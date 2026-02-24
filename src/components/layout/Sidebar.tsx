@@ -43,7 +43,7 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { SIDEBAR_PANEL_WIDTH, SIDEBAR_LG_POSITION } from "./sidebarLayout";
+import { SIDEBAR_PANEL_WIDTH } from "./sidebarLayout";
 
 /* ── Subject config ─────────────────────────────────────────────────── */
 
@@ -67,17 +67,20 @@ type NavItem = {
   requiredLevel?: number;
   /** Visuell hervorgehoben (z. B. Schwachstellen). */
   emphasized?: boolean;
+  /** Zusätzliche Pfade, die diesen Eintrag als aktiv markieren (z. B. Fortschritt-Subseiten). */
+  activePaths?: string[];
 };
 
-/** 4 Hauptsektionen: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR (einklappbar). */
+/** MedAT-orientierte Struktur: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
 const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
   {
     id: "lernen",
     title: "LERNEN",
     items: [
       { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
-      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
-      { to: "/notizen", icon: StickyNote, label: "Notizen" },
+      { to: "/kff", icon: Brain, label: "KFF" },
+      { to: "/tv", icon: FileText, label: "TV" },
+      { to: "/sek", icon: Heart, label: "SEK" },
     ],
   },
   {
@@ -85,41 +88,22 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     title: "TRAINIEREN",
     items: [
       { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
-      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
-      { to: "/wissencheck", icon: BookOpen, label: "Wissenscheck" },
       { to: "/karteikarten", icon: Layers, label: "Karteikarten" },
+      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
+      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
     ],
   },
   {
     id: "fortschritt",
     title: "FORTSCHRITT",
-    items: [
-      {
-        to: "/schwachstellen",
-        icon: Target,
-        label: "Schwachstellen",
-        requiredLevel: 0,
-        emphasized: true,
-      },
-      { to: "/statistik", icon: BarChart3, label: "Statistik" },
-      { to: "/prognose", icon: TrendingUp, label: "Prognose" },
-    ],
+    items: [{ to: "/fortschritt", icon: BarChart3, label: "Fortschritt", emphasized: true }],
   },
   {
     id: "mehr",
     title: "MEHR",
     items: [
-      { to: "/", icon: LayoutDashboard, label: "Dashboard" },
-      { to: "/ai-tutor", icon: MessageCircle, label: "AI-Tutor", requiredLevel: 0 },
-      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
+      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
       { to: "/performance", icon: Award, label: "Erfolge" },
-      { to: "/daily", icon: Trophy, label: "Daily" },
-      { to: "/kff", icon: Brain, label: "KFF" },
-      { to: "/tv", icon: FileText, label: "TV" },
-      { to: "/sek", icon: Heart, label: "SEK" },
-      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
-      { to: "/community", icon: Users, label: "Community" },
-      { to: "/duell", icon: Swords, label: "Duell" },
       { to: "/preise", icon: Settings, label: "Konto & Preise" },
     ],
   },
@@ -334,6 +318,15 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
   const isActive = (to: string) => {
     if (to === "/") return pathname === "/";
+    if (to === "/fortschritt")
+      return (
+        pathname === "/fortschritt" ||
+        pathname.startsWith("/fortschritt/") ||
+        pathname === "/schwachstellen" ||
+        pathname.startsWith("/schwachstellen") ||
+        pathname === "/statistik" ||
+        pathname === "/prognose"
+      );
     return pathname === to || (to !== "/" && pathname.startsWith(to + "/"));
   };
 
@@ -382,7 +375,26 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
       {/* Nav */}
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
-        {/* Weiterlernen – primärer Einstieg */}
+        {/* Dashboard – fix oben, visuell hervorgehoben */}
+        <div className="mb-3">
+          <NavLink to="/" end onClick={onClose}>
+            {({ isActive: dashboardActive }) => (
+              <div
+                className={cn(
+                  "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer border-l-[3px] pl-[9px]",
+                  dashboardActive
+                    ? "bg-[var(--accent)]/15 text-[var(--foreground)] border-[var(--accent)]"
+                    : "bg-[var(--foreground)]/5 text-[var(--foreground)] border-transparent hover:bg-[var(--foreground)]/8"
+                )}
+              >
+                <LayoutDashboard className="w-4 h-4 shrink-0 text-[var(--accent)]" />
+                <span className="truncate">Dashboard</span>
+              </div>
+            )}
+          </NavLink>
+        </div>
+
+        {/* Weiterlernen – schneller Einstieg wenn vorhanden */}
         {lastPathLabel && lastPath && lastPath !== "/" && (
           <div ref={lastPathRef} className="mb-3">
             <NavLink to={lastPath} end={false} onClick={onClose}>
@@ -618,14 +630,14 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
                   );
                 }
 
-                /* Regular nav item */
+                /* Regular nav item: Fortschritt gilt auch auf /schwachstellen, /statistik, /prognose als aktiv */
                 return (
                   <NavLink key={to} to={to} end={to === "/"} onClick={onClose}>
                     {({ isActive: itemActive }) => (
                       <NavItemRow
                         icon={item.icon}
                         label={item.label}
-                        active={itemActive}
+                        active={to === "/fortschritt" ? isActive(to) : itemActive}
                         emphasized={item.emphasized}
                       />
                     )}
@@ -658,7 +670,7 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
 
   return (
     <>
-      {/* Backdrop: on mobile always; in focus mode (chapter) also on desktop */}
+      {/* Backdrop: immer wenn Sidebar offen (auf allen Viewports) */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -668,7 +680,7 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
             transition={{ duration: 0.2 }}
             className={cn(
               "fixed inset-0 bg-black/50 backdrop-blur-sm",
-              focusMode ? "z-[110]" : "z-100 lg:hidden"
+              focusMode ? "z-[110]" : "z-100"
             )}
             onClick={onClose}
             aria-hidden
@@ -676,15 +688,14 @@ export function Sidebar({ mobileOpen, onClose, focusMode = false }: SidebarProps
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel: in focus mode always overlay with high z so it's above content (z-50); otherwise on lg fixed visible */}
+      {/* Sidebar panel: immer eingeklappt, nur bei mobileOpen sichtbar (Overlay auf allen Viewports) */}
       <aside
         className={cn(
           "fixed left-0 top-0 h-screen flex flex-col",
           SIDEBAR_PANEL_WIDTH,
-          !focusMode && SIDEBAR_LG_POSITION,
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
           "border-r border-[var(--border)]",
-          focusMode ? "z-[120]" : "z-101 lg:z-40",
+          focusMode ? "z-[120]" : "z-101",
           "transition-transform duration-200 ease-out",
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         )}

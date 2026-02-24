@@ -185,22 +185,24 @@ export default function Dashboard() {
         <SyncIndicator />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
-          {/* Hero: CTA + MedAT + Fortschritt */}
+          {/* Hero: klarer Fokus – „Heute lernen“ visuell dominant */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
             <div
               className={cn(
                 cardClass,
-                "p-6 sm:p-8 border-l-4 border-l-[var(--accent)] bg-[var(--card)]"
+                "p-8 sm:p-10 border-l-4 border-l-[var(--accent)] bg-[var(--card)] shadow-md"
               )}
             >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
                 <div>
-                  <h1 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
                     {lastPath && lastPath !== "/" && lastPath !== "/bms"
                       ? "Weiterlernen"
                       : "Heute lernen"}
                   </h1>
-                  <p className="text-sm text-[var(--muted)] mt-1">Noch {days} Tage bis MedAT</p>
+                  <p className="text-base text-[var(--text-secondary)] mt-1.5">
+                    Noch {days} Tage bis MedAT
+                  </p>
                 </div>
                 <Link
                   to={lastPath && lastPath !== "/" && lastPath !== "/bms" ? lastPath : "/bms"}
@@ -345,29 +347,43 @@ export default function Dashboard() {
                 </span>
               </div>
             </Link>
-            <Link to="/simulation">
-              <div className={cn(cardClass, "h-full p-4 flex items-center gap-3 min-h-[120px]")}>
-                <Timer className="w-8 h-8 text-[var(--muted)] shrink-0" />
+            <Link to="/simulation" className="opacity-90 hover:opacity-100 transition-opacity">
+              <div
+                className={cn(
+                  cardClass,
+                  "h-full p-4 flex items-center gap-3 min-h-[100px] border-[var(--border)] bg-[var(--card)]/80"
+                )}
+              >
+                <Timer className="w-7 h-7 text-[var(--muted)] shrink-0" />
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">Simulation</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Simulation</p>
                   <p className="text-xs text-[var(--muted)]">Gesamtstand</p>
                 </div>
               </div>
             </Link>
-            <Link to="/prognose">
-              <div className={cn(cardClass, "h-full p-4 flex items-center gap-3 min-h-[120px]")}>
-                <TrendingUp className="w-8 h-8 text-[var(--muted)] shrink-0" />
+            <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
+              <div
+                className={cn(
+                  cardClass,
+                  "h-full p-4 flex items-center gap-3 min-h-[100px] border-[var(--border)] bg-[var(--card)]/80"
+                )}
+              >
+                <TrendingUp className="w-7 h-7 text-[var(--muted)] shrink-0" />
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">Prognose</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
                   <p className="text-xs text-[var(--muted)]">Punktestand</p>
                 </div>
               </div>
             </Link>
           </motion.section>
 
-          {/* Kompakter Fortschritt: Level + XP + Streak + Badge-Hinweis */}
+          {/* Motivationsleiste: Level + XP + Streak + Badge (zusammenhängender Block) */}
           <motion.section variants={tileMotion} aria-label="Fortschritt">
-            <div className={cn(cardClass, "p-5")}>
+            <div
+              className={cn(
+                "rounded-xl border border-[var(--border)] bg-[var(--card)]/90 p-5 shadow-sm"
+              )}
+            >
               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">

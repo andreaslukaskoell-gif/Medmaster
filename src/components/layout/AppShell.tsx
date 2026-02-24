@@ -32,7 +32,6 @@ import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
-import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie) — focus mode: sidebar hidden, content full width. */
 function isChapterFocusRoute(pathname: string): boolean {
@@ -204,17 +203,12 @@ export function AppShell() {
           />
         </Suspense>
         <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} focusMode={isChapterFocus} />
-        {/* Main area: in chapter focus mode no sidebar margin; otherwise reserve space for sidebar */}
-        <div
-          className={cn(
-            "min-h-screen flex flex-col relative z-50 w-full bg-[var(--background)]",
-            !isChapterFocus && SIDEBAR_MAIN_ML
-          )}
-        >
+        {/* Main area: volle Breite, Sidebar nur per Burger als Overlay */}
+        <div className="min-h-screen flex flex-col relative z-50 w-full bg-[var(--background)]">
           <TopBar
             menuButtonRef={menuButtonRef}
             onMenuToggle={() => setMobileOpen(!mobileOpen)}
-            showHamburgerAlways={isChapterFocus}
+            showHamburgerAlways={true}
           />
           <main
             className={cn(
