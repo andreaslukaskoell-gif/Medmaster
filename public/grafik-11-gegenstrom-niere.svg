@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="100%">
+  <defs><style>.tube{fill:none;stroke:#0e7490;stroke-width:2}.ar{stroke:#0e7490;stroke-width:1;fill:none;marker-end:url(#hgg)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="hgg" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0 L5 2.5 L0 5 z" fill="#0e7490"/></marker></defs>
+  <text x="190" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Gegenstromprinzip Henle-Schleife</text>
+  <path d="M80 50 L80 140 L120 140 L120 50" class="tube"/>
+  <path d="M120 50 L120 140 L80 140" class="tube"/>
+  <text x="60" y="65" class="l">absteigend</text><text x="60" y="78" font-size="9" fill="#475569">H2O raus</text>
+  <text x="140" y="125" class="l">aufsteigend</text><text x="140" y="138" font-size="9" fill="#475569">NaCl raus</text>
+  <text x="82" y="52" font-size="9" fill="#0e7490">300</text><text x="82" y="138" font-size="9" fill="#0e7490">1200</text><text x="118" y="52" font-size="9" fill="#0e7490">100</text>
+  <rect x="200" y="44" width="172" height="100" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="286" y="64" text-anchor="middle" class="l">Osmolaritaet (mOsm)</text>
+  <text x="286" y="82" text-anchor="middle" font-size="10" fill="#475569">Rinde ~300, Markspitze ~1200. Absteigend: nur H2O permeabel. Aufsteigend: NaCl aktiv resorbiert, H2O impermeabel.</text>
+  <text x="286" y="102" text-anchor="middle" font-size="10" fill="#475569">Ergebnis: Konzentrationsgradient im Mark fuer H2O-Rueckresorption im Sammelrohr (ADH).</text>
+  <text x="286" y="128" text-anchor="middle" font-size="9" fill="#64748b">MedAT: Gegenstrom = Verstaerkung ohne aktiven H2O-Transport in der Schleife.</text>
+</svg>

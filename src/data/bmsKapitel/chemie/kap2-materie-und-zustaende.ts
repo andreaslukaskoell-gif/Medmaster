@@ -51,6 +51,8 @@ Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasg
 
 Kombiniert: p·V/(n·T) = R = const → **pV = nRT**.
 
+**SVG-Hinweis (Ideale Gasgleichung pV = nRT):** Ein Schema mit den vier Größen p, V, n, T und den drei Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) als Pfeile oder Kasten unterstützt die Merkfähigkeit und Umstellübungen. *Typ: Übersicht / Formelschema.*
+
 ## Umrechnungen und praktische Anwendung
 
 Häufige Umformungen:
@@ -123,8 +125,9 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Ideales Gasgesetz pV = nRT, R = 8,314 J/(mol·K), Temperatur in Kelvin, Umstellung nach p, V, n, T, Anwendung (Druck, Volumen, Atmung).
+
+**Ergänzend vertiefend:** Van-der-Waals-Gleichung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
@@ -389,6 +392,8 @@ pᵢ = nᵢ · R · T / V = xᵢ · p_gesamt
 
 **xᵢ = Molenbruch** der Komponente i: xᵢ = nᵢ / n_gesamt (dimensionslos, zwischen 0 und 1, Summe = 1).
 
+**SVG-Hinweis (Partialdruck und Molenbruch):** Ein Balken- oder Kreisschema mit p_gesamt = p₁ + p₂ + p₃ und xᵢ = nᵢ/n_gesamt macht Daltons Gesetz und die Berechnung von Partialdrücken auf einen Blick klar. *Typ: Schema / Übersicht.*
+
 ## Physikalische Begründung
 
 Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
@@ -465,8 +470,9 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Partialdruck (Dalton: p_i = x_i·p_ges), Molenbruch, O₂-Anteil Luft ~21 %, Henry-Gesetz (Gaslöslichkeit ∝ Partialdruck), klinisch (Atmung, O₂-Therapie).
+
+**Ergänzend vertiefend:** Sättigungsdampfdruck; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie berechnet man den Partialdruck von O₂ in Raumluft?" → 0,21 × 101,3 kPa = 21,2 kPa
@@ -726,6 +732,8 @@ Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt p
 
 **r₁/r₂ = √(M₂/M₁)**
 
+**SVG-Hinweis (Grahamsches Gesetz — Diffusion/Effusion):** Ein Vergleichsschema (leichtes vs. schweres Gas, Geschwindigkeit ∝ 1/√M) oder die Formel r₁/r₂ = √(M₂/M₁) mit Beispiel H₂ vs. O₂ unterstützt die Prüfungsvorbereitung. *Typ: Vergleich / Formelschema.*
+
 Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
 
 **Beispiele:**
@@ -816,8 +824,9 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Grahams Gesetz (Diffusionsrate ∝ 1/√M), kinetische Gastheorie (v_rms = √(3RT/M)), Maxwell-Boltzmann-Verteilung, leichtere Gase diffundieren schneller, Anwendung (Atmung, Trennung).
+
+**Ergänzend vertiefend:** Partialdruck, Stoßzahl; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie verhält sich die Diffusionsrate von H₂ (2 g/mol) zu O₂ (32 g/mol)?" → r(H₂)/r(O₂) = √(32/2) = 4 — H₂ diffundiert 4× schneller
@@ -1087,6 +1096,8 @@ Das **ideale Gasgesetz** (pV = nRT) gilt für verdünnte Gase gut: p = Druck (Pa
 
 Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es ist der bei weitem häufigste Zustand sichtbarer Materie im Universum (Sterne, Blitze, Fluoreszenzlampen). Im medizinischen Sprachgebrauch bezeichnet "Blutplasma" den flüssigen Bestandteil des Blutes nach Entfernung der Zellen – ein biologischer Begriff ohne Bezug zum physikalischen Plasma.
 
+**SVG-Hinweis (Aggregatzustände und Kristalltypen):** Ein Schema mit fest/flüssig/gasförmig/Plasma und den vier Kristalltypen (ionisch, Molekül, Netzwerk, Metall) unterstützt die Einordnung und die Siedepunktvergleiche. *Typ: Übersicht / Schema.*
+
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
 
 Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim Abkühlen von 100°C zunächst zu, erreicht ein **Maximum bei 3,98°C** (ρ = 0,9998 g/cm³) und nimmt dann beim weiteren Abkühlen bis 0°C wieder ab. Beim Gefrieren zu Eis sinkt die Dichte abrupt auf **ρ_Eis ≈ 0,917 g/cm³** – Eis ist also leichter als flüssiges Wasser.
@@ -1139,8 +1150,9 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Aggregatzustände (fest/flüssig/gasförmig), Eigenschaften (Form, Volumen, Nah-/Fernordnung), Phasenübergänge (Schmelzen, Sieden, Kondensieren, Erstarren, Sublimation, Desublimation), endotherm vs. exotherm.
+
+**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welcher Aggregatzustand hat definiertes Volumen aber keine eigene Form?" → flüssig (Nahordnung, fließfähig)
@@ -1412,6 +1424,8 @@ Die sechs Phasenübergänge:
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
+**SVG-Hinweis (Phasenübergänge und Heizkurve):** Ein Schema mit den sechs Übergängen (Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren) oder eine Heizkurve mit Plateaus macht die latente Wärme und die Nomenklatur auf einen Blick klar. *Typ: Schema / Heizkurve.*
+
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
 
 **Schmelzenthalpie**: ΔH_s(H₂O) = **6,01 kJ/mol = 333 J/g** (bei 0°C, 1 bar)
@@ -1497,8 +1511,9 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Phasenübergänge (Schmelzen, Verdampfen, Sublimieren = endotherm; Kondensieren, Erstarren, Desublimieren = exotherm), Dampfdruck, Siedepunkt abhängig vom Druck, Verdampfungsenthalpie.
+
+**Ergänzend vertiefend:** Phasendiagramm, Tripelpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Phasenübergänge sind endotherm?" → Schmelzen, Verdampfen, Sublimieren (Energie wird zugeführt)

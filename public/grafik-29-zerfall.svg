@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180" width="100%">
+  <defs><style>.ax{stroke:#94a3b8;stroke-width:1}.curve{fill:none;stroke:#0e7490;stroke-width:2}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="220" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Zerfallsgesetz N(t), Halbwertszeit</text>
+  <path d="M40 40 L40 140 L400 140" class="ax"/>
+  <path d="M40 40 Q80 70 120 95 Q200 125 280 132 Q360 136 400 138" class="curve"/>
+  <line x1="40" y1="40" x2="40" y2="140" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="160" y1="140" x2="160" y2="100" stroke="#b45309" stroke-dasharray="3 2" stroke-width="1"/>
+  <text x="165" y="98" font-size="9" fill="#b45309">T_1/2</text>
+  <rect x="40" y="152" width="360" height="24" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="220" y="168" text-anchor="middle" font-size="9" fill="#475569">N(t) = N_0 * e^(-lambda*t). T_1/2 = ln2/lambda. Alpha, Beta-, Beta+, Gamma: Teilchen/Energie.</text>
+</svg>

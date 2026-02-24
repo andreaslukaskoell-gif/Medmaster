@@ -53,6 +53,8 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 | Oberflächenspannung | 72 mN/m | Kapillarkräfte im Xylem (bis 100 m), Alveolarstabilität |
 | Schmelzwärme | 334 kJ/kg | Eis → Wasser: hoher Energiebedarf für Phasenübergang |
 
+**SVG-Hinweis (Wasser — Struktur und H-Brücken):** Ein Schema mit gewinkeltem H₂O (104,5°), Dipol und H-Brücken-Netzwerk (bis zu 4 pro Molekül) macht die Anomalien und den Siedepunktvergleich mit H₂S auf einen Blick klar. *Typ: Molekülschema / Netzwerk.*
+
 **Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
 **Hohe spezifische Wärmekapazität:** c = 4182 J/(kg·K). Ein 70 kg schwerer Mensch mit ~42 kg Körperwasser kann erhebliche Wärmeproduktion (z. B. Sport: bis 800 W) abpuffern. Rechenbeispiel: 800 J/s × 60 s = 48 kJ → ΔT = 48000 / (42 × 4182) ≈ 0,27 °C pro Minute.
@@ -110,8 +112,9 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Zwischenmolekulare Kräfte (H-Brücken, Dipol-Dipol, van der Waals), H₂O vs. H₂S (Siedepunkt), Hybridisierung (sp³, sp², sp), Diamant vs. Graphit, Struktur-Eigenschafts-Beziehungen.
+
+**Ergänzend vertiefend:** London-Kräfte; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum siedet Wasser bei 100 °C, obwohl MW nur 18 g/mol?" → H-Brücken-Netzwerk (20 kJ/mol × 4 Brücken) muss beim Verdampfen gebrochen werden; H₂S ohne H-Brücken siedet bei −60 °C
@@ -384,6 +387,8 @@ Alle Biomoleküle — Proteine, DNA, Kohlenhydrate, Fette — haben eines gemein
 
 ## Kohlenstoff — das Element des Lebens
 
+**SVG-Hinweis (Kohlenstoff — Allotrope und CO₂):** Ein Vergleichsschema Diamant/Graphit/Fulleren und die lineare CO₂-Struktur (apolar) vs. gewinkeltes H₂O (polar) unterstützen die Einordnung. *Typ: Vergleich / Strukturschema.*
+
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
 
 **Hybridisierungstypen und ihre Geometrie:**
@@ -454,8 +459,9 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Hybridorbitale (sp³ Tetraeder, sp² planar, sp linear), Diamant (sp³, Isolator) vs. Graphit (sp², leitend), Bindungswinkel, Molekülgeometrie.
+
+**Ergänzend vertiefend:** VSEPR; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Hybridisierung hat Diamant vs. Graphit?" → Diamant sp³ (Tetraeder, Isolator, hart); Graphit sp² (planar, Leiter, weich)
@@ -696,6 +702,8 @@ Stickstoff, Schwefel und Halogene sind für das Leben unverzichtbar — und glei
 
 ## Stickstoff (N) — das häufigste Atmosphärengas
 
+**SVG-Hinweis (Biogene Elemente N, S, Halogene):** Eine kompakte Übersicht zu Vorkommen, Oxidationsstufen und klinischen Bezügen (NH₃, H₂S, Halogenide) festigt die Prüfungsvorbereitung. *Typ: Übersicht / Tabelle.*
+
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
 **Stickstoffixierung — zwei Wege:**
@@ -755,8 +763,9 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Haber-Bosch (N₂+3H₂⇌2NH₃), Le Chatelier (exotherm + Volumenabnahme), Kompromiss T/Druck (400–500 °C, 150–300 bar), Katalysator (Fe), industrielle Bedeutung.
+
+**Ergänzend vertiefend:** Aktivierung von N₂; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum ist der Haber-Bosch-Prozess ein Kompromiss?" → N₂ + 3H₂ ⇌ 2NH₃ exotherm + Volumenabnahme; niedrige T begünstigt Produkt thermodynamisch, aber macht Reaktion zu langsam → Kompromiss: 400–500 °C + 150–300 bar + Fe-Katalysator
@@ -1032,6 +1041,8 @@ Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzepti
 
 ## Die Brønsted-Lowry-Definition
 
+**SVG-Hinweis (Säure-Base nach Brønsted und Lewis):** Ein Schema mit H⁺-Transfer, konjugierten Paaren und pH-Skala unterstützt die Abgrenzung zu Lewis. *Typ: Schema / Übersicht.*
+
 **Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
 - **Säure** = Protonendonator: gibt ein Proton (H⁺) ab
@@ -1113,8 +1124,9 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Brønsted: Säure = Protonendonator (H⁺), Base = Protonenakzeptor, konjugierte Paare, Ampholyte (H₂O, HCO₃⁻), Autoprotolyse des Wassers (K_W = 10⁻¹⁴).
+
+**Ergänzend vertiefend:** Lewis-Säure/Base; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist eine Brønsted-Säure?" → Protonendonator (gibt H⁺ ab); Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf)
@@ -1378,6 +1390,8 @@ Warum ätzt Salzsäure (HCl) sofort, während Essigsäure (CH₃COOH) im Salat n
 
 ## Starke Säuren: Vollständige Dissoziation
 
+**SVG-Hinweis (Starke vs. schwache Säuren und pH-Berechnung):** Ein Schema mit vollständiger vs. partieller Dissoziation und der Formel für schwache Säuren (pH ≈ ½(pK_a − log c)) unterstützt Rechenaufgaben. *Typ: Schema / Formel.*
+
 **Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
 Für starke Säuren gilt: **[H₃O⁺] = c(Säure)** (vollständige Dissoziation, kein Gleichgewicht). Der pH berechnet sich direkt: **pH = −log c(Säure)**.
@@ -1493,8 +1507,9 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Starke vs. schwache Säuren (pK_a), pH schwache Säure [H⁺]=√(K_a·c₀), pH=½(pK_a−log c₀), Säurekonstante K_a, Dissoziationsgrad.
+
+**Ergänzend vertiefend:** Mehrprotonige Säuren; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie berechnet man den pH einer schwachen Säure?" → pH = ½ · (pKa − log c₀); [H₃O⁺] = √(Ka · c₀) (Näherung für α << 1)
@@ -1767,6 +1782,8 @@ Blut hat einen pH von 7,4 — und dieser Wert ist lebenswichtig. Schon bei pH 7,
 
 ## Was ist ein Puffer?
 
+**SVG-Hinweis (Puffer und Henderson-Hasselbalch):** Ein Schema mit HA ⇌ H⁺ + A⁻, pH = pK_a + log([A⁻]/[HA]) und dem Carbonat-Puffer CO₂/HCO₃⁻ macht Pufferkapazität und Blut-pH auf einen Blick klar. *Typ: Formelschema / Puffer.*
+
 Ein **Puffersystem** ist eine Lösung, die pH-Änderungen bei Zugabe kleiner Mengen Säure oder Base minimiert. Puffer bestehen aus einem **schwachen Säure-Base-Paar**:
 
 - Einer **schwachen Säure (HA)** – neutralisiert zugesetzte Basen
@@ -1869,8 +1886,9 @@ Der Carbonat-Puffer kann versagen, wenn:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Puffer, Henderson-Hasselbalch pH=pK_a+log([A⁻]/[HA]), Pufferoptimum bei [A⁻]=[HA] → pH=pK_a, Pufferkapazität, physiologische Puffer (HCO₃⁻/CO₂, Hämoglobin).
+
+**Ergänzend vertiefend:** Titrationskurven; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie berechnet man pH mit Henderson-Hasselbalch?" → pH = pKa + log([A⁻]/[HA]); bei pH = pKa ist das Verhältnis 1:1
@@ -2112,6 +2130,8 @@ Wie findet man heraus, wie konzentriert eine Säure ist? Mit einer **Titration**
 
 ## Grundprinzip der Titration
 
+**SVG-Hinweis (Titration und Titrationskurve):** Ein Schema mit Bürette, Äquivalenzpunkt und typischer S-Kurve (pH vs. Volumen) unterstützt die Interpretation von Titrationskurven und Indikatoren. *Typ: Versuchsaufbau / Kurve.*
+
 Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung einer unbekannten Konzentration. Eine Lösung bekannter Konzentration (Titrant, in der Bürette) wird einer Lösung unbekannter Konzentration (Analyt, in dem Erlenmeyerkolben) tropfenweise zugegeben, bis die Reaktion vollständig ist.
 
 **Äquivalenzpunkt**: Der Punkt, an dem stöchiometrisch genauso viele Moles Titrant wie Analyt vorhanden sind.
@@ -2221,8 +2241,9 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Titration (stark/stark, schwach/stark), Äquivalenzpunkt (stark/stark pH=7, schwach/stark basisch wegen Hydrolyse des Salzes), Indikator, Pufferbereich.
+
+**Ergänzend vertiefend:** Mehrprotonige Titration; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welchen pH hat der Äquivalenzpunkt bei schwacher Säure + starker Base?" → basisch (pH > 7), weil das entstehende Salz (z. B. Acetat) basisch hydrolysiert
@@ -2482,6 +2503,8 @@ Warum rostet Eisen? Warum verbrennt Holz? Warum funktioniert die Atmungskette? A
 
 ## Definitionen: OIL RIG
 
+**SVG-Hinweis (Redox — OIL RIG und Oxidationszahlen):** Ein Übersichtsschema mit Oxidation (Elektronenabgabe), Reduktion (Elektronenaufnahme) und den Regeln für Oxidationszahlen unterstützt das Aufstellen von Redoxgleichungen. *Typ: Übersicht / Schema.*
+
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
 
 Das Teilchen, das Elektronen **abgibt** und dabei oxidiert wird, heißt **Reduktionsmittel** (RM), weil es das andere Teilchen reduziert. Das Teilchen, das Elektronen **aufnimmt** und dabei reduziert wird, heißt **Oxidationsmittel** (OM), weil es das andere Teilchen oxidiert. Im klassischen Beispiel Zn + Cu²⁺ → Zn²⁺ + Cu ist Zink das Reduktionsmittel (gibt 2e⁻ ab) und Cu²⁺ das Oxidationsmittel (nimmt 2e⁻ auf).
@@ -2535,8 +2558,9 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Redox (OIL RIG: Oxidation = Elektronenabgabe, Reduktion = Elektronenaufnahme), Oxidationszahl, Redoxpaare, Ausgleichen von Redoxgleichungen.
+
+**Ergänzend vertiefend:** Halbreaktionen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist OIL RIG?" → **O**xidation **I**s **L**oss (Elektronenabgabe, OZ steigt); **R**eduction **I**s **G**ain (Elektronenaufnahme, OZ sinkt)
@@ -2784,6 +2808,8 @@ Wie liefert eine Batterie Strom? Wie erzeugt der Herzschrittmacher seine Energie
 
 ## Galvanische Zellen (Voltasche Elemente)
 
+**SVG-Hinweis (Galvanische Zelle und Elektrolyse):** Ein Schema mit Anode/Kathode, Salzbrücke, AnOx RedKat und der Formel E°Zelle = E°Kathode − E°Anode bzw. ΔG = −nFE unterstützt die Prüfungsvorbereitung. *Typ: Zellenschema / Übersicht.*
+
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
 **Aufbau eines Daniell-Elements (Zn/Cu-Zelle):**
@@ -2873,8 +2899,9 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Galvanische Zelle vs. Elektrolyse, Anode = Oxidation (AnOx), Kathode = Reduktion (RedKat), Elektronenfluss (Anode → Kathode außen), Standardpotential E°, Spannungsreihe.
+
+**Ergänzend vertiefend:** Konzentrationszelle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist AnOx RedKat?" → **An**ode = **Ox**idation (Elektronenabgabe); **Red**uktion = **Kat**hode (Elektronenaufnahme) — gilt sowohl galvanisch als auch bei Elektrolyse
@@ -3127,6 +3154,8 @@ Standardpotenziale (E°) gelten bei perfekten Laborbedingungen — 1 mol/L, 25 �
 
 ## Die Nernst-Gleichung
 
+**SVG-Hinweis (Nernst-Gleichung und Membranpotenzial):** Ein Schema mit E = E° − (0,05916/n)·log Q und der Anwendung auf Konzentrationszelle bzw. Ruhemembranpotenzial (K⁺, Na⁺) macht die Abhängigkeit von der Konzentration auf einen Blick klar. *Typ: Formelschema / Anwendung.*
+
 Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
 
 **E = E° − (R·T)/(n·F) · ln(Q)**
@@ -3197,8 +3226,9 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Nernst-Gleichung E=E°−(0,05916/n)·log Q (25 °C), Q=[Red]/[Ox], konzentrationsabhängiges Potential, Anwendung (pH-Glaselektrode, Blutzucker-Messung).
+
+**Ergänzend vertiefend:** Temperaturabhängigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was sagt die Nernst-Gleichung?" → E = E° − (0,05916/n) · log(Q); bei 25 °C; Q = [Reduktans]/[Oxidans]; reale Konzentrationen ≠ Standard
@@ -3438,6 +3468,8 @@ Sauerstoff ist lebensnotwendig — aber auch gefährlich. Bei der Atmung entsteh
 
 ## Reaktive Sauerstoffspezies (ROS)
 
+**SVG-Hinweis (ROS und antioxidatives System):** Ein Flussschema von O₂·⁻ → H₂O₂ → ·OH (Fenton) und die Abfangkaskade (SOD, Katalase, GSH/GPx) unterstützen die Einordnung von oxidativem Stress und G6PD-Mangel. *Typ: Flussschema / Übersicht.*
+
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 
 **Wichtige ROS und ihre Bildung:**
@@ -3496,8 +3528,9 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Fenton-Reaktion (Fe²⁺+H₂O₂→·OH+OH⁻+Fe³⁺), Hydroxylradikal ·OH (reaktivstes ROS), oxidative Stress, Radikalfänger, Redox in der Biologie (Atmungskette, ROS).
+
+**Ergänzend vertiefend:** Superoxid, H₂O₂, Katalase; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was entsteht bei der Fenton-Reaktion?" → **·OH** (Hydroxyl-Radikal); Fe²⁺ + H₂O₂ → ·OH + OH⁻ + Fe³⁺; reaktivstes ROS — keine spezifische Entgiftung möglich

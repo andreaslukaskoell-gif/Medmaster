@@ -74,6 +74,8 @@ Alkine besitzen eine C≡C-Dreifachbindung (eine σ- und zwei π-Bindungen). Die
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
+**SVG-Hinweis (Kohlenwasserstoffe — Alkane, Alkene, Alkine):** Ein Vergleichsschema mit sp³/sp²/sp, Bindungswinkeln und den Formeln CₙH₂ₙ₊₂ / CₙH₂ₙ / CₙH₂ₙ₋₂ sowie Bromwassertest und Markovnikov unterstützt die Prüfungsvorbereitung. *Typ: Vergleich / Übersicht.*
+
 ## Polymerisation
 
 Alkene können durch radikalische oder koordinative Polymerisation zu Makromolekülen verknüpft werden: n CH₂=CH₂ → (−CH₂−CH₂−)ₙ = **Polyethylen (PE)**. Weitere Polymere: Polypropylen (PP), PVC (aus Vinylchlorid), Polystyrol (PS). Klinisch relevant: Polymere in Implantaten, Einwegspritzen und Infusionsbeuteln.
@@ -98,8 +100,9 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Organische C-Hybridisierung (sp³, sp², sp), Ethen (sp², 120°), Ethin (sp, 180°), Doppel-/Dreifachbindung, Isomerie (Struktur, cis/trans).
+
+**Ergänzend vertiefend:** Bindungslänge; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Hybridisierung hat C in Ethen?" → sp² (120°, trigonal-planar); in Ethin → sp (180°, linear)
@@ -347,6 +350,8 @@ Zwei Moleküle, gleiche Formel — aber völlig verschiedene Wirkung. Das S-Enan
 
 ## Konstitutionsisomere (Strukturisomere)
 
+**SVG-Hinweis (Isomerie — Konstitution, Konformation, Stereochemie):** Ein Schema mit Strukturisomeren, cis/trans, Enantiomeren (Spiegelbild) und R/S-Nomenklatur unterstützt die Abgrenzung und Chiralität. *Typ: Übersicht / Schema.*
+
 Konstitutionsisomere unterscheiden sich in der Reihenfolge (Konnektivität) der Atome. Sie haben die gleiche Summenformel, aber verschiedene Bindungspartner und damit unterschiedliche chemische und physikalische Eigenschaften.
 
 **Untergruppen:**
@@ -434,8 +439,9 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Chiralität (sp³-C mit 4 verschiedenen Substituenten), Enantiomere (Spiegelbilder), optische Aktivität, R/S-Nomenklatur, Racemat, biologische Relevanz (L/D-Aminosäuren).
+
+**Ergänzend vertiefend:** Diastereomere; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist ein Chiralitätszentrum?" → sp³-C mit vier verschiedenen Substituenten → nicht-superponierbare Spiegelbilder (Enantiomere)
@@ -668,6 +674,8 @@ Alle Pharmaka, Hormone, Enzyme-Substrate und Metabolite haben eines gemeinsam: S
 
 ## Alkohole (−OH, Hydroxylgruppe)
 
+**SVG-Hinweis (Funktionelle Gruppen und Oxidationsstufen):** Eine Übersicht mit −OH, −CHO, C=O, −COOH, −COO−, −NH₂, −SH und den typischen Verbindungsklassen (Alkohol, Aldehyd, Keton, Carbonsäure, Ester, Amin) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Tabelle.*
+
 Alkohole enthalten eine Hydroxylgruppe (-OH) an einem Kohlenstoffatom. Die OH-Gruppe macht das Molekül polar und ermöglicht Wasserstoffbrückenbindungen.
 
 **Einteilung:**
@@ -770,8 +778,9 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Oxidation Alkohole (primär → Aldehyd → Carbonsäure, sekundär → Keton, tertiär nicht oxidierbar), Reduktion Carbonylverbindungen, funktionelle Gruppen (OH, CHO, COOH, C=O).
+
+**Ergänzend vertiefend:** Oxidationsmittel (CrO₃, PCC); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was entsteht bei der Oxidation eines primären Alkohols?" → Zuerst Aldehyd → dann Carbonsäure (sekundärer Alkohol → Keton, keine weitere Oxidation ohne C-C-Spaltung!)
@@ -791,7 +800,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 ---
 
-## Zusammenfassung: Funktionelle Gruppen und Oxidationsstufen
+## Zusammenfassung (ultrakompakt)
 
 | Funktionelle Gruppe | Verbindungsklasse | Oxidationsstufe am C | Beispiel |
 |---|---|---|---|
@@ -1010,6 +1019,8 @@ Benzol, Pyridin, Purin — aromatische Ringe sind überall in der Biochemie: in 
 
 ## Benzol und Aromatizität
 
+**SVG-Hinweis (Benzol und Aromatizität):** Ein Schema mit dem Benzolring, delokalisierten π-Elektronen, Hückel-Regel (4n+2) und elektrophiler aromatischer Substitution macht Aromatizität und EAS auf einen Blick klar. *Typ: Strukturschema / Übersicht.*
+
 Benzol (C₆H₆) ist die einfachste aromatische Verbindung. Es besitzt eine ringförmige planare Struktur mit sechs Kohlenstoffatomen und sechs π-Elektronen (delokalisiert über den gesamten Ring).
 
 **Hückel-Regel für Aromatizität:**
@@ -1111,8 +1122,9 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Aromatizität, Hückel-Regel (4n+2 π-Elektronen, planar, konjugiert), Benzol (6 π-e⁻), aromatisch vs. antiaromatisch, Mesomerie, Stabilität.
+
+**Ergänzend vertiefend:** Heterocyclen (Pyridin); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt die Hückel-Regel?" → Planarer, vollständig konjugierter Ring mit 4n+2 π-Elektronen ist aromatisch (n=1: Benzol mit 6 π-e⁻)
@@ -1349,6 +1361,8 @@ Proteine sind die Maschinen des Lebens: Enzyme, Antikörper, Strukturproteine, H
 
 ## Grundstruktur der Aminosäuren
 
+**SVG-Hinweis (Aminosäuren und Peptidbindung):** Ein Schema mit allgemeiner Struktur (H₂N–CHR–COOH), Zwitterion, Peptidbindung (−CO–NH–) und Hierarchie Primär–Sekundär–Tertiär unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+
 Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
 ## Klassifikation der Aminosäuren
@@ -1446,8 +1460,9 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Proteinstruktur (primär Sequenz, sekundär α-Helix/β-Faltblatt, tertiär 3D-Faltung, quartär Untereinheiten), Peptidbindung, H-Brücken im Rückgrat, Denaturierung.
+
+**Ergänzend vertiefend:** Domänen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was sind die 4 Ebenen der Proteinstruktur?" → Primär (Sequenz, Peptidbindungen), Sekundär (α-Helix/β-Faltblatt, H-Brücken im Rückgrat), Tertiär (3D-Faltung durch Seitenketten-WW), Quartär (Oligomere, z.B. Hämoglobin α₂β₂)
@@ -1683,6 +1698,8 @@ Glucose ist der Hauptenergieträger des Körpers. Cellulose ist das häufigste o
 
 ## Monosaccharide — Grundbausteine
 
+**SVG-Hinweis (Kohlenhydrate — Ringform, glycosidische Bindung):** Ein Schema mit Pyranose/Furanose, α- und β-glycosidischer Bindung (Stärke vs. Cellulose) und Disacchariden unterstützt die Einordnung. *Typ: Strukturschema / Übersicht.*
+
 Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
 **Fischer-Projektion**: Darstellung als offene Kette; Referenz ist D-Glycerinaldehyd (OH rechts am letzten Chiralitätszentrum → D-Konfiguration). **Haworth-Projektion**: Ringform (Pyranose = Sechsring bei Hexosen, Furanose = Fünfring). Bei der Ringschluss-Reaktion entsteht ein neues Chiralitätszentrum: **α-Anomer** (OH am anomeren C1 axial = auf gleicher Seite wie die Ringbildung; in Haworth: unten) vs. **β-Anomer** (OH am C1 äquatorial; in Haworth: oben).
@@ -1737,8 +1754,9 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** HbA1c (nicht-enzymatische Glykierung von Hämoglobin, Langzeit-Blutzucker 8–12 Wochen), Zielwert <7% (53 mmol/mol) bei Diabetes, Glykierung vs. Glykosylierung.
+
+**Ergänzend vertiefend:** AGEs; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist HbA1c?" → Nicht-enzymatische Glykierung von Hämoglobin; spiegelt Ø-Blutglukose der letzten 8–12 Wochen wider; Zielwert <7% (53 mmol/mol) bei Typ-2-Diabetes
@@ -1997,6 +2015,8 @@ Fett hat schlechten Ruf — aber ist lebensnotwendig. Phospholipide bilden alle 
 
 ## Fettsäuren
 
+**SVG-Hinweis (Lipide — Fettsäuren, Triglyceride, Phospholipid-Bilayer):** Ein Schema mit gesättigt/ungesättigt (cis/trans), Triglycerid-Aufbau (Glycerin + 3 FS), Phospholipid (polarer Kopf + 2 Schwänze) und Bilayer unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+
 Fettsäuren sind unverzweigte Carbonsäuren mit langer Kohlenwasserstoffkette (meist 12–24 C-Atome, gerade Anzahl wegen biosynthetischer Verlängerung um je 2 C durch Acetyl-CoA). Einteilung nach Sättigungsgrad:
 - **Gesättigte Fettsäuren**: Keine Doppelbindungen; gestreckte Ketten, dicht packbar → festes Fett bei Raumtemperatur. Wichtige Vertreter: **Laurinsäure** (C12:0, Kokosöl), **Myristinsäure** (C14:0), **Palmitinsäure** (C16:0, häufigste gesättigte FS), **Stearinsäure** (C18:0)
 - **Einfach ungesättigte (MUFA)**: Eine C=C-Doppelbindung. **Ölsäure** (C18:1Δ9, cis; Hauptfettsäure in Olivenöl) → flüssig bei Raumtemperatur. Palmitoleinsäure (C16:1Δ9)
@@ -2057,8 +2077,9 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Phospholipide (amphipathisch: polarer Kopf + 2 apolare Schwänze), spontane Bilayer-Bildung, hydrophober Effekt, Membranaufbau, Liposome.
+
+**Ergänzend vertiefend:** Glykolipide; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum sind Phospholipide Membranbausteine?" → Amphipathisch (polarer Phosphatkopf + 2 apolare Fettsäureschwänze) → spontane Bilayer-Bildung durch hydrophoben Effekt
@@ -2317,6 +2338,8 @@ DNA ist der Bauplan des Lebens — ein langer Doppelstrang aus Nukleotiden, der 
 
 ## Nukleotid-Aufbau
 
+**SVG-Hinweis (Nukleotide und DNA-Doppelhelix):** Ein Schema mit Nukleotid-Bausteinen (Base + Zucker + Phosphat), Purin/Pyrimidin, Basenpaarung A–T (2 H-Brücken) und G–C (3 H-Brücken) sowie Doppelhelix unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+
 Das Grundmonomer der Nukleinsäuren ist das **Nukleotid**, bestehend aus drei Komponenten:
 1. **Stickstoffbase** (Purin oder Pyrimidin)
 2. **Pentosezucker** (Ribose bei RNA; 2'-Desoxyribose bei DNA — kein OH an C2')
@@ -2397,8 +2420,9 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** DNA-Basenpaarung (A=T 2 H-Brücken, G≡C 3 H-Brücken), Doppelhelix, GC-reicher Bereich thermisch stabiler, Schmelztemperatur, Replikation, Komplementarität.
+
+**Ergänzend vertiefend:** RNA vs. DNA; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie viele H-Brücken verbinden A-T und G-C?" → A=T: 2 H-Brücken; G≡C: 3 H-Brücken — GC-reiche DNA thermisch stabiler (höhere Schmelztemperatur)

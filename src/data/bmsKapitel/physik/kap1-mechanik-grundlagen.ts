@@ -174,8 +174,9 @@ Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse*
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** SI-Einheiten (Druck Pa = N/m², Kraft N, Masse kg), Dimensionsanalyse (M·L·T), wissenschaftliche Notation, Einheitenumrechnung.
+
+**Ergänzend vertiefend:** Abgeleitete Größen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist die SI-Einheit des Drucks?" → Pascal (Pa = N/m² = kg·m⁻¹·s⁻²)
@@ -391,6 +392,8 @@ Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffa
 
 ## SI-Präfixe: Das metrische Vorsatzsystem
 
+**SVG-Hinweis (SI-Präfixe und Zehnerpotenzen):** Eine Übersichtstabelle oder Grafik mit Präfixen (µ, m, k, M), Zehnerpotenzen und typischen medizinischen Größenordnungen (Erythrozyt ~8 µm, DNA ~2 nm, 1 mL = 10⁻⁶ m³) unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
+
 SI-Präfixe sind Vorsätze, die vor eine Einheit gestellt werden und sie mit einer Zehnerpotenz multiplizieren.
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
@@ -498,8 +501,9 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Wissenschaftliche Notation (Vorzeichen, Zehnerpotenz), SI-Präfixe (µ, m, k, M), Längen/Flächen/Volumina, Dimensionskontrolle (M·L·T).
+
+**Ergänzend vertiefend:** Konsistenzprüfung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist 0,000 045 m in wissenschaftlicher Notation?" → 4,5 × 10⁻⁵ m = 45 µm
@@ -714,6 +718,8 @@ Eine falsche Einheit kann Leben kosten — eine bekannte Katastrophe ereignete s
 
 ## Was ist Dimensionsanalyse?
 
+**SVG-Hinweis (Dimensionsanalyse und Einheitenumrechnung):** Ein Schema mit Basisdimensionen M·L·T, typischen abgeleiteten Dimensionen (Kraft, Druck, Energie, Leistung) und dem Kettenmultiplikationsverfahren (mmHg → Pa, kcal → kJ) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Die **Dimensionsanalyse** (auch: Einheitenanalyse oder dimensionale Analyse) ist eine mächtige Technik, die auf folgender Grundaussage beruht: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn man eine Formel aufschreibt und die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
 Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig vom Zahlenwert oder der gewählten Einheit. Die sieben Basisdimensionen entsprechen den sieben SI-Basisgrößen.
@@ -829,8 +835,9 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Dimensionsanalyse (Masse M, Länge L, Zeit T), Druck = M·L⁻¹·T⁻², Kraft = M·L·T⁻², Energie = M·L²·T⁻², Dimensionsgleichheit bei Gleichungen.
+
+**Ergänzend vertiefend:** Buckingham-π; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Dimension hat Druck?" → M·L⁻¹·T⁻² (= kg·m⁻¹·s⁻² = Pa)
@@ -1046,6 +1053,8 @@ Warum bricht ein Knochen beim Sturz? Warum muss man für eine effektive Herzdruc
 
 ## Newtonsche Gesetze und Kinematik
 
+**SVG-Hinweis (Newtonsche Gesetze und Kinematik):** Ein Schema mit den drei Newtonschen Gesetzen (Trägheit, F=ma, actio=reactio), freiem Fall (v, s, g) und Kräftegleichgewicht unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
 ## Kinematik: Bewegung ohne Kräfte
@@ -1109,8 +1118,9 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Newtonsche Gesetze (1: Trägheit, 2: F=ma, 3: actio=reactio), Kräftegleichgewicht, Freier Fall (g≈9,81 m/s²), Reibung, Anwendung (Körper in Ruhe/Bewegung).
+
+**Ergänzend vertiefend:** Impuls; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt das 1. Newtonsche Gesetz?" → Kein Nettokraft → keine Zustandsänderung (Trägheit)
@@ -1294,6 +1304,8 @@ Warum bricht ein Knochen beim Sturz aus einer bestimmten Höhe? Warum überträg
 
 ## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
+**SVG-Hinweis (Energie, Impuls, Herzarbeit):** Ein Schema mit E_kin = ½mv², E_pot = mgh, Impuls p = mv, elastischem vs. inelastischem Stoß und Herzarbeit W = p·ΔV unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Formelschema.*
+
 Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem abgeschlossenen System konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung. Sie folgen aus fundamentalen Symmetrieprinzipien (Noether-Theorem): Energieerhaltung aus Zeitsymmetrie, Impulserhaltung aus Translationssymmetrie, Drehimpulserhaltung aus Rotationssymmetrie.
 
 ## Impuls und Impulserhaltung
@@ -1355,8 +1367,9 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Kinetische Energie E_kin = ½mv² (E~v²), potentielle Energie (Lage), Energieerhaltung, Arbeit W = F·s, Leistung P = W/t, Rollreibung.
+
+**Ergänzend vertiefend:** Elastische Stöße; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist E_kin bei doppelter Geschwindigkeit?" → 4-fach (E_kin ~ v²)
@@ -1535,6 +1548,8 @@ Warum braucht der Bizeps 700 N, um 10 kg zu heben? Warum kollabiert eine Koronar
 
 ## Statik, Druck und Hydrodynamik
 
+**SVG-Hinweis (Statik, Druck, Strömung):** Ein Schema mit Hebelgesetz (Drehmoment), hydrostatischem Druck p = ρgh, Bernoulli und Poiseuille (Q ∝ r⁴) unterstützt die Einordnung. *Typ: Übersicht / Schema.*
+
 Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
 ## Statik und Gleichgewichtsbedingungen
@@ -1596,8 +1611,9 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Poiseuille Q = π·r⁴·Δp/(8·η·l), Q ~ r⁴ (Radius dominierend), Viskosität η, laminare Strömung, Widerstand bei Rohr/ Gefäß (Klinik: Stenose).
+
+**Ergänzend vertiefend:** Reynolds-Zahl; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
@@ -1780,6 +1796,8 @@ Warum atrophieren Muskeln und Knochen im Weltraum? Warum trennt eine Zentrifuge 
 
 ## Gravitation und Rotation
 
+**SVG-Hinweis (Gravitation, Zentripetalkraft, Zentrifuge):** Ein Schema mit F_G = m·g, Zentripetalkraft F_z = m·v²/r, RCF (relative Zentrifugalkraft) und Schwerpunkt unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Gravitation und Rotation sind zwei der fundamentalsten Phänomene der Physik. Die Gravitation beschreibt die Anziehungskraft zwischen Massen, Rotation beschreibt die Kreisbewegung und die damit verbundenen Beschleunigungen und Kräfte. Beide sind in der Medizin präsent: von der Erdanziehung auf den menschlichen Körper (Blutverteilung, orthopädische Belastung) bis zur Zentrifugation in der Labormedizin.
 
 ## Newtonsches Gravitationsgesetz
@@ -1844,8 +1862,9 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Masse (kg, ortsunabhängig) vs. Gewichtskraft (F_G = m·g, ortsabhängig), g ≈ 9,81 m/s², Schwerelosigkeit, Auftrieb, Anwendung (Waage, Beschleunigung).
+
+**Ergänzend vertiefend:** Relativistische Masse; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist der Unterschied zwischen Masse und Gewichtskraft?" → Masse (kg): ortsunabhängig, Materieeigenschaft; Gewichtskraft (N) = m·g, ortsabhängig

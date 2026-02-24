@@ -59,6 +59,8 @@ Die Summe aller Teilschritte ergibt die Bildungsenthalpie: ΔHf(NaCl) = −411 k
 
 Je kleiner der Ionenradius und je höher die Ladung der Ionen, desto größer die Gitterenergie (Coulombsches Gesetz: E ∝ q₁·q₂/r).
 
+**SVG-Hinweis (Ionenbindung und Born-Haber):** Ein Schema mit Elektronenübertragung Na → Cl, NaCl-Gitter (Koordinationszahl 6) und den Schritten des Born-Haber-Kreisprozesses unterstützt Gitterenergie und Schmelzpunktvergleiche. *Typ: Schema / Kreisprozess.*
+
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
 | NaCl | −786 | 801 | Einfach geladen, mittlere Radien |
@@ -109,8 +111,9 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Ionenbindung (Gitterenergie E∝q₁q₂/r), Schmelzpunkt (MgO vs. NaCl), Ladung und Ionenradius, Born-Haber-Zyklus, typische Ionengitter.
+
+**Ergänzend vertiefend:** Gitterenthalpie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum hat MgO einen viel höheren Schmelzpunkt als NaCl?" → Mg²⁺ und O²⁻ sind doppelt geladen und kleiner → E ∝ q₁·q₂/r → 5× größere Gitterenergie (~3795 vs. 786 kJ/mol)
@@ -366,6 +369,8 @@ Wasser, CO₂, Glucose, DNA — all diese Moleküle werden durch **kovalente Bin
 
 ## Grundprinzip der kovalenten Bindung
 
+**SVG-Hinweis (Kovalente Bindung, VSEPR und Hybridisierung):** Ein Übersichtsschema mit Elektronenteilung, ΔEN-Bereichen (polar/unpolar/ionisch), VSEPR-Geometrien und sp³/sp²/sp-Hybridisierung unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
 Lewis-Schreibweise: Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2).
@@ -452,8 +457,9 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Polare vs. unpolare Moleküle (Dipolmoment μ), Geometrie (CO₂ linear → unpolar; H₂O gewinkelt → polar), Elektronegativitätsdifferenz, VSEPR.
+
+**Ergänzend vertiefend:** Molekülpolarität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Ist CO₂ polar oder unpolar?" → CO₂ hat polare C=O-Bindungen (ΔEN = 1,0), aber lineare Geometrie → Dipole heben sich auf → unpolar (μ = 0)
@@ -723,6 +729,8 @@ Warum siedet Wasser bei 100 °C, obwohl H₂S schon bei −60 °C siedet? Warum 
 
 ## Überblick: Zwischenmolekulare Kräfte
 
+**SVG-Hinweis (Intermolekulare Kräfte und H-Brücken):** Ein Vergleichsschema mit London, Dipol-Dipol, H-Brücken (D–H···A) und der Anomalie des Wassers (4 H-Brücken, Dichtemaximum 4 °C) macht die Abstufung und biologische Bedeutung auf einen Blick klar. *Typ: Vergleich / Übersicht.*
+
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen. Entscheidend ist die Unterscheidung: **Intramolekulare** Bindungen halten Atome im Molekül zusammen; **intermolekulare** Kräfte wirken zwischen Molekülen und bestimmen die makroskopischen Eigenschaften.
 
 > **Merke:** Intermolekulare Kräfte sind 10–100-fach schwächer als kovalente Bindungen, bestimmen aber Aggregatszustand, Siedepunkt und biologische Erkennung.
@@ -808,8 +816,9 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Zwischenmolekulare Kräfte (London-Dispersionskräfte, Dipol-Dipol, H-Brücken), Stärke und Reichweite, Siedepunkt-Abhängigkeit (Masse, Oberfläche).
+
+**Ergänzend vertiefend:** Van-der-Waals; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche intermolekularen Kräfte wirken zwischen unpolaren Molekülen wie Edelgasen?" → ausschließlich London-Dispersionskräfte (instantane Dipole)
@@ -1101,6 +1110,8 @@ Proteine falten sich in spezifische Strukturen, Enzyme erkennen genau ihr Substr
 
 ## Bindungstypen in Biomolekülen
 
+**SVG-Hinweis (Biomoleküle — Peptidbindung, glycosidische Bindung, hydrophober Effekt):** Ein Flussschema mit kovalenten (Peptid, glycosidisch, Ester, Disulfid) und nichtkovalenten Wechselwirkungen (H-Brücken, hydrophob, Salzbrücke) unterstützt die Einordnung von Proteinstruktur und DNA. *Typ: Flussschema / Übersicht.*
+
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 
 > **Merke:** Kovalente Bindungen = Gerüst (stabil); nichtkovalente Wechselwirkungen = Feineinstellung (flexibel, reversibel). Beide zusammen ergeben die biologische Funktion.
@@ -1201,8 +1212,9 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Kohlenhydrate (Monosaccharide, Disaccharide, Polysaccharide), α- vs. β-glycosidische Bindung, Stärke (α-1,4, Amylase) vs. Cellulose (β-1,4, keine menschliche Cellulase), Verdauung.
+
+**Ergänzend vertiefend:** Glykogen, Laktoseintoleranz; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum kann der Mensch Cellulose nicht verdauen, Stärke aber schon?" → Stärke: α-1,4-glycosidische Bindungen → spaltet α-Amylase; Cellulose: β-1,4 → kein menschliches Enzym (Cellulase)

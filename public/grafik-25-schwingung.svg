@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="100%">
+  <defs><style>.ax{stroke:#94a3b8;stroke-width:1}.curve{fill:none;stroke:#0e7490;stroke-width:2}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="240" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Harmonische Schwingung x(t), v(t)</text>
+  <path d="M40 80 L440 80" class="ax"/><path d="M40 80 L40 20 L440 20 L440 80" class="ax"/>
+  <path d="M40 50 Q120 20 200 50 Q280 80 360 50 Q440 20 440 50" class="curve"/>
+  <text x="240" y="98" text-anchor="middle" font-size="10" fill="#475569">x(t) Sinus. v(t) Kosinus (90 Grad verschoben). Nulldurchgang x = Maximal v.</text>
+  <rect x="40" y="112" width="400" height="40" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="240" y="130" text-anchor="middle" font-size="9" fill="#475569">T = 2pi sqrt(m/k) Feder; T = 2pi sqrt(l/g) Fadenpendel. Isochronie: T unabhaengig von A (Kleinwinkel).</text>
+</svg>

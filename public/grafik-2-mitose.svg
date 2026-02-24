@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 160" width="100%">
+  <defs><style>.box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#m)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="m" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="290" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Zellzyklus und Mitose-Phasen</text>
+  <rect x="12" y="36" width="72" height="32" class="box"/><text x="48" y="54" text-anchor="middle" class="l">G1</text>
+  <rect x="92" y="36" width="72" height="32" class="box"/><text x="128" y="54" text-anchor="middle" class="l">S (Replikation)</text>
+  <rect x="172" y="36" width="72" height="32" class="box"/><text x="208" y="54" text-anchor="middle" class="l">G2</text>
+  <rect x="252" y="36" width="68" height="32" class="box"/><text x="286" y="54" text-anchor="middle" class="l">Prophase</text>
+  <rect x="328" y="36" width="68" height="32" class="box"/><text x="362" y="54" text-anchor="middle" class="l">Metaphase</text>
+  <rect x="404" y="36" width="68" height="32" class="box"/><text x="438" y="54" text-anchor="middle" class="l">Anaphase</text>
+  <rect x="480" y="36" width="68" height="32" class="box"/><text x="514" y="54" text-anchor="middle" class="l">Telophase</text>
+  <path d="M84 52 L92 52" class="ar"/><path d="M164 52 L172 52" class="ar"/><path d="M244 52 L252 52" class="ar"/><path d="M320 52 L328 52" class="ar"/><path d="M396 52 L404 52" class="ar"/><path d="M472 52 L480 52" class="ar"/>
+  <text x="48" y="92" text-anchor="middle" font-size="9" fill="#475569">Wachstum</text>
+  <text x="128" y="92" text-anchor="middle" font-size="9" fill="#475569">2n->4n</text>
+  <text x="208" y="92" text-anchor="middle" font-size="9" fill="#475569">Vorbereitung</text>
+  <text x="286" y="92" text-anchor="middle" font-size="9" fill="#475569">Kernmembran weg</text>
+  <text x="362" y="92" text-anchor="middle" font-size="9" fill="#475569">Aquator</text>
+  <text x="438" y="92" text-anchor="middle" font-size="9" fill="#475569">Chromosomen getrennt</text>
+  <text x="514" y="92" text-anchor="middle" font-size="9" fill="#475569">2 Tochterzellen</text>
+  <rect x="12" y="112" width="536" height="36" fill="#fef3c7" stroke="#b45309" stroke-width="1" rx="4"/>
+  <text x="280" y="130" text-anchor="middle" font-size="10" fill="#92400e">Merke: Mitose = 4 Phasen (P-M-A-T), gleiche Chromosomenzahl 2n. Meiose = Reduktion 2n->n.</text>
+</svg>

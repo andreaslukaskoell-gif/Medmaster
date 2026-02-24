@@ -32,6 +32,8 @@ Was hält Ionenkanäle in der Nervenmembran offen? Was treibt Elektrophorese an?
 
 ## Elektrische Ladung
 
+**SVG-Hinweis (Ladung, Coulomb, elektrisches Feld):** Ein Schema mit Elementarladung e, Coulomb-Kraft F ∝ q₁q₂/r², Feldlinien und Plattenkondensator unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
 
 Die kleinste frei vorkommende Ladung ist die **Elementarladung** e = 1,602 × 10⁻¹⁹ C. Alle beobachtbaren Ladungen sind ganzzahlige Vielfache davon — dieses Prinzip nennt man **Ladungsquantisierung**. Die SI-Einheit der Ladung ist das **Coulomb (C)**; 1 C entspricht der Ladung von ca. 6,24 × 10¹⁸ Elektronen. Das **Ladungserhaltungsgesetz** besagt: In einem abgeschlossenen System bleibt die Gesamtladung konstant. Ladung kann weder erzeugt noch vernichtet, sondern nur getrennt oder übertragen werden.
@@ -97,8 +99,9 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Coulombkraft F ~ 1/r², elektrische Ladung (e, C), Feldstärke E = F/q, Potential, Spannung U = Arbeit pro Ladung, Kondensator (Q = C·U).
+
+**Ergänzend vertiefend:** Dipol; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
@@ -302,6 +305,8 @@ Ein Stromschlag kann töten, ein Defibrillator kann Leben retten — beides ist 
 
 ## Elektrischer Strom
 
+**SVG-Hinweis (Strom, Ohm, Joule-Wärme):** Ein Schema mit I = ΔQ/Δt, U = R·I, P = U·I und Temperaturabhängigkeit des Widerstands unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
 
 **I = ΔQ / Δt** [A = C/s]
@@ -383,8 +388,9 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Ohm U = R·I, Widerstand R = ρ·l/A, Stromgefahr (ab ~100 mA Kammerflimmern), Leistung P = U·I, Reihen-/Parallelschaltung (R_seriell = R₁+R₂, 1/R_parallel = 1/R₁+1/R₂).
+
+**Ergänzend vertiefend:** Kirchhoff; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
@@ -587,6 +593,8 @@ Wie schließt man Lampen in einer Lichterkette so, dass nicht alle ausgehen, wen
 
 ## Grundlegende Schaltungstypen
 
+**SVG-Hinweis (Reihen-/Parallelschaltung, Kirchhoff, RC):** Ein Schema mit R_ges Reihe/Parallel, Knoten- und Maschenregel sowie RC-Zeitkonstante unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
 
 **Reihenschaltung von Widerständen:**
@@ -671,8 +679,9 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Reihenschaltung (R_ges = R₁+R₂, gleicher I), Parallelschaltung (1/R_ges = 1/R₁+1/R₂, gleiche U), Spannungsteiler, Stromteiler, Anwendung (Messgeräte).
+
+**Ergänzend vertiefend:** Kapazität in Reihe/Parallel; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie berechnet man den Gesamtwiderstand bei Parallelschaltung?" → 1/R_ges = 1/R₁ + 1/R₂ + ... (immer kleiner als kleinster Einzelwert)
@@ -858,6 +867,8 @@ Das MRT-Gerät im Krankenhaus nutzt ein Magnetfeld von 1,5–7 Tesla — hundert
 
 ## Grundlagen des Magnetismus
 
+**SVG-Hinweis (Magnetfeld, Lorentz, Faraday, MRT):** Ein Schema mit B-Feld, Lorentz-Kraft F = q(v×B), Induktion und Larmor-Frequenz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
 
 **Magnetische Materialien:**
@@ -933,8 +944,9 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Magnetfeld B, Lorentzkraft (F = q·v·B senkrecht), Larmor-Frequenz f_L = γ·B (MRT: 42,58 MHz/T), Kernspin, Anwendung MRT (Radiowellen, 1,5 T ≈ 64 MHz).
+
+**Ergänzend vertiefend:** T1/T2-Kontrast; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Frequenz hat das MRT-Anregungssignal bei 1,5 T?" → f_L = 42,58 × 1,5 ≈ 64 MHz (Radiowellenbereich)
@@ -1138,6 +1150,8 @@ Eine Brille korrigiert Fehlsichtigkeit — aber wie? Ein Endoskop leitet Licht d
 
 ## Reflexionsgesetz
 
+**SVG-Hinweis (Reflexion, Snellius, Totalreflexion, Linsen):** Ein Schema mit Einfall = Ausfall, n₁·sin α₁ = n₂·sin α₂, Grenzwinkel und Brechkraft D unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
 
 > **Einfallswinkel α₁ = Ausfallswinkel α₂**
@@ -1226,8 +1240,9 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Brechung (Snellius n₁·sin α = n₂·sin β), Brechzahl n, Totalreflexion (sin α_G = n₂/n₁), Grenzwinkel, Anwendung (Lichtleiter, Endoskopie).
+
+**Ergänzend vertiefend:** Dispersion; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist der Grenzwinkel für Totalreflexion bei Glas (n=1,5) → Luft (n=1)?" → sin α_G = 1/1,5 → α_G ≈ 41,8°
@@ -1428,6 +1443,8 @@ Warum kann ein Lichtmikroskop keine Strukturen kleiner als ~200 nm auflösen? Wa
 
 ## Licht als elektromagnetische Welle
 
+**SVG-Hinweis (Interferenz, Beugung, Abbe):** Ein Schema mit Gangunterschied n·λ / (n+½)·λ, Doppelspalt und Auflösungsgrenze d_min ≈ λ/(2·NA) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
 - **Wellenlänge λ**: räumlicher Abstand zwischen zwei Wellenbergen
 - **Frequenz f**: zeitliche Schwingungsfrequenz
@@ -1512,8 +1529,9 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Auflösungsgrenze d_min ≈ λ/(2·NA), numerische Apertur NA, Beugungsbegrenzung, Vergrößerung vs. Auflösung, Mikroskop (Objektiv, Okular).
+
+**Ergänzend vertiefend:** Auflösung Auge; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist die Auflösungsgrenze eines Mikroskops mit NA = 1,3 bei λ = 520 nm?" → d_min = 520/(2·1,3) = 200 nm
@@ -1703,6 +1721,8 @@ Ohne Lupe kann ein Dermatologe keine Melanommerkmale (ABCDE) erkennen. Ohne Mikr
 
 ## Lupe
 
+**SVG-Hinweis (Lupe, Mikroskop, Vergrößerung):** Ein Schema mit Lupenvergrößerung M = S/f, Mikroskop M_ges = M_ob×M_ok und Auflösungsgrenze unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Die Lupe ist die einfachste Sehhilfe – eine einzelne Sammellinse. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt nahe am Brennpunkt, entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
 
 **Vergrößerung der Lupe:**
@@ -1791,8 +1811,9 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Linse (Brennweite f, Brechkraft D = 1/f in dpt), Lupe (Vergrößerung M = 25 cm/f), Abbildungsgleichung 1/f = 1/g + 1/b, reelles/virtuelles Bild.
+
+**Ergänzend vertiefend:** Linsenfehler; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Vergrößerung hat eine Lupe mit f = 5 cm?" → M = 25/5 = 5-fach
@@ -1982,6 +2003,8 @@ Weltweit sind Milliarden Menschen kurzsichtig — Myopie ist die häufigste Fehl
 
 ## Anatomie und Optik des normalen Auges
 
+**SVG-Hinweis (Auge, Akkommodation, Fehlsichtigkeit):** Ein Schema mit Brechkraft ~60 dpt, Myopie/Hyperopie/Presbyopie und Korrektionslinsen unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Das Auge besteht optisch aus mehreren brechenden Flächen:
 - **Hornhaut (Kornea)**: liefert etwa 2/3 der gesamten Brechkraft (~43 dpt). Ihre stark gewölbte Vorderfläche ist der Hauptbrechungsort.
 - **Kammerwasser**: füllt die Vorderkammer
@@ -2080,8 +2103,9 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Auge (Akkommodation, Nahpunkt), Myopie (Auge zu lang → Zerstreuungslinse, negativ D), Hyperopie (Sammellinse), Presbyopie (Alterssichtigkeit), Brechkraft in dpt.
+
+**Ergänzend vertiefend:** Astigmatismus; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Brille korrigiert Myopie?" → Zerstreuungslinse (negatives D); Myopie = Auge zu lang

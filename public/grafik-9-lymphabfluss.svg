@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="100%">
+  <defs><style>.box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#hl)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="hl" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="240" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Lymphabfluss: Ductus thoracicus</text>
+  <rect x="20" y="44" width="120" height="32" class="box"/><text x="80" y="62" text-anchor="middle" class="l">Koerper unten/links</text>
+  <rect x="156" y="44" width="140" height="32" class="box"/><text x="226" y="62" text-anchor="middle" class="l">Ductus thoracicus</text>
+  <rect x="312" y="44" width="148" height="32" class="box"/><text x="386" y="62" text-anchor="middle" class="l">linke V. subclavia</text>
+  <path d="M140 60 L156 60" class="ar"/><path d="M296 60 L312 60" class="ar"/>
+  <rect x="256" y="92" width="160" height="32" class="box"/><text x="336" y="108" text-anchor="middle" class="l">rechts oben: Ductus lymphaticus dexter</text>
+  <text x="336" y="124" text-anchor="middle" font-size="9" fill="#475569">-> rechte V. subclavia</text>
+  <rect x="20" y="132" width="440" height="24" fill="#fef3c7" stroke="#b45309" stroke-width="1" rx="4"/>
+  <text x="240" y="148" text-anchor="middle" font-size="10" fill="#92400e">~75% der Lymphe ueber Ductus thoracicus (linke Seite + untere Koerperhaelfte).</text>
+</svg>

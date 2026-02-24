@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%">
+  <defs><style>.wave{fill:none;stroke:#0e7490;stroke-width:2}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="240" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Welle: Lambda, Amplitude, c</text>
+  <path d="M20 70 Q70 40 120 70 Q170 100 220 70 Q270 40 320 70 Q370 100 420 70 L460 70" class="wave"/>
+  <line x1="120" y1="70" x2="320" y2="70" stroke="#b45309" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="220" y1="70" x2="220" y2="40" stroke="#b45309" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="220" y="35" text-anchor="middle" font-size="10" fill="#b45309">A</text>
+  <text x="220" y="92" text-anchor="middle" font-size="10" fill="#475569">lambda</text>
+  <rect x="20" y="100" width="440" height="32" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="240" y="118" text-anchor="middle" font-size="9" fill="#475569">c = lambda * f. lambda = Wellenlaenge, A = Amplitude, c = Ausbreitungsgeschwindigkeit.</text>
+</svg>

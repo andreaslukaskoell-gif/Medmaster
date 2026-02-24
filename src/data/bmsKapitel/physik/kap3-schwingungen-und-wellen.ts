@@ -31,6 +31,8 @@ export const physKap3: Kapitel = {
 
 Pendel in einer Standuhr, Stimmgabel beim Stimmen eines Instruments, Herzschlag im EKG — all das sind periodische Schwingungen. Das Grundmodell dahinter ist die **harmonische Schwingung**: eine hin-und-hergehende Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist. Dieses Prinzip steckt auch im MRT (Protonenresonanz), in Ultraschallköpfen (Piezokristall) und im Innenohr. Für den MedAT sind Amplitude, Frequenz, Periodendauer, Kreisfrequenz, Resonanz und Dämpfung prüfungsrelevant.
 
+**SVG-Hinweis (Harmonische Schwingung — x(t), ω, Faden- und Federpendel):** Ein Schema mit x(t) = A·cos(ωt+φ), T = 2π√(l/g) bzw. T = 2π√(m/k), Resonanz und Dämpfung unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
 **x(t) = A · cos(ωt + φ₀)**
@@ -141,8 +143,9 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Harmonische Schwingung, Fadenpendel T = 2π√(l/g), Federpendel T = 2π√(m/D), T unabhängig von Amplitude (ungedämpft), Frequenz f = 1/T.
+
+**Ergänzend vertiefend:** Gedämpfte Schwingung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
@@ -364,6 +367,8 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind Wellen. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an, dieser seinen Nachbarn — so pflanzt sich die Störung fort. Ob Schall im Körper oder elektromagnetische Strahlung in der Bildgebung: Die Wellengleichung c = f·λ und die Unterscheidung von Transversal- und Longitudinalwellen sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
 
+**SVG-Hinweis (Wellen — c = f·λ, Transversal vs. Longitudinal, EM-Spektrum):** Ein Schema mit Wellengleichung, Schwingungsrichtung, Schallgeschwindigkeiten und EM-Bereichen unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 ## Grundgrößen der Welle
@@ -486,8 +491,9 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Wellengrößen (λ, f, c = λ·f), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
+
+**Ergänzend vertiefend:** Stehende Welle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
@@ -717,6 +723,8 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken Wellenphänomene: Doppler-Effekt, Totalreflexion und Interferenz. Diese Phänomene sind keine Theorie-Kuriosität — sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Anwendung in der Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
 
+**SVG-Hinweis (Interferenz, Doppler, Totalreflexion):** Ein Schema mit Gangunterschied n·λ / (n+½)·λ, Doppler-Formel und Snellius/Totalreflexion unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
 ## Überlagerung und Interferenz
@@ -834,8 +842,9 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Interferenz (konstruktiv Δs = n·λ, destruktiv Δs = (n+½)λ), Kohärenz, Beugung, Doppelspalt, Anwendung (Röntgenbeugung, Ultraschall).
+
+**Ergänzend vertiefend:** Huygens-Prinzip; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
@@ -1060,6 +1069,8 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist Akustik direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
 
+**SVG-Hinweis (Dezibel, Cochlea, Tonotopie):** Ein Schema mit L = 20·log(p/p₀), +3 dB / +6 dB-Regel, Cochlea-Querschnitt und Tonotopie (Basis = hohe Frequenzen) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
 ## Schallpegel und die Dezibel-Skala
@@ -1158,8 +1169,9 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Schall (Longitudinalwelle), Dezibel (dB = 10·log(I/I₀)), Verdopplung I → +3 dB, Hörschwelle, Schmerzgrenze, Ultraschall (Diagnostik), Dopplersonographie.
+
+**Ergänzend vertiefend:** Schallgeschwindigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)

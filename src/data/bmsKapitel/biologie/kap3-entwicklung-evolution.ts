@@ -68,8 +68,9 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Befruchtung (Ampulle Eileiter), Polyspermie-Verhinderung (Kortikalreaktion), Kapazitation, Akrosomreaktion, Zygote, Furchung, Blastozyste.
+
+**Ergänzend vertiefend:** Eizellreifung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Wo findet die Befruchtung statt? (Ampulle des Eileiters)
@@ -290,8 +291,9 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Keimblätter (Ektoderm: Haut, Nervensystem; Mesoderm: Muskulatur, Skelett, Herz, Niere; Entoderm: Darm, Leber, Lunge), Neurulation, Neuralrohr, Organanlage.
+
+**Ergänzend vertiefend:** Neuralleiste; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Aus welchem Keimblatt entstehen Gehirn und Rückenmark? (Ektoderm, via Neurulation)
@@ -498,8 +500,9 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene (kritische Phasen), Organogenese.
+
+**Ergänzend vertiefend:** Plazenta; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Wann endet die Embryonalperiode? (Nach Woche 8, alle Organe angelegt)
@@ -698,8 +701,9 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Plazenta, Nabelvene (sauerstoffreiches Blut zum Fötus), Nabelarterien (verbrauchtes Blut zurück), Ductus venosus/arteriosus/ovale, IgG-Transfer (FcRn), fetale Kreislaufanpassungen.
+
+**Ergänzend vertiefend:** Shunt-Umstellung bei Geburt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus)
@@ -919,8 +923,9 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Ursprung des Lebens (Miller-Urey: abiotische Aminosäure-Synthese), RNA-Welt-Hypothese (RNA als Katalysator + Speicher), chemische Evolution, erste Zellen.
+
+**Ergänzend vertiefend:** Endosymbiontentheorie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen)
@@ -1142,8 +1147,9 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Homologie (gemeinsamer Ursprung) vs. Analogie (konvergente Evolution), Clade (monophyletische Gruppe), phylogenetischer Baum, Synapomorphie, Konvergenz.
+
+**Ergänzend vertiefend:** Paraphylie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution)
@@ -1371,8 +1377,9 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Natürliche Selektion (Variation, Erblichkeit, Überproduktion, differentielle Reproduktion), Fitness (reproduktiver Erfolg), Adaptation, Selektionsdruck.
+
+**Ergänzend vertiefend:** Sexuelle Selektion; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was sind Darwins vier Voraussetzungen für natürliche Selektion? (Variation, Erblichkeit, Überproduktion, Differentialreproduktion)
@@ -1598,8 +1605,9 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Biologischer Artbegriff (Reproduktionsgemeinschaft, reproduktive Isolation), prä-/postzygotische Isolation (Maultier: Hybridsterilität), Artbildung (allopatrisch, sympatrisch).
+
+**Ergänzend vertiefend:** Ringarten; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation)
@@ -1820,8 +1828,9 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss), Gendrift (kleine Populationen, zufällige Änderung), Hardy-Weinberg (p²+2pq+q²=1), Gründer- und Flaschenhalseffekt.
+
+**Ergänzend vertiefend:** Selektionstypen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift)
@@ -2035,8 +2044,9 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Homininen (Australopithecus → H. habilis → H. erectus → H. sapiens), Bipedie vor Gehirnvergrößerung, Werkzeuggebrauch, Out-of-Africa, menschliche Evolution.
+
+**Ergänzend vertiefend:** Neandertaler; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - In welcher Reihenfolge erschienen die Homininen? (Australopithecus → H. habilis → H. erectus → H. sapiens)

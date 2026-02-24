@@ -55,6 +55,8 @@ Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen g
 | Substitution | A + BC → AC + B | CH₃Br + OH⁻ → CH₃OH + Br⁻ | Transaminierung (ALT, AST) |
 | Metathese | AB + CD → AD + CB | NaCl + AgNO₃ → AgCl↓ + NaNO₃ | CaC₂O₄-Fällung bei Nierensteinen |
 
+**SVG-Hinweis (Reaktionstypen und OIL RIG):** Ein Übersichtsschema mit den vier Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) und der Abgrenzung Säure-Base (H⁺) vs. Redox (e⁻) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 **1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
 Allgemein: A + B → AB
 Beispiel: 2 Na + Cl₂ → 2 NaCl (Natriumchlorid-Bildung)
@@ -135,8 +137,9 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Reaktionstypen (Säure-Base = H⁺-Transfer, Redox = e⁻-Transfer OIL RIG), Stöchiometrie, Reaktionsgleichungen ausgleichen, Aktivierungsenergie, Katalysator.
+
+**Ergänzend vertiefend:** Oxidationszahlen, Redoxpaare; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Was ist der Unterschied zwischen Säure-Base- und Redoxreaktion?" → Säure-Base = H⁺-Transfer; Redox = e⁻-Transfer (OIL RIG)
@@ -386,6 +389,8 @@ Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen 
 
 Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
+**SVG-Hinweis (Reaktionsgeschwindigkeit und Ordnungen):** Ein Schema mit v = k·[A]ⁿ, Konzentrations-Zeit-Kurven (0./1./2. Ordnung) und einem Energieprofil (E_A, mit/ohne Katalysator) unterstützt die Kinetik und Michaelis-Menten-Vorstellung. *Typ: Schema / Energieprofil + Kurven.*
+
 > **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
 
 ## Das Geschwindigkeitsgesetz
@@ -467,8 +472,9 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Reaktionskinetik (0., 1., 2. Ordnung), Halbwertszeit t₁/₂ = ln2/k bei 1. Ordnung (konzentrationsunabhängig), Geschwindigkeitskonstante k, Arrhenius-Gleichung.
+
+**Ergänzend vertiefend:** Reaktionsordnung aus Experiment; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Wie berechnet man t₁/₂ bei 1. Ordnung?" → t₁/₂ = ln 2 / k ≈ 0,693/k — konzentrationsunabhängig
@@ -705,6 +711,8 @@ Wie viel Sauerstoff braucht der Körper, um 1 g Glukose zu verbrennen? Wie viel 
 
 Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält. Die Stöchiometrie ist das mathematische Fundament der Chemie und essenziell für Dosierungen in der Medizin.
 
+**SVG-Hinweis (Stöchiometrie — Mol-Verhältnisse und Bilanzierung):** Ein Flussschema (Edukte → Koeffizienten → Produkte) mit n = m/M und Mangelreagenz-Logik unterstützt Rechenaufgaben und die Prüfungsvorbereitung. *Typ: Flussschema / Übersicht.*
+
 > **Merke:** Stöchiometrische Koeffizienten geben Mol-Verhältnisse an, NICHT Massenverhältnisse! Die Grundformeln: n = m/M, m = n × M, c = n/V.
 
 **Grundprinzip:** Die stöchiometrischen Koeffizienten geben die Mol-Verhältnisse an.
@@ -805,8 +813,9 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in F
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Stöchiometrie (Mol-Verhältnisse aus Koeffizienten), limitierender Reaktand (Mangelreagenz: n/Koeffizient minimal), theoretische und prozentuale Ausbeute, Überschuss.
+
+**Ergänzend vertiefend:** Umsatz, Selektivität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Wie findet man das Mangelreagenz?" → n/Koeffizient für jedes Edukt berechnen → kleinster Quotient = Mangelreagenz → Ausbeute nur daraus berechnen
@@ -1033,6 +1042,8 @@ Wichtig: Im Gleichgewicht sind die Konzentrationen der Stoffe **konstant, aber n
 
 > **Merke:** Dynamisches Gleichgewicht ≠ statischer Stillstand. Konzentrationen ändern sich netto nicht, aber auf molekularer Ebene herrscht rege Aktivität.
 
+**SVG-Hinweis (Massenwirkungsgesetz und Le Chatelier):** Ein Schema mit Kc = [C]^c·[D]^d/([A]^a·[B]^b) und den drei Störgrößen (Konzentration, Druck, Temperatur) mit Verschiebungsrichtung macht MWG und Le Chatelier auf einen Blick klar. *Typ: Übersicht / Formelschema.*
+
 ## Massenwirkungsgesetz (MWG)
 
 Für die allgemeine Reaktion **aA + bB ⇌ cC + dD** gilt:
@@ -1133,8 +1144,9 @@ Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Chemisches Gleichgewicht (K = Konstante, Q = Reaktionsquotient), Katalysator ändert nur Einstellgeschwindigkeit (nicht K), Le Chatelier (Konzentration, Druck, Temperatur), Gleichgewichtslage.
+
+**Ergänzend vertiefend:** Homogen vs. heterogen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Was ändert ein Katalysator am Gleichgewicht?" → Nichts — K und Gleichgewichtslage bleiben gleich, nur die Einstellungsgeschwindigkeit steigt
@@ -1409,6 +1421,8 @@ Das erklärt den erhöhten Kalorienverbrauch, die Tachykardie und die Tachypnoe 
 
 Damit eine Reaktion ablaufen kann, müssen die Reaktionspartner die **Aktivierungsenergie E_A** aufbringen. Diese entspricht der Energiebarriere im Reaktionskoordinatendiagramm, die Moleküle überwinden müssen, um vom Edukt- in den Übergangszustand (Aktivierungskomplex) und von dort in den Produktzustand zu gelangen.
 
+**SVG-Hinweis (Aktivierungsenergie und Arrhenius):** Ein Energieprofil (Edukt → E_A → Übergangszustand → Produkt) mit exotherm/endotherm und der Wirkung eines Katalysators (gesenkte E_A) macht E_A ≠ ΔH und Arrhenius auf einen Blick klar. *Typ: Energieprofil / Schema.*
+
 Die **Arrhenius-Gleichung** beschreibt den quantitativen Zusammenhang:
 
 **k = A · e^(−E_A / RT)**
@@ -1453,8 +1467,9 @@ Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Aktivierungsenergie E_A (Energiebarriere zum Übergangszustand), E_A ≠ ΔH, Katalysator senkt E_A (nicht ΔH), Arrhenius, Reaktionskoordinate, exotherm/endotherm.
+
+**Ergänzend vertiefend:** Übergangszustand, Kollisionstheorie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Was ist die Aktivierungsenergie E_A?" → Energiebarriere zum Übergangszustand — nicht identisch mit ΔH!
@@ -1722,6 +1737,8 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 > **Merke:** Dynamisches Gleichgewicht = v_hin = v_rück. Konzentrationen sind konstant (aber nicht gleich!). Beide Reaktionsrichtungen laufen weiterhin ab.
 
+**SVG-Hinweis (Dynamisches Gleichgewicht und MWG):** Ein Schema mit A + B ⇌ C + D, K_c = [C]^c·[D]^d/([A]^a·[B]^b) und Q vs. K_c (Q < K → Hinreaktion) unterstützt die Vorstellung und Prüfungsfragen. *Typ: Formelschema / Übersicht.*
+
 **Zeitlicher Verlauf bis zum Gleichgewicht:**
 - Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
 - Verlauf: [Edukte] sinkt, [Produkte] steigt → v_hin sinkt, v_rück steigt
@@ -1792,8 +1809,9 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Massenwirkungsgesetz (K_c, K_p), Reaktionsquotient Q (Q < K → Hinreaktion, Q > K → Rückreaktion, Q = K → Gleichgewicht), Gleichgewichtskonstante temperaturabhängig.
+
+**Ergänzend vertiefend:** K_c vs. K_p; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Was bedeutet Q < Kc?" → Reaktion läuft vorwärts (Hinreaktion überwiegt) — System ist noch nicht im Gleichgewicht
@@ -2054,6 +2072,8 @@ Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) laut
 
 Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — es erlaubt qualitative Vorhersagen über die Verschiebung von Gleichgewichten ohne aufwendige Berechnungen.
 
+**SVG-Hinweis (Le Chatelier — drei Störgrößen):** Ein Übersichtsschema mit Konzentration (Edukt ↑ → Produkte), Druck (Δn, mehr/weniger Gas) und Temperatur (exotherm/endotherm) mit Verschiebungsrichtung festigt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 ## Konzentration als Störgröße
 
 **Erhöhung der Eduktkonzentration:** Das System reagiert durch verstärkte Hinreaktion — mehr Produkte entstehen. Das Gleichgewicht verschiebt sich zur Produktseite.
@@ -2114,8 +2134,9 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Le Chatelier: Konzentration/Druck ändern Q (Verschiebung), Temperatur ändert K selbst; exotherme Reaktion → T↑ verschiebt nach links, endotherm → T↑ nach rechts.
+
+**Ergänzend vertiefend:** K_p bei Gasen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Was ist der Unterschied zwischen Temperatur- und Konzentrationseffekt auf das Gleichgewicht?" → Konzentration/Druck ändern Q (nicht K); Temperatur ändert K selbst!
@@ -2364,6 +2385,8 @@ Für konjugierte Säure-Base-Paare gilt:
 
 **pK_a + pK_b = 14 (bei 25 °C)**
 
+**SVG-Hinweis (Säure-Base und Henderson-Hasselbalch):** Ein Schema mit HA ⇌ H⁺ + A⁻, pH = pK_a + log([A⁻]/[HA]) und dem Carbonat-Puffer CO₂/HCO₃⁻ unterstützt pH-Berechnungen und Pufferkapazität. *Typ: Formelschema / Puffer.*
+
 ## Der pH-Wert und das Ionenprodukt des Wassers
 
 Wasser dissoziiert autoprotolytisch:
@@ -2459,8 +2482,9 @@ Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre,
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Puffer (schwache Säure + konjugierte Base), Henderson-Hasselbalch pH = pK_a + log([A⁻]/[HA]), Pufferoptimum bei [A⁻]=[HA] → pH=pK_a, Pufferkapazität, Titration.
+
+**Ergänzend vertiefend:** Indikator, Äquivalenzpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - „Wie berechnet man pH mit Henderson-Hasselbalch?" → pH = pKa + log([A⁻]/[HA]); Pufferoptimum bei [A⁻] = [HA] → log(1) = 0 → pH = pKa

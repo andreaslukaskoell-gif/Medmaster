@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%">
+  <defs>
+    <style>
+      .box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1.2;rx:4}
+      .box-end{fill:#fef3c7;stroke:#b45309;stroke-width:1.2;rx:4}
+      .arrow{stroke:#0e7490;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .label{font:12px system-ui,sans-serif;fill:#1e293b}
+      .small{font:10px system-ui,sans-serif;fill:#475569}
+      .title{font:600 14px system-ui,sans-serif;fill:#0f172a}
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#0e7490"/>
+    </marker>
+  </defs>
+  <text x="360" y="24" text-anchor="middle" class="title">Transduktion: Ein Prinzip fuer alle Sinne</text>
+  <text x="360" y="40" text-anchor="middle" class="small">Reiz wird in elektrisches Signal umgewandelt (gleiche Kette, anderer Rezeptor)</text>
+  <rect x="20" y="72" width="88" height="44" class="box"/>
+  <text x="64" y="97" text-anchor="middle" class="label">Reiz</text>
+  <rect x="128" y="72" width="88" height="44" class="box"/>
+  <text x="172" y="97" text-anchor="middle" class="label">Rezeptor</text>
+  <rect x="236" y="72" width="88" height="44" class="box"/>
+  <text x="280" y="97" text-anchor="middle" class="label">Ionenkanal</text>
+  <rect x="344" y="72" width="88" height="44" class="box"/>
+  <text x="388" y="97" text-anchor="middle" class="label">Membranpotential</text>
+  <rect x="452" y="72" width="88" height="44" class="box"/>
+  <text x="496" y="97" text-anchor="middle" class="label">Aktionspotential</text>
+  <rect x="560" y="72" width="140" height="44" class="box-end"/>
+  <text x="630" y="97" text-anchor="middle" class="label">ZNS / Gehirn</text>
+  <path d="M108 94 L128 94" class="arrow"/>
+  <path d="M216 94 L236 94" class="arrow"/>
+  <path d="M324 94 L344 94" class="arrow"/>
+  <path d="M432 94 L452 94" class="arrow"/>
+  <path d="M540 94 L560 94" class="arrow"/>
+  <text x="360" y="148" text-anchor="middle" class="small">Reiz je nach Sinnesorgan:</text>
+  <rect x="40" y="162" width="100" height="36" fill="#f0fdf4" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="90" y="182" text-anchor="middle" class="label">Auge: Licht</text>
+  <rect x="160" y="162" width="100" height="36" fill="#f0fdf4" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="210" y="182" text-anchor="middle" class="label">Ohr: Schall</text>
+  <rect x="280" y="162" width="100" height="36" fill="#f0fdf4" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="330" y="182" text-anchor="middle" class="label">Geruch: Molekuele</text>
+  <rect x="400" y="162" width="100" height="36" fill="#f0fdf4" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="450" y="182" text-anchor="middle" class="label">Geschmack: 5 Qual.</text>
+  <rect x="520" y="162" width="100" height="36" fill="#f0fdf4" stroke="#15803d" stroke-width="1" rx="4"/>
+  <text x="570" y="182" text-anchor="middle" class="label">Haut: Druck/Temp</text>
+  <rect x="40" y="218" width="640" height="42" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="360" y="238" text-anchor="middle" class="small">Merke: Immer dieselbe Kette. Nur Rezeptor und Reiz sind organspezifisch.</text>
+  <text x="360" y="252" text-anchor="middle" class="small">MedAT: Transduktion = Reiz zu AP. Auge: Licht -&gt; cGMP -&gt; Kanal zu -&gt; Hyperpolarisation.</text>
+  <text x="40" y="288" class="small">Blau: Prozess  |  Gelb: Ergebnis  |  Gruen: Reiz pro Organ</text>
+</svg>

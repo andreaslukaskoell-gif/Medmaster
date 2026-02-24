@@ -34,6 +34,8 @@ Warum leuchten Neonröhren orange-rot? Warum misst die Pulsoximetrie mit zwei be
 
 ## Entwicklung der Atommodelle
 
+**SVG-Hinweis (Atommodelle, Spektrallinien, Lambert-Beer):** Ein Schema mit Bohr-Modell, E = hf = hc/λ, Emissions-/Absorptionsspektrum und Lambert-Beer-Gesetz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
 Das **Rutherfordsche Kernmodell** (1911) folgte aus dem berühmten Streuexperiment: Alpha-Teilchen (⁴He²⁺, E ≈ 5 MeV) wurden an einer dünnen Goldfolie (wenige μm) gestreut. Die meisten Teilchen passierten nahezu ungehindert, doch etwa 1 von 8 000 wurde unter Winkeln > 90° zurückgeworfen. Rutherford schloss auf einen winzigen, massereichen, positiv geladenen Kern (Radius ≈ 10⁻¹⁵ m = 1 fm) umgeben von einer weitgehend leeren Elektronenhülle (Radius ≈ 10⁻¹⁰ m = 1 Å). Der Kern enthält damit > 99,9 % der Atommasse auf nur 10⁻¹⁵ des Volumens. Nachteil: Ein spiralförmig in den Kern fallendes Elektron würde nach der klassischen Elektrodynamik kontinuierlich Energie abstrahlen – das Atom wäre instabil (Kollapsproblem innerhalb von ≈ 10⁻¹¹ s).
@@ -113,8 +115,9 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Wasserstoff-Spektrum (Lyman UV, Balmer sichtbar, Paschen IR), Hα 656 nm (n=3→2), Energieniveaus E_n ~ 1/n², Photon E = h·f, Rydberg.
+
+**Ergänzend vertiefend:** Feinstruktur; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
@@ -309,6 +312,8 @@ Radioaktive Strahlung ist unsichtbar, aber messbar — und in der Medizin sowohl
 
 ## Alpha-Strahlung (α)
 
+**SVG-Hinweis (α/β/γ-Strahlung, Zerfallsgesetz, Halbwertszeit):** Ein Schema mit Reichweite, Abschirmung, N(t) = N₀·e^(-λt), Aktivität und Sievert unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
 
 Beim α-Zerfall gilt:
@@ -416,8 +421,9 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Radioaktiver Zerfall (α Z−2 A−4, β⁻ Z+1, β⁺ Z−1, γ unverändert), Halbwertszeit, Aktivität, Strahlenschutz, Anwendung (PET, Szintigraphie, Therapie).
+
+**Ergänzend vertiefend:** Bindungsenergie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
@@ -617,6 +623,8 @@ Röntgenstrahlung durchdringt Gewebe — härteres Gewebe absorbiert mehr, weich
 
 ## Entstehung von Röntgenstrahlung
 
+**SVG-Hinweis (Röntgen, Brems-/charakteristische Strahlung, Schwächung):** Ein Schema mit Röntgenröhre, Photoeffekt/Compton und exponentiellem Schwächungsgesetz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
 **1. Bremsstrahlung:** Die Elektronen werden im Coulomb-Feld der Atome abgebremst. Die dabei abgegebene kinetische Energie wird als Photon emittiert. Es entsteht ein kontinuierliches Spektrum mit einer minimalen Wellenlänge λ_min = hc/(e·U), entsprechend der maximalen Photonenenergie E_max = e·U. Mit U = 100 kV ergibt sich E_max = 100 keV.
@@ -702,8 +710,9 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Röntgen: Bremsstrahlung (kontinuierlich, Abbremsung e⁻), charakteristische Strahlung (diskrete Linien, Schalenübergänge), Kα/Kβ, Anwendung (Diagnostik, CT).
+
+**Ergänzend vertiefend:** Absorptionskante; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist Bremsstrahlung vs. charakteristische Strahlung?" → Bremsstrahlung: kontinuierliches Spektrum (Abbremsung im Coulomb-Feld); charakteristische Strahlung: diskrete Linien (elementspezifische Schalenübergänge)
@@ -897,6 +906,8 @@ PET zeigt Tumormetastasen, die noch keinen Knochen zerstört haben — weil Tumo
 
 ## PET – Positronen-Emissions-Tomographie
 
+**SVG-Hinweis (PET, SPECT, MRT-Prinzip):** Ein Schema mit Annihilation (2×511 keV), Koinzidenzdetektion, SPECT-Kollimator und Larmor-Frequenz (MRT) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
 
 > e⁺ + e⁻ → 2 γ-Photonen mit je 511 keV, emittiert in entgegengesetzten Richtungen (180° ± 0,5°)
@@ -971,8 +982,9 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** PET (β⁺-Zerfall, Annihilation e⁺+e⁻ → 2×511 keV γ), Ruheenergie m_e·c² = 0,511 MeV, Koinzidenzdetektion, ¹⁸F-FDG, Anwendung (Tumordiagnostik, Stoffwechsel).
+
+**Ergänzend vertiefend:** SPECT vs. PET; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Warum 511 keV bei der PET?" → Ruheenergie eines Elektrons = m_e·c² = 0,511 MeV; Annihilation wandelt Ruhemasse beider Teilchen vollständig in Energie um

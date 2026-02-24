@@ -5,7 +5,7 @@
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { alleKapitel } from '../src/data/bmsKapitel/index.js';
+import { alleKapitel } from '../src/data/bmsKapitel/index.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outPath = resolve(__dirname, '..', 'bms-playground-data.json');

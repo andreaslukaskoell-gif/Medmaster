@@ -79,8 +79,9 @@ Beim **dihybriden Erbgang** werden zwei unabhängige Gene gleichzeitig betrachte
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Monohybrider Erbgang (3:1 in F₂), dominant/rezessiv, Genotyp/Phänotyp, Kreuzungsschema, Mendel-Regeln.
+
+**Ergänzend vertiefend:** Dihybride Kreuzung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Phänotyp-Verhältnis in F₂ bei dominant-rezessivem monohybridem Erbgang (3:1)
@@ -284,8 +285,9 @@ Chromosomenaberrationen werden pränatal durch verschiedene Methoden diagnostizi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Karyotyp (47,XY,+21 = Trisomie 21), Chromosomenanomalien (Trisomie, Monosomie, Translokation), Geschlechtschromosomen (XX/XY), Aneuploidie.
+
+**Ergänzend vertiefend:** Mosaike; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Karyotyp-Notation interpretieren (z. B. 47,XY,+21)
@@ -486,8 +488,9 @@ Ein Sonderfall der Geninteraktion ist die **mitochondriale (maternale) Vererbung
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Dihybride Kreuzung (9:3:3:1), Epistasie (9:3:4), Komplementärgene (9:7), Geninteraktion, modifizierte Spaltungsverhältnisse.
+
+**Ergänzend vertiefend:** Kodominanz; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Modifizierte F₂-Verhältnisse ableiten (9:3:4 bei Epistasie, 9:7 bei Komplementierung)
@@ -691,8 +694,9 @@ Die X-Inaktivierung hat wichtige klinische Konsequenzen, die über das Kaliko-Ka
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** X-chromosomal rezessiv (z. B. Hämophilie, Rot-Grün-Blindheit), Stammbaum (väterlich an Söhne), gonosomal vs. autosomal, Trägerinnen.
+
+**Ergänzend vertiefend:** X-inaktivierung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Vererbungsmuster X-chromosomal rezessiver Erkrankungen in Stammbäumen erkennen
@@ -901,8 +905,9 @@ Die Erbgangbestimmung erfolgt systematisch durch Ausschlussprinzip. **Schritt 1:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Stammbaumanalyse (autosomal/gonosomal, dominant/rezessiv), Erkennungsmerkmale (z. B. X-rezessiv: Söhne von heterozygoten Müttern), Wahrscheinlichkeitsberechnung.
+
+**Ergänzend vertiefend:** Y-chromosomal; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Erbgang aus einem Stammbaum bestimmen (autosomal vs. gonosomal, dominant vs. rezessiv)
@@ -1110,8 +1115,9 @@ Neben den fünf klassischen HWE-Voraussetzungen gibt es weitere Faktoren, die Al
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Hardy-Weinberg (p²+2pq+q²=1), q² = Erkrankungshäufigkeit rezessiv, 2pq = Trägerfrequenz, Anwendung auf Populationsgenetik.
+
+**Ergänzend vertiefend:** Selektion im HW-Gleichgewicht; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Aus Erkrankungshäufigkeit (q²) die Trägerfrequenz (2pq) berechnen
@@ -1314,8 +1320,9 @@ Mutagene werden nach ihrer Natur eingeteilt: **Physikalische Mutagene** (UV-Stra
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Mutationstypen (stille/silent, Missense, Nonsense, Rasterverschiebung), Punktmutation, Folge (Aminosäureänderung, Stopp, Leseraster), Spontan- vs. induzierte Mutation.
+
+**Ergänzend vertiefend:** Splice-Mutation; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Stille, Missense und Nonsense-Mutation unterscheiden und Beispiele zuordnen
@@ -1541,8 +1548,9 @@ Doppelstrangbrüche (DSB), die gefährlichste Schadensform, werden durch zwei Ha
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Chargaff (A=T, G=C), Doppelhelix, Basenpaarung (A-T 2 H-Brücken, G-C 3 H-Brücken), Antiparallelität, 5'-3'-Richtung.
+
+**Ergänzend vertiefend:** Z-DNA; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Chargaff-Regeln anwenden: Aus A-Anteil den C-Anteil berechnen
@@ -1775,8 +1783,9 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** DNA vs. RNA (Desoxyribose vs. Ribose, Thymin vs. Uracil, doppelsträngig vs. oft einzelsträngig), mRNA, tRNA, rRNA, Stabilität.
+
+**Ergänzend vertiefend:** RNA-Editierung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Unterschied DNA vs. RNA (Zucker, Basen, Strangigkeit) nennen
@@ -2017,8 +2026,9 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Genetischer Code (Triplett, degeneriert/redundant, universell, kommafrei, Start-/Stoppcodons), Codon-Aminosäure, Wobble-Hypothese.
+
+**Ergänzend vertiefend:** Mitochondrialer Code; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Eigenschaften des genetischen Codes (Triplett, degeneriert, universell) erklären
@@ -2251,8 +2261,9 @@ Genomic Imprinting (genomische Prägung) beschreibt die elternspezifische Stilll
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** lac-Operon (Repressor, Induktion durch Laktose, Katabolit-Repression durch Glukose/cAMP), Genregulation Prokaryoten, Promotor, Operator.
+
+**Ergänzend vertiefend:** trp-Operon; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - lac-Operon-Regulation mit und ohne Laktose/Glukose erklären
@@ -2473,8 +2484,9 @@ PCR ist Goldstandard für Infektionsdiagnostik (COVID-19, HIV-VL), Genotypisieru
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** PCR (Denaturierung ~95 °C, Annealing ~55–65 °C, Elongation ~72 °C), Taq-Polymerase, Primer, exponentielle Vervielfältigung, Anwendung (Diagnostik, Forensik).
+
+**Ergänzend vertiefend:** qPCR; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Die drei PCR-Schritte mit Temperaturen und molekularen Vorgängen beschreiben
@@ -2707,8 +2719,9 @@ Die Sanger-Methode (auch Kettenabbruchmethode oder Didesoxymethode) beruht auf d
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Sanger-Sequenzierung (ddNTPs führen zu Kettenabbruch, Fragmentlänge = Position), Didesoxymethode, Kapillarelektrophorese, Leserichtung 5'→3'.
+
+**Ergänzend vertiefend:** Next-Generation Sequencing; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Sanger-Prinzip mit ddNTPs und Kettenabbruch erklären
@@ -2944,8 +2957,9 @@ HIV-Western-Blot war jahrzehntelang Goldstandard zur Bestätigung positiver HIV-
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Gelelektrophorese (DNA negativ geladen → wandert zur Anode), Trennprinzip (Größe, kleine Fragmente schneller), Agarose-Gel, Ladder, Anwendung (PCR-Produkte, Restriktion).
+
+**Ergänzend vertiefend:** Pulsfeld-Gelelektrophorese; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Wanderungsrichtung der DNA im Gel und Trennprinzip erklären
@@ -3174,8 +3188,9 @@ Genetischer Fingerabdruck per STR-Analyse ist Standard in Forensik, Vaterschafts
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** STR (Short Tandem Repeats), forensische DNA-Analyse (Extraktion → PCR [STR-Loci] → Gelelektrophorese → Profil), Vaterschafts-/Tatortgutachten.
+
+**Ergänzend vertiefend:** CODIS; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - STR-Analyse-Ablauf in Schritten erklären (Extraktion → PCR → Elektrophorese → Profil)
@@ -3425,8 +3440,9 @@ Rekombinante Proteine (Insulin, EPO, Wachstumshormon, monoklonale Antikörper) s
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Klonierung (Vektor, Restriktion, Ligation, Transformation, Selektion), Plasmid, Restriktionsenzyme, Ligase, Anwendung (rekombinante Proteine, Gentherapie).
+
+**Ergänzend vertiefend:** Expression; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Klonierungsschritte in richtiger Reihenfolge beschreiben
@@ -3657,8 +3673,9 @@ Casgevy ist die erste CRISPR-basierte Therapie (FDA Dez. 2023); AAV-Gentherapien
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** CRISPR-Cas9 (sgRNA führt Cas9 zur Ziel-DNA, PAM-Sequenz nötig, Doppelstrangbruch DSB), gezielte Genomeditierung, NHEJ vs. HDR, Anwendung (Gentherapie, Forschung).
+
+**Ergänzend vertiefend:** Base Editing; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - CRISPR-Cas9-Mechanismus mit sgRNA, PAM und DSB erklären
@@ -3890,8 +3907,9 @@ Beim X-chromosomal rezessiven Erbgang muss zwischen mütterlicher und väterlich
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Stammbaum + Krankheitsbeispiele (z. B. autosomal rezessiv: Mukoviszidose; X-rezessiv: Hämophilie; autosomal dominant: Chorea Huntington), Erbgang erkennen, Beratung.
+
+**Ergänzend vertiefend:** Imprinting; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Erbgang aus Stammbaum bestimmen und konkrete Krankheitsbeispiele zuordnen
@@ -4093,8 +4111,9 @@ Der Polygene Risikoscore (PRS) fasst die Effekte von Hunderten bis Tausenden Ris
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Polygenie (viele Gene → ein Merkmal, z. B. Hautfarbe) vs. Pleiotropie (ein Gen → viele Merkmale, z. B. Sichelzellanämie), quantitative vs. qualitative Merkmale.
+
+**Ergänzend vertiefend:** Epistase; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Polygenie von Pleiotropie unterscheiden und Beispiele nennen
@@ -4298,8 +4317,9 @@ Im Rahmen der präkonzeptionellen Beratung bei Risikofamilien (z. B. bekannte BR
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Hardy-Weinberg-Anwendung (q² aus Erkrankungshäufigkeit, p=1−q, 2pq=Trägerfrequenz), Voraussetzungen (große Population, keine Selektion/Mutation/Migration), Pränataldiagnostik-Grundlagen.
+
+**Ergänzend vertiefend:** Inzucht; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Trägerfrequenz aus Erkrankungshäufigkeit mit Hardy-Weinberg berechnen
@@ -4500,8 +4520,9 @@ NIPT hat in vielen europäischen Ländern das Erstrimester-Screening als Erstlin
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Pränataldiagnostik (NIPT: ab 10. SSW, cfDNA, geringes Risiko; Amniozentese: ab 15. SSW, Fruchtwasser, ~0,1–0,3 % Abort; CVS: 11.–13. SSW, Chorionzotten, ~0,5–1 % Abort), Indikationen.
+
+**Ergänzend vertiefend:** Triple-Test; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - NIPT, Amniozentese und CVS mit Zeitpunkt und Risiken vergleichen

@@ -35,6 +35,8 @@ Wie viele Blutgruppen gibt es? Wie viele DNA-Codons sind möglich? Wie viele Weg
 
 ## Grundbegriffe und Entscheidungsbaum
 
+**SVG-Hinweis (Kombinatorik — Permutation, Variation, Kombination):** Ein Schema mit n!, n!/(n−k)!, n^k und (n über k) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
 1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
@@ -164,8 +166,9 @@ Wichtige Eigenschaften:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Fakultät n!, Permutation (Anordnung aller n Elemente), Variation (k aus n, Reihenfolge), Kombination (k aus n, ohne Reihenfolge), Urnenmodell.
+
+**Ergänzend vertiefend:** Mit/ohne Wiederholung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Auf wie viele Arten können 5 Medikamente auf einer Ablage angeordnet werden?" → Permutation: 5! = 120
@@ -342,6 +345,8 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 ## Grundbegriffe
 
+**SVG-Hinweis (Wahrscheinlichkeit — Laplace, Additionssatz, Baum):** Ein Schema mit P(A) = |A|/|Ω|, P(A∪B) = P(A)+P(B)−P(A∩B) und Unabhängigkeit unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
 - **Ergebnisraum Ω** (Omega): Menge aller möglichen Ergebnisse
@@ -463,8 +468,9 @@ Erwartungswert: μ = 4 · 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Wahrscheinlichkeit (Laplace, relative Häufigkeit), P(mindestens 1) = 1−P(keiner), Additions- und Multiplikationsregel, Unabhängigkeit, Baumdiagramm.
+
+**Ergänzend vertiefend:** Bedingte Wahrscheinlichkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie wahrscheinlich ist mindestens ein Treffer bei 3 Versuchen mit p=0,3?" → Komplement: 1 − 0,7^3 = 1 − 0,343 = 0,657
@@ -637,6 +643,8 @@ Ein HIV-Test ist positiv — wie wahrscheinlich ist eine echte Infektion? Ohne K
 
 ## Bedingte Wahrscheinlichkeit
 
+**SVG-Hinweis (Bayes, Vierfeldertafel, PPV/NPV):** Ein Schema mit P(A|B) = P(A∩B)/P(B), Bayes-Formel und Vierfeldertafel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
 **Definition:**
@@ -739,8 +747,9 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Vierfeldertafel (Sensitivität, Spezifität, PPV, NPV), Prävalenz, Bayes (posterior aus Likelihood und Prior), Screening-Interpretation.
+
+**Ergänzend vertiefend:** Likelihood-Quotient; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Gegeben Sensitivität, Spezifität, Prävalenz → berechne PPV oder NPV mittels Vierfeldertafel
@@ -922,6 +931,8 @@ Nüchtern-Blutzucker 126 mg/dL: normal oder pathologisch? Um das zu beurteilen, 
 
 ## Lage- und Streumaße
 
+**SVG-Hinweis (Normalverteilung, 68-95-99,7, Sens/Spez):** Ein Schema mit μ, σ, Glockenkurve und Sensitivität/Spezifität unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 ### Lagemaße (Maße der zentralen Tendenz)
 
 **Arithmetischer Mittelwert (x̄):**
@@ -1085,8 +1096,9 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Lagemaße (Mittelwert, Median, Modus), Streuung (Spannweite, Varianz, Standardabweichung), Boxplot, Interpretation klinischer Studien.
+
+**Ergänzend vertiefend:** Konfidenzintervalle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Datensatz gegeben → Mittelwert, Median, Modus berechnen

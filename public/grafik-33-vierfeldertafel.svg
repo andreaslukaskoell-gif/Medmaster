@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" width="100%">
+  <defs><style>.cell{fill:#e8f4f8;stroke:#0e7490;stroke-width:1}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="240" y="22" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Vierfeldertafel: Sens, Spez, PPV, NPV</text>
+  <rect x="120" y="44" width="100" height="36" class="cell"/><text x="170" y="64" text-anchor="middle" class="l">TP</text>
+  <rect x="220" y="44" width="100" height="36" class="cell"/><text x="270" y="64" text-anchor="middle" class="l">FP</text>
+  <rect x="120" y="80" width="100" height="36" class="cell"/><text x="170" y="100" text-anchor="middle" class="l">FN</text>
+  <rect x="220" y="80" width="100" height="36" class="cell"/><text x="270" y="100" text-anchor="middle" class="l">TN</text>
+  <text x="80" y="64" text-anchor="end" font-size="10" fill="#475569">krank +</text><text x="80" y="100" text-anchor="end" font-size="10" fill="#475569">krank -</text>
+  <text x="170" y="38" text-anchor="middle" font-size="10" fill="#475569">Test +</text><text x="270" y="38" text-anchor="middle" font-size="10" fill="#475569">Test -</text>
+  <rect x="40" y="132" width="400" height="78" fill="#fef3c7" stroke="#b45309" stroke-width="1" rx="4"/>
+  <text x="240" y="152" text-anchor="middle" font-size="10" fill="#92400e">Sens = TP/(TP+FN). Spez = TN/(TN+FP). PPV = TP/(TP+FP). NPV = TN/(TN+FN).</text>
+  <text x="240" y="170" text-anchor="middle" font-size="9" fill="#b45309">MedAT: Formeln aus Tafel; Screening vs. Bestaetigungstest; Cutoff verschieben -&gt; Sens/Spez Trade-off.</text>
+  <text x="240" y="198" text-anchor="middle" font-size="9" fill="#64748b">TP=true positive, FP=false positive, FN=false negative, TN=true negative.</text>
+</svg>

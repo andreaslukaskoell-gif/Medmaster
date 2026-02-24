@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="100%">
+  <defs><style>.box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#hn)}.l{font:10px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="hn" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="300" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Nephron: Segmente und Resorption</text>
+  <rect x="8" y="36" width="68" height="28" class="box"/><text x="42" y="52" text-anchor="middle" class="l">Glomerulus</text>
+  <rect x="88" y="36" width="68" height="28" class="box"/><text x="122" y="52" text-anchor="middle" class="l">PT ~65%</text>
+  <rect x="168" y="36" width="68" height="28" class="box"/><text x="202" y="52" text-anchor="middle" class="l">Henle</text>
+  <rect x="248" y="36" width="68" height="28" class="box"/><text x="282" y="52" text-anchor="middle" class="l">DT ~5-10%</text>
+  <rect x="328" y="36" width="88" height="28" class="box"/><text x="372" y="52" text-anchor="middle" class="l">Sammelrohr</text>
+  <path d="M76 50 L88 50" class="ar"/><path d="M156 50 L168 50" class="ar"/><path d="M236 50 L248 50" class="ar"/><path d="M316 50 L328 50" class="ar"/>
+  <text x="42" y="78" text-anchor="middle" font-size="9" fill="#475569">Filtration</text>
+  <text x="122" y="78" text-anchor="middle" font-size="9" fill="#475569">Na, Glukose, HCO3</text>
+  <text x="202" y="78" text-anchor="middle" font-size="9" fill="#475569">Gegenstrom</text>
+  <text x="282" y="78" text-anchor="middle" font-size="9" fill="#475569">Na, ADH</text>
+  <text x="372" y="78" text-anchor="middle" font-size="9" fill="#475569">ADH, AQP2</text>
+  <rect x="8" y="96" width="584" height="38" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="300" y="114" text-anchor="middle" font-size="9" fill="#475569">Diuretika: Schleife = Furosemid. DT = Thiazide. Sammelrohr = Aldosteron-Antagonisten, ADH-Antagonisten.</text>
+  <text x="300" y="128" text-anchor="middle" font-size="9" fill="#64748b">MedAT: Segment -> Transporter -> Wirkort Diuretikum.</text>
+</svg>

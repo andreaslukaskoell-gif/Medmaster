@@ -78,8 +78,9 @@ Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökol
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Toleranzkurve (Optimum, Pessimum, ökologische Amplitude), abiotische Faktoren (Temperatur, Wasser, pH), stenök vs. euryök, Verbreitungsgrenzen.
+
+**Ergänzend vertiefend:** Liebigs Minimumgesetz; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Beschriftung und Interpretation einer Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
@@ -320,8 +321,9 @@ Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gl
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Symbiose (Mutualismus +/+, Kommensalismus +/0, Parasitismus +/−), Konkurrenz, Prädation, Räuber-Beute, Koevolution.
+
+**Ergänzend vertiefend:** Amensalismus; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Symbioseformen mit Vorzeichen unterscheiden: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−)
@@ -629,8 +631,9 @@ Die **Altersstruktur** einer Population (Alterspyramide) gibt Auskunft über Ver
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Populationswachstum (exponentiell J-Kurve, logistisch S-Kurve), Kapazitätsgrenze K, Wachstumsrate r, dN/dt = rN(1−N/K), Tragfähigkeit.
+
+**Ergänzend vertiefend:** Zeitverzögerung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - J-Kurve vs. S-Kurve unterscheiden und die zugehörigen Gleichungen nennen
@@ -873,8 +876,9 @@ Beispiele:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Nische (fundamental vs. realisiert), Konkurrenzausschluss, Connell-Seepocken-Experiment, Ressourcenaufteilung, ökologische Nische.
+
+**Ergänzend vertiefend:** Nischenüberlappung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Fundamentale vs. realisierte Nische definieren und das Connell-Seepocken-Experiment erklären
@@ -1150,8 +1154,9 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Nahrungskette/-netz, 10%-Regel (Energieverlust pro Stufe), Produzenten/Konsumenten/Destruenten, Trophieebenen, Biomagnifikation.
+
+**Ergänzend vertiefend:** Biomassepyramide; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - 10%-Regel erklären und auf konkrete Nahrungsketten anwenden (Berechnung über mehrere Stufen)
@@ -1453,8 +1458,9 @@ Ein **Massenaussterben** ist definiert als Verlust von ≥ 75% aller Arten in ei
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Biodiversität (genetisch, Arten, Ökosystem), Bedeutung (Stabilität, Ökosystemleistungen), Gefährdung, Artenschutz, Rote Liste.
+
+**Ergänzend vertiefend:** Hotspots; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Die drei Ebenen der Biodiversität benennen und deren Bedeutung erklären
@@ -1688,8 +1694,9 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** IgG (2 schwere + 2 leichte Ketten, Fab = Antigenbindung, Fc = Effektorfunktion), Antikörperklassen (IgM, IgG, IgA, IgE, IgD), neutralisierend/opsonisierend/Komplement.
+
+**Ergänzend vertiefend:** Affinitätsreifung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - IgG-Aufbau beschreiben: 2 schwere + 2 leichte Ketten, Fab (Antigenbindung) vs. Fc (Effektorfunktion)
@@ -1894,8 +1901,9 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** V(D)J-Rekombination (variable Antikörper-/TCR-Diversität), RAG1/RAG2, TdT (terminaler Transferase), somatische Rekombination, klonale Selektion.
+
+**Ergänzend vertiefend:** Klasse-Umschaltung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Das Prinzip der V(D)J-Rekombination und die beteiligten Enzyme (RAG1/RAG2, TdT) erklären
@@ -2124,8 +2132,9 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** AB0-System (I^A, I^B, i), Genotypen (A: I^A I^A oder I^A i; B: I^B I^B oder I^B i; AB: I^A I^B; 0: ii), Punnett-Quadrat, Antikörper gegen fehlende Antigene (Anti-A, Anti-B).
+
+**Ergänzend vertiefend:** Bombay-Phänotyp; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Genotypen aller vier Blutgruppen aufzählen und Kreuzungsschemata mit Punnett-Quadrat lösen
@@ -2340,8 +2349,9 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Rhesus (D-Antigen), Rhesus-Inkompatibilität (Sensibilisierung Mutter bei 1. Kind → Reaktion bei 2. Kind), Anti-D-Prophylaxe, hämolytische Neugeborenenerkrankung.
+
+**Ergänzend vertiefend:** Kell, Duffy; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Den Zweiphasen-Mechanismus der Rhesus-Inkompatibilität erklären (Sensibilisierung → Reaktion)

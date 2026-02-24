@@ -45,6 +45,8 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 ## Vektoroperationen
 
+**SVG-Hinweis (Vektoren — Betrag, Addition, Einheitsvektor):** Ein Schema mit |v| = √(v₁²+v₂²+v₃²), Parallelogrammregel und ê = v/|v| unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
 
 **Subtraktion** $\\vec{a} - \\vec{b}$ ist äquivalent zur Addition von $\\vec{a}$ und $(-\\vec{b})$. Geometrisch ist $\\vec{a} - \\vec{b}$ die zweite Diagonale des Parallelogramms.
@@ -125,8 +127,9 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag |a| = √(aₓ²+aᵧ²) bzw. 3D), Addition/Subtraktion, Skalarmultiplikation, Orts- und Richtungsvektoren.
+
+**Ergänzend vertiefend:** Kollinearität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Betrag eines 2D- oder 3D-Vektors berechnen (Pythagoras-Formel anwenden)
@@ -336,6 +339,8 @@ Stehen zwei Kräfte senkrecht aufeinander, leisten sie keine Arbeit aneinander �
 
 ## Skalarprodukt
 
+**SVG-Hinweis (Skalarprodukt, Kreuzprodukt, Orthogonalität):** Ein Schema mit a·b = |a||b|cos θ, a×b (Rechte-Hand-Regel) und Fläche |a×b| unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
 
 $$\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\theta$$
@@ -453,8 +458,9 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Skalarprodukt a·b = aₓbₓ+aᵧbᵧ(+a_zb_z), Orthogonalität a·b=0, Winkel zwischen Vektoren, Kreuzprodukt (Rechte-Hand-Regel, Fläche Parallelogramm).
+
+**Ergänzend vertiefend:** Anwendung Kräfte/ Geschwindigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Skalarprodukt berechnen und Orthogonalität prüfen: $\\vec{a} \\cdot \\vec{b} = 0$?
@@ -681,6 +687,8 @@ Ein Strahlengang in der Radiologie ist eine Gerade im Raum. Eine CT-Schnittebene
 
 ## Geradengleichung im Raum
 
+**SVG-Hinweis (Gerade, Ebene, Matrix, LGS):** Ein Schema mit r = r₀ + t·d, n·(r−r₀) = 0, 2×2-Determinante und A⁻¹ unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
 
 $$\\vec{r} = \\vec{r_0} + t \\cdot \\vec{d}, \\quad t \\in \\mathbb{R}$$
@@ -806,8 +814,9 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Gerade (Parameterform, Richtungsvektor), Ebene (Parameterform, Koordinatenform ax+by+cz=d), Normalenvektor n=(a,b,c), Lage Gerade–Ebene (Schnitt, parallel).
+
+**Ergänzend vertiefend:** Abstand windschiefer Geraden; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Normalenvektor aus Koordinatenform direkt ablesen: $ax+by+cz=d$ → $\\vec{n}=(a,b,c)$
@@ -1039,6 +1048,8 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ## Abstand Punkt–Punkt
 
+**SVG-Hinweis (Abstände — Punkt-Punkt, Punkt-Gerade, Punkt-Ebene):** Ein Schema mit d(A,B) = |AB|, Lotfußpunkt und Hessesche Normalform unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
 
 $$d(A, B) = |\\vec{AB}| = \\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2 + (b_3-a_3)^2}$$
@@ -1153,8 +1164,9 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Hessesche Normalform der Ebene, Abstand Punkt–Ebene (d = |n·p−d|/|n|), Abstand Punkt–Gerade, Anwendung (Anatomie, Bildgebung).
+
+**Ergänzend vertiefend:** Lotfußpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Punkt-Ebene-Abstand mit der Hesseschen Normalform berechnen (4-Schritte-Vorgehen)

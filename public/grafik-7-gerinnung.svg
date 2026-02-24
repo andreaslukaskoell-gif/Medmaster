@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="100%">
+  <defs><style>.box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#hg)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="hg" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="260" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Gerinnungskaskade (vereinfacht)</text>
+  <rect x="12" y="40" width="100" height="28" class="box"/><text x="62" y="56" text-anchor="middle" class="l">Intrinsisch</text>
+  <rect x="12" y="76" width="100" height="28" class="box"/><text x="62" y="92" text-anchor="middle" class="l">Extrinsisch</text>
+  <rect x="128" y="58" width="100" height="28" class="box"/><text x="178" y="74" text-anchor="middle" class="l">Gemeinsamer Weg</text>
+  <rect x="244" y="58" width="88" height="28" class="box"/><text x="288" y="74" text-anchor="middle" class="l">Fibrin</text>
+  <path d="M112 54 L128 58" class="ar"/><path d="M112 90 L128 72" class="ar"/><path d="M228 72 L244 72" class="ar"/><path d="M332 72 L344 72" class="ar"/>
+  <rect x="356" y="44" width="156" height="56" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="434" y="62" text-anchor="middle" font-size="10" fill="#475569">vWF, Vitamin K (Faktor II, VII, IX, X), Ca2+ noetig. Heparin/ Marcumar: Antikoagulation.</text>
+  <text x="434" y="92" text-anchor="middle" font-size="9" fill="#64748b">MedAT: intrinsisch vs. extrinsisch ausloesen; Vitamin-K-Antagonisten.</text>
+</svg>

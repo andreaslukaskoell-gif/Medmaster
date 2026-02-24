@@ -30,6 +30,8 @@ Blutdruck steigt pro BMI-Punkt um 1,8 mmHg — das ist eine lineare Funktion. Me
 
 ## Grundform und Begriffe
 
+**SVG-Hinweis (Lineare Funktion — Steigung, Achsenabschnitt, Geradengleichung):** Ein Schema mit m = Δy/Δx, y = mx+b, Nullstelle x₀ = −b/m und m₁·m₂ = −1 unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
 
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
@@ -284,6 +286,8 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 Der Blutdruck folgt während des Herzschlags einer parabolähnlichen Kurve — Maximum bei Systole, Minimum bei Diastole. Wurfbahnen, Schallausbreitung, optimale Dosierung: viele Phänomene folgen quadratischen Gesetzen. Quadratische Funktionen sind die einfachsten nicht-linearen Funktionen. Für den MedAT sind Scheitelpunktform, Diskriminante, Nullstellen (Formel, Vieta), Scheitelpunkt und Parabelöffnung prüfungsrelevant.
 
 ## Allgemeine und Scheitelpunktform
+
+**SVG-Hinweis (Parabel — Scheitelpunkt, Diskriminante, Vieta):** Ein Schema mit xs = −b/(2a), D = b²−4ac und Nullstellenformel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
 
@@ -558,6 +562,8 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 Paracetamol hat eine Halbwertszeit von 2 Stunden — der Spiegel halbiert sich alle 2 h exponentiell. Bakterien verdoppeln sich alle 20 Minuten — exponentielles Wachstum. Radioaktiver Zerfall, Kapitalzins, Virusvermehrung: all das folgt der Exponentialfunktion. Exponentialfunktionen beschreiben Vorgänge, bei denen die Änderungsrate proportional zum aktuellen Wert ist. Für den MedAT sind Grundform, e-Funktion, Halbwertszeit, k-Wert und Steady-State prüfungsrelevant.
 
 ## Grundform und Eigenschaften
+
+**SVG-Hinweis (Exponentialfunktion — Wachstum/Zerfall, Halbwertszeit):** Ein Schema mit f(t) = f₀·e^(±kt), T½ = ln(2)/k und C(t) = C₀·e^(−kt) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a · bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
 
@@ -835,6 +841,8 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 pH = −log₁₀([H⁺]): Eine der wichtigsten Formeln der Medizin basiert auf dem Logarithmus. Der Logarithmus macht aus riesigen Zahlenbereichen handhabbare Werte — [H⁺] reicht von 10⁻¹ bis 10⁻¹⁴ mol/L, der pH-Wert dafür von 1 bis 14. Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Für den MedAT sind Logarithmengesetze, pH-Berechnung, Henderson-Hasselbalch, Dezibel-Formel und Basiswechsel prüfungsrelevant.
 
 ## Definition und Grundbegriffe
+
+**SVG-Hinweis (Logarithmus — pH, Henderson-Hasselbalch, log-Regeln):** Ein Schema mit pH = −log([H⁺]), log(a·b) = log a + log b und Basiswechsel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
 
@@ -1130,6 +1138,8 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 Ein EKG ist ein Graph — wer ihn liest, interpretiert eine Funktion über Zeit. Eine Dosis-Wirkungs-Kurve im Semilog-Plot macht aus einer S-förmigen eine gerade Linie — leichter abzulesen. Im MedAT werden Graphen gelesen, Asymptoten erkannt und Transformationen verstanden. Für den MedAT sind Asymptoten (horizontal, vertikal), Monotonie, Extrempunkte, Semilog-Plots und Michaelis-Menten-Kurve prüfungsrelevant.
 
 ## Graphen und ihre Eigenschaften ablesen
+
+**SVG-Hinweis (Asymptoten, Semilog, Michaelis-Menten):** Ein Schema mit horizontaler/vertikaler Asymptote, Semilog-Linearisierung und EC₅₀ unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
 

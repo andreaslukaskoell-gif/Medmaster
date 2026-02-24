@@ -247,6 +247,10 @@ export function SubchapterContent({
     return cleaned;
   }, [uk.content]);
 
+  // If content has {{DIAGRAM}} placeholder, show diagram there instead of at the end
+  const hasDiagramPlaceholder = uk.diagram && cleanedContent.includes("{{DIAGRAM}}");
+  const contentParts = hasDiagramPlaceholder ? cleanedContent.split("{{DIAGRAM}}") : null;
+
   return (
     <div className="space-y-6">
       {/* Stichworte chips */}
@@ -266,18 +270,37 @@ export function SubchapterContent({
         </div>
       )}
 
-      {/* Main content — pure Markdown, AMBOSS style */}
-      <MarkdownContent
-        text={cleanedContent}
-        hinterfragMode={hinterfragMode}
-        keywordLinkEntries={keywordLinkEntries}
-      />
-
-      {/* Diagram (SVG) */}
-      {uk.diagram && (
-        <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
-          <DiagramSVG type={uk.diagram} />
-        </div>
+      {/* Main content — with optional inline diagram */}
+      {contentParts && contentParts.length >= 2 ? (
+        <>
+          <MarkdownContent
+            text={contentParts[0].trim()}
+            hinterfragMode={hinterfragMode}
+            keywordLinkEntries={keywordLinkEntries}
+          />
+          <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+            <DiagramSVG type={uk.diagram!} />
+          </div>
+          <MarkdownContent
+            text={contentParts[1].trim()}
+            hinterfragMode={hinterfragMode}
+            keywordLinkEntries={keywordLinkEntries}
+          />
+        </>
+      ) : (
+        <>
+          <MarkdownContent
+            text={cleanedContent}
+            hinterfragMode={hinterfragMode}
+            keywordLinkEntries={keywordLinkEntries}
+          />
+          {/* Diagram at end when no placeholder used */}
+          {uk.diagram && (
+            <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+              <DiagramSVG type={uk.diagram} />
+            </div>
+          )}
+        </>
       )}
     </div>
   );

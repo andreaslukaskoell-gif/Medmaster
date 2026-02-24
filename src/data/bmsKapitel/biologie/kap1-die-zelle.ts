@@ -108,6 +108,8 @@ Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
 | Bewegung | ✗ | ✓ |
 | Zellstruktur | ✗ (keine Zelle, keine Ribosomen) | ✓ |
 
+**SVG-Hinweis (Viren vs. Lebewesen):** Eine kompakte Gegenüberstellung der Kennzeichen (Tabelle als Schema) festigt die Abgrenzung und unterstützt die Merkfähigkeit für Prüfungsfragen. *Typ: Übersicht / Vergleichstabelle.*
+
 **Fazit:** Viren sind **obligat intrazelluläre Parasiten** — das heißt: Sie können nur **innerhalb** einer Wirtszelle existieren und vermehren; sie kapern deren Stoffwechsel. Außerhalb einer Wirtszelle sind sie metabolisch inaktiv.
 
 **Klinische Konsequenz:** Da Viren keine Zellwand, keine eigenen Ribosomen und keinen eigenen Stoffwechsel haben, wirken klassische Antibiotika (die auf Bakterienstrukturen zielen) nicht. Antivirale Therapien müssen selektiv virale Strukturen angreifen (z.B. HIV-Reverse-Transkriptase, Influenza-Neuraminidase).
@@ -146,8 +148,6 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 **Zentral prüfungsrelevant:** Sieben Kennzeichen (StReForWaEvoBeHo), negative vs. positive Rückkopplung, Viren als Grenzfall (kein Stoffwechsel, keine Zellstruktur, keine Antibiotika), Homöostase (Blutzucker, Temperatur).
 
 **Ergänzend vertiefend:** Emergenz-Hierarchie (Atom → Organismus), ATP als Energiewährung, Systembiologie-Begriff.
-
-**Häufige Verwechslungen:** siehe unten.
 
 **Häufige Fragen:**
 - "Welche Kennzeichen des Lebens gibt es?" → Sieben: Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase
@@ -343,6 +343,8 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen, 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
+**SVG-Hinweis (Prokaryot vs. Eukaryot):** Ein Schema mit Kern/Nukleoid, Ribosomen (70S vs. 80S) und Organellen macht den Grundunterschied auf einen Blick klar und unterstützt die Einordnung von Antibiotika-Zielstrukturen. *Typ: Vergleichsschema.*
+
 > **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
 ---
@@ -366,6 +368,8 @@ Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von B
 - Penicillin muss erst äußere Membran überwinden → schlechterer Zugang → häufiger resistent
 
 **Peptidoglykan (Murein):** Ein Netzwerk aus Zuckerketten (N-Acetylglucosamin + N-Acetylmuraminsäure), quervernetzt durch kurze Peptide — es gibt der Bakterienzelle mechanische Festigkeit gegen osmotischen Druck. **LPS** (Lipopolysaccharid) kommt nur bei **Gram-negativen** Bakterien vor (in der äußeren Membran) und wirkt als **Endotoxin** (kann bei Bakteriämie septischen Schock auslösen).
+
+**SVG-Hinweis (Gram-positiv vs. Gram-negativ):** Ein Querschnitt-Schema mit dicker Peptidoglykanschicht (violett) vs. dünner Schicht plus LPS-Außenmembran (rosa) festigt die Färbung und die klinische Konsequenz (LPS → septischer Schock). *Typ: Vergleichsschema / Querschnitt.*
 
 > **Merke:** Gram-positiv (violett) = dicke Peptidoglykanschicht. Gram-negativ (rosa) = dünn + LPS-Außenmembran. LPS → septischer Schock!
 
@@ -437,8 +441,6 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
 **Zentral prüfungsrelevant:** Pro vs. Eukaryot (Kern, 70S vs. 80S, Peptidoglykan), Gram-Färbung (positiv violett / negativ rosa, LPS, septischer Schock), Endosymbiontentheorie (5 Belege), Antibiotika-Zielstrukturen (70S), Cave Chloramphenicol/Mitochondrien.
 
 **Ergänzend vertiefend:** Archäen (dritte Domäne, kein Peptidoglykan → Penicillin-resistent), Plasmide, Kompartimentierungsvorteil.
-
-**Häufige Verwechslungen:** siehe unten.
 
 **Häufige Fragen:**
 - "Was ist der grundlegendste Unterschied zwischen Prokaryoten und Eukaryoten?" → Fehlender membranumschlossener Zellkern bei Prokaryoten
@@ -1067,6 +1069,8 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 
 > **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
+**SVG-Hinweis (Sekretorischer Weg):** Ein Flussschema rER → Golgi → Lysosom mit M6P-Targeting und Vesikeltransport unterstützt die räumliche Vorstellung und die Abgrenzung zu anderen Wegen. *Typ: Flussschema / Übersicht.*
+
 ---
 
 ## Mitochondrien — Kraftwerk und Endosymbiont
@@ -1094,6 +1098,8 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 **Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
 
 > **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
+
+**SVG-Hinweis (Mitochondrien-Querschnitt):** Ein Schema mit äußerer/innerer Membran, Cristae, Matrix und Intermembranraum macht den Ort der Atmungskette und die 5 Endosymbionten-Belege auf einen Blick klar. *Typ: Querschnitt / Schema.*
 
 ---
 
@@ -1157,8 +1163,6 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 **Ergänzend vertiefend:** I-Zell-Krankheit (M6P-Defekt), Bortezomib (Myelom), Zellweger/ALD, ER-Stress.
 
-**Häufige Verwechslungen:** siehe unten.
-
 **Häufige Fragen:**
 - "Wo findet die oxidative Phosphorylierung statt?" → An der inneren Mitochondrienmembran (Cristae)
 - "Was ist Mannose-6-Phosphat?" → Targeting-Signal für lysosomale Enzyme (im Golgi angehängt)
@@ -1182,7 +1186,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
 - **Sekretorischer Weg**: rER (Proteinsynthese + N-Glykosylierung) → Golgi (M6P-Tag + O-Glykosylierung) → Lysosom; I-Zell-Krankheit: M6P fehlt → Enzyme extrazellulär
 - **Mitochondrien**: Doppelmembran, Cristae (innere Membran = Ort der Atmungskette), ~30–32 ATP/Glucose; Endosymbiontenbeweis: zirkuläre DNA + 70S + Doppelmembran + binäre Fission + Antibiotika-Empfindlichkeit
@@ -1358,9 +1362,13 @@ Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig 
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
+**SVG-Hinweis (Kernporen / NLS-NES-Transport):** Ein Schema mit NPC, Importin/Exportin und RanGTP-Gradient veranschaulicht, warum große Proteine ein NLS oder NES brauchen und wie die Richtung des Transports entsteht. *Typ: Schema / Transport.*
+
 ---
 
 ## Chromatin: 2 Meter DNA in 6 µm verpackt
+
+**Bisher haben wir gesehen:** Kernhülle und Kernporen steuern den Austausch. **Die DNA** im Kern ist in Form von **Chromatin** verpackt — ohne diese Verpackung würde sie nicht in den Kern passen. **Um das zu verstehen,** schauen wir uns die hierarchische Verpackung an.
 
 Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2 Meter**. Es muss in einen ~6 µm großen Zellkern passen: **~10.000-fache Kompaktierung**.
 
@@ -1389,9 +1397,13 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 
 > **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A,H2B,H3,H4 je 2×). Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Körper = inaktives X.
 
+**SVG-Hinweis (Nukleosom / Chromatin-Hierarchie):** Ein Schema von Nukleosom („Perlen auf der Schnur“) bis zur 30-nm-Faser und Euchromatin vs. Heterochromatin festigt die Verpackungsstufen und die epigenetische Regulation. *Typ: Schema / Hierarchie.*
+
 ---
 
 ## Nucleolus: Ribosomenfabrik
+
+**Bisher haben wir gesehen:** Chromatin-Verpackung und epigenetische Regulation. **Ein weiterer zentraler Bestandteil** des Kerns ist der **Nucleolus** — die Ribosomenfabrik. **Um zu verstehen,** wofür er zuständig ist:
 
 Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kondensatstruktur** (organisiert um rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22).
 
@@ -1429,8 +1441,6 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 **Zentral prüfungsrelevant:** Nukleosom (147 bp + Histon-Oktamer), Euchromatin vs. Heterochromatin (Acetylierung vs. Methylierung), Kernporen (<40 kDa frei, NLS/NES), Transkription (Kern) vs. Translation (Zytoplasma), Barr-Körper (Lyon-Hypothese).
 
 **Ergänzend vertiefend:** Nucleolus (rRNA, Ribosomen-Assemblierung), Progeria (Lamin), HDAC-Inhibitoren, NLS/NES-Transport.
-
-**Häufige Verwechslungen:** siehe unten.
 
 **Häufige Fragen:**
 - "Was ist ein Nukleosom?" → 147 bp DNA um einen Histon-Oktamer (H2A, H2B, H3, H4, je 2×) — Grundeinheit der Chromatinverpackung
@@ -1627,11 +1637,15 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 > **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
 
+**SVG-Hinweis (Zellzyklus):** Ein Kreisschema mit G1 → S → G2 → M und G0-Abstieg sowie den Checkpoints (G1/S, G2/M, Spindel) unterstützt die Einordnung der Phasen und der Tumorrelevanz. *Typ: Kreisschema / Übersicht.*
+
 ---
 
 ## Mitose — Somatische Zellteilung
 
 **Bisher haben wir gesehen:** Der Zellzyklus bereitet die Zelle auf die Teilung vor (G1, S, G2). **In der M-Phase** findet die eigentliche Kernteilung statt — bei Körperzellen als **Mitose**. **Um sie zu verstehen,** gehen wir die Phasen nacheinander durch. Die Mitose ist die Standardform der Zellteilung für Körperzellen. Sie erzeugt zwei genetisch identische Tochterzellen.
+
+**SVG-Hinweis (Mitose-Phasen):** Ein Schema der Phasen Prophase → Metaphase → Anaphase → Telophase (z. B. \`grafik-2-mitose.svg\`) veranschaulicht Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden und Zytokinese auf einen Blick. *Typ: Phasenschema / Übersicht.*
 
 **Prophase:**
 Chromosomen kondensieren (werden sichtbar durch Histon-H3-Phosphorylierung). Das **Zentrosom** dupliziert sich und wandert zu den Polen. Die **Kernhülle löst sich auf**. Der **Spindelapparat** (Mikrotubuli aus Zentrosomen) beginnt sich zu bilden.
@@ -1729,8 +1743,6 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 **Zentral prüfungsrelevant:** Zellzyklus (G₁–S–G₂–M), Mitose-Phasen (Pro/Meta/Ana/Telo), Meiose I (Reduktion, Bivalent, Crossing-over) vs. Meiose II (Äquation), Trennung homolog vs. Schwesterchromatiden (Anaphase I vs. II), Non-disjunction (Trisomie 21).
 
 **Ergänzend vertiefend:** Zellzyklus-Checkpoints (G1/S, G2/M, Spindel), Spindelapparat, Cohesin/Separase.
-
-**Häufige Verwechslungen:** siehe unten.
 
 **Häufige Fragen:**
 - "Wann trennen sich Schwesterchromatiden?" → Anaphase (Mitose) und Anaphase II (Meiose)
@@ -1939,6 +1951,8 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
 
+**SVG-Hinweis (Glykolyse — Bilanz):** Ein kompaktes Schema mit Glucose → 2 Pyruvat, 2 ATP netto, 2 NADH und der Stellung von PFK-1 in der Kette unterstützt die Merkfähigkeit für Prüfungsfragen. *Typ: Flussschema / Bilanz.*
+
 ---
 
 ## Pyruvat-Dehydrogenase — Der Brückenschritt
@@ -1998,6 +2012,8 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 - **Komplex IV (Cytochrom-c-Oxidase):** Überträgt Elektronen auf O₂ → H₂O. Pumpt 2 H⁺. **O₂ ist der finale Elektronenakzeptor!** Hemmer: Cyanid (CN⁻), Kohlenmonoxid (CO) blockieren Komplex IV → kein O₂-Verbrauch → Atmungskette stoppt.
 - **ATP-Synthase (Komplex V):** H⁺ fließen zurück durch die ATP-Synthase in die Matrix (Protonenkanal + Motorprotein) → Konformationsänderung → ADP + Pᵢ → ATP. **Chemiosmose (Mitchell-Hypothese, Nobelpreis 1978).** Hemmer: Oligomycin (schließt H⁺-Kanal), Dinitrophenol (DNP, Entkoppler: H⁺ leaken durch Membran ohne ATP-Synthese → Energie als Wärme).
 
+**SVG-Hinweis (Atmungskette — Komplexe I–V):** Ein Schema mit Komplex I → Ubichinon → Komplex III → Cytochrom c → Komplex IV → O₂ und ATP-Synthase (Protonengradient) macht die Reihenfolge und die Einstiegspunkte von NADH vs. FADH₂ auf einen Blick klar. *Typ: Schemazeichnung / Übersicht.*
+
 **P/O-Verhältnis (ATP pro Sauerstoffatom):**
 - NADH: ~2,5 ATP pro NADH (frühere Angabe: 3 ATP)
 - FADH₂: ~1,5 ATP pro FADH₂ (frühere Angabe: 2 ATP)
@@ -2043,8 +2059,6 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 **Zentral prüfungsrelevant:** Glykolyse (Zytoplasma, 2 ATP netto, Pyruvat, PFK-1), Brückenschritt (Pyruvat → Acetyl-CoA, Thiamin), Citratzyklus + Atmungskette (Mitochondrien), ~30–32 ATP/Glucose aerob, oxidative Phosphorylierung/Chemiosmose, Cyanid (Komplex IV), anaerob → Laktat.
 
 **Ergänzend vertiefend:** Einzelreaktionen Glykolyse/Citratzyklus, Gärung (Laktat, Ethanol), PDH-Cofaktoren.
-
-**Häufige Verwechslungen:** siehe unten.
 
 **Häufige Fragen:**
 - "Wo findet Glykolyse statt?" → Zytoplasma (nicht Mitochondrien!)

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="100%">
+  <defs><style>.b{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#me)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="me" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="240" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Meiose I vs. Meiose II</text>
+  <rect x="20" y="44" width="200" height="52" class="b"/>
+  <text x="120" y="62" text-anchor="middle" class="l">Meiose I: Reduktionsteilung</text>
+  <text x="120" y="76" text-anchor="middle" font-size="10" fill="#475569">2n -> n. Paarung homologer Chromosomen, Crossing-over. Trennung homologer Chromosomen.</text>
+  <rect x="260" y="44" width="200" height="52" class="b"/>
+  <text x="360" y="62" text-anchor="middle" class="l">Meiose II: Aequationsteilung</text>
+  <text x="360" y="76" text-anchor="middle" font-size="10" fill="#475569">n -> n. Keine Replikation davor. Trennung der Schwesterchromatiden (wie Mitose).</text>
+  <path d="M220 70 L260 70" class="ar"/>
+  <rect x="20" y="112" width="440" height="54" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="240" y="132" text-anchor="middle" font-size="10" fill="#475569">Ergebnis: 4 haploide Zellen (Spermien/Oozyten). Meiose I = Reduktion; Meiose II = Aequation. Oozyte: Arrest Prophase I / Metaphase II.</text>
+  <text x="240" y="148" text-anchor="middle" font-size="9" fill="#64748b">MedAT: Non-Disjunction in I (homolog) vs. II (Schwesterchromatiden) -> verschiedene Aneuploidien.</text>
+</svg>

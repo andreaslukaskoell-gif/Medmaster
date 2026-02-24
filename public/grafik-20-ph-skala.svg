@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%">
+  <defs><style>.bar{fill:url(#phgrad);stroke:#0e7490;stroke-width:1}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <linearGradient id="phgrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#dc2626"/><stop offset="50%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+  <text x="240" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">pH-Skala und Puffer</text>
+  <rect x="20" y="44" width="440" height="24" class="bar" rx="2"/>
+  <text x="20" y="38" font-size="10" fill="#475569">0</text><text x="240" y="38" font-size="10" fill="#475569">7</text><text x="460" y="38" font-size="10" fill="#475569">14</text>
+  <text x="252" y="58" text-anchor="middle" font-size="10" fill="#1e293b">neutral</text>
+  <rect x="20" y="80" width="440" height="52" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="240" y="98" text-anchor="middle" font-size="10" fill="#475569">Puffer: Henderson-Hasselbalch pH = pKa + log([A-]/[HA]). Pufferbereich ca. pKa +/- 1. AEquivalenzpunkt bei Titration.</text>
+  <text x="240" y="124" text-anchor="middle" font-size="9" fill="#64748b">MedAT: pH, Pufferzone, starke vs. schwache Saeure.</text>
+</svg>

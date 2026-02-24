@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" width="100%">
+  <defs><style>.box{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.ar{stroke:#0e7490;stroke-width:1.5;fill:none;marker-end:url(#hc)}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style>
+  <marker id="hc" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker></defs>
+  <text x="280" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Herzzyklus: Systole und Diastole</text>
+  <rect x="16" y="44" width="118" height="36" class="box"/><text x="75" y="60" text-anchor="middle" class="l">Diastole</text><text x="75" y="72" text-anchor="middle" font-size="9" fill="#475569">Fuellung Ventrikel</text>
+  <rect x="148" y="44" width="118" height="36" class="box"/><text x="207" y="60" text-anchor="middle" class="l">isovolum. Kontraktion</text><text x="207" y="72" text-anchor="middle" font-size="9" fill="#475569">Klappen zu</text>
+  <rect x="280" y="44" width="118" height="36" class="box"/><text x="339" y="60" text-anchor="middle" class="l">Systole</text><text x="339" y="72" text-anchor="middle" font-size="9" fill="#475569">Auswurf</text>
+  <rect x="412" y="44" width="118" height="36" class="box"/><text x="471" y="60" text-anchor="middle" class="l">isovolum. Relaxation</text><text x="471" y="72" text-anchor="middle" font-size="9" fill="#475569">Klappen zu</text>
+  <path d="M134 62 L148 62" class="ar"/><path d="M266 62 L280 62" class="ar"/><path d="M398 62 L412 62" class="ar"/><path d="M530 62 L544 62" class="ar"/>
+  <path d="M544 62 L544 90 L16 90 L16 62" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2" fill="none"/>
+  <rect x="16" y="108" width="528" height="58" fill="#fef3c7" stroke="#b45309" stroke-width="1" rx="4"/>
+  <text x="280" y="128" text-anchor="middle" font-size="10" fill="#92400e">Systole = Kontraktion (Auswurf). Diastole = Relaxation (Fuellung). Auswurffraktion EF ~55-70%. Frank-Starling: mehr Fuellung -> groessere Kontraktion.</text>
+  <text x="280" y="152" text-anchor="middle" font-size="9" fill="#b45309">MedAT: Reihenfolge der Phasen, Klappenstellung, EF.</text>
+</svg>

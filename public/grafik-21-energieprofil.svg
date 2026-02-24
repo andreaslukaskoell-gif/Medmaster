@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%">
+  <defs><style>.curve{fill:none;stroke:#0e7490;stroke-width:2}.curve2{fill:none;stroke:#15803d;stroke-width:1.5;stroke-dasharray:4 2}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="200" y="18" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Energieprofil Reaktion</text>
+  <path d="M40 140 L120 60 L280 60 L360 100" class="curve"/>
+  <path d="M40 140 L160 80 L360 100" class="curve2"/>
+  <text x="40" y="155" class="l">Edukte</text><text x="360" y="115" class="l">Produkte</text>
+  <text x="120" y="52" class="l">E_A</text><text x="160" y="72" class="l">mit Katalyse</text>
+  <rect x="20" y="168" width="360" height="36" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="200" y="186" text-anchor="middle" font-size="9" fill="#475569">Aktivierungsenergie E_A = Barriere. Katalyse senkt E_A (nicht Delta G). RGT-Regel: T hoch -&gt; mehr Molekuele ueber E_A.</text>
+</svg>

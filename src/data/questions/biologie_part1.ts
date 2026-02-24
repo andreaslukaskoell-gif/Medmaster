@@ -314,7 +314,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-018",
-    stichwortId: "bio-1-04",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "leicht" as const,
     fragetext: 'Was versteht man unter dem Begriff "Zytoplasma"?',
@@ -333,7 +333,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-019",
-    stichwortId: "bio-1-04",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Woraus besteht das Zytosol hauptsächlich?",
@@ -352,7 +352,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-020",
-    stichwortId: "bio-1-04",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Welche biochemischen Prozesse finden typischerweise im Zytosol statt?",
@@ -371,7 +371,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-021",
-    stichwortId: "bio-1-04",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Was ist das Zytoskelett und wo befindet es sich?",
@@ -498,7 +498,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-028",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "leicht" as const,
     fragetext: "Was ist die Hauptfunktion der Mitochondrien?",
@@ -517,7 +517,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-029",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Wie ist ein Mitochondrium strukturell aufgebaut?",
@@ -536,7 +536,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-030",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Was ist die Atmungskette und wo findet sie statt?",
@@ -555,7 +555,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-031",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Wo findet der Citratzyklus (Krebs-Zyklus) statt?",
@@ -574,7 +574,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-032",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Was besagt die Endosymbiontentheorie bezüglich Mitochondrien?",
@@ -593,7 +593,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-033",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Was ist oxidative Phosphorylierung?",
@@ -612,7 +612,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-034",
-    stichwortId: "bio-1-06",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Welche Besonderheit hat die mitochondriale DNA?",
@@ -631,7 +631,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-035",
-    stichwortId: "bio-1-07",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "leicht" as const,
     fragetext: "Was sind Plastiden?",
@@ -650,7 +650,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-036",
-    stichwortId: "bio-1-07",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Was ist die Hauptfunktion von Chloroplasten?",
@@ -669,7 +669,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-037",
-    stichwortId: "bio-1-07",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Was sind Chromoplasten?",
@@ -688,7 +688,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-038",
-    stichwortId: "bio-1-07",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Was sind Leukoplasten und welche Funktion haben sie?",
@@ -707,7 +707,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-039",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "leicht" as const,
     fragetext: "Was ist das Endoplasmatische Retikulum (ER)?",
@@ -726,7 +726,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-040",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Was ist die Hauptfunktion des rauen ER?",
@@ -745,7 +745,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-041",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Welche Funktionen hat das glatte ER?",
@@ -764,7 +764,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-042",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext: "Wo werden Proteine mit einem Signalpeptid synthetisiert?",
@@ -783,7 +783,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-043",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "schwer" as const,
     fragetext: "Was ist die ER-assoziierte Degradation (ERAD)?",
@@ -802,7 +802,7 @@ export const fragenPart1 = [
   },
   {
     id: "bio-q-044",
-    stichwortId: "bio-1-08",
+    stichwortId: "bio-1-05",
     fach: "biologie" as const,
     schwierigkeit: "mittel" as const,
     fragetext:

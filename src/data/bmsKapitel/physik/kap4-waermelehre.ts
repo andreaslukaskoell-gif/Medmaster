@@ -33,6 +33,8 @@ Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 �
 
 ## Temperaturskalen
 
+**SVG-Hinweis (Temperatur, Wärmekapazität, Ausdehnung):** Ein Schema mit Celsius/Kelvin-Umrechnung, spezifischer Wärmekapazität c und linearer Ausdehnung ΔL = α·L₀·ΔT unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Drei Skalen sind praxisrelevant:
 
 **Celsius (°C)**: Die historische Alltagsskala. Der Nullpunkt liegt beim Gefrierpunkt des Wassers (bei 1 atm), 100 °C beim Siedepunkt. Negative Werte sind möglich.
@@ -123,8 +125,9 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Temperatur (Kelvin T = °C + 273,15), Wärme Q = c·m·ΔT, spezifische Wärmekapazität, Phasenübergang (latente Wärme), Wärmebilanz.
+
+**Ergänzend vertiefend:** Absolute Temperatur; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Temperatur in K entspricht 37 °C?" → T[K] = 37 + 273,15 = 310 K
@@ -356,6 +359,8 @@ Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt
 
 ## Wärmeleitung (Konduktion)
 
+**SVG-Hinweis (Wärmeübertragung — Konduktion, Konvektion, Strahlung):** Ein Schema mit Fourier-Gesetz Q̇ = λ·A·ΔT/d, Stefan-Boltzmann und den drei Übertragungswegen unterstützt die Einordnung. *Typ: Übersicht / Schema.*
+
 Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Teilchen übertragen, ohne dass Materie transportiert wird. Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom:
 
 **Q̇ = λ · A · ΔT / d**
@@ -444,8 +449,9 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Wärmeleitung (Fourier: Q̇ = λ·A·ΔT/d), Wärmeleitfähigkeit λ, Isolation (Fett, Luft), Wärmestrom, Anwendung (Körpertemperatur, Wärmedämmung).
+
+**Ergänzend vertiefend:** Konvektion, Strahlung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wärmestrom durch Fettschicht: λ = 0,2, A = 0,5 m², ΔT = 4 K, d = 2 cm?" → Q̇ = 0,2 · 0,5 · 4 / 0,02 = 20 W
@@ -665,6 +671,8 @@ Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmef
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
+**SVG-Hinweis (Hauptsätze, ΔU = Q + W, Carnot):** Ein Schema mit 1. und 2. Hauptsatz, Entropie und Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 "Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
 
 Dies ist die physikalische Grundlage der Temperaturmessung: Ein Thermometer erreicht mit dem Körper ein Gleichgewicht und zeigt dann denselben Temperaturwert an.
@@ -758,8 +766,9 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm (Kelvin!), 2. Hauptsatz (Wärme nicht vollständig in Arbeit), Wärmekraftmaschine, maximaler Wirkungsgrad.
+
+**Ergänzend vertiefend:** Entropie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Carnot-Wirkungsgrad bei T_warm = 600 K, T_kalt = 300 K?" → η = 1 − 300/600 = 50 %
@@ -956,6 +965,8 @@ Der Autoklav sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siede
 
 ## Ideales Gasgesetz
 
+**SVG-Hinweis (Ideales Gas, Phasendiagramm, Latentwärme):** Ein Schema mit pV = nRT, Boyle/Gay-Lussac/Charles und Phasendiagramm (Tripelpunkt, kritischer Punkt) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlässigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase näherungsweise ideal.
 
 **Allgemeine Zustandsgleichung des idealen Gases:**
@@ -1046,8 +1057,9 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Ideales Gas (pV=nRT), isochor (V const → p/T const), isobar (p const → V/T const), isotherm (T const → pV const), Gay-Lussac, Boyle-Mariotte.
+
+**Ergänzend vertiefend:** Adiabatisch; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Gas bei 27 °C und 2 bar, isochor auf 127 °C erhitzt — neuer Druck?" → p₂ = 2 × (400/300) ≈ 2,67 bar

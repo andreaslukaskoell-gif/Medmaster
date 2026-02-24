@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="100%">
+  <defs><style>.col1{fill:#e8f4f8;stroke:#0e7490;stroke-width:1;rx:3}.col2{fill:#fef3c7;stroke:#b45309;stroke-width:1;rx:3}.l{font:11px system-ui,sans-serif;fill:#1e293b}</style></defs>
+  <text x="240" y="20" text-anchor="middle" font-weight="600" font-size="13" fill="#0f172a">Angeborene vs. adaptive Immunitaet</text>
+  <rect x="20" y="40" width="200" height="120" class="col1"/>
+  <text x="120" y="58" text-anchor="middle" class="l">Angeboren (0h - Tage)</text>
+  <text x="120" y="76" text-anchor="middle" font-size="10" fill="#475569">Granulozyten, Makrophagen, NK-Zellen. Keine Spezifitaet, kein Gedaechtnis. Barrieren, Komplement, Phagozytose.</text>
+  <rect x="260" y="40" width="200" height="120" class="col2"/>
+  <text x="360" y="58" text-anchor="middle" class="l">Adaptiv (Tage - Wochen)</text>
+  <text x="360" y="76" text-anchor="middle" font-size="10" fill="#92400e">B-Zellen (Antikoerper), T-Zellen. Spezifisch, immunologisches Gedaechtnis. MHC I (CD8), MHC II (CD4).</text>
+  <rect x="20" y="172" width="440" height="36" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="4"/>
+  <text x="240" y="190" text-anchor="middle" font-size="9" fill="#475569">MedAT: Angeboren = schnell, unspezifisch. Adaptiv = spezifisch, Gedaechtnis, B/T. Typ-I-Allergie = IgE, Soforttyp.</text>
+</svg>

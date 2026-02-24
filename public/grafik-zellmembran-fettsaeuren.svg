@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" width="100%">
+  <defs>
+    <style>
+      .box { fill: #f0fdfa; stroke: #0e7490; stroke-width: 1.5; rx: 6 }
+      .title { font: 600 14px system-ui, sans-serif; fill: #0f172a }
+      .head { font: 600 12px system-ui, sans-serif; fill: #1e293b }
+      .sub { font: 11px system-ui, sans-serif; fill: #475569 }
+      .small { font: 10px system-ui, sans-serif; fill: #64748b }
+    </style>
+  </defs>
+  <text x="280" y="24" text-anchor="middle" class="title">Fetts&#228;uren und Membranfluidit&#228;t</text>
+
+  <rect x="24" y="40" width="248" height="200" class="box"/>
+  <text x="148" y="62" text-anchor="middle" class="head">Ges&#228;ttigte Fetts&#228;ure</text>
+  <text x="148" y="78" text-anchor="middle" class="sub">nur Einfachbindungen, gerade Kette</text>
+  <path d="M 60 110 L 100 110 L 140 108 L 180 110 L 220 112 L 236 110" stroke="#0e7490" stroke-width="2.5" fill="none"/>
+  <path d="M 64 122 L 104 122 L 144 120 L 184 122 L 224 124 L 240 122" stroke="#0e7490" stroke-width="2.5" fill="none"/>
+  <path d="M 58 134 L 98 134 L 138 132 L 178 134 L 218 136 L 234 134" stroke="#0e7490" stroke-width="2.5" fill="none"/>
+  <text x="148" y="158" text-anchor="middle" class="sub">enge Packung</text>
+  <text x="148" y="176" text-anchor="middle" class="head" fill="#0e7490">&#8595; Fluidit&#228;t</text>
+  <rect x="48" y="188" width="200" height="40" fill="#e0f2fe" stroke="#0e7490" stroke-width="0.8" rx="4"/>
+  <text x="148" y="208" text-anchor="middle" class="small">Palmitin-, Stearins&#228;ure (z. B. Butter fest)</text>
+
+  <rect x="288" y="40" width="248" height="200" class="box"/>
+  <text x="412" y="62" text-anchor="middle" class="head">Unges&#228;ttigte Fetts&#228;ure</text>
+  <text x="412" y="78" text-anchor="middle" class="sub">cis-Doppelbindung, Knick</text>
+  <path d="M 308 108 L 348 108 L 368 88 L 388 108 L 428 108" stroke="#059669" stroke-width="2.5" fill="none"/>
+  <circle cx="368" cy="88" r="5" fill="#059669"/>
+  <text x="368" y="82" text-anchor="middle" font-size="8" fill="#047857">cis</text>
+  <path d="M 312 122 L 352 122 L 372 102 L 392 122 L 432 122" stroke="#059669" stroke-width="2.5" fill="none"/>
+  <circle cx="372" cy="102" r="5" fill="#059669"/>
+  <path d="M 316 136 L 356 136 L 376 116 L 396 136 L 436 136" stroke="#059669" stroke-width="2.5" fill="none"/>
+  <circle cx="376" cy="116" r="5" fill="#059669"/>
+  <text x="412" y="158" text-anchor="middle" class="sub">lockere Packung</text>
+  <text x="412" y="176" text-anchor="middle" class="head" fill="#059669">&#8593; Fluidit&#228;t</text>
+  <rect x="312" y="188" width="200" height="40" fill="#d1fae5" stroke="#059669" stroke-width="0.8" rx="4"/>
+  <text x="412" y="208" text-anchor="middle" class="small">&#214;ls&#228;ure, DHA (Nervenzellen)</text>
+
+  <text x="280" y="252" text-anchor="middle" class="small">Unges&#228;ttigt = mehr Fluidit&#228;t; ges&#228;ttigt = weniger.</text>
+</svg>

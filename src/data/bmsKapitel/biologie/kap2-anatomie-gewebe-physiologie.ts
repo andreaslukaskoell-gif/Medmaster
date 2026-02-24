@@ -1148,8 +1148,9 @@ Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferente
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Vegetatives Nervensystem (Sympathikus vs. Parasympathikus), Wirkung auf Herz/Bronchien/Pupille/GI-Trakt, Acetylcholin vs. Noradrenalin, Rezeptoren (nikotinisch/muskarinisch, α/β).
+
+**Ergänzend vertiefend:** Enterisches NS; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Sympathikus vs. Parasympathikus: Wirkung auf Herz, Bronchien, Pupille, GI-Trakt
@@ -1434,8 +1435,9 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Fototransduktion (Rhodopsin → Transducin → PDE → cGMP↓ → Kanal schließt → Hyperpolarisation), Stäbchen vs. Zapfen, Dunkelstrom, Adaptation.
+
+**Ergänzend vertiefend:** Farbsehen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Fototransduktionskaskade: Rhodopsin → Transducin → PDE → cGMP ↓ → Hyperpolarisation
@@ -1644,8 +1646,9 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Peptidhormone (membranständiger Rezeptor, schnell) vs. Steroidhormone (Kernrezeptor, langsam, genexpression), Beispiele (Insulin, Cortisol, Schilddrüsenhormon), Hypophysenachsen.
+
+**Ergänzend vertiefend:** Second Messenger; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Peptidhormone vs. Steroidhormone: Rezeptortyp, Wirkgeschwindigkeit, Beispiele
@@ -1850,8 +1853,9 @@ Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Erregungsleitung (SA-Knoten → AV-Knoten → His-Bündel → Tawara-Schenkel → Purkinje-Fasern), AV-Verzögerung (Vollständige Ventrikelfüllung), Schrittmacher, EKG (P, QRS, T).
+
+**Ergänzend vertiefend:** Automatiezentren; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Erregungsleitung: Reihenfolge SA → AV → His → Tawara → Purkinje und Bedeutung der AV-Verzögerung
@@ -2060,8 +2064,9 @@ AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** O₂-Bindungskurve (S-Form), Bohr-Effekt (pH↓, CO₂↑, Temperatur↑ → Kurve rechts, O₂-Abgabe erleichtert), Hämoglobin, 2,3-BPG, Kooperativität.
+
+**Ergänzend vertiefend:** Fetal-Hb; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Bohr-Effekt: Welche Faktoren verschieben die O₂-Bindungskurve nach rechts?
@@ -2262,8 +2267,9 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Angeborene Immunität (schnell, unspezifisch, keine Gedächtnisbildung) vs. erworbene (spezifisch, Gedächtnis, B/T-Zellen), Barrieren, Phagozyten, Komplement, Antikörper.
+
+**Ergänzend vertiefend:** Kreuzpräsentation; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Angeborene vs. erworbene Immunität: Geschwindigkeit, Spezifität, Gedächtnis
@@ -2466,8 +2472,9 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Lymphsystem (Flüssigkeitsrücktransport, Immunabwehr, Fetttransport Chylomikronen), Lymphknoten, Milz, Ductus thoracicus, Lymphozyten-Rezirkulation.
+
+**Ergänzend vertiefend:** MALT; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Drei Funktionen des Lymphsystems: Flüssigkeitsrücktransport, Immunabwehr, Fetttransport
@@ -2653,8 +2660,9 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Surfactant (Typ-II-Pneumozyten, 90 % Phospholipide/DPPC), Oberflächenspannung, IRDS bei Frühgeborenen, Alveolenaufbau, Gasaustausch (Fick), Compliance.
+
+**Ergänzend vertiefend:** Atemmechanik; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Welche Zellen produzieren Surfactant und woraus besteht es? (Typ-II-Pneumozyten, 90 % Phospholipide/DPPC)
@@ -2872,8 +2880,9 @@ Der **Dickdarm** (Colon) ist ca. 1,5 m lang und besteht aus Caecum, Colon ascend
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Magenschleimhaut (Belegzellen: HCl + Intrinsic Factor; Hauptzellen: Pepsinogen; Nebenzellen: Mukus; G-Zellen: Gastrin; D-Zellen: Somatostatin), Magensaft, Pepsin, pH.
+
+**Ergänzend vertiefend:** Regulation der Magensäure; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Welche Zelltypen finden sich in der Magenschleimhaut und welche Sekrete produzieren sie? (Belegzellen: HCl + IF; Hauptzellen: Pepsinogen; Nebenzellen: Mukus; G-Zellen: Gastrin; D-Zellen: Somatostatin)
@@ -3081,8 +3090,9 @@ Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % we
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Henle-Schleife (Gegenstromprinzip), absteigend wasserdurchlässig (AQP1), aufsteigend wasserundurchlässig (NKCC2, NaCl-Rückresorption), osmotischer Gradient, Konzentrierung des Harns, ADH.
+
+**Ergänzend vertiefend:** Vasa recta; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Wie funktioniert das Gegenstromprinzip in der Henle-Schleife? (Absteigend: H₂O raus [AQP1]; Aufsteigend: NaCl raus [NKCC2], wasserundurchlässig → osmotischer Gradient)
@@ -3316,8 +3326,9 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Knochenumbau (Osteoblasten: Aufbau, ALP; Osteoklasten: Abbau, TRAP), RANKL/OPG, Kalziumhomöostase (PTH, Calcitriol, Calcitonin), Ossifikation.
+
+**Ergänzend vertiefend:** Osteozyten; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was ist der Unterschied zwischen Osteoblasten und Osteoklasten? (Aufbau vs. Abbau; ALP vs. TRAP als Marker)
@@ -3538,8 +3549,9 @@ Der 28-tägige Menstruationszyklus ist ein Musterbeispiel für negative und posi
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Sertoli-Zellen (FSH, Inhibin, ABP, Blut-Hoden-Schranke, Ernährung der Spermien) vs. Leydig-Zellen (LH → Testosteron), Spermatogenese, Hormonregulation Hoden.
+
+**Ergänzend vertiefend:** Spermatogonien; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Was ist der Unterschied zwischen Sertoli- und Leydig-Zellen? (Sertoli: FSH-abhängig, Inhibin, ABP, Blut-Hoden-Schranke; Leydig: LH → Testosteron)

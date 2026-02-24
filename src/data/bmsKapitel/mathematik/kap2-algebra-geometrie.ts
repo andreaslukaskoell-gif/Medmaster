@@ -31,6 +31,8 @@ Wie viel Paracetamol für ein 12 kg schweres Kind? Wie schnell fällt eine Wirks
 
 ## Grundprinzip der Gleichungsumformung
 
+**SVG-Hinweis (Gleichungen, Mitternachtsformel, Ungleichungen):** Ein Schema mit Äquivalenzumformungen, Diskriminante D = b²−4ac, Substitution/Elimination und Vorzeichenumkehr bei Ungleichungen unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Eine Gleichung ist eine Aussage der Form A = B, wobei A und B mathematische Ausdrücke sind. Das fundamentale Prinzip lautet: Eine Gleichung bleibt gültig, wenn man auf beiden Seiten dieselbe Operation durchführt. Erlaubte Operationen sind:
 
 - Addition oder Subtraktion derselben Zahl auf beiden Seiten
@@ -309,6 +311,8 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 Hämatokrit 42%, SpO₂ 98%, Ejektionsfraktion >55%, Serumverdünnung 1:10 — Prozente und Brüche durchziehen den klinischen Alltag. Die häufigste MedAT-Falle: Verwechseln von absoluter und relativer Risikoreduktion. ARR und NNT sind Grundkonzepte der EbM (evidenzbasierte Medizin) und fast jährlich im MedAT. Für den MedAT sind Prozentrechnung (Prozentwert, Prozentsatz, Grundwert), Bruchrechnung, ARR/RRR/NNT und Serienverdünnungen prüfungsrelevant.
 
 ## Prozentrechnung — die drei Grundfragen
+
+**SVG-Hinweis (Prozent, Bruch, Dreisatz):** Ein Schema mit P = G·p/100, Bruchrechenregeln und direktem/indirektem Dreisatz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Das Wort Prozent kommt von lateinisch pro centum, zu Deutsch je Hundert. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts gemeint sind.
 
@@ -599,6 +603,8 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 BSA-Formel (Körperoberfläche), Parabelkurve der Pharmakokinetik, Faktorisieren von Termen — quadratische Gleichungen und binomische Formeln sind Grundwerkzeuge. Die drei binomischen Formeln ermöglichen schnelles Faktorisieren, was am MedAT Rechenzeit spart. Für den MedAT sind drei binomische Formeln, pq-Formel, Scheitelpunktform (Dosisoptimum), Vieta-Formeln und quadratische Gleichungen in medizinischen Kontexten prüfungsrelevant.
 
 ## Die drei binomischen Formeln — Herleitung und Anwendung
+
+**SVG-Hinweis (Binomische Formeln, Scheitelpunkt, p-q-Formel):** Ein Schema mit (a±b)², (a+b)(a−b) = a²−b², Scheitelpunktform und p-q-Formel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
 
@@ -901,6 +907,8 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
 Bakterienwachstum verdoppelt sich alle 20 Minuten — nach 3 Stunden sind aus 1 Bakterium 2⁹ = 512 geworden. pH = −log₁₀([H⁺]) — der Logarithmus erlaubt, riesige Konzentrationsbereiche handhabbar zu machen. Potenz- und Logarithmengesetze sind überall in der Medizin. Für den MedAT sind Potenzgesetze (8 Regeln), Wurzeln als gebrochene Potenzen, Logarithmus (log₁₀, ln), pH-Berechnung und Dezibel prüfungsrelevant.
 
 ## Definition und Grundbegriffe
+
+**SVG-Hinweis (Potenzgesetze, Wurzel, Logarithmus):** Ein Schema mit aⁿ·aᵐ = aⁿ⁺ᵐ, a^(1/n) = ⁿ√a, negativem Exponenten und log-Regeln unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst:
 a hoch n = a mal a mal a ... mal a (n Faktoren).
@@ -1231,6 +1239,8 @@ Wundfläche für Transplantationsplanung, Aortenklappenöffnungsfläche bei Sten
 
 ## Rechteck und Quadrat
 
+**SVG-Hinweis (Ebene Figuren — Rechteck, Dreieck, Kreis, Heron):** Ein Schema mit A = l·b, A = ½·g·h, A = πr², Heron-Formel und DuBois/KOF unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Beim Rechteck mit Länge l und Breite b gilt:
 - Fläche: **A = l · b**
 - Umfang: **U = 2 · (l + b)**
@@ -1545,6 +1555,8 @@ Von der Berechnung des Herzvolumens (Ellipsoid) über die Medikamentendosierung 
 
 ## Quader
 
+**SVG-Hinweis (Körper — Quader, Zylinder, Kugel, Ellipsoid):** Ein Schema mit V = l·b·h, V = πr²h, V = (4/3)πr³ und Ellipsoid V ≈ 0,52·a·b·c unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+
 Ein Quader mit Länge l, Breite b und Höhe h:
 - **Volumen: V = l · b · h**
 - **Oberfläche: O = 2 · (l·b + b·h + l·h)**
@@ -1842,6 +1854,8 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 Eine EKG-Kurve ist eine Funktion über Zeit — Koordinatensystem. Eine Blutdruckkurve ebenfalls. Die Dosierungs-Wirkungskurve eines Medikaments ist ein Graph im Koordinatensystem. Analytische Geometrie verbindet algebraische Gleichungen mit geometrischen Objekten — Geraden, Kurven, Abstände. Für den MedAT sind kartesische Koordinaten, Geradengleichung (Steigung, Schnittpunkte), Abstände und lineare Interpolation prüfungsrelevant.
 
 ## Kartesisches Koordinatensystem
+
+**SVG-Hinweis (Koordinaten, Gerade, Abstand, Kreis):** Ein Schema mit d = √((x₂−x₁)²+(y₂−y₁)²), y = mx+b, m₁·m₂ = −1 und Kreisgleichung unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Ein Punkt P im zweidimensionalen kartesischen Koordinatensystem wird durch ein geordnetes Paar (x, y) beschrieben. Die x-Achse (Abszisse) ist horizontal, die y-Achse (Ordinate) vertikal; der Ursprung O = (0, 0) liegt im Schnittpunkt.
 
@@ -2161,6 +2175,8 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
 Die EKG-Herzachse ist ein Vektor in der Frontalebene. Kräfte auf Gelenke werden als Vektoren berechnet. Blutströmung hat Richtung und Betrag — also ist sie ein Vektor. Vektoren beschreiben Größen mit Richtung und Betrag, im Gegensatz zu Skalaren (nur Betrag). Für den MedAT sind Vektoraddition, Skalarprodukt, Winkelberechnung, Betrag und 3D-Koordinaten prüfungsrelevant.
 
 ## Grundbegriffe
+
+**SVG-Hinweis (Vektoren — Betrag, Skalarprodukt, Kreuzprodukt):** Ein Schema mit |a|, a·b = |a||b|cos θ, a×b und Ebenengleichung n·(r−r₀)=0 unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
 
 Ein Vektor **a** in 3D wird durch seine Komponenten beschrieben: **a** = (a₁, a₂, a₃). Im 2D entsprechend: **a** = (a₁, a₂).
 
