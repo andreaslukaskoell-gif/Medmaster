@@ -7,78 +7,69 @@ export const bioKapOekologie: Kapitel = {
   icon: "🌿",
   estimatedTime: "90 min",
   unterkapitel: [
-    // === from kap10-oekologie ===
+    // === Ökologie (überarbeitet) ===
 
     {
       id: "bio-10-01",
-      title: "Abiotische Faktoren — Toleranzkurven und Liebigs Minimum",
+      title: "Ökologie: Grundbegriffe und Ebenen",
       stichworte: [
-        "Temperatur",
-        "Licht",
-        "Wasser",
-        "Toleranzkurve",
-        "Minimum-Gesetz",
-        "Stenök",
-        "Euryök",
+        "Ökologie",
+        "Biotop",
+        "Biozönose",
+        "Ökosystem",
+        "Population",
+        "Organismus",
+        "Lebensgemeinschaft",
       ],
       content: `## Einleitung
 
-Abiotische Faktoren bilden die physikalisch-chemische Grundlage jedes Ökosystems und bestimmen, welche Organismen in einem Lebensraum überleben, wachsen und sich fortpflanzen können. Für den MedAT ist dieses Thema besonders relevant, da Toleranzkurven, das Liebigsche Minimumgesetz und Bioindikatoren regelmäßig abgefragt werden und das Minimumprinzip auch in der klinischen Medizin (Intensivmedizin, Ernährungsmedizin) direkte Anwendung findet.
+Ökologie ist die Wissenschaft von den Wechselbeziehungen zwischen Organismen und ihrer belebten und unbelebten Umwelt. Sie gliedert sich in Ebenen: vom einzelnen Organismus über die Population und die Lebensgemeinschaft (Biozönose) bis zum Ökosystem. Für den MedAT sind die Begriffe Biotop, Biozönose und Ökosystem sowie die klare Trennung von Lebensraum und ökologischer Nische zentral. Ohne diese Grundlagen sind Nahrungsketten, Stoffkreisläufe und Artinteraktionen nicht einzuordnen.
 
-**Das Wichtigste auf einen Blick:**
-- Abiotische Faktoren: Temperatur, Licht, Wasser, Boden, pH, Gase — nicht-lebende Umweltkomponenten
-- Toleranzkurve: Optimum, Pessimum, Todespunkt, ökologische Amplitude
-- Euryök (Generalist, breite Amplitude) vs. stenök (Spezialist, enge Amplitude, Bioindikator)
-- Liebigs Minimumgesetz (1840): der knappste Faktor limitiert das Wachstum
-- Shelfords Toleranzgesetz (1913): auch Überangebot kann limitierend wirken
-- Bioindikatoren zeigen langfristige Umweltbedingungen an (Brennnessel = N-reich, Flechten = saubere Luft)
+**In diesem Kapitel lernst du:**
+- die **Definition** von Ökologie und die **Ebenen** (Organismus → Population → Biozönose → Ökosystem)
+- **Biotop** (unbelebter Lebensraum) vs. **Biozönose** (Lebensgemeinschaft aller Arten)
+- **Ökosystem** = Biotop + Biozönose in Wechselwirkung
+- warum diese Begriffe für alle weiteren Ökologie-Themen grundlegend sind
 
 ---
 
-## Abiotische Faktoren — Definition und Überblick
+## Ökologie: Definition und Ebenen
 
-**Abiotische Faktoren** sind die nicht-lebenden, physikalisch-chemischen Komponenten der Umwelt, die Organismen direkt beeinflussen. Sie umfassen Temperatur, Lichtintensität und Lichtqualität (Wellenlänge), Wasser (Verfügbarkeit, Salzgehalt, pH), Boden (Textur, pH, Nährstoffgehalt, Humusanteil), atmosphärischen Gasdruck, Strömungsgeschwindigkeit in Gewässern sowie Windverhältnisse. Jeder dieser Faktoren kann das Überleben, Wachstum und die Reproduktion eines Organismus limitieren. Das Zusammenspiel aller abiotischen Faktoren definiert das physikalische Habitat.
+**Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
 
-Abiotische Faktoren wirken dabei nicht unabhängig voneinander: hohe Temperatur erhöht die Evapotranspiration und kann Wassermangel verschärfen; niedriger pH kann die Löslichkeit von Schwermetallen erhöhen und diese toxisch wirken lassen. Die Ökologie analysiert diese Wechselwirkungen systematisch.
+Die Ökologie arbeitet auf mehreren **Ebenen**:
+- **Organismus:** Einzelnes Individuum; Anpassung an Umweltfaktoren (Toleranz, Verhalten).
+- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen können.
+- **Biozönose** (Lebensgemeinschaft): Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) in einem Gebiet und ihre Wechselwirkungen.
+- **Ökosystem:** **Biozönose** + **Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energieflüssen.
 
----
-
-## Toleranzkurve — Optimum, Pessimum und ökologische Amplitude
-
-Die **Toleranzkurve** zeigt die Leistungsfähigkeit (Wachstum, Reproduktionsrate, Aktivität) eines Organismus in Abhängigkeit von einem abiotischen Faktor. Sie hat eine Glockenkurven-Form mit klar definierten Bereichen:
-
-- **Optimum**: Bereich maximaler Leistung und Fitness (mittlere Faktorstufe)
-- **Pessimum**: Randbereiche mit stark verminderter, aber noch möglicher Leistung (physiologischer Stress)
-- **Todespunkte (letale Grenzen)**: Extremwerte, jenseits derer der Organismus stirbt
-- **Ökologische Amplitude**: Gesamtbereich zwischen beiden Todespunkten — die Toleranzbreite
-
-Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art: Breite Amplitude = **euryök** (Generalist), enge Amplitude = **stenök** (Spezialist, Bioindikator).
-
-> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, aber Überleben) → Todespunkt (letale Grenze). Ökologische Amplitude = Breite des Toleranzbereichs.
-
-![Toleranzkurve](/grafik-toleranzkurve.svg)
-
-**Erklärung zur Grafik:** Die Glockenkurve zeigt Optimum, Pessimum und Todespunkte sowie die ökologische Amplitude — Grundlage für die Abgrenzung euryök (Generalist) vs. stenök (Spezialist).
-
-![Abiotische Faktoren und Verteilung](/grafik-normalverteilung.svg)
-
-**Erklärung zur Grafik:** Verteilung von Arten entlang eines Umweltgradienten; die Grafik veranschaulicht Toleranzbreite und ökologische Amplitude (stenök vs. euryök).
+> **Merke:** Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem (Biozönose + Biotop).
 
 ---
 
-## Euryök vs. stenök — Konsequenzen für den Naturschutz
+## Biotop und Biozönose
 
-Die Unterscheidung zwischen euryöken und stenöken Arten ist für den Naturschutz fundamental. Euryöke Generalisten (Fuchs, Krähe, Ratte) profitieren oft von anthropogener Habitatveränderung und Fragmentierung — sie können in gestörten Systemen überleben, wo Spezialisten ausgestorben sind. Stenöke Spezialisten hingegen sind besonders gefährdet: Der Klimawandel verschiebt Temperatur- und Niederschlagszonen, sodass stenöke Arten ihr Habitat verlieren, wenn sie nicht schnell genug migrieren oder sich anpassen können. Bergarten (z. B. Alpen-Murmeltier, Alpenblumen) sind besonders gefährdet, weil sie "bergauf" migrieren müssen — und irgendwann auf dem Gipfel keine weitere Ausweichmöglichkeit haben. Die ökologische Amplitude einer Art bestimmt unmittelbar ihre Vulnerabilität gegenüber Umweltveränderungen und ihre Eignung als Bioindikator.
+**Bisher haben wir gesehen:** Die ökologischen Ebenen von Organismus bis Ökosystem. **Um sie anzuwenden,** müssen Biotop und Biozönose klar getrennt werden.
 
-> **Merke:** Euryök = breite Amplitude, Generalist, widerstandsfähig. Stenök = enge Amplitude, Spezialist, gefährdet, Bioindikator.
+**Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Nährstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
+
+**Biozönose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Prädation, Symbiose).
+
+**Ökosystem** = **Biotop + Biozönose** in Wechselwirkung. Im Ökosystem fließen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreisläufe).
+
+| Begriff | Bedeutung |
+|--------|-----------|
+| **Biotop** | Unbelebter Lebensraum (Boden, Wasser, Klima, Licht) |
+| **Biozönose** | Lebensgemeinschaft aller Arten in einem Gebiet |
+| **Ökosystem** | Biotop + Biozönose; funktionelle Einheit mit Stoff- und Energieflüssen |
+
+> **Merke:** Biotop = unbelebt (Ort). Biozönose = belebt (alle Arten). Ökosystem = beides zusammen.
 
 ---
 
-## Liebigs Minimum in der modernen Ökologie und Medizin
+## Zusammenhang für die Prüfung
 
-Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökologie: Phosphor ist in Süßwasserseen oft der limitierende Faktor (Redfield-Verhältnis C:N:P = 106:16:1 im Phytoplankton). Selbst bei viel Stickstoff und Licht wächst das Phytoplankton nicht ohne Phosphor. Wird Phosphor durch Kläranlagenabwässer zugeführt, explodiert das Algenwachstum (Eutrophierung). In Gewächshäusern der Hochleistungslandwirtschaft wird CO₂ künstlich erhöht — hier ist CO₂ nicht mehr der limitierende Faktor, Licht und Wasser sind es. Shelfords Erweiterung (Toleranzgesetz) ist ebenfalls wichtig: Zu viel Kupfer, Zink oder andere Schwermetalle sind toxisch, obwohl diese Elemente in Spurenmengen essenziell sind. In der Humanmedizin findet sich eine direkte Analogie: Ein Intensivpatient kann trotz optimaler Beatmung, Hämodynamik und Antibiose an einem Mikronährstoffmangel (Selen, Zink, Vitamin D) sterben — der limitierende Mangelfaktor bestimmt das Outcome.
-
-> **Merke:** Liebigs Gesetz gilt für alle Ökosystemebenen: der knappste essentielle Faktor begrenzt das System, nicht die reichlichen. Shelford: auch Überschuss kann limitieren.
+**Bisher haben wir gesehen:** Ökologie, Ebenen, Biotop, Biozönose und Ökosystem. **Damit ist das Fundament gelegt.** Aus diesen Grundbegriffen leiten sich alle weiteren Themen ab: **Umweltfaktoren** wirken im Biotop auf die Biozönose; die **ökologische Nische** beschreibt die Rolle einer Art in der Biozönose; **Nahrungsketten** und **Stoffkreisläufe** laufen im Ökosystem ab. Wer Biotop und Biozönose sicher trennt, vermeidet typische Prüfungsfehler (z. B. „Biotop = alle Lebewesen“ — falsch, das ist die Biozönose).
 
 ---
 
@@ -86,68 +77,212 @@ Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökol
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Toleranzkurve (Optimum, Pessimum, ökologische Amplitude), abiotische Faktoren (Temperatur, Wasser, pH), stenök vs. euryök, Verbreitungsgrenzen.
+**Zentral prüfungsrelevant:**
+- Ökologie = Wissenschaft von den Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
+- Ebenen: Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem (Biozönose + Biotop).
+- **Biotop** = unbelebter Lebensraum (Boden, Wasser, Klima, Licht, Nährstoffe).
+- **Biozönose** = Lebensgemeinschaft aller Arten in einem Gebiet; Wechselwirkungen untereinander.
+- **Ökosystem** = Biotop + Biozönose in Wechselwirkung; Stoff- und Energieflüsse.
+- Population = alle Individuen **einer Art** in einem Gebiet; Biozönose = **alle Arten**.
+- Ohne diese Begriffe sind Nahrungsketten, Stoffkreisläufe und Artinteraktionen nicht einzuordnen.
+- Ökologische Nische beschreibt die Rolle einer Art in der Biozönose (kommt in späteren UK).
 
-**Ergänzend vertiefend:** Liebigs Minimumgesetz; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:**
+- Umweltfaktoren wirken im Biotop auf die Biozönose; Nahrungsketten und Stoffkreisläufe laufen im Ökosystem ab.
 
-**Häufige Fragen:**
-- Beschriftung und Interpretation einer Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
-- Unterscheidung euryök vs. stenök mit Beispielen und Bedeutung als Bioindikator
-- Anwendung des Liebig-Minimumgesetzes auf konkrete Szenarien (Landwirtschaft, Gewässer)
+**Häufige Prüfungsfragen:**
+- Was ist der Unterschied zwischen Biotop und Biozönose? → Biotop = unbelebt, Biozönose = alle Lebewesen.
+- Was versteht man unter einem Ökosystem? → Biotop + Biozönose in Wechselwirkung.
+- Nenne die ökologischen Ebenen. → Organismus, Population, Biozönose, Ökosystem.
+- Was ist eine Population? → Alle Individuen einer Art in einem definierten Gebiet.
+- Welche Ebene umfasst „alle Arten“ in einem Gebiet? → Biozönose.
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Liebig (nur Mangel limitiert) vs. Shelford (auch Überschuss limitiert) — Shelford ist die Erweiterung
-- Euryök (breit, Generalist) vs. stenök (eng, Spezialist) — Merkhilfe: stenos = griech. eng
-- Bioindikator ≠ häufigste Art, sondern stenöke Art mit enger Toleranz
-- Ökologische Amplitude ≠ Lebensraum, sondern Toleranzbreite für einen bestimmten Faktor
-- Minimumgesetz bezieht sich auf den knappsten Faktor, nicht auf den wichtigsten
+**Typische Prüfungsfallen:**
+- Biotop ≠ Biozönose (Biotop = unbelebt, Biozönose = alle Lebewesen).
+- Ökosystem = Biotop + Biozönose, nicht nur „Natur“ oder „Lebensraum“.
+- Population = **eine** Art; Biozönose = **viele** Arten — oft verwechselt.
+- „Biotop = alle Lebewesen“ ist falsch (das ist die Biozönose).
+- Organismus ist die unterste Ebene; Ökosystem die übergeordnete funktionelle Einheit.
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Liebig (1840), Shelford (1913) — Jahreszahlen werden abgefragt
-- Redfield-Verhältnis C:N:P = 106:16:1 im Phytoplankton
-- Phosphor = limitierender Faktor in Süßwasser, Stickstoff in der Landwirtschaft
-- Brennnessel = Ellenberg-Stickstoffzeigerwert N8–N9
-- Saprobiensystem: Ephemeroptera-Larven = sauberes Wasser, Tubificiden = stark verschmutzt
+**Wichtige Begriffe & Definitionen:**
+- **Ökologie:** Wissenschaft von den Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
+- **Biotop:** Unbelebter Lebensraum (Boden, Wasser, Klima, Licht).
+- **Biozönose:** Lebensgemeinschaft aller Arten in einem Gebiet.
+- **Ökosystem:** Biotop + Biozönose; funktionelle Einheit mit Stoff- und Energieflüssen.
+- **Population:** Alle Individuen einer Art in einem Gebiet (fortpflanzungsfähig).
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Toleranzkurve**: Leistung eines Organismus als Funktion eines Umweltfaktors; Optimum (max. Fitness), Pessimum, Todespunkte
-- **Ökologische Amplitude**: Toleranzbereich eines Organismus zwischen den Todespunkten
-- **Euryök** (Generalist): breite Amplitude → anpassungsfähig; **stenök** (Spezialist): enge Amplitude → empfindlich, guter Bioindikator
-- **Liebig'sches Minimumgesetz**: der knappste essenzielle Faktor begrenzt das Wachstum (nicht der reichlichste)
-- **Shelford'sches Toleranzgesetz**: sowohl Mangel ALS AUCH Überangebot eines Faktors sind limitierend
-- Klinische Analogie: auch in der Intensivmedizin bestimmt oft ein einzelner Mangelfaktor das Outcome`,
+- **Ökologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
+- **Ebenen:** Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem.
+- **Biotop** = unbelebter Lebensraum; **Biozönose** = Lebensgemeinschaft aller Arten; **Ökosystem** = Biotop + Biozönose.
+- Population = eine Art; Biozönose = alle Arten in einem Gebiet.
+- Aus diesen Grundbegriffen leiten sich Umweltfaktoren, ökologische Nische, Nahrungsketten und Stoffkreisläufe ab.
+- Für die Prüfung: Biotop und Biozönose sicher trennen (unbelebt vs. belebt).`,
       lernziele: [
-        "Abiotische Faktoren aufzählen und das Konzept der Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) erläutern",
-        "Den Unterschied zwischen euryöken und stenöken Arten erklären und Beispiele nennen",
-        "Das Liebigsche Minimumgesetz und Shelfords Toleranzgesetz erläutern und praktische Anwendungen beschreiben",
-        "Den Begriff Bioindikator erklären und konkrete Beispiele aus Pflanzen und Tieren nennen",
+        "Ökologie definieren und die Ebenen Organismus, Population, Biozönose, Ökosystem beschreiben.",
+        "Biotop und Biozönose unterscheiden und dem Ökosystem zuordnen.",
       ],
       sections: [],
       merksätze: [
-        "Toleranzkurve: Optimum → maximale Fitness. Toleranzbereich → Stress aber Überleben. Pessimum → kaum Reproduktion. Todespunkt → Sterben.",
-        "Ökologische Amplitude = Breite des Toleranzbereichs. Euryök = breit (Generalist). Stenök = eng (Spezialist, Bioindikator).",
-        "Liebigs Minimumgesetz (1840): das Wachstum wird durch den am stärksten limitierenden Faktor (Minimum) begrenzt, unabhängig von anderen Faktoren.",
-        "Shelfords Toleranzgesetz (1913): auch Überschuss (Maximum) kann limitierend und toxisch wirken — erweitert Liebig.",
-        "Bioindikatoren (Zeigerorganismen): stenöke Arten als Zeiger für Umweltbedingungen. Brennnessel → Stickstoffreich. Heidekraut → saurer, nährstoffarmer Boden. Flechten → saubere Luft.",
-        "Saprobiensystem: Gewässerqualitätsbewertung durch Indikatororganismen (Ephemeroptera = sauber; Tubificiden = stark verschmutzt).",
-        "In der Landwirtschaft: Stickstoff oft limitierender Faktor. In Gewässern: Phosphor oft limitierend → Eutrophierung bei Überdüngung.",
-        "Medizinische Analogie: Intensivmedizin = Liebig-Prinzip. Schwächstes Glied (Mangelfaktor) bestimmt Überleben, nicht die optimierten Parameter.",
+        "Biotop = unbelebt (Ort), Biozönose = alle Lebewesen (Arten), Ökosystem = Biotop + Biozönose.",
       ],
-      klinischerBezug: `Das Minimumgesetz hat eine direkte klinische Entsprechung in der Intensiv- und Ernährungsmedizin: Wie in einem Ökosystem das Wachstum durch den knappsten Nährstoff limitiert wird, kann ein kritisch kranker Patient trotz optimaler Beatmung, Hämodynamik und antibiotischer Therapie an einem einzelnen Mikronährstoffmangel sterben. Selenium-Mangel beeinträchtigt die Glutathionperoxidase-Aktivität und damit den antioxidativen Schutz; Zinkmangel hemmt über 300 Enzyme und das Immunsystem. Das "Refeeding-Syndrom" nach längerer Mangelernährung demonstriert den Minimumsatz dramatisch: Beim Beginn der Ernährungstherapie werden Phosphat, Kalium und Magnesium rasch in Zellen aufgenommen (Anabolismus wird aktiviert) → akuter Mangel im Blut → potentiell letale Herzrhythmusstörungen und neuromuskuläre Störungen. Der klinisch limitierende Faktor muss zuerst identifiziert und behandelt werden.`,
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
-      altfrage: {
-        question:
-          "Was beschreibt die Toleranzkurve eines Organismus und welche Begriffe sind damit verbunden?",
-        answer:
-          "Die Toleranzkurve zeigt die Leistung (Vitalität, Wachstum) eines Organismus in Abhängigkeit von einem Umweltfaktor. Optimum = Bereich maximaler Leistung. Pessimum = Randbereich mit stark verminderter Leistung. Letale Grenzen = Werte, jenseits derer der Organismus stirbt. Stenöke Arten haben enge Toleranz (Spezialisten, Zeigerorganismen), euryöke Arten breite Toleranz (Generalisten).",
-      },
+      selfTest: [
+        {
+          question: "Was ist der Unterschied zwischen Biotop und Biozönose?",
+          options: [
+            "Biotop = alle Lebewesen, Biozönose = unbelebte Umwelt",
+            "Biotop = unbelebter Lebensraum (Boden, Wasser, Klima); Biozönose = Lebensgemeinschaft aller Arten in einem Gebiet",
+            "Biotop und Biozönose sind dasselbe",
+            "Biotop = eine Art, Biozönose = viele Arten",
+            "Biotop = Ökosystem, Biozönose = Population",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Biotop** = der **unbelebte** Lebensraum (Boden, Wasser, Licht, Klima, Nährstoffe). **Biozönose** = die **Lebensgemeinschaft** aller Lebewesen (alle Arten) in diesem Gebiet. Zusammen bilden sie das **Ökosystem** (Biotop + Biozönose in Wechselwirkung).",
+          difficulty: 1,
+          tags: ["biotop", "biozönose", "ökosystem"],
+        },
+      ],
+    },
+    {
+      id: "bio-10-02",
+      title: "Umweltfaktoren: abiotisch, biotisch, Toleranzkurve",
+      stichworte: [
+        "Abiotische Faktoren",
+        "Biotische Faktoren",
+        "Toleranzkurve",
+        "Optimum",
+        "Pessimum",
+        "euryök",
+        "stenök",
+        "Liebig",
+        "Shelford",
+        "Bioindikator",
+      ],
+      content: `## Einleitung
+
+**Worum geht es?** Umweltfaktoren bestimmen, wo eine Art leben kann und wie gut sie gedeiht. Man unterscheidet **abiotische** (unbelebte: Temperatur, Licht, Wasser, Boden, pH) und **biotische** (belebte: Konkurrenz, Räuber, Symbionten) Faktoren. Die **Toleranzkurve** beschreibt die Leistung in Abhängigkeit von einem Faktor; **Liebig** und **Shelford** erklären limitierende Faktoren. **Warum MedAT-relevant?** Toleranzkurve, euryök vs. stenök und Bioindikatoren werden häufig abgefragt; Liebig/Shelford tauchen in Szenarien zu Landwirtschaft und Gewässern auf. **Typische Fragetypen:** Abiotisch vs. biotisch zuordnen, Toleranzkurve beschreiben, euryök/stenök mit Beispielen, Liebig/Shelford anwenden.
+
+**In diesem Kapitel lernst du:**
+- **Abiotische** und **biotische** Umweltfaktoren zu unterscheiden und Beispiele zu nennen
+- Die **Toleranzkurve** zu beschreiben (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
+- **Euryök** (Generalist) und **stenök** (Spezialist) zu unterscheiden und als Bioindikatoren einzuordnen
+- **Liebigs Minimumgesetz** (limitierender Faktor = Minimum) und **Shelfords Toleranzgesetz** (auch Maximum limitiert) anzuwenden
+
+---
+
+## Abiotische und biotische Faktoren
+
+**Um zu verstehen,** warum Arten nur in bestimmten Lebensräumen vorkommen, betrachtet man die **Umweltfaktoren** — unterteilt in abiotisch und biotisch.
+
+**Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensität, Wellenlänge), Wasser (Verfügbarkeit, Salzgehalt, pH), Boden (Textur, pH, Nährstoffe), Wind, Strömung. Sie wirken direkt auf Überleben, Wachstum und Reproduktion.
+
+**Biotische Faktoren** sind alle Einflüsse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Prädation (Räuber–Beute), Symbiose (Mutualismus, Parasitismus, Kommensalismus). Sie strukturieren Lebensgemeinschaften (Biozönosen) und begrenzen Verbreitung und Dichte von Arten.
+
+| Typ | Beispiele |
+|-----|-----------|
+| **Abiotisch** | Temperatur, Licht, Wasser, pH, Nährstoffe, Salzgehalt |
+| **Biotisch** | Konkurrenz, Prädation, Symbiose, Parasitismus |
+
+> **Merke:** Abiotisch = unbelebt. Biotisch = Einfluss durch andere Lebewesen.
+
+---
+
+## Toleranzkurve: Optimum, Pessimum, Todespunkt
+
+Die **Toleranzkurve** zeigt die Leistungsfähigkeit (Wachstum, Reproduktion, Aktivität) eines Organismus in Abhängigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve:
+
+- **Optimum:** Bereich maximaler Leistung und Fitness (mittlere Faktorstufe).
+- **Pessimum:** Randbereiche mit stark verminderter, aber noch möglicher Leistung (Stress).
+- **Todespunkte (letale Grenzen):** Werte jenseits derer der Organismus stirbt.
+- **Ökologische Amplitude:** Gesamtbereich zwischen beiden Todespunkten — die **Toleranzbreite** für diesen Faktor.
+
+Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
+
+> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, Überleben) → Todespunkt. Ökologische Amplitude = Breite des Toleranzbereichs.
+
+---
+
+## Euryök und stenök — Generalisten und Spezialisten
+
+- **Euryök** (griech. eurys = breit): breite ökologische Amplitude = **Generalist** — toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Krähe, Ratte).
+- **Stenök** (griech. stenos = eng): enge Amplitude = **Spezialist** — nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen präzise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven = sauberes Wasser).
+
+> **Merke:** Euryök = Generalist, breite Toleranz. Stenök = Spezialist, enge Toleranz, guter Bioindikator.
+
+---
+
+## Liebigs Minimumgesetz und Shelfords Toleranzgesetz
+
+**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt — nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffdünger steigert den Ertrag. In Süßwasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
+
+**Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Überschuss** eines Faktors kann limitierend wirken (Toxizität). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
+
+> **Merke:** Liebig: Minimum limitiert. Shelford: Minimum und Maximum limitieren (gesamte Toleranzkurve).
+
+---
+
+## Bioindikatoren
+
+**Bioindikatoren** (Zeigerorganismen) sind stenöke Arten, deren Vorkommen oder Fehlen Rückschlüsse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Böden (Ellenberg N8–N9); Flechten = Luftqualität; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:**
+- **Abiotisch** = unbelebte Faktoren (Temperatur, Licht, Wasser, pH); **biotisch** = Einfluss durch andere Lebewesen (Konkurrenz, Prädation, Symbiose).
+- **Toleranzkurve:** Optimum (max. Leistung), Pessimum (Stress), Todespunkt; **ökologische Amplitude** = Toleranzbreite zwischen den Todespunkten.
+- **Euryök** (Generalist) = breite Amplitude; **stenök** (Spezialist) = enge Amplitude; **Bioindikator** = stenöke Zeigerart.
+- **Liebigs Minimumgesetz:** Wachstum wird durch den **knappsten** Faktor limitiert.
+- **Shelfords Toleranzgesetz:** Auch **Überschuss** kann limitieren; Erweiterung von Liebig.
+- In Gewässern oft Phosphor limitierend (Eutrophierung); in Landwirtschaft oft Stickstoff.
+
+**Ergänzend vertiefend:** Ellenberg-Zeigerwerte; Saprobiensystem (Ephemeroptera = sauber, Tubificiden = belastet).
+
+**Häufige Prüfungsfragen:**
+- Was zeigt die Toleranzkurve? → Optimum, Pessimum, Todespunkt, ökologische Amplitude.
+- Euryök vs. stenök mit Beispielen? → Euryök = Generalist (Fuchs); stenök = Spezialist (Flechten).
+- Warum sind stenöke Arten gute Bioindikatoren? → Enge Toleranz → präziser Umweltzeiger.
+- Liebig/Shelford anwenden (Landwirtschaft, Gewässer).
+
+**Typische Prüfungsfallen:**
+- Liebig (nur Mangel) vs. Shelford (auch Überschuss).
+- Euryök = breit, stenök = eng. Bioindikator = stenöke Art, nicht „häufigste Art“.
+- Ökologische Amplitude = Toleranzbreite für einen Faktor, nicht Lebensraum.
+
+**Wichtige Begriffe & Definitionen:**
+- **Abiotisch:** Unbelebte Faktoren. **Biotisch:** Einflüsse durch Lebewesen. **Toleranzkurve:** Leistung vs. Faktor (Glockenkurve). **Ökologische Amplitude:** Toleranzbreite. **Euryök/stenök:** Generalist vs. Spezialist. **Bioindikator:** Stenöke Zeigerart. **Liebig:** Minimum limitiert. **Shelford:** Minimum und Maximum.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Abiotisch** = unbelebt; **biotisch** = Einfluss durch Lebewesen.
+- **Toleranzkurve:** Optimum → Pessimum → Todespunkt; **ökologische Amplitude** = Toleranzbreite.
+- **Euryök** = Generalist; **stenök** = Spezialist, Bioindikator.
+- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Überschuss kann limitieren.
+- Stenöke Arten = gute Bioindikatoren. Ökologische Amplitude ≠ Lebensraum.`,
+      lernziele: [
+        "Abiotische und biotische Faktoren unterscheiden und Beispiele nennen.",
+        "Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) beschreiben und euryök vs. stenök erklären.",
+        "Liebigs Minimumgesetz und Shelfords Toleranzgesetz anwenden und Bioindikatoren zuordnen.",
+      ],
+      sections: [],
+      merksätze: [
+        "Toleranzkurve: Optimum (max. Fitness) → Pessimum → Todespunkt. Ökologische Amplitude = Toleranzbreite.",
+        "Euryök = Generalist, stenök = Spezialist, Bioindikator.",
+        "Liebig: limitierender Faktor = Minimum. Shelford: auch Maximum limitiert.",
+      ],
       selfTest: [
         {
           question:
-            "Wie nennt man Arten mit einem sehr engen Toleranzbereich, die nur unter spezifischen Umweltbedingungen überleben können und deshalb als Umweltzeiger genutzt werden?",
+            "Wie nennt man Arten mit einem sehr engen Toleranzbereich, die nur unter spezifischen Umweltbedingungen überleben und deshalb als Umweltzeiger genutzt werden?",
           options: [
             "Euryöke Arten (Generalisten)",
             "Ubiquisten",
@@ -157,345 +292,73 @@ Das Minimumgesetz gilt weit über Pflanzenwachstum hinaus. In der Gewässerökol
           ],
           correctIndex: 2,
           explanation:
-            "Stenöke Arten (griech. stenos = eng) haben eine enge ökologische Amplitude und tolerieren nur ein schmales Spektrum eines Umweltfaktors. Da sie empfindlich auf Schwankungen reagieren, eignen sie sich hervorragend als Bioindikatoren (Zeigerorganismen): Ihr Vorkommen zeigt spezifische Umweltbedingungen an. Beispiele: Korallen (nur 23–29°C, enges pH-Fenster), Flechten (sensitiv für Luftverschmutzung), Ephemeroptera-Larven (nur in sauberem Wasser). Euryöke Arten (Generalisten) hingegen tolerieren breite Bedingungsspannen.",
-          hints: [
-            "Stenos (griech.) = eng. Wer hat einen engen Toleranzbereich und ist deshalb als Indikator geeignet?",
-            "Bioindikator = Zeiger für Umweltbedingungen. Nur Arten mit engem Toleranzbereich zeigen präzise an, was im Habitat los ist.",
-          ],
+            "Stenöke Arten (griech. stenos = eng) haben eine enge ökologische Amplitude und eignen sich als Bioindikatoren. Euryöke Arten (Generalisten) haben breite Toleranz.",
           difficulty: 1,
-          tags: ["stenök", "bioindikator", "toleranzbereich", "spezialist"],
+          tags: ["stenök", "bioindikator", "toleranzbereich"],
         },
         {
           question:
-            "Ein Landwirt fügt seinem Weizenfeld mehr Wasser, Licht und Kalium hinzu, der Ertrag steigt kaum. Nach Zugabe von Stickstoffdünger steigt der Ertrag stark. Was erklärt dieses Phänomen am besten?",
+            "Ein Landwirt fügt seinem Weizenfeld mehr Wasser, Licht und Kalium hinzu — der Ertrag steigt kaum. Nach Zugabe von Stickstoffdünger steigt der Ertrag stark. Was erklärt das am besten?",
           options: [
-            "Stickstoff ist toxisch für Schädlinge und verbessert dadurch den Ertrag",
+            "Stickstoff ist toxisch für Schädlinge",
             "Stickstoff war der limitierende Faktor gemäß Liebigs Minimumgesetz",
             "Wasser, Licht und Kalium waren in toxischer Menge vorhanden",
-            "Der Weizen adaptierte sich durch Mutation an Stickstoffzugabe",
-            "Shelfords Toleranzgesetz: zu viel Wasser war der limitierende Faktor",
+            "Der Weizen adaptierte sich durch Mutation",
+            "Shelfords Toleranzgesetz: zu viel Wasser war limitierend",
           ],
           correctIndex: 1,
           explanation:
-            "Liebigs Minimumgesetz erklärt dieses klassische Muster: Das Wachstum wird durch denjenigen Faktor begrenzt, der am weitesten vom Optimum entfernt ist (der limitierende Faktor). Obwohl Wasser, Licht und Kalium ausreichend vorhanden waren, war Stickstoff im Minimum — erst dessen Zugabe ermöglichte das volle Wachstumspotenzial. Weitere Zugaben der bereits ausreichenden Faktoren hätten keinen Effekt. Die Holzfass-Analogie: Die kürzeste Daube (Stickstoff) bestimmt den Wasserstand, nicht die langen Dauben.",
-          hints: [
-            "Welcher Faktor war neu hinzugefügt und bewirkte den Ertragsdurchbruch? Der war davor im Mangel.",
-            "Liebig: Das schwächste Glied der Kette bestimmt die Stärke — nicht die starken Glieder.",
-          ],
+            "Liebigs Minimumgesetz: Das Wachstum wird durch den knappsten Faktor begrenzt. Stickstoff war im Minimum — erst dessen Zugabe ermöglichte den Ertragsdurchbruch.",
           difficulty: 1,
-          tags: ["liebig", "minimumgesetz", "limitierender-faktor", "stickstoff"],
+          tags: ["liebig", "minimumgesetz", "limitierender-faktor"],
         },
         {
           question:
-            "Die Brennnessel (Urtica dioica) wächst bevorzugt auf Dungplätzen, Komposthaufen und stark gedüngten Flächen. Welche Funktion übernimmt sie dabei ökologisch?",
+            "Die Brennnessel wächst bevorzugt auf stark gedüngten Flächen. Welche ökologische Funktion hat sie?",
           options: [
-            "Sie ist ein euryöker Generalist, der überall wächst",
-            "Sie ist ein Bioindikator (Zeigerpflanze) für stickstoffreiche Böden",
-            "Sie ist ein Pionier in nährstoffarmen Böden (Sukzession)",
-            "Sie ist ein K-Stratege in stabilen Klimaxgesellschaften",
-            "Sie ist eine invasive Art, die andere Pflanzen verdrängt",
+            "Euryöker Generalist",
+            "Bioindikator (Zeigerpflanze) für stickstoffreiche Böden",
+            "Pionier in nährstoffarmen Böden",
+            "K-Stratege in Klimaxgesellschaften",
+            "Invasive Art",
           ],
           correctIndex: 1,
           explanation:
-            "Die Brennnessel ist ein klassischer Bioindikator für stickstoffreiche Böden (Ellenberg-Stickstoffzeigerwert N8–9). Als stenöke Art bevorzugt sie stark stickstoffhaltige Standorte und zeigt durch ihr Vorkommen zuverlässig anthropogen oder tierisch gedüngte Böden an. Das Ellenberg-System klassifiziert Zeigerpflanzen nach mehreren Umweltfaktoren — die Brennnessel ist in erster Linie ein N-Zeiger. Bioindikatoren sind wissenschaftlich wertvoller als chemische Sofortmessungen, weil sie langfristige Durchschnittsbedingungen anzeigen.",
-          hints: [
-            'Bioindikatoren "zeigen" Umweltbedingungen an. Auf welchen Böden wächst die Brennnessel?',
-            "Ellenberg-Zeigerwerte klassifizieren Pflanzen nach Stickstoff N1 (arm) bis N9 (reich). Wo liegt die Brennnessel?",
-          ],
+            "Die Brennnessel ist ein klassischer Bioindikator für stickstoffreiche Böden (Ellenberg N8–N9). Stenöke Zeigerart.",
           difficulty: 1,
-          tags: ["brennnessel", "bioindikator", "stickstoff", "ellenberg"],
+          tags: ["brennnessel", "bioindikator", "stickstoff"],
         },
         {
           question:
             "Ein Süßwassersee hat hohe Stickstoff- und Lichtmengen, aber sehr niedrige Phosphorkonzentrationen. Trotz Stickstoffdüngung steigt die Algenmasse nicht. Was ist der limitierende Faktor?",
           options: [
-            "Stickstoff — er ist noch nicht ausreichend vorhanden",
-            "Licht — die Algen brauchen mehr Licht",
-            "Phosphor — er ist das Minimum im Gewässer gemäß Liebigs Gesetz",
-            "CO₂ — die Photosynthese ist CO₂-limitiert",
-            "Temperatur — das Wasser ist zu kalt",
+            "Stickstoff",
+            "Licht",
+            "Phosphor — Minimum im Gewässer gemäß Liebig",
+            "CO₂",
+            "Temperatur",
           ],
           correctIndex: 2,
           explanation:
-            "In Süßwasserseen ist Phosphor sehr häufig der limitierende Faktor für die Primärproduktion (Phytoplankton). Das Redfield-Verhältnis (C:N:P ≈ 106:16:1) zeigt, dass Algen relativ wenig Phosphor brauchen, aber dieser in Süßwasser selten in ausreichender Menge verfügbar ist. Stickstoffzugabe hat keinen Effekt, solange Phosphor im Minimum ist — Liebigs Minimumgesetz. Phosphoreinleitung aus Kläranlagen (Waschmittelphosphat) führt dagegen zu massiver Eutrophierung.",
-          hints: [
-            "Liebig: Nicht die reichlichen Faktoren bestimmen das Wachstum, sondern der knappste. Was ist knapp?",
-            "In Süßwasserseen gilt: P limitiert (nicht N). In Meeresökosystemen oft N limitiert.",
-          ],
+            "In Süßwasserseen ist Phosphor oft der limitierende Faktor für Phytoplankton. Liebig: Der knappste Faktor limitiert.",
           difficulty: 2,
-          tags: ["phosphor", "eutrophierung", "liebig", "suesswasser"],
+          tags: ["phosphor", "liebig", "eutrophierung"],
         },
         {
           question:
             "Shelfords Toleranzgesetz erweitert Liebigs Minimumgesetz. Was ist der entscheidende Unterschied?",
           options: [
-            "Shelford bezieht sich nur auf Tiere, Liebig nur auf Pflanzen",
+            "Shelford bezieht sich nur auf Tiere",
             "Shelford berücksichtigt, dass auch ein Überangebot (Maximum) eines Faktors limitierend wirken kann",
-            "Liebig berücksichtigt Temperatur, Shelford berücksichtigt Licht",
-            "Shelford gilt nur für aquatische, Liebig für terrestrische Ökosysteme",
-            "Beide Gesetze sind identisch — Shelford hat Liebig nur neu formuliert",
+            "Liebig berücksichtigt nur Temperatur",
+            "Shelford gilt nur für aquatische Ökosysteme",
+            "Beide Gesetze sind identisch",
           ],
           correctIndex: 1,
           explanation:
-            "Liebig (1840) betrachtete nur das Minimum: Das Wachstum wird durch den knappsten Faktor begrenzt. Shelford (1913) erweiterte dies durch das Toleranzgesetz: Sowohl Minimum als auch Maximum können limitierend wirken. Organismen haben eine obere und untere Toleranzgrenze. Beispiele für Toxizität durch Überangebot: zu viel Kupfer oder Zink ist toxisch (auch wenn Spurenmengen essenziell sind); zu viel Licht → Photoinhibition; Stickstoffüberdüngung → Ammoniumtoxizität; zu viel Wasser → Wurzelfäule durch O₂-Mangel. Das Toleranzgesetz beschreibt damit die gesamte Toleranzkurve mit beiden Extrema.",
-          hints: [
-            "Liebig sah nur den Mangel als Problem. Was kann noch limitieren, wenn man an die Toleranzkurve denkt?",
-            "Toleranzkurve hat zwei Grenzen: Minimum (Mangel) und Maximum (Überschuss). Wer hat das Maximums-Problem ergänzt?",
-          ],
+            "Liebig: nur Minimum limitiert. Shelford: sowohl Minimum als auch Maximum können limitierend wirken (Toleranzkurve mit beiden Grenzen).",
           difficulty: 2,
-          tags: ["shelford", "toleranzgesetz", "maximum", "liebig-vergleich"],
-        },
-      ],
-    },
-    {
-      id: "bio-10-02",
-      title: "Biotische Faktoren — Konkurrenz, Prädation und Symbiose",
-      stichworte: [
-        "Konkurrenz",
-        "Prädation",
-        "Symbiose",
-        "Parasitismus",
-        "Kommensalismus",
-        "Mutualismus",
-      ],
-      content: `## Einleitung
-
-Biotische Faktoren umfassen alle Wechselwirkungen zwischen Lebewesen und sind zentrale treibende Kräfte der Evolution sowie der Strukturierung von Lebensgemeinschaften. Für den MedAT sind insbesondere das Konkurrenzausschlussprinzip nach Gauß, die Lotka-Volterra-Räuber-Beute-Dynamik und die Unterscheidung der Symbioseformen (Mutualismus, Kommensalismus, Parasitismus) mit ihren Vorzeichen prüfungsrelevant. Medizinisch bedeutsam ist das Thema durch parasitäre Erkrankungen wie Malaria und die Koevolution von Wirt und Parasit.
-
-**Das Wichtigste auf einen Blick:**
-- Biotische Faktoren: intraspezifische (innerhalb einer Art) und interspezifische (zwischen Arten) Wechselwirkungen
-- Konkurrenzausschlussprinzip (Gauß 1934): identische Nische = eine Art verdrängt die andere
-- Lotka-Volterra: Räuber-Beute-Zyklen mit zeitlicher Verzögerung
-- Symbioseformen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
-- Trophische Kaskade: Schlüsselprädatoren beeinflussen alle Trophieebenen
-- Koevolution Parasit-Wirt: Malaria/Sichelzellmutation als Paradebeispiel
-
----
-
-## Biotische Faktoren — Definition und Überblick
-
-**Biotische Faktoren** sind alle lebenden Bestandteile der Umwelt, die einen Organismus beeinflussen. Sie umfassen Interaktionen mit Individuen der eigenen Art (intraspezifische Interaktionen) und mit Individuen anderer Arten (interspezifische Interaktionen). Die wichtigsten biotischen Wechselwirkungen sind Konkurrenz, Prädation und die verschiedenen Formen der Symbiose. Diese Interaktionen sind treibende Kräfte der Evolution und strukturieren Lebensgemeinschaften (Biozönosen).
-
-![Toleranz und Wechselwirkungen](/grafik-toleranzkurve.svg)
-
-**Erklärung zur Grafik:** Toleranzkurve und Ressourcennutzung; Konkurrenz und Prädation wirken entlang abiotischer Gradienten — euryöke Arten haben breitere Nischen.
-
-![Räuber-Beute und Dynamik](/grafik-33-vierfeldertafel.svg)
-
-**Erklärung zur Grafik:** Systematische Erfassung von Wechselwirkungen; die Grafik unterstützt die Einordnung von Mutualismus (+/+), Parasitismus (+/−) und Prädation.
-
----
-
-## Konkurrenz — Intraspezifisch vs. Interspezifisch
-
-**Konkurrenz** entsteht, wenn zwei Individuen dieselbe begrenzte Ressource benötigen. Man unterscheidet zwei Arten:
-
-- **Intraspezifische Konkurrenz** (innerhalb einer Art): Besonders intensiv, da vollständige Nischenüberlappung; dichteabhängige Regulation → führt zu logistischem Wachstum
-- **Interspezifische Konkurrenz** (zwischen Arten): Treibt Nischendifferenzierung und Evolution an
-
-**Konkurrenzausschlussprinzip (Gauß, 1934):** Zwei Arten in identischer ökologischer Nische können nicht dauerhaft koexistieren — eine verdrängt die andere. Koexistenz erfordert Nischendifferenzierung (zeitlich, räumlich oder trophisch). Klassischer Beleg: *Paramecium aurelia* verdrängt *P. caudatum* in Mischkultur.
-
-> **Merke:** Konkurrenzausschlussprinzip (Gauß): identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung.
-
----
-
-## Symbioseformen — Wer profitiert, wer verliert?
-
-Biotische Wechselwirkungen werden durch die Wirkung auf jeden Partner klassifiziert:
-
-| Interaktionstyp | Partner 1 | Partner 2 | Beispiel |
-|---|---|---|---|
-| **Mutualismus** | + | + | Mykorrhiza (Pilz + Pflanze), Rhizobien in Leguminosen |
-| **Kommensalismus** | + | 0 | Epiphyten auf Ästen, Remoren an Haien |
-| **Parasitismus** | + | − | Plasmodium (Malaria), Taenia (Bandwurm) |
-| **Prädation** | + | − | Fuchs + Hase, Adler + Maus |
-| **Konkurrenz** | − | − | Zwei Arten um dieselbe Ressource |
-
-**Unterschied Parasitismus vs. Prädation:** Der Parasit tötet den Wirt normalerweise **nicht sofort** (ein toter Wirt = kein Lebensraum mehr → für den Parasiten nachteilig). Der Räuber tötet die Beute direkt. Beide haben das Vorzeichen (+/−).
-
-> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort — Räuber schon.
-
----
-
-## Lotka-Volterra-Dynamik — Versetzte Zyklen als Naturgesetz
-
-Die Lotka-Volterra-Gleichungen beschreiben ein grundlegendes Muster in der Natur: Räuber- und Beutepopulationen oszillieren, wobei die Räuberpopulation der Beutepopulation zeitlich nachhinkt. Der Mechanismus: (1) Viel Beute → Räuber können sich gut ernähren → Räuberpopulation wächst. (2) Viele Räuber → Beutepopulation wird dezimiert → sinkt. (3) Wenig Beute → Räuber verhungern → Räuberpopulation sinkt. (4) Wenige Räuber → Beutepopulation erholt sich → Zyklus beginnt von vorn. Das Modell hat drei wichtige Aussagen: (A) Populationen oszillieren periodisch. (B) Räuber-Zyklus hinkt Beute-Zyklus nach. (C) Mittlere Populationsgrößen bleiben konstant (Lotka-Volterra-Invariante). In der Praxis sind die Zyklen selten rein sinusförmig — externe Störungen (El Niño, harte Winter) überlagern die endogene Dynamik. Das Yellowstone-Wolf-Experiment (1995) zeigte, dass Räuber durch Verhaltensveränderungen der Beute (Angst) sogar ohne direktes Fressen das Ökosystem strukturieren können.
-
-> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen bilden versetzte Zyklen. Räuber hinkt Beute zeitlich nach. Klassisch: Luchs-Schneehasezyklus (10 Jahre).
-
----
-
-## Das Darmmikrobiom als mutualistisches Ökosystem
-
-Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gleich viele wie menschliche Körperzellen) und ca. 1.000 Bakterienarten — ein hochkomplexes mutualistisches Ökosystem. Funktionen des Mikrobioms: (1) Verdauung unverdaulicher Polysaccharide (Ballaststoffe) → kurzkettige Fettsäuren (Butyrat = Colonozyten-Energiequelle). (2) Vitaminsynthese (K2, B12, Biotin, Folat). (3) Immunmodulation — ca. 70% der Immunzellen im Darm (MALT = mucosa-associated lymphoid tissue); Mikrobiom trainiert Immunsystem (Toleranz vs. Abwehr). (4) Colonisation Resistance: etabliertes Mikrobiom verhindert durch Konkurrenz (Nischendifferenzierung, Bacteriocine) das Ansiedeln von Pathogenen. Antibiotika-assoziierte Diarrhö und Clostridioides-difficile-Infektionen entstehen, wenn Antibiotika das mutualistisches Ökosystem stören und Pathogene die freien Nischen besetzen. Das Mikrobiom wird zunehmend als "vergessenes Organ" verstanden, das Metabolismus, Immunsystem und sogar Verhalten (Darm-Hirn-Achse via Nervus vagus und Serotonin-Produktion) beeinflusst.
-
-> **Merke:** Darmmikrobiom = mutualistisches Ökosystem: Bakterien liefern Vitamine, Butyrat, Immunmodulation; Mensch liefert Nahrung und Habitat. Antibiotika stören das Ökosystem → C. difficile.
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Symbiose (Mutualismus +/+, Kommensalismus +/0, Parasitismus +/−), Konkurrenz, Prädation, Räuber-Beute, Koevolution.
-
-**Ergänzend vertiefend:** Amensalismus; typische Verwechslungen siehe „Typische Prüfungsfallen“.
-
-**Häufige Fragen:**
-- Symbioseformen mit Vorzeichen unterscheiden: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−)
-- Gauß'sches Konkurrenzausschlussprinzip anhand des Paramecium-Experiments erklären
-- Lotka-Volterra-Dynamik: Welche Population hinkt nach? (Räuber hinkt Beute nach)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Parasitismus (+/−) vs. Prädation (+/−): Parasit tötet den Wirt normalerweise nicht sofort, Räuber schon
-- Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst
-- Intraspezifische (innerhalb einer Art) vs. interspezifische (zwischen Arten) Konkurrenz verwechseln
-- Trophische Kaskade ≠ einfache Nahrungskette — Kaskade beschreibt den indirekten Effekt über mehrere Ebenen
-- Koevolution ≠ Koexistenz: Koevolution ist ein evolutionäres Wettrüsten, Koexistenz ein ökologisches Muster
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Gauß-Experiment (1934): P. aurelia verdrängt P. caudatum in Mischkultur
-- Lotka-Volterra: Luchs-Schneehase-Zyklus ca. 10 Jahre
-- Paine-Experiment (1969): Seestern als Schlüsselprädator in Gezeitenzone
-- Yellowstone-Wölfe (1995): Paradebeispiel trophischer Kaskade
-- Malaria: ca. 600.000 Todesfälle/Jahr; HbS-Heterozygotie schützt gegen P. falciparum
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Konkurrenzausschlussprinzip** (Gauß): zwei Arten mit identischer Nische können nicht dauerhaft koexistieren → eine verdrängt die andere
-- **Nischendifferenzierung**: ermöglicht Koexistenz durch zeitliche, räumliche oder trophische Ressourcenteilung
-- **Lotka-Volterra-Zyklen**: Räuber-Beute-Populationen schwingen gegeneinander; Räuber hinkt Beutepopulation zeitlich hinterher
-- **Schlüsselprädator**: Entfernung hat überproportionalen Einfluss auf gesamte Lebensgemeinschaft (trophische Kaskade)
-- Symbiose-Formen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
-- Koevolution Wirt/Parasit: Sichelzellanämie-Heterozygote in Malariaregionen → Selektion durch parasitären Druck`,
-      lernziele: [
-        "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Gauß'sche Konkurrenzausschlussprinzip mit experimentellem Beleg erläutern",
-        "Das Lotka-Volterra-Modell der Räuber-Beute-Dynamik und trophische Kaskaden beschreiben",
-        "Die vier Symbioseformen (Mutualismus, Kommensalismus, Parasitismus; Prädation) mit Vorzeichen und Beispielen unterscheiden",
-        "Medizinisch relevante Parasiten nennen und das Konzept der Koevolution am Beispiel Malaria/Sichelzellmutation erläutern",
-      ],
-      sections: [],
-      merksätze: [
-        "Konkurrenzausschlussprinzip (Gauß 1934): Zwei Arten in identischer Nische → eine verdrängt die andere. Koexistenz nur durch Nischendifferenzierung.",
-        "Prädation (+/-): Räuber tötet Beute direkt. Parasitismus (+/-): Parasit schädigt Wirt, tötet ihn normalerweise nicht sofort.",
-        "Lotka-Volterra: Räuber-Beute-Zyklen, zeitlich versetzt. Räuberpopulation hinkt Beutepopulation nach.",
-        "Trophische Kaskade: Schlüsselprädatoren haben überproportional großen Ökosystemeinfluss (Seestern-Experiment Paine 1969; Yellowstone-Wölfe 1995).",
-        "Mutualismus (+/+): Mykorrhiza, Leguminosen-Rhizobium, Darmmikrobiom-Mensch, Bestäubung.",
-        "Kommensalismus (+/0): Epiphyten auf Baumästen, Remoren an Haien — eine Art profitiert, die andere ist unbeeinträchtigt.",
-        "Parasitismus (+/-): Ektoparasiten (Zecken, Läuse) vs. Endoparasiten (Plasmodium, Toxoplasma, Taenia, Mycobacterium).",
-        "Koevolution Parasit-Wirt: evolutionäres Arme-Rennen. Malaria-Sichelzellmutation: HbS heterozygot schützt gegen P. falciparum.",
-        "Intraspezifische Konkurrenz: intensiver als interspezifische (vollständige Nischenüberlappung), dichteabhängige Regulation → logistisches Wachstum.",
-      ],
-      klinischerBezug: `Parasitismus ist eines der bedeutendsten medizinischen Themen weltweit. Malaria (Plasmodium falciparum, P. vivax, P. malariae, P. ovale) ist die tödlichste parasitäre Erkrankung: ca. 600.000 Todesfälle/Jahr (WHO 2022), vorwiegend Kinder unter 5 Jahren in Afrika. Die Koevolution zwischen Wirt und Parasit zeigt sich in der Sichelzellmutation (HbS): Heterozygote (HbAS) haben einen Überlebensvorteil in Malaria-Endemiegebieten, weil parasitierte Erythrozyten bei niedrigem O₂ sicheln und phagozytiert werden. Die höchste Frequenz der HbS-Mutation findet sich in Regionen mit historisch hoher Malaria-Prävalenz (Subsahara-Afrika, Mittelmeerraum) — ein direkter Fingerabdruck der Parasit-Wirt-Koevolution. Lyme-Borreliose (Borrelia burgdorferi, übertragen durch Ixodes-Zecken) ist in Europa und Nordamerika die häufigste vektorbürtige Erkrankung, mit zunehmender Ausbreitung durch Klimawandel (mildere Winter → mehr Zecken). Das "One-Health"-Konzept (WHO) betrachtet Mensch-, Tier- und Umweltgesundheit als untrennbar verbunden — Parasitosen sind Paradebeispiele dieser Verknüpfung.`,
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
-      altfrage: {
-        question:
-          "Was ist der Unterschied zwischen Symbiose und Parasitismus und nennen Sie je ein Beispiel?",
-        answer:
-          "Symbiose (Mutualismus): Beide Partner profitieren (z.B. Mykorrhiza: Pilz liefert Wasser/Mineralien, Pflanze liefert Zucker). Parasitismus: Ein Partner profitiert auf Kosten des anderen (z.B. Plasmodium: vermehrt sich in Erythrozyten des Wirts). Kommensalismus: Ein Partner profitiert, der andere ist unbeeinflusst.",
-      },
-      selfTest: [
-        {
-          question:
-            "Zwei Paramecium-Arten (*P. aurelia* und *P. caudatum*) werden in Mischkultur gehalten und nutzen dieselbe Nahrung. Nach einigen Wochen überlebt nur noch *P. aurelia*. Welches Prinzip erklärt das?",
-          options: [
-            "Prädation — P. aurelia frisst P. caudatum",
-            "Mutualismus — P. aurelia verdrängt P. caudatum durch gegenseitigen Nutzen",
-            "Konkurrenzausschlussprinzip (Gauß) — zwei Arten in identischer Nische können nicht dauerhaft koexistieren",
-            "Allopatrische Artbildung — P. caudatum entwickelt sich in eine neue Art",
-            "Dichteabhängige Regulation durch logistisches Wachstum",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Dies ist das klassische Gause-Experiment (1934), das das Konkurenzausschlussprinzip (Gauß'sches Prinzip) empirisch belegt. Zwei Arten, die dieselbe ökologische Nische (hier: dieselbe Nahrung im selben Habitat) vollständig besetzen, können nicht dauerhaft koexistieren. Die konkurrenzüberlegene Art (*P. aurelia* mit höherer Reproduktionsrate unter diesen Bedingungen) verdrängt die andere (*P. caudatum*) vollständig. Koexistenz wäre nur durch Nischendifferenzierung möglich (z. B. wenn eine Art andere Nahrungspartikel nutzt).",
-          hints: [
-            "Beide Arten nutzen dieselbe Nische. Was passiert laut Gauß mit zwei Arten in identischer Nische?",
-            "Konkurrenzausschluss: eine Art gewinnt, eine verliert — bis eine vollständig verdrängt ist.",
-          ],
-          difficulty: 1,
-          tags: ["konkurrenzausschluss", "gauss", "paramecium", "nische"],
-        },
-        {
-          question:
-            "Bei Räuber-Beute-Zyklen nach dem Lotka-Volterra-Modell: Wenn die Beutepopulation ihren Höhepunkt erreicht, was passiert mit der Räuberpopulation?",
-          options: [
-            "Die Räuberpopulation erreicht gleichzeitig ihren Höhepunkt",
-            "Die Räuberpopulation sinkt sofort auf null",
-            "Die Räuberpopulation beginnt zu steigen und erreicht ihren Höhepunkt zeitlich nach der Beute",
-            "Die Räuberpopulation bleibt konstant, unabhängig von der Beute",
-            "Die Räuberpopulation wechselt zu einer anderen Beuteart",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Im Lotka-Volterra-Modell hinkt die Räuberpopulation der Beutepopulation zeitlich nach. Wenn die Beutepopulation ihren Höhepunkt erreicht, bedeutet das: viel Nahrung für Räuber → Räuber reproduzieren sich gut → Räuberpopulation steigt → Räuber übernehmen erst nach dem Beutehöhepunkt ihren eigenen Höhepunkt. Dann frisst die nun große Räuberpopulation die Beute stark dezimiert, Beutepopulation sinkt, und mit Zeitverzögerung sinkt dann auch die Räuberpopulation (Nahrungsmangel).",
-          hints: [
-            "Ursache (viel Beute) → Wirkung (Räuber wachsen) dauert Zeit. Was kommt zuerst: Höhepunkt der Beute oder der Räuber?",
-            "Beute zuerst hoch → Räuber profitieren → Räuber erreichen Höhepunkt SPÄTER. Das ist die zeitliche Verzögerung.",
-          ],
-          difficulty: 2,
-          tags: ["lotka-volterra", "raeuter-beute", "zyklen", "zeitverzögerung"],
-        },
-        {
-          question:
-            "Mykorrhizapilze und Pflanzenwurzeln unterhalten eine enge Beziehung. Welche Kategorie der Symbiose und welches Vorzeichen trifft am besten zu?",
-          options: [
-            "Parasitismus (+/-): Pilz schädigt die Pflanzenwurzel",
-            "Kommensalismus (+/0): Pilz profitiert, Pflanze ist unbeeinträchtigt",
-            "Mutualismus (+/+): Beide profitieren — Pilz erhält Zucker, Pflanze erhält Mineralien/Wasser",
-            "Konkurrenz (-/-): Pilz und Pflanzenwurzel konkurrieren um Bodenmineralien",
-            "Prädation (+/-): Pilz nutzt die Pflanze als Nahrung",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Mykorrhiza ist ein obligater oder fakultativer Mutualismus (+/+): Der Pilz erhält Photosynthate (Glucose, Saccharose) von der Pflanze — bis zu 20% der pflanzlichen Nettoassimilation fließen in den Pilz. Dafür liefert der Pilz der Pflanze über sein ausgedehntes Hyphengeflecht (viel größere Oberfläche als Wurzeln) Wasser und Mineralstoffe, besonders Phosphat und Stickstoff. Ca. 90% aller Landpflanzen sind mykorrhiziert — die Beziehung ist für terrestrische Ökosysteme fundamental. Ohne Mykorrhiza wäre Pflanzenwachstum in nährstoffarmen Böden stark eingeschränkt.",
-          hints: [
-            "Was erhält der Pilz von der Pflanze? Was erhält die Pflanze vom Pilz? Wenn beide profitieren — welche Symbioseform?",
-            "Mutualismus = +/+. Beide profitieren. Mykorrhiza: Pilz (Zucker) und Pflanze (Mineralien, Wasser) profitieren beide.",
-          ],
-          difficulty: 1,
-          tags: ["mykorrhiza", "mutualismus", "symbiose", "pilz-pflanze"],
-        },
-        {
-          question:
-            "Das 1995 in Yellowstone wiedereingeführte Wolf-Rudel führte zu drastischen Veränderungen der Vegetation und sogar der Flussmorphologie, obwohl Wölfe Pflanzenfresser sind, keine Pflanzen. Wie nennt man diesen Effekt?",
-          options: [
-            "Liebigs Minimumgesetz — Wölfe sind der limitierende Faktor für Pflanzen",
-            "Intraspezifische Konkurrenz zwischen Wolfsrudeln",
-            "Trophische Kaskade — Schlüsselprädatoren beeinflussen alle Trophieebenen indirekt",
-            "Logistisches Wachstum — Wölfe begrenzen die Elchpopulation auf K",
-            "Nischendifferenzierung zwischen Wölfen und Elchen",
-          ],
-          correctIndex: 2,
-          explanation:
-            'Die Wiedereinführung der Wölfe in Yellowstone ist das bekannteste Beispiel einer trophischen Kaskade: Wölfe regulierten Elche (direkte Prädation und Verhaltensveränderung — "Landscape of Fear") → Elche mieden Flussufer → Weidepflanzen erholten sich → Biber kehrten zurück → Biberdämme schufen Feuchtgebiete → Fischhabitate verbesserten sich → sogar der Flusslauf veränderte sich (Uferostabilisierung durch Vegetation). Ein Schlüsselprädator (keystone predator) hat überproportional großen Einfluss auf die gesamte Ökosystemstruktur.',
-          hints: [
-            'Wölfe → Elche → Pflanzen → Biber → Fluss. Wie nennt man Effekte, die durch Nahrungsketten "kaskadieren"?',
-            "Trophisch = Nahrung betreffend. Kaskade = kaskadenartiger Effekt durch alle Ebenen. Schlüsselprädator = Wolf.",
-          ],
-          difficulty: 2,
-          tags: ["trophische-kaskade", "woelfe-yellowstone", "schlüsselpraedator", "nahrungskette"],
-        },
-        {
-          question:
-            "Worin besteht der entscheidende Unterschied zwischen Parasitismus und Prädation?",
-          options: [
-            "Parasitismus ist positiv für den Wirt; Prädation ist negativ",
-            "Parasitismus tötet den Wirt normalerweise sofort; Prädation tötet nur selten",
-            "Parasitismus schädigt den Wirt, tötet ihn aber normalerweise nicht sofort; Prädation tötet die Beute direkt",
-            "Parasitismus betrifft nur Tiere; Prädation betrifft Pflanzen und Tiere",
-            "Es gibt keinen biologischen Unterschied — beide sind (+/-) Interaktionen",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Beide Interaktionen haben dasselbe Vorzeichen (+/-), unterscheiden sich aber wesentlich: Parasitismus: Der Parasit lebt auf/in dem Wirt, schädigt ihn chronisch, tötet ihn aber normalerweise nicht sofort (ein toter Wirt = kein Lebensraum und keine Nahrung mehr → nachteilig für Parasiten). Parasiten sind meist kleiner als der Wirt. Prädation: Der Räuber tötet die Beute sofort oder schnell und verzehrt sie. Der Räuber ist meist gleich groß oder größer. Evolutionäre Konsequenz: Parasiten sind unter Selektionsdruck, virulent, aber nicht übermäßig tödlich zu sein (optimale Virulenz-Theorie).",
-          hints: [
-            "Was ist für einen Parasiten vorteilhafter: ein lebendiger oder ein toter Wirt? Das erklärt den Unterschied.",
-            "Parasit tötet seinen Wirt nicht sofort — ein toter Wirt bietet keine Ressourcen mehr. Räuber tötet sofort.",
-          ],
-          difficulty: 2,
-          tags: ["parasitismus", "praedation", "unterschied", "wirt-tod"],
+          tags: ["shelford", "toleranzgesetz", "liebig"],
         },
       ],
     },
@@ -514,14 +377,15 @@ Das humane Darmmikrobiom umfasst ca. 3,8 × 10¹³ Bakterienzellen (ungefähr gl
       ],
       content: `## Einleitung
 
-Die Populationsbiologie untersucht, wie sich Populationen in Abhängigkeit von Ressourcen, Konkurrenz und Umweltfaktoren entwickeln, und liefert damit die Grundlage für Epidemiologie, Naturschutzbiologie und nachhaltige Ressourcennutzung. Für den MedAT sind exponentielles und logistisches Wachstum, die Unterscheidung von r- und K-Strategen sowie das Konzept der Kapazitätsgrenze K zentrale Prüfungsthemen, die auch in der Infektionsepidemiologie (Basisreproduktionszahl R0) direkte Anwendung finden.
+**Worum geht es?** Die Populationsbiologie untersucht, wie sich Populationen in Abhängigkeit von Ressourcen, Konkurrenz und Umweltfaktoren entwickeln. **Warum ist das für den MedAT relevant?** Exponentielles und logistisches Wachstum, die Kapazitätsgrenze K und die Unterscheidung von r- und K-Strategen sind zentrale Prüfungsthemen; sie finden direkte Anwendung in der Infektionsepidemiologie (Basisreproduktionszahl R₀). **Welche Fragetypen?** Typische BMS-Fragen: Wachstumskurven zuordnen (J- vs. S-Form), r- vs. K-Strategen unterscheiden, K und Tragfähigkeit interpretieren, Demographie und Altersstruktur einordnen.
 
-**Das Wichtigste auf einen Blick:**
-- Populationsparameter: Dichte (N), Geburtenrate (b), Sterberate (d), Wachstumsrate r = b − d
-- Exponentielles Wachstum: dN/dt = r·N → J-förmige Kurve (unbegrenzte Ressourcen)
-- Logistisches Wachstum: dN/dt = r·N·(K−N)/K → S-förmige (sigmoidale) Kurve, Annäherung an Kapazitätsgrenze K
-- r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit
-- K-Strategen: wenige Nachkommen, intensive Brutpflege, lange Generationszeit
+**In diesem Kapitel lernst du:**
+- **Populationsparameter:** Dichte (N), Geburtenrate (b), Sterberate (d), Wachstumsrate r = b − d
+- **Exponentielles Wachstum:** dN/dt = r·N → J-förmige Kurve (unbegrenzte Ressourcen)
+- **Logistisches Wachstum:** dN/dt = r·N·(K−N)/K → S-förmige (sigmoidale) Kurve, Annäherung an Kapazitätsgrenze K
+- **r-Strategen:** viele Nachkommen, wenig Brutpflege, kurze Generationszeit
+- **K-Strategen:** wenige Nachkommen, intensive Brutpflege, lange Generationszeit
+- **Demographie:** Altersstruktur, Überlebenskurven, minimallebensfähige Population
 
 ![Wachstum und Kapazitätsgrenze](/grafik-exponential.svg)
 
