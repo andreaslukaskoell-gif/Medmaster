@@ -7,143 +7,254 @@ export const bioKapEntwicklung: Kapitel = {
   icon: "🧬",
   estimatedTime: "90 min",
   unterkapitel: [
-    // === from kap4-entwicklungsbiologie ===
+    // === Embryonalentwicklung (überarbeitet) ===
     {
-      id: "bio-4-01",
-      title: "Befruchtung, Furchung und Implantation",
+      id: "bio-4-00",
+      title: "Gametogenese — Spermatogenese und Oogenese",
       stichworte: [
-        "Befruchtung",
-        "Akrosomreaktion",
-        "Kapazitation",
-        "Zygote",
-        "Furchung",
-        "Morula",
-        "Blastozyste",
-        "Implantation",
-        "Polyspermie-Block",
+        "Gametogenese",
+        "Spermatogenese",
+        "Oogenese",
+        "Meiose",
+        "Spermatogonium",
+        "Oozyte",
+        "Polkörperchen",
       ],
       content: `## Einleitung
 
-Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden und miteinander verschmelzen — das nennt man **Befruchtung**. Beim Menschen geschieht dies im **Eileiter** (nicht in der Gebärmutter). Von dort entwickelt sich der Keim über Morula zur Blastozyste, die sich in der Gebärmutterschleimhaut einnistet. Für den MedAT sind Ort der Befruchtung, Kapazitation, Akrosom- und Kortikalreaktion, Blastozyste und hCG prüfungsrelevant.
+Bevor Befruchtung und Embryonalentwicklung möglich sind, müssen **Keimzellen** (Gameten) entstehen: Spermien beim Mann und Eizellen bei der Frau. Dieser Prozess heißt **Gametogenese** und läuft über **Meiose** (Reduktionsteilung), sodass jede Gamete nur einen einfachen Chromosomensatz (n) erhält. Beim Mann entstehen aus einer Ausgangszelle **vier Spermien**, bei der Frau aus einer Ausgangszelle **eine Eizelle und drei Polkörperchen** — diese Asymmetrie und die **Meiose-Arrests** der Oogenese sind für den MedAT zentral. Dieses Unterkapitel ordnet die Gametogenese in die embryologische Abfolge ein; Details zu Hormonsteuerung und Zyklus findest du im Kapitel Anatomie/Gewebe/Physiologie.
 
 **In diesem Kapitel lernst du:**
-- **Wo** die Befruchtung stattfindet (Ampulle des Eileiters) und was **Kapazitation** ist
-- **Akrosomreaktion** (Spermium durchdringt Eizellhülle) und **Kortikalreaktion** (Polyspermie-Block)
-- **Zygote**, **Morula**, **Blastozyste** (Trophoblast vs. Embryoblast) und **Implantation**
-- Die Rolle von **hCG** (erhält Corpus luteum, Schwangerschaftstest)
-- Klinik: Eileiterschwangerschaft, hCG-Diagnostik
-
-**Kontext:** Von der Befruchtung bis zur Einnistung — Grundlage für Reproduktionsmedizin und Pränataldiagnostik.
+- **Gametogenese** als Oberbegriff für die Bildung von Spermien (Spermatogenese) und Eizellen (Oogenese)
+- **Spermatogenese**: Ablauf (Spermatogonium → Meiose I/II → 4 Spermien), Ort (Tubuli seminiferi), Ergebnis
+- **Oogenese**: Ablauf mit zwei Arrests (Prophase I bis Pubertät, Metaphase II bis Befruchtung), Ergebnis (1 Eizelle + 3 Polkörperchen)
+- Warum nur **eine** funktionsfähige Eizelle pro Oozyte entsteht (asymmetrische Teilung, Polkörperchen degenerieren)
+- Zeitliche Einordnung: Oogenese beginnt pränatal; Spermatogenese ab Pubertät
 
 ---
 
-## Befruchtung
+## Voraussetzungen: Meiose und Keimzellen
 
-Die **Befruchtung** (Fertilisation) findet im äußeren Drittel des **Eileiters (Tuba uterina), der Ampulle**, statt. Bevor ein Spermium die Eizelle erreichen kann, muss es die **Kapazitation** durchlaufen — eine biochemische Reifung im weiblichen Genitaltrakt (Dauer ca. 7 Stunden), bei der Cholesterin aus der Spermienmembran entfernt wird und intrazelluläres Ca²⁺ ansteigt, was die Motilität erhöht (**Hyperaktivierung**) und die Akrosomreaktion ermöglicht. Dann durchdringt das Spermium mithilfe der **Akrosom-Reaktion** die Zona pellucida; die Eizelle setzt sofort den **Polyspermie-Block** über die Kortikalreaktion. Gleichzeitig vollendet die bis zur Ovulation in **Metaphase II** arretierte Oozyte die Meiose II → reife Eizelle (n) + 2. Polkörperchen. Abschließend verschmelzen die Vorkerne beider Zellen in der **Syngamie** zur diploiden **Zygote** (2n). Erst hier wird das Geschlecht festgelegt — durch das Spermium (X oder Y-Chromosom). Den molekularen Mechanismus von Akrosom- und Kortikalreaktion erklärt der folgende Abschnitt.
+**Bisher haben wir gesehen:** Gametogenese liefert die Zellen für die Befruchtung. **Damit die Chromosomenzahl nach der Verschmelzung von Ei- und Samenzelle wieder diploid (2n) ist,** müssen die Gameten **haploid (n)** sein. Dafür sorgt die **Meiose** (Reduktionsteilung): Zwei aufeinanderfolgende Teilungen ohne dazwischenliegende DNA-Replikation ergeben aus einer diploiden Ausgangszelle vier haploide Zellen — beim Mann vier Spermien, bei der Frau eine Eizelle und drei kleine **Polkörperchen** (Richtungskörperchen), die keine Rolle mehr spielen und abgebaut werden.
 
----
-
-## Akrosom-Reaktion und Kortikalreaktion
-
-Die Akrosom-Reaktion wird durch die Bindung des Spermiums an ZP3 der Zona pellucida ausgelöst: Das Akrosom (ein lysosomenartiges Organell im Spermien-Kopf) fusioniert mit der Spermien-Plasmamembran und setzt Enzyme frei, darunter Akrosin (eine Serinprotease) und Hyaluronidase. Diese Enzyme durchdringen die Zona pellucida, sodass das Spermium die Eizellmembran erreichen kann. Nach der Fusion beider Zellmembranen löst ein intrazellulärer Ca²⁺-Anstieg in der Eizelle die Kortikalreaktion aus: Kortikale Granula sezernieren ihren Inhalt in den perivitellinen Spalt, was die Zona pellucida biochemisch verändert (Zona-Reaktion, ZP2-Modifikation) und für weitere Spermien undurchdringbar macht. Dieser Mechanismus verhindert die Polyspermie (Befruchtung durch mehr als ein Spermium), die zur Triploidie und meist zum Absterben des Embryos führen würde.
-
-> **Merke:** Akrosom = Enzympaket; Kortikalreaktion = Polyspermie-Block nach Befruchtung.
+**Begriffe beim ersten Auftreten:**
+- **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n).
+- **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n).
+- **Oogonium** = diploide Vorläuferzelle der Eizelle; beim Menschen teilen sich Oogonien nur pränatal, danach entstehen **primäre Oozyten** (2n), die in die Meiose eintreten.
 
 ---
 
-## Blastozyste: Trophoblast und Embryoblast
+## Spermatogenese — Ablauf und Ergebnis
 
-Die Blastozyste (Tag 5–6) ist das erste Stadium mit zwei zellulär verschiedenen Populationen. Der Trophoblast (äußere Schicht) differenziert sich in den Zytotrophoblast (innere Stammzellschicht) und den Synzytiotrophoblast (äußere, mehrkernige, hochinvasive Schicht). Letzterer ist für die Invasion ins Endometrium und die Produktion von hCG verantwortlich. Der Embryoblast (innere Zellmasse) differenziert sich um Tag 8 in Epiblast (obere Schicht; Quelle aller drei Keimblätter und des Amnions) und Hypoblast (untere Schicht; bildet den primären Dottersack). Das Blastozoel ist ein flüssigkeitsgefüllter Hohlraum, dessen Ausdehnung zur typischen Blastozysten-Morphologie führt.
+**Spermatogenese** ist die Bildung reifer Spermien im Hoden. Sie findet in den **Tubuli seminiferi** (Samenkanälchen) statt und läuft ab Pubertät kontinuierlich ab.
 
-> **Merke:** Blastozyste: Trophoblast (→ Plazenta, hCG), Embryoblast (→ Embryo), Blastozoel (Hohlraum).
+**Schritte (vereinfacht):**
+1. **Spermatogonium** (2n) teilt sich mitotisch → weitere Spermatogonien und **primäre Spermatozyten** (2n).
+2. **Meiose I:** Primäre Spermatozyte (2n) → zwei **sekundäre Spermatozyten** (n).
+3. **Meiose II:** Jede sekundäre Spermatozyte (n) → zwei **Spermatiden** (n) → insgesamt **vier Spermatiden** aus einer primären Spermatozyte.
+4. **Spermiogenese:** Umwandlung der Spermatiden zu reifen **Spermien** (mit Kopf inkl. Akrosom, Mittelstück mit Mitochondrien, Schwanz/Flagellum). Die Dauer von der Stammzelle bis zum reifen Spermium beträgt etwa **74 Tage**.
 
-![Blastozyste](/grafik-blastozyste.svg)
-
-**Erklärung zur Grafik:** Die Abbildung zeigt einen Querschnitt der Blastozyste: Trophoblast (Zyto- und Synzytiotrophoblast) außen, Embryoblast (Epiblast/Hypoblast) als innere Zellmasse und den flüssigkeitsgefüllten Blastozoel. So erkennst du die Zuordnung Trophoblast → Plazenta, Embryoblast → Embryo.
-
-![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
-
-**Erklärung zur Grafik:** hCG aus dem Trophoblast bindet an LH-Rezeptoren und erhält das Corpus luteum; die Grafik veranschaulicht die hormonelle Steuerung (analog zu Hypophysenachsen).
+> **Merke:** Aus einem Spermatogonium entstehen über Meiose I und II **vier reife Spermien** (n). Spermatogenese ist kontinuierlich ab Pubertät, Ort: Tubuli seminiferi (Hoden).
 
 ---
 
-## hCG und die Corpus-luteum-Erhaltung
+## Oogenese — Ablauf, Arrests und Ergebnis
 
-hCG (humanes Choriongonadotropin) ist ein Glykoproteinhormon, das strukturell dem LH ähnelt und an LH-Rezeptoren bindet. Es wird vom Trophoblast (vorwiegend Synzytiotrophoblast) ab Beginn der Implantation produziert. Seine Hauptaufgabe besteht darin, das Corpus luteum im Ovar zu erhalten, das andernfalls gegen Ende des Zyklus atretisch würde. Das erhaltene Corpus luteum produziert weiterhin Progesteron (und Östrogen), das das Endometrium sekretorisch hält und die Menstruation verhindert. Die hCG-Konzentration steigt exponentiell bis zur 8.–12. SSW (Schwangerschaftswoche), danach übernimmt die Plazenta die Progesteron-Eigenproduktion und hCG fällt ab. Der Schwangerschaftstest weist hCG im Urin mithilfe von Anti-hCG-Antikörpern nach.
+**Oogenese** ist die Bildung der Eizelle. Sie unterscheidet sich von der Spermatogenese durch **zwei Meiose-Arrests** und durch ein **asymmetrisches Teilungsergebnis**.
 
-> **Merke:** Implantation Tag 6–7; hCG erhält Corpus luteum → Progesteron ↑ → keine Menstruation.
+**Zeitliche Einordnung:** Bereits während der **Embryonalentwicklung** (pränatal) entstehen aus Oogonien **primäre Oozyten** (2n), die in die **Meiose I** eintreten und dann in **Prophase I arretieren** — bis zur Pubertät. Bei jeder Ovulation wird eine primäre Oozyte „geweckt“, beendet Meiose I und gibt **eine sekundäre Oozyte** (n) und **ein erstes Polkörperchen** (n) ab. Die sekundäre Oozyte wird aus dem Ovar freigesetzt und arretiert in **Metaphase II**. **Meiose II** wird erst bei **Befruchtung** abgeschlossen: Es entstehen die reife **Eizelle** (n) und ein **zweites Polkörperchen** (n). Die Polkörperchen enthalten kaum Zytoplasma und degenerieren; nur die Eizelle ist befruchtungsfähig.
+
+| Aspekt | Spermatogenese | Oogenese |
+|--------|----------------|----------|
+| Beginn | Ab Pubertät | Pränatal (Oozyten angelegt) |
+| Meiose-Arrests | Keine | Prophase I (bis Pubertät), Metaphase II (bis Befruchtung) |
+| Ergebnis aus 1 Ausgangszelle | 4 Spermien | 1 Eizelle + 3 Polkörperchen |
+| Ort | Tubuli seminiferi (Hoden) | Ovar (Follikel) |
+
+> **Merke:** Oogenese: **1 Eizelle + 3 Polkörperchen** aus einer Oogonium. Meiose I-Arrest in Prophase I (bis Ovulation), Meiose II-Arrest in Metaphase II (bis Befruchtung).
+
+**SVG-Hinweis:** Eine schematische Gegenüberstellung Spermatogenese (4 Spermien) vs. Oogenese (1 Eizelle + 3 Polkörperchen) festigt die Prüfungsfrage „Wie viele Gameten entstehen?“.
 
 ---
 
-## Klinischer Bezug
+## Bedeutung für die Embryonalentwicklung
 
-Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, wenn die Blastozyste sich außerhalb des Uterus implantiert; sie kann zur Eileiterruptur und lebensbedrohlicher innerer Blutung führen. Ein erhöhter oder nicht regelrecht ansteigender hCG-Spiegel ist ein diagnostisches Hilfsmittel zur Unterscheidung von normaler Intrauteringravidität und Ektopie.
+Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …“ solltest du sicher beherrschen.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Prüfungsvorbereitung:**
 
-**Zentral prüfungsrelevant:** Befruchtung (Ampulle Eileiter), Polyspermie-Verhinderung (Kortikalreaktion), Kapazitation, Akrosomreaktion, Zygote, Furchung, Blastozyste.
+**Zentral prüfungsrelevant:**
+- Gametogenese = Bildung von Keimzellen (Spermatogenese + Oogenese)
+- Spermatogenese: Spermatogonium → Meiose I/II → **4 Spermien** (n); Ort: Tubuli seminiferi; ab Pubertät, kontinuierlich
+- Oogenese: Oogonium → primäre Oozyte (Arrest **Prophase I** bis Pubertät) → bei Ovulation Meiose I → sekundäre Oozyte (Arrest **Metaphase II** bis Befruchtung) → bei Befruchtung Meiose II → **1 Eizelle + 3 Polkörperchen**
+- Aus einer primären Oozyte entsteht nur **eine** befruchtungsfähige Eizelle (nicht vier)
 
-**Ergänzend vertiefend:** Eizellreifung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:**
+- Spermiogenese: Umwandlung Spermatide → Spermium (Akrosom, Flagellum, Mitochondrien); Dauer Spermatogenese ~74 Tage
+- Primäre Oozyten werden pränatal angelegt; bei Geburt ca. 400.000 Follikel, bei Pubertät weniger
 
-**Häufige Fragen:**
-- Wo findet die Befruchtung statt? (Ampulle des Eileiters)
-- Welche Reaktion verhindert Polyspermie? (Kortikalreaktion)
-- Welches Hormon erhält das Corpus luteum in der Frühschwangerschaft? (hCG)
+**Häufige Prüfungsfragen:**
+- Wie viele Spermien entstehen aus einem Spermatogonium? → Vier (über Meiose I und II)
+- Wie viele Eizellen entstehen aus einer primären Oozyte? → Eine (plus drei Polkörperchen)
+- In welcher Phase arretiert die Oozyte bis zur Ovulation? → Prophase I (Meiose I)
+- Wann wird die Meiose II der Oozyte abgeschlossen? → Bei der Befruchtung
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
-- Trophoblast (→ Plazenta, hCG) vs. Embryoblast (→ Embryo)
-- Morula (Tag 3–4, kompakter Zellhaufen) vs. Blastozyste (Tag 5–6, Hohlraum mit ICM)
-- Kapazitation (Reifung des Spermiums) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt)
-- hCG (Trophoblast) vs. LH (Hypophyse) — hCG wirkt über LH-Rezeptoren
+**Typische Prüfungsfallen:**
+- „Aus einer Oozyte entstehen vier Eizellen“ → falsch (nur eine Eizelle + drei Polkörperchen)
+- Spermatogenese (4 Gameten) vs. Oogenese (1 Gamet) — Ergebnis nicht verwechseln
+- Meiose-Arrest Prophase I (bis Pubertät/Ovulation) vs. Metaphase II (bis Befruchtung)
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Kapazitation: ca. 7 Stunden im weiblichen Genitaltrakt
-- Implantation: Tag 6–7 post conceptionem
-- hCG-Peak: 8.–12. SSW, danach Abfall (Plazenta übernimmt Progesteronsynthese)
-- Blastozyste: Tag 5–6; Epiblast + Hypoblast ab Tag 8
-- Zona pellucida: ZP3 triggert Akrosomreaktion
+**Prüfungsrelevante Zahlen:**
+- Spermatogenese: ~74 Tage; Oogenese: primäre Oozyten pränatal angelegt, Meiose II erst bei Befruchtung
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- Befruchtung findet in der **Ampulle des Eileiters** statt — nicht im Uterus
-- **Kapazitation** (~7 h): biochemische Reifung der Samenzelle im weiblichen Genitaltrakt → notwendige Voraussetzung für die Akrosomreaktion
-- **Akrosomreaktion** (Spermium): Bindung an ZP3 der Zona pellucida → Freisetzung von Akrosin und Hyaluronidase → Zona wird durchdrungen
-- **Kortikalreaktion** (Eizelle): Ca²⁺-Anstieg → kortikale Granula exozytieren → Zona-Modifikation = **Polyspermie-Block**
-- Die Eizelle vollendet **Meiose II** erst nach Befruchtung → reife Eizelle (n) + 2. Polkörperchen
-- **Syngamie**: Vorkerne von Ei- und Samenzelle verschmelzen zur diploiden **Zygote** (2n); Geschlecht durch Spermium bestimmt
-- Furchung: Morula (Tag 3–4) → **Blastozyste** (Tag 5–6) mit Trophoblast (→ Plazenta, hCG) und Embryoblast (→ Embryo)
-- **Implantation** Tag 6–7: Synzytiotrophoblast produziert hCG → erhält Corpus luteum → Progesteron ↑ → keine Menstruation
+- **Gametogenese** = Bildung von Spermien (Spermatogenese) und Eizellen (Oogenese) über Meiose
+- **Spermatogenese:** Spermatogonium (2n) → Meiose I/II → **4 Spermien** (n); Tubuli seminiferi, ab Pubertät, ~74 Tage
+- **Oogenese:** Primäre Oozyte (2n) in **Prophase I** arretiert bis Ovulation → Meiose I → sekundäre Oozyte (n) in **Metaphase II** arretiert bis Befruchtung → Meiose II → **1 Eizelle (n) + 3 Polkörperchen**
+- Nur **eine** funktionsfähige Eizelle pro Oogonium; Polkörperchen degenerieren
+- Zeitliche Einordnung: Oogenese beginnt embryonal; Spermatogenese ab Pubertät; Eizelle wird erst bei Befruchtung fertiggestellt
 `,
       lernziele: [
-        "Die Akrosom-Reaktion und Kortikalreaktion bei der Befruchtung erklären und voneinander abgrenzen.",
-        "Die Furchungsstadien (Morula, Blastozyste) mit korrekten Zeitangaben und strukturellen Merkmalen beschreiben.",
-        "Den Ablauf der Implantation und die Rolle von hCG für die Corpus-luteum-Erhaltung erläutern.",
+        "Gametogenese als Oberbegriff und den Unterschied zwischen Spermatogenese (4 Spermien) und Oogenese (1 Eizelle + 3 Polkörperchen) erklären.",
+        "Die beiden Meiose-Arrests der Oogenese (Prophase I, Metaphase II) und deren Auflösung (Ovulation, Befruchtung) benennen.",
       ],
       sections: [],
-      diagram: "cell-cycle",
-
       merksätze: [
-        "Die Befruchtung findet in der Ampulle des Eileiters statt — nicht im Uterus.",
-        "Akrosomreaktion (Spermium, Enzymfreisetzung) und Kortikalreaktion (Eizelle, Polyspermie-Block) sind zwei getrennte Prozesse.",
-        "Blastozyste (Tag 5–6): Trophoblast wird zur Plazenta und produziert hCG; Embryoblast wird zum Embryo.",
-        "Implantation erfolgt an Tag 6–7; hCG erhält das Corpus luteum und sichert die Progesteronproduktion.",
-        "Kapazitation (ca. 7 h) ist die biochemische Reifung des Spermiums im weiblichen Genitaltrakt — Voraussetzung für die Akrosomreaktion.",
+        "Spermatogenese: 1 Spermatogonium → Meiose I/II → 4 Spermien (n). Oogenese: 1 Oozyte → 1 Eizelle (n) + 3 Polkörperchen.",
+        "Oogenese-Arrests: Prophase I (bis Ovulation), Metaphase II (bis Befruchtung).",
+      ],
+      selfTest: [],
+    },
+    {
+      id: "bio-4-01",
+      title: "Befruchtung",
+      stichworte: [
+        "Befruchtung",
+        "Ampulle",
+        "Kapazitation",
+        "Akrosomreaktion",
+        "Kortikalreaktion",
+        "Zygote",
+        "Syngamie",
+        "Polyspermie-Block",
+      ],
+      content: `## Einleitung
+
+Die **Befruchtung** (Fertilisation) ist die Verschmelzung von Spermium und Eizelle zur **Zygote**. Sie findet beim Menschen im **Eileiter** statt — genauer in der **Ampulle** (dem weitesten Abschnitt im äußeren Drittel der Tuba uterina), nicht in der Gebärmutter. Damit ein Spermium die Eizelle erreichen und durchdringen kann, sind **Kapazitation** (Reifung im weiblichen Genitaltrakt) und **Akrosomreaktion** (Enzymfreisetzung) nötig; die Eizelle verhindert mit der **Kortikalreaktion** sofort den Eintritt weiterer Spermien (Polyspermie-Block). Für den MedAT sind Ort, Ablauf und die Begriffe Zygote, Syngamie und Polyspermie-Verhinderung zentral.
+
+**In diesem Kapitel lernst du:**
+- **Wo** die Befruchtung stattfindet (Ampulle des Eileiters) und was **Kapazitation** ist
+- **Akrosomreaktion** (Spermium durchdringt Eizellhülle) und **Kortikalreaktion** (Eizelle blockiert weitere Spermien)
+- **Syngamie** (Verschmelzung der Vorkerne) und **Zygote** (erste diploide Zelle)
+- Dass die Eizelle **Meiose II** erst bei Befruchtung abschließt (reife Eizelle n + 2. Polkörperchen)
+- Geschlechtsbestimmung durch das Spermium (X oder Y)
+
+---
+
+## Ort und zeitliche Einordnung
+
+Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität) und ist lebensbedrohlich.
+
+---
+
+## Voraussetzung: Kapazitation
+
+Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. **Kapazitation** ist eine biochemische Reifung, die im weiblichen Genitaltrakt stattfindet (Dauer etwa **7 Stunden**): Unter anderem wird Cholesterin aus der Spermienmembran entfernt und die intrazelluläre Calcium-Konzentration steigt. Dadurch wird die Spermienbewegung verstärkt (**Hyperaktivierung**) und das Spermium wird befähigt, die **Akrosomreaktion** auszulösen. Ohne Kapazitation kann kein Spermium die Eizellhülle durchdringen.
+
+> **Merke:** Kapazitation = Reifung des Spermiums im weiblichen Genitaltrakt (~7 h), Voraussetzung für Akrosomreaktion und Befruchtung.
+
+---
+
+## Ablauf der Befruchtung in Schritten
+
+1. **Ankunft des Spermiums:** Das kapazitierte Spermium bindet an die **Zona pellucida** (eine glycoproteinreiche Hülle um die Eizelle). Das Protein **ZP3** auf der Zona löst die Akrosomreaktion aus.
+
+2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin**, **Hyaluronidase**). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
+
+3. **Fusion und Kortikalreaktion (in der Eizelle):** Sobald die Membranen von Spermium und Eizelle fusionieren, steigt in der Eizelle die Calcium-Konzentration. Das löst die **Kortikalreaktion** aus: **Kortikale Granula** (Vesikel unter der Eizellmembran) entleeren ihren Inhalt in den **perivitellinen Spalt** (Raum zwischen Eizelle und Zona pellucida). Dadurch wird die Zona pellucida chemisch verändert (**Zona-Reaktion**) und für weitere Spermien undurchdringbar — **Polyspermie-Block**. Eine Befruchtung durch mehrere Spermien (Polyspermie) würde zu Triploidie und meist zum Absterben des Embryos führen.
+
+4. **Abschluss der Meiose II:** Die Eizelle lag bis zur Befruchtung in **Metaphase II** der Meiose. Jetzt wird **Meiose II** abgeschlossen: Es entstehen die **reife Eizelle** (n) und das **zweite Polkörperchen** (n).
+
+5. **Syngamie:** Die **Vorkerne** (Pronuclei) von Eizelle und Spermium verschmelzen. Die entstandene Zelle ist die **Zygote** (2n, diploid). Das **Geschlecht** wird durch das Spermium festgelegt: Es trägt entweder ein X- oder ein Y-Chromosom; die Eizelle liefert stets ein X-Chromosom.
+
+> **Merke:** Akrosomreaktion = Enzymfreisetzung beim Spermium (Durchdringung der Zona). Kortikalreaktion = Reaktion der Eizelle (Polyspermie-Block). Syngamie = Verschmelzung der Vorkerne → Zygote (2n).
+
+**SVG-Hinweis:** Schema „Befruchtung: Akrosomreaktion und Kortikalreaktion“ — Spermium mit Akrosom, Zona pellucida, kortikale Granula, Polyspermie-Block.
+
+---
+
+## Typische Fehler/Fehlentwicklungen (BMS-Level)
+
+- **Polyspermie:** Wenn die Kortikalreaktion ausbleibt, können mehrere Spermien eindringen → Triploidie (3n) → Embryo meist nicht lebensfähig.
+- **Eileiterschwangerschaft:** Implantation in der Tube statt im Uterus → Risiko für Tubarruptur und innere Blutung; Diagnostik u. a. über hCG-Verlauf.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung:**
+
+**Zentral prüfungsrelevant:**
+- Befruchtung findet in der **Ampulle des Eileiters** statt (nicht im Uterus)
+- **Kapazitation** (~7 h): Reifung des Spermiums im weiblichen Genitaltrakt, Voraussetzung für Akrosomreaktion
+- **Akrosomreaktion** (Spermium): Bindung an ZP3 → Freisetzung von Akrosin/Hyaluronidase → Durchdringung der Zona pellucida
+- **Kortikalreaktion** (Eizelle): Ca²⁺-Anstieg → kortikale Granula → Zona-Modifikation = **Polyspermie-Block**
+- **Syngamie** = Verschmelzung der Vorkerne → **Zygote** (2n); Geschlecht durch Spermium (X/Y)
+- Eizelle schließt **Meiose II** erst bei Befruchtung ab → reife Eizelle (n) + 2. Polkörperchen
+
+**Ergänzend vertiefend:**
+- Zona pellucida: ZP3 löst Akrosomreaktion aus; Zona-Reaktion macht sie für weitere Spermien undurchdringbar
+- Perivitelliner Spalt: Raum zwischen Eizellmembran und Zona pellucida
+
+**Häufige Prüfungsfragen:**
+- Wo findet die Befruchtung beim Menschen statt? → Ampulle des Eileiters
+- Welche Reaktion verhindert Polyspermie? → Kortikalreaktion (Eizelle)
+- Was ist die Zygote? → Die erste diploide Zelle nach Verschmelzung der Vorkerne von Ei- und Samenzelle
+- Wann wird die Meiose II der Eizelle abgeschlossen? → Bei der Befruchtung
+
+**Typische Prüfungsfallen:**
+- Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
+- Kapazitation (Reifung Spermium) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt)
+- Befruchtung (Ampulle) vs. Implantation (Uterus, Tag 6–7)
+
+**Prüfungsrelevante Zahlen:**
+- Kapazitation: ca. 7 Stunden im weiblichen Genitaltrakt
+- Befruchtung: in der Ampulle der Tuba uterina
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- Befruchtung in der **Ampulle des Eileiters** (nicht im Uterus)
+- **Kapazitation** (~7 h): Reifung des Spermiums → Voraussetzung für Akrosomreaktion
+- **Akrosomreaktion** (Spermium): ZP3-Bindung → Akrosin/Hyaluronidase → Durchdringung der Zona pellucida
+- **Kortikalreaktion** (Eizelle): Ca²⁺ → kortikale Granula → Zona-Reaktion = **Polyspermie-Block**
+- Eizelle beendet **Meiose II** bei Befruchtung → reife Eizelle (n) + 2. Polkörperchen
+- **Syngamie**: Vorkerne verschmelzen → **Zygote** (2n); Geschlecht durch Spermium (X oder Y)
+`,
+      lernziele: [
+        "Ort der Befruchtung (Ampulle des Eileiters) und die Rolle von Kapazitation, Akrosomreaktion und Kortikalreaktion erklären.",
+        "Syngamie und Zygote definieren und den Polyspermie-Block begründen.",
+      ],
+      sections: [],
+      merksätze: [
+        "Befruchtung in der Ampulle des Eileiters. Akrosomreaktion (Spermium) und Kortikalreaktion (Eizelle, Polyspermie-Block) sind getrennte Schritte.",
+        "Syngamie = Verschmelzung der Vorkerne → Zygote (2n). Geschlecht durch Spermium (X/Y).",
       ],
       klinischerBezug:
-        "Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, wenn die Blastozyste sich außerhalb des Uterus implantiert; sie kann zur Eileiterruptur und lebensbedrohlicher innerer Blutung führen. Ein erhöhter oder nicht regelrecht ansteigender hCG-Spiegel ist ein diagnostisches Hilfsmittel zur Unterscheidung von normaler Intrauteringravidität und Ektopie.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+        "Eileiterschwangerschaft (Extrauteringravidität): Implantation in der Tube statt im Uterus; Risiko Tubarruptur, Blutung; Diagnostik u. a. hCG-Verlauf.",
       altfrage: {
         question:
-          "Welche Reaktion der Eizelle verhindert unmittelbar nach der Befruchtung die Polyspermie, und was ist ihr zellulärer Mechanismus?",
+          "Welche Reaktion der Eizelle verhindert unmittelbar nach der Befruchtung die Polyspermie?",
         answer:
-          "Die Kortikalreaktion: Kortikale Granula der Eizelle exozytieren infolge des Ca²⁺-Anstiegs in den perivitellinen Spalt und verändern die Zona pellucida chemisch (Zona-Reaktion, ZP2-Modifikation), sodass kein weiteres Spermium binden oder eindringen kann.",
+          "Die Kortikalreaktion: Kortikale Granula der Eizelle setzen nach Ca²⁺-Anstieg ihren Inhalt in den perivitellinen Spalt frei und verändern die Zona pellucida (Zona-Reaktion), sodass keine weiteren Spermien eindringen können.",
       },
       selfTest: [
         {
@@ -157,231 +268,366 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
           ],
           correctIndex: 2,
           explanation:
-            "Die Befruchtung findet physiologischerweise in der Ampulle des Eileiters (Tuba uterina) statt, dem weitesten Abschnitt im äußeren Drittel. Hier treffen Oozyte und Spermien aufeinander. Findet die Implantation nicht im Uterus, sondern z. B. im Isthmus oder Infundibulum statt, spricht man von einer Eileiterschwangerschaft (Extrauteringravidität).",
-          hints: [
-            "Denk an den weitesten Abschnitt der Tuba uterina.",
-            "Ampulle = äußeres Drittel.",
-          ],
+            "Die Befruchtung findet in der Ampulle des Eileiters (Tuba uterina) statt — dem weitesten Abschnitt im äußeren Drittel. Eizelle und Spermien treffen dort aufeinander.",
+          hints: ["Weitester Abschnitt der Tuba.", "Ampulle = äußeres Drittel."],
           difficulty: 1,
           tags: ["befruchtung", "ampulle", "eileiter"],
         },
         {
-          question: "Welche Aussage zur Akrosom-Reaktion und Kortikalreaktion ist korrekt?",
+          question: "Welche Reaktion verhindert die Polyspermie?",
           options: [
-            "Die Kortikalreaktion setzt Akrosin frei, die Akrosom-Reaktion verhindert Polyspermie.",
-            "Beide Reaktionen werden durch denselben Mechanismus ausgelöst und dienen demselben Zweck.",
-            "Die Akrosom-Reaktion ermöglicht dem Spermium das Durchdringen der Zona pellucida; die Kortikalreaktion der Eizelle verhindert danach den Eintritt weiterer Spermien.",
-            "Die Akrosom-Reaktion findet in der Eizelle statt, die Kortikalreaktion im Spermium.",
-            "Die Kortikalreaktion findet vor der Akrosom-Reaktion statt.",
+            "Die Akrosomreaktion",
+            "Die Kapazitation",
+            "Die Kortikalreaktion der Eizelle",
+            "Die Syngamie",
+            "Die Zona pellucida-Bindung",
           ],
           correctIndex: 2,
           explanation:
-            "Die Akrosom-Reaktion ist ein Vorgang am Spermium: Das Akrosom setzt Enzyme (Akrosin, Hyaluronidase) frei, die die Zona pellucida durchdringen. Die Kortikalreaktion ist ein Vorgang der Eizelle: Ca²⁺-Anstieg → kortikale Granula-Exozytose → Zona-Modifikation → Polyspermie-Block. Beide Vorgänge sind getrennt, aber zeitlich eng verknüpft.",
-          hints: [
-            "Akrosom gehört zum Spermium, kortikale Granula gehören zur Eizelle.",
-            "Kortikalreaktion = Schutz vor Polyspermie.",
-          ],
-          difficulty: 2,
-          tags: ["akrosom-reaktion", "kortikalreaktion", "polyspermie"],
-        },
-        {
-          question:
-            "Welche Struktur der Blastozyste entwickelt sich zur Plazenta und produziert hCG?",
-          options: [
-            "Embryoblast (innere Zellmasse)",
-            "Hypoblast",
-            "Trophoblast",
-            "Epiblast",
-            "Blastozoel",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Der Trophoblast (äußere Zellschicht der Blastozyste) entwickelt sich zur Plazenta (Chorion) und ist die Quelle von hCG (humanes Choriongonadotropin). Der Embryoblast (= innere Zellmasse) entwickelt sich zum eigentlichen Embryo. Das Blastozoel ist nur der flüssigkeitsgefüllte Hohlraum.",
-          hints: [
-            "Tropho- = ernährend → Plazenta.",
-            "hCG = humanes Choriongonadotropin → Chorion kommt vom Trophoblast.",
-          ],
+            "Die Kortikalreaktion der Eizelle (nach Fusion mit dem Spermium): Kortikale Granula entleeren sich, die Zona pellucida wird verändert (Zona-Reaktion) und für weitere Spermien undurchdringbar. Die Akrosomreaktion gehört zum Spermium und ermöglicht das Eindringen; sie verhindert keine Polyspermie.",
+          hints: ["Eizelle reagiert auf Eindringen.", "Zona wird für weitere Spermien blockiert."],
           difficulty: 1,
-          tags: ["trophoblast", "plazenta", "hcg"],
+          tags: ["kortikalreaktion", "polyspermie"],
         },
         {
-          question: "Wann findet die Implantation der Blastozyste im Endometrium statt?",
+          question: "Was entsteht unmittelbar nach der Syngamie?",
           options: [
-            "Tag 1–2 nach der Befruchtung",
-            "Tag 3–4 nach der Befruchtung (Morula-Stadium)",
-            "Tag 6–7 nach der Befruchtung (entspricht ca. Tag 20–21 des Menstruationszyklus)",
-            "Tag 14 nach der Befruchtung",
-            "Erst in der 4. Schwangerschaftswoche (Tag 28)",
+            "Die Morula",
+            "Die Blastozyste",
+            "Die Zygote",
+            "Die sekundäre Oozyte",
+            "Die Keimscheibe",
           ],
           correctIndex: 2,
           explanation:
-            "Die Implantation (Nidation) findet am Tag 6–7 nach der Befruchtung statt, was dem Tag 20–21 des Menstruationszyklus entspricht (Lutealphase, Progesteron-Hochphase). Zu diesem Zeitpunkt liegt die Blastozyste vor, während Morula und frühe Blastozyste noch im Eileiter/Uterus wandern.",
-          hints: [
-            "Blastozyste bildet sich Tag 5–6, Implantation kurz danach.",
-            "Lutealphase = Tage 15–28 des Zyklus.",
-          ],
+            "Syngamie ist die Verschmelzung der Vorkerne von Eizelle und Spermium. Das Ergebnis ist die Zygote (2n) — die erste diploide Zelle des neuen Individuums. Morula und Blastozyste entstehen erst durch Furchungsteilungen danach.",
+          hints: ["Erste diploide Zelle nach Verschmelzung.", "2n = Zygote."],
           difficulty: 1,
-          tags: ["implantation", "blastozyste", "endometrium"],
-        },
-        {
-          question: "Welche Funktion hat hCG in der frühen Schwangerschaft?",
-          options: [
-            "hCG hemmt das Corpus luteum und senkt den Progesteronspiegel.",
-            "hCG stimuliert die Ovulation eines weiteren Follikels.",
-            "hCG erhält das Corpus luteum, das weiterhin Progesteron produziert, und verhindert so die Menstruation; es ist ab ca. Tag 10 im Blut nachweisbar.",
-            "hCG wird von der Decidua (mütterlichem Gewebe) produziert und fördert die Blastozysten-Reifung.",
-            "hCG ist erst ab der 20. Schwangerschaftswoche im Urin nachweisbar.",
-          ],
-          correctIndex: 2,
-          explanation:
-            "hCG wird vom Trophoblast produziert und bindet an LH-Rezeptoren des Corpus luteum, das dadurch erhalten bleibt und Progesteron weiter sezerniert. Dies stabilisiert das Endometrium und verhindert die Menstruation. hCG ist im Blut ab Tag ~10, im Urin ab Tag ~14 nach Befruchtung nachweisbar und erreicht sein Maximum in der 8.–12. SSW.",
-          hints: [
-            "hCG wirkt wie LH → bindet an LH-Rezeptoren.",
-            "Schwangerschaftstest misst hCG im Urin.",
-          ],
-          difficulty: 2,
-          tags: ["hcg", "corpus luteum", "progesteron"],
+          tags: ["syngamie", "zygote"],
         },
       ],
     },
     {
-      id: "bio-4-02",
-      title: "Gastrulation, Neurulation und die drei Keimblätter",
+      id: "bio-4-01b",
+      title: "Furchung, Morula, Blastozyste und Implantation",
       stichworte: [
-        "Gastrulation",
-        "Ektoderm",
-        "Mesoderm",
-        "Endoderm",
-        "Neurulation",
-        "Neuralrohr",
-        "Primitivstreifen",
-        "Keimblätter",
+        "Furchung",
+        "Morula",
+        "Blastozyste",
+        "Trophoblast",
+        "Embryoblast",
+        "Implantation",
+        "hCG",
+        "Blastozoel",
       ],
       content: `## Einleitung
 
-In der dritten Entwicklungswoche entstehen aus der frühen Keimscheibe die **drei Keimblätter** (Ektoderm, Mesoderm, Endoderm) — aus ihnen entwickeln sich später alle Organe. Gleichzeitig bildet sich das **Neuralrohr** (Vorläufer von Gehirn und Rückenmark). Für den MedAT sind Gastrulation, Keimblattderivate und Neurulation zentral.
+Aus der **Zygote** entstehen durch wiederholte Zellteilungen zunächst viele kleinere Zellen — man spricht von **Furchung** (ohne nennenswertes Wachstum, die Zellgröße nimmt ab). Der frühe Zellhaufen heißt **Morula**; mit Ausbildung eines Hohlraums wird daraus die **Blastozyste**. In der Blastozyste unterscheidet man den **Trophoblast** (wird zu Plazenta und Eihüllen, produziert hCG) und den **Embryoblast** (wird zum Embryo). Die **Implantation** (Einnistung) in die Gebärmutterschleimhaut erfolgt etwa am **Tag 6–7** nach der Befruchtung. Für den MedAT sind Furchung ≠ Wachstum, Morula vs. Blastozyste, Trophoblast vs. Embryoblast und die Rolle von hCG zentral.
 
 **In diesem Kapitel lernst du:**
-- **Gastrulation** (Primitivstreifen, Epiblast → drei Keimblätter) und **Neurulation** (Neuralrohr)
-- **Ektoderm, Mesoderm, Endoderm** und welche Organe aus welchem Blatt entstehen
-- **Neuralleiste** und ihre Derivate (Ganglien, Melanozyten, Nebennierenmark …)
-- Klinik: **Spina bifida**, Anenzephalie bei Neuralrohrdefekten
-
-**Kontext:** Warum welches Gewebe wo herkommt — Basis für Embryologie und Fehlbildungen.
-
----
-
-## Gastrulation
-
-Die **Gastrulation** (3. Entwicklungswoche, Tag 15–21) ist der Prozess, durch den aus der zweischichtigen Keimscheibe (Epiblast + Hypoblast) die **dreiblättrige Keimscheibe** entsteht. Lewis Wolpert bezeichnete die Gastrulation als „den wichtigsten Zeitpunkt im Leben" – wichtiger als Geburt, Heirat oder Tod. Ausgangspunkt ist der **Epiblast**. Am kaudalen Ende der Keimscheibe bildet sich der **Primitivstreifen** – eine Verdickung der Epiblastzellen an der Mittellinie, die gleichzeitig die **Körperachsen** festlegt: kranial-kaudal, dorsal-ventral und links-rechts. Kranial des Primitivstreifens liegt der **Primitiv-Knoten (Hensen-Knoten)**, das Organisationszentrum der Gastrulation (analog zum Spemann-Organisator bei Amphibien). Am Primitiv-Knoten rotieren Monocilien im Uhrzeigersinn und erzeugen einen gerichteten Flüssigkeitsstrom (**nodal flow**), der die **Links-Rechts-Asymmetrie** des Körpers determiniert (z. B. Herz links, Leber rechts). Defekte in diesem Prozess → **Situs inversus** (spiegelbildliche Organanordnung).
-
-Epiblastzellen wandern zum Primitivstreifen, durchlaufen eine **epithelial-mesenchymale Transition (EMT)** — sie verlieren E-Cadherin und ihre Zellpolarität, gewinnen Migrationsfähigkeit — invaginieren durch die **Primitivrinne** und migrieren als neues **Mesoderm** zwischen Epiblast und Hypoblast. Ein Teil der invaginierenden Zellen verdrängt den Hypoblast und bildet das **definitive Endoderm**. Die nicht involvierten, auf der Oberfläche verbleibenden Epiblastzellen werden zum **Ektoderm**. So entstehen die drei primären Keimblätter — alle drei gehen letztlich aus dem Epiblast hervor.
-
-Aus dem Primitiv-Knoten bildet sich zusätzlich das **Notochord** (Chorda dorsalis), eine transiente Achsenstruktur aus Mesoderm, die als Induktor der Neurulation wirkt und später zu den **Nuclei pulposi** der Bandscheiben wird.
-
-> **Merke:** Primitivstreifen → alle drei Keimblätter entstehen aus dem Epiblast: invaginierende Zellen → Endo + Meso; verbleibende Oberfläche → Ekto.
-
-![Keimblätter und Entwicklung](/grafik-blastozyste.svg)
-
-**Erklärung zur Grafik:** Aus dem Embryoblast (Epiblast/Hypoblast) entstehen durch Gastrulation die drei Keimblätter; die Grafik veranschaulicht die Herkunft von Ektoderm, Mesoderm und Endoderm.
-
-![Neuralrohr und Achsen](/grafik-12-ossifikation.svg)
-
-**Erklärung zur Grafik:** Notochord und Achsenstrukturen; die Grafik ergänzt die Embryonalentwicklung (Neurulation, Somiten) und die spätere Knochenbildung.
+- **Furchung**: schnelle Teilungen der Zygote/Blastomeren ohne Wachstum → Morula → Blastozyste
+- **Morula** (Tag 3–4): kompakter Zellhaufen; **Blastozyste** (Tag 5–6): Hohlraum (Blastozoel), Trophoblast außen, Embryoblast (innere Zellmasse) innen
+- **Trophoblast** → Plazenta, hCG; **Embryoblast** → Embryo; **Blastozoel** = flüssigkeitsgefüllter Hohlraum
+- **Implantation** (Tag 6–7): Synzytiotrophoblast invadiert Endometrium; hCG erhält Corpus luteum
+- Klinik: Eileiterschwangerschaft bei Implantation außerhalb des Uterus
 
 ---
 
-## Neurulation und Neuralleiste
+## Furchung — Teilungen ohne Wachstum
 
-Die Neurulation beginnt mit der Induktion der Neuralplatte durch Signale des Notochords (insbesondere Sonic Hedgehog ventral, Bone Morphogenetic Proteins dorsal). Die Neuralplatte verdickt sich, die Ränder heben sich als Neuralwülste an, und die Mitte faltet sich zur Neuralrinne. Durch Fusion der Neuralwülste entsteht das Neuralrohr. Die Schließung beginnt in der Mitte und schreitet in beide Richtungen fort; die offenen Enden heißen anteriorer (kranial) und posteriorer (kaudal) Neuroporus. Der anteriore Neuroporus schließt am Tag 25, der posteriore am Tag 27. Bleibt der Neuroporus offen, entstehen Neuralrohrdefekte (Anenzephalie kranial, Spina bifida kaudal). Neuralleistenzellen wandern aus und bilden ein breites Spektrum von Geweben: sensorische und autonome Ganglien, Schwann-Zellen, Melanozyten, Kieferknorpel und -knochen, Nebennierenmark (Chromaffin-Zellen).
+**Bisher haben wir gesehen:** Die Zygote ist die erste Zelle des neuen Individuums. **Damit sich ein vielzelliger Keim bildet,** teilt sie sich wiederholt. Diese Teilungen heißen **Furchung**: Sie finden in rascher Folge statt, **ohne** dass die Zellen zwischen den Teilungen nennenswert wachsen. Die Tochterzellen (**Blastomeren**) werden also mit jeder Runde kleiner. Es gibt **kein** Gesamtwachstum des Keims in dieser Phase — Furchung ist **nicht** mit Wachstum gleichzusetzen (typische Prüfungsfalle).
 
-> **Merke:** Ektoderm: Haut + Nerven; Mesoderm: Muskel + Knochen + Herz + Niere; Endoderm: Darm + Lunge + Drüsen.
+Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere“). Die Morula wandert weiter im Eileiter in Richtung Uterus.
 
-| Keimblatt | Derivate |
-| --- | --- |
-| **Ektoderm** | Epidermis, ZNS (Neuralrohr), PNS, Sinnesorgane, Zahnschmelz |
-| **Mesoderm** | Skelett, Muskulatur, Herz, Niere, Gonaden, Bindegewebe, Blut |
-| **Endoderm** | Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase |
-| **Neuralleiste** | Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kieferknochen |
+> **Merke:** Furchung = wiederholte Teilungen der Zygote/Blastomeren **ohne** Wachstum. Morula = kompakter Zellhaufen (Tag 3–4).
 
 ---
 
-## Somiten und ihre Derivate
+## Blastozyste — Aufbau und Bedeutung
 
-Somiten sind paarige Mesoderm-Segmente, die beiderseits des Neuralrohrs entstehen. Beim Menschen entstehen in der 3.–5. Woche ca. 42–44 Somiten-Paare. Jeder Somit differenziert sich in drei Bereiche: Das Sklerotom (ventral) liefert Chondrozyten und Osteoblasten für Wirbelkörper, Rippen und Teile des Schädels. Das Myotom (mittig) liefert Skelettmuskeln des Rumpfes und der Extremitäten. Das Dermatom (dorsal) liefert das dermale Bindegewebe der Haut (nicht die Epidermis, die vom Ektoderm kommt). Die Anzahl der Somiten korreliert mit dem Entwicklungsalter des Embryos und wird bei der klinischen Beurteilung von Frühaborten genutzt.
+In der Morula bildet sich ein **flüssigkeitsgefüllter Hohlraum** aus (**Blastozoel**). Sobald dieser Hohlraum erkennbar ist und zwei zellulär unterschiedliche Bereiche vorliegen, spricht man von einer **Blastozyste** (Tag 5–6).
 
-> **Merke:** Notochord induziert Neuralplatte → Neuralrinne → Neuralrohr (ZNS); offener Neuroporus = Neuralrohrdefekt.
+**Strukturen der Blastozyste:**
+- **Trophoblast** (äußere Zellschicht): Umhüllt die Blastozyste. Er differenziert sich in **Zytotrophoblast** (innere Schicht, Stammzellen) und **Synzytiotrophoblast** (äußere, mehrkernige Schicht, die in die Gebärmutterschleimhaut eindringt). Der Trophoblast wird zur **Plazenta** und zu Anteilen der Eihüllen; er produziert **hCG** (humanes Choriongonadotropin).
+- **Embryoblast** (innere Zellmasse, ICM): Liegt im Inneren an einer Seite der Blastozyste. Aus ihm entwickelt sich der **Embryo**. Ab etwa Tag 8 differenziert sich der Embryoblast in **Epiblast** (obere Schicht; Quelle aller drei Keimblätter) und **Hypoblast** (untere Schicht; u. a. Dottersack).
+- **Blastozoel**: Der Hohlraum, der die typische Blastozystenform bedingt.
+
+> **Merke:** Blastozyste: **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum.
+
+![Blastozyste](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Querschnitt Blastozyste: Trophoblast außen, Embryoblast als innere Zellmasse, Blastozoel als Hohlraum. Trophoblast → Plazenta/hCG, Embryoblast → Embryo.
 
 ---
 
-## Klinischer Bezug
+## Implantation (Nidation)
 
-Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore oder anteriore Neuroporus nicht schließt. Folsäure-Supplementierung (0,4 mg/Tag präkonzeptionell) reduziert das Risiko um ca. 70 %, da Folat für die Zellteilung beim Neuralrohrschluss essenziell ist.
+Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Gebärmutterschleimhaut (Endometrium)**. Sie beginnt etwa am **Tag 6–7** nach der Befruchtung. Der **Synzytiotrophoblast** (Teil des Trophoblasten) dringt in das Endometrium ein und verankert die Blastozyste. Gleichzeitig beginnt der Trophoblast mit der Produktion von **hCG** (humanes Choriongonadotropin).
+
+**hCG** bindet an LH-Rezeptoren des **Corpus luteum** (Gelbkörper) im Ovar. Das Corpus luteum bleibt dadurch erhalten und produziert weiter **Progesteron** (und Östrogen). Progesteron hält die Gebärmutterschleimhaut in einem sekretorischen Zustand und **verhindert die Menstruation**. Ohne hCG würde das Corpus luteum gegen Ende des Zyklus absterben und die Menstruation würde einsetzen — der Keim würde abgestoßen. Die hCG-Konzentration steigt in der frühen Schwangerschaft stark an und ist im Urin nachweisbar (**Schwangerschaftstest**). Etwa ab der 8.–12. SSW übernimmt die Plazenta zunehmend die Progesteronproduktion; hCG fällt dann ab.
+
+> **Merke:** Implantation Tag 6–7. hCG (vom Trophoblast) erhält das Corpus luteum → Progesteron ↑ → keine Menstruation.
+
+![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** hCG bindet an LH-Rezeptoren und erhält das Corpus luteum; hormonelle Steuerung der Frühschwangerschaft.
+
+---
+
+## Typische Fehler/Fehlentwicklungen (BMS-Level)
+
+- **Eileiterschwangerschaft (Extrauteringravidität):** Die Blastozyste nistet sich außerhalb des Uterus ein (meist in der Tube). Das kann zur Eileiterruptur und lebensbedrohlicher Blutung führen. Der hCG-Verlauf und die Sonografie dienen der Diagnostik.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Prüfungsvorbereitung:**
 
-**Zentral prüfungsrelevant:** Keimblätter (Ektoderm: Haut, Nervensystem; Mesoderm: Muskulatur, Skelett, Herz, Niere; Entoderm: Darm, Leber, Lunge), Neurulation, Neuralrohr, Organanlage.
+**Zentral prüfungsrelevant:**
+- **Furchung** = Teilungen ohne Wachstum; **Morula** (Tag 3–4) = kompakter Zellhaufen; **Blastozyste** (Tag 5–6) = Hohlraum mit Trophoblast + Embryoblast
+- **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum
+- **Implantation** Tag 6–7: Synzytiotrophoblast invadiert Endometrium; hCG erhält Corpus luteum → Progesteron → keine Menstruation
+- Furchung **≠** Wachstum (Zellen werden kleiner, kein Gesamtwachstum)
 
-**Ergänzend vertiefend:** Neuralleiste; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:**
+- Embryoblast differenziert ab Tag 8 in Epiblast und Hypoblast (Grundlage für Gastrulation)
+- hCG im Urin/Serum: Nachweis ab ca. Tag 10–14; Schwangerschaftstest
 
-**Häufige Fragen:**
-- Aus welchem Keimblatt entstehen Gehirn und Rückenmark? (Ektoderm, via Neurulation)
-- Welche Organe sind Mesoderm-Derivate? (Muskel, Knochen, Herz, Niere, Gonaden)
-- Was induziert die Neuralplattenbildung? (Notochord via Sonic Hedgehog)
+**Häufige Prüfungsfragen:**
+- Was ist der Unterschied zwischen Morula und Blastozyste? → Morula = kompakter Zellhaufen (Tag 3–4); Blastozyste = Hohlraum (Blastozoel), Trophoblast + Embryoblast (Tag 5–6)
+- Welche Struktur der Blastozyste wird zur Plazenta und produziert hCG? → Trophoblast
+- Wann findet die Implantation statt? → Tag 6–7 nach Befruchtung
+- Welches Hormon erhält das Corpus luteum in der Frühschwangerschaft? → hCG
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darmepithel + Drüsen) — Epidermis ist NICHT Endoderm
-- Neuralleiste (Ektoderm-Derivat!) vs. Mesoderm — Melanozyten und Nebennierenmark stammen von der Neuralleiste
-- Primitivstreifen (Gastrulation, Keimblattbildung) vs. Neuralrinne (Neurulation, ZNS-Anlage)
-- Somiten: Dermatom (dermales Bindegewebe) vs. Epidermis (Ektoderm!) — Dermatom liefert NICHT die Oberhaut
-- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
+**Typische Prüfungsfallen:**
+- Morula (kompakt, Tag 3–4) vs. Blastozyste (Hohlraum, Tag 5–6)
+- Trophoblast (→ Plazenta, hCG) vs. Embryoblast (→ Embryo)
+- Furchung (Teilungen ohne Wachstum) vs. Wachstum (Zunahme der Gesamtmasse)
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Gastrulation: Tag 15–21 (3. Entwicklungswoche)
-- Anteriorer Neuroporus schließt: Tag 25; posteriorer: Tag 27
-- 42–44 Somitenpaare beim Menschen (Woche 3–5)
-- Folsäure (0,4 mg/Tag präkonzeptionell) senkt Neuralrohrdefekt-Risiko um ca. 70 %
-- Notochord → Nuclei pulposi der Bandscheiben (einziges bleibendes Derivat)
+**Prüfungsrelevante Zahlen:**
+- Implantation: Tag 6–7 post conceptionem
+- Blastozyste: Tag 5–6; Epiblast/Hypoblast ab Tag 8
+- hCG-Peak: 8.–12. SSW, danach Abfall
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Gastrulation** (3. Woche, Tag 15–21): Epiblastzellen wandern durch den **Primitivstreifen** ein → alle drei Keimblätter entstehen aus dem Epiblast
-- **Ektoderm** → Epidermis, ZNS (Neuralrohr), Sinnesorgane, Zahnschmelz
+- **Furchung**: Teilungen der Zygote/Blastomeren **ohne** Wachstum → Morula (Tag 3–4) → Blastozyste (Tag 5–6)
+- **Blastozyste**: **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum
+- **Implantation** (Tag 6–7): Synzytiotrophoblast dringt ins Endometrium ein; Trophoblast produziert **hCG**
+- **hCG** erhält Corpus luteum → Progesteron ↑ → Endometrium bleibt erhalten → keine Menstruation
+- Schwangerschaftstest weist hCG im Urin nach
+`,
+      lernziele: [
+        "Furchung (ohne Wachstum), Morula und Blastozyste mit Trophoblast/Embryoblast/Blastozoel beschreiben.",
+        "Implantation (Tag 6–7) und die Rolle von hCG für die Corpus-luteum-Erhaltung erläutern.",
+      ],
+      sections: [],
+      merksätze: [
+        "Furchung ≠ Wachstum. Morula (Tag 3–4) → Blastozyste (Tag 5–6). Trophoblast → Plazenta/hCG, Embryoblast → Embryo.",
+        "Implantation Tag 6–7; hCG erhält Corpus luteum → Progesteron ↑ → keine Menstruation.",
+      ],
+      klinischerBezug:
+        "Extrauteringravidität (v. a. Eileiter): Implantation außerhalb des Uterus; Risiko Tubarruptur, Blutung; Diagnostik u. a. hCG-Verlauf.",
+      altfrage: {
+        question:
+          "Welche Struktur der Blastozyste entwickelt sich zur Plazenta und produziert hCG?",
+        answer:
+          "Der Trophoblast (äußere Zellschicht der Blastozyste) entwickelt sich zur Plazenta und produziert hCG; der Embryoblast (innere Zellmasse) wird zum Embryo.",
+      },
+      selfTest: [
+        {
+          question: "Welche Aussage zu Furchung und Morula ist korrekt?",
+          options: [
+            "Bei der Furchung wächst der Keim stark, die Zellen bleiben gleich groß.",
+            "Die Morula ist ein Hohlraum mit Trophoblast und Embryoblast.",
+            "Furchung bedeutet wiederholte Teilungen ohne nennenswertes Wachstum; die Morula ist der kompakte Zellhaufen (Tag 3–4).",
+            "Die Blastozyste entsteht vor der Morula.",
+            "Aus der Morula entsteht direkt die Zygote.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Furchung = Teilungen ohne Wachstum (Zellen werden kleiner). Morula = kompakter Zellhaufen (Tag 3–4). Blastozyste = Stadium mit Hohlraum (Blastozoel), Trophoblast und Embryoblast (Tag 5–6).",
+          hints: ["Furchung: Teilungen, kein Wachstum.", "Morula = Maulbeere, kompakt."],
+          difficulty: 1,
+          tags: ["furchung", "morula"],
+        },
+        {
+          question: "Welche Struktur der Blastozyste produziert hCG und wird zur Plazenta?",
+          options: ["Embryoblast", "Hypoblast", "Trophoblast", "Epiblast", "Blastozoel"],
+          correctIndex: 2,
+          explanation:
+            "Der Trophoblast (äußere Schicht) produziert hCG und wird zur Plazenta. Der Embryoblast (innere Zellmasse) wird zum Embryo. Blastozoel ist nur der Hohlraum.",
+          hints: [
+            "Tropho- = ernährend → Plazenta.",
+            "hCG = Choriongonadotropin → Chorion/Trophoblast.",
+          ],
+          difficulty: 1,
+          tags: ["trophoblast", "hcg", "plazenta"],
+        },
+        {
+          question: "Wann findet die Implantation der Blastozyste im Endometrium statt?",
+          options: [
+            "Tag 1–2 nach Befruchtung",
+            "Tag 3–4 (Morula-Stadium)",
+            "Tag 6–7 nach Befruchtung",
+            "Tag 14 nach Befruchtung",
+            "Erst in der 4. SSW",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Implantation (Nidation) beginnt etwa am Tag 6–7 nach der Befruchtung. Zu diesem Zeitpunkt liegt die Blastozyste vor; der Synzytiotrophoblast dringt ins Endometrium ein.",
+          hints: ["Blastozyste Tag 5–6, Implantation kurz danach.", "Tag 6–7."],
+          difficulty: 1,
+          tags: ["implantation", "blastozyste"],
+        },
+      ],
+    },
+    {
+      id: "bio-4-02",
+      title: "Gastrulation und die drei Keimblätter",
+      stichworte: [
+        "Gastrulation",
+        "Ektoderm",
+        "Mesoderm",
+        "Endoderm",
+        "Primitivstreifen",
+        "Keimblätter",
+        "Notochord",
+        "Epiblast",
+      ],
+      content: `## Einleitung
+
+Nach der Implantation liegt eine zweischichtige **Keimscheibe** vor (Epiblast oben, Hypoblast unten). In der **dritten Entwicklungswoche** entstehen daraus die **drei Keimblätter** — **Ektoderm**, **Mesoderm** und **Endoderm**. Aus ihnen entwickeln sich später **alle Organe und Gewebe** des Körpers. Dieser Prozess heißt **Gastrulation**; er legt die Körperachsen fest und ist die Voraussetzung für Neurulation (Bildung des Neuralrohrs) und Organogenese. Für den MedAT sind Gastrulation, die Herkunft der drei Keimblätter aus dem Epiblast und die wichtigsten **Keimblattderivate** (welches Organ aus welchem Blatt?) zentral.
+
+**In diesem Kapitel lernst du:**
+- **Gastrulation** (3. Woche): Bildung der drei Keimblätter aus dem Epiblast über den **Primitivstreifen**
+- **Ektoderm, Mesoderm, Endoderm** — welche Gewebe und Organe aus welchem Keimblatt entstehen
+- **Notochord** (Chorda dorsalis) als Achsenstruktur und Induktor der Neurulation
+- **Somiten** als segmentierte Mesoderm-Derivate (Sklerotom, Myotom, Dermatom)
+- Warum alle drei Keimblätter letztlich **aus dem Epiblast** hervorgehen
+
+---
+
+## Voraussetzungen: Zweischichtige Keimscheibe
+
+**Bisher haben wir gesehen:** Blastozyste mit Trophoblast und Embryoblast; der Embryoblast differenziert sich in **Epiblast** (obere Schicht) und **Hypoblast** (untere Schicht). **Damit alle Organanlagen entstehen können,** muss aus diesen zwei Schichten eine **dreischichtige** Anordnung werden: die drei **Keimblätter** (Ektoderm, Mesoderm, Endoderm). Die Gastrulation ist der Schritt, in dem diese drei Blätter gebildet werden.
+
+---
+
+## Ablauf der Gastrulation
+
+Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–21) statt. Ausgangspunkt ist die zweischichtige Keimscheibe (Epiblast + Hypoblast).
+
+**Schritte (vereinfacht):**
+1. Am **kaudalen** (schwanzwärtigen) Ende der Keimscheibe bildet sich der **Primitivstreifen** — eine Verdickung von Epiblastzellen in der Mittellinie. Er legt die **Körperachsen** fest (kranial-kaudal, dorsal-ventral, links-rechts). Kranial (kopfwärts) davon liegt der **Primitivknoten** (Hensen-Knoten).
+2. **Epiblastzellen** wandern zum Primitivstreifen, dringen durch die **Primitivrinne** ein (**Invagination**) und wandern zwischen Epiblast und Hypoblast. Diese Zellen bilden das **Mesoderm** (mittleres Keimblatt).
+3. Ein Teil der eingewanderten Zellen **verdrängt den Hypoblast** und bildet das **definitive Endoderm** (inneres Keimblatt). Der ursprüngliche Hypoblast wird ersetzt.
+4. Die **auf der Oberfläche verbleibenden** Epiblastzellen werden zum **Ektoderm** (äußeres Keimblatt).
+
+**Wichtig:** Alle drei Keimblätter gehen aus dem **Epiblast** hervor — invaginierende Zellen werden zu Mesoderm und Endoderm, die nicht invaginierten Epiblastzellen zum Ektoderm.
+
+Aus dem **Primitivknoten** entsteht außerdem das **Notochord** (Chorda dorsalis): eine stäbchenförmige Struktur aus Mesoderm in der Mittellinie. Das Notochord ist ein **Induktor** für die nachfolgende **Neurulation** (Bildung der Neuralplatte/des Neuralrohrs) und wird später zu den **Nuclei pulposi** der Bandscheiben (einzige bleibende Struktur des Notochords).
+
+> **Merke:** Gastrulation = Bildung der drei Keimblätter aus dem Epiblast. Primitivstreifen → Einwanderung → Mesoderm + Endoderm; Oberfläche → Ektoderm. Notochord aus Primitivknoten induziert Neurulation.
+
+![Keimblätter und Entwicklung](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Aus Epiblast/Hypoblast entstehen durch Gastrulation Ektoderm, Mesoderm und Endoderm.
+
+**SVG-Hinweis:** Zeitachse Embryonalentwicklung (Furchung → Blastozyste → Gastrulation → Neurulation); Keimblätter und ihre Derivate (Tabelle als Grafik).
+
+---
+
+## Die drei Keimblätter und ihre Derivate
+
+Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgende Tabelle fasst die wichtigsten **Derivate** (Abkömmlinge) zusammen.
+
+| Keimblatt | Wichtige Derivate |
+|-----------|------------------|
+| **Ektoderm** | **Epidermis** (Oberhaut), **ZNS** (Gehirn, Rückenmark über Neuralrohr), **PNS**, Sinnesorgane, Zahnschmelz, Teile der Mundhöhle |
+| **Mesoderm** | Skelett, **Muskulatur**, **Herz**, **Nieren**, Gonaden, Bindegewebe, **Blut**, Gefäße, Dermis-Vorläufer (Somiten → Dermatom) |
+| **Endoderm** | **Darmepithel**, **Lunge** (Epithel), **Leber**, **Pankreas**, **Schilddrüse**, Blase (Epithel), Teile der Atemwege |
+
+**Häufige Verwechslung:** Die **Epidermis** (Oberhaut) stammt vom **Ektoderm**, nicht vom Endoderm. Das **dermale Bindegewebe** (Lederhaut) stammt vom Mesoderm (Dermatom der Somiten).
+
+> **Merke:** Ektoderm = Haut (Epidermis) + Nervensystem; Mesoderm = Muskel + Knochen + Herz + Niere + Blut; Endoderm = Darm + Lunge + Leber + Drüsen.
+
+---
+
+## Somiten — segmentierte Mesoderm-Derivate
+
+**Somiten** sind paarige, segmentierte Abkömmlinge des Mesoderms, die beidseits des Neuralrohrs und des Notochords entstehen (3.–5. Woche, beim Menschen etwa 42–44 Paare). Jeder Somit gliedert sich in drei Bereiche:
+
+- **Sklerotom** (ventral): Liefert Zellen für **Wirbelkörper**, Rippen und Teile des Schädels (Chondrozyten, Osteoblasten).
+- **Myotom** (mittig): Liefert die **Skelettmuskulatur** des Rumpfes und der Gliedmaßen.
+- **Dermatom** (dorsal): Liefert das **dermale Bindegewebe** der Haut (Unterhaut, Bindegewebe) — **nicht** die Epidermis; die Epidermis kommt vom Ektoderm.
+
+> **Merke:** Somiten: Sklerotom → Knochen; Myotom → Skelettmuskel; Dermatom → dermales Bindegewebe (nicht Epidermis!).
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung:**
+
+**Zentral prüfungsrelevant:**
+- **Gastrulation** = Bildung der drei Keimblätter (Ektoderm, Mesoderm, Endoderm) in der 3. Woche (Tag 15–21)
+- Alle drei Keimblätter entstehen **aus dem Epiblast** (Primitivstreifen: Einwanderung → Meso + Entoderm; Oberfläche → Ektoderm)
+- **Ektoderm** → Epidermis, ZNS (Neuralrohr), PNS, Sinnesorgane, Zahnschmelz
 - **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
 - **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase
-- **Notochord** (aus Primitiv-Knoten) induziert Neuralplatte → **Neurulation**: Neuralrinne → Neuralrohr (= ZNS)
-- Anteriorer Neuroporus schließt Tag 25, posteriorer Tag 27 — offen = Neuralrohrdefekt (Anenzephalie / Spina bifida)
-- **Neuralleiste** (Ektoderm-Derivat): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kieferknochen
-- **Somiten**: Sklerotom (Knochen), Myotom (Skelettmuskel), Dermatom (dermales Bindegewebe)
-- Folsäure (0,4 mg/Tag präkonzeptionell) senkt Neuralrohrdefektrisiko um ~70 %
+- **Notochord** (aus Primitivknoten) → Induktor der Neurulation; später Nuclei pulposi der Bandscheiben
+- **Somiten**: Sklerotom (Knochen), Myotom (Muskel), Dermatom (dermales Bindegewebe)
+
+**Ergänzend vertiefend:**
+- Primitivknoten/Hensen-Knoten: Organisationszentrum; Links-Rechts-Asymmetrie (z. B. nodal flow)
+- Epidermis = Ektoderm; Dermis-Vorläufer = Mesoderm (Dermatom)
+
+**Häufige Prüfungsfragen:**
+- In welcher Woche findet die Gastrulation statt? → 3. Entwicklungswoche (Tag 15–21)
+- Aus welchem Keimblatt entstehen Gehirn und Rückenmark? → Ektoderm (über Neurulation/Neuralrohr)
+- Welche Organe sind Mesoderm-Derivate? → Muskel, Knochen, Herz, Niere, Gonaden, Blut
+- Was induziert die Neuralplatte? → Notochord
+- Was liefert das Dermatom? → Dermales Bindegewebe (nicht die Epidermis)
+
+**Typische Prüfungsfallen:**
+- Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darm, Lunge, Drüsen) — Epidermis ist **nicht** Endoderm
+- Dermatom (Mesoderm) liefert **nicht** die Epidermis (Ektoderm), sondern dermales Bindegewebe
+- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) — unterschiedliche Prozesse
+- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
+
+**Prüfungsrelevante Zahlen:**
+- Gastrulation: Tag 15–21 (3. Woche)
+- 42–44 Somitenpaare (3.–5. Woche)
+- Notochord → Nuclei pulposi (einzige bleibende Struktur)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Gastrulation** (3. Woche): Epiblastzellen wandern durch **Primitivstreifen** ein → **Mesoderm** + **Endoderm**; Oberfläche → **Ektoderm** (alle drei aus Epiblast)
+- **Ektoderm** → Epidermis, ZNS, PNS, Sinnesorgane, Zahnschmelz
+- **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
+- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase
+- **Notochord** (aus Primitivknoten) induziert Neurulation; Rest → Nuclei pulposi
+- **Somiten**: Sklerotom (Knochen), Myotom (Muskel), Dermatom (dermales Bindegewebe, nicht Epidermis)
 `,
       lernziele: [
         "Den Ablauf der Gastrulation (Primitivstreifen, drei Keimblätter) und die Herkunft jedes Keimblattes aus dem Epiblast erklären.",
         "Die wichtigsten Derivate von Ektoderm, Mesoderm und Endoderm aufzählen und korrekt zuordnen.",
-        "Die Neurulation (Neuralplatte → Neuralrohr → ZNS) und die Entstehung der Neuralleiste beschreiben.",
       ],
       sections: [],
       merksätze: [
         "Gastrulation (Woche 3): Alle drei Keimblätter entstehen aus dem Epiblast via Primitivstreifen.",
         "Ektoderm = Haut + Nervensystem; Mesoderm = Muskel + Knochen + Herz + Niere; Endoderm = Darm + Lunge + Drüsen.",
-        "Das Notochord induziert die Neuralplatte — Neuralrohrschluss: anterior Tag 25, posterior Tag 27.",
-        "Neuralleistenzellen stammen vom Ektoderm und bilden u. a. Melanozyten, Ganglien und Nebennierenmark.",
-        "Folsäure (0,4 mg/Tag präkonzeptionell) senkt das Risiko für Neuralrohrdefekte um ca. 70 %.",
       ],
-      klinischerBezug:
-        "Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore oder anteriore Neuroporus nicht schließt. Folsäure-Supplementierung (0,4 mg/Tag präkonzeptionell) reduziert das Risiko um ca. 70 %, da Folat für die Zellteilung beim Neuralrohrschluss essenziell ist.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Aus welchem Keimblatt entstehen Gehirn und Rückenmark, und durch welchen embryonalen Prozess?",
+        question: "Aus welchem Keimblatt entstehen Skelett, Muskulatur, Herz und Nieren?",
         answer:
-          "Gehirn und Rückenmark entstehen aus dem Ektoderm durch die Neurulation: Das Notochord (Mesoderm) induziert die Bildung der Neuralplatte (Ektoderm), die sich zur Neuralrinne einfaltet und zum Neuralrohr schließt, aus dem ZNS und PNS hervorgehen.",
+          "Aus dem Mesoderm (mittleres Keimblatt). Es entstehen u. a. Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe und Blut.",
       },
       selfTest: [
         {
@@ -477,8 +723,179 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
       ],
     },
     {
+      id: "bio-4-02n",
+      title: "Neurulation und Neuralleiste",
+      stichworte: [
+        "Neurulation",
+        "Neuralrohr",
+        "Neuralplatte",
+        "Neuralleiste",
+        "Neuroporus",
+        "Spina bifida",
+        "Anenzephalie",
+        "Folsäure",
+      ],
+      content: `## Einleitung
+
+Aus dem **Ektoderm** entstehen nicht nur die Epidermis, sondern auch **Gehirn und Rückenmark**. Dafür sorgt die **Neurulation**: Das **Notochord** (Mesoderm) induziert im darüber liegenden Ektoderm die Bildung der **Neuralplatte**, die sich zur **Neuralrinne** einfaltet und zum **Neuralrohr** schließt. Aus dem Neuralrohr gehen **ZNS** (Zentralnervensystem) und zentrale Anteile des **PNS** hervor. Zellen am Rand der Neuralplatte wandern aus und bilden die **Neuralleiste** — aus ihr entstehen u. a. Ganglien, Melanozyten und Nebennierenmark. Schließt das Neuralrohr nicht vollständig (offener **Neuroporus**), entstehen **Neuralrohrdefekte** (z. B. Spina bifida, Anenzephalie). **Folsäure** (0,4 mg/Tag vor und in der Frühschwangerschaft) senkt das Risiko deutlich. Für den MedAT sind Neurulation, Neuralrohr, Neuralleiste-Derivate und Neuralrohrdefekte zentral.
+
+**In diesem Kapitel lernst du:**
+- **Neurulation**: Notochord induziert Neuralplatte → Neuralrinne → **Neuralrohr** (Vorläufer von Gehirn und Rückenmark)
+- **Neuroporen** (vorderer/hinterer): Schließung Tag 25 (anterior) und Tag 27 (posterior); offen = Neuralrohrdefekt
+- **Neuralleiste** (Ektoderm-Abkömmling): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfmesenchyms
+- **Neuralrohrdefekte**: Spina bifida (kaudal), Anenzephalie (kranial); **Folsäure** senkt das Risiko (~70 %)
+
+---
+
+## Voraussetzung: Notochord
+
+**Bisher haben wir gesehen:** Gastrulation liefert die drei Keimblätter; das **Notochord** (Chorda dorsalis) entsteht aus dem Primitivknoten. **Damit sich das Nervensystem anlegt,** induziert das Notochord das darüber liegende **Ektoderm**: Es sendet Signale aus (u. a. Sonic Hedgehog), die die Zellen zur Verdickung und Faltung anregen. Ohne Notochord findet keine normale Neurulation statt.
+
+---
+
+## Ablauf der Neurulation
+
+1. **Neuralplatte:** Das Ektoderm über dem Notochord verdickt sich zur **Neuralplatte** (eine bandförmige Struktur in der Mittellinie).
+
+2. **Neuralrinne und Neuralwülste:** Die Ränder der Neuralplatte heben sich als **Neuralwülste** an; die Mitte senkt sich zur **Neuralrinne** ein.
+
+3. **Neuralrohr:** Die Neuralwülste fusionieren in der Mittellinie — zunächst in der Mitte, dann nach kranial und kaudal fortschreitend. Es entsteht das **Neuralrohr** (ein schlauchförmiger Hohlraum). Das Neuralrohr ist die **Anlage von Gehirn und Rückenmark** (ZNS). Die Schließung erfolgt durch Verschmelzung der Wülste; die vorübergehend offenen Enden heißen **vorderer (anteriore) Neuroporus** (kranial) und **hinterer (posteriorer) Neuroporus** (kaudal).
+
+4. **Schließung der Neuroporen:** Der **anteriore Neuroporus** schließt etwa am **Tag 25**, der **posteriore Neuroporus** am **Tag 27**. Bleibt einer der Neuroporen offen, entsteht ein **Neuralrohrdefekt** (siehe unten).
+
+> **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
+
+![Neuralrohr und Achsen](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Notochord und Achsenstrukturen; Neurulation und Somiten im Kontext der Embryonalentwicklung.
+
+**SVG-Hinweis:** Schema „Neurulation“: Neuralplatte → Neuralrinne → Neuralrohr; Neuroporen kranial/kaudal.
+
+---
+
+## Neuralleiste — Herkunft und Derivate
+
+Während sich das Neuralrohr schließt, lösen sich Zellen vom Rand der Neuralplatte (dem Übergang zwischen Neuralplatte und übrigem Ektoderm) und **wandern** aus. Diese Zellen bilden die **Neuralleiste**. Sie stammen vom **Ektoderm**, nicht vom Mesoderm (typische Prüfungsfalle).
+
+**Wichtige Derivate der Neuralleiste:**
+- **Periphere Nerven:** sensorische und autonome **Ganglien** (Nervenzellansammlungen außerhalb von Gehirn und Rückenmark), **Schwann-Zellen** (Umhüllung der Axone im peripheren Nerven)
+- **Melanozyten** (Pigmentzellen der Haut)
+- **Nebennierenmark** (Chromaffin-Zellen; Produktion von Adrenalin/Noradrenalin)
+- Teile des **Kopfmesenchyms** (z. B. Kieferknorpel und -knochen, Bindegewebe des Gesichts)
+
+> **Merke:** Neuralleiste = Ektoderm-Derivat. Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfes.
+
+---
+
+## Neuralrohrdefekte (BMS-Level)
+
+Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida** („offener Rücken“) kommen — eine Fehlbildung im Bereich der Wirbelsäule mit unterschiedlichem Schweregrad. Wenn der **anteriore Neuroporus** offen bleibt, kann **Anenzephalie** (Fehlen von Großhirnanteilen, nicht überlebensfähig) entstehen. **Folsäure** (Folat, Vitamin B9) ist für die Zellteilung und den Neuralrohrschluss essenziell. Eine **Folsäure-Supplementierung** von **0,4 mg/Tag** (idealerweise **präkonzeptionell**, also vor der Schwangerschaft, und in der Frühschwangerschaft) reduziert das Risiko für Neuralrohrdefekte um etwa **70 %**. Da der Neuralrohrschluss sehr früh erfolgt (3.–4. Woche), ist die Einnahme vor und zu Beginn der Schwangerschaft entscheidend.
+
+> **Merke:** Offener Neuroporus → Neuralrohrdefekt. Folsäure 0,4 mg/Tag präkonzeptionell und früh in der SS senkt das Risiko um ~70 %.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung:**
+
+**Zentral prüfungsrelevant:**
+- **Neurulation** = Bildung des Neuralrohrs aus dem Ektoderm; **Notochord** induziert die Neuralplatte
+- **Neuralrohr** = Vorläufer von Gehirn und Rückenmark (ZNS)
+- **Anteriorer Neuroporus** schließt Tag 25, **posteriorer** Tag 27; offen = Neuralrohrdefekt
+- **Neuralleiste** (Ektoderm-Derivat): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kiefer-/Kopfmesenchym
+- **Neuralrohrdefekte:** Spina bifida (kaudal), Anenzephalie (kranial); **Folsäure** 0,4 mg/Tag präkonzeptionell senkt Risiko ~70 %
+
+**Ergänzend vertiefend:**
+- Neuralplatte → Neuralrinne → Fusion der Neuralwülste → Neuralrohr
+- Neuralleiste ≠ Mesoderm (stammt vom Ektoderm)
+
+**Häufige Prüfungsfragen:**
+- Aus welchem Keimblatt entstehen Gehirn und Rückenmark? → Ektoderm (über Neurulation/Neuralrohr)
+- Was induziert die Neuralplatte? → Notochord (Mesoderm)
+- Wann schließen die Neuroporen? → Anterior Tag 25, posterior Tag 27
+- Aus welcher Struktur stammen Melanozyten und Nebennierenmark? → Neuralleiste (Ektoderm-Derivat)
+- Wie lässt sich das Risiko für Neuralrohrdefekte senken? → Folsäure 0,4 mg/Tag präkonzeptionell/frühe SS
+
+**Typische Prüfungsfallen:**
+- Neuralleiste (Ektoderm!) vs. Mesoderm — Melanozyten und Nebennierenmark kommen von der Neuralleiste
+- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation)
+- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
+
+**Prüfungsrelevante Zahlen:**
+- Anteriorer Neuroporus: Tag 25; posteriorer: Tag 27
+- Folsäure 0,4 mg/Tag präkonzeptionell: Risikosenkung Neuralrohrdefekt ~70 %
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Neurulation**: Notochord induziert **Neuralplatte** (Ektoderm) → **Neuralrinne** → **Neuralrohr** (= Anlage Gehirn + Rückenmark)
+- **Neuroporen**: anterior Tag 25, posterior Tag 27; offen = Neuralrohrdefekt (Spina bifida, Anenzephalie)
+- **Neuralleiste** (Ektoderm): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfes
+- **Folsäure** 0,4 mg/Tag präkonzeptionell/frühe SS senkt Neuralrohrdefekt-Risiko um ~70 %
+`,
+      lernziele: [
+        "Die Neurulation (Neuralplatte → Neuralrohr) und die Rolle des Notochords beschreiben.",
+        "Neuralleiste als Ektoderm-Derivat und ihre wichtigsten Derivate (Melanozyten, Ganglien, Nebennierenmark) nennen.",
+        "Neuralrohrdefekte (Spina bifida, Anenzephalie) und die Bedeutung der Folsäure-Supplementierung erklären.",
+      ],
+      sections: [],
+      merksätze: [
+        "Neurulation: Notochord induziert Neuralplatte → Neuralrinne → Neuralrohr (ZNS). Neuroporen: anterior Tag 25, posterior Tag 27.",
+        "Neuralleiste = Ektoderm-Derivat: Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark.",
+        "Folsäure 0,4 mg/Tag präkonzeptionell senkt Neuralrohrdefekt-Risiko um ~70 %.",
+      ],
+      klinischerBezug:
+        "Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen bei offenem Neuroporus. Folsäure 0,4 mg/Tag präkonzeptionell und in der Frühschwangerschaft reduziert das Risiko um ca. 70 %.",
+      altfrage: {
+        question:
+          "Aus welchem Keimblatt entstehen Gehirn und Rückenmark, und durch welchen Prozess?",
+        answer:
+          "Aus dem Ektoderm durch die Neurulation: Das Notochord induziert die Neuralplatte, die sich zur Neuralrinne einfaltet und zum Neuralrohr schließt; aus dem Neuralrohr gehen Gehirn und Rückenmark (ZNS) hervor.",
+      },
+      selfTest: [
+        {
+          question: "Welche Struktur induziert die Bildung der Neuralplatte?",
+          options: ["Trophoblast", "Endoderm", "Notochord", "Neuralleiste", "Somiten"],
+          correctIndex: 2,
+          explanation:
+            "Das Notochord (Mesoderm, aus Primitivknoten) induziert im darüber liegenden Ektoderm die Bildung der Neuralplatte, aus der Neuralrinne und Neuralrohr entstehen.",
+          hints: ["Achsenstruktur in der Mittellinie.", "Mesoderm-Derivat."],
+          difficulty: 1,
+          tags: ["notochord", "neurulation"],
+        },
+        {
+          question: "Wann schließt der posteriore Neuroporus?",
+          options: ["Tag 21", "Tag 25", "Tag 27", "Tag 30", "Woche 5"],
+          correctIndex: 2,
+          explanation:
+            "Der posteriore (hintere) Neuroporus schließt am Tag 27, der anteriore (vordere) am Tag 25. Ein offener Neuroporus führt zu Neuralrohrdefekten (Spina bifida kaudal, Anenzephalie kranial).",
+          hints: ["Posterior = kaudal.", "Tag 27."],
+          difficulty: 1,
+          tags: ["neuroporus", "neurulation"],
+        },
+        {
+          question: "Aus welcher embryonalen Struktur stammen Melanozyten und Nebennierenmark?",
+          options: [
+            "Mesoderm",
+            "Endoderm",
+            "Neuralleiste (Ektoderm-Derivat)",
+            "Trophoblast",
+            "Somiten",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Neuralleiste geht aus dem Ektoderm hervor (Zellen am Rand der Neuralplatte). Aus ihr entstehen u. a. Melanozyten, sensorische und autonome Ganglien, Schwann-Zellen, Nebennierenmark und Teile des Kopfmesenchyms.",
+          hints: ["Neuralleiste = Ektoderm, nicht Mesoderm.", "Pigmentzellen, Nebennierenmark."],
+          difficulty: 1,
+          tags: ["neuralleiste", "melanozyten", "nebennierenmark"],
+        },
+      ],
+    },
+    {
       id: "bio-4-03",
-      title: "Embryonal- und Fetalentwicklung",
+      title: "Organogenese, Embryo vs. Fetus und kritische Phasen",
       stichworte: [
         "Embryonalperiode",
         "Organogenese",
@@ -489,15 +906,14 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
       ],
       content: `## Einleitung
 
-In den ersten **8 Wochen** (Embryonalperiode) werden alle Organe angelegt; danach (Fetalperiode) wachsen und reifen sie. In der Embryonalperiode können **Teratogene** (z. B. Medikamente, Viren) zu Fehlbildungen führen. Für den MedAT sind Embryonal- vs. Fetalperiode, Teratogene, kritisches Zeitfenster und Lungenreife prüfungsrelevant.
+Nach Gastrulation und Neurulation liegen die drei Keimblätter und die Anlage des Neuralrohrs vor. In den folgenden Wochen entstehen daraus **alle Organe** — dieser Prozess heißt **Organogenese**. Die ersten **8 Wochen** nach der Befruchtung werden als **Embryonalperiode** bezeichnet; in ihr werden alle Organsysteme **angelegt**. Ab **Woche 9** spricht man von der **Fetalperiode**: Der **Fetus** (Fötus) wächst und reift, es werden keine neuen Organe mehr gebildet. In der Embryonalperiode ist der Keim besonders empfindlich gegenüber **Teratogenen** (Stoffe oder Einflüsse, die Fehlbildungen verursachen können). Für den MedAT sind die Abgrenzung Embryo vs. Fetus, das **Alles-oder-Nichts-Prinzip** (nur Woche 1–2), **kritische Perioden** und die **Lungenreife** (Surfactant) zentral.
 
 **In diesem Kapitel lernst du:**
-- **Embryonalperiode** (Wochen 1–8): Organogenese; **Fetalperiode** (ab Woche 9): Wachstum
-- **Teratogene** und **kritische Perioden** (organspezifische Schädigung)
-- **Alles-oder-Nichts-Prinzip** (Woche 1–2)
-- **Lungenreife**, Surfactant, RDS bei Frühgeborenen
-
-**Kontext:** Warum der erste Trimenon so empfindlich ist und was Frühgeburtlichkeit bedeutet.
+- **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; **Fetalperiode** (ab Woche 9): Wachstum und Reifung
+- **Embryo vs. Fetus**: zeitliche Abgrenzung (Ende 8. Woche) und Bedeutung
+- **Teratogene** und **kritische Perioden** (organspezifische Empfindlichkeit)
+- **Alles-oder-Nichts-Prinzip** (nur Woche 1–2: Fruchttod oder unauffällige Entwicklung)
+- **Lungenreife**: Surfactant ab Woche 24, Bedeutung bei Frühgeborenen (RDS)
 
 ![Embryonalentwicklung und Organanlage](/grafik-blastozyste.svg)
 
@@ -511,13 +927,15 @@ In den ersten **8 Wochen** (Embryonalperiode) werden alle Organe angelegt; danac
 
 ## Embryonalperiode (Wochen 1–8)
 
-Die **Embryonalperiode** umfasst die ersten 8 Wochen nach der Befruchtung. In dieser Zeit findet die **Organogenese** (Organanlage) statt: Aus den drei Keimblättern entstehen alle primären Organanlagen. Die Entwicklung schreitet cephalo-caudal (vom Kopf zum Schwanz) und proximo-distal (von der Körpermitte zu den Extremitäten) fort. In Woche 3 bilden sich Neuralrohr und Herzschlauch; in Woche 4 beginnt das Herz zu schlagen (der erste funktionelle Schlag erfolgt um Tag 22–23). In Woche 4–8 entstehen Gliedmaßenleisten (Arm- und Beinleisten), Augenlinsengruben, Ohrgrübchen und Gesichtsgaumen. Am Ende der Woche 8 sind alle wesentlichen Organsysteme angelegt, wenn auch noch nicht ausgereift. Das Embryo ist ca. 3 cm groß (SSL – Scheitel-Steiß-Länge). Während dieser Periode ist der Embryo besonders **vulnerabel** gegenüber teratogenen Noxen.
+**Bisher haben wir gesehen:** Gastrulation und Neurulation legen Keimblätter und Neuralrohr fest. **In der Embryonalperiode** entstehen daraus alle Organanlagen.
+
+Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. In dieser Zeit findet die **Organogenese** (Organanlage) statt: Aus den drei Keimblättern (Ektoderm, Mesoderm, Endoderm) entstehen alle primären Organanlagen. Die Entwicklung schreitet cephalo-caudal (vom Kopf zum Schwanz) und proximo-distal (von der Körpermitte zu den Extremitäten) fort. In Woche 3 bilden sich Neuralrohr und Herzschlauch; in Woche 4 beginnt das Herz zu schlagen (der erste funktionelle Schlag erfolgt um Tag 22–23). In Woche 4–8 entstehen Gliedmaßenleisten (Arm- und Beinleisten), Augenlinsengruben, Ohrgrübchen und Gesichtsgaumen. Am Ende der Woche 8 sind alle wesentlichen Organsysteme angelegt, wenn auch noch nicht ausgereift. Das Embryo ist ca. 3 cm groß; die **SSL** (Scheitel-Steiß-Länge, Längenmaß vom Kopf bis zum Gesäß) beträgt am Ende der 8. Woche etwa 3 cm. Während dieser Periode ist der Embryo besonders **vulnerabel** gegenüber teratogenen Noxen.
 
 ---
 
 ## Organogenese in der Embryonalperiode
 
-Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und **das Herz beginnt bereits in Woche 4 (Tag 22–23) zu schlagen** — **nicht** erst am Ende der 8. Woche (typische Falschaussage in MC-Fragen!). Die **4.–8. Woche** ist die **kritische Phase**: der Embryo ist gegenüber Teratogenen besonders anfällig. **Aus Ektoderm, Mesoderm und Entoderm entwickeln sich alle Organe** des Embryos. Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten **Amnionhöhle**. Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
+Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und **das Herz beginnt bereits in Woche 4 (Tag 22–23) zu schlagen** — **nicht** erst am Ende der 8. Woche (typische Falschaussage in MC-Fragen!). Die **4.–8. Woche** ist die **kritische Phase**: der Embryo ist gegenüber Teratogenen besonders anfällig. **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe** des Embryos. Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten **Amnionhöhle**. Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
 
 > **Merke:** Embryonalperiode (Wochen 1–8) = Organogenese; Fetalperiode (ab Woche 9) = Wachstum und Reifung.
 
@@ -533,7 +951,7 @@ Teratogene können physikalischer (ionisierende Strahlung), chemischer (Thalidom
 
 ## Fetalperiode: Wachstum und Reifung
 
-In der Fetalperiode (Woche 9–40) nimmt das Gewicht exponentiell zu: von ca. 10 g (Woche 12) auf ca. 3.400 g (Woche 40). Wichtige klinische Meilensteine: Die Viabilität (außerhalb des Mutterleibs überlebensfähig) wird ab ca. Woche 22–24 angesetzt, wobei intensivmedizinische Betreuung nötig ist. Ab Woche 24 produzieren Typ-II-Pneumozyten Surfactant (Dipalmitoylphosphatidylcholin), das die Alveolen bei Ausatmung offen hält. Fehlt Surfactant (Frühgeburt), kollabieren die Alveolen → Atemnotsyndrom (Respiratory Distress Syndrome, RDS). Kortikosteroide (Betamethason i.m.) werden bei drohender Frühgeburt <34 SSW verabreicht, um die Surfactant-Produktion zu beschleunigen.
+In der Fetalperiode (Woche 9–40) nimmt das Gewicht exponentiell zu: von ca. 10 g (Woche 12) auf ca. 3.400 g (Woche 40). Wichtige klinische Meilensteine: Die Viabilität (außerhalb des Mutterleibs überlebensfähig) wird ab ca. Woche 22–24 angesetzt, wobei intensivmedizinische Betreuung nötig ist. Ab Woche 24 produzieren **Typ-II-Pneumozyten** (Zellen der Lungenbläschen) **Surfactant** (u. a. Dipalmitoylphosphatidylcholin) — eine oberflächenaktive Substanz, die die **Alveolen** (Lungenbläschen) bei der Ausatmung offen hält. Fehlt Surfactant (Frühgeburt), kollabieren die Alveolen → Atemnotsyndrom (Respiratory Distress Syndrome, RDS). Kortikosteroide (Betamethason i.m.) werden bei drohender Frühgeburt <34 SSW verabreicht, um die Surfactant-Produktion zu beschleunigen.
 
 > **Merke:** Lungenreife / Surfactant: ab Woche 24; Frühgeburt <28 SSW → Atemnotsyndrom (RDS).
 
@@ -549,7 +967,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), **kritische Phase 4.–8. Woche** (besonders anfällig für Teratogene). **Aus Ektoderm, Mesoderm und Entoderm entwickeln sich alle Organe.** Embryo in **Amnionhöhle** (Fruchtwasser). **Herz schlägt ab Woche 4** (Tag 22–23), Finger/Zehen Ende 8. Woche. Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene, Organogenese.
+**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), **kritische Phase 4.–8. Woche** (besonders anfällig für Teratogene). **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe.** Embryo in **Amnionhöhle** (Fruchtwasser). **Herz schlägt ab Woche 4** (Tag 22–23), Finger/Zehen Ende 8. Woche. Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene, Organogenese.
 
 **Ergänzend vertiefend:** Plazenta; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
@@ -695,7 +1113,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
     },
     {
       id: "bio-4-04",
-      title: "Plazenta, Eihäute und Plazentaschranke",
+      title: "Embryonalhüllen und Plazenta",
       stichworte: [
         "Plazenta",
         "Amnion",
@@ -707,15 +1125,20 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       content: `## Einleitung
 
-Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — die **Plazenta** übernimmt das: Sie verbindet das Kind mit dem mütterlichen Kreislauf (Nabelschnur) und ist Lunge, Darm, Niere und Hormondrüse in einem. Wichtig: Das Blut von Mutter und Kind **mischt sich nicht**; der Austausch läuft über die **Plazentaschranke**. Für den MedAT sind Aufbau (fetal/maternal), Plazentaschranke und was durchtritt prüfungsrelevant.
+Der Embryo und später der Fetus werden von **Embryonalhüllen** (Eihäuten) umgeben und über die **Plazenta** (Mutterkuchen) mit der Mutter verbunden. Die **Plazenta** ist ein temporäres Organ: Sie ermöglicht den Austausch von Sauerstoff, Nährstoffen und Abfallprodukten zwischen mütterlichem und kindlichem Kreislauf, ohne dass das Blut beider direkt zusammenfließt — der Kontakt erfolgt über die **Plazentaschranke**. Außerdem produziert die Plazenta Hormone (z. B. hCG, Progesteron). Die **Nabelschnur** verbindet den Fetus mit der Plazenta (2 Arterien, 1 Vene). Für den MedAT sind Aufbau der Plazenta (fetaler vs. mütterlicher Anteil), Plazentaschranke (was durchtritt, was nicht) und Nabelschnur (AVA) zentral.
 
 **In diesem Kapitel lernst du:**
-- **Aufbau** der Plazenta (Chorionzotten, Decidua, intervillöse Räume)
-- **Plazentaschranke** — was passiert (O₂, Nährstoffe, IgG) und was nicht (Blut, viele Erreger)
-- **Nabelschnur** (2 Arterien, 1 Vene) und **Plazentahormone**
-- Klinik: Plazentainsuffizienz, Infektionen (TORCH)
+- **Aufbau** der Plazenta: fetaler Anteil (Chorionzotten) und mütterlicher Anteil (Decidua); **intervillöse Räume**
+- **Plazentaschranke**: Austausch von O₂, Nährstoffen, Abfall; **IgG** passiert (Transzytose), Blut mischt sich nicht
+- **Nabelschnur**: 2 Arterien (O₂-arm vom Kind), 1 Vene (O₂-reich zum Kind) — Merkhilfe **AVA**
+- **Eihäute**: Amnion (innen, Fruchtwasser), Chorion (außen)
+- Plazentahormone: hCG (Frühschwangerschaft), Progesteron
 
-**Kontext:** Warum der Fötus geschützt ist und wie der Stoffaustausch funktioniert.
+---
+
+## Voraussetzungen: Trophoblast und Eihüllen
+
+**Bisher haben wir gesehen:** Der Trophoblast der Blastozyste wird zur Plazenta und zu Anteilen der Eihüllen; der Embryo liegt in der **Amnionhöhle** (von Fruchtwasser umgeben). **Damit der Fetus versorgt wird,** bilden sich die **Plazenta** und die **Eihäute** (Amnion, Chorion) aus.
 
 ![Membrantransport und Plazentaschranke](/grafik-1-membrantransport.svg)
 
@@ -729,7 +1152,12 @@ Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — die **Pla
 
 ## Aufbau der Plazenta
 
-Die **Plazenta** ist ein temporäres Organ, das den Fötus mit der Mutter verbindet und aus zwei Anteilen besteht: dem **fetalen Anteil** (Chorion frondosum, bestehend aus **Chorionzotten** des Trophoblasten) und dem **mütterlichen Anteil** (Decidua basalis, umgebautes Endometrium). Chorionzotten tauchen in **intervillöse Räume** (Blutseen) ein, die mit mütterlichem Blut gefüllt sind. Fetales und mütterliches Blut **mischen sich nicht direkt**; der Austausch erfolgt durch Diffusion und aktiven Transport. Die voll entwickelte Plazenta (ab Woche 12–16) ist scheibenförmig, ca. 500 g schwer und 20 cm im Durchmesser. Die Decidua ist das transformierte Endometrium und gliedert sich in Decidua basalis (unter der Plazenta, mütterlicher Plazenta-Anteil), Decidua capsularis (über dem Embryo) und Decidua parietalis (restliches Endometrium).
+Die **Plazenta** ist ein temporäres Organ, das den Fetus mit der Mutter verbindet und aus **zwei Anteilen** besteht:
+
+- **Fetaler Anteil:** Das **Chorion frondosum** — bestehend aus **Chorionzotten** (fingerartige Ausstülpungen des Trophoblasten, die in die mütterliche Seite ragen). Die Chorionzotten sind von fetalem Bindegewebe und Gefäßen durchzogen.
+- **Mütterlicher Anteil:** Die **Decidua basalis** — das umgebaute **Endometrium** (Gebärmutterschleimhaut) unter der Plazenta. Die Decidua ist die während der Schwangerschaft umgewandelte Schleimhaut.
+
+Die Chorionzotten ragen in **intervillöse Räume** ein — das sind mit **mütterlichem Blut** gefüllte Hohlräume. Das Blut von Mutter und Kind **mischt sich nicht**; der Austausch (Sauerstoff, Nährstoffe, Kohlendioxid, Abfallprodukte) erfolgt über die Zellschichten der **Plazentaschranke** (u. a. Synzytiotrophoblast) durch Diffusion und aktiven Transport. Die voll entwickelte Plazenta (ab Woche 12–16) ist scheibenförmig, ca. 500 g schwer und 20 cm im Durchmesser. Die Decidua gliedert sich in **Decidua basalis** (unter der Plazenta), **Decidua capsularis** (über dem Embryo) und **Decidua parietalis** (restliches Endometrium).
 
 ---
 
@@ -753,7 +1181,9 @@ Die Plazenta ist ein endokrin aktives Organ. In der Frühschwangerschaft dominie
 
 Die Nabelschnur enthält 2 Nabelarterien (Aa. umbilicales) und 1 Nabelvene (V. umbilicalis), eingehüllt in Wharton-Sulze. Merkhilfe: 'AVA' (Arterie-Vene-Arterie). Sauerstoffarmes, kohlendioxidreiches fetales Blut fließt durch die Arterien zur Plazenta; sauerstoffreiches Blut kehrt über die Vene zum Fötus zurück – also umgekehrt zur konventionellen Arterie/Vene-Definition (fetale Arterien führen 'venöses' Blut). Fehlt eine Nabelarterie (Single Umbilical Artery, SUA), ist dies mit erhöhtem Risiko für Fehlbildungen assoziiert. Das Amnion (innere Membran) produziert und umgibt Fruchtwasser (Amnionflüssigkeit, ca. 800 ml am Termin). Das Chorion (äußere Membran) liegt dem Amnion an und grenzt an die Decidua.
 
-> **Merke:** Plazentaschranke: lipophile Stoffe (Alkohol, Nikotin, viele Viren) passieren sie; IgG wird aktiv per Transzytose transferiert.
+**Plazentaschranke — was durchtritt:** Lipophile (fettlösliche) Stoffe wie **Alkohol**, **Nikotin** und viele Medikamente passieren die Plazentaschranke leicht und können den Fetus schädigen. **IgG** (Antikörper der Klasse G) ist das einzige Immunglobulin, das von der Mutter zum Kind gelangt — über **Transzytose** (vesikulärer Transport) mithilfe des **FcRn-Rezeptors** (neonataler Fc-Rezeptor) im Synzytiotrophoblast. Das liefert dem Neugeborenen einen **Nestschutz** (passive Immunität). IgM, IgA und IgE passieren die Plazenta nicht.
+
+> **Merke:** Plazentaschranke: Lipophile Stoffe (Alkohol, Nikotin) passieren; nur **IgG** wird aktiv (FcRn-Transzytose) übertragen → Nestschutz.
 
 ---
 
