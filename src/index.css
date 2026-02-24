@@ -37,6 +37,8 @@
   /* Transitions */
   --ease-out: 0.15s ease-out;
   --ease-out-slow: 0.2s ease-out;
+  /* Dashboard: Navy-getönter Hintergrund (Premium-Startseite) */
+  --dashboard-bg: #e8ecf7;
   /* Fach-Akzente (unverändert) */
   --accent-bio: #329556;
   --accent-chem: #c2410c;
@@ -61,6 +63,7 @@
   --warning-bg: rgba(245, 158, 11, 0.15);
   --sidebar-bg: #0f172a;
   --topbar-bg: rgba(15, 23, 42, 0.92);
+  --dashboard-bg: #0f172a;
 }
 
 @theme {

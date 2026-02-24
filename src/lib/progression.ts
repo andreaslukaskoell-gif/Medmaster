@@ -63,6 +63,13 @@ export function getXPInCurrentLevel(xp: number | undefined | null): number {
   return value % XP_PER_LEVEL;
 }
 
+/** Noch benötigte XP bis zum nächsten Level (1 … XP_PER_LEVEL). */
+export function getXPToNextLevel(xp: number | undefined | null): number {
+  const inLevel = getXPInCurrentLevel(xp);
+  if (inLevel === 0 && (Number.isFinite(xp) ? (xp as number) : 0) > 0) return XP_PER_LEVEL;
+  return Math.max(1, XP_PER_LEVEL - inLevel);
+}
+
 /** Fortschritt zum nächsten Level 0 … 100 (%). Verhindert Division durch 0. */
 export function getLevelProgressPercent(xp: number | undefined | null): number {
   const value = Number.isFinite(xp) ? (xp as number) : 0;

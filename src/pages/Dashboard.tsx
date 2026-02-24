@@ -28,7 +28,13 @@ import { cn, daysUntilMedAT } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
 import { shareText, getStreakShareText } from "@/lib/shareUtils";
-import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
+import {
+  getLevelFromXP,
+  getLevelProgressPercent,
+  getLevelName,
+  getXPToNextLevel,
+  XP_PER_LEVEL,
+} from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
@@ -170,9 +176,12 @@ export default function Dashboard() {
     return keys.filter((d) => d >= startOfWeek.toISOString().split("T")[0]).length;
   }, [firstActivityTimeByDay]);
 
+  const xpToNextLevel = getXPToNextLevel(xp);
+  const nextLevelName = getLevelName(level + 1);
+
   return (
-    <div className="min-h-screen bg-[var(--background)]">
-      <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
+    <div className="min-h-screen bg-[var(--dashboard-bg)]">
+      <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
         <SyncIndicator />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
@@ -208,8 +217,10 @@ export default function Dashboard() {
               </div>
               <div className="mt-4 pt-4 border-t border-[var(--border)]">
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-[var(--muted)]">BMS-Fortschritt</span>
-                  <span className="font-medium text-[var(--text-primary)]">{bmsProgressPct} %</span>
+                  <span className="text-[var(--text-secondary)]">Du bist bei</span>
+                  <span className="font-semibold text-[var(--text-primary)]">
+                    {bmsProgressPct} %
+                  </span>
                 </div>
                 <Progress value={bmsProgressPct} className="h-2 rounded-full" />
               </div>
@@ -234,19 +245,19 @@ export default function Dashboard() {
                   >
                     <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-emerald-500/15 flex items-center justify-center shrink-0">
-                          <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                        <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
+                          <CheckCircle2 className="w-5 h-5 text-[var(--success)]" />
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-[var(--text-primary)]">
-                            ✅ BMS des Tages gelöst!
+                            BMS des Tages gelöst!
                           </p>
-                          <p className="text-xs text-[var(--muted)] flex items-center gap-1 mt-0.5">
+                          <p className="text-xs text-[var(--text-secondary)] flex items-center gap-1 mt-0.5">
                             <Clock className="w-3 h-3" /> Nächste Frage morgen
                           </p>
                         </div>
                       </div>
-                      <span className="shrink-0 text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/40 px-2.5 py-1 rounded-full">
+                      <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
                         +{dailyResult.xpEarned} XP
                       </span>
                     </CardContent>
@@ -259,20 +270,20 @@ export default function Dashboard() {
                   >
                     <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center shrink-0">
-                          <Target className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                        <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                          <Target className="w-5 h-5 text-[var(--accent)]" />
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-[var(--text-primary)]">
-                            🎯 BMS des Tages wartet!
+                            BMS des Tages wartet!
                           </p>
                           <p className="text-xs text-[var(--muted)] mt-0.5">
-                            Täglich eine Frage — bis zu 100 XP
+                            Täglich eine Frage — bis zu {XP_PER_LEVEL} XP
                           </p>
                         </div>
                       </div>
-                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/40 px-3 py-1.5 rounded-full">
-                        Jetzt lösen <ArrowRight className="w-3 h-3" />
+                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
+                        Jetzt starten <ArrowRight className="w-3 h-3" />
                       </span>
                     </CardContent>
                   </div>
@@ -369,7 +380,9 @@ export default function Dashboard() {
                 </div>
                 <div className="flex-1 min-w-[180px] max-w-xs">
                   <Progress value={levelProgress} className="h-2 rounded-full" />
-                  <p className="text-xs text-[var(--muted)] mt-1">Zum nächsten Level</p>
+                  <p className="text-xs text-[var(--text-secondary)] mt-1">
+                    Noch {xpToNextLevel} XP bis Level {level + 1}
+                  </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
                   <StreakFlameIcon
@@ -468,12 +481,12 @@ function StreakShareButton({ streak }: { streak: number }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }}
-      className="p-2 rounded-lg text-orange-500 hover:bg-orange-500/10 transition-colors cursor-pointer"
+      className="p-2 rounded-lg text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-colors cursor-pointer"
       aria-label="Streak teilen"
       title="Streak teilen"
     >
       {copied ? (
-        <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+        <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
       ) : (
         <Share2 className="w-4 h-4" />
       )}
