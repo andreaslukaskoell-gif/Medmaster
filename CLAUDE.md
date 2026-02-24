@@ -30,6 +30,10 @@ npm run format       # Prettier (auto-runs via hook)
 - TV questions use 0-indexed `correctOption` (different from BMS!)
 - IDs follow pattern: `bio-1-001`, `ch-2-003`, `ph-3-001`, `ma-1-001`
 
+### BMS-Kapitel Referenz (Vorbild: Zellmembran bio-1-03)
+
+Jedes Unterkapitel: Einleitung → **„In diesem Kapitel lernst du:“** (4–5 Bullets) → Kern mit `---` zwischen Abschnitten → **Übergänge** („Bisher haben wir gesehen“, „Um das zu verstehen“) → **Merksätze** `> **Merke:**` nach Blöcken → **1–3 SVG-Hinweise** (additiv) → **MedAT-Fokus:** „Zur gezielten Prüfungsvorbereitung“ → **Zentral prüfungsrelevant:** konkrete Aufzählung (niemals „Siehe unten“) → **Ergänzend vertiefend** → Häufige Fragen, Typische Fallen, Prüfungsrelevante Zahlen → **Zusammenfassung (ultrakompakt)**.
+
 ### Data Files
 
 - BMS data: `/src/data/bms/` (barrel files) + `/src/data/bmsKapitel/` (chapter files)

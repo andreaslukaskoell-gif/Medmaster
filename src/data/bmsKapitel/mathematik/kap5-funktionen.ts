@@ -107,8 +107,9 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Lineare Funktionen (y = mx + b, Steigung m, Achsenabschnitt b), Gerade aus zwei Punkten, Nullstelle, Proportionalität, klinische Anwendung (Dosis-Wirkung).
+
+**Ergänzend vertiefend:** Schnittpunkt zweier Geraden; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Geradengleichung aus 2 Punkten aufstellen (zuerst m, dann b)
@@ -369,8 +370,9 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Quadratische Funktionen (Parabel, Scheitelpunkt x_s = −b/(2a), Öffnung nach oben/unten), Nullstellen (Mitternachtsformel), Symmetrie, Anwendung (Wurf, Optimierung).
+
+**Ergänzend vertiefend:** Parabelform f(x) = a(x−x_s)² + y_s; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Scheitelpunkt berechnen: xs = −b/(2a), ys = f(xs)
@@ -664,8 +666,9 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Exponentialfunktion (Wachstum/Zerfall), e-Funktion, Halbwertszeit T½ = ln(2)/k, Verdopplungszeit, Bakterienwachstum, radioaktiver Zerfall, Pharmakokinetik (c(t) = c₀·e^(−kt)).
+
+**Ergänzend vertiefend:** Logarithmus zur Basis e (ln); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Halbwertszeit berechnen: T½ = ln(2)/k ≈ 0,693/k
@@ -941,8 +944,9 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Logarithmus (log₁₀, ln), pH = −log₁₀([H⁺]), pH-Abfall 1 = zehnfache [H⁺], pK_s, Henderson-Hasselbalch, logarithmische Skalen (Lautstärke, pH).
+
+**Ergänzend vertiefend:** Natürlicher Logarithmus und e; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - pH-Wert aus [H⁺] berechnen: pH = −log₁₀([H⁺])
@@ -1247,8 +1251,9 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2·e^(−(x−3)) + 1 aus? Analyse: (1) x�
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Grenzwert lim (x→±∞), horizontale/vertikale Asymptoten, stetig vs. unstetig, Definitionsbereich, Wertebereich, gebrochen-rationale Funktionen (Pol, Hebbare Lücke).
+
+**Ergänzend vertiefend:** L'Hospital; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - Horizontale Asymptote aus Funktionsterm ablesen (Grenzwert x → ±∞)

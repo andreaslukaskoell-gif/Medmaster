@@ -182,8 +182,9 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Zehnerpotenzen (10⁰=1, 10³, 10⁻⁶), Rechenregeln (Multiplikation/Division/Potenz: Exponenten addieren/subtrahieren/multiplizieren), Verhältnisse (Exponentendifferenz = Faktor), klinische Größenordnungen (Erythrozyten ~5×10¹²/L, pH log-Skala).
+
+**Ergänzend vertiefend:** Wurzel als Potenz 10^(m/n); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist 10⁻⁶ in Dezimalform?" → 0,000001 (eine Millionstel; positiv!)

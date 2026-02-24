@@ -129,8 +129,9 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Lineare Gleichungen (Äquivalenzumformungen), Gleichungssysteme (Substitution, Elimination), quadratische Gleichungen (Mitternachtsformel, Diskriminante D=b²−4ac, Vieta), Ungleichungen (Vorzeichenumkehr bei ×/÷ mit negativer Zahl), Verdünnungsformel c₁·V₁=c₂·V₂, Dosierung mg/kg.
+
+**Ergänzend vertiefend:** Dreisatz, Mischungsaufgaben; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Löse 3x − 7 = 2(x + 1)" → 3x − 7 = 2x + 2, also x = 9
@@ -430,8 +431,9 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Prozent (p = Teil/Ganzes × 100), Bruch ↔ Dezimal ↔ Prozent, Anteil und Grundwert, prozentuale Zu- und Abnahme, Promille.
+
+**Ergänzend vertiefend:** Zinsrechnung, Wachstumsfaktor; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "32 sind X% von 400?" → p = 32/400 × 100 = 8%
@@ -721,8 +723,9 @@ Wirksamkeit E(d) = minus 0,5 d hoch zwei + 10d minus 12 (d = Dosis in mg). Schei
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Binomische Formeln (a±b)² = a²±2ab+b² und (a+b)(a−b) = a²−b², Ausmultiplizieren, Faktorisieren, Potenzgesetze (aᵐ·aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ), Wurzeln als Potenzen a^(1/n).
+
+**Ergänzend vertiefend:** Bruchrechnung, Doppelbrüche; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "(x + 4)² = ?" → x² + 8x + 16 (mittlerer Term 2·x·4 = 8x nicht vergessen!)
@@ -1047,8 +1050,9 @@ Blut-pH 7,40: [H+] = 10 hoch (minus 7,40) = **3,98 mal 10 hoch (minus 8) mol/L**
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Potenzgesetze (aᵐ·aⁿ, aᵐ/aⁿ, (aᵐ)ⁿ), rationale Exponenten a^(p/q) = ᵍ√(aᵖ), Wurzelgesetze, Logarithmus (log_a(x) = y ⇔ aʸ = x), Zehnerlogarithmus und pH.
+
+**Ergänzend vertiefend:** Natürlicher Logarithmus ln; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist 8^(2/3)?" → (∛8)² = 2² = 4
@@ -1338,8 +1342,9 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Flächen (Rechteck, Dreieck, Kreis A=πr², Ellipse), KOF/BSA (Mosteller √(kg·cm/3600)), Volumen (Würfel, Quader, Zylinder, Kugel V=(4/3)πr³), Einheitenumrechnung (m², cm², Liter).
+
+**Ergänzend vertiefend:** Oberfläche Kugel 4πr²; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Kreisförmige Verbrennung Ø 12 cm — Anteil an BSA 1,8 m²?" → A = π·36 ≈ 113 cm² = 0,0113 m² → ~0,63% KOF
@@ -1630,8 +1635,9 @@ Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π · 0,16 · 1,5 = 0,24π 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Volumenformeln (Würfel, Quader, Zylinder V=πr²h, Kugel V=(4/3)πr³, Pyramide/Kegel), klinische Anwendung (Tumor-/Zystengröße), Einheiten (mL, cm³, Liter).
+
+**Ergänzend vertiefend:** Oberfläche Zylinder/Kugel; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Zyste mit Ø 4 cm — Volumen?" → r = 2, V = (4/3)·π·8 ≈ 33,5 mL
@@ -1947,8 +1953,9 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Geradengleichung y = mx + b, Steigung m = Δy/Δx, zwei Punkte → Gerade, Schnittpunkt, Abstand Punkt–Gerade, Parabel (Scheitelpunkt, Öffnung).
+
+**Ergänzend vertiefend:** Lineare Funktionen in der Klinik (Dosis-Wirkung); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Geradengleichung durch P(2,3) und P(6,11)?" → m = (11−3)/(6−2) = 2; b = 3−4 = −1 → y = 2x−1
@@ -2263,8 +2270,9 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2·3
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag |a| = √(aₓ²+aᵧ²+a_z²)), Skalarprodukt a·b = aₓbₓ+aᵧbᵧ+a_zb_z, orthogonale Vektoren (a·b=0), Kreuzprodukt (Rechte-Hand-Regel, Betrag = Fläche Parallelogramm).
+
+**Ergänzend vertiefend:** Anwendung in Physik (Kräfte, Geschwindigkeit); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Skalarprodukt a=(1,2,3) und b=(4,0,−2)?" → 4+0−6 = −2

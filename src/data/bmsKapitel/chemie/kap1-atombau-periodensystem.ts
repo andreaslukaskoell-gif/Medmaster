@@ -164,8 +164,9 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Atommodelle (Thomson Rosinenmodell, Rutherford Streuversuch → Kern/Hülle/leerer Raum, Bohr Schalen 2n², Orbitalmodell s/p/d/f), Ordnungszahl Z und Massenzahl A (A = Z + N), Isotope (gleiche Z, verschiedene N), Nuklidnotation ᴬ_Z X, Schalenkapazität 2n², Z > 83 alle radioaktiv.
+
+**Ergänzend vertiefend:** Grenzen der Modelle (Thomson vs. Rutherford), Spektrallinien (Bohr), Orbitaltypen; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welcher Schluss folgt aus dem Rutherford-Streuversuch?" → Positive Ladung und Masse im winzigen Kern konzentriert; Atom = fast vollständig leerer Raum
@@ -483,8 +484,9 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Quantenzahlen (n, l, mₗ, mₛ), Pauliprinzip (max. 2 e⁻ pro Orbital), Aufbauprinzip (Madelung 4s vor 3d), Hundsche Regel, Elektronenkonfiguration (Fe²⁺/Fe³⁺, Cr/Cu-Ausnahmen), Valenzelektronen, Paramagnetismus.
+
+**Ergänzend vertiefend:** Übergangsmetalle (Fe, Cu, Zn, Co, Mn) und biologische Funktion; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Aussage zum Pauliprinzip ist korrekt?" → Kein Atom hat zwei Elektronen mit identischen vier Quantenzahlen → max. 2 e⁻ pro Orbital, entgegengesetzter Spin
@@ -800,8 +802,9 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** α-Zerfall (Z−2, A−4), β⁻/β⁺ (Z±1, A gleich), γ (Z/A unverändert), Halbwertszeit N(t)=N₀·(½)^(t/T½), PET (β⁺-Annihilation), Gray/Sievert, Strahlenschutz, klinische Nuklide (⁹⁹ᵐTc, ¹⁸F, ¹³¹I, ¹⁴C), KI-Prophylaxe.
+
+**Ergänzend vertiefend:** Abschirmung (α Papier, β Al, γ Pb); Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was verändert sich beim α-Zerfall?" → Z sinkt um 2, A sinkt um 4 (Emission von ⁴He)
@@ -1145,8 +1148,9 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Atomare Masseneinheit u, molare Masse M, Avogadro Nₐ, n=m/M, c=n/V, Osmolarität (i=2 für NaCl), Blutplasma ≈290 mosmol/L, Verdünnungsformel c₁V₁=c₂V₂, Stöchiometrie (Mol-Verhältnisse).
+
+**Ergänzend vertiefend:** Van't-Hoff-Faktor, limitierender Reaktand; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie viele mol sind in 90 g H₂O?" → n = 90/18 = 5 mol
@@ -1418,8 +1422,9 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Periodensystem (Perioden/Gruppen, s/p/d/f-Blöcke), Valenzelektronen, H-Brücken (Donor X–H mit X=N,O,F; Akzeptor freies e⁻-Paar), Siedepunkte (H₂O vs. H₂S), Ionenbindung vs. kovalente Bindung, Elektronegativität.
+
+**Ergänzend vertiefend:** Van-der-Waals-Kräfte, Dipol-Dipol; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Voraussetzung hat ein H-Brücken-Donor?" → X–H mit X = N, O oder F (Donor gibt H); Akzeptor = freies e⁻-Paar von Y ∈ {N, O, F}
@@ -1740,8 +1745,9 @@ Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechne
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Löslichkeit, Konzentration (mol/L), Osmolarität/Osmolalität, Tonizität (hypoton → Hämolyse, hyperton → Krenation, isoton 0,9 % NaCl), Van't-Hoff-Faktor (NaCl i=2, CaCl₂ i=3), Erythrozyten in hypotoner Lösung.
+
+**Ergänzend vertiefend:** Kolligative Eigenschaften; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was passiert, wenn Erythrozyten in destilliertes Wasser gegeben werden?" → Hämolyse (hypotone Lösung → Wasser strömt ins Zellinnere → Zelle platzt)
@@ -2075,8 +2081,9 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Aggregatzustände, Phasenübergänge (Schmelzen/Erstarren, Sieden/Kondensieren, Sublimation/Desublimation), exotherm (Kondensation, Erstarren) vs. endotherm (Verdampfen, Schmelzen), Dampfdruck, Siedepunkt und äußerer Druck.
+
+**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welcher Phasenübergang ist exotherm?" → Kondensation, Erstarren, Desublimation (Übergänge zu geordneterem Zustand geben Energie ab)
@@ -2419,8 +2426,9 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** PSE-Aufbau (18 Gruppen, 7 Perioden), s-/p-/d-/f-Blöcke, Hauptgruppen vs. Nebengruppen, Valenzelektronen = Gruppennummer (Hauptgruppe), Periodennummer = höchstes n, Metalle/Halbleiter/Nichtmetalle.
+
+**Ergänzend vertiefend:** Gruppenbezeichnungen (Alkali, Erdalkali, Halogene, Edelgase); Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "In welchem Block steht Calcium (Z=20)?" → s-Block, Gruppe 2 ([Ar]4s²)
@@ -2736,8 +2744,9 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Elektronegativität (Pauling-Skala, F=4,0), Bindungsarten (ionisch ΔEN>1,7; polar kovalent 0,4–1,7; unpolar kovalent <0,4), Dipol, H-Brücken, Oktettregel, formale Ladung.
+
+**Ergänzend vertiefend:** EN-Trends im PSE; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welches Element hat die höchste Elektronegativität?" → Fluor (F, EN = 4,0 nach Pauling)
@@ -3071,8 +3080,9 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zentral prüfungsrelevant:** Hauptgruppen (Alkali, Erdalkali, Halogene, Edelgase), biologische Relevanz (Na⁺/K⁺, Ca²⁺, Cl⁻, Jod T3/T4, Fe²⁺ Hämoglobin), Übergangsmetalle (Fe, Cu, Zn, Co, Mn), NIS-Symporter, Methämoglobin (Fe³⁺ bindet kein O₂).
+
+**Ergänzend vertiefend:** Spurenelemente, Toxizität; Verwechslungen siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welches Halogen ist essenziell für T3/T4?" → Jod (I, Z=53): T3 = 3 I-Atome, T4 = 4 I-Atome; Aufnahme über NIS-Symporter
