@@ -10,9 +10,11 @@ import {
   processTextForSmartLinks,
   isKeywordLinkTitle,
   getKeywordLinkDescription,
+  hasGlossaryTerm,
   type KeywordLinkEntry,
 } from "@/data/glossary";
 import { SmartLink } from "@/components/content/SmartLink";
+import { GlossaryTerm } from "@/components/content/GlossaryTerm";
 import {
   parseHinterfragMarkers,
   PLACEHOLDER_REGEX,
@@ -119,8 +121,27 @@ function HinterfragBlock({
 const SMART_LINK_SUBTLE_CLASS =
   "border-b border-dotted border-primary-400/60 dark:border-primary-500/50";
 
+function getTextContent(children: ReactNode): string {
+  if (typeof children === "string") return children;
+  if (typeof children === "number") return String(children);
+  if (Array.isArray(children)) return children.map(getTextContent).join("");
+  if (
+    children &&
+    typeof children === "object" &&
+    "props" in children &&
+    (children as { props?: { children?: ReactNode } }).props?.children != null
+  )
+    return getTextContent((children as { props: { children: ReactNode } }).props.children);
+  return "";
+}
+
 function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
   return {
+    strong: ({ children }: { children?: ReactNode }) => {
+      const text = getTextContent(children ?? "").trim();
+      if (text && hasGlossaryTerm(text)) return <GlossaryTerm term={text} />;
+      return <strong>{children}</strong>;
+    },
     table: ({ children, ...props }: ComponentProps<"table">) => (
       <div className="overflow-x-auto my-4">
         <table
@@ -506,19 +527,10 @@ export function SubchapterContent({
     );
   }, []);
 
-  const handleCompleted = useCallback(
-    (id: string) => {
-      setSectionProgress((prev) => ({ ...prev, [id]: "completed" }));
-      if (readingMode === "learn") {
-        const idx = allSectionIds.indexOf(id);
-        if (idx >= 0 && idx < allSectionIds.length - 1) {
-          const nextId = allSectionIds[idx + 1];
-          setOpenSections((prev) => ({ ...prev, [nextId]: true }));
-        }
-      }
-    },
-    [readingMode, allSectionIds]
-  );
+  const handleCompleted = useCallback((id: string) => {
+    setSectionProgress((prev) => ({ ...prev, [id]: "completed" }));
+    // Sections only open when user clicks (header or TOC), not auto-open next
+  }, []);
   const handleTOCSelect = useCallback((id: string) => {
     setOpenSections((prev) => ({ ...prev, [id]: true }));
     requestAnimationFrame(() => {
