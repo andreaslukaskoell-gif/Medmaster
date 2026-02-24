@@ -28,11 +28,17 @@ export const physKapElektrizitaet: Kapitel = {
       ],
       content: `## Einleitung
 
-Was hält Ionenkanäle in der Nervenmembran offen? Was treibt Elektrophorese an? Was erzeugt das elektrische Feld der Herzmuskelzellen im EKG? Die Antwort liegt in der **elektrischen Ladung** und dem Coulombgesetz. Ladungen erzeugen elektrische Felder — und diese Felder steuern biologische Prozesse auf molekularer Ebene. Für den MedAT sind Elementarladung, Coulombgesetz, elektrisches Feld, Spannung, Kondensator und medizinische Anwendungen (EKG, Elektrophorese, Membranpotenzial) prüfungsrelevant.
+Was hält Ionenkanäle in der Nervenmembran offen? Was treibt Elektrophorese an? Die Antwort liegt in **elektrischer Ladung** und dem **Coulombgesetz**. Ladungen erzeugen elektrische Felder — diese steuern biologische Prozesse. Für den MedAT sind Elementarladung, Coulombgesetz, elektrisches Feld, Spannung, Kondensator und Anwendungen (EKG, Elektrophorese, Membranpotenzial) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Elementarladung e, Coulomb F ∝ q₁q₂/r², elektrisches Feld E = F/q, Spannung U = W/Q, Kondensator C = Q/U und E = U/d; Anwendung EKG, Membranpotenzial. **Kontext:** Ladung und Feld als Basis für Strom, Magnetismus und Optik; klinisch EKG, Ionenkanäle, Elektrophorese.
+
+---
 
 ## Elektrische Ladung
 
-**SVG-Hinweis (Ladung, Coulomb, elektrisches Feld):** Ein Schema mit Elementarladung e, Coulomb-Kraft F ∝ q₁q₂/r², Feldlinien und Plattenkondensator unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Ladung Coulomb](/grafik-elektrizitaet-grundlagen.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Elementarladung e, die Coulomb-Kraft F ∝ q₁q₂/r², elektrische Feldlinien und den Plattenkondensator.
 
 Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
 
@@ -74,6 +80,10 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
 **Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.
 
 > **Merke:** Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential.
+
+![Feldlinien und Vektoren](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Elektrische Feldstärke und Kraft sind Vektoren; die Grafik veranschaulicht Richtung und Überlagerung von Feldern (z. B. bei Punktladungen und im Plattenkondensator).
 
 **Kondensator und Energiespeicherung:**
 Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrischen Feld: **C = Q/U** [Farad] und **W = ½·C·U²**. Die Kapazität steigt mit der Plattenfläche und der Permittivität des Dielektrikums und sinkt mit dem Plattenabstand: C = ε₀·εᵣ·A/d. In der Medizin ist der Defibrillator ein Kondensator-Entlader: C ≈ 200 µF, geladen auf ~1500 V, liefert W ≈ 225 J in Millisekunden.
@@ -301,11 +311,17 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
       ],
       content: `## Einleitung
 
-Ein Stromschlag kann töten, ein Defibrillator kann Leben retten — beides ist elektrischer Strom. Das Ohm'sche Gesetz U = R·I verbindet Spannung, Widerstand und Strom. In Nervenfasern fließen Ionenströme durch Kanäle, in der Haut verändert Feuchtigkeit dramatisch den Widerstand. Strom erzeugt Wärme (Joule'sche Wärme) und kann Gewebe verbrennen oder stimulieren. Für den MedAT sind Ohm'sches Gesetz, Widerstand, Leistung P = U·I, Joule'sche Wärme, elektrische Gefährdung und biologische Leitfähigkeit prüfungsrelevant.
+Stromschlag und Defibrillator — beides elektrischer **Strom**. Das **Ohm'sche Gesetz** U = R·I verbindet Spannung, Widerstand und Strom. In Nerven fließen Ionenströme; Strom erzeugt Wärme (Joule) und kann Gewebe verbrennen oder stimulieren. Für den MedAT sind Ohm, Widerstand, Leistung P = U·I, Joule'sche Wärme und elektrische Gefährdung prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Ohm U = R·I, Widerstand R = ρ·l/A, Leistung P = U·I, Joule'sche Wärme Q = P·t; elektrische Gefährdung (Stromstärke, Weg); biologische Leitfähigkeit. **Kontext:** Strom als bewegte Ladung; klinisch Defibrillator, Nervenleitung, Stromunfall.
+
+---
 
 ## Elektrischer Strom
 
-**SVG-Hinweis (Strom, Ohm, Joule-Wärme):** Ein Schema mit I = ΔQ/Δt, U = R·I, P = U·I und Temperaturabhängigkeit des Widerstands unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Strom Ohm](/grafik-elektrizitaet-grundlagen.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht Stromstärke I = ΔQ/Δt, Ohmsches Gesetz U = R·I, Joule-Leistung P = U·I und die Temperaturabhängigkeit des Widerstands.
 
 **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
 
@@ -329,7 +345,12 @@ Der **elektrische Widerstand R** gibt an, wie stark ein Leiter dem Stromfluss en
 
 **U = R · I** [V = Ω · A]
 
-Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verdoppelt sich I proportional. Der Widerstand hängt von der **Geometrie** und dem **Material** ab:
+Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verdoppelt sich I proportional.
+
+![Ohmsches Gesetz (linear)](/grafik-lineare-funktion.svg)
+
+**Erklärung zur Grafik:** Die Kennlinie U = R·I ist eine Gerade durch den Ursprung; die Steigung entspricht dem Widerstand R.
+ Der Widerstand hängt von der **Geometrie** und dem **Material** ab:
 
 **R = ρ · L / A**
 
@@ -589,11 +610,17 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
       ],
       content: `## Einleitung
 
-Wie schließt man Lampen in einer Lichterkette so, dass nicht alle ausgehen, wenn eine kaputt ist? Parallelschaltung! Wie sind die Ionenkanäle einer Nervenzellmembran verschaltet — alle parallel, damit Ausfall eines Kanals nicht den Rest lahmlegt. Reihen- und Parallelschaltung, RC-Glieder und Kirchhoff'sche Regeln sind das Rüstzeug für Schaltungsanalyse — und damit für das Verständnis von Membranmodellen, Defibrillator-Entladung und Herzschrittmacher. Für den MedAT sind Reihen-/Parallelschaltung, Knoten- und Maschenregel, RC-Zeitkonstante sowie Kondensatorverhalten prüfungsrelevant.
+Reihen- und **Parallelschaltung**, **Kirchhoff** (Knoten- und Maschenregel) und **RC-Glieder** sind das Rüstzeug für Schaltungsanalyse — und für Membranmodelle, Defibrillator und Herzschrittmacher. Für den MedAT sind Reihen-/Parallelschaltung, Knoten-/Maschenregel, RC-Zeitkonstante τ = R·C und Kondensatorverhalten prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Reihenschaltung R_ges = R₁+R₂+…, Parallelschaltung 1/R_ges = 1/R₁+1/R₂+…; Kirchhoff (ΣI = 0, ΣU = 0); RC-Zeitkonstante τ = R·C; Kondensator Entladung/Ladung. **Kontext:** Schaltungen analysieren; klinisch Ionenkanäle (parallel), Defi-Entladung.
+
+---
 
 ## Grundlegende Schaltungstypen
 
-**SVG-Hinweis (Reihen-/Parallelschaltung, Kirchhoff, RC):** Ein Schema mit R_ges Reihe/Parallel, Knoten- und Maschenregel sowie RC-Zeitkonstante unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Schaltung Kirchhoff](/grafik-elektrizitaet-grundlagen.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Reihen- und Parallelschaltung (R_ges), die Kirchhoff-Regeln (Knoten, Maschen) und die RC-Zeitkonstante τ = R·C.
 
 In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
 
@@ -644,6 +671,10 @@ Gespeicherte Energie: **W = ½·C·U²** = Q²/(2C) = ½·Q·U.
 
 **Reihenschaltung von Kondensatoren:** 1/C_ges = 1/C₁ + 1/C₂ (C_ges kleiner)
 **Parallelschaltung:** C_ges = C₁ + C₂ (C_ges größer)
+
+![RC-Entladung (exponentiell)](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Die Kondensatorspannung bei Lade- und Entladung folgt einer Exponentialfunktion; die Zeitkonstante τ = R·C bestimmt den Verlauf.
 
 **RC-Schaltkreis (Lade-/Entladekurve):** Wird ein Kondensator über einen Widerstand geladen, verläuft die Spannung exponentiell: U_C(t) = U₀ · (1 − e^(−t/τ)), mit Zeitkonstante **τ = R·C** [s]. Nach τ ist der Kondensator zu 63 % geladen, nach 5τ gilt er als vollständig geladen. Die Entladung: U_C(t) = U₀ · e^(−t/τ). Der Defibrillator nutzt einen großen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W = ½·C·U² ≈ 200–400 J), der in ms über den Thorax entladen wird.
 
@@ -863,11 +894,17 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
       ],
       content: `## Einleitung
 
-Das MRT-Gerät im Krankenhaus nutzt ein Magnetfeld von 1,5–7 Tesla — hunderttausend Mal stärker als das Erdmagnetfeld. Ein Zyklotron beschleunigt Protonen auf 15 % Lichtgeschwindigkeit, um PET-Isotope zu erzeugen. Die Grundlage: **Magnetismus entsteht durch bewegte Ladungen**, und bewegte Ladungen im Magnetfeld erfahren die Lorentz-Kraft. Für den MedAT sind Magnetfeld (B, Tesla), Lorentz-Kraft, Biot-Savart, Faraday-Induktion, Larmor-Frequenz und MRT-Prinzip prüfungsrelevant.
+**Magnetismus entsteht durch bewegte Ladungen**; bewegte Ladungen im Magnetfeld erfahren die **Lorentz-Kraft**. MRT nutzt Felder von 1,5–7 T; Zyklotron beschleunigt Teilchen. Für den MedAT sind Magnetfeld B (Tesla), Lorentz-Kraft F = q·v·B, Biot-Savart, Faraday-Induktion, Larmor-Frequenz und MRT-Prinzip prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Magnetfeld B, Lorentz-Kraft F = q(v×B); Biot-Savart (Strom → B); Faraday (Induktion, Änderung Φ); Larmor f = γ·B₀ (MRT). **Kontext:** B-Felder und Kräfte; klinisch MRT, Zyklotron, Herzschrittmacher.
+
+---
 
 ## Grundlagen des Magnetismus
 
-**SVG-Hinweis (Magnetfeld, Lorentz, Faraday, MRT):** Ein Schema mit B-Feld, Lorentz-Kraft F = q(v×B), Induktion und Larmor-Frequenz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Magnetfeld MRT](/grafik-pet-mrt.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt das Magnetfeld B, die Lorentz-Kraft F = q(v×B), das Induktionsgesetz und die Larmor-Frequenz (MRT).
 
 Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
 
@@ -919,6 +956,10 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 | UV | 10–380 nm | Desinfektion, Phototherapie, LASIK (193 nm) |
 | Röntgen | 0,01–10 nm | Röntgen, CT |
 | Gamma | <0,01 nm | PET, Szintigraphie, Strahlentherapie |
+
+![Energieniveaus und Resonanz](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Im MRT werden Protonenspins zwischen Energieniveaus angeregt (Larmor-Frequenz); die Grafik veranschaulicht diskrete Niveaus und Resonanzanregung.
 
 **MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
 
@@ -1146,11 +1187,17 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
       ],
       content: `## Einleitung
 
-Eine Brille korrigiert Fehlsichtigkeit — aber wie? Ein Endoskop leitet Licht durch biegsame Glasfasern ins Körperinnere — warum geht das Licht nicht verloren? Beides erklärt die **geometrische Optik**: Reflexion, Brechung und Linsengleichung. Licht ändert beim Übergang zwischen Medien seine Richtung (Brechung), und ab einem kritischen Winkel wird es vollständig reflektiert (Totalreflexion — Basis der Glasfaser). Für den MedAT sind Snellius'sches Brechungsgesetz, Brechungsindex, Totalreflexion, Linsengleichung, Brechkraft (Dioptrien) und Endoskopie prüfungsrelevant.
+**Geometrische Optik**: Reflexion, Brechung und Linsengleichung. Licht ändert an Grenzflächen die Richtung (Brechung); ab dem Grenzwinkel **Totalreflexion** (Basis Glasfaser/Endoskop). Für den MedAT sind Snellius n₁·sin α₁ = n₂·sin α₂, Brechungsindex, Totalreflexion, Linsengleichung 1/f = 1/g+1/b, Brechkraft D (Dioptrien) und Endoskopie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Reflexionsgesetz; Snellius (Brechung); Totalreflexion und Grenzwinkel; Linsengleichung; Brechkraft D = 1/f [dpt]; Endoskopie (Lichtleiter). **Kontext:** Licht als Strahl; klinisch Brille, Endoskop, Korrektur Fehlsichtigkeit.
+
+---
 
 ## Reflexionsgesetz
 
-**SVG-Hinweis (Reflexion, Snellius, Totalreflexion, Linsen):** Ein Schema mit Einfall = Ausfall, n₁·sin α₁ = n₂·sin α₂, Grenzwinkel und Brechkraft D unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Reflexion Snellius](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht Reflexion (Einfall = Ausfall), Brechung (Snellius: n₁·sin α₁ = n₂·sin α₂), Totalreflexion und die Brechkraft D von Linsen.
 
 Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
 
@@ -1192,6 +1239,14 @@ Geht Licht von einem optisch dichteren Medium (n₁) in ein dünneres (n₂ < n�
 Beispiel Glas (n=1,5) → Luft (n=1): sin α_grenz = 1/1,5 = 0,667 → α_grenz ≈ 41,8°
 
 **Klinische Anwendung – Endoskopie:** Glasfasern nutzen Totalreflexion, um Licht über weite Strecken und um Kurven zu leiten. Millionen dünner Glasfasern bilden flexible Lichtleiter für Endoskope (Gastroskop, Koloskop, Bronchoskop). Die Fasern müssen von einem Mantel mit kleinerem n umgeben sein, damit Totalreflexion an der Kern-Mantel-Grenze gewährleistet ist.
+
+![Linsen und Abbildung](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Sammel- und Zerstreuungslinse, Brennpunkt und Linsengleichung 1/f = 1/g + 1/b — Grundlage für Brechkraft D = 1/f in Dioptrien.
+
+![Linsen und Abbildung](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Brennweite, Gegenstandsweite und Bildweite (Linsengleichung 1/f = 1/g + 1/b) sowie Sammel- und Zerstreuungslinse werden hier veranschaulicht.
 
 ## Linsen und Brechkraft
 
@@ -1439,11 +1494,17 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
       ],
       content: `## Einleitung
 
-Warum kann ein Lichtmikroskop keine Strukturen kleiner als ~200 nm auflösen? Warum leuchten Seifenblasen bunt? Warum kann OCT die Netzhautschichten schichtweise abbilden? Das Strahlmodell der geometrischen Optik reicht hier nicht — man muss Licht als **Welle** behandeln. Interferenz und Beugung bestimmen das Auflösungslimit (Abbe-Kriterium) und ermöglichen moderne Bildgebungsverfahren. Für den MedAT sind Interferenz, Abbe-Auflösungsgrenze, Numerische Apertur, Mikroskopie und OCT-Prinzip prüfungsrelevant.
+Licht als **Welle**: **Interferenz** und **Beugung** bestimmen das Auflösungslimit (Abbe). Das erklärt, warum ein Lichtmikroskop unter ~200 nm nicht auflöst und warum OCT Netzhautschichten abbilden kann. Für den MedAT sind Interferenz, Abbe-Grenze d_min ≈ λ/(2·NA), Numerische Apertur, Mikroskopie und OCT prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Licht als EM-Welle; Interferenz (konstruktiv/destruktiv); Beugung; Abbe d_min ≈ λ/(2·NA); NA und Auflösung; OCT-Prinzip. **Kontext:** Wellenoptik ergänzt Strahlenoptik; klinisch Mikroskop, OCT.
+
+---
 
 ## Licht als elektromagnetische Welle
 
-**SVG-Hinweis (Interferenz, Beugung, Abbe):** Ein Schema mit Gangunterschied n·λ / (n+½)·λ, Doppelspalt und Auflösungsgrenze d_min ≈ λ/(2·NA) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Interferenz Beugung](/grafik-26-welle.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt konstruktive und destruktive Interferenz (Gangunterschied), den Doppelspalt und die Abbe-Auflösungsgrenze d_min ≈ λ/(2·NA).
 
 Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
 - **Wellenlänge λ**: räumlicher Abstand zwischen zwei Wellenbergen
@@ -1456,7 +1517,15 @@ Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 78
 
 **Dispersion:** Der Brechungsindex n hängt von der Wellenlänge ab — kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Ein Prisma zerlegt weißes Licht in seine Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
 
+![Wellen und Spektrum](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Licht als Welle mit Wellenlänge λ und Frequenz f; das Spektrum (sichtbar, UV, IR) und die Abbe-Auflösungsgrenze werden hier zusammengefasst.
+
 **Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
+
+![Reflexion und Brechung](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Snellius-Gesetz und Dispersion (Wellenlängenabhängigkeit von n) — Grundlage für Prisma, Spektralfarben und chromatische Aberration.
 
 ## Interferenz
 
@@ -1717,11 +1786,17 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
       ],
       content: `## Einleitung
 
-Ohne Lupe kann ein Dermatologe keine Melanommerkmale (ABCDE) erkennen. Ohne Mikroskop keine Histologie, keine Bakterienidentifikation. Ohne Endoskop keine minimalinvasive Chirurgie. Optische Instrumente erweitern das Sehen — sie alle kombinieren Linsen nach denselben physikalischen Gesetzen. Die entscheidenden Konzepte: Vergrößerung, Auflösungsgrenze und numerische Apertur. Für den MedAT sind Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze und klinische Anwendungen prüfungsrelevant.
+**Optische Instrumente** (Lupe, Mikroskop, Teleskop, Endoskop) kombinieren Linsen nach denselben Gesetzen. Entscheidend: **Vergrößerung**, **Auflösungsgrenze** und **numerische Apertur**. Für den MedAT sind Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze und klinische Anwendungen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Lupe (Vergrößerung M); Mikroskop (Objektiv + Okular); Teleskop; Auflösungsgrenze und NA; klinische Anwendung (Dermatologie, Histologie). **Kontext:** Instrumente bauen auf Linsengleichung und Abbe auf; klinisch Lupen, Mikroskope.
+
+---
 
 ## Lupe
 
-**SVG-Hinweis (Lupe, Mikroskop, Vergrößerung):** Ein Schema mit Lupenvergrößerung M = S/f, Mikroskop M_ges = M_ob×M_ok und Auflösungsgrenze unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Lupe Mikroskop](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Lupenvergrößerung M = S/f, die Gesamtvergrößerung des Mikroskops M_ges = M_ob×M_ok und die Auflösungsgrenze.
 
 Die Lupe ist die einfachste Sehhilfe – eine einzelne Sammellinse. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt nahe am Brennpunkt, entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
 
@@ -1762,6 +1837,14 @@ Teleskope (Fernrohre) sind für ferne Objekte konzipiert. Im einfachsten Fall (K
 > **M = f_ob / f_ok**
 
 Beispiel: f_ob = 1000 mm, f_ok = 25 mm → M = 40x. Das erzeugte Bild ist umgekehrt; für aufrechte Bilder (terrestrisches Fernrohr) wird ein Umkehrsystem eingebaut.
+
+![Reflexion und Linsen](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Strahlengang bei Linsen und Totalreflexion in Glasfasern — Basis für Endoskop, Lupe und Mikroskop.
+
+![Lichtleitung und Abbildung](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Totalreflexion in Glasfasern (Lichtleitung im Endoskop) und Strahlengang bei Linsen (Lupe, Mikroskop) — Grundlage optischer Instrumente.
 
 ## Endoskop
 
@@ -1999,11 +2082,17 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
       ],
       content: `## Einleitung
 
-Weltweit sind Milliarden Menschen kurzsichtig — Myopie ist die häufigste Fehlsichtigkeit. Ein 20-Jähriger kann seinen Fokus um 10 Dioptrien verändern (Akkommodation); ein 50-Jähriger kaum noch 2 Dioptrien (Presbyopie). Das Auge ist ein biologisches Linsensystem: Hornhaut (~43 dpt) und Linse (~20 dpt) bündeln Licht auf der Fovea. Wenn Brechkraft und Augenlänge nicht passen, entsteht Fehlsichtigkeit — die mit Linsen oder LASIK korrigierbar ist. Für den MedAT sind Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen und Dioptrienrechnung prüfungsrelevant.
+Das **Auge** ist ein Linsensystem: Hornhaut (~43 dpt) und Linse (~20 dpt) bündeln Licht auf der Fovea. **Akkommodation** passt die Brechkraft an; mit dem Alter nimmt sie ab (Presbyopie). Fehlsichtigkeit (Myopie, Hyperopie, Astigmatismus) entsteht, wenn Brechkraft und Augenlänge nicht passen. Für den MedAT sind Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen und Dioptrien prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Anatomie und Brechkraft des Auges; Akkommodation; Myopie (Kurz-/Weitsichtigkeit), Hyperopie, Presbyopie, Astigmatismus; Korrektionslinsen (Konkav/Konvex); Dioptrien. **Kontext:** Auge als optisches System; klinisch Refraktion, Brille, LASIK.
+
+---
 
 ## Anatomie und Optik des normalen Auges
 
-**SVG-Hinweis (Auge, Akkommodation, Fehlsichtigkeit):** Ein Schema mit Brechkraft ~60 dpt, Myopie/Hyperopie/Presbyopie und Korrektionslinsen unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Auge Fehlsichtigkeit](/grafik-transduktion-sinne.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht das Auge (Brechkraft ~60 dpt), Akkommodation sowie Myopie, Hyperopie und Presbyopie mit den zugehörigen Korrekturlinsen.
 
 Das Auge besteht optisch aus mehreren brechenden Flächen:
 - **Hornhaut (Kornea)**: liefert etwa 2/3 der gesamten Brechkraft (~43 dpt). Ihre stark gewölbte Vorderfläche ist der Hauptbrechungsort.
@@ -2012,6 +2101,10 @@ Das Auge besteht optisch aus mehreren brechenden Flächen:
 - **Glaskörper**: füllt den Hauptraum des Augapfels
 
 Die **Gesamtbrechkraft** des entspannten Auges beträgt ca. **60 Dioptrien**, bei maximaler Akkommodation ca. 70 dpt.
+
+![Linsen und Brechkraft](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Brennweite und Brechkraft von Linsen — Konvexlinse zur Korrektur von Hyperopie, Konkavlinse bei Myopie.
 
 Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt beim Erwachsenen ca. 24 mm.
 
@@ -2029,6 +2122,10 @@ Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt be
 
 - **Fernpunkt**: die weiteste Entfernung, auf die das Auge bei entspanntem Ziliarmuskel scharf sehen kann. Normal: im Unendlichen.
 - **Nahpunkt**: die nächste Entfernung, auf die das Auge bei maximaler Akkommodation scharf sehen kann. Normal: ~10 cm bei 20-jährigen, ~25 cm bei 40-jährigen, ~100+ cm im Alter.
+
+![Brechkraft und Korrektur](/grafik-optik-lupe.svg)
+
+**Erklärung zur Grafik:** Sammel- und Zerstreuungslinse zur Korrektur von Hyperopie bzw. Myopie; Brechkraft in Dioptrien und Strahlengang im Auge.
 
 ## Myopie (Kurzsichtigkeit)
 

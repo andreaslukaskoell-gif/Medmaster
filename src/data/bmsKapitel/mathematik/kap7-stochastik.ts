@@ -24,18 +24,17 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
-Wie viele Blutgruppen gibt es? Wie viele DNA-Codons sind möglich? Wie viele Wege gibt es, ein Medikamenten-Trio aus acht auszuwählen? Die Kombinatorik beantwortet genau diese Fragen — sie zählt systematisch, ohne alles aufzulisten. Sie bildet das rechnerische Fundament der Wahrscheinlichkeitsrechnung und beantwortet die Frage: Auf wie viele Arten lassen sich Objekte auswählen oder anordnen? Für den MedAT sind die vier Grundtypen und der Binomialkoeffizient prüfungsrelevant:
+**Kombinatorik** = systematisches Zählen: Anordnungen und Auswahlen (Permutation, Variation, Kombination). Für den MedAT sind die vier Grundtypen und Binomialkoeffizient prüfungsrelevant.
 
-- **Permutation:** Alle n Objekte werden angeordnet — wie viele Reihenfolgen gibt es?
-- **Variation:** k Objekte aus n auswählen und anordnen (Reihenfolge zählt)
-- **Kombination:** k Objekte aus n auswählen, Reihenfolge spielt keine Rolle
-- **Entscheidungsfrage:** Geordnet oder ungeordnet? Mit oder ohne Wiederholung?
+**In diesem Kapitel lernst du:** **Permutation** (n!); **Variation** (mit/ohne Wdh.); **Kombination** (n über k); **Fakultät**; Entscheidungsbaum (geordnet? Wiederholung?). **Kontext:** Von Blutgruppen bis Studienplanung.
 
 ---
 
 ## Grundbegriffe und Entscheidungsbaum
 
-**SVG-Hinweis (Kombinatorik — Permutation, Variation, Kombination):** Ein Schema mit n!, n!/(n−k)!, n^k und (n über k) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Kombinatorik](/grafik-kombinatorik.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst die Formeln der Kombinatorik zusammen: Permutation n!, Variation ohne Wiederholung n!/(n−k)!, Variation mit Wiederholung n^k und Kombination (n über k). So behältst du den Überblick bei geordnet/ungeordnet und mit/ohne Wiederholung.
 
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
@@ -333,19 +332,17 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
       ],
       content: `## Einleitung
 
-"Wie wahrscheinlich ist es, dass ein Kind von zwei CF-Trägern krank wird?" Solche Fragen beantwortet die Wahrscheinlichkeitsrechnung — sie quantifiziert Unsicherheit mit Zahlen zwischen 0 (unmöglich) und 1 (sicher). In der Medizin ist sie unverzichtbar: Erbkrankheiten (Mendel-Regeln), Nebenwirkungen, Testergebnisse. Für den MedAT sind folgende Konzepte prüfungsrelevant:
+**Wahrscheinlichkeit** P(A) ∈ [0,1]: Erbkrankheiten, Tests, Nebenwirkungen. Für den MedAT sind Laplace, Additionssatz, Komplementregel, Unabhängigkeit, Binomialverteilung prüfungsrelevant.
 
-- **Laplace-Experiment:** Alle Ergebnisse gleich wahrscheinlich → P(A) = |A| / |Ω|
-- **Additionssatz:** P(A oder B) = P(A) + P(B) − P(A und B)
-- **Komplementregel:** P(nicht A) = 1 − P(A)
-- **Unabhängigkeit:** P(A und B) = P(A) · P(B)
-- **Binomialverteilung:** k Erfolge in n unabhängigen Versuchen mit Erfolgswahrscheinlichkeit p
+**In diesem Kapitel lernst du:** **Laplace** P(A)=|A|/|Ω|; **Additionssatz**; **Komplementregel**; **Unabhängigkeit**; **Binomialverteilung**; Baumdiagramm. **Kontext:** Von Mendel bis Testinterpretation.
 
 ---
 
 ## Grundbegriffe
 
-**SVG-Hinweis (Wahrscheinlichkeit — Laplace, Additionssatz, Baum):** Ein Schema mit P(A) = |A|/|Ω|, P(A∪B) = P(A)+P(B)−P(A∩B) und Unabhängigkeit unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht Laplace-Wahrscheinlichkeit P(A) = |A|/|Ω|, den Additionssatz P(A∪B) = P(A)+P(B)−P(A∩B) und die Vierfeldertafel zur Berechnung bedingter Wahrscheinlichkeiten und Unabhängigkeit.
 
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
@@ -632,18 +629,17 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
       ],
       content: `## Einleitung
 
-Ein HIV-Test ist positiv — wie wahrscheinlich ist eine echte Infektion? Ohne Kenntnis der Prävalenz ist die Antwort überraschend: Bei niedriger Prävalenz können >80% der positiven Tests falsch-positiv sein. Das Bayes-Theorem rechnet um: aus P(positiv | krank) wird P(krank | positiv) — es ist das wichtigste Werkzeug zur Beurteilung medizinischer Tests und erklärt, warum ein positiver Befund bei seltenen Erkrankungen oft trügerisch ist. Für den MedAT prüfungsrelevant:
+**Bayes** = Umrechnung von P(Test|Krank) zu P(Krank|Test); bei niedriger Prävalenz viele falsch-positive Ergebnisse. Für den MedAT sind bedingte Wahrscheinlichkeit, Satz von Bayes, totale Wahrscheinlichkeit, Vierfeldertafel prüfungsrelevant.
 
-- **Bedingte Wahrscheinlichkeit:** P(A|B) = "Wahrscheinlichkeit von A, gegeben dass B eingetreten ist"
-- **Satz von Bayes:** erlaubt die "Umkehr" der Bedingung: aus P(B|A) wird P(A|B)
-- **Totale Wahrscheinlichkeit:** Gesamtwahrscheinlichkeit aus bedingten Teilen zusammensetzen
-- **Vierfeldertafel:** visuelle Rechenhilfe, besonders bei medizinischen Tests
+**In diesem Kapitel lernst du:** **P(A|B)** = P(A∩B)/P(B); **Satz von Bayes**; **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV. **Kontext:** Testinterpretation, Screening, seltene Erkrankungen.
 
 ---
 
 ## Bedingte Wahrscheinlichkeit
 
-**SVG-Hinweis (Bayes, Vierfeldertafel, PPV/NPV):** Ein Schema mit P(A|B) = P(A∩B)/P(B), Bayes-Formel und Vierfeldertafel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Vierfeldertafel (TP, TN, FP, FN), die Formel für bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) und die Umrechnung mit dem Satz von Bayes; wichtig für PPV und NPV bei medizinischen Tests.
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
@@ -918,20 +914,19 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 · 0,04 
       ],
       content: `## Einleitung
 
-Nüchtern-Blutzucker 126 mg/dL: normal oder pathologisch? Um das zu beurteilen, braucht man den Mittelwert und die Standardabweichung der Bevölkerung — und die Normalverteilung. Statistik macht aus Datenmassen handhabbare Kennzahlen. Im MedAT werden Lagemaße, Streumaße, die Normalverteilung sowie Sensitivität und Spezifität als Schlüsselbegriffe der medizinischen Diagnostik geprüft:
+**Statistik** = Lagemaße (Mittelwert, Median), Streumaße (σ, Varianz), **Normalverteilung** (68-95-99,7), **Sensitivität/Spezifität**. Für den MedAT sind Normalverteilung, 68-95-99,7-Regel, Lagemaße, Streumaße, Sens/Spez, p-Wert prüfungsrelevant.
 
-- **Normalverteilung:** Symmetrische Glockenkurve, definiert durch μ (Mittelwert) und σ (Standardabweichung)
-- **68-95-99,7-Regel:** μ±1σ umfasst 68%, μ±2σ umfasst 95%, μ±3σ umfasst 99,7% der Daten
-- **Lagemaße:** Mittelwert, Median, Modus
-- **Streumaße:** Varianz, Standardabweichung, Interquartilsabstand
-- **Sensitivität / Spezifität:** TP/(TP+FN) vs. TN/(TN+FP)
-- **p-Wert:** Wahrscheinlichkeit, ein mindestens so extremes Ergebnis zufällig zu sehen
+**In diesem Kapitel lernst du:** **Mittelwert**, **Median**, **Modus**; **Varianz**, **Standardabweichung**; **Normalverteilung** (μ, σ); **68-95-99,7**; **Sensitivität/Spezifität**; p-Wert. **Kontext:** Von Laborwerten zur Diagnostik.
 
 ---
 
 ## Lage- und Streumaße
 
-**SVG-Hinweis (Normalverteilung, 68-95-99,7, Sens/Spez):** Ein Schema mit μ, σ, Glockenkurve und Sensitivität/Spezifität unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Normalverteilung](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Normalverteilung (Glockenkurve) mit Mittelwert μ und Standardabweichung σ, die 68-95-99,7-Regel sowie die Zuordnung von Sensitivität und Spezifität (TP, TN, FP, FN) in der Diagnostik.
+
+![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
 ### Lagemaße (Maße der zentralen Tendenz)
 
@@ -1146,7 +1141,6 @@ Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt 
         "Sensitivität, Spezifität, PPV und NPV aus einer Vierfeldertafel berechnen und klinisch interpretieren",
         "Den p-Wert konzeptuell erklären und den Unterschied zu klinischer Bedeutsamkeit benennen",
       ],
-      imageUrl: "/grafik-33-vierfeldertafel.svg",
       sections: [
         {
           heading: "68-95-99,7-Regel — prüfungsrelevant anwenden",

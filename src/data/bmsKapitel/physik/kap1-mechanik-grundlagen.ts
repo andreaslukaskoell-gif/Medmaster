@@ -37,6 +37,9 @@ Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Ph
 - **Masse** und **Gewichtskraft** (F_G = m·g) und warum sie nicht dasselbe sind
 - klinische Anwendungen: Blutdruck (mmHg ↔ Pa), Infusionsrate, Grundumsatz in Watt
 
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um die **Grundsprache der Physik und Medizin**: das SI (Internationales Einheitensystem) mit sieben Basisgrößen und den daraus abgeleiteten Einheiten (Kraft, Druck, Energie, Leistung). Ohne einheitliche Einheiten wären Laborwerte, Dosierungen und Geräteangaben nicht vergleichbar. Du brauchst das für alle späteren Kapitel (Mechanik, Thermodynamik, Elektrizität), für die Dimensionsanalyse und für die sichere Interpretation klinischer Werte (z. B. Blutdruck in Pa oder mmHg).
+
 ---
 
 ## Das Internationale Einheitensystem (SI)
@@ -63,7 +66,9 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 > **Merke:** Es gibt **genau 7** SI-Basisgrößen. Alle anderen Einheiten (z. B. Newton, Pascal, Joule) sind **abgeleitet** — sie lassen sich als Produkt von Potenzen der Basiseinheiten schreiben.
 
-**SVG-Hinweis (SI-Basisgrößen — Übersichtstabelle):** Eine kompakte Tabelle oder Grafik mit den sieben Basisgrößen, Einheiten und Symbolen unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
+![SI-Basisgroessen](/grafik-si-grundeinheiten.svg)
+
+**Erklärung zur Grafik:** Die Abbildung listet die sieben SI-Basisgrößen mit ihren Einheiten und Symbolen (Länge, Masse, Zeit, Stromstärke, Temperatur, Stoffmenge, Lichtstärke).
 
 ---
 
@@ -112,7 +117,9 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 > **Merke:** **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung). Vektoren addiert man nicht einfach arithmetisch, sondern wie Pfeile (komponentenweise oder geometrisch).
 
-**SVG-Hinweis (Skalar vs. Vektor):** Ein Vergleichsschema zeigt ein Skalar (z. B. ein Thermometer mit 37 °C) und einen Vektor als Pfeil (Betrag + Richtung, z. B. Kraftpfeil). So wird der Unterschied auf einen Blick klar. *Typ: Vergleich / Schema.*
+![Skalar Vektor](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Grafik vergleicht ein Skalar (z. B. Temperatur 37 °C) mit einem Vektor als Pfeil (Betrag + Richtung, z. B. Kraft).
 
 ---
 
@@ -386,19 +393,35 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
 
 Ein Wasserstoffatom ist 0,1 nm groß, ein Mensch 1,7 m und die Milchstraße 10²¹ m breit. Die Medizin arbeitet mit µg/mL (Plasmaspiegel), mmol/L (Elektrolyte) und kPa (Blutdruck) — alles Variationen von SI-Einheiten mit **Präfixen**. Wer Präfixe sicher beherrscht, vermeidet tödliche Dosierungsfehler (µg vs. mg = Faktor 1000!). Für den MedAT sind SI-Präfixe, wissenschaftliche Notation und Einheitenumrechnungen prüfungsrelevant.
 
+**In diesem Kapitel lernst du:**
+- **SI-Präfixe** (µ, m, k, M, n, …) und ihre Zehnerpotenzen sicher zuordnen und umzurechnen
+- die **wissenschaftliche Notation** (a × 10ⁿ) zu lesen, zu schreiben und damit zu rechnen
+- warum bei **Flächen und Volumen** der Präfix-Faktor quadriert bzw. kubiert werden muss (1 cm² ≠ 10⁻² m²!)
+- **medizinisch relevante Größenordnungen** (Erythrozyt ~8 µm, DNA ~2 nm, 1 mL = 10⁻⁶ m³) einzuordnen
+- **typische Prüfungsfallen** (M vs. m, cm² vs. m²) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um die **kompakte Darstellung sehr großer und sehr kleiner Zahlen**: Präfixe (z. B. Mikro µ = 10⁻⁶) und die wissenschaftliche Schreibweise (z. B. 4,5 × 10⁻⁵). Das ist in der Medizin überall präsent — von Laborwerten (mmol/L, ng/mL) über Dosierungen (µg, mg) bis zu Volumina (µL, mL). Ohne sicheres Präfix-Verständnis drohen Größenordnungsfehler; solche Fehler zählen zu den häufigsten vermeidbaren Medikationsfehlern. Später brauchst du das in allen naturwissenschaftlichen Fächern (Chemie, Physik, Pharmakologie) und für jede Einheitenumrechnung im MedAT.
+
+---
+
 ## Warum brauchen wir Präfixe?
 
 Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffatom hat einen Durchmesser von etwa 0,000 000 000 106 m, während der Abstand von der Erde zur Sonne ca. 150 000 000 000 m beträgt. Das Herz schlägt in einer Frequenz von ca. 1,2 Hz, Röntgenstrahlung schwingt bei 10¹⁸ Hz, und radioaktive Isotope haben Halbwertszeiten von Millisekunden bis zu Milliarden Jahren. Um diese enormen Spannen handhabbar zu machen, gibt es zwei komplementäre Werkzeuge: **SI-Präfixe** und **wissenschaftliche Notation**.
 
 ## SI-Präfixe: Das metrische Vorsatzsystem
 
-**SVG-Hinweis (SI-Präfixe und Zehnerpotenzen):** Eine Übersichtstabelle oder Grafik mit Präfixen (µ, m, k, M), Zehnerpotenzen und typischen medizinischen Größenordnungen (Erythrozyt ~8 µm, DNA ~2 nm, 1 mL = 10⁻⁶ m³) unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
+![SI-Praefixe](/grafik-praefix-leiter.svg)
 
-SI-Präfixe sind Vorsätze, die vor eine Einheit gestellt werden und sie mit einer Zehnerpotenz multiplizieren.
+**Erklärung zur Grafik:** Die Abbildung zeigt die SI-Präfixe (µ, m, k, M usw.), Zehnerpotenzen und typische Größenordnungen in der Medizin (z. B. Erythrozyt ~8 µm, 1 mL = 10⁻⁶ m³).
+
+**Bisher haben wir gesehen:** Warum wir Präfixe und eine einheitliche Schreibweise brauchen. **Jetzt konkret:** Was sind Präfixe und wie schreibt man Zahlen kompakt?
+
+**SI-Präfixe** sind Vorsätze (z. B. Kilo, Milli, Mikro), die vor eine Einheit gestellt werden und sie mit einer **Zehnerpotenz** (z. B. 10³, 10⁻⁶) multiplizieren — so wird „1000 Meter“ zu „1 Kilometer“ (1 km) und „0,000 001 Gramm“ zu „1 Mikrogramm“ (1 µg).
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
 
-Jede Zahl lässt sich in der wissenschaftlichen Notation schreiben als a × 10ⁿ, wobei gilt: 1 ≤ |a| < 10 und n eine ganzzahlige Potenz ist. Der Faktor a heißt **Mantisse**, n der **Exponent**.
+**Um das Rechnen mit sehr großen und sehr kleinen Zahlen zu vereinheitlichen,** verwendet man die **wissenschaftliche Notation**. Jede Zahl lässt sich darin schreiben als **a × 10ⁿ**, wobei die **Mantisse** a zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** n eine ganze Zahl ist. Die **Mantisse** (a) ist die „Ziffernfolge vor der Zehnerpotenz“, der **Exponent** (n) gibt an, „wie oft 10 mit sich selbst multipliziert wird“ (bzw. bei negativem n: dividiert wird).
 
 **Beispiele:**
 - 0,000 053 m = 5,3 × 10⁻⁵ m = 53 µm (Durchmesser einer menschlichen Eizelle)
@@ -423,7 +446,13 @@ Jede Zahl lässt sich in der wissenschaftlichen Notation schreiben als a × 10�
 Wenn das Ergebnis der Mantissenmultiplikation ≥ 10 ist, muss normiert werden:
 (5 × 10⁴) × (4 × 10³) = 20 × 10⁷ = 2 × 10⁸
 
+![Wissenschaftliche Notation](/grafik-wissenschaftliche-notation.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Aufbau der wissenschaftlichen Notation (Mantisse × 10^Exponent) und hilft beim sicheren Umrechnen und Vergleichen sehr großer bzw. sehr kleiner Zahlen (z. B. in der Medizin).
+
 ## Präfixe bei Flächen und Volumen: Die häufigste Fehlerquelle
+
+**Bisher haben wir gesehen:** Präfixe und wissenschaftliche Notation für einfache Längen (m, cm, µm). **Das erklärt aber noch nicht,** wie man Flächen (m², cm²) und Volumina (m³, mL) umrechnet — hier ist die **häufigste Fehlerquelle**: Der Präfix-Faktor wird **quadriert** (Fläche) bzw. **kubiert** (Volumen).
 
 Bei Flächen- und Volumeneinheiten mit Präfixen müssen die Präfixpotenzen quadriert bzw. kubiert werden.
 
@@ -503,7 +532,7 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 
 **Zentral prüfungsrelevant:** Wissenschaftliche Notation (Vorzeichen, Zehnerpotenz), SI-Präfixe (µ, m, k, M), Längen/Flächen/Volumina, Dimensionskontrolle (M·L·T).
 
-**Ergänzend vertiefend:** Konsistenzprüfung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konsistenzprüfung von Einheiten in Formeln (z. B. µg/mL × mL = µg); signifikante Stellen; typische Verwechslungen (M vs. m, cm² vs. m², ng/µg/mg) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist 0,000 045 m in wissenschaftlicher Notation?" → 4,5 × 10⁻⁵ m = 45 µm
@@ -716,13 +745,27 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
 
 Eine falsche Einheit kann Leben kosten — eine bekannte Katastrophe ereignete sich, als eine Raumsonde zwischen Meilen und Kilometern verwechselt wurde. In der Medizin ist das Gleiche möglich: mg statt µg, mL/h statt µg/kg/min. **Dimensionsanalyse** ist die Methode, Formeln und Berechnungen auf Einheiten-Konsistenz zu prüfen: beide Seiten einer Gleichung müssen dieselbe Dimension haben. Sie dient auch als universelles Werkzeug zur Einheitenumrechnung. Für den MedAT sind Dimensionsanalyse, Einheitenumrechnungen (mmHg↔Pa, kcal↔kJ) und dimensionslose Größen prüfungsrelevant.
 
+**In diesem Kapitel lernst du:**
+- was **Dimensionsanalyse** ist und wie du damit Formeln auf Einheiten-Konsistenz prüfst (beide Seiten gleiche Dimension)
+- die **Basisdimensionen** (M, L, T) und typische abgeleitete Dimensionen (Kraft, Druck, Energie) zuzuordnen
+- mit dem **Kettenmultiplikationsverfahren** sicher umzurechnen (km/h → m/s, mmHg → Pa, kcal → kJ)
+- **klinisch wichtige Umrechnungen** (Temperatur °C/K/°F, Druck mmHg/Pa/cmH₂O, Energie kcal/kJ) zu beherrschen
+- **dimensionslose Größen** zu erkennen und die **Reynolds-Zahl** (Strömung laminar/turbulent) einzuordnen
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Einheiten-Konsistenz und sicheres Umrechnen**: Jede physikalische Gleichung muss „dimensionshomogen“ sein (linke und rechte Seite haben dieselbe „Natur“: Masse×Länge/Zeit² usw.). Das nutzt man einerseits zur **Fehlerprüfung** von Formeln, andererseits zum **systematischen Umrechnen** (z. B. Blutdruck mmHg in Pascal, Kalorien in Joule). In der Medizin sind Einheitenfehler eine der häufigsten vermeidbaren Fehlerquellen; die Kettenmultiplikation und das Wissen um typische Umrechnungen (1 mmHg ≈ 133 Pa, 1 kcal = 4,184 kJ) sind daher direkt prüfungs- und praxisrelevant. Später brauchst du das in allen naturwissenschaftlichen Fächern und bei jeder Dosierungs- oder Druckberechnung.
+
+---
+
 ## Was ist Dimensionsanalyse?
 
-**SVG-Hinweis (Dimensionsanalyse und Einheitenumrechnung):** Ein Schema mit Basisdimensionen M·L·T, typischen abgeleiteten Dimensionen (Kraft, Druck, Energie, Leistung) und dem Kettenmultiplikationsverfahren (mmHg → Pa, kcal → kJ) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
 
-Die **Dimensionsanalyse** (auch: Einheitenanalyse oder dimensionale Analyse) ist eine mächtige Technik, die auf folgender Grundaussage beruht: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn man eine Formel aufschreibt und die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
+**Erklärung zur Grafik:** Die Grafik veranschaulicht Basisdimensionen (M·L·T), abgeleitete Größen (Kraft, Druck, Energie, Leistung) und die Einheitenumrechnung per Kettenmultiplikation (z. B. mmHg → Pa).
 
-Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig vom Zahlenwert oder der gewählten Einheit. Die sieben Basisdimensionen entsprechen den sieben SI-Basisgrößen.
+Die **Dimensionsanalyse** (Methode, Gleichungen anhand ihrer Einheiten auf Konsistenz zu prüfen) beruht auf einer einfachen Regel: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
+
+Die **Dimension** einer Größe (ihre „physikalische Natur“: Länge, Masse, Zeit usw., unabhängig von Zahlenwert oder Einheit) wird in eckigen Klammern angegeben. Die **Basisdimensionen** (die sieben Grundbausteine des SI-Systems: Länge L, Masse M, Zeit T, Stromstärke I, Temperatur Θ, Stoffmenge N, Lichtstärke J) entsprechen den sieben SI-Basisgrößen.
 
 Die Dimension einer abgeleiteten Größe wird in eckigen Klammern angegeben:
 - [Kraft] = M·L·T⁻² (entspricht Newton)
@@ -731,9 +774,11 @@ Die Dimension einer abgeleiteten Größe wird in eckigen Klammern angegeben:
 - [Leistung] = M·L²·T⁻³ (entspricht Watt)
 - [Impuls] = M·L·T⁻¹ (kg·m/s)
 
-Wichtig: **Dimensionslose Größen** (wie Wirkungsgrad, Brechungsindex, pH-Wert, Reynolds-Zahl) haben keine Dimension. Auch Winkel (in Radiant oder Grad) sind dimensionslos.
+Wichtig: **Dimensionslose Größen** (Zahlen ohne Einheit, z. B. Wirkungsgrad, Brechungsindex, pH-Wert, Reynolds-Zahl) haben die Dimension 1 — sie sind reine Verhältniszahlen. Auch Winkel (Radiant oder Grad) sind dimensionslos.
 
 ## Dimensionsanalyse als Formelprüfung
+
+**Darauf aufbauend** können wir die Dimensionsanalyse nutzen, um Formeln zu prüfen — ohne die Formel lösen zu müssen.
 
 Angenommen, jemand behauptet, die kinetische Energie sei E_kin = m·v (statt E_kin = ½·m·v²). Die Dimensionsanalyse entlarvt den Fehler:
 
@@ -746,10 +791,14 @@ Ebenso: Wenn eine Herleitung zum Ergebnis "Meter plus Sekunden" führt, ist gara
 
 ## Einheitenumrechnung mit dem Kettenmultiplikationsverfahren
 
-Das sicherste Verfahren zur Einheitenumrechnung ist die **Multiplikation mit 1** in Form von Umrechnungsfaktoren. Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
+**Um das Gelernte praktisch zu nutzen:** Mit der Dimensionsanalyse prüfen wir Formeln — zum **Umrechnen** von Einheiten brauchen wir ein klares Rechenverfahren. Das sicherste ist die **Kettenmultiplikation** („Multiplikation mit 1“ in Form von Umrechnungsfaktoren). Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
 
 **Beispiel: 72 km/h in m/s:**
 72 km/h × (1000 m / 1 km) × (1 h / 3600 s) = 72 × 1000/3600 m/s = 20 m/s
+
+![Geschwindigkeitsumrechnung](/grafik-kmh-ms.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Umrechnung zwischen km/h und m/s per Kettenmultiplikation — wichtig für Geschwindigkeitsangaben (z. B. in Physik und Verkehrsmedizin).
 
 Merke: km/h ÷ 3,6 = m/s
 
@@ -760,6 +809,8 @@ Merke: km/h ÷ 3,6 = m/s
 **Beispiel Energie: 500 kcal in Joule:**
 1 kcal = 4,184 kJ = 4184 J
 500 kcal × (4184 J / 1 kcal) = 2 092 000 J = 2092 kJ ≈ 2,09 MJ
+
+**Bisher haben wir gesehen:** Wie man mit Kettenmultiplikation umrechnet. **Für den MedAT und den Klinikalltag** sind folgende Umrechnungen besonders wichtig:
 
 ## Wichtige klinische Umrechnungen
 
@@ -784,7 +835,7 @@ Grundumsatz: ~1700–2000 kcal/d = ~7000–8400 kJ/d
 
 ## Reynolds-Zahl: Dimensionsloser Quotient in der Hämodynamik
 
-In der Physik spielen **dimensionslose Kennzahlen** eine wichtige Rolle. Die **Reynolds-Zahl** Re beschreibt das Strömungsverhalten:
+**Nicht jede wichtige Größe hat eine Einheit.** In der Physik und in der Medizin spielen **dimensionslose Kennzahlen** eine wichtige Rolle — sie sind reine Zahlen und bleiben unabhängig vom Einheitensystem. Die **Reynolds-Zahl** (Re) ist eine solche Kennzahl; sie beschreibt, ob eine Flüssigkeitsströmung **laminar** (geordnet, schichtweise) oder **turbulent** (wirbelnd, chaotisch) ist:
 
 Re = (ρ · v · d) / η
 
@@ -805,7 +856,7 @@ Klinische Anwendung: Bei Anämie sinkt die Blutviskosität η, Re steigt, Turbul
 
 ## Wirkungsgrad: Ein weiterer dimensionsloser Quotient
 
-Der **Wirkungsgrad** η (eta) = nutzbarer Energieoutput / zugeführter Energieinput ist dimensionslos (Energie/Energie = 1). Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
+**Ein weiteres Beispiel** für eine dimensionslose Größe ist der **Wirkungsgrad** (η, gesprochen „Eta“): das Verhältnis von nutzbar abgegebener zu zugeführter Energie. Er ist dimensionslos (Energie/Energie = 1) und wird oft in Prozent angegeben. Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
 
 ## Rechenbeispiele
 
@@ -837,7 +888,7 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 
 **Zentral prüfungsrelevant:** Dimensionsanalyse (Masse M, Länge L, Zeit T), Druck = M·L⁻¹·T⁻², Kraft = M·L·T⁻², Energie = M·L²·T⁻², Dimensionsgleichheit bei Gleichungen.
 
-**Ergänzend vertiefend:** Buckingham-π; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Buckingham-π (dimensionslose Kennzahlen aus Variablengruppen); Impuls [m·v] vs. Energie [m·v²]; typische Verwechslungen (Impuls ≠ Energie, 1 mmHg ≠ 1 cmH₂O) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Dimension hat Druck?" → M·L⁻¹·T⁻² (= kg·m⁻¹·s⁻² = Pa)
@@ -1049,17 +1100,31 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
       ],
       content: `## Einleitung
 
-Warum bricht ein Knochen beim Sturz? Warum muss man für eine effektive Herzdruckmassage stark drücken? Die Antworten liefert die **Newtonsche Mechanik**: Drei Gesetze, die Bewegung unter Krafteinfluss vollständig beschreiben. Kinematik beschreibt die Bewegung (ohne Ursachen), Dynamik erklärt sie mit Kräften. Für den MedAT sind die drei Newtonschen Gesetze, freier Fall, Dezelerationstrauma und die Grundbegriffe der Kinematik prüfungsrelevant.
+Warum bricht ein Knochen beim Sturz? Warum muss man für eine effektive Herzdruckmassage stark drücken? Die Antworten liefert die **Newtonsche Mechanik**: Drei Gesetze, die Bewegung unter Krafteinfluss vollständig beschreiben. **Kinematik** (Beschreibung von Bewegung ohne Ursachen) und **Dynamik** (Erklärung durch Kräfte) bilden das Gerüst. Für den MedAT sind die drei Newtonschen Gesetze, freier Fall, Dezelerationstrauma und die Grundbegriffe der Kinematik prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- die **drei Newtonschen Gesetze** (Trägheit, F = m·a, actio = reactio) zu formulieren und auf Alltag und Klinik anzuwenden
+- **Kinematik**: gleichförmige (s = v·t) und gleichmäßig beschleunigte Bewegung (v = v₀ + a·t, s = v₀·t + ½·a·t²) sowie **freien Fall** (a = g ≈ 9,81 m/s²)
+- warum **actio = reactio** Kräfte auf verschiedene Körper meint und sie sich nicht „aufheben“
+- **Dezelerationstrauma** (Trägheit der Organe bei plötzlichem Stopp) und **CPR** (F = m·a, Kompressionstiefe) einzuordnen
+- typische Prüfungsfallen (z. B. g ist Beschleunigung, keine Kraft) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Bewegung und Kräfte**: Wie beschreibt man Weg, Geschwindigkeit und Beschleunigung (Kinematik), und wie hängen Kraft, Masse und Beschleunigung zusammen (Newtonsche Gesetze)? Das ist die Basis aller Mechanik — von Sturz und Unfall (Dezelerationstrauma, Airbag) über Reanimation (Herzdruckmassage) bis zu Injektion und Punktion. Du brauchst es für Erhaltungssätze (Energie, Impuls), für Wärme und Strömung und für sicheres Lösen von MedAT-Aufgaben zu Kraft, Fall und Bremsweg.
+
+---
 
 ## Newtonsche Gesetze und Kinematik
 
-**SVG-Hinweis (Newtonsche Gesetze und Kinematik):** Ein Schema mit den drei Newtonschen Gesetzen (Trägheit, F=ma, actio=reactio), freiem Fall (v, s, g) und Kräftegleichgewicht unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Newton Kinematik](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst die drei Newtonschen Gesetze (Trägheit, F=ma, actio=reactio), den freien Fall (v, s, g) und das Kräftegleichgewicht zusammen.
 
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
 ## Kinematik: Bewegung ohne Kräfte
 
-Die Kinematik beschreibt Bewegung rein geometrisch, ohne die Ursachen zu hinterfragen. Grundgrößen sind Ort (s), Zeit (t), Geschwindigkeit (v) und Beschleunigung (a).
+**Um Bewegung mathematisch zu fassen,** betrachtet man zuerst nur den Ablauf — **ohne** nach der Ursache zu fragen. Das ist die **Kinematik** (Bewegungslehre). Grundgrößen sind **Ort** (s), **Zeit** (t), **Geschwindigkeit** (v = Weg pro Zeit) und **Beschleunigung** (a = Änderung der Geschwindigkeit pro Zeit).
 
 **Gleichförmige Bewegung:** Bei konstanter Geschwindigkeit gilt s = v · t. Der Weg ist proportional zur Zeit. Im v-t-Diagramm ist das eine Horizontale; die Fläche unter der Kurve ergibt den zurückgelegten Weg.
 
@@ -1068,6 +1133,10 @@ Die Kinematik beschreibt Bewegung rein geometrisch, ohne die Ursachen zu hinterf
 **Vektorielle Darstellung:** Geschwindigkeit und Beschleunigung sind Vektoren — sie haben Betrag (Skalar) und Richtung. Bei schiefer Wurf-Bewegung zerlegt man die Bewegung in horizontale (v_x = const) und vertikale Komponente (v_y = v₀y − g·t). Die Bahnkurve ist eine Parabel.
 
 **Relativbewegung:** Geschwindigkeiten addieren sich vektoriell. Wenn ein Läufer mit 4 m/s in einem Zug fährt, der selbst 30 m/s schnell fährt, ist seine Geschwindigkeit relativ zur Erde 34 m/s (in Fahrtrichtung) oder 26 m/s (entgegen). **Superpositionsprinzip**: Wirken mehrere Kräfte oder Bewegungen gleichzeitig auf einen Körper, addieren sich ihre Vektoren unabhängig voneinander. Das Gesamtergebnis ist die Vektorsumme aller Einzelbeiträge.
+
+![Körper und Kräfte](/grafik-koerper.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht Körper unter Krafteinwirkung, Kräftegleichgewicht und die vektorielle Zerlegung von Kräften — zentral für Newtonsche Gesetze und Kinematik.
 
 ## Das erste Newtonsche Gesetz — Trägheitsgesetz
 
@@ -1120,7 +1189,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 
 **Zentral prüfungsrelevant:** Newtonsche Gesetze (1: Trägheit, 2: F=ma, 3: actio=reactio), Kräftegleichgewicht, Freier Fall (g≈9,81 m/s²), Reibung, Anwendung (Körper in Ruhe/Bewegung).
 
-**Ergänzend vertiefend:** Impuls; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Impuls p = m·v und Kraftstoß; Superpositionsprinzip (Vektorsumme der Kräfte); typische Verwechslungen (actio/reactio auf verschiedene Körper, v vs. s Formeln, g als Beschleunigung) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt das 1. Newtonsche Gesetz?" → Kein Nettokraft → keine Zustandsänderung (Trägheit)
@@ -1302,15 +1371,29 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
 
 Warum bricht ein Knochen beim Sturz aus einer bestimmten Höhe? Warum überträgt ein Projektil seine gesamte kinetische Energie auf Gewebe? Warum leistet das Herz täglich ~96 kJ mechanische Arbeit? All das erklären die **Erhaltungssätze**: Energie, Impuls und Drehimpuls bleiben in abgeschlossenen Systemen konstant. Diese Prinzipien sind universell und fundamental. Für den MedAT sind Energieerhaltung, kinetische/potenzielle Energie, Impuls, Herzarbeit und Wirkungsgrad prüfungsrelevant.
 
+**In diesem Kapitel lernst du:**
+- **Energieerhaltung**: E_kin = ½mv², E_pot = mgh, Arbeit W = F·s, Leistung P = W/t
+- **Impulserhaltung**: p = m·v, Kraftstoß = Δp; elastischer vs. inelastischer Stoß
+- **Drehimpulserhaltung** (kurz) und warum Erhaltungssätze in abgeschlossenen Systemen gelten
+- **Herzarbeit** (W = p·ΔV) und **Wirkungsgrad** (nutzbarer Output / zugeführter Input) einzuordnen
+- typische Prüfungsfallen (Impuls ≠ Energie, [p] = M·L·T⁻¹ vs. [E] = M·L²·T⁻²) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Erhaltungsgrößen**: In abgeschlossenen Systemen bleiben Gesamtenergie, Gesamtimpuls und Drehimpuls konstant. Damit lassen sich Stöße, Fallhöhen, Bremswege und Herzarbeit berechnen, ohne jede Einzelkraft zu kennen. In der Medizin: Sturztrauma (potenzielle → kinetische Energie), Herzarbeit (Druck × Volumenänderung), Wirkungsgrad des Herzens. Du brauchst das für alle weiteren Physikthemen (Wärme, Wellen, Atomphysik) und für MedAT-Aufgaben zu Energie, Stoß und Leistung.
+
+---
+
 ## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
-**SVG-Hinweis (Energie, Impuls, Herzarbeit):** Ein Schema mit E_kin = ½mv², E_pot = mgh, Impuls p = mv, elastischem vs. inelastischem Stoß und Herzarbeit W = p·ΔV unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Formelschema.*
+![Energie Impuls](/grafik-energie-impuls.svg)
 
-Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem abgeschlossenen System konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung. Sie folgen aus fundamentalen Symmetrieprinzipien (Noether-Theorem): Energieerhaltung aus Zeitsymmetrie, Impulserhaltung aus Translationssymmetrie, Drehimpulserhaltung aus Rotationssymmetrie.
+**Erklärung zur Grafik:** Die Grafik zeigt E_kin = ½mv², E_pot = mgh, Impuls p = mv, elastischen vs. inelastischen Stoß und die Herzarbeit W = p·ΔV.
+
+Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem **abgeschlossenen System** (kein Austausch mit der Umgebung) konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung.
 
 ## Impuls und Impulserhaltung
 
-Der Impuls p = m · v ist das Produkt aus Masse und Geschwindigkeit (Einheit: kg·m/s = N·s). Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
+**Um Stöße und Kollisionen zu verstehen,** starten wir mit dem **Impuls**. Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge“ beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
 
 Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
 
@@ -1342,6 +1425,10 @@ In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Fede
 
 Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.
 
+![Energieumwandlung](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt Energieformen und deren Umwandlung (mechanisch, Wärme) — Grundlage für Energieerhaltung und Wirkungsgrad (z. B. Herzarbeit, Muskelarbeit).
+
 ## Rechenbeispiele
 
 **Beispiel 1 — Sturzenergie und Frakturrisiko:**
@@ -1369,7 +1456,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 
 **Zentral prüfungsrelevant:** Kinetische Energie E_kin = ½mv² (E~v²), potentielle Energie (Lage), Energieerhaltung, Arbeit W = F·s, Leistung P = W/t, Rollreibung.
 
-**Ergänzend vertiefend:** Elastische Stöße; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Elastischer Stoß (Impuls und E_kin erhalten); vollkommen inelastischer Stoß (nur Impuls); Drehimpuls L = I·ω und Pirouetteneffekt; typische Verwechslungen (Impuls ≠ Energie, Arbeit nur bei Kraft parallel zum Weg) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist E_kin bei doppelter Geschwindigkeit?" → 4-fach (E_kin ~ v²)
@@ -1544,11 +1631,25 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
       diagram: "newton-forces",
       content: `## Einleitung
 
-Warum braucht der Bizeps 700 N, um 10 kg zu heben? Warum kollabiert eine Koronarstenose den Blutfluss auf ein Sechzehntel? Warum ist der Blutdruck am Fuß im Stehen um 100 mmHg höher als am Herzen? Statik erklärt Kräftegleichgewichte (Hebelprinzip im Skelett), Hydrodynamik den Blutfluss. Für den MedAT sind Drehmoment, Hebelgesetz, Poiseuille-Gesetz (Q ~ r⁴), Bernoulli-Gleichung, Kontinuität und Reynolds-Zahl prüfungsrelevant.
+Warum braucht der Bizeps 700 N, um 10 kg zu heben? Warum kollabiert eine Koronarstenose den Blutfluss auf ein Sechzehntel? Warum ist der Blutdruck am Fuß im Stehen um 100 mmHg höher als am Herzen? **Statik** (Kräftegleichgewicht, Hebel) und **Hydrodynamik** (Strömung, Druck, Durchfluss) beantworten das. Für den MedAT sind Drehmoment, Hebelgesetz, Poiseuille-Gesetz (Q ~ r⁴), Bernoulli-Gleichung, Kontinuität und Reynolds-Zahl prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Statik**: Drehmoment M = F·r, Hebelgesetz (Gleichgewicht der Drehmomente), Anwendung am Skelett
+- **Druck**: p = F/A, hydrostatischer Druck p = ρ·g·h, Pascal-Prinzip (Druck fortgepflanzt)
+- **Strömung**: Kontinuitätsgleichung (A·v = const), Bernoulli (Druck + ½ρv² + ρgh = const), **Poiseuille** (Q ∝ r⁴)
+- **Viskosität** (η) und **Reynolds-Zahl** (laminar vs. turbulent) einzuordnen
+- typische Prüfungsfallen (Stenose: Radius halbiert → Durchfluss 1/16) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Kräfte im Gleichgewicht** (Statik) und um **Flüssigkeiten und Gase in Bewegung** (Hydrodynamik): Blutdruck, Blutfluss, Beatmung, Infusion. Das Hebelgesetz erklärt Muskelkräfte im Körper; Poiseuille und Bernoulli erklären Stenosen, Shunts und Druckverläufe. Du brauchst das für Kardiologie, Intensivmedizin und für MedAT-Aufgaben zu Druck, Durchfluss und Strömungstyp.
+
+---
 
 ## Statik, Druck und Hydrodynamik
 
-**SVG-Hinweis (Statik, Druck, Strömung):** Ein Schema mit Hebelgesetz (Drehmoment), hydrostatischem Druck p = ρgh, Bernoulli und Poiseuille (Q ∝ r⁴) unterstützt die Einordnung. *Typ: Übersicht / Schema.*
+![Statik Stroemung](/grafik-statik-stroemung.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Hebelgesetz und Drehmoment, hydrostatischen Druck p = ρgh, Bernoulli-Gleichung und das Gesetz von Hagen-Poiseuille (Q ∝ r⁴).
 
 Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
@@ -1575,6 +1676,10 @@ Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen 
 **Bernoulli-Gleichung:** ½·ρ·v² + ρ·g·h + p = const. Dies ist der Energieerhaltungssatz für Strömungen. An engen Stellen (hohe Geschwindigkeit) ist der Druck niedrig, an weiten Stellen (geringe Geschwindigkeit) ist der Druck hoch. Anwendung: Bei einer Arterienstenose steigt die Strömungsgeschwindigkeit — der Druck fällt hinter der Stenose ab (poststenotischer Druckabfall).
 
 **Poiseuille-Gesetz (reibungsbehaftete Strömung):** Der Volumenstrom durch ein zylindrisches Gefäß ist Q = (π·r⁴·Δp)/(8·η·l). Der Radius geht mit der vierten Potenz ein! Eine Halbierung des Gefäßradius reduziert den Volumenstrom auf 1/16 des ursprünglichen Wertes. Das erklärt, warum Koronarstenosen so kritisch sind: Eine 50%ige Radiusreduktion reduziert den Blutfluss auf 6,25 % des Normalen.
+
+![Druck und Volumen](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Zusammenhang zwischen Druck p und Volumen V (z. B. Boyle-Mariotte) — wichtig für Beatmung, Lunge und Gefäßdruck.
 
 ## Viskosität und Strömungstypen
 
@@ -1613,7 +1718,7 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 
 **Zentral prüfungsrelevant:** Poiseuille Q = π·r⁴·Δp/(8·η·l), Q ~ r⁴ (Radius dominierend), Viskosität η, laminare Strömung, Widerstand bei Rohr/ Gefäß (Klinik: Stenose).
 
-**Ergänzend vertiefend:** Reynolds-Zahl; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Reynolds-Zahl Re = ρvd/η (laminar < 2300, turbulent > 4000); Bernoulli und Venturi-Effekt bei Stenosen; Oberflächenspannung und Surfactant; typische Verwechslungen (Q ~ r⁴ nicht r², enge Stelle → v↑ p↓) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
@@ -1792,11 +1897,25 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Warum atrophieren Muskeln und Knochen im Weltraum? Warum trennt eine Zentrifuge Blut in Plasma und Blutzellen? Warum ist ein Gehstock so wertvoll gegen Sturzgefahr? Gravitation und Rotationsbewegung erklären es. Das Gravitationsgesetz und die Zentripetalkraft sind die Grundlagen — im Labor (Zentrifuge), in der Medizin (g-Kräfte bei Trauma) und im Körper (Standfläche, Schwerpunkt). Für den MedAT sind Gravitationsgesetz, Masse vs. Gewicht, Zentripetalkraft, RCF (Zentrifuge) und Schwerpunktlage prüfungsrelevant.
+Warum atrophieren Muskeln und Knochen im Weltraum? Warum trennt eine Zentrifuge Blut in Plasma und Blutzellen? Warum ist ein Gehstock so wertvoll gegen Sturzgefahr? **Gravitation** und **Rotation** erklären es. Das Gravitationsgesetz und die Zentripetalkraft sind die Grundlagen — im Labor (Zentrifuge), in der Medizin (g-Kräfte bei Trauma) und im Körper (Standfläche, Schwerpunkt). Für den MedAT sind Gravitationsgesetz, Masse vs. Gewicht, Zentripetalkraft, RCF (Zentrifuge) und Schwerpunktlage prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- das **Gravitationsgesetz** F_G = G·m₁·m₂/r² und die Näherung **F_G = m·g** (g ≈ 9,81 m/s²) auf der Erde
+- den Unterschied **Masse** (kg, ortsunabhängig) vs. **Gewichtskraft** (N, ortsabhängig) und Schwerelosigkeit
+- **Kreisbewegung**: Zentripetalbeschleunigung a_z = v²/r = ω²·r, **Zentripetalkraft** F_z = m·v²/r
+- **Zentrifuge**: RCF (relative Zentrifugalbeschleunigung), Sedimentation von Blutbestandteilen
+- **Schwerpunkt** und Gleichgewichtsarten (stabil, labil, indifferent); g-Kräfte in der Medizin
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Schwerkraft** und **Kreisbewegung**: Wie hängt die Gewichtskraft von Ort und Masse ab? Was hält einen Körper auf einer Kreisbahn (Zentripetalkraft)? Das brauchst du für Zentrifugation im Labor, für g-Kräfte bei Unfall und Flug, für Gleichgewicht und Sturzprophylaxe (Schwerpunkt, Standfläche). Du brauchst es auch für spätere Themen (Energie, Wellen) und für MedAT-Aufgaben zu Masse/Gewicht, RCF und Gleichgewicht.
+
+---
 
 ## Gravitation und Rotation
 
-**SVG-Hinweis (Gravitation, Zentripetalkraft, Zentrifuge):** Ein Schema mit F_G = m·g, Zentripetalkraft F_z = m·v²/r, RCF (relative Zentrifugalkraft) und Schwerpunkt unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Gravitation Zentrifuge](/grafik-gravitation-zentrifuge.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht die Gewichtskraft F_G = m·g, die Zentripetalkraft F_z = m·v²/r, die relative Zentrifugalkraft (RCF) und den Schwerpunkt.
 
 Gravitation und Rotation sind zwei der fundamentalsten Phänomene der Physik. Die Gravitation beschreibt die Anziehungskraft zwischen Massen, Rotation beschreibt die Kreisbewegung und die damit verbundenen Beschleunigungen und Kräfte. Beide sind in der Medizin präsent: von der Erdanziehung auf den menschlichen Körper (Blutverteilung, orthopädische Belastung) bis zur Zentrifugation in der Labormedizin.
 
@@ -1815,6 +1934,10 @@ Gleichförmige Kreisbewegung bedeutet konstante Bahngeschwindigkeit v bei sich s
 Wichtige Beziehungen: Umlaufzeit T = 2π/ω. Frequenz f = 1/T. Bahngeschwindigkeit v = ω·r = 2πr/T.
 
 **Scheinkräfte bei Rotation:** Im rotierenden Bezugssystem wirken Scheinkräfte (Trägheitskräfte): Zentrifugalkraft F_cf = m·ω²·r (nach außen gerichtet) und Corioliskraft (bei Bewegungen im rotierenden System).
+
+![Kräfte als Vektoren](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Gewichtskraft und Zentripetalkraft sind Vektoren mit Betrag und Richtung; die Grafik zeigt die vektorielle Zerlegung und Addition von Kräften bei Kreisbewegung und Schwerpunkt.
 
 ## Labormedizin: Zentrifugation
 
@@ -1864,7 +1987,7 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 
 **Zentral prüfungsrelevant:** Masse (kg, ortsunabhängig) vs. Gewichtskraft (F_G = m·g, ortsabhängig), g ≈ 9,81 m/s², Schwerelosigkeit, Auftrieb, Anwendung (Waage, Beschleunigung).
 
-**Ergänzend vertiefend:** Relativistische Masse; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Keplersche Gesetze (T² ~ a³); Trägheitsmoment I und Drehimpuls L = I·ω; Zentrifugalkraft als Scheinkraft; typische Verwechslungen (Masse bleibt in Schwerelosigkeit, Zentripetal- vs. Zentrifugalkraft) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ist der Unterschied zwischen Masse und Gewichtskraft?" → Masse (kg): ortsunabhängig, Materieeigenschaft; Gewichtskraft (N) = m·g, ortsabhängig

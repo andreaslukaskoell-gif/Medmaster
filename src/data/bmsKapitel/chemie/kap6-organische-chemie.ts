@@ -16,7 +16,9 @@ export const chemKapOrganisch: Kapitel = {
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       content: `## Einleitung
 
-Organische Chemie ist die Chemie des Kohlenstoffs — und damit die Chemie des Lebens. Kohlenhydrate, Fette, Proteine, DNA: alle sind organische Moleküle. Den einfachsten Baustein bilden die **Kohlenwasserstoffe**: Verbindungen aus C und H. Schon hier entscheidet die Sättigung (Alkane, Alkene, Alkine) über die Reaktivität. Für den MedAT sind IUPAC-Nomenklatur, Hybridisierung (sp³/sp²/sp), die Markovnikov-Regel sowie der Bromwassertest prüfungsrelevant.
+Organische Chemie = Chemie des Kohlenstoffs (Leben, Pharmaka, Biomoleküle). **Kohlenwasserstoffe** (C, H): Alkane, Alkene, Alkine. Für den MedAT sind IUPAC-Nomenklatur, Hybridisierung, Markovnikov-Regel und Bromwassertest prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Alkane** (gesättigt), **Alkene** (Doppelbindung), **Alkine** (Dreifachbindung); IUPAC; **Markovnikov**; Bromwassertest (ungesättigt). **Kontext:** Bausteine der Organik; Reaktivität durch Sättigung.
 
 ---
 
@@ -74,7 +76,9 @@ Alkine besitzen eine C≡C-Dreifachbindung (eine σ- und zwei π-Bindungen). Die
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
-**SVG-Hinweis (Kohlenwasserstoffe — Alkane, Alkene, Alkine):** Ein Vergleichsschema mit sp³/sp²/sp, Bindungswinkeln und den Formeln CₙH₂ₙ₊₂ / CₙH₂ₙ / CₙH₂ₙ₋₂ sowie Bromwassertest und Markovnikov unterstützt die Prüfungsvorbereitung. *Typ: Vergleich / Übersicht.*
+![Kohlenwasserstoffe](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Die Abbildung vergleicht Alkane, Alkene und Alkine: Hybridisierung sp³/sp²/sp, Bindungswinkel, Summenformeln CₙH₂ₙ₊₂ / CₙH₂ₙ / CₙH₂ₙ₋₂ sowie Bromwassertest und Markovnikov-Regel.
 
 ## Polymerisation
 
@@ -344,13 +348,17 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
       title: "Isomerie und Stereochemie",
       content: `## Einleitung
 
-Zwei Moleküle, gleiche Formel — aber völlig verschiedene Wirkung. Das S-Enantiomer von Thalidomid (Contergan) verursachte Missbildungen, das R-Enantiomer war harmlos. Enzymaktivzentren, Rezeptoren und Ionenkanäle erkennen Moleküle dreidimensional und unterscheiden Spiegelbilder. Das ist **Stereochemie**. Für den MedAT sind Konstitutionsisomere, Enantiomere, Diastereomere, das Chiralitätszentrum (R/S-Konfiguration) und Cis-Trans-Isomerie prüfungsrelevant.
+**Stereochemie** = räumliche Anordnung; gleiche Summenformel, andere Wirkung (z. B. Thalidomid). Für den MedAT sind Konstitutionsisomere, **Enantiomere**, **Diastereomere**, **Chiralitätszentrum** (R/S), Cis-Trans-Isomerie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Konstitutionsisomere**; **Enantiomere** (Spiegelbilder, R/S); **Diastereomere**; **Cis-Trans**; biologische Relevanz. **Kontext:** 3D-Struktur und Wirkung; Pharmaka, Enzyme.
 
 ---
 
 ## Konstitutionsisomere (Strukturisomere)
 
-**SVG-Hinweis (Isomerie — Konstitution, Konformation, Stereochemie):** Ein Schema mit Strukturisomeren, cis/trans, Enantiomeren (Spiegelbild) und R/S-Nomenklatur unterstützt die Abgrenzung und Chiralität. *Typ: Übersicht / Schema.*
+![Isomerie](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Konstitutionsisomere, Konformation (cis/trans), Enantiomere (Spiegelbilder) und die R/S-Nomenklatur zur Abgrenzung bei chiralen Zentren.
 
 Konstitutionsisomere unterscheiden sich in der Reihenfolge (Konnektivität) der Atome. Sie haben die gleiche Summenformel, aber verschiedene Bindungspartner und damit unterschiedliche chemische und physikalische Eigenschaften.
 
@@ -668,13 +676,17 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       title: "Funktionelle Gruppen der Organik",
       content: `## Einleitung
 
-Alle Pharmaka, Hormone, Enzyme-Substrate und Metabolite haben eines gemeinsam: Sie enthalten **funktionelle Gruppen** — definierte Atomgruppen, die das chemische Verhalten bestimmen. Eine Hydroxylgruppe (–OH) macht aus einem Kohlenwasserstoff einen Alkohol; eine Carboxylgruppe (–COOH) macht daraus eine Säure. Wer die funktionellen Gruppen kennt, versteht Reaktivität, Löslichkeit, Acidität und Biologische Funktion. Für den MedAT sind Alkohole, Aldehyde, Ketone, Carbonsäuren, Ester, Amine und Thiole prüfungsrelevant.
+**Funktionelle Gruppen** (–OH, –COOH, –CHO, C=O, –NH₂, …) bestimmen Reaktivität, Löslichkeit und Acidität. Für den MedAT sind Alkohole, Aldehyde, Ketone, Carbonsäuren, Ester, Amine, Thiole prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Alkohole** (–OH), **Aldehyde/Ketone** (C=O), **Carbonsäuren** (–COOH), **Ester**, **Amine**, **Thiole**; Oxidationsstufen; biologische Rolle. **Kontext:** Von der Gruppe zur Funktion; Pharmaka, Metabolite.
 
 ---
 
 ## Alkohole (−OH, Hydroxylgruppe)
 
-**SVG-Hinweis (Funktionelle Gruppen und Oxidationsstufen):** Eine Übersicht mit −OH, −CHO, C=O, −COOH, −COO−, −NH₂, −SH und den typischen Verbindungsklassen (Alkohol, Aldehyd, Keton, Carbonsäure, Ester, Amin) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Tabelle.*
+![Funktionelle Gruppen](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die Grafik listet die wichtigsten funktionellen Gruppen (−OH, −CHO, C=O, −COOH, −COO−, −NH₂, −SH) und die zugehörigen Verbindungsklassen (Alkohol, Aldehyd, Keton, Carbonsäure, Ester, Amin).
 
 Alkohole enthalten eine Hydroxylgruppe (-OH) an einem Kohlenstoffatom. Die OH-Gruppe macht das Molekül polar und ermöglicht Wasserstoffbrückenbindungen.
 
@@ -1013,13 +1025,17 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Einleitung
 
-Benzol, Pyridin, Purin — aromatische Ringe sind überall in der Biochemie: in den Basen der DNA, in Aminosäuren wie Phenylalanin und Tryptophan, in Hormonen, Neurotransmittern und Cofaktoren wie FAD und NAD⁺. Was macht ein Molekül aromatisch? Die **Hückel-Regel** liefert die Antwort: ein planarer Ring mit 4n+2 π-Elektronen. Aromatische Systeme sind besonders stabil. Für den MedAT sind Aromatizität, elektrophile aromatische Substitution, Aminosäurestruktur, Purine/Pyrimidine und die Peptidbindung prüfungsrelevant.
+**Aromatizität** (Hückel: 4n+2 π-Elektronen, planar) = besondere Stabilität. Aromaten in DNA-Basen, Aminosäuren, Cofaktoren. Für den MedAT sind Aromatizität, elektrophile Substitution, Aminosäuren, Purine/Pyrimidine, Peptidbindung prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Benzol**, **Hückel-Regel**; elektrophile aromatische Substitution; **Aminosäuren** (Grundstruktur); **Peptidbindung**; Purine/Pyrimidine. **Kontext:** Von Aromaten zu Proteinen und Nukleinsäuren.
 
 ---
 
 ## Benzol und Aromatizität
 
-**SVG-Hinweis (Benzol und Aromatizität):** Ein Schema mit dem Benzolring, delokalisierten π-Elektronen, Hückel-Regel (4n+2) und elektrophiler aromatischer Substitution macht Aromatizität und EAS auf einen Blick klar. *Typ: Strukturschema / Übersicht.*
+![Benzol](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Benzolring mit delokalisierten π-Elektronen, die Hückel-Regel (4n+2) und das Prinzip der elektrophilen aromatischen Substitution (EAS).
 
 Benzol (C₆H₆) ist die einfachste aromatische Verbindung. Es besitzt eine ringförmige planare Struktur mit sechs Kohlenstoffatomen und sechs π-Elektronen (delokalisiert über den gesamten Ring).
 
@@ -1355,13 +1371,17 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
       title: "Aminosäuren und Proteine",
       content: `## Einleitung
 
-Proteine sind die Maschinen des Lebens: Enzyme, Antikörper, Strukturproteine, Hormone, Transportmoleküle — alle bestehen aus **Aminosäuren**, verknüpft durch Peptidbindungen. Die Reihenfolge der Aminosäuren (Primärstruktur) bestimmt die Faltung (Sekundär- und Tertiärstruktur) und damit die Funktion. Eine einzige Aminosäure-Mutation kann tödlich sein (Sichelzellanämie). Für den MedAT sind die 20 proteinogenen Aminosäuren, Peptidbindung, Proteinstrukturebenen, Denaturierung und klinische Biomarker prüfungsrelevant.
+**Proteine** = Ketten aus **Aminosäuren** (Peptidbindung). Primär- → Sekundär- → Tertiär- → Quartärstruktur; Faltung bestimmt Funktion. Für den MedAT sind 20 proteinogene AS, Peptidbindung, Strukturebenen, Denaturierung, Biomarker prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Aminosäuren** (Grundstruktur, Rest); **Peptidbindung**; **Primär-/Sekundär-/Tertiärstruktur**; Denaturierung; klinische Biomarker. **Kontext:** Von der Sequenz zur Funktion; Enzyme, Antikörper.
 
 ---
 
 ## Grundstruktur der Aminosäuren
 
-**SVG-Hinweis (Aminosäuren und Peptidbindung):** Ein Schema mit allgemeiner Struktur (H₂N–CHR–COOH), Zwitterion, Peptidbindung (−CO–NH–) und Hierarchie Primär–Sekundär–Tertiär unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+![Aminosaeuren](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht den allgemeinen Aufbau von Aminosäuren (H₂N–CHR–COOH), das Zwitterion, die Peptidbindung (−CO–NH–) und die Strukturhierarchie Primär–Sekundär–Tertiär.
 
 Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
@@ -1692,13 +1712,17 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       content: `## Einleitung
 
-Glucose ist der Hauptenergieträger des Körpers. Cellulose ist das häufigste organische Polymer der Erde. Beide bestehen aus identischen Glucose-Einheiten — aber durch unterschiedliche Verknüpfung (α- vs. β-glycosidisch) haben sie völlig verschiedene Eigenschaften. **Kohlenhydrate** (Zucker) sind mehr als Energiequellen: Sie sind Informationsträger (Blutgruppen!), Strukturmoleküle und wichtige Marker (HbA1c). Für den MedAT sind Monosaccharidstruktur (Anomere, Fischer/Haworth), wichtige Di- und Polysaccharide sowie klinische Bezüge (HbA1c, Laktoseintoleranz) prüfungsrelevant.
+**Kohlenhydrate** = Zucker; Monosaccharide (Glucose, Fructose), Di- und Polysaccharide; α- vs. β-glycosidische Bindung entscheidet über Eigenschaften. Für den MedAT sind Anomere, Fischer/Haworth, wichtige Zucker, HbA1c, Laktoseintoleranz prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Monosaccharide** (Anomere, Fischer, Haworth); **Disaccharide** (Maltose, Laktose, Saccharose); **Polysaccharide** (Stärke, Glykogen, Cellulose); klinisch HbA1c. **Kontext:** Energie, Struktur, Blutgruppen.
 
 ---
 
 ## Monosaccharide — Grundbausteine
 
-**SVG-Hinweis (Kohlenhydrate — Ringform, glycosidische Bindung):** Ein Schema mit Pyranose/Furanose, α- und β-glycosidischer Bindung (Stärke vs. Cellulose) und Disacchariden unterstützt die Einordnung. *Typ: Strukturschema / Übersicht.*
+![Kohlenhydrate](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Ringformen (Pyranose, Furanose), α- und β-glycosidische Bindung (Stärke vs. Cellulose) und den Aufbau von Disacchariden.
 
 Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
@@ -2009,13 +2033,17 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
       ],
       content: `## Einleitung
 
-Fett hat schlechten Ruf — aber ist lebensnotwendig. Phospholipide bilden alle Membranen, Cholesterin ist Ausgangsstoff für Steroidhormone und Vitamin D, Eicosanoide (aus Fettsäuren) regulieren Entzündungen. **Lipide** sind eine chemisch heterogene Gruppe: Was sie vereint, ist ihre Unlöslichkeit in Wasser (Hydrophobie). Für den MedAT sind gesättigte vs. ungesättigte Fettsäuren, Triglyceride, Phospholipid-Membranstruktur, Cholesterin/LDL/HDL, Statine und Ketonkörper prüfungsrelevant.
+**Lipide** = hydrophobe Moleküle (Fette, Phospholipide, Cholesterin). Phospholipide = Membranen; Cholesterin = Hormone, Vitamin D; Fettsäuren = gesättigt/ungesättigt. Für den MedAT sind Fettsäuren, Triglyceride, Phospholipide, Cholesterin/LDL/HDL, Statine, Ketonkörper prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Fettsäuren** (gesättigt/ungesättigt); **Triglyceride**; **Phospholipide** (Membran); **Cholesterin**, LDL/HDL; Ketonkörper. **Kontext:** Membranen, Hormone, Energiespeicher.
 
 ---
 
 ## Fettsäuren
 
-**SVG-Hinweis (Lipide — Fettsäuren, Triglyceride, Phospholipid-Bilayer):** Ein Schema mit gesättigt/ungesättigt (cis/trans), Triglycerid-Aufbau (Glycerin + 3 FS), Phospholipid (polarer Kopf + 2 Schwänze) und Bilayer unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+![Lipide](/grafik-1-membrantransport.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt gesättigte und ungesättigte Fettsäuren (cis/trans), den Aufbau von Triglyceriden (Glycerin + 3 Fettsäuren), Phospholipide (polarer Kopf, zwei Schwänze) und die Bilayer-Struktur.
 
 Fettsäuren sind unverzweigte Carbonsäuren mit langer Kohlenwasserstoffkette (meist 12–24 C-Atome, gerade Anzahl wegen biosynthetischer Verlängerung um je 2 C durch Acetyl-CoA). Einteilung nach Sättigungsgrad:
 - **Gesättigte Fettsäuren**: Keine Doppelbindungen; gestreckte Ketten, dicht packbar → festes Fett bei Raumtemperatur. Wichtige Vertreter: **Laurinsäure** (C12:0, Kokosöl), **Myristinsäure** (C14:0), **Palmitinsäure** (C16:0, häufigste gesättigte FS), **Stearinsäure** (C18:0)
@@ -2332,13 +2360,17 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
       ],
       content: `## Einleitung
 
-DNA ist der Bauplan des Lebens — ein langer Doppelstrang aus Nukleotiden, der in jeder Körperzelle die vollständige genetische Information trägt. RNA übersetzt diese Information in Proteine. **Nukleinsäuren** bestehen aus den gleichen Bausteinen: Zucker (Ribose/Desoxyribose) + Phosphat + Base. Ihre spezifische Basenpaarung (A-T, G-C) ermöglicht die präzise Replikation und Transkription. Für den MedAT sind Nukleotidaufbau, Chargaff-Regeln, DNA-Struktur, RNA-Typen, PCR und DNA-Reparatur prüfungsrelevant.
+**Nukleinsäuren** (DNA, RNA) = Zucker + Phosphat + Base; **Basenpaarung** A–T, G–C. Für den MedAT sind Nukleotidaufbau, Chargaff-Regeln, DNA-Doppelhelix, RNA-Typen, PCR, DNA-Reparatur prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Nukleotid** (Zucker, Phosphat, Base); **DNA** (Doppelhelix, Chargaff); **RNA** (mRNA, tRNA, rRNA); Replikation, Transkription; **PCR**. **Kontext:** Genetik, Molekularbiologie, Diagnostik.
 
 ---
 
 ## Nukleotid-Aufbau
 
-**SVG-Hinweis (Nukleotide und DNA-Doppelhelix):** Ein Schema mit Nukleotid-Bausteinen (Base + Zucker + Phosphat), Purin/Pyrimidin, Basenpaarung A–T (2 H-Brücken) und G–C (3 H-Brücken) sowie Doppelhelix unterstützt die Prüfungsvorbereitung. *Typ: Strukturschema / Übersicht.*
+![Nukleotide DNA](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau eines Nukleotids (Base + Zucker + Phosphat), Purin vs. Pyrimidin, Basenpaarung A–T (2 H-Brücken) und G–C (3 H-Brücken) sowie die DNA-Doppelhelix.
 
 Das Grundmonomer der Nukleinsäuren ist das **Nukleotid**, bestehend aus drei Komponenten:
 1. **Stickstoffbase** (Purin oder Pyrimidin)

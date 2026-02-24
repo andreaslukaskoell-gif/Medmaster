@@ -30,11 +30,17 @@ export const physKap7: Kapitel = {
       ],
       content: `## Einleitung
 
-Warum leuchten Neonröhren orange-rot? Warum misst die Pulsoximetrie mit zwei bestimmten Wellenlängen? Die Antwort liegt in der Atomphysik: Elektronen können nur auf bestimmten Energieniveaus existieren, und beim Wechsel zwischen Niveaus wird Licht einer exakt definierten Wellenlänge emittiert oder absorbiert. Dieses Prinzip der **Spektroskopie** bildet die Basis für Pulsoximetrie, Photometrie, MRT-Resonanz und Lasertherapie. Für den MedAT sind Bohr'sches Atommodell, Photonenenergie E = hf = hc/λ, Emissionsspektren, Lambert-Beer-Gesetz und Pulsoximetrie prüfungsrelevant.
+**Atomphysik**: Elektronen besetzen diskrete **Energieniveaus**; beim Übergang wird Licht definierter Wellenlänge emittiert oder absorbiert (**Spektroskopie**). Das ist Basis für Pulsoximetrie, Photometrie und Lasertherapie. Für den MedAT sind Bohr-Modell, Photonenenergie E = hf = hc/λ, Emissions-/Absorptionsspektren, Lambert-Beer und Pulsoximetrie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Bohr'sches Atommodell (diskrete Niveaus); E = hf = hc/λ; Emissions- und Absorptionsspektren; Lambert-Beer (Extinktion); Pulsoximetrie (HbO₂ vs. Hb). **Kontext:** Quantensprünge und Licht; klinisch Pulsoximetrie, Photometrie, Laser.
+
+---
 
 ## Entwicklung der Atommodelle
 
-**SVG-Hinweis (Atommodelle, Spektrallinien, Lambert-Beer):** Ein Schema mit Bohr-Modell, E = hf = hc/λ, Emissions-/Absorptionsspektrum und Lambert-Beer-Gesetz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Atommodelle](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt das Bohr-Modell, die Photonenenergie E = hf = hc/λ, Emissions- und Absorptionsspektren sowie das Lambert-Beer-Gesetz.
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
@@ -56,6 +62,10 @@ Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energie
 | N | 4 | −0,85 eV | 32 |
 
 > **Merke:** Das Bohrsche Modell funktioniert exakt nur für Ein-Elektronen-Systeme (H, He⁺, Li²⁺). Für Mehrelektronensysteme ist die Quantenmechanik nötig.
+
+![Orbitale und Quantenzustände](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Im quantenmechanischen Modell ersetzen Orbitale (s, p, d) die Kreisbahnen; die Grafik zeigt Aufenthaltswahrscheinlichkeit und Quantenzahlen.
 
 Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). Das Pauli-Prinzip besagt, dass keine zwei Elektronen in allen vier Quantenzahlen übereinstimmen dürfen.
 
@@ -290,7 +300,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
     {
       id: "ph-7-02",
       diagram: "em-spectrum",
-      imageUrl: "/grafik-29-zerfall.svg",
       title: "Radioaktivität – Strahlenarten und Zerfallsgesetze",
       stichworte: [
         "Alpha-Strahlung",
@@ -308,11 +317,17 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
       ],
       content: `## Einleitung
 
-Radioaktive Strahlung ist unsichtbar, aber messbar — und in der Medizin sowohl gefährlich als auch heilsam. ⁹⁹ᵐTechnetium beleuchtet Schilddrüsen, ¹³¹Jod behandelt Schilddrüsenkrebs, Radon in Kellern verursacht Lungenkrebs. Das Zerfallsgesetz erklärt, wie schnell ein Radionuklid abklingt. Drei Strahlenarten mit sehr unterschiedlicher Reichweite und biologischer Wirkung sind zentral. Für den MedAT sind α/β/γ-Strahlung, Halbwertszeit, Zerfallsgesetz, Aktivität (Becquerel), Äquivalentdosis (Sievert) und Strahlenschutz prüfungsrelevant.
+**Radioaktivität**: In der Medizin sowohl diagnostisch (⁹⁹ᵐTc, ¹⁸F) als auch therapeutisch (¹³¹I) und als Risiko (Radon). **Zerfallsgesetz** und **Halbwertszeit** beschreiben das Abklingen; **α/β/γ-Strahlung** unterscheiden sich in Reichweite und biologischer Wirkung. Für den MedAT sind α/β/γ, Halbwertszeit, N(t) = N₀·e^(-λt), Aktivität (Bq), Äquivalentdosis (Sv) und Strahlenschutz prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** α- (Heliumkern), β- (Elektron), γ-Strahlung (Photon); Zerfallsgesetz und T_½; Aktivität A [Bq]; Dosis [Gy], Äquivalentdosis [Sv]; Strahlenschutz. **Kontext:** Kernumwandlungen und Strahlenwirkung; klinisch Szintigrafie, Therapie, ALARA.
+
+---
 
 ## Alpha-Strahlung (α)
 
-**SVG-Hinweis (α/β/γ-Strahlung, Zerfallsgesetz, Halbwertszeit):** Ein Schema mit Reichweite, Abschirmung, N(t) = N₀·e^(-λt), Aktivität und Sievert unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Zerfall](/grafik-29-zerfall.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht α-, β- und γ-Strahlung (Reichweite, Abschirmung), das Zerfallsgesetz N(t) = N₀·e^(-λt), Aktivität und die Dosis (Sievert).
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
 
@@ -363,6 +378,10 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 | β⁻ | Elektron | −1e | Aluminium | +1 | 0 | 1 |
 | β⁺ | Positron | +1e | Aluminium | −1 | 0 | 1 |
 | γ | Photon | 0 | Blei/Beton | 0 | 0 | 1 |
+
+![Exponentieller Zerfall](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Die Aktivität und die Anzahl der Kerne fallen exponentiell mit der Zeit; die Halbwertszeit T½ kennzeichnet den typischen Abklingverlauf.
 
 ## Exponentieller Zerfall und Halbwertszeit
 
@@ -619,15 +638,25 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
       ],
       content: `## Einleitung
 
-Röntgenstrahlung durchdringt Gewebe — härteres Gewebe absorbiert mehr, weicheres weniger — und erzeugt so kontrastreiche Bilder. Aber Röntgenstrahlung ionisiert auch DNA und kann Krebs verursachen. Dieser Dualismus — diagnostischer Nutzen vs. Strahlenrisiko — prägt den Alltag in der Radiologie. Das ALARA-Prinzip ("As Low As Reasonably Achievable") und das Schwächungsgesetz steuern den Umgang. Für den MedAT sind Bremsstrahlung, charakteristische Strahlung, Schwächungsgesetz, Strahlenschäden, deterministisch vs. stochastisch, Bergonié-Tribondeau und Abstandsquadratgesetz prüfungsrelevant.
+**Röntgenstrahlung** durchdringt Gewebe (Bildgebung), ionisiert aber auch DNA (Risiko). **Brems-** und **charakteristische Strahlung** entstehen in der Röntgenröhre; das **Schwächungsgesetz** beschreibt Absorption. Für den MedAT sind Entstehung (Brems-/charakteristische Strahlung), Schwächungsgesetz, Strahlenschäden (deterministisch vs. stochastisch), Bergonié-Tribondeau und Abstandsquadratgesetz prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Entstehung Röntgen (Bremsstrahlung, charakteristische Linien); Schwächung I = I₀·e^(-μx); deterministische vs. stochastische Schäden; Bergonié-Tribondeau; Abstandsquadratgesetz; ALARA. **Kontext:** Röntgen als Bildgebung und Risiko; klinisch Radiologie, Dosisreduktion.
+
+---
 
 ## Entstehung von Röntgenstrahlung
 
-**SVG-Hinweis (Röntgen, Brems-/charakteristische Strahlung, Schwächung):** Ein Schema mit Röntgenröhre, Photoeffekt/Compton und exponentiellem Schwächungsgesetz unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Röntgen](/grafik-roentgen.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau der Röntgenröhre, Brems- und charakteristische Strahlung, Photoeffekt/Compton und das exponentielle Schwächungsgesetz.
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
 **1. Bremsstrahlung:** Die Elektronen werden im Coulomb-Feld der Atome abgebremst. Die dabei abgegebene kinetische Energie wird als Photon emittiert. Es entsteht ein kontinuierliches Spektrum mit einer minimalen Wellenlänge λ_min = hc/(e·U), entsprechend der maximalen Photonenenergie E_max = e·U. Mit U = 100 kV ergibt sich E_max = 100 keV.
+
+![Energieniveaus und charakteristische Strahlung](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Charakteristische Röntgenstrahlung entsteht beim Übergang zwischen Schalen (K, L, M); die Grafik zeigt diskrete Energieniveaus und Photonenemission.
 
 **2. Charakteristische Strahlung:** Wenn ein eintreffendes Elektron ein kernnahes Elektron aus dem Wolframatom schlägt (K-Schale), fällt ein Elektron von einer äußeren Schale (L, M) in die entstehende Lücke und emittiert dabei ein Photon mit einer für Wolfram spezifischen Energie (diskrete Linien: Kα ≈ 59 keV, Kβ ≈ 67 keV für Wolfram). Diese Linien überlagern das Bremsspektrum.
 
@@ -902,11 +931,21 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
       ],
       content: `## Einleitung
 
-PET zeigt Tumormetastasen, die noch keinen Knochen zerstört haben — weil Tumorzellen mehr Glukose verbrennen (Warburg-Effekt). SPECT kariert Herzperfusion. MRT bildet Weichteile ohne Strahlung ab — mittels Kernspinresonanz. Und dahinter steckt Quantenphysik: Welle-Teilchen-Dualismus, Photoeffekt, Larmor-Frequenz. Für den MedAT sind PET (¹⁸F-FDG, Annihilation, Koinzidenz), SPECT (⁹⁹ᵐTc), MRT-Prinzip (Larmor, T1/T2), Photoeffekt und Welle-Teilchen-Dualismus prüfungsrelevant.
+**PET** (¹⁸F-FDG, Annihilation, Koinzidenz), **SPECT** (⁹⁹ᵐTc) und **MRT** (Kernspinresonanz, Larmor, T1/T2) sind zentrale Bildgebungsverfahren. Dahinter stecken **Quantenphysik** (Welle-Teilchen-Dualismus, Photoeffekt) und **Larmor-Frequenz**. Für den MedAT sind PET-/SPECT-/MRT-Prinzip, Photoeffekt und Welle-Teilchen-Dualismus prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** PET (Positronen, Annihilation 2×511 keV, Koinzidenz); SPECT (Single-Photon, Kollimator); MRT (Larmor f = γ·B₀, T1/T2); Photoeffekt; Welle-Teilchen-Dualismus. **Kontext:** Bildgebung und Quantenphysik; klinisch PET/SPECT/MRT in der Diagnostik.
+
+---
 
 ## PET – Positronen-Emissions-Tomographie
 
-**SVG-Hinweis (PET, SPECT, MRT-Prinzip):** Ein Schema mit Annihilation (2×511 keV), Koinzidenzdetektion, SPECT-Kollimator und Larmor-Frequenz (MRT) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![PET SPECT MRT](/grafik-pet-mrt.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt PET (Annihilation 2×511 keV, Koinzidenzdetektion), SPECT (Kollimator) und das MRT-Prinzip (Larmor-Frequenz).
+
+![Radioaktiver Zerfall und Bildgebung](/grafik-29-zerfall.svg)
+
+**Erklärung zur Grafik:** β⁺-Zerfall liefert Positronen für PET; die Grafik zeigt Zerfallsarten und die Nutzung in der nuklearmedizinischen Bildgebung.
 
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
 

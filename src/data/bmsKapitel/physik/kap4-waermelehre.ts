@@ -29,11 +29,25 @@ export const physKap4: Kapitel = {
       ],
       content: `## Einleitung
 
-Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 °C ebenfalls. Die Körperkerntemperatur ist ein kritischer Vitalparameter, der physiologische Prozesse steuert. Dahinter steckt der Begriff **Temperatur**: ein Maß für die mittlere kinetische Energie der Teilchen. Wärme fließt immer von heiß nach kalt — bis zum Gleichgewicht. Für den MedAT sind Temperaturskalen (Celsius/Kelvin/Fahrenheit), spezifische Wärmekapazität, thermische Ausdehnung und Körpertemperaturregulation prüfungsrelevant.
+Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 °C ebenfalls. Die Körperkerntemperatur ist ein kritischer Vitalparameter. Dahinter steckt **Temperatur** (Maß für die mittlere kinetische Energie der Teilchen) und **Wärme** (Energieübertragung von heiß nach kalt). Für den MedAT sind Temperaturskalen (Celsius/Kelvin/Fahrenheit), spezifische Wärmekapazität, thermische Ausdehnung und Körpertemperaturregulation prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Temperaturskalen**: Kelvin T = °C + 273,15 (absoluter Nullpunkt 0 K); Fahrenheit T[°F] = T[°C]·1,8 + 32
+- **Wärme** Q = m·c·ΔT; **spezifische Wärmekapazität** c (Wasser ≈ 4180 J/(kg·K))
+- **Thermische Ausdehnung** ΔL = α·L₀·ΔT; **Dichteanomalie** des Wassers (Maximum bei 4 °C)
+- **Mischungstemperatur** T_m = (m₁·T₁ + m₂·T₂)/(m₁ + m₂) bei gleichem Stoff
+- typische Prüfungsfallen (ΔT in K oder °C gleich; Wasser dichtest bei 4 °C) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Temperatur und Wärmeübertragung**: Wie misst man Temperatur (Skalen), wie viel Energie braucht Erwärmung (Wärmekapazität), und wie dehnen sich Körper aus (α, Dichteanomalie)? Klinisch: Fieber, Hypothermie, Wärmetherapie, Kalorimetrie. Du brauchst es für Wärmeübertragung und Thermodynamik (Hauptsätze) und für MedAT-Aufgaben zu Q, c und ΔT.
+
+---
 
 ## Temperaturskalen
 
-**SVG-Hinweis (Temperatur, Wärmekapazität, Ausdehnung):** Ein Schema mit Celsius/Kelvin-Umrechnung, spezifischer Wärmekapazität c und linearer Ausdehnung ΔL = α·L₀·ΔT unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Temperatur Waermekapazitaet](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Celsius/Kelvin-Umrechnung, die spezifische Wärmekapazität c (Q = m·c·ΔT) und die lineare Wärmedehnung ΔL = α·L₀·ΔT.
 
 Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Drei Skalen sind praxisrelevant:
 
@@ -86,6 +100,10 @@ Q_abgegeben = Q_aufgenommen → m₁ · c · (T₁ − T_m) = m₂ · c · (T_m 
 
 > **Merke:** Bei der Mischkalorimetrie kürzt sich c heraus, wenn beide Flüssigkeiten denselben Stoff darstellen. Die Mischtemperatur liegt stets zwischen den beiden Ausgangstemperaturen, gewichtet nach den Massen.
 
+![Zustand und Temperatur](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Zusammenhang von Temperatur, Druck und Volumen (ideales Gas) — Grundlage für Temperaturskalen und Wärmeausdehnung.
+
 **Wärmekapazität verschiedener Stoffe im Vergleich:**
 - Wasser: c = 4180 J/(kg·K) — biologisch essenziell als Temperaturpuffer
 - Eis: c = 2090 J/(kg·K) — nur halb so viel wie flüssiges Wasser
@@ -127,7 +145,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 **Zentral prüfungsrelevant:** Temperatur (Kelvin T = °C + 273,15), Wärme Q = c·m·ΔT, spezifische Wärmekapazität, Phasenübergang (latente Wärme), Wärmebilanz.
 
-**Ergänzend vertiefend:** Absolute Temperatur; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Absolute Temperatur (0 K); Volumenausdehnung γ ≈ 3α; Verdampfungsenthalpie (Schwitzen); typische Verwechslungen (c vs. λ, Dichteanomalie bei 4 °C) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Welche Temperatur in K entspricht 37 °C?" → T[K] = 37 + 273,15 = 310 K
@@ -355,11 +373,25 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
       ],
       content: `## Einleitung
 
-Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt Schweiß die Haut? Warum wird Infrarotstrahlung zur Tiefenwärme in der Physikotherapie eingesetzt? Wärmeübertragung geschieht auf drei Wegen — **Konduktion, Konvektion und Strahlung** — und alle drei sind im Körper gleichzeitig aktiv. Das Fourier-Gesetz beschreibt den Wärmefluss durch Kleidung und Körpergewebe. Für den MedAT sind Wärmeleitfähigkeit, Fourier-Gesetz, Strahlung (Stefan-Boltzmann), Gegenstrom-Wärmeaustausch und klinische Wärmetherapie prüfungsrelevant.
+Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt Schweiß die Haut? Wärmeübertragung geschieht auf drei Wegen — **Konduktion** (Leitung), **Konvektion** (Strömung) und **Strahlung** — und alle drei sind im Körper aktiv. Das **Fourier-Gesetz** beschreibt den Wärmefluss durch Gewebe und Kleidung. Für den MedAT sind Wärmeleitfähigkeit, Fourier-Gesetz, Strahlung (Stefan-Boltzmann), Gegenstrom-Wärmeaustausch und klinische Wärmetherapie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Wärmeleitung** (Konduktion): Fourier Q̇ = λ·A·ΔT/d; **Wärmeleitfähigkeit** λ [W/(m·K)]
+- **Konvektion** (Wärmetransport mit strömendem Medium) und **Wärmestrahlung** (Stefan-Boltzmann P ∝ T⁴)
+- **Gegenstrom-Wärmeaustausch** (z. B. Gefäße in Extremitäten) und **Thermoregulation**
+- **Wiensches Verschiebungsgesetz** (T·λ_max = const) und Infrarot in der Medizin
+- typische Prüfungsfallen (Q̇ vs. Q, λ vs. c) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **wie Wärme von einem Ort zum anderen gelangt**: Leitung durch Material, Mitführung durch strömende Luft/Flüssigkeit, Strahlung (Infrarot). Im Körper: Isolierung durch Fett, Vasokonstriktion/Vasodilatation, Schwitzen. Du brauchst es für Thermodynamik (Hauptsätze) und für MedAT-Aufgaben zu λ, Stefan-Boltzmann und Gegenstrom.
+
+---
 
 ## Wärmeleitung (Konduktion)
 
-**SVG-Hinweis (Wärmeübertragung — Konduktion, Konvektion, Strahlung):** Ein Schema mit Fourier-Gesetz Q̇ = λ·A·ΔT/d, Stefan-Boltzmann und den drei Übertragungswegen unterstützt die Einordnung. *Typ: Übersicht / Schema.*
+![Waermeuebertragung](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht die drei Wärmeübertragungswege (Konduktion, Konvektion, Strahlung), das Fourier-Gesetz Q̇ = λ·A·ΔT/d und Stefan-Boltzmann.
 
 Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Teilchen übertragen, ohne dass Materie transportiert wird. Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom:
 
@@ -374,6 +406,10 @@ Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Tei
 Metalle leiten Wärme gut (hohe λ), Gase und Isolatoren schlecht. Körperfett wirkt als Wärmeisolator (niedrige λ). Verbände aus Wolle oder Schaumstoff halten Körperwärme, weil eingeschlossene Luft (λ ≈ 0,026) schlecht leitet.
 
 Der **Widerstand** R_th = d/(λ·A) ist das thermische Analogon zum elektrischen Widerstand; Schichten können wie Widerstände in Reihe addiert werden (Bauphysik, Kleidung).
+
+![Druck und Temperatur](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Wärmeübertragung ändert Temperatur und damit Druck/Volumen; die Grafik zeigt den Zusammenhang p·V = n·R·T für Gase.
 
 ## Konvektion
 
@@ -667,11 +703,25 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
       ],
       content: `## Einleitung
 
-Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmefluss von kalt nach warm — das sind die Aussagen der Thermodynamik. Die Hauptsätze stecken das Mögliche ab. Für Mediziner: ATP-Synthese ist ein Energieumwandlungsprozess (1. Hauptsatz), Entropie erklärt, warum biologische Ordnung Energieinput braucht (2. Hauptsatz), und Körperwärme erklärt sich aus dem Energieerhaltungssatz. Für den MedAT sind 1. bis 3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad und Entropie prüfungsrelevant.
+Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmefluss von kalt nach warm — das sind die Aussagen der **Thermodynamik**. Die Hauptsätze stecken das Mögliche ab. Für den MedAT sind 1. bis 3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad und Entropie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **1. Hauptsatz**: ΔU = Q + W (innere Energie, Wärme, Arbeit); Energieerhaltung in thermischen Prozessen
+- **2. Hauptsatz**: Entropie nimmt in abgeschlossenen Systemen zu; Wärme fließt spontan nur von heiß nach kalt
+- **Carnot-Wirkungsgrad** η_C = 1 − T_kalt/T_warm (maximaler Wirkungsgrad einer Wärmekraftmaschine)
+- **Prozessarten**: isochor (V=const), isobar (p=const), isotherm (T=const), adiabatisch (Q=0)
+- typische Prüfungsfallen (Vorzeichenkonvention W, η < 1) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Energie und Richtung** thermischer Prozesse: Der 1. Hauptsatz (Energieerhaltung) und der 2. Hauptsatz (Entropie, irreversibler Ablauf) begrenzen, was möglich ist. Klinisch: ATP-Synthese, Körperwärme, Warum Kühlung Energie braucht. Du brauchst es für Biochemie und für MedAT-Aufgaben zu ΔU, Carnot und Entropie.
+
+---
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
-**SVG-Hinweis (Hauptsätze, ΔU = Q + W, Carnot):** Ein Schema mit 1. und 2. Hauptsatz, Entropie und Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Hauptsaetze Carnot](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst den 1. und 2. Hauptsatz, ΔU = Q + W, Entropie und den Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm zusammen.
 
 "Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
 
@@ -700,6 +750,10 @@ Bei **isobaren Prozessen** (p = const) leistet das System Volumenarbeit gegen de
 
 Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt).
 
+![Zustandsänderungen](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Isochore, isobare, isotherme und adiabatische Prozesse im p-V- bzw. p-T-Diagramm — Grundlage für ΔU = Q + W und Carnot-Prozess.
+
 ## Zweiter Hauptsatz: Entropie und Irreversibilität
 
 **Formulierungen** (äquivalent):
@@ -712,6 +766,10 @@ Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt)
 Folgen:
 - Keine thermische Maschine kann 100 % der Wärme in Arbeit umwandeln.
 - Biologie scheinbar im Widerspruch? Nein: Lebewesen sind **offene Systeme** — sie exportieren Entropie in die Umgebung (Wärme, Abfall), um intern Ordnung aufrechtzuerhalten.
+
+![Prozesse und Wirkungsgrad](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Carnot-Prozess und Zustandsänderungen (isotherm, adiabatisch) im p-V-Diagramm — Grundlage für den maximalen Wirkungsgrad.
 
 ## Carnotscher Wirkungsgrad
 
@@ -961,11 +1019,25 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
       ],
       content: `## Einleitung
 
-Der Autoklav sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siedepunkt erhöht. Stickstoffnarkose beim Tauchen entsteht, weil Gase unter Druck mehr im Blut lösen (Henry-Gesetz). Blut-Sauerstoffsättigung hängt vom Partialdruck ab. Hinter all dem stecken das ideale Gasgesetz und die Physik der Phasenübergänge. Für den MedAT sind ideales Gasgesetz (pV = nRT), Boyle, Gay-Lussac, Charles, Phasendiagramm, Latentwärme und medizinische Anwendungen (Autoklav, Tauchmedizin) prüfungsrelevant.
+Der **Autoklav** sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siedepunkt erhöht. Stickstoffnarkose beim Tauchen entsteht, weil Gase unter Druck mehr im Blut lösen (**Henry-Gesetz**). Hinter all dem stecken das **ideale Gasgesetz** und die Physik der **Phasenübergänge**. Für den MedAT sind pV = nRT, Boyle/Gay-Lussac/Charles, Phasendiagramm, Latentwärme und Anwendungen (Autoklav, Tauchmedizin) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Ideales Gasgesetz** pV = nRT; **Boyle** (T=const: p ∝ 1/V), **Gay-Lussac/Charles** (p ∝ T, V ∝ T)
+- **Phasendiagramm**: Tripelpunkt, kritischer Punkt; **latente Wärme** (Schmelzen, Verdampfen)
+- **Dampfdruck** und Siedepunkt; warum Autoklav bei Überdruck höhere Temperatur erreicht
+- **Henry-Gesetz** (Gaslöslichkeit ∝ Partialdruck) — Tauchmedizin, Narkose
+- typische Prüfungsfallen (T in Kelvin in pV = nRT; latente Wärme ohne ΔT) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Gase und Phasen**: Wie hängen Druck, Volumen und Temperatur zusammen (ideales Gas)? Was passiert beim Schmelzen und Verdampfen (latente Wärme)? Klinisch: Autoklav, Atemgase, Henry-Gesetz (Tauchen, Narkose). Du brauchst es für Physiologie (Atmung, Partialdrücke) und für MedAT-Aufgaben zu pV = nRT und Phasenübergängen.
+
+---
 
 ## Ideales Gasgesetz
 
-**SVG-Hinweis (Ideales Gas, Phasendiagramm, Latentwärme):** Ein Schema mit pV = nRT, Boyle/Gay-Lussac/Charles und Phasendiagramm (Tripelpunkt, kritischer Punkt) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Ideales Gas Phasendiagramm](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die ideale Gasgleichung pV = nRT, die Einzelgesetze (Boyle, Gay-Lussac, Charles) und das Phasendiagramm mit Tripelpunkt und kritischem Punkt.
 
 Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlässigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase näherungsweise ideal.
 
@@ -994,6 +1066,14 @@ Ein Phasendiagramm stellt die Gleichgewichtszustände eines Stoffes als Funktion
 - **Schmelzkurve**: Fest-Flüssig-Grenze (fast senkrecht, da Schmelzpunkt wenig druckabhängig)
 - **Dampfdruckkurve**: Flüssig-Gasförmig-Grenze (endet am kritischen Punkt)
 - **Sublimationskurve**: Fest-Gasförmig-Grenze
+
+![Wärme und Phasen](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Wärmeübertragung bei Phasenübergängen (latente Wärme) und der Zusammenhang von Temperatur mit innerer Energie — Ergänzung zum Phasendiagramm.
+
+![Thermodynamik und Phasen](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Wärmeübertragung und Hauptsätze bilden die Grundlage für Phasenübergänge; die Grafik fasst Energiebilanz und latente Wärme zusammen.
 
 **Tripelpunkt**: Alle drei Phasen koexistieren. Für Wasser: T_triple = 273,16 K, p_triple = 611,7 Pa.
 

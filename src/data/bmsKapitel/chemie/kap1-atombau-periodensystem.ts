@@ -79,7 +79,9 @@ Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mi
 
 > **Merke:** Rutherford: Meiste Teilchen durch → leerer Raum. Wenige stark abgelenkt → winziger, positiver, massereicher **Kern**. Vergleich: Kern = Murmel (1 cm), Atom = Fußballstadion (~100 m).
 
-**SVG-Hinweis (Rutherford-Streuversuch / Kern-Hülle-Modell):** Ein Schema zeigt den Versuchsaufbau (Alphateilchen-Quelle, Goldfolie, Streuung) und das daraus folgende Bild: winziger Kern, umgeben von leerem Raum und Elektronenhülle. So wird die Schlussfolgerung auf einen Blick nachvollziehbar. *Typ: Schema / Versuchsaufbau + Kernmodell.*
+![Rutherford](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Versuchsaufbau (Alphateilchen auf Goldfolie) und das Kern-Hülle-Modell: winziger Kern, umgeben von leerem Raum und Elektronenhülle.
 
 **Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
@@ -102,7 +104,9 @@ Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt
 
 **Grenzen:** Das Bohr-Modell versagt für Mehrelektronenatome und erklärt keine Feinstruktur der Spektren.
 
-**SVG-Hinweis (Bohr-Schalen):** Ein Schema zeigt den Kern und konzentrische Kreise (Schalen K, L, M) mit den maximalen Elektronenzahlen 2, 8, 18. So ist die räumliche Vorstellung sofort erfassbar. *Typ: Schema / Schalenmodell.*
+![Bohr-Schalen](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt den Kern und die konzentrischen Schalen K, L, M mit den maximalen Elektronenzahlen 2, 8, 18 (Formel 2n²).
 
 ## Quantenmechanisches Modell (Orbital-Modell, ab 1925)
 
@@ -121,7 +125,9 @@ Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig
 
 > **Merke:** **Orbital ≠ Bahn.** Orbitale sind Aufenthaltswahrscheinlichkeitsräume. Schale n hat n Unterschalen (l = 0 bis n−1) → Gesamtkapazität pro Schale = **2n²** Elektronen.
 
-**SVG-Hinweis (Orbitale s und p):** Ein Vergleichsschema zeigt ein kugelförmiges s-Orbital und die drei hantelförmigen p-Orbitale (pₓ, p_y, p_z) im Raum — so wird der Unterschied zwischen s und p sofort sichtbar. *Typ: Vergleich / Schema.*
+![Orbitale s p](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Die Abbildung vergleicht das kugelförmige s-Orbital mit den drei hantelförmigen p-Orbitalen (pₓ, p_y, p_z) im Raum.
 
 ## Atomkern: Protonen, Neutronen, Isotope
 
@@ -402,7 +408,19 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
       ],
       content: `## Einleitung
 
-Warum reagiert Natrium heftig mit Wasser, während Edelgase nahezu inert sind? Die Antwort liegt in der **Elektronenkonfiguration** — also darin, wie Elektronen um den Atomkern angeordnet sind. Vier Quantenzahlen beschreiben jeden Elektronen-"Wohnort" eindeutig: Etage (Schale), Zimmertyp (Orbital), Ausrichtung und Spin. Die Regeln, nach denen sich Elektronen anordnen (Aufbauprinzip, Pauliprinzip, Hundsche Regel), sind das Fundament für das Verständnis der Periodizität, der Bindungen und der biologischen Bedeutung von Spurenelementen — alles klassische MedAT-Themen.
+Warum reagiert Natrium heftig mit Wasser, während Edelgase nahezu inert sind? Die Antwort liegt in der **Elektronenkonfiguration** — also darin, wie Elektronen um den Atomkern angeordnet sind. Vier Quantenzahlen beschreiben jeden Elektronen-"Wohnort" eindeutig. Für den MedAT sind Quantenzahlen, Aufbauprinzip, Pauli, Hund und Valenzelektronen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Die vier **Quantenzahlen** (n, l, mₗ, mₛ) und was sie festlegen; **Pauliprinzip** (max. 2 e⁻ pro Orbital, entgegengesetzter Spin); **Aufbauprinzip** und **Madelung** (1s < 2s < 2p < 3s < 3p < 4s < 3d …); **Hundsche Regel** (einfache Besetzung vor Doppelbesetzung); **Valenz-** und Rumpfelektronen; Schreibweise [Edelgas] + Valenz. **Kontext:** Die Anordnung der Elektronen bestimmt chemisches Verhalten und Periodizität; du brauchst das für Bindung, PSE und MedAT-Fragen zu Konfiguration und Stabilität.
+
+---
+
+![Orbitale und Quantenzahlen](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Die Form der Orbitale (s, p, d) und ihre Besetzung mit Elektronen hängen mit den Quantenzahlen n, l und mₗ zusammen — Grundlage der Elektronenkonfiguration.
+
+![Schalen und Energieniveaus](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die Schalen K, L, M (Hauptquantenzahl n) und die Besetzung nach Aufbauprinzip und Hundscher Regel werden hier veranschaulicht.
 
 ## Die vier Quantenzahlen
 
@@ -713,9 +731,19 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
       ],
       content: `## Einleitung
 
-Manche Atomkerne sind instabil und wandeln sich spontan um — dabei geben sie **Strahlung** ab. Dieses Phänomen heißt **Radioaktivität**. Es gibt drei Haupttypen dieser Strahlung: Alpha (Heliumkerne), Beta (Elektronen oder Positronen) und Gamma (elektromagnetische Wellen). Sie unterscheiden sich in Durchdringungsvermögen und biologischer Wirkung erheblich. Medizinisch ist Radioaktivität unverzichtbar: Von der Tumordiagnostik mit PET über die Radiojodtherapie der Schilddrüse bis zum Strahlenschutz bei Kernunfällen — diese Themen sind klassischer MedAT-Stoff.
+Manche Atomkerne sind instabil und wandeln sich spontan um — dabei geben sie **Strahlung** ab. Dieses Phänomen heißt **Radioaktivität**. Drei Haupttypen: Alpha, Beta, Gamma — mit unterschiedlichem Durchdringungsvermögen und biologischer Wirkung. Für den MedAT sind α/β/γ, Halbwertszeit, Zerfallsgesetz, Aktivität (Bq), Dosis (Sv) und Nuklearmedizin prüfungsrelevant.
 
-Die Entdeckung erfolgte 1896 durch Antoine Henri Becquerel (Uransalze), wenig später durch Marie und Pierre Curie (Polonium, Radium).
+**In diesem Kapitel lernst du:** **α-** (⁴He-Kern), **β⁻/β⁺** (Elektron/Positron), **γ-**Strahlung (Photon); **Halbwertszeit** T½ und **Zerfallsgesetz** N(t) = N₀·(½)^(t/T½); **Aktivität** A [Bq]; Dosis und **Sievert**; Anwendung PET, ⁹⁹ᵐTc, ¹³¹I. **Kontext:** Radioaktivität in Diagnostik und Therapie; Strahlenschutz und ALARA; du brauchst das für Nuklearmedizin und MedAT-Fragen zu Zerfall und Dosis.
+
+---
+
+![Alpha-, Beta- und Gamma-Strahlung](/grafik-29-zerfall.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt α-, β- und γ-Strahlung, Reichweite und Abschirmung sowie den Zusammenhang mit Halbwertszeit und Aktivität.
+
+![Exponentieller Zerfall](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ führen zu einem exponentiellen Abfall der Teilchenzahl und der Aktivität.
 
 ## Arten der Strahlung
 
@@ -1043,7 +1071,19 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
       ],
       content: `## Einleitung
 
-Einzelne Atome sind so winzig, dass man sie nicht wiegen kann. Trotzdem müssen Chemiker und Mediziner präzise mit Mengen rechnen — zum Beispiel: Wie viel Gramm Kochsalz braucht man für eine isotone Infusion? Dafür gibt es das **Mol-Konzept**: Ein Mol ist eine riesige, aber definierte Anzahl von Teilchen (6,022 × 10²³), die man tatsächlich abwiegen kann. Das Mol verbindet die winzige atomare Welt mit der wägbaren Laborwelt. Für den MedAT sind Berechnungen mit Molarität, Osmolarität und Stöchiometrie besonders häufig prüfungsrelevant.
+Einzelne Atome sind so winzig, dass man sie nicht wiegen kann. Das **Mol-Konzept** löst das: 1 Mol = 6,022×10²³ Teilchen — eine wägbare Menge. Für den MedAT sind Mol, Molarität, Osmolarität und Stöchiometrie häufig prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Atomare Masseneinheit** u (1/12 von ¹²C); **molare Masse** M [g/mol]; **Avogadro-Konstante** Nₐ; **n = m/M** und **n = N/Nₐ**; **Molarität** c [mol/L]; **Osmolarität** (Teilchenkonzentration); Stöchiometrie und Infusionsberechnung. **Kontext:** Vom Teilchen zur wägbaren Menge; Laborwerte (mmol/L), Infusionen, Stöchiometrie — zentral für Chemie und Klinik.
+
+---
+
+![Stoffmenge und Konzentration](/grafik-mg-ug.svg)
+
+**Erklärung zur Grafik:** Umrechnung zwischen Masse, Stoffmenge und Konzentration (z. B. mg, µg, mol, mmol/L) — wichtig für Laborwerte und Infusionsberechnung.
+
+![Mol und Volumen](/grafik-volumen-liter.svg)
+
+**Erklärung zur Grafik:** Das Mol-Konzept verknüpft Teilchenzahl mit wägbaren Mengen und Volumina; die Grafik veranschaulicht n = m/M und Molarität c = n/V.
 
 ## Atomare Masseneinheit u
 
@@ -1365,7 +1405,19 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
       ],
       content: `## Einleitung
 
-Warum siedet Wasser bei 100 °C, obwohl Schwefelwasserstoff (H₂S) mit viel höherer Molmasse schon bei −60 °C siedet? Und warum löst sich Kochsalz in Wasser, aber nicht in Benzin? Die Antwort liegt in den **Kräften zwischen Molekülen** — den sogenannten intermolekularen Wechselwirkungen. Sie sind viel schwächer als kovalente Bindungen, aber sie bestimmen Siedepunkte, Löslichkeit und biologische Strukturen wie Proteinfaltung und die DNA-Doppelhelix. Für den MedAT sind das Stärkeranking und die biologische Bedeutung dieser Kräfte prüfungsrelevant.
+Warum siedet Wasser bei 100 °C, obwohl H₂S schon bei −60 °C siedet? Warum löst sich Kochsalz in Wasser, aber nicht in Benzin? Die Antwort: **intermolekulare Wechselwirkungen** (van-der-Waals, Dipol-Dipol, H-Brücken). Sie bestimmen Siedepunkte, Löslichkeit, Proteinfaltung und DNA-Doppelhelix. Für den MedAT sind Stärkeranking, H-Brücken (Donor/Akzeptor) und biologische Bedeutung prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **London-Dispersion** (alle Moleküle), **Dipol-Dipol** (Keesom), **Wasserstoffbrücken** (X–H···Y mit X,Y = N,O,F); Stärkeranking; **hydrophober Effekt**; Denaturierung. **Kontext:** Schwächere Kräfte als kovalent, aber entscheidend für Siedepunkt, Löslichkeit, DNA/Proteine; klinisch Pharmaka-Löslichkeit, PCR.
+
+---
+
+![Wasserstoffbrücken im Wasser](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Wasserstoffbrücken zwischen Wassermolekülen (O–H···O) bestimmen Siedepunkt, Dichteanomalie und die Löslichkeit vieler Stoffe.
+
+![Biogene Elemente und Bindung](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die wichtigsten Elemente für H-Brücken (N, O, F) und ihre Rolle in Biomolekülen — Grundlage für DNA-Basenpaarung und Proteinstruktur.
 
 ## Van-der-Waals-Kräfte
 
@@ -1683,7 +1735,19 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
       ],
       content: `## Einleitung
 
-Warum löst sich Zucker in Wasser, aber Öl nicht? Und warum schieben sich Erythrozyten zusammen, wenn man sie in zu konzentrierte Kochsalzlösung gibt? Die Antworten liegen in zwei zentralen Prinzipien: **Löslichkeit** (welche Stoffe sich gegenseitig lösen) und **Osmose** (wie Wasser durch Membranen fließt). Beide Konzepte sind medizinisch fundamental — von der Berechnung von Infusionslösungen bis zur Erklärung von Ödemen bei Hypoalbuminämie. Im MedAT kommen Osmolaritätsberechnungen und Löslichkeitsprodukte regelmäßig vor.
+Warum löst sich Zucker in Wasser, aber Öl nicht? Warum schrumpfen Erythrozyten in hypertoner Lösung? **Löslichkeit** („Gleiches löst Gleiches“) und **Osmose** (Wasserfluss durch semipermeable Membran) beantworten das. Für den MedAT sind Osmolarität, isoton/hypoton/hyperton, van't-Hoff-Faktor und onkotischer Druck prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Löslichkeit** (polar/unpolar, Hydratation); **Löslichkeitsprodukt** Ksp; **Osmose** und **osmotischer Druck** π = i·c·R·T; **Osmolarität** [mOsmol/L]; isoton/hypoton/hyperton, **Hämolyse**; **onkotischer Druck** (Albumin). **Kontext:** Infusionen, Erythrozyten, Ödeme bei Hypoalbuminämie; zentral für Klinik und MedAT.
+
+---
+
+![Konzentration und Osmolarität](/grafik-mg-ug.svg)
+
+**Erklärung zur Grafik:** Umrechnung zwischen Masse, Stoffmenge und Konzentration (mol/L, Osmolarität) — Basis für Infusionslösungen und Tonizität.
+
+![Osmose und Druck](/grafik-partialdruck.svg)
+
+**Erklärung zur Grafik:** Der osmotische Druck hängt von der Teilchenkonzentration ab (van't Hoff); die Grafik veranschaulicht den Zusammenhang mit Partialdruck und Konzentration.
 
 ## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
@@ -2011,7 +2075,19 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
       ],
       content: `## Einleitung
 
-Warum siedet Wasser im Gebirge schneller? Warum fühlen sich Dampfverbrennungen schlimmer an als Verbrennungen mit gleichtemperiertem Wasser? Und was hat Blut mit einer Milch-Emulsion gemeinsam? Hinter all diesen Fragen steckt die Physik der **Aggregatzustände** und der **Kolloide**. Der Zustand eines Stoffs (fest, flüssig, gasförmig) bestimmt seine Eigenschaften — und Phasenübergänge sind immer mit Energieumsatz verbunden. Kolloide sind Mischsysteme auf der Grenze zwischen echter Lösung und Suspension — klinisch wichtig bei Infusionslösungen, Lungenembolien und Surfactant. Für den MedAT sind besonders Phasenübergänge (endo/exotherm), Siedepunktänderungen und kolloidale Systeme relevant.
+**Aggregatzustände** (fest, flüssig, gasförmig) und **Phasenübergänge** (Schmelzen, Sieden, Sublimation) sind mit Energieumsatz verbunden. **Kolloide** (1 nm–1 μm) liegen zwischen Lösung und Suspension — relevant für Blut, Infusionen, Surfactant. Für den MedAT sind Phasenübergänge (endo/exotherm), Dampfdruck/Siedepunkt und Kolloidchemie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** Drei **Aggregatzustände**; **Phasenübergänge** (Schmelzen, Sieden, Sublimation) und Vorzeichen (endo/exo); **Dampfdruck** und Siedepunkt (Druckabhängigkeit); **Kolloide** (Tyndall, Brownsche Bewegung); klinisch: Blut als Kolloid, Surfactant, Emulsionen. **Kontext:** Zustände und Übergänge; Kolloide in Biologie und Medizin.
+
+---
+
+![Phasendiagramm und Zustände](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Der Zusammenhang von Druck, Volumen und Temperatur (p·V = n·R·T) und Phasenübergänge zwischen fest, flüssig und gasförmig werden hier dargestellt.
+
+![Wärme und Phasenübergänge](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Schmelzen, Verdampfen und Sublimation sind mit Wärmeumsatz verbunden (latente Wärme); die Grafik fasst endotherme und exotherme Übergänge zusammen.
 
 ## Die drei Aggregatzustände
 
@@ -2362,7 +2438,19 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
       ],
       content: `## Einleitung
 
-Das **Periodensystem der Elemente (PSE)** ist der "Stadtplan der Chemie": Mit einem Blick sieht man, wie reaktiv ein Element ist, wie viele Bindungspartner es eingehen kann und ob es Metall, Nichtmetall oder Halbmetall ist. Die Elemente sind nach ihrer **Ordnungszahl** (Protonenzahl) angeordnet und wiederholen dabei ihre Eigenschaften in regelmäßigen Abständen — deshalb heißen die horizontalen Zeilen "Perioden". Elemente in derselben Spalte (Gruppe) haben die gleiche Anzahl an Valenzelektronen und daher ähnliche chemische Eigenschaften. Für den MedAT sind PSE-Trends, Gruppen-Merkmale und der Zusammenhang zwischen Position und Elektronenkonfiguration prüfungsrelevant.
+Das **Periodensystem (PSE)** ordnet Elemente nach **Ordnungszahl Z**; **Perioden** (Zeilen) und **Gruppen** (Spalten) zeigen wiederkehrende Eigenschaften. Gleiche Gruppe = gleiche Valenzelektronenanzahl. Für den MedAT sind Aufbau (s/p/d/f-Blöcke), Perioden/Gruppen und Zusammenhang Position–Eigenschaften prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **PSE-Aufbau** (7 Perioden, Gruppen 1–18); **s-**, **p-**, **d-**, **f-Block**; Ordnungszahl und Valenzelektronen; Metall/Nichtmetall/Halbmetall. **Kontext:** PSE als Ordnungsprinzip; Grundlage für Trends und Gruppenchemie; MedAT-Fragen zu Position und Eigenschaften.
+
+---
+
+![Periodensystem und Blöcke](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die Anordnung der Elemente nach Ordnungszahl, s-/p-/d-/f-Blöcke und die Stellung der biogenen Elemente (C, N, O, P, S) im PSE.
+
+![Orbitale und PSE-Position](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Die Besetzung der Orbitale (s, p, d, f) bestimmt die Position im Periodensystem und die Periodizität der Eigenschaften.
 
 ## Geschichte und Entwicklung des Periodensystems
 
@@ -2684,7 +2772,19 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
       ],
       content: `## Einleitung
 
-Warum ist Fluor so viel reaktiver als Iod? Warum werden Metallatome zu Kationen und Nichtmetallatome zu Anionen? All diese Trends im PSE haben eine gemeinsame Ursache: die **effektive Kernladung** — also wie stark der Kern die Valenzelektronen tatsächlich anzieht, abzüglich der Abschirmung durch innere Elektronen. Je größer die effektive Kernladung, desto kleiner der Atomradius, desto höher die Ionisierungsenergie und Elektronegativität. Diese Trends bestimmen die gesamte Chemie eines Elements. Für den MedAT sind IE-Ausnahmen, EN-Werte, Atomradien und Bindungscharakter häufige Themen.
+**Periodische Trends** (Atomradius, Ionisierungsenergie, Elektronegativität) haben eine gemeinsame Ursache: die **effektive Kernladung** Z_eff. Sie bestimmt, wie stark Valenzelektronen gebunden werden. Für den MedAT sind Z_eff, Radius/IE/EN-Trends (Periode vs. Gruppe), Ausnahmen und Bindungscharakter prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Effektive Kernladung** Z_eff (Z − σ); **Atomradius** (↓ in Periode, ↑ in Gruppe); **Ionisierungsenergie** IE (↑ in Periode, ↓ in Gruppe); **Elektronegativität** (Pauling); Ionenradius; Einfluss auf Bindungscharakter. **Kontext:** Trends erklären Reaktivität und Bindungstyp; MedAT-Fragen zu IE, EN, Radius.
+
+---
+
+![Schalen und Atomradius](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die effektive Kernladung und die Schalenstruktur (K, L, M) bestimmen Atomradius und Ionisierungsenergie — Grundlage der periodischen Trends.
+
+![Orbitale und Elektronegativität](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Die Besetzung der Orbitale (s, p) und die daraus resultierende Stabilität (Hund, Pairing Penalty) beeinflussen IE und EN innerhalb einer Periode.
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
@@ -3010,7 +3110,19 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
       ],
       content: `## Einleitung
 
-Das Periodensystem wäre nur eine Tabelle mit Zahlen, wenn die Elemente nicht in charakteristischen Gruppen aufträten. Alkalimetalle (z.B. Na, K) reagieren heftig mit Wasser und sind im Körper unverzichtbare Elektrolyte. Halogene (F, Cl, I) sind aggressive Oxidationsmittel — und trotzdem essenziell für Schilddrüsenhormone und Desinfektion. Edelgase (He, Ar, Xe) sind inert — und doch in der Medizin nützlich. Übergangsmetalle wie Eisen, Zink und Kupfer sind mit ihren variablen Oxidationsstufen die "Motoren" der Biochemie. Für den MedAT sind die klinischen Folgen von Elektrolytstörungen und Spurenelementmängeln besonders wichtig.
+**Elementgruppen** prägen die Chemie: Alkalimetalle (Na, K) als Elektrolyte, Halogene (F, Cl, I) für Schilddrüse und Desinfektion, Edelgase inert, Übergangsmetalle (Fe, Zn, Cu) als Cofaktoren. Für den MedAT sind Gruppenmerkmale, Oxidationsstufen und klinische Bedeutung (Elektrolyte, Spurenelemente) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Alkalimetalle** (Gruppe 1, ns¹, +1); **Erdalkalimetalle** (Gruppe 2, ns², +2); **Halogene** (Gruppe 17, Oxidationsmittel); **Edelgase** (inert); **Übergangsmetalle** (variable Oxidationsstufen); biologische Rolle (Na⁺/K⁺, Ca²⁺, Fe, I). **Kontext:** Von der Gruppe zur Klinik — Elektrolyte, Schilddrüse, Hämoglobin; MedAT-Fragen zu Gruppen und Mangel/Überschuss.
+
+---
+
+![Biogene Elemente und Gruppen](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die wichtigsten Elementgruppen (Alkali, Erdalkali, Halogene, Chalkogene) und die Stellung der biogenen Elemente im PSE — Grundlage für physiologische Rollen.
+
+![Kohlenstoff und Übergangsmetalle](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Kohlenstoff (Gruppe 14) und Übergangsmetalle (d-Block) sind zentral für organische Chemie und Cofaktoren (z. B. Eisen im Hämoglobin).
 
 ## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 

@@ -24,7 +24,16 @@ export const bioKapEntwicklung: Kapitel = {
       ],
       content: `## Einleitung
 
-Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden und miteinander verschmelzen — das nennt man **Befruchtung**. Beim Menschen geschieht dies nicht in der Gebärmutter, sondern im **Eileiter**, einem engen Kanal zwischen Eierstock und Gebärmutter. Von dort entwickelt sich der befruchtete Keim in mehreren präzise getakteten Schritten: über einen Zellhaufen (Morula) zur hohlen Blastozyste, die sich schließlich in der Gebärmutterschleimhaut einnistet. Jede Stufe dieses Prozesses ist im MedAT prüfungsrelevant — von der Reifung der Samenzelle über die Zellverschmelzung bis zur Einnistung und der frühen Hormonsteuerung der Schwangerschaft.
+Damit neues Leben entstehen kann, müssen Samenzelle und Eizelle zusammenfinden und miteinander verschmelzen — das nennt man **Befruchtung**. Beim Menschen geschieht dies im **Eileiter** (nicht in der Gebärmutter). Von dort entwickelt sich der Keim über Morula zur Blastozyste, die sich in der Gebärmutterschleimhaut einnistet. Für den MedAT sind Ort der Befruchtung, Kapazitation, Akrosom- und Kortikalreaktion, Blastozyste und hCG prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Wo** die Befruchtung stattfindet (Ampulle des Eileiters) und was **Kapazitation** ist
+- **Akrosomreaktion** (Spermium durchdringt Eizellhülle) und **Kortikalreaktion** (Polyspermie-Block)
+- **Zygote**, **Morula**, **Blastozyste** (Trophoblast vs. Embryoblast) und **Implantation**
+- Die Rolle von **hCG** (erhält Corpus luteum, Schwangerschaftstest)
+- Klinik: Eileiterschwangerschaft, hCG-Diagnostik
+
+**Kontext:** Von der Befruchtung bis zur Einnistung — Grundlage für Reproduktionsmedizin und Pränataldiagnostik.
 
 ---
 
@@ -47,6 +56,10 @@ Die Akrosom-Reaktion wird durch die Bindung des Spermiums an ZP3 der Zona pelluc
 Die Blastozyste (Tag 5–6) ist das erste Stadium mit zwei zellulär verschiedenen Populationen. Der Trophoblast (äußere Schicht) differenziert sich in den Zytotrophoblast (innere Stammzellschicht) und den Synzytiotrophoblast (äußere, mehrkernige, hochinvasive Schicht). Letzterer ist für die Invasion ins Endometrium und die Produktion von hCG verantwortlich. Der Embryoblast (innere Zellmasse) differenziert sich um Tag 8 in Epiblast (obere Schicht; Quelle aller drei Keimblätter und des Amnions) und Hypoblast (untere Schicht; bildet den primären Dottersack). Das Blastozoel ist ein flüssigkeitsgefüllter Hohlraum, dessen Ausdehnung zur typischen Blastozysten-Morphologie führt.
 
 > **Merke:** Blastozyste: Trophoblast (→ Plazenta, hCG), Embryoblast (→ Embryo), Blastozoel (Hohlraum).
+
+![Blastozyste](/grafik-blastozyste.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt einen Querschnitt der Blastozyste: Trophoblast (Zyto- und Synzytiotrophoblast) außen, Embryoblast (Epiblast/Hypoblast) als innere Zellmasse und den flüssigkeitsgefüllten Blastozoel. So erkennst du die Zuordnung Trophoblast → Plazenta, Embryoblast → Embryo.
 
 ---
 
@@ -242,7 +255,15 @@ Die Extrauteringravidität (ektope Schwangerschaft, 95 % im Eileiter) entsteht, 
       ],
       content: `## Einleitung
 
-In der dritten Entwicklungswoche passiert etwas Entscheidendes: Aus einer flachen, zweischichtigen Zellscheibe — dem frühen Embryo — entstehen drei übereinanderliegende Schichten, die sogenannten **Keimblätter**. Aus diesen drei Schichten (Ektoderm, Mesoderm, Endoderm) entwickeln sich später alle Organe und Gewebe des Körpers. Gleichzeitig entsteht in diesem Stadium das **Nervensystem**: Eine Rinne faltet sich zum Neuralrohr zusammen, das später Gehirn und Rückenmark wird. Die Keimblattderivate — also welches Organ aus welchem Blatt entsteht — gehören zu den am häufigsten geprüften Themen im MedAT-BMS. Störungen der Neuralrohrbildung führen zu klinisch bedeutsamen Fehlbildungen wie Spina bifida.
+In der dritten Entwicklungswoche entstehen aus der frühen Keimscheibe die **drei Keimblätter** (Ektoderm, Mesoderm, Endoderm) — aus ihnen entwickeln sich später alle Organe. Gleichzeitig bildet sich das **Neuralrohr** (Vorläufer von Gehirn und Rückenmark). Für den MedAT sind Gastrulation, Keimblattderivate und Neurulation zentral.
+
+**In diesem Kapitel lernst du:**
+- **Gastrulation** (Primitivstreifen, Epiblast → drei Keimblätter) und **Neurulation** (Neuralrohr)
+- **Ektoderm, Mesoderm, Endoderm** und welche Organe aus welchem Blatt entstehen
+- **Neuralleiste** und ihre Derivate (Ganglien, Melanozyten, Nebennierenmark …)
+- Klinik: **Spina bifida**, Anenzephalie bei Neuralrohrdefekten
+
+**Kontext:** Warum welches Gewebe wo herkommt — Basis für Embryologie und Fehlbildungen.
 
 ---
 
@@ -456,7 +477,15 @@ Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen, wenn der posteriore od
       ],
       content: `## Einleitung
 
-Nach der Einnistung beginnt eine neun Monate lange Entwicklung — doch nicht alle Phasen sind gleich wichtig. In den ersten acht Wochen (**Embryonalperiode**) werden alle Organe des Körpers von Grund auf neu angelegt. Das ist eine extrem empfindliche Phase: Schädliche Einflüsse wie Medikamente oder Viren können in dieser Zeit gezielt die gerade entstehenden Organe treffen und bleibende Fehlbildungen verursachen. Solche schädigenden Substanzen heißen **Teratogene**. Ab der 9. Woche beginnt die **Fetalperiode** — jetzt wachsen und reifen die vorhandenen Organe, aber es entstehen keine neuen mehr. Meilensteine wie die Lungenreife (ab Woche 24) entscheiden darüber, ob ein Frühgeborenes überleben kann.
+In den ersten **8 Wochen** (Embryonalperiode) werden alle Organe angelegt; danach (Fetalperiode) wachsen und reifen sie. In der Embryonalperiode können **Teratogene** (z. B. Medikamente, Viren) zu Fehlbildungen führen. Für den MedAT sind Embryonal- vs. Fetalperiode, Teratogene, kritisches Zeitfenster und Lungenreife prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Embryonalperiode** (Wochen 1–8): Organogenese; **Fetalperiode** (ab Woche 9): Wachstum
+- **Teratogene** und **kritische Perioden** (organspezifische Schädigung)
+- **Alles-oder-Nichts-Prinzip** (Woche 1–2)
+- **Lungenreife**, Surfactant, RDS bei Frühgeborenen
+
+**Kontext:** Warum der erste Trimenon so empfindlich ist und was Frühgeburtlichkeit bedeutet.
 
 ---
 
@@ -657,7 +686,15 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       content: `## Einleitung
 
-Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — all das übernimmt für ihn ein einzigartiges Organ: die **Plazenta**. Sie verbindet das Kind über die Nabelschnur mit dem mütterlichen Kreislauf und ist gleichzeitig Lunge, Darm, Niere und Hormondrüse des wachsenden Embryos. Dabei gilt eine wichtige Regel: Das Blut von Mutter und Kind mischt sich **niemals direkt** — der Austausch von Sauerstoff, Nährstoffen und Hormonen läuft über eine spezielle Trennschicht, die **Plazentaschranke**. Aufbau, Funktion und die Frage, was diese Schranke passiert und was nicht, werden im MedAT regelmäßig geprüft.
+Der Fötus kann nicht selbst atmen, essen oder Hormone produzieren — die **Plazenta** übernimmt das: Sie verbindet das Kind mit dem mütterlichen Kreislauf (Nabelschnur) und ist Lunge, Darm, Niere und Hormondrüse in einem. Wichtig: Das Blut von Mutter und Kind **mischt sich nicht**; der Austausch läuft über die **Plazentaschranke**. Für den MedAT sind Aufbau (fetal/maternal), Plazentaschranke und was durchtritt prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Aufbau** der Plazenta (Chorionzotten, Decidua, intervillöse Räume)
+- **Plazentaschranke** — was passiert (O₂, Nährstoffe, IgG) und was nicht (Blut, viele Erreger)
+- **Nabelschnur** (2 Arterien, 1 Vene) und **Plazentahormone**
+- Klinik: Plazentainsuffizienz, Infektionen (TORCH)
+
+**Kontext:** Warum der Fötus geschützt ist und wie der Stoffaustausch funktioniert.
 
 ---
 
@@ -875,7 +912,15 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
       ],
       content: `## Einleitung
 
-Wie ist aus unbelebter Materie das erste Leben entstanden? Diese Frage beschäftigt Naturwissenschaftler seit Jahrhunderten — und es gibt heute plausible, experimentell gestützte Antworten. Ein Schlüsselexperiment war das **Miller-Urey-Experiment** (1953): Es bewies, dass sich die Bausteine des Lebens (z. B. Aminosäuren) spontan aus einfachen anorganischen Molekülen bilden können — ohne lebende Zellen. Aber wie entstand dann das erste Gen, das ersten Proteine? Die **RNA-Welt-Hypothese** liefert die eleganteste Antwort. Und wie erklären wir, dass unsere Zellen Kraftwerke (Mitochondrien) enthalten, die eigentlich einmal selbständige Bakterien waren? Dafür gibt es die **Endosymbiontentheorie** — und sie hat sogar direkte klinische Bedeutung für das Verständnis von Antibiotika-Nebenwirkungen.
+Wie ist aus unbelebter Materie das erste Leben entstanden? **Miller-Urey** zeigte: Aminosäuren entstehen abiotisch. **RNA-Welt-Hypothese** erklärt den Übergang zu genetischer Information. **Endosymbiontentheorie** erklärt Mitochondrien (und Chloroplasten) als ehemalige Bakterien. Für den MedAT sind diese drei Konzepte prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Miller-Urey-Experiment** (1953): abiotische Synthese organischer Moleküle (Aminosäuren)
+- **RNA-Welt-Hypothese**: RNA als erstes genetisches und katalytisches Molekül
+- **Endosymbiontentheorie**: Mitochondrien/Chloroplasten aus aufgenommenen Bakterien
+- Klinik: Antibiotika-Nebenwirkungen (Mitochondrien haben bakterielle Abstammung)
+
+**Kontext:** Von der Chemie zum ersten Leben — und warum unsere Zellkraftwerke „fremd“ sind.
 
 ---
 
@@ -1094,7 +1139,15 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
       ],
       content: `## Einleitung
 
-Wie rekonstruiert man die Geschichte des Lebens, wenn man nicht dabei war? Biologen lesen dazu in Fossilien, aber noch präziser in DNA-Sequenzen. Die **Phylogenetik** (griech. *phylon* = Stamm) untersucht die Verwandtschaft zwischen Lebewesen und stellt sie in **Stammbäumen** dar. Dabei sind zwei Begriffe wichtig: **Homologie** bedeutet, dass zwei Strukturen denselben evolutionären Ursprung haben — auch wenn sie heute unterschiedlich aussehen oder funktionieren. **Analogie** bedeutet, dass zwei ähnliche Strukturen unabhängig voneinander entstanden sind — eine Lösung, auf die die Evolution zweimal gestoßen ist. Diese Unterscheidung ist ein MedAT-Klassiker und wird regelmäßig geprüft.
+Die **Phylogenetik** rekonstruiert Verwandtschaft (Fossilien, DNA) und stellt sie in **Stammbäumen** dar. Zentral: **Homologie** (gleicher Ursprung, oft verschiedene Funktion) vs. **Analogie** (unabhängige Entstehung, ähnliche Funktion). Diese Unterscheidung ist ein MedAT-Klassiker.
+
+**In diesem Kapitel lernst du:**
+- **Homologie** = gemeinsamer evolutionärer Ursprung (z. B. Vogelflügel – Menschenarm)
+- **Analogie** = konvergente Evolution, gleiche Funktion, anderer Bau (z. B. Flügel Vogel – Insekt)
+- **Stammbäume** lesen: Verzweigungen = Aufspaltung von Linien
+- **Konvergenz** vs. **Divergenz**
+
+**Kontext:** Wie man Verwandtschaft erkennt und warum Ähnlichkeit nicht immer Abstammung bedeutet.
 
 ---
 
@@ -1316,7 +1369,15 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
       ],
       content: `## Einleitung
 
-Warum sehen Giraffen lange Hälse? Warum werden Bakterien resistent gegen Antibiotika? Die Antwort lautet in beiden Fällen: **natürliche Selektion**. Charles Darwin erkannte als erster, dass Lebewesen, die besser an ihre Umwelt angepasst sind, mehr Nachkommen hinterlassen — und diese Eigenschaft vererben. Über viele Generationen verändert sich so das Erscheinungsbild einer Art. Dieses Grundprinzip — bekannt als **Darwinismus** — wurde im 20. Jahrhundert mit der Genetik zur **Synthetischen Evolutionstheorie** vereint. Sie definiert Evolution präzise als Veränderung von Allelfrequenzen in Populationen und ist das zentrale Rahmenwerk der modernen Biologie. Im MedAT werden Darwins vier Kernprinzipien, die drei Selektionsarten und der Begriff der biologischen Fitness geprüft.
+**Natürliche Selektion** (Darwin): Besser angepasste Individuen haben mehr Nachkommen → ihre Eigenschaften häufen sich. Mit der Genetik wurde daraus die **Synthetische Evolutionstheorie** (Evolution = Änderung von Allelfrequenzen). Für den MedAT sind Darwins vier Prinzipien, Selektionsarten und Fitness zentral.
+
+**In diesem Kapitel lernst du:**
+- **Darwins vier Prinzipien**: Variation, Vererbung, Überproduktion, unterschiedlicher Fortpflanzungserfolg
+- **Natürliche, sexuelle, künstliche** Selektion
+- **Fitness** (reproduktiver Erfolg) und **Lamarck** (widerlegt: erworbene Merkmale nicht vererbt)
+- **Synthetische Evolutionstheorie** (Darwin + Genetik)
+
+**Kontext:** Warum Arten sich anpassen und warum Antibiotikaresistenz entsteht.
 
 ---
 
@@ -1556,7 +1617,15 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       ],
       content: `## Einleitung
 
-Was macht eine Art zu einer Art? Das ist keine triviale Frage — und verschiedene Biologen haben verschiedene Antworten. Der im MedAT relevanteste ist der **biologische Artbegriff** von Ernst Mayr: Eine Art ist eine Gruppe von Populationen, die sich untereinander fortpflanzen können und von anderen Gruppen **reproduktiv isoliert** sind. Wenn zwei Gruppen nicht mehr miteinander Nachkommen zeugen können, gelten sie als verschiedene Arten. Die Mechanismen, die diese Isolierung bewirken — und damit die Entstehung neuer Arten (**Speziation**) ermöglichen — sind das Kernthema dieses Kapitels. Das Maultier als klassisches Beispiel für Hybridsterilität ist eine typische MedAT-Prüfungsfrage.
+**Biologischer Artbegriff** (Mayr): Eine Art = Populationen, die sich untereinander fortpflanzen können und von anderen **reproduktiv isoliert** sind. **Speziation** = Entstehung neuer Arten durch Isolationsmechanismen. Für den MedAT sind Artbegriff, prä-/postzygotische Isolation und Beispiele (Maultier!) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Biologischer Artbegriff**: Fortpflanzungsgemeinschaft, reproduktive Isolation
+- **Präzygotische** Isolation (vor Befruchtung: räumlich, zeitlich, ethologisch …)
+- **Postzygotische** Isolation (Hybridsterilität, -invitabilität) — **Maultier** als Beispiel
+- **Allopatrische** vs. **sympatrische** Artbildung
+
+**Kontext:** Wann zwei Populationen als verschiedene Arten gelten und wie neue Arten entstehen.
 
 ---
 
@@ -1782,7 +1851,15 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
       ],
       content: `## Einleitung
 
-Evolution passiert nicht von allein — sie braucht **Antriebskräfte**. Vier solche Kräfte verändern, welche Gene (genauer: welche Allele) in einer Population häufig oder selten sind: Mutation schafft neue Varianten, Selektion bevorzugt vorteilhafte Varianten, Gendrift verändert Häufigkeiten durch puren Zufall (besonders in kleinen Gruppen), und Genfluss bringt Gene aus anderen Populationen hinein. Um zu verstehen, wann Evolution stattfindet und wann nicht, nutzt man das **Hardy-Weinberg-Gleichgewicht** — ein mathematisches Modell, das den Ausgangszustand ohne evolutionären Wandel beschreibt. Jede Abweichung von diesem Gleichgewicht verrät, dass einer der vier Faktoren aktiv ist.
+Vier **Evolutionsfaktoren** verändern Allelfrequenzen: **Mutation** (Rohstoff), **Selektion** (Anpassung), **Gendrift** (Zufall in kleinen Populationen), **Genfluss** (Austausch zwischen Populationen). Das **Hardy-Weinberg-Gleichgewicht** beschreibt den Zustand ohne Evolution; Abweichungen zeigen, welcher Faktor wirkt. Für den MedAT sind die vier Faktoren und Hardy-Weinberg prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Mutation, Selektion, Gendrift, Genfluss** — was jede Kraft bewirkt
+- **Hardy-Weinberg**: p² + 2pq + q² = 1; Voraussetzungen (keine Evolution)
+- Wann welche Abweichung welchen Faktor anzeigt
+- **Gründereffekt**, **Flaschenhals**
+
+**Kontext:** Warum sich Populationen verändern — und wann sie (theoretisch) gleich bleiben.
 
 ---
 
@@ -1998,7 +2075,15 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       ],
       content: `## Einleitung
 
-Der Mensch ist das Ergebnis von Millionen Jahren Evolution. Aber: Der Mensch stammt **nicht** vom Schimpansen ab. Vielmehr haben Mensch und Schimpanse einen gemeinsamen Vorfahren, der vor ca. 6–7 Millionen Jahren existierte und von dem sich beide Linien unabhängig entwickelten. Die Entwicklung hin zum modernen Menschen — die sogenannte **Hominisation** — war ein schrittweiser Prozess, bei dem sich zunächst der aufrechte Gang (**Bipedie**) entwickelte, und erst danach das Gehirn zunehmend größer wurde. Im MedAT werden typischerweise die wichtigsten Homininen in zeitlicher Reihenfolge, ihre Hirnvolumina, die Out-of-Africa-Theorie und die neanderthalischen Gene im modernen Menschen abgefragt.
+Der Mensch stammt **nicht** vom Schimpansen ab — beide haben einen gemeinsamen Vorfahren (vor ca. 6–7 Mio. Jahren). **Hominisation** = Entwicklung zum modernen Menschen; zuerst **Bipedie** (aufrechter Gang), dann Gehirnvergrößerung. Für den MedAT sind Homininen, Hirnvolumina, Out-of-Africa und Neandertaler-Gene prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Bipedie vor Gehirnvergrößerung** (Australopithecus vs. Homo)
+- Wichtige **Homininen** (Australopithecus, H. erectus, H. neanderthalensis, H. sapiens) und typische Merkmale
+- **Out-of-Africa-Theorie** und **Neandertaler-Anteil** im modernen Menschen
+- **Hirnvolumina** (Schimpanse ~450, H. sapiens ~1400 ccm)
+
+**Kontext:** Woher wir kommen und warum „der Mensch stammt vom Affen ab“ falsch formuliert ist.
 
 ---
 

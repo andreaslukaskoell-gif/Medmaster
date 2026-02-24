@@ -56,6 +56,10 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art: Breite 
 
 > **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, aber Überleben) → Todespunkt (letale Grenze). Ökologische Amplitude = Breite des Toleranzbereichs.
 
+![Toleranzkurve](/grafik-toleranzkurve.svg)
+
+**Erklärung zur Grafik:** Die Glockenkurve zeigt Optimum, Pessimum und Todespunkte sowie die ökologische Amplitude — Grundlage für die Abgrenzung euryök (Generalist) vs. stenök (Spezialist).
+
 ---
 
 ## Euryök vs. stenök — Konsequenzen für den Naturschutz

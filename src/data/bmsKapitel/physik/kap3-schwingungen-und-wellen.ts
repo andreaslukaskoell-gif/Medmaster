@@ -31,7 +31,21 @@ export const physKap3: Kapitel = {
 
 Pendel in einer Standuhr, Stimmgabel beim Stimmen eines Instruments, Herzschlag im EKG — all das sind periodische Schwingungen. Das Grundmodell dahinter ist die **harmonische Schwingung**: eine hin-und-hergehende Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist. Dieses Prinzip steckt auch im MRT (Protonenresonanz), in Ultraschallköpfen (Piezokristall) und im Innenohr. Für den MedAT sind Amplitude, Frequenz, Periodendauer, Kreisfrequenz, Resonanz und Dämpfung prüfungsrelevant.
 
-**SVG-Hinweis (Harmonische Schwingung — x(t), ω, Faden- und Federpendel):** Ein Schema mit x(t) = A·cos(ωt+φ), T = 2π√(l/g) bzw. T = 2π√(m/k), Resonanz und Dämpfung unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+**In diesem Kapitel lernst du:**
+- die **harmonische Schwingung** (x(t) = A·cos(ωt+φ₀)), **Amplitude** A, **Kreisfrequenz** ω = 2πf = 2π/T
+- **Fadenpendel**: T = 2π√(l/g) — unabhängig von Masse und Amplitude (**Isochronie**)
+- **Federpendel**: T = 2π√(m/k); Energie E_ges = ½·k·A² und Energiegleichstand bei x = A/√2
+- **Resonanz** (Anregungsfrequenz = Eigenfrequenz → maximale Amplitude) und **Dämpfung** (Abklingen)
+- typische Prüfungsfallen (ω vs. f, E ∝ A², Faden- vs. Federpendel) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rückstellkraft proportional zur Auslenkung (F = −k·x) führt zu Sinus-/Kosinus-Schwingungen. Das beschreibt Pendel, Federn, aber auch Schwingkreise in der Technik und Kernspin im MRT. Du brauchst es für Wellen (nächstes Unterkapitel), für Akustik und für MedAT-Aufgaben zu T, f, ω und Resonanz.
+
+---
+
+![Schwingung](/grafik-25-schwingung.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die harmonische Schwingung x(t) = A·cos(ωt+φ), die Periodendauer beim Fadenpendel T = 2π√(l/g) und beim Federpendel T = 2π√(m/k), sowie Resonanz und Dämpfung.
 
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
@@ -97,6 +111,10 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
 
 Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer Form in die andere über. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin² und cos² schwingen.
 
+![Schwingung und Welle](/grafik-26-welle.svg)
+
+**Erklärung zur Grafik:** Eine fortschreitende Welle entsteht, wenn eine Schwingung räumlich weitergegeben wird; die Grafik zeigt den Zusammenhang zwischen Schwingungsparametern und Wellengrößen (c = f·λ).
+
 ## Resonanz und Dämpfung
 
 **Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f₀ durch eine externe periodische Kraft angeregt wird – die Amplitude wächst dann stark an. Beispiele: MRT-Gerät (Kernspinresonanz), Tacoma-Narrows-Brücke (Windresonanz), Mikrowelle (Resonanzfrequenz des Wassermoleküls).
@@ -145,7 +163,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Zentral prüfungsrelevant:** Harmonische Schwingung, Fadenpendel T = 2π√(l/g), Federpendel T = 2π√(m/D), T unabhängig von Amplitude (ungedämpft), Frequenz f = 1/T.
 
-**Ergänzend vertiefend:** Gedämpfte Schwingung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Gedämpfte Schwingung (A(t) = A₀·e^(−δt)); aperiodischer Grenzfall und Kriechfall; Güte Q; Larmorfrequenz im MRT (f = γ·B₀); typische Verwechslungen (ω ≠ f, E ∝ A², Faden vs. Feder) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
@@ -202,7 +220,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
       ],
 
       diagram: "wave-types",
-      imageUrl: "/grafik-25-schwingung.svg",
 
       merksätze: [
         "x(t) = A · cos(ωt + φ₀) – die Grundformel der harmonischen Schwingung.",
@@ -365,11 +382,29 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
       ],
       content: `## Einleitung
 
-Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind Wellen. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an, dieser seinen Nachbarn — so pflanzt sich die Störung fort. Ob Schall im Körper oder elektromagnetische Strahlung in der Bildgebung: Die Wellengleichung c = f·λ und die Unterscheidung von Transversal- und Longitudinalwellen sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
+Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind **Wellen**. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an — so pflanzt sich die Störung fort. Die **Wellengleichung** c = f·λ und die Unterscheidung von **Transversal-** und **Longitudinalwellen** sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
 
-**SVG-Hinweis (Wellen — c = f·λ, Transversal vs. Longitudinal, EM-Spektrum):** Ein Schema mit Wellengleichung, Schwingungsrichtung, Schallgeschwindigkeiten und EM-Bereichen unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+**In diesem Kapitel lernst du:**
+- die **Wellengleichung** c = f·λ (Ausbreitungsgeschwindigkeit, Frequenz, Wellenlänge) und Grundgrößen der Welle
+- **Transversalwellen** (Schwingung senkrecht zur Ausbreitung, z. B. Licht) vs. **Longitudinalwellen** (Schwingung in Ausbreitungsrichtung, z. B. Schall)
+- **Schallgeschwindigkeit** in verschiedenen Medien und **elektromagnetisches Spektrum** (Bereiche, Anwendung)
+- **Akustische Impedanz** Z = ρ·c und Reflexion/Transmission beim **Medienwechsel** (z. B. Ultraschall)
+- typische Prüfungsfallen (c = f·λ, Einheiten, Impedanzanpassung) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie, nicht Materie. Schall (Longitudinalwelle), Licht und Röntgen (Transversalwellen) folgen c = f·λ. In der Medizin: Ultraschall (Echografie), MRT (Radiowellen), Röntgen. Du brauchst das für Optik, Atomphysik und für MedAT-Aufgaben zu Wellenlänge, Frequenz und Impedanz.
+
+---
+
+![Welle](/grafik-26-welle.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht c = f·λ, transversale vs. longitudinale Wellen, Schallgeschwindigkeiten und das elektromagnetische Spektrum.
 
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
+
+![Harmonische Schwingung](/grafik-25-schwingung.svg)
+
+**Erklärung zur Grafik:** Die lokale Schwingung der Teilchen (Amplitude A, Periodendauer T) ist die Grundlage jeder Welle; die Grafik zeigt den Zusammenhang zwischen Oszillator und Wellenausbreitung.
 
 ## Grundgrößen der Welle
 
@@ -493,7 +528,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Zentral prüfungsrelevant:** Wellengrößen (λ, f, c = λ·f), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
 
-**Ergänzend vertiefend:** Stehende Welle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Stehende Welle (Knoten/Bäuche, λₙ = 2L/n); Kohärenz; Snellius und Totalreflexion; typische Verwechslungen (Doppler-Vorzeichen, konstruktiv n·λ vs. destruktiv (n+½)·λ) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
@@ -550,7 +585,6 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       ],
 
       diagram: "wave-types",
-      imageUrl: "/grafik-26-welle.svg",
 
       merksätze: [
         "c = f · λ – die Grundgleichung jeder Welle.",
@@ -721,9 +755,23 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       diagram: "wave-types",
       content: `## Einleitung
 
-Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken Wellenphänomene: Doppler-Effekt, Totalreflexion und Interferenz. Diese Phänomene sind keine Theorie-Kuriosität — sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Anwendung in der Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
+Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken **Wellenphänomene**: Doppler-Effekt, Totalreflexion und Interferenz. Sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
 
-**SVG-Hinweis (Interferenz, Doppler, Totalreflexion):** Ein Schema mit Gangunterschied n·λ / (n+½)·λ, Doppler-Formel und Snellius/Totalreflexion unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+**In diesem Kapitel lernst du:**
+- **Interferenz**: konstruktiv (Gangunterschied n·λ) vs. destruktiv ((n+½)·λ); **Superpositionsprinzip**
+- **Stehende Wellen**: Knoten und Bäuche; Grundfrequenz und Obertöne (λₙ = 2L/n)
+- **Doppler-Effekt**: Frequenzverschiebung bei Relativbewegung; **Doppler-Sonographie** (Δf = 2·f₀·v·cos θ/c)
+- **Reflexion, Brechung** (Snellius), **Totalreflexion** und **Beugung**
+- typische Prüfungsfallen (Doppler-Vorzeichen, Grenzwinkel) zu vermeiden
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Überlagerung und Ausbreitung von Wellen**: Interferenz (Verstärkung/Auslöschung), stehende Wellen, Doppler (Frequenzänderung durch Bewegung), Reflexion und Brechung. In der Medizin: Doppler-Ultraschall (Blutfluss), Endoskopie (Totalreflexion in Lichtleitern), Pulsoximetrie. Du brauchst das für Akustik (nächstes UK) und für MedAT-Aufgaben zu Doppler, Interferenz und Brechung.
+
+---
+
+![Interferenz Doppler](/grafik-26-welle.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt konstruktive und destruktive Interferenz (Gangunterschied n·λ bzw. (n+½)·λ), die Doppler-Formel und Totalreflexion (Snellius).
 
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
@@ -785,6 +833,10 @@ Dabei ist θ der Winkel zwischen Schallstrahl und Blutfluss. Bei θ = 0° (paral
 
 **Reflexion**: Welle wird an Grenzfläche zurückgeworfen. Einfallswinkel = Reflexionswinkel (Reflexionsgesetz). Bei Reflexion am dichteren Medium: Phasensprung von π (Halbwelle). Bei Reflexion am dünneren Medium: kein Phasensprung. Dieses Verhalten ist wichtig für die Bildung stehender Wellen.
 
+![Reflexion und Brechung](/grafik-optik.svg)
+
+**Erklärung zur Grafik:** Einfallswinkel, Reflexionswinkel und Brechung (Snellius) an Grenzflächen — Grundlage für Totalreflexion in Lichtleitern und Ultraschall an Gewebegrenzen.
+
 **Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht. Schallwellen (λ ≈ 0,02–17 m) beugen leicht um Hindernisse wie Häuserecken; Lichtwellen (λ ≈ 500 nm) werden nur an Mikrostrukturen merklich gebeugt.
 
 **Brechung**: Änderung der Ausbreitungsrichtung beim Übergang zwischen Medien mit verschiedenen Ausbreitungsgeschwindigkeiten. Snellius'sches Brechungsgesetz: **n₁·sin(α₁) = n₂·sin(α₂)**, wobei n = c₀/c (Brechungsindex). Übergang in dichteres Medium (n₂ > n₁) → Brechung zum Lot hin; in dünneres Medium → Brechung vom Lot weg.
@@ -844,7 +896,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Zentral prüfungsrelevant:** Interferenz (konstruktiv Δs = n·λ, destruktiv Δs = (n+½)λ), Kohärenz, Beugung, Doppelspalt, Anwendung (Röntgenbeugung, Ultraschall).
 
-**Ergänzend vertiefend:** Huygens-Prinzip; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Huygens-Prinzip (Elementarwellen); Polarisation; typische Verwechslungen (Doppler: aufeinander zu = höhere Frequenz; Grenzwinkel Totalreflexion) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
@@ -1067,11 +1119,29 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
       diagram: "doppler-effect",
       content: `## Einleitung
 
-Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist Akustik direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
+Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist **Akustik** direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
 
-**SVG-Hinweis (Dezibel, Cochlea, Tonotopie):** Ein Schema mit L = 20·log(p/p₀), +3 dB / +6 dB-Regel, Cochlea-Querschnitt und Tonotopie (Basis = hohe Frequenzen) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+**In diesem Kapitel lernst du:**
+- die **Dezibel-Skala** L = 20·log(p/p₀) [dB]; Hörschwelle 0 dB, Lärmschwelle 85 dB, Schmerzgrenze ~120 dB
+- **Psychoakustik**: Tonhöhe (Frequenz), Lautstärke (Intensität), Klangfarbe (Obertöne)
+- **Cochlea**: Schallleitung, Impedanzanpassung, **Tonotopie** (Basis = hohe Frequenzen, Apex = tiefe)
+- **Haarzellen** (innere = Signalwandler, äußere = Verstärker) und **cochleärer Verstärker**
+- **Schallleitungs-** vs. **Schallempfindungsschwerhörigkeit**; Audiometrie, Weber/Rinne
+
+**Kontext — worum geht es und wofür brauchst du das?**  
+Hier geht es um **Schall und Hören**: Schalldruck, Dezibel, wie das Ohr Frequenzen und Pegel verarbeitet (Cochlea, Tonotopie, Haarzellen). Klinisch: Hörverlust, Lärmschaden, Audiometrie, Schallleitungs- vs. Schallempfindungsstörung. Du brauchst das für Anamnese und Diagnostik und für MedAT-Aufgaben zu dB, Hörschwelle und Cochlea.
+
+---
+
+![Dezibel Cochlea](/grafik-26-welle.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Dezibel-Skala L = 20·log(p/p₀), die +3 dB / +6 dB-Regel, den Cochlea-Querschnitt und die Tonotopie (Basis = hohe Frequenzen).
 
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
+
+![Schall und Sinne](/grafik-transduktion-sinne.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht die Umwandlung von Schallreizen in Nervensignale (Transduktion) und die Rolle von Cochlea und Haarzellen beim Hören.
 
 ## Schallpegel und die Dezibel-Skala
 
@@ -1171,7 +1241,7 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 
 **Zentral prüfungsrelevant:** Schall (Longitudinalwelle), Dezibel (dB = 10·log(I/I₀)), Verdopplung I → +3 dB, Hörschwelle, Schmerzgrenze, Ultraschall (Diagnostik), Dopplersonographie.
 
-**Ergänzend vertiefend:** Schallgeschwindigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Schallgeschwindigkeit in Gewebe; Impedanzanpassung im Mittelohr; Weber/Rinne; typische Verwechslungen (L = 20·log für Druck vs. 10·log für Intensität; 85 dB Lärmschwelle) — siehe „Typische Prüfungsfallen“.
 
 **Häufige Fragen:**
 - "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)

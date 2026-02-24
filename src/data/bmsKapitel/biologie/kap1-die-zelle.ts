@@ -668,9 +668,9 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 | **Ungesättigt** (cis-Doppelbindung = Knick) | Keine enge Packung | **↑ Fluidität** | Ölsäure, DHA (Nervenzellen) |
 | **Gesättigt** (gerade Kette) | Enges Packen | **↓ Fluidität** | Palmitinsäure, Stearinsäure (Butter fest) |
 
-**SVG-Hinweis (Fettsäuren & Fluidität):** Ein Vergleichsschema zeigt gerade (gesättigte) vs. geknickte (ungesättigte) Fettsäureketten und ihre Packungsdichte — so wird der Zusammenhang zwischen Struktur und Fluidität auf einen Blick klar. *Typ: Vergleich / Schema.*
-
 ![Fettsäuren und Fluidität](/grafik-zellmembran-fettsaeuren.svg)
+
+**Erklärung zur Grafik:** Die Abbildung vergleicht gesättigte (gerade) und ungesättigte (geknickte) Fettsäureketten und ihre Packungsdichte — damit wird der Zusammenhang zwischen Struktur und Membranfluidität deutlich.
 
 > **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger.
 
@@ -680,9 +680,9 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 **Bisher haben wir gesehen:** Die Membran besteht aus Lipiden und ihre Fluidität wird durch Cholesterin und Fettsäuren reguliert. **Aber die Tabelle hat gezeigt:** Ionen und viele Nährstoffe (z. B. Glucose) können die reine Lipidschicht nicht passieren — dafür braucht die Zelle **Proteine** in der Membran. **Proteine** sind Funktionsmoleküle aus Aminosäuren; in der Membran übernehmen sie z. B. Transport, Signalerkennung und Struktur. **Um zu verstehen,** welche Typen es gibt (und warum ein Defekt wie bei Mukoviszidose so folgenreich ist), unterscheidet man **integrale** und **periphere** Membranproteine.
 
-**SVG-Hinweis (Integral vs. peripher):** Ein Vergleichsschema direkt unter dieser Überschrift zeigt: integrale Proteine durchspannen die Membran, periphere sitzen nur an der Oberfläche — die Abgrenzung wird so visuell eindeutig. *Typ: Vergleich / Schema.*
-
 ![Integral vs. peripher](/grafik-zellmembran-integral-peripher.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt den Unterschied: Integrale (Transmembran-)Proteine durchspannen die Lipiddoppelschicht, periphere Proteine sitzen nur an einer Oberfläche (innen oder außen).
 
 **Integrale (Transmembran-)Proteine:**
 - Durchspannen die Lipiddoppelschicht mit **hydrophoben α-Helices**

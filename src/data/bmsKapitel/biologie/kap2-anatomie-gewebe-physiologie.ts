@@ -1358,6 +1358,10 @@ Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemisc
 
 > **Merke:** Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → **Hyperpolarisation** → Glutamat ↓. Akkommodation (Nah): Ziliarmuskel kontrahiert → Zonulafasern entspannen (nicht spannen!) → Linse wölbt sich.
 
+![Fototransduktion und Sinnesorgane](/grafik-transduktion-sinne.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Fototransduktion (Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Hyperpolarisation) und die Zuordnung von Auge, Ohr und Geruch zur jeweiligen Transduktion.
+
 ---
 
 ## Ohr — Schallübertragung und Hörphysiologie
@@ -1479,7 +1483,6 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
       ],
       sections: [],
       diagram: "sinnesorgane",
-      imageUrl: "/grafik-transduktion-sinne.svg",
 
       merksätze: [
         "**Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).",
@@ -1640,6 +1643,10 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
 
 > **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.
 
+![Hypophysen-Achsen](/grafik-5-hypophysen-achsen.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die hormonellen Achsen (Hypothalamus → Hypophyse → Schilddrüse/NNR/Gonaden) mit Releasing- und trophen Hormonen sowie die Rückkopplungspfeile (primäre vs. sekundäre Insuffizienz).
+
 ---
 
 ## MedAT-Fokus
@@ -1776,7 +1783,6 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
         },
       ],
       diagram: "hormonsystem",
-      imageUrl: "/grafik-5-hypophysen-achsen.svg",
 
       merksätze: [
         "**Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).",
@@ -1820,6 +1826,10 @@ Das Herz ist eine Pumpe — aber eine bemerkenswert effiziente. Es schlägt ~100
 ## Herzaufbau und Klappen
 
 Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv. **Systole** (Kontraktionsphase: Ventrikel pumpen Blut aus) und **Diastole** (Relaxationsphase: Ventrikel füllen sich mit Blut). Die Auswurffraktion beträgt in Ruhe ~55–70 % des enddiastolischen Volumens.
+
+![Herzzyklus](/grafik-6-herzzyklus.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht die vier Phasen des Herzzyklus (Füllung, isovolumetrische Kontraktion, Auswurf, isovolumetrische Relaxation) und die Druckverläufe in Vorhof, Kammer und Aorta.
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
@@ -1979,7 +1989,6 @@ Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → 
         },
       ],
       diagram: "blutkreislauf",
-      imageUrl: "/grafik-6-herzzyklus.svg",
 
       merksätze: [
         "**Herzaufbau:** 4 Kammern (RA, RV, LA, LV), 3 Wandschichten (Endokard, Myokard, Epikard). LV-Wand ~10–15 mm (3× dicker als RV ~3–5 mm) → Systemwiderstand (~120 mmHg). Perikard = Herzbeutel (Perikardhöhle, ~50 mL Flüssigkeit). Koronararterien versorgen Herzmuskel (LCA: R. interventricularis anterior/RIVA, R. circumflexus; RCA: R. nodi sinuatrialis, R. interventricularis posterior).",
@@ -2049,6 +2058,10 @@ Leukozyten sind die Immunzellen des Blutes. Die 5 Typen im Differentialblutbild:
 Primäre Hämostase: Vasokonstriktion → Thrombozytenadhäsion (vWF (von-Willebrand-Faktor)-GPIb) → -aggregation (ADP, Thromboxan A₂, Fibrinogen-GPIIb/IIIa) → Plättchenpfropf. Sekundäre Hämostase (Koagulationskaskade): Extrinsisch (TF+VIIa, schnell) + Intrinsisch (XIIa, langsam) → Gemeinsam: Xa+Va → Thrombin → Fibrinogen → Fibrin. Vitamin K aktiviert Faktoren II, VII, IX, X.
 
 > **Merke:** **Gerinnungskaskade:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin! (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)
+
+![Blutgerinnung](/grafik-7-gerinnung.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die primäre Hämostase (Thrombozytenpfropf), den extrinsischen und intrinsischen Weg sowie die gemeinsame Endstrecke (Thrombin → Fibrin) inkl. Vitamin-K-abhängiger Faktoren.
 
 ---
 
@@ -2190,7 +2203,6 @@ AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB 
         },
       ],
       diagram: "blutbestandteile",
-      imageUrl: "/grafik-7-gerinnung.svg",
 
       merksätze: [
         "**Hämatopoese:** Alle Blutzellen entstammen der pluripotenten hämatopoetischen Stammzelle (Knochenmark). Myeloische Linie: Erythrozyten, Thrombozyten, Granulozyten (Neutrophile, Eosinophile, Basophile), Monozyten/Makrophagen. Lymphoide Linie: T-Zellen (Thymus), B-Zellen (Knochenmark), NK-Zellen. EPO (Niere) → Erythropoese ↑. G-CSF → Neutrophilen-Produktion ↑.",
@@ -2236,6 +2248,10 @@ Das Immunsystem löst eine fundamentale Aufgabe: es unterscheidet "selbst" von "
 Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Das Komplementsystem kann über drei Wege aktiviert werden: **Klassischer Weg** (Antigen-Antikörper-Komplexe aktivieren C1q), **Lektin-Weg** (Mannose-bindendes Lektin/MBL erkennt Pathogenzucker), **Alternativer Weg** (spontane C3-Hydrolyse + Verstärkungsschleife auf Pathogenoberflächen). Alle drei Wege münden in C3-Spaltung → C3a (Anaphylatoxin) + C3b (Opsonin) → MAC-Bildung. Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
 
 > **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
+
+![Immunsystem](/grafik-8-immunitaet.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst angeborene (Barrieren, Phagozyten, Komplement) und erworbene Immunität (T-/B-Zellen) sowie MHC I/II und Antikörper zusammen.
 
 ---
 
@@ -2395,7 +2411,6 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
         },
       ],
       diagram: "immune-response",
-      imageUrl: "/grafik-8-immunitaet.svg",
 
       merksätze: [
         "**Angeboren vs. Erworben:** Angeborene Immunität: sofort (Minuten–Stunden), unspezifisch, kein Gedächtnis. Komponenten: Haut/Schleimhäute, Neutrophile (Phagozytose, Respiratory Burst), Makrophagen, NK-Zellen (Missing Self, MHC-I↓ → Lyse via Perforin/Granzyme), Komplement (C3b-Opsonierung, C5a-Chemotaxis, MAC-Lyse), Interferone. Erworbene Immunität: langsam (Tage), hochspezifisch, Gedächtnisbildung.",
@@ -2466,6 +2481,10 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 
 > **Merke:** Ductus thoracicus = 75 % der Körperlymphe → linker Venenwinkel. Lymphangion-Pumpe + Klappen + Muskelpumpe treiben den Lymphfluss an.
 
+![Lymphabfluss](/grafik-9-lymphabfluss.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt den Lymphabfluss von den Kapillaren über Sammelgefäße zum Ductus thoracicus bzw. ductus dexter und den Eintritt in die Venenwinkel (~75 % links).
+
 ---
 
 ## MedAT-Fokus
@@ -2511,7 +2530,6 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
         "Das Konzept der zentralen Toleranz und deren Bedeutung für die Autoimmunprävention darlegen.",
       ],
       sections: [],
-      imageUrl: "/grafik-9-lymphabfluss.svg",
       // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
       altfrage: {
         question: "Welche Aufgaben hat der Thymus bei der T-Zell-Reifung?",
@@ -3066,6 +3084,10 @@ Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % we
 
 > **Merke:** Nephron-Resorption: proximal **65 %** (alles, SGLT2), Henle **20 %** (NaCl), distal **10 %** (Aldosteron-ENaC), Sammelrohr **4 %** (ADH-AQP2). Gesamt: **99 %** zurück → ~1–2 L Urin.
 
+![Nephron](/grafik-10-nephron.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau des Nephrons (Glomerulus, proximaler Tubulus, Henle-Schleife, distaler Tubulus, Sammelrohr) und den osmotischen Gradienten im Gegenstromsystem.
+
 ---
 
 ## ADH, Aldosteron und RAAS-Regulation
@@ -3217,8 +3239,6 @@ Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % we
         },
       ],
       diagram: "nephron",
-      imageUrl: "/grafik-10-nephron.svg",
-
       merksätze: [
         "**Nephron-Anatomie:** Glomerulus (Filtrationsapparat) → Bowman-Kapsel → proximaler Tubulus (PT) → Henle-Schleife (absteigende + aufsteigende Schenkel) → distaler Tubulus (DT) → Sammelrohr (SD). GFR ~120 mL/min → ~180 L Primärharn/Tag → ~1,5 L Urin (99% resorbiert!). Filtrationsbarriere: fenestriertes Endothel + GBM (negativ geladen) + Podozyten (Schlitzmembran).",
         "**Tubuläre Resorption & Sekretion:** PT: 65% Na⁺/H₂O, 100% Glukose (SGLT2), 100% Aminosäuren, HCO₃⁻-Resorption (NHE3). Henle-Schleife: absteigende (H₂O, AQP1), aufsteigende (NaCl, NKCC2, kein H₂O → Gegenstromprinzip). DT: NaCl (NCCT, Thiazid-sensitive), K⁺-Sekretion, Ca²⁺-Resorption (PTH). Sammelrohr: H₂O (ADH/AQP2), Na⁺ (ENaC, Aldosteron), K⁺-Sekretion (ROMK). Kreatinin: filtriert + sezerniert → GFR-Marker.",
@@ -3311,6 +3331,10 @@ Ein Knorpelmodell (Chondrozyten) wird zunächst gebildet und dann schrittweise d
 **Desmale Ossifikation** (direkter Weg):
 Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betrifft: Schädelknochen (Frontal-, Parietalknochen), Schlüsselbein, Teile des Unterkiefers.
 
+![Ossifikation](/grafik-12-ossifikation.svg)
+
+**Erklärung zur Grafik:** Die Grafik vergleicht die enchondrale Ossifikation (Knorpelmodell → Kalzifizierung → Osteoblasten) mit der desmalen Ossifikation (direkter Knochenaufbau aus Mesenchym).
+
 **Zelltypen der Knochenentwicklung:**
 - **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
 - **Osteozyten**: reife Knochenzellen im Lakunen-Kanälchen-System, mechanosensitiv
@@ -3374,7 +3398,6 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
         answer:
           "Osteoblasten (Aufbau: Kollagen I, Mineralisierung mit Ca²⁺/PO₄³⁻) und Osteoklasten (Abbau: mehrkernig, H⁺ + Proteasen, Monozyten-Ursprung) bauen Knochen ständig um. PTH: aktiviert Osteoklasten → Ca²⁺ ins Blut ↑. Calcitonin: hemmt Osteoklasten → Ca²⁺ ins Blut ↓. Vitamin D3: fördert Ca²⁺-Resorption im Darm. Klinisch: Osteoporose = Abbau > Aufbau → Frakturrisiko ↑.",
       },
-      imageUrl: "/grafik-12-ossifikation.svg",
       selfTest: [
         {
           question: "Welche Aussage über Osteoblasten und Osteoklasten ist korrekt?",

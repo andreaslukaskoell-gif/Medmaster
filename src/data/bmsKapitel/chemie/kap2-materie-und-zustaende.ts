@@ -27,7 +27,11 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Einleitung
 
-Gase sind überall — in unserer Atemluft, in den Alveolen, im Beatmungsgerät. Um ihr Verhalten vorherzusagen, brauchen wir eine Gleichung, die Druck, Volumen, Temperatur und Stoffmenge miteinander verbindet: die **ideale Gasgleichung pV = nRT**. Sie fasst drei historische Gasgesetze (Boyle-Mariotte, Charles, Avogadro) zusammen und ist eine der wichtigsten Formeln in Chemie und Physik. Für den MedAT sind Rechenaufgaben mit der Gasgleichung, das Umrechnen zwischen verschiedenen Druckeinheiten und die klinische Anwendung in der Beatmungsmedizin prüfungsrelevant.
+Gase: Atemluft, Alveolen, Beatmung. Die **ideale Gasgleichung pV = nRT** verknüpft Druck, Volumen, Temperatur und Stoffmenge; sie fasst Boyle-Mariotte, Charles und Avogadro zusammen. Für den MedAT sind pV = nRT, Druckeinheiten und Beatmungsmedizin prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Ideale Gasgleichung** pV = nRT (T in Kelvin!); Boyle (p ∝ 1/V), Charles (V ∝ T), Avogadro; Druckeinheiten (Pa, bar, atm, mmHg); Anwendung Beatmung. **Kontext:** Gase in Chemie und Klinik; Grundlage für Partialdrücke und Diffusion.
+
+---
 
 ## Die Ideale Gasgleichung
 
@@ -51,7 +55,13 @@ Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasg
 
 Kombiniert: p·V/(n·T) = R = const → **pV = nRT**.
 
-**SVG-Hinweis (Ideale Gasgleichung pV = nRT):** Ein Schema mit den vier Größen p, V, n, T und den drei Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) als Pfeile oder Kasten unterstützt die Merkfähigkeit und Umstellübungen. *Typ: Übersicht / Formelschema.*
+![Ideales Gas](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die ideale Gasgleichung pV = nRT mit den vier Größen p, V, n, T und die drei Einzelgesetze (Boyle-Mariotte, Charles, Avogadro).
+
+![Druck und Temperatur](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Der Zusammenhang zwischen Druck, Volumen und Temperatur (Boyle, Charles) und die Einheit Kelvin für T sind Grundlage für Beatmung und Partialdrücke.
 
 ## Umrechnungen und praktische Anwendung
 
@@ -376,7 +386,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
       ],
       content: `## Einleitung
 
-Die Luft, die wir einatmen, ist kein reines Gas — sie ist ein Gemisch aus Stickstoff (~78 %), Sauerstoff (~21 %), Argon, CO₂ und Wasserdampf. Jedes Gas übt dabei seinen eigenen **Partialdruck** aus, als wäre es allein. Das beschreibt das **Daltonsche Gesetz**: Der Gesamtdruck eines Gasgemisches ist die Summe aller Partialdrücke. In der Medizin sind Partialdrücke fundamental: Ob O₂ von der Alveole ins Blut diffundiert, hängt vom Druckgradienten zwischen Alveole und Kapillarblut ab. Auch das Verständnis von Hyperoxie, Sauerstofftoxizität und Höhenkrankheit basiert auf Partialdrücken.
+Luft ist ein **Gasgemisch**; jedes Gas übt seinen **Partialdruck** aus. **Daltonsches Gesetz**: p_ges = p₁ + p₂ + … In der Medizin: O₂-Diffusion Alveole→Blut, Hyperoxie, Höhenkrankheit. Für den MedAT sind Partialdruck, p_O₂/p_CO₂ und klinische Anwendung prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Partialdruck** (Druckanteil eines Gases); **Daltonsches Gesetz**; p_O₂, p_CO₂ in Atemluft und Blut; Henry-Gesetz (Gaslöslichkeit); Anwendung Beatmung, Höhe. **Kontext:** Von der Atemluft zum Kapillarblut; O₂-Transport und -toxizität.
+
+---
 
 ## Das Daltonsche Partialdruck-Gesetz
 
@@ -392,13 +406,19 @@ pᵢ = nᵢ · R · T / V = xᵢ · p_gesamt
 
 **xᵢ = Molenbruch** der Komponente i: xᵢ = nᵢ / n_gesamt (dimensionslos, zwischen 0 und 1, Summe = 1).
 
-**SVG-Hinweis (Partialdruck und Molenbruch):** Ein Balken- oder Kreisschema mit p_gesamt = p₁ + p₂ + p₃ und xᵢ = nᵢ/n_gesamt macht Daltons Gesetz und die Berechnung von Partialdrücken auf einen Blick klar. *Typ: Schema / Übersicht.*
+![Partialdruck](/grafik-partialdruck.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht Daltons Gesetz (p_gesamt = p₁ + p₂ + p₃) und den Molenbruch xᵢ = nᵢ/n_gesamt zur Berechnung von Partialdrücken.
 
 ## Physikalische Begründung
 
 Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
 
 **Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 °C (Körpertemperatur) beträgt p(H₂O) ≈ 6,27 kPa (47 mmHg).
+
+![Gasgemisch und pV=nRT](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Partialdrücke und Molenbrüche folgen aus der idealen Gasgleichung; die Grafik veranschaulicht p_gesamt = Σ pᵢ und xᵢ = nᵢ/n_gesamt.
 
 ## Alveolarer Gasaustausch
 
@@ -712,7 +732,11 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
       ],
       content: `## Einleitung
 
-Wie gelangt Sauerstoff von der Alveole ins Blut? Warum können Zellen nicht größer als ~50 μm sein? Die Antwort ist **Diffusion** — der passive Transport von Teilchen entlang eines Konzentrationsgradienten, angetrieben allein durch thermische Zufallsbewegung. Das **Ficksche Gesetz** beschreibt diesen Prozess quantitativ: Je größer der Konzentrationsunterschied und je größer die Fläche, desto schneller die Diffusion. Diese Physik erklärt, warum die Lunge ~70 m² Austauschfläche benötigt — und was passiert, wenn diese Fläche (Emphysem) oder die Dicke der Membran (Fibrose) sich verändert.
+**Diffusion** = passiver Transport entlang des Konzentrationsgradienten. **Ficksches Gesetz** beschreibt den Fluss quantitativ; Lunge nutzt ~70 m² Austauschfläche. Für den MedAT sind Fick, Diffusionsfläche/-dicke und klinische Anwendung (Emphysem, Fibrose) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Diffusion** (Konzentrationsgradient); **1. Ficksches Gesetz** (Fluss ∝ Fläche, ∝ Δc, ∝ 1/Dicke); Diffusionskoeffizient; Anwendung Lunge, Zellgröße. **Kontext:** O₂/CO₂-Austausch, Zellbiologie; wenn Fläche oder Dicke sich ändern (Klinik).
+
+---
 
 ## Diffusion von Gasen
 
@@ -732,9 +756,15 @@ Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt p
 
 **r₁/r₂ = √(M₂/M₁)**
 
-**SVG-Hinweis (Grahamsches Gesetz — Diffusion/Effusion):** Ein Vergleichsschema (leichtes vs. schweres Gas, Geschwindigkeit ∝ 1/√M) oder die Formel r₁/r₂ = √(M₂/M₁) mit Beispiel H₂ vs. O₂ unterstützt die Prüfungsvorbereitung. *Typ: Vergleich / Formelschema.*
+![Graham](/grafik-graham.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt das Grahamsche Gesetz: Leichtes vs. schweres Gas (Geschwindigkeit ∝ 1/√M), Formel r₁/r₂ = √(M₂/M₁), Beispiel H₂ vs. O₂.
 
 Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
+
+![Diffusion und Partialdruck](/grafik-partialdruck.svg)
+
+**Erklärung zur Grafik:** Der Konzentrations- bzw. Partialdruckgradient treibt die Diffusion; die Grafik veranschaulicht den Zusammenhang mit dem Grahamschen Gesetz (leichtere Gase diffundieren schneller).
 
 **Beispiele:**
 - H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
@@ -1062,7 +1092,11 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
       ],
       content: `## Einleitung
 
-Eis, Wasser und Dampf bestehen aus denselben Molekülen (H₂O) — doch sie sehen und verhalten sich vollständig unterschiedlich. Das liegt am **Aggregatzustand**: In welchem Zustand ein Stoff vorliegt, hängt davon ab, ob die Wärmebewegung der Teilchen die Anziehungskräfte zwischen ihnen überwindet. Es gibt vier Aggregatzustände (fest, flüssig, gasförmig, Plasma), und jede Substanz kann je nach Temperatur und Druck in verschiedenen Zuständen vorliegen. Für den MedAT sind die Eigenschaften von Wasser (Anomalie, Wasserstoffbrücken), Kristalltypen und der Zusammenhang zwischen intermolekularen Kräften und Siedepunkten wichtig.
+**Aggregatzustand** (fest, flüssig, gasförmig, Plasma) hängt von Temperatur, Druck und intermolekularen Kräften ab. Für den MedAT sind die vier Zustände, Wasser (Anomalie, H-Brücken), Kristalltypen und Siedepunkte prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Vier Aggregatzustände**; Teilchenbewegung vs. Anziehung; **Wasser** (Dichteanomalie 4 °C, H-Brücken); Kristalltypen; Zusammenhang Kräfte–Siedepunkt. **Kontext:** Zustände und Eigenschaften; Wasser als biologisches Lösungsmittel.
+
+---
 
 ## Die vier Aggregatzustände der Materie
 
@@ -1096,13 +1130,19 @@ Das **ideale Gasgesetz** (pV = nRT) gilt für verdünnte Gase gut: p = Druck (Pa
 
 Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es ist der bei weitem häufigste Zustand sichtbarer Materie im Universum (Sterne, Blitze, Fluoreszenzlampen). Im medizinischen Sprachgebrauch bezeichnet "Blutplasma" den flüssigen Bestandteil des Blutes nach Entfernung der Zellen – ein biologischer Begriff ohne Bezug zum physikalischen Plasma.
 
-**SVG-Hinweis (Aggregatzustände und Kristalltypen):** Ein Schema mit fest/flüssig/gasförmig/Plasma und den vier Kristalltypen (ionisch, Molekül, Netzwerk, Metall) unterstützt die Einordnung und die Siedepunktvergleiche. *Typ: Übersicht / Schema.*
+![Aggregatzustaende](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst die Aggregatzustände (fest, flüssig, gasförmig, Plasma) und die vier Kristalltypen (ionisch, Molekül, Netzwerk, Metall) zusammen.
 
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
 
 Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim Abkühlen von 100°C zunächst zu, erreicht ein **Maximum bei 3,98°C** (ρ = 0,9998 g/cm³) und nimmt dann beim weiteren Abkühlen bis 0°C wieder ab. Beim Gefrieren zu Eis sinkt die Dichte abrupt auf **ρ_Eis ≈ 0,917 g/cm³** – Eis ist also leichter als flüssiges Wasser.
 
 **Ursache**: Wassermoleküle sind gewinkelt (Bindungswinkel 104,5°) und stark polar (Dipolmoment 1,85 D). Im flüssigen Wasser bestehen dynamische Wasserstoffbrückennetzwerke – jedes Molekül bildet im Mittel 3,4 Wasserstoffbrücken. Im Eiskristall (hexagonale Struktur) sind es genau 4 Wasserstoffbrücken pro Molekül, die ein offenes, weiträumiges hexagonales Gitter bilden. Diese Gitterstruktur ist weniger dicht gepackt als die Flüssigkeit.
+
+![Phasendiagramm und Aggregatzustände](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Phasendiagramm (fest/flüssig/gasförmig) und Dichteanomalie des Wassers (Maximum bei 4 °C) — Grundlage für Siedepunkt, Schmelzpunkt und Thermoregulation.
 
 **Biologische Bedeutung**: Diese Anomalie ist entscheidend für das Leben in gemäßigten Klimazonen:
 1. Im Winter sinkt das dichtere 4°C-Wasser auf den Grund von Gewässern (Dichteausgleich)
@@ -1408,7 +1448,11 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       content: `## Einleitung
 
-Wenn Wasser zu Eis wird oder Eis zu Dampf — das ist ein **Phasenübergang**. Was passiert dabei mit der Energie? Bei jedem Übergang zu einem "freieren" Zustand (fest → flüssig → gasförmig) muss Energie **zugeführt** werden (endotherm), um die intermolekularen Bindungen aufzubrechen. Diese Energie bewirkt keine Temperaturänderung — sie steckt in der Umordnung der Teilchen. Auf der Heizkurve sieht man das als Plateau. Medizinisch zentral: Dampfverbrennungen sind schlimmer als Wasserverbrennungen (Kondensationswärme frei), Schwitzen kühlt durch Verdampfungswärme, und Gefriertrocknung von Impfstoffen nutzt Sublimation. Das Phasendiagramm zeigt zudem, wann Wasser sublimiert — das ist die Grundlage der Lyophilisation.
+**Phasenübergänge** (Schmelzen, Sieden, Sublimation …) sind mit **latenter Wärme** verbunden — auf der Heizkurve als Plateau. Endotherm: zu „freierem“ Zustand; exotherm: zu „geordneterem“. Für den MedAT sind endo/exo, Heizkurve, Dampfverbrennung, Schwitzen, Lyophilisation prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Phasenübergänge** und Vorzeichen (endo/exo); **Heizkurve** (Plateaus); **Phasendiagramm**; Dampfdruck, Siedepunkt; klinisch: Dampfverbrennung, Schwitzen, Gefriertrocknung. **Kontext:** Energie bei Zustandsänderung; Thermoregulation, Lyophilisation.
+
+---
 
 ## Phasenübergänge: Überblick und Nomenklatur
 
@@ -1424,12 +1468,18 @@ Die sechs Phasenübergänge:
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
-**SVG-Hinweis (Phasenübergänge und Heizkurve):** Ein Schema mit den sechs Übergängen (Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren) oder eine Heizkurve mit Plateaus macht die latente Wärme und die Nomenklatur auf einen Blick klar. *Typ: Schema / Heizkurve.*
+![Phasenuebergaenge Heizkurve](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die sechs Phasenübergänge (Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren) und eine Heizkurve mit Plateaus (latente Wärme).
 
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
 
 **Schmelzenthalpie**: ΔH_s(H₂O) = **6,01 kJ/mol = 333 J/g** (bei 0°C, 1 bar)
 Zum Schmelzen von 1 g Eis bei 0°C werden 333 J benötigt – deutlich mehr als zum Erwärmen von 1 g flüssigem Wasser um 1°C (4,18 J). Ein Gramm schmelzendes Eis bei 0°C entnimmt der Umgebung dieselbe Wärmemenge wie die Abkühlung von 80 g Wasser um 1°C – deshalb kühlt Eis im Getränk so effizient.
+
+![Latente Wärme und Heizkurve](/grafik-ideales-gas.svg)
+
+**Erklärung zur Grafik:** Während eines Phasenübergangs bleibt die Temperatur konstant (Plateau in der Heizkurve); die latente Wärme (ΔH_s, ΔH_v) wird hier veranschaulicht.
 
 **Verdampfungsenthalpie**: ΔH_v(H₂O) = **40,7 kJ/mol = 2257 J/g** (bei 100°C, 1 bar)
 Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasserstoffbrücken, die beim Verdampfen vollständig gebrochen werden müssen. Verglichen mit: Methanol: 1104 J/g; Benzol: 393 J/g; Diethylether: 358 J/g.

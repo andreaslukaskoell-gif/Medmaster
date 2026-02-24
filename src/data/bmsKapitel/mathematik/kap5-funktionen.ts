@@ -26,11 +26,17 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
-Blutdruck steigt pro BMI-Punkt um 1,8 mmHg — das ist eine lineare Funktion. Medikamentenspiegel fällt nach Infusionsstopp gleichmäßig ab — ebenfalls linear. Lineare Funktionen beschreiben Zusammenhänge mit konstanter Veränderungsrate. Sie sind die einfachsten und häufigsten Funktionen in der Medizin. Für den MedAT sind Steigung, y-Achsenabschnitt, Geradengleichung (aus zwei Punkten), Schnittpunkte und klinische Interpretation prüfungsrelevant.
+**Lineare Funktionen** (y = mx + b) = konstante Änderungsrate; Dosierung, Clearance, Blutdruck-BMI. Für den MedAT sind Steigung m, Achsenabschnitt b, Geradengleichung aus zwei Punkten, Schnittpunkte prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **y = mx + b** (Steigung, Achsenabschnitt); Geradengleichung aus 2 Punkten; **Nullstelle**; Schnittpunkt; Senkrechte (m₁·m₂ = −1). **Kontext:** Lineare Modelle in Klinik und Pharmakologie.
+
+---
 
 ## Grundform und Begriffe
 
-**SVG-Hinweis (Lineare Funktion — Steigung, Achsenabschnitt, Geradengleichung):** Ein Schema mit m = Δy/Δx, y = mx+b, Nullstelle x₀ = −b/m und m₁·m₂ = −1 unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Lineare Funktion](/grafik-lineare-funktion.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Steigung m = Δy/Δx, Geradengleichung y = mx+b, Nullstelle x₀ = −b/m und die Bedingung für senkrechte Geraden m₁·m₂ = −1.
 
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
 
@@ -283,11 +289,17 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-Der Blutdruck folgt während des Herzschlags einer parabolähnlichen Kurve — Maximum bei Systole, Minimum bei Diastole. Wurfbahnen, Schallausbreitung, optimale Dosierung: viele Phänomene folgen quadratischen Gesetzen. Quadratische Funktionen sind die einfachsten nicht-linearen Funktionen. Für den MedAT sind Scheitelpunktform, Diskriminante, Nullstellen (Formel, Vieta), Scheitelpunkt und Parabelöffnung prüfungsrelevant.
+**Quadratische Funktionen** (Parabeln): Blutdruckkurve, Wurf, optimale Dosis. Für den MedAT sind Scheitelpunktform, Diskriminante, Nullstellen, Vieta prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Parabel** (a·x²+b·x+c); **Scheitelpunktform**; **Diskriminante** D; **Nullstellen** (Formel, Vieta); Öffnung. **Kontext:** Nicht-lineare Modelle in Physiologie.
+
+---
 
 ## Allgemeine und Scheitelpunktform
 
-**SVG-Hinweis (Parabel — Scheitelpunkt, Diskriminante, Vieta):** Ein Schema mit xs = −b/(2a), D = b²−4ac und Nullstellenformel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Parabel](/grafik-parabel.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt Scheitelpunkt xs = −b/(2a), Diskriminante D = b²−4ac und die pq-Formel bzw. Vieta für die Nullstellen der Parabel.
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
 
@@ -559,11 +571,17 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
       ],
       content: `## Einleitung
 
-Paracetamol hat eine Halbwertszeit von 2 Stunden — der Spiegel halbiert sich alle 2 h exponentiell. Bakterien verdoppeln sich alle 20 Minuten — exponentielles Wachstum. Radioaktiver Zerfall, Kapitalzins, Virusvermehrung: all das folgt der Exponentialfunktion. Exponentialfunktionen beschreiben Vorgänge, bei denen die Änderungsrate proportional zum aktuellen Wert ist. Für den MedAT sind Grundform, e-Funktion, Halbwertszeit, k-Wert und Steady-State prüfungsrelevant.
+**Exponentialfunktionen** f(t) = f₀·e^(±kt): Halbwertszeit, Wachstum, Zerfall. Für den MedAT sind Grundform, e-Funktion, Halbwertszeit (T½ = ln2/k), k-Wert prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **f(t) = f₀·e^(kt)** (Wachstum/Zerfall); **Halbwertszeit** T½; **e-Funktion**; Steady-State. **Kontext:** Pharmakokinetik, Bakterien, Radioaktivität.
+
+---
 
 ## Grundform und Eigenschaften
 
-**SVG-Hinweis (Exponentialfunktion — Wachstum/Zerfall, Halbwertszeit):** Ein Schema mit f(t) = f₀·e^(±kt), T½ = ln(2)/k und C(t) = C₀·e^(−kt) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Exponentialfunktion](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht Wachstum und Zerfall f(t) = f₀·e^(±kt), die Halbwertszeit T½ = ln(2)/k und typische Anwendungen (z. B. C(t) = C₀·e^(−kt) in der Pharmakokinetik).
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a · bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
 
@@ -838,11 +856,17 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
       ],
       content: `## Einleitung
 
-pH = −log₁₀([H⁺]): Eine der wichtigsten Formeln der Medizin basiert auf dem Logarithmus. Der Logarithmus macht aus riesigen Zahlenbereichen handhabbare Werte — [H⁺] reicht von 10⁻¹ bis 10⁻¹⁴ mol/L, der pH-Wert dafür von 1 bis 14. Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Für den MedAT sind Logarithmengesetze, pH-Berechnung, Henderson-Hasselbalch, Dezibel-Formel und Basiswechsel prüfungsrelevant.
+**Logarithmus** = Umkehr der Exponentialfunktion; **pH = −log([H⁺])**, Henderson-Hasselbalch, Dezibel. Für den MedAT sind log-Gesetze, pH, HH-Gleichung, Dezibel prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **log** und **ln**; **Logarithmengesetze**; **pH**; **Henderson-Hasselbalch**; Dezibel; Basiswechsel. **Kontext:** Von Konzentration zu Skala.
+
+---
 
 ## Definition und Grundbegriffe
 
-**SVG-Hinweis (Logarithmus — pH, Henderson-Hasselbalch, log-Regeln):** Ein Schema mit pH = −log([H⁺]), log(a·b) = log a + log b und Basiswechsel unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Logarithmus](/grafik-logarithmus.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Logarithmengesetze, pH = −log([H⁺]), Henderson-Hasselbalch und den Basiswechsel zwischen log₁₀ und ln.
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
 
@@ -1135,11 +1159,17 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
       ],
       content: `## Einleitung
 
-Ein EKG ist ein Graph — wer ihn liest, interpretiert eine Funktion über Zeit. Eine Dosis-Wirkungs-Kurve im Semilog-Plot macht aus einer S-förmigen eine gerade Linie — leichter abzulesen. Im MedAT werden Graphen gelesen, Asymptoten erkannt und Transformationen verstanden. Für den MedAT sind Asymptoten (horizontal, vertikal), Monotonie, Extrempunkte, Semilog-Plots und Michaelis-Menten-Kurve prüfungsrelevant.
+**Graphen** lesen: EKG, Dosis-Wirkung, Semilog, Michaelis-Menten. Für den MedAT sind Asymptoten, Monotonie, Extrempunkte, Semilog, EC₅₀ prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Asymptoten** (horizontal, vertikal); **Monotonie**; **Extrempunkte**; **Semilog-Plot**; **Michaelis-Menten**. **Kontext:** Von Kurve zur Interpretation.
+
+---
 
 ## Graphen und ihre Eigenschaften ablesen
 
-**SVG-Hinweis (Asymptoten, Semilog, Michaelis-Menten):** Ein Schema mit horizontaler/vertikaler Asymptote, Semilog-Linearisierung und EC₅₀ unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Asymptoten](/grafik-asymptote.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht horizontale und vertikale Asymptoten, den Semilog-Plot zur Linearisierung sowie das Michaelis-Menten-Modell mit EC₅₀.
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
 

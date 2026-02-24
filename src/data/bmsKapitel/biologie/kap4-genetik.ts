@@ -1767,6 +1767,10 @@ Prokaryoten haben 1 RNA-Polymerase, keine Introns, keine RNA-Prozessierung und g
 
 > **Merke:** Prokaryoten: KEINE Introns, KEINE RNA-Prozessierung, gekoppelte Transkription/Translation. Eukaryoten: Introns + Exons, RNA-Prozessierung (Capping/Poly-A/Splicing), getrennte Transkription (Kern) + Translation (Cytoplasma).
 
+![Zentraldogma](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Informationsfluss Replikation → Transkription → Translation und die räumliche Zuordnung (Kern: Replikation, Transkription; Zytoplasma: Translation) bei Eukaryoten.
+
 ---
 
 ## Die drei eukaryotischen RNA-Polymerasen
@@ -1828,7 +1832,6 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
       ],
       sections: [],
       diagram: "transcription-translation",
-      imageUrl: "/grafik-16-zentraldogma.svg",
 
       merksätze: [
         "RNA-Polymerase liest den Template Strand (3'->5') und synthetisiert RNA in 5'->3'-Richtung — ohne Primer (anders als DNA-Polymerase).",
@@ -1965,6 +1968,10 @@ Für das Verständnis der Splicing-Regulation ist die Zusammensetzung des Splice
 
 Die Translation ist der zweite Schritt der Genexpression, bei dem die Nukleotidsequenz der mRNA am Ribosom in eine Aminosäuresequenz übersetzt wird. Der genetische Code ist ein degenerierter Triplett-Code, bei dem 64 Codons für 20 Aminosäuren und 3 Stoppsignale codieren. Für den MedAT sind die Eigenschaften des genetischen Codes, der Ribosomenaufbau (70S vs. 80S) und die Wirkungsweise translationshemmender Antibiotika besonders wichtig.
 
+![Zentraldogma](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Die Grafik ordnet die Translation als dritten Schritt des Zentraldogmas ein: mRNA wird am Ribosom in Protein übersetzt (mRNA → Ribosom → Protein).
+
 **Das Wichtigste auf einen Blick:**
 - Triplett-Code: 3 Basen = 1 Codon = 1 Aminosäure; degeneriert und universell
 - Start-Codon AUG (Met), Stopp-Codons UAA, UAG, UGA
@@ -2070,7 +2077,6 @@ Die Proteinfaltung wird durch Chaperone (z. B. Hsp70, Hsp60/GroEL) unterstützt,
       ],
       sections: [],
       diagram: "transcription-translation",
-      imageUrl: "/grafik-16-zentraldogma.svg",
 
       merksätze: [
         "Genetischer Code: Triplett-Code (3 Basen = 1 Codon = 1 Aminosaeure), degeneriert (mehrere Codons pro AS), universell, kommafrei. Start: AUG (Met). Stopp: UAA, UAG, UGA.",

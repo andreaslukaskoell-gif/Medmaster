@@ -31,7 +31,11 @@ export const chemKapReaktionen: Kapitel = {
       ],
       content: `## Einleitung
 
-Chemie passiert überall im Körper: Hämoglobin bindet Sauerstoff, Enzyme spalten Nahrungsmoleküle, Muskeln verbrennen Glukose. All das sind **chemische Reaktionen** — Vorgänge, bei denen Atombindungen gebrochen und neu geknüpft werden. Im Unterschied zu physikalischen Vorgängen (z.B. Schmelzen, bei dem die Molekülstruktur erhalten bleibt) entstehen dabei neue Stoffe. Für den MedAT sind die verschiedenen Reaktionstypen, Katalyse und die Energiebilanz (exo-/endotherm, ΔG) prüfungsrelevant.
+**Chemische Reaktionen** = Bindungen werden gebrochen und neu geknüpft; neue Stoffe entstehen. Für den MedAT sind Reaktionstypen, Katalyse, Energiebilanz (exo-/endotherm, ΔG) und Stöchiometrie prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Reaktionsgleichung** (Massen- und Ladungserhaltung); Reaktionstypen (Säure-Base, Redox, Fällung …); **exotherm/endotherm**; **Katalyse**. **Kontext:** Reaktionen im Körper und im Labor; Grundlage für Kinetik und Gleichgewicht.
+
+---
 
 ## Grundbegriffe chemischer Reaktionen
 
@@ -55,7 +59,13 @@ Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen g
 | Substitution | A + BC → AC + B | CH₃Br + OH⁻ → CH₃OH + Br⁻ | Transaminierung (ALT, AST) |
 | Metathese | AB + CD → AD + CB | NaCl + AgNO₃ → AgCl↓ + NaNO₃ | CaC₂O₄-Fällung bei Nierensteinen |
 
-**SVG-Hinweis (Reaktionstypen und OIL RIG):** Ein Übersichtsschema mit den vier Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) und der Abgrenzung Säure-Base (H⁺) vs. Redox (e⁻) unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Reaktionstypen](/grafik-reaktionstypen.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst die vier Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) zusammen und grenzt Säure-Base (H⁺-Transfer) von Redox (Elektronenübertragung) ab.
+
+![Redox und Elektronenübertragung](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** Redoxreaktionen als Elektronenübertragung (Oxidation/Reduktion) — Ergänzung zu den Reaktionstypen und Grundlage für Elektrochemie.
 
 **1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
 Allgemein: A + B → AB
@@ -379,7 +389,11 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
       ],
       content: `## Einleitung
 
-Warum funktioniert ein Medikament schnell und ein anderes langsam? Warum wirken Enzyme als "Beschleuniger" des Stoffwechsels? Die Antworten liegen in der **Reaktionskinetik** — der Wissenschaft davon, wie schnell Reaktionen ablaufen und was diese Geschwindigkeit beeinflusst. Temperatur, Konzentration, Enzyme und die Aktivierungsenergie spielen hier die entscheidenden Rollen. Für den MedAT sind besonders die Michaelis-Menten-Kinetik, Enzymhemmung und der Einfluss von Temperatur und pH auf Enzyme prüfungsrelevant.
+**Reaktionskinetik** = wie schnell Reaktionen ablaufen. Temperatur, Konzentration, **Aktivierungsenergie** und **Enzyme** bestimmen die Geschwindigkeit. Für den MedAT sind **Michaelis-Menten**, Enzymhemmung und Einfluss von Temperatur/pH prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Reaktionsgeschwindigkeit** v; **Michaelis-Menten** (v = V_max·[S]/(K_M+[S])); **Enzymhemmung** (kompetitiv, nichtkompetitiv); Aktivierungsenergie; Temperatur/pH. **Kontext:** Warum Reaktionen schnell oder langsam laufen; Pharmaka, Enzyme.
+
+---
 
 ## Reaktionsgeschwindigkeit
 
@@ -389,7 +403,13 @@ Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen 
 
 Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
-**SVG-Hinweis (Reaktionsgeschwindigkeit und Ordnungen):** Ein Schema mit v = k·[A]ⁿ, Konzentrations-Zeit-Kurven (0./1./2. Ordnung) und einem Energieprofil (E_A, mit/ohne Katalysator) unterstützt die Kinetik und Michaelis-Menten-Vorstellung. *Typ: Schema / Energieprofil + Kurven.*
+![Energieprofil](/grafik-21-energieprofil.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Geschwindigkeitsgleichung v = k·[A]ⁿ, typische Konzentrations-Zeit-Verläufe (0., 1., 2. Ordnung) und ein Energieprofil mit Aktivierungsenergie E_A (mit und ohne Katalysator).
+
+![Katalyse und Gleichgewicht](/grafik-massenwirkungsgesetz.svg)
+
+**Erklärung zur Grafik:** Ein Katalysator senkt die Aktivierungsenergie (Hin- und Rückreaktion); im Gleichgewicht bleibt K unverändert — die Grafik veranschaulicht den Zusammenhang.
 
 > **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
 
@@ -532,7 +552,6 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
       ],
 
       diagram: "enzyme-substrate",
-      imageUrl: "/grafik-21-energieprofil.svg",
 
       merksätze: [
         "v = Δ[P]/Δt = −Δ[E]/Δt mit Einheit mol·L⁻¹·s⁻¹.",
@@ -705,13 +724,23 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
       ],
       content: `## Einleitung
 
-Wie viel Sauerstoff braucht der Körper, um 1 g Glukose zu verbrennen? Wie viel CO₂ entsteht dabei? Diese Fragen beantwortet die **Stöchiometrie** — sie ist die "Buchhaltung" der Chemie und beschreibt die exakten Mengenverhältnisse, in denen Stoffe miteinander reagieren. Sie bildet die Grundlage für Dosierungsberechnungen, Ausbeuten in der Synthese und klinische Berechnungen (z.B. Respirationsquotient). Für den MedAT sind stöchiometrische Mol-Berechnungen, Konzentrationsberechnungen und das Konzept des Grenzreaktants prüfungsrelevant.
+**Stöchiometrie** = Mengenverhältnisse in Reaktionen (Mol, Masse, Konzentration). Grundlage für Dosierung, Ausbeute, Respirationsquotient. Für den MedAT sind Mol-Berechnungen, **Grenzreaktant** und Konzentrationsberechnungen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Stöchiometrie** aus Reaktionsgleichung; **n = m/M**; **Molverhältnisse**; **Grenzreaktant**; Konzentration c = n/V; Ausbeute. **Kontext:** Von der Gleichung zur Menge; Dosierung, Labor, Klinik.
+
+---
 
 ## Was ist Stöchiometrie?
 
 Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält. Die Stöchiometrie ist das mathematische Fundament der Chemie und essenziell für Dosierungen in der Medizin.
 
-**SVG-Hinweis (Stöchiometrie — Mol-Verhältnisse und Bilanzierung):** Ein Flussschema (Edukte → Koeffizienten → Produkte) mit n = m/M und Mangelreagenz-Logik unterstützt Rechenaufgaben und die Prüfungsvorbereitung. *Typ: Flussschema / Übersicht.*
+![Stöchiometrie](/grafik-reaktionstypen.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Weg von Edukten über stöchiometrische Koeffizienten zu Produkten, die Formel n = m/M und die Mangelreagenz-Logik.
+
+![Molverhältnisse und Konzentration](/grafik-mg-ug.svg)
+
+**Erklärung zur Grafik:** Stoffmenge n = m/M und Konzentration c = n/V sind die Basis der Stöchiometrie und der Grenzreaktant-Berechnung.
 
 > **Merke:** Stöchiometrische Koeffizienten geben Mol-Verhältnisse an, NICHT Massenverhältnisse! Die Grundformeln: n = m/M, m = n × M, c = n/V.
 
@@ -1030,7 +1059,11 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in F
       ],
       content: `## Einleitung
 
-Im Körper sind viele Reaktionen keine Einbahnstraße — sie laufen hin und zurück. Das CO₂ aus dem Stoffwechsel reagiert im Blut mit Wasser, der Puffer reguliert den pH, Hämoglobin bindet und gibt Sauerstoff ab: All das sind **dynamische Gleichgewichte**. Sie sind nie wirklich „fertig", sondern befinden sich in einem ständigen Fließgleichgewicht. Wenn sich etwas ändert (Druck, Temperatur, Konzentration), verschiebt sich das Gleichgewicht nach dem **Prinzip von Le Chatelier**. Für den MedAT sind das Massenwirkungsgesetz (Kc, Kp), Le Chatelier und die klinischen Anwendungen (Puffer, Bohr-Effekt, Haber-Bosch) prüfungsrelevant.
+Viele Reaktionen sind **reversibel** und laufen in ein **dynamisches Gleichgewicht** (v_hin = v_rück). **Massenwirkungsgesetz** (Kc, Kp) und **Le Chatelier** (Reaktion auf Störung) beschreiben das. Für den MedAT sind Gleichgewicht, Kc/Kp, Le Chatelier und Puffer/Bohr-Effekt prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Chemisches Gleichgewicht** (v_hin = v_rück); **Massenwirkungsgesetz** K = [Produkte]/[Edukte]; **Le Chatelier** (Konzentration, Druck, Temperatur); Puffer, Bohr-Effekt. **Kontext:** Gleichgewichte im Körper (CO₂, O₂-Bindung, pH).
+
+---
 
 ## Das chemische Gleichgewicht
 
@@ -1042,7 +1075,13 @@ Wichtig: Im Gleichgewicht sind die Konzentrationen der Stoffe **konstant, aber n
 
 > **Merke:** Dynamisches Gleichgewicht ≠ statischer Stillstand. Konzentrationen ändern sich netto nicht, aber auf molekularer Ebene herrscht rege Aktivität.
 
-**SVG-Hinweis (Massenwirkungsgesetz und Le Chatelier):** Ein Schema mit Kc = [C]^c·[D]^d/([A]^a·[B]^b) und den drei Störgrößen (Konzentration, Druck, Temperatur) mit Verschiebungsrichtung macht MWG und Le Chatelier auf einen Blick klar. *Typ: Übersicht / Formelschema.*
+![MWG Le Chatelier](/grafik-mwg-lechatelier.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die MWG-Formel Kc = [C]^c·[D]^d/([A]^a·[B]^b) und die drei Störgrößen nach Le Chatelier (Konzentration, Druck, Temperatur) mit Verschiebungsrichtung.
+
+![Gleichgewichtskonstante K](/grafik-massenwirkungsgesetz.svg)
+
+**Erklärung zur Grafik:** Die Gleichgewichtskonstante K und das Massenwirkungsgesetz bestimmen das Konzentrationsverhältnis im Gleichgewicht; die Grafik fasst Kc und Kp zusammen.
 
 ## Massenwirkungsgesetz (MWG)
 
@@ -1386,7 +1425,11 @@ Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
       ],
       content: `## Einleitung
 
-Warum läuft ein Zündholz schneller ab als eine Kerze? Warum verbrennt Zucker langsam in Luft, aber explosionsartig in Sauerstoff? Die Antwort liegt in der **Aktivierungsenergie** — der Energiehürde, die eine Reaktion überwinden muss. Dieses Kapitel vertieft die Kinetik: Wie hängt die Reaktionsgeschwindigkeit von Temperatur und Aktivierungsenergie ab (Arrhenius-Gleichung)? Welche Rolle spielen Katalysatoren und der Übergangszustand? Im Unterschied zum vorherigen Kapitel (das Enzymkinetik und Michaelis-Menten behandelt) liegt der Fokus hier auf physikalisch-chemischen Grundlagen der Kinetik. Für den MedAT sind Arrhenius-Gleichung, Energieprofile und die klinische Bedeutung von Hypothermie und Katalyse prüfungsrelevant.
+**Aktivierungsenergie** E_A = Energiehürde der Reaktion. **Arrhenius**: Geschwindigkeit hängt von T und E_A ab; **Katalysatoren** senken E_A. Für den MedAT sind Arrhenius, Energieprofil, Katalyse und Hypothermie (langsamere Reaktionen) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Aktivierungsenergie** E_A; **Arrhenius-Gleichung** (k ∝ e^(-E_A/RT)); **Energieprofil** (Übergangszustand); **Katalysator** (senkt E_A); Hypothermie. **Kontext:** Warum Temperatur und Katalyse die Geschwindigkeit ändern.
+
+---
 
 ## Reaktionsgeschwindigkeit
 
@@ -1421,7 +1464,13 @@ Das erklärt den erhöhten Kalorienverbrauch, die Tachykardie und die Tachypnoe 
 
 Damit eine Reaktion ablaufen kann, müssen die Reaktionspartner die **Aktivierungsenergie E_A** aufbringen. Diese entspricht der Energiebarriere im Reaktionskoordinatendiagramm, die Moleküle überwinden müssen, um vom Edukt- in den Übergangszustand (Aktivierungskomplex) und von dort in den Produktzustand zu gelangen.
 
-**SVG-Hinweis (Aktivierungsenergie und Arrhenius):** Ein Energieprofil (Edukt → E_A → Übergangszustand → Produkt) mit exotherm/endotherm und der Wirkung eines Katalysators (gesenkte E_A) macht E_A ≠ ΔH und Arrhenius auf einen Blick klar. *Typ: Energieprofil / Schema.*
+![Energieprofil](/grafik-21-energieprofil.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt ein Energieprofil (Edukt → E_A → Übergangszustand → Produkt), den Unterschied exotherm/endotherm und die Senkung der Aktivierungsenergie durch einen Katalysator (E_A ≠ ΔH).
+
+![Gleichgewicht und Kinetik](/grafik-mwg-lechatelier.svg)
+
+**Erklärung zur Grafik:** Im Gleichgewicht ist v_hin = v_rück; die Grafik veranschaulicht den Übergang vom kinetischen Verlauf zur Gleichgewichtslage (Kc, Kp).
 
 Die **Arrhenius-Gleichung** beschreibt den quantitativen Zusammenhang:
 
@@ -1723,7 +1772,11 @@ Therapeutische Hypothermie (Kühlung auf 32–36 °C nach Herzstillstand oder be
       ],
       content: `## Einleitung
 
-Wenn du eine gesättigte Salzlösung betrachtest, sieht sie ruhig aus — und doch lösen sich ständig neue Salzkristalle auf, während andere auskristallisieren. Das ist das Wesen des **dynamischen Gleichgewichts**: Es sieht aus wie Stillstand, ist aber auf molekularer Ebene voller Aktivität. Dieses Kapitel vertieft das Konzept des chemischen Gleichgewichts mit Fokus auf das Massenwirkungsgesetz (Kc und Kp) und die verschiedenen Arten von Gleichgewichten (heterogen, homogen, Löslichkeitsprodukt). Im Unterschied zu ch-7-04 (das Gleichgewicht mit Le Chatelier und Puffer kombiniert) liegt der Schwerpunkt hier auf dem quantitativen Umgang mit Kc und Kp. Für den MedAT sind das Massenwirkungsgesetz, Löslichkeitsprodukt und die Unterscheidung Kc/Kp prüfungsrelevant.
+**Dynamisches Gleichgewicht** = auf molekularer Ebene läuft Hin- und Rückreaktion; makroskopisch Stillstand. **Massenwirkungsgesetz** Kc (Konzentrationen), Kp (Partialdrücke); **Löslichkeitsprodukt** Ksp. Für den MedAT sind Kc, Kp, Ksp und heterogen/homogen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Massenwirkungsgesetz** Kc = [C]^c[D]^d/([A]^a[B]^b); **Kp** für Gase; **Löslichkeitsprodukt** Ksp; homogen vs. heterogen. **Kontext:** Quantitative Gleichgewichte; Fällung, Sättigung.
+
+---
 
 ## Das dynamische Gleichgewicht
 
@@ -1737,7 +1790,13 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 > **Merke:** Dynamisches Gleichgewicht = v_hin = v_rück. Konzentrationen sind konstant (aber nicht gleich!). Beide Reaktionsrichtungen laufen weiterhin ab.
 
-**SVG-Hinweis (Dynamisches Gleichgewicht und MWG):** Ein Schema mit A + B ⇌ C + D, K_c = [C]^c·[D]^d/([A]^a·[B]^b) und Q vs. K_c (Q < K → Hinreaktion) unterstützt die Vorstellung und Prüfungsfragen. *Typ: Formelschema / Übersicht.*
+![Gleichgewicht MWG](/grafik-mwg-lechatelier.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht das dynamische Gleichgewicht A + B ⇌ C + D, die Gleichgewichtskonstante K_c und den Vergleich von Q mit K_c (Q < K → Hinreaktion).
+
+![Massenwirkungsgesetz Kc und Kp](/grafik-massenwirkungsgesetz.svg)
+
+**Erklärung zur Grafik:** Die Gleichgewichtskonstante Kc (Konzentrationen) und Kp (Partialdrücke) sowie das Löslichkeitsprodukt Ksp werden hier zusammengefasst.
 
 **Zeitlicher Verlauf bis zum Gleichgewicht:**
 - Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
@@ -2062,7 +2121,11 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
       title: "Le Chatelier-Prinzip — Störung des Gleichgewichts",
       content: `## Einleitung
 
-Stell dir vor, du drückst auf ein Gleichgewicht — es weicht aus. Genau das beschreibt das **Prinzip von Le Chatelier** (1884): Jedes Gleichgewicht reagiert auf Störungen (Konzentration, Druck, Temperatur), indem es sich in die Richtung verschiebt, die der Störung entgegenwirkt. Dieses Prinzip erklärt, warum das Blut bei CO₂-Anstieg saurer wird, warum der Haber-Bosch-Prozess unter hohem Druck optimiert wird, und warum Fieber den Stoffwechsel beschleunigt. Während ch-7-04 Le Chatelier mit dem Massenwirkungsgesetz und Puffer kombiniert, liegt der Fokus hier auf der systematischen Anwendung auf alle Störungstypen. Für den MedAT sind alle drei Störungsarten (Konzentration, Druck, Temperatur) und deren Vorhersage prüfungsrelevant.
+**Le Chatelier**: Gleichgewicht weicht Störungen aus — Verschiebung in die Richtung, die der Störung entgegenwirkt. Konzentration, Druck, Temperatur. Für den MedAT sind alle drei Störungsarten und Vorhersage der Verschiebung prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Le Chatelier** (Konzentration: Zugabe Edukt → mehr Produkt; Druck: mehr Mol Gas → Verschiebung zur Seite mit weniger Mol; Temperatur: endotherm → Wärmezugabe begünstigt Produkte). **Kontext:** CO₂ im Blut, Haber-Bosch, Fieber.
+
+---
 
 ## Das Prinzip von Le Chatelier
 
@@ -2072,7 +2135,13 @@ Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) laut
 
 Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — es erlaubt qualitative Vorhersagen über die Verschiebung von Gleichgewichten ohne aufwendige Berechnungen.
 
-**SVG-Hinweis (Le Chatelier — drei Störgrößen):** Ein Übersichtsschema mit Konzentration (Edukt ↑ → Produkte), Druck (Δn, mehr/weniger Gas) und Temperatur (exotherm/endotherm) mit Verschiebungsrichtung festigt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Le Chatelier](/grafik-mwg-lechatelier.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst die drei Störgrößen nach Le Chatelier zusammen: Konzentration (Edukt ↑ → mehr Produkte), Druck (Δn der Gase), Temperatur (exotherm/endotherm) mit jeweiliger Verschiebungsrichtung.
+
+![Gleichgewicht und Störung](/grafik-massenwirkungsgesetz.svg)
+
+**Erklärung zur Grafik:** Nach einer Störung (Konzentration, Druck, Temperatur) stellt sich ein neues Gleichgewicht ein; K bleibt konstant, die Konzentrationen verschieben sich.
 
 ## Konzentration als Störgröße
 
@@ -2367,7 +2436,11 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
       title: "Puffersysteme und Säure-Base-Gleichgewichte",
       content: `## Einleitung
 
-Das Blut hat einen pH von 7,4 — weicht er auch nur um 0,2 Einheiten ab, drohen Krämpfe oder Atemlähmung. Wie hält der Körper den pH so präzise stabil? Die Antwort sind **Puffersysteme** — Gemische aus schwacher Säure und ihrer konjugierten Base, die sowohl Säure- als auch Basenzugaben abfangen. Dieses Kapitel behandelt die Grundlagen der Säure-Base-Gleichgewichte (Ka, pH, Henderson-Hasselbalch) und die klinisch wichtigsten Puffersysteme des Körpers. Für den MedAT sind pH-Berechnungen, Henderson-Hasselbalch, Pufferkapazität und das Carbonat-Puffersystem prüfungsrelevant.
+**Puffer** = Gemisch aus schwacher Säure und konjugierter Base; fangen Säure- und Basenzugaben ab. **Henderson-Hasselbalch** verbindet pH mit pKa und Konzentrationsverhältnis. Für den MedAT sind pH, **Henderson-Hasselbalch**, Pufferkapazität und Carbonat-Puffer prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Säure-Base** (HA ⇌ H⁺ + A⁻); **pH**, **pKa**, **Ka**; **Henderson-Hasselbalch** pH = pKa + log([A⁻]/[HA]); **Puffer**; Carbonat-Puffer, Atemregulation. **Kontext:** pH-Homöostase; Blut, Puffer im Körper.
+
+---
 
 ## Säure-Base-Gleichgewichte: Grundlagen
 
@@ -2385,7 +2458,13 @@ Für konjugierte Säure-Base-Paare gilt:
 
 **pK_a + pK_b = 14 (bei 25 °C)**
 
-**SVG-Hinweis (Säure-Base und Henderson-Hasselbalch):** Ein Schema mit HA ⇌ H⁺ + A⁻, pH = pK_a + log([A⁻]/[HA]) und dem Carbonat-Puffer CO₂/HCO₃⁻ unterstützt pH-Berechnungen und Pufferkapazität. *Typ: Formelschema / Puffer.*
+![Puffer](/grafik-puffer.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt das Säure-Base-Gleichgewicht HA ⇌ H⁺ + A⁻, die Henderson-Hasselbalch-Gleichung pH = pK_a + log([A⁻]/[HA]) und den Carbonat-Puffer CO₂/HCO₃⁻.
+
+![Pufferbereich und Henderson-Hasselbalch](/grafik-puffer-henderson.svg)
+
+**Erklärung zur Grafik:** Der wirksame Pufferbereich liegt bei pH = pK_a ± 1; die Grafik veranschaulicht die Henderson-Hasselbalch-Gleichung und die Pufferkapazität.
 
 ## Der pH-Wert und das Ionenprodukt des Wassers
 

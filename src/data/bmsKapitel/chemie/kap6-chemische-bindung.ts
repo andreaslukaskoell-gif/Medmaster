@@ -27,7 +27,11 @@ export const chemKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-Salz ist überall — im Blut, im Schweiß, im Knochen. Was hält Kochsalz (NaCl) zusammen? Natrium gibt ein Elektron ab, Chlor nimmt es auf — beide werden zu stabilen Ionen mit Edelgaskonfiguration. Die elektrostatische Anziehung zwischen entgegengesetzt geladenen Ionen heißt **Ionenbindung**. Für den MedAT sind Gitterenergie, Born-Haber-Kreisprozess, Eigenschaften von Ionenverbindungen (Schmelzpunkt, Sprödigkeit, Leitfähigkeit) und klinisch relevante Salze prüfungsrelevant.
+**Ionenbindung** = elektrostatische Anziehung nach Elektronenübertragung (Metall → Nichtmetall); Edelgaskonfiguration. Für den MedAT sind Gitterenergie, Born-Haber, Eigenschaften (Schmelzpunkt, Leitfähigkeit) und klinische Salze prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Ionenbindung** (ΔEN > 1,7); **Gitterenergie**; **Born-Haber-Kreisprozess**; Eigenschaften (hoher Schmp., spröde, leitfähig geschmolzen/gelöst). **Kontext:** Salze in Körper und Labor; von der Bildung zur Stabilität.
+
+---
 
 ## Entstehung der Ionenbindung
 
@@ -59,7 +63,13 @@ Die Summe aller Teilschritte ergibt die Bildungsenthalpie: ΔHf(NaCl) = −411 k
 
 Je kleiner der Ionenradius und je höher die Ladung der Ionen, desto größer die Gitterenergie (Coulombsches Gesetz: E ∝ q₁·q₂/r).
 
-**SVG-Hinweis (Ionenbindung und Born-Haber):** Ein Schema mit Elektronenübertragung Na → Cl, NaCl-Gitter (Koordinationszahl 6) und den Schritten des Born-Haber-Kreisprozesses unterstützt Gitterenergie und Schmelzpunktvergleiche. *Typ: Schema / Kreisprozess.*
+![Ionenbindung](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Elektronenübertragung bei der Ionenbindung (Na → Cl), das NaCl-Gitter (Koordinationszahl 6) und die Schritte des Born-Haber-Kreisprozesses für Gitterenergie.
+
+![Ionen und Schalen](/grafik-atommodelle.svg)
+
+**Erklärung zur Grafik:** Die Edelgaskonfiguration (voll besetzte Schalen) ist das treibende Motiv für Ionenbildung; die Grafik veranschaulicht den Übergang vom Atom zum Ion.
 
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
@@ -365,11 +375,21 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Einleitung
 
-Wasser, CO₂, Glucose, DNA — all diese Moleküle werden durch **kovalente Bindungen** zusammengehalten. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Das Resultat: stabile Moleküle mit definierter Geometrie und Polarität. Die Geometrie entscheidet über Enzymfunktionen, Membranstabilität und Wirkstoffbindung. Für den MedAT sind Hybridisierung (sp³, sp², sp), VSEPR-Geometrie, Polarität, σ- und π-Bindungen prüfungsrelevant.
+**Kovalente Bindung** = Elektronenpaar wird geteilt (nicht übertragen); definierte Geometrie und Polarität. Für den MedAT sind **Hybridisierung** (sp³, sp², sp), **VSEPR**, Polarität, σ- und π-Bindungen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Kovalente Bindung** (Elektronenteilung, ΔEN < 1,7); **VSEPR** (Geometrie); **Hybridisierung** sp³/sp²/sp; **σ-** und **π-Bindungen**; Polarität. **Kontext:** Molekülstruktur und -funktion; Enzyme, Wirkstoffe.
+
+---
 
 ## Grundprinzip der kovalenten Bindung
 
-**SVG-Hinweis (Kovalente Bindung, VSEPR und Hybridisierung):** Ein Übersichtsschema mit Elektronenteilung, ΔEN-Bereichen (polar/unpolar/ionisch), VSEPR-Geometrien und sp³/sp²/sp-Hybridisierung unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Kovalente Bindung](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt Elektronenteilung bei kovalenter Bindung, ΔEN-Bereiche (polar/unpolar/ionisch), VSEPR-Geometrien und die Hybridisierungen sp³, sp², sp.
+
+![Orbitale und Hybridisierung](/grafik-orbitale.svg)
+
+**Erklärung zur Grafik:** Die räumliche Gestalt der s-, p- und hybriden Orbitale (sp³, sp², sp) bestimmt Bindungswinkel und Molekülgeometrie nach VSEPR.
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -725,11 +745,21 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Einleitung
 
-Warum siedet Wasser bei 100 °C, obwohl H₂S schon bei −60 °C siedet? Warum ist Fett wasserunlöslich? Warum ist DNA eine stabile Doppelhelix? All das erklären die **intermolekularen Kräfte** — die Anziehungskräfte zwischen Molekülen. Sie sind schwächer als Atombindungen, aber in ihrer Summe enorm wichtig. Für den MedAT sind Wasserstoffbrücken, Van-der-Waals-Kräfte, Dipol-Dipol-Wechselwirkungen, die Dichteanomalie des Wassers und der hydrophobe Effekt prüfungsrelevant.
+**Intermolekulare Kräfte** (zwischen Molekülen) sind schwächer als Atombindungen, bestimmen aber Siedepunkt, Löslichkeit und Biomolekül-Struktur. Für den MedAT sind H-Brücken, Van-der-Waals, Dipol-Dipol, Dichteanomalie Wasser und hydrophober Effekt prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **London**, **Dipol-Dipol**, **Wasserstoffbrücken** (X–H···Y, N/O/F); Stärkeranking; **hydrophober Effekt**; Wasser (Anomalie 4 °C). **Kontext:** DNA-Doppelhelix, Proteinfaltung, Löslichkeit.
+
+---
 
 ## Überblick: Zwischenmolekulare Kräfte
 
-**SVG-Hinweis (Intermolekulare Kräfte und H-Brücken):** Ein Vergleichsschema mit London, Dipol-Dipol, H-Brücken (D–H···A) und der Anomalie des Wassers (4 H-Brücken, Dichtemaximum 4 °C) macht die Abstufung und biologische Bedeutung auf einen Blick klar. *Typ: Vergleich / Übersicht.*
+![H-Bruecken](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Die Grafik vergleicht London-Kräfte, Dipol-Dipol und H-Brücken (D–H···A) und zeigt die Anomalie des Wassers (4 H-Brücken pro Molekül, Dichtemaximum bei 4 °C).
+
+![Biogene Elemente und H-Brücken](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** N, O und F als H-Brücken-Partner in Biomolekülen; die Stellung im PSE und die Rolle in DNA und Proteinen werden hier zusammengefasst.
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen. Entscheidend ist die Unterscheidung: **Intramolekulare** Bindungen halten Atome im Molekül zusammen; **intermolekulare** Kräfte wirken zwischen Molekülen und bestimmen die makroskopischen Eigenschaften.
 
@@ -1106,11 +1136,21 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Einleitung
 
-Proteine falten sich in spezifische Strukturen, Enzyme erkennen genau ihr Substrat, DNA liegt als stabile Doppelhelix vor — all das ist nur möglich durch ein Zusammenspiel verschiedener Bindungstypen. **Kovalente Bindungen** bilden das stabile Gerüst (Peptidbindungen, glycosidische Bindungen, Esterbrücken). **Nichtkovalente Wechselwirkungen** (H-Brücken, hydrophober Effekt, Van-der-Waals, Salzbrücken) sorgen für Flexibilität und Reversibilität — sie ermöglichen das Auf- und Abfalten von Proteinen, die Enzym-Substrat-Bindung und die Replikation der DNA. Für den MedAT sind Peptidbindung, glycosidische Bindungen, Ester, hydrophober Effekt und nichtkovalente Wechselwirkungen in Biomolekülen prüfungsrelevant.
+**Biomoleküle**: **kovalente** Gerüste (Peptidbindung, glycosidisch, Ester, Disulfid) + **nichtkovalente** Wechselwirkungen (H-Brücken, hydrophob, Salzbrücken) für Faltung und Bindung. Für den MedAT sind Peptid-, glycosidische Bindung, Ester und nichtkovalente Wechselwirkungen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Peptidbindung** (C–N); **glycosidische Bindung**; **Ester**, **Disulfidbrücke**; **nichtkovalent**: H-Brücken, hydrophob, Salzbrücken; Rolle in Proteinen/DNA. **Kontext:** Von der Bindung zur Struktur; Enzyme, DNA, Membranen.
+
+---
 
 ## Bindungstypen in Biomolekülen
 
-**SVG-Hinweis (Biomoleküle — Peptidbindung, glycosidische Bindung, hydrophober Effekt):** Ein Flussschema mit kovalenten (Peptid, glycosidisch, Ester, Disulfid) und nichtkovalenten Wechselwirkungen (H-Brücken, hydrophob, Salzbrücke) unterstützt die Einordnung von Proteinstruktur und DNA. *Typ: Flussschema / Übersicht.*
+![Biomolekuele](/grafik-16-zentraldogma.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst kovalente Bindungen (Peptid, glycosidisch, Ester, Disulfid) und nichtkovalente Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücke) in Proteinen und DNA zusammen.
+
+![Kohlenstoffgerüst und Biomoleküle](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Kohlenstoff als Gerüst der Biomoleküle (Proteine, Kohlenhydrate, Lipide); die Grafik veranschaulicht Bindungsarten und Strukturprinzipien.
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 

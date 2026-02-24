@@ -33,7 +33,11 @@ export const chemKapAnorganisch: Kapitel = {
       ],
       content: `## Einleitung
 
-Wasser ist das Medium des Lebens. Ohne Wasser gibt es keine Biochemie — kein Enzym, kein Protein, kein Membranpotenzial funktioniert ohne es. Aber warum ist Wasser so besonders? Wasser hat eine **gewinkelte Struktur** (104,5°) und ist stark polar — das ermöglicht Wasserstoffbrückenbindungen, die für außergewöhnliche Eigenschaften sorgen: hohe Siedetemperatur, hohe spezifische Wärmekapazität, Anomalie des Wassers (Eis schwimmt auf Wasser). Für den MedAT sind die Eigenschaften von Wasser, Wasserstoffbrückenbindungen, Osmose und Hydr(at)ation von Ionen prüfungsrelevant.
+**Wasser** = polares Molekül (104,5°), H-Brücken → hoher Siedepunkt, Anomalie (Dichtemaximum 4 °C), Lösungsmittel des Lebens. Für den MedAT sind Struktur, H-Brücken, Osmose, Hydratation prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Struktur** H₂O (VSEPR, 104,5°); **Polarität**, H-Brücken; Anomalie; **Hydratation** von Ionen; Osmose. **Kontext:** Wasser als Lösungsmittel und Temperaturpuffer; Körper, Zelle.
+
+---
 
 ## Struktur des Wassermoleküls
 
@@ -53,7 +57,13 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 | Oberflächenspannung | 72 mN/m | Kapillarkräfte im Xylem (bis 100 m), Alveolarstabilität |
 | Schmelzwärme | 334 kJ/kg | Eis → Wasser: hoher Energiebedarf für Phasenübergang |
 
-**SVG-Hinweis (Wasser — Struktur und H-Brücken):** Ein Schema mit gewinkeltem H₂O (104,5°), Dipol und H-Brücken-Netzwerk (bis zu 4 pro Molekül) macht die Anomalien und den Siedepunktvergleich mit H₂S auf einen Blick klar. *Typ: Molekülschema / Netzwerk.*
+![Wasser H-Brücken](/grafik-wasser-h-bruecken.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die gewinkelte Struktur von H₂O (104,5°), das Dipolmoment und das H-Brücken-Netzwerk (bis zu 4 pro Molekül); damit werden die Anomalien des Wassers und der Siedepunktvergleich mit H₂S verständlich.
+
+![Dichteanomalie und Phasen](/grafik-thermodynamik.svg)
+
+**Erklärung zur Grafik:** Die Dichteanomalie des Wassers (Maximum bei 4 °C) und die Phasenübergänge (Schmelzen, Verdampfen) mit latenter Wärme — Grundlage für Thermoregulation.
 
 **Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
@@ -383,11 +393,21 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
       ],
       content: `## Einleitung
 
-Alle Biomoleküle — Proteine, DNA, Kohlenhydrate, Fette — haben eines gemeinsam: Sie bestehen aus **Kohlenstoffgerüsten**. Kein anderes Element kann so vielfältige Strukturen bilden wie Kohlenstoff. Der Grund: C hat 4 Valenzelektronen, kann sich selbst verketten (Katenation) und in drei verschiedenen Hybridisierungen auftreten (sp³, sp², sp), was Einfach-, Doppel- und Dreifachbindungen ermöglicht. Für den MedAT sind Allotrope (Diamant/Graphit/Fulleren), CO₂-Chemie und CO-Toxizität, Cyanid sowie der Kohlenstoffzyklus prüfungsrelevant.
+**Kohlenstoff** = Element des Lebens (4 Valenzelektronen, Katenation, sp³/sp²/sp). Für den MedAT sind Allotrope (Diamant/Graphit/Fulleren), CO₂/CO/Cyanid, Kohlenstoffzyklus prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Allotrope** (Diamant, Graphit, Fulleren); **CO₂** (Kohlensäure, Bicarbonat); **CO**-Toxizität; **Cyanid**; Kohlenstoffzyklus. **Kontext:** Von anorganischem C zu Biomolekülen.
+
+---
 
 ## Kohlenstoff — das Element des Lebens
 
-**SVG-Hinweis (Kohlenstoff — Allotrope und CO₂):** Ein Vergleichsschema Diamant/Graphit/Fulleren und die lineare CO₂-Struktur (apolar) vs. gewinkeltes H₂O (polar) unterstützen die Einordnung. *Typ: Vergleich / Strukturschema.*
+![Kohlenstoff Allotrope](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** Die Grafik vergleicht die Allotrope Diamant, Graphit und Fulleren sowie die lineare CO₂-Struktur (apolar) mit gewinkeltem H₂O (polar).
+
+![Biogene Elemente und Kohlenstoff](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Kohlenstoff als zentrales Element der Biologie; die Grafik zeigt die Stellung von C, N, O, P, S im PSE und ihre Rolle in Biomolekülen.
 
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
 
@@ -698,11 +718,21 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
       ],
       content: `## Einleitung
 
-Stickstoff, Schwefel und Halogene sind für das Leben unverzichtbar — und gleichzeitig in falscher Konzentration toxisch. Stickstoff ist Bestandteil aller Aminosäuren und DNA-Basen; NO (Stickstoffmonoxid) ist ein wichtiger Botenstoff. Schwefel stabilisiert Proteinstrukturen durch Disulfidbrücken und ist Bestandteil von Coenzym A. Halogene haben vielfältige Rollen: Iod für Schilddrüsenhormone, Chlor für Magensäure und Desinfektion, Fluor für Kariesprophylaxe. Für den MedAT sind NO-Signalweg, Schwefelbindungen in Proteinen sowie Halogen-Redoxreaktionen prüfungsrelevant.
+**N, S, Halogene** = essenziell und in Überdosis toxisch. N: Aminosäuren, DNA, NO; S: Disulfidbrücken, CoA; Halogene: Iod (Schilddrüse), Cl (Magensäure), F (Zähne). Für den MedAT sind NO-Signalweg, Schwefel in Proteinen, Halogen-Redox prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Stickstoff** (NO, Nitrat); **Schwefel** (Disulfid, Thiole); **Halogene** (Cl₂, I₂, Fluorid); Toxizität und Biologie. **Kontext:** Anorganische Bausteine der Biochemie.
+
+---
 
 ## Stickstoff (N) — das häufigste Atmosphärengas
 
-**SVG-Hinweis (Biogene Elemente N, S, Halogene):** Eine kompakte Übersicht zu Vorkommen, Oxidationsstufen und klinischen Bezügen (NH₃, H₂S, Halogenide) festigt die Prüfungsvorbereitung. *Typ: Übersicht / Tabelle.*
+![Biogene Elemente](/grafik-biogene-elemente.svg)
+
+**Erklärung zur Grafik:** Die Abbildung fasst Vorkommen, Oxidationsstufen und klinische Bezüge von Stickstoff, Schwefel und Halogenen (z. B. NH₃, H₂S, Halogenide) zusammen.
+
+![Stickstoff und Schwefel in Biomolekülen](/grafik-kohlenstoff.svg)
+
+**Erklärung zur Grafik:** N und S in Aminosäuren, Disulfidbrücken und Coenzym A; die Grafik ergänzt die Rolle von N, S und Halogenen in der Biochemie.
 
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
@@ -1033,7 +1063,11 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
       ],
       content: `## Einleitung
 
-Was macht Essig sauer und Seife glatt? Säuren und Basen begegnen uns überall im Alltag und sind in der Medizin allgegenwärtig: Der Blut-pH von 7,4 muss millimetergenau gehalten werden, Magensäure verdaut Eiweiß bei pH ~1. Doch was genau ist eine Säure? Es gibt drei wichtige Definitionen, die sich ergänzen: Arrhenius (H⁺/OH⁻-Ionen), Brønsted-Lowry (Protonendonator/-akzeptor) und Lewis (Elektronenpaar-Akzeptor/-Donor). Für den MedAT sind pH-Berechnungen, das Ionenprodukt Kw und die Unterschiede zwischen starken und schwachen Säuren/Basen prüfungsrelevant.
+**Säuren und Basen** (Arrhenius, Brønsted-Lowry, Lewis): Blut-pH 7,4, Magensäure ~1. Für den MedAT sind pH, Kw, starke vs. schwache Säuren/Basen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Definitionen** (Arrhenius, Brønsted, Lewis); **pH** und **Kw**; konjugierte Paare; **Neutralisation**. **Kontext:** Säure-Base-Haushalt in Klinik und Labor.
+
+---
 
 ## Historische Entwicklung der Säure-Base-Theorie
 
@@ -1041,7 +1075,13 @@ Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzepti
 
 ## Die Brønsted-Lowry-Definition
 
-**SVG-Hinweis (Säure-Base nach Brønsted und Lewis):** Ein Schema mit H⁺-Transfer, konjugierten Paaren und pH-Skala unterstützt die Abgrenzung zu Lewis. *Typ: Schema / Übersicht.*
+![pH-Skala](/grafik-20-ph-skala.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt den H⁺-Transfer nach Brønsted, konjugierte Säure-Base-Paare und die pH-Skala; die Abgrenzung zur Lewis-Definition wird deutlich.
+
+![Puffer und Henderson-Hasselbalch](/grafik-puffer.svg)
+
+**Erklärung zur Grafik:** Puffersysteme (HA ⇌ H⁺ + A⁻) und Henderson-Hasselbalch-Gleichung — Grundlage für den Blut-pH und klinische Säure-Base-Störungen.
 
 **Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
@@ -1189,7 +1229,6 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
         },
       ],
       diagram: "ph-scale",
-      imageUrl: "/grafik-20-ph-skala.svg",
 
       merksätze: [
         "Brønsted-Säure = Protonendonor (gibt H⁺ ab); Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf).",
@@ -1386,11 +1425,21 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
       ],
       content: `## Einleitung
 
-Warum ätzt Salzsäure (HCl) sofort, während Essigsäure (CH₃COOH) im Salat nur säuerlich schmeckt? Beide sind Säuren — aber HCl ist vollständig dissoziiert (starke Säure), während Essigsäure nur partiell dissoziiert (schwache Säure). Der Unterschied liegt in der Säurekonstante Ka. Je kleiner der pKa, desto stärker die Säure. Für den MedAT sind pH-Berechnungen für schwache Säuren, pKa-Werte wichtiger biologischer Säuren (Kohlensäure, Phosphat) und mehrprotonige Säuren prüfungsrelevant.
+**Starke vs. schwache Säuren:** HCl vollständig dissoziiert, Essigsäure partiell. **pKa** = Maß für Stärke (kleiner pKa → stärker). Für den MedAT sind pH-Berechnungen, pKa (Kohlensäure, Phosphat), mehrprotonige Säuren prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Ka** und **pKa**; starke vs. schwache Säuren; **pH** für schwache Säuren; mehrprotonige Säuren; biologische pKa-Werte. **Kontext:** Warum Blut puffert, warum Magensäure ätzt.
+
+---
 
 ## Starke Säuren: Vollständige Dissoziation
 
-**SVG-Hinweis (Starke vs. schwache Säuren und pH-Berechnung):** Ein Schema mit vollständiger vs. partieller Dissoziation und der Formel für schwache Säuren (pH ≈ ½(pK_a − log c)) unterstützt Rechenaufgaben. *Typ: Schema / Formel.*
+![pH-Skala](/grafik-20-ph-skala.svg)
+
+**Erklärung zur Grafik:** Die Abbildung veranschaulicht vollständige vs. partielle Dissoziation (starke vs. schwache Säuren) und die pH-Formel für schwache Säuren: pH ≈ ½(pK_a − log c).
+
+![Pufferbereich und pKa](/grafik-puffer-henderson.svg)
+
+**Erklärung zur Grafik:** Pufferbereich um pKa und Henderson-Hasselbalch — optimaler Pufferbereich bei pH = pKa ± 1; relevant für Carbonat- und Phosphatpuffer.
 
 **Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
@@ -1602,7 +1651,6 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
         },
       ],
       diagram: "ph-scale",
-      imageUrl: "/grafik-20-ph-skala.svg",
 
       merksätze: [
         "Starke Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Stufe), HClO₄ – alle dissoziieren vollständig.",
@@ -1778,11 +1826,21 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
       ],
       content: `## Einleitung
 
-Blut hat einen pH von 7,4 — und dieser Wert ist lebenswichtig. Schon bei pH 7,0 oder 7,8 drohen lebensbedrohliche Komplikationen. Wie hält der Körper diesen Wert trotz ständiger Säureproduktion (CO₂ aus der Atmung, Laktat aus Muskeln) so stabil? Durch **Puffersysteme** — Gemische aus schwacher Säure und ihrer konjugierten Base, die Säure und Base abfangen ohne drastische pH-Änderungen. Die zentrale Formel ist die **Henderson-Hasselbalch-Gleichung**. Für den MedAT sind Carbonat-Puffer, Phosphatpuffer, Henderson-Hasselbalch und klinische Säure-Base-Störungen prüfungsrelevant.
+**Puffer** = schwache Säure + konjugierte Base → pH stabil trotz Säure/Base-Zugabe. **Henderson-Hasselbalch** beschreibt den Pufferbereich. Für den MedAT sind Carbonat-/Phosphatpuffer, HH-Gleichung, Säure-Base-Störungen prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Pufferprinzip**; **Henderson-Hasselbalch** (pH = pKa + log([A⁻]/[HA])); **Carbonat-** und **Phosphatpuffer**; Pufferbereich; klinische Störungen. **Kontext:** Warum Blut-pH 7,4 bleibt.
+
+---
 
 ## Was ist ein Puffer?
 
-**SVG-Hinweis (Puffer und Henderson-Hasselbalch):** Ein Schema mit HA ⇌ H⁺ + A⁻, pH = pK_a + log([A⁻]/[HA]) und dem Carbonat-Puffer CO₂/HCO₃⁻ macht Pufferkapazität und Blut-pH auf einen Blick klar. *Typ: Formelschema / Puffer.*
+![Puffer](/grafik-puffer.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt das Puffergleichgewicht HA ⇌ H⁺ + A⁻, die Henderson-Hasselbalch-Gleichung pH = pK_a + log([A⁻]/[HA]) und den Carbonat-Puffer (CO₂/HCO₃⁻) für den Blut-pH.
+
+![pH-Skala und Pufferbereich](/grafik-20-ph-skala.svg)
+
+**Erklärung zur Grafik:** Die pH-Skala mit typischen Werten (Magensäure, Blut, Seife) und der Pufferbereich des Bluts (7,35–7,45) — Grundlage für Azidose/Alkalose.
 
 Ein **Puffersystem** ist eine Lösung, die pH-Änderungen bei Zugabe kleiner Mengen Säure oder Base minimiert. Puffer bestehen aus einem **schwachen Säure-Base-Paar**:
 
@@ -2126,11 +2184,21 @@ Der Carbonat-Puffer kann versagen, wenn:
       ],
       content: `## Einleitung
 
-Wie findet man heraus, wie konzentriert eine Säure ist? Mit einer **Titration** — man gibt schrittweise bekannte Mengen einer Base hinzu, bis die Säure genau neutralisiert ist. Der pH-Verlauf dabei (Titrationskurve) hat eine charakteristische S-Form. Am **Äquivalenzpunkt** sind Säure und Base genau neutralisiert; am **Halbäquivalenzpunkt** gilt pH = pKa. **Indikatoren** zeigen diesen Punkt farblich an. Klinisch sind Titrationsprinzipien in der Blutgasanalyse angewendet. Für den MedAT sind Titrationskurven, Äquivalenz-/Halbäquivalenzpunkt und pH-Indikatoren prüfungsrelevant.
+**Titration** = Zugabe von Base zu Säure bis Neutralisation; **Titrationskurve** (S-Form), **Äquivalenzpunkt**, **Halbäquivalenzpunkt** (pH = pKa). Für den MedAT sind Kurvenverlauf, Äquivalenz-/Halbäquivalenzpunkt, Indikatoren prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Titration** (c·V = c·V); **Titrationskurve**; **Äquivalenz-** und **Halbäquivalenzpunkt**; **Indikatoren**; Blutgasanalyse. **Kontext:** Konzentrationsbestimmung in Labor und Klinik.
+
+---
 
 ## Grundprinzip der Titration
 
-**SVG-Hinweis (Titration und Titrationskurve):** Ein Schema mit Bürette, Äquivalenzpunkt und typischer S-Kurve (pH vs. Volumen) unterstützt die Interpretation von Titrationskurven und Indikatoren. *Typ: Versuchsaufbau / Kurve.*
+![Titration](/grafik-titration.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Versuchsaufbau (Bürette), den Äquivalenzpunkt und den typischen S-förmigen Verlauf der Titrationskurve (pH vs. Volumen) sowie die Rolle der Indikatoren.
+
+![pH-Skala und Indikatoren](/grafik-20-ph-skala.svg)
+
+**Erklärung zur Grafik:** pH-Skala und typische Umschlagsbereiche von Indikatoren (z. B. Phenolphthalein, Methylorange) — wichtig für die Wahl des Indikators bei der Titration.
 
 Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung einer unbekannten Konzentration. Eine Lösung bekannter Konzentration (Titrant, in der Bürette) wird einer Lösung unbekannter Konzentration (Analyt, in dem Erlenmeyerkolben) tropfenweise zugegeben, bis die Reaktion vollständig ist.
 
@@ -2499,11 +2567,21 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
       ],
       content: `## Einleitung
 
-Warum rostet Eisen? Warum verbrennt Holz? Warum funktioniert die Atmungskette? All das sind **Redoxreaktionen** — Reaktionen, bei denen Elektronen übertragen werden. Die Eselsbrücke **OIL RIG** hilft: Oxidation Is Loss (Elektronenverlust), Reduction Is Gain (Elektronengewinn). Oxidation und Reduktion passieren immer gleichzeitig — ein Stoff kann nicht Elektronen verlieren, ohne dass ein anderer sie aufnimmt. Für den MedAT sind Oxidationszahlen, Standardpotenziale (E°), Redox-Gleichungen ausgleichen und biologische Redoxreaktionen (NADH, Cytochrome) prüfungsrelevant.
+**Redox** = Elektronenübertragung; **OIL RIG** (Oxidation = Loss, Reduction = Gain). Atmungskette, Rost, Verbrennung. Für den MedAT sind Oxidationszahlen, E°, Redox-Gleichungen, NADH/Cytochrome prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Oxidationszahlen**; **OIL RIG**; Redox-Gleichungen ausgleichen; **Standardpotenzial** E°; biologische Redox (NADH, Atmungskette). **Kontext:** Von Batterie bis Mitochondrium.
+
+---
 
 ## Definitionen: OIL RIG
 
-**SVG-Hinweis (Redox — OIL RIG und Oxidationszahlen):** Ein Übersichtsschema mit Oxidation (Elektronenabgabe), Reduktion (Elektronenaufnahme) und den Regeln für Oxidationszahlen unterstützt das Aufstellen von Redoxgleichungen. *Typ: Übersicht / Schema.*
+![Redox OIL RIG](/grafik-redox.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht OIL RIG (Oxidation = Elektronenabgabe, Reduktion = Elektronenaufnahme) und die Regeln für Oxidationszahlen beim Aufstellen von Redoxgleichungen.
+
+![Galvanische Zelle und Redox](/grafik-galvanische-zelle.svg)
+
+**Erklärung zur Grafik:** In der galvanischen Zelle laufen Oxidation (Anode) und Reduktion (Kathode) räumlich getrennt ab; der Elektronenfluss erzeugt die Zellspannung.
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
 
@@ -2804,11 +2882,21 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
       ],
       content: `## Einleitung
 
-Wie liefert eine Batterie Strom? Wie erzeugt der Herzschrittmacher seine Energie? Die Antwort liegt in der **Elektrochemie**: Wenn eine Redoxreaktion freiwillig abläuft, können die übertragenen Elektronen als elektrischer Strom genutzt werden. Im Umkehrschluss kann elektrischer Strom eine nicht-spontane Redoxreaktion antreiben (Elektrolyse) — so funktionieren zum Beispiel Chlor-Produktion und Galvanisierung. Für den MedAT sind Standardpotenziale (E°), die Faraday-Gleichung (ΔG = −nFE°) und Grundprinzipien von Akkumulatoren und Brennstoffzellen prüfungsrelevant.
+**Elektrochemie** = Redoxreaktion als Strom (galvanische Zelle) oder Strom treibt Redox (Elektrolyse). **ΔG = −nFE°**. Für den MedAT sind E°, Faraday (ΔG = −nFE°), galvanische Zelle, Akku, Brennstoffzelle prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Galvanische Zelle** (Anode, Kathode); **E°** und Spannungsreihe; **ΔG = −nFE°**; Elektrolyse; Akku, Brennstoffzelle. **Kontext:** Von Batterie bis Schrittmacher.
+
+---
 
 ## Galvanische Zellen (Voltasche Elemente)
 
-**SVG-Hinweis (Galvanische Zelle und Elektrolyse):** Ein Schema mit Anode/Kathode, Salzbrücke, AnOx RedKat und der Formel E°Zelle = E°Kathode − E°Anode bzw. ΔG = −nFE unterstützt die Prüfungsvorbereitung. *Typ: Zellenschema / Übersicht.*
+![Galvanische Zelle](/grafik-galvanische-zelle.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau einer galvanischen Zelle (Anode, Kathode, Salzbrücke), die Merkregel AnOx RedKat und die Spannungsformel E°Zelle = E°Kathode − E°Anode bzw. ΔG = −nFE.
+
+![Nernst und Konzentrationsabhängigkeit](/grafik-nernst.svg)
+
+**Erklärung zur Grafik:** Die Nernst-Gleichung beschreibt, wie sich das Elektrodenpotenzial mit der Konzentration ändert — Grundlage für die reale Zellspannung und für Membranpotenziale.
 
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
@@ -3150,11 +3238,21 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
       ],
       content: `## Einleitung
 
-Standardpotenziale (E°) gelten bei perfekten Laborbedingungen — 1 mol/L, 25 °C, 1 atm. Im Körper aber herrschen andere Konzentrationen. Eine Nervenzelle hat innen 140 mmol/L K⁺ und außen nur 5 mmol/L — wie stark ist das resultierende Potenzial? Genau das berechnet die **Nernst-Gleichung**: Sie passt das Elektrodenpotenzial an reale Konzentrationen an. Das Membranpotenzial von Neuronen folgt direkt diesem Prinzip. Für den MedAT sind Nernst-Gleichung, Nerst-Potenzial, Gleichgewichtspotenziale und das Ruhemembranpotenzial prüfungsrelevant.
+**Nernst-Gleichung** = E° angepasst an reale Konzentrationen; Grundlage für **Membranpotenzial** (K⁺, Na⁺). Für den MedAT sind Nernst-Formel, Gleichgewichtspotenzial, Ruhemembranpotenzial prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Nernst-Gleichung** E = E° − (RT/nF)·ln Q; **Gleichgewichtspotenzial** (K⁺, Na⁺); **Ruhemembranpotenzial**; 37 °C-Formel. **Kontext:** Von Zelle zu EKG.
+
+---
 
 ## Die Nernst-Gleichung
 
-**SVG-Hinweis (Nernst-Gleichung und Membranpotenzial):** Ein Schema mit E = E° − (0,05916/n)·log Q und der Anwendung auf Konzentrationszelle bzw. Ruhemembranpotenzial (K⁺, Na⁺) macht die Abhängigkeit von der Konzentration auf einen Blick klar. *Typ: Formelschema / Anwendung.*
+![Nernst](/grafik-nernst.svg)
+
+**Erklärung zur Grafik:** Die Grafik zeigt die Nernst-Gleichung E = E° − (0,05916/n)·log Q und ihre Anwendung auf Konzentrationszelle bzw. Ruhemembranpotenzial (K⁺, Na⁺).
+
+![Galvanische Zelle und Halbzellen](/grafik-galvanische-zelle.svg)
+
+**Erklärung zur Grafik:** Jede Halbzelle hat ein eigenes Potenzial; die Nernst-Gleichung gibt das Potenzial bei beliebigen Konzentrationen — die Zellspannung ist die Differenz der Halbzellenpotenziale.
 
 Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
 
@@ -3464,11 +3562,17 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
       ],
       content: `## Einleitung
 
-Sauerstoff ist lebensnotwendig — aber auch gefährlich. Bei der Atmung entstehen als Nebenprodukte hochreaktive Sauerstoffmoleküle, sogenannte **Reaktive Sauerstoffspezies (ROS)**: Sie können DNA, Proteine und Zellmembranen beschädigen. Zu viele ROS führen zu **oxidativem Stress** — einem Zustand, der mit Arteriosklerose, Krebs, Alzheimer und Diabetes in Verbindung gebracht wird. Die Zelle schützt sich mit einem ausgeklügelten Antioxidans-System aus Enzymen (SOD, Katalase, Glutathion-Peroxidase) und Vitaminen (C, E). Für den MedAT sind ROS-Bildung, Fenton-Reaktion, Antioxidantien und der G6PD-Mangel besonders prüfungsrelevant.
+**ROS** (reaktive Sauerstoffspezies) = Nebenprodukte der Atmung; **oxidativer Stress** bei Überschuss. **Antioxidantien** (SOD, Katalase, Vit C/E) schützen. Für den MedAT sind ROS, Fenton-Reaktion, Antioxidantien, G6PD-Mangel prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **ROS** (Superoxid, H₂O₂, OH•); **Fenton-Reaktion**; **Antioxidantien** (SOD, Katalase, Glutathion, Vit C/E); **G6PD-Mangel**. **Kontext:** Balance zwischen Atmung und Zellschutz.
+
+---
 
 ## Reaktive Sauerstoffspezies (ROS)
 
-**SVG-Hinweis (ROS und antioxidatives System):** Ein Flussschema von O₂·⁻ → H₂O₂ → ·OH (Fenton) und die Abfangkaskade (SOD, Katalase, GSH/GPx) unterstützen die Einordnung von oxidativem Stress und G6PD-Mangel. *Typ: Flussschema / Übersicht.*
+![ROS](/grafik-ros.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Bildungskaskade reaktiver Sauerstoffspezies (O₂·⁻ → H₂O₂ → ·OH, Fenton-Reaktion) und das antioxidative System (SOD, Katalase, GSH/GPx) — wichtig für oxidativen Stress und G6PD-Mangel.
 
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 

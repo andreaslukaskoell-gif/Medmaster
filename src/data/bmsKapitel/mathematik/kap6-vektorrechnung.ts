@@ -29,7 +29,11 @@ export const mathKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-Wo Physik auf Medizin trifft, treffen wir auf Vektoren: Blutflussrichtung und -geschwindigkeit, Herzachse im EKG, Muskelkräfte an Gelenken — all das sind gerichtete Größen. Ein Vektor hat Betrag und Richtung, im Gegensatz zu einem Skalar (nur Betrag, z.B. Temperatur). Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor und Zerlegung in Komponenten prüfungsrelevant.
+**Vektoren** = gerichtete Größen (Betrag + Richtung): Blutfluss, EKG-Achse, Kräfte. Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag** |v|; **Addition** (Parallelogramm); Skalarmultiplikation; **Einheitsvektor**; Linearkombination, lineare Unabhängigkeit. **Kontext:** Physik und Medizin — wo Richtung zählt.
+
+---
 
 Ein **Vektor** ist eine gerichtete Größe: Er besitzt sowohl einen **Betrag** (Länge) als auch eine **Richtung**. Im Gegensatz dazu ist ein **Skalar** eine reine Zahlgröße ohne Richtung (z. B. Temperatur, Masse, Energie). Vektoren werden grafisch als Pfeile dargestellt und algebraisch als Spaltenvektoren geschrieben:
 
@@ -45,7 +49,9 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 ## Vektoroperationen
 
-**SVG-Hinweis (Vektoren — Betrag, Addition, Einheitsvektor):** Ein Schema mit |v| = √(v₁²+v₂²+v₃²), Parallelogrammregel und ê = v/|v| unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Vektoren](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Betragsformel |v| = √(v₁²+v₂²+v₃²), die Parallelogrammregel für die Vektoraddition und den Einheitsvektor ê = v/|v|.
 
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
 
@@ -335,11 +341,17 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
       ],
       content: `## Einleitung
 
-Stehen zwei Kräfte senkrecht aufeinander, leisten sie keine Arbeit aneinander — denn das Skalarprodukt ist null. Das Drehmoment eines Muskels ist maximal, wenn Kraft und Hebelarm rechtwinklig sind — das Kreuzprodukt ist dort maximal. Skalar- und Kreuzprodukt sind die zwei Hauptoperationen mit Vektoren. Für den MedAT sind Skalarprodukt (Winkelberechnung, Orthogonalität), Kreuzprodukt (Drehmoment, senkrechte Richtung) und Projektion prüfungsrelevant.
+**Skalarprodukt** (a·b = |a||b|cos θ) → Winkel, Orthogonalität; **Kreuzprodukt** → Drehmoment, senkrechte Richtung. Für den MedAT sind Skalarprodukt, Kreuzprodukt, Projektion prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Skalarprodukt** (Winkel, Orthogonalität); **Kreuzprodukt** (Rechte-Hand, Betrag = Fläche); **Projektion**. **Kontext:** Kräfte, Arbeit, Drehmoment.
+
+---
 
 ## Skalarprodukt
 
-**SVG-Hinweis (Skalarprodukt, Kreuzprodukt, Orthogonalität):** Ein Schema mit a·b = |a||b|cos θ, a×b (Rechte-Hand-Regel) und Fläche |a×b| unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Skalarprodukt Kreuzprodukt](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht das Skalarprodukt a·b = |a||b|cos θ (Winkel, Orthogonalität), das Kreuzprodukt a×b mit der Rechte-Hand-Regel und den Betrag |a×b| als Fläche des Parallelogramms.
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
 
@@ -683,11 +695,17 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
       ],
       content: `## Einleitung
 
-Ein Strahlengang in der Radiologie ist eine Gerade im Raum. Eine CT-Schnittebene ist eine Ebene. Und die CT-Bildrekonstruktion löst ein gigantisches lineares Gleichungssystem — das sind Matrizen. Geraden, Ebenen und Matrizen beschreiben geometrische Objekte im 3D-Raum und ermöglichen systematische Lösungsverfahren. Für den MedAT sind Geradenparameter, Ebenengleichungen, LGS lösen (Gauß), Determinante und 2×2-Matrixinversion prüfungsrelevant.
+**Geraden** (r = r₀ + t·d), **Ebenen** (n·(r−r₀)=0), **Matrizen** (LGS, Gauß). CT, Radiologie. Für den MedAT sind Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Gerade im Raum**; **Ebene** (Parameter-, Normalenform); **LGS** (Gauß); **Determinante**; **2×2-Inverse**. **Kontext:** Von 3D-Geometrie zu Bildgebung.
+
+---
 
 ## Geradengleichung im Raum
 
-**SVG-Hinweis (Gerade, Ebene, Matrix, LGS):** Ein Schema mit r = r₀ + t·d, n·(r−r₀) = 0, 2×2-Determinante und A⁻¹ unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Gerade Ebene Matrix](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Abbildung zeigt die Geradengleichung r = r₀ + t·d, die Ebenengleichung n·(r−r₀) = 0 sowie 2×2-Determinante und Inverse A⁻¹ für lineare Gleichungssysteme.
 
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
 
@@ -1044,11 +1062,17 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
       ],
       content: `## Einleitung
 
-"Wie weit ist der Tumor vom Rückenmark entfernt?" — diese Frage entscheidet über Bestrahlungsdosen und Schäden. Abstandsberechnungen im 3D-Raum sind in der Medizin direkt lebensrelevant. Ob Punkt zu Punkt, Punkt zu Gerade oder Punkt zu Ebene: die Vektorrechnung liefert präzise Abstände. Für den MedAT sind euklidischer Abstand, Punkt-Gerade-Abstand, Punkt-Ebene-Abstand und Schnittwinkel prüfungsrelevant.
+**Abstände** im 3D: Punkt–Punkt, Punkt–Gerade, Punkt–Ebene; Bestrahlungsplanung. Für den MedAT sind euklidischer Abstand, Lotfußpunkt, Hessesche Normalform, Schnittwinkel prüfungsrelevant.
+
+**In diesem Kapitel lernst du:** **Punkt–Punkt**; **Punkt–Gerade** (Lotfußpunkt); **Punkt–Ebene** (Hessesche); **Schnittwinkel**. **Kontext:** Von Anatomie zur Therapieplanung.
+
+---
 
 ## Abstand Punkt–Punkt
 
-**SVG-Hinweis (Abstände — Punkt-Punkt, Punkt-Gerade, Punkt-Ebene):** Ein Schema mit d(A,B) = |AB|, Lotfußpunkt und Hessesche Normalform unterstützt die Prüfungsvorbereitung. *Typ: Übersicht / Schema.*
+![Abstände](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Die Grafik veranschaulicht den Abstand d(A,B) = |AB|, die Berechnung des Abstands Punkt–Gerade (Lotfußpunkt) und Punkt–Ebene (Hessesche Normalform).
 
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
 
