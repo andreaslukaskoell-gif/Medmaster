@@ -29,13 +29,14 @@ export const mathKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-**Vektoren** = gerichtete Größen (Betrag + Richtung): Blutfluss, EKG-Achse, Kräfte. Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Blutfluss, EKG-Herzachse, Kräfte und Richtungen in der Biomechanik sind **gerichtete Größen** (Vektoren). Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag und Einheitsvektor prüfungsrelevant. Vektoren werden in **Algebra & Geometrie** (ma-3-04) eingeführt; hier vertiefen wir Rechenregeln, Skalar- und Kreuzprodukt sowie Anwendungen.
 
-**Einstieg:** Vektoren werden in **Algebra & Geometrie** (ma-3-04) erstmals eingeführt. Hier vertiefen wir Rechenregeln, Skalar- und Kreuzprodukt, Geraden und Ebenen sowie Abstandsberechnungen und medizinische Anwendungen.
-
-**Kontext:** Im MedAT und in der Medizin zählt oft die **Richtung**: EKG-Herzachse, Kraftzerlegung in der Biomechanik, Blutflussrichtung, Strahlentherapie. Wer Vektoren sicher handhabt, kann solche Aufgaben fehlerfrei lösen.
-
-**In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag** |v|; **Addition** (Parallelogramm); Skalarmultiplikation; **Einheitsvektor**; Linearkombination, lineare Unabhängigkeit.
+**In diesem Kapitel lernst du:**
+- **Vektor** vs. **Skalar:** Vektor = Betrag + Richtung (Pfeil); Skalar = reine Zahl
+- **Betrag** |v| = √(v₁² + v₂² + v₃²); **Addition** komponentenweise bzw. Parallelogrammregel
+- **Skalare Multiplikation** λ·v; **Verbindungsvektor** AB = Ortsvektor(B) − Ortsvektor(A)
+- **Einheitsvektor** ê = v/|v| (Richtung, Betrag 1); **Linearkombination**, lineare Unabhängigkeit
+- **Rechenweg:** Betrag zuerst, dann Einheitsvektor; Abstand = Betrag des Verbindungsvektors
 
 ---
 

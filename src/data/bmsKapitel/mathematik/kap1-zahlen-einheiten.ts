@@ -209,11 +209,13 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Zehnerpotenzen**: 10³ = 1.000; 10⁻⁶ = 0,000 001; negative Exponenten = Kehrwert
-- **Multiplikation**: 10ᵃ × 10ᵇ = 10^(a+b); **Division**: 10ᵃ / 10ᵇ = 10^(a−b)
-- **Potenzieren**: (10ᵃ)ᵇ = 10^(a×b); **Wurzel**: ⁿ√(10ᵐ) = 10^(m/n)
-- **Verhältnisse**: Exponentendifferenz gibt Faktor an (10⁶ / 10⁻³ = 10⁹ = Milliardenfaktor)
-- **Klinisch**: Zellgröße 8 µm = 8×10⁻⁶ m; Virus 100 nm = 10⁻⁷ m; [Na⁺] 140 mmol/L = 0,14 mol/L`,
+- **Zehnerpotenzen:** 10ⁿ (n positiv) = 1 mit n Nullen; 10⁻ⁿ = 1/10ⁿ (positiv, kleiner als 1); 10⁰ = 1
+- **Multiplikation:** 10ᵃ × 10ᵇ = 10^(a+b); **Division:** 10ᵃ / 10ᵇ = 10^(a−b); **Potenzieren:** (10ᵃ)ᵇ = 10^(a×b); **Wurzel:** ⁿ√(10ᵐ) = 10^(m/n)
+- **Vorfaktor:** (a×10ᵐ)×(b×10ⁿ) = (a×b)×10^(m+n); danach normalisieren (Vorfaktor 1 bis <10)
+- **Verhältnisse:** Exponentendifferenz = Faktor (10⁶/10⁻³ = 10⁹); Größenordnungen schnell vergleichen
+- **Addition:** erst auf gleichen Exponenten bringen, dann Vorfaktoren addieren (nicht Exponenten addieren!)
+- **Typische Fehler:** 10⁻³ ≠ −10³; bei Multiplikation Exponenten addieren (nicht multiplizieren)
+- **Klinisch:** Erythrozyten ~5×10¹²/L; Zelle ~8 µm = 8×10⁻⁶ m; Virus ~100 nm = 10⁻⁷ m; pH log-Skala`,
       lernziele: [
         "Zehnerpotenzen mit positiven und negativen Exponenten korrekt interpretieren und ineinander umrechnen.",
         "Die vier Grundrechenregeln (Multiplikation, Division, Potenzieren, Wurzeln) auf Zehnerpotenzen anwenden.",

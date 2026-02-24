@@ -26,9 +26,15 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
-**Lineare Funktionen** (y = mx + b) = konstante Änderungsrate; Dosierung, Clearance, Blutdruck-BMI. Für den MedAT sind Steigung m, Achsenabschnitt b, Geradengleichung aus zwei Punkten, Schnittpunkte prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Kalibrierkurven (Lambert-Beer), Dosierung (mg/kg), Infusionsraten und Blutdruck–BMI-Zusammenhang sind **lineare** Modelle (konstante Änderungsrate). Für den MedAT sind Steigung m, Achsenabschnitt b, Geradengleichung aus zwei Punkten und Schnittpunkte prüfungsrelevant.
 
-**In diesem Kapitel lernst du:** **y = mx + b** (Steigung, Achsenabschnitt); Geradengleichung aus 2 Punkten; **Nullstelle**; Schnittpunkt; Senkrechte (m₁×m₂ = −1). **Kontext:** Lineare Modelle in Klinik und Pharmakologie.
+**In diesem Kapitel lernst du:**
+- **Grundform** y = mx + b: **m** = Steigung (Δy/Δx), **b** = y-Achsenabschnitt; Graph = Gerade
+- **Geradengleichung aus zwei Punkten:** zuerst m = (y₂−y₁)/(x₂−x₁), dann b durch Einsetzen
+- **Nullstelle:** f(x) = 0 → x₀ = −b/m
+- **Schnittpunkt** zweier Geraden: Gleichsetzen und nach x auflösen
+- **Senkrechte Geraden:** m₁×m₂ = −1, also m₂ = −1/m₁
+- **Typische Anwendungen:** Kalibrierkurve, Regressionsgerade, Infusionsrate
 
 ---
 
@@ -146,11 +152,14 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Lineare Funktion**: f(x) = m×x + b; m = Steigung (Δy/Δx); b = y-Achsenabschnitt
-- **Steigung**: m > 0 → steigend; m < 0 → fallend; m = 0 → konstant
-- **Schnittpunkt mit x-Achse**: f(x) = 0 lösen → x = −b/m; mit y-Achse: x = 0 → y = b
-- **Zwei Geraden**: Schnittpunkt durch Gleichsetzen; parallel: gleiche m; senkrecht: m₁×m₂ = −1
-- **Klinisch**: Blutdruck–BMI-Kurve; Nullpunktgerade (Dosis proportional Körpergewicht); Infusionskinetik 0. Ordnung`,
+- **Lineare Funktion:** f(x) = m×x + b; m = Steigung (Δy/Δx), b = y-Achsenabschnitt
+- **Steigung:** m > 0 → steigend; m < 0 → fallend; m = 0 → konstant (horizontale Gerade)
+- **Nullstelle:** f(x) = 0 → x₀ = −b/m (nicht Mitternachtsformel!)
+- **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m×x₁
+- **Schnittpunkt:** Gleichsetzen → x berechnen → y einsetzen
+- **Parallel:** gleiche Steigung m; **senkrecht:** m₁×m₂ = −1 → m₂ = −1/m₁
+- **Lambert-Beer:** A = ε×c×d (linear in c); Kalibrierkurve zur Konzentrationsbestimmung
+- **Typische Fehler:** Nullstelle linear = −b/m; Senkrechte: m₂ = −1/m₁ (nicht −m₁)`,
       lernziele: [
         "Die Geradengleichung f(x) = mx + b aufstellen, wenn zwei Punkte oder Steigung und ein Punkt gegeben sind.",
         "Steigung und y-Achsenabschnitt aus einem Graphen oder einer Gleichung ablesen und interpretieren.",
@@ -293,9 +302,14 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-**Quadratische Funktionen** (Parabeln): Blutdruckkurve, Wurf, optimale Dosis. Für den MedAT sind Scheitelpunktform, Diskriminante, Nullstellen, Vieta prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Parabeln beschreiben Wurfparabeln, Konzentrations-Zeit-Kurven und optimale Dosis-Wirkung. Für den MedAT sind Scheitelpunkt, Diskriminante, Nullstellen (Mitternachts- oder pq-Formel) und Interpretation des Graphen prüfungsrelevant.
 
-**In diesem Kapitel lernst du:** **Parabel** (a×x²+b×x+c); **Scheitelpunktform**; **Diskriminante** D; **Nullstellen** (Formel, Vieta); Öffnung. **Kontext:** Nicht-lineare Modelle in Physiologie.
+**In diesem Kapitel lernst du:**
+- **Allgemeine Form** f(x) = ax² + bx + c: **a** (Leitkoeffizient) bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite
+- **Scheitelpunkt** S(xs|ys): xs = −b/(2a), ys = f(xs); Tiefpunkt bei a>0, Hochpunkt bei a<0
+- **Nullstellen:** Mitternachtsformel x = (−b ± √D)/(2a) mit **Diskriminante** D = b²−4ac (D>0: 2, D=0: 1, D<0: keine reelle Nullstelle)
+- **pq-Formel** für x² + px + q = 0: x = −p/2 ± √((p/2)² − q)
+- **Vieta:** Summe der Nullstellen = −b/a, Produkt = c/a; Graphen interpretieren (Symmetrieachse, Öffnung)
 
 ---
 
@@ -427,12 +441,14 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 
 ## Zusammenfassung (ultrakompakt)
 
-- **f(x) = ax²+bx+c**: a > 0 → Parabel öffnet nach oben (Minimum); a < 0 → nach unten (Maximum)
-- **Scheitelpunktform**: f(x) = a(x−d)²+e; Scheitelpunkt S(d, e); Symmetrieachse x = d
-- **Scheitelpunkt**: d = −b/(2a); e = f(d); quadratische Ergänzung oder Ablesen
-- **Nullstellen**: x = (−b ± √(b²−4ac))/(2a); Diskriminante D = b²−4ac; D>0: 2 Lösungen; D=0: 1; D<0: keine
-- **Vieta**: x₁+x₂ = −b/a; x₁×x₂ = c/a; Schnellmethode bei rationalen Nullstellen
-- **Klinisch**: Blutdruckkurve (Parabel); optimale Infusionskonzentration; Wachstumskurven`,
+- **Quadratische Funktion:** f(x) = ax²+bx+c; **a** (Leitkoeffizient): a>0 → Parabel nach oben (Minimum), a<0 → nach unten (Maximum)
+- **Scheitelpunktform:** f(x) = a(x−d)²+e; Scheitel S(d|e); Symmetrieachse x = d
+- **Scheitelpunkt:** xs = −b/(2a), ys = f(xs); über quadratische Ergänzung oder Formel
+- **Nullstellen:** x = (−b ± √D)/(2a) mit **D = b²−4ac**; D>0: 2, D=0: 1 (Doppellösung), D<0: keine reelle
+- **pq-Formel** (für x²+px+q=0): x = −p/2 ± √((p/2)²−q)
+- **Vieta:** x₁+x₂ = −b/a, x₁×x₂ = c/a; bei ganzzahligen Nullstellen schneller
+- **Graphen interpretieren:** Öffnung, Scheitel, Symmetrieachse, Nullstellenanzahl aus D
+- **Typische Fehler:** D = b²−4ac (nicht 2ac); Scheitel xs = −b/(2a) (Minus nicht vergessen)`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",
         "Scheitelpunkt, Öffnungsrichtung und Symmetrieachse einer Parabel bestimmen.",

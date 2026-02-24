@@ -27,13 +27,14 @@ export const mathKapAlgebra: Kapitel = {
       ],
       content: `## Einleitung
 
-**Gleichungen** (linear, quadratisch, Systeme) sind Grundlage für Dosierung, Clearance, Mischungsaufgaben. Für den MedAT sind lineare Gleichungen, Gleichungssysteme, Ungleichungen, Substitution/Elimination prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Dosierung (mg/kg), Infusionsrate (mL/h), Verdünnungen (c₁V₁ = c₂V₂) und Mischungsaufgaben sind **lineare Gleichungen**. Wer Äquivalenzumformungen und Gleichungssysteme sicher beherrscht, vermeidet Dosierungsfehler und löst typische BMS-Aufgaben schnell.
 
-**Kontext:** Im MedAT und in der Klinik musst du Textaufgaben in Gleichungen übersetzen und lösen — z. B. Infusionsrate (mL/h), Verdünnung (c₁V₁ = c₂V₂), Mischungsverhältnisse. Wer Äquivalenzumformungen und Gleichungssysteme sicher beherrscht, vermeidet Dosierungsfehler.
-
-**In diesem Kapitel lernst du:** **Äquivalenzumformungen**; lineare Gleichungen; **Gleichungssysteme** (Substitution, Elimination); **Ungleichungen** (Vorzeichenumkehr); Kurzüberblick quadratische Gleichungen (Vertiefung in ma-2-03).
-
-**Gliederung des Kapitels Algebra & Geometrie:** Zuerst Algebra (ma-2-01 Gleichungen, ma-2-02 Prozent/Bruch/Dreisatz, ma-2-03 Quadratische Gleichungen, ma-2-04 Potenzen/Wurzeln), dann Geometrie (ma-3-01 Figuren, ma-3-02 Körper, ma-3-03 Koordinaten, ma-3-04 Vektoren).
+**In diesem Kapitel lernst du:**
+- **Äquivalenzumformungen** — gleiche Operation auf beiden Seiten; Ziel: Variable isolieren
+- **Lineare Gleichungen** Schritt für Schritt: Klammern → Brüche (Hauptnenner) → x auf eine Seite → durch Koeffizient teilen → Probe
+- **Gleichungssysteme** mit zwei Unbekannten: **Substitution** (eine Variable ersetzen) oder **Elimination** (addieren/subtrahieren)
+- **Ungleichungen** — wie Gleichungen, aber bei ×/÷ mit **negativer Zahl** Vorzeichen **umkehren**
+- **Quadratische Gleichungen** (Kurzüberblick): Mitternachtsformel, Diskriminante D = b²−4ac; Vertiefung in ma-2-03
 
 ---
 
@@ -41,13 +42,9 @@ export const mathKapAlgebra: Kapitel = {
 
 ![Gleichungen](/grafik-parabel.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst Äquivalenzumformungen, die Mitternachtsformel (Diskriminante D = b²−4ac), Substitution/Elimination bei Gleichungssystemen und die Vorzeichenumkehr bei Ungleichungen zusammen.
-
 ![Parabel und Nullstellen](/grafik-lineare-funktion.svg)
 
-**Erklärung zur Grafik:** Lineare und quadratische Gleichungen als Schnitt mit der x-Achse; die Grafik ergänzt den Zusammenhang zwischen Funktionen und Gleichungslösungen.
-
-Eine Gleichung ist eine Aussage der Form A = B, wobei A und B mathematische Ausdrücke sind. Das fundamentale Prinzip lautet: Eine Gleichung bleibt gültig, wenn man auf beiden Seiten dieselbe Operation durchführt. Erlaubte Operationen sind:
+Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematische Ausdrücke sind. **Äquivalenzumformung** bedeutet: Die Gleichung bleibt gültig, wenn du auf **beiden Seiten** dieselbe Operation durchführst. Erlaubte Operationen sind:
 
 - Addition oder Subtraktion derselben Zahl auf beiden Seiten
 - Multiplikation oder Division beider Seiten mit derselben Zahl (niemals durch null)
@@ -59,15 +56,23 @@ Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite 
 
 > **Merke:** Was links passiert, passiert auch rechts — jede Operation auf BEIDE Seiten der Gleichung anwenden, sonst verliert sie ihre Gültigkeit. **a = b/c und d = a⁻¹ ⇒ d = c/b.**
 
-## Lineare Gleichungen
+## Lineare Gleichungen — Rechenprinzip Schritt für Schritt
 
-Eine lineare Gleichung in einer Unbekannten x hat die Normalform ax + b = c, wobei a, b, c reelle Zahlen sind und a nicht null ist. Der Lösungsweg ist immer derselbe:
+Eine **lineare Gleichung** in einer Unbekannten x hat die Form **ax + b = c** (a, b, c reelle Zahlen, a ≠ 0). **Rechenweg immer in dieser Reihenfolge:**
 
-1. Alle Terme mit x auf eine Seite bringen (durch Addition oder Subtraktion)
-2. Alle Zahlen (Konstanten) auf die andere Seite bringen
-3. Durch den Koeffizienten von x dividieren
+1. **Klammern** ausmultiplizieren (Distributivgesetz)
+2. **Brüche** beseitigen: mit dem **Hauptnenner** (kgV aller Nenner) multiplizieren
+3. Alle **Terme mit x** auf eine Seite bringen (Addition/Subtraktion)
+4. Alle **Zahlen** auf die andere Seite bringen
+5. Durch den **Koeffizienten von x** dividieren
+6. **Probe:** Lösung in die Ausgangsgleichung einsetzen
 
-Beispiel: 5x − 3 = 2x + 9. Subtrahiere 2x: 3x − 3 = 9. Addiere 3: 3x = 12. Dividiere durch 3: x = 4. Probe: 5(4) − 3 = 17 = 2(4) + 9. Korrekt.
+**Beispiel (Schritt für Schritt):** 5x − 3 = 2x + 9.  
+Schritt 1–2: Keine Klammern/Brüche.  
+Schritt 3: 2x subtrahieren → 3x − 3 = 9.  
+Schritt 4: +3 addieren → 3x = 12.  
+Schritt 5: durch 3 teilen → **x = 4**.  
+Schritt 6: Probe: 5(4) − 3 = 17 und 2(4) + 9 = 17 ✓
 
 Gleichungen mit Brüchen: Mit dem Hauptnenner (kgV aller Nenner) multiplizieren, um Brüche zu eliminieren. Beispiel: x/3 + x/4 = 7. Multipliziere mit 12: 4x + 3x = 84, also 7x = 84, x = 12.
 
@@ -172,12 +177,14 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Lineare Gleichung**: ax + b = 0 → x = −b/a; Äquivalenzumformungen: beidseitig +/−/×/÷
-- **Gleichungssystem**: Substitution (eine Variable ersetzen) oder Elimination (Gleichungen addieren/subtrahieren)
-- **Ungleichung**: wie Gleichung, aber bei Multiplikation/Division mit negativer Zahl Vorzeichen umkehren!
-- **Dreisatz**: direkte Proportion (mehr → mehr) oder inverse Proportion (mehr → weniger)
-- **Verdünnungsformel**: c₁×V₁ = c₂×V₂; Mischungsaufgabe als Gleichungssystem
-- **Klinisch**: Dosisberechnung mg/kg, Infusionsraten mL/h, Glukosemischung`,
+- **Äquivalenzumformung:** Gleiche Operation auf beiden Seiten; nie durch null teilen
+- **Lineare Gleichung:** Schema: Klammern → Brüche (HN) → x-Terme eine Seite → durch Koeffizient → Probe
+- **Gleichungssystem:** Substitution (Variable ersetzen) oder Elimination (addieren/subtrahieren); Probe in beide Gleichungen
+- **Ungleichung:** Wie Gleichung, aber bei ×/÷ mit **negativer** Zahl Vorzeichen **umkehren** (< ↔ >)
+- **Quadratisch:** Mitternachtsformel x = (−b ± √D)/(2a); D = b²−4ac (D>0: 2 Lösungen, D=0: 1, D<0: keine)
+- **Verdünnungsformel:** c₁×V₁ = c₂×V₂; Mischungsaufgaben als Gleichungssystem
+- **Dosierung:** Dosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg]; Volumen = Dosis / Konzentration
+- **Typische Fehler:** Ungleichung: Vorzeichenumkehr vergessen; Diskriminante: D = b²−4ac (nicht 2ac)`,
       lernziele: [
         "Lineare Gleichungen durch systematische Umformung nach einer Variablen auflösen und die Lösung mit einer Probe überprüfen",
         "Lineare Gleichungssysteme mit zwei Unbekannten mithilfe des Substitutions- und des Additionsverfahrens lösen",
@@ -323,11 +330,14 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
       ],
       content: `## Einleitung
 
-**Prozente** und **Brüche** im Alltag: Hämatokrit, SpO₂, Verdünnungen. **ARR/RRR/NNT** (EbM) sind häufige MedAT-Themen. Für den MedAT sind Prozentrechnung, Bruchrechnung, ARR/RRR/NNT, Serienverdünnungen prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Laborwerte (Hämatokrit in %, SpO₂), Evidenzbasierte Medizin (**ARR, RRR, NNT**) und Verdünnungsreihen (1:10, 1:100) verlangen sicheres **Prozent- und Bruchrechnen**. Ohne das scheitern viele Dosierungs- und EbM-Aufgaben.
 
-**Kontext:** Laborwerte (z. B. Hämatokrit in %, SpO₂), Evidenzbasierte Medizin (ARR, RRR, NNT) und Verdünnungsreihen (1:10, 1:100) verlangen sicheres Prozent- und Bruchrechnen. Ohne das scheitern viele Dosierungs- und EbM-Aufgaben.
-
-**In diesem Kapitel lernst du:** **Prozentrechnung** (P = G×p/100); **Bruchrechnung**; **Dreisatz**; **ARR, RRR, NNT**; Serienverdünnungen (1:10, 1:100).
+**In diesem Kapitel lernst du:**
+- **Prozentrechnung:** Grundformel P = G×p/100; die drei Grundfragen (Prozentwert, Grundwert, Prozentsatz) und Umstellen
+- **Bruchrechnung:** Addieren/Subtrahieren (gleichnamig machen), Multiplizieren (Zähler×Zähler, Nenner×Nenner), Dividieren (mit Kehrwert multiplizieren)
+- **Dreisatz:** direkter Dreisatz (mehr → mehr) und indirekter Dreisatz (mehr → weniger); Kreuzprodukt
+- **ARR, RRR, NNT** (EbM) aus Vierfeldertafel oder Risiken berechnen
+- **Serienverdünnungen** (1:10, 1:100) und Verdünnungsfaktor
 
 ---
 
@@ -1277,6 +1287,10 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
         "Parallelogramm",
         "Heronsche Formel",
         "Kreissektor",
+        "Trigonometrie",
+        "sin",
+        "cos",
+        "tan",
         "Ähnlichkeit",
         "Skalierungsfaktor",
         "Körperoberfläche",
@@ -1284,9 +1298,15 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
       ],
       content: `## Einleitung
 
-**Ebene Figuren** (Rechteck, Dreieck, Kreis, Trapez) → Wundflächen, Klappenfläche, **KOF** (DuBois), Neuner-Regel (Verbrennung). Für den MedAT sind Flächenformeln, Heron, Kreisring, KOF prüfungsrelevant.
+**Ebene Figuren** (Rechteck, Dreieck, Kreis, Trapez) und **Trigonometrie** (sin, cos, tan) brauchst du für Wundflächen, Klappenfläche, **KOF** (DuBois), Neuner-Regel (Verbrennung) und Steigungsaufgaben. Für den MedAT sind Flächenformeln, Heron, Kreisring, KOF und die drei Winkelfunktionen im rechtwinkligen Dreieck prüfungsrelevant.
 
-**In diesem Kapitel lernst du:** **Rechteck**, **Dreieck**, **Kreis**, **Trapez**; **Heron**; **KOF** (DuBois); Neuner-Regel. **Kontext:** Von Fläche zur Dosierung.
+**In diesem Kapitel lernst du:**
+- **Rechteck, Dreieck, Kreis, Trapez, Parallelogramm** — Flächen und Umfänge sicher berechnen
+- **Heronsche Formel** für Dreiecksfläche aus drei Seiten (s, dann A = √(s(s−a)(s−b)(s−c)))
+- **Kreis und Kreisring** (A = πr², U = 2πr; Ring: A = π(R²−r²))
+- **Trigonometrie-Grundlagen:** sin(α) = Gegenkathete/Hypotenuse, cos(α) = Ankathete/Hypotenuse, tan(α) = Gegenkathete/Ankathete; Steigung in % = tan(α)×100
+- **KOF** (DuBois, Mosteller) und **Neuner-Regel** (Verbrennungsfläche)
+- Typische **MedAT-Fehler** vermeiden (Parallelogramm: Höhe ≠ Schrägseite; Fläche skaliert mit k²)
 
 ---
 
@@ -1368,6 +1388,33 @@ Der Umfang des Parallelogramms: U = 2 × (a + b), wobei a und b die Seitenlänge
 
 **MedAT-typischer Aufgabentyp:** Ein Parallelogramm hat die Grundseite g = 12 cm und die Schrägseite b = 5 cm. Der Winkel zur Grundseite beträgt 30°. Höhe: h = b × sin 30° = 5 × 0,5 = 2,5 cm. Fläche: A = 12 × 2,5 = 30 cm².
 
+---
+
+## Trigonometrie-Grundlagen (sin, cos, tan)
+
+**Wozu brauche ich das im MedAT?** Steigungsangaben (z. B. 16 % Steigung), Winkel in rechtwinkligen Dreiecken, EKG-Achse und viele geometrische Aufgaben verlangen die drei **Winkelfunktionen** Sinus, Kosinus und Tangens. Sie verknüpfen Winkel und Seitenverhältnisse im **rechtwinkligen Dreieck**.
+
+**Begriffe beim ersten Auftreten:** Im **rechtwinkligen Dreieck** liegt der rechte Winkel (90°) an einer Ecke. Die **Hypotenuse** ist die Seite gegenüber dem rechten Winkel (immer die längste Seite). Bezüglich eines spitzen Winkels **α** heißen: **Gegenkathete** = Seite gegenüber von α, **Ankathete** = Seite, die an α anliegt (nicht die Hypotenuse).
+
+**Definitionen (immer im rechtwinkligen Dreieck):**
+
+| Funktion | Formel | Merkhilfe |
+|----------|--------|-----------|
+| **sin(α)** | Gegenkathete / Hypotenuse | „Gegen durch Hypotenuse“ |
+| **cos(α)** | Ankathete / Hypotenuse | „An durch Hypotenuse“ |
+| **tan(α)** | Gegenkathete / Ankathete | tan = sin/cos |
+
+**Rechenprinzip Schritt für Schritt:** (1) Dreieck skizzieren und rechten Winkel markieren. (2) Winkel α und die Seiten (Hypotenuse, Gegenkathete, Ankathete) zuordnen. (3) Gesuchte Größe auswählen (Seite oder Winkel). (4) Passende Formel wählen (sin, cos oder tan) und umstellen. (5) Zahlen einsetzen und ausrechnen.
+
+**Beispielrechnung:** Im rechtwinkligen Dreieck sei α = 30°, die Hypotenuse c = 10 cm. Gesucht: Gegenkathete a.  
+Schritt 1: sin(30°) = Gegenkathete / Hypotenuse = a / 10.  
+Schritt 2: a = 10 × sin(30°) = 10 × 0,5 = **5 cm**.  
+(Wichtige Werte: sin 30° = cos 60° = 0,5; cos 30° = sin 60° = √3/2 ≈ 0,866; tan 45° = 1.)
+
+**Typische Fehler:** Steigung in % (z. B. 16 %) entspricht dem **Tangens** des Steigungswinkels (Höhenunterschied / Horizontaldistanz), nicht Sinus oder Kosinus. Sinus und Kosinus sind immer ≤ 1; der Tangens kann größer als 1 sein.
+
+> **Merke:** **sin(α) = Gegenkathete/Hypotenuse**, **cos(α) = Ankathete/Hypotenuse**, **tan(α) = Gegenkathete/Ankathete**. Steigung in % = (Höhe/Horizontale) × 100 = **tan(α) × 100 %**. Im MedAT: „Welche Winkelfunktion bei Steigung?“ → **Tangens**.
+
 ## Raute (Rhombus) und Drachen
 
 Die Raute ist ein Parallelogramm mit vier gleich langen Seiten. Ihre Diagonalen stehen senkrecht aufeinander und halbieren sich:
@@ -1438,17 +1485,22 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Rechteck**: A = a×b; U = 2(a+b); **Dreieck**: A = ½×g×h; **Heron**: A = √(s×(s−a)×(s−b)×(s−c)); s = (a+b+c)/2
+- **Rechteck**: A = a×b; U = 2(a+b); Diagonale d = √(a²+b²)
+- **Dreieck**: A = ½×g×h; **Heron**: s = (a+b+c)/2, A = √(s×(s−a)×(s−b)×(s−c))
 - **Kreis**: A = π×r²; U = 2π×r; **Kreisring**: A = π(R²−r²); **Trapez**: A = ½×(a+c)×h
+- **Parallelogramm**: A = g×h (h = senkrechte Höhe, nicht Schrägseite!)
+- **Trigonometrie**: sin(α) = Gegenkathete/Hypotenuse, cos(α) = Ankathete/Hypotenuse, tan(α) = Gegenkathete/Ankathete; Steigung in % = tan(α)×100
+- **Ähnlichkeit**: Längen ×k, Flächen ×k², Volumina ×k³
 - **Neuner-Regel (Verbrennung)**: Kopf 9%, Arm je 9%, Brust 9%, Bauch 9%, Rücken 18%, Bein je 18%, Genitale 1%
-- **Aortenklappe**: schwere Stenose < 1 cm²; normale Klappe ~4,9 cm²
-- **Hagen-Poiseuille**: V̇ ∝ r⁴ → 70% Stenose (r×0,3) → Fluss × 0,3⁴ = 0,81% des Normalflusses`,
+- **Aortenklappe**: schwere Stenose < 1 cm²; normale Klappe ~4,9 cm²; KOF ~1,7–1,9 m² (Mosteller)
+- **Typische Fehler**: 1 m² = 10.000 cm² (nicht 100); Parallelogramm-Höhe ≠ Schrägseite; Steigung in % = Tangens`,
       lernziele: [
         "Flächen und Umfänge von Rechteck, Dreieck, Kreis, Trapez und Parallelogramm korrekt berechnen.",
         "Die Heronsche Formel auf Dreiecke mit bekannten Seitenlängen anwenden.",
         "Kreissektor-Fläche und Bogenlänge bei gegebenem Mittelpunktswinkel bestimmen.",
         "Den Ähnlichkeitsfaktor k und seinen Einfluss auf Längen und Flächen erklären.",
         "Den klinischen Bezug zwischen Flächenformeln und medizinischen Anwendungen (KOF, EKG) herstellen.",
+        "Im rechtwinkligen Dreieck sin, cos und tan anwenden und Steigung in % als tan(α)×100 interpretieren.",
       ],
       sections: [
         {

@@ -24,9 +24,14 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
-**Kombinatorik** = systematisches Zählen: Anordnungen und Auswahlen (Permutation, Variation, Kombination). Für den MedAT sind die vier Grundtypen und Binomialkoeffizient prüfungsrelevant.
+**Wozu brauche ich das im MedAT?** Genetik (Allelkombinationen), klinische Studien (Randomisierung) und diagnostische Tests (Vierfeldertafel) bauen auf **Kombinatorik** auf — systematisches Zählen von Anordnungen und Auswahlen. Für den MedAT sind Permutation, Variation, Kombination und Binomialkoeffizient prüfungsrelevant.
 
-**In diesem Kapitel lernst du:** **Permutation** (n!); **Variation** (mit/ohne Wdh.); **Kombination** (n über k); **Fakultät**; Entscheidungsbaum (geordnet? Wiederholung?). **Kontext:** Von Blutgruppen bis Studienplanung.
+**In diesem Kapitel lernst du:**
+- **Zwei Fragen zuerst:** Reihenfolge relevant? (geordnet/ungeordnet) — Mit/ohne Wiederholung?
+- **Permutation:** n! = Anordnung aller n Objekte; mit Wiederholung: n!/(k₁!×k₂!×…)
+- **Variation:** k aus n **mit** Reihenfolge — ohne Wdh. n!/(n−k)!, mit Wdh. n^k
+- **Kombination:** k aus n **ohne** Reihenfolge — (n über k) = n!/(k!(n−k)!)
+- **Binomialkoeffizient** (n über k); typische MedAT-Aufgaben (Blutgruppen, PIN-Codes, Ziehen ohne Zurücklegen)
 
 ---
 
