@@ -36,6 +36,10 @@ export const mathKapStochastik: Kapitel = {
 
 **Erklärung zur Grafik:** Die Abbildung fasst die Formeln der Kombinatorik zusammen: Permutation n!, Variation ohne Wiederholung n!/(n−k)!, Variation mit Wiederholung n^k und Kombination (n über k). So behältst du den Überblick bei geordnet/ungeordnet und mit/ohne Wiederholung.
 
+![Vierfeldertafel und Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
+
+**Erklärung zur Grafik:** Kombinatorik liefert die Anzahlen für Laplace-Wahrscheinlichkeiten; die Grafik verknüpft Zählprinzipien mit der Vierfeldertafel.
+
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
 1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
@@ -344,6 +348,10 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 **Erklärung zur Grafik:** Die Grafik veranschaulicht Laplace-Wahrscheinlichkeit P(A) = |A|/|Ω|, den Additionssatz P(A∪B) = P(A)+P(B)−P(A∩B) und die Vierfeldertafel zur Berechnung bedingter Wahrscheinlichkeiten und Unabhängigkeit.
 
+![Kombinatorik und Zählprinzip](/grafik-kombinatorik.svg)
+
+**Erklärung zur Grafik:** Anzahlen für Laplace (günstige/alle); die Grafik ergänzt Permutation, Variation und Kombination für Wahrscheinlichkeitsberechnungen.
+
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
 - **Ergebnisraum Ω** (Omega): Menge aller möglichen Ergebnisse
@@ -640,6 +648,10 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
 ![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Vierfeldertafel (TP, TN, FP, FN), die Formel für bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) und die Umrechnung mit dem Satz von Bayes; wichtig für PPV und NPV bei medizinischen Tests.
+
+![Normalverteilung und Tests](/grafik-normalverteilung.svg)
+
+**Erklärung zur Grafik:** Bedingte Wahrscheinlichkeit und Testgüte (Sensitivität, Spezifität); die Grafik verknüpft Vierfeldertafel mit Verteilungen und Grenzwerten.
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 

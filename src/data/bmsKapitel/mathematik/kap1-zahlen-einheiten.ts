@@ -1660,6 +1660,12 @@ Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s)
 
 ![km/h m/s](/grafik-kmh-ms.svg)
 
+**Erklärung zur Grafik:** Umrechnung zwischen km/h und m/s durch Faktor 3,6 (÷ 3,6 bzw. × 3,6); wichtig für Geschwindigkeitsangaben in Physik und Klinik.
+
+![Bewegung und Einheiten](/grafik-koerper.svg)
+
+**Erklärung zur Grafik:** Weg, Geschwindigkeit und Beschleunigung bauen auf den SI-Basiseinheiten m und s auf; die Grafik veranschaulicht den Zusammenhang für gleichförmige und beschleunigte Bewegung.
+
 ---
 
 ## Gleichförmige Bewegung
@@ -1980,6 +1986,12 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 **SVG-Hinweis (7 SI-Grundeinheiten):** Eine kompakte Tabelle oder Leiter mit m, kg, s, A, K, mol, cd unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
 
 ![SI-Grundeinheiten](/grafik-si-grundeinheiten.svg)
+
+**Erklärung zur Grafik:** Die sieben SI-Basiseinheiten (m, kg, s, A, K, mol, cd) sind die Grundlage für alle abgeleiteten Einheiten wie Newton, Pascal, Joule und Watt.
+
+![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
+
+**Erklärung zur Grafik:** Abgeleitete Einheiten entstehen aus Basiseinheiten (z. B. N = kg·m/s²); die Grafik unterstützt die Dimensionskontrolle bei Umrechnungen.
 
 ---
 

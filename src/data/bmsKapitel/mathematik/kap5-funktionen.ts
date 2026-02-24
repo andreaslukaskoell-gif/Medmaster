@@ -38,6 +38,10 @@ export const mathKap5: Kapitel = {
 
 **Erklärung zur Grafik:** Die Abbildung zeigt Steigung m = Δy/Δx, Geradengleichung y = mx+b, Nullstelle x₀ = −b/m und die Bedingung für senkrechte Geraden m₁·m₂ = −1.
 
+![Koordinaten und Geraden](/grafik-parabel.svg)
+
+**Erklärung zur Grafik:** Geraden im Koordinatensystem; die Grafik ergänzt Steigungsdreieck, Achsenabschnitte und den Übergang zu quadratischen Funktionen.
+
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
 
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
@@ -300,6 +304,10 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 ![Parabel](/grafik-parabel.svg)
 
 **Erklärung zur Grafik:** Die Grafik zeigt Scheitelpunkt xs = −b/(2a), Diskriminante D = b²−4ac und die pq-Formel bzw. Vieta für die Nullstellen der Parabel.
+
+![Lineare und quadratische Funktion](/grafik-lineare-funktion.svg)
+
+**Erklärung zur Grafik:** Vergleich Gerade vs. Parabel; die Grafik veranschaulicht den Unterschied zwischen linearer und quadratischer Abhängigkeit (z. B. Weg-Zeit bei konstanter Beschleunigung).
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
 
@@ -582,6 +590,10 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ · x₂ = 28. Systematisch p
 ![Exponentialfunktion](/grafik-exponential.svg)
 
 **Erklärung zur Grafik:** Die Abbildung veranschaulicht Wachstum und Zerfall f(t) = f₀·e^(±kt), die Halbwertszeit T½ = ln(2)/k und typische Anwendungen (z. B. C(t) = C₀·e^(−kt) in der Pharmakokinetik).
+
+![Logarithmus und Halbwertszeit](/grafik-logarithmus.svg)
+
+**Erklärung zur Grafik:** Halbwertszeit T½ = ln(2)/k; die Grafik verknüpft Exponentialzerfall mit dem natürlichen Logarithmus und der Pharmakokinetik.
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a · bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
 
@@ -867,6 +879,10 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 ![Logarithmus](/grafik-logarithmus.svg)
 
 **Erklärung zur Grafik:** Die Grafik zeigt die Logarithmengesetze, pH = −log([H⁺]), Henderson-Hasselbalch und den Basiswechsel zwischen log₁₀ und ln.
+
+![Exponential und Umkehrfunktion](/grafik-exponential.svg)
+
+**Erklärung zur Grafik:** Exponentialfunktion und Logarithmus als Umkehrfunktionen; die Grafik ergänzt pH, Halbwertszeit und Wachstums-/Zerfallskurven.
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
 
@@ -1170,6 +1186,10 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x · ln(5) = ln(200) → x = ln(200)/l
 ![Asymptoten](/grafik-asymptote.svg)
 
 **Erklärung zur Grafik:** Die Abbildung veranschaulicht horizontale und vertikale Asymptoten, den Semilog-Plot zur Linearisierung sowie das Michaelis-Menten-Modell mit EC₅₀.
+
+![Grenzverhalten und Kurven](/grafik-logarithmus.svg)
+
+**Erklärung zur Grafik:** Asymptotisches Verhalten bei Exponential- und Logarithmusfunktionen; die Grafik unterstützt das Ablesen von Grenzwerten und Sättigungskurven.
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
 

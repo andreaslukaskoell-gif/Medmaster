@@ -53,6 +53,10 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Betragsformel |v| = √(v₁²+v₂²+v₃²), die Parallelogrammregel für die Vektoraddition und den Einheitsvektor ê = v/|v|.
 
+![Vektor Betrag und Richtung](/grafik-vektoren-betrag.svg)
+
+**Erklärung zur Grafik:** Betrag und Einheitsvektor; die Grafik ergänzt die Zerlegung von Kräften und die Darstellung gerichteter Größen in Ebene und Raum.
+
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
 
 **Subtraktion** $\\vec{a} - \\vec{b}$ ist äquivalent zur Addition von $\\vec{a}$ und $(-\\vec{b})$. Geometrisch ist $\\vec{a} - \\vec{b}$ die zweite Diagonale des Parallelogramms.
@@ -352,6 +356,10 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 ![Skalarprodukt Kreuzprodukt](/grafik-vektoren.svg)
 
 **Erklärung zur Grafik:** Die Grafik veranschaulicht das Skalarprodukt a·b = |a||b|cos θ (Winkel, Orthogonalität), das Kreuzprodukt a×b mit der Rechte-Hand-Regel und den Betrag |a×b| als Fläche des Parallelogramms.
+
+![Vektoren und Winkel](/grafik-vektoren-betrag.svg)
+
+**Erklärung zur Grafik:** Winkel zwischen Vektoren und Orthogonalität (Skalarprodukt = 0); Grundlage für Arbeit W = F·s und Normalenvektoren.
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
 
@@ -706,6 +714,10 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 ![Gerade Ebene Matrix](/grafik-vektoren.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt die Geradengleichung r = r₀ + t·d, die Ebenengleichung n·(r−r₀) = 0 sowie 2×2-Determinante und Inverse A⁻¹ für lineare Gleichungssysteme.
+
+![Richtungsvektor und Normalenvektor](/grafik-vektoren.svg)
+
+**Erklärung zur Grafik:** Gerade und Ebene im Raum; die Grafik veranschaulicht Stützvektor, Richtungsvektor und Normalenvektor für Abstandsberechnungen.
 
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
 
@@ -1073,6 +1085,10 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 ![Abstände](/grafik-vektoren.svg)
 
 **Erklärung zur Grafik:** Die Grafik veranschaulicht den Abstand d(A,B) = |AB|, die Berechnung des Abstands Punkt–Gerade (Lotfußpunkt) und Punkt–Ebene (Hessesche Normalform).
+
+![Betrag und Abstand](/grafik-vektoren-betrag.svg)
+
+**Erklärung zur Grafik:** Abstand als Betrag des Verbindungsvektors; die Grafik unterstützt Punkt–Punkt-, Punkt–Gerade- und Punkt–Ebene-Abstände.
 
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
 
