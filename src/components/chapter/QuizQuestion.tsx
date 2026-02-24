@@ -72,7 +72,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
           <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
             {questionNumber}
           </span>
-          <p className="text-base font-semibold text-gray-900 dark:text-gray-100 leading-relaxed flex-1">
+          <p className="text-base font-semibold text-slate-950 dark:text-white leading-relaxed flex-1">
             {question.question}
           </p>
         </div>
@@ -98,7 +98,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                         ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
                         : isAnswered
                           ? "border-slate-200 dark:border-white/10 bg-slate-50/80 dark:bg-slate-800/50 text-gray-500 cursor-not-allowed"
-                          : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-gray-700 dark:text-slate-100 cursor-pointer"
+                          : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-slate-900 dark:text-slate-100 cursor-pointer"
                   }`}
               >
                 <span className="font-bold mr-3 text-base shrink-0">
@@ -147,7 +147,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               </p>
               {isCorrect && (
                 <>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
                     {explanation}
                   </p>
                   {merksatz && (
@@ -192,7 +192,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                   )}
                   {solutionRevealed ? (
                     <>
-                      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
                         {explanation}
                       </p>
                       {merksatz && (
@@ -202,7 +202,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                       )}
                     </>
                   ) : (
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    <p className="text-sm text-slate-900 dark:text-slate-100 mb-3">
                       Versuche es mit einem Tipp, bevor du die Lösung siehst – so prägt sich der
                       Stoff besser ein.
                     </p>
@@ -240,7 +240,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                         whileTap={{ scale: 0.97 }}
                         whileHover={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-slate-200 dark:border-white/10 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 text-gray-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-slate-200 dark:border-white/10 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
                       >
                         <BookOpen className="w-4 h-4" />
                         Lösung anzeigen

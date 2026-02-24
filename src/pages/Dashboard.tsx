@@ -39,6 +39,8 @@ import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
 import { alleKapitel } from "@/data/bmsKapitel";
+import { useTodayEngine } from "@/hooks/useTodayEngine";
+import { ListChecks } from "lucide-react";
 
 const MODULE_TO_PATH: Record<string, string> = { BMS: "/bms", KFF: "/kff", TV: "/tv", SEK: "/sek" };
 
@@ -72,6 +74,13 @@ export default function Dashboard() {
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
+  const {
+    dueCount: todayDueCount,
+    weaknessCount: todayWeaknessCount,
+    newCount: todayNewCount,
+    tasks: todayTasks,
+  } = useTodayEngine();
+  const hasTodayTasks = todayTasks.length > 0;
   const hasActivityToday = lastActiveDate === todayStr;
   const [searchParams] = useSearchParams();
   const streakPreview = searchParams.get("streakPreview");
@@ -111,11 +120,8 @@ export default function Dashboard() {
     consecutiveGoalMissed >= 3 &&
     (!smartAdjustDismissedUntil || todayStr > smartAdjustDismissedUntil);
 
-  // Calculate due chapters count
-  const dueCount = useMemo(() => {
-    const sr = spacedRepetition ?? {};
-    return Object.values(sr).filter((item) => item?.nextDue <= todayStr).length;
-  }, [spacedRepetition, todayStr]);
+  // Due count from Today Engine (Fragen + Kapitel)
+  const dueCount = todayDueCount;
 
   useEffect(() => {
     if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
@@ -185,7 +191,7 @@ export default function Dashboard() {
         <SyncIndicator />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
-          {/* Hero: klarer Fokus – „Heute lernen“ visuell dominant */}
+          {/* Hero: Heute lernen – Today Engine Badges + CTA */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
             <div
               className={cn(
@@ -203,16 +209,47 @@ export default function Dashboard() {
                   <p className="text-base text-[var(--text-secondary)] mt-1.5">
                     Noch {days} Tage bis MedAT
                   </p>
+                  {(todayDueCount > 0 || todayWeaknessCount > 0 || todayNewCount > 0) && (
+                    <p className="text-sm text-[var(--muted)] mt-2 flex flex-wrap gap-2">
+                      {todayDueCount > 0 && (
+                        <span className="font-medium text-amber-600 dark:text-amber-400">
+                          {todayDueCount} fällig
+                        </span>
+                      )}
+                      {todayWeaknessCount > 0 && (
+                        <span className="font-medium text-red-600 dark:text-red-400">
+                          {todayWeaknessCount} Schwachstellen
+                        </span>
+                      )}
+                      {todayNewCount > 0 && (
+                        <span className="font-medium text-emerald-600 dark:text-emerald-400">
+                          {todayNewCount} zum Weiterlernen
+                        </span>
+                      )}
+                    </p>
+                  )}
                 </div>
                 <Link
-                  to={lastPath && lastPath !== "/" && lastPath !== "/bms" ? lastPath : "/bms"}
+                  to={
+                    hasTodayTasks
+                      ? "/today"
+                      : lastPath && lastPath !== "/" && lastPath !== "/bms"
+                        ? lastPath
+                        : "/bms"
+                  }
                   className="shrink-0"
                 >
                   <Button size="lg" className="gap-2">
-                    <BookOpen className="w-5 h-5" />
-                    {lastPath && lastPath !== "/" && lastPath !== "/bms"
-                      ? "Weiterlernen"
-                      : "Jetzt starten"}
+                    {hasTodayTasks ? (
+                      <ListChecks className="w-5 h-5" />
+                    ) : (
+                      <BookOpen className="w-5 h-5" />
+                    )}
+                    {hasTodayTasks
+                      ? "Jetzt starten"
+                      : lastPath && lastPath !== "/" && lastPath !== "/bms"
+                        ? "Weiterlernen"
+                        : "Jetzt starten"}
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
@@ -319,10 +356,7 @@ export default function Dashboard() {
             aria-label="Empfohlen"
             className="grid grid-cols-1 lg:grid-cols-4 gap-4"
           >
-            <Link
-              to={dueCount > 0 ? "/bms?filter=due" : "/schwachstellen"}
-              className="lg:col-span-2"
-            >
+            <Link to="/today" className="lg:col-span-2">
               <div
                 className={cn(
                   cardClass,
@@ -331,14 +365,15 @@ export default function Dashboard() {
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                    <Target className="w-6 h-6 text-[var(--accent)]" />
+                    <ListChecks className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[var(--text-primary)]">
-                      {dueCount > 0 ? "Fällige Kapitel wiederholen" : "Schwachstellen trainieren"}
-                    </h3>
+                    <h3 className="font-semibold text-[var(--text-primary)]">Heute lernen</h3>
                     <p className="text-sm text-[var(--muted)] mt-0.5">
-                      {dueCount > 0 ? `${dueCount} Kapitel fällig` : "Gezielt Lücken schließen"}
+                      {todayDueCount > 0 && `${todayDueCount} fällig`}
+                      {todayDueCount > 0 && todayWeaknessCount > 0 && " · "}
+                      {todayWeaknessCount > 0 && `${todayWeaknessCount} Schwachstellen`}
+                      {todayDueCount === 0 && todayWeaknessCount === 0 && "Priorisierte Aufgaben"}
                     </p>
                   </div>
                 </div>

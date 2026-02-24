@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { computeXP } from "@/lib/xp";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import type { ErrorEvent } from "@/lib/learning/types";
 
 const STORAGE_KEY = "medmaster-storage";
 
@@ -109,6 +110,7 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
       smartAdjustDismissedUntil:
         typeof s.smartAdjustDismissedUntil === "string" ? s.smartAdjustDismissedUntil : "",
       lastActiveAt: typeof s.lastActiveAt === "string" ? s.lastActiveAt : "",
+      errorEvents: Array.isArray(s.errorEvents) ? s.errorEvents : [],
     };
   } catch {
     return {};
@@ -197,6 +199,9 @@ interface AppState {
   smartAdjustDismissedUntil: string;
   /** ISO timestamp der letzten Aktivität (für Streak-Protection) */
   lastActiveAt: string;
+  /** Today Engine: Fehler-Events für Schwächen-Score */
+  errorEvents: ErrorEvent[];
+  logError: (objectId: string, objectType: ErrorEvent["objectType"], context?: string) => void;
   /** Premium subscription status (true = active subscription or beta access) */
   isPro: boolean;
   setIsPro: (value: boolean) => void;
@@ -271,7 +276,21 @@ export const useStore = create<AppState>()(
       goalAchievedByDate: {},
       smartAdjustDismissedUntil: "",
       lastActiveAt: "",
+      errorEvents: [] as ErrorEvent[],
       isPro: false,
+
+      logError: (objectId, objectType, context) =>
+        set((s) => ({
+          errorEvents: [
+            ...s.errorEvents,
+            {
+              timestamp: new Date().toISOString(),
+              objectId,
+              objectType,
+              context,
+            },
+          ].slice(-2000),
+        })),
 
       setIsPro: (value) => set({ isPro: value }),
       setPendingBadgeId: (id) => set({ pendingBadgeId: id }),
@@ -443,12 +462,30 @@ export const useStore = create<AppState>()(
       clearAnswers: () => set({ currentAnswers: {} }),
 
       saveQuizResult: (result) =>
-        set((s) => ({
-          quizResults: [
-            ...s.quizResults,
-            { ...result, timestamp: result.timestamp || new Date().toISOString() },
-          ],
-        })),
+        set((s) => {
+          const ts = result.timestamp || new Date().toISOString();
+          const newResults = [...s.quizResults, { ...result, timestamp: ts }];
+          const wrongAnswers =
+            result.type === "bms" && Array.isArray(result.answers)
+              ? result.answers.filter((a) => !a.correct)
+              : [];
+          const newErrorEvents: ErrorEvent[] =
+            wrongAnswers.length > 0
+              ? [
+                  ...s.errorEvents,
+                  ...wrongAnswers.map((a) => ({
+                    timestamp: ts,
+                    objectId: a.questionId,
+                    objectType: "question" as const,
+                    context: result.subject,
+                  })),
+                ].slice(-2000)
+              : s.errorEvents;
+          return {
+            quizResults: newResults,
+            ...(wrongAnswers.length > 0 ? { errorEvents: newErrorEvents } : {}),
+          };
+        }),
 
       updateSpacedRepetition: (questionId, correct) =>
         set((s) => {

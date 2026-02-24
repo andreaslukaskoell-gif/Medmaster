@@ -40,6 +40,7 @@ const DailyChallenge = lazy(() => import("@/pages/DailyChallenge"));
 const BMSWrapped = lazy(() => import("@/pages/BMSWrapped"));
 const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
 const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
+const TodayPage = lazy(() => import("@/pages/TodayPage"));
 
 function LoadingSpinner() {
   return (
@@ -110,6 +111,7 @@ export default function App() {
           >
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Navigate to="/" replace />} />
+            <Route path="/today" element={<TodayPage />} />
             <Route path="/onboarding" element={<OnboardingGuard />} />
             <Route path="/bms" element={<BMS />} />
             <Route path="/bms/quiz/:fach" element={<BMSQuizWrapper />} />
@@ -172,6 +174,7 @@ export default function App() {
             <Route path="/daily" element={<DailyChallenge />} />
             <Route path="/wrapped" element={<BMSWrapped />} />
             <Route path="/formelsammlung" element={<Formelsammlung />} />
+            <Route path="/today" element={<TodayPage />} />
 
             {/* 404 Catch-all for protected routes */}
             <Route path="*" element={<NotFound404 />} />

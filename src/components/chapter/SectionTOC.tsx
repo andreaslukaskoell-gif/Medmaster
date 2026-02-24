@@ -51,17 +51,18 @@ export function SectionTOC({
   return (
     <nav
       className={cn(
-        "rounded-xl border border-[var(--border)] bg-[var(--card)] p-4",
+        "rounded-xl border border-[var(--border)] p-4",
         "sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto",
-        isLeft && "w-[240px] min-w-0 shrink-0",
+        isLeft
+          ? "w-[240px] min-w-0 shrink-0 bg-white dark:bg-slate-900 shadow-sm"
+          : "bg-white dark:bg-slate-900",
         className
       )}
       aria-label={readingMode === "learn" ? "Dein Lernpfad" : "Inhaltsverzeichnis"}
     >
       <h3
         className={cn(
-          "text-xs font-semibold uppercase tracking-wider mb-3",
-          isLeft ? "text-[var(--muted)]" : "text-[var(--muted)]"
+          "text-xs font-semibold uppercase tracking-wider mb-3 text-slate-900 dark:text-slate-100"
         )}
       >
         {isLeft ? "Inhalt" : readingMode === "learn" ? "Dein Lernpfad" : "Inhalt"}
@@ -80,34 +81,20 @@ export function SectionTOC({
                   "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-1",
                   isLeft
                     ? cn(
-                        "px-2 py-1.5 border-l-2 border-transparent",
-                        "text-slate-300 dark:text-slate-400 hover:text-[var(--text-primary)]",
+                        "px-2 py-1.5 border-l-4 border-transparent",
+                        "text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800",
                         isCurrent &&
-                          "border-[var(--accent)] bg-[var(--accent)]/10 text-white dark:text-white font-medium"
+                          "border-[var(--accent)] bg-slate-100 dark:bg-slate-800 font-semibold text-slate-900 dark:text-white"
                       )
                     : cn(
-                        "px-2 py-1.5 rounded-lg",
-                        "hover:bg-[var(--foreground)]/5",
-                        isCurrent && "bg-[var(--accent)]/10 text-[var(--foreground)] font-medium"
+                        "px-2 py-1.5 rounded-lg text-slate-900 dark:text-slate-100",
+                        "hover:bg-slate-100 dark:hover:bg-slate-800",
+                        isCurrent && "bg-[var(--accent)]/10 text-[var(--accent)] font-semibold"
                       )
                 )}
               >
                 {!isLeft && <ProgressDot status={status} />}
-                <span
-                  className={cn(
-                    "truncate",
-                    isLeft
-                      ? isCurrent
-                        ? "text-white dark:text-white"
-                        : ""
-                      : cn(
-                          "text-[var(--text-primary)]",
-                          isCurrent && "text-[var(--accent)] font-medium"
-                        )
-                  )}
-                >
-                  {section.title}
-                </span>
+                <span className="truncate">{section.title}</span>
               </button>
             </li>
           );

@@ -302,15 +302,13 @@ export function SubchapterContent({
 }: Props) {
   const colors = SUBJECT_COLORS[subject] || SUBJECT_COLORS.biologie;
 
-  // Stichworte: explicit or auto-extracted from ## headings
+  // Stichworte: nur offiziell hinterlegte aus Kapitel/UK-Daten – keine Auto-Extraktion
   const topics = useMemo(() => {
-    if (uk.stichworte && uk.stichworte.length > 0) return uk.stichworte;
-    const matches = (uk.content || "").match(/^##\s+(.+)$/gm);
-    if (!matches) return [];
-    return matches
-      .map((m) => m.replace(/^##\s+/, "").trim())
-      .filter((t) => t.length > 0 && t.length < 60);
-  }, [uk.stichworte, uk.content]);
+    if (uk.stichworte && Array.isArray(uk.stichworte) && uk.stichworte.length > 0) {
+      return uk.stichworte;
+    }
+    return [];
+  }, [uk.stichworte]);
 
   // Clean content: remove Kontrollfragen (they're rendered separately as interactive quiz)
   const cleanedContent = useMemo(() => {
@@ -604,7 +602,7 @@ export function SubchapterContent({
     <div className="space-y-6 content-section">
       {topics.length > 0 && (
         <div className="flex flex-wrap gap-1.5 pb-3 border-b border-[var(--border)]">
-          <span className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide self-center mr-1">
+          <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide self-center mr-1">
             Themen:
           </span>
           {topics.map((topic) => (
@@ -632,7 +630,7 @@ export function SubchapterContent({
               "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
               readingMode === "learn"
                 ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
             )}
           >
             Lernmodus
@@ -644,7 +642,7 @@ export function SubchapterContent({
               "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
               readingMode === "read"
                 ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
             )}
           >
             Lesemodus

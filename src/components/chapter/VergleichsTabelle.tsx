@@ -30,7 +30,7 @@ export function VergleichsTabelle({ headers, rows }: VergleichsTabelleProps) {
               {row.map((cell, ci) => (
                 <td
                   key={ci}
-                  className={`px-4 py-3 ${ci === 0 ? "font-medium text-gray-900 dark:text-gray-100" : "text-gray-700 dark:text-gray-300"}`}
+                  className={`px-4 py-3 ${ci === 0 ? "font-medium text-slate-950 dark:text-white" : "text-slate-900 dark:text-slate-100"}`}
                   dangerouslySetInnerHTML={{ __html: cell }}
                 />
               ))}
