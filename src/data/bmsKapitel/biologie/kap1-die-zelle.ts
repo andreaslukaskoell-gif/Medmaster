@@ -358,13 +358,13 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen, 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
+**SVG-Hinweis: Zellaufbau und Kompartimentierung** — Zeigt Membranen und Kompartimente; Eukaryoten mit Zellkern und Organellen (ER, Vesikel), Prokaryoten nur Nukleoid ohne Kernhülle. Hilft, den Grundunterschied zu verankern.
+
 ![Zellaufbau und Kompartimentierung](/grafik-1-membrantransport.svg)
 
-**Erklärung zur Grafik:** Membranen und Kompartimente — Eukaryoten haben Zellkern und Organellen (ER, Vesikel); Prokaryoten haben nur Nukleoid ohne Kernhülle.
+**SVG-Hinweis: Zellteilung Eukaryoten** — Mitose als typische eukaryotische Teilung; Prokaryoten teilen sich durch binäre Fission ohne Spindelapparat. Unterstützt die Abgrenzung der Teilungsweisen.
 
 ![Zellteilung Eukaryoten](/grafik-2-mitose.svg)
-
-**Erklärung zur Grafik:** Mitose als typische Zellteilung der Eukaryoten; Prokaryoten teilen sich durch binäre Fission ohne Spindelapparat.
 
 > **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
@@ -459,30 +459,41 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Pro vs. Eukaryot (Kern, 70S vs. 80S, Peptidoglykan), Gram-Färbung (positiv violett / negativ rosa, LPS, septischer Schock), Endosymbiontentheorie (5 Belege), Antibiotika-Zielstrukturen (70S), Cave Chloramphenicol/Mitochondrien.
+**Zentral prüfungsrelevant:**
+- Prokaryoten: kein membranumschlossener Zellkern (Nukleoid), 70S-Ribosomen, binäre Fission; Eukaryoten: Kern, 80S-Ribosomen, Mitose/Meiose
+- Gram-positiv: violett, dicke Peptidoglykanschicht; Gram-negativ: rosa, dünne Peptidoglykanschicht + äußere LPS-Membran
+- LPS (Lipopolysaccharid) nur bei Gram-negativen → Endotoxin → septischer Schock bei Bakteriämie
+- 70S = 30S + 50S (Prokaryoten); 80S = 40S + 60S (Eukaryoten) — Antibiotika zielen auf 70S
+- Endosymbiontentheorie: 5 Belege (zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit)
+- Mitochondrien haben 70S-Ribosomen → Chloramphenicol kann mitochondriale Proteinsynthese hemmen (aplastische Anämie)
+- Archäen: dritte Domäne, Prokaryoten-Bau, aber kein Peptidoglykan → Penicillin-resistent
+- Penicillin wirkt nicht gegen menschliche Zellen (keine Peptidoglykan-Zellwand)
 
-**Ergänzend vertiefend:** Archäen (dritte Domäne, kein Peptidoglykan → Penicillin-resistent), Plasmide, Kompartimentierungsvorteil.
+**Ergänzend vertiefend:**
+- Plasmide: extrachromosomale DNA, häufig bei Bakterien
+- Kompartimentierung bei Eukaryoten ermöglicht Spleißen, RNA-Prozessierung, feinere Regulation
+- Drei Domänen: Bacteria, Archaea, Eukarya (Woese, 16S-rRNA)
 
-**Häufige Fragen:**
-- "Was ist der grundlegendste Unterschied zwischen Prokaryoten und Eukaryoten?" → Fehlender membranumschlossener Zellkern bei Prokaryoten
-- "Warum wirkt Penicillin nicht gegen menschliche Zellen?" → Menschliche Zellen haben keine Peptidoglykan-Zellwand
-- "Welche Belege stützen die Endosymbiontentheorie?" → Zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit
+**Häufige Prüfungsfragen:**
+- Was ist der grundlegendste Unterschied zwischen Prokaryoten und Eukaryoten? → Fehlender membranumschlossener Zellkern bei Prokaryoten
+- Warum wirkt Penicillin nicht gegen menschliche Zellen? → Keine Peptidoglykan-Zellwand
+- Welche Belege stützen die Endosymbiontentheorie? → Zirkuläre DNA, 70S, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit
+- Welche Ribosomengröße haben Prokaryoten? → 70S (30S + 50S)
+- Warum können Archäen penicillinresistent sein? → Kein Peptidoglykan
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Prokaryoten haben durchaus Ribosomen (70S) — nur keinen Zellkern!
-- Archäen sind Prokaryoten, bilden aber eine EIGENE Domäne (nicht: Bakterien)
-- Archäen haben KEIN Peptidoglykan → Penicillin-resistent
-- Mitochondrien haben 70S-Ribosomen (wie Bakterien!) → Chloramphenicol-Toxizität möglich
-- Gram-negativ ≠ "keine Zellwand": Sie haben eine dünne Peptidoglykanschicht PLUS eine äußere LPS-Membran
+**Typische Prüfungsfallen:**
+- Prokaryoten haben sehr wohl Ribosomen (70S) — nur keinen Zellkern
+- Archäen sind Prokaryoten, bilden aber eine eigene Domäne (nicht „Bakterien“)
+- Archäen haben kein Peptidoglykan → Penicillin-resistent
+- Mitochondrien haben 70S-Ribosomen → Chloramphenicol-Toxizität möglich
+- Gram-negativ ≠ „keine Zellwand“: dünne Peptidoglykanschicht plus äußere LPS-Membran
 
-**SVG-Stellen im Kapitel:** (1) Vergleich Prokaryot vs. Eukaryot (Kern, Ribosomen, Organellen) — \`diagram: prokaryote-vs-eukaryote\`. (2) Optional: Gram-positiv vs. Gram-negativ Zellwandaufbau. (3) Optional: 5 Belege Endosymbiontentheorie.
-
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - 70S = 30S + 50S (Prokaryoten); 80S = 40S + 60S (Eukaryoten)
 - Drei Domänen: Bacteria, Archaea, Eukarya
 - 5 Belege der Endosymbiontentheorie
-- Gram-positiv: violett (Staphylokokken, Streptokokken); Gram-negativ: rosa (E. coli, Salmonella)
-- mtDNA kodiert ~13 Proteine (maternale Vererbung)
+- Gram-positiv: violett (z. B. Staphylokokken, Streptokokken); Gram-negativ: rosa (z. B. E. coli, Salmonella)
+- mtDNA kodiert ~13 Proteine; maternale Vererbung
 
 ---
 
@@ -663,7 +674,7 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 > **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Kleine unpolare Moleküle frei; Ionen und große polare Moleküle brauchen Proteine.
 
-**SVG-Hinweis (Querschnitt Zellmembran / Flüssig-Mosaik-Modell):** Ein Schema direkt nach diesem Abschnitt zeigt den Aufbau im Querschnitt: Phospholipid-Bilayer, Cholesterin zwischen den Lipiden, integrale und periphere Proteine sowie die Glykokalix außen. So siehst du auf einen Blick, wie die Bausteine räumlich zusammenspielen. *Typ: Schema / Querschnitt.*
+**SVG-Hinweis: Querschnitt Zellmembran (Flüssig-Mosaik-Modell)** — Zeigt Phospholipid-Bilayer, Cholesterin, integrale und periphere Proteine, Glykokalix; hilft, die Bausteine räumlich zu verankern.
 
 {{DIAGRAM}}
 
@@ -689,9 +700,9 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 | **Ungesättigt** (cis-Doppelbindung = Knick) | Keine enge Packung | **↑ Fluidität** | Ölsäure, DHA (Nervenzellen) |
 | **Gesättigt** (gerade Kette) | Enges Packen | **↓ Fluidität** | Palmitinsäure, Stearinsäure (Butter fest) |
 
-![Fettsäuren und Fluidität](/grafik-zellmembran-fettsaeuren.svg)
+**SVG-Hinweis: Fettsäuren und Fluidität** — Vergleicht gesättigte (gerade) und ungesättigte (geknickte) Fettsäureketten und Packungsdichte; verdeutlicht den Zusammenhang zwischen Struktur und Membranfluidität.
 
-**Erklärung zur Grafik:** Die Abbildung vergleicht gesättigte (gerade) und ungesättigte (geknickte) Fettsäureketten und ihre Packungsdichte — damit wird der Zusammenhang zwischen Struktur und Membranfluidität deutlich.
+![Fettsäuren und Fluidität](/grafik-zellmembran-fettsaeuren.svg)
 
 > **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger.
 
@@ -701,9 +712,9 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 **Bisher haben wir gesehen:** Die Membran besteht aus Lipiden und ihre Fluidität wird durch Cholesterin und Fettsäuren reguliert. **Aber die Tabelle hat gezeigt:** Ionen und viele Nährstoffe (z. B. Glucose) können die reine Lipidschicht nicht passieren — dafür braucht die Zelle **Proteine** in der Membran. **Proteine** sind Funktionsmoleküle aus Aminosäuren; in der Membran übernehmen sie z. B. Transport, Signalerkennung und Struktur. **Um zu verstehen,** welche Typen es gibt (und warum ein Defekt wie bei Mukoviszidose so folgenreich ist), unterscheidet man **integrale** und **periphere** Membranproteine.
 
-![Integral vs. peripher](/grafik-zellmembran-integral-peripher.svg)
+**SVG-Hinweis: Integral vs. peripher** — Integrale (Transmembran-)Proteine durchspannen die Lipiddoppelschicht, periphere sitzen nur an einer Oberfläche; hilft bei der Abgrenzung für MC-Fragen.
 
-**Erklärung zur Grafik:** Die Grafik zeigt den Unterschied: Integrale (Transmembran-)Proteine durchspannen die Lipiddoppelschicht, periphere Proteine sitzen nur an einer Oberfläche (innen oder außen).
+![Integral vs. peripher](/grafik-zellmembran-integral-peripher.svg)
 
 **Integrale (Transmembran-)Proteine:**
 - Durchspannen die Lipiddoppelschicht mit **hydrophoben α-Helices**
@@ -737,29 +748,38 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Flüssig-Mosaik-Modell, Phospholipid-Bilayer (amphiphil, Selbstorganisation), Cholesterin als bidirektionaler Fluiditätspuffer, ungesättigt ↑ / gesättigt ↓ Fluidität, integrale vs. periphere Proteine, Glykokalix (Zuckerschicht außen, Zellerkennung, Schutz), CFTR (Cl⁻-Kanal, ΔF508 → Mukoviszidose). **O₂ und CO₂** werden **nicht** über Transportproteine transportiert — einfache Diffusion durch die Lipidschicht.
+**Zentral prüfungsrelevant:**
+- Flüssig-Mosaik-Modell: fluide Phospholipid-Doppelschicht, Proteine lateral beweglich
+- Phospholipide = amphiphil (hydrophiler Kopf, hydrophobe Schwänze) → Selbstorganisation zum Bilayer
+- O₂ und CO₂: einfache Diffusion durch die Lipidschicht — **kein** Transportprotein nötig
+- Ionen und große polare Moleküle brauchen Kanäle/Transporter (hydrophobes Inneres + Hydrathülle)
+- Cholesterin = bidirektionaler Fluiditätspuffer (bei Wärme versteift, bei Kälte verflüssigt)
+- Ungesättigte Fettsäuren ↑ Fluidität (Knicke); gesättigte ↓ Fluidität
+- Integral = durch die Membran (Kanäle, Transporter, Rezeptoren, Pumpen); peripher = nur an Oberfläche
+- Glykokalix = Zuckerschicht außen (Zellerkennung, Schutz); Blutgruppenantigene
+- CFTR = Cl⁻-Kanal; ΔF508 = Fehlfaltung → Mukoviszidose (visköser Schleim)
 
-**Ergänzend vertiefend (noch prüfungsnah):** Lipid-Asymmetrie, PS-Flip bei Apoptose, Lipid-Rafts, GLUT/SGLT als Beispiele für Transporter (Details im UK Membrantransport).
+**Ergänzend vertiefend:**
+- Lipid-Asymmetrie; PS-Flip nach außen bei Apoptose („Eat me“-Signal)
+- Lipid-Rafts (Cholesterin + Sphingolipide); GLUT/SGLT (Details im UK Membrantransport)
 
-**Häufige Fragen:**
-- "Was beschreibt das Flüssig-Mosaik-Modell?" → Fluide Phospholipid-Doppelschicht mit lateral beweglichen Proteinen
-- "Warum können Ionen die Membran nicht frei passieren?" → Hydrophobes Inneres + Hydrathülle der Ionen → Ionenkanäle/Transporter nötig
-- "Welche Funktion hat Cholesterin?" → Bidirektionaler Fluiditätspuffer
-- "Integral vs. peripher?" → Integral = durch die Membran; peripher = nur an Oberfläche
-- "Was ist die Glykokalix?" → Zuckerschicht auf der Außenseite; Zellerkennung, Schutz
-- "Was ist CFTR?" → Cl⁻-Kanal; ΔF508 → Fehlfaltung → Mukoviszidose
+**Häufige Prüfungsfragen:**
+- Was beschreibt das Flüssig-Mosaik-Modell? → Fluide Phospholipid-Doppelschicht mit lateral beweglichen Proteinen
+- Warum können Ionen die Membran nicht frei passieren? → Hydrophobes Inneres, Hydrathülle → Kanäle/Transporter nötig
+- Welche Funktion hat Cholesterin? → Bidirektionaler Fluiditätspuffer
+- Integral vs. peripher? → Integral = durch die Membran; peripher = nur an Oberfläche
+- Was ist die Glykokalix? → Zuckerschicht außen; Zellerkennung, Schutz
+- Was ist CFTR? → Cl⁻-Kanal; ΔF508 → Mukoviszidose
 
-**Typische Prüfungsfallen / Abgrenzungen:**
-- **Sauerstoff (O₂) braucht KEIN Transportprotein** — O₂ diffundiert frei durch die Lipidschicht (kleines unpolares Molekül). Eine Aussage wie „Über Transportproteine werden Sauerstoffmoleküle transportiert“ ist **falsch**.
-- **Cholesterin ≠ Hauptbestandteil** der Membran — das sind Phospholipide; Cholesterin reguliert nur die Fluidität.
-- **Ungesättigte Fettsäuren erhöhen** Fluidität (Knicke), **gesättigte senken** sie — oft vertauscht in Multiple-Choice.
-- **PS normalerweise innen** — Flip nach außen = Apoptose-Signal.
-- **CFTR = Chloridkanal**, kein „Transporter“ im engeren Sinne; ΔF508 = Fehlfaltung, kein funktionsloser Kanal in der Membran.
+**Typische Prüfungsfallen:**
+- O₂ braucht **kein** Transportprotein — diffundiert frei durch die Lipidschicht
+- Cholesterin ≠ Hauptbestandteil der Membran (das sind Phospholipide)
+- Ungesättigte Fettsäuren **erhöhen** Fluidität, gesättigte **senken** sie — oft vertauscht
+- PS normalerweise innen; Flip nach außen = Apoptose-Signal
+- CFTR = Chloridkanal; ΔF508 = Fehlfaltung (Protein kommt nicht in die Membran)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - ΔF508: häufigste Mukoviszidose-Mutation (~70 % in Europa)
-
-**SVG-Stellen im Kapitel:** (1) Nach Grundprinzip Bilayer: Querschnitt Zellmembran/Flüssig-Mosaik. (2) Bei Fettsäure-Tabelle: Fettsäuren & Fluidität (gerade vs. geknickte Ketten). (3) Unter „Membranproteine“: Integral vs. peripher.
 
 ---
 
@@ -913,7 +933,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
       ],
       content: `## Einleitung
 
-Im vorherigen Unterkapitel ging es um **Aufbau und Barriere** der Zellmembran. Hier steht die Frage: **Wie** kommen Stoffe durch? Grundunterscheidung: **Passiver Transport** folgt dem **Konzentrationsgradienten** (ein Gradient ist ein Gefälle — hier: von hoher zu niedriger Konzentration; kein ATP nötig). **Aktiver Transport** arbeitet gegen den Gradienten (mit ATP oder indirekt über einen anderen Gradienten). Beides ist prüfungsrelevant — insbesondere Osmose/Tonizität (hypoton → Hämolyse) und die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein).
+Im vorherigen Unterkapitel ging es um **Aufbau und Barriere** der Zellmembran — woraus sie besteht und warum O₂ frei diffundiert, Ionen aber Kanäle brauchen. Hier steht die Frage: **Wie** kommen Stoffe konkret durch? Grundunterscheidung: **Passiver Transport** folgt dem **Konzentrationsgradienten** (ein Gefälle von hoher zu niedriger Konzentration; kein ATP nötig). **Aktiver Transport** arbeitet gegen den Gradienten — mit ATP (primär aktiv) oder über einen anderen Gradienten (sekundär aktiv). Für den MedAT zentral: Osmose und Tonizität (hypoton → Hämolyse, hyperton → Krenation) sowie die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein pro ATP). Ohne dieses Kapitel lassen sich Infusionstherapie, Herzglykoside und SGLT2-Hemmer nicht einordnen.
 
 **In diesem Kapitel lernst du:**
 - die drei Formen passiven Transports (einfache Diffusion, erleichterte Diffusion, Osmose) und **Tonizität**
@@ -941,9 +961,9 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
 
-![Membrantransport — passiv und aktiv](/grafik-1-membrantransport.svg)
+**SVG-Hinweis: Membrantransport — passiv und aktiv** — Zeigt die fünf Mechanismen (einfache und erleichterte Diffusion, Osmose, primär und sekundär aktiv); hilft, Richtung der Gradienten und ATP-Verbrauch zu unterscheiden.
 
-**Erklärung zur Grafik:** Die fünf Transportmechanismen: einfache und erleichterte Diffusion, Osmose, primär und sekundär aktiver Transport (Na⁺/K⁺-ATPase, Symport/Antiport).
+![Membrantransport — passiv und aktiv](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -965,13 +985,9 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
 
+**SVG-Hinweis: Osmose und Tonizität** — Wasser folgt der Osmolalität; Zelle in hypotoner/isotoner/hypertoner Lösung veranschaulicht Hämolyse und Krenation. Gleiches Prinzip wie in der Niere (Harnkonzentrierung).
+
 ![Osmose und Tonizität](/grafik-10-nephron.svg)
-
-**Erklärung zur Grafik:** Wasser folgt der Osmolalität; in der Niere entscheiden Konzentrationsgradienten über Harnkonzentrierung — gleiches Prinzip wie bei Zellen (hypoton/isoton/hyperton).
-
-**SVG-Hinweis (5 Mechanismen):** Schema „Membrantransport — 5 Mechanismen“ (einfache Diffusion, erleichterte Diffusion, Osmose, primär aktiv, sekundär aktiv). Bereits vorhanden: \`grafik-1-membrantransport.svg\`. Unterstützt die Abgrenzung passiv/aktiv und die Richtung der Gradienten. *Typ: Übersichtsschema.*
-
-**SVG-Hinweis (Osmose/Tonizität, additiv):** Ein kleines Schema „Osmose — Wasserfluss zur höheren Osmolalität“ mit Zelle in hypotoner/isotoner/hypertoner Lösung könnte die Begriffe Hämolyse/Krenation visuell stützen. *Typ: Vergleichsschema (optional).*
 
 ---
 
@@ -997,34 +1013,39 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
 
 > **Merke:** Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein (1 ATP). Sekundär aktiv = Na⁺-Gradient treibt Substrat (Symport/Antiport).
 
-**SVG-Hinweis (Na⁺/K⁺-ATPase, additiv):** Ein kleines Schema „3 Na⁺ raus, 2 K⁺ rein“ mit Zelle und ATPase könnte die Stöchiometrie einprägsam machen. *Typ: Stöchiometrie-Schema (optional).*
-
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zentral prüfungsrelevant:**
+- Passiv = entlang Gradient, kein ATP; aktiv = gegen Gradient, mit ATP oder Na⁺-Gradient
+- Einfache Diffusion: O₂, CO₂, Steroide (ohne Protein); erleichterte: Kanäle (schnell), Carrier (sättigbar, z. B. GLUT)
+- Osmose: Wassertransport zur **höheren** Osmolalität (nur Wasser, nicht die gelösten Teilchen)
+- Tonizität: hypoton → Hämolyse (Zelle schwillt); hyperton → Krenation (Zelle schrumpft); isoton → Volumen konstant
+- Isotone Infusion: 0,9 % NaCl (~290 mosmol/kg)
+- Na⁺/K⁺-ATPase: **3 Na⁺ raus, 2 K⁺ rein** pro 1 ATP; baut Ruhemembranpotenzial (~−70 mV) auf
+- Sekundär aktiv: Na⁺-Gradient treibt Substrat — Symport (z. B. SGLT: Na⁺ + Glucose gleiche Richtung), Antiport (z. B. NCX: Na⁺ rein, Ca²⁺ raus)
+- SGLT2-Hemmer → Glucosurie → Blutzuckersenkung bei Typ-2-Diabetes
 
-**Zentral prüfungsrelevant:** Passiv vs. aktiv (mit/ohne ATP, Richtung Gradient); einfache vs. erleichterte Diffusion; Osmose (Wasser zur höheren Osmolalität); Tonizität (hypoton → Hämolyse, hyperton → Krenation, isoton 0,9 % NaCl); Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein, 1 ATP); Ruhemembranpotenzial ~−70 mV; sekundär aktiver Transport (Na⁺-Gradient, Symport/Antiport, SGLT).
+**Ergänzend vertiefend:**
+- Herzglykoside (Digitalis, Ouabain): hemmen Na⁺/K⁺-ATPase → positiv inotrop
+- AQP2 in Niere: ADH-reguliert, Wasserrückresorption
+- Ionenkanäle vs. Carrier: Kanäle schnell und schaltbar, Carrier sättigbar
 
-**Ergänzend vertiefend:** Herzglykoside (Na⁺/K⁺-ATPase-Hemmung → positiv inotrop), SGLT2-Hemmer (Glucosurie), AQP2/ADH, Ionenkanäle vs. Carrier (schnell vs. sättigbar).
+**Häufige Prüfungsfragen:**
+- Was passiert mit Erythrozyten in hypotoner Lösung? → Wasser strömt ein → Hämolyse
+- Na⁺/K⁺-ATPase: Wie viele Ionen pro ATP? → 3 Na⁺ raus, 2 K⁺ rein
+- Primär vs. sekundär aktiv? → Primär: direkt ATP (Na⁺/K⁺-ATPase); sekundär: Na⁺-Gradient (SGLT, NCX)
+- Was wird bei der Osmose transportiert? → Nur Wasser
 
-**Häufige Fragen:**
-- "Was passiert mit Erythrozyten in hypotoner Lösung?" → Wasser strömt ein → Zelle schwillt → Hämolyse
-- "Na⁺/K⁺-ATPase: Wie viele Ionen?" → 3 Na⁺ raus, 2 K⁺ rein pro ATP
-- "Primär vs. sekundär aktiv?" → Primär: direkt ATP (Na⁺/K⁺-ATPase); sekundär: Na⁺-Gradient (z. B. SGLT)
-- "Osmose — was wird transportiert?" → Nur Wasser (nicht die gelösten Teilchen)
+**Typische Prüfungsfallen:**
+- Osmose = Wassertransport (nicht die gelösten Teilchen); Wasser zur **höheren** Osmolalität
+- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein — nicht umgekehrt
+- Hypoton → Hämolyse (schwellen); hyperton → Krenation (schrumpfen) — nicht vertauschen
 
-**Typische Prüfungsfallen / Abgrenzungen:**
-- **Osmose = Wassertransport** (nicht Transport gelöster Teilchen); Wasser strömt zur **höheren** Osmolalität.
-- **Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein** — nicht umgekehrt; oft als Distraktor.
-- **Hypoton → Hämolyse** (Zelle schwillt); **hyperton → Krenation** (Zelle schrumpft) — Begriffe nicht vertauschen.
-
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein (1 ATP); Ruhemembranpotenzial ~−70 mV
 - Isotone NaCl: 0,9 % (~290 mosmol/kg)
-
-**SVG-Stellen im Kapitel:** (1) Übersicht: 5 Mechanismen (\`grafik-1-membrantransport.svg\`). (2) Optional: Osmose/Tonizität; (3) Optional: Na⁺/K⁺-ATPase-Stöchiometrie.
 
 ---
 
@@ -1060,7 +1081,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       title: "Zellorganellen — Funktion und medizinische Relevanz",
       content: `## Einleitung
 
-Stell dir eine Fabrik vor: Sie hat Produktionshallen (ER), eine Poststelle (Golgi), ein Kraftwerk (Mitochondrien), einen Recyclinghof (Lysosomen) und eine Qualitätskontrolle (Proteasomen). Genau so funktioniert eine eukaryotische Zelle — durch **Kompartimentierung** (Aufteilung in abgegrenzte Räume mit eigenen Aufgaben und Enzymen) in spezialisierte **Organellen**. Jedes Organell hat eine definierte Aufgabe, eigene Enzyme und ein eigenes Milieu. Ohne diese Arbeitsteilung wären die Komplexität des Lebens und damit die Medizin undenkbar. Für den MedAT sind der sekretorische Weg (rER → Golgi → Lysosom), Mitochondrien (Endosymbiontentheorie, ATP-Synthese), lysosomale Speicherkrankheiten und das Ubiquitin-Proteasom-System prüfungsrelevant.
+Nach Membran und Transport stellt sich die Frage: **Wo** werden Proteine hergestellt, sortiert und abgebaut? **Wo** entsteht das meiste ATP? Eukaryotische Zellen sind durch **Kompartimentierung** (Aufteilung in abgegrenzte Räume mit eigenen Aufgaben und Enzymen) in spezialisierte **Organellen** strukturiert — raues ER (rER), Golgi, Mitochondrien, Lysosomen, Peroxisomen, Proteasomen. Jedes Organell hat eine definierte Aufgabe und ein eigenes Milieu. Ohne diese Arbeitsteilung wären Komplexität des Lebens und Medizin undenkbar. Dieses Kapitel baut auf Prokaryoten vs. Eukaryoten (nur Eukaryoten haben diese Organellen) und auf die Zellmembran (Vesikeltransport) auf. Für den MedAT zentral: sekretorischer Weg (rER → Golgi → Lysosom), M6P-Targeting, Mitochondrien (Struktur, Atmungskette, Endosymbiontentheorie), Lysosomen (pH, Speicherkrankheiten), Peroxisomen (VLCFA, Katalase).
 
 **In diesem Kapitel lernst du:**
 - den **sekretorischen Weg** (rER → Golgi → Lysosom) und **M6P-Targeting** für lysosomale Enzyme
@@ -1099,15 +1120,13 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 
 > **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
+**SVG-Hinweis: Proteinbiosynthese und sekretorischer Weg** — DNA → RNA → Protein; im rER beginnt die Translation sekretorischer Proteine, dann Vesikeltransport über Golgi; hilft, den Weg bis Lysosom oder Zellmembran zu verankern.
+
 ![Proteinbiosynthese und sekretorischer Weg](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** DNA → RNA → Protein; im rER beginnt die Translation sekretorischer Proteine, dann Vesikeltransport über Golgi zu Lysosomen oder nach außen.
+**SVG-Hinweis: Organellen und Vesikeltransport** — Vesikel und Membranfluss rER → Golgi → Ziel; veranschaulicht Kompartimentierung und Transport zu Lysosomen oder Zellmembran.
 
 ![Organellen und Vesikeltransport](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Vesikel und Membranfluss (rER → Golgi → Ziel); die Grafik veranschaulicht Kompartimentierung und Transport zu Lysosomen oder Zellmembran.
-
-**SVG-Hinweis (Sekretorischer Weg):** Ein Flussschema rER → Golgi → Lysosom mit M6P-Targeting und Vesikeltransport unterstützt die räumliche Vorstellung und die Abgrenzung zu anderen Wegen. *Typ: Flussschema / Übersicht.*
 
 ---
 
@@ -1139,9 +1158,9 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 ![Lysosom und Abbau](/grafik-1-membrantransport.svg)
 
-**Erklärung zur Grafik:** Lysosomen entstehen aus dem Trans-Golgi; Fusion mit Autophagosomen oder Phagolysosomen — Abbau in saurem Milieu (pH 4,5).
+**SVG-Hinweis: Lysosom und Abbau** — Lysosomen entstehen aus dem Trans-Golgi; Fusion mit Autophagosomen oder Phagolysosomen; Abbau in saurem Milieu (pH 4,5). Hilft, den Weg vom Golgi zum Lysosom und die Rolle der sauren Hydrolasen zu verankern.
 
-**SVG-Hinweis (Mitochondrien-Querschnitt):** Ein Schema mit äußerer/innerer Membran, Cristae, Matrix und Intermembranraum macht den Ort der Atmungskette und die 5 Endosymbionten-Belege auf einen Blick klar. *Typ: Querschnitt / Schema.*
+**SVG-Hinweis: Mitochondrien-Querschnitt** — Äußere/innerer Membran, Cristae, Matrix, Intermembranraum; macht den Ort der Atmungskette und die Endosymbionten-Belege auf einen Blick klar.
 
 ---
 
@@ -1376,7 +1395,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
       ],
       content: `## Einleitung
 
-Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig überleben? Weil der Zellkern sämtliche Informationen enthält, aber diese Information nur innerhalb des komplexen zellulären Systems umgesetzt werden kann. Der **Zellkern** ist das Informationszentrum der Zelle: Er bewahrt das Erbgut, kontrolliert, welche Gene wann aktiv sind, und reguliert über **Kernporen**, welche Moleküle in den Kern gelangen oder aus ihm heraus. Das Grundprinzip: **räumliche Trennung** von Transkription (Kern) und Translation (Zytoplasma) ermöglicht die umfangreiche Prozessierung der RNA — ein eukaryotisches Alleinstellungsmerkmal. Für den MedAT sind Kernhülle, Kernporen (NLS/NES), Chromatinverpackung (Nukleosom, Euchromatin/Heterochromatin), Nucleolus und Progeria prüfungsrelevant.
+Nach den Organellen steht die **Steuerzentrale** im Mittelpunkt: der **Zellkern**. Er bewahrt das Erbgut, kontrolliert, welche Gene wann aktiv sind, und reguliert über **Kernporen**, welche Moleküle ein- oder ausgeschleust werden. Die **räumliche Trennung** von Transkription (im Kern) und Translation (im Zytoplasma) ist ein eukaryotisches Alleinstellungsmerkmal und ermöglicht umfangreiche RNA-Prozessierung (Spleißen, 5′-Kappe, Poly-A-Schwanz). Ohne Zellkern-Kapitel bleiben Chromatin, Nukleosom und epigenetische Regulation unverständlich; zugleich ist der Kern die Brücke zu Zellteilung (Mitose/Meiose) und Energiestoffwechsel (Kern-genkodierte Atmungsketten-Proteine). Für den MedAT zentral: Kernhülle, Kernporen (freie Diffusion <40 kDa, NLS/NES für aktiven Transport), Chromatinverpackung (Nukleosom, Euchromatin/Heterochromatin), Nucleolus, Progeria (Lamin-Defekt).
 
 **In diesem Kapitel lernst du:**
 - **Kernhülle** und **Kernporen** (freie Diffusion <40 kDa, aktiver Transport mit NLS/NES)
@@ -1408,11 +1427,9 @@ Warum können Körperzellen nur im Körper existieren, nicht aber eigenständig 
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
+**SVG-Hinweis: Kern und Genexpression** — Transkription im Kern, Translation im Zytoplasma; NLS/NES steuern den Kerntransport; hilft, die räumliche Trennung und den aktiven Transport (>40 kDa) zu verankern.
+
 ![Kern und Genexpression](/grafik-16-zentraldogma.svg)
-
-**Erklärung zur Grafik:** Transkription im Kern, Translation im Zytoplasma; NLS/NES steuern den Kerntransport von Proteinen und RNA.
-
-**SVG-Hinweis (Kernporen / NLS-NES-Transport):** Ein Schema mit NPC, Importin/Exportin und RanGTP-Gradient veranschaulicht, warum große Proteine ein NLS oder NES brauchen und wie die Richtung des Transports entsteht. *Typ: Schema / Transport.*
 
 ---
 
@@ -1455,9 +1472,9 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 
 > **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A,H2B,H3,H4 je 2×). Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Körper = inaktives X.
 
-![Chromosomen und Mitose](/grafik-2-mitose.svg)
+**SVG-Hinweis: Chromosomen und Mitose** — Chromatin kondensiert in der Mitose zu sichtbaren Chromosomen; zeigt die Verpackung von der Interphase bis zur Metaphase und unterstützt die Abgrenzung Chromatin vs. Chromosom.
 
-**Erklärung zur Grafik:** Chromatin kondensiert in der Mitose zu sichtbaren Chromosomen; die Grafik zeigt die Verpackung von der Interphase bis zur Metaphase.
+![Chromosomen und Mitose](/grafik-2-mitose.svg)
 
 **SVG-Hinweis (Nukleosom / Chromatin-Hierarchie):** Ein Schema von Nukleosom („Perlen auf der Schnur“) bis zur 30-nm-Faser und Euchromatin vs. Heterochromatin festigt die Verpackungsstufen und die epigenetische Regulation. *Typ: Schema / Hierarchie.*
 
@@ -1673,7 +1690,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
       ],
       content: `## Einleitung
 
-Jede Sekunde teilt sich im menschlichen Körper die Zelle 3,8 Millionen Mal. Wachstum, Gewebeheilung, Blutbildung — all das erfordert präzise Zellteilung. Zwei Typen existieren: die **Mitose** (identische Kopien für Körperzellen) und die **Meiose** (genetisch verschiedene Keimzellen für die Fortpflanzung). Wenn diese Prozesse fehlgehen, entstehen Chromosomenaberrationen (Down-Syndrom) oder Krebs (Kontrollpunktverlust). Das Grundprinzip: Der **Zellzyklus** ist ein streng kontrollierter Ablauf mit eingebauten **Checkpoints** — Sicherheitsschleusen, die Fehler erkennen und korrigieren. Für den MedAT sind Zellzyklus-Phasen, Checkpoints, Mitose- und Meiose-Phasen, Crossing-over und Non-disjunction prüfungsrelevant.
+Nach Zellkern und Chromatin folgt die Frage: **Wie** werden Zellen vermehrt? Wachstum, Gewebeheilung und Blutbildung erfordern präzise Zellteilung. Zwei Typen existieren: **Mitose** (zwei genetisch identische Tochterzellen für Körperzellen) und **Meiose** (genetisch verschiedene Keimzellen für die Fortpflanzung). Fehler führen zu Chromosomenaberrationen (z. B. Trisomie 21) oder Krebs (Checkpoint-Defekte). Der **Zellzyklus** (G1 → S → G2 → M) ist streng kontrolliert; **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint) wirken als Sicherheitsschleusen. Dieses Kapitel baut direkt auf den Zellkern (Chromosomen, Centromer, Kinetochor) und auf Organellen (Zentrosom, Spindelapparat) auf. Für den MedAT zentral: Zellzyklus-Phasen, Checkpoints (Cycline/CDK, Rb, p53), Mitose-Phasen (Anaphase = Trennung der Schwesterchromatiden), Meiose I vs. II (Reduktion vs. Äquation), Crossing-over, Non-disjunction (Trisomie 21).
 
 **In diesem Kapitel lernst du:**
 - den **Zellzyklus** (G1, S, G2, M) und **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint)
@@ -1701,11 +1718,9 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 > **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
 
+**SVG-Hinweis: Mitose — Phasen** — Prophase → Metaphase → Anaphase → Telophase: Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden, Zytokinese; hilft, die Reihenfolge und Anaphase (Schwesterchromatiden) zu verankern.
+
 ![Mitose — Phasen](/grafik-2-mitose.svg)
-
-**Erklärung zur Grafik:** Prophase → Metaphase → Anaphase → Telophase: Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden, Zytokinese.
-
-**SVG-Hinweis (Zellzyklus):** Ein Kreisschema mit G1 → S → G2 → M und G0-Abstieg sowie den Checkpoints (G1/S, G2/M, Spindel) unterstützt die Einordnung der Phasen und der Tumorrelevanz. *Typ: Kreisschema / Übersicht.*
 
 ---
 
@@ -1713,9 +1728,9 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 **Bisher haben wir gesehen:** Der Zellzyklus bereitet die Zelle auf die Teilung vor (G1, S, G2). **In der M-Phase** findet die eigentliche Kernteilung statt — bei Körperzellen als **Mitose**. **Um sie zu verstehen,** gehen wir die Phasen nacheinander durch. Die Mitose ist die Standardform der Zellteilung für Körperzellen. Sie erzeugt zwei genetisch identische Tochterzellen.
 
-![Meiose — Reduktion und Crossing-over](/grafik-3-meiose.svg)
+**SVG-Hinweis: Meiose — Reduktion und Crossing-over** — Meiose I (Bivalente, Crossing-over, Trennung der homologen Chromosomen) und Meiose II (Trennung der Schwesterchromatiden); Grundlage für genetische Vielfalt und Abgrenzung zur Mitose.
 
-**Erklärung zur Grafik:** Meiose I (Bivalente, Crossing-over, Trennung der homologen Chromosomen) und Meiose II (Trennung der Schwesterchromatiden); Grundlage für genetische Vielfalt.
+![Meiose — Reduktion und Crossing-over](/grafik-3-meiose.svg)
 
 **Prophase:**
 Chromosomen kondensieren (werden sichtbar durch Histon-H3-Phosphorylierung). Das **Zentrosom** dupliziert sich und wandert zu den Polen. Die **Kernhülle löst sich auf**. Der **Spindelapparat** (Mikrotubuli aus Zentrosomen) beginnt sich zu bilden.
@@ -1991,7 +2006,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
       ],
       content: `## Einleitung
 
-Jede Muskelkontraktion, jeder Gedanke, jeder Herzschlag braucht Energie in Form von **ATP** (Adenosintriphosphat). Woher kommt dieses ATP? Aus Nährstoffen — vor allem **Glucose**. Der **Energiestoffwechsel** zerlegt Glucose in drei aufeinanderfolgenden Schritten vollständig ab und gewinnt dabei ~30–32 ATP pro Molekül. Das Grundprinzip: Je mehr Sauerstoff verfügbar ist, desto mehr ATP entsteht. Ohne Sauerstoff gibt es nur 2 ATP und Laktat. Für die Medizin ist das täglich relevant: Cyanidvergiftung blockiert die Atmungskette, Thiaminmangel lähmt den Brückenschritt, Laktatazidose bei Schock zeigt Sauerstoffmangel an. Für den MedAT sind Glykolyse (PFK-1!), Citratzyklus (Bilanz), Atmungskette (Komplexe, Cyanid), Chemiosmose und anaerober Stoffwechsel (Laktat) prüfungsrelevant.
+Nach Organellen (Mitochondrien als Kraftwerk) und Zellteilung stellt sich die Frage: **Woher** kommt das ATP konkret? Jede Muskelkontraktion, jeder Herzschlag braucht **ATP** (Adenosintriphosphat). Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brückenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) — Bilanz ~30–32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto). Dieses Kapitel baut auf Zellorganellen (Mitochondrien-Struktur) und auf Grundlagen der Zelle auf. Klinisch relevant: Cyanid blockiert Komplex IV, Thiaminmangel schädigt den Brückenschritt (Wernicke), Laktatazidose bei Schock. Für den MedAT zentral: Glykolyse (Ort Zytoplasma, PFK-1, 2 ATP netto, 2 NADH), Brückenschritt (Pyruvat → Acetyl-CoA, Thiamin), Citratzyklus (Bilanz pro Acetyl-CoA), Atmungskette (Komplexe I–IV, O₂ als Endakzeptor, Cyanid), Chemiosmose, anaerober Stoffwechsel (Laktat).
 
 **In diesem Kapitel lernst du:**
 - **Glykolyse** (Zytoplasma, 1 Glucose → 2 Pyruvat, 2 ATP netto, PFK-1 als Schlüsselenzym)
@@ -2025,11 +2040,9 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
 
+**SVG-Hinweis: Redox und Atmungskette** — NADH und FADH₂ liefern Elektronen für die Atmungskette; veranschaulicht den Zusammenhang Glykolyse → Citratzyklus → oxidative Phosphorylierung.
+
 ![Redox und Atmungskette](/grafik-redox.svg)
-
-**Erklärung zur Grafik:** NADH und FADH₂ liefern Elektronen für die Atmungskette; die Grafik veranschaulicht den Zusammenhang zwischen Glykolyse, Citratzyklus und oxidativer Phosphorylierung.
-
-**SVG-Hinweis (Glykolyse — Bilanz):** Ein kompaktes Schema mit Glucose → 2 Pyruvat, 2 ATP netto, 2 NADH und der Stellung von PFK-1 in der Kette unterstützt die Merkfähigkeit für Prüfungsfragen. *Typ: Flussschema / Bilanz.*
 
 ---
 
@@ -2098,9 +2111,9 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 
 > **Merke:** NADH → Komplex I → Q → Komplex III → Cyt c → Komplex IV → O₂ → H₂O. FADH₂ → Komplex II → Q (kein H⁺-Pumpen → weniger ATP). O₂ = finale Elektronenakzeptor. Cyanid blockiert Komplex IV!
 
-![Energie und ATP-Synthese](/grafik-21-energieprofil.svg)
+**SVG-Hinweis: Energie und ATP-Synthese** — Protonengradient und ATP-Synthese (Chemiosmose); veranschaulicht die Kopplung von Redoxreaktionen und Phosphorylierung (~30–32 ATP/Glucose).
 
-**Erklärung zur Grafik:** Protonengradient und ATP-Synthese (Chemiosmose); die Grafik veranschaulicht die Kopplung von Redoxreaktionen und Phosphorylierung (~30–32 ATP/Glucose).
+![Energie und ATP-Synthese](/grafik-21-energieprofil.svg)
 
 ---
 

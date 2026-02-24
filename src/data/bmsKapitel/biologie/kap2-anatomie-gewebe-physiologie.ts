@@ -23,12 +23,13 @@ export const bioKapAnatomieGewebe: Kapitel = {
       ],
       content: `## Einleitung
 
-Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmschleimhaut, die Blutgefäßinnenwand, die Harnblase. **Epithel** ist die universelle Verkleidung und Barriere; es besteht aus dicht aneinandergrenzenden Zellen. Je nach Aufgabe unterscheidet sich der Typ radikal: Ein hauchdünnes Plattenepithel in der Lunge ermöglicht schnellen Gasaustausch, das Darmepithel saugt Nährstoffe auf, das Harnblasenepithel dehnt sich enorm. Grundprinzip: Alle Epithelien sind **polar** (Ober- vs. Unterseite), **avaskulär** (keine eigenen Blutgefäße) und sitzen auf einer **Basalmembran**. Für den MedAT ist die Zuordnung von Epitheltyp zu Organ prüfungsrelevant, ebenso Tight Junctions und Sekretionsmechanismen.
+**Epithelgewebe** (kurz: Epithel) ist das Gewebe, das alle inneren und äußeren Oberflächen des Körpers bedeckt — Haut, Darmschleimhaut, Gefäßinnenwand, Harnblase, Atemwege. Seine **Hauptfunktion** ist Barriere und gerichteter Transport: Es trennt Innen von Außen, ermöglicht Resorption und Sekretion und passt sich der Aufgabe an (dünn für Gasaustausch in der Lunge, mehrschichtig für Schutz in der Haut, dehnbar in der Harnblase). **Medizinisch und für den BMS** ist Epithel zentral: Die Zuordnung „welches Epithel in welchem Organ“ wird regelmäßig abgefragt; Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) sind Klassiker. **Zusammenhang mit anderen Systemen:** Epithel liegt immer auf Bindegewebe (über die Basalmembran); Drüsenepithel liefert Sekrete in Blut (endokrin) oder in Gänge (exokrin); Flimmerepithel der Atemwege arbeitet mit Schleim und Immunabwehr zusammen. Alle Epithelien sind **polar** (apikal vs. basolateral), **avaskulär** (keine eigenen Gefäße) und sitzen auf einer **Basalmembran**.
 
 **In diesem Kapitel lernst du:**
 - die **Grundprinzipien** aller Epithelien (Polarität, Basalmembran, avaskulär) und **Zellkontakte** (Tight Junctions, Desmosomen, Gap Junctions, Hemidesmosomen)
-- die **Klassifikation** (einschichtig/mehrschichtig, Platten-/Kubisch-/Zylinderepithel) und typische **Organzuordnung**
-- **Drüsenepithelien** und **Sekretionsarten** (merokrin, apokrin, holokrin) sowie Kartagener-Syndrom
+- die **Klassifikation** nach Zellform und Schichtung sowie die **Organzuordnung** (z. B. Flimmerepithel → Trachea, Urothel → Harnblase)
+- **Drüsenepithelien** und **Sekretionsarten** (merokrin, apokrin, holokrin) mit typischen Beispielen
+- **Pseudostratifiziert** vs. mehrschichtig und **Kartagener-Syndrom** (Dynein-Defekt, Zilien)
 
 ---
 
@@ -50,9 +51,9 @@ Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmsc
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
 
-![Zellkontakte und Polarität](/grafik-1-membrantransport.svg)
+**SVG-Hinweis: Zellkontakte und Polarität** — Zeigt Epithelzellen mit apikaler und basolateraler Seite sowie die Lage von Tight Junctions, Desmosomen und Hemidesmosomen; hilft, Barriere- und Fence-Funktion zu verankern.
 
-**Erklärung zur Grafik:** Epithelzellen mit apikaler und basolateraler Seite; Transporter und Kanäle sind polar verteilt — Grundlage für gerichteten Transport und Barrierefunktion.
+![Zellkontakte und Polarität](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -77,9 +78,9 @@ Jede Oberfläche im Körper ist mit **Epithel** bedeckt — die Haut, die Darmsc
 
 > **Merke:** Pseudostratifiziert ≠ mehrschichtig — alle Zellen berühren Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
 
-![Epitheltypen und Organe](/grafik-zellmembran-integral-peripher.svg)
+**SVG-Hinweis: Epitheltypen und Organe** — Veranschaulicht die Zuordnung von Epithelform zu Funktion (Resorption, Barriere, Sekretion); unterstützt die Organzuordnung für Prüfungsfragen.
 
-**Erklärung zur Grafik:** Integrale und periphere Proteine in Epithelzellen; die Polarität (apikal/basolateral) bestimmt Resorption, Sekretion und Barriere — von Dünndarm bis Alveole.
+![Epitheltypen und Organe](/grafik-zellmembran-integral-peripher.svg)
 
 ---
 
@@ -109,26 +110,39 @@ Sekretionsmechanismen exokriner Drüsen:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Epithel-Grundprinzipien (polar, avaskulär, Basalmembran), Zellkontakte (Tight Junctions apikal, Desmosomen, Gap Junctions, Hemidesmosomen), Klassifikation und Organzuordnung (Flimmerepithel → Trachea, Urothel → Harnblase, verhornt/unverhornt), Sekretionsarten (merokrin, apokrin, holokrin), Kartagener-Syndrom (Dynein-Defekt).
+**Zentral prüfungsrelevant:**
+- Epithelien sind **polar** (apikal/basolateral), **avaskulär** und sitzen auf der **Basalmembran** (Verbindung zum Bindegewebe).
+- **Tight Junctions**: apikal, Barriere und Fence (trennen apikale von basolateraler Membrandomäne).
+- **Desmosomen**: mechanischer Zusammenhalt; **Gap Junctions**: Ionenaustausch (z. B. Herzmuskelzellen); **Hemidesmosomen**: Verankerung an Basalmembran.
+- **Flimmerepithel** (mehrreihig/pseudostratifiziert) → Trachea, Bronchien, Eileiter; **Urothel** (Schirmzellen) → Harnblase, Ureter.
+- **Verhorntes** Plattenepithel → Epidermis; **unverhorntes** Plattenepithel → Ösophagus, Vagina, Mundhöhle.
+- **Merokrin** = Exozytose (häufigste Form); **apokrin** = Abschnürung Zellspitze; **holokrin** = ganze Zelle wird Sekret (Talgdrüsen).
+- **Pseudostratifiziert** ≠ mehrschichtig: Alle Zellen berühren die Basalmembran, Kerne auf verschiedenen Höhen.
+- **Kartagener-Syndrom**: Dynein-Defekt → Kinozilien bewegungslos → Bronchiektasen, Infertilität, oft Situs inversus.
 
-**Ergänzend vertiefend:** Becherzellen, Schichten der Epidermis, Urothel-Schirmzellen.
+**Ergänzend vertiefend:**
+- Becherzellen: einzelfellige Schleimdrüsen im Darm- und Atemwegsepithel (Muzin, merokrin).
+- Epidermis: Stratum basale → spinosum → granulosum → corneum (Korneozyten, Keratin).
+- Urothel-Schirmzellen: Uroplakin-Membranen aus Vesikeln, Dehnung ohne Riss.
 
-**Häufige Fragen:**
-- Zuordnung von Epitheltyp zu Organ (z. B. Flimmerepithel → Trachea, Urothel → Harnblase)
-- Unterschied pseudostratifiziert vs. echt mehrschichtig
-- Sekretionsmechanismen (merokrin, apokrin, holokrin) mit Organbeispielen
+**Häufige Prüfungsfragen:**
+- Welches Epithel kleidet die Trachea aus? → Mehrreihiges (pseudostratifiziertes) Flimmerepithel.
+- Welches Epithel ermöglicht die Dehnung der Harnblase? → Urothel (Übergangsepithel) mit Schirmzellen.
+- Wo wird holokrin sezerniert? → Talgdrüsen (Glandulae sebaceae).
+- Was kennzeichnet pseudostratifiziertes Epithel? → Alle Zellen berühren die Basalmembran; Kerne auf unterschiedlichen Höhen.
+- Welche Funktion haben Tight Junctions? → Apikale Barriere und Fence (Trennung apikal/basolateral).
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Pseudostratifiziert ≠ mehrschichtig (alle Zellen berühren Basalmembran!)
-- Plattenepithel verhornt (Epidermis) vs. unverhornt (Ösophagus, Vagina)
-- Tight Junctions (apikal, Barriere) vs. Gap Junctions (Ionenaustausch)
-- Desmosomen (mechanische Haftung) vs. Hemidesmosomen (Verankerung an Basalmembran)
+**Typische Prüfungsfallen:**
+- Pseudostratifiziert ≠ mehrschichtig (alle Zellen berühren Basalmembran!).
+- Plattenepithel verhornt (Epidermis) vs. unverhornt (Ösophagus, Vagina) — nicht verwechseln.
+- Tight Junctions (apikal, Barriere) vs. Gap Junctions (Ionenaustausch zwischen Zellen).
+- Desmosomen (mechanische Haftung Zelle–Zelle) vs. Hemidesmosomen (Verankerung Zelle–Basalmembran).
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Dünndarm-Mikrovilli: Resorptionsfläche ca. 200 m²
 - Kinozilien: 9+2-Axonemstruktur, ca. 6 µm Länge
-- Ca. 85 % aller Karzinome entstehen aus entartetem Epithelgewebe
-- Kartagener-Syndrom: Dynein-Arm-Defekt → Situs inversus + Bronchiektasen + Infertilität
+- Ca. 85 % aller Karzinome entstehen aus Epithelgewebe
+- Kartagener-Syndrom: Dynein-Arm-Defekt → Situs inversus, Bronchiektasen, Infertilität
 
 ---
 
@@ -268,13 +282,13 @@ Sekretionsmechanismen exokriner Drüsen:
       ],
       content: `## Einleitung
 
-Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese Strukturen verbindet: Die eigentliche Masse ist nicht in den Zellen, sondern **außerhalb** — in der **extrazellulären Matrix (EZM)**. **Kollagen** ist das häufigste Protein des Körpers und gibt dem Bindegewebe seine Festigkeit. Je nach Kollagentyp und Matrix entsteht zugfeste Sehne, druckresistenter Knorpel oder mineralisierter Knochen. Für die Medizin ist das täglich relevant: Osteoporose, Arthrose, Skorbut — alles Bindegewebserkrankungen. Im MedAT werden Kollagentypen, Knochenumbau und Knorpelarten regelmäßig abgefragt.
+**Binde- und Stützgewebe** umfasst alle Gewebe, bei denen die **extrazelluläre Matrix (EZM)** — der Raum zwischen den Zellen mit Fasern und Grundsubstanz — die Masse und Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe, Bänder. **Hauptfunktion** ist Stützung, Formgebung, Speicherung (Fett) und Bewegung (Sehnen übertragen Muskelkraft). **Medizinisch und für den BMS** sind Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), die drei Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) zentral; Osteoporose, Arthrose und Skorbut sind Bindegewebserkrankungen. **Zusammenhang mit anderen Systemen:** Bindegewebe trägt Epithelien (Basalmembran enthält Kollagen IV), umgibt Muskeln und Nerven, bildet das Gerüst der Organe und speichert Energie (Fett). **Kollagen** ist das häufigste Protein des Körpers (~30 %) und verleiht Festigkeit; Vitamin C ist für seine Synthese nötig (Skorbut bei Mangel).
 
 **In diesem Kapitel lernst du:**
-- die **extrazelluläre Matrix (EZM)** (Kollagen, Elastin, Proteoglykane) und Zellen des Bindegewebes
-- **Kollagentypen I–IV** und ihre Zuordnung (Knochen/Sehne, Knorpel, Gefäße, Basalmembran)
-- **Knochenumbau** (Osteoblasten, Osteoklasten, RANKL/OPG) und **Knorpeltypen** (hyalin, Faser, elastisch)
-- **Fettgewebe** (weiß vs. braun, Leptin, UCP-1)
+- die **extrazelluläre Matrix (EZM)** (Kollagen, Elastin, Proteoglykane) und die wichtigsten Zellen (Fibroblasten, Osteoblasten/Osteoklasten, Chondrozyten)
+- **Kollagentypen I–IV** und ihre Zuordnung (I: Knochen/Sehne, II: Knorpel, III: Gefäße, IV: Basalmembran)
+- **Knochenumbau** (Osteoblast vs. Osteoklast, RANKL/OPG, Östrogen) und **Knorpeltypen** (hyalin, Faser, elastisch; alle avaskulär)
+- **Fettgewebe** (weiß: Leptin, Energiespeicher; braun: UCP-1, Thermogenese)
 
 ---
 
@@ -295,9 +309,9 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
 
 > **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
 
-![Extrazelluläre Matrix und Zellen](/grafik-zellmembran-fettsaeuren.svg)
+**SVG-Hinweis: Extrazelluläre Matrix und Zellen** — Zeigt die Grenzfläche zwischen Zelle und EZM (Integrine, Kollagen, Proteoglykane); unterstützt das Verständnis von Stütz- und Füllfunktion des Bindegewebes.
 
-**Erklärung zur Grafik:** Zellen und umgebende Matrix; die Grafik veranschaulicht die Grenzfläche zwischen Zelle und EZM (Integrine, Kollagen, Proteoglykane).
+![Extrazelluläre Matrix und Zellen](/grafik-zellmembran-fettsaeuren.svg)
 
 ---
 
@@ -341,9 +355,9 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
-![Knochenumbau und Ossifikation](/grafik-12-ossifikation.svg)
+**SVG-Hinweis: Knochenumbau und Ossifikation** — Zeigt Osteoblasten (Aufbau) und Osteoklasten (Abbau) sowie RANKL/OPG; hilft, Osteoporose und Therapie (Bisphosphonate, Denosumab) einzuordnen.
 
-**Erklärung zur Grafik:** Osteoblasten und Osteoklasten beim Knochenumbau; die Grafik zeigt Auf- und Abbau sowie die Rolle von RANKL/OPG.
+![Knochenumbau und Ossifikation](/grafik-12-ossifikation.svg)
 
 ---
 
@@ -388,27 +402,37 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** EZM (Kollagen, Elastin, Proteoglykane), Kollagentypen I–IV und Vorkommen, Knochenumbau (Osteoblast/Osteoklast, RANKL/OPG), Knorpeltypen (hyalin, Faser, elastisch, avaskulär), Vitamin C/Skorbut, Fettgewebe (weiß/braun, Leptin, UCP-1).
+**Zentral prüfungsrelevant:**
+- Bindegewebe: **Matrix dominiert über Zellen**; EZM aus Kollagen (Festigkeit), Elastin (Elastizität), Proteoglykanen (Wasser/Druck), Fibronektin (Adhäsion).
+- **Kollagen I**: Knochen, Sehnen, Haut, Kornea (zugfest, häufigster Typ). **Kollagen II**: Hyaliner Knorpel (druckresistent). **Kollagen III**: Gefäße, Wundheilung (dehnbar). **Kollagen IV**: Basalmembran (netzartig).
+- **Vitamin C** ist Cofaktor der Prolyl-/Lysylhydroxylase → ohne Vitamin C instabile Kollagenfibrillen → **Skorbut**.
+- **Osteoblast** (mesenchymal, baut auf) vs. **Osteoklast** (hämatopoetisch, resorbiert via HCl + Kathepsin K). **RANKL** aktiviert Osteoklasten, **OPG** hemmt RANKL. **Östrogen** ↑ OPG → Osteoporose bei Östrogenmangel.
+- **Knorpel**: Alle drei Typen **avaskulär** → schlechte Heilung. **Hyalin** = Kollagen II (Gelenk, Trachea). **Faser** = Kollagen I (Bandscheibe, Meniskus). **Elastisch** = Kollagen II + Elastin (Ohr, Epiglottis).
+- **Weißes Fett**: ein großer Lipidtropfen, Leptin (Sättigung), Adiponektin. **Braunes Fett**: viele Mitochondrien, **UCP-1** entkoppelt Atmungskette → Wärme (Thermogenese).
 
-**Ergänzend vertiefend:** Bisphosphonate, Denosumab, Arthrose, Bandscheibenvorfall.
+**Ergänzend vertiefend:**
+- Bisphosphonate und Denosumab (RANKL-Antikörper) bei Osteoporose.
+- Arthrose = Degeneration des Hyalinknorpels; Bandscheibenvorfall = Prolaps durch Anulus fibrosus.
 
-**Häufige Fragen:**
-- Zuordnung der Kollagentypen I, II, III zu Organen und Strukturen
-- Unterschied Osteoblasten vs. Osteoklasten (Herkunft, Funktion, Regulation)
-- Warum heilt Knorpel schlecht? (Avaskularität)
+**Häufige Prüfungsfragen:**
+- Welcher Kollagentyp in Sehnen und Knochen? → Kollagen Typ I.
+- Welche Zellen bauen Knochen ab, und aus welcher Linie? → Osteoklasten, hämatopoetisch (Monozyten/Makrophagen).
+- Warum heilt Knorpel schlecht? → Avaskulär (keine Gefäße), Ernährung nur durch Diffusion.
+- Was macht UCP-1 im braunen Fett? → Entkoppelt Atmungskette → Energie als Wärme (Thermogenese).
+- Wofür braucht der Körper Vitamin C bei der Kollagensynthese? → Cofaktor für Prolyl-/Lysylhydroxylase (Hydroxylierung → stabile Tripelhelix).
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Kollagen I (Zugfestigkeit, Sehnen/Knochen) vs. Kollagen II (Druckresistenz, Knorpel)
-- Hyalinknorpel (Gelenk, Kollagen II) vs. Faserknorpel (Bandscheibe, Kollagen I)
-- Osteoblasten (mesenchymal) vs. Osteoklasten (hämatopoetisch, Makrophagen-Linie)
-- Weißes Fettgewebe (Energiespeicher, ein großer Lipidtropfen) vs. braunes Fettgewebe (Thermogenese, viele Mitochondrien)
+**Typische Prüfungsfallen:**
+- Kollagen I (Zugfest, Sehnen/Knochen) vs. Kollagen II (Druckresistent, Knorpel) — nicht vertauschen.
+- Hyalinknorpel (Gelenk, Kollagen II) vs. Faserknorpel (Bandscheibe, Kollagen I).
+- Osteoblasten (mesenchymal, aufbauend) vs. Osteoklasten (hämatopoetisch, abbauend).
+- Weißes Fett (ein Tropfen, Leptin) vs. braunes Fett (viele Mitochondrien, UCP-1, Thermogenese).
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Kollagen = ca. 30 % des Gesamtproteins im Körper
-- Ca. 10 % der Knochenmasse werden jährlich umgebaut
-- Osteoklasten: Ruffled Border, HCl (pH ~4,5), Kathepsin K
-- Vitamin-C-Mangel → Skorbut (instabile Kollagenfibrillen)
-- RANKL aktiviert Osteoklasten; OPG hemmt RANKL (Denosumab-Wirkprinzip)
+**Prüfungsrelevante Zahlen & Fakten:**
+- Kollagen ≈ 30 % des Körperproteins
+- Knochenumbau ≈ 10 % der Knochenmasse/Jahr
+- Osteoklasten: Ruffled Border, HCl pH ~4,5, Kathepsin K
+- Vitamin-C-Mangel → Skorbut (instabile Fibrillen, Zahnfleischbluten, Wundheilungsstörung)
+- RANKL aktiviert Osteoklasten; OPG fängt RANKL ab (Denosumab = RANKL-Antikörper)
 
 ---
 
@@ -553,13 +577,13 @@ Knochen, Sehnen, Knorpel, Fettgewebe — all das ist **Bindegewebe**. Was diese 
       ],
       content: `## Einleitung
 
-Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gibt **drei Muskeltypen**: **Skelettmuskel** für willkürliche Bewegungen, **Herzmuskel** für den automatischen Blutpump, und **glatte Muskulatur** für alles im Inneren (Darm, Gefäße, Blase). Was alle verbindet: Kontraktion durch **Aktin-Myosin-Interaktion**, betrieben von ATP. Das Grundprinzip ist die **Gleitfilamenttheorie** — Filamente gleiten aneinander, das **Sarkomer** wird kürzer. Für den MedAT sind das Sarkomer, der Troponin/Ca²⁺-Schalter und die Unterschiede der drei Muskeltypen absolute Klassiker.
+**Muskelgewebe** ist das Gewebe, das durch Kontraktion Bewegung, Haltung und innerorganische Funktionen ermöglicht. Es gibt **drei Muskeltypen**: **Skelettmuskel** (willkürlich, an Knochen), **Herzmuskel** (unwillkürlich, Pumpe), **glatte Muskulatur** (unwillkürlich, Darm, Gefäße, Blase). **Hauptfunktion** ist Kraftentwicklung durch **Aktin-Myosin-Interaktion** nach dem **Gleitfilamentprinzip** — die kleinste Einheit ist das **Sarkomer** (von Z-Scheibe zu Z-Scheibe). **Medizinisch und für den BMS** sind Sarkomeraufbau (I-Bande, A-Bande, H-Zone bei Kontraktion), der Ca²⁺-Schalter (Troponin/Tropomyosin), die Rolle von ATP (Lösen des Myosins, nicht für den Kraftschlag) und die Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) zentral; Troponin I/T sind Herzinfarkt-Marker. **Zusammenhang mit anderen Systemen:** Skelettmuskel wird über motorische Nerven (NMJ) gesteuert; Herzmuskelzellen sind über Gap Junctions elektrisch gekoppelt; glatte Muskulatur reagiert auf autonomes Nervensystem und Hormone.
 
 **In diesem Kapitel lernst du:**
 - die **drei Muskeltypen** (Skelett, Herz, glatt) und ihre Steuerung (willkürlich/unwillkürlich)
-- **Sarkomeraufbau** (Z-Scheibe, A-Bande, I-Bande, H-Zone) und was bei Kontraktion passiert
-- den **Ca²⁺-Schalter** (Troponin/Tropomyosin) und die Rolle von **ATP** (Lösen, nicht Kraftschlag)
-- **Herzmuskel** (Gap Junctions, kein Tetanus) und **glatte Muskulatur** (Calmodulin statt Troponin)
+- **Sarkomeraufbau** (Z-Scheibe, A-Bande, I-Bande, H-Zone) und **Gleitfilamenttheorie** (bei Kontraktion: I und H kürzer, A konstant)
+- den **Ca²⁺-Schalter** (Troponin/Tropomyosin) und die Rolle von **ATP** (Lösen des Myosins nach dem Kraftschlag; Rigor mortis bei Fehlen)
+- **Herzmuskel** (Gap Junctions, Glanzstreifen, kein Tetanus) und **glatte Muskulatur** (Calmodulin/MLCK statt Troponin)
 
 ---
 
@@ -579,9 +603,9 @@ Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gi
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
 
-![Herzzyklus und Kontraktion](/grafik-6-herzzyklus.svg)
+**SVG-Hinweis: Herzzyklus und Kontraktion** — Zeigt die Koordination von Vorhof und Kammer sowie die Rolle von Gap Junctions; hilft, „kein Tetanus im Herzmuskel“ zu verankern.
 
-**Erklärung zur Grafik:** Herzmuskelkontraktion im EKG-Kontext; die Grafik veranschaulicht die Koordination von Vorhof und Kammer (Gap Junctions, kein Tetanus).
+![Herzzyklus und Kontraktion](/grafik-6-herzzyklus.svg)
 
 ---
 
@@ -602,9 +626,9 @@ Muskeln machen Bewegung möglich — aber das stimmt nur zu einem Drittel. Es gi
 
 > **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
 
-![Aktin-Myosin und Sarkomer](/grafik-1-membrantransport.svg)
+**SVG-Hinweis: Aktin-Myosin und Sarkomer** — Veranschaulicht Sarkomeraufbau und Ca²⁺-Freisetzung aus dem sarkoplasmatischen Retikulum (SR); unterstützt das Verständnis von Gleitfilamenttheorie und Troponin-Schalter.
 
-**Erklärung zur Grafik:** Ionenkanäle und Transport — Ca²⁺-Freisetzung aus dem SR und Rückpumpe (SERCA) steuern die Kontraktion; die Grafik ergänzt die elektromechanische Kopplung.
+![Aktin-Myosin und Sarkomer](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -654,27 +678,37 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Sarkomer (Z-Scheibe, A-/I-Bande, H-Zone; I und H kürzer, A konstant), Gleitfilamenttheorie, Ca²⁺/Troponin/Tropomyosin, ATP löst Myosin (Rigor mortis), drei Muskeltypen (Skelett/Herz/glatt), Herzmuskel (Gap Junctions, kein Tetanus), glatt (Calmodulin/MLCK), Troponin I/T als Herzinfarkt-Marker. **Glatte Muskulatur** (z. B. Darm): typisch **ausdauernde Tätigkeit**, unwillkürlich — nicht schnelle Kontraktion, nicht willkürlich beeinflussbar, keine aktive Streckung.
+**Zentral prüfungsrelevant:**
+- **Sarkomer**: von Z-Scheibe zu Z-Scheibe. Bei Kontraktion: **I-Bande** und **H-Zone** werden kürzer, **A-Bande** bleibt konstant (Myosinlänge ändert sich nicht). Gleitfilamenttheorie: Filamente gleiten, schrumpfen nicht.
+- **Ca²⁺-Schalter**: Ca²⁺ bindet Troponin C → Tropomyosin weicht → Myosin bindet Aktin → Kraftschlag. **ATP** löst Myosin von Aktin (nicht für den Kraftschlag!); fehlt ATP → **Rigor mortis**.
+- **Drei Muskeltypen**: Skelett (willkürlich, mehrkernig, Tetanus möglich); Herz (quergestreift, einkernig, **Gap Junctions** in Glanzstreifen, **kein Tetanus**); glatt (keine Sarkomere, **Calmodulin/MLCK** statt Troponin, unwillkürlich).
+- **Herzmuskel**: elektrische Kopplung über Gap Junctions; lange Refraktärzeit verhindert Tetanus (wichtig für Pumpfunktion).
+- **Glatte Muskulatur**: Ca²⁺/Calmodulin → MLCK → Myosin-Phosphorylierung → Kontraktion; ausdauernde, unwillkürliche Tätigkeit (Darm, Gefäße).
+- **Troponin I und T** (kardiale Isoformen): Herzinfarkt-Marker, 3–6 h nach Infarkt nachweisbar.
 
-**Ergänzend vertiefend:** Motorische Einheit, Rekrutierung, Titin/Nebulin.
+**Ergänzend vertiefend:**
+- Motorische Einheit = 1 Motoneuron + alle innervierten Fasern; Kraft durch Rekrutierung und Frequenzerhöhung (Tetanus).
+- Titin (Ruhespannung), Nebulin (Aktinlänge).
 
-**Häufige Fragen:**
-- Welche Sarkomerbanden verändern sich bei Kontraktion? (I-Bande und H-Zone kürzer, A-Bande konstant)
-- Rolle von Ca²⁺, Troponin und Tropomyosin im Kreuzbrückenzyklus
-- Vergleich Skelettmuskel vs. Herzmuskel vs. glatte Muskulatur
+**Häufige Prüfungsfragen:**
+- Welche Sarkomerbanden werden bei Kontraktion kürzer? → I-Bande und H-Zone; A-Bande konstant.
+- Wofür wird ATP im Kreuzbrückenzyklus benötigt? → Zum Lösen des Myosins von Aktin (nicht für den Kraftschlag).
+- Warum kann der Herzmuskel keinen Tetanus entwickeln? → Lange absolute Refraktärzeit, fast so lang wie die Kontraktion.
+- Was unterscheidet glatte von quergestreifter Muskulatur? → Kein Troponin, Calmodulin/MLCK; keine Sarkomere.
+- Warum steigt Troponin bei Herzinfarkt? → Freisetzung aus geschädigten Kardiomyozyten (cTnI, cTnT).
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- A-Bande (bleibt konstant, enthält Myosin) vs. I-Bande (wird kürzer, nur Aktin)
-- ATP wird für das Lösen (nicht für den Kraftschlag) benötigt
-- Herzmuskel: quergestreift aber einkernig (vs. Skelettmuskel: mehrkernig)
-- Glatte Muskulatur: Calmodulin statt Troponin, keine Sarkomere
-- Tetanus unmöglich im Herzmuskel (lange absolute Refraktärzeit)
+**Typische Prüfungsfallen:**
+- A-Bande bleibt konstant (Myosin) — nicht I-Bande. I-Bande und H-Zone werden kürzer.
+- ATP wird für das **Lösen** (nicht für den Kraftschlag) benötigt; Rigor mortis = kein ATP.
+- Herzmuskel: quergestreift, aber einkernig und mit Gap Junctions (nicht wie Skelettmuskel).
+- Glatte Muskulatur: Calmodulin/MLCK, keine Sarkomere, kein Troponin.
+- Tetanus im Herzmuskel unmöglich (Refraktärzeit).
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Sarkomerlänge in Ruhe: ca. 2,2 µm
-- Troponin I und T: Herzinfarkt-Marker, nachweisbar 3–6 h nach Infarkt
-- Motorische Einheit: 10 Fasern (Feinmotorik) bis 2000 Fasern (Grobmotorik)
-- Rigor mortis löst sich nach 24–48 h durch Proteolyse
+- Troponin I/T: 3–6 h nach Infarkt nachweisbar, bis ~14 Tage erhöht
+- Motorische Einheit: ~10 Fasern (Feinmotorik) bis ~2000 Fasern (Grobmotorik)
+- Rigor mortis: löst sich nach 24–48 h (Proteolyse)
 
 ---
 
@@ -822,13 +856,13 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
       ],
       content: `## Einleitung
 
-Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele **Gliazellen**. Gliazellen sind nicht bloß Stützzellen; sie bilden die **Blut-Hirn-Schranke**, isolieren Axone mit **Myelin**, räumen tote Zellen auf und regulieren Neurotransmitter. Das Nervensystem ist also ein Zusammenspiel aus **Neuronen** (Signalleitung) und **Gliazellen** (alles andere). Das wichtigste Prinzip: **Myelin** isoliert Axone → das Aktionspotential springt von **Schnürring** zu Schnürring (**saltatorisch**) → 100× schneller, 10× energiesparender. Für den MedAT sind der Vergleich Schwann-Zelle vs. Oligodendrozyt, saltatorische Leitung und Astrozyten/Mikroglia Prüfungsklassiker.
+**Nervengewebe** besteht aus **Neuronen** (Signalleitung) und **Gliazellen** (Stützung, Myelinisierung, Stoffwechsel, Immunität). **Hauptfunktion** ist die Erzeugung und Weiterleitung von Erregung: Dendriten und Soma empfangen Signale, am **Axonhügel** entsteht das Aktionspotential, das **Axon** leitet es weiter — bei myeliniserten Axonen **saltatorisch** (von Schnürring zu Schnürring), dadurch deutlich schneller und energiesparender. **Medizinisch und für den BMS** sind Aufbau des Neurons (Axon leitet vom Soma weg, Dendriten zum Soma hin), Myelinisierung (Schwann-Zelle im PNS: 1 Segment pro Zelle; Oligodendrozyt im ZNS: bis 50 Segmente) und Gliazellen (Astrozyten: Blut-Hirn-Schranke, K⁺-Puffer; Mikroglia: einzige mesodermale Gliazelle) zentral. **Zusammenhang mit anderen Systemen:** Nervengewebe bildet Gehirn, Rückenmark und periphere Nerven; Myelin wird von Schwann-Zellen (PNS) bzw. Oligodendrozyten (ZNS) gebildet; bei Demyelinisierung (z. B. Multiple Sklerose) ist die Leitungsgeschwindigkeit gestört.
 
 **In diesem Kapitel lernst du:**
-- den **Aufbau des Neurons** (Soma, Dendriten, Axon, Axonhügel) und wo das Aktionspotential startet
-- **Myelinisierung**: Schwann-Zelle (PNS, 1 Segment) vs. Oligodendrozyt (ZNS, bis 50 Segmente)
-- **Saltatorische Leitung** und warum sie schneller und energiesparender ist
-- **Gliazellen** (Astrozyten, Oligodendrozyten, Mikroglia) und ihre Funktionen
+- den **Aufbau des Neurons** (Soma, Dendriten, Axon, Axonhügel) und dass Erregung **vom Zellkörper weg** über das **Axon** geleitet wird
+- **Myelinisierung**: Schwann-Zelle (PNS, 1 Axon-Segment pro Zelle) vs. Oligodendrozyt (ZNS, bis 50 Segmente an verschiedenen Axonen)
+- **Saltatorische Leitung** (Sprung von Ranvier-Schnürring zu Schnürring) und warum sie schneller und energiesparender ist
+- **Gliazellen** (Astrozyten, Oligodendrozyten, Mikroglia, Ependym) und ihre Funktionen (BHS, Myelin, Immunität, Liquor)
 
 ---
 
@@ -843,9 +877,9 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 
 **Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
 
-![Membran und Ionenkanäle](/grafik-1-membrantransport.svg)
+**SVG-Hinweis: Membran und Ionenkanäle** — Zeigt Axon/Dendriten mit Ionenkanälen und Na⁺/K⁺-ATPase; Grundlage für Ruhepotenzial und Aktionspotential.
 
-**Erklärung zur Grafik:** Axon und Dendriten mit Ionenkanälen und Transport; die Grafik veranschaulicht die Grundlage für Ruhepotenzial und Aktionspotential (Na⁺/K⁺-ATPase, Kanäle).
+![Membran und Ionenkanäle](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -865,9 +899,7 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 
 > **Merke:** Schwann-Zelle (PNS) = **1 Segment**. Oligodendrozyt (ZNS) = **bis 50 Segmente**. PNS regeneriert (Büngner-Bänder), ZNS nicht (Nogo-A).
 
-![Myelin und Schnürringe](/grafik-zellmembran-integral-peripher.svg)
-
-**Erklärung zur Grafik:** Myelinscheide als Isolationsschicht; die Grafik ergänzt die Vorstellung von Segmenten und Ranvier-Schnürringen für die saltatorische Leitung.
+**SVG-Hinweis: Myelin und Schnürringe** — Zeigt Myelinscheide und Ranvier-Schnürringe; unterstützt das Verständnis der saltatorischen Leitung (Sprungleitung).
 
 ---
 
@@ -923,27 +955,36 @@ Das Gehirn enthält ~86 Milliarden **Neuronen** — aber fast doppelt so viele *
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Neuron (Soma, Dendriten, Axon, Axonhügel), Schwann-Zelle (PNS, 1 Segment) vs. Oligodendrozyt (ZNS, bis 50 Segmente), saltatorische Leitung (Schnürringe, Geschwindigkeit), Astrozyten (BHS-Induktion, Glutamat-Reuptake, K⁺-Puffer), Mikroglia (mesodermale Makrophagen), PNS-Regeneration vs. ZNS (Nogo-A, Glianarbe), Multiple Sklerose.
+**Zentral prüfungsrelevant:**
+- **Neuron**: Soma (Zellkörper), **Dendriten** (leiten zum Soma hin, Input), **Axon** (leitet vom Soma weg, Output). **Axonhügel**: Ort der Aktionspotential-Initiation (höchste Na⁺-Kanaldichte).
+- **Schwann-Zelle** (PNS): myelinisiert **1 Segment** eines Axons. **Oligodendrozyt** (ZNS): myelinisiert **bis 50 Segmente** verschiedener Axone.
+- **Saltatorische Leitung**: AP springt von **Ranvier-Schnürring** zu Schnürring; myelinisierte Fasern **70–120 m/s**, unmyelinisierte C-Fasern **0,5–2 m/s**; energiesparend (Na⁺/K⁺-ATPase nur an Schnürringen).
+- **Astrozyten**: induzieren **Blut-Hirn-Schranke** (Tight Junctions im Endothel), K⁺-Puffer, Glutamat-Reuptake; bilden Tight Junctions **nicht selbst**, sondern induzieren sie im Kapillarendothel.
+- **Mikroglia**: einzige **mesodermale** Gliazelle (Makrophagen des ZNS); alle anderen Gliazellen neuroektodermal.
+- **PNS**: Regeneration möglich (Büngner-Bänder, neurotrophe Faktoren). **ZNS**: kaum Regeneration (Nogo-A, Glianarbe nach Verletzung).
+- **Multiple Sklerose**: Demyelinisierung im ZNS (Oligodendrozyten geschädigt) → Leitungsverlangsamung/-block.
 
-**Ergänzend vertiefend:** Ependymzellen, Fasertypen Aα/C, Nav1.6.
+**Ergänzend vertiefend:**
+- Ependymzellen: Liquorproduktion (Plexus choroideus). Fasertypen Aα (motorisch, 70–120 m/s) vs. C (Schmerz, 0,5–2 m/s).
+- Na⁺-Kanal Nav1.6 an Ranvier-Schnürringen.
 
-**Häufige Fragen:**
-- Schwann-Zelle vs. Oligodendrozyt: Anzahl myelinisierter Segmente und Lokalisation
-- Warum ist saltatorische Leitung schneller und energiesparender?
-- Funktion der Astrozyten an der Blut-Hirn-Schranke
+**Häufige Prüfungsfragen:**
+- Über welche Fortsätze wird Erregung vom Zellkörper weggeleitet? → Axon (nicht Dendriten).
+- Schwann-Zelle vs. Oligodendrozyt? → Schwann (PNS, 1 Segment); Oligodendrozyt (ZNS, bis 50 Segmente).
+- Warum ist saltatorische Leitung schneller? → AP springt nur an Schnürringen, dazwischen passive Ausbreitung; weniger Ionenfluss, weniger ATP.
+- Welche Gliazelle ist mesodermalen Ursprungs? → Mikroglia (Makrophagen des ZNS).
+- Wer induziert die Blut-Hirn-Schranke? → Astrozyten (induzieren Tight Junctions im Endothel).
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Schwann-Zelle (PNS, 1 Segment) vs. Oligodendrozyt (ZNS, bis 50 Segmente)
-- Astrozyten induzieren die Tight Junctions, bilden sie aber nicht selbst
-- Mikroglia (Immunzellen des ZNS) vs. Astrozyten (Stützfunktion, BHS)
-- Axonhügel (Aktionspotential-Initiation) vs. Ranvier-Schnürringe (AP-Regeneration)
-- Büngner-Bänder (PNS-Regeneration) vs. Nogo-A (ZNS-Regenerationshemmung)
+**Typische Prüfungsfallen:**
+- Schwann-Zelle = **1** Segment (PNS); Oligodendrozyt = **bis 50** Segmente (ZNS) — nicht vertauschen.
+- Astrozyten **induzieren** Tight Junctions der BHS, bilden sie aber **nicht selbst** (liegen im Endothel).
+- Mikroglia (Immunzellen, mesoderm) vs. Astrozyten (Stützung, BHS, neuroektoderm).
+- Axonhügel = Initiation des AP; Ranvier-Schnürringe = Regeneration des AP entlang des Axons.
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Myelinisierte Aα-Fasern: bis 120 m/s Leitungsgeschwindigkeit
-- Unmyelinisierte C-Fasern: nur 0,5–2 m/s
-- Ein Oligodendrozyt kann bis zu 50 Axonsegmente gleichzeitig myelinisieren
-- Na⁺-Kanaldichte an Ranvier-Schnürringen besonders hoch (Nav1.6)
+**Prüfungsrelevante Zahlen & Fakten:**
+- Aα-Fasern (myelinisiert): 70–120 m/s; C-Fasern (unmyelinisiert): 0,5–2 m/s
+- Ein Oligodendrozyt: bis 50 Axonsegmente
+- Na⁺-Kanaldichte an Ranvier-Schnürringen hoch (Nav1.6)
 
 ---
 
