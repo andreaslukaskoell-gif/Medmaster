@@ -1226,11 +1226,22 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
       ],
       content: `## Einleitung
 
-1 m² = 10.000 cm² (nicht 100!). 1 L = 1.000 mL = 1 dm³ = 1.000 cm³. Wer das nicht weiß, macht beim nächsten Berechnungsschritt einen Faktor-10-Fehler — ein klassischer MedAT-Stolperpunkt. Länge, Fläche und Volumen hängen über Potenzen zusammen: Fläche ist quadratisch (k²), Volumen kubisch (k³). Für den MedAT sind Längenumrechnungen, Flächen- und Volumenumrechnungen, Körperoberfläche (BSA) für Dosierungen und Laborwerte (g/dL → g/L) prüfungsrelevant.
+1 m² = 10.000 cm² (nicht 100!). 1 L = 1.000 mL = 1 dm³ = 1.000 cm³. Wer das nicht weiß, macht beim nächsten Berechnungsschritt einen **Faktor-10-Fehler** — ein klassischer MedAT-Stolperpunkt. **Länge, Fläche und Volumen** hängen über Potenzen zusammen: Bei der **Fläche** wird der Längenfaktor **quadriert** (k²), beim **Volumen** **kubiert** (k³). Für den MedAT sind Längenumrechnungen, Flächen- und Volumenumrechnungen, **Körperoberfläche (BSA)** für Dosierungen und Laborwerte (g/dL → g/L) prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Längeneinheiten** von km bis nm (Faktor 10 je Stufe) und medizinische Größenordnungen (Zelle µm, Virus nm)
+- **Flächenumrechnung:** Faktor **quadrieren** — 1 m² = 10.000 cm² (nicht 100!)
+- **Volumenumrechnung:** Faktor **kubieren** — 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**
+- **Körperoberfläche (BSA)** nach Mosteller und klinische Anwendung (Chemotherapie, Verbrennungen)
+- **Laborwerte** g/dL ↔ g/L (1 dL = 100 mL) und typische MedAT-Fallen
+
+---
 
 ## Längeneinheiten — Die vollständige Hierarchie
 
-Die metrischen Längeneinheiten sind durch Zehnerpotenzen verbunden. Das Grundprinzip: Jede Einheitsstufe unterscheidet sich von der nächsten um den Faktor 10.
+**Um Längen sicher umzurechnen,** brauchst du die **metrische Hierarchie**. **Dafür** die Grundregel: Jede **Längeneinheit** unterscheidet sich von der nächsten um den **Faktor 10**.
+
+Die metrischen Längeneinheiten sind durch Zehnerpotenzen verbunden:
 
 1 km = 1.000 m = 10³ m
 1 m = 10 dm = 100 cm = 1.000 mm
@@ -1250,9 +1261,15 @@ In der Medizin sind folgende Größenordnungen essenziell:
 
 Das Lichtmikroskop löst bis ~200 nm auf: Bakterien (~1 μm) sichtbar, Viren (~100 nm) nicht.
 
+> **Merke:** **Länge:** Jede Stufe = Faktor 10. 1 m = 10⁶ μm = 10⁹ nm. Zellen im μm-Bereich, Viren im nm-Bereich.
+
+---
+
 ## Flächeneinheiten — Der häufigste Irrtum am MedAT
 
-ACHTUNG: Bei Flächeneinheiten wird der Faktor QUADRIERT!
+**Bisher haben wir gesehen:** Lineare Längen mit Faktor 10. **Bei Flächen** gilt etwas anderes: Der Umrechnungsfaktor wird **quadriert** (mit 2 potenziert). **Das ist der häufigste MedAT-Fehler.**
+
+ACHTUNG: Bei **Flächeneinheiten** wird der Faktor **QUADRIERT**!
 
 **1 m² = 10.000 cm² = 10⁴ cm²** (NICHT 100 cm²!)
 
@@ -1275,9 +1292,15 @@ Klinisch relevante Flächen:
 - Dünndarmoberfläche (mit Zotten und Mikrovilli): ~250–400 m²
 - Handflächenfläche: ~0,8 % KOF (Neuner-Regel in der Verbrennungsmedizin)
 
+**SVG-Hinweis (Fläche: Faktor quadrieren):** Ein Quadrat 1 m × 1 m mit 100×100-Kästchen (1 cm²) zeigt: 1 m² = 10.000 cm². *Typ: Schema / Veranschaulichung.*
+
+---
+
 ## Volumeneinheiten — Der Faktor wird kubisch
 
-Bei Volumen wird der Faktor KUBIERT:
+**Bisher haben wir gesehen:** Fläche = Faktor². **Bei Volumen** wird der Faktor **kubiert** (mit 3 potenziert). **Dafür** die wichtigsten Beziehungen.
+
+Bei Volumen wird der Faktor **KUBIERT**:
 
 **1 m³ = 10⁶ cm³** (NICHT 10³ cm³!)
 
@@ -1297,11 +1320,17 @@ Klinisch relevante Volumina:
 - Atemzugvolumen: ~500 mL; Totalkapazität Lunge: ~6 L
 - Tagesharnmenge: ~1.500 mL; Perspiratio insensibilis: ~700 mL/Tag
 
-> **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor kubieren!
+> **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor **kubieren**!
+
+**SVG-Hinweis (Volumen: 1 L = 1 dm³ = 1.000 cm³):** Ein Würfel 1 dm Kantenlänge mit Unterteilung in cm³ zeigt: 1 L = 1.000 cm³. *Typ: Schema / Veranschaulichung.*
+
+---
 
 ## Der allgemeine Umrechnungsalgorithmus
 
-1. Länge: Faktor k → k¹
+**Um jede Umrechnung sicher zu machen,** merk dir: **Dimension bestimmt die Potenz.** **Dafür** die drei Fälle:
+
+1. **Länge:** Faktor k → k¹
 2. Fläche: Faktor k → k²
 3. Volumen: Faktor k → k³
 
@@ -1324,7 +1353,11 @@ Für 170 cm, 70 kg: BSA = √(170 × 70 / 3.600) = √3,306 ≈ 1,82 m²
 
 Die KOF wird in der Onkologie für Chemotherapiedosierungen und in der Intensivmedizin für Flüssigkeitsbilanzierung genutzt.
 
+---
+
 ## MedAT-Rechenbeispiele
+
+**Um das Gelernte anzuwenden,** folgen drei typische Aufgaben: Fläche, Volumen, Laborwert. **Kernfrage:** Ist der Faktor linear, quadratisch oder kubisch?
 
 **Aufgabe 1 — Flächenumrechnung:** Eine Hauttransplantation erfordert eine Fläche von 0,15 m². Wie viel cm² ist das?
 Lösung: 1 m² = 10.000 cm² → 0,15 m² = 0,15 × 10.000 = 1.500 cm². Das entspricht einem Hautlappen von ca. 30 cm × 50 cm.
@@ -1339,8 +1372,11 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Länge: Faktor 10 je Stufe (km → m → … → μm → nm); Fläche: Faktor **quadrieren** — 1 m² = 10.000 cm² (nicht 100!); Volumen: Faktor **kubieren** — 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**; 1 dL = 100 mL; g/dL → g/L: × 10; BSA Mosteller: √(Größe[cm]×Gewicht[kg]/3.600); Alveolenfläche ~70–140 m²; KOF ~1,7–2,0 m².
+
+**Ergänzend vertiefend (noch prüfungsnah):** Neuner-Regel Verbrennungen; 1 mm² = 10⁶ μm²; Hektar; klinische Volumina (Blutvolumen, Herzzeitvolumen).
 
 **Häufige Fragen:**
 - "1 m² = ? cm²" → 10.000 cm² (Faktor quadrieren: 100² = 10.000 — nicht 100!)
@@ -1533,11 +1569,22 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
       ],
       content: `## Einleitung
 
-Ein EKG-Intervall wird in ms gemessen. Blutfluss in m/s oder cm/s. Bremsweg beim Autounfall in m und g-Kräfte. Zeit, Geschwindigkeit und Beschleunigung sind die kinematischen Grundgrößen — und im MedAT erscheinen sie regelmäßig in Physikaufgaben zu Herzfrequenz, Blutfluss, Fallversuchen und Traumamechanismen. Für den MedAT sind Zeitumrechnungen (s/min/h), v = s/t, a = Δv/Δt, g = 9,81 m/s², freier Fall und km/h ↔ m/s prüfungsrelevant.
+Ein EKG-Intervall wird in **ms** gemessen. Blutfluss in **m/s** oder cm/s. Bremsweg beim Autounfall in m und **g-Kräfte**. **Zeit, Geschwindigkeit und Beschleunigung** sind die **kinematischen Grundgrößen** — also die Größen, die Bewegung beschreiben (ohne die Ursache, die Kraft). Im MedAT erscheinen sie in Physikaufgaben zu Herzfrequenz, Blutfluss, Fallversuchen und Traumamechanismen. Für den MedAT sind Zeitumrechnungen (s/min/h), **v = s/t**, **a = Δv/Δt**, **g = 9,81 m/s²**, freier Fall und **km/h ↔ m/s** prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- **Zeiteinheiten** im 60er-System (1 min = 60 s, 1 h = 3.600 s) und medizinische Zeitskalen (EKG, Halbwertszeit)
+- **Geschwindigkeit** v = s/t [m/s] und Umrechnung **km/h ↔ m/s** (Faktor 3,6)
+- **Beschleunigung** a = Δv/Δt und die **drei Formeln** der gleichmäßig beschleunigten Bewegung
+- **Freier Fall:** v = g·t, s = ½·g·t², Aufprall **v = √(2gh)**; g ≈ 10 m/s²
+- **Herzfrequenz** in Hz (÷ 60) und **Nervenleitgeschwindigkeit** (NLG) als klinische Anwendung
+
+---
 
 ## Zeiteinheiten — Das nicht-dezimale System
 
-Anders als metrische Längen- oder Masseneinheiten folgen Zeiteinheiten einem historisch gewachsenen 60er-System (Sexagesimalsystem) aus dem babylonischen Raum:
+**Um Zeitintervalle sicher umzurechnen,** brauchst du das **60er-System**. **Anders** als Länge oder Masse folgen Zeiteinheiten keinem Dezimalsystem. **Dafür** die festen Umrechnungen.
+
+Anders als metrische Längen- oder Masseneinheiten folgen **Zeiteinheiten** einem historisch gewachsenen **60er-System** (**Sexagesimalsystem**) aus dem babylonischen Raum:
 
 1 Minute (min) = 60 Sekunden (s)
 1 Stunde (h) = 60 min = 3.600 s
@@ -1560,9 +1607,11 @@ Frequenz und Periode: f = 1/T und T = 1/f
 - Herzfrequenz 75/min = 1,25 Hz → T = 0,8 s = 800 ms
 - Herzfrequenz 120/min (Tachykardie) = 2 Hz → T = 0,5 s
 
+---
+
 ## Geschwindigkeit und ihre Umrechnung
 
-Geschwindigkeit: v = s/t (Weg durch Zeit). SI-Einheit: m/s.
+**Bisher haben wir gesehen:** Zeiteinheiten. **Die zentrale Größe der Bewegung** ist die **Geschwindigkeit** — sie gibt an, wie viel **Weg pro Zeit** zurückgelegt wird. **Formel:** **v = s/t** (Weg durch Zeit). SI-Einheit: **m/s**.
 
 Umrechnung km/h ↔ m/s:
 v [m/s] = v [km/h] / 3,6
@@ -1588,7 +1637,15 @@ Physiologische Geschwindigkeiten:
 
 Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s) geleitet; der anhaltende, dumpfe Schmerz über C-Fasern (0,5–2 m/s). Das erklärt das zeitliche Muster der Schmerzwahrnehmung.
 
+> **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** mal **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
+
+**SVG-Hinweis (km/h ↔ m/s):** Ein kleines Schema mit Pfeilen „÷ 3,6“ und „× 3,6“ und den Beispielen 36 km/h = 10 m/s unterstützt die Merkfähigkeit. *Typ: Schema / Eselsbrücke.*
+
+---
+
 ## Gleichförmige Bewegung
+
+**Bisher haben wir gesehen:** Geschwindigkeit und ihre Umrechnung. **Wenn die Geschwindigkeit konstant ist** (keine Beschleunigung, a = 0), gilt die einfachste Bewegungsgleichung. **Dafür:**
 
 Bei konstanter Geschwindigkeit (a = 0):
 s = v × t (Weg = Geschwindigkeit × Zeit)
@@ -1600,9 +1657,11 @@ s = 0,5 m/s × 60 s = 30 m!
 
 Die Kreislaufzeit beträgt beim Gesunden ~1 Minute.
 
+---
+
 ## Gleichmäßig beschleunigte Bewegung
 
-Wenn eine konstante Kraft wirkt, entsteht gleichmäßige Beschleunigung a in m/s².
+**Bisher haben wir gesehen:** Gleichförmige Bewegung (v = const). **Wenn eine konstante Kraft wirkt** (z. B. die Erdanziehung), entsteht **gleichmäßige Beschleunigung** — die **Beschleunigung** a gibt an, um wie viel sich die Geschwindigkeit pro Sekunde ändert (Einheit m/s²). **Dafür** die drei Grundformeln:
 
 Die drei kinematischen Grundformeln:
 1. v(t) = v₀ + a × t (Geschwindigkeit nach Zeit t)
@@ -1621,11 +1680,19 @@ v = √(2 × g × h)
 - Aus 5 m: v = √(100) = 10 m/s = 36 km/h
 - Aus 20 m: v = √(400) = 20 m/s = 72 km/h
 
+> **Merke:** **Freier Fall:** v = g·t; s = ½·g·t²; **Aufprallgeschwindigkeit** v = √(2·g·h). g ≈ 10 m/s². Ab 3 m Sturzhöhe: Hochrasanztrauma.
+
+---
+
 ## Klinische Mechanik — Trauma
 
-In der Notfallmedizin beschreibt der Traumamechanismus die Energieübertragung auf den Körper. Fahrzeugkollision bei 50 km/h (= 13,9 m/s): Bei Airbag-Auslösung (Verzögerungszeit ~30 ms): a = 13,9 / 0,03 ≈ 463 m/s² ≈ 47 g. Sturz aus >3 m Höhe gilt als Hochrasanztrauma. Dezelerationstrauma der Aorta: Scherkraft-Riss am Aortenisthmus ist eine klassische Hochrasanzkomplikation.
+**Um Kinematik im Notfall einzuordnen:** die Energieübertragung auf den Körper. Fahrzeugkollision bei 50 km/h (= 13,9 m/s): Bei Airbag-Auslösung (Verzögerungszeit ~30 ms): a = 13,9 / 0,03 ≈ 463 m/s² ≈ 47 g. Sturz aus >3 m Höhe gilt als Hochrasanztrauma. Dezelerationstrauma der Aorta: Scherkraft-Riss am Aortenisthmus ist eine klassische Hochrasanzkomplikation.
+
+---
 
 ## MedAT-Rechenbeispiele
+
+**Um das Gelernte anzuwenden,** folgen drei typische Aufgaben: Geschwindigkeitsumrechnung, Herzfrequenz, Sturzhöhe. **Die drei wichtigsten Formeln:** km/h ÷ 3,6 = m/s; HF/min ÷ 60 = Hz; v = √(2gh).
 
 **Aufgabe 1 — Geschwindigkeitsumrechnung:** Ein Krankenwagen fährt mit 108 km/h. Wie schnell ist das in m/s?
 Lösung: 108 / 3,6 = 30 m/s. Merkhilfe: 36 km/h = 10 m/s → 108 = 3 × 36 → 3 × 10 = 30 m/s.
@@ -1640,8 +1707,11 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Zeiteinheiten: 1 min = 60 s, 1 h = 3.600 s, 1 Tag = 86.400 s; Geschwindigkeit v = s/t [m/s]; **km/h ÷ 3,6 = m/s**, m/s × 3,6 = km/h (36 km/h = 10 m/s); Beschleunigung a = Δv/Δt; drei Formeln gleichmäßig beschleunigt (v = v₀+at, s = v₀t+½at², v² = v₀²+2as); **Freier Fall:** v = g·t, s = ½·g·t², **Aufprall v = √(2gh)**; g ≈ 10 m/s²; Herzfrequenz: f [Hz] = HF [1/min] ÷ 60, T = 1/f; NLG A-alpha 60–80 m/s, C-Fasern 0,5–2 m/s; ab 3 m Sturzhöhe Hochrasanztrauma.
+
+**Ergänzend vertiefend (noch prüfungsnah):** Trauma g-Kräfte; EKG-Intervalle in ms; Halbwertszeiten in verschiedenen Zeiteinheiten.
 
 **Häufige Fragen:**
 - "72 km/h = ? m/s" → 20 m/s (÷ 3,6; Merkhilfe: 36 km/h = 10 m/s)
@@ -1851,21 +1921,32 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
       ],
       content: `## Einleitung
 
-Kraft in Newton, Druck in Pascal, Energie in Joule — diese Einheiten tauchen in jeder MedAT-Physikaufgabe auf. Aber wie hängen sie zusammen? Alle abgeleiteten Einheiten lassen sich aus den **7 SI-Grundeinheiten** aufbauen. Das SI-System ist das gemeinsame Fundament aller Naturwissenschaften und der Medizin. Die Dimensionsanalyse — Prüfen ob Einheiten stimmen — rettet vor Rechenfehlern. Für den MedAT sind die 7 Grundeinheiten, abgeleitete Einheiten (N, Pa, J, W, V), klinisch relevante Nicht-SI-Einheiten (mmHg, kcal) und Dimensionsanalyse prüfungsrelevant.
+Kraft in **Newton**, Druck in **Pascal**, Energie in **Joule** — diese Einheiten tauchen in jeder MedAT-Physikaufgabe auf. **Aber wie hängen sie zusammen?** Alle **abgeleiteten Einheiten** lassen sich aus den **7 SI-Grundeinheiten** aufbauen — das sind die sieben Basisgrößen, aus denen sich alles andere durch Multiplikation und Division ableitet. Das **SI-System** ist das gemeinsame Fundament aller Naturwissenschaften und der Medizin. Die **Dimensionsanalyse** — das Prüfen, ob die Einheiten auf beiden Seiten einer Gleichung übereinstimmen — rettet vor Rechenfehlern. Für den MedAT sind die 7 Grundeinheiten, abgeleitete Einheiten (N, Pa, J, W, V), klinisch relevante Nicht-SI-Einheiten (mmHg, kcal) und Dimensionsanalyse prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- die **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) und warum **kg** die einzige mit Vorsilbe ist
+- **abgeleitete Einheiten** und die **Ableitungskette** N → Pa → J → W (Newton, Pascal, Joule, Watt)
+- **klinisch relevante Nicht-SI-Einheiten** (mmHg, kcal, Da) und ihre Umrechnung
+- **Dimensionsanalyse** als Kontrolle (Einheiten beider Seiten müssen übereinstimmen)
+- typische **MedAT-Aufgaben** (Druck mmHg↔Pa, Energie kcal↔kJ, Molkonzentration)
+
+---
 
 ## Die sieben SI-Grundeinheiten
 
-Die sieben Grundgrößen und ihre SI-Einheiten:
+**Um das SI-System zu nutzen,** starten wir mit den **sieben Grundeinheiten**. **Sie sind so gewählt,** dass sich alle anderen physikalischen Einheiten daraus ableiten lassen.
 
-Länge → Meter (m): Körpergröße, Organabmessungen, Wellenlängen
-Masse → Kilogramm (kg): Körpergewicht, Dosierung — EINZIGE Grundeinheit mit Vorsilbe!
-Zeit → Sekunde (s): EKG-Intervalle, Halbwertszeiten, Reflexlatenzen
-Elektrische Stromstärke → Ampere (A): Defibrillation, Elektrostimulation
-Thermodynamische Temperatur → Kelvin (K): Enzymkinetik, Fieberdefinition
-Stoffmenge → Mol (mol): Laborwerte, Osmolarität, Reaktionsgleichungen
-Lichtstärke → Candela (cd): Ophthalmologie (selten klinisch)
+Die sieben **Grundgrößen** und ihre **SI-Einheiten**:
 
-Merksatz: m — kg — s — A — K — mol — cd
+| Grundgröße | Einheit | Symbol | Klinischer Bezug (Auszug) |
+|------------|---------|--------|---------------------------|
+| Länge | Meter | m | Körpergröße, Organabmessungen |
+| Masse | **Kilogramm** | **kg** | Körpergewicht, Dosierung — **einzige** Grundeinheit mit Vorsilbe! |
+| Zeit | Sekunde | s | EKG-Intervalle, Halbwertszeiten |
+| Elektrische Stromstärke | Ampere | A | Defibrillation, Elektrostimulation |
+| Thermodynamische Temperatur | Kelvin | K | Enzymkinetik; T[K] = T[°C] + 273 |
+| Stoffmenge | Mol | mol | Laborwerte, Osmolarität |
+| Lichtstärke | Candela | cd | Ophthalmologie (selten klinisch) |
 
 > **Merke:** Es gibt genau **7 SI-Grundeinheiten**: m, kg, s, A, K, mol, cd. kg ist die einzige Grundeinheit MIT Vorsilbe. Temperatur in Kelvin (kein °-Symbol!): T[K] = T[°C] + 273.
 
@@ -1873,13 +1954,19 @@ Wichtige Besonderheiten:
 
 Masse: Die SI-Grundeinheit ist Kilogramm (kg), NICHT Gramm! Das ist historisch ungewöhnlich — kg ist die einzige Grundeinheit mit Vorsilbe. Massenleiter: 1 kg = 1.000 g; 1 g = 1.000 mg; 1 mg = 1.000 μg; 1 μg = 1.000 ng.
 
-Temperatur: Grundeinheit Kelvin (K), KEIN Grad-Symbol! Umrechnung: T [K] = T [°C] + 273,15. Absolutnullpunkt: 0 K = −273,15°C. Körpertemperatur 37°C = 310 K. Fieber: >38°C = >311 K.
+Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T [°C] + 273,15. Absolutnullpunkt: 0 K = −273,15°C. Körpertemperatur 37°C = 310 K. Fieber: >38°C = >311 K.
 
-Mol: 1 mol = N_A = 6,022 × 10²³ Teilchen (Avogadro-Zahl). Molare Masse M in g/mol. Glukose C₆H₁₂O₆: M = 6×12 + 12×1 + 6×16 = 180 g/mol. NaCl: M = 23 + 35,5 = 58,5 g/mol.
+**Mol:** 1 mol = N_A = 6,022 × 10²³ Teilchen (**Avogadro-Zahl**). **Molare Masse** M in g/mol. Glukose C₆H₁₂O₆: M = 180 g/mol. NaCl: M = 58,5 g/mol.
+
+**SVG-Hinweis (7 SI-Grundeinheiten):** Eine kompakte Tabelle oder Leiter mit m, kg, s, A, K, mol, cd unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
+
+---
 
 ## Abgeleitete SI-Einheiten
 
-Kraft → Newton (N) = kg·m/s²; Klinisch: Gewebezug, Herzkontraktion
+**Bisher haben wir gesehen:** Die sieben Grundeinheiten. **Alle weiteren** Einheiten (Kraft, Druck, Energie, Leistung, …) sind **abgeleitet** — sie entstehen durch Produkte und Quotienten der Grundeinheiten. **Dafür** die wichtigsten für den MedAT:
+
+Kraft → **Newton (N)** = kg·m/s²; Klinisch: Gewebezug, Herzkontraktion
 Druck → Pascal (Pa) = N/m² = kg/(m·s²); Klinisch: Blutdruck, Atemwegsdruck
 Energie/Arbeit → Joule (J) = N·m = kg·m²/s²; Klinisch: Nahrungsenergie, Herzarbeit
 Leistung → Watt (W) = J/s = kg·m²/s³; Klinisch: Herzleistung, Metabolismus
@@ -1895,9 +1982,13 @@ Ableitungsketten:
 Newton → Joule → Watt: N (kg·m/s²) → N·m = J (kg·m²/s²) → J/s = W (kg·m²/s³)
 Newton → Pascal: N/m² = Pa (kg/(m·s²))
 
-> **Merke:** Ableitungskette: N = kg·m/s² → Pa = N/m² (Druck) → J = N·m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
+> **Merke:** **Ableitungskette:** N = kg·m/s² → Pa = N/m² (Druck) → J = N·m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
+
+---
 
 ## Klinisch relevante Nicht-SI-Einheiten
+
+**Bisher haben wir gesehen:** SI-Grundeinheiten und abgeleitete SI-Einheiten. **In der Klinik** werden daneben noch **Nicht-SI-Einheiten** verwendet — du musst sie in SI umrechnen können. **Dafür** die wichtigsten:
 
 Druck:
 - mmHg: Blutdruck, Liquordruck, Augeninnendruck; 1 mmHg = 133,322 Pa
@@ -1913,6 +2004,8 @@ Molekülmasse:
 - Albumin: 66 kDa; IgG: 150 kDa; Hämoglobin (Tetramer): 64 kDa; Insulin: 5,8 kDa
 
 ## Dimensionsanalyse
+
+**Um Formeln zu prüfen oder zu rekonstruieren,** nutzt du die **Dimensionsanalyse**: Die **Einheiten** auf beiden Seiten einer Gleichung müssen **übereinstimmen**.
 
 Prinzip: Die Einheiten auf beiden Seiten einer Gleichung müssen übereinstimmen.
 
@@ -1950,6 +2043,8 @@ Klinische Konzentrationseinheiten im Labor:
 
 ## MedAT-Rechenbeispiele
 
+**Um das Gelernte anzuwenden,** folgen vier typische Aufgaben: Druckumrechnung, Energieumrechnung, Dimensionsanalyse, Molkonzentration. **Kernwerkzeug:** Ableitungskette N → Pa → J → W und Einheitenkontrolle.
+
 **Aufgabe 1 — Druckumrechnung:** Der diastolische Blutdruck beträgt 80 mmHg. Wie viel Pa ist das?
 Lösung: 80 mmHg × 133 Pa/mmHg = 10.640 Pa ≈ 10,6 kPa. Der systolische Wert von 120 mmHg = 15.960 Pa ≈ 16 kPa.
 
@@ -1966,8 +2061,11 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd; **kg** einzige mit Vorsilbe; Temperatur in K: T[K] = T[°C] + 273; Ableitungskette N = kg·m/s² → Pa = N/m² → J = N·m → W = J/s; 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; Dimensionsanalyse (Einheiten beider Seiten müssen übereinstimmen); Mol, Avogadro 6,022×10²³; Glukose mg/dL → mmol/L (÷ 18 bzw. Molmasse 180).
+
+**Ergänzend vertiefend (noch prüfungsnah):** Coulomb, Volt, Ohm, Hertz, Becquerel, Gray, Sievert; Da (Dalton); cmH₂O; mOsmol/kg.
 
 **Häufige Fragen:**
 - "Welche SI-Grundeinheit misst Stoffmenge?" → Mol (mol); Avogadro: 6,022 × 10²³ Teilchen/mol
