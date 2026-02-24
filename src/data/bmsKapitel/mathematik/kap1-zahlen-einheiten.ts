@@ -411,19 +411,40 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
       ],
       content: `## Einleitung
 
-"250 mg Paracetamol", "0,5 µg Fentanyl/h", "5 nmol/L TSH", "120 mmHg Blutdruck" — SI-Präfixe begegnen Ärzten täglich. Ein Verwechseln von Mikro und Milli bei einer Dosierung kann tödlich sein. Präfixe sind keine optionale Extrakenntnis, sondern Grundvoraussetzung für sicheres Rechnen in der Medizin. 12 Präfixe von Femto bis Tera genügen für den Alltag. Für den MedAT sind Milli (m, 10⁻³), Mikro (µ, 10⁻⁶), Nano (n, 10⁻⁹), Piko (p, 10⁻¹²), Kilo (k, 10³) und Mega (M, 10⁶) besonders prüfungsrelevant.
+"250 mg Paracetamol", "0,5 µg Fentanyl/h", "5 nmol/L TSH", "120 mmHg Blutdruck" — **SI-Präfixe** begegnen Ärzten täglich. Ein **Präfix** ist eine vorgestellte Silbe oder ein Zeichen (z. B. m, µ, n), die eine **Zehnerpotenz** zur Basiseinheit angeben. Ein Verwechseln von Mikro und Milli bei einer Dosierung kann tödlich sein. Präfixe sind keine optionale Extrakenntnis, sondern Grundvoraussetzung für sicheres Rechnen in der Medizin. 12 Präfixe von Femto bis Tera genügen für den Alltag. Für den MedAT sind Milli (m, 10⁻³), Mikro (µ, 10⁻⁶), Nano (n, 10⁻⁹), Piko (p, 10⁻¹²), Kilo (k, 10³) und Mega (M, 10⁶) besonders prüfungsrelevant.
+
+**In diesem Kapitel lernst du:**
+- die **Systematik der SI-Präfixe** (Dreierschritte 10³) von Femto (10⁻¹⁵) bis Tera (10¹²)
+- **medizinisch relevante Präfixe** sicher zuordnen: Milli (mg, mmol, mL), Mikro (µg, µm), Nano (ng, nm), Piko, Femto (z. B. fL für MCV)
+- **Umrechnungen** zwischen Präfixen (kleinere Einheit → größere Zahl; "wer kleiner misst, zählt mehr")
+- **Dosierungsfallen** zu vermeiden (µg ≠ mg; 1 mg = 1.000 µg — Verwechslung = 1.000-facher Fehler)
+- typische **MedAT-Aufgaben** (z. B. mmol/L → µmol/L, mg → µg) fehlerfrei zu lösen
+
+---
 
 ## Die Systematik der SI-Präfixe
 
-SI-Präfixe sind eindeutige, unveränderliche Abkürzungen für Potenzen von 10. Sie können vor jede SI-Einheit gesetzt werden: Meter (m), Gramm (g), Liter (L), Mol (mol), Sekunde (s), Pascal (Pa), Volt (V) usw. Die Präfixe sind in Dreierschritten (10³) angeordnet, was dem menschlichen Bedürfnis nach handlichen Zahlen zwischen 1 und 1.000 entspricht.
+**Um Präfixe sicher zu nutzen,** brauchst du zuerst die **Systematik**: Welche Zeichen gibt es, und in welcher Reihenfolge? **Dafür** die Grundregel.
 
-Für die Medizin sind die Bereiche von Femto (10⁻¹⁵) bis Tera (10¹²) relevant, wobei der Alltag hauptsächlich die mittleren Präfixe Milli (10⁻³), Mikro (10⁻⁶) und Nano (10⁻⁹) umfasst.
+**SI-Präfixe** sind eindeutige, unveränderliche **Abkürzungen für Zehnerpotenzen**. Sie werden **vor** jede SI-Einheit gesetzt: Meter (m), Gramm (g), Liter (L), Mol (mol), Sekunde (s), Pascal (Pa), Volt (V) usw. Die Präfixe sind in **Dreierschritten** angeordnet — jede Stufe entspricht dem **Faktor 10³ = 1.000** zur Nachbarstufe. So bleiben Zahlen oft zwischen 1 und 1.000 handhabbar.
+
+| Richtung | Präfixe (Auszug) | Zehnerpotenz |
+|----------|------------------|--------------|
+| **Klein** (Brüche) | Femto (f) → Piko (p) → Nano (n) → Mikro (µ) → Milli (m) | 10⁻¹⁵ → 10⁻¹² → 10⁻⁹ → 10⁻⁶ → 10⁻³ |
+| **Basis** | (kein Präfix) | 10⁰ |
+| **Groß** | Kilo (k) → Mega (M) → Giga (G) → Tera (T) | 10³ → 10⁶ → 10⁹ → 10¹² |
+
+Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²)** relevant; der Alltag umfasst hauptsächlich **Milli, Mikro und Nano**.
+
+> **Merke:** **Dreierschritte:** Jede Präfix-Stufe = Faktor **1.000** (10³) zur Nachbarstufe. Klein→groß: f → p → n → µ → m → [Basis] → k → M → G → T.
 
 ## Medizinisch relevante Präfixe im Detail
 
+**Bisher haben wir gesehen:** Die Präfix-Leiter in Dreierschritten. **Um sie im Alltag anzuwenden,** schauen wir uns die **medizinisch wichtigsten** Präfixe nacheinander an — von Milli über Mikro und Nano bis Piko, Femto und die großen Präfixe.
+
 ### Milli (m) — 10⁻³
 
-Milli ist der am häufigsten verwendete Präfix in der Klinik:
+**Milli** (Symbol **m**) steht für **10⁻³ = 0,001** — also ein Tausendstel der Basiseinheit. Es ist der am häufigsten verwendete Präfix in der Klinik:
 - **Millimeter (mm):** Blutdruckmessung in mmHg (z. B. 120/80 mmHg), EKG-Papier in mm-Abstand
 - **Milligramm (mg):** Tablettendosen (250 mg Aspirin, 500 mg Paracetamol)
 - **Millimol (mmol):** Elektrolytkonzentrationen im Blut (Na⁺: 136–145 mmol/L; K⁺: 3,5–5,0 mmol/L)
@@ -431,9 +452,11 @@ Milli ist der am häufigsten verwendete Präfix in der Klinik:
 
 1 mmol/L = 10⁻³ mol/L = 0,001 mol/L. Wenn man Laborwerte liest, sind Millimol pro Liter die Standardeinheit für die meisten Elektrolyte.
 
+> **Merke:** **Milli (m) = 10⁻³.** Blutdruck (mmHg), Tabletten (mg), Elektrolyte (mmol/L), Injektionsvolumina (mL) — überall wo "milli" vorkommt, ist der Faktor 1.000 kleiner als die Basiseinheit.
+
 ### Mikro (µ) — 10⁻⁶
 
-Das Mikro-Präfix (µ, aus dem griechischen Buchstaben "my") tritt v. a. bei sehr potenten Substanzen und biologischen Maßen auf:
+**Mikro** (Symbol **µ**, griech. "my") steht für **10⁻⁶ = 0,000001** — ein Millionstel. Es tritt v. a. bei sehr potenten Substanzen und biologischen Maßen auf:
 - **Mikrometer (µm):** Zelldurchmesser (Erythrozyt: 6–8 µm; Lymphozyt: 10–14 µm; Hepatozyt: 20–30 µm)
 - **Mikrogramm (µg):** Hochpotente Hormone und Medikamente (z. B. Fentanyl: 1–2 µg/kg; L-Thyroxin: 25–200 µg/Tag)
 - **Mikromol (µmol):** Bilirubinkonzentration (Normwert <17 µmol/L), Serumkupfer (~15–24 µmol/L)
@@ -445,7 +468,7 @@ Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspri
 
 ### Nano (n) — 10⁻⁹
 
-Nano-Größen sind typisch für Hormone, Vitamine und Viren:
+**Nano** (Symbol **n**) steht für **10⁻⁹ = 0,000000001** — ein Milliardstel. Nano-Größen sind typisch für Hormone, Vitamine und Viren:
 - **Nanomol (nmol):** Steroide (Testosteron Normwert: 9–38 nmol/L; Progesteron: 1–80 nmol/L je Zyklusphase), Vitamin D (75–125 nmol/L)
 - **Nanogramm (ng):** Tumormarker (PSA: <4 ng/mL), TSH (0,4–4,0 mU/L im Nanogramm-Bereich)
 - **Nanometer (nm):** Virusgröße (SARS-CoV-2: ca. 100 nm; HIV: ca. 120 nm), Antikörpergröße (~10 nm)
@@ -455,14 +478,14 @@ Nano-Größen sind typisch für Hormone, Vitamine und Viren:
 
 ### Piko (p) — 10⁻¹²
 
-Piko-Einheiten tauchen bei ultrasensitiven Laboranalysen auf:
+**Piko** (Symbol **p**) steht für **10⁻¹²** — ein Billionstel. Piko-Einheiten tauchen bei ultrasensitiven Laboranalysen auf:
 - **Picomol (pmol):** T3 (freies Trijodthyronin: 2,6–5,7 pmol/L), Insulin-Wachstumsfaktor IGF-1
 - **Pikogramm (pg):** Zytokinbestimmungen (z. B. IL-6: <7 pg/mL im Serum)
 - 1 pg = 10⁻¹² g. Moderne ELISA- und Luminex-Assays können Konzentrationen im Pikogramm-Bereich nachweisen.
 
 ### Femto (f) — 10⁻¹⁵
 
-Femto ist in der klinischen Routine selten, tritt aber in der Hämatologie auf:
+**Femto** (Symbol **f**) steht für **10⁻¹⁵** — ein Billiardstel. Femto ist in der klinischen Routine selten, tritt aber in der Hämatologie auf:
 - **Femtoliter (fL):** MCV (Mittleres Erythrozytenvolumen): Normwert 80–96 fL. Ein einzelnes rotes Blutkörperchen hat ein Volumen von ca. 90 fL = 90 × 10⁻¹⁵ L.
 
 ### Kilo (k), Mega (M) und darüber
@@ -472,9 +495,17 @@ Femto ist in der klinischen Routine selten, tritt aber in der Hämatologie auf:
 - **Megabecquerel (MBq):** Radioaktivitätsangaben in der Nuklearmedizin (z. B. 600 MBq ⁹⁹ᵐTc für Skelettszintigrafie)
 - **Gigabyte (GB):** Datenspeicher in medizinischen Bildgebungssystemen (MRT-Datensätze)
 
+> **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Großbuchstabe!). Blutdruck in kPa; Radioaktivität in MBq; Körpergewicht in kg.
+
+**SVG-Hinweis (Präfix-Leiter Femto bis Tera):** Eine vertikale Leiter oder Skala von f (10⁻¹⁵) bis T (10¹²) mit Symbolen und Zehnerpotenzen unterstützt die Merkfähigkeit der Reihenfolge. *Typ: Übersicht / Schema.*
+
+---
+
 ## Umrechnung zwischen Präfixen
 
-Die Umrechnung zwischen Präfixen erfolgt durch Multiplikation oder Division mit den entsprechenden Zehnerpotenzen. Beim Wechsel in eine kleinere Einheit wird die Zahl größer; beim Wechsel in eine größere Einheit wird die Zahl kleiner.
+**Bisher haben wir gesehen:** Die einzelnen Präfixe und ihre klinische Bedeutung. **Um Werte zwischen Einheiten umzurechnen,** brauchst du eine klare Regel. **Die wichtigste:** Beim Wechsel in eine **kleinere** Einheit wird die **Zahl größer**; beim Wechsel in eine **größere** Einheit wird die **Zahl kleiner**.
+
+Die Umrechnung erfolgt durch Multiplikation oder Division mit der entsprechenden Zehnerpotenz (jede Stufe = Faktor 1.000).
 
 **Systematischer Umrechnungsweg:**
 1. Ausgangseinheit als Zehnerpotenz schreiben: 1 mg = 1 × 10⁻³ g
@@ -483,7 +514,15 @@ Die Umrechnung zwischen Präfixen erfolgt durch Multiplikation oder Division mit
 
 Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenpräparate sind in µg beschriftet: 0,025 mg × 1.000 µg/mg = 25 µg. Das entspricht einer Tablette "Euthyrox 25 µg".
 
+> **Merke:** **Kleinere Einheit → größere Zahl; größere Einheit → kleinere Zahl.** Eselsbrücke: "Wer kleiner misst, zählt mehr." Systematisch: Ausgangs- und Zieleinheit als Zehnerpotenz schreiben, Verhältnis bilden.
+
+**SVG-Hinweis (Umrechnung mg ↔ µg):** Ein einfaches Schema mit Pfeilen "mg → µg: × 1.000" und "µg → mg: ÷ 1.000" mit Beispiel (1 mg = 1.000 µg) reduziert Verwechslungen. *Typ: Schema / Eselsbrücke.*
+
+---
+
 ## MedAT-typische Umrechnungsaufgaben
+
+**Um das Gelernte anzuwenden,** folgen drei typische Umrechnungsaufgaben. **Kernkompetenz** ist die richtige Richtung (× oder ÷) und der Faktor 1.000 pro Stufe.
 
 **Aufgabe 1:** Ein Laborwert zeigt 250 nmol/L Vitamin D. Wie viel ist das in µmol/L?
 Lösung: Von Nano (10⁻⁹) zu Mikro (10⁻⁶) ist eine Stufe nach oben → dividieren durch 1.000. 250 nmol/L ÷ 1.000 = 0,25 µmol/L.
@@ -511,8 +550,11 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** SI-Präfixe in Dreierschritten (10³); Reihenfolge f → p → n → µ → m → [Basis] → k → M → G → T; Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹) mit Symbol und Faktor; Umrechnungsregel „kleinere Einheit → größere Zahl“; µg ≠ mg (1 mg = 1.000 µg); typische Umrechnungen mmol/L ↔ µmol/L, mg ↔ µg ↔ ng; MCV in fL (80–96 fL).
+
+**Ergänzend vertiefend (noch prüfungsnah):** Piko/Femto in Labor und Hämatologie; Mega (MBq) in der Nuklearmedizin; Groß-/Kleinschreibung (M vs. m); ISMP-Empfehlung „mcg“ statt „µg“ in der Verschreibung.
 
 **Häufige Fragen:**
 - "Welcher Faktor entspricht Nano (n)?" → 10⁻⁹ (= 0,000000001)
@@ -766,25 +808,39 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
       ],
       content: `## Einleitung
 
-Der Serumkreatinin-Normwert liegt bei 0,000088 mol/L — oder sauberer: 8,8 × 10⁻⁵ mol/L. Avogadro-Zahl: 6,022 × 10²³. Erythrozytenzahl: 5 × 10¹². Die **wissenschaftliche Notation** macht große und kleine Zahlen handhabbar — und ist Voraussetzung für Berechnungen in Physik, Chemie, Labormedizin und Pharmakologie. Am MedAT ist besonders das Rechnen (Multiplizieren, Dividieren) und Normalisieren gefragt. Für den MedAT sind Schreibweise, Umrechnung, Multiplikation/Division und medizinische Zahlengrößen prüfungsrelevant.
+Der Serumkreatinin-Normwert liegt bei 0,000088 mol/L — oder sauberer: **8,8 × 10⁻⁵** mol/L. Avogadro-Zahl: **6,022 × 10²³**. Erythrozytenzahl: **5 × 10¹²**. Die **wissenschaftliche Notation** (auch Exponentialschreibweise) ist die Darstellung einer Zahl als **Produkt aus einem Vorfaktor und einer Zehnerpotenz** — so werden sehr große und sehr kleine Zahlen lesbar und rechenbar. Sie ist Voraussetzung für Physik, Chemie, Labormedizin und Pharmakologie. Am MedAT sind besonders Rechnen (Multiplizieren, Dividieren) und **Normalisieren** gefragt.
+
+**In diesem Kapitel lernst du:**
+- die **normalisierte Form** (a × 10ⁿ mit 1 ≤ a < 10) und warum sie eindeutig ist
+- **Umrechnung** Dezimalzahl ↔ wissenschaftliche Notation (Kommaverschiebung → Exponent)
+- **Multiplikation und Division** (Vorfaktoren getrennt, Exponenten addieren/subtrahieren; danach normalisieren)
+- **Addition und Subtraktion** (erst gleichen Exponenten herstellen, dann Vorfaktoren verrechnen)
+- **pH-Wert** als Logarithmus der H⁺-Konzentration und den **Dreischritt** für MedAT-Aufgaben (Vorfaktoren → Exponenten → Normieren)
+
+---
 
 ## Definition und Normalform
 
-Die wissenschaftliche Notation schreibt jede Zahl in der Form:
-**a × 10ⁿ**
-wobei gilt: 1 ≤ a < 10 und n ist eine ganze Zahl.
+**Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
 
-Beispiele:
-- 1.234 = 1,234 × 10³ (Vorfaktor 1,234; Exponent +3)
-- 0,00456 = 4,56 × 10⁻³ (Vorfaktor 4,56; Exponent −3)
-- 0,0000000089 = 8,9 × 10⁻⁹ (Vorfaktor 8,9; Exponent −9)
-- 299.792.458 m/s (Lichtgeschwindigkeit) = 2,998 × 10⁸ m/s
+Die **wissenschaftliche Notation** schreibt jede Zahl in der Form **a × 10ⁿ**, wobei:
+- **a** der **Vorfaktor** ist (die Zahl vor „mal 10ⁿ“) und
+- **n** der **Exponent** (ganze Zahl) ist.
 
-Der Vorfaktor ist immer eine Zahl mit genau einer Stelle vor dem Komma (1 bis 9), und der Exponent gibt die Größenordnung an.
+In der **normalisierten Form** gilt zusätzlich: **1 ≤ a < 10** — der Vorfaktor hat also genau **eine Stelle vor dem Komma** (1 bis 9,…). So ist die Schreibweise **eindeutig** und der Exponent gibt direkt die **Größenordnung** an.
 
-> **Merke:** Normalisierte Form: **a × 10ⁿ** mit 1 ≤ a < 10. Große Zahl → Komma nach links → positiver Exponent. Kleine Zahl < 1 → Komma nach rechts → negativer Exponent.
+| Dezimal | Normalisierte Form | Vorfaktor a | Exponent n |
+|---------|--------------------|-------------|------------|
+| 1.234 | 1,234 × 10³ | 1,234 | +3 |
+| 0,00456 | 4,56 × 10⁻³ | 4,56 | −3 |
+| 0,0000000089 | 8,9 × 10⁻⁹ | 8,9 | −9 |
+| 299.792.458 m/s | 2,998 × 10⁸ m/s | 2,998 | +8 |
+
+> **Merke:** **Normalisierte Form:** **a × 10ⁿ** mit **1 ≤ a < 10**. Große Zahl → Komma nach **links** → **positiver** Exponent. Kleine Zahl (< 1) → Komma nach **rechts** → **negativer** Exponent.
 
 ## Umrechnung: Dezimalzahl → Wissenschaftliche Notation
+
+**Bisher haben wir gesehen:** Die normalisierte Form a × 10ⁿ. **Um beliebige Dezimalzahlen** in diese Form zu bringen, gehst du in zwei Schritten vor. **Dafür** das folgende Verfahren.
 
 **Schritt-für-Schritt-Verfahren:**
 1. Komma so verschieben, dass die Zahl zwischen 1 und 10 liegt (das wird der Vorfaktor a).
@@ -806,13 +862,17 @@ Komma 5 Stellen nach rechts: 7,2 × 10⁻⁵
 
 ## Umrechnung: Wissenschaftliche Notation → Dezimalzahl
 
-Umgekehrt gilt: Den Exponenten als Anweisung lesen, das Komma zu verschieben.
+**Umgekehrt:** Aus einer Zahl in wissenschaftlicher Notation die **Dezimalzahl** zu machen, liest du den **Exponenten als Anweisung**, das Komma zu verschieben.
 - Positiver Exponent n: Komma n Stellen nach rechts. 3,7 × 10⁴ → 37.000
 - Negativer Exponent n: Komma n Stellen nach links. 5,1 × 10⁻³ → 0,0051
 
+---
+
 ## Addieren und Subtrahieren in wissenschaftlicher Notation
 
-Für Addition und Subtraktion müssen beide Zahlen denselben Exponenten haben:
+**Bisher haben wir gesehen:** Umrechnen in beide Richtungen. **Beim Rechnen** unterscheiden sich Addition/Subtraktion von Multiplikation/Division. **Um Fehler zu vermeiden:** Nur Summanden mit **demselben Exponenten** dürfen direkt addiert werden.
+
+Für Addition und Subtraktion:
 1. Den kleineren Exponenten auf den größeren angleichen (Vorfaktor entsprechend anpassen).
 2. Vorfaktoren addieren oder subtrahieren.
 3. Ergebnis bei Bedarf normalisieren.
@@ -822,9 +882,13 @@ Für Addition und Subtraktion müssen beide Zahlen denselben Exponenten haben:
 
 **Warum Angleichung nötig?** Man kann nur Gleichartiges addieren. 35.000 + 2.100 = 37.100, nicht 5.600 — analog darf man Vorfaktoren nicht addieren, wenn die Exponenten verschieden sind.
 
+> **Merke:** **Addition/Subtraktion:** erst auf **gleichen Exponenten** angleichen, dann **Vorfaktoren** addieren/subtrahieren. Danach normalisieren.
+
+---
+
 ## Multiplizieren und Dividieren in wissenschaftlicher Notation
 
-Diese Operationen sind einfacher als Addition/Subtraktion:
+**Bisher haben wir gesehen:** Bei Addition/Subtraktion muss der Exponent angeglichen werden. **Bei Multiplikation und Division** ist es einfacher: **Vorfaktoren** und **Exponenten** getrennt verrechnen.
 
 **Multiplikation:**
 (a × 10ᵐ) × (b × 10ⁿ) = (a × b) × 10^(m+n)
@@ -843,9 +907,15 @@ Falls das Ergebnis nicht normalisiert ist (Vorfaktor ≥ 10 oder < 1), muss man 
 - Vorfaktor ≥ 10: Vorfaktor durch 10 teilen, Exponent um 1 erhöhen. 12 × 10³ → 1,2 × 10⁴
 - Vorfaktor < 1: Vorfaktor mit 10 multiplizieren, Exponent um 1 verringern. 0,5 × 10⁻⁴ → 5 × 10⁻⁵
 
+> **Merke:** **Multiplikation:** Vorfaktoren ×, Exponenten **addieren**. **Division:** Vorfaktoren ÷, Exponenten **subtrahieren**. Danach **normalisieren**.
+
+**SVG-Hinweis (Rechenregeln wissenschaftliche Notation):** Ein kleines Schema: Multiplikation (Vorfaktor × Vorfaktor, Exponent + Exponent) und Division (Vorfaktor ÷ Vorfaktor, Exponent − Exponent) mit je einem Beispiel. *Typ: Übersicht / Schema.*
+
+---
+
 ## Logarithmen und Zehnerpotenzen: der natürliche Zusammenhang
 
-Der dekadische Logarithmus (log₁₀ oder lg) ist die Umkehroperation zur Zehnerpotenz:
+**Bisher haben wir gesehen:** Rechnen mit Vorfaktor und Exponent. **Der pH-Wert** und viele medizinische Skalen nutzen den **Logarithmus**. **Um das zu verstehen,** der Zusammenhang: Der **dekadische Logarithmus** (log₁₀ oder lg) ist die **Umkehroperation** zur Zehnerpotenz:
 log₁₀(10ⁿ) = n
 
 Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
@@ -863,7 +933,15 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 **pH-Wert als Logarithmus:** pH = −log₁₀([H⁺]), wobei [H⁺] in mol/L. Das bedeutet: Bei [H⁺] = 10⁻⁷ mol/L ist pH = 7 (neutrales Wasser). Eine Änderung des pH um 1 entspricht einer zehnfachen Änderung der H⁺-Konzentration. pH 6 hat zehnmal mehr H⁺ als pH 7, pH 5 hat hundertmal mehr H⁺ als pH 7.
 
+> **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
+
+**SVG-Hinweis (pH und Zehnerpotenzen):** Eine Skala von pH 0–14 mit zugehörigen [H⁺]-Werten (10⁰ bis 10⁻¹⁴) zeigt den logarithmischen Zusammenhang auf einen Blick. *Typ: Skala / Übersicht.*
+
+---
+
 ## Häufige Anwendungen in der Medizin
+
+**Um die Notation im Kontext zu sehen,** folgen kurze Anwendungen: Avogadro-Zahl, Halbwertszeiten, Henderson-Hasselbalch.
 
 **Avogadro-Zahl (Nₐ = 6,022 × 10²³ mol⁻¹):** Gibt an, wie viele Teilchen in einem Mol enthalten sind. Wenn 1 mmol = 10⁻³ mol Na⁺ in 1 L Lösung vorliegen, dann enthält diese Lösung 6,022 × 10²³ × 10⁻³ = 6,022 × 10²⁰ Na⁺-Ionen pro Liter.
 
@@ -871,7 +949,11 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 **Henderson-Hasselbalch-Gleichung:** pH = pKₐ + log([A⁻]/[HA]), die Grundformel für Puffersysteme im Blut. Der Logarithmus verknüpft pH, pKₐ und das Konzentrationsverhältnis von Base zu Säure.
 
+---
+
 ## MedAT-Rechenbeispiele mit wissenschaftlicher Notation
+
+**Um das Gelernte anzuwenden,** folgen zwei typische MedAT-Aufgaben. **Kernkompetenz** ist der **Dreischritt:** (1) Vorfaktoren getrennt, (2) Exponenten getrennt, (3) Ergebnis normalisieren.
 
 **Aufgabe 1 — Infusionsberechnung:** Eine NaCl-Infusion (0,9 %) enthält 9 g NaCl pro Liter. Molmasse NaCl = 58,5 g/mol. Molarität: c = 9 / 58,5 = 0,154 mol/L = 1,54 × 10⁻¹ mol/L = 154 mmol/L. Diese Berechnung verbindet wissenschaftliche Notation, Molkonzentration und klinischen Alltag.
 
@@ -881,8 +963,11 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:** Siehe „Häufige Fragen“ und „Prüfungsrelevante Zahlen/Fakten“ unten.
-**Ergänzend vertiefend:** Vertiefung im Kapiteltext; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:** Normalisierte Form (1 ≤ Vorfaktor < 10); Umrechnung Dezimal ↔ Notation (Kommaverschiebung → Exponent); Multiplikation (Vorfaktoren ×, Exponenten addieren); Division (Vorfaktoren ÷, Exponenten subtrahieren); Addition/Subtraktion (erst gleichen Exponenten herstellen); Normalisierung nach Rechnung; Dreischritt (Vorfaktoren → Exponenten → Normieren); pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺]; Avogadro 6,022×10²³ mol⁻¹; Erythrozyten ~5×10¹²/L.
+
+**Ergänzend vertiefend (noch prüfungsnah):** Logarithmusregeln (log(a×b), log(a/b), log(aⁿ)); Henderson-Hasselbalch; Halbwertszeit in wissenschaftlicher Notation; Signifikanz und Rundung.
 
 **Häufige Fragen:**
 - "Schreibe 0,000047 in normalisierter Form" → 4,7 × 10⁻⁵ (5 Stellen nach rechts = negativer Exponent)
