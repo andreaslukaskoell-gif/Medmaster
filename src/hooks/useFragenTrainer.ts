@@ -19,7 +19,15 @@ import {
   type ErrorPattern,
 } from "@/lib/supabaseBMSFragen";
 import { generateContentQuestions, toBMSFrage } from "@/lib/bmsQuestionGenerator";
+import { getPoolBMSFragen, getBMSFragenBySubject } from "@/lib/bmsPoolForTrainer";
 import type { FSRSRating } from "@/lib/fsrs";
+
+export type BMSSubjectId = "biologie" | "chemie" | "physik" | "mathematik";
+
+export type FragenTrainerOptions = {
+  subjectId?: BMSSubjectId;
+  timeLimitMinutes?: number;
+};
 
 // ── Session types ─────────────────────────────────────────────
 
@@ -34,10 +42,12 @@ export interface SessionAnswer {
   typKPhase1?: boolean[]; // TYP K: user's per-Aussage decisions
 }
 
+export type SessionAnswers = SessionAnswer[];
+
 export type TrainerMode = "trainer" | "simulation";
 
-/** Where questions come from: Supabase (FSRS) or content-derived (generator). */
-export type QuestionSource = "supabase" | "content";
+/** Where questions come from: Supabase (FSRS), content-derived (generator), or pool (static Typ A + Typ K). */
+export type QuestionSource = "supabase" | "content" | "pool";
 
 // ── Hook ─────────────────────────────────────────────────────
 
@@ -46,8 +56,10 @@ export function useFragenTrainer(
   user_id: string | null,
   mode: TrainerMode = "trainer",
   count = 8,
-  source: QuestionSource = "supabase"
+  source: QuestionSource = "supabase",
+  options?: FragenTrainerOptions
 ) {
+  const { subjectId, timeLimitMinutes } = options ?? {};
   const [fragen, setFragen] = useState<BMSFrage[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,6 +69,10 @@ export function useFragenTrainer(
   const [confidence, setConfidence] = useState<Confidence | null>(null);
   const [answers, setAnswers] = useState<SessionAnswer[]>([]);
   const [sessionDone, setSessionDone] = useState(false);
+  const [timeRemainingSeconds, setTimeRemainingSeconds] = useState<number | null>(
+    timeLimitMinutes != null ? timeLimitMinutes * 60 : null
+  );
+  const startTimeRef = useRef<number>(0);
 
   // Per-question phase state
   const [revealed, setRevealed] = useState(false);
@@ -76,62 +92,97 @@ export function useFragenTrainer(
   }, []);
 
   // ── Load questions ──────────────────────────────────────────
+  const subjectKey = subjectId ?? "";
+  const ukIdsKey = uk_ids.join(",");
   useEffect(() => {
-    if (!uk_ids.length) {
-      const t = setTimeout(() => {
+    const t = setTimeout(() => {
+      if (subjectId) {
+        setLoading(true);
+        setError(null);
+        const list = getBMSFragenBySubject(subjectId, count);
+        setFragen(list);
+        setLoading(false);
+        if (list.length === 0) setError(`Keine Fragen für ${subjectId} gefunden.`);
+        setIdx(0);
+        setConfidence(null);
+        setAnswers([]);
+        setSessionDone(false);
+        setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
+        startTimeRef.current = Date.now();
+        resetQuestionState();
+        recordedRef.current = false;
+        return;
+      }
+      if (!uk_ids.length) {
         setFragen([]);
         setLoading(false);
         setError(null);
-      }, 0);
-      return () => clearTimeout(t);
-    }
-    const t = setTimeout(() => {
+        return;
+      }
       setLoading(true);
       setError(null);
-    }, 0);
 
-    if (source === "content") {
-      const generated = generateContentQuestions(uk_ids, count);
-      const asFragen = generated.map(toBMSFrage);
-      const valid = filterValidBMSFragen(asFragen);
-      setFragen(valid);
-      setLoading(false);
-      if (valid.length === 0) {
-        setError(
-          asFragen.length > 0
-            ? "Einige Fragen waren ungültig und wurden verworfen. Bitte andere Unterkapitel wählen."
-            : "Für die gewählten Unterkapitel sind noch keine Fragen hinterlegt. Bitte andere wählen."
-        );
+      if (source === "content") {
+        const generated = generateContentQuestions(uk_ids, count);
+        const asFragen = generated.map(toBMSFrage);
+        const valid = filterValidBMSFragen(asFragen);
+        setFragen(valid);
+        setLoading(false);
+        if (valid.length === 0) {
+          setError(
+            asFragen.length > 0
+              ? "Einige Fragen waren ungültig und wurden verworfen. Bitte andere Unterkapitel wählen."
+              : "Für die gewählten Unterkapitel sind noch keine Fragen hinterlegt. Bitte andere wählen."
+          );
+        }
+      } else if (source === "pool") {
+        const poolFragen = getPoolBMSFragen(uk_ids, count);
+        setFragen(poolFragen);
+        setLoading(false);
+        if (poolFragen.length === 0) {
+          setError(
+            "Für die gewählten Unterkapitel sind keine Pool-Fragen vorhanden. Bitte andere Unterkapitel wählen."
+          );
+        }
+      } else {
+        getNextQuestions(uk_ids, user_id, count)
+          .then((raw) => {
+            const valid = filterValidBMSFragen(raw);
+            setFragen(valid);
+            setLoading(false);
+            if (raw.length > 0 && valid.length === 0) {
+              setError("Alle geladenen Fragen waren ungültig und wurden verworfen.");
+            }
+          })
+          .catch((e) => {
+            setError(String(e));
+            setLoading(false);
+          });
       }
-    } else {
-      getNextQuestions(uk_ids, user_id, count)
-        .then((raw) => {
-          const valid = filterValidBMSFragen(raw);
-          setFragen(valid);
-          setLoading(false);
-          if (raw.length > 0 && valid.length === 0) {
-            setError("Alle geladenen Fragen waren ungültig und wurden verworfen.");
-          }
-        })
-        .catch((e) => {
-          setError(String(e));
-          setLoading(false);
-        });
-    }
-    // Reset session (defer to satisfy react-hooks/set-state-in-effect)
-    const t2 = setTimeout(() => {
       setIdx(0);
       setConfidence(null);
       setAnswers([]);
       setSessionDone(false);
+      setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
+      startTimeRef.current = Date.now();
       resetQuestionState();
+      recordedRef.current = false;
     }, 0);
-    recordedRef.current = false;
-    return () => {
-      clearTimeout(t);
-      clearTimeout(t2);
-    };
-  }, [uk_ids.join(","), user_id, count, source, resetQuestionState]);
+    return () => clearTimeout(t);
+  }, [subjectKey, ukIdsKey, user_id, count, source, timeLimitMinutes, resetQuestionState]);
+
+  // ── Timer (official simulation) ─────────────────────────────
+  useEffect(() => {
+    if (timeLimitMinutes == null || sessionDone) return;
+    const totalSeconds = timeLimitMinutes * 60;
+    const interval = setInterval(() => {
+      const elapsed = (Date.now() - startTimeRef.current) / 1000;
+      const remaining = Math.max(0, Math.floor(totalSeconds - elapsed));
+      setTimeRemainingSeconds(remaining);
+      if (remaining <= 0) setSessionDone(true);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [timeLimitMinutes, sessionDone]);
 
   // ── Current question ────────────────────────────────────────
   const currentFrage = fragen[idx] ?? null;
@@ -175,7 +226,7 @@ export function useFragenTrainer(
   );
 
   // ── Determine correctness ────────────────────────────────────
-  function isAnswerCorrect(): boolean {
+  const isAnswerCorrect = useCallback((): boolean => {
     if (!currentFrage) return false;
     if (currentFrage.typ === "A" || currentFrage.typ === "M") {
       return chosenOption === currentFrage.korrekte_option;
@@ -184,7 +235,7 @@ export function useFragenTrainer(
       return typKCombChosen === currentFrage.korrekte_option;
     }
     return false;
-  }
+  }, [currentFrage, chosenOption, typKCombChosen]);
 
   // ── Record + advance after FSRS rating ──────────────────────
   const submitFSRSRating = useCallback(
@@ -232,12 +283,13 @@ export function useFragenTrainer(
       confidence,
       chosenOption,
       typKDecisions,
-      typKCombChosen,
       answers,
       idx,
       fragen.length,
       user_id,
       source,
+      isAnswerCorrect,
+      resetQuestionState,
     ]
   );
 
@@ -246,13 +298,22 @@ export function useFragenTrainer(
     setConfidence(null);
     setAnswers([]);
     setSessionDone(false);
+    setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
+    startTimeRef.current = Date.now();
     resetQuestionState();
     recordedRef.current = false;
+    if (subjectId) {
+      setFragen(getBMSFragenBySubject(subjectId, count));
+      return;
+    }
     if (uk_ids.length) {
       setLoading(true);
       if (source === "content") {
         const generated = generateContentQuestions(uk_ids, count);
         setFragen(filterValidBMSFragen(generated.map(toBMSFrage)));
+        setLoading(false);
+      } else if (source === "pool") {
+        setFragen(getPoolBMSFragen(uk_ids, count));
         setLoading(false);
       } else {
         getNextQuestions(uk_ids, user_id, count)
@@ -263,7 +324,7 @@ export function useFragenTrainer(
           .catch(() => setLoading(false));
       }
     }
-  }, [uk_ids, user_id, count, source, resetQuestionState]);
+  }, [uk_ids, user_id, count, source, subjectId, timeLimitMinutes, resetQuestionState]);
 
   return {
     // Data
@@ -295,6 +356,8 @@ export function useFragenTrainer(
     restart,
     mode,
     isAnswerCorrect,
+    timeLimitSeconds: timeLimitMinutes != null ? timeLimitMinutes * 60 : null,
+    timeRemainingSeconds,
   };
 }
 
@@ -306,13 +369,14 @@ export function useMRS(user_id: string | null) {
 
   useEffect(() => {
     if (!user_id) return;
-    setLoading(true);
+    const t = setTimeout(() => setLoading(true), 0);
     fetchMRSData(user_id)
       .then((d) => {
         setMRS(d);
         setLoading(false);
       })
       .catch(() => setLoading(false));
+    return () => clearTimeout(t);
   }, [user_id]);
 
   return { mrs, loading };
@@ -326,6 +390,7 @@ export function useErrorPatterns(user_id: string | null, uk_ids: string[]) {
   useEffect(() => {
     if (!user_id || !uk_ids.length) return;
     fetchErrorPatterns(user_id, uk_ids).then(setPatterns);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- stable key uk_ids.join(",")
   }, [user_id, uk_ids.join(",")]);
 
   return patterns;
