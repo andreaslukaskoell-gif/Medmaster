@@ -1,7 +1,5 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import {
   ArrowLeft,
   ArrowRight,
@@ -20,8 +18,6 @@ import { StickyBackButton } from "../components/ui/StickyBackButton";
 import { QuickEdit } from "../components/QuickEdit";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
-import { processTextForSmartLinks } from "@/data/glossary";
-import { SmartLink } from "@/components/content/SmartLink";
 import { useStore } from "../store/useStore";
 import { SelbstTest } from "../components/chapter/SelbstTest";
 import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
@@ -323,6 +319,7 @@ export default function BMSUnterkapitel({
   };
 
   // BUG-3 fix: selfTestBlock useMemo before all early returns, guarded for null uk
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization -- deps intentionally minimal to avoid re-creating block
   const selfTestBlock = useMemo(() => {
     if (!uk || !uk.id) return null;
     const questionsFromArray =
@@ -516,7 +513,8 @@ export default function BMSUnterkapitel({
           <div className="flex items-center gap-3 mt-1">
             <h1 className="text-2xl font-bold text-[var(--text-primary)]">{uk.title}</h1>
             <span className="flex items-center gap-1 text-xs text-muted shrink-0">
-              <Clock className="w-3 h-3" />~{readingTimeMin} min
+              <Clock className="w-3 h-3" aria-hidden />
+              Ca. {readingTimeMin} Min Lesezeit
             </span>
           </div>
         </div>
