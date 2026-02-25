@@ -22,16 +22,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
-import { FSRSRatingButtons } from "@/components/bms/FSRSRatingButtons";
 import { TypAQuestion } from "@/components/bms/TypAQuestion";
 import { TypKQuestion } from "@/components/bms/TypKQuestion";
-import { useFragenTrainer, suggestFSRSRating } from "@/hooks/useFragenTrainer";
+import { useFragenTrainer } from "@/hooks/useFragenTrainer";
 import type {
   TrainerMode,
   BMSSubjectId,
   SessionAnswers,
   QuestionSource,
 } from "@/hooks/useFragenTrainer";
+import { getBMSFragenBySubject } from "@/lib/bmsPoolForTrainer";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -98,7 +98,8 @@ function SelectionScreen({
     subjectId: BMSSubjectId,
     count: number,
     timeLimitMinutes: number | null,
-    source: QuestionSource
+    source: QuestionSource,
+    initialFragen?: import("@/lib/supabaseBMSFragen").BMSFrage[]
   ) => void;
   userId: string;
 }) {
@@ -113,7 +114,10 @@ function SelectionScreen({
 
   const handleStart = () => {
     if (!subjectId) return;
-    onStart(subjectId, effectiveCount, timeLimitMinutes, source);
+    const effectiveCount = mode === "offiziell" && subject ? subject.officialCount : count;
+    const timeLimit = mode === "offiziell" && subject ? subject.officialMinutes : null;
+    const precomputed = getBMSFragenBySubject(subjectId, effectiveCount);
+    onStart(subjectId, effectiveCount, timeLimit, source, precomputed);
   };
 
   return (
@@ -284,6 +288,7 @@ function QuizScreen({
   timeLimitMinutes,
   source,
   userId,
+  initialFragen,
   onFinish,
   onBack,
 }: {
@@ -292,6 +297,7 @@ function QuizScreen({
   timeLimitMinutes: number | null;
   source: QuestionSource;
   userId: string;
+  initialFragen?: import("@/lib/supabaseBMSFragen").BMSFrage[];
   onFinish: (a: SessionAnswers) => void;
   onBack: () => void;
 }) {
@@ -301,7 +307,7 @@ function QuizScreen({
     timeLimitMinutes != null ? "simulation" : "trainer",
     count,
     source,
-    { subjectId, timeLimitMinutes: timeLimitMinutes ?? undefined }
+    { subjectId, timeLimitMinutes: timeLimitMinutes ?? undefined, initialFragen }
   );
   const { addXP } = useStore();
   const {
@@ -321,9 +327,6 @@ function QuizScreen({
     judgeAussage,
     confirmTypKPhase1,
     chooseTypKCombination,
-    submitFSRSRating,
-    isAnswerCorrect,
-    getTimeOnCurrentQuestion,
     answers,
     timeRemainingSeconds,
     timeLimitSeconds,
@@ -340,13 +343,9 @@ function QuizScreen({
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (sessionDone || !currentFrage) return;
-      const canRateNow = revealed && (currentFrage.typ !== "K" || typKCombChosen !== null);
       const isReview = idx < answers.length;
       if (e.key === "Enter") {
-        if (canRateNow) {
-          e.preventDefault();
-          submitFSRSRating(3);
-        } else if (isReview && idx < fragen.length - 1) {
+        if (isReview && idx < fragen.length - 1) {
           e.preventDefault();
           goToQuestion(idx + 1);
         }
@@ -391,13 +390,10 @@ function QuizScreen({
   }, [
     sessionDone,
     currentFrage,
-    revealed,
     typKPhase,
-    typKCombChosen,
     idx,
     answers.length,
     fragen.length,
-    submitFSRSRating,
     chooseOption,
     chooseTypKCombination,
     goToQuestion,
@@ -440,7 +436,6 @@ function QuizScreen({
 
   if (!currentFrage) return null;
 
-  const canRate = revealed && (currentFrage.typ !== "K" || typKCombChosen !== null);
   const showTimer = timeLimitSeconds != null && timeRemainingSeconds != null;
   const isReviewMode = idx < answers.length;
   const reviewAnswer = isReviewMode ? answers[idx] : null;
@@ -521,15 +516,16 @@ function QuizScreen({
                       <div
                         key={opt.key}
                         className={`text-sm px-3 py-2 rounded-lg ${
-                          opt.key === reviewAnswer.frage.korrekte_option
-                            ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 font-medium"
-                            : opt.key === reviewAnswer.chosenOption
-                              ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through"
-                              : "text-gray-500 dark:text-gray-500"
+                          opt.key === reviewAnswer.chosenOption
+                            ? "bg-muted font-medium text-gray-800 dark:text-gray-200"
+                            : "text-gray-500 dark:text-gray-500"
                         }`}
                       >
                         <span className="font-bold mr-2">{opt.key}</span>
                         {opt.text}
+                        {opt.key === reviewAnswer.chosenOption && (
+                          <span className="ml-1 text-xs text-muted-foreground">(deine Wahl)</span>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -539,41 +535,17 @@ function QuizScreen({
                   {reviewAnswer.frage.aussagen.map((a) => (
                     <div
                       key={a.nr}
-                      className={`text-sm px-3 py-1.5 rounded-lg ${
-                        a.korrekt
-                          ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
-                          : "text-gray-500"
-                      }`}
+                      className="text-sm px-3 py-1.5 rounded-lg text-gray-600 dark:text-gray-400"
                     >
                       <span className="font-bold mr-2">{a.nr}</span>
                       {a.text}
                     </div>
                   ))}
-                  {(reviewAnswer.typKChosenOption != null ||
-                    reviewAnswer.frage.korrekte_option) && (
-                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-                      {reviewAnswer.typKChosenOption != null && (
-                        <span className="text-red-600 dark:text-red-400">
-                          Deine Wahl: {reviewAnswer.typKChosenOption}
-                        </span>
-                      )}
-                      {reviewAnswer.frage.korrekte_option && (
-                        <span className="ml-2 text-green-600 dark:text-green-400">
-                          Richtig: {reviewAnswer.frage.korrekte_option}
-                        </span>
-                      )}
+                  {reviewAnswer.typKChosenOption != null && (
+                    <p className="text-xs text-muted-foreground mt-2">
+                      Deine Wahl: {reviewAnswer.typKChosenOption}
                     </p>
                   )}
-                </div>
-              )}
-              {reviewAnswer.frage.erklaerung?.trim() && (
-                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                  <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">
-                    Begründung
-                  </p>
-                  <p className="text-sm text-blue-700 dark:text-blue-400 leading-relaxed">
-                    {reviewAnswer.frage.erklaerung}
-                  </p>
                 </div>
               )}
               <div className="flex gap-2 pt-2">
@@ -650,26 +622,6 @@ function QuizScreen({
                     </>
                   )}
                 </div>
-                {canRate && (
-                  <div className="border-t border-border pt-4 space-y-2">
-                    <FSRSRatingButtons
-                      onRate={(rating) => submitFSRSRating(rating)}
-                      suggestedRating={
-                        currentFrage
-                          ? suggestFSRSRating(
-                              isAnswerCorrect(),
-                              currentFrage.schwierigkeit,
-                              getTimeOnCurrentQuestion()
-                            )
-                          : null
-                      }
-                    />
-                    <p className="text-xs text-muted-foreground">
-                      Tipp: <kbd className="px-1.5 py-0.5 rounded bg-muted font-mono">Enter</kbd> =
-                      Weiter („Gut“)
-                    </p>
-                  </div>
-                )}
               </CardContent>
             </Card>
           </>
@@ -685,7 +637,6 @@ function QuizScreen({
           {fragen.map((_, i) => {
             const answered = i < answers.length;
             const isCurrent = i === idx;
-            const correct = answered && answers[i]?.correct;
             return (
               <button
                 key={i}
@@ -693,11 +644,10 @@ function QuizScreen({
                 onClick={() => goToQuestion(i)}
                 className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
                   ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
-                  ${!isCurrent && answered && correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50" : ""}
-                  ${!isCurrent && answered && !correct ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 hover:bg-red-200 dark:hover:bg-red-900/50" : ""}
+                  ${!isCurrent && answered ? "bg-muted text-muted-foreground hover:bg-muted/80" : ""}
                   ${!isCurrent && !answered ? "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700" : ""}
                 `}
-                title={`Frage ${i + 1}${answered ? (correct ? " (richtig)" : " (falsch)") : ""}`}
+                title={answered ? `Frage ${i + 1} (beantwortet)` : `Frage ${i + 1}`}
               >
                 {i + 1}
               </button>
@@ -944,6 +894,9 @@ export default function FragenTrainer() {
   const [count, setCount] = useState(20);
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number | null>(null);
   const [questionSource, setQuestionSource] = useState<QuestionSource>("pool");
+  const [initialFragen, setInitialFragen] = useState<
+    import("@/lib/supabaseBMSFragen").BMSFrage[] | undefined
+  >(undefined);
   const [results, setResults] = useState<SessionAnswers>([]);
   const userId = useMemo(() => getLocalUserId(), []);
 
@@ -952,11 +905,12 @@ export default function FragenTrainer() {
       {screen === "select" && (
         <SelectionScreen
           userId={userId}
-          onStart={(subj, c, time, src) => {
+          onStart={(subj, c, time, src, precomputed) => {
             setSubjectId(subj);
             setCount(c);
             setTimeLimitMinutes(time);
             setQuestionSource(src);
+            setInitialFragen(precomputed);
             setScreen("quiz");
           }}
         />
@@ -968,6 +922,7 @@ export default function FragenTrainer() {
           timeLimitMinutes={timeLimitMinutes}
           source={questionSource}
           userId={userId}
+          initialFragen={initialFragen}
           onFinish={(r) => {
             setResults(r);
             setScreen("results");

@@ -31,6 +31,8 @@ export type BMSSubjectId = "biologie" | "chemie" | "physik" | "mathematik";
 export type FragenTrainerOptions = {
   subjectId?: BMSSubjectId;
   timeLimitMinutes?: number;
+  /** Wenn gesetzt: Fragen sofort nutzen, kein Ladezustand (z. B. beim Start aus Fach-Auswahl) */
+  initialFragen?: BMSFrage[];
 };
 
 // ── Session types ─────────────────────────────────────────────
@@ -93,8 +95,8 @@ export function useFragenTrainer(
   source: QuestionSource = "supabase",
   options?: FragenTrainerOptions
 ) {
-  const { subjectId, timeLimitMinutes } = options ?? {};
-  const [fragen, setFragen] = useState<BMSFrage[]>([]);
+  const { subjectId, timeLimitMinutes, initialFragen: initialFragenOption } = options ?? {};
+  const [fragen, setFragen] = useState<BMSFrage[]>(initialFragenOption ?? []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -136,7 +138,21 @@ export function useFragenTrainer(
   useEffect(() => {
     const t = setTimeout(() => {
       if (subjectId) {
-        setLoading(true);
+        // Mit initialFragen: sofort nutzen, kein Ladezustand
+        if (initialFragenOption != null && initialFragenOption.length > 0) {
+          setFragen(initialFragenOption);
+          setError(null);
+          setLoading(false);
+          setIdx(0);
+          setAnswers([]);
+          setSessionDone(false);
+          setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
+          startTimeRef.current = Date.now();
+          resetQuestionState();
+          recordedRef.current = false;
+          return;
+        }
+        // Ohne initialFragen: synchron aus Pool/SelfTest
         setError(null);
         const list = getBMSFragenBySubject(subjectId, count);
         setFragen(list);
@@ -157,7 +173,9 @@ export function useFragenTrainer(
         setError(null);
         return;
       }
-      setLoading(true);
+      // Mit uk_ids: pool/content sind synchron, nur Supabase ist async
+      const isAsync = source !== "pool" && source !== "content";
+      if (isAsync) setLoading(true);
       setError(null);
 
       if (source === "content") {
@@ -208,7 +226,16 @@ export function useFragenTrainer(
     return () => clearTimeout(t);
     // subjectId / uk_ids intentionally omitted: we key off subjectKey/ukIdsKey to avoid unnecessary resets
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [subjectKey, ukIdsKey, user_id, count, source, timeLimitMinutes, resetQuestionState]);
+  }, [
+    subjectKey,
+    ukIdsKey,
+    user_id,
+    count,
+    source,
+    timeLimitMinutes,
+    resetQuestionState,
+    initialFragenOption,
+  ]);
 
   // ── Timer (official simulation) ─────────────────────────────
   useEffect(() => {
@@ -228,13 +255,60 @@ export function useFragenTrainer(
   const progress = fragen.length > 0 ? idx / fragen.length : 0;
 
   // ── TYP A: choose option ────────────────────────────────────
+  /** Record answer with system-derived FSRS rating and advance; no per-question feedback. */
+  const recordAndAdvance = useCallback(
+    (params: { chosenOption?: string; typKCombChosen?: string; typKPhase1?: boolean[] }) => {
+      if (!currentFrage) return;
+      if (recordedRef.current) return;
+      recordedRef.current = true;
+
+      const timeSeconds = Math.round((Date.now() - questionStartRef.current) / 1000);
+      const correct =
+        currentFrage.typ === "K"
+          ? params.typKCombChosen === currentFrage.korrekte_option
+          : params.chosenOption === currentFrage.korrekte_option;
+      const confidence = deriveConfidence(correct, currentFrage.schwierigkeit, timeSeconds);
+      const rating = suggestFSRSRating(correct, currentFrage.schwierigkeit, timeSeconds);
+
+      if (source === "supabase") {
+        recordAttempt({
+          question_id: currentFrage.id,
+          user_id,
+          correct,
+          confidence,
+          fsrs_rating: rating,
+          prev_fsrs: currentFrage.fsrs ?? null,
+        }).catch(console.error);
+      }
+
+      const answer: SessionAnswer = {
+        frage: currentFrage,
+        correct,
+        confidence,
+        fsrs_rating: rating,
+        chosenOption: params.chosenOption,
+        typKPhase1: params.typKPhase1,
+        typKChosenOption: currentFrage.typ === "K" ? params.typKCombChosen : undefined,
+      };
+      setAnswers((prev) => [...prev, answer]);
+
+      if (idx + 1 >= fragen.length) {
+        setSessionDone(true);
+      } else {
+        setIdx((i) => i + 1);
+        resetQuestionState();
+        recordedRef.current = false;
+      }
+    },
+    [currentFrage, idx, fragen.length, user_id, source, resetQuestionState]
+  );
+
   const chooseOption = useCallback(
     (key: string) => {
       if (revealed) return;
-      setChosenOption(key);
-      setRevealed(true);
+      recordAndAdvance({ chosenOption: key });
     },
-    [revealed]
+    [revealed, recordAndAdvance]
   );
 
   // ── TYP K phase 1: judge each Aussage ──────────────────────
@@ -258,10 +332,12 @@ export function useFragenTrainer(
   const chooseTypKCombination = useCallback(
     (key: string) => {
       if (typKPhase !== 2 || typKCombChosen) return;
-      setTypKCombChosen(key);
-      setRevealed(true);
+      recordAndAdvance({
+        typKCombChosen: key,
+        typKPhase1: typKDecisions.map((d) => d === true),
+      });
     },
-    [typKPhase, typKCombChosen]
+    [typKPhase, typKCombChosen, typKDecisions, recordAndAdvance]
   );
 
   // ── Determine correctness ────────────────────────────────────

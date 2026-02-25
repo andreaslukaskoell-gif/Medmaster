@@ -59,7 +59,7 @@ export default function TextverstaendnisUeben() {
   const [textIndex, setTextIndex] = useState(0);
   const [shuffled, setShuffled] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({}); // questionIdx -> selectedOption
-  const [revealed, setRevealed] = useState<Record<number, boolean>>({}); // questionIdx -> true if revealed
+  const [showResultsForText, setShowResultsForText] = useState(false); // erst wenn alle beantwortet + Klick
   const [showConfetti, setShowConfetti] = useState(false);
   const [highlightedPassage, setHighlightedPassage] = useState<string | undefined>();
 
@@ -78,24 +78,21 @@ export default function TextverstaendnisUeben() {
 
   const handleSelectOption = useCallback(
     (qIdx: number, optIdx: number) => {
-      if (revealed[qIdx]) return;
+      if (showResultsForText) return;
       setAnswers((prev) => ({ ...prev, [qIdx]: optIdx }));
     },
-    [revealed]
+    [showResultsForText]
   );
 
-  const handleReveal = useCallback(
-    (qIdx: number) => {
-      if (!currentText) return;
-      const question = currentText.questions[qIdx];
+  const handleShowResults = useCallback(() => {
+    if (!currentText) return;
+    const allAnswered = currentText.questions.every((_, i) => answers[i] !== undefined);
+    if (!allAnswered) return;
+
+    currentText.questions.forEach((question, qIdx) => {
       const selected = answers[qIdx];
       if (selected === undefined) return;
-
       const correct = selected === question.correctAnswer;
-      setRevealed((prev) => ({ ...prev, [qIdx]: true }));
-      setHighlightedPassage(question.relevantPassage);
-
-      // Record result
       recordResult("textverständnis", {
         exerciseId: `${currentText.id}-q${qIdx}`,
         userAnswer: question.options[selected],
@@ -103,26 +100,29 @@ export default function TextverstaendnisUeben() {
         timeSpent: 0,
         date: new Date().toISOString(),
       });
+    });
 
-      if (correct) {
-        setShowConfetti(true);
-        setTimeout(() => setShowConfetti(false), 100);
-      }
-    },
-    [currentText, answers, recordResult]
-  );
+    const correctCount = currentText.questions.filter(
+      (q, i) => answers[i] === q.correctAnswer
+    ).length;
+    if (correctCount === currentText.questions.length) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 100);
+    }
+    setShowResultsForText(true);
+  }, [currentText, answers, recordResult]);
 
   const handleNextText = useCallback(() => {
     setTextIndex((i) => Math.min(i + 1, filteredTexts.length - 1));
     setAnswers({});
-    setRevealed({});
+    setShowResultsForText(false);
     setHighlightedPassage(undefined);
   }, [filteredTexts.length]);
 
   const handlePrevText = useCallback(() => {
     setTextIndex((i) => Math.max(0, i - 1));
     setAnswers({});
-    setRevealed({});
+    setShowResultsForText(false);
     setHighlightedPassage(undefined);
   }, []);
 
@@ -130,13 +130,13 @@ export default function TextverstaendnisUeben() {
     setShuffled((s) => !s);
     setTextIndex(0);
     setAnswers({});
-    setRevealed({});
+    setShowResultsForText(false);
     setHighlightedPassage(undefined);
   }, []);
 
   const handleReset = useCallback(() => {
     setAnswers({});
-    setRevealed({});
+    setShowResultsForText(false);
     setHighlightedPassage(undefined);
   }, []);
 
@@ -150,10 +150,11 @@ export default function TextverstaendnisUeben() {
     );
   }
 
-  const allRevealed = currentText.questions.every((_, i) => revealed[i]);
+  const allAnswered = currentText.questions.every((_, i) => answers[i] !== undefined);
   const correctCount = currentText.questions.filter(
-    (q, i) => revealed[i] && answers[i] === q.correctAnswer
+    (q, i) => answers[i] === q.correctAnswer
   ).length;
+  const showResultsBlock = showResultsForText && allAnswered;
 
   // Determine which passage to highlight
   const textHtml = highlightText(currentText.text, highlightedPassage);
@@ -171,7 +172,7 @@ export default function TextverstaendnisUeben() {
               setDifficultyFilter(null);
               setTextIndex(0);
               setAnswers({});
-              setRevealed({});
+              setShowResultsForText(false);
               setHighlightedPassage(undefined);
             }}
             className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
@@ -189,7 +190,7 @@ export default function TextverstaendnisUeben() {
                 setDifficultyFilter(d);
                 setTextIndex(0);
                 setAnswers({});
-                setRevealed({});
+                setShowResultsForText(false);
                 setHighlightedPassage(undefined);
               }}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
@@ -277,15 +278,31 @@ export default function TextverstaendnisUeben() {
               question={q}
               qIdx={qIdx}
               selected={answers[qIdx]}
-              isRevealed={!!revealed[qIdx]}
+              isResultsView={showResultsBlock}
               onSelect={(optIdx) => handleSelectOption(qIdx, optIdx)}
-              onReveal={() => handleReveal(qIdx)}
               onHighlight={(passage) => setHighlightedPassage(passage)}
             />
           ))}
 
-          {/* Summary after all revealed */}
-          {allRevealed && (
+          {/* Ergebnis anzeigen: nur wenn alle beantwortet, noch nicht angezeigt */}
+          {allAnswered && !showResultsForText && (
+            <Card className="border-indigo-200 dark:border-indigo-800">
+              <CardContent className="p-4 text-center">
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                  Alle Fragen beantwortet. Auswertung anzeigen?
+                </p>
+                <button
+                  onClick={handleShowResults}
+                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
+                >
+                  Ergebnis anzeigen
+                </button>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Summary nach Klick auf "Ergebnis anzeigen" */}
+          {showResultsBlock && (
             <Card className="border-indigo-200 dark:border-indigo-800">
               <CardContent className="p-4 text-center space-y-3">
                 <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
@@ -325,17 +342,15 @@ function QuestionCard({
   question,
   qIdx,
   selected,
-  isRevealed,
+  isResultsView,
   onSelect,
-  onReveal,
   onHighlight,
 }: {
   question: TVQuestion;
   qIdx: number;
   selected: number | undefined;
-  isRevealed: boolean;
+  isResultsView: boolean;
   onSelect: (optIdx: number) => void;
-  onReveal: () => void;
   onHighlight: (passage?: string) => void;
 }) {
   return (
@@ -353,7 +368,7 @@ function QuestionCard({
             let optClass =
               "border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600";
 
-            if (isRevealed) {
+            if (isResultsView) {
               if (isCorrect) {
                 optClass = "border-green-500 bg-green-50 dark:bg-green-900/20";
               } else if (isSelected && !isCorrect) {
@@ -369,7 +384,7 @@ function QuestionCard({
               <button
                 key={optIdx}
                 onClick={() => onSelect(optIdx)}
-                disabled={isRevealed}
+                disabled={isResultsView}
                 className={`w-full text-left p-3 rounded-lg border-2 transition-all text-sm cursor-pointer disabled:cursor-default ${optClass}`}
               >
                 <div className="flex items-start gap-2">
@@ -377,10 +392,10 @@ function QuestionCard({
                     {String.fromCharCode(65 + optIdx)}.
                   </span>
                   <span className="flex-1 text-gray-800 dark:text-gray-200">{opt}</span>
-                  {isRevealed && isCorrect && (
+                  {isResultsView && isCorrect && (
                     <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                   )}
-                  {isRevealed && isSelected && !isCorrect && (
+                  {isResultsView && isSelected && !isCorrect && (
                     <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                   )}
                 </div>
@@ -389,18 +404,8 @@ function QuestionCard({
           })}
         </div>
 
-        {/* Reveal button */}
-        {!isRevealed && selected !== undefined && (
-          <button
-            onClick={onReveal}
-            className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
-          >
-            &Uuml;berpr&uuml;fen
-          </button>
-        )}
-
-        {/* Explanation */}
-        {isRevealed && (
+        {/* Erklärung nur in der Ergebnis-Ansicht */}
+        {isResultsView && (
           <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 space-y-2">
             <p className="text-xs text-muted leading-relaxed">{question.explanation}</p>
             {question.relevantPassage && (
