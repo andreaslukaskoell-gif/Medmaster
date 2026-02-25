@@ -25,6 +25,9 @@ import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import {
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
+  generateAllWordFluencyTasksFromLexicon,
+  generateImplicationTrainingTask,
+  generateWordFluencyTask,
 } from "@/data/kffGenerators";
 import {
   OFFICIAL_GM_EXAMPLES,
@@ -32,13 +35,22 @@ import {
   type AllergyPass,
   type GedaechtnisQuestion,
 } from "@/data/kffGedaechtnisMedAT";
-import { OFFICIAL_IMPLICATION_EXAMPLES, type ImplikationTask } from "@/data/kffImplikationen";
+import {
+  OFFICIAL_IMPLICATION_EXAMPLES,
+  implikationenTasks,
+  type ImplikationTask,
+} from "@/data/kffImplikationen";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 import { OFFICIAL_WF_EXAMPLES, type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
-import { OFFICIAL_ZF_EXAMPLES, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
+import {
+  OFFICIAL_ZF_EXAMPLES,
+  generateSequenceTaskSet,
+  type SequenceTask,
+} from "@/data/kffZahlenfolgenMedAT";
 import { difficultyLabel } from "@/data/figurenGenerator";
 import {
   OFFICIAL_FZ_EXAMPLES,
+  generateFigurenTrainingSet,
   polygonToPath,
   FIGURE_SVG_ASPECT_PROPS,
   isOptionE,
@@ -76,6 +88,23 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
   wortfluessigkeit: "wortflüssigkeit",
 };
 
+/** Zahlenfolge für Anzeige: nur Zahlen + genau „?, ?“ am Ende (MedAT: immer 2 Lücken). */
+function formatZahlenfolgeDisplay(sequence: (number | "?")[] | undefined): string {
+  if (!sequence?.length) return "?, ?";
+  const numbers = sequence.filter((x): x is number => x !== "?");
+  return numbers.length ? `${numbers.join(", ")}, ?, ?` : "?, ?";
+}
+
+/** Mischt ein Array und gibt bis zu limit Elemente zurück (Fallback wenn Task-DB leer). */
+function shuffleSlice<T>(arr: T[], limit: number): T[] {
+  const out = [...arr];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j]!, out[i]!];
+  }
+  return out.slice(0, limit);
+}
+
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
   const [searchParams] = useSearchParams();
@@ -99,7 +128,7 @@ export default function KFF() {
   if (authTimedOut || !user) {
     return (
       <PageError
-        message="Sitzung abgelaufen oder nicht eingeloggt. Bitte melde dich erneut an."
+        message="Zum Üben im KFF-Bereich musst du angemeldet sein. Sitzung abgelaufen oder nicht eingeloggt? Bitte melde dich erneut an."
         action={
           <Button asChild variant="outline" className="gap-2">
             <a href="/login">Zum Login</a>
@@ -268,6 +297,8 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<SequenceTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [trainingLoading, setTrainingLoading] = useState(false);
+  const [trainingError, setTrainingError] = useState<string | null>(null);
   const {
     addXP,
     checkStreak,
@@ -295,25 +326,41 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const startTraining = async () => {
-    const domain = "kff-zahlenfolgen" as const;
-    const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserWithWeakness(
-      domain,
-      rating,
-      questionCount,
-      150,
-      getKffFailedIdsForDomain(domain)
-    );
-    const raw = tasks.map((t) => taskToData<SequenceTask>(t));
-    const valid = filterValidSequenceTasks(raw);
-    setQuestions(valid);
-    if (valid.length < questionCount && import.meta.env?.DEV) {
-      logPoolWarning("zahlenfolgen", valid.length, "Training");
+    setTrainingError(null);
+    setTrainingLoading(true);
+    try {
+      const domain = "kff-zahlenfolgen" as const;
+      const rating = skillRating ?? 500;
+      const tasks = await getTasksForUserWithWeakness(
+        domain,
+        rating,
+        questionCount,
+        150,
+        getKffFailedIdsForDomain(domain)
+      );
+      const raw = tasks.map((t) => taskToData<SequenceTask>(t));
+      let valid = filterValidSequenceTasks(raw);
+      if (valid.length === 0) {
+        const generated = generateSequenceTaskSet(questionCount, Date.now());
+        valid = shuffleSlice(filterValidSequenceTasks(generated), questionCount);
+        if (valid.length === 0)
+          valid = shuffleSlice(filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]), questionCount);
+        if (import.meta.env?.DEV)
+          logPoolWarning("zahlenfolgen", valid.length, "Fallback (generiert)");
+      }
+      setQuestions(valid);
+      if (valid.length < questionCount && import.meta.env?.DEV) {
+        logPoolWarning("zahlenfolgen", valid.length, "Training");
+      }
+      setMode("training");
+      setIndex(0);
+      setAnswers({});
+      setPhase("quiz");
+    } catch (e) {
+      setTrainingError(e instanceof Error ? e.message : "Aufgaben konnten nicht geladen werden.");
+    } finally {
+      setTrainingLoading(false);
     }
-    setMode("training");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
   };
 
   const handleSubmit = () => {
@@ -404,8 +451,8 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="text-lg">Training</CardTitle>
             <p className="text-sm text-muted">
-              Geprüfte Trainingsaufgaben – Schwierigkeit wird automatisch gemischt (leicht, mittel,
-              schwer). Offizielle Beispiele werden dabei nicht verändert.
+              Aufgaben aus der Datenbank – Schwierigkeit wird automatisch gemischt (leicht, mittel,
+              schwer). Offizielle Beispiele bleiben unverändert in der DB.
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -429,9 +476,21 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startTraining}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Fragen generieren
+            <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
+              {trainingLoading ? (
+                <>
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  Wird geladen…
+                </>
+              ) : (
+                <>
+                  <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Fragen laden
+                </>
+              )}
             </Button>
+            {trainingError && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -478,7 +537,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium">
-                    {i + 1}. {q.sequence.join(", ")}
+                    {i + 1}. {formatZahlenfolgeDisplay(q.sequence)}
                   </span>
                   {q.source && (
                     <Badge variant="default" className="text-[10px]">
@@ -525,15 +584,47 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (!safeQuestions.length) {
+    const isTrainingEmpty = phase === "quiz" && mode === "training";
     return (
       <div className="max-w-3xl mx-auto space-y-6 p-8">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <div className="flex flex-col items-center justify-center gap-4 text-muted">
-          <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
-          <p>Fragen werden geladen und geprüft...</p>
-        </div>
+        {isTrainingEmpty ? (
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <p className="text-muted">
+                Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
+                möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button variant="outline" onClick={onBack}>
+                  Zurück zum Setup
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    const valid = filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]);
+                    if (valid.length > 0) {
+                      setQuestions(valid);
+                      setMode("official");
+                      setIndex(0);
+                      setAnswers({});
+                      setPhase("quiz");
+                    }
+                  }}
+                >
+                  <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <div className="flex flex-col items-center justify-center gap-4 text-muted">
+            <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+            <p>Fragen werden geladen und geprüft...</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -575,8 +666,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
             </Badge>
           )}
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
-            {currentQ.sequence?.join(", ") ?? ""},{" "}
-            <span className="text-primary-700 dark:text-primary-400">?, ?</span>
+            {formatZahlenfolgeDisplay(currentQ.sequence)}
           </p>
           <p className="text-sm text-muted mb-6">Welche zwei Zahlen folgen als nächstes?</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -696,9 +786,17 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
         _currentGmIsOfficial = false;
         onLearn();
       } else {
-        setDbError(
-          "Keine Allergieausweis-Aufgaben in der Datenbank. Führe den Seed aus: npx tsx src/scripts/seedTaskDb.ts --generate kff-merkfähigkeit 100"
-        );
+        const passes = generateAllergyPasses(8);
+        const raw = generateGedaechtnisQuestionsFromPasses(passes, 25);
+        const questions = filterValidGedaechtnisQuestions(raw);
+        if (questions.length > 0) {
+          _currentGmPasses = passes;
+          _currentGmQuestions = questions;
+          _currentGmIsOfficial = false;
+          onLearn();
+        } else {
+          setDbError("Keine gültigen Fragen generiert. Bitte später erneut versuchen.");
+        }
       }
     } catch (e) {
       setDbError(e instanceof Error ? e.message : "Fehler beim Laden aus der Datenbank.");
@@ -781,7 +879,7 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
           {dbError && <p className="text-sm text-amber-700 dark:text-amber-400">{dbError}</p>}
           <div className="border-t border-border dark:border-gray-700 pt-4">
             <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
-              Fallback: lokal generieren (Anzahl Pässe)
+              Fallback: Set lokal erzeugen (Anzahl Pässe)
             </label>
             <div className="flex flex-wrap gap-2">
               {[6, 7, 8, 9, 10].map((n) => (
@@ -1103,6 +1201,8 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [trainingLoading, setTrainingLoading] = useState(false);
+  const [trainingError, setTrainingError] = useState<string | null>(null);
   const {
     addXP,
     checkStreak,
@@ -1129,25 +1229,54 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const startTraining = async () => {
-    const domain = "kff-implikationen" as const;
-    const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserWithWeakness(
-      domain,
-      rating,
-      questionCount,
-      150,
-      getKffFailedIdsForDomain(domain)
-    );
-    const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
-    const valid = filterValidImplikationTasks(raw);
-    setQuestions(valid);
-    if (valid.length < raw.length && import.meta.env?.DEV) {
-      logPoolWarning("implikationen", valid.length, "Training");
+    setTrainingError(null);
+    setTrainingLoading(true);
+    try {
+      const domain = "kff-implikationen" as const;
+      const rating = skillRating ?? 500;
+      const tasks = await getTasksForUserWithWeakness(
+        domain,
+        rating,
+        questionCount,
+        150,
+        getKffFailedIdsForDomain(domain)
+      );
+      const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
+      let valid = filterValidImplikationTasks(raw);
+      if (valid.length === 0) {
+        const levels: (1 | 2 | 3)[] = [1, 2, 3];
+        const generated: ImplikationTask[] = [];
+        for (let i = 0; i < questionCount; i++) {
+          const t = generateImplicationTrainingTask(levels[i % 3]!);
+          t.id = t.id ?? `imp-client-${Date.now()}-${i}`;
+          generated.push(t);
+        }
+        valid = shuffleSlice(filterValidImplikationTasks(generated), questionCount);
+        if (valid.length === 0) {
+          const combined = [
+            ...OFFICIAL_IMPLICATION_EXAMPLES,
+            ...implikationenTasks.filter(
+              (t) => !OFFICIAL_IMPLICATION_EXAMPLES.some((o) => o.id === t.id)
+            ),
+          ];
+          valid = shuffleSlice(filterValidImplikationTasks(combined), questionCount);
+        }
+        if (import.meta.env?.DEV)
+          logPoolWarning("implikationen", valid.length, "Fallback (generiert)");
+      }
+      setQuestions(valid);
+      if (valid.length < raw.length && import.meta.env?.DEV) {
+        logPoolWarning("implikationen", valid.length, "Training");
+      }
+      setMode("training");
+      setIndex(0);
+      setAnswers({});
+      setPhase("quiz");
+    } catch (e) {
+      setTrainingError(e instanceof Error ? e.message : "Aufgaben konnten nicht geladen werden.");
+    } finally {
+      setTrainingLoading(false);
     }
-    setMode("training");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
   };
 
   const handleSubmit = () => {
@@ -1235,7 +1364,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
             <p className="text-sm text-muted">
-              Geprüfte Trainingsaufgaben – gleiche Logik-Typen, andere Inhalte. Keine Überlappung
+              Aufgaben aus der Datenbank – gleiche Logik-Typen, andere Inhalte. Keine Überlappung
               mit den offiziellen Beispielen.
             </p>
           </CardHeader>
@@ -1260,9 +1389,21 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startTraining}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben generieren
+            <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
+              {trainingLoading ? (
+                <>
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  Wird geladen…
+                </>
+              ) : (
+                <>
+                  <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben laden
+                </>
+              )}
             </Button>
+            {trainingError && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -1357,17 +1498,46 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (!safeQuestions.length) {
+    const isTrainingEmpty = phase === "quiz";
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <Card>
-          <CardContent className="p-6 text-center">
-            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto" />
-            <p className="text-sm text-muted mt-4">Fragen werden geladen und geprüft...</p>
-          </CardContent>
-        </Card>
+        {isTrainingEmpty ? (
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <p className="text-muted">
+                Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
+                möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button variant="outline" onClick={() => setPhase("setup")}>
+                  Zurück zum Setup
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    const valid = filterValidImplikationTasks([...OFFICIAL_IMPLICATION_EXAMPLES]);
+                    setQuestions(valid);
+                    setIndex(0);
+                    setAnswers({});
+                    setPhase("quiz");
+                  }}
+                >
+                  <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <Card>
+            <CardContent className="p-6 text-center">
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto" />
+              <p className="text-sm text-muted mt-4">Fragen werden geladen und geprüft...</p>
+            </CardContent>
+          </Card>
+        )}
       </div>
     );
   }
@@ -1495,6 +1665,8 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [trainingLoading, setTrainingLoading] = useState(false);
+  const [trainingError, setTrainingError] = useState<string | null>(null);
   const {
     addXP,
     checkStreak,
@@ -1528,25 +1700,59 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const startTraining = async () => {
-    const domain = "kff-wortflüssigkeit" as const;
-    const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserWithWeakness(
-      domain,
-      rating,
-      questionCount,
-      150,
-      getKffFailedIdsForDomain(domain)
-    );
-    const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
-    const valid = filterValidWordFluencyTasks(raw);
-    setQuestions(valid);
-    if (valid.length < raw.length && import.meta.env?.DEV) {
-      logPoolWarning("wortflüssigkeit", valid.length, "Training");
+    setTrainingError(null);
+    setTrainingLoading(true);
+    try {
+      const domain = "kff-wortflüssigkeit" as const;
+      const rating = skillRating ?? 500;
+      const tasks = await getTasksForUserWithWeakness(
+        domain,
+        rating,
+        questionCount,
+        150,
+        getKffFailedIdsForDomain(domain)
+      );
+      const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
+      let valid = filterValidWordFluencyTasks(raw);
+      if (valid.length === 0) {
+        const levels: (1 | 2 | 3)[] = [1, 2, 3];
+        const generated: WordFluencyTask[] = [];
+        for (let i = 0; i < questionCount; i++) {
+          const t = generateWordFluencyTask(levels[i % 3]!);
+          t.id = t.id ?? `wf-client-${Date.now()}-${i}`;
+          generated.push(t);
+        }
+        valid = shuffleSlice(filterValidWordFluencyTasks(generated), questionCount);
+        if (valid.length === 0) {
+          const withIds = OFFICIAL_WF_EXAMPLES.map((t, idx) => ({
+            ...t,
+            id: t.id ?? `wf-off-${idx}`,
+          }));
+          const fromLexicon = generateAllWordFluencyTasksFromLexicon().map((t, idx) => ({
+            ...t,
+            id: t.id ?? `wf-lex-${idx}`,
+          }));
+          valid = shuffleSlice(
+            filterValidWordFluencyTasks([...withIds, ...fromLexicon]),
+            questionCount
+          );
+        }
+        if (import.meta.env?.DEV)
+          logPoolWarning("wortflüssigkeit", valid.length, "Fallback (generiert)");
+      }
+      setQuestions(valid);
+      if (valid.length < raw.length && import.meta.env?.DEV) {
+        logPoolWarning("wortflüssigkeit", valid.length, "Training");
+      }
+      setMode("training");
+      setIndex(0);
+      setAnswers({});
+      setPhase("quiz");
+    } catch (e) {
+      setTrainingError(e instanceof Error ? e.message : "Aufgaben konnten nicht geladen werden.");
+    } finally {
+      setTrainingLoading(false);
     }
-    setMode("training");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
   };
 
   const handleSubmit = () => {
@@ -1646,7 +1852,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
             <p className="text-sm text-muted">
-              Geprüfte Trainingsaufgaben – andere Wörter, gleiche Regel. Keine Überlappung mit
+              Aufgaben aus der Datenbank – andere Wörter, gleiche Regel. Keine Überlappung mit
               offiziellen Beispielen.
             </p>
           </CardHeader>
@@ -1671,9 +1877,21 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                 ))}
               </div>
             </div>
-            <Button className="w-full" size="lg" onClick={startTraining}>
-              <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben generieren
+            <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
+              {trainingLoading ? (
+                <>
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  Wird geladen…
+                </>
+              ) : (
+                <>
+                  <Shuffle className="w-5 h-5 mr-2" /> {questionCount} Trainingsaufgaben laden
+                </>
+              )}
             </Button>
+            {trainingError && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -1765,15 +1983,50 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   }
 
   if (!safeQuestions.length || !currentQ) {
+    const isTrainingEmpty = phase === "quiz" && questions.length === 0;
     return (
       <div className="max-w-3xl mx-auto space-y-6 p-8">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <div className="flex flex-col items-center justify-center gap-4 text-muted">
-          <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
-          <p>Wörter werden geladen...</p>
-        </div>
+        {isTrainingEmpty ? (
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <p className="text-muted">
+                Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
+                möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button variant="outline" onClick={() => setPhase("setup")}>
+                  Zurück zum Setup
+                </Button>
+                {OFFICIAL_WF_EXAMPLES.length > 0 && (
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      const withIds = OFFICIAL_WF_EXAMPLES.map((t, i) => ({
+                        ...t,
+                        id: t.id ?? `wf-off-${i}`,
+                      }));
+                      const valid = filterValidWordFluencyTasks(withIds);
+                      setQuestions(valid);
+                      setIndex(0);
+                      setAnswers({});
+                      setPhase("quiz");
+                    }}
+                  >
+                    <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
+                  </Button>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <div className="flex flex-col items-center justify-center gap-4 text-muted">
+            <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+            <p>Wörter werden geladen...</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -1870,6 +2123,8 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(90);
+  const [trainingLoading, setTrainingLoading] = useState(false);
+  const [trainingError, setTrainingError] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const {
     addXP,
@@ -1894,25 +2149,49 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   };
 
   const startTraining = async () => {
-    const domain = "kff-figuren" as const;
-    const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserWithWeakness(
-      domain,
-      rating,
-      Math.min(questionCount, 150),
-      150,
-      getKffFailedIdsForDomain(domain)
-    );
-    const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
-    const valid = filterValidFigurenTasks(list);
-    setQuestions(valid);
-    if (valid.length < list.length && import.meta.env?.DEV) {
-      logPoolWarning("figuren", valid.length, "Training");
+    setTrainingError(null);
+    setTrainingLoading(true);
+    try {
+      const domain = "kff-figuren" as const;
+      const rating = skillRating ?? 500;
+      const tasks = await getTasksForUserWithWeakness(
+        domain,
+        rating,
+        Math.min(questionCount, 150),
+        150,
+        getKffFailedIdsForDomain(domain)
+      );
+      const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
+      let valid = filterValidFigurenTasks(list);
+      if (valid.length === 0) {
+        const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+        const seed = Date.now();
+        const generated: FigureAssembleTask[] = [];
+        for (let i = 0; i < Math.min(questionCount, 150); i++) {
+          const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+          if (t) generated.push(t);
+        }
+        valid = shuffleSlice(filterValidFigurenTasks(generated), Math.min(questionCount, 150));
+        if (valid.length === 0)
+          valid = shuffleSlice(
+            filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
+            Math.min(questionCount, 150)
+          );
+        if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Fallback (generiert)");
+      }
+      setQuestions(valid);
+      if (valid.length < list.length && import.meta.env?.DEV) {
+        logPoolWarning("figuren", valid.length, "Training");
+      }
+      setIndex(0);
+      setAnswers({});
+      setTimeLeft(90);
+      setPhase("quiz");
+    } catch (e) {
+      setTrainingError(e instanceof Error ? e.message : "Aufgaben konnten nicht geladen werden.");
+    } finally {
+      setTrainingLoading(false);
     }
-    setIndex(0);
-    setAnswers({});
-    setTimeLeft(90);
-    setPhase("quiz");
   };
 
   // Timer logic - reset on each question change
@@ -2037,7 +2316,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 </span>
                 <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">Training</h2>
                 <p className="text-sm text-muted mt-1">
-                  Geprüfte Trainingsaufgaben – Schwierigkeit passt sich deinem Level an.
+                  Aufgaben aus der Datenbank – Schwierigkeit passt sich deinem Level an.
                 </p>
               </CardContent>
             </Card>
@@ -2084,13 +2363,25 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 </div>
               </div>
               <div className="flex gap-3">
-                <Button variant="outline" onClick={() => setMode(null)}>
+                <Button variant="outline" onClick={() => setMode(null)} disabled={trainingLoading}>
                   Zurück
                 </Button>
-                <Button size="lg" onClick={startTraining}>
-                  <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben starten
+                <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
+                  {trainingLoading ? (
+                    <>
+                      <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-rose-500 border-t-transparent rounded-full" />
+                      Wird geladen…
+                    </>
+                  ) : (
+                    <>
+                      <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben laden
+                    </>
+                  )}
                 </Button>
               </div>
+              {trainingError && (
+                <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+              )}
             </CardContent>
           </Card>
         )}
@@ -2274,12 +2565,49 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   // --- QUIZ ---
   const fzQ = questions[index];
   if (!fzQ) {
+    const isTrainingEmpty = phase === "quiz" && questions.length === 0;
     return (
-      <div className="max-w-2xl mx-auto p-6">
+      <div className="max-w-2xl mx-auto p-6 space-y-4">
         <Button variant="ghost" size="sm" onClick={onBack}>
           Zurück
         </Button>
-        <p className="text-muted">Keine Aufgabe geladen.</p>
+        {isTrainingEmpty ? (
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <p className="text-muted">
+                Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
+                möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setPhase("setup");
+                    setMode(null);
+                  }}
+                >
+                  Zurück zum Setup
+                </Button>
+                {OFFICIAL_FZ_EXAMPLES.length > 0 && (
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      const valid = filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]);
+                      setQuestions(valid);
+                      setIndex(0);
+                      setAnswers({});
+                      setPhase("quiz");
+                    }}
+                  >
+                    <Puzzle className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
+                  </Button>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <p className="text-muted">Keine Aufgabe geladen.</p>
+        )}
       </div>
     );
   }

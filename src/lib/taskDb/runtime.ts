@@ -69,8 +69,9 @@ export async function getTasksForUser(
 }
 
 /**
- * Wie getTasksForUser, aber wartet auf Nachfüllen wenn aktuell 0 Aufgaben,
- * und versucht danach erneut aus der DB zu lesen (eine Runde).
+ * Wie getTasksForUser, aber wenn aktuell 0 Aufgaben: Nachfüllen nur im Hintergrund,
+ * sofort [] zurückgeben – die UI nutzt dann Fallback (offizielle/kuratierte Daten).
+ * Kein Blockieren auf fillPool, damit das Laden schnell bleibt.
  */
 export async function getTasksForUserOrFill(
   domain: TaskDomain,
@@ -84,14 +85,16 @@ export async function getTasksForUserOrFill(
   const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
   if (total < minPool) {
-    const toGenerate = Math.max(count, minPool - total);
-    await fillPool(domain, toGenerate);
-    return getTasksByDifficulty(
-      domain,
-      Math.max(0, userSkill - bandWidth),
-      Math.min(1000, userSkill + bandWidth),
-      count
-    );
+    const toGenerate = Math.max(count, Math.min(minPool - total, 100));
+    fillPool(domain, toGenerate).then((r) => {
+      if (
+        typeof console !== "undefined" &&
+        import.meta.env?.DEV &&
+        (r.saved > 0 || r.discarded > 0)
+      ) {
+        console.log(`[TaskDB] Filled ${domain}: saved=${r.saved}, discarded=${r.discarded}`);
+      }
+    });
   }
   return [];
 }
@@ -108,6 +111,7 @@ const shuffle = <T>(arr: T[]): T[] => {
 /**
  * Wie getTasksForUserOrFill, aber bis zur Hälfte der gewünschten Anzahl aus failedIds
  * (öfter falsch gelöste Tasks), Rest aus Skill-Band. Merged und gemischt.
+ * Lädt weak und rest parallel, wenn beides nötig.
  */
 export async function getTasksForUserWithWeakness(
   domain: TaskDomain,
@@ -117,22 +121,19 @@ export async function getTasksForUserWithWeakness(
   failedIds?: string[]
 ): Promise<Task[]> {
   const weakCount = failedIds?.length ? Math.min(Math.ceil(count / 2), failedIds.length) : 0;
+  const restCount = count - weakCount;
 
-  let weak: Task[] = [];
-  if (weakCount > 0 && failedIds && failedIds.length > 0) {
-    // failedIds sind bereits nach wrongCount sortiert (meist falsch zuerst)
-    const idsToFetch = failedIds.slice(0, weakCount);
-    weak = await getTasksByIds(idsToFetch);
-  }
+  const [weak, restRaw] = await Promise.all([
+    weakCount > 0 && failedIds && failedIds.length > 0
+      ? getTasksByIds(failedIds.slice(0, weakCount))
+      : Promise.resolve([]),
+    restCount > 0
+      ? getTasksForUserOrFill(domain, userSkill, restCount + weakCount, bandWidth)
+      : Promise.resolve([]),
+  ]);
 
-  const restCount = count - weak.length;
-  let restFiltered: Task[] = [];
-  if (restCount > 0) {
-    const rest = await getTasksForUserOrFill(domain, userSkill, restCount + weak.length, bandWidth);
-    const excludeIds = new Set(weak.map((t) => t.id));
-    restFiltered = rest.filter((t) => !excludeIds.has(t.id)).slice(0, restCount);
-  }
-
+  const excludeIds = new Set(weak.map((t) => t.id));
+  const restFiltered = restRaw.filter((t) => !excludeIds.has(t.id)).slice(0, restCount);
   const merged = [...weak, ...restFiltered];
   return shuffle(merged).slice(0, count);
 }

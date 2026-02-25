@@ -34,11 +34,12 @@ function transformSelfTest(
   subject: "biologie" | "chemie" | "physik" | "mathematik",
   chapter: string
 ): Question {
+  const rawQuestion = q.question != null ? String(q.question).trim() : "";
   return {
     id: `${chapter}__${ukId}-st-${qIdx}`,
     subject,
     chapter,
-    text: q.question,
+    text: rawQuestion || `[Fragetext fehlt: ${chapter} ${ukId}]`,
     options: q.options.map((opt, i) => ({
       id: OPTION_IDS[i] ?? String(i),
       text: opt,

@@ -1,6 +1,7 @@
 /**
  * Chemie BMS-Fragenpool (500+ Fragen, MedAT Single Choice + Typ K + „Was ist falsch?“).
  * Nur Stoff aus bmsKapitel/chemie.
+ * Platzhalter („Chemie Pool-Frage N.“) werden ausgefiltert.
  */
 import type { Question } from "./index";
 import { chemiePool1 } from "./chemiePool1";
@@ -15,6 +16,12 @@ import { chemiePool9 } from "./chemiePool9";
 import { chemiePool10 } from "./chemiePool10";
 import { chemieWasIstFalsch } from "./chemieWasIstFalsch";
 
+const CHEMIE_PLACEHOLDER = /^Chemie Pool-Frage \d+\.$/;
+
+function isPlaceholder(q: Question): boolean {
+  return CHEMIE_PLACEHOLDER.test((q.text || "").trim());
+}
+
 export const chemiePoolQuestions: Question[] = [
   ...chemiePool1,
   ...chemiePool2,
@@ -27,4 +34,4 @@ export const chemiePoolQuestions: Question[] = [
   ...chemiePool9,
   ...chemiePool10,
   ...chemieWasIstFalsch,
-];
+].filter((q) => !isPlaceholder(q));

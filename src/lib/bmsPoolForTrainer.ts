@@ -72,7 +72,7 @@ export function questionToBMSFrage(q: Question, uk_id: string): BMSFrage {
     typ: "A",
     fach: q.subject,
     uk_id,
-    stamm: q.text,
+    stamm: (q.text && q.text.trim()) || `[Fragetext fehlt: ${q.id}]`,
     optionen,
     korrekte_option,
     erklaerung: q.explanation,

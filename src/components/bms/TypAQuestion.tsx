@@ -23,12 +23,15 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
   const correct = frage.korrekte_option ?? "";
   const isCorrect = chosenOption === correct;
   const locked = revealed;
+  const stammDisplay =
+    (frage.stamm && frage.stamm.trim()) ||
+    `[Fragetext fehlt — ID: ${frage.id}. Bitte „Offline-Pool“ als Quelle wählen oder Fehler melden.]`;
 
   return (
     <div className="space-y-3">
       {/* Question stem */}
       <p className="text-base font-medium text-gray-900 dark:text-gray-100 leading-relaxed">
-        {frage.stamm}
+        {stammDisplay}
       </p>
 
       {/* Options */}

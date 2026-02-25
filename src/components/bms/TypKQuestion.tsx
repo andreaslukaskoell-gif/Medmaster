@@ -55,6 +55,9 @@ export function TypKQuestion({
   const korrekt = frage.korrekte_option ?? "";
   const isCorrect = typKCombChosen === korrekt;
   const locked = false;
+  const stammDisplay =
+    (frage.stamm && frage.stamm.trim()) ||
+    `[Fragetext fehlt — ID: ${frage.id}. Bitte „Offline-Pool“ als Quelle wählen oder Fehler melden.]`;
 
   // Phase 1 complete when all aussagen have a decision
   const phase1Complete = aussagen.every((_, i) => typKDecisions[i] != null);
@@ -63,7 +66,7 @@ export function TypKQuestion({
     <div className="space-y-4">
       {/* Question stem */}
       <p className="text-base font-medium text-gray-900 dark:text-gray-100 leading-relaxed">
-        {frage.stamm}
+        {stammDisplay}
       </p>
 
       {/* ── AUSSAGEN ─────────────────────────────────────── */}

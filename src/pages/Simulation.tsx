@@ -34,15 +34,15 @@ import {
 } from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
 import {
-  generateZahlenfolgenSet,
   generateAllergyCards,
   generateMemoryQuestions,
   generateWortflüssigkeitSet,
-  generateSyllogismSet,
 } from "@/data/kffGenerators";
 import type { AllergyCard } from "@/data/kffGenerators";
+import { OFFICIAL_ZF_EXAMPLES, generateSequenceTaskSet } from "@/data/kffZahlenfolgenMedAT";
 import { figurenAufgaben } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
+import { OFFICIAL_IMPLICATION_EXAMPLES, implikationenTasks } from "@/data/kffImplikationen";
 import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
@@ -111,6 +111,7 @@ type SectionType =
   | "bms"
   | "tv"
   | "kff-zahlenfolgen"
+  | "kff-gedaechtnis-learn"
   | "kff-gedaechtnis"
   | "kff-implikationen"
   | "kff-wortfluessigkeit"
@@ -129,6 +130,8 @@ interface SimSection {
   parentGroup?: string;
   learnPhaseMinutes?: number; // for gedaechtnis
 }
+
+// kff-gedaechtnis-learn: only learn phase (cards generated there, used in kff-gedaechtnis recall)
 
 // A unified question interface that all section types normalize into
 interface UnifiedQuestion {
@@ -213,20 +216,28 @@ const KFF_FULL_SECTIONS: SimSection[] = [
     parentGroup: "KFF",
   },
   {
-    id: "kff-ged",
-    label: "Gedächtnis & Merkfähigkeit",
-    sectionType: "kff-gedaechtnis",
-    questionCount: 25,
-    timeLimitMinutes: 15,
+    id: "kff-ged-learn",
+    label: "Gedächtnis & Merkfähigkeit — Lernphase",
+    sectionType: "kff-gedaechtnis-learn",
+    questionCount: 0,
+    timeLimitMinutes: 8,
     parentGroup: "KFF",
     learnPhaseMinutes: 8,
   },
   {
-    id: "kff-imp",
-    label: "Implikationen",
-    sectionType: "kff-implikationen",
+    id: "kff-fig",
+    label: "Figuren zusammensetzen",
+    sectionType: "kff-figuren",
     questionCount: 10,
-    timeLimitMinutes: 10,
+    timeLimitMinutes: 15,
+    parentGroup: "KFF",
+  },
+  {
+    id: "kff-ged",
+    label: "Gedächtnis & Merkfähigkeit — Abfrage",
+    sectionType: "kff-gedaechtnis",
+    questionCount: 25,
+    timeLimitMinutes: 15,
     parentGroup: "KFF",
   },
   {
@@ -238,11 +249,11 @@ const KFF_FULL_SECTIONS: SimSection[] = [
     parentGroup: "KFF",
   },
   {
-    id: "kff-fig",
-    label: "Figuren zusammensetzen",
-    sectionType: "kff-figuren",
+    id: "kff-imp",
+    label: "Implikationen",
+    sectionType: "kff-implikationen",
     questionCount: 10,
-    timeLimitMinutes: 15,
+    timeLimitMinutes: 10,
     parentGroup: "KFF",
   },
 ];
@@ -396,29 +407,38 @@ function mixDifficulties<T>(
   return all;
 }
 
-function generateZahlenfolgenQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = mixDifficulties(generateZahlenfolgenSet, section.questionCount);
-  return set.map((q) => ({
-    id: q.id,
-    sectionId: section.id,
-    sectionType: "kff-zahlenfolgen",
-    sequence: q.sequence,
-    numOptions: q.options,
-    correctOption: q.correctOption,
-    correctPair: q.correctPair,
-    zfExplanation: q.explanation,
-  }));
+function generateZahlenfolgenQuestions(section: SimSection, variant?: number): UnifiedQuestion[] {
+  const need = section.questionCount;
+  const official = [...OFFICIAL_ZF_EXAMPLES];
+  const generated = generateSequenceTaskSet(
+    Math.max(0, need - official.length),
+    (variant ?? 0) * 7919 + 42
+  );
+  const pool = shuffle([...official, ...generated]).slice(0, need);
+  return pool.map((task) => {
+    const numbers = task.sequence.filter((x): x is number => x !== "?");
+    const optStrings = task.options.map((o) =>
+      o.value ? `${o.value[0]}, ${o.value[1]}` : (o.text ?? "E")
+    );
+    const correctIndex = task.options.findIndex((o) => o.key === task.correctOptionId);
+    return {
+      id: task.id,
+      sectionId: section.id,
+      sectionType: "kff-zahlenfolgen",
+      sequence: numbers,
+      numOptions: optStrings,
+      correctOption: correctIndex >= 0 ? correctIndex : 0,
+      correctPair: task.correctNext,
+      zfExplanation: task.explanation,
+    };
+  });
 }
-
-let _allergyCards: AllergyCard[] = [];
 
 function generateGedaechtnisQuestions(section: SimSection): {
   cards: AllergyCard[];
   questions: UnifiedQuestion[];
 } {
   const cards = generateAllergyCards(8);
-  _allergyCards = cards;
-  void _allergyCards;
   const memQ = generateMemoryQuestions(cards, section.questionCount);
   const questions = memQ.map((q) => ({
     id: q.id,
@@ -432,16 +452,19 @@ function generateGedaechtnisQuestions(section: SimSection): {
 }
 
 function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = mixDifficulties(generateSyllogismSet, section.questionCount);
-  return set.map((q) => ({
-    id: q.id,
+  const pool = shuffle([
+    ...OFFICIAL_IMPLICATION_EXAMPLES,
+    ...implikationenTasks.filter((t) => !OFFICIAL_IMPLICATION_EXAMPLES.some((o) => o.id === t.id)),
+  ]).slice(0, section.questionCount);
+  return pool.map((t) => ({
+    id: t.id,
     sectionId: section.id,
     sectionType: "kff-implikationen" as SectionType,
-    premise1: q.premise1,
-    premise2: q.premise2,
-    sylOptions: q.options,
-    sylCorrectOption: q.correctOption,
-    impExplanation: q.explanation,
+    premise1: t.premise1,
+    premise2: t.premise2,
+    sylOptions: [...t.options],
+    sylCorrectOption: t.correctAnswer,
+    impExplanation: t.explanation,
   }));
 }
 
@@ -526,7 +549,8 @@ function generateSekQuestions(section: SimSection): UnifiedQuestion[] {
 
 function generateQuestionsForSection(
   section: SimSection,
-  variant?: number
+  variant?: number,
+  existingGedaechtnisCards?: AllergyCard[]
 ): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
   switch (section.sectionType) {
     case "bms":
@@ -534,10 +558,23 @@ function generateQuestionsForSection(
     case "tv":
       return { questions: generateTvQuestions(section) };
     case "kff-zahlenfolgen":
-      return { questions: generateZahlenfolgenQuestions(section) };
+      return { questions: generateZahlenfolgenQuestions(section, variant) };
+    case "kff-gedaechtnis-learn": {
+      const cards = generateAllergyCards(8);
+      return { questions: [], cards };
+    }
     case "kff-gedaechtnis": {
-      const { cards, questions } = generateGedaechtnisQuestions(section);
-      return { questions, cards };
+      const cards = existingGedaechtnisCards ?? [];
+      const memQ = generateMemoryQuestions(cards, section.questionCount);
+      const questions = memQ.map((q) => ({
+        id: q.id,
+        sectionId: section.id,
+        sectionType: "kff-gedaechtnis" as SectionType,
+        memText: q.text,
+        memOptions: q.options,
+        memCorrect: q.correctAnswer,
+      }));
+      return { questions };
     }
     case "kff-implikationen":
       return { questions: generateImplikationenQuestions(section) };
@@ -767,7 +804,11 @@ export default function Simulation() {
       let cardsForGedaechtnis: AllergyCard[] = [];
 
       for (const sec of secs) {
-        const result = generateQuestionsForSection(sec, variant);
+        const result = generateQuestionsForSection(
+          sec,
+          variant,
+          cardsForGedaechtnis.length > 0 ? cardsForGedaechtnis : undefined
+        );
         questionMap.set(sec.id, result.questions);
         if (result.cards) cardsForGedaechtnis = result.cards;
       }
@@ -785,9 +826,12 @@ export default function Simulation() {
       setAnswers({});
       setSectionStartTime(Date.now());
 
-      // If first section is gedaechtnis, go to learn mode
-      if (firstSec.sectionType === "kff-gedaechtnis" && firstSec.learnPhaseMinutes) {
-        setLearnTimeLeft(firstSec.learnPhaseMinutes * 60);
+      // If first section is gedaechtnis learn phase (or ged with learn), go to learn mode
+      if (
+        firstSec.sectionType === "kff-gedaechtnis-learn" ||
+        (firstSec.sectionType === "kff-gedaechtnis" && firstSec.learnPhaseMinutes)
+      ) {
+        setLearnTimeLeft((firstSec.learnPhaseMinutes ?? firstSec.timeLimitMinutes) * 60);
         setMode("gedaechtnis-learn");
       } else {
         setTimeLeft(firstSec.timeLimitMinutes * 60);
@@ -912,9 +956,12 @@ export default function Simulation() {
       setIndex(0);
       setSectionStartTime(Date.now());
 
-      // If gedaechtnis with learn phase
-      if (sec.sectionType === "kff-gedaechtnis" && sec.learnPhaseMinutes) {
-        setLearnTimeLeft(sec.learnPhaseMinutes * 60);
+      // If gedaechtnis with learn phase, or gedaechtnis-learn section
+      if (
+        sec.sectionType === "kff-gedaechtnis-learn" ||
+        (sec.sectionType === "kff-gedaechtnis" && sec.learnPhaseMinutes)
+      ) {
+        setLearnTimeLeft((sec.learnPhaseMinutes ?? sec.timeLimitMinutes) * 60);
         setMode("gedaechtnis-learn");
       } else {
         setTimeLeft(sec.timeLimitMinutes * 60);
@@ -931,8 +978,9 @@ export default function Simulation() {
   const advanceSection = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
 
-    // Record time for current section
-    recordSectionTime(currentSectionIdx, sections, timeLeft);
+    const currentSec = sections[currentSectionIdx];
+    const remaining = currentSec?.sectionType === "kff-gedaechtnis-learn" ? 0 : timeLeft;
+    recordSectionTime(currentSectionIdx, sections, remaining);
 
     const nextIdx = currentSectionIdx + 1;
     if (nextIdx >= sections.length) {
@@ -942,7 +990,6 @@ export default function Simulation() {
       return;
     }
 
-    const currentSec = sections[currentSectionIdx];
     if (currentSec.breakAfterMinutes) {
       setBreakTimeLeft(currentSec.breakAfterMinutes * 60);
       setMode("break");
@@ -1007,7 +1054,12 @@ export default function Simulation() {
       timerRef.current = setInterval(() => {
         setLearnTimeLeft((t) => {
           if (t <= 1) {
-            startGedaechtnisQuiz();
+            const sec = sections[currentSectionIdx];
+            if (sec?.sectionType === "kff-gedaechtnis-learn") {
+              advanceSection();
+            } else {
+              startGedaechtnisQuiz();
+            }
             return 0;
           }
           return t - 1;
@@ -1017,8 +1069,17 @@ export default function Simulation() {
         if (timerRef.current) clearInterval(timerRef.current);
       };
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- intent: mode + timer flags only
-  }, [mode, timeLeft > 0, breakTimeLeft > 0, learnTimeLeft > 0]);
+  }, [
+    mode,
+    timeLeft > 0,
+    breakTimeLeft > 0,
+    learnTimeLeft > 0,
+    sections,
+    currentSectionIdx,
+    advanceSection,
+    startGedaechtnisQuiz,
+    loadNextSection,
+  ]);
 
   // ============================================================
   // SELECT MODE
