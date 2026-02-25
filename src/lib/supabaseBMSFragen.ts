@@ -127,31 +127,48 @@ export async function fetchFragenForUKs(uk_ids: string[]): Promise<BMSFrage[]> {
  *   3. Recently seen (filler)
  *
  * Ordered so users always see something "new" or "due" first.
+ *
+ * If getStaticQuestions is provided, questions are taken from that (single source = code);
+ * otherwise they are fetched from bms_questions (Supabase). FSRS state always comes from DB.
  */
 export async function getNextQuestions(
   uk_ids: string[],
   user_id: string | null,
-  count = 8
+  count = 8,
+  getStaticQuestions?: (uk_ids: string[]) => BMSFrage[]
 ): Promise<BMSFrage[]> {
-  if (!supabase || !uk_ids.length) return [];
+  if (!uk_ids.length) return [];
+  if (getStaticQuestions) {
+    const allFragen = getStaticQuestions(uk_ids);
+    if (!allFragen.length) return [];
+    const fsrsMap = await fetchFSRSStates(
+      allFragen.map((q) => q.id),
+      user_id
+    );
+    const fragenWithFSRS: BMSFrage[] = allFragen.map((q) => ({
+      ...q,
+      fsrs: fsrsMap[q.id] ?? null,
+    }));
+    return buildNextFromCategorized(fragenWithFSRS, count);
+  }
+  if (!supabase) return [];
 
-  // 1. Fetch all questions for selected UKs
+  // Legacy: fetch from bms_questions
   const allFragen = await fetchFragenForUKs(uk_ids);
   if (!allFragen.length) return [];
 
-  // 2. Fetch latest FSRS state per question for this user
   const fsrsMap = await fetchFSRSStates(
     allFragen.map((q) => q.id),
     user_id
   );
-
-  // 3. Inject FSRS state into questions
   const fragenWithFSRS: BMSFrage[] = allFragen.map((q) => ({
     ...q,
     fsrs: fsrsMap[q.id] ?? null,
   }));
+  return buildNextFromCategorized(fragenWithFSRS, count);
+}
 
-  // 4. Categorize
+function buildNextFromCategorized(fragenWithFSRS: BMSFrage[], count: number): BMSFrage[] {
   const now = new Date();
   const due: BMSFrage[] = [];
   const newQ: BMSFrage[] = [];
@@ -167,14 +184,10 @@ export async function getNextQuestions(
     }
   }
 
-  // Sort due by most overdue first
   due.sort((a, b) => a.fsrs!.due.getTime() - b.fsrs!.due.getTime());
-
-  // Shuffle new and recent
   shuffle(newQ);
   shuffle(recent);
 
-  // 5. Build result: due → new → recent, capped at count
   const result: BMSFrage[] = [];
   const add = (arr: BMSFrage[]) => {
     for (const q of arr) {
@@ -183,13 +196,11 @@ export async function getNextQuestions(
     }
   };
 
-  // Target: ~40% due, ~40% new, ~20% recent
   const dueCap = Math.ceil(count * 0.4);
   const newCap = Math.ceil(count * 0.4);
   add(due.slice(0, dueCap));
   add(newQ.slice(0, newCap));
   add(recent);
-  // Fill remainder with what's left
   if (result.length < count) add(due.slice(dueCap));
   if (result.length < count) add(newQ.slice(newCap));
 

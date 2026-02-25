@@ -12,6 +12,7 @@
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "audit-bms": "npx tsx scripts/audit-bms-questions.mts",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
   },

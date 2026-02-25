@@ -31,6 +31,7 @@ import type {
   TrainerMode,
   BMSSubjectId,
   SessionAnswers,
+  QuestionSource,
 } from "@/hooks/useFragenTrainer";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -83,12 +84,18 @@ function SelectionScreen({
   onStart,
   userId: _userId,
 }: {
-  onStart: (subjectId: BMSSubjectId, count: number, timeLimitMinutes: number | null) => void;
+  onStart: (
+    subjectId: BMSSubjectId,
+    count: number,
+    timeLimitMinutes: number | null,
+    source: QuestionSource
+  ) => void;
   userId: string;
 }) {
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [mode, setMode] = useState<TrainMode>("einfach");
   const [count, setCount] = useState(20);
+  const [source, setSource] = useState<QuestionSource>("pool");
 
   const subject = subjectId ? BMS_SUBJECTS.find((s) => s.id === subjectId) : null;
   const effectiveCount = mode === "offiziell" && subject ? subject.officialCount : count;
@@ -96,7 +103,7 @@ function SelectionScreen({
 
   const handleStart = () => {
     if (!subjectId) return;
-    onStart(subjectId, effectiveCount, timeLimitMinutes);
+    onStart(subjectId, effectiveCount, timeLimitMinutes, source);
   };
 
   return (
@@ -203,6 +210,43 @@ function SelectionScreen({
             </Card>
           )}
 
+          {/* 3. Quelle */}
+          <Card>
+            <CardContent className="p-4 space-y-3">
+              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">3. Quelle</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSource("pool")}
+                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                    source === "pool"
+                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  <div className="font-semibold">Offline-Pool</div>
+                  <div className="text-xs opacity-70">
+                    Ohne Anmeldung, alle Fragen aus dem lokalen Pool
+                  </div>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSource("supabase")}
+                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                    source === "supabase"
+                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  <div className="font-semibold">Mit Fortschritt (Supabase)</div>
+                  <div className="text-xs opacity-70">
+                    Versuche werden gespeichert, FSRS-Anpassung
+                  </div>
+                </button>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Start */}
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted-foreground">
@@ -228,6 +272,7 @@ function QuizScreen({
   subjectId,
   count,
   timeLimitMinutes,
+  source,
   userId,
   onFinish,
   onBack,
@@ -235,6 +280,7 @@ function QuizScreen({
   subjectId: BMSSubjectId;
   count: number;
   timeLimitMinutes: number | null;
+  source: QuestionSource;
   userId: string;
   onFinish: (a: SessionAnswers) => void;
   onBack: () => void;
@@ -244,7 +290,7 @@ function QuizScreen({
     userId,
     timeLimitMinutes != null ? "simulation" : "trainer",
     count,
-    "supabase",
+    source,
     { subjectId, timeLimitMinutes: timeLimitMinutes ?? undefined }
   );
   const { addXP } = useStore();
@@ -560,6 +606,7 @@ export default function FragenTrainer() {
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [count, setCount] = useState(20);
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number | null>(null);
+  const [questionSource, setQuestionSource] = useState<QuestionSource>("pool");
   const [results, setResults] = useState<SessionAnswers>([]);
   const userId = useMemo(() => getLocalUserId(), []);
 
@@ -568,10 +615,11 @@ export default function FragenTrainer() {
       {screen === "select" && (
         <SelectionScreen
           userId={userId}
-          onStart={(subj, c, time) => {
+          onStart={(subj, c, time, src) => {
             setSubjectId(subj);
             setCount(c);
             setTimeLimitMinutes(time);
+            setQuestionSource(src);
             setScreen("quiz");
           }}
         />
@@ -581,6 +629,7 @@ export default function FragenTrainer() {
           subjectId={subjectId}
           count={count}
           timeLimitMinutes={timeLimitMinutes}
+          source={questionSource}
           userId={userId}
           onFinish={(r) => {
             setResults(r);

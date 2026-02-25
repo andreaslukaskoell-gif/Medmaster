@@ -35,7 +35,7 @@ function transformSelfTest(
   chapter: string
 ): Question {
   return {
-    id: `${ukId}-st-${qIdx}`,
+    id: `${chapter}__${ukId}-st-${qIdx}`,
     subject,
     chapter,
     text: q.question,

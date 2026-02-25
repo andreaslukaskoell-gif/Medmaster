@@ -4,9 +4,14 @@
  */
 import { getKapitelBySubject, alleKapitel } from "@/data/bmsKapitel/index";
 import { biologiePoolQuestions } from "@/data/bms/biologiePool";
+import { chemiePoolQuestions } from "@/data/bms/chemiePool";
+import { physikPoolQuestions } from "@/data/bms/physikPool";
+import { mathematikPoolQuestions } from "@/data/bms/mathematikPool";
 import { biologiePoolTypK } from "@/data/bms/biologiePoolTypK";
 import { getQuestionsBySubject, type Question } from "@/data/bms/index";
+import { chemiePoolTypK } from "@/data/bms/chemiePoolTypK";
 import { mathematikPoolTypK } from "@/data/bms/mathematikPoolTypK";
+import { physikPoolTypK } from "@/data/bms/physikPoolTypK";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { filterValidBMSFragen } from "@/lib/supabaseBMSFragen";
 
@@ -21,30 +26,31 @@ function shuffle<T>(arr: T[]): T[] {
   return out;
 }
 
-/** Chapter ID → list of Unterkapitel IDs (for biologie from bmsKapitel). */
+/** Chapter ID → list of Unterkapitel IDs (all subjects). */
 export function getChapterToUkIds(): Map<string, string[]> {
   const map = new Map<string, string[]>();
   for (const k of alleKapitel) {
-    if (k.subject !== "biologie") continue;
     const ids = (k.unterkapitel ?? []).map((u) => u.id).filter(Boolean);
     if (ids.length) map.set(k.id, ids);
   }
   return map;
 }
 
-/** For trainer selection when source=pool: chapters that have pool questions, with their UKs. */
+/** For trainer selection when source=pool: chapters that have pool questions, with their UKs (all subjects). */
 export function getChaptersWithPool(): { chapterId: string; ukIds: string[]; title?: string }[] {
   const chapterToUk = getChapterToUkIds();
   const result: { chapterId: string; ukIds: string[]; title?: string }[] = [];
-  const bioChapters = getKapitelBySubject("biologie");
-  for (const ch of bioChapters) {
-    const ukIds = chapterToUk.get(ch.id) ?? [];
-    if (ukIds.length) {
-      result.push({
-        chapterId: ch.id,
-        ukIds,
-        title: ch.sequenceTitle ?? ch.title,
-      });
+  for (const subject of ["biologie", "chemie", "physik", "mathematik"] as const) {
+    const chapters = getKapitelBySubject(subject);
+    for (const ch of chapters) {
+      const ukIds = chapterToUk.get(ch.id) ?? [];
+      if (ukIds.length) {
+        result.push({
+          chapterId: ch.id,
+          ukIds,
+          title: ch.sequenceTitle ?? ch.title,
+        });
+      }
     }
   }
   return result;
@@ -75,27 +81,40 @@ export function questionToBMSFrage(q: Question, uk_id: string): BMSFrage {
   };
 }
 
-/** Assign each pool question (by chapter) to an uk_id (round-robin within chapter). */
+/** Assign each pool question (by chapter) to an uk_id (round-robin within chapter). All subjects. */
 function buildTypAPoolWithUkIds(): BMSFrage[] {
   const chapterToUk = getChapterToUkIds();
   const result: BMSFrage[] = [];
   const indexByChapter = new Map<string, number>();
 
-  for (const q of biologiePoolQuestions) {
+  const allPoolQuestions: Question[] = [
+    ...biologiePoolQuestions,
+    ...chemiePoolQuestions,
+    ...physikPoolQuestions,
+    ...mathematikPoolQuestions,
+  ];
+
+  for (const q of allPoolQuestions) {
     const ukIds = chapterToUk.get(q.chapter);
-    if (!ukIds?.length) continue;
-    const idx = indexByChapter.get(q.chapter) ?? 0;
-    const uk_id = ukIds[idx % ukIds.length];
-    indexByChapter.set(q.chapter, idx + 1);
+    const uk_id = ukIds?.length
+      ? ukIds[(indexByChapter.get(q.chapter) ?? 0) % ukIds.length]
+      : q.chapter;
+    if (ukIds?.length) indexByChapter.set(q.chapter, (indexByChapter.get(q.chapter) ?? 0) + 1);
     result.push(questionToBMSFrage(q, uk_id));
   }
   return result;
 }
 
-/** All pool questions as BMSFrage (Typ A with assigned uk_id + Typ K from biologiePoolTypK). */
+/** All pool questions as BMSFrage (Typ A all subjects + Typ K per subject). */
 function getAllPoolBMSFragen(): BMSFrage[] {
   const typA = buildTypAPoolWithUkIds();
-  return [...typA, ...biologiePoolTypK];
+  return [
+    ...typA,
+    ...biologiePoolTypK,
+    ...chemiePoolTypK,
+    ...physikPoolTypK,
+    ...mathematikPoolTypK,
+  ];
 }
 
 let cachedPool: BMSFrage[] | null = null;
@@ -103,6 +122,17 @@ let cachedPool: BMSFrage[] | null = null;
 function getPool(): BMSFrage[] {
   if (!cachedPool) cachedPool = getAllPoolBMSFragen();
   return cachedPool;
+}
+
+/**
+ * Get all pool BMSFragen for the given uk_ids (no shuffle, no count limit).
+ * For use with getNextQuestions so FSRS ordering can be applied on static data.
+ */
+export function getAllPoolBMSFragenForUKs(uk_ids: string[]): BMSFrage[] {
+  if (!uk_ids.length) return [];
+  const pool = getPool();
+  const set = new Set(uk_ids);
+  return filterValidBMSFragen(pool.filter((q) => set.has(q.uk_id)));
 }
 
 /**
@@ -119,7 +149,7 @@ export function getPoolBMSFragen(uk_ids: string[], count = 8): BMSFrage[] {
 
 /**
  * Get BMS questions by subject (from static pool + selfTests), shuffled, capped at count.
- * For mathematik and biologie: includes Typ A (Question) and Typ K (poolTypK).
+ * All four subjects: Typ A (Question) + Typ K (poolTypK) where available.
  */
 export function getBMSFragenBySubject(
   subject: "biologie" | "chemie" | "physik" | "mathematik",
@@ -128,7 +158,15 @@ export function getBMSFragenBySubject(
   const questions = getQuestionsBySubject(subject);
   const typA = questions.map((q) => questionToBMSFrage(q, q.chapter));
   const typK =
-    subject === "mathematik" ? mathematikPoolTypK : subject === "biologie" ? biologiePoolTypK : [];
+    subject === "mathematik"
+      ? mathematikPoolTypK
+      : subject === "biologie"
+        ? biologiePoolTypK
+        : subject === "chemie"
+          ? chemiePoolTypK
+          : subject === "physik"
+            ? physikPoolTypK
+            : [];
   const combined = shuffle([...typA, ...typK]);
   const selected = combined.slice(0, Math.min(count, combined.length));
   return filterValidBMSFragen(selected);

@@ -19,7 +19,11 @@ import {
   type ErrorPattern,
 } from "@/lib/supabaseBMSFragen";
 import { generateContentQuestions, toBMSFrage } from "@/lib/bmsQuestionGenerator";
-import { getPoolBMSFragen, getBMSFragenBySubject } from "@/lib/bmsPoolForTrainer";
+import {
+  getPoolBMSFragen,
+  getBMSFragenBySubject,
+  getAllPoolBMSFragenForUKs,
+} from "@/lib/bmsPoolForTrainer";
 import type { FSRSRating } from "@/lib/fsrs";
 
 export type BMSSubjectId = "biologie" | "chemie" | "physik" | "mathematik";
@@ -145,7 +149,7 @@ export function useFragenTrainer(
           );
         }
       } else {
-        getNextQuestions(uk_ids, user_id, count)
+        getNextQuestions(uk_ids, user_id, count, getAllPoolBMSFragenForUKs)
           .then((raw) => {
             const valid = filterValidBMSFragen(raw);
             setFragen(valid);
@@ -316,7 +320,7 @@ export function useFragenTrainer(
         setFragen(getPoolBMSFragen(uk_ids, count));
         setLoading(false);
       } else {
-        getNextQuestions(uk_ids, user_id, count)
+        getNextQuestions(uk_ids, user_id, count, getAllPoolBMSFragenForUKs)
           .then((raw) => {
             setFragen(filterValidBMSFragen(raw));
             setLoading(false);
