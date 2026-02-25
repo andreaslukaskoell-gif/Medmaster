@@ -31,6 +31,8 @@ export interface SozialesEntscheidenTask {
   aussagen: { text: string; idealRank: number }[];
 }
 
+import { sozialesEntscheiden100 } from "@/data/sozialesEntscheiden100";
+
 // ============================================================
 // EMOTIONEN ERKENNEN — Set 1 (14 Aufgaben)
 // ============================================================
@@ -1048,6 +1050,64 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
 ];
 
 // ============================================================
+// SOZIALES ENTSCHEIDEN — Offizielle Beispielaufgaben (MedAT-Vorbild)
+// ============================================================
+
+/** Offizielle Beispielaufgaben 1 und 2 aus dem MedAT-Material (Rita/Wechselgeld, Franz/Produkt). */
+const sozialesEntscheidenOffiziell: SozialesEntscheidenTask[] = [
+  {
+    id: "se-off-01",
+    difficulty: 1,
+    dilemma:
+      "Rita kauft in einem teuren Laden ein. Es ist allgemein bekannt, dass der Laden seine Kunden gelegentlich ausnimmt. Sie bekommt an der Kassa zu viel Wechselgeld zurück. Rita ist unsicher, wie sie reagieren soll. Wie relevant sollten Ihrer Meinung nach die folgenden Überlegungen, die Rita bei ihrer Entscheidung angestellt haben könnte, sein?",
+    aussagen: [
+      {
+        text: "Würde ich durch mein Verhalten dem Verkäufer mehr schaden als dem Laden?",
+        idealRank: 1,
+      },
+      {
+        text: "Würde es meine Pflicht sein, immer das überschüssige Wechselgeld zurückzugeben?",
+        idealRank: 2,
+      },
+      { text: "Würden andere an meiner Stelle das Wechselgeld zurückgeben?", idealRank: 3 },
+      { text: "Würde ich das Wechselgeld für notwendige Anschaffungen benötigen?", idealRank: 4 },
+      {
+        text: "Würde jemand dahinterkommen, dass ich zu viel Wechselgeld zurückbekommen habe?",
+        idealRank: 5,
+      },
+    ],
+  },
+  {
+    id: "se-off-02",
+    difficulty: 1,
+    dilemma:
+      "Franz präsentiert vor Kunden ein neues Produkt. Die Kunden scheinen begeistert zu sein und stehen kurz vor dem Kauf. Während des Abschlusses stellt sich heraus, dass die Kunden fälschlicherweise annehmen, dass das Produkt eine Funktion besitzt, die es gar nicht hat. Franz ist unsicher, wie er reagieren soll. Wie relevant sollten Ihrer Meinung nach die folgenden Überlegungen, die Franz bei seiner Entscheidung angestellt haben könnte, sein?",
+    aussagen: [
+      {
+        text: "Würde es für mich von Nachteil sein, wenn die Kunden später ihren Irrtum bemerken?",
+        idealRank: 5,
+      },
+      {
+        text: "Würden mich die Kunden an meiner Stelle vor dem Kauf auf einen solchen Irrtum hinweisen?",
+        idealRank: 3,
+      },
+      {
+        text: "Würde sich mein Umsatz merklich verbessern, wenn ich das Geschäft trotzdem abschließe?",
+        idealRank: 4,
+      },
+      {
+        text: "Würde ich die Kunden darauf aufmerksam machen müssen, weil man sich im Geschäftsleben vertrauen können sollte?",
+        idealRank: 1,
+      },
+      {
+        text: "Würde ich nicht generell die Verpflichtung haben, immer die Wahrheit zu sagen?",
+        idealRank: 2,
+      },
+    ],
+  },
+];
+
+// ============================================================
 // SOZIALES ENTSCHEIDEN — Set 1 (14 Aufgaben)
 // ============================================================
 
@@ -1860,6 +1920,8 @@ export const emotionenRegulierenTasks: EmotionenRegulierenTask[] = [
 ];
 
 export const sozialesEntscheidenTasks: SozialesEntscheidenTask[] = [
+  ...sozialesEntscheidenOffiziell,
   ...sozialesEntscheidenSet1,
   ...sozialesEntscheidenSet2,
+  ...sozialesEntscheiden100,
 ];

@@ -1,11 +1,14 @@
 /**
  * Lädt TV-Texte (Textverständnis) aus Supabase (kff_tasks, category: textverstaendnis).
- * Fallback: statische tvTexte aus kffTextverstaendnis, wenn DB leer oder nicht erreichbar.
+ * Fallback: statische tvTexte + tvUebungstexte (~50 Texte), wenn DB leer oder nicht erreichbar.
  */
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 import { tvTexte } from "@/data/kffTextverstaendnis";
+import { tvUebungstexte } from "@/data/tvUebungstexte";
 import type { TVText } from "@/data/kffTextverstaendnis";
+
+const fallbackTexte: TVText[] = [...tvTexte, ...tvUebungstexte];
 
 function parseRow(row: { data_json: unknown }): TVText | null {
   const d = row.data_json as Record<string, unknown>;
@@ -43,13 +46,13 @@ export function useTvTexte(): {
   error: string | null;
   refetch: () => void;
 } {
-  const [texts, setTexts] = useState<TVText[]>(tvTexte);
+  const [texts, setTexts] = useState<TVText[]>(fallbackTexte);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchFromDb = useCallback(async () => {
     if (!supabase) {
-      setTexts(tvTexte);
+      setTexts(fallbackTexte);
       setLoading(false);
       return;
     }
@@ -62,7 +65,7 @@ export function useTvTexte(): {
 
     if (err) {
       setError(err.message);
-      setTexts(tvTexte);
+      setTexts(fallbackTexte);
       setLoading(false);
       return;
     }
@@ -76,7 +79,7 @@ export function useTvTexte(): {
     if (merged.length > 0) {
       setTexts(merged);
     } else {
-      setTexts(tvTexte);
+      setTexts(fallbackTexte);
     }
     setLoading(false);
   }, []);

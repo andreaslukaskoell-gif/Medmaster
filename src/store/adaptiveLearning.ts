@@ -67,7 +67,11 @@ interface AdaptiveState {
   setLastPath: (path: string | null) => void;
   recordAnswer: (stichwortId: string, correct: boolean, timeSeconds: number) => void;
   getRecommendation: () => DailyRecommendation;
-  getAdaptiveQuestions: (count: number, fach?: string) => Question[];
+  getAdaptiveQuestions: (
+    count: number,
+    fach?: string,
+    options?: { progressive?: boolean }
+  ) => Question[];
   getWeakestTopics: (
     limit?: number
   ) => { stichwortId: string; thema: string; fach: string; rate: number }[];
@@ -313,7 +317,7 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         };
       },
 
-      getAdaptiveQuestions: (count, fach) => {
+      getAdaptiveQuestions: (count, fach, options?: { progressive?: boolean }) => {
         const { profile } = get();
         const pool = fach
           ? allBmsQuestions.filter((q) => q.subject === fach)
@@ -343,7 +347,6 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           }
         }
 
-        // Shuffle each bucket
         const shuffle = <T>(arr: T[]) => {
           const a = [...arr];
           for (let i = a.length - 1; i > 0; i--) {
@@ -353,7 +356,17 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           return a;
         };
 
-        // 40% weak, 30% medium, 20% strong, 10% unseen
+        if (options?.progressive) {
+          // Sukzessive schwieriger: zuerst stark (einfach für User), dann medium, unseen, zuletzt weak
+          const result: Question[] = [];
+          result.push(...shuffle(strong));
+          result.push(...shuffle(medium));
+          result.push(...shuffle(unseen));
+          result.push(...shuffle(weak));
+          return result.slice(0, count);
+        }
+
+        // 40% weak, 30% medium, 20% strong, 10% unseen (mehr Wiederholung bei Schwächen)
         const result: Question[] = [];
         const weakCount = Math.ceil(count * 0.4);
         const mediumCount = Math.ceil(count * 0.3);

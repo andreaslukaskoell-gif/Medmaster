@@ -5,6 +5,7 @@ import { useKFFStore } from "@/stores/kffStore";
 import TextverstaendnisLernen from "./TextverstaendnisLernen";
 import TextverstaendnisUeben from "./TextverstaendnisUeben";
 import TextverstaendnisSimulation from "./TextverstaendnisSimulation";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 
 type TabKey = "lernen" | "ueben" | "simulation";
 
@@ -77,8 +78,18 @@ export default function TextverstaendnisPage() {
 
       {/* Tab content */}
       {activeTab === "lernen" && <TextverstaendnisLernen />}
-      {activeTab === "ueben" && <TextverstaendnisUeben />}
-      {activeTab === "simulation" && <TextverstaendnisSimulation />}
+      {activeTab === "ueben" && (
+        <div className="space-y-4">
+          <UebungsbeschreibungCard id="tv-ueben" collapsible defaultCollapsed />
+          <TextverstaendnisUeben />
+        </div>
+      )}
+      {activeTab === "simulation" && (
+        <div className="space-y-4">
+          <UebungsbeschreibungCard id="tv-simulation" collapsible defaultCollapsed />
+          <TextverstaendnisSimulation />
+        </div>
+      )}
     </div>
   );
 }

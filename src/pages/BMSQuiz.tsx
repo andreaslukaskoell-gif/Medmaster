@@ -82,12 +82,21 @@ interface Props {
 }
 
 export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
+  const { recordAnswer, getAdaptiveQuestions } = useAdaptiveStore();
+
   const questions = useMemo(() => {
-    if (subject === "gemischt" && questionCount) {
-      return getMixedQuestions(questionCount);
+    if (subject === "gemischt") {
+      return getAdaptiveQuestions(questionCount ?? 20, undefined, { progressive: true });
     }
+    const adaptive = getAdaptiveQuestions(
+      50,
+      subject as "biologie" | "chemie" | "physik" | "mathematik",
+      { progressive: true }
+    );
+    if (adaptive.length > 0) return adaptive;
     return getQuestionsBySubject(subject);
-  }, [subject, questionCount]);
+  }, [subject, questionCount, getAdaptiveQuestions]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -105,7 +114,6 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     toggleFlagQuestion,
     updateSpacedRepetition,
   } = useStore();
-  const { recordAnswer } = useAdaptiveStore();
 
   const currentQuestion = questions[currentIndex];
   const allAnswered = questions.every((q) => answers[q.id]);

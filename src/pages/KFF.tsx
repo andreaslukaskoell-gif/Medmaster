@@ -55,6 +55,7 @@ import {
 import { getTasksForUserOrFill, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 
 type KffView =
   | "overview"
@@ -347,6 +348,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
+        <UebungsbeschreibungCard id="kff-zahlenfolgen" collapsible defaultCollapsed />
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -680,6 +682,7 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
         Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E. E = „Keine der
         Antwortmöglichkeiten ist richtig.“
       </p>
+      <UebungsbeschreibungCard id="kff-merkfaehigkeit" collapsible defaultCollapsed />
 
       <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
         <CardHeader>
@@ -1131,6 +1134,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
           Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche
           Schlussfolgerung ist korrekt?
         </p>
+        <UebungsbeschreibungCard id="kff-implikationen" collapsible defaultCollapsed />
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -1513,6 +1517,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           Die Buchstaben eines Wortes wurden vertauscht. Finde heraus, mit welchem Buchstaben das
           Wort beginnt (oder ob keine der Antworten passt)!
         </p>
+        <UebungsbeschreibungCard id="kff-wortfluessigkeit" collapsible defaultCollapsed />
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -1878,6 +1883,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.) 1:30 min
           pro Aufgabe.
         </p>
+        <UebungsbeschreibungCard id="kff-figuren" collapsible defaultCollapsed />
 
         {mode === null ? (
           <div className="grid gap-4 sm:grid-cols-2">

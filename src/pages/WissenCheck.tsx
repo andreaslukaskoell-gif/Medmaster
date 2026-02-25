@@ -19,6 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { getQuestionsBySubject, type Question } from "@/data/bms/index";
 import { getSequenceQuestionsBySubject } from "@/data/wissencheckSequences";
 import { LogicBuilder } from "@/components/wissencheck/LogicBuilder";
@@ -324,6 +325,7 @@ export default function WissenCheck() {
               Die Fragen werden zufällig aus dem gesamten Fragenpool ausgewählt. Beantworte alle
               Fragen innerhalb des Zeitlimits. Nach Ablauf der Zeit wird automatisch abgegeben.
             </div>
+            <UebungsbeschreibungCard id="bms-wissencheck" />
             <div className="flex flex-wrap gap-3 justify-center pt-2">
               <Button variant="outline" onClick={() => navigate("/bms")}>
                 <ArrowLeft className="w-4 h-4 mr-2" />

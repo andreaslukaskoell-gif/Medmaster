@@ -40,6 +40,7 @@ import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/mi
 import { PageLoadingSkeleton, PageError, PageEmpty } from "@/components/ui/page-states";
 import { MRSWidget } from "@/components/bms/MRSWidget";
 import { useMRS } from "@/hooks/useFragenTrainer";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 
 // Safe imports with fallbacks - prevents "Failed to fetch dynamically imported module" errors
 // Fixed: Use proper ES6 imports with error handling
@@ -576,6 +577,8 @@ export default function BMS() {
             )}
           </p>
         </div>
+
+        <UebungsbeschreibungCard id="bms" collapsible defaultCollapsed />
 
         {subjectUK > 0 && (
           <div className="space-y-1">
