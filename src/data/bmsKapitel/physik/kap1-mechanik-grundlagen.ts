@@ -28,7 +28,7 @@ export const physKapMechanik: Kapitel = {
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Physik und Medizin teilen dieselbe Sprache: **Einheiten**. Das **Internationale Einheitensystem (SI)** stellt sicher, dass alle Messungen weltweit vergleichbar sind. Wer die Basisgrößen und abgeleiteten Einheiten kennt, kann Messwerte verstehen, Formeln anwenden und klinische Werte interpretieren. Für den MedAT sind SI-Einheiten, Präfixe, Vektoren vs. Skalare und Dimensionsanalyse prüfungsrelevant.
+**Worum geht es?** Physik und Medizin teilen dieselbe Sprache: **Einheiten**. Das **SI (Internationales Einheitensystem)** definiert sieben Basisgrößen und alle abgeleiteten Einheiten (Newton, Pascal, Joule, Watt). **Warum für den MedAT relevant?** Ohne Einheitenverständnis sind Blutdruck (mmHg ↔ Pa), Infusionsraten und Grundumsatz (Watt) nicht sicher interpretierbar. **Welche Arten von MedAT-BMS-Fragen kannst du damit lösen?** Definitionsfragen (Was ist eine abgeleitete Größe?), „Welche Aussage ist richtig/falsch?“ (z. B. Joule in Watt umrechenbar), Einheitenfragen (Newton in Basiseinheiten, 7 SI-Basisgrößen), Rechenfragen (Blutdruck mmHg → Pa, Infusionsrate, Grundumsatz in Watt), Kombinationsfragen (Skalar/Vektor, intensiv/extensiv). Mit diesem Kapitel sind alle typischen BMS-Fragen zu SI, Einheiten und Größenarten abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **sieben SI-Basisgrößen** (Länge, Masse, Zeit, Strom, Temperatur, Stoffmenge, Lichtstärke) und ihre Einheiten
@@ -36,9 +36,6 @@ Wie misst man Blutdruck in mmHg, Körpermasse in kg und Herzleistung in Watt? Ph
 - den Unterschied **Skalar vs. Vektor** (nur Betrag vs. Betrag + Richtung) und **intensiv vs. extensiv**
 - **Masse** und **Gewichtskraft** (F_G = m·g) und warum sie nicht dasselbe sind
 - klinische Anwendungen: Blutdruck (mmHg ↔ Pa), Infusionsrate, Grundumsatz in Watt
-
-**Kontext — worum geht es und wofür brauchst du das?**  
-Hier geht es um die **Grundsprache der Physik und Medizin**: das SI (Internationales Einheitensystem) mit sieben Basisgrößen und den daraus abgeleiteten Einheiten (Kraft, Druck, Energie, Leistung). Ohne einheitliche Einheiten wären Laborwerte, Dosierungen und Geräteangaben nicht vergleichbar. Du brauchst das für alle späteren Kapitel (Mechanik, Thermodynamik, Elektrizität), für die Dimensionsanalyse und für die sichere Interpretation klinischer Werte (z. B. Blutdruck in Pa oder mmHg).
 
 ---
 
@@ -187,16 +184,27 @@ Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse*
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** SI-Einheiten (Druck Pa = N/m², Kraft N, Masse kg), Dimensionsanalyse (M·L·T), wissenschaftliche Notation, Einheitenumrechnung.
+**Zentral prüfungsrelevant:**
+- **7 SI-Basisgrößen:** Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd).
+- **Newton ist keine Basiseinheit:** N = kg·m·s⁻². Pascal = N/m², Joule = N·m, Watt = J/s.
+- **Kraft** in **kg·m/s²** (Newton) — nicht in m/s² (Beschleunigung), nicht in Coulomb oder Ampere.
+- **Druck:** Pa = N/m² = kg·m⁻¹·s⁻²; 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa.
+- **Energie/Arbeit:** J = N·m. **Leistung:** W = J/s = kg·m²·s⁻³. Joule **nicht** in Watt umrechenbar (Watt = Leistung).
+- **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit).
+- **Intensiv** = unabhängig von der Menge (Temperatur, Konzentration). **Extensiv** = proportional zur Menge (Masse, Volumen).
+- **Masse (kg) ≠ Gewichtskraft (N):** F_G = m·g; g ≈ 9,81 m/s² auf der Erde; Masse ortsunabhängig.
+- Jede physikalische Größe = Zahlenwert × Einheit; Dimensionsanalyse prüft Einheitskonsistenz.
 
 **Ergänzend vertiefend:** Abgeleitete Größen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen (typische BMS-Formulierungen):**
 - "Was ist die SI-Einheit des Drucks?" → Pascal (Pa = N/m² = kg·m⁻¹·s⁻²)
 - "Wie viele SI-Basisgrößen gibt es, und welche?" → 7: Länge (m), Masse (kg), Zeit (s), Strom (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
-- "Was ist der Unterschied zwischen Skalar und Vektor?" → Skalar: nur Betrag (z.B. Temperatur, Druck); Vektor: Betrag + Richtung (z.B. Kraft, Geschwindigkeit)
+- "Was ist der Unterschied zwischen Skalar und Vektor?" → Skalar: nur Betrag (z. B. Temperatur, Druck); Vektor: Betrag + Richtung (z. B. Kraft, Geschwindigkeit)
 - "Was ist 1 Watt in Basiseinheiten?" → W = J/s = kg·m²·s⁻³
 - "Was ist der Unterschied zwischen intensiver und extensiver Größe?" → Intensiv: unabhängig von der Menge (Konzentration, Temperatur); extensiv: proportional zur Menge (Masse, Volumen)
+- "Kann man Joule in Watt umrechnen?" → Nein — Joule = Energie (J), Watt = Leistung (J/s); verschiedene Größen
+- "In welcher Einheit wird Kraft angegeben?" → Newton (N = kg·m/s²) — nicht m/s² (Beschleunigung), nicht Coulomb oder Ampere
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Joule** umrechenbar in **Nm, eV, Kalorien** — **nicht** in Watt (Watt ist Leistungseinheit, J ist Energie).
@@ -207,21 +215,29 @@ Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse*
 - Intensive Größen addieren sich NICHT beim Zusammenfügen: 2 × (20°C Wasser) = 20°C, nicht 40°C
 - "Körpergewicht 70 kg" ist physikalisch die Masse — die Gewichtskraft beträgt 70 × 9,81 ≈ 687 N
 
+**Wichtige Begriffe & Definitionen:**
+- **SI-Basisgröße:** Fundamental, nicht aus anderen ableitbar (Länge, Masse, Zeit, Strom, Temperatur, Stoffmenge, Lichtstärke).
+- **Abgeleitete Größe:** Aus Basiseinheiten durch Produkt/Quotient; messbar, hat SI-Einheit (N, Pa, J, W).
+- **Skalar:** Größe mit nur Betrag + Einheit (keine Richtung). **Vektor:** Betrag + Richtung.
+- **Intensiv:** Unabhängig von Systemgröße (Temperatur, Konzentration). **Extensiv:** Proportional zur Menge (Masse, Volumen).
+- **Gewichtskraft:** F_G = m·g (Kraft durch Gravitation); Einheit N.
+
 **Prüfungsrelevante Zahlen/Fakten:**
-- **1 J = 1 N·m**; 1 eV ≈ 1,602×10⁻¹⁹ J; 1 cal = 4,184 J. Joule **nicht** in Watt umrechenbar (W = J/s = Leistung).
-- **Kraft** in **kg·m/s²** (Newton). 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa (normaler systolischer Blutdruck in SI)
-- Grundumsatz Erwachsener ≈ 87 W (vergleichbar mit einer Glühbirne)
-- Gewichtskraft 70 kg: F_G = 70 × 9,81 ≈ 687 N
-- 7 SI-Basisgrößen — Kraft (Newton) ist KEINE Basisgröße!
+- 1 J = 1 N·m; 1 eV ≈ 1,602×10⁻¹⁹ J; 1 cal = 4,184 J. Joule **nicht** in Watt umrechenbar (W = J/s = Leistung).
+- Kraft in kg·m/s² (Newton). 1 mmHg ≈ 133 Pa; 120 mmHg ≈ 16 kPa (systolisch in SI).
+- Grundumsatz Erwachsener ≈ 87 W. Gewichtskraft 70 kg: F_G = 70 × 9,81 ≈ 687 N. 7 SI-Basisgrößen — Newton ist KEINE.
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
 - **7 SI-Basisgrößen**: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol), Lichtstärke (cd)
-- **Abgeleitete Einheiten**: Newton (N = kg·m/s²), Pascal (Pa = N/m²), Joule (J = N·m), Watt (W = J/s)
-- **Präfixe**: μ (10⁻⁶), m (10⁻³), k (10³), M (10⁶), G (10⁹) — wichtig für klinische Einheiten (mmHg, mL, μg)
-- **Skalare**: nur Betrag (Temperatur, Masse, Druck); **Vektoren**: Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung)
-- **Dimensionsanalyse**: Einheiten beider Seiten einer Gleichung müssen identisch sein → überprüft Formeln
+- **Abgeleitete Einheiten**: N = kg·m/s², Pa = N/m², J = N·m, W = J/s — Kette sicher auf- und ableiten können
+- **Präfixe**: μ (10⁻⁶), m (10⁻³), k (10³), M (10⁶) — klinisch: mmHg, mL, μg
+- **Skalare**: nur Betrag (Temperatur, Masse, Druck); **Vektoren**: Betrag + Richtung (Kraft, Geschwindigkeit)
+- **Intensiv** = unabhängig von der Menge (Temperatur, Konzentration); **extensiv** = proportional (Masse, Volumen)
+- **Masse (kg) ≠ Gewichtskraft (N)**: F_G = m·g; Masse ortsunabhängig, Gewichtskraft von g abhängig
+- **Dimensionsanalyse**: Einheiten beider Seiten müssen identisch sein → Formeln prüfen
+- **Typische Fallen**: Joule nicht in Watt umrechenbar (W = J/s); Newton keine Basiseinheit; 2×20°C ≠ 40°C
 - **Klinisch**: 1 mmHg ≈ 133 Pa; Grundumsatz ~87 W; Blutdruck 120/80 mmHg = 16/10,7 kPa`,
 
       lernziele: [
@@ -401,7 +417,7 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
       ],
       content: `## Einleitung
 
-Ein Wasserstoffatom ist 0,1 nm groß, ein Mensch 1,7 m und die Milchstraße 10²¹ m breit. Die Medizin arbeitet mit µg/mL (Plasmaspiegel), mmol/L (Elektrolyte) und kPa (Blutdruck) — alles Variationen von SI-Einheiten mit **Präfixen**. Wer Präfixe sicher beherrscht, vermeidet tödliche Dosierungsfehler (µg vs. mg = Faktor 1000!). Für den MedAT sind SI-Präfixe, wissenschaftliche Notation und Einheitenumrechnungen prüfungsrelevant.
+**Worum geht es?** Die Medizin arbeitet mit µg/mL (Plasmaspiegel), mmol/L (Elektrolyte) und kPa (Blutdruck) — alles Variationen von SI-Einheiten mit **Präfixen**. **Wissenschaftliche Notation** (a × 10ⁿ) und **SI-Präfixe** (µ, m, k, M …) ermöglichen kompakte Darstellung und sichere Umrechnung über viele Größenordnungen. **Warum für den MedAT relevant?** Wer Präfixe sicher beherrscht, vermeidet Dosierungsfehler (µg vs. mg = Faktor 1000!); Flächen/Volumen (cm² → m², mL → m³) sind häufige Fallen. **Welche Fragen werden beantwortet?** „0,000 045 m in wissenschaftlicher Notation?“; „1 cm² in m²?“; „5 mL in m³?“; „M vs. m?“; „Erythrozyt-Durchmesser?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Präfixen und wissenschaftlicher Notation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **SI-Präfixe** (µ, m, k, M, n, …) und ihre Zehnerpotenzen sicher zuordnen und umzurechnen
@@ -753,7 +769,7 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
       ],
       content: `## Einleitung
 
-Eine falsche Einheit kann Leben kosten — eine bekannte Katastrophe ereignete sich, als eine Raumsonde zwischen Meilen und Kilometern verwechselt wurde. In der Medizin ist das Gleiche möglich: mg statt µg, mL/h statt µg/kg/min. **Dimensionsanalyse** ist die Methode, Formeln und Berechnungen auf Einheiten-Konsistenz zu prüfen: beide Seiten einer Gleichung müssen dieselbe Dimension haben. Sie dient auch als universelles Werkzeug zur Einheitenumrechnung. Für den MedAT sind Dimensionsanalyse, Einheitenumrechnungen (mmHg↔Pa, kcal↔kJ) und dimensionslose Größen prüfungsrelevant.
+**Worum geht es?** **Dimensionsanalyse** prüft Formeln und Berechnungen auf Einheiten-Konsistenz: beide Seiten einer Gleichung müssen dieselbe Dimension haben (M, L, T, …). Sie dient als universelles Werkzeug zur Einheitenumrechnung (Kettenmultiplikation). **Warum für den MedAT relevant?** Falsche Einheiten (mg vs. µg, mL/h vs. µg/kg/min) können lebensgefährlich sein; mmHg↔Pa, kcal↔kJ und dimensionslose Größen (Reynolds-Zahl, Wirkungsgrad) werden geprüft. **Welche Fragen werden beantwortet?** „Blutdruck 120 mmHg in Pa?“; „kcal in kJ?“; „Dimensionsanalyse — wofür?“; „Reynolds-Zahl dimensionslos?“; „Temperatur K vs. °C?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Dimensionsanalyse und Einheitenumrechnung abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - was **Dimensionsanalyse** ist und wie du damit Formeln auf Einheiten-Konsistenz prüfst (beide Seiten gleiche Dimension)
@@ -1110,7 +1126,7 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
       ],
       content: `## Einleitung
 
-Warum bricht ein Knochen beim Sturz? Warum muss man für eine effektive Herzdruckmassage stark drücken? Die Antworten liefert die **Newtonsche Mechanik**: Drei Gesetze, die Bewegung unter Krafteinfluss vollständig beschreiben. **Kinematik** (Beschreibung von Bewegung ohne Ursachen) und **Dynamik** (Erklärung durch Kräfte) bilden das Gerüst. Für den MedAT sind die drei Newtonschen Gesetze, freier Fall, Dezelerationstrauma und die Grundbegriffe der Kinematik prüfungsrelevant.
+**Worum geht es?** Die **Newtonsche Mechanik** beschreibt Bewegung unter Krafteinfluss: **Kinematik** (Weg, Geschwindigkeit, Beschleunigung ohne Ursachen) und **Dynamik** (drei Newtonsche Gesetze: Trägheit, F = m·a, actio = reactio). **Warum für den MedAT relevant?** Freier Fall (g ≈ 9,81 m/s²), Dezelerationstrauma, Herzdruckmassage (F = m·a) und Bremsweg werden geprüft. **Welche Fragen werden beantwortet?** „Was besagt das 1. Newtonsche Gesetz?“; „Einheit der Kraft?“; „actio = reactio — auf welche Körper?“; „Freier Fall nach 1 s — v und s?“; „Bremsweg-Formel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Newtonschen Gesetzen und Kinematik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **drei Newtonschen Gesetze** (Trägheit, F = m·a, actio = reactio) zu formulieren und auf Alltag und Klinik anzuwenden
@@ -1379,7 +1395,7 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Warum bricht ein Knochen beim Sturz aus einer bestimmten Höhe? Warum überträgt ein Projektil seine gesamte kinetische Energie auf Gewebe? Warum leistet das Herz täglich ~96 kJ mechanische Arbeit? All das erklären die **Erhaltungssätze**: Energie, Impuls und Drehimpuls bleiben in abgeschlossenen Systemen konstant. Diese Prinzipien sind universell und fundamental. Für den MedAT sind Energieerhaltung, kinetische/potenzielle Energie, Impuls, Herzarbeit und Wirkungsgrad prüfungsrelevant.
+**Worum geht es?** Die **Erhaltungssätze** (Energie, Impuls, Drehimpuls) besagen: In abgeschlossenen Systemen bleiben diese Größen konstant. **Energieerhaltung** (E_kin = ½mv², E_pot = mgh), **Impulserhaltung** (p = m·v, Kraftstoß = Δp) und **Arbeit/Leistung** (W = F·s, P = W/t) erklären Sturztrauma, Stoß und Herzarbeit. **Warum für den MedAT relevant?** Energieerhaltung, kinetische/potenzielle Energie, Impuls, elastischer vs. inelastischer Stoß, Herzarbeit (W = p·ΔV) und Wirkungsgrad werden geprüft. **Welche Fragen werden beantwortet?** „E_kin bei doppelter Geschwindigkeit?“; „Impuls erhalten bei Stoß?“; „Herzarbeit Formel?“; „Halten = Arbeit?“; „Wirkungsgrad Definition?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Erhaltungssätzen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Energieerhaltung**: E_kin = ½mv², E_pot = mgh, Arbeit W = F·s, Leistung P = W/t
@@ -1642,7 +1658,7 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
       diagram: "newton-forces",
       content: `## Einleitung
 
-Warum braucht der Bizeps 700 N, um 10 kg zu heben? Warum kollabiert eine Koronarstenose den Blutfluss auf ein Sechzehntel? Warum ist der Blutdruck am Fuß im Stehen um 100 mmHg höher als am Herzen? **Statik** (Kräftegleichgewicht, Hebel) und **Hydrodynamik** (Strömung, Druck, Durchfluss) beantworten das. Für den MedAT sind Drehmoment, Hebelgesetz, Poiseuille-Gesetz (Q ~ r⁴), Bernoulli-Gleichung, Kontinuität und Reynolds-Zahl prüfungsrelevant.
+**Worum geht es?** **Statik** (Kräfte- und Momentengleichgewicht, Hebelgesetz) und **Hydrodynamik** (Druck p = F/A, hydrostatisch p = ρgh, Strömung: Kontinuität A·v = const, Bernoulli, **Poiseuille** Q ∝ r⁴) erklären Muskelkräfte, Blutdruck und Blutfluss. **Warum für den MedAT relevant?** Drehmoment, Hebelgesetz (Bizeps 700 N für 10 kg), Poiseuille (Stenose: Radius halbiert → Fluss 1/16), Bernoulli (Stenose → v↑ p↓), Reynolds-Zahl werden geprüft. **Welche Fragen werden beantwortet?** „Poiseuille — Q ~ r⁴?“; „Kontinuität bei Verengung?“; „Hebelgesetz Bizeps?“; „Hydrostatischer Druck Kopf–Fuß?“; „Re laminar?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Statik, Druck und Hydrodynamik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Statik**: Drehmoment M = F·r, Hebelgesetz (Gleichgewicht der Drehmomente), Anwendung am Skelett
@@ -1908,7 +1924,7 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Warum atrophieren Muskeln und Knochen im Weltraum? Warum trennt eine Zentrifuge Blut in Plasma und Blutzellen? Warum ist ein Gehstock so wertvoll gegen Sturzgefahr? **Gravitation** und **Rotation** erklären es. Das Gravitationsgesetz und die Zentripetalkraft sind die Grundlagen — im Labor (Zentrifuge), in der Medizin (g-Kräfte bei Trauma) und im Körper (Standfläche, Schwerpunkt). Für den MedAT sind Gravitationsgesetz, Masse vs. Gewicht, Zentripetalkraft, RCF (Zentrifuge) und Schwerpunktlage prüfungsrelevant.
+**Worum geht es?** **Gravitation** (F_G = m·g, Masse vs. Gewicht) und **Rotation** (Zentripetalkraft F_z = m·v²/r = m·ω²·r, Zentrifuge, RCF) erklären Gewichtskraft, Kreisbewegung und Schwerelosigkeit. **Warum für den MedAT relevant?** Gravitationsgesetz, Masse (kg) vs. Gewicht (N), Zentripetalkraft, RCF (Zentrifuge im Labor), Schwerpunkt und Gleichgewicht werden geprüft. **Welche Fragen werden beantwortet?** „Masse vs. Gewicht?“; „Zentripetalkraft Formel?“; „RCF — wofür?“; „Schwerelosigkeit — warum?“; „Schwerpunkt — stabil/labil?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Gravitation und Rotation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - das **Gravitationsgesetz** F_G = G·m₁·m₂/r² und die Näherung **F_G = m·g** (g ≈ 9,81 m/s²) auf der Erde

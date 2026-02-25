@@ -26,7 +26,7 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Kalibrierkurven (Lambert-Beer), Dosierung (mg/kg), Infusionsraten und Blutdruck–BMI-Zusammenhang sind **lineare** Modelle (konstante Änderungsrate). Für den MedAT sind Steigung m, Achsenabschnitt b, Geradengleichung aus zwei Punkten und Schnittpunkte prüfungsrelevant.
+**Worum geht es?** **Lineare Funktionen** y = mx + b: Steigung m = Δy/Δx, Achsenabschnitt b; Geradengleichung aus zwei Punkten, Nullstelle, Schnittpunkt. **Warum für den MedAT relevant?** Steigung m, b, Geradengleichung aus zwei Punkten, Schnittpunkte (Kalibrierkurve, Dosierung) werden geprüft. **Welche Fragen werden beantwortet?** „m aus zwei Punkten?“; „Nullstelle x₀?“; „Schnittpunkt zweier Geraden?“; „y = mx + b — was ist m?“; „Δy/Δx?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu linearen Funktionen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Grundform** y = mx + b: **m** = Steigung (Δy/Δx), **b** = y-Achsenabschnitt; Graph = Gerade
@@ -302,7 +302,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Parabeln beschreiben Wurfparabeln, Konzentrations-Zeit-Kurven und optimale Dosis-Wirkung. Für den MedAT sind Scheitelpunkt, Diskriminante, Nullstellen (Mitternachts- oder pq-Formel) und Interpretation des Graphen prüfungsrelevant.
+**Worum geht es?** **Quadratische Funktionen** f(x) = ax² + bx + c: Scheitelpunkt, **Diskriminante** D = b²−4ac, Nullstellen (Mitternachts- oder pq-Formel). **Warum für den MedAT relevant?** Scheitelpunkt, Diskriminante, Nullstellen, Parabel-Interpretation werden geprüft. **Welche Fragen werden beantwortet?** „Scheitelpunkt xs?“; „D > 0 — wie viele Nullstellen?“; „pq-Formel?“; „a > 0 — Parabel?“; „Mitternachtsformel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu quadratischen Funktionen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Allgemeine Form** f(x) = ax² + bx + c: **a** (Leitkoeffizient) bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite
@@ -601,9 +601,9 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
       ],
       content: `## Einleitung
 
-**Exponentialfunktionen** f(t) = f₀×e^(±kt): Halbwertszeit, Wachstum, Zerfall. Für den MedAT sind Grundform, e-Funktion, Halbwertszeit (T½ = ln2/k), k-Wert prüfungsrelevant.
+**Worum geht es?** **Exponentialfunktionen** f(t) = f₀·e^(±kt): Wachstum und Zerfall; **Halbwertszeit** T½ = ln2/k. **Warum für den MedAT relevant?** Grundform, e-Funktion, Halbwertszeit, k-Wert (Pharmakokinetik, Radioaktivität) werden geprüft. **Welche Fragen werden beantwortet?** „T½ = ln2/k?“; „f(t) = f₀·e^(−kt) — Zerfall?“; „k aus T½?“; „e-Funktion Ableitung?“; „Steady-State?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Exponentialfunktionen abgedeckt.
 
-**In diesem Kapitel lernst du:** **f(t) = f₀×e^(kt)** (Wachstum/Zerfall); **Halbwertszeit** T½; **e-Funktion**; Steady-State. **Kontext:** Pharmakokinetik, Bakterien, Radioaktivität.
+**In diesem Kapitel lernst du:** **f(t) = f₀×e^(kt)** (Wachstum/Zerfall); **Halbwertszeit** T½; **e-Funktion**; Steady-State.
 
 ---
 
@@ -890,9 +890,9 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
       ],
       content: `## Einleitung
 
-**Logarithmus** = Umkehr der Exponentialfunktion; **pH = −log([H⁺])**, Henderson-Hasselbalch, Dezibel. Für den MedAT sind log-Gesetze, pH, HH-Gleichung, Dezibel prüfungsrelevant.
+**Worum geht es?** **Logarithmus** (log, ln) als Umkehr der e-Funktion; **Logarithmengesetze**; **pH = −log([H⁺])**, **Henderson-Hasselbalch**, Dezibel. **Warum für den MedAT relevant?** log-Gesetze, pH, HH-Gleichung, Dezibel werden geprüft. **Welche Fragen werden beantwortet?** „log(ab) =?“; „pH aus [H⁺]?“; „HH-Gleichung?“; „ln Basis?“; „Dezibel +3 dB?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Logarithmus abgedeckt.
 
-**In diesem Kapitel lernst du:** **log** und **ln**; **Logarithmengesetze**; **pH**; **Henderson-Hasselbalch**; Dezibel; Basiswechsel. **Kontext:** Von Konzentration zu Skala.
+**In diesem Kapitel lernst du:** **log** und **ln**; **Logarithmengesetze**; **pH**; **Henderson-Hasselbalch**; Dezibel; Basiswechsel.
 
 ---
 
@@ -1199,9 +1199,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
       ],
       content: `## Einleitung
 
-**Graphen** lesen: EKG, Dosis-Wirkung, Semilog, Michaelis-Menten. Für den MedAT sind Asymptoten, Monotonie, Extrempunkte, Semilog, EC₅₀ prüfungsrelevant.
-
-**Kontext:** Im MedAT und in der Klinik musst du Kurven **ohne Formel** deuten: EKG-Kurven, Dosis-Wirkungskurven (EC₅₀), Pharmakokinetik (Konzentration über Zeit, oft als **Semilog-Plot**), Michaelis-Menten-Kinetik, Überlebenskurven (Kaplan-Meier). Wer Asymptoten, Sättigung und Linearisierung versteht, erkennt Funktionstypen und Fehlinterpretationen.
+**Worum geht es?** **Graphen lesen**: Asymptoten, Monotonie, Extrempunkte; **Semilog-Plot** (Pharmakokinetik); **Michaelis-Menten**, EC₅₀ (Dosis-Wirkung). **Warum für den MedAT relevant?** Asymptoten, Monotonie, Extrempunkte, Semilog, EC₅₀ (EKG, Dosis-Wirkung) werden geprüft. **Welche Fragen werden beantwortet?** „Asymptote — was?“; „Semilog — Achse?“; „EC₅₀ — Bedeutung?“; „Michaelis-Menten Sättigung?“; „Monotonie steigend?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Graphenlesen abgedeckt.
 
 **In diesem Kapitel lernst du:** **Asymptoten** (horizontal, vertikal); **Monotonie**; **Extrempunkte**; **Semilog-Plot**; **Michaelis-Menten**.
 

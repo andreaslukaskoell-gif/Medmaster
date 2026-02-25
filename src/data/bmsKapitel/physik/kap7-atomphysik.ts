@@ -30,9 +30,9 @@ export const physKap7: Kapitel = {
       ],
       content: `## Einleitung
 
-**Atomphysik**: Elektronen besetzen diskrete **Energieniveaus**; beim Übergang wird Licht definierter Wellenlänge emittiert oder absorbiert (**Spektroskopie**). Das ist Basis für Pulsoximetrie, Photometrie und Lasertherapie. Für den MedAT sind Bohr-Modell, Photonenenergie E = hf = hc/λ, Emissions-/Absorptionsspektren, Lambert-Beer und Pulsoximetrie prüfungsrelevant.
+**Worum geht es?** **Atomphysik**: diskrete **Energieniveaus** (Bohr-Modell); beim Übergang Emission/Absorption von Licht (**Spektroskopie**). **Photonenenergie** E = hf = hc/λ; **Lambert-Beer** (Extinktion); **Pulsoximetrie** (HbO₂ vs. Hb). **Warum für den MedAT relevant?** Bohr-Modell, E = hf = hc/λ, Emissions-/Absorptionsspektren, Lambert-Beer, Pulsoximetrie werden geprüft. **Welche Fragen werden beantwortet?** „E = hf = hc/λ?“; „Lambert-Beer?“; „Pulsoximetrie — welche Wellenlängen?“; „Bohr — diskrete Niveaus?“; „Absorption vs. Emission?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Atomphysik und Spektroskopie abgedeckt.
 
-**In diesem Kapitel lernst du:** Bohr'sches Atommodell (diskrete Niveaus); E = hf = hc/λ; Emissions- und Absorptionsspektren; Lambert-Beer (Extinktion); Pulsoximetrie (HbO₂ vs. Hb). **Kontext:** Quantensprünge und Licht; klinisch Pulsoximetrie, Photometrie, Laser.
+**In diesem Kapitel lernst du:** Bohr'sches Atommodell (diskrete Niveaus); E = hf = hc/λ; Emissions- und Absorptionsspektren; Lambert-Beer (Extinktion); Pulsoximetrie (HbO₂ vs. Hb).
 
 ---
 
@@ -317,9 +317,9 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
       ],
       content: `## Einleitung
 
-**Radioaktivität**: In der Medizin sowohl diagnostisch (⁹⁹ᵐTc, ¹⁸F) als auch therapeutisch (¹³¹I) und als Risiko (Radon). **Zerfallsgesetz** und **Halbwertszeit** beschreiben das Abklingen; **α/β/γ-Strahlung** unterscheiden sich in Reichweite und biologischer Wirkung. Für den MedAT sind α/β/γ, Halbwertszeit, N(t) = N₀·e^(-λt), Aktivität (Bq), Äquivalentdosis (Sv) und Strahlenschutz prüfungsrelevant.
+**Worum geht es?** **Radioaktivität**: **α-** (Heliumkern), **β-** (Elektron), **γ-Strahlung** (Photon); **Zerfallsgesetz** N(t) = N₀·e^(-λt), **Halbwertszeit** T_½; **Aktivität** A [Bq]; **Dosis** [Gy], **Äquivalentdosis** [Sv]; Strahlenschutz. **Warum für den MedAT relevant?** α/β/γ, Halbwertszeit, N(t) = N₀·e^(-λt), Aktivität Bq, Äquivalentdosis Sv, Strahlenschutz werden geprüft. **Welche Fragen werden beantwortet?** „α/β/γ — Reichweite?“; „T_½ — was ist λ?“; „Aktivität Einheit?“; „Sv vs. Gy?“; „ALARA?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Radioaktivität abgedeckt.
 
-**In diesem Kapitel lernst du:** α- (Heliumkern), β- (Elektron), γ-Strahlung (Photon); Zerfallsgesetz und T_½; Aktivität A [Bq]; Dosis [Gy], Äquivalentdosis [Sv]; Strahlenschutz. **Kontext:** Kernumwandlungen und Strahlenwirkung; klinisch Szintigrafie, Therapie, ALARA.
+**In diesem Kapitel lernst du:** α- (Heliumkern), β- (Elektron), γ-Strahlung (Photon); Zerfallsgesetz und T_½; Aktivität A [Bq]; Dosis [Gy], Äquivalentdosis [Sv]; Strahlenschutz.
 
 ---
 
@@ -647,9 +647,9 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
       ],
       content: `## Einleitung
 
-**Röntgenstrahlung** durchdringt Gewebe (Bildgebung), ionisiert aber auch DNA (Risiko). **Brems-** und **charakteristische Strahlung** entstehen in der Röntgenröhre; das **Schwächungsgesetz** beschreibt Absorption. Für den MedAT sind Entstehung (Brems-/charakteristische Strahlung), Schwächungsgesetz, Strahlenschäden (deterministisch vs. stochastisch), Bergonié-Tribondeau und Abstandsquadratgesetz prüfungsrelevant.
+**Worum geht es?** **Röntgenstrahlung**: Entstehung (**Bremsstrahlung**, **charakteristische Strahlung**); **Schwächungsgesetz** I = I₀·e^(-μx); Strahlenschäden (deterministisch vs. stochastisch); **Bergonié-Tribondeau**; Abstandsquadratgesetz. **Warum für den MedAT relevant?** Brems-/charakteristische Strahlung, Schwächungsgesetz, deterministisch vs. stochastisch, Bergonié-Tribondeau, Abstandsquadratgesetz werden geprüft. **Welche Fragen werden beantwortet?** „Brems- vs. charakteristische Strahlung?“; „I = I₀·e^(-μx)?“; „Deterministisch — was?“; „Bergonié-Tribondeau?“; „Abstand verdoppelt — Dosis?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Röntgenstrahlung abgedeckt.
 
-**In diesem Kapitel lernst du:** Entstehung Röntgen (Bremsstrahlung, charakteristische Linien); Schwächung I = I₀·e^(-μx); deterministische vs. stochastische Schäden; Bergonié-Tribondeau; Abstandsquadratgesetz; ALARA. **Kontext:** Röntgen als Bildgebung und Risiko; klinisch Radiologie, Dosisreduktion.
+**In diesem Kapitel lernst du:** Entstehung Röntgen (Bremsstrahlung, charakteristische Linien); Schwächung I = I₀·e^(-μx); deterministische vs. stochastische Schäden; Bergonié-Tribondeau; Abstandsquadratgesetz; ALARA.
 
 ---
 
@@ -940,9 +940,9 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
       ],
       content: `## Einleitung
 
-**PET** (¹⁸F-FDG, Annihilation, Koinzidenz), **SPECT** (⁹⁹ᵐTc) und **MRT** (Kernspinresonanz, Larmor, T1/T2) sind zentrale Bildgebungsverfahren. Dahinter stecken **Quantenphysik** (Welle-Teilchen-Dualismus, Photoeffekt) und **Larmor-Frequenz**. Für den MedAT sind PET-/SPECT-/MRT-Prinzip, Photoeffekt und Welle-Teilchen-Dualismus prüfungsrelevant.
+**Worum geht es?** **PET** (Positronen, Annihilation 2×511 keV, Koinzidenz), **SPECT** (⁹⁹ᵐTc, Single-Photon, Kollimator), **MRT** (Kernspinresonanz, **Larmor** f = γ·B₀, T1/T2); **Photoeffekt**, **Welle-Teilchen-Dualismus**. **Warum für den MedAT relevant?** PET-/SPECT-/MRT-Prinzip, Photoeffekt, Welle-Teilchen-Dualismus werden geprüft. **Welche Fragen werden beantwortet?** „PET — was wird detektiert?“; „MRT Larmor-Formel?“; „SPECT vs. PET?“; „Photoeffekt — E = hf?“; „T1 vs. T2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Bildgebung (PET, SPECT, MRT) und Quantenphysik abgedeckt.
 
-**In diesem Kapitel lernst du:** PET (Positronen, Annihilation 2×511 keV, Koinzidenz); SPECT (Single-Photon, Kollimator); MRT (Larmor f = γ·B₀, T1/T2); Photoeffekt; Welle-Teilchen-Dualismus. **Kontext:** Bildgebung und Quantenphysik; klinisch PET/SPECT/MRT in der Diagnostik.
+**In diesem Kapitel lernst du:** PET (Positronen, Annihilation 2×511 keV, Koinzidenz); SPECT (Single-Photon, Kollimator); MRT (Larmor f = γ·B₀, T1/T2); Photoeffekt; Welle-Teilchen-Dualismus.
 
 ---
 

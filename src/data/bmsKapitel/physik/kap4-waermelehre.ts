@@ -29,7 +29,7 @@ export const physKap4: Kapitel = {
       ],
       content: `## Einleitung
 
-Fieber über 40 °C ist lebensgefährlich — aber warum? Hypothermie unter 35 °C ebenfalls. Die Körperkerntemperatur ist ein kritischer Vitalparameter. Dahinter steckt **Temperatur** (Maß für die mittlere kinetische Energie der Teilchen) und **Wärme** (Energieübertragung von heiß nach kalt). Für den MedAT sind Temperaturskalen (Celsius/Kelvin/Fahrenheit), spezifische Wärmekapazität, thermische Ausdehnung und Körpertemperaturregulation prüfungsrelevant.
+**Worum geht es?** **Temperatur** (Maß für mittlere kinetische Energie der Teilchen) und **Wärme** (Energieübertragung von heiß nach kalt). Temperaturskalen (Kelvin T = °C + 273,15), **spezifische Wärmekapazität** c, thermische Ausdehnung. **Warum für den MedAT relevant?** Celsius/Kelvin/Fahrenheit, spezifische Wärmekapazität, thermische Ausdehnung, Körpertemperaturregulation werden geprüft. **Welche Fragen werden beantwortet?** „0 K in °C?“; „spezifische Wärmekapazität — Einheit?“; „Wärme Q = m·c·ΔT?“; „thermische Ausdehnung?“; „Körpertemperatur Normalbereich?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Temperatur und Wärme abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Temperaturskalen**: Kelvin T = °C + 273,15 (absoluter Nullpunkt 0 K); Fahrenheit T[°F] = T[°C]·1,8 + 32
@@ -375,7 +375,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
       ],
       content: `## Einleitung
 
-Warum wärmt eine Wollmütze, obwohl Wolle keine Wärme produziert? Warum kühlt Schweiß die Haut? Wärmeübertragung geschieht auf drei Wegen — **Konduktion** (Leitung), **Konvektion** (Strömung) und **Strahlung** — und alle drei sind im Körper aktiv. Das **Fourier-Gesetz** beschreibt den Wärmefluss durch Gewebe und Kleidung. Für den MedAT sind Wärmeleitfähigkeit, Fourier-Gesetz, Strahlung (Stefan-Boltzmann), Gegenstrom-Wärmeaustausch und klinische Wärmetherapie prüfungsrelevant.
+**Worum geht es?** Wärmeübertragung auf drei Wegen: **Konduktion** (Fourier Q̇ = λ·A·ΔT/d), **Konvektion** (Strömung), **Strahlung** (Stefan-Boltzmann). **Warum für den MedAT relevant?** Wärmeleitfähigkeit λ, Fourier-Gesetz, Stefan-Boltzmann, Gegenstrom-Wärmeaustausch, klinische Wärmetherapie werden geprüft. **Welche Fragen werden beantwortet?** „Fourier — wovon hängt Q̇ ab?“; „Konduktion vs. Konvektion?“; „Stefan-Boltzmann?“; „Gegenstromprinzip?“; „Wärmeleitung im Gewebe?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wärmeübertragung abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Wärmeleitung** (Konduktion): Fourier Q̇ = λ·A·ΔT/d; **Wärmeleitfähigkeit** λ [W/(m·K)]
@@ -705,7 +705,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
       ],
       content: `## Einleitung
 
-Kein Perpetuum mobile, kein 100-prozentiger Wirkungsgrad, kein spontaner Wärmefluss von kalt nach warm — das sind die Aussagen der **Thermodynamik**. Die Hauptsätze stecken das Mögliche ab. Für den MedAT sind 1. bis 3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad und Entropie prüfungsrelevant.
+**Worum geht es?** **Thermodynamik**: **1. Hauptsatz** ΔU = Q + W (Energieerhaltung), **2. Hauptsatz** (Entropie nimmt zu, kein Perpetuum mobile), **3. Hauptsatz** (0 K nicht erreichbar). Carnot-Wirkungsgrad, Entropie. **Warum für den MedAT relevant?** 1.–3. Hauptsatz, ΔU = Q + W, Carnot-Wirkungsgrad, Entropie werden geprüft. **Welche Fragen werden beantwortet?** „1. Hauptsatz Formel?“; „2. Hauptsatz — was besagt er?“; „Carnot η?“; „Entropie — Richtung?“; „Perpetuum mobile?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu den Hauptsätzen der Thermodynamik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **1. Hauptsatz**: ΔU = Q + W (innere Energie, Wärme, Arbeit); Energieerhaltung in thermischen Prozessen
@@ -1021,7 +1021,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
       ],
       content: `## Einleitung
 
-Der **Autoklav** sterilisiert bei 121 °C / 2 bar — möglich, weil Druck den Siedepunkt erhöht. Stickstoffnarkose beim Tauchen entsteht, weil Gase unter Druck mehr im Blut lösen (**Henry-Gesetz**). Hinter all dem stecken das **ideale Gasgesetz** und die Physik der **Phasenübergänge**. Für den MedAT sind pV = nRT, Boyle/Gay-Lussac/Charles, Phasendiagramm, Latentwärme und Anwendungen (Autoklav, Tauchmedizin) prüfungsrelevant.
+**Worum geht es?** **Ideales Gasgesetz** pV = nRT; **Boyle** (p ∝ 1/V bei T = const), **Gay-Lussac/Charles** (V ∝ T, p ∝ T); **Phasenübergänge** (Schmelzen, Sieden, Latentwärme), **Henry-Gesetz** (Gaslöslichkeit ∝ Druck). **Warum für den MedAT relevant?** pV = nRT, Boyle/Gay-Lussac/Charles, Phasendiagramm, Latentwärme, Autoklav, Tauchmedizin werden geprüft. **Welche Fragen werden beantwortet?** „Boyle — p und V?“; „ideales Gas — welche Variablen?“; „Henry — Tauchmedizin?“; „Latentwärme bei Phasenübergang?“; „Autoklav Druck?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu idealem Gas und Phasenübergängen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Ideales Gasgesetz** pV = nRT; **Boyle** (T=const: p ∝ 1/V), **Gay-Lussac/Charles** (p ∝ T, V ∝ T)

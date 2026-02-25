@@ -23,7 +23,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
       ],
       content: `## Einleitung
 
-**Epithelgewebe** (kurz: Epithel) ist das Gewebe, das alle inneren und äußeren Oberflächen des Körpers bedeckt — Haut, Darmschleimhaut, Gefäßinnenwand, Harnblase, Atemwege. Seine **Hauptfunktion** ist Barriere und gerichteter Transport: Es trennt Innen von Außen, ermöglicht Resorption und Sekretion und passt sich der Aufgabe an (dünn für Gasaustausch in der Lunge, mehrschichtig für Schutz in der Haut, dehnbar in der Harnblase). **Medizinisch und für den BMS** ist Epithel zentral: Die Zuordnung „welches Epithel in welchem Organ“ wird regelmäßig abgefragt; Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) sind Klassiker. **Zusammenhang mit anderen Systemen:** Epithel liegt immer auf Bindegewebe (über die Basalmembran); Drüsenepithel liefert Sekrete in Blut (endokrin) oder in Gänge (exokrin); Flimmerepithel der Atemwege arbeitet mit Schleim und Immunabwehr zusammen. Alle Epithelien sind **polar** (apikal vs. basolateral), **avaskulär** (keine eigenen Gefäße) und sitzen auf einer **Basalmembran**.
+**Worum geht es?** **Epithelgewebe** bedeckt alle inneren und äußeren Oberflächen — Haut, Darm, Gefäße, Harnblase, Atemwege. **Hauptfunktion:** Barriere und gerichteter Transport (Resorption, Sekretion). **Warum für den MedAT relevant?** Die Zuordnung „welches Epithel in welchem Organ“, Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) werden regelmäßig abgefragt. **Welche Fragen werden beantwortet?** „Welches Epithel kleidet die Trachea aus?“; „Urothel — wo?“; „Merokrin vs. apokrin vs. holokrin?“; „Tight Junctions — Funktion?“; „Pseudostratifiziert — was bedeutet das?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Epithelgewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Grundprinzipien** aller Epithelien (Polarität, Basalmembran, avaskulär) und **Zellkontakte** (Tight Junctions, Desmosomen, Gap Junctions, Hemidesmosomen)
@@ -282,7 +282,7 @@ Sekretionsmechanismen exokriner Drüsen:
       ],
       content: `## Einleitung
 
-**Binde- und Stützgewebe** umfasst alle Gewebe, bei denen die **extrazelluläre Matrix (EZM)** — der Raum zwischen den Zellen mit Fasern und Grundsubstanz — die Masse und Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe, Bänder. **Hauptfunktion** ist Stützung, Formgebung, Speicherung (Fett) und Bewegung (Sehnen übertragen Muskelkraft). **Medizinisch und für den BMS** sind Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), die drei Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) zentral; Osteoporose, Arthrose und Skorbut sind Bindegewebserkrankungen. **Zusammenhang mit anderen Systemen:** Bindegewebe trägt Epithelien (Basalmembran enthält Kollagen IV), umgibt Muskeln und Nerven, bildet das Gerüst der Organe und speichert Energie (Fett). **Kollagen** ist das häufigste Protein des Körpers (~30 %) und verleiht Festigkeit; Vitamin C ist für seine Synthese nötig (Skorbut bei Mangel).
+**Worum geht es?** **Binde- und Stützgewebe** umfasst Gewebe, bei denen die **extrazelluläre Matrix (EZM)** die Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe. **Warum für den MedAT relevant?** Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) werden regelmäßig geprüft; Osteoporose, Arthrose, Skorbut sind Bindegewebserkrankungen. **Welche Fragen werden beantwortet?** „Welcher Kollagentyp in der Basalmembran?“; „Osteoblast vs. Osteoklast?“; „Welche Knorpelart wo?“; „Skorbut — Ursache?“; „Braunes Fett — UCP-1?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Binde- und Stützgewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **extrazelluläre Matrix (EZM)** (Kollagen, Elastin, Proteoglykane) und die wichtigsten Zellen (Fibroblasten, Osteoblasten/Osteoklasten, Chondrozyten)
@@ -577,7 +577,7 @@ Sekretionsmechanismen exokriner Drüsen:
       ],
       content: `## Einleitung
 
-**Muskelgewebe** ist das Gewebe, das durch Kontraktion Bewegung, Haltung und innerorganische Funktionen ermöglicht. Es gibt **drei Muskeltypen**: **Skelettmuskel** (willkürlich, an Knochen), **Herzmuskel** (unwillkürlich, Pumpe), **glatte Muskulatur** (unwillkürlich, Darm, Gefäße, Blase). **Hauptfunktion** ist Kraftentwicklung durch **Aktin-Myosin-Interaktion** nach dem **Gleitfilamentprinzip** — die kleinste Einheit ist das **Sarkomer** (von Z-Scheibe zu Z-Scheibe). **Medizinisch und für den BMS** sind Sarkomeraufbau (I-Bande, A-Bande, H-Zone bei Kontraktion), der Ca²⁺-Schalter (Troponin/Tropomyosin), die Rolle von ATP (Lösen des Myosins, nicht für den Kraftschlag) und die Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) zentral; Troponin I/T sind Herzinfarkt-Marker. **Zusammenhang mit anderen Systemen:** Skelettmuskel wird über motorische Nerven (NMJ) gesteuert; Herzmuskelzellen sind über Gap Junctions elektrisch gekoppelt; glatte Muskulatur reagiert auf autonomes Nervensystem und Hormone.
+**Worum geht es?** **Muskelgewebe** ermöglicht Kontraktion; es gibt **drei Typen**: Skelettmuskel (willkürlich), Herzmuskel (unwillkürlich, Pumpe), glatte Muskulatur (unwillkürlich). **Warum für den MedAT relevant?** Sarkomeraufbau (I-Bande, A-Bande, H-Zone), Ca²⁺-Schalter (Troponin/Tropomyosin), Rolle von ATP, Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) und Troponin als Herzinfarkt-Marker werden geprüft. **Welche Fragen werden beantwortet?** „Sarkomer — was wird bei Kontraktion kürzer?“; „Herzmuskel — warum kein Tetanus?“; „ATP — wofür bei Kontraktion?“; „Welcher Muskeltyp hat Gap Junctions?“; „Glatte Muskulatur — Troponin oder Calmodulin?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Muskelgewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **drei Muskeltypen** (Skelett, Herz, glatt) und ihre Steuerung (willkürlich/unwillkürlich)
@@ -856,7 +856,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
       ],
       content: `## Einleitung
 
-**Nervengewebe** besteht aus **Neuronen** (Signalleitung) und **Gliazellen** (Stützung, Myelinisierung, Stoffwechsel, Immunität). **Hauptfunktion** ist die Erzeugung und Weiterleitung von Erregung: Dendriten und Soma empfangen Signale, am **Axonhügel** entsteht das Aktionspotential, das **Axon** leitet es weiter — bei myeliniserten Axonen **saltatorisch** (von Schnürring zu Schnürring), dadurch deutlich schneller und energiesparender. **Medizinisch und für den BMS** sind Aufbau des Neurons (Axon leitet vom Soma weg, Dendriten zum Soma hin), Myelinisierung (Schwann-Zelle im PNS: 1 Segment pro Zelle; Oligodendrozyt im ZNS: bis 50 Segmente) und Gliazellen (Astrozyten: Blut-Hirn-Schranke, K⁺-Puffer; Mikroglia: einzige mesodermale Gliazelle) zentral. **Zusammenhang mit anderen Systemen:** Nervengewebe bildet Gehirn, Rückenmark und periphere Nerven; Myelin wird von Schwann-Zellen (PNS) bzw. Oligodendrozyten (ZNS) gebildet; bei Demyelinisierung (z. B. Multiple Sklerose) ist die Leitungsgeschwindigkeit gestört.
+**Worum geht es?** **Nervengewebe** besteht aus **Neuronen** (Signalleitung) und **Gliazellen** (Myelinisierung, Stützung). Erregung entsteht am Axonhügel, das **Axon** leitet vom Soma weg; bei Myelin **saltatorisch** (Schnürring zu Schnürring). **Warum für den MedAT relevant?** Neuronaufbau (Axon vs. Dendrit), Myelinisierung (Schwann-Zelle PNS: 1 Segment; Oligodendrozyt ZNS: bis 50 Segmente) und Gliazellen (Astrozyten: BHS; Mikroglia: mesodermale Gliazelle) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Axon — wohin leitet es?“; „Schwann-Zelle vs. Oligodendrozyt?“; „Saltatorische Leitung — wo?“; „Welche Gliazelle bildet die Blut-Hirn-Schranke?“; „Multiple Sklerose — was wird zerstört?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nervengewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **Aufbau des Neurons** (Soma, Dendriten, Axon, Axonhügel) und dass Erregung **vom Zellkörper weg** über das **Axon** geleitet wird
@@ -1135,7 +1135,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
       ],
       content: `## Einleitung
 
-Das Nervensystem ist das schnellste Kommunikationssystem des Körpers — Signale können mit 120 m/s reisen. Es gliedert sich in **ZNS** (Gehirn + Rückenmark: Verarbeitung) und **PNS** (Spinal-/Hirnnerven: Weiterleitung). Das vegetative (autonome) Nervensystem steuert unwillkürlich innere Organe und ist in zwei Gegenspieler aufgeteilt: **Sympathikus** ("fight-or-flight") und **Parasympathikus** ("rest-and-digest"). Die Grundbausteine der Signalübertragung — Aktionspotential und Synapse — gehören zu den absoluten MedAT-Schwerpunktthemen dieses Kapitels.
+**Worum geht es?** Das Nervensystem gliedert sich in **ZNS** (Gehirn + Rückenmark) und **PNS**; das vegetative System in **Sympathikus** (fight-or-flight) und **Parasympathikus** (rest-and-digest). **Warum für den MedAT relevant?** Aktionspotential, Synapse (SNARE, ionotrop/metabotrop), Sympathikus vs. Parasympathikus (Wirkung auf Herz, Bronchien, Pupille) und Reflexbogen sind Schwerpunktthemen. **Welche Fragen werden beantwortet?** „Sympathikus — Wirkung auf Herz?“; „Ablauf der synaptischen Transmission?“; „Ruhepotential, Schwelle, Refraktärzeit?“; „Monosynaptisch vs. polysynaptisch?“; „EPSP vs. IPSP?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Nervensystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Sympathikus** und **Parasympathikus** (Ursprung, Neurotransmitter, Wirkung auf Herz, Bronchien, Pupille, GI)
@@ -1382,7 +1382,7 @@ Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferente
       ],
       content: `## Einleitung
 
-Ohne Sinnesorgane keine Wahrnehmung. Die verschiedenen Sinnesorgane lösen alle dasselbe grundlegende Problem: Wie wird ein physikalischer oder chemischer Reiz (Licht, Schall, Druck, Temperatur) in ein elektrisches Signal umgewandelt, das das Gehirn verarbeiten kann? Das nennt sich **Transduktion**. Bemerkenswert: Im Auge führt mehr Licht paradoxerweise zur **Hyperpolarisation** der Photorezeptoren — das ist MedAT-relevant. Im Ohr ermöglichen Gehörknöchelchen die Schallübertragung von Luft auf Flüssigkeit (Impedanzanpassung). In der Haut sind fünf verschiedene Rezeptortypen für Berührung, Vibration, Druck, Dehnung und Schmerz zuständig. MedAT-Schwerpunkte: Fototransduktion, Akkommodation, Tonotopie des Corti-Organs.
+**Worum geht es?** Sinnesorgane wandeln Reize (Licht, Schall, Druck, Temperatur) in elektrische Signale um — **Transduktion**. **Warum für den MedAT relevant?** Im Auge führt mehr Licht zur **Hyperpolarisation** der Photorezeptoren; Ohr: Impedanzanpassung, Tonotopie; Haut: Rezeptortypen. **Welche Fragen werden beantwortet?** „Fototransduktion — Hyperpolarisation oder Depolarisation?“; „Akkommodation — welche Struktur?“; „Tonotopie — wo?“; „Welcher Hautrezeptor für Druck?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Sinnesorganen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Transduktion** (Reiz → elektrisches Signal) und Fototransduktion (Licht → Hyperpolarisation)
@@ -1683,7 +1683,7 @@ Das Ohr löst ein physikalisches Problem: Luftschwingungen müssen in Flüssigke
       ],
       content: `## Einleitung
 
-Nervensystem = Blitz (Millisekunden). **Hormonsystem** = langsames Feuer (Minuten bis Tage). Beide kommunizieren, aber auf grundlegend verschiedene Weise. **Hormone** sind chemische Botenstoffe, die über das Blut zu Zielorganen gelangen. Die Schlüsselstruktur: die **Hypothalamus-Hypophyse-Achse** — ein hierarchischer Regelkreis, in dem Hypothalamus-Hormone die Hypophyse steuern, die wiederum periphere Drüsen steuert, die dann über negative Rückkopplung den Kreis schließen. Für die Medizin ist das enorm wichtig: Schilddrüsenerkrankungen, Diabetes, Cushing — fast alle endokrinen Diagnosen basieren auf diesem Prinzip. MedAT-Klassiker: Peptidhormone vs. Steroidhormone, Insulin/Glukagon, Schilddrüsen-Regelkreis.
+**Worum geht es?** **Hormone** sind chemische Botenstoffe über das Blut; die **Hypothalamus-Hypophyse-Achse** steuert periphere Drüsen mit negativer Rückkopplung. **Warum für den MedAT relevant?** Peptid- vs. Steroidhormone, Insulin/Glukagon, Schilddrüsen-Regelkreis (TRH → TSH → T₃/T₄), primäre vs. sekundäre Hypothyreose und Cortisol werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Peptid- vs. Steroidhormon — Rezeptor?“; „Wo wird Somatotropin/Glukagon gebildet?“; „Primäre Hypothyreose — TSH?“; „Insulin senkt oder hebt Blutzucker?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Hormonsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Hypothalamus-Hypophyse-Achse** (Releasing-Hormone, Adenohypophyse, Neurohypophyse)
@@ -1909,7 +1909,7 @@ Das endokrine System nutzt negative Rückkopplung zur Homöostase: Effektor-Horm
       ],
       content: `## Einleitung
 
-Das Herz ist eine Pumpe — aber eine bemerkenswert effiziente. Es schlägt ~100.000-mal pro Tag, pumpt 5–25 L Blut pro Minute und wird dabei durch ein präzises elektrisches System (SA-Knoten → AV-Knoten → Purkinje-Fasern) gesteuert, das vollständig autonom arbeitet. Zwei Kreisläufe in Serie: **großer Kreislauf** (Körperversorgung, hoher Druck) und **kleiner Kreislauf** (Lungenkreislauf, niedriger Druck). Der linke Ventrikel pumpt gegen dreifach höheren Widerstand → dreifach dickere Wand. Für die Medizin sind Herzerkrankungen die häufigste Todesursache in der westlichen Welt. MedAT-Klassiker: Erregungsleitung, Herzklappenvergleich, Kreislaufwege, Blutdruckregulation (RAAS).
+**Worum geht es?** Das Herz pumpt in zwei Kreisläufen in Serie: **großer Kreislauf** (Körper) und **kleiner Kreislauf** (Lunge); Erregungsleitung SA-Knoten → AV-Knoten → His/Purkinje. **Warum für den MedAT relevant?** Erregungsleitung, Herzklappen (AV vs. Taschenklappen), Systole/Diastole, Blutdruckregulation (RAAS, Barorezeptoren) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Erregungsleitung — Reihenfolge?“; „Welche Klappe zwischen Vorhof und Kammer links?“; „Großer vs. kleiner Kreislauf?“; „RAAS — was wird stimuliert?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Herz und Kreislauf abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Herzaufbau** (Kammern, Klappen, Systole/Diastole) und **Erregungsleitung** (SA → AV → His/Purkinje)
@@ -2119,7 +2119,7 @@ Kurzfristig: Barorezeptor-Reflex (Aortenbogen, Karotis-Sinus) – Druck ↑ → 
       ],
       content: `## Einleitung
 
-Blut ist das flüssige Transportmittel des Körpers — 5–6 Liter, die kontinuierlich durch alle Gewebe fließen. Es besteht aus **Plasma** (~55%) als flüssiger Phase und **zellulären Elementen** (~45%, Hämatokrit): Erythrozyten (O₂-Transport), Leukozyten (Immunabwehr) und Thrombozyten (Gerinnung). Alles wird im Knochenmark aus einer gemeinsamen hämatopoetischen Stammzelle gebildet. Für die Medizin ist Blut der direkte diagnostische Zugang: Hämoglobin (Anämie), Leukozytenzahl (Infektion), Thrombozytenzahl (Blutungsrisiko), Blutgruppe (Transfusion), Troponin (Herzinfarkt). MedAT-Schwerpunkte: Bohr-Effekt, AB0/Rhesus-System, Gerinnungskaskade.
+**Worum geht es?** **Blut** besteht aus **Plasma** (~55%) und **zellulären Elementen** (Erythrozyten, Leukozyten, Thrombozyten). **Warum für den MedAT relevant?** Bohr-Effekt, AB0/Rhesus-System, Gerinnungskaskade (extrinsisch/intrinsisch), Serum vs. Plasma und Blutgruppen werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Bohr-Effekt — Rechtsverschiebung bei?“; „Universalspender/Universalempfänger?“; „Extrinsisch vs. intrinsisch — welcher Faktor?“; „Serum vs. Plasma?“; „Vitamin K — welche Faktoren?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Blut abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Blutbestandteile** (Plasma, Erythrozyten, Leukozyten, Thrombozyten) und **Hämoglobin** (Bohr-Effekt)
@@ -2337,7 +2337,7 @@ AB0-System: Blutgruppe A (Antigen A, Anti-B IgM), B (Antigen B, Anti-A IgM), AB 
       ],
       content: `## Einleitung
 
-Das Immunsystem löst eine fundamentale Aufgabe: es unterscheidet "selbst" von "fremd" — und zerstört das Fremde, ohne sich selbst anzugreifen. Es arbeitet auf zwei Ebenen: die **angeborene Immunität** (sofort, unspezifisch, kein Gedächtnis) mit Neutrophilen, Makrophagen, NK-Zellen und Komplement, und die **erworbene Immunität** (Tage, hochspezifisch, Gedächtnisbildung) mit T- und B-Zellen. Das Verbindungsglied: MHC-Moleküle präsentieren Antigene an T-Zellen und starten die zielgerichtete Immunantwort. Für die Medizin ist das Immunsystem allgegenwärtig: Infektionen, Impfungen, Allergien, Autoimmunerkrankungen, Transplantatabstoßung. MedAT-Klassiker: MHC I vs. II, Antikörperklassen, Allergie Typ I, aktiv vs. passiv.
+**Worum geht es?** Das Immunsystem unterscheidet „selbst“ von „fremd“: **angeborene Immunität** (sofort, unspezifisch) und **erworbene Immunität** (spezifisch, Gedächtnis). **Warum für den MedAT relevant?** MHC I vs. II, Antikörperklassen (IgG, IgM, IgA, IgE), Allergie Typ I, Komplementsystem und angeborene vs. erworbene Abwehr werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „MHC I vs. MHC II — wer präsentiert?“; „Welche Antikörperklasse bei Allergie Typ I?“; „Angeborene vs. erworbene — Gedächtnis?“; „Komplement — klassischer Weg?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Immunsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Angeborene vs. erworbene Immunität** und zentrale Zellen (Neutrophile, Makrophagen, NK, T/B)
@@ -2541,7 +2541,7 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
       content: `## Einleitung
 
-Das lymphatische System ist das unterschätzte dritte Kreislaufsystem. Es hat drei Hauptaufgaben: täglich ~2–4 L interstitielle Flüssigkeit zurück ins Blut transportieren (sonst Ödem), Immunabwehr durch Lymphknoten (filtern Lymphe, präsentieren Antigene) und Fettresorption (Chylomikronen aus dem Darm über die Lymphe, nicht über die Pfortader). Die zentralen lymphatischen Organe — Lymphknoten, Milz und Thymus — haben präzise Architekturen für unterschiedliche Aufgaben. MedAT-Relevanz: Lymphknoten-Zonierung, Milz-Kompartimente, T-Zell-Selektion im Thymus.
+**Worum geht es?** Das **Lymphsystem** transportiert täglich ~2–4 L Flüssigkeit zurück ins Blut, dient der Immunabwehr (Lymphknoten, Milz, Thymus) und dem Fetttransport (Chylomikronen über Lymphe). **Warum für den MedAT relevant?** Lymphknoten-Zonierung (Cortex/Paracortex/Mark), Milz (weiße vs. rote Pulpa), Thymus (positive/negative Selektion) und OPSI-Risiko werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Drei Funktionen des Lymphsystems?“; „Wo B-Zellen, wo T-Zellen im Lymphknoten?“; „Weiße vs. rote Pulpa der Milz?“; „Positive vs. negative Selektion im Thymus?“; „OPSI nach Splenektomie — welche Bakterien?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Lymphsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Funktionen** des Lymphsystems (Flüssigkeitsrücktransport, Immunität, Fettresorption)
@@ -2743,7 +2743,7 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
       ],
       content: `## Einleitung
 
-Ohne Sauerstoff kein Leben — und ohne ein System, das O₂ aus der Luft ins Blut bringt und CO₂ zurückgibt, kein Sauerstoff. Das Atmungssystem löst dieses Problem elegant: ~300 Millionen Alveolen bieten 80–140 m² Austauschfläche, die Blut-Luft-Schranke ist nur 0,5 µm dünn. Surfactant verhindert, dass die winzigen Alveolen kollabieren. Die Atemansteuerung reagiert primär auf CO₂/pH (nicht auf O₂!) über zentrale Chemorezeptoren. Für die Medizin sind Atemwegserkrankungen (Asthma, COPD) die häufigsten Erkrankungen überhaupt. MedAT-Schwerpunkte: Surfactant, Atemmechanik, CO₂-Transport, Bohr-Effekt, Atemregulation.
+**Worum geht es?** Das **Atmungssystem** ermöglicht Gasaustausch (O₂/CO₂) in den Alveolen; Surfactant stabilisiert die Alveolen, die Atemregulation erfolgt primär über CO₂/pH. **Warum für den MedAT relevant?** Surfactant (Typ-II-Pneumozyten, DPPC), CO₂-Transport (Bikarbonat, Haldane-Effekt), Bohr-Effekt und Atemmechanik (aktiv/passiv) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wer produziert Surfactant?“; „CO₂-Transport — Anteile?“; „Bohr-Effekt — Rechtsverschiebung bei?“; „Inspiration aktiv oder passiv?“; „Hauptantrieb der Atmung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Atmungssystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Alveolen**, **Surfactant** (Typ-II-Pneumozyten) und **Blut-Luft-Schranke**
@@ -2961,7 +2961,7 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
       ],
       content: `## Einleitung
 
-Was wir essen, muss auf Molekülebene zerlegt werden, damit es ins Blut aufgenommen werden kann. Das Verdauungssystem zerlegt Nahrung (mechanisch + chemisch), resorbiert Nährstoffe, und scheidet den Rest aus. Der GI-Trakt ist ~9 m lang — vom Mund bis zum Anus. Besonderheit: Drei akzessorische Organe (Leber, Gallenblase, Pankreas) unterstützen die Verdauung durch Galle und Enzyme. Die Dünndarmschleimhaut (Kerckring-Falten + Zotten + Mikrovilli) hat ~200 m² Resorptionsfläche. Für die Medizin sind Erkrankungen des GI-Trakts (Gastritis, Ulkus, Pankreatitis, Ikterus) täglich relevant. MedAT-Schwerpunkte: Magenzelltypen, Trypsin-Aktivierungskaskade, Fett-/Glukoseresorption, Bilirubin-Weg.
+**Worum geht es?** Das **Verdauungssystem** zerlegt Nahrung (Magen, Dünndarm, Pankreas, Leber/Galle) und resorbiert Nährstoffe; Bilirubin wird in der Leber konjugiert und über Galle ausgeschieden. **Warum für den MedAT relevant?** Magenzelltypen (Beleg-/Hauptzellen), Trypsin-Aktivierung (Enterokinase), Fettweg (Chylomikronen → Lymphe), Bilirubin-Stoffwechsel und Ikterus-Typen werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Belegzellen vs. Hauptzellen — was sezernieren sie?“; „Trypsinogen → Trypsin — welches Enzym?“; „Fette — Pfortader oder Lymphe?“; „Unkonjugiert vs. konjugiertes Bilirubin?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Verdauungssystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Magen** (Zelltypen, HCl, Pepsin, Regulation) und **Dünndarm** (Resorptionsfläche, Enzyme)
@@ -3185,9 +3185,7 @@ Der **Dickdarm** (Colon) ist ca. 1,5 m lang und besteht aus Caecum, Colon ascend
       ],
       content: `## Einleitung
 
-Die Niere ist weit mehr als ein Abfallfilter: Sie reguliert Blutvolumen, Blutdruck, pH-Wert und Elektrolyte — und produziert Hormone (Erythropoetin, Renin). Jede Niere hat ~1 Million Nephrone, die täglich 180 Liter Primärharn filtrieren — durch Rückresorption werden davon >99% zurückgewonnen, nur 1–2 Liter werden als Endurin ausgeschieden. Das RAAS (Renin-Angiotensin-Aldosteron-System) ist zentraler Blutdruckregulator. Für die Medizin: Niereninsuffizienz ist häufig (diabetische Nephropathie als Hauptursache), renale Anämie durch EPO-Mangel, ACE-Hemmer als RAAS-Blocker. MedAT-Schwerpunkte: GFR, Tubulustransporte, ADH/Aldosteron, RAAS-Kaskade.
-
-Der **Harntrakt** besteht aus: Nieren (Urinbildung) → **rechter und linker Harnleiter** (Ureter) → **Harnblase** (Speicherung, 300–500 mL) → **Harnröhre** (Urethra, eine gemeinsame Ausleitung). **Prüfungssicher:** Die korrekte Reihenfolge ist **Harnleiter → Harnblase → Harnröhre** (nicht „rechte und linke Harnröhre“ — es gibt nur eine Harnröhre).
+**Worum geht es?** Die **Niere** filtert (GFR ~180 L/Tag), resorbiert und sekretiert; sie reguliert Volumen, Elektrolyte und pH und produziert EPO und Renin. **Harntrakt:** Nieren → Harnleiter (rechts + links) → Harnblase → Harnröhre (nur eine). **Warum für den MedAT relevant?** GFR, Tubulusabschnitte (proximal, Henle, distaler Tubulus, Sammelrohr), ADH/Aldosteron und RAAS werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wo wird Glukose rückresorbiert (SGLT2)?“; „ADH — Wirkung auf Sammelrohr?“; „RAAS — Auslöser und Effekt?“; „Gegenstromprinzip — wo?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Harnsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Nephron** (Glomerulus, Tubuli, GFR ~180 L/Tag) und **Gegenstromprinzip** (Henle-Schleife)
@@ -3402,7 +3400,7 @@ Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % we
       ],
       content: `## Einleitung
 
-Das Skelett ist nicht statisch — es wird ständig umgebaut. 206 Knochen stützen, schützen und ermöglichen Bewegung. Das rote Knochenmark produziert täglich Milliarden Blutzellen (Hämatopoese). Die Mineralspeicherfunktion (Kalzium, Phosphat) macht den Knochen zum zentralen Partner des Ca²⁺-Haushalts. Knochenumbau ist ein Gleichgewicht zwischen Osteoblasten (Aufbau) und Osteoklasten (Abbau) — gesteuert durch RANKL/OPG, PTH, Calcitonin und Östrogen. MedAT-Schwerpunkte: Osteoblasten vs. Osteoklasten, RANKL/OPG-System, Knorpeltypen, Gelenktypen, Osteoporose-Pathophysiologie.
+**Worum geht es?** Das **Skelett** (206 Knochen) wird ständig umgebaut; Osteoblasten (Aufbau) und Osteoklasten (Abbau) stehen im Gleichgewicht (RANKL/OPG). **Warum für den MedAT relevant?** Osteoblasten vs. Osteoklasten (ALP vs. TRAP), RANKL/OPG, Knorpeltypen (hyalin/Faser/elastisch), Ca²⁺-Regulation (PTH, Calcitonin, Vitamin D) und Osteoporose werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Osteoblast vs. Osteoklast — wer baut auf?“; „RANKL — aktiviert oder hemmt Osteoklasten?“; „Hyaliner vs. Faserknorpel — Kollagen?“; „PTH — Ca²⁺ hoch oder runter?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Skelettsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Knochenumbau** (Osteoblasten, Osteoklasten, RANKL/OPG) und **Osteoporose** (Östrogenmangel)
@@ -3647,7 +3645,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
       ],
       content: `## Einleitung
 
-Fortpflanzung erfordert **Gameten** (Spermien + Eizellen), deren präzise hormonelle Steuerung und einen koordinierten Zyklus. **FSH** und **LH** (aus dem Hypophysenvorderlappen) steuern Gonadenentwicklung und Hormonsynthese. Die Besonderheit der **Oogenese**: Sie beginnt pränatal und ist erst bei Befruchtung abgeschlossen — dabei entstehen 1 Eizelle + 3 Polkörperchen aus einer Oozyte. Der **Menstruationszyklus** ist ein Paradebeispiel für positive und negative Rückkopplung. MedAT-Schwerpunkte: Sertoli vs. Leydig, 4 Spermien vs. 1 Eizelle, LH-Peak-Mechanismus, hCG-Funktion, Meiose-Arrests.
+**Worum geht es?** **Fortpflanzung** erfordert Gameten (Spermatogenese: 4 Spermien; Oogenese: 1 Eizelle + 3 Polkörperchen), gesteuert durch FSH/LH; Menstruationszyklus mit LH-Peak und hCG bei Schwangerschaft. **Warum für den MedAT relevant?** Sertoli vs. Leydig, Spermatogenese vs. Oogenese (Ergebnis), LH-Peak (positive Rückkopplung), hCG-Funktion und Meiose-Arrests werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Sertoli vs. Leydig — wer produziert Testosteron?“; „4 Spermien vs. 1 Eizelle — Meiose-Ergebnis?“; „LH-Peak — was löst ihn aus?“; „hCG — was erhält es?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Fortpflanzungssystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Spermatogenese** (4 Spermien, Sertoli/Leydig) vs. **Oogenese** (1 Eizelle + 3 Polkörperchen, Meiose-Arrests)

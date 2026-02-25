@@ -27,7 +27,7 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
-Ein rotes Blutkörperchen ist 8 µm groß. Ein Virus misst 100 nm. Glukose im Blut liegt bei 5 mmol/L. All das lässt sich nur mit **Zehnerpotenzen** bequem und fehlerfrei schreiben — also mit Ausdrücken der Form 10ⁿ, bei denen die **Zehnerpotenz** die kompakte Schreibweise für „10 × 10 × … (n-mal)“ oder „1 geteilt durch 10ⁿ“ ist. Wer Zehnerpotenzen nicht sicher beherrscht, stolpert über Dosierungsberechnungen, Laborwerte und Einheitenumrechnungen — exakt die Aufgaben, die im MedAT und im klinischen Alltag vorkommen. Für den MedAT sind Potenzschreibweise, die vier Rechenregeln und schnelles Abschätzen von Verhältnissen prüfungsrelevant.
+**Worum geht es?** Ein Erythrozyt ist 8 µm groß, ein Virus 100 nm, Glukose im Blut 5 mmol/L — all das lässt sich nur mit **Zehnerpotenzen** (Ausdrücke der Form 10ⁿ) bequem schreiben. **Warum für den MedAT relevant?** Dosierungen, Laborwerte und Einheitenumrechnungen bauen auf Potenzschreibweise und den vier Rechenregeln auf. **Welche Arten von MedAT-BMS-Fragen kannst du damit lösen?** Rechenfragen (10³ × 10⁻⁵ = ?, Verhältnis konzentrierter?), „Welche Aussage ist richtig/falsch?“ (z. B. 10⁻³ = −10³?), Umrechnung Dezimal ↔ Zehnerpotenz, Größenordnungen vergleichen. Mit diesem Kapitel sind alle typischen BMS-Fragen zu Zehnerpotenzen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Zehnerpotenzen** mit positivem und negativem **Exponenten** zu lesen und in Dezimalzahlen umzurechnen (10³ = 1.000, 10⁻⁶ = 0,000001)
@@ -418,7 +418,7 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
       ],
       content: `## Einleitung
 
-"250 mg Paracetamol", "0,5 µg Fentanyl/h", "5 nmol/L TSH", "120 mmHg Blutdruck" — **SI-Präfixe** begegnen Ärzten täglich. Ein **Präfix** ist eine vorgestellte Silbe oder ein Zeichen (z. B. m, µ, n), die eine **Zehnerpotenz** zur Basiseinheit angeben. Ein Verwechseln von Mikro und Milli bei einer Dosierung kann tödlich sein. Präfixe sind keine optionale Extrakenntnis, sondern Grundvoraussetzung für sicheres Rechnen in der Medizin. 12 Präfixe von Femto bis Tera genügen für den Alltag. Für den MedAT sind Milli (m, 10⁻³), Mikro (µ, 10⁻⁶), Nano (n, 10⁻⁹), Piko (p, 10⁻¹²), Kilo (k, 10³) und Mega (M, 10⁶) besonders prüfungsrelevant.
+**Worum geht es?** **SI-Präfixe** (m, µ, n, p, k, M, …) geben Zehnerpotenzen zur Basiseinheit an; Verwechslung µg/mg kann tödlich sein. **Warum für den MedAT relevant?** Milli, Mikro, Nano, Piko, Kilo, Mega und Umrechnungen zwischen Präfixen werden geprüft. **Welche Fragen werden beantwortet?** „µg in mg?“; „1 mg = wie viele µg?“; „Femto — 10^?“; „Dosierung 0,5 µg/h — in mg?“; „wer kleiner misst, zählt mehr?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu SI-Präfixen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Systematik der SI-Präfixe** (Dreierschritte 10³) von Femto (10⁻¹⁵) bis Tera (10¹²)
@@ -824,7 +824,7 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
       ],
       content: `## Einleitung
 
-Der Serumkreatinin-Normwert liegt bei 0,000088 mol/L — oder sauberer: **8,8 × 10⁻⁵** mol/L. Avogadro-Zahl: **6,022 × 10²³**. Erythrozytenzahl: **5 × 10¹²**. Die **wissenschaftliche Notation** (auch Exponentialschreibweise) ist die Darstellung einer Zahl als **Produkt aus einem Vorfaktor und einer Zehnerpotenz** — so werden sehr große und sehr kleine Zahlen lesbar und rechenbar. Sie ist Voraussetzung für Physik, Chemie, Labormedizin und Pharmakologie. Am MedAT sind besonders Rechnen (Multiplizieren, Dividieren) und **Normalisieren** gefragt.
+**Worum geht es?** **Wissenschaftliche Notation**: Zahl als **a × 10ⁿ** (Vorfaktor 1 ≤ a < 10) — für sehr große/kleine Werte (Avogadro, Labor, Erythrozyten). **Warum für den MedAT relevant?** Normalisierte Form, Multiplikation/Division, Addition/Subtraktion mit gleichem Exponenten werden geprüft. **Welche Fragen werden beantwortet?** „8,8×10⁻⁵ normalisiert?“; „10³ × 10⁻⁵?“; „Addition gleicher Exponent?“; „Kommaverschiebung → Exponent?“; „Dezimal ↔ 10ⁿ?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur wissenschaftlichen Notation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **normalisierte Form** (a × 10ⁿ mit 1 ≤ a < 10) und warum sie eindeutig ist
@@ -1246,7 +1246,7 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
       ],
       content: `## Einleitung
 
-1 m² = 10.000 cm² (nicht 100!). 1 L = 1.000 mL = 1 dm³ = 1.000 cm³. Wer das nicht weiß, macht beim nächsten Berechnungsschritt einen **Faktor-10-Fehler** — ein klassischer MedAT-Stolperpunkt. **Länge, Fläche und Volumen** hängen über Potenzen zusammen: Bei der **Fläche** wird der Längenfaktor **quadriert** (k²), beim **Volumen** **kubiert** (k³). Für den MedAT sind Längenumrechnungen, Flächen- und Volumenumrechnungen, **Körperoberfläche (BSA)** für Dosierungen und Laborwerte (g/dL → g/L) prüfungsrelevant.
+**Worum geht es?** **Länge, Fläche, Volumen**: Längenfaktor k → Fläche k², Volumen k³. 1 m² = 10.000 cm² (nicht 100!); 1 L = 1 dm³ = 1.000 cm³. **Körperoberfläche (BSA)** nach Mosteller für Dosierung. **Warum für den MedAT relevant?** Längen-, Flächen-, Volumenumrechnungen, BSA, g/dL → g/L werden geprüft. **Welche Fragen werden beantwortet?** „1 m² in cm²?“; „1 L in cm³?“; „BSA-Formel?“; „Fläche Faktor?“; „Zelle — µm oder nm?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Länge, Fläche und Volumen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Längeneinheiten** von km bis nm (Faktor 10 je Stufe) und medizinische Größenordnungen (Zelle µm, Virus nm)
@@ -1593,7 +1593,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
       ],
       content: `## Einleitung
 
-Ein EKG-Intervall wird in **ms** gemessen. Blutfluss in **m/s** oder cm/s. Bremsweg beim Autounfall in m und **g-Kräfte**. **Zeit, Geschwindigkeit und Beschleunigung** sind die **kinematischen Grundgrößen** — also die Größen, die Bewegung beschreiben (ohne die Ursache, die Kraft). Im MedAT erscheinen sie in Physikaufgaben zu Herzfrequenz, Blutfluss, Fallversuchen und Traumamechanismen. Für den MedAT sind Zeitumrechnungen (s/min/h), **v = s/t**, **a = Δv/Δt**, **g = 9,81 m/s²**, freier Fall und **km/h ↔ m/s** prüfungsrelevant.
+**Worum geht es?** **Zeit** (s, min, h), **Geschwindigkeit** v = s/t, **Beschleunigung** a = Δv/Δt; **freier Fall** v = g·t, s = ½g·t², **km/h ↔ m/s** (Faktor 3,6). **Warum für den MedAT relevant?** Zeitumrechnungen, v = s/t, a = Δv/Δt, g ≈ 9,81 m/s², freier Fall, km/h ↔ m/s werden geprüft. **Welche Fragen werden beantwortet?** „v = s/t?“; „km/h in m/s?“; „Freier Fall v beim Aufprall?“; „1 h in s?“; „g in m/s²?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Zeit, Geschwindigkeit und Beschleunigung abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Zeiteinheiten** im 60er-System (1 min = 60 s, 1 h = 3.600 s) und medizinische Zeitskalen (EKG, Halbwertszeit)
@@ -1953,7 +1953,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
       ],
       content: `## Einleitung
 
-Kraft in **Newton**, Druck in **Pascal**, Energie in **Joule** — diese Einheiten tauchen in jeder MedAT-Physikaufgabe auf. **Aber wie hängen sie zusammen?** Alle **abgeleiteten Einheiten** lassen sich aus den **7 SI-Grundeinheiten** aufbauen — das sind die sieben Basisgrößen, aus denen sich alles andere durch Multiplikation und Division ableitet. Das **SI-System** ist das gemeinsame Fundament aller Naturwissenschaften und der Medizin. Die **Dimensionsanalyse** — das Prüfen, ob die Einheiten auf beiden Seiten einer Gleichung übereinstimmen — rettet vor Rechenfehlern. Für den MedAT sind die 7 Grundeinheiten, abgeleitete Einheiten (N, Pa, J, W, V), klinisch relevante Nicht-SI-Einheiten (mmHg, kcal) und Dimensionsanalyse prüfungsrelevant.
+**Worum geht es?** **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd); **abgeleitete Einheiten** (N, Pa, J, W, V); **Dimensionsanalyse** (Einheitenkontrolle). **Warum für den MedAT relevant?** 7 Grundeinheiten, N/Pa/J/W/V, mmHg/kcal, Dimensionsanalyse werden geprüft. **Welche Fragen werden beantwortet?** „N in kg, m, s?“; „Pa = N/m²?“; „J in N·m?“; „Dimensionsanalyse — wozu?“; „kg einzige mit Vorsilbe?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu SI-Einheiten und Dimensionsanalyse abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) und warum **kg** die einzige mit Vorsilbe ist

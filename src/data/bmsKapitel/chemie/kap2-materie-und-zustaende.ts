@@ -27,9 +27,14 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Einleitung
 
-Gase: Atemluft, Alveolen, Beatmung. Die **ideale Gasgleichung pV = nRT** verknüpft Druck, Volumen, Temperatur und Stoffmenge; sie fasst Boyle-Mariotte, Charles und Avogadro zusammen. Für den MedAT sind pV = nRT, Druckeinheiten und Beatmungsmedizin prüfungsrelevant.
+**Worum geht es?** Die **ideale Gasgleichung pV = nRT** verknüpft Druck, Volumen, Temperatur und Stoffmenge und fasst die Gesetze von Boyle-Mariotte, Charles und Avogadro zusammen. **Warum für den MedAT relevant?** Gase (Atemluft, Alveolen, Beatmung) und Druckeinheiten sind Grundlage für Partialdrücke, Diffusion und klinische Anwendungen. **Welche Arten von MedAT-BMS-Fragen kannst du damit lösen?** Rechenfragen (pV = nRT umstellen, V und T verdoppelt → p?), Definitionsfragen (Was ist ein ideales Gas?), „Welche Aussage ist richtig/falsch?“ (z. B. Gase komprimierbar), Einheitenfragen (R, T in K), Kombinationsfragen (1–4 Aussagen). Mit diesem Kapitel sind alle typischen BMS-Fragen zu Gasgleichung und Gaseigenschaften abgedeckt.
 
-**In diesem Kapitel lernst du:** **Ideale Gasgleichung** pV = nRT (T in Kelvin!); Boyle (p ∝ 1/V), Charles (V ∝ T), Avogadro; Druckeinheiten (Pa, bar, atm, mmHg); Anwendung Beatmung. **Kontext:** Gase in Chemie und Klinik; Grundlage für Partialdrücke und Diffusion.
+**In diesem Kapitel lernst du:**
+- die **ideale Gasgleichung** pV = nRT und ihre Umstellung nach p, V, n, T (T stets in Kelvin)
+- die **Einzelgesetze** Boyle-Mariotte (p·V = const), Charles (V/T = const), Avogadro (V/n = const)
+- **Druckeinheiten** (Pa, bar, atm, mmHg) und Standardbedingungen (STP, molares Volumen 22,4 L/mol)
+- den Unterschied **ideales vs. reales Gas** und die Van-der-Waals-Korrektur
+- **Anwendung** in der Beatmungsmedizin und kinetische Gastheorie (v_rms, E_kin)
 
 ---
 
@@ -152,11 +157,21 @@ Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge λ,
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Ideales Gasgesetz pV = nRT, R = 8,314 J/(mol·K), Temperatur in Kelvin, Umstellung nach p, V, n, T; **V und T verdoppelt → p bleibt gleich**. Gase: gleichmäßig verteilt, **komprimierbar**, verflüssigbar, in jedem Verhältnis mischbar. **Licht:** elektromagnetische Welle; **Lichtgeschwindigkeit c ≈ 300 000 km/s** (3·10⁸ m/s); Lichtteilchen = **Photonen** (nicht Protonen); E ∝ 1/λ.
+**Zentral prüfungsrelevant:**
+- Ideale Gasgleichung **pV = nRT** und Umstellung nach p, V, n, T (T stets in **Kelvin**)
+- **R = 8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K); **V und T verdoppelt → p bleibt gleich** (p = nRT/V)
+- Boyle-Mariotte: p·V = const (isotherm); Charles: V/T = const (isobar); Avogadro: V/n = const
+- **Molares Volumen bei STP** (0 °C, 1 bar): **22,4 L/mol** für alle idealen Gase
+- Gase: gleichmäßig verteilt, **komprimierbar**, verflüssigbar, in jedem Verhältnis mischbar
+- Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂ (bei konstanter Stoffmenge n)
+- Ideales vs. reales Gas: Van-der-Waals-Korrektur; **Z = pV/(nRT)** (Z > 1: Eigenvolumen, Z < 1: Anziehung)
+- Kinetische Gastheorie: E_kin = (3/2)k_B·T; **v_rms = √(3RT/M)** — leichtere Gase schneller
+- **Licht:** elektromagnetische Welle; **c ≈ 300 000 km/s**; Lichtteilchen = **Photonen** (nicht Protonen); E ∝ 1/λ
+- Klinisch: Beatmung (Compliance, Barotrauma bei ARDS), Dekompressionskrankheit (Boyle)
 
-**Ergänzend vertiefend:** Van-der-Waals-Gleichung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen:**
 - "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
 - "Wenn V und T (in Kelvin) verdoppelt werden, wie ändert sich p?" → p bleibt **gleich** (p = nRT/V → 2T/2V = T/V)
 - "Welches Volumen hat 1 mol ideales Gas bei STP (0 °C, 1 bar)?" → 22,4 L/mol
@@ -164,13 +179,20 @@ Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge λ,
 - "Was passiert mit Volumen bei doppeltem Druck, T = const?" → Halbierung (Boyle-Mariotte)
 - "Wie unterscheiden sich R und k_B?" → R gilt pro Mol, k_B gilt pro Teilchen: R = k_B × N_A
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Celsius NIEMALS direkt in pV=nRT einsetzen — immer T[K] = T[°C] + 273,15 zuerst!
 - **„Ein Gas kann nicht komprimiert werden“** ist **falsch** — Gase sind komprimierbar.
 - R (8,314 J/(mol·K)) ≠ k_B (1,381 × 10⁻²³ J/K) ≠ N_A (6,022 × 10²³ mol⁻¹)
 - Van-der-Waals: **a** korrigiert Druck (Anziehungskräfte) — **b** korrigiert Volumen (Eigenvolumen der Moleküle)
 - Z > 1 (hoher Druck): Eigenvolumen dominiert → Gas schwerer komprimierbar
 - Z < 1 (tiefe T): Anziehung dominiert → Gas leichter komprimierbar als ideal
+
+**Wichtige Begriffe & Definitionen:**
+- **Ideale Gasgleichung:** pV = nRT; Modell: punktförmige Teilchen, keine Wechselwirkungen.
+- **Partialdruck:** Druck einer Gaskomponente im Gemisch (Dalton: p_ges = Σ pᵢ).
+- **STP:** 0 °C, 1 bar → V_m = 22,4 L/mol.
+- **Kompressibilitätsfaktor Z:** Z = pV/(nRT); Z = 1 ideal, Z ≠ 1 real.
+- **v_rms:** quadratischer Mittelwert der Geschwindigkeit; v_rms = √(3RT/M), M in kg/mol.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - R = **8,314 J/(mol·K)** = 0,08314 L·bar/(mol·K) = 0,08206 L·atm/(mol·K)
@@ -407,9 +429,13 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
       ],
       content: `## Einleitung
 
-Luft ist ein **Gasgemisch**; jedes Gas übt seinen **Partialdruck** aus. **Daltonsches Gesetz**: p_ges = p₁ + p₂ + … In der Medizin: O₂-Diffusion Alveole→Blut, Hyperoxie, Höhenkrankheit. Für den MedAT sind Partialdruck, p_O₂/p_CO₂ und klinische Anwendung prüfungsrelevant.
+**Worum geht es?** Luft ist ein **Gasgemisch**; jedes Gas übt seinen **Partialdruck** aus. Das **Daltonsche Gesetz** (p_ges = p₁ + p₂ + …) und der Molenbruch ermöglichen die Berechnung von p_O₂, p_CO₂ und die Anwendung in Atmung und Klinik. **Warum für den MedAT relevant?** O₂-Diffusion Alveole→Blut, Sauerstofftherapie, Hyperoxie und Höhenkrankheit bauen auf Partialdrücken auf. **Welche Fragen werden beantwortet?** „Partialdruck von O₂ in Raumluft?“; „Warum ist alveolärer p(O₂) niedriger?“; „Henry-Gesetz?“; „Heliox?“; „kPa ↔ mmHg?“.
 
-**In diesem Kapitel lernst du:** **Partialdruck** (Druckanteil eines Gases); **Daltonsches Gesetz**; p_O₂, p_CO₂ in Atemluft und Blut; Henry-Gesetz (Gaslöslichkeit); Anwendung Beatmung, Höhe. **Kontext:** Von der Atemluft zum Kapillarblut; O₂-Transport und -toxizität.
+**In diesem Kapitel lernst du:**
+- das **Daltonsche Gesetz** (p_ges = Σ pᵢ) und die Berechnung von Partialdrücken über den Molenbruch (pᵢ = xᵢ·p_ges)
+- **p_O₂ und p_CO₂** in Atemluft, Alveole und Blut sowie den Wasserdampfdruck bei 37 °C
+- das **Henry-Gesetz** (Gaslöslichkeit ∝ Partialdruck) und klinische Anwendungen (O₂-Therapie, Tauchen)
+- **Hyperoxie-Risiken** (Lorrain-Smith, Paul-Bert, Retinopathie) und die Umrechnung kPa ↔ mmHg
 
 ---
 
@@ -511,21 +537,37 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Partialdruck (Dalton: p_i = x_i·p_ges), Molenbruch, O₂-Anteil Luft ~21 %, Henry-Gesetz (Gaslöslichkeit ∝ Partialdruck), klinisch (Atmung, O₂-Therapie).
+**Zentral prüfungsrelevant:**
+- **Daltonsches Gesetz:** p_gesamt = Σ pᵢ; **Partialdruck** pᵢ = xᵢ · p_gesamt (xᵢ = Molenbruch)
+- **Molenbruch** xᵢ = nᵢ/n_gesamt (dimensionslos, 0–1); nur Molenbruch für Partialdrücke, nicht Massenanteil
+- O₂-Anteil in trockener Luft ~21 % → p(O₂) Raumluft ≈ 21,2 kPa (159 mmHg)
+- **Alveolarer p(O₂)** ≈ 13,3 kPa (100 mmHg); venös ≈ 5,3 kPa → O₂ diffundiert Alveole → Blut
+- **Wasserdampfdruck bei 37 °C:** p(H₂O) = 6,27 kPa (47 mmHg) — immer vom Gesamtdruck abziehen
+- **Henry-Gesetz:** c = k_H · p — Gaslöslichkeit ∝ Partialdruck; mehr Druck → mehr Gas gelöst
+- Klinisch: O₂-Therapie (F_IO₂), alveolärer Gasaustausch, Taucherkrankheit (N₂-Blasen bei Druckabfall)
+- **Heliox** (He/O₂): geringere Gasdichte → weniger Atemwiderstand bei Obstruktion (Asthma, Krupp)
+- **Hyperoxie-Risiken:** Lorrain-Smith (Lunge), Paul-Bert (ZNS), Retinopathie bei Frühgeborenen
+- Umrechnung: **1 kPa = 7,5 mmHg**; arterieller Ziel-pO₂: 8–13 kPa (60–100 mmHg)
 
-**Ergänzend vertiefend:** Sättigungsdampfdruck; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Alveolargasgleichung, Sättigungsdampfdruck; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen:**
 - "Wie berechnet man den Partialdruck von O₂ in Raumluft?" → 0,21 × 101,3 kPa = 21,2 kPa
 - "Warum ist der alveoläre p(O₂) niedriger als in der Außenluft?" → Wasserdampf (6,27 kPa) + CO₂ verdrängen O₂
 - "Was bewirkt das Henry-Gesetz?" → Mehr Druck → mehr Gas physikalisch gelöst (c = k_H × p)
 - "Was ist Heliox und wofür wird es eingesetzt?" → He/O₂-Gemisch, geringere Dichte → weniger Atemwiderstand bei Obstruktion
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Molenbruch (nᵢ/n_gesamt) ≠ Massenanteil (mᵢ/m_gesamt) — nur Molenbruch für Partialdrücke verwenden!
 - Wasserdampfdruck bei 37 °C = 6,27 kPa IMMER abziehen bei Berechnung alveolarer Partialdrücke
 - Henry-Gesetz beschreibt Gaslöslichkeit (c = k_H·p), nicht Druckverteilung im Gemisch (das ist Dalton)
 - Erhöhte Temperatur → geringere Gaslöslichkeit (anders als bei Feststoffen in Wasser!)
+
+**Wichtige Begriffe & Definitionen:**
+- **Partialdruck pᵢ:** Druck, den eine Gaskomponente allein im Gesamtvolumen ausüben würde; pᵢ = xᵢ · p_gesamt.
+- **Molenbruch xᵢ:** xᵢ = nᵢ/n_gesamt; Summe aller xᵢ = 1.
+- **Henry-Gesetz:** c = k_H · p (physikalische Gaslöslichkeit in Flüssigkeit proportional zum Partialdruck).
+- **F_IO₂:** inspiratorische O₂-Fraktion (z. B. 0,21 = Raumluft, 1,0 = 100 % O₂).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 
@@ -753,9 +795,13 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
       ],
       content: `## Einleitung
 
-**Diffusion** = passiver Transport entlang des Konzentrationsgradienten. **Ficksches Gesetz** beschreibt den Fluss quantitativ; Lunge nutzt ~70 m² Austauschfläche. Für den MedAT sind Fick, Diffusionsfläche/-dicke und klinische Anwendung (Emphysem, Fibrose) prüfungsrelevant.
+**Worum geht es?** **Diffusion** ist der passive Transport entlang des Konzentrations- oder Partialdruckgradienten. Das **erste Ficksche Gesetz** beschreibt den Fluss quantitativ (Fläche, Gradient, Dicke); die Lunge nutzt ~70 m² Austauschfläche. **Warum für den MedAT relevant?** O₂/CO₂-Austausch, Grahamsches Gesetz (leichtere Gase schneller) und klinische Diffusionsstörungen (Emphysem, Fibrose, DLCO) sind prüfungsnah. **Welche Fragen werden beantwortet?** „H₂ vs. O₂ Diffusionsrate?“; „Warum diffundiert CO₂ in der Lunge schneller als O₂?“; „Was misst DLCO?“; „Erniedrigter DLCO bei …?“.
 
-**In diesem Kapitel lernst du:** **Diffusion** (Konzentrationsgradient); **1. Ficksches Gesetz** (Fluss ∝ Fläche, ∝ Δc, ∝ 1/Dicke); Diffusionskoeffizient; Anwendung Lunge, Zellgröße. **Kontext:** O₂/CO₂-Austausch, Zellbiologie; wenn Fläche oder Dicke sich ändern (Klinik).
+**In diesem Kapitel lernst du:**
+- **Diffusion** und Konzentrationsgradient sowie das **1. Ficksche Gesetz** (J = −D·dc/dx; Fluss ∝ A, ∝ Δc, ∝ 1/d)
+- das **Grahamsche Gesetz** (r₁/r₂ = √(M₂/M₁)) und die Anwendung auf Lunge und Zellgröße
+- den **DLCO-Test** und die Deutung von Erniedrigung (Fibrose, Emphysem) vs. Erhöhung (Polyzythämie, Hämorrhagie)
+- die **mittlere freie Weglänge** und warum Diffusion über große Distanzen langsam ist (t ∝ x²)
 
 ---
 
@@ -875,21 +921,38 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Grahams Gesetz (Diffusionsrate ∝ 1/√M), kinetische Gastheorie (v_rms = √(3RT/M)), Maxwell-Boltzmann-Verteilung, leichtere Gase diffundieren schneller, Anwendung (Atmung, Trennung).
+**Zentral prüfungsrelevant:**
+- **Diffusion:** spontaner Transport entlang Konzentrations- oder Partialdruckgradient (von hoch → niedrig)
+- **1. Ficksches Gesetz:** J = −D·dc/dx; Fluss ∝ Fläche A, ∝ Gradient Δc, ∝ 1/Diffusionsstrecke d
+- **Grahamsches Gesetz:** r₁/r₂ = √(M₂/M₁) — leichtere Gase diffundieren/effundieren schneller (r ∝ 1/√M)
+- H₂ (2 g/mol) diffundiert **4×** schneller als O₂ (32 g/mol): √(32/2) = 4
+- In der Lunge: **CO₂ diffundiert ca. 20× schneller als O₂** (höhere Wasserlöslichkeit; D ∝ α/√M)
+- **Fick für Lunge:** Fluss = (D × A × Δp)/d; Alveolarfläche 60–80 m², Membran 0,3–0,5 μm
+- **DLCO-Test:** misst Diffusionskapazität; CO als Tracergas (210× Hb-Affinität → p_Blut ≈ 0)
+- **DLCO ↓:** Lungenfibrose (d↑), Emphysem (A↓), pulmonale Hypertonie, Anämie
+- **DLCO ↑:** alveoläre Hämorrhagie, Polyzythämie, Links-Rechts-Shunt
+- **Mittlere freie Weglänge λ:** Strecke zwischen Kollisionen; Diffusion über große Distanzen langsam (t ∝ x²)
 
-**Ergänzend vertiefend:** Partialdruck, Stoßzahl; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** 2. Ficksches Gesetz, Isotopentrennung (UF₆); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen:**
 - "Wie verhält sich die Diffusionsrate von H₂ (2 g/mol) zu O₂ (32 g/mol)?" → r(H₂)/r(O₂) = √(32/2) = 4 — H₂ diffundiert 4× schneller
 - "Warum diffundiert CO₂ in der Lunge 20× schneller als O₂, obwohl es schwerer ist?" → Löslichkeit von CO₂ in Wasser ist 24× höher; D ∝ Löslichkeit/√M
 - "Was misst der DLCO-Test?" → Diffusionskapazität der Lunge; CO als Tracergas (maximaler Gradient garantiert)
 - "Was zeigt ein erniedrigter DLCO?" → Fibrose (dickere Membran d↑) oder Emphysem (weniger Fläche A↓)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Graham's Gesetz: Massenverhältnis muss unter der WURZEL stehen — r ∝ 1/√M, nicht 1/M!
+**Typische Prüfungsfallen:**
+- Grahams Gesetz: Massenverhältnis muss unter der WURZEL stehen — r ∝ 1/√M, nicht 1/M!
 - Diffusion ≠ Effusion: Diffusion = Transport durch Medium; Effusion = Ausströmen durch Öffnung ins Vakuum (gleiche Formel!)
 - CO₂ in Lunge schneller als O₂ obwohl schwerer → Löslichkeit schlägt Masse (D ∝ α/√M)
 - Diffusionszeit ∝ x²/(2D): über nm = ns; über cm = Stunden → Kreislauf ist nötig!
+
+**Wichtige Begriffe & Definitionen:**
+- **Diffusion:** Transport von Teilchen von hoher zu niedriger Konzentration; Antrieb: Entropiezunahme.
+- **Grahamsches Gesetz:** r₁/r₂ = √(M₂/M₁); Diffusions-/Effusionsrate umgekehrt proportional zu √(molare Masse).
+- **Ficks 1. Gesetz:** J = −D·dc/dx (J = Stromdichte, D = Diffusionskoeffizient, dc/dx = Konzentrationsgradient).
+- **DLCO:** Diffusionskapazität der Lunge für CO; reflektiert Fläche A, Membrandicke d und Diffusionskoeffizient.
+- **Mittlere freie Weglänge λ:** durchschnittliche Strecke zwischen zwei Kollisionen; bei 1 bar für N₂ ≈ 60–70 nm.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Graham: r₁/r₂ = √(M₂/M₁) — schwereres Gas unter der Wurzel im Zähler
@@ -1113,9 +1176,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
       ],
       content: `## Einleitung
 
-**Aggregatzustand** (fest, flüssig, gasförmig, Plasma) hängt von Temperatur, Druck und intermolekularen Kräften ab. Für den MedAT sind die vier Zustände, Wasser (Anomalie, H-Brücken), Kristalltypen und Siedepunkte prüfungsrelevant.
+**Worum geht es?** **Aggregatzustände** (fest, flüssig, gasförmig, Plasma) hängen von Temperatur, Druck und der Stärke intermolekularer Kräfte ab. Dieses Unterkapitel erklärt die vier Zustände, Kristalltypen (ionisch, Molekül, Netzwerk, Metall), die **Anomalie des Wassers** (Dichtemaximum bei 4 °C) und den Zusammenhang Kräfte–Siedepunkt. **Warum für den MedAT relevant?** Wasser als biologisches Lösungsmittel, H-Brücken, Siedepunktvergleiche und Kristalltypen werden häufig abgefragt. **Welche Fragen werden beantwortet?** „Definiertes Volumen, keine Form?“; „Warum siedet H₂O bei 100 °C, CH₄ bei −162 °C?“; „Dichtemaximum Wasser?“; „Was hält Metallkristall zusammen?“.
 
-**In diesem Kapitel lernst du:** **Vier Aggregatzustände**; Teilchenbewegung vs. Anziehung; **Wasser** (Dichteanomalie 4 °C, H-Brücken); Kristalltypen; Zusammenhang Kräfte–Siedepunkt. **Kontext:** Zustände und Eigenschaften; Wasser als biologisches Lösungsmittel.
+**In diesem Kapitel lernst du:**
+- die **vier Aggregatzustände** und ihre Eigenschaften (Form, Volumen, Nah-/Fernordnung)
+- die **vier Kristalltypen** (Ionen-, Molekül-, Netzwerk-, Metallkristall) mit Beispielen
+- die **Anomalie des Wassers** (Dichtemaximum bei 4 °C, Eis leichter als Wasser) und ihre biologische Bedeutung
+- die **Hierarchie** der intermolekularen Kräfte (ionisch > H-Brücken > Dipol-Dipol > London) und Siedepunktvergleiche
 
 ---
 
@@ -1211,21 +1278,38 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Aggregatzustände (fest/flüssig/gasförmig), Eigenschaften (Form, Volumen, Nah-/Fernordnung), Phasenübergänge (Schmelzen, Sieden, Kondensieren, Erstarren, Sublimation, Desublimation), endotherm vs. exotherm.
+**Zentral prüfungsrelevant:**
+- **Vier Aggregatzustände:** fest (definiertes Volumen + Form, Gitter), flüssig (def. Volumen, keine Form, Nahordnung), gasförmig (kompressibel, keine Ordnung), Plasma (ionisiert)
+- **Flüssig:** definiertes Volumen, keine eigene Form, Nahordnung, fließfähig — typische Prüfungsfrage
+- **Vier Kristalltypen:** Ionenkristall (NaCl, hoher Smp., leitet nur in Schmelze/Lösung), Molekülkristall (Eis, niedriger Smp.), Netzwerkkristall (Diamant, extrem hart, nicht leitend), Metallkristall (leitend, duktil, Elektronengas)
+- **Anomalie des Wassers:** Dichtemaximum bei **3,98 °C** (≈ 4 °C); Eis leichter als Wasser (ρ_Eis ≈ 0,917 g/cm³) → Seen gefrieren von oben
+- **Siedepunktvergleich:** H₂O (100 °C) >> CH₄ (−162 °C) trotz ähnlicher Molmasse → Wasserstoffbrücken
+- **Hierarchie intermolekularer Kräfte:** ionisch > Wasserstoffbrücken > Dipol-Dipol > London-Dispersion
+- **Wasserstoffbrücken:** nur H gebunden an N, O oder F mit freiem Elektronenpaar von N, O, F — nicht C-H
+- Ethanol vs. Dimethylether (beide M = 46): Ethanol 78 °C, Dimethylether −24 °C → H-Brücken bei Ethanol
+- **Oberflächenspannung** Wasser 72 mN/m; **Viskosität** Blut 3–4 mPa·s (Wasser 1 mPa·s)
+- **Amorphe Feststoffe:** keine Fernordnung, Glasübergang T_g, höhere Löslichkeit → Bioverfügbarkeit
 
-**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt, Plasma (physikalisch vs. Blutplasma); typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen:**
 - "Welcher Aggregatzustand hat definiertes Volumen aber keine eigene Form?" → flüssig (Nahordnung, fließfähig)
 - "Warum siedet H₂O bei 100 °C, CH₄ (ähnliche Masse) bei −162 °C?" → H₂O bildet starke Wasserstoffbrücken
 - "Bei welcher Temperatur hat Wasser seine maximale Dichte?" → 3,98 °C (≈ 4 °C)
 - "Was hält einen Metallkristall zusammen?" → delokalisiertes Elektronengas (freie Elektronen)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Ionenkristall (NaCl) leitet Strom NICHT im festen Zustand (Ionen fixiert), wohl aber in Schmelze und Lösung
 - Diamant (Netzwerkkristall) ist extrem hart aber spröde und leitet NICHT; Metall ist duktil und leitet
 - H-Brücken nur zwischen H (gebunden an N, O, F) und freiem Elektronenpaar von N, O, F — NICHT mit C-H!
 - Dichteanomalie: Eis ist LEICHTER als Wasser (ρ_Eis ≈ 0,917 vs. ρ_Wasser = 1,000 g/cm³)
+
+**Wichtige Begriffe & Definitionen:**
+- **Nahordnung:** lokale Anordnung der Teilchen ohne langreichweitiges Gitter (Flüssigkeit).
+- **Fernordnung:** periodische Anordnung über große Bereiche (Kristall).
+- **Wasserstoffbrücke:** Wechselwirkung zwischen H (an N, O, F gebunden) und freiem Elektronenpaar (N, O, F); 10–40 kJ/mol.
+- **Dichteanomalie (Wasser):** Dichtemaximum bei 4 °C; Eis weniger dicht als flüssiges Wasser.
+- **Metallkristall:** positive Ionenrümpfe in delokalisiertem Elektronengas → Leitfähigkeit, Duktilität.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Dichtemaximum Wasser: **3,98 °C** (≈ 4 °C); ρ_Eis ≈ 0,917 g/cm³ — Eis schwimmt auf Wasser
@@ -1241,7 +1325,9 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 - **Anomalie des Wassers**: Dichtemaximum bei 4 °C; Eis weniger dicht als Wasser (H-Brücken-Netzwerk); biolog. wichtig: Seen frieren von oben → Leben bleibt am Grund erhalten
 - Siedepunkt ∝ Stärke der intermolekularen Kräfte: H₂O (100 °C) >> CH₄ (−162 °C) trotz ähnlicher Molmasse
 - Ionische > Wasserstoffbrücken > Dipol-Dipol > London; NaCl-Gitter 786 kJ/mol vs. H₂O-H-Brücke ~20 kJ/mol
-- **Amorphe Feststoffe**: kein scharfer Schmelzpunkt, Glasübergangstemperatur T_g; höhere Löslichkeit → relevant für Bioverfügbarkeit von Arzneistoffen`,
+- **Amorphe Feststoffe**: kein scharfer Schmelzpunkt, Glasübergangstemperatur T_g; höhere Löslichkeit → relevant für Bioverfügbarkeit von Arzneistoffen
+- **Plasma** (physikalisch): ionisiertes Gas; „Blutplasma“ = flüssiger Blutbestandteil (biologischer Begriff)
+- **Oberflächenspannung** (Wasser 72 mN/m) und **Viskosität** (Blut 3–4 mPa·s) als Folge intermolekularer Kräfte`,
       lernziele: [
         "Die vier Aggregatzustände anhand von Teilchenanordnung, Energie und makroskopischen Eigenschaften beschreiben und vergleichen",
         "Die vier Typen intermolekularer Wechselwirkungen (Van-der-Waals, Dipol-Dipol, Wasserstoffbrücken, ionisch) in ihrer Stärke einordnen und Beispiele nennen",
@@ -1469,9 +1555,13 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       content: `## Einleitung
 
-**Phasenübergänge** (Schmelzen, Sieden, Sublimation …) sind mit **latenter Wärme** verbunden — auf der Heizkurve als Plateau. Endotherm: zu „freierem“ Zustand; exotherm: zu „geordneterem“. Für den MedAT sind endo/exo, Heizkurve, Dampfverbrennung, Schwitzen, Lyophilisation prüfungsrelevant.
+**Worum geht es?** **Phasenübergänge** (Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren) sind mit **latenter Wärme** verbunden und erscheinen auf der Heizkurve als Plateaus. Endotherm = Übergang zu „freierem“ Zustand; exotherm = zu „geordneterem“. **Warum für den MedAT relevant?** Richtige Benennung (Erstarren vs. Sublimieren), Heizkurve, Dampfverbrennung, Schwitzen und Gefriertrocknung werden geprüft. **Welche Fragen werden beantwortet?** „Welche Phasenübergänge sind endotherm?“; „Warum bleibt T beim Phasenübergang konstant?“; „Energie für 1 g Wasser verdampfen?“; „ΔT_f bei NaCl?“.
 
-**In diesem Kapitel lernst du:** **Phasenübergänge** und Vorzeichen (endo/exo); **Heizkurve** (Plateaus); **Phasendiagramm**; Dampfdruck, Siedepunkt; klinisch: Dampfverbrennung, Schwitzen, Gefriertrocknung. **Kontext:** Energie bei Zustandsänderung; Thermoregulation, Lyophilisation.
+**In diesem Kapitel lernst du:**
+- die **sechs Phasenübergänge** korrekt zu benennen und endo-/exotherm zuzuordnen
+- **Heizkurve** (Plateaus = latente Wärme) sowie Schmelz- und Verdampfungsenthalpie von Wasser (333 J/g, 2257 J/g)
+- **Phasendiagramm**, Tripelpunkt und Druckabhängigkeit des Siedepunkts
+- **kolligative Eigenschaften** (Gefrierpunktserniedrigung ΔT_f = K_f·b·i) und klinische Anwendung (Osmolalität, Schwitzen)
 
 ---
 
@@ -1592,23 +1682,40 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Phasenübergänge (Schmelzen, Verdampfen, Sublimieren = endotherm; Kondensieren, Erstarren, Desublimieren = exotherm), Dampfdruck, Siedepunkt abhängig vom Druck, Verdampfungsenthalpie.
+**Zentral prüfungsrelevant:**
+- **Sechs Phasenübergänge:** Schmelzen (fest→flüssig), Erstarren (flüssig→fest), Verdampfen (flüssig→gas), Kondensieren (gas→flüssig), Sublimieren (fest→gas), Resublimieren (gas→fest)
+- **Endotherm** (Energie zugeführt): Schmelzen, Verdampfen, Sublimieren — Übergang zu „freierem“ Zustand
+- **Exotherm:** Erstarren, Kondensieren, Resublimieren — Übergang zu „geordneterem“ Zustand
+- **Heizkurve:** Plateaus bei Phasenübergang = latente Wärme; Temperatur bleibt konstant
+- **Schmelzenthalpie Wasser:** ΔH_s = **333 J/g** (6,01 kJ/mol); **Verdampfungsenthalpie:** ΔH_v = **2257 J/g** (40,7 kJ/mol) — Verdampfen ~7× mehr als Schmelzen
+- **Siedepunkt druckabhängig:** z. B. Everest ~70 °C, Schnellkochtopf ~120 °C; Tripelpunkt Wasser 0,01 °C, 611 Pa
+- **Kolligative Eigenschaften:** ΔT_f = K_f·b·i (Gefrierpunktserniedrigung); ΔT_s = K_s·b·i; nur Teilchenanzahl zählt
+- **Van't-Hoff-Faktor i:** Glucose i = 1, NaCl i ≈ 2, CaCl₂ i ≈ 3 — Elektrolyte senken Gefrierpunkt stärker
+- **Osmolalität/Kryoskopie:** Blutosmolalität 280–300 mosmol/kg; Gefrierpunkt Blut ca. −0,52 °C; Osmolalitätslücke > 10 → Toxine
+- **Thermoregulation:** Schwitzen nutzt Verdampfungsenthalpie; 1 L/h → ~627 W Wärmeabgabe
 
-**Ergänzend vertiefend:** Phasendiagramm, Tripelpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Phasendiagramm, kritischer Punkt, Clausius-Clapeyron; typische Verwechslungen siehe „Typische Prüfungsfallen“.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen:**
 - "Welche Phasenübergänge sind endotherm?" → Schmelzen, Verdampfen, Sublimieren (Energie wird zugeführt)
 - "Warum bleibt die Temperatur bei einem Phasenübergang konstant?" → Energie wird für Umordnung der Teilchen genutzt (latente Wärme), nicht für Temperaturerhöhung
 - "Wie viel Energie braucht 1 g Wasser zum Verdampfen?" → 2257 J/g (40,7 kJ/mol) — Verdampfen braucht ~7× mehr Energie als Schmelzen (333 J/g)
 - "Wie berechnet man die Gefrierpunktserniedrigung bei NaCl?" → ΔT_f = K_f × b × i (i = 2 für NaCl)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - **Phasenübergang-Namen:** Von **flüssig nach fest** = **Erstarren** (nicht Sublimieren, nicht Verdampfen). Von **gasförmig nach flüssig** = **Kondensieren** (nicht Sublimieren). Von **fest nach gasförmig** = **Sublimieren** (nicht Verdampfen). Von gasförmig nach fest = Resublimieren (nicht Kondensieren).
-- **Sieden ≠ Erstarren:** Siedepunkt = Temperatur beim Übergang flüssig → gas; Erstarren = flüssig → fest. Pentan Sdp. 36 °C heißt: bei 36 °C siedet Pentan (wird gasförmig); bei 34 °C liegt Pentan noch flüssig vor; „erstarrt bei 36 °C“ wäre falsch.
-- Phasenübergänge sind KEINE Reaktionen — kein neues Produkt, nur andere Anordnung der Moleküle
-- Verdunstung ≠ Sieden: Verdunstung an der Oberfläche bei jeder T; Sieden = Dampfdruckblasen im Volumen wenn p_Dampf = p_außen
-- Van't-Hoff-Faktor i: Glucose (i = 1), NaCl (i ≈ 2), CaCl₂ (i ≈ 3) — Elektrolyte senken Gefrierpunkt MEHR
-- Sublimation ist nur UNTERHALB des Tripelpunktdrucks (< 611 Pa für Wasser) möglich
+- **Sieden ≠ Erstarren:** Siedepunkt = Temperatur beim Übergang flüssig → gas; Erstarren = flüssig → fest.
+- Phasenübergänge sind KEINE Reaktionen — kein neues Produkt, nur andere Anordnung der Moleküle.
+- Verdunstung ≠ Sieden: Verdunstung an der Oberfläche bei jeder T; Sieden = Blasen im Volumen wenn p_Dampf = p_außen.
+- Van't-Hoff-Faktor i: Glucose (i = 1), NaCl (i ≈ 2), CaCl₂ (i ≈ 3) — Elektrolyte senken Gefrierpunkt MEHR.
+- Sublimation nur UNTERHALB des Tripelpunktdrucks (< 611 Pa für Wasser); Gefriertrocknung nutzt das.
+
+**Wichtige Begriffe & Definitionen:**
+- **Latente Wärme:** Enthalpieänderung beim Phasenübergang; keine Temperaturänderung, nur Umordnung.
+- **Kolligative Eigenschaft:** Eigenschaft, die nur von der Anzahl gelöster Teilchen abhängt (z. B. ΔT_f, ΔT_s, osmotischer Druck).
+- **Van't-Hoff-Faktor i:** Anzahl Teilchen pro Formeleinheit in Lösung (NaCl → 2, CaCl₂ → 3).
+- **Tripelpunkt:** Druck und Temperatur, bei denen fest, flüssig und gasförmig koexistieren (Wasser: 0,01 °C, 611 Pa).
+- **Sublimation:** Übergang fest → gasförmig ohne flüssige Phase (unterhalb Tripelpunktdruck).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - ΔH_s(H₂O) = **333 J/g** = 6,01 kJ/mol; ΔH_v(H₂O) = **2257 J/g** = 40,7 kJ/mol

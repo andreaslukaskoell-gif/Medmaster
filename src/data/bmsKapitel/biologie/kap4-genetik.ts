@@ -14,7 +14,7 @@ export const bioKapGenetik: Kapitel = {
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
       content: `## Einleitung
 
-Die Genetik erklärt, wie Merkmale von einer Generation zur nächsten weitergegeben werden. Drei Begriffe stehen im Zentrum: **DNA** (der chemische Träger der Erbinformation), **Gene** (die funktionellen Einheiten auf der DNA) und **Chromosomen** (die verpackte Form der DNA bei der Zellteilung). Ohne den Zusammenhang zwischen diesen drei Ebenen sind weder Mitose und Meiose noch die Mendelschen Regeln oder Erbgänge verständlich. Dieses Unterkapitel legt das Fundament: Was ist wo gespeichert, und wie hängen die Begriffe zusammen?
+**Worum geht es?** **DNA** trägt die Erbinformation, **Gene** sind funktionelle Abschnitte darauf, **Chromosomen** die verpackte Form bei der Teilung. **Warum für den MedAT relevant?** Zusammenhang DNA → Gen → Chromosom, Gen vs. Allel, homologe Chromosomen vs. Schwesterchromatiden werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was ist der Unterschied zwischen Gen und Allel?“; „Wo liegt die Erbinformation?“; „Homologe Chromosomen vs. Schwesterchromatiden?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu DNA, Gen und Chromosom abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **Zusammenhang** zwischen DNA, Gen und Chromosom (Speicherort, Verpackung, funktionelle Einheit)
@@ -159,7 +159,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
       ],
       content: `## Einleitung
 
-Chromosomen sind die sichtbare Form der DNA bei der Zellteilung. Ihr Aufbau (Zentromer, Arme, Telomere) und die korrekte Zahl und Struktur sind für die Vererbung und für die Medizin zentral: Abweichungen führen zu Syndromen wie Trisomie 21 oder Turner. Hier lernst du den Aufbau eines Chromosoms, die Bedeutung von Autosomen und Gonosomen sowie die Karyotyp-Notation — alles BMS-relevant.
+**Worum geht es?** **Chromosomen** sind die verpackte DNA bei der Teilung; Aufbau (Zentromer, p-/q-Arm, Telomere), **Autosomen** vs. **Gonosomen** und **Karyotyp-Notation** (46,XX; 47,XX,+21; 45,X) sind prüfungsrelevant. **Warum für den MedAT relevant?** Chromosomenaufbau, Karyotyp lesen (Trisomie 21, Klinefelter, Turner) und Geschlechtsbestimmung (SRY auf Y) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was verbindet die Schwesterchromatiden?“; „46,XX vs. 46,XY?“; „Was bedeutet 47,XX,+21?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Chromosomen und Karyotyp abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **Aufbau** eines Chromosoms (Zentromer, p- und q-Arm, Telomere)
@@ -267,7 +267,7 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
       ],
       content: `## Einleitung
 
-Körperzellen vermehren sich durch **Mitose** — dabei entstehen aus einer Zelle zwei genetisch gleiche Tochterzellen. **Keimzellen** (Eizellen, Spermien) entstehen dagegen durch **Meiose** — dabei wird der Chromosomensatz halbiert (von diploid 2n auf haploid n), und durch **Crossing-over** entsteht neue Allelkombinationen. Für den MedAT ist der Unterschied zwischen Mitose und Meiose (Zweck, Ablauf, Ergebnis) sowie die Rolle der Meiose für die Mendelsche Vererbung und für Fehler wie Trisomie (Nicht-Disjunktion) zentral.
+**Worum geht es?** **Mitose** erzeugt zwei genetisch identische Körperzellen (2n); **Meiose** halbiert den Chromosomensatz und erzeugt Keimzellen (n), mit **Crossing-over** in Prophase I. **Warum für den MedAT relevant?** Mitose vs. Meiose (Trennung: Schwesterchromatiden vs. homologe Chromosomen), Crossing-over, Nicht-Disjunktion (Trisomie 21) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was wird in Meiose I getrennt?“; „Wo findet Crossing-over statt?“; „Mitose vs. Meiose — Chromosomenzahl?“; „Trisomie 21 — Ursache?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Zellzyklus, Mitose und Meiose abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Mitose** vs. **Meiose** (Zweck, Ablauf, Ergebnis) sicher unterscheiden
@@ -425,7 +425,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
       ],
       content: `## Einleitung
 
-Gregor Mendel formulierte anhand von Kreuzungsversuchen mit Erbsen drei Regeln, die bis heute das Fundament der Vererbungslehre bilden. Sie beschreiben, wie sich Merkmale in der Nachkommenschaft verteilen, wenn man reinerbige bzw. mischerbige Eltern kreuzt. Für den MedAT sind die drei Mendelschen Regeln, die zugehörigen Kreuzungsschemata (Punnett-Quadrat) und die typischen Zahlenverhältnisse (3:1, 1:2:1, 9:3:3:1) unverzichtbar.
+**Worum geht es?** Die **drei Mendelschen Regeln** (Uniformität, Spaltung, Unabhängigkeit) beschreiben Vererbungsverhältnisse; **Punnett-Quadrat** für mono- und dihybride Erbgänge. **Warum für den MedAT relevant?** 1. Regel (F₁ uniform), 2. Regel (F₂ 3:1 Phänotyp, 1:2:1 Genotyp), 3. Regel (9:3:3:1) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Aa × Aa — Phänotyp-Verhältnis F₂?“; „RrGg × RrGg — Verhältnis?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu den Mendelschen Regeln abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **1. Mendelsche Regel** (Uniformität): Kreuzung reinerbiger Eltern → einheitliche F₁
@@ -532,7 +532,7 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
       ],
       content: `## Einleitung
 
-**Genotyp** ist die genetische Ausstattung (welche Allele ein Individuum trägt); **Phänotyp** ist das sichtbare oder messbare Merkmal. Ob ein Allel im Phänotyp zur Geltung kommt, hängt vom **Dominanzverhältnis** ab: dominant-rezessiv, intermediär oder kodominant. Mit der **Testkreuzung** (Rückkreuzung mit homozygot Rezessivem) kann man prüfen, ob ein dominanter Phänotyp homozygot (AA) oder heterozygot (Aa) ist. Das ist BMS-Grundwissen für alle Erbgangsaufgaben.
+**Worum geht es?** **Genotyp** (Allelkombination) vs. **Phänotyp** (sichtbares Merkmal); **Dominanzverhältnisse** (dominant-rezessiv, intermediär, kodominant) und **Testkreuzung** (mit homozygot Rezessivem). **Warum für den MedAT relevant?** Genotyp/Phänotyp, homo-/heterozygot und Testkreuzung werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Genotyp vs. Phänotyp?“; „Testkreuzung — wozu?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Genotyp, Phänotyp und Dominanz abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Genotyp** (AA, Aa, aa) vs. **Phänotyp** (sichtbares Merkmal)
@@ -649,7 +649,7 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
       ],
       content: `## Einleitung
 
-Ein **Erbgang** beschreibt, wie ein Merkmal (z. B. eine Erbkrankheit) in einer Familie weitergegeben wird. Entscheidend sind: Liegt das Gen auf einem **Autosom** oder auf dem **X-Chromosom**? Ist das krankheitsauslösende Allel **dominant** oder **rezessiv**? Daraus ergeben sich vier Grundtypen: autosomal-dominant, autosomal-rezessiv, X-chromosomal-dominant, X-chromosomal-rezessiv. Für den MedAT sind Stammbaum-Muster und die Unterscheidung dieser Erbgänge zentral.
+**Worum geht es?** **Erbgänge** werden nach Ort (autosomal vs. X-chromosomal) und Dominanz (dominant vs. rezessiv) unterschieden; Stammbaum-Muster zeigen den Typ. **Warum für den MedAT relevant?** Autosomal-dominant/rezessiv, X-chromosomal rezessiv (keine Vater-Sohn-Übertragung, Konduktorin), X-chromosomal dominant (kranker Vater → alle Töchter krank) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „X-rezessiv — warum mehr Männer?“; „Kranker Vater, nur Töchter krank — welcher Erbgang?“; „Aa × Aa — Erkrankungsrisiko?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Erbgängen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **autosomal** vs. **X-chromosomal** (Ort des Gens)
@@ -768,7 +768,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `## Einleitung
 
-Das **AB0-Blutgruppensystem** ist ein klassisches Prüfungsbeispiel für **mehrere Allele** und **Kodominanz**. Drei Allele (I^A, I^B, i) ergeben vier Phänotypen (A, B, AB, 0). I^A und I^B sind **kodominant** zueinander (Blutgruppe AB trägt beide Antigene); beide dominieren über **i** (Blutgruppe 0). Für den MedAT sind Kreuzungsaufgaben (welche Blutgruppen können die Kinder haben?) und die Grundlogik des Systems unverzichtbar.
+**Worum geht es?** **AB0-System**: drei Allele I^A, I^B, i → vier Phänotypen (A, B, AB, 0); I^A und I^B **kodominant**, beide dominant über i. **Warum für den MedAT relevant?** Kreuzungsaufgaben (I^A i × I^B i → alle vier möglich; 0 × AB → nur A oder B) und Kodominanz werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „I^A i × I^B i — welche Blutgruppen?“; „Eltern 0 und AB — Kinder 0 möglich?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum AB0-System abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **drei Allele** I^A, I^B und i sowie die **vier Phänotypen** A, B, AB, 0
@@ -882,7 +882,7 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
       ],
       content: `## Einleitung
 
-**Mutationen** sind vererbbare Änderungen des Erbguts. Man unterscheidet grob **Genmutationen** (Änderung auf Ebene einzelner Gene/Basen), **Chromosomenmutationen** (strukturelle Änderungen von Chromosomenabschnitten) und **Genommutationen** (Änderung der Chromosomenzahl). Für den BMS reicht die Einordnung: Was passiert wo, und welche Folgen haben die wichtigsten Typen (z. B. Trisomie durch Nicht-Disjunktion, Deletion bei Cri-du-chat)?
+**Worum geht es?** **Mutationen**: **Genmutation** (Sequenz: Punkt-, Frameshift), **Chromosomenmutation** (Struktur: Deletion, Translokation), **Genommutation** (Zahl: Trisomie/Monosomie durch Nicht-Disjunktion). **Warum für den MedAT relevant?** Einordnung (Gen vs. Chromosom vs. Genom), Trisomie-Ursache (Nicht-Disjunktion) und Beispiele (Cri-du-chat = 5p-) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Trisomie — welche Ursache?“; „Cri-du-chat — welche Mutation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Mutationen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Genmutation** (Punktmutation, z. B. Basenaustausch; Folgen: stille, Missense-, Nonsense-, Frameshift-Mutation)
@@ -995,7 +995,7 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
       ],
       content: `## Einleitung
 
-Wie wird aus der in der DNA gespeicherten Information ein sichtbares Merkmal? Der Weg heißt **Genexpression**: Die DNA wird in **RNA** umgeschrieben (**Transkription**), und die RNA wird in **Proteine** übersetzt (**Translation**). Proteine sind die Wirkstoffe der Zelle (Enzyme, Strukturproteine, Rezeptoren) und prägen den Phänotyp. Für den BMS reicht das **Konzept** (DNA → RNA → Protein → Merkmal); molekulare Details von Replikation, Transkription und Translation sind nicht prüfungsrelevant.
+**Worum geht es?** **Genexpression**: **DNA → RNA (Transkription) → Protein (Translation)** → Merkmal (Zentraldogma). **Warum für den MedAT relevant?** Der Informationsfluss DNA → RNA → Protein und die Begriffe Transkription/Translation werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Zentraldogma — Reihenfolge?“; „Transkription — was entsteht?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Genexpression abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - das **Zentraldogma** (DNA → RNA → Protein) als Grundprinzip der Genexpression

@@ -29,7 +29,7 @@ export const physKap3: Kapitel = {
       ],
       content: `## Einleitung
 
-Pendel in einer Standuhr, Stimmgabel beim Stimmen eines Instruments, Herzschlag im EKG — all das sind periodische Schwingungen. Das Grundmodell dahinter ist die **harmonische Schwingung**: eine hin-und-hergehende Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist. Dieses Prinzip steckt auch im MRT (Protonenresonanz), in Ultraschallköpfen (Piezokristall) und im Innenohr. Für den MedAT sind Amplitude, Frequenz, Periodendauer, Kreisfrequenz, Resonanz und Dämpfung prüfungsrelevant.
+**Worum geht es?** Die **harmonische Schwingung** ist das Grundmodell periodischer Bewegung: Rückstellkraft proportional zur Auslenkung (F = −k·x), Auslenkung x(t) = A·cos(ωt+φ₀). **Fadenpendel** T = 2π√(l/g), **Federpendel** T = 2π√(m/k); **Resonanz** und **Dämpfung**. **Warum für den MedAT relevant?** Amplitude, Frequenz, Periodendauer, Kreisfrequenz ω = 2πf, Faden- vs. Federpendel, Resonanz (MRT), Dämpfung werden geprüft. **Welche Fragen werden beantwortet?** „T Fadenpendel — wovon abhängig?“; „E_kin = E_pot bei welcher Auslenkung?“; „ω vs. f?“; „Resonanz — wann maximale Amplitude?“; „Isochronie?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu harmonischen Schwingungen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **harmonische Schwingung** (x(t) = A·cos(ωt+φ₀)), **Amplitude** A, **Kreisfrequenz** ω = 2πf = 2π/T
@@ -382,7 +382,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
       ],
       content: `## Einleitung
 
-Schall, Licht, Ultraschall, Röntgen, Radiowellen im MRT — all das sind **Wellen**. Sie transportieren Energie durch den Raum, ohne dabei Materie mitzubewegen. Das Grundprinzip: Ein Schwingender regt seinen Nachbarn an — so pflanzt sich die Störung fort. Die **Wellengleichung** c = f·λ und die Unterscheidung von **Transversal-** und **Longitudinalwellen** sind Schlüsselkonzepte. Für den MedAT sind Wellengleichung, Wellentypen, Schallgeschwindigkeit, elektromagnetisches Spektrum und akustische Impedanz prüfungsrelevant.
+**Worum geht es?** **Wellen** transportieren Energie durch den Raum ohne Materietransport. **Wellengleichung** c = f·λ; **Transversalwellen** (Schwingung ⊥ Ausbreitung, z. B. Licht) vs. **Longitudinalwellen** (Schwingung in Ausbreitungsrichtung, z. B. Schall). **Warum für den MedAT relevant?** c = f·λ, Schallgeschwindigkeit in Medien, elektromagnetisches Spektrum, **akustische Impedanz** Z = ρ·c und Reflexion/Transmission (Ultraschall) werden geprüft. **Welche Fragen werden beantwortet?** „c = f·λ — was bedeutet was?“; „Transversal vs. longitudinal?“; „Schall schneller in Wasser oder Luft?“; „Impedanz — Reflexion bei Medienwechsel?“; „Ultraschall Frequenz?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Wellengleichung** c = f·λ (Ausbreitungsgeschwindigkeit, Frequenz, Wellenlänge) und Grundgrößen der Welle
@@ -759,7 +759,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       diagram: "wave-types",
       content: `## Einleitung
 
-Warum klingt ein Krankenwagen höher, wenn er sich nähert? Warum leitet eine Glasfaser Licht um die Ecke? Warum entstehen Geisterbilder im Ultraschall? Hinter all dem stecken **Wellenphänomene**: Doppler-Effekt, Totalreflexion und Interferenz. Sie bilden die physikalische Grundlage für Doppler-Sonographie, Endoskopie und Pulsoximetrie. Für den MedAT sind Interferenz, Doppler-Effekt (Sonographie), Reflexion/Brechung, Totalreflexion und Polarisation prüfungsrelevant.
+**Worum geht es?** **Wellenphänomene**: **Interferenz** (konstruktiv/destruktiv nach Gangunterschied), **Doppler-Effekt** (Frequenzverschiebung bei Relativbewegung; Doppler-Sonographie Δf = 2·f₀·v·cos θ/c), **Reflexion/Brechung** (Snellius), **Totalreflexion** (Glasfaser, Endoskop). **Warum für den MedAT relevant?** Interferenz, Doppler (Blutflussmessung), Totalreflexion, Polarisation werden geprüft. **Welche Fragen werden beantwortet?** „Doppler — Quelle nähert sich?“; „Totalreflexion — Grenzwinkel?“; „Interferenz konstruktiv wann?“; „Stehende Welle — Knoten/Bäuche?“; „Doppler-Sonographie Formel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellenphänomenen (Doppler, Interferenz, Totalreflexion) abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Interferenz**: konstruktiv (Gangunterschied n·λ) vs. destruktiv ((n+½)·λ); **Superpositionsprinzip**
@@ -1123,7 +1123,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
       diagram: "doppler-effect",
       content: `## Einleitung
 
-Warum ist die Dezibel-Skala logarithmisch? Weil das Ohr es so verlangt. Das menschliche Hörsystem ist ein biologisches Präzisionsinstrument: Es erkennt Druckschwankungen kleiner als ein Milliardstel des Atmosphärendrucks und spannt dennoch 6 Zehnerpotenzen im Dynamikbereich. Für Mediziner ist **Akustik** direkt relevant — Hörverlust, Lärmschwerhörigkeit, Audiometrie und die Unterscheidung von Schallleitungs- vs. Schallempfindungsschwerhörigkeit sind klinische Kernthemen. Für den MedAT sind Dezibel-Skala, Frequenzbereich des Hörens, Cochlea/Tonotopie und Lärmschutz prüfungsrelevant.
+**Worum geht es?** **Akustik**: Schalldruck, **Dezibel-Skala** L = 20·log(p/p₀) [dB], **Cochlea** (Tonotopie: Basis = hohe, Apex = tiefe Frequenzen), Haarzellen, Schallleitungs- vs. Schallempfindungsschwerhörigkeit. **Warum für den MedAT relevant?** Dezibel, Hörschwelle 0 dB, Lärmschwelle 85 dB, Frequenzbereich des Hörens, Cochlea/Tonotopie, Lärmschutz werden geprüft. **Welche Fragen werden beantwortet?** „Dezibel-Formel?“; „+3 dB = doppelte Intensität?“; „Cochlea — wo hohe Frequenzen?“; „Schallleitungs- vs. Schallempfindungsschwerhörigkeit?“; „Weber/Rinne?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Akustik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Dezibel-Skala** L = 20·log(p/p₀) [dB]; Hörschwelle 0 dB, Lärmschwelle 85 dB, Schmerzgrenze ~120 dB

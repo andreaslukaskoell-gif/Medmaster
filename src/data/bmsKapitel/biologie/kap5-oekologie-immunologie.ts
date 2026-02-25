@@ -23,7 +23,7 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `## Einleitung
 
-Ökologie ist die Wissenschaft von den Wechselbeziehungen zwischen Organismen und ihrer belebten und unbelebten Umwelt. Sie gliedert sich in Ebenen: vom einzelnen Organismus über die Population und die Lebensgemeinschaft (Biozönose) bis zum Ökosystem. Für den MedAT sind die Begriffe Biotop, Biozönose und Ökosystem sowie die klare Trennung von Lebensraum und ökologischer Nische zentral. Ohne diese Grundlagen sind Nahrungsketten, Stoffkreisläufe und Artinteraktionen nicht einzuordnen.
+**Worum geht es?** **Ökologie** beschreibt Wechselbeziehungen zwischen Organismen und Umwelt; Ebenen: Organismus → Population → Biozönose → Ökosystem. **Warum für den MedAT relevant?** Biotop (unbelebter Lebensraum) vs. Biozönose (alle Arten), Ökosystem = Biotop + Biozönose und Population (eine Art) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Biotop vs. Biozönose?“; „Was ist ein Ökosystem?“; „Population — eine oder viele Arten?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu ökologischen Grundbegriffen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Definition** von Ökologie und die **Ebenen** (Organismus → Population → Biozönose → Ökosystem)
@@ -376,7 +376,7 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
       ],
       content: `## Einleitung
 
-Die **ökologische Nische** beschreibt die Rolle und die Umweltansprüche einer Art im Ökosystem — nicht nur den Ort, an dem sie lebt. Der **Lebensraum** (Habitat) ist dagegen der konkrete physische Ort. Für den MedAT ist die Trennung „Nische ≠ Lebensraum“ zentral; ebenso die Begriffe **fundamentale** und **realisierte Nische** sowie **Nischendifferenzierung** als Mechanismus der Koexistenz. Damit lassen sich typische BMS-Fragen zu Konkurrenz und Artengemeinschaften sicher beantworten.
+**Worum geht es?** **Ökologische Nische** = alle Umweltansprüche + Rolle der Art (nicht nur Ort); **Lebensraum (Habitat)** = physischer Ort. **Warum für den MedAT relevant?** Nische ≠ Lebensraum, fundamentale vs. realisierte Nische (Connell-Seepocken) und Nischendifferenzierung werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Nische vs. Lebensraum?“; „Fundamentale vs. realisierte Nische?“; „Connell-Experiment — was belegt es?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nische und Lebensraum abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Ökologische Nische** von **Lebensraum (Habitat)** zu unterscheiden
@@ -517,7 +517,7 @@ Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konk
       ],
       content: `## Einleitung
 
-**Konkurrenz** und **Symbiose** sind zentrale biotische Wechselwirkungen: Sie bestimmen, welche Arten wo koexistieren können und wie Lebensgemeinschaften aufgebaut sind. Für den MedAT sind das **Konkurrenzausschlussprinzip** (Gauß), die **Symbioseformen** mit Vorzeichen (Mutualismus +/+, Kommensalismus +/0, Parasitismus +/−, Prädation +/−) und die **Räuber-Beute-Dynamik** (Lotka-Volterra) prüfungsrelevant. Typische BMS-Fragen: Gauß-Experiment, Symbioseformen zuordnen, Unterschied Parasit vs. Räuber, Räuber-Beute-Zyklus.
+**Worum geht es?** **Konkurrenz** (intra-/interspezifisch), **Konkurrenzausschlussprinzip** (Gauß), **Symbioseformen** (Mutualismus +/+, Kommensalismus +/0, Parasitismus/Prädation +/−) und **Räuber-Beute-Dynamik** (Räuber hinkt nach). **Warum für den MedAT relevant?** Gauß-Experiment, Symbiose-Vorzeichen, Parasit vs. Räuber und Räuber-Beute-Zyklus werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Gauß — was besagt das Prinzip?“; „Mutualismus — Vorzeichen?“; „Parasit vs. Räuber?“; „Räuber-Beute — wer hinkt nach?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Konkurrenz und Symbiose abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Intraspezifische** und **interspezifische Konkurrenz** zu unterscheiden
@@ -708,7 +708,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
       ],
       content: `## Einleitung
 
-Ökosysteme sind die funktionellen Einheiten, in denen **Biozönose** und **Biotop** durch **Energie- und Stoffflüsse** verbunden sind. Für den MedAT sind **Nahrungsketten** und **Nahrungsnetze**, die **10%-Regel** des Energietransfers, die Unterscheidung **Energiefluss (gerichtet) vs. Stoffkreisläufe (geschlossen)** sowie die wichtigsten biogeochemischen Kreisläufe (Kohlenstoff, Stickstoff, Phosphor) zentral. Typische BMS-Fragen: Trophieebenen zuordnen, 10%-Regel anwenden, Energiefluss von Stoffkreisläufen unterscheiden.
+**Worum geht es?** **Nahrungsketten/Nahrungsnetze**, **10%-Regel** (Energieverlust pro Trophieebene), **Energiefluss** (gerichtet) vs. **Stoffkreisläufe** (geschlossen), GPP/NPP und biogeochemische Kreisläufe (C, N, P). **Warum für den MedAT relevant?** 10%-Regel, Trophieebenen, GPP vs. NPP, Stoffkreisläufe (Stickstoff: Rhizobien; Phosphor: kein gasförmiges Reservoir) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „10%-Regel — was besagt sie?“; „GPP vs. NPP?“; „Phosphorkreislauf — gasförmiges Reservoir?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nahrungsketten und Stoffkreisläufen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Nahrungskette** und **Nahrungsnetz** (Produzenten → Konsumenten → Destruenten)
@@ -1002,7 +1002,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
       ],
       content: `## Einleitung
 
-**Sukzession** ist die gerichtete Abfolge von Lebensgemeinschaften auf einer Fläche über die Zeit; **Populationsdynamik** beschreibt, wie Populationen wachsen und durch Ressourcen begrenzt werden. Beide Themen sind für den MedAT BMS-relevant: Primär vs. sekundäre Sukzession, Pionier- und Klimaxgesellschaft, exponentielles vs. logistisches Wachstum, Kapazitätsgrenze K und r- vs. K-Strategen. Typische Fragen: Welche Sukzession beginnt wo? Was ist die 10%-Regel der Energie? J- vs. S-Kurve, r- vs. K-Strategen zuordnen.
+**Worum geht es?** **Sukzession** (primär vs. sekundär, Pionier → Klimaxgesellschaft) und **Populationsdynamik** (exponentiell vs. logistisch, Kapazitätsgrenze K, r- vs. K-Strategen). **Warum für den MedAT relevant?** Primäre vs. sekundäre Sukzession, J- vs. S-Kurve und r- vs. K-Strategen werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Primäre Sukzession — wo beginnt sie?“; „Logistisches Wachstum — was begrenzt?“; „r- vs. K-Strategen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Sukzession und Populationsdynamik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Primäre** und **sekundäre Sukzession** zu unterscheiden und Pionierorganismen zu nennen
@@ -1163,7 +1163,7 @@ Zwei grundlegende Lebensstrategien:
       ],
       content: `## Einleitung
 
-Antikörper sind die zentralen Effektormoleküle der adaptiven humoralen Immunantwort und ermöglichen die hochspezifische Erkennung und Beseitigung von Pathogenen und Fremdstoffen. Für den MedAT sind der Aufbau des IgG-Antikörpers (Fab/Fc), die fünf Immunglobulin-Klassen mit ihren spezifischen Funktionen und die Effektormechanismen (Neutralisierung, Opsonisierung, Komplementaktivierung) prüfungsrelevante Kernthemen. Die klinische Bedeutung zeigt sich in der serologischen Diagnostik, bei der IgM-Nachweis auf akute und IgG-Nachweis auf durchgemachte Infektionen hinweist.
+**Worum geht es?** **Antikörper** (Ig) sind Y-förmige Effektormoleküle der humoralen Immunantwort; **Fab** (Antigenbindung), **Fc** (Effektorfunktionen). **Warum für den MedAT relevant?** IgG-Aufbau (Fab/Fc), fünf Ig-Klassen (IgG, IgM, IgA, IgE, IgD), Opsonisierung, Komplementaktivierung und IgM vs. IgG (akute vs. durchgemachte Infektion) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Fab vs. Fc — Funktion?“; „Welches Ig ist plazentagängig?“; „IgM — akute oder durchgemachte Infektion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Antikörpern abgedeckt.
 
 **Das Wichtigste auf einen Blick:**
 - Struktur: 2 schwere + 2 leichte Ketten, verbunden durch Disulfidbrücken, Y-Form
@@ -1407,7 +1407,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `## Einleitung
 
-Die enorme Antikörperdiversität des menschlichen Immunsystems — über 10¹⁰ verschiedene Spezifitäten bei nur ca. 20.000 Genen — wird durch den eleganten Mechanismus der V(D)J-Rekombination erzeugt, bei dem Gensegmente zufällig kombiniert und durch zusätzliche Variabilität an den Verbindungsstellen erweitert werden. Für den MedAT sind die V(D)J-Rekombination, die klonale Selektionstheorie nach Burnet und die Affinitätsreifung in Keimzentren zentrale Prüfungsthemen, die das Verständnis von Immunantwort, Impfwirkung und B-Zell-Lymphomen voraussetzen.
+**Worum geht es?** **Antikörperdiversität** entsteht durch **V(D)J-Rekombination** (RAG, TdT), **klonale Selektion** (Burnet) und **Affinitätsreifung** (somatische Hypermutation, AID). **Warum für den MedAT relevant?** V(D)J-Prinzip, klonale Selektion, Primär- vs. Sekundärantwort (IgM vs. IgG, Gedächtniszellen) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wie entsteht Antikörperdiversität?“; „Klonale Selektion — was wählt wen?“; „Sekundärantwort — warum schneller/stärker?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Antikörpergenen und Diversität abgedeckt.
 
 **Das Wichtigste auf einen Blick:**
 - V(D)J-Rekombination: zufällige Auswahl von V-, D-, J-Gensegmenten → kombinatorische Diversität
@@ -1624,7 +1624,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## Einleitung
 
-Das AB0-Blutgruppensystem ist eines der wichtigsten Beispiele für multiple Allelie und Kodominanz in der Genetik und hat gleichzeitig enorme klinische Bedeutung in der Transfusionsmedizin. Für den MedAT werden regelmäßig Kreuzungsschemata (Punnett-Quadrat) zu AB0-Blutgruppen abgefragt, weshalb die sichere Zuordnung von Genotypen zu Phänotypen und das Verständnis von Kodominanz essenziell sind. Die AB0-Inkompatibilität bei Transfusionen ist eine der häufigsten vermeidbaren Ursachen schwerer Zwischenfälle in der klinischen Praxis.
+**Worum geht es?** **AB0-Blutgruppen** (I^A, I^B, i⁰): Kodominanz von I^A und I^B, Genotyp-Phänotyp-Zuordnung, Kreuzungsschemata und Transfusionslogik. **Warum für den MedAT relevant?** Punnett-Quadrat für AB0, Kodominanz, universeller Spender (0) vs. Empfänger (AB) und Antikörper-Regel werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Eltern A und B — Kind 0 möglich?“; „Kodominanz — was bedeutet das bei AB?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur AB0-Vererbung abgedeckt.
 
 **Das Wichtigste auf einen Blick:**
 - ABO-Gen auf Chromosom 9 mit drei Allelen: I^A, I^B (kodominant) und i⁰ (rezessiv)
@@ -1866,7 +1866,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       ],
       content: `## Einleitung
 
-Das Rhesus-System ist nach dem AB0-System das klinisch bedeutsamste Blutgruppensystem, wobei das D-Antigen durch seine starke Immunogenität bei Inkompatibilität zwischen Mutter und Kind den gefürchteten Morbus haemolyticus neonatorum auslösen kann. Für den MedAT sind die autosomal-dominante Vererbung des RhD-Faktors, der Zweiphasen-Mechanismus der Sensibilisierung (1. Schwangerschaft) und Reaktion (2. Schwangerschaft) sowie der Wirkmechanismus der Anti-D-Prophylaxe zentrale Prüfungsthemen. Die Einführung der Anti-D-Prophylaxe 1968 ist eine der großen Erfolgsgeschichten der pränatalen Medizin.
+**Worum geht es?** **Rhesus-System** (D dominant, dd = Rh−): **Rhesus-Inkompatibilität** (Rh−-Mutter + Rh+-Kind → Sensibilisierung → 2. Schwangerschaft: Anti-D-IgG → Morbus haemolyticus neonatorum); **Anti-D-Prophylaxe** verhindert Sensibilisierung. **Warum für den MedAT relevant?** Vererbung (autosomal-dominant), Zweiphasen-Mechanismus und Anti-D (wann, wofür) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wann Anti-D-Prophylaxe?“; „Warum erst 2. Kind betroffen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Rhesusfaktor abgedeckt.
 
 **Das Wichtigste auf einen Blick:**
 - RhD-Gen auf Chromosom 1: autosomal dominant vererbt (DD oder Dd = Rh+, dd = Rh-)

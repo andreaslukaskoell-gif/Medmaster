@@ -27,7 +27,7 @@ export const mathKapAlgebra: Kapitel = {
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Dosierung (mg/kg), Infusionsrate (mL/h), Verdünnungen (c₁V₁ = c₂V₂) und Mischungsaufgaben sind **lineare Gleichungen**. Wer Äquivalenzumformungen und Gleichungssysteme sicher beherrscht, vermeidet Dosierungsfehler und löst typische BMS-Aufgaben schnell.
+**Worum geht es?** **Lineare Gleichungen**, Ungleichungen, **Gleichungssysteme** (Substitution, Elimination); Dosierung, Verdünnung c₁V₁ = c₂V₂. **Warum für den MedAT relevant?** Äquivalenzumformungen, Gleichungssysteme, Ungleichungen (Vorzeichenumkehr), Verdünnungsformeln werden geprüft. **Welche Fragen werden beantwortet?** „x isolieren?“; „Substitution vs. Elimination?“; „Ungleichung ×(−1)?“; „c₁V₁ = c₂V₂?“; „Dosierung mg/kg?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Gleichungen und Ungleichungen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Äquivalenzumformungen** — gleiche Operation auf beiden Seiten; Ziel: Variable isolieren
@@ -154,24 +154,39 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Lineare Gleichungen (Äquivalenzumformungen), Gleichungssysteme (Substitution, Elimination), quadratische Gleichungen (Mitternachtsformel, Diskriminante D=b²−4ac, Vieta), Ungleichungen (Vorzeichenumkehr bei ×/÷ mit negativer Zahl), Verdünnungsformel c₁×V₁=c₂×V₂, Dosierung mg/kg.
+**Zentral prüfungsrelevant:**
+- **Äquivalenzumformung:** Gleiche Operation auf beiden Seiten; nie durch null teilen.
+- **Lineare Gleichung:** Schema Klammern → Brüche (Hauptnenner) → x-Terme eine Seite → durch Koeffizient → Probe.
+- **Gleichungssystem:** Substitution (Variable ersetzen) oder Elimination (addieren/subtrahieren); Probe in **beide** Gleichungen.
+- **Ungleichung:** Bei ×/÷ mit **negativer** Zahl Vorzeichen **umkehren** (< ↔ >, ≤ ↔ ≥).
+- **Quadratische Gleichung:** Mitternachtsformel x = (−b ± √D)/(2a); **Diskriminante D = b² − 4ac** (D > 0: 2 Lösungen, D = 0: 1, D < 0: keine).
+- **Verdünnungsformel:** c₁×V₁ = c₂×V₂; Mischungsaufgaben als Gleichungssystem.
+- **Dosierung:** Dosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg]; Volumen = Dosis / Konzentration.
+- **Kehrwert:** a = b/c und d = a⁻¹ ⇒ d = c/b (Zähler und Nenner tauschen).
 
-**Ergänzend vertiefend:** Dreisatz, Mischungsaufgaben; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Dreisatz, Mischungsaufgaben; Vieta (Summe und Produkt der Lösungen bei x² + px + q = 0).
 
-**Häufige Fragen:**
-- "Löse 3x − 7 = 2(x + 1)" → 3x − 7 = 2x + 2, also x = 9
-- "Welche Lösungen hat x² − 5x + 6 = 0?" → Vieta: Summe 5, Produkt 6 → x₁ = 2, x₂ = 3
-- "Für welche x gilt −2x + 4 > 10?" → −2x > 6, Vorzeichen dreht um → x < −3
+**Häufige Prüfungsfragen:**
+- Löse 3x − 7 = 2(x + 1) → 3x − 7 = 2x + 2, x = 9.
+- Welche Lösungen hat x² − 5x + 6 = 0? → Vieta: Summe 5, Produkt 6 → x₁ = 2, x₂ = 3.
+- Für welche x gilt −2x + 4 > 10? → −2x > 6, Vorzeichen umkehren → x < −3.
+- Verdünnung: c₁ = 20 mg/mL, V₂ = 100 mL, c₂ = 5 mg/mL → V₁ = c₂×V₂/c₁ = 25 mL.
+- Dosierung 5 mg/kg, 72 kg → Dosis = 5 × 72 = 360 mg.
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Ungleichung: Division durch negative Zahl → Zeichen UMKEHREN (−2x > 6 → x < −3, nicht x > −3)
-- Diskriminante: D = b² − 4ac, NICHT b² − 2ac
-- Gleichungssystem: Ergebnis in BEIDE Gleichungen als Probe einsetzen
+**Typische Prüfungsfallen:**
+- Ungleichung: Division durch negative Zahl → Zeichen **umkehren** (−2x > 6 → x < −3, nicht x > −3).
+- Diskriminante: D = b² − **4ac**, NICHT b² − 2ac.
+- Gleichungssystem: Lösung in **beide** Originalgleichungen zur Probe einsetzen.
+- Bruch invertieren: (a/b)⁻¹ = b/a, nicht a/b.
+- Hauptnenner bei Brüchen: kgV aller Nenner, dann mit HN multiplizieren.
+
+**Wichtige Begriffe & Definitionen:**
+- **Äquivalenzumformung:** Operation auf beiden Seiten der Gleichung; Gleichung bleibt gültig.
+- **Diskriminante D:** b² − 4ac; entscheidet über Anzahl der reellen Lösungen bei ax² + bx + c = 0.
+- **Verdünnungsformel:** c₁×V₁ = c₂×V₂ (Stoffmenge bleibt erhalten).
 
 **Prüfungsrelevante Zahlen/Fakten:**
-- Verdünnungsformel: c₁×V₁ = c₂×V₂
-- Dosierungsformel: Dosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg]
-- Mitternachtsformel: x = (−b ± √(b² − 4ac)) / (2a)
+- Verdünnungsformel: c₁×V₁ = c₂×V₂. Dosierung: Dosis [mg] = [mg/kg] × kg. Mitternachtsformel: x = (−b ± √(b² − 4ac))/(2a).
 
 ---
 
@@ -330,7 +345,7 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Laborwerte (Hämatokrit in %, SpO₂), Evidenzbasierte Medizin (**ARR, RRR, NNT**) und Verdünnungsreihen (1:10, 1:100) verlangen sicheres **Prozent- und Bruchrechnen**. Ohne das scheitern viele Dosierungs- und EbM-Aufgaben.
+**Worum geht es?** **Prozentrechnung** P = G×p/100, **Bruchrechnung**, **Dreisatz**; **EbM** (ARR, RRR, NNT), **Serienverdünnungen** (1:10, 1:100). **Warum für den MedAT relevant?** Prozent, Bruch, Dreisatz, ARR/RRR/NNT, Verdünnungsfaktor werden geprüft. **Welche Fragen werden beantwortet?** „P = G×p/100 umstellen?“; „ARR, NNT aus Vierfeldertafel?“; „1:10 Verdünnung — Faktor?“; „Dreisatz direkt/indirekt?“; „Kehrwert beim Dividieren?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Prozent, Bruch und EbM abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Prozentrechnung:** Grundformel P = G×p/100; die drei Grundfragen (Prozentwert, Grundwert, Prozentsatz) und Umstellen
@@ -643,9 +658,9 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
       ],
       content: `## Einleitung
 
-**Quadratische Gleichungen** und **binomische Formeln** (a±b)², a²−b²; BSA, Pharmakokinetik. Für den MedAT sind binomische Formeln, pq-Formel, Scheitelpunktform, Vieta prüfungsrelevant.
+**Worum geht es?** **Binomische Formeln** (a±b)², a²−b²; **Quadratische Gleichungen** (pq-Formel, Mitternachtsformel), **Scheitelpunktform**, Vieta. **Warum für den MedAT relevant?** Binomische Formeln, pq-Formel, Scheitelpunkt, Vieta, BSA/Dosis-Anwendung werden geprüft. **Welche Fragen werden beantwortet?** „(a+b)²?“; „pq-Formel?“; „Diskriminante D?“; „Scheitelpunkt aus Form?“; „Vieta Summe/Produkt?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu quadratischen Gleichungen und binomischen Formeln abgedeckt.
 
-**In diesem Kapitel lernst du:** **Binomische Formeln** (3 Stück); **pq-Formel**; **Scheitelpunktform**; Vieta; Anwendung (BSA, Dosis). **Kontext:** Parabeln und Optimierung in der Medizin.
+**In diesem Kapitel lernst du:** **Binomische Formeln** (3 Stück); **pq-Formel**; **Scheitelpunktform**; Vieta; Anwendung (BSA, Dosis).
 
 ---
 
@@ -953,9 +968,9 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
       ],
       content: `## Einleitung
 
-**Potenzen** und **Logarithmen**: Wachstum (2ⁿ), pH = −log([H⁺]), Dezibel. Für den MedAT sind Potenzgesetze, Wurzeln, log/ln, pH-Berechnung prüfungsrelevant.
+**Worum geht es?** **Potenzgesetze** (aⁿ·aᵐ, (aⁿ)ᵐ, a⁰), **Wurzeln** a^(1/n), **Logarithmus** (log, ln), **pH = −log([H⁺])**, Dezibel. **Warum für den MedAT relevant?** Potenzgesetze, Wurzeln, log/ln, pH-Berechnung werden geprüft. **Welche Fragen werden beantwortet?** „aⁿ·aᵐ?“; „log(ab) =?“; „pH aus [H⁺]?“; „ln und log Basis?“; „a⁰?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Potenzen und Logarithmen abgedeckt.
 
-**In diesem Kapitel lernst du:** **Potenzgesetze** (aⁿ×aᵐ, (aⁿ)ᵐ, a⁰); **Wurzeln** (a^(1/n)); **Logarithmus** (log₁₀, ln); **pH**; Dezibel. **Kontext:** Von Konzentration bis Wachstum.
+**In diesem Kapitel lernst du:** **Potenzgesetze** (aⁿ×aᵐ, (aⁿ)ᵐ, a⁰); **Wurzeln** (a^(1/n)); **Logarithmus** (log₁₀, ln); **pH**; Dezibel.
 
 ---
 
@@ -1298,7 +1313,7 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
       ],
       content: `## Einleitung
 
-**Ebene Figuren** (Rechteck, Dreieck, Kreis, Trapez) und **Trigonometrie** (sin, cos, tan) brauchst du für Wundflächen, Klappenfläche, **KOF** (DuBois), Neuner-Regel (Verbrennung) und Steigungsaufgaben. Für den MedAT sind Flächenformeln, Heron, Kreisring, KOF und die drei Winkelfunktionen im rechtwinkligen Dreieck prüfungsrelevant.
+**Worum geht es?** **Ebene Figuren** (Rechteck, Dreieck, Kreis, Trapez) — Flächen/Umfänge; **Heron** (Dreieck aus 3 Seiten); **Trigonometrie** sin/cos/tan im rechtwinkligen Dreieck; **KOF** (DuBois), **Neuner-Regel** (Verbrennung). **Warum für den MedAT relevant?** Flächenformeln, Heron, Kreisring, KOF, Neuner-Regel, sin/cos/tan werden geprüft. **Welche Fragen werden beantwortet?** „Dreiecksfläche Heron?“; „sin α =?“; „KOF-Formel?“; „Neuner-Regel?“; „Steigung in %?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu ebenen Figuren und Trigonometrie abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Rechteck, Dreieck, Kreis, Trapez, Parallelogramm** — Flächen und Umfänge sicher berechnen
@@ -1666,9 +1681,9 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
       ],
       content: `## Einleitung
 
-**Körper** (Quader, Zylinder, Kugel, Kegel, Ellipsoid) → Herzvolumen, Stent, Gelenke. Für den MedAT sind V und O von Kugel, Zylinder, Quader, Kegel prüfungsrelevant.
+**Worum geht es?** **Körper**: Quader, Zylinder, Kugel, Kegel — **Volumen V** und **Oberfläche O**; Ellipsoid (Herz). **Warum für den MedAT relevant?** V und O von Kugel, Zylinder, Quader, Kegel werden geprüft. **Welche Fragen werden beantwortet?** „Kugel V =?“; „Zylinder O?“; „Quader V?“; „Kegel V?“; „Ellipsoid — Anwendung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Körpern (Volumen, Oberfläche) abgedeckt.
 
-**In diesem Kapitel lernst du:** **Quader**, **Zylinder**, **Kugel**, **Kegel**; **Ellipsoid** (Herz); Volumen und Oberfläche. **Kontext:** Von Anatomie zur Dosierung.
+**In diesem Kapitel lernst du:** **Quader**, **Zylinder**, **Kugel**, **Kegel**; **Ellipsoid** (Herz); Volumen und Oberfläche.
 
 ---
 
@@ -1980,9 +1995,9 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
       ],
       content: `## Einleitung
 
-**Analytische Geometrie** = Algebra + Geometrie: Koordinaten, Geraden, Abstände. EKG, Blutdruck, Dosis-Wirkung. Für den MedAT sind Koordinaten, Geradengleichung, Abstand, Interpolation prüfungsrelevant.
+**Worum geht es?** **Kartesische Koordinaten**, **Geradengleichung** (Steigung m, Achsenabschnitt b), **Abstand** zweier Punkte, **lineare Interpolation**. **Warum für den MedAT relevant?** Koordinaten, Geradengleichung, Abstand, Interpolation (EKG, Dosis-Wirkung) werden geprüft. **Welche Fragen werden beantwortet?** „Abstand zweier Punkte?“; „Gerade aus zwei Punkten?“; „Steigung m?“; „Interpolation?“; „y = mx + b?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu analytischer Geometrie (Koordinaten, Geraden, Abstand) abgedeckt.
 
-**In diesem Kapitel lernst du:** **Kartesische Koordinaten**; **Geradengleichung** (Steigung, Schnitt); **Abstand** zweier Punkte; lineare Interpolation. **Kontext:** Graphen in Klinik und Pharmakologie.
+**In diesem Kapitel lernst du:** **Kartesische Koordinaten**; **Geradengleichung** (Steigung, Schnitt); **Abstand** zweier Punkte; lineare Interpolation.
 
 ---
 
@@ -2315,9 +2330,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
       ],
       content: `## Einleitung
 
-**Vektoren** (Betrag + Richtung): EKG-Achse, Kräfte, Blutfluss. Für den MedAT sind Vektoraddition, Skalarprodukt, Winkel, Betrag, 3D prüfungsrelevant.
-
-**Kontext:** In der analytischen Geometrie (Ebene und Raum) beschreiben Vektoren Kräfte, Richtungen und Abstände; hier lernst du die Grundideen. **Vertiefung:** Rechenregeln, Skalar- und Kreuzprodukt, Geraden/Ebenen und Anwendungen im eigenständigen Kapitel **Vektorrechnung** (ma-6-01 bis ma-6-04).
+**Worum geht es?** **Vektoren** (Betrag + Richtung): Addition, Skalarmultiplikation, **Betrag**, **Skalarprodukt** (Winkel), **Kreuzprodukt**; EKG-Achse, Kräfte, Blutfluss. **Warum für den MedAT relevant?** Vektoraddition, Skalarprodukt, Winkel, Betrag, 3D werden geprüft. **Welche Fragen werden beantwortet?** „Vektor vs. Skalar?“; „Betrag |v|?“; „Skalarprodukt Winkel?“; „Kreuzprodukt — Ergebnis?“; „Orthogonal wenn?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Vektoren (Grundlagen) abgedeckt. Vertiefung: ma-6-01 bis ma-6-04.
 
 **In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag**; **Skalarprodukt** (Winkel); **Kreuzprodukt**; Ebenengleichung.
 

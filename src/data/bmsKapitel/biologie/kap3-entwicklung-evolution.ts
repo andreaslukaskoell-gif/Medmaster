@@ -22,7 +22,7 @@ export const bioKapEntwicklung: Kapitel = {
       ],
       content: `## Einleitung
 
-Bevor Befruchtung und Embryonalentwicklung möglich sind, müssen **Keimzellen** (Gameten) entstehen: Spermien beim Mann und Eizellen bei der Frau. Dieser Prozess heißt **Gametogenese** und läuft über **Meiose** (Reduktionsteilung), sodass jede Gamete nur einen einfachen Chromosomensatz (n) erhält. Beim Mann entstehen aus einer Ausgangszelle **vier Spermien**, bei der Frau aus einer Ausgangszelle **eine Eizelle und drei Polkörperchen** — diese Asymmetrie und die **Meiose-Arrests** der Oogenese sind für den MedAT zentral. Dieses Unterkapitel ordnet die Gametogenese in die embryologische Abfolge ein; Details zu Hormonsteuerung und Zyklus findest du im Kapitel Anatomie/Gewebe/Physiologie.
+**Worum geht es?** **Gametogenese** ist die Bildung von Keimzellen (Spermien und Eizellen) über Meiose. **Warum für den MedAT relevant?** Ergebnis Asymmetrie (4 Spermien vs. 1 Eizelle + 3 Polkörperchen) und die Meiose-Arrests der Oogenese (Prophase I, Metaphase II) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wie viele Spermien aus einem Spermatogonium?“; „Wie viele Eizellen aus einer Oozyte?“; „In welcher Phase arretiert die Oozyte bis zur Ovulation?“; „Wann wird Meiose II der Oozyte abgeschlossen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Gametogenese abgedeckt. (Details zu Hormonsteuerung und Zyklus: Kapitel Anatomie/Gewebe/Physiologie.)
 
 **In diesem Kapitel lernst du:**
 - **Gametogenese** als Oberbegriff für die Bildung von Spermien (Spermatogenese) und Eizellen (Oogenese)
@@ -147,7 +147,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Einleitung
 
-Die **Befruchtung** (Fertilisation) ist die Verschmelzung von Spermium und Eizelle zur **Zygote**. Sie findet beim Menschen im **Eileiter** statt — genauer in der **Ampulle** (dem weitesten Abschnitt im äußeren Drittel der Tuba uterina), nicht in der Gebärmutter. Damit ein Spermium die Eizelle erreichen und durchdringen kann, sind **Kapazitation** (Reifung im weiblichen Genitaltrakt) und **Akrosomreaktion** (Enzymfreisetzung) nötig; die Eizelle verhindert mit der **Kortikalreaktion** sofort den Eintritt weiterer Spermien (Polyspermie-Block). Für den MedAT sind Ort, Ablauf und die Begriffe Zygote, Syngamie und Polyspermie-Verhinderung zentral.
+**Worum geht es?** **Befruchtung** ist die Verschmelzung von Spermium und Eizelle zur **Zygote** (2n); sie findet in der **Ampulle des Eileiters** statt. **Warum für den MedAT relevant?** Ort (Ampulle, nicht Uterus), Kapazitation, Akrosomreaktion vs. Kortikalreaktion (Polyspermie-Block), Syngamie und Zygote werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wo findet die Befruchtung statt?“; „Welche Reaktion verhindert Polyspermie?“; „Was ist die Zygote?“; „Wann wird Meiose II der Eizelle abgeschlossen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Befruchtung abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Wo** die Befruchtung stattfindet (Ampulle des Eileiters) und was **Kapazitation** ist
@@ -322,7 +322,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       ],
       content: `## Einleitung
 
-Aus der **Zygote** entstehen durch wiederholte Zellteilungen zunächst viele kleinere Zellen — man spricht von **Furchung** (ohne nennenswertes Wachstum, die Zellgröße nimmt ab). Der frühe Zellhaufen heißt **Morula**; mit Ausbildung eines Hohlraums wird daraus die **Blastozyste**. In der Blastozyste unterscheidet man den **Trophoblast** (wird zu Plazenta und Eihüllen, produziert hCG) und den **Embryoblast** (wird zum Embryo). Die **Implantation** (Einnistung) in die Gebärmutterschleimhaut erfolgt etwa am **Tag 6–7** nach der Befruchtung. Für den MedAT sind Furchung ≠ Wachstum, Morula vs. Blastozyste, Trophoblast vs. Embryoblast und die Rolle von hCG zentral.
+**Worum geht es?** Aus der **Zygote** entstehen durch **Furchung** (Teilungen ohne Wachstum) **Morula** und **Blastozyste**; **Trophoblast** → Plazenta/hCG, **Embryoblast** → Embryo; **Implantation** am Tag 6–7. **Warum für den MedAT relevant?** Furchung ≠ Wachstum, Morula vs. Blastozyste, Trophoblast vs. Embryoblast und hCG (erhält Corpus luteum) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Furchung — mit oder ohne Wachstum?“; „Morula vs. Blastozyste — was hat den Hohlraum?“; „Welche Struktur produziert hCG?“; „Wann Implantation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Furchung, Blastozyste und Implantation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Furchung**: schnelle Teilungen der Zygote/Blastomeren ohne Wachstum → Morula → Blastozyste
@@ -500,7 +500,7 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
       ],
       content: `## Einleitung
 
-Nach der Implantation liegt eine zweischichtige **Keimscheibe** vor (Epiblast oben, Hypoblast unten). In der **dritten Entwicklungswoche** entstehen daraus die **drei Keimblätter** — **Ektoderm**, **Mesoderm** und **Endoderm**. Aus ihnen entwickeln sich später **alle Organe und Gewebe** des Körpers. Dieser Prozess heißt **Gastrulation**; er legt die Körperachsen fest und ist die Voraussetzung für Neurulation (Bildung des Neuralrohrs) und Organogenese. Für den MedAT sind Gastrulation, die Herkunft der drei Keimblätter aus dem Epiblast und die wichtigsten **Keimblattderivate** (welches Organ aus welchem Blatt?) zentral.
+**Worum geht es?** In der **dritten Woche** entstehen aus der Keimscheibe die **drei Keimblätter** (Ektoderm, Mesoderm, Endoderm) durch **Gastrulation** (Primitivstreifen, Invagination). **Warum für den MedAT relevant?** Gastrulation, Herkunft der Keimblätter aus dem Epiblast und **Keimblattderivate** (welches Organ aus welchem Blatt?) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Aus welchem Keimblatt entstehen ZNS und Epidermis?“; „Mesoderm — welche Organe?“; „Notochord — aus wo?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Gastrulation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Gastrulation** (3. Woche): Bildung der drei Keimblätter aus dem Epiblast über den **Primitivstreifen**
@@ -737,7 +737,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
       ],
       content: `## Einleitung
 
-Aus dem **Ektoderm** entstehen nicht nur die Epidermis, sondern auch **Gehirn und Rückenmark**. Dafür sorgt die **Neurulation**: Das **Notochord** (Mesoderm) induziert im darüber liegenden Ektoderm die Bildung der **Neuralplatte**, die sich zur **Neuralrinne** einfaltet und zum **Neuralrohr** schließt. Aus dem Neuralrohr gehen **ZNS** (Zentralnervensystem) und zentrale Anteile des **PNS** hervor. Zellen am Rand der Neuralplatte wandern aus und bilden die **Neuralleiste** — aus ihr entstehen u. a. Ganglien, Melanozyten und Nebennierenmark. Schließt das Neuralrohr nicht vollständig (offener **Neuroporus**), entstehen **Neuralrohrdefekte** (z. B. Spina bifida, Anenzephalie). **Folsäure** (0,4 mg/Tag vor und in der Frühschwangerschaft) senkt das Risiko deutlich. Für den MedAT sind Neurulation, Neuralrohr, Neuralleiste-Derivate und Neuralrohrdefekte zentral.
+**Worum geht es?** **Neurulation**: Notochord induziert **Neuralplatte** → **Neuralrinne** → **Neuralrohr** (ZNS-Anlage); **Neuralleiste** liefert Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark. **Warum für den MedAT relevant?** Ablauf Neurulation, Neuroporen-Schluss (Tag 25/27), Neuralleiste-Derivate und **Folsäure** (0,4 mg/Tag, Risikosenkung ~70 %) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was induziert die Neuralplatte?“; „Neuralleiste — aus welchem Keimblatt?“; „Spina bifida — welcher Neuroporus?“; „Folsäure — wofür?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Neurulation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Neurulation**: Notochord induziert Neuralplatte → Neuralrinne → **Neuralrohr** (Vorläufer von Gehirn und Rückenmark)
@@ -906,7 +906,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       ],
       content: `## Einleitung
 
-Nach Gastrulation und Neurulation liegen die drei Keimblätter und die Anlage des Neuralrohrs vor. In den folgenden Wochen entstehen daraus **alle Organe** — dieser Prozess heißt **Organogenese**. Die ersten **8 Wochen** nach der Befruchtung werden als **Embryonalperiode** bezeichnet; in ihr werden alle Organsysteme **angelegt**. Ab **Woche 9** spricht man von der **Fetalperiode**: Der **Fetus** (Fötus) wächst und reift, es werden keine neuen Organe mehr gebildet. In der Embryonalperiode ist der Keim besonders empfindlich gegenüber **Teratogenen** (Stoffe oder Einflüsse, die Fehlbildungen verursachen können). Für den MedAT sind die Abgrenzung Embryo vs. Fetus, das **Alles-oder-Nichts-Prinzip** (nur Woche 1–2), **kritische Perioden** und die **Lungenreife** (Surfactant) zentral.
+**Worum geht es?** **Embryonalperiode** (Wochen 1–8): **Organogenese** — alle Organe werden angelegt; **Fetalperiode** (ab Woche 9): Wachstum und Reifung. **Warum für den MedAT relevant?** Embryo vs. Fetus, **Alles-oder-Nichts-Prinzip** (Woche 1–2), **kritische Phase 4.–8. Woche** (Teratogene), Herzschlag ab Woche 4 und Lungenreife (Surfactant ab Woche 24) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wann endet die Embryonalperiode?“; „Alles-oder-Nichts-Prinzip — in welcher Woche?“; „Wann schlägt das Herz?“; „Ab wann Surfactant?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Organogenese und kritischen Phasen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; **Fetalperiode** (ab Woche 9): Wachstum und Reifung
@@ -1125,7 +1125,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       content: `## Einleitung
 
-Der Embryo und später der Fetus werden von **Embryonalhüllen** (Eihäuten) umgeben und über die **Plazenta** (Mutterkuchen) mit der Mutter verbunden. Die **Plazenta** ist ein temporäres Organ: Sie ermöglicht den Austausch von Sauerstoff, Nährstoffen und Abfallprodukten zwischen mütterlichem und kindlichem Kreislauf, ohne dass das Blut beider direkt zusammenfließt — der Kontakt erfolgt über die **Plazentaschranke**. Außerdem produziert die Plazenta Hormone (z. B. hCG, Progesteron). Die **Nabelschnur** verbindet den Fetus mit der Plazenta (2 Arterien, 1 Vene). Für den MedAT sind Aufbau der Plazenta (fetaler vs. mütterlicher Anteil), Plazentaschranke (was durchtritt, was nicht) und Nabelschnur (AVA) zentral.
+**Worum geht es?** **Plazenta** (fetaler + mütterlicher Anteil) ermöglicht Austausch über die **Plazentaschranke** (Blut mischt sich nicht); **Nabelschnur**: 2 Arterien, 1 Vene (AVA). **Warum für den MedAT relevant?** Plazentaschranke (IgG passiert), Nabelschnur-Aufbau (AVA) und Eihäute (Amnion, Chorion) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Nabelschnur — wie viele Arterien/Venen?“; „Plazentaschranke — was durchtritt?“; „Fetaler vs. mütterlicher Plazenta-Anteil?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Embryonalhüllen und Plazenta abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Aufbau** der Plazenta: fetaler Anteil (Chorionzotten) und mütterlicher Anteil (Decidua); **intervillöse Räume**
@@ -1371,7 +1371,7 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
       ],
       content: `## Einleitung
 
-Wie ist aus unbelebter Materie das erste Leben entstanden? **Miller-Urey** zeigte: Aminosäuren entstehen abiotisch. **RNA-Welt-Hypothese** erklärt den Übergang zu genetischer Information. **Endosymbiontentheorie** erklärt Mitochondrien (und Chloroplasten) als ehemalige Bakterien. Für den MedAT sind diese drei Konzepte prüfungsrelevant.
+**Worum geht es?** Ursprung des Lebens: **Miller-Urey** (abiotische Entstehung von Aminosäuren), **RNA-Welt-Hypothese**, **Endosymbiontentheorie** (Mitochondrien/Chloroplasten als ehemalige Bakterien). **Warum für den MedAT relevant?** Miller-Urey, RNA-Welt und Endosymbiontentheorie werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Miller-Urey — was entsteht?“; „Endosymbiontentheorie — welche Organellen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Ursprung des Lebens abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Miller-Urey-Experiment** (1953): abiotische Synthese organischer Moleküle (Aminosäuren)
@@ -1606,7 +1606,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
       ],
       content: `## Einleitung
 
-Die **Phylogenetik** rekonstruiert Verwandtschaft (Fossilien, DNA) und stellt sie in **Stammbäumen** dar. Zentral: **Homologie** (gleicher Ursprung, oft verschiedene Funktion) vs. **Analogie** (unabhängige Entstehung, ähnliche Funktion). Diese Unterscheidung ist ein MedAT-Klassiker.
+**Worum geht es?** **Phylogenetik** rekonstruiert Verwandtschaft (Stammbäume); **Homologie** (gleicher Ursprung) vs. **Analogie** (konvergente Ähnlichkeit) sind zentral. **Warum für den MedAT relevant?** Homologie vs. Analogie wird regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Homologie vs. Analogie — Definition?“; „Stammbaum lesen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Phylogenetik abgedeckt.
 
 ![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
 
@@ -1844,7 +1844,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
       ],
       content: `## Einleitung
 
-**Natürliche Selektion** (Darwin): Besser angepasste Individuen haben mehr Nachkommen → ihre Eigenschaften häufen sich. Mit der Genetik wurde daraus die **Synthetische Evolutionstheorie** (Evolution = Änderung von Allelfrequenzen). Für den MedAT sind Darwins vier Prinzipien, Selektionsarten und Fitness zentral.
+**Worum geht es?** **Natürliche Selektion** (Darwin): bessere Anpassung → mehr Nachkommen; **Synthetische Evolutionstheorie** verbindet Selektion mit Genetik (Allelfrequenzen). **Warum für den MedAT relevant?** Darwins Prinzipien, Selektionsarten (stabilisierend, gerichtet, disruptiv) und Fitness werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was ist natürliche Selektion?“; „Selektionsarten — wann welche?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Selektion abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Darwins vier Prinzipien**: Variation, Vererbung, Überproduktion, unterschiedlicher Fortpflanzungserfolg
@@ -2100,7 +2100,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       ],
       content: `## Einleitung
 
-**Biologischer Artbegriff** (Mayr): Eine Art = Populationen, die sich untereinander fortpflanzen können und von anderen **reproduktiv isoliert** sind. **Speziation** = Entstehung neuer Arten durch Isolationsmechanismen. Für den MedAT sind Artbegriff, prä-/postzygotische Isolation und Beispiele (Maultier!) prüfungsrelevant.
+**Worum geht es?** **Biologischer Artbegriff** (Mayr): Art = reproduktiv isolierte Populationen. **Speziation** durch prä- oder postzygotische Isolationsmechanismen. **Warum für den MedAT relevant?** Artbegriff, prä- vs. postzygotische Isolation und Beispiele (Maultier = hybrid, steril) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Biologischer Artbegriff?“; „Prä- vs. postzygotische Isolation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Artbegriff und Speziation abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Biologischer Artbegriff**: Fortpflanzungsgemeinschaft, reproduktive Isolation
@@ -2342,7 +2342,7 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
       ],
       content: `## Einleitung
 
-Vier **Evolutionsfaktoren** verändern Allelfrequenzen: **Mutation** (Rohstoff), **Selektion** (Anpassung), **Gendrift** (Zufall in kleinen Populationen), **Genfluss** (Austausch zwischen Populationen). Das **Hardy-Weinberg-Gleichgewicht** beschreibt den Zustand ohne Evolution; Abweichungen zeigen, welcher Faktor wirkt. Für den MedAT sind die vier Faktoren und Hardy-Weinberg prüfungsrelevant.
+**Worum geht es?** **Evolutionsfaktoren**: Mutation, Selektion, **Gendrift**, **Genfluss**. **Hardy-Weinberg** = Gleichgewicht ohne Evolution (p²+2pq+q²=1). **Warum für den MedAT relevant?** Die vier Faktoren und Hardy-Weinberg (Abweichungen interpretieren) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Welche Faktoren ändern Allelfrequenzen?“; „Hardy-Weinberg — wann gilt es?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Evolutionsfaktoren abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Mutation, Selektion, Gendrift, Genfluss** — was jede Kraft bewirkt
@@ -2574,7 +2574,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       ],
       content: `## Einleitung
 
-Der Mensch stammt **nicht** vom Schimpansen ab — beide haben einen gemeinsamen Vorfahren (vor ca. 6–7 Mio. Jahren). **Hominisation** = Entwicklung zum modernen Menschen; zuerst **Bipedie** (aufrechter Gang), dann Gehirnvergrößerung. Für den MedAT sind Homininen, Hirnvolumina, Out-of-Africa und Neandertaler-Gene prüfungsrelevant.
+**Worum geht es?** Mensch und Schimpanse haben einen **gemeinsamen Vorfahren** (ca. 6–7 Mio. Jahre). **Hominisation**: Bipedie zuerst, dann Gehirnvergrößerung. **Warum für den MedAT relevant?** Homininen, Out-of-Africa, Neandertaler-Gene und Bipedie werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Stammt der Mensch vom Schimpansen ab?“; „Hominisation — was zuerst?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Stammesgeschichte des Menschen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Bipedie vor Gehirnvergrößerung** (Australopithecus vs. Homo)

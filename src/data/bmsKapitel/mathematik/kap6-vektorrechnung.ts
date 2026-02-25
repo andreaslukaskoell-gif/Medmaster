@@ -29,7 +29,7 @@ export const mathKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Blutfluss, EKG-Herzachse, Kräfte und Richtungen in der Biomechanik sind **gerichtete Größen** (Vektoren). Für den MedAT sind Vektordefinition, Addition, Skalarmultiplikation, Betrag und Einheitsvektor prüfungsrelevant. Vektoren werden in **Algebra & Geometrie** (ma-3-04) eingeführt; hier vertiefen wir Rechenregeln, Skalar- und Kreuzprodukt sowie Anwendungen.
+**Worum geht es?** **Vektoren** (Betrag + Richtung): Addition, Skalarmultiplikation, **Betrag** |v| = √(v₁²+v₂²+v₃²), **Einheitsvektor** ê = v/|v|, Linearkombination. **Warum für den MedAT relevant?** Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor (Blutfluss, EKG-Achse, Kräfte) werden geprüft. **Welche Fragen werden beantwortet?** „Betrag |v|?“; „Einheitsvektor?“; „Addition komponentenweise?“; „Verbindungsvektor AB?“; „linear unabhängig?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Vektoren (Rechenregeln) abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Vektor** vs. **Skalar:** Vektor = Betrag + Richtung (Pfeil); Skalar = reine Zahl
@@ -352,9 +352,9 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
       ],
       content: `## Einleitung
 
-**Skalarprodukt** (a×b = |a||b|cos θ) → Winkel, Orthogonalität; **Kreuzprodukt** → Drehmoment, senkrechte Richtung. Für den MedAT sind Skalarprodukt, Kreuzprodukt, Projektion prüfungsrelevant.
+**Worum geht es?** **Skalarprodukt** a·b = |a||b|cos θ (Winkel, Orthogonalität); **Kreuzprodukt** a×b (Rechte-Hand-Regel, Betrag = Fläche); **Projektion**. **Warum für den MedAT relevant?** Skalarprodukt, Kreuzprodukt, Projektion (Kräfte, Arbeit, Drehmoment) werden geprüft. **Welche Fragen werden beantwortet?** „Skalarprodukt = 0?“; „Kreuzprodukt — Vektor oder Skalar?“; „Winkel aus Skalarprodukt?“; „Betrag Kreuzprodukt?“; „Projektion Formel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Skalar- und Kreuzprodukt abgedeckt.
 
-**In diesem Kapitel lernst du:** **Skalarprodukt** (Winkel, Orthogonalität); **Kreuzprodukt** (Rechte-Hand, Betrag = Fläche); **Projektion**. **Kontext:** Kräfte, Arbeit, Drehmoment.
+**In diesem Kapitel lernst du:** **Skalarprodukt** (Winkel, Orthogonalität); **Kreuzprodukt** (Rechte-Hand, Betrag = Fläche); **Projektion**.
 
 ---
 
@@ -710,9 +710,9 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
       ],
       content: `## Einleitung
 
-**Geraden** (r = r₀ + t×d), **Ebenen** (n×(r−r₀)=0), **Matrizen** (LGS, Gauß). CT, Radiologie. Für den MedAT sind Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse prüfungsrelevant.
+**Worum geht es?** **Geraden im Raum** r = r₀ + t·d; **Ebenen** (Parameterform, Normalenform n·(r−r₀)=0); **LGS** (Gauß), **Determinante**, **2×2-Inverse**. **Warum für den MedAT relevant?** Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse (CT, Radiologie) werden geprüft. **Welche Fragen werden beantwortet?** „Gerade Parameterform?“; „Ebene Normalenform?“; „Gauß — Ziel?“; „Determinante 2×2?“; „Inverse 2×2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Geraden, Ebenen und Matrizen abgedeckt.
 
-**In diesem Kapitel lernst du:** **Gerade im Raum**; **Ebene** (Parameter-, Normalenform); **LGS** (Gauß); **Determinante**; **2×2-Inverse**. **Kontext:** Von 3D-Geometrie zu Bildgebung.
+**In diesem Kapitel lernst du:** **Gerade im Raum**; **Ebene** (Parameter-, Normalenform); **LGS** (Gauß); **Determinante**; **2×2-Inverse**.
 
 ---
 
@@ -1081,9 +1081,9 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
       ],
       content: `## Einleitung
 
-**Abstände** im 3D: Punkt–Punkt, Punkt–Gerade, Punkt–Ebene; Bestrahlungsplanung. Für den MedAT sind euklidischer Abstand, Lotfußpunkt, Hessesche Normalform, Schnittwinkel prüfungsrelevant.
+**Worum geht es?** **Abstände im 3D**: Punkt–Punkt (euklidisch), **Punkt–Gerade** (Lotfußpunkt), **Punkt–Ebene** (Hessesche Normalform); **Schnittwinkel**. **Warum für den MedAT relevant?** Euklidischer Abstand, Lotfußpunkt, Hessesche Normalform, Schnittwinkel (Bestrahlungsplanung) werden geprüft. **Welche Fragen werden beantwortet?** „Abstand Punkt–Ebene?“; „Lotfußpunkt?“; „Hessesche Normalform?“; „Schnittwinkel Gerade–Ebene?“; „Punkt–Punkt Abstand?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Abständen im Raum abgedeckt.
 
-**In diesem Kapitel lernst du:** **Punkt–Punkt**; **Punkt–Gerade** (Lotfußpunkt); **Punkt–Ebene** (Hessesche); **Schnittwinkel**. **Kontext:** Von Anatomie zur Therapieplanung.
+**In diesem Kapitel lernst du:** **Punkt–Punkt**; **Punkt–Gerade** (Lotfußpunkt); **Punkt–Ebene** (Hessesche); **Schnittwinkel**.
 
 ---
 

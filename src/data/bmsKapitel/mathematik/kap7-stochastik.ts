@@ -24,7 +24,7 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
-**Wozu brauche ich das im MedAT?** Genetik (Allelkombinationen), klinische Studien (Randomisierung) und diagnostische Tests (Vierfeldertafel) bauen auf **Kombinatorik** auf — systematisches Zählen von Anordnungen und Auswahlen. Für den MedAT sind Permutation, Variation, Kombination und Binomialkoeffizient prüfungsrelevant.
+**Worum geht es?** **Kombinatorik**: systematisches Zählen — **Permutation** (n!), **Variation** (k aus n mit Reihenfolge), **Kombination** (n über k), Binomialkoeffizient. **Warum für den MedAT relevant?** Permutation, Variation, Kombination (Genetik, Vierfeldertafel, Studien) werden geprüft. **Welche Fragen werden beantwortet?** „Reihenfolge relevant — Variation oder Kombination?“; „(n über k) =?“; „n! wann?“; „mit/ohne Wiederholung?“; „5 über 2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Kombinatorik abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Zwei Fragen zuerst:** Reihenfolge relevant? (geordnet/ungeordnet) — Mit/ohne Wiederholung?
@@ -341,9 +341,9 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
       ],
       content: `## Einleitung
 
-**Wahrscheinlichkeit** P(A) ∈ [0,1]: Erbkrankheiten, Tests, Nebenwirkungen. Für den MedAT sind Laplace, Additionssatz, Komplementregel, Unabhängigkeit, Binomialverteilung prüfungsrelevant.
+**Worum geht es?** **Wahrscheinlichkeit** P(A) ∈ [0,1]: **Laplace** P(A)=|A|/|Ω|, **Additionssatz**, **Komplementregel**, **Unabhängigkeit**, **Binomialverteilung**. **Warum für den MedAT relevant?** Laplace, Additionssatz, Komplementregel, Unabhängigkeit, Binomialverteilung (Erbkrankheiten, Tests) werden geprüft. **Welche Fragen werden beantwortet?** „Laplace-Formel?“; „P(nicht A)?“; „Unabhängig — P(A∩B)=?“; „Binomial n, p?“; „Baumdiagramm?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wahrscheinlichkeit abgedeckt.
 
-**In diesem Kapitel lernst du:** **Laplace** P(A)=|A|/|Ω|; **Additionssatz**; **Komplementregel**; **Unabhängigkeit**; **Binomialverteilung**; Baumdiagramm. **Kontext:** Von Mendel bis Testinterpretation.
+**In diesem Kapitel lernst du:** **Laplace** P(A)=|A|/|Ω|; **Additionssatz**; **Komplementregel**; **Unabhängigkeit**; **Binomialverteilung**; Baumdiagramm.
 
 ---
 
@@ -642,9 +642,9 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
       ],
       content: `## Einleitung
 
-**Bayes** = Umrechnung von P(Test|Krank) zu P(Krank|Test); bei niedriger Prävalenz viele falsch-positive Ergebnisse. Für den MedAT sind bedingte Wahrscheinlichkeit, Satz von Bayes, totale Wahrscheinlichkeit, Vierfeldertafel prüfungsrelevant.
+**Worum geht es?** **Bedingte Wahrscheinlichkeit** P(A|B) = P(A∩B)/P(B); **Satz von Bayes** (P(Krank|Test) aus P(Test|Krank)); **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV. **Warum für den MedAT relevant?** Bedingte Wahrscheinlichkeit, Bayes, totale Wahrscheinlichkeit, Vierfeldertafel (Testinterpretation, Screening) werden geprüft. **Welche Fragen werden beantwortet?** „P(A|B) =?“; „Bayes — wozu?“; „PPV aus Vierfeldertafel?“; „Prävalenz niedrig — viele falsch positiv?“; „totale Wahrscheinlichkeit?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu bedingter Wahrscheinlichkeit und Bayes abgedeckt.
 
-**In diesem Kapitel lernst du:** **P(A|B)** = P(A∩B)/P(B); **Satz von Bayes**; **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV. **Kontext:** Testinterpretation, Screening, seltene Erkrankungen.
+**In diesem Kapitel lernst du:** **P(A|B)** = P(A∩B)/P(B); **Satz von Bayes**; **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV.
 
 ---
 
@@ -931,9 +931,9 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
       ],
       content: `## Einleitung
 
-**Statistik** = Lagemaße (Mittelwert, Median), Streumaße (σ, Varianz), **Normalverteilung** (68-95-99,7), **Sensitivität/Spezifität**. Für den MedAT sind Normalverteilung, 68-95-99,7-Regel, Lagemaße, Streumaße, Sens/Spez, p-Wert prüfungsrelevant.
+**Worum geht es?** **Lagemaße** (Mittelwert, Median, Modus), **Streumaße** (Varianz σ², Standardabweichung σ); **Normalverteilung** (μ, σ), **68-95-99,7-Regel**; **Sensitivität/Spezifität**; p-Wert. **Warum für den MedAT relevant?** Normalverteilung, 68-95-99,7, Lagemaße, Streumaße, Sens/Spez, p-Wert werden geprüft. **Welche Fragen werden beantwortet?** „Mittelwert vs. Median?“; „68-95-99,7 — was?“; „Sensitivität =?“; „Varianz Formel?“; „p-Wert < 0,05?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Statistik abgedeckt.
 
-**In diesem Kapitel lernst du:** **Mittelwert**, **Median**, **Modus**; **Varianz**, **Standardabweichung**; **Normalverteilung** (μ, σ); **68-95-99,7**; **Sensitivität/Spezifität**; p-Wert. **Kontext:** Von Laborwerten zur Diagnostik.
+**In diesem Kapitel lernst du:** **Mittelwert**, **Median**, **Modus**; **Varianz**, **Standardabweichung**; **Normalverteilung** (μ, σ); **68-95-99,7**; **Sensitivität/Spezifität**; p-Wert.
 
 ---
 

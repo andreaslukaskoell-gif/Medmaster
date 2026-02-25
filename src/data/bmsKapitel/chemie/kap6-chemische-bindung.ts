@@ -27,9 +27,11 @@ export const chemKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-**Ionenbindung** = elektrostatische Anziehung nach Elektronenübertragung (Metall → Nichtmetall); Edelgaskonfiguration. Für den MedAT sind Gitterenergie, Born-Haber, Eigenschaften (Schmelzpunkt, Leitfähigkeit) und klinische Salze prüfungsrelevant.
+**Worum geht es?** Die **Ionenbindung** entsteht durch vollständige **Elektronenübertragung** vom Metall auf das Nichtmetall; beide erreichen Edelgaskonfiguration. **Gitterenergie** (Coulomb: E ∝ q₁·q₂/r), **Born-Haber-Kreisprozess** und die Eigenschaften (hoher Schmelzpunkt, spröde, leitfähig geschmolzen/gelöst) sind zentral. **Warum für den MedAT relevant?** Gitterenergie, Schmelzpunkt-Vergleich (MgO vs. NaCl), Leitfähigkeit fest vs. Lösung und klinische Salze (NaCl, KCl, Ca²⁺) werden geprüft. **Welche Fragen werden beantwortet?** „Warum hat MgO einen höheren Schmelzpunkt als NaCl?“; „Warum leitet NaCl-Kristall keinen Strom?“; „Welcher Schritt im Born-Haber ist am stärksten exotherm?“; „Koordinationszahl NaCl-Gitter?“; „Löslichkeit — Gitterenergie vs. Hydratation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Ionenbindung abgedeckt.
 
-**In diesem Kapitel lernst du:** **Ionenbindung** (ΔEN > 1,7); **Gitterenergie**; **Born-Haber-Kreisprozess**; Eigenschaften (hoher Schmp., spröde, leitfähig geschmolzen/gelöst). **Kontext:** Salze in Körper und Labor; von der Bildung zur Stabilität.
+**In diesem Kapitel lernst du:**
+- **Ionenbindung** (ΔEN > 1,7); **Gitterenergie**; **Born-Haber-Kreisprozess**; Eigenschaften (hoher Schmp., spröde, leitfähig geschmolzen/gelöst)
+- **Kontext:** Salze in Körper und Labor; von der Bildung zur Stabilität
 
 ---
 
@@ -375,9 +377,11 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Einleitung
 
-**Kovalente Bindung** = Elektronenpaar wird geteilt (nicht übertragen); definierte Geometrie und Polarität. Für den MedAT sind **Hybridisierung** (sp³, sp², sp), **VSEPR**, Polarität, σ- und π-Bindungen prüfungsrelevant.
+**Worum geht es?** Die **kovalente Bindung** entsteht durch **gemeinsame Nutzung von Elektronenpaaren** (nicht Übertragung); sie liefert definierte Geometrie und Polarität. **VSEPR** sagt die Molekülgestalt vorher; **Hybridisierung** (sp³, sp², sp) erklärt Bindungswinkel; **σ-** und **π-Bindungen** unterscheiden Einfach- von Mehrfachbindungen. **Warum für den MedAT relevant?** Hybridisierung, VSEPR, Polarität (z. B. H₂O polar, CO₂ unpolar), polare vs. unpolare Bindungen und „Welche Verbindung ist kovalent?“ (z. B. H₂O₂) werden geprüft. **Welche Fragen werden beantwortet?** „Welche Hybridisierung hat Methan?“; „Warum ist CO₂ unpolar?“; „σ- vs. π-Bindung?“; „VSEPR H₂O?“; „Polarste Bindung — ΔEN?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur kovalenten Bindung abgedeckt.
 
-**In diesem Kapitel lernst du:** **Kovalente Bindung** (Elektronenteilung, ΔEN < 1,7); **VSEPR** (Geometrie); **Hybridisierung** sp³/sp²/sp; **σ-** und **π-Bindungen**; Polarität. **Kontext:** Molekülstruktur und -funktion; Enzyme, Wirkstoffe.
+**In diesem Kapitel lernst du:**
+- **Kovalente Bindung** (Elektronenteilung, ΔEN < 1,7); **VSEPR** (Geometrie); **Hybridisierung** sp³/sp²/sp; **σ-** und **π-Bindungen**; Polarität
+- **Kontext:** Molekülstruktur und -funktion; Enzyme, Wirkstoffe
 
 ---
 
@@ -749,9 +753,11 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Einleitung
 
-**Intermolekulare Kräfte** (zwischen Molekülen) sind schwächer als Atombindungen, bestimmen aber Siedepunkt, Löslichkeit und Biomolekül-Struktur. Für den MedAT sind H-Brücken, Van-der-Waals, Dipol-Dipol, Dichteanomalie Wasser und hydrophober Effekt prüfungsrelevant.
+**Worum geht es?** **Intermolekulare Kräfte** (zwischen Molekülen) sind schwächer als Atombindungen, bestimmen aber Siedepunkt, Löslichkeit und Biomolekül-Struktur: **London-Dispersion** (alle Moleküle), **Dipol-Dipol** (polare Moleküle), **Wasserstoffbrücken** (X–H···Y mit N, O, F) und **Metallbindung** (Elektronengas). **Warum für den MedAT relevant?** H-Brücken, Van-der-Waals, Dichteanomalie Wasser (4 °C), hydrophober Effekt, DNA-Basenpaarung (A–T 2, G–C 3) und Metall-Eigenschaften (Leitfähigkeit, Duktilität) werden geprüft. **Welche Fragen werden beantwortet?** „Stärkeranking der Wechselwirkungen?“; „Warum nur N, O, F für H-Brücken?“; „Warum siedet H₂O bei 100 °C, H₂S bei −60 °C?“; „Metallbindung — warum leitfähig?“; „Brownsche Bewegung — was ist das?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Van-der-Waals, Wasserstoffbrücken und Metallbindung abgedeckt.
 
-**In diesem Kapitel lernst du:** **London**, **Dipol-Dipol**, **Wasserstoffbrücken** (X–H···Y, N/O/F); Stärkeranking; **hydrophober Effekt**; Wasser (Anomalie 4 °C). **Kontext:** DNA-Doppelhelix, Proteinfaltung, Löslichkeit.
+**In diesem Kapitel lernst du:**
+- **London**, **Dipol-Dipol**, **Wasserstoffbrücken** (X–H···Y, N/O/F); Stärkeranking; **hydrophober Effekt**; Wasser (Anomalie 4 °C); **Metallbindung** (Elektronengas)
+- **Kontext:** DNA-Doppelhelix, Proteinfaltung, Löslichkeit
 
 ---
 
@@ -1140,9 +1146,11 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Einleitung
 
-**Biomoleküle**: **kovalente** Gerüste (Peptidbindung, glycosidisch, Ester, Disulfid) + **nichtkovalente** Wechselwirkungen (H-Brücken, hydrophob, Salzbrücken) für Faltung und Bindung. Für den MedAT sind Peptid-, glycosidische Bindung, Ester und nichtkovalente Wechselwirkungen prüfungsrelevant.
+**Worum geht es?** **Biomoleküle** bauen auf **kovalenten** Gerüsten (Peptidbindung, glycosidische Bindung, Ester, Disulfidbrücke) und **nichtkovalenten** Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücken) für Faltung und Bindung. **Warum für den MedAT relevant?** Peptidbindung (planar, sp²), α- vs. β-glycosidische Bindung (Stärke verdaulich, Cellulose unverdaulich), Disulfidbrücken (Cys–S–S–Cys), Phosphodiesterbindung (DNA/RNA) und Denaturierung vs. Hydrolyse werden geprüft. **Welche Fragen werden beantwortet?** „Peptidbindung — planar?“; „Warum Cellulose unverdaulich?“; „Disulfidbrücke — welche Aminosäure?“; „Denaturierung — welche Bindungen bleiben?“; „Hydrophober Effekt — treibt was?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu chemischen Bindungen in biologischen Molekülen abgedeckt.
 
-**In diesem Kapitel lernst du:** **Peptidbindung** (C–N); **glycosidische Bindung**; **Ester**, **Disulfidbrücke**; **nichtkovalent**: H-Brücken, hydrophob, Salzbrücken; Rolle in Proteinen/DNA. **Kontext:** Von der Bindung zur Struktur; Enzyme, DNA, Membranen.
+**In diesem Kapitel lernst du:**
+- **Peptidbindung** (C–N); **glycosidische Bindung**; **Ester**, **Disulfidbrücke**; **nichtkovalent**: H-Brücken, hydrophob, Salzbrücken; Rolle in Proteinen/DNA
+- **Kontext:** Von der Bindung zur Struktur; Enzyme, DNA, Membranen
 
 ---
 

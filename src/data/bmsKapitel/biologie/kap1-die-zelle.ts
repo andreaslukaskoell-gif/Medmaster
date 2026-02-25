@@ -28,7 +28,7 @@ export const bioKap1: Kapitel = {
       ],
       content: `## Einleitung
 
-Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall zwischen belebt und unbelebt? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. Für die Medizin ist das zentral: Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (die aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur oder pH). Dieses Kapitel legt das Fundament für alle weiteren Zellthemen: Ohne klare Abgrenzung von „Leben“ sind Membran, Stoffwechsel und Zellteilung nicht einzuordnen.
+**Worum geht es?** Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. **Warum ist das für den MedAT relevant?** Für die Medizin ist das zentral: Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur, pH). **Welche Arten von Fragen werden damit beantwortet?** Typische BMS-Fragen: „Welche Kennzeichen des Lebens?“; „Warum sind Viren keine Lebewesen?“; „Negativ vs. positiv Rückkopplung?“; „Was ist Emergenz?“ Dieses Kapitel legt das Fundament für alle weiteren Zellthemen.
 
 **In diesem Kapitel lernst du:**
 - die **sieben Kennzeichen des Lebens** (StReForWaEvoBeHo) und warum kein einzelnes allein reicht
@@ -185,11 +185,13 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 ## Zusammenfassung (ultrakompakt)
 
 - **Sieben Kennzeichen** (StReForWaEvoBeHo): Erst ihre Kombination definiert Leben — kein einzelnes reicht
-- **Homöostase** = aktive Aufrechterhaltung innerer Gleichgewichte durch **negative Rückkopplung** (Effekt wirkt dem Auslöser entgegen; Beispiel: Blutzucker-Insulin-Regelkreis)
-- **Positive Rückkopplung** verstärkt: Blutgerinnung, Wehen, Aktionspotential — sinnvoll für schnelle Alles-oder-Nichts-Reaktionen
+- **Homöostase** = aktive Aufrechterhaltung innerer Gleichgewichte durch **negative Rückkopplung** (Effekt wirkt dem Auslöser entgegen)
+- **Negative Rückkopplung**: Blutzucker-Insulin, Temperatur-Regelkreis — stabilisiert den Sollwert
+- **Positive Rückkopplung** verstärkt den Reiz: Blutgerinnung, Wehen, Aktionspotential — Alles-oder-Nichts-Reaktionen
 - **Viren = Grenzfall**: Fortpflanzung + Evolution ✓, aber kein Stoffwechsel + keine Zellstruktur ✗ → keine Antibiotika wirksam
 - **Emergenz**: Neue Eigenschaften auf höherer Ebene (Bewusstsein, Immunschutz) — nicht aus Teilen vorhersagbar
-- **Klinisch**: Diabetes mellitus Typ 2 = Homöostasestörung des Blutzuckerregelkreises (Insulinresistenz)`,
+- **Hierarchie**: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organismus
+- **Klinisch**: Diabetes mellitus Typ 2 = Homöostasestörung (Insulinresistenz); Kristallisation ≠ biologisches Wachstum`,
       lernziele: [
         "Die sieben Kennzeichen des Lebens benennen, erläutern und mit klinischen Beispielen verknüpfen",
         "Den Begriff Emergenz im Kontext der Systembiologie präzise erklären und Beispiele nennen",
@@ -331,7 +333,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       ],
       content: `## Einleitung
 
-Nach den Kennzeichen des Lebens stellt sich die Frage: Welche **Baupläne** haben Lebewesen? Penicillin tötet Bakterien, schadet unserem Körper aber nicht. Chloramphenicol hemmt Ribosomen in Bakterien, nicht in unseren Zellen. Das wird möglich durch einen der fundamentalsten Unterschiede der Biologie: **Prokaryoten** (Bakterien, Archäen) haben keinen membranumschlossenen Zellkern, **Eukaryoten** (Pflanzen, Tiere, Pilze, unsere Zellen) schon. Aus diesen Unterschieden folgen Gram-Färbung, 70S- vs. 80S-Ribosomen und die gezielte Wirkung von Antibiotika — und deren Gefahren, wenn man sie falsch einsetzt. Dieses Kapitel baut direkt auf „Kennzeichen des Lebens“ auf und führt in die Zellstruktur ein, die in den folgenden Kapiteln (Membran, Organellen, Zellkern, Zellteilung) vertieft wird.
+**Worum geht es?** Welche **Baupläne** haben Lebewesen? **Prokaryoten** (Bakterien, Archäen) haben keinen membranumschlossenen Zellkern, **Eukaryoten** (Pflanzen, Tiere, Pilze, unsere Zellen) schon — daraus folgen Gram-Färbung, 70S- vs. 80S-Ribosomen und die gezielte Wirkung von Antibiotika. **Warum für den MedAT relevant?** Penicillin und Chloramphenicol wirken über bakterielle Strukturen (Peptidoglykan, 70S-Ribosomen); Endosymbiontentheorie und Archäen werden häufig geprüft. **Welche Fragen werden beantwortet?** „Was unterscheidet Prokaryoten von Eukaryoten?“; „Gram-positiv vs. Gram-negativ?“; „Welche Ribosomengröße?“; „Welche Belege für Endosymbiontentheorie?“; „Warum wirkt Penicillin nicht gegen Archäen?“ Mit diesem Kapitel kannst du alle typischen BMS-Fragen zu Prokaryoten/Eukaryoten und Antibiotika sicher beantworten.
 
 **In diesem Kapitel lernst du:**
 - den **Grundunterschied** Prokaryot vs. Eukaryot (Kern, Ribosomen, Zellteilung) und warum Antibiotika gezielt wirken können
@@ -641,7 +643,7 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
       ],
       content: `## Einleitung
 
-Die **Zellmembran** ist die äußere Hülle jeder Zelle — die Grenze zwischen Innen und Außen. Sie ist keine starre Mauer, sondern eine **selektive, dynamische Barriere**: Sie entscheidet, was ein- und austritt, vermittelt Signale und trägt die **Identität** der Zelle. Defekte haben direkte klinische Folgen — z. B. Mukoviszidose durch einen defekten Chloridkanal. Beschrieben wird der Aufbau durch das **Flüssig-Mosaik-Modell** (Singer & Nicolson, 1972). **Wie** Stoffe die Membran konkret passieren (passiv oder aktiv), kommt im nächsten Unterkapitel „Membrantransport“.
+**Worum geht es?** Die **Zellmembran** ist die äußere Hülle jeder Zelle — eine **selektive, dynamische Barriere**, die Ein- und Austritt steuert, Signale vermittelt und die **Identität** der Zelle trägt. **Warum für den MedAT relevant?** Defekte haben direkte klinische Folgen (z. B. Mukoviszidose durch CFTR). Beschrieben wird der Aufbau durch das **Flüssig-Mosaik-Modell** (Singer & Nicolson, 1972). **Welche Fragen werden beantwortet?** Typische BMS-Fragen: „Was beschreibt das Flüssig-Mosaik-Modell?“; „Warum brauchen Ionen Kanäle?“; „Cholesterin-Funktion?“; „Integral vs. peripher?“; „Was ist CFTR?“ Wie Stoffe die Membran konkret passieren (passiv/aktiv), kommt im nächsten UK „Membrantransport“.
 
 **In diesem Kapitel lernst du:**
 - woraus die Membran aufgebaut ist (Phospholipid-Doppelschicht, **Bilayer**)
@@ -786,11 +788,13 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
 ## Zusammenfassung (ultrakompakt)
 
 - **Flüssig-Mosaik:** Fluide Phospholipid-Doppelschicht, Proteine lateral beweglich; Phospholipide = amphiphil → Bilayer
-- **Barriere:** O₂/CO₂/Steroide frei; Ionen und große polare Moleküle über Proteine
-- **Fluidität:** Cholesterin = bidirektionaler Puffer; ungesättigte Fettsäuren ↑, gesättigte ↓ Fluidität
-- **Proteine:** integral = durch die Membran (Kanäle, Transporter, Rezeptoren, Pumpen); peripher = an Oberfläche
-- **Glykokalix:** Zuckerschicht außen; Zellerkennung, Schutz; Blutgruppenantigene sind Kohlenhydratstrukturen der Glykokalix (Details: Kapitel Blut/Immunologie)
-- **CFTR:** Cl⁻-Kanal; ΔF508 → Fehlfaltung → Mukoviszidose`,
+- **Barriere:** O₂/CO₂/Steroide frei (kein Transportprotein!); Ionen und große polare Moleküle brauchen Kanäle/Transporter
+- **Fluidität:** Cholesterin = bidirektionaler Puffer (Wärme/Kälte); ungesättigte Fettsäuren ↑, gesättigte ↓ Fluidität
+- **Proteine:** integral = durch die Membran (Kanäle, Transporter, Rezeptoren, Pumpen); peripher = nur an Oberfläche
+- **Glykokalix:** Zuckerschicht außen; Zellerkennung, Schutz; Blutgruppenantigene = Kohlenhydratstrukturen
+- **CFTR:** Cl⁻-Kanal; ΔF508 = Fehlfaltung → Mukoviszidose (visköser Schleim)
+- **Typische Fallen:** O₂ braucht kein Protein; Cholesterin ≠ Hauptbestandteil; ungesättigt ↑ Fluidität (nicht vertauschen)
+- **PS-Flip:** Phosphatidylserin nach außen = Apoptose-Signal („Eat me“)`,
       lernziele: [
         "Das Flüssig-Mosaik-Modell mit allen Komponenten (Phospholipide, Cholesterin, Membranproteine, Glykokalix) erklären",
         "Die Rolle von Cholesterin und Fettsäurezusammensetzung für die Membranfluidität beschreiben",
@@ -933,7 +937,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
       ],
       content: `## Einleitung
 
-Im vorherigen Unterkapitel ging es um **Aufbau und Barriere** der Zellmembran — woraus sie besteht und warum O₂ frei diffundiert, Ionen aber Kanäle brauchen. Hier steht die Frage: **Wie** kommen Stoffe konkret durch? Grundunterscheidung: **Passiver Transport** folgt dem **Konzentrationsgradienten** (ein Gefälle von hoher zu niedriger Konzentration; kein ATP nötig). **Aktiver Transport** arbeitet gegen den Gradienten — mit ATP (primär aktiv) oder über einen anderen Gradienten (sekundär aktiv). Für den MedAT zentral: Osmose und Tonizität (hypoton → Hämolyse, hyperton → Krenation) sowie die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein pro ATP). Ohne dieses Kapitel lassen sich Infusionstherapie, Herzglykoside und SGLT2-Hemmer nicht einordnen.
+**Worum geht es?** Im vorherigen UK ging es um **Aufbau und Barriere** der Zellmembran. Hier: **Wie** kommen Stoffe konkret durch? **Passiver Transport** folgt dem Konzentrationsgradienten (kein ATP); **aktiver Transport** arbeitet gegen den Gradienten (primär mit ATP, sekundär über anderen Gradienten). **Warum für den MedAT relevant?** Osmose und Tonizität (hypoton → Hämolyse, hyperton → Krenation), Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein pro ATP), Infusionstherapie, Herzglykoside, SGLT2-Hemmer. **Welche Fragen werden beantwortet?** „Was ist Tonizität?“; „Warum hämolysieren Erythrozyten in destilliertem Wasser?“; „Wie funktioniert die Na⁺/K⁺-ATPase?“; „Primär vs. sekundär aktiv?“.
 
 **In diesem Kapitel lernst du:**
 - die drei Formen passiven Transports (einfache Diffusion, erleichterte Diffusion, Osmose) und **Tonizität**
@@ -1081,7 +1085,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       title: "Zellorganellen — Funktion und medizinische Relevanz",
       content: `## Einleitung
 
-Nach Membran und Transport stellt sich die Frage: **Wo** werden Proteine hergestellt, sortiert und abgebaut? **Wo** entsteht das meiste ATP? Eukaryotische Zellen sind durch **Kompartimentierung** (Aufteilung in abgegrenzte Räume mit eigenen Aufgaben und Enzymen) in spezialisierte **Organellen** strukturiert — raues ER (rER), Golgi, Mitochondrien, Lysosomen, Peroxisomen, Proteasomen. Jedes Organell hat eine definierte Aufgabe und ein eigenes Milieu. Ohne diese Arbeitsteilung wären Komplexität des Lebens und Medizin undenkbar. Dieses Kapitel baut auf Prokaryoten vs. Eukaryoten (nur Eukaryoten haben diese Organellen) und auf die Zellmembran (Vesikeltransport) auf. Für den MedAT zentral: sekretorischer Weg (rER → Golgi → Lysosom), M6P-Targeting, Mitochondrien (Struktur, Atmungskette, Endosymbiontentheorie), Lysosomen (pH, Speicherkrankheiten), Peroxisomen (VLCFA, Katalase).
+**Worum geht es?** **Wo** werden Proteine hergestellt, sortiert und abgebaut? **Wo** entsteht das meiste ATP? Eukaryotische Zellen sind durch **Kompartimentierung** in spezialisierte **Organellen** strukturiert — rER, Golgi, Mitochondrien, Lysosomen, Peroxisomen, Proteasomen. **Warum für den MedAT relevant?** Sekretorischer Weg (rER → Golgi → Lysosom), M6P-Targeting, Mitochondrien (Cristae, Atmungskette, Endosymbiontentheorie), Lysosomen (pH, Speicherkrankheiten), Peroxisomen (VLCFA, Katalase) sind Standardthemen. **Welche Fragen werden beantwortet?** „Sekretorischer Weg — welche Reihenfolge?“; „Was ist M6P-Targeting?“; „Wo sitzt die Atmungskette?“; „Welche lysosomale Speicherkrankheit?“; „Peroxisomen — welche Funktion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Organellen abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **sekretorischen Weg** (rER → Golgi → Lysosom) und **M6P-Targeting** für lysosomale Enzyme
@@ -1395,7 +1399,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
       ],
       content: `## Einleitung
 
-Nach den Organellen steht die **Steuerzentrale** im Mittelpunkt: der **Zellkern**. Er bewahrt das Erbgut, kontrolliert, welche Gene wann aktiv sind, und reguliert über **Kernporen**, welche Moleküle ein- oder ausgeschleust werden. Die **räumliche Trennung** von Transkription (im Kern) und Translation (im Zytoplasma) ist ein eukaryotisches Alleinstellungsmerkmal und ermöglicht umfangreiche RNA-Prozessierung (Spleißen, 5′-Kappe, Poly-A-Schwanz). Ohne Zellkern-Kapitel bleiben Chromatin, Nukleosom und epigenetische Regulation unverständlich; zugleich ist der Kern die Brücke zu Zellteilung (Mitose/Meiose) und Energiestoffwechsel (Kern-genkodierte Atmungsketten-Proteine). Für den MedAT zentral: Kernhülle, Kernporen (freie Diffusion <40 kDa, NLS/NES für aktiven Transport), Chromatinverpackung (Nukleosom, Euchromatin/Heterochromatin), Nucleolus, Progeria (Lamin-Defekt).
+**Worum geht es?** Der **Zellkern** ist die Steuerzentrale: Er bewahrt das Erbgut, kontrolliert Genaktivität und reguliert über **Kernporen** den Molekülaustausch. **Räumliche Trennung** von Transkription (Kern) und Translation (Zytoplasma) ermöglicht RNA-Prozessierung (Spleißen, 5′-Kappe, Poly-A-Schwanz). **Warum für den MedAT relevant?** Kernporen (<40 kDa frei, NLS/NES), Chromatin (Nukleosom, Euchromatin/Heterochromatin), Nucleolus und Barr-Körper werden häufig geprüft. **Welche Fragen werden beantwortet?** „Kernporen — wer diffundiert frei?“; „Nukleosom — was ist das?“; „Euchromatin vs. Heterochromatin?“; „Was ist ein Barr-Körper?“; „Transkription wo, Translation wo?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Zellkern abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Kernhülle** und **Kernporen** (freie Diffusion <40 kDa, aktiver Transport mit NLS/NES)
@@ -1690,7 +1694,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
       ],
       content: `## Einleitung
 
-Nach Zellkern und Chromatin folgt die Frage: **Wie** werden Zellen vermehrt? Wachstum, Gewebeheilung und Blutbildung erfordern präzise Zellteilung. Zwei Typen existieren: **Mitose** (zwei genetisch identische Tochterzellen für Körperzellen) und **Meiose** (genetisch verschiedene Keimzellen für die Fortpflanzung). Fehler führen zu Chromosomenaberrationen (z. B. Trisomie 21) oder Krebs (Checkpoint-Defekte). Der **Zellzyklus** (G1 → S → G2 → M) ist streng kontrolliert; **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint) wirken als Sicherheitsschleusen. Dieses Kapitel baut direkt auf den Zellkern (Chromosomen, Centromer, Kinetochor) und auf Organellen (Zentrosom, Spindelapparat) auf. Für den MedAT zentral: Zellzyklus-Phasen, Checkpoints (Cycline/CDK, Rb, p53), Mitose-Phasen (Anaphase = Trennung der Schwesterchromatiden), Meiose I vs. II (Reduktion vs. Äquation), Crossing-over, Non-disjunction (Trisomie 21).
+**Worum geht es?** **Wie** werden Zellen vermehrt? **Mitose** erzeugt zwei genetisch identische Tochterzellen (Körperzellen), **Meiose** genetisch verschiedene Keimzellen (Fortpflanzung). Der **Zellzyklus** (G1 → S → G2 → M) und **Checkpoints** (G1/S, G2/M, Spindel) steuern die Teilung. **Warum für den MedAT relevant?** Zellzyklus-Reihenfolge, Mitose- vs. Meiose-Anaphase, Crossing-over (nur Prophase I), Non-disjunction (Trisomie 21) und Checkpoints (Rb, p53) sind Standardthemen. **Welche Fragen werden beantwortet?** „Zellzyklus — richtige Reihenfolge?“; „Anaphase Mitose vs. Anaphase I Meiose?“; „Wo findet Crossing-over statt?“; „Trisomie 21 — Ursache?“; „Was ist ein Bivalent?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Mitose/Meiose abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **Zellzyklus** (G1, S, G2, M) und **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint)
@@ -2006,7 +2010,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
       ],
       content: `## Einleitung
 
-Nach Organellen (Mitochondrien als Kraftwerk) und Zellteilung stellt sich die Frage: **Woher** kommt das ATP konkret? Jede Muskelkontraktion, jeder Herzschlag braucht **ATP** (Adenosintriphosphat). Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brückenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) — Bilanz ~30–32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto). Dieses Kapitel baut auf Zellorganellen (Mitochondrien-Struktur) und auf Grundlagen der Zelle auf. Klinisch relevant: Cyanid blockiert Komplex IV, Thiaminmangel schädigt den Brückenschritt (Wernicke), Laktatazidose bei Schock. Für den MedAT zentral: Glykolyse (Ort Zytoplasma, PFK-1, 2 ATP netto, 2 NADH), Brückenschritt (Pyruvat → Acetyl-CoA, Thiamin), Citratzyklus (Bilanz pro Acetyl-CoA), Atmungskette (Komplexe I–IV, O₂ als Endakzeptor, Cyanid), Chemiosmose, anaerober Stoffwechsel (Laktat).
+**Worum geht es?** Woher kommt das ATP konkret? Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brückenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) — Bilanz ~30–32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto). **Warum für den MedAT relevant?** Ort der Schritte, PFK-1, Cyanid (Komplex IV), Thiamin (Brückenschritt), Laktatazidose und ATP-Bilanzen sind Standardthemen. **Welche Arten von Fragen werden beantwortet?** „Wo findet Glykolyse/Citratzyklus/Atmungskette statt?“; „Welche Aussage ist richtig/falsch?“ (z. B. Glykolyse im Mitochondrium); „Was blockiert Cyanid?“; „Warum FADH₂ weniger ATP als NADH?“; „Rechenfrage: ATP pro Glucose?“; „Kombination: Welche Aussagen treffen zu?“ Mit diesem Kapitel kannst du alle typischen BMS-Fragen zum Energiestoffwechsel sicher beantworten.
 
 **In diesem Kapitel lernst du:**
 - **Glykolyse** (Zytoplasma, 1 Glucose → 2 Pyruvat, 2 ATP netto, PFK-1 als Schlüsselenzym)
@@ -2155,18 +2159,22 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 
 **Ergänzend vertiefend:** Einzelreaktionen Glykolyse/Citratzyklus, Gärung (Laktat, Ethanol), PDH-Cofaktoren.
 
-**Häufige Fragen:**
+**Häufige Prüfungsfragen (typische BMS-Formulierungen):**
 - "Wo findet Glykolyse statt?" → Zytoplasma (nicht Mitochondrien!)
 - "Was ist der finale Elektronenakzeptor der Atmungskette?" → O₂ (Wasser entsteht)
-- "Warum stirbt man an Cyanidvergiftung?" → Komplex IV blockiert → keine Atmungskette → kein ATP → Zelluntergang
+- "Warum stirbt man an Cyanidvergiftung trotz normaler O₂-Sättigung?" → Komplex IV blockiert → O₂ kann nicht verwertet werden → keine Atmungskette → kein ATP
 - "Was ist der Unterschied zwischen Substratkettenphosphorylierung und oxidativer Phosphorylierung?" → Substrat (direkt, ATP aus Glykolyse/Citratzyklus); oxidativ (indirekt, via Protonengradient, ATP-Synthase)
+- "Welches Enzym ist das wichtigste Regulationsenzym der Glykolyse?" → PFK-1 (ATP hemmt, AMP aktiviert)
+- "Warum liefert FADH₂ weniger ATP als NADH?" → FADH₂ speist Komplex II ein (pumpt keine H⁺) → geringerer Protonengradient
+- "Wo entsteht Laktat?" → Im Zytoplasma (Laktat-Dehydrogenase); Pyruvat → Laktat bei Sauerstoffmangel
 
 **Typische Prüfungsfallen / Verwechslungen:**
-- Glykolyse findet im Zytoplasma statt (nicht im Mitochondrium!)
-- Citratzyklus und Atmungskette sind in Mitochondrien, aber in verschiedenen Kompartimenten: Citratzyklus = Matrix, Atmungskette = innere Membran
-- FADH₂ liefert weniger ATP als NADH (weil es Komplex II eingibt, der keine H⁺ pumpt)
-- "30–32 ATP" ist die moderne Zahl (alte Bücher: 36–38 ATP)
-- Succinat-Dehydrogenase = Komplex II der Atmungskette UND Citratzyklus-Enzym (Verbindung!)
+- Glykolyse findet im **Zytoplasma** statt (nicht im Mitochondrium!) — häufig als falsche Aussage in „Welche Aussage ist richtig?“.
+- Citratzyklus = **Matrix**; Atmungskette = **innere Membran** — beides Mitochondrien, aber unterschiedliche Kompartimente.
+- FADH₂ liefert weniger ATP als NADH (Komplex II pumpt keine Protonen).
+- "30–32 ATP" ist die moderne Bilanz (alte Lehrbücher: 36–38 ATP).
+- Succinat-Dehydrogenase = **Komplex II** der Atmungskette **und** Citratzyklus-Enzym (Verbindungsenzym).
+- Substratkettenphosphorylierung nur in Glykolyse (z. B. Pyruvat-Kinase) und Citratzyklus (Succinyl-CoA-Synthetase), nicht in der Atmungskette (dort nur oxidative Phosphorylierung).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Glykolyse: 2 ATP netto, 2 NADH, 2 Pyruvat

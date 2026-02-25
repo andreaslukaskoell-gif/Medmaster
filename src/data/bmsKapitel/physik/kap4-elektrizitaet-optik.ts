@@ -28,9 +28,9 @@ export const physKapElektrizitaet: Kapitel = {
       ],
       content: `## Einleitung
 
-Was hält Ionenkanäle in der Nervenmembran offen? Was treibt Elektrophorese an? Die Antwort liegt in **elektrischer Ladung** und dem **Coulombgesetz**. Ladungen erzeugen elektrische Felder — diese steuern biologische Prozesse. Für den MedAT sind Elementarladung, Coulombgesetz, elektrisches Feld, Spannung, Kondensator und Anwendungen (EKG, Elektrophorese, Membranpotenzial) prüfungsrelevant.
+**Worum geht es?** **Elektrische Ladung** (Elementarladung e), **Coulombgesetz** F ∝ q₁q₂/r², **elektrisches Feld** E = F/q, **Spannung** U = W/Q, **Kondensator** C = Q/U, E = U/d. **Warum für den MedAT relevant?** Elementarladung, Coulomb, E-Feld, Spannung, Kondensator, EKG, Elektrophorese, Membranpotenzial werden geprüft. **Welche Fragen werden beantwortet?** „Coulomb — Abstandsabhängigkeit?“; „E = F/q?“; „Kondensator C = Q/U?“; „Membranpotenzial — welche Ionen?“; „EKG Ableitungen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Ladung und elektrischem Feld abgedeckt.
 
-**In diesem Kapitel lernst du:** Elementarladung e, Coulomb F ∝ q₁q₂/r², elektrisches Feld E = F/q, Spannung U = W/Q, Kondensator C = Q/U und E = U/d; Anwendung EKG, Membranpotenzial. **Kontext:** Ladung und Feld als Basis für Strom, Magnetismus und Optik; klinisch EKG, Ionenkanäle, Elektrophorese.
+**In diesem Kapitel lernst du:** Elementarladung e, Coulomb F ∝ q₁q₂/r², elektrisches Feld E = F/q, Spannung U = W/Q, Kondensator C = Q/U und E = U/d; Anwendung EKG, Membranpotenzial.
 
 ---
 
@@ -312,9 +312,9 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
       ],
       content: `## Einleitung
 
-Stromschlag und Defibrillator — beides elektrischer **Strom**. Das **Ohm'sche Gesetz** U = R·I verbindet Spannung, Widerstand und Strom. In Nerven fließen Ionenströme; Strom erzeugt Wärme (Joule) und kann Gewebe verbrennen oder stimulieren. Für den MedAT sind Ohm, Widerstand, Leistung P = U·I, Joule'sche Wärme und elektrische Gefährdung prüfungsrelevant.
+**Worum geht es?** **Strom** I = Q/t, **Ohm'sches Gesetz** U = R·I, **Widerstand** R = ρ·l/A, **Leistung** P = U·I, **Joule'sche Wärme** Q = P·t. **Warum für den MedAT relevant?** Ohm, Widerstand, Leistung, Joule'sche Wärme, elektrische Gefährdung (Stromstärke, Weg) werden geprüft. **Welche Fragen werden beantwortet?** „Ohm U = R·I?“; „R = ρ·l/A?“; „Leistung P?“; „Joule'sche Wärme?“; „Gefährlich — Strom oder Spannung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Strom und Widerstand abgedeckt.
 
-**In diesem Kapitel lernst du:** Ohm U = R·I, Widerstand R = ρ·l/A, Leistung P = U·I, Joule'sche Wärme Q = P·t; elektrische Gefährdung (Stromstärke, Weg); biologische Leitfähigkeit. **Kontext:** Strom als bewegte Ladung; klinisch Defibrillator, Nervenleitung, Stromunfall.
+**In diesem Kapitel lernst du:** Ohm U = R·I, Widerstand R = ρ·l/A, Leistung P = U·I, Joule'sche Wärme Q = P·t; elektrische Gefährdung (Stromstärke, Weg); biologische Leitfähigkeit.
 
 ---
 
@@ -617,9 +617,9 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
       ],
       content: `## Einleitung
 
-Reihen- und **Parallelschaltung**, **Kirchhoff** (Knoten- und Maschenregel) und **RC-Glieder** sind das Rüstzeug für Schaltungsanalyse — und für Membranmodelle, Defibrillator und Herzschrittmacher. Für den MedAT sind Reihen-/Parallelschaltung, Knoten-/Maschenregel, RC-Zeitkonstante τ = R·C und Kondensatorverhalten prüfungsrelevant.
+**Worum geht es?** **Reihenschaltung** R_ges = R₁+R₂+…, **Parallelschaltung** 1/R_ges = 1/R₁+1/R₂+…, **Kirchhoff** (Knotenregel ΣI = 0, Maschenregel ΣU = 0), **RC-Glied** (Zeitkonstante τ = R·C). **Warum für den MedAT relevant?** Reihen-/Parallelschaltung, Kirchhoff, RC-Zeitkonstante, Kondensator Ladung/Entladung werden geprüft. **Welche Fragen werden beantwortet?** „Reihe R_ges?“; „Parallel 1/R_ges?“; „Kirchhoff Knoten?“; „τ = R·C?“; „Kondensator — Strom beim Laden?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Schaltungen und RC-Gliedern abgedeckt.
 
-**In diesem Kapitel lernst du:** Reihenschaltung R_ges = R₁+R₂+…, Parallelschaltung 1/R_ges = 1/R₁+1/R₂+…; Kirchhoff (ΣI = 0, ΣU = 0); RC-Zeitkonstante τ = R·C; Kondensator Entladung/Ladung. **Kontext:** Schaltungen analysieren; klinisch Ionenkanäle (parallel), Defi-Entladung.
+**In diesem Kapitel lernst du:** Reihenschaltung R_ges = R₁+R₂+…, Parallelschaltung 1/R_ges = 1/R₁+1/R₂+…; Kirchhoff (ΣI = 0, ΣU = 0); RC-Zeitkonstante τ = R·C; Kondensator Entladung/Ladung.
 
 ---
 
@@ -901,9 +901,9 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
       ],
       content: `## Einleitung
 
-**Magnetismus entsteht durch bewegte Ladungen**; bewegte Ladungen im Magnetfeld erfahren die **Lorentz-Kraft**. MRT nutzt Felder von 1,5–7 T; Zyklotron beschleunigt Teilchen. Für den MedAT sind Magnetfeld B (Tesla), Lorentz-Kraft F = q·v·B, Biot-Savart, Faraday-Induktion, Larmor-Frequenz und MRT-Prinzip prüfungsrelevant.
+**Worum geht es?** **Magnetfeld** B (Tesla); **Lorentz-Kraft** F = q·v·B auf bewegte Ladungen; Biot-Savart (Strom erzeugt B); **Faraday-Induktion** (Änderung des magnetischen Flusses → Spannung); **Larmor-Frequenz** f = γ·B₀ (MRT). **Warum für den MedAT relevant?** Magnetfeld B, Lorentz-Kraft, Biot-Savart, Faraday, Larmor, MRT-Prinzip werden geprüft. **Welche Fragen werden beantwortet?** „Lorentz-Kraft Formel?“; „Larmor MRT?“; „Faraday — was induziert U?“; „B Einheit?“; „MRT — welches Atom?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Magnetismus abgedeckt.
 
-**In diesem Kapitel lernst du:** Magnetfeld B, Lorentz-Kraft F = q(v×B); Biot-Savart (Strom → B); Faraday (Induktion, Änderung Φ); Larmor f = γ·B₀ (MRT). **Kontext:** B-Felder und Kräfte; klinisch MRT, Zyklotron, Herzschrittmacher.
+**In diesem Kapitel lernst du:** Magnetfeld B, Lorentz-Kraft F = q(v×B); Biot-Savart (Strom → B); Faraday (Induktion, Änderung Φ); Larmor f = γ·B₀ (MRT).
 
 ---
 
@@ -1194,9 +1194,9 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
       ],
       content: `## Einleitung
 
-**Geometrische Optik**: Reflexion, Brechung und Linsengleichung. Licht ändert an Grenzflächen die Richtung (Brechung); ab dem Grenzwinkel **Totalreflexion** (Basis Glasfaser/Endoskop). Für den MedAT sind Snellius n₁·sin α₁ = n₂·sin α₂, Brechungsindex, Totalreflexion, Linsengleichung 1/f = 1/g+1/b, Brechkraft D (Dioptrien) und Endoskopie prüfungsrelevant.
+**Worum geht es?** **Geometrische Optik**: Reflexion, **Brechung** (Snellius n₁·sin α₁ = n₂·sin α₂), **Totalreflexion** (Grenzwinkel, Glasfaser, Endoskop), **Linsengleichung** 1/f = 1/g+1/b, **Brechkraft** D = 1/f [dpt]. **Warum für den MedAT relevant?** Snellius, Brechungsindex, Totalreflexion, Linsengleichung, Dioptrien, Endoskopie werden geprüft. **Welche Fragen werden beantwortet?** „Snellius Formel?“; „Totalreflexion — wann?“; „1/f = 1/g+1/b?“; „D in dpt?“; „Endoskop — Totalreflexion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu geometrischer Optik abgedeckt.
 
-**In diesem Kapitel lernst du:** Reflexionsgesetz; Snellius (Brechung); Totalreflexion und Grenzwinkel; Linsengleichung; Brechkraft D = 1/f [dpt]; Endoskopie (Lichtleiter). **Kontext:** Licht als Strahl; klinisch Brille, Endoskop, Korrektur Fehlsichtigkeit.
+**In diesem Kapitel lernst du:** Reflexionsgesetz; Snellius (Brechung); Totalreflexion und Grenzwinkel; Linsengleichung; Brechkraft D = 1/f [dpt]; Endoskopie (Lichtleiter).
 
 ---
 
@@ -1502,9 +1502,9 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
       ],
       content: `## Einleitung
 
-Licht als **Welle**: **Interferenz** und **Beugung** bestimmen das Auflösungslimit (Abbe). Das erklärt, warum ein Lichtmikroskop unter ~200 nm nicht auflöst und warum OCT Netzhautschichten abbilden kann. Für den MedAT sind Interferenz, Abbe-Grenze d_min ≈ λ/(2·NA), Numerische Apertur, Mikroskopie und OCT prüfungsrelevant.
+**Worum geht es?** Licht als **Welle**: **Interferenz**, **Beugung**, **Abbe-Grenze** d_min ≈ λ/(2·NA) (Auflösungslimit des Mikroskops), **Numerische Apertur** NA. **Warum für den MedAT relevant?** Interferenz, Beugung, Abbe-Grenze, NA, Mikroskopie, OCT werden geprüft. **Welche Fragen werden beantwortet?** „Abbe d_min?“; „NA — wofür?“; „Auflösung verbessern?“; „OCT — Prinzip?“; „Interferenz konstruktiv?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellenoptik (Interferenz, Beugung, Abbe) abgedeckt.
 
-**In diesem Kapitel lernst du:** Licht als EM-Welle; Interferenz (konstruktiv/destruktiv); Beugung; Abbe d_min ≈ λ/(2·NA); NA und Auflösung; OCT-Prinzip. **Kontext:** Wellenoptik ergänzt Strahlenoptik; klinisch Mikroskop, OCT.
+**In diesem Kapitel lernst du:** Licht als EM-Welle; Interferenz (konstruktiv/destruktiv); Beugung; Abbe d_min ≈ λ/(2·NA); NA und Auflösung; OCT-Prinzip.
 
 ---
 
@@ -1794,9 +1794,9 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
       ],
       content: `## Einleitung
 
-**Optische Instrumente** (Lupe, Mikroskop, Teleskop, Endoskop) kombinieren Linsen nach denselben Gesetzen. Entscheidend: **Vergrößerung**, **Auflösungsgrenze** und **numerische Apertur**. Für den MedAT sind Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze und klinische Anwendungen prüfungsrelevant.
+**Worum geht es?** **Optische Instrumente**: Lupe (Vergrößerung M), Mikroskop (Objektiv + Okular), Teleskop; **Auflösungsgrenze** (Abbe), **numerische Apertur** NA. **Warum für den MedAT relevant?** Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze, klinische Anwendungen werden geprüft. **Welche Fragen werden beantwortet?** „Lupe Vergrößerung?“; „Mikroskop Aufbau?“; „Auflösungsgrenze von was abhängig?“; „NA erhöhen — wozu?“; „Endoskop — Optik?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu optischen Instrumenten abgedeckt.
 
-**In diesem Kapitel lernst du:** Lupe (Vergrößerung M); Mikroskop (Objektiv + Okular); Teleskop; Auflösungsgrenze und NA; klinische Anwendung (Dermatologie, Histologie). **Kontext:** Instrumente bauen auf Linsengleichung und Abbe auf; klinisch Lupen, Mikroskope.
+**In diesem Kapitel lernst du:** Lupe (Vergrößerung M); Mikroskop (Objektiv + Okular); Teleskop; Auflösungsgrenze und NA; klinische Anwendung (Dermatologie, Histologie).
 
 ---
 
@@ -2091,9 +2091,9 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
       ],
       content: `## Einleitung
 
-Das **Auge** ist ein Linsensystem: Hornhaut (~43 dpt) und Linse (~20 dpt) bündeln Licht auf der Fovea. **Akkommodation** passt die Brechkraft an; mit dem Alter nimmt sie ab (Presbyopie). Fehlsichtigkeit (Myopie, Hyperopie, Astigmatismus) entsteht, wenn Brechkraft und Augenlänge nicht passen. Für den MedAT sind Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen und Dioptrien prüfungsrelevant.
+**Worum geht es?** Das **Auge** als Linsensystem (Hornhaut ~43 dpt, Linse ~20 dpt); **Akkommodation**; Fehlsichtigkeit: **Myopie** (Kurzsichtigkeit), **Hyperopie** (Weitsichtigkeit), **Presbyopie** (Alterssichtigkeit), **Astigmatismus**; Korrektionslinsen (Konkav/Konvex), Dioptrien. **Warum für den MedAT relevant?** Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen, Dioptrien werden geprüft. **Welche Fragen werden beantwortet?** „Myopie — welche Linse?“; „Hyperopie — Korrektur?“; „Presbyopie — Ursache?“; „Dioptrie D = 1/f?“; „Akkommodation — was passiert?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Auge und zur Fehlsichtigkeit abgedeckt.
 
-**In diesem Kapitel lernst du:** Anatomie und Brechkraft des Auges; Akkommodation; Myopie (Kurz-/Weitsichtigkeit), Hyperopie, Presbyopie, Astigmatismus; Korrektionslinsen (Konkav/Konvex); Dioptrien. **Kontext:** Auge als optisches System; klinisch Refraktion, Brille, LASIK.
+**In diesem Kapitel lernst du:** Anatomie und Brechkraft des Auges; Akkommodation; Myopie (Kurz-/Weitsichtigkeit), Hyperopie, Presbyopie, Astigmatismus; Korrektionslinsen (Konkav/Konvex); Dioptrien.
 
 ---
 
