@@ -13,6 +13,7 @@ import {
   recordAttempt,
   fetchErrorPatterns,
   fetchMRSData,
+  filterValidBMSFragen,
   type BMSFrage,
   type MRSData,
   type ErrorPattern,
@@ -70,6 +71,8 @@ export function useFragenTrainer(
   useEffect(() => {
     if (!uk_ids.length) {
       setFragen([]);
+      setLoading(false);
+      setError(null);
       return;
     }
     setLoading(true);
@@ -78,18 +81,25 @@ export function useFragenTrainer(
     if (source === "content") {
       const generated = generateContentQuestions(uk_ids, count);
       const asFragen = generated.map(toBMSFrage);
-      setFragen(asFragen);
+      const valid = filterValidBMSFragen(asFragen);
+      setFragen(valid);
       setLoading(false);
-      if (asFragen.length === 0) {
+      if (valid.length === 0) {
         setError(
-          "Für die gewählten Unterkapitel sind noch keine Fragen hinterlegt. Bitte andere wählen."
+          asFragen.length > 0
+            ? "Einige Fragen waren ungültig und wurden verworfen. Bitte andere Unterkapitel wählen."
+            : "Für die gewählten Unterkapitel sind noch keine Fragen hinterlegt. Bitte andere wählen."
         );
       }
     } else {
       getNextQuestions(uk_ids, user_id, count)
-        .then((q) => {
-          setFragen(q);
+        .then((raw) => {
+          const valid = filterValidBMSFragen(raw);
+          setFragen(valid);
           setLoading(false);
+          if (raw.length > 0 && valid.length === 0) {
+            setError("Alle geladenen Fragen waren ungültig und wurden verworfen.");
+          }
         })
         .catch((e) => {
           setError(String(e));
@@ -233,12 +243,12 @@ export function useFragenTrainer(
       setLoading(true);
       if (source === "content") {
         const generated = generateContentQuestions(uk_ids, count);
-        setFragen(generated.map(toBMSFrage));
+        setFragen(filterValidBMSFragen(generated.map(toBMSFrage)));
         setLoading(false);
       } else {
         getNextQuestions(uk_ids, user_id, count)
-          .then((q) => {
-            setFragen(q);
+          .then((raw) => {
+            setFragen(filterValidBMSFragen(raw));
             setLoading(false);
           })
           .catch(() => setLoading(false));

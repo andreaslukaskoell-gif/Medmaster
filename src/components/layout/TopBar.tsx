@@ -41,6 +41,8 @@ export function TopBar({
   const darkMode = store?.darkMode ?? false;
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
   const onboardingCompleted = store?.onboardingCompleted ?? false;
+  const hasCompletedMedATOnboarding = store?.hasCompletedMedATOnboarding ?? false;
+  const showEinstufungstest = hasCompletedMedATOnboarding && !onboardingCompleted;
   const days = daysUntilMedAT();
   const showStoreValues = mounted;
   const todayStr = new Date().toISOString().split("T")[0];
@@ -101,7 +103,7 @@ export function TopBar({
 
         <GlobalBreadcrumb />
 
-        {!onboardingCompleted && !showMinimalBar && (
+        {showEinstufungstest && !showMinimalBar && (
           <Link to="/onboarding" className="shrink-0">
             <Button
               size="sm"

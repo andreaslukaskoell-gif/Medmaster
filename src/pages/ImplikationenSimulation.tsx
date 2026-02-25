@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
+import { filterValidImplikationTasks } from "@/data/kffValidation";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const TASK_COUNT = 10;
@@ -76,7 +77,8 @@ export default function ImplikationenSimulation() {
   }, [timeLeft, phase]);
 
   const startSimulation = useCallback(() => {
-    const selected = shuffle(implikationenTasks).slice(0, TASK_COUNT);
+    const valid = filterValidImplikationTasks(implikationenTasks);
+    const selected = shuffle(valid).slice(0, TASK_COUNT);
     setTasks(selected);
     setCurrentIndex(0);
     setSelectedAnswer(null);

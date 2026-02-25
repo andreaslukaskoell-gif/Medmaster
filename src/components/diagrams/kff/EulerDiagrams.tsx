@@ -1,7 +1,15 @@
 // Euler-Diagramme für Implikationen erkennen
-// Visualisiert die 4 Grundaussagen und Schlussfolgerungen
+// Rendering ausschließlich aus der Logik-Engine (Constraints). Keine visuelle Annäherung.
 
 import type { ImplikationTask } from "@/data/kffImplikationen";
+import type { ImplicationRelationModel } from "@/data/kffImplikationenLogic";
+import {
+  buildRelationModelFromPremises,
+  deriveEulerLayoutFromModel,
+  modelToConstraints,
+  layoutSatisfiesConstraints,
+  isCorrectOptionEntailed,
+} from "@/data/kffImplikationenLogic";
 
 interface EulerProps {
   width?: number;
@@ -19,62 +27,30 @@ type LayoutKey =
   | "a-in-b-in-c"
   | "all-separated";
 
-function parsePremise(p: string): {
-  type: "all-in" | "all-disjoint" | "some-overlap" | "some-not";
-  terms: [string, string];
-} | null {
-  const s = p.trim().replace(/\.$/, "");
-  const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
-  if (allIn) return { type: "all-in", terms: [allIn[1].trim(), allIn[2].trim()] };
-  const allDisjoint = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
-  if (allDisjoint)
-    return { type: "all-disjoint", terms: [allDisjoint[1].trim(), allDisjoint[2].trim()] };
-  const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
-  if (someIn) return { type: "some-overlap", terms: [someIn[1].trim(), someIn[2].trim()] };
-  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
-  if (someNot) return { type: "some-not", terms: [someNot[1].trim(), someNot[2].trim()] };
-  return null;
-}
-
-function getLayoutFromPremises(
-  p1: string,
-  p2: string
-): { labels: [string, string, string]; layout: LayoutKey } {
-  const a = parsePremise(p1);
-  const b = parsePremise(p2);
-  if (!a || !b) return { labels: ["A", "B", "C"], layout: "chain" };
-  const [t1a, t1b] = a.terms;
-  const [t2a, t2b] = b.terms;
-  const mid = t1a === t2a ? t1a : t1b === t2a ? t2a : t1a === t2b ? t1a : t1b;
-  const left = t1a === mid ? t1b : t1a;
-  const right = t2a === mid ? t2b : t2a;
-  // Einheitliche Semantik: labels[0]=Kreis 0, labels[1]=Kreis 1, labels[2]=Kreis 2.
-  // a-in-b-in-c: innen = A (erstes Kettenglied), mittel = B, außen = C → [left, mid, right]
-  if (a.type === "all-in" && b.type === "all-in")
-    return { labels: [left, mid, right], layout: "a-in-b-in-c" };
-  // a-in-b-overlap-c: A (mid) innen in B (left), C (right) überlappt B → [mid, left, right]
-  if (a.type === "all-in" && b.type === "some-overlap")
-    return { labels: [mid, left, right], layout: "a-in-b-overlap-c" };
-  // a-in-b-separated-c: A innen in B, C getrennt. A = Subjekt von "Alle A sind B" = t1a.
-  if (a.type === "all-in" && b.type === "all-disjoint") {
-    const t1a = a.terms[0];
-    const t1b = a.terms[1];
-    const labels: [string, string, string] = t1a === mid ? [mid, left, right] : [left, mid, right]; // mid in left vs left in mid
-    return { labels, layout: "a-in-b-separated-c" };
+/** Layout ausschließlich aus Logik-Modell. Bei ungültiger Aufgabe: Fallback mit Hinweis (kein Crash). */
+function getLayoutForTask(task: ImplikationTask): {
+  labels: [string, string, string];
+  layout: LayoutKey;
+  model: ImplicationRelationModel | null;
+  invalid?: boolean;
+} {
+  const model =
+    task.relationModel ?? buildRelationModelFromPremises(task.premise1 || "", task.premise2 || "");
+  if (!model) {
+    return { labels: ["A", "B", "C"], layout: "chain", model: null, invalid: true };
   }
-  // all-disjoint + all-in: P2 gibt B in C, P1 sagt A getrennt von B → labels passend für A-in-B-sep-C
-  if (a.type === "all-disjoint" && b.type === "all-in")
-    return { labels: [t2a, t2b, t1a], layout: "a-in-b-separated-c" };
-  // Nüsse∩Gewürze ≠ ∅, Nüsse∩Pflanzen = ∅ → Kreise 0&1 überlappen, 2 getrennt
-  if (a.type === "all-disjoint" && b.type === "some-overlap")
-    return { labels: [mid, left, right], layout: "bc-separated" };
-  if (a.type === "some-overlap" && b.type === "all-disjoint")
-    return { labels: [mid, left, right], layout: "bc-separated" };
-  if (a.type === "some-overlap" && b.type === "some-overlap")
-    return { labels: [mid, left, right], layout: "all-overlap" };
-  if (a.type === "some-not" || b.type === "some-not")
-    return { labels: [mid, left, right], layout: "chain" };
-  return { labels: [mid, left, right], layout: "chain" };
+  try {
+    const { labels, layout } = deriveEulerLayoutFromModel(model);
+    if (import.meta.env?.DEV) {
+      const constraints = modelToConstraints(model);
+      if (!layoutSatisfiesConstraints(layout as LayoutKey, labels, constraints)) {
+        return { labels: ["A", "B", "C"], layout: "chain", model: null, invalid: true };
+      }
+    }
+    return { labels, layout: layout as LayoutKey, model };
+  } catch {
+    return { labels: ["A", "B", "C"], layout: "chain", model: null, invalid: true };
+  }
 }
 
 function getHighlightFromConclusion(
@@ -119,7 +95,7 @@ function getHighlightFromConclusion(
   return "none";
 }
 
-/** Visuelle Lösung für eine Implikationsaufgabe: Euler-Diagramm mit hervorgehobener gültiger Region. */
+/** Visuelle Lösung: Euler-Diagramm. Hervorhebung nur, wenn die richtige Option aus dem Modell zwingend folgt (logisch garantierter Bereich). */
 export function ImplikationSolutionDiagram({
   task,
   width,
@@ -138,11 +114,19 @@ export function ImplikationSolutionDiagram({
     task.options.length === 5 &&
     task.correctAnswer >= 0 &&
     task.correctAnswer <= 4;
-  const { labels, layout } = getLayoutFromPremises(task.premise1 || "", task.premise2 || "");
+  const layoutResult = getLayoutForTask(task);
+  const { labels, layout, model, invalid } = layoutResult;
   const correctOption = hasVisualData ? task.options[task.correctAnswer] : null;
-  const highlight = correctOption ? getHighlightFromConclusion(correctOption, labels) : "none";
+  const mayHighlight =
+    !invalid &&
+    model &&
+    correctOption &&
+    isCorrectOptionEntailed(model, task.correctAnswer, task.options);
+  /** Nur wenn zwingend ableitbar: Region hervorheben (kein „möglicher“ Bereich). */
+  const highlight =
+    mayHighlight && correctOption ? getHighlightFromConclusion(correctOption, labels) : "none";
   const isNone = highlight === "none";
-  const useDefaultVisual = !hasVisualData;
+  const useDefaultVisual = !hasVisualData || !model || invalid;
 
   return (
     <div className={className}>
@@ -155,11 +139,13 @@ export function ImplikationSolutionDiagram({
           highlightRegion={isNone ? undefined : highlight}
         />
         <p className="text-xs font-medium text-center text-muted">
-          {useDefaultVisual
-            ? "Lösung siehe Erklärung unten."
-            : isNone
-              ? "Keine der Schlussfolgerungen ist zwingend — kein Bereich hervorgehoben."
-              : "✓ Markierter Bereich = gültige Schlussfolgerung."}
+          {invalid
+            ? "Ungültige Aufgabe – Diagramm kann nicht aus den Prämissen abgeleitet werden."
+            : useDefaultVisual
+              ? "Kein konsistentes Relationsmodell – Diagramm nur aus Logik darstellbar."
+              : isNone
+                ? "Keine der Schlussfolgerungen ist zwingend — kein Bereich hervorgehoben."
+                : "✓ Markierter Bereich = zwingend gültige Schlussfolgerung (nur wenn logisch garantiert)."}
         </p>
         {!useDefaultVisual && (
           <p className="text-[11px] text-center text-muted-foreground/80">
@@ -289,7 +275,7 @@ export function EulerEinigeXkeineY({ width = 220, height = 150, className }: Eul
 }
 
 interface EulerThreeCircleProps extends EulerProps {
-  /** Labels for the three circles */
+  /** Mengen-Namen (A, B, C); kurz halten, damit Beschriftungen sich nicht überlappen. Eindeutig zuordenbar. */
   labels?: [string, string, string];
   /** Layout type */
   layout:
@@ -301,7 +287,7 @@ interface EulerThreeCircleProps extends EulerProps {
     | "a-in-b-separated-c"
     | "a-in-b-in-c"
     | "all-separated";
-  /** Welche Region als gültige Schlussfolgerung hervorheben (visuell) */
+  /** Welche Region hervorheben: nur wenn die Schlussfolgerung aus dem Modell zwingend folgt (logisch garantiert). */
   highlightRegion?: "ab" | "bc" | "ac" | "a-in-b" | "b-in-c" | "a-in-c" | "none";
 }
 
@@ -318,7 +304,7 @@ export function EulerThreeCircles({
     string,
     { circles: { cx: number; cy: number; r: number; color: string; fill: string }[] }
   > = {
-    // A-B überlappen, B-C überlappen, A-C nicht direkt
+    // A-B überlappen, B-C überlappen, A-C nicht direkt (chain)
     chain: {
       circles: [
         { cx: 65, cy: 80, r: 40, color: "#dc2626", fill: "#fecaca" },
@@ -342,7 +328,7 @@ export function EulerThreeCircles({
         { cx: 225, cy: 80, r: 35, color: "#059669", fill: "#a7f3d0" },
       ],
     },
-    // B und C getrennt
+    // B und C getrennt; A überlappt B
     "bc-separated": {
       circles: [
         { cx: 90, cy: 80, r: 42, color: "#dc2626", fill: "#fecaca" },
@@ -350,23 +336,23 @@ export function EulerThreeCircles({
         { cx: 225, cy: 80, r: 35, color: "#059669", fill: "#a7f3d0" },
       ],
     },
-    // A innerhalb von B, B überlappt mit C
+    // Kreis 0 ⊆ Kreis 1, Kreis 1 ∩ Kreis 2 ≠ ∅ (0 vollständig in 1; 1 überlappt 2)
     "a-in-b-overlap-c": {
       circles: [
-        { cx: 95, cy: 85, r: 22, color: "#dc2626", fill: "#fecaca" },
-        { cx: 100, cy: 80, r: 45, color: "#6366f1", fill: "#c7d2fe" },
-        { cx: 175, cy: 80, r: 40, color: "#059669", fill: "#a7f3d0" },
+        { cx: 118, cy: 80, r: 18, color: "#dc2626", fill: "#fecaca" },
+        { cx: 128, cy: 80, r: 48, color: "#6366f1", fill: "#c7d2fe" },
+        { cx: 185, cy: 80, r: 40, color: "#059669", fill: "#a7f3d0" },
       ],
     },
-    // A innerhalb von B, B getrennt von C
+    // Kreis 0 ⊆ Kreis 1, Kreis 1 und 2 disjunkt
     "a-in-b-separated-c": {
       circles: [
-        { cx: 80, cy: 85, r: 22, color: "#dc2626", fill: "#fecaca" },
-        { cx: 85, cy: 80, r: 45, color: "#6366f1", fill: "#c7d2fe" },
+        { cx: 78, cy: 80, r: 20, color: "#dc2626", fill: "#fecaca" },
+        { cx: 82, cy: 80, r: 44, color: "#6366f1", fill: "#c7d2fe" },
         { cx: 195, cy: 80, r: 40, color: "#059669", fill: "#a7f3d0" },
       ],
     },
-    // A in B in C (konzentrisch)
+    // 0 ⊆ 1 ⊆ 2 (konzentrisch)
     "a-in-b-in-c": {
       circles: [
         { cx: 140, cy: 80, r: 20, color: "#dc2626", fill: "#fecaca" },
@@ -374,7 +360,7 @@ export function EulerThreeCircles({
         { cx: 140, cy: 80, r: 58, color: "#059669", fill: "#a7f3d0" },
       ],
     },
-    // Alle getrennt
+    // Alle drei disjunkt
     "all-separated": {
       circles: [
         { cx: 55, cy: 80, r: 35, color: "#dc2626", fill: "#fecaca" },

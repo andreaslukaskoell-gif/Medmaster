@@ -6,6 +6,8 @@
 
 // ─── Types ───────────────────────────────────────────────────────────
 
+import { assertUniformScale } from "@/data/kffFigurenZusammensetzenMedAT";
+
 export interface FZPiece {
   path: string;
   fill: string;
@@ -160,13 +162,14 @@ function transformPiece(pts: Pt[], angle: number): Pt[] {
   }
   const maxDim = Math.max(maxX - minX, maxY - minY);
   const scale = maxDim > 0 ? Math.min(160 / maxDim, 2.8) : 1;
+  assertUniformScale(scale, scale, "transformPiece");
   const bcx = (minX + maxX) / 2,
     bcy = (minY + maxY) / 2;
 
   return result.map(([x, y]) => [rd(100 + (x - bcx) * scale), rd(100 + (y - bcy) * scale)] as Pt);
 }
 
-// ─── 13 Lösungsfiguren (Antwort-Outlines, 200×200) ──────────────────
+// ─── 14 Lösungsfiguren (13 + L-Form, Antwort-Outlines 200×200) ──────────────────
 
 type FK =
   | "dreieck"
@@ -181,7 +184,8 @@ type FK =
   | "viertelkreis"
   | "halbkreis"
   | "dreiviertelkreis"
-  | "vollkreis";
+  | "vollkreis"
+  | "l-form";
 
 const ALL_FK: FK[] = [
   "dreieck",
@@ -197,6 +201,7 @@ const ALL_FK: FK[] = [
   "halbkreis",
   "dreiviertelkreis",
   "vollkreis",
+  "l-form",
 ];
 
 const FIG: Record<FK, string> = {
@@ -220,6 +225,7 @@ const FIG: Record<FK, string> = {
     return `M ${cx} ${cy} L ${rd(cx + r * Math.cos(g2))} ${rd(cy + r * Math.sin(g2))} A ${r} ${r} 0 1 1 ${rd(cx + r * Math.cos(g1))} ${rd(cy + r * Math.sin(g1))} Z`;
   })(),
   vollkreis: circPath(100, 100, 80),
+  "l-form": "M 40 50 L 160 50 L 160 100 L 100 100 L 100 150 L 40 150 Z",
 };
 
 const FIGNAME: Record<FK, string> = {
@@ -236,6 +242,7 @@ const FIGNAME: Record<FK, string> = {
   halbkreis: "einen Halbkreis",
   dreiviertelkreis: "einen Dreiviertelkreis",
   vollkreis: "einen Vollkreis",
+  "l-form": "eine L-Form",
 };
 
 /** Für Strategie-View: alle 13 Lösungsfiguren mit Pfad und Anzeigename (richtige Farbe wie beim Üben). */
@@ -259,6 +266,7 @@ const SIMILAR: Record<FK, FK[]> = {
   halbkreis: ["viertelkreis", "dreiviertelkreis", "vollkreis"],
   dreiviertelkreis: ["halbkreis", "vollkreis", "viertelkreis"],
   vollkreis: ["dreiviertelkreis", "halbkreis", "viertelkreis"],
+  "l-form": ["trapez", "parallelogramm", "quadrat"],
 };
 
 // ─── Zielfiguren & strategische Schnitte (MedAT IB_FZ_26-Stil) ───────
@@ -522,6 +530,7 @@ function scaleToViewBox(pieces: Pt[][], pad: number): Pt[][] {
   const w = maxX - minX || 1,
     h = maxY - minY || 1;
   const scale = Math.min((200 - 2 * pad) / w, (200 - 2 * pad) / h);
+  assertUniformScale(scale, scale, "scaleToViewBox");
   return pieces.map((pts) =>
     pts.map(([x, y]) => [rd(100 + (x - midX) * scale), rd(100 + (y - midY) * scale)] as Pt)
   );
@@ -699,6 +708,7 @@ function makePieces(
     w = maxX - minX || 1,
     h = maxY - minY || 1;
   const scale = Math.min((200 - 2 * pad) / w, (200 - 2 * pad) / h);
+  assertUniformScale(scale, scale, "assemblyPaths");
   const assemblyPaths = rotatedInFigure.map((pts) =>
     pts2path(
       pts.map(([x, y]) => [rd(100 + (x - midX) * scale), rd(100 + (y - midY) * scale)] as Pt)
@@ -890,9 +900,9 @@ export const figurenStrategyGuide = {
         "Dir werden dunkelgraue Puzzleteile gezeigt. Du musst erkennen, welche der 4 vorgegebenen Figuren (A\u2013D) entsteht, wenn man alle Teile richtig zusammensetzt. Option E ist immer \u201eKeine der Figuren ist richtig\u201c.\n\nWICHTIG: Teile nur drehen, nie spiegeln oder skalieren! Bei ca. 20% der Aufgaben ist E die richtige Antwort.",
     },
     {
-      heading: "13 offizielle L\u00f6sungsfiguren",
+      heading: "14 offizielle L\u00f6sungsfiguren",
       content:
-        "8 Polygone: Dreieck (60\u00b0), Quadrat (90\u00b0), Parallelogramm, Trapez, F\u00fcnfeck (108\u00b0), Sechseck (120\u00b0), Siebeneck (~128\u00b0), Achteck (135\u00b0)\n4 Kreisformen: Viertelkreis, Halbkreis, Dreiviertelkreis, Vollkreis\nSonderform: Raute (4 gleiche Seiten, keine 90\u00b0)\n\nDie Distraktoren sind immer \u00e4hnliche Figuren aus derselben Kategorie!",
+        "8 Polygone: Dreieck (60\u00b0), Quadrat (90\u00b0), Parallelogramm, Trapez, F\u00fcnfeck (108\u00b0), Sechseck (120\u00b0), Siebeneck (~128\u00b0), Achteck (135\u00b0)\n4 Kreisformen: Viertelkreis, Halbkreis, Dreiviertelkreis, Vollkreis\nSonderform: Raute (4 gleiche Seiten, keine 90\u00b0)\nL-Form: zusammengesetzte Stufenform (14. Lösungsform)\n\nDie Distraktoren sind immer \u00e4hnliche Figuren aus denselben 14 Formen!",
     },
     {
       heading: "Schritt-f\u00fcr-Schritt",

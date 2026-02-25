@@ -6,7 +6,8 @@
  * Aufgabe lösbar, keine Mehrdeutigkeit, MedAT-Regeln eingehalten.
  *
  * Quality-Gate: Nicht bestandene Aufgaben werden verworfen (beim Generieren
- * neu erzeugen / beim Laden nicht anzeigen).
+ * neu erzeugen / beim Laden nicht anzeigen). Generatoren müssen vor Return
+ * validieren; bei Fehler verwerfen und neu generieren.
  * Dev-Statistiken: Pool-Größen, verworfene Anzahl, Konsolen-Warnungen.
  */
 
@@ -52,7 +53,8 @@ function validateImplikationen(task: ImplikationTask): ValidationResult {
   if (!validateImplikationTaskImpl(task))
     return {
       ok: false,
-      reason: "Implikationen: Keine genau 5 Optionen oder ungültige correctAnswer",
+      reason:
+        "Implikationen: Keine genau 5 Optionen, ungültige correctAnswer, inkonsistentes Relationsmodell oder unerlaubte Formulierung (z. B. könnte/manchmal/eventuell)",
     };
   return { ok: true };
 }

@@ -51,6 +51,43 @@ export interface RecordAttemptInput {
   prev_fsrs: FSRSState | null;
 }
 
+/** Prüft, ob eine BMS-Frage vollständig und konsistent ist. Lieber keine Aufgabe anzeigen als eine falsche. */
+export function validateBMSFrage(q: BMSFrage): boolean {
+  if (!q?.id || typeof q.stamm !== "string" || !q.stamm.trim()) return false;
+  if (!["A", "K", "M"].includes(q.typ)) return false;
+  if (![1, 2, 3].includes(q.schwierigkeit)) return false;
+  if (q.typ === "A" || q.typ === "M") {
+    const opts = q.optionen;
+    if (!Array.isArray(opts) || opts.length !== 5) return false;
+    const keys = new Set(opts.map((o) => o?.key));
+    if (keys.size !== 5) return false;
+    const korrekt = q.korrekte_option;
+    if (!korrekt || !opts.some((o) => o.key === korrekt)) return false;
+  }
+  if (q.typ === "K") {
+    if (!Array.isArray(q.aussagen) || !q.aussagen.length) return false;
+    if (!Array.isArray(q.kombinationen) || !q.kombinationen.length) return false;
+    const korrekt = q.korrekte_option;
+    if (!korrekt || !q.kombinationen.some((k) => k?.key === korrekt)) return false;
+  }
+  return true;
+}
+
+/** Filtert ungültige Fragen heraus. In DEV: Console-Error bei verworfenen. */
+export function filterValidBMSFragen(fragen: BMSFrage[]): BMSFrage[] {
+  const valid: BMSFrage[] = [];
+  for (const q of fragen) {
+    if (validateBMSFrage(q)) valid.push(q);
+    else if (import.meta.env?.DEV) {
+      console.error(
+        "[Fragen-Trainer] Ungültige Frage verworfen (inkonsistente Daten):",
+        q?.id ?? q
+      );
+    }
+  }
+  return valid;
+}
+
 // ── Fetch questions for selection ────────────────────────────
 
 export async function fetchFragenForUK(uk_id: string): Promise<BMSFrage[]> {

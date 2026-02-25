@@ -18,11 +18,32 @@
 // - Optionen A–D: Vollständige Sätze mit Punkt am Ende (z. B. "Einige X sind Y.")
 // - Option E: exakt "Keine der Schlussfolgerungen ist zwingend" (ohne Punkt)
 // - Genau 5 Optionen, correctAnswer 0–4, explanation sachlich, rulesApplied [1–5]
+// - Grammatik: Durchgehend "Alle / Einige / Kein"; keine Mehrdeutigkeit (kein "könnte", "manchmal", "eventuell").
+// - Logik: Genau 1 zwingend richtige Antwort; alle anderen formal widerlegbar; Euler-Diagramm aus Relationsmodell.
 // - Vorbild: MedAT 2026 PDF „Implikationen erkennen“ (medizinstudieren.at)
 //
 // Offizielle Beispiele werden nie verändert; Übungsaufgaben und Generator
 // orientieren sich an diesem Format.
 // =============================================================================
+
+import type { ImplicationRelationModel, ImplicationTaskCanonical } from "./kffImplikationenLogic";
+import {
+  buildRelationModelFromPremises,
+  isRelationModelConsistent,
+  modelToConstraints,
+  constraintsConsistent,
+  layoutSatisfiesConstraints,
+  deriveEulerLayoutFromModel,
+  isCorrectOptionEntailed,
+  assertImplikationTaskValid,
+  premisesFromText,
+  buildConcreteModel,
+  validateImplicationTaskCanonical,
+} from "./kffImplikationenLogic";
+
+// Re-export kanonisches Datenmodell (A) für Validierung/Generatoren
+export type { ImplicationTaskCanonical, Premise, SetRelation } from "./kffImplikationenLogic";
+export { validateImplicationTaskCanonical } from "./kffImplikationenLogic";
 
 export interface ImplikationTask {
   id: string;
@@ -35,6 +56,29 @@ export interface ImplikationTask {
   rulesApplied: number[]; // which golden rules apply (1-5)
   /** Nur bei offiziellen Beispielen: Quelle (z. B. PDF). */
   source?: string;
+  /** Optional: formales Mengenmodell; wenn gesetzt, wird das Euler-Diagramm ausschließlich daraus abgeleitet. */
+  relationModel?: ImplicationRelationModel;
+}
+
+/**
+ * Konvertiert eine gespeicherte Implikations-Aufgabe ins kanonische Datenmodell (sets, premises, conclusions, model).
+ * Wenn Prämissen nicht parsbar oder Modell nicht konsistent: null → Aufgabe verwerfen.
+ */
+export function toCanonicalImplicationTask(task: ImplikationTask): ImplicationTaskCanonical | null {
+  const parsed = premisesFromText(task.premise1, task.premise2);
+  if (!parsed || !task.options || task.options.length !== 5) return null;
+  const { sets, premises } = parsed;
+  const model = buildConcreteModel(sets, premises);
+  if (!model) return null;
+  return {
+    sets,
+    premises,
+    conclusions: task.options,
+    correctIndex: task.correctAnswer,
+    model,
+    premise1: task.premise1,
+    premise2: task.premise2,
+  };
 }
 
 // =============================================================================
@@ -194,7 +238,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Tulpen sind Blumen.",
     premise2: "Alle Blumen sind keine Steine.",
     options: [
-      "Alle Steine sind keine Tulpen.",
+      "Alle Tulpen sind Steine.",
       "Einige Tulpen sind Steine.",
       "Alle Tulpen sind keine Steine.",
       "Einige Steine sind Tulpen.",
@@ -202,7 +246,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     ],
     correctAnswer: 2,
     explanation:
-      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4 greift: Ein 'keine' in der Prämisse erfordert 'keine' im Schluss. Im Euler-Diagramm sind Tulpen eine Teilmenge von Blumen, und Blumen und Steine sind vollständig getrennt. Daher sind alle Tulpen zwingend keine Steine. A ist zwar inhaltlich auch wahr, aber C ist der direkte logische Schluss. Beide A und C wären korrekt, aber C ist die unmittelbare Folgerung.",
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in einer Prämisse erfordert 'keine' im Schluss. Im Euler-Diagramm sind Tulpen eine Teilmenge von Blumen, und Blumen und Steine sind disjunkt. Daher sind alle Tulpen zwingend keine Steine (C). A und B widersprechen der zweiten Prämisse, D ist nicht ableitbar.",
     difficulty: 1,
     rulesApplied: [4],
   },
@@ -849,14 +893,43 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
 ];
 
 /**
- * Struktureller Validator: Genau 5 Optionen, genau 1 korrekte Antwort (correctAnswer 0–4).
- * Volle logische Prüfung („nur 1 Option zwingend korrekt“) erfordert einen Solver (Goldene Regeln).
+ * Struktureller und logischer Validator: Genau 5 Optionen, genau 1 korrekte Antwort (correctAnswer 0–4).
+ * Logik bestimmt die Grafik: Modell → Constraints → nur Layout, das alle erfüllt → zwingende Antwort.
+ * D) Validierung: 1) Prämissen konsistent 2) Genau 1 Schlussfolgerung in allen Modellen wahr 3) Falsche haben Gegenmodell.
+ * Wenn Validation fehlschlägt → Aufgabe verwerfen (return false). In DEV: assert wirft bei Fehler.
  */
 export function validateImplikationTask(task: ImplikationTask): boolean {
   if (!task.options || task.options.length !== 5) return false;
   if (task.correctAnswer < 0 || task.correctAnswer > 4) return false;
   if (task.correctAnswer === 4 && task.options[4] !== "Keine der Schlussfolgerungen ist zwingend")
     return false;
+
+  const forbidden = /\b(könnte|manchmal|eventuell|vielleicht)\b/i;
+  if (forbidden.test(task.premise1) || forbidden.test(task.premise2)) return false;
+  for (const opt of task.options) {
+    if (forbidden.test(opt)) return false;
+  }
+
+  const canonical = toCanonicalImplicationTask(task);
+  if (!canonical) return false;
+  if (!validateImplicationTaskCanonical(canonical)) return false;
+
+  const model = buildRelationModelFromPremises(task.premise1, task.premise2);
+  if (!model) return false;
+  let layoutResult: ReturnType<typeof deriveEulerLayoutFromModel>;
+  try {
+    layoutResult = deriveEulerLayoutFromModel(model);
+  } catch {
+    return false;
+  }
+  const constraints = modelToConstraints(model);
+  if (!layoutSatisfiesConstraints(layoutResult.layout, layoutResult.labels, constraints))
+    return false;
+  if (!isCorrectOptionEntailed(model, task.correctAnswer, task.options)) return false;
+
+  if (import.meta.env?.DEV) {
+    assertImplikationTaskValid(task.premise1, task.premise2, task.options, task.correctAnswer);
+  }
   return true;
 }
 

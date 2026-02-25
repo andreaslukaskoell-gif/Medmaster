@@ -1,13 +1,14 @@
 /**
- * KFF „Figuren zusammensetzen“ – MedAT (IB_FZ_26).
+ * KFF „Figuren zusammensetzen“ – MedAT.
  *
- * Architektur: Regel → Konstruktion → Validator → Duplikat-Schutz → Anzeige.
- * - ShapePool: Basisformen (regulär, unregelmäßig, zusammengesetzt).
- * - CutStrategies: diagonale, versetzte, Zickzack-, mehrstufige, asymmetrische Schnitte.
- * - Validator: Nur eine Option exakt aus den Teilen zusammensetzbar.
- * - DuplicateGuard: Fingerprint aus normalisiertem Ziel + Teile-Set; keine Wiederholung.
+ * Nur 14 offizielle Zielformen: gleichseitiges Dreieck, Quadrat, Raute, Parallelogramm,
+ * Trapez, regelmäßiges Fünfeck, Sechseck, Siebeneck, Achteck, Viertelkreis, Halbkreis,
+ * Dreiviertelkreis, Vollkreis, L-Form.
  *
- * Offizielle Beispiele: 1:1 aus PDF (OFFICIAL_FZ_EXAMPLES). Training: Generator mit obiger Pipeline.
+ * Pflicht: Generator wählt eine Zielform → zerlegt in 2–7 Teilpolygone (nur gerade Schnitte,
+ * keine Verzerrung). Teile nur Rotation + Translation (keine Spiegelung). Optionen A–E nur
+ * aus diesen 14 Formen. validateFigurenTask prüft: Union=Ziel, keine Überlappung/Lücken,
+ * genau eine Option passt. Bei Fehlschlag: Aufgabe verwerfen.
  */
 
 export type Polygon = { points: { x: number; y: number }[] };
@@ -51,6 +52,11 @@ export function polygonToPath(poly: Polygon): string {
   return "M " + poly.points.map((p) => `${p.x} ${p.y}`).join(" L ") + " Z";
 }
 
+/** Alle Figuren-SVGs müssen dieses Attribut setzen, damit keine Verzerrung entsteht (nur uniforme Skalierung). */
+export const FIGURE_SVG_ASPECT_PROPS = {
+  preserveAspectRatio: "xMidYMid meet" as const,
+} as const;
+
 export function polygonArea(poly: Polygon): number {
   const pts = poly.points;
   if (pts.length < 3) return 0;
@@ -84,21 +90,43 @@ function mid(a: { x: number; y: number }, b: { x: number; y: number }): { x: num
   return { x: rd((a.x + b.x) / 2), y: rd((a.y + b.y) / 2) };
 }
 
+/** Kreisbogen als Polygon (Zentrum + Bogenpunkte). Winkel in Radiant, von start bis end. */
+function arcPolygon(
+  cx: number,
+  cy: number,
+  r: number,
+  startAngle: number,
+  endAngle: number,
+  steps: number
+): { x: number; y: number }[] {
+  const pts: { x: number; y: number }[] = [{ x: rd(cx), y: rd(cy) }];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const a = startAngle + t * (endAngle - startAngle);
+    pts.push({ x: rd(cx + r * Math.cos(a)), y: rd(cy + r * Math.sin(a)) });
+  }
+  return pts;
+}
+
 // =============================================================================
-// SHAPE POOL – Erweiterte Basisformen
+// 14 OFFIZIELLE ZIELFORMEN – Einzige erlaubte Formen
 // =============================================================================
-// Nicht nur Quadrat/Raute/Trapez: unregelmäßige Polygone (5–10 Kanten, auch konkav),
-// asymmetrische Formen, zusammengesetzte Silhouetten (Stufen, Einkerbungen, Zacken).
+// Gleichseitiges Dreieck, Quadrat, Raute, Parallelogramm, Trapez, regelmäßiges
+// Fünfeck, Sechseck, Siebeneck, Achteck, Viertelkreis, Halbkreis, Dreiviertelkreis,
+// Vollkreis, L-Form. Keine Verzerrung, keine Skalierung X≠Y.
 
 const CX = 100;
 const CY = 100;
 const R = 65;
+const ARC_STEPS = 24;
 
-/** Reguläre Basisformen (für Abwärtskompatibilität und einfache Schnitte). */
+/** Reguläre Polygone. */
 const SQUARE: Polygon = { points: regularPolygonPoints(CX, CY, R, 4) };
 const TRIANGLE: Polygon = { points: regularPolygonPoints(CX, CY, R, 3) };
 const PENTAGON: Polygon = { points: regularPolygonPoints(CX, CY, R, 5) };
 const HEXAGON: Polygon = { points: regularPolygonPoints(CX, CY, R, 6) };
+const HEPTAGON: Polygon = { points: regularPolygonPoints(CX, CY, R, 7) };
+const OCTAGON: Polygon = { points: regularPolygonPoints(CX, CY, R, 8) };
 const RHOMBUS: Polygon = {
   points: [
     { x: CX, y: CY - 45 },
@@ -124,43 +152,7 @@ const PARALLELOGRAM: Polygon = {
   ],
 };
 
-/** Unregelmäßiges Fünfeck (asymmetrisch, keine gleichen Winkel). */
-const IRREGULAR_PENTAGON: Polygon = {
-  points: [
-    { x: CX - 10, y: CY - 55 },
-    { x: CX + 50, y: CY - 30 },
-    { x: CX + 45, y: CY + 50 },
-    { x: CX - 35, y: CY + 40 },
-    { x: CX - 55, y: CY - 10 },
-  ],
-};
-
-/** Unregelmäßiges Sechseck (eine Ecke eingezogen → leicht konkav wirkend). */
-const IRREGULAR_HEXAGON: Polygon = {
-  points: [
-    { x: CX, y: CY - 60 },
-    { x: CX + 55, y: CY - 20 },
-    { x: CX + 50, y: CY + 35 },
-    { x: CX, y: CY + 60 },
-    { x: CX - 50, y: CY + 20 },
-    { x: CX - 40, y: CY - 25 },
-  ],
-};
-
-/** Siebeneck (asymmetrisch). */
-const IRREGULAR_HEPTAGON: Polygon = {
-  points: [
-    { x: CX, y: CY - 58 },
-    { x: CX + 48, y: CY - 35 },
-    { x: CX + 55, y: CY + 15 },
-    { x: CX + 20, y: CY + 52 },
-    { x: CX - 30, y: CY + 45 },
-    { x: CX - 55, y: CY + 5 },
-    { x: CX - 45, y: CY - 40 },
-  ],
-};
-
-/** L-Form (zusammengesetzte Silhouette, Stufe). */
+/** L-Form. */
 const L_SHAPE: Polygon = {
   points: [
     { x: 40, y: 50 },
@@ -172,49 +164,101 @@ const L_SHAPE: Polygon = {
   ],
 };
 
-/** Stufenform (Einkerbung oben rechts). */
-const STEP_SHAPE: Polygon = {
-  points: [
-    { x: 35, y: 45 },
-    { x: 165, y: 45 },
-    { x: 165, y: 95 },
-    { x: 125, y: 95 },
-    { x: 125, y: 155 },
-    { x: 35, y: 155 },
-  ],
+/** Viertelkreis (rechter oberer Quadrant). */
+const QUARTER_CIRCLE: Polygon = {
+  points: arcPolygon(CX, CY, R, 0, -Math.PI / 2, ARC_STEPS),
 };
 
-/** Zackenform (5 Spitzen, asymmetrisch). */
-const STARLIKE: Polygon = {
-  points: [
-    { x: CX, y: CY - 62 },
-    { x: CX + 28, y: CY - 8 },
-    { x: CX + 62, y: CY + 10 },
-    { x: CX + 18, y: CY + 35 },
-    { x: CX + 25, y: CY + 62 },
-    { x: CX - 25, y: CY + 40 },
-    { x: CX - 62, y: CY + 15 },
-    { x: CX - 35, y: CY - 20 },
-  ],
+/** Halbkreis (obere Hälfte). */
+const HALF_CIRCLE: Polygon = {
+  points: arcPolygon(CX, CY, R, Math.PI, 0, ARC_STEPS),
 };
 
-/** Alle Zielformen pro Schwierigkeit (weniger Quadrat/Dreieck bei schwer). */
+/** Dreiviertelkreis (drei Viertel, von links oben im Uhrzeigersinn). */
+const THREE_QUARTER_CIRCLE: Polygon = {
+  points: arcPolygon(CX, CY, R, Math.PI / 2, -Math.PI, ARC_STEPS),
+};
+
+/** Vollkreis (Polygon-Approximation, 32 Ecken). */
+const FULL_CIRCLE: Polygon = { points: regularPolygonPoints(CX, CY, R, 32) };
+
+// =============================================================================
+// SOLUTION_SHAPES – Exakt 14 offizielle Formen
+// =============================================================================
+
+export const SOLUTION_SHAPES = [
+  "triangle",
+  "square",
+  "rhombus",
+  "parallelogram",
+  "trapezoid",
+  "pentagon",
+  "hexagon",
+  "heptagon",
+  "octagon",
+  "quarter-circle",
+  "half-circle",
+  "three-quarter-circle",
+  "full-circle",
+  "L-shape",
+] as const;
+
+export type SolutionShapeName = (typeof SOLUTION_SHAPES)[number];
+
+const OFFICIAL_TARGET_POLYGONS: Polygon[] = [
+  TRIANGLE,
+  SQUARE,
+  RHOMBUS,
+  PARALLELOGRAM,
+  TRAPEZ,
+  PENTAGON,
+  HEXAGON,
+  HEPTAGON,
+  OCTAGON,
+  QUARTER_CIRCLE,
+  HALF_CIRCLE,
+  THREE_QUARTER_CIRCLE,
+  FULL_CIRCLE,
+  L_SHAPE,
+];
+
+const ALLOWED_SOLUTION_SHAPES: Polygon[] = OFFICIAL_TARGET_POLYGONS;
+
+/** Fingerprints der 14 offiziellen Formen. */
+const ALLOWED_FINGERPRINTS: Set<string> = new Set(
+  ALLOWED_SOLUTION_SHAPES.map((s) => polygonFingerprint(s))
+);
+
+function isAllowedTarget(poly: Polygon): boolean {
+  return ALLOWED_FINGERPRINTS.has(polygonFingerprint(poly));
+}
+
+function isExactStrategyShape(poly: Polygon): boolean {
+  return ALLOWED_FINGERPRINTS.has(polygonFingerprint(poly));
+}
+
+export function getAllowedSolutionShapes(): Polygon[] {
+  return ALLOWED_SOLUTION_SHAPES.map((s) => ({ points: s.points.map((p) => ({ ...p })) }));
+}
+
+/** Zielformen pro Schwierigkeit (nur die 14). */
 const SHAPE_POOL_EASY: Polygon[] = [SQUARE, TRIANGLE, HEXAGON, PENTAGON, RHOMBUS];
 const SHAPE_POOL_MEDIUM: Polygon[] = [
   HEXAGON,
   PENTAGON,
-  IRREGULAR_PENTAGON,
-  IRREGULAR_HEXAGON,
+  TRAPEZ,
+  PARALLELOGRAM,
   L_SHAPE,
-  STEP_SHAPE,
+  OCTAGON,
+  HALF_CIRCLE,
 ];
 const SHAPE_POOL_HARD: Polygon[] = [
-  IRREGULAR_HEXAGON,
-  IRREGULAR_HEPTAGON,
-  STARLIKE,
+  HEPTAGON,
+  QUARTER_CIRCLE,
+  THREE_QUARTER_CIRCLE,
+  FULL_CIRCLE,
   L_SHAPE,
-  STEP_SHAPE,
-  IRREGULAR_PENTAGON,
+  TRAPEZ,
 ];
 
 // =============================================================================
@@ -258,10 +302,32 @@ function cutSquareOffset(): CutResult {
   };
 }
 
+/** Quadrat: 3 Teile (von einer Ecke zu zwei Kantenmitten). */
+function cutSquare3(): CutResult {
+  const [p0, p1, p2, p3] = SQUARE.points;
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  return {
+    target: SQUARE,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, p2, m23] }, { points: [p0, m23, p3] }],
+  };
+}
+
 function cutTriangleMedian(): CutResult {
   const [p0, p1, p2] = TRIANGLE.points;
   const m = mid(p1, p2);
   return { target: TRIANGLE, pieces: [{ points: [p0, p1, m] }, { points: [p0, m, p2] }] };
+}
+
+/** Dreieck: 3 Teile (von einer Ecke zu den Mitten der gegenüberliegenden Seiten). */
+function cutTriangle3(): CutResult {
+  const [p0, p1, p2] = TRIANGLE.points;
+  const m12 = mid(p1, p2);
+  const m20 = mid(p2, p0);
+  return {
+    target: TRIANGLE,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, m20] }, { points: [p0, m20, p2] }],
+  };
 }
 
 /** Sechseck: diagonal (2 Teile). */
@@ -270,6 +336,63 @@ function cutHexagon2(): CutResult {
   return {
     target: HEXAGON,
     pieces: [{ points: [v[0], v[1], v[2], v[3]] }, { points: [v[0], v[3], v[4], v[5]] }],
+  };
+}
+
+/** Raute: 2 Teile (Diagonale). */
+function cutRhombus2(): CutResult {
+  const [p0, p1, p2, p3] = RHOMBUS.points;
+  return { target: RHOMBUS, pieces: [{ points: [p0, p1, p2] }, { points: [p0, p2, p3] }] };
+}
+
+/** Raute: 3 Teile (von einer Ecke zu zwei Kantenmitten). */
+function cutRhombus3(): CutResult {
+  const [p0, p1, p2, p3] = RHOMBUS.points;
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  return {
+    target: RHOMBUS,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, m23] }, { points: [p0, m23, p3] }],
+  };
+}
+
+/** Parallelogramm: 2 Teile (Diagonale). */
+function cutParallelogram2(): CutResult {
+  const [p0, p1, p2, p3] = PARALLELOGRAM.points;
+  return { target: PARALLELOGRAM, pieces: [{ points: [p0, p1, p2] }, { points: [p0, p2, p3] }] };
+}
+
+/** Parallelogramm: 3 Teile (von einer Ecke zu zwei Kantenmitten). */
+function cutParallelogram3(): CutResult {
+  const [p0, p1, p2, p3] = PARALLELOGRAM.points;
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  return {
+    target: PARALLELOGRAM,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, p2, m23] }, { points: [p0, m23, p3] }],
+  };
+}
+
+/** Trapez: 2 Teile (Mitten Grundlinien + Schwerpunkt). */
+function cutTrapez2(): CutResult {
+  const [p0, p1, p2, p3] = TRAPEZ.points;
+  const m01 = mid(p0, p1);
+  const m23 = mid(p2, p3);
+  const c = centroid(TRAPEZ);
+  return {
+    target: TRAPEZ,
+    pieces: [{ points: [p0, p1, m01, c, p3, m23] }, { points: [m01, p1, p2, m23, c] }],
+  };
+}
+
+/** Trapez: 3 Teile (von einer Ecke zu zwei Kantenmitten). */
+function cutTrapez3(): CutResult {
+  const [p0, p1, p2, p3] = TRAPEZ.points;
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  return {
+    target: TRAPEZ,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, p2, m23] }, { points: [p0, m23, p3] }],
   };
 }
 
@@ -297,7 +420,22 @@ function cutHexagon6(): CutResult {
   };
 }
 
-/** Fünfeck: 3 Teile (asymmetrische Aufteilung). */
+/** Achteck: 4 Teile vom Zentrum (je 2 gegenüberliegende Ecken) – mittel/schwer. */
+function cutOctagon4(): CutResult {
+  const v = OCTAGON.points;
+  const c = centroid(OCTAGON);
+  return {
+    target: OCTAGON,
+    pieces: [
+      { points: [c, v[0], v[1], v[2]] },
+      { points: [c, v[2], v[3], v[4]] },
+      { points: [c, v[4], v[5], v[6]] },
+      { points: [c, v[6], v[7], v[0]] },
+    ],
+  };
+}
+
+/** Fünfeck: 3 Teile vom Zentrum. */
 function cutPentagon3(): CutResult {
   const v = PENTAGON.points;
   const c = centroid(PENTAGON);
@@ -311,39 +449,201 @@ function cutPentagon3(): CutResult {
   };
 }
 
-/** Unregelmäßiges Fünfeck: versetzter Schnitt → 3 Teile. */
-function cutIrregularPentagon3(): CutResult {
-  const v = IRREGULAR_PENTAGON.points;
-  const c = centroid(IRREGULAR_PENTAGON);
-  const m02 = mid(v[0], v[2]);
+/** Fünfeck: 4 Teile vom Zentrum. */
+function cutPentagon4(): CutResult {
+  const v = PENTAGON.points;
+  const c = centroid(PENTAGON);
   return {
-    target: IRREGULAR_PENTAGON,
+    target: PENTAGON,
     pieces: [
-      { points: [c, v[0], v[1], m02] },
-      { points: [c, m02, v[2], v[3]] },
-      { points: [c, v[3], v[4], v[0]] },
+      { points: [c, v[0], v[1], v[2]] },
+      { points: [c, v[2], v[3]] },
+      { points: [c, v[3], v[4]] },
+      { points: [c, v[4], v[0]] },
     ],
   };
 }
 
-/** Unregelmäßiges Sechseck: 4 Teile (Zickzack-artig: zwei Schnitte). */
-function cutIrregularHexagon4(): CutResult {
-  const v = IRREGULAR_HEXAGON.points;
-  const c = centroid(IRREGULAR_HEXAGON);
-  const m01 = mid(v[0], v[1]);
-  const m34 = mid(v[3], v[4]);
+/** Fünfeck: 5 Teile (Zentrum zu jeder Ecke). */
+function cutPentagon5(): CutResult {
+  const v = PENTAGON.points;
+  const c = centroid(PENTAGON);
   return {
-    target: IRREGULAR_HEXAGON,
+    target: PENTAGON,
+    pieces: Array.from({ length: 5 }, (_, i) => ({
+      points: [c, v[i], v[(i + 1) % 5]],
+    })),
+  };
+}
+
+/** Siebeneck (regulär): 4 Teile vom Zentrum. */
+function cutHeptagon4(): CutResult {
+  const v = HEPTAGON.points;
+  const c = centroid(HEPTAGON);
+  return {
+    target: HEPTAGON,
     pieces: [
-      { points: [c, v[0], m01, v[5]] },
-      { points: [c, m01, v[1], v[2]] },
-      { points: [c, v[2], v[3], m34] },
-      { points: [c, m34, v[4], v[5]] },
+      { points: [c, v[0], v[1], v[2]] },
+      { points: [c, v[2], v[3], v[4]] },
+      { points: [c, v[4], v[5], v[6]] },
+      { points: [c, v[6], v[0]] },
     ],
   };
 }
 
-/** L-Form: 3 Rechtecke, die exakt die L-Fläche ausfüllen. */
+/** Siebeneck: 7 Teile (Zentrum zu jeder Ecke). */
+function cutHeptagon7(): CutResult {
+  const v = HEPTAGON.points;
+  const c = centroid(HEPTAGON);
+  return {
+    target: HEPTAGON,
+    pieces: Array.from({ length: 7 }, (_, i) => ({
+      points: [c, v[i], v[(i + 1) % 7]],
+    })),
+  };
+}
+
+/** Viertelkreis: 2 Teile (gerader Schnitt von Mitte zum Bogen). */
+function cutQuarterCircle2(): CutResult {
+  const pts = QUARTER_CIRCLE.points;
+  const c = pts[0]!;
+  const k = Math.floor((pts.length - 1) / 2) + 1;
+  return {
+    target: QUARTER_CIRCLE,
+    pieces: [{ points: [c, ...pts.slice(1, k)] }, { points: [c, ...pts.slice(k - 1)] }],
+  };
+}
+
+/** Viertelkreis: 3 Teile (zwei radiale Schnitte). */
+function cutQuarterCircle3(): CutResult {
+  const pts = QUARTER_CIRCLE.points;
+  const c = pts[0]!;
+  const n = pts.length - 1;
+  const i1 = Math.floor(n / 3);
+  const i2 = Math.floor((2 * n) / 3);
+  return {
+    target: QUARTER_CIRCLE,
+    pieces: [
+      { points: [c, pts[1]!, pts[i1]!].concat(pts.slice(2, i1 + 1)) },
+      { points: [c, pts[i1]!, pts[i2]!].concat(pts.slice(i1 + 1, i2 + 1)) },
+      { points: [c, pts[i2]!].concat(pts.slice(i2 + 1)) },
+    ],
+  };
+}
+
+/** Halbkreis: 3 Teile (zwei radiale Schnitte vom Zentrum). */
+function cutHalfCircle3(): CutResult {
+  const pts = HALF_CIRCLE.points;
+  const c = pts[0]!;
+  const n = pts.length - 1;
+  const i1 = Math.floor(n / 3);
+  const i2 = Math.floor((2 * n) / 3);
+  return {
+    target: HALF_CIRCLE,
+    pieces: [
+      { points: [c, pts[1]!, pts[i1]!].concat(pts.slice(2, i1 + 1)) },
+      { points: [c, pts[i1]!, pts[i2]!].concat(pts.slice(i1 + 1, i2 + 1)) },
+      { points: [c, pts[i2]!].concat(pts.slice(i2 + 1)) },
+    ],
+  };
+}
+
+/** Halbkreis: 4 Teile (vier radiale Schnitte). */
+function cutHalfCircle4(): CutResult {
+  const pts = HALF_CIRCLE.points;
+  const c = pts[0]!;
+  const n = pts.length - 1;
+  const step = Math.floor(n / 4);
+  return {
+    target: HALF_CIRCLE,
+    pieces: Array.from({ length: 4 }, (_, i) => {
+      const start = i === 0 ? 1 : 1 + i * step;
+      const end = i === 3 ? pts.length : 1 + (i + 1) * step;
+      return { points: [c, ...pts.slice(start, end)] };
+    }),
+  };
+}
+
+/** Dreiviertelkreis: 3 Teile (zwei radiale Schnitte vom Zentrum). */
+function cutThreeQuarterCircle3(): CutResult {
+  const pts = THREE_QUARTER_CIRCLE.points;
+  const c = pts[0]!;
+  const n = pts.length - 1;
+  const i1 = Math.floor(n / 3);
+  const i2 = Math.floor((2 * n) / 3);
+  return {
+    target: THREE_QUARTER_CIRCLE,
+    pieces: [
+      { points: [c, pts[1]!, pts[i1]!].concat(pts.slice(2, i1 + 1)) },
+      { points: [c, pts[i1]!, pts[i2]!].concat(pts.slice(i1 + 1, i2 + 1)) },
+      { points: [c, pts[i2]!].concat(pts.slice(i2 + 1)) },
+    ],
+  };
+}
+
+/** Dreiviertelkreis: 4 Teile (vier radiale Schnitte). */
+function cutThreeQuarterCircle4(): CutResult {
+  const pts = THREE_QUARTER_CIRCLE.points;
+  const c = pts[0]!;
+  const n = pts.length - 1;
+  const step = Math.floor(n / 4);
+  return {
+    target: THREE_QUARTER_CIRCLE,
+    pieces: Array.from({ length: 4 }, (_, i) => {
+      const start = i === 0 ? 1 : 1 + i * step;
+      const end = i === 3 ? pts.length : 1 + (i + 1) * step;
+      return { points: [c, ...pts.slice(start, end)] };
+    }),
+  };
+}
+
+/** Vollkreis: 4 Teile (4 radiale Schnitte vom Zentrum). */
+function cutFullCircle4(): CutResult {
+  const v = FULL_CIRCLE.points;
+  const c = centroid(FULL_CIRCLE);
+  const n = v.length;
+  const step = n / 4;
+  return {
+    target: FULL_CIRCLE,
+    pieces: Array.from({ length: 4 }, (_, i) => ({
+      points: [c, ...v.slice(Math.floor(i * step), Math.floor((i + 1) * step))],
+    })),
+  };
+}
+
+/** Vollkreis: 6 Teile (6 radiale Schnitte). */
+function cutFullCircle6(): CutResult {
+  const v = FULL_CIRCLE.points;
+  const c = centroid(FULL_CIRCLE);
+  const n = v.length;
+  const step = Math.floor(n / 6);
+  return {
+    target: FULL_CIRCLE,
+    pieces: Array.from({ length: 6 }, (_, i) => {
+      const start = i * step;
+      const end = i === 5 ? n : (i + 1) * step;
+      return { points: [c, ...v.slice(start, end)] };
+    }),
+  };
+}
+
+/** Vollkreis: 5 Teile (5 radiale Schnitte). */
+function cutFullCircle5(): CutResult {
+  const v = FULL_CIRCLE.points;
+  const c = centroid(FULL_CIRCLE);
+  const n = v.length;
+  const step = Math.floor(n / 5);
+  return {
+    target: FULL_CIRCLE,
+    pieces: Array.from({ length: 5 }, (_, i) => {
+      const start = i * step;
+      const end = i === 4 ? n : (i + 1) * step;
+      return { points: [c, ...v.slice(start, end)] };
+    }),
+  };
+}
+
+/** L-Form: 3 Rechtecke. */
 function cutLShape4Simple(): CutResult {
   return {
     target: L_SHAPE,
@@ -376,95 +676,48 @@ function cutLShape4Simple(): CutResult {
   };
 }
 
-/** Stufenform: 3 Teile vom Zentrum. */
-function cutStepShape4(): CutResult {
-  const v = STEP_SHAPE.points;
-  const c = centroid(STEP_SHAPE);
-  return {
-    target: STEP_SHAPE,
-    pieces: [
-      { points: [c, v[0], v[1], v[2]] },
-      { points: [c, v[2], v[3], v[4]] },
-      { points: [c, v[4], v[5], v[0]] },
-    ],
-  };
-}
-
-/** Siebeneck: 5 Teile (asymmetrisch unterschiedlich groß). */
-function cutHeptagon5(): CutResult {
-  const v = IRREGULAR_HEPTAGON.points;
-  const c = centroid(IRREGULAR_HEPTAGON);
-  return {
-    target: IRREGULAR_HEPTAGON,
-    pieces: [
-      { points: [c, v[0], v[1], v[2]] },
-      { points: [c, v[2], v[3]] },
-      { points: [c, v[3], v[4]] },
-      { points: [c, v[4], v[5], v[6]] },
-      { points: [c, v[6], v[0]] },
-    ],
-  };
-}
-
-/** Unregelmäßiges Sechseck: 5 Teile (verschachtelt, vom Zentrum zu Kanten). */
-function cutIrregularHexagon5(): CutResult {
-  const v = IRREGULAR_HEXAGON.points;
-  const c = centroid(IRREGULAR_HEXAGON);
-  return {
-    target: IRREGULAR_HEXAGON,
-    pieces: [
-      { points: [c, v[0], v[1], v[2]] },
-      { points: [c, v[2], v[3]] },
-      { points: [c, v[3], v[4]] },
-      { points: [c, v[4], v[5]] },
-      { points: [c, v[5], v[0]] },
-    ],
-  };
-}
-
-/** Zackenform: 6–8 Teile (vom Zentrum zu Ecken). */
-function cutStarlike6(): CutResult {
-  const v = STARLIKE.points;
-  const c = centroid(STARLIKE);
-  const n = v.length;
-  return {
-    target: STARLIKE,
-    pieces: Array.from({ length: n }, (_, i) => ({
-      points: [c, v[i], v[(i + 1) % n]],
-    })),
-  };
-}
-
 export type FZDifficulty = "easy" | "medium" | "hard";
 
-/** Schnitt-Schemata nach Schwierigkeit:
- * - Leicht (easy): einfache Schnitte, 2–4 Teile (Diagonale, Median, Zentrum zu Ecken).
- * - Mittel (medium): asymmetrische/versetzte Schnitte, 3–4 Teile (L-Form, Stufe, unregelmäßige Polygone).
- * - Schwer (hard): verschachtelte/unregelmäßige Schnitte, 5–8 Teile (viele Teile vom Zentrum, Zackenform).
- */
+/** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile, nur gerade Schnitte. */
 const CUT_SCHEMES: { diff: FZDifficulty; cut: () => CutResult }[] = [
   { diff: "easy", cut: cutSquareDiagonal },
   { diff: "easy", cut: cutSquareCenter4 },
+  { diff: "easy", cut: cutSquare3 },
   { diff: "easy", cut: cutTriangleMedian },
+  { diff: "easy", cut: cutTriangle3 },
   { diff: "easy", cut: cutHexagon2 },
+  { diff: "easy", cut: cutRhombus2 },
+  { diff: "easy", cut: cutRhombus3 },
+  { diff: "easy", cut: cutParallelogram2 },
+  { diff: "easy", cut: cutParallelogram3 },
   { diff: "medium", cut: cutHexagon3 },
   { diff: "medium", cut: cutPentagon3 },
+  { diff: "medium", cut: cutPentagon4 },
   { diff: "medium", cut: cutSquareOffset },
-  { diff: "medium", cut: cutIrregularPentagon3 },
-  { diff: "medium", cut: cutIrregularHexagon4 },
+  { diff: "medium", cut: cutTrapez2 },
+  { diff: "medium", cut: cutTrapez3 },
   { diff: "medium", cut: cutLShape4Simple },
-  { diff: "medium", cut: cutStepShape4 },
+  { diff: "medium", cut: cutOctagon4 },
+  { diff: "medium", cut: cutHeptagon4 },
+  { diff: "medium", cut: cutQuarterCircle2 },
+  { diff: "medium", cut: cutQuarterCircle3 },
+  { diff: "medium", cut: cutHalfCircle3 },
+  { diff: "medium", cut: cutHalfCircle4 },
+  { diff: "medium", cut: cutThreeQuarterCircle3 },
+  { diff: "medium", cut: cutThreeQuarterCircle4 },
   { diff: "hard", cut: cutHexagon6 },
-  { diff: "hard", cut: cutHeptagon5 },
-  { diff: "hard", cut: cutStarlike6 },
-  { diff: "hard", cut: cutIrregularHexagon5 },
+  { diff: "hard", cut: cutHeptagon7 },
+  { diff: "hard", cut: cutPentagon5 },
+  { diff: "hard", cut: cutFullCircle4 },
+  { diff: "hard", cut: cutFullCircle5 },
+  { diff: "hard", cut: cutFullCircle6 },
 ];
 
 // =============================================================================
 // NORMALIZE & FINGERPRINT – für DuplicateGuard und Validator
 // =============================================================================
 
-/** Polygon normalisieren: Schwerpunkt nach (0,0), skaliert auf Fläche 1, dann Ecken nach Winkel sortiert. */
+/** Polygon normalisieren: Schwerpunkt nach (0,0), uniform skaliert auf Fläche 1 (ein Faktor), dann Ecken nach Winkel sortiert. */
 function normalizePolygon(poly: Polygon): { x: number; y: number }[] {
   const pts = poly.points;
   if (pts.length < 3) return [];
@@ -502,6 +755,18 @@ function taskFingerprint(target: Polygon, pieces: Polygon[]): string {
   return polygonFingerprint(target) + "::" + piecesFingerprint(pieces);
 }
 
+/** Dev-Validation: Erzwingt uniforme Skalierung (scaleX === scaleY). Bei Verzerrung → throw. */
+export function assertUniformScale(scaleX: number, scaleY: number, context?: string): void {
+  if (typeof window !== "undefined" && import.meta.env?.DEV) {
+    const tol = 1e-10;
+    if (Math.abs(scaleX - scaleY) > tol) {
+      throw new Error(
+        `[Figuren] Non-uniform scale verboten: scaleX=${scaleX}, scaleY=${scaleY}. ${context ?? ""}`
+      );
+    }
+  }
+}
+
 // =============================================================================
 // DUPLICATE GUARD – Hash/Fingerprint, bei Kollision verwerfen
 // =============================================================================
@@ -526,16 +791,118 @@ export function duplicateGuardAdd(fingerprint: string): void {
 }
 
 // =============================================================================
-// VALIDATOR – Nur eine Option exakt aus den Teilen zusammensetzbar
+// VALIDATOR – Harte Prüfung: Fläche, keine Überlappung, Ziel in SOLUTION_SHAPES
 // =============================================================================
+// Bei Fehlschlag: Aufgabe VERWERFEN (nicht anzeigen).
 
-const AREA_TOL = 0.5;
+const AREA_TOL = 1e-6;
 
-/** Prüft: Summe Teilflächen = Zielfläche; keine Überlappung (implizit durch Konstruktion). */
+/** Prüft: Sum(Fläche Teile) === Fläche Ziel (exakt, keine Lücken/Überlappung durch Fläche). */
 export function validatePiecesMatchTarget(pieces: Polygon[], target: Polygon): boolean {
   const sum = pieces.reduce((s, p) => s + polygonArea(p), 0);
   const targetA = polygonArea(target);
-  return Math.abs(sum - targetA) < AREA_TOL;
+  return Math.abs(sum - targetA) <= AREA_TOL;
+}
+
+/** Prüft: Keine zwei Teile überlappen (kein Vertex strikt im Inneren des anderen Polygons). */
+function validatePiecesNoOverlap(pieces: Polygon[]): boolean {
+  for (let i = 0; i < pieces.length; i++) {
+    for (let j = i + 1; j < pieces.length; j++) {
+      const a = pieces[i]!.points;
+      const b = pieces[j]!.points;
+      for (const p of a) {
+        if (pointStrictlyInsidePolygon(p, b)) return false;
+      }
+      for (const p of b) {
+        if (pointStrictlyInsidePolygon(p, a)) return false;
+      }
+    }
+  }
+  return true;
+}
+
+/** Prüft: Jeder Eckpunkt jedes Teils liegt innerhalb oder auf dem Rand der Zielform (Union = Ziel, keine Lücken). */
+function validatePiecesInsideTarget(pieces: Polygon[], target: Polygon): boolean {
+  const targetV = target.points;
+  for (const piece of pieces) {
+    for (const p of piece.points) {
+      if (!pointInsideOrOnPolygon(p, targetV)) return false;
+    }
+  }
+  return true;
+}
+
+/** Liegt der Punkt auf der Strecke von a nach b (inkl. Endpunkte, mit Toleranz)? */
+function pointOnSegment(
+  p: { x: number; y: number },
+  a: { x: number; y: number },
+  b: { x: number; y: number },
+  eps: number = 1e-4
+): boolean {
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  const len = Math.hypot(dx, dy);
+  if (len < eps) return Math.hypot(p.x - a.x, p.y - a.y) <= eps;
+  const t = Math.abs(dx) >= Math.abs(dy) ? (p.x - a.x) / dx : (p.y - a.y) / dy;
+  if (t < -eps || t > 1 + eps) return false;
+  const qx = a.x + t * dx;
+  const qy = a.y + t * dy;
+  return Math.abs(p.x - qx) <= eps && Math.abs(p.y - qy) <= eps;
+}
+
+/** Punkt liegt innerhalb oder auf dem Rand des Polygons (Randpunkte zählen als gültig). */
+function pointInsideOrOnPolygon(
+  point: { x: number; y: number },
+  vertices: { x: number; y: number }[]
+): boolean {
+  const n = vertices.length;
+  if (n < 3) return false;
+  for (let i = 0, j = n - 1; i < n; j = i++) {
+    if (pointOnSegment(point, vertices[j]!, vertices[i]!)) return true;
+  }
+  return pointInPolygon(point, vertices);
+}
+function pointStrictlyInsidePolygon(
+  point: { x: number; y: number },
+  vertices: { x: number; y: number }[]
+): boolean {
+  const n = vertices.length;
+  if (n < 3) return false;
+  const eps = 1e-4;
+  for (let i = 0, j = n - 1; i < n; j = i++) {
+    const vi = vertices[i]!;
+    const vj = vertices[j]!;
+    const dx = vj.x - vi.x;
+    const dy = vj.y - vi.y;
+    const t = Math.abs(dx) > Math.abs(dy) ? (point.x - vi.x) / dx : (point.y - vi.y) / dy;
+    const onEdge = t >= -eps && t <= 1 + eps;
+    if (onEdge) {
+      const px = vi.x + t * dx;
+      const py = vi.y + t * dy;
+      if (Math.abs(point.x - px) < eps && Math.abs(point.y - py) < eps) return false;
+    }
+  }
+  return pointInPolygon(point, vertices);
+}
+
+/** Punkt-in-Polygon (Strahl-Test). */
+function pointInPolygon(
+  point: { x: number; y: number },
+  vertices: { x: number; y: number }[]
+): boolean {
+  const n = vertices.length;
+  if (n < 3) return false;
+  let inside = false;
+  for (let i = 0, j = n - 1; i < n; j = i++) {
+    const xi = vertices[i]!.x,
+      yi = vertices[i]!.y;
+    const xj = vertices[j]!.x,
+      yj = vertices[j]!.y;
+    if (yi > point.y !== yj > point.y && point.x < ((xj - xi) * (point.y - yi)) / (yj - yi) + xi) {
+      inside = !inside;
+    }
+  }
+  return inside;
 }
 
 /** Prüft: Genau eine Option (A–D) hat denselben Fingerprint wie das Ziel; E ist Option 4. */
@@ -553,85 +920,62 @@ export function validateUniqueCorrectOption(task: FigureAssembleTask): boolean {
   return !isOptionE(correctOpt) && polygonFingerprint(correctOpt) === targetFp;
 }
 
-/** Vollständige Validierung: Fläche + eindeutige Lösung. */
+/** Prüft: Ziel und alle Polygon-Optionen (A–D) sind exakt die 14 SOLUTION_SHAPES. Keine Verzerrung. */
+export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): boolean {
+  if (!isExactStrategyShape(task.target)) return false;
+  for (let i = 0; i < 4; i++) {
+    const opt = task.options[i];
+    if (isOptionE(opt)) continue;
+    if (!isExactStrategyShape(opt)) return false;
+  }
+  return true;
+}
+
+/** Vollständige Validierung (hart): Fläche, keine Überlappung, Teile in Ziel, Ziel in 14 Formen, eindeutige Lösung. */
 export function validateFigurenTask(task: FigureAssembleTask): boolean {
-  if (task.pieces.length < 2 || task.options.length !== 5) return false;
+  if (task.pieces.length < 2 || task.pieces.length > 7 || task.options.length !== 5) return false;
   if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
+  if (!validatePiecesNoOverlap(task.pieces)) return false;
+  if (!validatePiecesInsideTarget(task.pieces, task.target)) return false;
   if (!validateUniqueCorrectOption(task)) return false;
+  if (!validateTaskUsesOnlyStrategyShapes(task)) return false;
   if (task.correctIndex < 0 || task.correctIndex > 4) return false;
   return true;
 }
 
 // =============================================================================
-// DISTRACTORS – Gezielt falsche Optionen (kein Recycling)
+// DISTRACTORS – nur exakte Formen aus den 14 Strategie-Formen
 // =============================================================================
-// Minimal veränderte Winkel, leicht falsche Kantenlängen, Spiegelung, falsche Topologie.
+// Keine Skalierung, keine Verzerrung: Falsche Optionen = andere Formen aus der Liste.
+// Korrekte Antwort = exakt die ursprüngliche Lösungsform (gleicher Fingerprint).
 
-function scalePolygon(poly: Polygon, fx: number, fy: number): Polygon {
-  const c = centroid(poly);
-  return {
-    points: poly.points.map((p) => ({
-      x: rd(c.x + (p.x - c.x) * fx),
-      y: rd(c.y + (p.y - c.y) * fy),
-    })),
-  };
+/** Kopie eines Polygons (exakte Geometrie, keine Änderung). */
+function copyPolygon(poly: Polygon): Polygon {
+  return { points: poly.points.map((p) => ({ x: p.x, y: p.y })) };
 }
 
-function mirrorPolygonY(poly: Polygon): Polygon {
-  const pts = poly.points.map((p) => ({ x: p.x, y: rd(2 * CY - p.y) }));
-  return { points: pts.reverse() };
-}
-
-/** Leichte Winkel-/Kantenänderung: einen Vertex leicht verschieben. */
-function deformPolygon(poly: Polygon, rng: () => number, amount: number): Polygon {
-  const pts = poly.points.map((p) => ({ ...p }));
-  const i = Math.floor(rng() * pts.length);
-  pts[i] = {
-    x: rd(pts[i].x + (rng() - 0.5) * amount),
-    y: rd(pts[i].y + (rng() - 0.5) * amount),
-  };
-  return { points: pts };
-}
-
-/** Erzeugt 3 Distraktoren: Spiegelung, Deformation, anderes Verhältnis; alle mit anderem Fingerprint als target. */
+/** Erzeugt 3 Distraktoren: exakt 3 andere Formen aus ALLOWED_SOLUTION_SHAPES. */
 function buildDistractors(
   target: Polygon,
   count: number,
   rng: () => number,
-  excludeFingerprint: string
+  _excludeFingerprint: string
 ): Polygon[] {
-  const out: Polygon[] = [];
   const targetFp = polygonFingerprint(target);
-  const pool = [RHOMBUS, TRAPEZ, PARALLELOGRAM, IRREGULAR_PENTAGON, L_SHAPE, STEP_SHAPE];
-  let tried = 0;
-  while (out.length < count && tried < 50) {
-    tried++;
-    const variant =
-      rng() < 0.33
-        ? mirrorPolygonY(target)
-        : rng() < 0.5
-          ? deformPolygon(target, rng, 8)
-          : scalePolygon(
-              pool[Math.floor(rng() * pool.length)]!,
-              0.9 + rng() * 0.3,
-              0.9 + rng() * 0.3
-            );
-    const fp = polygonFingerprint(variant);
-    if (fp === targetFp || fp === excludeFingerprint) continue;
-    if (out.some((p) => polygonFingerprint(p) === fp)) continue;
-    out.push(variant);
+  const others = ALLOWED_SOLUTION_SHAPES.filter((s) => polygonFingerprint(s) !== targetFp);
+  const shuffled = [...others];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  while (out.length < count) {
-    const v = pool[out.length % pool.length]!;
-    const scaled = scalePolygon(v, 0.85 + rng() * 0.2, 0.85 + rng() * 0.2);
-    if (polygonFingerprint(scaled) !== targetFp) out.push(scaled);
-  }
-  return out.slice(0, count);
+  return shuffled.slice(0, count).map((s) => copyPolygon(s));
 }
 
 // =============================================================================
-// GENERATOR – Pipeline: Kandidat → Validator → DuplicateGuard → Return
+// GENERATOR – Solution-first: Form wählen → exakt schneiden → exakt rekonstruieren
 // =============================================================================
+// Pipeline: Kandidat aus CUT_SCHEMES (nur 14 Strategie-Formen) → Validator → DuplicateGuard.
+// Ziel und Optionen A–D sind ausschließlich exakte Geometrie aus den 14 Formen.
 
 const OPTION_E = { isOptionE: true as const } as const;
 
@@ -672,6 +1016,7 @@ export function generateFigurenTrainingTask(
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(difficulty, seed + attempt * 9973);
+    if (!isAllowedTarget(target)) continue;
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
 
@@ -727,7 +1072,7 @@ function generateFigurenTrainingTaskFallback(
     [order[i], order[j]] = [order[j], order[i]];
   }
   const correctIndex = order.indexOf(0);
-  return {
+  const task: FigureAssembleTask = {
     id: `fz-train-fb-${difficulty}-${seed}`,
     pieces,
     target,
@@ -736,6 +1081,13 @@ function generateFigurenTrainingTaskFallback(
     difficulty,
     explanation: `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
   };
+  if (validateFigurenTask(task)) return task;
+  if (OFFICIAL_FZ_EXAMPLES.length > 0) {
+    const first = OFFICIAL_FZ_EXAMPLES[0];
+    if (first && validateFigurenTask(first))
+      return { ...first, id: `fz-train-fb-official-${seed}` };
+  }
+  return task;
 }
 
 export function generateFigurenTrainingSet(

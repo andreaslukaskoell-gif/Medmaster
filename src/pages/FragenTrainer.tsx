@@ -449,6 +449,19 @@ function QuizScreen({
       </div>
     );
 
+  if (!loading && fragen.length === 0)
+    return (
+      <div className="flex flex-col items-center justify-center py-20 gap-3 text-muted-foreground">
+        <AlertCircle className="w-8 h-8" />
+        <p className="text-sm">
+          Keine Fragen geladen. Bitte andere Unterkapitel wählen oder Quelle wechseln.
+        </p>
+        <Button variant="outline" onClick={onBack}>
+          Zurück
+        </Button>
+      </div>
+    );
+
   if (!currentFrage) return null;
 
   const canRate = revealed && (currentFrage.typ !== "K" || typKCombChosen !== null);
@@ -712,6 +725,25 @@ export default function FragenTrainer() {
   const [results, setResults] = useState<SessionAnswers>([]);
   const userId = useMemo(() => getLocalUserId(), []);
 
+  useEffect(() => {
+    if (import.meta.env?.DEV) {
+      try {
+        const chapters = getChaptersWithContentKnowledge();
+        if (!Array.isArray(chapters)) {
+          console.error(
+            "[Fragen-Trainer] getChaptersWithContentKnowledge lieferte kein Array.",
+            chapters
+          );
+        }
+      } catch (e) {
+        console.error(
+          "[Fragen-Trainer] Beim Laden der Kapitel-Daten ist ein Fehler aufgetreten.",
+          e
+        );
+      }
+    }
+  }, []);
+
   return (
     <div className="p-4 pb-24 md:p-6">
       {screen === "select" && (
@@ -725,7 +757,16 @@ export default function FragenTrainer() {
           }}
         />
       )}
-      {screen === "quiz" && (
+      {screen === "quiz" && selectedIds.length === 0 && (
+        <div className="flex flex-col items-center justify-center py-20 gap-3 text-muted-foreground">
+          <AlertCircle className="w-8 h-8" />
+          <p className="text-sm">Bitte zuerst Unterkapitel wählen.</p>
+          <Button variant="outline" onClick={() => setScreen("select")}>
+            Zur Auswahl
+          </Button>
+        </div>
+      )}
+      {screen === "quiz" && selectedIds.length > 0 && (
         <QuizScreen
           uk_ids={selectedIds}
           mode={mode}

@@ -2,10 +2,10 @@
  * Central registry for BMS question knowledge (all subjects).
  * Generator uses getKnowledgeByUkId(ukId) to resolve knowledge per Unterkapitel.
  */
-import { getKnowledgeByUkId as getBio } from "./biologie";
-import { getKnowledgeByUkId as getChem } from "./chemie";
-import { getKnowledgeByUkId as getPhys } from "./physik";
-import { getKnowledgeByUkId as getMath } from "./mathematik";
+import { getKnowledgeByUkId as getBio, getAllBiologieUkIds } from "./biologie";
+import { getKnowledgeByUkId as getChem, getAllChemieUkIds } from "./chemie";
+import { getKnowledgeByUkId as getPhys, getAllPhysikUkIds } from "./physik";
+import { getKnowledgeByUkId as getMath, getAllMathematikUkIds } from "./mathematik";
 import type { BMSKnowledge } from "./types";
 
 export type {
@@ -27,10 +27,6 @@ export function getKnowledgeByUkId(ukId: string): BMSKnowledge | undefined {
 }
 
 export function getAllKnowledgeUkIds(): string[] {
-  const { getAllBiologieUkIds } = require("./biologie");
-  const { getAllChemieUkIds } = require("./chemie");
-  const { getAllPhysikUkIds } = require("./physik");
-  const { getAllMathematikUkIds } = require("./mathematik");
   return [
     ...getAllBiologieUkIds(),
     ...getAllChemieUkIds(),

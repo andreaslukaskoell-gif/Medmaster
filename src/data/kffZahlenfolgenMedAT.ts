@@ -366,8 +366,18 @@ function distinctPairs(correct: [number, number], pairs: [number, number][]): [n
   return result;
 }
 
-/** Generiert eine MedAT-Zahlenfolgen-Aufgabe. */
+/** Generiert eine MedAT-Zahlenfolgen-Aufgabe. Validiert vor Return; bei Fehlschlag Retry mit anderem Seed. */
+const MAX_SEQUENCE_VALIDATE_RETRIES = 5;
+
 export function generateSequenceTask(difficulty: DifficultyLevel, seed: number): SequenceTask {
+  for (let retry = 0; retry < MAX_SEQUENCE_VALIDATE_RETRIES; retry++) {
+    const result = generateSequenceTaskInner(difficulty, seed + retry);
+    if (validateSequenceTask(result)) return result;
+  }
+  return generateSequenceTaskInner(difficulty, seed + MAX_SEQUENCE_VALIDATE_RETRIES);
+}
+
+function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): SequenceTask {
   const rand = seedRng(seed);
   const ops = pickOps(difficulty, rand);
   const lengthVisible =

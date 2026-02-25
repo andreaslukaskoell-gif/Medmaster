@@ -48,6 +48,7 @@ import type {
 } from "@/data/kffGenerators";
 import { figurenAufgaben } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
+import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
@@ -1883,7 +1884,7 @@ export default function Simulation() {
                 key={i}
                 className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
               >
-                <svg viewBox="0 0 200 200" className="w-full h-full">
+                <svg viewBox="0 0 200 200" {...FIGURE_SVG_ASPECT_PROPS} className="w-full h-full">
                   <path d={piece.path} fill={piece.fill} stroke="#374151" strokeWidth="1.2" />
                 </svg>
               </div>
@@ -1911,7 +1912,11 @@ export default function Simulation() {
                   {opt.text ? (
                     <span className="text-xs text-center text-muted leading-tight">{opt.text}</span>
                   ) : (
-                    <svg viewBox="0 0 200 200" className="w-full max-w-[72px] max-h-[72px] flex-1">
+                    <svg
+                      viewBox="0 0 200 200"
+                      {...FIGURE_SVG_ASPECT_PROPS}
+                      className="w-full max-w-[72px] max-h-[72px] flex-1"
+                    >
                       {opt.paths.map((p, pi) => (
                         <path key={pi} d={p} fill={opt.fill} stroke="#374151" strokeWidth="1.2" />
                       ))}

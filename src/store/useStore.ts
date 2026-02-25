@@ -65,6 +65,7 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
           ? (s.userProgress as Record<string, ChapterProgress>)
           : {},
       onboardingCompleted: Boolean(s.onboardingCompleted),
+      hasCompletedMedATOnboarding: Boolean(s.hasCompletedMedATOnboarding),
       einstufungsResult:
         s.einstufungsResult != null &&
         typeof s.einstufungsResult === "object" &&
@@ -111,6 +112,9 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
         typeof s.smartAdjustDismissedUntil === "string" ? s.smartAdjustDismissedUntil : "",
       lastActiveAt: typeof s.lastActiveAt === "string" ? s.lastActiveAt : "",
       errorEvents: Array.isArray(s.errorEvents) ? s.errorEvents : [],
+      skillRating: Number.isFinite(s.skillRating)
+        ? Math.max(0, Math.min(1000, s.skillRating as number))
+        : 500,
     };
   } catch {
     return {};
@@ -205,6 +209,12 @@ interface AppState {
   /** Premium subscription status (true = active subscription or beta access) */
   isPro: boolean;
   setIsPro: (value: boolean) => void;
+  /** True nach Abschluss des MedAT-Onboardings (4 Info-Seiten). Vorher Redirect auf /onboarding/medat. */
+  hasCompletedMedATOnboarding: boolean;
+  setMedATOnboardingComplete: () => void;
+  /** Skill-Rating 0–1000 für adaptives KFF/BMS-Training (Aufgabenauswahl aus Task-DB). */
+  skillRating: number;
+  setSkillRating: (updater: (prev: number) => number) => void;
 
   addXP: (amount: number) => void;
   /** XP aus Basis + Schwierigkeit + Zeit; Fallbacks wenn Daten fehlen. */
@@ -278,6 +288,8 @@ export const useStore = create<AppState>()(
       lastActiveAt: "",
       errorEvents: [] as ErrorEvent[],
       isPro: false,
+      hasCompletedMedATOnboarding: false,
+      skillRating: 500,
 
       logError: (objectId, objectType, context) =>
         set((s) => ({
@@ -293,6 +305,12 @@ export const useStore = create<AppState>()(
         })),
 
       setIsPro: (value) => set({ isPro: value }),
+      setMedATOnboardingComplete: () => set({ hasCompletedMedATOnboarding: true }),
+      setSkillRating: (updater) =>
+        set((s) => {
+          const next = Math.max(0, Math.min(1000, updater(s.skillRating ?? 500)));
+          return { skillRating: next };
+        }),
       setPendingBadgeId: (id) => set({ pendingBadgeId: id }),
 
       setGoalAchievedToday: (date, achieved) =>

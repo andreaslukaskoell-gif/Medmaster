@@ -29,7 +29,11 @@ export function useBMSSubchapterList(chapterId: string | null) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!chapterId || !supabase) return;
+    if (!chapterId || !supabase) {
+      setSubchapters([]);
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     supabase
       .from("bms_subchapters")

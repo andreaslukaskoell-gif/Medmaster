@@ -2,6 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FIGURE_STRATEGY_GALLERY, FILL } from "@/data/figurenGenerator";
+import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
 import { KFF_STRATEGIES, type KFFStrategyTestType } from "@/data/kffStrategies";
 import { cn } from "@/lib/utils";
 
@@ -171,7 +172,7 @@ function FigurenSkizze() {
     <Card>
       <CardContent className="p-6">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">
-          Die 13 Lösungsfiguren (in der Prüfungsfarbe)
+          Die 14 Lösungsfiguren (in der Prüfungsfarbe)
         </h2>
         <p className="text-xs text-muted mb-4">
           So sehen die Zielfiguren aus – sie können aus Puzzleteilen zusammengesetzt werden. Teile
@@ -183,7 +184,12 @@ function FigurenSkizze() {
               key={key}
               className="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-gray-50 dark:bg-gray-800/50"
             >
-              <svg viewBox="0 0 200 200" className="w-16 h-16 sm:w-20 sm:h-20 shrink-0" aria-hidden>
+              <svg
+                viewBox="0 0 200 200"
+                {...FIGURE_SVG_ASPECT_PROPS}
+                className="w-16 h-16 sm:w-20 sm:h-20 shrink-0"
+                aria-hidden
+              >
                 <path d={path} fill={FILL} stroke="#0e7490" strokeWidth="2" />
               </svg>
               <span className="text-[10px] text-center text-gray-700 dark:text-gray-300 leading-tight">

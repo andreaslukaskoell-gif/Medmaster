@@ -3,6 +3,7 @@ import { CheckCircle2, XCircle, Lightbulb, ChevronRight, Filter, RotateCcw } fro
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
+import { filterValidImplikationTasks } from "@/data/kffValidation";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
@@ -43,8 +44,9 @@ export default function ImplikationenUeben() {
   const { recordResult } = useKFFResults();
 
   const filteredTasks = useMemo(() => {
-    if (difficultyFilter === null) return implikationenTasks;
-    return implikationenTasks.filter((t) => t.difficulty === difficultyFilter);
+    const valid = filterValidImplikationTasks(implikationenTasks);
+    if (difficultyFilter === null) return valid;
+    return valid.filter((t) => t.difficulty === difficultyFilter);
   }, [difficultyFilter]);
 
   const currentTask: ImplikationTask | undefined = filteredTasks[currentIndex];
@@ -346,7 +348,13 @@ export default function ImplikationenUeben() {
           {/* Explanation */}
           {showExplanation && isChecked && currentTask && (
             <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
-              <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Lösungsweg</h4>
+              <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Lösungsweg (formale Mengenlogik)
+              </h4>
+              <p className="text-xs text-muted">
+                Das Euler-Diagramm ist ausschließlich aus den Prämissen abgeleitet; der markierte
+                Bereich entspricht der zwingenden Schlussfolgerung.
+              </p>
               <ImplikationSolutionDiagram task={currentTask} className="mb-3" />
               <div className="space-y-2">
                 <div>
