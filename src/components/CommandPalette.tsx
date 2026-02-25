@@ -70,6 +70,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   });
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { completedChapters, streak } = useStore();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
@@ -162,6 +163,37 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
     return () => window.removeEventListener("keydown", handler);
   }, [open, results, safeSelectedIndex, onClose, selectItem]);
 
+  useEffect(() => {
+    if (!open || !containerRef.current) return;
+    const container = containerRef.current;
+    const getFocusables = () =>
+      Array.from(
+        container.querySelectorAll<HTMLElement>(
+          'input:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((el) => el.tabIndex >= 0 || el.tagName === "INPUT" || el.tagName === "BUTTON");
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const focusables = getFocusables();
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    container.addEventListener("keydown", handler);
+    return () => container.removeEventListener("keydown", handler);
+  }, [open]);
+
   if (!open) return null;
 
   return (
@@ -185,6 +217,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
           aria-label="Kapitel und Unterkapitel durchsuchen"
           className="relative w-full max-w-xl bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-700/50 overflow-hidden card-glass"
           onClick={(e) => e.stopPropagation()}
+          ref={containerRef}
         >
           <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-100 dark:border-slate-800">
             <Search className="w-4 h-4 text-slate-400 shrink-0" />
