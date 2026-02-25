@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { PageEmpty } from "@/components/ui/page-states";
@@ -10,16 +10,13 @@ import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { emotionenRegulierenTasks, sozialesEntscheidenTasks } from "@/data/sekDataNew";
 import {
-  emotionenErkennenTasks,
-  emotionenRegulierenTasks,
-  sozialesEntscheidenTasks,
-} from "@/data/sekDataNew";
-import type {
-  EmotionenErkennenTask,
-  EmotionenRegulierenTask,
-  SozialesEntscheidenTask,
-} from "@/data/sekDataNew";
+  emotionenErkennenOffiziellAlle,
+  type EmotionenErkennenOffiziellTask,
+} from "@/data/emotionenErkennenOffiziell";
+import type { EmotionenRegulierenTask, SozialesEntscheidenTask } from "@/data/sekDataNew";
 import { useStore } from "@/store/useStore";
 
 type SekView =
@@ -46,7 +43,7 @@ export default function SEK() {
   const [view, setView] = useState<SekView>("overview");
 
   const hasTasks =
-    emotionenErkennenTasks.length > 0 ||
+    emotionenErkennenOffiziellAlle.length > 0 ||
     emotionenRegulierenTasks.length > 0 ||
     sozialesEntscheidenTasks.length > 0;
   if (!hasTasks) {
@@ -74,7 +71,10 @@ export default function SEK() {
 
   if (view === "erkennen-quiz" || view === "erkennen-result")
     return (
-      <EmotionenErkennenQuiz tasks={emotionenErkennenTasks} onBack={() => setView("overview")} />
+      <EmotionenErkennenQuiz
+        tasks={emotionenErkennenOffiziellAlle}
+        onBack={() => setView("overview")}
+      />
     );
   if (view === "regulieren-quiz" || view === "regulieren-result")
     return (
@@ -121,6 +121,10 @@ export default function SEK() {
         </CardContent>
       </Card>
 
+      <UebungsbeschreibungCard id="sek-emotionen-erkennen" collapsible defaultCollapsed />
+      <UebungsbeschreibungCard id="sek-emotionen-regulieren" collapsible defaultCollapsed />
+      <UebungsbeschreibungCard id="sek-soziales-entscheiden" collapsible defaultCollapsed />
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-5">
@@ -136,16 +140,16 @@ export default function SEK() {
               5 Emotionen pro Situation: wahrscheinlich oder unwahrscheinlich?
             </p>
             <p className="text-xs text-muted mb-3">
-              {emotionenErkennenTasks.length} Situationen | Alles-oder-Nichts
+              {emotionenErkennenOffiziellAlle.length} Situationen | Alles-oder-Nichts
             </p>
             <Button
               size="sm"
               className="w-full"
               onClick={() => setView("erkennen-quiz")}
-              disabled={emotionenErkennenTasks.length === 0}
+              disabled={emotionenErkennenOffiziellAlle.length === 0}
             >
               <Play className="w-4 h-4 mr-1" /> Üben (
-              {emotionenErkennenTasks.length > 0 ? "14 Aufgaben" : "Daten fehlen"})
+              {emotionenErkennenOffiziellAlle.length > 0 ? "14 Aufgaben" : "Daten fehlen"})
             </Button>
           </CardContent>
         </Card>
@@ -188,9 +192,10 @@ export default function SEK() {
                 Soziales Entscheiden
               </h3>
             </div>
-            <p className="text-sm text-muted mb-1">5 Aussagen nach Wichtigkeit ranken (A-E)</p>
+            <p className="text-sm text-muted mb-1">5 Überlegungen (A–E) nach Wichtigkeit ordnen</p>
             <p className="text-xs text-muted mb-3">
-              {sozialesEntscheidenTasks.length} Dilemmata | Kohlberg-basiert
+              {sozialesEntscheidenTasks.length} Situationen | 14 Aufgaben, 21 Min (offizielles
+              Format)
             </p>
             <Button
               size="sm"
@@ -216,7 +221,7 @@ function EmotionenErkennenQuiz({
   tasks,
   onBack,
 }: {
-  tasks: EmotionenErkennenTask[];
+  tasks: EmotionenErkennenOffiziellTask[];
   onBack: () => void;
 }) {
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
@@ -227,15 +232,15 @@ function EmotionenErkennenQuiz({
   >({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
-  const _toggleEmotion = (taskId: string, emotionName: string) => {
+  const _toggleEmotion = (taskId: string, optionId: string) => {
     setAnswers((prev) => {
       const current = prev[taskId] || {};
-      const val = current[emotionName];
+      const val = current[optionId];
       return {
         ...prev,
         [taskId]: {
           ...current,
-          [emotionName]: val === "wahrscheinlich" ? "unwahrscheinlich" : "wahrscheinlich",
+          [optionId]: val === "wahrscheinlich" ? "unwahrscheinlich" : "wahrscheinlich",
         },
       };
     });
@@ -246,7 +251,7 @@ function EmotionenErkennenQuiz({
     let score = 0;
     questions.forEach((q) => {
       const a = answers[q.id] || {};
-      const allCorrect = q.emotionen.every((e) => a[e.name] === e.correct);
+      const allCorrect = q.emotionen.every((e) => a[e.id] === e.correct);
       if (allCorrect) score++;
     });
     saveQuizResult({
@@ -258,7 +263,7 @@ function EmotionenErkennenQuiz({
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((q) => {
         const a = answers[q.id] || {};
-        const allCorrect = q.emotionen.every((e) => a[e.name] === e.correct);
+        const allCorrect = q.emotionen.every((e) => a[e.id] === e.correct);
         return { questionId: q.id, selectedAnswer: JSON.stringify(a), correct: allCorrect };
       }),
     });
@@ -272,8 +277,7 @@ function EmotionenErkennenQuiz({
     let score = 0;
     questions.forEach((q) => {
       const a = answers[q.id] || {};
-      const allCorrect = q.emotionen.every((e) => a[e.name] === e.correct);
-      if (allCorrect) score++;
+      if (q.emotionen.every((e) => a[e.id] === e.correct)) score++;
     });
     return (
       <div className="max-w-3xl mx-auto space-y-6">
@@ -293,7 +297,7 @@ function EmotionenErkennenQuiz({
         </Card>
         {questions.map((q, qi) => {
           const a = answers[q.id] || {};
-          const allCorrect = q.emotionen.every((e) => a[e.name] === e.correct);
+          const allCorrect = q.emotionen.every((e) => a[e.id] === e.correct);
           return (
             <Card
               key={q.id}
@@ -312,14 +316,14 @@ function EmotionenErkennenQuiz({
                 </div>
                 <div className="ml-7 space-y-1">
                   {q.emotionen.map((e) => {
-                    const userAnswer = a[e.name] || "unwahrscheinlich";
+                    const userAnswer = a[e.id] || "unwahrscheinlich";
                     const isRight = userAnswer === e.correct;
                     return (
                       <div
-                        key={e.name}
+                        key={e.id}
                         className={`text-xs px-2 py-1 rounded flex justify-between ${isRight ? "bg-green-50 dark:bg-green-900/10" : "bg-red-50 dark:bg-red-900/10"}`}
                       >
-                        <span>{e.name}</span>
+                        <span>{e.text}</span>
                         <span>{isRight ? "✓" : `${userAnswer} → ${e.correct}`}</span>
                       </div>
                     );
@@ -339,11 +343,9 @@ function EmotionenErkennenQuiz({
   const q = questions[index];
   if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
   const currentAnswers = answers[q.id] || {};
-  const _allEmotionsAnswered = q.emotionen.every((e) => currentAnswers[e.name] !== undefined);
-  void _allEmotionsAnswered;
   const allQuestionsAnswered = questions.every((qu) => {
     const a = answers[qu.id] || {};
-    return qu.emotionen.every((e) => a[e.name] !== undefined);
+    return qu.emotionen.every((e) => a[e.id] !== undefined);
   });
 
   return (
@@ -374,25 +376,26 @@ function EmotionenErkennenQuiz({
             <p className="text-sm text-gray-800 dark:text-gray-200">{q.situation}</p>
           </div>
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">
-            Ist diese Emotion in dieser Situation eher wahrscheinlich oder unwahrscheinlich?
+            Wie fühlt sich {q.personName} in dieser Situation? Eher wahrscheinlich oder eher
+            unwahrscheinlich?
           </p>
           <div className="space-y-3">
             {q.emotionen.map((e) => {
-              const val = currentAnswers[e.name];
+              const val = currentAnswers[e.id];
               return (
                 <div
-                  key={e.name}
+                  key={e.id}
                   className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
                 >
                   <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                    {e.name}
+                    ({e.id}) {e.text}
                   </span>
                   <div className="flex gap-2">
                     <button
                       onClick={() => {
                         setAnswers((prev) => ({
                           ...prev,
-                          [q.id]: { ...(prev[q.id] || {}), [e.name]: "wahrscheinlich" },
+                          [q.id]: { ...(prev[q.id] || {}), [e.id]: "wahrscheinlich" },
                         }));
                       }}
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
@@ -401,13 +404,13 @@ function EmotionenErkennenQuiz({
                           : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
                       }`}
                     >
-                      wahrscheinlich
+                      eher wahrscheinlich
                     </button>
                     <button
                       onClick={() => {
                         setAnswers((prev) => ({
                           ...prev,
-                          [q.id]: { ...(prev[q.id] || {}), [e.name]: "unwahrscheinlich" },
+                          [q.id]: { ...(prev[q.id] || {}), [e.id]: "unwahrscheinlich" },
                         }));
                       }}
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
@@ -416,7 +419,7 @@ function EmotionenErkennenQuiz({
                           : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
                       }`}
                     >
-                      unwahrscheinlich
+                      eher unwahrscheinlich
                     </button>
                   </div>
                 </div>
@@ -661,8 +664,27 @@ function EmotionenRegulierenQuiz({
 }
 
 // ==========================================
-// SOZIALES ENTSCHEIDEN — Rank 5 statements
+// SOZIALES ENTSCHEIDEN — Rank 5 statements (offizielles MedAT-Vorbild)
+// Bewertung: Zusammenhangsmaß (Spearman Rangkorrelation)
 // ==========================================
+
+/** Spearman-Rangkorrelation zwischen Nutzer-Rangordnung und theoretischer Rangordnung (n=5). */
+function spearmanScore(userRanks: Record<number, number>, idealRanks: number[]): number {
+  const values = Object.values(userRanks);
+  if (values.length !== 5) return 0;
+  const unique = new Set(values);
+  if (unique.size !== 5 || Math.min(...values) !== 1 || Math.max(...values) !== 5) return 0;
+  let sumD2 = 0;
+  for (let i = 0; i < idealRanks.length; i++) {
+    const u = userRanks[i];
+    if (u === undefined) return 0;
+    sumD2 += (u - idealRanks[i]) ** 2;
+  }
+  const n = idealRanks.length;
+  const rho = 1 - (6 * sumD2) / (n * (n * n - 1));
+  // rho in [-1, 1] → Punkte 0–20 pro Aufgabe
+  return Math.max(0, ((rho + 1) / 2) * 20);
+}
 
 function SozialesEntscheidenQuiz({
   tasks,
@@ -671,7 +693,7 @@ function SozialesEntscheidenQuiz({
   tasks: SozialesEntscheidenTask[];
   onBack: () => void;
 }) {
-  const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  const [phase, setPhase] = useState<"instructions" | "quiz" | "result">("instructions");
   const [questions] = useState(() => shuffle(tasks).slice(0, 14));
   const [index, setIndex] = useState(0);
   // rankings[taskId] = { statementIdx: rank (1-5) }
@@ -692,20 +714,13 @@ function SozialesEntscheidenQuiz({
 
   const calculateScore = (q: SozialesEntscheidenTask): number => {
     const r = rankings[q.id] || {};
-    let score = 0;
-    q.aussagen.forEach((a, i) => {
-      const userRank = r[i];
-      if (userRank !== undefined) {
-        const diff = Math.abs(userRank - a.idealRank);
-        score += Math.max(0, 4 - diff); // 4 for exact, 3 for off-by-1, etc.
-      }
-    });
-    return score;
+    const idealRanks = q.aussagen.map((a) => a.idealRank);
+    return spearmanScore(r, idealRanks);
   };
 
   const handleSubmit = () => {
     let totalScore = 0;
-    const maxPerQ = 20; // 5 statements × 4 max points
+    const maxPerQ = 20; // Spearman normiert auf 0–20 pro Aufgabe
     questions.forEach((q) => {
       totalScore += calculateScore(q);
     });
@@ -729,6 +744,123 @@ function SozialesEntscheidenQuiz({
     setIndex(0);
   };
 
+  // Ausfüllvorschrift (offizielle Anleitung) vor dem Quiz anzeigen
+  if (phase === "instructions") {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">
+              Ausfüllvorschrift der Aufgabengruppe Soziales Entscheiden
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-5 text-sm text-gray-700 dark:text-gray-300">
+            <p>
+              Die Aufgabe bei der Aufgabengruppe Soziales Entscheiden besteht darin, die fünf
+              Überlegungen nach ihrer Wichtigkeit für die Entscheidung in eine Rangfolge zu bringen.
+            </p>
+            <p className="font-semibold text-gray-900 dark:text-gray-100">Bitte beachten Sie:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Es müssen immer <strong>alle fünf</strong> Überlegungen in eine{" "}
+                <strong>eindeutige</strong> Rangfolge gebracht und jede Wichtigkeitsstufe nur{" "}
+                <strong>einmal</strong> vergeben werden.
+              </li>
+              <li>
+                Das bedeutet, dass nie zwei oder mehr Überlegungen als gleich wichtig eingestuft und
+                auf die gleiche Wichtigkeitsstufe gestellt werden können.
+              </li>
+              <li>
+                Weiters können Sie nie einer Überlegung zwei oder mehr Wichtigkeitsstufen zuordnen.
+              </li>
+              <li>
+                Außerdem müssen Sie <strong>alle fünf Wichtigkeitsstufen</strong> vergeben.
+              </li>
+            </ul>
+            <p>
+              Sollten Sie eine Wichtigkeitsstufe dennoch doppelt oder mehrfach vergeben und/oder
+              einer oder mehreren Überlegungen keine Wichtigkeitsstufe zuordnen, wird die
+              betreffende Aufgabe mit <strong>null bewertet</strong>. Bitte vergewissern Sie sich
+              daher bei jeder Aufgabe, dass Sie tatsächlich immer nur einer Überlegung eine
+              Wichtigkeitsstufe zugeordnet und alle fünf Wichtigkeitsstufen vergeben haben.
+            </p>
+
+            <p className="font-semibold text-gray-900 dark:text-gray-100 pt-2">
+              Wie trage ich meine Antworten richtig ein?
+            </p>
+            <p>
+              Wenn für Sie Überlegung <strong>A</strong> am wichtigsten ist (1. Stelle), ordnen Sie
+              A die Wichtigkeitsstufe <strong>1</strong> zu. Wenn Überlegung <strong>B</strong> an
+              2. Stelle steht, ordnen Sie B die Stufe <strong>2</strong> zu – und so weiter für C, D
+              und E. Jede Wichtigkeitsstufe wird nur einmal vergeben, jeder Überlegung genau eine
+              Stufe zugeordnet.
+            </p>
+
+            <p className="font-semibold text-gray-900 dark:text-gray-100">Richtiges Beispiel:</p>
+            <div className="overflow-x-auto">
+              <table className="w-full max-w-xs border border-border dark:border-gray-600 text-center">
+                <thead>
+                  <tr className="bg-muted/50">
+                    <th className="border-b border-r border-border dark:border-gray-600 p-2"></th>
+                    <th className="border-b border-border dark:border-gray-600 p-2">1</th>
+                    <th className="border-b border-border dark:border-gray-600 p-2">2</th>
+                    <th className="border-b border-border dark:border-gray-600 p-2">3</th>
+                    <th className="border-b border-border dark:border-gray-600 p-2">4</th>
+                    <th className="border-b border-border dark:border-gray-600 p-2">5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {["A", "B", "C", "D", "E"].map((row, i) => (
+                    <tr key={row}>
+                      <td className="border-r border-border dark:border-gray-600 p-2 font-medium">
+                        {row}
+                      </td>
+                      {[1, 2, 3, 4, 5].map((col) => (
+                        <td key={col} className="border border-border dark:border-gray-600 p-2">
+                          {i + 1 === col ? "✓" : ""}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted text-xs">
+              Jede Wichtigkeitsstufe nur einmal vergeben, allen Überlegungen eine Stufe zugeordnet →
+              Aufgabe wird gewertet.
+            </p>
+
+            <p className="font-semibold text-gray-900 dark:text-gray-100">
+              Falsche Beispiele (Aufgabe wird mit 0 bewertet):
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <strong>Doppelt vergeben / keine Stufe:</strong> Einer Überlegung zwei Stufen
+                zugeordnet oder einer Überlegung keine Stufe zugeordnet.
+              </li>
+              <li>
+                <strong>Gleiche Stufe zweimal:</strong> Zwei Überlegungen haben dieselbe
+                Wichtigkeitsstufe (z. B. beide 2); eine Stufe fehlt.
+              </li>
+              <li>
+                <strong>Nicht alle Stufen vergeben:</strong> Nur z. B. Stufe 1 und 4 vergeben,
+                Stufen 2, 3 und 5 fehlen.
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        <div className="flex justify-end">
+          <Button onClick={() => setPhase("quiz")}>
+            Weiter zu den Aufgaben <ArrowRight className="w-4 h-4 ml-1" />
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   if (phase === "result") {
     let totalScore = 0;
     const maxPerQ = 20;
@@ -747,7 +879,8 @@ function SozialesEntscheidenQuiz({
               {Math.round((totalScore / maxScore) * 100)}%
             </div>
             <p className="text-muted mt-1">
-              {totalScore} von {maxScore} Punkten
+              {totalScore} von {maxScore} Punkten (Übereinstimmung mit der theoretischen
+              Rangordnung)
             </p>
           </CardContent>
         </Card>
@@ -767,16 +900,21 @@ function SozialesEntscheidenQuiz({
                   </Badge>
                 </p>
                 <div className="ml-2 space-y-1">
-                  {q.aussagen.map((a, ai) => (
-                    <div key={ai} className="text-xs flex items-center gap-2">
-                      <span
-                        className={`w-16 ${r[ai] === a.idealRank ? "text-green-600 font-bold" : "text-red-500"}`}
-                      >
-                        Dein: {r[ai] || "-"} | Ideal: {a.idealRank}
-                      </span>
-                      <span className="flex-1">{a.text.slice(0, 60)}...</span>
-                    </div>
-                  ))}
+                  {q.aussagen.map((a, ai) => {
+                    const label = String.fromCharCode(65 + ai);
+                    return (
+                      <div key={ai} className="text-xs flex items-center gap-2">
+                        <span
+                          className={`w-16 ${r[ai] === a.idealRank ? "text-green-600 font-bold" : "text-red-500"}`}
+                        >
+                          Dein: {r[ai] || "-"} | Ideal: {a.idealRank}
+                        </span>
+                        <span className="flex-1">
+                          <span className="font-medium">{label})</span> {a.text.slice(0, 55)}...
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
@@ -826,39 +964,49 @@ function SozialesEntscheidenQuiz({
             <p className="text-sm text-gray-800 dark:text-gray-200">{q.dilemma}</p>
           </div>
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">
-            Ordne die Aussagen nach Wichtigkeit (1 = wichtigste, 5 = unwichtigste):
+            Wie wichtig sind Ihrer Meinung nach die folgenden Überlegungen für diese
+            Entscheidungssituation? Ordnen Sie die Überlegungen A) bis E) der Wichtigkeit nach,
+            wobei <strong>1</strong> die (relativ) wichtigste und <strong>5</strong> die am
+            wenigsten wichtige Überlegung ist. Entscheiden Sie sich für eine eindeutige Ordnung –
+            Sie können nicht zwei Überlegungen auf die gleiche Wichtigkeitsstufe stellen.
           </p>
           <div className="space-y-3">
-            {q.aussagen.map((a, ai) => (
-              <div
-                key={ai}
-                className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
-              >
-                <div className="flex gap-1 flex-wrap">
-                  {[1, 2, 3, 4, 5].map((rank) => {
-                    const isSelected = currentRanking[ai] === rank;
-                    const isUsed = Object.values(currentRanking).includes(rank) && !isSelected;
-                    return (
-                      <button
-                        key={rank}
-                        onClick={() => setRank(q.id, ai, rank)}
-                        disabled={isUsed}
-                        className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
-                          isSelected
-                            ? "bg-blue-500 text-white"
-                            : isUsed
-                              ? "bg-gray-100 dark:bg-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed"
-                              : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                        }`}
-                      >
-                        {rank}
-                      </button>
-                    );
-                  })}
+            {q.aussagen.map((a, ai) => {
+              const label = String.fromCharCode(65 + ai);
+              return (
+                <div
+                  key={ai}
+                  className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
+                >
+                  <div className="flex gap-1 flex-wrap">
+                    {[1, 2, 3, 4, 5].map((rank) => {
+                      const isSelected = currentRanking[ai] === rank;
+                      const isUsed = Object.values(currentRanking).includes(rank) && !isSelected;
+                      return (
+                        <button
+                          key={rank}
+                          onClick={() => setRank(q.id, ai, rank)}
+                          disabled={isUsed}
+                          className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                            isSelected
+                              ? "bg-blue-500 text-white"
+                              : isUsed
+                                ? "bg-gray-100 dark:bg-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed"
+                                : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                          }`}
+                        >
+                          {rank}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">
+                    <span className="font-semibold text-gray-900 dark:text-gray-100">{label})</span>{" "}
+                    {a.text}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">{a.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </CardContent>
       </Card>

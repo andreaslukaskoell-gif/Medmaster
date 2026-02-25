@@ -1,34 +1,16 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import {
-  Timer,
-  CheckCircle2,
-  XCircle,
-  ChevronRight,
-  RotateCcw,
-  Trophy,
-  Clock,
-  BarChart3,
-} from "lucide-react";
+import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import {
-  emotionenErkennenScenarios,
-  type EmotionenErkennenScenario,
-} from "@/data/kffEmotionenErkennen";
+  emotionenErkennenOffiziellAlle,
+  EMOTIONEN_ERKENNEN_INSTRUKTION,
+  EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT,
+  type EmotionenErkennenOffiziellTask,
+} from "@/data/emotionenErkennenOffiziell";
 
-const SCENARIO_COUNT = 5;
-const TIME_LIMIT = 600; // 10 minutes
-
-interface QuestionResult {
-  scenarioId: string;
-  questionIndex: number;
-  question: string;
-  userAnswer: number | null;
-  correctAnswer: number;
-  correct: boolean;
-  options: string[];
-  timeSpent: number;
-}
+const TASK_COUNT = 14;
+const TIME_LIMIT = 21 * 60; // 21 Minuten (Papier-Bleistift-Test)
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -47,24 +29,28 @@ function formatTime(seconds: number): string {
 
 type SimPhase = "start" | "running" | "results";
 
+type TaskResult = {
+  task: EmotionenErkennenOffiziellTask;
+  answers: Record<string, "wahrscheinlich" | "unwahrscheinlich">;
+  correct: boolean;
+};
+
 export default function EmotionenErkennenSimulation() {
   const [phase, setPhase] = useState<SimPhase>("start");
-  const [scenarios, setScenarios] = useState<EmotionenErkennenScenario[]>([]);
-  const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
-  const [results, setResults] = useState<QuestionResult[]>([]);
+  const [tasks, setTasks] = useState<EmotionenErkennenOffiziellTask[]>([]);
+  const [index, setIndex] = useState(0);
+  const [answers, setAnswers] = useState<
+    Record<string, Record<string, "wahrscheinlich" | "unwahrscheinlich">>
+  >({});
+  const [results, setResults] = useState<TaskResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
-  const taskStartTime = useRef(0);
+  const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const { recordSimulation } = useKFFResults();
+  const startTimeRef = useRef(0);
 
   useEffect(() => {
-    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+    if (phase === "running" && timeLeft === TIME_LIMIT) startTimeRef.current = Date.now();
   }, [phase]);
-
-  const totalQuestions = scenarios.reduce((sum, s) => sum + s.questions.length, 0);
-  const answeredCount = results.length;
 
   useEffect(() => {
     if (phase !== "running") return;
@@ -81,157 +67,109 @@ export default function EmotionenErkennenSimulation() {
   }, [phase]);
 
   const startSimulation = useCallback(() => {
-    const selected = shuffle(emotionenErkennenScenarios).slice(0, SCENARIO_COUNT);
-    setScenarios(selected);
-    setCurrentScenarioIndex(0);
-    setCurrentQuestionIndex(0);
-    setSelectedAnswer(null);
-    setTimeLeft(TIME_LIMIT);
+    const selected = shuffle(emotionenErkennenOffiziellAlle).slice(0, TASK_COUNT);
+    setTasks(selected);
+    setIndex(0);
+    setAnswers({});
     setResults([]);
     setExpandedResult(null);
+    setTimeLeft(TIME_LIMIT);
     setPhase("running");
-    taskStartTime.current = Date.now();
+    startTimeRef.current = Date.now();
   }, []);
 
   const finishSimulation = useCallback(() => {
-    setResults((prev) => {
-      // Add unanswered questions
-      const answeredKeys = new Set(prev.map((r) => `${r.scenarioId}-${r.questionIndex}`));
-      const remaining: QuestionResult[] = [];
-      scenarios.forEach((s) => {
-        s.questions.forEach((q, qi) => {
-          if (!answeredKeys.has(`${s.id}-${qi}`)) {
-            remaining.push({
-              scenarioId: s.id,
-              questionIndex: qi,
-              question: q.question,
-              userAnswer: null,
-              correctAnswer: q.correctAnswer,
-              correct: false,
-              options: q.options,
-              timeSpent: 0,
-            });
-          }
-        });
-      });
-      const allResults = [...prev, ...remaining];
-      const correctCount = allResults.filter((r) => r.correct).length;
-      recordSimulation({
-        id: `sim-ee-${Date.now()}`,
-        subtestType: "emotionen-erkennen",
-        score: correctCount,
-        maxScore: allResults.length,
-        timeUsed: TIME_LIMIT - timeLeft,
-        timeLimit: TIME_LIMIT,
+    const taskResults: TaskResult[] = tasks.map((task) => {
+      const a = answers[task.id] || {};
+      const allCorrect = task.emotionen.every((e) => a[e.id] === e.correct);
+      return { task, answers: a, correct: allCorrect };
+    });
+    const score = taskResults.filter((r) => r.correct).length;
+    setResults(taskResults);
+    recordSimulation({
+      id: `sim-ee-${Date.now()}`,
+      subtestType: "emotionen-erkennen",
+      score,
+      maxScore: tasks.length,
+      timeUsed: TIME_LIMIT - timeLeft,
+      timeLimit: TIME_LIMIT,
+      date: new Date().toISOString(),
+      details: taskResults.map((r) => ({
+        exerciseId: r.task.id,
+        userAnswer: JSON.stringify(r.answers),
+        correct: r.correct,
+        timeSpent: 0,
         date: new Date().toISOString(),
-        details: allResults.map((r) => ({
-          exerciseId: `${r.scenarioId}-q${r.questionIndex}`,
-          userAnswer: r.userAnswer !== null ? String(r.userAnswer) : "",
-          correct: r.correct,
-          timeSpent: r.timeSpent * 1000,
-          date: new Date().toISOString(),
-        })),
-      });
-      return allResults;
+      })),
     });
     setPhase("results");
-  }, [scenarios, timeLeft, recordSimulation]);
+  }, [tasks, answers, timeLeft, recordSimulation]);
 
   useEffect(() => {
-    const t = setTimeout(() => {
-      if (phase === "running" && timeLeft === 0) finishSimulation();
-    }, 0);
-    return () => clearTimeout(t);
-  }, [timeLeft, phase, finishSimulation]);
+    if (phase === "running" && timeLeft === 0) finishSimulation();
+  }, [phase, timeLeft, finishSimulation]);
 
-  const handleSubmitAnswer = useCallback(() => {
-    if (selectedAnswer === null) return;
-    const scenario = scenarios[currentScenarioIndex];
-    const question = scenario.questions[currentQuestionIndex];
-    const timeSpent = Math.round((Date.now() - taskStartTime.current) / 1000);
-    const correct = selectedAnswer === question.correctAnswer;
+  const currentTask = tasks[index];
+  const currentAnswers = currentTask ? answers[currentTask.id] || {} : {};
+  const allTasksAnswered = tasks.every((t) => {
+    const a = answers[t.id] || {};
+    return t.emotionen.every((e) => a[e.id] !== undefined);
+  });
 
-    const result: QuestionResult = {
-      scenarioId: scenario.id,
-      questionIndex: currentQuestionIndex,
-      question: question.question,
-      userAnswer: selectedAnswer,
-      correctAnswer: question.correctAnswer,
-      correct,
-      options: question.options,
-      timeSpent,
-    };
-    setResults((prev) => [...prev, result]);
-
-    // Move to next question
-    if (currentQuestionIndex + 1 < scenario.questions.length) {
-      setCurrentQuestionIndex((i) => i + 1);
-      setSelectedAnswer(null);
-      taskStartTime.current = Date.now();
-    } else if (currentScenarioIndex + 1 < scenarios.length) {
-      setCurrentScenarioIndex((i) => i + 1);
-      setCurrentQuestionIndex(0);
-      setSelectedAnswer(null);
-      taskStartTime.current = Date.now();
-    } else {
-      // Last question — finish
-      const allResults = [...results, result];
-      const correctCount = allResults.filter((r) => r.correct).length;
-      recordSimulation({
-        id: `sim-ee-${Date.now()}`,
-        subtestType: "emotionen-erkennen",
-        score: correctCount,
-        maxScore: allResults.length,
-        timeUsed: TIME_LIMIT - timeLeft,
-        timeLimit: TIME_LIMIT,
-        date: new Date().toISOString(),
-        details: allResults.map((r) => ({
-          exerciseId: `${r.scenarioId}-q${r.questionIndex}`,
-          userAnswer: r.userAnswer !== null ? String(r.userAnswer) : "",
-          correct: r.correct,
-          timeSpent: r.timeSpent * 1000,
-          date: new Date().toISOString(),
-        })),
-      });
-      setPhase("results");
+  const handleNext = useCallback(() => {
+    if (index < tasks.length - 1) {
+      setIndex((i) => i + 1);
+    } else if (allTasksAnswered) {
+      finishSimulation();
     }
-  }, [
-    selectedAnswer,
-    scenarios,
-    currentScenarioIndex,
-    currentQuestionIndex,
-    timeLeft,
-    results,
-    recordSimulation,
-  ]);
+  }, [index, tasks.length, allTasksAnswered, finishSimulation]);
 
-  const optionLabels = ["A", "B", "C", "D", "E"];
-  const timePercent = (timeLeft / TIME_LIMIT) * 100;
-  const isUrgent = timeLeft <= 60;
+  const setAnswer = useCallback(
+    (optionId: string, value: "wahrscheinlich" | "unwahrscheinlich") => {
+      if (!currentTask) return;
+      setAnswers((prev) => ({
+        ...prev,
+        [currentTask.id]: {
+          ...(prev[currentTask.id] || {}),
+          [optionId]: value,
+        },
+      }));
+    },
+    [currentTask]
+  );
 
+  // —— Start ——
   if (phase === "start") {
     return (
       <Card>
-        <CardContent className="p-8 text-center space-y-6">
+        <CardContent className="p-8 space-y-6">
           <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 rounded-2xl flex items-center justify-center mx-auto">
             <Timer className="w-8 h-8 text-amber-500" />
           </div>
           <div>
             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Simulation starten
+              Emotionen erkennen — Simulation
             </h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
-              {SCENARIO_COUNT} zufällige Szenarien mit je 4-5 Fragen in {TIME_LIMIT / 60} Minuten.
-              Keine Erklärungen während der Simulation.
+            <p className="text-sm text-muted max-w-md mx-auto mb-2">
+              {TASK_COUNT} Situationsbeschreibungen. Pro Aufgabe 5 Emotionen als &quot;eher
+              wahrscheinlich&quot; oder &quot;eher unwahrscheinlich&quot; bewerten. Eine Aufgabe
+              gilt nur als richtig, wenn alle 5 Zuordnungen stimmen (Alles-oder-Nichts).
             </p>
+            <p className="text-xs text-muted max-w-md mx-auto">{EMOTIONEN_ERKENNEN_INSTRUKTION}</p>
           </div>
+          <details className="max-w-md mx-auto text-left group">
+            <summary className="text-sm font-medium text-amber-700 dark:text-amber-400 cursor-pointer list-none flex items-center justify-center gap-1 [&::-webkit-details-marker]:hidden">
+              Offizielle Ausfüllvorschrift anzeigen
+            </summary>
+            <div className="mt-3 p-4 bg-gray-50 dark:bg-gray-800/80 rounded-lg border border-gray-200 dark:border-gray-700 text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap leading-relaxed">
+              {EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT}
+            </div>
+          </details>
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+              <Clock className="w-4 h-4" /> 21:00 min
             </span>
-            <span className="flex items-center gap-1">
-              <BarChart3 className="w-4 h-4" /> {SCENARIO_COUNT} Szenarien
-            </span>
+            <span>{TASK_COUNT} Aufgaben</span>
           </div>
           <button
             onClick={startSimulation}
@@ -244,11 +182,11 @@ export default function EmotionenErkennenSimulation() {
     );
   }
 
+  // —— Results ——
   if (phase === "results") {
-    const correctCount = results.filter((r) => r.correct).length;
-    const totalTime = results.reduce((sum, r) => sum + r.timeSpent, 0);
-    const avgTime = results.length > 0 ? Math.round(totalTime / results.length) : 0;
-    const scorePercent = Math.round((correctCount / results.length) * 100);
+    const score = results.filter((r) => r.correct).length;
+    const total = results.length;
+    const percent = total > 0 ? Math.round((score / total) * 100) : 0;
 
     return (
       <div className="space-y-6">
@@ -259,36 +197,24 @@ export default function EmotionenErkennenSimulation() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                {correctCount}/{results.length}
+                {score}/{total}
               </h2>
               <p className="text-sm text-muted">
-                {scorePercent}% richtig —{" "}
-                {scorePercent >= 80
+                {percent}% richtig (Alles-oder-Nichts) —{" "}
+                {percent >= 80
                   ? "Ausgezeichnet!"
-                  : scorePercent >= 60
+                  : percent >= 60
                     ? "Gut gemacht!"
-                    : scorePercent >= 40
+                    : percent >= 40
                       ? "Weiter üben!"
                       : "Mehr Übung nötig!"}
               </p>
             </div>
-            <div className="flex justify-center gap-6 text-sm">
-              <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  {formatTime(TIME_LIMIT - timeLeft)}
-                </p>
-                <p className="text-xs text-muted">Gesamtzeit</p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
-                <p className="text-xs text-muted">Ø pro Frage</p>
-              </div>
-            </div>
             <div className="w-full max-w-xs mx-auto">
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                 <div
-                  className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
-                  style={{ width: `${scorePercent}%` }}
+                  className={`h-3 rounded-full transition-all ${percent >= 80 ? "bg-green-500" : percent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
+                  style={{ width: `${percent}%` }}
                 />
               </div>
             </div>
@@ -299,43 +225,54 @@ export default function EmotionenErkennenSimulation() {
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
             Aufgabenübersicht
           </h3>
-          {results.map((result, i) => (
-            <Card key={i}>
+          {results.map((r, i) => (
+            <Card
+              key={r.task.id}
+              className={`border-l-4 ${r.correct ? "border-l-green-500" : "border-l-red-500"}`}
+            >
               <CardContent className="p-0">
                 <button
                   onClick={() => setExpandedResult(expandedResult === i ? null : i)}
                   className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                 >
                   <span
-                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${r.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}
                   >
                     {i + 1}
                   </span>
-                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
-                    {result.question}
+                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 line-clamp-1">
+                    {r.task.situation}
                   </p>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs text-muted">{result.timeSpent}s</span>
-                    {result.correct ? (
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    ) : (
-                      <XCircle className="w-4 h-4 text-red-500" />
-                    )}
-                  </div>
+                  {r.correct ? (
+                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                  ) : (
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0" />
+                  )}
                 </button>
                 {expandedResult === i && (
-                  <div className="px-4 pb-4 space-y-1 border-t border-gray-100 dark:border-gray-800 pt-3">
-                    {result.options.map((opt, j) => (
-                      <div
-                        key={j}
-                        className={`text-sm px-3 py-2 rounded ${j === result.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
-                      >
-                        <span className="font-bold mr-2">{optionLabels[j]}</span>
-                        {opt}
-                        {j === result.correctAnswer && " ✓"}
-                        {j === result.userAnswer && j !== result.correctAnswer && " ✗"}
-                      </div>
-                    ))}
+                  <div className="px-4 pb-4 pt-2 border-t border-gray-100 dark:border-gray-800 space-y-3">
+                    <div className="space-y-1">
+                      {r.task.emotionen.map((e) => {
+                        const userVal = r.answers[e.id];
+                        const isRight = userVal === e.correct;
+                        return (
+                          <div
+                            key={e.id}
+                            className={`text-sm px-3 py-2 rounded flex justify-between items-center ${isRight ? "bg-green-50 dark:bg-green-900/15" : "bg-red-50 dark:bg-red-900/15"}`}
+                          >
+                            <span className="font-medium">
+                              {e.id}) {e.text}
+                            </span>
+                            <span className="text-xs">
+                              {userVal || "—"} {isRight ? "✓" : `→ ${e.correct}`}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-xs text-muted border-t border-gray-200 dark:border-gray-700 pt-2">
+                      {r.task.explanation}
+                    </p>
                   </div>
                 )}
               </CardContent>
@@ -355,10 +292,11 @@ export default function EmotionenErkennenSimulation() {
     );
   }
 
-  // === RUNNING ===
-  const currentScenario = scenarios[currentScenarioIndex];
-  const currentQuestion = currentScenario?.questions[currentQuestionIndex];
-  if (!currentScenario || !currentQuestion) return null;
+  // —— Running ——
+  if (!currentTask) return null;
+
+  const isUrgent = timeLeft <= 60;
+  const timePercent = (timeLeft / TIME_LIMIT) * 100;
 
   return (
     <div className="space-y-4">
@@ -383,63 +321,94 @@ export default function EmotionenErkennenSimulation() {
 
       <div className="flex items-center justify-between text-sm text-muted">
         <span>
-          Szenario {currentScenarioIndex + 1}/{scenarios.length} — Frage {currentQuestionIndex + 1}/
-          {currentScenario.questions.length}
+          Aufgabe {index + 1} von {tasks.length}
         </span>
-        <div className="flex gap-1">
-          {Array.from({ length: totalQuestions }, (_, i) => (
-            <div
-              key={i}
-              className={`w-2 h-2 rounded-full ${i < answeredCount ? (results[i]?.correct ? "bg-green-500" : "bg-red-500") : i === answeredCount ? "bg-amber-500" : "bg-gray-300 dark:bg-gray-600"}`}
-            />
-          ))}
-        </div>
       </div>
 
       <Card>
-        <CardContent className="p-0">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
-              {currentScenario.scenario}
+        <CardContent className="p-6 space-y-6">
+          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+            <p className="text-xs text-muted uppercase tracking-wide mb-1">
+              Situationsbeschreibung
+            </p>
+            <p className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+              {currentTask.situation}
             </p>
           </div>
-          <div className="p-6 space-y-4">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              {currentQuestion.question}
-            </p>
-            <div className="space-y-2">
-              {currentQuestion.options.map((option, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSelectedAnswer(i)}
-                  className={`w-full text-left p-3 rounded-lg border-2 transition-all cursor-pointer ${
-                    selectedAnswer === i
-                      ? "border-amber-400 dark:border-amber-600 bg-amber-50 dark:bg-amber-900/20"
-                      : "border-gray-200 dark:border-gray-700 hover:bg-amber-50 dark:hover:bg-amber-900/10"
-                  }`}
+          <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+            Wie fühlt sich {currentTask.personName} in dieser Situation? Geben Sie für jede der
+            folgenden Möglichkeiten an, ob sie eher wahrscheinlich oder eher unwahrscheinlich ist.
+          </p>
+          <div className="space-y-3">
+            {currentTask.emotionen.map((e) => {
+              const val = currentAnswers[e.id];
+              return (
+                <div
+                  key={e.id}
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
                 >
-                  <div className="flex items-start gap-3">
-                    <span
-                      className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-amber-600" : "text-gray-400"}`}
+                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    ({e.id}) {e.text}
+                  </span>
+                  <div className="flex gap-2 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => setAnswer(e.id, "wahrscheinlich")}
+                      className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                        val === "wahrscheinlich"
+                          ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700"
+                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      }`}
                     >
-                      {optionLabels[i]}
-                    </span>
-                    <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
+                      eher wahrscheinlich
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setAnswer(e.id, "unwahrscheinlich")}
+                      className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                        val === "unwahrscheinlich"
+                          ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-700"
+                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      }`}
+                    >
+                      eher unwahrscheinlich
+                    </button>
                   </div>
-                </button>
-              ))}
-            </div>
-            <button
-              onClick={handleSubmitAnswer}
-              disabled={selectedAnswer === null}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-semibold disabled:opacity-40 disabled:cursor-not-allowed transition-colors cursor-pointer"
-            >
-              Bestätigen & Weiter
-              <ChevronRight className="w-4 h-4" />
-            </button>
+                </div>
+              );
+            })}
           </div>
         </CardContent>
       </Card>
+
+      <div className="flex justify-between gap-2">
+        <button
+          type="button"
+          onClick={() => setIndex((i) => Math.max(0, i - 1))}
+          disabled={index === 0}
+          className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        >
+          Zurück
+        </button>
+        {index < tasks.length - 1 ? (
+          <button
+            type="button"
+            onClick={handleNext}
+            className="flex items-center gap-1 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-medium cursor-pointer"
+          >
+            Weiter <ChevronRight className="w-4 h-4" />
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={finishSimulation}
+            disabled={!allTasksAnswered}
+            className="flex items-center gap-1 px-4 py-2 bg-amber-600 text-white rounded-lg text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer hover:bg-amber-700"
+          >
+            Auswertung
+          </button>
+        )}
+      </div>
     </div>
   );
 }

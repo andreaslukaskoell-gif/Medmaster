@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { ChevronLeft, ChevronRight, Lightbulb, BookOpen, AlertTriangle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT } from "@/data/emotionenErkennenOffiziell";
 
 const totalPages = 3;
 
@@ -146,8 +147,10 @@ function Seite1() {
           Aufgabenformat &amp; Emotionsliste
         </h2>
         <p className="text-sm text-muted">
-          Im Untertest &quot;Emotionen erkennen&quot; erhältst du eine kurze Situationsbeschreibung.
-          Deine Aufgabe: Die Emotionen der beteiligten Personen korrekt identifizieren.
+          Im Untertest &quot;Emotionen erkennen&quot; erhältst du eine kurze Situationsbeschreibung
+          und den Namen einer Person. Deine Aufgabe: Für fünf vorgegebene Emotionen angeben, ob sie
+          bei dieser Person in der Situation eher wahrscheinlich oder eher unwahrscheinlich sind.
+          Eine Aufgabe gilt nur als richtig, wenn alle fünf Zuordnungen stimmen (Alles-oder-Nichts).
         </p>
       </div>
 
@@ -155,22 +158,30 @@ function Seite1() {
       <Card>
         <CardContent className="p-5 space-y-3">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-            So sieht eine Aufgabe aus
+            So sieht eine Aufgabe aus (offizielles MedAT-Format)
           </h3>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-amber-400">
             <p className="text-sm text-muted mb-1">Situationsbeschreibung:</p>
             <p className="text-sm italic text-gray-700 dark:text-gray-300">
-              &quot;Anna hat monatelang für den MedAT gelernt. Am Testtag erfährt sie, dass der Test
-              auf einen anderen Tag verschoben wurde...&quot;
+              &quot;Tanja trifft auf einem Klassentreffen eine gute Schulfreundin, die nun bereits
+              seit vielen Jahren im Ausland lebt. Ursprünglich hatte die Freundin ihren Besuch
+              abgesagt.&quot;
             </p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-400">
             <p className="text-sm text-muted mb-1">Frage:</p>
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              &quot;Was empfindet Anna am ehesten?&quot;
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Wie fühlt sich Tanja in dieser Situation? (Für jede Möglichkeit: eher wahrscheinlich
+              oder eher unwahrscheinlich?)
             </p>
             <div className="mt-2 space-y-1">
-              {["A) Erleichterung", "B) Frustration ✓", "C) Freude", "D) Angst"].map((opt) => (
+              {[
+                "Sie ist ausgeglichen. → eher unwahrscheinlich",
+                "Sie ist dankbar. → eher unwahrscheinlich",
+                "Sie freut sich. → eher wahrscheinlich ✓",
+                "Sie ist überrascht. → eher wahrscheinlich ✓",
+                "Sie ist zuversichtlich. → eher unwahrscheinlich",
+              ].map((opt) => (
                 <p
                   key={opt}
                   className={`text-sm ${opt.includes("✓") ? "text-green-600 dark:text-green-400 font-medium" : "text-muted"}`}
@@ -182,6 +193,20 @@ function Seite1() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Offizielle Ausfüllvorschrift */}
+      <details className="group">
+        <summary className="text-sm font-semibold text-amber-700 dark:text-amber-400 cursor-pointer list-none py-2 [&::-webkit-details-marker]:hidden">
+          Offizielle Ausfüllvorschrift (MedAT)
+        </summary>
+        <Card>
+          <CardContent className="p-5">
+            <div className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap leading-relaxed">
+              {EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT}
+            </div>
+          </CardContent>
+        </Card>
+      </details>
 
       {/* Emotion list */}
       <div>
