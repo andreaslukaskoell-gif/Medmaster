@@ -1,8 +1,10 @@
 /**
  * Mathematik BMS Pool — Typ K (Kombinationsaufgaben) für den FragenTrainer.
  * Stoff aus bmsKapitel/mathematik. Format: BMSFrage mit typ "K".
+ * Mind. 40 Aufgaben: Basis 001–008 + Extra 009–040.
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
+import { mathematikPoolTypKExtra } from "./mathematikPoolTypKExtra";
 
 export const mathematikPoolTypK: BMSFrage[] = [
   {
@@ -250,4 +252,5 @@ export const mathematikPoolTypK: BMSFrage[] = [
     schwierigkeit: 2,
     fsrs: null,
   },
+  ...mathematikPoolTypKExtra,
 ];

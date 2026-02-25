@@ -165,7 +165,7 @@ function StepWasIst({ onNext }: { onNext: () => void }) {
               <p className="font-semibold text-app-foreground">KFF</p>
               <p className="text-sm text-app-muted">
                 Kognitive Fähigkeiten: Figuren zusammensetzen, Implikationen, Wortflüssigkeit,
-                Merkfähigkeit, Zahlenfolgen, Textverständnis, Schlauchfiguren u. a.
+                Merkfähigkeit, Zahlenfolgen, Textverständnis, Schlauchfiguren u. a.
               </p>
             </div>
             <p className="text-sm text-app-muted">
@@ -253,7 +253,7 @@ function StepAblauf({ onNext }: { onNext: () => void }) {
       <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-900/10">
         <CardContent className="py-3">
           <p className="text-xs text-app-muted">
-            <strong className="text-app-foreground">Quote</strong> = Aufteilung der Plätze (z. B.
+            <strong className="text-app-foreground">Quote</strong> = Aufteilung der Plätze (z. B.
             Österreich / EU / Nicht-EU). Du konkurrierst innerhalb deiner Quote.
           </p>
         </CardContent>
@@ -321,7 +321,7 @@ function StepQuoten({ onNext }: { onNext: () => void }) {
                       {latest.places.toLocaleString("de-AT")}
                     </td>
                     <td className="py-3 pr-4 pl-2 font-medium text-app-foreground text-right">
-                      ca. {rate} %
+                      ca. {rate} %
                     </td>
                   </tr>
                 );
@@ -331,7 +331,7 @@ function StepQuoten({ onNext }: { onNext: () => void }) {
         </div>
         {byUni.some(({ stats }) => stats[0]?.cutoffPercent != null) && (
           <div className="border-t border-app-border px-4 py-2 text-xs text-app-muted">
-            Grenzbereich (Richtwert): ca. 90–92 % der Maximalpunktzahl je nach Uni und Jahr.
+            Grenzbereich (Richtwert): ca. 90–92 % der Maximalpunktzahl je nach Uni und Jahr.
           </div>
         )}
       </Card>
@@ -435,7 +435,8 @@ function StepNutzen({ onNext }: { onNext: () => void }) {
 
 function StepStart() {
   const navigate = useNavigate();
-  const { setMedATOnboardingComplete } = useStore();
+  const _setComplete = useStore((s) => s.setMedATOnboardingComplete);
+  void _setComplete;
 
   const handleStart = () => {
     navigate("/placement-test", { replace: true });

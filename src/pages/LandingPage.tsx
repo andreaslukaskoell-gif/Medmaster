@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   Brain,
   ListChecks,
-  BookOpen,
   Sparkles,
   ArrowRight,
   GraduationCap,
@@ -13,7 +12,6 @@ import {
   LayoutGrid,
   RefreshCw,
   TrendingUp,
-  Users,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { usePageTitle } from "@/hooks/usePageTitle";

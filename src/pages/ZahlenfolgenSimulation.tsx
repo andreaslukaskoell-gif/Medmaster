@@ -61,8 +61,12 @@ export default function ZahlenfolgenSimulation() {
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [results, setResults] = useState<TaskResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
-  const taskStartTime = useRef(Date.now());
+  const taskStartTime = useRef(0);
   const { recordSimulation } = useKFFResults();
+
+  useEffect(() => {
+    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+  }, [phase]);
 
   // Timer
   useEffect(() => {
@@ -119,9 +123,10 @@ export default function ZahlenfolgenSimulation() {
 
   // Auto-finish when time runs out
   useEffect(() => {
-    if (phase === "running" && timeLeft === 0) {
-      finishSimulation();
-    }
+    const t = setTimeout(() => {
+      if (phase === "running" && timeLeft === 0) finishSimulation();
+    }, 0);
+    return () => clearTimeout(t);
   }, [timeLeft, phase, finishSimulation]);
 
   const startSimulation = useCallback(() => {
@@ -157,6 +162,17 @@ export default function ZahlenfolgenSimulation() {
   const optionLabels = ["A", "B", "C", "D", "E"];
   const timePercent = (timeLeft / TIME_LIMIT) * 100;
   const isUrgent = timeLeft <= 120;
+
+  const patternStats = useMemo(() => {
+    const stats: Record<string, { correct: number; total: number }> = {};
+    for (const r of results) {
+      const p = r.task.pattern;
+      if (!stats[p]) stats[p] = { correct: 0, total: 0 };
+      stats[p].total++;
+      if (r.correct) stats[p].correct++;
+    }
+    return stats;
+  }, [results]);
 
   // === START SCREEN ===
   if (phase === "start") {
@@ -204,18 +220,6 @@ export default function ZahlenfolgenSimulation() {
     const totalTime = results.reduce((sum, r) => sum + r.timeSpent, 0);
     const avgTime = results.length > 0 ? Math.round(totalTime / results.length) : 0;
     const scorePercent = Math.round((correctCount / TASK_COUNT) * 100);
-
-    // Pattern statistics
-    const patternStats = useMemo(() => {
-      const stats: Record<string, { correct: number; total: number }> = {};
-      for (const r of results) {
-        const p = r.task.pattern;
-        if (!stats[p]) stats[p] = { correct: 0, total: 0 };
-        stats[p].total++;
-        if (r.correct) stats[p].correct++;
-      }
-      return stats;
-    }, [results]);
 
     return (
       <div className="space-y-6">

@@ -70,7 +70,9 @@ export default function AdminTasksPage() {
   };
 
   useEffect(() => {
-    load();
+    const t = setTimeout(() => load(), 0);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- load depends on domain/source/validatedOnly
   }, [domain, source, validatedOnly]);
 
   const handleMarkInvalid = async (id: string, reason: string) => {

@@ -319,7 +319,6 @@ export const useStore = create<AppState>()(
         })),
 
       dismissSmartAdjust: (reducePlan) => {
-        const today = new Date().toISOString().split("T")[0];
         const d = new Date();
         d.setDate(d.getDate() + 7);
         const until = d.toISOString().split("T")[0];
@@ -673,7 +672,9 @@ export const useStore = create<AppState>()(
     {
       name: STORAGE_KEY,
       partialize: (state) => {
-        const { xpMultiplier: _, pendingBadgeId: __, ...rest } = state;
+        const { xpMultiplier: _xm, pendingBadgeId: _pid, ...rest } = state;
+        void _xm;
+        void _pid;
         return rest;
       },
       storage: createJSONStorage<Partial<AppState>>(() => ({

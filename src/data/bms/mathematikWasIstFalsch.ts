@@ -191,4 +191,78 @@ export const mathematikWasIstFalsch: Question[] = [
     "mittel",
     ["Ableitung"]
   ),
+  q(
+    "ma-pool-wif-011",
+    "mathe-kap1",
+    STEM,
+    [
+      "10⁹ = 1 Milliarde.",
+      "Mikro (μ) = 10⁻⁶.",
+      "1 km = 10³ m.",
+      "1 mg = 10⁻³ kg.",
+      "Zenti (c) = 10⁻².",
+    ],
+    3,
+    "1 mg = 10⁻⁶ kg (D falsch).",
+    "leicht",
+    ["Einheiten"]
+  ),
+  q(
+    "ma-pool-wif-012",
+    "mathe-kap2",
+    STEM,
+    [
+      "Quader: V = a·b·c.",
+      "Kugel: V = (4/3)πr³.",
+      "Zylinder: V = πr²h.",
+      "Kreisfläche A = 2πr.",
+      "Dreieck: A = (1/2)·g·h.",
+    ],
+    3,
+    "Kreisfläche A = πr² (D falsch).",
+    "leicht",
+    ["Geometrie"]
+  ),
+  q(
+    "ma-pool-wif-013",
+    "mathe-kap5",
+    STEM,
+    ["ln(e) = 1.", "log₁₀(100) = 2.", "ld(8) = 3.", "ln(0) = 0.", "ln(a) + ln(b) = ln(a·b)."],
+    3,
+    "ln(0) ist nicht definiert (D falsch).",
+    "mittel",
+    ["Logarithmus"]
+  ),
+  q(
+    "ma-pool-wif-014",
+    "mathe-kap5",
+    STEM,
+    [
+      "Parabel y = x²: Scheitel (0|0).",
+      "a > 0: nach oben geöffnet.",
+      "Diskriminante D = b² − 4ac.",
+      "D > 0: zwei reelle Nullstellen.",
+      "Die Parabel y = −x² hat ein Minimum bei (0|0).",
+    ],
+    4,
+    "y = −x² hat ein Maximum bei (0|0) (E falsch).",
+    "mittel",
+    ["Parabel"]
+  ),
+  q(
+    "ma-pool-wif-015",
+    "mathe-kap2",
+    STEM,
+    [
+      "tan(α) = sin(α)/cos(α).",
+      "sin(90°) = 1.",
+      "cos(0°) = 1.",
+      "Steigung 50% entspricht tan(α) = 0,5.",
+      "Eine Steigung von 45° entspricht 100%.",
+    ],
+    4,
+    "Steigung 100% entspricht 45°, nicht umgekehrt (D falsch).",
+    "mittel",
+    ["Trigonometrie"]
+  ),
 ];

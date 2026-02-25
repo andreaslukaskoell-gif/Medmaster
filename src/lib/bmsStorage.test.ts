@@ -4,13 +4,7 @@
  * Run this in browser console to verify subchapters don't overwrite each other
  */
 
-import {
-  saveChapter,
-  saveSubchapter,
-  loadAllChapters,
-  loadChaptersBySubject,
-  clearAllChapters,
-} from "./bmsStorage";
+import { saveChapter, saveSubchapter, loadChaptersBySubject, clearAllChapters } from "./bmsStorage";
 import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
 
 export function testSubchapterPersistence() {
@@ -154,7 +148,7 @@ export function testSubchapterPersistence() {
 
 // Auto-run in development
 if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
-  // @ts-ignore
+  // @ts-expect-error - test helper attached to window in dev
   window.testSubchapterPersistence = testSubchapterPersistence;
   console.log("💡 Run testSubchapterPersistence() in the console to test subchapter persistence");
 }

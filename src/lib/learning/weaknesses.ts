@@ -3,7 +3,6 @@
  */
 
 import type { ErrorEvent, LearningObjectType } from "./types";
-import { todayStr } from "./srs";
 
 export type WeaknessEntry = {
   objectId: string;

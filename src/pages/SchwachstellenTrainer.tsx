@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
   Target,
@@ -97,6 +97,7 @@ export default function SchwachstellenTrainer() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResult, setShowResult] = useState(false);
   const [showTipp, setShowTipp] = useState<string | null>(null);
+  void showTipp;
   const [aiTutorQ, setAiTutorQ] = useState<{
     question: (typeof allBmsQuestions)[0];
     userAnswer: string;
@@ -111,27 +112,30 @@ export default function SchwachstellenTrainer() {
   const strongTopics = adaptive.getStrongestTopics(5);
   const { profile } = adaptive;
 
-  // Daily challenge questions: mix of weak topics
   const dailyQuestions = useMemo(() => {
     return adaptive.getAdaptiveQuestions(15);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- adaptive from store, intentionally stable
   }, []);
 
-  // Auto-start focused quiz from URL param ?stichwort=bio-1-01
   useEffect(() => {
     const sw = searchParams.get("stichwort");
     if (sw && mode === "overview") {
       const qs = getQuestionsForStichwort(sw, 10);
       if (qs.length > 0) {
-        setFocusStichwortId(sw);
-        setQuizQuestions(qs);
-        setCurrentIndex(0);
-        setAnswers({});
-        setShowResult(false);
-        setShowTipp(null);
-        setMode("focused");
-        setSearchParams({}, { replace: true });
+        const t = setTimeout(() => {
+          setFocusStichwortId(sw);
+          setQuizQuestions(qs);
+          setCurrentIndex(0);
+          setAnswers({});
+          setShowResult(false);
+          setShowTipp(null);
+          setMode("focused");
+          setSearchParams({}, { replace: true });
+        }, 0);
+        return () => clearTimeout(t);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run only on searchParams change
   }, [searchParams]);
 
   // ============================================================
@@ -486,7 +490,8 @@ export default function SchwachstellenTrainer() {
             </p>
           ) : (
             weakTopics.map((topic) => {
-              const sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
+              const _sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
+              void _sw;
               const fc = fachColors[topic.fach];
               const questionsAvailable = allBmsQuestions.filter((q) => {
                 const d = getDirectStichwortId(q.id);

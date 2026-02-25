@@ -69,12 +69,13 @@ export default function DailyChallengePage() {
 
   // Load question and check for existing result on mount
   useEffect(() => {
-    const q = getDailyQuestion();
-    setChallenge(q);
-    const result = getTodaysResult();
-    if (result) {
-      setExistingResult(result);
-    }
+    const t = setTimeout(() => {
+      const q = getDailyQuestion();
+      setChallenge(q);
+      const result = getTodaysResult();
+      if (result) setExistingResult(result);
+    }, 0);
+    return () => clearTimeout(t);
   }, []);
 
   // Countdown timer — only runs when finished or already completed

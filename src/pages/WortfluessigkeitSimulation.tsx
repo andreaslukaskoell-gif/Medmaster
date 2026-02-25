@@ -68,9 +68,13 @@ export default function WortfluessigkeitSimulation() {
   const [results, setResults] = useState<TaskResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
-  const taskStartTime = useRef(Date.now());
+  const taskStartTime = useRef(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const { recordSimulation } = useKFFResults();
+
+  useEffect(() => {
+    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+  }, [phase]);
 
   // Timer
   useEffect(() => {
@@ -122,9 +126,10 @@ export default function WortfluessigkeitSimulation() {
 
   // Auto-finish when time runs out
   useEffect(() => {
-    if (phase === "running" && timeLeft === 0) {
-      finishSimulation();
-    }
+    const t = setTimeout(() => {
+      if (phase === "running" && timeLeft === 0) finishSimulation();
+    }, 0);
+    return () => clearTimeout(t);
   }, [timeLeft, phase, finishSimulation]);
 
   const startSimulation = useCallback(() => {

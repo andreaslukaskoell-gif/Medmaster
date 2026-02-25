@@ -119,7 +119,7 @@ function getAdaptiveTasks(
 }
 
 export function generateAdaptivePlan(input: AdaptivePlanInput): AdaptivePlanResult {
-  const { hoursPerWeek, weeksLeft, readiness, fachReadiness, weakTopics, phase } = input;
+  const { hoursPerWeek, weeksLeft, fachReadiness, weakTopics, phase } = input;
   const minutesPerWeek = hoursPerWeek * 60;
 
   const avgBmsReadiness = Object.entries(fachReadiness).reduce(

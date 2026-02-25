@@ -64,7 +64,9 @@ const STORAGE_PREFIX = "daily_challenge_";
 export function saveDailyResult(result: DailyChallengeResult): void {
   try {
     localStorage.setItem(STORAGE_PREFIX + result.date, JSON.stringify(result));
-  } catch {}
+  } catch {
+    // ignore storage errors
+  }
 }
 
 export function getTodaysResult(): DailyChallengeResult | null {

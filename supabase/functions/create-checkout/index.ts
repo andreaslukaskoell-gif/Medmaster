@@ -47,7 +47,16 @@ serve(async (req) => {
       });
     }
 
-    const { priceId } = await req.json();
+    let body: { priceId?: unknown };
+    try {
+      body = await req.json();
+    } catch {
+      return new Response(JSON.stringify({ message: "Ungültiger JSON-Body" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    const { priceId } = body;
     if (!priceId || typeof priceId !== "string" || !priceId.startsWith("price_")) {
       return new Response(JSON.stringify({ message: "Ungültige Price ID" }), {
         status: 400,
@@ -73,9 +82,10 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Checkout error:", err);
-    return new Response(
-      JSON.stringify({ message: err instanceof Error ? err.message : "Interner Fehler" }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
+    const message = err instanceof Error ? err.message : "Interner Fehler";
+    return new Response(JSON.stringify({ message }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   }
 });

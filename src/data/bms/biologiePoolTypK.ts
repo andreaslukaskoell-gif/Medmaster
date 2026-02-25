@@ -1,8 +1,9 @@
 /**
  * Biology BMS pool — Typ K (Kombinationsaufgaben) for FragenTrainer.
- * Content from bmsKapitel/biologie only. Format: BMSFrage with typ "K".
+ * Mind. 40: Basis 001–008 + Extra 009–040.
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
+import { biologiePoolTypKExtra } from "./biologiePoolTypKExtra";
 
 export const biologiePoolTypK: BMSFrage[] = [
   {
@@ -330,4 +331,5 @@ export const biologiePoolTypK: BMSFrage[] = [
     schwierigkeit: 2,
     fsrs: null,
   },
+  ...biologiePoolTypKExtra,
 ];

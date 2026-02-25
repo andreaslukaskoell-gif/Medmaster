@@ -45,12 +45,15 @@ export default function WortfluessigkeitEndlos() {
 
   useEffect(() => {
     if (typeof window === "undefined" || typeof localStorage === "undefined") return;
-    try {
-      const saved = localStorage.getItem("medmaster-wf-best-streak");
-      if (saved) setBestStreak(Math.max(0, parseInt(saved, 10) || 0));
-    } catch {
-      // ignore
-    }
+    const t = setTimeout(() => {
+      try {
+        const saved = localStorage.getItem("medmaster-wf-best-streak");
+        if (saved) setBestStreak(Math.max(0, parseInt(saved, 10) || 0));
+      } catch {
+        // ignore
+      }
+    }, 0);
+    return () => clearTimeout(t);
   }, []);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);

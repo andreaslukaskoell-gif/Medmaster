@@ -13,7 +13,6 @@
 
 import { loadAllChapters } from "@/lib/bmsStorage";
 import { supabase } from "@/lib/supabase";
-import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
 
 interface MigrationResult {
   success: boolean;

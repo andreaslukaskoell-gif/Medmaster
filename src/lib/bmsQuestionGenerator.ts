@@ -11,7 +11,6 @@ import { getKnowledgeByUkId } from "@/data/bmsQuestionKnowledge";
 import { BMS_QUESTION_TEMPLATES } from "@/data/bmsQuestionTemplates/templates";
 import type {
   BMSKnowledge,
-  BMSFact,
   BMSContrast,
   BMSNumber,
   BMSRelation,

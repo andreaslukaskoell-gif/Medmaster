@@ -88,7 +88,7 @@ export async function runComprehensiveOptimization(): Promise<{
  */
 export function getLatestOptimizationReport(): {
   timestamp: string;
-  report: any;
+  report: Record<string, unknown>;
   markdown: string;
   backupKey: string;
 } | null {

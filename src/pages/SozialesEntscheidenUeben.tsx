@@ -16,16 +16,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const ratingColors = [
-  "", // 0 unused
-  "bg-red-500",
-  "bg-orange-500",
-  "bg-amber-500",
-  "bg-lime-500",
-  "bg-green-500",
-  "bg-emerald-500",
-];
-
 const ratingLabels = ["", "1", "2", "3", "4", "5", "6"];
 
 function getDeviationColor(deviation: number): string {

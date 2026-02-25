@@ -35,11 +35,9 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
 
   let currentQuestion: Partial<SelfTestQuestion> | null = null;
   let currentOptions: string[] = [];
-  let questionNumber = 0;
 
   for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    const originalLine = line;
+    const line = lines[i];
     const trimmed = line.trim();
 
     // Skip empty lines
@@ -59,7 +57,6 @@ export function parseKontrollfragen(text: string): SelfTestQuestion[] {
       }
 
       // Start new question
-      questionNumber++;
       currentQuestion = {
         question: questionMatch[1],
         correctIndex: 0, // Default, should be set manually or detected

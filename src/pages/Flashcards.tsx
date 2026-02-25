@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, RotateCcw, Layers, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { getDeckNames, flashcardDecks } from "@/data/flashcards";
@@ -130,7 +130,7 @@ export default function FlashcardsPage() {
 }
 
 function FlashcardStudy({
-  deckId,
+  deckId: _deckId,
   cards,
   onBack,
 }: {
@@ -138,6 +138,7 @@ function FlashcardStudy({
   cards: Flashcard[];
   onBack: () => void;
 }) {
+  void _deckId;
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [results, setResults] = useState<Record<number, "again" | "hard" | "good" | "easy">>({});
@@ -184,6 +185,7 @@ function FlashcardStudy({
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- handleRate stable, omit to avoid re-subscribe
   }, [index, flipped]);
 
   const handleTouchStart = (e: React.TouchEvent) => setTouchStartX(e.touches[0].clientX);

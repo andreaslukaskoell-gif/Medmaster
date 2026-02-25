@@ -1,6 +1,6 @@
 /**
- * Physik BMS-Fragenpool (500 Fragen, MedAT-Typ K, Single Choice).
- * Nur Stoff aus bmsKapitel/physik (Mechanik, Wellen, Wärmelehre, E-Lehre & Optik, Atomphysik).
+ * Physik BMS-Fragenpool (500+ Fragen, MedAT Single Choice + Typ K + „Was ist falsch?“).
+ * Nur Stoff aus bmsKapitel/physik.
  */
 import type { Question } from "./index";
 import { physikPool1 } from "./physikPool1";
@@ -13,6 +13,7 @@ import { physikPool7 } from "./physikPool7";
 import { physikPool8 } from "./physikPool8";
 import { physikPool9 } from "./physikPool9";
 import { physikPool10 } from "./physikPool10";
+import { physikWasIstFalsch } from "./physikWasIstFalsch";
 
 export const physikPoolQuestions: Question[] = [
   ...physikPool1,
@@ -25,4 +26,5 @@ export const physikPoolQuestions: Question[] = [
   ...physikPool8,
   ...physikPool9,
   ...physikPool10,
+  ...physikWasIstFalsch,
 ];

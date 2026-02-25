@@ -1,18 +1,8 @@
 import { useState, useMemo } from "react";
-import {
-  ArrowLeft,
-  CheckCircle2,
-  Bookmark,
-  StickyNote,
-  Target,
-  Lightbulb,
-  Stethoscope,
-  ListChecks,
-} from "lucide-react";
+import { ArrowLeft, CheckCircle2, Bookmark, StickyNote, Target, ListChecks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
 import { allBmsQuestions } from "@/data/bms/index";
@@ -31,16 +21,7 @@ interface Props {
 }
 
 export default function BMSChapter({ chapter, onBack }: Props) {
-  const {
-    completeChapter,
-    completedChapters,
-    addXP,
-    checkStreak,
-    notes,
-    setNote,
-    bookmarks,
-    toggleBookmarkChapter,
-  } = useStore();
+  const { completedChapters, notes, setNote, bookmarks, toggleBookmarkChapter } = useStore();
   const isCompleted = completedChapters.includes(chapter.id);
   const isBookmarked = bookmarks.chapters.includes(chapter.id);
   const [noteText, setNoteText] = useState(notes[chapter.id] || "");
@@ -54,14 +35,6 @@ export default function BMSChapter({ chapter, onBack }: Props) {
       .map((id) => allBmsQuestions.find((q) => q.id === id))
       .filter(Boolean) as typeof allBmsQuestions;
   }, [chapter.selfTestIds]);
-
-  const handleComplete = () => {
-    if (!isCompleted) {
-      completeChapter(chapter.id);
-      addXP(50); // +50 XP pro gelesenes Kapitel
-      checkStreak();
-    }
-  };
 
   const handleSaveNote = () => {
     setNote(chapter.id, noteText);

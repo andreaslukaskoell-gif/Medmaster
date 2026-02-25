@@ -8,7 +8,7 @@ import type { FigureAssembleTask } from "@/data/kffFigurenZusammensetzenMedAT";
 import type { ImplikationTask } from "@/data/kffImplikationen";
 import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import type { GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
-import type { Task, TaskDomain } from "./types";
+import type { Task } from "./types";
 
 export type ValidationOutcome = { ok: true } | { ok: false; reason: string };
 

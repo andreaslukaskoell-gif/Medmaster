@@ -114,7 +114,8 @@ const tabs: { key: TabKey; label: string; icon: React.ElementType }[] = [
 
 export default function KFFSubtest() {
   const { subtestId } = useParams<{ subtestId: string }>();
-  const navigate = useNavigate();
+  const _navigate = useNavigate();
+  void _navigate;
   const [activeTab, setActiveTab] = useState<TabKey>("lernen");
   const progress = useKFFStore((s) => (subtestId ? s.progress[subtestId as KFFSubtestType] : null));
 

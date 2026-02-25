@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import {
   BarChart,
   Bar,
@@ -14,7 +14,6 @@ import {
   Line,
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Heatmap } from "@/components/ui/heatmap";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
@@ -24,29 +23,6 @@ import { getQuestionSubject } from "@/lib/bmsLookup";
 import { Progress } from "@/components/ui/progress";
 
 const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
-
-const fachColors: Record<string, { bg: string; text: string; bar: string }> = {
-  biologie: {
-    bg: "bg-emerald-50 dark:bg-emerald-900/20",
-    text: "text-emerald-700 dark:text-emerald-400",
-    bar: "[&>div]:bg-emerald-500",
-  },
-  chemie: {
-    bg: "bg-red-50 dark:bg-red-900/20",
-    text: "text-red-700 dark:text-red-400",
-    bar: "[&>div]:bg-red-500",
-  },
-  physik: {
-    bg: "bg-blue-50 dark:bg-blue-900/20",
-    text: "text-blue-700 dark:text-blue-400",
-    bar: "[&>div]:bg-blue-500",
-  },
-  mathematik: {
-    bg: "bg-violet-50 dark:bg-violet-900/20",
-    text: "text-violet-700 dark:text-violet-400",
-    bar: "[&>div]:bg-violet-500",
-  },
-};
 
 const confidenceLabel: Record<string, { text: string; className: string }> = {
   sicher: {
@@ -64,7 +40,7 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
 };
 
 export default function Statistics() {
-  const { quizResults, xp, streak, completedChapters } = useStore();
+  const { quizResults, xp, streak } = useStore();
   const adaptive = useAdaptiveStore();
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");

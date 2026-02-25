@@ -26,6 +26,7 @@ import { emotionenErkennenScenarios } from "../data/kffEmotionenErkennen";
 import { emotionenRegulierenScenarios } from "../data/kffEmotionenRegulieren";
 import { sozialesEntscheidenScenarios } from "../data/kffSozialesEntscheiden";
 import { tvTexte } from "../data/kffTextverstaendnis";
+import { tvUebungstexte } from "../data/tvUebungstexte";
 
 // Env: Service Role umgeht RLS (nur für dieses Skript, Key nie im Frontend nutzen)
 const supabaseUrl = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
@@ -176,6 +177,15 @@ async function seedKFFTasks(): Promise<number> {
     rows.push({
       category: "textverstaendnis",
       difficulty: tv.difficulty ? difficultyNumToText(tv.difficulty) : null,
+      data_json: tv,
+    });
+  }
+
+  // TV-Übungstexte (offizielles MedAT-Vorbild)
+  for (const tv of tvUebungstexte) {
+    rows.push({
+      category: "textverstaendnis",
+      difficulty: difficultyNumToText(tv.difficulty),
       data_json: tv,
     });
   }

@@ -45,7 +45,7 @@ export function useKFFResults() {
           subtest_type: subtestType,
           payload: result,
         });
-      } catch (_) {
+      } catch {
         // Offline / keine Supabase-Config / Tabelle fehlt – nur lokal gespeichert
       }
     },
@@ -83,7 +83,7 @@ export function useKFFResults() {
           subtest_type: result.subtestType,
           payload: result,
         });
-      } catch (_) {
+      } catch {
         // Offline / keine Supabase-Config / Tabelle fehlt – nur lokal gespeichert
       }
     },

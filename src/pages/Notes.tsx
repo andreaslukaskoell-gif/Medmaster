@@ -25,6 +25,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 // ---------------------------------------------------------------------------
 // Lightweight Markdown parser -- no external dependencies
 // ---------------------------------------------------------------------------
+/* eslint-disable no-useless-escape -- regex character class escapes */
 function parseMarkdown(text: string): string {
   // Escape HTML entities to prevent injection
   const escapeHtml = (s: string): string =>

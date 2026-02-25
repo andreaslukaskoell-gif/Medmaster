@@ -49,9 +49,6 @@ function getStatus(details: UkAudit[]): Status {
   const shortText = details.filter((d) => !d.hasEnoughText).length;
   const noMerksatz = details.filter((d) => !d.hasMerksatz).length;
   const total = details.length;
-  const gapsPerUk = details.map(
-    (d) => [d.hasQuiz, d.hasEnoughText, d.hasMerksatz].filter(Boolean).length
-  );
   const anyCritical = noQuiz > 0 || shortText > 0 || noMerksatz > 0;
   const manyGaps =
     noQuiz === total || noMerksatz === total || noQuiz + shortText + noMerksatz >= total * 2;

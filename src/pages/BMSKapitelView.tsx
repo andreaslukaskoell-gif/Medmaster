@@ -20,6 +20,7 @@ import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { getSubjectColors } from "@/data/bmsKapitel/colors";
+import type { SubjectId } from "@/data/bmsKapitel/colors";
 import { getKapitelById } from "@/data/bmsKapitel";
 import BMSUnterkapitel from "./BMSUnterkapitel";
 import { ChapterSRSBadge } from "@/components/chapter/ChapterSRSBadge";
@@ -55,7 +56,7 @@ export default function BMSKapitelView({
   onGoToChapter,
 }: Props) {
   // Get subject-specific colors from centralized color system
-  const subjectColors = getSubjectColors(kapitel.subject as any);
+  const subjectColors = getSubjectColors((kapitel.subject ?? "biologie") as SubjectId);
   const location = useLocation();
   const [activeUKIndex, setActiveUKIndex] = useState<number | null>(initialUkIndex ?? null);
   const { setBreadcrumbs } = useBreadcrumb();
@@ -85,15 +86,18 @@ export default function BMSKapitelView({
     ) {
       const idx =
         initialUkIndex >= 0 && initialUkIndex < kapitel.unterkapitel.length ? initialUkIndex : null;
-      setActiveUKIndex(idx);
-      return;
+      const t = setTimeout(() => setActiveUKIndex(idx), 0);
+      return () => clearTimeout(t);
     }
     const resumeId = useAdaptiveStore.getState().resumeToUnterkapitelId;
     if (!resumeId || !kapitel?.unterkapitel?.length) return;
     const idx = kapitel.unterkapitel.findIndex((u) => u?.id === resumeId);
     if (idx >= 0) {
-      setActiveUKIndex(idx);
-      useAdaptiveStore.getState().setResumeToUnterkapitelId(null);
+      const t = setTimeout(() => {
+        setActiveUKIndex(idx);
+        useAdaptiveStore.getState().setResumeToUnterkapitelId(null);
+      }, 0);
+      return () => clearTimeout(t);
     }
   }, [kapitel?.id, kapitel?.unterkapitel, initialUkIndex]);
 

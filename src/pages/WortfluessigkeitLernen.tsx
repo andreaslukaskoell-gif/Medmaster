@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { ChevronLeft, ChevronRight, Lightbulb, Clock, BookOpen, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lightbulb, Clock, Zap } from "lucide-react";
 
 function PageIndicator({ current, total }: { current: number; total: number }) {
   return (

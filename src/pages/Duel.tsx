@@ -1,16 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  ArrowLeft,
-  Swords,
-  Play,
-  Trophy,
-  User,
-  Bot,
-  Clock,
-  Zap,
-  Target,
-  Lightbulb,
-} from "lucide-react";
+import { Swords, Play, Trophy, User, Bot, Clock, Zap, Target, Lightbulb } from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -81,6 +70,7 @@ export default function Duel() {
   const [showExplanation, setShowExplanation] = useState<string | null>(null);
   const [aiTutorQ, setAiTutorQ] = useState<{ question: Question; userAnswer: string } | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
+  const savedResultRef = useRef(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
   const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } =
     useAdaptiveStore();
@@ -88,6 +78,40 @@ export default function Duel() {
   useEffect(() => {
     getQuestions().then((q) => setQuestions(q));
   }, []);
+
+  // Save result once when duel ends (avoid calling during render)
+  useEffect(() => {
+    if (duel?.phase !== "result") {
+      savedResultRef.current = false;
+      return;
+    }
+    if (savedResultRef.current) return;
+    savedResultRef.current = true;
+    const playerScore = duel.questions.filter(
+      (q) => duel.playerAnswers[q.id] === q.correctOptionId
+    ).length;
+    const modeBonus = duel.mode === "schwachstellen" ? 1.5 : duel.mode === "adaptive" ? 1.2 : 1;
+    const playerWon =
+      playerScore >
+      duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId).length;
+    const xpGain = Math.round((playerWon ? playerScore * 20 : playerScore * 10) * modeBonus);
+    addXP(xpGain);
+    checkStreak();
+    saveQuizResult({
+      id: `duel-${Date.now()}`,
+      type: "bms",
+      subject: "Duell",
+      score: playerScore,
+      total: 5,
+      date: new Date().toLocaleDateString("de-AT"),
+      timestamp: new Date().toISOString(),
+      answers: duel.questions.map((q) => ({
+        questionId: q.id,
+        selectedAnswer: duel.playerAnswers[q.id] || "",
+        correct: duel.playerAnswers[q.id] === q.correctOptionId,
+      })),
+    });
+  }, [duel, addXP, checkStreak, saveQuizResult]);
 
   const selectQuestions = (mode: DuelMode): Question[] => {
     if (mode === "adaptive") {
@@ -160,6 +184,7 @@ export default function Duel() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intent: react to phase/index only
   }, [duel?.phase, duel?.currentIndex]);
 
   // Simulate opponent answer
@@ -191,6 +216,7 @@ export default function Duel() {
     }, delay);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intent: react to phase/index only
   }, [duel?.phase, duel?.currentIndex]);
 
   const handleAnswer = (optionId: string) => {
@@ -337,23 +363,6 @@ export default function Duel() {
 
     const modeBonus = duel.mode === "schwachstellen" ? 1.5 : duel.mode === "adaptive" ? 1.2 : 1;
     const xpGain = Math.round((playerWon ? playerScore * 20 : playerScore * 10) * modeBonus);
-    addXP(xpGain);
-    checkStreak();
-
-    saveQuizResult({
-      id: `duel-${Date.now()}`,
-      type: "bms",
-      subject: "Duell",
-      score: playerScore,
-      total: 5,
-      date: new Date().toLocaleDateString("de-AT"),
-      timestamp: new Date().toISOString(),
-      answers: duel.questions.map((q) => ({
-        questionId: q.id,
-        selectedAnswer: duel.playerAnswers[q.id] || "",
-        correct: duel.playerAnswers[q.id] === q.correctOptionId,
-      })),
-    });
 
     return (
       <div className="max-w-3xl mx-auto space-y-6">

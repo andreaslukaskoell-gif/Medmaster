@@ -1,7 +1,8 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { ChevronLeft, ChevronRight, Lightbulb, BookOpen } from "lucide-react";
+import { ChevronLeft, ChevronRight, Lightbulb, BookOpen, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { EMOTIONEN_REGULIEREN_AUSFUELLHILFE } from "@/data/emotionenRegulierenOffiziell";
 
 const totalPages = 3;
 
@@ -307,6 +308,25 @@ function Seite3() {
           So sieht eine Aufgabe im MedAT aus — und so löst du sie.
         </p>
       </div>
+
+      {/* Ausfüllhilfe — offizielle Instruktion */}
+      <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10">
+        <CardContent className="p-5 space-y-3">
+          <div className="flex items-center gap-2">
+            <FileText className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+            <h3 className="font-semibold text-amber-900 dark:text-amber-200">
+              Ausfüllhilfe (offizielle Instruktion)
+            </h3>
+          </div>
+          <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+            {EMOTIONEN_REGULIEREN_AUSFUELLHILFE}
+          </p>
+          <p className="text-xs text-muted">
+            Diese Instruktion erscheint im Aufnahmeverfahren vor den Aufgaben. In der Simulation
+            kannst du sie jederzeit über &quot;Ausfüllhilfe anzeigen&quot; einblenden.
+          </p>
+        </CardContent>
+      </Card>
 
       {/* Format */}
       <Card>

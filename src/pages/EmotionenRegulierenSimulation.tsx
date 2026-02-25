@@ -12,16 +12,21 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import {
-  emotionenRegulierenScenarios,
-  type EmotionenRegulierenScenario,
-} from "@/data/kffEmotionenRegulieren";
+  emotionenRegulierenOffiziellTasks,
+  EMOTIONEN_REGULIEREN_AUSFUELLHILFE,
+  type EmotionenRegulierenOffiziellTask,
+  type OptionId,
+} from "@/data/emotionenRegulierenOffiziell";
 
-const TASK_COUNT = 10;
-const TIME_LIMIT = 600; // 10 minutes
+/** Offiziell: 12 Aufgaben, 18 Minuten (Aufnahmeverfahren) */
+const TASK_COUNT = 12;
+const TIME_LIMIT = 18 * 60; // 18 Minuten
+
+const OFFIZIELLE_INSTRUKTION = EMOTIONEN_REGULIEREN_AUSFUELLHILFE;
 
 interface TaskResult {
-  task: EmotionenRegulierenScenario;
-  userAnswer: number | null;
+  task: EmotionenRegulierenOffiziellTask;
+  userAnswer: OptionId | null;
   correct: boolean;
   timeSpent: number;
 }
@@ -41,27 +46,23 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
-const strategyColors: Record<string, string> = {
-  Situationsauswahl: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-  Situationsmodifikation: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
-  Aufmerksamkeitslenkung:
-    "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
-  "Kognitive Veränderung": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-  Reaktionsmodulation: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
-};
-
 type SimPhase = "start" | "running" | "results";
 
 export default function EmotionenRegulierenSimulation() {
   const [phase, setPhase] = useState<SimPhase>("start");
-  const [tasks, setTasks] = useState<EmotionenRegulierenScenario[]>([]);
+  const [tasks, setTasks] = useState<EmotionenRegulierenOffiziellTask[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<OptionId | null>(null);
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [results, setResults] = useState<TaskResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
-  const taskStartTime = useRef(Date.now());
+  const [showAusfuellhilfe, setShowAusfuellhilfe] = useState(false);
+  const taskStartTime = useRef(0);
   const { recordSimulation } = useKFFResults();
+
+  useEffect(() => {
+    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+  }, [phase]);
 
   useEffect(() => {
     if (phase !== "running") return;
@@ -77,12 +78,8 @@ export default function EmotionenRegulierenSimulation() {
     return () => clearInterval(interval);
   }, [phase]);
 
-  useEffect(() => {
-    if (phase === "running" && timeLeft === 0) finishSimulation();
-  }, [timeLeft, phase]);
-
   const startSimulation = useCallback(() => {
-    const selected = shuffle(emotionenRegulierenScenarios).slice(0, TASK_COUNT);
+    const selected = shuffle(emotionenRegulierenOffiziellTasks).slice(0, TASK_COUNT);
     setTasks(selected);
     setCurrentIndex(0);
     setSelectedAnswer(null);
@@ -91,6 +88,7 @@ export default function EmotionenRegulierenSimulation() {
     setExpandedResult(null);
     setPhase("running");
     taskStartTime.current = Date.now();
+    setShowAusfuellhilfe(false);
   }, []);
 
   const finishSimulation = useCallback(() => {
@@ -98,7 +96,12 @@ export default function EmotionenRegulierenSimulation() {
       const answered = new Set(prev.map((r) => r.task.id));
       const remaining = tasks
         .filter((t) => !answered.has(t.id))
-        .map((task) => ({ task, userAnswer: null, correct: false, timeSpent: 0 }));
+        .map((task) => ({
+          task,
+          userAnswer: null,
+          correct: false,
+          timeSpent: 0,
+        }));
       const allResults = [...prev, ...remaining];
       const correctCount = allResults.filter((r) => r.correct).length;
       recordSimulation({
@@ -111,7 +114,7 @@ export default function EmotionenRegulierenSimulation() {
         date: new Date().toISOString(),
         details: allResults.map((r) => ({
           exerciseId: r.task.id,
-          userAnswer: r.userAnswer !== null ? String(r.userAnswer) : "",
+          userAnswer: r.userAnswer ?? "",
           correct: r.correct,
           timeSpent: r.timeSpent * 1000,
           date: new Date().toISOString(),
@@ -122,12 +125,24 @@ export default function EmotionenRegulierenSimulation() {
     setPhase("results");
   }, [tasks, timeLeft, recordSimulation]);
 
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (phase === "running" && timeLeft === 0) finishSimulation();
+    }, 0);
+    return () => clearTimeout(t);
+  }, [timeLeft, phase, finishSimulation]);
+
   const handleSubmitAnswer = useCallback(() => {
     if (selectedAnswer === null) return;
     const task = tasks[currentIndex];
     const timeSpent = Math.round((Date.now() - taskStartTime.current) / 1000);
-    const correct = selectedAnswer === task.correctAnswer;
-    const result: TaskResult = { task, userAnswer: selectedAnswer, correct, timeSpent };
+    const correct = selectedAnswer === task.correctOptionId;
+    const result: TaskResult = {
+      task,
+      userAnswer: selectedAnswer,
+      correct,
+      timeSpent,
+    };
     setResults((prev) => [...prev, result]);
 
     if (currentIndex + 1 < TASK_COUNT) {
@@ -147,7 +162,7 @@ export default function EmotionenRegulierenSimulation() {
         date: new Date().toISOString(),
         details: allResults.map((r) => ({
           exerciseId: r.task.id,
-          userAnswer: r.userAnswer !== null ? String(r.userAnswer) : "",
+          userAnswer: r.userAnswer ?? "",
           correct: r.correct,
           timeSpent: r.timeSpent * 1000,
           date: new Date().toISOString(),
@@ -163,33 +178,41 @@ export default function EmotionenRegulierenSimulation() {
   if (phase === "start") {
     return (
       <Card>
-        <CardContent className="p-8 text-center space-y-6">
+        <CardContent className="p-8 space-y-6">
           <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center mx-auto">
             <Timer className="w-8 h-8 text-pink-500" />
           </div>
-          <div>
+          <div className="text-center">
             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Simulation starten
+              Emotionen regulieren — Simulation
             </h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
-              {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten. Wähle die effektivste
-              Regulationsstrategie.
+            <p className="text-sm text-muted max-w-lg mx-auto mb-4">
+              Mit diesen Aufgaben wird Ihr Wissen darüber gemessen, wie man in bestimmten
+              Situationen mit Emotionen effektiv umgehen kann, um bestimmte Ziele zu erreichen. Sie
+              wählen bei jeder Aufgabe die
+              <strong> eine</strong> Möglichkeit, mit der die Ziele der Person unter den schilderten
+              Umständen am besten erreicht werden können.
             </p>
+            <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-left text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+              {OFFIZIELLE_INSTRUKTION}
+            </div>
           </div>
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
+              <Clock className="w-4 h-4" /> 18:00 min
             </span>
             <span className="flex items-center gap-1">
-              <BarChart3 className="w-4 h-4" /> {TASK_COUNT} Aufgaben
+              <BarChart3 className="w-4 h-4" /> 12 Aufgaben
             </span>
           </div>
-          <button
-            onClick={startSimulation}
-            className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
-          >
-            Simulation starten
-          </button>
+          <div className="flex justify-center">
+            <button
+              onClick={startSimulation}
+              className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
+            >
+              Simulation starten
+            </button>
+          </div>
         </CardContent>
       </Card>
     );
@@ -248,7 +271,7 @@ export default function EmotionenRegulierenSimulation() {
 
         <div className="space-y-2">
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            Aufgabenübersicht
+            Aufgabenübersicht mit Erklärungen
           </h3>
           {results.map((result, i) => (
             <Card key={i}>
@@ -263,9 +286,12 @@ export default function EmotionenRegulierenSimulation() {
                     {i + 1}
                   </span>
                   <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
-                    {result.task.scenario.slice(0, 80)}...
+                    {result.task.situation.slice(0, 80)}…
                   </p>
                   <div className="flex items-center gap-2 shrink-0">
+                    <span className="text-xs text-muted">
+                      {result.userAnswer ?? "—"} / {result.task.correctOptionId}
+                    </span>
                     <span className="text-xs text-muted">{result.timeSpent}s</span>
                     {result.correct ? (
                       <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -277,32 +303,27 @@ export default function EmotionenRegulierenSimulation() {
                 {expandedResult === i && (
                   <div className="px-4 pb-4 space-y-3 border-t border-gray-100 dark:border-gray-800 pt-3">
                     <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                      <p className="text-xs text-muted mb-1">Szenario:</p>
-                      <p className="text-sm">{result.task.scenario}</p>
-                      <p className="text-xs text-pink-600 dark:text-pink-400 mt-1">
-                        Unerwünschte Emotion: {result.task.unwantedEmotion}
-                      </p>
+                      <p className="text-xs text-muted mb-1">Situation:</p>
+                      <p className="text-sm">{result.task.situation}</p>
                     </div>
                     <div className="space-y-1">
-                      {result.task.options.map((opt, j) => (
+                      {result.task.options.map((opt) => (
                         <div
-                          key={j}
-                          className={`text-sm px-3 py-2 rounded ${j === result.task.correctAnswer ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : j === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
+                          key={opt.id}
+                          className={`text-sm px-3 py-2 rounded ${opt.id === result.task.correctOptionId ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : opt.id === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
                         >
-                          <span
-                            className={`inline-block text-xs font-medium px-1.5 py-0.5 rounded mr-2 ${strategyColors[opt.strategy] || ""}`}
-                          >
-                            {opt.strategy}
-                          </span>
-                          {opt.description}
-                          {j === result.task.correctAnswer && " ✓"}
-                          {j === result.userAnswer && j !== result.task.correctAnswer && " ✗"}
+                          <span className="font-medium mr-2">{opt.id}</span>
+                          {opt.text}
+                          {opt.id === result.task.correctOptionId && " ✓"}
+                          {opt.id === result.userAnswer &&
+                            opt.id !== result.task.correctOptionId &&
+                            " ✗"}
                         </div>
                       ))}
                     </div>
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                      <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-                        Erklärung:
+                    <div className="bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800 rounded-lg p-3">
+                      <p className="text-xs font-medium text-amber-800 dark:text-amber-300 mb-1">
+                        Erklärung der richtigen Antwort:
                       </p>
                       <p className="text-sm text-gray-700 dark:text-gray-300">
                         {result.task.explanation}
@@ -354,51 +375,65 @@ export default function EmotionenRegulierenSimulation() {
         <span>
           Aufgabe {currentIndex + 1} von {TASK_COUNT}
         </span>
-        <div className="flex gap-1">
-          {Array.from({ length: TASK_COUNT }, (_, i) => (
-            <div
-              key={i}
-              className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-gray-300 dark:bg-gray-600"}`}
-            />
-          ))}
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setShowAusfuellhilfe((s) => !s)}
+            className="text-xs text-pink-600 dark:text-pink-400 hover:underline cursor-pointer"
+          >
+            {showAusfuellhilfe ? "Ausfüllhilfe ausblenden" : "Ausfüllhilfe anzeigen"}
+          </button>
+          <div className="flex gap-1">
+            {Array.from({ length: TASK_COUNT }, (_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-gray-300 dark:bg-gray-600"}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
+
+      {showAusfuellhilfe && (
+        <div className="bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+          <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-2">
+            Ausfüllhilfe (offizielle Instruktion)
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+            {EMOTIONEN_REGULIEREN_AUSFUELLHILFE}
+          </p>
+        </div>
+      )}
 
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-xs text-pink-600 dark:text-pink-400 mb-2">
-              Unerwünschte Emotion: {currentTask.unwantedEmotion}
-            </p>
             <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
-              {currentTask.scenario}
+              {currentTask.situation}
             </p>
           </div>
           <div className="p-6 space-y-4">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              Welche Strategie wäre am effektivsten?
+              Mit welcher der vier Möglichkeiten können die Ziele der Person unter den geschilderten
+              Umständen am besten erreicht werden?
             </p>
             <div className="space-y-2">
-              {currentTask.options.map((option, i) => (
+              {currentTask.options.map((option) => (
                 <button
-                  key={i}
-                  onClick={() => setSelectedAnswer(i)}
-                  className={`w-full text-left p-4 rounded-lg border-2 transition-all cursor-pointer ${
-                    selectedAnswer === i
+                  key={option.id}
+                  onClick={() => setSelectedAnswer(option.id)}
+                  className={`w-full text-left p-4 rounded-lg border-2 transition-all cursor-pointer flex items-start gap-3 ${
+                    selectedAnswer === option.id
                       ? "border-pink-400 dark:border-pink-600 bg-pink-50 dark:bg-pink-900/20"
                       : "border-gray-200 dark:border-gray-700 hover:bg-pink-50 dark:hover:bg-pink-900/10"
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <span
-                      className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full shrink-0 mt-0.5 ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}
-                    >
-                      {option.strategy}
-                    </span>
-                    <span className="text-sm text-gray-900 dark:text-gray-100">
-                      {option.description}
-                    </span>
-                  </div>
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-sm font-bold text-gray-700 dark:text-gray-300">
+                    {option.id}
+                  </span>
+                  <span className="text-sm text-gray-900 dark:text-gray-100 pt-0.5">
+                    {option.text}
+                  </span>
                 </button>
               ))}
             </div>

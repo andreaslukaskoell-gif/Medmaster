@@ -12,7 +12,8 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
-import { tvTexte, type TVText, type TVQuestion } from "@/data/kffTextverstaendnis";
+import { useTvTexte } from "@/hooks/useTvTexte";
+import type { TVQuestion } from "@/data/kffTextverstaendnis";
 
 const difficultyLabels: Record<number, { label: string; bg: string; color: string }> = {
   1: {
@@ -63,6 +64,7 @@ export default function TextverstaendnisUeben() {
   const [highlightedPassage, setHighlightedPassage] = useState<string | undefined>();
 
   const { recordResult } = useKFFResults();
+  const { texts: tvTexte } = useTvTexte();
 
   const filteredTexts = useMemo(() => {
     let texts = difficultyFilter
@@ -70,7 +72,7 @@ export default function TextverstaendnisUeben() {
       : [...tvTexte];
     if (shuffled) texts = shuffle(texts);
     return texts;
-  }, [difficultyFilter, shuffled]);
+  }, [difficultyFilter, shuffled, tvTexte]);
 
   const currentText = filteredTexts[textIndex];
 

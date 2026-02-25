@@ -31,7 +31,6 @@ import { shareText, getStreakShareText } from "@/lib/shareUtils";
 import {
   getLevelFromXP,
   getLevelProgressPercent,
-  getLevelName,
   getXPToNextLevel,
   XP_PER_LEVEL,
 } from "@/lib/progression";
@@ -41,8 +40,6 @@ import { getBadgeProgress } from "@/data/badges";
 import { alleKapitel } from "@/data/bmsKapitel";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { ListChecks } from "lucide-react";
-
-const MODULE_TO_PATH: Record<string, string> = { BMS: "/bms", KFF: "/kff", TV: "/tv", SEK: "/sek" };
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -69,11 +66,12 @@ export default function Dashboard() {
     goalAchievedByDate,
     smartAdjustDismissedUntil,
     dismissSmartAdjust,
-    spacedRepetition,
   } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
+  const dailyResult = useMemo(() => getTodaysResult(), []);
+  // todayStr omitted: getTodaysResult uses current date internally
   const {
     dueCount: todayDueCount,
     weaknessCount: todayWeaknessCount,
@@ -121,8 +119,6 @@ export default function Dashboard() {
     (!smartAdjustDismissedUntil || todayStr > smartAdjustDismissedUntil);
 
   // Due count from Today Engine (Fragen + Kapitel)
-  const dueCount = todayDueCount;
-
   useEffect(() => {
     if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
       setGoalAchievedToday(todayStr, true);
@@ -158,9 +154,6 @@ export default function Dashboard() {
     ).slice(-3);
   }, [badgeState]);
 
-  const questProgress = dailyGoalState.hasPlan ? dailyGoalState.primaryProgressPct : 0;
-  const dailyResult = getTodaysResult();
-
   const cardClass =
     "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200";
   const bmsProgressPct = useMemo(() => {
@@ -172,6 +165,7 @@ export default function Dashboard() {
       0
     );
     return Math.round((done / total) * 100);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- alleKapitel is outer scope
   }, [alleKapitel, completedChapters]);
   const daysThisWeekActive = useMemo(() => {
     const keys = Object.keys(firstActivityTimeByDay ?? {});
@@ -183,7 +177,6 @@ export default function Dashboard() {
   }, [firstActivityTimeByDay]);
 
   const xpToNextLevel = getXPToNextLevel(xp);
-  const nextLevelName = getLevelName(level + 1);
 
   return (
     <div className="min-h-screen bg-[var(--dashboard-bg)]">

@@ -50,9 +50,7 @@ export function buildTodayTasks(input: BuildTodayInput): TodayEngineTask[] {
     topWeaknesses,
     lastViewedChapterId,
     lastViewedUnterkapitelId,
-    lastPath,
     maxTasks = DEFAULT_MAX_TASKS,
-    today,
   } = input;
 
   const tasks: TodayEngineTask[] = [];

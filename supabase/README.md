@@ -54,3 +54,9 @@ Siehe `src/lib/supabaseBMS.ts`:
 Um Kapitel zu erstellen/bearbeiten, muss der User eine E-Mail mit `@admin.medmaster` haben.
 
 Du kannst die Admin-Prüfung in `001_bms_schema.sql` anpassen, falls nötig.
+
+## Backend-Verbesserungen (Sicherheit & Robustheit)
+
+- **Tasks:** Migration `20260225100000_tasks_rls_admin_only.sql` schränkt DELETE auf Admins ein; Pool-Fill aus der App bleibt möglich.
+- **Edge Functions:** create-checkout parst JSON sicher; stripe-webhook prüft `STRIPE_WEBHOOK_SECRET` (503 wenn nicht gesetzt).
+- **Sync:** Beim Pull werden `stichwort_stats`- und `fach_stats`-Zeilen validiert; ungültige Einträge werden übersprungen.

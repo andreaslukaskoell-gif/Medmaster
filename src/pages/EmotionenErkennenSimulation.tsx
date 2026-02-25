@@ -56,8 +56,12 @@ export default function EmotionenErkennenSimulation() {
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [results, setResults] = useState<QuestionResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
-  const taskStartTime = useRef(Date.now());
+  const taskStartTime = useRef(0);
   const { recordSimulation } = useKFFResults();
+
+  useEffect(() => {
+    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+  }, [phase]);
 
   const totalQuestions = scenarios.reduce((sum, s) => sum + s.questions.length, 0);
   const answeredCount = results.length;
@@ -75,10 +79,6 @@ export default function EmotionenErkennenSimulation() {
     }, 1000);
     return () => clearInterval(interval);
   }, [phase]);
-
-  useEffect(() => {
-    if (phase === "running" && timeLeft === 0) finishSimulation();
-  }, [timeLeft, phase]);
 
   const startSimulation = useCallback(() => {
     const selected = shuffle(emotionenErkennenScenarios).slice(0, SCENARIO_COUNT);
@@ -136,6 +136,13 @@ export default function EmotionenErkennenSimulation() {
     });
     setPhase("results");
   }, [scenarios, timeLeft, recordSimulation]);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (phase === "running" && timeLeft === 0) finishSimulation();
+    }, 0);
+    return () => clearTimeout(t);
+  }, [timeLeft, phase, finishSimulation]);
 
   const handleSubmitAnswer = useCallback(() => {
     if (selectedAnswer === null) return;

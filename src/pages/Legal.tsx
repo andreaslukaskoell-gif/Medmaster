@@ -24,7 +24,8 @@ export default function Legal() {
   usePageTitle(tab === "agb" ? "AGB" : tab === "datenschutz" ? "Datenschutz" : "Impressum");
 
   useEffect(() => {
-    setTab(tabFromPath(location.pathname));
+    const t = setTimeout(() => setTab(tabFromPath(location.pathname)), 0);
+    return () => clearTimeout(t);
   }, [location.pathname]);
 
   const handleTab = (t: Tab) => {

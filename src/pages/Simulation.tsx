@@ -40,19 +40,13 @@ import {
   generateWortflüssigkeitSet,
   generateSyllogismSet,
 } from "@/data/kffGenerators";
-import type {
-  AllergyCard,
-  MemoryQuestion,
-  ZahlenfolgeGenerated,
-  WortflüssigkeitQuestion,
-} from "@/data/kffGenerators";
+import type { AllergyCard } from "@/data/kffGenerators";
 import { figurenAufgaben } from "@/data/figurenGenerator";
 import type { FZAufgabe } from "@/data/figurenGenerator";
 import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
-import type { ImplikationQuestion } from "@/data/kffData";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -424,6 +418,7 @@ function generateGedaechtnisQuestions(section: SimSection): {
 } {
   const cards = generateAllergyCards(8);
   _allergyCards = cards;
+  void _allergyCards;
   const memQ = generateMemoryQuestions(cards, section.questionCount);
   const questions = memQ.map((q) => ({
     id: q.id,
@@ -705,6 +700,7 @@ export default function Simulation() {
   const [learnTimeLeft, setLearnTimeLeft] = useState(0);
   const [sectionTimeData, setSectionTimeData] = useState<SectionTimeData[]>([]);
   const [sectionStartTime, setSectionStartTime] = useState(0);
+  void sectionStartTime;
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
@@ -1021,6 +1017,7 @@ export default function Simulation() {
         if (timerRef.current) clearInterval(timerRef.current);
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intent: mode + timer flags only
   }, [mode, timeLeft > 0, breakTimeLeft > 0, learnTimeLeft > 0]);
 
   // ============================================================

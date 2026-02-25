@@ -1,4 +1,4 @@
-import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
+import type { Kapitel } from "@/data/bmsKapitel/types";
 import { loadAllChapters, saveChapter } from "@/lib/bmsStorage";
 
 /**
@@ -335,7 +335,7 @@ function addSpacingAroundElements(text: string): string {
  * Preserves content, only enhances visual presentation
  */
 function formatDefinitions(text: string): string {
-  let formatted = text;
+  const formatted = text;
 
   // Ensure consistent formatting for common patterns
   // This is conservative - we don't want to change actual content
@@ -356,7 +356,7 @@ function formatDefinitions(text: string): string {
  * Format tables - ensure spacing around and consistent formatting
  */
 function formatTables(text: string): string {
-  let formatted = text;
+  const formatted = text;
   const lines = formatted.split("\n");
   const result: string[] = [];
   let inTable = false;
@@ -419,7 +419,7 @@ function formatInlineCode(text: string): string {
  * Format formulas - ensure proper spacing and formatting
  */
 function formatFormulas(text: string): string {
-  let formatted = text;
+  const formatted = text;
 
   // Ensure formulas have blank lines before and after if they're standalone
   // Pattern: line with only formula-like content (e.g., "f(x) = x^2" or "$...$")

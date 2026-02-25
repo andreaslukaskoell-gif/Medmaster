@@ -46,7 +46,7 @@ function migrateSubchapterIds(chapters: Kapitel[]): Kapitel[] {
     }
 
     // Migrate: generate unique IDs for all subchapters
-    const migratedSubchapters = chapter.unterkapitel.map((uk, index) => {
+    const migratedSubchapters = chapter.unterkapitel.map((uk) => {
       // If ID is in old format, generate new unique ID
       if (uk.id.match(/^[^-]+-kap\d+-uk\d+$/)) {
         return {
@@ -366,7 +366,7 @@ export function loadAllChapters(): Kapitel[] {
         console.log(
           "📊 Duplicate titles:",
           Array.from(titleMap.entries())
-            .filter(([_, count]) => count > 1)
+            .filter(([, count]) => count > 1)
             .map(([title, count]) => `"${title}" (${count}x)`)
             .join(", ")
         );

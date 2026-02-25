@@ -94,3 +94,5 @@ npx ts-node --esm -r tsconfig-paths/register -P tsconfig.app.json src/scripts/se
 
 - **BMS:** Es werden alle Einträge aus `alleKapitel` (alle Fächer) eingelesen. Kapitel werden per `upsert` nach `id` geschrieben, Unterkapitel ebenfalls – mehrfaches Ausführen aktualisiert vorhandene Einträge.
 - **KFF:** `kff_tasks` hat einen UUID-Primary-Key ohne inhaltlichen Unique-Constraint. Jeder Lauf fügt neue Zeilen ein; bei mehrfachem Ausführen entstehen doppelte Aufgaben. Für ein sauberes Re-Seed vorher in Supabase die Tabelle `kff_tasks` leeren (oder ein eigenes „Replace by category“-Skript verwenden).
+
+**TV-Übungstexte:** Zusätzlich können die MedAT-Vorbild-Texte aus `tvUebungstexte.ts` mit `npx tsx src/scripts/seedTvUebungstexte.ts` in `kff_tasks` gespeichert werden (ohne Duplikate bei erneutem Lauf).

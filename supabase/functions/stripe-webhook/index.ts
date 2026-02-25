@@ -14,7 +14,10 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!, {
   apiVersion: "2023-10-16",
 });
 
-const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET")!;
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
+if (!webhookSecret) {
+  console.error("STRIPE_WEBHOOK_SECRET is not set");
+}
 
 // Use service role to bypass RLS for profile updates
 const supabase = createClient(
@@ -37,6 +40,10 @@ serve(async (req) => {
 
     if (!signature) {
       return new Response("Missing stripe-signature header", { status: 400 });
+    }
+    if (!webhookSecret) {
+      console.error("STRIPE_WEBHOOK_SECRET not set");
+      return new Response("Webhook not configured", { status: 503 });
     }
 
     const event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
@@ -119,8 +126,7 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Webhook error:", err);
-    return new Response(`Webhook Error: ${err instanceof Error ? err.message : "Unknown"}`, {
-      status: 400,
-    });
+    const msg = err instanceof Error ? err.message : "Unknown";
+    return new Response(`Webhook Error: ${msg}`, { status: 400 });
   }
 });

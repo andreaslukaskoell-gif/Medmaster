@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { alleStichworteListe, type Stichwort } from "@/data/stichwortliste";
+import { alleStichworteListe } from "@/data/stichwortliste";
 import { allBmsQuestions, type Question } from "@/data/bms";
 import { getDirectStichwortId } from "@/data/questions/index";
 

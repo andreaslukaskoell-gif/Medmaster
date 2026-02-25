@@ -92,7 +92,7 @@ export function listAllChapters(): {
  * Zeigt eine formatierte Übersicht in der Konsole
  */
 export function printChapterOverview(): void {
-  const { summary, chapters } = listAllChapters();
+  const { summary } = listAllChapters();
 
   console.log("\n📚 === KAPITEL-ÜBERSICHT ===\n");
   console.log(
@@ -132,6 +132,10 @@ export function printChapterOverview(): void {
  * Nutzung: window.showChapters() oder window.listChapters()
  */
 if (typeof window !== "undefined") {
-  (window as any).showChapters = printChapterOverview;
-  (window as any).listChapters = listAllChapters;
+  (
+    window as Window & { showChapters?: () => void; listChapters?: typeof listAllChapters }
+  ).showChapters = printChapterOverview;
+  (
+    window as Window & { showChapters?: () => void; listChapters?: typeof listAllChapters }
+  ).listChapters = listAllChapters;
 }

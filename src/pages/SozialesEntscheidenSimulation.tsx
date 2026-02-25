@@ -1,13 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import {
-  Timer,
-  CheckCircle2,
-  ChevronRight,
-  RotateCcw,
-  Trophy,
-  Clock,
-  BarChart3,
-} from "lucide-react";
+import { Timer, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import {
@@ -57,8 +49,12 @@ export default function SozialesEntscheidenSimulation() {
   const [timeLeft, setTimeLeft] = useState(TIME_LIMIT);
   const [results, setResults] = useState<ScenarioResult[]>([]);
   const [expandedResult, setExpandedResult] = useState<number | null>(null);
-  const taskStartTime = useRef(Date.now());
+  const taskStartTime = useRef(0);
   const { recordSimulation } = useKFFResults();
+
+  useEffect(() => {
+    if (phase === "running" && taskStartTime.current === 0) taskStartTime.current = Date.now();
+  }, [phase]);
 
   const currentScenario = scenarios[currentIndex];
   const allRated = currentScenario
@@ -78,10 +74,6 @@ export default function SozialesEntscheidenSimulation() {
     }, 1000);
     return () => clearInterval(interval);
   }, [phase]);
-
-  useEffect(() => {
-    if (phase === "running" && timeLeft === 0) finishSimulation();
-  }, [timeLeft, phase]);
 
   const startSimulation = useCallback(() => {
     const selected = shuffle(sozialesEntscheidenScenarios).slice(0, SCENARIO_COUNT);
@@ -136,6 +128,13 @@ export default function SozialesEntscheidenSimulation() {
     });
     setPhase("results");
   }, [scenarios, timeLeft, recordSimulation]);
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      if (phase === "running" && timeLeft === 0) finishSimulation();
+    }, 0);
+    return () => clearTimeout(t);
+  }, [timeLeft, phase, finishSimulation]);
 
   const handleRating = useCallback((optionIndex: number, value: number) => {
     setRatings((prev) => ({ ...prev, [optionIndex]: value }));

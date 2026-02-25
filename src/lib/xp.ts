@@ -7,7 +7,6 @@ const DEFAULT_BASE_XP = 10;
 const MIN_DIFFICULTY = 0.5;
 const MAX_DIFFICULTY = 2;
 const FAST_THRESHOLD_SEC = 15;
-const SLOW_THRESHOLD_SEC = 60;
 const MAX_TIME_BONUS = 5;
 
 export interface XPParams {

@@ -4,7 +4,7 @@
 export interface TVQuestion {
   question: string;
   options: string[];
-  correctAnswer: number; // 0-3
+  correctAnswer: number; // 0–4 für A–E (MedAT: 5 Optionen)
   explanation: string;
   /** Relevante Textstelle für Highlighting bei Auflösung */
   relevantPassage?: string;

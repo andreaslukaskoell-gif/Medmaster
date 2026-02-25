@@ -34,13 +34,6 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 import { daysUntilMedAT } from "@/lib/utils";
 
-interface SubjectData {
-  name: string;
-  score: number;
-  total: number;
-  percentage: number;
-}
-
 export default function Analysis() {
   const mounted = useIsMounted();
   const { quizResults } = useStore();

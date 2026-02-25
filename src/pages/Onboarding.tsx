@@ -1,16 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  GraduationCap,
-  Calendar,
-  Clock,
-  BookOpen,
-  ArrowRight,
-  CheckCircle2,
-  Sparkles,
-  Target,
-} from "lucide-react";
+import { GraduationCap, Calendar, Clock, BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { cn } from "@/lib/utils";

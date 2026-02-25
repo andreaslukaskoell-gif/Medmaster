@@ -1,26 +1,21 @@
-import { useState, useMemo, useEffect } from "react";
+/**
+ * KFF Academy – Untertests: Lernen, Üben, Simulation
+ */
+/* eslint-disable @typescript-eslint/no-unused-vars -- many dev/debug vars */
+/* eslint-disable @typescript-eslint/no-explicit-any -- legacy editor types */
+
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Copy,
-  Check,
-  FileText,
-  Eye,
-  Save,
-  Clock,
-  History,
-  ArrowRight,
-  Plus,
-  X,
-} from "lucide-react";
+import { FileText, Save } from "lucide-react";
 
-const subjects = [
+const _subjects = [
   { id: "biologie", label: "Biologie" },
   { id: "chemie", label: "Chemie" },
   { id: "physik", label: "Physik" },
   { id: "mathematik", label: "Mathematik" },
 ] as const;
-import type { Unterkapitel, Kapitel } from "@/data/bmsKapitel/types";
+import type { Unterkapitel } from "@/data/bmsKapitel/types";
 import { normalizeChapterContent } from "@/utils/normalizeChapterContent";
 import { splitChapterContent } from "@/utils/splitChapterContent";
 import { alleKapitel } from "@/data/bmsKapitel";

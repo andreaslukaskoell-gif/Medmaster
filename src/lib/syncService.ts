@@ -75,6 +75,18 @@ interface StichwortStatRow {
   updated_at: string;
 }
 
+function isValidStichwortStatRow(row: unknown): row is StichwortStatRow {
+  if (!row || typeof row !== "object") return false;
+  const r = row as Record<string, unknown>;
+  return (
+    typeof r.stichwort_id === "string" &&
+    typeof r.total_attempts === "number" &&
+    typeof r.correct_attempts === "number" &&
+    typeof r.success_rate === "number" &&
+    typeof r.streak === "number"
+  );
+}
+
 /** Vergessenskurve: nächster Wiederholungszeitpunkt ab jetzt (ISO-String). */
 function calculateNextReview(streak: number): string {
   const now = Date.now();
@@ -95,6 +107,16 @@ interface FachStatRow {
   weak_topics: unknown;
   strong_topics: unknown;
   recommended_daily_questions: number | null;
+}
+
+function isValidFachStatRow(row: unknown): row is FachStatRow {
+  if (!row || typeof row !== "object") return false;
+  const r = row as Record<string, unknown>;
+  return (
+    typeof r.fach === "string" &&
+    typeof r.overall_success_rate === "number" &&
+    ["biologie", "chemie", "physik", "mathematik"].includes(r.fach as string)
+  );
 }
 
 // ============================================================
@@ -249,7 +271,7 @@ export async function pullStatsFromSupabase(
         .select("*")
         .eq("user_id", userId);
       if (swErr) throw swErr;
-      swData = Array.isArray(data) ? (data as StichwortStatRow[]) : [];
+      swData = Array.isArray(data) ? (data as unknown[]).filter(isValidStichwortStatRow) : [];
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       console.warn("[sync] Pull stichwort_stats failed, using empty list:", msg);
@@ -264,7 +286,7 @@ export async function pullStatsFromSupabase(
         .select("*")
         .eq("user_id", userId);
       if (fachErr) throw fachErr;
-      fachData = Array.isArray(data) ? (data as FachStatRow[]) : [];
+      fachData = Array.isArray(data) ? (data as unknown[]).filter(isValidFachStatRow) : [];
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       console.warn("[sync] Pull fach_stats failed, using empty list:", msg);

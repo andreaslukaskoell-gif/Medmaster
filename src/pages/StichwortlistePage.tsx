@@ -10,15 +10,10 @@ import {
   Clock,
   Search,
   Sparkles,
-  ChevronRight,
-  BarChart3,
   Target,
-  Filter,
   Play,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {

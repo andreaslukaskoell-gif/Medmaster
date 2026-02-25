@@ -1,18 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import {
-  Share2,
-  ChevronRight,
-  Trophy,
-  Flame,
-  Target,
-  BookOpen,
-  Star,
-  ArrowLeft,
-} from "lucide-react";
+import { Share2, ChevronRight, Flame, Target, BookOpen, Star, ArrowLeft } from "lucide-react";
 import { useStore } from "@/store/useStore";
-import { Button } from "@/components/ui/button";
 import { shareText, getWrappedShareText } from "@/lib/shareUtils";
 import { getLevelFromXP } from "@/lib/progression";
 import { usePageTitle } from "@/hooks/usePageTitle";

@@ -16,11 +16,7 @@ import { Confetti } from "@/components/ui/confetti";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
-import {
-  bmsQuestions as legacyQuestions,
-  getQuestionsBySubject as getLegacyQuestions,
-  type Question,
-} from "@/data/bmsQuestions";
+import { getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";

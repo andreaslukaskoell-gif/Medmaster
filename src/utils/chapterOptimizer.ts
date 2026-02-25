@@ -8,8 +8,8 @@
  * - Batch processing of all chapters
  */
 
-import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";
-import { loadAllChapters, saveChapter } from "@/lib/bmsStorage";
+import type { Kapitel } from "@/data/bmsKapitel/types";
+import { loadAllChapters } from "@/lib/bmsStorage";
 import { optimizeChapterContent } from "./optimizeChapterContent";
 
 const BACKUP_INDEX_KEY = "bms-backup-index";
@@ -109,7 +109,6 @@ function analyzeContent(content: string): {
   formulas: number;
   codeBlocks: number;
 } {
-  const lines = content.split("\n");
   const paragraphs = content.split(/\n\s*\n/).filter((p) => p.trim().length > 0);
   const headings = content.match(/^#{1,6}\s+.+$/gm)?.length || 0;
   const merksätze =
@@ -141,9 +140,6 @@ function analyzeContent(content: string): {
  * Counts specific optimizations in content
  */
 function countOptimizations(before: string, after: string): OptimizationAudit["changes"] {
-  const beforeLines = before.split("\n");
-  const afterLines = after.split("\n");
-
   // Count paragraph splits (more paragraphs in after)
   const beforeParagraphs = before.split(/\n\s*\n/).filter((p) => p.trim().length > 0).length;
   const afterParagraphs = after.split(/\n\s*\n/).filter((p) => p.trim().length > 0).length;
@@ -281,7 +277,7 @@ export function optimizeChapterWithAudit(chapter: Kapitel): OptimizationAudit {
           text: optimizeChapterContent(section.text),
           merksatz: section.merksatz ? optimizeChapterContent(section.merksatz) : undefined,
         }));
-      } catch (err) {
+      } catch {
         optimizedSections = uk.sections;
       }
     }
@@ -292,6 +288,7 @@ export function optimizeChapterWithAudit(chapter: Kapitel): OptimizationAudit {
       sections: optimizedSections,
     };
   });
+  void optimizedSubchapters;
 
   // Calculate stats
   audit.beforeStats.totalLength = totalBeforeLength;

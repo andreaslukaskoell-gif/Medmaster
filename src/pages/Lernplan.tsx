@@ -109,7 +109,8 @@ export default function Lernplan() {
   const weeksLeft = Math.max(1, Math.floor(days / 7));
   const readiness = adaptive.getMedATReadiness();
   const weakTopics = adaptive.getWeakestTopics(5);
-  const strongTopics = adaptive.getStrongestTopics(3);
+  const _strongTopics = adaptive.getStrongestTopics(3);
+  void _strongTopics;
   const { profile } = adaptive;
 
   const fachReadiness = useMemo(

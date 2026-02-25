@@ -6,6 +6,7 @@
  * - Save/update user progress
  * - Sync with localStorage as fallback
  */
+/* eslint-disable @typescript-eslint/no-explicit-any -- JSONB/row types from Supabase */
 
 import { supabase } from "./supabase";
 import type { Kapitel, Unterkapitel } from "@/data/bmsKapitel/types";

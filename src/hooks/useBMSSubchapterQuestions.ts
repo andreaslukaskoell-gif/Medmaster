@@ -89,6 +89,8 @@ export function useBMSQuestions(subchapterIds: string[]) {
         const allQ: BMSQuestion[] = [];
         (data || []).forEach((row) => {
           if (!Array.isArray(row.questions)) return;
+          const rowId = row.id ?? "";
+          const rowTitle = row.title ?? "";
           row.questions.forEach(
             (q: {
               id?: string;
@@ -99,16 +101,24 @@ export function useBMSQuestions(subchapterIds: string[]) {
               difficulty?: string;
               tags?: string[];
             }) => {
+              const opts = Array.isArray(q.options)
+                ? (q.options as { id?: string; text?: string }[]).map((o) => ({
+                    id: o.id ?? "",
+                    text: o.text ?? "",
+                  }))
+                : [];
+              const diff =
+                q.difficulty === "easy" || q.difficulty === "hard" ? q.difficulty : "medium";
               allQ.push({
-                id: q.id,
-                question: q.question,
-                options: q.options,
-                correct: q.correct,
-                explanation: q.explanation || "",
-                difficulty: q.difficulty || "medium",
-                tags: q.tags || [],
-                ukId: row.id,
-                ukTitle: row.title,
+                id: q.id ?? "",
+                question: q.question ?? "",
+                options: opts,
+                correct: q.correct ?? "",
+                explanation: q.explanation ?? "",
+                difficulty: diff,
+                tags: q.tags ?? [],
+                ukId: rowId,
+                ukTitle: rowTitle,
               });
             }
           );
@@ -117,6 +127,7 @@ export function useBMSQuestions(subchapterIds: string[]) {
         setLoading(false);
       });
     return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- stable key subchapterIds.join(",")
   }, [subchapterIds.join(",")]);
 
   return { questions, loading, error };

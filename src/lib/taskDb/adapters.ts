@@ -12,7 +12,7 @@ import type {
   EmotionenRegulierenTask,
   SozialesEntscheidenTask,
 } from "@/data/sekDataNew";
-import type { Task, TaskDomain, TaskInsert, TaskSource } from "./types";
+import type { Task, TaskInsert, TaskSource } from "./types";
 
 function difficultyToScore(d: "easy" | "medium" | "hard" | 1 | 2 | 3): number {
   if (typeof d === "number") return d === 1 ? 200 : d === 2 ? 500 : 800;

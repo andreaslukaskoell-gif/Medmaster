@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 /** MedAT-Stichtag: Erster Freitag im Juli 2026 */
 export function getMedATDate(): Date {
   const july = new Date(2026, 6, 1); // July 1, 2026
-  let day = july.getDay(); // 0 = Sun, 5 = Fri
+  const day = july.getDay(); // 0 = Sun, 5 = Fri
   const daysToFriday = day <= 5 ? 5 - day : 7 - day + 5;
   return new Date(2026, 6, 1 + daysToFriday);
 }

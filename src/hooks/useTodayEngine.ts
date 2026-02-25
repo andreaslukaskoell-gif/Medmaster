@@ -14,7 +14,6 @@ import {
   countWeaknessRecommendations,
   todayStr,
 } from "@/lib/learning";
-import type { TodayEngineTask } from "@/lib/learning/types";
 
 export function useTodayEngine() {
   const spacedRepetition = useStore((s) => s.spacedRepetition ?? {});

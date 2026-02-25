@@ -1,7 +1,5 @@
 /**
- * Biology BMS question pool (500 questions, MedAT style).
- * Content based only on bmsKapitel/biologie (Kap1–Kap5). No material beyond or deeper.
- * Füllt ihr nacheinander: biologiePool1–5 mit Fragen; hier werden sie zusammengeführt.
+ * Biology BMS question pool (500+ Fragen) inkl. „Was ist falsch?“ pro Thema.
  */
 import type { Question } from "./index";
 import { biologiePool1 } from "./biologiePool1";
@@ -9,6 +7,7 @@ import { biologiePool2 } from "./biologiePool2";
 import { biologiePool3 } from "./biologiePool3";
 import { biologiePool4 } from "./biologiePool4";
 import { biologiePool5 } from "./biologiePool5";
+import { biologieWasIstFalsch } from "./biologieWasIstFalsch";
 
 export const biologiePoolQuestions: Question[] = [
   ...biologiePool1,
@@ -16,4 +15,5 @@ export const biologiePoolQuestions: Question[] = [
   ...biologiePool3,
   ...biologiePool4,
   ...biologiePool5,
+  ...biologieWasIstFalsch,
 ];
