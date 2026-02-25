@@ -8,6 +8,7 @@ import type { FigureAssembleTask } from "@/data/kffFigurenZusammensetzenMedAT";
 import type { ImplikationTask } from "@/data/kffImplikationen";
 import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import type { GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
+import type { MerkfahigkeitTaskData } from "./adapters";
 import type { Task } from "./types";
 
 export type ValidationOutcome = { ok: true } | { ok: false; reason: string };
@@ -38,15 +39,16 @@ export function validateTask(task: Task): ValidationOutcome {
 
   const kffType = DOMAIN_TO_KFF_TYPE[task.domain as keyof typeof DOMAIN_TO_KFF_TYPE];
   if (kffType) {
-    const result = validateKFFTask(
-      task.data as
-        | SequenceTask
-        | FigureAssembleTask
-        | ImplikationTask
-        | WordFluencyTask
-        | GedaechtnisQuestion,
-      kffType
-    );
+    const payload =
+      kffType === "gedaechtnis" && task.data && "question" in (task.data as MerkfahigkeitTaskData)
+        ? (task.data as MerkfahigkeitTaskData).question
+        : (task.data as
+            | SequenceTask
+            | FigureAssembleTask
+            | ImplikationTask
+            | WordFluencyTask
+            | GedaechtnisQuestion);
+    const result = validateKFFTask(payload, kffType);
     if (!result.ok) return result;
   }
 

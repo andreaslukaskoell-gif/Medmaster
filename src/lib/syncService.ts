@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { setSchemaSkip, isSchemaSkipActive } from "./supabaseSchemaSkip";
 import { useSyncStatus } from "@/stores/syncStatus";
 
 // Avoid circular dependency: useAuth → syncService → adaptiveLearning → data.
@@ -11,6 +12,18 @@ type FachStat = import("@/store/adaptiveLearning").FachStat;
 // ============================================================
 
 const OFFLINE_QUEUE_KEY = "medmaster-sync-offline-queue";
+
+function isSchemaMissingError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  const code =
+    err && typeof err === "object" && "code" in err ? String((err as { code: string }).code) : "";
+  return (
+    code === "PGRST301" ||
+    msg.includes("404") ||
+    msg.includes("relation") ||
+    msg.includes("does not exist")
+  );
+}
 
 export interface OfflineQueueItem {
   userId: string;
@@ -127,6 +140,9 @@ export async function pushStatsToSupabase(
   userId: string
 ): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
+  if (isSchemaSkipActive()) {
+    return { ok: true };
+  }
   useSyncStatus.getState().setSyncing(true);
   const errors: string[] = [];
   try {
@@ -243,9 +259,24 @@ export async function pullStatsFromSupabase(
   userId: string
 ): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
+  if (isSchemaSkipActive()) {
+    return { ok: true };
+  }
   useSyncStatus.getState().setSyncing(true);
   try {
-    // 1) Fetch profile fields — use maybeSingle() so missing row is not an error
+    // Probe: wenn profiles fehlt, keine weiteren Requests (gleicher Key wie sync.ts)
+    const probe = await supabase.from("profiles").select("xp").eq("id", userId).maybeSingle();
+    if (probe.error) {
+      if (isSchemaMissingError(probe.error)) {
+        setSchemaSkip();
+        console.warn("[sync] Supabase-Schema fehlt, Stats-Sync diese Session übersprungen.");
+        return { ok: true };
+      }
+      console.warn("[sync] Pull profiles failed, treating as no remote data:", probe.error.message);
+      return { ok: true };
+    }
+
+    // 1) Full profile fields
     const { data: profileData, error: profileErr } = await supabase
       .from("profiles")
       .select(

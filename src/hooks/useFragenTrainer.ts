@@ -106,7 +106,7 @@ export function useFragenTrainer(
     timeLimitMinutes != null ? timeLimitMinutes * 60 : null
   );
   const startTimeRef = useRef<number>(0);
-  const questionStartRef = useRef<number>(Date.now());
+  const questionStartRef = useRef<number>(0);
 
   // Wenn Frage wechselt: Startzeit für aktuelle Frage setzen
   useEffect(() => {
@@ -206,6 +206,8 @@ export function useFragenTrainer(
       recordedRef.current = false;
     }, 0);
     return () => clearTimeout(t);
+    // subjectId / uk_ids intentionally omitted: we key off subjectKey/ukIdsKey to avoid unnecessary resets
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subjectKey, ukIdsKey, user_id, count, source, timeLimitMinutes, resetQuestionState]);
 
   // ── Timer (official simulation) ─────────────────────────────

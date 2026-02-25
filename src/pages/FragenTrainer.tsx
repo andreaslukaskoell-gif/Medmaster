@@ -93,7 +93,6 @@ type TrainMode = "einfach" | "offiziell";
 
 function SelectionScreen({
   onStart,
-  userId: _userId,
 }: {
   onStart: (
     subjectId: BMSSubjectId,
@@ -404,6 +403,11 @@ function QuizScreen({
     goToQuestion,
   ]);
 
+  const [adaptiveHintDismissed, setAdaptiveHintDismissed] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return localStorage.getItem("medmaster-adaptive-hint") === "1";
+  });
+
   if (loading)
     return (
       <div className="flex flex-col items-center justify-center py-20 gap-3 text-muted-foreground">
@@ -441,16 +445,14 @@ function QuizScreen({
   const isReviewMode = idx < answers.length;
   const reviewAnswer = isReviewMode ? answers[idx] : null;
 
-  const [adaptiveHintDismissed, setAdaptiveHintDismissed] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return localStorage.getItem("medmaster-adaptive-hint") === "1";
-  });
   const showAdaptiveHint = !adaptiveHintDismissed;
   const dismissAdaptiveHint = () => {
     setAdaptiveHintDismissed(true);
     try {
       localStorage.setItem("medmaster-adaptive-hint", "1");
-    } catch {}
+    } catch {
+      // ignore localStorage errors
+    }
   };
 
   return (
@@ -850,7 +852,7 @@ function ResultsScreen({
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Richtig beantwortet ({right.length}) – Begründungen
           </h3>
-          {right.map(({ frage, typKChosenOption }) => (
+          {right.map(({ frage }) => (
             <Card key={frage.id} className="border-l-4 border-l-green-400">
               <CardContent className="p-4 space-y-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-100">

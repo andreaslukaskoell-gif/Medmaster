@@ -1,6 +1,7 @@
 /**
  * Stale-While-Revalidate: BMS Chapters
  *
+ * Quelle der Wahrheit: Supabase (bms_chapters, bms_subchapters).
  * 1. Zeigt sofort gecachte Daten aus localStorage (falls vorhanden)
  * 2. Lädt im Hintergrund von Supabase und aktualisiert Cache + State
  * 3. Bei Fehler/Offline: Cache bleibt sichtbar, kein Error-Screen solange Daten da sind

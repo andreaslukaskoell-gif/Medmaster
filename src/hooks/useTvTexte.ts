@@ -85,7 +85,7 @@ export function useTvTexte(): {
   }, []);
 
   useEffect(() => {
-    fetchFromDb();
+    queueMicrotask(() => fetchFromDb());
   }, [fetchFromDb]);
 
   return { texts, loading, error, refetch: fetchFromDb };

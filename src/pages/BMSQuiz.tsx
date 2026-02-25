@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
-import { allBmsQuestions, getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
+import { getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
@@ -51,30 +51,6 @@ const subjectColors: Record<string, { bg: string; text: string; label: string }>
   },
 };
 
-function shuffleArray<T>(arr: T[]): T[] {
-  const shuffled = [...arr];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
-
-function getMixedQuestions(count: number) {
-  const subjects = ["biologie", "chemie", "physik", "mathematik"];
-  const perSubject = Math.floor(count / subjects.length);
-  const remainder = count % subjects.length;
-  const selected: typeof allBmsQuestions = [];
-
-  subjects.forEach((subj, idx) => {
-    const subjectQs = shuffleArray(allBmsQuestions.filter((q) => q.subject === subj));
-    const take = perSubject + (idx < remainder ? 1 : 0);
-    selected.push(...subjectQs.slice(0, take));
-  });
-
-  return shuffleArray(selected);
-}
-
 interface Props {
   subject: string;
   onBack: () => void;
@@ -99,7 +75,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const questionStartRef = useRef<number>(Date.now());
+  const questionStartRef = useRef<number>(0);
   const questionTimesRef = useRef<Record<string, number>>({});
 
   useEffect(() => {

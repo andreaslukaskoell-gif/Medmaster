@@ -52,7 +52,7 @@ import {
   filterValidGedaechtnisQuestions,
   logPoolWarning,
 } from "@/data/kffValidation";
-import { getTasksForUserOrFill, getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
+import { getTasksForUserWithWeakness, getOneMerkfahigkeitSet, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
@@ -184,6 +184,7 @@ export default function KFF() {
       color: "bg-rose-100 dark:bg-rose-900/30",
       textColor: "text-rose-600 dark:text-rose-400",
       icon: "puzzle",
+      badge: "Geprüft",
     },
   ];
 
@@ -670,6 +671,8 @@ function AllergyPassCard({ pass }: { pass: AllergyPass }) {
 
 function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: () => void }) {
   const [passCount, setPassCount] = useState(8);
+  const [dbLoading, setDbLoading] = useState(false);
+  const [dbError, setDbError] = useState<string | null>(null);
   const officialValid = useMemo(() => validateOfficialGedaechtnisExamples(), []);
   const hasOfficial =
     OFFICIAL_GM_EXAMPLES.passes.length > 0 && OFFICIAL_GM_EXAMPLES.questions.length > 0;
@@ -680,6 +683,28 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
     logPoolWarning("gedaechtnis", _currentGmQuestions.length, "offiziell");
     _currentGmIsOfficial = true;
     onLearn();
+  };
+
+  const startFromDb = async () => {
+    setDbError(null);
+    setDbLoading(true);
+    try {
+      const set = await getOneMerkfahigkeitSet();
+      if (set && set.passes.length > 0 && set.questions.length > 0) {
+        _currentGmPasses = set.passes;
+        _currentGmQuestions = set.questions;
+        _currentGmIsOfficial = false;
+        onLearn();
+      } else {
+        setDbError(
+          "Keine Allergieausweis-Aufgaben in der Datenbank. Führe den Seed aus: npx tsx src/scripts/seedTaskDb.ts --generate kff-merkfähigkeit 100"
+        );
+      }
+    } catch (e) {
+      setDbError(e instanceof Error ? e.message : "Fehler beim Laden aus der Datenbank.");
+    } finally {
+      setDbLoading(false);
+    }
   };
 
   const startTraining = () => {
@@ -740,14 +765,23 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
         <CardHeader>
           <CardTitle className="text-lg">🧠 Training</CardTitle>
           <p className="text-sm text-muted">
-            Geprüfte Trainingsaufgaben: Allergiepässe und 25 Fragen – realistische Namen,
-            Blutgruppen, Allergien, Medikamente.
+            Trainingsaufgaben aus der Datenbank (8 Pässe + bis zu 25 Fragen) oder lokal generiert.
           </p>
         </CardHeader>
         <CardContent className="space-y-6">
-          <div>
+          <Button className="w-full" size="lg" onClick={startFromDb} disabled={dbLoading}>
+            {dbLoading ? (
+              "Lade …"
+            ) : (
+              <>
+                <BarChart3 className="w-5 h-5 mr-2" /> Aus Datenbank starten (8 Pässe + Fragen)
+              </>
+            )}
+          </Button>
+          {dbError && <p className="text-sm text-amber-700 dark:text-amber-400">{dbError}</p>}
+          <div className="border-t border-border dark:border-gray-700 pt-4">
             <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
-              Anzahl Allergiepässe (Lernphase)
+              Fallback: lokal generieren (Anzahl Pässe)
             </label>
             <div className="flex flex-wrap gap-2">
               {[6, 7, 8, 9, 10].map((n) => (
@@ -764,10 +798,10 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
                 </button>
               ))}
             </div>
+            <Button className="w-full mt-3" size="lg" variant="outline" onClick={startTraining}>
+              <Shuffle className="w-5 h-5 mr-2" /> {passCount} Pässe + 25 Fragen (lokal)
+            </Button>
           </div>
-          <Button className="w-full" size="lg" onClick={startTraining}>
-            <Shuffle className="w-5 h-5 mr-2" /> {passCount} Pässe + 25 Fragen (geprüft) starten
-          </Button>
         </CardContent>
       </Card>
     </div>
@@ -1936,7 +1970,16 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     checkStreak();
     setPhase("result");
     setIndex(0);
-  }, [questions, answers, saveQuizResult, addXP, checkStreak, setSkillRating, addKffTaskFailed]);
+  }, [
+    questions,
+    answers,
+    saveQuizResult,
+    addXP,
+    checkStreak,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+  ]);
 
   const goToNext = () => {
     if (index < questions.length - 1) {

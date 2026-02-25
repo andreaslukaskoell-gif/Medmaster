@@ -1,5 +1,17 @@
 # Skripte
 
+## Datenpersistenz: Alles in der Datenbank
+
+Bei konfigurierter Supabase-URL und -Key gilt:
+
+- **KFF/SEK-Aufgaben (Figuren, Zahlenfolgen, Implikationen, …):** Tabelle **tasks** – einzige Quelle; kein localStorage für Tasks wenn Supabase verfügbar ist.
+- **BMS-Kapitel:** Tabellen **bms_chapters** und **bms_subchapters** – werden von der App aus Supabase geladen (localStorage nur als Cache/Offline-Fallback).
+- **User-Fortschritt (XP, Quiz, Spaced Repetition, Notizen):** Wird beim Login aus Supabase gezogen und bei Änderungen dorthin geschrieben.
+
+Damit alle Daten in der DB liegen: Migrations ausführen, dann `seedTaskDb.ts` (und ggf. `seedDatabase.ts` für BMS-Kapitel) ausführen.
+
+---
+
 ## seedTaskDb.ts – Task-DB (BMS/KFF/SEK) befüllen
 
 Persistente Aufgaben-Datenbank: Offizielle Beispiele und optionale Generator-Batches in die Tabelle **tasks** schreiben.
@@ -15,8 +27,12 @@ Persistente Aufgaben-Datenbank: Offizielle Beispiele und optionale Generator-Bat
 # Nur offizielle Beispiele (Zahlenfolgen, Figuren, Implikationen, Wortflüssigkeit, SEK)
 npx tsx src/scripts/seedTaskDb.ts
 
-# Zusätzlich 100 generierte Aufgaben für eine Domain (z. B. kff-figuren)
-npx tsx src/scripts/seedTaskDb.ts --generate kff-figuren 100
+# Zusätzlich generierte Aufgaben für eine Domain (kff-figuren / kff-implikationen: Standard 500, sonst 100)
+npx tsx src/scripts/seedTaskDb.ts --generate kff-figuren
+npx tsx src/scripts/seedTaskDb.ts --generate kff-figuren 500
+npx tsx src/scripts/seedTaskDb.ts --generate kff-implikationen
+npx tsx src/scripts/seedTaskDb.ts --generate kff-implikationen 500
+npx tsx src/scripts/seedTaskDb.ts --generate kff-zahlenfolgen 100
 ```
 
 Unterstützte Domains für `--generate`: `kff-zahlenfolgen`, `kff-figuren`, `kff-implikationen`, `kff-wortflüssigkeit`.

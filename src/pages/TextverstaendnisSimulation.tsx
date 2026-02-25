@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   Timer,
   CheckCircle2,
@@ -109,7 +109,7 @@ export default function TextverstaendnisSimulation() {
   const { recordSimulation } = useKFFResults();
   const { texts: tvTexte, loading } = useTvTexte();
 
-  const flatQuestions = testData?.flatQuestions ?? [];
+  const flatQuestions = useMemo(() => testData?.flatQuestions ?? [], [testData]);
   const totalQuestions = flatQuestions.length;
 
   useEffect(() => {
@@ -159,7 +159,7 @@ export default function TextverstaendnisSimulation() {
   }, [testData, flatQuestions, answers, timeLeft, totalQuestions, recordSimulation]);
 
   useEffect(() => {
-    if (phase === "running" && timeLeft === 0) finishSimulation();
+    if (phase === "running" && timeLeft === 0) queueMicrotask(() => finishSimulation());
   }, [timeLeft, phase, finishSimulation]);
 
   const startSimulation = useCallback(() => {
@@ -372,6 +372,17 @@ export default function TextverstaendnisSimulation() {
             );
           })}
         </div>
+
+        {highlightedPassage && (
+          <div className="rounded-lg border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 p-3">
+            <p className="text-xs font-medium text-indigo-800 dark:text-indigo-200 mb-1">
+              Markierte Textstelle
+            </p>
+            <p className="text-sm text-gray-700 dark:text-gray-300 italic">
+              &quot;{highlightedPassage}&quot;
+            </p>
+          </div>
+        )}
 
         <div className="flex justify-center">
           <button

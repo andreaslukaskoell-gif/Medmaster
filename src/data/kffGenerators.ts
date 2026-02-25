@@ -11,6 +11,7 @@ import {
 } from "@/data/kffImplikationen";
 import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { OFFICIAL_WF_EXAMPLES } from "@/data/kffWortfluessigkeitMedAT";
+import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWortfluessigkeit";
 import type { AllergyPass, GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
 
 // --- ZAHLENFOLGEN-GENERATOR (Legacy: 7 Zahlen + Paar-Optionen) ---
@@ -35,6 +36,22 @@ function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/** Deterministischer Shuffle für stabile Aufgaben pro Wort-ID. */
+function shuffleWithSeed<T>(arr: T[], seed: string): T[] {
+  const a = [...arr];
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (Math.imul(31, h) + seed.charCodeAt(i)) | 0;
+  const rng = () => {
+    h = (Math.imul(16807, h) + 12345) | 0;
+    return (Math.abs(h) >>> 0) / (0xffffffff + 1);
+  };
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
@@ -1690,6 +1707,7 @@ function getWFLexicon(): string[] {
   for (const d of [1, 2, 3] as const) {
     for (const w of TRAINING_WF_WORDS[d]) set.add(w.toUpperCase());
   }
+  for (const w of wortfluessigkeitWords) set.add(w.solution.toUpperCase());
   for (const o of OFFICIAL_WF_EXAMPLES) set.add(o.solutionWord.toUpperCase());
   return [...set];
 }
@@ -1719,9 +1737,13 @@ function findAllWordsFromLetters(letters: string[], lexicon: string[]): string[]
 /**
  * Validator Wortflüssigkeit: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt, Optionen nur Buchstaben aus dem Wort.
  * Qualitäts-Gate: keine Mehrdeutigkeit, keine falsche Lösung.
+ * @param lexiconOverride Wenn gesetzt (z. B. [solutionWord] bei Lexikon-Aufgaben), wird nur dieses Lexikon verwendet – erlaubt alle Lexikon-Wörter auch bei Anagrammen im Gesamtlexikon.
  */
-export function validateWordFluencyTask(task: WordFluencyTask): boolean {
-  const lexicon = getWFLexicon();
+export function validateWordFluencyTask(
+  task: WordFluencyTask,
+  lexiconOverride?: string[]
+): boolean {
+  const lexicon = lexiconOverride ?? getWFLexicon();
   const words = findAllWordsFromLetters(task.letters, lexicon);
   if (words.length !== 1) return false;
   const soleWord = words[0]!;
@@ -1759,6 +1781,63 @@ export function assertNotOfficialLikeWordFluency(task: WordFluencyTask): boolean
     if (lettersSortedKey(o.letters) === key) return false;
   }
   return true;
+}
+
+/**
+ * Erzeugt genau eine WordFluencyTask aus einem Lexikon-Wort (deterministisch).
+ * Liefert null, wenn das Wort zu wenige verschiedene Buchstaben hat (< 2) oder offiziell ist.
+ */
+export function generateWordFluencyTaskFromWord(
+  word: WortfluessigkeitWord
+): WordFluencyTask | null {
+  const solution = word.solution.toUpperCase();
+  const officialWords = new Set(OFFICIAL_WF_EXAMPLES.map((o) => o.solutionWord.toUpperCase()));
+  if (officialWords.has(solution)) return null;
+
+  const lettersInWord = [...new Set(solution.split(""))];
+  if (lettersInWord.length < 2) return null; // mind. 2: 1 korrekt + 1 falsch (+ "-" und ggf. Wiederholungen für 5 Optionen)
+
+  const letters = shuffleWithSeed(solution.split(""), word.id);
+  const correctFirst = solution[0]!;
+  const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
+  const wrongLetters = shuffleWithSeed(wrongPool, word.id + "-wrong").slice(0, 3);
+  // Immer 5 Optionen: 4 Buchstaben (1 korrekt + 3 falsch, ggf. wiederholt) + "-" am Ende. correctIndex nur 0–3.
+  const optionBase =
+    wrongLetters.length >= 3
+      ? [correctFirst, ...wrongLetters]
+      : wrongLetters.length === 2
+        ? [correctFirst, ...wrongLetters, wrongLetters[0]!]
+        : [correctFirst, ...wrongLetters, wrongLetters[0]!, wrongLetters[0]!];
+  const options = [...shuffleWithSeed(optionBase, word.id + "-opt"), "-"];
+  if (options.length !== 5) return null;
+  const correctIndex = options.indexOf(correctFirst);
+  if (correctIndex === 4) return null; // Korrekter Buchstabe darf nicht auf "-"-Position (E) landen
+
+  const task: WordFluencyTask = {
+    id: word.id,
+    letters,
+    options,
+    correctIndex,
+    solutionWord: solution,
+    explanation: `Das Wort lautet „${solution}" und beginnt mit „${correctFirst}".`,
+    difficulty: word.difficulty,
+  };
+
+  if (!validateWordFluencyTask(task, [word.solution.toUpperCase()])) return null;
+  return task;
+}
+
+/**
+ * Erzeugt für alle Lexikon-Wörter (wortfluessigkeitWords) je eine Trainingsaufgabe.
+ * Offizielle Wörter und Wörter mit < 4 verschiedenen Buchstaben werden übersprungen.
+ */
+export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
+  const tasks: WordFluencyTask[] = [];
+  for (const word of wortfluessigkeitWords) {
+    const t = generateWordFluencyTaskFromWord(word);
+    if (t) tasks.push(t);
+  }
+  return tasks;
 }
 
 /**

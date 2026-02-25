@@ -50,6 +50,8 @@ export default function EmotionenErkennenSimulation() {
 
   useEffect(() => {
     if (phase === "running" && timeLeft === TIME_LIMIT) startTimeRef.current = Date.now();
+    // timeLeft intentionally omitted: we only want to set start time when phase enters "running"
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
   useEffect(() => {
@@ -106,7 +108,7 @@ export default function EmotionenErkennenSimulation() {
   }, [tasks, answers, timeLeft, recordSimulation]);
 
   useEffect(() => {
-    if (phase === "running" && timeLeft === 0) finishSimulation();
+    if (phase === "running" && timeLeft === 0) queueMicrotask(() => finishSimulation());
   }, [phase, timeLeft, finishSimulation]);
 
   const currentTask = tasks[index];

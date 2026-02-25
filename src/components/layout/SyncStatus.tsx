@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RefreshCw } from "lucide-react";
 import { useSyncStatus } from "../../stores/syncStatus";
 import { useAuth } from "../../hooks/useAuth";
 import { pushStatsToSupabase } from "../../lib/syncService";
+import { isSchemaSkipActive } from "../../lib/supabaseSchemaSkip";
 
 /**
  * Zeigt in der Navbar den Sync-Status und eine "Sync jetzt"-Schaltfläche.
  * - Synchronisiert: grüner Punkt + Text
+ * - Nur lokal: wenn Supabase-Schema fehlt (keine Console-Spam mehr)
  * - Synchronisiere...: gelbes Blinken
  */
 export function SyncStatus() {
@@ -14,9 +16,20 @@ export function SyncStatus() {
   const isSyncing = useSyncStatus((s) => s.isSyncing);
   const lastSyncedAt = useSyncStatus((s) => s.lastSyncedAt);
   const [manualSyncing, setManualSyncing] = useState(false);
+  const [syncUnavailable, setSyncUnavailable] = useState(false);
+
+  useEffect(() => {
+    setSyncUnavailable(typeof window !== "undefined" && isSchemaSkipActive());
+  }, []);
+
+  useEffect(() => {
+    const onFocus = () => setSyncUnavailable(isSchemaSkipActive());
+    window.addEventListener("focus", onFocus);
+    return () => window.removeEventListener("focus", onFocus);
+  }, []);
 
   const handleSyncNow = async () => {
-    if (!user?.id || manualSyncing || isSyncing) return;
+    if (!user?.id || manualSyncing || isSyncing || syncUnavailable) return;
     setManualSyncing(true);
     await pushStatsToSupabase(user.id);
     setManualSyncing(false);
@@ -25,6 +38,23 @@ export function SyncStatus() {
   if (!user) return null;
 
   const syncing = isSyncing || manualSyncing;
+
+  if (syncUnavailable) {
+    return (
+      <div
+        className="flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-2xl border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/20"
+        title="Sync dieser Session deaktiviert (Backend-Tabellen nicht verfügbar). Daten werden nur lokal gespeichert. Beim nächsten Login mit funktionierendem Backend wird wieder synchronisiert."
+      >
+        <span className="h-2 w-2 shrink-0 rounded-full bg-amber-500" aria-hidden />
+        <span className="text-xs text-amber-700 dark:text-amber-400 whitespace-nowrap">
+          Nur lokal
+        </span>
+        <span className="sr-only">
+          Synchronisation deaktiviert. Fortschritt wird nur auf diesem Gerät gespeichert.
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className="flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">

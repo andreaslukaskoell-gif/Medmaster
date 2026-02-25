@@ -26,7 +26,12 @@ export function BreadcrumbNav({ items }: { items: BreadcrumbItemConfig[] }) {
                 {isLast && !item.href ? (
                   <BreadcrumbPage>{item.label}</BreadcrumbPage>
                 ) : item.href ? (
-                  <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
+                  <BreadcrumbLink
+                    href={item.href}
+                    {...(isLast ? { "aria-current": "page" as const } : {})}
+                  >
+                    {item.label}
+                  </BreadcrumbLink>
                 ) : (
                   <BreadcrumbPage>{item.label}</BreadcrumbPage>
                 )}

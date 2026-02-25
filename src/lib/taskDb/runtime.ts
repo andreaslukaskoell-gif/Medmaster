@@ -2,12 +2,32 @@
  * Runtime: Erst DB abfragen, bei Bedarf Pool nachfüllen.
  * User bekommt nur geprüfte Aufgaben aus der DB.
  */
-import { getTasksByDifficulty, getTaskCountByDomain, getTasksByIds } from "./storage";
+import {
+  getTasksByDifficulty,
+  getTaskCountByDomain,
+  getTasksByIds,
+  getTasksBySetId,
+} from "./storage";
 import { fillPool } from "./fillPool";
 import type { Task, TaskDomain } from "./types";
+import type { AllergyPass } from "@/data/kffGedaechtnisMedAT";
+import type { GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
+import type { MerkfahigkeitTaskData } from "./adapters";
 
 /** Benötigtes Minimum an validierten Aufgaben pro Domain, bevor Nachfüllen getriggert wird */
 const MIN_POOL_SIZE = 50;
+
+/** Für Figuren zusammensetzen: Mindestpool 500 Aufgaben. */
+const MIN_POOL_SIZE_FIGUREN = 500;
+
+/** Für Allergieausweise (Merkfähigkeit): Mindestpool 100 Aufgaben. */
+const MIN_POOL_SIZE_MERKFAEHIGKEIT = 100;
+
+function minPoolSizeFor(domain: TaskDomain): number {
+  if (domain === "kff-figuren") return MIN_POOL_SIZE_FIGUREN;
+  if (domain === "kff-merkfähigkeit") return MIN_POOL_SIZE_MERKFAEHIGKEIT;
+  return MIN_POOL_SIZE;
+}
 
 /**
  * Holt eine oder mehrere Aufgaben für den User aus der DB.
@@ -29,9 +49,11 @@ export async function getTasksForUser(
   if (tasks.length >= count) return tasks;
 
   // Zu wenig im Pool: Hintergrund-Nachfüllen (nicht warten)
+  const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
-  if (total < MIN_POOL_SIZE) {
-    fillPool(domain, Math.min(30, MIN_POOL_SIZE - total)).then((r) => {
+  if (total < minPool) {
+    const toGenerate = Math.min(minPool - total, 100);
+    fillPool(domain, toGenerate).then((r) => {
       if (
         typeof console !== "undefined" &&
         import.meta.env?.DEV &&
@@ -59,9 +81,11 @@ export async function getTasksForUserOrFill(
   const tasks = await getTasksForUser(domain, userSkill, count, bandWidth);
   if (tasks.length > 0) return tasks;
 
+  const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
-  if (total < MIN_POOL_SIZE) {
-    await fillPool(domain, Math.min(50, Math.max(count, MIN_POOL_SIZE - total)));
+  if (total < minPool) {
+    const toGenerate = Math.max(count, minPool - total);
+    await fillPool(domain, toGenerate);
     return getTasksByDifficulty(
       domain,
       Math.max(0, userSkill - bandWidth),
@@ -111,4 +135,28 @@ export async function getTasksForUserWithWeakness(
 
   const merged = [...weak, ...restFiltered];
   return shuffle(merged).slice(0, count);
+}
+
+/** Ein vollständiges Merkfähigkeit-Set aus der DB (8 Pässe + bis zu 25 Fragen). Liefert null wenn kein Set vorhanden. */
+export type MerkfahigkeitSet = {
+  passes: AllergyPass[];
+  questions: GedaechtnisQuestion[];
+};
+
+export async function getOneMerkfahigkeitSet(): Promise<MerkfahigkeitSet | null> {
+  const one = await getTasksByDifficulty("kff-merkfähigkeit", 0, 1000, 1);
+  if (one.length === 0) return null;
+  const first = one[0]!;
+  const data = first.data as MerkfahigkeitTaskData;
+  if (!data?.passes || !data.question) return null;
+  if (data.setId) {
+    const setTasks = await getTasksBySetId(data.setId);
+    if (setTasks.length === 0) return { passes: data.passes, questions: [data.question] };
+    const questions: GedaechtnisQuestion[] = setTasks.map((t) => {
+      const d = t.data as MerkfahigkeitTaskData;
+      return d.question;
+    });
+    return { passes: data.passes, questions };
+  }
+  return { passes: data.passes, questions: [data.question] };
 }

@@ -7,6 +7,7 @@ import type { FigureAssembleTask } from "@/data/kffFigurenZusammensetzenMedAT";
 import type { ImplikationTask } from "@/data/kffImplikationen";
 import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import type { GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
+import type { AllergyPass } from "@/data/kffGedaechtnisMedAT";
 import type {
   EmotionenErkennenTask,
   EmotionenRegulierenTask,
@@ -85,16 +86,27 @@ export function wortflüssigkeitToTask(
   };
 }
 
+/** Task-Daten für Merkfähigkeit: Set-ID, Pässe + eine Frage (für Gruppierung und Lernphase). */
+export type MerkfahigkeitTaskData = {
+  setId: string;
+  passes: AllergyPass[];
+  question: GedaechtnisQuestion;
+};
+
 export function gedaechtnisToTask(
   t: GedaechtnisQuestion,
-  source: TaskSource = "generated"
+  source: TaskSource = "generated",
+  passes?: AllergyPass[],
+  setId?: string
 ): TaskInsert {
+  const data: MerkfahigkeitTaskData | GedaechtnisQuestion =
+    passes && setId ? { setId, passes, question: t } : t;
   return {
     id: t.id,
     domain: "kff-merkfähigkeit",
     type: "merkfähigkeit",
     difficulty: 500,
-    data: t,
+    data,
     correctAnswer: t.correctIndex,
     explanation: "",
     source,

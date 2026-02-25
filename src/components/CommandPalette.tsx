@@ -125,7 +125,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   useEffect(() => {
     if (!open && showKeyboardHint && typeof localStorage !== "undefined") {
       localStorage.setItem(CMD_PALETTE_HINT_KEY, "1");
-      setShowKeyboardHint(false);
+      queueMicrotask(() => setShowKeyboardHint(false));
     }
   }, [open, showKeyboardHint]);
 

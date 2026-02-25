@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "./supabase";
+import { setSchemaSkip, isSchemaSkipActive, clearSchemaSkip } from "./supabaseSchemaSkip";
 import { useStore } from "@/store/useStore";
 import type { QuizResult, SpacedItem } from "@/store/useStore";
 
@@ -7,10 +8,43 @@ import type { QuizResult, SpacedItem } from "@/store/useStore";
 // Pull: Supabase → useStore (beim Login)
 // ============================================================
 
+function isSchemaMissing(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  const code =
+    err && typeof err === "object" && "code" in err ? String((err as { code: string }).code) : "";
+  return (
+    code === "PGRST301" ||
+    msg.includes("404") ||
+    msg.includes("relation") ||
+    msg.includes("does not exist")
+  );
+}
+
 export async function pullFromSupabase(userId: string): Promise<void> {
   const client = supabase;
   if (!client) return;
+  clearSchemaSkip();
   try {
+    // Einmalige Probe: wenn profiles-Tabelle fehlt, keine weiteren Requests (weniger Console-Fehler)
+    const probe = await client.from("profiles").select("xp").eq("id", userId).maybeSingle();
+    if (probe.error) {
+      const code = probe.error.code ?? "";
+      const msg = probe.error.message ?? "";
+      if (
+        code === "PGRST301" ||
+        String(code).includes("404") ||
+        msg.includes("relation") ||
+        msg.includes("does not exist")
+      ) {
+        setSchemaSkip();
+        console.warn(
+          "[main-sync] Supabase-Tabellen fehlen oder Schema nicht deployed. Sync wird diese Session übersprungen."
+        );
+        return;
+      }
+      throw probe.error;
+    }
+
     const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes] = await Promise.all([
       client
         .from("profiles")
@@ -114,6 +148,13 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       console.log("[main-sync] Pulled:", Object.keys(patch));
     }
   } catch (err) {
+    if (isSchemaMissing(err)) {
+      setSchemaSkip();
+      console.warn(
+        "[main-sync] Supabase-Tabellen fehlen oder Schema nicht deployed. Sync wird diese Session übersprungen. App läuft weiter mit lokalen Daten."
+      );
+      return;
+    }
     console.error("[main-sync] Pull failed:", err);
   }
 }
@@ -125,6 +166,9 @@ export async function pullFromSupabase(userId: string): Promise<void> {
 export async function pushToSupabase(userId: string): Promise<void> {
   const client = supabase;
   if (!client) return;
+  if (isSchemaSkipActive()) {
+    return;
+  }
   try {
     const s = useStore.getState();
     const level = Math.floor(s.xp / 100) + 1;
@@ -150,6 +194,11 @@ export async function pushToSupabase(userId: string): Promise<void> {
 
     console.log("[main-sync] Pushed");
   } catch (err) {
+    if (isSchemaMissing(err)) {
+      setSchemaSkip();
+      console.warn("[main-sync] Supabase-Sync übersprungen (Schema fehlt).");
+      return;
+    }
     console.error("[main-sync] Push failed:", err);
   }
 }

@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { CheckCircle2, XCircle, ChevronRight, RotateCcw, Shuffle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
@@ -30,7 +30,10 @@ export default function EmotionenErkennenUeben() {
   const { recordResult } = useKFFResults();
 
   const currentTask = tasks[index];
-  const currentAnswers = currentTask ? answers[currentTask.id] || {} : {};
+  const currentAnswers = useMemo(
+    () => (currentTask ? answers[currentTask.id] || {} : {}),
+    [currentTask, answers]
+  );
   const allAnswered =
     currentTask && currentTask.emotionen.every((e) => currentAnswers[e.id] !== undefined);
 

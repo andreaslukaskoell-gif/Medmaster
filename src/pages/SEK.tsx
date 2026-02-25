@@ -843,10 +843,10 @@ function SozialesEntscheidenQuiz({
               </li>
               <li>
                 <strong>Gleiche Stufe zweimal:</strong> Zwei Überlegungen haben dieselbe
-                Wichtigkeitsstufe (z. B. beide 2); eine Stufe fehlt.
+                Wichtigkeitsstufe (z. B. beide 2); eine Stufe fehlt.
               </li>
               <li>
-                <strong>Nicht alle Stufen vergeben:</strong> Nur z. B. Stufe 1 und 4 vergeben,
+                <strong>Nicht alle Stufen vergeben:</strong> Nur z. B. Stufe 1 und 4 vergeben,
                 Stufen 2, 3 und 5 fehlen.
               </li>
             </ul>

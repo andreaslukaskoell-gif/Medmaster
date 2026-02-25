@@ -416,6 +416,17 @@ select:focus {
   text-align: center;
 }
 
+/* Prose: Bilder und SVGs überlappen nicht, responsive */
+.prose img,
+.prose svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.prose figure {
+  margin: var(--space-block) 0;
+}
+
 /* Micro-Interactions: subtile Hover, 100–200ms */
 .sidebar-nav-item,
 .btn-interactive,
