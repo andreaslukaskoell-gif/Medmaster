@@ -17,6 +17,8 @@ const SUBJECT_LABELS: Record<string, string> = {
 
 export { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
+const CMD_PALETTE_HINT_KEY = "medmaster-cmd-palette-hint-seen";
+
 export type SearchItem =
   | { type: "chapter"; kapitel: Kapitel }
   | { type: "unterkapitel"; kapitel: Kapitel; unterkapitel: Unterkapitel; index: number };
@@ -62,6 +64,10 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [showKeyboardHint, setShowKeyboardHint] = useState(() => {
+    if (typeof localStorage === "undefined") return false;
+    return !localStorage.getItem(CMD_PALETTE_HINT_KEY);
+  });
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const { completedChapters, streak } = useStore();
@@ -104,7 +110,6 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
 
   useEffect(() => {
     if (!open) return;
-    // Defer reset to avoid synchronous setState in effect (react-hooks/set-state-in-effect)
     const t = setTimeout(() => {
       setQuery("");
       setSelectedIndex(0);
@@ -115,6 +120,13 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
       clearTimeout(t2);
     };
   }, [open]);
+
+  useEffect(() => {
+    if (!open && showKeyboardHint && typeof localStorage !== "undefined") {
+      localStorage.setItem(CMD_PALETTE_HINT_KEY, "1");
+      setShowKeyboardHint(false);
+    }
+  }, [open, showKeyboardHint]);
 
   useEffect(() => {
     const el = listRef.current;
@@ -224,12 +236,23 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
             )}
           </div>
 
-          <div className="px-4 py-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-            <span>↑↓ Auswählen · Enter öffnen</span>
-            <span className="flex items-center gap-1.5">
-              <Flame className="w-3.5 h-3.5 text-orange-500" />
-              {streak} Tage Streak
-            </span>
+          <div className="px-4 py-2 border-t border-slate-100 dark:border-slate-800 space-y-1">
+            {showKeyboardHint && (
+              <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                Tipp: Mit{" "}
+                <kbd className="px-1 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-mono">
+                  ⌘K
+                </kbd>{" "}
+                (Strg+K) öffnest du die Suche jederzeit.
+              </p>
+            )}
+            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <span>↑↓ Auswählen · Enter öffnen</span>
+              <span className="flex items-center gap-1.5">
+                <Flame className="w-3.5 h-3.5 text-orange-500" />
+                {streak} Tage Streak
+              </span>
+            </div>
           </div>
         </motion.div>
       </motion.div>
