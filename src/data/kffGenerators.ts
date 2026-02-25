@@ -4,12 +4,18 @@
 // ============================================================
 
 import type { ImplikationTask } from "@/data/kffImplikationen";
-import { OFFICIAL_IMPLICATION_EXAMPLES, validateImplikationTask } from "@/data/kffImplikationen";
+import {
+  OFFICIAL_IMPLICATION_EXAMPLES,
+  validateImplikationTask,
+  hasVisualSolutionForImplikationTask,
+} from "@/data/kffImplikationen";
 import type { WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { OFFICIAL_WF_EXAMPLES } from "@/data/kffWortfluessigkeitMedAT";
 import type { AllergyPass, GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
 
-// --- ZAHLENFOLGEN-GENERATOR ---
+// --- ZAHLENFOLGEN-GENERATOR (Legacy: 7 Zahlen + Paar-Optionen) ---
+// HINWEIS: Für MedAT-Training (KFF) wird kffZahlenfolgenMedAT.generateSequenceTask verwendet
+// (OFFICIAL_ZF_EXAMPLES unantastbar; Training nur aus definierten Regelklassen + validierten Bereichen).
 
 export interface ZahlenfolgeGenerated {
   id: string;
@@ -1493,7 +1499,8 @@ export function generateWortflüssigkeitSet(
 
 // --- WORTFLÜSSIGKEIT MEDAT: Offizielle vs. Training (strikt getrennt) ---
 
-/** Nur für Training: deutsche Hauptwörter ohne Ä/Ö/Ü/ß, nicht in OFFICIAL_WF_EXAMPLES. */
+/** Nur für Training: deutsche Hauptwörter ohne Ä/Ö/Ü/ß, nicht in OFFICIAL_WF_EXAMPLES.
+ * Buchstabenmenge = Lösungswort; Optionen nur Buchstaben aus dem Wort oder "-". */
 const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
   1: [
     "HAUS",
@@ -2459,6 +2466,7 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     };
 
     if (!validateImplikationTask(task)) continue;
+    if (!hasVisualSolutionForImplikationTask(task)) continue;
     if (assertNotOfficialLike(task)) return task;
   }
 
@@ -2496,7 +2504,7 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
       difficulty,
       rulesApplied: [3],
     };
-    if (validateImplikationTask(task)) return task;
+    if (validateImplikationTask(task) && hasVisualSolutionForImplikationTask(task)) return task;
   }
   const tripel = TRAINING_TERM_TRIPELS[0];
   const [s, m, p] = tripel;

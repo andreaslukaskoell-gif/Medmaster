@@ -61,6 +61,8 @@ Das **Coulombsche Gesetz** beschreibt die Kraft zwischen zwei ruhenden Punktladu
 
 Dabei ist k = 1/(4πε₀) = 8,99 × 10⁹ N·m²/C² die Coulombkonstante und ε₀ = 8,854 × 10⁻¹² C²/(N·m²) die elektrische Feldkonstante (Permittivität des Vakuums). Die Kraft wirkt entlang der Verbindungslinie der beiden Ladungen. In einem Medium mit relativer Permittivität εᵣ reduziert sich die Kraft: F = k · |q₁ · q₂| / (εᵣ · r²). Wasser hat εᵣ ≈ 80 — elektrostatische Kräfte zwischen Ionen sind in wässriger Lösung ca. 80-mal schwächer als im Vakuum, was die Dissoziation von Salzen erklärt.
 
+**Formelklartext:** F = k·|q₁·q₂|/r² heißt: Die **Kraft** ist proportional zum **Produkt der Ladungen** und **umgekehrt proportional zum Quadrat des Abstands**. Doppelter Abstand → Kraft auf **¼**; halber Abstand → Kraft **vierfach**. Im Medium (εᵣ > 1) wird F **geteilt** durch εᵣ — nicht multipliziert. **Einheiten:** [F] = N, [q] = C, [r] = m → k in N·m²/C² ✓.
+
 Die strukturelle Analogie zum Gravitationsgesetz (F = G·m₁·m₂/r²) ist augenfällig: beide gehorchen dem **inversen Quadratgesetz**. Der entscheidende Unterschied: Die Coulombkraft kann repulsiv oder attraktiv sein, die Gravitation ist immer attraktiv. Und: Die Coulombkraft ist ca. 10³⁶-mal stärker als die Gravitation — weshalb elektromagnetische Wechselwirkungen Chemie und Biologie auf molekularer Ebene dominieren.
 
 ## Das elektrische Feld
@@ -69,13 +71,19 @@ Das **elektrische Feld E** ist eine Vektorgröße, die jedem Raumpunkt die Kraft
 
 **E = F / q₀** [N/C = V/m]
 
+**Formelklartext:** E = F/q₀ bedeutet: **Feldstärke** = **Kraft auf eine Probeladung** geteilt durch deren Ladung. Je stärker das Feld, desto größer die Kraft auf eine gegebene Ladung (F = q·E). **Plattenkondensator:** E = U/d — bei homogener Spannung U und Abstand d ist das Feld konstant. **Einheiten:** [E] = N/C = V/m. **Nicht verwechseln:** U [V] = Potentialdifferenz (Skalar); E [V/m] = Feldstärke (Vektor).
+
 Eine positive Probeladung q₀ erfährt in einem Feld E die Kraft F = q₀ · E. **Elektrische Feldlinien** verlaufen von positiven zu negativen Ladungen; ihre Dichte ist ein Maß für die Feldstärke. Auf leitenden Oberflächen stehen Feldlinien immer senkrecht. Das Innere eines Leiters ist feldfrei (Faradayscher Käfig).
 
 Das Feld einer Punktladung Q: **E = k · Q / r²** (radiales Feld, nimmt mit r² ab). In einem **Plattenkondensator** (Plattenabstand d, Spannung U) ist das Feld homogen: **E = U / d**. Homogene Felder eignen sich ideal für Experimente und technische Anwendungen. Die Gelelektrophorese nutzt ein homogenes elektrisches Feld, um DNA-Fragmente oder Proteine nach Größe und Ladung zu trennen.
 
 ## Elektrisches Potential und Spannung
 
-Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q. Die **elektrische Spannung U** zwischen zwei Punkten ist die **Potentialdifferenz**: **U = Δφ = φ₂ − φ₁** (wobei φ₂ das Potential am Punkt mit dem Pluspol des Voltmeters, φ₁ am Minuspol). Einheit: **Volt = J/C** (1 V = 1 J/C). **Vorzeichen:** Wird der Plus-Eingang des Voltmeters an die Klemme mit höherem Potential angeschlossen, zeigt die Spannung positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an Klemme 2, Minus an Klemme 1 → U = φ₂ − φ₁ = (+7) − (−3) = **+10 V** (bzw. +10 J/C). Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung.
+Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q. Die **elektrische Spannung U** zwischen zwei Punkten ist die **Potentialdifferenz**: **U = Δφ = φ₂ − φ₁** (wobei φ₂ das Potential am Punkt mit dem Pluspol des Voltmeters, φ₁ am Minuspol). Einheit: **Volt = J/C** (1 V = 1 J/C).
+
+**Formelklartext:** U = φ₂ − φ₁ bedeutet: **Spannung** ist die **Differenz** der Potentiale („Potentialgefälle“). Sie treibt den Ladungsfluss an: positive Ladungen fließen von **hohem** zu **niedrigem** Potential. **Vorzeichen:** Voltmeter-Plus an die Klemme mit **höherem** Potential → Anzeige positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an 2, Minus an 1 → U = (+7) − (−3) = **+10 V**. **Einheiten:** [U] = V = J/C.
+
+**Vorzeichen:** Wird der Plus-Eingang des Voltmeters an die Klemme mit höherem Potential angeschlossen, zeigt die Spannung positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an Klemme 2, Minus an Klemme 1 → U = φ₂ − φ₁ = (+7) − (−3) = **+10 V** (bzw. +10 J/C). Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung.
 
 **Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.
 
@@ -86,7 +94,11 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
 **Erklärung zur Grafik:** Elektrische Feldstärke und Kraft sind Vektoren; die Grafik veranschaulicht Richtung und Überlagerung von Feldern (z. B. bei Punktladungen und im Plattenkondensator).
 
 **Kondensator und Energiespeicherung:**
-Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrischen Feld: **C = Q/U** [Farad] und **W = ½·C·U²**. Die Kapazität steigt mit der Plattenfläche und der Permittivität des Dielektrikums und sinkt mit dem Plattenabstand: C = ε₀·εᵣ·A/d. In der Medizin ist der Defibrillator ein Kondensator-Entlader: C ≈ 200 µF, geladen auf ~1500 V, liefert W ≈ 225 J in Millisekunden.
+Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrischen Feld: **C = Q/U** [Farad] und **W = ½·C·U²**. Die Kapazität steigt mit der Plattenfläche und der Permittivität des Dielektrikums und sinkt mit dem Plattenabstand: C = ε₀·εᵣ·A/d.
+
+**Formelklartext:** **C = Q/U** — die **Kapazität** gibt an, wie viel Ladung pro Volt Spannung gespeichert wird; [C] = F = C/V. **W = ½·C·U²** — die gespeicherte **Energie** wächst mit dem Quadrat der Spannung; doppelte Spannung → **vierfache** Energie. **E = U/d** im Plattenkondensator: gleiche U, kleinerer Abstand d → stärkeres Feld E. **Einheiten:** W in J, C in F, U in V → ½·F·V² = J ✓.
+
+In der Medizin ist der Defibrillator ein Kondensator-Entlader: C ≈ 200 µF, geladen auf ~1500 V, liefert W ≈ 225 J in Millisekunden.
 
 ## Rechenbeispiele
 
@@ -111,7 +123,7 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 **Zentral prüfungsrelevant:** Coulombkraft F ~ 1/r², elektrische Ladung (e, C), Feldstärke E = F/q, **Spannung U = Δφ = φ₂ − φ₁**, **Volt = J/C**; Vorzeichen bei Voltmeter (Plus an höherem Potential → positive Anzeige); Kondensator (Q = C·U).
 
-**Ergänzend vertiefend:** Dipol; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Dipol. Typische Fallen: U = φ₂−φ₁; Coulomb F ∝ 1/r² (doppelter Abstand → ¼ Kraft); Spannung [V] ≠ Feldstärke E [V/m]; εᵣ im Nenner (F/εᵣ).
 
 **Häufige Fragen:**
 - "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
@@ -121,9 +133,11 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Spannung U = φ₂ − φ₁**; 1 V = 1 J/C; Pluspol an Klemme mit höherem Potential → positive Anzeige (z. B. −3 V und +7 V → U = +10 V).
-- Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator)
-- Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft hingegen senkrecht zur Bewegungsrichtung
-- Im Medium erscheint εᵣ im Nenner (Kraft wird geschwächt), nicht im Zähler
+- **Coulomb:** Doppelter Abstand r → Kraft auf **¼** (F ∝ 1/r²). Halber Abstand → **vierfache** Kraft. Nicht „halbe Kraft“ bei doppeltem Abstand!
+- Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator).
+- Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft (Magnetfeld) senkrecht zur Bewegungsrichtung.
+- Im Medium erscheint εᵣ **im Nenner** (Kraft wird geschwächt: F/εᵣ), nicht im Zähler. Wasser εᵣ ≈ 80 → Kraft 80× kleiner.
+- **Kondensator:** W = ½·C·U² — doppelte Spannung → **vierfache** gespeicherte Energie (nicht doppelt).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Elementarladung: e = 1,602 × 10⁻¹⁹ C
@@ -346,6 +360,8 @@ Der **elektrische Widerstand R** gibt an, wie stark ein Leiter dem Stromfluss en
 
 **U = R · I** [V = Ω · A]
 
+**Formelklartext:** U = R·I heißt: **Spannung** = **Widerstand** × **Stromstärke**. Bei konstantem R: doppelte Spannung → doppelter Strom. **R = ρ·L/A** heißt: Widerstand wächst mit der **Länge** L und sinkt mit dem **Querschnitt** A (R ∝ L, R ∝ 1/A). Doppelte Länge → doppelter R; doppelter Durchmesser → **vierfacher** Querschnitt → R auf **¼**. **Einheiten:** [U] = V, [R] = Ω, [I] = A; [ρ] = Ω·m.
+
 Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verdoppelt sich I proportional.
 
 ![Ohmsches Gesetz (linear)](/grafik-lineare-funktion.svg)
@@ -370,6 +386,8 @@ Für die meisten Metalle steigt der Widerstand mit der Temperatur: **R(T) = R₀
 Die elektrische Leistung:
 
 **P = U · I = I² · R = U² / R** [W]
+
+**Formelklartext:** P = U·I = **Leistung** (Energie pro Zeit) im Stromkreis. Äquivalent: P = I²·R (wenn I und R bekannt) oder P = U²/R (wenn U und R bekannt). **Joulesche Wärme** Q = P·t = I²·R·t — der Widerstand erwärmt sich. **Einheiten:** [P] = W = J/s = V·A. **MedAT-Falle:** Gefährlich ist die **Stromstärke** (ab ~100 mA Kammerflimmern), nicht allein die Spannung; I = U/R — nasse Haut (R klein) → großer I bei gleicher U.
 
 Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²·R. Dieser Effekt wird genutzt in Heizkörpern und Glühlampen — und ist in medizinischen Anwendungen relevant: Elektrochirurgie (HF-Strom → lokale Wärme → Gewebeschnitt/Koagulation), Ablationstherapie bei Herzrhythmusstörungen, Diathermie.
 
@@ -416,7 +434,7 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 **Zentral prüfungsrelevant:** Ohm U = R·I, **Widerstand R = ρ·l/A** (R ∝ L, R ∝ 1/A); bei gleichem Material: doppelte Länge → doppelter R, doppelter Durchmesser → A vervierfacht → R auf 1/4; Beispiel 100 m/1 mm vs. 50 m/2 mm → R₁:R₂ = 8. Stromgefahr (ab ~100 mA Kammerflimmern), Leistung P = U·I, Reihen-/Parallelschaltung (R_seriell = R₁+R₂, 1/R_parallel = 1/R₁+1/R₂).
 
-**Ergänzend vertiefend:** Kirchhoff; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kirchhoff. Typische Fallen: 230 V Effektivwert → Amplitude ≈ 325 V; P = U·I = I²R = U²/R; Metalle R↑ mit T, NTC R↓ mit T; Leitwert G = 1/R.
 
 **Häufige Fragen:**
 - "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
@@ -719,7 +737,7 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 
 **Zentral prüfungsrelevant:** Reihenschaltung (R_ges = R₁+R₂, gleicher I), Parallelschaltung (1/R_ges = 1/R₁+1/R₂, gleiche U), Spannungsteiler, Stromteiler, Anwendung (Messgeräte).
 
-**Ergänzend vertiefend:** Kapazität in Reihe/Parallel; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kapazität in Reihe/Parallel. Typische Fallen: Kondensatoren Reihe 1/C_ges = 1/C₁+1/C₂ (umgekehrt zu R); parallel C_ges = C₁+C₂; nach 1τ etwa 63 % geladen; Knotenregel = Ladung, Maschenregel = Energie.
 
 **Häufige Fragen:**
 - "Wie berechnet man den Gesamtwiderstand bei Parallelschaltung?" → 1/R_ges = 1/R₁ + 1/R₂ + ... (immer kleiner als kleinster Einzelwert)
@@ -994,7 +1012,7 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 **Zentral prüfungsrelevant:** Magnetfeld B, Lorentzkraft (F = q·v·B senkrecht), Larmor-Frequenz f_L = γ·B (MRT: 42,58 MHz/T), Kernspin, Anwendung MRT (Radiowellen, 1,5 T ≈ 64 MHz).
 
-**Ergänzend vertiefend:** T1/T2-Kontrast; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** T1/T2-Kontrast. Typische Fallen: Lorentz-Kraft verrichtet keine Arbeit (senkrecht zu v); Faraday ε ∝ dΦ/dt (konstantes B induziert nichts); MRT-Signal von ¹H (Wasser); B [T] ≠ E [V/m].
 
 **Häufige Fragen:**
 - "Welche Frequenz hat das MRT-Anregungssignal bei 1,5 T?" → f_L = 42,58 × 1,5 ≈ 64 MHz (Radiowellenbereich)
@@ -1225,6 +1243,8 @@ Trifft Licht schräg auf die Grenzfläche zwischen zwei optisch unterschiedliche
 
 > **n₁ · sin α₁ = n₂ · sin α₂**
 
+**Formelklartext:** n₁·sin α₁ = n₂·sin α₂ bedeutet: Das **Produkt aus Brechungsindex und Sinus des Winkels** ist auf beiden Seiten der Grenzfläche gleich. **Übergang in dichteres Medium** (n₂ > n₁, z. B. Luft → Wasser): sin α₂ = (n₁/n₂)·sin α₁ < sin α₁ → **α₂ < α₁** — der Strahl bricht **zum Lot hin**. **Übergang in dünneres Medium** (n₂ < n₁): Strahl bricht **vom Lot weg**. **Totalreflexion:** Wenn n₁ > n₂ und α₁ so groß, dass sin α₂ = 1 würde → ab **Grenzwinkel** sin α_grenz = n₂/n₁ wird alles reflektiert. **Einheiten:** n dimensionslos; Winkel in Grad oder Radiant (einheitlich verwenden).
+
 Der **Brechungsindex n** ist ein dimensionsloses Maß für die optische Dichte eines Mediums:
 - n_Vakuum = 1 (exakt)
 - n_Luft ≈ 1,0003 ≈ 1
@@ -1267,6 +1287,8 @@ Die **Linsengleichung** (Abbildungsgleichung) verknüpft Brennweite f, Gegenstan
 
 > **1/f = 1/g + 1/b**
 
+**Formelklartext:** 1/f = 1/g + 1/b heißt: **Kehrwert der Brennweite** = **Summe der Kehrwerte** von Gegenstandsweite und Bildweite. Kennt man f und g, folgt 1/b = 1/f − 1/g → b = 1/(1/f − 1/g). **Sammellinse (f > 0):** reelles Bild für g > f; **Zerstreuungslinse (f < 0):** nur virtuelles Bild. **Brechkraft** D = 1/f [dpt], wenn f in **Metern**: f = 0,2 m → D = 5 dpt. **Einheiten:** f, g, b in m (oder einheitlich cm); D in dpt = 1/m.
+
 Der **Abbildungsmaßstab** ist m = b/g = Bildgröße/Gegenstandsgröße.
 
 Die **Brechkraft D** in **Dioptrien (dpt)** ist der Kehrwert der in Metern gemessenen Brennweite:
@@ -1304,7 +1326,7 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 **Zentral prüfungsrelevant:** Brechung (Snellius n₁·sin α = n₂·sin β), Brechzahl n, Totalreflexion (sin α_G = n₂/n₁), Grenzwinkel, **Dispersion = wellenlängenabhängige Brechung** (Regenbogen: Auffächerung durch Brechung in Tropfen, nicht durch Streuung/Beugung/Totalreflexion/Absorption), Anwendung (Lichtleiter, Endoskopie).
 
-**Ergänzend vertiefend:** Dispersion; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Dispersion. Typische Fallen: Dispersion = n(λ), wellenlängenabhängige Brechung (nicht Totalreflexion/Beugung); Totalreflexion nur n₁ > n₂; Winkel gegen Lot; b > 0 reelles Bild, b < 0 virtuelles Bild.
 
 **Häufige Fragen:**
 - "Was ist der Grenzwinkel für Totalreflexion bei Glas (n=1,5) → Luft (n=1)?" → sin α_G = 1/1,5 → α_G ≈ 41,8°
@@ -1608,7 +1630,7 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 **Zentral prüfungsrelevant:** Auflösungsgrenze d_min ≈ λ/(2·NA), numerische Apertur NA, Beugungsbegrenzung, Vergrößerung vs. Auflösung, Mikroskop (Objektiv, Okular).
 
-**Ergänzend vertiefend:** Auflösung Auge; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Auflösung Auge. Typische Fallen: konstruktiv Δ = nλ, destruktiv (n+½)λ; Beugung stärker bei längerer λ; OCT = Interferenz (axiale Auflösung), nicht Beugung.
 
 **Häufige Fragen:**
 - "Was ist die Auflösungsgrenze eines Mikroskops mit NA = 1,3 bei λ = 520 nm?" → d_min = 520/(2·1,3) = 200 nm
@@ -1904,7 +1926,7 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 **Zentral prüfungsrelevant:** Linse (Brennweite f, Brechkraft D = 1/f in dpt), **Lupe: Sammellinse als Lupe → Gegenstand innerhalb der einfachen Brennweite** (g < f); Vergrößerung M = 25 cm/f; Abbildungsgleichung 1/f = 1/g + 1/b, reelles/virtuelles Bild.
 
-**Ergänzend vertiefend:** Linsenfehler; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Linsenfehler. Typische Fallen: Lupe Gegenstand innerhalb f (g < f); M = S/f (S = 25 cm); Mikroskop M_ges = M_ob×M_ok (Produkt); Teleskop M = f_ob/f_ok.
 
 **Häufige Fragen:**
 - "Welche Vergrößerung hat eine Lupe mit f = 5 cm?" → M = 25/5 = 5-fach
@@ -2211,7 +2233,7 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 
 **Zentral prüfungsrelevant:** Auge (Akkommodation, Nahpunkt), Myopie (Auge zu lang → Zerstreuungslinse, negativ D), Hyperopie (Sammellinse), Presbyopie (Alterssichtigkeit), Brechkraft in dpt.
 
-**Ergänzend vertiefend:** Astigmatismus; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Astigmatismus. Typische Fallen: Myopie (Auge zu lang) → Zerstreuungslinse (−dpt); Hyperopie (zu kurz) → Sammellinse (+dpt); Presbyopie ≠ Hyperopie (andere Ursache); Akkommodation: Ziliarmuskel kontrahiert → Linse wölbt sich.
 
 **Häufige Fragen:**
 - "Welche Brille korrigiert Myopie?" → Zerstreuungslinse (negatives D); Myopie = Auge zu lang

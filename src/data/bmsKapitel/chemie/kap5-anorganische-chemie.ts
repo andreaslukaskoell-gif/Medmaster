@@ -137,7 +137,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 - **Hydratation:** Ion-Dipol (Na⁺, Cl⁻); Wasser **amphoter** (Säure oder Base je nach Partner)
 - Wärmekapazität 4182 J/(kg·K); Verdampfungsenthalpie ~2430 kJ/kg bei 37 °C (Schweiß)
 
-**Ergänzend vertiefend:** London-Kräfte; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** London-Kräfte. Typische Fallen: Neutral ≠ immer pH 7 (37 °C ≈ 6,8); K_w temperaturabhängig; hydrophober Effekt entropisch; CO₂ apolar, Wasser polar.
 
 **Häufige Prüfungsfragen:**
 - "Warum Siedepunkt 100 °C?" → H-Brücken-Netzwerk; H₂S −60 °C
@@ -501,7 +501,7 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 - **Acetyl-CoA:** aus **Glykolyse** (Pyruvat → PDH) und **β-Oxidation** → Zitratzyklus (Acetyl + Oxalacetat → Citrat)
 - **Carboanhydrase:** kcat ~10⁶ s⁻¹; **Cyanid** hemmt Komplex IV (Atmungskette)
 
-**Ergänzend vertiefend:** VSEPR, Katenation; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** VSEPR, Katenation. Typische Fallen: CO₂ apolar trotz polarer Bindungen; CO ≠ CO₂; Diamant Isolator, Graphit Leiter; Carboanhydrase katalysiert Hydratation, nicht Puffer.
 
 **Häufige Prüfungsfragen:**
 - "Diamant vs. Graphit?" → Diamant sp³, Isolator; Graphit sp², Leiter
@@ -823,7 +823,7 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 - **T₃** (3 I, aktiv) vs. **T₄** (4 I, Prohormon); Hypothyreose TSH↑, Hyperthyreose TSH↓
 - **Königswasser:** 3 HCl + 1 HNO₃ → löst Au, Pt; konz. HNO₃ → NO₂ (braun), verd. → NO
 
-**Ergänzend vertiefend:** Kontaktverfahren H₂SO₄; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kontaktverfahren H₂SO₄. Typische Fallen: Halogene F₂ > Cl₂ > Br₂ > I₂ (abnehmend); NO ≠ NO₂; konz. HNO₃ → NO₂, verd. → NO; Hypothyreose TSH↑, Hyperthyreose TSH↓.
 
 **Häufige Prüfungsfragen:**
 - "Haber-Bosch Kompromiss?" → Exotherm + Δn&lt;0; niedrige T gut für K, aber langsam → 400–500 °C + hoher Druck + Katalysator
@@ -1595,7 +1595,7 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
 - **Salz-Hydrolyse:** schwache Säure + starke Base → basisch (CH₃COONa); starke Säure + schwache Base → sauer (NH₄Cl)
 - **NH₄⁺** pKa = 9,25 (NH₃ pKb = 4,75); Essigsäure pKa = 4,75
 
-**Ergänzend vertiefend:** Dissoziationsgrad α (steigt bei Verdünnung); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Dissoziationsgrad α (steigt bei Verdünnung). Typische Fallen: Kleiner pKa = stärkere Säure; Konzentration ≠ Stärke; α steigt bei Verdünnung; H₂CO₃ im Blut pKa eff. 6,1 (nicht 6,35).
 
 **Häufige Prüfungsfragen:**
 - "pH schwache Säure?" → pH = ½(pKa − log c₀)
@@ -2687,7 +2687,7 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 - **Disproportionierung:** gleiches Element gleichzeitig oxidiert und reduziert (2H₂O₂ → 2H₂O + O₂)
 - **KMnO₄:** Mn +7 → +2 (sauer, 5e⁻), +4 (neutral), +6 (basisch); NADH/FADH₂ = biologische Reduktionsmittel
 
-**Ergänzend vertiefend:** Komproportionierung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Komproportionierung. Typische Fallen: Schwach/stark titriert → ÄP basisch (nicht pH 7); Halbäquivalenz [HA]=[A⁻] → pH=pKa ≠ Äquivalenz; metabolische Azidose → Kompensation Hyperventilation.
 
 **Häufige Prüfungsfragen:**
 - "OIL RIG?" → Oxidation Is Loss (e⁻ ab), Reduction Is Gain (e⁻ auf)
@@ -3041,7 +3041,7 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
 - **Elektrolyse:** m = M·I·t/(n·F); Salzbrücke = Ionentransfer (Ladungsausgleich)
 - Höheres E° = stärkeres Oxidationsmittel; Spannungsreihe F₂ &gt; … &gt; Zn &gt; Li
 
-**Ergänzend vertiefend:** Blei-Akku, Brennstoffzelle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Blei-Akku, Brennstoffzelle. Typische Fallen: Oxidationsmittel wird reduziert (nicht oxidiert); OZ O in Peroxiden −1, H in Hydriden −1; KMnO₄ je nach Medium +2/+4/+6.
 
 **Häufige Prüfungsfragen:**
 - "AnOx RedKat?" → Anode Oxidation, Kathode Reduktion
@@ -3380,7 +3380,7 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
 - **Nernst-Potenzial:** E_Ion = (RT/zF)·ln([außen]/[innen]); **K⁺** ≈ −90 mV, **Na⁺** ≈ +62 mV
 - **Ruhemembranpotenzial** ≈ −70 mV (zwischen E_K und E_Na, Goldman)
 
-**Ergänzend vertiefend:** Konzentrationszelle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konzentrationszelle. Typische Fallen: Nernst mit Minuszeichen; hohes [Ox] → E größer (nicht kleiner); Ruhemembran zwischen E_K und E_Na; 37 °C: 61,5 mV.
 
 **Häufige Prüfungsfragen:**
 - "Nernst-Gleichung?" → E = E° − (0,05916/n)·log Q
@@ -3695,7 +3695,7 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 - **G6PD-Mangel:** X-chromosomal → NADPH↓ → GSH↓ → hämolytische Anämie bei Oxidantien (Primaquin, Favabohnen)
 - **Vitamin E** (Membran) + **Vitamin C** (regeneriert Vit. E); H₂O₂ als Signalmolekül (niedrige Konz.)
 
-**Ergänzend vertiefend:** Katalase (peroxisomal, hohe Umsatzzahl); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Katalase (peroxisomal, hohe Umsatzzahl). Typische Fallen: SOD liefert H₂O₂ (nicht H₂O); GSSG→2GSH durch Glutathion-Reduktase (nicht Katalase); G6PD X-chromosomal; Vit. E fettlöslich, Vit. C wasserlöslich.
 
 **Häufige Prüfungsfragen:**
 - "Fenton-Produkt?" → ·OH (Hydroxyl-Radikal)

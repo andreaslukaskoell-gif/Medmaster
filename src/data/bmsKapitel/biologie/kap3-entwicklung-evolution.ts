@@ -108,7 +108,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
 - Spermatogenese (4 Gameten) vs. Oogenese (1 Gamet) — Ergebnis nicht verwechseln
 - Meiose-Arrest Prophase I (bis Pubertät/Ovulation) vs. Metaphase II (bis Befruchtung)
 
-**Prüfungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Spermatogenese: ~74 Tage; Oogenese: primäre Oozyten pränatal angelegt, Meiose II erst bei Befruchtung
 
 ---
@@ -130,7 +130,84 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
         "Spermatogenese: 1 Spermatogonium → Meiose I/II → 4 Spermien (n). Oogenese: 1 Oozyte → 1 Eizelle (n) + 3 Polkörperchen.",
         "Oogenese-Arrests: Prophase I (bis Ovulation), Metaphase II (bis Befruchtung).",
       ],
-      selfTest: [],
+      selfTest: [
+        {
+          question:
+            "Wie viele reife Spermien entstehen aus einem Spermatogonium über Meiose I und II?",
+          options: ["Eine", "Zwei", "Vier", "Acht", "Die Anzahl ist variabel"],
+          correctIndex: 2,
+          explanation:
+            "Aus einem Spermatogonium entstehen über Meiose I (2 Zellen) und Meiose II (je 2 aus jeder) insgesamt vier haploide Spermatiden, die zu vier reifen Spermien ausreifen. Bei der Oogenese entsteht dagegen nur eine Eizelle plus drei Polkörperchen.",
+          hints: ["Meiose: 1 → 2 → 4 haploide Zellen."],
+          difficulty: 1,
+          tags: ["spermatogenese", "meiose", "spermien"],
+        },
+        {
+          question:
+            "In welcher Phase der Meiose arretiert die menschliche Oozyte bis zur Ovulation?",
+          options: [
+            "Metaphase II",
+            "Anaphase I",
+            "Prophase I",
+            "Telophase II",
+            "Sie arretiert nicht",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die primäre Oozyte tritt pränatal in die Meiose I ein und arretiert in Prophase I bis zur Pubertät/Ovulation. Nach Abschluss von Meiose I arretiert die sekundäre Oozyte in Metaphase II bis zur Befruchtung.",
+          hints: ["Erster Arrest = bis Ovulation. Zweiter Arrest = bis Befruchtung."],
+          difficulty: 2,
+          tags: ["oogenese", "arrest", "prophase-i"],
+        },
+        {
+          question: "Was entsteht aus einer primären Oozyte nach Abschluss beider Meiose-Teile?",
+          options: [
+            "Vier befruchtungsfähige Eizellen",
+            "Zwei Eizellen und zwei Polkörperchen",
+            "Eine Eizelle und drei Polkörperchen",
+            "Eine Eizelle und ein Polkörperchen",
+            "Nur eine Eizelle ohne Polkörperchen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Oogenese ist asymmetrisch: Aus einer primären Oozyte entstehen bei Meiose I eine sekundäre Oozyte und ein erstes Polkörperchen, bei Meiose II eine reife Eizelle (n) und ein zweites Polkörperchen (das erste teilt sich oft noch). Insgesamt: 1 Eizelle + 3 Polkörperchen; nur die Eizelle ist befruchtungsfähig.",
+          hints: ["Asymmetrische Teilung — viel Zytoplasma bleibt in einer Zelle."],
+          difficulty: 1,
+          tags: ["oogenese", "eizelle", "polkörperchen"],
+        },
+        {
+          question: "Wo findet die Spermatogenese beim Menschen statt?",
+          options: [
+            "Im Nebenhoden",
+            "In den Tubuli seminiferi des Hodens",
+            "In der Prostata",
+            "Im Samenleiter",
+            "Im Ovar",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die Spermatogenese (Bildung der Spermien aus Spermatogonien über Meiose und Spermiogenese) findet in den Tubuli seminiferi (Samenkanälchen) des Hodens statt. Ab Pubertät läuft sie kontinuierlich ab.",
+          hints: ["Samenkanälchen = lateinisch Tubuli seminiferi."],
+          difficulty: 1,
+          tags: ["spermatogenese", "tubuli-seminiferi", "hoden"],
+        },
+        {
+          question: "Wann wird die Meiose II der Oozyte abgeschlossen?",
+          options: [
+            "Bei der Ovulation",
+            "Pränatal bei der Anlage der Follikel",
+            "Bei der Befruchtung (Fusion mit dem Spermium)",
+            "Nach der Einnistung im Uterus",
+            "Erst in der Menopause",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die sekundäre Oozyte verbleibt in Metaphase II bis zur Befruchtung. Erst wenn ein Spermium mit der Eizelle fusioniert, wird Meiose II abgeschlossen: Es entstehen die reife Eizelle (n) und das zweite Polkörperchen.",
+          hints: ["Zweiter Arrest = Metaphase II. Wann wird er aufgelöst?"],
+          difficulty: 2,
+          tags: ["oogenese", "meiose-ii", "befruchtung"],
+        },
+      ],
     },
     {
       id: "bio-4-01",
@@ -160,7 +237,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
 
 ## Ort und zeitliche Einordnung
 
-Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität) und ist lebensbedrohlich.
+**Um die Befruchtung einzuordnen,** betrachten wir zuerst **Ort** und **Zeitpunkt**. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität) und ist lebensbedrohlich.
 
 ---
 
@@ -224,7 +301,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 - Kapazitation (Reifung Spermium) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt)
 - Befruchtung (Ampulle) vs. Implantation (Uterus, Tag 6–7)
 
-**Prüfungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Kapazitation: ca. 7 Stunden im weiblichen Genitaltrakt
 - Befruchtung: in der Ampulle der Tuba uterina
 
@@ -405,7 +482,7 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 - Trophoblast (→ Plazenta, hCG) vs. Embryoblast (→ Embryo)
 - Furchung (Teilungen ohne Wachstum) vs. Wachstum (Zunahme der Gesamtmasse)
 
-**Prüfungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Implantation: Tag 6–7 post conceptionem
 - Blastozyste: Tag 5–6; Epiblast/Hypoblast ab Tag 8
 - hCG-Peak: 8.–12. SSW, danach Abfall
@@ -599,7 +676,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 - Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) — unterschiedliche Prozesse
 - Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
 
-**Prüfungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Gastrulation: Tag 15–21 (3. Woche)
 - 42–44 Somitenpaare (3.–5. Woche)
 - Notochord → Nuclei pulposi (einzige bleibende Struktur)
@@ -761,7 +838,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 3. **Neuralrohr:** Die Neuralwülste fusionieren in der Mittellinie — zunächst in der Mitte, dann nach kranial und kaudal fortschreitend. Es entsteht das **Neuralrohr** (ein schlauchförmiger Hohlraum). Das Neuralrohr ist die **Anlage von Gehirn und Rückenmark** (ZNS). Die Schließung erfolgt durch Verschmelzung der Wülste; die vorübergehend offenen Enden heißen **vorderer (anteriore) Neuroporus** (kranial) und **hinterer (posteriorer) Neuroporus** (kaudal).
 
-4. **Schließung der Neuroporen:** Der **anteriore Neuroporus** schließt etwa am **Tag 25**, der **posteriore Neuroporus** am **Tag 27**. Bleibt einer der Neuroporen offen, entsteht ein **Neuralrohrdefekt** (siehe unten).
+4. **Schließung der Neuroporen:** Der **anteriore Neuroporus** schließt etwa am **Tag 25**, der **posteriore Neuroporus** am **Tag 27**. Bleibt einer der Neuroporen offen, entsteht ein **Neuralrohrdefekt** (z. B. Spina bifida, Anenzephalie).
 
 > **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
 
@@ -822,7 +899,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
 - Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation)
 - Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
 
-**Prüfungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Anteriorer Neuroporus: Tag 25; posteriorer: Tag 27
 - Folsäure 0,4 mg/Tag präkonzeptionell: Risikosenkung Neuralrohrdefekt ~70 %
 
@@ -969,14 +1046,14 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), **kritische Phase 4.–8. Woche** (besonders anfällig für Teratogene). **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe.** Embryo in **Amnionhöhle** (Fruchtwasser). **Herz schlägt ab Woche 4** (Tag 22–23), Finger/Zehen Ende 8. Woche. Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene, Organogenese.
 
-**Ergänzend vertiefend:** Plazenta; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Plazenta.
 
 **Häufige Fragen:**
 - Wann endet die Embryonalperiode? (Nach Woche 8, alle Organe angelegt)
 - Was besagt das Alles-oder-Nichts-Prinzip? (Woche 1–2: Fruchttod oder normale Entwicklung)
 - Ab wann produzieren Typ-II-Pneumozyten Surfactant? (Ab Woche 24)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - **„Das Herz beginnt am Ende der 8. Woche zu schlagen“ ist FALSCH** — das Herz schlägt bereits in **Woche 4** (Tag 22–23). Am Ende der 8. Woche sind Finger und Zehen ausgebildet.
 - Embryonalperiode (Organogenese, Wochen 1–8) vs. Fetalperiode (Wachstum/Reifung, ab Woche 9)
 - Alles-oder-Nichts-Prinzip (nur Woche 1–2!) vs. kritische Perioden (ab Woche 3, organspezifisch)
@@ -984,7 +1061,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 - Viabilität (~Woche 22–24) vs. volle Lungenreife (Woche 35–37)
 - Teratogen (verursacht Fehlbildungen) vs. Mutagen (verursacht DNA-Schäden) — Überlappung möglich
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Herzschlag beginnt: Tag 22–23
 - SSL Ende Woche 8: ca. 3 cm, Gewicht ca. 3 g
 - Surfactant (DPPC): ab Woche 24 durch Typ-II-Pneumozyten
@@ -1199,21 +1276,21 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 **Zentral prüfungsrelevant:** Plazenta, Nabelvene (sauerstoffreiches Blut zum Fötus), Nabelarterien (verbrauchtes Blut zurück), Ductus venosus/arteriosus/ovale, IgG-Transfer (FcRn), fetale Kreislaufanpassungen.
 
-**Ergänzend vertiefend:** Shunt-Umstellung bei Geburt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Shunt-Umstellung bei Geburt.
 
 **Häufige Fragen:**
 - Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus)
 - Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren)
 - Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Nabelarterie (O₂-arm, VOM Kind) vs. Nabelvene (O₂-reich, ZUM Kind) — umgekehrt zur systemischen Konvention
 - Chorion frondosum (fetaler Anteil) vs. Decidua basalis (mütterlicher Anteil) — häufig vertauscht
 - Synzytiotrophoblast (mehrkernig, invasiv, hCG) vs. Zytotrophoblast (Stammzellschicht, Langhan-Zellen)
 - IgG (passiert Plazenta via Transzytose) vs. IgM, IgA, IgE (passieren die Plazenta NICHT)
 - Amnion (innere Membran, Fruchtwasser) vs. Chorion (äußere Membran, grenzt an Decidua)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Nabelschnur: 2 Arterien + 1 Vene (AVA), eingehüllt in Wharton-Sulze
 - Plazentaoberfläche (Chorionzotten): ca. 10–14 m² am Termin
 - Fruchtwassermenge am Termin: ca. 800 ml
@@ -1437,21 +1514,21 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 **Zentral prüfungsrelevant:** Ursprung des Lebens (Miller-Urey: abiotische Aminosäure-Synthese), RNA-Welt-Hypothese (RNA als Katalysator + Speicher), chemische Evolution, erste Zellen.
 
-**Ergänzend vertiefend:** Endosymbiontentheorie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Endosymbiontentheorie.
 
 **Häufige Fragen:**
 - Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen)
 - Warum löst die RNA-Welt-Hypothese das Henne-Ei-Problem? (RNA speichert Information UND katalysiert)
 - Nennen Sie drei Belege für die Endosymbiontentheorie (eigenes Genom, 70S-Ribosomen, Doppelmembran)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Miller-Urey bewies NICHT die Entstehung von Leben, sondern die abiotische Synthese organischer Moleküle
 - 70S-Ribosomen (Mitochondrien, Bakterien) vs. 80S-Ribosomen (eukaryotisches Zytoplasma)
 - RNA-Welt (RNA als erstes Molekül) vs. Panspermie (Leben aus dem Weltall) — verschiedene Konzepte
 - Endosymbiose betrifft Mitochondrien + Chloroplasten, NICHT den Zellkern oder das ER
 - Mitochondriale DNA: ringförmig, ohne Histone, maternal vererbt — nicht mit nukleärer DNA verwechseln
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Miller-Urey: 1953; Ausgangsstoffe CH₄, NH₃, H₂, H₂O + elektrische Entladungen
 - Erste Lebensformen: ca. 3,8 Milliarden Jahre alt (Prokaryoten)
 - Lynn Margulis: Endosymbiontentheorie erstmals 1967 publiziert
@@ -1677,21 +1754,21 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 **Zentral prüfungsrelevant:** Homologie (gemeinsamer Ursprung) vs. Analogie (konvergente Evolution), Clade (monophyletische Gruppe), phylogenetischer Baum, Synapomorphie, Konvergenz.
 
-**Ergänzend vertiefend:** Paraphylie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Paraphylie.
 
 **Häufige Fragen:**
 - Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution)
 - Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen)
 - Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion)
 - Vogelflügel + Menschenarm = homolog (Wirbeltier-Vorderextremität); Vogelflügel + Insektenflügel = analog
 - Monophyletisch (Clade: Vorfahre + ALLE Nachkommen) vs. paraphyletisch (nicht alle Nachkommen eingeschlossen)
 - Synapomorphie (gemeinsames abgeleitetes Merkmal, für Cladistik relevant) vs. Symplesiomorphie (gemeinsames primitives Merkmal)
 - 16S-rRNA (Bakterien-Phylogenie) vs. Cytochrom c (vergleichende Phylogenie bei Eukaryoten)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Divergenz Mensch/Schimpanse: ca. 6–7 Millionen Jahre
 - 16S-rRNA: Standardmarker für bakterielle Phylogenie (Carl Woese → Entdeckung der Archaea)
 - Cytochrom c: hochkonserviertes Protein für Verwandtschaftsanalysen
@@ -1923,7 +2000,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 **Zentral prüfungsrelevant:** Natürliche Selektion (Variation, Erblichkeit, Überproduktion, differentielle Reproduktion), Fitness (reproduktiver Erfolg), Adaptation, Selektionsdruck.
 
-**Ergänzend vertiefend:** Sexuelle Selektion; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Sexuelle Selektion.
 
 **Häufige Fragen:**
 - Was sind Darwins vier Voraussetzungen für natürliche Selektion? (Variation, Erblichkeit, Überproduktion, Differentialreproduktion)
@@ -1936,14 +2013,14 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 | Gerichtet | Mittelwert verschiebt sich | Ein Extrem | Antibiotikaresistenz (MRSA) |
 | Disruptiv | Verteilung spaltet sich | Beide Extreme | Schnabelgröße (2 Nischen) |
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Fitness = reproduktiver Erfolg, NICHT physische Kraft oder Überlebensrate
 - Stabilisierende Selektion (Mittelwert bleibt) vs. gerichtete Selektion (Mittelwert verschiebt sich) vs. disruptive Selektion (Extreme bevorzugt)
 - Intrasexuelle Selektion (Konkurrenz innerhalb eines Geschlechts) vs. intersexuelle Selektion (Partnerwahl durch das andere Geschlecht)
 - Darwin (natürliche Selektion, 1859) vs. Lamarck (Vererbung erworbener Eigenschaften — widerlegt)
 - Inklusive Fitness (Hamilton, Kin Selection) vs. direkte Fitness (eigene Nachkommen)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Darwin: "On the Origin of Species" (1859)
 - Synthetische Theorie: 1930–1950er (Fisher, Dobzhansky, Mayr)
 - Evolution = Veränderung der Allelfrequenzen in einer Population
@@ -2167,7 +2244,7 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 **Zentral prüfungsrelevant:** Biologischer Artbegriff (Reproduktionsgemeinschaft, reproduktive Isolation), prä-/postzygotische Isolation (Maultier: Hybridsterilität), Artbildung (allopatrisch, sympatrisch).
 
-**Ergänzend vertiefend:** Ringarten; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Ringarten.
 
 **Häufige Fragen:**
 - Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation)
@@ -2182,14 +2259,14 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 | Häufigkeit | Häufigster Modus | Selten bei Tieren |
 | Beispiel | Darwin-Finken (Galapagos) | Weizen (6n = 42) |
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Präzygotisch (vor Befruchtung: geografisch, zeitlich, Verhalten, mechanisch) vs. postzygotisch (nach Befruchtung: Hybridsterilität, -lethalität)
 - Allopatrisch (geografische Barriere → Divergenz) vs. sympatrisch (im selben Gebiet, v. a. Polyploidie)
 - Autopolyploidie (Verdoppelung innerhalb einer Art) vs. Allopolyploidie (Hybridisierung zwischen Arten + Verdoppelung)
 - Maultier (Pferdestute × Eselhengst, steril) vs. Maulesel (Eselstute × Pferdehengst, ebenfalls steril)
 - Biologischer Artbegriff versagt bei Asexuellen (Bakterien) und Fossilien
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Ernst Mayr: biologischer Artbegriff (1942)
 - Darwin-Finken: 13–15 Arten durch adaptive Radiation auf Galapagos
 - Weizen (Triticum aestivum): hexaploid 6n = 42, Allopolyploidie aus 3 diploiden Vorfahren
@@ -2406,7 +2483,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 **Zentral prüfungsrelevant:** Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss), Gendrift (kleine Populationen, zufällige Änderung), Hardy-Weinberg (p²+2pq+q²=1), Gründer- und Flaschenhalseffekt.
 
-**Ergänzend vertiefend:** Selektionstypen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Selektionstypen.
 
 **Häufige Fragen:**
 - Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift)
@@ -2420,14 +2497,14 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 | Gendrift | Zufällige Frequenzänderung | Nein | Sehr stark |
 | Genfluss | Homogenisierung | Nein | Stark (wirkt gegen Divergenz) |
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Flaschenhals (bestehende große Population wird durch Katastrophe reduziert) vs. Gründereffekt (kleine Gruppe gründet neue Population)
 - Gendrift (zufällig, ungerichtet, stark in kleinen Populationen) vs. Selektion (gerichtet, stärker in großen Populationen)
 - Genfluss (homogenisiert Populationen, wirkt gegen Artbildung) vs. Gendrift (führt zu Divergenz)
 - Hardy-Weinberg-Abweichung = Evolution aktiv, NICHT ein Fehler im Experiment
 - Heterozygotenvorteil (HbA/HbS resistenter gegen Malaria) vs. Sichelzellanämie (HbS/HbS homozygot krank)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Hardy-Weinberg: p² + 2pq + q² = 1 (Genotypfrequenzen); p + q = 1 (Allelfrequenzen)
 - 5 Bedingungen: große Population, keine Mutation, keine Selektion, keine Migration, Panmixie
 - Sichelzellanämie: HbS-Allel durch Heterozygotenvorteil in Malariaregionen erhalten
@@ -2638,21 +2715,21 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 **Zentral prüfungsrelevant:** Homininen (Australopithecus → H. habilis → H. erectus → H. sapiens), Bipedie vor Gehirnvergrößerung, Werkzeuggebrauch, Out-of-Africa, menschliche Evolution.
 
-**Ergänzend vertiefend:** Neandertaler; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Neandertaler.
 
 **Häufige Fragen:**
 - In welcher Reihenfolge erschienen die Homininen? (Australopithecus → H. habilis → H. erectus → H. sapiens)
 - Was evolvierte zuerst: aufrechter Gang oder großes Gehirn? (Bipedie vor Gehirnvergrößerung)
 - Wie viel Neanderthaler-DNA tragen moderne Nicht-Afrikaner? (1–4 %)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Neanderthaler sind NICHT Vorfahren des modernen Menschen, sondern eine eigenständige, parallel existierende Art
 - Bipedie evolvierte VOR der Gehirnvergrößerung (Australopithecus: aufrecht, aber kleines Gehirn)
 - Homo erectus (erster Auswanderer aus Afrika, ~1,8 Mya) vs. Homo sapiens (Out-of-Africa ~60.000–70.000 Jahre)
 - Hominidae (gesamte Familie der Menschenaffen) vs. Hominini (Tribus: Mensch + Schimpanse)
 - Mensch stammt NICHT vom Affen ab — beide teilen gemeinsame Vorfahren
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Divergenz Mensch/Schimpanse: ca. 6–7 Millionen Jahre
 - Lucy (A. afarensis): ~3,2 Mya, Hirnvolumen ~450 ccm, biped
 - H. erectus: ~1,9 Mya, Hirnvolumen ~1.000 ccm, erster Out-of-Africa

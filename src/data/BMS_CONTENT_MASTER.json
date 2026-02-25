@@ -25,10 +25,10 @@
           "explanation": "Mitochondrien sind die Kraftwerke der Zelle und produzieren ATP in der Atmungskette (oxidative Phosphorylierung)."
         },
         {
-          "question": "Platzhalter-Frage",
-          "options": ["A", "B", "C", "D"],
-          "correctIndex": 0,
-          "explanation": "Erklärung hier eintragen."
+          "question": "Was passiert mit Erythrozyten in einer hypotonen Lösung?",
+          "options": ["Sie schrumpfen", "Sie bleiben unverändert", "Sie schwellen an und können platzen", "Sie nehmen keine Flüssigkeit auf"],
+          "correctIndex": 2,
+          "explanation": "In hypotoner Lösung strömt Wasser osmotisch in die Zellen ein; Erythrozyten schwellen an und können hämolysieren (platzen). Isotone Lösung erhält die Form, hyperton lässt sie schrumpfen."
         }
       ]
     }

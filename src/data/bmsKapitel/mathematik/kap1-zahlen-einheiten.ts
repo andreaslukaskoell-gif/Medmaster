@@ -40,7 +40,9 @@ export const mathKapZahlen: Kapitel = {
 
 ## Grunddefinition und positive Exponenten
 
-**Um Zehnerpotenzen sicher zu nutzen,** starten wir mit der Definition. Danach bauen wir negative Exponenten und die Rechenregeln darauf auf.
+**Idee:** Zehnerpotenzen 10ⁿ fassen „Größenordnungen“ in einer Zahl zusammen: Statt 1.000.000 zu schreiben, schreibst du 10⁶. So lassen sich sehr große und sehr kleine Werte (Labor, Dosierung, Zellgrößen) einheitlich darstellen und **mit Rechenregeln** schnell vergleichen. Der **Exponent** n sagt dir: Wie viele Nullen hinter der 1 (positiv) bzw. wie viele Dezimalstellen bis zur 1 (negativ).
+
+**Verfahren:** 10ⁿ (n positiv) = 1 mit **n Nullen** dahinter. Tabelle auswendig können: 10¹=10, 10²=100, 10³=1.000, 10⁶=1.000.000. Umrechnung Dezimal → Zehnerpotenz: Zähle die Nullen bzw. Kommastellen; das ist der Exponent. Umrechnung Zehnerpotenz → Dezimal: Schreibe 1 und setze n Nullen (positiv) oder n Nachkommastellen mit einer 1 (negativ).
 
 Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl 10 genau **n-mal** mit sich selbst multipliziert wird. Die Zahl **n** heißt **Exponent** (Hochzahl) und gibt an, wie oft die 10 als Faktor vorkommt.
 
@@ -55,6 +57,8 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 **Eselsbrücke:** Bei **positivem** Exponenten gibt **n** an, wie viele **Nullen hinter der 1** stehen. Bei 10¹² stehen zwölf Nullen. Im Blut zirkulieren beim Erwachsenen ca. **5 × 10¹²** rote Blutkörperchen pro Liter — eine Zahl, die man nur mit Zehnerpotenzen handhabbar macht.
 
 > **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn“) der Zahl.
+
+**Typische Prüfungsfehler:** 10⁻ⁿ mit „negativer Zahl“ verwechseln (10⁻³ ist 0,001, nicht −1000). Bei Multiplikation fälschlich Exponenten multiplizieren statt addieren. Bei Addition Vorfaktoren addieren, ohne vorher auf gleichen Exponenten zu bringen. Siehe dazu ausführlich den Abschnitt „Fehlerquellen und häufige Missverständnisse“ unten.
 
 ---
 
@@ -186,19 +190,28 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Dezimal ↔ Zehnerpotenz umrechnen (z. B. 10⁻⁶ = ?, 0,001 = ?)
+- Rechenaufgaben: 10³ × 10⁻⁵, 10⁶ / 10², (10²)³ — nur Potenzgesetze anwenden
+- Verhältnis/Konzentration: „Wie oft konzentrierter?“ → Exponentendifferenz
+- Vorfaktor × Zehnerpotenz: (a×10ᵐ)×(b×10ⁿ) berechnen und normalisieren
+- Größenordnungen vergleichen (Virus vs. Zelle vs. Mensch)
+
+**Typische Fallen:**
+- 10⁻³ ≠ −10³ — negativer Exponent ergibt positive Zahl (0,001)
+- 10ᵃ × 10ᵇ ≠ 10^(a×b) — Multiplikation: Exponenten **addieren**
+- 3×10³ + 2×10² ≠ 5×10⁵ — Addition: erst auf gleichen Exponenten bringen, dann Vorfaktoren addieren
+- Bei Division Exponenten **subtrahieren** (nicht addieren)
+
+**Minimal-Rechenrezepte:**
+- **Multiplikation:** 10ᵃ × 10ᵇ = 10^(a+b). Vorfaktoren getrennt multiplizieren, dann Exponenten addieren, ggf. normalisieren (Vorfaktor 1 bis <10).
+- **Division:** 10ᵃ / 10ᵇ = 10^(a−b). Verhältnis = eine Zehnerpotenz mit Exponent = Differenz.
+- **Verhältnis „wie oft?“:** Exponent von A minus Exponent von B → 10^(A−B) = Faktor.
+- **Normalisierung:** Vorfaktor ≥10 → eine Zehnerpotenz nach rechts (Exponent +1); Vorfaktor <1 → nach links (Exponent −1).
+
 **Zentral prüfungsrelevant:** Zehnerpotenzen (10⁰=1, 10³, 10⁻⁶), Rechenregeln (Multiplikation/Division/Potenz: Exponenten addieren/subtrahieren/multiplizieren), Verhältnisse (Exponentendifferenz = Faktor), klinische Größenordnungen (Erythrozyten ~5×10¹²/L, pH log-Skala).
 
-**Ergänzend vertiefend:** Wurzel als Potenz 10^(m/n); typische Verwechslungen siehe „Typische Prüfungsfallen“.
-
-**Häufige Fragen:**
-- "Was ist 10⁻⁶ in Dezimalform?" → 0,000001 (eine Millionstel; positiv!)
-- "Was ergibt 10³ × 10⁻⁵?" → 10⁻² = 0,01 (Exponenten addieren: 3 + (−5) = −2)
-- "Wie oft ist Substanz A (10⁻³ mol/L) konzentrierter als B (10⁻⁶ mol/L)?" → Exponentendifferenz: 10³ = 1.000-mal
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- 10⁻³ ≠ −10³ — negativer Exponent ≠ negatives Vorzeichen; 10⁻³ = 0,001, eine **positive** Zahl
-- 10ᵃ × 10ᵇ ≠ 10^(a×b) — Multiplikation: Exponenten **addieren**, nicht multiplizieren!
-- 3 × 10³ + 2 × 10² ≠ 5 × 10⁵ — Addition: erst auf gleichen Exponenten bringen: = 3,2 × 10³
+**Ergänzend vertiefend:** Wurzel als Potenz 10^(m/n). Typische Fallen: 10⁻³ ≠ −10³ (negativer Exponent → positive Zahl); bei Multiplikation Exponenten addieren (nicht multiplizieren); bei Addition erst gleichen Exponenten herstellen.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 10⁰ = 1; 10³ = 1.000; 10⁶ = 1.000.000; 10⁻³ = 0,001; 10⁻⁶ = 0,000001; 10⁻⁹ = 0,000000001
@@ -429,6 +442,16 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
 
 ---
 
+**Idee:** SI-Präfixe sind feste Zehnerpotenzen (10³ pro Stufe) vor der Basiseinheit — sie machen sehr große oder sehr kleine Zahlen handhabbar (mg, µg, nm, fL). **Warum für den MedAT:** Dosierungen, Laborwerte und Einheitenumrechnungen verlangen sichere Zuordnung Präfix ↔ Faktor und die richtige **Richtung** beim Umrechnen (kleinere Einheit → größere Zahl).
+
+**Verfahren — Umrechnung zwischen Präfixen (Schrittfolge):**
+1. **Ausgangs- und Zieleinheit** als Zehnerpotenz zur **gleichen** Basiseinheit schreiben (z. B. 1 mg = 10⁻³ g, 1 µg = 10⁻⁶ g).
+2. **Verhältnis bilden:** Exponent Ausgang minus Exponent Ziel → Faktor 10^(Differenz). Von mg (10⁻³) nach µg (10⁻⁶): 10⁻³/10⁻⁶ = 10³ → 1 mg = 1.000 µg.
+3. **Richtung merken:** Kleinere Einheit (z. B. µg) → **größere Zahl** (× 1.000). Größere Einheit (mg) → **kleinere Zahl** (÷ 1.000). Eselsbrücke: „Wer kleiner misst, zählt mehr.“
+
+**Typische Prüfungsfehler:** µ (Mikro, 10⁻⁶) mit m (Milli, 10⁻³) verwechseln → 1.000-facher Dosierungsfehler. Umrechnungsrichtung falsch (mg → µg muss × 1.000 sein, nicht ÷). M (Mega, 10⁶) vs. m (Milli) — Groß-/Kleinschreibung beachten. Piko = 10⁻¹², Nano = 10⁻⁹ (Reihenfolge nicht vertauschen).
+
+---
 ## Die Systematik der SI-Präfixe
 
 **Um Präfixe sicher zu nutzen,** brauchst du zuerst die **Systematik**: Welche Zeichen gibt es, und in welcher Reihenfolge? **Dafür** die Grundregel.
@@ -564,6 +587,18 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- „Welcher Faktor entspricht Präfix X?“ (n = 10⁻⁹, µ = 10⁻⁶, m = 10⁻³, p = 10⁻¹², f = 10⁻¹⁵)
+- Umrechnung mg ↔ µg ↔ ng, mmol/L ↔ µmol/L (Schrittfolge: Zehnerpotenz → Verhältnis → × oder ÷)
+- „X mg = wie viele µg?“ / „X µg = wie viele mg?“ — Richtung: kleinere Einheit → größere Zahl
+- MCV in fL (80–96 fL), Radioaktivität in MBq (Mega = 10⁶)
+- Textaufgaben: Dosierung in µg, Verordnung in mg — eine Einheit vereinheitlichen
+
+**Minimal-Rechenrezepte:**
+- **Präfix → Zehnerpotenz:** Reihenfolge klein→groß: f (10⁻¹⁵) → p (10⁻¹²) → n (10⁻⁹) → µ (10⁻⁶) → m (10⁻³) → Basis → k (10³) → M (10⁶).
+- **Umrechnung A → B:** Beide als Zehnerpotenz zur gleichen Basis; Faktor = 10^(Exponent_A − Exponent_B). Kleinere Einheit → × Faktor; größere Einheit → ÷ Faktor.
+- **Schnellregel:** Eine Stufe (Dreierschritt) = Faktor 1.000. mg → µg: × 1.000; µg → mg: ÷ 1.000.
 
 **Zentral prüfungsrelevant:** SI-Präfixe in Dreierschritten (10³); Reihenfolge f → p → n → µ → m → [Basis] → k → M → G → T; Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹) mit Symbol und Faktor; Umrechnungsregel „kleinere Einheit → größere Zahl“; µg ≠ mg (1 mg = 1.000 µg); typische Umrechnungen mmol/L ↔ µmol/L, mg ↔ µg ↔ ng; MCV in fL (80–96 fL).
 
@@ -835,6 +870,14 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
 
 ---
 
+**Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
+
+**Verfahren — Schrittfolge:** (1) **Multiplikation/Division:** Vorfaktoren verrechnen, Exponenten addieren/subtrahieren, dann normalisieren. (2) **Addition/Subtraktion:** kleineren Exponenten an größeren angleichen (Vorfaktor anpassen), dann Vorfaktoren addieren/subtrahieren, normalisieren. (3) **Dezimal → Notation:** Komma verschieben bis 1 ≤ a < 10; Stellen zählen → Exponent (links = positiv, rechts = negativ). (4) **pH:** pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺].
+
+**Typische Prüfungsfehler:** Bei Addition Vorfaktoren addieren ohne gleichen Exponenten (3×10³ + 4×10² ≠ 7×10⁵). Bei Division Exponenten dividieren statt subtrahieren. Normalisierung vergessen (12×10⁴ → 1,2×10⁵). pH: Vorzeichen nicht vergessen (pH = −log([H⁺])).
+
+---
+
 ## Definition und Normalform
 
 **Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
@@ -984,6 +1027,19 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- Dezimal in normalisierte Form (a × 10ⁿ, 1 ≤ a < 10) und umgekehrt
+- (a×10ᵐ)×(b×10ⁿ) bzw. Division — Vorfaktoren getrennt, Exponenten addieren/subtrahieren, normieren
+- Addition/Subtraktion (erst Exponenten angleichen)
+- pH aus [H⁺] oder [H⁺] aus pH (pH = −log₁₀([H⁺]); 1 pH = Faktor 10)
+
+**Minimal-Rechenrezepte:**
+- **Multiplikation:** (a×10ᵐ)×(b×10ⁿ) = (a×b)×10^(m+n); dann normalisieren (Vorfaktor 1–<10).
+- **Division:** (a×10ᵐ)/(b×10ⁿ) = (a/b)×10^(m−n); normalisieren.
+- **Addition:** Beide auf gleichen Exponenten bringen, Vorfaktoren addieren, normalisieren.
+- **Dezimal → Notation:** Komma verschieben bis 1 ≤ a < 10; Anzahl Stellen = |n| (links = n>0, rechts = n<0).
+- **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH). 1 pH-Einheit = Faktor 10.
 
 **Zentral prüfungsrelevant:** Normalisierte Form (1 ≤ Vorfaktor < 10); Umrechnung Dezimal ↔ Notation (Kommaverschiebung → Exponent); Multiplikation (Vorfaktoren ×, Exponenten addieren); Division (Vorfaktoren ÷, Exponenten subtrahieren); Addition/Subtraktion (erst gleichen Exponenten herstellen); Normalisierung nach Rechnung; Dreischritt (Vorfaktoren → Exponenten → Normieren); pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺]; Avogadro 6,022×10²³ mol⁻¹; Erythrozyten ~5×10¹²/L.
 
@@ -1257,6 +1313,14 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
 
 ---
 
+**Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
+
+**Verfahren — Schrittfolge:** (1) **Dimension klären:** Länge → Faktor k¹; Fläche → k²; Volumen → k³. (2) **Längenfaktor** zwischen Einheiten (z. B. 1 m = 100 cm). (3) **Potenz anwenden:** 1 m² = (100)² cm² = 10.000 cm²; 1 L = 1 dm³ = 10³ cm³ = 1.000 mL. (4) **BSA Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3.600).
+
+**Typische Prüfungsfehler:** 1 m² = 100 cm² (falsch — muss 10.000 sein). 1 m³ = 10³ cm³ (falsch — 10⁶). 1 mL ≠ 1 cm³ (falsch — gleich!). g/dL → g/L: × 10 (1 L = 10 dL).
+
+---
+
 ## Längeneinheiten — Die vollständige Hierarchie
 
 **Um Längen sicher umzurechnen,** brauchst du die **metrische Hierarchie**. **Dafür** die Grundregel: Jede **Längeneinheit** unterscheidet sich von der nächsten um den **Faktor 10**.
@@ -1397,6 +1461,17 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- „1 m² = ? cm²“ / „1 m³ = ? cm³“ (Faktor quadrieren/kubieren)
+- Länge/Fläche/Volumen umrechnen (mm, cm, m, µm, nm)
+- 1 L in mL/cm³; 1 mL = 1 cm³; g/dL ↔ g/L (× 10)
+- BSA nach Mosteller: √(Größe×Gewicht/3.600)
+
+**Minimal-Rechenrezepte:**
+- **Fläche:** Längenfaktor k → Flächenfaktor k². 1 m² = 10.000 cm² (nicht 100).
+- **Volumen:** k → k³. 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**.
+- **g/dL → g/L:** × 10 (1 L = 10 dL). **BSA:** BSA [m²] = √(Größe[cm]×Gewicht[kg]/3.600).
 
 **Zentral prüfungsrelevant:** Länge: Faktor 10 je Stufe (km → m → … → μm → nm); Fläche: Faktor **quadrieren** — 1 m² = 10.000 cm² (nicht 100!); Volumen: Faktor **kubieren** — 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**; 1 dL = 100 mL; g/dL → g/L: × 10; BSA Mosteller: √(Größe[cm]×Gewicht[kg]/3.600); Alveolenfläche ~70–140 m²; KOF ~1,7–2,0 m².
 
@@ -1604,6 +1679,14 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 
 ---
 
+**Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
+
+**Verfahren — Schrittfolge:** (1) **km/h → m/s:** ÷ 3,6; **m/s → km/h:** × 3,6 (Merkhilfe: 36 km/h = 10 m/s). (2) **Zeit:** 1 h = 3.600 s, 1 min = 60 s; Herzfrequenz in Hz = HF/min ÷ 60. (3) **Gleichmäßig beschleunigt:** v = v₀+at; s = v₀t+½at²; v² = v₀²+2as. (4) **Freier Fall (v₀=0):** v = g×t; s = ½×g×t²; Aufprall aus Höhe h: v = √(2gh).
+
+**Typische Prüfungsfehler:** km/h in m/s: fälschlich × 3,6 statt ÷ 3,6. s (Weg) und v (Geschwindigkeit) verwechseln (s = ½gt² vs. v = gt). Herzfrequenz in Hz: ÷ 60 nicht vergessen.
+
+---
+
 ## Zeiteinheiten — Das nicht-dezimale System
 
 **Um Zeitintervalle sicher umzurechnen,** brauchst du das **60er-System**. **Anders** als Länge oder Masse folgen Zeiteinheiten keinem Dezimalsystem. **Dafür** die festen Umrechnungen.
@@ -1740,6 +1823,17 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- km/h ↔ m/s (÷ 3,6 bzw. × 3,6)
+- v = s/t, a = Δv/Δt; freier Fall v = g×t, s = ½×g×t², Aufprall v = √(2gh)
+- Herzfrequenz/min → Periodendauer T, Frequenz in Hz (÷ 60)
+- Sturzhöhe → Aufprallgeschwindigkeit
+
+**Minimal-Rechenrezepte:**
+- **km/h → m/s:** ÷ 3,6. **m/s → km/h:** × 3,6. (36 km/h = 10 m/s.)
+- **Freier Fall:** v = g×t; s = ½×g×t²; **Aufprall:** v = √(2×g×h); g ≈ 10 m/s².
+- **HF in Hz:** f [Hz] = HF [1/min] ÷ 60; T = 1/f.
 
 **Zentral prüfungsrelevant:** Zeiteinheiten: 1 min = 60 s, 1 h = 3.600 s, 1 Tag = 86.400 s; Geschwindigkeit v = s/t [m/s]; **km/h ÷ 3,6 = m/s**, m/s × 3,6 = km/h (36 km/h = 10 m/s); Beschleunigung a = Δv/Δt; drei Formeln gleichmäßig beschleunigt (v = v₀+at, s = v₀t+½at², v² = v₀²+2as); **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s²; Herzfrequenz: f [Hz] = HF [1/min] ÷ 60, T = 1/f; NLG A-alpha 60–80 m/s, C-Fasern 0,5–2 m/s; ab 3 m Sturzhöhe Hochrasanztrauma.
 
@@ -1964,6 +2058,14 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 
 ---
 
+**Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
+
+**Verfahren — Schrittfolge:** (1) **Kraft:** F = m×a → [N] = kg×m/s². (2) **Druck:** p = F/A → [Pa] = N/m². (3) **Energie:** W = F×s → [J] = N×m. (4) **Leistung:** P = W/t → [W] = J/s. (5) **Umrechnungen:** 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; T[K] = T[°C]+273.
+
+**Typische Prüfungsfehler:** SI-Grundeinheit Masse = kg (nicht g). J (Energie) vs. W (Leistung = Energie/Zeit) verwechseln. 1 mmHg ≈ 133 Pa (nicht 100 Pa).
+
+---
+
 ## Die sieben SI-Grundeinheiten
 
 **Um das SI-System zu nutzen,** starten wir mit den **sieben Grundeinheiten**. **Sie sind so gewählt,** dass sich alle anderen physikalischen Einheiten daraus ableiten lassen.
@@ -2102,6 +2204,16 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- „N in kg, m, s?“; „Pa = N/m²?“; „J in N×m?“; Dimensionsanalyse
+- Druck mmHg ↔ Pa (× 133); Energie kcal ↔ kJ (× 4,184); °C ↔ K (+ 273)
+- Molkonzentration, Avogadro
+
+**Minimal-Rechenrezepte:**
+- **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s.
+- **Umrechnung:** 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; T[K] = T[°C] + 273.
+- **Dimensionsanalyse:** Einheiten beidseits prüfen; aus gesuchter Einheit Formel rekonstruieren.
 
 **Zentral prüfungsrelevant:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd; **kg** einzige mit Vorsilbe; Temperatur in K: T[K] = T[°C] + 273; Ableitungskette N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s; 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; Dimensionsanalyse (Einheiten beider Seiten müssen übereinstimmen); Mol, Avogadro 6,022×10²³; Glukose mg/dL → mmol/L (÷ 18 bzw. Molmasse 180).
 

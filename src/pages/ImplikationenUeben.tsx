@@ -3,6 +3,7 @@ import { CheckCircle2, XCircle, Lightbulb, ChevronRight, Filter, RotateCcw } fro
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
+import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
   1: {
@@ -343,9 +344,10 @@ export default function ImplikationenUeben() {
           )}
 
           {/* Explanation */}
-          {showExplanation && isChecked && (
+          {showExplanation && isChecked && currentTask && (
             <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
               <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Lösungsweg</h4>
+              <ImplikationSolutionDiagram task={currentTask} className="mb-3" />
               <div className="space-y-2">
                 <div>
                   <p className="text-xs text-muted mb-1">Angewandte Regeln:</p>

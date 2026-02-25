@@ -126,7 +126,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 - Cycloalkane und Alkene haben gleiche Summenformel CₙH₂ₙ (Vorsicht bei Aufgaben!)
 - Klinisch: Benzol → AML; Disulfiram hemmt ALDH (Acetaldehyd); FCKW → Ozonabbau
 
-**Ergänzend vertiefend:** Konstitutionsisomerie, Polymerisation (PE, PP, PVC); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konstitutionsisomerie, Polymerisation (PE, PP, PVC). Typische Fallen: Benzen (Benzol) = Aromat, nicht Alken; Cycloalkane und Alkene beide CₙH₂ₙ — nicht verwechseln.
 
 **Häufige Prüfungsfragen:**
 - "Welche Hybridisierung hat C in Ethen?" → sp² (120°, trigonal-planar); in Ethin → sp (180°, linear)
@@ -497,7 +497,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 - **cis/trans** an C=C: π-Bindung verhindert Rotation; **Konformation** (z. B. Ethan): Rotation möglich
 - **Klinisch:** Thalidomid (R = Sedativum, S = teratogen; Racemisierung in vivo!); L-Dopa nur L-Form wirksam; proteinogene AS = L
 
-**Ergänzend vertiefend:** Epimere, Anomere, meso-Verbindungen, Sesselkonformation; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Epimere, Anomere, meso-Verbindungen, Sesselkonformation. Typische Fallen: Enantiomere (Spiegelbilder, gleiche Eigenschaften) ≠ Diastereomere (trennbar); R/S-Konfiguration ≠ (+)/(−)-Drehung — experimentell bestimmen.
 
 **Häufige Prüfungsfragen:**
 - "Was ist ein Chiralitätszentrum?" → sp³-C mit vier verschiedenen Substituenten → Enantiomere möglich
@@ -864,7 +864,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 - Ethanolabbau: Ethanol →[ADH] Acetaldehyd →[ALDH] Acetat → Acetyl-CoA; Methanol → Formaldehyd (toxisch!)
 - **Thiole** (–SH): Cystein, Disulfidbrücken; Glutathion (GSH) als Antioxidans
 
-**Ergänzend vertiefend:** Oxidationsmittel (PCC, CrO₃), biogene Amine (Dopamin, Serotonin, Histamin); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Oxidationsmittel (PCC, CrO₃), biogene Amine (Dopamin, Serotonin, Histamin). Typische Fallen: Aldehyde Fehling/Tollens positiv, Ketone keine Reduktion (C=O-Position); Methanol→Formaldehyd (Erblindung) ≠ Ethanol→Acetaldehyd.
 
 **Häufige Prüfungsfragen:**
 - "Was entsteht bei Oxidation eines primären Alkohols?" → Aldehyd → Carbonsäure (sekundär → Keton)
@@ -1234,7 +1234,7 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 - **Aminosäuren:** Bausteine der Proteine (α-C mit –NH₂, –COOH, –R); **Peptidbindung** –CO–NH– (planar, Amid)
 - **Tyrosin** → L-DOPA → Dopamin → Noradrenalin → Adrenalin; **Tryptophan** → Serotonin, Melatonin; **PKU** = Phe-Hydroxylase-Defekt
 
-**Ergänzend vertiefend:** Heteroaromaten (Pyridin, Pyrrol, Imidazol), EAS-Mechanismus, dirigierende Effekte; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Heteroaromaten (Pyridin, Pyrrol, Imidazol), EAS-Mechanismus, dirigierende Effekte. Typische Fallen: Purine (A, G) ≠ Pyrimidine (C, T, U); Cyclooctatetraen nicht aromatisch; Allopurinol hemmt Xanthinoxidase, löst keine Kristalle auf.
 
 **Häufige Prüfungsfragen:**
 - "Was besagt die Hückel-Regel?" → 4n+2 π-Elektronen, planar, konjugiert → aromatisch (Benzol: 6)
@@ -1596,7 +1596,7 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 - **Disulfidbrücken** (–S–S–) = Tertiär-/Quartärstruktur (kovalent, Cystein); Sekundär = H-Brücken (nicht-kovalent)
 - Klinisch: **Troponin** (Herzinfarkt 3–6 h), Sichelzellanämie (Glu6Val in β-Globin), PKU (Phe-Hydroxylase), essentielle AS (8 Erwachsene)
 
-**Ergänzend vertiefend:** Ramachandran-Plot, Chaperone, posttranslationale Modifikationen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Ramachandran-Plot, Chaperone, posttranslationale Modifikationen. Typische Fallen: α-Helix (H-Brücken im Rückgrat, C=O(n)–N-H(n+4)) ≠ β-Faltblatt (zwischen Strängen); Disulfidbrücken = Tertiärstruktur (kovalent), nicht Sekundärstruktur.
 
 **Häufige Prüfungsfragen:**
 - "Was sind die 4 Ebenen der Proteinstruktur?" → Primär (Sequenz), Sekundär (α-Helix/β-Faltblatt), Tertiär (3D), Quartär (Oligomere)
@@ -1914,7 +1914,7 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 - **HbA1c:** nicht-enzymatische **Glykierung** von Hämoglobin; Langzeit-Blutzucker **8–12 Wochen**; Zielwert **<7 %** (53 mmol/mol) bei Diabetes
 - **Laktoseintoleranz:** Laktasemangel (erworben, ~75 % Weltbevölkerung) ≠ **Galaktosämie** (Enzymdefekt Galactose-Abbau, neonatal)
 
-**Ergänzend vertiefend:** Mutarotation, AGEs, Glykosylierung (enzymatisch) vs. Glykierung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Mutarotation, AGEs, Glykosylierung (enzymatisch) vs. Glykierung. Typische Fallen: α-Anomer (OH unten) ≠ β-Anomer (OH oben); Amylose (linear, Iod blau) ≠ Amylopektin (verzweigt, Iod rotbraun); Laktoseintoleranz (Laktase) ≠ Galaktosämie (Abbau defekt).
 
 **Häufige Prüfungsfragen:**
 - "Was ist HbA1c?" → Glykiertes Hämoglobin, 8–12 Wochen Glukosegedächtnis; Zielwert <7 %
@@ -2262,7 +2262,7 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 - **Essentielle Fettsäuren:** Linolsäure (ω-6), α-Linolensäure (ω-3) — mit Nahrung zuführen
 - **Triglyceride:** Glycerin + 3 Fettsäuren (Ester); Lipolyse setzt Fettsäuren frei
 
-**Ergänzend vertiefend:** Glykolipide, Lipoproteine (VLDL, IDL), Eicosanoide; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Glykolipide, Lipoproteine (VLDL, IDL), Eicosanoide. Typische Fallen: cis-Fettsäuren (flüssig, Knick) ≠ trans (fest, atherogen); LDL ≠ HDL; Ketoazidose (lebensbedrohlich) ≠ physiologische Ketonämie beim Fasten.
 
 **Häufige Prüfungsfragen:**
 - "Warum sind Phospholipide Membranbausteine?" → Amphipathisch → spontane Bilayer-Bildung (hydrophober Effekt)
@@ -2632,7 +2632,7 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 - **PCR:** Denaturierung (95 °C) → Annealing → Elongation (Taq-Polymerase); **RT-PCR** = RNA → cDNA → PCR (z. B. COVID-19-Nachweis)
 - **Nukleosid-Analoga** (Aciclovir, Tenofovir): **kein 3′-OH** → Kettenabbruch nach Einbau durch virale Polymerase (Selektivität: virale Kinase aktiviert)
 
-**Ergänzend vertiefend:** DNA-Reparatur (MMR, NER, BER), DNA-Methylierung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** DNA-Reparatur (MMR, NER, BER), DNA-Methylierung. Typische Fallen: Thymin nur DNA, Uracil nur RNA; Nukleosid ≠ Nukleotid; Purine (A, G) ≠ Pyrimidine (C, T, U).
 
 **Häufige Prüfungsfragen:**
 - "Wie viele H-Brücken A-T und G-C?" → A=T: 2; G≡C: 3; GC-reich = stabiler

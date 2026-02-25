@@ -406,6 +406,22 @@ function cutHeptagon5(): CutResult {
   };
 }
 
+/** Unregelmäßiges Sechseck: 5 Teile (verschachtelt, vom Zentrum zu Kanten). */
+function cutIrregularHexagon5(): CutResult {
+  const v = IRREGULAR_HEXAGON.points;
+  const c = centroid(IRREGULAR_HEXAGON);
+  return {
+    target: IRREGULAR_HEXAGON,
+    pieces: [
+      { points: [c, v[0], v[1], v[2]] },
+      { points: [c, v[2], v[3]] },
+      { points: [c, v[3], v[4]] },
+      { points: [c, v[4], v[5]] },
+      { points: [c, v[5], v[0]] },
+    ],
+  };
+}
+
 /** Zackenform: 6–8 Teile (vom Zentrum zu Ecken). */
 function cutStarlike6(): CutResult {
   const v = STARLIKE.points;
@@ -421,7 +437,11 @@ function cutStarlike6(): CutResult {
 
 export type FZDifficulty = "easy" | "medium" | "hard";
 
-/** Alle Schnitt-Schemata: Ziel + Teile, nach Schwierigkeit. Leicht 3–4, Mittel 4–6, Schwer 6–8 Teile. */
+/** Schnitt-Schemata nach Schwierigkeit:
+ * - Leicht (easy): einfache Schnitte, 2–4 Teile (Diagonale, Median, Zentrum zu Ecken).
+ * - Mittel (medium): asymmetrische/versetzte Schnitte, 3–4 Teile (L-Form, Stufe, unregelmäßige Polygone).
+ * - Schwer (hard): verschachtelte/unregelmäßige Schnitte, 5–8 Teile (viele Teile vom Zentrum, Zackenform).
+ */
 const CUT_SCHEMES: { diff: FZDifficulty; cut: () => CutResult }[] = [
   { diff: "easy", cut: cutSquareDiagonal },
   { diff: "easy", cut: cutSquareCenter4 },
@@ -437,6 +457,7 @@ const CUT_SCHEMES: { diff: FZDifficulty; cut: () => CutResult }[] = [
   { diff: "hard", cut: cutHexagon6 },
   { diff: "hard", cut: cutHeptagon5 },
   { diff: "hard", cut: cutStarlike6 },
+  { diff: "hard", cut: cutIrregularHexagon5 },
 ];
 
 // =============================================================================

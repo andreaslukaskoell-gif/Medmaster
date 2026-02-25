@@ -169,7 +169,7 @@ Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge λ,
 - **Licht:** elektromagnetische Welle; **c ≈ 300 000 km/s**; Lichtteilchen = **Photonen** (nicht Protonen); E ∝ 1/λ
 - Klinisch: Beatmung (Compliance, Barotrauma bei ARDS), Dekompressionskrankheit (Boyle)
 
-**Ergänzend vertiefend:** Van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT. Typische Fallen: T immer in Kelvin (nicht °C); Gase sind komprimierbar; R ≠ k_B ≠ N_A; Van-der-Waals a = Druckkorrektur (Anziehung), b = Volumenkorrektur (Eigenvolumen).
 
 **Häufige Prüfungsfragen:**
 - "Was ergibt pV=nRT umgestellt nach V?" → V = nRT/p (Celsius zuerst in Kelvin umrechnen!)
@@ -549,7 +549,7 @@ In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häu
 - **Hyperoxie-Risiken:** Lorrain-Smith (Lunge), Paul-Bert (ZNS), Retinopathie bei Frühgeborenen
 - Umrechnung: **1 kPa = 7,5 mmHg**; arterieller Ziel-pO₂: 8–13 kPa (60–100 mmHg)
 
-**Ergänzend vertiefend:** Alveolargasgleichung, Sättigungsdampfdruck; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Alveolargasgleichung, Sättigungsdampfdruck. Typische Fallen: Molenbruch ≠ Massenanteil (nur Molenbruch für Partialdrücke); p(H₂O) 37 °C = 6,27 kPa abziehen; Henry = Gaslöslichkeit, Dalton = Partialdrücke; T↑ → geringere Gaslöslichkeit.
 
 **Häufige Prüfungsfragen:**
 - "Wie berechnet man den Partialdruck von O₂ in Raumluft?" → 0,21 × 101,3 kPa = 21,2 kPa
@@ -933,7 +933,7 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 - **DLCO ↑:** alveoläre Hämorrhagie, Polyzythämie, Links-Rechts-Shunt
 - **Mittlere freie Weglänge λ:** Strecke zwischen Kollisionen; Diffusion über große Distanzen langsam (t ∝ x²)
 
-**Ergänzend vertiefend:** 2. Ficksches Gesetz, Isotopentrennung (UF₆); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** 2. Ficksches Gesetz, Isotopentrennung (UF₆). Typische Fallen: Graham r ∝ 1/√M (nicht 1/M); Diffusion (durch Medium) ≠ Effusion (durch Öffnung ins Vakuum); Diffusionszeit ∝ x²/(2D) — Kreislauf nötig.
 
 **Häufige Prüfungsfragen:**
 - "Wie verhält sich die Diffusionsrate von H₂ (2 g/mol) zu O₂ (32 g/mol)?" → r(H₂)/r(O₂) = √(32/2) = 4 — H₂ diffundiert 4× schneller
@@ -1290,7 +1290,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
 - **Oberflächenspannung** Wasser 72 mN/m; **Viskosität** Blut 3–4 mPa·s (Wasser 1 mPa·s)
 - **Amorphe Feststoffe:** keine Fernordnung, Glasübergang T_g, höhere Löslichkeit → Bioverfügbarkeit
 
-**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt, Plasma (physikalisch vs. Blutplasma); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Tripelpunkt, kritischer Punkt, Plasma (physikalisch vs. Blutplasma). Typische Fallen: Ionenkristall fest = kein Leiter (erst Schmelze/Lösung); Diamant hart, nicht leitend; H-Brücken nur N, O, F (nicht C–H); Eis leichter als Wasser.
 
 **Häufige Prüfungsfragen:**
 - "Welcher Aggregatzustand hat definiertes Volumen aber keine eigene Form?" → flüssig (Nahordnung, fließfähig)
@@ -1694,7 +1694,7 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 - **Osmolalität/Kryoskopie:** Blutosmolalität 280–300 mosmol/kg; Gefrierpunkt Blut ca. −0,52 °C; Osmolalitätslücke > 10 → Toxine
 - **Thermoregulation:** Schwitzen nutzt Verdampfungsenthalpie; 1 L/h → ~627 W Wärmeabgabe
 
-**Ergänzend vertiefend:** Phasendiagramm, kritischer Punkt, Clausius-Clapeyron; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Phasendiagramm, kritischer Punkt, Clausius-Clapeyron. Typische Fallen: Erstarren = flüssig→fest (nicht Sublimieren); Sieden ≠ Erstarren; Phasenübergänge keine Reaktionen; Verdunstung (Oberfläche) ≠ Sieden (Blasen); Van't-Hoff i: Glucose 1, NaCl ≈ 2, CaCl₂ ≈ 3.
 
 **Häufige Prüfungsfragen:**
 - "Welche Phasenübergänge sind endotherm?" → Schmelzen, Verdampfen, Sublimieren (Energie wird zugeführt)
@@ -1783,7 +1783,86 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
         answer:
           "Ethylenglykol (Ethandiol, C₂H₆O₂, M = 62 g/mol) ist ein nicht-elektrolytischer, organischer Alkohol (i = 1 – er dissoziiert nicht in Ionen). Im Blutplasma erhöht er die Osmolalität, da jedes gelöste Molekül als ein Osmolyt zählt. Klinische Erkennung durch Osmolalitätslücke: Die gemessene Plasma-Osmolalität (durch Kryoskopie) übersteigt die berechnete Osmolalität (aus Na⁺, Glucose, Harnstoff) deutlich. Die Differenz – die Osmolalitätslücke – ist erhöht (>10 mosmol/kg, bei Vergiftung oft >30–50 mosmol/kg). Van't-Hoff-Faktor: Ethylenglykol ist kein Elektrolyt (i = 1), erzeugt also pro Mol nur eine Teilcheneinheit. NaCl hingegen ergibt i = 2 (Na⁺ + Cl⁻), was eine doppelt so starke Gefrierpunktserniedrigung pro Mol verursacht. Bei der Interpretation muss daher die Art des Gelösten berücksichtigt werden. Ethylenglykol wird zu toxischen Metaboliten (Glykolsäure, Oxalsäure → Hyperoxalurie, Nierenversagen durch Calciumoxalat-Kristalle) abgebaut. Therapie: Fomepizol oder Ethanol hemmen die Alkoholdehydrogenase kompetitiv und verhindern die Bildung der toxischen Metabolite. Frühzeitige Diagnose ist lebenswichtig.",
       },
-      selfTest: [],
+      selfTest: [
+        {
+          question: "Welche Phasenübergänge sind endotherm?",
+          options: [
+            "Erstarren, Kondensieren, Resublimieren",
+            "Schmelzen, Verdampfen, Sublimieren",
+            "Nur Verdampfen",
+            "Nur Schmelzen und Verdampfen",
+            "Alle sechs Phasenübergänge",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Endotherm (Energie wird zugeführt) sind die Übergänge zum „freierem“ Zustand: Schmelzen (fest→flüssig), Verdampfen (flüssig→gas), Sublimieren (fest→gas). Exotherm sind Erstarren, Kondensieren, Resublimieren.",
+          hints: ["Endotherm = Energie rein. Welche Übergänge brauchen Energiezufuhr?"],
+          difficulty: 1,
+          tags: ["phasenübergänge", "endotherm", "energetik"],
+        },
+        {
+          question:
+            "Warum bleibt die Temperatur bei einem Phasenübergang (z. B. Schmelzen) konstant?",
+          options: [
+            "Weil keine Wärme zugeführt wird",
+            "Weil die zugeführte Energie für die Umordnung der Teilchen (latente Wärme) genutzt wird, nicht für Temperaturerhöhung",
+            "Weil der Druck abnimmt",
+            "Weil die Teilchen sich nicht bewegen",
+            "Nur bei Wasser, bei anderen Stoffen steigt T",
+          ],
+          correctIndex: 1,
+          explanation:
+            "An der Heizkurve zeigen Phasenübergänge Plateaus: Die zugeführte Wärme wird als latente Wärme (z. B. Schmelzenthalpie) verbraucht, um die Gitterstruktur aufzubrechen bzw. die Molekülanordnung zu ändern — ohne Temperaturänderung.",
+          hints: ["Latente Wärme = Enthalpieänderung beim Phasenübergang."],
+          difficulty: 1,
+          tags: ["heizkurve", "latente-wärme", "phasenübergang"],
+        },
+        {
+          question: "Wie viel Energie braucht 1 g Wasser zum Verdampfen (bei 100 °C, 1 bar)?",
+          options: ["333 J", "2257 J", "4,18 J", "40,7 J", "Gleich viel wie zum Schmelzen"],
+          correctIndex: 1,
+          explanation:
+            "Verdampfungsenthalpie von Wasser: ΔH_v = 2257 J/g (40,7 kJ/mol). Schmelzenthalpie ΔH_s = 333 J/g. Verdampfen braucht etwa 7× mehr Energie als Schmelzen, weil alle H-Brücken gebrochen werden müssen.",
+          hints: ["Verdampfen >> Schmelzen. 2257 J/g ist der große Wert."],
+          difficulty: 1,
+          tags: ["verdampfungsenthalpie", "wasser", "enthalpie"],
+        },
+        {
+          question: "Was besagt der Van't-Hoff-Faktor i bei der Gefrierpunktserniedrigung?",
+          options: [
+            "Er gibt die Temperatur in °C an",
+            "Er gibt die Anzahl der Teilchen pro Formeleinheit in Lösung an (z. B. NaCl → 2, CaCl₂ → 3)",
+            "Er ist immer 1",
+            "Er hängt nur von der Masse des Gelösten ab",
+            "Er gilt nur für Nichtelektrolyte",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Van't-Hoff-Faktor i ist die Anzahl der Teilchen, die eine Formeleinheit in Lösung liefert: Glucose i = 1 (nicht dissozierend), NaCl i ≈ 2 (Na⁺ + Cl⁻), CaCl₂ i ≈ 3. In ΔT_f = K_f·b·i bestimmt i, wie stark Elektrolyte den Gefrierpunkt senken.",
+          hints: ["Kolligativ = nur Teilchenanzahl zählt. NaCl dissoziiert in 2 Ionen."],
+          difficulty: 2,
+          tags: ["van-t-hoff", "kolligativ", "gefrierpunktserniedrigung"],
+        },
+        {
+          question:
+            "Was bedeutet eine erhöhte Osmolalitätslücke im Blutplasma (gemessen − berechnet > 10 mosmol/kg)?",
+          options: [
+            "Normale Schwankung, ohne Bedeutung",
+            "Hinweis auf osmotisch wirksame Substanzen, die in der Berechnung nicht erfasst sind (z. B. Ethanol, Methanol, Ethylenglykol bei Intoxikation)",
+            "Beweis für Diabetes mellitus",
+            "Zeichen für Nierenversagen ohne weitere Ursache",
+            "Nur bei Kryoskopie-Messfehlern möglich",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die Osmolalitätslücke ist die Differenz aus gemessener (Kryoskopie) und berechneter Osmolalität (z. B. 2×Na⁺ + Glucose/18 + Harnstoff/2,8). Eine Lücke > 10 mosmol/kg weist auf osmotisch aktive Substanzen hin, die nicht in der Formel vorkommen — typisch bei Intoxikation mit Methanol oder Ethylenglykol.",
+          hints: [
+            "Kryoskopie misst alle Teilchen. Die Formel berücksichtigt nur Na⁺, Glucose, Harnstoff.",
+          ],
+          difficulty: 2,
+          tags: ["osmolalitätslücke", "kryoskopie", "intoxikation"],
+        },
+      ],
     },
   ],
 };

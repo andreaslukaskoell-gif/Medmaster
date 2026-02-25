@@ -860,5 +860,15 @@ export function validateImplikationTask(task: ImplikationTask): boolean {
   return true;
 }
 
+/**
+ * Prüft, ob eine Implikationsaufgabe eine definierte visuelle Lösungsdarstellung haben kann.
+ * Erforderlich: premise1, premise2, genau 5 Optionen, correctAnswer 0–4.
+ * Wird bei Generierung assertiert und in der UI für Default-Visualisierung genutzt.
+ */
+export function hasVisualSolutionForImplikationTask(task: ImplikationTask): boolean {
+  if (!task.premise1 || !task.premise2) return false;
+  return validateImplikationTask(task);
+}
+
 /** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation (42 Aufgaben). */
 export const implikationenTasks: ImplikationTask[] = [...IMPLIKATION_PRACTICE_TASKS];

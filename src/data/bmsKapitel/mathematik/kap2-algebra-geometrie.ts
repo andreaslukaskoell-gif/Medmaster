@@ -40,6 +40,10 @@ export const mathKapAlgebra: Kapitel = {
 
 ## Grundprinzip der Gleichungsumformung
 
+**Idee:** Eine Gleichung A = B bleibt „wahr“, wenn auf **beiden Seiten** dieselbe Operation ausgeführt wird. So kannst du schrittweise die gesuchte Variable isolieren (allein auf einer Seite), ohne die Lösungsmenge zu ändern. Ziel ist immer: x = … (bzw. die gesuchte Größe).
+
+**Verfahren:** Erlaubte Schritte: Addition/Subtraktion derselben Zahl auf beiden Seiten; Multiplikation/Division beider Seiten mit derselben Zahl (niemals durch 0); Wurzelziehen oder Logarithmieren auf beiden Seiten (Definitionsbereich beachten). Bei linearen Gleichungen: Klammern auflösen → Brüche beseitigen (Hauptnenner) → x-Terme auf eine Seite, Zahlen auf die andere → durch Koeffizient von x teilen → Probe.
+
 ![Gleichungen](/grafik-parabel.svg)
 
 ![Parabel und Nullstellen](/grafik-lineare-funktion.svg)
@@ -51,6 +55,8 @@ Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematis
 - Anwenden einer Funktion auf beiden Seiten (z.B. Wurzelziehen, Logarithmieren — Definitionsbereich beachten)
 
 Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite stehen zu haben.
+
+**Typische Prüfungsfehler:** Operation nur auf einer Seite durchführen (Gleichung wird falsch). Durch null teilen. Bei Ungleichungen: Multiplikation/Division mit negativer Zahl ohne Vorzeichenumkehr. Kehrwert falsch: (a/b)⁻¹ = b/a (nicht a/b). Hauptnenner vergessen bei Brüchen.
 
 **Umformen von Termen (MedAT-typisch):** Ist **a = b/c** gegeben und **d = a⁻¹** (Kehrwert von a), so gilt **d = 1/a = 1/(b/c) = c/b**. Merke: Bruch invertieren heißt Zähler und Nenner tauschen — also **d = c/b** (nicht d = b/c, nicht d = b−c). Allgemein: **a/b invertieren → (a/b)⁻¹ = b/a**.
 
@@ -117,6 +123,14 @@ Quadratisches Ergänzen: x² + px + q = 0 wird zu (x + p/2)² = (p/2)² − q, w
 
 ## Ungleichungen
 
+**Idee:** Ungleichungen (A < B, A ≤ B, …) werden wie Gleichungen umgeformt — **gleiche Operation auf beiden Seiten** — mit einer **kritischen Ausnahme:** Multiplizierst oder dividierst du mit einer **negativen** Zahl, dreht sich das Relationszeichen um, weil die Anordnung auf der Zahlengeraden sich umkehrt.
+
+**Verfahren:** Wie bei Gleichungen: Terme sortieren, Variable isolieren. **Vor Division/Multiplikation prüfen:** Steht da eine **negative** Zahl? → Dann < ↔ > und ≤ ↔ ≥ **umkehren**. Bei positiven Zahlen kein Umdrehen.
+
+**Typische Fallen:** Nach Division durch −3 das Zeichen vergessen umzudrehen (z. B. −3x > 6 fälschlich zu x > −2 statt x < −2). Doppelte Ungleichung: Operation auf **alle drei** Teile anwenden.
+
+---
+
 Ungleichungen verwenden statt = eines der Zeichen <, >, ≤, ≥. Die Umformungsregeln sind fast identisch zu Gleichungen, mit einer entscheidenden Ausnahme:
 
 Bei Multiplikation oder Division mit einer negativen Zahl kehrt sich das Ungleichungszeichen um!
@@ -154,35 +168,44 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- „Löse nach x auf“ (lineare Gleichung) — Klammern, Brüche, dann x isolieren
+- Gleichungssystem: zwei Gleichungen, zwei Unbekannte (Substitution oder Elimination)
+- „Für welche x gilt …?“ bei Ungleichungen — Lösung mit Vorzeichenumkehr beachten
+- Quadratische Gleichung: Lösungsanzahl (Diskriminante), Mitternachtsformel anwenden
+- Verdünnung: c₁V₁ = c₂V₂ nach V₁ oder c₂ umstellen
+- Dosierung: Dosis = mg/kg × kg; Volumen = Dosis / Konzentration
+- Kehrwert: a = b/c, d = a⁻¹ ⇒ d = c/b
+
+**Typische Fallen:**
+- Ungleichung: Bei ×/÷ mit **negativer** Zahl Zeichen **umkehren** (−2x > 6 → x < −3).
+- Diskriminante: D = b² − **4ac** (nicht b² − 2ac).
+- Gleichungssystem: Probe in **beide** Gleichungen einsetzen.
+- Bruch invertieren: (a/b)⁻¹ = **b/a** (Zähler und Nenner tauschen).
+- Hauptnenner: kgV aller Nenner, dann **beide Seiten** mit HN multiplizieren.
+
+**Minimal-Rechenrezepte:**
+- **Lineare Gleichung:** (1) Klammern ausmultiplizieren, (2) mit Hauptnenner multiplizieren (wenn Brüche), (3) alle x-Terme auf eine Seite, Zahlen auf die andere, (4) durch Koeffizient von x teilen, (5) Probe.
+- **Gleichungssystem:** Substitution: eine Gleichung nach einer Variable auflösen, in die andere einsetzen. Oder Elimination: eine Variable durch Multiplikation/Addition entfernen, dann einsetzen.
+- **Ungleichung:** Wie Gleichung umformen; bei Division/Multiplikation mit **negativer** Zahl: < ↔ >, ≤ ↔ ≥ umkehren.
+- **Quadratisch:** D = b² − 4ac; x = (−b ± √D)/(2a). D > 0: 2 Lösungen, D = 0: 1, D < 0: keine.
+- **Verdünnung:** V₁ = c₂×V₂/c₁ (Stoffmenge bleibt erhalten).
+- **Dosierung:** D [mg] = Dosierung [mg/kg] × Körpergewicht [kg]; V [mL] = D [mg] / c [mg/mL].
+
 **Zentral prüfungsrelevant:**
 - **Äquivalenzumformung:** Gleiche Operation auf beiden Seiten; nie durch null teilen.
 - **Lineare Gleichung:** Schema Klammern → Brüche (Hauptnenner) → x-Terme eine Seite → durch Koeffizient → Probe.
-- **Gleichungssystem:** Substitution (Variable ersetzen) oder Elimination (addieren/subtrahieren); Probe in **beide** Gleichungen.
+- **Gleichungssystem:** Substitution oder Elimination; Probe in **beide** Gleichungen.
 - **Ungleichung:** Bei ×/÷ mit **negativer** Zahl Vorzeichen **umkehren** (< ↔ >, ≤ ↔ ≥).
-- **Quadratische Gleichung:** Mitternachtsformel x = (−b ± √D)/(2a); **Diskriminante D = b² − 4ac** (D > 0: 2 Lösungen, D = 0: 1, D < 0: keine).
-- **Verdünnungsformel:** c₁×V₁ = c₂×V₂; Mischungsaufgaben als Gleichungssystem.
-- **Dosierung:** Dosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg]; Volumen = Dosis / Konzentration.
-- **Kehrwert:** a = b/c und d = a⁻¹ ⇒ d = c/b (Zähler und Nenner tauschen).
+- **Quadratische Gleichung:** Mitternachtsformel; **D = b² − 4ac** (D > 0: 2, D = 0: 1, D < 0: keine).
+- **Verdünnungsformel:** c₁×V₁ = c₂×V₂. **Dosierung:** Dosis = [mg/kg] × kg; Volumen = Dosis / Konzentration.
+- **Kehrwert:** a = b/c und d = a⁻¹ ⇒ d = c/b.
 
 **Ergänzend vertiefend:** Dreisatz, Mischungsaufgaben; Vieta (Summe und Produkt der Lösungen bei x² + px + q = 0).
 
-**Häufige Prüfungsfragen:**
-- Löse 3x − 7 = 2(x + 1) → 3x − 7 = 2x + 2, x = 9.
-- Welche Lösungen hat x² − 5x + 6 = 0? → Vieta: Summe 5, Produkt 6 → x₁ = 2, x₂ = 3.
-- Für welche x gilt −2x + 4 > 10? → −2x > 6, Vorzeichen umkehren → x < −3.
-- Verdünnung: c₁ = 20 mg/mL, V₂ = 100 mL, c₂ = 5 mg/mL → V₁ = c₂×V₂/c₁ = 25 mL.
-- Dosierung 5 mg/kg, 72 kg → Dosis = 5 × 72 = 360 mg.
-
-**Typische Prüfungsfallen:**
-- Ungleichung: Division durch negative Zahl → Zeichen **umkehren** (−2x > 6 → x < −3, nicht x > −3).
-- Diskriminante: D = b² − **4ac**, NICHT b² − 2ac.
-- Gleichungssystem: Lösung in **beide** Originalgleichungen zur Probe einsetzen.
-- Bruch invertieren: (a/b)⁻¹ = b/a, nicht a/b.
-- Hauptnenner bei Brüchen: kgV aller Nenner, dann mit HN multiplizieren.
-
 **Wichtige Begriffe & Definitionen:**
-- **Äquivalenzumformung:** Operation auf beiden Seiten der Gleichung; Gleichung bleibt gültig.
-- **Diskriminante D:** b² − 4ac; entscheidet über Anzahl der reellen Lösungen bei ax² + bx + c = 0.
+- **Äquivalenzumformung:** Operation auf beiden Seiten; Gleichung bleibt gültig.
+- **Diskriminante D:** b² − 4ac; entscheidet über Anzahl der reellen Lösungen.
 - **Verdünnungsformel:** c₁×V₁ = c₂×V₂ (Stoffmenge bleibt erhalten).
 
 **Prüfungsrelevante Zahlen/Fakten:**
@@ -356,6 +379,18 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ---
 
+**Idee:** Prozent ist ein **Verhältnis** („von Hundert“), kein absoluter Wert — p % = p/100; „x % von G“ = (x/100)×G. Die **drei Grundfragen** (Prozentwert P, Grundwert G, Prozentsatz p) leiten sich aus **einer** Formel P = G×p/100 durch Umstellen ab. Beim **Dreisatz** entscheidet die Frage „Wird die gesuchte Größe bei mehr von A größer (direkt) oder kleiner (indirekt)?“ über die Rechenrichtung.
+
+**Verfahren — Schrittfolge:**
+- **Prozentwert P:** P = G×p/100 (direkt). **Grundwert G:** G = P×100/p. **Prozentsatz p:** p = P/G×100.
+- **Bruchdivision:** Nie durch Bruch teilen — mit **Kehrwert** multiplizieren: (a/b) ÷ (c/d) = (a/b)×(d/c). Addition/Subtraktion: zuerst **gleichnamig** machen (kgV der Nenner).
+- **Dreisatz direkt:** Verhältnisgleichung a/b = c/x → x = b×c/a. **Indirekt:** a×b = c×x → x = a×b/c (Produkt konstant).
+- **ARR/NNT:** ARR = Risiko_Kontrolle − Risiko_Behandlung; NNT = 1/ARR (ARR als Dezimalzahl, z. B. 0,03 für 3 %).
+
+**Typische Prüfungsfehler:** Prozentpunkte mit relativer Änderung verwechseln (von 40 % auf 30 % = 10 Prozentpunkte, aber 25 % relative Senkung). Beim Dreisatz direkt vs. indirekt vertauschen (mehr Helfer → weniger Zeit = indirekt!). NNT: ARR zuerst in Dezimalzahl (3 % → 0,03), dann 1/0,03. Bruchdivision: Kehrwert nehmen (Zähler und Nenner tauschen), nicht einfach „durch Zähler teilen“.
+
+---
+
 ## Prozentrechnung — die drei Grundfragen
 
 ![Prozent Dreisatz](/grafik-prozent-dreisatz.svg)
@@ -494,9 +529,25 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- „X sind wie viel % von Y?“ → p = X/Y×100
+- „W % von G?“ → P = G×W/100
+- „P ist W % von wie viel?“ → G = P×100/W
+- Relative vs. absolute Änderung (Prozentpunkte ≠ %-Änderung)
+- Direkter/indirekter Dreisatz (Erkennungsfrage: mehr A → mehr oder weniger B?)
+- ARR, RRR, NNT aus Vierfeldertafel oder Risikoangaben
+- Serienverdünnung 1:kⁿ; Originalkonzentration aus Verdünnung zurückrechnen
+
+**Minimal-Rechenrezepte:**
+- **Prozent:** P = G×p/100; G = P×100/p; p = P/G×100. Rechentrick: 10 % = G÷10, 5 % = halbe 10 %, 1 % = G÷100.
+- **Bruchdivision:** (a/b) ÷ (c/d) = (a/b)×(d/c). Addition: gleichnamig (kgV), dann Zähler verrechnen.
+- **Dreisatz direkt:** a/b = c/x ⇒ x = b×c/a. **Indirekt:** a×b = c×x ⇒ x = a×b/c.
+- **ARR/NNT:** ARR = R_Kontrolle − R_Behandlung (als Dezimalzahl); NNT = 1/ARR.
+- **Verdünnung n× 1:k:** Gesamtfaktor 1:kⁿ; Konzentration nach Verdünnung × kⁿ = Original.
+
 **Zentral prüfungsrelevant:** Prozent (p = Teil/Ganzes × 100), Bruch ↔ Dezimal ↔ Prozent, Anteil und Grundwert, prozentuale Zu- und Abnahme, Promille.
 
-**Ergänzend vertiefend:** Zinsrechnung, Wachstumsfaktor; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Zinsrechnung, Wachstumsfaktor. Typische Fallen: % = Verhältnis, nicht absoluter Wert; Prozentpunkte ≠ relative Änderung; NNT aus ARR in Dezimalzahl (z. B. 3 % → 0,03).
 
 **Häufige Fragen:**
 - "32 sind X% von 400?" → p = 32/400 × 100 = 8%
@@ -664,6 +715,14 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 ---
 
+**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+
+**Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
+
+**Typische Prüfungsfehler:** (a+b)² = a²+b² (2ab vergessen). Vieta: Summe = −p (Minus!). Scheitelpunkt: x_S = −b/(2a), nicht b/(2a).
+
+---
+
 ## Die drei binomischen Formeln — Herleitung und Anwendung
 
 ![Binomische Formeln](/grafik-parabel.svg)
@@ -797,9 +856,20 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- (a±b)² ausmultiplizieren; a²±2ab+b² faktorisieren; (a+b)(a−b) = a²−b²
+- Quadratische Gleichung lösen (Mitternachtsformel, D = b²−4ac)
+- Scheitelpunkt aus f(x) = ax²+bx+c (x_S = −b/(2a))
+- Vieta: zwei Zahlen mit gegebener Summe und Produkt; Gleichung aus Lösungen
+
+**Minimal-Rechenrezepte:**
+- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b².
+- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S).
+- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q. **BSA:** √(Größe[cm]×Gewicht[kg]/3600).
+
 **Zentral prüfungsrelevant:** Binomische Formeln (a±b)² = a²±2ab+b² und (a+b)(a−b) = a²−b², Ausmultiplizieren, Faktorisieren, Potenzgesetze (aᵐ×aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ), Wurzeln als Potenzen a^(1/n).
 
-**Ergänzend vertiefend:** Bruchrechnung, Doppelbrüche; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Bruchrechnung, Doppelbrüche. Typische Fallen: (a+b)² ≠ a²+b² (2ab nicht vergessen); Vieta x₁+x₂ = −p; Scheitel x_S = −b/(2a) — Minuszeichen beachten.
 
 **Häufige Fragen:**
 - "(x + 4)² = ?" → x² + 8x + 16 (mittlerer Term 2×x×4 = 8x nicht vergessen!)
@@ -974,6 +1044,14 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
 
 ---
 
+**Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
+
+**Verfahren — Schrittfolge:** (1) **Potenz:** aⁿ×aᵐ = a^(n+m); aⁿ/aᵐ = a^(n−m); (aⁿ)ᵐ = a^(n×m); a⁰ = 1; a⁻ⁿ = 1/aⁿ. (2) **Wurzel:** ⁿ√a = a^(1/n); √(a×b) = √a×√b (nicht √(a+b) = √a+√b!). (3) **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. (4) **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
+
+**Typische Prüfungsfehler:** (aⁿ)ᵐ = a^(n×m) (nicht n+m). a⁻ⁿ = 1/aⁿ (nicht −aⁿ). √(a+b) ≠ √a+√b.
+
+---
+
 ## Definition und Grundbegriffe
 
 ![Potenz Logarithmus](/grafik-logarithmus.svg)
@@ -1132,9 +1210,21 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- aⁿ×aᵐ, (aⁿ)ᵐ, a⁰, a⁻ⁿ, a^(m/n) anwenden
+- Wurzel vereinfachen (√(a×b) = √a×√b); ⁿ√a = a^(1/n)
+- log(ab), log(a/b), log(aⁿ); pH aus [H⁺] und [H⁺] aus pH
+- Halbwertszeit (½)^(t/T½); Dezibel 10×log(I/I₀)
+
+**Minimal-Rechenrezepte:**
+- **Potenz:** aⁿ·aᵐ = a^(n+m); aⁿ/aᵐ = a^(n−m); (aⁿ)ᵐ = a^(n×m); a⁰ = 1; a⁻ⁿ = 1/aⁿ; a^(1/n) = ⁿ√a.
+- **Wurzel:** √(a×b) = √a×√b. **Nicht:** √(a+b) ≠ √a+√b.
+- **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a.
+- **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH). 1 pH = Faktor 10.
+
 **Zentral prüfungsrelevant:** Potenzgesetze (aᵐ×aⁿ, aᵐ/aⁿ, (aᵐ)ⁿ), rationale Exponenten a^(p/q) = ᵍ√(aᵖ), Wurzelgesetze, Logarithmus (log_a(x) = y ⇔ aʸ = x), Zehnerlogarithmus und pH.
 
-**Ergänzend vertiefend:** Natürlicher Logarithmus ln; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Natürlicher Logarithmus ln. Typische Fallen: (aⁿ)ᵐ = aⁿˣᵐ (nicht aⁿ⁺ᵐ); a⁻ⁿ = 1/aⁿ (nicht −aⁿ); √(a+b) ≠ √a+√b.
 
 **Häufige Fragen:**
 - "Was ist 8^(2/3)?" → (∛8)² = 2² = 4
@@ -1325,6 +1415,14 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
 
 ---
 
+**Idee:** Flächen und Umfänge ebener Figuren folgen festen Formeln; **Heron** erlaubt Dreiecksfläche aus drei Seiten ohne Höhe. **Trigonometrie:** sin/cos/tan im rechtwinkligen Dreieck = Verhältnis zweier Seiten. **KOF** für Dosierung (Mosteller: √(G×Gew/3600)).
+
+**Verfahren — Schrittfolge:** (1) **Rechteck:** A = l×b, U = 2(l+b). **Dreieck:** A = ½×g×h; **Heron:** s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)). (2) **Kreis:** A = πr², U = 2πr; **Kreisring:** A = π(R²−r²). (3) **sin/cos/tan:** Gegenkathete/Hypotenuse, Ankathete/Hypotenuse, Gegenkathete/Ankathete. (4) **KOF Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3600).
+
+**Typische Prüfungsfehler:** Parallelogramm: Fläche = Grundseite×**Höhe** (nicht Schrägseite). Fläche skaliert mit k² (nicht k). Heron: s = halber Umfang, dann Wurzel aus s(s−a)(s−b)(s−c).
+
+---
+
 ## Rechteck und Quadrat
 
 ![Ebene Figuren](/grafik-ebene-figuren.svg)
@@ -1477,9 +1575,20 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Fläche/Umfang Rechteck, Dreieck (½×g×h), Kreis (πr², 2πr), Trapez, Parallelogramm
+- Heron: Dreieck aus drei Seiten (s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)))
+- Kreisring A = π(R²−r²); sin/cos/tan im rechtwinkligen Dreieck
+- KOF Mosteller; Neuner-Regel Verbrennung; Ähnlichkeit (Flächen × k²)
+
+**Minimal-Rechenrezepte:**
+- **Rechteck:** A = l×b, U = 2(l+b). **Dreieck:** A = ½×g×h. **Heron:** s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)).
+- **Kreis:** A = πr², U = 2πr. **Parallelogramm:** A = g×**h** (h = senkrechte Höhe!).
+- **sin/cos/tan:** Gegenkathete/Hyp, Ankathete/Hyp, Gegenkathete/Ankathete. **KOF:** √(Größe[cm]×Gewicht[kg]/3600). **Ähnlichkeit:** Flächen × k².
+
 **Zentral prüfungsrelevant:** Flächen (Rechteck, Dreieck, Kreis A=πr², Ellipse), KOF/BSA (Mosteller √(kg×cm/3600)), Volumen (Würfel, Quader, Zylinder, Kugel V=(4/3)πr³), Einheitenumrechnung (m², cm², Liter).
 
-**Ergänzend vertiefend:** Oberfläche Kugel 4πr²; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Oberfläche Kugel 4πr². Typische Fallen: Kreisfläche A = πr² (r quadriert) vs. Umfang U = 2πr (r linear); Flächen bei Ähnlichkeit skalieren mit k², nicht k.
 
 **Häufige Fragen:**
 - "Kreisförmige Verbrennung Ø 12 cm — Anteil an BSA 1,8 m²?" → A = π×36 ≈ 113 cm² = 0,0113 m² → ~0,63% KOF
@@ -1687,6 +1796,14 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
 
 ---
 
+**Idee:** Volumen V = „Rauminhalt“, Oberfläche O = „Hüllfläche“. **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
+
+**Verfahren — Schrittfolge:** (1) **Quader/Würfel:** V = a×b×c, O = 2(ab+ac+bc); Würfel V = a³, O = 6a². (2) **Zylinder:** V = πr²h, O = 2πr²+2πrh. (3) **Kugel:** V = (4/3)πr³, O = 4πr². (4) **Kegel:** V = (1/3)πr²h. (5) **Ellipsoid:** V ≈ (4/3)πabc (Herz).
+
+**Typische Prüfungsfehler:** Quader: V mit O verwechseln (V = a×b×c, nicht 2(ab+ac+bc)). Kugel: V = (4/3)πr³ (r³, nicht r²). O/V-Verhältnis Kugel = 3/r (nicht 4/r).
+
+---
+
 ## Quader
 
 ![Körper](/grafik-koerper.svg)
@@ -1791,9 +1908,19 @@ Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π × 0,16 × 1,5 = 0,24π 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- V(Quader), V(Zylinder), V(Kugel), V(Kegel), O(Kugel); Ellipsoid V ≈ 0,52×a×b×c
+- r aus V (Kugel: r³ = 3V/(4π)); Hagen-Poiseuille (Fluss ~ r⁴)
+- O/V-Verhältnis; Tumor-/Zysten-/Restharn-Volumen
+
+**Minimal-Rechenrezepte:**
+- **Quader:** V = a×b×c, O = 2(ab+ac+bc). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h.
+- **Kegel/Pyramide:** V = ⅓×Grundfläche×h. **Ellipsoid:** V ≈ 0,52×a×b×c.
+- **O/V Kugel:** 3/r. **Hagen-Poiseuille:** Fluss ~ r⁴.
+
 **Zentral prüfungsrelevant:** Volumenformeln (Würfel, Quader, Zylinder V=πr²h, Kugel V=(4/3)πr³, Pyramide/Kegel), klinische Anwendung (Tumor-/Zystengröße), Einheiten (mL, cm³, Liter).
 
-**Ergänzend vertiefend:** Oberfläche Zylinder/Kugel; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Oberfläche Zylinder/Kugel. Typische Fallen: Kegel/Pyramide V = ⅓×G×h (Drittel!); Hagen-Poiseuille Q ~ r⁴ (nicht r²); Mantelfläche Zylinder ohne Grundkreise.
 
 **Häufige Fragen:**
 - "Zyste mit Ø 4 cm — Volumen?" → r = 2, V = (4/3)×π×8 ≈ 33,5 mL
@@ -2001,6 +2128,14 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 
 ---
 
+**Idee:** Punkte durch (x,y) beschrieben; **Abstand** = Pythagoras: d = √((x₂−x₁)²+(y₂−y₁)²). **Gerade** y = mx+b: m = Steigung, b = y-Achsenabschnitt; aus zwei Punkten: m = (y₂−y₁)/(x₂−x₁), dann b = y₁−m×x₁.
+
+**Verfahren — Schrittfolge:** (1) **Abstand:** d = √((Δx)²+(Δy)²). **Mittelpunkt:** M = ((x₁+x₂)/2, (y₁+y₂)/2). (2) **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), b = y₁−m×x₁. (3) **Schnittpunkt:** Gleichsetzen, nach x auflösen. (4) **Polarkoordinaten:** x = r×cos φ, y = r×sin φ.
+
+**Typische Prüfungsfehler:** Abstand: Differenzen quadrieren (Δx)²+(Δy)², nicht (x₁²+x₂²). Steigung: Δy/Δx — y im Zähler. Senkrechte Geraden: m₂ = −1/m₁.
+
+---
+
 ## Kartesisches Koordinatensystem
 
 ![Koordinaten Gerade](/grafik-lineare-funktion.svg)
@@ -2123,9 +2258,20 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Abstand zweier Punkte d = √((Δx)²+(Δy)²); Mittelpunkt
+- Geradengleichung aus 2 Punkten (m = Δy/Δx, b = y₁−m×x₁); Schnittpunkt; parallel/senkrecht
+- Kreisgleichung (x−x₀)²+(y−y₀)² = r²; Polarkoordinaten x = r×cos φ, y = r×sin φ
+- Steigung in % = tan(α)×100 (Tangens, nicht Sinus!)
+
+**Minimal-Rechenrezepte:**
+- **Abstand:** d = √((x₂−x₁)²+(y₂−y₁)²). **Mittelpunkt:** ((x₁+x₂)/2, (y₁+y₂)/2).
+- **Gerade:** m = (y₂−y₁)/(x₂−x₁), b = y₁−m×x₁. **Schnittpunkt:** Gleichsetzen → x, dann y.
+- **Senkrecht:** m₂ = −1/m₁. **Kreis:** (x−x₀)²+(y−y₀)² = r².
+
 **Zentral prüfungsrelevant:** Geradengleichung y = mx + b, Steigung m = Δy/Δx, zwei Punkte → Gerade, Schnittpunkt, Abstand Punkt–Gerade, Parabel (Scheitelpunkt, Öffnung). **Trigonometrie:** sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete; **Steigung in % = Höhenunterschied/Horizontaldistanz = tan(α)** — Angabe „16 % Steigung“ entspricht **Tangens** (nicht Sinus/Cosinus).
 
-**Ergänzend vertiefend:** Lineare Funktionen in der Klinik (Dosis-Wirkung); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Lineare Funktionen in der Klinik (Dosis-Wirkung). Typische Fallen: Steigung in % = tan(α), nicht sin/cos; Kreisgleichung rechts r² (nicht r); parallele Geraden: gleiche Steigung, verschiedener y-Achsenabschnitt.
 
 **Häufige Fragen:**
 - "Geradengleichung durch P(2,3) und P(6,11)?" → m = (11−3)/(6−2) = 2; b = 3−4 = −1 → y = 2x−1
@@ -2336,6 +2482,14 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
 
 ---
 
+**Idee:** **Vektor** = Betrag + Richtung (Pfeil); **Skalar** = nur Zahl. **Betrag** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt** a·b = |a||b|cos θ → Winkel und Orthogonalität (a·b = 0). **Kreuzprodukt** a×b = Vektor ⊥ zu beiden, |a×b| = |a||b|sin θ.
+
+**Verfahren — Schrittfolge:** (1) **Betrag:** |a| = √(a₁²+a₂²+a₃²). (2) **Addition/Subtraktion:** komponentenweise. (3) **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; cos θ = a·b/(|a||b|); orthogonal ⇔ a·b = 0. (4) **Kreuzprodukt:** a×b steht senkrecht auf a und b; Recht-Hand-Regel.
+
+**Typische Prüfungsfehler:** Skalarprodukt = Zahl (nicht Vektor!); Kreuzprodukt = Vektor. Orthogonal: a·b = 0 (nicht a×b = 0). Betrag: Wurzel aus Summe der Quadrate der Komponenten.
+
+---
+
 ## Grundbegriffe
 
 ![Vektoren](/grafik-vektoren.svg)
@@ -2454,9 +2608,20 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2×3
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Betrag |a| = √(a₁²+a₂²+a₃²); Addition/Subtraktion komponentenweise
+- Skalarprodukt a·b = a₁b₁+a₂b₂+a₃b₃; Winkel cos θ = a·b/(|a||b|); orthogonal ⇔ a·b = 0
+- Kreuzprodukt a×b (Vektor ⊥ zu beiden); |a×b| = Fläche Parallelogramm
+- Ebenengleichung n·(r−r₀) = 0; Abstand Punkt–Ebene
+
+**Minimal-Rechenrezepte:**
+- **Betrag:** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃ (Zahl!); orthogonal ⇔ a·b = 0.
+- **Kreuzprodukt:** a×b = Vektor; |a×b| = |a||b|sin θ; a×b = −(b×a).
+- **Winkel:** cos θ = (a·b)/(|a||b|).
+
 **Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag |a| = √(aₓ²+aᵧ²+a_z²)), Skalarprodukt a×b = aₓbₓ+aᵧbᵧ+a_zb_z, orthogonale Vektoren (a×b=0), Kreuzprodukt (Rechte-Hand-Regel, Betrag = Fläche Parallelogramm).
 
-**Ergänzend vertiefend:** Anwendung in Physik (Kräfte, Geschwindigkeit); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Anwendung in Physik (Kräfte, Geschwindigkeit). Typische Fallen: Skalarprodukt = Skalar, Kreuzprodukt = Vektor; Kreuzprodukt antikommutativ (a×b ≠ b×a); EKG Linkstyp = negativer Winkel.
 
 **Häufige Fragen:**
 - "Skalarprodukt a=(1,2,3) und b=(4,0,−2)?" → 4+0−6 = −2

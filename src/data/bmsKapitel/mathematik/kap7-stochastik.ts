@@ -47,6 +47,10 @@ export const mathKapStochastik: Kapitel = {
 
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
+**Idee:** Kombinatorik beantwortet „Wie viele Möglichkeiten?“ — durch systematisches Zählen ohne alles aufzulisten. Entscheidend: **Reihenfolge relevant?** (geordnet → Variation/Permutation; ungeordnet → Kombination) und **Wiederholung erlaubt?** (mit/ohne). So vermeidest du die falsche Formel.
+
+**Verfahren:** (1) Reihenfolge wichtig? Ja → Permutation (alle n) oder Variation (k aus n); Nein → Kombination. (2) Wiederholung? Ohne → Fakultäten n!/(n−k)! bzw. (n über k); mit → n^k bzw. Kombination mit Wdh. Permutation mit identischen Elementen: n!/(k₁!·k₂!·…).
+
 1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
 2. **Darf ein Objekt mehrfach vorkommen?** (mit vs. ohne Wiederholung)
 
@@ -58,6 +62,8 @@ Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 | Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! × (n-1)!) |
 
 > **Merke:** Die Entscheidung "geordnet oder ungeordnet" ist der wichtigste erste Schritt — sie bestimmt, ob man Permutation/Variation oder Kombination verwendet.
+
+**Typische Prüfungsfehler:** Variation mit Kombination verwechseln (z. B. „3 aus 8 auswählen“ ohne Reihenfolge → Kombination; „Vorsitz + Stellvertreter“ → Variation). Bei Permutation mit Wiederholung das Teilen durch k₁!·k₂!… vergessen. (n über k): Nenner k!·(n−k)!, nicht nur k!.
 
 ---
 
@@ -174,20 +180,26 @@ Wichtige Eigenschaften:
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Fakultät n!, Permutation (Anordnung aller n Elemente), Variation (k aus n, Reihenfolge), Kombination (k aus n, ohne Reihenfolge), Urnenmodell.
+**Typische Aufgabentypen:**
+- „Auf wie viele Arten können n Objekte angeordnet werden?“ → Permutation: n!
+- „k aus n auswählen, Reihenfolge wichtig“ (z. B. PIN, Passwort) → Variation: n!/(n−k)! oder n^k (mit Wdh.)
+- „k aus n auswählen, Reihenfolge egal“ (z. B. Lotto, Ausschuss) → Kombination: (n über k)
+- Permutation mit identischen Elementen (z. B. ANNA) → n!/(k₁!·k₂!·…)
 
-**Ergänzend vertiefend:** Mit/ohne Wiederholung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Fallen:**
+- **Variation vs. Kombination:** „Vorsitz + Stellvertreter“ = Reihenfolge zählt → Variation. „3 von 8 Tests auswählen“ ohne Rang = Kombination.
+- **Ohne/mit Zurücklegen:** Ohne Zurücklegen = ohne Wiederholung; mit Zurücklegen = mit Wiederholung (n^k bei Variation).
+- **(n über k):** Nenner = k!·(n−k)!, nicht nur k!.
 
-**Häufige Fragen:**
-- "Auf wie viele Arten können 5 Medikamente auf einer Ablage angeordnet werden?" → Permutation: 5! = 120
-- "Ein Arzt wählt 3 Tests aus 8 möglichen — wie viele Kombinationen?" → C(8,3) = 56
-- "Wie viele 4-stellige Codes aus Ziffern 1–6 ohne Wiederholung?" → V(6,4) = 6!/2! = 360
-- "Lotto 6 aus 45 (österreichischer Lotto-Sonderfall)?" → C(45,6) = 8.145.060
+**Minimal-Rechenrezepte:**
+- **Permutation (alle n):** P = n!. Mit identischen: P = n!/(k₁!·k₂!·…).
+- **Variation (k aus n, geordnet):** ohne Wdh. V = n!/(n−k)! = n·(n−1)·…·(n−k+1); mit Wdh. V = n^k.
+- **Kombination (k aus n, ungeordnet):** C(n,k) = n!/(k!(n−k)!) = (n·(n−1)·…·(n−k+1))/k!. Symmetrie: C(n,k) = C(n,n−k).
+- **Erst fragen:** Reihenfolge? → Ja = V/P, Nein = C. Wiederholung? → mit = Potenz/n^k, ohne = Fakultät.
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Variation vs. Kombination: Wenn "Vorstandswahl mit Vorsitzendem und Stellvertreter" gefragt wird → Variation (Reihenfolge zählt!), nicht Kombination
-- "Ohne Zurücklegen" = ohne Wiederholung; "mit Zurücklegen" = mit Wiederholung — bei Lottofragen explizit angegeben
-- n! im Nenner des Binomialkoeffizienten: k! eliminiert Anordnungen der Auswahl, (n-k)! eliminiert die Anordnungen der Nicht-Auswahl
+**Zentral prüfungsrelevant:** Fakultät n!, Permutation, Variation (k aus n, Reihenfolge), Kombination (n über k), Urnenmodell.
+
+**Ergänzend vertiefend:** Mit/ohne Wiederholung. Typische Fallen: Variation (Reihenfolge zählt) vs. Kombination; mit Zurücklegen → n^k bei Variation; (n über k) Nenner k!·(n−k)!.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - 5! = 120, 6! = 720, 7! = 5.040, 10! = 3.628.800
@@ -347,6 +359,14 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 ---
 
+**Idee:** **Laplace** P(A) = (günstige)/(alle) bei gleichwahrscheinlichen Ergebnissen. **Komplement** P(nicht A) = 1−P(A) — bei „mindestens eines“ zuerst „keines“ berechnen. **Additionssatz** P(A∪B) = P(A)+P(B)−P(A∩B). **Unabhängig** ⇔ P(A∩B) = P(A)×P(B). **Binomial** B(n,p): P(X=k) = (n über k)×p^k×(1−p)^(n−k); μ = n×p.
+
+**Verfahren — Schrittfolge:** (1) **Laplace:** |A|/|Ω|. (2) **Komplement:** P(mind. 1) = 1−P(keiner). (3) **Additionssatz:** Schnitt P(A∩B) abziehen wenn nicht disjunkt. (4) **Unabhängig:** P(A∩B) = P(A)×P(B). (5) **Binomial:** (n über k)×p^k×(1−p)^(n−k); Erwartungswert n×p.
+
+**Typische Prüfungsfehler:** Laplace nur bei Gleichwahrscheinlichkeit. „Mindestens eines“ → 1−P(keines). Additionssatz: P(A∩B) nicht vergessen abzuziehen. Unabhängig ≠ disjunkt.
+
+---
+
 ## Grundbegriffe
 
 ![Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
@@ -480,7 +500,7 @@ Erwartungswert: μ = 4 × 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 
 **Zentral prüfungsrelevant:** Wahrscheinlichkeit (Laplace, relative Häufigkeit), P(mindestens 1) = 1−P(keiner), Additions- und Multiplikationsregel, Unabhängigkeit, Baumdiagramm.
 
-**Ergänzend vertiefend:** Bedingte Wahrscheinlichkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Bedingte Wahrscheinlichkeit. Typische Fallen: ohne Zurücklegen → keine Binomialverteilung; disjunkt ≠ unabhängig; Additionssatz P(A∩B) abziehen.
 
 **Häufige Fragen:**
 - "Wie wahrscheinlich ist mindestens ein Treffer bei 3 Versuchen mit p=0,3?" → Komplement: 1 − 0,7^3 = 1 − 0,343 = 0,657
@@ -648,6 +668,14 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
 
 ---
 
+**Idee:** **P(A|B)** = Wahrscheinlichkeit von A unter der Bedingung B; P(A|B) = P(A∩B)/P(B). **Bayes** kehrt die Bedingung um: P(Krank|Test+) aus P(Test+|Krank), Prävalenz und Spezifität. **Totale Wahrscheinlichkeit:** P(A) = Σ P(A|Bᵢ)×P(Bᵢ). **Vierfeldertafel:** TP, TN, FP, FN → Sensitivität, Spezifität, PPV, NPV.
+
+**Verfahren — Schrittfolge:** (1) **P(A|B)** = P(A∩B)/P(B). (2) **Totale W.** P(B) = P(B|A)×P(A)+P(B|Ā)×P(Ā). (3) **Bayes** P(A|B) = P(B|A)×P(A)/P(B). (4) **Vierfeldertafel** ausfüllen; PPV = TP/(TP+FP), NPV = TN/(TN+FN).
+
+**Typische Prüfungsfehler:** P(A|B) ≠ P(B|A) verwechseln. P(B) im Nenner bei Bayes (totale Wahrscheinlichkeit). Bei niedriger Prävalenz: PPV klein trotz guter Sensitivität.
+
+---
+
 ## Bedingte Wahrscheinlichkeit
 
 ![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
@@ -762,7 +790,7 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 
 **Zentral prüfungsrelevant:** Vierfeldertafel (Sensitivität, Spezifität, PPV, NPV), Prävalenz, Bayes (posterior aus Likelihood und Prior), Screening-Interpretation.
 
-**Ergänzend vertiefend:** Likelihood-Quotient; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Likelihood-Quotient. Typische Fallen: P(T+|K) = Sensitivität, P(K|T+) = PPV (nicht vertauschen); P(A|B) ≠ P(B|A); Bayes-Zähler P(B|A)·P(A).
 
 **Häufige Fragen:**
 - Gegeben Sensitivität, Spezifität, Prävalenz → berechne PPV oder NPV mittels Vierfeldertafel
@@ -934,6 +962,14 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
 **Worum geht es?** **Lagemaße** (Mittelwert, Median, Modus), **Streumaße** (Varianz σ², Standardabweichung σ); **Normalverteilung** (μ, σ), **68-95-99,7-Regel**; **Sensitivität/Spezifität**; p-Wert. **Warum für den MedAT relevant?** Normalverteilung, 68-95-99,7, Lagemaße, Streumaße, Sens/Spez, p-Wert werden geprüft. **Welche Fragen werden beantwortet?** „Mittelwert vs. Median?“; „68-95-99,7 — was?“; „Sensitivität =?“; „Varianz Formel?“; „p-Wert < 0,05?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Statistik abgedeckt.
 
 **In diesem Kapitel lernst du:** **Mittelwert**, **Median**, **Modus**; **Varianz**, **Standardabweichung**; **Normalverteilung** (μ, σ); **68-95-99,7**; **Sensitivität/Spezifität**; p-Wert.
+
+---
+
+**Idee:** **Lagemaße:** Mittelwert x̄ = Σxᵢ/n (anfällig für Ausreißer), **Median** = mittlerer Wert sortiert (robust), **Modus** = häufigster Wert. **Streuung:** Varianz s² = Σ(xᵢ−x̄)²/(n−1), **Standardabweichung** s = √s². **Normalverteilung:** 68 % innerhalb μ±σ, 95 % innerhalb μ±2σ, 99,7 % innerhalb μ±3σ. **Sensitivität** = TP/(TP+FN), **Spezifität** = TN/(TN+FP). **p-Wert** < 0,05 → signifikant.
+
+**Verfahren — Schrittfolge:** (1) **Mittelwert** Σxᵢ/n; **Median** sortieren, mittleres Element (bzw. Mittel der zwei mittleren). (2) **Varianz** Σ(xᵢ−x̄)²/(n−1); **s** = √s². (3) **68-95-99,7:** μ±σ, μ±2σ, μ±3σ. (4) **Sens** = TP/(TP+FN); **Spez** = TN/(TN+FP); **PPV** = TP/(TP+FP).
+
+**Typische Prüfungsfehler:** Varianz Nenner n−1 (Stichprobe), nicht n. Sensitivität/Spezifität vs. PPV/NPV verwechseln (Sens/Spez = Testeigenschaft; PPV/NPV = abhängig von Prävalenz). p < 0,05 = signifikant, nicht „bewiesen“.
 
 ---
 
@@ -1110,7 +1146,7 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 
 **Zentral prüfungsrelevant:** Lagemaße (Mittelwert, Median, Modus), Streuung (Spannweite, Varianz, Standardabweichung), Boxplot, Interpretation klinischer Studien.
 
-**Ergänzend vertiefend:** Konfidenzintervalle; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konfidenzintervalle. Typische Fallen: Mittelwert ≠ Median bei schiefer Verteilung; Standardfehler SEM = σ/√n (nicht Streuung der Rohwerte); p < 0,05 ≠ „H0 ist falsch“.
 
 **Häufige Fragen:**
 - Datensatz gegeben → Mittelwert, Median, Modus berechnen

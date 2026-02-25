@@ -40,6 +40,10 @@ export const mathKap6: Kapitel = {
 
 ---
 
+**Idee:** Ein **Vektor** beschreibt eine gerichtete Größe (Kraft, Geschwindigkeit, Verschiebung) — also Betrag **und** Richtung. Ein **Skalar** ist nur eine Zahl (Temperatur, Masse). Rechnen mit Vektoren: komponentenweise (Addition, Skalarmultiplikation), Betrag mit Pythagoras, Einheitsvektor = Richtung mit Betrag 1. So lassen sich Kräfte zerlegen, Abstände und Verbindungsvektoren berechnen.
+
+**Verfahren:** Betrag |v| = √(v₁² + v₂² + v₃²). Addition: komponentenweise; Subtraktion: a − b = a + (−b). Verbindungsvektor AB = Ortsvektor(B) − Ortsvektor(A). Einheitsvektor ê = v/|v| (nur wenn v ≠ 0). Linearkombination: λ₁v₁ + λ₂v₂; linear unabhängig ⇔ keiner ist Vielfaches der anderen (2D) bzw. nicht koplanar (3D).
+
 Ein **Vektor** ist eine gerichtete Größe: Er besitzt sowohl einen **Betrag** (Länge) als auch eine **Richtung**. Im Gegensatz dazu ist ein **Skalar** eine reine Zahlgröße ohne Richtung (z. B. Temperatur, Masse, Energie). Vektoren werden grafisch als Pfeile dargestellt und algebraisch als Spaltenvektoren geschrieben:
 
 $$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$$
@@ -49,6 +53,8 @@ Der Betrag eines Vektors ergibt sich aus dem verallgemeinerten Satz des Pythagor
 $$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$$
 
 Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{v_1^2 + v_2^2}$. Der **Nullvektor** $\\vec{0} = (0, 0, 0)^\\top$ hat Betrag 0 und keine definierte Richtung — er ist das neutrale Element der Vektoraddition.
+
+**Typische Prüfungsfehler:** Betrag als Summe der Komponenten rechnen (v₁+v₂ statt √(v₁²+v₂²)). Verbindungsvektor AB als A−B statt B−A. Einheitsvektor durch Betrag² teilen statt durch Betrag. Vektor und Skalar verwechseln (z. B. Kraft = Vektor, Temperatur = Skalar).
 
 > **Merke:** Vektoren beschreiben gerichtete Größen (Kraft, Geschwindigkeit, Verschiebung). Skalare beschreiben ungerichtete Größen (Temperatur, Masse, Energie). Diese Unterscheidung ist in der Physik und Medizin fundamental.
 
@@ -144,22 +150,29 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag |a| = √(aₓ²+aᵧ²) bzw. 3D), Addition/Subtraktion, Skalarmultiplikation, Orts- und Richtungsvektoren.
+**Typische Aufgabentypen:**
+- Betrag eines 2D- oder 3D-Vektors (Pythagoras: √(v₁²+v₂²) bzw. +v₃²)
+- Einheitsvektor: v/|v| (Vektor durch Betrag teilen)
+- Addition/Subtraktion komponentenweise
+- Verbindungsvektor AB und Abstand d(A,B) = |AB| (Ziel − Start)
+- Lineare Abhängigkeit: Ist **b** = k·**a**? (parallel ⇔ linear abhängig)
 
-**Ergänzend vertiefend:** Kollinearität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Fallen:**
+- Skalar ≠ Vektor: Temperatur, Masse, Energie = Skalar; Kraft, Geschwindigkeit = Vektor
+- Betrag ≠ Summe der Komponenten: |v| = √(v₁²+v₂²), **nicht** v₁+v₂
+- Verbindungsvektor: **AB = B − A** (Ziel minus Start), nicht A − B
+- Einheitsvektor: durch **Betrag** dividieren (nicht durch Betrag²)
 
-**Häufige Fragen:**
-- Betrag eines 2D- oder 3D-Vektors berechnen (Pythagoras-Formel anwenden)
-- Einheitsvektor bestimmen: Vektor durch seinen Betrag dividieren
-- Zwei Vektoren komponentenweise addieren oder subtrahieren
-- Lineare Abhängigkeit prüfen: Ist $\\vec{b} = k \\cdot \\vec{a}$ für ein skalares $k$?
-- Verbindungsvektor und Abstand zweier Punkte berechnen
+**Minimal-Rechenrezepte:**
+- **Betrag:** |v| = √(v₁² + v₂² + v₃²). 2D: dritte Komponente weglassen.
+- **Einheitsvektor:** ê = v/|v| (nur für v ≠ 0). Probe: |ê| = 1.
+- **Addition:** (a₁+b₁, a₂+b₂, a₃+b₃). **Subtraktion:** (a₁−b₁, …).
+- **Verbindungsvektor:** AB = Ortsvektor(B) − Ortsvektor(A). **Abstand:** d(A,B) = |AB|.
+- **Pythagoras-Tripel:** 3-4-5, 5-12-13 → Betrag ohne Taschenrechner.
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Skalar ≠ Vektor: Temperatur, Energie, Masse = Skalare; Kraft, Geschwindigkeit, Verschiebung = Vektoren
-- Betrag ≠ Komponentensumme: $|\\vec{v}| = \\sqrt{v_1^2+v_2^2}$, NICHT $v_1+v_2$
-- Verbindungsvektor: **immer Ziel − Start** ($\\vec{AB} = B - A$, nicht $A - B$)
-- Einheitsvektor: durch den Betrag dividieren (nicht durch das Quadrat)
+**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag, Addition/Subtraktion, Skalarmultiplikation), Orts- und Verbindungsvektor, Einheitsvektor.
+
+**Ergänzend vertiefend:** Kollinearität. Typische Fallen: Betrag |v| = √(v₁²+v₂²), nicht v₁+v₂; Verbindungsvektor AB = B−A (Ziel minus Start); Einheitsvektor durch Betrag dividieren.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Pythagoräische Tripel: **3-4-5**, 5-12-13, 8-15-17 → Betrag sofort ablesen ohne Rechnen!
@@ -358,6 +371,14 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 ---
 
+**Idee:** **Skalarprodukt** a·b = Zahl (Projektion, Winkel); **orthogonal** ⇔ a·b = 0. **Kreuzprodukt** a×b = Vektor ⊥ zu beiden; **Betrag** = Fläche Parallelogramm; **Rechte-Hand-Regel**; a×b = −(b×a). **Projektion** von a auf b: (a·b/|b|²)×b.
+
+**Verfahren — Schrittfolge:** (1) **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; cos θ = (a·b)/(|a||b|); orthogonal ⇔ a·b = 0. (2) **Kreuzprodukt:** Komponentenform oder Sarrus; |a×b| = |a||b|sin θ. (3) **Projektion:** proj_b(a) = (a·b/|b|²)×b; skalare Komponente = (a·b)/|b|.
+
+**Typische Prüfungsfehler:** Skalarprodukt = Skalar (nicht Vektor); Kreuzprodukt = Vektor. Orthogonal: a·b = 0 (nicht a×b = 0). a×b = −(b×a).
+
+---
+
 ## Skalarprodukt
 
 ![Skalarprodukt Kreuzprodukt](/grafik-vektoren.svg)
@@ -487,7 +508,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 **Zentral prüfungsrelevant:** Skalarprodukt a×b = aₓbₓ+aᵧbᵧ(+a_zb_z), Orthogonalität a×b=0, Winkel zwischen Vektoren, Kreuzprodukt (Rechte-Hand-Regel, Fläche Parallelogramm).
 
-**Ergänzend vertiefend:** Anwendung Kräfte/ Geschwindigkeit; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Anwendung Kräfte/ Geschwindigkeit. Typische Fallen: Skalarprodukt → Skalar; Kreuzprodukt → Vektor, antikommutativ; Orthogonalität Skalarprodukt = 0, Parallelität Kreuzprodukt = 0.
 
 **Häufige Fragen:**
 - Skalarprodukt berechnen und Orthogonalität prüfen: $\\vec{a} \\cdot \\vec{b} = 0$?
@@ -716,6 +737,14 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ---
 
+**Idee:** **Gerade** r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor). **Ebene** n·(r−r₀) = 0 (Normalenform) oder r = r₀ + s·d₁ + t·d₂ (Parameterform). **Determinante** det(A) = ad−bc (2×2); det = 0 ⇒ singulär (keine eindeutige Lösung). **Inverse** 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.
+
+**Verfahren — Schrittfolge:** (1) **Gerade durch A, B:** r₀ = A, d = B−A. (2) **Ebene:** Normalenvektor n = d₁×d₂; Koordinatenform ax+by+cz = d mit d = n·r₀. (3) **det(2×2):** ad−bc. **A⁻¹:** (d −b; −c a)/det. (4) **LGS:** x = A⁻¹·b falls det ≠ 0.
+
+**Typische Prüfungsfehler:** Gerade: d = B−A (nicht A−B). Inverse nur bei det ≠ 0. 2×2-Inverse: Nebendiagonale **negieren**.
+
+---
+
 ## Geradengleichung im Raum
 
 ![Gerade Ebene Matrix](/grafik-vektoren.svg)
@@ -853,7 +882,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 **Zentral prüfungsrelevant:** Gerade (Parameterform, Richtungsvektor), Ebene (Parameterform, Koordinatenform ax+by+cz=d), Normalenvektor n=(a,b,c), Lage Gerade–Ebene (Schnitt, parallel).
 
-**Ergänzend vertiefend:** Abstand windschiefer Geraden; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Abstand windschiefer Geraden. Typische Fallen: Determinante 0 → singuläre Matrix; Matrizenmultiplikation nicht kommutativ; Normalenvektor senkrecht zur Ebene.
 
 **Häufige Fragen:**
 - Normalenvektor aus Koordinatenform direkt ablesen: $ax+by+cz=d$ → $\\vec{n}=(a,b,c)$
@@ -1087,6 +1116,14 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ---
 
+**Idee:** **Abstand Punkt–Punkt** = |AB| = |B−A|. **Punkt–Gerade:** d = |r₀P×d|/|d| (Kreuzprodukt) oder Lotfußpunkt t_F = (r₀P·d)/|d|². **Punkt–Ebene:** Hessesche Normalform d = |n·r_P−d|/|n| (n normiert) bzw. |ax+by+cz−d|/√(a²+b²+c²). **Schnittwinkel** Gerade–Gerade: cos α = |d₁·d₂|/(|d₁||d₂|); Gerade–Ebene: sin α = |d·n|/(|d||n|).
+
+**Verfahren — Schrittfolge:** (1) **Punkt–Punkt:** d = |B−A|. (2) **Punkt–Gerade:** d(P,g) = |r₀P×d|/|d|. (3) **Punkt–Ebene:** Ebenengleichung in Koordinatenform; d = |ap₁+bp₂+cp₃−d|/√(a²+b²+c²). (4) **Schnittwinkel:** Gerade–Gerade: cos; Gerade–Ebene: sin mit n.
+
+**Typische Prüfungsfehler:** Punkt–Ebene: Betrag im Zähler und durch |n| teilen. Gerade–Ebene-Winkel: **sin** (nicht cos). Windschief: nur im ℝ³.
+
+---
+
 ## Abstand Punkt–Punkt
 
 ![Abstände](/grafik-vektoren.svg)
@@ -1213,7 +1250,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 **Zentral prüfungsrelevant:** Hessesche Normalform der Ebene, Abstand Punkt–Ebene (d = |n×p−d|/|n|), Abstand Punkt–Gerade, Anwendung (Anatomie, Bildgebung).
 
-**Ergänzend vertiefend:** Lotfußpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Lotfußpunkt. Typische Fallen: Gerade–Ebene-Winkel mit sin (nicht cos); windschief nur im ℝ³; Abstand Punkt–Ebene: Betrag des Zählers durch |n|.
 
 **Häufige Fragen:**
 - Punkt-Ebene-Abstand mit der Hesseschen Normalform berechnen (4-Schritte-Vorgehen)

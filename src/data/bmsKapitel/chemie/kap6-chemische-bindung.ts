@@ -125,7 +125,7 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 **Zentral prüfungsrelevant:** Ionenbindung (Gitterenergie E∝q₁q₂/r), Schmelzpunkt (MgO vs. NaCl), Ladung und Ionenradius, Born-Haber-Zyklus, typische Ionengitter.
 
-**Ergänzend vertiefend:** Gitterenthalpie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Gitterenthalpie. Typische Fallen: Gitterenergie ≠ Hydratationsenthalpie (beide für Löslichkeit); Ionenkristall fest = kein Leiter (erst Schmelze/Lösung); Coulomb E ∝ q₁·q₂ — doppelte Ladung beider → 4× E.
 
 **Häufige Fragen:**
 - "Warum hat MgO einen viel höheren Schmelzpunkt als NaCl?" → Mg²⁺ und O²⁻ sind doppelt geladen und kleiner → E ∝ q₁·q₂/r → 5× größere Gitterenergie (~3795 vs. 786 kJ/mol)
@@ -487,7 +487,7 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 
 **Zentral prüfungsrelevant:** Polare vs. unpolare Moleküle (Dipolmoment μ), Geometrie (CO₂ linear → unpolar; H₂O gewinkelt → polar), Elektronegativitätsdifferenz, VSEPR.
 
-**Ergänzend vertiefend:** Molekülpolarität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Molekülpolarität. Typische Fallen: Polare Bindungen ≠ polares Molekül (CO₂, CCl₄ unpolar); VSEPR = Elektronenanordnung, NH₃ trigonal pyramidal; π-Bindung verhindert Rotation → Cis-Trans bei Doppelbindungen.
 
 **Häufige Fragen:**
 - "Ist CO₂ polar oder unpolar?" → CO₂ hat polare C=O-Bindungen (ΔEN = 1,0), aber lineare Geometrie → Dipole heben sich auf → unpolar (μ = 0)
@@ -858,7 +858,7 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 **Zentral prüfungsrelevant:** Zwischenmolekulare Kräfte (London-Dispersionskräfte, Dipol-Dipol, H-Brücken), Stärke und Reichweite, Siedepunkt-Abhängigkeit (Masse, Oberfläche).
 
-**Ergänzend vertiefend:** Van-der-Waals; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Van-der-Waals. Typische Fallen: H-Brücken nur mit N, O, F (nicht S, nicht C–H); Eis leichter als Wasser (Dichteanomalie); Verzweigung → weniger London-Kräfte → niedrigerer Siedepunkt.
 
 **Häufige Fragen:**
 - "Welche intermolekularen Kräfte wirken zwischen unpolaren Molekülen wie Edelgasen?" → ausschließlich London-Dispersionskräfte (instantane Dipole)
@@ -1266,7 +1266,7 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 
 **Zentral prüfungsrelevant:** Kohlenhydrate (Monosaccharide, Disaccharide, Polysaccharide), α- vs. β-glycosidische Bindung, Stärke (α-1,4, Amylase) vs. Cellulose (β-1,4, keine menschliche Cellulase), Verdauung.
 
-**Ergänzend vertiefend:** Glykogen, Laktoseintoleranz; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Glykogen, Laktoseintoleranz. Typische Fallen: Hydrophober Effekt entropisch (nicht enthalpisch); Denaturierung ≠ Hydrolyse (Peptidbindungen bleiben); α-glycosidisch (Stärke/Glykogen) ≠ β (Cellulose); trans-Fettsäuren ohne Knick → kardiovaskuläres Risiko.
 
 **Häufige Fragen:**
 - "Warum kann der Mensch Cellulose nicht verdauen, Stärke aber schon?" → Stärke: α-1,4-glycosidische Bindungen → spaltet α-Amylase; Cellulose: β-1,4 → kein menschliches Enzym (Cellulase)

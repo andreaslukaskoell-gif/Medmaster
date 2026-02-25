@@ -35,7 +35,7 @@ export const bioKapOekologie: Kapitel = {
 
 ## Ökologie: Definition und Ebenen
 
-**Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
+**Um die Ökologie einzuführen,** beginnen wir mit der Definition und den Ebenen. **Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
 
 Die Ökologie arbeitet auf mehreren **Ebenen**:
 - **Organismus:** Einzelnes Individuum; Anpassung an Umweltfaktoren (Toleranz, Verhalten).
@@ -841,14 +841,14 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 **Zentral prüfungsrelevant:** Nahrungskette/-netz, 10%-Regel (Energieverlust pro Stufe), Produzenten/Konsumenten/Destruenten, Trophieebenen, Biomagnifikation.
 
-**Ergänzend vertiefend:** Biomassepyramide; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Biomassepyramide.
 
 **Häufige Fragen:**
 - 10%-Regel erklären und auf konkrete Nahrungsketten anwenden (Berechnung über mehrere Stufen)
 - GPP vs. NPP definieren: NPP = GPP − autotrophe Respiration
 - Stickstoffkreislauf-Schritte in korrekter Reihenfolge aufzählen und beteiligte Organismen nennen
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Energiefluss (einrichtungsgerichtet, 10%-Regel) ≠ Stoffkreislauf (Materie zirkuliert).
 - GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar.
 - Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf.
@@ -857,7 +857,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 **Wichtige Begriffe & Definitionen:**
 - Produzenten, Konsumenten (I–III), Destruenten, Trophieebene, Nahrungskette, Nahrungsnetz, 10%-Regel, GPP, NPP, Stoffkreislauf, Eutrophierung.
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - 10%-Regel (Lindeman 1942): ca. 10% Energieübertragung pro Trophiestufe
 - Ozeane absorbieren ca. 30% des anthropogenen CO₂ → Ozeanversauerung
 - N₂O = 298× stärkeres Treibhausgas als CO₂
@@ -1247,21 +1247,21 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 **Zentral prüfungsrelevant:** IgG (2 schwere + 2 leichte Ketten, Fab = Antigenbindung, Fc = Effektorfunktion), Antikörperklassen (IgM, IgG, IgA, IgE, IgD), neutralisierend/opsonisierend/Komplement.
 
-**Ergänzend vertiefend:** Affinitätsreifung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Affinitätsreifung.
 
 **Häufige Fragen:**
 - IgG-Aufbau beschreiben: 2 schwere + 2 leichte Ketten, Fab (Antigenbindung) vs. Fc (Effektorfunktion)
 - Die fünf Ig-Klassen mit jeweiliger Hauptfunktion und Vorkommen nennen
 - Serologische Diagnostik: IgM (akute Infektion) vs. IgG (durchgemachte Infektion/Immunität)
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - IgM (Primärantwort, akut) vs. IgG (Sekundärantwort, dauerhaft) — Reihenfolge merken: M kommt vor G im Alphabet, M kommt zuerst
 - IgA (Schleimhautschutz, Sekrete) vs. IgE (Allergie, Mastzellen) — verschiedene Lokalisation und Funktion
 - Fab (Fragment antigen-binding, variabel) vs. Fc (Fragment crystallizable, konstant) — nicht verwechseln
 - IgM kann die Plazenta NICHT passieren (zu groß als Pentamer), nur IgG wird aktiv über FcRn transportiert
 - Opsonisierung (Markierung für Phagozytose) ≠ Neutralisierung (direkte Blockade des Pathogens)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - IgG = 75% aller Serumantikörper, einziges plazentagängiges Ig
 - IgM = Pentamer mit 10 Bindestellen, stärkster Komplementaktivator
 - IgA = dominantes Ig in Sekreten (Speichel, Muttermilch, Tränen), Dimer in Sekreten
@@ -1462,21 +1462,21 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 **Zentral prüfungsrelevant:** V(D)J-Rekombination (variable Antikörper-/TCR-Diversität), RAG1/RAG2, TdT (terminaler Transferase), somatische Rekombination, klonale Selektion.
 
-**Ergänzend vertiefend:** Klasse-Umschaltung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Klasse-Umschaltung.
 
 **Häufige Fragen:**
 - Das Prinzip der V(D)J-Rekombination und die beteiligten Enzyme (RAG1/RAG2, TdT) erklären
 - Die drei Quellen der Antikörperdiversität unterscheiden (kombinatorisch, junctional, somatische Hypermutation)
 - Primärantwort (IgM, niedrige Affinität) vs. Sekundärantwort (IgG, hohe Affinität durch Gedächtniszellen) vergleichen
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - V(D)J-Rekombination (vor Antigenkontakt, Knochenmark) vs. somatische Hypermutation (nach Antigenkontakt, Keimzentren)
 - Kombinatorische Diversität (Segmentwahl) vs. junctionale Diversität (N-Nukleotide durch TdT an Schnittstellen)
 - Klonale Selektion: das Antigen wählt den passenden Klon aus — Antikörper werden nicht nach Bedarf neu konstruiert
 - Affinitätsreifung findet nur in Keimzentren statt, nicht im Knochenmark
 - Somatische Hypermutation betrifft nur V-Regionen der Antikörpergene, nicht das gesamte Genom
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Über 10¹⁰ verschiedene Antikörperspezifitäten möglich
 - RAG1/RAG2 katalysiert die V(D)J-Rekombination, TdT fügt N-Nukleotide ein
 - AID (Activation-Induced Cytidine Deaminase): Mutationsrate 10⁵–10⁶× höher als normal
@@ -1701,21 +1701,21 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 
 **Zentral prüfungsrelevant:** AB0-System (I^A, I^B, i), Genotypen (A: I^A I^A oder I^A i; B: I^B I^B oder I^B i; AB: I^A I^B; 0: ii), Punnett-Quadrat, Antikörper gegen fehlende Antigene (Anti-A, Anti-B).
 
-**Ergänzend vertiefend:** Bombay-Phänotyp; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Bombay-Phänotyp.
 
 **Häufige Fragen:**
 - Genotypen aller vier Blutgruppen aufzählen und Kreuzungsschemata mit Punnett-Quadrat lösen
 - Den Unterschied zwischen Kodominanz und unvollständiger Dominanz am Beispiel AB0 erklären
 - Antikörper-Antigen-Zuordnung: Wer hat welche Antikörper und warum?
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Kodominanz (beide Allele voll exprimiert: AB zeigt A UND B) vs. unvollständige Dominanz (Intermediärphänotyp)
 - Blutgruppe 0 hat H-Antigen auf den Erythrozyten, nicht "kein Antigen"
 - I^A und I^B sind kodominant zueinander, aber beide dominant über i⁰
 - Universeller Spender (0-) vs. universeller Empfänger (AB+) — in der Praxis dennoch blutgruppenidentisch transfundieren
 - Ein AB-Elternteil kann kein Kind mit Blutgruppe 0 haben (kein i⁰-Allel vorhanden)
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - ABO-Gen auf Chromosom 9, drei Allele: I^A, I^B, i⁰
 - A-Transferase: hängt N-Acetylgalactosamin an H-Antigen; B-Transferase: Galactose
 - Bombay-Phänotyp: 1:10.000 in Indien, FUT1-Defekt auf Chromosom 19
@@ -1926,21 +1926,21 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
 
 **Zentral prüfungsrelevant:** Rhesus (D-Antigen), Rhesus-Inkompatibilität (Sensibilisierung Mutter bei 1. Kind → Reaktion bei 2. Kind), Anti-D-Prophylaxe, hämolytische Neugeborenenerkrankung.
 
-**Ergänzend vertiefend:** Kell, Duffy; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kell, Duffy.
 
 **Häufige Fragen:**
 - Den Zweiphasen-Mechanismus der Rhesus-Inkompatibilität erklären (Sensibilisierung → Reaktion)
 - Warum ist das erste Kind meist nicht betroffen, das zweite aber gefährdet?
 - Wirkmechanismus und Zeitpunkt der Anti-D-Prophylaxe beschreiben
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - 1. Schwangerschaft = Sensibilisierung (IgM, kann Plazenta nicht passieren), 2. Schwangerschaft = Reaktion (IgG, passiert Plazenta)
 - RhD ist autosomal dominant (nicht kodominant wie AB0), dd = Rh-negativ
 - Anti-D-Prophylaxe verhindert die Sensibilisierung, sie behandelt nicht eine bereits bestehende
 - IgG passiert die Plazenta aktiv über FcRn, nicht durch einfache Diffusion
 - Rh-negativ = Deletion des RHD-Gens (in Europa), nicht nur ein "schwaches" Allel
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - RHD-Gen auf Chromosom 1p36, autosomal dominant
 - 85% der Europäer Rh+, 15% Rh- (Basken: bis 35% Rh-)
 - Anti-D-Prophylaxe: 28. SSW (antepartal) + <72h postpartal

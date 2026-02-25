@@ -39,7 +39,8 @@ export type SequenceTask = {
 // =============================================================================
 // Pflicht: PDF IB_ZF_26.pdf öffnen, Zahlenfolgen-Beispiele 1:1 abtippen.
 // Für jede Aufgabe: sequence (inkl. zwei "?"), options A–E, correctOptionId, explanation, source.
-// Diese Liste ist fix, nicht zufällig, nicht vom Generator betroffen.
+// Diese Liste ist FIX – niemals vom Generator verändern oder erweitern.
+// Training ausschließlich über generateSequenceTask/generateSequenceTaskSet (unten).
 
 export const OFFICIAL_ZF_EXAMPLES: SequenceTask[] = [
   {

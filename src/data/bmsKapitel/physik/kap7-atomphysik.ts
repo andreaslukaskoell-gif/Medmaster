@@ -52,7 +52,9 @@ Das **Bohrsche Atommodell** (1913) löste dieses Problem durch zwei Postulate:
 1. Elektronen bewegen sich auf bestimmten erlaubten Kreisbahnen (Schalen K, L, M, …) ohne Energieabstrahlung.
 2. Energie wird nur beim Übergang zwischen Schalen emittiert oder absorbiert (E = hf).
 
-Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energien Eₙ = −13,6 eV/n² für Wasserstoff. Je größer n, desto weiter die Bahn vom Kern und desto höher (weniger negativ) die Energie. Für n = 1 (Grundzustand): E₁ = −13,6 eV; für n = 2: E₂ = −3,4 eV; für n = 3: E₃ = −1,51 eV. Die Ionisierungsenergie von Wasserstoff beträgt daher 13,6 eV.
+Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energien **Eₙ = −13,6 eV/n²** für Wasserstoff. Je größer n, desto weiter die Bahn vom Kern und desto höher (weniger negativ) die Energie. Für n = 1 (Grundzustand): E₁ = −13,6 eV; für n = 2: E₂ = −3,4 eV; für n = 3: E₃ = −1,51 eV. Die Ionisierungsenergie von Wasserstoff beträgt daher 13,6 eV.
+
+**Formelklartext:** Eₙ = −13,6 eV/n² bedeutet: Die **Bindungsenergie** des Elektrons (negativ = gebunden) wird **betragsmäßig kleiner**, je weiter die Schale (n ↑). **ΔE beim Übergang** n₂ → n₁: ΔE = Eₙ₁ − Eₙ₂ = 13,6·(1/n₁² − 1/n₂²) eV (Abstrahlung beim Fall in tiefere Schale). **Größenordnung:** Ionisierung H = 13,6 eV; Hα (3→2) = 13,6·(1/4 − 1/9) = 1,89 eV; sichtbares Licht ≈ 1,8–3,1 eV.
 
 | Schale | n | Eₙ (H-Atom) | Max. Elektronen (2n²) |
 |--------|---|-------------|----------------------|
@@ -76,6 +78,8 @@ Wenn ein Elektron von einer höheren Schale (n₂) auf eine niedrigere (n₁) f�
 > **E = hf = hc/λ**
 
 mit h = 6,626 × 10⁻³⁴ J·s (Plancksches Wirkungsquantum), f = Frequenz, c ≈ 3 × 10⁸ m/s, λ = Wellenlänge.
+
+**Formelklartext:** E = hf = hc/λ bedeutet: Die **Photonenenergie** ist proportional zur **Frequenz** (E ∝ f) und **umgekehrt proportional zur Wellenlänge** (E ∝ 1/λ). Höhere Frequenz (kürzere λ) → energiereicheres Photon (z. B. UV, Röntgen). **Einheiten:** E in **Joule** oder **eV** (1 eV = 1,602×10⁻¹⁹ J); λ in m → E = hc/λ in J. **MedAT-Falle:** E in eV umrechnen: E[eV] = E[J] / (1,602×10⁻¹⁹). Hα (656 nm) → E ≈ 1,89 eV.
 
 Die Energie des Photons entspricht der Energiedifferenz: ΔE = Eₙ₂ − Eₙ₁ = hf.
 
@@ -103,6 +107,8 @@ In der Praxis misst die **Spektrophotometrie** die Extinktion (Absorbanz) einer 
 
 mit A = Extinktion (dimensionslos), ε = molarer Extinktionskoeffizient [L·mol⁻¹·cm⁻¹], c = Konzentration [mol/L], d = Schichtdicke [cm].
 
+**Formelklartext:** A = ε·c·d heißt: **Extinktion** („optische Dichte“) ist proportional zur **Konzentration** c und zur **Schichtdicke** d. Doppelte Konzentration oder doppelte Weglänge → **doppelte** Extinktion. **A = log₁₀(I₀/I)** — nicht „Absorption in %“: Bei A = 1 ist T = I/I₀ = 10 %; bei A = 2 ist T = 1 %. **Einheiten:** [ε] = L/(mol·cm), [c] = mol/L, [d] = cm → A dimensionslos. Gilt nur bei **verdünnten** Lösungen und **monochromatischem** Licht.
+
 Je mehr chromophore Moleküle in der Lösung und je länger der optische Weg, desto mehr Licht wird absorbiert. Die Transmission T = I/I₀ und Extinktion A = −log T = log(I₀/I) sind verknüpft. Bei A = 1 beträgt T = 10 %, bei A = 2 nur noch T = 1 %. Das Gesetz gilt nur bei monochromatischem Licht, verdünnten Lösungen und Abwesenheit von Streuung oder Fluoreszenz.
 
 > **Merke:** Lambert-Beer gilt linear nur bei verdünnten Lösungen (c < 0,01 mol/L) und monochromatischem Licht. Bei hohen Konzentrationen treten Abweichungen auf.
@@ -127,7 +133,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 **Zentral prüfungsrelevant:** **Pauli-Prinzip:** Jedes Orbital kann **maximal 2 Elektronen** aufnehmen. Wasserstoff-Spektrum (Lyman UV, Balmer sichtbar, Paschen IR), Hα 656 nm (n=3→2), Energieniveaus E_n ~ 1/n², Photon E = h·f, Rydberg.
 
-**Ergänzend vertiefend:** Feinstruktur; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Feinstruktur. Typische Fallen: Emissionsspektrum (helle Linien) ≠ Absorptionsspektrum (dunkle Linien); Lyman (UV) ≠ Balmer (sichtbar) ≠ Paschen (IR); E = hc/λ — kürzere λ = höhere Energie; Lambert-Beer A = log(I₀/I), nicht %.
 
 **Häufige Fragen:**
 - "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
@@ -136,9 +142,12 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 - "Welche Wellenlängen nutzt die Pulsoximetrie?" → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
 
 **Typische Prüfungsfallen / Verwechslungen:**
-- Emissionsspektrum (helle Linien auf dunklem Hintergrund) ≠ Absorptionsspektrum (dunkle Linien im Kontinuum)
-- Lyman-Serie (UV, n→1) ≠ Balmer-Serie (sichtbar, n→2) ≠ Paschen-Serie (IR, n→3)
-- Bei Lambert-Beer: A ist nicht die Absorption in Prozent, sondern A = log₁₀(I₀/I); bei A = 1 gilt T = 10 %
+- **Emissionsspektrum** (helle Linien auf dunklem Hintergrund) ≠ **Absorptionsspektrum** (dunkle Linien im Kontinuum). Emission = Atom gibt Photon ab (Übergang nach unten); Absorption = Atom nimmt Photon auf (Übergang nach oben).
+- **Lyman** (UV, n→1) ≠ **Balmer** (sichtbar, n→2) ≠ **Paschen** (IR, n→3). Balmer ist die **einzige** Wasserstoff-Serie im sichtbaren Bereich — Hα = 656 nm (rot).
+- **Lambert-Beer:** A ist **nicht** die Absorption in Prozent. A = log₁₀(I₀/I); bei A = 1 gilt T = I/I₀ = 10 %; bei A = 2 gilt T = 1 %. Doppelte Konzentration → doppelte A (linear nur bei Verdünnung).
+- **E = hc/λ:** E in **eV** für MedAT oft nötig — 1 eV = 1,602×10⁻¹⁹ J. Kürzere Wellenlänge → **höhere** Photonenenergie.
+- **Pulsoximetrie:** 660 nm (Hb absorbiert stark) und **940 nm** (HbO₂ absorbiert stärker) — nicht zwei rote Wellenlängen. Isobestischer Punkt bei 805 nm.
+- **Pauli:** Jedes Orbital **maximal 2 Elektronen** (entgegengesetzter Spin).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - h = 6,626 × 10⁻³⁴ J·s; c = 3 × 10⁸ m/s; 1 eV = 1,602 × 10⁻¹⁹ J
@@ -448,7 +457,7 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 **Zentral prüfungsrelevant:** Radioaktiver Zerfall (α Z−2 A−4, β⁻ Z+1, β⁺ Z−1, γ unverändert), **ionisierende Strahlung beim Zerfall = Alpha, Beta, Gamma** (nicht Infrarot!). **Kernspaltung:** Auslösung durch **Neutronen**. **Massendefekt:** Kernmasse **kleiner** als Summe der Nukleonenmassen. Halbwertszeit, Aktivität, Strahlenschutz, Anwendung (PET, Szintigraphie, Therapie).
 
-**Ergänzend vertiefend:** Bindungsenergie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Bindungsenergie. Typische Fallen: Ionisierend nur Alpha, Beta, Gamma (nicht IR); Kernspaltung durch Neutronen; Massendefekt = Kernmasse kleiner als Nukleonensumme; Gray (Energie) ≠ Sievert (biolog. Wirksamkeit).
 
 **Häufige Fragen:**
 - "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
@@ -750,7 +759,7 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 **Zentral prüfungsrelevant:** Röntgen: Bremsstrahlung (kontinuierlich, Abbremsung e⁻), charakteristische Strahlung (diskrete Linien, Schalenübergänge), Kα/Kβ, Anwendung (Diagnostik, CT).
 
-**Ergänzend vertiefend:** Absorptionskante; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Absorptionskante. Typische Fallen: Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum); stochastisch (kein Schwellenwert) ≠ deterministisch (Schwellendosis); HVL = ln2/μ.
 
 **Häufige Fragen:**
 - "Was ist Bremsstrahlung vs. charakteristische Strahlung?" → Bremsstrahlung: kontinuierliches Spektrum (Abbremsung im Coulomb-Feld); charakteristische Strahlung: diskrete Linien (elementspezifische Schalenübergänge)
@@ -1032,7 +1041,7 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 
 **Zentral prüfungsrelevant:** PET (β⁺-Zerfall, Annihilation e⁺+e⁻ → 2×511 keV γ), Ruheenergie m_e·c² = 0,511 MeV, Koinzidenzdetektion, ¹⁸F-FDG, Anwendung (Tumordiagnostik, Stoffwechsel).
 
-**Ergänzend vertiefend:** SPECT vs. PET; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** SPECT vs. PET. Typische Fallen: PET β⁺, Koinzidenz, kein Kollimator; SPECT γ, Kollimator nötig; T1 (Longitudinal) ≠ T2 (Transversal); Photoeffekt: Energie von Frequenz, nicht Intensität.
 
 **Häufige Fragen:**
 - "Warum 511 keV bei der PET?" → Ruheenergie eines Elektrons = m_e·c² = 0,511 MeV; Annihilation wandelt Ruhemasse beider Teilchen vollständig in Energie um

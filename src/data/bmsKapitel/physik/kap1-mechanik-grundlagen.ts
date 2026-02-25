@@ -195,7 +195,7 @@ Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse*
 - **Masse (kg) ≠ Gewichtskraft (N):** F_G = m·g; g ≈ 9,81 m/s² auf der Erde; Masse ortsunabhängig.
 - Jede physikalische Größe = Zahlenwert × Einheit; Dimensionsanalyse prüft Einheitskonsistenz.
 
-**Ergänzend vertiefend:** Abgeleitete Größen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Abgeleitete Größen. Typische Fallen: Joule (Energie) ≠ Watt (Leistung); Kraft in N = kg·m/s²; Masse (kg) ≠ Gewichtskraft (N); Newton abgeleitet, keine Basiseinheit.
 
 **Häufige Prüfungsfragen (typische BMS-Formulierungen):**
 - "Was ist die SI-Einheit des Drucks?" → Pascal (Pa = N/m² = kg·m⁻¹·s⁻²)
@@ -558,7 +558,7 @@ Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) 
 
 **Zentral prüfungsrelevant:** Wissenschaftliche Notation (Vorzeichen, Zehnerpotenz), SI-Präfixe (µ, m, k, M), Längen/Flächen/Volumina, Dimensionskontrolle (M·L·T).
 
-**Ergänzend vertiefend:** Konsistenzprüfung von Einheiten in Formeln (z. B. µg/mL × mL = µg); signifikante Stellen; typische Verwechslungen (M vs. m, cm² vs. m², ng/µg/mg) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konsistenzprüfung von Einheiten in Formeln (z. B. µg/mL × mL = µg); signifikante Stellen. Typische Fallen: 1 cm² = 10⁻⁴ m² (Exponent quadrieren); M (Mega) ≠ m (Milli); Mantisse 1 bis <10.
 
 **Häufige Fragen:**
 - "Was ist 0,000 045 m in wissenschaftlicher Notation?" → 4,5 × 10⁻⁵ m = 45 µm
@@ -914,7 +914,7 @@ Re = (1060 × 0,5 × 0,025) / (3,5 × 10⁻³) = 13,25 / 0,0035 ≈ **3786** →
 
 **Zentral prüfungsrelevant:** Dimensionsanalyse (Masse M, Länge L, Zeit T), Druck = M·L⁻¹·T⁻², Kraft = M·L·T⁻², Energie = M·L²·T⁻², Dimensionsgleichheit bei Gleichungen.
 
-**Ergänzend vertiefend:** Buckingham-π (dimensionslose Kennzahlen aus Variablengruppen); Impuls [m·v] vs. Energie [m·v²]; typische Verwechslungen (Impuls ≠ Energie, 1 mmHg ≠ 1 cmH₂O) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Buckingham-π (dimensionslose Kennzahlen aus Variablengruppen); Impuls [m·v] vs. Energie [m·v²]. Typische Fallen: [m·v] = Impuls (nicht Energie); 1 mmHg ≠ 1 cmH₂O (≈ 1,36 cmH₂O).
 
 **Häufige Fragen:**
 - "Welche Dimension hat Druck?" → M·L⁻¹·T⁻² (= kg·m⁻¹·s⁻² = Pa)
@@ -1172,7 +1172,9 @@ Im klinischen Kontext ist das Trägheitsgesetz bei Dezelerationstraumen entschei
 
 ## Das zweite Newtonsche Gesetz — Aktionsprinzip
 
-F = m · a ist das wichtigste Gesetz der Mechanik. Eine Kraft von 1 Newton (N = kg·m/s²) beschleunigt 1 kg um 1 m/s². Das Gesetz ist vektoriell: Die Beschleunigung zeigt in dieselbe Richtung wie die resultierende Kraft.
+**F = m · a** ist das wichtigste Gesetz der Mechanik. Eine Kraft von 1 Newton (N = kg·m/s²) beschleunigt 1 kg um 1 m/s². Das Gesetz ist vektoriell: Die Beschleunigung zeigt in dieselbe Richtung wie die resultierende Kraft.
+
+**Formelklartext:** F = m·a heißt: **Kraft** = **Masse** × **Beschleunigung**. Bei gleicher Kraft: größere Masse → **kleinere** Beschleunigung. Bei gleicher Masse: größere Kraft → größere Beschleunigung. **Einheiten:** [F] = N = kg·m/s², [m] = kg, [a] = m/s². **MedAT:** Airbag verlängert Brems**zeit** Δt → gleiche Impulsänderung Δp = F·Δt bei **kleinerer** Kraft F. Brems**weg** s größer → kleinere Verzögerung a → F = m·a kleiner.
 
 Aus F = m·a folgt direkt: Größere Masse → geringere Beschleunigung bei gleicher Kraft. Das erklärt, warum ein schwerer Patient schwieriger zu reanimieren ist — bei identischer Herzmassagekraft ist die erzeugte Thoraxkompression (Beschleunigung des Sternums) geringer. Die optimale Drucktiefe erfordert daher eine angepasste Kraft.
 
@@ -1215,7 +1217,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 
 **Zentral prüfungsrelevant:** Newtonsche Gesetze (1: Trägheit, 2: F=ma, 3: actio=reactio), Kräftegleichgewicht, Freier Fall (g≈9,81 m/s²), Reibung, Anwendung (Körper in Ruhe/Bewegung).
 
-**Ergänzend vertiefend:** Impuls p = m·v und Kraftstoß; Superpositionsprinzip (Vektorsumme der Kräfte); typische Verwechslungen (actio/reactio auf verschiedene Körper, v vs. s Formeln, g als Beschleunigung) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Impuls p = m·v und Kraftstoß; Superpositionsprinzip (Vektorsumme der Kräfte). Typische Fallen: actio/reactio auf verschiedene Körper; v(t) vs. s(t) Formeln nicht vertauschen; g = Beschleunigung, nicht Kraft; E_kin ∝ v² (doppelt v → vierfach E).
 
 **Häufige Fragen:**
 - "Was besagt das 1. Newtonsche Gesetz?" → Kein Nettokraft → keine Zustandsänderung (Trägheit)
@@ -1227,8 +1229,10 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 **Typische Prüfungsfallen / Verwechslungen:**
 - actio = reactio: Beide Kräfte wirken auf VERSCHIEDENE Körper — deshalb heben sie sich nicht auf!
 - v(t) = v₀ + at (Geschwindigkeit, linear) vs. s(t) = v₀t + ½at² (Weg, parabolisch) — nicht verwechseln
-- Freier Fall: a = g (Beschleunigung), nicht F = g (g ist keine Kraft, sondern m/s²)
-- Trägheitsgesetz: Körper im freien Weltraum ohne Krafteinwirkung bewegt sich GERADLINIG mit konstanter Geschwindigkeit — er bleibt nicht automatisch stehen
+- Freier Fall: a = g (Beschleunigung in m/s²), nicht F = g (g ist keine Kraft!)
+- Trägheitsgesetz: Körper ohne Nettokraft bewegt sich geradlinig mit konstanter Geschwindigkeit — bleibt nicht „automatisch stehen“
+- **E_kin = ½·m·v²:** Doppelte Geschwindigkeit → **vierfache** kinetische Energie (E ∝ v²), nicht doppelt
+- **N = kg·m/s²** — Newton ist **abgeleitete** Einheit, keine der 7 SI-Basiseinheiten
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - g = 9,81 m/s² ≈ 10 m/s²; freier Fall 1 s: v = 9,8 m/s, s = 4,9 m
@@ -1427,9 +1431,15 @@ Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als 
 
 ## Arbeit, Energie und der Energieerhaltungssatz
 
-**Arbeit** ist definiert als **W = F · s** (bzw. W = F·s·cos θ bei schrägem Kraftvektor) — Einheit Joule (J = N·m). **Mechanische Arbeit wird nur bei einer Verschiebung (Weg s ≠ 0) verrichtet.** Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr“ ist **falsch**.
+**Arbeit** ist definiert als **W = F · s** (bzw. W = F·s·cos θ bei schrägem Kraftvektor) — Einheit Joule (J = N·m). **Mechanische Arbeit wird nur bei einer Verschiebung (Weg s ≠ 0) verrichtet.**
+
+**Formelklartext:** W = F·s heißt: **Arbeit** = **Kraft** × **Weg** (in Kraftrichtung). **Beim Halten** (s = 0) wird **keine** Arbeit verrichtet — unabhängig von der Dauer. Beim Heben: W = F_G·h = m·g·h = Zunahme der potenziellen Energie. **Einheiten:** [W] = J = N·m = kg·m²/s². **Leistung** P = W/t = Arbeit pro Zeit [W = J/s]. **MedAT-Falle:** „Halten kostet Kraft, also wird Arbeit geleistet“ — falsch; nur **Bewegung** (s ≠ 0) verrichtet Arbeit.
+
+Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr“ ist **falsch**.
 
 **Kinetische Energie** (Bewegungsenergie): E_kin = ½·m·v². Sie ist proportional zum Quadrat der Geschwindigkeit — bei doppelter Geschwindigkeit viermal so viel kinetische Energie. Das erklärt, warum Hochgeschwindigkeitsprojektile so verheerend sind und warum der Bremsweg bei Kraftfahrzeugen quadratisch mit der Geschwindigkeit wächst.
+
+**Formelklartext:** E_kin = ½·m·v² bedeutet: **Bewegungsenergie** wächst mit dem **Quadrat** der Geschwindigkeit. Doppelte Geschwindigkeit → **vierfache** kinetische Energie (nicht doppelt!). **Einheiten:** [E_kin] = J = kg·m²/s². **Nicht verwechseln:** Impuls p = m·v [kg·m/s]; Energie E_kin = ½·m·v² [J]. **Potenzielle Energie** E_pot = m·g·h: proportional zu Masse, Fallbeschleunigung und Höhe; [E_pot] = J.
 
 **Potenzielle Energie** (Lageenergie): E_pot = m·g·h. Die potenzielle Energie ist eine Zustandsgröße — sie hängt nur von der Höhe h über einem gewählten Referenzniveau ab, nicht vom zurückgelegten Weg.
 
@@ -1482,7 +1492,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
 
 **Zentral prüfungsrelevant:** Kinetische Energie E_kin = ½mv² (E~v²), potentielle Energie (Lage), Energieerhaltung, **Arbeit W = F·s nur bei Weg** (beim Halten keine Arbeit!), Leistung P = W/t, Rollreibung. **Formeln:** W = F·s, P = W/t, F = m·a.
 
-**Ergänzend vertiefend:** Elastischer Stoß (Impuls und E_kin erhalten); vollkommen inelastischer Stoß (nur Impuls); Drehimpuls L = I·ω und Pirouetteneffekt; typische Verwechslungen (Impuls ≠ Energie, Arbeit nur bei Kraft parallel zum Weg) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Elastischer Stoß (Impuls und E_kin erhalten); vollkommen inelastischer Stoß (nur Impuls); Drehimpuls L = I·ω und Pirouetteneffekt. Typische Fallen: Impuls ≠ Energie; Arbeit nur bei Weg (Halten = keine Arbeit); Zentripetalkraft → cos 90° = 0, keine Arbeit.
 
 **Häufige Fragen:**
 - "Was ist E_kin bei doppelter Geschwindigkeit?" → 4-fach (E_kin ~ v²)
@@ -1745,7 +1755,7 @@ Klinisch: Bei längerem Stehen → venöse Pooling in Beinen → orthostatische 
 
 **Zentral prüfungsrelevant:** **Kontinuitätsgleichung:** Verengung → **v₂ > v₁** (A₁v₁ = A₂v₂). Poiseuille Q = π·r⁴·Δp/(8·η·l), Q ~ r⁴ (Radius dominierend), Viskosität η, laminare Strömung, Widerstand bei Rohr/Gefäß (Klinik: Stenose).
 
-**Ergänzend vertiefend:** Reynolds-Zahl Re = ρvd/η (laminar < 2300, turbulent > 4000); Bernoulli und Venturi-Effekt bei Stenosen; Oberflächenspannung und Surfactant; typische Verwechslungen (Q ~ r⁴ nicht r², enge Stelle → v↑ p↓) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Reynolds-Zahl Re = ρvd/η (laminar < 2300, turbulent > 4000); Bernoulli und Venturi-Effekt bei Stenosen; Oberflächenspannung und Surfactant. Typische Fallen: Poiseuille Q ~ r⁴ (nicht r²); enge Stelle → v↑ p↓; Auftrieb = Gewicht des verdrängten Fluids.
 
 **Häufige Fragen:**
 - "Was besagt das Poiseuille-Gesetz?" → Q = π·r⁴·Δp/(8·η·l); Q ~ r⁴ — Radius ist der dominierende Parameter
@@ -2014,7 +2024,7 @@ Mit Gehstock (effektive Standbreite ~60 cm): θ = arctan(0,30/1,01) ≈ **16,5°
 
 **Zentral prüfungsrelevant:** Masse (kg, ortsunabhängig) vs. Gewichtskraft (F_G = m·g, ortsabhängig), g ≈ 9,81 m/s², Schwerelosigkeit, Auftrieb, Anwendung (Waage, Beschleunigung).
 
-**Ergänzend vertiefend:** Keplersche Gesetze (T² ~ a³); Trägheitsmoment I und Drehimpuls L = I·ω; Zentrifugalkraft als Scheinkraft; typische Verwechslungen (Masse bleibt in Schwerelosigkeit, Zentripetal- vs. Zentrifugalkraft) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Keplersche Gesetze (T² ~ a³); Trägheitsmoment I und Drehimpuls L = I·ω; Zentrifugalkraft als Scheinkraft. Typische Fallen: Zentrifugalkraft nur im rotierenden System; Masse in Schwerelosigkeit unverändert; Schwerpunkt-Projektion in Standfläche für Stabilität.
 
 **Häufige Fragen:**
 - "Was ist der Unterschied zwischen Masse und Gewichtskraft?" → Masse (kg): ortsunabhängig, Materieeigenschaft; Gewichtskraft (N) = m·g, ortsabhängig

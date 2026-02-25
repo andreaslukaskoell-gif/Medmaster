@@ -34,6 +34,8 @@ npm run format       # Prettier (auto-runs via hook)
 
 Jedes Unterkapitel: Einleitung → **„In diesem Kapitel lernst du:“** (4–5 Bullets) → Kern mit `---` zwischen Abschnitten → **Übergänge** („Bisher haben wir gesehen“, „Um das zu verstehen“) → **Merksätze** `> **Merke:**` nach Blöcken → **1–3 SVG-Hinweise** (additiv) → **MedAT-Fokus:** „Zur gezielten Prüfungsvorbereitung“ → **Zentral prüfungsrelevant:** konkrete Aufzählung (niemals „Siehe unten“) → **Ergänzend vertiefend** → Häufige Fragen, Typische Fallen, Prüfungsrelevante Zahlen → **Zusammenfassung (ultrakompakt)**.
 
+**Erledigt (Feb 2025):** Kap4 UKs 04–09 Übergangssätze ergänzt. Kap2-Datei (bio-2-01 bis bio-3-12): Übergangssätze in allen UKs ergänzt. Kap3- und Kap5-Dateien haben bereits zahlreiche Übergänge; vereinzelt ergänzt. **Muster-UK** bleibt bio-4-01 in `kap4-genetik.ts` für künftige Tiefenprüfungen.
+
 ### Data Files
 
 - BMS data: `/src/data/bms/` (barrel files) + `/src/data/bmsKapitel/` (chapter files)

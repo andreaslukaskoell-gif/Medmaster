@@ -160,7 +160,7 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
 - Reaktionsgleichung: Massen- und Ladungserhaltung; Stöchiometrische Koeffizienten = Mol-Verhältnisse
 - Klinisch: Katalase (H₂O₂→H₂O+O₂), Atmungskette (Redox), Puffer (Säure-Base)
 
-**Ergänzend vertiefend:** Oxidationszahlen, Redoxpaare; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Oxidationszahlen, Redoxpaare. Typische Fallen: Katalysator verschiebt Gleichgewicht nicht; exotherm ≠ spontan (ΔG entscheidet); OIL RIG (Oxidation = Elektronenabgabe, Reduktion = -aufnahme) nicht vertauschen.
 
 **Häufige Prüfungsfragen:**
 - „Säure-Base vs. Redox?" → Säure-Base = H⁺-Transfer; Redox = e⁻-Transfer (OIL RIG)
@@ -520,7 +520,7 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 - **RGT-Regel:** +10 °C → v verdoppelt bis verdreifacht (Q₁₀ ≈ 2–3); **Arrhenius** k = A·e^(−E_A/RT) — Katalysator senkt E_A
 - **Steady-State:** nach ~5 Halbwertszeiten < 3 % Rest; Reaktionsordnungen **experimentell** bestimmen, nicht aus Stöchiometrie
 
-**Ergänzend vertiefend:** Reaktionsordnung aus Experiment; Lineweaver-Burk; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Reaktionsordnung aus Experiment; Lineweaver-Burk. Typische Fallen: Ordnung aus Experiment, nicht aus Koeffizienten; 0. Ordnung t₁/₂ konzentrationsabhängig; kompetitiv ≠ nichtkompetitiv (Hemmung).
 
 **Häufige Prüfungsfragen:**
 - „t₁/₂ bei 1. Ordnung?" → t₁/₂ = ln2/k, konzentrationsunabhängig
@@ -884,7 +884,7 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in F
 - **Respirationsquotient RQ** = CO₂(produziert)/O₂(verbraucht): **Glucose = 1,0**; Fette ≈ 0,7; Proteine ≈ 0,8; RQ > 1 → Lipogenese
 - **Haber-Bosch:** N₂ + 3 H₂ → 2 NH₃; Molverhältnis 1:3:2; Avogadro N_A = 6,022×10²³ mol⁻¹; V_m = 22,4 L/mol (NTP)
 
-**Ergänzend vertiefend:** Umsatz, Selektivität; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Umsatz, Selektivität. Typische Fallen: Koeffizienten = Mol, nicht Gramm; theoretische ≠ tatsächliche Ausbeute; beim Ausgleichen Redox zuletzt H und O (z. B. mit H⁺/H₂O).
 
 **Häufige Prüfungsfragen:**
 - „Wie findet man das Mangelreagenz?" → n/Koeffizient für jedes Edukt → kleinster = Mangelreagenz
@@ -1239,7 +1239,7 @@ Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
 - **Blutpuffer:** CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; pH = 6,1 + log([HCO₃⁻]/[CO₂]); **Bohr-Effekt:** pH↓/pCO₂↑ → O₂-Abgabe ↑
 - **ΔG° = −RT·ln(K):** ΔG° < 0 ↔ K > 1 ↔ Produkte bevorzugt
 
-**Ergänzend vertiefend:** Homogen vs. heterogen; Kp = Kc·(RT)^Δn; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Homogen vs. heterogen; Kp = Kc·(RT)^Δn. Typische Fallen: Dynamisches Gleichgewicht ≠ Stillstand; Kc ≠ Geschwindigkeit (Thermodynamik vs. Kinetik); exotherm + T↑ → K sinkt.
 
 **Häufige Prüfungsfragen:**
 - „Was ändert ein Katalysator am Gleichgewicht?" → Nichts; nur Einstellgeschwindigkeit
@@ -1586,7 +1586,7 @@ Die **Übergangszustandstheorie (Eyring)** verfeinert dieses Bild: Edukte bilden
 - **Therapeutische Hypothermie:** 32–36 °C → v ↓ ~30–50 % → Neuroprotektion nach Herzstillstand
 - **Fieber:** +2–3 °C → v ↑ ~20–35 %; >42 °C → Enzymdenaturierung
 
-**Ergänzend vertiefend:** Übergangszustand, Stoßtheorie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Übergangszustand, Stoßtheorie. Typische Fallen: E_A ≠ ΔH (Aktivierungsenergie vs. Reaktionsenthalpie); RGT-Regel gilt nicht über ~42 °C; Katalysator ändert nur Geschwindigkeit, nicht Thermodynamik.
 
 **Häufige Prüfungsfragen:**
 - „Was ist E_A?" → Energiebarriere zum Übergangszustand; nicht ΔH
@@ -1955,7 +1955,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
 - **Temperatur:** exotherm + T↑ → K sinkt; endotherm + T↑ → K steigt; **ΔG° = −RT·ln(K)** (ΔG° < 0 ↔ K > 1)
 - Umkehrreaktion: K' = 1/K
 
-**Ergänzend vertiefend:** Kc vs. Kp; Löslichkeitsprodukt Ksp; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kc vs. Kp; Löslichkeitsprodukt Ksp. Typische Fallen: Katalysator verschiebt Gleichgewicht nicht; großes K ≠ schnelle Reaktion; Q = aktuelle Konzentrationen (Reaktionsquotient), K = Gleichgewichtskonstante.
 
 **Häufige Prüfungsfragen:**
 - „Q < Kc?" → Hinreaktion überwiegt, noch nicht im Gleichgewicht
@@ -2304,7 +2304,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 - **Haber-Bosch:** N₂ + 3 H₂ ⇌ 2 NH₃; Δn = −2, ΔH = −92 kJ/mol; 150–300 bar, 400–500 °C (Kompromiss), Fe-Katalysator, NH₃-Entnahme
 - **Blutpuffer:** CO₂ ↑ → pH↓ (respiratorische Acidose); Hyperventilation → CO₂↓ → pH↑ (respiratorische Alkalose)
 
-**Ergänzend vertiefend:** Kp bei Gasen; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Kp bei Gasen. Typische Fallen: Katalysator verschiebt Gleichgewicht nicht; Inertgas bei konstantem V: kein Effekt auf Gleichgewicht; Δn = 0: kein Druckeffekt.
 
 **Häufige Prüfungsfragen:**
 - „Temperatur vs. Konzentration auf K?" → Nur Temperatur ändert K; Konzentration/Druck ändern nur Q
@@ -2677,7 +2677,7 @@ Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre,
 - **Carboanhydrase:** CO₂ + H₂O ⇌ H₂CO₃; **Zn²⁺**-Cofaktor; **Acetazolamid** hemmt (Diuretikum, Glaukom); ~10⁶× Beschleunigung
 - **BGA:** pH 7,35–7,45; pCO₂ 35–45 mmHg; [HCO₃⁻] 22–26 mmol/L; **BE** < −2 = metabolische Azidose, > +2 = Alkalose
 
-**Ergänzend vertiefend:** Indikator, Äquivalenzpunkt; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Indikator, Äquivalenzpunkt. Typische Fallen: pKa(H₂CO₃) = 6,1 (nicht 7,4); Lunge puffert schnell, Niere langsam; Azidose pH < 7,35, Alkalose > 7,45.
 
 **Häufige Prüfungsfragen:**
 - „pH mit Henderson-Hasselbalch?" → pH = pKa + log([A⁻]/[HA]); bei [A⁻]=[HA] → pH = pKa

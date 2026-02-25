@@ -34,6 +34,8 @@ export const bioKapGenetik: Kapitel = {
 
 ## Gen: funktionelle Einheit auf der DNA
 
+**Bisher haben wir gesehen:** DNA ist der Träger der Erbinformation — Doppelhelix, Basenpaarung, Sequenz. **Um die nächste Ebene zu verstehen** — wie die Information in funktionelle Einheiten gegliedert ist — schauen wir uns das **Gen** an.
+
 Ein **Gen** ist ein **Abschnitt der DNA**, der die Information für ein bestimmtes Merkmal oder ein Produkt (z. B. ein Protein oder eine RNA) trägt. Gene liegen an festen Orten auf den Chromosomen; dieser Ort heißt **Locus** (Plural: Loci). Beim Menschen gibt es etwa 20.000–25.000 protein codierende Gene, verteilt auf 46 Chromosomen. Ein Gen kann in verschiedenen **Varianten** vorkommen — diese Varianten nennt man **Allele**. Beispiel: Das Gen für die Blütenfarbe bei Erbsen hat ein Allel für „rot“ und ein Allel für „weiß“. Ein diploider Organismus trägt pro Gen zwei Allele (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
 
 > **Merke:** Gen = DNA-Abschnitt für ein Merkmal/Produkt. Locus = Ort des Gens auf dem Chromosom. Allel = eine von mehreren Varianten eines Gens.
@@ -41,6 +43,8 @@ Ein **Gen** ist ein **Abschnitt der DNA**, der die Information für ein bestimmt
 ---
 
 ## Chromosom: verpackte DNA
+
+**Bisher haben wir gesehen:** DNA trägt die Information, Gene sind die funktionellen Einheiten mit Allelen am Locus. **Damit die DNA bei der Zellteilung sauber verteilt werden kann,** liegt sie in verpackter Form vor — als **Chromosom**.
 
 Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpackungsproteinen) und weiteren Proteinen zu einer kompakten Struktur organisiert ist. So kann die DNA bei der Zellteilung sauber verteilt werden. Beim Menschen liegt die DNA im Zellkern in 46 Chromosomen vor (23 von der Mutter, 23 vom Vater). Vor der Zellteilung wird jede DNA verdoppelt; dann besteht jedes Chromosom aus zwei identischen **Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Zwei Chromosomen, die dasselbe setzen von Genen tragen (eins vom Vater, eins von der Mutter), heißen **homologe Chromosomen** — sie sind nicht identisch, aber entsprechen einander (gleiche Loci, oft unterschiedliche Allele).
 
@@ -58,7 +62,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 
 ## Zusammenhang für die Vererbung
 
-**DNA** enthält die Information, **Gene** sind die Einheiten, die vererbt werden (jeweils als Allel-Paar), und **Chromosomen** sind die Strukturen, die bei Meiose und Mitose getrennt und auf die Tochterzellen verteilt werden. In der **Meiose** werden die homologen Chromosomen getrennt — deshalb erbt jede Keimzelle pro Gen nur ein Allel. Das erklärt die Mendelsche Spaltung: Jeder Elternteil gibt eines von zwei Allelen weiter, und die Kombination in der Nachkommenschaft folgt den Kreuzungsschemata.
+**Bisher haben wir gesehen:** DNA als Träger der Information, Gene als Einheiten mit Allelen, Chromosomen als verpackte Strukturen. **Für die Vererbung** ist der Zusammenhang entscheidend: **DNA** enthält die Information, **Gene** sind die Einheiten, die vererbt werden (jeweils als Allel-Paar), und **Chromosomen** sind die Strukturen, die bei Meiose und Mitose getrennt und auf die Tochterzellen verteilt werden. In der **Meiose** werden die homologen Chromosomen getrennt — deshalb erbt jede Keimzelle pro Gen nur ein Allel. Das erklärt die Mendelsche Spaltung: Jeder Elternteil gibt eines von zwei Allelen weiter, und die Kombination in der Nachkommenschaft folgt den Kreuzungsschemata.
 
 > **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.
 
@@ -84,6 +88,10 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 - Gen ≠ Allel (Gen = Ort/Information, Allel = konkrete Variante).
 - Homologe Chromosomen sind nicht identisch (gleiche Gene, oft verschiedene Allele).
 - Schwesterchromatiden sind identisch (Kopien nach Verdopplung).
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Mensch: 46 Chromosomen (2n), 23 Paare; ca. 20.000–25.000 protein codierende Gene.
+- DNA-Basenpaarung: A–T (2 H-Brücken), G–C (3 H-Brücken); Chargaff-Regeln (A=T, G=C).
 
 **Wichtige Begriffe & Definitionen:**
 - DNA, Gen, Locus, Allel, Chromosom, homologe Chromosomen, Schwesterchromatiden, Zentromer.
@@ -179,6 +187,8 @@ Ein metaphasisches Chromosom (in der Zellteilung sichtbar) besteht aus **zwei Sc
 
 ## Autosomen und Gonosomen
 
+**Bisher haben wir gesehen:** Aufbau des Chromosoms (Zentromer, Arme, Telomere). **Um Chromosomen beim Menschen einzuordnen,** unterscheidet man **Autosomen** und **Gonosomen**.
+
 Beim Menschen gibt es **46 Chromosomen** in jeder Körperzelle (diploider Satz): **22 Paare Autosomen** (Chromosomen 1–22, nicht geschlechtsbestimmend) und **ein Paar Geschlechtschromosomen** (**Gonosomen**): **XX** bei Frauen, **XY** bei Männern. Die Gonosomen bestimmen das genetische Geschlecht: Das **Y-Chromosom** trägt das **SRY-Gen**, das die männliche Geschlechtsentwicklung auslöst. Fehlt das Y, entwickelt sich weiblich (z. B. 46,XX oder 45,X).
 
 > **Merke:** 46 Chromosomen = 22 Autosomenpaare + 1 Gonosomenpaar. XX = weiblich, XY = männlich; Geschlecht durch Y-Chromosom (SRY) bestimmt.
@@ -186,6 +196,8 @@ Beim Menschen gibt es **46 Chromosomen** in jeder Körperzelle (diploider Satz):
 ---
 
 ## Karyotyp und Notation
+
+**Bisher haben wir gesehen:** 46 Chromosomen, davon 44 Autosomen + XX oder XY. **Um Abweichungen zu beschreiben und zu diagnostizieren,** nutzt man den **Karyotyp** und eine einheitliche **Notation**.
 
 Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (nach Größe, Zentromerlage, Färbemuster). Er wird in der **Metaphase** der Mitose erstellt (Chromosomen sind dann maximal kondensiert). Die **Karyotyp-Notation** gibt zuerst die **Chromosomenzahl**, dann die **Gonosomen** und bei Abweichungen die **Aberration** an:
 
@@ -216,6 +228,11 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
 - p-Arm = kurz, q-Arm = lang (nicht umgekehrt).
 - 47,XXY = männlich (Y vorhanden), 45,X = weiblich (kein Y).
 - Karyotyp wird in der Metaphase erstellt, nicht in der Interphase.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Mensch: 46 Chromosomen (44 Autosomen + XX oder XY); 22 Autosomenpaare.
+- Karyotyp-Notation: 46,XX / 46,XY (normal); 47,XX,+21 (Trisomie 21); 47,XXY (Klinefelter); 45,X (Turner).
+- Telomere: repetitive Sequenz TTAGGG (beim Menschen); verkürzen sich bei jeder Zellteilung ohne Telomerase.
 
 **Wichtige Begriffe & Definitionen:**
 - Zentromer, Kinetochor, p-Arm, q-Arm, Telomere, Autosomen, Gonosomen, Karyotyp.
@@ -287,6 +304,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 
 ## Mitose: Teilung der Körperzellen
 
+**Bisher haben wir gesehen:** Zellzyklus, 2n und n. **Für Wachstum und Erneuerung** teilen sich Körperzellen durch **Mitose** — ohne Reduktion des Chromosomensatzes.
+
 **Mitose** dient der Vermehrung von Zellen bei Wachstum und Erneuerung. Ablauf (vereinfacht): Die Chromosomen kondensieren, die Kernmembran löst sich auf, die Chromosomen ordnen sich in der Äquatorialebene an (Metaphase), die **Schwesterchromatiden** werden getrennt und zu den Polen gezogen (Anaphase), zwei neue Kerne und Zellen entstehen. **Ergebnis:** Zwei Tochterzellen, jede mit derselben Chromosomenzahl (2n) und genetisch identisch zur Mutterzelle. Es gibt **keine** Reduktion der Chromosomenzahl und **kein** Crossing-over.
 
 > **Merke:** Mitose: 1 Zelle (2n) → 2 Zellen (je 2n); genetisch identisch; Trennung der Schwesterchromatiden.
@@ -294,6 +313,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 ---
 
 ## Meiose: Entstehung der Keimzellen
+
+**Bisher haben wir gesehen:** Mitose erhält den diploiden Satz. **Für die Bildung von Keimzellen** muss der Chromosomensatz halbiert werden — das leistet die **Meiose**.
 
 **Meiose** dient der Bildung von **Keimzellen** (Gameten). Sie besteht aus **zwei aufeinanderfolgenden Teilungen** (Meiose I und Meiose II), wobei nur vor der ersten Teilung die DNA verdoppelt wird.
 
@@ -307,6 +328,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 
 ## Crossing-over und Rekombination
 
+**Bisher haben wir gesehen:** Meiose I trennt homologe Chromosomen, Meiose II die Schwesterchromatiden. **Die genetische Vielfalt** der Keimzellen entsteht maßgeblich durch **Crossing-over** in der Prophase I.
+
 **Crossing-over** (in der Prophase I der Meiose): Zwei homologe Chromosomen (je mit zwei Chromatiden) liegen gepaart; dabei können sich Chromatidenstücke kreuzen und austauschen. Dadurch entstehen **Rekombinanten** — Chromosomen mit neuer Kombination von Allelen. Gene auf demselben Chromosom sind zunächst **gekoppelt**; durch Crossing-over können sie dennoch neu kombiniert werden. Die **Rekombinationsfrequenz** (wie oft zwei Gene getrennt werden) hängt vom Abstand der Gene ab und wird in **centiMorgan (cM)** angegeben (1 cM ≈ 1 % Rekombination). Gene mit 50 % Rekombination verhalten sich wie unabhängig (entweder auf verschiedenen Chromosomen oder sehr weit auseinander).
 
 > **Merke:** Crossing-over = Austausch zwischen Chromatiden homologer Chromosomen in Prophase I → Rekombination, genetische Vielfalt. Genkopplung wird dadurch teilweise aufgehoben.
@@ -314,6 +337,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 ---
 
 ## Nicht-Disjunktion und Aneuploidie
+
+**Bisher haben wir gesehen:** Regelgerechte Trennung in Meiose I und II. **Wenn die Trennung fehlerhaft verläuft,** entstehen Keimzellen mit falscher Chromosomenzahl — **Nicht-Disjunktion** führt zu Trisomie oder Monosomie.
 
 **Nicht-Disjunktion** bedeutet: Bei der Meiose (oder seltener Mitose) trennen sich Chromosomen oder Chromatiden nicht korrekt. Eine Keimzelle erhält dann z. B. zwei Kopien eines Chromosoms statt einer, eine andere erhält keine. Nach Befruchtung: **Trisomie** (3 Kopien eines Chromosoms, z. B. Trisomie 21 = Down-Syndrom) oder **Monosomie** (nur 1 Kopie, z. B. 45,X = Turner-Syndrom). Das Risiko für Nicht-Disjunktion (besonders Trisomie 21) steigt mit dem **mütterlichen Alter**.
 
@@ -352,6 +377,11 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 - Mitose: Trennung der **Schwesterchromatiden**; Meiose I: Trennung der **homologen Chromosomen** (nicht der Schwesterchromatiden).
 - Meiose II ähnelt Mitose (Trennung der Schwesterchromatiden), aber Ausgangszelle ist bereits haploid.
 - Crossing-over findet nur in der **Meiose** (Prophase I) statt, nicht in der Mitose.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Mensch: diploid 2n = 46 (Körperzellen), haploid n = 23 (Keimzellen); Mitose 1→2 Zellen (je 2n), Meiose 1→4 Zellen (je n).
+- Rekombinationsfrequenz: 1 centiMorgan (cM) ≈ 1 % Rekombination; 50 % cM = Gene verhalten sich unabhängig.
+- Trisomie 21: Risiko steigt mit mütterlichem Alter; häufigste lebensfähige Autosom-Trisomie.
 
 **Wichtige Begriffe & Definitionen:**
 - Mitose, Meiose I/II, homologe Chromosomen, Schwesterchromatiden, Crossing-over, Rekombination, haploid, diploid, Nicht-Disjunktion, Trisomie, Monosomie.
@@ -445,6 +475,8 @@ Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen*
 
 ## 2. Mendelsche Regel (Spaltungsregel)
 
+**Bisher haben wir gesehen:** Die 1. Regel liefert eine uniforme F₁ aus reinerbigen Eltern. **Um zu sehen, wie sich die Merkmale in der nächsten Generation aufspalten,** betrachten wir die **2. Mendelsche Regel**.
+
 Kreuzt man die **F₁-Hybriden** untereinander (Aa × Aa), so **spaltet** die **F₂-Generation** in festen Verhältnissen auf. **Genotyp:** 1 AA : 2 Aa : 1 aa (Verhältnis 1:2:1). **Phänotyp** (bei dominant-rezessiv, A dominant über a): 3 dominant (rot) : 1 rezessiv (weiß), also **3:1**. Das Punnett-Quadrat (2×2) zeigt die vier möglichen Kombinationen der Gameten (A und a von jedem Elternteil).
 
 > **Merke:** 2. Mendelsche Regel: Aa × Aa → F₂ Genotyp 1:2:1 (AA:Aa:aa), Phänotyp (dominant-rezessiv) 3:1.
@@ -453,6 +485,8 @@ Kreuzt man die **F₁-Hybriden** untereinander (Aa × Aa), so **spaltet** die **
 
 ## 3. Mendelsche Regel (Unabhängigkeitsregel)
 
+**Bisher haben wir gesehen:** Ein Gen führt in F₂ zu Aufspaltung 3:1 (Phänotyp). **Sind zwei Merkmale im Spiel,** gilt die **3. Mendelsche Regel**.
+
 Betrachtet man **zwei Merkmale** (zwei Gene auf **verschiedenen Chromosomen** oder weit voneinander entfernt), so werden die Gene **unabhängig** voneinander verteilt. Kreuzung **RrGg × RrGg** (dihybrider Erbgang) ergibt in F₂ das **Phänotyp-Verhältnis 9:3:3:1** (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg). Das Punnett-Quadrat hat 4×4 = 16 Felder. Voraussetzung: **Unabhängigkeit** der Gene (keine Kopplung). Bei **gekoppelten Genen** (auf demselben Chromosom, nah beieinander) weicht das Verhältnis ab — dann überwiegen die Parentaltypen.
 
 > **Merke:** 3. Mendelsche Regel: Zwei unabhängige Gene (RrGg × RrGg) → F₂ 9:3:3:1. Nur bei Genen auf verschiedenen Chromosomen oder ohne Kopplung.
@@ -460,6 +494,8 @@ Betrachtet man **zwei Merkmale** (zwei Gene auf **verschiedenen Chromosomen** od
 ---
 
 ## Punnett-Quadrat und Wahrscheinlichkeit
+
+**Bisher haben wir gesehen:** Die drei Mendelschen Regeln beschreiben die Verhältnisse in F₁ und F₂. **Um diese Verhältnisse systematisch zu ermitteln,** nutzt man das **Punnett-Quadrat**.
 
 Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eizellen/Spermien) dar. Monohybrid: 2×2 = 4 Kombinationen (Aa × Aa → AA, Aa, Aa, aa). Dihybrid: 4×4 = 16 (je Elternteil 4 Gameten-Typen: RG, Rg, rG, rg). **Produktregel** bei unabhängigen Ereignissen: P(rrgg) = P(rr) × P(gg) = 1/4 × 1/4 = 1/16.
 
@@ -482,6 +518,10 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
 - Genotyp 1:2:1 vs. Phänotyp 3:1 verwechseln (bei dominant-rezessiv).
 - 9:3:3:1 nur bei **unabhängigen** Genen; bei Kopplung abweichendes Verhältnis.
 - 1. Regel: homozygote Eltern → F₁ uniform; 2. Regel: heterozygote F₁ → F₂ spaltet.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- 1. Regel: AA × aa → F₁ 100 % Aa. 2. Regel: Aa × Aa → F₂ Phänotyp 3:1, Genotyp 1:2:1.
+- 3. Regel: RrGg × RrGg → F₂ 9:3:3:1 (16 Felder im Punnett-Quadrat); Produktregel: P(rrgg) = 1/4 × 1/4 = 1/16.
 
 **Wichtige Begriffe & Definitionen:**
 - Uniformitätsregel, Spaltungsregel, Unabhängigkeitsregel, F₁, F₂, Punnett-Quadrat, monohybrid, dihybrid.
@@ -552,11 +592,15 @@ Der **Genotyp** ist die **Allel-Kombination** eines Individuums für ein (oder m
 
 ## Homozygot und heterozygot
 
+**Bisher haben wir gesehen:** Genotyp (Allel-Kombination) und Phänotyp (sichtbares Merkmal) sind die Grundbegriffe. **Für die Vererbung** ist entscheidend, ob ein Individuum **reinerbig** oder **mischerbig** ist.
+
 **Homozygot** (reinerbig): Beide Allele sind gleich — **AA** (homozygot dominant) oder **aa** (homozygot rezessiv). **Heterozygot** (mischerbig): Die beiden Allele sind unterschiedlich — **Aa**. Bei der Vererbung gibt jeder Elternteil genau eines seiner beiden Allele weiter (über die Keimzelle); deshalb kann man mit Kreuzungsschemata die Genotyp- und Phänotyp-Verhältnisse vorhersagen.
 
 ---
 
 ## Dominanzverhältnisse
+
+**Bisher haben wir gesehen:** Homozygot vs. heterozygot. **Wie sich die Allele im Phänotyp ausprägen,** hängt von den **Dominanzverhältnissen** ab.
 
 **Dominant-rezessiv:** Das **dominante** Allel (üblicherweise Großbuchstabe, z. B. A) setzt sich auch im heterozygoten Zustand durch; das **rezessive** Allel (Kleinbuchstabe, a) ist nur im homozygoten Zustand (aa) sichtbar. Beispiel: Aa → gleicher Phänotyp wie AA (rot).
 
@@ -569,6 +613,8 @@ Der **Genotyp** ist die **Allel-Kombination** eines Individuums für ein (oder m
 ---
 
 ## Testkreuzung (Rückkreuzung)
+
+**Bisher haben wir gesehen:** Genotyp, Phänotyp und Dominanzverhältnisse. **Um den Genotyp eines Individuums mit dominantem Phänotyp zu bestimmen,** wendet man die **Testkreuzung** an.
 
 Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)** oder **heterozygot (Aa)** ist, kreuzt man es mit einem **homozygot rezessiven** Partner (aa). **Ergebnis:** Sind alle Nachkommen dominant → Elternteil war **AA**. Spaltet die Nachkommenschaft **1:1** (dominant : rezessiv) → Elternteil war **Aa**. Die Testkreuzung liefert also eine klare Aussage über den Genotyp.
 
@@ -594,6 +640,10 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
 - Dominant ≠ häufig (Häufigkeit in der Population ist unabhängig von Dominanz).
 - Gen ≠ Allel (Allel = Variante des Gens).
 - Intermediär (Mischphänotyp) vs. kodominant (beide Merkmale gleichzeitig) verwechseln.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Testkreuzung × aa: 100 % dominant → Elternteil homozygot (AA); 1:1 (dominant : rezessiv) → Elternteil heterozygot (Aa).
+- Intermediär: F₂-Phänotyp-Verhältnis 1:2:1 (entspricht Genotyp); kodominant: beide Allele sichtbar (z. B. Blutgruppe AB).
 
 **Wichtige Begriffe & Definitionen:**
 - Genotyp, Phänotyp, homozygot, heterozygot, dominant, rezessiv, kodominant, intermediär, Testkreuzung.
@@ -667,6 +717,8 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
 
 ## Autosomal-dominant
 
+**Bisher haben wir gesehen:** Autosomal vs. X-chromosomal und die Bedeutung der Hemizygotie bei Männern. **Für die Einordnung von Stammbäumen** unterscheidet man **dominante** und **rezessive** Erbgänge.
+
 **Ein** krankes Allel genügt für die Erkrankung (Aa oder AA krank). Typisches Stammbaum-Muster: **In jeder Generation** Betroffene (vertikale Weitergabe); Männer und Frauen gleich häufig; ein betroffenes Elternteil gibt mit 50 % Wahrscheinlichkeit das kranke Allel weiter. Beispiele: Chorea Huntington, Marfan-Syndrom, Achondroplasie.
 
 > **Merke:** Autosomal-dominant: jede Generation kann betroffen sein; 50 % Risiko für Kinder eines betroffenen Elternteils (wenn dieser heterozygot Aa ist).
@@ -674,6 +726,8 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
 ---
 
 ## Autosomal-rezessiv
+
+**Bisher haben wir gesehen:** Beim autosomal-dominanten Erbgang ist in jeder Generation mindestens ein Betroffener typisch. **Beim rezessiven Erbgang** müssen **beide** Allele krank sein — das führt zu einem anderen Stammbaum-Muster.
 
 Die Erkrankung tritt nur auf, wenn **beide** Allele krank sind (**aa**). Heterozygote (Aa) sind **Konduktoren/Träger**, meist gesund. Typisches Muster: **Generationensprünge** (gesunde Eltern können betroffene Kinder haben, wenn beide Aa sind); Geschwister können betroffen sein; **Konsanguinität** (Verwandtenehe) erhöht das Risiko. Aa × Aa → 25 % aa (krank), 50 % Aa (Träger), 25 % AA (gesund). Beispiele: Mukoviszidose, Phenylketonurie (PKU), Sichelzellanämie.
 
@@ -683,6 +737,8 @@ Die Erkrankung tritt nur auf, wenn **beide** Allele krank sind (**aa**). Heteroz
 
 ## X-chromosomal rezessiv
 
+**Bisher haben wir gesehen:** Autosomal-dominant und -rezessiv. **Liegt das Gen auf dem X-Chromosom,** ergeben sich andere Verteilungsmuster — besonders bei **X-chromosomal rezessiv**.
+
 Das kranke Allel liegt auf dem **X-Chromosom** und ist **rezessiv**. **Männer** sind häufiger betroffen (hemizygot: ein X^a reicht). **Frauen** können Konduktorinnen sein (X^A X^a, phänotypisch meist gesund). **Keine Vater-Sohn-Übertragung** (Vater gibt X nur an Töchter, Y an Söhne). Typisches Muster: Betroffene Männer; Töchter betroffener Väter sind obligate Konduktorinnen; Diagonal-Muster (Großvater → Enkel über Konduktorin). Beispiele: Hämophilie A, Duchenne-Muskeldystrophie, Rot-Grün-Blindheit.
 
 > **Merke:** X-chromosomal rezessiv: Männer häufiger krank (hemizygot); keine Vater-Sohn-Übertragung; Konduktorin = heterozygote Frau, meist gesund.
@@ -691,6 +747,8 @@ Das kranke Allel liegt auf dem **X-Chromosom** und ist **rezessiv**. **Männer**
 
 ## X-chromosomal dominant
 
+**Bisher haben wir gesehen:** X-rezessiv führt zu mehr betroffenen Männern und keiner Vater-Sohn-Übertragung. **Bei X-chromosomal dominant** ist das Muster anders — hier ist das kranke Allel bereits in einfacher Dosis wirksam.
+
 Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):** Alle **Töchter** erhalten sein X^A → **100 % Töchter krank**; alle **Söhne** erhalten sein Y → **100 % Söhne gesund**. Dieses Muster ist sehr charakteristisch. Beispiele: Hypophosphatämische Rachitis, Rett-Syndrom (meist nur Mädchen, da bei Jungen oft letal).
 
 > **Merke:** X-chromosomal dominant: kranker Vater → 100 % Töchter krank, 100 % Söhne gesund.
@@ -698,6 +756,8 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 ---
 
 ## Stammbaum: Symbole und Auswertung
+
+**Bisher haben wir gesehen:** Die vier Haupterbgänge (autosomal-dominant/rezessiv, X-dominant/rezessiv) und ihre typischen Muster. **Um einen unbekannten Stammbaum einzuordnen,** braucht man die **Symbole** und eine **systematische Auswertung**.
 
 **Symbole:** Quadrat = Mann, Kreis = Frau; ausgefüllt = betroffen; halb ausgefüllt = Konduktor/Träger; Doppellinie = Konsanguinität. **Systematische Erbgangbestimmung:** Beide Geschlechter betroffen? → autosomal möglich. Nur Männer? → Y-chromosomal oder X-rezessiv prüfen. Keine Vater-Sohn-Übertragung? → X-chromosomal. Jede Generation betroffen? → dominant. Generationensprünge? → rezessiv.
 
@@ -721,6 +781,11 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 - Autosomal-dominant vs. autosomal-rezessiv (Generationen vs. Sprünge).
 - X-rezessiv: keine Vater-Sohn-Übertragung (Vater gibt Y an Söhne).
 - Konduktorin = heterozygot, phänotypisch meist gesund.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Autosomal-dominant: 50 % Risiko für Nachkommen bei Aa × aa (betroffenes Elternteil heterozygot).
+- Autosomal-rezessiv: Aa × Aa → 25 % krank (aa), 50 % Träger (Aa), 25 % gesund (AA).
+- X-chromosomal dominant: kranker Vater (X^A Y) → 100 % Töchter krank, 100 % Söhne gesund.
 
 **Wichtige Begriffe & Definitionen:**
 - Autosomal, X-chromosomal, autosomal-dominant, autosomal-rezessiv, Konduktorin, Hemizygotie, Stammbaum.
@@ -795,6 +860,8 @@ Beim AB0-System gibt es **drei Allele** an einem Genort: **I^A** (Antigen A), **
 
 ## Kreuzungsbeispiele
 
+**Bisher haben wir gesehen:** Die drei Allele und vier Phänotypen des AB0-Systems. **Für typische Prüfungsfragen** sind **Kreuzungsbeispiele** zentral.
+
 **Eltern I^A i × I^B i:** Jeder Elternteil kann I^A oder i bzw. I^B oder i abgeben. Mögliche Genotypen der Kinder: I^A I^B (AB), I^A i (A), I^B i (B), i i (0) — **alle vier Blutgruppen** mit je 25 % möglich.
 
 **Eltern 0 (ii) × AB (I^A I^B):** Kinder erhalten von einem Elternteil i, vom anderen I^A oder I^B → nur **I^A i (A)** oder **I^B i (B)**. Kinder mit Blutgruppe **0** oder **AB** sind **nicht** möglich (0 gibt nur i weiter; AB gibt nur I^A oder I^B weiter).
@@ -804,6 +871,8 @@ Beim AB0-System gibt es **drei Allele** an einem Genort: **I^A** (Antigen A), **
 ---
 
 ## Rhesus-System (kurz)
+
+**Bisher haben wir gesehen:** AB0 mit drei Allelen und Kodominanz. **Neben AB0** ist das **Rhesus-System** für Blutgruppen und Schwangerschaft relevant.
 
 Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgang: **D** (Rh-positiv) ist dominant über **d** (Rh-negativ). DD oder Dd = Rh-positiv; dd = Rh-negativ. **Rhesus-Inkompatibilität:** Rh-negative Mutter (dd), Rh-positives Kind (D von Vater) → Mutter kann Anti-D-Antikörper bilden; bei erneuter Schwangerschaft mit Rh-positivem Kind Gefahr für **Morbus haemolyticus neonatorum**. Durch **Anti-D-Prophylaxe** wird dies verhindert.
 
@@ -828,6 +897,11 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 **Typische Prüfungsfallen:**
 - Kodominant (beide Allele sichtbar, AB) vs. intermediär (Mischung).
 - Eltern 0 × AB → Kinder nur A oder B (nicht 0 oder AB).
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- AB0: 3 Allele (I^A, I^B, i) → 6 Genotypen, 4 Phänotypen (A, B, AB, 0).
+- I^A i × I^B i → A, B, AB, 0 je 25 %. Eltern 0 (ii) und AB (I^A I^B) → Kinder nur A oder B (je 50 %).
+- Rhesus: D dominant über d; dd = Rh-negativ; Anti-D-Prophylaxe bei Rh-negativer Mutter verhindert Morbus haemolyticus neonatorum.
 
 **Wichtige Begriffe & Definitionen:**
 - AB0-System, I^A, I^B, i, kodominant, Rhesus, Rh-positiv/Rh-negativ.
@@ -902,6 +976,8 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 
 ## Chromosomenmutation
 
+**Bisher haben wir gesehen:** Genmutationen betreffen die DNA-Sequenz eines Gens. **Auf der Ebene des Chromosoms** können **strukturelle** Veränderungen auftreten — **Chromosomenmutationen**.
+
 **Chromosomenmutationen** sind **strukturelle** Veränderungen von Chromosomenabschnitten (nicht der Gesamtzahl). **Deletion:** Verlust eines Stücks (z. B. Cri-du-chat: 5p-Deletion). **Duplikation:** Verdopplung eines Abschnitts. **Translokation:** Verlagerung eines Stücks auf ein anderes Chromosom (z. B. Robertsonsche Translokation bei Trisomie 21). **Inversion:** Drehung eines Abschnitts um 180°. **Balancierte** Translokation/Inversion: Kein Verlust von Material → Träger oft phänotypisch unauffällig, aber erhöhtes Risiko für unbalancierte Keimzellen (Nachkommen mit Über- oder Unterdosierung).
 
 > **Merke:** Chromosomenmutation = strukturell (Deletion, Duplikation, Translokation, Inversion). Cri-du-chat = 5p-Deletion.
@@ -909,6 +985,8 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 ---
 
 ## Genommutation
+
+**Bisher haben wir gesehen:** Genmutation (Sequenz) und Chromosomenmutation (Struktur). **Ändert sich die Anzahl der Chromosomen,** spricht man von **Genommutation**.
 
 **Genommutationen** betreffen die **Anzahl** der Chromosomen. **Aneuploidie:** Abweichung um einzelne Chromosomen — **Trisomie** (3 Kopien, z. B. Trisomie 21) oder **Monosomie** (1 Kopie, z. B. 45,X = Turner). Ursache meist **Nicht-Disjunktion** in der Meiose (Chromosomen trennen sich nicht). **Polyploidie:** Vervielfachung des gesamten Chromosomensatzes (3n, 4n); beim Menschen in der Regel letal. Trisomie 21 (Down-Syndrom) ist die häufigste lebensfähige Autosom-Trisomie; das Risiko steigt mit dem mütterlichen Alter.
 
@@ -941,6 +1019,11 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 **Typische Prüfungsfallen:**
 - Genmutation (Sequenz) vs. Chromosomenmutation (Struktur) vs. Genommutation (Zahl).
 - Nicht-Disjunktion betrifft die Verteilung in der Meiose, nicht die DNA-Sequenz.
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Genmutation: Punktmutation (1 Base) vs. Frameshift (Einfügung/Deletion nicht durch 3 teilbar); Nonsense = Stopp-Codon.
+- Chromosomenmutation: Cri-du-chat = Deletion 5p-; Robertsonsche Translokation kann zu Trisomie 21 führen.
+- Genommutation: Trisomie 21 (47,+21), Turner (45,X), Klinefelter (47,XXY); Ursache meist Nicht-Disjunktion in der Meiose.
 
 **Wichtige Begriffe & Definitionen:**
 - Genmutation, Punktmutation, Chromosomenmutation, Genommutation, Trisomie, Monosomie, Nicht-Disjunktion, Deletion, Translokation.
@@ -1015,6 +1098,8 @@ Das **Zentraldogma** der Molekularbiologie beschreibt den gerichteten Informatio
 
 ## Transkription und Translation (Konzept)
 
+**Bisher haben wir gesehen:** Das Zentraldogma beschreibt den Fluss DNA → RNA → Protein. **Wie dieser Fluss im Detail abläuft,** zeigen **Transkription** und **Translation**.
+
 **Transkription:** Im Zellkern wird die DNA eines Gens in eine **RNA-Kopie** (mRNA) umgeschrieben. Die Basenfolge der DNA bestimmt die Basenfolge der RNA (A, U, G, C in RNA; U ersetzt T). **Translation:** Im Zytoplasma lesen **Ribosomen** die mRNA und bauen anhand des **genetischen Codes** (je 3 Basen = 1 Codon = 1 Aminosäure) das **Protein** aus Aminosäuren. So bestimmt die **Gensequenz** die **Proteinsequenz** und damit die Funktion des Proteins. Mutationen in der DNA können die Proteinsequenz oder -menge verändern und so den Phänotyp verändern (z. B. Erbkrankheiten).
 
 > **Merke:** Transkription = DNA → RNA (im Kern). Translation = RNA → Protein (an Ribosomen). Genetischer Code: Codon (3 Basen) → Aminosäure.
@@ -1022,6 +1107,8 @@ Das **Zentraldogma** der Molekularbiologie beschreibt den gerichteten Informatio
 ---
 
 ## Zusammenhang mit Genetik und Vererbung
+
+**Bisher haben wir gesehen:** DNA → RNA → Protein als Grundprinzip der Genexpression. **Damit schließt sich der Bogen** von der Molekularebene zur **Vererbung** und zu den Erbgängen.
 
 Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (oder Regulation). Dadurch entstehen unterschiedliche RNA- und Proteinvarianten → unterschiedlicher **Phänotyp**. Vererbung bedeutet: Die DNA (und damit die Allele) wird über Keimzellen weitergegeben; in der nächsten Generation wird sie wieder exprimiert (DNA → RNA → Protein) und prägt den Phänotyp. So schließt sich der Bogen von DNA, Gen, Chromosom und Meiose zur klassischen Genetik (Mendel, Erbgänge, Blutgruppen).
 
@@ -1043,6 +1130,10 @@ Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (oder Regu
 **Typische Prüfungsfallen:**
 - Transkription = DNA → RNA (nicht Translation). Translation = RNA → Protein.
 - Genetische Information fließt von DNA zu Protein, nicht umgekehrt (Zentraldogma).
+
+**Prüfungsrelevante Zahlen & Fakten:**
+- Zentraldogma: DNA → (Transkription) → RNA → (Translation) → Protein; Ort: Transkription im Zellkern, Translation an Ribosomen im Zytoplasma.
+- Genetischer Code: 1 Codon = 3 Basen → 1 Aminosäure; 64 Codons für 20 Aminosäuren + Stopp-Codons; RNA-Basen: A, U, G, C (U ersetzt T).
 
 **Wichtige Begriffe & Definitionen:**
 - Genexpression, Zentraldogma, Transkription, Translation, DNA, RNA, Protein, genetischer Code, Codon.

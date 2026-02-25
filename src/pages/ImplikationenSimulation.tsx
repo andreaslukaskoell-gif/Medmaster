@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
+import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const TASK_COUNT = 10;
 const TIME_LIMIT = 600; // 10 minutes in seconds
@@ -345,6 +346,7 @@ export default function ImplikationenSimulation() {
                         <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                           Lösungsweg:
                         </p>
+                        <ImplikationSolutionDiagram task={result.task} className="mb-3" />
                         <p className="text-sm text-gray-700 dark:text-gray-300">
                           {result.task.explanation}
                         </p>

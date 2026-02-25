@@ -73,6 +73,10 @@ Typische Werte: Zimmertemperatur 293 K (20 °C), Körpertemperatur 310 K (37 °C
 - ΔT: Temperaturänderung [K oder °C]
 - α: linearer Ausdehnungskoeffizient [1/K] (Stahl ≈ 12 × 10⁻⁶ /K, Glas ≈ 9 × 10⁻⁶ /K, Aluminium ≈ 23 × 10⁻⁶ /K)
 
+**Formelklartext:** ΔL = α·L₀·ΔT heißt: Die **Längenänderung** ist proportional zur **Ausgangslänge** und zur **Temperaturänderung**. α ist materialabhängig – Aluminium dehnt sich stärker aus als Stahl bei gleichem ΔT. **Ursache:** Erwärmung → höhere mittlere Teilchengeschwindigkeit → heftigere Stöße → größerer mittlerer Abstand. **Einheiten:** [α] = 1/K, [ΔT] = K → [ΔL] = m ✓. Für ΔT dürfen °C oder K verwendet werden (Skalenverschiebung spielt bei Differenzen keine Rolle).
+
+**Größenordnung:** Stahlschiene 30 m, ΔT = 40 K → ΔL ≈ 14 mm. Bimetall: zwei Metalle mit unterschiedlichem α → Verbiegung bei Temperaturänderung.
+
 Für Flächen gilt entsprechend β ≈ 2α, für Volumina γ ≈ 3α.
 
 > **Merke:** Die Volumenausdehnung ist dreimal so groß wie die lineare Ausdehnung desselben Materials (γ ≈ 3α). Bei Flüssigkeiten wird direkt der Volumenausdehnungskoeffizient γ verwendet.
@@ -92,13 +96,19 @@ Die **spezifische Wärmekapazität c** gibt an, wie viel Energie nötig ist, um 
 
 **Q = m · c · ΔT**
 
-Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkeiten – ein biologisch zentraler Fakt. Der menschliche Körper (≈ 60 % Wasser) kann große Wärmemengen aufnehmen/abgeben ohne starke Temperaturschwankungen.
+**Formelklartext:** Q = m·c·ΔT bedeutet: Die **Wärmemenge** (Energie), die ein Körper aufnimmt oder abgibt, ist proportional zu seiner **Masse**, seiner **spezifischen Wärmekapazität** c und der **Temperaturänderung** ΔT. Große c → gleiche Masse und ΔT speichern mehr Energie (Wasser „puffert“ Temperatur). **Einheiten:** [Q] = J, [m] = kg, [c] = J/(kg·K), [ΔT] = K → J = kg · (J/(kg·K)) · K ✓. **Nicht verwechseln:** c = Wärmekapazität (Speichern); λ (Lambda) = Wärmeleitfähigkeit (Transport).
+
+**Größenordnung:** c(Wasser) = 4180 J/(kg·K); 1 kg Wasser um 1 K erwärmen = 4180 J ≈ 1 kcal. Mensch (70 kg, c ≈ 3500 J/(kg·K)) von 34 °C auf 37 °C: Q ≈ 735 kJ.
 
 **Mischungstemperatur**: Werden zwei Wassermengen vermischt, gilt Energieerhaltung:
 Q_abgegeben = Q_aufgenommen → m₁ · c · (T₁ − T_m) = m₂ · c · (T_m − T₂)
-→ T_m = (m₁ · T₁ + m₂ · T₂) / (m₁ + m₂)
+→ **T_m = (m₁ · T₁ + m₂ · T₂) / (m₁ + m₂)**
+
+**Formelklartext:** T_m ist der **massengewichtete Mittelwert** der Ausgangstemperaturen. Gleiche Stoffe → c kürzt sich heraus; T_m liegt immer **zwischen** T₁ und T₂. Mehr Masse der kälteren Flüssigkeit → T_m näher an T₂. **Einheiten:** Alle T in °C oder K (einheitlich); [T_m] = K bzw. °C.
 
 > **Merke:** Bei der Mischkalorimetrie kürzt sich c heraus, wenn beide Flüssigkeiten denselben Stoff darstellen. Die Mischtemperatur liegt stets zwischen den beiden Ausgangstemperaturen, gewichtet nach den Massen.
+
+Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkeiten – ein biologisch zentraler Fakt. Der menschliche Körper (≈ 60 % Wasser) kann große Wärmemengen aufnehmen/abgeben ohne starke Temperaturschwankungen.
 
 ![Zustand und Temperatur](/grafik-ideales-gas.svg)
 
@@ -145,7 +155,7 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 
 **Zentral prüfungsrelevant:** Temperatur (Kelvin T = °C + 273,15), Wärme Q = c·m·ΔT, spezifische Wärmekapazität, **thermische Ausdehnung durch Teilchenbewegung** (mittlere Geschwindigkeit ↑ → Stöße heftiger → mittlerer Abstand ↑), **Anomalie des Wassers** (Dichte bei **4 °C** am größten; Seen frieren von oben), Phasenübergang (latente Wärme), Wärmebilanz.
 
-**Ergänzend vertiefend:** Absolute Temperatur (0 K); Volumenausdehnung γ ≈ 3α; Verdampfungsenthalpie (Schwitzen); typische Verwechslungen (c vs. λ, Dichteanomalie bei 4 °C) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Absolute Temperatur (0 K); Volumenausdehnung γ ≈ 3α; Verdampfungsenthalpie (Schwitzen). Typische Fallen: Wärmekapazität c (Speichern) ≠ Wärmeleitfähigkeit λ (Transport); Dichteanomalie Wasser bei 4 °C (nicht 0 °C); ΔT in K und °C gleich.
 
 **Häufige Fragen:**
 - "Welche Temperatur in K entspricht 37 °C?" → T[K] = 37 + 273,15 = 310 K
@@ -155,9 +165,9 @@ Beim Schwitzen werden pro Gramm Schweiss ca. 2400 J (Verdampfungsenthalpie) der 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Thermische Ausdehnung:** Ursache = mittlere Teilchengeschwindigkeit ↑ → heftigere Stöße → mittlerer Abstand ↑. Falsch: „Wärme braucht Platz“, „Körper wird weicher“, „Gase treiben aus dem Körper“.
 - **Anomalie des Wassers:** Dichte bei **4 °C** am größten; Seen frieren **von oben** zu (nicht von unten). Nicht: „Wasser verhält sich normal“ oder „Dichte bei 0 °C am größten“.
-- Bei Temperaturdifferenzen (ΔT) sind °C und K gleichwertig — bei absoluten Temperaturen in Formeln immer Kelvin!
-- Wärmekapazität c [J/(kg·K)] beschreibt Speichern von Wärme — nicht verwechseln mit Wärmeleitfähigkeit λ [W/(m·K)]
-- Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)
+- **ΔT:** Temperaturdifferenzen sind in Kelvin und Celsius **gleich** (ΔT = 10 K = 10 °C). Nur bei absoluten Werten: T in Formeln (z. B. ideales Gas) in **Kelvin** einsetzen.
+- Wärmekapazität **c** [J/(kg·K)] = Speichern von Wärme — **nicht** verwechseln mit Wärmeleitfähigkeit **λ** [W/(m·K)] = Transport von Wärme.
+- Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!). Körpertemperatur **37 °C = 310 K** (nicht 273 + 37 = 310 — genau 310,15 K).
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - c(Wasser) = 4180 J/(kg·K); c(Eis) = 2090 J/(kg·K); c(Luft) ≈ 1005 J/(kg·K)
@@ -405,6 +415,8 @@ Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Tei
 - ΔT: Temperaturdifferenz [K]
 - d: Schichtdicke [m]
 
+**Formelklartext:** Q̇ = λ·A·ΔT/d heißt: Der **Wärmestrom** (Leistung in Watt) durch eine Schicht ist proportional zur **Fläche** A und zur **Temperaturdifferenz** ΔT, und **umgekehrt proportional** zur **Dicke** d. Hohes λ (Metalle) → viel Wärme pro Zeit; niedriges λ (Luft, Fett) → gute Isolierung. **Einheiten:** [λ]·[A]·[ΔT]/[d] = (W/(m·K))·m²·K/m = W ✓. **Nicht verwechseln:** λ = Wärmeleitfähigkeit (Transport); c = spezifische Wärmekapazität (Speichern).
+
 Metalle leiten Wärme gut (hohe λ), Gase und Isolatoren schlecht. Körperfett wirkt als Wärmeisolator (niedrige λ). Verbände aus Wolle oder Schaumstoff halten Körperwärme, weil eingeschlossene Luft (λ ≈ 0,026) schlecht leitet.
 
 Der **Widerstand** R_th = d/(λ·A) ist das thermische Analogon zum elektrischen Widerstand; Schichten können wie Widerstände in Reihe addiert werden (Bauphysik, Kleidung).
@@ -489,7 +501,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 **Zentral prüfungsrelevant:** Wärmeleitung (Fourier: Q̇ = λ·A·ΔT/d), Wärmeleitfähigkeit λ, Isolation (Fett, Luft), Wärmestrom, Anwendung (Körpertemperatur, Wärmedämmung).
 
-**Ergänzend vertiefend:** Konvektion, Strahlung; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Konvektion, Strahlung. Typische Fallen: Stefan-Boltzmann T in Kelvin (nicht °C); Strahlung im Vakuum möglich, Konduktion braucht Materialkontakt; ε(Haut) ≈ 0,97.
 
 **Häufige Fragen:**
 - "Wärmestrom durch Fettschicht: λ = 0,2, A = 0,5 m², ΔT = 4 K, d = 2 cm?" → Q̇ = 0,2 · 0,5 · 4 / 0,02 = 20 W
@@ -737,6 +749,8 @@ Dies ist die physikalische Grundlage der Temperaturmessung: Ein Thermometer erre
 - Q: dem System zugeführte Wärme [J] (positiv: Wärme zugeführt)
 - W: am System verrichtete Arbeit [J] (positiv: Kompression/Arbeit von außen)
 
+**Formelklartext:** ΔU = Q + W ist die **Energieerhaltung** der Thermodynamik: Die Änderung der inneren Energie des Systems ist gleich der **zugeführten Wärme** plus der **am System verrichteten Arbeit**. Wärme zuführen (Q > 0) oder Kompression (W > 0) erhöht U. **Vorzeichenkonvention prüfen:** Manche Bücher schreiben ΔU = Q − W, wenn W = vom System verrichtete Arbeit (z. B. Expansion). Bei isochoren Prozessen: W = 0 → ΔU = Q; bei adiabatischen: Q = 0 → ΔU = W.
+
 Alternativform: ΔU = Q − W_System (wenn W_System die vom System verrichtete Arbeit ist).
 
 Die innere Energie U ist die Gesamtenergie aller Mikrozustände (Translation, Rotation, Vibration der Teilchen, Bindungsenergien). Bei idealen Gasen gilt U ∝ T.
@@ -780,6 +794,8 @@ Der maximal erreichbare Wirkungsgrad η einer Wärmekraftmaschine zwischen zwei 
 **η_Carnot = 1 − T_kalt / T_warm**
 
 (T in Kelvin!)
+
+**Formelklartext:** Der **Carnot-Wirkungsgrad** ist der theoretisch **maximale** Wirkungsgrad einer Wärmekraftmaschine zwischen zwei Temperaturreservoirs. Er hängt **nur** von den Temperaturen ab: Je größer T_warm oder je kleiner T_kalt, desto höher η. **Unbedingt T in Kelvin** einsetzen – 1 − (30+273)/(600+273) ≠ 1 − 30/600! Reale Maschinen haben immer η < η_Carnot wegen Reibung und Irreversibilität.
 
 - Reale Maschinen haben immer η < η_Carnot (Reibung, Wärmeverluste, Irreversibilität).
 - Beispiel: T_warm = 600 K, T_kalt = 300 K → η = 1 − 300/600 = 50 %.
@@ -828,7 +844,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 **Zentral prüfungsrelevant:** Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm (Kelvin!), 2. Hauptsatz (Wärme nicht vollständig in Arbeit), Wärmekraftmaschine, maximaler Wirkungsgrad.
 
-**Ergänzend vertiefend:** Entropie; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Entropie. Typische Fallen: Carnot T immer in Kelvin; Vorzeichenkonvention 1. Hauptsatz (Q ± W); Perpetuum mobile 1. Art (Energie) vs. 2. Art (Wärme→Arbeit).
 
 **Häufige Fragen:**
 - "Carnot-Wirkungsgrad bei T_warm = 600 K, T_kalt = 300 K?" → η = 1 − 300/600 = 50 %
@@ -1141,7 +1157,7 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 
 **Zentral prüfungsrelevant:** Ideales Gas (pV=nRT), isochor (V const → p/T const), isobar (p const → V/T const), isotherm (T const → pV const), Gay-Lussac, Boyle-Mariotte.
 
-**Ergänzend vertiefend:** Adiabatisch; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Adiabatisch. Typische Fallen: Ideales Gas T in Kelvin; Boyle-Mariotte nur isotherm; bei Phasenübergang T konstant (Latentwärme).
 
 **Häufige Fragen:**
 - "Gas bei 27 °C und 2 bar, isochor auf 127 °C erhitzt — neuer Druck?" → p₂ = 2 × (400/300) ≈ 2,67 bar

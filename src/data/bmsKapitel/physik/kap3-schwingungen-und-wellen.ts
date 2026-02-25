@@ -57,6 +57,8 @@ Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschrei
 - **f** (Frequenz) – Anzahl der Schwingungen pro Sekunde [Hz = 1/s]
 - **φ₀** (Anfangsphase) – bestimmt den Zustand zur Zeit t = 0
 
+**Formelklartext:** x(t) = A·cos(ωt+φ₀) beschreibt, *wo* sich der Körper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und −A; ωt ist der „Phasenwinkel“ (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = −k·x** bedeutet: Die Rückstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (größeres k), desto größer die Kraft bei gleicher Auslenkung.
+
 > **Merke:** Die Kreisfrequenz ω = 2πf = 2π/T ist die zentrale Verknüpfungsgrösse zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
 
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
@@ -83,6 +85,10 @@ Für kleine Winkel (< 5°, Kleinwinkelnäherung sin θ ≈ θ) verhält sich ein
 
 Die Periodendauer ist **unabhängig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhängig von der Amplitude, solange die Auslenkung klein bleibt; gilt für Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor √2 ≈ 1,41. Auf dem Mond (g ≈ 1,62 m/s²) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
 
+**Formelklartext:** T = 2π√(l/g) heißt: Die Schwingungsdauer wird nur von der **Fadenlänge** l und der **Fallbeschleunigung** g bestimmt. Längeres Pendel → längere T; größeres g (z. B. auf der Erde vs. Mond) → kürzere T. Masse und Amplitude (bei kleinen Winkeln) spielen keine Rolle – das ist die Isochronie.
+
+**Größenordnung:** Pendel l = 1 m auf der Erde → T ≈ 2,0 s („Sekundenpendel“). l = 25 cm → T ≈ 1 s.
+
 > **Merke:** Beim Fadenpendel bestimmen nur Fadenlänge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
 
 **Gültigkeitsgrenze:** Bei Auslenkungen > 15° weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Für θ_max = 30° beträgt der Fehler bereits ~2 %.
@@ -95,6 +101,8 @@ Eine Masse m an einer Feder mit Federkonstante k schwingt mit:
 
 Hier ist T unabhängig von der Amplitude (gleiche Isochronie), aber abhängig von der Masse. Größere Masse → längere Periodendauer; steifere Feder (größeres k) → kürzere Periodendauer.
 
+**Formelklartext:** T = 2π√(m/k) bedeutet: Schwerere Masse (m ↑) schwingt langsamer (T ↑); steifere Feder (k ↑) schwingt schneller (T ↓). Die Amplitude beeinflusst T nicht (Isochronie). Einheitlich: [m] = kg, [k] = N/m → √(kg/(N/m)) = √(kg·m/N) = √(s²) = s ✓.
+
 Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Hängt man eine Masse m an die Feder und misst die statische Dehnung Δx, gilt k = mg/Δx.
 
 ## Energie im harmonischen Oszillator
@@ -104,6 +112,10 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
 - E_kin = ½ · m · v² = ½ · m · ω² · A² · sin²(ωt)
 - E_pot = ½ · k · x² = ½ · k · A² · cos²(ωt)
 - E_ges = ½ · k · A² = const.
+
+**Formelklartext:** E_ges = ½·k·A² heißt: Die **Gesamtenergie** des ungedämpften Oszillators ist konstant und wird allein durch **Federkonstante k** und **Amplitude A** bestimmt. Verdoppelte Amplitude → **viermal** mehr Energie (E ∝ A²). In der Ruhelage (x = 0) ist die gesamte Energie kinetisch (v maximal); in den Umkehrpunkten (x = ±A) ist sie vollständig potentiell.
+
+**Einheiten:** E_kin, E_pot, E_ges in **Joule [J]**; k in **N/m**, A in **m** → ½·k·A² hat Einheit (N/m)·m² = N·m = J ✓.
 
 **Gleichstand** (E_kin = E_pot) herrscht bei x = ±A/√2 ≈ ±0,707·A.
 
@@ -163,7 +175,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Zentral prüfungsrelevant:** Harmonische Schwingung, Fadenpendel T = 2π√(l/g), Federpendel T = 2π√(m/D), T unabhängig von Amplitude (ungedämpft), Frequenz f = 1/T.
 
-**Ergänzend vertiefend:** Gedämpfte Schwingung (A(t) = A₀·e^(−δt)); aperiodischer Grenzfall und Kriechfall; Güte Q; Larmorfrequenz im MRT (f = γ·B₀); typische Verwechslungen (ω ≠ f, E ∝ A², Faden vs. Feder) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Gedämpfte Schwingung (A(t) = A₀·e^(−δt)); aperiodischer Grenzfall und Kriechfall; Güte Q; Larmorfrequenz im MRT (f = γ·B₀). Typische Fallen: ω (Kreisfrequenz) ≠ f (Frequenz); E ∝ A²; Fadenpendel vs. Federpendel (verschiedene Rückstellkraft).
 
 **Häufige Fragen:**
 - "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
@@ -171,11 +183,12 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 - "Wovon hängt die Periodendauer des Fadenpendels ab?" → nur von l und g (nicht von Masse oder Amplitude)
 - "Was ist Resonanz?" → Anregungsfrequenz = Eigenfrequenz → maximale Amplitudenzunahme
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- ω = 2πf (Kreisfrequenz, rad/s) ≠ f = 1/T (normale Frequenz, Hz) — beides beschreibt die Schwingungsrate, aber in verschiedenen Einheiten
-- E_ges ∝ A² (nicht ∝ A): doppelte Amplitude → **viermal** mehr Energie
-- Fadenpendel: T unabhängig von Masse; Federpendel: T abhängig von Masse — aber beide zeigen Isochronie
-- Aperiodischer Grenzfall (δ = ω₀, schnellste Rückkehr ohne Überschwingen) ≠ Kriechfall (δ > ω₀, schleichende Rückkehr)
+**Typische Denkfehler (MedAT):**
+- **ω ≠ f:** Kreisfrequenz ω [rad/s] ist 2π mal die Frequenz f [Hz]. „ω = 10 rad/s“ bedeutet nicht „10 Hz“, sondern f = ω/(2π) ≈ 1,59 Hz.
+- **E ∝ A (falsch):** Energie geht mit **A²**; doppelte Amplitude = vierfache Energie. Nicht „doppelte Amplitude → doppelte Energie“.
+- **Faden vs. Feder:** Beim Fadenpendel hängt T **nur** von l und g ab (nicht von m). Beim Federpendel hängt T von m **und** k ab. Beide: T unabhängig von A (Isochronie).
+- **Resonanz:** Maximale Amplitude nur bei **f_Anregung = f_Eigen**. Nicht „bei höchster Anregungsfrequenz“ oder „bei kleinster Dämpfung“ (Dämpfung bestimmt nur die Breite der Resonanzkurve).
+- **Gleichstand E_kin = E_pot:** Bei x = ±A/√2 ≈ ±0,707·A, **nicht** bei x = A/2.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Fadenpendel: T = 2π√(l/g); l = 1 m auf Erde → T ≈ 2,0 s; auf Mond (g/6) → T ≈ 4,9 s
@@ -414,6 +427,8 @@ Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen
 - **f** (Frequenz) [Hz] – wird von der Quelle festgelegt und ändert sich beim Medienwechsel nicht
 - **λ** (Wellenlänge) [m] – Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
 
+**Formelklartext:** c = f·λ bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** × **Wellenlänge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt λ = c/f – die Wellenlänge **passt sich** an. Beim Übergang in ein schnelleres Medium (z. B. Schall: Luft → Wasser) wird λ **größer**; in ein langsameres Medium wird λ **kleiner**. Die Frequenz bleibt dabei immer gleich („Quelle schwingt weiter mit derselben Rate“).
+
 **Prüfungsrelevante Zahlen:** **Lichtgeschwindigkeit** (Vakuum/Luft) **c ≈ 3·10⁸ m/s = 300 000 km/s**. **Sichtbares Licht** hat Wellenlängen im Bereich **380 nm bis 750 nm** (nanometer, nicht mm, cm oder km). Beispiel: Trägerfrequenz 2 GHz (z. B. Mobilfunk) → λ = c/f = 3·10⁸/(2·10⁹) = 0,15 m = **15 cm**.
 
 > **Merke:** c gehört zum Medium, f gehört zur Quelle, λ = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
@@ -477,6 +492,8 @@ Die **akustische Impedanz** Z beschreibt, wie leicht sich Schall in einem Medium
 
 **Z = ρ · c** (mit ρ = Dichte des Mediums in kg/m³, c = Schallgeschwindigkeit in m/s, Einheit: Pa·s/m = Rayl)
 
+**Formelklartext:** Z = ρ·c ist der „Widerstand“ des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit → hohe Impedanz. An Grenzflächen mit **großem Z-Unterschied** (z. B. Luft–Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [ρ]·[c] = (kg/m³)·(m/s) = kg/(m²·s) = Pa·s/m (Rayl).
+
 Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschiedlicher Impedanz (Z₁ ≠ Z₂), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
 
 **Reflexionskoeffizient:** R = [(Z₂ − Z₁)/(Z₂ + Z₁)]²
@@ -530,7 +547,7 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Zentral prüfungsrelevant:** **c = λ·f**; **Lichtgeschwindigkeit c ≈ 3·10⁸ m/s**; **sichtbares Licht 380–750 nm**; Wellenlänge aus λ = c/f (z. B. 2 GHz → λ ≈ 15 cm). Wellengrößen (λ, f, c), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
 
-**Ergänzend vertiefend:** Stehende Welle (Knoten/Bäuche, λₙ = 2L/n); Kohärenz; Snellius und Totalreflexion; typische Verwechslungen (Doppler-Vorzeichen, konstruktiv n·λ vs. destruktiv (n+½)·λ) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Stehende Welle (Knoten/Bäuche, λₙ = 2L/n); Kohärenz; Snellius und Totalreflexion. Typische Fallen: Licht 380–750 nm (nicht mm!); c zum Medium, f zur Quelle; Doppler Vorzeichen (näher = höher); konstruktiv n·λ, destruktiv (n+½)·λ.
 
 **Häufige Fragen:**
 - "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
@@ -541,10 +558,11 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Sichtbares Licht:** Wellenlänge **380–750 nm** (Nanometer), nicht 380–750 mm, cm, m oder km.
 - **c = λ·f** mit c ≈ 3·10⁸ m/s; z. B. 2 GHz → λ = 0,15 m = 15 cm.
-- c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium)
+- c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium). **Beim Medienwechsel:** f bleibt gleich, c und λ ändern sich – nicht „f ändert sich“ oder „c bleibt gleich“.
 - Schall = Longitudinalwelle; Licht = Transversalwelle — nicht umgekehrt!
 - Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)
 - Schall breitet sich in Festkörpern am schnellsten aus; im Vakuum existiert er gar nicht
+- **Impedanz:** Große Z-Differenz → starke Reflexion (Luft–Gewebe ohne Gel → fast 100 % Reflexion)
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - c_Luft ≈ 340 m/s; c_Wasser ≈ 1480 m/s; c_Gewebe ≈ 1540 m/s; c_Licht = 3×10⁸ m/s
@@ -900,7 +918,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Zentral prüfungsrelevant:** Interferenz (konstruktiv Δs = n·λ, destruktiv Δs = (n+½)λ), Kohärenz, Beugung, Doppelspalt, Anwendung (Röntgenbeugung, Ultraschall).
 
-**Ergänzend vertiefend:** Huygens-Prinzip (Elementarwellen); Polarisation; typische Verwechslungen (Doppler: aufeinander zu = höhere Frequenz; Grenzwinkel Totalreflexion) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Huygens-Prinzip (Elementarwellen); Polarisation. Typische Fallen: Gangunterschied n·λ konstruktiv, (n+½)·λ destruktiv; Doppler: aufeinander zu = höhere Frequenz; Totalreflexion nur dichter → dünner.
 
 **Häufige Fragen:**
 - "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
@@ -1245,7 +1263,7 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 
 **Zentral prüfungsrelevant:** Schall (Longitudinalwelle), Dezibel (dB = 10·log(I/I₀)), Verdopplung I → +3 dB, Hörschwelle, Schmerzgrenze, Ultraschall (Diagnostik), Dopplersonographie.
 
-**Ergänzend vertiefend:** Schallgeschwindigkeit in Gewebe; Impedanzanpassung im Mittelohr; Weber/Rinne; typische Verwechslungen (L = 20·log für Druck vs. 10·log für Intensität; 85 dB Lärmschwelle) — siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Schallgeschwindigkeit in Gewebe; Impedanzanpassung im Mittelohr; Weber/Rinne. Typische Fallen: L = 20·log für Druck vs. 10·log für Intensität; 85 dB Lärmschwelle; Mittelohr- vs. Innenohrschwerhörigkeit (Weber lateralisiert).
 
 **Häufige Fragen:**
 - "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)

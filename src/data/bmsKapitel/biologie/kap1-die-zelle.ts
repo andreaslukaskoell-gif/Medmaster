@@ -28,7 +28,7 @@ export const bioKap1: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. **Warum ist das für den MedAT relevant?** Für die Medizin ist das zentral: Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur, pH). **Welche Arten von Fragen werden damit beantwortet?** Typische BMS-Fragen: „Welche Kennzeichen des Lebens?“; „Warum sind Viren keine Lebewesen?“; „Negativ vs. positiv Rückkopplung?“; „Was ist Emergenz?“ Dieses Kapitel legt das Fundament für alle weiteren Zellthemen.
+**Worum geht es?** Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. **Warum für den MedAT relevant?** Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur, pH). **Welche Fragen werden beantwortet?** Typische BMS-Fragen: „Welche Kennzeichen des Lebens?“; „Warum sind Viren keine Lebewesen?“; „Negativ vs. positiv Rückkopplung?“; „Was ist Emergenz?“ Dieses Kapitel legt das Fundament für alle weiteren Zellthemen.
 
 **In diesem Kapitel lernst du:**
 - die **sieben Kennzeichen des Lebens** (StReForWaEvoBeHo) und warum kein einzelnes allein reicht
@@ -177,8 +177,9 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 - Kristallisation ≠ Wachstum im biologischen Sinne
 
 **Prüfungsrelevante Zahlen & Fakten:**
-- 7 Kennzeichen (StReForWaEvoBeHo)
-- Hierarchie: Atom → Organismus
+- Sieben Kennzeichen: StReForWaEvoBeHo (kein einzelnes definiert Leben allein)
+- Hierarchie: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organismus
+- Homöostase: Blutzucker-Soll ca. 4–6 mmol/L; Körpertemperatur ca. 36,5–37,5 °C; Blut-pH 7,35–7,45
 
 ---
 
@@ -209,7 +210,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       ],
       klinischerBezug:
         "Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuckerregelkreis versagt durch Insulinresistenz und relative Insulininsuffizienz. Die Folge ist chronische Hyperglykämie mit Glykation von Proteinen (HbA1c als Laborparameter), Endothelschäden und Mikroangiopathie. Klinische Konsequenzen: diabetische Retinopathie (häufigste Erblindungsursache im Erwachsenenalter), Nephropathie (häufigste Ursache terminaler Niereninsuffizienz), Polyneuropathie und kardiovaskuläre Erkrankungen. Systembiologisches Denken hat hier zur Entwicklung personalisierter Therapieansätze (CGM, Insulinpumpen, SGLT2-Inhibitoren mit kardioprotektiver Wirkung) geführt.",
-      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Warum gelten Viren nicht als Lebewesen im klassischen Sinne?",
         answer:
@@ -524,7 +525,7 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
       ],
       klinischerBezug:
         "Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmung) – menschliche Zellen besitzen keine solche Zellwand und sind daher unempfindlich. Bei Gram-negativen Bakterien muss Penicillin die äußere Membran überwinden (schlechterer Zugang → Resistenzproblem). MRSA (Methicillin-resistenter Staphylococcus aureus) hat ein verändertes PBP2a, an das Beta-Laktame nicht binden. Therapie: Vancomycin, Linezolid, Daptomycin. LPS gram-negativer Bakterien aktiviert TLR4 auf Immunzellen → Cytokinausschüttung → septischer Schock. Therapie: antibiotische Eradikation, hämodynamische Stabilisierung (Noradrenalin), Organschutz.",
-      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
           "Ein Patient erhält Chloramphenicol. Warum ist dieses Antibiotikum für Prokaryoten toxisch, nicht aber für menschliche Zellen?",
@@ -669,7 +670,7 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 | Durchlässigkeit | Stoffe | Mechanismus |
 |-----------------|--------|-------------|
 | **Frei (ohne Protein)** | O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K) | Einfache Diffusion durch die Lipidschicht (O₂ braucht **kein** Transportprotein!) |
-| **Via Kanal/Transporter** | Wasser (AQP), Ionen (Na⁺, K⁺, Ca²⁺, Cl⁻), Glucose (GLUT), Aminosäuren | Membranproteine, entlang oder gegen Gradient (siehe UK „Membrantransport“) |
+| **Via Kanal/Transporter** | Wasser (AQP), Ionen (Na⁺, K⁺, Ca²⁺, Cl⁻), Glucose (GLUT), Aminosäuren | Membranproteine: passiv (Kanäle, Carrier) oder aktiv (ATP, Na⁺-Gradient) |
 | **Blockiert** | Geladene Ionen ohne Kanal | Hydrophobes Membraninneres + Hydrathülle der Ionen = hohe Energiebarriere |
 
 **Steroide** (z. B. Cortisol, Vitamin D) sind fettähnliche Moleküle und können die Lipidschicht daher gut durchqueren. Ionen dagegen sind geladen und von einer Wasserschicht umhüllt — der Eintritt in die fettige Membran wäre energetisch sehr ungünstig; dafür braucht die Zelle spezielle **Proteine** (Funktionsmoleküle aus Aminosäuren; Kanäle, Transporter), die im nächsten Abschnitt vorkommen.
@@ -813,7 +814,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
       ],
       klinischerBezug:
         "Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Die ABO-Blutgruppenantigene sind Glykokalix-Strukturen (Kapitel Blut/Immunologie). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl--Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.",
-      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Warum können Ionen wie Na+ und K+ die Lipiddoppelschicht nicht frei passieren?",
         answer:
@@ -1074,7 +1075,89 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       ],
       klinischerBezug:
         "Herzglykoside hemmen Na⁺/K⁺-ATPase → Ca²⁺ ↑ → positiv inotrop. SGLT2-Hemmer blockieren Glucoserückresorption in der Niere → Glucosurie → Blutzuckersenkung bei Typ-2-Diabetes. Isotone Infusion 0,9 % NaCl; hypotone Infusion kann Hämolyse begünstigen.",
-      selfTest: [],
+      selfTest: [
+        {
+          question: "Was passiert mit Erythrozyten in einer hypotonen Lösung?",
+          options: [
+            "Sie schrumpfen (Krenation)",
+            "Sie schwellen und können hämolysieren",
+            "Ihr Volumen bleibt konstant",
+            "Sie nehmen aktiv Na⁺ auf",
+            "Sie verlieren Wasser durch Aquaporine",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Hypoton bedeutet: Osmolalität außen < innen. Wasser strömt osmotisch in die Zelle → sie schwillt an → bei Erythrozyten kann die Membran zerplatzen (Hämolyse). Krenation tritt bei hypertoner Lösung auf.",
+          hints: ["Hypoton = weniger Teilchen außen. Wohin strömt das Wasser?"],
+          difficulty: 1,
+          tags: ["tonizität", "osmose", "hämolyse"],
+        },
+        {
+          question: "Wie viele Na⁺- und K⁺-Ionen werden pro ATP von der Na⁺/K⁺-ATPase bewegt?",
+          options: [
+            "2 Na⁺ raus, 3 K⁺ rein",
+            "3 Na⁺ raus, 2 K⁺ rein",
+            "1 Na⁺ raus, 1 K⁺ rein",
+            "3 Na⁺ rein, 2 K⁺ raus",
+            "Gleich viele Na⁺ und K⁺ in gleiche Richtung",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Pro 1 ATP pumpt die Na⁺/K⁺-ATPase 3 Na⁺ aus der Zelle und 2 K⁺ in die Zelle. Das baut das Ruhemembranpotenzial (~−70 mV) auf und schafft den Na⁺-Gradienten für sekundär aktiven Transport.",
+          hints: ["Merksatz: 3 raus, 2 rein — nicht umgekehrt."],
+          difficulty: 1,
+          tags: ["na-k-atpase", "primär-aktiv", "stöchiometrie"],
+        },
+        {
+          question: "Was wird bei der Osmose durch die Membran transportiert?",
+          options: [
+            "Die gelösten Teilchen (z. B. Salze)",
+            "Nur Wasser (zur Seite mit höherer Osmolalität)",
+            "Wasser und Ionen gemeinsam",
+            "ATP zur Energiebereitstellung",
+            "Nur kleine lipophile Moleküle",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Osmose ist der passive Transport von Wasser durch eine semipermeable Membran von der Seite mit niedrigerer Osmolalität zur Seite mit höherer Osmolalität. Die gelösten Teilchen diffundieren nicht bei reiner Osmose; nur das Wasser folgt dem Konzentrationsgradienten der gelösten Teilchen.",
+          hints: ["Osmolalität = Teilchen pro kg Wasser. Wohin strömt das Wasser?"],
+          difficulty: 1,
+          tags: ["osmose", "wasser", "osmolalität"],
+        },
+        {
+          question: "Was kennzeichnet sekundär aktiven Transport?",
+          options: [
+            "Direkter Verbrauch von ATP pro transportiertem Molekül",
+            "Nur Ionenkanäle sind beteiligt",
+            "Der Na⁺-Gradient (von der Na⁺/K⁺-ATPase aufgebaut) treibt den Transport",
+            "Es findet nur bei Pflanzen statt",
+            "Wasser wird gegen den Gradienten gepumpt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Sekundär aktiver Transport nutzt den Na⁺-Gradienten (außen hoch, innen niedrig) als Energiequelle. Beispiele: Symport (SGLT: Na⁺ + Glucose in dieselbe Richtung), Antiport (NCX: Na⁺ rein, Ca²⁺ raus). Die Na⁺/K⁺-ATPase baut den Gradienten primär aktiv mit ATP auf.",
+          hints: ["Primär aktiv = direkt ATP. Sekundär = welcher Gradient wird genutzt?"],
+          difficulty: 2,
+          tags: ["sekundär-aktiv", "symport", "antiport", "sglt"],
+        },
+        {
+          question:
+            "Welche Konzentration hat eine isotone physiologische Kochsalzlösung zur Infusion?",
+          options: [
+            "0,09 % NaCl",
+            "0,9 % NaCl (~290 mosmol/kg)",
+            "9 % NaCl",
+            "0,9 mol/L NaCl",
+            "Isoton ist nur Glukoselösung 5 %",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Isotone Kochsalzlösung entspricht etwa 0,9 % NaCl (ca. 290 mosmol/kg) und damit der Osmolalität des Zytoplasmas. So bleibt das Zellvolumen konstant; hypotone Infusion könnte Hämolyse begünstigen.",
+          hints: ["Blutplasma ~290 mosmol/kg. Welcher NaCl-Gehalt führt dazu?"],
+          difficulty: 1,
+          tags: ["tonizität", "infusion", "0,9%"],
+        },
+      ],
       diagram: "cell-membrane",
       imageUrl: "/grafik-1-membrantransport.svg",
     },
@@ -1083,6 +1166,19 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
     {
       id: "bio-1-05",
       title: "Zellorganellen — Funktion und medizinische Relevanz",
+      stichworte: [
+        "Sekretorischer Weg",
+        "rER",
+        "Golgi",
+        "M6P-Targeting",
+        "Mitochondrien",
+        "Cristae",
+        "Lysosomen",
+        "Speicherkrankheiten",
+        "Peroxisomen",
+        "Proteasomen",
+        "Ubiquitin",
+      ],
       content: `## Einleitung
 
 **Worum geht es?** **Wo** werden Proteine hergestellt, sortiert und abgebaut? **Wo** entsteht das meiste ATP? Eukaryotische Zellen sind durch **Kompartimentierung** in spezialisierte **Organellen** strukturiert — rER, Golgi, Mitochondrien, Lysosomen, Peroxisomen, Proteasomen. **Warum für den MedAT relevant?** Sekretorischer Weg (rER → Golgi → Lysosom), M6P-Targeting, Mitochondrien (Cristae, Atmungskette, Endosymbiontentheorie), Lysosomen (pH, Speicherkrankheiten), Peroxisomen (VLCFA, Katalase) sind Standardthemen. **Welche Fragen werden beantwortet?** „Sekretorischer Weg — welche Reihenfolge?“; „Was ist M6P-Targeting?“; „Wo sitzt die Atmungskette?“; „Welche lysosomale Speicherkrankheit?“; „Peroxisomen — welche Funktion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Organellen abgedeckt.
@@ -1235,7 +1331,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 - "Was ist Mannose-6-Phosphat?" → Targeting-Signal für lysosomale Enzyme (im Golgi angehängt)
 - "Was ist der Unterschied zwischen rauem und glattem ER?" → rER: Ribosomen, Proteinsynthese; gER: Lipidsynthese, Detox, Ca²⁺
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - **Organellen mit zwei Membranen:** Mitochondrien, Zellkern. Peroxisom, Lysosom, ER, Golgi haben nur **eine** Membran.
 - **Struktur „von eigener Membran umgeben“:** Peroxisom (Wasserstoffperoxid-Stoffwechsel) ja; Nukleosom (Histon-DNA), Ribosom (Protein-rRNA), MTOC (Mikrotubuli-Organisationszentrum) **nein** — keine umschließende Membran.
 - Glykolyse findet im Zytoplasma statt, NICHT in Mitochondrien!
@@ -1244,9 +1340,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 - Mitochondrien vermehren sich durch binäre Fission (wie Bakterien), NICHT durch Mitose
 - I-Zell-Krankheit: lysosomale Enzyme fehlen nicht, sie werden nur falsch sortiert (kein M6P-Tag)
 
-**SVG-Stellen im Kapitel (optional):** (1) Schema sekretorischer Weg (rER → Golgi → Lysosom). (2) Mitochondrien-Querschnitt (Cristae, Matrix, Atmungskette). (3) Übersicht Organellen-Tabelle (bereits im Text).
-
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Pro Glucose aerob: ~30–32 ATP; anaerob: 2 ATP
 - Lysosomaler pH: 4,5–5,0 (H⁺-ATPase)
 - mtDNA: ~16.500 bp, kodiert ~13 Proteine, maternale Vererbung
@@ -1521,7 +1615,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Nukleosom (147 bp + Histon-Oktamer), Euchromatin vs. Heterochromatin (Acetylierung vs. Methylierung), Kernporen (<40 kDa frei, NLS/NES), Transkription (Kern) vs. Translation (Zytoplasma), Barr-Körper (Lyon-Hypothese). **Chromosom, Centromer, Telomer, Histone** (Definitionen siehe oben). **Strukturen im Zellkern:** Chromatin, Nukleolus (rRNA-Synthese, Ribosomen-Assemblierung). **NICHT im Zellkern:** Akrosom (Spermium), Ribosom (Zytoplasma/ER), Zentriol (Zytoplasma), Lysosom (Zytoplasma).
+**Zentral prüfungsrelevant:** Nukleosom (147 bp + Histon-Oktamer), Euchromatin vs. Heterochromatin (Acetylierung vs. Methylierung), Kernporen (<40 kDa frei, NLS/NES), Transkription (Kern) vs. Translation (Zytoplasma), Barr-Körper (Lyon-Hypothese). **Chromosom** = Träger der DNA mit Centromer und Telomeren; **Centromer** = Einschnürung für Spindelansatz; **Telomer** = Endkappen; **Histone** = Verpackungsproteine für DNA. **Strukturen im Zellkern:** Chromatin, Nukleolus (rRNA-Synthese, Ribosomen-Assemblierung). **NICHT im Zellkern:** Akrosom (Spermium), Ribosom (Zytoplasma/ER), Zentriol (Zytoplasma), Lysosom (Zytoplasma).
 
 **Ergänzend vertiefend:** Nucleolus (rRNA, Ribosomen-Assemblierung), Progeria (Lamin), HDAC-Inhibitoren, NLS/NES-Transport.
 
@@ -1530,7 +1624,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 - "Was ist der Unterschied zwischen Euchromatin und Heterochromatin?" → Euchromatin: acetyliert, aktiv; Heterochromatin: methyliert, inaktiv
 - "Was ist der Barr-Körper?" → Inaktiviertes X-Chromosom (Lyon-Hypothese), sichtbar als kondensiertes Heterochromatin
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - **„Chromosomen erlauben die freie Kombination der Gene“ ist FALSCH** — die freie Kombination erfolgt in der Meiose (Crossing-over, zufällige Verteilung).
 - **Im Zellkern finden sich:** Chromatin, Nukleolus. **Nicht im Zellkern:** Akrosom (Spermium), Ribosom (Zytoplasma), Zentriol (Zytoplasma), Lysosom (Zytoplasma).
 - Transkription im Kern, Translation im Zytoplasma — NICHT umgekehrt!
@@ -1539,7 +1633,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 - NLS = Kernimport (basische Aminosäuren Lys/Arg), NES = Kernexport — nicht verwechseln!
 - Nucleolus ist NICHT membranumschlossen — er ist eine Phasenseparationsstruktur
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Menschliches Genom: 3,2 Milliarden bp pro haploidem Satz, ~2 m ausgestreckt in ~6 µm Kern (~10.000-fache Kompaktierung)
 - Kernporen: <40 kDa freie Diffusion, >40 kDa aktiver Transport (NLS/NES)
 - Nukleosom: 147 bp DNA, Histon-Oktamer (H2A, H2B, H3, H4 je 2×)
@@ -1573,7 +1667,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
       ],
       klinischerBezug:
         "Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin, das die Kernlamina destabilisiert. Klinisch: vorzeitige Arteriosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod mit ~13 Jahren. Lonafarnib (Farnesyltransferase-Hemmer) verhindert die Farnesylierung von Progerin und verlängert das Leben um ~2,5 Jahre. HIV nutzt Importin-alpha/beta für den Kerntransport des Preintegrationskomplexes – LEDGF/p75 als Kofaktor der Integration. HIV-Integrase-Hemmer (Dolutegravir) = Standardtherapie. Prominente Nucleoli in Tumorbiopsien = Hinweis auf hohe Proliferationsaktivität, wichtiges histopathologisches Kriterium bei Prostata-, Nierenzell- und Lymphomdiagnose.",
-      // TODO: echte MedAT-Altfrage prüfen – aktüll Übungsformat
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Warum führt ein defekter Kernporenkomplex zur Katastrophe für die Zelle?",
         answer:
@@ -1839,7 +1933,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 - "Was ist ein Bivalent?" → 2 homologe Chromosomen (mit je 2 Schwesterchromatiden = 4 Chromatiden)
 - "Was passiert beim Crossing-over?" → DNA-Austausch zwischen homologen Chromosomen in Prophase I → neue Allelkombinationen
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - **Crossing-over findet NUR in der Meiose (Prophase I) statt, NICHT in der Mitose** — auch nicht in der Telophase der Mitose. In der Mitose gibt es kein Crossing-over.
 - **Zellzyklus-Reihenfolge: G1 → S → G2 → M** (nicht G1–G2–S–M!).
 - **Kerngenom wird in Chromosomen verpackt** (im Zellkern), nicht in Mitochondrien.
@@ -1849,7 +1943,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 - "Haploid" vs. "1 Chromatide": Nach Meiose I haben die Zellen n Chromosomen, aber jedes besteht noch aus 2 Schwesterchromatiden (technisch: haploid aber mit verdoppelter DNA)
 - G0 ≠ G1: G0 ist eine Ruhephase außerhalb des aktiven Zellzyklus
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Mensch: 46 Chromosomen (2n=46), 23 Chromosomenpaare
 - Mitose-Ergebnis: 2 Zellen mit je 46 Chromosomen (2n)
 - Meiose-Ergebnis: 4 Zellen mit je 23 Chromosomen (n)
@@ -2168,7 +2262,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 - "Warum liefert FADH₂ weniger ATP als NADH?" → FADH₂ speist Komplex II ein (pumpt keine H⁺) → geringerer Protonengradient
 - "Wo entsteht Laktat?" → Im Zytoplasma (Laktat-Dehydrogenase); Pyruvat → Laktat bei Sauerstoffmangel
 
-**Typische Prüfungsfallen / Verwechslungen:**
+**Typische Prüfungsfallen:**
 - Glykolyse findet im **Zytoplasma** statt (nicht im Mitochondrium!) — häufig als falsche Aussage in „Welche Aussage ist richtig?“.
 - Citratzyklus = **Matrix**; Atmungskette = **innere Membran** — beides Mitochondrien, aber unterschiedliche Kompartimente.
 - FADH₂ liefert weniger ATP als NADH (Komplex II pumpt keine Protonen).
@@ -2176,7 +2270,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 - Succinat-Dehydrogenase = **Komplex II** der Atmungskette **und** Citratzyklus-Enzym (Verbindungsenzym).
 - Substratkettenphosphorylierung nur in Glykolyse (z. B. Pyruvat-Kinase) und Citratzyklus (Succinyl-CoA-Synthetase), nicht in der Atmungskette (dort nur oxidative Phosphorylierung).
 
-**Prüfungsrelevante Zahlen/Fakten:**
+**Prüfungsrelevante Zahlen & Fakten:**
 - Glykolyse: 2 ATP netto, 2 NADH, 2 Pyruvat
 - Pyruvat-DH: 1 CO₂, 1 NADH, 1 Acetyl-CoA pro Pyruvat (×2 pro Glucose)
 - Citratzyklus pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP, 2 CO₂

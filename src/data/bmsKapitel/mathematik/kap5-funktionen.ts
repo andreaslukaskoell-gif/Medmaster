@@ -40,6 +40,10 @@ export const mathKap5: Kapitel = {
 
 ## Grundform und Begriffe
 
+**Idee:** Eine lineare Funktion beschreibt einen Zusammenhang, bei dem die Änderung von y proportional zur Änderung von x ist — der Graph ist eine **Gerade**. Die Steigung m sagt „wie viel y pro x“, der Achsenabschnitt b sagt „wo die Gerade die y-Achse schneidet“. Damit lassen sich Kalibrierkurven, Dosis-Wirkungs-Beziehungen im linearen Bereich und Infusionsraten modellieren.
+
+**Verfahren:** Allgemeine Form **f(x) = mx + b**: m = Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁); b = y-Achsenabschnitt = f(0). Gerade aus zwei Punkten: zuerst m berechnen, dann b = y₁ − m·x₁. Nullstelle: f(x) = 0 ⇒ x₀ = −b/m. Senkrechte Gerade zu m₁: m₂ = −1/m₁. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.
+
 ![Lineare Funktion](/grafik-lineare-funktion.svg)
 
 **Erklärung zur Grafik:** Die Abbildung zeigt Steigung m = Δy/Δx, Geradengleichung y = mx+b, Nullstelle x₀ = −b/m und die Bedingung für senkrechte Geraden m₁×m₂ = −1.
@@ -53,6 +57,8 @@ Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die una
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
 
 > **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. "mg/L pro Stunde" oder "mmHg pro BMI-Punkt".
+
+**Typische Prüfungsfehler:** Nullstelle mit Mitternachtsformel verwechseln (bei linear: x₀ = −b/m). Senkrechte Gerade: m₂ = −1/m₁ setzen (nicht m₂ = −m₁). Steigung: Δy/Δx — y-Differenz im Zähler, x-Differenz im Nenner (nicht vertauschen). b ist der y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle.
 
 ## Steigung und Achsenabschnitt im Detail
 
@@ -125,22 +131,30 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Lineare Funktionen (y = mx + b, Steigung m, Achsenabschnitt b), Gerade aus zwei Punkten, Nullstelle, Proportionalität, klinische Anwendung (Dosis-Wirkung).
+**Typische Aufgabentypen:**
+- Geradengleichung aus 2 Punkten aufstellen (zuerst m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁)
+- Nullstelle berechnen: f(x) = 0 ⇒ x₀ = −b/m
+- Schnittpunkt zweier Geraden: Gleichsetzen, nach x auflösen, y einsetzen
+- Kalibrierkurve: Konzentration aus Absorption (A = ε·c·d → c = A/(ε·d) im linearen Bereich)
+- Steigung oder y-Achsenabschnitt aus Graph ablesen (Steigungsdreieck Δy/Δx)
+- Senkrechte Gerade zu gegebener Gerade durch einen Punkt (m₂ = −1/m₁, dann b₂ aus Punkt)
 
-**Ergänzend vertiefend:** Schnittpunkt zweier Geraden; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Typische Fallen:**
+- Nullstelle **linearer** Funktion: x₀ = **−b/m** (nicht Mitternachtsformel!)
+- Senkrechte Geraden: m₂ = **−1/m₁** (nicht m₂ = −m₁)
+- Steigung m = **Δy/Δx** — Zähler = y-Differenz, Nenner = x-Differenz (nicht umgekehrt)
+- b = y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle
 
-**Häufige Fragen:**
-- Geradengleichung aus 2 Punkten aufstellen (zuerst m, dann b)
-- Nullstelle berechnen: x₀ = −b/m
-- Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen
-- Kalibrierkurve: Konzentration aus Absorption berechnen (Lambert-Beer: A = ε×c×d)
-- Steigung und y-Achsenabschnitt aus einem Graphen ablesen
+**Minimal-Rechenrezepte:**
+- **Gerade aus 2 Punkten P₁(x₁|y₁), P₂(x₂|y₂):** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁ ⇒ y = mx + b.
+- **Nullstelle:** 0 = mx + b ⇒ x₀ = −b/m (m ≠ 0).
+- **Schnittpunkt:** m₁x + b₁ = m₂x + b₂ ⇒ x = (b₂−b₁)/(m₁−m₂), dann y = m₁x + b₁.
+- **Senkrechte zu m₁:** m₂ = −1/m₁; durch P(x₀|y₀): b₂ = y₀ − m₂·x₀.
+- **Lambert-Beer (linear):** A = ε·c·d ⇒ c = A/(ε·d); aus Kalibrierkurve: c = (A − A₀)/Steigung.
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Nullstelle linearer Funktion: x₀ = −b/m (NICHT die Mitternachtsformel!)
-- Senkrechte Geraden: m₂ = −1/m₁ (nicht m₂ = −m₁)
-- Steigung m = Δy/Δx: Zähler ist y-Differenz, Nenner x-Differenz (nicht umgekehrt!)
-- b ist der y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle
+**Zentral prüfungsrelevant:** Lineare Funktionen (y = mx + b, Steigung m, Achsenabschnitt b), Gerade aus zwei Punkten, Nullstelle, Proportionalität, klinische Anwendung (Dosis-Wirkung, Kalibrierung).
+
+**Ergänzend vertiefend:** Schnittpunkt zweier Geraden. Typische Fallen: Nullstelle linearer Funktion x₀ = −b/m (nicht Mitternachtsformel); Senkrechte m₂ = −1/m₁; Steigung m = Δy/Δx.
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - Lambert-Beer: A = ε×c×d — nur im linearen Bereich gültig
@@ -313,6 +327,14 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 ---
 
+**Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
+
+**Verfahren — Schrittfolge:** (1) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (2) **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a). (3) **pq-Formel** nur bei normierter Form x²+px+q = 0: x = −p/2 ± √((p/2)²−q). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
+
+**Typische Prüfungsfehler:** pq-Formel bei ax²+bx+c anwenden ohne vorher durch a zu teilen. D = b²−**4ac** (nicht 2ac). Scheitelpunkt x_S = **−**b/(2a) (Minus nicht vergessen).
+
+---
+
 ## Allgemeine und Scheitelpunktform
 
 ![Parabel](/grafik-parabel.svg)
@@ -412,9 +434,19 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Scheitelpunkt x_S = −b/(2a), y_S = f(x_S); Öffnung (a>0 oben, a<0 unten)
+- Nullstellen: D = b²−4ac; x = (−b±√D)/(2a); D>0: 2, D=0: 1, D<0: keine
+- pq-Formel (nur bei x²+px+q=0); Vieta: x₁+x₂ = −p, x₁×x₂ = q
+- Parabel aus Graph (Wurf, Optimierung, Dosis-Wirkung)
+
+**Minimal-Rechenrezepte:**
+- **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
+- **pq-Formel** (x²+px+q=0): x = −p/2 ± √((p/2)²−q). **Vieta:** Summe = −p, Produkt = q.
+
 **Zentral prüfungsrelevant:** Quadratische Funktionen (Parabel, Scheitelpunkt x_s = −b/(2a), Öffnung nach oben/unten), Nullstellen (Mitternachtsformel), Symmetrie, Anwendung (Wurf, Optimierung).
 
-**Ergänzend vertiefend:** Parabelform f(x) = a(x−x_s)² + y_s; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Parabelform f(x) = a(x−x_s)² + y_s. Typische Fallen: a < 0 → Maximum (Parabel nach unten); Scheitelform Vorzeichen (x−2)² → x_S = +2; pq-Formel nur bei normierter Form.
 
 **Häufige Fragen:**
 - Scheitelpunkt berechnen: xs = −b/(2a), ys = f(xs)
@@ -607,6 +639,14 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 
 ---
 
+**Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
+
+**Verfahren — Schrittfolge:** (1) **Zerfall:** f(t) = f₀×e^(−kt). (2) **T½ aus k:** T½ = ln(2)/k. **k aus T½:** k = ln(2)/T½. (3) **Rest nach n Halbwertszeiten:** f = f₀×(½)ⁿ. (4) **Steady-State** (Sättigung): f(t) = A×(1−e^(−kt)) → Grenzwert A.
+
+**Typische Prüfungsfehler:** e-Funktion wird nie exakt 0 (nur Asymptote). T½ = ln(2)/k (nicht 1/k). Nach 3×T½ bleiben 12,5 % (½³), nicht 1/3.
+
+---
+
 ## Grundform und Eigenschaften
 
 ![Exponentialfunktion](/grafik-exponential.svg)
@@ -724,9 +764,18 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Zerfall f(t) = f₀×e^(−kt); T½ = ln(2)/k; k aus T½; Rest nach n×T½ = f₀×(½)ⁿ
+- Pharmakokinetik C(t) = C₀×e^(−kt); Steady-State nach 4–5×T½
+- Wachstum f(t) = f₀×e^(kt); Verdopplungszeit T₂ = ln(2)/k
+
+**Minimal-Rechenrezepte:**
+- **Zerfall:** C(t) = C₀×e^(−kt). **T½** = ln(2)/k ≈ 0,693/k. **k** = ln(2)/T½.
+- **Rest nach n×T½:** f = f₀×(½)ⁿ. Nach 5×T½: < 3,2 %. **Steady-State:** nach 4–5×T½.
+
 **Zentral prüfungsrelevant:** Exponentialfunktion (Wachstum/Zerfall), e-Funktion, Halbwertszeit T½ = ln(2)/k, Verdopplungszeit, Bakterienwachstum, radioaktiver Zerfall, Pharmakokinetik (c(t) = c₀×e^(−kt)).
 
-**Ergänzend vertiefend:** Logarithmus zur Basis e (ln); typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Logarithmus zur Basis e (ln). Typische Fallen: e^x erreicht nie 0; nach 5 Halbwertszeiten ca. 3 % verbleibend; Kinetik 1. Ordnung (exponentiell) ≠ 0. Ordnung (linear).
 
 **Häufige Fragen:**
 - Halbwertszeit berechnen: T½ = ln(2)/k ≈ 0,693/k
@@ -896,6 +945,14 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 ---
 
+**Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
+
+**Verfahren — Schrittfolge:** (1) **pH aus [H⁺]:** pH = −log₁₀([H⁺]). **[H⁺] aus pH:** [H⁺] = 10^(−pH). (2) **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). (3) **Dezibel:** L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10. (4) **Basiswechsel:** log_b(x) = ln(x)/ln(b).
+
+**Typische Prüfungsfehler:** ln(0) und ln(negativ) existieren nicht. log(a+b) ≠ log a + log b. pH: Vorzeichen nicht vergessen (pH = **−**log([H⁺])).
+
+---
+
 ## Definition und Grundbegriffe
 
 ![Logarithmus](/grafik-logarithmus.svg)
@@ -1014,9 +1071,18 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- log(a×b), log(a/b), log(aⁿ); pH = −log([H⁺]); [H⁺] = 10^(−pH); Henderson-Hasselbalch
+- Dezibel L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10
+- Basiswechsel; ln nur für x > 0
+
+**Minimal-Rechenrezepte:**
+- **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
+- **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). **Dezibel:** +10 dB = Faktor 10; +3 dB ≈ Faktor 2.
+
 **Zentral prüfungsrelevant:** Logarithmus (log₁₀, ln), **ld = log₂**, **ld(16) = 4**, **ld(2ⁿ) = n**; **log(a+b) ≠ log a + log b** (Falle!); **ln(x) nur für x > 0**; pH = −log₁₀([H⁺]); Gleichung **U = (a/b)·ln(A/B)** mit a>0, b<0: U < 0 wenn A > B > 0, U = 0 wenn A = B; A = 0 oder B = 0 nicht erlaubt. Henderson-Hasselbalch, logarithmische Skalen.
 
-**Ergänzend vertiefend:** Natürlicher Logarithmus und e; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** Natürlicher Logarithmus und e. Typische Fallen: log(a+b) ≠ log a + log b (nur Produktregel); ln(x) nur für x > 0; pH ↑ → [H⁺] ↓.
 
 **Häufige Fragen:**
 - pH-Wert aus [H⁺] berechnen: pH = −log₁₀([H⁺])
@@ -1205,6 +1271,14 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 
 ---
 
+**Idee:** **Asymptote** = Grenzlinie, der sich der Graph annähert (horizontal: y = const für x→±∞; vertikal: x = const, wo f→±∞). **Semilog-Plot** (y-Achse log): Exponentialfunktion wird zur Geraden; **EC₅₀** = Konzentration bei halbmaximaler Wirkung (Steilster Anstieg bei sigmoider Kurve). **Michaelis-Menten:** Sättigungskinetik, maximale Reaktionsgeschwindigkeit v_max.
+
+**Verfahren — Schrittfolge:** (1) **Asymptoten:** lim(x→±∞) f(x) für horizontal; Nenner null für vertikal. (2) **Semilog:** ln(C) vs. t → Gerade bei C = C₀×e^(−kt); Steigung = −k. (3) **EC₅₀** aus Dosis-Wirkungskurve ablesen (50 % der max. Wirkung). (4) **Monotonie/Extrempunkte** aus Kurvenverlauf (steigend/fallend, Hoch-/Tiefpunkt).
+
+**Typische Prüfungsfehler:** Asymptote ≠ Nullstelle. Semilog: Achse ist logarithmisch (nicht linear). EC₅₀ = 50 % Wirkung, nicht 50 % der Dosis.
+
+---
+
 ## Graphen und ihre Eigenschaften ablesen
 
 ![Asymptoten](/grafik-asymptote.svg)
@@ -1335,9 +1409,19 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
+**Typische Aufgabentypen:**
+- Horizontale/vertikale Asymptoten; Monotonie; Extrempunkte aus Graph
+- Semilog-Plot: ln C vs. t → Gerade bei C = C₀×e^(−kt); Steigung = −k, T½ = 0,693/k
+- Michaelis-Menten v = v_max×[S]/(Km+[S]); EC₅₀; Dosis-Wirkungskurve
+- Graphentransformationen (Verschiebung, Spiegelung, Streckung)
+
+**Minimal-Rechenrezepte:**
+- **Asymptote:** lim(x→±∞) f(x) für horizontal; Nenner = 0 für vertikal. **Semilog:** Steigung = −k; T½ = ln(2)/k.
+- **Michaelis-Menten:** v = v_max×[S]/(Km+[S]); bei [S] = Km ist v = v_max/2. **EC₅₀** = 50 % der max. Wirkung.
+
 **Zentral prüfungsrelevant:** Grenzwert lim (x→±∞), horizontale/vertikale Asymptoten, stetig vs. unstetig, Definitionsbereich, Wertebereich, gebrochen-rationale Funktionen (Pol, Hebbare Lücke).
 
-**Ergänzend vertiefend:** L'Hospital; typische Verwechslungen siehe „Typische Prüfungsfallen“.
+**Ergänzend vertiefend:** L'Hospital. Typische Fallen: Semilog-Gerade = Kinetik 1. Ordnung; Michaelis-Menten v_max/2 bei [S] = K_M (nicht bei v_max/2); Wendepunkt ≠ Extremum.
 
 **Häufige Fragen:**
 - Horizontale Asymptote aus Funktionsterm ablesen (Grenzwert x → ±∞)

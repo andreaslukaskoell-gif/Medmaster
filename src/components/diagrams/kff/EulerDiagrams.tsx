@@ -1,10 +1,176 @@
 // Euler-Diagramme für Implikationen erkennen
 // Visualisiert die 4 Grundaussagen und Schlussfolgerungen
 
+import type { ImplikationTask } from "@/data/kffImplikationen";
+
 interface EulerProps {
   width?: number;
   height?: number;
   className?: string;
+}
+
+type LayoutKey =
+  | "chain"
+  | "all-overlap"
+  | "ab-separated"
+  | "bc-separated"
+  | "a-in-b-overlap-c"
+  | "a-in-b-separated-c"
+  | "a-in-b-in-c"
+  | "all-separated";
+
+function parsePremise(p: string): {
+  type: "all-in" | "all-disjoint" | "some-overlap" | "some-not";
+  terms: [string, string];
+} | null {
+  const s = p.trim().replace(/\.$/, "");
+  const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
+  if (allIn) return { type: "all-in", terms: [allIn[1].trim(), allIn[2].trim()] };
+  const allDisjoint = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
+  if (allDisjoint)
+    return { type: "all-disjoint", terms: [allDisjoint[1].trim(), allDisjoint[2].trim()] };
+  const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
+  if (someIn) return { type: "some-overlap", terms: [someIn[1].trim(), someIn[2].trim()] };
+  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
+  if (someNot) return { type: "some-not", terms: [someNot[1].trim(), someNot[2].trim()] };
+  return null;
+}
+
+function getLayoutFromPremises(
+  p1: string,
+  p2: string
+): { labels: [string, string, string]; layout: LayoutKey } {
+  const a = parsePremise(p1);
+  const b = parsePremise(p2);
+  if (!a || !b) return { labels: ["A", "B", "C"], layout: "chain" };
+  const [t1a, t1b] = a.terms;
+  const [t2a, t2b] = b.terms;
+  const mid = t1a === t2a ? t1a : t1b === t2a ? t2a : t1a === t2b ? t1a : t1b;
+  const left = t1a === mid ? t1b : t1a;
+  const right = t2a === mid ? t2b : t2a;
+  // Einheitliche Semantik: labels[0]=Kreis 0, labels[1]=Kreis 1, labels[2]=Kreis 2.
+  // a-in-b-in-c: innen = A (erstes Kettenglied), mittel = B, außen = C → [left, mid, right]
+  if (a.type === "all-in" && b.type === "all-in")
+    return { labels: [left, mid, right], layout: "a-in-b-in-c" };
+  // a-in-b-overlap-c: A (mid) innen in B (left), C (right) überlappt B → [mid, left, right]
+  if (a.type === "all-in" && b.type === "some-overlap")
+    return { labels: [mid, left, right], layout: "a-in-b-overlap-c" };
+  // a-in-b-separated-c: A innen in B, C getrennt. A = Subjekt von "Alle A sind B" = t1a.
+  if (a.type === "all-in" && b.type === "all-disjoint") {
+    const t1a = a.terms[0];
+    const t1b = a.terms[1];
+    const labels: [string, string, string] = t1a === mid ? [mid, left, right] : [left, mid, right]; // mid in left vs left in mid
+    return { labels, layout: "a-in-b-separated-c" };
+  }
+  // all-disjoint + all-in: P2 gibt B in C, P1 sagt A getrennt von B → labels passend für A-in-B-sep-C
+  if (a.type === "all-disjoint" && b.type === "all-in")
+    return { labels: [t2a, t2b, t1a], layout: "a-in-b-separated-c" };
+  // Nüsse∩Gewürze ≠ ∅, Nüsse∩Pflanzen = ∅ → Kreise 0&1 überlappen, 2 getrennt
+  if (a.type === "all-disjoint" && b.type === "some-overlap")
+    return { labels: [mid, left, right], layout: "bc-separated" };
+  if (a.type === "some-overlap" && b.type === "all-disjoint")
+    return { labels: [mid, left, right], layout: "bc-separated" };
+  if (a.type === "some-overlap" && b.type === "some-overlap")
+    return { labels: [mid, left, right], layout: "all-overlap" };
+  if (a.type === "some-not" || b.type === "some-not")
+    return { labels: [mid, left, right], layout: "chain" };
+  return { labels: [mid, left, right], layout: "chain" };
+}
+
+function getHighlightFromConclusion(
+  option: string,
+  labels: [string, string, string]
+): "ab" | "bc" | "ac" | "a-in-b" | "b-in-c" | "a-in-c" | "none" {
+  const s = option.trim().replace(/\.$/, "");
+  if (/^Keine der Schlussfolgerungen/i.test(s)) return "none";
+  const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
+  if (allIn) {
+    const [x, y] = [allIn[1].trim(), allIn[2].trim()];
+    const ix = labels.indexOf(x);
+    const iy = labels.indexOf(y);
+    if (ix >= 0 && iy >= 0) {
+      if (ix === 0 && iy === 1) return "a-in-b";
+      if (ix === 1 && iy === 2) return "b-in-c";
+      if (ix === 0 && iy === 2) return "a-in-c";
+    }
+  }
+  const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
+  if (someIn) {
+    const [x, y] = [someIn[1].trim(), someIn[2].trim()];
+    const ix = labels.indexOf(x);
+    const iy = labels.indexOf(y);
+    if (ix >= 0 && iy >= 0) {
+      if ((ix === 0 && iy === 1) || (ix === 1 && iy === 0)) return "ab";
+      if ((ix === 1 && iy === 2) || (ix === 2 && iy === 1)) return "bc";
+      if ((ix === 0 && iy === 2) || (ix === 2 && iy === 0)) return "ac";
+    }
+  }
+  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
+  if (someNot) {
+    const [x, y] = [someNot[1].trim(), someNot[2].trim()];
+    const ix = labels.indexOf(x);
+    const iy = labels.indexOf(y);
+    if (ix >= 0 && iy >= 0) {
+      if ((ix === 0 && iy === 1) || (ix === 1 && iy === 0)) return "ab";
+      if ((ix === 1 && iy === 2) || (ix === 2 && iy === 1)) return "bc";
+      if ((ix === 0 && iy === 2) || (ix === 2 && iy === 0)) return "ac";
+    }
+  }
+  return "none";
+}
+
+/** Visuelle Lösung für eine Implikationsaufgabe: Euler-Diagramm mit hervorgehobener gültiger Region. */
+export function ImplikationSolutionDiagram({
+  task,
+  width,
+  height,
+  className,
+}: {
+  task: ImplikationTask;
+  width?: number;
+  height?: number;
+  className?: string;
+}) {
+  const hasVisualData =
+    task.premise1 &&
+    task.premise2 &&
+    task.options &&
+    task.options.length === 5 &&
+    task.correctAnswer >= 0 &&
+    task.correctAnswer <= 4;
+  const { labels, layout } = getLayoutFromPremises(task.premise1 || "", task.premise2 || "");
+  const correctOption = hasVisualData ? task.options[task.correctAnswer] : null;
+  const highlight = correctOption ? getHighlightFromConclusion(correctOption, labels) : "none";
+  const isNone = highlight === "none";
+  const useDefaultVisual = !hasVisualData;
+
+  return (
+    <div className={className}>
+      <div className="flex flex-col items-center gap-2">
+        <EulerThreeCircles
+          width={width ?? 280}
+          height={height ?? 160}
+          labels={labels}
+          layout={layout}
+          highlightRegion={isNone ? undefined : highlight}
+        />
+        <p className="text-xs font-medium text-center text-muted">
+          {useDefaultVisual
+            ? "Lösung siehe Erklärung unten."
+            : isNone
+              ? "Keine der Schlussfolgerungen ist zwingend — kein Bereich hervorgehoben."
+              : "✓ Markierter Bereich = gültige Schlussfolgerung."}
+        </p>
+        {!useDefaultVisual && (
+          <p className="text-[11px] text-center text-muted-foreground/80">
+            Mengen: <span className="font-medium">{labels[0]}</span>,{" "}
+            <span className="font-medium">{labels[1]}</span>,{" "}
+            <span className="font-medium">{labels[2]}</span>
+          </p>
+        )}
+      </div>
+    </div>
+  );
 }
 
 /** "Alle X sind Y" — X komplett innerhalb von Y */
@@ -135,6 +301,8 @@ interface EulerThreeCircleProps extends EulerProps {
     | "a-in-b-separated-c"
     | "a-in-b-in-c"
     | "all-separated";
+  /** Welche Region als gültige Schlussfolgerung hervorheben (visuell) */
+  highlightRegion?: "ab" | "bc" | "ac" | "a-in-b" | "b-in-c" | "a-in-c" | "none";
 }
 
 /** Flexibles 3-Kreis-Euler-Diagramm für Schlussfolgerungen */
@@ -144,6 +312,7 @@ export function EulerThreeCircles({
   className,
   labels = ["A", "B", "C"],
   layout,
+  highlightRegion,
 }: EulerThreeCircleProps) {
   const configs: Record<
     string,
@@ -217,13 +386,22 @@ export function EulerThreeCircles({
 
   const config = configs[layout] || configs.chain;
 
-  // For nested layouts, draw largest first
+  // Zeichenreihenfolge: bei Verschachtelung zuerst großer Kreis, dann kleinere, damit Labels lesbar bleiben
   const sortedCircles =
     layout === "a-in-b-in-c"
       ? [...config.circles].reverse()
       : layout === "a-in-b-overlap-c" || layout === "a-in-b-separated-c"
         ? [config.circles[1], config.circles[2], config.circles[0]]
         : config.circles;
+
+  // Bei konzentrischem Layout Labels in den Ringen platzieren (nicht alle im Zentrum)
+  const getLabelY = (i: number) => {
+    if (layout !== "a-in-b-in-c") return config.circles[i].cy + 5;
+    const baseY = 80;
+    if (i === 0) return baseY; // innen
+    if (i === 1) return baseY - 28; // mittlerer Ring
+    return baseY - 52; // äußerer Ring
+  };
 
   return (
     <svg viewBox="0 0 280 160" width={width} height={height} className={className}>
@@ -234,24 +412,75 @@ export function EulerThreeCircles({
           cy={c.cy}
           r={c.r}
           fill={c.fill}
-          fillOpacity="0.35"
+          fillOpacity="0.4"
           stroke={c.color}
-          strokeWidth="2"
+          strokeWidth="2.5"
         />
       ))}
       {config.circles.map((c, i) => (
         <text
           key={`label-${i}`}
           x={c.cx}
-          y={layout === "a-in-b-in-c" ? c.cy + 4 : c.cy + 4}
+          y={getLabelY(i)}
           textAnchor="middle"
-          fontSize="12"
-          fontWeight="600"
+          fontSize="13"
+          fontWeight="700"
           fill={c.color}
         >
           {labels[i]}
         </text>
       ))}
+      {highlightRegion &&
+        highlightRegion !== "none" &&
+        (() => {
+          const circles = config.circles;
+          const mid = (i: number, j: number) => ({
+            x: (circles[i].cx + circles[j].cx) / 2,
+            y: (circles[i].cy + circles[j].cy) / 2,
+          });
+          const pos =
+            highlightRegion === "ab"
+              ? mid(0, 1)
+              : highlightRegion === "bc"
+                ? mid(1, 2)
+                : highlightRegion === "ac"
+                  ? mid(0, 2)
+                  : highlightRegion === "a-in-b"
+                    ? { x: circles[0].cx, y: circles[0].cy }
+                    : highlightRegion === "b-in-c"
+                      ? { x: circles[1].cx, y: circles[1].cy }
+                      : highlightRegion === "a-in-c"
+                        ? { x: circles[0].cx, y: circles[0].cy }
+                        : null;
+          if (!pos) return null;
+          const isContained =
+            highlightRegion === "a-in-b" ||
+            highlightRegion === "b-in-c" ||
+            highlightRegion === "a-in-c";
+          const r = isContained ? 14 : 20;
+          return (
+            <g key="highlight">
+              <circle
+                cx={pos.x}
+                cy={pos.y}
+                r={r + 5}
+                fill="rgba(34,197,94,0.2)"
+                stroke="#16a34a"
+                strokeWidth="3"
+              />
+              <text
+                x={pos.x}
+                y={pos.y + 5}
+                textAnchor="middle"
+                fontSize="16"
+                fontWeight="700"
+                fill="#15803d"
+              >
+                ✓
+              </text>
+            </g>
+          );
+        })()}
     </svg>
   );
 }
