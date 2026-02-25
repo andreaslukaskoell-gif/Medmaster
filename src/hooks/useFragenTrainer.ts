@@ -17,6 +17,7 @@ import {
   type MRSData,
   type ErrorPattern,
 } from "@/lib/supabaseBMSFragen";
+import { generateContentQuestions, toBMSFrage } from "@/lib/bmsQuestionGenerator";
 import type { FSRSRating } from "@/lib/fsrs";
 
 // ── Session types ─────────────────────────────────────────────
@@ -34,13 +35,17 @@ export interface SessionAnswer {
 
 export type TrainerMode = "trainer" | "simulation";
 
+/** Where questions come from: Supabase (FSRS) or content-derived (generator). */
+export type QuestionSource = "supabase" | "content";
+
 // ── Hook ─────────────────────────────────────────────────────
 
 export function useFragenTrainer(
   uk_ids: string[],
   user_id: string | null,
   mode: TrainerMode = "trainer",
-  count = 8
+  count = 8,
+  source: QuestionSource = "supabase"
 ) {
   const [fragen, setFragen] = useState<BMSFrage[]>([]);
   const [loading, setLoading] = useState(false);
@@ -69,15 +74,28 @@ export function useFragenTrainer(
     }
     setLoading(true);
     setError(null);
-    getNextQuestions(uk_ids, user_id, count)
-      .then((q) => {
-        setFragen(q);
-        setLoading(false);
-      })
-      .catch((e) => {
-        setError(String(e));
-        setLoading(false);
-      });
+
+    if (source === "content") {
+      const generated = generateContentQuestions(uk_ids, count);
+      const asFragen = generated.map(toBMSFrage);
+      setFragen(asFragen);
+      setLoading(false);
+      if (asFragen.length === 0) {
+        setError(
+          "Für die gewählten Unterkapitel sind noch keine Fragen hinterlegt. Bitte andere wählen."
+        );
+      }
+    } else {
+      getNextQuestions(uk_ids, user_id, count)
+        .then((q) => {
+          setFragen(q);
+          setLoading(false);
+        })
+        .catch((e) => {
+          setError(String(e));
+          setLoading(false);
+        });
+    }
     // Reset session
     setIdx(0);
     setConfidence(null);
@@ -85,7 +103,7 @@ export function useFragenTrainer(
     setSessionDone(false);
     resetQuestionState();
     recordedRef.current = false;
-  }, [uk_ids.join(","), user_id, count]);
+  }, [uk_ids.join(","), user_id, count, source]);
 
   // ── Current question ────────────────────────────────────────
   const currentFrage = fragen[idx] ?? null;
@@ -149,15 +167,16 @@ export function useFragenTrainer(
 
       const correct = isAnswerCorrect();
 
-      // Persist to Supabase (non-blocking)
-      recordAttempt({
-        question_id: currentFrage.id,
-        user_id,
-        correct,
-        confidence,
-        fsrs_rating: rating,
-        prev_fsrs: currentFrage.fsrs ?? null,
-      }).catch(console.error);
+      if (source === "supabase") {
+        recordAttempt({
+          question_id: currentFrage.id,
+          user_id,
+          correct,
+          confidence,
+          fsrs_rating: rating,
+          prev_fsrs: currentFrage.fsrs ?? null,
+        }).catch(console.error);
+      }
 
       const answer: SessionAnswer = {
         frage: currentFrage,
@@ -190,6 +209,7 @@ export function useFragenTrainer(
       idx,
       fragen.length,
       user_id,
+      source,
     ]
   );
 
@@ -209,17 +229,22 @@ export function useFragenTrainer(
     setSessionDone(false);
     resetQuestionState();
     recordedRef.current = false;
-    // Re-fetch for fresh FSRS ordering
     if (uk_ids.length) {
       setLoading(true);
-      getNextQuestions(uk_ids, user_id, count)
-        .then((q) => {
-          setFragen(q);
-          setLoading(false);
-        })
-        .catch(() => setLoading(false));
+      if (source === "content") {
+        const generated = generateContentQuestions(uk_ids, count);
+        setFragen(generated.map(toBMSFrage));
+        setLoading(false);
+      } else {
+        getNextQuestions(uk_ids, user_id, count)
+          .then((q) => {
+            setFragen(q);
+            setLoading(false);
+          })
+          .catch(() => setLoading(false));
+      }
     }
-  }, [uk_ids, user_id, count]);
+  }, [uk_ids, user_id, count, source]);
 
   return {
     // Data

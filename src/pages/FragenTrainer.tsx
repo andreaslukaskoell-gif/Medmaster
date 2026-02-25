@@ -37,7 +37,8 @@ import { TypKQuestion } from "@/components/bms/TypKQuestion";
 import { MRSWidget } from "@/components/bms/MRSWidget";
 import { useBMSSubchapterList } from "@/hooks/useBMSSubchapterQuestions";
 import { useFragenTrainer, useMRS, useErrorPatterns } from "@/hooks/useFragenTrainer";
-import type { Confidence, TrainerMode } from "@/hooks/useFragenTrainer";
+import type { Confidence, TrainerMode, QuestionSource } from "@/hooks/useFragenTrainer";
+import { getChaptersWithContentKnowledge, getKnowledgeByUkId } from "@/data/bmsQuestionKnowledge";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -79,24 +80,46 @@ function SelectionScreen({
   onStart,
   userId,
 }: {
-  onStart: (ids: string[], mode: TrainerMode) => void;
+  onStart: (ids: string[], mode: TrainerMode, source: QuestionSource) => void;
   userId: string;
 }) {
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null);
   const [selectedUKs, setSelectedUKs] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<TrainerMode>("trainer");
+  const [questionSource, setQuestionSource] = useState<QuestionSource>("supabase");
   const [interleaving, setInterleaving] = useState(
     () => localStorage.getItem("ft-interleaving") === "true"
   );
 
-  const { subchapters, loading } = useBMSSubchapterList(selectedChapter);
+  const contentChapters = useMemo(() => getChaptersWithContentKnowledge(), []);
+  const { subchapters, loading } = useBMSSubchapterList(
+    questionSource === "supabase" ? selectedChapter : null
+  );
+  const contentSubchapters = useMemo(() => {
+    if (questionSource !== "content" || !selectedChapter) return [];
+    const ch = contentChapters.find((c) => c.chapterId === selectedChapter);
+    if (!ch) return [];
+    return ch.ukIds.map((ukId) => {
+      const k = getKnowledgeByUkId(ukId);
+      return { id: ukId, title: k?.title ?? ukId, questionCount: 8 };
+    });
+  }, [questionSource, selectedChapter, contentChapters]);
+
+  const activeSubchapters = questionSource === "content" ? contentSubchapters : subchapters;
+  const subchaptersLoading = questionSource === "supabase" && loading;
+
   const { mrs, loading: mrsLoading } = useMRS(userId);
-  const allUKIds = useMemo(() => subchapters.map((s) => s.id), [subchapters]);
+  const allUKIds = useMemo(() => activeSubchapters.map((s) => s.id), [activeSubchapters]);
   const errorPatterns = useErrorPatterns(userId, allUKIds);
 
   const totalSelected = useMemo(
-    () => subchapters.filter((s) => selectedUKs.has(s.id)).reduce((n, s) => n + s.questionCount, 0),
-    [subchapters, selectedUKs]
+    () =>
+      questionSource === "content"
+        ? (interleaving ? activeSubchapters.length : selectedUKs.size) * 8
+        : activeSubchapters
+            .filter((s) => selectedUKs.has(s.id))
+            .reduce((n, s) => n + s.questionCount, 0),
+    [questionSource, activeSubchapters, selectedUKs, interleaving]
   );
 
   const toggleUK = (id: string) =>
@@ -113,9 +136,32 @@ function SelectionScreen({
   };
 
   const handleStart = () =>
-    onStart(interleaving ? subchapters.map((s) => s.id) : [...selectedUKs], mode);
+    onStart(
+      interleaving ? activeSubchapters.map((s) => s.id) : [...selectedUKs],
+      mode,
+      questionSource
+    );
 
   const canStart = selectedChapter && (selectedUKs.size > 0 || interleaving);
+
+  const chaptersToShow =
+    questionSource === "content"
+      ? contentChapters.map((c) => ({
+          id: c.chapterId,
+          label: c.chapterId
+            .replace("bio-kap", "Bio ")
+            .replace("ch-kap", "Chemie ")
+            .replace("ph-kap", "Physik ")
+            .replace("ma-kap", "Mathe "),
+          emoji: c.chapterId.startsWith("bio")
+            ? "🧬"
+            : c.chapterId.startsWith("ch")
+              ? "⚗️"
+              : c.chapterId.startsWith("ph")
+                ? "⚡"
+                : "📐",
+        }))
+      : BIO_CHAPTERS;
 
   return (
     <div className="max-w-2xl mx-auto space-y-5">
@@ -125,11 +171,56 @@ function SelectionScreen({
         </div>
         <div>
           <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">Fragen-Trainer</h1>
-          <p className="text-sm text-muted-foreground">Biologie · FSRS-gesteuerte Wiederholung</p>
+          <p className="text-sm text-muted-foreground">
+            {questionSource === "supabase"
+              ? "Biologie · FSRS-gesteuerte Wiederholung"
+              : "MedMaster-Inhalt · Generierte Fragen"}
+          </p>
         </div>
       </div>
 
-      <MRSWidget mrs={mrs} loading={mrsLoading} />
+      {questionSource === "supabase" && <MRSWidget mrs={mrs} loading={mrsLoading} />}
+
+      {/* Quelle */}
+      <Card>
+        <CardContent className="p-4 space-y-3">
+          <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">Quelle</p>
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setQuestionSource("supabase");
+                setSelectedChapter(null);
+                setSelectedUKs(new Set());
+              }}
+              className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                questionSource === "supabase"
+                  ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                  : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+              }`}
+            >
+              <div className="font-semibold">Supabase</div>
+              <div className="text-xs opacity-70">Bestehende Fragen, FSRS</div>
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setQuestionSource("content");
+                setSelectedChapter(null);
+                setSelectedUKs(new Set());
+              }}
+              className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                questionSource === "content"
+                  ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                  : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+              }`}
+            >
+              <div className="font-semibold">MedMaster-Inhalt</div>
+              <div className="text-xs opacity-70">Aus Kapitelstoff generiert</div>
+            </button>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Mode */}
       <Card>
@@ -165,7 +256,7 @@ function SelectionScreen({
         <CardContent className="p-4 space-y-3">
           <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">1. Kapitel</p>
           <div className="grid grid-cols-2 gap-2">
-            {BIO_CHAPTERS.map((ch) => (
+            {chaptersToShow.map((ch) => (
               <button
                 key={ch.id}
                 onClick={() => {
@@ -196,7 +287,7 @@ function SelectionScreen({
               </p>
               <div className="flex gap-2">
                 <button
-                  onClick={() => setSelectedUKs(new Set(subchapters.map((s) => s.id)))}
+                  onClick={() => setSelectedUKs(new Set(activeSubchapters.map((s) => s.id)))}
                   className="text-xs text-emerald-600 hover:underline cursor-pointer"
                 >
                   Alle
@@ -210,13 +301,13 @@ function SelectionScreen({
                 </button>
               </div>
             </div>
-            {loading ? (
+            {subchaptersLoading ? (
               <div className="flex items-center gap-2 text-muted-foreground text-sm py-4">
                 <Loader2 className="w-4 h-4 animate-spin" /> Lädt…
               </div>
             ) : (
               <div className="space-y-1 max-h-64 overflow-y-auto">
-                {subchapters.map((uk) => {
+                {activeSubchapters.map((uk) => {
                   const pat = errorPatterns[uk.id];
                   const hasError = pat && pat.errorRate > 0.5 && pat.attempts >= 5;
                   return (
@@ -296,16 +387,18 @@ function QuizScreen({
   uk_ids,
   mode,
   userId,
+  source,
   onFinish,
   onBack,
 }: {
   uk_ids: string[];
   mode: TrainerMode;
   userId: string;
+  source: QuestionSource;
   onFinish: (a: SessionAnswers) => void;
   onBack: () => void;
 }) {
-  const trainer = useFragenTrainer(uk_ids, userId, mode, 8);
+  const trainer = useFragenTrainer(uk_ids, userId, mode, 8, source);
   const { addXP } = useStore();
   const {
     loading,
@@ -615,6 +708,7 @@ export default function FragenTrainer() {
   const [screen, setScreen] = useState<"select" | "quiz" | "results">("select");
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [mode, setMode] = useState<TrainerMode>("trainer");
+  const [questionSource, setQuestionSource] = useState<QuestionSource>("supabase");
   const [results, setResults] = useState<SessionAnswers>([]);
   const userId = useMemo(() => getLocalUserId(), []);
 
@@ -623,9 +717,10 @@ export default function FragenTrainer() {
       {screen === "select" && (
         <SelectionScreen
           userId={userId}
-          onStart={(ids, m) => {
+          onStart={(ids, m, source) => {
             setSelectedIds(ids);
             setMode(m);
+            setQuestionSource(source);
             setScreen("quiz");
           }}
         />
@@ -635,6 +730,7 @@ export default function FragenTrainer() {
           uk_ids={selectedIds}
           mode={mode}
           userId={userId}
+          source={questionSource}
           onFinish={(r) => {
             setResults(r);
             setScreen("results");

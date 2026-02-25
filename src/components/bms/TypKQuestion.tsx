@@ -192,7 +192,9 @@ export function TypKQuestion({
                 `}
               >
                 <span className="font-bold mr-2 text-xs opacity-70">{k.key}</span>
-                Aussagen {k.nummern.join(", ")} sind richtig
+                {k.nummern.length === 0
+                  ? "Keine der Aussagen ist richtig"
+                  : `Aussagen ${k.nummern.join(", ")} sind richtig`}
                 {revealed && k.key === korrekt && (
                   <CheckCircle2 className="w-4 h-4 inline ml-2 text-green-500" />
                 )}
