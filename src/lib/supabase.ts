@@ -1,8 +1,12 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-// Vite: use import.meta.env.VITE_* only
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? "";
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY ?? "";
+// Vite: use import.meta.env.VITE_*; Node (e.g. seed scripts): fallback to process.env
+const env =
+  typeof import.meta !== "undefined" && import.meta.env
+    ? import.meta.env
+    : (process.env as Record<string, string | undefined>);
+const supabaseUrl = env.VITE_SUPABASE_URL ?? "";
+const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY ?? "";
 
 const missing: string[] = [];
 if (!supabaseUrl.trim()) missing.push("VITE_SUPABASE_URL");

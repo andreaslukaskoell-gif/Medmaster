@@ -1,5 +1,28 @@
 # Skripte
 
+## seedTaskDb.ts – Task-DB (BMS/KFF/SEK) befüllen
+
+Persistente Aufgaben-Datenbank: Offizielle Beispiele und optionale Generator-Batches in die Tabelle **tasks** schreiben.
+
+### Voraussetzungen
+
+1. **Migration ausführen:** Die Tabelle `tasks` muss existieren. In Supabase SQL Editor die Datei `supabase/migrations/20260225000000_tasks_table.sql` ausführen (oder `supabase link` + `supabase db push`).
+2. **Umgebungsvariablen** (z. B. in `.env`): `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`. Das Skript lädt `.env` via `dotenv/config`.
+
+### Ausführung
+
+```bash
+# Nur offizielle Beispiele (Zahlenfolgen, Figuren, Implikationen, Wortflüssigkeit, SEK)
+npx tsx src/scripts/seedTaskDb.ts
+
+# Zusätzlich 100 generierte Aufgaben für eine Domain (z. B. kff-figuren)
+npx tsx src/scripts/seedTaskDb.ts --generate kff-figuren 100
+```
+
+Unterstützte Domains für `--generate`: `kff-zahlenfolgen`, `kff-figuren`, `kff-implikationen`, `kff-wortflüssigkeit`.
+
+---
+
 ## importLocalStorageBackup.ts – localStorage-Backup nach Supabase
 
 Kapitel, die **nur im localStorage** liegen (z. B. aus dem Editor), in Supabase retten:

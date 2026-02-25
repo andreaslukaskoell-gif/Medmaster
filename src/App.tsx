@@ -1,11 +1,23 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from "react-router-dom";
+import type { ReactNode } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useParams,
+  useNavigate,
+  useLocation,
+  Outlet,
+} from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useStore } from "@/store/useStore";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const MedATOnboarding = lazy(() => import("@/pages/MedATOnboarding"));
+const PlacementTest = lazy(() => import("@/pages/PlacementTest"));
 const Onboarding = lazy(() => import("@/pages/Onboarding"));
 const BMS = lazy(() => import("@/pages/BMS"));
 const KFF = lazy(() => import("@/pages/KFF"));
@@ -27,6 +39,7 @@ const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
 const ContentAudit = lazy(() => import("@/pages/ContentAudit"));
 const AdminPreview = lazy(() => import("@/pages/AdminPreview"));
 const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
+const AdminTasksPage = lazy(() => import("@/pages/AdminTasksPage"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
@@ -54,6 +67,19 @@ function OnboardingGuard() {
   const { onboardingCompleted } = useStore();
   if (onboardingCompleted) return <Navigate to="/" replace />;
   return <Onboarding />;
+}
+
+function MedATGuard({ children }: { children: ReactNode }) {
+  const { hasCompletedMedATOnboarding } = useStore();
+  const location = useLocation();
+  if (
+    !hasCompletedMedATOnboarding &&
+    location.pathname !== "/onboarding/medat" &&
+    location.pathname !== "/placement-test"
+  ) {
+    return <Navigate to="/onboarding/medat" replace />;
+  }
+  return <>{children}</>;
 }
 
 function AdminGuard({ children }: { children: React.ReactNode }) {
@@ -105,79 +131,97 @@ export default function App() {
           <Route
             element={
               <AuthGuard>
-                <AppShell />
+                <Outlet />
               </AuthGuard>
             }
           >
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Navigate to="/" replace />} />
-            <Route path="/today" element={<TodayPage />} />
-            <Route path="/onboarding" element={<OnboardingGuard />} />
-            <Route path="/bms" element={<BMS />} />
-            <Route path="/bms/quiz/:fach" element={<BMSQuizWrapper />} />
-            <Route path="/bms/:fach" element={<BMS />} />
-            <Route path="/bms/:fach/:kapitel" element={<BMS />} />
-            <Route path="/kff" element={<KFF />} />
-            <Route path="/tv" element={<TV />} />
-            <Route path="/sek" element={<SEK />} />
-            <Route path="/simulation" element={<Simulation />} />
-            <Route path="/ai-tutor" element={<AITutor />} />
-            <Route path="/lernplan" element={<Lernplan />} />
-            <Route path="/analyse" element={<Analysis />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/statistik" element={<Statistics />} />
-            <Route path="/notizen" element={<Notes />} />
-            <Route path="/karteikarten" element={<Flashcards />} />
-            <Route path="/duell" element={<Duel />} />
-            <Route path="/stichwortliste" element={<StichwortlistePage />} />
-            <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
-            <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
-            <Route path="/preise" element={<Pricing />} />
+            <Route path="/onboarding/medat" element={<MedATOnboarding />} />
+            <Route path="/placement-test" element={<PlacementTest />} />
             <Route
-              path="/admin/kapitel-editor"
               element={
-                <AdminGuard>
-                  <KapitelEditor />
-                </AdminGuard>
+                <MedATGuard>
+                  <AppShell />
+                </MedATGuard>
               }
-            />
-            <Route
-              path="/admin/audit"
-              element={
-                <AdminGuard>
-                  <ContentAudit />
-                </AdminGuard>
-              }
-            />
-            <Route
-              path="/admin/preview"
-              element={
-                <AdminGuard>
-                  <AdminPreview />
-                </AdminGuard>
-              }
-            />
-            <Route
-              path="/admin/dashboard"
-              element={
-                <AdminGuard>
-                  <AdminDashboard />
-                </AdminGuard>
-              }
-            />
-            <Route path="/wissencheck" element={<WissenCheck />} />
-            <Route path="/wissencheck/:fach" element={<WissenCheck />} />
-            <Route path="/prognose" element={<Prognose />} />
-            <Route path="/performance" element={<PerformanceOverview />} />
-            <Route path="/fortschritt" element={<FortschrittPage />} />
-            <Route path="/fragen-trainer" element={<FragenTrainer />} />
-            <Route path="/daily" element={<DailyChallenge />} />
-            <Route path="/wrapped" element={<BMSWrapped />} />
-            <Route path="/formelsammlung" element={<Formelsammlung />} />
-            <Route path="/today" element={<TodayPage />} />
+            >
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Navigate to="/" replace />} />
+              <Route path="/today" element={<TodayPage />} />
+              <Route path="/onboarding" element={<OnboardingGuard />} />
+              <Route path="/bms" element={<BMS />} />
+              <Route path="/bms/quiz/:fach" element={<BMSQuizWrapper />} />
+              <Route path="/bms/:fach" element={<BMS />} />
+              <Route path="/bms/:fach/:kapitel" element={<BMS />} />
+              <Route path="/kff" element={<KFF />} />
+              <Route path="/tv" element={<TV />} />
+              <Route path="/sek" element={<SEK />} />
+              <Route path="/simulation" element={<Simulation />} />
+              <Route path="/ai-tutor" element={<AITutor />} />
+              <Route path="/lernplan" element={<Lernplan />} />
+              <Route path="/analyse" element={<Analysis />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/statistik" element={<Statistics />} />
+              <Route path="/notizen" element={<Notes />} />
+              <Route path="/karteikarten" element={<Flashcards />} />
+              <Route path="/duell" element={<Duel />} />
+              <Route path="/stichwortliste" element={<StichwortlistePage />} />
+              <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
+              <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
+              <Route path="/preise" element={<Pricing />} />
+              <Route
+                path="/admin/kapitel-editor"
+                element={
+                  <AdminGuard>
+                    <KapitelEditor />
+                  </AdminGuard>
+                }
+              />
+              <Route
+                path="/admin/audit"
+                element={
+                  <AdminGuard>
+                    <ContentAudit />
+                  </AdminGuard>
+                }
+              />
+              <Route
+                path="/admin/preview"
+                element={
+                  <AdminGuard>
+                    <AdminPreview />
+                  </AdminGuard>
+                }
+              />
+              <Route
+                path="/admin/dashboard"
+                element={
+                  <AdminGuard>
+                    <AdminDashboard />
+                  </AdminGuard>
+                }
+              />
+              <Route
+                path="/admin/tasks"
+                element={
+                  <AdminGuard>
+                    <AdminTasksPage />
+                  </AdminGuard>
+                }
+              />
+              <Route path="/wissencheck" element={<WissenCheck />} />
+              <Route path="/wissencheck/:fach" element={<WissenCheck />} />
+              <Route path="/prognose" element={<Prognose />} />
+              <Route path="/performance" element={<PerformanceOverview />} />
+              <Route path="/fortschritt" element={<FortschrittPage />} />
+              <Route path="/fragen-trainer" element={<FragenTrainer />} />
+              <Route path="/daily" element={<DailyChallenge />} />
+              <Route path="/wrapped" element={<BMSWrapped />} />
+              <Route path="/formelsammlung" element={<Formelsammlung />} />
+              <Route path="/today" element={<TodayPage />} />
 
-            {/* 404 Catch-all for protected routes */}
-            <Route path="*" element={<NotFound404 />} />
+              {/* 404 Catch-all for protected routes */}
+              <Route path="*" element={<NotFound404 />} />
+            </Route>
           </Route>
 
           {/* 404 Catch-all for public routes (fallback) */}

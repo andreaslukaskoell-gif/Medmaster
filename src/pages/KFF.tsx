@@ -24,8 +24,6 @@ import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import {
   generateWortflüssigkeitSet,
   generateSyllogismSet,
-  generateImplicationTrainingSet,
-  generateWordFluencyTrainingSet,
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
 } from "@/data/kffGenerators";
@@ -39,16 +37,12 @@ import {
 import { OFFICIAL_IMPLICATION_EXAMPLES, type ImplikationTask } from "@/data/kffImplikationen";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 import { OFFICIAL_WF_EXAMPLES, type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
-import {
-  generateSequenceTaskSet,
-  OFFICIAL_ZF_EXAMPLES,
-  type SequenceTask,
-} from "@/data/kffZahlenfolgenMedAT";
+import { OFFICIAL_ZF_EXAMPLES, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
 import { difficultyLabel } from "@/data/figurenGenerator";
 import {
   OFFICIAL_FZ_EXAMPLES,
-  generateFigurenTrainingSet,
   polygonToPath,
+  FIGURE_SVG_ASPECT_PROPS,
   isOptionE,
   type FigureAssembleTask,
 } from "@/data/kffFigurenZusammensetzenMedAT";
@@ -60,6 +54,7 @@ import {
   filterValidGedaechtnisQuestions,
   logPoolWarning,
 } from "@/data/kffValidation";
+import { getTasksForUserOrFill, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -296,7 +291,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<SequenceTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -313,8 +308,11 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
     setPhase("quiz");
   };
 
-  const startTraining = () => {
-    const raw = shuffleArray(generateSequenceTaskSet(questionCount, Date.now()));
+  const startTraining = async () => {
+    const domain = "kff-zahlenfolgen" as const;
+    const rating = skillRating ?? 500;
+    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const raw = tasks.map((t) => taskToData<SequenceTask>(t));
     const valid = filterValidSequenceTasks(raw);
     setQuestions(valid);
     if (valid.length < questionCount && import.meta.env?.DEV) {
@@ -329,6 +327,9 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const handleSubmit = () => {
     const list = questions || [];
     const score = list.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const correct = score;
+    const wrong = list.length - correct;
+    setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-zf-${Date.now()}`,
       type: "kff",
@@ -415,7 +416,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
-                {[5, 10, 15, 20].map((c) => (
+                {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
@@ -1070,7 +1071,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -1086,15 +1087,11 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     setPhase("quiz");
   };
 
-  const startTraining = () => {
-    const n1 = Math.max(0, Math.floor(questionCount / 3));
-    const n2 = Math.max(0, Math.floor(questionCount / 3));
-    const n3 = questionCount - n1 - n2;
-    const raw = shuffleArray([
-      ...generateImplicationTrainingSet(n1, 1),
-      ...generateImplicationTrainingSet(n2, 2),
-      ...generateImplicationTrainingSet(n3, 3),
-    ]);
+  const startTraining = async () => {
+    const domain = "kff-implikationen" as const;
+    const rating = skillRating ?? 500;
+    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
     const valid = filterValidImplikationTasks(raw);
     setQuestions(valid);
     if (valid.length < raw.length && import.meta.env?.DEV) {
@@ -1108,6 +1105,9 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
 
   const handleSubmit = () => {
     const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
+    const correct = score;
+    const wrong = safeQuestions.length - correct;
+    setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-imp-${Date.now()}`,
       type: "kff",
@@ -1192,7 +1192,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
-                {[10, 15, 20].map((c) => (
+                {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
@@ -1442,7 +1442,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -1465,15 +1465,11 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     setPhase("quiz");
   };
 
-  const startTraining = () => {
-    const n1 = Math.max(0, Math.floor(questionCount / 3));
-    const n2 = Math.max(0, Math.floor(questionCount / 3));
-    const n3 = questionCount - n1 - n2;
-    const raw = shuffleArray([
-      ...generateWordFluencyTrainingSet(n1, 1),
-      ...generateWordFluencyTrainingSet(n2, 2),
-      ...generateWordFluencyTrainingSet(n3, 3),
-    ]);
+  const startTraining = async () => {
+    const domain = "kff-wortflüssigkeit" as const;
+    const rating = skillRating ?? 500;
+    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
     const valid = filterValidWordFluencyTasks(raw);
     setQuestions(valid);
     if (valid.length < raw.length && import.meta.env?.DEV) {
@@ -1491,6 +1487,9 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       const correctOption = qu.options[qu.correctIndex];
       return answers[id] === correctOption;
     }).length;
+    const correct = score;
+    const wrong = safeQuestions.length - correct;
+    setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-wf-${Date.now()}`,
       type: "kff",
@@ -1582,7 +1581,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
-                {[5, 10, 15, 20].map((c) => (
+                {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
@@ -1800,7 +1799,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(90);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
 
   const startOfficial = () => {
     const list = [...OFFICIAL_FZ_EXAMPLES];
@@ -1813,12 +1812,11 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     setPhase("quiz");
   };
 
-  const startTraining = () => {
-    const list = generateFigurenTrainingSet(
-      Math.min(questionCount, 20),
-      trainingDifficulty,
-      Date.now()
-    );
+  const startTraining = async () => {
+    const domain = "kff-figuren" as const;
+    const rating = skillRating ?? 500;
+    const tasks = await getTasksForUserOrFill(domain, rating, Math.min(questionCount, 150), 150);
+    const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
     const valid = filterValidFigurenTasks(list);
     setQuestions(valid);
     if (valid.length < list.length && import.meta.env?.DEV) {
@@ -1857,6 +1855,9 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     const score = questions.filter(
       (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
     ).length;
+    const correct = score;
+    const wrong = questions.length - correct;
+    setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-fz-${Date.now()}`,
       type: "kff",
@@ -1874,7 +1875,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     checkStreak();
     setPhase("result");
     setIndex(0);
-  }, [questions, answers, saveQuizResult, addXP, checkStreak]);
+  }, [questions, answers, saveQuizResult, addXP, checkStreak, setSkillRating]);
 
   const goToNext = () => {
     if (index < questions.length - 1) {
@@ -1978,7 +1979,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   Anzahl Aufgaben
                 </label>
                 <div className="flex gap-2">
-                  {[5, 10, 15, 20].map((c) => (
+                  {[10, 25, 50, 75, 100, 150].map((c) => (
                     <button
                       key={c}
                       onClick={() => setQuestionCount(c)}
@@ -2066,6 +2067,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                         <svg
                           key={pi}
                           viewBox="0 0 200 200"
+                          {...FIGURE_SVG_ASPECT_PROPS}
                           className="w-10 h-10 bg-white dark:bg-gray-900 rounded"
                         >
                           <path
@@ -2082,14 +2084,21 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
                     <svg
                       viewBox="0 0 200 200"
-                      className="w-20 h-20 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                      {...FIGURE_SVG_ASPECT_PROPS}
+                      className="w-24 h-24 sm:w-28 sm:h-28 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
                     >
-                      <path
-                        d={polygonToPath(q.target)}
-                        fill={FILL_FZ}
-                        stroke="#0e7490"
-                        strokeWidth="1.2"
-                      />
+                      {/* Zielform gefüllt */}
+                      <path d={polygonToPath(q.target)} fill={FILL_FZ} stroke="none" />
+                      {/* Trennlinien zwischen den Teilsteinen */}
+                      {q.pieces.map((piece, pi) => (
+                        <path
+                          key={pi}
+                          d={polygonToPath(piece)}
+                          fill="none"
+                          stroke="#0e7490"
+                          strokeWidth="1.5"
+                        />
+                      ))}
                     </svg>
                   </div>
                   <div>
@@ -2103,6 +2112,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     ) : (
                       <svg
                         viewBox="0 0 200 200"
+                        {...FIGURE_SVG_ASPECT_PROPS}
                         className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
                       >
                         <path
@@ -2128,6 +2138,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                       ) : (
                         <svg
                           viewBox="0 0 200 200"
+                          {...FIGURE_SVG_ASPECT_PROPS}
                           className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
                         >
                           <path
@@ -2234,7 +2245,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   key={pi}
                   className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
                 >
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                  <svg viewBox="0 0 200 200" {...FIGURE_SVG_ASPECT_PROPS} className="w-full h-full">
                     <path
                       d={polygonToPath(piece)}
                       fill={FILL_FZ}
@@ -2273,7 +2284,11 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                       Keine der Figuren ist richtig
                     </span>
                   ) : (
-                    <svg viewBox="0 0 200 200" className="w-full max-w-[64px] max-h-[64px] flex-1">
+                    <svg
+                      viewBox="0 0 200 200"
+                      {...FIGURE_SVG_ASPECT_PROPS}
+                      className="w-full max-w-[64px] max-h-[64px] flex-1"
+                    >
                       <path
                         d={polygonToPath(opt)}
                         fill={FILL_FZ}
