@@ -25,6 +25,7 @@ const BadgeUnlockModalLazy = lazy(() =>
   import("@/components/badges/BadgeUnlockModal").then((m) => ({ default: m.BadgeUnlockModal }))
 );
 import { SyncToast } from "@/components/SyncToast";
+import { OfflineBanner } from "@/components/OfflineBanner";
 import { BreadcrumbProvider } from "@/contexts/BreadcrumbContext";
 import { useInterleavingStore, shouldShowInterleavingOverlay } from "@/store/interleaving";
 import { useQuizSessionStore } from "@/store/quizSessionStore";
@@ -211,6 +212,7 @@ export function AppShell() {
           />
         </Suspense>
         <SyncToast />
+        <OfflineBanner />
         <Suspense fallback={null}>
           <HotStreakOverlayLazy active={hotStreakActive} />
           <RandomRewardToastLazy
