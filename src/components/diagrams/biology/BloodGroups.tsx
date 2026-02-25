@@ -52,7 +52,6 @@ const groups: BloodGroup[] = [
 export default function BloodGroups() {
   const [activeGroup, setActiveGroup] = useState<BloodGroup | null>(null);
 
-  const cellW = 95;
   const headerH = 35;
   const rowH = 55;
   const tableX = 25;

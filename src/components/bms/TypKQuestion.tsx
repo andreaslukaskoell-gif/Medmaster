@@ -13,8 +13,20 @@ import { Check, X, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
+import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import type { Confidence } from "@/hooks/useFragenTrainer";
 import type { TrainerMode } from "@/hooks/useFragenTrainer";
+
+/** MedAT-typische Optionstexte: „Nur 1 und 3“, „Alle richtig“, „Keine richtig“. */
+function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): string {
+  const n = k.nummern?.length ?? 0;
+  if (n === 0) return "Keine der Aussagen ist richtig";
+  if (totalAussagen >= 2 && n === totalAussagen) return "Alle Aussagen sind richtig";
+  const nummern = k.nummern ?? [];
+  if (nummern.length === 1) return `Nur Aussage ${nummern[0]} ist richtig`;
+  if (nummern.length === 2) return `Nur ${nummern[0]} und ${nummern[1]} sind richtig`;
+  return `Nur Aussagen ${nummern.slice(0, -1).join(", ")} und ${nummern[nummern.length - 1]} sind richtig`;
+}
 
 interface Props {
   frage: BMSFrage;
@@ -182,6 +194,7 @@ export function TypKQuestion({
               }
             }
 
+            const label = formatTypKOptionLabel(k, aussagen.length);
             return (
               <button
                 key={k.key}
@@ -192,9 +205,7 @@ export function TypKQuestion({
                 `}
               >
                 <span className="font-bold mr-2 text-xs opacity-70">{k.key}</span>
-                {k.nummern.length === 0
-                  ? "Keine der Aussagen ist richtig"
-                  : `Aussagen ${k.nummern.join(", ")} sind richtig`}
+                {label}
                 {revealed && k.key === korrekt && (
                   <CheckCircle2 className="w-4 h-4 inline ml-2 text-green-500" />
                 )}

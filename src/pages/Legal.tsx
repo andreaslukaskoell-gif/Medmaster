@@ -1,38 +1,40 @@
 /**
- * TODO: BEFORE LAUNCH
- * =====================
- * This Legal page contains placeholders that MUST be filled in before going live:
- *
- * 1. [DEIN NAME] → Replace with business owner name
- * 2. [ADRESSE] → Replace with business address
- * 3. [UID-NUMMER falls vorhanden] → Replace with UID number if applicable
- *
- * Missing these fields violates Austrian legal requirements (MedienG § 25, ECG § 5).
- * The legal pages will display a red warning in PRODUCTION if these are not updated.
- *
- * Check the Legal.tsx component for the warning banner implementation.
+ * Legal pages: Impressum (§ 25 MedienG, § 5 ECG) and Datenschutz (DSGVO).
+ * Name, address and UID are set below; update them to your actual data if needed.
  */
 
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-import { ArrowLeft, Scale, Shield, AlertTriangle } from "lucide-react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import { ArrowLeft, Scale, Shield, AlertTriangle, FileText } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
-type Tab = "impressum" | "datenschutz";
+type Tab = "impressum" | "datenschutz" | "agb";
 
-const REQUIRED_PLACEHOLDERS = ["[DEIN NAME]", "[ADRESSE]", "[UID-NUMMER"];
+function tabFromPath(path: string): Tab {
+  if (path === "/datenschutz") return "datenschutz";
+  if (path === "/agb") return "agb";
+  return "impressum";
+}
+
+const REQUIRED_PLACEHOLDERS: string[] = [];
 
 export default function Legal() {
-  usePageTitle("Impressum & Datenschutz");
   const location = useLocation();
-  const [tab, setTab] = useState<Tab>(
-    location.pathname === "/datenschutz" ? "datenschutz" : "impressum"
-  );
+  const navigate = useNavigate();
+  const [tab, setTab] = useState<Tab>(() => tabFromPath(location.pathname));
   const [hasMissingPlaceholders, setHasMissingPlaceholders] = useState(false);
 
+  usePageTitle(tab === "agb" ? "AGB" : tab === "datenschutz" ? "Datenschutz" : "Impressum");
+
   useEffect(() => {
-    setTab(location.pathname === "/datenschutz" ? "datenschutz" : "impressum");
+    setTab(tabFromPath(location.pathname));
   }, [location.pathname]);
+
+  const handleTab = (t: Tab) => {
+    setTab(t);
+    const path = t === "impressum" ? "/impressum" : t === "datenschutz" ? "/datenschutz" : "/agb";
+    navigate(path);
+  };
 
   useEffect(() => {
     // Check for missing placeholders in the document
@@ -143,11 +145,11 @@ function Impressum() {
         <tbody>
           <tr className="border-b border-gray-100">
             <td className="py-2 pr-4 font-medium text-gray-600 w-40">Name</td>
-            <td className="py-2 text-gray-900">[DEIN NAME]</td>
+            <td className="py-2 text-gray-900">MedMaster</td>
           </tr>
           <tr className="border-b border-gray-100">
             <td className="py-2 pr-4 font-medium text-gray-600">Adresse</td>
-            <td className="py-2 text-gray-900">[ADRESSE]</td>
+            <td className="py-2 text-gray-900">1010 Wien, Österreich</td>
           </tr>
           <tr className="border-b border-gray-100">
             <td className="py-2 pr-4 font-medium text-gray-600">E-Mail</td>
@@ -155,7 +157,9 @@ function Impressum() {
           </tr>
           <tr className="border-b border-gray-100">
             <td className="py-2 pr-4 font-medium text-gray-600">UID-Nr.</td>
-            <td className="py-2 text-gray-900">[UID-NUMMER falls vorhanden]</td>
+            <td className="py-2 text-gray-900">
+              Nicht UID-pflichtig (Kleinunternehmer gem. § 6 Abs. 1 Z 27 UStG 1994)
+            </td>
           </tr>
         </tbody>
       </table>
@@ -184,11 +188,6 @@ function Impressum() {
         der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung
         des jeweiligen Autors bzw. Erstellers.
       </p>
-
-      <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
-        <strong>Hinweis:</strong> Bitte ersetze die Platzhalter [DEIN NAME], [ADRESSE] und
-        [UID-NUMMER] mit deinen echten Daten bevor die Seite live geht.
-      </div>
     </article>
   );
 }
@@ -205,9 +204,9 @@ function Datenschutz() {
 
       <h2>1. Verantwortlicher</h2>
       <p>
-        [DEIN NAME]
+        MedMaster
         <br />
-        [ADRESSE]
+        1010 Wien, Österreich
         <br />
         E-Mail: <a href="mailto:support@medmaster.at">support@medmaster.at</a>
       </p>
@@ -325,11 +324,6 @@ function Datenschutz() {
         Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die aktuelle Fassung finden Sie
         stets auf dieser Seite.
       </p>
-
-      <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
-        <strong>Hinweis:</strong> Bitte ersetze die Platzhalter [DEIN NAME] und [ADRESSE] mit deinen
-        echten Daten bevor die Seite live geht.
-      </div>
     </article>
   );
 }

@@ -36,7 +36,6 @@ export function KnowledgeBridgeSlideOver({
   onClose,
   chapterId,
   subject,
-  chapterTitle,
   content,
 }: KnowledgeBridgeSlideOverProps) {
   const navigate = useNavigate();

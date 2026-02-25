@@ -54,6 +54,7 @@ const BMSWrapped = lazy(() => import("@/pages/BMSWrapped"));
 const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
 const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
 const TodayPage = lazy(() => import("@/pages/TodayPage"));
+const Legal = lazy(() => import("@/pages/Legal"));
 
 function LoadingSpinner() {
   return (
@@ -126,6 +127,10 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/impressum" element={<Legal />} />
+          <Route path="/datenschutz" element={<Legal />} />
+          <Route path="/agb" element={<Legal />} />
 
           {/* Protected routes */}
           <Route

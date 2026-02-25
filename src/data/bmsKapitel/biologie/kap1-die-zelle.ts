@@ -1359,20 +1359,6 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 - **Cave Glykolyse**: findet im Zytoplasma statt (nicht in Mitochondrien!)
 
 **Zusammenfassung (ultrakompakt):** rER→Golgi→Lysosom (M6P); Cristae = Atmungskette; Lysosom pH 4,5, Speicherkrankheiten; Proteasom = Ubiquitin; Peroxisomen = VLCFA + Katalase.`,
-      stichworte: [
-        "Mitochondrien",
-        "Endoplasmatisches Retikulum",
-        "Golgi-Apparat",
-        "Lysosomen",
-        "Peroxisomen",
-        "Ribosomen",
-        "Proteasomen",
-        "Endosymbiontentheorie",
-        "Lysosomale Speicherkrankheiten",
-        "ER-Stress",
-        "Autophagie",
-        "Ubiquitin-Proteasom-System",
-      ],
       lernziele: [
         "Die wichtigsten Zellorganellen (Mitochondrien, ER, Golgi, Lysosomen, Peroxisomen) mit Struktur und Funktion beschreiben",
         "Endosymbiontenhypothese für Mitochondrien und Chloroplasten erläutern",

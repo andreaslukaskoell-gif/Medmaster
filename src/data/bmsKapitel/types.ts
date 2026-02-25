@@ -49,6 +49,7 @@ export interface Unterkapitel {
   id: string;
   title: string;
   content: string;
+  /** Einheitliche Struktur im content: Einleitung (Worum geht es, MedAT-Relevanz) → „In diesem Kapitel lernst du:“ (4–5 Bullets) → Kern mit --- zwischen Abschnitten → Übergänge („Bisher …“, „Um …“) → Merksätze → MedAT-Fokus (Zentral prüfungsrelevant, Häufige Fragen, Typische Prüfungsfallen, Zusammenfassung). Keine „siehe oben“/„siehe unten“ – klare Definitionen. */
   /** Themen/Stichworte, die in diesem Unterkapitel abgedeckt werden. Wird oben im Kapitel als Chips angezeigt. Wenn nicht gesetzt, werden automatisch die ## Überschriften aus dem Content extrahiert. */
   stichworte?: string[];
   lernziele?: string[];
@@ -60,6 +61,7 @@ export interface Unterkapitel {
     answer: string;
   };
   klinischerBezug?: string;
+  /** 3–5 Self-Test-Fragen pro Unterkapitel (MedAT-Vorgabe). Referenz: bio-4-01 in kap4-genetik.ts. */
   selfTest: SelfTestQuestion[];
   /** Optional image URL for this subchapter; render only if present. */
   imageUrl?: string;

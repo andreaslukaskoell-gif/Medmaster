@@ -29,7 +29,6 @@ export default function UnitCircle() {
   const py = CY - R * Math.sin(rad);
 
   const cosX = CX + R * Math.cos(rad);
-  const sinY = CY - R * Math.sin(rad);
 
   // Tangent line at (1, 0) point
   const tanLen = activeDeg !== 90 ? Math.tan(rad) * R : 0;

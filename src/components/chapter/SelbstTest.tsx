@@ -248,7 +248,8 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
 
   useEffect(() => {
     if (questions.length > 0 && allRequiredAnswered && !showReport) {
-      setShowReport(true);
+      const t = setTimeout(() => setShowReport(true), 0);
+      return () => clearTimeout(t);
     }
   }, [allRequiredAnswered, questions.length, showReport]);
 

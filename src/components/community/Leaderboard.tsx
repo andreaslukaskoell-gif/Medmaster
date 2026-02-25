@@ -24,7 +24,6 @@ import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { cn } from "@/lib/utils";
 
 const TOP_LIST_SIZE = 10;
-const MOCK_SIZE = 80;
 
 const FACH_OPTIONS: { value: FachFilter; label: string }[] = [
   { value: "biologie", label: "Biologie" },
@@ -133,7 +132,6 @@ export function Leaderboard() {
   const currentEntry = rankedList.find((e) => e.isCurrentUser);
   const totalCount = rankedList.length;
   const topPercent = currentEntry ? getTopPercent(currentRank, totalCount) : 0;
-  const valueLabel = category === "global" ? "XP" : category === "weekly" ? "XP (7 Tage)" : "%";
   const valueSuffix = category === "fach" ? "%" : " XP";
 
   const getValue = (e: LeaderboardEntry) =>

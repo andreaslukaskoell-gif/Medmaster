@@ -93,12 +93,11 @@ export default function EMSpectrum() {
   const BAR_Y = 110;
   const BAR_H = 55;
 
-  let currentX = START_X;
-  const bandPositions = bands.map((b) => {
-    const pos = { x: currentX, w: b.width };
-    currentX += b.width;
-    return pos;
-  });
+  const bandPositions = bands.reduce<{ x: number; w: number }[]>((acc, b) => {
+    const x = acc.length === 0 ? START_X : acc[acc.length - 1]!.x + acc[acc.length - 1]!.w;
+    acc.push({ x, w: b.width });
+    return acc;
+  }, []);
 
   return (
     <div className="space-y-3">

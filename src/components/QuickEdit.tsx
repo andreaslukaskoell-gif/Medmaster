@@ -27,9 +27,21 @@ export function QuickEdit<T extends object>({
   const [copied, setCopied] = useState(false);
   const isDev = import.meta.env.DEV;
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     if (open) setText(JSON.stringify(data, null, 2));
   }, [open, data]);
+
+  useEffect(() => {
+    const onEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleClose();
+    };
+    if (open) window.addEventListener("keydown", onEscape);
+    return () => window.removeEventListener("keydown", onEscape);
+  }, [open]);
 
   if (devOnly && !isDev) return null;
 
@@ -48,18 +60,6 @@ export function QuickEdit<T extends object>({
       alert("Ungültiges JSON. Bitte Syntax prüfen.");
     }
   };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  useEffect(() => {
-    const onEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") handleClose();
-    };
-    if (open) window.addEventListener("keydown", onEscape);
-    return () => window.removeEventListener("keydown", onEscape);
-  }, [open]);
 
   return (
     <>

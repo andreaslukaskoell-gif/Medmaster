@@ -18,12 +18,7 @@ interface InteractiveQuizProps {
  * Shows immediate feedback per question with explanations
  * FIXED: Now uses reusable QuizQuestion component for consistency
  */
-export function InteractiveQuiz({
-  questions,
-  unterkapitelId,
-  onAnswer,
-  onAllComplete,
-}: InteractiveQuizProps) {
+export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: InteractiveQuizProps) {
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
 
   const handleAnswerChange = (questionIndex: number, isCorrect: boolean, secondTry?: boolean) => {

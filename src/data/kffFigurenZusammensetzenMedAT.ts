@@ -16,6 +16,9 @@ export type Polygon = { points: { x: number; y: number }[] };
 /** Option E = "Keine der Figuren ist richtig". */
 export type FigureOption = Polygon | { isOptionE: true };
 
+/** Trennlinien für die visuelle Lösung (wie die Teile zusammengesetzt sind). */
+export type SolutionOverlayLine = { from: { x: number; y: number }; to: { x: number; y: number } };
+
 export type FigureAssembleTask = {
   id: string;
   pieces: Polygon[];
@@ -25,6 +28,10 @@ export type FigureAssembleTask = {
   difficulty: "easy" | "medium" | "hard";
   explanation: string;
   source?: string;
+  /** Eine der 14 Zielformen oder L-Form (z. B. "triangle", "square", "L-shape"). */
+  targetShapeId?: string;
+  /** Visuelle Lösung: Trennlinien zwischen den Teilen in Zielgeometrie. */
+  solutionOverlay?: { lines: SolutionOverlayLine[] };
 };
 
 // ─── Kern-Hilfsfunktionen ─────────────────────────────────────────────────
@@ -203,6 +210,9 @@ export const SOLUTION_SHAPES = [
   "L-shape",
 ] as const;
 
+/** IDs der 14 offiziellen Zielformen (+ L-Form). Für Validierung und Speicherung. */
+export const TARGET_SHAPE_IDS: readonly string[] = SOLUTION_SHAPES;
+
 export type SolutionShapeName = (typeof SOLUTION_SHAPES)[number];
 
 const OFFICIAL_TARGET_POLYGONS: Polygon[] = [
@@ -239,6 +249,51 @@ function isExactStrategyShape(poly: Polygon): boolean {
 
 export function getAllowedSolutionShapes(): Polygon[] {
   return ALLOWED_SOLUTION_SHAPES.map((s) => ({ points: s.points.map((p) => ({ ...p })) }));
+}
+
+/** Gibt die targetShapeId für ein Polygon zurück, wenn es eine der 14 offiziellen Formen ist. */
+export function getTargetShapeIdForPolygon(target: Polygon): string | undefined {
+  const fp = polygonFingerprint(target);
+  const idx = OFFICIAL_TARGET_POLYGONS.findIndex((p) => polygonFingerprint(p) === fp);
+  return idx >= 0 ? SOLUTION_SHAPES[idx] : undefined;
+}
+
+const SEG_TOL = 0.02;
+function segmentKey(a: { x: number; y: number }, b: { x: number; y: number }): string {
+  const ax = rd(a.x);
+  const ay = rd(a.y);
+  const bx = rd(b.x);
+  const by = rd(b.y);
+  return ax < bx || (ax === bx && ay <= by) ? `${ax},${ay},${bx},${by}` : `${bx},${by},${ax},${ay}`;
+}
+
+/** Erzeugt die Trennlinien zwischen Teilen (Kanten, die nicht auf dem Zielrand liegen). */
+export function computeSolutionOverlay(
+  target: Polygon,
+  pieces: Polygon[]
+): { lines: SolutionOverlayLine[] } {
+  const targetEdges = new Set<string>();
+  const t = target.points;
+  for (let i = 0; i < t.length; i++) {
+    const j = (i + 1) % t.length;
+    targetEdges.add(segmentKey(t[i]!, t[j]!));
+  }
+  const seen = new Set<string>();
+  const lines: SolutionOverlayLine[] = [];
+  for (const piece of pieces) {
+    const pts = piece.points;
+    for (let i = 0; i < pts.length; i++) {
+      const j = (i + 1) % pts.length;
+      const key = segmentKey(pts[i]!, pts[j]!);
+      if (targetEdges.has(key) || seen.has(key)) continue;
+      seen.add(key);
+      lines.push({
+        from: { x: rd(pts[i]!.x), y: rd(pts[i]!.y) },
+        to: { x: rd(pts[j]!.x), y: rd(pts[j]!.y) },
+      });
+    }
+  }
+  return { lines };
 }
 
 /** Zielformen pro Schwierigkeit (nur die 14). */
@@ -934,6 +989,7 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
 /** Vollständige Validierung (hart): Fläche, keine Überlappung, Teile in Ziel, Ziel in 14 Formen, eindeutige Lösung. */
 export function validateFigurenTask(task: FigureAssembleTask): boolean {
   if (task.pieces.length < 2 || task.pieces.length > 7 || task.options.length !== 5) return false;
+  if (task.targetShapeId != null && !TARGET_SHAPE_IDS.includes(task.targetShapeId)) return false;
   if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
   if (!validatePiecesNoOverlap(task.pieces)) return false;
   if (!validatePiecesInsideTarget(task.pieces, task.target)) return false;
@@ -1048,6 +1104,8 @@ export function generateFigurenTrainingTask(
         correctIndex === 4
           ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben eine andere Form.`
           : `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
+      targetShapeId: getTargetShapeIdForPolygon(target),
+      solutionOverlay: computeSolutionOverlay(target, pieces),
     };
 
     if (!validateFigurenTask(task)) continue;
@@ -1080,6 +1138,8 @@ function generateFigurenTrainingTaskFallback(
     correctIndex,
     difficulty,
     explanation: `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
+    targetShapeId: getTargetShapeIdForPolygon(target),
+    solutionOverlay: computeSolutionOverlay(target, pieces),
   };
   if (validateFigurenTask(task)) return task;
   if (OFFICIAL_FZ_EXAMPLES.length > 0) {

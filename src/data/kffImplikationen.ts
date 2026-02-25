@@ -943,5 +943,18 @@ export function hasVisualSolutionForImplikationTask(task: ImplikationTask): bool
   return validateImplikationTask(task);
 }
 
-/** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation (42 Aufgaben). */
-export const implikationenTasks: ImplikationTask[] = [...IMPLIKATION_PRACTICE_TASKS];
+/** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation. Nur validierte Aufgaben. */
+function getValidImplikationenTasks(): ImplikationTask[] {
+  const invalid: string[] = [];
+  const valid = IMPLIKATION_PRACTICE_TASKS.filter((t) => {
+    const ok = validateImplikationTask(t);
+    if (!ok) invalid.push(t.id);
+    return ok;
+  });
+  if (import.meta.env?.DEV && invalid.length > 0) {
+    console.warn("[KFF Implikationen] Ungültige Aufgaben (ausgefiltert):", invalid.join(", "));
+  }
+  return valid;
+}
+
+export const implikationenTasks: ImplikationTask[] = getValidImplikationenTasks();

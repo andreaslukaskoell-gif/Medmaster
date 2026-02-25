@@ -147,6 +147,21 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           difficulty: 1,
           tags: ["homologe chromosomen", "meiose"],
         },
+        {
+          question: "Wo liegt die Erbinformation bei Eukaryoten?",
+          options: [
+            "In den Ribosomen.",
+            "In der DNA im Zellkern, an Histonen verpackt in Chromosomen.",
+            "Nur in den Mitochondrien.",
+            "In der Zellmembran.",
+            "In der RNA außerhalb des Zellkerns.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die **Erbinformation** liegt in der **DNA** im **Zellkern**. Bei Eukaryoten ist die DNA an **Histonen** verpackt und als **Chromosomen** organisiert. Mitochondrien haben eigene DNA (mtDNA), aber der Großteil der Erbinformation ist im Zellkern.",
+          difficulty: 1,
+          tags: ["dna", "zellkern", "chromosom"],
+        },
       ],
     },
 

@@ -135,7 +135,7 @@ function getTextContent(children: ReactNode): string {
   return "";
 }
 
-function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
+function buildMarkdownComponents(_keywordLinkEntries?: KeywordLinkEntry[]) {
   return {
     strong: ({ children }: { children?: ReactNode }) => {
       const text = getTextContent(children ?? "").trim();
@@ -208,7 +208,6 @@ function MarkdownContent({
   hinterfragMode?: boolean;
   keywordLinkEntries?: KeywordLinkEntry[];
 }) {
-  if (!text.trim()) return null;
   const { contentWithPlaceholders, blocks } = useMemo(() => parseHinterfragMarkers(text), [text]);
   const processedBase = useMemo(
     () => processTextForSmartLinks(contentWithPlaceholders, keywordLinkEntries),
@@ -218,6 +217,8 @@ function MarkdownContent({
     () => buildMarkdownComponents(keywordLinkEntries),
     [keywordLinkEntries]
   );
+
+  if (!text.trim()) return null;
 
   if (blocks.length === 0) {
     return (
@@ -375,7 +376,7 @@ export function SubchapterContent({
             defaultOpen: true,
           });
         }
-        sections.forEach((sec, secIdx) => {
+        sections.forEach((sec, _secIdx) => {
           list.push({
             id: `${segIdx}-${sec.id}`,
             title: sec.title,
@@ -469,13 +470,14 @@ export function SubchapterContent({
 
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const openSectionsInitialized = useRef(false);
-
-  // Reset init when subchapter changes
   const prevUkId = useRef(uk.id);
-  if (prevUkId.current !== uk.id) {
-    prevUkId.current = uk.id;
-    openSectionsInitialized.current = false;
-  }
+
+  useEffect(() => {
+    if (prevUkId.current !== uk.id) {
+      prevUkId.current = uk.id;
+      openSectionsInitialized.current = false;
+    }
+  }, [uk.id]);
 
   // Initialize open state when sections are ready: learn = only first open, read = all open
   useEffect(() => {

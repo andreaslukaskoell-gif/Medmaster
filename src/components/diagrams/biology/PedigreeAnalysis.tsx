@@ -146,11 +146,6 @@ const people: Person[] = [
   },
 ];
 
-const matingLines = [
-  { from: "I-1", to: "I-2", childrenMidX: 150 },
-  { from: "I-3", to: "I-4", childrenMidX: 370 },
-];
-
 export default function PedigreeAnalysis() {
   const [mode, setMode] = useState<Mode>("dominant");
   const [activePerson, setActivePerson] = useState<Person | null>(null);

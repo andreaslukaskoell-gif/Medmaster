@@ -3,6 +3,7 @@ import { Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /** Streak-Tage → visuelles Level (0 = aus/grau, 1–4 = zunehmendes Flickern/Glow) */
+// eslint-disable-next-line react-refresh/only-export-components -- shared helper used by components below
 export function getStreakLevel(streakDays: number, hasActivityToday: boolean): 0 | 1 | 2 | 3 | 4 {
   if (!hasActivityToday || streakDays <= 0) return 0;
   if (streakDays <= 3) return 1;
@@ -37,7 +38,7 @@ type StreakFlameIconProps = {
 export function StreakFlameIcon({
   streak,
   hasActivityToday,
-  iconOnly = true,
+  iconOnly: _iconOnly = true,
   className,
   size = "inherit",
 }: StreakFlameIconProps) {
@@ -49,9 +50,12 @@ export function StreakFlameIcon({
 
   useEffect(() => {
     if (streak > prevStreakRef.current && level >= 1) {
-      setIgnite(true);
+      const t0 = setTimeout(() => setIgnite(true), 0);
       const t = setTimeout(() => setIgnite(false), 650);
-      return () => clearTimeout(t);
+      return () => {
+        clearTimeout(t0);
+        clearTimeout(t);
+      };
     }
     prevStreakRef.current = streak;
   }, [streak, level]);
@@ -70,7 +74,6 @@ export function StreakFlameIcon({
   const sizeClass =
     size === "sm" ? "w-5 h-5" : size === "md" ? "w-8 h-8" : size === "lg" ? "w-11 h-11" : "";
 
-  const levelClass = `streak-l${level}`;
   /* Bei Streak > 0 immer Flackern (mind. L1), auch ohne Aktivität heute – gleicher Look wie Dashboard */
   const animationLevel = level >= 1 ? level : streak > 0 ? 1 : 0;
   const animateClass = isVisible && animationLevel >= 1 ? `streak-l${animationLevel}` : "streak-l0";

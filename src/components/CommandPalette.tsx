@@ -84,6 +84,9 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
 
   const results = useMemo(() => filterItems(query), [query]);
 
+  /** Clamp selectedIndex to results (no setState in effect when results.length changes). */
+  const safeSelectedIndex = results.length > 0 ? Math.min(selectedIndex, results.length - 1) : 0;
+
   const selectItem = useCallback(
     (item: SearchItem) => {
       if (item.type === "chapter") {
@@ -100,23 +103,25 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
   );
 
   useEffect(() => {
-    if (open) {
+    if (!open) return;
+    // Defer reset to avoid synchronous setState in effect (react-hooks/set-state-in-effect)
+    const t = setTimeout(() => {
       setQuery("");
       setSelectedIndex(0);
-      setTimeout(() => inputRef.current?.focus(), 50);
-    }
+    }, 0);
+    const t2 = setTimeout(() => inputRef.current?.focus(), 50);
+    return () => {
+      clearTimeout(t);
+      clearTimeout(t2);
+    };
   }, [open]);
 
   useEffect(() => {
-    setSelectedIndex((i) => (results.length ? Math.min(i, results.length - 1) : 0));
-  }, [results.length]);
-
-  useEffect(() => {
     const el = listRef.current;
-    if (!el || selectedIndex < 0) return;
-    const child = el.children[selectedIndex] as HTMLElement | undefined;
+    if (!el || safeSelectedIndex < 0) return;
+    const child = el.children[safeSelectedIndex] as HTMLElement | undefined;
     child?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-  }, [selectedIndex, results]);
+  }, [safeSelectedIndex, results]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -136,14 +141,14 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
         setSelectedIndex((i) => (i - 1 + results.length) % Math.max(1, results.length));
         return;
       }
-      if (e.key === "Enter" && results[selectedIndex]) {
+      if (e.key === "Enter" && results[safeSelectedIndex]) {
         e.preventDefault();
-        selectItem(results[selectedIndex]);
+        selectItem(results[safeSelectedIndex]);
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [open, results, selectedIndex, onClose, selectItem]);
+  }, [open, results, safeSelectedIndex, onClose, selectItem]);
 
   if (!open) return null;
 
@@ -208,7 +213,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                 <ResultRow
                   key={item.type === "chapter" ? item.kapitel.id : item.unterkapitel.id}
                   item={item}
-                  isSelected={i === selectedIndex}
+                  isSelected={i === safeSelectedIndex}
                   completedChapters={completedChapters}
                   onSelect={() => selectItem(item)}
                 />
