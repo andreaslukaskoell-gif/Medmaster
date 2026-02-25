@@ -81,7 +81,6 @@ Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mi
 
 ![Rutherford](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Versuchsaufbau (Alphateilchen auf Goldfolie) und das Kern-Hülle-Modell: winziger Kern, umgeben von leerem Raum und Elektronenhülle.
 
 **Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
@@ -106,7 +105,6 @@ Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt
 
 ![Bohr-Schalen](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt den Kern und die konzentrischen Schalen K, L, M mit den maximalen Elektronenzahlen 2, 8, 18 (Formel 2n²).
 
 ## Quantenmechanisches Modell (Orbital-Modell, ab 1925)
 
@@ -127,7 +125,6 @@ Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig
 
 ![Orbitale s p](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Die Abbildung vergleicht das kugelförmige s-Orbital mit den drei hantelförmigen p-Orbitalen (pₓ, p_y, p_z) im Raum.
 
 ## Atomkern: Protonen, Neutronen, Isotope
 
@@ -444,11 +441,9 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 ![Orbitale und Quantenzahlen](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Die Form der Orbitale (s, p, d) und ihre Besetzung mit Elektronen hängen mit den Quantenzahlen n, l und mₗ zusammen — Grundlage der Elektronenkonfiguration.
 
 ![Schalen und Energieniveaus](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die Schalen K, L, M (Hauptquantenzahl n) und die Besetzung nach Aufbauprinzip und Hundscher Regel werden hier veranschaulicht.
 
 ## Die vier Quantenzahlen
 
@@ -788,11 +783,9 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 ![Alpha-, Beta- und Gamma-Strahlung](/grafik-29-zerfall.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt α-, β- und γ-Strahlung, Reichweite und Abschirmung sowie den Zusammenhang mit Halbwertszeit und Aktivität.
 
 ![Exponentieller Zerfall](/grafik-exponential.svg)
 
-**Erklärung zur Grafik:** Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ führen zu einem exponentiellen Abfall der Teilchenzahl und der Aktivität.
 
 ## Arten der Strahlung
 
@@ -1150,11 +1143,9 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 
 ![Stoffmenge und Konzentration](/grafik-mg-ug.svg)
 
-**Erklärung zur Grafik:** Umrechnung zwischen Masse, Stoffmenge und Konzentration (z. B. mg, µg, mol, mmol/L) — wichtig für Laborwerte und Infusionsberechnung.
 
 ![Mol und Volumen](/grafik-volumen-liter.svg)
 
-**Erklärung zur Grafik:** Das Mol-Konzept verknüpft Teilchenzahl mit wägbaren Mengen und Volumina; die Grafik veranschaulicht n = m/M und Molarität c = n/V.
 
 ## Atomare Masseneinheit u
 
@@ -1505,11 +1496,9 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 ![Wasserstoffbrücken im Wasser](/grafik-wasser-h-bruecken.svg)
 
-**Erklärung zur Grafik:** Wasserstoffbrücken zwischen Wassermolekülen (O–H···O) bestimmen Siedepunkt, Dichteanomalie und die Löslichkeit vieler Stoffe.
 
 ![Biogene Elemente und Bindung](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die wichtigsten Elemente für H-Brücken (N, O, F) und ihre Rolle in Biomolekülen — Grundlage für DNA-Basenpaarung und Proteinstruktur.
 
 ## Van-der-Waals-Kräfte
 
@@ -1849,11 +1838,9 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
 
 ![Konzentration und Osmolarität](/grafik-mg-ug.svg)
 
-**Erklärung zur Grafik:** Umrechnung zwischen Masse, Stoffmenge und Konzentration (mol/L, Osmolarität) — Basis für Infusionslösungen und Tonizität.
 
 ![Osmose und Druck](/grafik-partialdruck.svg)
 
-**Erklärung zur Grafik:** Der osmotische Druck hängt von der Teilchenkonzentration ab (van't Hoff); die Grafik veranschaulicht den Zusammenhang mit Partialdruck und Konzentration.
 
 ## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
@@ -2203,11 +2190,9 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
 
 ![Phasendiagramm und Zustände](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Der Zusammenhang von Druck, Volumen und Temperatur (p·V = n·R·T) und Phasenübergänge zwischen fest, flüssig und gasförmig werden hier dargestellt.
 
 ![Wärme und Phasenübergänge](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Schmelzen, Verdampfen und Sublimation sind mit Wärmeumsatz verbunden (latente Wärme); die Grafik fasst endotherme und exotherme Übergänge zusammen.
 
 ## Die drei Aggregatzustände
 
@@ -2579,11 +2564,9 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
 
 ![Periodensystem und Blöcke](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die Anordnung der Elemente nach Ordnungszahl, s-/p-/d-/f-Blöcke und die Stellung der biogenen Elemente (C, N, O, P, S) im PSE.
 
 ![Orbitale und PSE-Position](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Die Besetzung der Orbitale (s, p, d, f) bestimmt die Position im Periodensystem und die Periodizität der Eigenschaften.
 
 ## Geschichte und Entwicklung des Periodensystems
 
@@ -2930,11 +2913,9 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 ![Schalen und Atomradius](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die effektive Kernladung und die Schalenstruktur (K, L, M) bestimmen Atomradius und Ionisierungsenergie — Grundlage der periodischen Trends.
 
 ![Orbitale und Elektronegativität](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Die Besetzung der Orbitale (s, p) und die daraus resultierende Stabilität (Hund, Pairing Penalty) beeinflussen IE und EN innerhalb einer Periode.
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
@@ -3286,11 +3267,9 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 
 ![Biogene Elemente und Gruppen](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die wichtigsten Elementgruppen (Alkali, Erdalkali, Halogene, Chalkogene) und die Stellung der biogenen Elemente im PSE — Grundlage für physiologische Rollen.
 
 ![Kohlenstoff und Übergangsmetalle](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Kohlenstoff (Gruppe 14) und Übergangsmetalle (d-Block) sind zentral für organische Chemie und Cofaktoren (z. B. Eisen im Hämoglobin).
 
 ## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 

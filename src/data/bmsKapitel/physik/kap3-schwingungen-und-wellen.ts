@@ -45,7 +45,6 @@ Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rückstellkraft pro
 
 ![Schwingung](/grafik-25-schwingung.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die harmonische Schwingung x(t) = A·cos(ωt+φ), die Periodendauer beim Fadenpendel T = 2π√(l/g) und beim Federpendel T = 2π√(m/k), sowie Resonanz und Dämpfung.
 
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
@@ -125,7 +124,6 @@ Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer
 
 ![Schwingung und Welle](/grafik-26-welle.svg)
 
-**Erklärung zur Grafik:** Eine fortschreitende Welle entsteht, wenn eine Schwingung räumlich weitergegeben wird; die Grafik zeigt den Zusammenhang zwischen Schwingungsparametern und Wellengrößen (c = f·λ).
 
 ## Resonanz und Dämpfung
 
@@ -411,13 +409,11 @@ Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie,
 
 ![Welle](/grafik-26-welle.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht c = f·λ, transversale vs. longitudinale Wellen, Schallgeschwindigkeiten und das elektromagnetische Spektrum.
 
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 ![Harmonische Schwingung](/grafik-25-schwingung.svg)
 
-**Erklärung zur Grafik:** Die lokale Schwingung der Teilchen (Amplitude A, Periodendauer T) ist die Grundlage jeder Welle; die Grafik zeigt den Zusammenhang zwischen Oszillator und Wellenausbreitung.
 
 ## Grundgrößen der Welle
 
@@ -793,7 +789,6 @@ Hier geht es um **Überlagerung und Ausbreitung von Wellen**: Interferenz (Verst
 
 ![Interferenz Doppler](/grafik-26-welle.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt konstruktive und destruktive Interferenz (Gangunterschied n·λ bzw. (n+½)·λ), die Doppler-Formel und Totalreflexion (Snellius).
 
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
 
@@ -857,7 +852,6 @@ Dabei ist θ der Winkel zwischen Schallstrahl und Blutfluss. Bei θ = 0° (paral
 
 ![Reflexion und Brechung](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Einfallswinkel, Reflexionswinkel und Brechung (Snellius) an Grenzflächen — Grundlage für Totalreflexion in Lichtleitern und Ultraschall an Gewebegrenzen.
 
 **Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht. Schallwellen (λ ≈ 0,02–17 m) beugen leicht um Hindernisse wie Häuserecken; Lichtwellen (λ ≈ 500 nm) werden nur an Mikrostrukturen merklich gebeugt.
 
@@ -1157,13 +1151,11 @@ Hier geht es um **Schall und Hören**: Schalldruck, Dezibel, wie das Ohr Frequen
 
 ![Dezibel Cochlea](/grafik-26-welle.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Dezibel-Skala L = 20·log(p/p₀), die +3 dB / +6 dB-Regel, den Cochlea-Querschnitt und die Tonotopie (Basis = hohe Frequenzen).
 
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
 ![Schall und Sinne](/grafik-transduktion-sinne.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht die Umwandlung von Schallreizen in Nervensignale (Transduktion) und die Rolle von Cochlea und Haarzellen beim Hören.
 
 ## Schallpegel und die Dezibel-Skala
 

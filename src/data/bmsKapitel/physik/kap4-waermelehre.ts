@@ -47,7 +47,6 @@ Hier geht es um **Temperatur und Wärmeübertragung**: Wie misst man Temperatur 
 
 ![Temperatur Waermekapazitaet](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Celsius/Kelvin-Umrechnung, die spezifische Wärmekapazität c (Q = m·c·ΔT) und die lineare Wärmedehnung ΔL = α·L₀·ΔT.
 
 Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Drei Skalen sind praxisrelevant:
 
@@ -112,7 +111,6 @@ Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkei
 
 ![Zustand und Temperatur](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Zusammenhang von Temperatur, Druck und Volumen (ideales Gas) — Grundlage für Temperaturskalen und Wärmeausdehnung.
 
 **Wärmekapazität verschiedener Stoffe im Vergleich:**
 - Wasser: c = 4180 J/(kg·K) — biologisch essenziell als Temperaturpuffer
@@ -403,7 +401,6 @@ Hier geht es um **wie Wärme von einem Ort zum anderen gelangt**: Leitung durch 
 
 ![Waermeuebertragung](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht die drei Wärmeübertragungswege (Konduktion, Konvektion, Strahlung), das Fourier-Gesetz Q̇ = λ·A·ΔT/d und Stefan-Boltzmann.
 
 Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Teilchen übertragen, ohne dass Materie transportiert wird. Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom:
 
@@ -423,7 +420,6 @@ Der **Widerstand** R_th = d/(λ·A) ist das thermische Analogon zum elektrischen
 
 ![Druck und Temperatur](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Wärmeübertragung ändert Temperatur und damit Druck/Volumen; die Grafik zeigt den Zusammenhang p·V = n·R·T für Gase.
 
 ## Konvektion
 
@@ -735,7 +731,6 @@ Hier geht es um **Energie und Richtung** thermischer Prozesse: Der 1. Hauptsatz 
 
 ![Hauptsaetze Carnot](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst den 1. und 2. Hauptsatz, ΔU = Q + W, Entropie und den Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm zusammen.
 
 "Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
 
@@ -768,7 +763,6 @@ Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt)
 
 ![Zustandsänderungen](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Isochore, isobare, isotherme und adiabatische Prozesse im p-V- bzw. p-T-Diagramm — Grundlage für ΔU = Q + W und Carnot-Prozess.
 
 ## Zweiter Hauptsatz: Entropie und Irreversibilität
 
@@ -785,7 +779,6 @@ Folgen:
 
 ![Prozesse und Wirkungsgrad](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Carnot-Prozess und Zustandsänderungen (isotherm, adiabatisch) im p-V-Diagramm — Grundlage für den maximalen Wirkungsgrad.
 
 ## Carnotscher Wirkungsgrad
 
@@ -1055,7 +1048,6 @@ Hier geht es um **Gase und Phasen**: Wie hängen Druck, Volumen und Temperatur z
 
 ![Ideales Gas Phasendiagramm](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die ideale Gasgleichung pV = nRT, die Einzelgesetze (Boyle, Gay-Lussac, Charles) und das Phasendiagramm mit Tripelpunkt und kritischem Punkt.
 
 Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlässigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase näherungsweise ideal.
 
@@ -1087,11 +1079,9 @@ Ein Phasendiagramm stellt die Gleichgewichtszustände eines Stoffes als Funktion
 
 ![Wärme und Phasen](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Wärmeübertragung bei Phasenübergängen (latente Wärme) und der Zusammenhang von Temperatur mit innerer Energie — Ergänzung zum Phasendiagramm.
 
 ![Thermodynamik und Phasen](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Wärmeübertragung und Hauptsätze bilden die Grundlage für Phasenübergänge; die Grafik fasst Energiebilanz und latente Wärme zusammen.
 
 **Tripelpunkt**: Alle drei Phasen koexistieren. Für Wasser: T_triple = 273,16 K, p_triple = 611,7 Pa.
 

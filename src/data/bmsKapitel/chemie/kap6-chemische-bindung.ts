@@ -67,11 +67,9 @@ Je kleiner der Ionenradius und je höher die Ladung der Ionen, desto größer di
 
 ![Ionenbindung](/grafik-redox.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Elektronenübertragung bei der Ionenbindung (Na → Cl), das NaCl-Gitter (Koordinationszahl 6) und die Schritte des Born-Haber-Kreisprozesses für Gitterenergie.
 
 ![Ionen und Schalen](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die Edelgaskonfiguration (voll besetzte Schalen) ist das treibende Motiv für Ionenbildung; die Grafik veranschaulicht den Übergang vom Atom zum Ion.
 
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
@@ -389,11 +387,9 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
 
 ![Kovalente Bindung](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt Elektronenteilung bei kovalenter Bindung, ΔEN-Bereiche (polar/unpolar/ionisch), VSEPR-Geometrien und die Hybridisierungen sp³, sp², sp.
 
 ![Orbitale und Hybridisierung](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Die räumliche Gestalt der s-, p- und hybriden Orbitale (sp³, sp², sp) bestimmt Bindungswinkel und Molekülgeometrie nach VSEPR.
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -765,11 +761,9 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
 
 ![H-Bruecken](/grafik-wasser-h-bruecken.svg)
 
-**Erklärung zur Grafik:** Die Grafik vergleicht London-Kräfte, Dipol-Dipol und H-Brücken (D–H···A) und zeigt die Anomalie des Wassers (4 H-Brücken pro Molekül, Dichtemaximum bei 4 °C).
 
 ![Biogene Elemente und H-Brücken](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** N, O und F als H-Brücken-Partner in Biomolekülen; die Stellung im PSE und die Rolle in DNA und Proteinen werden hier zusammengefasst.
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen. Entscheidend ist die Unterscheidung: **Intramolekulare** Bindungen halten Atome im Molekül zusammen; **intermolekulare** Kräfte wirken zwischen Molekülen und bestimmen die makroskopischen Eigenschaften.
 
@@ -1158,11 +1152,9 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
 
 ![Biomolekuele](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst kovalente Bindungen (Peptid, glycosidisch, Ester, Disulfid) und nichtkovalente Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücke) in Proteinen und DNA zusammen.
 
 ![Kohlenstoffgerüst und Biomoleküle](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Kohlenstoff als Gerüst der Biomoleküle (Proteine, Kohlenhydrate, Lipide); die Grafik veranschaulicht Bindungsarten und Strukturprinzipien.
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 

@@ -29,7 +29,11 @@ export const bioKapOekologie: Kapitel = {
 - die **Definition** von Ökologie und die **Ebenen** (Organismus → Population → Biozönose → Ökosystem)
 - **Biotop** (unbelebter Lebensraum) vs. **Biozönose** (Lebensgemeinschaft aller Arten)
 - **Ökosystem** = Biotop + Biozönose in Wechselwirkung
-- warum diese Begriffe für alle weiteren Ökologie-Themen grundlegend sind
+- warum diese Begriffe für Ökologie und Artinteraktionen grundlegend sind
+
+![Ökologische Ebenen und Stoffflüsse](/grafik-toleranzkurve.svg)
+
+![Population und Toleranz](/grafik-exponential.svg)
 
 ---
 
@@ -171,6 +175,10 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
 - Die **Toleranzkurve** zu beschreiben (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
 - **Euryök** (Generalist) und **stenök** (Spezialist) zu unterscheiden und als Bioindikatoren einzuordnen
 - **Liebigs Minimumgesetz** (limitierender Faktor = Minimum) und **Shelfords Toleranzgesetz** (auch Maximum limitiert) anzuwenden
+
+![Toleranzkurve und Optimum](/grafik-toleranzkurve.svg)
+
+![Umweltfaktoren und Leistung](/grafik-exponential.svg)
 
 ---
 
@@ -384,6 +392,10 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 - Wie **Nischendifferenzierung** Koexistenz konkurrierender Arten ermöglicht
 - Das Connell-Seepocken-Experiment als Beleg für fundamentale vs. realisierte Nische
 
+![Toleranzkurve und Nische](/grafik-toleranzkurve.svg)
+
+![Lebensraum und ökologische Nische](/grafik-exponential.svg)
+
 ---
 
 ## Nische vs. Lebensraum (Habitat)
@@ -525,6 +537,10 @@ Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konk
 - **Symbioseformen** mit Vorzeichen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
 - **Parasitismus** von **Prädation** zu unterscheiden (Parasit tötet Wirt nicht sofort)
 - Die Grundidee der **Räuber-Beute-Dynamik** (Räuberpopulation hinkt Beute nach)
+
+![Konkurrenz und Symbiose](/grafik-toleranzkurve.svg)
+
+![Räuber-Beute und Populationsdynamik](/grafik-exponential.svg)
 
 ---
 
@@ -719,11 +735,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
 
 ![Energiefluss und Trophieebenen](/grafik-21-energieprofil.svg)
 
-**Erklärung zur Grafik:** Energie verringert sich pro Trophieebene; die 10%-Regel und der Energieverlust als Wärme werden so veranschaulicht.
-
 ![Stoffkreislauf und Reaktionen](/grafik-kohlenstoff.svg)
-
-**Erklärung zur Grafik:** Kohlenstoff- und andere Stoffkreisläufe; Produzenten, Konsumenten und Destruenten schließen die Kreisläufe.
 
 ---
 
@@ -1010,6 +1022,10 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 - **Exponentielles** (J-Kurve) und **logistisches** (S-Kurve) Wachstum zu unterscheiden
 - **Kapazitätsgrenze K** und **r- vs. K-Strategen** (viele Nachkommen vs. wenige mit Brutpflege)
 
+![Sukzession und Wachstum](/grafik-exponential.svg)
+
+![Populationsdynamik — logistisch und exponentielle Kurve](/grafik-toleranzkurve.svg)
+
 ---
 
 ## Sukzession: Primär und Sekundär
@@ -1174,11 +1190,7 @@ Zwei grundlegende Lebensstrategien:
 
 ![Antikörper und Komplement](/grafik-19-komplement.svg)
 
-**Erklärung zur Grafik:** Komplementaktivierung durch Antigen-Antikörper-Komplexe; klassischer Weg (C1q bindet Fc) bis zur Lyse (MAC).
-
 ![Immunantwort und Abwehr](/grafik-8-immunitaet.svg)
-
-**Erklärung zur Grafik:** Übersicht der humoralen Immunantwort; Antikörper (IgG, IgA, IgM u. a.) und ihre Effektorfunktionen im Kontext.
 
 ---
 
@@ -1418,11 +1430,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 ![Zentraldogma und Rekombination](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** DNA als Informationsträger; V(D)J-Rekombination verändert die DNA-Sequenz in B-Zellen und erzeugt Antikörperdiversität.
-
 ![Kombinatorik und Diversität](/grafik-kombinatorik.svg)
-
-**Erklärung zur Grafik:** Kombinatorische Vielfalt durch Auswahl von V-, D-, J-Segmenten; Grundprinzip der klonalen Diversität.
 
 ---
 
@@ -1635,11 +1643,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 ![Vererbung und Genotypen](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Kreuzungsschema (Punnett-Quadrat) für AB0; Kombination der Allele I^A, I^B, i⁰ und Zuordnung zu Phänotypen.
-
 ![Kodominanz und multiple Allele](/grafik-16-zentraldogma.svg)
-
-**Erklärung zur Grafik:** Genotyp und Phänotyp bei Kodominanz; beide Allele (I^A, I^B) werden exprimiert, i⁰ ist rezessiv.
 
 ---
 
@@ -1875,13 +1879,9 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 - Anti-D-Prophylaxe: 28. SSW + <72h postpartal → verhindert Sensibilisierung
 - IgG passiert Plazenta (FcRn-Transport), IgM nicht (zu groß als Pentamer)
 
-![Plazentatransfer und IgG](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Transzytose von IgG über die Plazentaschranke (FcRn); nur IgG passiert, Anti-D-IgG kann so den Fötus schädigen.
+![Immunantwort und Antikörper](/grafik-8-immunitaet.svg)
 
 ![Gerinnung und Blutgruppen](/grafik-7-gerinnung.svg)
-
-**Erklärung zur Grafik:** Blut und Gefäßsystem; Rhesus-Inkompatibilität betrifft Erythrozyten und kann zu Hämolyse führen.
 
 ---
 

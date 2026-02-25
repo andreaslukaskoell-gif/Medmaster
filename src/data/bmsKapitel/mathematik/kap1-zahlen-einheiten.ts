@@ -97,7 +97,6 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 > **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
 
-**SVG-Hinweis (Vier Rechenregeln — Zehnerpotenzen):** Ein kleines Schema mit vier Kästchen: Multiplikation (Pfeil „Exponenten addieren“), Division („subtrahieren“), Potenzieren („multiplizieren“), Wurzel („halbieren“). Unterstützt das Einprägen der Operationen. *Typ: Übersicht / Schema.*
 
 ![Zehnerpotenzen](/grafik-zehnerpotenzen.svg)
 
@@ -138,7 +137,6 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
 
 > **Merke:** **Verhältnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. 10⁻³ / 10⁻⁶ = 10³ = Faktor 1.000. Exponentendifferenz abschätzen — nicht lange ausrechnen!
 
-**SVG-Hinweis (Größenordnungen — Medizin/Biologie):** Eine logarithmische Skala von 10⁻⁹ m (Nanometer) bis 10⁰ m (Meter) mit eingezeichneten Objekten (Atom, Virus, Bakterium, Zelle, Mensch) macht die Größenordnungen auf einen Blick erfassbar. *Typ: logarithmische Skala / Übersicht.*
 
 ![Größenordnungen](/grafik-groessenordnungen.svg)
 
@@ -529,7 +527,6 @@ Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspri
 
 > **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Großbuchstabe!). Blutdruck in kPa; Radioaktivität in MBq; Körpergewicht in kg.
 
-**SVG-Hinweis (Präfix-Leiter Femto bis Tera):** Eine vertikale Leiter oder Skala von f (10⁻¹⁵) bis T (10¹²) mit Symbolen und Zehnerpotenzen unterstützt die Merkfähigkeit der Reihenfolge. *Typ: Übersicht / Schema.*
 
 ![Präfix-Leiter](/grafik-praefix-leiter.svg)
 
@@ -550,7 +547,6 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
 
 > **Merke:** **Kleinere Einheit → größere Zahl; größere Einheit → kleinere Zahl.** Eselsbrücke: "Wer kleiner misst, zählt mehr." Systematisch: Ausgangs- und Zieleinheit als Zehnerpotenz schreiben, Verhältnis bilden.
 
-**SVG-Hinweis (Umrechnung mg ↔ µg):** Ein einfaches Schema mit Pfeilen "mg → µg: × 1.000" und "µg → mg: ÷ 1.000" mit Beispiel (1 mg = 1.000 µg) reduziert Verwechslungen. *Typ: Schema / Eselsbrücke.*
 
 ![mg µg Umrechnung](/grafik-mg-ug.svg)
 
@@ -968,7 +964,6 @@ Falls das Ergebnis nicht normalisiert ist (Vorfaktor ≥ 10 oder < 1), muss man 
 
 > **Merke:** **Multiplikation:** Vorfaktoren ×, Exponenten **addieren**. **Division:** Vorfaktoren ÷, Exponenten **subtrahieren**. Danach **normalisieren**.
 
-**SVG-Hinweis (Rechenregeln wissenschaftliche Notation):** Ein kleines Schema: Multiplikation (Vorfaktor × Vorfaktor, Exponent + Exponent) und Division (Vorfaktor ÷ Vorfaktor, Exponent − Exponent) mit je einem Beispiel. *Typ: Übersicht / Schema.*
 
 ![Wissenschaftliche Notation](/grafik-wissenschaftliche-notation.svg)
 
@@ -996,7 +991,6 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 > **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
 
-**SVG-Hinweis (pH und Zehnerpotenzen):** Eine Skala von pH 0–14 mit zugehörigen [H⁺]-Werten (10⁰ bis 10⁻¹⁴) zeigt den logarithmischen Zusammenhang auf einen Blick. *Typ: Skala / Übersicht.*
 
 ![pH Zehnerpotenzen](/grafik-20-ph-skala.svg)
 
@@ -1376,7 +1370,6 @@ Klinisch relevante Flächen:
 - Dünndarmoberfläche (mit Zotten und Mikrovilli): ~250–400 m²
 - Handflächenfläche: ~0,8 % KOF (Neuner-Regel in der Verbrennungsmedizin)
 
-**SVG-Hinweis (Fläche: Faktor quadrieren):** Ein Quadrat 1 m × 1 m mit 100×100-Kästchen (1 cm²) zeigt: 1 m² = 10.000 cm². *Typ: Schema / Veranschaulichung.*
 
 ![Fläche Quadrat](/grafik-flaeche-quadrat.svg)
 
@@ -1408,7 +1401,6 @@ Klinisch relevante Volumina:
 
 > **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor **kubieren**!
 
-**SVG-Hinweis (Volumen: 1 L = 1 dm³ = 1.000 cm³):** Ein Würfel 1 dm Kantenlänge mit Unterteilung in cm³ zeigt: 1 L = 1.000 cm³. *Typ: Schema / Veranschaulichung.*
 
 ![Volumen Liter](/grafik-volumen-liter.svg)
 
@@ -1746,15 +1738,12 @@ Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s)
 
 > **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** × **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
 
-**SVG-Hinweis (km/h ↔ m/s):** Ein kleines Schema mit Pfeilen „÷ 3,6“ und „× 3,6“ und den Beispielen 36 km/h = 10 m/s unterstützt die Merkfähigkeit. *Typ: Schema / Eselsbrücke.*
 
 ![km/h m/s](/grafik-kmh-ms.svg)
 
-**Erklärung zur Grafik:** Umrechnung zwischen km/h und m/s durch Faktor 3,6 (÷ 3,6 bzw. × 3,6); wichtig für Geschwindigkeitsangaben in Physik und Klinik.
 
 ![Bewegung und Einheiten](/grafik-koerper.svg)
 
-**Erklärung zur Grafik:** Weg, Geschwindigkeit und Beschleunigung bauen auf den SI-Basiseinheiten m und s auf; die Grafik veranschaulicht den Zusammenhang für gleichförmige und beschleunigte Bewegung.
 
 ---
 
@@ -2092,15 +2081,12 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 
 **Mol:** 1 mol = N_A = 6,022 × 10²³ Teilchen (**Avogadro-Zahl**). **Molare Masse** M in g/mol. Glukose C₆H₁₂O₆: M = 180 g/mol. NaCl: M = 58,5 g/mol.
 
-**SVG-Hinweis (7 SI-Grundeinheiten):** Eine kompakte Tabelle oder Leiter mit m, kg, s, A, K, mol, cd unterstützt die Merkfähigkeit. *Typ: Übersichtstabelle / Schema.*
 
 ![SI-Grundeinheiten](/grafik-si-grundeinheiten.svg)
 
-**Erklärung zur Grafik:** Die sieben SI-Basiseinheiten (m, kg, s, A, K, mol, cd) sind die Grundlage für alle abgeleiteten Einheiten wie Newton, Pascal, Joule und Watt.
 
 ![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
 
-**Erklärung zur Grafik:** Abgeleitete Einheiten entstehen aus Basiseinheiten (z. B. N = kg×m/s²); die Grafik unterstützt die Dimensionskontrolle bei Umrechnungen.
 
 ---
 

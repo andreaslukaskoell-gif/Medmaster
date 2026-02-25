@@ -31,6 +31,8 @@ export const bioKapEntwicklung: Kapitel = {
 - Warum nur **eine** funktionsfähige Eizelle pro Oozyte entsteht (asymmetrische Teilung, Polkörperchen degenerieren)
 - Zeitliche Einordnung: Oogenese beginnt pränatal; Spermatogenese ab Pubertät
 
+![Meiose — Spermatogenese und Oogenese](/grafik-3-meiose.svg)
+
 ---
 
 ## Voraussetzungen: Meiose und Keimzellen
@@ -73,7 +75,7 @@ export const bioKapEntwicklung: Kapitel = {
 
 > **Merke:** Oogenese: **1 Eizelle + 3 Polkörperchen** aus einer Oogonium. Meiose I-Arrest in Prophase I (bis Ovulation), Meiose II-Arrest in Metaphase II (bis Befruchtung).
 
-**SVG-Hinweis:** Eine schematische Gegenüberstellung Spermatogenese (4 Spermien) vs. Oogenese (1 Eizelle + 3 Polkörperchen) festigt die Prüfungsfrage „Wie viele Gameten entstehen?“.
+![Gametogenese — Ergebnis (4 Spermien vs. 1 Eizelle + 3 Polkörperchen)](/grafik-3-meiose.svg)
 
 ---
 
@@ -233,6 +235,8 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
 - Dass die Eizelle **Meiose II** erst bei Befruchtung abschließt (reife Eizelle n + 2. Polkörperchen)
 - Geschlechtsbestimmung durch das Spermium (X oder Y)
 
+![Befruchtung und frühe Entwicklung](/grafik-blastozyste.svg)
+
 ---
 
 ## Ort und zeitliche Einordnung
@@ -263,7 +267,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 > **Merke:** Akrosomreaktion = Enzymfreisetzung beim Spermium (Durchdringung der Zona). Kortikalreaktion = Reaktion der Eizelle (Polyspermie-Block). Syngamie = Verschmelzung der Vorkerne → Zygote (2n).
 
-**SVG-Hinweis:** Schema „Befruchtung: Akrosomreaktion und Kortikalreaktion“ — Spermium mit Akrosom, Zona pellucida, kortikale Granula, Polyspermie-Block.
+![Akrosomreaktion und Kortikalreaktion](/grafik-3-meiose.svg)
 
 ---
 
@@ -408,6 +412,8 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 - **Implantation** (Tag 6–7): Synzytiotrophoblast invadiert Endometrium; hCG erhält Corpus luteum
 - Klinik: Eileiterschwangerschaft bei Implantation außerhalb des Uterus
 
+![Furchung und Blastozyste](/grafik-blastozyste.svg)
+
 ---
 
 ## Furchung — Teilungen ohne Wachstum
@@ -433,8 +439,6 @@ In der Morula bildet sich ein **flüssigkeitsgefüllter Hohlraum** aus (**Blasto
 
 ![Blastozyste](/grafik-blastozyste.svg)
 
-**Erklärung zur Grafik:** Querschnitt Blastozyste: Trophoblast außen, Embryoblast als innere Zellmasse, Blastozoel als Hohlraum. Trophoblast → Plazenta/hCG, Embryoblast → Embryo.
-
 ---
 
 ## Implantation (Nidation)
@@ -446,8 +450,6 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 > **Merke:** Implantation Tag 6–7. hCG (vom Trophoblast) erhält das Corpus luteum → Progesteron ↑ → keine Menstruation.
 
 ![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
-
-**Erklärung zur Grafik:** hCG bindet an LH-Rezeptoren und erhält das Corpus luteum; hormonelle Steuerung der Frühschwangerschaft.
 
 ---
 
@@ -586,6 +588,8 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 - **Somiten** als segmentierte Mesoderm-Derivate (Sklerotom, Myotom, Dermatom)
 - Warum alle drei Keimblätter letztlich **aus dem Epiblast** hervorgehen
 
+![Gastrulation und dreischichtige Keimscheibe](/grafik-blastozyste.svg)
+
 ---
 
 ## Voraussetzungen: Zweischichtige Keimscheibe
@@ -611,10 +615,6 @@ Aus dem **Primitivknoten** entsteht außerdem das **Notochord** (Chorda dorsalis
 > **Merke:** Gastrulation = Bildung der drei Keimblätter aus dem Epiblast. Primitivstreifen → Einwanderung → Mesoderm + Endoderm; Oberfläche → Ektoderm. Notochord aus Primitivknoten induziert Neurulation.
 
 ![Keimblätter und Entwicklung](/grafik-blastozyste.svg)
-
-**Erklärung zur Grafik:** Aus Epiblast/Hypoblast entstehen durch Gastrulation Ektoderm, Mesoderm und Endoderm.
-
-**SVG-Hinweis:** Zeitachse Embryonalentwicklung (Furchung → Blastozyste → Gastrulation → Neurulation); Keimblätter und ihre Derivate (Tabelle als Grafik).
 
 ---
 
@@ -822,6 +822,8 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 - **Neuralleiste** (Ektoderm-Abkömmling): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfmesenchyms
 - **Neuralrohrdefekte**: Spina bifida (kaudal), Anenzephalie (kranial); **Folsäure** senkt das Risiko (~70 %)
 
+![Embryonalentwicklung und Keimblätter](/grafik-blastozyste.svg)
+
 ---
 
 ## Voraussetzung: Notochord
@@ -842,11 +844,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 > **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
 
-![Neuralrohr und Achsen](/grafik-12-ossifikation.svg)
-
-**Erklärung zur Grafik:** Notochord und Achsenstrukturen; Neurulation und Somiten im Kontext der Embryonalentwicklung.
-
-**SVG-Hinweis:** Schema „Neurulation“: Neuralplatte → Neuralrinne → Neuralrohr; Neuroporen kranial/kaudal.
+![Neurulation und Embryonalentwicklung](/grafik-blastozyste.svg)
 
 ---
 
@@ -994,11 +992,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
 
 ![Embryonalentwicklung und Organanlage](/grafik-blastozyste.svg)
 
-**Erklärung zur Grafik:** Aus dem Embryoblast entstehen die Keimblätter und in der Embryonalperiode alle Organanlagen; die Grafik veranschaulicht die frühe Entwicklung bis zur Organogenese.
-
 ![Ossifikation und Wachstum](/grafik-12-ossifikation.svg)
-
-**Erklärung zur Grafik:** In der Fetalperiode wachsen und reifen die angelegten Strukturen; die Grafik zeigt Knochenbildung und Wachstum als Teil der Reifung.
 
 ---
 
@@ -1217,13 +1211,9 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Bisher haben wir gesehen:** Der Trophoblast der Blastozyste wird zur Plazenta und zu Anteilen der Eihüllen; der Embryo liegt in der **Amnionhöhle** (von Fruchtwasser umgeben). **Damit der Fetus versorgt wird,** bilden sich die **Plazenta** und die **Eihäute** (Amnion, Chorion) aus.
 
-![Membrantransport und Plazentaschranke](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Der Stoffaustausch an der Plazentaschranke erfolgt über Diffusion und aktiven Transport; die Grafik veranschaulicht Transportmechanismen an Membranen.
+![Plazenta und Trophoblast](/grafik-blastozyste.svg)
 
 ![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
-
-**Erklärung zur Grafik:** Die Plazenta produziert hCG und erhält so das Corpus luteum; hormonelle Steuerung ist für die Schwangerschaftserhaltung zentral.
 
 ---
 
@@ -1458,13 +1448,9 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 **Kontext:** Von der Chemie zum ersten Leben — und warum unsere Zellkraftwerke „fremd“ sind.
 
-![Zellaufbau und Organellen](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Moderne Zellen mit Membranen und Kompartimenten; Mitochondrien als Organellen mit eigenem Ursprung (Endosymbiontentheorie).
+![Abiotische Synthese und Redox](/grafik-redox.svg)
 
 ![Zentraldogma und RNA](/grafik-16-zentraldogma.svg)
-
-**Erklärung zur Grafik:** RNA als Informations- und Katalysemolekül in der RNA-Welt; die Grafik veranschaulicht den Fluss von Information (DNA → RNA → Protein).
 
 ---
 
@@ -1687,11 +1673,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 ![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Systematische Einordnung von Merkmalen; Stammbäume und Kladistik ordnen Arten und Merkmale nach gemeinsamer Abstammung.
-
 ![Wahrscheinlichkeit und Verteilung](/grafik-normalverteilung.svg)
-
-**Erklärung zur Grafik:** Statistische Verteilung von Merkmalen in Populationen; Grundlage für phylogenetische und populationsgenetische Analysen.
 
 **In diesem Kapitel lernst du:**
 - **Homologie** = gemeinsamer evolutionärer Ursprung (z. B. Vogelflügel – Menschenarm)
@@ -1933,11 +1915,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ![Variation und Verteilung](/grafik-normalverteilung.svg)
 
-**Erklärung zur Grafik:** Variation in Populationen; natürliche Selektion wirkt auf die Verteilung von Merkmalen — besser angepasste Individuen haben höheren Fortpflanzungserfolg.
-
 ![Wahrscheinlichkeit und Allelfrequenzen](/grafik-33-vierfeldertafel.svg)
-
-**Erklärung zur Grafik:** Systematische Erfassung von Merkmalen und Ergebnissen; Grundlage für die Synthetische Evolutionstheorie (Änderung von Allelfrequenzen).
 
 ---
 
@@ -2189,11 +2167,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 ![Stammbaum und Aufspaltung](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Artbildung durch Aufspaltung von Linien; prä- und postzygotische Isolation verhindern Genfluss und führen zu getrennten Arten.
-
 ![Verteilung und Isolation](/grafik-normalverteilung.svg)
-
-**Erklärung zur Grafik:** Räumliche oder ökologische Trennung von Populationen; Grundlage für allopatrische und sympatrische Artbildung.
 
 ---
 
@@ -2431,11 +2405,7 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 ![Allelfrequenzen und Verteilung](/grafik-normalverteilung.svg)
 
-**Erklärung zur Grafik:** Hardy-Weinberg beschreibt die erwartete Genotypverteilung (p², 2pq, q²); Abweichungen zeigen Wirkung von Mutation, Selektion, Drift oder Genfluss.
-
 ![Vierfeldertafel und Häufigkeiten](/grafik-33-vierfeldertafel.svg)
-
-**Erklärung zur Grafik:** Systematische Erfassung von Genotypen und Phänotypen; nützlich für die Anwendung des Hardy-Weinberg-Gleichgewichts und die Identifikation von Evolutionsfaktoren.
 
 ---
 
@@ -2663,11 +2633,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 ![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Systematische Einordnung von Merkmalen und Linien; Stammbäume der Hominiden zeigen Verzweigung von Schimpanse und Mensch aus einem gemeinsamen Vorfahren.
-
 ![Ossifikation und Skelett](/grafik-12-ossifikation.svg)
-
-**Erklärung zur Grafik:** Skelettanpassungen an Bipedie (Wirbelsäule, Becken, Beine); die Grafik veranschaulicht strukturelle Veränderungen während der Hominisation.
 
 ---
 

@@ -65,7 +65,6 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 ![SI-Basisgroessen](/grafik-si-grundeinheiten.svg)
 
-**Erklärung zur Grafik:** Die Abbildung listet die sieben SI-Basisgrößen mit ihren Einheiten und Symbolen (Länge, Masse, Zeit, Stromstärke, Temperatur, Stoffmenge, Lichtstärke).
 
 ---
 
@@ -122,7 +121,6 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 ![Skalar Vektor](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Die Grafik vergleicht ein Skalar (z. B. Temperatur 37 °C) mit einem Vektor als Pfeil (Betrag + Richtung, z. B. Kraft).
 
 ---
 
@@ -439,7 +437,6 @@ Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffa
 
 ![SI-Praefixe](/grafik-praefix-leiter.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die SI-Präfixe (µ, m, k, M usw.), Zehnerpotenzen und typische Größenordnungen in der Medizin (z. B. Erythrozyt ~8 µm, 1 mL = 10⁻⁶ m³).
 
 **Bisher haben wir gesehen:** Warum wir Präfixe und eine einheitliche Schreibweise brauchen. **Jetzt konkret:** Was sind Präfixe und wie schreibt man Zahlen kompakt?
 
@@ -474,7 +471,6 @@ Wenn das Ergebnis der Mantissenmultiplikation ≥ 10 ist, muss normiert werden:
 
 ![Wissenschaftliche Notation](/grafik-wissenschaftliche-notation.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Aufbau der wissenschaftlichen Notation (Mantisse × 10^Exponent) und hilft beim sicheren Umrechnen und Vergleichen sehr großer bzw. sehr kleiner Zahlen (z. B. in der Medizin).
 
 ## Präfixe bei Flächen und Volumen: Die häufigste Fehlerquelle
 
@@ -787,7 +783,6 @@ Hier geht es um **Einheiten-Konsistenz und sicheres Umrechnen**: Jede physikalis
 
 ![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht Basisdimensionen (M·L·T), abgeleitete Größen (Kraft, Druck, Energie, Leistung) und die Einheitenumrechnung per Kettenmultiplikation (z. B. mmHg → Pa).
 
 Die **Dimensionsanalyse** (Methode, Gleichungen anhand ihrer Einheiten auf Konsistenz zu prüfen) beruht auf einer einfachen Regel: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
@@ -824,7 +819,6 @@ Ebenso: Wenn eine Herleitung zum Ergebnis "Meter plus Sekunden" führt, ist gara
 
 ![Geschwindigkeitsumrechnung](/grafik-kmh-ms.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Umrechnung zwischen km/h und m/s per Kettenmultiplikation — wichtig für Geschwindigkeitsangaben (z. B. in Physik und Verkehrsmedizin).
 
 Merke: km/h ÷ 3,6 = m/s
 
@@ -1144,7 +1138,6 @@ Hier geht es um **Bewegung und Kräfte**: Wie beschreibt man Weg, Geschwindigkei
 
 ![Newton Kinematik](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst die drei Newtonschen Gesetze (Trägheit, F=ma, actio=reactio), den freien Fall (v, s, g) und das Kräftegleichgewicht zusammen.
 
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
@@ -1162,7 +1155,6 @@ Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich K�
 
 ![Körper und Kräfte](/grafik-koerper.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht Körper unter Krafteinwirkung, Kräftegleichgewicht und die vektorielle Zerlegung von Kräften — zentral für Newtonsche Gesetze und Kinematik.
 
 ## Das erste Newtonsche Gesetz — Trägheitsgesetz
 
@@ -1417,7 +1409,6 @@ Hier geht es um **Erhaltungsgrößen**: In abgeschlossenen Systemen bleiben Gesa
 
 ![Energie Impuls](/grafik-energie-impuls.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt E_kin = ½mv², E_pot = mgh, Impuls p = mv, elastischen vs. inelastischen Stoß und die Herzarbeit W = p·ΔV.
 
 Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem **abgeschlossenen System** (kein Austausch mit der Umgebung) konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung.
 
@@ -1463,7 +1454,6 @@ Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkel
 
 ![Energieumwandlung](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt Energieformen und deren Umwandlung (mechanisch, Wärme) — Grundlage für Energieerhaltung und Wirkungsgrad (z. B. Herzarbeit, Muskelarbeit).
 
 ## Rechenbeispiele
 
@@ -1686,7 +1676,6 @@ Hier geht es um **Kräfte im Gleichgewicht** (Statik) und um **Flüssigkeiten un
 
 ![Statik Stroemung](/grafik-statik-stroemung.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt Hebelgesetz und Drehmoment, hydrostatischen Druck p = ρgh, Bernoulli-Gleichung und das Gesetz von Hagen-Poiseuille (Q ∝ r⁴).
 
 Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
@@ -1716,7 +1705,6 @@ Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen 
 
 ![Druck und Volumen](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Zusammenhang zwischen Druck p und Volumen V (z. B. Boyle-Mariotte) — wichtig für Beatmung, Lunge und Gefäßdruck.
 
 ## Viskosität und Strömungstypen
 
@@ -1952,7 +1940,6 @@ Hier geht es um **Schwerkraft** und **Kreisbewegung**: Wie hängt die Gewichtskr
 
 ![Gravitation Zentrifuge](/grafik-gravitation-zentrifuge.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht die Gewichtskraft F_G = m·g, die Zentripetalkraft F_z = m·v²/r, die relative Zentrifugalkraft (RCF) und den Schwerpunkt.
 
 Gravitation und Rotation sind zwei der fundamentalsten Phänomene der Physik. Die Gravitation beschreibt die Anziehungskraft zwischen Massen, Rotation beschreibt die Kreisbewegung und die damit verbundenen Beschleunigungen und Kräfte. Beide sind in der Medizin präsent: von der Erdanziehung auf den menschlichen Körper (Blutverteilung, orthopädische Belastung) bis zur Zentrifugation in der Labormedizin.
 
@@ -1974,7 +1961,6 @@ Wichtige Beziehungen: Umlaufzeit T = 2π/ω. Frequenz f = 1/T. Bahngeschwindigke
 
 ![Kräfte als Vektoren](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Gewichtskraft und Zentripetalkraft sind Vektoren mit Betrag und Richtung; die Grafik zeigt die vektorielle Zerlegung und Addition von Kräften bei Kreisbewegung und Schwerpunkt.
 
 ## Labormedizin: Zentrifugation
 

@@ -58,9 +58,7 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
-**SVG-Hinweis: Zelle und Stoffwechsel** — Zeigt die Zelle als Einheit mit Membran und Transport; damit lassen sich Stoffwechsel, Reizbarkeit und Homöostase auf Zellebene verankern.
-
-![Zelle und Stoffwechsel](/grafik-1-membrantransport.svg)
+{{DIAGRAM}}
 
 ---
 
@@ -90,8 +88,6 @@ Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertempera
 
 > **Merke:** Negative Rückkopplung = stabilisiert (Homöostase). Positive Rückkopplung = verstärkt für Alles-oder-Nichts-Effekte (Blutgerinnung, Wehen, Aktionspotential).
 
-**SVG-Hinweis: Hypophysen-Achsen und Regelkreise** — Hormonelle Regelkreise (z. B. Schilddrüsenachse) mit negativer Rückkopplung; hilft, Soll-Ist-Vergleich und Homöostase zu verstehen.
-
 ![Hypophysen-Achsen und Regelkreise](/grafik-5-hypophysen-achsen.svg)
 
 ---
@@ -111,8 +107,6 @@ Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
 | Evolution | ✓ (Antigendrift, Antigenshifts) | ✓ |
 | Bewegung | ✗ | ✓ |
 | Zellstruktur | ✗ (keine Zelle, keine Ribosomen) | ✓ |
-
-**SVG-Hinweis (Viren vs. Lebewesen):** Eine kompakte Gegenüberstellung der Kennzeichen (Tabelle als Schema) festigt die Abgrenzung und unterstützt die Merkfähigkeit für Prüfungsfragen. *Typ: Übersicht / Vergleichstabelle.*
 
 **Fazit:** Viren sind **obligat intrazelluläre Parasiten** — das heißt: Sie können nur **innerhalb** einer Wirtszelle existieren und vermehren; sie kapern deren Stoffwechsel. Außerhalb einer Wirtszelle sind sie metabolisch inaktiv.
 
@@ -136,12 +130,11 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 - Keine einzelne Immunzelle schützt vollständig — aber das Immunsystem schützt
 
 **Für die Medizin bedeutet das:** Krankheiten können auf verschiedenen Ebenen entstehen:
+
 - Molekülebene: Genmutation (Sichelzellanämie, Krebs)
 - Zellebene: Infektionen, Apoptosedefekte
 - Gewebeebene: Fibrose, Atherosklerose
 - Systemebene: Sepsis, Herzversagen
-
-> **Merke:** Emergenz = neue Eigenschaften auf höherer Ebene, nicht vorhersagbar aus den Teilen. Bewusstsein, Immunschutz, Herzpumpleistung sind emergente Eigenschaften.
 
 ---
 
@@ -313,6 +306,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
           tags: ["viren", "stoffwechsel", "kennzeichen des lebens"],
         },
       ],
+      diagram: "animal-cell",
     },
 
     // ─── UK2 ────────────────────────────────────────────────────────────────
@@ -361,11 +355,7 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen, 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
-**SVG-Hinweis: Zellaufbau und Kompartimentierung** — Zeigt Membranen und Kompartimente; Eukaryoten mit Zellkern und Organellen (ER, Vesikel), Prokaryoten nur Nukleoid ohne Kernhülle. Hilft, den Grundunterschied zu verankern.
-
-![Zellaufbau und Kompartimentierung](/grafik-1-membrantransport.svg)
-
-**SVG-Hinweis: Zellteilung Eukaryoten** — Mitose als typische eukaryotische Teilung; Prokaryoten teilen sich durch binäre Fission ohne Spindelapparat. Unterstützt die Abgrenzung der Teilungsweisen.
+{{DIAGRAM}}
 
 ![Zellteilung Eukaryoten](/grafik-2-mitose.svg)
 
@@ -392,8 +382,6 @@ Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von B
 - Penicillin muss erst äußere Membran überwinden → schlechterer Zugang → häufiger resistent
 
 **Peptidoglykan (Murein):** Ein Netzwerk aus Zuckerketten (N-Acetylglucosamin + N-Acetylmuraminsäure), quervernetzt durch kurze Peptide — es gibt der Bakterienzelle mechanische Festigkeit gegen osmotischen Druck. **LPS** (Lipopolysaccharid) kommt nur bei **Gram-negativen** Bakterien vor (in der äußeren Membran) und wirkt als **Endotoxin** (kann bei Bakteriämie septischen Schock auslösen).
-
-**SVG-Hinweis (Gram-positiv vs. Gram-negativ):** Ein Querschnitt-Schema mit dicker Peptidoglykanschicht (violett) vs. dünner Schicht plus LPS-Außenmembran (rosa) festigt die Färbung und die klinische Konsequenz (LPS → septischer Schock). *Typ: Vergleichsschema / Querschnitt.*
 
 > **Merke:** Gram-positiv (violett) = dicke Peptidoglykanschicht. Gram-negativ (rosa) = dünn + LPS-Außenmembran. LPS → septischer Schock!
 
@@ -677,8 +665,6 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 > **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Kleine unpolare Moleküle frei; Ionen und große polare Moleküle brauchen Proteine.
 
-**SVG-Hinweis: Querschnitt Zellmembran (Flüssig-Mosaik-Modell)** — Zeigt Phospholipid-Bilayer, Cholesterin, integrale und periphere Proteine, Glykokalix; hilft, die Bausteine räumlich zu verankern.
-
 {{DIAGRAM}}
 
 **Lipid-Asymmetrie (vertiefend):** Die beiden Schichten sind unterschiedlich zusammengesetzt — außen u. a. Phosphatidylcholin, Sphingomyelin, Glykolipide; innen Phosphatidylserin (PS), Phosphatidylethanolamin (PE). **Bei Apoptose** flippt PS nach außen → „Eat me“-Signal für Makrophagen → Clearance. Prüfungsrelevant: PS normalerweise innen; Flip = Apoptose.
@@ -703,8 +689,6 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 | **Ungesättigt** (cis-Doppelbindung = Knick) | Keine enge Packung | **↑ Fluidität** | Ölsäure, DHA (Nervenzellen) |
 | **Gesättigt** (gerade Kette) | Enges Packen | **↓ Fluidität** | Palmitinsäure, Stearinsäure (Butter fest) |
 
-**SVG-Hinweis: Fettsäuren und Fluidität** — Vergleicht gesättigte (gerade) und ungesättigte (geknickte) Fettsäureketten und Packungsdichte; verdeutlicht den Zusammenhang zwischen Struktur und Membranfluidität.
-
 ![Fettsäuren und Fluidität](/grafik-zellmembran-fettsaeuren.svg)
 
 > **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger.
@@ -714,8 +698,6 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 ## Membranproteine: integral vs. peripher
 
 **Bisher haben wir gesehen:** Die Membran besteht aus Lipiden und ihre Fluidität wird durch Cholesterin und Fettsäuren reguliert. **Aber die Tabelle hat gezeigt:** Ionen und viele Nährstoffe (z. B. Glucose) können die reine Lipidschicht nicht passieren — dafür braucht die Zelle **Proteine** in der Membran. **Proteine** sind Funktionsmoleküle aus Aminosäuren; in der Membran übernehmen sie z. B. Transport, Signalerkennung und Struktur. **Um zu verstehen,** welche Typen es gibt (und warum ein Defekt wie bei Mukoviszidose so folgenreich ist), unterscheidet man **integrale** und **periphere** Membranproteine.
-
-**SVG-Hinweis: Integral vs. peripher** — Integrale (Transmembran-)Proteine durchspannen die Lipiddoppelschicht, periphere sitzen nur an einer Oberfläche; hilft bei der Abgrenzung für MC-Fragen.
 
 ![Integral vs. peripher](/grafik-zellmembran-integral-peripher.svg)
 
@@ -742,10 +724,6 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 Die **Glykokalix** (von griech. *glykys* = süß, *kalyx* = Hülle) ist die **Zuckerschicht** auf der Außenseite der Zellmembran — Kohlenhydratketten, die an **Glykoproteine** (Proteine mit angehängten Zuckern) und **Glykolipide** (Lipide mit angehängten Zuckern) gebunden sind. Funktionen: **Zellerkennung** (z. B. MHC/HLA), **Schutz** der Zelloberfläche (besonders bei Epithelien).
 
 Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgruppenantigene** — das wird im Kapitel Blut/Immunologie ausführlich behandelt.
-
-> **Merke:** Glykokalix = Zuckerschicht außen (Zellerkennung, Schutz). Blutgruppenantigene sind Kohlenhydratstrukturen der Glykokalix.
-
----
 
 ## MedAT-Fokus
 
@@ -966,8 +944,6 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
 
-**SVG-Hinweis: Membrantransport — passiv und aktiv** — Zeigt die fünf Mechanismen (einfache und erleichterte Diffusion, Osmose, primär und sekundär aktiv); hilft, Richtung der Gradienten und ATP-Verbrauch zu unterscheiden.
-
 ![Membrantransport — passiv und aktiv](/grafik-1-membrantransport.svg)
 
 ---
@@ -990,9 +966,7 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
 
-**SVG-Hinweis: Osmose und Tonizität** — Wasser folgt der Osmolalität; Zelle in hypotoner/isotoner/hypertoner Lösung veranschaulicht Hämolyse und Krenation. Gleiches Prinzip wie in der Niere (Harnkonzentrierung).
-
-![Osmose und Tonizität](/grafik-10-nephron.svg)
+![Osmose und Tonizität](/grafik-osmose-tonizitaet.svg)
 
 ---
 
@@ -1220,13 +1194,9 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 
 > **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
-**SVG-Hinweis: Proteinbiosynthese und sekretorischer Weg** — DNA → RNA → Protein; im rER beginnt die Translation sekretorischer Proteine, dann Vesikeltransport über Golgi; hilft, den Weg bis Lysosom oder Zellmembran zu verankern.
-
 ![Proteinbiosynthese und sekretorischer Weg](/grafik-16-zentraldogma.svg)
 
-**SVG-Hinweis: Organellen und Vesikeltransport** — Vesikel und Membranfluss rER → Golgi → Ziel; veranschaulicht Kompartimentierung und Transport zu Lysosomen oder Zellmembran.
-
-![Organellen und Vesikeltransport](/grafik-1-membrantransport.svg)
+{{DIAGRAM}}
 
 ---
 
@@ -1255,12 +1225,6 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 **Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
 
 > **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
-
-![Lysosom und Abbau](/grafik-1-membrantransport.svg)
-
-**SVG-Hinweis: Lysosom und Abbau** — Lysosomen entstehen aus dem Trans-Golgi; Fusion mit Autophagosomen oder Phagolysosomen; Abbau in saurem Milieu (pH 4,5). Hilft, den Weg vom Golgi zum Lysosom und die Rolle der sauren Hydrolasen zu verankern.
-
-**SVG-Hinweis: Mitochondrien-Querschnitt** — Äußere/innerer Membran, Cristae, Matrix, Intermembranraum; macht den Ort der Atmungskette und die Endosymbionten-Belege auf einen Blick klar.
 
 ---
 
@@ -1511,8 +1475,6 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
-**SVG-Hinweis: Kern und Genexpression** — Transkription im Kern, Translation im Zytoplasma; NLS/NES steuern den Kerntransport; hilft, die räumliche Trennung und den aktiven Transport (>40 kDa) zu verankern.
-
 ![Kern und Genexpression](/grafik-16-zentraldogma.svg)
 
 ---
@@ -1556,11 +1518,7 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 
 > **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer (H2A,H2B,H3,H4 je 2×). Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Körper = inaktives X.
 
-**SVG-Hinweis: Chromosomen und Mitose** — Chromatin kondensiert in der Mitose zu sichtbaren Chromosomen; zeigt die Verpackung von der Interphase bis zur Metaphase und unterstützt die Abgrenzung Chromatin vs. Chromosom.
-
 ![Chromosomen und Mitose](/grafik-2-mitose.svg)
-
-**SVG-Hinweis (Nukleosom / Chromatin-Hierarchie):** Ein Schema von Nukleosom („Perlen auf der Schnur“) bis zur 30-nm-Faser und Euchromatin vs. Heterochromatin festigt die Verpackungsstufen und die epigenetische Regulation. *Typ: Schema / Hierarchie.*
 
 ---
 
@@ -1802,8 +1760,6 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 > **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
 
-**SVG-Hinweis: Mitose — Phasen** — Prophase → Metaphase → Anaphase → Telophase: Kondensation, Metaphasenplatte, Trennung der Schwesterchromatiden, Zytokinese; hilft, die Reihenfolge und Anaphase (Schwesterchromatiden) zu verankern.
-
 ![Mitose — Phasen](/grafik-2-mitose.svg)
 
 ---
@@ -1811,8 +1767,6 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 ## Mitose — Somatische Zellteilung
 
 **Bisher haben wir gesehen:** Der Zellzyklus bereitet die Zelle auf die Teilung vor (G1, S, G2). **In der M-Phase** findet die eigentliche Kernteilung statt — bei Körperzellen als **Mitose**. **Um sie zu verstehen,** gehen wir die Phasen nacheinander durch. Die Mitose ist die Standardform der Zellteilung für Körperzellen. Sie erzeugt zwei genetisch identische Tochterzellen.
-
-**SVG-Hinweis: Meiose — Reduktion und Crossing-over** — Meiose I (Bivalente, Crossing-over, Trennung der homologen Chromosomen) und Meiose II (Trennung der Schwesterchromatiden); Grundlage für genetische Vielfalt und Abgrenzung zur Mitose.
 
 ![Meiose — Reduktion und Crossing-over](/grafik-3-meiose.svg)
 
@@ -2098,6 +2052,8 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 - **Atmungskette** und **oxidative Phosphorylierung** (Chemiosmose, ~30–32 ATP/Glucose)
 - **Anaerober** Stoffwechsel (Laktat) und klinische Bezüge (Cyanid, Thiamin, Laktatazidose)
 
+![Redox und Energie](/grafik-redox.svg)
+
 ---
 
 ## Glykolyse — Der erste Schritt
@@ -2123,10 +2079,6 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 - **Pyruvat-Kinase** (Schritt 10): Phosphoenolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
-
-**SVG-Hinweis: Redox und Atmungskette** — NADH und FADH₂ liefern Elektronen für die Atmungskette; veranschaulicht den Zusammenhang Glykolyse → Citratzyklus → oxidative Phosphorylierung.
-
-![Redox und Atmungskette](/grafik-redox.svg)
 
 ---
 
@@ -2187,17 +2139,15 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 - **Komplex IV (Cytochrom-c-Oxidase):** Überträgt Elektronen auf O₂ → H₂O. Pumpt 2 H⁺. **O₂ ist der finale Elektronenakzeptor!** Hemmer: Cyanid (CN⁻), Kohlenmonoxid (CO) blockieren Komplex IV → kein O₂-Verbrauch → Atmungskette stoppt.
 - **ATP-Synthase (Komplex V):** H⁺ fließen zurück durch die ATP-Synthase in die Matrix (Protonenkanal + Motorprotein) → Konformationsänderung → ADP + Pᵢ → ATP. **Chemiosmose (Mitchell-Hypothese, Nobelpreis 1978).** Hemmer: Oligomycin (schließt H⁺-Kanal), Dinitrophenol (DNP, Entkoppler: H⁺ leaken durch Membran ohne ATP-Synthese → Energie als Wärme).
 
-**SVG-Hinweis (Atmungskette — Komplexe I–V):** Ein Schema mit Komplex I → Ubichinon → Komplex III → Cytochrom c → Komplex IV → O₂ und ATP-Synthase (Protonengradient) macht die Reihenfolge und die Einstiegspunkte von NADH vs. FADH₂ auf einen Blick klar. *Typ: Schemazeichnung / Übersicht.*
-
 **P/O-Verhältnis (ATP pro Sauerstoffatom):**
 - NADH: ~2,5 ATP pro NADH (frühere Angabe: 3 ATP)
 - FADH₂: ~1,5 ATP pro FADH₂ (frühere Angabe: 2 ATP)
 
 > **Merke:** NADH → Komplex I → Q → Komplex III → Cyt c → Komplex IV → O₂ → H₂O. FADH₂ → Komplex II → Q (kein H⁺-Pumpen → weniger ATP). O₂ = finale Elektronenakzeptor. Cyanid blockiert Komplex IV!
 
-**SVG-Hinweis: Energie und ATP-Synthese** — Protonengradient und ATP-Synthese (Chemiosmose); veranschaulicht die Kopplung von Redoxreaktionen und Phosphorylierung (~30–32 ATP/Glucose).
+**Redox-Grundprinzip:** Der Elektronentransport in der Atmungskette beruht auf Oxidation (Elektronen abgeben, OIL) und Reduktion (Elektronen aufnehmen, RIG) — NADH und FADH₂ liefern Elektronen, O₂ ist der finale Akzeptor.
 
-![Energie und ATP-Synthese](/grafik-21-energieprofil.svg)
+![Redox-Grundprinzip (OIL RIG)](/grafik-redox.svg)
 
 ---
 

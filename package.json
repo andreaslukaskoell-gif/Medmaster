@@ -13,6 +13,7 @@
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "audit-bms": "npx tsx scripts/audit-bms-questions.mts",
+    "audit-images": "npx tsx scripts/audit-bms-images.mts",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
   },

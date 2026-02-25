@@ -65,11 +65,9 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 
 ![Wasser H-Brücken](/grafik-wasser-h-bruecken.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die gewinkelte Struktur von H₂O (104,5°), das Dipolmoment und das H-Brücken-Netzwerk (bis zu 4 pro Molekül); damit werden die Anomalien des Wassers und der Siedepunktvergleich mit H₂S verständlich.
 
 ![Dichteanomalie und Phasen](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Dichteanomalie des Wassers (Maximum bei 4 °C) und die Phasenübergänge (Schmelzen, Verdampfen) mit latenter Wärme — Grundlage für Thermoregulation.
 
 **Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
@@ -417,11 +415,9 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
 
 ![Kohlenstoff Allotrope](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Die Grafik vergleicht die Allotrope Diamant, Graphit und Fulleren sowie die lineare CO₂-Struktur (apolar) mit gewinkeltem H₂O (polar).
 
 ![Biogene Elemente und Kohlenstoff](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Kohlenstoff als zentrales Element der Biologie; die Grafik zeigt die Stellung von C, N, O, P, S im PSE und ihre Rolle in Biomolekülen.
 
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
 
@@ -749,11 +745,9 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
 
 ![Biogene Elemente](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst Vorkommen, Oxidationsstufen und klinische Bezüge von Stickstoff, Schwefel und Halogenen (z. B. NH₃, H₂S, Halogenide) zusammen.
 
 ![Stickstoff und Schwefel in Biomolekülen](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** N und S in Aminosäuren, Disulfidbrücken und Coenzym A; die Grafik ergänzt die Rolle von N, S und Halogenen in der Biochemie.
 
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
@@ -1103,11 +1097,9 @@ Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzepti
 
 ![pH-Skala](/grafik-20-ph-skala.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt den H⁺-Transfer nach Brønsted, konjugierte Säure-Base-Paare und die pH-Skala; die Abgrenzung zur Lewis-Definition wird deutlich.
 
 ![Puffer und Henderson-Hasselbalch](/grafik-puffer.svg)
 
-**Erklärung zur Grafik:** Puffersysteme (HA ⇌ H⁺ + A⁻) und Henderson-Hasselbalch-Gleichung — Grundlage für den Blut-pH und klinische Säure-Base-Störungen.
 
 **Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
@@ -1467,11 +1459,9 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 ![pH-Skala](/grafik-20-ph-skala.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht vollständige vs. partielle Dissoziation (starke vs. schwache Säuren) und die pH-Formel für schwache Säuren: pH ≈ ½(pK_a − log c).
 
 ![Pufferbereich und pKa](/grafik-puffer-henderson.svg)
 
-**Erklärung zur Grafik:** Pufferbereich um pKa und Henderson-Hasselbalch — optimaler Pufferbereich bei pH = pKa ± 1; relevant für Carbonat- und Phosphatpuffer.
 
 **Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
@@ -1872,11 +1862,9 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
 
 ![Puffer](/grafik-puffer.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt das Puffergleichgewicht HA ⇌ H⁺ + A⁻, die Henderson-Hasselbalch-Gleichung pH = pK_a + log([A⁻]/[HA]) und den Carbonat-Puffer (CO₂/HCO₃⁻) für den Blut-pH.
 
 ![pH-Skala und Pufferbereich](/grafik-20-ph-skala.svg)
 
-**Erklärung zur Grafik:** Die pH-Skala mit typischen Werten (Magensäure, Blut, Seife) und der Pufferbereich des Bluts (7,35–7,45) — Grundlage für Azidose/Alkalose.
 
 Ein **Puffersystem** ist eine Lösung, die pH-Änderungen bei Zugabe kleiner Mengen Säure oder Base minimiert. Puffer bestehen aus einem **schwachen Säure-Base-Paar**:
 
@@ -2233,11 +2221,9 @@ Der Carbonat-Puffer kann versagen, wenn:
 
 ![Titration](/grafik-titration.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Versuchsaufbau (Bürette), den Äquivalenzpunkt und den typischen S-förmigen Verlauf der Titrationskurve (pH vs. Volumen) sowie die Rolle der Indikatoren.
 
 ![pH-Skala und Indikatoren](/grafik-20-ph-skala.svg)
 
-**Erklärung zur Grafik:** pH-Skala und typische Umschlagsbereiche von Indikatoren (z. B. Phenolphthalein, Methylorange) — wichtig für die Wahl des Indikators bei der Titration.
 
 Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung einer unbekannten Konzentration. Eine Lösung bekannter Konzentration (Titrant, in der Bürette) wird einer Lösung unbekannter Konzentration (Analyt, in dem Erlenmeyerkolben) tropfenweise zugegeben, bis die Reaktion vollständig ist.
 
@@ -2619,11 +2605,9 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 
 ![Redox OIL RIG](/grafik-redox.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht OIL RIG (Oxidation = Elektronenabgabe, Reduktion = Elektronenaufnahme) und die Regeln für Oxidationszahlen beim Aufstellen von Redoxgleichungen.
 
 ![Galvanische Zelle und Redox](/grafik-galvanische-zelle.svg)
 
-**Erklärung zur Grafik:** In der galvanischen Zelle laufen Oxidation (Anode) und Reduktion (Kathode) räumlich getrennt ab; der Elektronenfluss erzeugt die Zellspannung.
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
 
@@ -2939,11 +2923,9 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 
 ![Galvanische Zelle](/grafik-galvanische-zelle.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau einer galvanischen Zelle (Anode, Kathode, Salzbrücke), die Merkregel AnOx RedKat und die Spannungsformel E°Zelle = E°Kathode − E°Anode bzw. ΔG = −nFE.
 
 ![Nernst und Konzentrationsabhängigkeit](/grafik-nernst.svg)
 
-**Erklärung zur Grafik:** Die Nernst-Gleichung beschreibt, wie sich das Elektrodenpotenzial mit der Konzentration ändert — Grundlage für die reale Zellspannung und für Membranpotenziale.
 
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
@@ -3297,11 +3279,9 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
 
 ![Nernst](/grafik-nernst.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Nernst-Gleichung E = E° − (0,05916/n)·log Q und ihre Anwendung auf Konzentrationszelle bzw. Ruhemembranpotenzial (K⁺, Na⁺).
 
 ![Galvanische Zelle und Halbzellen](/grafik-galvanische-zelle.svg)
 
-**Erklärung zur Grafik:** Jede Halbzelle hat ein eigenes Potenzial; die Nernst-Gleichung gibt das Potenzial bei beliebigen Konzentrationen — die Zellspannung ist die Differenz der Halbzellenpotenziale.
 
 Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
 
@@ -3624,11 +3604,9 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
 
 ![ROS](/grafik-ros.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Bildungskaskade reaktiver Sauerstoffspezies (O₂·⁻ → H₂O₂ → ·OH, Fenton-Reaktion) und das antioxidative System (SOD, Katalase, GSH/GPx) — wichtig für oxidativen Stress und G6PD-Mangel.
 
 ![Redox in der Atmungskette](/grafik-redox.svg)
 
-**Erklärung zur Grafik:** ROS entstehen bei der Reduktion von O₂; die Grafik veranschaulicht Elektronenübertragung und Oxidationszahlen — Bezug zu NADH, Cytochromen und antioxidativer Abwehr.
 
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 

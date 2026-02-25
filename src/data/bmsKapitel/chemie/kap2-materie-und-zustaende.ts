@@ -64,11 +64,9 @@ Kombiniert: p·V/(n·T) = R = const → **pV = nRT**.
 
 ![Ideales Gas](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die ideale Gasgleichung pV = nRT mit den vier Größen p, V, n, T und die drei Einzelgesetze (Boyle-Mariotte, Charles, Avogadro).
 
 ![Druck und Temperatur](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Der Zusammenhang zwischen Druck, Volumen und Temperatur (Boyle, Charles) und die Einheit Kelvin für T sind Grundlage für Beatmung und Partialdrücke.
 
 ## Umrechnungen und praktische Anwendung
 
@@ -455,7 +453,6 @@ pᵢ = nᵢ · R · T / V = xᵢ · p_gesamt
 
 ![Partialdruck](/grafik-partialdruck.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht Daltons Gesetz (p_gesamt = p₁ + p₂ + p₃) und den Molenbruch xᵢ = nᵢ/n_gesamt zur Berechnung von Partialdrücken.
 
 ## Physikalische Begründung
 
@@ -465,7 +462,6 @@ Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine W
 
 ![Gasgemisch und pV=nRT](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Partialdrücke und Molenbrüche folgen aus der idealen Gasgleichung; die Grafik veranschaulicht p_gesamt = Σ pᵢ und xᵢ = nᵢ/n_gesamt.
 
 ## Alveolarer Gasaustausch
 
@@ -825,13 +821,11 @@ Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt p
 
 ![Graham](/grafik-graham.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt das Grahamsche Gesetz: Leichtes vs. schweres Gas (Geschwindigkeit ∝ 1/√M), Formel r₁/r₂ = √(M₂/M₁), Beispiel H₂ vs. O₂.
 
 Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
 
 ![Diffusion und Partialdruck](/grafik-partialdruck.svg)
 
-**Erklärung zur Grafik:** Der Konzentrations- bzw. Partialdruckgradient treibt die Diffusion; die Grafik veranschaulicht den Zusammenhang mit dem Grahamschen Gesetz (leichtere Gase diffundieren schneller).
 
 **Beispiele:**
 - H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
@@ -1220,7 +1214,6 @@ Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es i
 
 ![Aggregatzustaende](/grafik-wasser-h-bruecken.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst die Aggregatzustände (fest, flüssig, gasförmig, Plasma) und die vier Kristalltypen (ionisch, Molekül, Netzwerk, Metall) zusammen.
 
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
 
@@ -1230,7 +1223,6 @@ Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim A
 
 ![Phasendiagramm und Aggregatzustände](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Phasendiagramm (fest/flüssig/gasförmig) und Dichteanomalie des Wassers (Maximum bei 4 °C) — Grundlage für Siedepunkt, Schmelzpunkt und Thermoregulation.
 
 **Biologische Bedeutung**: Diese Anomalie ist entscheidend für das Leben in gemäßigten Klimazonen:
 1. Im Winter sinkt das dichtere 4°C-Wasser auf den Grund von Gewässern (Dichteausgleich)
@@ -1591,7 +1583,6 @@ Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betra
 
 ![Phasenuebergaenge Heizkurve](/grafik-thermodynamik.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die sechs Phasenübergänge (Schmelzen, Erstarren, Verdampfen, Kondensieren, Sublimieren, Resublimieren) und eine Heizkurve mit Plateaus (latente Wärme).
 
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
 
@@ -1600,7 +1591,6 @@ Zum Schmelzen von 1 g Eis bei 0°C werden 333 J benötigt – deutlich mehr als 
 
 ![Latente Wärme und Heizkurve](/grafik-ideales-gas.svg)
 
-**Erklärung zur Grafik:** Während eines Phasenübergangs bleibt die Temperatur konstant (Plateau in der Heizkurve); die latente Wärme (ΔH_s, ΔH_v) wird hier veranschaulicht.
 
 **Verdampfungsenthalpie**: ΔH_v(H₂O) = **40,7 kJ/mol = 2257 J/g** (bei 100°C, 1 bar)
 Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasserstoffbrücken, die beim Verdampfen vollständig gebrochen werden müssen. Verglichen mit: Methanol: 1104 J/g; Benzol: 393 J/g; Diethylether: 358 J/g.

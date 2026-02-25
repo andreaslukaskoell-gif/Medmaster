@@ -31,6 +31,8 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Drüsenepithelien** und **Sekretionsarten** (merokrin, apokrin, holokrin) mit typischen Beispielen
 - **Pseudostratifiziert** vs. mehrschichtig und **Kartagener-Syndrom** (Dynein-Defekt, Zilien)
 
+![Zellmembran und Polarität](/grafik-zellmembran-integral-peripher.svg)
+
 ---
 
 ## Grundprinzip: Eigenschaften aller Epithelien
@@ -49,11 +51,9 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
+{{DIAGRAM}}
+
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
-
-**SVG-Hinweis: Zellkontakte und Polarität** — Zeigt Epithelzellen mit apikaler und basolateraler Seite sowie die Lage von Tight Junctions, Desmosomen und Hemidesmosomen; hilft, Barriere- und Fence-Funktion zu verankern.
-
-![Zellkontakte und Polarität](/grafik-1-membrantransport.svg)
 
 ---
 
@@ -77,10 +77,6 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Verhorntes Plattenepithel**: 4 Schichten: Stratum basale (Mitose, Stammzellen) → spinosum (Desmosomen) → granulosum (Keratohyalin) → corneum (tote Korneozyten, Keratin)
 
 > **Merke:** Pseudostratifiziert ≠ mehrschichtig — alle Zellen berühren Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
-
-**SVG-Hinweis: Epitheltypen und Organe** — Veranschaulicht die Zuordnung von Epithelform zu Funktion (Resorption, Barriere, Sekretion); unterstützt die Organzuordnung für Prüfungsfragen.
-
-![Epitheltypen und Organe](/grafik-zellmembran-integral-peripher.svg)
 
 ---
 
@@ -154,6 +150,7 @@ Sekretionsmechanismen exokriner Drüsen:
 - **Pseudostratifiziert ≠ mehrschichtig**: Alle Zellen berühren Basalmembran, Kerne nur auf verschiedenen Höhen
 - **Drüsen**: merokrin (Exozytose, häufig), apokrin (Zellspitze), holokrin (ganze Zelle = Talgdrüse)
 - **Klinisch**: Kartagener-Syndrom (Dynein-Defekt → Zilien starr → Bronchiektasen, Infertilität, Situs inversus)`,
+      diagram: "cell-membrane",
       lernziele: [
         "Epitheltypen nach Form und Schichtung benennen und ihren Vorkommen zuordnen",
         "Polarität des Epithels, Basalmembran und wichtige Zellkontakte erklären",
@@ -309,9 +306,7 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
 
-**SVG-Hinweis: Extrazelluläre Matrix und Zellen** — Zeigt die Grenzfläche zwischen Zelle und EZM (Integrine, Kollagen, Proteoglykane); unterstützt das Verständnis von Stütz- und Füllfunktion des Bindegewebes.
-
-![Extrazelluläre Matrix und Zellen](/grafik-zellmembran-fettsaeuren.svg)
+![Extrazelluläre Matrix und Knochenzellen](/grafik-12-ossifikation.svg)
 
 ---
 
@@ -354,8 +349,6 @@ Sekretionsmechanismen exokriner Drüsen:
 **Therapeutisch:** Bisphosphonate (hemmen Osteoklasten, direkt), Denosumab (RANKL-Antikörper).
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
-
-**SVG-Hinweis: Knochenumbau und Ossifikation** — Zeigt Osteoblasten (Aufbau) und Osteoklasten (Abbau) sowie RANKL/OPG; hilft, Osteoporose und Therapie (Bisphosphonate, Denosumab) einzuordnen.
 
 ![Knochenumbau und Ossifikation](/grafik-12-ossifikation.svg)
 
@@ -603,8 +596,6 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
 
-**SVG-Hinweis: Herzzyklus und Kontraktion** — Zeigt die Koordination von Vorhof und Kammer sowie die Rolle von Gap Junctions; hilft, „kein Tetanus im Herzmuskel“ zu verankern.
-
 ![Herzzyklus und Kontraktion](/grafik-6-herzzyklus.svg)
 
 ---
@@ -626,9 +617,7 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
 
-**SVG-Hinweis: Aktin-Myosin und Sarkomer** — Veranschaulicht Sarkomeraufbau und Ca²⁺-Freisetzung aus dem sarkoplasmatischen Retikulum (SR); unterstützt das Verständnis von Gleitfilamenttheorie und Troponin-Schalter.
-
-![Aktin-Myosin und Sarkomer](/grafik-1-membrantransport.svg)
+{{DIAGRAM}}
 
 ---
 
@@ -877,9 +866,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 **Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
 
-**SVG-Hinweis: Membran und Ionenkanäle** — Zeigt Axon/Dendriten mit Ionenkanälen und Na⁺/K⁺-ATPase; Grundlage für Ruhepotenzial und Aktionspotential.
-
-![Membran und Ionenkanäle](/grafik-1-membrantransport.svg)
+{{DIAGRAM}}
 
 ---
 
@@ -898,8 +885,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 **Klinisch — Multiple Sklerose (MS):** Autoreaktive T-Zellen zerstören Oligodendrozyten → Demyelinisierung im ZNS → Leitungsverlangsamung/-block → wechselnde neurologische Ausfälle (Sehstörungen, Paresen, Sensibilitätsverlust). Plaques (Vernarbungen) typischerweise periventrikular, im Corpus callosum und im Rückenmark.
 
 > **Merke:** Schwann-Zelle (PNS) = **1 Segment**. Oligodendrozyt (ZNS) = **bis 50 Segmente**. PNS regeneriert (Büngner-Bänder), ZNS nicht (Nogo-A).
-
-**SVG-Hinweis: Myelin und Schnürringe** — Zeigt Myelinscheide und Ranvier-Schnürringe; unterstützt das Verständnis der saltatorischen Leitung (Sprungleitung).
 
 ---
 
@@ -921,6 +906,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 - **C-Fasern** (langsamer Schmerz, Temperatur, unmyelinisiert): **0,5–2 m/s**
 
 > **Merke:** Saltatorisch = springt von Schnürring zu Schnürring: **120 m/s** vs. **2 m/s** kontinuierlich. Energiesparend, weil Na⁺/K⁺-ATPase nur an Schnürringen aktiv.
+
+![Membranpotential und Nernst-Gleichung](/grafik-nernst.svg)
 
 ---
 
@@ -1166,13 +1153,9 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 | Leber | Glykogenolyse ↑ (β2) | — |
 | Neurotransmitter | Noradrenalin | Acetylcholin |
 
-![Signalübertragung und Transporter](/grafik-1-membrantransport.svg)
+![Autonome Regulation und Achsen](/grafik-5-hypophysen-achsen.svg)
 
-**Erklärung zur Grafik:** Ionenkanäle und Transporter an der Synapse; die Grafik veranschaulicht die Grundlage für Neurotransmitter-Freisetzung (Ca²⁺) und Wiederaufnahme.
-
-![Redox und Energie](/grafik-redox.svg)
-
-**Erklärung zur Grafik:** Energiebereitstellung in Neuronen; die Grafik ergänzt den Zusammenhang zwischen Stoffwechsel und Na⁺/K⁺-ATPase für Ruhe- und Aktionspotenzial.
+![Redox-Grundprinzip (OIL RIG)](/grafik-redox.svg)
 
 ---
 
@@ -1442,11 +1425,9 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ![Fototransduktion und Sinnesorgane](/grafik-transduktion-sinne.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Fototransduktion (Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Hyperpolarisation) und die Zuordnung von Auge, Ohr und Geruch zur jeweiligen Transduktion.
 
 ![Auge und Akkommodation](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Brechung und Scharfstellung; die Grafik veranschaulicht das Prinzip von Linse und Brennweite — Bezug zur Nahakkommodation (Ziliarmuskel, Linse).
 
 ---
 
@@ -1733,11 +1714,9 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ![Hypophysen-Achsen](/grafik-5-hypophysen-achsen.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die hormonellen Achsen (Hypothalamus → Hypophyse → Schilddrüse/NNR/Gonaden) mit Releasing- und trophen Hormonen sowie die Rückkopplungspfeile (primäre vs. sekundäre Insuffizienz).
 
 ![Regelkreise und Homöostase](/grafik-puffer.svg)
 
-**Erklärung zur Grafik:** Negative Rückkopplung stabilisiert Hormonspiegel; die Grafik veranschaulicht das Prinzip Soll-Ist-Vergleich und Korrektur (analog zu pH-Pufferung).
 
 ---
 
@@ -1916,6 +1895,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 - **Großer vs. kleiner Kreislauf** und **Blutdruckregulation** (RAAS, Barorezeptoren)
 - **Herzzyklus** und typische Werte (Auswurffraktion, Druckverhältnisse)
 
+{{DIAGRAM}}
+
 ---
 
 ## Herzaufbau und Klappen
@@ -1923,12 +1904,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 **Um Herz und Kreislauf zu verstehen,** beginnen wir mit **Aufbau und Klappen**. Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv. **Systole** (Kontraktionsphase: Ventrikel pumpen Blut aus) und **Diastole** (Relaxationsphase: Ventrikel füllen sich mit Blut). Die Auswurffraktion beträgt in Ruhe ~55–70 % des enddiastolischen Volumens.
 
 ![Herzzyklus](/grafik-6-herzzyklus.svg)
-
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht die vier Phasen des Herzzyklus (Füllung, isovolumetrische Kontraktion, Auswurf, isovolumetrische Relaxation) und die Druckverläufe in Vorhof, Kammer und Aorta.
-
-![Kreislauf und Druck](/grafik-11-gegenstrom-niere.svg)
-
-**Erklärung zur Grafik:** Druck- und Volumenverhältnisse; die Grafik ergänzt das Verständnis von Vorlast, Nachlast und Füllung (analog zu Gradienten in Gefäßsystemen).
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
@@ -2160,11 +2135,9 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ![Blutgerinnung](/grafik-7-gerinnung.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die primäre Hämostase (Thrombozytenpfropf), den extrinsischen und intrinsischen Weg sowie die gemeinsame Endstrecke (Thrombin → Fibrin) inkl. Vitamin-K-abhängiger Faktoren.
 
 ![Positive Rückkopplung und Kaskade](/grafik-19-komplement.svg)
 
-**Erklärung zur Grafik:** Kaskaden und Verstärkung; die Grafik veranschaulicht das Prinzip der Gerinnung (positive Rückkopplung: Thrombin aktiviert weitere Thrombinbildung).
 
 ---
 
@@ -2354,11 +2327,9 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ![Immunsystem](/grafik-8-immunitaet.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst angeborene (Barrieren, Phagozyten, Komplement) und erworbene Immunität (T-/B-Zellen) sowie MHC I/II und Antikörper zusammen.
 
 ![Komplement und Kaskaden](/grafik-19-komplement.svg)
 
-**Erklärung zur Grafik:** Komplementsystem (klassisch, Lektin, alternativ) und Lyse/Opsonierung; die Grafik ergänzt die angeborene Immunität und die Verbindung zur Antikörper-Aktivierung.
 
 ---
 
@@ -2592,11 +2563,9 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 
 ![Lymphabfluss](/grafik-9-lymphabfluss.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt den Lymphabfluss von den Kapillaren über Sammelgefäße zum Ductus thoracicus bzw. ductus dexter und den Eintritt in die Venenwinkel (~75 % links).
 
 ![Lymphknoten und Immunabwehr](/grafik-8-immunitaet.svg)
 
-**Erklärung zur Grafik:** Lymphozyten und Immunzellen in Lymphknoten; die Grafik verknüpft Lymphabfluss mit Filterfunktion und Immunantwort (T-/B-Zellen).
 
 ---
 
@@ -2750,6 +2719,8 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 - **Atemmechanik** (Inspiration/Exspiration, Compliance) und **Gasaustausch**
 - **CO₂-Transport** (Bikarbonat, Bohr-Effekt) und **Atemregulation** (CO₂/pH, Chemorezeptoren)
 
+![Gasaustausch und Partialdrücke](/grafik-partialdruck.svg)
+
 ---
 
 ## Surfactant und Alveolarstruktur
@@ -2766,13 +2737,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 > **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
 
-![Alveolen und Gasaustausch](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Membran und Diffusion; die Grafik veranschaulicht den Gasaustausch über die dünne Blut-Luft-Schranke (O₂ und CO₂ entlang Konzentrationsgradienten).
-
 ![Oberflächenspannung und Puffer](/grafik-puffer.svg)
-
-**Erklärung zur Grafik:** Surfactant senkt die Oberflächenspannung; die Grafik ergänzt das Prinzip der Stabilität (analog zu Pufferung) — kleine Alveolen ohne Surfactant kollabieren.
 
 ---
 
@@ -2968,6 +2933,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 - **Pankreas** (Trypsin-Kaskade, Lipase, Amylase) und **Leber/Galle** (Bilirubin, Gallensäuren)
 - **Resorption** (Glukose, Fette, Proteine) und **Bilirubin-Stoffwechsel**
 
+![Enzyme und pH-Optima](/grafik-21-energieprofil.svg)
+
 ---
 
 ## Magen — Sekretion und Regulation
@@ -2988,13 +2955,7 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 > **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
 
-![Resorption und Transporter](/grafik-1-membrantransport.svg)
-
-**Erklärung zur Grafik:** Epithel mit apikalem und basolateralem Transport; SGLT1, GLUT2 und andere Transporter ermöglichen die Resorption von Glukose, Aminosäuren und Ionen im Dünndarm.
-
 ![pH und Verdauung](/grafik-20-ph-skala.svg)
-
-**Erklärung zur Grafik:** Magen-pH ~1 (HCl), Dünndarm neutral bis leicht basisch; die Grafik ergänzt die Bedeutung des pH für Pepsin-Aktivierung und Pankreasenzyme.
 
 ---
 
@@ -3215,11 +3176,9 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 ![Nephron](/grafik-10-nephron.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau des Nephrons (Glomerulus, proximaler Tubulus, Henle-Schleife, distaler Tubulus, Sammelrohr) und den osmotischen Gradienten im Gegenstromsystem.
 
 ![Gegenstrom und Konzentration](/grafik-11-gegenstrom-niere.svg)
 
-**Erklärung zur Grafik:** Gegenstromprinzip in der Henle-Schleife; die Grafik veranschaulicht den Aufbau des osmotischen Gradienten und die ADH-abhängige Harnkonzentrierung.
 
 ---
 
@@ -3466,11 +3425,9 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 ![Ossifikation](/grafik-12-ossifikation.svg)
 
-**Erklärung zur Grafik:** Die Grafik vergleicht die enchondrale Ossifikation (Knorpelmodell → Kalzifizierung → Osteoblasten) mit der desmalen Ossifikation (direkter Knochenaufbau aus Mesenchym).
 
 ![Knochenumbau und Zellen](/grafik-12-ossifikation.svg)
 
-**Erklärung zur Grafik:** Osteoblasten (Aufbau) und Osteoklasten (Abbau) im Gleichgewicht; RANKL/OPG-System und Kalziumhomöostase (PTH, Vitamin D, Calcitonin).
 
 **Zelltypen der Knochenentwicklung:**
 - **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
@@ -3654,11 +3611,9 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 ![Hypophysen-Achsen und Gonaden](/grafik-5-hypophysen-achsen.svg)
 
-**Erklärung zur Grafik:** FSH und LH aus der Hypophyse steuern Ovar und Hoden; die Grafik zeigt die Achse Hypothalamus → Hypophyse → Gonaden mit negativer Rückkopplung.
 
 ![Meiose und Keimzellen](/grafik-3-meiose.svg)
 
-**Erklärung zur Grafik:** Meiose in Spermatogenese (4 Spermien) und Oogenese (1 Eizelle + 3 Polkörperchen); Reduktionsteilung und genetische Rekombination.
 
 ---
 

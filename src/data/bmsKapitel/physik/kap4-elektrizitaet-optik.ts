@@ -38,7 +38,6 @@ export const physKapElektrizitaet: Kapitel = {
 
 ![Ladung Coulomb](/grafik-elektrizitaet-grundlagen.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Elementarladung e, die Coulomb-Kraft F ∝ q₁q₂/r², elektrische Feldlinien und den Plattenkondensator.
 
 Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
 
@@ -91,7 +90,6 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
 
 ![Feldlinien und Vektoren](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Elektrische Feldstärke und Kraft sind Vektoren; die Grafik veranschaulicht Richtung und Überlagerung von Feldern (z. B. bei Punktladungen und im Plattenkondensator).
 
 **Kondensator und Energiespeicherung:**
 Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrischen Feld: **C = Q/U** [Farad] und **W = ½·C·U²**. Die Kapazität steigt mit der Plattenfläche und der Permittivität des Dielektrikums und sinkt mit dem Plattenabstand: C = ε₀·εᵣ·A/d.
@@ -336,7 +334,6 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
 
 ![Strom Ohm](/grafik-elektrizitaet-grundlagen.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht Stromstärke I = ΔQ/Δt, Ohmsches Gesetz U = R·I, Joule-Leistung P = U·I und die Temperaturabhängigkeit des Widerstands.
 
 **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
 
@@ -366,7 +363,6 @@ Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verd
 
 ![Ohmsches Gesetz (linear)](/grafik-lineare-funktion.svg)
 
-**Erklärung zur Grafik:** Die Kennlinie U = R·I ist eine Gerade durch den Ursprung; die Steigung entspricht dem Widerstand R.
  Der Widerstand hängt von der **Geometrie** und dem **Material** ab:
 
 **R = ρ · L / A**
@@ -645,7 +641,6 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
 
 ![Schaltung Kirchhoff](/grafik-elektrizitaet-grundlagen.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt Reihen- und Parallelschaltung (R_ges), die Kirchhoff-Regeln (Knoten, Maschen) und die RC-Zeitkonstante τ = R·C.
 
 In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
 
@@ -699,7 +694,6 @@ Gespeicherte Energie: **W = ½·C·U²** = Q²/(2C) = ½·Q·U.
 
 ![RC-Entladung (exponentiell)](/grafik-exponential.svg)
 
-**Erklärung zur Grafik:** Die Kondensatorspannung bei Lade- und Entladung folgt einer Exponentialfunktion; die Zeitkonstante τ = R·C bestimmt den Verlauf.
 
 **RC-Schaltkreis (Lade-/Entladekurve):** Wird ein Kondensator über einen Widerstand geladen, verläuft die Spannung exponentiell: U_C(t) = U₀ · (1 − e^(−t/τ)), mit Zeitkonstante **τ = R·C** [s]. Nach τ ist der Kondensator zu 63 % geladen, nach 5τ gilt er als vollständig geladen. Die Entladung: U_C(t) = U₀ · e^(−t/τ). Der Defibrillator nutzt einen großen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W = ½·C·U² ≈ 200–400 J), der in ms über den Thorax entladen wird.
 
@@ -929,7 +923,6 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
 
 ![Magnetfeld MRT](/grafik-pet-mrt.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt das Magnetfeld B, die Lorentz-Kraft F = q(v×B), das Induktionsgesetz und die Larmor-Frequenz (MRT).
 
 Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
 
@@ -984,7 +977,6 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 
 ![Energieniveaus und Resonanz](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Im MRT werden Protonenspins zwischen Energieniveaus angeregt (Larmor-Frequenz); die Grafik veranschaulicht diskrete Niveaus und Resonanzanregung.
 
 **MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
 
@@ -1222,7 +1214,6 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 ![Reflexion Snellius](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht Reflexion (Einfall = Ausfall), Brechung (Snellius: n₁·sin α₁ = n₂·sin α₂), Totalreflexion und die Brechkraft D von Linsen.
 
 Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
 
@@ -1269,11 +1260,9 @@ Beispiel Glas (n=1,5) → Luft (n=1): sin α_grenz = 1/1,5 = 0,667 → α_grenz 
 
 ![Linsen und Abbildung](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Sammel- und Zerstreuungslinse, Brennpunkt und Linsengleichung 1/f = 1/g + 1/b — Grundlage für Brechkraft D = 1/f in Dioptrien.
 
 ![Linsen und Abbildung](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Brennweite, Gegenstandsweite und Bildweite (Linsengleichung 1/f = 1/g + 1/b) sowie Sammel- und Zerstreuungslinse werden hier veranschaulicht.
 
 ## Linsen und Brechkraft
 
@@ -1534,7 +1523,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 ![Interferenz Beugung](/grafik-26-welle.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt konstruktive und destruktive Interferenz (Gangunterschied), den Doppelspalt und die Abbe-Auflösungsgrenze d_min ≈ λ/(2·NA).
 
 Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
 - **Wellenlänge λ**: räumlicher Abstand zwischen zwei Wellenbergen
@@ -1549,13 +1537,11 @@ Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 78
 
 ![Wellen und Spektrum](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Licht als Welle mit Wellenlänge λ und Frequenz f; das Spektrum (sichtbar, UV, IR) und die Abbe-Auflösungsgrenze werden hier zusammengefasst.
 
 **Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
 
 ![Reflexion und Brechung](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Snellius-Gesetz und Dispersion (Wellenlängenabhängigkeit von n) — Grundlage für Prisma, Spektralfarben und chromatische Aberration.
 
 ## Interferenz
 
@@ -1826,7 +1812,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 ![Lupe Mikroskop](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Lupenvergrößerung M = S/f, die Gesamtvergrößerung des Mikroskops M_ges = M_ob×M_ok und die Auflösungsgrenze.
 
 Die Lupe ist die einfachste Sehhilfe – eine einzelne **Sammellinse**. **Um eine Sammellinse als Lupe zu verwenden** (vergrößertes, aufrechtes virtuelles Bild), muss sich der **Gegenstand innerhalb der einfachen Brennweite** befinden (g < f). Außerhalb der Brennweite entstünde ein reelles (umgekehrtes) Bild; als Lupe nutzt man bewusst g < f. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt **innerhalb der Brennweite** (nahe am Brennpunkt), entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
 
@@ -1870,11 +1855,9 @@ Beispiel: f_ob = 1000 mm, f_ok = 25 mm → M = 40x. Das erzeugte Bild ist umgeke
 
 ![Reflexion und Linsen](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Strahlengang bei Linsen und Totalreflexion in Glasfasern — Basis für Endoskop, Lupe und Mikroskop.
 
 ![Lichtleitung und Abbildung](/grafik-optik.svg)
 
-**Erklärung zur Grafik:** Totalreflexion in Glasfasern (Lichtleitung im Endoskop) und Strahlengang bei Linsen (Lupe, Mikroskop) — Grundlage optischer Instrumente.
 
 ## Endoskop
 
@@ -2123,7 +2106,6 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 ![Auge Fehlsichtigkeit](/grafik-transduktion-sinne.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht das Auge (Brechkraft ~60 dpt), Akkommodation sowie Myopie, Hyperopie und Presbyopie mit den zugehörigen Korrekturlinsen.
 
 Das Auge besteht optisch aus mehreren brechenden Flächen:
 - **Hornhaut (Kornea)**: liefert etwa 2/3 der gesamten Brechkraft (~43 dpt). Ihre stark gewölbte Vorderfläche ist der Hauptbrechungsort.
@@ -2135,7 +2117,6 @@ Die **Gesamtbrechkraft** des entspannten Auges beträgt ca. **60 Dioptrien**, be
 
 ![Linsen und Brechkraft](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Brennweite und Brechkraft von Linsen — Konvexlinse zur Korrektur von Hyperopie, Konkavlinse bei Myopie.
 
 Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt beim Erwachsenen ca. 24 mm.
 
@@ -2156,7 +2137,6 @@ Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt be
 
 ![Brechkraft und Korrektur](/grafik-optik-lupe.svg)
 
-**Erklärung zur Grafik:** Sammel- und Zerstreuungslinse zur Korrektur von Hyperopie bzw. Myopie; Brechkraft in Dioptrien und Strahlengang im Auge.
 
 ## Myopie (Kurzsichtigkeit)
 

@@ -84,11 +84,9 @@ Alkine besitzen eine C≡C-Dreifachbindung (eine σ- und zwei π-Bindungen). Die
 
 ![Kohlenwasserstoffe](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Die Abbildung vergleicht Alkane, Alkene und Alkine: Hybridisierung sp³/sp²/sp, Bindungswinkel, Summenformeln CₙH₂ₙ₊₂ / CₙH₂ₙ / CₙH₂ₙ₋₂ sowie Bromwassertest und Markovnikov-Regel.
 
 ![Siedepunkte und zwischenmolekulare Kräfte](/grafik-wasser-h-bruecken.svg)
 
-**Erklärung zur Grafik:** Wie bei Wasser führen H-Brücken und van-der-Waals-Kräfte zu typischen Siedepunkten; Alkane steigen mit Kettenlänge, Ethanol liegt über Dimethylether wegen H-Brücken.
 
 ## Polymerisation
 
@@ -392,11 +390,9 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 ![Isomerie](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt Konstitutionsisomere, Konformation (cis/trans), Enantiomere (Spiegelbilder) und die R/S-Nomenklatur zur Abgrenzung bei chiralen Zentren.
 
 ![Orbitale und Hybridisierung](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** sp³-, sp²- und sp-Hybridisierung bestimmen Geometrie und Bindungswinkel; Grundlage für Konformation (Sessel) und cis/trans-Isomerie.
 
 Konstitutionsisomere unterscheiden sich in der Reihenfolge (Konnektivität) der Atome. Sie haben die gleiche Summenformel, aber verschiedene Bindungspartner und damit unterschiedliche chemische und physikalische Eigenschaften.
 
@@ -746,11 +742,9 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 
 ![Funktionelle Gruppen](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die Grafik listet die wichtigsten funktionellen Gruppen (−OH, −CHO, C=O, −COOH, −COO−, −NH₂, −SH) und die zugehörigen Verbindungsklassen (Alkohol, Aldehyd, Keton, Carbonsäure, Ester, Amin).
 
 ![Oxidationsreihe und Kohlenstoffgerüst](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Alkohol → Aldehyd → Carbonsäure (primär) bzw. Keton (sekundär); die Grafik ergänzt die Oxidation organischer Verbindungen und die Rolle des Kohlenstoffgerüsts.
 
 Alkohole enthalten eine Hydroxylgruppe (-OH) an einem Kohlenstoffatom. Die OH-Gruppe macht das Molekül polar und ermöglicht Wasserstoffbrückenbindungen.
 
@@ -1118,11 +1112,9 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 ![Benzol](/grafik-kohlenstoff.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Benzolring mit delokalisierten π-Elektronen, die Hückel-Regel (4n+2) und das Prinzip der elektrophilen aromatischen Substitution (EAS).
 
 ![Energieprofil und Mesomerie](/grafik-21-energieprofil.svg)
 
-**Erklärung zur Grafik:** Die Resonanzstabilisierung des Benzols senkt die Energie; die Grafik veranschaulicht Übergangszustände und Aktivierungsenergie bei EAS.
 
 Benzol (C₆H₆) ist die einfachste aromatische Verbindung. Es besitzt eine ringförmige planare Struktur mit sechs Kohlenstoffatomen und sechs π-Elektronen (delokalisiert über den gesamten Ring).
 
@@ -1483,11 +1475,9 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 ![Aminosaeuren](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht den allgemeinen Aufbau von Aminosäuren (H₂N–CHR–COOH), das Zwitterion, die Peptidbindung (−CO–NH–) und die Strukturhierarchie Primär–Sekundär–Tertiär.
 
 ![Biogene Elemente in Proteinen](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** N, S und O in Aminosäuren und Proteinen; die Grafik zeigt die Stellung der Bausteine im PSE und ihre Rolle in Biomolekülen.
 
 Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
@@ -1846,11 +1836,9 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 
 ![Kohlenhydrate](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt Ringformen (Pyranose, Furanose), α- und β-glycosidische Bindung (Stärke vs. Cellulose) und den Aufbau von Disacchariden.
 
 ![DNA, RNA und Zuckerbausteine](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** Ribose und Desoxyribose als Bausteine von RNA/DNA; die Grafik verknüpft Kohlenhydrate mit Nukleotiden und dem Informationsfluss in der Zelle.
 
 Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
@@ -2184,13 +2172,11 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 
 ## Fettsäuren
 
-![Lipide](/grafik-1-membrantransport.svg)
+![Lipide](/grafik-zellmembran-fettsaeuren.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt gesättigte und ungesättigte Fettsäuren (cis/trans), den Aufbau von Triglyceriden (Glycerin + 3 Fettsäuren), Phospholipide (polarer Kopf, zwei Schwänze) und die Bilayer-Struktur.
 
 ![Membran und Fettsäuren](/grafik-zellmembran-fettsaeuren.svg)
 
-**Erklärung zur Grafik:** Phospholipide mit gesättigten und ungesättigten Fettsäuren bilden die Doppelschicht; die Grafik ergänzt den Aufbau biologischer Membranen.
 
 Fettsäuren sind unverzweigte Carbonsäuren mit langer Kohlenwasserstoffkette (meist 12–24 C-Atome, gerade Anzahl wegen biosynthetischer Verlängerung um je 2 C durch Acetyl-CoA). Einteilung nach Sättigungsgrad:
 - **Gesättigte Fettsäuren**: Keine Doppelbindungen; gestreckte Ketten, dicht packbar → festes Fett bei Raumtemperatur. Wichtige Vertreter: **Laurinsäure** (C12:0, Kokosöl), **Myristinsäure** (C14:0), **Palmitinsäure** (C16:0, häufigste gesättigte FS), **Stearinsäure** (C18:0)
@@ -2536,11 +2522,9 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 
 ![Nukleotide DNA](/grafik-16-zentraldogma.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau eines Nukleotids (Base + Zucker + Phosphat), Purin vs. Pyrimidin, Basenpaarung A–T (2 H-Brücken) und G–C (3 H-Brücken) sowie die DNA-Doppelhelix.
 
 ![Biogene Elemente in Nukleotiden](/grafik-biogene-elemente.svg)
 
-**Erklärung zur Grafik:** N und P in Basen und Phosphat; die Grafik zeigt die Rolle der Bioelemente in Nukleotiden und der Nukleinsäurestruktur.
 
 Das Grundmonomer der Nukleinsäuren ist das **Nukleotid**, bestehend aus drei Komponenten:
 1. **Stickstoffbase** (Purin oder Pyrimidin)

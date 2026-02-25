@@ -65,11 +65,9 @@ Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen g
 
 ![Reaktionstypen](/grafik-reaktionstypen.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst die vier Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) zusammen und grenzt Säure-Base (H⁺-Transfer) von Redox (Elektronenübertragung) ab.
 
 ![Redox und Elektronenübertragung](/grafik-redox.svg)
 
-**Erklärung zur Grafik:** Redoxreaktionen als Elektronenübertragung (Oxidation/Reduktion) — Ergänzung zu den Reaktionstypen und Grundlage für Elektrochemie.
 
 **1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
 Allgemein: A + B → AB
@@ -423,11 +421,9 @@ Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die
 
 ![Energieprofil](/grafik-21-energieprofil.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Geschwindigkeitsgleichung v = k·[A]ⁿ, typische Konzentrations-Zeit-Verläufe (0., 1., 2. Ordnung) und ein Energieprofil mit Aktivierungsenergie E_A (mit und ohne Katalysator).
 
 ![Katalyse und Gleichgewicht](/grafik-massenwirkungsgesetz.svg)
 
-**Erklärung zur Grafik:** Ein Katalysator senkt die Aktivierungsenergie (Hin- und Rückreaktion); im Gleichgewicht bleibt K unverändert — die Grafik veranschaulicht den Zusammenhang.
 
 > **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
 
@@ -769,11 +765,9 @@ Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschre
 
 ![Stöchiometrie](/grafik-reaktionstypen.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Weg von Edukten über stöchiometrische Koeffizienten zu Produkten, die Formel n = m/M und die Mangelreagenz-Logik.
 
 ![Molverhältnisse und Konzentration](/grafik-mg-ug.svg)
 
-**Erklärung zur Grafik:** Stoffmenge n = m/M und Konzentration c = n/V sind die Basis der Stöchiometrie und der Grenzreaktant-Berechnung.
 
 > **Merke:** Stöchiometrische Koeffizienten geben Mol-Verhältnisse an, NICHT Massenverhältnisse! Die Grundformeln: n = m/M, m = n × M, c = n/V.
 
@@ -1124,11 +1118,9 @@ Wichtig: Im Gleichgewicht sind die Konzentrationen der Stoffe **konstant, aber n
 
 ![MWG Le Chatelier](/grafik-mwg-lechatelier.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die MWG-Formel Kc = [C]^c·[D]^d/([A]^a·[B]^b) und die drei Störgrößen nach Le Chatelier (Konzentration, Druck, Temperatur) mit Verschiebungsrichtung.
 
 ![Gleichgewichtskonstante K](/grafik-massenwirkungsgesetz.svg)
 
-**Erklärung zur Grafik:** Die Gleichgewichtskonstante K und das Massenwirkungsgesetz bestimmen das Konzentrationsverhältnis im Gleichgewicht; die Grafik fasst Kc und Kp zusammen.
 
 ## Massenwirkungsgesetz (MWG)
 
@@ -1527,11 +1519,9 @@ Damit eine Reaktion ablaufen kann, müssen die Reaktionspartner die **Aktivierun
 
 ![Energieprofil](/grafik-21-energieprofil.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt ein Energieprofil (Edukt → E_A → Übergangszustand → Produkt), den Unterschied exotherm/endotherm und die Senkung der Aktivierungsenergie durch einen Katalysator (E_A ≠ ΔH).
 
 ![Gleichgewicht und Kinetik](/grafik-mwg-lechatelier.svg)
 
-**Erklärung zur Grafik:** Im Gleichgewicht ist v_hin = v_rück; die Grafik veranschaulicht den Übergang vom kinetischen Verlauf zur Gleichgewichtslage (Kc, Kp).
 
 Die **Arrhenius-Gleichung** beschreibt den quantitativen Zusammenhang:
 
@@ -1867,11 +1857,9 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 ![Gleichgewicht MWG](/grafik-mwg-lechatelier.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht das dynamische Gleichgewicht A + B ⇌ C + D, die Gleichgewichtskonstante K_c und den Vergleich von Q mit K_c (Q < K → Hinreaktion).
 
 ![Massenwirkungsgesetz Kc und Kp](/grafik-massenwirkungsgesetz.svg)
 
-**Erklärung zur Grafik:** Die Gleichgewichtskonstante Kc (Konzentrationen) und Kp (Partialdrücke) sowie das Löslichkeitsprodukt Ksp werden hier zusammengefasst.
 
 **Zeitlicher Verlauf bis zum Gleichgewicht:**
 - Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
@@ -2229,11 +2217,9 @@ Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — 
 
 ![Le Chatelier](/grafik-mwg-lechatelier.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst die drei Störgrößen nach Le Chatelier zusammen: Konzentration (Edukt ↑ → mehr Produkte), Druck (Δn der Gase), Temperatur (exotherm/endotherm) mit jeweiliger Verschiebungsrichtung.
 
 ![Gleichgewicht und Störung](/grafik-massenwirkungsgesetz.svg)
 
-**Erklärung zur Grafik:** Nach einer Störung (Konzentration, Druck, Temperatur) stellt sich ein neues Gleichgewicht ein; K bleibt konstant, die Konzentrationen verschieben sich.
 
 ## Konzentration als Störgröße
 
@@ -2567,11 +2553,9 @@ Für konjugierte Säure-Base-Paare gilt:
 
 ![Puffer](/grafik-puffer.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt das Säure-Base-Gleichgewicht HA ⇌ H⁺ + A⁻, die Henderson-Hasselbalch-Gleichung pH = pK_a + log([A⁻]/[HA]) und den Carbonat-Puffer CO₂/HCO₃⁻.
 
 ![Pufferbereich und Henderson-Hasselbalch](/grafik-puffer-henderson.svg)
 
-**Erklärung zur Grafik:** Der wirksame Pufferbereich liegt bei pH = pK_a ± 1; die Grafik veranschaulicht die Henderson-Hasselbalch-Gleichung und die Pufferkapazität.
 
 ## Der pH-Wert und das Ionenprodukt des Wassers
 

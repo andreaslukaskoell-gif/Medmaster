@@ -40,7 +40,6 @@ export const physKap7: Kapitel = {
 
 ![Atommodelle](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt das Bohr-Modell, die Photonenenergie E = hf = hc/λ, Emissions- und Absorptionsspektren sowie das Lambert-Beer-Gesetz.
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
@@ -67,7 +66,6 @@ Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energie
 
 ![Orbitale und Quantenzustände](/grafik-orbitale.svg)
 
-**Erklärung zur Grafik:** Im quantenmechanischen Modell ersetzen Orbitale (s, p, d) die Kreisbahnen; die Grafik zeigt Aufenthaltswahrscheinlichkeit und Quantenzahlen.
 
 Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). **Pauli-Prinzip:** Keine zwei Elektronen dürfen in allen vier Quantenzahlen übereinstimmen. **Daraus folgt: Jedes Orbital der Atomhülle kann nur maximal 2 Elektronen aufnehmen** (mit entgegengesetztem Spin).
 
@@ -336,7 +334,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 ![Zerfall](/grafik-29-zerfall.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht α-, β- und γ-Strahlung (Reichweite, Abschirmung), das Zerfallsgesetz N(t) = N₀·e^(-λt), Aktivität und die Dosis (Sievert).
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
 
@@ -396,7 +393,6 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 
 ![Exponentieller Zerfall](/grafik-exponential.svg)
 
-**Erklärung zur Grafik:** Die Aktivität und die Anzahl der Kerne fallen exponentiell mit der Zeit; die Halbwertszeit T½ kennzeichnet den typischen Abklingverlauf.
 
 ## Exponentieller Zerfall und Halbwertszeit
 
@@ -666,7 +662,6 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 ![Röntgen](/grafik-roentgen.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt den Aufbau der Röntgenröhre, Brems- und charakteristische Strahlung, Photoeffekt/Compton und das exponentielle Schwächungsgesetz.
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
@@ -674,7 +669,6 @@ In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert u
 
 ![Energieniveaus und charakteristische Strahlung](/grafik-atommodelle.svg)
 
-**Erklärung zur Grafik:** Charakteristische Röntgenstrahlung entsteht beim Übergang zwischen Schalen (K, L, M); die Grafik zeigt diskrete Energieniveaus und Photonenemission.
 
 **2. Charakteristische Strahlung:** Wenn ein eintreffendes Elektron ein kernnahes Elektron aus dem Wolframatom schlägt (K-Schale), fällt ein Elektron von einer äußeren Schale (L, M) in die entstehende Lücke und emittiert dabei ein Photon mit einer für Wolfram spezifischen Energie (diskrete Linien: Kα ≈ 59 keV, Kβ ≈ 67 keV für Wolfram). Diese Linien überlagern das Bremsspektrum.
 
@@ -959,11 +953,9 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 ![PET SPECT MRT](/grafik-pet-mrt.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt PET (Annihilation 2×511 keV, Koinzidenzdetektion), SPECT (Kollimator) und das MRT-Prinzip (Larmor-Frequenz).
 
 ![Radioaktiver Zerfall und Bildgebung](/grafik-29-zerfall.svg)
 
-**Erklärung zur Grafik:** β⁺-Zerfall liefert Positronen für PET; die Grafik zeigt Zerfallsarten und die Nutzung in der nuklearmedizinischen Bildgebung.
 
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
 

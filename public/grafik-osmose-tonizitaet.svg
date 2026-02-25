@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="100%">
+  <defs>
+    <style>
+      .title { font: 600 14px system-ui, sans-serif; fill: #0f172a }
+      .head { font: 600 11px system-ui, sans-serif; fill: #1e293b }
+      .sub { font: 10px system-ui, sans-serif; fill: #475569 }
+      .cell { fill: #fef3c7; stroke: #b45309; stroke-width: 1.5; rx: 4 }
+      .arrow { stroke: #0e7490; stroke-width: 1.5; fill: none; marker-end: url(#ar) }
+    </style>
+    <marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#0e7490"/></marker>
+  </defs>
+  <text x="260" y="22" text-anchor="middle" class="title">Osmose und Tonizit&#228;t: Zelle in verschiedener Umgebung</text>
+
+  <!-- hypoton -->
+  <rect x="16" y="44" width="152" height="148" fill="#f0fdfa" stroke="#0e7490" stroke-width="1" rx="6"/>
+  <text x="92" y="66" text-anchor="middle" class="head">Hypoton</text>
+  <text x="92" y="80" text-anchor="middle" class="sub">weniger gel&#246;st au&#223;en</text>
+  <ellipse cx="92" cy="118" rx="42" ry="32" class="cell"/>
+  <text x="92" y="118" text-anchor="middle" class="sub">Zelle</text>
+  <path d="M 50 98 L 50 78" class="arrow"/><path d="M 92 86 L 92 66" class="arrow"/><path d="M 134 98 L 134 78" class="arrow"/>
+  <text x="92" y="162" text-anchor="middle" class="sub">Wasser str&#246;mt rein</text>
+  <text x="92" y="178" text-anchor="middle" class="head" fill="#dc2626">H&#228;molyse (Ery)</text>
+
+  <!-- isoton -->
+  <rect x="184" y="44" width="152" height="148" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" rx="6"/>
+  <text x="260" y="66" text-anchor="middle" class="head">Isoton</text>
+  <text x="260" y="80" text-anchor="middle" class="sub">gleiche Osmolalit&#228;t</text>
+  <ellipse cx="260" cy="118" rx="36" ry="28" class="cell"/>
+  <text x="260" y="118" text-anchor="middle" class="sub">Zelle</text>
+  <text x="260" y="162" text-anchor="middle" class="sub">kein Nettostrom</text>
+  <text x="260" y="178" text-anchor="middle" class="head" fill="#059669">physiologisch</text>
+
+  <!-- hyperton -->
+  <rect x="352" y="44" width="152" height="148" fill="#fef2f2" stroke="#dc2626" stroke-width="1" rx="6"/>
+  <text x="428" y="66" text-anchor="middle" class="head">Hyperton</text>
+  <text x="428" y="80" text-anchor="middle" class="sub">mehr gel&#246;st au&#223;en</text>
+  <ellipse cx="428" cy="118" rx="28" ry="22" class="cell"/>
+  <text x="428" y="118" text-anchor="middle" class="sub">Zelle</text>
+  <path d="M 388 98 L 388 118" class="arrow"/><path d="M 428 106 L 428 126" class="arrow"/><path d="M 468 98 L 468 118" class="arrow"/>
+  <text x="428" y="162" text-anchor="middle" class="sub">Wasser str&#246;mt raus</text>
+  <text x="428" y="178" text-anchor="middle" class="head" fill="#dc2626">Krenation (Ery)</text>
+</svg>

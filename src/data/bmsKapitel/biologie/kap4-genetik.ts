@@ -22,6 +22,10 @@ export const bioKapGenetik: Kapitel = {
 - wo die Erbinformation liegt (DNA im Zellkern, bei Eukaryoten an Histonen verpackt)
 - warum diese Begriffe für Vererbung und Meiose zentral sind
 
+![DNA und Zentraldogma](/grafik-16-zentraldogma.svg)
+
+![Chromosomen und Zellteilung](/grafik-2-mitose.svg)
+
 ---
 
 ## DNA: Träger der Erbinformation
@@ -190,6 +194,10 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 - die **Karyotyp-Notation** (z. B. 46,XX und 46,XY) lesen und interpretieren
 - warum Chromosomenzahl und -struktur für Vererbung und Klinik wichtig sind
 
+![Chromosomenaufbau und Karyotyp](/grafik-2-mitose.svg)
+
+![Mitose und Chromosomen](/grafik-3-meiose.svg)
+
 ---
 
 ## Aufbau eines Chromosoms
@@ -306,6 +314,10 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
 - warum Keimzellen **haploid** (n) sind und was **diploid** (2n) bedeutet
 - **Crossing-over** in der Meiose (Rekombination, Bedeutung für genetische Vielfalt)
 - **Nicht-Disjunktion** als Ursache von Trisomie/Monosomie
+
+![Mitose — Ablauf](/grafik-2-mitose.svg)
+
+![Meiose — Keimzellen und Crossing-over](/grafik-3-meiose.svg)
 
 ---
 
@@ -478,6 +490,10 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 - die **3. Mendelsche Regel** (Unabhängigkeit): zwei unabhängige Gene → F₂-Verhältnis 9:3:3:1
 - **Punnett-Quadrat** und **monohybrider** vs. **dihybrider** Erbgang
 
+![Mendelsche Regeln und Kreuzungsschema](/grafik-33-vierfeldertafel.svg)
+
+![Punnett-Quadrat und Verhältnisse](/grafik-2-mitose.svg)
+
 ---
 
 ## 1. Mendelsche Regel (Uniformitätsregel)
@@ -594,6 +610,10 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
 - **homozygot** (reinerbig) vs. **heterozygot** (mischerbig)
 - **dominant**, **rezessiv**, **kodominant**, **intermediär** unterscheiden
 - **Testkreuzung** zur Genotypbestimmung anwenden
+
+![Genotyp und Phänotyp](/grafik-33-vierfeldertafel.svg)
+
+![Blutgruppen und Kodominanz](/grafik-8-immunitaet.svg)
 
 ---
 
@@ -721,6 +741,10 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
 - **autosomal-dominant** und **autosomal-rezessiv** (typische Stammbaum-Muster)
 - **X-chromosomal rezessiv** (Männer häufiger betroffen, keine Vater-Sohn-Übertragung, Konduktorin)
 - **X-chromosomal dominant** (z. B. kranker Vater → alle Töchter krank)
+
+![Stammbaum und Erbgang](/grafik-33-vierfeldertafel.svg)
+
+![Autosomal und X-chromosomal](/grafik-2-mitose.svg)
 
 ---
 
@@ -856,6 +880,10 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 - **Kreuzungsaufgaben** (z. B. I^A i × I^B i → alle vier Blutgruppen möglich)
 - **Rhesus-System** (D dominant über d) kurz
 
+![AB0-System und Kodominanz](/grafik-8-immunitaet.svg)
+
+![Blutgruppen und Antigene](/grafik-33-vierfeldertafel.svg)
+
 ---
 
 ## Allele und Phänotypen
@@ -979,6 +1007,10 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 - **Genommutation** (Trisomie, Monosomie durch Nicht-Disjunktion; Polyploidie)
 - typische Beispiele zuordnen können
 
+![Genmutation und Sequenz](/grafik-16-zentraldogma.svg)
+
+![Chromosomen und Nicht-Disjunktion](/grafik-3-meiose.svg)
+
 ---
 
 ## Genmutation
@@ -1100,6 +1132,10 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
 - **Transkription** (DNA wird in RNA umgeschrieben) und **Translation** (RNA wird in Protein übersetzt)
 - warum Gene den Phänotyp prägen (über Proteine)
 - Begriffe DNA, RNA, Protein und Genexpression verknüpfen
+
+![Zentraldogma — DNA zu Protein](/grafik-16-zentraldogma.svg)
+
+![Transkription und Translation](/grafik-2-mitose.svg)
 
 ---
 

@@ -395,11 +395,9 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ![Prozent Dreisatz](/grafik-prozent-dreisatz.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Prozentformel P = G×p/100, die wichtigsten Bruchrechenregeln und den direkten sowie indirekten Dreisatz.
 
 ![Zehnerpotenzen und Größenordnungen](/grafik-zehnerpotenzen.svg)
 
-**Erklärung zur Grafik:** Prozent und Dreisatz bauen auf Bruchrechnung und Zehnerpotenzen auf; die Grafik unterstützt das Umrechnen zwischen Dezimal, Prozent und Bruch.
 
 Das Wort Prozent kommt von lateinisch pro centum, zu Deutsch je Hundert. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts gemeint sind.
 
@@ -727,11 +725,9 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 ![Binomische Formeln](/grafik-parabel.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die drei binomischen Formeln (a±b)² und a²−b², die Scheitelpunktform der Parabel und die p-q-Formel für die Nullstellen.
 
 ![Parabel und Scheitelpunkt](/grafik-parabel.svg)
 
-**Erklärung zur Grafik:** Quadratische Funktionen und Parabeln; die Grafik ergänzt den Zusammenhang zwischen binomischen Formeln, Scheitelpunkt und Nullstellen.
 
 Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
 
@@ -1056,11 +1052,9 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
 
 ![Potenz Logarithmus](/grafik-logarithmus.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht die Potenzgesetze (aⁿ×aᵐ = aⁿ⁺ᵐ, a^(1/n) = ⁿ√a, negativer Exponent), Wurzeln und die wichtigsten Logarithmus-Regeln.
 
 ![Exponential und Logarithmus](/grafik-exponential.svg)
 
-**Erklärung zur Grafik:** Exponentialfunktion und Logarithmus als Umkehrfunktion; wichtig für pH = −log([H⁺]), Wachstum und Halbwertszeiten.
 
 Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst:
 a hoch n = a × a × a ... × a (n Faktoren).
@@ -1427,11 +1421,9 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
 
 ![Ebene Figuren](/grafik-ebene-figuren.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Flächenformeln für Rechteck (A = l×b), Dreieck (A = ½×g×h), Kreis (A = πr²), die Heron-Formel und die DuBois-Formel für die Körperoberfläche.
 
 ![Fläche und Volumen](/grafik-flaeche-quadrat.svg)
 
-**Erklärung zur Grafik:** Flächen- und Volumeneinheiten (m², cm², Liter); die Grafik unterstützt Umrechnungen und die DuBois-Formel (KOF).
 
 Beim Rechteck mit Länge l und Breite b gilt:
 - Fläche: **A = l × b**
@@ -1808,11 +1800,9 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
 
 ![Körper](/grafik-koerper.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Volumen- und Oberflächenformeln für Quader (V = l×b×h), Zylinder (V = πr²h), Kugel (V = (4/3)πr³) und Ellipsoid (V ≈ 0,52×a×b×c).
 
 ![Volumen und Einheiten](/grafik-volumen-liter.svg)
 
-**Erklärung zur Grafik:** Volumeneinheiten (m³, Liter, mL) und Umrechnungen; relevant für Herzvolumen, Dosisberechnung und klinische Volumina.
 
 Ein Quader mit Länge l, Breite b und Höhe h (bzw. Kanten a, b, c):
 - **Volumen: V = l × b × h = a · b · c** (alle drei Kanten multiplizieren, nicht addieren!)
@@ -2140,11 +2130,9 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 
 ![Koordinaten Gerade](/grafik-lineare-funktion.svg)
 
-**Erklärung zur Grafik:** Die Abbildung veranschaulicht den Abstand d = √((x₂−x₁)²+(y₂−y₁)²), die Geradengleichung y = mx+b, senkrechte Geraden (m₁×m₂ = −1) und die Kreisgleichung.
 
 ![Parabel und Geraden](/grafik-parabel.svg)
 
-**Erklärung zur Grafik:** Schnitt von Geraden und Parabeln führt auf lineare bzw. quadratische Gleichungen; die Grafik verknüpft Algebra und analytische Geometrie.
 
 Ein Punkt P im zweidimensionalen kartesischen Koordinatensystem wird durch ein geordnetes Paar (x, y) beschrieben. Die x-Achse (Abszisse) ist horizontal, die y-Achse (Ordinate) vertikal; der Ursprung O = (0, 0) liegt im Schnittpunkt.
 
@@ -2494,11 +2482,9 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
 
 ![Vektoren](/grafik-vektoren.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt Betrag |a|, Skalarprodukt a×b = |a||b|cos θ, Kreuzprodukt a×b und die Ebenengleichung in Normalenform n×(r−r₀)=0.
 
 ![Vektor Betrag und Richtung](/grafik-vektoren-betrag.svg)
 
-**Erklärung zur Grafik:** Vektoraddition (Parallelogramm), Betrag und Einheitsvektor; Grundlage für Kräfte, EKG-Achse und räumliche Abstände.
 
 Ein Vektor **a** in 3D wird durch seine Komponenten beschrieben: **a** = (a₁, a₂, a₃). Im 2D entsprechend: **a** = (a₁, a₂).
 

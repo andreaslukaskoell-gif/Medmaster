@@ -39,11 +39,9 @@ export const mathKapStochastik: Kapitel = {
 
 ![Kombinatorik](/grafik-kombinatorik.svg)
 
-**Erklärung zur Grafik:** Die Abbildung fasst die Formeln der Kombinatorik zusammen: Permutation n!, Variation ohne Wiederholung n!/(n−k)!, Variation mit Wiederholung n^k und Kombination (n über k). So behältst du den Überblick bei geordnet/ungeordnet und mit/ohne Wiederholung.
 
 ![Vierfeldertafel und Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Kombinatorik liefert die Anzahlen für Laplace-Wahrscheinlichkeiten; die Grafik verknüpft Zählprinzipien mit der Vierfeldertafel.
 
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
@@ -371,11 +369,9 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 ![Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Die Grafik veranschaulicht Laplace-Wahrscheinlichkeit P(A) = |A|/|Ω|, den Additionssatz P(A∪B) = P(A)+P(B)−P(A∩B) und die Vierfeldertafel zur Berechnung bedingter Wahrscheinlichkeiten und Unabhängigkeit.
 
 ![Kombinatorik und Zählprinzip](/grafik-kombinatorik.svg)
 
-**Erklärung zur Grafik:** Anzahlen für Laplace (günstige/alle); die Grafik ergänzt Permutation, Variation und Kombination für Wahrscheinlichkeitsberechnungen.
 
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
@@ -680,11 +676,9 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
 
 ![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
-**Erklärung zur Grafik:** Die Abbildung zeigt die Vierfeldertafel (TP, TN, FP, FN), die Formel für bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) und die Umrechnung mit dem Satz von Bayes; wichtig für PPV und NPV bei medizinischen Tests.
 
 ![Normalverteilung und Tests](/grafik-normalverteilung.svg)
 
-**Erklärung zur Grafik:** Bedingte Wahrscheinlichkeit und Testgüte (Sensitivität, Spezifität); die Grafik verknüpft Vierfeldertafel mit Verteilungen und Grenzwerten.
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
@@ -977,7 +971,6 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
 
 ![Normalverteilung](/grafik-normalverteilung.svg)
 
-**Erklärung zur Grafik:** Die Grafik zeigt die Normalverteilung (Glockenkurve) mit Mittelwert μ und Standardabweichung σ, die 68-95-99,7-Regel sowie die Zuordnung von Sensitivität und Spezifität (TP, TN, FP, FN) in der Diagnostik.
 
 ![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
