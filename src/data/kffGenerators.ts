@@ -854,7 +854,7 @@ export function generateGedaechtnisQuestionsFromPasses(
       (builderIdx === 3 ? medsNotUsed.length > 0 : wrongPool.length >= 4);
 
     let questionText = b.question;
-    let correctVal = b.correct;
+    const correctVal = b.correct;
     let options: string[];
     let correctIndex: number;
 
@@ -2305,7 +2305,6 @@ const MAX_ASSERT_RETRIES = 5;
 export function assertNotOfficialLike(task: ImplikationTask): boolean {
   const a1 = task.premise1.toLowerCase();
   const a2 = task.premise2.toLowerCase();
-  const optSet = new Set(task.options.map((o) => o.toLowerCase().trim()));
   const taskWords = new Set(
     [...a1.split(/\s+/), ...a2.split(/\s+/), ...task.options.flatMap((o) => o.split(/\s+/))]
       .map((w) => w.replace(/[.,]/g, ""))
@@ -2324,7 +2323,6 @@ export function assertNotOfficialLike(task: ImplikationTask): boolean {
     );
     const overlap = [...taskWords].filter((w) => oWords.has(w));
     if (overlap.length >= 4) return false;
-    const oOptSet = new Set(o.options.map((x) => x.toLowerCase().trim()));
     if (
       task.options.some(
         (opt, i) => o.options[i] && opt.toLowerCase().trim() === o.options[i].toLowerCase().trim()
@@ -2411,7 +2409,6 @@ function trainingWrongOptions(s: TrainingBegriff, p: TrainingBegriff, correct: s
  * Darf keine Texte/Zahlen/Struktur/Lösung der offiziellen Beispiele kopieren.
  */
 export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): ImplikationTask {
-  const official = OFFICIAL_IMPLICATION_EXAMPLES;
   for (let attempt = 0; attempt < MAX_ASSERT_RETRIES; attempt++) {
     const tripel = TRAINING_TERM_TRIPELS[randInt(0, TRAINING_TERM_TRIPELS.length - 1)];
     const [s, m, p] = shuffle([...tripel]);

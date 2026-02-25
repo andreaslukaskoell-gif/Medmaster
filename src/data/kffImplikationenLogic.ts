@@ -461,10 +461,8 @@ export function deriveEulerLayoutFromModel(model: ImplicationRelationModel): {
 
   const sets = model.sets;
   if (sets.length < 3) {
-    const a = sets[0] ?? "A";
-    const b = sets[1] ?? "B";
     throw new Error(
-      "[KFF Implikationen] Nur 2 Mengen – kein 3-Kreis-Layout definiert. Invalid implication task – rejected."
+      `[KFF Implikationen] Nur 2 Mengen (${sets[0] ?? "A"}, ${sets[1] ?? "B"}) – kein 3-Kreis-Layout definiert. Invalid implication task – rejected.`
     );
   }
 

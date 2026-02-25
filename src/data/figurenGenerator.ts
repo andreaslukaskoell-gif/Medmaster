@@ -60,8 +60,6 @@ const PI = Math.PI;
 const TAU = 2 * PI;
 /** Einheitliche Figurenfarbe (hellblau, MedAT-ähnlich). Export für UI. */
 export const FILL = "#5eb8f0";
-const STROKE = "#0e7490";
-
 function rd(n: number): number {
   return Math.round(n * 100) / 100;
 }
@@ -147,7 +145,7 @@ function quantizedAngle(diff: "leicht" | "mittel" | "schwer", rand: () => number
  */
 function transformPiece(pts: Pt[], angle: number): Pt[] {
   const c = centroid(pts);
-  let result = rotatePts(pts, angle, c[0], c[1]);
+  const result = rotatePts(pts, angle, c[0], c[1]);
 
   // Bounding box
   let minX = Infinity,

@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Scale, Shield, AlertTriangle, FileText } from "lucide-react";
+import { ArrowLeft, Scale, Shield, FileText } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 type Tab = "impressum" | "datenschutz" | "agb";
@@ -16,13 +16,10 @@ function tabFromPath(path: string): Tab {
   return "impressum";
 }
 
-const REQUIRED_PLACEHOLDERS: string[] = [];
-
 export default function Legal() {
   const location = useLocation();
   const navigate = useNavigate();
   const [tab, setTab] = useState<Tab>(() => tabFromPath(location.pathname));
-  const [hasMissingPlaceholders, setHasMissingPlaceholders] = useState(false);
 
   usePageTitle(tab === "agb" ? "AGB" : tab === "datenschutz" ? "Datenschutz" : "Impressum");
 
@@ -36,49 +33,8 @@ export default function Legal() {
     navigate(path);
   };
 
-  useEffect(() => {
-    // Check for missing placeholders in the document
-    const pageContent = document.body.innerText;
-    const hasMissing = REQUIRED_PLACEHOLDERS.some((placeholder) =>
-      pageContent.includes(placeholder)
-    );
-    setHasMissingPlaceholders(hasMissing);
-  }, [tab]);
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Dev/Production Warning */}
-      {import.meta.env.DEV ? (
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-0">
-          <div className="flex gap-3">
-            <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <p className="text-sm font-semibold text-yellow-800">
-                DEV MODE: Gesetzliche Angaben unvollständig
-              </p>
-              <p className="text-xs text-yellow-700 mt-1">
-                Bitte alle [PLATZHALTER] mit echten Daten ausfüllen, bevor die Seite live geht:
-                Name, Adresse, UID-Nummer
-              </p>
-            </div>
-          </div>
-        </div>
-      ) : hasMissingPlaceholders ? (
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-0">
-          <div className="flex gap-3">
-            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <p className="text-sm font-semibold text-red-800">
-                FEHLER: Gesetzliche Angaben unvollständig
-              </p>
-              <p className="text-xs text-red-700 mt-1">
-                Diese Seite enthält noch Platzhalter. Bitte kontaktieren Sie den Administrator.
-              </p>
-            </div>
-          </div>
-        </div>
-      ) : null}
-
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
@@ -91,9 +47,9 @@ export default function Legal() {
 
       {/* Tab bar */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-3xl mx-auto px-4 flex gap-1">
+        <div className="max-w-3xl mx-auto px-4 flex gap-1 flex-wrap">
           <button
-            onClick={() => setTab("impressum")}
+            onClick={() => handleTab("impressum")}
             className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
               tab === "impressum"
                 ? "border-indigo-600 text-indigo-600"
@@ -103,7 +59,7 @@ export default function Legal() {
             <Scale className="w-4 h-4" /> Impressum
           </button>
           <button
-            onClick={() => setTab("datenschutz")}
+            onClick={() => handleTab("datenschutz")}
             className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
               tab === "datenschutz"
                 ? "border-indigo-600 text-indigo-600"
@@ -112,12 +68,24 @@ export default function Legal() {
           >
             <Shield className="w-4 h-4" /> Datenschutz
           </button>
+          <button
+            onClick={() => handleTab("agb")}
+            className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
+              tab === "agb"
+                ? "border-indigo-600 text-indigo-600"
+                : "border-transparent text-gray-500 hover:text-gray-700"
+            }`}
+          >
+            <FileText className="w-4 h-4" /> AGB
+          </button>
         </div>
       </div>
 
       {/* Content */}
       <main className="max-w-3xl mx-auto px-4 py-8">
-        {tab === "impressum" ? <Impressum /> : <Datenschutz />}
+        {tab === "impressum" && <Impressum />}
+        {tab === "datenschutz" && <Datenschutz />}
+        {tab === "agb" && <AGB />}
       </main>
 
       {/* Footer */}
@@ -323,6 +291,101 @@ function Datenschutz() {
         Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte
         Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die aktuelle Fassung finden Sie
         stets auf dieser Seite.
+      </p>
+    </article>
+  );
+}
+
+/* ─────────────────── ALLGEMEINE GESCHÄFTSBEDINGUNGEN (AGB) ──────────────────── */
+
+function AGB() {
+  return (
+    <article className="prose prose-gray prose-sm max-w-none">
+      <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+      <p className="text-xs text-gray-400 uppercase tracking-wide">
+        Stand: {new Date().toLocaleDateString("de-AT", { month: "long", year: "numeric" })}
+      </p>
+
+      <h2>1. Geltungsbereich</h2>
+      <p>
+        Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der Lernplattform
+        MedMaster („Dienst“) unter der Domain medmaster.at sowie verbundener Dienste.
+        Vertragspartner ist der Nutzer bzw. die Nutzerin („Nutzer/in“) einerseits und der Betreiber
+        MedMaster andererseits. Mit der Registrierung bzw. Nutzung des Dienstes akzeptieren Sie
+        diese AGB.
+      </p>
+
+      <h2>2. Leistungsbeschreibung</h2>
+      <p>
+        MedMaster bietet eine webbasierte Lernplattform zur Vorbereitung auf den MedAT
+        (Medizinischer Aufnahmetest). Der Umfang der Leistungen (z.B. freie vs. kostenpflichtige
+        Funktionen) ergibt sich aus der jeweiligen Tarifbeschreibung auf der Website. Der Betreiber
+        behält sich vor, Inhalte und Funktionen im Rahmen der technischen Entwicklung zu erweitern
+        oder einzuschränken, soweit die Hauptleistung nicht entfällt.
+      </p>
+
+      <h2>3. Registrierung und Konto</h2>
+      <p>
+        Zur Nutzung bestimmter Funktionen ist eine Registrierung erforderlich. Sie verpflichten
+        sich, wahrheitsgemäße Angaben zu machen und Ihr Passwort geheim zu halten. Das Konto ist
+        persönlich und nicht übertragbar. Der Betreiber ist berechtigt, Konten bei Verstößen gegen
+        diese AGB oder bei Missbrauch zu sperren oder zu löschen.
+      </p>
+
+      <h2>4. Kostenlose und kostenpflichtige Nutzung</h2>
+      <p>
+        Ein Teil des Dienstes kann kostenlos genutzt werden. Für erweiterte Funktionen (z.B.
+        Standard- oder Pro-Tarif) gelten die zum Zeitpunkt des Abschlusses auf der Website
+        angegebenen Preise und Laufzeiten. Die Bezahlung erfolgt über Stripe; es gelten die
+        Zahlungsbedingungen des jeweiligen Tarifs (monatlich/jährlich, automatische Verlängerung
+        sofern nicht gekündigt).
+      </p>
+
+      <h2>5. Widerruf und Kündigung</h2>
+      <p>
+        <strong>Verbraucher:</strong> Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen
+        vom Vertrag zurückzutreten (Widerrufsrecht). Die Frist beginnt mit dem Vertragsschluss. Zur
+        Wahrung der Frist genügt die rechtzeitige Absendung der Mitteilung (z.B. per E-Mail an
+        support@medmaster.at). Bei vor Vertragsende in Anspruch genommenen Leistungen kann ein
+        Wertersatz geschuldet sein.
+      </p>
+      <p>
+        <strong>Kündigung:</strong> Abonnements können jederzeit zum Ende der laufenden
+        Abrechnungsperiode gekündigt werden (z.B. in den Kontoeinstellungen oder per E-Mail). Nach
+        Ablauf bleibt der Zugang bis zum Ende der bereits bezahlten Zeit bestehen; eine Verlängerung
+        erfolgt nicht.
+      </p>
+
+      <h2>6. Haftung</h2>
+      <p>
+        Der Betreiber haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit sowie für Schäden aus
+        der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei leichter Fahrlässigkeit
+        haftet er nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) und nur in
+        Höhe des vorhersehbaren, typischerweise eintretenden Schadens. Die Haftung für entgangenen
+        Gewinn und mittelbare Schäden ist ausgeschlossen, soweit nicht zwingend gehaftet wird. Die
+        Lerninhalte dienen der Vorbereitung; der Betreiber übernimmt keine Gewähr für den Erfolg bei
+        der Prüfung.
+      </p>
+
+      <h2>7. Urheberrecht und Nutzungsrechte</h2>
+      <p>
+        Alle Inhalte der Plattform (Texte, Grafiken, Aufgaben, Strukturen) sind urheberrechtlich
+        geschützt. Sie erhalten ein nicht ausschließliches, nicht übertragbares Recht zur Nutzung im
+        Rahmen des bestimmungsgemäßen Gebrauchs des Dienstes. Eine Weitergabe, Vervielfältigung oder
+        gewerbliche Nutzung außerhalb der Plattform ist nicht gestattet.
+      </p>
+
+      <h2>8. Schlussbestimmungen</h2>
+      <p>
+        Es gilt das Recht der Republik Österreich unter Ausschluss des UN-Kaufrechts. Gerichtsstand
+        für Streitigkeiten ist, soweit gesetzlich zulässig, der Sitz des Betreibers. Sollte eine
+        Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
+        Änderungen dieser AGB werden auf dieser Seite veröffentlicht; bei wesentlichen Änderungen
+        werden registrierte Nutzer per E-Mail informiert.
+      </p>
+      <p>
+        Bei Fragen zu diesen AGB wenden Sie sich an{" "}
+        <a href="mailto:support@medmaster.at">support@medmaster.at</a>.
       </p>
     </article>
   );

@@ -6,6 +6,8 @@ interface ConfettiPiece {
   color: string;
   delay: number;
   size: number;
+  borderRadius: string;
+  duration: number;
 }
 
 export function Confetti({ active }: { active: boolean }) {
@@ -13,8 +15,8 @@ export function Confetti({ active }: { active: boolean }) {
 
   useEffect(() => {
     if (!active) {
-      setPieces([]);
-      return;
+      const t = setTimeout(() => setPieces([]), 0);
+      return () => clearTimeout(t);
     }
     const colors = ["#0f766e", "#14b8a6", "#f59e0b", "#ef4444", "#8b5cf6", "#3b82f6", "#ec4899"];
     const newPieces = Array.from({ length: 60 }, (_, i) => ({
@@ -23,10 +25,15 @@ export function Confetti({ active }: { active: boolean }) {
       color: colors[Math.floor(Math.random() * colors.length)],
       delay: Math.random() * 0.5,
       size: Math.random() * 8 + 4,
+      borderRadius: Math.random() > 0.5 ? "50%" : "2px",
+      duration: 2 + Math.random(),
     }));
-    setPieces(newPieces);
+    const t = setTimeout(() => setPieces(newPieces), 0);
     const timer = setTimeout(() => setPieces([]), 3000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(t);
+      clearTimeout(timer);
+    };
   }, [active]);
 
   if (pieces.length === 0) return null;
@@ -42,8 +49,8 @@ export function Confetti({ active }: { active: boolean }) {
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-            borderRadius: Math.random() > 0.5 ? "50%" : "2px",
-            animation: `confetti-fall ${2 + Math.random()}s linear ${p.delay}s forwards`,
+            borderRadius: p.borderRadius,
+            animation: `confetti-fall ${p.duration}s linear ${p.delay}s forwards`,
           }}
         />
       ))}

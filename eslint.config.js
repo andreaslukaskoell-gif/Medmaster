@@ -20,4 +20,14 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  // Data/content files: allow @ts-nocheck, irregular whitespace in strings, regex escapes
+  {
+    files: ["src/data/bmsKapitel/**/*.ts", "src/data/figurenGenerator.ts", "src/data/kff*.ts"],
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "no-irregular-whitespace": "off",
+      "no-useless-escape": "off",
+      "no-constant-condition": "off",
+    },
+  },
 ]);

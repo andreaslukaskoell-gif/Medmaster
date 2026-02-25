@@ -258,7 +258,6 @@ export function getTargetShapeIdForPolygon(target: Polygon): string | undefined 
   return idx >= 0 ? SOLUTION_SHAPES[idx] : undefined;
 }
 
-const SEG_TOL = 0.02;
 function segmentKey(a: { x: number; y: number }, b: { x: number; y: number }): string {
   const ax = rd(a.x);
   const ay = rd(a.y);
@@ -296,25 +295,7 @@ export function computeSolutionOverlay(
   return { lines };
 }
 
-/** Zielformen pro Schwierigkeit (nur die 14). */
-const SHAPE_POOL_EASY: Polygon[] = [SQUARE, TRIANGLE, HEXAGON, PENTAGON, RHOMBUS];
-const SHAPE_POOL_MEDIUM: Polygon[] = [
-  HEXAGON,
-  PENTAGON,
-  TRAPEZ,
-  PARALLELOGRAM,
-  L_SHAPE,
-  OCTAGON,
-  HALF_CIRCLE,
-];
-const SHAPE_POOL_HARD: Polygon[] = [
-  HEPTAGON,
-  QUARTER_CIRCLE,
-  THREE_QUARTER_CIRCLE,
-  FULL_CIRCLE,
-  L_SHAPE,
-  TRAPEZ,
-];
+/** Zielformen pro Schwierigkeit (nur die 14). Pools sind in CUT_SCHEMES pro difficulty hinterlegt. */
 
 // =============================================================================
 // CUT STRATEGIES – Schnitt-Strategien
@@ -1017,6 +998,7 @@ function buildDistractors(
   rng: () => number,
   _excludeFingerprint: string
 ): Polygon[] {
+  void _excludeFingerprint;
   const targetFp = polygonFingerprint(target);
   const others = ALLOWED_SOLUTION_SHAPES.filter((s) => polygonFingerprint(s) !== targetFp);
   const shuffled = [...others];

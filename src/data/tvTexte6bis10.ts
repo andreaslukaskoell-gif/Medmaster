@@ -1,4 +1,4 @@
-import type { TVText, TVQuestion } from "./kffTextverstaendnis";
+import type { TVText } from "./kffTextverstaendnis";
 
 export const tvTexte6bis10: TVText[] = [
   {

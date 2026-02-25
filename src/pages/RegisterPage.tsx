@@ -15,6 +15,7 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [acceptedAgb, setAcceptedAgb] = useState(false);
   const { signUp } = useAuth();
   const navigate = useNavigate();
 
@@ -28,6 +29,10 @@ export default function RegisterPage() {
     }
     if (password.length < 6) {
       setError("Passwort muss mindestens 6 Zeichen haben.");
+      return;
+    }
+    if (!acceptedAgb) {
+      setError("Bitte akzeptiere die AGB, um fortzufahren.");
       return;
     }
 
@@ -136,7 +141,37 @@ export default function RegisterPage() {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full" disabled={loading}>
+              <label className="flex items-start gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={acceptedAgb}
+                  onChange={(e) => setAcceptedAgb(e.target.checked)}
+                  className="mt-1 w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                />
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Ich habe die{" "}
+                  <Link
+                    to="/agb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
+                  >
+                    AGB
+                  </Link>{" "}
+                  und die{" "}
+                  <Link
+                    to="/datenschutz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
+                  >
+                    Datenschutzerklärung
+                  </Link>{" "}
+                  gelesen und akzeptiere sie.
+                </span>
+              </label>
+
+              <Button type="submit" className="w-full" disabled={loading || !acceptedAgb}>
                 {loading ? "Wird erstellt..." : "Konto erstellen"}
               </Button>
             </form>

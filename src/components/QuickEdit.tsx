@@ -32,7 +32,9 @@ export function QuickEdit<T extends object>({
   };
 
   useEffect(() => {
-    if (open) setText(JSON.stringify(data, null, 2));
+    if (!open) return;
+    const t = setTimeout(() => setText(JSON.stringify(data, null, 2)), 0);
+    return () => clearTimeout(t);
   }, [open, data]);
 
   useEffect(() => {

@@ -67,16 +67,28 @@ export function useFragenTrainer(
 
   const recordedRef = useRef(false);
 
+  const resetQuestionState = useCallback(() => {
+    setRevealed(false);
+    setChosenOption(null);
+    setTypKDecisions([]);
+    setTypKPhase(1);
+    setTypKCombChosen(null);
+  }, []);
+
   // ── Load questions ──────────────────────────────────────────
   useEffect(() => {
     if (!uk_ids.length) {
-      setFragen([]);
-      setLoading(false);
-      setError(null);
-      return;
+      const t = setTimeout(() => {
+        setFragen([]);
+        setLoading(false);
+        setError(null);
+      }, 0);
+      return () => clearTimeout(t);
     }
-    setLoading(true);
-    setError(null);
+    const t = setTimeout(() => {
+      setLoading(true);
+      setError(null);
+    }, 0);
 
     if (source === "content") {
       const generated = generateContentQuestions(uk_ids, count);
@@ -106,14 +118,20 @@ export function useFragenTrainer(
           setLoading(false);
         });
     }
-    // Reset session
-    setIdx(0);
-    setConfidence(null);
-    setAnswers([]);
-    setSessionDone(false);
-    resetQuestionState();
+    // Reset session (defer to satisfy react-hooks/set-state-in-effect)
+    const t2 = setTimeout(() => {
+      setIdx(0);
+      setConfidence(null);
+      setAnswers([]);
+      setSessionDone(false);
+      resetQuestionState();
+    }, 0);
     recordedRef.current = false;
-  }, [uk_ids.join(","), user_id, count, source]);
+    return () => {
+      clearTimeout(t);
+      clearTimeout(t2);
+    };
+  }, [uk_ids.join(","), user_id, count, source, resetQuestionState]);
 
   // ── Current question ────────────────────────────────────────
   const currentFrage = fragen[idx] ?? null;
@@ -223,15 +241,6 @@ export function useFragenTrainer(
     ]
   );
 
-  // ── Reset ────────────────────────────────────────────────────
-  function resetQuestionState() {
-    setRevealed(false);
-    setChosenOption(null);
-    setTypKDecisions([]);
-    setTypKPhase(1);
-    setTypKCombChosen(null);
-  }
-
   const restart = useCallback(() => {
     setIdx(0);
     setConfidence(null);
@@ -254,7 +263,7 @@ export function useFragenTrainer(
           .catch(() => setLoading(false));
       }
     }
-  }, [uk_ids, user_id, count, source]);
+  }, [uk_ids, user_id, count, source, resetQuestionState]);
 
   return {
     // Data

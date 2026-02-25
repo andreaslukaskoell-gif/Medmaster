@@ -1,5 +1,5 @@
-// Stripe Pricing Configuration
-// Replace PLACEHOLDER values with real Stripe Price IDs when ready
+// Stripe Pricing Configuration — PLACEHOLDER bis zur finalen Integration am Schluss.
+// Ersetze PLACEHOLDER-Price-IDs durch echte Stripe Price IDs, wenn Zahlung aktiviert wird.
 
 export const PRICING = {
   standard: {
@@ -36,10 +36,8 @@ export function formatPrice(cents: number): string {
   return `€${(cents / 100).toFixed(2).replace(".", ",")}`;
 }
 
-// Placeholder for Stripe checkout redirect
+// Platzhalter: Kein Redirect zu Stripe. Wird durch echte Supabase Edge Function + Stripe ersetzt.
 export async function createCheckoutSession(priceId: string): Promise<string | null> {
-  // TODO: Implement with Supabase Edge Function
-  // This would call a serverless function that creates a Stripe Checkout Session
-  console.log("Stripe Checkout for price:", priceId);
+  console.warn("[Stripe] Checkout noch nicht aktiv (Platzhalter). Price:", priceId);
   return null;
 }

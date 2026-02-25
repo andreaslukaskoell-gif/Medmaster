@@ -135,7 +135,8 @@ function getTextContent(children: ReactNode): string {
   return "";
 }
 
-function buildMarkdownComponents(_keywordLinkEntries?: KeywordLinkEntry[]) {
+function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
+  void keywordLinkEntries; // reserved for future keyword tooltips
   return {
     strong: ({ children }: { children?: ReactNode }) => {
       const text = getTextContent(children ?? "").trim();
@@ -376,7 +377,7 @@ export function SubchapterContent({
             defaultOpen: true,
           });
         }
-        sections.forEach((sec, _secIdx) => {
+        sections.forEach((sec) => {
           list.push({
             id: `${segIdx}-${sec.id}`,
             title: sec.title,
@@ -420,6 +421,7 @@ export function SubchapterContent({
       };
     }
     return list;
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- renderSectionContent is stable
   }, [segments, uk.diagram, diagramRendered, hinterfragMode, keywordLinkEntries]);
 
   const allSectionIds = useMemo(() => unifiedSections.map((s) => s.id), [unifiedSections]);
@@ -485,12 +487,15 @@ export function SubchapterContent({
     if (openSectionsInitialized.current) return;
     openSectionsInitialized.current = true;
     if (readingMode === "read") {
-      setOpenSections(
-        allSectionIds.reduce<Record<string, boolean>>((acc, id) => ({ ...acc, [id]: true }), {})
+      const next = allSectionIds.reduce<Record<string, boolean>>(
+        (acc, id) => ({ ...acc, [id]: true }),
+        {}
       );
-    } else {
-      setOpenSections({ [firstSectionId]: true });
+      const t = setTimeout(() => setOpenSections(next), 0);
+      return () => clearTimeout(t);
     }
+    const t = setTimeout(() => setOpenSections({ [firstSectionId]: true }), 0);
+    return () => clearTimeout(t);
   }, [unifiedSections, firstSectionId, readingMode, allSectionIds]);
 
   // When switching reading mode: sync open state
@@ -576,11 +581,14 @@ export function SubchapterContent({
     if (!hash) return;
     const hasSection = unifiedSections.some((s) => s.id === hash);
     if (hasSection) {
-      setOpenSections((prev) => ({ ...prev, [hash]: true }));
-      const t = setTimeout(() => {
+      const t = setTimeout(() => setOpenSections((prev) => ({ ...prev, [hash]: true })), 0);
+      const t2 = setTimeout(() => {
         document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 150);
-      return () => clearTimeout(t);
+      return () => {
+        clearTimeout(t);
+        clearTimeout(t2);
+      };
     }
   }, [unifiedSections]);
 
@@ -716,6 +724,7 @@ export function SubchapterContent({
 }
 
 // Export extracted questions for use in parent component
+// eslint-disable-next-line react-refresh/only-export-components -- helper used by BMSUnterkapitel
 export function getExtractedQuestions(uk: Unterkapitel): SelfTestQuestion[] {
   if (!uk.content) return uk.selfTest || [];
   const { questions } = extractKontrollfragen(uk.content);

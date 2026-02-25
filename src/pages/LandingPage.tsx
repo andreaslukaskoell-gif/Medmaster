@@ -532,6 +532,17 @@ export default function LandingPage() {
             <GraduationCap className="w-5 h-5 text-[#7aa7ff]" />
             <span className="text-sm font-semibold text-gray-300">MedMaster</span>
           </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
+            <Link to="/impressum" className="hover:text-gray-300 transition-colors">
+              Impressum
+            </Link>
+            <Link to="/datenschutz" className="hover:text-gray-300 transition-colors">
+              Datenschutz
+            </Link>
+            <Link to="/agb" className="hover:text-gray-300 transition-colors">
+              AGB
+            </Link>
+          </div>
           <p className="text-xs text-gray-500">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>

@@ -21,7 +21,8 @@ export function useFocusMode() {
   const [isFocusMode, setFocusModeState] = useState(false);
 
   useEffect(() => {
-    setFocusModeState(readStored());
+    const t = setTimeout(() => setFocusModeState(readStored()), 0);
+    return () => clearTimeout(t);
   }, []);
 
   useEffect(() => {

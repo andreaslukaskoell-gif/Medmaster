@@ -16,20 +16,16 @@ export function TableOfContents({ sections }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Don't render if fewer than 3 sections
-  if (sections.length < 3) return null;
-
   const handleClick = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
-    // Close on mobile after click
     setIsOpen(false);
   }, []);
 
-  // Scroll-spy with IntersectionObserver
   useEffect(() => {
+    if (sections.length < 3) return;
     observerRef.current?.disconnect();
 
     const headings = sections
@@ -56,6 +52,9 @@ export function TableOfContents({ sections }: Props) {
 
     return () => observerRef.current?.disconnect();
   }, [sections]);
+
+  // Don't render if fewer than 3 sections
+  if (sections.length < 3) return null;
 
   // Number sections: H2 gets main number, H3 gets sub-number
   const numbered = buildNumberedList(sections);

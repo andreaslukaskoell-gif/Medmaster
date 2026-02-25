@@ -387,7 +387,7 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
   const visible = fullSeq.slice(0, lengthVisible);
   const correctNext: [number, number] = [fullSeq[lengthVisible], fullSeq[lengthVisible + 1]];
 
-  let distractors: [number, number][] = [];
+  const distractors: [number, number][] = [];
   distractors.push(distractorFirstRight(correctNext, ops, rand));
   distractors.push(distractorWrongOp(correctNext, rand));
   distractors.push(distractorOffset(visible, ops, rand));

@@ -90,15 +90,20 @@ export function AppShell() {
       return;
     }
     if (currentLevel > levelRef.current) {
-      setLevelUpState({
-        level: currentLevel,
-        feature: getFeatureUnlockedAtLevel(currentLevel),
-      });
+      const t = setTimeout(
+        () =>
+          setLevelUpState({
+            level: currentLevel,
+            feature: getFeatureUnlockedAtLevel(currentLevel),
+          }),
+        0
+      );
       levelRef.current = currentLevel;
-
-      // Auto-dismiss after 5 seconds
       const timer = setTimeout(() => setLevelUpState(null), 5000);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(t);
+        clearTimeout(timer);
+      };
     }
   }, [xp]);
 

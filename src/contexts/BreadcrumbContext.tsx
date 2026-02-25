@@ -17,7 +17,8 @@ export function BreadcrumbProvider({ children }: { children: ReactNode }) {
     setBreadcrumbsState(items);
   }, []);
   useEffect(() => {
-    setBreadcrumbsState(null);
+    const t = setTimeout(() => setBreadcrumbsState(null), 0);
+    return () => clearTimeout(t);
   }, [location.pathname]);
   return (
     <BreadcrumbContext.Provider value={{ breadcrumbs, setBreadcrumbs }}>
@@ -26,12 +27,14 @@ export function BreadcrumbProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- hook is a valid export from context
 export function useBreadcrumb() {
   const ctx = useContext(BreadcrumbContext);
   return ctx ?? { breadcrumbs: null, setBreadcrumbs: () => {} };
 }
 
 /** Derive default breadcrumb from pathname when no page has set custom ones */
+// eslint-disable-next-line react-refresh/only-export-components -- pure helper
 export function getDefaultBreadcrumbs(pathname: string): BreadcrumbItemConfig[] {
   const segments = pathname.split("/").filter(Boolean);
   if (segments.length === 0) return [{ label: "Dashboard" }];

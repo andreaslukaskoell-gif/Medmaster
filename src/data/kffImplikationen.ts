@@ -29,9 +29,7 @@
 import type { ImplicationRelationModel, ImplicationTaskCanonical } from "./kffImplikationenLogic";
 import {
   buildRelationModelFromPremises,
-  isRelationModelConsistent,
   modelToConstraints,
-  constraintsConsistent,
   layoutSatisfiesConstraints,
   deriveEulerLayoutFromModel,
   isCorrectOptionEntailed,

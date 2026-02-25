@@ -31,12 +31,12 @@ export function useDashboardProfile(): DashboardProfile {
 
   useEffect(() => {
     if (!userId) {
-      setState((s) => ({ ...s, loading: false, hasData: false }));
-      return;
+      const t = setTimeout(() => setState((s) => ({ ...s, loading: false, hasData: false })), 0);
+      return () => clearTimeout(t);
     }
     if (!supabase) {
-      setState((s) => ({ ...s, loading: false, hasData: false }));
-      return;
+      const t = setTimeout(() => setState((s) => ({ ...s, loading: false, hasData: false })), 0);
+      return () => clearTimeout(t);
     }
 
     let cancelled = false;

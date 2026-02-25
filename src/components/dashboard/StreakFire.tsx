@@ -38,7 +38,6 @@ type StreakFlameIconProps = {
 export function StreakFlameIcon({
   streak,
   hasActivityToday,
-  iconOnly: _iconOnly = true,
   className,
   size = "inherit",
 }: StreakFlameIconProps) {

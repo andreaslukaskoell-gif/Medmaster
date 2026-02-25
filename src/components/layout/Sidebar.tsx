@@ -661,7 +661,20 @@ export function Sidebar({
             Abmelden
           </button>
         )}
-        <p className="text-[10px] text-[var(--muted)] text-center pt-2 opacity-50">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 pt-2 text-[10px] text-[var(--muted)] opacity-70">
+          <RouterLink to="/impressum" onClick={onClose} className="hover:underline">
+            Impressum
+          </RouterLink>
+          <span aria-hidden>·</span>
+          <RouterLink to="/datenschutz" onClick={onClose} className="hover:underline">
+            Datenschutz
+          </RouterLink>
+          <span aria-hidden>·</span>
+          <RouterLink to="/agb" onClick={onClose} className="hover:underline">
+            AGB
+          </RouterLink>
+        </div>
+        <p className="text-[10px] text-[var(--muted)] text-center pt-1 opacity-50">
           MedMaster v2.0
         </p>
       </div>

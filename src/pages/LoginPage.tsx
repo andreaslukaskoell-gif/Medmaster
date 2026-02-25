@@ -145,6 +145,19 @@ export default function LoginPage() {
             </p>
           </CardContent>
         </Card>
+        <p className="text-center text-xs text-muted">
+          <Link to="/impressum" className="hover:underline">
+            Impressum
+          </Link>
+          {" · "}
+          <Link to="/datenschutz" className="hover:underline">
+            Datenschutz
+          </Link>
+          {" · "}
+          <Link to="/agb" className="hover:underline">
+            AGB
+          </Link>
+        </p>
       </div>
     </div>
   );

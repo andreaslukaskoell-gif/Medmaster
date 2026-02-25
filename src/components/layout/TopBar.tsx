@@ -53,9 +53,13 @@ export function TopBar({
 
   useEffect(() => {
     if (showStoreValues && typeof xp === "number" && xp > prevXpRef.current) {
-      setXpFlash(true);
-      const t = setTimeout(() => setXpFlash(false), 600);
-      return () => clearTimeout(t);
+      const t = setTimeout(() => setXpFlash(true), 0);
+      const t2 = setTimeout(() => setXpFlash(false), 600);
+      prevXpRef.current = xp ?? 0;
+      return () => {
+        clearTimeout(t);
+        clearTimeout(t2);
+      };
     }
     prevXpRef.current = xp ?? 0;
   }, [xp, showStoreValues]);

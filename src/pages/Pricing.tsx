@@ -1,4 +1,5 @@
 import { Check, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -73,6 +74,9 @@ export default function Pricing() {
         <p className="text-muted mt-2 max-w-lg mx-auto">
           Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.
         </p>
+        <p className="text-sm text-amber-600 dark:text-amber-400 mt-2">
+          Zahlung (Stripe) wird zum Launch hinzugefügt — Upgrade-Buttons sind vorerst Platzhalter.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -103,8 +107,11 @@ export default function Pricing() {
                 variant={plan.highlighted ? "primary" : "outline"}
                 className="w-full mb-6"
                 size="lg"
+                disabled={plan.price !== "0"}
+                title={plan.price !== "0" ? "Zahlung demnächst verfügbar" : undefined}
+                asChild={plan.price === "0"}
               >
-                {plan.price === "0" ? "Kostenlos starten" : "Jetzt upgraden"}
+                {plan.price === "0" ? <Link to="/register">Kostenlos starten</Link> : "Demnächst"}
               </Button>
 
               <div className="space-y-3">

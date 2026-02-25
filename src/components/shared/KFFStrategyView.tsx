@@ -252,7 +252,7 @@ function MerkfaehigkeitProfil() {
               Name + 1 Merkmal + 1 Zahl
             </p>
             <p className="text-muted text-xs">
-              z. B. „Müller – Penicillin – Italien“ oder „Blutgruppe 0 – 12.03.1995“
+              z. B. „Müller – Penicillin – Italien“ oder „Blutgruppe 0 – 12.03.1995“
             </p>
             <p className="text-[10px] text-teal-700 dark:text-teal-300 mt-2">
               Ein Satz oder eine Eselsbrücke pro Person hilft mehr als isolierte Fakten.

@@ -36,8 +36,10 @@ export function KnowledgeBridgeSlideOver({
   onClose,
   chapterId,
   subject,
+  chapterTitle: _chapterTitle, // kept for API, not used in component
   content,
 }: KnowledgeBridgeSlideOverProps) {
+  void _chapterTitle;
   const navigate = useNavigate();
   const earnedBadges = useStore((s) => s.earnedBadges);
   const showDeep = subject === "physik" && earnedBadges.includes("physik-profi");

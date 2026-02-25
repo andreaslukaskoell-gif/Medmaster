@@ -30,11 +30,13 @@ export function useBMSSubchapterList(chapterId: string | null) {
 
   useEffect(() => {
     if (!chapterId || !supabase) {
-      setSubchapters([]);
-      setLoading(false);
-      return;
+      const t = setTimeout(() => {
+        setSubchapters([]);
+        setLoading(false);
+      }, 0);
+      return () => clearTimeout(t);
     }
-    setLoading(true);
+    const t = setTimeout(() => setLoading(true), 0);
     supabase
       .from("bms_subchapters")
       .select("id, title, chapter_id, questions")
@@ -56,6 +58,7 @@ export function useBMSSubchapterList(chapterId: string | null) {
         );
         setLoading(false);
       });
+    return () => clearTimeout(t);
   }, [chapterId]);
 
   return { subchapters, loading };
@@ -69,9 +72,10 @@ export function useBMSQuestions(subchapterIds: string[]) {
 
   useEffect(() => {
     if (!subchapterIds.length || !supabase) return;
-    setLoading(true);
-    setError(null);
-
+    const t = setTimeout(() => {
+      setLoading(true);
+      setError(null);
+    }, 0);
     supabase
       .from("bms_subchapters")
       .select("id, title, questions")
@@ -85,23 +89,34 @@ export function useBMSQuestions(subchapterIds: string[]) {
         const allQ: BMSQuestion[] = [];
         (data || []).forEach((row) => {
           if (!Array.isArray(row.questions)) return;
-          row.questions.forEach((q: any) => {
-            allQ.push({
-              id: q.id,
-              question: q.question,
-              options: q.options,
-              correct: q.correct,
-              explanation: q.explanation || "",
-              difficulty: q.difficulty || "medium",
-              tags: q.tags || [],
-              ukId: row.id,
-              ukTitle: row.title,
-            });
-          });
+          row.questions.forEach(
+            (q: {
+              id?: string;
+              question?: string;
+              options?: unknown;
+              correct?: string;
+              explanation?: string;
+              difficulty?: string;
+              tags?: string[];
+            }) => {
+              allQ.push({
+                id: q.id,
+                question: q.question,
+                options: q.options,
+                correct: q.correct,
+                explanation: q.explanation || "",
+                difficulty: q.difficulty || "medium",
+                tags: q.tags || [],
+                ukId: row.id,
+                ukTitle: row.title,
+              });
+            }
+          );
         });
         setQuestions(allQ);
         setLoading(false);
       });
+    return () => clearTimeout(t);
   }, [subchapterIds.join(",")]);
 
   return { questions, loading, error };
