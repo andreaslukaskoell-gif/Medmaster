@@ -197,6 +197,9 @@ export default function KFF() {
         <p className="text-muted mt-1">
           Trainiere Zahlenfolgen, Gedächtnis, logisches Denken und Wortflüssigkeit.
         </p>
+        <Badge variant="info" className="mt-2 text-xs font-normal">
+          An dein Level angepasst
+        </Badge>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {modules.map((m) => (

@@ -96,7 +96,8 @@ export async function getTasksForUserWithWeakness(
 
   let weak: Task[] = [];
   if (weakCount > 0 && failedIds && failedIds.length > 0) {
-    const idsToFetch = shuffle([...failedIds]).slice(0, weakCount);
+    // failedIds sind bereits nach wrongCount sortiert (meist falsch zuerst)
+    const idsToFetch = failedIds.slice(0, weakCount);
     weak = await getTasksByIds(idsToFetch);
   }
 

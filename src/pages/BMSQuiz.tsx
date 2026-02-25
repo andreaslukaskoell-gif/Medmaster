@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -99,6 +99,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const questionStartRef = useRef<number>(Date.now());
+  const questionTimesRef = useRef<Record<string, number>>({});
+
+  useEffect(() => {
+    questionStartRef.current = Date.now();
+  }, [currentIndex]);
   const [submitted, setSubmitted] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [aiTutorQ, setAiTutorQ] = useState<{
@@ -132,14 +138,19 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     onConfirm: () => {
       if (currentQuestion && answers[currentQuestion.id]) {
         if (currentIndex < questions.length - 1) {
+          captureQuestionTime(currentQuestion.id);
           setCurrentIndex((i) => i + 1);
         } else if (allAnswered) {
+          captureQuestionTime(currentQuestion.id);
           handleSubmit();
         }
       }
     },
     onNext: () => {
-      if (currentIndex < questions.length - 1) setCurrentIndex((i) => i + 1);
+      if (currentIndex < questions.length - 1) {
+        captureQuestionTime(currentQuestion?.id ?? "");
+        setCurrentIndex((i) => i + 1);
+      }
     },
     onPrev: () => {
       if (currentIndex > 0) setCurrentIndex((i) => i - 1);
@@ -151,7 +162,13 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     setAnswers((prev) => ({ ...prev, [currentQuestion.id]: optionId }));
   };
 
+  const captureQuestionTime = (questionId: string) => {
+    const elapsed = Math.round((Date.now() - questionStartRef.current) / 1000);
+    questionTimesRef.current = { ...questionTimesRef.current, [questionId]: elapsed };
+  };
+
   const handleSubmit = () => {
+    if (currentQuestion) captureQuestionTime(currentQuestion.id);
     const score = questions.filter((q) => answers[q.id] === q.correctOptionId).length;
     const pct = Math.round((score / questions.length) * 100);
 
@@ -170,12 +187,13 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
       })),
     });
 
-    // Update spaced repetition and adaptive store for each question
+    // Update spaced repetition and adaptive store for each question (mit echter Zeit pro Frage)
     questions.forEach((q) => {
       const correct = answers[q.id] === q.correctOptionId;
+      const timeSeconds = questionTimesRef.current[q.id] ?? 30;
       updateSpacedRepetition(q.id, correct);
       const swId = getDirectStichwortId(q.id) || getStichwortForQuestion(q.id);
-      if (swId) recordAnswer(swId, correct, 30);
+      if (swId) recordAnswer(swId, correct, timeSeconds);
     });
 
     addXP(score * 10);
@@ -350,12 +368,15 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" />
           Abbrechen
         </Button>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
+          <Badge variant="info" className="text-xs font-normal">
+            An dein Level angepasst
+          </Badge>
           <button
             onClick={() => toggleFlagQuestion(currentQuestion.id)}
             className={`p-1.5 rounded cursor-pointer ${isFlagged ? "text-red-500" : "text-muted hover:text-gray-700 dark:hover:text-gray-300"}`}
@@ -425,7 +446,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             </Button>
           )}
           {currentIndex < questions.length - 1 ? (
-            <Button onClick={() => setCurrentIndex((i) => i + 1)}>
+            <Button
+              onClick={() => {
+                captureQuestionTime(currentQuestion?.id ?? "");
+                setCurrentIndex((i) => i + 1);
+              }}
+            >
               Weiter
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>

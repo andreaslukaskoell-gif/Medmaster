@@ -40,27 +40,57 @@ function safeStorage() {
 function sanitizeKffFailedTasks(
   newFormat: unknown,
   oldFormat: unknown
-): Record<string, { taskIds: string[]; wrongCount: Record<string, number>; consecutiveCorrect: Record<string, number> }> {
+): Record<
+  string,
+  {
+    taskIds: string[];
+    wrongCount: Record<string, number>;
+    consecutiveCorrect: Record<string, number>;
+  }
+> {
   if (newFormat && typeof newFormat === "object") {
-    const out: Record<string, { taskIds: string[]; wrongCount: Record<string, number>; consecutiveCorrect: Record<string, number> }> = {};
+    const out: Record<
+      string,
+      {
+        taskIds: string[];
+        wrongCount: Record<string, number>;
+        consecutiveCorrect: Record<string, number>;
+      }
+    > = {};
     for (const [domain, val] of Object.entries(newFormat as Record<string, unknown>)) {
       if (val && typeof val === "object" && Array.isArray((val as { taskIds?: unknown }).taskIds)) {
-        const v = val as { taskIds: string[]; wrongCount?: Record<string, number>; consecutiveCorrect?: Record<string, number> };
+        const v = val as {
+          taskIds: string[];
+          wrongCount?: Record<string, number>;
+          consecutiveCorrect?: Record<string, number>;
+        };
         out[domain] = {
           taskIds: Array.isArray(v.taskIds) ? v.taskIds : [],
           wrongCount: v.wrongCount && typeof v.wrongCount === "object" ? v.wrongCount : {},
-          consecutiveCorrect: v.consecutiveCorrect && typeof v.consecutiveCorrect === "object" ? v.consecutiveCorrect : {},
+          consecutiveCorrect:
+            v.consecutiveCorrect && typeof v.consecutiveCorrect === "object"
+              ? v.consecutiveCorrect
+              : {},
         };
       }
     }
     return out;
   }
   if (oldFormat && typeof oldFormat === "object") {
-    const out: Record<string, { taskIds: string[]; wrongCount: Record<string, number>; consecutiveCorrect: Record<string, number> }> = {};
+    const out: Record<
+      string,
+      {
+        taskIds: string[];
+        wrongCount: Record<string, number>;
+        consecutiveCorrect: Record<string, number>;
+      }
+    > = {};
     for (const [domain, ids] of Object.entries(oldFormat as Record<string, string[]>)) {
       if (Array.isArray(ids)) {
         const wrongCount: Record<string, number> = {};
-        ids.forEach((id) => { wrongCount[id] = (wrongCount[id] ?? 0) + 1; });
+        ids.forEach((id) => {
+          wrongCount[id] = (wrongCount[id] ?? 0) + 1;
+        });
         out[domain] = { taskIds: [...ids], wrongCount, consecutiveCorrect: {} };
       }
     }
@@ -68,6 +98,9 @@ function sanitizeKffFailedTasks(
   }
   return {};
 }
+
+/** Sanitized persisted state: verhindert NaN/undefined/korrupte Typen nach Reload. */
+function sanitizePersisted(state: unknown): Partial<AppState> {
   try {
     if (state == null || typeof state !== "object") return {};
   } catch {
@@ -365,14 +398,24 @@ export const useStore = create<AppState>()(
           if (cur.taskIds.includes(taskId)) {
             const wrongCount = { ...cur.wrongCount, [taskId]: (cur.wrongCount[taskId] ?? 0) + 1 };
             return {
-              kffFailedTasks: { ...s.kffFailedTasks, [domain]: { ...cur, wrongCount, consecutiveCorrect: { ...cur.consecutiveCorrect, [taskId]: 0 } } },
+              kffFailedTasks: {
+                ...s.kffFailedTasks,
+                [domain]: {
+                  ...cur,
+                  wrongCount,
+                  consecutiveCorrect: { ...cur.consecutiveCorrect, [taskId]: 0 },
+                },
+              },
             };
           }
           const taskIds = [taskId, ...cur.taskIds].slice(0, 30);
           const wrongCount = { ...cur.wrongCount, [taskId]: (cur.wrongCount[taskId] ?? 0) + 1 };
           const consecutiveCorrect = { ...cur.consecutiveCorrect, [taskId]: 0 };
           return {
-            kffFailedTasks: { ...s.kffFailedTasks, [domain]: { taskIds, wrongCount, consecutiveCorrect } },
+            kffFailedTasks: {
+              ...s.kffFailedTasks,
+              [domain]: { taskIds, wrongCount, consecutiveCorrect },
+            },
           };
         }),
       markKffTaskCorrect: (domain, taskId) =>
@@ -384,13 +427,18 @@ export const useStore = create<AppState>()(
             return {
               kffFailedTasks: {
                 ...s.kffFailedTasks,
-                [domain]: { ...cur, consecutiveCorrect: { ...cur.consecutiveCorrect, [taskId]: nextConsec } },
+                [domain]: {
+                  ...cur,
+                  consecutiveCorrect: { ...cur.consecutiveCorrect, [taskId]: nextConsec },
+                },
               },
             };
           }
           const taskIds = cur.taskIds.filter((id) => id !== taskId);
-          const wrongCount = { ...cur.wrongCount }; delete wrongCount[taskId];
-          const consecutiveCorrect = { ...cur.consecutiveCorrect }; delete consecutiveCorrect[taskId];
+          const wrongCount = { ...cur.wrongCount };
+          delete wrongCount[taskId];
+          const consecutiveCorrect = { ...cur.consecutiveCorrect };
+          delete consecutiveCorrect[taskId];
           const nextTasks = { ...s.kffFailedTasks };
           if (taskIds.length === 0) delete nextTasks[domain];
           else nextTasks[domain] = { taskIds, wrongCount, consecutiveCorrect };

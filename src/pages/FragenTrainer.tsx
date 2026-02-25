@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
 import { FSRSRatingButtons } from "@/components/bms/FSRSRatingButtons";
 import { TypAQuestion } from "@/components/bms/TypAQuestion";
@@ -440,9 +441,35 @@ function QuizScreen({
   const isReviewMode = idx < answers.length;
   const reviewAnswer = isReviewMode ? answers[idx] : null;
 
+  const [adaptiveHintDismissed, setAdaptiveHintDismissed] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return localStorage.getItem("medmaster-adaptive-hint") === "1";
+  });
+  const showAdaptiveHint = !adaptiveHintDismissed;
+  const dismissAdaptiveHint = () => {
+    setAdaptiveHintDismissed(true);
+    try {
+      localStorage.setItem("medmaster-adaptive-hint", "1");
+    } catch {}
+  };
+
   return (
     <div className="flex gap-4 max-w-4xl mx-auto">
       <div className="flex-1 min-w-0 space-y-4">
+        {showAdaptiveHint && (
+          <div className="flex items-center justify-between gap-2 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-3 py-2">
+            <p className="text-xs text-blue-800 dark:text-blue-200">
+              Schwierigkeit und Wiederholungen passen sich deinem Stand an.
+            </p>
+            <button
+              type="button"
+              onClick={dismissAdaptiveHint}
+              className="text-blue-600 dark:text-blue-400 hover:underline shrink-0 text-xs"
+            >
+              OK
+            </button>
+          </div>
+        )}
         <div className="flex items-center justify-between">
           <Button variant="ghost" size="sm" onClick={onBack}>
             <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -463,6 +490,9 @@ function QuizScreen({
             <span className="text-sm text-muted-foreground font-medium">
               {idx + 1} / {fragen.length}
             </span>
+            <Badge variant="info" className="text-xs font-normal">
+              An dein Level angepasst
+            </Badge>
           </div>
         </div>
 
