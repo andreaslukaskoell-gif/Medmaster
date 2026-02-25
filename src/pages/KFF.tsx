@@ -16,18 +16,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import {
-  generateWortflüssigkeitSet,
-  generateSyllogismSet,
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
 } from "@/data/kffGenerators";
-import type { WortflüssigkeitQuestion, SyllogismQuestion } from "@/data/kffGenerators";
 import {
   OFFICIAL_GM_EXAMPLES,
   validateOfficialGedaechtnisExamples,
@@ -95,18 +93,18 @@ export default function KFF() {
   }, [isLoading]);
 
   if (isLoading && !authTimedOut) {
-    return <div className="p-8 text-slate-500 dark:text-slate-400">Lade KFF-Module...</div>;
+    return <PageLoadingSkeleton />;
   }
   if (authTimedOut || !user) {
     return (
-      <div className="p-8 text-center">
-        <p className="text-slate-500 dark:text-slate-400 mb-4">
-          Sitzung abgelaufen oder nicht eingeloggt.
-        </p>
-        <a href="/login" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-          → Zum Login
-        </a>
-      </div>
+      <PageError
+        message="Sitzung abgelaufen oder nicht eingeloggt. Bitte melde dich erneut an."
+        action={
+          <Button asChild variant="outline" className="gap-2">
+            <a href="/login">Zum Login</a>
+          </Button>
+        }
+      />
     );
   }
 
@@ -252,35 +250,9 @@ export default function KFF() {
 // Helpers
 // ==========================================
 
-function shuffleMixed<T>(
-  generator: (count: number, diff: "leicht" | "mittel" | "schwer") => T[],
-  totalCount: number
-): T[] {
-  const perDiff = Math.ceil(totalCount / 3);
-  const all = [
-    ...generator(perDiff, "leicht"),
-    ...generator(perDiff, "mittel"),
-    ...generator(perDiff, "schwer"),
-  ].slice(0, totalCount);
-  for (let i = all.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [all[i], all[j]] = [all[j], all[i]];
-  }
-  return all;
-}
-
 // ==========================================
 // ZAHLENFOLGEN
 // ==========================================
-
-function shuffleArray<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 type ZahlenfolgenMode = "official" | "training";
 
@@ -296,7 +268,7 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
   const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
-  const isOfficialMode = mode === "official";
+  void (mode === "official");
 
   const startOfficial = () => {
     const valid = filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]);
@@ -1065,7 +1037,7 @@ function impDifficultyLabel(d: 1 | 2 | 3): string {
 type ImplikationenMode = "official" | "training";
 
 function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
-  const [mode, setMode] = useState<ImplikationenMode | null>(null);
+  const [, setMode] = useState<ImplikationenMode | null>(null);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questionCount, setQuestionCount] = useState(10);
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
@@ -1436,7 +1408,7 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
 type WortfluessigkeitMode = "official" | "training";
 
 function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
-  const [mode, setMode] = useState<WortfluessigkeitMode | null>(null);
+  const [, setMode] = useState<WortfluessigkeitMode | null>(null);
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
@@ -1834,15 +1806,18 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       if (timerRef.current) clearInterval(timerRef.current);
       return;
     }
-    setTimeLeft(90);
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) return 0;
-        return prev - 1;
-      });
-    }, 1000);
+    const t = setTimeout(() => {
+      setTimeLeft(90);
+      if (timerRef.current) clearInterval(timerRef.current);
+      timerRef.current = setInterval(() => {
+        setTimeLeft((prev) => {
+          if (prev <= 1) return 0;
+          return prev - 1;
+        });
+      }, 1000);
+    }, 0);
     return () => {
+      clearTimeout(t);
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [phase, index]);

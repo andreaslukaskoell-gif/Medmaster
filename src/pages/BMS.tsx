@@ -1,3 +1,8 @@
+/**
+ * BMS Overview: Fachauswahl, Kapitelliste, SWR-Loader, URL-Sync.
+ */
+/* eslint-disable @typescript-eslint/no-explicit-any -- dev-only window debug helpers */
+
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -13,7 +18,6 @@ import {
   Clock,
   ChevronRight,
   ArrowLeft,
-  AlertTriangle,
   Award,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,7 +37,7 @@ import {
 } from "@/lib/bmsRoutes";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/migrateBMS";
-import { ChapterListSkeleton } from "@/components/chapter/ChapterListSkeleton";
+import { PageLoadingSkeleton, PageError, PageEmpty } from "@/components/ui/page-states";
 import { MRSWidget } from "@/components/bms/MRSWidget";
 import { useMRS } from "@/hooks/useFragenTrainer";
 
@@ -125,10 +129,13 @@ export default function BMS() {
 
   // Safe store access with fallback
   const store = useSafeStore();
-  const completedChapters =
-    store?.completedChapters && Array.isArray(store.completedChapters)
-      ? store.completedChapters
-      : [];
+  const completedChapters = useMemo(
+    () =>
+      store?.completedChapters && Array.isArray(store.completedChapters)
+        ? store.completedChapters
+        : [],
+    [store?.completedChapters]
+  );
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const setLastPath = useAdaptiveStore((s) => s.setLastPath);
   const { setBreadcrumbs } = useBreadcrumb();
@@ -153,10 +160,12 @@ export default function BMS() {
 
   // Initialize and listen for localStorage changes
   useEffect(() => {
-    setIsLoading(false); // Mark as loaded after mount
+    const t = setTimeout(() => setIsLoading(false), 0);
+    return () => clearTimeout(t);
+  }, []);
 
+  useEffect(() => {
     // Make chapter listing and optimization functions available in console for debugging
-    // Usage:
     //   window.showChapters() - zeigt Übersicht
     //   window.listChapters() - gibt Daten zurück
     //   window.optimizeChapters() - optimiert alle Kapitel
@@ -200,27 +209,29 @@ export default function BMS() {
 
   // Stale-While-Revalidate: zuerst Cache (sofort), dann Supabase
   useEffect(() => {
-    setIsLoading(true);
-    setError(null);
-
-    loadBMSChaptersSWR(
-      (chapters, source) => {
-        setSupabaseChapters(chapters);
-        setIsLoading(false);
-        if (source === "cache") {
-          if (import.meta.env.DEV)
-            console.log("📦 Showing cached chapters (revalidating in background)");
-        } else {
-          if (import.meta.env.DEV)
-            console.log("✅ Loaded", chapters.length, "chapters from Supabase");
-        }
-      },
-      (err) => {
-        setError(err);
-        setIsLoading(false);
-      },
-      () => {}
-    );
+    const t = setTimeout(() => {
+      setIsLoading(true);
+      setError(null);
+      loadBMSChaptersSWR(
+        (chapters, source) => {
+          setSupabaseChapters(chapters);
+          setIsLoading(false);
+          if (source === "cache") {
+            if (import.meta.env.DEV)
+              console.log("📦 Showing cached chapters (revalidating in background)");
+          } else {
+            if (import.meta.env.DEV)
+              console.log("✅ Loaded", chapters.length, "chapters from Supabase");
+          }
+        },
+        (err) => {
+          setError(err);
+          setIsLoading(false);
+        },
+        () => {}
+      );
+    }, 0);
+    return () => clearTimeout(t);
   }, []);
 
   // URL-Sync: Lese fach/kapitel aus URL und setze State (sobald Kapitel geladen)
@@ -228,16 +239,15 @@ export default function BMS() {
     if (supabaseChapters.length === 0) return;
 
     const subjectId = subjectFromSlug(fachParam);
-    const allChapterIds = supabaseChapters.map((c) => c.id);
-    const chapterId = chapterIdFromParams(fachParam, kapitelParam, allChapterIds);
-
-    if (subjectId) {
-      setSelectedSubject(subjectId);
-      // Note: activeKapitel will be updated by the next useEffect from chaptersForSelectedSubject
-    } else if (fachParam === undefined && kapitelParam === undefined) {
-      setSelectedSubject(null);
-      setActiveKapitel(null);
-    }
+    const t = setTimeout(() => {
+      if (subjectId) {
+        setSelectedSubject(subjectId);
+      } else if (fachParam === undefined && kapitelParam === undefined) {
+        setSelectedSubject(null);
+        setActiveKapitel(null);
+      }
+    }, 0);
+    return () => clearTimeout(t);
   }, [fachParam, kapitelParam, supabaseChapters]);
 
   // Compute merged chapters for selected subject (only Supabase)
@@ -376,7 +386,8 @@ export default function BMS() {
     if (chapterId) {
       const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
       if (chapter) {
-        setActiveKapitel(chapter);
+        const t = setTimeout(() => setActiveKapitel(chapter), 0);
+        return () => clearTimeout(t);
       }
     }
   }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
@@ -384,47 +395,19 @@ export default function BMS() {
   // Error state: nur anzeigen wenn wirklich keine Daten (kein Cache, Supabase leer/Fehler)
   if (error && supabaseChapters.length === 0) {
     return (
-      <div className="max-w-6xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <AlertTriangle className="w-12 h-12 text-red-600 dark:text-red-400 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Fehler beim Laden
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">{error}</p>
-            <Button onClick={() => window.location.reload()}>Seite neu laden</Button>
-          </CardContent>
-        </Card>
+      <div className="max-w-6xl mx-auto p-6">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
+        <PageError message={error} onRetry={() => window.location.reload()} />
       </div>
     );
   }
 
-  // Loading state with skeleton (nur wenn noch keine Daten aus Cache)
+  // Loading state (nur wenn noch keine Daten aus Cache)
   if (isLoading && supabaseChapters.length === 0) {
     return (
       <div className="max-w-6xl mx-auto space-y-6 p-6">
         <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
-        <div>
-          <div className="h-8 w-64 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2" />
-          <div className="h-4 w-96 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-        </div>
-        {selectedSubject ? (
-          <ChapterListSkeleton count={6} />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 space-y-4"
-              >
-                <div className="h-6 w-32 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
-                <div className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse" />
-              </div>
-            ))}
-          </div>
-        )}
+        <PageLoadingSkeleton />
       </div>
     );
   }
@@ -445,7 +428,6 @@ export default function BMS() {
         </div>
       );
     }
-    const filterParam = searchParams.get("filter");
     const ukParam = searchParams.get("uk");
     const initialUkIndex = ukParam !== null ? parseInt(ukParam, 10) : undefined;
     const validUkIndex =
@@ -498,6 +480,34 @@ export default function BMS() {
 
     // Use only sequenced (official BMS) chapters to avoid Supabase ghost entries
     const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
+
+    if (kapitel.length === 0) {
+      return (
+        <div className="max-w-5xl mx-auto p-6">
+          <BreadcrumbNav
+            items={[
+              { label: "Dashboard", href: "/" },
+              { label: "BMS", href: "/bms" },
+              { label: subjectData.label },
+            ]}
+          />
+          <div className="flex items-center gap-4 flex-wrap mt-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                setSelectedSubject(null);
+                navigate("/bms");
+              }}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Zurück zu Fächern
+            </Button>
+          </div>
+          <PageEmpty message="In diesem Fach sind noch keine Kapitel vorhanden." />
+        </div>
+      );
+    }
 
     const subjectUK = kapitel.reduce((sum, k) => {
       if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
