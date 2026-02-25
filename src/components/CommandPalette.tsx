@@ -168,6 +168,9 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.97, y: -8 }}
           transition={{ duration: 0.2 }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Kapitel und Unterkapitel durchsuchen"
           className="relative w-full max-w-xl bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-slate-200/80 dark:border-slate-700/50 overflow-hidden card-glass"
           onClick={(e) => e.stopPropagation()}
         >

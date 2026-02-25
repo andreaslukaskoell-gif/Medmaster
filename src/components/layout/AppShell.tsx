@@ -189,6 +189,12 @@ export function AppShell() {
   return (
     <BreadcrumbProvider>
       <div className="min-h-screen bg-[var(--background)]">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-[var(--background)] focus:text-[var(--foreground)] focus:rounded-lg focus:ring-2 focus:ring-[var(--color-primary-500)] focus:outline-none"
+        >
+          Zum Hauptinhalt springen
+        </a>
         {cmdPaletteEverOpened && (
           <Suspense fallback={null}>
             <CommandPalette
@@ -245,6 +251,8 @@ export function AppShell() {
             onToggleFocusMode={toggleFocusMode}
           />
           <main
+            id="main-content"
+            tabIndex={-1}
             className={cn(
               "flex-1 p-4 lg:p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
               focusModeActive ? "pt-12 max-w-6xl mx-auto" : "pt-14 sm:pt-16",
