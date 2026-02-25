@@ -336,7 +336,8 @@ export const useAdaptiveStore = create<AdaptiveState>()(
             continue;
           }
           const stat = profile.stichwortStats[swId];
-          if (!stat || stat.totalAttempts === 0) {
+          // Erst nach 2+ Versuchen in weak/medium/strong einordnen
+          if (!stat || stat.totalAttempts < 3) {
             unseen.push(q);
           } else if (stat.successRate < 60) {
             weak.push(q);
@@ -356,12 +357,17 @@ export const useAdaptiveStore = create<AdaptiveState>()(
           return a;
         };
 
+        const diffOrder = (d: Question["difficulty"]) =>
+          d === "leicht" ? 0 : d === "mittel" ? 1 : 2;
+        const sortUnseenByDifficulty = (arr: Question[]) =>
+          [...arr].sort((a, b) => diffOrder(a.difficulty) - diffOrder(b.difficulty));
+
         if (options?.progressive) {
-          // Sukzessive schwieriger: zuerst stark (einfach für User), dann medium, unseen, zuletzt weak
+          // Sukzessive schwieriger: stark → medium → unseen (leicht zuerst) → weak
           const result: Question[] = [];
           result.push(...shuffle(strong));
           result.push(...shuffle(medium));
-          result.push(...shuffle(unseen));
+          result.push(...sortUnseenByDifficulty(unseen));
           result.push(...shuffle(weak));
           return result.slice(0, count);
         }

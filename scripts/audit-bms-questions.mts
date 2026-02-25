@@ -20,7 +20,8 @@ type IssueKind =
   | "correctOptionId_not_in_options"
   | "chapter_unknown"
   | "duplicate_id"
-  | "empty_text";
+  | "empty_text"
+  | "empty_explanation";
 
 interface Issue {
   id: string;
@@ -63,6 +64,15 @@ for (const q of allBmsQuestions) {
 
   if (!q.text?.trim())
     issues.push({ id: q.id, kind: "empty_text", message: "Leerer Fragetext", subject: q.subject, chapter: q.chapter });
+
+  if (!q.explanation || !String(q.explanation).trim())
+    issues.push({
+      id: q.id,
+      kind: "empty_explanation",
+      message: "Keine Erklärung in der Lösung",
+      subject: q.subject,
+      chapter: q.chapter,
+    });
 
   const opts = q.options;
   if (!Array.isArray(opts) || opts.length !== 5) {
@@ -137,6 +147,11 @@ console.log(`Fehler/Probleme: ${issues.length}`);
 console.log("\n--- Details Fehler (max. 80) ---");
 issues.slice(0, 80).forEach((i) => console.log(`[${i.id}] ${i.kind}: ${i.message}`));
 if (issues.length > 80) console.log(`... und ${issues.length - 80} weitere.`);
+const missingExplanation = issues.filter((i) => i.kind === "empty_explanation");
+if (missingExplanation.length > 0) {
+  console.log(`\n--- ${missingExplanation.length} Fragen OHNE Erklärung in der Lösung ---`);
+  missingExplanation.forEach((i) => console.log(`  ${i.id} (${i.subject} / ${i.chapter ?? "—"})`));
+}
 const critical = issues.filter(
   (i) => i.kind === "options_not_5" || i.kind === "correctOptionId_missing" || i.kind === "correctOptionId_not_in_options"
 );

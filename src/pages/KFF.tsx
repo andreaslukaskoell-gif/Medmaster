@@ -52,7 +52,7 @@ import {
   filterValidGedaechtnisQuestions,
   logPoolWarning,
 } from "@/data/kffValidation";
-import { getTasksForUserOrFill, taskToData } from "@/lib/taskDb";
+import { getTasksForUserOrFill, getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
@@ -264,7 +264,16 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<SequenceTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    skillRating,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+    getKffFailedIdsForDomain,
+  } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -284,7 +293,13 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
   const startTraining = async () => {
     const domain = "kff-zahlenfolgen" as const;
     const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const tasks = await getTasksForUserWithWeakness(
+      domain,
+      rating,
+      questionCount,
+      150,
+      getKffFailedIdsForDomain(domain)
+    );
     const raw = tasks.map((t) => taskToData<SequenceTask>(t));
     const valid = filterValidSequenceTasks(raw);
     setQuestions(valid);
@@ -302,6 +317,11 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
     const score = list.filter((q) => answers[q.id] === q.correctOptionId).length;
     const correct = score;
     const wrong = list.length - correct;
+    const domain = "kff-zahlenfolgen" as const;
+    list.forEach((q) => {
+      if (answers[q.id] !== q.correctOptionId) addKffTaskFailed(domain, q.id);
+      else markKffTaskCorrect(domain, q.id);
+    });
     setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-zf-${Date.now()}`,
@@ -1046,7 +1066,16 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    skillRating,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+    getKffFailedIdsForDomain,
+  } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -1065,7 +1094,13 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
   const startTraining = async () => {
     const domain = "kff-implikationen" as const;
     const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const tasks = await getTasksForUserWithWeakness(
+      domain,
+      rating,
+      questionCount,
+      150,
+      getKffFailedIdsForDomain(domain)
+    );
     const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
     const valid = filterValidImplikationTasks(raw);
     setQuestions(valid);
@@ -1082,6 +1117,11 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
     const score = safeQuestions.filter((qu) => answers[qu.id] === qu.correctAnswer).length;
     const correct = score;
     const wrong = safeQuestions.length - correct;
+    const domain = "kff-implikationen" as const;
+    safeQuestions.forEach((qu) => {
+      if (answers[qu.id] !== qu.correctAnswer) addKffTaskFailed(domain, qu.id);
+      else markKffTaskCorrect(domain, qu.id);
+    });
     setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-imp-${Date.now()}`,
@@ -1418,7 +1458,16 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    skillRating,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+    getKffFailedIdsForDomain,
+  } = useStore();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -1444,7 +1493,13 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const startTraining = async () => {
     const domain = "kff-wortflüssigkeit" as const;
     const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserOrFill(domain, rating, questionCount, 150);
+    const tasks = await getTasksForUserWithWeakness(
+      domain,
+      rating,
+      questionCount,
+      150,
+      getKffFailedIdsForDomain(domain)
+    );
     const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
     const valid = filterValidWordFluencyTasks(raw);
     setQuestions(valid);
@@ -1465,6 +1520,12 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     }).length;
     const correct = score;
     const wrong = safeQuestions.length - correct;
+    const domain = "kff-wortflüssigkeit" as const;
+    safeQuestions.forEach((qu) => {
+      const id = qu.id ?? "";
+      if (answers[id] !== qu.options[qu.correctIndex]) addKffTaskFailed(domain, id);
+      else markKffTaskCorrect(domain, id);
+    });
     setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
     saveQuizResult({
       id: `kff-wf-${Date.now()}`,
@@ -1767,16 +1828,22 @@ const FILL_FZ = "#5eb8f0";
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [mode, setMode] = useState<"official" | "training" | null>(null);
-  const [trainingDifficulty, setTrainingDifficulty] = useState<"easy" | "medium" | "hard">(
-    "medium"
-  );
   const [questionCount, setQuestionCount] = useState(10);
   const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(90);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const { addXP, checkStreak, saveQuizResult, skillRating, setSkillRating } = useStore();
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    skillRating,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+    getKffFailedIdsForDomain,
+  } = useStore();
 
   const startOfficial = () => {
     const list = [...OFFICIAL_FZ_EXAMPLES];
@@ -1792,7 +1859,13 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const startTraining = async () => {
     const domain = "kff-figuren" as const;
     const rating = skillRating ?? 500;
-    const tasks = await getTasksForUserOrFill(domain, rating, Math.min(questionCount, 150), 150);
+    const tasks = await getTasksForUserWithWeakness(
+      domain,
+      rating,
+      Math.min(questionCount, 150),
+      150,
+      getKffFailedIdsForDomain(domain)
+    );
     const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
     const valid = filterValidFigurenTasks(list);
     setQuestions(valid);
@@ -1832,9 +1905,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
 
   const handleFzSubmit = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
+    const domain = "kff-figuren" as const;
     const score = questions.filter(
       (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
     ).length;
+    questions.forEach((q) => {
+      if (answers[q.id] !== FZ_OPTION_LABELS[q.correctIndex]) addKffTaskFailed(domain, q.id);
+      else markKffTaskCorrect(domain, q.id);
+    });
     const correct = score;
     const wrong = questions.length - correct;
     setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
@@ -1855,7 +1933,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     checkStreak();
     setPhase("result");
     setIndex(0);
-  }, [questions, answers, saveQuizResult, addXP, checkStreak, setSkillRating]);
+  }, [questions, answers, saveQuizResult, addXP, checkStreak, setSkillRating, addKffTaskFailed]);
 
   const goToNext = () => {
     if (index < questions.length - 1) {
@@ -1913,7 +1991,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 </span>
                 <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">Training</h2>
                 <p className="text-sm text-muted mt-1">
-                  Geprüfte Trainingsaufgaben mit wählbarer Schwierigkeit (leicht / mittel / schwer).
+                  Geprüfte Trainingsaufgaben – Schwierigkeit passt sich deinem Level an.
                 </p>
               </CardContent>
             </Card>
@@ -1939,22 +2017,6 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         ) : (
           <Card>
             <CardContent className="p-6 space-y-6">
-              <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Schwierigkeit</p>
-              <div className="flex gap-2">
-                {(["easy", "medium", "hard"] as const).map((d) => (
-                  <button
-                    key={d}
-                    onClick={() => setTrainingDifficulty(d)}
-                    className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                      trainingDifficulty === d
-                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}
-                  >
-                    {difficultyLabel(d)}
-                  </button>
-                ))}
-              </div>
               <div>
                 <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
                   Anzahl Aufgaben

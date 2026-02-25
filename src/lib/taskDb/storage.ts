@@ -91,6 +91,26 @@ export async function getTaskById(id: string): Promise<Task | null> {
   return task ?? null;
 }
 
+/** Mehrere Tasks nach IDs laden (nur gültige, validated). */
+export async function getTasksByIds(ids: string[]): Promise<Task[]> {
+  if (ids.length === 0) return [];
+  const seen = new Set(ids);
+  const unique = [...seen];
+  if (supabase) {
+    const { data, error } = await supabase
+      .from("tasks")
+      .select("*")
+      .in("id", unique)
+      .is("invalid_reason", null)
+      .eq("validated", true);
+    if (!error && data) return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
+  }
+  const list = localStore
+    .get()
+    .filter((t) => unique.includes(t.id) && !t.invalidReason && t.validated);
+  return list;
+}
+
 export async function getTasksByDomain(filters: TaskFilters): Promise<Task[]> {
   const {
     domain,

@@ -35,7 +35,36 @@ export type FragenTrainerOptions = {
 
 // ── Session types ─────────────────────────────────────────────
 
-export type Confidence = 0 | 1 | 2; // 0=Raten 1=Unsicher 2=Sicher
+export type Confidence = 0 | 1 | 2; // 0=Raten 1=Unsicher 2=Sicher (nur noch abgeleitet, nicht vom User)
+
+/** Aus Richtig/Falsch + Fragenschwierigkeit + optional Antwortzeit ableiten (kein User-Self-Report). */
+export function deriveConfidence(
+  correct: boolean,
+  schwierigkeit: 1 | 2 | 3,
+  timeSeconds?: number
+): Confidence {
+  if (!correct) return 0;
+  // Richtig + leicht → sicher; richtig + mittel/schwer + schnell → eher sicher
+  if (schwierigkeit === 1) return 2;
+  if (timeSeconds != null) {
+    if (timeSeconds < 15) return 2; // Schnell richtig = sicher
+    if (timeSeconds > 45) return 1; // Langsam richtig = unsicher
+  }
+  return 1;
+}
+
+/** Vorschlag für FSRS-Rating aus abgeleiteter Confidence (für Hervorhebung im UI). */
+export function suggestFSRSRating(
+  correct: boolean,
+  schwierigkeit: 1 | 2 | 3,
+  timeSeconds?: number
+): FSRSRating {
+  if (!correct) return 1; // Wieder
+  const conf = deriveConfidence(correct, schwierigkeit, timeSeconds);
+  if (conf === 2 && timeSeconds != null && timeSeconds < 20) return 4; // Leicht
+  if (conf === 2) return 3; // Gut
+  return 2; // Schwer
+}
 
 export interface SessionAnswer {
   frage: BMSFrage;
@@ -44,6 +73,7 @@ export interface SessionAnswer {
   fsrs_rating: FSRSRating;
   chosenOption?: string; // TYP A/M
   typKPhase1?: boolean[]; // TYP K: user's per-Aussage decisions
+  typKChosenOption?: string; // TYP K: chosen combination key (A–E) for results screen
 }
 
 export type SessionAnswers = SessionAnswer[];
@@ -70,13 +100,18 @@ export function useFragenTrainer(
 
   // Session
   const [idx, setIdx] = useState(0);
-  const [confidence, setConfidence] = useState<Confidence | null>(null);
   const [answers, setAnswers] = useState<SessionAnswer[]>([]);
   const [sessionDone, setSessionDone] = useState(false);
   const [timeRemainingSeconds, setTimeRemainingSeconds] = useState<number | null>(
     timeLimitMinutes != null ? timeLimitMinutes * 60 : null
   );
   const startTimeRef = useRef<number>(0);
+  const questionStartRef = useRef<number>(Date.now());
+
+  // Wenn Frage wechselt: Startzeit für aktuelle Frage setzen
+  useEffect(() => {
+    questionStartRef.current = Date.now();
+  }, [idx]);
 
   // Per-question phase state
   const [revealed, setRevealed] = useState(false);
@@ -108,7 +143,6 @@ export function useFragenTrainer(
         setLoading(false);
         if (list.length === 0) setError(`Keine Fragen für ${subjectId} gefunden.`);
         setIdx(0);
-        setConfidence(null);
         setAnswers([]);
         setSessionDone(false);
         setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
@@ -164,7 +198,6 @@ export function useFragenTrainer(
           });
       }
       setIdx(0);
-      setConfidence(null);
       setAnswers([]);
       setSessionDone(false);
       setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
@@ -195,17 +228,17 @@ export function useFragenTrainer(
   // ── TYP A: choose option ────────────────────────────────────
   const chooseOption = useCallback(
     (key: string) => {
-      if (revealed || confidence === null) return;
+      if (revealed) return;
       setChosenOption(key);
       setRevealed(true);
     },
-    [revealed, confidence]
+    [revealed]
   );
 
   // ── TYP K phase 1: judge each Aussage ──────────────────────
   const judgeAussage = useCallback(
     (nr: number, decision: boolean) => {
-      if (typKPhase !== 1 || confidence === null) return;
+      if (typKPhase !== 1) return;
       setTypKDecisions((prev) => {
         const next = [...prev];
         const i = nr - 1;
@@ -213,7 +246,7 @@ export function useFragenTrainer(
         return next;
       });
     },
-    [typKPhase, confidence]
+    [typKPhase]
   );
 
   const confirmTypKPhase1 = useCallback(() => {
@@ -244,11 +277,13 @@ export function useFragenTrainer(
   // ── Record + advance after FSRS rating ──────────────────────
   const submitFSRSRating = useCallback(
     async (rating: FSRSRating) => {
-      if (!currentFrage || !revealed || confidence === null) return;
+      if (!currentFrage || !revealed) return;
       if (recordedRef.current) return;
       recordedRef.current = true;
 
+      const timeSeconds = Math.round((Date.now() - questionStartRef.current) / 1000);
       const correct = isAnswerCorrect();
+      const confidence = deriveConfidence(correct, currentFrage.schwierigkeit, timeSeconds);
 
       if (source === "supabase") {
         recordAttempt({
@@ -268,6 +303,7 @@ export function useFragenTrainer(
         fsrs_rating: rating,
         chosenOption: chosenOption ?? undefined,
         typKPhase1: typKDecisions.map((d) => !!d),
+        typKChosenOption: currentFrage.typ === "K" ? (typKCombChosen ?? undefined) : undefined,
       };
       const newAnswers = [...answers, answer];
       setAnswers(newAnswers);
@@ -276,7 +312,6 @@ export function useFragenTrainer(
         setSessionDone(true);
       } else {
         setIdx((i) => i + 1);
-        setConfidence(null);
         resetQuestionState();
         recordedRef.current = false;
       }
@@ -284,9 +319,9 @@ export function useFragenTrainer(
     [
       currentFrage,
       revealed,
-      confidence,
       chosenOption,
       typKDecisions,
+      typKCombChosen,
       answers,
       idx,
       fragen.length,
@@ -299,7 +334,6 @@ export function useFragenTrainer(
 
   const restart = useCallback(() => {
     setIdx(0);
-    setConfidence(null);
     setAnswers([]);
     setSessionDone(false);
     setTimeRemainingSeconds(timeLimitMinutes != null ? timeLimitMinutes * 60 : null);
@@ -330,6 +364,16 @@ export function useFragenTrainer(
     }
   }, [uk_ids, user_id, count, source, subjectId, timeLimitMinutes, resetQuestionState]);
 
+  /** Jump to question by index (0-based). Resets per-question state when jumping to unanswered. */
+  const goToQuestion = useCallback(
+    (i: number) => {
+      if (i < 0 || i >= fragen.length) return;
+      setIdx(i);
+      if (i >= answers.length) resetQuestionState();
+    },
+    [fragen.length, answers.length, resetQuestionState]
+  );
+
   return {
     // Data
     fragen,
@@ -341,9 +385,6 @@ export function useFragenTrainer(
     progress,
     answers,
     sessionDone,
-    // Confidence (before answer)
-    confidence,
-    setConfidence,
     // TYP A
     revealed,
     chosenOption,
@@ -358,10 +399,12 @@ export function useFragenTrainer(
     // Actions
     submitFSRSRating,
     restart,
+    goToQuestion,
     mode,
     isAnswerCorrect,
     timeLimitSeconds: timeLimitMinutes != null ? timeLimitMinutes * 60 : null,
     timeRemainingSeconds,
+    getTimeOnCurrentQuestion: () => Math.round((Date.now() - questionStartRef.current) / 1000),
   };
 }
 

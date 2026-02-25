@@ -2,11 +2,10 @@
  * TypAQuestion — MedAT Typ A (Einzelauswahl) + Typ M (Rechenaufgabe)
  *
  * Flow:
- *   1. User taps confidence  (ConfidenzButtons)
- *   2. Options appear → user taps one option
- *   3. Correct/wrong revealed immediately
- *   4. Explanation shown
- *   5. FSRS rating buttons appear
+ *   1. User taps one option (no confidence step)
+ *   2. Correct/wrong revealed immediately
+ *   3. Explanation shown
+ *   4. FSRS rating buttons appear
  */
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,17 +13,16 @@ import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 
 interface Props {
   frage: BMSFrage;
-  confidence: import("@/hooks/useFragenTrainer").Confidence | null;
   chosenOption: string | null;
   revealed: boolean;
   onChoose: (key: string) => void;
 }
 
-export function TypAQuestion({ frage, confidence, chosenOption, revealed, onChoose }: Props) {
+export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props) {
   const optionen = frage.optionen ?? [];
   const correct = frage.korrekte_option ?? "";
   const isCorrect = chosenOption === correct;
-  const locked = revealed || confidence === null;
+  const locked = revealed;
 
   return (
     <div className="space-y-3">
@@ -33,12 +31,8 @@ export function TypAQuestion({ frage, confidence, chosenOption, revealed, onChoo
         {frage.stamm}
       </p>
 
-      {/* Options — hidden until confidence selected */}
-      <div
-        className={`space-y-2 transition-all duration-200 ${
-          confidence === null ? "opacity-30 pointer-events-none select-none" : "opacity-100"
-        }`}
-      >
+      {/* Options */}
+      <div className="space-y-2">
         {optionen.map((opt) => {
           let cls =
             "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";

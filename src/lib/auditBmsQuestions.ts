@@ -15,7 +15,8 @@ export type IssueKind =
   | "correctOptionId_not_in_options"
   | "chapter_unknown"
   | "duplicate_id"
-  | "empty_text";
+  | "empty_text"
+  | "empty_explanation";
 
 export interface AuditIssue {
   id: string;
@@ -81,6 +82,15 @@ export function runBmsAudit(questions: Question[]): BmsAuditReport {
         id: q.id,
         kind: "empty_text",
         message: "Leerer Fragetext",
+        subject: q.subject,
+        chapter: q.chapter,
+      });
+
+    if (!q.explanation || !String(q.explanation).trim())
+      issues.push({
+        id: q.id,
+        kind: "empty_explanation",
+        message: "Keine Erklärung in der Lösung",
         subject: q.subject,
         chapter: q.chapter,
       });

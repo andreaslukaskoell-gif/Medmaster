@@ -14,7 +14,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
-import type { Confidence } from "@/hooks/useFragenTrainer";
 import type { TrainerMode } from "@/hooks/useFragenTrainer";
 
 /** MedAT-typische Optionstexte: „Nur 1 und 3“, „Alle richtig“, „Keine richtig“. */
@@ -31,7 +30,6 @@ function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): strin
 interface Props {
   frage: BMSFrage;
   mode: TrainerMode;
-  confidence: Confidence | null;
   typKPhase: 1 | 2;
   typKDecisions: (boolean | null)[];
   typKCombChosen: string | null;
@@ -44,7 +42,6 @@ interface Props {
 export function TypKQuestion({
   frage,
   mode,
-  confidence,
   typKPhase,
   typKDecisions,
   typKCombChosen,
@@ -57,7 +54,7 @@ export function TypKQuestion({
   const kombinationen = frage.kombinationen ?? [];
   const korrekt = frage.korrekte_option ?? "";
   const isCorrect = typKCombChosen === korrekt;
-  const locked = confidence === null;
+  const locked = false;
 
   // Phase 1 complete when all aussagen have a decision
   const phase1Complete = aussagen.every((_, i) => typKDecisions[i] != null);

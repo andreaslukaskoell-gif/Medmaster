@@ -2,13 +2,15 @@
  * FSRSRatingButtons — shown AFTER the user sees the answer.
  * User rates how well they knew the answer (FSRS scale):
  *   1 = Wieder   2 = Schwer   3 = Gut   4 = Leicht
- * These drive the FSRS scheduling algorithm.
+ * suggestedRating optionally highlights the suggested button.
  */
 import type { FSRSRating } from "@/lib/fsrs";
 
 interface Props {
   onRate: (rating: FSRSRating) => void;
   disabled?: boolean;
+  /** Optional: empfohlenes Rating (wird hervorgehoben) */
+  suggestedRating?: FSRSRating | null;
 }
 
 const RATINGS: { value: FSRSRating; label: string; sub: string; cls: string }[] = [
@@ -38,27 +40,36 @@ const RATINGS: { value: FSRSRating; label: string; sub: string; cls: string }[] 
   },
 ];
 
-export function FSRSRatingButtons({ onRate, disabled }: Props) {
+export function FSRSRatingButtons({ onRate, disabled, suggestedRating }: Props) {
   return (
     <div className="space-y-1.5">
       <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
         Wie leicht war es?
       </p>
       <div className="grid grid-cols-4 gap-1.5">
-        {RATINGS.map((r) => (
-          <button
-            key={r.value}
-            onClick={() => !disabled && onRate(r.value)}
-            disabled={disabled}
-            className={`flex flex-col items-center gap-0.5 py-2.5 px-1 rounded-xl border text-center
-              transition-all cursor-pointer ${r.cls}
-              ${disabled ? "opacity-50 cursor-default" : "hover:scale-105 active:scale-95"}
-            `}
-          >
-            <span className="text-xs font-bold">{r.label}</span>
-            <span className="text-[10px] opacity-70">{r.sub}</span>
-          </button>
-        ))}
+        {RATINGS.map((r) => {
+          const isSuggested = suggestedRating != null && suggestedRating === r.value;
+          return (
+            <button
+              key={r.value}
+              onClick={() => !disabled && onRate(r.value)}
+              disabled={disabled}
+              className={`flex flex-col items-center gap-0.5 py-2.5 px-1 rounded-xl border text-center
+                transition-all cursor-pointer ${r.cls}
+                ${isSuggested ? "ring-2 ring-offset-2 ring-primary-500 dark:ring-offset-gray-900 scale-105" : ""}
+                ${disabled ? "opacity-50 cursor-default" : "hover:scale-105 active:scale-95"}
+              `}
+            >
+              <span className="text-xs font-bold">{r.label}</span>
+              <span className="text-[10px] opacity-70">{r.sub}</span>
+              {isSuggested && (
+                <span className="text-[9px] text-primary-600 dark:text-primary-400 font-medium">
+                  Empfohlen
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

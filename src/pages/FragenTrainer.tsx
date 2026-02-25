@@ -21,18 +21,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
-import { ConfidenzButtons } from "@/components/bms/ConfidenzButtons";
 import { FSRSRatingButtons } from "@/components/bms/FSRSRatingButtons";
 import { TypAQuestion } from "@/components/bms/TypAQuestion";
 import { TypKQuestion } from "@/components/bms/TypKQuestion";
-import { useFragenTrainer } from "@/hooks/useFragenTrainer";
+import { useFragenTrainer, suggestFSRSRating } from "@/hooks/useFragenTrainer";
 import type {
-  Confidence,
   TrainerMode,
   BMSSubjectId,
   SessionAnswers,
   QuestionSource,
 } from "@/hooks/useFragenTrainer";
+import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -74,6 +73,17 @@ function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
   return `${m}:${s.toString().padStart(2, "0")}`;
+}
+
+function formatTypKOptionLabel(k: TypKKombination | undefined, totalAussagen: number): string {
+  if (!k) return "";
+  const n = k.nummern?.length ?? 0;
+  if (n === 0) return "Keine der Aussagen ist richtig";
+  if (totalAussagen >= 2 && n === totalAussagen) return "Alle Aussagen sind richtig";
+  const nummern = k.nummern ?? [];
+  if (nummern.length === 1) return `Nur Aussage ${nummern[0]} ist richtig`;
+  if (nummern.length === 2) return `Nur ${nummern[0]} und ${nummern[1]} sind richtig`;
+  return `Nur Aussagen ${nummern.slice(0, -1).join(", ")} und ${nummern[nummern.length - 1]} sind richtig`;
 }
 
 // ── Selection Screen ──────────────────────────────────────────
@@ -302,8 +312,6 @@ function QuizScreen({
     progress,
     fragen,
     sessionDone,
-    confidence,
-    setConfidence,
     revealed,
     chosenOption,
     chooseOption,
@@ -314,9 +322,12 @@ function QuizScreen({
     confirmTypKPhase1,
     chooseTypKCombination,
     submitFSRSRating,
+    isAnswerCorrect,
+    getTimeOnCurrentQuestion,
     answers,
     timeRemainingSeconds,
     timeLimitSeconds,
+    goToQuestion,
   } = trainer;
 
   useEffect(() => {
@@ -325,6 +336,72 @@ function QuizScreen({
       onFinish(answers);
     }
   }, [sessionDone, answers, addXP, onFinish]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (sessionDone || !currentFrage) return;
+      const canRateNow = revealed && (currentFrage.typ !== "K" || typKCombChosen !== null);
+      const isReview = idx < answers.length;
+      if (e.key === "Enter") {
+        if (canRateNow) {
+          e.preventDefault();
+          submitFSRSRating(3);
+        } else if (isReview && idx < fragen.length - 1) {
+          e.preventDefault();
+          goToQuestion(idx + 1);
+        }
+        return;
+      }
+      const num =
+        e.key === "1"
+          ? 1
+          : e.key === "2"
+            ? 2
+            : e.key === "3"
+              ? 3
+              : e.key === "4"
+                ? 4
+                : e.key === "5"
+                  ? 5
+                  : 0;
+      if (num === 0) return;
+      const keys = ["A", "B", "C", "D", "E"];
+      const key = keys[num - 1];
+      if (
+        !revealed &&
+        (currentFrage.typ === "A" || currentFrage.typ === "M") &&
+        currentFrage.optionen?.some((o) => o.key === key)
+      ) {
+        e.preventDefault();
+        chooseOption(key);
+        return;
+      }
+      if (
+        !revealed &&
+        currentFrage.typ === "K" &&
+        typKPhase === 2 &&
+        currentFrage.kombinationen?.[num - 1]
+      ) {
+        e.preventDefault();
+        chooseTypKCombination(currentFrage.kombinationen[num - 1].key);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [
+    sessionDone,
+    currentFrage,
+    revealed,
+    typKPhase,
+    typKCombChosen,
+    idx,
+    answers.length,
+    fragen.length,
+    submitFSRSRating,
+    chooseOption,
+    chooseTypKCombination,
+    goToQuestion,
+  ]);
 
   if (loading)
     return (
@@ -360,89 +437,242 @@ function QuizScreen({
 
   const canRate = revealed && (currentFrage.typ !== "K" || typKCombChosen !== null);
   const showTimer = timeLimitSeconds != null && timeRemainingSeconds != null;
+  const isReviewMode = idx < answers.length;
+  const reviewAnswer = isReviewMode ? answers[idx] : null;
 
   return (
-    <div className="max-w-2xl mx-auto space-y-4">
-      <div className="flex items-center justify-between">
-        <Button variant="ghost" size="sm" onClick={onBack}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
-        </Button>
-        <div className="flex items-center gap-3">
-          {showTimer && (
-            <span
-              className={`flex items-center gap-1 text-sm font-medium ${
-                timeRemainingSeconds <= 60
-                  ? "text-red-600 dark:text-red-400"
-                  : "text-muted-foreground"
-              }`}
-            >
-              <Clock className="w-4 h-4" />
-              {formatTime(timeRemainingSeconds)}
+    <div className="flex gap-4 max-w-4xl mx-auto">
+      <div className="flex-1 min-w-0 space-y-4">
+        <div className="flex items-center justify-between">
+          <Button variant="ghost" size="sm" onClick={onBack}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
+          </Button>
+          <div className="flex items-center gap-3">
+            {showTimer && (
+              <span
+                className={`flex items-center gap-1 text-sm font-medium ${
+                  timeRemainingSeconds !== null && timeRemainingSeconds <= 60
+                    ? "text-red-600 dark:text-red-400"
+                    : "text-muted-foreground"
+                }`}
+              >
+                <Clock className="w-4 h-4" />
+                {timeRemainingSeconds != null ? formatTime(timeRemainingSeconds) : ""}
+              </span>
+            )}
+            <span className="text-sm text-muted-foreground font-medium">
+              {idx + 1} / {fragen.length}
             </span>
-          )}
-          <span className="text-sm text-muted-foreground font-medium">
-            {idx + 1} / {fragen.length}
-          </span>
+          </div>
+        </div>
+
+        <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+            style={{ width: `${Math.round(progress * 100)}%` }}
+          />
+        </div>
+
+        {isReviewMode && reviewAnswer ? (
+          <Card className="border-l-4 border-l-blue-400">
+            <CardContent className="p-5 space-y-3">
+              <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
+                Durchsicht — Frage {idx + 1}
+              </p>
+              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+                {reviewAnswer.frage.stamm}
+              </p>
+              {(reviewAnswer.frage.typ === "A" || reviewAnswer.frage.typ === "M") &&
+                reviewAnswer.frage.optionen && (
+                  <div className="space-y-1">
+                    {reviewAnswer.frage.optionen.map((opt) => (
+                      <div
+                        key={opt.key}
+                        className={`text-sm px-3 py-2 rounded-lg ${
+                          opt.key === reviewAnswer.frage.korrekte_option
+                            ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 font-medium"
+                            : opt.key === reviewAnswer.chosenOption
+                              ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through"
+                              : "text-gray-500 dark:text-gray-500"
+                        }`}
+                      >
+                        <span className="font-bold mr-2">{opt.key}</span>
+                        {opt.text}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              {reviewAnswer.frage.typ === "K" && reviewAnswer.frage.aussagen && (
+                <div className="space-y-1">
+                  {reviewAnswer.frage.aussagen.map((a) => (
+                    <div
+                      key={a.nr}
+                      className={`text-sm px-3 py-1.5 rounded-lg ${
+                        a.korrekt
+                          ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      <span className="font-bold mr-2">{a.nr}</span>
+                      {a.text}
+                    </div>
+                  ))}
+                  {(reviewAnswer.typKChosenOption != null ||
+                    reviewAnswer.frage.korrekte_option) && (
+                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                      {reviewAnswer.typKChosenOption != null && (
+                        <span className="text-red-600 dark:text-red-400">
+                          Deine Wahl: {reviewAnswer.typKChosenOption}
+                        </span>
+                      )}
+                      {reviewAnswer.frage.korrekte_option && (
+                        <span className="ml-2 text-green-600 dark:text-green-400">
+                          Richtig: {reviewAnswer.frage.korrekte_option}
+                        </span>
+                      )}
+                    </p>
+                  )}
+                </div>
+              )}
+              {reviewAnswer.frage.erklaerung?.trim() && (
+                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">
+                    Begründung
+                  </p>
+                  <p className="text-sm text-blue-700 dark:text-blue-400 leading-relaxed">
+                    {reviewAnswer.frage.erklaerung}
+                  </p>
+                </div>
+              )}
+              <div className="flex gap-2 pt-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => goToQuestion(idx - 1)}
+                  disabled={idx <= 0}
+                >
+                  ← Zurück
+                </Button>
+                <Button
+                  size="sm"
+                  onClick={() => goToQuestion(idx + 1)}
+                  disabled={idx >= fragen.length - 1}
+                  className="bg-emerald-600 hover:bg-emerald-700"
+                >
+                  Weiter →
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ) : (
+          <>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span
+                className={`text-xs px-2 py-0.5 rounded-full font-medium ${DIFF_COLOR[currentFrage.schwierigkeit]}`}
+              >
+                {DIFF_LABEL[currentFrage.schwierigkeit]}
+              </span>
+              <span className="text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full font-medium">
+                Typ {currentFrage.typ}
+              </span>
+            </div>
+
+            <Card>
+              <CardContent className="p-5 space-y-5">
+                <div>
+                  {(currentFrage.typ === "A" || currentFrage.typ === "M") && (
+                    <>
+                      <TypAQuestion
+                        frage={currentFrage}
+                        chosenOption={chosenOption}
+                        revealed={revealed}
+                        onChoose={chooseOption}
+                      />
+                      {!revealed && (
+                        <p className="text-xs text-muted-foreground mt-2">
+                          Tipp: Tasten <kbd className="px-1 rounded bg-muted font-mono">1</kbd>–
+                          <kbd className="px-1 rounded bg-muted font-mono">5</kbd> = A–E
+                        </p>
+                      )}
+                    </>
+                  )}
+                  {currentFrage.typ === "K" && (
+                    <>
+                      <TypKQuestion
+                        frage={currentFrage}
+                        mode={"trainer" as TrainerMode}
+                        typKPhase={typKPhase}
+                        typKDecisions={typKDecisions}
+                        typKCombChosen={typKCombChosen}
+                        revealed={revealed}
+                        onJudge={judgeAussage}
+                        onConfirmPhase1={confirmTypKPhase1}
+                        onChooseCombination={chooseTypKCombination}
+                      />
+                      {!revealed && typKPhase === 2 && (
+                        <p className="text-xs text-muted-foreground mt-2">
+                          Tipp: Tasten <kbd className="px-1 rounded bg-muted font-mono">1</kbd>–
+                          <kbd className="px-1 rounded bg-muted font-mono">5</kbd> = Kombination A–E
+                        </p>
+                      )}
+                    </>
+                  )}
+                </div>
+                {canRate && (
+                  <div className="border-t border-border pt-4 space-y-2">
+                    <FSRSRatingButtons
+                      onRate={(rating) => submitFSRSRating(rating)}
+                      suggestedRating={
+                        currentFrage
+                          ? suggestFSRSRating(
+                              isAnswerCorrect(),
+                              currentFrage.schwierigkeit,
+                              getTimeOnCurrentQuestion()
+                            )
+                          : null
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Tipp: <kbd className="px-1.5 py-0.5 rounded bg-muted font-mono">Enter</kbd> =
+                      Weiter („Gut“)
+                    </p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </>
+        )}
+      </div>
+
+      {/* Rechte Seite: Fragen-Navigation */}
+      <div className="w-12 shrink-0 flex flex-col gap-1">
+        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide sticky top-0 bg-background/95 py-1">
+          Nr.
+        </p>
+        <div className="flex flex-col gap-0.5 max-h-[60vh] overflow-y-auto">
+          {fragen.map((_, i) => {
+            const answered = i < answers.length;
+            const isCurrent = i === idx;
+            const correct = answered && answers[i]?.correct;
+            return (
+              <button
+                key={i}
+                type="button"
+                onClick={() => goToQuestion(i)}
+                className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
+                  ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
+                  ${!isCurrent && answered && correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 hover:bg-green-200 dark:hover:bg-green-900/50" : ""}
+                  ${!isCurrent && answered && !correct ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 hover:bg-red-200 dark:hover:bg-red-900/50" : ""}
+                  ${!isCurrent && !answered ? "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700" : ""}
+                `}
+                title={`Frage ${i + 1}${answered ? (correct ? " (richtig)" : " (falsch)") : ""}`}
+              >
+                {i + 1}
+              </button>
+            );
+          })}
         </div>
       </div>
-
-      <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-emerald-500 rounded-full transition-all duration-300"
-          style={{ width: `${Math.round(progress * 100)}%` }}
-        />
-      </div>
-
-      <div className="flex items-center gap-2 flex-wrap">
-        <span
-          className={`text-xs px-2 py-0.5 rounded-full font-medium ${DIFF_COLOR[currentFrage.schwierigkeit]}`}
-        >
-          {DIFF_LABEL[currentFrage.schwierigkeit]}
-        </span>
-        <span className="text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full font-medium">
-          Typ {currentFrage.typ}
-        </span>
-      </div>
-
-      <Card>
-        <CardContent className="p-5 space-y-5">
-          <ConfidenzButtons
-            value={confidence as Confidence | null}
-            onChange={(c) => !revealed && setConfidence(c)}
-            disabled={revealed}
-          />
-          <div className="border-t border-border pt-4">
-            {(currentFrage.typ === "A" || currentFrage.typ === "M") && (
-              <TypAQuestion
-                frage={currentFrage}
-                confidence={confidence as Confidence | null}
-                chosenOption={chosenOption}
-                revealed={revealed}
-                onChoose={chooseOption}
-              />
-            )}
-            {currentFrage.typ === "K" && (
-              <TypKQuestion
-                frage={currentFrage}
-                mode={"trainer" as TrainerMode}
-                confidence={confidence as Confidence | null}
-                typKPhase={typKPhase}
-                typKDecisions={typKDecisions}
-                typKCombChosen={typKCombChosen}
-                revealed={revealed}
-                onJudge={judgeAussage}
-                onConfirmPhase1={confirmTypKPhase1}
-                onChooseCombination={chooseTypKCombination}
-              />
-            )}
-          </div>
-          {canRate && (
-            <div className="border-t border-border pt-4">
-              <FSRSRatingButtons onRate={(rating) => submitFSRSRating(rating)} />
-            </div>
-          )}
-        </CardContent>
-      </Card>
     </div>
   );
 }
@@ -500,13 +730,13 @@ function ResultsScreen({
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Falsch beantwortet ({wrong.length})
           </h3>
-          {wrong.map(({ frage, chosenOption }) => (
+          {wrong.map(({ frage, chosenOption, typKChosenOption }) => (
             <Card key={frage.id} className="border-l-4 border-l-red-400">
               <CardContent className="p-4 space-y-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
                   {frage.stamm}
                 </p>
-                {frage.typ === "A" && frage.optionen && (
+                {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
                   <div className="space-y-1">
                     {frage.optionen.map((opt) => (
                       <div
@@ -525,7 +755,46 @@ function ResultsScreen({
                     ))}
                   </div>
                 )}
-                {frage.erklaerung && (
+                {frage.typ === "K" && frage.aussagen && (
+                  <>
+                    <div className="space-y-1">
+                      {frage.aussagen.map((a) => (
+                        <div
+                          key={a.nr}
+                          className={`text-xs px-3 py-1.5 rounded-lg ${
+                            a.korrekt
+                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                              : "text-gray-500 dark:text-gray-500"
+                          }`}
+                        >
+                          <span className="font-bold mr-1">{a.nr}</span>
+                          {a.text}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      {typKChosenOption != null && (
+                        <span className="text-red-700 dark:text-red-400 font-medium">
+                          Deine Kombination:{" "}
+                          {formatTypKOptionLabel(
+                            frage.kombinationen?.find((k) => k.key === typKChosenOption),
+                            frage.aussagen.length
+                          ) || typKChosenOption}
+                        </span>
+                      )}
+                      {frage.korrekte_option && (
+                        <span className="text-green-700 dark:text-green-400 font-medium">
+                          Richtig:{" "}
+                          {formatTypKOptionLabel(
+                            frage.kombinationen?.find((k) => k.key === frage.korrekte_option),
+                            frage.aussagen.length
+                          ) || frage.korrekte_option}
+                        </span>
+                      )}
+                    </div>
+                  </>
+                )}
+                {frage.erklaerung?.trim() ? (
                   <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
                     <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
                       Begründung
@@ -534,6 +803,10 @@ function ResultsScreen({
                       {frage.erklaerung}
                     </p>
                   </div>
+                ) : (
+                  <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                    Keine Begründung hinterlegt.
+                  </p>
                 )}
               </CardContent>
             </Card>
@@ -547,13 +820,13 @@ function ResultsScreen({
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Richtig beantwortet ({right.length}) – Begründungen
           </h3>
-          {right.map(({ frage }) => (
+          {right.map(({ frage, typKChosenOption }) => (
             <Card key={frage.id} className="border-l-4 border-l-green-400">
               <CardContent className="p-4 space-y-2">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
                   {frage.stamm}
                 </p>
-                {frage.typ === "A" && frage.optionen && (
+                {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
                   <div className="space-y-1">
                     {frage.optionen.map((opt) => (
                       <div
@@ -570,7 +843,35 @@ function ResultsScreen({
                     ))}
                   </div>
                 )}
-                {frage.erklaerung && (
+                {frage.typ === "K" && frage.aussagen && (
+                  <>
+                    <div className="space-y-1">
+                      {frage.aussagen.map((a) => (
+                        <div
+                          key={a.nr}
+                          className={`text-xs px-3 py-1.5 rounded-lg ${
+                            a.korrekt
+                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                              : "text-gray-500 dark:text-gray-500"
+                          }`}
+                        >
+                          <span className="font-bold mr-1">{a.nr}</span>
+                          {a.text}
+                        </div>
+                      ))}
+                    </div>
+                    {frage.korrekte_option && (
+                      <p className="text-xs text-green-700 dark:text-green-400 font-medium">
+                        Richtig:{" "}
+                        {formatTypKOptionLabel(
+                          frage.kombinationen?.find((k) => k.key === frage.korrekte_option),
+                          frage.aussagen.length
+                        ) || frage.korrekte_option}
+                      </p>
+                    )}
+                  </>
+                )}
+                {frage.erklaerung?.trim() ? (
                   <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
                     <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
                       Begründung
@@ -579,6 +880,10 @@ function ResultsScreen({
                       {frage.erklaerung}
                     </p>
                   </div>
+                ) : (
+                  <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                    Keine Begründung hinterlegt.
+                  </p>
                 )}
               </CardContent>
             </Card>
