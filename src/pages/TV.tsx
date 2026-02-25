@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowLeft,
   BookOpen,
@@ -15,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { PageEmpty, PageError } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -23,7 +25,7 @@ import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
 import { useStore } from "@/store/useStore";
-import type { TVTextSet, TVTextMC } from "@/data/tvTextsExpanded";
+import type { TVTextSet } from "@/data/tvTextsExpanded";
 
 const allTextSets: TVTextSet[] = [...tvTextSets, ...tvTextSets2];
 
@@ -53,6 +55,41 @@ export default function TV() {
 
   const tvText = tvTexts[selectedTextIndex];
   const currentSet = allTextSets[selectedSetIndex];
+
+  const allSetQuestions = useMemo(() => {
+    if (!currentSet) return [];
+    return currentSet.texts.flatMap((t) => t.questions);
+  }, [currentSet]);
+
+  useKeyboardShortcuts({
+    disabled: view !== "set-quiz",
+    onNext: () => {
+      if (view === "set-quiz" && currentSet && textIndex < currentSet.texts.length - 1)
+        setTextIndex((i) => i + 1);
+    },
+    onPrev: () => {
+      if (view === "set-quiz" && textIndex > 0) setTextIndex((i) => i - 1);
+    },
+  });
+
+  if (!tvTexts?.length && !allTextSets?.length) {
+    return (
+      <div className="max-w-5xl mx-auto p-6">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
+        <PageEmpty
+          message="Keine TV-Texte geladen."
+          action={
+            <Button asChild variant="outline" className="gap-2">
+              <Link to="/">
+                <BookOpen className="w-4 h-4" />
+                Zum Dashboard
+              </Link>
+            </Button>
+          }
+        />
+      </div>
+    );
+  }
 
   // --- Legacy quiz handlers ---
   const handleStartLegacy = (textIdx: number) => {
@@ -90,11 +127,6 @@ export default function TV() {
     setView("set-quiz");
   };
 
-  const allSetQuestions = useMemo(() => {
-    if (!currentSet) return [];
-    return currentSet.texts.flatMap((t) => t.questions);
-  }, [currentSet]);
-
   const handleSubmitSet = () => {
     const score = allSetQuestions.filter((q) => mcAnswers[q.id] === q.correctOption).length;
     saveQuizResult({
@@ -115,21 +147,33 @@ export default function TV() {
     setView("set-results");
   };
 
-  // Keyboard navigation for set-quiz (arrow keys for text navigation)
-  useKeyboardShortcuts({
-    disabled: view !== "set-quiz",
-    onNext: () => {
-      if (view === "set-quiz" && textIndex < currentSet.texts.length - 1)
-        setTextIndex((i) => i + 1);
-    },
-    onPrev: () => {
-      if (view === "set-quiz" && textIndex > 0) setTextIndex((i) => i - 1);
-    },
-  });
-
   // ===== STRATEGY =====
   if (view === "strategy") {
     return <StrategyGuideView guide={tvStrategyGuide} onBack={() => setView("overview")} />;
+  }
+
+  // Guard: Legacy-Views brauchen tvText
+  if ((view === "legacy-quiz" || view === "legacy-results") && !tvText) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <PageError
+          message="Text nicht verfügbar."
+          action={<Button onClick={() => setView("overview")}>Zur Übersicht</Button>}
+        />
+      </div>
+    );
+  }
+
+  // Guard: Set-Views brauchen currentSet
+  if ((view === "set-quiz" || view === "set-results") && !currentSet) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <PageError
+          message="Textset nicht verfügbar."
+          action={<Button onClick={() => setView("overview")}>Zur Übersicht</Button>}
+        />
+      </div>
+    );
   }
 
   // ===== LEGACY RESULTS =====
@@ -273,7 +317,7 @@ export default function TV() {
             <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 border-l-4 border-primary-500 pl-3">
               {t.title}
             </h3>
-            {t.questions.map((q, qi) => {
+            {t.questions.map((q) => {
               const userAnswer = mcAnswers[q.id];
               const isCorrect = userAnswer === q.correctOption;
               return (
@@ -333,6 +377,7 @@ export default function TV() {
     const currentTextAllAnswered = currentText.questions.every(
       (q) => mcAnswers[q.id] !== undefined
     );
+    void currentTextAllAnswered;
     const allAnswered = allSetQuestions.every((q) => mcAnswers[q.id] !== undefined);
 
     return (
@@ -391,7 +436,7 @@ export default function TV() {
 
         {/* Questions for current text */}
         <div className="space-y-3">
-          {currentText.questions.map((q, qi) => (
+          {currentText.questions.map((q) => (
             <Card key={q.id}>
               <CardContent className="p-4">
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">

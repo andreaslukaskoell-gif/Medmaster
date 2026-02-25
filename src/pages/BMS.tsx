@@ -504,7 +504,15 @@ export default function BMS() {
               Zurück zu Fächern
             </Button>
           </div>
-          <PageEmpty message="In diesem Fach sind noch keine Kapitel vorhanden." />
+          <PageEmpty
+            message="In diesem Fach sind noch keine Kapitel vorhanden."
+            action={
+              <Button variant="outline" className="gap-2" onClick={() => navigate("/bms")}>
+                <BookOpen className="w-4 h-4" />
+                Anderes Fach wählen
+              </Button>
+            }
+          />
         </div>
       );
     }

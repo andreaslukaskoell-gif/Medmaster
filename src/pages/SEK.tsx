@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { PageEmpty } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
-import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
@@ -43,6 +44,29 @@ function shuffle<T>(arr: T[]): T[] {
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
   const [view, setView] = useState<SekView>("overview");
+
+  const hasTasks =
+    emotionenErkennenTasks.length > 0 ||
+    emotionenRegulierenTasks.length > 0 ||
+    sozialesEntscheidenTasks.length > 0;
+  if (!hasTasks) {
+    return (
+      <div className="max-w-5xl mx-auto p-6">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
+        <PageEmpty
+          message="Keine SEK-Aufgaben geladen."
+          action={
+            <Button asChild variant="outline" className="gap-2">
+              <Link to="/">
+                <BookOpen className="w-4 h-4" />
+                Zum Dashboard
+              </Link>
+            </Button>
+          }
+        />
+      </div>
+    );
+  }
 
   if (view === "strategy") {
     return <StrategyGuideView guide={sekStrategyGuide} onBack={() => setView("overview")} />;
@@ -203,7 +227,7 @@ function EmotionenErkennenQuiz({
   >({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
-  const toggleEmotion = (taskId: string, emotionName: string) => {
+  const _toggleEmotion = (taskId: string, emotionName: string) => {
     setAnswers((prev) => {
       const current = prev[taskId] || {};
       const val = current[emotionName];
@@ -216,6 +240,7 @@ function EmotionenErkennenQuiz({
       };
     });
   };
+  void _toggleEmotion;
 
   const handleSubmit = () => {
     let score = 0;
@@ -314,7 +339,8 @@ function EmotionenErkennenQuiz({
   const q = questions[index];
   if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
   const currentAnswers = answers[q.id] || {};
-  const allEmotionsAnswered = q.emotionen.every((e) => currentAnswers[e.name] !== undefined);
+  const _allEmotionsAnswered = q.emotionen.every((e) => currentAnswers[e.name] !== undefined);
+  void _allEmotionsAnswered;
   const allQuestionsAnswered = questions.every((qu) => {
     const a = answers[qu.id] || {};
     return qu.emotionen.every((e) => a[e.name] !== undefined);
@@ -455,6 +481,7 @@ function EmotionenRegulierenQuiz({
       }
     });
     const pct = Math.round((totalScore / maxScore) * 100);
+    void pct;
     saveQuizResult({
       id: `sek-er-${Date.now()}`,
       type: "sek",
@@ -765,7 +792,8 @@ function SozialesEntscheidenQuiz({
   const q = questions[index];
   if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
   const currentRanking = rankings[q.id] || {};
-  const allRanked = q.aussagen.every((_, i) => currentRanking[i] !== undefined);
+  const _allRanked = q.aussagen.every((_, i) => currentRanking[i] !== undefined);
+  void _allRanked;
   const allQuestionsRanked = questions.every((qu) => {
     const r = rankings[qu.id] || {};
     return qu.aussagen.every((_, i) => r[i] !== undefined);
