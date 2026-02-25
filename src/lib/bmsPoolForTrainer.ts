@@ -119,7 +119,7 @@ export function getPoolBMSFragen(uk_ids: string[], count = 8): BMSFrage[] {
 
 /**
  * Get BMS questions by subject (from static pool + selfTests), shuffled, capped at count.
- * For mathematik: includes Typ A (Question) and Typ K (mathematikPoolTypK).
+ * For mathematik and biologie: includes Typ A (Question) and Typ K (poolTypK).
  */
 export function getBMSFragenBySubject(
   subject: "biologie" | "chemie" | "physik" | "mathematik",
@@ -127,7 +127,8 @@ export function getBMSFragenBySubject(
 ): BMSFrage[] {
   const questions = getQuestionsBySubject(subject);
   const typA = questions.map((q) => questionToBMSFrage(q, q.chapter));
-  const typK = subject === "mathematik" ? mathematikPoolTypK : [];
+  const typK =
+    subject === "mathematik" ? mathematikPoolTypK : subject === "biologie" ? biologiePoolTypK : [];
   const combined = shuffle([...typA, ...typK]);
   const selected = combined.slice(0, Math.min(count, combined.length));
   return filterValidBMSFragen(selected);

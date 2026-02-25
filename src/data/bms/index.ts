@@ -1,5 +1,9 @@
 import { alleKapitel } from "@/data/bmsKapitel/index";
 import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
+import { biologiePoolQuestions } from "./biologiePool";
+import { chemiePoolQuestions } from "./chemiePool";
+import { physikPoolQuestions } from "./physikPool";
+import { mathematikPoolQuestions } from "./mathematikPool";
 
 export interface Question {
   id: string;
@@ -46,7 +50,7 @@ function transformSelfTest(
   };
 }
 
-// Build allBmsQuestions from selfTest data embedded in all chapters
+// Build allBmsQuestions from selfTest data embedded in all chapters + biology pool
 function buildAllBmsQuestions(): Question[] {
   const result: Question[] = [];
   for (const kapitel of alleKapitel) {
@@ -58,6 +62,10 @@ function buildAllBmsQuestions(): Question[] {
       });
     }
   }
+  result.push(...biologiePoolQuestions);
+  result.push(...chemiePoolQuestions);
+  result.push(...physikPoolQuestions);
+  result.push(...mathematikPoolQuestions);
   return result;
 }
 
