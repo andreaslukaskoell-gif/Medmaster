@@ -73,6 +73,7 @@ export async function generateAndSaveOne(
  * und zu speichern. Gibt Anzahl gespeichert vs. verworfen zurück.
  * Für kff-figuren mit count >= 500: läuft bis mind. 500 gespeichert oder max. (count + 150) Versuche.
  * Für kff-implikationen mit count >= 500: läuft bis mind. count gespeichert oder max. (count + 200) Versuche.
+ * Für kff-zahlenfolgen mit count >= 1000: läuft bis mind. 1000 gespeichert oder max. (count + 200) Versuche.
  * Für kff-merkfähigkeit: erzeugt Sets (8 Pässe + 25 Fragen), je Frage = 1 Task mit passes in data.
  */
 export async function fillPool(
@@ -89,11 +90,14 @@ export async function fillPool(
   const targets = [200, 500, 800]; // easy, medium, hard
   const isFigurenMin500 = domain === "kff-figuren" && count >= 500;
   const isImplikationenMin500 = domain === "kff-implikationen" && count >= 500;
-  const runUntilTarget = isFigurenMin500 || isImplikationenMin500;
+  const isZahlenfolgenMin1000 = domain === "kff-zahlenfolgen" && count >= 1000;
+  const runUntilTarget = isFigurenMin500 || isImplikationenMin500 || isZahlenfolgenMin1000;
   const maxAttempts = runUntilTarget
     ? domain === "kff-figuren"
       ? count + 150
-      : count + 200
+      : domain === "kff-implikationen"
+        ? count + 200
+        : count + 200
     : count;
 
   for (let i = 0; i < maxAttempts; i++) {

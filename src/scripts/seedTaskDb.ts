@@ -2,7 +2,10 @@
  * Migration: Offizielle KFF/SEK-Aufgaben und Lexikon-Tasks in die Task-DB (Supabase) schreiben.
  * Alle Daten werden ausschließlich in der Datenbank gespeichert (Tabelle "tasks").
  *
- * Ausführung: npx tsx src/scripts/seedTaskDb.ts [--generate kff-figuren 100]
+ * Ausführung: npx tsx src/scripts/seedTaskDb.ts [--generate kff-zahlenfolgen 1000]
+ * - Ohne --generate: nur offizielle + Lexikon-Wortflüssigkeit.
+ * - Mit --generate kff-zahlenfolgen [1000]: generiert ca. 1000 Zahlenfolgen (leicht/mittel/schwer)
+ *   und speichert sie in der DB. Default-Anzahl für kff-zahlenfolgen ist 1000.
  * Voraussetzung: .env mit VITE_SUPABASE_URL und VITE_SUPABASE_ANON_KEY; Tabelle "tasks" muss existieren.
  */
 import "dotenv/config";
@@ -150,9 +153,11 @@ async function main() {
   const defaultCount =
     domainArg === "kff-figuren" || domainArg === "kff-implikationen"
       ? 500
-      : domainArg === "kff-merkfähigkeit"
-        ? 100
-        : 100;
+      : domainArg === "kff-zahlenfolgen"
+        ? 1000
+        : domainArg === "kff-merkfähigkeit"
+          ? 100
+          : 100;
   const count = countArg ? parseInt(countArg, 10) : defaultCount;
 
   await seedOfficial();

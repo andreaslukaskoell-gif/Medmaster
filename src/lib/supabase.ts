@@ -45,7 +45,8 @@ export const supabase: SupabaseClient | null = rawClient
   ? new Proxy(rawClient, {
       get(target, prop, receiver) {
         if (prop === "from" && isSchemaSkipActive()) {
-          return (_table: string) => createNoopFromBuilder();
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars -- .from(table) signature
+          return (table: string) => createNoopFromBuilder();
         }
         return Reflect.get(target, prop, receiver);
       },
