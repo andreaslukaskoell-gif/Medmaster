@@ -12,6 +12,7 @@
 import { Check, X, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import type { TrainerMode } from "@/hooks/useFragenTrainer";
@@ -240,7 +241,7 @@ export function TypKQuestion({
               </span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              {frage.erklaerung}
+              {stripMarkdownAsterisks(frage.erklaerung)}
             </p>
           </CardContent>
         </Card>

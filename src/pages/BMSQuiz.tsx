@@ -20,6 +20,7 @@ import { getQuestionsBySubject as getLegacyQuestions, type Question } from "@/da
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 // Use new expanded questions if available, fall back to legacy
 function getQuestionsBySubject(subject: string) {
@@ -304,7 +305,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-1">
                       Erklärung:
                     </p>
-                    <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
+                    <p className="text-xs text-blue-700 dark:text-blue-400">
+                      {stripMarkdownAsterisks(q.explanation)}
+                    </p>
                   </div>
                   {getStrategieTipp(q.id) && (
                     <div className="ml-8 mt-2 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">

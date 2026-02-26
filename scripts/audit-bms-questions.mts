@@ -158,3 +158,4 @@ const critical = issues.filter(
 if (critical.length > 0) {
   console.log(`\n${critical.length} Fragen mit kritischen Datenfehlern (werden von filterValidBMSFragen verworfen).`);
 }
+if (issues.length > 0) process.exit(1);

@@ -23,6 +23,7 @@ import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useStore } from "@/store/useStore";
 import { allBmsQuestions } from "@/data/bms/index";
 import { alleStichworteListe } from "@/data/stichwortliste";
@@ -329,7 +330,7 @@ export default function SchwachstellenTrainer() {
                     {isCorrect ? "Richtig!" : "Leider falsch"}
                   </span>
                 </div>
-                <p className="text-sm text-muted">{q.explanation}</p>
+                <p className="text-sm text-muted">{stripMarkdownAsterisks(q.explanation)}</p>
               </CardContent>
             </Card>
 

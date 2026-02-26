@@ -14,6 +14,7 @@ import { KeyFactsGrid } from "@/components/chapter/KeyFactsGrid";
 import { VergleichsTabelle } from "@/components/chapter/VergleichsTabelle";
 import { SelbstTest } from "@/components/chapter/SelbstTest";
 import { KapitelFortschritt } from "@/components/chapter/KapitelFortschritt";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 interface Props {
   chapter: Chapter;
@@ -262,7 +263,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
                 </div>
                 {selfTestSubmitted && (
                   <p className="text-xs text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded ml-4">
-                    {q.explanation}
+                    {stripMarkdownAsterisks(q.explanation)}
                   </p>
                 )}
               </div>

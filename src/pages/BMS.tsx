@@ -730,13 +730,6 @@ export default function BMS() {
                               {kap.estimatedTime}
                             </span>
                           )}
-                          {(topicTotal > 0 || ukTotal > 0) && (
-                            <span className="text-primary-500 font-medium">
-                              {topicTotal > 0
-                                ? `${topicLearned}/${topicTotal} gelernt`
-                                : `${ukDone}/${ukTotal}`}
-                            </span>
-                          )}
                         </div>
                         <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 mt-2">
                           <div

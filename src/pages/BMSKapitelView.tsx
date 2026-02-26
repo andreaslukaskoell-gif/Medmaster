@@ -307,15 +307,9 @@ export default function BMSKapitelView({
                     )}
                     <div className="flex-1 min-w-0">
                       <h3
-                        className={`font-medium text-sm relative inline-block ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
+                        className={`font-medium text-sm ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
                       >
-                        <span className="relative z-1">{uk.title || "Untitled Subchapter"}</span>
-                        {isDone && (
-                          <span
-                            className="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-green-500/80 dark:bg-green-400/80 w-full strikethrough-line pointer-events-none"
-                            aria-hidden
-                          />
-                        )}
+                        {uk.title || "Untitled Subchapter"}
                       </h3>
                       <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
                         {selfTestCount} Selbsttest-Fragen

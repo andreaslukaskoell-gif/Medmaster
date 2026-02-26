@@ -24,6 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
 import { TypAQuestion } from "@/components/bms/TypAQuestion";
 import { TypKQuestion } from "@/components/bms/TypKQuestion";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useFragenTrainer } from "@/hooks/useFragenTrainer";
 import type {
   TrainerMode,
@@ -31,12 +32,17 @@ import type {
   SessionAnswers,
   QuestionSource,
 } from "@/hooks/useFragenTrainer";
-import { getBMSFragenBySubject } from "@/lib/bmsPoolForTrainer";
+import {
+  getBMSFragenBySubject,
+  getBMSFragenBySubjectFromChapters,
+  toCompletedChapterIdSet,
+} from "@/lib/bmsPoolForTrainer";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // ── Constants ─────────────────────────────────────────────────
 
@@ -87,6 +93,23 @@ function formatTypKOptionLabel(k: TypKKombination | undefined, totalAussagen: nu
   if (nummern.length === 1) return `Nur Aussage ${nummern[0]} ist richtig`;
   if (nummern.length === 2) return `Nur ${nummern[0]} und ${nummern[1]} sind richtig`;
   return `Nur Aussagen ${nummern.slice(0, -1).join(", ")} und ${nummern[nummern.length - 1]} sind richtig`;
+}
+
+/** Gemischte Fragen aus dem Lernplan: nur aus gelernten Kapiteln, Reihenfolge Bio → Chemie → Physik → Mathe. */
+function buildMixedPlanFragen(
+  planBms: { fach: BMSSubjectId; count: number }[],
+  completedChapterIds: string[]
+): import("@/lib/supabaseBMSFragen").BMSFrage[] {
+  const completedSet = toCompletedChapterIdSet(completedChapterIds);
+  const order: BMSSubjectId[] = ["biologie", "chemie", "physik", "mathematik"];
+  const all: import("@/lib/supabaseBMSFragen").BMSFrage[] = [];
+  for (const fach of order) {
+    const plan = planBms.find((p) => p.fach === fach);
+    if (!plan || plan.count <= 0) continue;
+    const list = getBMSFragenBySubjectFromChapters(fach, plan.count, completedSet);
+    all.push(...list);
+  }
+  return all;
 }
 
 // ── Selection Screen ──────────────────────────────────────────
@@ -352,6 +375,7 @@ function QuizScreen({
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- revealed omitted to avoid re-binding on every toggle
   }, [
     sessionDone,
     currentFrage,
@@ -747,7 +771,7 @@ function ResultsScreen({
                       Begründung
                     </p>
                     <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
-                      {frage.erklaerung}
+                      {stripMarkdownAsterisks(frage.erklaerung)}
                     </p>
                   </div>
                 ) : (
@@ -824,7 +848,7 @@ function ResultsScreen({
                       Begründung
                     </p>
                     <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
-                      {frage.erklaerung}
+                      {stripMarkdownAsterisks(frage.erklaerung)}
                     </p>
                   </div>
                 ) : (
@@ -854,6 +878,12 @@ function ResultsScreen({
 
 export default function FragenTrainer() {
   usePageTitle("Fragen-Trainer");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const planBms = location.state?.dailyPlanBms as
+    | { fach: BMSSubjectId; count: number }[]
+    | undefined;
+
   const [screen, setScreen] = useState<"select" | "quiz" | "results">("select");
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [count, setCount] = useState(20);
@@ -863,8 +893,84 @@ export default function FragenTrainer() {
     import("@/lib/supabaseBMSFragen").BMSFrage[] | undefined
   >(undefined);
   const [results, setResults] = useState<SessionAnswers>([]);
+  const [planResults, setPlanResults] = useState<SessionAnswers | null>(null);
   const { user } = useAuth();
   const userId = useMemo(() => user?.id ?? getLocalUserId(), [user?.id]);
+  const completedChapters = useStore((s) => s.completedChapters);
+
+  const mixedPlanFragen = useMemo(() => {
+    if (!planBms?.length) return [];
+    return buildMixedPlanFragen(planBms, completedChapters ?? []);
+  }, [planBms, completedChapters]);
+
+  if (planBms?.length && mixedPlanFragen.length === 0) {
+    return (
+      <div className="p-4 pb-24 md:p-6">
+        <Card>
+          <CardContent className="p-6 space-y-4">
+            <p className="text-gray-700 dark:text-gray-300">
+              Es kommen nur Fragen aus Kapiteln, die du schon gelernt hast. Schließe zuerst
+              mindestens ein BMS-Kapitel ab, dann erscheinen hier die Lernplan-Fragen – zuerst
+              Biologie, dann Chemie, Physik, Mathematik.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Button variant="outline" onClick={() => navigate("/lernplan")}>
+                Zum Lernplan
+              </Button>
+              <Button onClick={() => navigate("/fragen-trainer", { replace: true })}>
+                Neue Auswahl
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (planBms?.length && mixedPlanFragen.length > 0) {
+    if (planResults != null) {
+      return (
+        <div className="p-4 pb-24 md:p-6">
+          <ResultsScreen
+            answers={planResults}
+            onRestart={() => {
+              setPlanResults(null);
+              setScreen("quiz");
+            }}
+            onBack={() => {
+              setPlanResults(null);
+              navigate("/fragen-trainer", { replace: true });
+            }}
+          />
+        </div>
+      );
+    }
+    return (
+      <div className="p-4 pb-24 md:p-6">
+        <QuizScreen
+          subjectId="biologie"
+          count={mixedPlanFragen.length}
+          timeLimitMinutes={null}
+          source="supabase"
+          userId={userId}
+          initialFragen={mixedPlanFragen}
+          onFinish={(r) => {
+            try {
+              useAdaptiveStore
+                .getState()
+                .initializeFromQuizResults([
+                  { answers: r.map((a) => ({ questionId: a.frage.id, correct: a.correct })) },
+                ]);
+            } catch {
+              // Einige Pool-Fragen haben ggf. keine Stichwort-Zuordnung
+            }
+            setPlanResults(r);
+          }}
+          onBack={() => navigate("/fragen-trainer", { replace: true })}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="p-4 pb-24 md:p-6">
@@ -896,7 +1002,7 @@ export default function FragenTrainer() {
                 .initializeFromQuizResults([
                   { answers: r.map((a) => ({ questionId: a.frage.id, correct: a.correct })) },
                 ]);
-            } catch (_) {
+            } catch {
               // Einige Pool-Fragen haben ggf. keine Stichwort-Zuordnung
             }
             setResults(r);

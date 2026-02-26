@@ -507,7 +507,7 @@ export function useMRS(user_id: string | null) {
   }, [user_id]);
 
   useEffect(() => {
-    fetch();
+    queueMicrotask(() => fetch());
   }, [fetch]);
 
   return { mrs, loading, refetch: fetch };

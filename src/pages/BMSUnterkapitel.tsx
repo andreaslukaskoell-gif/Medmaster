@@ -6,7 +6,6 @@ import {
   ChevronLeft,
   Bookmark,
   StickyNote,
-  CheckCircle2,
   Network,
   HelpCircle,
   Zap,
@@ -579,69 +578,50 @@ export default function BMSUnterkapitel({
           </div>
         ) : (
           /* Main content: im Fluss (relative), kein Overlap mit Header */
-          <Card className="relative card-interactive">
-            <CardContent className={`relative ${kapitel?.enhancedFormatting ? "p-8" : "p-6"}`}>
-              <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
-                <ContentVisualizer
-                  uk={uk}
-                  subject={kapitel?.subject ?? "biologie"}
-                  chapterId={kapitel?.id}
-                  enhancedFormatting={kapitel?.enhancedFormatting}
-                  hinterfragMode={hinterfragMode}
-                />
-              </ContentErrorBoundary>
-            </CardContent>
-          </Card>
+          <>
+            <Card className="relative card-interactive">
+              <CardContent className={`relative ${kapitel?.enhancedFormatting ? "p-8" : "p-6"}`}>
+                <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
+                  <ContentVisualizer
+                    uk={uk}
+                    subject={kapitel?.subject ?? "biologie"}
+                    chapterId={kapitel?.id}
+                    enhancedFormatting={kapitel?.enhancedFormatting}
+                    hinterfragMode={hinterfragMode}
+                  />
+                </ContentErrorBoundary>
+              </CardContent>
+            </Card>
+
+            {/* Altfrage + Kontrollfragen: gleiche Breite wie Haupttext (1fr-Spalte neben TOC) */}
+            <div className="w-full lg:max-w-[calc(100%-272px)] lg:ml-[272px] min-w-0 space-y-6">
+              {/* Altfrage */}
+              {uk.altfrage && (
+                <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
+                  <CardContent className="p-5">
+                    <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
+                      Altfragen-Klassiker
+                    </h3>
+                    <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
+                      {uk.altfrage.question}
+                    </p>
+                    <details className="group">
+                      <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
+                        Antwort anzeigen
+                      </summary>
+                      <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
+                        {uk.altfrage.answer}
+                      </p>
+                    </details>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Kontrollfragen / Self-Test */}
+              {selfTestBlock}
+            </div>
+          </>
         )}
-
-        {/* Altfrage */}
-        {uk.altfrage && (
-          <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
-            <CardContent className="p-5">
-              <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
-                Altfragen-Klassiker
-              </h3>
-              <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
-                {uk.altfrage.question}
-              </p>
-              <details className="group">
-                <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
-                  Antwort anzeigen
-                </summary>
-                <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
-                  {uk.altfrage.answer}
-                </p>
-              </details>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Kontrollfragen / Self-Test */}
-        {selfTestBlock}
-
-        {/* Gelesen-Markierung: triggert Fortschrittsbalken in der Sidebar */}
-        <Card className="border-[var(--border)] bg-[var(--surface)]">
-          <CardContent className="p-4 flex items-center gap-3">
-            {isCompleted ? (
-              <span className="flex items-center gap-2 text-sm font-medium text-green-700 dark:text-green-400">
-                <CheckCircle2 className="w-5 h-5 shrink-0" />
-                Bereits gelesen ✓
-              </span>
-            ) : (
-              <label className="flex items-center gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={isCompleted}
-                  onChange={() => completeChapter(uk.id)}
-                  className="w-4 h-4 rounded border-2 border-slate-300 dark:border-white/20 text-primary-500 focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500"
-                />
-                <span className="text-sm font-medium text-[var(--text-primary)]">
-                  Als gelesen markieren
-                </span>
-              </label>
-            )}
-          </CardContent>
-        </Card>
 
         {/* Navigation: Previous / Next (book-like, inkl. benachbarte Kapitel) */}
         <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">

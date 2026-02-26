@@ -9,6 +9,7 @@
  */
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 
 interface Props {
@@ -24,7 +25,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
   const isCorrect = chosenOption === correct;
   const locked = revealed;
   const stammDisplay =
-    (frage.stamm && frage.stamm.trim()) ||
+    stripMarkdownAsterisks(frage.stamm) ||
     `[Fragetext fehlt — ID: ${frage.id}. Bitte „Offline-Pool“ als Quelle wählen oder Fehler melden.]`;
 
   return (
@@ -63,7 +64,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
               `}
             >
               <span className="font-bold mr-2 text-xs opacity-70">{opt.key}</span>
-              {opt.text}
+              {stripMarkdownAsterisks(opt.text)}
               {revealed && opt.key === correct && (
                 <CheckCircle2 className="w-4 h-4 inline ml-2 text-green-500" />
               )}
@@ -97,7 +98,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
             </div>
             {frage.erklaerung && (
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                {frage.erklaerung}
+                {stripMarkdownAsterisks(frage.erklaerung)}
               </p>
             )}
           </CardContent>

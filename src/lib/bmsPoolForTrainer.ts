@@ -1,7 +1,12 @@
 /**
  * BMS Pool for FragenTrainer — Typ A (Single Choice), Typ M (Rechenfragen) und Typ K (Kombinationsfragen, MedAT-Format).
  */
-import { getKapitelBySubject, alleKapitel } from "@/data/bmsKapitel/index";
+import {
+  getKapitelBySubject,
+  alleKapitel,
+  findChapterByUnterkapitelId,
+  getKapitelById,
+} from "@/data/bmsKapitel/index";
 import { biologiePoolQuestions } from "@/data/bms/biologiePool";
 import { chemiePoolQuestions } from "@/data/bms/chemiePool";
 import { physikPoolQuestions } from "@/data/bms/physikPool";
@@ -120,6 +125,23 @@ const TYP_K_BY_SUBJECT: Record<"biologie" | "chemie" | "physik" | "mathematik", 
   mathematik: mathematikPoolTypK,
 };
 
+/**
+ * completedIds aus dem Store enthält Kapitel-IDs und/oder Unterkapitel-IDs (uk.id).
+ * Gibt ein Set von Kapitel-IDs zurück, damit getBMSFragenBySubjectFromChapters korrekt filtert.
+ */
+export function toCompletedChapterIdSet(completedIds: string[]): Set<string> {
+  const chapterIds = new Set<string>();
+  for (const id of completedIds) {
+    if (!id) continue;
+    if (getKapitelById(id)) chapterIds.add(id);
+    else {
+      const fromUk = findChapterByUnterkapitelId(id);
+      if (fromUk) chapterIds.add(fromUk.kapitel.id);
+    }
+  }
+  return chapterIds;
+}
+
 let cachedPool: BMSFrage[] | null = null;
 
 function getPool(): BMSFrage[] {
@@ -161,6 +183,46 @@ export function getBMSFragenBySubject(
   const questions = getQuestionsBySubject(subject);
   const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
   const typK = TYP_K_BY_SUBJECT[subject] ?? [];
+  const combined = shuffle([...typAM, ...typK]);
+  const selected = combined.slice(0, Math.min(count, combined.length));
+  return filterValidBMSFragen(selected);
+}
+
+/** UK-ID → Kapitel-ID für Filterung nach gelernten Kapiteln (Typ K). */
+function getUkIdToChapterId(): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const k of alleKapitel) {
+    const uks = k.unterkapitel ?? [];
+    for (const u of uks) {
+      if (u?.id) map.set(u.id, k.id);
+    }
+  }
+  return map;
+}
+
+/**
+ * BMS-Fragen pro Fach, nur aus bereits gelernten Kapiteln.
+ * Reihenfolge innerhalb des Fachs: shuffle für Abwechslung.
+ * Für Lernplan: Aufruf in Reihenfolge Bio → Chemie → Physik → Mathe.
+ */
+export function getBMSFragenBySubjectFromChapters(
+  subject: "biologie" | "chemie" | "physik" | "mathematik",
+  count: number,
+  completedChapterIds: Set<string>
+): BMSFrage[] {
+  if (completedChapterIds.size === 0) return [];
+
+  const questions = getQuestionsBySubject(subject).filter((q) =>
+    completedChapterIds.has(q.chapter)
+  );
+  const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
+
+  const ukToChapter = getUkIdToChapterId();
+  const typK = (TYP_K_BY_SUBJECT[subject] ?? []).filter((f) => {
+    const chId = ukToChapter.get(f.uk_id) ?? findChapterByUnterkapitelId(f.uk_id)?.kapitel.id;
+    return chId != null && completedChapterIds.has(chId);
+  });
+
   const combined = shuffle([...typAM, ...typK]);
   const selected = combined.slice(0, Math.min(count, combined.length));
   return filterValidBMSFragen(selected);
