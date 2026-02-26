@@ -308,6 +308,7 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
     {
       id: "ph-5-02",
       title: "Strom, Widerstand und Ohmsches Gesetz",
+      diagram: "circuit",
       stichworte: [
         "Stromstärke",
         "Ohmsches Gesetz",
@@ -615,6 +616,7 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
     {
       id: "ph-5-03",
       title: "Kirchhoffsche Gesetze und Schaltkreise",
+      diagram: "circuit",
       stichworte: [
         "Reihenschaltung",
         "Parallelschaltung",
@@ -1188,6 +1190,7 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
     {
       id: "ph-6-01",
       title: "Geometrische Optik",
+      diagram: "lens-imaging",
       stichworte: [
         "Reflexionsgesetz",
         "Brechungsgesetz",
@@ -1497,6 +1500,7 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
     {
       id: "ph-6-02",
       title: "Wellenoptik",
+      diagram: "em-spectrum",
       stichworte: [
         "Interferenz",
         "Beugung",
