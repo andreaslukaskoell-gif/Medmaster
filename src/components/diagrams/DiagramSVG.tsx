@@ -53,6 +53,13 @@ const VectorAddition = lazy(() => import("./math/VectorAddition"));
 const ProbabilityDistribution = lazy(() => import("./math/ProbabilityDistribution"));
 const GeometricShapes = lazy(() => import("./math/GeometricShapes"));
 const Thermodynamics = lazy(() => import("./physics/Thermodynamics"));
+const TemperatureScales = lazy(() => import("./physics/TemperatureScales"));
+const RadioactiveDecay = lazy(() => import("./physics/RadioactiveDecay"));
+const QuadraticFunction = lazy(() => import("./math/QuadraticFunction"));
+const ExponentialFunction = lazy(() => import("./math/ExponentialFunction"));
+const LogarithmFunction = lazy(() => import("./math/LogarithmFunction"));
+const CombinatoricsTree = lazy(() => import("./math/CombinatoricsTree"));
+const PercentFractions = lazy(() => import("./math/PercentFractions"));
 
 const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "animal-cell": AnimalCell,
@@ -104,6 +111,13 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "probability-distribution": ProbabilityDistribution,
   "geometric-shapes": GeometricShapes,
   thermodynamics: Thermodynamics,
+  "temperature-scales": TemperatureScales,
+  "radioactive-decay": RadioactiveDecay,
+  "quadratic-function": QuadraticFunction,
+  "exponential-function": ExponentialFunction,
+  "logarithm-function": LogarithmFunction,
+  "combinatorics-tree": CombinatoricsTree,
+  "percent-fractions": PercentFractions,
 };
 
 /** Short German captions shown below each diagram. */
@@ -167,6 +181,13 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "probability-distribution": "Normalverteilung mit 68-95-99,7 %-Regel (Gaußsche Glockenkurve).",
   "geometric-shapes": "Geometrische Grundformen — Flächen- und Volumenformeln.",
   thermodynamics: "Wärmekraftmaschine — Hauptsätze der Thermodynamik und Carnot-Wirkungsgrad.",
+  "temperature-scales": "Temperaturskalen — Celsius, Kelvin und Fahrenheit im Vergleich.",
+  "radioactive-decay": "Radioaktiver Zerfall — Zerfallskurve mit Halbwertszeiten.",
+  "quadratic-function": "Quadratische Funktionen — Parabelformen und Scheitelpunktbestimmung.",
+  "exponential-function": "Exponentialfunktionen — Wachstum und Zerfall mit Asymptote.",
+  "logarithm-function": "Logarithmusfunktionen — ln(x) und log₁₀(x) im Vergleich.",
+  "combinatorics-tree": "Baumdiagramm — Pfadmultiplikation und Pfadaddition.",
+  "percent-fractions": "Prozent- und Bruchrechnung — Visualisierung als Kreisdiagramm und Balken.",
 };
 
 export type DiagramType = keyof typeof DIAGRAM_MAP;

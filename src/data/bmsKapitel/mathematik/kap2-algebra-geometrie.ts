@@ -365,7 +365,7 @@ Ein neues Medikament senkt die Sterblichkeit von 8 % auf 5 % -- klingt nach weni
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:unit-circle}}
+{{DIAGRAM:percent-fractions}}
 
 **Idee:** Prozent ist ein **Verhältnis** („von Hundert“), kein absoluter Wert — p % = p/100; „x % von G“ = (x/100)×G. Die **drei Grundfragen** (Prozentwert P, Grundwert G, Prozentsatz p) leiten sich aus **einer** Formel P = G×p/100 durch Umstellen ab. Beim **Dreisatz** entscheidet die Frage „Wird die gesuchte Größe bei mehr von A größer (direkt) oder kleiner (indirekt)?“ über die Rechenrichtung.
 
@@ -686,7 +686,7 @@ Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- 
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:unit-circle}}
+{{DIAGRAM:percent-fractions}}
 
 **Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
 
@@ -1002,7 +1002,7 @@ Der pH-Wert im Blut, die Lautstaerke in Dezibel, die Halbwertszeit eines Medikam
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:unit-circle}}
+{{DIAGRAM:percent-fractions}}
 
 **Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
 

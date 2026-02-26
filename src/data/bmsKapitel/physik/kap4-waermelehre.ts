@@ -45,7 +45,7 @@ Hier geht es um **Temperatur und Wärmeübertragung**: Wie misst man Temperatur 
 
 {{DIAGRAM:thermodynamics}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:temperature-scales}}
 
 ## Temperaturskalen
 
@@ -383,7 +383,7 @@ Hier geht es um **wie Wärme von einem Ort zum anderen gelangt**: Leitung durch 
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:temperature-scales}}
 
 {{DIAGRAM:thermodynamics}}
 
@@ -708,7 +708,7 @@ Hier geht es um **Energie und Richtung** thermischer Prozesse: Der 1. Hauptsatz 
 
 {{DIAGRAM:thermodynamics}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:temperature-scales}}
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
@@ -1015,7 +1015,7 @@ Hier geht es um **Gase und Phasen**: Wie hängen Druck, Volumen und Temperatur z
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:temperature-scales}}
 
 {{DIAGRAM:thermodynamics}}
 

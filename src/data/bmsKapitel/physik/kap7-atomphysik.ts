@@ -43,7 +43,7 @@ Warum leuchtet Neon orange und Natrium gelb -- aber niemals umgekehrt? Jedes Ele
 
 {{DIAGRAM:em-spectrum}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:radioactive-decay}}
 
 ## Entwicklung der Atommodelle
 
@@ -333,7 +333,7 @@ Warum ist das Einatmen von Radongas gefährlicher als das Stehen neben einem Gam
 
 {{DIAGRAM:em-spectrum}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:radioactive-decay}}
 
 ## Alpha-Strahlung (α)
 
@@ -656,7 +656,7 @@ Warum erscheinen Knochen im Röntgenbild weiß, Lunge aber fast schwarz? Calcium
 
 {{DIAGRAM:em-spectrum}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:radioactive-decay}}
 
 ## Entstehung von Röntgenstrahlung
 
@@ -944,7 +944,7 @@ Warum leuchtet ein Tumor im PET-Bild hell auf, obwohl er anatomisch im CT kaum s
 
 {{DIAGRAM:em-spectrum}}
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:radioactive-decay}}
 
 ## PET – Positronen-Emissions-Tomographie
 

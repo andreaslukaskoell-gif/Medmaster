@@ -35,7 +35,7 @@ Wie viele verschiedene DNA-Codons gibt es aus vier Basen? Auf wie viele Arten ka
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:combinatorics-tree}}
 
 {{DIAGRAM:probability-distribution}}
 
@@ -355,7 +355,7 @@ Wenn du einen fairen Würfel wirfst, ist die Chance auf eine Sechs genau 1/6 —
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:combinatorics-tree}}
 
 {{DIAGRAM:probability-distribution}}
 
@@ -646,7 +646,7 @@ Ein HIV-Test hat eine Sensitivität von 99,5 % und eine Spezifität von 99,5 % �
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:combinatorics-tree}}
 
 {{DIAGRAM:probability-distribution}}
 
@@ -924,7 +924,7 @@ Wenn ein Labor den Referenzbereich für Blutzucker mit 70-100 mg/dL angibt, stec
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:combinatorics-tree}}
 
 {{DIAGRAM:probability-distribution}}
 
