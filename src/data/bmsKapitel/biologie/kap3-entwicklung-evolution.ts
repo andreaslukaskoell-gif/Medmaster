@@ -210,6 +210,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
           tags: ["oogenese", "meiose-ii", "befruchtung"],
         },
       ],
+      diagram: "meiosis",
     },
     {
       id: "bio-4-01",
@@ -387,6 +388,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
           tags: ["syngamie", "zygote"],
         },
       ],
+      diagram: "meiosis",
     },
     {
       id: "bio-4-01b",
@@ -1181,6 +1183,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
           tags: ["quickening", "kindsbewegungen", "lanugo"],
         },
       ],
+      diagram: "stem-cells",
     },
     {
       id: "bio-4-04",
@@ -1306,7 +1309,7 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
         "Den Aufbau der Nabelschnur (2 Arterien, 1 Vene) und die Funktion der Eihäute (Amnion, Chorion) erklären.",
       ],
       sections: [],
-      diagram: "membrane-transport",
+      diagram: "menstrual-cycle",
       merksätze: [
         "Plazenta: fetaler Anteil = Chorion frondosum (Chorionzotten); mütterlicher Anteil = Decidua basalis.",
         "Mütterliches und fetales Blut mischen sich nie direkt — Austausch erfolgt über die Plazentaschranke.",
@@ -1538,7 +1541,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
         "Die Endosymbiontentheorie mit mindestens drei Belegen stützen",
       ],
       sections: [],
-      diagram: "endomembrane-system",
+      diagram: "prokaryote-vs-eukaryote",
       merksätze: [
         "Miller-Urey: CH₄ + NH₃ + H₂ + H₂O + Blitz → Aminosäuren (1953). Beweis: abiotische Entstehung organischer Moleküle.",
         "RNA-Welt: RNA als erstes Informations- und Katalysemolekül. Ribozyme = RNA-Enzyme.",
