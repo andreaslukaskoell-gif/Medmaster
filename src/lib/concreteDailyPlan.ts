@@ -1,10 +1,10 @@
 /**
- * Konkreter Tagesplan: welche Kapitel lesen/wiederholen, wie viele Fragen/KFF/TV/SEK.
+ * Konkreter Tagesplan: welche Kapitel lernen/wiederholen, wie viele Fragen/KFF/TV/SEK.
  * Macht den Lernplan täglich umsetzbar ohne Überforderung.
  */
 
 import type { AdaptivePlanResult } from "@/lib/adaptivePlan";
-import { alleKapitel } from "@/data/bmsKapitel";
+import { alleKapitel, getKapitelBySubject } from "@/data/bmsKapitel";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 
@@ -18,7 +18,11 @@ export type BmsReadItem = {
 
 export type BmsReviewItem = {
   chapterId: string;
+  /** Konkretes Unterkapitel zum Wiederholen; Link geht direkt dorthin */
+  subchapterId?: string;
+  /** Anzeige: z. B. "Zelle: Membranaufbau" */
   title: string;
+  /** Link direkt zum UK (pathForChapter + ?uk=index) */
   path: string;
   subject: string;
 };
@@ -35,10 +39,17 @@ export type KffTarget = {
   label: string;
 };
 
+/** SEK: Unterteil (Erkennen / Regulieren / Entscheiden) + Anzahl Beispiele */
+export type SekTarget = {
+  domain: "sek-erkennen" | "sek-regulieren" | "sek-entscheiden";
+  count: number;
+  label: string;
+};
+
 export interface ConcreteDailyPlan {
-  /** 1–2 neue Unterkapitel/Kapitel zum Lesen (Weiterlernen) */
+  /** 1–2 neue Unterkapitel zum Lernen (Reihenfolge wie im BMS-Lernbereich, ggf. mehrere Fächer) */
   bmsRead: BmsReadItem[];
-  /** Fällige Kapitel zum Wiederholen (max 5) */
+  /** Fällige Unterkapitel zum Wiederholen (konkret mit Link direkt zum UK, max. 8) */
   bmsReview: BmsReviewItem[];
   /** Fragen pro BMS-Fach (aus Wochenplan abgeleitet) */
   bmsQuestions: BmsQuestionsTarget[];
@@ -46,8 +57,8 @@ export interface ConcreteDailyPlan {
   kffTasks: KffTarget[];
   /** TV: Anzahl Texte (1–2) */
   tvTexts: number;
-  /** SEK: Minuten pro Tag */
-  sekMinutes: number;
+  /** SEK: Unterteile mit Anzahl Beispiele (Erkennen, Regulieren, Entscheiden) */
+  sekTasks: SekTarget[];
   /** Geschätzte Gesamtminuten heute */
   totalMinutesEstimate: number;
 }
@@ -55,83 +66,13 @@ export interface ConcreteDailyPlan {
 const MIN_PER_BMS_QUESTION = 4;
 const MIN_PER_KFF_TASK = 2;
 const MIN_PER_TV_TEXT = 15;
-const MAX_BMS_READ = 2;
-const MAX_BMS_REVIEW = 5;
+const MAX_BMS_READ = 3;
+/** Max. 3 Kapitel pro Tag wiederholen; nur Kapitel/UKs, die schon gelernt wurden. Max. 3 Einträge (UKs) in der Liste. */
+const MAX_BMS_REVIEW_CHAPTERS = 3;
+const MAX_BMS_REVIEW_UK = 3;
 const KFF_SPLIT_ZF = 0.5; // 50% Zahlenfolgen, 50% Implikationen
 
-function getChapterById(chapterId: string): Kapitel | undefined {
-  return alleKapitel.find((k) => k.id === chapterId);
-}
-
-function getNextUnterkapitelOrChapter(
-  lastChapterId: string | null,
-  lastUnterkapitelId: string | null
-): BmsReadItem | null {
-  if (!lastChapterId) {
-    // Kein Fortschritt: erstes Kapitel Biologie vorschlagen
-    const bio = alleKapitel.filter((k) => k.subject === "biologie").sort(bySequence)[0];
-    if (!bio?.unterkapitel?.length) return null;
-    const first = bio.unterkapitel[0];
-    if (!first?.id) return null;
-    return {
-      chapterId: bio.id,
-      subchapterId: first.id,
-      title: `${bio.sequenceTitle || bio.title}: ${first.title}`,
-      path: pathForChapter(bio.subject, bio.id),
-      subject: bio.subject,
-    };
-  }
-
-  const chapter = getChapterById(lastChapterId);
-  if (!chapter) return null;
-
-  const uks = chapter.unterkapitel ?? [];
-  if (lastUnterkapitelId) {
-    const idx = uks.findIndex((u) => u?.id === lastUnterkapitelId);
-    if (idx >= 0 && idx < uks.length - 1) {
-      const next = uks[idx + 1];
-      if (next?.id) {
-        return {
-          chapterId: chapter.id,
-          subchapterId: next.id,
-          title: `${chapter.sequenceTitle || chapter.title}: ${next.title}`,
-          path: pathForChapter(chapter.subject, chapter.id),
-          subject: chapter.subject,
-        };
-      }
-    }
-    // Nächstes Kapitel (gleiches Fach oder rotieren)
-    const sameSubject = alleKapitel.filter((k) => k.subject === chapter.subject).sort(bySequence);
-    const chIdx = sameSubject.findIndex((k) => k.id === chapter.id);
-    if (chIdx >= 0 && chIdx < sameSubject.length - 1) {
-      const nextChap = sameSubject[chIdx + 1]!;
-      const firstUk = nextChap.unterkapitel?.[0];
-      return {
-        chapterId: nextChap.id,
-        subchapterId: firstUk?.id,
-        title: firstUk
-          ? `${nextChap.sequenceTitle || nextChap.title}: ${firstUk.title}`
-          : nextChap.sequenceTitle || nextChap.title,
-        path: pathForChapter(nextChap.subject, nextChap.id),
-        subject: nextChap.subject,
-      };
-    }
-  } else {
-    // Nur Kapitel bekannt: erstes UK dieses Kapitels
-    const first = uks[0];
-    if (first?.id) {
-      return {
-        chapterId: chapter.id,
-        subchapterId: first.id,
-        title: `${chapter.sequenceTitle || chapter.title}: ${first.title}`,
-        path: pathForChapter(chapter.subject, chapter.id),
-        subject: chapter.subject,
-      };
-    }
-  }
-
-  return null;
-}
+const SUBJECT_ORDER: string[] = ["biologie", "chemie", "physik", "mathematik"];
 
 function bySequence(a: Kapitel, b: Kapitel): number {
   const sa = a.sequence ?? 999;
@@ -139,8 +80,37 @@ function bySequence(a: Kapitel, b: Kapitel): number {
   return sa - sb;
 }
 
+/** Alle Unterkapitel in der Reihenfolge des BMS-Lernbereichs: 1. UK des 1. Kapitels, 2. UK des 1. Kapitels, … (Bio → Chemie → Physik → Mathe). */
+function getOrderedBmsReadItems(): BmsReadItem[] {
+  const items: BmsReadItem[] = [];
+  for (const subject of SUBJECT_ORDER) {
+    const chapters = getKapitelBySubject(subject).sort(bySequence);
+    for (const ch of chapters) {
+      const uks = ch.unterkapitel ?? [];
+      for (let ukIndex = 0; ukIndex < uks.length; ukIndex++) {
+        const uk = uks[ukIndex];
+        if (!uk?.id) continue;
+        items.push({
+          chapterId: ch.id,
+          subchapterId: uk.id,
+          title: `${ch.sequenceTitle || ch.title}: ${uk.title}`,
+          path: `${pathForChapter(ch.subject, ch.id)}?uk=${ukIndex}`,
+          subject: ch.subject,
+        });
+      }
+    }
+  }
+  return items;
+}
+
+function getChapterById(chapterId: string): Kapitel | undefined {
+  return alleKapitel.find((k) => k.id === chapterId);
+}
+
 /**
  * Baut den konkreten Tagesplan aus dem adaptiven Plan und Nutzerstand.
+ * Wenn completedChapterIds übergeben wird, erscheinen bei BMS-Fragen nur Fächer,
+ * zu denen mindestens ein abgeschlossenes Kapitel existiert.
  */
 export function buildConcreteDailyPlan(
   plan: AdaptivePlanResult,
@@ -148,9 +118,12 @@ export function buildConcreteDailyPlan(
     dueChapterIds: string[];
     lastViewedChapterId?: string | null;
     lastViewedUnterkapitelId?: string | null;
+    /** Nur BMS-Fragen für Fächer mit mindestens einem abgeschlossenen Kapitel */
+    completedChapterIds?: string[];
   }
 ): ConcreteDailyPlan {
-  const { dueChapterIds, lastViewedChapterId, lastViewedUnterkapitelId } = options;
+  const { dueChapterIds, lastViewedChapterId, lastViewedUnterkapitelId, completedChapterIds } =
+    options;
 
   const weeklyPlan = plan.weeklyPlan;
   const bmsItem = weeklyPlan.find((p) => p.module === "BMS");
@@ -163,37 +136,62 @@ export function buildConcreteDailyPlan(
   const tvMinutesPerDay = tvItem ? tvItem.minutesPerWeek / 7 : 0;
   const sekMinutesPerDay = sekItem ? Math.round(sekItem.minutesPerWeek / 7) : 0;
 
-  // BMS: Lesen (1–2 Vorschläge)
+  // BMS: Lernen – strikte Reihenfolge: immer 1. UK des 1. Kapitels, dann 2. UK des 1. Kapitels usw.; nur noch nicht gemachte
+  const completedSet = new Set(completedChapterIds ?? []);
+  const orderedItems = getOrderedBmsReadItems();
   const bmsRead: BmsReadItem[] = [];
-  for (let i = 0; i < MAX_BMS_READ; i++) {
-    const item =
-      i === 0
-        ? getNextUnterkapitelOrChapter(
-            lastViewedChapterId ?? null,
-            lastViewedUnterkapitelId ?? null
-          )
-        : null;
-    if (
-      item &&
-      !bmsRead.some((r) => r.chapterId === item.chapterId && r.subchapterId === item.subchapterId)
-    ) {
+  for (let i = 0; i < orderedItems.length && bmsRead.length < MAX_BMS_READ; i++) {
+    const item = orderedItems[i]!;
+    const ukId = item.subchapterId ?? item.chapterId;
+    if (!completedSet.has(ukId) && !completedSet.has(item.chapterId)) {
       bmsRead.push(item);
     }
-    if (!item) break;
   }
 
-  // BMS: Wiederholen (fällige Kapitel, max 5)
-  const bmsReview: BmsReviewItem[] = dueChapterIds.slice(0, MAX_BMS_REVIEW).map((chapterId) => {
+  // BMS: Wiederholen – nur bereits gelernte Kapitel, max. 3 Kapitel pro Tag; pro Kapitel konkrete UKs mit direktem Link
+  const bmsReview: BmsReviewItem[] = [];
+  const learnedDueChapterIds = dueChapterIds.filter((chapterId) => {
     const k = getChapterById(chapterId);
-    const title = k?.sequenceTitle || k?.title || chapterId;
-    const subject = k?.subject ?? "biologie";
-    return {
-      chapterId,
-      title,
-      path: pathForChapter(subject, chapterId),
-      subject,
-    };
+    if (!k) return false;
+    if (completedSet.has(chapterId)) return true;
+    return (k.unterkapitel ?? []).some((u) => u?.id && completedSet.has(u.id));
   });
+  const chaptersToReview = learnedDueChapterIds.slice(0, MAX_BMS_REVIEW_CHAPTERS);
+  for (const chapterId of chaptersToReview) {
+    if (bmsReview.length >= MAX_BMS_REVIEW_UK) break;
+    const k = getChapterById(chapterId);
+    if (!k) continue;
+    const subject = k.subject ?? "biologie";
+    const uks = k.unterkapitel ?? [];
+    for (let ukIndex = 0; ukIndex < uks.length && bmsReview.length < MAX_BMS_REVIEW_UK; ukIndex++) {
+      const uk = uks[ukIndex];
+      if (!uk?.id) continue;
+      // Nur UKs anzeigen, die bereits abgehakt sind (in completedChapters)
+      if (!completedSet.has(uk.id)) continue;
+      bmsReview.push({
+        chapterId,
+        subchapterId: uk.id,
+        title: `${k.sequenceTitle || k.title}: ${uk.title}`,
+        path: `${pathForChapter(subject, chapterId)}?uk=${ukIndex}`,
+        subject,
+      });
+    }
+  }
+  // Falls keine UKs (Kapitel ohne Unterkapitel): ein Eintrag pro Kapitel, nur wenn abgehakt
+  if (bmsReview.length === 0) {
+    for (const chapterId of chaptersToReview) {
+      if (!completedSet.has(chapterId)) continue;
+      const k = getChapterById(chapterId);
+      const title = k?.sequenceTitle || k?.title || chapterId;
+      const subject = k?.subject ?? "biologie";
+      bmsReview.push({
+        chapterId,
+        title,
+        path: pathForChapter(subject, chapterId),
+        subject,
+      });
+    }
+  }
 
   // BMS: Fragen pro Fach (aus bmsSubPlan)
   let bmsQuestions: BmsQuestionsTarget[] = plan.bmsSubPlan
@@ -225,6 +223,20 @@ export function buildConcreteDailyPlan(
     ];
   }
 
+  // Nur Fächer anzeigen, zu denen mindestens ein Kapitel oder Unterkapitel abgeschlossen ist.
+  // completedChapters enthält sowohl Kapitel-IDs (bei Vollabschluss) als auch Unterkapitel-IDs (uk.id).
+  if (completedChapterIds && completedChapterIds.length > 0) {
+    const completedSet = new Set(completedChapterIds);
+    bmsQuestions = bmsQuestions.filter((q) => {
+      const chapters = getKapitelBySubject(q.fach);
+      return chapters.some(
+        (ch) =>
+          completedSet.has(ch.id) ||
+          (ch.unterkapitel ?? []).some((u) => u?.id && completedSet.has(u.id))
+      );
+    });
+  }
+
   // KFF: Zahlenfolgen + Implikationen
   const kffTotalTasks = Math.max(0, Math.round(kffMinutesPerDay / MIN_PER_KFF_TASK));
   const zfCount = Math.max(0, Math.round(kffTotalTasks * KFF_SPLIT_ZF));
@@ -239,6 +251,27 @@ export function buildConcreteDailyPlan(
   const tvTexts =
     tvMinutesPerDay >= MIN_PER_TV_TEXT * 2 ? 2 : tvMinutesPerDay >= MIN_PER_TV_TEXT ? 1 : 0;
 
+  // SEK: Minuten → Anzahl Beispiele (~2.5 Min pro Beispiel), auf Erkennen / Regulieren / Entscheiden verteilen
+  const MIN_PER_SEK_EXAMPLE = 2.5;
+  const totalSekExamples = Math.max(0, Math.round(sekMinutesPerDay / MIN_PER_SEK_EXAMPLE));
+  const sekDomains: {
+    domain: "sek-erkennen" | "sek-regulieren" | "sek-entscheiden";
+    label: string;
+  }[] = [
+    { domain: "sek-erkennen", label: "Erkennen" },
+    { domain: "sek-regulieren", label: "Regulieren" },
+    { domain: "sek-entscheiden", label: "Entscheiden" },
+  ];
+  const sekTasks: SekTarget[] = [];
+  if (totalSekExamples > 0) {
+    const perDomain = Math.floor(totalSekExamples / 3);
+    const remainder = totalSekExamples % 3;
+    sekDomains.forEach((d, i) => {
+      const count = perDomain + (i < remainder ? 1 : 0);
+      if (count > 0) sekTasks.push({ domain: d.domain, count, label: d.label });
+    });
+  }
+
   const totalMinutesEstimate =
     Math.round(bmsMinutesPerDay) +
     Math.round(kffMinutesPerDay) +
@@ -251,7 +284,7 @@ export function buildConcreteDailyPlan(
     bmsQuestions,
     kffTasks,
     tvTexts,
-    sekMinutes: sekMinutesPerDay,
+    sekTasks,
     totalMinutesEstimate,
   };
 }

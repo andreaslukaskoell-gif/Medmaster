@@ -24,6 +24,7 @@ import type { TodayEngineTask } from "@/lib/learning/types";
 import { daysUntilMedAT } from "@/lib/utils";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
+import { getPlanAdaptation } from "@/lib/planAdaptation";
 
 const REASON_LABEL: Record<string, string> = {
   due: "Fällig",
@@ -46,6 +47,9 @@ export default function TodayPage() {
   const navigate = useNavigate();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
   const { lernplanConfig, getDueChapterIds, userProgress } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
+  const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
+  const activityLog = useStore((s) => s.activityLog);
   const adaptive = useAdaptiveStore();
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
@@ -55,8 +59,15 @@ export default function TodayPage() {
     if (!lernplanConfig?.hoursPerWeek) return null;
     const days = daysUntilMedAT();
     const weeksLeft = Math.max(1, Math.floor(days / 7));
-    const plan = generateAdaptivePlan({
+    const adaptation = getPlanAdaptation({
       hoursPerWeek: lernplanConfig.hoursPerWeek,
+      goalAchievedByDate: goalAchievedByDate ?? {},
+      quizResults: quizResults ?? [],
+      activityLog: activityLog ?? {},
+    });
+    const effectiveHours = adaptation.effectiveHoursPerWeek;
+    const plan = generateAdaptivePlan({
+      hoursPerWeek: effectiveHours,
       weeksLeft,
       readiness: adaptive.getMedATReadiness(),
       fachReadiness: {
@@ -80,6 +91,9 @@ export default function TodayPage() {
     lastViewedUnterkapitelId,
     userProgress,
     adaptive,
+    goalAchievedByDate,
+    quizResults,
+    activityLog,
   ]);
 
   const startFirstTask = () => {
@@ -136,18 +150,18 @@ export default function TodayPage() {
                   </span>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] mb-3">
-                  {concretePlan.bmsRead.length > 0 && "Kapitel lesen · "}
+                  {concretePlan.bmsRead.length > 0 && "Kapitel lernen · "}
                   {concretePlan.bmsReview.length > 0 && "Wiederholen · "}
                   {concretePlan.bmsQuestions.length > 0 && "BMS-Fragen · "}
                   {concretePlan.kffTasks.length > 0 && "KFF · "}
                   {concretePlan.tvTexts > 0 && "TV · "}
-                  {concretePlan.sekMinutes > 0 && "SEK"}
+                  {concretePlan.sekTasks.length > 0 && "SEK"}
                   {!concretePlan.bmsRead.length &&
                     !concretePlan.bmsReview.length &&
                     !concretePlan.bmsQuestions.length &&
                     !concretePlan.kffTasks.length &&
                     concretePlan.tvTexts === 0 &&
-                    concretePlan.sekMinutes === 0 &&
+                    concretePlan.sekTasks.length === 0 &&
                     "Alles erledigt?"}
                 </p>
                 <span className="text-xs text-primary-600 dark:text-primary-400 font-medium flex items-center gap-1">

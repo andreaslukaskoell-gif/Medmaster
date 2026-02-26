@@ -12,6 +12,7 @@ import {
   ListChecks,
   RefreshCw,
   Check,
+  CheckCircle2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,7 @@ import { daysUntilMedAT } from "@/lib/utils";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { getDailyGoalFromPlan } from "@/lib/dailyGoal";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
+import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 // Gesamtpensum BMS+KFF+TV+SEK (gleicher Wert wie Onboarding)
@@ -53,7 +55,16 @@ const phaseConfig = {
 
 export default function Lernplan() {
   usePageTitle("Lernplan");
-  const { lernplanConfig, setLernplanConfig, getDueChapterIds, userProgress } = useStore();
+  const {
+    lernplanConfig,
+    setLernplanConfig,
+    getDueChapterIds,
+    completedChapters,
+    userProgress,
+    goalAchievedByDate,
+    quizResults,
+    activityLog,
+  } = useStore();
   const adaptive = useAdaptiveStore();
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
@@ -110,9 +121,24 @@ export default function Lernplan() {
     });
   };
 
+  const adaptation = useMemo(
+    () =>
+      lernplanConfig
+        ? getPlanAdaptation({
+            hoursPerWeek: lernplanConfig.hoursPerWeek,
+            goalAchievedByDate: goalAchievedByDate ?? {},
+            quizResults: quizResults ?? [],
+            activityLog: activityLog ?? {},
+          })
+        : null,
+    [lernplanConfig, goalAchievedByDate, quizResults, activityLog]
+  );
+  const effectiveHoursPerWeek =
+    adaptation?.effectiveHoursPerWeek ?? lernplanConfig?.hoursPerWeek ?? 10;
+
   const plan = lernplanConfig
     ? generateAdaptivePlan({
-        hoursPerWeek: lernplanConfig.hoursPerWeek,
+        hoursPerWeek: effectiveHoursPerWeek,
         weeksLeft,
         readiness,
         fachReadiness,
@@ -127,8 +153,16 @@ export default function Lernplan() {
       dueChapterIds: getDueChapterIds(),
       lastViewedChapterId: lastViewedKapitelId,
       lastViewedUnterkapitelId,
+      completedChapterIds: completedChapters ?? [],
     });
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId, userProgress]);
+  }, [
+    plan,
+    getDueChapterIds,
+    lastViewedKapitelId,
+    lastViewedUnterkapitelId,
+    userProgress,
+    completedChapters,
+  ]);
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
@@ -150,6 +184,17 @@ export default function Lernplan() {
             <p className="text-sm text-muted font-normal">
               Konkrete Vorschläge für heute – machbar und nicht überfordernd.
             </p>
+            {adaptation && adaptation.reason === "schnell_und_gut" && (
+              <p className="text-xs text-emerald-600 dark:text-emerald-400">
+                Dein Plan wurde leicht erhöht – du warst in den letzten Tagen schnell und gut
+                unterwegs.
+              </p>
+            )}
+            {adaptation && adaptation.reason === "überfordert" && (
+              <p className="text-xs text-amber-600 dark:text-amber-400">
+                Dein Plan wurde etwas entlastet – damit du nicht unter Druck gerätst.
+              </p>
+            )}
           </CardHeader>
           <CardContent className="space-y-4">
             {plan ? (
@@ -182,26 +227,49 @@ export default function Lernplan() {
                           <div>
                             <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
                               <BookOpen className="w-3.5 h-3.5" />
-                              Kapitel lesen
+                              Kapitel lernen
                             </h4>
                             <ul className="space-y-1.5">
-                              {concretePlan.bmsRead.map((item) => (
-                                <li key={`${item.chapterId}-${item.subchapterId ?? "ch"}`}>
-                                  <Link
-                                    to={item.path}
-                                    onClick={() =>
-                                      item.subchapterId &&
-                                      setResumeToUnterkapitelId(item.subchapterId)
-                                    }
-                                    className="flex items-center gap-2 p-2 rounded-lg border border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors text-left"
-                                  >
-                                    <span className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate flex-1">
-                                      {item.title}
-                                    </span>
-                                    <ArrowRight className="w-4 h-4 shrink-0 text-muted" />
-                                  </Link>
-                                </li>
-                              ))}
+                              {concretePlan.bmsRead.map((item) => {
+                                const isDone =
+                                  (item.subchapterId &&
+                                    completedChapters?.includes(item.subchapterId)) ||
+                                  completedChapters?.includes(item.chapterId);
+                                return (
+                                  <li key={`${item.chapterId}-${item.subchapterId ?? "ch"}`}>
+                                    <Link
+                                      to={item.path}
+                                      onClick={() =>
+                                        item.subchapterId &&
+                                        setResumeToUnterkapitelId(item.subchapterId)
+                                      }
+                                      className={`flex items-center gap-2 p-2 rounded-lg border transition-colors text-left ${
+                                        isDone
+                                          ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                          : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                      }`}
+                                    >
+                                      {isDone ? (
+                                        <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                                      ) : (
+                                        <span className="w-4 h-4 shrink-0 rounded-full border-2 border-muted" />
+                                      )}
+                                      <span
+                                        className={`text-sm font-medium truncate flex-1 ${
+                                          isDone
+                                            ? "text-emerald-800 dark:text-emerald-200"
+                                            : "text-gray-900 dark:text-gray-100"
+                                        }`}
+                                      >
+                                        {item.title}
+                                      </span>
+                                      {!isDone && (
+                                        <ArrowRight className="w-4 h-4 shrink-0 text-muted" />
+                                      )}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </div>
                         )}
@@ -213,107 +281,228 @@ export default function Lernplan() {
                               Wiederholen (fällig)
                             </h4>
                             <ul className="space-y-1.5">
-                              {concretePlan.bmsReview.map((item) => (
-                                <li key={item.chapterId}>
-                                  <Link
-                                    to={item.path}
-                                    className="flex items-center gap-2 p-2 rounded-lg border border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-900/10 hover:bg-amber-100/50 dark:hover:bg-amber-900/20 transition-colors text-left"
-                                  >
-                                    <span className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate flex-1">
-                                      {item.title}
-                                    </span>
-                                    <ArrowRight className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
-                                  </Link>
-                                </li>
-                              ))}
+                              {concretePlan.bmsReview.map((item) => {
+                                const isDone = item.subchapterId
+                                  ? completedChapters?.includes(item.subchapterId)
+                                  : completedChapters?.includes(item.chapterId);
+                                return (
+                                  <li key={item.subchapterId ?? item.chapterId}>
+                                    <Link
+                                      to={item.path}
+                                      className={`flex items-center gap-2 p-2 rounded-lg transition-colors text-left ${
+                                        isDone
+                                          ? "border border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                          : "border border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-900/10 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
+                                      }`}
+                                    >
+                                      {isDone ? (
+                                        <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                                      ) : (
+                                        <span className="w-4 h-4 shrink-0 rounded-full border-2 border-amber-400 dark:border-amber-500" />
+                                      )}
+                                      <span
+                                        className={`text-sm font-medium truncate flex-1 ${
+                                          isDone
+                                            ? "text-emerald-800 dark:text-emerald-200"
+                                            : "text-gray-900 dark:text-gray-100"
+                                        }`}
+                                      >
+                                        {item.title}
+                                      </span>
+                                      {!isDone && (
+                                        <ArrowRight className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
+                                      )}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </div>
                         )}
 
-                        {concretePlan.bmsQuestions.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
-                              <ListChecks className="w-3.5 h-3.5" />
-                              BMS-Fragen
-                            </h4>
-                            <Link
-                              to="/fragen-trainer"
-                              className="flex flex-wrap gap-2 p-3 rounded-lg border border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
-                            >
-                              {concretePlan.bmsQuestions.map((q) => (
-                                <span
-                                  key={q.fach}
-                                  className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 text-xs font-medium"
+                        {concretePlan.bmsQuestions.length > 0 &&
+                          (() => {
+                            const bmsDone = dailyState.todayTasks.find(
+                              (t) => t.module === "BMS"
+                            )?.done;
+                            return (
+                              <div>
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                  <ListChecks className="w-3.5 h-3.5" />
+                                  BMS-Fragen
+                                </h4>
+                                <Link
+                                  to="/fragen-trainer"
+                                  state={{
+                                    dailyPlanBms: concretePlan.bmsQuestions.map((q) => ({
+                                      fach: q.fach,
+                                      count: q.count,
+                                    })),
+                                  }}
+                                  className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
+                                    bmsDone
+                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                  }`}
                                 >
-                                  {q.label}: {q.count}
-                                </span>
-                              ))}
-                              <span className="text-xs text-muted self-center ml-auto">
-                                Fragen-Trainer →
-                              </span>
-                            </Link>
-                          </div>
-                        )}
+                                  {bmsDone ? (
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
+                                  ) : null}
+                                  {concretePlan.bmsQuestions.map((q) => (
+                                    <span
+                                      key={q.fach}
+                                      className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
+                                        bmsDone
+                                          ? "bg-emerald-200/60 dark:bg-emerald-800/40 text-emerald-800 dark:text-emerald-200"
+                                          : "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200"
+                                      }`}
+                                    >
+                                      {q.label}: {q.count}
+                                    </span>
+                                  ))}
+                                  <span className="text-xs text-muted self-center ml-auto">
+                                    {bmsDone ? "Erledigt" : "Fragen-Trainer →"}
+                                  </span>
+                                </Link>
+                              </div>
+                            );
+                          })()}
 
-                        {concretePlan.kffTasks.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
-                              <Brain className="w-3.5 h-3.5" />
-                              KFF
-                            </h4>
-                            <Link
-                              to="/kff"
-                              className="flex flex-wrap gap-2 p-3 rounded-lg border border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
-                            >
-                              {concretePlan.kffTasks.map((t) => (
-                                <span
-                                  key={t.domain}
-                                  className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 text-xs font-medium"
+                        {concretePlan.kffTasks.length > 0 &&
+                          (() => {
+                            const kffDone = dailyState.todayTasks.find(
+                              (t) => t.module === "KFF"
+                            )?.done;
+                            return (
+                              <div>
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                  <Brain className="w-3.5 h-3.5" />
+                                  KFF
+                                </h4>
+                                <Link
+                                  to="/kff"
+                                  state={{
+                                    dailyPlanKff: concretePlan.kffTasks.map((t) => ({
+                                      domain: t.domain,
+                                      count: t.count,
+                                    })),
+                                  }}
+                                  className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
+                                    kffDone
+                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                  }`}
                                 >
-                                  {t.label}: {t.count}
-                                </span>
-                              ))}
-                              <span className="text-xs text-muted self-center ml-auto">KFF →</span>
-                            </Link>
-                          </div>
-                        )}
+                                  {kffDone ? (
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
+                                  ) : null}
+                                  {concretePlan.kffTasks.map((t) => (
+                                    <span
+                                      key={t.domain}
+                                      className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
+                                        kffDone
+                                          ? "bg-amber-200/60 dark:bg-amber-800/40 text-amber-800 dark:text-amber-200"
+                                          : "bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200"
+                                      }`}
+                                    >
+                                      {t.label}: {t.count}
+                                    </span>
+                                  ))}
+                                  <span className="text-xs text-muted self-center ml-auto">
+                                    {kffDone ? "Erledigt" : "KFF →"}
+                                  </span>
+                                </Link>
+                              </div>
+                            );
+                          })()}
 
-                        {concretePlan.tvTexts > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
-                              <FileText className="w-3.5 h-3.5" />
-                              TV
-                            </h4>
-                            <Link
-                              to="/tv"
-                              className="flex items-center gap-2 p-3 rounded-lg border border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
-                            >
-                              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                {concretePlan.tvTexts} Text{concretePlan.tvTexts > 1 ? "e" : ""}{" "}
-                                bearbeiten
-                              </span>
-                              <ArrowRight className="w-4 h-4 shrink-0 text-muted ml-auto" />
-                            </Link>
-                          </div>
-                        )}
+                        {concretePlan.tvTexts > 0 &&
+                          (() => {
+                            const tvDone = dailyState.todayTasks.find(
+                              (t) => t.module === "TV"
+                            )?.done;
+                            return (
+                              <div>
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                  <FileText className="w-3.5 h-3.5" />
+                                  TV
+                                </h4>
+                                <Link
+                                  to="/tv"
+                                  state={{ dailyPlanTvTexts: concretePlan.tvTexts }}
+                                  className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
+                                    tvDone
+                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                  }`}
+                                >
+                                  {tvDone ? (
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                                  ) : null}
+                                  <span
+                                    className={`text-sm font-medium flex-1 ${
+                                      tvDone
+                                        ? "text-emerald-800 dark:text-emerald-200"
+                                        : "text-gray-900 dark:text-gray-100"
+                                    }`}
+                                  >
+                                    {concretePlan.tvTexts} Text{concretePlan.tvTexts > 1 ? "e" : ""}{" "}
+                                    bearbeiten
+                                  </span>
+                                  {!tvDone && (
+                                    <ArrowRight className="w-4 h-4 shrink-0 text-muted ml-auto" />
+                                  )}
+                                  {tvDone && <span className="text-xs text-muted">Erledigt</span>}
+                                </Link>
+                              </div>
+                            );
+                          })()}
 
-                        {concretePlan.sekMinutes > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
-                              <Heart className="w-3.5 h-3.5" />
-                              SEK
-                            </h4>
-                            <Link
-                              to="/sek"
-                              className="flex items-center gap-2 p-3 rounded-lg border border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
-                            >
-                              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                ca. {concretePlan.sekMinutes} Min
-                              </span>
-                              <ArrowRight className="w-4 h-4 shrink-0 text-muted ml-auto" />
-                            </Link>
-                          </div>
-                        )}
+                        {concretePlan.sekTasks.length > 0 &&
+                          (() => {
+                            const sekDone = dailyState.todayTasks.find(
+                              (t) => t.module === "SEK"
+                            )?.done;
+                            return (
+                              <div>
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                  <Heart className="w-3.5 h-3.5" />
+                                  SEK
+                                </h4>
+                                <Link
+                                  to="/sek"
+                                  state={{ dailyPlanSek: concretePlan.sekTasks }}
+                                  className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
+                                    sekDone
+                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
+                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                  }`}
+                                >
+                                  {sekDone ? (
+                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                                  ) : null}
+                                  <div className="flex flex-wrap gap-2 flex-1">
+                                    {concretePlan.sekTasks.map((t) => (
+                                      <span
+                                        key={t.domain}
+                                        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
+                                          sekDone
+                                            ? "bg-rose-200/60 dark:bg-rose-800/40 text-rose-800 dark:text-rose-200"
+                                            : "bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200"
+                                        }`}
+                                      >
+                                        {t.label}: {t.count}{" "}
+                                        {t.count === 1 ? "Beispiel" : "Beispiele"}
+                                      </span>
+                                    ))}
+                                  </div>
+                                  <span className="text-xs text-muted shrink-0">
+                                    {sekDone ? "Erledigt" : "SEK →"}
+                                  </span>
+                                </Link>
+                              </div>
+                            );
+                          })()}
                       </div>
                     )}
                   </>
