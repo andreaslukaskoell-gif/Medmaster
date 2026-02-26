@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   ArrowRight,
@@ -22,6 +22,7 @@ import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import KFFStrategyView from "@/components/shared/KFFStrategyView";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import {
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
@@ -42,6 +43,7 @@ import {
 } from "@/data/kffImplikationen";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 import { OFFICIAL_WF_EXAMPLES, type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
+import { WF_TRAINING_POOL_1000 } from "@/data/kffWortfluessigkeit1000";
 import {
   OFFICIAL_ZF_EXAMPLES,
   generateSequenceTaskSet,
@@ -76,6 +78,7 @@ import type { TaskDomain } from "@/lib/taskDb/types";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 
 type KffView =
   | "overview"
@@ -136,12 +139,24 @@ function TaskDbCountHint({ domain }: { domain: TaskDomain }) {
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
   const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const dailyPlanKff = location.state?.dailyPlanKff as
+    | { domain: string; count: number }[]
+    | undefined;
+  const planZfCount = dailyPlanKff?.find((t) => t.domain === "kff-zahlenfolgen")?.count ?? 0;
+  const planImpCount = dailyPlanKff?.find((t) => t.domain === "kff-implikationen")?.count ?? 0;
+
   const startParam = searchParams.get("start");
   const initialView: KffView =
-    startParam && QUICK_START_VIEWS[startParam] ? QUICK_START_VIEWS[startParam] : "overview";
+    planZfCount > 0 || planImpCount > 0
+      ? "zahlenfolgen"
+      : startParam && QUICK_START_VIEWS[startParam]
+        ? QUICK_START_VIEWS[startParam]
+        : "overview";
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
+  const { kffDomainIntroSeen, markKffDomainIntroSeen } = useStore();
   const [authTimedOut, setAuthTimedOut] = useState(false);
 
   useEffect(() => {
@@ -166,20 +181,57 @@ export default function KFF() {
     );
   }
 
-  if (view === "figuren-quiz") return <FigurenQuiz onBack={() => setView("overview")} />;
+  if (view === "figuren-quiz") {
+    if (!kffDomainIntroSeen["figuren"]) {
+      return (
+        <FirstTimeKffIntro
+          strategyKey="figuren"
+          onContinue={() => markKffDomainIntroSeen("figuren")}
+          onBack={() => setView("overview")}
+        />
+      );
+    }
+    return <FigurenQuiz onBack={() => setView("overview")} />;
+  }
 
   if (view === "strategy") {
     return <KFFStrategyView strategyKey={strategyKey} onBack={() => setView("overview")} />;
   }
 
-  if (view === "zahlenfolgen") return <ZahlenfolgenQuiz onBack={() => setView("overview")} />;
-  if (view === "gedaechtnis-setup")
+  if (view === "zahlenfolgen") {
+    if (!kffDomainIntroSeen["zahlenfolgen"]) {
+      return (
+        <FirstTimeKffIntro
+          strategyKey="zahlenfolgen"
+          onContinue={() => markKffDomainIntroSeen("zahlenfolgen")}
+          onBack={() => setView("overview")}
+        />
+      );
+    }
+    return (
+      <ZahlenfolgenQuiz
+        onBack={() => setView("overview")}
+        initialQuestionCount={planZfCount > 0 ? planZfCount : undefined}
+      />
+    );
+  }
+  if (view === "gedaechtnis-setup") {
+    if (!kffDomainIntroSeen["gedaechtnis"]) {
+      return (
+        <FirstTimeKffIntro
+          strategyKey="gedaechtnis"
+          onContinue={() => markKffDomainIntroSeen("gedaechtnis")}
+          onBack={() => setView("overview")}
+        />
+      );
+    }
     return (
       <GedaechtnisSetup
         onLearn={() => setView("gedaechtnis-learn")}
         onBack={() => setView("overview")}
       />
     );
+  }
   if (view === "gedaechtnis-learn")
     return (
       <GedaechtnisLearn
@@ -188,8 +240,35 @@ export default function KFF() {
       />
     );
   if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;
-  if (view === "implikationen") return <ImplikationenQuiz onBack={() => setView("overview")} />;
-  if (view === "wortflüssigkeit") return <WortflüssigkeitQuiz onBack={() => setView("overview")} />;
+  if (view === "implikationen") {
+    if (!kffDomainIntroSeen["implikationen"]) {
+      return (
+        <FirstTimeKffIntro
+          strategyKey="implikationen"
+          onContinue={() => markKffDomainIntroSeen("implikationen")}
+          onBack={() => setView("overview")}
+        />
+      );
+    }
+    return (
+      <ImplikationenQuiz
+        onBack={() => setView("overview")}
+        initialQuestionCount={planImpCount > 0 ? planImpCount : undefined}
+      />
+    );
+  }
+  if (view === "wortflüssigkeit") {
+    if (!kffDomainIntroSeen["wortflüssigkeit"]) {
+      return (
+        <FirstTimeKffIntro
+          strategyKey="wortflüssigkeit"
+          onContinue={() => markKffDomainIntroSeen("wortflüssigkeit")}
+          onBack={() => setView("overview")}
+        />
+      );
+    }
+    return <WortflüssigkeitQuiz onBack={() => setView("overview")} />;
+  }
 
   const modules = [
     {
@@ -318,9 +397,15 @@ export default function KFF() {
 
 type ZahlenfolgenMode = "official" | "training";
 
-function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
+function ZahlenfolgenQuiz({
+  onBack,
+  initialQuestionCount,
+}: {
+  onBack: () => void;
+  initialQuestionCount?: number;
+}) {
   const [mode, setMode] = useState<ZahlenfolgenMode | null>(null);
-  const [questionCount, setQuestionCount] = useState(10);
+  const [questionCount, setQuestionCount] = useState(initialQuestionCount ?? 10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<SequenceTask[]>([]);
   const [index, setIndex] = useState(0);
@@ -591,7 +676,9 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
                   Richtige Antwort: {q.correctNext[0]}, {q.correctNext[1]}
                 </p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
+                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                    {stripMarkdownAsterisks(q.explanation)}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -1225,10 +1312,16 @@ function impDifficultyLabel(d: 1 | 2 | 3): string {
 
 type ImplikationenMode = "official" | "training";
 
-function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
+function ImplikationenQuiz({
+  onBack,
+  initialQuestionCount,
+}: {
+  onBack: () => void;
+  initialQuestionCount?: number;
+}) {
   const [, setMode] = useState<ImplikationenMode | null>(null);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [questionCount, setQuestionCount] = useState(10);
+  const [questionCount, setQuestionCount] = useState(initialQuestionCount ?? 10);
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -1508,7 +1601,9 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
                 </p>
                 <ImplikationSolutionDiagram task={qu} className="ml-7 mb-3" />
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">{qu.explanation}</p>
+                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                    {stripMarkdownAsterisks(qu.explanation)}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -1762,12 +1857,12 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
             ...t,
             id: t.id ?? `wf-off-${idx}`,
           }));
-          const fromLexicon = generateAllWordFluencyTasksFromLexicon().map((t, idx) => ({
+          const fromPool = WF_TRAINING_POOL_1000.map((t, idx) => ({
             ...t,
-            id: t.id ?? `wf-lex-${idx}`,
+            id: t.id ?? `wf-1000-${idx}`,
           }));
           valid = shuffleSlice(
-            filterValidWordFluencyTasks([...withIds, ...fromLexicon]),
+            filterValidWordFluencyTasks([...withIds, ...fromPool]),
             questionCount
           );
         }
@@ -1996,7 +2091,9 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                   {qu.correctIndex === 4 && " (keine der Antworten war richtig)"}
                 </p>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">{qu.explanation}</p>
+                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                    {stripMarkdownAsterisks(qu.explanation)}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -2583,7 +2680,9 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   )}
                 </div>
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">{q.explanation}</p>
+                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                    {stripMarkdownAsterisks(q.explanation)}
+                  </p>
                 </div>
               </CardContent>
             </Card>
