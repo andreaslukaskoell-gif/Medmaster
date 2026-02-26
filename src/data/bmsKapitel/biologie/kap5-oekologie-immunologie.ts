@@ -1625,6 +1625,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
           tags: ["somatische-hypermutation", "aid", "keimzentrum", "affinitaetsreifung"],
         },
       ],
+      diagram: "immune-response",
     },
     {
       id: "bio-11-03",
