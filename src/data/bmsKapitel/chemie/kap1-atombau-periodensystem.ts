@@ -1328,6 +1328,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         },
       ],
 
+      diagram: "periodic-table",
+
       merksätze: [
         "1 u = 1/12 von ¹²C-Atom = 1,66 × 10⁻²⁷ kg; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar.",
         "Molare Masse M [g/mol] = numerisch gleich der relativen Atommasse Aᵣ [u].",
@@ -1639,6 +1641,8 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
           },
         },
       ],
+
+      diagram: "covalent-bond",
 
       merksätze: [
         "London-Dispersion: temporäre Dipole in allen Molekülen; wächst mit Molmasse und Elektronenzahl.",
@@ -3417,6 +3421,8 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Na⁺/K⁺-ATPase: 3Na⁺ raus, 2K⁺ rein, 1 ATP → RMP −70 mV; Digoxin hemmt diese Pumpe → positiv inotrop",
         },
       ],
+
+      diagram: "periodic-table",
 
       merksätze: [
         "Alkalimetalle (Gr.1): ns¹, +1-Ion — Na⁺ extrazellulär (~140 mmol/L), K⁺ intrazellulär (~150 mmol/L)",

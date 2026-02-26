@@ -7,8 +7,8 @@
 
 ### BMS Content
 
-- [ ] **BMS-01**: BMS-Kapitel auf Struktur, Lesbarkeit, Verstandlichkeit und Tiefe auditieren und verbessern
-- [ ] **BMS-02**: Hochqualitative SVG-Bilder pro BMS-Kapitel erstellen (visuell ansprechend, lernfoerdernd)
+- [x] **BMS-01**: BMS-Kapitel auf Struktur, Lesbarkeit, Verstandlichkeit und Tiefe auditieren und verbessern
+- [x] **BMS-02**: Hochqualitative SVG-Bilder pro BMS-Kapitel erstellen (visuell ansprechend, lernfoerdernd)
 
 ### KFF Aufgaben
 
@@ -48,8 +48,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BMS-01 | Phase 1 | Pending |
-| BMS-02 | Phase 1 | Pending |
+| BMS-01 | Phase 1 | Complete |
+| BMS-02 | Phase 1 | Complete |
 | KFF-01 | Phase 2 | Pending |
 | KFF-02 | Phase 2 | Pending |
 | KFF-03 | Phase 2 | Pending |

@@ -932,6 +932,8 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
         },
       ],
 
+      diagram: "covalent-bond",
+
       merksätze: [
         "London-Kräfte: wirken zwischen ALLEN Molekülen, entstehen durch instantane Dipole.",
         "Größere Moleküle = höhere Polarisierbarkeit = stärkere London-Kräfte.",
@@ -1323,6 +1325,8 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
             "Reversible Hemmung: nichtkovalent, steuerbar; irreversibel: kovalent, dauerhaft (z. B. Aspirin-COX).",
         },
       ],
+
+      diagram: "enzyme-substrate",
 
       merksätze: [
         "α-glycosidisch (Stärke) = Amylase spaltet = Energiespeicher; β-glycosidisch (Cellulose) = Ballaststoff.",
