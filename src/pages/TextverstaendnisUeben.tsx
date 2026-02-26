@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { useTvTexte } from "@/hooks/useTvTexte";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { TVQuestion } from "@/data/kffTextverstaendnis";
 
 const difficultyLabels: Record<number, { label: string; bg: string; color: string }> = {
@@ -407,7 +408,9 @@ function QuestionCard({
         {/* Erklärung nur in der Ergebnis-Ansicht */}
         {isResultsView && (
           <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 space-y-2">
-            <p className="text-xs text-muted leading-relaxed">{question.explanation}</p>
+            <p className="text-xs text-muted leading-relaxed">
+              {stripMarkdownAsterisks(question.explanation)}
+            </p>
             {question.relevantPassage && (
               <button
                 onClick={() => onHighlight(question.relevantPassage)}

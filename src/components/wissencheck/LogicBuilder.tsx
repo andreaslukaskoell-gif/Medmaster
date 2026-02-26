@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { SequenceQuestion } from "@/data/wissencheckSequences";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -162,7 +163,7 @@ export function LogicBuilder({
             </div>
             {explanation && (
               <p className="text-sm text-green-900 dark:text-green-100 leading-relaxed">
-                {explanation}
+                {stripMarkdownAsterisks(explanation)}
               </p>
             )}
           </div>

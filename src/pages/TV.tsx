@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   BookOpen,
@@ -21,6 +21,7 @@ import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -41,6 +42,9 @@ const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
   usePageTitle("TV – Textverständnis");
+  const location = useLocation();
+  const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
+
   const [view, setView] = useState<TvView>("overview");
   // Legacy mode
   const [selectedTextIndex, setSelectedTextIndex] = useState(0);
@@ -221,7 +225,9 @@ export default function TV() {
                     </Badge>
                   </p>
                   <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg mt-2">
-                    <p className="text-xs text-blue-700 dark:text-blue-300">{s.explanation}</p>
+                    <p className="text-xs text-blue-700 dark:text-blue-300">
+                      {stripMarkdownAsterisks(s.explanation)}
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -352,7 +358,9 @@ export default function TV() {
                         </div>
                       ))}
                       <div className="bg-blue-50 dark:bg-blue-900/20 p-2 rounded mt-1">
-                        <p className="text-xs text-blue-700 dark:text-blue-300">{q.explanation}</p>
+                        <p className="text-xs text-blue-700 dark:text-blue-300">
+                          {stripMarkdownAsterisks(q.explanation)}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -504,6 +512,11 @@ export default function TV() {
           TV — Textverständnis
         </h1>
         <p className="text-muted mt-1">5 Texte lesen, Fragen beantworten — wie im echten MedAT.</p>
+        {dailyPlanTvTexts != null && dailyPlanTvTexts > 0 && (
+          <p className="text-sm text-primary-600 dark:text-primary-400 mt-2 font-medium">
+            Lernplan heute: {dailyPlanTvTexts} Text{dailyPlanTvTexts > 1 ? "e" : ""}
+          </p>
+        )}
       </div>
 
       {/* Strategy Guide Card */}

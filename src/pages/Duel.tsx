@@ -11,6 +11,7 @@ import { useStore } from "@/store/useStore";
 import type { Question } from "@/data/bms/index";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId, getStrategieTipp } from "@/data/questions/index";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 // Dynamic import to keep data out of initial bundle
 let allBmsQuestionsCache: Question[] | null = null;
@@ -456,7 +457,7 @@ export default function Duel() {
                             {q.options.find((o) => o.id === q.correctOptionId)?.text}
                           </p>
                           <p className="text-green-700 dark:text-green-400 text-xs">
-                            {q.explanation}
+                            {stripMarkdownAsterisks(q.explanation)}
                           </p>
                         </div>
                         {tipp && (

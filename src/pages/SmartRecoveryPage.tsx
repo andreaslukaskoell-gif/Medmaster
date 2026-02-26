@@ -22,6 +22,7 @@ import { getQuestionById } from "@/data/bms/index";
 import { getStrategieTipp } from "@/data/questions/index";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { alleStichworteListe } from "@/data/stichwortliste";
 
 const fachColors: Record<string, { bg: string; text: string; label: string }> = {
@@ -312,7 +313,9 @@ export default function SmartRecoveryPage() {
                       : "Leider falsch"}
                   </span>
                 </div>
-                <p className="text-sm text-muted">{currentQuestion.explanation}</p>
+                <p className="text-sm text-muted">
+                  {stripMarkdownAsterisks(currentQuestion.explanation)}
+                </p>
               </CardContent>
             </Card>
           )}

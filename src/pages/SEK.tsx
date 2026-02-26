@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,6 +40,11 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
+  const location = useLocation();
+  const dailyPlanSek = location.state?.dailyPlanSek as
+    | { domain: string; count: number; label: string }[]
+    | undefined;
+
   const [view, setView] = useState<SekView>("overview");
 
   const hasTasks =
@@ -101,6 +106,14 @@ export default function SEK() {
         <p className="text-muted mt-1">
           Trainiere Emotionserkennung, Emotionsregulation und soziales Entscheiden.
         </p>
+        {dailyPlanSek != null && dailyPlanSek.length > 0 && (
+          <p className="text-sm text-primary-600 dark:text-primary-400 mt-2 font-medium">
+            Lernplan heute:{" "}
+            {dailyPlanSek
+              .map((t) => `${t.label}: ${t.count} ${t.count === 1 ? "Beispiel" : "Beispiele"}`)
+              .join(", ")}
+          </p>
+        )}
       </div>
 
       <Card>

@@ -26,6 +26,7 @@ import { LogicBuilder } from "@/components/wissencheck/LogicBuilder";
 import { playCorrectAnswerSound } from "@/lib/sounds";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 const QUESTION_COUNT = 10;
 const TIME_LIMIT = 8 * 60; // 8 minutes in seconds
@@ -577,7 +578,7 @@ export default function WissenCheck() {
                     : "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
                 }`}
               >
-                {q.explanation}
+                {stripMarkdownAsterisks(q.explanation)}
               </div>
             )}
 
@@ -696,7 +697,7 @@ export default function WissenCheck() {
                       })}
                     </div>
                     <div className="text-xs text-muted bg-gray-50 dark:bg-gray-800/50 rounded p-2">
-                      {q.explanation}
+                      {stripMarkdownAsterisks(q.explanation)}
                     </div>
                   </div>
                 )}

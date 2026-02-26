@@ -49,6 +49,7 @@ import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 // ============================================================
 // BMS QUESTION RESOLUTION
@@ -434,7 +435,9 @@ function generateZahlenfolgenQuestions(section: SimSection, variant?: number): U
   });
 }
 
-function generateGedaechtnisQuestions(section: SimSection): {
+/** Reserviert für künftige Gedächtnis-Sektion in der Simulation. */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for future use
+function _generateGedaechtnisQuestions(section: SimSection): {
   cards: AllergyCard[];
   questions: UnifiedQuestion[];
 } {
@@ -1017,10 +1020,14 @@ export default function Simulation() {
   // TIMERS
   // ============================================================
 
+  const hasTimeLeft = timeLeft > 0;
+  const hasBreakTimeLeft = breakTimeLeft > 0;
+  const hasLearnTimeLeft = learnTimeLeft > 0;
+
   useEffect(() => {
     if (timerRef.current) clearInterval(timerRef.current);
 
-    if (mode === "playing" && timeLeft > 0) {
+    if (mode === "playing" && hasTimeLeft) {
       timerRef.current = setInterval(() => {
         setTimeLeft((t) => {
           if (t <= 1) {
@@ -1035,7 +1042,7 @@ export default function Simulation() {
       };
     }
 
-    if (mode === "break" && breakTimeLeft > 0) {
+    if (mode === "break" && hasBreakTimeLeft) {
       timerRef.current = setInterval(() => {
         setBreakTimeLeft((t) => {
           if (t <= 1) {
@@ -1050,7 +1057,7 @@ export default function Simulation() {
       };
     }
 
-    if (mode === "gedaechtnis-learn" && learnTimeLeft > 0) {
+    if (mode === "gedaechtnis-learn" && hasLearnTimeLeft) {
       timerRef.current = setInterval(() => {
         setLearnTimeLeft((t) => {
           if (t <= 1) {
@@ -1071,9 +1078,9 @@ export default function Simulation() {
     }
   }, [
     mode,
-    timeLeft > 0,
-    breakTimeLeft > 0,
-    learnTimeLeft > 0,
+    hasTimeLeft,
+    hasBreakTimeLeft,
+    hasLearnTimeLeft,
     sections,
     currentSectionIdx,
     advanceSection,
@@ -1695,7 +1702,9 @@ export default function Simulation() {
                     )}
                     {explanation && (
                       <div className="ml-6 mt-2 bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg">
-                        <p className="text-xs text-blue-700 dark:text-blue-400">{explanation}</p>
+                        <p className="text-xs text-blue-700 dark:text-blue-400">
+                          {stripMarkdownAsterisks(explanation)}
+                        </p>
                       </div>
                     )}
                   </CardContent>
