@@ -1,175 +1,80 @@
-# Roadmap: MedMaster Premium BMS Platform
+# Roadmap: MedMaster v2.0 Launch-Ready
 
 ## Overview
 
-Transform MedMaster from mixed-quality BMS content into a premium-grade learning platform with textbook-level depth, exam markings, and seamless interactive experiences. The roadmap starts with content synchronization against the official Stichwortliste, fills gaps, raises quality to premium standards, reorganizes for learning logic, then polishes UX and prepares the freemium architecture. Each phase delivers a verifiable capability that builds toward the core value: BMS content in textbook depth with exam markings, interactively delivered via quiz and Merksätze.
+Bring MedMaster from content-complete to production-ready: audit and polish BMS chapters, expand KFF to 1.000+ tasks per subtest, implement Figuren zusammensetzen, add Stripe payments, improve legal pages, polish UI/UX, and launch on a real domain. Each phase delivers independently verifiable value.
 
 ## Phases
 
-**Phase Numbering:**
-- Integer phases (1, 2, 3): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
-
-Decimal phases appear between their surrounding integers in numeric order.
-
-- [x] **Phase 1: Content Audit** - Sync existing content with Stichwortliste, identify gaps and irrelevant content (completed 2026-02-19)
-- [x] **Phase 2: Gap Filling** - Create missing content for 8 neu2026 topics and sync abgedeckt flags (completed 2026-02-19)
-- [x] **Phase 3: Quality Elevation** - Raise all BMS content to textbook-level with exam markings (completed 2026-02-19)
-- [x] **Phase 4: Structure Reorganization** - Implement lernlogische Abfolge and premium buckets (completed 2026-02-19)
-- [ ] **Phase 5: Smart Integration** - Ensure QuizQuestion, MerksatzBox, and XP systems work consistently
-- [ ] **Phase 6: Progress Tracking** - Build Mastered status and progress bars at all levels
-- [ ] **Phase 7: UX Polish** - Eliminate glitches, add breadcrumbs, improve navigation flow
-- [ ] **Phase 8: Freemium Foundation** - Prepare data architecture for tiered access control
+- [ ] **Phase 1: BMS Content Quality** — Kapitel auditieren, SVG-Bilder erstellen
+- [ ] **Phase 2: KFF Expansion** — Figuren zusammensetzen, alle Teile auf 1.000+, Gedaechtnis mit Gesichtern
+- [ ] **Phase 3: UI/UX Polish** — Sidebar bereinigen, App komplett durchpruefen
+- [ ] **Phase 4: Landing & Legal** — Landing Page, Post-Registration, Impressum/AGB
+- [ ] **Phase 5: Monetarisierung** — Stripe Payment implementieren
+- [ ] **Phase 6: Go-Live** — Echte Domain, Deployment, Launch
 
 ## Phase Details
 
-### Phase 1: Content Audit
-**Goal**: Every existing BMS chapter is validated against Stichwortliste, irrelevant content identified for deletion, coverage mapped
-**Depends on**: Nothing (first phase)
-**Requirements**: SYNC-01, SYNC-03, SYNC-05
-**Success Criteria** (what must be TRUE):
-  1. All 189 Stichwortliste entries have a mapped Kapitel or marked as missing
-  2. Content audit document lists all chapters not in Stichwortliste (candidates for deletion)
-  3. Every BMS question uses tags from linkedQuestionTags for trackability
-  4. Coverage report shows which Fächer have gaps (neu2026 topics identified)
-**Plans**: 3 plans in 2 waves
+### Phase 1: BMS Content Quality
+**Goal:** Alle BMS-Kapitel auf konsistente Qualitaet — Struktur, Lesbarkeit, Verstaendlichkeit, Tiefe. Plus hochqualitative SVG-Bilder pro Kapitel.
+**Depends on:** Nothing (first phase)
+**Requirements:** BMS-01, BMS-02
+**Success Criteria:**
+1. Jedes BMS-Kapitel hat konsistente Struktur (Einleitung, Lernziele, Merksaetze, Zusammenfassung)
+2. Lesbarkeit und Verstaendlichkeit auf einheitlichem Premium-Niveau
+3. Mindestens 2 SVG-Bilder pro Unterkapitel (audit-images passt)
+4. npm run build fehlerfrei
 
-Plans:
-- [ ] 01-01-PLAN.md — Map Stichwortliste entries to chapters and identify coverage gaps
-- [ ] 01-02-PLAN.md — Validate premium pattern compliance (MerksatzBox + QuizQuestion)
-- [ ] 01-03-PLAN.md — Consolidate audit findings and create Phase 1 summary
+### Phase 2: KFF Expansion
+**Goal:** Alle KFF-Untertests haben 1.000+ Uebungsaufgaben. Figuren zusammensetzen als echtes MedAT-Format neu implementiert. Gedaechtnis mit copyright-freien Gesichtern.
+**Depends on:** Phase 1 (BMS fertig, voller Fokus auf KFF)
+**Requirements:** KFF-01, KFF-02, KFF-03
+**Success Criteria:**
+1. Figuren zusammensetzen: Generator + Validator + 1.000 Aufgaben im echten MedAT-Format
+2. Implikationen, Wortfluessigkeit, Zahlenfolgen: jeweils 1.000+ Aufgaben
+3. Gedaechtnis: copyright-freie Gesichter, MedAT-authentisches Format
+4. Alle KFF-Generatoren produzieren nur eindeutig loesbare Aufgaben
 
-### Phase 2: Gap Filling
-**Goal**: All 8 missing neu2026 topics have complete content, abgedeckt flags updated
-**Depends on**: Phase 1
-**Requirements**: SYNC-02, SYNC-04
-**Success Criteria** (what must be TRUE):
-  1. All 8 neu2026 topics with abgedeckt: false have full BMSUnterkapitel.tsx implementations
-  2. Each new topic has 5+ questions with 5 options (A-E) per MedAT format
-  3. Stichwortliste abgedeckt flags set to true for newly created content
-  4. No Stichwortliste entry remains unmapped or incomplete
-**Plans**: 3 plans in 2 waves
+### Phase 3: UI/UX Polish
+**Goal:** App bugfrei und konsistent. Sidebar bereinigt, alle Flows geprueft.
+**Depends on:** Phase 2 (Content komplett, jetzt UI pruefen)
+**Requirements:** UI-01, UI-02
+**Success Criteria:**
+1. Erfolge-Label aus Sidebar entfernt
+2. Alle Seiten/Flows manuell durchgetestet (BMS, TV, KFF, SEK, Dashboard, Simulation)
+3. Keine Console Errors, keine broken Links, keine Layout-Glitches
+4. Mobile-responsive Verhalten verifiziert
 
-Plans:
-- [x] 02-01-PLAN.md — Add tags field to SelfTestQuestion interface and create Kapitel 7 (Methoden der Genetik) with 6 Unterkapitel
-- [x] 02-02-PLAN.md — Create Kapitel 8 (Humangenetik) with 2 Unterkapitel
-- [x] 02-03-PLAN.md — Update Stichwortliste abgedeckt flags for all 8 neu2026 topics
+### Phase 4: Landing & Legal
+**Goal:** Landing Page ueberzeugend, Onboarding-Flow smooth, rechtliche Seiten vollstaendig.
+**Depends on:** Phase 3 (UI sauber, jetzt oeffentlichkeitstauglich machen)
+**Requirements:** UI-03, UI-04, LEGAL-01
+**Success Criteria:**
+1. Landing Page mit klarer Value Proposition, Features, Pricing, CTA
+2. Post-Registration Flow fuehrt User nahtlos in die App
+3. Impressum, Datenschutzerklaerung und AGB rechtskonform und vollstaendig
+4. Alle Links funktionieren, kein Placeholder-Text
 
-### Phase 3: Quality Elevation
-**Goal**: All BMS content meets textbook-level standards with exam markings and clinical highlights
-**Depends on**: Phase 2
-**Requirements**: QUAL-01, QUAL-02, QUAL-03, QUAL-04, QUAL-05, QUAL-06
-**Success Criteria** (what must be TRUE):
-  1. Every Kapitel follows BMSUnterkapitel.tsx pattern (SubchapterContent + QuizQuestion + MerksatzBox)
-  2. All BMS questions have exactly 5 options (A-E) conforming to MedAT format
-  3. Exam questions marked with MerksatzBox type="altfragen"
-  4. Clinical highlights use MerksatzBox type="klinisch" with by-doctors-for-doctors framing
-  5. Explanation quality verified as textbook-level (not just correct/incorrect)
-  6. Difficulty ratings (leicht/mittel/schwer) correctly assigned and validated
-**Plans**: 4 plans in 2 waves
+### Phase 5: Monetarisierung
+**Goal:** Stripe-basierte Bezahlung funktioniert end-to-end.
+**Depends on:** Phase 4 (Landing + Legal muessen vor Paywall stehen)
+**Requirements:** PAY-01
+**Success Criteria:**
+1. Stripe Checkout Integration (Abo-Modell)
+2. Paywall schuetzt Premium-Content
+3. Abo-Status in Supabase gespeichert und UI-seitig reflektiert
+4. Test-Zahlung erfolgreich durchfuehrbar
 
-Plans:
-- [x] 03-01-PLAN.md — isPro architecture + premium MerksatzBox glassmorphism
-- [x] 03-02-PLAN.md — Audit Biologie chapters (5-option format, altfragen/klinisch markers, difficulty validation)
-- [x] 03-03-PLAN.md — Upgrade Kapitel 1 to premium quality with learning bites
-- [x] 03-04-PLAN.md — Extract kap1 MerksatzBox content into structured fields (gap closure)
+### Phase 6: Go-Live
+**Goal:** App auf eigener Domain live und oeffentlich zugaenglich.
+**Depends on:** Phase 5 (Payment muss funktionieren vor Launch)
+**Requirements:** LAUNCH-01
+**Success Criteria:**
+1. Eigene Domain konfiguriert (DNS, SSL)
+2. Vercel Custom Domain oder alternative Hosting-Loesung
+3. Smoke-Test auf Produktion (alle Flows, Payment, Auth)
+4. App oeffentlich erreichbar
 
-### Phase 4: Structure Reorganization
-**Goal**: BMS content organized in lernlogische Abfolge with premium buckets and smart navigation
-**Depends on**: Phase 3
-**Requirements**: STRUCT-01, STRUCT-02, STRUCT-03, STRUCT-04, STRUCT-05
-**Success Criteria** (what must be TRUE):
-  1. 4 Premium-Buckets implemented with Fach colors (Bio=emerald, Chemie=red, Physik=blue, Math=violet)
-  2. Biologie chapters appear in learning sequence: Zelle → Gewebe → Organe → Frühentwicklung → Genetik → Molekulare Genetik → Methoden → Humangenetik → Ökologie
-  3. Each Fach has overview page with chapter roadmap and Fortschrittsanzeige
-  4. URL structure /bms/:fach/:kapitel works consistently across all chapters
-  5. Smart-Links between chapters function (Querverweise navigable)
-**Plans**: 2 plans in 2 waves
-
-Plans:
-- [x] 04-01-PLAN.md — Data layer foundation: extend types with sequence/smart-links, create SUBJECT_COLORS, apply sequence to Biologie
-- [x] 04-02-PLAN.md — UI integration: FachRoadmap component, centralized colors in BMS.tsx, smart-links in chapter views (checkpoint)
-
-### Phase 5: Smart Integration
-**Goal**: QuizQuestion, MerksatzBox, and progression systems work seamlessly in every chapter
-**Depends on**: Phase 4
-**Requirements**: SMART-01, SMART-02, SMART-03, SMART-04, SMART-05, SMART-06, SMART-07
-**Success Criteria** (what must be TRUE):
-  1. Every question uses QuizQuestion.tsx with XP-Vergabe via useStore.ts
-  2. Second-Try mechanics work (halbe XP on second attempt)
-  3. Hints display after first incorrect attempt
-  4. Every Kapitel uses MerksatzBox at least 2x (merke/altfragen/klinisch/achtung/tipp)
-  5. XP system from xp.ts + progression.ts integrated consistently
-  6. Level-Aufstieg shows after quiz completion with Level-Namen
-  7. Hot-Streak-Bonus triggers after 3+ correct answers in sequence
-**Plans**: 4 plans in 3 waves
-
-Plans:
-- [ ] 05-01-PLAN.md — XP integration with second-try, hot-streak bonuses, and level-up detection
-- [ ] 05-02-PLAN.md — Verify hint display mechanics in QuizQuestion
-- [ ] 05-03-PLAN.md — Audit MerksatzBox usage across all 38 chapters (checkpoint)
-- [ ] 05-04-PLAN.md — Deploy MerksatzBox to deficit chapters (implementation decision)
-
-### Phase 6: Progress Tracking
-**Goal**: Users can track mastery per chapter, progress per Fach, and overall completion
-**Depends on**: Phase 5
-**Requirements**: PROG-01, PROG-02, PROG-03, PROG-04, PROG-05, PROG-06
-**Success Criteria** (what must be TRUE):
-  1. Mastered status per Kapitel shows when 100% questions correctly answered
-  2. Progress-Bar per Fach displays % abgeschlossener Kapitel
-  3. Progress-Bar per Kapitel shows % beantworteter Fragen
-  4. Dashboard displays Gesamt-Fortschritt über alle 4 Fächer
-  5. Stichwortliste-Seite shows abgedeckt status and Kapitel-Verlinkung
-  6. Quiz-Session-History persists in quizSessionStore.ts
-**Plans**: TBD
-
-Plans:
-- [ ] TBD
-
-### Phase 7: UX Polish
-**Goal**: Navigation is seamless, layout glitches eliminated, premium-grade usability achieved
-**Depends on**: Phase 6
-**Requirements**: UX-01, UX-02, UX-03, UX-04, UX-05, UX-06, UX-07
-**Success Criteria** (what must be TRUE):
-  1. Chapter navigation works without layout glitches (no content jumps on switch)
-  2. TopBar shows current Fach + Kapitel + Fortschritt accurately
-  3. Sidebar navigation collapsible, shows Fach icons with colors
-  4. Mobile BottomTabBar functions on all BMS pages
-  5. Dark Mode works consistently across all Kapitel
-  6. Breadcrumbs display path: BMS > Fach > Kapitel
-  7. Nächstes Kapitel button at end of each Kapitel (lernlogische Reihenfolge)
-**Plans**: TBD
-
-Plans:
-- [ ] TBD
-
-### Phase 8: Freemium Foundation
-**Goal**: Data architecture supports tiered access control without implementing paywall
-**Depends on**: Phase 7
-**Requirements**: DATA-01, DATA-02, DATA-03, DATA-04, DATA-05
-**Success Criteria** (what must be TRUE):
-  1. Question interface includes optional premium: boolean flag
-  2. Kapitel data includes optional tier: "free" | "pro" | "premium" flag
-  3. Feature-Flags in useStore.ts prepared for freemium splits
-  4. Content files use barrel-files pattern (e.g., biologie.ts aggregates _part1.ts, _part2.ts)
-  5. Build command npm run build executes without errors
-**Plans**: TBD
-
-Plans:
-- [ ] TBD
-
-## Progress
-
-**Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
-
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 1. Content Audit | 3/3 | Complete    | 2026-02-19 |
-| 2. Gap Filling | 3/3 | Complete    | 2026-02-19 |
-| 3. Quality Elevation | 4/4 | Complete    | 2026-02-19 |
-| 4. Structure Reorganization | 2/2 | Complete    | 2026-02-19 |
-| 5. Smart Integration | 2/4 | In Progress | 2026-02-19 |
-| 6. Progress Tracking | 0/TBD | Not started | - |
-| 7. UX Polish | 0/TBD | Not started | - |
-| 8. Freemium Foundation | 0/TBD | Not started | - |
+---
+*Roadmap created: 2026-02-26*
+*Last updated: 2026-02-26 after milestone v2.0 initialization*

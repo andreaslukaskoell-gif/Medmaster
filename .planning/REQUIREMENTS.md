@@ -1,166 +1,71 @@
-# Requirements: MedMaster Premium BMS-Plattform
+# Requirements: MedMaster v2.0 Launch-Ready
 
-**Defined:** 2026-02-19
-**Core Value:** BMS-Inhalte in Lehrbuch-Tiefe mit Altfragen-Markierungen, interaktiv aufbereitet über Quiz und Merksätze, sodass zahlende Nutzer sich besser vorbereiten als mit jedem anderen Tool.
+**Defined:** 2026-02-26
+**Core Value:** BMS-Inhalte in Lehrbuch-Tiefe, interaktiv aufbereitet, sodass zahlende Nutzer sich besser vorbereiten als mit jedem anderen Tool.
 
----
+## v2.0 Requirements
 
-## v1 Requirements
+### BMS Content
 
-### Content-Synchronisation (Stichwortliste als Source of Truth)
+- [ ] **BMS-01**: BMS-Kapitel auf Struktur, Lesbarkeit, Verstandlichkeit und Tiefe auditieren und verbessern
+- [ ] **BMS-02**: Hochqualitative SVG-Bilder pro BMS-Kapitel erstellen (visuell ansprechend, lernfoerdernd)
 
-- [x] **SYNC-01**: Jedes Thema aus `stichworteData.ts` (189 Einträge) hat ein zugeordnetes Kapitel in `src/data/bms/`
-- [x] **SYNC-02**: Alle 8 fehlenden Themen (neu2026, abgedeckt: false) werden mit vollständigem Content erstellt
-- [x] **SYNC-03**: Content-Audit pro Fach — irrelevante Inhalte (nicht in Stichwortliste) werden gelöscht
-- [x] **SYNC-04**: `abgedeckt`-Flag in Stichwortliste wird nach Content-Erstellung auf `true` gesetzt
-- [x] **SYNC-05**: Jede Frage verwendet Tags aus `linkedQuestionTags` der Stichwortliste für Trackbarkeit
+### KFF Aufgaben
 
-### Content-Qualität (Lehrbuch-Niveau + Altfragen)
+- [ ] **KFF-01**: Figuren zusammensetzen als echte MedAT-Aufgaben implementieren + 1.000 Aufgaben generieren
+- [ ] **KFF-02**: Alle KFF-Teile (ausser Gedaechtnis) auf jeweils 1.000+ Aufgaben bringen
+- [ ] **KFF-03**: Gedaechtnis-Untertest erweitern mit copyright-freien Gesichtern im echten MedAT-Stil
 
-- [x] **QUAL-01**: Jedes Kapitel folgt dem BMSUnterkapitel.tsx-Pattern (SubchapterContent + QuizQuestion + MerksatzBox)
-- [x] **QUAL-02**: BMS-Fragen haben 5 Optionen (A-E) gemäß MedAT-Format
-- [x] **QUAL-03**: Altfragen sind mit MerksatzBox type="altfragen" markiert
-- [x] **QUAL-04**: Klinische Highlights verwenden MerksatzBox type="klinisch" ("By doctors for future doctors")
-- [x] **QUAL-05**: Erklärungen zu Antworten sind auf Lehrbuch-Niveau (nicht nur "richtig/falsch")
-- [x] **QUAL-06**: Schwierigkeitsgrad (difficulty: "leicht" | "mittel" | "schwer") ist korrekt zugeordnet
+### UI/UX
 
-### Struktur & Bucketing (Lernlogische Abfolge)
+- [ ] **UI-01**: Erfolge-Label aus Sidebar entfernen
+- [ ] **UI-02**: App komplett durchpruefen (alle Flows, Bugs, Edge Cases)
+- [ ] **UI-03**: Landing Page verbessern
+- [ ] **UI-04**: Post-Registration Flow optimieren
 
-- [x] **STRUCT-01**: 4 Premium-Buckets (Biologie=emerald, Chemie=red, Physik=blue, Mathematik=violet) sind implementiert
-- [x] **STRUCT-02**: Biologie-Kapitel in lernlogischer Abfolge: Zelle → Gewebe → Organe → Frühentwicklung → Genetik → Molekulare Genetik → Methoden → Humangenetik → Ökologie
-- [ ] **STRUCT-03**: Jedes Fach hat eine Übersichtsseite mit Kapitel-Roadmap und Fortschrittsanzeige
-- [ ] **STRUCT-04**: Kapitel-Navigation nutzt konsistente URL-Struktur (`/bms/:fach/:kapitel`)
-- [ ] **STRUCT-05**: Smart-Links zwischen Kapiteln funktionieren (Querverweise auf verwandte Themen)
+### Legal
 
-### Smart-Function Integration (QuizQuestion + MerksatzBox + Progression)
+- [ ] **LEGAL-01**: Impressum, Datenschutz und AGB verbessern/vervollstaendigen
 
-- [x] **SMART-01**: Jede Frage nutzt QuizQuestion.tsx mit XP-Vergabe via `useStore.ts`
-- [x] **SMART-02**: Second-Try-Mechanik ist aktiv (halbe XP bei zweitem Versuch)
-- [x] **SMART-03**: Hints werden angezeigt nach falschem ersten Versuch
-- [ ] **SMART-04**: MerksatzBox-Komponente ist in jedem Kapitel mindestens 2x verwendet (merke/altfragen/klinisch/achtung/tipp)
-- [x] **SMART-05**: XP-System aus `xp.ts` + `progression.ts` ist konsistent integriert
-- [x] **SMART-06**: Level-Aufstieg wird nach Quiz-Abschluss angezeigt mit Level-Namen
-- [x] **SMART-07**: Hot-Streak-Bonus wird nach 3+ korrekten Antworten in Folge vergeben
+### Monetarisierung
 
-### Fortschritts-Tracking (Mastered-Status + Progress-Bars)
+- [ ] **PAY-01**: Stripe Payment implementieren (Abo/Paywall)
 
-- [ ] **PROG-01**: "Mastered"-Status pro Kapitel (100% Fragen korrekt beantwortet)
-- [ ] **PROG-02**: Progress-Bar pro Fach zeigt % abgeschlossener Kapitel
-- [ ] **PROG-03**: Progress-Bar pro Kapitel zeigt % beantworteter Fragen
-- [ ] **PROG-04**: Dashboard zeigt Gesamt-Fortschritt über alle 4 Fächer
-- [ ] **PROG-05**: Stichwortliste-Seite zeigt `abgedeckt`-Status und Kapitel-Verlinkung
-- [ ] **PROG-06**: Quiz-Session-History wird in `quizSessionStore.ts` persistent gespeichert
+### Launch
 
-### UX & Navigation (Premium-Grad Usability)
-
-- [ ] **UX-01**: Nahtlose Kapitel-Navigation ohne Layout-Glitches (kein Content-Jump beim Wechsel)
-- [ ] **UX-02**: TopBar zeigt aktuelles Fach + Kapitel + Fortschritt
-- [ ] **UX-03**: Sidebar-Navigation ist kollabierbar und zeigt Fach-Icons mit Farben
-- [ ] **UX-04**: Mobile: BottomTabBar funktioniert auf allen BMS-Seiten
-- [ ] **UX-05**: Dark Mode funktioniert konsistent in allen Kapiteln
-- [ ] **UX-06**: Breadcrumbs zeigen Pfad: BMS > Fach > Kapitel
-- [ ] **UX-07**: "Nächstes Kapitel"-Button am Ende jedes Kapitels (lernlogische Reihenfolge)
-
-### Datenstruktur & Freemium-Vorbereitung
-
-- [ ] **DATA-01**: Question-Interface hat optionales `premium: boolean`-Flag
-- [ ] **DATA-02**: Kapitel-Daten haben optionales `tier: "free" | "pro" | "premium"`-Flag
-- [ ] **DATA-03**: Feature-Flags in `useStore.ts` für freemium-Splits vorbereitet
-- [ ] **DATA-04**: Content-Dateien verwenden barrel-files (z.B. `biologie.ts` aggregiert `_part1.ts`, `_part2.ts`)
-- [ ] **DATA-05**: Build (`npm run build`) läuft fehlerfrei durch
-
----
-
-## v2 Requirements
-
-### Content-Erweiterung
-
-- **CONT-V2-01**: Chemie-Content auf Lehrbuch-Niveau gebracht (analog zu Biologie)
-- **CONT-V2-02**: Physik-Content auf Lehrbuch-Niveau gebracht
-- **CONT-V2-03**: Mathematik-Content auf Lehrbuch-Niveau gebracht
-- **CONT-V2-04**: Zusätzliche SVG-Diagramme für komplexe Themen (z.B. Zellorganellen, Kreisläufe)
-
-### Premium-Features
-
-- **PREM-V2-01**: Paywall-Implementation (Stripe Integration)
-- **PREM-V2-02**: Custom Quiz-Creation (Premium-Feature)
-- **PREM-V2-03**: Personalisierte Lernpfade basierend auf Schwächen
-- **PREM-V2-04**: Analytics-Dashboard (Learning Insights mit PostHog)
-
-### Andere Sektionen
-
-- **TV-V2-01**: TV-Modul auf Premium-Niveau poliert (einheitliches Design, XP-Integration)
-- **KFF-V2-02**: KFF-Modul auf Premium-Niveau poliert
-- **SEK-V2-03**: SEK-Modul auf Premium-Niveau poliert
-
----
+- [ ] **LAUNCH-01**: Von Vercel auf echte Domain wechseln + Go-Live
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Bilder/Medien-Content | Fokus auf Text-Präzision und Interaktivität, keine Medien-Assets in v1 |
-| Karteikarten/Flashcards | Per User-Präferenz ausgeschlossen |
-| AI-Tutor-Integration | Feature-Gate vorhanden, aber keine Vertiefung in v1 |
-| Mobile App | Web-first, responsive reicht |
-| Paywall-Implementation | Architektur vorbereiten (Feature-Flags), aber kein Zahlungssystem in v1 |
-| Content-Migration zu DB | TypeScript-Dateien bleiben in `src/data/`, kein DB-driven Content |
-| Andere MedAT-Sektionen als BMS | BMS ist Herzstück, TV/KFF/SEK polieren erst in v2 |
-
----
+| Mobile App | Web-first, responsive genuegt |
+| AI-Tutor-Vertiefung | Feature-Gate vorhanden, kein Ausbau in v2 |
+| Karteikarten/Flashcards | Per User-Praeferenz ausgeschlossen |
+| DB-Migration Content | Bleibt in TypeScript-Dateien |
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SYNC-01 | Phase 1 | Complete |
-| SYNC-02 | Phase 2 | Complete |
-| SYNC-03 | Phase 1 | Complete |
-| SYNC-04 | Phase 2 | Complete |
-| SYNC-05 | Phase 1 | Complete |
-| QUAL-01 | Phase 3 | Complete |
-| QUAL-02 | Phase 3 | Complete |
-| QUAL-03 | Phase 3 | Complete |
-| QUAL-04 | Phase 3 | Complete |
-| QUAL-05 | Phase 3 | Complete |
-| QUAL-06 | Phase 3 | Complete |
-| STRUCT-01 | Phase 4 | Complete |
-| STRUCT-02 | Phase 4 | Complete |
-| STRUCT-03 | Phase 4 | Pending |
-| STRUCT-04 | Phase 4 | Pending |
-| STRUCT-05 | Phase 4 | Pending |
-| SMART-01 | Phase 5 | ✅ Complete (05-01) |
-| SMART-02 | Phase 5 | ✅ Complete (05-01) |
-| SMART-03 | Phase 5 | Complete |
-| SMART-04 | Phase 5 | Pending |
-| SMART-05 | Phase 5 | ✅ Complete (05-01) |
-| SMART-06 | Phase 5 | ✅ Complete (05-01) |
-| SMART-07 | Phase 5 | ✅ Complete (05-01) |
-| PROG-01 | Phase 6 | Pending |
-| PROG-02 | Phase 6 | Pending |
-| PROG-03 | Phase 6 | Pending |
-| PROG-04 | Phase 6 | Pending |
-| PROG-05 | Phase 6 | Pending |
-| PROG-06 | Phase 6 | Pending |
-| UX-01 | Phase 7 | Pending |
-| UX-02 | Phase 7 | Pending |
-| UX-03 | Phase 7 | Pending |
-| UX-04 | Phase 7 | Pending |
-| UX-05 | Phase 7 | Pending |
-| UX-06 | Phase 7 | Pending |
-| UX-07 | Phase 7 | Pending |
-| DATA-01 | Phase 8 | Pending |
-| DATA-02 | Phase 8 | Pending |
-| DATA-03 | Phase 8 | Pending |
-| DATA-04 | Phase 8 | Pending |
-| DATA-05 | Phase 8 | Pending |
+| BMS-01 | Phase 1 | Pending |
+| BMS-02 | Phase 1 | Pending |
+| KFF-01 | Phase 2 | Pending |
+| KFF-02 | Phase 2 | Pending |
+| KFF-03 | Phase 2 | Pending |
+| UI-01 | Phase 3 | Pending |
+| UI-02 | Phase 3 | Pending |
+| UI-03 | Phase 4 | Pending |
+| UI-04 | Phase 4 | Pending |
+| LEGAL-01 | Phase 4 | Pending |
+| PAY-01 | Phase 5 | Pending |
+| LAUNCH-01 | Phase 6 | Pending |
 
 **Coverage:**
-- v1 requirements: 42 total
-- Mapped to phases: 42
+- v2.0 requirements: 12 total
+- Mapped to phases: 12
 - Unmapped: 0 ✓
 
 ---
-
-*Requirements defined: 2026-02-19*
-*Last updated: 2026-02-19 after initial definition*
+*Requirements defined: 2026-02-26*
+*Last updated: 2026-02-26 after milestone v2.0 initialization*
