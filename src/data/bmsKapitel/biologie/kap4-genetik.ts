@@ -167,6 +167,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           tags: ["dna", "zellkern", "chromosom"],
         },
       ],
+      diagram: "dna-helix",
     },
 
     // ─── 2. Chromosomen: Aufbau und Karyotyp ──────────────────────────────────
@@ -288,6 +289,7 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
           tags: ["karyotyp", "trisomie 21", "down-syndrom"],
         },
       ],
+      diagram: "cell-cycle",
     },
 
     // ─── 3. Zellzyklus, Mitose und Meiose ─────────────────────────────────────
@@ -464,6 +466,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           tags: ["crossing-over", "meiose", "rekombination"],
         },
       ],
+      diagram: "meiosis",
     },
 
     // ─── 4. Mendelsche Regeln ─────────────────────────────────────────────────
@@ -584,6 +587,7 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
           tags: ["mendel", "spaltungsregel", "f2"],
         },
       ],
+      diagram: "pedigree-analysis",
     },
 
     // ─── 5. Genotyp, Phänotyp und Dominanzverhältnisse ────────────────────────
@@ -717,6 +721,7 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
           tags: ["intermediär", "dominanz", "phänotyp"],
         },
       ],
+      diagram: "dna-helix",
     },
 
     // ─── 6. Erbgänge: autosomal und X-chromosomal ─────────────────────────────
@@ -863,6 +868,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           tags: ["x-chromosomal dominant", "erbgang", "stammbaum"],
         },
       ],
+      diagram: "pedigree-analysis",
     },
 
     // ─── 7. Blutgruppen: AB0-System ──────────────────────────────────────────
@@ -982,6 +988,7 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
           tags: ["blutgruppe", "ab0", "kreuzung"],
         },
       ],
+      diagram: "blood-groups",
     },
 
     // ─── 8. Mutationen ───────────────────────────────────────────────────────
@@ -1108,6 +1115,7 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
           tags: ["trisomie", "nicht-disjunktion", "meiose"],
         },
       ],
+      diagram: "dna-helix",
     },
 
     // ─── 9. Genexpression (Grundprinzip) ─────────────────────────────────────
@@ -1222,6 +1230,7 @@ Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (oder Regu
           tags: ["zentraldogma", "genexpression", "transkription"],
         },
       ],
+      diagram: "transcription-translation",
     },
   ],
 };
