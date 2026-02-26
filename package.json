@@ -14,6 +14,12 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "audit-bms": "npx tsx scripts/audit-bms-questions.mts",
     "audit-images": "npx tsx scripts/audit-bms-images.mts",
+    "audit-stichworte-kapitel": "npx tsx scripts/audit-stichworte-kapitel.mts",
+    "figurelabs-briefs": "npx tsx scripts/generate-figurelabs-briefs.mts",
+    "seed-zahlenfolgen-1000": "npx tsx src/scripts/seedTaskDb.ts --generate kff-zahlenfolgen 1000",
+    "generate-zahlenfolgen-pool": "npx tsx scripts/generate-zahlenfolgen-pool.mts --count 1000",
+    "export-offizielle-angaben": "npx tsx scripts/export-offizielle-angaben.mts",
+    "check": "npm run typecheck && npm run audit-bms",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
   },

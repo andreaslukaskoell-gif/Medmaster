@@ -13,6 +13,9 @@ npm run build        # Production build (Vite)
 npm run typecheck    # Type check (tsc -b)
 npm run lint         # ESLint
 npm run format       # Prettier (auto-runs via hook)
+npm run check        # typecheck + audit-bms (0 Fehler)
+npm run audit-bms    # BMS-Fragen: 5 Optionen, correctOptionId, chapter, keine Duplikate (0 Fehler erwartet)
+npm run audit-images # BMS-Kapitel: mind. 2 Bilder pro Unterkapitel
 ```
 
 ## Key Rules
@@ -37,7 +40,7 @@ npm run format       # Prettier (auto-runs via hook)
 - **Typ M:** Rechenaufgabe — wie Typ A, 5 Optionen, eine richtig (z. B. `tags` enthalten `rechenfrage` oder Optionen sind vorwiegend Zahlen)
 - **Falsch-Aussagen:** „Welche der folgenden Aussagen ist falsch?“ — Typ A, `korrekte_option` = die falsche Aussage
 
-Streuung anstreben: je Fach grob gleich viele Typ A (inkl. Falsch), Typ K, Typ M; Schwierigkeit leicht/mittel/schwer (z. B. 40 % / 40 % / 20 %). Neue Fragen in Batches von <75 pro Datei; vor Aufnahme `validateBMSFrage`/`filterValidBMSFragen` nutzen.
+Streuung anstreben: je Fach grob gleich viele Typ A (inkl. Falsch), Typ K, Typ M; Schwierigkeit leicht/mittel/schwer (z. B. 40 % / 40 % / 20 %). Neue Fragen in Batches von <75 pro Datei; vor Aufnahme `validateBMSFrage`/`filterValidBMSFragen` nutzen. **Nach Änderungen an BMS-Pools** (`src/data/bms/*`) **`npm run audit-bms` ausführen** — 0 Fehler erwartet (5 Optionen, correctOptionId a–e, chapter in alleKapitel, keine leeren Texte/Erklärungen, keine doppelten IDs).
 
 ### BMS-Kapitel Referenz (Vorbild: Zellmembran bio-1-03)
 
@@ -73,7 +76,7 @@ Für alle KFF-Untertests gilt: **Erst Regel/Modell definieren → Aufgabe daraus
 Wenn wir mehr Übungsaufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit) generieren wollen, **immer am Skript in der jeweiligen Data-Datei orientieren**:
 
 - **Implikationen:** `src/data/kffImplikationen.ts` – oben „SKRIPT FÜR NEUE / WEITERE ÜBUNGSAUFGABEN“; Format an OFFICIAL_IMPLICATION_EXAMPLES anpassen (Prämissen/Optionen mit Punkt, E exakt „Keine der Schlussfolgerungen ist zwingend“).
-- **Zahlenfolgen:** `src/data/kffZahlenfolgenMedAT.ts` – OFFICIAL_ZF_EXAMPLES als Formatvorbild; neue Aufgaben nur über Generator, offizielle nie verändern.
+- **Zahlenfolgen:** `src/data/kffZahlenfolgenMedAT.ts` – OFFICIAL_ZF_EXAMPLES als Formatvorbild; neue Aufgaben nur über Generator, offizielle nie verändern. **Ca. 1000 Zahlenfolgen:** `npm run seed-zahlenfolgen-1000` füllt die Task-DB (Supabase); `npm run generate-zahlenfolgen-pool` erzeugt `docs/zahlenfolgen-pool-1000.json` (leicht/mittel/schwer gemischt).
 - **Wortflüssigkeit:** `src/data/kffWortfluessigkeitMedAT.ts` – OFFICIAL_WF_EXAMPLES; Training in `kffGenerators.ts` (assertNotOfficialLikeWordFluency).
 - **Figuren zusammensetzen:** `src/data/kffFigurenZusammensetzenMedAT.ts` – OFFICIAL_FZ_EXAMPLES (1:1 aus IB_FZ_26.pdf); Training via cutPolygonStrategically/generateFigurenTrainingTask (vom Ziel aus strategisch schneiden). UI: zwei Modi (Offizielle Beispiele / Training mit leicht–mittel–schwer).
 
@@ -89,6 +92,7 @@ Wenn wir mehr Übungsaufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit) ge
 - Commit types: feat, fix, refactor, docs, test, chore, perf
 - Never use `localStorage.clear()` — only clear specific keys
 - Run `npm run build` before committing to catch errors
+- **Nach Änderungen an BMS-Pool-Dateien:** `npm run audit-bms` ausführen (0 Fehler anstreben)
 
 ## What to Avoid
 

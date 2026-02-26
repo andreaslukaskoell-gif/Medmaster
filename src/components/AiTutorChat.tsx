@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Sparkles, Send, BookOpen } from "lucide-react";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 /** Minimal question shape — works with both legacy and new Question types */
 interface TutorQuestion {
@@ -24,7 +25,7 @@ interface AiTutorChatProps {
 function generateLocalResponse(question: TutorQuestion, userMessage: string): string {
   const msg = userMessage.toLowerCase();
   const correctOpt = question.options.find((o) => o.id === question.correctOptionId);
-  const explanation = question.explanation || "Keine Erklärung verfügbar.";
+  const explanation = stripMarkdownAsterisks(question.explanation || "Keine Erklärung verfügbar.");
 
   if (msg.includes("warum") && (msg.includes("falsch") || msg.includes("nicht"))) {
     return `Die Antwort "${question.options.find((o) => o.id !== question.correctOptionId)?.text}" ist nicht korrekt, weil: ${explanation}`;
@@ -72,7 +73,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: "ai",
-      text: `Du hast "${userOpt?.text || "—"}" gewählt, aber die richtige Antwort ist ${correctOpt?.id.toUpperCase()}) ${correctOpt?.text}.\n\n${question.explanation}\n\nStell mir gerne Fragen dazu!`,
+      text: `Du hast "${userOpt?.text || "—"}" gewählt, aber die richtige Antwort ist ${correctOpt?.id.toUpperCase()}) ${correctOpt?.text}.\n\n${stripMarkdownAsterisks(question.explanation)}\n\nStell mir gerne Fragen dazu!`,
     },
   ]);
   const [input, setInput] = useState("");
