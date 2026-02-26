@@ -244,18 +244,9 @@ function NavItemRow({
 interface SidebarProps {
   mobileOpen: boolean;
   onClose: () => void;
-  /** When true (e.g. chapter view): sidebar is overlay-only even on desktop, no reserved space. */
-  focusMode?: boolean;
-  /** User has enabled Fokusmodus on chapter page → sidebar ausblenden (animate out). */
-  focusModeActive?: boolean;
 }
 
-export function Sidebar({
-  mobileOpen,
-  onClose,
-  focusMode = false,
-  focusModeActive = false,
-}: SidebarProps) {
+export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const { user, signOut } = useAuth();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
@@ -432,9 +423,15 @@ export function Sidebar({
           className="lg:hidden p-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/8 transition-colors cursor-pointer"
         >
           <motion.span
-            className="inline-flex"
+            className="inline-flex items-center justify-center"
+            style={{ transformOrigin: "50% 50%" }}
+            initial={false}
             animate={{ rotate: 90 }}
-            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 30,
+            }}
           >
             <Menu className="w-5 h-5" />
           </motion.span>
@@ -756,27 +753,24 @@ export function Sidebar({
     <>
       {/* Backdrop: nur wenn Sidebar offen und nicht Fokusmodus aktiv */}
       <AnimatePresence>
-        {mobileOpen && !focusModeActive && (
+        {mobileOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-            className={cn(
-              "fixed inset-0 bg-black/50 backdrop-blur-sm",
-              focusMode ? "z-[110]" : "z-100"
-            )}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-100"
             onClick={onClose}
             aria-hidden
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel: bei focusModeActive ausblenden (animate out) */}
+      {/* Sidebar panel */}
       <motion.aside
         initial={false}
         animate={{
-          x: focusModeActive ? "-100%" : mobileOpen ? 0 : "-100%",
+          x: mobileOpen ? 0 : "-100%",
         }}
         transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         className={cn(
@@ -784,12 +778,11 @@ export function Sidebar({
           SIDEBAR_PANEL_WIDTH,
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
           "border-r border-[var(--border)]",
-          focusMode ? "z-[120]" : "z-101",
-          focusModeActive && "pointer-events-none"
+          "z-101"
         )}
-        role={mobileOpen && !focusModeActive ? "dialog" : undefined}
-        aria-modal={mobileOpen && !focusModeActive ? true : undefined}
-        aria-label={mobileOpen && !focusModeActive ? "Hauptmenü" : undefined}
+        role={mobileOpen ? "dialog" : undefined}
+        aria-modal={mobileOpen ? true : undefined}
+        aria-label={mobileOpen ? "Hauptmenü" : undefined}
       >
         {sidebarContent}
       </motion.aside>

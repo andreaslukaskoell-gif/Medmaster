@@ -2,23 +2,12 @@ import type { RefObject } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  CalendarClock,
-  Sun,
-  Moon,
-  Search,
-  Menu,
-  ClipboardList,
-  Focus,
-  LayoutDashboard,
-} from "lucide-react";
+import { Sun, Moon, Search, Menu, ClipboardList, LayoutDashboard } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { SyncStatus } from "./SyncStatus";
-import { daysUntilMedAT } from "@/lib/utils";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
-import { GlobalBreadcrumb } from "./GlobalBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -27,13 +16,8 @@ interface TopBarProps {
   onMenuToggle: () => void;
   /** Sidebar/Drawer offen (z. B. mobile) → Burger-Icon dreht sich 90°. */
   sidebarOpen?: boolean;
-  /** When true (e.g. chapter focus mode), show hamburger on all screen sizes. */
+  /** When true (e.g. chapter view), show hamburger on all screen sizes. */
   showHamburgerAlways?: boolean;
-  /** On BMS chapter page: show Fokusmodus toggle. */
-  isChapterRoute?: boolean;
-  /** User has enabled Fokusmodus → show minimal bar. */
-  isFocusMode?: boolean;
-  onToggleFocusMode?: () => void;
 }
 
 export function TopBar({
@@ -41,9 +25,6 @@ export function TopBar({
   onMenuToggle,
   sidebarOpen = false,
   showHamburgerAlways = false,
-  isChapterRoute = false,
-  isFocusMode = false,
-  onToggleFocusMode,
 }: TopBarProps) {
   const mounted = useIsMounted();
   const store = useStore();
@@ -54,7 +35,6 @@ export function TopBar({
   const onboardingCompleted = store?.onboardingCompleted ?? false;
   const hasCompletedMedATOnboarding = store?.hasCompletedMedATOnboarding ?? false;
   const showEinstufungstest = hasCompletedMedATOnboarding && !onboardingCompleted;
-  const days = daysUntilMedAT();
   const showStoreValues = mounted;
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
@@ -70,8 +50,6 @@ export function TopBar({
     window.dispatchEvent(new CustomEvent(OPEN_COMMAND_PALETTE));
   };
 
-  const showMinimalBar = isFocusMode && isChapterRoute;
-
   return (
     <motion.header
       initial={{ y: -8, opacity: 0 }}
@@ -79,7 +57,7 @@ export function TopBar({
       transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
       className={cn(
         "sticky top-0 z-[100] flex items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-200",
-        showMinimalBar ? "h-12" : "h-[60px]",
+        "h-[60px]",
         "bg-[var(--topbar-bg)] backdrop-blur-sm",
         "border-b border-[var(--border)]",
         "transition-[border-color,background-color] duration-200",
@@ -93,15 +71,20 @@ export function TopBar({
           type="button"
           className={cn(
             "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0",
-            (!showHamburgerAlways || showMinimalBar) && "lg:hidden"
+            !showHamburgerAlways && "lg:hidden"
           )}
           onClick={onMenuToggle}
           aria-label={sidebarOpen ? "Menü schließen" : "Menü öffnen"}
         >
           <motion.span
-            className="inline-flex"
+            className="inline-flex items-center justify-center"
+            style={{ transformOrigin: "50% 50%" }}
             animate={{ rotate: sidebarOpen ? 90 : 0 }}
-            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 30,
+            }}
           >
             <Menu className="w-5 h-5" />
           </motion.span>
@@ -110,8 +93,7 @@ export function TopBar({
         <Link
           to="/"
           className={cn(
-            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors shrink-0",
-            showMinimalBar && "hidden"
+            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors shrink-0"
           )}
           aria-label="Dashboard"
           title="Dashboard"
@@ -119,9 +101,7 @@ export function TopBar({
           <LayoutDashboard className="w-5 h-5" />
         </Link>
 
-        <GlobalBreadcrumb />
-
-        {showEinstufungstest && !showMinimalBar && (
+        {showEinstufungstest && (
           <Link to="/onboarding" className="shrink-0">
             <Button
               size="sm"
@@ -134,70 +114,41 @@ export function TopBar({
         )}
       </div>
 
-      {/* Right: Fokusmodus (chapter) + stats + controls */}
+      {/* Right: stats + controls */}
       <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-        {isChapterRoute && onToggleFocusMode && (
-          <motion.button
+        <motion.div
+          initial={false}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
+          className="flex items-center gap-1.5 sm:gap-2"
+        >
+          {/* Search */}
+          <button
             type="button"
-            onClick={onToggleFocusMode}
-            className={cn(
-              "flex items-center gap-2 px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors cursor-pointer",
-              isFocusMode
-                ? "border-[var(--accent)] bg-[var(--accent)]/15 text-[var(--accent)]"
-                : "border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--foreground)]/20"
-            )}
-            aria-label={isFocusMode ? "Fokusmodus aus" : "Fokusmodus an"}
-            title={isFocusMode ? "Fokusmodus aus (F)" : "Fokusmodus an (F)"}
+            onClick={openCommandPalette}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] text-sm text-[var(--muted)] hover:border-[var(--color-primary-500)]/50 hover:text-[var(--foreground)] transition-colors cursor-pointer"
           >
-            <Focus className={cn("w-4 h-4", isFocusMode && "text-[var(--accent)]")} />
-            <span className="hidden sm:inline">{isFocusMode ? "Fokus aus" : "Fokusmodus"}</span>
-          </motion.button>
-        )}
+            <Search className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline text-xs">Suche</span>
+            <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-1.5 py-0.5 rounded font-mono">
+              ⌘K
+            </kbd>
+          </button>
 
-        {!showMinimalBar && (
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex items-center gap-1.5 sm:gap-2"
-          >
-            {/* Days counter */}
-            <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[var(--border)] text-sm">
-              <CalendarClock className="w-3.5 h-3.5 text-[var(--color-primary-500)] shrink-0" />
-              <span className="text-[var(--muted)] whitespace-nowrap">
-                <span className="font-semibold text-[var(--foreground)]">{days}</span>
-                <span className="ml-1 text-xs">Tage</span>
-              </span>
-            </div>
+          {/* Streak */}
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
+            <StreakFlameIcon
+              streak={streak ?? 0}
+              hasActivityToday={hasActivityToday}
+              size="inherit"
+              className="w-3.5 h-3.5 shrink-0"
+            />
+            <span className="min-w-5 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
+          </div>
 
-            {/* Search */}
-            <button
-              type="button"
-              onClick={openCommandPalette}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] text-sm text-[var(--muted)] hover:border-[var(--color-primary-500)]/50 hover:text-[var(--foreground)] transition-colors cursor-pointer"
-            >
-              <Search className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline text-xs">Suche</span>
-              <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-1.5 py-0.5 rounded font-mono">
-                ⌘K
-              </kbd>
-            </button>
-
-            {/* Streak */}
-            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
-              <StreakFlameIcon
-                streak={streak ?? 0}
-                hasActivityToday={hasActivityToday}
-                size="inherit"
-                className="w-3.5 h-3.5 shrink-0"
-              />
-              <span className="min-w-5 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
-            </div>
-
-            <SyncStatus />
-          </motion.div>
-        )}
+          <SyncStatus />
+        </motion.div>
 
         {/* Dark mode toggle: always visible */}
         <button
