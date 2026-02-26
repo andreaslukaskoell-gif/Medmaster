@@ -247,6 +247,7 @@ export function AppShell() {
           <TopBar
             menuButtonRef={menuButtonRef}
             onMenuToggle={() => setMobileOpen(!mobileOpen)}
+            sidebarOpen={mobileOpen}
             showHamburgerAlways={true}
             isChapterRoute={isChapterRoute}
             isFocusMode={isFocusMode}

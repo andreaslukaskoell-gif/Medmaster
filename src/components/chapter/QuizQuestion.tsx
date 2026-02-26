@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, RotateCcw, Lightbulb, BookOpen } from "lucide-react";
 import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
+import { stripMarkdownAsterisks } from "../../utils/formatExplanation";
 import { playCorrectAnswerSound } from "../../lib/sounds";
 import { useQuizSessionStore } from "../../store/quizSessionStore";
 
@@ -19,8 +20,6 @@ interface QuizQuestionProps {
  * Interaktives Quiz: Immediate Feedback, kein Prüfen-Button, Glassmorphism-Feedback, Smart Reveal, Input Lock.
  */
 export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQuestionProps) {
-  console.log("BMS Quiz-Logik geladen");
-
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [hintIndex, setHintIndex] = useState(0);
@@ -40,9 +39,18 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
     setSelectedOption(index);
     setIsAnswered(true);
     const isCorrect = index === correctIndex;
-    if (isCorrect) playCorrectAnswerSound();
-    recordQuizAnswer(isCorrect);
-    onAnswerChange?.(isCorrect, isSecondAttempt);
+    if (isCorrect) {
+      playCorrectAnswerSound();
+      recordQuizAnswer(true);
+      onAnswerChange?.(isCorrect, isSecondAttempt);
+      return;
+    }
+    // Falsch: Erst beim 2. Mal (nach Wiederholen oder nach „Lösung anzeigen“) auflösen
+    recordQuizAnswer(false);
+    if (isSecondAttempt) {
+      setSolutionRevealed(true);
+      onAnswerChange?.(false);
+    }
   };
 
   const handleSecondTry = () => {
@@ -81,7 +89,8 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
         <div className="ml-0 sm:ml-11 flex flex-col gap-2">
           {options.map((option, oi) => {
             const isChosen = selectedOption === oi;
-            const isCorrectOption = isAnswered && oi === correctIndex;
+            const showAsCorrect =
+              isAnswered && oi === correctIndex && (isChosen || solutionRevealed);
             const isWrongChosen = isAnswered && isChosen && oi !== correctIndex;
 
             return (
@@ -92,7 +101,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                 disabled={isAnswered}
                 className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/50
                   ${
-                    isCorrectOption
+                    showAsCorrect
                       ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
                       : isWrongChosen
                         ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
@@ -105,7 +114,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                   {String.fromCharCode(65 + oi)})
                 </span>
                 <span className="text-base break-words">{option}</span>
-                {isCorrectOption && (
+                {showAsCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 float-right mt-0.5 shrink-0" />
                 )}
                 {isWrongChosen && (
@@ -148,7 +157,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               {isCorrect && (
                 <>
                   <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
-                    {explanation}
+                    {stripMarkdownAsterisks(explanation)}
                   </p>
                   {merksatz && (
                     <p className="text-sm mt-2 pt-2 border-t border-green-200 dark:border-green-800 text-green-800 dark:text-green-200 italic">
@@ -159,6 +168,11 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               )}
               {isWrong && (
                 <>
+                  <p className="text-sm text-slate-900 dark:text-slate-100 mb-3">
+                    {solutionRevealed
+                      ? null
+                      : "Wähle „Wiederholen“, um es erneut zu versuchen, oder „Mit Tipp lösen“, um einen Tipp zu sehen und dann die Lösung anzuzeigen."}
+                  </p>
                   {hintIndex > 0 && (
                     <div className="space-y-2 mb-3">
                       {hints.slice(0, hintIndex).map((hint, i) => (
@@ -193,7 +207,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                   {solutionRevealed ? (
                     <>
                       <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
-                        {explanation}
+                        {stripMarkdownAsterisks(explanation)}
                       </p>
                       {merksatz && (
                         <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
@@ -202,51 +216,52 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                       )}
                     </>
                   ) : (
-                    <p className="text-sm text-slate-900 dark:text-slate-100 mb-3">
-                      Versuche es mit einem Tipp, bevor du die Lösung siehst – so prägt sich der
-                      Stoff besser ein.
-                    </p>
+                    <>
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {!isSecondAttempt && (
+                          <motion.button
+                            type="button"
+                            onClick={handleSecondTry}
+                            whileTap={{ scale: 0.97 }}
+                            whileHover={{ scale: 1.02 }}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-emerald-300 dark:border-emerald-700 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                          >
+                            <RotateCcw className="w-4 h-4" />
+                            Wiederholen
+                          </motion.button>
+                        )}
+                        {hasMoreHints ? (
+                          <motion.button
+                            type="button"
+                            onClick={showNextHint}
+                            whileTap={{ scale: 0.97 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-amber-400/60 active:shadow-[0_0_12px_rgba(251,191,36,0.25)]"
+                          >
+                            <Lightbulb className="w-4 h-4" />
+                            {hintIndex === 0 ? "Mit Tipp lösen" : "Weiterer Tipp"}
+                          </motion.button>
+                        ) : null}
+                        {(hintIndex > 0 || !hasMoreHints) && (
+                          <motion.button
+                            type="button"
+                            onClick={() => {
+                              setSolutionRevealed(true);
+                              onAnswerChange?.(false);
+                            }}
+                            whileTap={{ scale: 0.97 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-slate-200 dark:border-white/10 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
+                          >
+                            <BookOpen className="w-4 h-4" />
+                            Lösung anzeigen
+                          </motion.button>
+                        )}
+                      </div>
+                    </>
                   )}
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {!solutionRevealed && !isSecondAttempt && (
-                      <motion.button
-                        type="button"
-                        onClick={handleSecondTry}
-                        whileTap={{ scale: 0.97 }}
-                        whileHover={{ scale: 1.02 }}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-emerald-300 dark:border-emerald-700 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
-                      >
-                        <RotateCcw className="w-4 h-4" />
-                        Nochmal versuchen (50% XP)
-                      </motion.button>
-                    )}
-                    {!solutionRevealed && hasMoreHints && (
-                      <motion.button
-                        type="button"
-                        onClick={showNextHint}
-                        whileTap={{ scale: 0.97 }}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-amber-400/60 active:shadow-[0_0_12px_rgba(251,191,36,0.25)]"
-                      >
-                        <Lightbulb className="w-4 h-4" />
-                        Gib mir einen Tipp
-                      </motion.button>
-                    )}
-                    {!solutionRevealed && (hintIndex > 0 || !hasMoreHints) && (
-                      <motion.button
-                        type="button"
-                        onClick={() => setSolutionRevealed(true)}
-                        whileTap={{ scale: 0.97 }}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-slate-200 dark:border-white/10 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
-                      >
-                        <BookOpen className="w-4 h-4" />
-                        Lösung anzeigen
-                      </motion.button>
-                    )}
-                  </div>
                 </>
               )}
             </div>

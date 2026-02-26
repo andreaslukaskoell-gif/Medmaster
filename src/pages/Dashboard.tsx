@@ -15,7 +15,6 @@ import {
   Heart,
   ListChecks,
   RefreshCw,
-  CalendarDays,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -42,6 +41,7 @@ import {
 } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
+import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { getPrognoseSummary } from "@/lib/prognoseScore";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
@@ -74,8 +74,8 @@ export default function Dashboard() {
     smartAdjustDismissedUntil,
     dismissSmartAdjust,
     getDueChapterIds,
-    userProgress,
   } = useStore();
+  const activityLog = useStore((s) => s.activityLog);
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
@@ -114,8 +114,14 @@ export default function Dashboard() {
   const plan = useMemo(() => {
     if (!lernplanConfig) return null;
     const ad = useAdaptiveStore.getState();
-    return generateAdaptivePlan({
+    const adaptation = getPlanAdaptation({
       hoursPerWeek: lernplanConfig.hoursPerWeek,
+      goalAchievedByDate: goalAchievedByDate ?? {},
+      quizResults: quizResults ?? [],
+      activityLog: activityLog ?? {},
+    });
+    return generateAdaptivePlan({
+      hoursPerWeek: adaptation.effectiveHoursPerWeek,
       weeksLeft,
       readiness: ad.getMedATReadiness(),
       fachReadiness: {
@@ -127,7 +133,7 @@ export default function Dashboard() {
       weakTopics: ad.getWeakestTopics(5),
       phase: ad.profile.learningPhase,
     });
-  }, [lernplanConfig, weeksLeft]);
+  }, [lernplanConfig, weeksLeft, goalAchievedByDate, quizResults, activityLog]);
   const concretePlan = useMemo(() => {
     if (!plan) return null;
     return buildConcreteDailyPlan(plan, {
@@ -135,7 +141,7 @@ export default function Dashboard() {
       lastViewedChapterId: lastViewedKapitelId,
       lastViewedUnterkapitelId,
     });
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId, userProgress]);
+  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const prognoseSummary = useMemo(() => getPrognoseSummary(quizResults ?? []), [quizResults]);
   const dailyGoalState = useMemo(
     () => getDailyGoalFromPlan(plan, quizResults, todayStr),
@@ -255,7 +261,7 @@ export default function Dashboard() {
         <SyncIndicator />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
-          {/* Hero: Heute lernen – Today Engine Badges + CTA */}
+          {/* Hero: Begrüßung + Heute im Lernplan */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
             <div
               className={cn(
@@ -264,58 +270,59 @@ export default function Dashboard() {
                 "bg-linear-to-br from-[var(--card)] via-[var(--card)] to-blue-50/50 dark:to-blue-950/20"
               )}
             >
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+              <div className="flex flex-col gap-5">
                 <div>
                   <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
                     {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                   </h1>
-                  <p className="text-base text-[var(--text-secondary)] mt-1.5">
-                    Noch {days} Tage bis MedAT
-                  </p>
-                  {(todayDueCount > 0 || todayWeaknessCount > 0 || todayNewCount > 0) && (
-                    <p className="text-sm text-[var(--muted)] mt-2 flex flex-wrap gap-2">
-                      {todayDueCount > 0 && (
-                        <span className="font-medium text-amber-600 dark:text-amber-400">
-                          {todayDueCount} fällig
-                        </span>
-                      )}
-                      {todayWeaknessCount > 0 && (
-                        <span className="font-medium text-red-600 dark:text-red-400">
-                          {todayWeaknessCount} Schwachstellen
-                        </span>
-                      )}
-                      {todayNewCount > 0 && (
-                        <span className="font-medium text-emerald-600 dark:text-emerald-400">
-                          {todayNewCount} zum Weiterlernen
-                        </span>
-                      )}
-                    </p>
-                  )}
-                </div>
-                <Link
-                  to={
-                    hasTodayTasks
-                      ? "/today"
-                      : lastPath && lastPath !== "/" && lastPath !== "/bms"
-                        ? lastPath
-                        : "/bms"
-                  }
-                  className="shrink-0"
-                >
-                  <Button size="lg" className="gap-2">
-                    {hasTodayTasks ? (
-                      <ListChecks className="w-5 h-5" />
-                    ) : (
-                      <BookOpen className="w-5 h-5" />
-                    )}
-                    {hasTodayTasks
-                      ? "Jetzt starten"
-                      : lastPath && lastPath !== "/" && lastPath !== "/bms"
-                        ? "Weiterlernen"
-                        : "Jetzt starten"}
+                  <Link
+                    to="/lernplan"
+                    className="mt-2 inline-flex items-center gap-1.5 text-base font-semibold text-[var(--accent)] hover:underline"
+                  >
+                    Heute im Lernplan
                     <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </Link>
+                  </Link>
+                </div>
+                {concretePlan && (
+                  <div className="flex flex-wrap gap-2 text-sm">
+                    {concretePlan.bmsRead.length > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                        <BookOpen className="w-3.5 h-3.5" />
+                        {concretePlan.bmsRead.length} Kapitel lernen
+                      </span>
+                    )}
+                    {concretePlan.bmsReview.length > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                        <RefreshCw className="w-3.5 h-3.5" />
+                        {concretePlan.bmsReview.length} wiederholen
+                      </span>
+                    )}
+                    {concretePlan.bmsQuestions.length > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                        <ListChecks className="w-3.5 h-3.5" />
+                        BMS-Fragen
+                      </span>
+                    )}
+                    {concretePlan.kffTasks.length > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                        <Brain className="w-3.5 h-3.5" />
+                        KFF
+                      </span>
+                    )}
+                    {concretePlan.tvTexts > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200">
+                        <FileText className="w-3.5 h-3.5" />
+                        TV
+                      </span>
+                    )}
+                    {concretePlan.sekTasks.length > 0 && (
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200">
+                        <Heart className="w-3.5 h-3.5" />
+                        SEK
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
               <div className="mt-4 pt-4 border-t border-[var(--border)]">
                 <div className="flex items-center justify-between text-sm mb-1">
@@ -417,164 +424,41 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
-          {/* Empfohlene Aktion: Heute im Lernplan (oder Fallback Heute lernen + Simulation) */}
+          {/* Prognose-Karte */}
           <motion.section
             variants={tileMotion}
-            aria-label="Empfohlen"
-            className="grid grid-cols-1 lg:grid-cols-4 gap-4"
+            aria-label="Prognose"
+            className="grid grid-cols-1 gap-4"
           >
-            {concretePlan ? (
-              <>
-                <Link to="/lernplan" className="lg:col-span-2">
-                  <div
-                    className={cn(
-                      cardClass,
-                      "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col min-h-[120px]",
-                      "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
-                    )}
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
-                        <CalendarDays className="w-6 h-6 text-[var(--accent)]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[var(--text-primary)]">
-                          Heute im Lernplan
-                        </h3>
-                        <p className="text-sm text-[var(--muted)] mt-0.5">
-                          ca. {concretePlan.totalMinutesEstimate} Min
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2 text-sm">
-                      {concretePlan.bmsRead.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
-                          <BookOpen className="w-3.5 h-3.5" />
-                          {concretePlan.bmsRead.length} Kapitel lesen
-                        </span>
-                      )}
-                      {concretePlan.bmsReview.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
-                          <RefreshCw className="w-3.5 h-3.5" />
-                          {concretePlan.bmsReview.length} wiederholen
-                        </span>
-                      )}
-                      {concretePlan.bmsQuestions.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
-                          <ListChecks className="w-3.5 h-3.5" />
-                          BMS-Fragen
-                        </span>
-                      )}
-                      {concretePlan.kffTasks.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
-                          <Brain className="w-3.5 h-3.5" />
-                          KFF
-                        </span>
-                      )}
-                      {concretePlan.tvTexts > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200">
-                          <FileText className="w-3.5 h-3.5" />
-                          TV
-                        </span>
-                      )}
-                      {concretePlan.sekMinutes > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200">
-                          <Heart className="w-3.5 h-3.5" />
-                          SEK
-                        </span>
-                      )}
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
-                      Zum Lernplan <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
-                <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
-                  <div
-                    className={cn(
-                      cardClass,
-                      "h-full p-4 flex items-center gap-3 min-h-[100px]",
-                      "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
-                    )}
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
-                      <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
-                      <p className="text-xs text-[var(--muted)]">
-                        {prognoseSummary.hasEnoughData
-                          ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
-                          : "Ab 20 Fragen"}
-                      </p>
-                    </div>
-                    {prognoseSummary.hasEnoughData && (
-                      <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
-                        {prognoseSummary.totalPct.toFixed(0)}%
-                      </p>
-                    )}
-                  </div>
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link to="/today" className="lg:col-span-2">
-                  <div
-                    className={cn(
-                      cardClass,
-                      "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]",
-                      "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
-                    )}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
-                        <ListChecks className="w-6 h-6 text-[var(--accent)]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[var(--text-primary)]">Heute lernen</h3>
-                        <p className="text-sm text-[var(--muted)] mt-0.5">
-                          {todayDueCount > 0 && `${todayDueCount} fällig`}
-                          {todayDueCount > 0 && todayWeaknessCount > 0 && " · "}
-                          {todayWeaknessCount > 0 && `${todayWeaknessCount} Schwachstellen`}
-                          {todayDueCount === 0 &&
-                            todayWeaknessCount === 0 &&
-                            "Priorisierte Aufgaben"}
-                        </p>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
-                      Jetzt starten <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
-                <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
-                  <div
-                    className={cn(
-                      cardClass,
-                      "h-full p-4 flex items-center gap-3 min-h-[100px]",
-                      "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
-                    )}
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
-                      <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
-                      <p className="text-xs text-[var(--muted)]">
-                        {prognoseSummary.hasEnoughData
-                          ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
-                          : "Ab 20 Fragen"}
-                      </p>
-                    </div>
-                    {prognoseSummary.hasEnoughData && (
-                      <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
-                        {prognoseSummary.totalPct.toFixed(0)}%
-                      </p>
-                    )}
-                  </div>
-                </Link>
-              </>
-            )}
+            <Link
+              to="/prognose"
+              className="opacity-90 hover:opacity-100 transition-opacity max-w-md"
+            >
+              <div
+                className={cn(
+                  cardClass,
+                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                  "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
+                )}
+              >
+                <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
+                  <p className="text-xs text-[var(--muted)]">
+                    {prognoseSummary.hasEnoughData
+                      ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
+                      : "Ab 20 Fragen"}
+                  </p>
+                </div>
+                {prognoseSummary.hasEnoughData && (
+                  <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
+                    {prognoseSummary.totalPct.toFixed(0)}%
+                  </p>
+                )}
+              </div>
+            </Link>
           </motion.section>
 
           {/* Motivationsleiste: Level links, Badges rechts daneben (eigene Zeile), dann Progress/Streak/Link */}

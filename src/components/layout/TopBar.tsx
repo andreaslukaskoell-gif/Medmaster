@@ -1,8 +1,17 @@
 import type { RefObject } from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Star, CalendarClock, Sun, Moon, Search, Menu, ClipboardList, Focus } from "lucide-react";
+import {
+  CalendarClock,
+  Sun,
+  Moon,
+  Search,
+  Menu,
+  ClipboardList,
+  Focus,
+  LayoutDashboard,
+} from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
@@ -16,6 +25,8 @@ import { cn } from "@/lib/utils";
 interface TopBarProps {
   menuButtonRef?: RefObject<HTMLButtonElement | null>;
   onMenuToggle: () => void;
+  /** Sidebar/Drawer offen (z. B. mobile) → Burger-Icon dreht sich 90°. */
+  sidebarOpen?: boolean;
   /** When true (e.g. chapter focus mode), show hamburger on all screen sizes. */
   showHamburgerAlways?: boolean;
   /** On BMS chapter page: show Fokusmodus toggle. */
@@ -28,6 +39,7 @@ interface TopBarProps {
 export function TopBar({
   menuButtonRef,
   onMenuToggle,
+  sidebarOpen = false,
   showHamburgerAlways = false,
   isChapterRoute = false,
   isFocusMode = false,
@@ -35,7 +47,6 @@ export function TopBar({
 }: TopBarProps) {
   const mounted = useIsMounted();
   const store = useStore();
-  const xp = store?.xp ?? 0;
   const streak = store?.streak ?? 0;
   const lastActiveDate = store?.lastActiveDate ?? "";
   const darkMode = store?.darkMode ?? false;
@@ -48,21 +59,6 @@ export function TopBar({
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
   const [scrolled, setScrolled] = useState(false);
-  const [xpFlash, setXpFlash] = useState(false);
-  const prevXpRef = useRef<number>(xp);
-
-  useEffect(() => {
-    if (showStoreValues && typeof xp === "number" && xp > prevXpRef.current) {
-      const t = setTimeout(() => setXpFlash(true), 0);
-      const t2 = setTimeout(() => setXpFlash(false), 600);
-      prevXpRef.current = xp ?? 0;
-      return () => {
-        clearTimeout(t);
-        clearTimeout(t2);
-      };
-    }
-    prevXpRef.current = xp ?? 0;
-  }, [xp, showStoreValues]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -100,10 +96,28 @@ export function TopBar({
             (!showHamburgerAlways || showMinimalBar) && "lg:hidden"
           )}
           onClick={onMenuToggle}
-          aria-label="Menü öffnen"
+          aria-label={sidebarOpen ? "Menü schließen" : "Menü öffnen"}
         >
-          <Menu className="w-5 h-5" />
+          <motion.span
+            className="inline-flex"
+            animate={{ rotate: sidebarOpen ? 90 : 0 }}
+            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Menu className="w-5 h-5" />
+          </motion.span>
         </button>
+
+        <Link
+          to="/"
+          className={cn(
+            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors shrink-0",
+            showMinimalBar && "hidden"
+          )}
+          aria-label="Dashboard"
+          title="Dashboard"
+        >
+          <LayoutDashboard className="w-5 h-5" />
+        </Link>
 
         <GlobalBreadcrumb />
 
@@ -169,20 +183,6 @@ export function TopBar({
                 ⌘K
               </kbd>
             </button>
-
-            {/* XP */}
-            <motion.div
-              layout
-              className={cn(
-                "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold transition-all duration-200",
-                xpFlash
-                  ? "border-amber-400/60 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400"
-                  : "text-[var(--muted)] hover:text-[var(--foreground)]"
-              )}
-            >
-              <Star className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-              <span className="min-w-5 text-center">{showStoreValues ? (xp ?? 0) : "–"}</span>
-            </motion.div>
 
             {/* Streak */}
             <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">

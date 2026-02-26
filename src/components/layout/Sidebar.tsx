@@ -14,7 +14,7 @@ import {
   CalendarDays,
   Layers,
   ListChecks,
-  X,
+  Menu,
   LogOut,
   Award,
   ChevronDown,
@@ -431,7 +431,13 @@ export function Sidebar({
           aria-label="Menü schließen"
           className="lg:hidden p-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/8 transition-colors cursor-pointer"
         >
-          <X className="w-4 h-4" />
+          <motion.span
+            className="inline-flex"
+            animate={{ rotate: 90 }}
+            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Menu className="w-5 h-5" />
+          </motion.span>
         </button>
       </div>
 

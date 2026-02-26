@@ -16,11 +16,9 @@ export function SyncStatus() {
   const isSyncing = useSyncStatus((s) => s.isSyncing);
   const lastSyncedAt = useSyncStatus((s) => s.lastSyncedAt);
   const [manualSyncing, setManualSyncing] = useState(false);
-  const [syncUnavailable, setSyncUnavailable] = useState(false);
-
-  useEffect(() => {
-    setSyncUnavailable(typeof window !== "undefined" && isSchemaSkipActive());
-  }, []);
+  const [syncUnavailable, setSyncUnavailable] = useState(
+    () => typeof window !== "undefined" && isSchemaSkipActive()
+  );
 
   useEffect(() => {
     const onFocus = () => setSyncUnavailable(isSchemaSkipActive());
@@ -42,36 +40,38 @@ export function SyncStatus() {
   if (syncUnavailable) {
     return (
       <div
-        className="flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-2xl border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/20"
-        title="Sync dieser Session deaktiviert (Backend-Tabellen nicht verfügbar). Daten werden nur lokal gespeichert. Beim nächsten Login mit funktionierendem Backend wird wieder synchronisiert."
+        className="flex items-center gap-1 px-1.5 py-1 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/20"
+        title="Sync dieser Session deaktiviert. Daten werden nur lokal gespeichert."
       >
-        <span className="h-2 w-2 shrink-0 rounded-full bg-amber-500" aria-hidden />
-        <span className="text-xs text-amber-700 dark:text-amber-400 whitespace-nowrap">
-          Nur lokal
+        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" aria-hidden />
+        <span className="text-[10px] text-amber-700 dark:text-amber-400 whitespace-nowrap">
+          Lokal
         </span>
-        <span className="sr-only">
-          Synchronisation deaktiviert. Fortschritt wird nur auf diesem Gerät gespeichert.
-        </span>
+        <span className="sr-only">Synchronisation deaktiviert.</span>
       </div>
     );
   }
 
   return (
-    <div className="flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+    <div className="flex items-center gap-1 px-1.5 py-1 rounded-lg border border-[var(--border)] bg-[var(--card)]/50">
       {syncing ? (
         <>
-          <span className="relative flex h-2 w-2 shrink-0" title="Synchronisiere..." aria-hidden>
+          <span
+            className="relative flex h-1.5 w-1.5 shrink-0"
+            title="Synchronisiere..."
+            aria-hidden
+          >
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-500" />
           </span>
-          <span className="text-xs text-amber-700 dark:text-amber-400 font-medium whitespace-nowrap">
-            Synchronisiere...
+          <span className="text-[10px] text-amber-700 dark:text-amber-400 whitespace-nowrap">
+            Sync…
           </span>
         </>
       ) : (
         <>
           <span
-            className="h-2 w-2 shrink-0 rounded-full bg-green-500"
+            className="h-1.5 w-1.5 shrink-0 rounded-full bg-green-500"
             title={
               lastSyncedAt
                 ? `Zuletzt: ${new Date(lastSyncedAt).toLocaleString()}`
@@ -79,20 +79,18 @@ export function SyncStatus() {
             }
             aria-hidden
           />
-          <span className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap">
-            Synchronisiert
-          </span>
+          <span className="text-[10px] text-[var(--muted)] whitespace-nowrap">Sync</span>
         </>
       )}
       <button
         type="button"
         onClick={handleSyncNow}
         disabled={syncing}
-        className="p-1.5 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        title="Jetzt mit Supabase synchronisieren"
+        className="p-1 rounded-md hover:bg-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        title="Jetzt synchronisieren"
         aria-label="Sync jetzt"
       >
-        <RefreshCw className={`w-3.5 h-3.5 ${syncing ? "animate-spin" : ""}`} />
+        <RefreshCw className={`w-3 h-3 ${syncing ? "animate-spin" : ""}`} />
       </button>
     </div>
   );
