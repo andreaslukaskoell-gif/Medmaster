@@ -15,7 +15,7 @@ export interface Formel {
 
 export const formeln: Formel[] = [
   // ═══════════════════════════════════════════
-  // PHYSIK (15 Formeln)
+  // PHYSIK (23 Formeln)
   // ═══════════════════════════════════════════
 
   {
@@ -169,9 +169,94 @@ export const formeln: Formel[] = [
     einheiten: "F [N], m [kg], r [m]",
     beispiel: "Erde–Mond: m₁ ≈ 6·10²⁴ kg, m₂ ≈ 7,3·10²² kg, r ≈ 3,8·10⁸ m → F ≈ 2·10²⁰ N.",
   },
+  {
+    id: "p16",
+    fach: "physik",
+    kapitel: "Elektrizität",
+    name: "Coulomb-Gesetz",
+    formel: "F = k · |q₁ · q₂| / r²",
+    variablen:
+      "F = Kraft, k = 8,99·10⁹ N·m²/C², q₁/q₂ = Ladungen, r = Abstand. Im Medium: F durch εᵣ teilen.",
+    einheiten: "F [N], q [C], r [m]",
+    beispiel: "Doppelter Abstand → Kraft auf ¼. Wasser εᵣ ≈ 80 → Kraft 80× schwächer.",
+  },
+  {
+    id: "p17",
+    fach: "physik",
+    kapitel: "Elektrizität",
+    name: "Kapazität Kondensator",
+    formel: "C = Q / U",
+    variablen: "C = Kapazität, Q = gespeicherte Ladung, U = Spannung",
+    einheiten: "C [F = As/V], Q [C], U [V]",
+    beispiel: "Q = 10 µC, U = 5 V → C = 10·10⁻⁶/5 = 2 µF.",
+  },
+  {
+    id: "p18",
+    fach: "physik",
+    kapitel: "Elektrizität",
+    name: "Kirchhoffsche Maschenregel",
+    formel: "Σ U = 0 (in einer Masche)",
+    variablen:
+      "Summe der Spannungen in einem geschlossenen Umlauf = 0. Vorzeichen: Richtung des Umlaufs beachten.",
+    einheiten: "U [V]",
+    beispiel: "U_Quelle = U₁ + U₂ + U₃ (Reihenschaltung).",
+  },
+  {
+    id: "p23",
+    fach: "physik",
+    kapitel: "Elektrizität",
+    name: "Kirchhoffsche Knotenregel",
+    formel: "Σ I = 0 (in einem Knoten)",
+    variablen:
+      "Summe der Ströme in einen Knoten = 0. Zufließend positiv, abfließend negativ (oder umgekehrt konsistent).",
+    einheiten: "I [A]",
+    beispiel: "I_1 = I_2 + I_3 (Parallelschaltung: Gesamtstrom = Summe Teilströme).",
+  },
+  {
+    id: "p19",
+    fach: "physik",
+    kapitel: "Optik",
+    name: "Linsengleichung",
+    formel: "1/f = 1/g + 1/b",
+    variablen: "f = Brennweite, g = Gegenstandsweite, b = Bildweite",
+    einheiten: "f, g, b [m]",
+    beispiel: "Lupe: g < f → virtuelles, vergrößertes Bild. g = f → kein reelles Bild.",
+  },
+  {
+    id: "p20",
+    fach: "physik",
+    kapitel: "Optik",
+    name: "Brechungsgesetz (Snellius)",
+    formel: "n₁ · sin α = n₂ · sin β",
+    variablen:
+      "n₁, n₂ = Brechungsindizes, α = Einfallswinkel, β = Brechungswinkel (gegen die Normale)",
+    einheiten: "Winkel [° oder rad], n dimensionslos",
+    beispiel: "Luft (n≈1) → Glas (n≈1,5): Licht wird zum Lot hin gebrochen.",
+  },
+  {
+    id: "p21",
+    fach: "physik",
+    kapitel: "Strömung",
+    name: "Kontinuitätsgleichung",
+    formel: "A₁ · v₁ = A₂ · v₂",
+    variablen: "A = Querschnittsfläche, v = Strömungsgeschwindigkeit (inkompressible Flüssigkeit)",
+    einheiten: "A [m²], v [m/s]",
+    beispiel: "Rohr verengt sich → v nimmt zu (z. B. Gartenschlauch mit Düse).",
+  },
+  {
+    id: "p22",
+    fach: "physik",
+    kapitel: "Quantenphysik",
+    name: "Massendefekt und Bindungsenergie",
+    formel: "E = Δm · c²",
+    variablen:
+      "E = Bindungsenergie, Δm = Massendefekt (Summe Nukleonen − Kernmasse), c = Lichtgeschwindigkeit",
+    einheiten: "E [J], Δm [kg], c [m/s]",
+    beispiel: "Der Massendefekt ist die „fehlende“ Masse; sie steckt als Bindungsenergie im Kern.",
+  },
 
   // ═══════════════════════════════════════════
-  // CHEMIE (10 Formeln)
+  // CHEMIE (13 Formeln)
   // ═══════════════════════════════════════════
 
   {
@@ -278,6 +363,39 @@ export const formeln: Formel[] = [
       "Elemente: 0 | H: +I (außer Metallhydride: −I) | O: −II (außer Peroxide: −I) | Summe in Verbindung = 0, in Ion = Ionenladung",
     einheiten: "dimensionslos (römische Ziffern)",
     beispiel: "H₂SO₄: H = +I, O = −II → S: 2·(+1) + x + 4·(−2) = 0 → x = +VI.",
+  },
+  {
+    id: "c11",
+    fach: "chemie",
+    kapitel: "Säure-Base",
+    name: "Henderson-Hasselbalch (Puffer)",
+    formel: "pH = pK_a + log₁₀([Base]/[Säure])",
+    variablen:
+      "pH = Puffer-pH, pK_a = −log K_a der schwachen Säure, [Base] und [Säure] = Konzentrationen des konjugierten Paars",
+    einheiten: "pH, pK_a dimensionslos; [ ] in mol/L",
+    beispiel: "Gleiche Konzentrationen [Base] = [Säure] → pH = pK_a. Blutpuffer: HCO₃⁻/CO₂.",
+  },
+  {
+    id: "c12",
+    fach: "chemie",
+    kapitel: "Thermodynamik",
+    name: "Gleichgewichtskonstante und ΔG°",
+    formel: "ΔG° = −R · T · ln K",
+    variablen:
+      "ΔG° = Standard-Reaktionsenthalpie, R = 8,314 J/(mol·K), T = Temperatur, K = Gleichgewichtskonstante",
+    einheiten: "ΔG° [J/mol], T [K], K dimensionslos",
+    beispiel: "K > 1 → ΔG° < 0 (Produkte begünstigt). K = 1 → ΔG° = 0.",
+  },
+  {
+    id: "c13",
+    fach: "chemie",
+    kapitel: "Gasgesetze",
+    name: "Daltons Partialdruck",
+    formel: "p_i = x_i · p_ges",
+    variablen:
+      "p_i = Partialdruck der Komponente i, x_i = Molenbruch (n_i/n_ges), p_ges = Gesamtdruck",
+    einheiten: "p [Pa], x dimensionslos",
+    beispiel: "21 % O₂ in Luft bei 1 bar → p(O₂) = 0,21 · 1 bar = 0,21 bar.",
   },
 
   // ═══════════════════════════════════════════

@@ -28,8 +28,6 @@ function q(
   };
 }
 
-const CHAPTERS = ["bio-kap1", "bio-kap2", "bio-kap3", "bio-kap4", "bio-kap5"] as const;
-
 export const biologiePool10: Question[] = [
   q(
     "bio-pool-10-001",
