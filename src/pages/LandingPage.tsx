@@ -16,7 +16,9 @@ import {
 import { supabase } from "@/lib/supabase";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
-const MEDICAL_BLUE = "#0055ff";
+const NAVY = "#1b3ea7"; /* Signature Navy (--accent) */
+const NAVY_HOVER = "#163286"; /* --accent-hover */
+const NAVY_LIGHT = "#3655b2"; /* primary-400 for gradients */
 
 const features = [
   {
@@ -24,14 +26,14 @@ const features = [
     title: "KI-Adaptives Lernen",
     description:
       "Unser System erkennt deine Schwächen und passt die Fragen automatisch an dein Niveau an.",
-    color: "bg-[#e0ebff] dark:bg-primary-900/30 text-[#0055ff] dark:text-primary-400",
+    color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: ListChecks,
     title: "Offizielle Stichwortliste",
     description:
       "Alle 106 offiziellen BMS-Stichworte 2025/2026. Fortschritt pro Stichwort in Echtzeit.",
-    color: "bg-[#e0ebff] dark:bg-primary-900/30 text-[#0055ff] dark:text-primary-400",
+    color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: LayoutGrid,
@@ -141,7 +143,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-3">
             <div
               className="w-9 h-9 rounded-2xl flex items-center justify-center text-white shadow-sm"
-              style={{ backgroundColor: MEDICAL_BLUE }}
+              style={{ backgroundColor: NAVY }}
             >
               <GraduationCap className="w-5 h-5" />
             </div>
@@ -160,7 +162,7 @@ export default function LandingPage() {
               <Link
                 to="/register"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-2xl shadow-sm transition-colors"
-                style={{ backgroundColor: MEDICAL_BLUE }}
+                style={{ backgroundColor: NAVY }}
               >
                 Kostenlos starten
                 <ArrowRight className="w-4 h-4" />
@@ -172,14 +174,14 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-[#f0f5ff] via-white to-[#f0f5ff] dark:from-primary-950/40 dark:via-gray-950 dark:to-primary-950/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#e8ecf7] via-white to-[#e8ecf7] dark:from-primary-950/40 dark:via-gray-950 dark:to-primary-950/30" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 text-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-white/80 dark:bg-gray-900/80"
-            style={{ color: MEDICAL_BLUE }}
+            style={{ color: NAVY }}
           >
             <Sparkles className="w-4 h-4" />
             MedAT 2026 — Jetzt früh starten
@@ -194,7 +196,7 @@ export default function LandingPage() {
             <br />
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: `linear-gradient(135deg, ${MEDICAL_BLUE}, #3b82f6)` }}
+              style={{ backgroundImage: `linear-gradient(135deg, ${NAVY}, ${NAVY_LIGHT})` }}
             >
               der smarteste Weg dorthin
             </span>
@@ -218,7 +220,7 @@ export default function LandingPage() {
               <Link
                 to="/register"
                 className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
-                style={{ backgroundColor: MEDICAL_BLUE }}
+                style={{ backgroundColor: NAVY }}
               >
                 Kostenlos registrieren
                 <ArrowRight className="w-5 h-5" />
@@ -252,7 +254,7 @@ export default function LandingPage() {
               >
                 <div
                   className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100"
-                  style={{ color: i === 1 ? MEDICAL_BLUE : undefined }}
+                  style={{ color: i === 1 ? NAVY : undefined }}
                 >
                   {stat.value}
                 </div>
@@ -352,12 +354,12 @@ export default function LandingPage() {
             ].map((s) => (
               <motion.div key={s.step} variants={item} className="text-center">
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm bg-[#e0ebff] dark:bg-primary-900/30"
-                  style={{ color: MEDICAL_BLUE }}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm bg-[#e8ecf7] dark:bg-primary-900/30"
+                  style={{ color: NAVY }}
                 >
                   <s.icon className="w-7 h-7" />
                 </div>
-                <div className="text-xs font-bold mb-2" style={{ color: MEDICAL_BLUE }}>
+                <div className="text-xs font-bold mb-2" style={{ color: NAVY }}>
                   SCHRITT {s.step}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
@@ -436,7 +438,7 @@ export default function LandingPage() {
                 whileHover={{ y: -4 }}
                 className={`relative rounded-2xl p-8 shadow-sm ${
                   plan.highlight
-                    ? "bg-[#0055ff] text-white shadow-lg shadow-primary-500/20 scale-[1.02]"
+                    ? "bg-[#1b3ea7] text-white shadow-lg shadow-primary-500/20 scale-[1.02]"
                     : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800"
                 }`}
               >
@@ -469,7 +471,7 @@ export default function LandingPage() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <span className={plan.highlight ? "text-primary-200" : "text-[#0055ff]"}>
+                      <span className={plan.highlight ? "text-primary-200" : "text-[#1b3ea7]"}>
                         &#10003;
                       </span>
                       <span
@@ -487,8 +489,8 @@ export default function LandingPage() {
                     to="/register"
                     className={`block w-full text-center font-semibold py-3.5 rounded-2xl transition-colors shadow-sm ${
                       plan.highlight
-                        ? "bg-white text-[#0055ff] hover:bg-primary-50"
-                        : "bg-[#0055ff] text-white hover:opacity-90"
+                        ? "bg-white text-[#1b3ea7] hover:bg-primary-50"
+                        : "bg-[#1b3ea7] text-white hover:opacity-90"
                     }`}
                   >
                     {plan.cta}
@@ -506,7 +508,7 @@ export default function LandingPage() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="py-16 sm:py-24 rounded-t-[2rem] sm:rounded-t-[3rem]"
-        style={{ background: `linear-gradient(135deg, ${MEDICAL_BLUE}, #0047d9)` }}
+        style={{ background: `linear-gradient(135deg, ${NAVY}, ${NAVY_HOVER})` }}
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
@@ -514,7 +516,7 @@ export default function LandingPage() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/register"
-              className="inline-flex items-center gap-2 bg-white text-[#0055ff] font-semibold px-8 py-4 rounded-2xl text-lg shadow-sm hover:bg-primary-50 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-2xl text-lg shadow-sm hover:bg-primary-50 transition-colors"
             >
               Jetzt kostenlos registrieren
               <ArrowRight className="w-5 h-5" />
@@ -527,7 +529,7 @@ export default function LandingPage() {
       <footer className="py-8 bg-gray-900 dark:bg-gray-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-[#7aa7ff]" />
+            <GraduationCap className="w-5 h-5 text-primary-300" />
             <span className="text-sm font-semibold text-gray-300">MedMaster</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">

@@ -37,8 +37,9 @@
   /* Transitions */
   --ease-out: 0.15s ease-out;
   --ease-out-slow: 0.2s ease-out;
-  /* Dashboard: Navy-getönter Hintergrund (Premium-Startseite) */
+  /* Dashboard: etwas wärmer und farbiger (Light) */
   --dashboard-bg: #e8ecf7;
+  --dashboard-bg-solid: #e8ecf7;
   /* Fach-Akzente (unverändert) */
   --accent-bio: #329556;
   --accent-chem: #c2410c;
@@ -64,6 +65,7 @@
   --sidebar-bg: #0f172a;
   --topbar-bg: rgba(15, 23, 42, 0.92);
   --dashboard-bg: #0f172a;
+  --dashboard-bg-solid: #0f172a;
 }
 
 @theme {
@@ -440,6 +442,16 @@ select:focus {
 }
 .dark .card-interactive:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard: farbenfroher Verlauf (Light + Dark) */
+.dashboard-page-bg {
+  background: linear-gradient(160deg, #eef2ff 0%, #e8ecf7 35%, #e0e7ff 70%, #ddd6fe 100%);
+  min-height: 100vh;
+}
+.dark .dashboard-page-bg,
+body.dark-body .dashboard-page-bg {
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 40%, #312e81 70%, #1e1b4b 100%);
 }
 
 /* Sidebar: schmale Scrollbar, Navy-Konsistenz */

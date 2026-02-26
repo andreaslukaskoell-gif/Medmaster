@@ -7,9 +7,18 @@ import { TrendingUp, Loader2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import type { MRSData } from "@/lib/supabaseBMSFragen";
 
+/** Fallback wenn Supabase keine Versuche hat, aber Adaptive-Store (Kapitel-Quiz / Trainer) Daten hat. */
+export type MRSFallback = {
+  readiness: number;
+  totalQuestions: number;
+  totalCorrect?: number;
+};
+
 interface Props {
   mrs: MRSData | null;
   loading: boolean;
+  /** Zeigen wenn mrs null aber Nutzer hat BMS-Antworten im lokalen Profil. */
+  fallback?: MRSFallback | null;
 }
 
 function ScoreArc({ score }: { score: number }) {
@@ -57,7 +66,7 @@ function ScoreArc({ score }: { score: number }) {
   );
 }
 
-export function MRSWidget({ mrs, loading }: Props) {
+export function MRSWidget({ mrs, loading, fallback }: Props) {
   if (loading) {
     return (
       <Card>
@@ -69,13 +78,50 @@ export function MRSWidget({ mrs, loading }: Props) {
   }
 
   if (!mrs) {
+    if (fallback && fallback.totalQuestions > 0) {
+      const score =
+        fallback.readiness > 0
+          ? fallback.readiness
+          : fallback.totalCorrect != null
+            ? Math.round((100 * fallback.totalCorrect) / fallback.totalQuestions)
+            : 0;
+      const scoreLabel =
+        score >= 80
+          ? "Sehr gut 🟢"
+          : score >= 60
+            ? "Gut 🟡"
+            : score >= 40
+              ? "Ausbaufähig 🟠"
+              : "Anfänger 🔴";
+      return (
+        <Card>
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                  MedAT Readiness (BMS)
+                </p>
+                <p className="text-sm font-bold text-gray-900 dark:text-gray-100 mt-0.5">
+                  {scoreLabel}
+                </p>
+              </div>
+              <ScoreArc score={score} />
+            </div>
+            <p className="text-[10px] text-muted-foreground">
+              Basierend auf {fallback.totalQuestions} beantworteten BMS-Fragen (Kapitel-Quiz &
+              Trainer). Für Retention & Kontinuität „Fragen-Trainer“ mit Modus „Supabase“ nutzen.
+            </p>
+          </CardContent>
+        </Card>
+      );
+    }
     return (
       <Card className="border-dashed">
         <CardContent className="p-4 text-center space-y-1">
           <TrendingUp className="w-6 h-6 mx-auto text-gray-300 dark:text-gray-600" />
           <p className="text-xs text-muted-foreground font-medium">MedAT Readiness Score</p>
           <p className="text-xs text-muted-foreground">
-            Beantworte 10+ Fragen um deinen Score zu sehen.
+            Melde dich an und beantworte BMS-Fragen im Fragen-Trainer, um deinen Score zu sehen.
           </p>
         </CardContent>
       </Card>
@@ -127,27 +173,6 @@ export function MRSWidget({ mrs, loading }: Props) {
             <p className="text-[10px] text-muted-foreground">Antworten</p>
           </div>
         </div>
-
-        {mrs.brierScore != null && (
-          <p className="text-[10px] text-muted-foreground mt-2 text-center">
-            Kalibrierung: {mrs.brierScore.toFixed(3)} Brier{" "}
-            <span
-              className={
-                mrs.brierScore < 0.1
-                  ? "text-green-500"
-                  : mrs.brierScore < 0.2
-                    ? "text-yellow-500"
-                    : "text-red-500"
-              }
-            >
-              {mrs.brierScore < 0.1
-                ? "(ausgezeichnet)"
-                : mrs.brierScore < 0.2
-                  ? "(gut)"
-                  : "(überkalibriert)"}
-            </span>
-          </p>
-        )}
       </CardContent>
     </Card>
   );

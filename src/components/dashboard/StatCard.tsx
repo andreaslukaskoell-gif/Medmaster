@@ -1,5 +1,6 @@
 import { TrendingUp, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getLevelFromXP } from "@/lib/progression";
 
 const MEDICAL_BLUE = "#0055ff";
 
@@ -12,10 +13,10 @@ interface StatCardProps {
 }
 
 /**
- * Displays XP and level in a compact card. Level is derived as floor(xp/100)+1 if not provided.
+ * Displays XP and level in a compact card. Level is derived from XP via progression if not provided.
  */
 export function StatCard({ xp, level, label, className }: StatCardProps) {
-  const displayLevel = level >= 1 ? level : Math.floor(xp / 100) + 1;
+  const displayLevel = level >= 1 ? level : getLevelFromXP(xp);
 
   return (
     <div

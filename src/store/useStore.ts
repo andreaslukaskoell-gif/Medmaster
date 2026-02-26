@@ -513,11 +513,37 @@ export const useStore = create<AppState>()(
 
       checkAndAwardBadges: async () => {
         const state = get();
+        const totalQuestions = (state.quizResults ?? []).reduce((s, r) => s + r.total, 0);
+        const goalAchievedCount = Object.values(state.goalAchievedByDate ?? {}).filter(
+          Boolean
+        ).length;
+        const quizResultsByType = (state.quizResults ?? []).reduce(
+          (acc, r) => {
+            if (r.type === "bms" || r.type === "simulation") acc.bms += 1;
+            else if (r.type === "kff") acc.kff += 1;
+            else if (r.type === "tv") acc.tv += 1;
+            else if (r.type === "sek") acc.sek += 1;
+            return acc;
+          },
+          { bms: 0, kff: 0, tv: 0, sek: 0 }
+        );
+        let dailyChallengeStreak = 0;
+        try {
+          const ad = useAdaptiveStore.getState();
+          dailyChallengeStreak = ad?.profile?.dailyChallengeStreak ?? 0;
+        } catch {
+          // ignore
+        }
         const badgeState = {
           completedChapters: state.completedChapters,
           maxConsecutiveCorrectEver: state.maxConsecutiveCorrectEver,
           smartRecoveryCount: state.smartRecoveryCount,
           firstActivityTimeByDay: state.firstActivityTimeByDay,
+          streak: state.streak ?? 0,
+          totalQuestions,
+          goalAchievedCount,
+          dailyChallengeStreak,
+          quizResultsByType,
         };
         const [{ BADGE_DEFINITIONS, getBadgeProgress }, { alleKapitel }] = await Promise.all([
           import("@/data/badges"),

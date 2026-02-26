@@ -461,8 +461,8 @@ function StepStart() {
         Bereit für den nächsten Schritt
       </h1>
       <p className="mx-auto max-w-sm text-sm leading-relaxed text-app-muted">
-        Starte jetzt den Einstufungstest. Danach erhältst du deinen persönlichen Lernplan und kannst
-        mit dem Lernen beginnen.
+        Starte jetzt den Einstufungstest. Danach kannst du optional einen Lernplan erstellen oder
+        direkt loslegen.
       </p>
       <Button size="lg" className="w-full gap-2 py-6 text-base font-semibold" onClick={handleStart}>
         <ClipboardList className="w-5 h-5" aria-hidden />

@@ -24,7 +24,8 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import { cn, daysUntilMedAT } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
 import { shareText, getStreakShareText } from "@/lib/shareUtils";
@@ -86,6 +87,18 @@ export default function Dashboard() {
     streakPreview != null ? Math.max(0, parseInt(streakPreview, 10) || 0) : streak;
   const flameHasActivity = streakPreview != null ? flameStreak > 0 : hasActivityToday;
   const profile = useDashboardProfile();
+  const { user, profile: authProfile } = useAuth();
+  const displayName =
+    authProfile?.display_name?.trim() ||
+    authProfile?.username?.trim() ||
+    (
+      user?.user_metadata as { display_name?: string; full_name?: string } | undefined
+    )?.display_name?.trim() ||
+    (
+      user?.user_metadata as { display_name?: string; full_name?: string } | undefined
+    )?.full_name?.trim() ||
+    user?.email?.split("@")[0]?.trim() ||
+    "";
   const days = daysUntilMedAT();
   const weeksLeft = Math.max(1, Math.floor(days / 7));
   const plan = useMemo(() => {
@@ -139,20 +152,59 @@ export default function Dashboard() {
     });
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
-  const badgeState = useMemo(
-    () => ({
+  const badgeState = useMemo(() => {
+    const totalQuestions = (quizResults ?? []).reduce((s, r) => s + r.total, 0);
+    const goalAchievedCount = Object.values(goalAchievedByDate ?? {}).filter(Boolean).length;
+    const quizResultsByType = (quizResults ?? []).reduce(
+      (acc, r) => {
+        if (r.type === "bms" || r.type === "simulation") acc.bms += 1;
+        else if (r.type === "kff") acc.kff += 1;
+        else if (r.type === "tv") acc.tv += 1;
+        else if (r.type === "sek") acc.sek += 1;
+        return acc;
+      },
+      { bms: 0, kff: 0, tv: 0, sek: 0 }
+    );
+    let dailyChallengeStreak = 0;
+    try {
+      dailyChallengeStreak = useAdaptiveStore.getState()?.profile?.dailyChallengeStreak ?? 0;
+    } catch {
+      // ignore
+    }
+    return {
       completedChapters,
       maxConsecutiveCorrectEver,
       smartRecoveryCount,
       firstActivityTimeByDay,
-    }),
-    [completedChapters, maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay]
-  );
+      streak: streak ?? 0,
+      totalQuestions,
+      goalAchievedCount,
+      dailyChallengeStreak,
+      quizResultsByType,
+    };
+  }, [
+    completedChapters,
+    maxConsecutiveCorrectEver,
+    smartRecoveryCount,
+    firstActivityTimeByDay,
+    quizResults,
+    streak,
+    goalAchievedByDate,
+  ]);
+  const earnedBadgeIds = useStore((s) => s.earnedBadges ?? []);
   const earnedBadges = useMemo(() => {
     return BADGE_DEFINITIONS.filter(
       (b) => getBadgeProgress(b.id, badgeState, alleKapitel).earned
     ).slice(-3);
   }, [badgeState]);
+  const newestFourBadges = useMemo(() => {
+    const ids = earnedBadgeIds.slice(-4);
+    const fromStore = ids
+      .map((id) => BADGE_DEFINITIONS.find((b) => b.id === id))
+      .filter((b): b is NonNullable<typeof b> => b != null);
+    if (fromStore.length > 0) return fromStore;
+    return earnedBadges.slice(-4);
+  }, [earnedBadgeIds, earnedBadges]);
 
   const cardClass =
     "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200";
@@ -179,7 +231,7 @@ export default function Dashboard() {
   const xpToNextLevel = getXPToNextLevel(xp);
 
   return (
-    <div className="min-h-screen bg-[var(--dashboard-bg)]">
+    <div className="dashboard-page-bg">
       <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
         <SyncIndicator />
 
@@ -189,15 +241,14 @@ export default function Dashboard() {
             <div
               className={cn(
                 cardClass,
-                "p-8 sm:p-10 border-l-4 border-l-[var(--accent)] bg-[var(--card)] shadow-md"
+                "p-8 sm:p-10 border-l-4 border-l-[var(--accent-phys)] bg-[var(--card)] shadow-md",
+                "bg-linear-to-br from-[var(--card)] via-[var(--card)] to-blue-50/50 dark:to-blue-950/20"
               )}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
                 <div>
                   <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
-                    {lastPath && lastPath !== "/" && lastPath !== "/bms"
-                      ? "Weiterlernen"
-                      : "Heute lernen"}
+                    {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                   </h1>
                   <p className="text-base text-[var(--text-secondary)] mt-1.5">
                     Noch {days} Tage bis MedAT
@@ -324,10 +375,14 @@ export default function Dashboard() {
             </div>
             {/* Streak-Karte */}
             <div
-              className={cn(cardClass, "p-4 sm:p-5 flex items-center gap-4")}
+              className={cn(
+                cardClass,
+                "p-4 sm:p-5 flex items-center gap-4 border-l-4 border-l-amber-500",
+                "bg-linear-to-br from-amber-50/60 to-orange-50/40 dark:from-amber-950/30 dark:to-orange-950/20"
+              )}
               aria-label="Streak"
             >
-              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center shrink-0">
                 <StreakFlameIcon
                   streak={flameStreak}
                   hasActivityToday={flameHasActivity}
@@ -353,11 +408,12 @@ export default function Dashboard() {
               <div
                 className={cn(
                   cardClass,
-                  "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]"
+                  "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]",
+                  "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
                 )}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
                     <ListChecks className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
@@ -379,10 +435,13 @@ export default function Dashboard() {
               <div
                 className={cn(
                   cardClass,
-                  "h-full p-4 flex items-center gap-3 min-h-[100px] border-[var(--border)] bg-[var(--card)]/80"
+                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                  "border-l-4 border-l-[var(--accent-phys)] bg-linear-to-br from-blue-50/50 to-[var(--card)]/80 dark:from-blue-950/20 dark:to-[var(--card)]/80"
                 )}
               >
-                <Timer className="w-7 h-7 text-[var(--muted)] shrink-0" />
+                <div className="w-10 h-10 rounded-xl bg-[var(--accent-phys)]/20 flex items-center justify-center shrink-0">
+                  <Timer className="w-5 h-5 text-[var(--accent-phys)]" />
+                </div>
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">Simulation</p>
                   <p className="text-xs text-[var(--muted)]">Gesamtstand</p>
@@ -393,10 +452,13 @@ export default function Dashboard() {
               <div
                 className={cn(
                   cardClass,
-                  "h-full p-4 flex items-center gap-3 min-h-[100px] border-[var(--border)] bg-[var(--card)]/80"
+                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                  "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
                 )}
               >
-                <TrendingUp className="w-7 h-7 text-[var(--muted)] shrink-0" />
+                <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
+                </div>
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
                   <p className="text-xs text-[var(--muted)]">Punktestand</p>
@@ -405,23 +467,45 @@ export default function Dashboard() {
             </Link>
           </motion.section>
 
-          {/* Motivationsleiste: Level + XP + Streak + Badge (zusammenhängender Block) */}
+          {/* Motivationsleiste: Level links, Badges rechts daneben (eigene Zeile), dann Progress/Streak/Link */}
           <motion.section variants={tileMotion} aria-label="Fortschritt">
             <div
               className={cn(
-                "rounded-xl border border-[var(--border)] bg-[var(--card)]/90 p-5 shadow-sm"
+                "rounded-xl border border-[var(--border)] p-5 shadow-sm",
+                "bg-linear-to-r from-emerald-50/60 via-[var(--card)] to-teal-50/40 dark:from-emerald-950/25 dark:via-[var(--card)] dark:to-teal-950/20"
               )}
             >
-              <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-3">
+              {/* Zeile 1: Level links, Badges rechts daneben (grid: Level | Badges) */}
+              <div className="grid grid-cols-[auto_1fr] items-center gap-4 mb-4">
+                <div className="flex items-center gap-3 shrink-0 min-w-0">
                   <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
                     <Award className="w-5 h-5 text-[var(--accent)]" />
                   </div>
-                  <div>
+                  <div className="shrink-0">
                     <p className="text-lg font-bold text-[var(--text-primary)]">Level {level}</p>
                     <p className="text-xs text-[var(--muted)]">{xp.toLocaleString()} XP</p>
                   </div>
                 </div>
+                {newestFourBadges.length > 0 && (
+                  <div
+                    className="flex items-center justify-end gap-1.5 flex-nowrap min-w-0"
+                    aria-label="Neueste Badges"
+                  >
+                    {newestFourBadges.map((badge) => (
+                      <Link
+                        key={badge.id}
+                        to="/performance"
+                        className="focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded-lg shrink-0"
+                        title={badge.name}
+                      >
+                        <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="sm" />
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {/* Zeile 2: Progress, Streak, Link */}
+              <div className="flex flex-wrap items-center gap-6">
                 <div className="flex-1 min-w-[180px] max-w-xs">
                   <Progress value={levelProgress} className="h-2 rounded-full" />
                   <p className="text-xs text-[var(--text-secondary)] mt-1">
@@ -446,7 +530,8 @@ export default function Dashboard() {
                   {earnedBadges.length > 0 ? (
                     <>
                       <BadgeIcon
-                        tier={earnedBadges[earnedBadges.length - 1].tier}
+                        badgeId={earnedBadges[earnedBadges.length - 1].id}
+                        icon={earnedBadges[earnedBadges.length - 1].icon}
                         earned
                         size="sm"
                       />
@@ -463,7 +548,13 @@ export default function Dashboard() {
 
           {/* Wochen-Aktivität + Legende */}
           <motion.section variants={tileMotion} aria-label="Wochen-Aktivität">
-            <div className={cn(cardClass, "p-5")}>
+            <div
+              className={cn(
+                cardClass,
+                "p-5 border-l-4 border-l-[var(--success)]",
+                "bg-linear-to-br from-teal-50/40 to-[var(--card)] dark:from-teal-950/20 dark:to-[var(--card)]"
+              )}
+            >
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
                 <p className="text-sm text-[var(--text-primary)]">

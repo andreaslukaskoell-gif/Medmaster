@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
+import { getLevelFromXP } from "@/lib/progression";
 
 const LOG_PREFIX = "[Dashboard]";
 
@@ -68,7 +69,7 @@ export function useDashboardProfile(): DashboardProfile {
         }
 
         const xp = Number(data?.xp ?? 0);
-        const level = Number(data?.level ?? 0) || Math.floor(xp / 100) + 1;
+        const level = Number(data?.level ?? 0) || getLevelFromXP(xp);
         const streak = Number(data?.streak_days ?? 0);
         const hasData = xp > 0 || streak > 0 || (data != null && data !== undefined);
 

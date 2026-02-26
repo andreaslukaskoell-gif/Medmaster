@@ -14,6 +14,7 @@ import { chemiePool7 } from "./chemiePool7";
 import { chemiePool8 } from "./chemiePool8";
 import { chemiePool9 } from "./chemiePool9";
 import { chemiePool10 } from "./chemiePool10";
+import { chemiePool11 } from "./chemiePool11";
 import { chemieWasIstFalsch } from "./chemieWasIstFalsch";
 
 const CHEMIE_PLACEHOLDER = /^Chemie Pool-Frage \d+\.$/;
@@ -33,5 +34,6 @@ export const chemiePoolQuestions: Question[] = [
   ...chemiePool8,
   ...chemiePool9,
   ...chemiePool10,
+  ...chemiePool11,
   ...chemieWasIstFalsch,
 ].filter((q) => !isPlaceholder(q));

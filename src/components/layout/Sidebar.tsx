@@ -61,6 +61,8 @@ type NavItem = {
   emphasized?: boolean;
   /** Zusätzliche Pfade, die diesen Eintrag als aktiv markieren (z. B. Fortschritt-Subseiten). */
   activePaths?: string[];
+  /** Icon-Farbe (Tailwind-Klasse), z. B. text-pink-500. Bei aktiv wird weiterhin --accent genutzt. */
+  iconColor?: string;
 };
 
 /** MedAT-orientierte Struktur: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
@@ -69,35 +71,90 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "lernen",
     title: "LERNEN",
     items: [
-      { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
-      { to: "/kff", icon: Brain, label: "KFF" },
-      { to: "/tv", icon: FileText, label: "TV" },
-      { to: "/sek", icon: Heart, label: "SEK" },
+      {
+        to: "/bms",
+        icon: BookOpen,
+        label: "BMS-Inhalte",
+        hasChildren: true,
+        iconColor: "text-emerald-600 dark:text-emerald-400",
+      },
+      { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-pink-500 dark:text-pink-400" },
+      { to: "/tv", icon: FileText, label: "TV", iconColor: "text-amber-600 dark:text-amber-400" },
+      { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-500 dark:text-rose-400" },
     ],
   },
   {
     id: "training",
     title: "TRAINIEREN",
     items: [
-      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
-      { to: "/karteikarten", icon: Layers, label: "Karteikarten" },
-      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
-      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
+      {
+        to: "/fragen-trainer",
+        icon: Dumbbell,
+        label: "Fragen-Trainer",
+        iconColor: "text-violet-500 dark:text-violet-400",
+      },
+      {
+        to: "/karteikarten",
+        icon: Layers,
+        label: "Karteikarten",
+        iconColor: "text-sky-500 dark:text-sky-400",
+      },
+      {
+        to: "/simulation",
+        icon: Timer,
+        label: "Simulation",
+        requiredLevel: 0,
+        iconColor: "text-orange-500 dark:text-orange-400",
+      },
+      {
+        to: "/formelsammlung",
+        icon: BookMarked,
+        label: "Formelsammlung",
+        iconColor: "text-teal-500 dark:text-teal-400",
+      },
     ],
   },
   {
     id: "fortschritt",
     title: "FORTSCHRITT",
-    items: [{ to: "/fortschritt", icon: BarChart3, label: "Fortschritt", emphasized: true }],
+    items: [
+      {
+        to: "/fortschritt",
+        icon: BarChart3,
+        label: "Fortschritt",
+        emphasized: true,
+        iconColor: "text-indigo-500 dark:text-indigo-400",
+      },
+    ],
   },
   {
     id: "mehr",
     title: "MEHR",
     items: [
-      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
-      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
-      { to: "/performance", icon: Award, label: "Erfolge" },
-      { to: "/preise", icon: Settings, label: "Konto & Preise" },
+      {
+        to: "/lernplan",
+        icon: CalendarDays,
+        label: "Lernplan",
+        iconColor: "text-lime-600 dark:text-lime-400",
+      },
+      {
+        to: "/stichwortliste",
+        icon: ListChecks,
+        label: "Stichwortliste",
+        iconColor: "text-cyan-500 dark:text-cyan-400",
+      },
+      {
+        to: "/performance",
+        icon: Award,
+        label: "Erfolge",
+        iconColor: "text-yellow-500 dark:text-yellow-400",
+      },
+      {
+        to: "/preise",
+        icon: Settings,
+        label: "Konto & Preise",
+        iconColor: "text-slate-500 dark:text-slate-400",
+      },
     ],
   },
 ];
@@ -153,11 +210,13 @@ function NavItemRow({
   label,
   active,
   emphasized,
+  iconColor,
 }: {
   icon: typeof BookOpen;
   label: string;
   active: boolean;
   emphasized?: boolean;
+  iconColor?: string;
 }) {
   return (
     <div
@@ -170,7 +229,10 @@ function NavItemRow({
       )}
     >
       <Icon
-        className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "text-[var(--muted)]")}
+        className={cn(
+          "w-4 h-4 shrink-0",
+          active ? "text-[var(--accent)]" : (iconColor ?? "text-[var(--muted)]")
+        )}
       />
       <span className="truncate flex-1">{label}</span>
     </div>
@@ -475,7 +537,9 @@ export function Sidebar({
                             <item.icon
                               className={cn(
                                 "w-4 h-4 shrink-0",
-                                isBmsActive ? "text-[var(--accent)]" : "text-[var(--muted)]"
+                                isBmsActive
+                                  ? "text-[var(--accent)]"
+                                  : (item.iconColor ?? "text-[var(--muted)]")
                               )}
                             />
                             <span className="truncate flex-1">{item.label}</span>
@@ -639,6 +703,7 @@ export function Sidebar({
                         label={item.label}
                         active={to === "/fortschritt" ? isActive(to) : itemActive}
                         emphasized={item.emphasized}
+                        iconColor={item.iconColor}
                       />
                     )}
                   </NavLink>

@@ -490,13 +490,32 @@ export const useAdaptiveStore = create<AdaptiveState>()(
 
       initializeFromQuizResults: (results) => {
         const { recordAnswer } = get();
+        let totalAdded = 0;
+        let correctAdded = 0;
+        let mappedCount = 0;
+        let mappedCorrect = 0;
         for (const r of results) {
           for (const a of r.answers) {
+            totalAdded++;
+            if (a.correct) correctAdded++;
             const swId = getQuestionStichwortMap().get(a.questionId);
             if (swId) {
-              recordAnswer(swId, a.correct, 30); // Default 30s per question
+              recordAnswer(swId, a.correct, 30);
+              mappedCount++;
+              if (a.correct) mappedCorrect++;
             }
           }
+        }
+        const unmappedTotal = totalAdded - mappedCount;
+        const unmappedCorrect = correctAdded - mappedCorrect;
+        if (unmappedTotal > 0) {
+          set((state) => ({
+            profile: {
+              ...state.profile,
+              totalQuestionsAnswered: state.profile.totalQuestionsAnswered + unmappedTotal,
+              totalCorrect: state.profile.totalCorrect + unmappedCorrect,
+            },
+          }));
         }
       },
     }),

@@ -2,6 +2,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "./supabase";
 import { setSchemaSkip, isSchemaSkipActive, clearSchemaSkip } from "./supabaseSchemaSkip";
 import { useStore } from "@/store/useStore";
+import { getLevelFromXP } from "@/lib/progression";
 import type { QuizResult, SpacedItem } from "@/store/useStore";
 
 // ============================================================
@@ -171,7 +172,7 @@ export async function pushToSupabase(userId: string): Promise<void> {
   }
   try {
     const s = useStore.getState();
-    const level = Math.floor(s.xp / 100) + 1;
+    const level = getLevelFromXP(s.xp);
 
     await Promise.all([
       client

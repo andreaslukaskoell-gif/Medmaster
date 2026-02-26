@@ -1,11 +1,90 @@
 /**
  * Biology BMS pool — Typ K (Kombinationsaufgaben) for FragenTrainer.
- * Mind. 40: Basis 001–008 + Extra 009–040.
+ * MedAT-Format: Stamm „Welche Aussagen zu X ist/sind zutreffend?“ → 4 Teilaussagen (1.–4.) → Antworten A–E als Kombinationen („Alle sind richtig.“, „1. und 3. sind richtig.“, „2. ist richtig.“ usw.).
+ * Mind. 40: Basis 000–008 + Extra 009–040.
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { biologiePoolTypKExtra } from "./biologiePoolTypKExtra";
 
 export const biologiePoolTypK: BMSFrage[] = [
+  {
+    id: "bio-pool-typk-000",
+    typ: "K",
+    fach: "biologie",
+    uk_id: "bio-2-01",
+    stamm: "Welche der folgenden Aussagen zu Kinozilien und Geißeln ist/sind zutreffend?",
+    aussagen: [
+      {
+        nr: 1,
+        text: "Geißeln zeigen im Wesentlichen den gleichen Bau wie Kinozilien.",
+        korrekt: true,
+      },
+      { nr: 2, text: "Spermien können sich mit Hilfe einer Geißel fortbewegen.", korrekt: true },
+      {
+        nr: 3,
+        text: "Kinozilien kommen an der Oberfläche von Epithelzellen der Atemwege vor.",
+        korrekt: true,
+      },
+      {
+        nr: 4,
+        text: "Wesentliche Baubestandteile von Kinozilien sind Mikrotubuli.",
+        korrekt: true,
+      },
+    ],
+    kombinationen: [
+      { key: "A", nummern: [1, 2, 3, 4] },
+      { key: "B", nummern: [1, 3] },
+      { key: "C", nummern: [1, 2, 4] },
+      { key: "D", nummern: [2, 4] },
+      { key: "E", nummern: [2] },
+    ],
+    korrekte_option: "A",
+    erklaerung:
+      "Alle vier Aussagen sind zutreffend: Bau (1), Spermien-Geißel (2), Atemwegsepithel (3), Mikrotubuli (4).",
+    schwierigkeit: 2,
+    fsrs: null,
+  },
+  {
+    id: "bio-pool-typk-000b",
+    typ: "K",
+    fach: "biologie",
+    uk_id: "bio-3-01",
+    stamm: "Welche der folgenden Aussagen zur Atmung ist/sind zutreffend?",
+    aussagen: [
+      {
+        nr: 1,
+        text: "In der Lunge wird mit jedem Atemzug die gesamte Luftmenge erneuert.",
+        korrekt: false,
+      },
+      {
+        nr: 2,
+        text: "In den Bronchien findet der Gasaustausch (Sauerstoff/Kohlendioxid) statt.",
+        korrekt: false,
+      },
+      {
+        nr: 3,
+        text: "Sauerstoff wird im Blut an das Hämoglobin der roten Blutkörperchen gebunden.",
+        korrekt: true,
+      },
+      {
+        nr: 4,
+        text: "Ein Teil der CO₂-Moleküle wird an das Hämoglobin der roten Blutkörperchen gebunden.",
+        korrekt: true,
+      },
+    ],
+    kombinationen: [
+      { key: "A", nummern: [2] },
+      { key: "B", nummern: [3] },
+      { key: "C", nummern: [1, 2, 3] },
+      { key: "D", nummern: [1, 2, 3, 4] },
+      { key: "E", nummern: [3, 4] },
+    ],
+    korrekte_option: "E",
+    erklaerung:
+      "Nur 3 und 4 sind richtig. 1: Es wird nur ein Teil der Luft erneuert (Totraum). 2: Gasaustausch findet in den Alveolen statt.",
+    schwierigkeit: 2,
+    fsrs: null,
+  },
   {
     id: "bio-pool-typk-001",
     typ: "K",

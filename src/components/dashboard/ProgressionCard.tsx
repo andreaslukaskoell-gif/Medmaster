@@ -3,7 +3,8 @@ import {
   getLevelFromXP,
   getLevelProgressPercent,
   getLevelName,
-  XP_PER_LEVEL,
+  getXPInCurrentLevel,
+  getXPRequiredForNextLevel,
 } from "@/lib/progression";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +20,8 @@ export function ProgressionCard({ xp, className }: ProgressionCardProps) {
   const level = getLevelFromXP(xp);
   const progress = getLevelProgressPercent(xp);
   const levelName = getLevelName(level);
-  const xpInLevel = xp <= 0 ? 0 : xp % XP_PER_LEVEL;
+  const xpInLevel = getXPInCurrentLevel(xp);
+  const xpRequiredForNext = getXPRequiredForNextLevel(xp);
 
   return (
     <div
@@ -43,7 +45,7 @@ export function ProgressionCard({ xp, className }: ProgressionCardProps) {
         <div className="flex justify-between text-xs text-muted">
           <span>Zum nächsten Level</span>
           <span>
-            {xpInLevel} / {XP_PER_LEVEL}
+            {xpInLevel} / {xpRequiredForNext}
           </span>
         </div>
         <Progress value={progress} className="h-2" />

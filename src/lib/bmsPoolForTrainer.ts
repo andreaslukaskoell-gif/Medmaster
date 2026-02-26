@@ -1,6 +1,5 @@
 /**
- * BMS Pool for FragenTrainer — Typ A (Single Choice) + Typ K from static pool.
- * Converts pool questions to BMSFrage and provides getPoolBMSFragen(uk_ids, count).
+ * BMS Pool for FragenTrainer — Typ A (Single Choice), Typ M (Rechenfragen) und Typ K (Kombinationsfragen, MedAT-Format).
  */
 import { getKapitelBySubject, alleKapitel } from "@/data/bmsKapitel/index";
 import { biologiePoolQuestions } from "@/data/bms/biologiePool";
@@ -8,10 +7,10 @@ import { chemiePoolQuestions } from "@/data/bms/chemiePool";
 import { physikPoolQuestions } from "@/data/bms/physikPool";
 import { mathematikPoolQuestions } from "@/data/bms/mathematikPool";
 import { biologiePoolTypK } from "@/data/bms/biologiePoolTypK";
-import { getQuestionsBySubject, type Question } from "@/data/bms/index";
 import { chemiePoolTypK } from "@/data/bms/chemiePoolTypK";
-import { mathematikPoolTypK } from "@/data/bms/mathematikPoolTypK";
 import { physikPoolTypK } from "@/data/bms/physikPoolTypK";
+import { mathematikPoolTypK } from "@/data/bms/mathematikPoolTypK";
+import { getQuestionsBySubject, type Question } from "@/data/bms/index";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { filterValidBMSFragen } from "@/lib/supabaseBMSFragen";
 
@@ -56,7 +55,7 @@ export function getChaptersWithPool(): { chapterId: string; ukIds: string[]; tit
   return result;
 }
 
-/** Convert a Typ A pool Question to BMSFrage. Option keys A–E. */
+/** Convert a Typ A pool Question to BMSFrage. Option keys A–E. Rechenfragen (tag "rechenfrage") → typ "M". */
 export function questionToBMSFrage(q: Question, uk_id: string): BMSFrage {
   const schwierigkeit = q.difficulty === "schwer" ? 3 : q.difficulty === "mittel" ? 2 : 1;
   const optionen = q.options.map((opt, i) => ({
@@ -67,9 +66,10 @@ export function questionToBMSFrage(q: Question, uk_id: string): BMSFrage {
   const correctIndex = q.options.findIndex((o) => (o.id ?? "").toLowerCase() === correctId);
   const korrekte_option =
     correctIndex >= 0 ? (optionen[correctIndex]?.key ?? "A") : (optionen[0]?.key ?? "A");
+  const typ = q.tags?.includes("rechenfrage") ? "M" : "A";
   return {
     id: q.id,
-    typ: "A",
+    typ,
     fach: q.subject,
     uk_id,
     stamm: (q.text && q.text.trim()) || `[Fragetext fehlt: ${q.id}]`,
@@ -105,17 +105,20 @@ function buildTypAPoolWithUkIds(): BMSFrage[] {
   return result;
 }
 
-/** All pool questions as BMSFrage (Typ A all subjects + Typ K per subject). */
+/** Typ A/M aus Pools + alle Typ-K-Fragen (für UK-Filter und getBMSFragenBySubject). */
 function getAllPoolBMSFragen(): BMSFrage[] {
-  const typA = buildTypAPoolWithUkIds();
-  return [
-    ...typA,
-    ...biologiePoolTypK,
-    ...chemiePoolTypK,
-    ...physikPoolTypK,
-    ...mathematikPoolTypK,
-  ];
+  const typAM = buildTypAPoolWithUkIds();
+  const typK = [...biologiePoolTypK, ...chemiePoolTypK, ...physikPoolTypK, ...mathematikPoolTypK];
+  return [...typAM, ...typK];
 }
+
+/** Typ-K-Fragen pro Fach (bereits BMSFrage-Format mit uk_id). */
+const TYP_K_BY_SUBJECT: Record<"biologie" | "chemie" | "physik" | "mathematik", BMSFrage[]> = {
+  biologie: biologiePoolTypK,
+  chemie: chemiePoolTypK,
+  physik: physikPoolTypK,
+  mathematik: mathematikPoolTypK,
+};
 
 let cachedPool: BMSFrage[] | null = null;
 
@@ -138,6 +141,7 @@ export function getAllPoolBMSFragenForUKs(uk_ids: string[]): BMSFrage[] {
 /**
  * Get pool questions for the given uk_ids, shuffled, capped at count.
  * Used when FragenTrainer source is "pool". No FSRS.
+ * Enthält Typ A/M aus Pools; Typ K wird nur über getBMSFragenBySubject eingemischt.
  */
 export function getPoolBMSFragen(uk_ids: string[], count = 8): BMSFrage[] {
   if (!uk_ids.length) return [];
@@ -148,26 +152,16 @@ export function getPoolBMSFragen(uk_ids: string[], count = 8): BMSFrage[] {
 }
 
 /**
- * Get BMS questions by subject (from static pool + selfTests), shuffled, capped at count.
- * All four subjects: Typ A (Question) + Typ K (poolTypK) where available.
+ * Get BMS questions by subject (from static pool): Typ A/M + Typ K eingemischt.
  */
 export function getBMSFragenBySubject(
   subject: "biologie" | "chemie" | "physik" | "mathematik",
   count: number
 ): BMSFrage[] {
   const questions = getQuestionsBySubject(subject);
-  const typA = questions.map((q) => questionToBMSFrage(q, q.chapter));
-  const typK =
-    subject === "mathematik"
-      ? mathematikPoolTypK
-      : subject === "biologie"
-        ? biologiePoolTypK
-        : subject === "chemie"
-          ? chemiePoolTypK
-          : subject === "physik"
-            ? physikPoolTypK
-            : [];
-  const combined = shuffle([...typA, ...typK]);
+  const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
+  const typK = TYP_K_BY_SUBJECT[subject] ?? [];
+  const combined = shuffle([...typAM, ...typK]);
   const selected = combined.slice(0, Math.min(count, combined.length));
   return filterValidBMSFragen(selected);
 }

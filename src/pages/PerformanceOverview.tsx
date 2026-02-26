@@ -21,8 +21,8 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { XpProgressRingSkeleton } from "@/components/skeletons/AppSkeletons";
-import { BADGE_DEFINITIONS } from "@/data/badges";
-import { getBadgeProgress } from "@/data/badges";
+import { BADGE_DEFINITIONS, getBadgeProgress } from "@/data/badges";
+import { alleKapitel } from "@/data/bmsKapitel";
 import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { cn } from "@/lib/utils";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -69,11 +69,46 @@ function ProgressRing({
 export default function PerformanceOverview() {
   usePageTitle("Performance");
   const mounted = useIsMounted();
-  const { quizResults, completedChapters, streak, unlockedFachMilestones } = useStore();
+  const { quizResults, completedChapters, streak, unlockedFachMilestones, goalAchievedByDate } =
+    useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const { maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay } = useStore();
 
   const totalQuizzes = quizResults.length;
+  const badgeState = useMemo(() => {
+    const totalQuestions = (quizResults ?? []).reduce((s, r) => s + r.total, 0);
+    const goalAchievedCount = Object.values(goalAchievedByDate ?? {}).filter(Boolean).length;
+    const quizResultsByType = (quizResults ?? []).reduce(
+      (acc, r) => {
+        if (r.type === "bms" || r.type === "simulation") acc.bms += 1;
+        else if (r.type === "kff") acc.kff += 1;
+        else if (r.type === "tv") acc.tv += 1;
+        else if (r.type === "sek") acc.sek += 1;
+        return acc;
+      },
+      { bms: 0, kff: 0, tv: 0, sek: 0 }
+    );
+    const ad = useAdaptiveStore.getState();
+    return {
+      completedChapters,
+      maxConsecutiveCorrectEver,
+      smartRecoveryCount,
+      firstActivityTimeByDay,
+      streak: streak ?? 0,
+      totalQuestions,
+      goalAchievedCount,
+      dailyChallengeStreak: ad?.profile?.dailyChallengeStreak ?? 0,
+      quizResultsByType,
+    };
+  }, [
+    quizResults,
+    completedChapters,
+    maxConsecutiveCorrectEver,
+    smartRecoveryCount,
+    firstActivityTimeByDay,
+    streak,
+    goalAchievedByDate,
+  ]);
 
   const store = useAdaptiveStore.getState();
   const readiness = store.getMedATReadiness();
@@ -368,12 +403,7 @@ export default function PerformanceOverview() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {BADGE_DEFINITIONS.map((badge) => {
-                const { earned, progress } = getBadgeProgress(badge.id, {
-                  completedChapters,
-                  maxConsecutiveCorrectEver,
-                  smartRecoveryCount,
-                  firstActivityTimeByDay,
-                });
+                const { earned, progress } = getBadgeProgress(badge.id, badgeState, alleKapitel);
                 return (
                   <div
                     key={badge.id}
@@ -384,7 +414,7 @@ export default function PerformanceOverview() {
                         : "bg-slate-50/50 dark:bg-slate-800/30 border-slate-200 dark:border-white/10"
                     )}
                   >
-                    <BadgeIcon tier={badge.tier} earned={earned} size="sm" />
+                    <BadgeIcon badgeId={badge.id} icon={badge.icon} earned={earned} size="sm" />
                     <div className="min-w-0 flex-1">
                       <p
                         className={cn(

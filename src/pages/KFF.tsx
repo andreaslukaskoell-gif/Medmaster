@@ -52,6 +52,8 @@ import {
   OFFICIAL_FZ_EXAMPLES,
   generateFigurenTrainingSet,
   polygonToPath,
+  polygonToPathScaledToViewBox,
+  layoutPiecesCompact,
   FIGURE_SVG_ASPECT_PROPS,
   isOptionE,
   type FigureAssembleTask,
@@ -64,7 +66,13 @@ import {
   filterValidGedaechtnisQuestions,
   logPoolWarning,
 } from "@/data/kffValidation";
-import { getTasksForUserWithWeakness, getOneMerkfahigkeitSet, taskToData } from "@/lib/taskDb";
+import {
+  getTasksForUserWithWeakness,
+  getOneMerkfahigkeitSet,
+  taskToData,
+  getTaskCountByDomain,
+} from "@/lib/taskDb";
+import type { TaskDomain } from "@/lib/taskDb/types";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
@@ -103,6 +111,26 @@ function shuffleSlice<T>(arr: T[], limit: number): T[] {
     [out[i], out[j]] = [out[j]!, out[i]!];
   }
   return out.slice(0, limit);
+}
+
+/** Zeigt die Anzahl validierter Aufgaben in der Task-DB für eine Domain (z. B. „500 Aufgaben in der Datenbank“). */
+function TaskDbCountHint({ domain }: { domain: TaskDomain }) {
+  const [count, setCount] = useState<number | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    getTaskCountByDomain(domain, true).then((n) => {
+      if (!cancelled) setCount(n);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [domain]);
+  if (count === null) return <span className="text-muted text-sm">Lade Anzahl…</span>;
+  return (
+    <span className="text-muted text-sm">
+      Aktuell {count} Aufgabe{count !== 1 ? "n" : ""} in der Datenbank.
+    </span>
+  );
 }
 
 export default function KFF() {
@@ -453,6 +481,9 @@ function ZahlenfolgenQuiz({ onBack }: { onBack: () => void }) {
             <p className="text-sm text-muted">
               Aufgaben aus der Datenbank – Schwierigkeit wird automatisch gemischt (leicht, mittel,
               schwer). Offizielle Beispiele bleiben unverändert in der DB.
+            </p>
+            <p className="mt-1">
+              <TaskDbCountHint domain="kff-zahlenfolgen" />
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -1367,6 +1398,9 @@ function ImplikationenQuiz({ onBack }: { onBack: () => void }) {
               Aufgaben aus der Datenbank – gleiche Logik-Typen, andere Inhalte. Keine Überlappung
               mit den offiziellen Beispielen.
             </p>
+            <p className="mt-1">
+              <TaskDbCountHint domain="kff-implikationen" />
+            </p>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
@@ -1855,6 +1889,9 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
               Aufgaben aus der Datenbank – andere Wörter, gleiche Regel. Keine Überlappung mit
               offiziellen Beispielen.
             </p>
+            <p className="mt-1">
+              <TaskDbCountHint domain="kff-wortflüssigkeit" />
+            </p>
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
@@ -2318,6 +2355,9 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 <p className="text-sm text-muted mt-1">
                   Aufgaben aus der Datenbank – Schwierigkeit passt sich deinem Level an.
                 </p>
+                <p className="mt-1">
+                  <TaskDbCountHint domain="kff-figuren" />
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -2442,23 +2482,27 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 <div className="flex items-center gap-4 ml-7 mb-2 flex-wrap">
                   <div>
                     <p className="text-xs text-muted mb-1">Puzzleteile:</p>
-                    <div className="flex gap-1 flex-wrap">
-                      {q.pieces.map((piece, pi) => (
+                    {(() => {
+                      const { viewBox, paths } = layoutPiecesCompact(q.pieces);
+                      return (
                         <svg
-                          key={pi}
-                          viewBox="0 0 200 200"
+                          viewBox={viewBox}
                           {...FIGURE_SVG_ASPECT_PROPS}
-                          className="w-10 h-10 bg-white dark:bg-gray-900 rounded"
+                          className="w-32 h-12 sm:w-40 sm:h-14 bg-white dark:bg-gray-900 rounded"
                         >
-                          <path
-                            d={polygonToPath(piece)}
-                            fill={FILL_FZ}
-                            stroke="#374151"
-                            strokeWidth="1.2"
-                          />
+                          {paths.map((p, pi) => (
+                            <path
+                              key={pi}
+                              d={p.d}
+                              fill={FILL_FZ}
+                              stroke="#374151"
+                              strokeWidth="1.2"
+                              transform={p.transform}
+                            />
+                          ))}
                         </svg>
-                      ))}
-                    </div>
+                      );
+                    })()}
                   </div>
                   <div>
                     <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
@@ -2496,7 +2540,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                         className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
                       >
                         <path
-                          d={polygonToPath(
+                          d={polygonToPathScaledToViewBox(
                             q.options[q.correctIndex] as { points: { x: number; y: number }[] }
                           )}
                           fill="#22c55e"
@@ -2522,7 +2566,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                           className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
                         >
                           <path
-                            d={polygonToPath(
+                            d={polygonToPathScaledToViewBox(
                               q.options[
                                 FZ_OPTION_LABELS.indexOf(
                                   selectedLabel as "A" | "B" | "C" | "D" | "E"
@@ -2657,21 +2701,27 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
               Puzzleteile
             </p>
             <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg">
-              {fzQ.pieces.map((piece, pi) => (
-                <div
-                  key={pi}
-                  className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
-                >
-                  <svg viewBox="0 0 200 200" {...FIGURE_SVG_ASPECT_PROPS} className="w-full h-full">
-                    <path
-                      d={polygonToPath(piece)}
-                      fill={FILL_FZ}
-                      stroke="#0e7490"
-                      strokeWidth="1.2"
-                    />
+              {(() => {
+                const { viewBox, paths } = layoutPiecesCompact(fzQ.pieces);
+                return (
+                  <svg
+                    viewBox={viewBox}
+                    {...FIGURE_SVG_ASPECT_PROPS}
+                    className="w-full max-w-md h-24 sm:h-28 mx-auto"
+                  >
+                    {paths.map((p, pi) => (
+                      <path
+                        key={pi}
+                        d={p.d}
+                        fill={FILL_FZ}
+                        stroke="#0e7490"
+                        strokeWidth="1.2"
+                        transform={p.transform}
+                      />
+                    ))}
                   </svg>
-                </div>
-              ))}
+                );
+              })()}
             </div>
           </CardContent>
         </Card>
@@ -2707,7 +2757,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                       className="w-full max-w-[64px] max-h-[64px] flex-1"
                     >
                       <path
-                        d={polygonToPath(opt)}
+                        d={polygonToPathScaledToViewBox(opt)}
                         fill={FILL_FZ}
                         stroke="#0e7490"
                         strokeWidth="1.2"

@@ -35,6 +35,8 @@ import { getBMSFragenBySubject } from "@/lib/bmsPoolForTrainer";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useAuth } from "@/hooks/useAuth";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
 // ── Constants ─────────────────────────────────────────────────
 
@@ -106,7 +108,7 @@ function SelectionScreen({
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [mode, setMode] = useState<TrainMode>("einfach");
   const [count, setCount] = useState(20);
-  const [source, setSource] = useState<QuestionSource>("pool");
+  const [source] = useState<QuestionSource>("supabase");
 
   const subject = subjectId ? BMS_SUBJECTS.find((s) => s.id === subjectId) : null;
   const effectiveCount = mode === "offiziell" && subject ? subject.officialCount : count;
@@ -223,43 +225,6 @@ function SelectionScreen({
               </CardContent>
             </Card>
           )}
-
-          {/* 3. Quelle */}
-          <Card>
-            <CardContent className="p-4 space-y-3">
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">3. Quelle</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  onClick={() => setSource("pool")}
-                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
-                    source === "pool"
-                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}
-                >
-                  <div className="font-semibold">Offline-Pool</div>
-                  <div className="text-xs opacity-70">
-                    Ohne Anmeldung, alle Fragen aus dem lokalen Pool
-                  </div>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setSource("supabase")}
-                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
-                    source === "supabase"
-                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  }`}
-                >
-                  <div className="font-semibold">Mit Fortschritt (Supabase)</div>
-                  <div className="text-xs opacity-70">
-                    Versuche werden gespeichert, FSRS-Anpassung
-                  </div>
-                </button>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Start */}
           <div className="flex items-center justify-between">
@@ -893,12 +858,13 @@ export default function FragenTrainer() {
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [count, setCount] = useState(20);
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number | null>(null);
-  const [questionSource, setQuestionSource] = useState<QuestionSource>("pool");
+  const [questionSource, setQuestionSource] = useState<QuestionSource>("supabase");
   const [initialFragen, setInitialFragen] = useState<
     import("@/lib/supabaseBMSFragen").BMSFrage[] | undefined
   >(undefined);
   const [results, setResults] = useState<SessionAnswers>([]);
-  const userId = useMemo(() => getLocalUserId(), []);
+  const { user } = useAuth();
+  const userId = useMemo(() => user?.id ?? getLocalUserId(), [user?.id]);
 
   return (
     <div className="p-4 pb-24 md:p-6">
@@ -924,6 +890,15 @@ export default function FragenTrainer() {
           userId={userId}
           initialFragen={initialFragen}
           onFinish={(r) => {
+            try {
+              useAdaptiveStore
+                .getState()
+                .initializeFromQuizResults([
+                  { answers: r.map((a) => ({ questionId: a.frage.id, correct: a.correct })) },
+                ]);
+            } catch (_) {
+              // Einige Pool-Fragen haben ggf. keine Stichwort-Zuordnung
+            }
             setResults(r);
             setScreen("results");
           }}

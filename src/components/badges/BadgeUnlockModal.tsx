@@ -74,7 +74,7 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
                 transition={{ delay: 0.1 }}
                 className="flex justify-center mb-4"
               >
-                <BadgeIcon tier={badge.tier} earned size="lg" />
+                <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="lg" />
               </motion.div>
               <p className="text-xs font-semibold uppercase tracking-wider text-primary-400 dark:text-primary-400 mb-1">
                 Badge freigeschaltet

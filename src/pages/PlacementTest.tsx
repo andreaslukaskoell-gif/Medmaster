@@ -82,7 +82,7 @@ export default function PlacementTest() {
       );
       setSkillRating(() => estimated);
       setMedATOnboardingComplete();
-      navigate("/", { replace: true });
+      navigate("/onboarding/lernplan-choice", { replace: true });
       return;
     }
     setIndex((i) => i + 1);

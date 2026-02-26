@@ -59,6 +59,82 @@ export function polygonToPath(poly: Polygon): string {
   return "M " + poly.points.map((p) => `${p.x} ${p.y}`).join(" L ") + " Z";
 }
 
+/** Bounding-Box eines Polygons (minX, minY, maxX, maxY, Breite, Höhe). */
+export function polygonBBox(poly: Polygon): {
+  minX: number;
+  minY: number;
+  maxX: number;
+  maxY: number;
+  width: number;
+  height: number;
+} {
+  const pts = poly.points;
+  if (pts.length === 0) return { minX: 0, minY: 0, maxX: 0, maxY: 0, width: 0, height: 0 };
+  let minX = pts[0]!.x;
+  let minY = pts[0]!.y;
+  let maxX = pts[0]!.x;
+  let maxY = pts[0]!.y;
+  for (const p of pts) {
+    minX = Math.min(minX, p.x);
+    minY = Math.min(minY, p.y);
+    maxX = Math.max(maxX, p.x);
+    maxY = Math.max(maxY, p.y);
+  }
+  return {
+    minX,
+    minY,
+    maxX,
+    maxY,
+    width: maxX - minX,
+    height: maxY - minY,
+  };
+}
+
+/** Puzzleteile kompakt anordnen: eine ViewBox, Teile nebeneinander mit wenig Abstand (nicht weit verstreut). */
+export function layoutPiecesCompact(pieces: Polygon[]): {
+  viewBox: string;
+  paths: { d: string; transform: string }[];
+} {
+  const gap = 10;
+  const bboxes = pieces.map((p) => ({ poly: p, bbox: polygonBBox(p) }));
+  let x = 0;
+  const paths: { d: string; transform: string }[] = [];
+  for (const { poly, bbox } of bboxes) {
+    const tx = x - bbox.minX;
+    const ty = -bbox.minY;
+    paths.push({ d: polygonToPath(poly), transform: `translate(${tx},${ty})` });
+    x += bbox.width + gap;
+  }
+  const totalWidth = x - gap;
+  const maxHeight = Math.max(...bboxes.map((b) => b.bbox.height), 1);
+  const padding = 8;
+  return {
+    viewBox: `0 0 ${totalWidth + padding * 2} ${maxHeight + padding * 2}`,
+    paths: paths.map((p) => ({
+      ...p,
+      transform: `${p.transform} translate(${padding},${padding})`,
+    })),
+  };
+}
+
+/** Option einheitlich groß: Polygon in ViewBox (z. B. 200) zentrieren und einheitlich skalieren. */
+export function polygonToPathScaledToViewBox(poly: Polygon, viewBoxSize: number = 200): string {
+  const bbox = polygonBBox(poly);
+  const w = bbox.width || 1;
+  const h = bbox.height || 1;
+  const cx = (bbox.minX + bbox.maxX) / 2;
+  const cy = (bbox.minY + bbox.maxY) / 2;
+  const margin = viewBoxSize * 0.1;
+  const scale = (viewBoxSize - margin * 2) / Math.max(w, h);
+  const tx = viewBoxSize / 2 - cx * scale;
+  const ty = viewBoxSize / 2 - cy * scale;
+  const pts = poly.points.map((p) => ({
+    x: rd(p.x * scale + tx),
+    y: rd(p.y * scale + ty),
+  }));
+  return "M " + pts.map((p) => `${p.x} ${p.y}`).join(" L ") + " Z";
+}
+
 /** Alle Figuren-SVGs müssen dieses Attribut setzen, damit keine Verzerrung entsteht (nur uniforme Skalierung). */
 export const FIGURE_SVG_ASPECT_PROPS = {
   preserveAspectRatio: "xMidYMid meet" as const,
@@ -714,39 +790,42 @@ function cutLShape4Simple(): CutResult {
 
 export type FZDifficulty = "easy" | "medium" | "hard";
 
-/** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile, nur gerade Schnitte. */
-const CUT_SCHEMES: { diff: FZDifficulty; cut: () => CutResult }[] = [
-  { diff: "easy", cut: cutSquareDiagonal },
-  { diff: "easy", cut: cutSquareCenter4 },
-  { diff: "easy", cut: cutSquare3 },
-  { diff: "easy", cut: cutTriangleMedian },
-  { diff: "easy", cut: cutTriangle3 },
-  { diff: "easy", cut: cutHexagon2 },
-  { diff: "easy", cut: cutRhombus2 },
-  { diff: "easy", cut: cutRhombus3 },
-  { diff: "easy", cut: cutParallelogram2 },
-  { diff: "easy", cut: cutParallelogram3 },
-  { diff: "medium", cut: cutHexagon3 },
-  { diff: "medium", cut: cutPentagon3 },
-  { diff: "medium", cut: cutPentagon4 },
-  { diff: "medium", cut: cutSquareOffset },
-  { diff: "medium", cut: cutTrapez2 },
-  { diff: "medium", cut: cutTrapez3 },
-  { diff: "medium", cut: cutLShape4Simple },
-  { diff: "medium", cut: cutOctagon4 },
-  { diff: "medium", cut: cutHeptagon4 },
-  { diff: "medium", cut: cutQuarterCircle2 },
-  { diff: "medium", cut: cutQuarterCircle3 },
-  { diff: "medium", cut: cutHalfCircle3 },
-  { diff: "medium", cut: cutHalfCircle4 },
-  { diff: "medium", cut: cutThreeQuarterCircle3 },
-  { diff: "medium", cut: cutThreeQuarterCircle4 },
-  { diff: "hard", cut: cutHexagon6 },
-  { diff: "hard", cut: cutHeptagon7 },
-  { diff: "hard", cut: cutPentagon5 },
-  { diff: "hard", cut: cutFullCircle4 },
-  { diff: "hard", cut: cutFullCircle5 },
-  { diff: "hard", cut: cutFullCircle6 },
+/** Pro Schema: Schwierigkeit, Zielform (für gleiche Häufigkeit aller 14 Formen), Schnitt. */
+type CutScheme = { diff: FZDifficulty; shapeId: SolutionShapeName; cut: () => CutResult };
+
+/** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile. shapeId für ausgeglichene Verteilung. */
+const CUT_SCHEMES: CutScheme[] = [
+  { diff: "easy", shapeId: "square", cut: cutSquareDiagonal },
+  { diff: "easy", shapeId: "square", cut: cutSquareCenter4 },
+  { diff: "easy", shapeId: "square", cut: cutSquare3 },
+  { diff: "easy", shapeId: "triangle", cut: cutTriangleMedian },
+  { diff: "easy", shapeId: "triangle", cut: cutTriangle3 },
+  { diff: "easy", shapeId: "hexagon", cut: cutHexagon2 },
+  { diff: "easy", shapeId: "rhombus", cut: cutRhombus2 },
+  { diff: "easy", shapeId: "rhombus", cut: cutRhombus3 },
+  { diff: "easy", shapeId: "parallelogram", cut: cutParallelogram2 },
+  { diff: "easy", shapeId: "parallelogram", cut: cutParallelogram3 },
+  { diff: "medium", shapeId: "hexagon", cut: cutHexagon3 },
+  { diff: "medium", shapeId: "pentagon", cut: cutPentagon3 },
+  { diff: "medium", shapeId: "pentagon", cut: cutPentagon4 },
+  { diff: "medium", shapeId: "square", cut: cutSquareOffset },
+  { diff: "medium", shapeId: "trapezoid", cut: cutTrapez2 },
+  { diff: "medium", shapeId: "trapezoid", cut: cutTrapez3 },
+  { diff: "medium", shapeId: "L-shape", cut: cutLShape4Simple },
+  { diff: "medium", shapeId: "octagon", cut: cutOctagon4 },
+  { diff: "medium", shapeId: "heptagon", cut: cutHeptagon4 },
+  { diff: "medium", shapeId: "quarter-circle", cut: cutQuarterCircle2 },
+  { diff: "medium", shapeId: "quarter-circle", cut: cutQuarterCircle3 },
+  { diff: "medium", shapeId: "half-circle", cut: cutHalfCircle3 },
+  { diff: "medium", shapeId: "half-circle", cut: cutHalfCircle4 },
+  { diff: "medium", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle3 },
+  { diff: "medium", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle4 },
+  { diff: "hard", shapeId: "hexagon", cut: cutHexagon6 },
+  { diff: "hard", shapeId: "heptagon", cut: cutHeptagon7 },
+  { diff: "hard", shapeId: "pentagon", cut: cutPentagon5 },
+  { diff: "hard", shapeId: "full-circle", cut: cutFullCircle4 },
+  { diff: "hard", shapeId: "full-circle", cut: cutFullCircle5 },
+  { diff: "hard", shapeId: "full-circle", cut: cutFullCircle6 },
 ];
 
 // =============================================================================
@@ -1026,16 +1105,24 @@ function createRng(seed: number): () => number {
 }
 
 /**
- * Schneidet die Zielform strategisch (vom Ziel aus). Nutzt erweiterte CutStrategies.
+ * Schneidet die Zielform strategisch (vom Ziel aus).
+ * Alle 14 Formen gleich oft: Zuerst Form-Index (seed % 14), dann Schnitt für diese Form wählen.
  */
 export function cutPolygonStrategically(
   difficulty: FZDifficulty,
   seed: number
 ): { target: Polygon; pieces: Polygon[] } {
-  const schemes = CUT_SCHEMES.filter((s) => s.diff === difficulty);
-  if (schemes.length === 0) return cutSquareDiagonal();
-  const idx = Math.floor(Math.abs(seed) % schemes.length);
-  const { target, pieces } = schemes[idx]!.cut();
+  const shapeIndex = Math.floor(Math.abs(seed) % SOLUTION_SHAPES.length);
+  const shapeId = SOLUTION_SHAPES[shapeIndex]!;
+  const schemes = CUT_SCHEMES.filter((s) => s.diff === difficulty && s.shapeId === shapeId);
+  const fallback = CUT_SCHEMES.filter((s) => s.diff === difficulty);
+  const list = schemes.length > 0 ? schemes : fallback;
+  if (list.length === 0) return cutSquareDiagonal();
+  const rawIdx = Math.floor((Math.abs(seed) >> 4) % list.length);
+  const idx = Math.min(list.length - 1, Math.max(0, rawIdx));
+  const entry = list[idx];
+  if (!entry?.cut) return cutSquareDiagonal();
+  const { target, pieces } = entry.cut();
   return {
     target: { points: [...target.points] },
     pieces: pieces.map((p) => ({ points: [...p.points] })),

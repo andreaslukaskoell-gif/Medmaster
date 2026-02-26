@@ -16,15 +16,16 @@ import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
 import type { TrainerMode } from "@/hooks/useFragenTrainer";
 
-/** MedAT-typische Optionstexte: „Nur 1 und 3“, „Alle richtig“, „Keine richtig“. */
+/** MedAT-exakte Optionstexte: „Alle sind richtig.“, „1. und 3. sind richtig.“, „2. ist richtig.“ (4 Aussagen, A–E). */
 function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): string {
-  const n = k.nummern?.length ?? 0;
-  if (n === 0) return "Keine der Aussagen ist richtig";
-  if (totalAussagen >= 2 && n === totalAussagen) return "Alle Aussagen sind richtig";
-  const nummern = k.nummern ?? [];
-  if (nummern.length === 1) return `Nur Aussage ${nummern[0]} ist richtig`;
-  if (nummern.length === 2) return `Nur ${nummern[0]} und ${nummern[1]} sind richtig`;
-  return `Nur Aussagen ${nummern.slice(0, -1).join(", ")} und ${nummern[nummern.length - 1]} sind richtig`;
+  const nummern = (k.nummern ?? []).slice().sort((a, b) => a - b);
+  const n = nummern.length;
+  if (n === 0) return "Keine der Aussagen ist richtig.";
+  if (totalAussagen >= 2 && n === totalAussagen) return "Alle sind richtig.";
+  const mitPunkt = nummern.map((nr) => `${nr}.`);
+  if (mitPunkt.length === 1) return `${mitPunkt[0]} ist richtig.`;
+  if (mitPunkt.length === 2) return `${mitPunkt[0]} und ${mitPunkt[1]} sind richtig.`;
+  return `${mitPunkt.slice(0, -1).join(", ")} und ${mitPunkt[mitPunkt.length - 1]} sind richtig.`;
 }
 
 interface Props {

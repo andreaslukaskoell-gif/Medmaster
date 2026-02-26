@@ -284,7 +284,14 @@ export function Leaderboard() {
                 {currentEntry.badgeIds.slice(0, 3).map((bid) => {
                   const def = BADGE_DEFINITIONS.find((b) => b.id === bid);
                   return def ? (
-                    <BadgeIcon key={bid} tier={def.tier} earned size="sm" className="w-6 h-6" />
+                    <BadgeIcon
+                      key={bid}
+                      badgeId={bid}
+                      icon={def.icon}
+                      earned
+                      size="sm"
+                      className="w-6 h-6"
+                    />
                   ) : null;
                 })}
               </div>
@@ -381,7 +388,8 @@ function LeaderboardRow({
             return def ? (
               <BadgeIcon
                 key={bid}
-                tier={def.tier}
+                badgeId={bid}
+                icon={def.icon}
                 earned
                 size="sm"
                 className="w-6! h-6! [&>svg]:w-3! [&>svg]:h-3!"

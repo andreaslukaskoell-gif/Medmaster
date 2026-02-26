@@ -8,6 +8,7 @@ import { mathematikPool2 } from "./mathematikPool2";
 import { mathematikPool3 } from "./mathematikPool3";
 import { mathematikPool4 } from "./mathematikPool4";
 import { mathematikPool5 } from "./mathematikPool5";
+import { mathematikPool6 } from "./mathematikPool6";
 import { mathematikWasIstFalsch } from "./mathematikWasIstFalsch";
 
 export const mathematikPoolQuestions: Question[] = [
@@ -16,5 +17,6 @@ export const mathematikPoolQuestions: Question[] = [
   ...mathematikPool3,
   ...mathematikPool4,
   ...mathematikPool5,
+  ...mathematikPool6,
   ...mathematikWasIstFalsch,
 ];

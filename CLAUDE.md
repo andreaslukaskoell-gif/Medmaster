@@ -26,9 +26,18 @@ npm run format       # Prettier (auto-runs via hook)
 ### BMS Questions
 
 - ALL BMS questions MUST have exactly 5 options (A–E) — MedAT format requirement
+- **Only one answer per question may be correct** — enforced by `validateBMSFrage()` in `src/lib/supabaseBMSFragen.ts`; reject any question with multiple correct or ambiguous options
 - Question interface: `{ id, subject, chapter, topic?, text, options: [{id,text}], correctOptionId, explanation, difficulty, tags }`
 - TV questions use 0-indexed `correctOption` (different from BMS!)
 - IDs follow pattern: `bio-1-001`, `ch-2-003`, `ph-3-001`, `ma-1-001`
+
+**Ziel: mind. 1000 BMS-Fragen pro Fachgebiet** (Biologie, Chemie, Physik, Mathematik). MedAT-Vorbild; mit BMS-Teil beantwortbar; **nur eine richtige Antwort**; Schwierigkeit 1–3; Fragetypen gleichermaßen abdecken:
+- **Typ A:** Einzelauswahl („Welche Aussage ist richtig?“) — 5 Optionen, `korrekte_option`
+- **Typ K:** Kombinationsaufgabe (Aussagen 1–5, Optionen A–E „Nur 1 und 3“ etc.) — `aussagen`, `kombinationen`, genau eine Kombination richtig
+- **Typ M:** Rechenaufgabe — wie Typ A, 5 Optionen, eine richtig (z. B. `tags` enthalten `rechenfrage` oder Optionen sind vorwiegend Zahlen)
+- **Falsch-Aussagen:** „Welche der folgenden Aussagen ist falsch?“ — Typ A, `korrekte_option` = die falsche Aussage
+
+Streuung anstreben: je Fach grob gleich viele Typ A (inkl. Falsch), Typ K, Typ M; Schwierigkeit leicht/mittel/schwer (z. B. 40 % / 40 % / 20 %). Neue Fragen in Batches von <75 pro Datei; vor Aufnahme `validateBMSFrage`/`filterValidBMSFragen` nutzen.
 
 ### BMS-Kapitel Referenz (Vorbild: Zellmembran bio-1-03)
 

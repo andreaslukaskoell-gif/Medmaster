@@ -154,7 +154,8 @@ export async function getTasksByDifficulty(
   domain: TaskDomain,
   minDiff: number,
   maxDiff: number,
-  limit: number
+  limit: number,
+  offset: number = 0
 ): Promise<Task[]> {
   return getTasksByDomain({
     domain,
@@ -162,6 +163,7 @@ export async function getTasksByDifficulty(
     maxDifficulty: maxDiff,
     validated: true,
     limit,
+    offset,
   });
 }
 
@@ -207,6 +209,36 @@ export async function getTaskCountByDomain(
   }
   let list = localStore.get().filter((t) => t.domain === domain && !t.invalidReason);
   if (validatedOnly) list = list.filter((t) => t.validated);
+  return list.length;
+}
+
+/** Anzahl validierter Tasks in einer Domain innerhalb eines Difficulty-Bands (für Zufalls-Offset). */
+export async function getTaskCountInBand(
+  domain: TaskDomain,
+  minDiff: number,
+  maxDiff: number
+): Promise<number> {
+  if (supabase) {
+    const { count } = await supabase
+      .from("tasks")
+      .select("id", { count: "exact", head: true })
+      .eq("domain", domain)
+      .eq("validated", true)
+      .is("invalid_reason", null)
+      .gte("difficulty", minDiff)
+      .lte("difficulty", maxDiff);
+    return count ?? 0;
+  }
+  const list = localStore
+    .get()
+    .filter(
+      (t) =>
+        t.domain === domain &&
+        !t.invalidReason &&
+        t.validated &&
+        t.difficulty >= minDiff &&
+        t.difficulty <= maxDiff
+    );
   return list.length;
 }
 

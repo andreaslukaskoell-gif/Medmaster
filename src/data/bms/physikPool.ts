@@ -13,6 +13,7 @@ import { physikPool7 } from "./physikPool7";
 import { physikPool8 } from "./physikPool8";
 import { physikPool9 } from "./physikPool9";
 import { physikPool10 } from "./physikPool10";
+import { physikPool11 } from "./physikPool11";
 import { physikWasIstFalsch } from "./physikWasIstFalsch";
 
 export const physikPoolQuestions: Question[] = [
@@ -26,5 +27,6 @@ export const physikPoolQuestions: Question[] = [
   ...physikPool8,
   ...physikPool9,
   ...physikPool10,
+  ...physikPool11,
   ...physikWasIstFalsch,
 ];

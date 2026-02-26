@@ -492,19 +492,25 @@ export function useMRS(user_id: string | null) {
   const [mrs, setMRS] = useState<MRSData | null>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (!user_id) return;
-    const t = setTimeout(() => setLoading(true), 0);
+  const fetch = useCallback(() => {
+    if (!user_id) {
+      setMRS(null);
+      setLoading(false);
+      return;
+    }
+    setLoading(true);
     fetchMRSData(user_id)
       .then((d) => {
-        setMRS(d);
-        setLoading(false);
+        setMRS(d ?? null);
       })
-      .catch(() => setLoading(false));
-    return () => clearTimeout(t);
+      .finally(() => setLoading(false));
   }, [user_id]);
 
-  return { mrs, loading };
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
+
+  return { mrs, loading, refetch: fetch };
 }
 
 // ── Error patterns hook ─────────────────────────────────────

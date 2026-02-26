@@ -51,7 +51,7 @@ export interface RecordAttemptInput {
   prev_fsrs: FSRSState | null;
 }
 
-/** Prüft, ob eine BMS-Frage vollständig und konsistent ist. Lieber keine Aufgabe anzeigen als eine falsche. */
+/** Prüft, ob eine BMS-Frage vollständig und konsistent ist. MedAT: genau eine richtige Antwort (korrekte_option). Lieber keine Aufgabe anzeigen als eine falsche. */
 export function validateBMSFrage(q: BMSFrage): boolean {
   if (!q?.id || typeof q.stamm !== "string" || !q.stamm.trim()) return false;
   if (!["A", "K", "M"].includes(q.typ)) return false;
@@ -65,15 +65,18 @@ export function validateBMSFrage(q: BMSFrage): boolean {
     if (!korrekt || !opts.some((o) => o.key === korrekt)) return false;
   }
   if (q.typ === "K") {
-    if (!Array.isArray(q.aussagen) || !q.aussagen.length) return false;
-    if (!Array.isArray(q.kombinationen) || !q.kombinationen.length) return false;
+    if (!Array.isArray(q.aussagen) || q.aussagen.length < 4 || q.aussagen.length > 5) return false;
+    const komb = q.kombinationen;
+    if (!Array.isArray(komb) || komb.length !== 5) return false;
+    const keys = new Set(komb.map((k) => k?.key));
+    if (keys.size !== 5 || !["A", "B", "C", "D", "E"].every((k) => keys.has(k))) return false;
     const korrekt = q.korrekte_option;
-    if (!korrekt || !q.kombinationen.some((k) => k?.key === korrekt)) return false;
+    if (!korrekt || !komb.some((k) => k?.key === korrekt)) return false;
   }
   return true;
 }
 
-/** Filtert ungültige Fragen heraus. In DEV: Console-Error bei verworfenen. */
+/** Filtert ungültige Fragen heraus. Typ K ist MedAT-konform (4 Aussagen, 5 Kombinationen A–E) und wird zugelassen. */
 export function filterValidBMSFragen(fragen: BMSFrage[]): BMSFrage[] {
   const valid: BMSFrage[] = [];
   for (const q of fragen) {
@@ -168,6 +171,13 @@ export async function getNextQuestions(
   return buildNextFromCategorized(fragenWithFSRS, count);
 }
 
+/**
+ * buildNextFromCategorized — Auswahl für Übung:
+ * - Großteil zufällig (jedes Mal andere Fragen)
+ * - Nur ein Bruchteil sind bereits gesehene/fällige Fragen (zyklisch wiederholen)
+ */
+const REVIEW_RATIO = 0.2; // 20 % der Session = Wiederholung (schon gesehen, fällig)
+
 function buildNextFromCategorized(fragenWithFSRS: BMSFrage[], count: number): BMSFrage[] {
   const now = new Date();
   const due: BMSFrage[] = [];
@@ -188,22 +198,20 @@ function buildNextFromCategorized(fragenWithFSRS: BMSFrage[], count: number): BM
   shuffle(newQ);
   shuffle(recent);
 
-  const result: BMSFrage[] = [];
-  const add = (arr: BMSFrage[]) => {
-    for (const q of arr) {
-      if (result.length >= count) break;
-      result.push(q);
-    }
-  };
+  const reviewCount = Math.min(due.length, Math.max(0, Math.round(count * REVIEW_RATIO)));
+  const randomCount = count - reviewCount;
+  const reviewSlice = due.slice(0, reviewCount);
 
-  const dueCap = Math.ceil(count * 0.4);
-  const newCap = Math.ceil(count * 0.4);
-  add(due.slice(0, dueCap));
-  add(newQ.slice(0, newCap));
-  add(recent);
-  if (result.length < count) add(due.slice(dueCap));
-  if (result.length < count) add(newQ.slice(newCap));
+  const randomPool = [...newQ, ...recent];
+  shuffle(randomPool);
+  let randomSlice = randomPool.slice(0, randomCount);
+  if (randomSlice.length < randomCount && due.length > reviewCount) {
+    const extra = due.slice(reviewCount, reviewCount + (randomCount - randomSlice.length));
+    randomSlice = [...randomSlice, ...extra];
+  }
 
+  const result = [...reviewSlice, ...randomSlice];
+  shuffle(result);
   return result.slice(0, count);
 }
 
@@ -233,9 +241,8 @@ export async function recordAttempt(input: RecordAttemptInput): Promise<void> {
 
 export interface MRSData {
   score: number; // 0–100
-  fsrsRetention: number; // % questions with retention ≥ 0.7
-  brierScore: number | null;
-  consistencyDays: number; // days with at least 1 answer in last 30d
+  fsrsRetention: number; // % Fragen mit Retention ≥ 0.7
+  consistencyDays: number; // Tage mit mind. 1 Antwort (letzte 30)
   totalAttempts: number;
 }
 
@@ -246,7 +253,7 @@ export async function fetchMRSData(user_id: string | null): Promise<MRSData | nu
 
   const { data, error } = await supabase
     .from("user_question_attempts")
-    .select("correct, confidence, fsrs_stability, fsrs_due, answered_at")
+    .select("question_id, fsrs_stability, fsrs_due, answered_at")
     .eq("user_id", user_id)
     .gte("answered_at", thirtyDaysAgo)
     .order("answered_at", { ascending: false });
@@ -255,17 +262,15 @@ export async function fetchMRSData(user_id: string | null): Promise<MRSData | nu
 
   const now = Date.now();
 
-  // FSRS Retention Rate (questions with current retention ≥ 0.7)
+  // FSRS Retention: pro Frage nur den neuesten Versuch (answered_at desc → erster Eintrag pro question_id)
   let retained = 0;
-  const seen = new Set<string>();
+  const seenQuestions = new Set<string>();
   const latestPerQuestion: typeof data = [];
-  // data is ordered desc, so first occurrence per question = latest
   for (const row of data) {
-    const key = `${row.fsrs_stability}:${row.fsrs_due}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      latestPerQuestion.push(row);
-    }
+    const qid = (row as { question_id?: string }).question_id;
+    if (!qid || seenQuestions.has(qid)) continue;
+    seenQuestions.add(qid);
+    latestPerQuestion.push(row);
   }
   for (const row of latestPerQuestion) {
     const dueMs = new Date(row.fsrs_due).getTime();
@@ -277,30 +282,17 @@ export async function fetchMRSData(user_id: string | null): Promise<MRSData | nu
     ? Math.round((retained / latestPerQuestion.length) * 100)
     : 0;
 
-  // Brier Score
-  const withConf = data.filter((r) => r.confidence != null);
-  let brier: number | null = null;
-  if (withConf.length >= 10) {
-    const sum = withConf.reduce((acc, r) => {
-      const p = [0.25, 0.5, 0.9][r.confidence as 0 | 1 | 2];
-      return acc + (p - (r.correct ? 1 : 0)) ** 2;
-    }, 0);
-    brier = Math.round((sum / withConf.length) * 1000) / 1000;
-  }
-
-  // Consistency (unique days with ≥1 answer)
+  // Kontinuität (Tage mit mind. 1 Antwort)
   const days = new Set(data.map((r) => r.answered_at.slice(0, 10)));
   const consistencyDays = days.size;
 
-  // Composite MRS (0–100)
-  // Retention 40%, Brier 25%, Consistency 20%, bonus 15%
-  const retScore = fsrsRetention * 0.4;
-  const brierScore_ = brier != null ? Math.max(0, (1 - brier / 0.25) * 100) * 0.25 : 0;
-  const consScore = Math.min(consistencyDays / 30, 1) * 100 * 0.2;
-  const bonus = data.length > 50 ? 15 : data.length > 20 ? 8 : 0;
-  const score = Math.min(100, Math.round(retScore + brierScore_ + consScore + bonus));
+  // MRS nur aus Retention + Kontinuität + Bonus (alles systemseitig, kein Brier/Kalibrierung)
+  const retScore = fsrsRetention * 0.55; // 55 %
+  const consScore = Math.min(consistencyDays / 30, 1) * 100 * 0.3; // 30 %
+  const bonus = data.length >= 50 ? 15 : data.length >= 20 ? 8 : 0; // 15 %
+  const score = Math.min(100, Math.round(retScore + consScore + bonus));
 
-  return { score, fsrsRetention, brierScore: brier, consistencyDays, totalAttempts: data.length };
+  return { score, fsrsRetention, consistencyDays, totalAttempts: data.length };
 }
 
 // ── Error Pattern DNA ─────────────────────────────────────────

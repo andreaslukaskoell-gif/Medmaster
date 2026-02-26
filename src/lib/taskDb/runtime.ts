@@ -5,6 +5,7 @@
 import {
   getTasksByDifficulty,
   getTaskCountByDomain,
+  getTaskCountInBand,
   getTasksByIds,
   getTasksBySetId,
 } from "./storage";
@@ -37,6 +38,10 @@ function minPoolSizeFor(domain: TaskDomain): number {
  * @param count Anzahl gewünschter Aufgaben
  * @param bandWidth ± um userSkill (z. B. 100 → userSkill-100 bis userSkill+100)
  */
+/**
+ * Holt eine oder mehrere Aufgaben für den User aus der DB.
+ * Wenn genug im Pool: zufälliger Offset, damit nicht immer dieselben Aufgaben kommen.
+ */
 export async function getTasksForUser(
   domain: TaskDomain,
   userSkill: number,
@@ -45,10 +50,15 @@ export async function getTasksForUser(
 ): Promise<Task[]> {
   const minDiff = Math.max(0, userSkill - bandWidth);
   const maxDiff = Math.min(1000, userSkill + bandWidth);
-  const tasks = await getTasksByDifficulty(domain, minDiff, maxDiff, count);
+  const totalInBand = await getTaskCountInBand(domain, minDiff, maxDiff);
+
+  let offset = 0;
+  if (totalInBand > count) {
+    offset = Math.floor(Math.random() * (totalInBand - count + 1));
+  }
+  const tasks = await getTasksByDifficulty(domain, minDiff, maxDiff, count, offset);
   if (tasks.length >= count) return tasks;
 
-  // Zu wenig im Pool: Hintergrund-Nachfüllen (nicht warten)
   const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
   if (total < minPool) {
@@ -64,7 +74,6 @@ export async function getTasksForUser(
     });
   }
 
-  // Trotzdem zurückgeben, was vorhanden ist (evtl. weniger als count)
   return tasks;
 }
 

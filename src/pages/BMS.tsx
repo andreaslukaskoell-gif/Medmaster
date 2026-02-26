@@ -36,6 +36,7 @@ import {
   pathForChapter,
 } from "@/lib/bmsRoutes";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
+import { useAuth } from "@/hooks/useAuth";
 import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/migrateBMS";
 import { PageLoadingSkeleton, PageError, PageEmpty } from "@/components/ui/page-states";
 import { MRSWidget } from "@/components/bms/MRSWidget";
@@ -140,8 +141,28 @@ export default function BMS() {
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const setLastPath = useAdaptiveStore((s) => s.setLastPath);
   const { setBreadcrumbs } = useBreadcrumb();
-  const userId = localStorage.getItem("medmaster-local-uid") ?? null;
-  const { mrs, loading: mrsLoading } = useMRS(userId);
+  const { user } = useAuth();
+  const userId = user?.id ?? null;
+  const { mrs, loading: mrsLoading, refetch: refetchMRS } = useMRS(userId);
+  const profile = useAdaptiveStore((s) => s.profile);
+  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness);
+  const mrsFallback = useMemo(() => {
+    if (profile.totalQuestionsAnswered > 0) {
+      return {
+        readiness: getMedATReadiness(),
+        totalQuestions: profile.totalQuestionsAnswered,
+        totalCorrect: profile.totalCorrect,
+      };
+    }
+    return null;
+  }, [profile.totalQuestionsAnswered, profile.totalCorrect, getMedATReadiness]);
+
+  useEffect(() => {
+    if (!userId) return;
+    const onFocus = () => refetchMRS();
+    window.addEventListener("focus", onFocus);
+    return () => window.removeEventListener("focus", onFocus);
+  }, [userId, refetchMRS]);
 
   useEffect(() => {
     if (activeKapitel) return;
@@ -770,7 +791,7 @@ export default function BMS() {
 
       {/* MedAT Readiness Score */}
       <BlurFade delay={0.05} inView>
-        <MRSWidget mrs={mrs} loading={mrsLoading} />
+        <MRSWidget mrs={mrs} loading={mrsLoading} fallback={mrsFallback} />
       </BlurFade>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

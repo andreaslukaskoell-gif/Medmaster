@@ -6,6 +6,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/** Begrüßung nach Tageszeit (für Dashboard). */
+export function getGreetingByTime(): "Guten Morgen" | "Guten Tag" | "Guten Abend" | "Gute Nacht" {
+  const h = new Date().getHours();
+  if (h >= 5 && h < 12) return "Guten Morgen";
+  if (h >= 12 && h < 18) return "Guten Tag";
+  if (h >= 18 && h < 22) return "Guten Abend";
+  return "Gute Nacht";
+}
+
 /** MedAT-Stichtag: Erster Freitag im Juli 2026 */
 export function getMedATDate(): Date {
   const july = new Date(2026, 6, 1); // July 1, 2026

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import type { ReactNode } from "react";
 import {
   BrowserRouter,
@@ -18,6 +18,7 @@ import { useStore } from "@/store/useStore";
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const MedATOnboarding = lazy(() => import("@/pages/MedATOnboarding"));
 const PlacementTest = lazy(() => import("@/pages/PlacementTest"));
+const LernplanChoice = lazy(() => import("@/pages/LernplanChoice"));
 const Onboarding = lazy(() => import("@/pages/Onboarding"));
 const BMS = lazy(() => import("@/pages/BMS"));
 const KFF = lazy(() => import("@/pages/KFF"));
@@ -62,6 +63,15 @@ function LoadingSpinner() {
       <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500" />
     </div>
   );
+}
+
+/** Scrollt bei jedem Seitenwechsel nach oben. */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
 }
 
 function OnboardingGuard() {
@@ -121,6 +131,7 @@ function NotFound404() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           {/* Public routes */}
@@ -142,6 +153,7 @@ export default function App() {
           >
             <Route path="/onboarding/medat" element={<MedATOnboarding />} />
             <Route path="/placement-test" element={<PlacementTest />} />
+            <Route path="/onboarding/lernplan-choice" element={<LernplanChoice />} />
             <Route
               element={
                 <MedATGuard>
