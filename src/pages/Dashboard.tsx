@@ -490,7 +490,7 @@ export default function Dashboard() {
                         key={badge.id}
                         to="/performance"
                         className="focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded-lg shrink-0"
-                        title={badge.name}
+                        title={`${badge.name} – ${badge.description}`}
                       >
                         <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="sm" />
                       </Link>
@@ -520,6 +520,11 @@ export default function Dashboard() {
                 <Link
                   to="/performance"
                   className="text-sm font-medium text-[var(--accent)] hover:underline inline-flex items-center gap-1 shrink-0"
+                  title={
+                    earnedBadges.length > 0
+                      ? `${earnedBadges[earnedBadges.length - 1].name} – ${earnedBadges[earnedBadges.length - 1].description}`
+                      : "Badges anzeigen"
+                  }
                 >
                   {earnedBadges.length > 0 ? (
                     <>

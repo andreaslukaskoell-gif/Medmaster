@@ -12,6 +12,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { useStore } from "@/store/useStore";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { Button } from "@/components/ui/button";
 import {
   getDailyQuestion,
@@ -366,7 +367,7 @@ export default function DailyChallengePage() {
                   Erklarung
                 </p>
                 <p className="text-sm text-blue-900 dark:text-blue-100 leading-relaxed">
-                  {challenge.explanation}
+                  {stripMarkdownAsterisks(challenge.explanation)}
                 </p>
               </div>
 

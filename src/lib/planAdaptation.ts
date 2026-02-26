@@ -13,6 +13,8 @@ export type PlanAdaptationInput = {
   hoursPerWeek: number;
   goalAchievedByDate: Record<string, boolean>;
   quizResults: { timestamp?: string; score: number; total: number }[];
+  /** Tage mit Aktivität (z. B. aus activityLog) – für Nenner der Erreichungsrate */
+  activityLog?: Record<string, { minutes?: number; questions?: number }>;
 };
 
 export type PlanAdaptationResult = {
@@ -29,7 +31,7 @@ export type PlanAdaptationResult = {
  * und passt die Wochenstunden entsprechend an.
  */
 export function getPlanAdaptation(input: PlanAdaptationInput): PlanAdaptationResult {
-  const { hoursPerWeek, goalAchievedByDate, quizResults } = input;
+  const { hoursPerWeek, goalAchievedByDate, quizResults, activityLog } = input;
   const today = new Date().toISOString().split("T")[0];
 
   const goalDates: string[] = [];
@@ -39,7 +41,12 @@ export function getPlanAdaptation(input: PlanAdaptationInput): PlanAdaptationRes
     goalDates.push(d.toISOString().split("T")[0]);
   }
   const achievedCount = goalDates.filter((d) => goalAchievedByDate[d]).length;
-  const daysWithData = goalDates.filter((d) => goalAchievedByDate[d] !== undefined).length;
+  const daysWithActivity = activityLog
+    ? goalDates.filter(
+        (d) => activityLog[d] && (activityLog[d].minutes! > 0 || activityLog[d].questions! > 0)
+      ).length
+    : DAYS_LOOKBACK_GOAL;
+  const daysWithData = activityLog ? Math.max(achievedCount, daysWithActivity) : DAYS_LOOKBACK_GOAL;
 
   if (daysWithData < MIN_DAYS_FOR_ADAPTATION) {
     return {
@@ -49,7 +56,7 @@ export function getPlanAdaptation(input: PlanAdaptationInput): PlanAdaptationRes
     };
   }
 
-  const achievementRate = achievedCount / Math.max(1, daysWithData);
+  const achievementRate = achievedCount / Math.max(1, daysWithActivity);
 
   const cutoff = new Date(today);
   cutoff.setDate(cutoff.getDate() - DAYS_LOOKBACK_QUALITY);

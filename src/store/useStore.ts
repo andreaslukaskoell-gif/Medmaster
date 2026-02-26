@@ -179,6 +179,10 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
         ? Math.max(0, Math.min(1000, s.skillRating as number))
         : 500,
       kffFailedTasks: sanitizeKffFailedTasks(s.kffFailedTasks, s.kffFailedTaskIds),
+      kffDomainIntroSeen:
+        s.kffDomainIntroSeen && typeof s.kffDomainIntroSeen === "object"
+          ? (s.kffDomainIntroSeen as Record<string, boolean>)
+          : {},
     };
   } catch {
     return {};
@@ -294,6 +298,8 @@ interface AppState {
   addKffTaskFailed: (domain: string, taskId: string) => void;
   markKffTaskCorrect: (domain: string, taskId: string) => void;
   getKffFailedIdsForDomain: (domain: string) => string[];
+  kffDomainIntroSeen: Record<string, boolean>;
+  markKffDomainIntroSeen: (domain: string) => void;
 
   addXP: (amount: number) => void;
   /** XP aus Basis + Schwierigkeit + Zeit; Fallbacks wenn Daten fehlen. */
@@ -370,6 +376,7 @@ export const useStore = create<AppState>()(
       hasCompletedMedATOnboarding: false,
       skillRating: 500,
       kffFailedTasks: {},
+      kffDomainIntroSeen: {},
 
       logError: (objectId, objectType, context) =>
         set((s) => ({
@@ -452,6 +459,11 @@ export const useStore = create<AppState>()(
         if (!cur?.taskIds.length) return [];
         return [...cur.taskIds].sort((a, b) => (cur.wrongCount[b] ?? 0) - (cur.wrongCount[a] ?? 0));
       },
+      markKffDomainIntroSeen: (domain) =>
+        set((s) => ({
+          kffDomainIntroSeen: { ...s.kffDomainIntroSeen, [domain]: true },
+        })),
+
       setPendingBadgeId: (id) => set({ pendingBadgeId: id }),
 
       setGoalAchievedToday: (date, achieved) =>

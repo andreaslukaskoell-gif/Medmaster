@@ -60,7 +60,6 @@ export default function Lernplan() {
     setLernplanConfig,
     getDueChapterIds,
     completedChapters,
-    userProgress,
     goalAchievedByDate,
     quizResults,
     activityLog,
@@ -155,14 +154,7 @@ export default function Lernplan() {
       lastViewedUnterkapitelId,
       completedChapterIds: completedChapters ?? [],
     });
-  }, [
-    plan,
-    getDueChapterIds,
-    lastViewedKapitelId,
-    lastViewedUnterkapitelId,
-    userProgress,
-    completedChapters,
-  ]);
+  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId, completedChapters]);
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">

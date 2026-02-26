@@ -20,7 +20,7 @@ export type BmsReviewItem = {
   chapterId: string;
   /** Konkretes Unterkapitel zum Wiederholen; Link geht direkt dorthin */
   subchapterId?: string;
-  /** Anzeige: z. B. "Zelle: Membranaufbau" */
+  /** Anzeige: z.B. "Zelle: Membranaufbau" */
   title: string;
   /** Link direkt zum UK (pathForChapter + ?uk=index) */
   path: string;
@@ -122,8 +122,7 @@ export function buildConcreteDailyPlan(
     completedChapterIds?: string[];
   }
 ): ConcreteDailyPlan {
-  const { dueChapterIds, lastViewedChapterId, lastViewedUnterkapitelId, completedChapterIds } =
-    options;
+  const { dueChapterIds, completedChapterIds } = options;
 
   const weeklyPlan = plan.weeklyPlan;
   const bmsItem = weeklyPlan.find((p) => p.module === "BMS");

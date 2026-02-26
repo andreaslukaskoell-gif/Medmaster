@@ -46,7 +46,7 @@ export default function TodayPage() {
   usePageTitle("Heute lernen");
   const navigate = useNavigate();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
-  const { lernplanConfig, getDueChapterIds, userProgress } = useStore();
+  const { lernplanConfig, getDueChapterIds } = useStore();
   const quizResults = useStore((s) => s.quizResults);
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
   const activityLog = useStore((s) => s.activityLog);
@@ -89,7 +89,6 @@ export default function TodayPage() {
     getDueChapterIds,
     lastViewedKapitelId,
     lastViewedUnterkapitelId,
-    userProgress,
     adaptive,
     goalAchievedByDate,
     quizResults,
