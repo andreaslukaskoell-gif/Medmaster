@@ -3,12 +3,12 @@
  */
 import type { Question } from "./index";
 
-const CHAPTERS: ("mathe-kap1" | "mathe-kap2" | "mathe-kap3" | "mathe-kap4" | "mathe-kap5")[] = [
+const CHAPTERS: ("mathe-kap1" | "mathe-kap2" | "mathe-kap5" | "mathe-kap6" | "mathe-kap7")[] = [
   "mathe-kap1",
   "mathe-kap2",
-  "mathe-kap3",
-  "mathe-kap4",
   "mathe-kap5",
+  "mathe-kap6",
+  "mathe-kap7",
 ];
 
 function q(

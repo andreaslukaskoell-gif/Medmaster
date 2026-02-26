@@ -1,16 +1,29 @@
 /**
  * Today – priorisierte Tagesaufgaben aus der Today Engine.
- * Zeigt Badges (fällig / Schwächen / neu) und Liste; „Jetzt starten“ öffnet erste Aufgabe.
+ * Zeigt bei aktivem Lernplan auch die konkreten Tagesvorschläge (Kapitel, Fragen, KFF, TV, SEK).
  */
 
+import { useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, BookOpen, Target, RefreshCw, ListChecks } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Target,
+  RefreshCw,
+  ListChecks,
+  CalendarDays,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import type { TodayEngineTask } from "@/lib/learning/types";
+import { daysUntilMedAT } from "@/lib/utils";
+import { generateAdaptivePlan } from "@/lib/adaptivePlan";
+import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 
 const REASON_LABEL: Record<string, string> = {
   due: "Fällig",
@@ -32,7 +45,42 @@ export default function TodayPage() {
   usePageTitle("Heute lernen");
   const navigate = useNavigate();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
+  const { lernplanConfig, getDueChapterIds, userProgress } = useStore();
+  const adaptive = useAdaptiveStore();
+  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
+  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const { dueCount, weaknessCount, newCount, tasks } = useTodayEngine();
+
+  const concretePlan = useMemo(() => {
+    if (!lernplanConfig?.hoursPerWeek) return null;
+    const days = daysUntilMedAT();
+    const weeksLeft = Math.max(1, Math.floor(days / 7));
+    const plan = generateAdaptivePlan({
+      hoursPerWeek: lernplanConfig.hoursPerWeek,
+      weeksLeft,
+      readiness: adaptive.getMedATReadiness(),
+      fachReadiness: {
+        biologie: adaptive.getFachReadiness("biologie"),
+        chemie: adaptive.getFachReadiness("chemie"),
+        physik: adaptive.getFachReadiness("physik"),
+        mathematik: adaptive.getFachReadiness("mathematik"),
+      },
+      weakTopics: adaptive.getWeakestTopics(5),
+      phase: adaptive.profile.learningPhase,
+    });
+    return buildConcreteDailyPlan(plan, {
+      dueChapterIds: getDueChapterIds(),
+      lastViewedChapterId: lastViewedKapitelId,
+      lastViewedUnterkapitelId,
+    });
+  }, [
+    lernplanConfig,
+    getDueChapterIds,
+    lastViewedKapitelId,
+    lastViewedUnterkapitelId,
+    userProgress,
+    adaptive,
+  ]);
 
   const startFirstTask = () => {
     const first = tasks[0];
@@ -72,6 +120,44 @@ export default function TodayPage() {
         <p className="text-[var(--text-secondary)] mb-6">
           Priorisierte Aufgaben aus Wiederholung, Schwächen und deinem Fortschritt.
         </p>
+
+        {/* Konkreter Lernplan für heute (wenn aktiv) */}
+        {concretePlan && (
+          <Link to="/lernplan" className="block mb-6">
+            <Card className="border-2 border-primary-200 dark:border-primary-800 hover:bg-gray-50/50 dark:hover:bg-gray-900/30 transition-colors">
+              <CardContent className="p-4">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">
+                    <CalendarDays className="w-4 h-4 text-primary-500" />
+                    Lernplan für heute
+                  </h3>
+                  <span className="text-xs text-[var(--muted)]">
+                    {concretePlan.totalMinutesEstimate} Min
+                  </span>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] mb-3">
+                  {concretePlan.bmsRead.length > 0 && "Kapitel lesen · "}
+                  {concretePlan.bmsReview.length > 0 && "Wiederholen · "}
+                  {concretePlan.bmsQuestions.length > 0 && "BMS-Fragen · "}
+                  {concretePlan.kffTasks.length > 0 && "KFF · "}
+                  {concretePlan.tvTexts > 0 && "TV · "}
+                  {concretePlan.sekMinutes > 0 && "SEK"}
+                  {!concretePlan.bmsRead.length &&
+                    !concretePlan.bmsReview.length &&
+                    !concretePlan.bmsQuestions.length &&
+                    !concretePlan.kffTasks.length &&
+                    concretePlan.tvTexts === 0 &&
+                    concretePlan.sekMinutes === 0 &&
+                    "Alles erledigt?"}
+                </p>
+                <span className="text-xs text-primary-600 dark:text-primary-400 font-medium flex items-center gap-1">
+                  Details im Lernplan
+                  <ArrowRight className="w-3 h-3" />
+                </span>
+              </CardContent>
+            </Card>
+          </Link>
+        )}
 
         {/* Badges */}
         <div className="flex flex-wrap gap-3 mb-6">

@@ -223,6 +223,9 @@ export interface LernplanConfig {
   medatDate: string;
   hoursPerWeek: number;
   generatedAt: string;
+  /** Optionale Eingaben: Tage pro Woche (3–7) und Stunden pro Lerntag */
+  daysPerWeek?: number;
+  hoursPerDay?: number;
 }
 
 export interface RecentItem {

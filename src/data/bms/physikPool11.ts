@@ -3,15 +3,13 @@
  */
 import type { Question } from "./index";
 
-const CHAPTERS: (
-  | "phys-kap1"
-  | "phys-kap2"
-  | "phys-kap3"
-  | "phys-kap4"
-  | "phys-kap5"
-  | "phys-kap6"
-  | "phys-kap7"
-)[] = ["phys-kap1", "phys-kap2", "phys-kap3", "phys-kap4", "phys-kap5", "phys-kap6", "phys-kap7"];
+const CHAPTERS: ("phys-kap1" | "phys-kap3" | "phys-kap4" | "phys-kap5" | "phys-kap7")[] = [
+  "phys-kap1",
+  "phys-kap3",
+  "phys-kap4",
+  "phys-kap5",
+  "phys-kap7",
+];
 
 function q(
   id: string,

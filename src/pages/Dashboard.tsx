@@ -9,8 +9,13 @@ import {
   CheckCircle2,
   Clock,
   Share2,
-  Timer,
   TrendingUp,
+  Brain,
+  FileText,
+  Heart,
+  ListChecks,
+  RefreshCw,
+  CalendarDays,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -36,11 +41,12 @@ import {
   XP_PER_LEVEL,
 } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
+import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
+import { getPrognoseSummary } from "@/lib/prognoseScore";
 import { BADGE_DEFINITIONS } from "@/data/badges";
 import { getBadgeProgress } from "@/data/badges";
 import { alleKapitel } from "@/data/bmsKapitel";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
-import { ListChecks } from "lucide-react";
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -67,9 +73,13 @@ export default function Dashboard() {
     goalAchievedByDate,
     smartAdjustDismissedUntil,
     dismissSmartAdjust,
+    getDueChapterIds,
+    userProgress,
   } = useStore();
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastPath = useAdaptiveStore((s) => s.lastPath);
+  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
+  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
   const dailyResult = useMemo(() => getTodaysResult(), []);
   // todayStr omitted: getTodaysResult uses current date internally
@@ -118,6 +128,15 @@ export default function Dashboard() {
       phase: ad.profile.learningPhase,
     });
   }, [lernplanConfig, weeksLeft]);
+  const concretePlan = useMemo(() => {
+    if (!plan) return null;
+    return buildConcreteDailyPlan(plan, {
+      dueChapterIds: getDueChapterIds(),
+      lastViewedChapterId: lastViewedKapitelId,
+      lastViewedUnterkapitelId,
+    });
+  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId, userProgress]);
+  const prognoseSummary = useMemo(() => getPrognoseSummary(quizResults ?? []), [quizResults]);
   const dailyGoalState = useMemo(
     () => getDailyGoalFromPlan(plan, quizResults, todayStr),
     [plan, quizResults, todayStr]
@@ -398,73 +417,164 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
-          {/* Empfohlene Aktion: 1 groß + 2–3 klein */}
+          {/* Empfohlene Aktion: Heute im Lernplan (oder Fallback Heute lernen + Simulation) */}
           <motion.section
             variants={tileMotion}
             aria-label="Empfohlen"
             className="grid grid-cols-1 lg:grid-cols-4 gap-4"
           >
-            <Link to="/today" className="lg:col-span-2">
-              <div
-                className={cn(
-                  cardClass,
-                  "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]",
-                  "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
-                    <ListChecks className="w-6 h-6 text-[var(--accent)]" />
+            {concretePlan ? (
+              <>
+                <Link to="/lernplan" className="lg:col-span-2">
+                  <div
+                    className={cn(
+                      cardClass,
+                      "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col min-h-[120px]",
+                      "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
+                    )}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
+                        <CalendarDays className="w-6 h-6 text-[var(--accent)]" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-[var(--text-primary)]">
+                          Heute im Lernplan
+                        </h3>
+                        <p className="text-sm text-[var(--muted)] mt-0.5">
+                          ca. {concretePlan.totalMinutesEstimate} Min
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 text-sm">
+                      {concretePlan.bmsRead.length > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                          <BookOpen className="w-3.5 h-3.5" />
+                          {concretePlan.bmsRead.length} Kapitel lesen
+                        </span>
+                      )}
+                      {concretePlan.bmsReview.length > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                          <RefreshCw className="w-3.5 h-3.5" />
+                          {concretePlan.bmsReview.length} wiederholen
+                        </span>
+                      )}
+                      {concretePlan.bmsQuestions.length > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                          <ListChecks className="w-3.5 h-3.5" />
+                          BMS-Fragen
+                        </span>
+                      )}
+                      {concretePlan.kffTasks.length > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                          <Brain className="w-3.5 h-3.5" />
+                          KFF
+                        </span>
+                      )}
+                      {concretePlan.tvTexts > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200">
+                          <FileText className="w-3.5 h-3.5" />
+                          TV
+                        </span>
+                      )}
+                      {concretePlan.sekMinutes > 0 && (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200">
+                          <Heart className="w-3.5 h-3.5" />
+                          SEK
+                        </span>
+                      )}
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
+                      Zum Lernplan <ArrowRight className="w-4 h-4" />
+                    </span>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-[var(--text-primary)]">Heute lernen</h3>
-                    <p className="text-sm text-[var(--muted)] mt-0.5">
-                      {todayDueCount > 0 && `${todayDueCount} fällig`}
-                      {todayDueCount > 0 && todayWeaknessCount > 0 && " · "}
-                      {todayWeaknessCount > 0 && `${todayWeaknessCount} Schwachstellen`}
-                      {todayDueCount === 0 && todayWeaknessCount === 0 && "Priorisierte Aufgaben"}
-                    </p>
+                </Link>
+                <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
+                  <div
+                    className={cn(
+                      cardClass,
+                      "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                      "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
+                    )}
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
+                      <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
+                      <p className="text-xs text-[var(--muted)]">
+                        {prognoseSummary.hasEnoughData
+                          ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
+                          : "Ab 20 Fragen"}
+                      </p>
+                    </div>
+                    {prognoseSummary.hasEnoughData && (
+                      <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
+                        {prognoseSummary.totalPct.toFixed(0)}%
+                      </p>
+                    )}
                   </div>
-                </div>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
-                  Jetzt starten <ArrowRight className="w-4 h-4" />
-                </span>
-              </div>
-            </Link>
-            <Link to="/simulation" className="opacity-90 hover:opacity-100 transition-opacity">
-              <div
-                className={cn(
-                  cardClass,
-                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
-                  "border-l-4 border-l-[var(--accent-phys)] bg-linear-to-br from-blue-50/50 to-[var(--card)]/80 dark:from-blue-950/20 dark:to-[var(--card)]/80"
-                )}
-              >
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-phys)]/20 flex items-center justify-center shrink-0">
-                  <Timer className="w-5 h-5 text-[var(--accent-phys)]" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Simulation</p>
-                  <p className="text-xs text-[var(--muted)]">Gesamtstand</p>
-                </div>
-              </div>
-            </Link>
-            <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
-              <div
-                className={cn(
-                  cardClass,
-                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
-                  "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
-                )}
-              >
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
-                  <p className="text-xs text-[var(--muted)]">Punktestand</p>
-                </div>
-              </div>
-            </Link>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/today" className="lg:col-span-2">
+                  <div
+                    className={cn(
+                      cardClass,
+                      "h-full p-5 border-l-4 border-l-[var(--accent)] flex flex-col justify-between min-h-[120px]",
+                      "bg-linear-to-br from-indigo-50/50 to-[var(--card)] dark:from-indigo-950/20 dark:to-[var(--card)]"
+                    )}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/20 flex items-center justify-center shrink-0">
+                        <ListChecks className="w-6 h-6 text-[var(--accent)]" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-[var(--text-primary)]">Heute lernen</h3>
+                        <p className="text-sm text-[var(--muted)] mt-0.5">
+                          {todayDueCount > 0 && `${todayDueCount} fällig`}
+                          {todayDueCount > 0 && todayWeaknessCount > 0 && " · "}
+                          {todayWeaknessCount > 0 && `${todayWeaknessCount} Schwachstellen`}
+                          {todayDueCount === 0 &&
+                            todayWeaknessCount === 0 &&
+                            "Priorisierte Aufgaben"}
+                        </p>
+                      </div>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)] mt-3">
+                      Jetzt starten <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+                <Link to="/prognose" className="opacity-90 hover:opacity-100 transition-opacity">
+                  <div
+                    className={cn(
+                      cardClass,
+                      "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                      "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
+                    )}
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
+                      <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
+                      <p className="text-xs text-[var(--muted)]">
+                        {prognoseSummary.hasEnoughData
+                          ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
+                          : "Ab 20 Fragen"}
+                      </p>
+                    </div>
+                    {prognoseSummary.hasEnoughData && (
+                      <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
+                        {prognoseSummary.totalPct.toFixed(0)}%
+                      </p>
+                    )}
+                  </div>
+                </Link>
+              </>
+            )}
           </motion.section>
 
           {/* Motivationsleiste: Level links, Badges rechts daneben (eigene Zeile), dann Progress/Streak/Link */}
