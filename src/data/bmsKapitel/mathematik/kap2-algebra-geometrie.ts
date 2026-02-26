@@ -10,6 +10,7 @@ export const mathKapAlgebra: Kapitel = {
     // === from kap2-algebra ===
     {
       id: "ma-2-01",
+      diagram: "coordinate-system",
       title: "Gleichungen und Ungleichungen",
       stichworte: [
         "Lineare Gleichung",
@@ -692,6 +693,7 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
     },
     {
       id: "ma-2-03",
+      diagram: "coordinate-system",
       title: "Quadratische Gleichungen und binomische Formeln",
       stichworte: [
         "Binomische Formeln",
@@ -1019,6 +1021,7 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
     },
     {
       id: "ma-2-04",
+      diagram: "coordinate-system",
       title: "Potenz- und Wurzelgesetze",
       stichworte: [
         "Potenzgesetz",
