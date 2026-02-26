@@ -2615,3 +2615,6 @@ export function generateImplicationTrainingSet(
 ): ImplikationTask[] {
   return Array.from({ length: count }, () => generateImplicationTrainingTask(difficulty));
 }
+
+/** Für Skript generate-wortfluessigkeit-1000: Wortlisten pro Schwierigkeit (nur Großbuchstaben, ohne ÄÖÜß). */
+export { TRAINING_WF_WORDS, WORD_POOL_LEICHT, WORD_POOL_MITTEL, WORD_POOL_SCHWER };

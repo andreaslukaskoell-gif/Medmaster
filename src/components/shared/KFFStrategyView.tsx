@@ -18,13 +18,16 @@ const STRATEGY_KEY_TO_TEST_TYPE: Record<StrategyKey, KFFStrategyTestType> = {
 type Props = {
   strategyKey: StrategyKey;
   onBack: () => void;
+  /** Wenn gesetzt: großer Button am Ende „Weiter zum Üben“ (z.B. beim ersten Mal KFF-Unterbereich) */
+  onContinue?: () => void;
+  continueLabel?: string;
 };
 
 /**
  * Volle KFF-Strategie-Seite: Schritte, Fallen und visuelle Hilfen.
  * Wird nur unter „Strategie“ angezeigt, nicht beim Üben.
  */
-export default function KFFStrategyView({ strategyKey, onBack }: Props) {
+export default function KFFStrategyView({ strategyKey, onBack, onContinue, continueLabel }: Props) {
   const testType = STRATEGY_KEY_TO_TEST_TYPE[strategyKey];
   const strategy = KFF_STRATEGIES[testType];
   if (!strategy) return null;
@@ -73,6 +76,17 @@ export default function KFFStrategyView({ strategyKey, onBack }: Props) {
           </ul>
         </CardContent>
       </Card>
+
+      {onContinue && continueLabel && (
+        <div className="flex flex-col gap-3">
+          <Button onClick={onContinue} size="lg" className="w-full sm:w-auto">
+            {continueLabel}
+          </Button>
+          <Button variant="ghost" size="sm" onClick={onBack}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück zur Übersicht
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

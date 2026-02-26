@@ -228,6 +228,7 @@ function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
   const choices: { type: OpType; value: number }[][] = [
     [{ type: "+", value: 3 }],
     [{ type: "+", value: 5 }],
+    [{ type: "+", value: 2 }],
     [{ type: "−", value: 2 }],
     [{ type: "×", value: 2 }],
     [
@@ -237,6 +238,14 @@ function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
     [
       { type: "×", value: 2 },
       { type: "−", value: 1 },
+    ],
+    [
+      { type: "+", value: 3 },
+      { type: "−", value: 1 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 1 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
@@ -265,6 +274,21 @@ function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
       { type: "×", value: 3 },
       { type: "+", value: 1 },
     ],
+    [
+      { type: "+", value: 2 },
+      { type: "×", value: 3 },
+      { type: "−", value: 4 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "−", value: 3 },
+      { type: "+", value: 2 },
+    ],
+    [
+      { type: "−", value: 1 },
+      { type: "×", value: 2 },
+      { type: "+", value: 5 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
@@ -289,6 +313,24 @@ function pickOpsHard(rand: () => number): { type: OpType; value: number }[] {
       { type: "×", value: 2 },
       { type: "−", value: 8 },
       { type: "÷", value: 2 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 4 },
+      { type: "−", value: 2 },
+      { type: "÷", value: 2 },
+    ],
+    [
+      { type: "+", value: 5 },
+      { type: "×", value: 2 },
+      { type: "−", value: 6 },
+      { type: "+", value: 3 },
+    ],
+    [
+      { type: "−", value: 3 },
+      { type: "×", value: 3 },
+      { type: "+", value: 4 },
+      { type: "−", value: 2 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
