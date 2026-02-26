@@ -399,6 +399,7 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
     {
       id: "ph-1-02",
       title: "Präfixe und wissenschaftliche Notation",
+      diagram: "coordinate-system",
       stichworte: [
         "SI-Präfixe",
         "Zehnerpotenz",
@@ -750,6 +751,7 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
+      diagram: "coordinate-system",
       stichworte: [
         "Dimensionsanalyse",
         "dimensionale Homogenität",
@@ -1105,6 +1107,7 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
     {
       id: "ph-2-01",
       title: "Newtonsche Gesetze und Kinematik",
+      diagram: "newton-forces",
       stichworte: [
         "Trägheitsgesetz",
         "F=ma",

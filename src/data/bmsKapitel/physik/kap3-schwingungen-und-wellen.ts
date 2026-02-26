@@ -13,6 +13,7 @@ export const physKap3: Kapitel = {
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
+      diagram: "wave-types",
       stichworte: [
         "Harmonische Schwingung",
         "Amplitude",
@@ -378,6 +379,7 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
+      diagram: "wave-types",
       stichworte: [
         "Wellengleichung",
         "Wellenlänge",
