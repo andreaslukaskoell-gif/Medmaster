@@ -108,6 +108,7 @@ export default function DoubleMembraneOrganelles() {
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Organellen für Details.</p>
       <svg viewBox="0 0 800 500" className="w-full max-w-4xl mx-auto">
+        <title>Doppelmembran-Organellen — Mitochondrium und Chloroplast</title>
         {/* Background */}
         <rect width="800" height="500" fill="#f8fafc" className="dark:fill-gray-900" />
 

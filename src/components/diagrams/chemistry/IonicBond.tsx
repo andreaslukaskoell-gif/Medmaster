@@ -36,6 +36,7 @@ export default function IonicBond() {
 
       {step === "transfer" ? (
         <svg viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
+          <title>Ionenbindung — Elektronenübertragung und NaCl-Gitter</title>
           <defs>
             <radialGradient id="naGrad" cx="40%" cy="35%" r="55%">
               <stop offset="0%" stopColor="#d1d5db" />

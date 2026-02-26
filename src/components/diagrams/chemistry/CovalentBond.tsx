@@ -10,6 +10,7 @@ export default function CovalentBond() {
       </h4>
       <p className="text-xs text-muted">Lewis-Struktur, Bindungswinkel und Dipolmoment.</p>
       <svg viewBox="0 0 420 350" className="w-full max-w-lg mx-auto">
+        <title>Kovalente Bindung — Elektronenpaarbindung</title>
         <defs>
           <radialGradient id="oGrad" cx="40%" cy="35%" r="55%">
             <stop offset="0%" stopColor="#fca5a5" />

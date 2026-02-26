@@ -35,6 +35,7 @@ export default function CircuitDiagram() {
 
       {view === "series" ? (
         <svg viewBox="0 0 460 300" className="w-full max-w-lg mx-auto">
+          <title>Elektrischer Schaltkreis — Reihen- und Parallelschaltung</title>
           <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
             Reihenschaltung
           </text>

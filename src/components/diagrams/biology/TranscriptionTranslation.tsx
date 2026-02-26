@@ -52,6 +52,7 @@ export default function TranscriptionTranslation() {
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 480 400" className="w-full max-w-xl mx-auto">
+        <title>Transkription und Translation — vom Gen zum Protein</title>
         {/* ===== SECTION 1: TRANSKRIPTION ===== */}
         <rect
           x="10"

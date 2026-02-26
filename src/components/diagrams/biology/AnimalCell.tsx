@@ -148,6 +148,7 @@ export default function AnimalCell() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Tierzelle — Aufbau</h4>
       <p className="text-xs text-muted">Klicke auf eine Organelle für Details.</p>
       <svg viewBox="0 0 600 500" className="w-full max-w-2xl mx-auto">
+        <title>Tierische Zelle — Aufbau mit Organellen</title>
         <defs>
           {/* Radial gradient for cell background */}
           <radialGradient id="cellGradient" cx="50%" cy="45%" r="55%">

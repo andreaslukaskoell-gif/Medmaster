@@ -35,6 +35,7 @@ export default function LensImaging() {
 
       {lens === "converging" ? (
         <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+          <title>Strahlengang durch Sammel- und Zerstreuungslinsen</title>
           <defs>
             <marker
               id="arrowRayC"

@@ -93,6 +93,7 @@ export default function MembraneTransport() {
       </p>
 
       <svg viewBox="0 0 650 380" className="w-full max-w-2xl mx-auto">
+        <title>Membrantransport — Diffusion, Osmose, aktiver Transport</title>
         <defs>
           {/* Gradients */}
           <linearGradient id="mt-bg" x1="0" y1="0" x2="0" y2="1">

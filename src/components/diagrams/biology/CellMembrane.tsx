@@ -132,6 +132,7 @@ export default function CellMembrane() {
       </p>
 
       <svg viewBox="0 0 500 310" className="w-full max-w-xl mx-auto">
+        <title>Flüssig-Mosaik-Modell der Zellmembran</title>
         <defs>
           {/* Head gradient — teal with depth */}
           <radialGradient id="headGradient" cx="35%" cy="35%">

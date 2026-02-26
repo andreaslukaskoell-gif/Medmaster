@@ -42,6 +42,7 @@ export default function MitosisPhases() {
       </p>
 
       <svg viewBox={`0 0 ${totalW} 250`} className="w-full max-w-2xl mx-auto">
+        <title>Mitose — Prophase, Metaphase, Anaphase, Telophase</title>
         {phases.map((phase, i) => {
           const x = i * (boxW + gap);
           const cx = x + boxW / 2;

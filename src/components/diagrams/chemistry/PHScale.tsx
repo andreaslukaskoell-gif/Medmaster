@@ -45,6 +45,7 @@ export default function PHScale() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">pH-Skala</h4>
       <p className="text-xs text-muted">Klicke auf eine Substanz für Details.</p>
       <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
+        <title>pH-Skala — sauer, neutral, basisch</title>
         <text x="230" y="22" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
           pH-Skala (0 - 14)
         </text>

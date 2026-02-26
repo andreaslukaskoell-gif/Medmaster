@@ -84,6 +84,7 @@ export default function ActionPotential() {
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Phasen für Details.</p>
 
       <svg viewBox="0 0 480 380" className="w-full max-w-xl mx-auto">
+        <title>Aktionspotential — Ruhepotential, Depolarisation, Repolarisation</title>
         {/* Grid lines */}
         {[-90, -70, -55, -30, 0, 30].map((mv) => (
           <g key={`grid-${mv}`}>

@@ -76,6 +76,7 @@ export default function BloodGroups() {
       </p>
 
       <svg viewBox="0 0 480 320" className="w-full max-w-xl mx-auto">
+        <title>AB0-Blutgruppensystem — Antigene und Antikörper</title>
         {/* Table header */}
         <rect x={tableX} y={tableY} width={totalW} height={headerH} rx="6" fill="#0d9488" />
         {cols.map((col, i) => (

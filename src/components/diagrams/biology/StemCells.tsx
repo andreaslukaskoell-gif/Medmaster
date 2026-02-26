@@ -92,6 +92,7 @@ export default function StemCells() {
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Zelltypen für Details.</p>
       <svg viewBox="0 0 600 500" className="w-full max-w-2xl mx-auto">
+        <title>Stammzellen — Potenz-Stufen</title>
         {/* Background labels for differentiation levels */}
         <text x="10" y="25" fontSize="11" fill="#6b7280" fontWeight="600">
           Totipotent

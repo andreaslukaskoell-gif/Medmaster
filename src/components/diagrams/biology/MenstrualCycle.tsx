@@ -129,6 +129,7 @@ export default function MenstrualCycle() {
       </p>
 
       <svg viewBox="0 0 480 340" className="w-full max-w-xl mx-auto">
+        <title>Weiblicher Zyklus — Follikelphase, Ovulation, Lutealphase</title>
         {/* Phase backgrounds */}
         {phases.map((phase) => (
           <g key={phase.label}>

@@ -106,6 +106,7 @@ export default function EMSpectrum() {
       </h4>
       <p className="text-xs text-muted">Klicke auf einen Bereich für Details.</p>
       <svg viewBox="0 0 460 300" className="w-full max-w-lg mx-auto">
+        <title>Elektromagnetisches Spektrum</title>
         <defs>
           <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#8b5cf6" />

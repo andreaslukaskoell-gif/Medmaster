@@ -85,6 +85,7 @@ export default function HeartAnatomy() {
       </p>
 
       <svg viewBox="0 0 480 440" className="w-full max-w-xl mx-auto">
+        <title>Anatomie des Herzens — Kammern, Klappen und Gefäße</title>
         {/* Heart outline */}
         <path
           d="M240,50 Q180,20 140,60 Q90,110 100,170 Q100,200 120,240 L240,400 L360,240 Q380,200 380,170 Q390,110 340,60 Q300,20 240,50"

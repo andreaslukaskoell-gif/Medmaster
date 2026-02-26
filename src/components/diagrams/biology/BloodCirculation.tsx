@@ -70,6 +70,7 @@ export default function BloodCirculation() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Blutkreislauf</h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Abschnitte für Details.</p>
       <svg viewBox="0 0 480 500" className="w-full max-w-xl mx-auto">
+        <title>Großer und kleiner Blutkreislauf</title>
         {/* Background */}
         <rect width="480" height="500" fill="white" />
 

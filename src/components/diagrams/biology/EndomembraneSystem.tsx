@@ -64,6 +64,7 @@ export default function EndomembraneSystem() {
       </p>
 
       <svg viewBox="0 0 600 500" className="w-full max-w-2xl mx-auto">
+        <title>Endomembransystem — ER, Golgi, Vesikel, Lysosom</title>
         <defs>
           {/* Arrow markers */}
           <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">

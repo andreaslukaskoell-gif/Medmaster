@@ -186,6 +186,7 @@ export default function PedigreeAnalysis() {
       </div>
 
       <svg viewBox="0 0 500 340" className="w-full max-w-xl mx-auto">
+        <title>Stammbaum-Analyse — Erbgänge</title>
         {/* Generation labels */}
         <text x="15" y="64" fontSize="13" fill="#0d9488" fontWeight="bold">
           I

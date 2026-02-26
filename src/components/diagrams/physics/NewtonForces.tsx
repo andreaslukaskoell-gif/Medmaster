@@ -41,6 +41,7 @@ export default function NewtonForces() {
       </h4>
       <p className="text-xs text-muted">Klicke auf eine Kraft f\u00FCr Details.</p>
       <svg viewBox="0 0 520 350" className="w-full max-w-2xl mx-auto">
+        <title>Newtonsche Gesetze und Kräftediagramm</title>
         <defs>
           <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
             <path d="M0,0 L8,3 L0,6" fill="#ef4444" />

@@ -318,7 +318,7 @@ Ein Wurfgeschoss fliegt eine Parabel, und die Wirkstoffkonzentration im Blut err
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:logarithm-function}}
+{{DIAGRAM:quadratic-function}}
 
 **Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
 
@@ -610,7 +610,7 @@ Paracetamol hat eine Halbwertszeit von etwa 2 Stunden -- nach 2 Stunden ist die 
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:logarithm-function}}
+{{DIAGRAM:exponential-function}}
 
 **Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
 
@@ -1204,7 +1204,7 @@ Auf dem Monitor einer Intensivstation laufen Kurven: Herzfrequenz, Sauerstoffsä
 
 {{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:logarithm-function}}
+{{DIAGRAM:exponential-function}}
 
 **Idee:** **Asymptote** = Grenzlinie, der sich der Graph annähert (horizontal: y = const für x→±∞; vertikal: x = const, wo f→±∞). **Semilog-Plot** (y-Achse log): Exponentialfunktion wird zur Geraden; **EC₅₀** = Konzentration bei halbmaximaler Wirkung (Steilster Anstieg bei sigmoider Kurve). **Michaelis-Menten:** Sättigungskinetik, maximale Reaktionsgeschwindigkeit v_max.
 

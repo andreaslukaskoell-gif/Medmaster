@@ -38,7 +38,7 @@ Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) --
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:percent-fractions}}
 
 {{DIAGRAM:coordinate-system}}
 
@@ -433,7 +433,7 @@ Eine Tablette enthaelt 500 mg Wirkstoff, ein Laborwert zeigt 4,2 µmol/L, das mi
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:percent-fractions}}
 
 {{DIAGRAM:coordinate-system}}
 
@@ -839,7 +839,7 @@ Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen --
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:percent-fractions}}
 
 {{DIAGRAM:coordinate-system}}
 

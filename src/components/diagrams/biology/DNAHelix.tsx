@@ -47,6 +47,7 @@ export default function DNAHelix() {
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 620 470" className="w-full max-w-2xl mx-auto">
+        <title>DNA-Doppelhelix mit Basenpaaren</title>
         {/* ---- 5' / 3' end labels (top) ---- */}
         <g
           className="cursor-pointer"

@@ -50,6 +50,7 @@ export default function AtomicOrbitals() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Atomorbitale</h4>
       <p className="text-xs text-muted">Klicke auf ein Orbital für Details.</p>
       <svg viewBox="0 0 540 380" className="w-full max-w-2xl mx-auto">
+        <title>Atomorbitale — s-, p-, d-Orbitale</title>
         <defs>
           <radialGradient id="sGrad" cx="40%" cy="35%" r="55%">
             <stop offset="0%" stopColor="#99f6e4" />

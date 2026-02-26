@@ -142,6 +142,7 @@ export default function NervousSystem() {
       </p>
 
       <svg viewBox="0 0 600 520" className="w-full max-w-2xl mx-auto">
+        <title>Zentrales und peripheres Nervensystem</title>
         <defs>
           {/* Brain interior gradient */}
           <radialGradient id="ns-brainGrad" cx="45%" cy="40%" r="55%">

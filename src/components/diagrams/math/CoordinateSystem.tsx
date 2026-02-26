@@ -75,6 +75,7 @@ export default function CoordinateSystem() {
       </div>
 
       <svg viewBox="0 0 420 310" className="w-full max-w-lg mx-auto">
+        <title>Kartesisches Koordinatensystem</title>
         <text x="210" y="18" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
           Funktionstypen im Vergleich
         </text>

@@ -65,6 +65,7 @@ export default function DigestiveSystem() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Verdauungssystem</h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Organe für Details.</p>
       <svg viewBox="0 0 420 520" className="w-full max-w-xl mx-auto">
+        <title>Verdauungstrakt — Mund bis Dickdarm</title>
         {/* Mouth */}
         <ellipse
           id="mouth"

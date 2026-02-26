@@ -55,6 +55,7 @@ export default function UnitCircle() {
       </div>
 
       <svg viewBox="0 0 430 380" className="w-full max-w-lg mx-auto">
+        <title>Einheitskreis — Sinus, Kosinus und Bogenmaß</title>
         <text x="215" y="20" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
           Einheitskreis (r = 1)
         </text>

@@ -70,6 +70,7 @@ export default function Nephron() {
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
       <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
+        <title>Nephron — Glomerulus, Tubulus und Henle-Schleife</title>
         {/* Cortex / Medulla zones */}
         <rect x="10" y="10" width="460" height="160" rx="0" fill="#f0fdfa" opacity="0.3" />
         <rect x="10" y="170" width="460" height="240" rx="0" fill="#ccfbf1" opacity="0.2" />
