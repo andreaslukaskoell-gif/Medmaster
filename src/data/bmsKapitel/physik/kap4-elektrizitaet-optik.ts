@@ -480,7 +480,6 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
             "P = I²·R (Joulesche Wärme). Elektrochirurgie: HF-Strom → Wärme ohne Muskelreizung.",
         },
       ],
-      diagram: "circuit",
 
       merksätze: [
         "Ohmsches Gesetz: U = R·I — gilt für lineare Widerstände.",
@@ -779,7 +778,6 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
           merksatz: "τ = R·C (Zeitkonstante). W = ½·C·U² (gespeicherte Energie im Kondensator).",
         },
       ],
-      diagram: "circuit",
 
       merksätze: [
         "Reihenschaltung R: R_ges = R₁ + R₂ + ... (größer als jeder Einzelwert).",
@@ -1354,7 +1352,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
           merksatz: "sin α_grenz = n₂/n₁ – nur möglich wenn n₁ > n₂.",
         },
       ],
-      diagram: "lens-imaging",
 
       merksätze: [
         "Reflexionsgesetz: Einfallswinkel α = Ausfallswinkel α (beide zur Normalen gemessen).",
@@ -1652,7 +1649,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
             "OCT nutzt Interferenz von Niederkohärenz-Licht für hochaufgelöste Tiefenbilder (~10 µm).",
         },
       ],
-      diagram: "em-spectrum",
 
       merksätze: [
         "Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot).",

@@ -783,9 +783,7 @@ In der Praxis wird die theoretische Ausbeute selten vollständig erreicht (Neben
 
 **Ausbeute % = (tatsächliche Ausbeute / theoretische Ausbeute) × 100**
 
-**Rechenbeispiel — Prozentuale Ausbeute:**
-Theoretisch sollten 50 g Produkt entstehen. Tatsächlich werden 38 g isoliert.
-Ausbeute = (38/50) × 100 = 76 %. Die 24 % Verlust: Nebenreaktionen, unvollständiger Umsatz, Aufarbeitungsverluste.
+Beispiel: 50 g theoretisch, 38 g tatsächlich → (38/50) × 100 = 76 %.
 
 > **Merke:** Die theoretische Ausbeute ist immer die Obergrenze. In der Realität wird sie durch Nebenreaktionen, Gleichgewichtslage und Verluste bei der Isolierung unterschritten.
 
@@ -798,11 +796,7 @@ Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreic
 - **Blutgasanalyse:** Stöchiometrie des CO₂/HCO₃⁻-Puffersystems: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 - **Glucose-Oxidation:** C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; pro Mol Glucose 6 Mol CO₂ → Respirationsquotient = 1,0
 
-**Rechenbeispiel — Physiologische Kochsalzlösung (NaCl 0,9 %):**
-- 0,9 % (w/v) bedeutet 0,9 g NaCl pro 100 mL
-- In 1000 mL: 9 g NaCl
-- Molare Konzentration: c = 9 g / (58,5 g/mol × 1 L) = 0,154 mol/L = 154 mmol/L
-- Entspricht annähernd der physiologischen Na⁺-Konzentration im Blutplasma (~140 mmol/L)
+Beispiel NaCl 0,9 %: 9 g NaCl pro 1 L → c = 9 / 58,5 = 0,154 mol/L ≈ 154 mmol/L (nahe dem Plasma-Na⁺ von ~140 mmol/L).
 
 **Respirationsquotienten verschiedener Nährstoffe:**
 

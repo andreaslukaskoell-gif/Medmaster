@@ -3102,10 +3102,6 @@ Das ist keine rein chemische Spielerei: Dein Körper nutzt dasselbe Prinzip. Ner
 
 ## Warum reicht E° allein nicht aus?
 
-![Nernst](/grafik-nernst.svg)
-
-![Galvanische Zelle und Halbzellen](/grafik-galvanische-zelle.svg)
-
 Im letzten Unterkapitel hast du das **Standardpotenzial E°** kennengelernt — die Spannung unter idealen Laborbedingungen (25 °C, alle Konzentrationen exakt 1 mol/L). In der Realität sind diese Bedingungen aber fast nie erfüllt: Im Blut liegt die K⁺-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Also brauchen wir eine Formel, die das berücksichtigt.
 
 **Die Grundidee in einem Satz:** Je mehr vom Oxidationsmittel vorhanden ist, desto stärker "will" die Reaktion ablaufen → die Spannung steigt. Je mehr vom Reduktionsmittel da ist, desto schwächer wird der Antrieb → die Spannung sinkt.

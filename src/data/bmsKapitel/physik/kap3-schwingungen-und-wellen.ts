@@ -223,8 +223,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
         },
       ],
 
-      diagram: "wave-types",
-
       merksätze: [
         "x(t) = A · cos(ωt + φ₀) – die Grundformel der harmonischen Schwingung.",
         "ω = 2πf = 2π/T – Kreisfrequenz verknüpft f und T.",
@@ -421,8 +419,6 @@ Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen
 
 **Formelklartext:** c = f·λ bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** × **Wellenlänge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt λ = c/f – die Wellenlänge **passt sich** an. Beim Übergang in ein schnelleres Medium (z. B. Schall: Luft → Wasser) wird λ **größer**; in ein langsameres Medium wird λ **kleiner**. Die Frequenz bleibt dabei immer gleich („Quelle schwingt weiter mit derselben Rate“).
 
-**Prüfungsrelevante Zahlen:** **Lichtgeschwindigkeit** (Vakuum/Luft) **c ≈ 3·10⁸ m/s = 300 000 km/s**. **Sichtbares Licht** hat Wellenlängen im Bereich **380 nm bis 750 nm** (nanometer, nicht mm, cm oder km). Beispiel: Trägerfrequenz 2 GHz (z. B. Mobilfunk) → λ = c/f = 3·10⁸/(2·10⁹) = 0,15 m = **15 cm**.
-
 > **Merke:** c gehört zum Medium, f gehört zur Quelle, λ = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
 
 Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge λ = c/f. In einem schnelleren Medium wird λ grösser, in einem langsameren kleiner – bei identischer Frequenz. Dieses Prinzip erklärt sowohl Brechung als auch die unterschiedlichen Wellenlängen von Ultraschall in verschiedenen Geweben.
@@ -587,8 +583,6 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
           merksatz: "Hohe US-Frequenz → bessere Auflösung, aber geringere Eindringtiefe.",
         },
       ],
-
-      diagram: "wave-types",
 
       merksätze: [
         "c = f · λ – die Grundgleichung jeder Welle.",

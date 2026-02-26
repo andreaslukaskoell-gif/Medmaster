@@ -453,11 +453,6 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 - Enantiomere haben gleiche physikalische Eigenschaften, Diastereomere nicht (trennbar!)
 - cis/trans an C=C ist Konfigurationsisomerie (keine Rotation), nicht Konformationsisomerie
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- n Chiralitätszentren → max. 2ⁿ Stereoisomere (Ausnahme: meso mit Spiegelebene)
-- Thalidomid: R = Sedativum, S = teratogen; Racemisierung in vivo
-- Proteinogene Aminosäuren: alle L; Polarimeter: [α] = α/(c·l); (+) rechts-, (−) linksdrehend
-
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -1351,14 +1346,13 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
       title: "Aminosäuren und Proteine",
       content: `## Einleitung
 
-**Worum geht es?** **Proteine** sind Ketten aus **Aminosäuren**, verknüpft durch **Peptidbindungen** (–CO–NH–). Die Struktur wird in vier Ebenen beschrieben: **Primärstruktur** (AS-Sequenz), **Sekundärstruktur** (α-Helix, β-Faltblatt durch H-Brücken im Rückgrat), **Tertiärstruktur** (3D-Faltung), **Quartärstruktur** (Untereinheiten, z. B. Hämoglobin α₂β₂). **Warum für den MedAT relevant?** Grundstruktur der Aminosäuren, Peptidbindung, Denaturierung vs. Hydrolyse und klinische Biomarker (Troponin, PKU, Sichelzellanämie) sind prüfungsnah. **Welche Fragen werden beantwortet?** „Was sind die 4 Ebenen der Proteinstruktur?“; „Was ist Denaturierung?“; „pI einer Aminosäure?“; „Sichelzellanämie — welche Mutation?“; „Troponin wofür?“; „Disulfidbrücken in welcher Strukturebene?“.
+Ein einziger Aminosäureaustausch — Glutamat zu Valin an Position 6 der beta-Kette — verwandelt normales Hämoglobin in Sichelzell-Hämoglobin und verursacht eine schwere Erbkrankheit. Dieses Beispiel zeigt eindrucksvoll, wie die **Proteinstruktur** von der exakten Aminosäuresequenz abhängt. Proteine sind die vielseitigsten Makromoleküle des Lebens: Sie katalysieren Reaktionen (Enzyme), transportieren Sauerstoff (Hämoglobin), bilden Strukturen (Kollagen) und übertragen Signale (Rezeptoren). Ihr Verständnis beginnt bei den 20 proteinogenen Aminosäuren und den vier Strukturebenen.
 
 **In diesem Kapitel lernst du:**
-- **Aminosäuren:** α-C mit –NH₂, –COOH, –H, –R; **Zwitterion** bei physiologischem pH; 20 proteinogene, L-Konfiguration
-- **Peptidbindung:** Kondensation –CO–NH–; planar, partieller Doppelbindungscharakter
-- **Primär-** (Sequenz), **Sekundär-** (α-Helix, β-Faltblatt), **Tertiär-** (3D, Disulfid, hydrophob), **Quartär-** (Oligomere)
-- **Denaturierung:** Verlust von Sekundär–Quartärstruktur, Primärstruktur bleibt; **isoelektrischer Punkt (pI)**
-- Klinisch: Troponin (Herzinfarkt), Sichelzellanämie (Glu6Val), PKU, essentielle AS
+- wie alle 20 proteinogenen Aminosäuren aufgebaut sind und warum sie in Lösung als Zwitterionen vorliegen
+- die vier Ebenen der Proteinstruktur und welche Kräfte jede Ebene stabilisieren
+- den Unterschied zwischen Denaturierung (Faltung geht verloren) und Hydrolyse (Peptidbindungen brechen)
+- klinische Bezüge: warum eine einzige Mutation Sichelzellanämie verursacht und was Troponin als Biomarker zeigt
 
 ---
 
@@ -1465,40 +1459,16 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Vier Ebenen der Proteinstruktur?" → Primär (Sequenz), Sekundär (Helix/Faltblatt), Tertiär (3D), Quartär (Oligomere)
+- „Was ist Denaturierung?" → Verlust der Faltung (Sekundär-Quartär), Primärstruktur bleibt
+- „Isoelektrischer Punkt?" → pH mit Nettoladung 0; unter pI positiv, über pI negativ
+- „Disulfidbrücken in welcher Strukturebene?" → Tertiär- (und Quartär-)struktur
 
-**Zentral prüfungsrelevant:**
-- **Proteine** = Ketten aus **Aminosäuren** (Peptidbindung); **20 proteinogene** AS, alle L (außer Glycin achiral)
-- **Peptidbindung** –CO–NH–: planar, partieller Doppelbindungscharakter; Kondensation unter H₂O-Abspaltung
-- **Primärstruktur:** AS-Sequenz (Peptidbindungen); **Sekundärstruktur:** α-Helix, β-Faltblatt (H-Brücken im Rückgrat)
-- **Tertiärstruktur:** 3D-Faltung (hydrophob, Disulfidbrücken, ionisch); **Quartärstruktur:** Untereinheiten (z. B. Hämoglobin α₂β₂)
-- **Denaturierung:** Verlust Sekundär–Quartärstruktur, **Primärstruktur bleibt** (keine Hydrolyse!); Hitze, pH, Harnstoff, Reduktionsmittel
-- **Isoelektrischer Punkt (pI):** pH mit Nettoladung 0; bei pH < pI positiv, bei pH > pI negativ
-- **Disulfidbrücken** (–S–S–) = Tertiär-/Quartärstruktur (kovalent, Cystein); Sekundär = H-Brücken (nicht-kovalent)
-- Klinisch: **Troponin** (Herzinfarkt 3–6 h), Sichelzellanämie (Glu6Val in β-Globin), PKU (Phe-Hydroxylase), essentielle AS (8 Erwachsene)
-
-**Ergänzend vertiefend:** Ramachandran-Plot, Chaperone, posttranslationale Modifikationen. Typische Fallen: α-Helix (H-Brücken im Rückgrat, C=O(n)–N-H(n+4)) ≠ β-Faltblatt (zwischen Strängen); Disulfidbrücken = Tertiärstruktur (kovalent), nicht Sekundärstruktur.
-
-**Häufige Prüfungsfragen:**
-- "Was sind die 4 Ebenen der Proteinstruktur?" → Primär (Sequenz), Sekundär (α-Helix/β-Faltblatt), Tertiär (3D), Quartär (Oligomere)
-- "Was ist Denaturierung?" → Verlust Sekundär–Quartärstruktur, Primärstruktur bleibt
-- "Was ist der isoelektrische Punkt?" → pH mit Nettoladung 0 (Zwitterion)
-- "Welche Struktur stabilisieren Disulfidbrücken?" → Tertiär- (und Quartär-)struktur
-
-**Typische Prüfungsfallen:**
-- α-Helix (H-Brücken im Rückgrat, C=O(n)–N-H(n+4)) ≠ β-Faltblatt (H-Brücken zwischen Strängen)
-- Disulfidbrücken = Tertiärstruktur (kovalent) ≠ Sekundärstruktur (H-Brücken)
-- Denaturierung ≠ Hydrolyse — Peptidbindungen bleiben bei Denaturierung erhalten
-
-**Wichtige Begriffe & Definitionen:**
-- **Peptidbindung:** Amidbindung –CO–NH– zwischen α-COOH und α-NH₂; planar, Mesomerie.
-- **Primärstruktur:** lineare Aminosäuresequenz, festgelegt durch Peptidbindungen.
-- **Denaturierung:** Verlust der nativen Faltung (Sekundär–Quartär) bei erhaltener Primärstruktur.
-- **pI (isoelektrischer Punkt):** pH-Wert, bei dem die Nettoladung einer Aminosäure null ist.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Essentielle AS (8): Ile, Leu, Lys, Met, Phe, Thr, Trp, Val (+ His für Kinder)
-- Sichelzellanämie: Glu6Val in β-Globin; Troponin T/I = Herzinfarkt-Marker (3–6 h); PKU = Phe-Hydroxylase-Defekt
+**Typische Fallen:**
+- Denaturierung bricht keine Peptidbindungen — das wäre Hydrolyse
+- Disulfidbrücken sind kovalente Bindungen (Tertiärstruktur), nicht H-Brücken (Sekundärstruktur)
+- Alpha-Helix: H-Brücken im Rückgrat (n → n+4); Beta-Faltblatt: H-Brücken zwischen Strängen
 
 ---
 
@@ -1713,14 +1683,13 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       content: `## Einleitung
 
-**Worum geht es?** **Kohlenhydrate** sind Zucker: **Monosaccharide** (Glucose, Fructose, Galactose), **Disaccharide** (Maltose, Laktose, Saccharose) und **Polysaccharide** (Stärke, Glykogen, Cellulose). Die **α- vs. β-glycosidische Bindung** entscheidet über Verdaulichkeit (Stärke α-1,4 verdaulich, Cellulose β-1,4 unverdaulich). **Warum für den MedAT relevant?** Anomere (α/β), reduzierende vs. nicht reduzierende Zucker, HbA1c als Langzeit-Blutzuckermarker und Laktoseintoleranz werden häufig abgefragt. **Welche Fragen werden beantwortet?** „Was ist HbA1c?“; „Warum ist Cellulose unverdaulich?“; „Reduzierender Zucker?“; „α- vs. β-Anomer?“; „Laktoseintoleranz vs. Galaktosämie?“; „Maltose, Saccharose, Laktose — Bestandteile?“.
+Kartoffeln und Holz bestehen beide aus Glucose-Einheiten — aber Kartoffelstärke kannst du verdauen, Holzcellulose nicht. Der einzige Unterschied: die Verknüpfung der Zuckerbausteine (alpha vs. beta). Diese scheinbar kleine chemische Nuance hat enorme biologische Konsequenzen. **Kohlenhydrate** sind die wichtigste Energiequelle des Körpers und gleichzeitig Strukturmaterial, Erkennungssignale auf Zelloberflächen und Bestandteile der DNA. Vom Blutzucker über den Langzeitmarker HbA1c bis zur Laktoseintoleranz — Kohlenhydratchemie ist Alltagsmedizin.
 
 **In diesem Kapitel lernst du:**
-- **Monosaccharide:** Aldosen vs. Ketosen; **α- und β-Anomere** (Haworth: OH unten/oben am anomeren C); Epimere (z. B. D-Galactose = C4-Epimer von D-Glucose)
-- **Disaccharide:** Maltose (Glc+Glc, α-1,4, reduzierend), **Saccharose** (Glc+Frc, nicht reduzierend), **Laktose** (Gal+Glc, β-1,4, reduzierend)
-- **Polysaccharide:** Stärke (α-1,4/α-1,6), Glykogen (stark verzweigt), Cellulose (β-1,4, unverdaulich)
-- **HbA1c:** nicht-enzymatische Glykierung von Hämoglobin, Langzeit-Blutzucker 8–12 Wochen; Zielwert <7 %
-- **Laktoseintoleranz:** Laktasemangel; Galaktosämie = Enzymdefekt im Galactose-Abbau
+- den Unterschied zwischen Aldosen und Ketosen sowie alpha- und beta-Anomeren
+- aus welchen Bausteinen die drei wichtigsten Disaccharide bestehen und welches nicht reduzierend ist
+- warum Stärke verdaulich, Cellulose aber unverdaulich ist (alpha- vs. beta-Bindung)
+- was HbA1c biochemisch ist und warum es als Langzeit-Blutzuckermarker über 8-12 Wochen funktioniert
 
 ---
 
@@ -1782,36 +1751,16 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was ist HbA1c?" → Glykiertes Hämoglobin; Langzeit-Blutzucker 8-12 Wochen; Zielwert <7 %
+- „Warum ist Cellulose unverdaulich?" → beta-1,4-Bindung; Mensch hat keine Cellulase
+- „Welches Disaccharid ist nicht reduzierend?" → Saccharose (beide anomeren C gebunden)
+- „alpha- vs. beta-Anomer?" → alpha: OH unten in Haworth (axial); beta: OH oben (aequatorial)
 
-**Zentral prüfungsrelevant:**
-- **Monosaccharide:** Aldosen (CHO am C1) vs. Ketosen (C=O am C2); **α-Anomer** (OH unten in Haworth) vs. **β-Anomer** (OH oben); Epimere (z. B. D-Galactose = C4-Epimer von D-Glucose)
-- **Disaccharide:** **Maltose** (Glc-α1,4-Glc, reduzierend), **Saccharose** (Glc-α1-β2-Frc, **nicht reduzierend**), **Laktose** (Gal-β1,4-Glc, reduzierend)
-- **Reduzierender Zucker:** freie Halbacetalgruppe → reduziert Fehling/Tollens; Saccharose nicht reduzierend (beide anomeren C gebunden)
-- **Polysaccharide:** Stärke (α-1,4 + α-1,6), **Glykogen** (α-1,6 alle 8–12 Reste), **Cellulose** (β-1,4, **unverdaulich** — keine Cellulase)
-- **HbA1c:** nicht-enzymatische **Glykierung** von Hämoglobin; Langzeit-Blutzucker **8–12 Wochen**; Zielwert **<7 %** (53 mmol/mol) bei Diabetes
-- **Laktoseintoleranz:** Laktasemangel (erworben, ~75 % Weltbevölkerung) ≠ **Galaktosämie** (Enzymdefekt Galactose-Abbau, neonatal)
-
-**Ergänzend vertiefend:** Mutarotation, AGEs, Glykosylierung (enzymatisch) vs. Glykierung. Typische Fallen: α-Anomer (OH unten) ≠ β-Anomer (OH oben); Amylose (linear, Iod blau) ≠ Amylopektin (verzweigt, Iod rotbraun); Laktoseintoleranz (Laktase) ≠ Galaktosämie (Abbau defekt).
-
-**Häufige Prüfungsfragen:**
-- "Was ist HbA1c?" → Glykiertes Hämoglobin, 8–12 Wochen Glukosegedächtnis; Zielwert <7 %
-- "Warum ist Cellulose unverdaulich?" → β-1,4-Bindung; Mensch hat keine β-Glucosidase/Cellulase
-- "Reduzierender Zucker?" → Freie Halbacetalgruppe; Saccharose nicht reduzierend
-- "α- vs. β-Anomer?" → α: OH unten (axial); β: OH oben (äquatorial) in Haworth
-
-**Typische Prüfungsfallen:**
-- α-Anomer (OH unten) ≠ β-Anomer (OH oben); Amylose (linear, Iod blau) ≠ Amylopektin (verzweigt, Iod rotbraun)
-- Laktoseintoleranz (Laktasemangel) ≠ Galaktosämie (Galactose-Abbau defekt)
-
-**Wichtige Begriffe & Definitionen:**
-- **Anomer:** Stereoisomere am anomeren C (C1 bei Aldosen) nach Ringschluss; α = OH axial/unten, β = OH äquatorial/oben.
-- **Reduzierender Zucker:** besitzt freie Halbacetalgruppe und reduziert Fehling/Tollens (Cu²⁺ → Cu₂O).
-- **HbA1c:** Anteil glykierten Hämoglobins; nicht-enzymatische Reaktion, reflektiert mittlere Blutglukose der letzten 8–12 Wochen.
-- **Glykierung:** nicht-enzymatische Anlagerung von Zucker an Proteine (HbA1c); **Glykosylierung:** enzymatisch.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- HbA1c Zielwert <7 %; Cellulose β-1,4 unverdaulich; Saccharose nicht reduzierend; Laktose β-1,4 Gal+Glc; Glykogen α-1,6 alle 8–12 Reste
+**Typische Fallen:**
+- Laktoseintoleranz (Laktasemangel, erworben, harmlos) ist nicht dasselbe wie Galaktosaemie (Enzymdefekt, neonatal, gefaehrlich)
+- Amylose (linear, Iod blau) und Amylopektin (verzweigt, Iod rotbraun) sind nicht dasselbe
+- Glykierung (nicht-enzymatisch, HbA1c) und Glykosylierung (enzymatisch) sind verschiedene Prozesse
 
 ---
 
@@ -2048,15 +1997,13 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Lipide** sind hydrophobe Moleküle: **Fettsäuren** (gesättigt/ungesättigt, cis/trans), **Triglyceride** (Glycerin + 3 Fettsäuren, Energiespeicher), **Phospholipide** (amphipathisch: polarer Kopf + 2 apolare Schwänze → spontane **Bilayer-Bildung** = Membran) und **Cholesterin** (Membranfluidität, Vorläufer von Steroidhormonen, Vitamin D, Gallensäuren). **Warum für den MedAT relevant?** Phospholipid-Bilayer, LDL/HDL, Statine (HMG-CoA-Reduktase), Ketonkörper/Ketoazidose und essentielle Fettsäuren werden häufig geprüft. **Welche Fragen werden beantwortet?** „Warum bilden Phospholipide Membranen?“; „Was tun Statine?“; „LDL vs. HDL?“; „Energiedichte Fett vs. Kohlenhydrat?“; „cis- vs. trans-Fettsäuren?“; „Ketonkörper bei Diabetes?“; „Cholesterin Vorläufer wofür?“; „Gallensäuren aus was?“.
+Warum ist Olivenöl flüssig, aber Butter fest? Warum verschreibt der Arzt Statine bei hohem Cholesterin? Und warum sind industrielle Trans-Fette so gefährlich? Die Antworten liegen in der Chemie der **Lipide**. Diese wasserunlöslichen Biomoleküle sind weit mehr als nur Energiespeicher: Phospholipide bilden die Grundstruktur jeder Zellmembran, Cholesterin ist der Vorläufer aller Steroidhormone und Gallensäuren, und Fettsäuren liefern mit 38 kJ/g mehr als doppelt so viel Energie wie Kohlenhydrate.
 
 **In diesem Kapitel lernst du:**
-- **Fettsäuren:** gesättigt/ungesättigt; **cis** (Knick, flüssig) vs. **trans** (gestreckt, atherogen); essentielle FS (Linolsäure ω-6, α-Linolensäure ω-3)
-- **Triglyceride:** Glycerin + 3 Fettsäuren (Ester); Energiespeicher; **Energiedichte** Lipide ~38 kJ/g vs. KH/Protein ~17 kJ/g
-- **Phospholipide:** amphipathisch → **spontane Bilayer-Bildung** (hydrophober Effekt); Grundstruktur aller Membranen
-- **Cholesterin:** Sterangerüst; Vorläufer Cortisol, Testosteron, Östradiol, Vitamin D₃, Gallensäuren; **LDL** (atherogen) vs. **HDL** (protektiv)
-- **Statine:** hemmen **HMG-CoA-Reduktase** → weniger Cholesterin → LDL-Rezeptor-Hochregulation → LDL-Senkung
-- **Ketonkörper:** Acetoacetat, β-Hydroxybutyrat, Aceton; bei Fasten/Diabetes; **Ketoazidose** bei Typ-1-Diabetes
+- den Unterschied zwischen gesättigten und ungesättigten Fettsäuren und warum cis-Knicke die Membranfluidität bestimmen
+- warum Phospholipide spontan Doppelschichten bilden und damit die Grundlage aller Zellmembranen schaffen
+- wofür Cholesterin im Körper gebraucht wird und wie Statine den LDL-Spiegel senken
+- wann Ketonkörper entstehen und warum eine Ketoazidose bei Typ-1-Diabetes lebensbedrohlich ist
 
 ---
 
@@ -2125,39 +2072,16 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Warum sind Phospholipide Membranbausteine?" → Amphipathisch: spontane Bilayer-Bildung durch hydrophoben Effekt
+- „Was tun Statine?" → Hemmen HMG-CoA-Reduktase → weniger Cholesterin → LDL-Rezeptor hoch → LDL sinkt
+- „LDL vs. HDL?" → LDL transportiert Cholesterin zu Geweben (atherogen); HDL zurück zur Leber (protektiv)
+- „Energiedichte Fett vs. Kohlenhydrat?" → Lipide 38 kJ/g, Kohlenhydrate/Protein je 17 kJ/g
 
-**Zentral prüfungsrelevant:**
-- **Phospholipide:** **amphipathisch** (polarer Kopf + 2 apolare Fettsäureschwänze) → **spontane Bilayer-Bildung** durch hydrophoben Effekt = Grundstruktur aller Membranen
-- **Fettsäuren:** gesättigt (keine C=C) vs. ungesättigt; **cis** (Knick, flüssig, protektiv) vs. **trans** (gestreckt, atherogen: LDL↑, HDL↓)
-- **Energiedichte:** Lipide **38 kJ/g** (~9 kcal/g) vs. Kohlenhydrate/Protein je **17 kJ/g** (~4 kcal/g)
-- **Cholesterin:** Vorläufer aller Steroide (Cortisol, Testosteron, Östradiol, Vitamin D₃, **Gallensäuren**); **LDL** (atherogen) ≠ **HDL** (reverser Transport zur Leber)
-- **Statine:** hemmen **HMG-CoA-Reduktase** → weniger Cholesterinsynthese → LDL-Rezeptor-Hochregulation → LDL-Senkung 30–50 %
-- **Ketonkörper:** Acetoacetat, β-Hydroxybutyrat, Aceton; entstehen in der **Leber** aus Acetyl-CoA bei Fasten/Diabetes; **Ketoazidose** (pH <7,3) bei Typ-1-Diabetes
-- **Essentielle Fettsäuren:** Linolsäure (ω-6), α-Linolensäure (ω-3) — mit Nahrung zuführen
-- **Triglyceride:** Glycerin + 3 Fettsäuren (Ester); Lipolyse setzt Fettsäuren frei
-
-**Ergänzend vertiefend:** Glykolipide, Lipoproteine (VLDL, IDL), Eicosanoide. Typische Fallen: cis-Fettsäuren (flüssig, Knick) ≠ trans (fest, atherogen); LDL ≠ HDL; Ketoazidose (lebensbedrohlich) ≠ physiologische Ketonämie beim Fasten.
-
-**Häufige Prüfungsfragen:**
-- "Warum sind Phospholipide Membranbausteine?" → Amphipathisch → spontane Bilayer-Bildung (hydrophober Effekt)
-- "Was tun Statine?" → Hemmen HMG-CoA-Reduktase → weniger Cholesterin → LDL-Senkung
-- "LDL vs. HDL?" → LDL = atherogen (Cholesterin zu Geweben), HDL = protektiv (Rücktransport zur Leber)
-- "Energiedichte Fett vs. KH?" → Lipide 38 kJ/g, KH 17 kJ/g
-- "Ketonkörper bei Diabetes?" → Leber aus Acetyl-CoA; Ketoazidose bei Typ-1-Diabetes
-
-**Typische Prüfungsfallen:**
-- cis-Fettsäuren (flüssig, Knick) ≠ trans-Fettsäuren (fest, atherogen)
-- LDL ("schlechtes") ≠ HDL ("gutes"); Ketoazidose (lebensbedrohlich) ≠ physiologische Ketonämie beim Fasten
-
-**Wichtige Begriffe & Definitionen:**
-- **Amphipathisch:** Molekül mit hydrophilem und hydrophobem Teil (z. B. Phospholipid: polarer Kopf + apolare Schwänze).
-- **Bilayer:** Doppelschicht aus Phospholipiden; Schwänze innen, Köpfe außen zur wässrigen Phase; Grundstruktur biologischer Membranen.
-- **Statine:** Inhibitoren der HMG-CoA-Reduktase (Cholesterinbiosynthese) → LDL-Senkung.
-- **Ketonkörper:** Acetoacetat, β-Hydroxybutyrat, Aceton; aus Acetyl-CoA in der Leber bei Glukosemangel.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Energiedichte: Lipide 38 kJ/g, KH/Protein 17 kJ/g; essentielle FS: Linolsäure ω-6, α-Linolensäure ω-3; Statine → LDL↓ 30–50 %
+**Typische Fallen:**
+- cis-Fettsäuren (flüssig, Knick) sind nicht dasselbe wie trans-Fettsäuren (fest, atherogen: LDL hoch, HDL runter)
+- Ketoazidose (lebensbedrohlich, pH <7,3) bei Typ-1-Diabetes ist nicht dasselbe wie physiologische Ketonämie beim Fasten
+- Cholesterin ist nicht nur „schlecht" — es ist Vorläufer von Steroidhormonen, Vitamin D und Gallensäuren
 
 ---
 
@@ -2395,16 +2319,13 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Nukleinsäuren** (DNA, RNA) bestehen aus **Nukleotiden**: Stickstoffbase (Purin oder Pyrimidin) + Pentose (Desoxyribose in DNA, Ribose in RNA) + Phosphat. Die **Basenpaarung** folgt den **Chargaff-Regeln**: A=T (2 H-Brücken), G≡C (3 H-Brücken); die DNA-Doppelhelix ist antiparallel und rechtsgängig. **Warum für den MedAT relevant?** Nukleotidaufbau, Nukleosid vs. Nukleotid, A-T- und G-C-Paarung, RNA-Typen (mRNA, tRNA, rRNA), PCR und Nukleosid-Analoga (Aciclovir: Kettenabbruch) werden häufig geprüft. **Welche Fragen werden beantwortet?** „Wie viele H-Brücken A-T und G-C?“; „Nukleosid vs. Nukleotid?“; „DNA vs. RNA — Thymin vs. Uracil?“; „Was macht Aciclovir?“; „RT-PCR wofür?“; „GC-reich — stabiler?“; „Purine vs. Pyrimidine?“; „mRNA, tRNA, rRNA — Funktion?“.
+Der COVID-19-Test beruht auf der RT-PCR — einer Methode, die RNA-Sequenzen des Virus nachweist. Um zu verstehen, wie dieser Test funktioniert, musst du die Grundlagen der **Nukleinsäuren** kennen: DNA und RNA bestehen aus Nukleotiden, die durch Basenpaarung (A mit T bzw. U, G mit C) zusammengehalten werden. Diese komplementäre Paarung ist nicht nur die Grundlage der Vererbung, sondern auch der Ansatzpunkt für antivirale Medikamente wie Aciclovir, die als falsche Bausteine die virale DNA-Synthese stoppen.
 
 **In diesem Kapitel lernst du:**
-- **Nukleotid** = Base + Pentose + Phosphat; **Nukleosid** = Base + Zucker (ohne Phosphat); **ATP** = Adenosin-Triphosphat
-- **DNA:** Desoxyribose, Basen A, T, G, C; **RNA:** Ribose, Basen A, U, G, C (Thymin nur in DNA, Uracil nur in RNA)
-- **Chargaff:** A=T (2 H-Brücken), G≡C (3 H-Brücken); **GC-reich** → höhere Schmelztemperatur (thermisch stabiler)
-- **DNA-Doppelhelix:** antiparallel (5′→3′ || 3′→5′), rechtsgängig, 10,5 bp/Windung
-- **RNA-Typen:** mRNA (Matrize), tRNA (Aminosäure + Anticodon), rRNA (Ribosom), miRNA (Regulation)
-- **PCR:** Denaturierung → Annealing → Elongation; **RT-PCR** für RNA-Nachweis (z. B. COVID-19)
-- **Nukleosid-Analoga** (Aciclovir, Tenofovir): kein 3′-OH → **Kettenabbruch** nach Einbau durch virale Polymerase
+- den Unterschied zwischen Nukleosid und Nukleotid und warum ATP das universelle Energiemolekül ist
+- wie die Basenpaarung funktioniert (A=T mit 2, G≡C mit 3 Wasserstoffbrücken) und warum GC-reiche DNA stabiler ist
+- den Aufbau der DNA-Doppelhelix und die vier wichtigsten RNA-Typen mit ihren Funktionen
+- wie PCR und RT-PCR funktionieren und warum Nukleosid-Analoga die virale DNA-Synthese stoppen
 
 ---
 
@@ -2493,37 +2414,16 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Wie viele H-Brücken bei A-T und G-C?" → A=T: 2; G≡C: 3; GC-reiche DNA ist thermisch stabiler
+- „Nukleosid vs. Nukleotid?" → Nukleosid = Base + Zucker; Nukleotid = Base + Zucker + Phosphat
+- „Was macht Aciclovir?" → Nukleosid-Analogon ohne 3'-OH, wird eingebaut und stoppt die virale DNA-Kette
+- „Wofür RT-PCR?" → RNA-Nachweis (z. B. COVID-19): Reverse Transkriptase macht cDNA, dann PCR
 
-**Zentral prüfungsrelevant:**
-- **Nukleotid** = Base + Pentose + Phosphat; **Nukleosid** = Base + Zucker (ohne Phosphat); **ATP** = Adenosin-Triphosphat
-- **DNA:** Desoxyribose (kein OH an C2′), Basen **A, T, G, C**; **RNA:** Ribose (OH an C2′), Basen **A, U, G, C** — Thymin nur DNA, Uracil nur RNA
-- **Chargaff-Regeln:** **A=T** (2 H-Brücken), **G≡C** (3 H-Brücken); A+G = C+T; **GC-reiche** DNA thermisch stabiler (höhere Schmelztemperatur)
-- **DNA-Doppelhelix:** antiparallel (5′→3′ || 3′→5′), rechtsgängig, **10,5 bp/Windung**, 3,4 nm Steigung
-- **Purine** (Doppelring: A, G) ≠ **Pyrimidine** (Einzelring: C, T, U)
-- **RNA-Typen:** mRNA (Matrize für Translation), tRNA (Aminosäure + Anticodon), rRNA (Ribosom), miRNA (Regulation)
-- **PCR:** Denaturierung (95 °C) → Annealing → Elongation (Taq-Polymerase); **RT-PCR** = RNA → cDNA → PCR (z. B. COVID-19-Nachweis)
-- **Nukleosid-Analoga** (Aciclovir, Tenofovir): **kein 3′-OH** → Kettenabbruch nach Einbau durch virale Polymerase (Selektivität: virale Kinase aktiviert)
-
-**Ergänzend vertiefend:** DNA-Reparatur (MMR, NER, BER), DNA-Methylierung. Typische Fallen: Thymin nur DNA, Uracil nur RNA; Nukleosid ≠ Nukleotid; Purine (A, G) ≠ Pyrimidine (C, T, U).
-
-**Häufige Prüfungsfragen:**
-- "Wie viele H-Brücken A-T und G-C?" → A=T: 2; G≡C: 3; GC-reich = stabiler
-- "Nukleosid vs. Nukleotid?" → Nukleosid = Base + Zucker; Nukleotid = Base + Zucker + Phosphat
-- "Was macht Aciclovir?" → Nukleosid-Analogon ohne 3′-OH → Kettenabbruch bei viraler DNA-Synthese
-- "RT-PCR?" → RNA → cDNA (Reverse Transkriptase) → PCR; Nachweis RNA-Viren (COVID-19, HIV)
-
-**Typische Prüfungsfallen:**
-- Thymin (nur DNA) ≠ Uracil (nur RNA); Nukleosid ≠ Nukleotid; Purine (A, G) ≠ Pyrimidine (C, T, U)
-
-**Wichtige Begriffe & Definitionen:**
-- **Nukleotid:** Baustein aus Stickstoffbase + Pentose + Phosphat; Verknüpfung über Phosphodiesterbindung (3′→5′).
-- **Chargaff-Regeln:** In doppelsträngiger DNA gilt A=T und G=C; A+T+G+C = 100 %; GC-Gehalt bestimmt Schmelztemperatur.
-- **Kettenabbruch (Nukleosid-Analoga):** Analogon ohne 3′-OH wird eingebaut → keine weitere Verlängerung durch Polymerase.
-- **RT-PCR:** Reverse Transkriptase wandelt RNA in cDNA um; danach PCR zur Amplifikation (RNA-Nachweis).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- A=T (2 H-Brücken), G≡C (3 H-Brücken); DNA 10,5 bp/Windung; PCR 95 °C Denaturierung; Aciclovir = Kettenabbruch; RT-PCR für COVID-19
+**Typische Fallen:**
+- Thymin kommt nur in DNA vor, Uracil nur in RNA — nicht verwechseln
+- Nukleosid (ohne Phosphat) und Nukleotid (mit Phosphat) sind verschiedene Dinge
+- Purine (A, G) haben den Doppelring, Pyrimidine (C, T, U) den Einzelring
 
 ---
 ## Zusammenfassung (ultrakompakt)

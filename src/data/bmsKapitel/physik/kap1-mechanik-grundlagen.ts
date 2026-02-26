@@ -1223,7 +1223,6 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
             "Airbag-Prinzip: Längere Bremsstrecke → geringere Verzögerung a → geringere Kraft F = m·a auf den Körper.",
         },
       ],
-      diagram: "newton-forces",
 
       merksätze: [
         "Trägheitsgesetz: Kein F_res → kein Δv. Alles bleibt so, wie es ist.",

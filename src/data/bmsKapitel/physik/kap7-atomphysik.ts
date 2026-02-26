@@ -34,7 +34,7 @@ Warum leuchtet Neon orange und Natrium gelb -- aber niemals umgekehrt? Jedes Ele
 
 **In diesem Kapitel lernst du:**
 - wie das Bohrsche Atommodell diskrete Energieniveaus und Spektrallinien erklärt
-- warum die Photonenenergie E = hf = hc/λ Frequenz und Wellenlänge verknüpft
+- warum die Energie eines Lichtquants von seiner Frequenz und Wellenlänge abhängt
 - wie Emissions- und Absorptionsspektren als Fingerabdruck von Elementen dienen
 - wie das Lambert-Beer-Gesetz Extinktion mit Konzentration verknüpft
 - warum die Pulsoximetrie genau 660 nm und 940 nm verwendet

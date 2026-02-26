@@ -399,24 +399,15 @@ Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konk
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:**
-- Nische ≠ Lebensraum: Nische = alle Umweltansprüche + Rolle; Lebensraum = physischer Ort.
-- Fundamentale Nische (ohne Konkurrenz) ≥ realisierte Nische (mit Konkurrenz).
-- Connell-Experiment: Entfernung von *Balanus* → *Chthamalus* nutzt größeren Bereich = Beleg für realisierte vs. fundamentale Nische.
-- Nischendifferenzierung ermöglicht Koexistenz (zeitlich, räumlich, trophisch).
-
-**Häufige Prüfungsfragen:**
+**Typische Prüfungsfragen:**
 - Was ist der Unterschied zwischen ökologischer Nische und Lebensraum?
 - Erkläre fundamentale und realisierte Nische. Was zeigt das Connell-Seepocken-Experiment?
 - Wie ermöglicht Nischendifferenzierung das Zusammenleben konkurrierender Arten?
 
-**Typische Prüfungsfallen:**
-- Nische ≠ Lebensraum (Nische ist die „Rolle“ und alle Ansprüche, nicht nur der Ort).
+**Typische Fallen:**
+- Nische ≠ Lebensraum (Nische ist die „Rolle” und alle Ansprüche, nicht nur der Ort).
 - Realisierte Nische ist nie größer als die fundamentale Nische.
 - Nischendifferenzierung ≠ Konkurrenzausschluss — Differenzierung ist der Weg zur Koexistenz.
-
-**Wichtige Begriffe & Definitionen:**
-- Lebensraum (Habitat), ökologische Nische, fundamentale Nische, realisierte Nische, Nischendifferenzierung.
 
 ---
 
@@ -489,14 +480,14 @@ Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konk
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Konkurrenz** (intra-/interspezifisch), **Konkurrenzausschlussprinzip** (Gauß), **Symbioseformen** (Mutualismus +/+, Kommensalismus +/0, Parasitismus/Prädation +/−) und **Räuber-Beute-Dynamik** (Räuber hinkt nach). **Warum für den MedAT relevant?** Gauß-Experiment, Symbiose-Vorzeichen, Parasit vs. Räuber und Räuber-Beute-Zyklus werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Gauß — was besagt das Prinzip?“; „Mutualismus — Vorzeichen?“; „Parasit vs. Räuber?“; „Räuber-Beute — wer hinkt nach?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Konkurrenz und Symbiose abgedeckt.
+Warum können zwei Bakterienarten nicht dauerhaft denselben Nährboden besiedeln, wenn sie exakt dasselbe fressen? Gauß hat das 1934 mit Pantoffeltierchen gezeigt -- und das Prinzip gilt genauso für Krankenhauskeime. Gleichzeitig existieren in der Natur unzählige Formen des Zusammenlebens: Pilze, die Pflanzen beim Wachsen helfen, Zecken, die Blut saugen, und Luchse, deren Populationsgipfel immer ein paar Jahre hinter dem der Schneehasen herhinkt. Dieses Kapitel klärt, welche Vorzeichen hinter welcher Beziehung stecken.
 
 **In diesem Kapitel lernst du:**
-- **Intraspezifische** und **interspezifische Konkurrenz** zu unterscheiden
-- Das **Konkurrenzausschlussprinzip** (Gauß) und den Beleg (Paramecium-Experiment)
-- **Symbioseformen** mit Vorzeichen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−)
-- **Parasitismus** von **Prädation** zu unterscheiden (Parasit tötet Wirt nicht sofort)
-- Die Grundidee der **Räuber-Beute-Dynamik** (Räuberpopulation hinkt Beute nach)
+- Warum Konkurrenz innerhalb einer Art intensiver ist als zwischen Arten
+- Was passiert, wenn zwei Arten exakt dieselbe Nische besetzen (Gauß-Prinzip)
+- Wie man Mutualismus, Kommensalismus, Parasitismus und Prädation an ihren Vorzeichen erkennt
+- Worin sich ein Parasit grundlegend von einem Räuber unterscheidet
+- Warum bei Räuber-Beute-Zyklen die Räuberpopulation der Beute immer hinterherhinkt
 
 ---
 
@@ -560,26 +551,16 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:**
-- Konkurrenz intraspezifisch (innerhalb einer Art) vs. interspezifisch (zwischen Arten).
-- Konkurrenzausschlussprinzip (Gauß): identische Nische → eine Art verdrängt die andere; Paramecium-Experiment.
-- Symbioseformen: Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−).
-- Parasit tötet Wirt nicht sofort; Räuber tötet Beute sofort.
-- Räuber-Beute: Räuberpopulation hinkt Beutepopulation nach.
-
-**Häufige Prüfungsfragen:**
+**Typische Prüfungsfragen:**
 - Was besagt das Konkurrenzausschlussprinzip? Nenne ein Experiment.
 - Ordne Symbioseformen mit Vorzeichen zu (Mutualismus, Kommensalismus, Parasitismus, Prädation).
 - Worin unterscheiden sich Parasitismus und Prädation?
 - Bei Räuber-Beute-Zyklen: Welche Population hinkt nach? (Räuber)
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - Parasitismus (+/−) und Prädation (+/−) verwechseln: Parasit tötet nicht sofort, Räuber schon.
 - Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst.
 - Intraspezifisch = innerhalb einer Art, interspezifisch = zwischen Arten.
-
-**Wichtige Begriffe & Definitionen:**
-- Konkurrenz (intraspezifisch, interspezifisch), Konkurrenzausschlussprinzip (Gauß), Mutualismus, Kommensalismus, Parasitismus, Prädation, Räuber-Beute-Dynamik.
 
 ---
 
@@ -684,14 +665,14 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Nahrungsketten/Nahrungsnetze**, **10%-Regel** (Energieverlust pro Trophieebene), **Energiefluss** (gerichtet) vs. **Stoffkreisläufe** (geschlossen), GPP/NPP und biogeochemische Kreisläufe (C, N, P). **Warum für den MedAT relevant?** 10%-Regel, Trophieebenen, GPP vs. NPP, Stoffkreisläufe (Stickstoff: Rhizobien; Phosphor: kein gasförmiges Reservoir) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „10%-Regel — was besagt sie?“; „GPP vs. NPP?“; „Phosphorkreislauf — gasförmiges Reservoir?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nahrungsketten und Stoffkreisläufen abgedeckt.
+Stell dir vor, ein Feld produziert 10.000 Kilokalorien Pflanzenmaterial. Davon kommen beim Rind nur 1.000 an, und beim Menschen, der das Steak isst, gerade einmal 100. Warum? Weil auf jeder Stufe der Nahrungskette rund 90 % der Energie als Wärme verloren gehen. Diese einfache Rechnung -- die 10%-Regel -- erklärt, warum es auf der Erde so viel mehr Pflanzen als Raubtiere gibt und warum vegetarische Ernährung zehnmal effizienter ist.
 
 **In diesem Kapitel lernst du:**
-- **Nahrungskette** und **Nahrungsnetz** (Produzenten → Konsumenten → Destruenten)
-- **10%-Regel:** nur ca. 10% der Energie gelangt auf die nächste Trophieebene
-- **Energiefluss** (einrichtungsgerichtet, Verlust als Wärme) vs. **Stoffkreisläufe** (Materie zirkuliert)
-- **Primärproduktion:** GPP (brutto) vs. NPP (netto)
-- Grundidee der **Stoffkreisläufe** (Kohlenstoff, Stickstoff, Phosphor)
+- Warum Nahrungsnetze realistischer sind als lineare Nahrungsketten
+- Weshalb auf jeder Trophieebene rund 90 % der Energie verloren gehen (10%-Regel)
+- Was den gerichteten Energiefluss von den geschlossenen Stoffkreisläufen unterscheidet
+- Wie man GPP (Bruttoproduktion) und NPP (Nettoproduktion) voneinander abgrenzt
+- Warum Phosphor als einziger Kreislauf kein gasförmiges Reservoir besitzt
 
 ---
 
@@ -809,32 +790,16 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Nahrungskette/-netz, 10%-Regel (Energieverlust pro Stufe), Produzenten/Konsumenten/Destruenten, Trophieebenen, Biomagnifikation.
-
-**Ergänzend vertiefend:** Biomassepyramide.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - 10%-Regel erklären und auf konkrete Nahrungsketten anwenden (Berechnung über mehrere Stufen)
 - GPP vs. NPP definieren: NPP = GPP − autotrophe Respiration
 - Stickstoffkreislauf-Schritte in korrekter Reihenfolge aufzählen und beteiligte Organismen nennen
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - Energiefluss (einrichtungsgerichtet, 10%-Regel) ≠ Stoffkreislauf (Materie zirkuliert).
 - GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar.
 - Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf.
 - Nahrungskette (linear) vs. Nahrungsnetz (komplex, realistisch). Destruenten nicht vergessen.
-
-**Wichtige Begriffe & Definitionen:**
-- Produzenten, Konsumenten (I–III), Destruenten, Trophieebene, Nahrungskette, Nahrungsnetz, 10%-Regel, GPP, NPP, Stoffkreislauf, Eutrophierung.
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- 10%-Regel (Lindeman 1942): ca. 10% Energieübertragung pro Trophiestufe
-- Ozeane absorbieren ca. 30% des anthropogenen CO₂ → Ozeanversauerung
-- N₂O = 298× stärkeres Treibhausgas als CO₂
-- Haber-Bosch-Synthese: ca. 120 TgN/Jahr industrielle N-Fixierung
-- Tropischer Regenwald: höchste NPP (2.000–3.000 g Trockenmasse/m²/Jahr)
 
 ---
 
@@ -974,13 +939,14 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Sukzession** (primär vs. sekundär, Pionier → Klimaxgesellschaft) und **Populationsdynamik** (exponentiell vs. logistisch, Kapazitätsgrenze K, r- vs. K-Strategen). **Warum für den MedAT relevant?** Primäre vs. sekundäre Sukzession, J- vs. S-Kurve und r- vs. K-Strategen werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Primäre Sukzession — wo beginnt sie?“; „Logistisches Wachstum — was begrenzt?“; „r- vs. K-Strategen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Sukzession und Populationsdynamik abgedeckt.
+Nach einem Vulkanausbruch bleibt nur nackte Lava zurück -- kein Boden, kein Samen, kein Leben. Trotzdem stehen Jahrhunderte später Wälder an derselben Stelle. Dieser vorhersagbare Wiederaufbau heißt Sukzession. Gleichzeitig stellt sich die Frage, wie schnell eine Population wachsen kann: Bakterien verdoppeln sich alle 20 Minuten, aber kein See ist jemals vollständig mit Bakterien gefüllt. Den Unterschied zwischen unbegrenztem Wachstum und der Realität beschreibt die Kapazitätsgrenze K.
 
 **In diesem Kapitel lernst du:**
-- **Primäre** und **sekundäre Sukzession** zu unterscheiden und Pionierorganismen zu nennen
-- Das Endstadium **Klimaxgesellschaft** und die Abfolge der Sukzessionsstadien
-- **Exponentielles** (J-Kurve) und **logistisches** (S-Kurve) Wachstum zu unterscheiden
-- **Kapazitätsgrenze K** und **r- vs. K-Strategen** (viele Nachkommen vs. wenige mit Brutpflege)
+- Warum primäre Sukzession auf nacktem Gestein beginnt und sekundäre schneller abläuft
+- Was die Klimaxgesellschaft vom Pionierstadium unterscheidet
+- Weshalb exponentielles Wachstum (J-Kurve) in der Natur nur kurzfristig auftritt
+- Was die Kapazitätsgrenze K begrenzt und wie sich logistisches Wachstum (S-Kurve) davon ableitet
+- Worin sich r-Strategen (viele Nachkommen, wenig Fürsorge) von K-Strategen grundlegend unterscheiden
 
 ---
 
@@ -1034,23 +1000,15 @@ Zwei grundlegende Lebensstrategien:
 
 ## MedAT-Fokus
 
-**Zentral prüfungsrelevant:**
-- **Primäre Sukzession:** nacktes Substrat → Pionierorganismen (Flechten, Moose) → … → Klimaxgesellschaft. **Sekundäre Sukzession:** Boden/Samen vorhanden → schneller.
-- **Exponentielles Wachstum:** J-Kurve, dN/dt = r·N. **Logistisches Wachstum:** S-Kurve, K = Kapazitätsgrenze.
-- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege.
-
-**Häufige Prüfungsfragen:**
+**Typische Prüfungsfragen:**
 - Primär vs. sekundäre Sukzession unterscheiden. Was sind Pionierorganismen?
 - J-Kurve vs. S-Kurve zuordnen. Was ist K?
 - r- vs. K-Strategen mit Beispielen zuordnen.
 
-**Typische Prüfungsfallen:**
-- Primäre Sukzession = auf nacktem Substrat (nicht „nach Waldbrand“ — das ist sekundär).
+**Typische Fallen:**
+- Primäre Sukzession = auf nacktem Substrat (nicht „nach Waldbrand” — das ist sekundär).
 - Exponentiell (J) vs. logistisch (S): In der Natur dominiert logistisches Wachstum.
 - r = Wachstumsrate, K = Kapazitätsgrenze (nicht verwechseln).
-
-**Wichtige Begriffe & Definitionen:**
-- Sukzession (primär, sekundär), Pionierorganismen, Klimaxgesellschaft, exponentielle/logistische Wachstum, Kapazitätsgrenze K, r-Strategen, K-Strategen.
 
 ---
 
@@ -1139,14 +1097,14 @@ Zwei grundlegende Lebensstrategien:
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Antikörper** (Ig) sind Y-förmige Effektormoleküle der humoralen Immunantwort; **Fab** (Antigenbindung), **Fc** (Effektorfunktionen). **Warum für den MedAT relevant?** IgG-Aufbau (Fab/Fc), fünf Ig-Klassen (IgG, IgM, IgA, IgE, IgD), Opsonisierung, Komplementaktivierung und IgM vs. IgG (akute vs. durchgemachte Infektion) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Fab vs. Fc — Funktion?“; „Welches Ig ist plazentagängig?“; „IgM — akute oder durchgemachte Infektion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Antikörpern abgedeckt.
+Wenn ein Virus in deinen Körper eindringt, muss das Immunsystem es irgendwie markieren -- wie ein Etikett, das sagt: “Hier, Fresszelle, das musst du beseitigen.” Genau das tun Antikörper. Sie sind Y-förmige Proteine, deren obere Arme (Fab) das Virus erkennen und deren Stamm (Fc) den Fresszellen signalisiert: “Zugreifen!” Ob ein Arzt bei dir eine akute Infektion oder eine durchgemachte Erkrankung feststellt, hängt davon ab, welche Antikörperklasse er im Blut findet -- IgM oder IgG.
 
-**Das Wichtigste auf einen Blick:**
-- Struktur: 2 schwere + 2 leichte Ketten, verbunden durch Disulfidbrücken, Y-Form
-- Fab-Region: bindet Antigene (variabel, spezifisch)
-- Fc-Region: vermittelt Effektorfunktionen (konstant, isotyp-abhängig)
-- 5 Klassen: IgG (häufigster, plazentagängig), IgA (Sekrete), IgM (Primärantwort, Pentamer), IgE (Allergie), IgD (B-Zell-Signal)
-- Effektorfunktionen: Neutralisierung, Opsonisierung, Komplementaktivierung (MAC)
+**In diesem Kapitel lernst du:**
+- Warum Antikörper Y-förmig sind und welche Aufgabe Fab- und Fc-Region jeweils erfüllen
+- Wie sich die fünf Immunglobulin-Klassen (IgG, IgM, IgA, IgE, IgD) in Funktion und Vorkommen unterscheiden
+- Warum IgM auf eine akute Infektion hinweist und IgG auf eine durchgemachte
+- Welches Immunglobulin als einziges die Plazenta passieren kann und weshalb
+- Wie Opsonisierung, Neutralisierung und Komplementaktivierung zusammenwirken
 
 ---
 
@@ -1217,30 +1175,17 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** IgG (2 schwere + 2 leichte Ketten, Fab = Antigenbindung, Fc = Effektorfunktion), Antikörperklassen (IgM, IgG, IgA, IgE, IgD), neutralisierend/opsonisierend/Komplement.
-
-**Ergänzend vertiefend:** Affinitätsreifung.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - IgG-Aufbau beschreiben: 2 schwere + 2 leichte Ketten, Fab (Antigenbindung) vs. Fc (Effektorfunktion)
 - Die fünf Ig-Klassen mit jeweiliger Hauptfunktion und Vorkommen nennen
 - Serologische Diagnostik: IgM (akute Infektion) vs. IgG (durchgemachte Infektion/Immunität)
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - IgM (Primärantwort, akut) vs. IgG (Sekundärantwort, dauerhaft) — Reihenfolge merken: M kommt vor G im Alphabet, M kommt zuerst
 - IgA (Schleimhautschutz, Sekrete) vs. IgE (Allergie, Mastzellen) — verschiedene Lokalisation und Funktion
 - Fab (Fragment antigen-binding, variabel) vs. Fc (Fragment crystallizable, konstant) — nicht verwechseln
 - IgM kann die Plazenta NICHT passieren (zu groß als Pentamer), nur IgG wird aktiv über FcRn transportiert
 - Opsonisierung (Markierung für Phagozytose) ≠ Neutralisierung (direkte Blockade des Pathogens)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- IgG = 75% aller Serumantikörper, einziges plazentagängiges Ig
-- IgM = Pentamer mit 10 Bindestellen, stärkster Komplementaktivator
-- IgA = dominantes Ig in Sekreten (Speichel, Muttermilch, Tränen), Dimer in Sekreten
-- IgE = Allergie Typ I, Parasitenabwehr, bindet Mastzellen/Basophile
-- Komplementkaskade: C1q → C3-Konvertase → C3b (Opsonin) → C5b-C9 (MAC, Lyse)
 
 ---
 
@@ -1379,14 +1324,14 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Antikörperdiversität** entsteht durch **V(D)J-Rekombination** (RAG, TdT), **klonale Selektion** (Burnet) und **Affinitätsreifung** (somatische Hypermutation, AID). **Warum für den MedAT relevant?** V(D)J-Prinzip, klonale Selektion, Primär- vs. Sekundärantwort (IgM vs. IgG, Gedächtniszellen) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wie entsteht Antikörperdiversität?“; „Klonale Selektion — was wählt wen?“; „Sekundärantwort — warum schneller/stärker?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Antikörpergenen und Diversität abgedeckt.
+Dein Körper kann Antikörper gegen praktisch jede Substanz bilden -- gegen Pollen, gegen ein neues Virus, sogar gegen Moleküle, die in der Natur gar nicht vorkommen. Das ist erstaunlich, denn das menschliche Genom enthält nur rund 20.000 Gene. Wie schafft es das Immunsystem, mehr als 10 Milliarden verschiedene Antikörper-Varianten zu erzeugen? Die Antwort liegt in einem molekularen Kartenmischen: der V(D)J-Rekombination. Stell dir vor, du hast drei Stapel Spielkarten (V, D, J) und ziehst aus jedem zufällig eine -- schon die Kombinationsmöglichkeiten sind enorm. Dazu kommt noch ein “Joker-Enzym” (TdT), das an den Schnittstellen zufällige Buchstaben einfügt.
 
-**Das Wichtigste auf einen Blick:**
-- V(D)J-Rekombination: zufällige Auswahl von V-, D-, J-Gensegmenten → kombinatorische Diversität
-- TdT fügt N-Nukleotide an Verbindungsstellen ein → junctionale Diversität
-- Klonale Selektion (Burnet): Antigen wählt B-Zelle mit passendem BCR aus → klonale Expansion
-- Affinitätsreifung: somatische Hypermutation (AID) in Keimzentren → Selektion auf höhere Affinität
-- Gedächtnis-B-Zellen: Grundlage der Sekundärantwort (schneller, stärker, höhere Affinität)
+**In diesem Kapitel lernst du:**
+- Wie aus nur wenigen Gensegmenten Milliarden verschiedener Antikörper entstehen (V(D)J-Rekombination)
+- Was das Antigen bei der klonalen Selektion tatsächlich “auswählt”
+- Warum die Sekundärantwort schneller, stärker und präziser ist als die Primärantwort
+- Wie Antikörper in Keimzentren durch somatische Hypermutation immer besser werden
+- Was den Klassenwechsel (IgM zu IgG) auslöst und warum sich dabei die Spezifität nicht ändert
 
 ---
 
@@ -1428,30 +1373,17 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** V(D)J-Rekombination (variable Antikörper-/TCR-Diversität), RAG1/RAG2, TdT (terminaler Transferase), somatische Rekombination, klonale Selektion.
-
-**Ergänzend vertiefend:** Klasse-Umschaltung.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Das Prinzip der V(D)J-Rekombination und die beteiligten Enzyme (RAG1/RAG2, TdT) erklären
 - Die drei Quellen der Antikörperdiversität unterscheiden (kombinatorisch, junctional, somatische Hypermutation)
 - Primärantwort (IgM, niedrige Affinität) vs. Sekundärantwort (IgG, hohe Affinität durch Gedächtniszellen) vergleichen
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - V(D)J-Rekombination (vor Antigenkontakt, Knochenmark) vs. somatische Hypermutation (nach Antigenkontakt, Keimzentren)
 - Kombinatorische Diversität (Segmentwahl) vs. junctionale Diversität (N-Nukleotide durch TdT an Schnittstellen)
 - Klonale Selektion: das Antigen wählt den passenden Klon aus — Antikörper werden nicht nach Bedarf neu konstruiert
 - Affinitätsreifung findet nur in Keimzentren statt, nicht im Knochenmark
 - Somatische Hypermutation betrifft nur V-Regionen der Antikörpergene, nicht das gesamte Genom
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Über 10¹⁰ verschiedene Antikörperspezifitäten möglich
-- RAG1/RAG2 katalysiert die V(D)J-Rekombination, TdT fügt N-Nukleotide ein
-- AID (Activation-Induced Cytidine Deaminase): Mutationsrate 10⁵–10⁶× höher als normal
-- Burnet (1957): Klonale Selektionstheorie
-- t(8;14) bei Burkitt-Lymphom: c-Myc unter IgH-Promotor durch fehlerhafte V(D)J-Rekombination
 
 ---
 
@@ -1594,14 +1526,14 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## Einleitung
 
-**Worum geht es?** **AB0-Blutgruppen** (I^A, I^B, i⁰): Kodominanz von I^A und I^B, Genotyp-Phänotyp-Zuordnung, Kreuzungsschemata und Transfusionslogik. **Warum für den MedAT relevant?** Punnett-Quadrat für AB0, Kodominanz, universeller Spender (0) vs. Empfänger (AB) und Antikörper-Regel werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Eltern A und B — Kind 0 möglich?“; „Kodominanz — was bedeutet das bei AB?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur AB0-Vererbung abgedeckt.
+Vor jeder Bluttransfusion stellt sich eine lebenswichtige Frage: Verträgt der Empfänger das Spenderblut? Gibt man einer Person mit Blutgruppe 0 versehentlich Blut der Gruppe A, kann das innerhalb von Minuten zur tödlichen Hämolyse führen. Der Grund: Wir bilden Antikörper gegen genau die Blutgruppen-Antigene, die wir selbst nicht tragen. Die Genetik dahinter ist ein Paradebeispiel für Kodominanz und multiple Allelie -- und ein Klassiker im MedAT.
 
-**Das Wichtigste auf einen Blick:**
-- ABO-Gen auf Chromosom 9 mit drei Allelen: I^A, I^B (kodominant) und i⁰ (rezessiv)
-- Kodominanz: I^A und I^B werden beide vollständig exprimiert (Blutgruppe AB)
-- Genotyp-Phänotyp: A (I^AI^A oder I^Ai⁰), B (I^BI^B oder I^Bi⁰), AB (I^AI^B), 0 (i⁰i⁰)
-- Antikörper-Regel: Man bildet Antikörper gegen das, was man nicht hat
-- 0 Rh- = universeller Spender, AB Rh+ = universeller Empfänger (vereinfacht)
+**In diesem Kapitel lernst du:**
+- Warum drei Allele (I^A, I^B, i^0) vier Blutgruppen ergeben und was Kodominanz bei AB bedeutet
+- Wie man Punnett-Quadrate für AB0-Kreuzungen aufstellt und mögliche Kindergenotypen ableitet
+- Nach welcher Regel der Körper Antikörper gegen AB0-Antigene bildet
+- Warum Blutgruppe 0 als universeller Spender und AB als universeller Empfänger gilt
+- Was der Bombay-Phänotyp über die Rolle des H-Antigens verrät
 
 ---
 
@@ -1665,30 +1597,17 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** AB0-System (I^A, I^B, i), Genotypen (A: I^A I^A oder I^A i; B: I^B I^B oder I^B i; AB: I^A I^B; 0: ii), Punnett-Quadrat, Antikörper gegen fehlende Antigene (Anti-A, Anti-B).
-
-**Ergänzend vertiefend:** Bombay-Phänotyp.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Genotypen aller vier Blutgruppen aufzählen und Kreuzungsschemata mit Punnett-Quadrat lösen
 - Den Unterschied zwischen Kodominanz und unvollständiger Dominanz am Beispiel AB0 erklären
 - Antikörper-Antigen-Zuordnung: Wer hat welche Antikörper und warum?
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - Kodominanz (beide Allele voll exprimiert: AB zeigt A UND B) vs. unvollständige Dominanz (Intermediärphänotyp)
 - Blutgruppe 0 hat H-Antigen auf den Erythrozyten, nicht "kein Antigen"
 - I^A und I^B sind kodominant zueinander, aber beide dominant über i⁰
 - Universeller Spender (0-) vs. universeller Empfänger (AB+) — in der Praxis dennoch blutgruppenidentisch transfundieren
 - Ein AB-Elternteil kann kein Kind mit Blutgruppe 0 haben (kein i⁰-Allel vorhanden)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- ABO-Gen auf Chromosom 9, drei Allele: I^A, I^B, i⁰
-- A-Transferase: hängt N-Acetylgalactosamin an H-Antigen; B-Transferase: Galactose
-- Bombay-Phänotyp: 1:10.000 in Indien, FUT1-Defekt auf Chromosom 19
-- AB0-Fehltransfusion: innerhalb von Minuten Hämolyse, DIC, Nierenversagen, Schock
-- Blutgruppe 0 = ca. 41% in Europa, A = ca. 43%, B = ca. 11%, AB = ca. 5%
 
 ---
 
@@ -1832,14 +1751,14 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Rhesus-System** (D dominant, dd = Rh−): **Rhesus-Inkompatibilität** (Rh−-Mutter + Rh+-Kind → Sensibilisierung → 2. Schwangerschaft: Anti-D-IgG → Morbus haemolyticus neonatorum); **Anti-D-Prophylaxe** verhindert Sensibilisierung. **Warum für den MedAT relevant?** Vererbung (autosomal-dominant), Zweiphasen-Mechanismus und Anti-D (wann, wofür) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wann Anti-D-Prophylaxe?“; „Warum erst 2. Kind betroffen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Rhesusfaktor abgedeckt.
+Warum ist bei einer Schwangerschaft meist das erste Kind gesund, aber das zweite könnte in Gefahr sein? Die Antwort liegt im Rhesusfaktor: Trägt eine Rh-negative Mutter ein Rh-positives Kind aus, “merkt” sich ihr Immunsystem das fremde D-Antigen. Beim ersten Kind passiert noch wenig -- die Mutter bildet zunächst IgM, das die Plazenta nicht passieren kann. Doch bei der nächsten Schwangerschaft mit einem Rh-positiven Kind sind bereits IgG-Antikörper da, die durch die Plazenta gelangen und die roten Blutkörperchen des Kindes zerstören. Eine einfache Spritze -- die Anti-D-Prophylaxe -- kann das verhindern.
 
-**Das Wichtigste auf einen Blick:**
-- RhD-Gen auf Chromosom 1: autosomal dominant vererbt (DD oder Dd = Rh+, dd = Rh-)
-- Ca. 85% der Europäer sind Rh-positiv, 15% Rh-negativ
-- Rhesus-Inkompatibilität: Rh- Mutter + Rh+ Kind → Sensibilisierung → Anti-D-IgG → Hämolyse beim nächsten Rh+ Kind
-- Anti-D-Prophylaxe: 28. SSW + <72h postpartal → verhindert Sensibilisierung
-- IgG passiert Plazenta (FcRn-Transport), IgM nicht (zu groß als Pentamer)
+**In diesem Kapitel lernst du:**
+- Warum der Rhesusfaktor autosomal dominant vererbt wird und nur dd-Individuen Rh-negativ sind
+- Weshalb die Rhesus-Inkompatibilität erst ab der zweiten Schwangerschaft gefährlich wird (Zweiphasen-Mechanismus)
+- Wie die Anti-D-Prophylaxe die Sensibilisierung der Mutter verhindert
+- Warum IgG die Plazenta passieren kann, IgM aber nicht
+- Was Morbus haemolyticus neonatorum und Hydrops fetalis bedeuten
 
 ---
 
@@ -1886,30 +1805,17 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Rhesus (D-Antigen), Rhesus-Inkompatibilität (Sensibilisierung Mutter bei 1. Kind → Reaktion bei 2. Kind), Anti-D-Prophylaxe, hämolytische Neugeborenenerkrankung.
-
-**Ergänzend vertiefend:** Kell, Duffy.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Den Zweiphasen-Mechanismus der Rhesus-Inkompatibilität erklären (Sensibilisierung → Reaktion)
 - Warum ist das erste Kind meist nicht betroffen, das zweite aber gefährdet?
 - Wirkmechanismus und Zeitpunkt der Anti-D-Prophylaxe beschreiben
 
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - 1. Schwangerschaft = Sensibilisierung (IgM, kann Plazenta nicht passieren), 2. Schwangerschaft = Reaktion (IgG, passiert Plazenta)
 - RhD ist autosomal dominant (nicht kodominant wie AB0), dd = Rh-negativ
 - Anti-D-Prophylaxe verhindert die Sensibilisierung, sie behandelt nicht eine bereits bestehende
 - IgG passiert die Plazenta aktiv über FcRn, nicht durch einfache Diffusion
 - Rh-negativ = Deletion des RHD-Gens (in Europa), nicht nur ein "schwaches" Allel
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- RHD-Gen auf Chromosom 1p36, autosomal dominant
-- 85% der Europäer Rh+, 15% Rh- (Basken: bis 35% Rh-)
-- Anti-D-Prophylaxe: 28. SSW (antepartal) + <72h postpartal
-- Anti-D-Prophylaxe eingeführt 1968 — drastische Reduktion des Morbus haemolyticus neonatorum
-- Hydrops fetalis: schwerste Form der Rh-Inkompatibilität mit generalisierter Ödembildung
 
 ---
 
