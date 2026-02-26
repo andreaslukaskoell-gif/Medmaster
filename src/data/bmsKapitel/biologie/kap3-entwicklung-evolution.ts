@@ -22,16 +22,15 @@ export const bioKapEntwicklung: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Gametogenese** ist die Bildung von Keimzellen (Spermien und Eizellen) über Meiose. **Warum für den MedAT relevant?** Ergebnis Asymmetrie (4 Spermien vs. 1 Eizelle + 3 Polkörperchen) und die Meiose-Arrests der Oogenese (Prophase I, Metaphase II) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wie viele Spermien aus einem Spermatogonium?“; „Wie viele Eizellen aus einer Oozyte?“; „In welcher Phase arretiert die Oozyte bis zur Ovulation?“; „Wann wird Meiose II der Oozyte abgeschlossen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Gametogenese abgedeckt. (Details zu Hormonsteuerung und Zyklus: Kapitel Anatomie/Gewebe/Physiologie.)
+Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer Eizelle und eines Spermiums. Doch wie entstehen diese Keimzellen überhaupt, und warum sind sie so grundlegend verschieden? Die **Gametogenese** beschreibt genau diesen Weg: Aus einer normalen Körperzelle mit doppeltem Chromosomensatz wird durch Meiose eine haploide Keimzelle. Dabei zeigt sich ein überraschender Gegensatz — ein Mann produziert aus einer Stammzelle vier gleichwertige Spermien, eine Frau aus derselben Ausgangslage nur eine einzige befruchtungsfähige Eizelle. Warum das so ist und in welchen Phasen die Eizellreifung über Jahrzehnte pausiert, ist nicht nur biologisch faszinierend, sondern gehört zu den meistgeprüften Themen im MedAT.
 
 **In diesem Kapitel lernst du:**
-- **Gametogenese** als Oberbegriff für die Bildung von Spermien (Spermatogenese) und Eizellen (Oogenese)
-- **Spermatogenese**: Ablauf (Spermatogonium → Meiose I/II → 4 Spermien), Ort (Tubuli seminiferi), Ergebnis
-- **Oogenese**: Ablauf mit zwei Arrests (Prophase I bis Pubertät, Metaphase II bis Befruchtung), Ergebnis (1 Eizelle + 3 Polkörperchen)
-- Warum nur **eine** funktionsfähige Eizelle pro Oozyte entsteht (asymmetrische Teilung, Polkörperchen degenerieren)
-- Zeitliche Einordnung: Oogenese beginnt pränatal; Spermatogenese ab Pubertät
+- warum Spermien und Eizellen haploid sein müssen und wie die Meiose das sicherstellt
+- weshalb aus einer Stammzelle vier Spermien, aber nur eine Eizelle entsteht
+- an welchen Punkten die Eizellreifung pausiert — und was sie jeweils wieder in Gang setzt
+- wie sich der zeitliche Ablauf von Spermatogenese und Oogenese grundlegend unterscheidet
 
-![Meiose — Spermatogenese und Oogenese](/grafik-3-meiose.svg)
+{{DIAGRAM:meiosis}}
 
 ---
 
@@ -47,6 +46,8 @@ export const bioKapEntwicklung: Kapitel = {
 ---
 
 ## Spermatogenese — Ablauf und Ergebnis
+
+{{DIAGRAM:cell-cycle}}
 
 **Spermatogenese** ist die Bildung reifer Spermien im Hoden. Sie findet in den **Tubuli seminiferi** (Samenkanälchen) statt und läuft ab Pubertät kontinuierlich ab.
 
@@ -75,11 +76,11 @@ export const bioKapEntwicklung: Kapitel = {
 
 > **Merke:** Oogenese: **1 Eizelle + 3 Polkörperchen** aus einer Oogonium. Meiose I-Arrest in Prophase I (bis Ovulation), Meiose II-Arrest in Metaphase II (bis Befruchtung).
 
-![Gametogenese — Ergebnis (4 Spermien vs. 1 Eizelle + 3 Polkörperchen)](/grafik-3-meiose.svg)
-
 ---
 
 ## Bedeutung für die Embryonalentwicklung
+
+{{DIAGRAM:hormonsystem}}
 
 Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …“ solltest du sicher beherrschen.
 
@@ -87,31 +88,15 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung:**
+**Typische Prüfungsfragen:**
+- Wie viele Spermien/Eizellen entstehen aus einer Ausgangszelle?
+- In welcher Phase arretiert die Oozyte bis zur Ovulation?
+- Wann wird Meiose II der Oozyte abgeschlossen?
 
-**Zentral prüfungsrelevant:**
-- Gametogenese = Bildung von Keimzellen (Spermatogenese + Oogenese)
-- Spermatogenese: Spermatogonium → Meiose I/II → **4 Spermien** (n); Ort: Tubuli seminiferi; ab Pubertät, kontinuierlich
-- Oogenese: Oogonium → primäre Oozyte (Arrest **Prophase I** bis Pubertät) → bei Ovulation Meiose I → sekundäre Oozyte (Arrest **Metaphase II** bis Befruchtung) → bei Befruchtung Meiose II → **1 Eizelle + 3 Polkörperchen**
-- Aus einer primären Oozyte entsteht nur **eine** befruchtungsfähige Eizelle (nicht vier)
-
-**Ergänzend vertiefend:**
-- Spermiogenese: Umwandlung Spermatide → Spermium (Akrosom, Flagellum, Mitochondrien); Dauer Spermatogenese ~74 Tage
-- Primäre Oozyten werden pränatal angelegt; bei Geburt ca. 400.000 Follikel, bei Pubertät weniger
-
-**Häufige Prüfungsfragen:**
-- Wie viele Spermien entstehen aus einem Spermatogonium? → Vier (über Meiose I und II)
-- Wie viele Eizellen entstehen aus einer primären Oozyte? → Eine (plus drei Polkörperchen)
-- In welcher Phase arretiert die Oozyte bis zur Ovulation? → Prophase I (Meiose I)
-- Wann wird die Meiose II der Oozyte abgeschlossen? → Bei der Befruchtung
-
-**Typische Prüfungsfallen:**
-- „Aus einer Oozyte entstehen vier Eizellen“ → falsch (nur eine Eizelle + drei Polkörperchen)
-- Spermatogenese (4 Gameten) vs. Oogenese (1 Gamet) — Ergebnis nicht verwechseln
-- Meiose-Arrest Prophase I (bis Pubertät/Ovulation) vs. Metaphase II (bis Befruchtung)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Spermatogenese: ~74 Tage; Oogenese: primäre Oozyten pränatal angelegt, Meiose II erst bei Befruchtung
+**Typische Fallen:**
+- „Aus einer Oozyte entstehen vier Eizellen” -- falsch (nur eine Eizelle + drei Polkörperchen)
+- Spermatogenese (4 Gameten) vs. Oogenese (1 Gamet) -- Ergebnis nicht verwechseln
+- Meiose-Arrest Prophase I (bis Ovulation) vs. Metaphase II (bis Befruchtung)
 
 ---
 
@@ -210,7 +195,6 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
           tags: ["oogenese", "meiose-ii", "befruchtung"],
         },
       ],
-      diagram: "meiosis",
     },
     {
       id: "bio-4-01",
@@ -227,16 +211,15 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Befruchtung** ist die Verschmelzung von Spermium und Eizelle zur **Zygote** (2n); sie findet in der **Ampulle des Eileiters** statt. **Warum für den MedAT relevant?** Ort (Ampulle, nicht Uterus), Kapazitation, Akrosomreaktion vs. Kortikalreaktion (Polyspermie-Block), Syngamie und Zygote werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wo findet die Befruchtung statt?“; „Welche Reaktion verhindert Polyspermie?“; „Was ist die Zygote?“; „Wann wird Meiose II der Eizelle abgeschlossen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Befruchtung abgedeckt.
+Von den Hunderten Millionen Spermien, die beim Geschlechtsverkehr freigesetzt werden, erreichen nur wenige Hundert die Eizelle im Eileiter -- und genau eines davon darf eindringen. Die Befruchtung ist kein passiver Vorgang, sondern ein präzise choreografierter Prozess: Das Spermium muss erst reifen (Kapazitation), dann die Eizellhülle enzymatisch durchdringen (Akrosomreaktion), und die Eizelle muss sofort alle weiteren Spermien abwehren (Kortikalreaktion). Dass die Eizelle dabei ihre eigene Meiose erst abschließt, macht den Vorgang noch komplexer.
 
 **In diesem Kapitel lernst du:**
-- **Wo** die Befruchtung stattfindet (Ampulle des Eileiters) und was **Kapazitation** ist
-- **Akrosomreaktion** (Spermium durchdringt Eizellhülle) und **Kortikalreaktion** (Eizelle blockiert weitere Spermien)
-- **Syngamie** (Verschmelzung der Vorkerne) und **Zygote** (erste diploide Zelle)
-- Dass die Eizelle **Meiose II** erst bei Befruchtung abschließt (reife Eizelle n + 2. Polkörperchen)
-- Geschlechtsbestimmung durch das Spermium (X oder Y)
+- warum die Befruchtung im Eileiter stattfindet und nicht in der Gebärmutter
+- wie Spermium und Eizelle in einer koordinierten Abfolge von Reaktionen verschmelzen
+- warum nur ein einziges Spermium eindringen darf und wie die Eizelle sich schützt
+- wie aus der Verschmelzung der Vorkerne die erste Zelle des neuen Individuums entsteht
 
-![Befruchtung und frühe Entwicklung](/grafik-blastozyste.svg)
+{{DIAGRAM:meiosis}}
 
 ---
 
@@ -247,6 +230,8 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
 ---
 
 ## Voraussetzung: Kapazitation
+
+{{DIAGRAM:menstrual-cycle}}
 
 Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. **Kapazitation** ist eine biochemische Reifung, die im weiblichen Genitaltrakt stattfindet (Dauer etwa **7 Stunden**): Unter anderem wird Cholesterin aus der Spermienmembran entfernt und die intrazelluläre Calcium-Konzentration steigt. Dadurch wird die Spermienbewegung verstärkt (**Hyperaktivierung**) und das Spermium wird befähigt, die **Akrosomreaktion** auszulösen. Ohne Kapazitation kann kein Spermium die Eizellhülle durchdringen.
 
@@ -260,6 +245,8 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin**, **Hyaluronidase**). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
 
+{{DIAGRAM:cell-membrane}}
+
 3. **Fusion und Kortikalreaktion (in der Eizelle):** Sobald die Membranen von Spermium und Eizelle fusionieren, steigt in der Eizelle die Calcium-Konzentration. Das löst die **Kortikalreaktion** aus: **Kortikale Granula** (Vesikel unter der Eizellmembran) entleeren ihren Inhalt in den **perivitellinen Spalt** (Raum zwischen Eizelle und Zona pellucida). Dadurch wird die Zona pellucida chemisch verändert (**Zona-Reaktion**) und für weitere Spermien undurchdringbar — **Polyspermie-Block**. Eine Befruchtung durch mehrere Spermien (Polyspermie) würde zu Triploidie und meist zum Absterben des Embryos führen.
 
 4. **Abschluss der Meiose II:** Die Eizelle lag bis zur Befruchtung in **Metaphase II** der Meiose. Jetzt wird **Meiose II** abgeschlossen: Es entstehen die **reife Eizelle** (n) und das **zweite Polkörperchen** (n).
@@ -267,8 +254,6 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 5. **Syngamie:** Die **Vorkerne** (Pronuclei) von Eizelle und Spermium verschmelzen. Die entstandene Zelle ist die **Zygote** (2n, diploid). Das **Geschlecht** wird durch das Spermium festgelegt: Es trägt entweder ein X- oder ein Y-Chromosom; die Eizelle liefert stets ein X-Chromosom.
 
 > **Merke:** Akrosomreaktion = Enzymfreisetzung beim Spermium (Durchdringung der Zona). Kortikalreaktion = Reaktion der Eizelle (Polyspermie-Block). Syngamie = Verschmelzung der Vorkerne → Zygote (2n).
-
-![Akrosomreaktion und Kortikalreaktion](/grafik-3-meiose.svg)
 
 ---
 
@@ -281,34 +266,15 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung:**
+**Typische Prüfungsfragen:**
+- Wo findet die Befruchtung beim Menschen statt?
+- Welche Reaktion verhindert Polyspermie?
+- Wann wird die Meiose II der Eizelle abgeschlossen?
 
-**Zentral prüfungsrelevant:**
-- Befruchtung findet in der **Ampulle des Eileiters** statt (nicht im Uterus)
-- **Kapazitation** (~7 h): Reifung des Spermiums im weiblichen Genitaltrakt, Voraussetzung für Akrosomreaktion
-- **Akrosomreaktion** (Spermium): Bindung an ZP3 → Freisetzung von Akrosin/Hyaluronidase → Durchdringung der Zona pellucida
-- **Kortikalreaktion** (Eizelle): Ca²⁺-Anstieg → kortikale Granula → Zona-Modifikation = **Polyspermie-Block**
-- **Syngamie** = Verschmelzung der Vorkerne → **Zygote** (2n); Geschlecht durch Spermium (X/Y)
-- Eizelle schließt **Meiose II** erst bei Befruchtung ab → reife Eizelle (n) + 2. Polkörperchen
-
-**Ergänzend vertiefend:**
-- Zona pellucida: ZP3 löst Akrosomreaktion aus; Zona-Reaktion macht sie für weitere Spermien undurchdringbar
-- Perivitelliner Spalt: Raum zwischen Eizellmembran und Zona pellucida
-
-**Häufige Prüfungsfragen:**
-- Wo findet die Befruchtung beim Menschen statt? → Ampulle des Eileiters
-- Welche Reaktion verhindert Polyspermie? → Kortikalreaktion (Eizelle)
-- Was ist die Zygote? → Die erste diploide Zelle nach Verschmelzung der Vorkerne von Ei- und Samenzelle
-- Wann wird die Meiose II der Eizelle abgeschlossen? → Bei der Befruchtung
-
-**Typische Prüfungsfallen:**
+**Typische Fallen:**
 - Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
 - Kapazitation (Reifung Spermium) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt)
-- Befruchtung (Ampulle) vs. Implantation (Uterus, Tag 6–7)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Kapazitation: ca. 7 Stunden im weiblichen Genitaltrakt
-- Befruchtung: in der Ampulle der Tuba uterina
+- Befruchtung (Ampulle) vs. Implantation (Uterus, Tag 6--7)
 
 ---
 
@@ -388,7 +354,6 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
           tags: ["syngamie", "zygote"],
         },
       ],
-      diagram: "meiosis",
     },
     {
       id: "bio-4-01b",
@@ -405,20 +370,19 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       ],
       content: `## Einleitung
 
-**Worum geht es?** Aus der **Zygote** entstehen durch **Furchung** (Teilungen ohne Wachstum) **Morula** und **Blastozyste**; **Trophoblast** → Plazenta/hCG, **Embryoblast** → Embryo; **Implantation** am Tag 6–7. **Warum für den MedAT relevant?** Furchung ≠ Wachstum, Morula vs. Blastozyste, Trophoblast vs. Embryoblast und hCG (erhält Corpus luteum) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Furchung — mit oder ohne Wachstum?“; „Morula vs. Blastozyste — was hat den Hohlraum?“; „Welche Struktur produziert hCG?“; „Wann Implantation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Furchung, Blastozyste und Implantation abgedeckt.
+Stell dir vor: Aus einer einzigen Zelle -- der Zygote -- soll ein ganzer Mensch werden. Die ersten Tage nach der Befruchtung sind dabei paradox: Die Zygote teilt sich immer wieder, doch der Keim wird dabei nicht größer. Diese raschen Teilungen ohne Wachstum heißen Furchung, und sie formen aus einer Zelle zunächst einen kompakten Zellhaufen (Morula), dann eine hohle Kugel mit zwei völlig verschiedenen Zelltypen (Blastozyste). Der eine wird zur Plazenta, der andere zum Embryo. Etwa am sechsten Tag nach der Befruchtung bohrt sich diese Blastozyste in die Gebärmutterschleimhaut ein -- die Implantation, ohne die keine Schwangerschaft bestehen kann.
 
 **In diesem Kapitel lernst du:**
-- **Furchung**: schnelle Teilungen der Zygote/Blastomeren ohne Wachstum → Morula → Blastozyste
-- **Morula** (Tag 3–4): kompakter Zellhaufen; **Blastozyste** (Tag 5–6): Hohlraum (Blastozoel), Trophoblast außen, Embryoblast (innere Zellmasse) innen
-- **Trophoblast** → Plazenta, hCG; **Embryoblast** → Embryo; **Blastozoel** = flüssigkeitsgefüllter Hohlraum
-- **Implantation** (Tag 6–7): Synzytiotrophoblast invadiert Endometrium; hCG erhält Corpus luteum
-- Klinik: Eileiterschwangerschaft bei Implantation außerhalb des Uterus
-
-![Furchung und Blastozyste](/grafik-blastozyste.svg)
+- warum die Zygote sich teilt, ohne dabei zu wachsen, und was das für die Zellgröße bedeutet
+- worin sich Morula und Blastozyste unterscheiden und warum der Hohlraum entscheidend ist
+- welche Zellen den Embryo und welche die Plazenta bilden werden
+- wie die Einnistung in die Gebärmutterschleimhaut abläuft und warum hCG die Schwangerschaft erhält
 
 ---
 
 ## Furchung — Teilungen ohne Wachstum
+
+{{DIAGRAM:stem-cells}}
 
 **Bisher haben wir gesehen:** Die Zygote ist die erste Zelle des neuen Individuums. **Damit sich ein vielzelliger Keim bildet,** teilt sie sich wiederholt. Diese Teilungen heißen **Furchung**: Sie finden in rascher Folge statt, **ohne** dass die Zellen zwischen den Teilungen nennenswert wachsen. Die Tochterzellen (**Blastomeren**) werden also mit jeder Runde kleiner. Es gibt **kein** Gesamtwachstum des Keims in dieser Phase — Furchung ist **nicht** mit Wachstum gleichzusetzen (typische Prüfungsfalle).
 
@@ -430,6 +394,8 @@ Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus et
 
 ## Blastozyste — Aufbau und Bedeutung
 
+{{DIAGRAM:animal-cell}}
+
 In der Morula bildet sich ein **flüssigkeitsgefüllter Hohlraum** aus (**Blastozoel**). Sobald dieser Hohlraum erkennbar ist und zwei zellulär unterschiedliche Bereiche vorliegen, spricht man von einer **Blastozyste** (Tag 5–6).
 
 **Strukturen der Blastozyste:**
@@ -438,8 +404,6 @@ In der Morula bildet sich ein **flüssigkeitsgefüllter Hohlraum** aus (**Blasto
 - **Blastozoel**: Der Hohlraum, der die typische Blastozystenform bedingt.
 
 > **Merke:** Blastozyste: **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum.
-
-![Blastozyste](/grafik-blastozyste.svg)
 
 ---
 
@@ -451,8 +415,6 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 
 > **Merke:** Implantation Tag 6–7. hCG (vom Trophoblast) erhält das Corpus luteum → Progesteron ↑ → keine Menstruation.
 
-![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
-
 ---
 
 ## Typische Fehler/Fehlentwicklungen (BMS-Level)
@@ -463,33 +425,15 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung:**
+**Typische Prüfungsfragen:**
+- Morula vs. Blastozyste -- was ist der Unterschied?
+- Welche Struktur der Blastozyste wird zur Plazenta?
+- Wann findet die Implantation statt?
 
-**Zentral prüfungsrelevant:**
-- **Furchung** = Teilungen ohne Wachstum; **Morula** (Tag 3–4) = kompakter Zellhaufen; **Blastozyste** (Tag 5–6) = Hohlraum mit Trophoblast + Embryoblast
-- **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum
-- **Implantation** Tag 6–7: Synzytiotrophoblast invadiert Endometrium; hCG erhält Corpus luteum → Progesteron → keine Menstruation
-- Furchung **≠** Wachstum (Zellen werden kleiner, kein Gesamtwachstum)
-
-**Ergänzend vertiefend:**
-- Embryoblast differenziert ab Tag 8 in Epiblast und Hypoblast (Grundlage für Gastrulation)
-- hCG im Urin/Serum: Nachweis ab ca. Tag 10–14; Schwangerschaftstest
-
-**Häufige Prüfungsfragen:**
-- Was ist der Unterschied zwischen Morula und Blastozyste? → Morula = kompakter Zellhaufen (Tag 3–4); Blastozyste = Hohlraum (Blastozoel), Trophoblast + Embryoblast (Tag 5–6)
-- Welche Struktur der Blastozyste wird zur Plazenta und produziert hCG? → Trophoblast
-- Wann findet die Implantation statt? → Tag 6–7 nach Befruchtung
-- Welches Hormon erhält das Corpus luteum in der Frühschwangerschaft? → hCG
-
-**Typische Prüfungsfallen:**
-- Morula (kompakt, Tag 3–4) vs. Blastozyste (Hohlraum, Tag 5–6)
-- Trophoblast (→ Plazenta, hCG) vs. Embryoblast (→ Embryo)
-- Furchung (Teilungen ohne Wachstum) vs. Wachstum (Zunahme der Gesamtmasse)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Implantation: Tag 6–7 post conceptionem
-- Blastozyste: Tag 5–6; Epiblast/Hypoblast ab Tag 8
-- hCG-Peak: 8.–12. SSW, danach Abfall
+**Typische Fallen:**
+- Morula (kompakt, Tag 3--4) vs. Blastozyste (Hohlraum, Tag 5--6)
+- Trophoblast (Plazenta, hCG) vs. Embryoblast (Embryo)
+- Furchung = Teilungen ohne Wachstum (Zellen werden kleiner, kein Gesamtwachstum)
 
 ---
 
@@ -581,16 +525,13 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
       ],
       content: `## Einleitung
 
-**Worum geht es?** In der **dritten Woche** entstehen aus der Keimscheibe die **drei Keimblätter** (Ektoderm, Mesoderm, Endoderm) durch **Gastrulation** (Primitivstreifen, Invagination). **Warum für den MedAT relevant?** Gastrulation, Herkunft der Keimblätter aus dem Epiblast und **Keimblattderivate** (welches Organ aus welchem Blatt?) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Aus welchem Keimblatt entstehen ZNS und Epidermis?“; „Mesoderm — welche Organe?“; „Notochord — aus wo?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Gastrulation abgedeckt.
+Wie wird aus einer flachen Zellscheibe ein dreidimensionaler Embryo mit Haut, Muskeln und inneren Organen? In der dritten Entwicklungswoche geschieht einer der spektakulärsten Schritte der Embryologie: Durch die Gastrulation wandern Zellen ins Innere der Keimscheibe ein und schaffen drei übereinanderliegende Zellschichten -- die Keimblätter. Aus dem Ektoderm werden später Haut und Nervensystem, aus dem Mesoderm Muskeln und Knochen, aus dem Endoderm Darm und Lunge. Das Erstaunliche: Alle drei Blätter gehen auf dieselbe Zellschicht zurück, den Epiblast.
 
 **In diesem Kapitel lernst du:**
-- **Gastrulation** (3. Woche): Bildung der drei Keimblätter aus dem Epiblast über den **Primitivstreifen**
-- **Ektoderm, Mesoderm, Endoderm** — welche Gewebe und Organe aus welchem Keimblatt entstehen
-- **Notochord** (Chorda dorsalis) als Achsenstruktur und Induktor der Neurulation
-- **Somiten** als segmentierte Mesoderm-Derivate (Sklerotom, Myotom, Dermatom)
-- Warum alle drei Keimblätter letztlich **aus dem Epiblast** hervorgehen
-
-![Gastrulation und dreischichtige Keimscheibe](/grafik-blastozyste.svg)
+- wie aus einer zweischichtigen Keimscheibe durch Zellwanderung drei Keimblätter entstehen
+- welche Organe und Gewebe sich aus welchem Keimblatt entwickeln
+- warum das Notochord als Organisator des Nervensystems so bedeutend ist
+- wie Somiten den Bauplan von Wirbelsäule, Muskeln und Haut vorgeben
 
 ---
 
@@ -601,6 +542,8 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 ---
 
 ## Ablauf der Gastrulation
+
+{{DIAGRAM:stem-cells}}
 
 Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–21) statt. Ausgangspunkt ist die zweischichtige Keimscheibe (Epiblast + Hypoblast).
 
@@ -615,8 +558,6 @@ Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–
 Aus dem **Primitivknoten** entsteht außerdem das **Notochord** (Chorda dorsalis): eine stäbchenförmige Struktur aus Mesoderm in der Mittellinie. Das Notochord ist ein **Induktor** für die nachfolgende **Neurulation** (Bildung der Neuralplatte/des Neuralrohrs) und wird später zu den **Nuclei pulposi** der Bandscheiben (einzige bleibende Struktur des Notochords).
 
 > **Merke:** Gastrulation = Bildung der drei Keimblätter aus dem Epiblast. Primitivstreifen → Einwanderung → Mesoderm + Endoderm; Oberfläche → Ektoderm. Notochord aus Primitivknoten induziert Neurulation.
-
-![Keimblätter und Entwicklung](/grafik-blastozyste.svg)
 
 ---
 
@@ -638,6 +579,8 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 ## Somiten — segmentierte Mesoderm-Derivate
 
+{{DIAGRAM:animal-cell}}
+
 **Somiten** sind paarige, segmentierte Abkömmlinge des Mesoderms, die beidseits des Neuralrohrs und des Notochords entstehen (3.–5. Woche, beim Menschen etwa 42–44 Paare). Jeder Somit gliedert sich in drei Bereiche:
 
 - **Sklerotom** (ventral): Liefert Zellen für **Wirbelkörper**, Rippen und Teile des Schädels (Chondrozyten, Osteoblasten).
@@ -650,38 +593,16 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung:**
+**Typische Prüfungsfragen:**
+- Aus welchem Keimblatt entstehen Gehirn und Rückenmark?
+- Welche Organe sind Mesoderm-Derivate?
+- Was liefert das Dermatom -- und was nicht?
 
-**Zentral prüfungsrelevant:**
-- **Gastrulation** = Bildung der drei Keimblätter (Ektoderm, Mesoderm, Endoderm) in der 3. Woche (Tag 15–21)
-- Alle drei Keimblätter entstehen **aus dem Epiblast** (Primitivstreifen: Einwanderung → Meso + Entoderm; Oberfläche → Ektoderm)
-- **Ektoderm** → Epidermis, ZNS (Neuralrohr), PNS, Sinnesorgane, Zahnschmelz
-- **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
-- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase
-- **Notochord** (aus Primitivknoten) → Induktor der Neurulation; später Nuclei pulposi der Bandscheiben
-- **Somiten**: Sklerotom (Knochen), Myotom (Muskel), Dermatom (dermales Bindegewebe)
-
-**Ergänzend vertiefend:**
-- Primitivknoten/Hensen-Knoten: Organisationszentrum; Links-Rechts-Asymmetrie (z. B. nodal flow)
-- Epidermis = Ektoderm; Dermis-Vorläufer = Mesoderm (Dermatom)
-
-**Häufige Prüfungsfragen:**
-- In welcher Woche findet die Gastrulation statt? → 3. Entwicklungswoche (Tag 15–21)
-- Aus welchem Keimblatt entstehen Gehirn und Rückenmark? → Ektoderm (über Neurulation/Neuralrohr)
-- Welche Organe sind Mesoderm-Derivate? → Muskel, Knochen, Herz, Niere, Gonaden, Blut
-- Was induziert die Neuralplatte? → Notochord
-- Was liefert das Dermatom? → Dermales Bindegewebe (nicht die Epidermis)
-
-**Typische Prüfungsfallen:**
-- Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darm, Lunge, Drüsen) — Epidermis ist **nicht** Endoderm
-- Dermatom (Mesoderm) liefert **nicht** die Epidermis (Ektoderm), sondern dermales Bindegewebe
-- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) — unterschiedliche Prozesse
+**Typische Fallen:**
+- Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darm, Lunge, Drüsen) -- Epidermis ist nicht Endoderm
+- Dermatom (Mesoderm) liefert dermales Bindegewebe, nicht die Epidermis (Ektoderm)
+- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) -- verschiedene Prozesse
 - Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Gastrulation: Tag 15–21 (3. Woche)
-- 42–44 Somitenpaare (3.–5. Woche)
-- Notochord → Nuclei pulposi (einzige bleibende Struktur)
 
 ---
 
@@ -816,17 +737,19 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Neurulation**: Notochord induziert **Neuralplatte** → **Neuralrinne** → **Neuralrohr** (ZNS-Anlage); **Neuralleiste** liefert Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark. **Warum für den MedAT relevant?** Ablauf Neurulation, Neuroporen-Schluss (Tag 25/27), Neuralleiste-Derivate und **Folsäure** (0,4 mg/Tag, Risikosenkung ~70 %) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was induziert die Neuralplatte?“; „Neuralleiste — aus welchem Keimblatt?“; „Spina bifida — welcher Neuroporus?“; „Folsäure — wofür?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Neurulation abgedeckt.
+Gehirn und Rückenmark gehören zu den ersten Organen, die im Embryo angelegt werden -- und der Prozess, der sie formt, ist erstaunlich elegant. Das Notochord, eine stäbchenförmige Struktur unter dem Ektoderm, sendet Signale nach oben und bringt eine flache Zellplatte dazu, sich zu einer Röhre zusammenzufalten: dem Neuralrohr, der Anlage des gesamten zentralen Nervensystems. Wenn dieser Verschluss an einer Stelle ausbleibt, entstehen schwerwiegende Fehlbildungen wie Spina bifida oder Anenzephalie. Die gute Nachricht: Eine einfache Vitaminergänzung mit Folsäure kann das Risiko um rund 70 % senken -- eine der wirksamsten Präventionsmaßnahmen der Medizin.
 
 **In diesem Kapitel lernst du:**
-- **Neurulation**: Notochord induziert Neuralplatte → Neuralrinne → **Neuralrohr** (Vorläufer von Gehirn und Rückenmark)
-- **Neuroporen** (vorderer/hinterer): Schließung Tag 25 (anterior) und Tag 27 (posterior); offen = Neuralrohrdefekt
-- **Neuralleiste** (Ektoderm-Abkömmling): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfmesenchyms
-- **Neuralrohrdefekte**: Spina bifida (kaudal), Anenzephalie (kranial); **Folsäure** senkt das Risiko (~70 %)
-
-![Embryonalentwicklung und Keimblätter](/grafik-blastozyste.svg)
+- wie aus einer flachen Zellplatte das Neuralrohr entsteht und warum das Notochord dafür nötig ist
+- wann sich die offenen Enden des Neuralrohrs schließen müssen und was passiert, wenn sie es nicht tun
+- welche überraschend vielfältigen Zelltypen aus der Neuralleiste hervorgehen -- von Pigmentzellen bis zum Nebennierenmark
+- warum Folsäure vor der Schwangerschaft so entscheidend ist
 
 ---
+
+{{DIAGRAM:stem-cells}}
+
+{{DIAGRAM:nervensystem-übersicht}}
 
 ## Voraussetzung: Notochord
 
@@ -835,6 +758,8 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 ---
 
 ## Ablauf der Neurulation
+
+{{DIAGRAM:nervensystem-übersicht}}
 
 1. **Neuralplatte:** Das Ektoderm über dem Notochord verdickt sich zur **Neuralplatte** (eine bandförmige Struktur in der Mittellinie).
 
@@ -846,11 +771,11 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 > **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
 
-![Neurulation und Embryonalentwicklung](/grafik-blastozyste.svg)
-
 ---
 
 ## Neuralleiste — Herkunft und Derivate
+
+{{DIAGRAM:stem-cells}}
 
 Während sich das Neuralrohr schließt, lösen sich Zellen vom Rand der Neuralplatte (dem Übergang zwischen Neuralplatte und übrigem Ektoderm) und **wandern** aus. Diese Zellen bilden die **Neuralleiste**. Sie stammen vom **Ektoderm**, nicht vom Mesoderm (typische Prüfungsfalle).
 
@@ -874,34 +799,15 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung:**
+**Typische Prüfungsfragen:**
+- Was induziert die Neuralplatte?
+- Wann schließen die Neuroporen?
+- Aus welcher Struktur stammen Melanozyten und Nebennierenmark?
 
-**Zentral prüfungsrelevant:**
-- **Neurulation** = Bildung des Neuralrohrs aus dem Ektoderm; **Notochord** induziert die Neuralplatte
-- **Neuralrohr** = Vorläufer von Gehirn und Rückenmark (ZNS)
-- **Anteriorer Neuroporus** schließt Tag 25, **posteriorer** Tag 27; offen = Neuralrohrdefekt
-- **Neuralleiste** (Ektoderm-Derivat): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kiefer-/Kopfmesenchym
-- **Neuralrohrdefekte:** Spina bifida (kaudal), Anenzephalie (kranial); **Folsäure** 0,4 mg/Tag präkonzeptionell senkt Risiko ~70 %
-
-**Ergänzend vertiefend:**
-- Neuralplatte → Neuralrinne → Fusion der Neuralwülste → Neuralrohr
-- Neuralleiste ≠ Mesoderm (stammt vom Ektoderm)
-
-**Häufige Prüfungsfragen:**
-- Aus welchem Keimblatt entstehen Gehirn und Rückenmark? → Ektoderm (über Neurulation/Neuralrohr)
-- Was induziert die Neuralplatte? → Notochord (Mesoderm)
-- Wann schließen die Neuroporen? → Anterior Tag 25, posterior Tag 27
-- Aus welcher Struktur stammen Melanozyten und Nebennierenmark? → Neuralleiste (Ektoderm-Derivat)
-- Wie lässt sich das Risiko für Neuralrohrdefekte senken? → Folsäure 0,4 mg/Tag präkonzeptionell/frühe SS
-
-**Typische Prüfungsfallen:**
-- Neuralleiste (Ektoderm!) vs. Mesoderm — Melanozyten und Nebennierenmark kommen von der Neuralleiste
-- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation)
+**Typische Fallen:**
+- Neuralleiste stammt vom Ektoderm, nicht vom Mesoderm -- Melanozyten und Nebennierenmark kommen von der Neuralleiste
+- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) -- verschiedene Prozesse
 - Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Anteriorer Neuroporus: Tag 25; posteriorer: Tag 27
-- Folsäure 0,4 mg/Tag präkonzeptionell: Risikosenkung Neuralrohrdefekt ~70 %
 
 ---
 
@@ -983,18 +889,15 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Embryonalperiode** (Wochen 1–8): **Organogenese** — alle Organe werden angelegt; **Fetalperiode** (ab Woche 9): Wachstum und Reifung. **Warum für den MedAT relevant?** Embryo vs. Fetus, **Alles-oder-Nichts-Prinzip** (Woche 1–2), **kritische Phase 4.–8. Woche** (Teratogene), Herzschlag ab Woche 4 und Lungenreife (Surfactant ab Woche 24) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wann endet die Embryonalperiode?“; „Alles-oder-Nichts-Prinzip — in welcher Woche?“; „Wann schlägt das Herz?“; „Ab wann Surfactant?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Organogenese und kritischen Phasen abgedeckt.
+Innerhalb von nur acht Wochen entsteht aus drei Zellschichten ein Embryo, in dem alle Organsysteme angelegt sind -- vom schlagenden Herz (ab Tag 22) bis zu den ersten Fingeransätzen. Danach folgt eine Phase des Wachstums und der Reifung, die bis zur Geburt dauert. Besonders brisant: In genau dieser Zeitspanne der Organogenese ist der Embryo extrem empfindlich gegenüber schädlichen Einflüssen. Ein Medikament, das in Woche 5 eingenommen wird, kann ganz andere Folgen haben als dasselbe Medikament in Woche 12. Die Geschichte von Thalidomid (Contergan) zeigt auf tragische Weise, wie organspezifisch diese Empfindlichkeit ist.
 
 **In diesem Kapitel lernst du:**
-- **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; **Fetalperiode** (ab Woche 9): Wachstum und Reifung
-- **Embryo vs. Fetus**: zeitliche Abgrenzung (Ende 8. Woche) und Bedeutung
-- **Teratogene** und **kritische Perioden** (organspezifische Empfindlichkeit)
-- **Alles-oder-Nichts-Prinzip** (nur Woche 1–2: Fruchttod oder unauffällige Entwicklung)
-- **Lungenreife**: Surfactant ab Woche 24, Bedeutung bei Frühgeborenen (RDS)
+- warum nach der 8. Woche keine neuen Organe mehr angelegt werden und was danach passiert
+- weshalb die Wochen 4--8 als besonders gefährlich für Fehlbildungen gelten
+- was das Alles-oder-Nichts-Prinzip in den allerersten Tagen bedeutet
+- ab wann die Lunge des Fetus reif genug für ein Überleben außerhalb des Mutterleibs ist
 
-![Embryonalentwicklung und Organanlage](/grafik-blastozyste.svg)
-
-![Ossifikation und Wachstum](/grafik-12-ossifikation.svg)
+{{DIAGRAM:stem-cells}}
 
 ---
 
@@ -1007,6 +910,8 @@ Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. I
 ---
 
 ## Organogenese in der Embryonalperiode
+
+{{DIAGRAM:heart-anatomy}}
 
 Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und **das Herz beginnt bereits in Woche 4 (Tag 22–23) zu schlagen** — **nicht** erst am Ende der 8. Woche (typische Falschaussage in MC-Fragen!). Die **4.–8. Woche** ist die **kritische Phase**: der Embryo ist gegenüber Teratogenen besonders anfällig. **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe** des Embryos. Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten **Amnionhöhle**. Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
 
@@ -1038,31 +943,16 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Wann endet die Embryonalperiode?
+- Was besagt das Alles-oder-Nichts-Prinzip?
+- Ab wann produzieren Typ-II-Pneumozyten Surfactant?
 
-**Zentral prüfungsrelevant:** Embryonalperiode (bis Woche 8, alle Organe angelegt), **kritische Phase 4.–8. Woche** (besonders anfällig für Teratogene). **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe.** Embryo in **Amnionhöhle** (Fruchtwasser). **Herz schlägt ab Woche 4** (Tag 22–23), Finger/Zehen Ende 8. Woche. Fetalperiode, Alles-oder-Nichts-Prinzip (Woche 1–2), Teratogene, Organogenese.
-
-**Ergänzend vertiefend:** Plazenta.
-
-**Häufige Fragen:**
-- Wann endet die Embryonalperiode? (Nach Woche 8, alle Organe angelegt)
-- Was besagt das Alles-oder-Nichts-Prinzip? (Woche 1–2: Fruchttod oder normale Entwicklung)
-- Ab wann produzieren Typ-II-Pneumozyten Surfactant? (Ab Woche 24)
-
-**Typische Prüfungsfallen:**
-- **„Das Herz beginnt am Ende der 8. Woche zu schlagen“ ist FALSCH** — das Herz schlägt bereits in **Woche 4** (Tag 22–23). Am Ende der 8. Woche sind Finger und Zehen ausgebildet.
-- Embryonalperiode (Organogenese, Wochen 1–8) vs. Fetalperiode (Wachstum/Reifung, ab Woche 9)
-- Alles-oder-Nichts-Prinzip (nur Woche 1–2!) vs. kritische Perioden (ab Woche 3, organspezifisch)
-- SSL (Scheitel-Steiß-Länge, Maß in Embryonalperiode) vs. BPD (Biparietaler Durchmesser, Fetalperiode)
-- Viabilität (~Woche 22–24) vs. volle Lungenreife (Woche 35–37)
-- Teratogen (verursacht Fehlbildungen) vs. Mutagen (verursacht DNA-Schäden) — Überlappung möglich
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Herzschlag beginnt: Tag 22–23
-- SSL Ende Woche 8: ca. 3 cm, Gewicht ca. 3 g
-- Surfactant (DPPC): ab Woche 24 durch Typ-II-Pneumozyten
-- Quickening (erste spürbare Kindsbewegungen): Woche 16–20
-- Thalidomid-Phokomelie: kritische Periode Woche 4–8
+**Typische Fallen:**
+- “Das Herz beginnt am Ende der 8. Woche zu schlagen” ist FALSCH -- es schlägt bereits in Woche 4 (Tag 22--23)
+- Alles-oder-Nichts-Prinzip gilt nur Woche 1--2, nicht danach
+- Viabilität (~Woche 22--24) vs. volle Lungenreife (Woche 35--37)
+- Teratogen (verursacht Fehlbildungen) vs. Mutagen (verursacht DNA-Schäden)
 
 ---
 
@@ -1183,7 +1073,6 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
           tags: ["quickening", "kindsbewegungen", "lanugo"],
         },
       ],
-      diagram: "stem-cells",
     },
     {
       id: "bio-4-04",
@@ -1199,14 +1088,13 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Plazenta** (fetaler + mütterlicher Anteil) ermöglicht Austausch über die **Plazentaschranke** (Blut mischt sich nicht); **Nabelschnur**: 2 Arterien, 1 Vene (AVA). **Warum für den MedAT relevant?** Plazentaschranke (IgG passiert), Nabelschnur-Aufbau (AVA) und Eihäute (Amnion, Chorion) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Nabelschnur — wie viele Arterien/Venen?“; „Plazentaschranke — was durchtritt?“; „Fetaler vs. mütterlicher Plazenta-Anteil?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Embryonalhüllen und Plazenta abgedeckt.
+Neun Monate lang versorgt ein einziges Organ den heranwachsenden Fetus mit Sauerstoff und Nährstoffen, entsorgt seinen Abfall und schützt ihn vor den meisten Krankheitserregern der Mutter -- die Plazenta. Das Besondere: Obwohl mütterliches und kindliches Blut nur durch eine hauchdünne Zellschicht getrennt sind, mischen sie sich nie. Durch die Nabelschnur fließt sauerstoffreiches Blut zum Kind und sauerstoffarmes zurück -- und zwar in einer Anordnung, die genau umgekehrt ist, als man erwarten würde: Die Vene bringt das gute Blut, die Arterien das schlechte.
 
 **In diesem Kapitel lernst du:**
-- **Aufbau** der Plazenta: fetaler Anteil (Chorionzotten) und mütterlicher Anteil (Decidua); **intervillöse Räume**
-- **Plazentaschranke**: Austausch von O₂, Nährstoffen, Abfall; **IgG** passiert (Transzytose), Blut mischt sich nicht
-- **Nabelschnur**: 2 Arterien (O₂-arm vom Kind), 1 Vene (O₂-reich zum Kind) — Merkhilfe **AVA**
-- **Eihäute**: Amnion (innen, Fruchtwasser), Chorion (außen)
-- Plazentahormone: hCG (Frühschwangerschaft), Progesteron
+- wie die Plazenta aus fetalen und mütterlichen Anteilen aufgebaut ist
+- warum sich mütterliches und kindliches Blut nicht mischen und was trotzdem die Schranke passiert
+- wie die Nabelschnur aufgebaut ist und warum die Merkhilfe AVA so wichtig ist
+- welche Hormone die Plazenta produziert und warum sie für die Schwangerschaft unverzichtbar ist
 
 ---
 
@@ -1214,9 +1102,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 
 **Bisher haben wir gesehen:** Der Trophoblast der Blastozyste wird zur Plazenta und zu Anteilen der Eihüllen; der Embryo liegt in der **Amnionhöhle** (von Fruchtwasser umgeben). **Damit der Fetus versorgt wird,** bilden sich die **Plazenta** und die **Eihäute** (Amnion, Chorion) aus.
 
-![Plazenta und Trophoblast](/grafik-blastozyste.svg)
-
-![Hormonachse und hCG](/grafik-5-hypophysen-achsen.svg)
+{{DIAGRAM:menstrual-cycle}}
 
 ---
 
@@ -1249,6 +1135,8 @@ Die Plazenta ist ein endokrin aktives Organ. In der Frühschwangerschaft dominie
 
 ## Nabelschnur und Eihäute
 
+{{DIAGRAM:blutkreislauf}}
+
 Die Nabelschnur enthält 2 Nabelarterien (Aa. umbilicales) und 1 Nabelvene (V. umbilicalis), eingehüllt in Wharton-Sulze. Merkhilfe: 'AVA' (Arterie-Vene-Arterie). Sauerstoffarmes, kohlendioxidreiches fetales Blut fließt durch die Arterien zur Plazenta; sauerstoffreiches Blut kehrt über die Vene zum Fötus zurück – also umgekehrt zur konventionellen Arterie/Vene-Definition (fetale Arterien führen 'venöses' Blut). Fehlt eine Nabelarterie (Single Umbilical Artery, SUA), ist dies mit erhöhtem Risiko für Fehlbildungen assoziiert. Das Amnion (innere Membran) produziert und umgibt Fruchtwasser (Amnionflüssigkeit, ca. 800 ml am Termin). Das Chorion (äußere Membran) liegt dem Amnion an und grenzt an die Decidua.
 
 **Plazentaschranke — was durchtritt:** Lipophile (fettlösliche) Stoffe wie **Alkohol**, **Nikotin** und viele Medikamente passieren die Plazentaschranke leicht und können den Fetus schädigen. **IgG** (Antikörper der Klasse G) ist das einzige Immunglobulin, das von der Mutter zum Kind gelangt — über **Transzytose** (vesikulärer Transport) mithilfe des **FcRn-Rezeptors** (neonataler Fc-Rezeptor) im Synzytiotrophoblast. Das liefert dem Neugeborenen einen **Nestschutz** (passive Immunität). IgM, IgA und IgE passieren die Plazenta nicht.
@@ -1265,30 +1153,15 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus.)
+- Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren.)
+- Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten.)
 
-**Zentral prüfungsrelevant:** Plazenta, Nabelvene (sauerstoffreiches Blut zum Fötus), Nabelarterien (verbrauchtes Blut zurück), Ductus venosus/arteriosus/ovale, IgG-Transfer (FcRn), fetale Kreislaufanpassungen.
-
-**Ergänzend vertiefend:** Shunt-Umstellung bei Geburt.
-
-**Häufige Fragen:**
-- Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus)
-- Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren)
-- Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten)
-
-**Typische Prüfungsfallen:**
-- Nabelarterie (O₂-arm, VOM Kind) vs. Nabelvene (O₂-reich, ZUM Kind) — umgekehrt zur systemischen Konvention
-- Chorion frondosum (fetaler Anteil) vs. Decidua basalis (mütterlicher Anteil) — häufig vertauscht
-- Synzytiotrophoblast (mehrkernig, invasiv, hCG) vs. Zytotrophoblast (Stammzellschicht, Langhan-Zellen)
-- IgG (passiert Plazenta via Transzytose) vs. IgM, IgA, IgE (passieren die Plazenta NICHT)
-- Amnion (innere Membran, Fruchtwasser) vs. Chorion (äußere Membran, grenzt an Decidua)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Nabelschnur: 2 Arterien + 1 Vene (AVA), eingehüllt in Wharton-Sulze
-- Plazentaoberfläche (Chorionzotten): ca. 10–14 m² am Termin
-- Fruchtwassermenge am Termin: ca. 800 ml
-- Plazenta vollentwickelt: ab Woche 12–16; ca. 500 g, 20 cm Durchmesser
-- hPL (Plazenta-Laktogen): insulinantagonistisch → Glukose für den Fötus
+**Typische Fallen:**
+- Nabelarterie (sauerstoffarm, VOM Kind) vs. Nabelvene (sauerstoffreich, ZUM Kind): umgekehrt zur systemischen Konvention.
+- Chorion frondosum (fetaler Anteil) vs. Decidua basalis (mütterlicher Anteil) werden häufig vertauscht.
+- Nur IgG passiert die Plazenta (aktive Transzytose); IgM, IgA, IgE passieren sie NICHT.
 
 ---
 
@@ -1309,7 +1182,6 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
         "Den Aufbau der Nabelschnur (2 Arterien, 1 Vene) und die Funktion der Eihäute (Amnion, Chorion) erklären.",
       ],
       sections: [],
-      diagram: "menstrual-cycle",
       merksätze: [
         "Plazenta: fetaler Anteil = Chorion frondosum (Chorionzotten); mütterlicher Anteil = Decidua basalis.",
         "Mütterliches und fetales Blut mischen sich nie direkt — Austausch erfolgt über die Plazentaschranke.",
@@ -1441,19 +1313,14 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
       ],
       content: `## Einleitung
 
-**Worum geht es?** Ursprung des Lebens: **Miller-Urey** (abiotische Entstehung von Aminosäuren), **RNA-Welt-Hypothese**, **Endosymbiontentheorie** (Mitochondrien/Chloroplasten als ehemalige Bakterien). **Warum für den MedAT relevant?** Miller-Urey, RNA-Welt und Endosymbiontentheorie werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Miller-Urey — was entsteht?“; „Endosymbiontentheorie — welche Organellen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Ursprung des Lebens abgedeckt.
+Wie konnte aus einer leblosen Urerde das erste Leben entstehen? Diese Frage klingt philosophisch, doch die Biologie hat handfeste experimentelle Antworten. 1953 zeigten Miller und Urey, dass einfache Gase und Blitze ausreichen, um Aminosäuren zu bilden -- die Bausteine des Lebens. Die RNA-Welt-Hypothese erklärt, wie ein einziges Molekül gleichzeitig Information speichern und chemische Reaktionen katalysieren konnte. Und die Endosymbiontentheorie enthüllt eine erstaunliche Wahrheit: Unsere Mitochondrien waren einst frei lebende Bakterien, die von einer Urzelle aufgenommen wurden. Diese bakterielle Herkunft hat bis heute medizinische Konsequenzen -- etwa wenn Antibiotika unbeabsichtigt unsere Mitochondrien schädigen.
 
 **In diesem Kapitel lernst du:**
-- **Miller-Urey-Experiment** (1953): abiotische Synthese organischer Moleküle (Aminosäuren)
-- **RNA-Welt-Hypothese**: RNA als erstes genetisches und katalytisches Molekül
-- **Endosymbiontentheorie**: Mitochondrien/Chloroplasten aus aufgenommenen Bakterien
-- Klinik: Antibiotika-Nebenwirkungen (Mitochondrien haben bakterielle Abstammung)
+- wie das Miller-Urey-Experiment die Brücke zwischen Chemie und Biologie schlug
+- warum RNA als “erstes Lebensmolekül” gilt und was das Henne-Ei-Problem löst
+- welche Belege für die bakterielle Herkunft von Mitochondrien und Chloroplasten sprechen
 
-**Kontext:** Von der Chemie zum ersten Leben — und warum unsere Zellkraftwerke „fremd“ sind.
-
-![Abiotische Synthese und Redox](/grafik-redox.svg)
-
-![Zentraldogma und RNA](/grafik-16-zentraldogma.svg)
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 ---
 
@@ -1477,6 +1344,8 @@ Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese 
 
 ## Protobionten — Erste Zell-ähnliche Strukturen
 
+{{DIAGRAM:cell-membrane}}
+
 Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
 
 > **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
@@ -1484,6 +1353,8 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
 ---
 
 ## Endosymbiontentheorie — Belege und Bedeutung
+
+{{DIAGRAM:animal-cell}}
 
 Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
 
@@ -1499,30 +1370,15 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen.)
+- Warum löst die RNA-Welt-Hypothese das Henne-Ei-Problem? (RNA speichert Information UND katalysiert.)
+- Nennen Sie drei Belege für die Endosymbiontentheorie. (Eigenes Genom, 70S-Ribosomen, Doppelmembran.)
 
-**Zentral prüfungsrelevant:** Ursprung des Lebens (Miller-Urey: abiotische Aminosäure-Synthese), RNA-Welt-Hypothese (RNA als Katalysator + Speicher), chemische Evolution, erste Zellen.
-
-**Ergänzend vertiefend:** Endosymbiontentheorie.
-
-**Häufige Fragen:**
-- Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen)
-- Warum löst die RNA-Welt-Hypothese das Henne-Ei-Problem? (RNA speichert Information UND katalysiert)
-- Nennen Sie drei Belege für die Endosymbiontentheorie (eigenes Genom, 70S-Ribosomen, Doppelmembran)
-
-**Typische Prüfungsfallen:**
-- Miller-Urey bewies NICHT die Entstehung von Leben, sondern die abiotische Synthese organischer Moleküle
-- 70S-Ribosomen (Mitochondrien, Bakterien) vs. 80S-Ribosomen (eukaryotisches Zytoplasma)
-- RNA-Welt (RNA als erstes Molekül) vs. Panspermie (Leben aus dem Weltall) — verschiedene Konzepte
-- Endosymbiose betrifft Mitochondrien + Chloroplasten, NICHT den Zellkern oder das ER
-- Mitochondriale DNA: ringförmig, ohne Histone, maternal vererbt — nicht mit nukleärer DNA verwechseln
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Miller-Urey: 1953; Ausgangsstoffe CH₄, NH₃, H₂, H₂O + elektrische Entladungen
-- Erste Lebensformen: ca. 3,8 Milliarden Jahre alt (Prokaryoten)
-- Lynn Margulis: Endosymbiontentheorie erstmals 1967 publiziert
-- Mitochondrien verwandt mit Alphaproteobakterien (Rickettsiales)
-- Chloroplasten verwandt mit Cyanobakterien
+**Typische Fallen:**
+- Miller-Urey bewies NICHT die Entstehung von Leben, sondern nur die abiotische Synthese organischer Moleküle.
+- 70S-Ribosomen (Mitochondrien, Bakterien) vs. 80S-Ribosomen (eukaryotisches Zytoplasma) verwechseln.
+- Endosymbiose betrifft Mitochondrien und Chloroplasten, NICHT den Zellkern oder das ER.
 
 ---
 
@@ -1541,7 +1397,6 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
         "Die Endosymbiontentheorie mit mindestens drei Belegen stützen",
       ],
       sections: [],
-      diagram: "prokaryote-vs-eukaryote",
       merksätze: [
         "Miller-Urey: CH₄ + NH₃ + H₂ + H₂O + Blitz → Aminosäuren (1953). Beweis: abiotische Entstehung organischer Moleküle.",
         "RNA-Welt: RNA als erstes Informations- und Katalysemolekül. Ribozyme = RNA-Enzyme.",
@@ -1672,20 +1527,18 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Phylogenetik** rekonstruiert Verwandtschaft (Stammbäume); **Homologie** (gleicher Ursprung) vs. **Analogie** (konvergente Ähnlichkeit) sind zentral. **Warum für den MedAT relevant?** Homologie vs. Analogie wird regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Homologie vs. Analogie — Definition?“; „Stammbaum lesen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Phylogenetik abgedeckt.
-
-![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
-
-![Wahrscheinlichkeit und Verteilung](/grafik-normalverteilung.svg)
+Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
 
 **In diesem Kapitel lernst du:**
-- **Homologie** = gemeinsamer evolutionärer Ursprung (z. B. Vogelflügel – Menschenarm)
-- **Analogie** = konvergente Evolution, gleiche Funktion, anderer Bau (z. B. Flügel Vogel – Insekt)
-- **Stammbäume** lesen: Verzweigungen = Aufspaltung von Linien
-- **Konvergenz** vs. **Divergenz**
+- warum gleicher Bauplan noch lange nicht gleiche Funktion bedeutet und umgekehrt
+- wie man Homologie von Analogie unterscheidet und warum das für Stammbäume entscheidend ist
+- wie man phylogenetische Stammbäume liest und welche Informationen in den Verzweigungspunkten stecken
+- wie die molekulare Uhr evolutionäre Zeiträume datieren kann
 
-**Kontext:** Wie man Verwandtschaft erkennt und warum Ähnlichkeit nicht immer Abstammung bedeutet.
+---
 
+GARBX (z. B. Vogelflügel – Menschenarm)
+- RML (zz. B. Flügel Vogel – Insekt)
 ---
 
 ## Homologie vs. Analogie — Ein kritischer Unterschied
@@ -1707,6 +1560,8 @@ Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied
 
 ## Molekulare Uhr — Evolution zeitlich datieren
 
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
 Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6–7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
@@ -1714,6 +1569,8 @@ Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutation
 ---
 
 ## Kladistik und Stammbäume lesen
+
+{{DIAGRAM:dna-helix}}
 
 Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
 - **Äste** = Evolutionslinien der abstammenden Taxa
@@ -1735,30 +1592,15 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution.)
+- Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen.)
+- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen.)
 
-**Zentral prüfungsrelevant:** Homologie (gemeinsamer Ursprung) vs. Analogie (konvergente Evolution), Clade (monophyletische Gruppe), phylogenetischer Baum, Synapomorphie, Konvergenz.
-
-**Ergänzend vertiefend:** Paraphylie.
-
-**Häufige Fragen:**
-- Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution)
-- Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen)
-- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen)
-
-**Typische Prüfungsfallen:**
-- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion)
-- Vogelflügel + Menschenarm = homolog (Wirbeltier-Vorderextremität); Vogelflügel + Insektenflügel = analog
-- Monophyletisch (Clade: Vorfahre + ALLE Nachkommen) vs. paraphyletisch (nicht alle Nachkommen eingeschlossen)
-- Synapomorphie (gemeinsames abgeleitetes Merkmal, für Cladistik relevant) vs. Symplesiomorphie (gemeinsames primitives Merkmal)
-- 16S-rRNA (Bakterien-Phylogenie) vs. Cytochrom c (vergleichende Phylogenie bei Eukaryoten)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Divergenz Mensch/Schimpanse: ca. 6–7 Millionen Jahre
-- 16S-rRNA: Standardmarker für bakterielle Phylogenie (Carl Woese → Entdeckung der Archaea)
-- Cytochrom c: hochkonserviertes Protein für Verwandtschaftsanalysen
-- „Reptilien" ohne Vögel = paraphyletisch (Vögel sind Dinosaurier-Nachkommen)
-- Molekulare Uhr: kalibriert mit datierten Fossilien
+**Typische Fallen:**
+- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion) verwechseln.
+- Monophyletisch (Clade: alle Nachkommen eingeschlossen) vs. paraphyletisch (nicht alle Nachkommen) verwechseln.
+- Synapomorphie (abgeleitetes Merkmal, relevant für Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ für Verwandtschaft).
 
 ---
 
@@ -1916,10 +1758,6 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 **Kontext:** Warum Arten sich anpassen und warum Antibiotikaresistenz entsteht.
 
-![Variation und Verteilung](/grafik-normalverteilung.svg)
-
-![Wahrscheinlichkeit und Allelfrequenzen](/grafik-33-vierfeldertafel.svg)
-
 ---
 
 ## Darwins 4 Kernprinzipien und Lamarck im Vergleich
@@ -1941,6 +1779,8 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
 
+{{DIAGRAM:pedigree-analysis}}
+
 Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
 
 > **Merke:** **Fitness = Fortpflanzungserfolg** (nicht Körperkraft, nicht Schnelligkeit). Nach Darwin sind die **erfolgreichsten Individuen die mit den meisten fortpflanzungsfähigen Nachkommen**. Inklusive Fitness = eigene + indirekte Reproduktion durch Verwandte (Kin Selection).
@@ -1956,6 +1796,8 @@ Darwin kannte Mendels Arbeit nicht (obwohl sie 1866 veröffentlicht wurde). Die 
 ---
 
 ## Die drei Selektionsarten
+
+{{DIAGRAM:dna-helix}}
 
 Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene Weisen wirken:
 
@@ -2168,13 +2010,11 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 **Kontext:** Wann zwei Populationen als verschiedene Arten gelten und wie neue Arten entstehen.
 
-![Stammbaum und Aufspaltung](/grafik-33-vierfeldertafel.svg)
-
-![Verteilung und Isolation](/grafik-normalverteilung.svg)
-
 ---
 
 ## Reproduktive Isolation — Präzygotisch und Postzygotisch
+
+{{DIAGRAM:pedigree-analysis}}
 
 **Reproduktive Isolation** verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
 
@@ -2202,6 +2042,8 @@ Allopatrische Artbildung verläuft in typischen Schritten: (1) Ausgangs-Populati
 ---
 
 ## Polyploidie — Sympatrische Artbildung in einer Generation
+
+{{DIAGRAM:dna-helix}}
 
 Polyploidie ist der wichtigste Mechanismus sympatrischer Artbildung, besonders bei Pflanzen. Wenn die Meiose fehlerhaft verläuft, können diploide Gameten entstehen (statt haploider). Vereinigung zweier diploider Gameten → tetraploider Organismus (Autopolyploidie). Dieser kann sich nicht mehr mit den Ausgangsdiploiden fortpflanzen (Hybride sind triploid und steril), aber tetraploide Individuen können sich untereinander fortpflanzen → neue Art. Allopolyploidie: Ein interspezifischer Hybrid (steril) verdoppelt seinen Chromosomensatz → jedes Chromosom hat ein Homologes → fertil. Beispiele: Weizen (Triticum aestivum, 6n=42 aus drei diploiden Vorfahren), Raps (Brassica napus, aus Kohl und Rübsen). Beim Menschen führt Polyploidie zum Tod (Ausnahme: einzelne Gewebe).
 
@@ -2406,13 +2248,11 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 **Kontext:** Warum sich Populationen verändern — und wann sie (theoretisch) gleich bleiben.
 
-![Allelfrequenzen und Verteilung](/grafik-normalverteilung.svg)
-
-![Vierfeldertafel und Häufigkeiten](/grafik-33-vierfeldertafel.svg)
-
 ---
 
 ## Die vier Evolutionsfaktoren
+
+{{DIAGRAM:dna-helix}}
 
 Evolution bedeutet Veränderung der Allelfrequenzen in einer Population. Vier Kräfte können diese Veränderung antreiben:
 
@@ -2437,6 +2277,8 @@ Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene
 ---
 
 ## Hardy-Weinberg-Gleichgewicht und Heterozygotenvorteil
+
+{{DIAGRAM:pedigree-analysis}}
 
 Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population — einen Referenzzustand ohne Evolution. Abweichungen zeigen, welche evolutionären Kräfte aktiv sind. Ein wichtiges Abweichungsbeispiel ist der Heterozygotenvorteil (Überdominanz): In Malariaregionen Afrikas sind Sichelzellanämie-Allele (HbS) in höherer Frequenz vorhanden als durch Mutation allein zu erwarten wäre. Der Grund: Heterozygote (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt (Heterozygotenvorteil). Dies ist ein Beispiel für balancierte Polymorphismus.
 
@@ -2634,11 +2476,11 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 **Kontext:** Woher wir kommen und warum „der Mensch stammt vom Affen ab“ falsch formuliert ist.
 
-![Stammbaum und Verwandtschaft](/grafik-33-vierfeldertafel.svg)
-
-![Ossifikation und Skelett](/grafik-12-ossifikation.svg)
-
 ---
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+{{DIAGRAM:dna-helix}}
 
 ## Bipedie vor Gehirnvergrößerung — Eine wichtige Erkenntnis
 
@@ -2649,6 +2491,8 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 ---
 
 ## Homo habilis — Der erste Werkzeugmacher
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
 
@@ -2665,6 +2509,8 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 ---
 
 ## Neanderthaler — Verwandte, keine Vorfahren
+
+{{DIAGRAM:nervensystem-übersicht}}
 
 Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
 

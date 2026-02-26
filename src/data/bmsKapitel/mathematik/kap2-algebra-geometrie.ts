@@ -28,16 +28,20 @@ export const mathKapAlgebra: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Lineare Gleichungen**, Ungleichungen, **Gleichungssysteme** (Substitution, Elimination); Dosierung, Verdünnung c₁V₁ = c₂V₂. **Warum für den MedAT relevant?** Äquivalenzumformungen, Gleichungssysteme, Ungleichungen (Vorzeichenumkehr), Verdünnungsformeln werden geprüft. **Welche Fragen werden beantwortet?** „x isolieren?“; „Substitution vs. Elimination?“; „Ungleichung ×(−1)?“; „c₁V₁ = c₂V₂?“; „Dosierung mg/kg?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Gleichungen und Ungleichungen abgedeckt.
+Wie viel Milliliter einer Stammlosung brauchst du, um 100 mL einer bestimmten Konzentration herzustellen? Welche Dosis erhaelt ein 72-kg-Patient bei 5 mg/kg? Hinter diesen klinischen Alltagsfragen stecken **lineare Gleichungen** -- und das Prinzip ist immer dasselbe: gleiche Operation auf beiden Seiten, bis die gesuchte Groesse allein steht. Ob Verduennungsformel, Dosierungsberechnung oder Gleichungssystem mit zwei Unbekannten -- wer sicher umformt, loest jede MedAT-Rechenaufgabe.
 
 **In diesem Kapitel lernst du:**
-- **Äquivalenzumformungen** — gleiche Operation auf beiden Seiten; Ziel: Variable isolieren
-- **Lineare Gleichungen** Schritt für Schritt: Klammern → Brüche (Hauptnenner) → x auf eine Seite → durch Koeffizient teilen → Probe
-- **Gleichungssysteme** mit zwei Unbekannten: **Substitution** (eine Variable ersetzen) oder **Elimination** (addieren/subtrahieren)
-- **Ungleichungen** — wie Gleichungen, aber bei ×/÷ mit **negativer Zahl** Vorzeichen **umkehren**
-- **Quadratische Gleichungen** (Kurzüberblick): Mitternachtsformel, Diskriminante D = b²−4ac; Vertiefung in ma-2-03
+- wie Aequivalenzumformungen funktionieren und warum dieselbe Operation immer auf beide Seiten muss
+- wie du lineare Gleichungen Schritt fuer Schritt loest -- von Klammern ueber Brueche bis zur Probe
+- wann du bei zwei Unbekannten Substitution und wann Elimination einsetzt
+- warum bei Ungleichungen die Multiplikation mit einer negativen Zahl das Relationszeichen umdreht
+- wie die Verduennungsformel und Dosierungsberechnungen als lineare Gleichungen funktionieren
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:vector-addition}}
 
 ## Grundprinzip der Gleichungsumformung
 
@@ -45,9 +49,7 @@ export const mathKapAlgebra: Kapitel = {
 
 **Verfahren:** Erlaubte Schritte: Addition/Subtraktion derselben Zahl auf beiden Seiten; Multiplikation/Division beider Seiten mit derselben Zahl (niemals durch 0); Wurzelziehen oder Logarithmieren auf beiden Seiten (Definitionsbereich beachten). Bei linearen Gleichungen: Klammern auflösen → Brüche beseitigen (Hauptnenner) → x-Terme auf eine Seite, Zahlen auf die andere → durch Koeffizient von x teilen → Probe.
 
-![Gleichungen](/grafik-parabel.svg)
 
-![Parabel und Nullstellen](/grafik-lineare-funktion.svg)
 
 Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematische Ausdrücke sind. **Äquivalenzumformung** bedeutet: Die Gleichung bleibt gültig, wenn du auf **beiden Seiten** dieselbe Operation durchführst. Erlaubte Operationen sind:
 
@@ -192,25 +194,6 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 - **Quadratisch:** D = b² − 4ac; x = (−b ± √D)/(2a). D > 0: 2 Lösungen, D = 0: 1, D < 0: keine.
 - **Verdünnung:** V₁ = c₂×V₂/c₁ (Stoffmenge bleibt erhalten).
 - **Dosierung:** D [mg] = Dosierung [mg/kg] × Körpergewicht [kg]; V [mL] = D [mg] / c [mg/mL].
-
-**Zentral prüfungsrelevant:**
-- **Äquivalenzumformung:** Gleiche Operation auf beiden Seiten; nie durch null teilen.
-- **Lineare Gleichung:** Schema Klammern → Brüche (Hauptnenner) → x-Terme eine Seite → durch Koeffizient → Probe.
-- **Gleichungssystem:** Substitution oder Elimination; Probe in **beide** Gleichungen.
-- **Ungleichung:** Bei ×/÷ mit **negativer** Zahl Vorzeichen **umkehren** (< ↔ >, ≤ ↔ ≥).
-- **Quadratische Gleichung:** Mitternachtsformel; **D = b² − 4ac** (D > 0: 2, D = 0: 1, D < 0: keine).
-- **Verdünnungsformel:** c₁×V₁ = c₂×V₂. **Dosierung:** Dosis = [mg/kg] × kg; Volumen = Dosis / Konzentration.
-- **Kehrwert:** a = b/c und d = a⁻¹ ⇒ d = c/b.
-
-**Ergänzend vertiefend:** Dreisatz, Mischungsaufgaben; Vieta (Summe und Produkt der Lösungen bei x² + px + q = 0).
-
-**Wichtige Begriffe & Definitionen:**
-- **Äquivalenzumformung:** Operation auf beiden Seiten; Gleichung bleibt gültig.
-- **Diskriminante D:** b² − 4ac; entscheidet über Anzahl der reellen Lösungen.
-- **Verdünnungsformel:** c₁×V₁ = c₂×V₂ (Stoffmenge bleibt erhalten).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Verdünnungsformel: c₁×V₁ = c₂×V₂. Dosierung: Dosis [mg] = [mg/kg] × kg. Mitternachtsformel: x = (−b ± √(b² − 4ac))/(2a).
 
 ---
 
@@ -369,16 +352,20 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Prozentrechnung** P = G×p/100, **Bruchrechnung**, **Dreisatz**; **EbM** (ARR, RRR, NNT), **Serienverdünnungen** (1:10, 1:100). **Warum für den MedAT relevant?** Prozent, Bruch, Dreisatz, ARR/RRR/NNT, Verdünnungsfaktor werden geprüft. **Welche Fragen werden beantwortet?** „P = G×p/100 umstellen?“; „ARR, NNT aus Vierfeldertafel?“; „1:10 Verdünnung — Faktor?“; „Dreisatz direkt/indirekt?“; „Kehrwert beim Dividieren?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Prozent, Bruch und EbM abgedeckt.
+Ein neues Medikament senkt die Sterblichkeit von 8 % auf 5 % -- klingt nach wenig, doch die **absolute Risikoreduktion** betraegt 3 Prozentpunkte und die **NNT** liegt bei 33: Du musst nur 33 Patienten behandeln, um einen Todesfall zu verhindern. Solche Fragen stehen am MedAT -- und hinter jeder steckt eine einfache **Prozentrechnung**. Zusammen mit **Bruchrechnung** und **Dreisatz** bildet sie das Handwerkszeug fuer Dosierungen, Verduennungen und die Bewertung klinischer Studien.
 
 **In diesem Kapitel lernst du:**
-- **Prozentrechnung:** Grundformel P = G×p/100; die drei Grundfragen (Prozentwert, Grundwert, Prozentsatz) und Umstellen
-- **Bruchrechnung:** Addieren/Subtrahieren (gleichnamig machen), Multiplizieren (Zähler×Zähler, Nenner×Nenner), Dividieren (mit Kehrwert multiplizieren)
-- **Dreisatz:** direkter Dreisatz (mehr → mehr) und indirekter Dreisatz (mehr → weniger); Kreuzprodukt
-- **ARR, RRR, NNT** (EbM) aus Vierfeldertafel oder Risiken berechnen
-- **Serienverdünnungen** (1:10, 1:100) und Verdünnungsfaktor
+- wie du die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) mit einer einzigen Formel loest
+- wie Brueche addiert, multipliziert und dividiert werden -- und warum du beim Teilen den Kehrwert nimmst
+- wann du den direkten und wann den indirekten Dreisatz einsetzt
+- wie du aus klinischen Studien ARR, RRR und NNT berechnest und interpretierst
+- wie Serienverduennungen im Labor funktionieren und was der Verduennungsfaktor bedeutet
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** Prozent ist ein **Verhältnis** („von Hundert“), kein absoluter Wert — p % = p/100; „x % von G“ = (x/100)×G. Die **drei Grundfragen** (Prozentwert P, Grundwert G, Prozentsatz p) leiten sich aus **einer** Formel P = G×p/100 durch Umstellen ab. Beim **Dreisatz** entscheidet die Frage „Wird die gesuchte Größe bei mehr von A größer (direkt) oder kleiner (indirekt)?“ über die Rechenrichtung.
 
@@ -394,10 +381,8 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
 
 ## Prozentrechnung — die drei Grundfragen
 
-![Prozent Dreisatz](/grafik-prozent-dreisatz.svg)
 
 
-![Zehnerpotenzen und Größenordnungen](/grafik-zehnerpotenzen.svg)
 
 
 Das Wort Prozent kommt von lateinisch pro centum, zu Deutsch je Hundert. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts gemeint sind.
@@ -544,27 +529,6 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 - **ARR/NNT:** ARR = R_Kontrolle − R_Behandlung (als Dezimalzahl); NNT = 1/ARR.
 - **Verdünnung n× 1:k:** Gesamtfaktor 1:kⁿ; Konzentration nach Verdünnung × kⁿ = Original.
 
-**Zentral prüfungsrelevant:** Prozent (p = Teil/Ganzes × 100), Bruch ↔ Dezimal ↔ Prozent, Anteil und Grundwert, prozentuale Zu- und Abnahme, Promille.
-
-**Ergänzend vertiefend:** Zinsrechnung, Wachstumsfaktor. Typische Fallen: % = Verhältnis, nicht absoluter Wert; Prozentpunkte ≠ relative Änderung; NNT aus ARR in Dezimalzahl (z. B. 3 % → 0,03).
-
-**Häufige Fragen:**
-- "32 sind X% von 400?" → p = 32/400 × 100 = 8%
-- "Hämatokrit sinkt von 42% auf 28% — wie viel % relativer Rückgang?" → (42−28)/42 × 100 = 33,3%
-- "Serumverdünnung 1:100 zeigt Titer 50 AU/mL — Originaltiter?" → 50 × 100 = 5000 AU/mL
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **% ist kein absoluter Wert, sondern ein Verhältnis** — „x % von y“ = (x/100)·y.
-- Prozentpunkte ≠ relative Änderung: Von 40% auf 30% sind 10 Prozentpunkte, aber 25% relative Senkung
-- Direkter vs. indirekter Dreisatz: Mehr Helfer → weniger Zeit (indirekt!), nicht mehr Zeit
-- NNT aus Prozent berechnen: ARR erst in Dezimalzahl umrechnen (3% → 0,03), dann NNT = 1/0,03 = 33
-- Textaufgaben „2/3 dazu, 1/3 weg“: Summe bilden, dann (2/3) der Summe behalten → Gleichung (10/9)x = 10 ⇒ x = 9.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- ARR = R_Kontrolle − R_Behandlung; RRR = ARR/R_Kontrolle; NNT = 1/ARR (ARR als Dezimalzahl)
-- Hämatokrit Normwerte: ♂ 40–52%, ♀ 37–47%; SpO₂ ≥ 95%
-- Serienverdünnung: n Schritte à 1:k → Gesamtverdünnung 1:kⁿ
-
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -709,11 +673,20 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Binomische Formeln** (a±b)², a²−b²; **Quadratische Gleichungen** (pq-Formel, Mitternachtsformel), **Scheitelpunktform**, Vieta. **Warum für den MedAT relevant?** Binomische Formeln, pq-Formel, Scheitelpunkt, Vieta, BSA/Dosis-Anwendung werden geprüft. **Welche Fragen werden beantwortet?** „(a+b)²?“; „pq-Formel?“; „Diskriminante D?“; „Scheitelpunkt aus Form?“; „Vieta Summe/Produkt?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu quadratischen Gleichungen und binomischen Formeln abgedeckt.
+Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat eine Parabel? Die **Diskriminante** verraet es auf einen Blick. In der Medizin begegnen dir quadratische Zusammenhaenge etwa bei der Koerperoberflaeche (BSA) oder der Pharmakokinetik.
 
-**In diesem Kapitel lernst du:** **Binomische Formeln** (3 Stück); **pq-Formel**; **Scheitelpunktform**; Vieta; Anwendung (BSA, Dosis).
+**In diesem Kapitel lernst du:**
+- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
+- wie du mit der pq-Formel und der Mitternachtsformel quadratische Gleichungen loest
+- was die Diskriminante ueber die Anzahl der Loesungen aussagt
+- wie du den Scheitelpunkt einer Parabel findest und wofuer er steht
+- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
 
@@ -725,10 +698,8 @@ Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P
 
 ## Die drei binomischen Formeln — Herleitung und Anwendung
 
-![Binomische Formeln](/grafik-parabel.svg)
 
 
-![Parabel und Scheitelpunkt](/grafik-parabel.svg)
 
 
 Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
@@ -864,25 +835,6 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
 - **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b².
 - **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S).
 - **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q. **BSA:** √(Größe[cm]×Gewicht[kg]/3600).
-
-**Zentral prüfungsrelevant:** Binomische Formeln (a±b)² = a²±2ab+b² und (a+b)(a−b) = a²−b², Ausmultiplizieren, Faktorisieren, Potenzgesetze (aᵐ×aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ), Wurzeln als Potenzen a^(1/n).
-
-**Ergänzend vertiefend:** Bruchrechnung, Doppelbrüche. Typische Fallen: (a+b)² ≠ a²+b² (2ab nicht vergessen); Vieta x₁+x₂ = −p; Scheitel x_S = −b/(2a) — Minuszeichen beachten.
-
-**Häufige Fragen:**
-- "(x + 4)² = ?" → x² + 8x + 16 (mittlerer Term 2×x×4 = 8x nicht vergessen!)
-- "Faktorisiere x² − 36" → (x+6)(x−6) — dritte binomische Formel rückwärts
-- "Scheitelpunkt von f(x) = x² − 4x + 7?" → x_S = −(−4)/(2×1) = 2, y_S = f(2) = 4−8+7 = 3
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- (a+b)² ≠ a² + b² — der mittlere Term 2ab wird häufig vergessen!
-- Vieta-Summe: x₁+x₂ = −p (MINUS p!), nicht +p, für x² + px + q = 0
-- Scheitelpunkt: x_S = −b/(2a), NICHT b/(2a) — das Minuszeichen gilt immer
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- BSA nach Mosteller: √(Größe[cm] × Gewicht[kg] / 3600) in m²
-- Durchschnittliche BSA: 1,7–1,9 m²; Zytostatikum-Dosierung in mg/m²
-- Scheitelpunkt einer Parabel = Optimum (Maximum der Wirkung bei optimaler Dosis)
 
 ---
 
@@ -1037,11 +989,20 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Potenzgesetze** (aⁿ·aᵐ, (aⁿ)ᵐ, a⁰), **Wurzeln** a^(1/n), **Logarithmus** (log, ln), **pH = −log([H⁺])**, Dezibel. **Warum für den MedAT relevant?** Potenzgesetze, Wurzeln, log/ln, pH-Berechnung werden geprüft. **Welche Fragen werden beantwortet?** „aⁿ·aᵐ?“; „log(ab) =?“; „pH aus [H⁺]?“; „ln und log Basis?“; „a⁰?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Potenzen und Logarithmen abgedeckt.
+Der pH-Wert im Blut, die Lautstaerke in Dezibel, die Halbwertszeit eines Medikaments -- hinter all diesen Groessen stecken **Potenzen und Logarithmen**. Wer weiss, dass gleiche Basis bei Multiplikation “Exponenten addieren” bedeutet und dass der Logarithmus die Umkehrfunktion der Potenz ist, kann pH-Aufgaben im Kopf loesen und versteht, warum 3 dB den Schallpegel verdoppeln.
 
-**In diesem Kapitel lernst du:** **Potenzgesetze** (aⁿ×aᵐ, (aⁿ)ᵐ, a⁰); **Wurzeln** (a^(1/n)); **Logarithmus** (log₁₀, ln); **pH**; Dezibel.
+**In diesem Kapitel lernst du:**
+- wie die acht Potenzgesetze funktionieren und wann du Exponenten addierst, subtrahierst oder multiplizierst
+- warum Wurzeln nichts anderes als Potenzen mit Bruchexponenten sind
+- was ein Logarithmus bedeutet und wie die drei wichtigsten Rechenregeln lauten
+- wie du den pH-Wert aus der H⁺-Konzentration berechnest und umgekehrt
+- warum eine Erhoehung um 10 Dezibel den Schallpegel verzehnfacht
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
 
@@ -1053,10 +1014,8 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
 
 ## Definition und Grundbegriffe
 
-![Potenz Logarithmus](/grafik-logarithmus.svg)
 
 
-![Exponential und Logarithmus](/grafik-exponential.svg)
 
 
 Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst:
@@ -1218,25 +1177,6 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
 - **Wurzel:** √(a×b) = √a×√b. **Nicht:** √(a+b) ≠ √a+√b.
 - **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a.
 - **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH). 1 pH = Faktor 10.
-
-**Zentral prüfungsrelevant:** Potenzgesetze (aᵐ×aⁿ, aᵐ/aⁿ, (aᵐ)ⁿ), rationale Exponenten a^(p/q) = ᵍ√(aᵖ), Wurzelgesetze, Logarithmus (log_a(x) = y ⇔ aʸ = x), Zehnerlogarithmus und pH.
-
-**Ergänzend vertiefend:** Natürlicher Logarithmus ln. Typische Fallen: (aⁿ)ᵐ = aⁿˣᵐ (nicht aⁿ⁺ᵐ); a⁻ⁿ = 1/aⁿ (nicht −aⁿ); √(a+b) ≠ √a+√b.
-
-**Häufige Fragen:**
-- "Was ist 8^(2/3)?" → (∛8)² = 2² = 4
-- "Welchen pH hat [H⁺] = 10⁻⁵ mol/L?" → pH = −log(10⁻⁵) = 5
-- "Nach 3 Halbwertszeiten: wie viel % verbleiben?" → (½)³ = 1/8 = 12,5%
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- (aⁿ)ᵐ = aⁿˣᵐ (Multiplikation der Exponenten!), NICHT aⁿ⁺ᵐ
-- a⁻ⁿ = 1/aⁿ, NICHT −aⁿ
-- √(a+b) ≠ √a + √b — häufigster Wurzelfehler!
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- pH-Normalbereich arteriell: 7,35–7,45; pH < 7,35 = Azidose; pH > 7,45 = Alkalose
-- ln(2) ≈ 0,693; lg(2) ≈ 0,301; ln(10) ≈ 2,303
-- Nach 5 Halbwertszeiten: ~3% der Ausgangsdosis → Medikament gilt als ausgewaschen
 
 ---
 
@@ -1400,17 +1340,20 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Ebene Figuren** (Rechteck, Dreieck, Kreis, Trapez) — Flächen/Umfänge; **Heron** (Dreieck aus 3 Seiten); **Trigonometrie** sin/cos/tan im rechtwinkligen Dreieck; **KOF** (DuBois), **Neuner-Regel** (Verbrennung). **Warum für den MedAT relevant?** Flächenformeln, Heron, Kreisring, KOF, Neuner-Regel, sin/cos/tan werden geprüft. **Welche Fragen werden beantwortet?** „Dreiecksfläche Heron?“; „sin α =?“; „KOF-Formel?“; „Neuner-Regel?“; „Steigung in %?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu ebenen Figuren und Trigonometrie abgedeckt.
+Eine Verbrennungswunde an Arm und Rumpf -- wie viel Prozent der Koerperoberflaeche sind betroffen? Die **Neuner-Regel** liefert die Schaetzung, und fuer die exakte Berechnung braucht man die **Koerperoberflaeche** (KOF) aus Koerpergroesse und Gewicht. Dahinter stecken Flaechenformeln von Rechteck bis Kreis und die Grundlagen der **Trigonometrie**. Ob Operationsfeld, EKG-Achse oder Strassensteigung in Prozent: Flaechenberechnung und die Verhaeltnisse sin, cos und tan gehoeren zum Standardrepertoire.
 
 **In diesem Kapitel lernst du:**
-- **Rechteck, Dreieck, Kreis, Trapez, Parallelogramm** — Flächen und Umfänge sicher berechnen
-- **Heronsche Formel** für Dreiecksfläche aus drei Seiten (s, dann A = √(s(s−a)(s−b)(s−c)))
-- **Kreis und Kreisring** (A = πr², U = 2πr; Ring: A = π(R²−r²))
-- **Trigonometrie-Grundlagen:** sin(α) = Gegenkathete/Hypotenuse, cos(α) = Ankathete/Hypotenuse, tan(α) = Gegenkathete/Ankathete; Steigung in % = tan(α)×100
-- **KOF** (DuBois, Mosteller) und **Neuner-Regel** (Verbrennungsfläche)
-- Typische **MedAT-Fehler** vermeiden (Parallelogramm: Höhe ≠ Schrägseite; Fläche skaliert mit k²)
+- wie du Flaechen und Umfaenge von Rechteck, Dreieck, Kreis und weiteren Figuren sicher berechnest
+- wie die Heronsche Formel die Dreiecksflaeche aus drei Seitenlaengen liefert -- ohne Hoehe
+- was Sinus, Kosinus und Tangens im rechtwinkligen Dreieck bedeuten und wie Steigung in Prozent damit zusammenhaengt
+- wie du die Koerperoberflaeche nach Mosteller berechnest und wofuer sie in der Klinik gebraucht wird
+- warum beim Parallelogramm die senkrechte Hoehe zaehlt und nicht die Schraegseite
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
 
 **Idee:** Flächen und Umfänge ebener Figuren folgen festen Formeln; **Heron** erlaubt Dreiecksfläche aus drei Seiten ohne Höhe. **Trigonometrie:** sin/cos/tan im rechtwinkligen Dreieck = Verhältnis zweier Seiten. **KOF** für Dosierung (Mosteller: √(G×Gew/3600)).
 
@@ -1422,10 +1365,8 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
 
 ## Rechteck und Quadrat
 
-![Ebene Figuren](/grafik-ebene-figuren.svg)
 
 
-![Fläche und Volumen](/grafik-flaeche-quadrat.svg)
 
 
 Beim Rechteck mit Länge l und Breite b gilt:
@@ -1580,25 +1521,6 @@ Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm)
 - **Rechteck:** A = l×b, U = 2(l+b). **Dreieck:** A = ½×g×h. **Heron:** s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)).
 - **Kreis:** A = πr², U = 2πr. **Parallelogramm:** A = g×**h** (h = senkrechte Höhe!).
 - **sin/cos/tan:** Gegenkathete/Hyp, Ankathete/Hyp, Gegenkathete/Ankathete. **KOF:** √(Größe[cm]×Gewicht[kg]/3600). **Ähnlichkeit:** Flächen × k².
-
-**Zentral prüfungsrelevant:** Flächen (Rechteck, Dreieck, Kreis A=πr², Ellipse), KOF/BSA (Mosteller √(kg×cm/3600)), Volumen (Würfel, Quader, Zylinder, Kugel V=(4/3)πr³), Einheitenumrechnung (m², cm², Liter).
-
-**Ergänzend vertiefend:** Oberfläche Kugel 4πr². Typische Fallen: Kreisfläche A = πr² (r quadriert) vs. Umfang U = 2πr (r linear); Flächen bei Ähnlichkeit skalieren mit k², nicht k.
-
-**Häufige Fragen:**
-- "Kreisförmige Verbrennung Ø 12 cm — Anteil an BSA 1,8 m²?" → A = π×36 ≈ 113 cm² = 0,0113 m² → ~0,63% KOF
-- "Tumor wächst von r = 1 cm auf r = 1,5 cm — Flächenzunahme?" → k = 1,5; Fläche × k² = 2,25 → +125%
-- "Dreieck: a=5, b=7, c=8 cm — Fläche?" → s=10, A = √(10×5×3×2) = √300 ≈ 17,3 cm²
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Kreisfläche A = π×r² (r im Quadrat!), Kreisumfang U = 2×π×r (r linear) — nicht vertauschen
-- Parallelogramm-Höhe ≠ Schrägseite — h ist die SENKRECHTE Höhe
-- Ähnlichkeit: Flächen skalieren mit k², nicht k (k=2 → Fläche ×4, nicht ×2)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Neuner-Regel (Verbrennung): Kopf 9%, Arm je 9%, Brust 9%, Bauch 9%, Rücken 18%, Bein je 18%, Genitale 1%
-- Aortenklappe: normal ~4,9 cm², schwere Stenose < 1 cm² (OP-Indikation)
-- KOF Erwachsene: ~1,7–1,9 m²
 
 ---
 
@@ -1785,11 +1707,19 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Körper**: Quader, Zylinder, Kugel, Kegel — **Volumen V** und **Oberfläche O**; Ellipsoid (Herz). **Warum für den MedAT relevant?** V und O von Kugel, Zylinder, Quader, Kegel werden geprüft. **Welche Fragen werden beantwortet?** „Kugel V =?“; „Zylinder O?“; „Quader V?“; „Kegel V?“; „Ellipsoid — Anwendung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Körpern (Volumen, Oberfläche) abgedeckt.
+Wie gross ist das Volumen einer zylindrischen Infusionsflasche? Wie schaetzt der Radiologe die Groesse einer kugelfoermigen Zyste? Und warum haben kleine Zellen ein groesseres Oberflaeche-zu-Volumen-Verhaeltnis als grosse? Hinter diesen Fragen stehen die **Volumen- und Oberflaechenformeln** geometrischer Koerper. Die Formeln fuer Quader, Zylinder, Kugel und Kegel gehoeren zum Standardwissen am MedAT -- und eine der beliebtesten Fallen ist die Verwechslung von Volumen und Oberflaeche beim Quader.
 
-**In diesem Kapitel lernst du:** **Quader**, **Zylinder**, **Kugel**, **Kegel**; **Ellipsoid** (Herz); Volumen und Oberfläche.
+**In diesem Kapitel lernst du:**
+- wie du Volumen und Oberflaeche von Quader, Zylinder, Kugel und Kegel berechnest
+- warum das Oberflaeche-zu-Volumen-Verhaeltnis bei kleinen Koerpern groesser ist und was das biologisch bedeutet
+- wie du mit dem Ellipsoid-Modell das Herzvolumen abschaetzen kannst
+- welche typischen Verwechslungen (V vs. O beim Quader, r³ vs. r² bei der Kugel) am MedAT lauern
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
 
 **Idee:** Volumen V = „Rauminhalt“, Oberfläche O = „Hüllfläche“. **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
 
@@ -1801,10 +1731,8 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
 
 ## Quader
 
-![Körper](/grafik-koerper.svg)
 
 
-![Volumen und Einheiten](/grafik-volumen-liter.svg)
 
 
 Ein Quader mit Länge l, Breite b und Höhe h (bzw. Kanten a, b, c):
@@ -1910,25 +1838,6 @@ Zylindrische Kapsel: r = 0,4 cm, h = 1,5 cm. V_Zyl = π × 0,16 × 1,5 = 0,24π 
 - **Quader:** V = a×b×c, O = 2(ab+ac+bc). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h.
 - **Kegel/Pyramide:** V = ⅓×Grundfläche×h. **Ellipsoid:** V ≈ 0,52×a×b×c.
 - **O/V Kugel:** 3/r. **Hagen-Poiseuille:** Fluss ~ r⁴.
-
-**Zentral prüfungsrelevant:** Volumenformeln (Würfel, Quader, Zylinder V=πr²h, Kugel V=(4/3)πr³, Pyramide/Kegel), klinische Anwendung (Tumor-/Zystengröße), Einheiten (mL, cm³, Liter).
-
-**Ergänzend vertiefend:** Oberfläche Zylinder/Kugel. Typische Fallen: Kegel/Pyramide V = ⅓×G×h (Drittel!); Hagen-Poiseuille Q ~ r⁴ (nicht r²); Mantelfläche Zylinder ohne Grundkreise.
-
-**Häufige Fragen:**
-- "Zyste mit Ø 4 cm — Volumen?" → r = 2, V = (4/3)×π×8 ≈ 33,5 mL
-- "70%-Stenose (Radius auf 30%) — Flussreduktion?" → 0,3⁴ = 0,0081 → auf ~0,8% des Normalflusses
-- "Tumor 3×4×5 cm (Ellipsoid) — Volumen?" → 0,524×60 ≈ 31,4 cm³
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Kegel: V = ⅓×π×r²×h (DRITTEL, nicht ½!); Pyramide: V = ⅓×A_G×h
-- Hagen-Poiseuille: Fluss ~ r⁴, NICHT ~ r² (r² wäre nur der Querschnitt)
-- Mantelfläche Zylinder: M = 2πr×h (ohne Grundkreise); Gesamtoberfläche: O = 2πr(r+h)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Restharn > 100 mL = pathologisch (Ultraschall-Ellipsoid: V ≈ 0,52×a×b×c)
-- RECIST: > 20% Volumenzunahme = Progressive Disease
-- Alveolen: Radius ~0,15 mm, Gesamtoberfläche ~70 m² bei 6 L Volumen
 
 ---
 
@@ -2115,11 +2024,20 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Kartesische Koordinaten**, **Geradengleichung** (Steigung m, Achsenabschnitt b), **Abstand** zweier Punkte, **lineare Interpolation**. **Warum für den MedAT relevant?** Koordinaten, Geradengleichung, Abstand, Interpolation (EKG, Dosis-Wirkung) werden geprüft. **Welche Fragen werden beantwortet?** „Abstand zweier Punkte?“; „Gerade aus zwei Punkten?“; „Steigung m?“; „Interpolation?“; „y = mx + b?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu analytischer Geometrie (Koordinaten, Geraden, Abstand) abgedeckt.
+Zwei Messpunkte auf dem Laborbefund -- wie legst du eine Gerade hindurch, um einen Zwischenwert abzuschaetzen? Das ist **lineare Interpolation**, und sie funktioniert im Koordinatensystem: Punkte werden zu Zahlenpaaren, Geraden zu Gleichungen, und der Abstand zwischen zwei Punkten folgt dem Satz des Pythagoras. Das **kartesische Koordinatensystem** ist die Grundlage fuer Kalibrierkurven, Dosis-Wirkungs-Diagramme und grafische MedAT-Aufgaben.
 
-**In diesem Kapitel lernst du:** **Kartesische Koordinaten**; **Geradengleichung** (Steigung, Schnitt); **Abstand** zweier Punkte; lineare Interpolation.
+**In diesem Kapitel lernst du:**
+- wie du Punkte im Koordinatensystem beschreibst und den Abstand zwischen ihnen mit Pythagoras berechnest
+- wie du die Geradengleichung aus zwei Punkten aufstellst und die Steigung interpretierst
+- wie du Schnittpunkte zweier Geraden berechnest und wann Geraden parallel oder senkrecht sind
+- wie lineare Interpolation in der Labormedizin funktioniert
+- wie Polarkoordinaten Vektoren ueber Betrag und Winkel beschreiben
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:vector-addition}}
 
 **Idee:** Punkte durch (x,y) beschrieben; **Abstand** = Pythagoras: d = √((x₂−x₁)²+(y₂−y₁)²). **Gerade** y = mx+b: m = Steigung, b = y-Achsenabschnitt; aus zwei Punkten: m = (y₂−y₁)/(x₂−x₁), dann b = y₁−m×x₁.
 
@@ -2131,10 +2049,8 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 
 ## Kartesisches Koordinatensystem
 
-![Koordinaten Gerade](/grafik-lineare-funktion.svg)
 
 
-![Parabel und Geraden](/grafik-parabel.svg)
 
 
 Ein Punkt P im zweidimensionalen kartesischen Koordinatensystem wird durch ein geordnetes Paar (x, y) beschrieben. Die x-Achse (Abszisse) ist horizontal, die y-Achse (Ordinate) vertikal; der Ursprung O = (0, 0) liegt im Schnittpunkt.
@@ -2259,26 +2175,6 @@ g₁: y = ¾x + 2. Parallele Gerade durch P(4, 1): y = ¾x + b. Einsetzen: 1 = �
 - **Abstand:** d = √((x₂−x₁)²+(y₂−y₁)²). **Mittelpunkt:** ((x₁+x₂)/2, (y₁+y₂)/2).
 - **Gerade:** m = (y₂−y₁)/(x₂−x₁), b = y₁−m×x₁. **Schnittpunkt:** Gleichsetzen → x, dann y.
 - **Senkrecht:** m₂ = −1/m₁. **Kreis:** (x−x₀)²+(y−y₀)² = r².
-
-**Zentral prüfungsrelevant:** Geradengleichung y = mx + b, Steigung m = Δy/Δx, zwei Punkte → Gerade, Schnittpunkt, Abstand Punkt–Gerade, Parabel (Scheitelpunkt, Öffnung). **Trigonometrie:** sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete; **Steigung in % = Höhenunterschied/Horizontaldistanz = tan(α)** — Angabe „16 % Steigung“ entspricht **Tangens** (nicht Sinus/Cosinus).
-
-**Ergänzend vertiefend:** Lineare Funktionen in der Klinik (Dosis-Wirkung). Typische Fallen: Steigung in % = tan(α), nicht sin/cos; Kreisgleichung rechts r² (nicht r); parallele Geraden: gleiche Steigung, verschiedener y-Achsenabschnitt.
-
-**Häufige Fragen:**
-- "Geradengleichung durch P(2,3) und P(6,11)?" → m = (11−3)/(6−2) = 2; b = 3−4 = −1 → y = 2x−1
-- "Schnittpunkt y=2x+1 und y=−x+7?" → 3x = 6, x = 2, y = 5 → Schnittpunkt (2, 5)
-- "Sind y = 3x+1 und y = −⅓x+5 senkrecht?" → 3×(−1/3) = −1 → ja!
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **Steigung in % (z. B. 16 %) = Tangens** des Steigungswinkels (Höhe/Horizontale) — nicht Sinus, nicht Cosinus
-- Kreisgleichung: (x−x₀)²+(y−y₀)² = r² — rechts steht r² (nicht r); Mittelpunkt bei (x+2)² ist x₀ = −2!
-- Parallele Geraden: gleiche Steigung, VERSCHIEDENER y-Abschnitt — kein Schnittpunkt
-- arctan: Bereich nur −90° bis +90° → im II./III. Quadranten +180° addieren
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Sensitivität = TP/(TP+FN); Spezifität = TN/(TN+FP); PPV = TP/(TP+FP)
-- EKG-Lagetypen: Normotyp 0°–90°, Linkstyp −30° bis 0°, Rechtstyp +90° bis +120°
-- Bland-Altman: Bias = mittlere Differenz; Limits of Agreement = Bias ± 1,96×SD
 
 ---
 
@@ -2467,11 +2363,20 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Vektoren** (Betrag + Richtung): Addition, Skalarmultiplikation, **Betrag**, **Skalarprodukt** (Winkel), **Kreuzprodukt**; EKG-Achse, Kräfte, Blutfluss. **Warum für den MedAT relevant?** Vektoraddition, Skalarprodukt, Winkel, Betrag, 3D werden geprüft. **Welche Fragen werden beantwortet?** „Vektor vs. Skalar?“; „Betrag |v|?“; „Skalarprodukt Winkel?“; „Kreuzprodukt — Ergebnis?“; „Orthogonal wenn?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Vektoren (Grundlagen) abgedeckt. Vertiefung: ma-6-01 bis ma-6-04.
+Stell dir vor, du zerlegst die Muskelkraft am Kniegelenk in eine Druck- und eine Scherkomponente -- das geht nur, weil Kraft ein **Vektor** ist: Sie hat sowohl einen Betrag als auch eine Richtung. Im Gegensatz dazu ist die Temperatur ein **Skalar** -- eine reine Zahl ohne Richtung. Vom EKG-Herzachsenvektor ueber die Blutflussrichtung bis zur Kraefteparallelogramm-Regel: Vektoren sind in der Medizin allgegenwaertig. Vertiefung folgt in Kapitel 6.
 
-**In diesem Kapitel lernst du:** **Vektor** vs. Skalar; **Betrag**; **Skalarprodukt** (Winkel); **Kreuzprodukt**; Ebenengleichung.
+**In diesem Kapitel lernst du:**
+- worin sich Vektoren (Betrag + Richtung) von Skalaren (nur Zahl) unterscheiden
+- wie du den Betrag eines Vektors mit dem Satz des Pythagoras berechnest
+- was das Skalarprodukt ueber den Winkel zwischen zwei Vektoren verraet und wann Vektoren senkrecht stehen
+- was das Kreuzprodukt liefert und warum sein Ergebnis ein Vektor senkrecht auf beiden Ausgangsvektoren ist
+- wie diese Konzepte in der Biomechanik und beim EKG konkret angewendet werden
 
 ---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** **Vektor** = Betrag + Richtung (Pfeil); **Skalar** = nur Zahl. **Betrag** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt** a·b = |a||b|cos θ → Winkel und Orthogonalität (a·b = 0). **Kreuzprodukt** a×b = Vektor ⊥ zu beiden, |a×b| = |a||b|sin θ.
 
@@ -2483,10 +2388,8 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
 
 ## Grundbegriffe
 
-![Vektoren](/grafik-vektoren.svg)
 
 
-![Vektor Betrag und Richtung](/grafik-vektoren-betrag.svg)
 
 
 Ein Vektor **a** in 3D wird durch seine Komponenten beschrieben: **a** = (a₁, a₂, a₃). Im 2D entsprechend: **a** = (a₁, a₂).
@@ -2608,24 +2511,6 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2×3
 - **Kreuzprodukt:** a×b = Vektor; |a×b| = |a||b|sin θ; a×b = −(b×a).
 - **Winkel:** cos θ = (a·b)/(|a||b|).
 
-**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag |a| = √(aₓ²+aᵧ²+a_z²)), Skalarprodukt a×b = aₓbₓ+aᵧbᵧ+a_zb_z, orthogonale Vektoren (a×b=0), Kreuzprodukt (Rechte-Hand-Regel, Betrag = Fläche Parallelogramm).
-
-**Ergänzend vertiefend:** Anwendung in Physik (Kräfte, Geschwindigkeit). Typische Fallen: Skalarprodukt = Skalar, Kreuzprodukt = Vektor; Kreuzprodukt antikommutativ (a×b ≠ b×a); EKG Linkstyp = negativer Winkel.
-
-**Häufige Fragen:**
-- "Skalarprodukt a=(1,2,3) und b=(4,0,−2)?" → 4+0−6 = −2
-- "Sind a=(2,1) und b=(−1,2) senkrecht?" → 2×(−1)+1×2 = 0 → ja!
-- "Drehmoment: F=200N, r=6cm, θ=90°?" → |M| = 0,06×200×sin90° = 12 N×m
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Skalarprodukt = Zahl (Skalar!), Kreuzprodukt = Vektor — nicht verwechseln
-- Kreuzprodukt: a×b ≠ b×a (antikommutativ!) — Richtung kehrt sich um
-- EKG-Herzachse: Linkstyp = NEGATIVER Winkel (< 0°), Rechtstyp > +90°
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- EKG-Lagetypen: Normotyp 0°–90°, Linkstyp −30° bis 0°, Rechtstyp +90° bis +120°
-- Drehmoment maximal wenn θ = 90° (Kraft senkrecht zum Hebelarm; sin 90° = 1)
-- Abstand Punkt P von Ebene n₁x+n₂y+n₃z = d: |n₁xP+n₂yP+n₃zP−d| / |n|
 
 ---
 

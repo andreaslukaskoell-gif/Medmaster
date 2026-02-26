@@ -27,16 +27,20 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** Ein Erythrozyt ist 8 µm groß, ein Virus 100 nm, Glukose im Blut 5 mmol/L — all das lässt sich nur mit **Zehnerpotenzen** (Ausdrücke der Form 10ⁿ) bequem schreiben. **Warum für den MedAT relevant?** Dosierungen, Laborwerte und Einheitenumrechnungen bauen auf Potenzschreibweise und den vier Rechenregeln auf. **Welche Arten von MedAT-BMS-Fragen kannst du damit lösen?** Rechenfragen (10³ × 10⁻⁵ = ?, Verhältnis konzentrierter?), „Welche Aussage ist richtig/falsch?“ (z. B. 10⁻³ = −10³?), Umrechnung Dezimal ↔ Zehnerpotenz, Größenordnungen vergleichen. Mit diesem Kapitel sind alle typischen BMS-Fragen zu Zehnerpotenzen abgedeckt.
+Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) -- in der Medizin begegnest du staendig extrem grossen und extrem kleinen Zahlen. Ein Erythrozyt misst 8 Mikrometer, ein Virus gerade einmal 100 Nanometer, und die Glukose im Blut liegt bei 5 Millimol pro Liter. **Zehnerpotenzen** sind das Werkzeug, um mit diesen Groessenordnungen sicher zu rechnen -- ob bei Dosierungen, Laborwerten oder Einheitenumrechnungen.
 
 **In diesem Kapitel lernst du:**
-- **Zehnerpotenzen** mit positivem und negativem **Exponenten** zu lesen und in Dezimalzahlen umzurechnen (10³ = 1.000, 10⁻⁶ = 0,000001)
-- die **vier Rechenregeln** für Zehnerpotenzen: Multiplikation (Exponenten addieren), Division (subtrahieren), Potenzieren (multiplizieren), Wurzel (Exponent halbieren)
-- Produkte und Quotienten der Form (a × 10ᵐ) × (b × 10ⁿ) zu berechnen und in **normalisierter Form** (Vorfaktor zwischen 1 und 10) zu bringen
-- **Verhältnisse** und **Größenordnungen** durch Exponenten-Subtraktion schnell abzuschätzen (z. B. wie oft konzentrierter?)
-- typische **Fehlerquellen** zu vermeiden (10⁻³ ≠ −10³; bei Addition erst auf gleichen Exponenten bringen)
+- wie du mit extrem grossen und kleinen Zahlen rechnest, indem du sie als Zehnerpotenzen schreibst
+- die vier Rechenregeln fuer Zehnerpotenzen und wann du Exponenten addierst, subtrahierst oder multiplizierst
+- wie du Ausdruecke mit Vorfaktor und Zehnerpotenz in eine einheitliche, normalisierte Form bringst
+- wie du durch Exponenten-Subtraktion blitzschnell abschaetzt, um welchen Faktor eine Konzentration groesser ist als eine andere
+- welche typischen Denkfallen bei Zehnerpotenzen lauern und wie du sie vermeidest
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:coordinate-system}}
 
 ## Grunddefinition und positive Exponenten
 
@@ -98,7 +102,6 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 > **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
 
 
-![Zehnerpotenzen](/grafik-zehnerpotenzen.svg)
 
 ---
 
@@ -138,7 +141,6 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
 > **Merke:** **Verhältnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. 10⁻³ / 10⁻⁶ = 10³ = Faktor 1.000. Exponentendifferenz abschätzen — nicht lange ausrechnen!
 
 
-![Größenordnungen](/grafik-groessenordnungen.svg)
 
 ---
 
@@ -207,15 +209,6 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 - **Verhältnis „wie oft?“:** Exponent von A minus Exponent von B → 10^(A−B) = Faktor.
 - **Normalisierung:** Vorfaktor ≥10 → eine Zehnerpotenz nach rechts (Exponent +1); Vorfaktor <1 → nach links (Exponent −1).
 
-**Zentral prüfungsrelevant:** Zehnerpotenzen (10⁰=1, 10³, 10⁻⁶), Rechenregeln (Multiplikation/Division/Potenz: Exponenten addieren/subtrahieren/multiplizieren), Verhältnisse (Exponentendifferenz = Faktor), klinische Größenordnungen (Erythrozyten ~5×10¹²/L, pH log-Skala).
-
-**Ergänzend vertiefend:** Wurzel als Potenz 10^(m/n). Typische Fallen: 10⁻³ ≠ −10³ (negativer Exponent → positive Zahl); bei Multiplikation Exponenten addieren (nicht multiplizieren); bei Addition erst gleichen Exponenten herstellen.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 10⁰ = 1; 10³ = 1.000; 10⁶ = 1.000.000; 10⁻³ = 0,001; 10⁻⁶ = 0,000001; 10⁻⁹ = 0,000000001
-- Multiplikation: 10ᵃ × 10ᵇ = 10^(a+b) | Division: 10ᵃ / 10ᵇ = 10^(a−b) | Potenzieren: (10ᵃ)ᵇ = 10^(a×b)
-- Erythrozytenzahl: ~5 × 10¹² /L; Erythrozytengröße: 8 × 10⁻⁶ m; Virusgröße: ~10⁻⁷ m
-- pH-Wert: Abfall um 1 Einheit = zehnfache H⁺-Konzentration (log-Skala)
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -429,16 +422,20 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
       ],
       content: `## Einleitung
 
-**Worum geht es?** **SI-Präfixe** (m, µ, n, p, k, M, …) geben Zehnerpotenzen zur Basiseinheit an; Verwechslung µg/mg kann tödlich sein. **Warum für den MedAT relevant?** Milli, Mikro, Nano, Piko, Kilo, Mega und Umrechnungen zwischen Präfixen werden geprüft. **Welche Fragen werden beantwortet?** „µg in mg?“; „1 mg = wie viele µg?“; „Femto — 10^?“; „Dosierung 0,5 µg/h — in mg?“; „wer kleiner misst, zählt mehr?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu SI-Präfixen abgedeckt.
+Eine Tablette enthaelt 500 mg Wirkstoff, ein Laborwert zeigt 4,2 µmol/L, das mittlere Erythrozytenvolumen betraegt 90 fL -- ueberall stecken **SI-Praefixe** wie Milli, Mikro und Femto. Sie stehen fuer feste Zehnerpotenzen und machen extrem grosse oder kleine Zahlen handhabbar. Wer Mikro und Milli verwechselt, liegt um den Faktor 1.000 daneben -- bei einer Dosierung kann das lebensgefaehrlich sein.
 
 **In diesem Kapitel lernst du:**
-- die **Systematik der SI-Präfixe** (Dreierschritte 10³) von Femto (10⁻¹⁵) bis Tera (10¹²)
-- **medizinisch relevante Präfixe** sicher zuordnen: Milli (mg, mmol, mL), Mikro (µg, µm), Nano (ng, nm), Piko, Femto (z. B. fL für MCV)
-- **Umrechnungen** zwischen Präfixen (kleinere Einheit → größere Zahl; "wer kleiner misst, zählt mehr")
-- **Dosierungsfallen** zu vermeiden (µg ≠ mg; 1 mg = 1.000 µg — Verwechslung = 1.000-facher Fehler)
-- typische **MedAT-Aufgaben** (z. B. mmol/L → µmol/L, mg → µg) fehlerfrei zu lösen
+- wie die SI-Praefixe in Dreierschritten aufgebaut sind und warum jede Stufe dem Faktor 1.000 entspricht
+- welche Praefixe in der Medizin staendig vorkommen und wie du sie sicher den richtigen Zehnerpotenzen zuordnest
+- wie du zwischen Praefixen umrechnest -- mit der einfachen Regel “wer kleiner misst, zaehlt mehr”
+- warum die Verwechslung von µg und mg einer der gefaehrlichsten Dosierungsfehler ist
+- wie du typische MedAT-Umrechnungsaufgaben (mmol/L in µmol/L, mg in µg) fehlerfrei loest
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** SI-Präfixe sind feste Zehnerpotenzen (10³ pro Stufe) vor der Basiseinheit — sie machen sehr große oder sehr kleine Zahlen handhabbar (mg, µg, nm, fL). **Warum für den MedAT:** Dosierungen, Laborwerte und Einheitenumrechnungen verlangen sichere Zuordnung Präfix ↔ Faktor und die richtige **Richtung** beim Umrechnen (kleinere Einheit → größere Zahl).
 
@@ -528,7 +525,6 @@ Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspri
 > **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Großbuchstabe!). Blutdruck in kPa; Radioaktivität in MBq; Körpergewicht in kg.
 
 
-![Präfix-Leiter](/grafik-praefix-leiter.svg)
 
 ---
 
@@ -548,7 +544,6 @@ Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenprä
 > **Merke:** **Kleinere Einheit → größere Zahl; größere Einheit → kleinere Zahl.** Eselsbrücke: "Wer kleiner misst, zählt mehr." Systematisch: Ausgangs- und Zieleinheit als Zehnerpotenz schreiben, Verhältnis bilden.
 
 
-![mg µg Umrechnung](/grafik-mg-ug.svg)
 
 ---
 
@@ -596,28 +591,6 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 - **Umrechnung A → B:** Beide als Zehnerpotenz zur gleichen Basis; Faktor = 10^(Exponent_A − Exponent_B). Kleinere Einheit → × Faktor; größere Einheit → ÷ Faktor.
 - **Schnellregel:** Eine Stufe (Dreierschritt) = Faktor 1.000. mg → µg: × 1.000; µg → mg: ÷ 1.000.
 
-**Zentral prüfungsrelevant:** SI-Präfixe in Dreierschritten (10³); Reihenfolge f → p → n → µ → m → [Basis] → k → M → G → T; Milli (10⁻³), Mikro (10⁻⁶), Nano (10⁻⁹) mit Symbol und Faktor; Umrechnungsregel „kleinere Einheit → größere Zahl“; µg ≠ mg (1 mg = 1.000 µg); typische Umrechnungen mmol/L ↔ µmol/L, mg ↔ µg ↔ ng; MCV in fL (80–96 fL).
-
-**Ergänzend vertiefend (noch prüfungsnah):** Piko/Femto in Labor und Hämatologie; Mega (MBq) in der Nuklearmedizin; Groß-/Kleinschreibung (M vs. m); ISMP-Empfehlung „mcg“ statt „µg“ in der Verschreibung.
-
-**Häufige Fragen:**
-- "Welcher Faktor entspricht Nano (n)?" → 10⁻⁹ (= 0,000000001)
-- "Wie viele µg sind 0,005 mg?" → 0,005 × 1.000 = 5 µg (mg → µg: × 1.000)
-- "4,2 mmol/L Kalium in µmol/L?" → 4.200 µmol/L (mmol → µmol: × 1.000; kleinere Einheit = größere Zahl)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **µ (Mikro) = 10⁻⁶, nicht 10⁻³** — 10⁻³ = Milli (m). MedAT-Frage „Welches Präfix?“: pico = 10⁻¹², nano = 10⁻⁹, mikro = 10⁻⁶, milli = 10⁻³.
-- µ (Mikro, 10⁻⁶) ≠ m (Milli, 10⁻³) — 1 mg = 1.000 µg; Verwechslung = **1.000-facher** Dosierungsfehler!
-- M (Mega, 10⁶, Großbuchstabe) ≠ m (Milli, 10⁻³, Kleinbuchstabe) — Groß-/Kleinschreibung entscheidend
-- Umrechnungsrichtung: kleinere Einheit → größere Zahl ("wer kleiner misst, zählt mehr")
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- **15 μmol/L** = 15 × 10⁻⁶ mol/L = **1,5 × 10⁻⁵ mol/L** (normalisierte Form: Vorfaktor 1–10). MedAT: „15 μmol/L in mol/L?“ → 1,5·10⁻⁵ mol/L.
-- **Pico (p)** = **10⁻¹²** (nicht 10⁻⁹, nicht 10⁻⁶, nicht 10⁻¹⁵).
-- Reihe klein→groß: f (10⁻¹⁵) → p (10⁻¹²) → n (10⁻⁹) → µ (10⁻⁶) → m (10⁻³) → [Basis] → k (10³) → M (10⁶) → G (10⁹) → T (10¹²)
-- 1 mg = 1.000 µg = 1.000.000 ng = 10⁹ pg; jede Stufe: Faktor 1.000
-- Elektrolyte: Na⁺ 135–145 mmol/L; K⁺ 3,5–5,0 mmol/L; Hormone: nmol/L–pmol/L
-- MCV (Erythrozytenvolumen): 80–96 fL (Femtoliter = 10⁻¹⁵ L); <80 fL = mikrozytär; >96 fL = makrozytär
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -855,16 +828,20 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Wissenschaftliche Notation**: Zahl als **a × 10ⁿ** (Vorfaktor 1 ≤ a < 10) — für sehr große/kleine Werte (Avogadro, Labor, Erythrozyten). **Warum für den MedAT relevant?** Normalisierte Form, Multiplikation/Division, Addition/Subtraktion mit gleichem Exponenten werden geprüft. **Welche Fragen werden beantwortet?** „8,8×10⁻⁵ normalisiert?“; „10³ × 10⁻⁵?“; „Addition gleicher Exponent?“; „Kommaverschiebung → Exponent?“; „Dezimal ↔ 10ⁿ?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur wissenschaftlichen Notation abgedeckt.
+Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen -- solche Zahlen aufzuschreiben waere ein Albtraum. Die **wissenschaftliche Notation** (z. B. 6,022 x 10²³) loest dieses Problem: Ein kompakter Vorfaktor zwischen 1 und 10 und eine Zehnerpotenz reichen aus. In der Medizin begegnet dir diese Schreibweise bei Laborwerten, Zellzahlen und dem pH-Wert -- und am MedAT wird sicher gerechnet, wer sie beherrscht.
 
 **In diesem Kapitel lernst du:**
-- die **normalisierte Form** (a × 10ⁿ mit 1 ≤ a < 10) und warum sie eindeutig ist
-- **Umrechnung** Dezimalzahl ↔ wissenschaftliche Notation (Kommaverschiebung → Exponent)
-- **Multiplikation und Division** (Vorfaktoren getrennt, Exponenten addieren/subtrahieren; danach normalisieren)
-- **Addition und Subtraktion** (erst gleichen Exponenten herstellen, dann Vorfaktoren verrechnen)
-- **pH-Wert** als Logarithmus der H⁺-Konzentration und den **Dreischritt** für MedAT-Aufgaben (Vorfaktoren → Exponenten → Normieren)
+- warum die normalisierte Form (Vorfaktor zwischen 1 und 10) eine Zahl eindeutig und vergleichbar macht
+- wie du jede Dezimalzahl durch Kommaverschiebung in wissenschaftliche Notation bringst und zurueck
+- wie du Ausdruecke in wissenschaftlicher Notation multiplizierst, dividierst und addierst -- Schritt fuer Schritt
+- warum bei der Addition erst der Exponent angeglichen werden muss, bevor die Vorfaktoren verrechnet werden
+- wie der pH-Wert als Logarithmus der H⁺-Konzentration funktioniert und was “1 pH-Einheit = Faktor 10” bedeutet
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
 
@@ -965,7 +942,6 @@ Falls das Ergebnis nicht normalisiert ist (Vorfaktor ≥ 10 oder < 1), muss man 
 > **Merke:** **Multiplikation:** Vorfaktoren ×, Exponenten **addieren**. **Division:** Vorfaktoren ÷, Exponenten **subtrahieren**. Danach **normalisieren**.
 
 
-![Wissenschaftliche Notation](/grafik-wissenschaftliche-notation.svg)
 
 ---
 
@@ -992,7 +968,6 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 > **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
 
 
-![pH Zehnerpotenzen](/grafik-20-ph-skala.svg)
 
 ---
 
@@ -1035,24 +1010,6 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 - **Dezimal → Notation:** Komma verschieben bis 1 ≤ a < 10; Anzahl Stellen = |n| (links = n>0, rechts = n<0).
 - **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH). 1 pH-Einheit = Faktor 10.
 
-**Zentral prüfungsrelevant:** Normalisierte Form (1 ≤ Vorfaktor < 10); Umrechnung Dezimal ↔ Notation (Kommaverschiebung → Exponent); Multiplikation (Vorfaktoren ×, Exponenten addieren); Division (Vorfaktoren ÷, Exponenten subtrahieren); Addition/Subtraktion (erst gleichen Exponenten herstellen); Normalisierung nach Rechnung; Dreischritt (Vorfaktoren → Exponenten → Normieren); pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺]; Avogadro 6,022×10²³ mol⁻¹; Erythrozyten ~5×10¹²/L.
-
-**Ergänzend vertiefend (noch prüfungsnah):** Logarithmusregeln (log(a×b), log(a/b), log(aⁿ)); Henderson-Hasselbalch; Halbwertszeit in wissenschaftlicher Notation; Signifikanz und Rundung.
-
-**Häufige Fragen:**
-- "Schreibe 0,000047 in normalisierter Form" → 4,7 × 10⁻⁵ (5 Stellen nach rechts = negativer Exponent)
-- "Was ist (4 × 10⁻³) × (3 × 10⁵)?" → Vorfaktoren: 4×3=12; Exponenten: −3+5=2 → 12×10² → normiert: 1,2 × 10³
-- "pH, wenn [H⁺] = 10⁻⁷ mol/L?" → pH = −log₁₀(10⁻⁷) = 7
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Nicht normalisiert ≠ falsch, aber Prüfung verlangt normalisierte Form: 15 × 10³ → richtig: 1,5 × 10⁴
-- Bei Division: Exponenten **subtrahieren** (nicht dividieren!): 10⁶ / 10² = 10⁴
-- Addition: erst gleiche Exponenten herstellen — 3 × 10³ + 4 × 10² = 3 × 10³ + 0,4 × 10³ = **3,4 × 10³** (nicht 7 × 10⁵!)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Normalisierte Form: 1 ≤ Vorfaktor < 10; Dreischritt: (1) Vorfaktoren, (2) Exponenten, (3) Normieren
-- pH = −log₁₀([H⁺]); pH 7,4 ↔ [H⁺] ≈ 40 nmol/L; pH-Differenz 0,3 ≈ Faktor 2 in [H⁺]; 1 pH-Einheit = Faktor 10
-- Avogadro: 6,022 × 10²³ mol⁻¹; Erythrozyten: 5 × 10¹²/L; Lichtgeschwindigkeit: 2,998 × 10⁸ m/s
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -1296,16 +1253,20 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Länge, Fläche, Volumen**: Längenfaktor k → Fläche k², Volumen k³. 1 m² = 10.000 cm² (nicht 100!); 1 L = 1 dm³ = 1.000 cm³. **Körperoberfläche (BSA)** nach Mosteller für Dosierung. **Warum für den MedAT relevant?** Längen-, Flächen-, Volumenumrechnungen, BSA, g/dL → g/L werden geprüft. **Welche Fragen werden beantwortet?** „1 m² in cm²?“; „1 L in cm³?“; „BSA-Formel?“; „Fläche Faktor?“; „Zelle — µm oder nm?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Länge, Fläche und Volumen abgedeckt.
+Wie gross ist eine menschliche Zelle? Etwa 10 Mikrometer -- das ist ein Hundertstel Millimeter. Und wie viele Quadratzentimeter hat ein Quadratmeter? Die Antwort ist 10.000, nicht 100 -- denn bei Flaechen wird der Laengenfaktor **quadriert**. Diese Falle ist einer der haeufigsten Fehler am MedAT. Ob Zellgroessen, Infusionsvolumina oder die Koerperoberflaeche fuer die Chemotherapie-Dosierung: **Laenge, Flaeche und Volumen** sicher umzurechnen ist medizinischer Alltag.
 
 **In diesem Kapitel lernst du:**
-- **Längeneinheiten** von km bis nm (Faktor 10 je Stufe) und medizinische Größenordnungen (Zelle µm, Virus nm)
-- **Flächenumrechnung:** Faktor **quadrieren** — 1 m² = 10.000 cm² (nicht 100!)
-- **Volumenumrechnung:** Faktor **kubieren** — 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**
-- **Körperoberfläche (BSA)** nach Mosteller und klinische Anwendung (Chemotherapie, Verbrennungen)
-- **Laborwerte** g/dL ↔ g/L (1 dL = 100 mL) und typische MedAT-Fallen
+- wie die metrischen Laengeneinheiten von Kilometer bis Nanometer zusammenhaengen und welche Groessenordnungen in der Medizin vorkommen
+- warum bei Flaechenumrechnungen der Faktor quadriert und bei Volumen kubiert werden muss -- und wie du diesen typischen Fehler vermeidest
+- wie Liter, Milliliter und Kubikzentimeter zusammenhaengen (Spoiler: 1 mL = 1 cm³)
+- wie du die Koerperoberflaeche (BSA) nach Mosteller berechnest und wofuer sie klinisch gebraucht wird
+- wie du Laborwerte zwischen g/dL und g/L umrechnest, ohne die Richtung zu verwechseln
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
 
 **Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
 
@@ -1371,7 +1332,6 @@ Klinisch relevante Flächen:
 - Handflächenfläche: ~0,8 % KOF (Neuner-Regel in der Verbrennungsmedizin)
 
 
-![Fläche Quadrat](/grafik-flaeche-quadrat.svg)
 
 ---
 
@@ -1402,7 +1362,6 @@ Klinisch relevante Volumina:
 > **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor **kubieren**!
 
 
-![Volumen Liter](/grafik-volumen-liter.svg)
 
 ---
 
@@ -1465,26 +1424,6 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
 - **Volumen:** k → k³. 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**.
 - **g/dL → g/L:** × 10 (1 L = 10 dL). **BSA:** BSA [m²] = √(Größe[cm]×Gewicht[kg]/3.600).
 
-**Zentral prüfungsrelevant:** Länge: Faktor 10 je Stufe (km → m → … → μm → nm); Fläche: Faktor **quadrieren** — 1 m² = 10.000 cm² (nicht 100!); Volumen: Faktor **kubieren** — 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³**; 1 dL = 100 mL; g/dL → g/L: × 10; BSA Mosteller: √(Größe[cm]×Gewicht[kg]/3.600); Alveolenfläche ~70–140 m²; KOF ~1,7–2,0 m².
-
-**Ergänzend vertiefend (noch prüfungsnah):** Neuner-Regel Verbrennungen; 1 mm² = 10⁶ μm²; Hektar; klinische Volumina (Blutvolumen, Herzzeitvolumen).
-
-**Häufige Fragen:**
-- "1 m² = ? cm²" → 10.000 cm² (Faktor quadrieren: 100² = 10.000 — nicht 100!)
-- "2,5 L = ? mL" → 2.500 mL (1 L = 1.000 mL)
-- "1 mL = ? cm³" → 1 cm³ (exakte Gleichheit per Definition — kein Umrechnen nötig!)
-- "14 g/dL Hb = ? g/L" → 140 g/L (1 dL = 0,1 L → × 10)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- 1 m² ≠ 100 cm² — **häufigster MedAT-Fehler!** Richtig: 10.000 cm² (= 100²)
-- 1 m³ ≠ 1.000 cm³ — Richtig: 1.000.000 cm³ (= 10⁶ cm³; Faktor kubieren: 100³)
-- 1 mm² ≠ 1.000 µm² — Richtig: 1.000.000 µm² (1 mm = 10³ µm → quadriert: 10⁶ µm²)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Dimension bestimmt Potenz: Länge k¹ | Fläche k² | Volumen k³
-- 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; 1 mL = 1 cm³; 1 dL = 100 mL
-- Mosteller-Formel: BSA [m²] = √(Größe[cm] × Gewicht[kg] / 3.600); Erwachsener: ~1,73 m²
-- Alveolenfläche: 70–140 m²; Darmoberfläche: ~250–400 m²; Körperoberfläche: ~1,7–2,0 m²
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -1660,16 +1599,20 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Zeit** (s, min, h), **Geschwindigkeit** v = s/t, **Beschleunigung** a = Δv/Δt; **freier Fall** v = g·t, s = ½g·t², **km/h ↔ m/s** (Faktor 3,6). **Warum für den MedAT relevant?** Zeitumrechnungen, v = s/t, a = Δv/Δt, g ≈ 9,81 m/s², freier Fall, km/h ↔ m/s werden geprüft. **Welche Fragen werden beantwortet?** „v = s/t?“; „km/h in m/s?“; „Freier Fall v beim Aufprall?“; „1 h in s?“; „g in m/s²?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Zeit, Geschwindigkeit und Beschleunigung abgedeckt.
+Ein EKG-Intervall dauert 200 Millisekunden, eine Halbwertszeit Stunden bis Tage, und die Nervenleitgeschwindigkeit erreicht 120 m/s -- **Zeit und Geschwindigkeit** begegnen dir in der Medizin in voellig unterschiedlichen Groessenordnungen. Anders als Laengen und Massen folgen Zeiteinheiten keinem Dezimalsystem, sondern dem babylonischen 60er-System. Wer km/h und m/s sicher umrechnet und die Formeln fuer gleichmaessige Beschleunigung kennt, loest die typischen MedAT-Rechenaufgaben zuegig.
 
 **In diesem Kapitel lernst du:**
-- **Zeiteinheiten** im 60er-System (1 min = 60 s, 1 h = 3.600 s) und medizinische Zeitskalen (EKG, Halbwertszeit)
-- **Geschwindigkeit** v = s/t [m/s] und Umrechnung **km/h ↔ m/s** (Faktor 3,6)
-- **Beschleunigung** a = Δv/Δt und die **drei Formeln** der gleichmäßig beschleunigten Bewegung
-- **Freier Fall:** v = g×t, s = ½×g×t², Aufprall **v = √(2gh)**; g ≈ 10 m/s²
-- **Herzfrequenz** in Hz (÷ 60) und **Nervenleitgeschwindigkeit** (NLG) als klinische Anwendung
+- warum Zeiteinheiten dem 60er-System folgen und wie du sicher zwischen Sekunden, Minuten und Stunden umrechnest
+- wie Geschwindigkeit als Weg pro Zeit definiert ist und wie du zwischen km/h und m/s wechselst (Faktor 3,6)
+- was Beschleunigung bedeutet und welche drei Formeln die gleichmaessig beschleunigte Bewegung beschreiben
+- wie du beim freien Fall die Aufprallgeschwindigkeit und Fallhoehe berechnest
+- wie Herzfrequenz und Nervenleitgeschwindigkeit als klinische Anwendungen von Frequenz und Geschwindigkeit funktionieren
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
 
 **Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
 
@@ -1739,10 +1682,8 @@ Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s)
 > **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** × **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
 
 
-![km/h m/s](/grafik-kmh-ms.svg)
 
 
-![Bewegung und Einheiten](/grafik-koerper.svg)
 
 
 ---
@@ -1824,25 +1765,6 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 - **Freier Fall:** v = g×t; s = ½×g×t²; **Aufprall:** v = √(2×g×h); g ≈ 10 m/s².
 - **HF in Hz:** f [Hz] = HF [1/min] ÷ 60; T = 1/f.
 
-**Zentral prüfungsrelevant:** Zeiteinheiten: 1 min = 60 s, 1 h = 3.600 s, 1 Tag = 86.400 s; Geschwindigkeit v = s/t [m/s]; **km/h ÷ 3,6 = m/s**, m/s × 3,6 = km/h (36 km/h = 10 m/s); Beschleunigung a = Δv/Δt; drei Formeln gleichmäßig beschleunigt (v = v₀+at, s = v₀t+½at², v² = v₀²+2as); **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s²; Herzfrequenz: f [Hz] = HF [1/min] ÷ 60, T = 1/f; NLG A-alpha 60–80 m/s, C-Fasern 0,5–2 m/s; ab 3 m Sturzhöhe Hochrasanztrauma.
-
-**Ergänzend vertiefend (noch prüfungsnah):** Trauma g-Kräfte; EKG-Intervalle in ms; Halbwertszeiten in verschiedenen Zeiteinheiten.
-
-**Häufige Fragen:**
-- "72 km/h = ? m/s" → 20 m/s (÷ 3,6; Merkhilfe: 36 km/h = 10 m/s)
-- "Herzfrequenz 75/min → Periodendauer?" → T = 60/75 = 0,8 s = 800 ms
-- "Fallhöhe aus 5 m → Aufprallgeschwindigkeit?" → v = √(2 × 10 × 5) = 10 m/s = 36 km/h
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- km/h ÷ 3,6 = m/s (nicht × 3,6!) — und m/s × 3,6 = km/h
-- s = ½ × g × t² (Fallweg) ≠ v = g × t (Fallgeschwindigkeit) — nicht verwechseln!
-- Herzfrequenz in Hz: 60/min = 1 Hz (÷ 60 nicht vergessen; Einheit ist 1/s, nicht 1/min)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 1 h = 3.600 s; 1 Tag = 86.400 s; 1 Jahr ≈ π × 10⁷ s
-- g ≈ 9,81 m/s² ≈ 10 m/s²; Formeln freier Fall: v = g×t; s = ½×g×t²; Aufprall: v = √(2gh)
-- NLG: A-alpha 60–80 m/s; A-delta 5–30 m/s; C-Fasern 0,5–2 m/s (myelinisiert = schneller)
-- Ab Sturzhöhe 3 m: Verdacht auf Hochrasanztrauma → Polytrauma-CT
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -2036,16 +1958,20 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
       ],
       content: `## Einleitung
 
-**Worum geht es?** **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd); **abgeleitete Einheiten** (N, Pa, J, W, V); **Dimensionsanalyse** (Einheitenkontrolle). **Warum für den MedAT relevant?** 7 Grundeinheiten, N/Pa/J/W/V, mmHg/kcal, Dimensionsanalyse werden geprüft. **Welche Fragen werden beantwortet?** „N in kg, m, s?“; „Pa = N/m²?“; „J in N·m?“; „Dimensionsanalyse — wozu?“; „kg einzige mit Vorsilbe?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu SI-Einheiten und Dimensionsanalyse abgedeckt.
+Blutdruck in mmHg, Energie in Kilokalorien, Dosierung in mg/kg -- die Medizin benutzt viele Einheiten, und sie alle lassen sich auf genau **sieben SI-Grundeinheiten** zurueckfuehren: Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela. Wer die Ableitungskette von Newton ueber Pascal bis Joule und Watt kennt, kann jede Einheit in ihre Grundbausteine zerlegen. Die **Dimensionsanalyse** -- also der Vergleich der Einheiten auf beiden Seiten einer Gleichung -- ist zugleich das zuverlaessigste Werkzeug, um Rechenfehler aufzudecken.
 
 **In diesem Kapitel lernst du:**
-- die **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) und warum **kg** die einzige mit Vorsilbe ist
-- **abgeleitete Einheiten** und die **Ableitungskette** N → Pa → J → W (Newton, Pascal, Joule, Watt)
-- **klinisch relevante Nicht-SI-Einheiten** (mmHg, kcal, Da) und ihre Umrechnung
-- **Dimensionsanalyse** als Kontrolle (Einheiten beider Seiten müssen übereinstimmen)
-- typische **MedAT-Aufgaben** (Druck mmHg↔Pa, Energie kcal↔kJ, Molkonzentration)
+- welche sieben Grundeinheiten das SI-System bilden und warum ausgerechnet das Kilogramm die einzige mit Vorsilbe ist
+- wie sich Newton, Pascal, Joule und Watt Schritt fuer Schritt aus den Grundeinheiten ableiten
+- welche Nicht-SI-Einheiten in der Klinik ueblich sind (mmHg, kcal, Dalton) und wie du sie umrechnest
+- wie du mit der Dimensionsanalyse pruefen kannst, ob eine Formel stimmt -- einfach indem du die Einheiten vergleichst
+- wie du typische MedAT-Aufgaben zu Druck, Energie und Molkonzentration sicher loest
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
 
 **Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
 
@@ -2082,10 +2008,8 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 **Mol:** 1 mol = N_A = 6,022 × 10²³ Teilchen (**Avogadro-Zahl**). **Molare Masse** M in g/mol. Glukose C₆H₁₂O₆: M = 180 g/mol. NaCl: M = 58,5 g/mol.
 
 
-![SI-Grundeinheiten](/grafik-si-grundeinheiten.svg)
 
 
-![Dimensionsanalyse](/grafik-dimensionsanalyse.svg)
 
 
 ---
@@ -2201,25 +2125,6 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
 - **Umrechnung:** 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; T[K] = T[°C] + 273.
 - **Dimensionsanalyse:** Einheiten beidseits prüfen; aus gesuchter Einheit Formel rekonstruieren.
 
-**Zentral prüfungsrelevant:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd; **kg** einzige mit Vorsilbe; Temperatur in K: T[K] = T[°C] + 273; Ableitungskette N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s; 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; Dimensionsanalyse (Einheiten beider Seiten müssen übereinstimmen); Mol, Avogadro 6,022×10²³; Glukose mg/dL → mmol/L (÷ 18 bzw. Molmasse 180).
-
-**Ergänzend vertiefend (noch prüfungsnah):** Coulomb, Volt, Ohm, Hertz, Becquerel, Gray, Sievert; Da (Dalton); cmH₂O; mOsmol/kg.
-
-**Häufige Fragen:**
-- "Welche SI-Grundeinheit misst Stoffmenge?" → Mol (mol); Avogadro: 6,022 × 10²³ Teilchen/mol
-- "Newton in SI-Grundeinheiten?" → kg×m/s² (F = m × a; Masse × Beschleunigung)
-- "37°C in Kelvin?" → 37 + 273 = 310 K
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- SI-Grundeinheit der Masse = kg (nicht g!) — kg ist die **einzige** Grundeinheit mit Vorsilbe
-- Joule (Energie, J = N×m) ≠ Watt (Leistung, W = J/s) — Leistung ist Energie **pro Zeit**
-- 1 mmHg ≈ 133 Pa (nicht 100 Pa!) — Blutdruck 120 mmHg ≈ 16.000 Pa ≈ 16 kPa
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd
-- Ableitungskette: N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s → V = J/C
-- 1 mmHg = 133 Pa; 760 mmHg = 1 atm ≈ 10⁵ Pa; 1 kcal = 4,184 kJ
-- Glukose mg/dL → mmol/L: ÷ 18 (Molmasse Glukose 180 g/mol); Herzleistung Ruhe: ~1 W
 ---
 
 ## Zusammenfassung (ultrakompakt)

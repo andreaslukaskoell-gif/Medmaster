@@ -29,16 +29,20 @@ export const mathKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Vektoren** (Betrag + Richtung): Addition, Skalarmultiplikation, **Betrag** |v| = √(v₁²+v₂²+v₃²), **Einheitsvektor** ê = v/|v|, Linearkombination. **Warum für den MedAT relevant?** Vektordefinition, Addition, Skalarmultiplikation, Betrag, Einheitsvektor (Blutfluss, EKG-Achse, Kräfte) werden geprüft. **Welche Fragen werden beantwortet?** „Betrag |v|?“; „Einheitsvektor?“; „Addition komponentenweise?“; „Verbindungsvektor AB?“; „linear unabhängig?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Vektoren (Rechenregeln) abgedeckt.
+Ein Navigationssystem berechnet nicht nur die Entfernung zum Ziel, sondern auch die Richtung — genau das leistet ein Vektor. In der Medizin begegnen dir Vektoren überall: Die Herzachse im EKG ist ein Summenvektor der elektrischen Erregung, Muskelkräfte am Kniegelenk werden als Kräfteparallelogramm addiert, und der Blutfluss in einem Gefäß hat sowohl Geschwindigkeit als auch Richtung. Wer Vektoren sicher addiert, Beträge berechnet und Einheitsvektoren bestimmt, kann diese klinischen Größen quantitativ erfassen.
 
 **In diesem Kapitel lernst du:**
-- **Vektor** vs. **Skalar:** Vektor = Betrag + Richtung (Pfeil); Skalar = reine Zahl
-- **Betrag** |v| = √(v₁² + v₂² + v₃²); **Addition** komponentenweise bzw. Parallelogrammregel
-- **Skalare Multiplikation** λ·v; **Verbindungsvektor** AB = Ortsvektor(B) − Ortsvektor(A)
-- **Einheitsvektor** ê = v/|v| (Richtung, Betrag 1); **Linearkombination**, lineare Unabhängigkeit
-- **Rechenweg:** Betrag zuerst, dann Einheitsvektor; Abstand = Betrag des Verbindungsvektors
+- worin sich Vektoren (Betrag + Richtung) von Skalaren (reine Zahlenwerte) unterscheiden
+- wie du Vektoren komponentenweise addierst und geometrisch als Kräfteparallelogramm interpretierst
+- wie du den Betrag eines Vektors mit dem räumlichen Pythagoras berechnest
+- wie du Einheitsvektoren bestimmst und Verbindungsvektoren zwischen zwei Punkten aufstellst
+- wann Vektoren linear abhängig oder unabhängig sind und was das geometrisch bedeutet
 
 ---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** Ein **Vektor** beschreibt eine gerichtete Größe (Kraft, Geschwindigkeit, Verschiebung) — also Betrag **und** Richtung. Ein **Skalar** ist nur eine Zahl (Temperatur, Masse). Rechnen mit Vektoren: komponentenweise (Addition, Skalarmultiplikation), Betrag mit Pythagoras, Einheitsvektor = Richtung mit Betrag 1. So lassen sich Kräfte zerlegen, Abstände und Verbindungsvektoren berechnen.
 
@@ -60,10 +64,8 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 ## Vektoroperationen
 
-![Vektoren](/grafik-vektoren.svg)
 
 
-![Vektor Betrag und Richtung](/grafik-vektoren-betrag.svg)
 
 
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
@@ -167,15 +169,6 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 - **Addition:** (a₁+b₁, a₂+b₂, a₃+b₃). **Subtraktion:** (a₁−b₁, …).
 - **Verbindungsvektor:** AB = Ortsvektor(B) − Ortsvektor(A). **Abstand:** d(A,B) = |AB|.
 - **Pythagoras-Tripel:** 3-4-5, 5-12-13 → Betrag ohne Taschenrechner.
-
-**Zentral prüfungsrelevant:** Vektoren (Komponenten, Betrag, Addition/Subtraktion, Skalarmultiplikation), Orts- und Verbindungsvektor, Einheitsvektor.
-
-**Ergänzend vertiefend:** Kollinearität. Typische Fallen: Betrag |v| = √(v₁²+v₂²), nicht v₁+v₂; Verbindungsvektor AB = B−A (Ziel minus Start); Einheitsvektor durch Betrag dividieren.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Pythagoräische Tripel: **3-4-5**, 5-12-13, 8-15-17 → Betrag sofort ablesen ohne Rechnen!
-- $\\sin(30°) = 0{,}5$, $\\cos(30°) = \\frac{\\sqrt{3}}{2}$; $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = 0{,}5$
-- Standardbasis $\\mathbb{R}^3$: $\\vec{e_1}=(1,0,0)$, $\\vec{e_2}=(0,1,0)$, $\\vec{e_3}=(0,0,1)$
 
 ---
 
@@ -363,11 +356,20 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Skalarprodukt** a·b = |a||b|cos θ (Winkel, Orthogonalität); **Kreuzprodukt** a×b (Rechte-Hand-Regel, Betrag = Fläche); **Projektion**. **Warum für den MedAT relevant?** Skalarprodukt, Kreuzprodukt, Projektion (Kräfte, Arbeit, Drehmoment) werden geprüft. **Welche Fragen werden beantwortet?** „Skalarprodukt = 0?“; „Kreuzprodukt — Vektor oder Skalar?“; „Winkel aus Skalarprodukt?“; „Betrag Kreuzprodukt?“; „Projektion Formel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Skalar- und Kreuzprodukt abgedeckt.
+Wenn ein Physiotherapeut die Kraft misst, die ein Patient entlang einer bestimmten Bewegungsachse aufbringt, berechnet er im Grunde ein Skalarprodukt: die Projektion der Kraftrichtung auf die Achse. Und wenn ein Chirurg das Drehmoment an einem Gelenk abschätzt, steckt dahinter das Kreuzprodukt — ein Vektor senkrecht zur Kraftebene, dessen Betrag der Parallelogrammfläche entspricht. Diese beiden Verknüpfungen von Vektoren — eine liefert eine Zahl (Skalar), die andere einen neuen Vektor — sind das zentrale Werkzeug für Winkelberechnungen, Orthogonalitätsprüfungen und Kraftzerlegungen.
 
-**In diesem Kapitel lernst du:** **Skalarprodukt** (Winkel, Orthogonalität); **Kreuzprodukt** (Rechte-Hand, Betrag = Fläche); **Projektion**.
+**In diesem Kapitel lernst du:**
+- wie das Skalarprodukt den Winkel zwischen zwei Vektoren bestimmt und wann es null wird (Orthogonalität)
+- wie das Kreuzprodukt einen Vektor senkrecht zu beiden Ausgangsvektoren erzeugt und welche Rolle die Rechte-Hand-Regel spielt
+- wie du die Projektion eines Vektors auf einen anderen berechnest (Kraftkomponenten, Arbeit)
+- worin sich Skalarprodukt (Ergebnis: Zahl) und Kreuzprodukt (Ergebnis: Vektor) fundamental unterscheiden
+- wie Drehmoment, Lorentz-Kraft und Parallelogrammfläche mit dem Kreuzprodukt zusammenhängen
 
 ---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** **Skalarprodukt** a·b = Zahl (Projektion, Winkel); **orthogonal** ⇔ a·b = 0. **Kreuzprodukt** a×b = Vektor ⊥ zu beiden; **Betrag** = Fläche Parallelogramm; **Rechte-Hand-Regel**; a×b = −(b×a). **Projektion** von a auf b: (a·b/|b|²)×b.
 
@@ -379,10 +381,8 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 
 ## Skalarprodukt
 
-![Skalarprodukt Kreuzprodukt](/grafik-vektoren.svg)
 
 
-![Vektoren und Winkel](/grafik-vektoren-betrag.svg)
 
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
@@ -502,28 +502,21 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Skalarprodukt a×b = aₓbₓ+aᵧbᵧ(+a_zb_z), Orthogonalität a×b=0, Winkel zwischen Vektoren, Kreuzprodukt (Rechte-Hand-Regel, Fläche Parallelogramm).
+**Typische Aufgabentypen:**
+- Skalarprodukt berechnen: a·b = a₁b₁ + a₂b₂ + a₃b₃; Orthogonalität prüfen (a·b = 0?)
+- Winkel zwischen Vektoren: cos θ = (a·b)/(|a||b|)
+- Kreuzprodukt komponentenweise; Betrag = Parallelogrammfläche
+- Drehmoment M = r × F; Arbeit W = F · s
 
-**Ergänzend vertiefend:** Anwendung Kräfte/ Geschwindigkeit. Typische Fallen: Skalarprodukt → Skalar; Kreuzprodukt → Vektor, antikommutativ; Orthogonalität Skalarprodukt = 0, Parallelität Kreuzprodukt = 0.
+**Typische Fallen:**
+- Skalarprodukt = Skalar; Kreuzprodukt = Vektor — nicht verwechseln
+- Kreuzprodukt antikommutativ: a×b = −(b×a); Reihenfolge kritisch
+- Orthogonal: Skalarprodukt = 0; Parallel: Kreuzprodukt = Nullvektor (genau umgekehrt!)
 
-**Häufige Fragen:**
-- Skalarprodukt berechnen und Orthogonalität prüfen: $\\vec{a} \\cdot \\vec{b} = 0$?
-- Winkel zwischen zwei Vektoren: $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$ — dann $\\arccos$ anwenden
-- Kreuzprodukt komponentenweise berechnen: $(a_2b_3-a_3b_2,\\; a_3b_1-a_1b_3,\\; a_1b_2-a_2b_1)$
-- Betrag des Kreuzprodukts als Parallelogrammfläche interpretieren
-- Drehmoment: $|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta$; maximal bei $\\theta = 90°$
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Skalarprodukt liefert **Skalar** (keine Richtung); Kreuzprodukt liefert **Vektor** (mit Richtung)
-- Kreuzprodukt ist **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$ — Reihenfolge kritisch!
-- Kreuzprodukt nur im $\\mathbb{R}^3$ definiert — nicht im $\\mathbb{R}^2$!
-- Orthogonalität → Skalarprodukt $= 0$; Parallelität → Kreuzprodukt $= \\vec{0}$ (genau umgekehrt)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- $\\cos(90°) = 0$ → orthogonal; $\\cos(0°) = 1$ → parallel; $\\cos(180°) = -1$ → antiparallel
-- $\\sin(90°) = 1$ → Kreuzprodukt maximal bei senkrechter Stellung der Vektoren
-- Mechanische Arbeit: $W = \\vec{F} \\cdot \\vec{s}$ (Skalarprodukt); Drehmoment: $\\vec{M} = \\vec{r} \\times \\vec{F}$ (Kreuzprodukt)
-- Sarrus-Regel: Achtung auf das **Minuszeichen** vor der mittleren Komponente $-\\vec{e_2}(\\ldots)$
+**Minimal-Rechenrezepte:**
+- **Skalarprodukt:** a·b = a₁b₁ + a₂b₂ + a₃b₃. **Winkel:** cos θ = (a·b)/(|a||b|).
+- **Kreuzprodukt:** (a₂b₃−a₃b₂, a₃b₁−a₁b₃, a₁b₂−a₂b₁). **Betrag** = |a||b|sin θ.
+- **Projektion:** proj_b(a) = (a·b/|b|²)·b.
 
 ---
 
@@ -727,11 +720,20 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Geraden im Raum** r = r₀ + t·d; **Ebenen** (Parameterform, Normalenform n·(r−r₀)=0); **LGS** (Gauß), **Determinante**, **2×2-Inverse**. **Warum für den MedAT relevant?** Geradenparameter, Ebenengleichung, LGS, Determinante, 2×2-Inverse (CT, Radiologie) werden geprüft. **Welche Fragen werden beantwortet?** „Gerade Parameterform?“; „Ebene Normalenform?“; „Gauß — Ziel?“; „Determinante 2×2?“; „Inverse 2×2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Geraden, Ebenen und Matrizen abgedeckt.
+Stell dir einen CT-Scanner vor, der Röntgenstrahlen als gerade Linien durch den Körper schickt: Jeder Strahl ist mathematisch eine Gerade im Raum, und die Schnittebene des Bildes ist eine Ebene. Die Bildrekonstruktion löst ein riesiges lineares Gleichungssystem — im Kern stecken Matrizen, Determinanten und inverse Matrizen. In diesem Kapitel lernst du die Werkzeuge, mit denen Geraden und Ebenen im dreidimensionalen Raum beschrieben werden und wie Matrizen lineare Gleichungssysteme kompakt darstellen und lösen.
 
-**In diesem Kapitel lernst du:** **Gerade im Raum**; **Ebene** (Parameter-, Normalenform); **LGS** (Gauß); **Determinante**; **2×2-Inverse**.
+**In diesem Kapitel lernst du:**
+- wie du eine Gerade im Raum durch Stützvektor und Richtungsvektor in Parameterform aufstellst
+- wie Ebenen in Parameter- und Normalenform beschrieben werden und was der Normalenvektor aussagt
+- wie du die Determinante einer 2x2- und 3x3-Matrix berechnest und was det = 0 bedeutet
+- wie du die Inverse einer 2x2-Matrix bestimmst und lineare Gleichungssysteme damit löst
+- wie der Gaußsche Algorithmus ein beliebiges LGS systematisch in Dreiecksform bringt
 
 ---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** **Gerade** r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor). **Ebene** n·(r−r₀) = 0 (Normalenform) oder r = r₀ + s·d₁ + t·d₂ (Parameterform). **Determinante** det(A) = ad−bc (2×2); det = 0 ⇒ singulär (keine eindeutige Lösung). **Inverse** 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.
 
@@ -743,10 +745,8 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 
 ## Geradengleichung im Raum
 
-![Gerade Ebene Matrix](/grafik-vektoren.svg)
 
 
-![Richtungsvektor und Normalenvektor](/grafik-vektoren.svg)
 
 
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
@@ -874,27 +874,20 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Gerade (Parameterform, Richtungsvektor), Ebene (Parameterform, Koordinatenform ax+by+cz=d), Normalenvektor n=(a,b,c), Lage Gerade–Ebene (Schnitt, parallel).
+**Typische Aufgabentypen:**
+- Gerade durch zwei Punkte aufstellen (Parameterform); Punkt auf Gerade prüfen
+- Normalenvektor aus Koordinatenform ablesen: ax+by+cz=d → n=(a,b,c)
+- Determinante 2x2 berechnen: ad−bc; Inverse 2x2 bestimmen
 
-**Ergänzend vertiefend:** Abstand windschiefer Geraden. Typische Fallen: Determinante 0 → singuläre Matrix; Matrizenmultiplikation nicht kommutativ; Normalenvektor senkrecht zur Ebene.
+**Typische Fallen:**
+- det = 0 → singuläre Matrix (keine Inverse, kein eindeutiges LGS)
+- Matrizenmultiplikation ist NICHT kommutativ: A·B ≠ B·A
+- Normalenvektor steht senkrecht AUF der Ebene, nicht in ihr
 
-**Häufige Fragen:**
-- Normalenvektor aus Koordinatenform direkt ablesen: $ax+by+cz=d$ → $\\vec{n}=(a,b,c)$
-- Determinante einer 2×2-Matrix berechnen: $\\det = ad - bc$
-- Punkt auf Gerade prüfen: in Parameterform einsetzen, konsistentes $t$ suchen
-- Dimensionsregel bei Matrizenmultiplikation: $(m\\times n) \\cdot (n\\times p) = (m\\times p)$
-- Inverse 2×2-Matrix berechnen (Hauptdiag. tauschen, Nebendiag. negieren, durch det dividieren)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Determinante $= 0$ → Matrix ist **singulär** (keine Inverse, kein eindeutiges LGS) — bei det $\\neq 0$ ist sie regulär
-- Matrizenmultiplikation ist **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$ im Allgemeinen
-- Normalenvektor steht **senkrecht** auf der Ebene — er liegt nicht in der Ebene!
-- Cramersche Regel: Die **$i$-te Spalte** von $A$ wird durch $\\vec{b}$ ersetzt (nicht die $i$-te Zeile)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Determinante 2×2: $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$ (Hauptdiag. − Nebendiag.)
-- Inverse 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$ — nur bei $\\det \\neq 0$ definiert
-- CT-Rekonstruktion: Radon-Transformation + gefilterte Rückprojektion = Matrizenoperationen auf Sinogramm
+**Minimal-Rechenrezepte:**
+- **Gerade:** x = p + t·v (p = Stützpunkt, v = Richtung). **Ebene:** n·(x−p) = 0 oder ax+by+cz = d.
+- **det(2×2):** ad−bc. **Inverse:** (1/det)·[[d,−b],[−c,a]].
+- **Gauß:** Zeilenoperationen → Stufenform → Rückeinsetzen.
 
 ---
 
@@ -1104,11 +1097,20 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Abstände im 3D**: Punkt–Punkt (euklidisch), **Punkt–Gerade** (Lotfußpunkt), **Punkt–Ebene** (Hessesche Normalform); **Schnittwinkel**. **Warum für den MedAT relevant?** Euklidischer Abstand, Lotfußpunkt, Hessesche Normalform, Schnittwinkel (Bestrahlungsplanung) werden geprüft. **Welche Fragen werden beantwortet?** „Abstand Punkt–Ebene?“; „Lotfußpunkt?“; „Hessesche Normalform?“; „Schnittwinkel Gerade–Ebene?“; „Punkt–Punkt Abstand?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Abständen im Raum abgedeckt.
+In der stereotaktischen Neurochirurgie muss der Abstand einer Nadel zu einem Tumor auf Bruchteile von Millimetern bekannt sein. Bei der Bestrahlungsplanung wird der Abstand eines Organs von der Strahlenebene berechnet, um Kollateralschäden zu minimieren. All diese Probleme reduzieren sich auf drei geometrische Grundaufgaben: Abstand Punkt-Punkt, Punkt-Gerade und Punkt-Ebene. Wer die zugehörigen Formeln beherrscht, kann solche räumlichen Fragen systematisch lösen.
 
-**In diesem Kapitel lernst du:** **Punkt–Punkt**; **Punkt–Gerade** (Lotfußpunkt); **Punkt–Ebene** (Hessesche); **Schnittwinkel**.
+**In diesem Kapitel lernst du:**
+- wie du den euklidischen Abstand zwischen zwei Punkten im Raum berechnest
+- wie der Abstand eines Punktes von einer Geraden über das Kreuzprodukt oder den Lotfußpunkt bestimmt wird
+- wie die Hessesche Normalform den Abstand eines Punktes von einer Ebene liefert
+- wie du Schnittwinkel zwischen Geraden und zwischen Gerade und Ebene berechnest
+- wann Geraden im Raum windschief sind und wie man deren Abstand bestimmt
 
 ---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
 
 **Idee:** **Abstand Punkt–Punkt** = |AB| = |B−A|. **Punkt–Gerade:** d = |r₀P×d|/|d| (Kreuzprodukt) oder Lotfußpunkt t_F = (r₀P·d)/|d|². **Punkt–Ebene:** Hessesche Normalform d = |n·r_P−d|/|n| (n normiert) bzw. |ax+by+cz−d|/√(a²+b²+c²). **Schnittwinkel** Gerade–Gerade: cos α = |d₁·d₂|/(|d₁||d₂|); Gerade–Ebene: sin α = |d·n|/(|d||n|).
 
@@ -1120,10 +1122,8 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 
 ## Abstand Punkt–Punkt
 
-![Abstände](/grafik-vektoren.svg)
 
 
-![Betrag und Abstand](/grafik-vektoren-betrag.svg)
 
 
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
@@ -1240,26 +1240,21 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Hessesche Normalform der Ebene, Abstand Punkt–Ebene (d = |n×p−d|/|n|), Abstand Punkt–Gerade, Anwendung (Anatomie, Bildgebung).
-
-**Ergänzend vertiefend:** Lotfußpunkt. Typische Fallen: Gerade–Ebene-Winkel mit sin (nicht cos); windschief nur im ℝ³; Abstand Punkt–Ebene: Betrag des Zählers durch |n|.
-
-**Häufige Fragen:**
-- Punkt-Ebene-Abstand mit der Hesseschen Normalform berechnen (4-Schritte-Vorgehen)
+**Typische Aufgabentypen:**
 - Euklidische Distanz zweier 3D-Punkte (verallgemeinerter Pythagoras)
-- Lagebeziehung zweier Geraden bestimmen: parallel / identisch / schneidend / windschief
-- Schnittwinkel zweier Geraden oder zweier Ebenen berechnen
+- Punkt-Ebene-Abstand mit Hessescher Normalform (4 Schritte)
+- Schnittwinkel Gerade-Gerade bzw. Gerade-Ebene
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Gerade–Ebene-Winkel: **sin** verwenden ($\\sin\\alpha = \\frac{|\\vec{d}\\cdot\\vec{n}|}{|\\vec{d}||\\vec{n}|}$), NICHT cos!
-- Gerade–Gerade und Ebene–Ebene: **cos** mit Richtungsvektoren bzw. Normalenvektoren
-- Windschief gibt es nur im $\\mathbb{R}^3$ — in der Ebene ($\\mathbb{R}^2$) schneiden sich nicht-parallele Geraden immer
-- Abstandsformel Punkt–Ebene: Betrag des Zählers nehmen UND durch $|\\vec{n}|$ dividieren — beides nötig!
+**Typische Fallen:**
+- Gerade-Ebene-Winkel: sin verwenden, NICHT cos
+- Windschief gibt es nur im 3D-Raum — in der Ebene schneiden sich nicht-parallele Geraden immer
+- Punkt-Ebene: Betrag im Zähler UND durch |n| teilen — beides nötig
 
-**Prüfungsrelevante Zahlen/Fakten:**
-- Merkhilfe Schnittwinkel: **G↔G und E↔E: cos; G↔E: sin** (Gerade trifft Ebene → sin)
-- Strahlentherapie-Sicherheitsmarge: typisch **5–10 mm** Mindestabstand Risikorgan–Feldgrenze
-- Punkt-Ebene-Formel 4 Schritte: ① Koordinatenform, ② Einsetzen, ③ Betrag, ④ durch $\\sqrt{a^2+b^2+c^2}$ teilen
+**Minimal-Rechenrezepte:**
+- **Punkt-Punkt:** d = |B−A| = √((b₁−a₁)²+(b₂−a₂)²+(b₃−a₃)²).
+- **Punkt-Gerade:** d = |(a−p)×v|/|v|.
+- **Punkt-Ebene:** d = |ax₀+by₀+cz₀−d|/√(a²+b²+c²).
+- **Schnittwinkel:** G↔G und E↔E: cos; G↔E: sin.
 
 ---
 

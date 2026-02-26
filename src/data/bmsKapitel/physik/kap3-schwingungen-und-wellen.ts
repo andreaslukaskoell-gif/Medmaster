@@ -30,21 +30,24 @@ export const physKap3: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** Die **harmonische Schwingung** ist das Grundmodell periodischer Bewegung: Rückstellkraft proportional zur Auslenkung (F = −k·x), Auslenkung x(t) = A·cos(ωt+φ₀). **Fadenpendel** T = 2π√(l/g), **Federpendel** T = 2π√(m/k); **Resonanz** und **Dämpfung**. **Warum für den MedAT relevant?** Amplitude, Frequenz, Periodendauer, Kreisfrequenz ω = 2πf, Faden- vs. Federpendel, Resonanz (MRT), Dämpfung werden geprüft. **Welche Fragen werden beantwortet?** „T Fadenpendel — wovon abhängig?“; „E_kin = E_pot bei welcher Auslenkung?“; „ω vs. f?“; „Resonanz — wann maximale Amplitude?“; „Isochronie?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu harmonischen Schwingungen abgedeckt.
+Warum schwingt ein langes Pendel langsamer als ein kurzes -- aber die Masse spielt keine Rolle? Und wie nutzt ein MRT-Gerät das Phänomen der Resonanz, um Bilder aus dem Körperinneren zu erzeugen? Die **harmonische Schwingung** ist das Grundmodell aller periodischen Bewegungen: vom Herzrhythmus über den Federpendel bis zur Kernspinresonanz. Wer Amplitude, Frequenz und Dämpfung versteht, kann Wellen, Akustik und MRT-Physik leichter einordnen.
 
 **In diesem Kapitel lernst du:**
-- die **harmonische Schwingung** (x(t) = A·cos(ωt+φ₀)), **Amplitude** A, **Kreisfrequenz** ω = 2πf = 2π/T
-- **Fadenpendel**: T = 2π√(l/g) — unabhängig von Masse und Amplitude (**Isochronie**)
-- **Federpendel**: T = 2π√(m/k); Energie E_ges = ½·k·A² und Energiegleichstand bei x = A/√2
-- **Resonanz** (Anregungsfrequenz = Eigenfrequenz → maximale Amplitude) und **Dämpfung** (Abklingen)
-- typische Prüfungsfallen (ω vs. f, E ∝ A², Faden- vs. Federpendel) zu vermeiden
+- was Amplitude, Frequenz und Kreisfrequenz beschreiben und wie sie zusammenhängen
+- warum beim Fadenpendel nur Länge und Erdbeschleunigung die Schwingungsdauer bestimmen (Isochronie)
+- worin sich Faden- und Federpendel physikalisch unterscheiden und wovon jeweils T abhängt
+- wie Energie im Oszillator zwischen kinetischer und potentieller Form pendelt (und warum E proportional zu A-Quadrat ist)
+- wann Resonanz auftritt und warum Dämpfung in biologischen Systemen Schutzfunktion hat
 
 **Kontext — worum geht es und wofür brauchst du das?**  
 Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rückstellkraft proportional zur Auslenkung (F = −k·x) führt zu Sinus-/Kosinus-Schwingungen. Das beschreibt Pendel, Federn, aber auch Schwingkreise in der Technik und Kernspin im MRT. Du brauchst es für Wellen (nächstes Unterkapitel), für Akustik und für MedAT-Aufgaben zu T, f, ω und Resonanz.
 
 ---
 
-![Schwingung](/grafik-25-schwingung.svg)
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:coordinate-system}}
+
 
 
 Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
@@ -123,7 +126,6 @@ Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwis
 
 Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer Form in die andere über. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin² und cos² schwingen.
 
-![Schwingung und Welle](/grafik-26-welle.svg)
 
 
 ## Resonanz und Dämpfung
@@ -172,10 +174,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Harmonische Schwingung, Fadenpendel T = 2π√(l/g), Federpendel T = 2π√(m/D), T unabhängig von Amplitude (ungedämpft), Frequenz f = 1/T.
-
-**Ergänzend vertiefend:** Gedämpfte Schwingung (A(t) = A₀·e^(−δt)); aperiodischer Grenzfall und Kriechfall; Güte Q; Larmorfrequenz im MRT (f = γ·B₀). Typische Fallen: ω (Kreisfrequenz) ≠ f (Frequenz); E ∝ A²; Fadenpendel vs. Federpendel (verschiedene Rückstellkraft).
-
 **Häufige Fragen:**
 - "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
 - "Bei welcher Auslenkung sind E_kin und E_pot gleich?" → x = A/√2 ≈ 0,707·A
@@ -188,12 +186,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 - **Faden vs. Feder:** Beim Fadenpendel hängt T **nur** von l und g ab (nicht von m). Beim Federpendel hängt T von m **und** k ab. Beide: T unabhängig von A (Isochronie).
 - **Resonanz:** Maximale Amplitude nur bei **f_Anregung = f_Eigen**. Nicht „bei höchster Anregungsfrequenz“ oder „bei kleinster Dämpfung“ (Dämpfung bestimmt nur die Breite der Resonanzkurve).
 - **Gleichstand E_kin = E_pot:** Bei x = ±A/√2 ≈ ±0,707·A, **nicht** bei x = A/2.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Fadenpendel: T = 2π√(l/g); l = 1 m auf Erde → T ≈ 2,0 s; auf Mond (g/6) → T ≈ 4,9 s
-- Federpendel: T = 2π√(m/k); E_ges = ½·k·A²; v_max = A·ω in der Ruhelage
-- Isochronie gilt nur für kleine Auslenkungen (< 15°; Fehler bei 30° bereits ~2 %)
-- MRT-Resonanzfrequenz: f = γ·B₀; ¹H bei 1,5 T → f ≈ 64 MHz (Larmorfrequenz)
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -395,26 +387,28 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Wellen** transportieren Energie durch den Raum ohne Materietransport. **Wellengleichung** c = f·λ; **Transversalwellen** (Schwingung ⊥ Ausbreitung, z. B. Licht) vs. **Longitudinalwellen** (Schwingung in Ausbreitungsrichtung, z. B. Schall). **Warum für den MedAT relevant?** c = f·λ, Schallgeschwindigkeit in Medien, elektromagnetisches Spektrum, **akustische Impedanz** Z = ρ·c und Reflexion/Transmission (Ultraschall) werden geprüft. **Welche Fragen werden beantwortet?** „c = f·λ — was bedeutet was?“; „Transversal vs. longitudinal?“; „Schall schneller in Wasser oder Luft?“; „Impedanz — Reflexion bei Medienwechsel?“; „Ultraschall Frequenz?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellen abgedeckt.
+Wirf einen Stein ins Wasser: Kreisförmige Wellen breiten sich aus, aber der Korken auf der Oberfläche bewegt sich nur auf und ab -- er wandert nicht mit der Welle mit. Dieses einfache Bild zeigt das Grundprinzip aller **Wellen**: Sie transportieren **Energie, aber keine Materie**. Ob Schall, Licht oder Ultraschall -- die gleiche Gleichung c = f mal Lambda beschreibt sie alle. Wer versteht, was beim Medienwechsel passiert und was akustische Impedanz bedeutet, kann Ultraschalldiagnostik, MRT und Röntgen physikalisch einordnen.
 
 **In diesem Kapitel lernst du:**
-- die **Wellengleichung** c = f·λ (Ausbreitungsgeschwindigkeit, Frequenz, Wellenlänge) und Grundgrößen der Welle
-- **Transversalwellen** (Schwingung senkrecht zur Ausbreitung, z. B. Licht) vs. **Longitudinalwellen** (Schwingung in Ausbreitungsrichtung, z. B. Schall)
-- **Schallgeschwindigkeit** in verschiedenen Medien und **elektromagnetisches Spektrum** (Bereiche, Anwendung)
-- **Akustische Impedanz** Z = ρ·c und Reflexion/Transmission beim **Medienwechsel** (z. B. Ultraschall)
-- typische Prüfungsfallen (c = f·λ, Einheiten, Impedanzanpassung) zu vermeiden
+- was die Wellengleichung c = f mal Lambda aussagt und welche Größe zum Medium, welche zur Quelle gehört
+- worin sich Transversalwellen (Licht, Seilwellen) und Longitudinalwellen (Schall) grundlegend unterscheiden
+- warum Schall in Wasser viermal schneller ist als in Luft und wie sich das auf Ultraschall auswirkt
+- was akustische Impedanz bedeutet und warum ohne Ultraschallgel kein Bild entsteht
+- wie das elektromagnetische Spektrum aufgebaut ist -- von Radiowellen bis Gammastrahlung
 
 **Kontext — worum geht es und wofür brauchst du das?**  
 Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie, nicht Materie. Schall (Longitudinalwelle), Licht und Röntgen (Transversalwellen) folgen c = f·λ. In der Medizin: Ultraschall (Echografie), MRT (Radiowellen), Röntgen. Du brauchst das für Optik, Atomphysik und für MedAT-Aufgaben zu Wellenlänge, Frequenz und Impedanz.
 
 ---
 
-![Welle](/grafik-26-welle.svg)
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:coordinate-system}}
+
 
 
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
-![Harmonische Schwingung](/grafik-25-schwingung.svg)
 
 
 ## Grundgrößen der Welle
@@ -543,10 +537,6 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** **c = λ·f**; **Lichtgeschwindigkeit c ≈ 3·10⁸ m/s**; **sichtbares Licht 380–750 nm**; Wellenlänge aus λ = c/f (z. B. 2 GHz → λ ≈ 15 cm). Wellengrößen (λ, f, c), Medienwechsel (f konstant, λ und c ändern sich), Reflexion, Brechung, Snellius, Dopplereffekt (f' bei Bewegung).
-
-**Ergänzend vertiefend:** Stehende Welle (Knoten/Bäuche, λₙ = 2L/n); Kohärenz; Snellius und Totalreflexion. Typische Fallen: Licht 380–750 nm (nicht mm!); c zum Medium, f zur Quelle; Doppler Vorzeichen (näher = höher); konstruktiv n·λ, destruktiv (n+½)·λ.
-
 **Häufige Fragen:**
 - "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
 - "Welche Wellenlänge hat Ultraschall (5 MHz) in Gewebe (c = 1540 m/s)?" → λ = 1540/5×10⁶ ≈ 0,3 mm
@@ -561,12 +551,6 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
 - Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)
 - Schall breitet sich in Festkörpern am schnellsten aus; im Vakuum existiert er gar nicht
 - **Impedanz:** Große Z-Differenz → starke Reflexion (Luft–Gewebe ohne Gel → fast 100 % Reflexion)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- c_Luft ≈ 340 m/s; c_Wasser ≈ 1480 m/s; c_Gewebe ≈ 1540 m/s; c_Licht = 3×10⁸ m/s
-- Hörbereich: 20 Hz – 20 kHz; Ultraschall > 20 kHz; diagnostischer Ultraschall: 2–20 MHz
-- Akustische Impedanz: Z = ρ·c; Reflexionskoeffizient: R = ((Z₂−Z₁)/(Z₂+Z₁))²
-- EM-Spektrum (niedrig → hoch): Radio → Mikrowelle → IR → Sichtbar → UV → Röntgen → Gamma
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -775,21 +759,24 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       diagram: "wave-types",
       content: `## Einleitung
 
-**Worum geht es?** **Wellenphänomene**: **Interferenz** (konstruktiv/destruktiv nach Gangunterschied), **Doppler-Effekt** (Frequenzverschiebung bei Relativbewegung; Doppler-Sonographie Δf = 2·f₀·v·cos θ/c), **Reflexion/Brechung** (Snellius), **Totalreflexion** (Glasfaser, Endoskop). **Warum für den MedAT relevant?** Interferenz, Doppler (Blutflussmessung), Totalreflexion, Polarisation werden geprüft. **Welche Fragen werden beantwortet?** „Doppler — Quelle nähert sich?“; „Totalreflexion — Grenzwinkel?“; „Interferenz konstruktiv wann?“; „Stehende Welle — Knoten/Bäuche?“; „Doppler-Sonographie Formel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellenphänomenen (Doppler, Interferenz, Totalreflexion) abgedeckt.
+Warum klingt die Sirene eines Rettungswagens höher, solange er auf dich zufährt -- und tiefer, sobald er vorbei ist? Und wie kann ein Ultraschallgerät die Blutflussgeschwindigkeit messen, ohne den Patienten zu berühren? Die Antwort liegt im **Doppler-Effekt**, einem von mehreren faszinierenden Wellenphänomenen. Zusammen mit **Interferenz**, **Brechung** und **Totalreflexion** bilden sie das physikalische Fundament für Doppler-Sonographie, Endoskopie und Pulsoximetrie.
 
 **In diesem Kapitel lernst du:**
-- **Interferenz**: konstruktiv (Gangunterschied n·λ) vs. destruktiv ((n+½)·λ); **Superpositionsprinzip**
-- **Stehende Wellen**: Knoten und Bäuche; Grundfrequenz und Obertöne (λₙ = 2L/n)
-- **Doppler-Effekt**: Frequenzverschiebung bei Relativbewegung; **Doppler-Sonographie** (Δf = 2·f₀·v·cos θ/c)
-- **Reflexion, Brechung** (Snellius), **Totalreflexion** und **Beugung**
-- typische Prüfungsfallen (Doppler-Vorzeichen, Grenzwinkel) zu vermeiden
+- wann sich Wellen verstärken (konstruktive Interferenz) und wann sie sich auslöschen (destruktive Interferenz)
+- wie stehende Wellen auf Saiten und in Körperhöhlen entstehen und was Knoten und Bäuche bedeuten
+- wie der Doppler-Effekt funktioniert und warum er die Grundlage der Blutflussmessung per Ultraschall ist
+- unter welchen Bedingungen Totalreflexion auftritt und warum Glasfaser-Endoskope darauf basieren
+- wie Brechung und Beugung die Ausbreitung von Licht und Schall im Körper beeinflussen
 
 **Kontext — worum geht es und wofür brauchst du das?**  
 Hier geht es um **Überlagerung und Ausbreitung von Wellen**: Interferenz (Verstärkung/Auslöschung), stehende Wellen, Doppler (Frequenzänderung durch Bewegung), Reflexion und Brechung. In der Medizin: Doppler-Ultraschall (Blutfluss), Endoskopie (Totalreflexion in Lichtleitern), Pulsoximetrie. Du brauchst das für Akustik (nächstes UK) und für MedAT-Aufgaben zu Doppler, Interferenz und Brechung.
 
 ---
 
-![Interferenz Doppler](/grafik-26-welle.svg)
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:doppler-effect}}
+
 
 
 Wellen zeigen eine Reihe charakteristischer Phänomene, die sie von Teilchen unterscheiden: Interferenz, Beugung, Reflexion, Brechung und den Doppler-Effekt. Diese Phänomene sind in der modernen Medizintechnik allgegenwärtig und bilden die physikalische Grundlage für Ultraschall, MRT, Endoskopie und viele weitere diagnostische Verfahren.
@@ -852,7 +839,6 @@ Dabei ist θ der Winkel zwischen Schallstrahl und Blutfluss. Bei θ = 0° (paral
 
 **Reflexion**: Welle wird an Grenzfläche zurückgeworfen. Einfallswinkel = Reflexionswinkel (Reflexionsgesetz). Bei Reflexion am dichteren Medium: Phasensprung von π (Halbwelle). Bei Reflexion am dünneren Medium: kein Phasensprung. Dieses Verhalten ist wichtig für die Bildung stehender Wellen.
 
-![Reflexion und Brechung](/grafik-optik.svg)
 
 
 **Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht. Schallwellen (λ ≈ 0,02–17 m) beugen leicht um Hindernisse wie Häuserecken; Lichtwellen (λ ≈ 500 nm) werden nur an Mikrostrukturen merklich gebeugt.
@@ -912,10 +898,6 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Interferenz (konstruktiv Δs = n·λ, destruktiv Δs = (n+½)λ), Kohärenz, Beugung, Doppelspalt, Anwendung (Röntgenbeugung, Ultraschall).
-
-**Ergänzend vertiefend:** Huygens-Prinzip (Elementarwellen); Polarisation. Typische Fallen: Gangunterschied n·λ konstruktiv, (n+½)·λ destruktiv; Doppler: aufeinander zu = höhere Frequenz; Totalreflexion nur dichter → dünner.
-
 **Häufige Fragen:**
 - "Wann ist Interferenz konstruktiv?" → Gangunterschied Δs = n·λ (ganzzahlige Vielfache der Wellenlänge)
 - "Wie berechnet man die Doppler-Frequenzverschiebung?" → Δf = 2·f₀·v·cos(θ)/c
@@ -927,12 +909,6 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 - Doppler: Quelle nähert sich → f_obs > f_Quelle (höherer Ton); entfernt sich → f_obs < f_Quelle (tieferer Ton)
 - Totalreflexion nur bei Übergang vom optisch **DICHTEREN** ins **DÜNNERE** Medium (nicht umgekehrt)
 - Brechung vom Lot weg = Übergang ins dünnere Medium (n₂ < n₁); zum Lot hin = ins dichtere Medium
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Grundschwingung (n=1): λ₁ = 2L; n-te Harmonische: λₙ = 2L/n; (n−1) innere Knoten
-- Doppler-Rettungswagen: f_obs = f_Q · c/(c − v_Q) bei bewegter Quelle; c_Schall = 340 m/s
-- Glasfaser (n_Glas ≈ 1,5, n_Luft = 1,0): Grenzwinkel ≈ 41,8° → Totalreflexion → Endoskopie
-- Brechungsindex wichtiger Augenmedien: Hornhaut ≈ 1,376; Linse ≈ 1,40; Gesamtbrechkraft Auge ≈ 60 D
 
 ---
 ## Zusammenfassung (ultrakompakt)
@@ -1137,26 +1113,28 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
       diagram: "doppler-effect",
       content: `## Einleitung
 
-**Worum geht es?** **Akustik**: Schalldruck, **Dezibel-Skala** L = 20·log(p/p₀) [dB], **Cochlea** (Tonotopie: Basis = hohe, Apex = tiefe Frequenzen), Haarzellen, Schallleitungs- vs. Schallempfindungsschwerhörigkeit. **Warum für den MedAT relevant?** Dezibel, Hörschwelle 0 dB, Lärmschwelle 85 dB, Frequenzbereich des Hörens, Cochlea/Tonotopie, Lärmschutz werden geprüft. **Welche Fragen werden beantwortet?** „Dezibel-Formel?“; „+3 dB = doppelte Intensität?“; „Cochlea — wo hohe Frequenzen?“; „Schallleitungs- vs. Schallempfindungsschwerhörigkeit?“; „Weber/Rinne?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Akustik abgedeckt.
+Warum klingt ein normales Gespräch bei 60 Dezibel harmlos, während 85 Dezibel am Arbeitsplatz bereits Gehörschäden verursachen können -- obwohl der Unterschied nur 25 dB beträgt? Der Schlüssel liegt in der **logarithmischen** Natur der Dezibel-Skala: Jede 10-dB-Erhöhung verzehnfacht die Schallintensität. Dieses Kapitel verbindet die Physik des Schalls mit der Physiologie des Hörens -- von der Basilarmembran bis zur klinischen Audiometrie.
 
 **In diesem Kapitel lernst du:**
-- die **Dezibel-Skala** L = 20·log(p/p₀) [dB]; Hörschwelle 0 dB, Lärmschwelle 85 dB, Schmerzgrenze ~120 dB
-- **Psychoakustik**: Tonhöhe (Frequenz), Lautstärke (Intensität), Klangfarbe (Obertöne)
-- **Cochlea**: Schallleitung, Impedanzanpassung, **Tonotopie** (Basis = hohe Frequenzen, Apex = tiefe)
-- **Haarzellen** (innere = Signalwandler, äußere = Verstärker) und **cochleärer Verstärker**
-- **Schallleitungs-** vs. **Schallempfindungsschwerhörigkeit**; Audiometrie, Weber/Rinne
+- warum die Dezibel-Skala logarithmisch ist und was eine Verdopplung der Intensität in dB bedeutet
+- wie Tonhöhe, Lautstärke und Klangfarbe physikalisch definiert sind
+- wie die Cochlea Frequenzen ortskodiert (Tonotopie) und welche Rolle innere und äußere Haarzellen spielen
+- worin sich Schallleitungs- und Schallempfindungsschwerhörigkeit unterscheiden
+- ab welcher Lautstärke Gehörschäden auftreten und wie Audiometrie funktioniert
 
 **Kontext — worum geht es und wofür brauchst du das?**  
 Hier geht es um **Schall und Hören**: Schalldruck, Dezibel, wie das Ohr Frequenzen und Pegel verarbeitet (Cochlea, Tonotopie, Haarzellen). Klinisch: Hörverlust, Lärmschaden, Audiometrie, Schallleitungs- vs. Schallempfindungsstörung. Du brauchst das für Anamnese und Diagnostik und für MedAT-Aufgaben zu dB, Hörschwelle und Cochlea.
 
 ---
 
-![Dezibel Cochlea](/grafik-26-welle.svg)
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:doppler-effect}}
+
 
 
 Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
 
-![Schall und Sinne](/grafik-transduktion-sinne.svg)
 
 
 ## Schallpegel und die Dezibel-Skala
@@ -1255,10 +1233,6 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Schall (Longitudinalwelle), Dezibel (dB = 10·log(I/I₀)), Verdopplung I → +3 dB, Hörschwelle, Schmerzgrenze, Ultraschall (Diagnostik), Dopplersonographie.
-
-**Ergänzend vertiefend:** Schallgeschwindigkeit in Gewebe; Impedanzanpassung im Mittelohr; Weber/Rinne. Typische Fallen: L = 20·log für Druck vs. 10·log für Intensität; 85 dB Lärmschwelle; Mittelohr- vs. Innenohrschwerhörigkeit (Weber lateralisiert).
-
 **Häufige Fragen:**
 - "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)
 - "Wie viel dB entspricht einer Verdopplung des Schalldrucks?" → +6 dB (p×2 → 20·log 2 ≈ 6 dB)
@@ -1270,14 +1244,6 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 - Schallleitungsschwerhörigkeit = **Mittelohrproblem** (Knochenleitung intakt!) — Weber lateralisiert zum kranken Ohr
 - Schallempfindungsschwerhörigkeit = **Innenohr/Haarzellproblem** (Knochen- und Luftleitung gleich gestört)
 - Tonotopie: HOHE Frequenzen → BASIS (steif/schmal); TIEFE Frequenzen → APEX (elastisch/breit)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Referenzwerte: p₀ = 2×10⁻⁵ Pa (Hörschwelle); I₀ = 10⁻¹² W/m²
-- Dezibel-Formeln: L = 20·log(p/p₀) = 10·log(I/I₀) — beide Formeln ergeben denselben Wert!
-- Grenzwerte: 0 dB (Hörschwelle) → 60 dB (Gespräch) → 85 dB (Lärm-Grenzwert!) → 120 dB (Schmerzgrenze)
-- Pro +3 dB halbiert sich die erlaubte Expositionszeit: 85 dB/8h → 88 dB/4h → 91 dB/2h → 94 dB/1h
-- C5-Senke bei 4 kHz im Audiogramm = pathognomonischer Befund der Lärmschwerhörigkeit
-- Hörbereich: 20 Hz – 20 kHz; grösste Empfindlichkeit 1–4 kHz (Sprachbereich)
 
 ---
 ## Zusammenfassung (ultrakompakt)

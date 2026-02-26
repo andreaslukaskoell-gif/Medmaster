@@ -31,13 +31,11 @@ export const bioKapOekologie: Kapitel = {
 - **Ökosystem** = Biotop + Biozönose in Wechselwirkung
 - warum diese Begriffe für Ökologie und Artinteraktionen grundlegend sind
 
-![Ökologische Ebenen und Stoffflüsse](/grafik-toleranzkurve.svg)
-
-![Population und Toleranz](/grafik-exponential.svg)
-
 ---
 
 ## Ökologie: Definition und Ebenen
+
+{{DIAGRAM:plant-vs-animal-cell}}
 
 **Um die Ökologie einzuführen,** beginnen wir mit der Definition und den Ebenen. **Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
 
@@ -52,6 +50,8 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
 ---
 
 ## Biotop und Biozönose
+
+{{DIAGRAM:animal-cell}}
 
 **Bisher haben wir gesehen:** Die ökologischen Ebenen von Organismus bis Ökosystem. **Um sie anzuwenden,** müssen Biotop und Biozönose klar getrennt werden.
 
@@ -176,13 +176,11 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
 - **Euryök** (Generalist) und **stenök** (Spezialist) zu unterscheiden und als Bioindikatoren einzuordnen
 - **Liebigs Minimumgesetz** (limitierender Faktor = Minimum) und **Shelfords Toleranzgesetz** (auch Maximum limitiert) anzuwenden
 
-![Toleranzkurve und Optimum](/grafik-toleranzkurve.svg)
-
-![Umweltfaktoren und Leistung](/grafik-exponential.svg)
-
 ---
 
 ## Abiotische und biotische Faktoren
+
+{{DIAGRAM:plant-vs-animal-cell}}
 
 **Um zu verstehen,** warum Arten nur in bestimmten Lebensräumen vorkommen, betrachtet man die **Umweltfaktoren** — unterteilt in abiotisch und biotisch.
 
@@ -215,6 +213,8 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 ---
 
 ## Euryök und stenök — Generalisten und Spezialisten
+
+{{DIAGRAM:cell-membrane}}
 
 - **Euryök** (griech. eurys = breit): breite ökologische Amplitude = **Generalist** — toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Krähe, Ratte).
 - **Stenök** (griech. stenos = eng): enge Amplitude = **Spezialist** — nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen präzise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven = sauberes Wasser).
@@ -392,13 +392,11 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 - Wie **Nischendifferenzierung** Koexistenz konkurrierender Arten ermöglicht
 - Das Connell-Seepocken-Experiment als Beleg für fundamentale vs. realisierte Nische
 
-![Toleranzkurve und Nische](/grafik-toleranzkurve.svg)
-
-![Lebensraum und ökologische Nische](/grafik-exponential.svg)
-
 ---
 
 ## Nische vs. Lebensraum (Habitat)
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt „wo“ die Art lebt.
 
@@ -426,6 +424,8 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 ---
 
 ## Nischendifferenzierung und Koexistenz
+
+{{DIAGRAM:plant-vs-animal-cell}}
 
 Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist möglich durch **Nischendifferenzierung** — die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
 
@@ -538,13 +538,11 @@ Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konk
 - **Parasitismus** von **Prädation** zu unterscheiden (Parasit tötet Wirt nicht sofort)
 - Die Grundidee der **Räuber-Beute-Dynamik** (Räuberpopulation hinkt Beute nach)
 
-![Konkurrenz und Symbiose](/grafik-toleranzkurve.svg)
-
-![Räuber-Beute und Populationsdynamik](/grafik-exponential.svg)
-
 ---
 
 ## Konkurrenz: intraspezifisch und interspezifisch
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Konkurrenz** entsteht, wenn Individuen dieselbe begrenzte Ressource benötigen.
 
@@ -566,6 +564,8 @@ Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im s
 ---
 
 ## Symbioseformen: Wer profitiert, wer verliert?
+
+{{DIAGRAM:immune-response}}
 
 Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifiziert (Vorzeichen: + Nutzen, − Schaden, 0 unbeeinflusst):
 
@@ -733,13 +733,11 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
 - **Primärproduktion:** GPP (brutto) vs. NPP (netto)
 - Grundidee der **Stoffkreisläufe** (Kohlenstoff, Stickstoff, Phosphor)
 
-![Energiefluss und Trophieebenen](/grafik-21-energieprofil.svg)
-
-![Stoffkreislauf und Reaktionen](/grafik-kohlenstoff.svg)
-
 ---
 
 ## Ökosystem-Ebenen und Trophiestruktur
+
+{{DIAGRAM:plant-vs-animal-cell}}
 
 Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eines Gebiets und ihre Wechselwirkungen mit der abiotischen Umwelt (Biotop). Ökosysteme sind offen für Energie- und Materieflüsse.
 
@@ -788,6 +786,8 @@ NPP variiert stark zwischen Ökosystemen: Tropische Regenwälder und Ästuarien 
 ---
 
 ## Biogeochemische Kreisläufe
+
+{{DIAGRAM:double-membrane-organelles}}
 
 Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und abiotischen Komponenten.
 
@@ -1022,13 +1022,11 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
 - **Exponentielles** (J-Kurve) und **logistisches** (S-Kurve) Wachstum zu unterscheiden
 - **Kapazitätsgrenze K** und **r- vs. K-Strategen** (viele Nachkommen vs. wenige mit Brutpflege)
 
-![Sukzession und Wachstum](/grafik-exponential.svg)
-
-![Populationsdynamik — logistisch und exponentielle Kurve](/grafik-toleranzkurve.svg)
-
 ---
 
 ## Sukzession: Primär und Sekundär
+
+{{DIAGRAM:cell-cycle}}
 
 **Sukzession** = die gerichtete, vorhersagbare Abfolge von Biozönosen (Lebensgemeinschaften) auf einer Fläche über die Zeit.
 
@@ -1062,6 +1060,8 @@ Eine **Population** ist die Gesamtheit aller Individuen **einer Art** in einem d
 ---
 
 ## r-Strategen und K-Strategen
+
+{{DIAGRAM:pedigree-analysis}}
 
 Zwei grundlegende Lebensstrategien:
 
@@ -1188,13 +1188,11 @@ Zwei grundlegende Lebensstrategien:
 - 5 Klassen: IgG (häufigster, plazentagängig), IgA (Sekrete), IgM (Primärantwort, Pentamer), IgE (Allergie), IgD (B-Zell-Signal)
 - Effektorfunktionen: Neutralisierung, Opsonisierung, Komplementaktivierung (MAC)
 
-![Antikörper und Komplement](/grafik-19-komplement.svg)
-
-![Immunantwort und Abwehr](/grafik-8-immunitaet.svg)
-
 ---
 
 ## IgG-Grundstruktur — Fab und Fc
+
+{{DIAGRAM:immune-response}}
 
 Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein. Der klassische IgG-Antikörper besteht aus:
 
@@ -1222,6 +1220,8 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein. Der kl
 
 ## Immunglobulin-Klassen (Isotypen)
 
+{{DIAGRAM:blood-groups}}
+
 Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sich in Struktur, Vorkommen und Funktion unterscheiden.
 
 > **Merke:** Ig-Klassen: IgG (häufig, plazentagängig), IgA (Sekrete), IgM (Primär, Pentamer), IgE (Allergie), IgD (B-Zell-Signal).
@@ -1246,6 +1246,8 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 ---
 
 ## Komplementsystem — Der klassische Aktivierungsweg
+
+{{DIAGRAM:blutbestandteile}}
 
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
@@ -1298,8 +1300,6 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
         "Die Effektorfunktionen von Antikörpern (Neutralisierung, Opsonisierung, Komplementaktivierung) erläutern",
       ],
       sections: [],
-      diagram: "immune-response",
-
       merksätze: [
         "IgG-Aufbau: 2H + 2L Ketten, Disulfidbrücken, Fab (Antigen) + Fc (Effektur). Y-Form.",
         "Effektorfunktionen: Neutralisierung, Opsonisierung (→ Phagozytose), Komplementaktivierung (klassischer Weg → MAC).",
@@ -1428,19 +1428,19 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
 - Affinitätsreifung: somatische Hypermutation (AID) in Keimzentren → Selektion auf höhere Affinität
 - Gedächtnis-B-Zellen: Grundlage der Sekundärantwort (schneller, stärker, höhere Affinität)
 
-![Zentraldogma und Rekombination](/grafik-16-zentraldogma.svg)
-
-![Kombinatorik und Diversität](/grafik-kombinatorik.svg)
-
 ---
 
 ## Antikörperdiversität — Das Grundproblem
+
+{{DIAGRAM:immune-response}}
 
 Das menschliche Immunsystem kann Antikörper gegen praktisch jede Substanz bilden — eine unvorstellbare Vielfalt von mehr als 10¹⁰ verschiedenen Antikörperspezifitäten. Das Genom enthält jedoch nur ~20.000 Gene. Wie wird diese Diversität generiert?
 
 ---
 
 ## V(D)J-Rekombination — Molekularer Mechanismus
+
+{{DIAGRAM:dna-helix}}
 
 Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activating Gene) katalysiert. RAG1/RAG2 erkennen konservierte Rekombinationssignalsequenzen (RSS) neben den V-, D- und J-Segmenten. Die Rekombination erfolgt durch: (1) Bindung von RAG an RSS beider Segmente; (2) DNA-Doppelstrangbrüche; (3) Ligation durch die allgemeine DNA-Reparaturmaschinerie (NHEJ). Während des Ligationsschritts werden durch TdT (Terminal deoxynucleotidyl Transferase) zufällige Nukleotide (N-Nukleotide) an die Schnittstellen eingefügt — dies ist eine enorme Quelle junctionaler Diversität, da die Insertion in einem zufälligen Leseraster erfolgt (kann Frameshift verursachen → nicht-produktive Rearrangements). Nur Rearrangements im richtigen Leseraster führen zu funktionalem Antikörperprotein (produktiv).
 
@@ -1457,6 +1457,8 @@ Die Affinitätsreifung findet in Keimzentren der sekundären Lymphorgane (Lymphk
 ---
 
 ## Klassenwechsel (Isotyp-Switch) — Funktionelle Anpassung
+
+{{DIAGRAM:transcription-translation}}
 
 Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Immunsystem über einen dritten Mechanismus zur Antikörperanpassung: den Klassenwechsel (Class Switch Recombination, CSR). Dabei wird die konstante Region der schweren Kette ausgetauscht, ohne die Antigenbindestelle zu verändern — die Spezifität bleibt erhalten, aber die Effektorfunktion ändert sich. Der Klassenwechsel wird durch Zytokine gesteuert: IL-4 induziert den Switch zu IgE (relevant bei Allergien und Parasitenabwehr), IFN-gamma fördert den Switch zu IgG (Opsonierung, Komplementaktivierung), TGF-beta fördert IgA (Schleimhautimmunität). Auch der Klassenwechsel erfordert das Enzym AID (Activation-Induced Cytidine Deaminase), das DNA-Brüche in den Switch-Regionen erzeugt. Fehlerhafte CSR kann ebenso wie fehlerhafte V(D)J-Rekombination zu chromosomalen Translokationen und damit zu Lymphomen beitragen.
 
@@ -1625,7 +1627,6 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
           tags: ["somatische-hypermutation", "aid", "keimzentrum", "affinitaetsreifung"],
         },
       ],
-      diagram: "immune-response",
     },
     {
       id: "bio-11-03",
@@ -1642,13 +1643,11 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
 - Antikörper-Regel: Man bildet Antikörper gegen das, was man nicht hat
 - 0 Rh- = universeller Spender, AB Rh+ = universeller Empfänger (vereinfacht)
 
-![Vererbung und Genotypen](/grafik-33-vierfeldertafel.svg)
-
-![Kodominanz und multiple Allele](/grafik-16-zentraldogma.svg)
-
 ---
 
 ## AB0-Blutgruppensystem — Genetische Grundlagen
+
+{{DIAGRAM:blood-groups}}
 
 Das **AB0-Blutgruppensystem** wird durch das ABO-Gen auf Chromosom 9 bestimmt. Das Gen kodiert für eine Glykosyltransferase, die an der Synthese von Kohlenhydrat-Antigenen (A- und B-Antigenen) auf der Oberfläche roter Blutkörperchen beteiligt ist.
 
@@ -1686,6 +1685,8 @@ Die vier AB0-Blutgruppen werden durch drei Allele (I^A, I^B, i⁰) bestimmt. Jed
 
 ## Kodominanz — Beide Allele werden exprimiert
 
+{{DIAGRAM:pedigree-analysis}}
+
 Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollständig exprimiert werden und im Phänotyp erkennbar sind. Dies unterscheidet sich von dominanter/rezessiver Vererbung (ein Allel unterdrückt das andere) und von unvollständiger Dominanz (Intermediärphänotyp). Bei Blutgruppe AB werden sowohl A- als auch B-Antigen auf den roten Blutkörperchen exprimiert — beide Allele I^A und I^B sind aktiv und produzieren ihre jeweilige Glykosyltransferase. Wichtig für forensische Genetik und Vaterschaftstests: Eine Person mit Blutgruppe AB kann nicht Blutgruppe 0-Eltern haben (da keiner das AB-Kind-Allel weitergeben kann). Blutgruppen-Mismatch kann Vaterschaft ausschließen, aber nie beweisen.
 
 > **Merke:** Kodominanz: beide Allele werden exprimiert. AB = I^A I^B → A-Antigen + B-Antigen. Unterschied zu Dominanz/Rezessivität und unvollständiger Dominanz.
@@ -1693,6 +1694,8 @@ Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollstän
 ---
 
 ## Universeller Spender und Empfänger
+
+{{DIAGRAM:immune-response}}
 
 In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als universeller Spender (keine A-, B- oder D-Antigene auf Erythrozyten → kein Angriff durch Empfänger-Antikörper). Blutgruppe AB Rh-positiv (AB+) als universeller Empfänger (keine Anti-A oder Anti-B im Serum → kein Angriff auf Spendererythrozyten). In der modernen Transfusionsmedizin wird diese Vereinfachung vermieden — durch weitere Blutgruppensysteme (Kell, Duffy, Kidd, Lewis etc.) sind auch 0- und AB+-Blut inkompatibel möglich. Dennoch werden 0-Präparate in Notfallsituationen ohne Kreuzprobe eingesetzt. Pro Jahr werden Millionen von Transfusionen durchgeführt — AB0-Fehler durch Verwechslung sind eine vermeidbare Hauptursache schwerer Transfusionszwischenfälle.
 
@@ -1743,8 +1746,6 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
         "Die klinische Relevanz des AB0-Systems bei Transfusionen erläutern",
       ],
       sections: [],
-      diagram: "blood-groups",
-
       merksätze: [
         "Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A und Anti-B.",
         "Transfusion: AB0-kompatibel wählen. 0- = universeller Spender (Notfall). Inkompatibilität → Hämolyse.",
@@ -1880,13 +1881,11 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
 - Anti-D-Prophylaxe: 28. SSW + <72h postpartal → verhindert Sensibilisierung
 - IgG passiert Plazenta (FcRn-Transport), IgM nicht (zu groß als Pentamer)
 
-![Immunantwort und Antikörper](/grafik-8-immunitaet.svg)
-
-![Gerinnung und Blutgruppen](/grafik-7-gerinnung.svg)
-
 ---
 
 ## Rhesusfaktor — Definition
+
+{{DIAGRAM:blood-groups}}
 
 Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB0. Das wichtigste Antigen ist das **D-Antigen (Rh-D)**, kodiert durch das RHD-Gen auf Chromosom 1.
 
@@ -1907,6 +1906,8 @@ Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB
 
 ## Rhesus-Inkompatibilität — Schritt für Schritt
 
+{{DIAGRAM:pedigree-analysis}}
+
 Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phase 1 (Sensibilisierung): Bei einer ersten Rh+ Schwangerschaft oder durch Bluttransfusion gelangen Rh+ Erythrozyten in die Zirkulation der Rh- Mutter. Das Rh-D-Antigen ist stark immunogen. Die Mutter bildet zunächst IgM-Anti-D-Antikörper (IgM kann Plazenta nicht passieren → erstes Kind kaum betroffen), dann IgG-Anti-D. Phase 2 (Reaktion): Bei der nächsten Rh+ Schwangerschaft passieren mütterliche IgG-Anti-D die Plazenta. Sie binden an D-Antigen auf fetalen Erythrozyten → Hämolyse durch Komplementaktivierung und ADCC → Anämie → extramedulläre Erythropoese (Leber, Milz) → Hepatomegalie, Splenomegalie → Hydrops fetalis (schwere Ödembildung) im schwersten Fall.
 
 > **Merke:** Rhesus-Inkompatibilität: Rh- Mutter + Rh+ Kind. 1. Schwangerschaft = Sensibilisierung. 2. Schwangerschaft = IgG-Anti-D passiert Plazenta → Hämolyse beim Kind.
@@ -1914,6 +1915,8 @@ Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phas
 ---
 
 ## Anti-D-Prophylaxe — Wirkmechanismus und Zeitpunkt
+
+{{DIAGRAM:immune-response}}
 
 Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medizin. Vor ihrer Einführung (1968) war Rhesusinkompatibilität eine der häufigsten Ursachen für perinatale Mortalität. Der Wirkmechanismus basiert auf dem Prinzip der Antikörper-vermittelten Suppression der Immunantwort: Exogen verabreichte Anti-D-IgG-Antikörper binden an Rh+ Erythrozyten in der mütterlichen Zirkulation und führen zu ihrer schnellen Clearance durch Makrophagen der Milz, bevor B-Zellen eine Primärantwort aufbauen können. Der genaue Mechanismus ist nicht vollständig geklärt — möglicherweise spielen auch FcgRIIb (inhibitorische Fc-Rezeptoren auf B-Zellen) eine Rolle. Die Prophylaxe wird in der 28. SSW (pränatale Prophylaxe, da 2% der Mütter sich bereits antepartum sensibilisieren) und innerhalb von 72 Stunden postpartal verabreicht.
 
@@ -1964,7 +1967,6 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
         "Den Wirkmechanismus der Anti-D-Prophylaxe erläutern",
       ],
       sections: [],
-      diagram: "blood-groups",
       merksätze: [
         "RhD: dominant (ein Allel reicht für Rh+). Rh- = homozygot dd (RHD-Deletion). 85% Europäer Rh+.",
         "Rhesus-Inkompatibilität: Rh- Mutter → Sensibilisierung → Anti-D IgG → passiert Plazenta → Hämolyse beim Rh+ Kind.",

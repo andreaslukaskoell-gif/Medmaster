@@ -27,11 +27,13 @@ export const chemKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** Die **Ionenbindung** entsteht durch vollständige **Elektronenübertragung** vom Metall auf das Nichtmetall; beide erreichen Edelgaskonfiguration. **Gitterenergie** (Coulomb: E ∝ q₁·q₂/r), **Born-Haber-Kreisprozess** und die Eigenschaften (hoher Schmelzpunkt, spröde, leitfähig geschmolzen/gelöst) sind zentral. **Warum für den MedAT relevant?** Gitterenergie, Schmelzpunkt-Vergleich (MgO vs. NaCl), Leitfähigkeit fest vs. Lösung und klinische Salze (NaCl, KCl, Ca²⁺) werden geprüft. **Welche Fragen werden beantwortet?** „Warum hat MgO einen höheren Schmelzpunkt als NaCl?“; „Warum leitet NaCl-Kristall keinen Strom?“; „Welcher Schritt im Born-Haber ist am stärksten exotherm?“; „Koordinationszahl NaCl-Gitter?“; „Löslichkeit — Gitterenergie vs. Hydratation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Ionenbindung abgedeckt.
+Warum steht an jedem Krankenbett ein Beutel mit NaCl-Lösung — und warum löst sich dieses Salz überhaupt so gut in Wasser? Die Antwort führt zur **Ionenbindung**: Natrium übergibt sein Valenzelektron komplett an Chlor, und die entstehenden Na⁺- und Cl⁻-Ionen ordnen sich in einem Kristallgitter an, das durch enorme elektrostatische Kräfte zusammengehalten wird. Diese **Gitterenergie** bestimmt Schmelzpunkt, Härte und Löslichkeit — und erklärt, warum MgO bei 2852 °C schmilzt, während NaCl bereits bei 801 °C flüssig wird.
 
 **In diesem Kapitel lernst du:**
-- **Ionenbindung** (ΔEN > 1,7); **Gitterenergie**; **Born-Haber-Kreisprozess**; Eigenschaften (hoher Schmp., spröde, leitfähig geschmolzen/gelöst)
-- **Kontext:** Salze in Körper und Labor; von der Bildung zur Stabilität
+- wie die Ionenbindung durch vollständige Elektronenübertragung entsteht und warum Metall-Nichtmetall-Paare besonders stabil sind
+- warum doppelte Ladung und kleinerer Radius die Gitterenergie drastisch erhöhen (Coulomb-Gesetz)
+- wie der Born-Haber-Kreisprozess die Gitterenergie indirekt berechnet
+- warum Ionenkristalle hart, aber spröde sind und erst in Lösung oder Schmelze Strom leiten
 
 ---
 
@@ -46,10 +48,14 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na⁺-Kation; Chlor n
 
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
+{{DIAGRAM:periodic-table}}
+
 **Weitere Beispiele:**
 - **MgCl₂:** Mg gibt 2 Elektronen ab → Mg²⁺ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf → 2 Cl⁻ (Ar-Konfiguration)
 - **CaO:** Ca gibt 2 Elektronen ab → Ca²⁺; O nimmt 2 Elektronen auf → O²⁻ — beide erreichen die Ar- bzw. Ne-Konfiguration
 - **Al₂O₃:** Aluminium gibt 3 Elektronen ab → Al³⁺; hohe Ladung → extrem hohe Gitterenergie → Schmelzpunkt 2072 °C
+
+{{DIAGRAM:atomic-orbitals}}
 
 ## Born-Haber-Kreisprozess und Gitterenergie
 
@@ -65,11 +71,7 @@ Die Summe aller Teilschritte ergibt die Bildungsenthalpie: ΔHf(NaCl) = −411 k
 
 Je kleiner der Ionenradius und je höher die Ladung der Ionen, desto größer die Gitterenergie (Coulombsches Gesetz: E ∝ q₁·q₂/r).
 
-![Ionenbindung](/grafik-redox.svg)
-
-
-![Ionen und Schalen](/grafik-atommodelle.svg)
-
+{{DIAGRAM:ionic-bond}}
 
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
@@ -119,30 +121,15 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Warum hat MgO einen viel höheren Schmelzpunkt als NaCl? → Doppelte Ladung beider Ionen + kleinerer Radius → ~5x größere Gitterenergie
+- Warum leitet NaCl-Kristall keinen Strom? → Ionen sind im Gitter fixiert; erst in Lösung oder Schmelze frei beweglich
+- Welcher Schritt im Born-Haber-Kreisprozess ist am stärksten exotherm? → Gitterenergie (Zusammentritt der Ionen zum Kristall)
 
-**Zentral prüfungsrelevant:** Ionenbindung (Gitterenergie E∝q₁q₂/r), Schmelzpunkt (MgO vs. NaCl), Ladung und Ionenradius, Born-Haber-Zyklus, typische Ionengitter.
-
-**Ergänzend vertiefend:** Gitterenthalpie. Typische Fallen: Gitterenergie ≠ Hydratationsenthalpie (beide für Löslichkeit); Ionenkristall fest = kein Leiter (erst Schmelze/Lösung); Coulomb E ∝ q₁·q₂ — doppelte Ladung beider → 4× E.
-
-**Häufige Fragen:**
-- "Warum hat MgO einen viel höheren Schmelzpunkt als NaCl?" → Mg²⁺ und O²⁻ sind doppelt geladen und kleiner → E ∝ q₁·q₂/r → 5× größere Gitterenergie (~3795 vs. 786 kJ/mol)
-- "Warum leitet NaCl-Kristall keinen Strom, NaCl-Lösung aber schon?" → Fester Kristall: Ionen fixiert, nicht beweglich; Lösung: Ionen frei → Elektrolyt
-- "Welcher Schritt im Born-Haber-Kreisprozess ist der stärkste exotherme?" → Gitterenergie (beim Zusammentreten der Ionen zum Kristall)
-- "Was bedeutet Koordinationszahl 6 im NaCl-Gitter?" → Jedes Na⁺ ist von 6 Cl⁻ umgeben (oktaedrisch), und umgekehrt
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Gitterenergie ≠ Hydratationsenthalpie — beide müssen bilanziert werden, um Löslichkeit zu beurteilen
-- Ionenkristall fester Zustand = KEIN Stromleiter (Ionen nicht beweglich); erst in Schmelze oder Lösung = Elektrolyt
-- Coulomb-Gesetz: E ∝ q₁·q₂ — bei doppelter Ladung BEIDER Ionen ist E 4× größer (nicht 2×!)
-- Sprödigkeit ≠ niedrige Bindungsenergie: Ionenkristalle sind HART und STARK, aber nicht verformbar (Abstoßung gleicher Ladungen bei Verschiebung)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- NaCl: Gitterenergie **786 kJ/mol**, Schmelzpunkt **801 °C**, gut wasserlöslich
-- MgO: Gitterenergie **3795 kJ/mol**, Schmelzpunkt **2852 °C**, kaum löslich
-- Na⁺: Radius **102 pm**; Cl⁻: **181 pm**; Mg²⁺: **72 pm**; O²⁻: **140 pm**
-- NaCl-Gitter: Koordinationszahl **6** (oktaedrisch); CsCl-Gitter: KZ **8** (kubisch)
-- EN-Differenz > **1,7** → ionischer Charakter; < 1,7 → kovalent
+**Typische Fallen:**
+- Gitterenergie ist nicht Hydratationsenthalpie — für Löslichkeit müssen beide bilanziert werden
+- Ionenkristalle sind hart, aber spröde (nicht weil sie schwach gebunden sind, sondern weil gleichnamige Ladungen sich abstoßen)
+- Coulomb: Verdoppelt man die Ladung beider Ionen, wird E 4x größer (nicht 2x)
 
 ## Zusammenfassung (ultrakompakt)
 
@@ -178,8 +165,6 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
           merksatz: "Ionenkristall: fest und spröde; in Lösung: leitfähig und biologisch aktiv.",
         },
       ],
-
-      diagram: "ionic-bond",
 
       merksätze: [
         "Ionenbindung = vollständige Elektronenübertragung vom Metall auf das Nichtmetall.",
@@ -375,21 +360,19 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Einleitung
 
-**Worum geht es?** Die **kovalente Bindung** entsteht durch **gemeinsame Nutzung von Elektronenpaaren** (nicht Übertragung); sie liefert definierte Geometrie und Polarität. **VSEPR** sagt die Molekülgestalt vorher; **Hybridisierung** (sp³, sp², sp) erklärt Bindungswinkel; **σ-** und **π-Bindungen** unterscheiden Einfach- von Mehrfachbindungen. **Warum für den MedAT relevant?** Hybridisierung, VSEPR, Polarität (z. B. H₂O polar, CO₂ unpolar), polare vs. unpolare Bindungen und „Welche Verbindung ist kovalent?“ (z. B. H₂O₂) werden geprüft. **Welche Fragen werden beantwortet?** „Welche Hybridisierung hat Methan?“; „Warum ist CO₂ unpolar?“; „σ- vs. π-Bindung?“; „VSEPR H₂O?“; „Polarste Bindung — ΔEN?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur kovalenten Bindung abgedeckt.
+CO₂ hat zwei stark polare C=O-Bindungen — trotzdem ist das Molekül insgesamt unpolar. H₂O hat ebenfalls polare Bindungen — und ist extrem polar. Der Unterschied? Die **Geometrie**. Genau hier zeigt sich die Stärke der kovalenten Bindung: Atome teilen sich Elektronenpaare, und die räumliche Anordnung dieser Paare bestimmt Gestalt, Polarität und Funktion des Moleküls. Von der Peptidbindung in Proteinen bis zur Doppelbindung in Fettsäuren — die kovalente Chemie ist das Fundament der Biochemie.
 
 **In diesem Kapitel lernst du:**
-- **Kovalente Bindung** (Elektronenteilung, ΔEN < 1,7); **VSEPR** (Geometrie); **Hybridisierung** sp³/sp²/sp; **σ-** und **π-Bindungen**; Polarität
-- **Kontext:** Molekülstruktur und -funktion; Enzyme, Wirkstoffe
+- warum Atome bei kovalenter Bindung Elektronen teilen statt übertragen und wie die Elektronegativitätsdifferenz den Bindungscharakter bestimmt
+- wie VSEPR die Molekülgestalt vorhersagt und warum freie Elektronenpaare die Bindungswinkel verkleinern
+- was Hybridisierung (sp³, sp², sp) über Geometrie und biologische Funktion verrät
+- worin sich σ- und π-Bindungen unterscheiden und warum π-Bindungen die freie Rotation verhindern
 
 ---
 
 ## Grundprinzip der kovalenten Bindung
 
-![Kovalente Bindung](/grafik-kohlenstoff.svg)
-
-
-![Orbitale und Hybridisierung](/grafik-orbitale.svg)
-
+{{DIAGRAM:covalent-bond}}
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -444,6 +427,8 @@ Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindend
 
 ## Hybridisierung
 
+{{DIAGRAM:atomic-orbitals}}
+
 Hybridisierung erklärt die Geometrie von Kohlenstoff- (und anderen) Verbindungen durch Mischung von Atomorbitalen zu energieäquivalenten **Hybridorbitalen**. Die Zahl der Hybridorbitale entspricht der Zahl der gemischten Atomorbitale.
 
 **sp³-Hybridisierung** (Methan, CH₄):
@@ -479,29 +464,15 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Ist CO₂ polar oder unpolar? → Polare Bindungen, aber lineare Geometrie → Dipole heben sich auf → unpolar
+- Welche Hybridisierung hat der Kohlenstoff der Peptidbindung? → sp² (Carbonyl mit Doppelbindung zu O)
+- Warum ist NH₃ trigonal pyramidal und nicht tetraedrisch? → 3 Bindungspaare + 1 freies EP → Molekülgeometrie pyramidal
 
-**Zentral prüfungsrelevant:** Polare vs. unpolare Moleküle (Dipolmoment μ), Geometrie (CO₂ linear → unpolar; H₂O gewinkelt → polar), Elektronegativitätsdifferenz, VSEPR.
-
-**Ergänzend vertiefend:** Molekülpolarität. Typische Fallen: Polare Bindungen ≠ polares Molekül (CO₂, CCl₄ unpolar); VSEPR = Elektronenanordnung, NH₃ trigonal pyramidal; π-Bindung verhindert Rotation → Cis-Trans bei Doppelbindungen.
-
-**Häufige Fragen:**
-- "Ist CO₂ polar oder unpolar?" → CO₂ hat polare C=O-Bindungen (ΔEN = 1,0), aber lineare Geometrie → Dipole heben sich auf → unpolar (μ = 0)
-- "Welche Hybridisierung hat der Kohlenstoff der Peptidbindung?" → sp² (Carbonylkohlenstoff mit Doppelbindung zu O)
-- "Warum ist NH₃ ein trigonales Pyramide, kein Tetraeder?" → 3 bindende + 1 freies EP → VSEPR ergibt Elektronenanordnung Tetraeder, Molekülgeometrie trigonal pyramidal (wegen freiem EP)
-- "Was verhindert Rotation um C=C?" → die π-Bindung (laterale p-Orbital-Überlappung würde aufgebrochen werden)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Polare Bindungen ≠ polares Molekül: CO₂ und CCl₄ sind trotz polarer Bindungen UNPOLAR (symmetrische Geometrie!)
-- VSEPR gibt die Elektronenanordnung (inkl. freier EP) — Molekülgeometrie bezieht sich nur auf Atome: NH₃ = trigonal pyramidal (NICHT tetraedrisch)
-- π-Bindung verhindert Rotation; σ-Bindung erlaubt Rotation → Cis-Trans-Isomerie nur bei Doppelbindungen
-- Hybridisierung zählen: Anzahl σ-Bindungen + freie Elektronenpaare am Zentralatom = Hybridisierungsgrad (sp = 2, sp² = 3, sp³ = 4)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- EN-Skala (Pauling): F = **4,0**; O = **3,5**; N = **3,0**; Cl = **3,0**; C = **2,5**; H = **2,1**; Na = **0,9**
-- Bindungswinkel: sp³ = **109,5°** (CH₄), H₂O = **104,5°** (2 freie EP), NH₃ = **107°** (1 freies EP), sp² = **120°**, sp = **180°**
-- C–C: **154 pm**, 347 kJ/mol; C=C: **134 pm**, 614 kJ/mol; C≡C: **120 pm**, 839 kJ/mol
-- Dipolmoment H₂O: **1,85 D** (polar); CO₂: **0 D** (unpolar); NH₃: **1,47 D** (polar)
+**Typische Fallen:**
+- Polare Bindungen ergeben nicht automatisch ein polares Molekül — symmetrische Geometrie kann Dipole aufheben (CO₂, CCl₄)
+- VSEPR gibt die Elektronenanordnung inklusive freier EP — die Molekülgeometrie bezieht sich nur auf die Atomposition
+- π-Bindung verhindert freie Rotation → Cis-Trans-Isomerie nur bei Doppelbindungen möglich
 
 ## Zusammenfassung (ultrakompakt)
 
@@ -572,8 +543,6 @@ Delokalisierung stabilisiert Moleküle (Resonanzenergie). Aromatizität ist ein 
           },
         },
       ],
-
-      diagram: "covalent-bond",
 
       merksätze: [
         "Kovalente Bindung: Elektronenpaar wird gemeinsam genutzt (nicht übertragen).",
@@ -749,21 +718,19 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Intermolekulare Kräfte** (zwischen Molekülen) sind schwächer als Atombindungen, bestimmen aber Siedepunkt, Löslichkeit und Biomolekül-Struktur: **London-Dispersion** (alle Moleküle), **Dipol-Dipol** (polare Moleküle), **Wasserstoffbrücken** (X–H···Y mit N, O, F) und **Metallbindung** (Elektronengas). **Warum für den MedAT relevant?** H-Brücken, Van-der-Waals, Dichteanomalie Wasser (4 °C), hydrophober Effekt, DNA-Basenpaarung (A–T 2, G–C 3) und Metall-Eigenschaften (Leitfähigkeit, Duktilität) werden geprüft. **Welche Fragen werden beantwortet?** „Stärkeranking der Wechselwirkungen?“; „Warum nur N, O, F für H-Brücken?“; „Warum siedet H₂O bei 100 °C, H₂S bei −60 °C?“; „Metallbindung — warum leitfähig?“; „Brownsche Bewegung — was ist das?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Van-der-Waals, Wasserstoffbrücken und Metallbindung abgedeckt.
+Warum siedet Wasser erst bei 100 °C, obwohl das vergleichbar schwere H₂S schon bei −60 °C gasförmig ist? Die Antwort: **Wasserstoffbrücken**. Jedes Wassermolekül kann bis zu vier davon ausbilden und wird dadurch in ein dreidimensionales Netzwerk eingebunden. Diese „schwachen” Kräfte zwischen Molekülen bestimmen enorm viel: Sie halten die DNA-Doppelhelix zusammen (A-T: 2 H-Brücken, G-C: 3), treiben die Proteinfaltung an und sorgen dafür, dass Eis auf Seen schwimmt. Neben H-Brücken gibt es London-Dispersionskräfte und Dipol-Dipol-Wechselwirkungen — zusammen erklären sie Siedepunkte, Löslichkeiten und biologische Strukturen.
 
 **In diesem Kapitel lernst du:**
-- **London**, **Dipol-Dipol**, **Wasserstoffbrücken** (X–H···Y, N/O/F); Stärkeranking; **hydrophober Effekt**; Wasser (Anomalie 4 °C); **Metallbindung** (Elektronengas)
-- **Kontext:** DNA-Doppelhelix, Proteinfaltung, Löslichkeit
+- welche drei Arten intermolekularer Kräfte es gibt und wie sie sich in der Stärke unterscheiden
+- warum nur N, O und F als H-Brücken-Donoren wirken und welche biologischen Strukturen davon abhängen
+- wie die Anomalien des Wassers (Siedepunkt, Dichteanomalie, Wärmekapazität) mit H-Brücken zusammenhängen
+- wie das Elektronengas-Modell die besonderen Eigenschaften von Metallen erklärt
 
 ---
 
 ## Überblick: Zwischenmolekulare Kräfte
 
-![H-Bruecken](/grafik-wasser-h-bruecken.svg)
-
-
-![Biogene Elemente und H-Brücken](/grafik-biogene-elemente.svg)
-
+{{DIAGRAM:covalent-bond}}
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen. Entscheidend ist die Unterscheidung: **Intramolekulare** Bindungen halten Atome im Molekül zusammen; **intermolekulare** Kräfte wirken zwischen Molekülen und bestimmen die makroskopischen Eigenschaften.
 
@@ -826,6 +793,8 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 **Pharmaka:** H-Brücken-Donoren und -Akzeptoren sind entscheidend für Lipinski's Rule of Five (Bioverfügbarkeit): ≤5 HBD, ≤10 HBA. Zu viele H-Brücken-Gruppen → schlechte Membranpermeabilität.
 
+{{DIAGRAM:ionic-bond}}
+
 ## Metallbindung
 
 **Modell:** Im Metall befinden sich die Metallatome im Gitter, ihre Valenzelektronen sind jedoch **delokalisiert** und bilden ein „Elektronengas" oder „Elektronenmeer", das sich frei durch das gesamte Gitter bewegt. Die positiven Metallionen (Rumpfionen) werden durch das Elektronengas zusammengehalten. Das Bändermodell beschreibt dies quantenmechanisch genauer: Valenzbänder überlappen mit Leitungsbändern → keine Bandlücke → metallische Leitung.
@@ -848,30 +817,15 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Welche Kräfte wirken zwischen unpolaren Molekülen? → Ausschließlich London-Dispersionskräfte (instantane Dipole)
+- Warum siedet H₂O bei 100 °C, H₂S bei −60 °C? → H₂O bildet starke H-Brücken (O elektronegativ genug); S nicht
+- Wie viele H-Brücken bilden A-T vs. G-C? → A-T: 2, G-C: 3 → GC-reiche DNA ist stabiler
 
-**Zentral prüfungsrelevant:** Zwischenmolekulare Kräfte (London-Dispersionskräfte, Dipol-Dipol, H-Brücken), Stärke und Reichweite, Siedepunkt-Abhängigkeit (Masse, Oberfläche).
-
-**Ergänzend vertiefend:** Van-der-Waals. Typische Fallen: H-Brücken nur mit N, O, F (nicht S, nicht C–H); Eis leichter als Wasser (Dichteanomalie); Verzweigung → weniger London-Kräfte → niedrigerer Siedepunkt.
-
-**Häufige Fragen:**
-- "Welche intermolekularen Kräfte wirken zwischen unpolaren Molekülen wie Edelgasen?" → ausschließlich London-Dispersionskräfte (instantane Dipole)
-- "Warum siedet H₂O bei 100 °C, H₂S aber schon bei −60 °C?" → H₂O bildet bis zu 4 starke H-Brücken (O an N, O, F); S ist nicht elektronegativ genug für echte H-Brücken
-- "Wie viele H-Brücken bilden A-T bzw. G-C in der DNA?" → A-T: **2 H-Brücken**; G-C: **3 H-Brücken** → GC-reiche DNA ist stabiler (höhere Schmelztemperatur)
-- "Was erklärt die Duktilität von Metallen?" → Elektronengas hält Ionenschichten zusammen auch beim Gleiten → kein Bruch (im Gegensatz zu spröden Ionenkristallen)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- H-Brücken nur mit **N, O, F** als Donor/Akzeptor — NICHT Schwefel (S–H bildet nur sehr schwache H-Brücken)!
-- C–H-Bindungen sind KEINE H-Brücken-Donoren (C ist nicht elektronegativ genug)
-- Dichteanomalie: Eis ist LEICHTER als Wasser (ρ_Eis ≈ 0,917 g/cm³ < ρ_Wasser = 1,000 g/cm³) — merken durch „Eis schwimmt"
-- Verzweigung VERRINGERT Kontaktfläche → SCHWÄCHERE London-Kräfte → NIEDRIGERER Siedepunkt (n-Pentan > Neopentan)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- H-Brücken: **10–40 kJ/mol**; London-Kräfte: **0,1–10 kJ/mol**; Dipol-Dipol: **1–5 kJ/mol**
-- A-T: **2** H-Brücken; G-C: **3** H-Brücken → GC-reich = höhere Schmelztemperatur Tm
-- Dichtemaximum Wasser: **3,98 °C** (≈ 4 °C); ρ_Eis = **0,917 g/cm³**
-- Verdampfungsenthalpie Wasser: **40,7 kJ/mol** (580 kcal/L) → effiziente Thermoregulation durch Schwitzen
-- Siedepunkt H₂O: **100 °C** vs. H₂S: **−60 °C** — Unterschied durch H-Brücken!
+**Typische Fallen:**
+- H-Brücken nur mit N, O, F als Donor — nicht Schwefel, nicht C-H (C nicht elektronegativ genug)
+- Eis ist leichter als Wasser (Dichteanomalie) — merken: Eis schwimmt
+- Verzweigung verringert die Kontaktfläche → schwächere London-Kräfte → niedrigerer Siedepunkt
 
 ## Zusammenfassung (ultrakompakt)
 
@@ -931,8 +885,6 @@ Wasser siedet bei 100 °C (H₂O, MM = 18 g/mol), während H₂S bei −60 °C s
           },
         },
       ],
-
-      diagram: "covalent-bond",
 
       merksätze: [
         "London-Kräfte: wirken zwischen ALLEN Molekülen, entstehen durch instantane Dipole.",
@@ -1142,21 +1094,19 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Biomoleküle** bauen auf **kovalenten** Gerüsten (Peptidbindung, glycosidische Bindung, Ester, Disulfidbrücke) und **nichtkovalenten** Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücken) für Faltung und Bindung. **Warum für den MedAT relevant?** Peptidbindung (planar, sp²), α- vs. β-glycosidische Bindung (Stärke verdaulich, Cellulose unverdaulich), Disulfidbrücken (Cys–S–S–Cys), Phosphodiesterbindung (DNA/RNA) und Denaturierung vs. Hydrolyse werden geprüft. **Welche Fragen werden beantwortet?** „Peptidbindung — planar?“; „Warum Cellulose unverdaulich?“; „Disulfidbrücke — welche Aminosäure?“; „Denaturierung — welche Bindungen bleiben?“; „Hydrophober Effekt — treibt was?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu chemischen Bindungen in biologischen Molekülen abgedeckt.
+Warum kann der Mensch Stärke verdauen, aber keine Cellulose — obwohl beide aus den gleichen Glucosemolekülen bestehen? Der Unterschied liegt in einem einzigen Bindungswinkel: **α-glycosidisch** (Stärke) vs. **β-glycosidisch** (Cellulose). Unsere α-Amylase erkennt nur die α-Verknüpfung. Solche feinen Unterschiede in **kovalenten Bindungen** bestimmen die gesamte Biologie: Die planare Peptidbindung erzwingt die Sekundärstruktur von Proteinen, Disulfidbrücken stabilisieren Insulin, und **nichtkovalente Wechselwirkungen** treiben die Proteinfaltung und DNA-Basenpaarung.
 
 **In diesem Kapitel lernst du:**
-- **Peptidbindung** (C–N); **glycosidische Bindung**; **Ester**, **Disulfidbrücke**; **nichtkovalent**: H-Brücken, hydrophob, Salzbrücken; Rolle in Proteinen/DNA
-- **Kontext:** Von der Bindung zur Struktur; Enzyme, DNA, Membranen
+- welche kovalenten Bindungstypen in Biomolekülen vorkommen und warum die Peptidbindung planar ist
+- warum α- und β-glycosidische Bindung über Verdaulichkeit entscheiden
+- wie nichtkovalente Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücken) die dreidimensionale Struktur bestimmen
+- warum Denaturierung die Primärstruktur intakt lässt und was den hydrophoben Effekt wirklich antreibt
 
 ---
 
 ## Bindungstypen in Biomolekülen
 
-![Biomolekuele](/grafik-16-zentraldogma.svg)
-
-
-![Kohlenstoffgerüst und Biomoleküle](/grafik-kohlenstoff.svg)
-
+{{DIAGRAM:functional-groups}}
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 
@@ -1196,6 +1146,8 @@ Konsequenzen:
 - Einfach ungesättigt (Ölsäure, 18:1 cis-Δ9): Knick durch cis-Doppelbindung → lockere Packung, schwächere London-Kräfte → niedrigerer Schmelzpunkt, flüssig bei RT (Olivenöl)
 - Trans-Fettsäuren (Elaidinsäure): kein Knick → ähnliche Packung wie gesättigt → erhöhtes kardiovaskuläres Risiko
 
+{{DIAGRAM:covalent-bond}}
+
 ## Aminosäuren, Peptide und Proteinstruktur
 
 Aminosäuren haben eine **Aminogruppe** (–NH₂, Donor für H-Brücken) und eine **Carboxylgruppe** (–COOH, Akzeptor) sowie eine variable **Seitenkette** (R-Gruppe, bestimmt Eigenschaften).
@@ -1233,6 +1185,8 @@ Klinisch: Autoklav-Sterilisation (121 °C, 15 min) denaturiert alle mikrobiellen
 
 **RNA-Struktur:** RNA ist einsträngig, kann aber intramolekular H-Brücken bilden → Sekundärstrukturen (Haarnadelschleifen, Stamm-Schleifen) → tRNA, rRNA, Ribozyme, microRNA.
 
+{{DIAGRAM:enzyme-substrate}}
+
 ## Enzyme: Bindung und Katalyse
 
 Enzyme sind Proteine (Ausnahme: Ribozyme = RNA) mit einem **aktiven Zentrum**, das durch nichtkovalente Wechselwirkungen das Substrat spezifisch bindet:
@@ -1256,30 +1210,15 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Warum kann der Mensch Cellulose nicht verdauen? → β-1,4-glycosidische Bindung; kein menschliches Enzym (Cellulase) vorhanden
+- Was treibt die Proteinfaltung an? → Hydrophober Effekt (entropisch — Freisetzung geordneten Hydratationswassers)
+- Was passiert bei Denaturierung mit der Primärstruktur? → Nichts — Peptidbindungen (kovalent) bleiben intakt
 
-**Zentral prüfungsrelevant:** Kohlenhydrate (Monosaccharide, Disaccharide, Polysaccharide), α- vs. β-glycosidische Bindung, Stärke (α-1,4, Amylase) vs. Cellulose (β-1,4, keine menschliche Cellulase), Verdauung.
-
-**Ergänzend vertiefend:** Glykogen, Laktoseintoleranz. Typische Fallen: Hydrophober Effekt entropisch (nicht enthalpisch); Denaturierung ≠ Hydrolyse (Peptidbindungen bleiben); α-glycosidisch (Stärke/Glykogen) ≠ β (Cellulose); trans-Fettsäuren ohne Knick → kardiovaskuläres Risiko.
-
-**Häufige Fragen:**
-- "Warum kann der Mensch Cellulose nicht verdauen, Stärke aber schon?" → Stärke: α-1,4-glycosidische Bindungen → spaltet α-Amylase; Cellulose: β-1,4 → kein menschliches Enzym (Cellulase)
-- "Was treibt die Proteinfaltung thermodynamisch an?" → hydrophober Effekt (entropisch!) — Aggregation hydrophober Seitenketten setzt geordnetes Hydratationswasser frei → ΔS > 0
-- "Was passiert bei Denaturierung mit der Primärstruktur?" → NICHTS! Peptidbindungen (kovalent) bleiben intakt; nur nichtkovalente Wechselwirkungen werden gestört
-- "Warum wirkt Aspirin irreversibel, obwohl es ein kleines Molekül ist?" → Aspirin acetyliert COX kovalent — Thrombozyten sind kernlos, können kein neues COX synthetisieren → Effekt ~10 Tage
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Hydrophober Effekt ist ENTROPISCH (nicht enthalpisch): Triebkraft = Entropiegewinn des Wassers, nicht Anziehung zwischen unpolaren Molekülen!
-- Denaturierung ≠ Hydrolyse: Primärstruktur (Peptidbindungen) bleibt bei Denaturierung intakt — erst Proteasen spalten Peptidbindungen
-- α-glycosidisch ≠ β-glycosidisch: α = Stärke/Glykogen (verdaulich); β = Cellulose (Ballaststoff, unverdaulich)
-- Trans-Fettsäuren: kein Knick (wie gesättigte) → erhöhtes kardiovaskuläres Risiko; cis-ungesättigt: Knick → flüssig bei RT → günstig
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Peptidbindung: sp²-hybridisiert, **planar**, partieller Doppelbindungscharakter, **keine freie Rotation**
-- DNA: Phosphodiesterbindung = Rückgrat (kovalent); H-Brücken = Basenpaarung; π-Stacking = zusätzliche Stabilisierung
-- Disulfidbrücken: Cys–Cys, **kovalent** (~250 kJ/mol), stabilisiert extrazelluläre Proteine (Insulin, Antikörper)
-- Lipinski Rule of Five: MW ≤ **500**, logP ≤ **5**, HBD ≤ **5**, HBA ≤ **10**
-- Aspirin-COX-Hemmung: **irreversibel** (kovalente Acetylierung), Thrombozytenleben ~**10 Tage**
+**Typische Fallen:**
+- Hydrophober Effekt ist entropisch, nicht enthalpisch — die Triebkraft ist der Entropiegewinn des Wassers
+- Denaturierung ist nicht Hydrolyse: Peptidbindungen werden erst durch Proteasen gespalten
+- α-glycosidisch (Stärke, verdaulich) vs. β-glycosidisch (Cellulose, unverdaulich) — kleiner Winkelunterschied, große Konsequenz
 
 ## Zusammenfassung (ultrakompakt)
 
@@ -1325,8 +1264,6 @@ Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-
             "Reversible Hemmung: nichtkovalent, steuerbar; irreversibel: kovalent, dauerhaft (z. B. Aspirin-COX).",
         },
       ],
-
-      diagram: "enzyme-substrate",
 
       merksätze: [
         "α-glycosidisch (Stärke) = Amylase spaltet = Energiespeicher; β-glycosidisch (Cellulose) = Ballaststoff.",

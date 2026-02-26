@@ -24,23 +24,25 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Kombinatorik**: systematisches Zählen — **Permutation** (n!), **Variation** (k aus n mit Reihenfolge), **Kombination** (n über k), Binomialkoeffizient. **Warum für den MedAT relevant?** Permutation, Variation, Kombination (Genetik, Vierfeldertafel, Studien) werden geprüft. **Welche Fragen werden beantwortet?** „Reihenfolge relevant — Variation oder Kombination?“; „(n über k) =?“; „n! wann?“; „mit/ohne Wiederholung?“; „5 über 2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Kombinatorik abgedeckt.
+Wie viele verschiedene DNA-Codons gibt es aus vier Basen? Auf wie viele Arten kann ein Chirurg drei von acht verfügbaren Instrumenten auswählen? Und warum ist die Chance, im Lotto zu gewinnen, so verschwindend gering? All diese Fragen beantwortet die Kombinatorik — die Kunst des systematischen Zählens, ohne jede Möglichkeit einzeln aufzulisten. Der Schlüssel liegt in zwei Entscheidungen: Zählt die Reihenfolge? Und darf ein Element mehrfach vorkommen? Aus diesen zwei Fragen ergeben sich vier Formeltypen, die im MedAT regelmäßig geprüft werden.
 
 **In diesem Kapitel lernst du:**
-- **Zwei Fragen zuerst:** Reihenfolge relevant? (geordnet/ungeordnet) — Mit/ohne Wiederholung?
-- **Permutation:** n! = Anordnung aller n Objekte; mit Wiederholung: n!/(k₁!×k₂!×…)
-- **Variation:** k aus n **mit** Reihenfolge — ohne Wdh. n!/(n−k)!, mit Wdh. n^k
-- **Kombination:** k aus n **ohne** Reihenfolge — (n über k) = n!/(k!(n−k)!)
-- **Binomialkoeffizient** (n über k); typische MedAT-Aufgaben (Blutgruppen, PIN-Codes, Ziehen ohne Zurücklegen)
+- wie du mit zwei Entscheidungsfragen (Reihenfolge? Wiederholung?) die richtige Formel wählst
+- wie Permutationen alle Anordnungen einer Menge zählen und was sich bei identischen Elementen ändert
+- wie Variationen k aus n Objekte mit Reihenfolge zählen (z. B. PIN-Codes, Passwörter)
+- wie Kombinationen und der Binomialkoeffizient Auswahlen ohne Reihenfolge beschreiben (z. B. Lotto, Studiengruppen)
+- wie du das Pascalsche Dreieck für schnelle Berechnungen kleiner Binomialkoeffizienten nutzt
 
 ---
 
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:probability-distribution}}
+
 ## Grundbegriffe und Entscheidungsbaum
 
-![Kombinatorik](/grafik-kombinatorik.svg)
 
 
-![Vierfeldertafel und Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
 
 
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
@@ -195,15 +197,6 @@ Wichtige Eigenschaften:
 - **Kombination (k aus n, ungeordnet):** C(n,k) = n!/(k!(n−k)!) = (n·(n−1)·…·(n−k+1))/k!. Symmetrie: C(n,k) = C(n,n−k).
 - **Erst fragen:** Reihenfolge? → Ja = V/P, Nein = C. Wiederholung? → mit = Potenz/n^k, ohne = Fakultät.
 
-**Zentral prüfungsrelevant:** Fakultät n!, Permutation, Variation (k aus n, Reihenfolge), Kombination (n über k), Urnenmodell.
-
-**Ergänzend vertiefend:** Mit/ohne Wiederholung. Typische Fallen: Variation (Reihenfolge zählt) vs. Kombination; mit Zurücklegen → n^k bei Variation; (n über k) Nenner k!·(n−k)!.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 5! = 120, 6! = 720, 7! = 5.040, 10! = 3.628.800
-- C(6,2) = 15, C(7,3) = 35, C(8,3) = 56, C(10,3) = 120
-- Lotto 6 aus 45: C(45,6) = 8.145.060; Lotto 6 aus 49: C(49,6) ≈ 13,98 Mio.
-
 ---
 
 ## Rechenbeispiele
@@ -351,11 +344,20 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Wahrscheinlichkeit** P(A) ∈ [0,1]: **Laplace** P(A)=|A|/|Ω|, **Additionssatz**, **Komplementregel**, **Unabhängigkeit**, **Binomialverteilung**. **Warum für den MedAT relevant?** Laplace, Additionssatz, Komplementregel, Unabhängigkeit, Binomialverteilung (Erbkrankheiten, Tests) werden geprüft. **Welche Fragen werden beantwortet?** „Laplace-Formel?“; „P(nicht A)?“; „Unabhängig — P(A∩B)=?“; „Binomial n, p?“; „Baumdiagramm?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wahrscheinlichkeit abgedeckt.
+Wenn du einen fairen Würfel wirfst, ist die Chance auf eine Sechs genau 1/6 — das klingt einfach. Aber wie wahrscheinlich ist es, bei einem Gentest ein falsch-positives Ergebnis zu erhalten? Oder dass unter fünf Geschwistern genau zwei eine Erbkrankheit tragen? Solche Fragen beantworten die Rechenregeln der Wahrscheinlichkeitstheorie: Laplace-Formel, Additionssatz, Komplementregel und Binomialverteilung. Diese Werkzeuge verbinden Münzwurf-Logik mit klinisch entscheidenden Fragestellungen.
 
-**In diesem Kapitel lernst du:** **Laplace** P(A)=|A|/|Ω|; **Additionssatz**; **Komplementregel**; **Unabhängigkeit**; **Binomialverteilung**; Baumdiagramm.
+**In diesem Kapitel lernst du:**
+- wie die Laplace-Formel Wahrscheinlichkeiten bei gleichwahrscheinlichen Ergebnissen berechnet
+- wie Additions- und Komplementregel zusammengesetzte Ereignisse behandeln
+- wann Ereignisse unabhängig sind und wie sich dann die Wahrscheinlichkeiten multiplizieren
+- wie die Binomialverteilung die Anzahl von Treffern in n Versuchen beschreibt (z. B. Erbkrankheiten bei Geschwistern)
+- wie Baumdiagramme mehrstufige Zufallsexperimente übersichtlich darstellen
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:probability-distribution}}
 
 **Idee:** **Laplace** P(A) = (günstige)/(alle) bei gleichwahrscheinlichen Ergebnissen. **Komplement** P(nicht A) = 1−P(A) — bei „mindestens eines“ zuerst „keines“ berechnen. **Additionssatz** P(A∪B) = P(A)+P(B)−P(A∩B). **Unabhängig** ⇔ P(A∩B) = P(A)×P(B). **Binomial** B(n,p): P(X=k) = (n über k)×p^k×(1−p)^(n−k); μ = n×p.
 
@@ -367,10 +369,8 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 ## Grundbegriffe
 
-![Wahrscheinlichkeit](/grafik-33-vierfeldertafel.svg)
 
 
-![Kombinatorik und Zählprinzip](/grafik-kombinatorik.svg)
 
 
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
@@ -489,29 +489,6 @@ Erwartungswert: μ = 4 × 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 > **Merke:** Binomialverteilung gilt nur wenn: (1) n Versuche sind unabhängig, (2) jeder Versuch hat genau zwei Ausgänge (Erfolg/Misserfolg), (3) p ist konstant. Wird eine Kugel ohne Zurücklegen gezogen, gilt Binomial nicht mehr!
 
 ---
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Wahrscheinlichkeit (Laplace, relative Häufigkeit), P(mindestens 1) = 1−P(keiner), Additions- und Multiplikationsregel, Unabhängigkeit, Baumdiagramm.
-
-**Ergänzend vertiefend:** Bedingte Wahrscheinlichkeit. Typische Fallen: ohne Zurücklegen → keine Binomialverteilung; disjunkt ≠ unabhängig; Additionssatz P(A∩B) abziehen.
-
-**Häufige Fragen:**
-- "Wie wahrscheinlich ist mindestens ein Treffer bei 3 Versuchen mit p=0,3?" → Komplement: 1 − 0,7^3 = 1 − 0,343 = 0,657
-- "Würfel: P(keine 6 in 4 Würfen)?" → (5/6)^4 ≈ 0,482
-- "Baumdiagramm: 2 Kugeln aus Urne ohne Zurücklegen — P(beide gleich)?" → Pfadregeln anwenden
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Mit vs. ohne Zurücklegen: ohne Zurücklegen ändern sich die Nenner in jedem Schritt (4/5, dann 3/4, etc.) — kein festes p mehr → keine Binomialverteilung
-- Disjunkt vs. unabhängig verwechseln: Zwei disjunkte Ereignisse (A∩B=∅) mit P(A)>0 und P(B)>0 sind niemals unabhängig, denn wenn A eintritt, kann B nicht eintreten
-- Additionssatz: P(A∩B) vergessen abzuziehen → Überzählung!
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- P(Ā) = 1 − P(A) — immer gültig
-- (1/2)^10 ≈ 0,001 (10 Münzwürfe alle Kopf: sehr unwahrscheinlich)
-- Binomial-Erwartungswert: n×p (bei n=100, p=0,05: μ=5)
 
 ---
 
@@ -658,11 +635,20 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Bedingte Wahrscheinlichkeit** P(A|B) = P(A∩B)/P(B); **Satz von Bayes** (P(Krank|Test) aus P(Test|Krank)); **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV. **Warum für den MedAT relevant?** Bedingte Wahrscheinlichkeit, Bayes, totale Wahrscheinlichkeit, Vierfeldertafel (Testinterpretation, Screening) werden geprüft. **Welche Fragen werden beantwortet?** „P(A|B) =?“; „Bayes — wozu?“; „PPV aus Vierfeldertafel?“; „Prävalenz niedrig — viele falsch positiv?“; „totale Wahrscheinlichkeit?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu bedingter Wahrscheinlichkeit und Bayes abgedeckt.
+Ein HIV-Test hat eine Sensitivität von 99,5 % und eine Spezifität von 99,5 % — klingt fast perfekt. Doch wenn du 10.000 Personen mit niedriger Prävalenz (0,1 %) testest, erhältst du 10 richtig positive, aber auch 50 falsch positive Ergebnisse. Die Mehrheit der positiven Tests ist also falsch! Dieses kontraintuitive Ergebnis erklärt der Satz von Bayes, der die Bedingung umdreht: von P(Test+|Krank) zu P(Krank|Test+). Bayes, bedingte Wahrscheinlichkeit und die Vierfeldertafel sind die Werkzeuge, mit denen Ärzte Testergebnisse korrekt interpretieren — und sie gehören zu den am häufigsten geprüften Themen im MedAT.
 
-**In diesem Kapitel lernst du:** **P(A|B)** = P(A∩B)/P(B); **Satz von Bayes**; **totale Wahrscheinlichkeit**; **Vierfeldertafel**; PPV, NPV.
+**In diesem Kapitel lernst du:**
+- was bedingte Wahrscheinlichkeit P(A|B) bedeutet und wie du sie aus der gemeinsamen Wahrscheinlichkeit berechnest
+- wie der Satz von Bayes die Bedingungsrichtung umdreht (von Likelihood zu Posterior)
+- wie die totale Wahrscheinlichkeit einen Sachverhalt über alle möglichen Bedingungen aufsummiert
+- wie du eine Vierfeldertafel mit TP, TN, FP, FN aufstellst und Sensitivität, Spezifität, PPV, NPV abliest
+- warum der positive prädiktive Wert bei niedriger Prävalenz drastisch sinkt
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:probability-distribution}}
 
 **Idee:** **P(A|B)** = Wahrscheinlichkeit von A unter der Bedingung B; P(A|B) = P(A∩B)/P(B). **Bayes** kehrt die Bedingung um: P(Krank|Test+) aus P(Test+|Krank), Prävalenz und Spezifität. **Totale Wahrscheinlichkeit:** P(A) = Σ P(A|Bᵢ)×P(Bᵢ). **Vierfeldertafel:** TP, TN, FP, FN → Sensitivität, Spezifität, PPV, NPV.
 
@@ -674,10 +660,8 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
 
 ## Bedingte Wahrscheinlichkeit
 
-![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
 
-![Normalverteilung und Tests](/grafik-normalverteilung.svg)
 
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
@@ -777,30 +761,6 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 > **Merke:** Bei MedAT-Aufgaben zu Sensitivität/Spezifität immer zuerst die Vierfeldertafel aufstellen — das verhindert Verwechslungen und macht das Ergebnis sofort sichtbar.
 
 ---
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Vierfeldertafel (Sensitivität, Spezifität, PPV, NPV), Prävalenz, Bayes (posterior aus Likelihood und Prior), Screening-Interpretation.
-
-**Ergänzend vertiefend:** Likelihood-Quotient. Typische Fallen: P(T+|K) = Sensitivität, P(K|T+) = PPV (nicht vertauschen); P(A|B) ≠ P(B|A); Bayes-Zähler P(B|A)·P(A).
-
-**Häufige Fragen:**
-- Gegeben Sensitivität, Spezifität, Prävalenz → berechne PPV oder NPV mittels Vierfeldertafel
-- "In einer Urne sind 4 rote und 6 blaue Kugeln. Eine rote wird gezogen, ohne zurückzulegen. Wie groß ist P(zweite auch rot)?" → Bedingte Wahrscheinlichkeit: P(2.rot | 1.rot) = 3/9 = 1/3
-- Bayes-Anwendung auf Erbkrankheiten: Eltern als Träger bekannt → P(Kind krank)?
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- P(T+|K) ist die Sensitivität; P(K|T+) ist der PPV — diese werden im Alltag ständig verwechselt
-- Bedingte Wahrscheinlichkeit ist nicht symmetrisch: P(A|B) ≠ P(B|A) in der Regel
-- Satz von Bayes: Im Zähler steht P(B|A)×P(A), nicht P(A|B) — die Formel nicht umdrehen
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Hohe Sensitivität (>95%) → gut zum Ausschließen einer Erkrankung (Negativtest verlässlich)
-- Hohe Spezifität (>95%) → gut zum Bestätigen (Positivtest verlässlich)
-- Bei Prävalenz 1% und Sensitivität 99%, Spezifität 99%: PPV ≈ 50% (!)
-- NPV = TN / (TN + FN); PPV = TP / (TP + FP)
 
 ---
 
@@ -953,11 +913,20 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Lagemaße** (Mittelwert, Median, Modus), **Streumaße** (Varianz σ², Standardabweichung σ); **Normalverteilung** (μ, σ), **68-95-99,7-Regel**; **Sensitivität/Spezifität**; p-Wert. **Warum für den MedAT relevant?** Normalverteilung, 68-95-99,7, Lagemaße, Streumaße, Sens/Spez, p-Wert werden geprüft. **Welche Fragen werden beantwortet?** „Mittelwert vs. Median?“; „68-95-99,7 — was?“; „Sensitivität =?“; „Varianz Formel?“; „p-Wert < 0,05?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Statistik abgedeckt.
+Wenn ein Labor den Referenzbereich für Blutzucker mit 70-100 mg/dL angibt, steckt dahinter die Normalverteilung: Der Bereich umfasst typischerweise den Mittelwert plus/minus zwei Standardabweichungen und schließt 95 % der gesunden Population ein. Ob ein Messwert auffällig ist, entscheidet die Streuung. Ob ein Studienmedikament besser wirkt als ein Placebo, sagt der p-Wert. Und ob ein diagnostischer Test taugt, messen Sensitivität und Spezifität. All diese statistischen Grundbegriffe begegnen dir täglich in der klinischen Medizin und regelmäßig im MedAT.
 
-**In diesem Kapitel lernst du:** **Mittelwert**, **Median**, **Modus**; **Varianz**, **Standardabweichung**; **Normalverteilung** (μ, σ); **68-95-99,7**; **Sensitivität/Spezifität**; p-Wert.
+**In diesem Kapitel lernst du:**
+- wie Mittelwert, Median und Modus Daten zusammenfassen und wann du welches Lagemaß verwendest
+- wie Varianz und Standardabweichung die Streuung quantifizieren
+- was die Normalverteilung ist und wie die 68-95-99,7-Regel Referenzbereiche definiert
+- wie Sensitivität und Spezifität die Güte eines diagnostischen Tests beschreiben
+- was der p-Wert aussagt und warum p < 0,05 nicht “bewiesen” bedeutet
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:probability-distribution}}
 
 **Idee:** **Lagemaße:** Mittelwert x̄ = Σxᵢ/n (anfällig für Ausreißer), **Median** = mittlerer Wert sortiert (robust), **Modus** = häufigster Wert. **Streuung:** Varianz s² = Σ(xᵢ−x̄)²/(n−1), **Standardabweichung** s = √s². **Normalverteilung:** 68 % innerhalb μ±σ, 95 % innerhalb μ±2σ, 99,7 % innerhalb μ±3σ. **Sensitivität** = TP/(TP+FN), **Spezifität** = TN/(TN+FP). **p-Wert** < 0,05 → signifikant.
 
@@ -969,10 +938,8 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
 
 ## Lage- und Streumaße
 
-![Normalverteilung](/grafik-normalverteilung.svg)
 
 
-![Vierfeldertafel](/grafik-33-vierfeldertafel.svg)
 
 ### Lagemaße (Maße der zentralen Tendenz)
 
@@ -1132,32 +1099,6 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 > **Merke:** p < 0,05 = statistisch signifikant (die konventionelle Grenze). Der p-Wert sagt nichts über die klinische Relevanz oder die Größe des Effekts — dafür braucht man das Konfidenzintervall.
 
 ---
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Lagemaße (Mittelwert, Median, Modus), Streuung (Spannweite, Varianz, Standardabweichung), Boxplot, Interpretation klinischer Studien.
-
-**Ergänzend vertiefend:** Konfidenzintervalle. Typische Fallen: Mittelwert ≠ Median bei schiefer Verteilung; Standardfehler SEM = σ/√n (nicht Streuung der Rohwerte); p < 0,05 ≠ „H0 ist falsch“.
-
-**Häufige Fragen:**
-- Datensatz gegeben → Mittelwert, Median, Modus berechnen
-- Normalverteilung N(μ=170, σ=8): Wie viel Prozent liegen zwischen 162 und 178? → 68% (μ±1σ)
-- Sensitivität aus Vierfeldertafel: TP=45, FN=5, also Sens = 45/50 = 90%
-- p-Wert: "Was bedeutet p=0,03?" → Unter H0 würde dieses extreme Ergebnis nur in 3% der Fälle auftreten → statistisch signifikant
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Mittelwert ≠ Median bei schiefer Verteilung (Ausreißer ziehen nur den Mittelwert)
-- Standardabweichung ≠ Standardfehler (SEM = σ/√n ist kleiner und unterschätzt die Streuung der Rohwerte)
-- Sensitivität und Spezifität sind komplementär zum Fehler: FPR = 1 − Spezifität; FNR = 1 − Sensitivität
-- p < 0,05 bedeutet nicht "H0 ist falsch" — es bedeutet "Daten sind mit H0 schlecht vereinbar"
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Normalverteilung: 68% in ±1σ, 95% in ±2σ, 99,7% in ±3σ
-- p-Wert Schwellenwert: p < 0,05 = signifikant (Konvention)
-- Hohe Sensitivität → gut zum Ausschließen (SnNout)
-- Hohe Spezifität → gut zum Bestätigen (SpPin)
 
 ---
 

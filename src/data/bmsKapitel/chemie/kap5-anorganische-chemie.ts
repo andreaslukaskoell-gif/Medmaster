@@ -33,15 +33,13 @@ export const chemKapAnorganisch: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Wasser** (H₂O) ist ein polares Molekül mit gewinkelter Geometrie (104,5°, VSEPR) und starkem Dipolmoment (μ = 1,85 D). Bis zu **vier H-Brücken** pro Molekül erklären den hohen Siedepunkt (100 °C), die hohe Wärmekapazität, die **Dichteanomalie** (Maximum bei 4 °C → Eis schwimmt) und die Verdampfungsenthalpie. **Autoprotolysé** (K_w = 10⁻¹⁴), **Hydratation** von Ionen (Ion-Dipol) und der **hydrophobe Effekt** (entropisch getrieben) sind Grundlage für Leben und Membranbildung. **Warum für den MedAT relevant?** H-Brücken-Anzahl, Siedepunkt-Vergleich H₂O vs. H₂S, Dichtemaximum 4 °C, neutraler pH bei 37 °C (≈6,8), K_w und hydrophober Effekt werden geprüft. **Welche Fragen werden beantwortet?** „Warum siedet Wasser bei 100 °C?“; „Dichtemaximum?“; „Neutral bei 37 °C?“; „Wie viele H-Brücken?“; „Hydrophober Effekt — entropisch?“; „K_w temperaturabhängig?“; „Hydratation von NaCl?“.
+Warum frieren Seen im Winter von oben zu — und nicht von unten? Weil Wasser eine einzigartige **Dichteanomalie** zeigt: Bei 4 °C ist es am dichtesten, und Eis ist leichter als flüssiges Wasser. Ohne diese Eigenschaft würden Gewässer durchfrieren und aquatisches Leben wäre unmöglich. Hinter all den besonderen Eigenschaften des Wassers steckt seine Fähigkeit, bis zu **vier Wasserstoffbrücken** pro Molekül auszubilden — ein dreidimensionales Netzwerk, das Siedepunkt, Wärmekapazität und Lösungseigenschaften erklärt.
 
 **In diesem Kapitel lernst du:**
-- **Struktur H₂O:** VSEPR, 104,5° (2 bindende + 2 freie Elektronenpaare am O); **Dipolmoment** μ = 1,85 D
-- **H-Brücken:** bis zu **4** pro Molekül (2× Donor über H, 2× Akzeptor über O); ~20 kJ/mol; Netzwerk erklärt Siedepunkt, Wärmekapazität, Verdampfungsenthalpie
-- **Dichteanomalie:** Maximum bei **4 °C**; Eis ~9 % weniger dicht → schwimmt → Seen frieren von oben
-- **K_w = 10⁻¹⁴** (25 °C); bei **37 °C** K_w ≈ 2,4×10⁻¹⁴ → **Neutralpunkt pH ≈ 6,8** (nicht 7)
-- **Hydratation:** Ion-Dipol-Wechselwirkungen (Na⁺, Cl⁻); **hydrophober Effekt** = entropisch (Clathrate → Aggregation apolarer Gruppen → Proteinfaltung, Membranen)
-- **Wasser amphoter:** kann H⁺ abgeben oder aufnehmen (H₂O + NH₃ → NH₄⁺ + OH⁻; H₂O + HCl → H₃O⁺ + Cl⁻)
+- warum Wasser trotz seiner niedrigen Molmasse erst bei 100 °C siedet (H₂S bei −60 °C)
+- wie die Dichteanomalie mit dem H-Brücken-Netzwerk zusammenhängt und warum Eis schwimmt
+- warum der neutrale pH bei Körpertemperatur (37 °C) nicht 7 ist, sondern etwa 6,8
+- wie der hydrophobe Effekt Proteinfaltung und Membranbildung antreibt — und warum er entropisch ist
 
 ---
 
@@ -63,11 +61,7 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 | Oberflächenspannung | 72 mN/m | Kapillarkräfte im Xylem (bis 100 m), Alveolarstabilität |
 | Schmelzwärme | 334 kJ/kg | Eis → Wasser: hoher Energiebedarf für Phasenübergang |
 
-![Wasser H-Brücken](/grafik-wasser-h-bruecken.svg)
-
-
-![Dichteanomalie und Phasen](/grafik-thermodynamik.svg)
-
+{{DIAGRAM:covalent-bond}}
 
 **Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
@@ -107,6 +101,8 @@ Wasser ist **amphoter** (Ampholyt) — je nach Reaktionspartner Säure oder Base
 
 ## Hydratation und Löslichkeit
 
+{{DIAGRAM:ionic-bond}}
+
 Wasser solvatisiert Ionen durch **Ion-Dipol-Wechselwirkungen**: Der δ⁻-Sauerstoff orientiert sich zu Kationen, die δ⁺-Wasserstoffe zu Anionen. Hydratationsenthalpien: ΔH_hyd(Na⁺) ≈ −406 kJ/mol, ΔH_hyd(Cl⁻) ≈ −363 kJ/mol. Die Summe (−769 kJ/mol) überwindet die NaCl-Gitterenergie (−787 kJ/mol); der leicht endotherme Lösungsprozess (+4 kJ/mol) wird durch Entropiegewinn kompensiert. Polare organische Moleküle (Glucose, Ethanol, Harnstoff) werden über H-Brücken und Dipol-Dipol-WW gelöst.
 
 ## Hydrophober Effekt
@@ -124,35 +120,15 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Warum siedet Wasser bei 100 °C trotz niedriger Molmasse? → H-Brücken-Netzwerk (H₂S ohne H-Brücken siedet bei −60 °C)
+- Bei welcher Temperatur hat Wasser seine maximale Dichte? → 4 °C; Eis ist ~9 % weniger dicht → schwimmt
+- Welcher pH ist bei 37 °C neutral? → pH ≈ 6,8 (nicht 7, weil K_w temperaturabhängig ist)
 
-**Zentral prüfungsrelevant:**
-- **Struktur H₂O:** gewinkelt **104,5°** (VSEPR); **Dipolmoment** μ = 1,85 D; **bis zu 4 H-Brücken** pro Molekül (2 Donor, 2 Akzeptor), ~20 kJ/mol
-- **Siedepunkt 100 °C** trotz MW 18 g/mol → H-Brücken-Netzwerk; **H₂S** (keine H-Brücken) siedet bei −60 °C
-- **Dichtemaximum bei 4 °C**; Eis ~9 % weniger dicht → schwimmt → Seen frieren von oben → aquatisches Leben
-- **K_w = 10⁻¹⁴** (25 °C); **temperaturabhängig** (endotherm); bei **37 °C** K_w ≈ 2,4×10⁻¹⁴ → **Neutralpunkt pH ≈ 6,8** (nicht 7)
-- **Hydrophober Effekt:** entropisch getrieben (apolare Gruppen → geordnete Wasserkäfige → Aggregation minimiert Oberfläche → ΔS > 0); Grundlage Membranbildung, Proteinfaltung
-- **Hydratation:** Ion-Dipol (Na⁺, Cl⁻); Wasser **amphoter** (Säure oder Base je nach Partner)
-- Wärmekapazität 4182 J/(kg·K); Verdampfungsenthalpie ~2430 kJ/kg bei 37 °C (Schweiß)
-
-**Ergänzend vertiefend:** London-Kräfte. Typische Fallen: Neutral ≠ immer pH 7 (37 °C ≈ 6,8); K_w temperaturabhängig; hydrophober Effekt entropisch; CO₂ apolar, Wasser polar.
-
-**Häufige Prüfungsfragen:**
-- "Warum Siedepunkt 100 °C?" → H-Brücken-Netzwerk; H₂S −60 °C
-- "Dichtemaximum?" → 4 °C; Eis schwimmt
-- "Neutral bei 37 °C?" → pH ≈ 6,8 (K_w temperaturabhängig)
-- "Wie viele H-Brücken?" → bis zu 4 (2 Donor, 2 Akzeptor)
-
-**Typische Prüfungsfallen:**
-- Neutral ≠ immer pH 7 (bei 37 °C ≈ 6,8); K_w temperaturabhängig; hydrophober Effekt entropisch, nicht Abstoßung; CO₂ apolar, Wasser polar
-
-**Wichtige Begriffe & Definitionen:**
-- **Dichteanomalie:** Wasser hat maximale Dichte bei 4 °C; darunter nimmt Dichte ab (Eisstruktur) → Eis schwimmt.
-- **Hydrophober Effekt:** Entropisch getriebene Aggregation apolarer Gruppen in Wasser (Minimierung geordneter Wasserkäfige); treibt Membranbildung und Proteinfaltung.
-- **Autoprotolysé:** 2 H₂O ⇌ H₃O⁺ + OH⁻; K_w = [H₃O⁺][OH⁻] = 10⁻¹⁴ (25 °C); temperaturabhängig.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- 104,5°; μ = 1,85 D; 4 H-Brücken, ~20 kJ/mol; Sdp. 100 °C (H₂S −60 °C); Dichtemax. 4 °C; K_w 10⁻¹⁴; bei 37 °C pH_neutral ≈ 6,8; 4182 J/(kg·K); ~2430 kJ/kg
+**Typische Fallen:**
+- Neutral heißt nicht immer pH 7 — bei 37 °C ist der Neutralpunkt bei pH ≈ 6,8
+- Hydrophober Effekt ist entropisch getrieben (Entropiegewinn des Wassers), nicht durch Abstoßung
+- CO₂ ist apolar (trotz polarer Bindungen), Wasser ist polar — nicht verwechseln
 
 ---
 
@@ -399,25 +375,19 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Kohlenstoff** (4 Valenzelektronen, **Katenation**) bildet durch **Hybridisierung** (sp³, sp², sp) Ketten, Ringe und Netzwerke. **Allotrope:** **Diamant** (sp³, Isolator, hart), **Graphit** (sp², Leiter, weich), Graphen, Fullerene. **CO₂** ist sp-hybridisiert, linear, **apolar**; im Blut: CO₂ + H₂O ⇌ HCO₃⁻ + H⁺ (Carboanhydrase, Bicarbonat-Puffer). **CO** ist farb-/geruchlos, **250× höhere Hb-Affinität** als O₂ → HbCO, Antidot 100 % O₂. **Warum für den MedAT relevant?** Diamant vs. Graphit (sp³ vs. sp², Isolator vs. Leiter), CO₂ apolar, CO-Toxizität und Antidot, Bicarbonat-Puffer (pH = 6,1 + log([HCO₃⁻]/[CO₂])), Acetyl-CoA als Stoffwechsel-Drehkreuz werden geprüft. **Welche Fragen werden beantwortet?** „Diamant vs. Graphit?“; „Warum CO₂ apolar?“; „CO-Toxizität?“; „Acetyl-CoA aus was?“; „Bicarbonat-pH?“; „Carboanhydrase?“; „Cyanid-Wirkung?“.
+Ein defekter Gasboiler produziert farb- und geruchloses **Kohlenmonoxid** — und jedes Jahr sterben Menschen daran, weil CO mit **250-fach höherer Affinität** als Sauerstoff an Hämoglobin bindet. Die Rettung: reiner Sauerstoff als Antidot. CO ist nur eine der vielen Erscheinungsformen des **Kohlenstoffs**: Dasselbe Element bildet den härtesten Stoff der Welt (Diamant, sp³) und einen der weichsten Feststoffe (Graphit, sp²). Im Blut liegt Kohlenstoff als CO₂ vor und wird über den Bicarbonat-Puffer zum zentralen pH-Regulator.
 
 **In diesem Kapitel lernst du:**
-- **Hybridisierung:** sp³ (Tetraeder, 109,5°, Diamant, Alkane), sp² (planar, 120°, Graphit, Benzol), **sp** (linear, 180°, **CO₂**, Ethin)
-- **Allotrope:** **Diamant** (sp³, Isolator, hart); **Graphit** (sp², delokalisiertes π, Leiter, weich); Graphen (Einzelschicht); Fullerene (C₆₀)
-- **CO₂:** sp-hybridisiert, **linear, apolar** (Dipole kompensieren sich); CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ (Carboanhydrase, kcat ~10⁶ s⁻¹)
-- **Bicarbonat-Puffer:** pH = 6,1 + log([HCO₃⁻]/[CO₂]); Normal 20:1 → pH 7,4; CO₂-Transport ~70 % HCO₃⁻, ~23 % Carbaminohb, ~7 % gelöst
-- **CO-Toxizität:** 250× höhere Hb-Affinität als O₂ → HbCO; Linksverschiebung O₂-Kurve; Komplex-IV-Hemmung; **Antidot: 100 % O₂** (hyperbar bei schwer)
-- **Acetyl-CoA:** aus Glykolyse (PDH) und β-Oxidation → Zitratzyklus; **Cyanid** hemmt Komplex IV
+- warum Diamant und Graphit trotz gleicher Atome völlig verschiedene Eigenschaften haben (Hybridisierung entscheidet)
+- warum CO₂ trotz polarer Bindungen insgesamt apolar ist und wie es im Blut als Puffer wirkt
+- wie CO-Vergiftung funktioniert und warum 100 % Sauerstoff das Antidot ist
+- welche Rolle Acetyl-CoA als Stoffwechsel-Drehkreuz spielt und wie Cyanid die Atmungskette blockiert
 
 ---
 
 ## Kohlenstoff — das Element des Lebens
 
-![Kohlenstoff Allotrope](/grafik-kohlenstoff.svg)
-
-
-![Biogene Elemente und Kohlenstoff](/grafik-biogene-elemente.svg)
-
+{{DIAGRAM:covalent-bond}}
 
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
 
@@ -473,6 +443,8 @@ CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Häm
 
 ## Carbonate und Metabolismus
 
+{{DIAGRAM:functional-groups}}
+
 **CaCO₃ (Calciumcarbonat)** bildet zusammen mit Hydroxylapatit die mineralische Matrix der Knochen und Zähne. CaCO₃ findet sich auch in Marmor, Kalkstein und Muschelschalen.
 
 Metabolisch zentrale Kohlenstoffverbindungen:
@@ -487,34 +459,15 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Diamant vs. Graphit? → Diamant sp³, Isolator, hart; Graphit sp², Leiter, weich (delokalisiertes π)
+- Warum ist CO₂ apolar? → Lineare Geometrie (sp) → zwei C=O-Dipole kompensieren sich
+- CO-Vergiftung: Antidot? → 100 % O₂ (hyperbar bei schweren Fällen); HWZ HbCO sinkt von 5 h auf ~60 min
 
-**Zentral prüfungsrelevant:**
-- **Hybridisierung:** sp³ (109,5°, Tetraeder), sp² (120°, planar), **sp** (180°, linear); **Diamant** sp³ = Isolator, hart; **Graphit** sp² = Leiter, weich (delokalisiertes π)
-- **CO₂:** sp-hybridisiert, **linear, apolar** (zwei C=O-Dipole kompensieren sich); CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ (Carboanhydrase)
-- **Bicarbonat-Puffer:** pH = 6,1 + log([HCO₃⁻]/[CO₂]); Normal 20:1 → pH 7,4; pKa effektiv **6,1**; CO₂-Transport ~70 % HCO₃⁻, ~23 % Carbaminohb, ~7 % gelöst
-- **CO-Toxizität:** **250×** höhere Hb-Affinität als O₂ → HbCO; Linksverschiebung; Komplex-IV-Hemmung; **Antidot: 100 % O₂** (HWZ HbCO ~60 min mit O₂)
-- **Acetyl-CoA:** aus **Glykolyse** (Pyruvat → PDH) und **β-Oxidation** → Zitratzyklus (Acetyl + Oxalacetat → Citrat)
-- **Carboanhydrase:** kcat ~10⁶ s⁻¹; **Cyanid** hemmt Komplex IV (Atmungskette)
-
-**Ergänzend vertiefend:** VSEPR, Katenation. Typische Fallen: CO₂ apolar trotz polarer Bindungen; CO ≠ CO₂; Diamant Isolator, Graphit Leiter; Carboanhydrase katalysiert Hydratation, nicht Puffer.
-
-**Häufige Prüfungsfragen:**
-- "Diamant vs. Graphit?" → Diamant sp³, Isolator; Graphit sp², Leiter
-- "Warum CO₂ apolar?" → linear (sp), Dipole kompensieren sich
-- "CO-Toxizität?" → 250× Hb-Affinität, HbCO, Antidot 100 % O₂
-- "Acetyl-CoA aus was?" → Glykolyse (PDH) + β-Oxidation
-
-**Typische Prüfungsfallen:**
-- CO₂ apolar trotz polarer C=O-Bindungen; CO ≠ CO₂; Diamant Isolator, Graphit Leiter; Carboanhydrase katalysiert Hydratation, nicht Puffer selbst
-
-**Wichtige Begriffe & Definitionen:**
-- **Katenation:** Fähigkeit von Atomen, stabile Ketten/Ringe zu bilden; bei Kohlenstoff besonders ausgeprägt (C-C ~347 kJ/mol).
-- **Bicarbonat-Puffer:** CO₂ + H₂O ⇌ H⁺ + HCO₃⁻; pH = 6,1 + log([HCO₃⁻]/[CO₂]); Lunge reguliert CO₂, Niere HCO₃⁻.
-- **HbCO (Carboxyhämoglobin):** CO gebunden an Hb; 250× höhere Affinität als O₂ → funktionelle Anämie, Antidot 100 % O₂.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- sp³ 109,5°, sp² 120°, sp 180°; CO 250× Hb-Affinität; Carboanhydrase ~10⁶ s⁻¹; pH = 6,1 + log(24/1,2) = 7,4; CO₂-Transport 70 % / 23 % / 7 %
+**Typische Fallen:**
+- CO₂ ist apolar trotz polarer C=O-Bindungen — lineare Geometrie hebt die Dipole auf
+- CO ist nicht CO₂: CO ist hochgiftig (Hb-Affinität 250x), CO₂ ist ein Stoffwechselprodukt
+- Diamant ist Isolator, Graphit ist Leiter — beide bestehen aus reinem Kohlenstoff
 
 ---
 
@@ -743,11 +696,7 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
 
 ## Stickstoff (N) — das häufigste Atmosphärengas
 
-![Biogene Elemente](/grafik-biogene-elemente.svg)
-
-
-![Stickstoff und Schwefel in Biomolekülen](/grafik-kohlenstoff.svg)
-
+{{DIAGRAM:periodic-table}}
 
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
@@ -784,6 +733,8 @@ Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen 
 pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygroskopisch** und **dehydratisierend** (karbonisiert Zucker zu schwarzem Kohlenstoff, verursacht schwere Verätzungen).
 
 ## Halogene — Gruppe 17
+
+{{DIAGRAM:ionic-bond}}
 
 Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidationskraft von oben nach unten:
 
@@ -1095,11 +1046,7 @@ Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzepti
 
 ## Die Brønsted-Lowry-Definition
 
-![pH-Skala](/grafik-20-ph-skala.svg)
-
-
-![Puffer und Henderson-Hasselbalch](/grafik-puffer.svg)
-
+{{DIAGRAM:ph-scale}}
 
 **Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
@@ -1134,6 +1081,8 @@ Wichtige Lewis-Säure-Base-Reaktion:
 BF₃ + :NH₃ → F₃B←NH₃  (Addukt)
 Lewis-S.  Lewis-B.
 \`\`\`
+
+{{DIAGRAM:ionic-bond}}
 
 ## Das Ionenprodukt des Wassers (Kw) und die Autoprotolyse
 
@@ -1248,7 +1197,6 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
           merksatz: "pH = −log[H₃O⁺] | pH + pOH = 14 | Kw = 10⁻¹⁴ | Neutral: pH = 7 nur bei 25 °C.",
         },
       ],
-      diagram: "ph-scale",
 
       merksätze: [
         "Brønsted-Säure = Protonendonor (gibt H⁺ ab); Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf).",
@@ -1457,11 +1405,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 ## Starke Säuren: Vollständige Dissoziation
 
-![pH-Skala](/grafik-20-ph-skala.svg)
-
-
-![Pufferbereich und pKa](/grafik-puffer-henderson.svg)
-
+{{DIAGRAM:ph-scale}}
 
 **Starke Säuren** dissoziieren in wässriger Lösung vollständig (nahezu irreversibel). Das bedeutet: Alle Säuremoleküle geben ihr Proton an das Wasser ab.
 
@@ -1470,6 +1414,8 @@ Für starke Säuren gilt: **[H₃O⁺] = c(Säure)** (vollständige Dissoziation
 Beispiel: 0,01 mol/L HCl → [H₃O⁺] = 0,01 = 10⁻² mol/L → **pH = 2**
 
 ## Schwache Säuren: Gleichgewichtige Dissoziation
+
+{{DIAGRAM:covalent-bond}}
 
 **Schwache Säuren** dissoziieren nur teilweise. Es stellt sich ein Gleichgewicht ein:
 
@@ -1672,7 +1618,6 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
           },
         },
       ],
-      diagram: "ph-scale",
 
       merksätze: [
         "Starke Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Stufe), HClO₄ – alle dissoziieren vollständig.",
@@ -1860,11 +1805,7 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
 
 ## Was ist ein Puffer?
 
-![Puffer](/grafik-puffer.svg)
-
-
-![pH-Skala und Pufferbereich](/grafik-20-ph-skala.svg)
-
+{{DIAGRAM:ph-scale}}
 
 Ein **Puffersystem** ist eine Lösung, die pH-Änderungen bei Zugabe kleiner Mengen Säure oder Base minimiert. Puffer bestehen aus einem **schwachen Säure-Base-Paar**:
 
@@ -1908,6 +1849,8 @@ Die **Pufferkapazität** β gibt an, wie viel Säure oder Base ein Puffer aufneh
 **Praktische Konsequenz:** Ein konzentrierterer Puffer kann mehr Säure/Base abpuffern, ändert aber den pH bei Verdünnung (nur wenn beide Komponenten gleich verdünnt werden, bleibt pH konstant).
 
 ## Das Carbonat-Puffersystem im Blut
+
+{{DIAGRAM:enzyme-substrate}}
 
 Das wichtigste Puffersystem im Blut ist das **Kohlensäure-Bicarbonat-System**:
 
@@ -2033,8 +1976,6 @@ Der Carbonat-Puffer kann versagen, wenn:
             "Pufferkapazität maximal bei pH = pKa. Konzentriertere Puffer = höhere Kapazität. Begrenzt: Erschöpfung möglich.",
         },
       ],
-
-      diagram: "ph-scale",
 
       merksätze: [
         "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) – die wichtigste Puffergleichung.",
@@ -2222,11 +2163,7 @@ Der Carbonat-Puffer kann versagen, wenn:
 
 ## Grundprinzip der Titration
 
-![Titration](/grafik-titration.svg)
-
-
-![pH-Skala und Indikatoren](/grafik-20-ph-skala.svg)
-
+{{DIAGRAM:ph-scale}}
 
 Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung einer unbekannten Konzentration. Eine Lösung bekannter Konzentration (Titrant, in der Bürette) wird einer Lösung unbekannter Konzentration (Analyt, in dem Erlenmeyerkolben) tropfenweise zugegeben, bis die Reaktion vollständig ist.
 
@@ -2235,6 +2172,8 @@ Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung e
 **Berechnung:** n(Säure) = n(Base) → c₁ · V₁ = c₂ · V₂
 
 ## Titrationskurven: Vier wichtige Fälle
+
+{{DIAGRAM:covalent-bond}}
 
 ### 1. Starke Säure mit starker Base (z. B. HCl mit NaOH)
 
@@ -2401,8 +2340,6 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
             "pH ↓ = Azidose. pH ↑ = Alkalose. Primär CO₂-Änderung = respiratorisch. Primär HCO₃⁻-Änderung = metabolisch.",
         },
       ],
-
-      diagram: "ph-scale",
 
       merksätze: [
         "Titration: n(Säure) = n(Base) am Äquivalenzpunkt → c₁V₁ = c₂V₂.",
@@ -2609,17 +2546,15 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 
 ## Definitionen: OIL RIG
 
-![Redox OIL RIG](/grafik-redox.svg)
-
-
-![Galvanische Zelle und Redox](/grafik-galvanische-zelle.svg)
-
+{{DIAGRAM:periodic-table}}
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab — es kann keine Oxidation ohne gleichzeitige Reduktion geben.
 
 Das Teilchen, das Elektronen **abgibt** und dabei oxidiert wird, heißt **Reduktionsmittel** (RM), weil es das andere Teilchen reduziert. Das Teilchen, das Elektronen **aufnimmt** und dabei reduziert wird, heißt **Oxidationsmittel** (OM), weil es das andere Teilchen oxidiert. Im klassischen Beispiel Zn + Cu²⁺ → Zn²⁺ + Cu ist Zink das Reduktionsmittel (gibt 2e⁻ ab) und Cu²⁺ das Oxidationsmittel (nimmt 2e⁻ auf).
 
 ## Oxidationszahlen (Oxidationsstufen)
+
+{{DIAGRAM:ionic-bond}}
 
 Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugewiesen werden, als wären alle Bindungen vollständig ionisch. Sie erlauben es, Elektronenverschiebungen in kovalenten Molekülen zu verfolgen, ohne tatsächliche Ladungen zu berechnen.
 
@@ -2927,11 +2862,7 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 
 ## Galvanische Zellen (Voltasche Elemente)
 
-![Galvanische Zelle](/grafik-galvanische-zelle.svg)
-
-
-![Nernst und Konzentrationsabhängigkeit](/grafik-nernst.svg)
-
+{{DIAGRAM:ionic-bond}}
 
 Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
@@ -2952,6 +2883,8 @@ Das Standardelektrodenpotenzial E° beschreibt die Tendenz eines Redox-Paares, E
 - Niedrigeres E° = stärkeres Reduktionsmittel (gibt lieber Elektronen ab)
 - Eine spontane Redox-Reaktion läuft ab, wenn E°Zelle = E°Kathode − E°Anode > 0
 - ΔG° = −n·F·E°Zelle (Faraday-Gleichung, n = Elektronenanzahl, F = 96485 C/mol)
+
+{{DIAGRAM:periodic-table}}
 
 ## Elektrolyse (erzwungene Redox-Reaktionen)
 
@@ -3272,129 +3205,120 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
       ],
       content: `## Einleitung
 
-**Worum geht es?** Die **Nernst-Gleichung** beschreibt das Elektrodenpotenzial bei beliebigen Konzentrationen: **E = E° − (0,05916/n)·log Q** (25 °C); Q = [Red]/[Ox]. Hohes [Ox] → kleines Q → E &gt; E°; hohes [Red] → E &lt; E°. **Glaselektrode:** −59,16 mV pro pH-Einheit (Nernst-Faktor). **Gleichgewichtskonstante:** K = 10^(n·E°/0,05916). **Biologisch:** **Nernst-Potenzial** E_Ion = (RT/zF)·ln([außen]/[innen]); **K⁺** ≈ −90 mV, **Na⁺** ≈ +62 mV; **Ruhemembranpotenzial** ≈ −70 mV (zwischen K⁺- und Na⁺-Nernst). **Warum für den MedAT relevant?** Nernst-Formel, pH-Messung, K⁺/Na⁺-Nernst, Ruhemembranpotenzial werden geprüft. **Welche Fragen werden beantwortet?** „Nernst-Gleichung?“; „59 mV?“; „E_K?“; „Ruhemembranpotenzial?“; „K aus E°?“.
+**Worum geht es?** Stell dir eine Batterie vor: Frisch geladen liefert sie volle Spannung, aber je länger sie läuft, desto schwächer wird sie. *Warum?* Weil sich die Konzentrationen der beteiligten Stoffe ändern. Genau das beschreibt die **Nernst-Gleichung** — sie beantwortet die Frage: **Wie hängt die elektrische Spannung einer Redoxreaktion von der Konzentration ab?**
+
+Das ist keine rein chemische Spielerei: Dein Körper nutzt dasselbe Prinzip. Nervenzellen “feuern”, weil auf beiden Seiten der Membran unterschiedliche Ionenkonzentrationen herrschen — und die Spannung, die daraus entsteht, lässt sich mit der Nernst-Gleichung berechnen.
 
 **In diesem Kapitel lernst du:**
-- **Nernst:** E = E° − (0,05916/n)·log Q; Q = [Red]/[Ox]; **59,16 mV** pro Dekade (25 °C), bei 37 °C ≈ 61,5 mV
-- **Glaselektrode:** −59,16 mV pro pH-Einheit; **K aus E°:** K = 10^(n·E°/0,05916)
-- **Nernst-Potenzial:** E_Ion = (RT/zF)·ln([außen]/[innen]); **K⁺** ≈ −90 mV, **Na⁺** ≈ +62 mV; Ruhemembran ≈ −70 mV
+- warum sich die Spannung einer Redoxreaktion ändert, wenn man die Konzentrationen verändert
+- die Nernst-Gleichung und was jeder Buchstabe darin bedeutet
+- wie ein pH-Messgerät im Krankenhaus auf diesem Prinzip basiert
+- warum Nervenzellen ein Ruhemembranpotenzial von ca. −70 mV haben
 
 ---
 
-## Die Nernst-Gleichung
+{{DIAGRAM:ionic-bond}}
+
+{{DIAGRAM:periodic-table}}
+
+## Warum reicht E° allein nicht aus?
 
 ![Nernst](/grafik-nernst.svg)
 
-
 ![Galvanische Zelle und Halbzellen](/grafik-galvanische-zelle.svg)
 
+Im letzten Unterkapitel hast du das **Standardpotenzial E°** kennengelernt — die Spannung unter idealen Laborbedingungen (25 °C, alle Konzentrationen exakt 1 mol/L). In der Realität sind diese Bedingungen aber fast nie erfüllt: Im Blut liegt die K⁺-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Also brauchen wir eine Formel, die das berücksichtigt.
 
-Das Standardelektrodenpotenzial E° gilt nur unter Standardbedingungen (25 °C, alle Konzentrationen 1 mol/L, Gasdruck 1 atm). Unter realen Bedingungen wird das tatsächliche Elektrodenpotenzial E durch die **Nernst-Gleichung** beschrieben:
+**Die Grundidee in einem Satz:** Je mehr vom Oxidationsmittel vorhanden ist, desto stärker "will" die Reaktion ablaufen → die Spannung steigt. Je mehr vom Reduktionsmittel da ist, desto schwächer wird der Antrieb → die Spannung sinkt.
 
-**E = E° − (R·T)/(n·F) · ln(Q)**
+Das ist wie ein Wasserfall: Je größer der Höhenunterschied (= Konzentrationsunterschied), desto mehr Kraft hat das Wasser (= Spannung).
 
-oder bei 25 °C vereinfacht:
+---
 
-**E = E° − (0,05916 V)/n · log₁₀(Q)**
+## Die Nernst-Gleichung — Schritt für Schritt
 
-- R = 8,314 J/(mol·K) — allgemeine Gaskonstante
-- T = absolute Temperatur in Kelvin
-- n = Anzahl übertragener Elektronen
-- F = 96485 C/mol — Faraday-Konstante
-- Q = Reaktionsquotient (Konzentrationen der Produkte/Edukte)
+Die Formel sieht auf den ersten Blick kompliziert aus, aber sie hat nur **eine zentrale Aussage**: *Das reale Potenzial E weicht vom Standardpotenzial E° ab, und zwar abhängig vom Konzentrationsverhältnis Q.*
 
-**Für eine allgemeine Halbreaktion: Ox + ne⁻ → Red**
-- Q = [Red] / [Ox]
-- Hohe [Ox]-Konzentration → kleiner Q → E wird größer als E° (stärkeres Oxidationsmittel)
-- Hohe [Red]-Konzentration → großer Q → E wird kleiner als E° (schwächeres Oxidationsmittel)
+**E = E° − (0,05916 V)/n · log(Q)**   *(bei 25 °C)*
 
-## Anwendungen der Nernst-Gleichung
+Was bedeuten die einzelnen Teile?
 
-**Beispiel: Cu²⁺/Cu-Elektrode bei [Cu²⁺] = 0,01 mol/L**
-- E° = +0,34 V; n = 2
-- E = 0,34 − (0,05916/2) · log(1/0,01) = 0,34 − 0,02958 · 2 = 0,34 − 0,059 = **+0,281 V**
-- Verdünnung der Cu²⁺-Lösung senkt das Elektrodenpotenzial
+| Symbol | Bedeutung | Woher kommt es? |
+|--------|-----------|-----------------|
+| **E** | Das tatsächliche Potenzial — was du messen würdest | Das ist gesucht |
+| **E°** | Das Standardpotenzial (aus der Tabelle) | Bekannt aus dem letzten UK |
+| **0,05916 V** | Der "Nernst-Faktor" — eine Naturkonstante bei 25 °C | Kommt aus R·T/F · ln(10) |
+| **n** | Anzahl übertragener Elektronen | Aus der Reaktionsgleichung |
+| **Q** | Reaktionsquotient: [Produkte] / [Edukte] | Aus den aktuellen Konzentrationen |
 
-**Beispiel: Zn²⁺/Zn-Elektrode bei [Zn²⁺] = 0,001 mol/L**
-- E° = −0,76 V; n = 2
-- E = −0,76 − (0,05916/2) · log(1/0,001) = −0,76 − 0,02958 · 3 = −0,76 − 0,089 = **−0,849 V**
+**Das Minuszeichen** ist der Schlüssel: Wenn Q groß wird (viel Produkt, wenig Edukt → Batterie fast leer), wird E kleiner. Wenn Q klein ist (viel Edukt → Batterie frisch), bleibt E nahe an E° oder wird sogar größer.
 
-**Zellpotenzial der Konzentrationszelle:**
-Zwei identische Elektroden, aber verschiedene Ionenkonzentrationen → E°Zelle = 0, aber E_Zelle ≠ 0 durch die Nernst-Gleichung. Diese Konzentrationszellen spielen eine wichtige Rolle bei biologischen Membranpotenziale.
+> **Merke:** Mehr Oxidationsmittel (Edukt) = stärkerer Antrieb = höheres E. Mehr Reduktionsmittel (Produkt) = schwächerer Antrieb = niedrigeres E. Der Nernst-Faktor beträgt **59,16 mV pro Zehnerpotenz** im Konzentrationsverhältnis (bei 25 °C).
 
-## pH-Messung und Glaselektrode
+---
 
-Die wichtigste praktische Anwendung der Nernst-Gleichung ist die potentiometrische **pH-Messung**. Eine Glaselektrode enthält eine Glasmembran, die selektiv H⁺-Ionen durchlässt. Das Membranpotenzial folgt der Nernst-Gleichung:
+## Wie misst das pH-Gerät im Krankenhaus?
 
-**E_Membran = const − 0,05916 · pH (bei 25 °C)**
+Die wichtigste Anwendung der Nernst-Gleichung in der Klinik ist die **pH-Messung** mit einer Glaselektrode. Das Prinzip ist elegant: Eine spezielle Glasmembran lässt nur H⁺-Ionen durch. Je nachdem wie viele H⁺-Ionen in der Lösung sind (= der pH-Wert), baut sich eine messbare Spannung auf.
 
-Pro pH-Einheit ändert sich das Potential um 59,16 mV (bei 25 °C) — dieser Wert heißt Nernst-Faktor oder Nernst-Steigung. Mit steigendem pH wird das Potential negativer (weniger H⁺ = reduziertere Bedingungen). Die Glaselektrode wird mit bekannten Pufferlösungen kalibriert (2-Punkt-Kalibrierung).
+Pro **pH-Einheit** ändert sich die Spannung um genau **59,16 mV** (bei 25 °C).
 
-## Gleichgewichtskonstante aus E°
+- pH sinkt um 1 (z. B. von 7 auf 6 = 10-fach mehr H⁺) → Spannung steigt um ~59 mV
+- pH steigt um 1 (z. B. von 7 auf 8 = 10-fach weniger H⁺) → Spannung sinkt um ~59 mV
 
-Im elektrochemischen Gleichgewicht gilt E = 0 (keine treibende Kraft mehr), was ΔG = 0 entspricht. Daraus folgt:
+Bei **Körpertemperatur (37 °C)** beträgt der Nernst-Faktor ca. **61,5 mV** pro pH-Einheit.
 
-**K = 10^(n · E° / 0,05916)** (bei 25 °C)
+> **Merke:** Glaselektrode: **−59 mV pro pH-Einheit** (25 °C). Klinisch: Blutgasanalysator misst Blut-pH (Norm: 7,35–7,45) genau mit diesem Prinzip.
 
-Beispiel Daniell-Element: K = 10^(2 × 1,10 / 0,05916) = 10^37,2 ≈ 10³⁷ (extrem weit auf der Produktseite, praktisch vollständig).
+---
 
-## Biologische Membranpotenziale
+## Warum haben Nervenzellen eine Spannung? — Biologische Membranpotenziale
 
-Das **Ruhemembranpotenzial** einer Nervenzelle (ca. −70 mV) entsteht durch unterschiedliche Ionenkonzentrationen auf beiden Seiten der Zellmembran (K⁺ höher intrazellulär, Na⁺ und Cl⁻ höher extrazellulär) und durch selektive Membranpermeabilität. Das **Nernst-Potenzial** für ein einzelnes Ion berechnet sich als:
+Stell dir eine Nervenzelle vor:
 
-**E_Ion = (RT)/(z·F) · ln([Ion]_außen / [Ion]_innen)**
+- **Innerhalb** der Zelle: viel K⁺ (ca. 140 mmol/L), wenig Na⁺ (ca. 15 mmol/L)
+- **Außerhalb** der Zelle: wenig K⁺ (ca. 4 mmol/L), viel Na⁺ (ca. 145 mmol/L)
 
-- E_K (bei 37 °C): E_K = (0,02585 × 1,037)/(1) · ln(4/140) = −0,09 V ≈ −90 mV
-- E_Na (bei 37 °C): E_Na = 0,02680 · ln(145/15) = +0,062 V ≈ +62 mV
+Dieser Konzentrationsunterschied erzeugt — genau wie bei einer Batterie — eine elektrische Spannung. Die Nernst-Gleichung berechnet, welche Spannung sich für **ein einzelnes Ion** ergibt:
 
-Das **Goldman-Hodgkin-Katz-Gleichung** berechnet das tatsächliche Membranpotenzial unter Berücksichtigung der Permeabilitäten mehrerer Ionen.
+**E_Ion = (RT/zF) · ln([außen] / [innen])**
 
-## Henderson-Hasselbalch und Elektrochemie
+In der Praxis merkt man sich die Ergebnisse:
 
-Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich direkt aus der Nernst-Gleichung ableiten. In biologischen Systemen beeinflusst der pH-Wert direkt die Redoxpotenziale biochemischer Reaktionen — z. B. sinkt E für O₂/H₂O mit steigendem pH (0,059 V pro pH-Einheit), was die Reaktivität von Sauerstoff bei physiologischem pH (7,4) moduliert.
+| Ion | innen | außen | Nernst-Potenzial |
+|-----|-------|-------|----------|
+| **K⁺** | 140 mmol/L | 4 mmol/L | **~−90 mV** |
+| **Na⁺** | 15 mmol/L | 145 mmol/L | **~+62 mV** |
+
+Wäre die Membran *nur* für K⁺ durchlässig, läge das Potenzial bei −90 mV. Wäre sie *nur* für Na⁺ durchlässig, bei +62 mV. In der Realität ist sie vor allem für K⁺ durchlässig — daher liegt das **Ruhemembranpotenzial bei ca. −70 mV** (näher am K⁺-Wert).
+
+> **Merke:** K⁺-Nernst ~−90 mV, Na⁺-Nernst ~+62 mV. Ruhemembranpotenzial (~−70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen und wie du sie löst:**
+- "Nernst-Gleichung?" → E = E° **minus** (0,05916/n) · log(Q) — achte auf das Minuszeichen!
+- "Was ist der Nernst-Faktor?" → 59,16 mV pro Zehnerpotenz (25 °C)
+- "Nernst-Potenzial für K⁺?" → ca. −90 mV (viel innen, wenig außen)
+- "Ruhemembranpotenzial?" → ca. −70 mV, zwischen K⁺ und Na⁺
 
-**Zentral prüfungsrelevant:**
-- **Nernst:** E = E° − (0,05916/n)·log Q (25 °C); Q = [Red]/[Ox]; **Minuszeichen!** Hohes [Ox] → Q klein → E &gt; E°
-- **Nernst-Faktor:** 59,16 mV/Dekade (25 °C), 61,5 mV (37 °C); **Glaselektrode:** −59,16 mV pro pH-Einheit
-- **K aus E°:** K = 10^(n·E°/0,05916); Daniell K ≈ 10³⁷
-- **Nernst-Potenzial:** E_Ion = (RT/zF)·ln([außen]/[innen]); **K⁺** ≈ −90 mV, **Na⁺** ≈ +62 mV
-- **Ruhemembranpotenzial** ≈ −70 mV (zwischen E_K und E_Na, Goldman)
-
-**Ergänzend vertiefend:** Konzentrationszelle. Typische Fallen: Nernst mit Minuszeichen; hohes [Ox] → E größer (nicht kleiner); Ruhemembran zwischen E_K und E_Na; 37 °C: 61,5 mV.
-
-**Häufige Prüfungsfragen:**
-- "Nernst-Gleichung?" → E = E° − (0,05916/n)·log Q
-- "59 mV?" → Nernst-Faktor pro Dekade (25 °C) bzw. pro pH (Glaselektrode)
-- "E_K?" → ca. −90 mV (K⁺ innen hoch, außen niedrig)
-- "Ruhemembranpotenzial?" → ca. −70 mV, zwischen K⁺- und Na⁺-Nernst
-
-**Typische Prüfungsfallen:**
-- Nernst mit Minuszeichen; hohes [Ox] → E größer (nicht kleiner); Ruhemembran zwischen E_K und E_Na; 37 °C: 61,5 mV
-
-**Wichtige Begriffe & Definitionen:**
-- **Nernst-Gleichung:** E = E° − (RT/nF)·ln Q; verknüpft Potenzial mit Konzentration.
-- **Nernst-Potenzial:** Gleichgewichtspotenzial eines Ions über eine selektive Membran; kein Nettostrom.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- E = E° − (0,05916/n)·log Q; 59,16 mV (25 °C), 61,5 mV (37 °C); Glaselektrode −59,16 mV/pH; E_K ≈ −90 mV, E_Na ≈ +62 mV, Ruhemembran ≈ −70 mV; K = 10^(n·E°/0,05916)
+**Typische Fallen:**
+- Minuszeichen vergessen → Vorzeichen umgedreht
+- Hohes [Ox] → E wird **größer** (nicht kleiner!) — mehr Oxidationsmittel = stärkerer Antrieb
+- Ruhemembranpotenzial ist **nicht** gleich dem K⁺-Nernst, sondern liegt zwischen K⁺ und Na⁺
+- Bei 37 °C: Nernst-Faktor 61,5 mV (nicht 59,16 mV)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Nernst-Gleichung**: E = E° − (0,05916/n) · log(Q) bei 25 °C; Q = [Produkte]/[Edukte]
-- **Nernst-Faktor**: 59,16 mV pro Dekade in Q (bei 25 °C, n = 1); bei 37 °C ≈ 61,5 mV
-- **Hohe [Ox]**: Q klein → E > E°; **hohe [Red]**: Q groß → E < E°
-- **Gleichgewicht**: E = 0; K = 10^(n·E°/0,05916); großes E° → großes K
-- **Glaselektrode**: E_Membran = const − 0,05916 · pH; −59,16 mV pro pH-Einheit (25 °C)
-- **Nernst-Potenzial**: E_Ion = (RT/zF)·ln([außen]/[innen]); K⁺ ≈ −90 mV; Na⁺ ≈ +62 mV
-- **Ruhemembranpotenzial**: ≈ −70 mV (liegt zwischen K⁺- und Na⁺-Nernst-Potenzial)`,
+- **Nernst-Gleichung**: E = E° − (0,05916/n) · log(Q) — beschreibt, wie Konzentration die Spannung verändert
+- **Grundidee**: Mehr Oxidationsmittel → stärkerer Antrieb → E steigt. Mehr Reduktionsmittel → E sinkt.
+- **Nernst-Faktor**: 59,16 mV pro Zehnerpotenz (25 °C); bei 37 °C ~61,5 mV
+- **Glaselektrode**: misst pH durch Spannungsänderung (−59 mV pro pH-Einheit)
+- **K⁺-Nernst**: ~−90 mV | **Na⁺-Nernst**: ~+62 mV | **Ruhemembranpotenzial**: ~−70 mV`,
       lernziele: [
         "Die Nernst-Gleichung formulieren und auf konkrete Elektroden- und Zellpotenziale anwenden",
         "Den Einfluss von Konzentration und Temperatur auf Elektrodenpotenziale berechnen und interpretieren",
@@ -3606,12 +3530,11 @@ Die Henderson-Hasselbalch-Gleichung pH = pKa + log([A⁻]/[HA]) lässt sich dire
 
 ---
 
+{{DIAGRAM:enzyme-substrate}}
+
+{{DIAGRAM:covalent-bond}}
+
 ## Reaktive Sauerstoffspezies (ROS)
-
-![ROS](/grafik-ros.svg)
-
-
-![Redox in der Atmungskette](/grafik-redox.svg)
 
 
 Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.

@@ -31,9 +31,9 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Drüsenepithelien** und **Sekretionsarten** (merokrin, apokrin, holokrin) mit typischen Beispielen
 - **Pseudostratifiziert** vs. mehrschichtig und **Kartagener-Syndrom** (Dynein-Defekt, Zilien)
 
-![Zellmembran und Polarität](/grafik-zellmembran-integral-peripher.svg)
-
 ---
+
+{{DIAGRAM:cell-membrane}}
 
 ## Grundprinzip: Eigenschaften aller Epithelien
 
@@ -50,8 +50,6 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
 - **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
-
-{{DIAGRAM}}
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
 
@@ -80,6 +78,8 @@ export const bioKapAnatomieGewebe: Kapitel = {
 
 ---
 
+{{DIAGRAM:stem-cells}}
+
 ## Drüsenepithelien und Sekretionsarten
 
 **Bisher haben wir gesehen:** Oberflächenepithelien nach Form und Schichtung. **Viele Epithelien** bilden aber auch **Drüsen** — sie sezernieren Flüssigkeiten oder Schleim. **Um das einzuteilen,** unterscheidet man **exokrin** (mit Ausführungsgang) vs. **endokrin** (ohne Gang, direkt ins Blut) und die **Sekretionsmechanismen** exokriner Drüsen.
@@ -104,41 +104,18 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:**
-- Epithelien sind **polar** (apikal/basolateral), **avaskulär** und sitzen auf der **Basalmembran** (Verbindung zum Bindegewebe).
-- **Tight Junctions**: apikal, Barriere und Fence (trennen apikale von basolateraler Membrandomäne).
-- **Desmosomen**: mechanischer Zusammenhalt; **Gap Junctions**: Ionenaustausch (z. B. Herzmuskelzellen); **Hemidesmosomen**: Verankerung an Basalmembran.
-- **Flimmerepithel** (mehrreihig/pseudostratifiziert) → Trachea, Bronchien, Eileiter; **Urothel** (Schirmzellen) → Harnblase, Ureter.
-- **Verhorntes** Plattenepithel → Epidermis; **unverhorntes** Plattenepithel → Ösophagus, Vagina, Mundhöhle.
-- **Merokrin** = Exozytose (häufigste Form); **apokrin** = Abschnürung Zellspitze; **holokrin** = ganze Zelle wird Sekret (Talgdrüsen).
-- **Pseudostratifiziert** ≠ mehrschichtig: Alle Zellen berühren die Basalmembran, Kerne auf verschiedenen Höhen.
-- **Kartagener-Syndrom**: Dynein-Defekt → Kinozilien bewegungslos → Bronchiektasen, Infertilität, oft Situs inversus.
-
-**Ergänzend vertiefend:**
-- Becherzellen: einzelfellige Schleimdrüsen im Darm- und Atemwegsepithel (Muzin, merokrin).
-- Epidermis: Stratum basale → spinosum → granulosum → corneum (Korneozyten, Keratin).
-- Urothel-Schirmzellen: Uroplakin-Membranen aus Vesikeln, Dehnung ohne Riss.
-
-**Häufige Prüfungsfragen:**
-- Welches Epithel kleidet die Trachea aus? → Mehrreihiges (pseudostratifiziertes) Flimmerepithel.
-- Welches Epithel ermöglicht die Dehnung der Harnblase? → Urothel (Übergangsepithel) mit Schirmzellen.
-- Wo wird holokrin sezerniert? → Talgdrüsen (Glandulae sebaceae).
-- Was kennzeichnet pseudostratifiziertes Epithel? → Alle Zellen berühren die Basalmembran; Kerne auf unterschiedlichen Höhen.
-- Welche Funktion haben Tight Junctions? → Apikale Barriere und Fence (Trennung apikal/basolateral).
+**Typische Prüfungsfragen:**
+- Welches Epithel kleidet die Trachea aus? → Mehrreihiges (pseudostratifiziertes) Flimmerepithel
+- Welches Epithel ermöglicht die Dehnung der Harnblase? → Urothel mit Schirmzellen
+- Wo wird holokrin sezerniert? → Talgdrüsen (ganze Zelle = Sekret)
+- Welche Funktion haben Tight Junctions? → Apikale Barriere und Fence
 
 **Typische Prüfungsfallen:**
-- Pseudostratifiziert ≠ mehrschichtig (alle Zellen berühren Basalmembran!).
-- Plattenepithel verhornt (Epidermis) vs. unverhornt (Ösophagus, Vagina) — nicht verwechseln.
-- Tight Junctions (apikal, Barriere) vs. Gap Junctions (Ionenaustausch zwischen Zellen).
-- Desmosomen (mechanische Haftung Zelle–Zelle) vs. Hemidesmosomen (Verankerung Zelle–Basalmembran).
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Dünndarm-Mikrovilli: Resorptionsfläche ca. 200 m²
-- Kinozilien: 9+2-Axonemstruktur, ca. 6 µm Länge
+- Pseudostratifiziert ≠ mehrschichtig (alle Zellen berühren Basalmembran!)
+- Plattenepithel verhornt (Epidermis) vs. unverhornt (Ösophagus, Vagina) — nicht verwechseln
+- Tight Junctions (apikal, Barriere) vs. Gap Junctions (Ionenaustausch)
+- Desmosomen (Zelle-Zelle) vs. Hemidesmosomen (Zelle-Basalmembran)
 - Ca. 85 % aller Karzinome entstehen aus Epithelgewebe
-- Kartagener-Syndrom: Dynein-Arm-Defekt → Situs inversus, Bronchiektasen, Infertilität
 
 ---
 
@@ -150,7 +127,6 @@ Sekretionsmechanismen exokriner Drüsen:
 - **Pseudostratifiziert ≠ mehrschichtig**: Alle Zellen berühren Basalmembran, Kerne nur auf verschiedenen Höhen
 - **Drüsen**: merokrin (Exozytose, häufig), apokrin (Zellspitze), holokrin (ganze Zelle = Talgdrüse)
 - **Klinisch**: Kartagener-Syndrom (Dynein-Defekt → Zilien starr → Bronchiektasen, Infertilität, Situs inversus)`,
-      diagram: "cell-membrane",
       lernziele: [
         "Epitheltypen nach Form und Schichtung benennen und ihren Vorkommen zuordnen",
         "Polarität des Epithels, Basalmembran und wichtige Zellkontakte erklären",
@@ -289,6 +265,8 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ---
 
+{{DIAGRAM:stem-cells}}
+
 ## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
 **Um zu verstehen,** warum Bindegewebe so unterschiedlich aussehen kann (Sehne vs. Knorpel vs. Knochen), schauen wir zuerst, was **alle** Bindegewebe gemeinsam haben: Viel **mehr Matrix als Zellen**. Die **EZM** (der Raum zwischen den Zellen, gefüllt mit Fasern und Proteoglykanen) besteht aus:
@@ -305,8 +283,6 @@ Sekretionsmechanismen exokriner Drüsen:
 - **Mastzellen, Makrophagen**: Immunfunktionen
 
 > **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
-
-![Extrazelluläre Matrix und Knochenzellen](/grafik-12-ossifikation.svg)
 
 ---
 
@@ -350,9 +326,9 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
-![Knochenumbau und Ossifikation](/grafik-12-ossifikation.svg)
-
 ---
+
+{{DIAGRAM:animal-cell}}
 
 ## Knorpeltypen im Vergleich
 
@@ -393,39 +369,18 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:**
-- Bindegewebe: **Matrix dominiert über Zellen**; EZM aus Kollagen (Festigkeit), Elastin (Elastizität), Proteoglykanen (Wasser/Druck), Fibronektin (Adhäsion).
-- **Kollagen I**: Knochen, Sehnen, Haut, Kornea (zugfest, häufigster Typ). **Kollagen II**: Hyaliner Knorpel (druckresistent). **Kollagen III**: Gefäße, Wundheilung (dehnbar). **Kollagen IV**: Basalmembran (netzartig).
-- **Vitamin C** ist Cofaktor der Prolyl-/Lysylhydroxylase → ohne Vitamin C instabile Kollagenfibrillen → **Skorbut**.
-- **Osteoblast** (mesenchymal, baut auf) vs. **Osteoklast** (hämatopoetisch, resorbiert via HCl + Kathepsin K). **RANKL** aktiviert Osteoklasten, **OPG** hemmt RANKL. **Östrogen** ↑ OPG → Osteoporose bei Östrogenmangel.
-- **Knorpel**: Alle drei Typen **avaskulär** → schlechte Heilung. **Hyalin** = Kollagen II (Gelenk, Trachea). **Faser** = Kollagen I (Bandscheibe, Meniskus). **Elastisch** = Kollagen II + Elastin (Ohr, Epiglottis).
-- **Weißes Fett**: ein großer Lipidtropfen, Leptin (Sättigung), Adiponektin. **Braunes Fett**: viele Mitochondrien, **UCP-1** entkoppelt Atmungskette → Wärme (Thermogenese).
-
-**Ergänzend vertiefend:**
-- Bisphosphonate und Denosumab (RANKL-Antikörper) bei Osteoporose.
-- Arthrose = Degeneration des Hyalinknorpels; Bandscheibenvorfall = Prolaps durch Anulus fibrosus.
-
-**Häufige Prüfungsfragen:**
-- Welcher Kollagentyp in Sehnen und Knochen? → Kollagen Typ I.
-- Welche Zellen bauen Knochen ab, und aus welcher Linie? → Osteoklasten, hämatopoetisch (Monozyten/Makrophagen).
-- Warum heilt Knorpel schlecht? → Avaskulär (keine Gefäße), Ernährung nur durch Diffusion.
-- Was macht UCP-1 im braunen Fett? → Entkoppelt Atmungskette → Energie als Wärme (Thermogenese).
-- Wofür braucht der Körper Vitamin C bei der Kollagensynthese? → Cofaktor für Prolyl-/Lysylhydroxylase (Hydroxylierung → stabile Tripelhelix).
+**Typische Prüfungsfragen:**
+- Welcher Kollagentyp in Sehnen und Knochen? → Typ I (zugfest, häufigster Typ)
+- Welche Zellen bauen Knochen ab? → Osteoklasten (hämatopoetisch, Monozyten/Makrophagen)
+- Warum heilt Knorpel schlecht? → Avaskulär, Ernährung nur durch Diffusion
+- Was macht UCP-1 im braunen Fett? → Entkoppelt Atmungskette → Wärme statt ATP
+- Vitamin C bei der Kollagensynthese? → Cofaktor der Prolyl-/Lysylhydroxylase
 
 **Typische Prüfungsfallen:**
-- Kollagen I (Zugfest, Sehnen/Knochen) vs. Kollagen II (Druckresistent, Knorpel) — nicht vertauschen.
-- Hyalinknorpel (Gelenk, Kollagen II) vs. Faserknorpel (Bandscheibe, Kollagen I).
-- Osteoblasten (mesenchymal, aufbauend) vs. Osteoklasten (hämatopoetisch, abbauend).
-- Weißes Fett (ein Tropfen, Leptin) vs. braunes Fett (viele Mitochondrien, UCP-1, Thermogenese).
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Kollagen ≈ 30 % des Körperproteins
-- Knochenumbau ≈ 10 % der Knochenmasse/Jahr
-- Osteoklasten: Ruffled Border, HCl pH ~4,5, Kathepsin K
-- Vitamin-C-Mangel → Skorbut (instabile Fibrillen, Zahnfleischbluten, Wundheilungsstörung)
-- RANKL aktiviert Osteoklasten; OPG fängt RANKL ab (Denosumab = RANKL-Antikörper)
+- Kollagen I (Zugfest, Sehnen/Knochen) vs. Kollagen II (Druckresistent, Knorpel) — nicht vertauschen
+- Osteoblasten (mesenchymal, aufbauend) vs. Osteoklasten (hämatopoetisch, abbauend)
+- Weißes Fett (ein Tropfen, Leptin) vs. braunes Fett (viele Mitochondrien, UCP-1)
+- Kollagen ≈ 30 % des Körperproteins; Knochenumbau ≈ 10 %/Jahr
 
 ---
 
@@ -580,6 +535,8 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ---
 
+{{DIAGRAM:sarkomer}}
+
 ## Grundprinzip: Die drei Muskeltypen
 
 **Um die folgenden Abschnitte einzuordnen:** Zuerst der Überblick — welche Muskeltypen gibt es und wie unterscheiden sie sich?
@@ -595,8 +552,6 @@ Sekretionsmechanismen exokriner Drüsen:
 | Biomarker | CK-MM | **Troponin I/T**, CK-MB | — |
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
-
-![Herzzyklus und Kontraktion](/grafik-6-herzzyklus.svg)
 
 ---
 
@@ -617,9 +572,9 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
 
-{{DIAGRAM}}
-
 ---
+
+{{DIAGRAM:action-potential}}
 
 ## Troponin-Tropomyosin-Schalter: Wie Ca²⁺ Kontraktion auslöst
 
@@ -665,39 +620,18 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:**
-- **Sarkomer**: von Z-Scheibe zu Z-Scheibe. Bei Kontraktion: **I-Bande** und **H-Zone** werden kürzer, **A-Bande** bleibt konstant (Myosinlänge ändert sich nicht). Gleitfilamenttheorie: Filamente gleiten, schrumpfen nicht.
-- **Ca²⁺-Schalter**: Ca²⁺ bindet Troponin C → Tropomyosin weicht → Myosin bindet Aktin → Kraftschlag. **ATP** löst Myosin von Aktin (nicht für den Kraftschlag!); fehlt ATP → **Rigor mortis**.
-- **Drei Muskeltypen**: Skelett (willkürlich, mehrkernig, Tetanus möglich); Herz (quergestreift, einkernig, **Gap Junctions** in Glanzstreifen, **kein Tetanus**); glatt (keine Sarkomere, **Calmodulin/MLCK** statt Troponin, unwillkürlich).
-- **Herzmuskel**: elektrische Kopplung über Gap Junctions; lange Refraktärzeit verhindert Tetanus (wichtig für Pumpfunktion).
-- **Glatte Muskulatur**: Ca²⁺/Calmodulin → MLCK → Myosin-Phosphorylierung → Kontraktion; ausdauernde, unwillkürliche Tätigkeit (Darm, Gefäße).
-- **Troponin I und T** (kardiale Isoformen): Herzinfarkt-Marker, 3–6 h nach Infarkt nachweisbar.
-
-**Ergänzend vertiefend:**
-- Motorische Einheit = 1 Motoneuron + alle innervierten Fasern; Kraft durch Rekrutierung und Frequenzerhöhung (Tetanus).
-- Titin (Ruhespannung), Nebulin (Aktinlänge).
-
-**Häufige Prüfungsfragen:**
-- Welche Sarkomerbanden werden bei Kontraktion kürzer? → I-Bande und H-Zone; A-Bande konstant.
-- Wofür wird ATP im Kreuzbrückenzyklus benötigt? → Zum Lösen des Myosins von Aktin (nicht für den Kraftschlag).
-- Warum kann der Herzmuskel keinen Tetanus entwickeln? → Lange absolute Refraktärzeit, fast so lang wie die Kontraktion.
-- Was unterscheidet glatte von quergestreifter Muskulatur? → Kein Troponin, Calmodulin/MLCK; keine Sarkomere.
-- Warum steigt Troponin bei Herzinfarkt? → Freisetzung aus geschädigten Kardiomyozyten (cTnI, cTnT).
+**Typische Prüfungsfragen:**
+- Welche Sarkomerbanden werden bei Kontraktion kürzer? → I-Bande und H-Zone; A-Bande konstant
+- Wofür wird ATP im Kreuzbrückenzyklus benötigt? → Zum Lösen des Myosins von Aktin (nicht für den Kraftschlag!)
+- Warum kann der Herzmuskel keinen Tetanus entwickeln? → Lange absolute Refraktärzeit
+- Was unterscheidet glatte von quergestreifter Muskulatur? → Kein Troponin, Calmodulin/MLCK statt Troponin; keine Sarkomere
 
 **Typische Prüfungsfallen:**
-- A-Bande bleibt konstant (Myosin) — nicht I-Bande. I-Bande und H-Zone werden kürzer.
-- ATP wird für das **Lösen** (nicht für den Kraftschlag) benötigt; Rigor mortis = kein ATP.
-- Herzmuskel: quergestreift, aber einkernig und mit Gap Junctions (nicht wie Skelettmuskel).
-- Glatte Muskulatur: Calmodulin/MLCK, keine Sarkomere, kein Troponin.
-- Tetanus im Herzmuskel unmöglich (Refraktärzeit).
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Sarkomerlänge in Ruhe: ca. 2,2 µm
-- Troponin I/T: 3–6 h nach Infarkt nachweisbar, bis ~14 Tage erhöht
-- Motorische Einheit: ~10 Fasern (Feinmotorik) bis ~2000 Fasern (Grobmotorik)
-- Rigor mortis: löst sich nach 24–48 h (Proteolyse)
+- A-Bande bleibt konstant (= Myosinlänge) -- I-Bande und H-Zone werden kürzer
+- ATP = Lösen, nicht Kraftschlag; Rigor mortis = kein ATP
+- Herzmuskel: quergestreift, aber einkernig + Gap Junctions + kein Tetanus
+- Glatte Muskulatur: Calmodulin/MLCK, keine Sarkomere, kein Troponin
+- Troponin I/T: 3-6 h nach Infarkt, bis ~14 Tage erhöht; Rigor mortis nach 24-48 h
 
 ---
 
@@ -716,7 +650,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Die drei Muskeltypen strukturell und funktionell vergleichen",
       ],
       sections: [],
-      diagram: "sarkomer",
 
       merksätze: [
         "Sarkomer: Z-Z-Grenzen; bei Kontraktion kürzer werden I-Bande und H-Zone; A-Bande bleibt konstant.",
@@ -855,6 +788,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:action-potential}}
+
 ## Grundprinzip: Aufbau eines Neurons
 
 **Um Nervenleitung zu verstehen,** brauchst du zuerst den Bauplan einer Nervenzelle. **Neuron = Grundbaustein der Nervenleitung:**
@@ -865,8 +800,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 - **Präsynaptische Endknöpfchen**: Vesikel mit Neurotransmittern → Synapse zum nächsten Neuron
 
 **Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
-
-{{DIAGRAM}}
 
 ---
 
@@ -907,7 +840,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 > **Merke:** Saltatorisch = springt von Schnürring zu Schnürring: **120 m/s** vs. **2 m/s** kontinuierlich. Energiesparend, weil Na⁺/K⁺-ATPase nur an Schnürringen aktiv.
 
-![Membranpotential und Nernst-Gleichung](/grafik-nernst.svg)
+{{DIAGRAM:synapse}}
 
 ---
 
@@ -940,38 +873,18 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:**
-- **Neuron**: Soma (Zellkörper), **Dendriten** (leiten zum Soma hin, Input), **Axon** (leitet vom Soma weg, Output). **Axonhügel**: Ort der Aktionspotential-Initiation (höchste Na⁺-Kanaldichte).
-- **Schwann-Zelle** (PNS): myelinisiert **1 Segment** eines Axons. **Oligodendrozyt** (ZNS): myelinisiert **bis 50 Segmente** verschiedener Axone.
-- **Saltatorische Leitung**: AP springt von **Ranvier-Schnürring** zu Schnürring; myelinisierte Fasern **70–120 m/s**, unmyelinisierte C-Fasern **0,5–2 m/s**; energiesparend (Na⁺/K⁺-ATPase nur an Schnürringen).
-- **Astrozyten**: induzieren **Blut-Hirn-Schranke** (Tight Junctions im Endothel), K⁺-Puffer, Glutamat-Reuptake; bilden Tight Junctions **nicht selbst**, sondern induzieren sie im Kapillarendothel.
-- **Mikroglia**: einzige **mesodermale** Gliazelle (Makrophagen des ZNS); alle anderen Gliazellen neuroektodermal.
-- **PNS**: Regeneration möglich (Büngner-Bänder, neurotrophe Faktoren). **ZNS**: kaum Regeneration (Nogo-A, Glianarbe nach Verletzung).
-- **Multiple Sklerose**: Demyelinisierung im ZNS (Oligodendrozyten geschädigt) → Leitungsverlangsamung/-block.
-
-**Ergänzend vertiefend:**
-- Ependymzellen: Liquorproduktion (Plexus choroideus). Fasertypen Aα (motorisch, 70–120 m/s) vs. C (Schmerz, 0,5–2 m/s).
-- Na⁺-Kanal Nav1.6 an Ranvier-Schnürringen.
-
-**Häufige Prüfungsfragen:**
-- Über welche Fortsätze wird Erregung vom Zellkörper weggeleitet? → Axon (nicht Dendriten).
-- Schwann-Zelle vs. Oligodendrozyt? → Schwann (PNS, 1 Segment); Oligodendrozyt (ZNS, bis 50 Segmente).
-- Warum ist saltatorische Leitung schneller? → AP springt nur an Schnürringen, dazwischen passive Ausbreitung; weniger Ionenfluss, weniger ATP.
-- Welche Gliazelle ist mesodermalen Ursprungs? → Mikroglia (Makrophagen des ZNS).
-- Wer induziert die Blut-Hirn-Schranke? → Astrozyten (induzieren Tight Junctions im Endothel).
+**Typische Prüfungsfragen:**
+- Erregung vom Zellkörper weg -- welcher Fortsatz? → Axon (nicht Dendriten)
+- Schwann-Zelle vs. Oligodendrozyt? → Schwann: PNS, 1 Segment; Oligodendrozyt: ZNS, bis 50 Segmente
+- Warum ist saltatorische Leitung schneller? → AP springt an Schnürringen, dazwischen passive Ausbreitung
+- Welche Gliazelle ist mesodermalen Ursprungs? → Mikroglia (Makrophagen des ZNS)
+- Wer induziert die Blut-Hirn-Schranke? → Astrozyten (induzieren Tight Junctions im Endothel)
 
 **Typische Prüfungsfallen:**
-- Schwann-Zelle = **1** Segment (PNS); Oligodendrozyt = **bis 50** Segmente (ZNS) — nicht vertauschen.
-- Astrozyten **induzieren** Tight Junctions der BHS, bilden sie aber **nicht selbst** (liegen im Endothel).
-- Mikroglia (Immunzellen, mesoderm) vs. Astrozyten (Stützung, BHS, neuroektoderm).
-- Axonhügel = Initiation des AP; Ranvier-Schnürringe = Regeneration des AP entlang des Axons.
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Aα-Fasern (myelinisiert): 70–120 m/s; C-Fasern (unmyelinisiert): 0,5–2 m/s
-- Ein Oligodendrozyt: bis 50 Axonsegmente
-- Na⁺-Kanaldichte an Ranvier-Schnürringen hoch (Nav1.6)
+- Schwann-Zelle = **1** Segment (PNS); Oligodendrozyt = **bis 50** Segmente (ZNS) -- nicht vertauschen
+- Astrozyten **induzieren** Tight Junctions der BHS, bilden sie aber **nicht selbst**
+- Mikroglia = mesoderm; alle anderen Gliazellen = neuroektodermal
+- Aα-Fasern: 70-120 m/s; C-Fasern: 0,5-2 m/s
 
 ---
 
@@ -990,7 +903,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Saltatorische Erregungsleitung erklären und ihren Vorteil gegenüber kontinuierlicher Leitung benennen",
       ],
       sections: [],
-      diagram: "action-potential",
 
       merksätze: [
         "Oligodendrozyten (ZNS) vs. Schwann-Zellen (PNS): Beide myelinisieren; Schwann-Zellen fördern PNS-Regeneration.",
@@ -1132,6 +1044,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:nervensystem-übersicht}}
+
 ## Autonomes Nervensystem — Sympathikus und Parasympathikus
 
 **Um das vegetative Nervensystem einzuordnen,** betrachten wir zuerst Aufbau und Gegenspieler. Das vegetative Nervensystem (ANS) reguliert Herzfrequenz, Blutdruck, Atmung, Verdauung und Sekretion ohne bewusste Kontrolle. Beide Systeme besitzen eine **zweineuronalige Verschaltung**: präganglionäres Neuron → Ganglion → postganglionäres Neuron → Effektor. Der grundlegende Unterschied liegt in Ursprung, Ganglionlage, Neurotransmitter und Rezeptoren:
@@ -1152,10 +1066,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 | Blase | Sphinkter-Kontraktion (α1) | Detrusor-Kontraktion (M3) |
 | Leber | Glykogenolyse ↑ (β2) | — |
 | Neurotransmitter | Noradrenalin | Acetylcholin |
-
-![Autonome Regulation und Achsen](/grafik-5-hypophysen-achsen.svg)
-
-![Redox-Grundprinzip (OIL RIG)](/grafik-redox.svg)
 
 ---
 
@@ -1180,6 +1090,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:synapse}}
+
 ## Aktionspotential
 
 **Bisher haben wir gesehen:** An der Synapse entstehen EPSP und IPSP. **Damit ein Signal über weite Strecken läuft,** wird es als **Aktionspotential** codiert. Das Ruhepotential beträgt ~-70 mV und wird durch Na⁺/K⁺-ATPase und K⁺-Leckkanäle aufrechterhalten. Bei Schwellenreizung (~-55 mV) öffnen spannungsgesteuerte Na⁺-Kanäle, Depolarisation auf +40 mV, dann Repolarisation durch K⁺-Kanäle und Inaktivierung der Na⁺-Kanäle.
@@ -1196,6 +1108,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:action-potential}}
+
 ## Reflexbogen
 
 **Bisher haben wir gesehen:** Von der Synapse über das Aktionspotential bis zur saltatorischen Leitung. **Die einfachste verschaltete Antwort** des Nervensystems ist der **Reflex** — ohne bewusste Steuerung. Der Reflexbogen besteht aus Rezeptor, afferenter Faser, (Interneuron), efferenter Faser und Effektor. Der monosynaptische Eigenreflex (z.B. Patellarsehnenreflex) verbindet Ia-Faser direkt mit dem α-Motoneuron ohne Interneuron. Polysynaptische Fremdreflexe (z.B. Fluchtreflex) schalten mehrere Interneurone ein.
@@ -1210,29 +1124,21 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Vegetatives Nervensystem (Sympathikus vs. Parasympathikus), Wirkung auf Herz/Bronchien/Pupille/GI-Trakt, Acetylcholin vs. Noradrenalin, Rezeptoren (nikotinisch/muskarinisch, α/β). **Atem- und Kreislaufzentrum** befinden sich im **Hirnstamm** (Medulla oblongata + Pons) — nicht im Großhirn, Kleinhirn oder Rückenmark.
-
-**Ergänzend vertiefend:** Enterisches NS.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Sympathikus vs. Parasympathikus: Wirkung auf Herz, Bronchien, Pupille, GI-Trakt
 - Ablauf des Aktionspotentials (Phasen, Ionenkanäle, Refraktärzeit)
 - Synaptische Transmission: SNARE-Komplex, ionotrope vs. metabotrope Rezeptoren
+- Wo liegen Atem- und Kreislaufzentrum? → Hirnstamm (Medulla oblongata + Pons)
 
 **Typische Prüfungsfallen:**
-- **„Verminderung der Schlagfrequenz des Herzens“ ist KEINE Wirkung des Sympathikus** — das ist Parasympathikus (M2, Vagus). Sympathikus **erhöht** Herzfrequenz (β1).
+- **„Verminderung der Schlagfrequenz des Herzens” ist KEINE Wirkung des Sympathikus** — das ist Parasympathikus (M2, Vagus). Sympathikus **erhöht** Herzfrequenz (β1).
 - Sympathikus: Noradrenalin postganglionär, aber ACh präganglionär (im Ganglion nikotinisch!)
 - EPSP (Glutamat, Depolarisation) vs. IPSP (GABA, Hyperpolarisation)
 - Absolute Refraktärzeit (Na⁺-Kanäle inaktiviert, KEIN AP) vs. relative (überschwelliger Reiz nötig)
 - Monosynaptischer Eigenreflex (1 Synapse, Ia-Faser direkt) vs. polysynaptischer Fremdreflex (Interneurone)
 - NMDA-Rezeptor: Mg²⁺-Block bei Ruhepotential, Koinzidenzdetektor für Lernen
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Ruhepotential: ca. -70 mV; Schwelle: ca. -55 mV; Overshoot: ca. +40 mV
-- Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein (elektrogen)
-- Saltatorische Leitung: bis 120 m/s; unmyelinisiert: ca. 1 m/s
+- Ruhepotential ca. -70 mV, Schwelle ca. -55 mV, Overshoot ca. +40 mV
+- Saltatorische Leitung bis 120 m/s vs. unmyelinisiert ca. 1 m/s
 - N. vagus (X): wichtigster parasympathischer Nerv (Herz, Lunge, GI-Trakt bis linke Kolonflexur)
 
 ---
@@ -1255,7 +1161,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Den Unterschied zwischen monosynaptischem (Patellarsehnenreflex) und polysynaptischem Reflex (Fluchtreflex) anhand des Reflexbogens darstellen.",
       ],
       sections: [],
-      diagram: "nervensystem-übersicht",
 
       merksätze: [
         "**Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).",
@@ -1375,6 +1280,12 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:sinnesorgane}}
+
+{{DIAGRAM:nervensystem-übersicht}}
+
+{{DIAGRAM:sinnesorgane}}
+
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
 **Um die Sinnesorgane zu vergleichen,** betrachten wir zuerst das gemeinsame Prinzip: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
@@ -1423,12 +1334,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 > **Merke:** Licht → Rhodopsin → Transducin → PDE → cGMP ↓ → Na⁺-Kanäle schließen → **Hyperpolarisation** → Glutamat ↓. Akkommodation (Nah): Ziliarmuskel kontrahiert → Zonulafasern entspannen (nicht spannen!) → Linse wölbt sich.
 
-![Fototransduktion und Sinnesorgane](/grafik-transduktion-sinne.svg)
-
-
-![Auge und Akkommodation](/grafik-optik-lupe.svg)
-
-
 ---
 
 ## Ohr — Schallübertragung und Hörphysiologie
@@ -1471,6 +1376,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 > **Merke:** Süß/Umami/Bitter via GPCR (Second Messenger cAMP/Ca²⁺). Sauer/Salzig direkt ionisch. Geruch: ~400 olfaktorische Rezeptortypen, N. olfactorius → Bulbus → limbisches System (OHNE Thalamus!).
 
+{{DIAGRAM:nervensystem-übersicht}}
+
 ---
 
 ## Haut — Schichten und Rezeptortypen
@@ -1504,13 +1411,7 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Fototransduktion (Rhodopsin → Transducin → PDE → cGMP↓ → Kanal schließt → Hyperpolarisation), Stäbchen vs. Zapfen, Dunkelstrom, Adaptation.
-
-**Ergänzend vertiefend:** Farbsehen.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Fototransduktionskaskade: Rhodopsin → Transducin → PDE → cGMP ↓ → Hyperpolarisation
 - Stäbchen vs. Zapfen: Lokalisation, Empfindlichkeit, Pigmente
 - Schallübertragung und Impedanzanpassung im Mittelohr
@@ -1523,13 +1424,8 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 - Basilarmembran-Tonotopie: Basis (steif, schmal) = hohe Frequenzen; Apex (flexibel, breit) = niedrige Frequenzen
 - **Ziliarkörper** ist primär für die **Änderung der Linsenkrümmung** (Akkommodation) nötig — nicht Hornhaut, Glaskörper, Regenbogenhaut oder äußere Augenmuskeln.
 - Akkommodation: Ziliarmuskel kontrahiert → Zonulafasern ENTSPANNEN → Linse wölbt sich (nicht umgekehrt!)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Ca. 120 Mio. Stäbchen, ca. 6 Mio. Zapfen pro Retina
-- Impedanzanpassung der Gehörknöchelchen: ca. 22-fach
-- Hörbereich: 20 Hz -- 20 kHz
-- TRPV1: aktiviert bei >43 °C und durch Capsaicin; TRPM8: aktiviert bei ca. 25 °C und durch Menthol
-- Presbyopie ab ca. 45 Jahren: Linse verliert Elastizität
+- Ca. 120 Mio. Stäbchen, ca. 6 Mio. Zapfen; Impedanzanpassung ca. 22-fach; Hörbereich 20 Hz -- 20 kHz
+- TRPV1 >43 °C / Capsaicin; TRPM8 ca. 25 °C / Menthol; Presbyopie ab ca. 45 Jahren
 
 ---
 
@@ -1551,7 +1447,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Die drei Schichten der Haut und die fünf Typen der Hautrezeptoren mit ihren Modalitäten und Adaptationsgeschwindigkeiten nennen.",
       ],
       sections: [],
-      diagram: "sinnesorgane",
 
       merksätze: [
         "**Photorezeptoren:** **Stäbchen** (skotopisch [Dämmerung], Rhodopsin [11-cis-Retinal + Opsin, λ_max ~500 nm], ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung). **Zapfen** (photopisch [Tageslicht, Farben], 3 Opsine [S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm], ~6 Mio., Fovea centralis, niedrige Empfindlichkeit, hohe Auflösung [1:1 Ganglienzelle]).",
@@ -1674,6 +1569,12 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 ---
 
+{{DIAGRAM:hormonsystem}}
+
+{{DIAGRAM:menstrual-cycle}}
+
+{{DIAGRAM:hormonsystem}}
+
 ## Hormonklassen und Wirkungsmechanismen
 
 **Um das endokrine System einzuordnen,** beginnen wir mit den **Hormonklassen** und wie sie wirken. Peptidhormone (Insulin, ACTH, TSH) sind hydrophil und wirken über Membranrezeptoren mit Second Messengern (cAMP, IP₃, Ca²⁺) – schnelle Wirkung in Minuten. Steroidhormone (Cortisol, Aldosteron, Testosteron) sind lipophil, passieren die Membran und binden intrazelluläre Rezeptoren im Zellkern, die die Genexpression regulieren – langsame Wirkung in Stunden. T₃/T₄ sind lipophile Aminosäurederivate und wirken ähnlich wie Steroidhormone.
@@ -1704,6 +1605,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Insulin vs. Glukagon:** Insulin (β-Zellen, nach Mahlzeit): GLUT4-Translokation ↑ (Muskel/Fett), Glykogensynthese ↑ (Leber), Lipolyse ↓, Proteinaufbau ↑ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Typ-1-DM: β-Zell-Zerstörung. Typ-2-DM: Insulinresistenz + relativer Mangel.
 
+{{DIAGRAM:nervensystem-übersicht}}
+
 ---
 
 ## Regelkreise und negative Rückkopplung
@@ -1712,27 +1615,15 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.
 
-![Hypophysen-Achsen](/grafik-5-hypophysen-achsen.svg)
-
-
-![Regelkreise und Homöostase](/grafik-puffer.svg)
-
-
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Peptidhormone (membranständiger Rezeptor, schnell) vs. Steroidhormone (Kernrezeptor, langsam, genexpression), Beispiele (Insulin, Cortisol, Schilddrüsenhormon), Hypophysenachsen. **Somatotropin (Wachstumshormon, GH)** wird in der **Hypophyse** gebildet (nicht Schilddrüse, Nebenniere, Nebenschilddrüse, Keimdrüsen); zu viel bei Kindern → Riesenwuchs, zu wenig → Zwergwuchs. **Glukagon** wird von **α-Zellen** der Langerhans-Inseln (Pankreas) gebildet — neben Insulin wichtig für Blutzucker (Glukagon ↑ bei Fasten). **Pepsinogen** (inaktive Vorstufe von Pepsin) wird in der **Magenschleimhaut** gebildet (Hauptzellen), nicht in Bauchspeicheldrüse, Leber oder Mundspeicheldrüsen. Die **Galle** (aus der Gallenblase) wird in den **Dünndarm** abgegeben (nicht in Magen, Leber, Pfortader oder Dickdarm).
-
-**Ergänzend vertiefend:** Second Messenger.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Peptidhormone vs. Steroidhormone: Rezeptortyp, Wirkgeschwindigkeit, Beispiele
-- Wo wird Somatotropin gebildet? (Hypophyse)
-- Wo wird Pepsinogen gebildet? (Magenschleimhaut)
-- Wohin wird Galle abgegeben? (Dünndarm)
+- Wo wird Somatotropin gebildet? → Hypophyse (nicht Schilddrüse, Nebenniere)
+- Wo wird Pepsinogen gebildet? → Magenschleimhaut (Hauptzellen)
+- Wohin wird Galle abgegeben? → Dünndarm (nicht Magen)
 - Primäre vs. sekundäre Hypothyreose: TSH-Werte als Schlüssel zur Differenzierung
 - Insulin-Sekretionsmechanismus: GLUT2 → ATP ↑ → K-ATP schließen → Ca²⁺ → Exozytose
 
@@ -1742,13 +1633,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 - Cortisol: Glukoneogenese ↑ (Blutzucker steigt, diabetogene Wirkung!)
 - Insulin senkt Blutzucker, Glukagon hebt ihn -- nicht verwechseln!
 - Aldosteron (Zona glomerulosa, RAAS) vs. Cortisol (Zona fasciculata, CRH-ACTH-Achse)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Schilddrüse: TPO jodiert Tyrosin; 2×DIT → T₄, MIT+DIT → T₃
-- Insulin: β-Zellen (65--80 % der Langerhans-Inseln), Glukagon: α-Zellen (15--20 %)
-- Adrenalin: 80 % der Nebennierenmark-Sekretion, Noradrenalin: 20 %
-- PTH erhöht Ca²⁺, Calcitonin senkt Ca²⁺
-- Hashimoto-Thyreoiditis: häufigste Autoimmunerkrankung
+- Insulin: β-Zellen (65--80 %), Glukagon: α-Zellen (15--20 %); Adrenalin 80 % / Noradrenalin 20 % im NNM
+- PTH erhöht Ca²⁺, Calcitonin senkt Ca²⁺; Hashimoto = häufigste Autoimmunerkrankung
 
 ---
 
@@ -1856,7 +1742,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
           tags: ["insulin", "glukagon", "blutzucker"],
         },
       ],
-      diagram: "hormonsystem",
 
       merksätze: [
         "**Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).",
@@ -1895,15 +1780,13 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 - **Großer vs. kleiner Kreislauf** und **Blutdruckregulation** (RAAS, Barorezeptoren)
 - **Herzzyklus** und typische Werte (Auswurffraktion, Druckverhältnisse)
 
-{{DIAGRAM}}
-
 ---
+
+{{DIAGRAM:blutkreislauf}}
 
 ## Herzaufbau und Klappen
 
 **Um Herz und Kreislauf zu verstehen,** beginnen wir mit **Aufbau und Klappen**. Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv. **Systole** (Kontraktionsphase: Ventrikel pumpen Blut aus) und **Diastole** (Relaxationsphase: Ventrikel füllen sich mit Blut). Die Auswurffraktion beträgt in Ruhe ~55–70 % des enddiastolischen Volumens.
-
-![Herzzyklus](/grafik-6-herzzyklus.svg)
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
@@ -1915,6 +1798,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Erregungsleitung:** SA-Knoten startet (60–80), AV-Knoten verzögert, His-Bündel leitet, Tawara teilt, Purkinje sprintet von Spitze nach oben! (SA → AV [Verzögerung] → His → Tawara [re/li] → Purkinje [Spitze → Basis])
 
+{{DIAGRAM:heart-anatomy}}
+
 ---
 
 ## Kreislauf und Blutgefäße
@@ -1924,6 +1809,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 > **Merke:** **Kreisläufe:** Rechts = Lunge (klein, niedrig), Links = Körper (groß, hoch) – Lungenarterie hat O₂-armes Blut, Lungenvene hat O₂-reiches Blut! (Kleiner Kreislauf: RV → Lungenarterie → Lunge → Lungenvene → LA; Großer Kreislauf: LV → Aorta → Körper → Venen → RA)
 
 ---
+
+{{DIAGRAM:cardiac-conduction}}
 
 ## Blutdruckregulation
 
@@ -1935,13 +1822,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Erregungsleitung (SA-Knoten → AV-Knoten → His-Bündel → Tawara-Schenkel → Purkinje-Fasern), AV-Verzögerung (Vollständige Ventrikelfüllung), Schrittmacher, EKG (P, QRS, T).
-
-**Ergänzend vertiefend:** Automatiezentren.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Erregungsleitung: Reihenfolge SA → AV → His → Tawara → Purkinje und Bedeutung der AV-Verzögerung
 - Kleiner vs. großer Kreislauf: Verlauf und Druckverhältnisse
 - Blutdruckregulation: Barorezeptorreflex (kurzfristig) vs. RAAS (langfristig)
@@ -1952,13 +1833,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 - SA-Knoten (primärer Schrittmacher, 60--80/min) vs. AV-Knoten (Backup, 40--60/min)
 - Arteriolen = Widerstandsgefäße (TPR) vs. Venen = Kapazitätsgefäße (70 % des Blutvolumens)
 - Windkesselfunktion: Aorta wandelt pulsatilen in kontinuierlichen Fluss um
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- LV-Wanddicke: 10--15 mm; RV: 3--5 mm
-- HZV in Ruhe: ca. 5 L/min; Belastung: bis 25 L/min
-- AV-Verzögerung: ca. 100 ms
-- **Normaler Blutdruck** (junger Erwachsener, Ruhe): systolisch **~115 mmHg** (bzw. 120/80 mmHg); Lungenkreislauf: 25/10 mmHg
-- Kapillaroberfläche: ca. 600 m² für Stoffaustausch
+- LV-Wanddicke 10--15 mm (3x RV); HZV Ruhe ca. 5 L/min; AV-Verzögerung ca. 100 ms
+- Normaler Blutdruck ~120/80 mmHg; Lungenkreislauf 25/10 mmHg; Kapillaroberfläche ca. 600 m²
 
 ---
 
@@ -2062,7 +1938,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
           tags: ["arterien", "venen", "kapillaren"],
         },
       ],
-      diagram: "blutkreislauf",
 
       merksätze: [
         "**Herzaufbau:** 4 Kammern (RA, RV, LA, LV), 3 Wandschichten (Endokard, Myokard, Epikard). LV-Wand ~10–15 mm (3× dicker als RV ~3–5 mm) → Systemwiderstand (~120 mmHg). Perikard = Herzbeutel (Perikardhöhle, ~50 mL Flüssigkeit). Koronararterien versorgen Herzmuskel (LCA: R. interventricularis anterior/RIVA, R. circumflexus; RCA: R. nodi sinuatrialis, R. interventricularis posterior).",
@@ -2103,6 +1978,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ---
 
+{{DIAGRAM:blutbestandteile}}
+
 ## Erythrozyten und Hämoglobin
 
 **Um die Bestandteile des Blutes einzuordnen,** beginnen wir mit den **Erythrozyten** — sie transportieren O₂. Erythrozyten sind bikonkave Scheiben **ohne Zellkern** (reife menschliche Erythrozyten haben keinen Zellkern!) mit Hämoglobin (Tetramer 2α2β, Fe²⁺). **Mittlerer Durchmesser ~7,5 µm** (= 7,5×10⁻⁶ m; nicht 7,5 nm, nicht 7,5 mm). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).
@@ -2133,11 +2010,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Gerinnungskaskade:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin! (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)
 
-![Blutgerinnung](/grafik-7-gerinnung.svg)
-
-
-![Positive Rückkopplung und Kaskade](/grafik-19-komplement.svg)
-
+{{DIAGRAM:immune-response}}
 
 ---
 
@@ -2151,30 +2024,19 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** O₂-Bindungskurve (S-Form), Bohr-Effekt (pH↓, CO₂↑, Temperatur↑ → Kurve rechts, O₂-Abgabe erleichtert), Hämoglobin, 2,3-BPG, Kooperativität.
-
-**Ergänzend vertiefend:** Fetal-Hb.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Bohr-Effekt: Welche Faktoren verschieben die O₂-Bindungskurve nach rechts?
 - AB0-Blutgruppen: Antigene, Antikörper, Universalspender/-empfänger
 - Gerinnungskaskade: Extrinsisch (TF+VII) vs. intrinsisch (XII), gemeinsame Endstrecke
 
 **Typische Prüfungsfallen:**
-- **Serum vs. Plasma:** Unterschied = **Gerinnungsfaktoren**. **Plasma** enthält Fibrinogen und andere Gerinnungsfaktoren (Blut + Antikoagulans). **Serum** = Plasma **ohne** Gerinnungsfaktoren (nach Gerinnung abgetrennt). Serum ≠ Plasma wegen Fehlen der Gerinnungsfaktoren.
+- **Serum vs. Plasma:** Unterschied = **Gerinnungsfaktoren**. **Plasma** enthält Fibrinogen und andere Gerinnungsfaktoren (Blut + Antikoagulans). **Serum** = Plasma **ohne** Gerinnungsfaktoren (nach Gerinnung abgetrennt).
 - AB0-Antikörper sind natürlich vorhanden (IgM), Rhesus-Antikörper erst nach Sensibilisierung (IgG)
 - Hämophilie A = Faktor VIII-Mangel (nicht IX); Hämophilie B = Faktor IX
 - Fe²⁺ in Hämoglobin (O₂-bindend) vs. Fe³⁺ = Methämoglobin (kann kein O₂ binden)
 - Linksverschiebung im Blutbild = unreife Stabkernige ↑ (akute Infektion), nicht Linksverschiebung der O₂-Kurve
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Erythrozyten-Lebensdauer: ca. 120 Tage, Abbau in der Milz
-- Neutrophile: 50--70 % der Leukozyten (erste Verteidigungslinie)
-- Vitamin K: Faktoren II, VII, IX, X (Merkhilfe: "1972")
-- Thrombozyten: 150.000--400.000/µL; Spontanblutung bei <20.000/µL
-- Rh+ bei ca. 85 % der Bevölkerung
+- Erythrozyten-Lebensdauer ca. 120 Tage; Neutrophile 50--70 % der Leukozyten; Vitamin K-Faktoren: II, VII, IX, X ("1972")
+- Thrombozyten 150.000--400.000/µL (Spontanblutung <20.000/µL); Rh+ bei ca. 85 %
 
 ---
 
@@ -2278,7 +2140,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
           tags: ["ab0-system", "blutgruppen", "antigene"],
         },
       ],
-      diagram: "blutbestandteile",
 
       merksätze: [
         "**Hämatopoese:** Alle Blutzellen entstammen der pluripotenten hämatopoetischen Stammzelle (Knochenmark). Myeloische Linie: Erythrozyten, Thrombozyten, Granulozyten (Neutrophile, Eosinophile, Basophile), Monozyten/Makrophagen. Lymphoide Linie: T-Zellen (Thymus), B-Zellen (Knochenmark), NK-Zellen. EPO (Niere) → Erythropoese ↑. G-CSF → Neutrophilen-Produktion ↑.",
@@ -2319,17 +2180,13 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 ---
 
+{{DIAGRAM:immune-response}}
+
 ## Angeborene Immunität
 
 **Um das Immunsystem zu verstehen,** unterscheidet man **angeborene** (schnell, unspezifisch) und **erworbene** (spezifisch, Gedächtnis) Immunität. Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Das Komplementsystem kann über drei Wege aktiviert werden: **Klassischer Weg** (Antigen-Antikörper-Komplexe aktivieren C1q), **Lektin-Weg** (Mannose-bindendes Lektin/MBL erkennt Pathogenzucker), **Alternativer Weg** (spontane C3-Hydrolyse + Verstärkungsschleife auf Pathogenoberflächen). Alle drei Wege münden in C3-Spaltung → C3a (Anaphylatoxin) + C3b (Opsonin) → MAC-Bildung. Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
 
 > **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
-
-![Immunsystem](/grafik-8-immunitaet.svg)
-
-
-![Komplement und Kaskaden](/grafik-19-komplement.svg)
-
 
 ---
 
@@ -2338,6 +2195,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 **Bisher haben wir gesehen:** Angeborene Immunität und Komplement. **Die spezifische Abwehr** liefern **T- und B-Zellen**. CD4⁺ T-Helferzellen (MHC II, koordinieren B-Zellen und CTL), CD8⁺ zytotoxische T-Zellen (MHC I, töten virusinfizierte Zellen/Tumorzellen per Perforin/Granzyme), Treg (Selbsttoleranz). B-Zellen produzieren Antikörper (Plasmazellen) und bilden Gedächtniszellen. Klonale Selektion → klonale Expansion bei Antigenerstkontak.
 
 > **Merke:** **MHC-Präsentation:** MHC I auf ALLEN Zellen zeigt CD8⁺ Viren (innen), MHC II auf APCs zeigt CD4⁺ Bakterien (außen)! (MHC I → CD8⁺ → intrazelluläre Pathogene; MHC II → CD4⁺ → extrazelluläre Pathogene)
+
+{{DIAGRAM:blutbestandteile}}
 
 ---
 
@@ -2348,6 +2207,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 > **Merke:** **Antikörper-Klassen:** IgM = Erste (Pentamer, Primär), IgG = Gedächtnis (Sekundär, Plazenta), IgA = Schleimhaut (Dimer), IgE = Allergie (Mastzellen)! (IgM → akut, IgG → chronisch/Impfung, IgA → Sekrete, IgE → Anaphylaxie)
 
 ---
+
+{{DIAGRAM:blood-groups}}
 
 ## Allergie und Autoimmunität
 
@@ -2361,30 +2222,19 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Angeborene Immunität (schnell, unspezifisch, keine Gedächtnisbildung) vs. erworbene (spezifisch, Gedächtnis, B/T-Zellen), Barrieren, Phagozyten, Komplement, Antikörper.
-
-**Ergänzend vertiefend:** Kreuzpräsentation.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Angeborene vs. erworbene Immunität: Geschwindigkeit, Spezifität, Gedächtnis
 - MHC I vs. MHC II: Welche Zellen exprimieren sie, welche T-Zellen erkennen sie?
 - Antikörperklassen: IgM, IgG, IgA, IgE -- Struktur, Funktion, Zeitpunkt
 
 **Typische Prüfungsfallen:**
 - MHC I auf ALLEN kernhaltigen Zellen (nicht nur APCs!) → CD8⁺
-- IgM = Primärantwort (akut); IgG = Sekundärantwort (Gedächtnis, plazentagängig)
+- IgM = Primärantwort (akut); IgG = Sekundärantwort (Gedächtnis, plazentagängig, ca. 75 % der Serum-Ig)
 - NK-Zellen: angeborene Immunität, töten bei FEHLENDEM MHC I ("Missing Self")
 - Aktive Impfung (Antigen, langsam, dauerhaft) vs. passive (Antikörper, sofort, kurzfristig)
 - Lebendimpfstoffe kontraindiziert bei Immunsuppression!
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- IgG macht ca. 75 % der Serum-Immunglobuline aus, Halbwertszeit ca. 21 Tage
-- Nur IgG kann die Plazenta passieren (Nestschutz)
-- Komplementeffekte: C3b (Opsonierung), C5a (Chemotaxis), C5b-C9/MAC (Lyse)
-- Anaphylaxie-Therapie: Adrenalin i.m. (erste Wahl!)
-- Herdenimmunität für Masern: ab ca. 95 % Durchimpfungsrate
+- Komplement: C3b (Opsonierung), C5a (Chemotaxis), C5b-C9/MAC (Lyse)
+- Anaphylaxie-Therapie: Adrenalin i.m. (erste Wahl!); Herdenimmunität Masern ab ca. 95 %
 
 ---
 
@@ -2490,7 +2340,6 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
           tags: ["impfung", "immunisierung", "schutzimpfung"],
         },
       ],
-      diagram: "immune-response",
 
       merksätze: [
         "**Angeboren vs. Erworben:** Angeborene Immunität: sofort (Minuten–Stunden), unspezifisch, kein Gedächtnis. Komponenten: Haut/Schleimhäute, Neutrophile (Phagozytose, Respiratory Burst), Makrophagen, NK-Zellen (Missing Self, MHC-I↓ → Lyse via Perforin/Granzyme), Komplement (C3b-Opsonierung, C5a-Chemotaxis, MAC-Lyse), Interferone. Erworbene Immunität: langsam (Tage), hochspezifisch, Gedächtnisbildung.",
@@ -2520,6 +2369,8 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 - **Thymus** (T-Zell-Reifung, positive/negative Selektion)
 
 ---
+
+{{DIAGRAM:immune-response}}
 
 ## Lymphknoten — Architektur und Immunfunktion
 
@@ -2553,6 +2404,8 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 
 ---
 
+{{DIAGRAM:blutkreislauf}}
+
 ## Lymphgefäße und Lymphtransport im Detail
 
 **Bisher haben wir gesehen:** Lymphknoten, Milz und Thymus. **Damit Lymphe zurück ins Blut gelangt,** braucht es **Lymphgefäße** und einen geordneten Abfluss. Lymphkapillaren (blind endend, basalmembranfrei) → Lymphgefäße (mit Taschenklappen und Lymphangion-Pumpe aus glatter Muskulatur) → Ductus thoracicus / Ductus lymphaticus dexter → linke/rechte Vena subclavia. Die Skelettmuskelpumpe und Atembewegungen unterstützen den Lymphtransport zusätzlich.
@@ -2561,23 +2414,11 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 
 > **Merke:** Ductus thoracicus = 75 % der Körperlymphe → linker Venenwinkel. Lymphangion-Pumpe + Klappen + Muskelpumpe treiben den Lymphfluss an.
 
-![Lymphabfluss](/grafik-9-lymphabfluss.svg)
-
-
-![Lymphknoten und Immunabwehr](/grafik-8-immunitaet.svg)
-
-
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Lymphsystem (Flüssigkeitsrücktransport, Immunabwehr, Fetttransport Chylomikronen), Lymphknoten, Milz, Ductus thoracicus, Lymphozyten-Rezirkulation.
-
-**Ergänzend vertiefend:** MALT.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Drei Funktionen des Lymphsystems: Flüssigkeitsrücktransport, Immunabwehr, Fetttransport
 - Lymphknoten-Architektur: Wo B-Zellen, wo T-Zellen, wo Plasmazellen?
 - Milz: Weiße vs. rote Pulpa und Konsequenzen der Splenektomie
@@ -2587,13 +2428,8 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 - Weiße Pulpa (Immunfunktion) vs. rote Pulpa (Erythrozyten-Filterung) der Milz
 - Positive Selektion (Thymus-Cortex: MHC-Erkennung) vs. negative Selektion (Thymus-Mark: Selbsttoleranz)
 - Lymphe vs. Blutplasma: Lymphe enthält weniger Proteine, keine Erythrozyten
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Täglicher Lymphfluss: ca. 2--4 L interstitielle Flüssigkeit zurück ins Blut
-- Nur ca. 5 % der Thymozyten überleben positive und negative Selektion
-- OPSI-Risiko: bekapselte Bakterien (Pneumokokken, Meningokokken, H. influenzae)
-- Milz speichert ca. 30 % der Thrombozyten
-- Ductus thoracicus: größtes Lymphgefäß, mündet in V. subclavia sinistra
+- Nur ca. 5 % der Thymozyten überleben; Lymphfluss ca. 2--4 L/Tag; Milz speichert ca. 30 % der Thrombozyten
+- OPSI-Risiko nach Splenektomie: bekapselte Bakterien (Pneumokokken, Meningokokken, H. influenzae)
 
 ---
 
@@ -2719,9 +2555,9 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
 - **Atemmechanik** (Inspiration/Exspiration, Compliance) und **Gasaustausch**
 - **CO₂-Transport** (Bikarbonat, Bohr-Effekt) und **Atemregulation** (CO₂/pH, Chemorezeptoren)
 
-![Gasaustausch und Partialdrücke](/grafik-partialdruck.svg)
-
 ---
+
+{{DIAGRAM:atmungssystem}}
 
 ## Surfactant und Alveolarstruktur
 
@@ -2736,8 +2572,6 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 **Klinisch — RDS (Neonatales Atemnotsyndrom):** Frühgeborene (<28 SSW) haben unreife Typ-II-Pneumozyten → Surfactant-Mangel → Atelektase → Hypoxie. Prophylaxe: Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑). Therapie: Surfactant-Instillation.
 
 > **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
-
-![Oberflächenspannung und Puffer](/grafik-puffer.svg)
 
 ---
 
@@ -2760,17 +2594,13 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 > **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂. **Atemantrieb**: primär CO₂/pH (zentral), O₂ erst bei pO₂ <60 mmHg (peripher).
 
+{{DIAGRAM:blutkreislauf}}
+
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Surfactant (Typ-II-Pneumozyten, 90 % Phospholipide/DPPC), Oberflächenspannung, IRDS bei Frühgeborenen, Alveolenaufbau, Gasaustausch (Fick), Compliance.
-
-**Ergänzend vertiefend:** Atemmechanik.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Welche Zellen produzieren Surfactant und woraus besteht es? (Typ-II-Pneumozyten, 90 % Phospholipide/DPPC)
 - Wie verläuft der CO₂-Transport im Blut? (70 % HCO₃⁻ via Carboanhydrase, 23 % Carbamino-Hb, 7 % gelöst)
 - Was bewirkt der Bohr-Effekt im metabolisch aktiven Gewebe? (Rechtsverschiebung → O₂-Abgabe ↑)
@@ -2779,17 +2609,10 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 - Typ-I-Pneumozyten (Gasaustausch, 95 % der Fläche) vs. Typ-II-Pneumozyten (Surfactant-Produktion, 5 % der Fläche)
 - Aktive Inspiration (Muskelarbeit) vs. passive Exspiration in Ruhe (elastische Rückstellung)
 - Bohr-Effekt (O₂-Abgabe im Gewebe, Hb-Kurve) vs. Haldane-Effekt (CO₂-Transport, Desoxy-Hb bindet mehr CO₂)
-- Intrapleuraler Druck immer negativ (~−5 mmHg) vs. intrapulmonaler Druck schwankt um 0
+- Intrapleuraler Druck immer negativ (~-5 mmHg) vs. intrapulmonaler Druck schwankt um 0
 - COPD (irreversible Obstruktion, FEV1/FVC < 70 %) vs. Asthma (reversible Obstruktion)
-
-**Lungenvolumina und Spirometrie:**
-Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständiger Inspiration und Exspiration und setzt sich aus Atemzugvolumen (AZV ~500 mL), inspiratorischem Reservevolumen (IRV ~3.000 mL) und exspiratorischem Reservevolumen (ERV ~1.100 mL) zusammen. Das Residualvolumen (RV ~1.200 mL) verbleibt nach maximaler Exspiration in der Lunge und kann spirometrisch nicht gemessen werden. Die Totalkapazität (TLC = VC + RV ~5.800 mL) beschreibt das gesamte Lungenvolumen. Die Totraumventilation (anatomischer Totraum ~150 mL) bezeichnet das Volumen, das nicht am Gasaustausch teilnimmt.
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Alveolenzahl: ~300 Mio., Gesamtoberfläche ~80–140 m², Blut-Luft-Schranke ~0,5 µm
-- AZV ~500 mL, TLC ~5.800 mL, GFR für Luft: ~12× /min
-- pO₂ alveolär ~100 mmHg, venös ~40 mmHg (Gradient 60 mmHg)
-- pCO₂ venös ~46 mmHg, alveolär ~40 mmHg (Gradient 6 mmHg)
+- Alveolen: ~300 Mio., Oberfläche 80--140 m², Blut-Luft-Schranke ~0,5 µm
+- AZV ~500 mL, TLC ~5.800 mL; pO₂ alveolär ~100 mmHg, venös ~40 mmHg
 - RDS bei Frühgeborenen < 28 SSW: Surfactant-Mangel → Betamethason antenatal
 
 ---
@@ -2895,7 +2718,6 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
           tags: ["co2-transport", "bikarbonat", "carboanhydrase"],
         },
       ],
-      diagram: "atmungssystem",
 
       merksätze: [
         "**Atemwege-Anatomie:** Obere Atemwege: Nase (Filtration, Befeuchtung, Erwärmung), Nasennebenhöhlen, Pharynx. Untere Atemwege: Larynx (Stimmbildung, Epiglottis), Trachea (C-Knorpel, 16–20 Spangen), Bronchien (Knorpel + Flimmerepithel) → Bronchiolen (KEIN Knorpel, glatte Muskulatur) → Alveolen (~300 Mio., ~80–140 m², Typ-I [Gasaustausch] + Typ-II [Surfactant]).",
@@ -2933,9 +2755,9 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 - **Pankreas** (Trypsin-Kaskade, Lipase, Amylase) und **Leber/Galle** (Bilirubin, Gallensäuren)
 - **Resorption** (Glukose, Fette, Proteine) und **Bilirubin-Stoffwechsel**
 
-![Enzyme und pH-Optima](/grafik-21-energieprofil.svg)
-
 ---
+
+{{DIAGRAM:verdauungssystem}}
 
 ## Magen — Sekretion und Regulation
 
@@ -2954,8 +2776,6 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 **Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
 
 > **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
-
-![pH und Verdauung](/grafik-20-ph-skala.svg)
 
 ---
 
@@ -2978,6 +2798,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 > **Merke:** **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (Milz, albumin-gebunden) → Leber (UGT1A1, Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). **Fett-Transport**: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!).
 
+{{DIAGRAM:cell-membrane}}
+
 ---
 
 ## Dickdarm
@@ -2988,30 +2810,19 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Magenschleimhaut (Belegzellen: HCl + Intrinsic Factor; Hauptzellen: Pepsinogen; Nebenzellen: Mukus; G-Zellen: Gastrin; D-Zellen: Somatostatin), Magensaft, Pepsin, pH.
-
-**Ergänzend vertiefend:** Regulation der Magensäure.
-
-**Häufige Fragen:**
-- Welche Zelltypen finden sich in der Magenschleimhaut und welche Sekrete produzieren sie? (Belegzellen: HCl + IF; Hauptzellen: Pepsinogen; Nebenzellen: Mukus; G-Zellen: Gastrin; D-Zellen: Somatostatin)
+**Typische Prüfungsfragen:**
+- Welche Zelltypen finden sich in der Magenschleimhaut und welche Sekrete produzieren sie?
 - Wie werden Pankreasenzyme aktiviert? (Trypsinogen → Trypsin via Enterokinase, dann Kaskade)
-- Auf welchem Weg gelangen resorbierte Fette ins Blut? (Mizellen → Enterozyt → Chylomikronen → Lymphe → Ductus thoracicus → Blut)
+- Auf welchem Weg gelangen resorbierte Fette ins Blut? (Mizellen → Chylomikronen → Lymphe → Blut)
 
 **Typische Prüfungsfallen:**
-- Belegzellen (HCl + IF) vs. Hauptzellen (Pepsinogen) – häufigster Verwechslungsfehler
+- Belegzellen (HCl + IF) vs. Hauptzellen (Pepsinogen) -- häufigster Verwechslungsfehler
 - Fett-Transport über Lymphe (Chylomikronen) vs. Glukose/Aminosäuren über Pfortader
 - Unkonjugiertes Bilirubin (lipophil, albumin-gebunden) vs. konjugiertes Bilirubin (wasserlöslich, Galle)
 - Prähepatischer Ikterus (Hämolyse, unkonj. ↑) vs. posthepatischer Ikterus (Cholestase, konj. ↑, heller Stuhl)
 - SGLT2 (Niere, Glukose-Rückresorption) vs. SGLT1 (Dünndarm, Glukose-Aufnahme)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Galleproduktion: ~500–1.000 mL/Tag; enterohepatischer Kreislauf recycelt ~95 % der Gallensalze
-- Dünndarm-Oberfläche: ~200 m² (Kerckring-Falten + Zotten + Mikrovilli)
-- Vitamin-K-abhängige Gerinnungsfaktoren: II, VII, IX, X (Merkhilfe: „1972")
-- Nierenschwelle für Glukose: ~180 mg/dL (SGLT2-Kapazitätsgrenze)
-- E. coli verursacht ~80 % der unkomplizierten Harnwegsinfekte (Differenzialdiagnose bei GI-Symptomen)
+- Galleproduktion ~500--1.000 mL/Tag; enterohepatischer Kreislauf recycelt ~95 % der Gallensalze
+- Dünndarm-Oberfläche ~200 m²; Nierenschwelle Glukose ~180 mg/dL
 
 ---
 
@@ -3114,7 +2925,6 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
           tags: ["bilirubin", "hämoglobinabbau", "ikterus"],
         },
       ],
-      diagram: "verdauungssystem",
 
       merksätze: [
         "**GI-Anatomie & Wandschichten:** GIT: Mund → Speiseröhre → Magen → Dünndarm (Duodenum, Jejunum, Ileum) → Dickdarm (Colon) → Rektum → Anus. Wandschichten: Mukosa (Epithel, Lamina propria, Muscularis mucosae) → Submukosa → Muscularis propria (Längs + Zirkular) → Serosa/Adventitia. Plexus myentericus (Auerbach, zwischen Muskelschichten) + Plexus submucosus (Meissner).",
@@ -3155,6 +2965,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 ---
 
+{{DIAGRAM:nephron}}
+
 ## Nephron-Segmente und Rückresorption
 
 **Um die Niere zu verstehen,** betrachten wir das **Nephron** — Filtration und segmentale Rückresorption. Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % werden rückresorbiert — nur ~1–2 L Endurin. Jedes Segment hat spezifische Transporter:
@@ -3174,12 +2986,6 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 > **Merke:** Nephron-Resorption: proximal **65 %** (alles, SGLT2), Henle **20 %** (NaCl), distal **10 %** (Aldosteron-ENaC), Sammelrohr **4 %** (ADH-AQP2). Gesamt: **99 %** zurück → ~1–2 L Urin.
 
-![Nephron](/grafik-10-nephron.svg)
-
-
-![Gegenstrom und Konzentration](/grafik-11-gegenstrom-niere.svg)
-
-
 ---
 
 ## ADH, Aldosteron und RAAS-Regulation
@@ -3198,20 +3004,16 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 > **Merke:** **RAAS**: Renin (Niere, Druck ↓) → Ang. I → ACE (Lunge) → **Ang. II** → Vasokonstriktion + Aldosteron (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. **ACE-Hemmer**: Bradykinin ↑ → Husten (häufigste NW).
 
+{{DIAGRAM:blutkreislauf}}
+
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Henle-Schleife (Gegenstromprinzip), absteigend wasserdurchlässig (AQP1), aufsteigend wasserundurchlässig (NKCC2, NaCl-Rückresorption), osmotischer Gradient, Konzentrierung des Harns, ADH.
-
-**Ergänzend vertiefend:** Vasa recta.
-
-**Häufige Fragen:**
-- Wie funktioniert das Gegenstromprinzip in der Henle-Schleife? (Absteigend: H₂O raus [AQP1]; Aufsteigend: NaCl raus [NKCC2], wasserundurchlässig → osmotischer Gradient)
-- Welche Rolle spielt ADH bei der Harnkonzentrierung? (V₂-Rezeptor → AQP2-Insertion → H₂O folgt Gradient → konzentrierter Harn bis 1.200 mOsm/L)
-- Wie ist die RAAS-Kaskade aufgebaut und wo greifen Medikamente an? (Renin → Ang I → ACE → Ang II; ACE-Hemmer, AT₁-Blocker, Spironolacton)
+**Typische Prüfungsfragen:**
+- Wie funktioniert das Gegenstromprinzip in der Henle-Schleife?
+- Welche Rolle spielt ADH bei der Harnkonzentrierung? (V₂-Rezeptor → AQP2-Insertion)
+- Wie ist die RAAS-Kaskade aufgebaut und wo greifen Medikamente an?
 
 **Typische Prüfungsfallen:**
 - Proximaler Tubulus (65 % Rückresorption, SGLT2) vs. Sammelrohr (ADH-abhängige Feinregulation, AQP2)
@@ -3219,13 +3021,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 - ACE-Hemmer (Bradykinin ↑ → Husten als NW) vs. AT₁-Blocker (kein Bradykinin → kein Husten)
 - Diabetes insipidus zentralis (ADH-Mangel, Desmopressin wirkt) vs. nephrogen (ADH-Resistenz, Desmopressin unwirksam)
 - Nephritisches Syndrom (Hämaturie, Proteinurie < 3,5 g/d) vs. nephrotisches Syndrom (Proteinurie > 3,5 g/d, Ödeme)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- GFR ~120 mL/min = ~180 L/Tag Primärharn → ~1,5 L Endharn (99 % Rückresorption)
-- Nierenschwelle Glukose: ~180 mg/dL
-- Osmotischer Gradient: Rinde 300 mOsm/L → Mark 1.200 mOsm/L
-- Kreatinin: filtriert + sezerniert (nicht resorbiert) → GFR-Marker
-- CKD-Stadium V: GFR < 15 mL/min → Dialyse/Transplantation
+- GFR ~120 mL/min = ~180 L/Tag → ~1,5 L Endharn (99 % Rückresorption); Gradient 300--1.200 mOsm/L
+- Kreatinin = GFR-Marker (filtriert, nicht resorbiert); CKD V: GFR < 15 mL/min → Dialyse
 
 ---
 
@@ -3330,7 +3127,6 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
           tags: ["raas", "renin", "aldosteron"],
         },
       ],
-      diagram: "nephron",
       merksätze: [
         "**Nephron-Anatomie:** Glomerulus (Filtrationsapparat) → Bowman-Kapsel → proximaler Tubulus (PT) → Henle-Schleife (absteigende + aufsteigende Schenkel) → distaler Tubulus (DT) → Sammelrohr (SD). GFR ~120 mL/min → ~180 L Primärharn/Tag → ~1,5 L Urin (99% resorbiert!). Filtrationsbarriere: fenestriertes Endothel + GBM (negativ geladen) + Podozyten (Schlitzmembran).",
         "**Tubuläre Resorption & Sekretion:** PT: 65% Na⁺/H₂O, 100% Glukose (SGLT2), 100% Aminosäuren, HCO₃⁻-Resorption (NHE3). Henle-Schleife: absteigende (H₂O, AQP1), aufsteigende (NaCl, NKCC2, kein H₂O → Gegenstromprinzip). DT: NaCl (NCCT, Thiazid-sensitive), K⁺-Sekretion, Ca²⁺-Resorption (PTH). Sammelrohr: H₂O (ADH/AQP2), Na⁺ (ENaC, Aldosteron), K⁺-Sekretion (ROMK). Kreatinin: filtriert + sezerniert → GFR-Marker.",
@@ -3367,6 +3163,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 - **Ca²⁺-Regulation** (PTH, Vitamin D, Calcitonin) und **Ossifikation** (enchondral vs. desmal)
 
 ---
+
+{{DIAGRAM:sarkomer}}
 
 ## Knochen — Umbau durch Osteoblasten und Osteoklasten
 
@@ -3413,6 +3211,8 @@ Die Vitalkapazität (VC) umfasst das maximale Atemvolumen zwischen vollständige
 
 ---
 
+{{DIAGRAM:animal-cell}}
+
 ## Ossifikation — Knochenbildung
 
 **Bisher haben wir gesehen:** Knochenumbau und Knorpeltypen. **Wie Knochen entstehen,** beschreiben **enchondrale** und **desmale Ossifikation**. Knochen entstehen durch zwei Wege:
@@ -3422,12 +3222,6 @@ Ein Knorpelmodell (Chondrozyten) wird zunächst gebildet und dann schrittweise d
 
 **Desmale Ossifikation** (direkter Weg):
 Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betrifft: Schädelknochen (Frontal-, Parietalknochen), Schlüsselbein, Teile des Unterkiefers.
-
-![Ossifikation](/grafik-12-ossifikation.svg)
-
-
-![Knochenumbau und Zellen](/grafik-12-ossifikation.svg)
-
 
 **Zelltypen der Knochenentwicklung:**
 - **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
@@ -3442,30 +3236,19 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Knochenumbau (Osteoblasten: Aufbau, ALP; Osteoklasten: Abbau, TRAP), RANKL/OPG, Kalziumhomöostase (PTH, Calcitriol, Calcitonin), Ossifikation.
-
-**Ergänzend vertiefend:** Osteozyten.
-
-**Häufige Fragen:**
+**Typische Prüfungsfragen:**
 - Was ist der Unterschied zwischen Osteoblasten und Osteoklasten? (Aufbau vs. Abbau; ALP vs. TRAP als Marker)
-- Wie reguliert das RANKL/OPG-System den Knochenumbau? (RANKL aktiviert Osteoklasten via RANK; OPG bindet RANKL als Decoy)
-- Welche Knorpeltypen gibt es und wo kommen sie vor? (Hyalin: Gelenkflächen [Kollagen II]; Elastisch: Ohr [+ Elastin]; Faser: Bandscheibe [Kollagen I])
+- Wie reguliert das RANKL/OPG-System den Knochenumbau?
+- Welche Knorpeltypen gibt es und wo kommen sie vor?
 
 **Typische Prüfungsfallen:**
 - Osteoblasten (einkernig, Aufbau, ALP ↑) vs. Osteoklasten (mehrkernig, Abbau, TRAP ↑)
 - Hyaliner Knorpel (Kollagen II, Gelenke) vs. Faserknorpel (Kollagen I, Bandscheiben)
 - Arthrose (degenerativ, Verschleiß, kein Entzündungsmarker) vs. Arthritis (entzündlich, RA: Anti-CCP, Morgensteifigkeit > 1 h)
 - Sehnen (Muskel-Knochen-Verbindung) vs. Bänder (Knochen-Knochen-Verbindung)
-- Rachitis/Osteomalazie (Vitamin-D-Mangel, Mineralisierung ↓) vs. Osteoporose (Knochenmasse ↓, Knochenstruktur ↓)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- 206 Knochen beim Erwachsenen; Knochenumbau: ~10 %/Jahr erneuert
-- Knochen: 30 % organisch (Kollagen I, Flexibilität) + 70 % anorganisch (**Hydroxyapatit** [Ca₅(PO₄)₃OH] — das anorganische Calciumphosphat-Mineral, das Knochen Härte und Druckfestigkeit verleiht)
-- Osteoporose-Diagnostik: DXA-Messung, T-Score ≤ −2,5
-- Wirbelsäule: 7 HWK + 12 BWK + 5 LWK + 5 SWK (fusioniert) + 4 Steißbeinwirbel
-- Kugelgelenk: 3 Achsen; Scharniergelenk: 1 Achse; Sattelgelenk: 2 Achsen
+- Rachitis/Osteomalazie (Vitamin-D-Mangel, Mineralisierung ↓) vs. Osteoporose (Knochenmasse ↓, T-Score ≤ -2,5)
+- 206 Knochen; ~10 %/Jahr erneuert; Matrix: 30 % Kollagen I + 70 % Hydroxyapatit
+- Wirbelsäule: 7 HWK + 12 BWK + 5 LWK + 5 SWK + 4 Steißbeinwirbel
 
 ---
 
@@ -3609,13 +3392,9 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 - **Menstruationszyklus** (Follikelphase, LH-Peak, Lutealphase) und **Östrogen/Progesteron**
 - **Befruchtung** (Akrosom-Reaktion, Kortikalreaktion, Polyspermie-Block) und **hCG**
 
-![Hypophysen-Achsen und Gonaden](/grafik-5-hypophysen-achsen.svg)
-
-
-![Meiose und Keimzellen](/grafik-3-meiose.svg)
-
-
 ---
+
+{{DIAGRAM:menstrual-cycle}}
 
 ## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
@@ -3645,6 +3424,8 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 ---
 
+{{DIAGRAM:meiosis}}
+
 ## Menstruationszyklus und Hormonregulation
 
 **Bisher haben wir gesehen:** Gametogenese und Befruchtung. **Der weibliche Zyklus** wird durch **FSH, LH, Östrogen und Progesteron** gesteuert — negative und positive Rückkopplung. Der 28-tägige Menstruationszyklus ist ein Musterbeispiel für negative und positive Rückkopplung:
@@ -3668,32 +3449,24 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 ---
 
+{{DIAGRAM:hormonsystem}}
+
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Sertoli-Zellen (FSH, Inhibin, ABP, Blut-Hoden-Schranke, Ernährung der Spermien) vs. Leydig-Zellen (LH → Testosteron), Spermatogenese, Hormonregulation Hoden. **Bis zur Ejakulation werden Spermien in den Nebenhodengängen (Nebenhoden) gespeichert** — nicht in Samenkanälchen, Samenbläschen, Samenleitern oder Prostata.
-
-**Ergänzend vertiefend:** Spermatogonien.
-
-**Häufige Fragen:**
-- Was ist der Unterschied zwischen Sertoli- und Leydig-Zellen? (Sertoli: FSH-abhängig, Inhibin, ABP, Blut-Hoden-Schranke; Leydig: LH → Testosteron)
+**Typische Prüfungsfragen:**
+- Was ist der Unterschied zwischen Sertoli- und Leydig-Zellen?
 - Wie unterscheiden sich Spermatogenese und Oogenese im Ergebnis? (4 Spermien vs. 1 Eizelle + 3 Polkörperchen)
-- Wie kommt der LH-Peak zustande? (Hohes Östrogen > 200 pg/mL > 2 Tage → positive Rückkopplung → GnRH ↑ → LH-Peak)
+- Wie kommt der LH-Peak zustande? (Hohes Östrogen > 200 pg/mL > 2 Tage → positive Rückkopplung)
+- Wo werden Spermien gespeichert? → Nebenhoden (nicht Samenkanälchen, Samenbläschen oder Prostata)
 
 **Typische Prüfungsfallen:**
-- Sertoli-Zellen (FSH-reguliert, Inhibin) vs. Leydig-Zellen (LH-reguliert, Testosteron) – häufigster Prüfungsfehler
+- Sertoli-Zellen (FSH-reguliert, Inhibin) vs. Leydig-Zellen (LH-reguliert, Testosteron) -- häufigster Prüfungsfehler
 - Prophase-I-Arrest (primäre Oozyte, pränatal bis Pubertät) vs. Metaphase-II-Arrest (sekundäre Oozyte, bis Befruchtung)
 - Positive Rückkopplung (hohes Östrogen → LH-Peak) vs. negative Rückkopplung (niedriges/mittleres Östrogen → FSH/LH ↓)
 - hCG (Schwangerschaftserhaltung des Corpus luteum) vs. LH (Corpus-luteum-Stimulation im normalen Zyklus)
-- Spermatogenese (kontinuierlich ab Pubertät, 4 Gameten) vs. Oogenese (zyklisch, 1 Gamet, endlicher Vorrat)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Spermatogenese: ~74 Tage; Oozytenvorrat: ~7 Mio. (5. Monat intrauterin) → ~400.000 bei Geburt → ~400 Ovulationen
-- LH-Peak: Tag 14; Ovulation: 24–36 h nach LH-Peak
-- Basaltemperatur steigt nach Ovulation ~0,5 °C (Progesteron-Effekt)
-- hCG nachweisbar ab Tag 6–7 post conceptionem; verdoppelt sich alle 48 h in Frühschwangerschaft
-- PCOS: 5–15 % der Frauen, LH/FSH-Ratio > 2, Rotterdam-Kriterien (2 von 3)
+- Spermatogenese (kontinuierlich ab Pubertät, 4 Gameten, ~74 Tage) vs. Oogenese (zyklisch, 1 Gamet, endlicher Vorrat)
+- LH-Peak Tag 14; Ovulation 24--36 h danach; Basaltemperatur +0,5 °C (Progesteron)
+- hCG ab Tag 6--7, verdoppelt alle 48 h; PCOS 5--15 % der Frauen, LH/FSH > 2
 
 ---
 
@@ -3796,7 +3569,6 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
           tags: ["lh-peak", "ovulation", "eisprung"],
         },
       ],
-      diagram: "menstrual-cycle",
 
       merksätze: [
         "**Spermatogenese:** Spermatogonien (2n) → Mitose → primäre Spermatozyten (2n) → Meiose I → sekundäre Spermatozyten (n) → Meiose II → 4 Spermatiden (n) → Spermiogenese → Spermien (Akrosom, Flagellum, Mitochondrien). Dauer: ~74 Tage. Kontinuierlich ab Pubertät. Sertoli-Zellen: Unterstützung + Inhibin (hemmt FSH) + ABP. Leydig-Zellen: Testosteron (LH-stimuliert).",

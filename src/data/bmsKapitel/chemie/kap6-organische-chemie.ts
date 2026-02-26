@@ -60,6 +60,8 @@ C₂H₄ + Br₂ → C₂H₄Br₂ (1,2-Dibromethan)
 
 **Bromwasser-Nachweis:** Bromwasser (orange) entfärbt sich bei Anwesenheit einer Doppelbindung — die klassische Nachweisreaktion für Alkene und Alkine.
 
+{{DIAGRAM:covalent-bond}}
+
 **Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation wird als Intermediat bevorzugt.
 
 **cis/trans-Isomerie bei Alkenen**: Die C=C-Doppelbindung ist nicht frei drehbar → wenn beide C-Atome jeweils zwei verschiedene Substituenten tragen, existieren cis- und trans-Isomere. cis-But-2-en: beide Methylgruppen auf gleicher Seite; trans-But-2-en: gegenüberliegende Seite. Bei komplexeren Fällen: E/Z-Nomenklatur (nach CIP-Prioritätsregeln).
@@ -82,11 +84,7 @@ Alkine besitzen eine C≡C-Dreifachbindung (eine σ- und zwei π-Bindungen). Die
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
-![Kohlenwasserstoffe](/grafik-kohlenstoff.svg)
-
-
-![Siedepunkte und zwischenmolekulare Kräfte](/grafik-wasser-h-bruecken.svg)
-
+{{DIAGRAM:functional-groups}}
 
 ## Polymerisation
 
@@ -222,7 +220,6 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
           },
         },
       ],
-      diagram: "functional-groups",
 
       merksätze: [
         "Alkane: CₙH₂ₙ₊₂ — gesättigt, nur Einfachbindungen, reagieren durch radikalische Substitution.",
@@ -388,11 +385,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 ## Konstitutionsisomere (Strukturisomere)
 
-![Isomerie](/grafik-kohlenstoff.svg)
-
-
-![Orbitale und Hybridisierung](/grafik-orbitale.svg)
-
+{{DIAGRAM:functional-groups}}
 
 Konstitutionsisomere unterscheiden sich in der Reihenfolge (Konnektivität) der Atome. Sie haben die gleiche Summenformel, aber verschiedene Bindungspartner und damit unterschiedliche chemische und physikalische Eigenschaften.
 
@@ -429,6 +422,8 @@ Für die Z/E-Nomenklatur werden Prioritäten nach CIP-Regeln vergeben: höhere O
 Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene Substituenten trägt. Das Molekül ist dann nicht mit seinem Spiegelbild identisch (nicht superponierbar).
 
 **Merke:** Chiral = asymmetrisch = vier verschiedene Gruppen am C-Atom.
+
+{{DIAGRAM:covalent-bond}}
 
 **Enantiomere** sind nicht superponierbare Spiegelbilder. Sie haben:
 - Gleiche physikalische Eigenschaften (Siedepunkt, Schmelzpunkt, Löslichkeit, IR/UV-Spektrum)
@@ -570,8 +565,6 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Thalidomid: R=Sedativum, S=teratogen. Racemisierung in vivo macht Trennung klinisch unwirksam. Lehre: Chirale Arzneimittel müssen auf jedes Enantiomer einzeln geprüft werden.",
         },
       ],
-
-      diagram: "functional-groups",
 
       merksätze: [
         "Isomere haben gleiche Summenformel, aber verschiedene Struktur oder Raumanordnung.",
@@ -743,11 +736,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 
 ## Alkohole (−OH, Hydroxylgruppe)
 
-![Funktionelle Gruppen](/grafik-biogene-elemente.svg)
-
-
-![Oxidationsreihe und Kohlenstoffgerüst](/grafik-kohlenstoff.svg)
-
+{{DIAGRAM:functional-groups}}
 
 Alkohole enthalten eine Hydroxylgruppe (-OH) an einem Kohlenstoffatom. Die OH-Gruppe macht das Molekül polar und ermöglicht Wasserstoffbrückenbindungen.
 
@@ -805,6 +794,8 @@ Carbonsäuren enthalten die Carboxylgruppe -COOH (Kombination aus Carbonyl C=O u
 
 **Typische pKₐ-Werte:** 4–5 (deutlich schwächer als Salzsäure pKₐ = -7, aber Protonen-Donor!)
 
+{{DIAGRAM:ph-scale}}
+
 **Wichtige Carbonsäuren:**
 - Ameisensäure (HCOOH, Methansäure): Ameisengift, Brennnesseln
 - Essigsäure (CH₃COOH, Ethansäure): Essig, Endprodukt Ethanolabbau
@@ -818,6 +809,8 @@ Carbonsäuren enthalten die Carboxylgruppe -COOH (Kombination aus Carbonyl C=O u
 
 Ester entstehen durch Veresterung (Kondensationsreaktion) zwischen einer Carbonsäure und einem Alkohol unter Wasserabspaltung (Gleichgewichtsreaktion):
 R-COOH + R'-OH ⇌ R-COO-R' + H₂O
+
+{{DIAGRAM:covalent-bond}}
 
 **Wichtige Ester:**
 - Triglyceride: Glycerin + 3 Fettsäuren → Neutralfette (Fette und Öle); Energiespeicher
@@ -941,7 +934,6 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
             "Ketonkörper bei Diabetes/Fasten: Aceton (Atemgeruch), Acetoacetat, β-Hydroxybutyrat. Ketoazidose: pH sinkt < 7,35. Kussmaul-Atmung = tiefe, schnelle Atemzüge als Kompensation.",
         },
       ],
-      diagram: "functional-groups",
 
       merksätze: [
         "Alkohole (-OH): polar, Wasserstoffbrücken, kleiner Siedepunkt-Boost. Primär → Aldehyd, sekundär → Keton bei Oxidation.",
@@ -1113,11 +1105,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 ## Benzol und Aromatizität
 
-![Benzol](/grafik-kohlenstoff.svg)
-
-
-![Energieprofil und Mesomerie](/grafik-21-energieprofil.svg)
-
+{{DIAGRAM:covalent-bond}}
 
 Benzol (C₆H₆) ist die einfachste aromatische Verbindung. Es besitzt eine ringförmige planare Struktur mit sechs Kohlenstoffatomen und sechs π-Elektronen (delokalisiert über den gesamten Ring).
 
@@ -1150,6 +1138,8 @@ Aromate erhalten ihre Stabilität durch die delokalisierten π-Elektronen. Um di
 - **Friedel-Crafts-Alkylierung:** Benzol + R-Cl/AlCl₃ → Alkylbenzol + HCl
 
 ## Heteroaromaten — Stickstoffhaltige Ringsysteme
+
+{{DIAGRAM:functional-groups}}
 
 Heteroaromaten enthalten neben Kohlenstoff mindestens ein Heteroatom (N, O, S) im aromatischen Ring:
 - **Pyridin** (6-Ring, 1 N): Stickstoff-Analogon des Benzols, basisch (freies Elektronenpaar am N steht senkrecht zum π-System). Bestandteil von NAD⁺/NADH, Vitamin B₃ (Niacin)
@@ -1302,8 +1292,6 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
             "Purine → Xanthin → Harnsäure (Xanthinoxidase). Hyperurikämie → Gicht (Urat-Kristalle in Gelenken). Allopurinol hemmt Xanthinoxidase. Podagra = Gicht im Großzehengrundgelenk.",
         },
       ],
-
-      diagram: "functional-groups",
 
       merksätze: [
         "Hückel-Regel: 4n+2 π-Elektronen → aromatisch. Benzol: n=1, 6 π-Elektronen.",
@@ -1479,11 +1467,7 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 ## Grundstruktur der Aminosäuren
 
-![Aminosaeuren](/grafik-16-zentraldogma.svg)
-
-
-![Biogene Elemente in Proteinen](/grafik-biogene-elemente.svg)
-
+{{DIAGRAM:functional-groups}}
 
 Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
@@ -1512,6 +1496,8 @@ Die räumliche Organisation von Proteinen wird in vier Ebenen beschrieben:
 - **Quartärstruktur**: Anordnung mehrerer Untereinheiten (Polypeptidketten) zu einem funktionstüchtigen Proteinkomplex; Beispiel: Hämoglobin (2α + 2β)
 
 ## Isoelektrischer Punkt und Zwitterion
+
+{{DIAGRAM:ph-scale}}
 
 Aminosäuren sind **Ampholyte** — sie tragen sowohl eine Amino- als auch eine Carboxylgruppe und existieren in Lösung als **Zwitterion**: bei physiologischem pH liegt die Aminogruppe protoniert (–NH₃⁺) und die Carboxylgruppe deprotoniert (–COO⁻) vor. Die Nettoladung hängt vom pH ab:
 
@@ -1551,6 +1537,8 @@ Nach der Translation werden viele Proteine chemisch modifiziert:
 ---
 
 ## Denaturierung
+
+{{DIAGRAM:enzyme-substrate}}
 
 Denaturierung = **Verlust der nativen Raumstruktur** (Sekundär- bis Quartärstruktur) bei erhaltener Primärstruktur.
 
@@ -1665,8 +1653,6 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
           merksatz: "Troponin → Herzinfarkt; GPT/ALT → Leber; CK-MB → frühzeitig bei Herzschäden.",
         },
       ],
-
-      diagram: "enzyme-substrate",
 
       merksätze: [
         "Alle proteinogenen Aminosäuren (außer Glycin) sind L-konfiguriert und tragen am α-C: –NH₂, –COOH, –H, –R.",
@@ -1843,11 +1829,7 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
 
 ## Monosaccharide — Grundbausteine
 
-![Kohlenhydrate](/grafik-biogene-elemente.svg)
-
-
-![DNA, RNA und Zuckerbausteine](/grafik-16-zentraldogma.svg)
-
+{{DIAGRAM:functional-groups}}
 
 Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
@@ -1870,6 +1852,8 @@ Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Form
 Die Glykolyse (Embden-Meyerhof-Weg) ist der zentrale Glucoseabbauweg im Zytoplasma: Glucose → 2 Pyruvat + 2 ATP (netto) + 2 NADH. Schlüsselenzyme: **Hexokinase** (Glucose → G6P, irreversibel, ATP-abhängig), **Phosphofructokinase-1** (PFK-1, Schrittmacherenzym, allosterisch reguliert: Aktivatoren AMP, Fructose-2,6-bisphosphat; Inhibitoren ATP, Citrat), **Pyruvatkinase** (PEP → Pyruvat + ATP). Unter aeroben Bedingungen: Pyruvat →[Pyruvatdehydrogenase] Acetyl-CoA → Citratzyklus → Atmungskette (Gesamtbilanz aerob: ~30–32 ATP/Glucose). Unter anaeroben Bedingungen: Pyruvat →[LDH] Lactat (Milchsäuregärung, regeneriert NAD⁺ für fortgesetzte Glykolyse bei O₂-Mangel, z.B. Sprint-Muskulatur).
 
 ## Disaccharide und glykosidische Bindung
+
+{{DIAGRAM:covalent-bond}}
 
 Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidische Bindung** (O-glykosidisch) zwischen dem anomeren C und einer OH-Gruppe des zweiten Zuckers. Die Nomenklatur gibt an: Anomerie (α oder β), C-Nummer des ersten Zuckers → C-Nummer des zweiten (z.B. α-1,4-glykosidisch).
 
@@ -2179,12 +2163,11 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
 
 ---
 
+{{DIAGRAM:functional-groups}}
+
+{{DIAGRAM:cell-membrane}}
+
 ## Fettsäuren
-
-![Lipide](/grafik-zellmembran-fettsaeuren.svg)
-
-
-![Membran und Fettsäuren](/grafik-zellmembran-fettsaeuren.svg)
 
 
 Fettsäuren sind unverzweigte Carbonsäuren mit langer Kohlenwasserstoffkette (meist 12–24 C-Atome, gerade Anzahl wegen biosynthetischer Verlängerung um je 2 C durch Acetyl-CoA). Einteilung nach Sättigungsgrad:
@@ -2337,8 +2320,6 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
           },
         },
       ],
-
-      diagram: "functional-groups",
 
       merksätze: [
         "Fettsäuren: gesättigt = keine C=C; einfach ungesättigt = eine C=C; mehrfach ungesättigt = ≥2 C=C.",
@@ -2530,12 +2511,11 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
 
 ---
 
+{{DIAGRAM:dna-helix}}
+
+{{DIAGRAM:covalent-bond}}
+
 ## Nukleotid-Aufbau
-
-![Nukleotide DNA](/grafik-16-zentraldogma.svg)
-
-
-![Biogene Elemente in Nukleotiden](/grafik-biogene-elemente.svg)
 
 
 Das Grundmonomer der Nukleinsäuren ist das **Nukleotid**, bestehend aus drei Komponenten:

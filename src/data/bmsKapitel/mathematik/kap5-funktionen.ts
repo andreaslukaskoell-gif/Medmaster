@@ -26,17 +26,20 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Lineare Funktionen** y = mx + b: Steigung m = Δy/Δx, Achsenabschnitt b; Geradengleichung aus zwei Punkten, Nullstelle, Schnittpunkt. **Warum für den MedAT relevant?** Steigung m, b, Geradengleichung aus zwei Punkten, Schnittpunkte (Kalibrierkurve, Dosierung) werden geprüft. **Welche Fragen werden beantwortet?** „m aus zwei Punkten?“; „Nullstelle x₀?“; „Schnittpunkt zweier Geraden?“; „y = mx + b — was ist m?“; „Δy/Δx?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu linearen Funktionen abgedeckt.
+Im Labor zeigt das Photometer eine Absorption von 0,77 -- wie hoch ist die Konzentration der Probe? Wenn du die Kalibrierkurve als Gerade kennst, genuegt eine einfache Umstellung. **Lineare Funktionen** beschreiben Zusammenhaenge, bei denen sich y gleichmaessig mit x aendert: Die Steigung sagt “wie viel pro Einheit”, der Achsenabschnitt gibt den Startwert an. Von der Infusionsrate ueber die Regressionsgerade bis zum Alkoholabbau im Blut (Kinetik 0. Ordnung) -- ueberall steckt y = mx + b.
 
 **In diesem Kapitel lernst du:**
-- **Grundform** y = mx + b: **m** = Steigung (Δy/Δx), **b** = y-Achsenabschnitt; Graph = Gerade
-- **Geradengleichung aus zwei Punkten:** zuerst m = (y₂−y₁)/(x₂−x₁), dann b durch Einsetzen
-- **Nullstelle:** f(x) = 0 → x₀ = −b/m
-- **Schnittpunkt** zweier Geraden: Gleichsetzen und nach x auflösen
-- **Senkrechte Geraden:** m₁×m₂ = −1, also m₂ = −1/m₁
-- **Typische Anwendungen:** Kalibrierkurve, Regressionsgerade, Infusionsrate
+- was Steigung und Achsenabschnitt einer Geraden bedeuten und wie du sie aus einem Graphen oder zwei Punkten bestimmst
+- wie du die Nullstelle einer linearen Funktion berechnest und geometrisch deutest
+- wie du den Schnittpunkt zweier Geraden durch Gleichsetzen findest
+- woran du erkennst, ob zwei Geraden parallel oder senkrecht zueinander stehen
+- wie lineare Funktionen in der Labormedizin (Kalibrierkurve, Lambert-Beer) und Pharmakokinetik (Ethanolabbau) eingesetzt werden
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 ## Grundform und Begriffe
 
@@ -44,10 +47,8 @@ export const mathKap5: Kapitel = {
 
 **Verfahren:** Allgemeine Form **f(x) = mx + b**: m = Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁); b = y-Achsenabschnitt = f(0). Gerade aus zwei Punkten: zuerst m berechnen, dann b = y₁ − m·x₁. Nullstelle: f(x) = 0 ⇒ x₀ = −b/m. Senkrechte Gerade zu m₁: m₂ = −1/m₁. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.
 
-![Lineare Funktion](/grafik-lineare-funktion.svg)
 
 
-![Koordinaten und Geraden](/grafik-parabel.svg)
 
 
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
@@ -149,16 +150,6 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 - **Schnittpunkt:** m₁x + b₁ = m₂x + b₂ ⇒ x = (b₂−b₁)/(m₁−m₂), dann y = m₁x + b₁.
 - **Senkrechte zu m₁:** m₂ = −1/m₁; durch P(x₀|y₀): b₂ = y₀ − m₂·x₀.
 - **Lambert-Beer (linear):** A = ε·c·d ⇒ c = A/(ε·d); aus Kalibrierkurve: c = (A − A₀)/Steigung.
-
-**Zentral prüfungsrelevant:** Lineare Funktionen (y = mx + b, Steigung m, Achsenabschnitt b), Gerade aus zwei Punkten, Nullstelle, Proportionalität, klinische Anwendung (Dosis-Wirkung, Kalibrierung).
-
-**Ergänzend vertiefend:** Schnittpunkt zweier Geraden. Typische Fallen: Nullstelle linearer Funktion x₀ = −b/m (nicht Mitternachtsformel); Senkrechte m₂ = −1/m₁; Steigung m = Δy/Δx.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Lambert-Beer: A = ε×c×d — nur im linearen Bereich gültig
-- Ethanolabbau: ca. 0,1–0,15 ‰/h (Kinetik 0. Ordnung = linearer Abfall)
-- Parallele Geraden: gleiche Steigung m, verschiedene b — kein Schnittpunkt
-- Senkrechte Geraden: m₁×m₂ = −1
 
 ---
 
@@ -314,16 +305,20 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Quadratische Funktionen** f(x) = ax² + bx + c: Scheitelpunkt, **Diskriminante** D = b²−4ac, Nullstellen (Mitternachts- oder pq-Formel). **Warum für den MedAT relevant?** Scheitelpunkt, Diskriminante, Nullstellen, Parabel-Interpretation werden geprüft. **Welche Fragen werden beantwortet?** „Scheitelpunkt xs?“; „D > 0 — wie viele Nullstellen?“; „pq-Formel?“; „a > 0 — Parabel?“; „Mitternachtsformel?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu quadratischen Funktionen abgedeckt.
+Ein Wurfgeschoss fliegt eine Parabel, und die Wirkstoffkonzentration im Blut erreicht nach einiger Zeit ein Maximum -- beides sind **quadratische Funktionen**. Ihre Graphen sind Parabeln, und der Scheitelpunkt ist der Hoch- oder Tiefpunkt. Am MedAT tauchen sie als Rechenaufgaben (“Wie viele Nullstellen?”) und als Graphen-Interpretation (“Oeffnung nach oben oder unten?”) auf. Der Schluessel ist die **Diskriminante**: Sie verraet mit einem Blick, ob die Parabel die x-Achse schneidet.
 
 **In diesem Kapitel lernst du:**
-- **Allgemeine Form** f(x) = ax² + bx + c: **a** (Leitkoeffizient) bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite
-- **Scheitelpunkt** S(xs|ys): xs = −b/(2a), ys = f(xs); Tiefpunkt bei a>0, Hochpunkt bei a<0
-- **Nullstellen:** Mitternachtsformel x = (−b ± √D)/(2a) mit **Diskriminante** D = b²−4ac (D>0: 2, D=0: 1, D<0: keine reelle Nullstelle)
-- **pq-Formel** für x² + px + q = 0: x = −p/2 ± √((p/2)² − q)
-- **Vieta:** Summe der Nullstellen = −b/a, Produkt = c/a; Graphen interpretieren (Symmetrieachse, Öffnung)
+- wie der Leitkoeffizient a die Oeffnungsrichtung und Breite einer Parabel bestimmt
+- wie du den Scheitelpunkt berechnest -- den Punkt, an dem die Funktion ihr Maximum oder Minimum erreicht
+- was die Diskriminante ueber die Anzahl der Nullstellen aussagt und wie du sie mit der Mitternachtsformel findest
+- wann du die pq-Formel statt der Mitternachtsformel einsetzt
+- wie der Satz von Vieta Summe und Produkt der Nullstellen mit den Koeffizienten verbindet
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
 
@@ -335,10 +330,8 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
 
 ## Allgemeine und Scheitelpunktform
 
-![Parabel](/grafik-parabel.svg)
 
 
-![Lineare und quadratische Funktion](/grafik-lineare-funktion.svg)
 
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
@@ -439,31 +432,6 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 **Minimal-Rechenrezepte:**
 - **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
 - **pq-Formel** (x²+px+q=0): x = −p/2 ± √((p/2)²−q). **Vieta:** Summe = −p, Produkt = q.
-
-**Zentral prüfungsrelevant:** Quadratische Funktionen (Parabel, Scheitelpunkt x_s = −b/(2a), Öffnung nach oben/unten), Nullstellen (Mitternachtsformel), Symmetrie, Anwendung (Wurf, Optimierung).
-
-**Ergänzend vertiefend:** Parabelform f(x) = a(x−x_s)² + y_s. Typische Fallen: a < 0 → Maximum (Parabel nach unten); Scheitelform Vorzeichen (x−2)² → x_S = +2; pq-Formel nur bei normierter Form.
-
-**Häufige Fragen:**
-- Scheitelpunkt berechnen: xs = −b/(2a), ys = f(xs)
-- Diskriminante bestimmen und Anzahl der Nullstellen ableiten (D > 0 / D = 0 / D < 0)
-- Nullstellen mit Mitternachtsformel oder Satz von Vieta
-- Aus Scheitelpunktform: Öffnungsrichtung und Maximum/Minimum direkt ablesen
-- Optimale Dosis aus quadratischem Wirkungsmodell (Scheitelpunkt = Optimum)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **Vorzeichen von a entscheidet über Öffnung der Parabel:** a < 0 → Maximum, Parabel öffnet nach UNTEN (z. B. y = −x² − 5: Scheitel (0, −5))
-- f(t) = f_Ruhe − a·t + b·t²: Minimum bei **t = a/(2b)** (nicht a/b, 2a/b oder a²/b)
-- a < 0 → Maximum (nicht Minimum!); Parabel öffnet nach UNTEN
-- Scheitelpunktform f(x) = a(x − xs)² + ys: Vorzeichen beachten — (x − 2)² → xs = +2
-- pq-Formel gilt nur für normierte Form (x² + px + q = 0, Koeffizient vor x² muss 1 sein)
-- D < 0 bedeutet: KEINE reellen Nullstellen (Parabel berührt x-Achse nicht)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Mitternachtsformel: x₁₂ = (−b ± √(b²−4ac))/(2a)
-- Diskriminante D = b²−4ac; D > 0 → 2 Nullstellen; D = 0 → 1; D < 0 → keine
-- Vieta (normierte Form): x₁+x₂ = −p; x₁×x₂ = q
-- Hagen-Poiseuille: A = πr² → Halbierung des Radius = Viertelung der Querschnittsfläche
 
 ---
 
@@ -629,11 +597,20 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Exponentialfunktionen** f(t) = f₀·e^(±kt): Wachstum und Zerfall; **Halbwertszeit** T½ = ln2/k. **Warum für den MedAT relevant?** Grundform, e-Funktion, Halbwertszeit, k-Wert (Pharmakokinetik, Radioaktivität) werden geprüft. **Welche Fragen werden beantwortet?** „T½ = ln2/k?“; „f(t) = f₀·e^(−kt) — Zerfall?“; „k aus T½?“; „e-Funktion Ableitung?“; „Steady-State?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Exponentialfunktionen abgedeckt.
+Paracetamol hat eine Halbwertszeit von etwa 2 Stunden -- nach 2 Stunden ist die Haelfte abgebaut, nach 4 Stunden ein Viertel, nach 10 Stunden weniger als 3 %. Dieses Muster ist kein Zufall, sondern eine **Exponentialfunktion**: Die Aenderungsrate ist proportional zum aktuellen Bestand. Ob Bakterienwachstum, radioaktiver Zerfall oder der Medikamentenspiegel im Blut -- ueberall beschreibt f(t) = f_0 mal e hoch (plus oder minus kt) den Verlauf. Die **Halbwertszeit** ist dabei der zentrale Parameter.
 
-**In diesem Kapitel lernst du:** **f(t) = f₀×e^(kt)** (Wachstum/Zerfall); **Halbwertszeit** T½; **e-Funktion**; Steady-State.
+**In diesem Kapitel lernst du:**
+- was exponentielles Wachstum und exponentiellen Zerfall unterscheidet und wie die Grundformel aufgebaut ist
+- warum die Exponentialfunktion nie den Wert null erreicht -- auch wenn sie sich ihm beliebig naehert
+- wie du die Halbwertszeit aus der Zerfallskonstante berechnest und umgekehrt
+- wie viel nach einer, drei oder fuenf Halbwertszeiten noch uebrig ist (die 50-12,5-3-Prozent-Regel)
+- was Steady-State bedeutet und wann er bei Dauertherapie erreicht wird
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
 
@@ -645,10 +622,8 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
 
 ## Grundform und Eigenschaften
 
-![Exponentialfunktion](/grafik-exponential.svg)
 
 
-![Logarithmus und Halbwertszeit](/grafik-logarithmus.svg)
 
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a × bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
@@ -766,29 +741,6 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 **Minimal-Rechenrezepte:**
 - **Zerfall:** C(t) = C₀×e^(−kt). **T½** = ln(2)/k ≈ 0,693/k. **k** = ln(2)/T½.
 - **Rest nach n×T½:** f = f₀×(½)ⁿ. Nach 5×T½: < 3,2 %. **Steady-State:** nach 4–5×T½.
-
-**Zentral prüfungsrelevant:** Exponentialfunktion (Wachstum/Zerfall), e-Funktion, Halbwertszeit T½ = ln(2)/k, Verdopplungszeit, Bakterienwachstum, radioaktiver Zerfall, Pharmakokinetik (c(t) = c₀×e^(−kt)).
-
-**Ergänzend vertiefend:** Logarithmus zur Basis e (ln). Typische Fallen: e^x erreicht nie 0; nach 5 Halbwertszeiten ca. 3 % verbleibend; Kinetik 1. Ordnung (exponentiell) ≠ 0. Ordnung (linear).
-
-**Häufige Fragen:**
-- Halbwertszeit berechnen: T½ = ln(2)/k ≈ 0,693/k
-- Restmenge nach n Halbwertszeiten: C = C₀ × (½)ⁿ
-- Wachstum (eᵏᵗ, k > 0) vs. Zerfall (e⁻ᵏᵗ, k > 0) unterscheiden
-- Steady-State-Zeitpunkt: nach 4–5 T½
-- Bakterienanzahl nach gegebener Zeit: N = N₀ × 2^(t/T₂)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Exponentialfunktion erreicht NIEMALS den Wert 0 (nähert sich nur asymptotisch an)
-- Nach 5 T½ verbleiben ca. 3 % — nicht 0 %!
-- Kinetik 1. Ordnung (exponentiell) ≠ Kinetik 0. Ordnung (linear — Beispiel: Ethanol!)
-- e ≈ 2,718 (nicht 2,5 oder 3)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- ln(2) ≈ 0,693 (auswendig lernen!)
-- Nach 1 T½: 50 %; 2 T½: 25 %; 3 T½: 12,5 %; 4 T½: 6,25 %; 5 T½: 3,1 %
-- Paracetamol T½ ≈ 2 h; ⁹⁹ᵐTc T½ ≈ 6 h; Amiodaron T½ ≈ 40–55 Tage
-- Steady State: nach 4–5 T½ werden 94–97 % des Gleichgewichtsspiegels erreicht
 
 ---
 
@@ -933,11 +885,20 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Logarithmus** (log, ln) als Umkehr der e-Funktion; **Logarithmengesetze**; **pH = −log([H⁺])**, **Henderson-Hasselbalch**, Dezibel. **Warum für den MedAT relevant?** log-Gesetze, pH, HH-Gleichung, Dezibel werden geprüft. **Welche Fragen werden beantwortet?** „log(ab) =?“; „pH aus [H⁺]?“; „HH-Gleichung?“; „ln Basis?“; „Dezibel +3 dB?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Logarithmus abgedeckt.
+Warum hat Blut einen pH von 7,4 — und warum ist bereits ein Abfall auf 7,0 lebensbedrohlich? Die Antwort steckt im Logarithmus: Eine pH-Einheit entspricht einem Faktor 10 bei der Protonenkonzentration. Der Logarithmus verwandelt riesige Zahlenbereiche in handliche Skalen — vom pH-Wert über die Dezibel-Skala des Gehörs bis zur Halbwertszeitberechnung in der Pharmakokinetik. Wer die drei Logarithmengesetze sicher beherrscht, kann Exponentialgleichungen lösen und klinische Pufferprobleme (Henderson-Hasselbalch) bearbeiten.
 
-**In diesem Kapitel lernst du:** **log** und **ln**; **Logarithmengesetze**; **pH**; **Henderson-Hasselbalch**; Dezibel; Basiswechsel.
+**In diesem Kapitel lernst du:**
+- wie der Logarithmus als Umkehrung der Exponentialfunktion funktioniert und wann du log, ln oder ld verwendest
+- wie du mit den drei Logarithmengesetzen (Produkt, Quotient, Potenz) Gleichungen vereinfachst
+- wie der pH-Wert aus der Protonenkonzentration berechnet wird und warum kleine pH-Änderungen klinisch dramatisch sind
+- wie die Henderson-Hasselbalch-Gleichung den Puffer im Blut beschreibt
+- wie logarithmische Skalen (Dezibel, Semilog-Plot) exponentielle Zusammenhänge linearisieren
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
 
@@ -949,10 +910,8 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 ## Definition und Grundbegriffe
 
-![Logarithmus](/grafik-logarithmus.svg)
 
 
-![Exponential und Umkehrfunktion](/grafik-exponential.svg)
 
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
@@ -1071,31 +1030,6 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 **Minimal-Rechenrezepte:**
 - **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
 - **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). **Dezibel:** +10 dB = Faktor 10; +3 dB ≈ Faktor 2.
-
-**Zentral prüfungsrelevant:** Logarithmus (log₁₀, ln), **ld = log₂**, **ld(16) = 4**, **ld(2ⁿ) = n**; **log(a+b) ≠ log a + log b** (Falle!); **ln(x) nur für x > 0**; pH = −log₁₀([H⁺]); Gleichung **U = (a/b)·ln(A/B)** mit a>0, b<0: U < 0 wenn A > B > 0, U = 0 wenn A = B; A = 0 oder B = 0 nicht erlaubt. Henderson-Hasselbalch, logarithmische Skalen.
-
-**Ergänzend vertiefend:** Natürlicher Logarithmus und e. Typische Fallen: log(a+b) ≠ log a + log b (nur Produktregel); ln(x) nur für x > 0; pH ↑ → [H⁺] ↓.
-
-**Häufige Fragen:**
-- pH-Wert aus [H⁺] berechnen: pH = −log₁₀([H⁺])
-- Henderson-Hasselbalch anwenden: pH = pKₐ + log([A⁻]/[HA])
-- Logarithmengesetze anwenden (Produkt-, Quotienten-, Potenzregel)
-- Exponentialgleichung lösen durch Logarithmieren beider Seiten
-- Semilog-Plot: Steigung = −k aus ln C-vs-t-Gerade ablesen und T½ berechnen
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **log(a+b) ≠ log a + log b** (und **ld(a+b) ≠ ld a + ld b**) — nur Produktregel: log(a·b) = log a + log b (gleiche Basis!)
-- **ln(x) nur für x > 0** definiert; U = (a/b)·ln(A/B): U = 0 nur wenn A = B; A = 0 oder B = 0 nicht erlaubt
-- log(0) und log(negativer Zahl) sind NICHT definiert!
-- pH ↑ → [H⁺] ↓ (höherer pH = basischer = weniger Protonen)
-- ln ≠ log: ln hat Basis e, log hat Basis 10
-- pH-Änderung um 0,3 ≈ Faktor 2 bei [H⁺] (aus log(2) ≈ 0,301)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- ln(2) ≈ 0,693; log(2) ≈ 0,301; log(3) ≈ 0,477; ln(10) ≈ 2,303
-- Blut-pH: 7,35–7,45 (Azidose: < 7,35; Alkalose: > 7,45)
-- Bicarbonatpuffer: pH = 6,1 + log([HCO₃⁻]/(0,03×pCO₂)); Normal: HCO₃⁻ = 24, pCO₂ = 40 → pH 7,4
-- Dezibel: +10 dB → 10-fache Intensität; +3 dB → ca. 2-fache Intensität
 
 ---
 
@@ -1257,11 +1191,20 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Graphen lesen**: Asymptoten, Monotonie, Extrempunkte; **Semilog-Plot** (Pharmakokinetik); **Michaelis-Menten**, EC₅₀ (Dosis-Wirkung). **Warum für den MedAT relevant?** Asymptoten, Monotonie, Extrempunkte, Semilog, EC₅₀ (EKG, Dosis-Wirkung) werden geprüft. **Welche Fragen werden beantwortet?** „Asymptote — was?“; „Semilog — Achse?“; „EC₅₀ — Bedeutung?“; „Michaelis-Menten Sättigung?“; „Monotonie steigend?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Graphenlesen abgedeckt.
+Auf dem Monitor einer Intensivstation laufen Kurven: Herzfrequenz, Sauerstoffsättigung, Medikamentenspiegel. In der Pharmakologie zeigen Dosis-Wirkungskurven eine sigmoidale Form mit EC₅₀, und die Michaelis-Menten-Kinetik nähert sich asymptotisch einem Maximum. All diese Graphen zu lesen — Asymptoten erkennen, Monotonie beurteilen, Extrempunkte identifizieren — ist eine Kernkompetenz, die im MedAT ebenso gefragt wird wie später am Krankenbett. In diesem Kapitel lernst du, aus einem Kurvenverlauf auf den Funktionstyp zu schließen und klinisch relevante Kenngrößen abzulesen.
 
-**In diesem Kapitel lernst du:** **Asymptoten** (horizontal, vertikal); **Monotonie**; **Extrempunkte**; **Semilog-Plot**; **Michaelis-Menten**.
+**In diesem Kapitel lernst du:**
+- was Asymptoten (horizontal, vertikal, schräg) aussagen und wie du sie aus dem Graphen oder der Funktionsgleichung bestimmst
+- wie du Monotonie und Krümmung eines Graphen beurteilst und Extrempunkte identifizierst
+- wie ein Semilog-Plot exponentielle Abklingkurven linearisiert und was die Steigung verrät
+- wie du die Michaelis-Menten-Sättigungskinetik und EC₅₀ aus Dosis-Wirkungskurven abliest
+- wie du aus einem unbekannten Graphen den Funktionstyp erschließt (linear, quadratisch, exponentiell, sigmoidal)
 
 ---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:unit-circle}}
 
 **Idee:** **Asymptote** = Grenzlinie, der sich der Graph annähert (horizontal: y = const für x→±∞; vertikal: x = const, wo f→±∞). **Semilog-Plot** (y-Achse log): Exponentialfunktion wird zur Geraden; **EC₅₀** = Konzentration bei halbmaximaler Wirkung (Steilster Anstieg bei sigmoider Kurve). **Michaelis-Menten:** Sättigungskinetik, maximale Reaktionsgeschwindigkeit v_max.
 
@@ -1273,10 +1216,8 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
 
 ## Graphen und ihre Eigenschaften ablesen
 
-![Asymptoten](/grafik-asymptote.svg)
 
 
-![Grenzverhalten und Kurven](/grafik-logarithmus.svg)
 
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
@@ -1408,29 +1349,6 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
 **Minimal-Rechenrezepte:**
 - **Asymptote:** lim(x→±∞) f(x) für horizontal; Nenner = 0 für vertikal. **Semilog:** Steigung = −k; T½ = ln(2)/k.
 - **Michaelis-Menten:** v = v_max×[S]/(Km+[S]); bei [S] = Km ist v = v_max/2. **EC₅₀** = 50 % der max. Wirkung.
-
-**Zentral prüfungsrelevant:** Grenzwert lim (x→±∞), horizontale/vertikale Asymptoten, stetig vs. unstetig, Definitionsbereich, Wertebereich, gebrochen-rationale Funktionen (Pol, Hebbare Lücke).
-
-**Ergänzend vertiefend:** L'Hospital. Typische Fallen: Semilog-Gerade = Kinetik 1. Ordnung; Michaelis-Menten v_max/2 bei [S] = K_M (nicht bei v_max/2); Wendepunkt ≠ Extremum.
-
-**Häufige Fragen:**
-- Horizontale Asymptote aus Funktionsterm ablesen (Grenzwert x → ±∞)
-- Semilog-Plot: k und T½ aus Steigung berechnen (Steigung = −k; T½ = 0,693/k)
-- Michaelis-Menten: v bei gegebenem [S] berechnen; Km-Definition verstehen
-- Graphentyp aus Kurvenform erkennen (Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal)
-- Graphentransformationen: Verschiebung, Streckung, Spiegelung
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Semilog-Plot: Gerade = Kinetik 1. Ordnung; Kurve = KEINE reine Kinetik 1. Ordnung
-- Michaelis-Menten: v = v_max/2 bei [S] = Km (NICHT bei [S] = v_max/2!)
-- Horizontale Asymptote ist keine Nullstelle — Graph nähert sich an, schneidet sie (meist) nicht
-- Wendepunkt ist kein Extremum (kein Maximum, kein Minimum)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Michaelis-Menten: v = v_max × [S]/(Km + [S]); Asymptote y = v_max
-- Semilog-Plot: Steigung = −k; y-Achsenabschnitt = ln C₀; T½ = 0,693/k
-- Kinetik 0. Ordnung: linear in C-vs-t (Gerade); Kinetik 1. Ordnung: linear in ln C-vs-t
-- EC₅₀: Dosis für halbe Maximalwirkung (entspricht Km bei Enzymen)
 
 ---
 

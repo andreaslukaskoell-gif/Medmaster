@@ -28,15 +28,23 @@ export const physKapElektrizitaet: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Elektrische Ladung** (Elementarladung e), **Coulombgesetz** F ∝ q₁q₂/r², **elektrisches Feld** E = F/q, **Spannung** U = W/Q, **Kondensator** C = Q/U, E = U/d. **Warum für den MedAT relevant?** Elementarladung, Coulomb, E-Feld, Spannung, Kondensator, EKG, Elektrophorese, Membranpotenzial werden geprüft. **Welche Fragen werden beantwortet?** „Coulomb — Abstandsabhängigkeit?“; „E = F/q?“; „Kondensator C = Q/U?“; „Membranpotenzial — welche Ionen?“; „EKG Ableitungen?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Ladung und elektrischem Feld abgedeckt.
+Stell dir einen Gartenschlauch vor: Wasser fließt, weil am Hahn Druck herrscht. In der Elektrizität übernimmt die **Spannung** die Rolle des Drucks und die **Ladung** die Rolle des Wassers. Warum dissoziiert Kochsalz in Wasser, aber nicht in Luft? Warum erzeugt das Herz ein elektrisches Signal, das ein EKG messen kann? Und warum reichen 70 Millivolt über einer hauchdünnen Zellmembran aus, um ein elektrisches Feld zu erzeugen, das stärker ist als die Durchschlagsfeldstärke von Luft?
 
-**In diesem Kapitel lernst du:** Elementarladung e, Coulomb F ∝ q₁q₂/r², elektrisches Feld E = F/q, Spannung U = W/Q, Kondensator C = Q/U und E = U/d; Anwendung EKG, Membranpotenzial.
+**In diesem Kapitel lernst du:**
+- warum sich gleichnamige Ladungen abstoßen und wie das Coulomb-Gesetz die Kraft quantifiziert
+- wie das elektrische Feld den Raum um Ladungen beschreibt und warum Feldlinien nie kreuzen
+- was Spannung physikalisch bedeutet und warum sie den Ladungsfluss antreibt
+- wie ein Kondensator Energie speichert und warum der Defibrillator ein Kondensator-Entlader ist
+- warum das Membranpotential ein extremes elektrisches Feld über die Zellmembran erzeugt
 
 ---
 
+{{DIAGRAM:circuit}}
+
+{{DIAGRAM:em-spectrum}}
+
 ## Elektrische Ladung
 
-![Ladung Coulomb](/grafik-elektrizitaet-grundlagen.svg)
 
 
 Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
@@ -88,7 +96,6 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
 
 > **Merke:** Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential.
 
-![Feldlinien und Vektoren](/grafik-vektoren.svg)
 
 
 **Kondensator und Energiespeicherung:**
@@ -119,10 +126,6 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Coulombkraft F ~ 1/r², elektrische Ladung (e, C), Feldstärke E = F/q, **Spannung U = Δφ = φ₂ − φ₁**, **Volt = J/C**; Vorzeichen bei Voltmeter (Plus an höherem Potential → positive Anzeige); Kondensator (Q = C·U).
-
-**Ergänzend vertiefend:** Dipol. Typische Fallen: U = φ₂−φ₁; Coulomb F ∝ 1/r² (doppelter Abstand → ¼ Kraft); Spannung [V] ≠ Feldstärke E [V/m]; εᵣ im Nenner (F/εᵣ).
-
 **Häufige Fragen:**
 - "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
 - "In welchem Medium ist die Coulombkraft zwischen Ionen am schwächsten?" → Wasser (εᵣ ≈ 80 → Kraft 80× reduziert)
@@ -136,13 +139,6 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 - Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft (Magnetfeld) senkrecht zur Bewegungsrichtung.
 - Im Medium erscheint εᵣ **im Nenner** (Kraft wird geschwächt: F/εᵣ), nicht im Zähler. Wasser εᵣ ≈ 80 → Kraft 80× kleiner.
 - **Kondensator:** W = ½·C·U² — doppelte Spannung → **vierfache** gespeicherte Energie (nicht doppelt).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Elementarladung: e = 1,602 × 10⁻¹⁹ C
-- Coulombkonstante: k = 8,99 × 10⁹ N·m²/C²
-- εᵣ(Wasser) ≈ 80; εᵣ(Vakuum) = 1
-- Membranpotential: −70 mV über ~7 nm → E ≈ 10⁷ V/m (stärker als Luftdurchschlag!)
-- Defibrillator: C ≈ 200 µF, U ≈ 1500 V → W = ½·C·U² ≈ 225 J
 
 ---
 
@@ -325,15 +321,23 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Strom** I = Q/t, **Ohm'sches Gesetz** U = R·I, **Widerstand** R = ρ·l/A, **Leistung** P = U·I, **Joule'sche Wärme** Q = P·t. **Warum für den MedAT relevant?** Ohm, Widerstand, Leistung, Joule'sche Wärme, elektrische Gefährdung (Stromstärke, Weg) werden geprüft. **Welche Fragen werden beantwortet?** „Ohm U = R·I?“; „R = ρ·l/A?“; „Leistung P?“; „Joule'sche Wärme?“; „Gefährlich — Strom oder Spannung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Strom und Widerstand abgedeckt.
+Warum ist ein Stromschlag mit nassen Händen so viel gefährlicher als mit trockenen? Die Steckdose liefert immer 230 Volt -- doch der entscheidende Faktor ist der **Widerstand** der Haut: Nasse Haut hat nur ein Fünfzigstel des Widerstands trockener Haut, sodass ein 50-fach höherer Strom durch den Körper fließen kann. Ab 100 Milliampere droht Kammerflimmern.
 
-**In diesem Kapitel lernst du:** Ohm U = R·I, Widerstand R = ρ·l/A, Leistung P = U·I, Joule'sche Wärme Q = P·t; elektrische Gefährdung (Stromstärke, Weg); biologische Leitfähigkeit.
+**In diesem Kapitel lernst du:**
+- wie das Ohmsche Gesetz Spannung, Strom und Widerstand verknüpft
+- warum der Widerstand eines Drahtes von Länge, Querschnitt und Material abhängt
+- wie elektrische Leistung und Joulesche Wärme Elektrochirurgie und Ablation ermöglichen
+- warum Metalle bei Erwärmung schlechter leiten, Halbleiter aber besser
+- ab welcher Stromstärke ein Elektrounfall lebensbedrohlich wird
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:circuit}}
+
 ## Elektrischer Strom
 
-![Strom Ohm](/grafik-elektrizitaet-grundlagen.svg)
 
 
 **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
@@ -362,7 +366,6 @@ Der **elektrische Widerstand R** gibt an, wie stark ein Leiter dem Stromfluss en
 
 Die Einheit ist Ohm (Ω). Ein Ohmscher Leiter ist linear: Verdoppelt man U, verdoppelt sich I proportional.
 
-![Ohmsches Gesetz (linear)](/grafik-lineare-funktion.svg)
 
  Der Widerstand hängt von der **Geometrie** und dem **Material** ab:
 
@@ -429,10 +432,6 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Ohm U = R·I, **Widerstand R = ρ·l/A** (R ∝ L, R ∝ 1/A); bei gleichem Material: doppelte Länge → doppelter R, doppelter Durchmesser → A vervierfacht → R auf 1/4; Beispiel 100 m/1 mm vs. 50 m/2 mm → R₁:R₂ = 8. Stromgefahr (ab ~100 mA Kammerflimmern), Leistung P = U·I, Reihen-/Parallelschaltung (R_seriell = R₁+R₂, 1/R_parallel = 1/R₁+1/R₂).
-
-**Ergänzend vertiefend:** Kirchhoff. Typische Fallen: 230 V Effektivwert → Amplitude ≈ 325 V; P = U·I = I²R = U²/R; Metalle R↑ mit T, NTC R↓ mit T; Leitwert G = 1/R.
-
 **Häufige Fragen:**
 - "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
 - "Wie ändert sich der Widerstand eines Drahtes bei Verdopplung der Länge?" → R verdoppelt sich (R = ρ·L/A)
@@ -444,13 +443,6 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 - P = U·I = I²·R = U²/R — alle drei Formen äquivalent, aber unterschiedliche Variablen nötig
 - Metalle: R steigt mit T; Halbleiter/NTC: R sinkt mit T (entgegengesetzt!)
 - Leitwert G = 1/R [Siemens] — wird bei Ionenkanälen statt R verwendet
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- **Wechselspannung Steckdose:** 230 V = Effektivwert; Amplitude ≈ 325 V > 230 V; Volt = J/C.
-- 1–2 mA: wahrnehmbar; 10–20 mA: Loslasssperre; >100 mA: Kammerflimmern; >1 A: Verbrennungen
-- Spez. Widerstand: Kupfer ~1,7 × 10⁻⁸ Ω·m; Körpergewebe ~0,5–3 Ω·m
-- MRT-Magnete: Supraleiter (Nb-Ti) bei 4 K, R = 0
-- Nernst-Potential: E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV
 
 ---
 
@@ -633,15 +625,23 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Reihenschaltung** R_ges = R₁+R₂+…, **Parallelschaltung** 1/R_ges = 1/R₁+1/R₂+…, **Kirchhoff** (Knotenregel ΣI = 0, Maschenregel ΣU = 0), **RC-Glied** (Zeitkonstante τ = R·C). **Warum für den MedAT relevant?** Reihen-/Parallelschaltung, Kirchhoff, RC-Zeitkonstante, Kondensator Ladung/Entladung werden geprüft. **Welche Fragen werden beantwortet?** „Reihe R_ges?“; „Parallel 1/R_ges?“; „Kirchhoff Knoten?“; „τ = R·C?“; „Kondensator — Strom beim Laden?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Schaltungen und RC-Gliedern abgedeckt.
+Warum entlädt ein Defibrillator seine gesamte Energie in nur 10 Millisekunden -- und warum genügt das, um Kammerflimmern zu beenden? Ein Defibrillator ist im Kern ein Kondensator, der sich über den Thoraxwiderstand entlädt. Die Entladezeit hängt von der Zeitkonstante des RC-Kreises ab. Um solche Schaltungen zu verstehen, braucht man Reihen- und Parallelschaltungen sowie die Kirchhoffschen Gesetze.
 
-**In diesem Kapitel lernst du:** Reihenschaltung R_ges = R₁+R₂+…, Parallelschaltung 1/R_ges = 1/R₁+1/R₂+…; Kirchhoff (ΣI = 0, ΣU = 0); RC-Zeitkonstante τ = R·C; Kondensator Entladung/Ladung.
+**In diesem Kapitel lernst du:**
+- wie sich Widerstände in Reihen- und Parallelschaltung zum Gesamtwiderstand kombinieren
+- warum die Knotenregel Ladungserhaltung und die Maschenregel Energieerhaltung ausdrückt
+- wie sich Kondensatoren über RC-Glieder exponentiell laden und entladen
+- was die Zeitkonstante τ = R·C physikalisch bedeutet und warum nach τ genau 63 % erreicht sind
+- warum die Zellmembran elektrisch einem RC-Parallelglied entspricht
 
 ---
 
+{{DIAGRAM:circuit}}
+
+{{DIAGRAM:coordinate-system}}
+
 ## Grundlegende Schaltungstypen
 
-![Schaltung Kirchhoff](/grafik-elektrizitaet-grundlagen.svg)
 
 
 In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
@@ -694,7 +694,6 @@ Gespeicherte Energie: **W = ½·C·U²** = Q²/(2C) = ½·Q·U.
 **Reihenschaltung von Kondensatoren:** 1/C_ges = 1/C₁ + 1/C₂ (C_ges kleiner)
 **Parallelschaltung:** C_ges = C₁ + C₂ (C_ges größer)
 
-![RC-Entladung (exponentiell)](/grafik-exponential.svg)
 
 
 **RC-Schaltkreis (Lade-/Entladekurve):** Wird ein Kondensator über einen Widerstand geladen, verläuft die Spannung exponentiell: U_C(t) = U₀ · (1 − e^(−t/τ)), mit Zeitkonstante **τ = R·C** [s]. Nach τ ist der Kondensator zu 63 % geladen, nach 5τ gilt er als vollständig geladen. Die Entladung: U_C(t) = U₀ · e^(−t/τ). Der Defibrillator nutzt einen großen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W = ½·C·U² ≈ 200–400 J), der in ms über den Thorax entladen wird.
@@ -731,10 +730,6 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Reihenschaltung (R_ges = R₁+R₂, gleicher I), Parallelschaltung (1/R_ges = 1/R₁+1/R₂, gleiche U), Spannungsteiler, Stromteiler, Anwendung (Messgeräte).
-
-**Ergänzend vertiefend:** Kapazität in Reihe/Parallel. Typische Fallen: Kondensatoren Reihe 1/C_ges = 1/C₁+1/C₂ (umgekehrt zu R); parallel C_ges = C₁+C₂; nach 1τ etwa 63 % geladen; Knotenregel = Ladung, Maschenregel = Energie.
-
 **Häufige Fragen:**
 - "Wie berechnet man den Gesamtwiderstand bei Parallelschaltung?" → 1/R_ges = 1/R₁ + 1/R₂ + ... (immer kleiner als kleinster Einzelwert)
 - "Nach welcher Zeit ist ein RC-Kondensator auf 63 % geladen?" → Nach einer Zeitkonstante τ = R·C
@@ -746,12 +741,6 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
 - Kondensatoren parallel → C_ges = C₁ + C₂ (wie Widerstände in Reihe addieren sich)
 - Nach 1τ: 63 % geladen (nicht 50 %, nicht 100 %)
 - Knotenregel = Ladungserhaltung; Maschenregel = Energieerhaltung (nicht verwechseln!)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Defibrillator: C ≈ 200 µF, U ≈ 1000–2000 V, W ≈ 200–360 J, τ = R·C ≈ 10–15 ms
-- Membrankapazität: C_m ≈ 1 µF/cm²; Membranzeitkonstante τ_m = R_m·C_m ≈ 10 ms
-- Kapazitive Reaktanz: X_C = 1/(2π·f·C) — Kondensator sperrt Gleichstrom (f = 0 → X_C = ∞)
-- Wheatstone-Brücke Gleichgewicht: R₁·R₄ = R₂·R₃
 
 ---
 
@@ -915,15 +904,23 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Magnetfeld** B (Tesla); **Lorentz-Kraft** F = q·v·B auf bewegte Ladungen; Biot-Savart (Strom erzeugt B); **Faraday-Induktion** (Änderung des magnetischen Flusses → Spannung); **Larmor-Frequenz** f = γ·B₀ (MRT). **Warum für den MedAT relevant?** Magnetfeld B, Lorentz-Kraft, Biot-Savart, Faraday, Larmor, MRT-Prinzip werden geprüft. **Welche Fragen werden beantwortet?** „Lorentz-Kraft Formel?“; „Larmor MRT?“; „Faraday — was induziert U?“; „B Einheit?“; „MRT — welches Atom?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Magnetismus abgedeckt.
+Warum klopft ein MRT-Gerät so laut? Die Gradientenspulen führen starke Wechselströme im Hauptmagnetfeld -- die Lorentz-Kraft lässt sie vibrieren wie eine Lautsprechermembran. Magnetismus, Induktion und Larmor-Frequenz stecken hinter der wichtigsten strahlungsfreien Bildgebung der modernen Medizin.
 
-**In diesem Kapitel lernst du:** Magnetfeld B, Lorentz-Kraft F = q(v×B); Biot-Savart (Strom → B); Faraday (Induktion, Änderung Φ); Larmor f = γ·B₀ (MRT).
+**In diesem Kapitel lernst du:**
+- wie bewegte Ladungen und Ströme Magnetfelder erzeugen und von ihnen abgelenkt werden
+- warum die Lorentz-Kraft keine Arbeit verrichtet, aber Ladungen auf Kreisbahnen zwingt
+- wie eine Änderung des magnetischen Flusses nach Faraday eine Spannung induziert
+- warum die Larmor-Frequenz das MRT-Signal bestimmt und wie Gradientenspulen den Ort kodieren
+- welchen Frequenzbereich verschiedene Teile des elektromagnetischen Spektrums abdecken
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:circuit}}
+
 ## Grundlagen des Magnetismus
 
-![Magnetfeld MRT](/grafik-pet-mrt.svg)
 
 
 Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
@@ -977,7 +974,6 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 | Röntgen | 0,01–10 nm | Röntgen, CT |
 | Gamma | <0,01 nm | PET, Szintigraphie, Strahlentherapie |
 
-![Energieniveaus und Resonanz](/grafik-atommodelle.svg)
 
 
 **MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
@@ -1004,10 +1000,6 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Magnetfeld B, Lorentzkraft (F = q·v·B senkrecht), Larmor-Frequenz f_L = γ·B (MRT: 42,58 MHz/T), Kernspin, Anwendung MRT (Radiowellen, 1,5 T ≈ 64 MHz).
-
-**Ergänzend vertiefend:** T1/T2-Kontrast. Typische Fallen: Lorentz-Kraft verrichtet keine Arbeit (senkrecht zu v); Faraday ε ∝ dΦ/dt (konstantes B induziert nichts); MRT-Signal von ¹H (Wasser); B [T] ≠ E [V/m].
-
 **Häufige Fragen:**
 - "Welche Frequenz hat das MRT-Anregungssignal bei 1,5 T?" → f_L = 42,58 × 1,5 ≈ 64 MHz (Radiowellenbereich)
 - "Warum klopft ein MRT-Gerät?" → Lorentz-Kraft F = I·L×B auf stromführende Gradientenspulen im Hauptfeld B₀
@@ -1019,13 +1011,6 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
 - Faraday-Induktion: ε ∝ Änderungsrate dΦ/dt, nicht dem Feld B selbst (konstantes B induziert nichts!)
 - MRT-Signal kommt von ¹H-Protonen (Wasser), nicht von anderen Atomkernen
 - Magnetfeld B [Tesla] ≠ Elektrisches Feld E [V/m] — Einheiten beachten!
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- μ₀ = 4π × 10⁻⁷ T·m/A (Permeabilität des Vakuums)
-- Larmor-Konstante ¹H: γ/2π = 42,58 MHz/T → bei 1,5 T: ~64 MHz; bei 3 T: ~128 MHz
-- Zyklotronradius: r = m·v/(q·B)
-- c = λ·f = 3 × 10⁸ m/s (alle EM-Wellen im Vakuum)
-- TMS: dB/dt bis 10⁴ T/s → induziertes Feld im Kortex ~200 V/m (100× über Depolarisationsschwelle)
 
 ---
 
@@ -1207,15 +1192,23 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Geometrische Optik**: Reflexion, **Brechung** (Snellius n₁·sin α₁ = n₂·sin α₂), **Totalreflexion** (Grenzwinkel, Glasfaser, Endoskop), **Linsengleichung** 1/f = 1/g+1/b, **Brechkraft** D = 1/f [dpt]. **Warum für den MedAT relevant?** Snellius, Brechungsindex, Totalreflexion, Linsengleichung, Dioptrien, Endoskopie werden geprüft. **Welche Fragen werden beantwortet?** „Snellius Formel?“; „Totalreflexion — wann?“; „1/f = 1/g+1/b?“; „D in dpt?“; „Endoskop — Totalreflexion?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu geometrischer Optik abgedeckt.
+Warum sieht ein Bleistift im Wasserglas geknickt aus? Der Lichtstrahl ändert beim Übergang von Wasser zu Luft seine Richtung -- Brechung. Dasselbe Prinzip ermöglicht es, Licht durch haarfeine Glasfasern um Kurven zu leiten: Totalreflexion hält das Licht im Kern gefangen. Ohne dieses Phänomen gäbe es keine flexible Endoskopie.
 
-**In diesem Kapitel lernst du:** Reflexionsgesetz; Snellius (Brechung); Totalreflexion und Grenzwinkel; Linsengleichung; Brechkraft D = 1/f [dpt]; Endoskopie (Lichtleiter).
+**In diesem Kapitel lernst du:**
+- wie das Reflexionsgesetz funktioniert und warum Winkel immer zum Lot gemessen werden
+- wie das Snellsche Brechungsgesetz die Ablenkung von Licht an Grenzflächen beschreibt
+- wann Totalreflexion auftritt und warum sie nur vom dichteren zum dünneren Medium möglich ist
+- wie die Linsengleichung Brennweite, Gegenstandsweite und Bildweite verknüpft
+- was Brechkraft in Dioptrien bedeutet und wie das Auge sie nutzt
 
 ---
 
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:em-spectrum}}
+
 ## Reflexionsgesetz
 
-![Reflexion Snellius](/grafik-optik.svg)
 
 
 Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
@@ -1261,10 +1254,8 @@ Beispiel Glas (n=1,5) → Luft (n=1): sin α_grenz = 1/1,5 = 0,667 → α_grenz 
 
 **Klinische Anwendung – Endoskopie:** Glasfasern nutzen Totalreflexion, um Licht über weite Strecken und um Kurven zu leiten. Millionen dünner Glasfasern bilden flexible Lichtleiter für Endoskope (Gastroskop, Koloskop, Bronchoskop). Die Fasern müssen von einem Mantel mit kleinerem n umgeben sein, damit Totalreflexion an der Kern-Mantel-Grenze gewährleistet ist.
 
-![Linsen und Abbildung](/grafik-optik-lupe.svg)
 
 
-![Linsen und Abbildung](/grafik-optik-lupe.svg)
 
 
 ## Linsen und Brechkraft
@@ -1316,10 +1307,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Brechung (Snellius n₁·sin α = n₂·sin β), Brechzahl n, Totalreflexion (sin α_G = n₂/n₁), Grenzwinkel, **Dispersion = wellenlängenabhängige Brechung** (Regenbogen: Auffächerung durch Brechung in Tropfen, nicht durch Streuung/Beugung/Totalreflexion/Absorption), Anwendung (Lichtleiter, Endoskopie).
-
-**Ergänzend vertiefend:** Dispersion. Typische Fallen: Dispersion = n(λ), wellenlängenabhängige Brechung (nicht Totalreflexion/Beugung); Totalreflexion nur n₁ > n₂; Winkel gegen Lot; b > 0 reelles Bild, b < 0 virtuelles Bild.
-
 **Häufige Fragen:**
 - "Was ist der Grenzwinkel für Totalreflexion bei Glas (n=1,5) → Luft (n=1)?" → sin α_G = 1/1,5 → α_G ≈ 41,8°
 - "Wie berechnet man die Bildweite mit der Linsengleichung?" → 1/b = 1/f − 1/g
@@ -1331,12 +1318,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
 - Totalreflexion nur vom dichteren zum dünneren Medium (n₁ > n₂), NICHT umgekehrt
 - Winkel werden immer gegen das Lot (Flächennormale) gemessen, nicht gegen die Oberfläche
 - Positives b → reelles Bild hinter der Linse; negatives b → virtuelles Bild auf der Gegenstandsseite
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Brechungsindizes: Vakuum = 1; Luft ≈ 1; Wasser = 1,33; Glas ≈ 1,5; Hornhaut = 1,376
-- Brechkraft Auge: ~60 dpt gesamt (Hornhaut ~43 dpt + Linse ~17 dpt variabel)
-- Glasfaser Grenzwinkel ≈ 70° (Kern n=1,62, Mantel n=1,52)
-- D = 1/f [m]: positive D = Sammellinse; negative D = Zerstreuungslinse
 
 ---
 
@@ -1517,15 +1498,23 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
       ],
       content: `## Einleitung
 
-**Worum geht es?** Licht als **Welle**: **Interferenz**, **Beugung**, **Abbe-Grenze** d_min ≈ λ/(2·NA) (Auflösungslimit des Mikroskops), **Numerische Apertur** NA. **Warum für den MedAT relevant?** Interferenz, Beugung, Abbe-Grenze, NA, Mikroskopie, OCT werden geprüft. **Welche Fragen werden beantwortet?** „Abbe d_min?“; „NA — wofür?“; „Auflösung verbessern?“; „OCT — Prinzip?“; „Interferenz konstruktiv?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Wellenoptik (Interferenz, Beugung, Abbe) abgedeckt.
+Warum kann ein Lichtmikroskop Viren nicht sichtbar machen, egal wie stark es vergrößert? Die Antwort liegt im Wellencharakter des Lichts: Beugung setzt eine fundamentale Auflösungsgrenze bei etwa 200 Nanometern. Strukturen darunter verschwimmen -- nicht wegen schlechter Optik, sondern wegen der Physik.
 
-**In diesem Kapitel lernst du:** Licht als EM-Welle; Interferenz (konstruktiv/destruktiv); Beugung; Abbe d_min ≈ λ/(2·NA); NA und Auflösung; OCT-Prinzip.
+**In diesem Kapitel lernst du:**
+- warum Licht als elektromagnetische Welle Interferenz und Beugung zeigt
+- unter welchen Bedingungen sich Wellen konstruktiv oder destruktiv überlagern
+- wie das Abbe-Kriterium die Auflösungsgrenze optischer Systeme bestimmt
+- warum Ölimmersion die Auflösung verbessert und was die numerische Apertur bedeutet
+- wie die optische Kohärenztomographie (OCT) Netzhautschichten darstellt
 
 ---
 
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:wave-types}}
+
 ## Licht als elektromagnetische Welle
 
-![Interferenz Beugung](/grafik-26-welle.svg)
 
 
 Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
@@ -1539,12 +1528,10 @@ Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 78
 
 **Dispersion:** **Dispersion** ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
 
-![Wellen und Spektrum](/grafik-optik.svg)
 
 
 **Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
 
-![Reflexion und Brechung](/grafik-optik.svg)
 
 
 ## Interferenz
@@ -1618,10 +1605,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Auflösungsgrenze d_min ≈ λ/(2·NA), numerische Apertur NA, Beugungsbegrenzung, Vergrößerung vs. Auflösung, Mikroskop (Objektiv, Okular).
-
-**Ergänzend vertiefend:** Auflösung Auge. Typische Fallen: konstruktiv Δ = nλ, destruktiv (n+½)λ; Beugung stärker bei längerer λ; OCT = Interferenz (axiale Auflösung), nicht Beugung.
-
 **Häufige Fragen:**
 - "Was ist die Auflösungsgrenze eines Mikroskops mit NA = 1,3 bei λ = 520 nm?" → d_min = 520/(2·1,3) = 200 nm
 - "Wie verbessert Ölimmersion die Mikroskop-Auflösung?" → Erhöht NA = n·sin α (n_Öl ≈ 1,52 > n_Luft = 1)
@@ -1632,12 +1615,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
 - Konstruktiv = ganzzahliges Vielfaches (Δ = nλ, hell); Destruktiv = halbzahliges (Δ = (n+½)λ, dunkel)
 - Beugung wird stärker (nicht schwächer) bei längerer Wellenlänge
 - OCT nutzt Interferenz (nicht Beugung) für Tiefenauflösung — axiale Auflösung durch Kohärenzlänge begrenzt
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot)
-- Abbe-Limit: d_min = λ/(2·NA) ≈ 200 nm (Standard-Lichtmikroskop mit Ölimmersion)
-- Ölimmersion: n_Öl ≈ 1,52 → NA bis ~1,4
-- OCT: axiale Auflösung ~5–15 µm (nicht beugungsbegrenzt, sondern durch Kohärenzlänge)
 
 ---
 
@@ -1806,15 +1783,23 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Optische Instrumente**: Lupe (Vergrößerung M), Mikroskop (Objektiv + Okular), Teleskop; **Auflösungsgrenze** (Abbe), **numerische Apertur** NA. **Warum für den MedAT relevant?** Lupen-/Mikroskop-/Teleskopvergrößerung, Auflösungsgrenze, klinische Anwendungen werden geprüft. **Welche Fragen werden beantwortet?** „Lupe Vergrößerung?“; „Mikroskop Aufbau?“; „Auflösungsgrenze von was abhängig?“; „NA erhöhen — wozu?“; „Endoskop — Optik?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu optischen Instrumenten abgedeckt.
+Wie kann ein Pathologe einzelne Zellen in einer Gewebeprobe erkennen, die mit bloßem Auge nur ein rosa Fleck wäre? Das Lichtmikroskop kombiniert zwei Linsensysteme -- Objektiv und Okular -- und erreicht Vergrößerungen bis 1000-fach. Doch Vergrößerung allein nützt nichts ohne ausreichende Auflösung.
 
-**In diesem Kapitel lernst du:** Lupe (Vergrößerung M); Mikroskop (Objektiv + Okular); Teleskop; Auflösungsgrenze und NA; klinische Anwendung (Dermatologie, Histologie).
+**In diesem Kapitel lernst du:**
+- wie eine Lupe als einfachste Sammellinse funktioniert und warum M = S/f gilt
+- warum die Gesamtvergrößerung eines Mikroskops das Produkt aus Objektiv- und Okularvergrößerung ist
+- wie ein Endoskop Licht und Bild durch flexible Glasfasern transportiert
+- welche Rolle Spaltlampe und Ophthalmoskop in der Augendiagnostik spielen
+- warum Elektronenmikroskope die Abbe-Grenze durch kurze De-Broglie-Wellenlängen überwinden
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:lens-imaging}}
+
 ## Lupe
 
-![Lupe Mikroskop](/grafik-optik-lupe.svg)
 
 
 Die Lupe ist die einfachste Sehhilfe – eine einzelne **Sammellinse**. **Um eine Sammellinse als Lupe zu verwenden** (vergrößertes, aufrechtes virtuelles Bild), muss sich der **Gegenstand innerhalb der einfachen Brennweite** befinden (g < f). Außerhalb der Brennweite entstünde ein reelles (umgekehrtes) Bild; als Lupe nutzt man bewusst g < f. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt **innerhalb der Brennweite** (nahe am Brennpunkt), entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
@@ -1857,10 +1842,8 @@ Teleskope (Fernrohre) sind für ferne Objekte konzipiert. Im einfachsten Fall (K
 
 Beispiel: f_ob = 1000 mm, f_ok = 25 mm → M = 40x. Das erzeugte Bild ist umgekehrt; für aufrechte Bilder (terrestrisches Fernrohr) wird ein Umkehrsystem eingebaut.
 
-![Reflexion und Linsen](/grafik-optik.svg)
 
 
-![Lichtleitung und Abbildung](/grafik-optik.svg)
 
 
 ## Endoskop
@@ -1911,10 +1894,6 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Linse (Brennweite f, Brechkraft D = 1/f in dpt), **Lupe: Sammellinse als Lupe → Gegenstand innerhalb der einfachen Brennweite** (g < f); Vergrößerung M = 25 cm/f; Abbildungsgleichung 1/f = 1/g + 1/b, reelles/virtuelles Bild.
-
-**Ergänzend vertiefend:** Linsenfehler. Typische Fallen: Lupe Gegenstand innerhalb f (g < f); M = S/f (S = 25 cm); Mikroskop M_ges = M_ob×M_ok (Produkt); Teleskop M = f_ob/f_ok.
-
 **Häufige Fragen:**
 - "Welche Vergrößerung hat eine Lupe mit f = 5 cm?" → M = 25/5 = 5-fach
 - "Wie berechnet sich die Gesamtvergrößerung eines Mikroskops?" → M_ges = M_Objektiv × M_Okular
@@ -1927,12 +1906,6 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
 - Mikroskop: M_ges = M_ob × M_ok (Produkt, nicht Summe!)
 - Teleskop: M = f_ob/f_ok — langes Objektiv, kurzes Okular → hohe Vergrößerung
 - Konfokalmikroskop: Pinhole blockt Out-of-focus-Licht → optische Schnittbilder (verbessert nicht die Vergrößerung)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Deutliche Sehweite: S = 25 cm (Konvention für Vergrößerungsformeln)
-- Auflösungsgrenze Lichtmikroskop: ~200 nm (Abbe-Limit mit Ölimmersion)
-- Auflösungsgrenze Elektronenmikroskop: ~0,1 nm (De-Broglie-Wellenlänge bei 100 kV)
-- Typische Vergrößerungen: Dermatoskop ~10×; Histologie 40–400×; TEM bis 500.000×
 
 ---
 
@@ -2100,15 +2073,23 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
       ],
       content: `## Einleitung
 
-**Worum geht es?** Das **Auge** als Linsensystem (Hornhaut ~43 dpt, Linse ~20 dpt); **Akkommodation**; Fehlsichtigkeit: **Myopie** (Kurzsichtigkeit), **Hyperopie** (Weitsichtigkeit), **Presbyopie** (Alterssichtigkeit), **Astigmatismus**; Korrektionslinsen (Konkav/Konvex), Dioptrien. **Warum für den MedAT relevant?** Akkommodation, Myopie/Hyperopie/Presbyopie/Astigmatismus, Korrektionslinsen, Dioptrien werden geprüft. **Welche Fragen werden beantwortet?** „Myopie — welche Linse?“; „Hyperopie — Korrektur?“; „Presbyopie — Ursache?“; „Dioptrie D = 1/f?“; „Akkommodation — was passiert?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Auge und zur Fehlsichtigkeit abgedeckt.
+Warum brauchen fast alle Menschen ab 45 eine Lesebrille -- selbst wer vorher perfekt gesehen hat? Die Augenlinse verliert mit den Jahren ihre Elastizität und kann sich nicht mehr ausreichend wölben. Das ist Presbyopie, und sie ist nur eine von vier häufigen Fehlsichtigkeiten, die alle mit den optischen Gesetzen von Linsen und Brechkraft zusammenhängen.
 
-**In diesem Kapitel lernst du:** Anatomie und Brechkraft des Auges; Akkommodation; Myopie (Kurz-/Weitsichtigkeit), Hyperopie, Presbyopie, Astigmatismus; Korrektionslinsen (Konkav/Konvex); Dioptrien.
+**In diesem Kapitel lernst du:**
+- wie das Auge mit Hornhaut und Linse zusammen etwa 60 Dioptrien Brechkraft erzeugt
+- warum Akkommodation den Ziliarmuskel und die Elastizität der Linse erfordert
+- wie Myopie, Hyperopie, Presbyopie und Astigmatismus physikalisch entstehen
+- welche Linsentypen die jeweilige Fehlsichtigkeit korrigieren
+- wie LASIK die Hornhautkrümmung dauerhaft verändert
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:wave-types}}
+
 ## Anatomie und Optik des normalen Auges
 
-![Auge Fehlsichtigkeit](/grafik-transduktion-sinne.svg)
 
 
 Das Auge besteht optisch aus mehreren brechenden Flächen:
@@ -2119,7 +2100,6 @@ Das Auge besteht optisch aus mehreren brechenden Flächen:
 
 Die **Gesamtbrechkraft** des entspannten Auges beträgt ca. **60 Dioptrien**, bei maximaler Akkommodation ca. 70 dpt.
 
-![Linsen und Brechkraft](/grafik-optik-lupe.svg)
 
 
 Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt beim Erwachsenen ca. 24 mm.
@@ -2139,7 +2119,6 @@ Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt be
 - **Fernpunkt**: die weiteste Entfernung, auf die das Auge bei entspanntem Ziliarmuskel scharf sehen kann. Normal: im Unendlichen.
 - **Nahpunkt**: die nächste Entfernung, auf die das Auge bei maximaler Akkommodation scharf sehen kann. Normal: ~10 cm bei 20-jährigen, ~25 cm bei 40-jährigen, ~100+ cm im Alter.
 
-![Brechkraft und Korrektur](/grafik-optik-lupe.svg)
 
 
 ## Myopie (Kurzsichtigkeit)
@@ -2215,10 +2194,6 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Auge (Akkommodation, Nahpunkt), Myopie (Auge zu lang → Zerstreuungslinse, negativ D), Hyperopie (Sammellinse), Presbyopie (Alterssichtigkeit), Brechkraft in dpt.
-
-**Ergänzend vertiefend:** Astigmatismus. Typische Fallen: Myopie (Auge zu lang) → Zerstreuungslinse (−dpt); Hyperopie (zu kurz) → Sammellinse (+dpt); Presbyopie ≠ Hyperopie (andere Ursache); Akkommodation: Ziliarmuskel kontrahiert → Linse wölbt sich.
-
 **Häufige Fragen:**
 - "Welche Brille korrigiert Myopie?" → Zerstreuungslinse (negatives D); Myopie = Auge zu lang
 - "Was passiert beim Akkommodieren auf Nähe mit dem Ziliarmuskel?" → Kontrahiert → Linse wölbt sich → Brechkraft steigt
@@ -2230,13 +2205,6 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
 - Hyperopie: Auge zu KURZ (zu schwach brechend) → Sammellinse (+dpt)
 - Presbyopie ≠ Hyperopie: gleiche Korrektur (Lesebrille +dpt), aber unterschiedliche Ursache (Elastizitätsverlust vs. kurzes Auge)
 - Akkommodation: Ziliarmuskel KONTRAHIERT → Linse wölbt sich (nicht flacher!)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Gesamtbrechkraft Auge: ~60 dpt (Hornhaut ~43 dpt + Linse ~17–27 dpt variabel)
-- Akkommodationsbreite: Jugendliche ~10 dpt; ab 50 Jahren nur noch ~2 dpt
-- Normaler IOP: 10–21 mmHg; Glaukom oft >21 mmHg
-- LASIK: Excimerlaser λ = 193 nm; Korrekturbereiche −10 bis +6 dpt
-- Nahpunkt: ~10 cm (20-jährig) → >100 cm (60-jährig, Presbyopie)
 
 ---
 

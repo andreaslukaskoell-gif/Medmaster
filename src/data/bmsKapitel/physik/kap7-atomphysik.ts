@@ -30,15 +30,23 @@ export const physKap7: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Atomphysik**: diskrete **Energieniveaus** (Bohr-Modell); beim Übergang Emission/Absorption von Licht (**Spektroskopie**). **Photonenenergie** E = hf = hc/λ; **Lambert-Beer** (Extinktion); **Pulsoximetrie** (HbO₂ vs. Hb). **Warum für den MedAT relevant?** Bohr-Modell, E = hf = hc/λ, Emissions-/Absorptionsspektren, Lambert-Beer, Pulsoximetrie werden geprüft. **Welche Fragen werden beantwortet?** „E = hf = hc/λ?“; „Lambert-Beer?“; „Pulsoximetrie — welche Wellenlängen?“; „Bohr — diskrete Niveaus?“; „Absorption vs. Emission?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Atomphysik und Spektroskopie abgedeckt.
+Warum leuchtet Neon orange und Natrium gelb -- aber niemals umgekehrt? Jedes Element besitzt einen einzigartigen Satz von Energieniveaus, die wie eine Fingerabdruck-Signatur wirken. Wenn Elektronen zwischen diesen Niveaus springen, entsteht Licht ganz bestimmter Wellenlängen. Dieses Prinzip nutzt die Pulsoximetrie an deinem Finger: Zwei Wellenlängen reichen aus, um die Sauerstoffsättigung des Blutes zu messen.
 
-**In diesem Kapitel lernst du:** Bohr'sches Atommodell (diskrete Niveaus); E = hf = hc/λ; Emissions- und Absorptionsspektren; Lambert-Beer (Extinktion); Pulsoximetrie (HbO₂ vs. Hb).
+**In diesem Kapitel lernst du:**
+- wie das Bohrsche Atommodell diskrete Energieniveaus und Spektrallinien erklärt
+- warum die Photonenenergie E = hf = hc/λ Frequenz und Wellenlänge verknüpft
+- wie Emissions- und Absorptionsspektren als Fingerabdruck von Elementen dienen
+- wie das Lambert-Beer-Gesetz Extinktion mit Konzentration verknüpft
+- warum die Pulsoximetrie genau 660 nm und 940 nm verwendet
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:coordinate-system}}
+
 ## Entwicklung der Atommodelle
 
-![Atommodelle](/grafik-atommodelle.svg)
 
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
@@ -64,7 +72,6 @@ Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energie
 
 > **Merke:** Das Bohrsche Modell funktioniert exakt nur für Ein-Elektronen-Systeme (H, He⁺, Li²⁺). Für Mehrelektronensysteme ist die Quantenmechanik nötig.
 
-![Orbitale und Quantenzustände](/grafik-orbitale.svg)
 
 
 Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). **Pauli-Prinzip:** Keine zwei Elektronen dürfen in allen vier Quantenzahlen übereinstimmen. **Daraus folgt: Jedes Orbital der Atomhülle kann nur maximal 2 Elektronen aufnehmen** (mit entgegengesetztem Spin).
@@ -129,10 +136,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** **Pauli-Prinzip:** Jedes Orbital kann **maximal 2 Elektronen** aufnehmen. Wasserstoff-Spektrum (Lyman UV, Balmer sichtbar, Paschen IR), Hα 656 nm (n=3→2), Energieniveaus E_n ~ 1/n², Photon E = h·f, Rydberg.
-
-**Ergänzend vertiefend:** Feinstruktur. Typische Fallen: Emissionsspektrum (helle Linien) ≠ Absorptionsspektrum (dunkle Linien); Lyman (UV) ≠ Balmer (sichtbar) ≠ Paschen (IR); E = hc/λ — kürzere λ = höhere Energie; Lambert-Beer A = log(I₀/I), nicht %.
-
 **Häufige Fragen:**
 - "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
 - "Was besagt das Bohrsche Modell?" → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
@@ -146,13 +149,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 - **E = hc/λ:** E in **eV** für MedAT oft nötig — 1 eV = 1,602×10⁻¹⁹ J. Kürzere Wellenlänge → **höhere** Photonenenergie.
 - **Pulsoximetrie:** 660 nm (Hb absorbiert stark) und **940 nm** (HbO₂ absorbiert stärker) — nicht zwei rote Wellenlängen. Isobestischer Punkt bei 805 nm.
 - **Pauli:** Jedes Orbital **maximal 2 Elektronen** (entgegengesetzter Spin).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- h = 6,626 × 10⁻³⁴ J·s; c = 3 × 10⁸ m/s; 1 eV = 1,602 × 10⁻¹⁹ J
-- Ionisierungsenergie Wasserstoff: 13,6 eV (n=1 → n=∞)
-- Hα = 656 nm (rot), Hβ = 486 nm (blau-grün) — Balmer-Serie
-- Isobestischer Punkt Hb/HbO₂: 805 nm
-- SpO₂-Normwert ≥ 95 %; < 90 % = klinische Hypoxämie
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -324,15 +320,23 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Radioaktivität**: **α-** (Heliumkern), **β-** (Elektron), **γ-Strahlung** (Photon); **Zerfallsgesetz** N(t) = N₀·e^(-λt), **Halbwertszeit** T_½; **Aktivität** A [Bq]; **Dosis** [Gy], **Äquivalentdosis** [Sv]; Strahlenschutz. **Warum für den MedAT relevant?** α/β/γ, Halbwertszeit, N(t) = N₀·e^(-λt), Aktivität Bq, Äquivalentdosis Sv, Strahlenschutz werden geprüft. **Welche Fragen werden beantwortet?** „α/β/γ — Reichweite?“; „T_½ — was ist λ?“; „Aktivität Einheit?“; „Sv vs. Gy?“; „ALARA?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Radioaktivität abgedeckt.
+Warum ist das Einatmen von Radongas gefährlicher als das Stehen neben einem Gammastrahler -- obwohl Alpha-Teilchen nicht einmal ein Blatt Papier durchdringen? Alpha-Strahlung gibt ihre gesamte Energie auf wenigen Mikrometern ab. Im Lungengewebe bedeutet das: massive lokale DNA-Schäden mit 20-facher biologischer Wirksamkeit im Vergleich zu Gamma-Strahlung.
 
-**In diesem Kapitel lernst du:** α- (Heliumkern), β- (Elektron), γ-Strahlung (Photon); Zerfallsgesetz und T_½; Aktivität A [Bq]; Dosis [Gy], Äquivalentdosis [Sv]; Strahlenschutz.
+**In diesem Kapitel lernst du:**
+- wie sich Alpha-, Beta- und Gamma-Strahlung in Teilchenart, Reichweite und Abschirmung unterscheiden
+- warum radioaktiver Zerfall exponentiell verläuft und was die Halbwertszeit bedeutet
+- wie Aktivität in Becquerel und biologische Wirksamkeit in Sievert gemessen werden
+- welche medizinischen Isotope in Szintigraphie, PET und Schilddrüsentherapie eingesetzt werden
+- warum der Strahlungs-Wichtungsfaktor von Alpha-Strahlung 20 beträgt
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:coordinate-system}}
+
 ## Alpha-Strahlung (α)
 
-![Zerfall](/grafik-29-zerfall.svg)
 
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
@@ -391,7 +395,6 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 
 **Massendefekt:** Die **Masse des Atomkerns** ist **etwas geringer** als die Summe der Massen der in ihm enthaltenen Nukleonen (Protonen + Neutronen). Diese Massendifferenz (Massendefekt) entspricht der **Bindungsenergie** des Kerns (E = Δm·c²). Nicht: „Die Masse des Atoms ist größer als die Summe der Nukleonen“ (das wäre falsch); auch nicht die Massenzunahme bei hohen Geschwindigkeiten oder der Massenunterschied zwischen Proton und Elektron.
 
-![Exponentieller Zerfall](/grafik-exponential.svg)
 
 
 ## Exponentieller Zerfall und Halbwertszeit
@@ -451,10 +454,6 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Radioaktiver Zerfall (α Z−2 A−4, β⁻ Z+1, β⁺ Z−1, γ unverändert), **ionisierende Strahlung beim Zerfall = Alpha, Beta, Gamma** (nicht Infrarot!). **Kernspaltung:** Auslösung durch **Neutronen**. **Massendefekt:** Kernmasse **kleiner** als Summe der Nukleonenmassen. Halbwertszeit, Aktivität, Strahlenschutz, Anwendung (PET, Szintigraphie, Therapie).
-
-**Ergänzend vertiefend:** Bindungsenergie. Typische Fallen: Ionisierend nur Alpha, Beta, Gamma (nicht IR); Kernspaltung durch Neutronen; Massendefekt = Kernmasse kleiner als Nukleonensumme; Gray (Energie) ≠ Sievert (biolog. Wirksamkeit).
-
 **Häufige Fragen:**
 - "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
 - "Was ändert sich bei β⁻-Zerfall?" → Z+1, A gleich (Neutron → Proton + e⁻ + ν̄ₑ)
@@ -468,14 +467,6 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 - Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit)
 - α äußerlich harmlos (Papier stoppt), aber innerlich extrem gefährlich (w_R = 20!)
 - β⁺-Zerfall (Positronenemitter, Z−1, für PET) ≠ β⁻-Zerfall (Elektronemitter, Z+1, für Therapie)
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Strahlungs-Wichtungsfaktoren: α: w_R = 20; β, γ, e⁻: w_R = 1; Neutronen: w_R = 5–20
-- ⁹⁹ᵐTc: T½ = 6 h, γ 140 keV, Szintigraphie
-- ¹³¹I: T½ = 8 d, β⁻+γ, Schilddrüsentherapie
-- ¹⁸F: T½ = 110 min, β⁺, PET
-- C-14: T½ = 5730 Jahre, Altersbestimmung
-- Abschirmung: α → Papier; β → Aluminium; γ → Blei/Beton
 ---
 
 ## Zusammenfassung (ultrakompakt)
@@ -652,22 +643,29 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Röntgenstrahlung**: Entstehung (**Bremsstrahlung**, **charakteristische Strahlung**); **Schwächungsgesetz** I = I₀·e^(-μx); Strahlenschäden (deterministisch vs. stochastisch); **Bergonié-Tribondeau**; Abstandsquadratgesetz. **Warum für den MedAT relevant?** Brems-/charakteristische Strahlung, Schwächungsgesetz, deterministisch vs. stochastisch, Bergonié-Tribondeau, Abstandsquadratgesetz werden geprüft. **Welche Fragen werden beantwortet?** „Brems- vs. charakteristische Strahlung?“; „I = I₀·e^(-μx)?“; „Deterministisch — was?“; „Bergonié-Tribondeau?“; „Abstand verdoppelt — Dosis?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Röntgenstrahlung abgedeckt.
+Warum erscheinen Knochen im Röntgenbild weiß, Lunge aber fast schwarz? Calcium hat eine hohe Ordnungszahl und absorbiert Röntgenstrahlung viel stärker als luftgefülltes Lungengewebe. Aber Röntgenstrahlung kann auch Schäden verursachen: Wie unterscheidet man einen Strahlenschaden, der erst ab einer Schwellendosis auftritt, von einem Krebsrisiko, das mit jeder noch so kleinen Dosis steigt?
 
-**In diesem Kapitel lernst du:** Entstehung Röntgen (Bremsstrahlung, charakteristische Linien); Schwächung I = I₀·e^(-μx); deterministische vs. stochastische Schäden; Bergonié-Tribondeau; Abstandsquadratgesetz; ALARA.
+**In diesem Kapitel lernst du:**
+- wie Bremsstrahlung und charakteristische Strahlung in der Röntgenröhre entstehen
+- warum Röntgenstrahlung exponentiell im Gewebe geschwächt wird
+- wie direkte und indirekte Strahlenwirkung DNA-Schäden verursachen
+- was deterministische von stochastischen Strahlenschäden unterscheidet
+- warum das ALARA-Prinzip Abstand, Zeit und Abschirmung kombiniert
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:coordinate-system}}
+
 ## Entstehung von Röntgenstrahlung
 
-![Röntgen](/grafik-roentgen.svg)
 
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
 **1. Bremsstrahlung:** Die Elektronen werden im Coulomb-Feld der Atome abgebremst. Die dabei abgegebene kinetische Energie wird als Photon emittiert. Es entsteht ein kontinuierliches Spektrum mit einer minimalen Wellenlänge λ_min = hc/(e·U), entsprechend der maximalen Photonenenergie E_max = e·U. Mit U = 100 kV ergibt sich E_max = 100 keV.
 
-![Energieniveaus und charakteristische Strahlung](/grafik-atommodelle.svg)
 
 
 **2. Charakteristische Strahlung:** Wenn ein eintreffendes Elektron ein kernnahes Elektron aus dem Wolframatom schlägt (K-Schale), fällt ein Elektron von einer äußeren Schale (L, M) in die entstehende Lücke und emittiert dabei ein Photon mit einer für Wolfram spezifischen Energie (diskrete Linien: Kα ≈ 59 keV, Kβ ≈ 67 keV für Wolfram). Diese Linien überlagern das Bremsspektrum.
@@ -751,10 +749,6 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** Röntgen: Bremsstrahlung (kontinuierlich, Abbremsung e⁻), charakteristische Strahlung (diskrete Linien, Schalenübergänge), Kα/Kβ, Anwendung (Diagnostik, CT).
-
-**Ergänzend vertiefend:** Absorptionskante. Typische Fallen: Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum); stochastisch (kein Schwellenwert) ≠ deterministisch (Schwellendosis); HVL = ln2/μ.
-
 **Häufige Fragen:**
 - "Was ist Bremsstrahlung vs. charakteristische Strahlung?" → Bremsstrahlung: kontinuierliches Spektrum (Abbremsung im Coulomb-Feld); charakteristische Strahlung: diskrete Linien (elementspezifische Schalenübergänge)
 - "Warum erscheinen Knochen hell im Röntgenbild?" → höheres μ durch Ca (Z=20) → mehr Absorption → weniger Photonen erreichen Detektor
@@ -765,12 +759,6 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 - Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum, elementspezifisch)
 - Stochastisch (kein Schwellenwert, Krebsinduktion) ≠ deterministisch (Schwellendosis, Strahlenkater)
 - Halbwertsschichtdicke HVL = ln2/μ — analog zur Halbwertszeit, aber für Röntgenabschirmung
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- λ_min [pm] ≈ 1240/U [kV] — Kurzregel für Röntgenröhre
-- Bergonié-Tribondeau: Lymphozyten (sensitiv) > Knochenmark > Darmepithel > Muskel > Nervenzellen (resistent)
-- Indirekte Strahlenwirkung (via OH•-Radikale): ≈ 70 %; direkte: ≈ 30 %
-- CT Abdomen ≈ 10 mSv; Röntgen Thorax ≈ 0,02–0,1 mSv; Natürliche Hintergrundstrahlung ≈ 2 mSv/Jahr
 - Berufsgrenzwert: ≤ 20 mSv/Jahr; Bevölkerungsgrenzwert: ≤ 1 mSv/Jahr
 ---
 
@@ -943,18 +931,25 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
       ],
       content: `## Einleitung
 
-**Worum geht es?** **PET** (Positronen, Annihilation 2×511 keV, Koinzidenz), **SPECT** (⁹⁹ᵐTc, Single-Photon, Kollimator), **MRT** (Kernspinresonanz, **Larmor** f = γ·B₀, T1/T2); **Photoeffekt**, **Welle-Teilchen-Dualismus**. **Warum für den MedAT relevant?** PET-/SPECT-/MRT-Prinzip, Photoeffekt, Welle-Teilchen-Dualismus werden geprüft. **Welche Fragen werden beantwortet?** „PET — was wird detektiert?“; „MRT Larmor-Formel?“; „SPECT vs. PET?“; „Photoeffekt — E = hf?“; „T1 vs. T2?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Bildgebung (PET, SPECT, MRT) und Quantenphysik abgedeckt.
+Warum leuchtet ein Tumor im PET-Bild hell auf, obwohl er anatomisch im CT kaum sichtbar ist? PET misst Stoffwechselaktivität, nicht Struktur: Tumorzellen verbrauchen mehr Glukose als normales Gewebe. Ein radioaktiv markiertes Glukoseanalogon reichert sich dort an, und die beim Zerfall entstehenden Gammaphotonen verraten die genaue Position.
 
-**In diesem Kapitel lernst du:** PET (Positronen, Annihilation 2×511 keV, Koinzidenz); SPECT (Single-Photon, Kollimator); MRT (Larmor f = γ·B₀, T1/T2); Photoeffekt; Welle-Teilchen-Dualismus.
+**In diesem Kapitel lernst du:**
+- wie bei der PET Positronen mit Elektronen annihilieren und zwei 511-keV-Photonen erzeugen
+- warum SPECT einen Kollimator braucht, PET aber nicht
+- wie die MRT ohne ionisierende Strahlung Weichteilbilder mit exzellentem Kontrast erzeugt
+- warum der Photoeffekt zeigt, dass Licht aus Teilchen besteht
+- was der Welle-Teilchen-Dualismus für Licht und Materie bedeutet
 
 ---
 
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:coordinate-system}}
+
 ## PET – Positronen-Emissions-Tomographie
 
-![PET SPECT MRT](/grafik-pet-mrt.svg)
 
 
-![Radioaktiver Zerfall und Bildgebung](/grafik-29-zerfall.svg)
 
 
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
@@ -1031,10 +1026,6 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:** PET (β⁺-Zerfall, Annihilation e⁺+e⁻ → 2×511 keV γ), Ruheenergie m_e·c² = 0,511 MeV, Koinzidenzdetektion, ¹⁸F-FDG, Anwendung (Tumordiagnostik, Stoffwechsel).
-
-**Ergänzend vertiefend:** SPECT vs. PET. Typische Fallen: PET β⁺, Koinzidenz, kein Kollimator; SPECT γ, Kollimator nötig; T1 (Longitudinal) ≠ T2 (Transversal); Photoeffekt: Energie von Frequenz, nicht Intensität.
-
 **Häufige Fragen:**
 - "Warum 511 keV bei der PET?" → Ruheenergie eines Elektrons = m_e·c² = 0,511 MeV; Annihilation wandelt Ruhemasse beider Teilchen vollständig in Energie um
 - "Larmorfrequenz bei 1,5 T?" → f = 42,58 MHz/T × 1,5 T ≈ 64 MHz; bei 3,0 T ≈ 128 MHz
@@ -1045,10 +1036,6 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
 - PET (β⁺-Strahler, kein Kollimator nötig, Koinzidenz, höhere Auflösung) ≠ SPECT (γ-Strahler, Kollimator nötig, günstiger)
 - T1 ≠ T2: T1 = Längsmagnetisierung erholt sich; T2 = Transversalmagnetisierung zerfällt durch Dephasierung
 - Photoeffekt: Intensität beeinflusst Anzahl der emittierten Elektronen — die kinetische Energie hängt nur von der Frequenz ab
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- PET: Annihilation → 2 × 511 keV γ unter 180°; Koinzidenzdetektion ohne Kollimator
-- ¹⁸F-FDG: T½ = 110 min; Warburg-Effekt → Tumoranreicherung
 - MRT: γ_H = 42,58 MHz/T; bei 1,5 T → 64 MHz; bei 3 T → 128 MHz
 - Gadolinium: paramagnetisch, verkürzt T1 → Enhancement (heller in T1-Bild); Cave NSF bei Niereninsuffizienz
 - MRT: keine ionisierende Strahlung; Kontraindikationen: ferromagnetische Implantate, alte Herzschrittmacher
