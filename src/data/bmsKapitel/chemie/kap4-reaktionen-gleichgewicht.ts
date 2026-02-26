@@ -1290,6 +1290,8 @@ Für die Ammoniaksynthese bei 500 °C (773 K): K = 600.
         },
       ],
 
+      diagram: "enzyme-substrate",
+
       merksätze: [
         "Dynamisches Gleichgewicht: v_hin = v_rück; Konzentrationen konstant, aber nicht gleich.",
         "Kc ≫ 1: Produktseite bevorzugt; Kc ≪ 1: Eduktseite bevorzugt.",

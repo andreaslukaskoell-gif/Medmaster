@@ -2033,6 +2033,9 @@ Der Carbonat-Puffer kann versagen, wenn:
             "Pufferkapazität maximal bei pH = pKa. Konzentriertere Puffer = höhere Kapazität. Begrenzt: Erschöpfung möglich.",
         },
       ],
+
+      diagram: "ph-scale",
+
       merksätze: [
         "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]) – die wichtigste Puffergleichung.",
         "Bei [A⁻] = [HA] gilt pH = pKa (Halbäquivalenzpunkt; maximale Pufferkapazität).",
@@ -2398,6 +2401,9 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
             "pH ↓ = Azidose. pH ↑ = Alkalose. Primär CO₂-Änderung = respiratorisch. Primär HCO₃⁻-Änderung = metabolisch.",
         },
       ],
+
+      diagram: "ph-scale",
+
       merksätze: [
         "Titration: n(Säure) = n(Base) am Äquivalenzpunkt → c₁V₁ = c₂V₂.",
         "Starke Säure + starke Base: Äquivalenzpunkt pH = 7 (neutrales Salz).",
