@@ -570,6 +570,9 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
             "Thalidomid: R=Sedativum, S=teratogen. Racemisierung in vivo macht Trennung klinisch unwirksam. Lehre: Chirale Arzneimittel müssen auf jedes Enantiomer einzeln geprüft werden.",
         },
       ],
+
+      diagram: "functional-groups",
+
       merksätze: [
         "Isomere haben gleiche Summenformel, aber verschiedene Struktur oder Raumanordnung.",
         "Konstitutionsisomere (Strukturisomere): gleiche Formel, verschiedene Konnektivität der Atome.",
@@ -1299,6 +1302,9 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
             "Purine → Xanthin → Harnsäure (Xanthinoxidase). Hyperurikämie → Gicht (Urat-Kristalle in Gelenken). Allopurinol hemmt Xanthinoxidase. Podagra = Gicht im Großzehengrundgelenk.",
         },
       ],
+
+      diagram: "functional-groups",
+
       merksätze: [
         "Hückel-Regel: 4n+2 π-Elektronen → aromatisch. Benzol: n=1, 6 π-Elektronen.",
         "Aromate: bevorzugen elektrophile aromatische Substitution (EAS), nicht Addition.",
@@ -1659,6 +1665,9 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
           merksatz: "Troponin → Herzinfarkt; GPT/ALT → Leber; CK-MB → frühzeitig bei Herzschäden.",
         },
       ],
+
+      diagram: "enzyme-substrate",
+
       merksätze: [
         "Alle proteinogenen Aminosäuren (außer Glycin) sind L-konfiguriert und tragen am α-C: –NH₂, –COOH, –H, –R.",
         "Essentielle AS (8 Erwachsene): Ile, Leu, Lys, Met, Phe, Thr, Trp, Val — Histidin zusätzlich für Kinder.",
@@ -2328,6 +2337,9 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
           },
         },
       ],
+
+      diagram: "functional-groups",
+
       merksätze: [
         "Fettsäuren: gesättigt = keine C=C; einfach ungesättigt = eine C=C; mehrfach ungesättigt = ≥2 C=C.",
         "Essentielle Fettsäuren: Linolsäure (ω-6) und α-Linolensäure (ω-3) — müssen mit Nahrung zugeführt werden.",
