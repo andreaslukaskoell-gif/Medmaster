@@ -1537,9 +1537,8 @@ Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus s
 
 ---
 
-GARBX (z. B. Vogelflügel – Menschenarm)
-- RML (zz. B. Flügel Vogel – Insekt)
----
+G_Z (z. B. Vogelflügel – Menschenarm)
+-X B. Flügel 
 
 ## Homologie vs. Analogie — Ein kritischer Unterschied
 
@@ -1748,15 +1747,13 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Natürliche Selektion** (Darwin): bessere Anpassung → mehr Nachkommen; **Synthetische Evolutionstheorie** verbindet Selektion mit Genetik (Allelfrequenzen). **Warum für den MedAT relevant?** Darwins Prinzipien, Selektionsarten (stabilisierend, gerichtet, disruptiv) und Fitness werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Was ist natürliche Selektion?“; „Selektionsarten — wann welche?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Selektion abgedeckt.
+Warum werden Bakterien immer resistenter gegen Antibiotika? Die Antwort liegt in demselben Prinzip, das Darwin vor über 150 Jahren beschrieben hat: natürliche Selektion. Wenn ein Antibiotikum alle empfindlichen Bakterien abtötet, überleben nur die wenigen, die zufällig eine Resistenz tragen, und vermehren sich ungestört weiter. Dieses einfache Prinzip erklärt, wie sich Populationen über Generationen verändern.
 
 **In diesem Kapitel lernst du:**
-- **Darwins vier Prinzipien**: Variation, Vererbung, Überproduktion, unterschiedlicher Fortpflanzungserfolg
-- **Natürliche, sexuelle, künstliche** Selektion
-- **Fitness** (reproduktiver Erfolg) und **Lamarck** (widerlegt: erworbene Merkmale nicht vererbt)
-- **Synthetische Evolutionstheorie** (Darwin + Genetik)
-
-**Kontext:** Warum Arten sich anpassen und warum Antibiotikaresistenz entsteht.
+- warum vier Bedingungen gleichzeitig erfüllt sein müssen, damit natürliche Selektion wirkt
+- wie sich stabilisierende, gerichtete und disruptive Selektion auf die Merkmalsverteilung einer Population auswirken
+- warum Fitness in der Biologie etwas ganz anderes bedeutet als im Fitnessstudio
+- wie die Synthetische Evolutionstheorie Darwin und Mendel unter einen Hut bringt
 
 ---
 
@@ -1819,36 +1816,21 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Natürliche Selektion (Variation, Erblichkeit, Überproduktion, differentielle Reproduktion), Fitness (reproduktiver Erfolg), Adaptation, Selektionsdruck.
-
-**Ergänzend vertiefend:** Sexuelle Selektion.
-
-**Häufige Fragen:**
-- Was sind Darwins vier Voraussetzungen für natürliche Selektion? (Variation, Erblichkeit, Überproduktion, Differentialreproduktion)
-- Was bedeutet Fitness in der Evolutionsbiologie? (Reproduktiver Erfolg, NICHT physische Stärke)
-- Was ist stabilisierende Selektion? (Mittelwert wird bevorzugt, Extreme selektiert; Beispiel: Geburtsgewicht)
+**Typische Prüfungsfragen:**
+- Was sind Darwins vier Voraussetzungen für natürliche Selektion?
+- Was bedeutet Fitness in der Evolutionsbiologie? (Reproduktiver Erfolg, NICHT physische Stärke.)
+- Welche Selektionsart liegt vor, wenn der Mittelwert eines Merkmals bevorzugt wird? (Stabilisierend.)
 
 | Selektionsart | Wirkung auf Verteilung | Bevorzugt | Beispiel |
 | --- | --- | --- | --- |
-| Stabilisierend | Varianz ↓, Mittelwert bleibt | Mittelwert | Geburtsgewicht |
+| Stabilisierend | Varianz sinkt, Mittelwert bleibt | Mittelwert | Geburtsgewicht |
 | Gerichtet | Mittelwert verschiebt sich | Ein Extrem | Antibiotikaresistenz (MRSA) |
 | Disruptiv | Verteilung spaltet sich | Beide Extreme | Schnabelgröße (2 Nischen) |
 
-**Typische Prüfungsfallen:**
-- Fitness = reproduktiver Erfolg, NICHT physische Kraft oder Überlebensrate
-- Stabilisierende Selektion (Mittelwert bleibt) vs. gerichtete Selektion (Mittelwert verschiebt sich) vs. disruptive Selektion (Extreme bevorzugt)
-- Intrasexuelle Selektion (Konkurrenz innerhalb eines Geschlechts) vs. intersexuelle Selektion (Partnerwahl durch das andere Geschlecht)
-- Darwin (natürliche Selektion, 1859) vs. Lamarck (Vererbung erworbener Eigenschaften — widerlegt)
-- Inklusive Fitness (Hamilton, Kin Selection) vs. direkte Fitness (eigene Nachkommen)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Darwin: "On the Origin of Species" (1859)
-- Synthetische Theorie: 1930–1950er (Fisher, Dobzhansky, Mayr)
-- Evolution = Veränderung der Allelfrequenzen in einer Population
-- Geburtsgewicht: klassisches Beispiel für stabilisierende Selektion
-- Antibiotikaresistenz (MRSA): Beispiel für gerichtete Selektion in der Medizin
+**Typische Fallen:**
+- Fitness bedeutet reproduktiver Erfolg, NICHT physische Kraft oder Überlebensrate.
+- Stabilisierende, gerichtete und disruptive Selektion verwechseln (Mittelwert bleibt / verschiebt sich / Extreme bevorzugt).
+- Darwin (natürliche Selektion, 1859) vs. Lamarck (Vererbung erworbener Eigenschaften, widerlegt) verwechseln.
 
 ---
 
@@ -2000,15 +1982,13 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Biologischer Artbegriff** (Mayr): Art = reproduktiv isolierte Populationen. **Speziation** durch prä- oder postzygotische Isolationsmechanismen. **Warum für den MedAT relevant?** Artbegriff, prä- vs. postzygotische Isolation und Beispiele (Maultier = hybrid, steril) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Biologischer Artbegriff?“; „Prä- vs. postzygotische Isolation?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Artbegriff und Speziation abgedeckt.
+Pferde und Esel können sich paaren und ein Maultier zeugen, aber das Maultier ist steril. Sind Pferd und Esel dann dieselbe Art? Nach dem biologischen Artbegriff nicht, denn echte Arten sind reproduktiv isoliert: Ihre Nachkommen müssen selbst fruchtbar sein. Dieses Kapitel erklärt, wie man Arten definiert, warum Isolationsmechanismen der Schlüssel zur Artbildung sind und wie aus einer Art zwei werden.
 
 **In diesem Kapitel lernst du:**
-- **Biologischer Artbegriff**: Fortpflanzungsgemeinschaft, reproduktive Isolation
-- **Präzygotische** Isolation (vor Befruchtung: räumlich, zeitlich, ethologisch …)
-- **Postzygotische** Isolation (Hybridsterilität, -invitabilität) — **Maultier** als Beispiel
-- **Allopatrische** vs. **sympatrische** Artbildung
-
-**Kontext:** Wann zwei Populationen als verschiedene Arten gelten und wie neue Arten entstehen.
+- was den biologischen Artbegriff ausmacht und wo er an seine Grenzen stößt
+- welche Barrieren verhindern, dass sich zwei Populationen erfolgreich fortpflanzen (prä- vs. postzygotisch)
+- warum das Maultier lebt, sich aber nicht fortpflanzen kann, und was das über Artgrenzen aussagt
+- wie neue Arten durch geografische Trennung oder Polyploidie entstehen
 
 ---
 
@@ -2059,38 +2039,22 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Biologischer Artbegriff (Reproduktionsgemeinschaft, reproduktive Isolation), prä-/postzygotische Isolation (Maultier: Hybridsterilität), Artbildung (allopatrisch, sympatrisch).
-
-**Ergänzend vertiefend:** Ringarten.
-
-**Häufige Fragen:**
-- Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation)
-- Warum ist das Maultier steril? (Postzygotische Isolation durch Hybridsterilität; Pferd 64 + Esel 62 Chromosomen → Meiose-Probleme)
-- Was ist der Unterschied zwischen allopatrischer und sympatrischer Artbildung? (Geografische Trennung vs. im selben Gebiet)
+**Typische Prüfungsfragen:**
+- Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation.)
+- Warum ist das Maultier steril? (Pferd 64 + Esel 62 Chromosomen, Maultier 63: keine reguläre Meiose möglich.)
+- Was ist der Unterschied zwischen allopatrischer und sympatrischer Artbildung?
 
 | Merkmal | Allopatrische Artbildung | Sympatrische Artbildung |
 | --- | --- | --- |
 | Geografische Trennung | Ja (Barriere) | Nein (selbes Gebiet) |
 | Hauptmechanismus | Divergenz + Drift + Selektion | Polyploidie (Pflanzen) |
 | Geschwindigkeit | Langsam (viele Generationen) | Schnell (1 Generation möglich) |
-| Häufigkeit | Häufigster Modus | Selten bei Tieren |
 | Beispiel | Darwin-Finken (Galapagos) | Weizen (6n = 42) |
 
-**Typische Prüfungsfallen:**
-- Präzygotisch (vor Befruchtung: geografisch, zeitlich, Verhalten, mechanisch) vs. postzygotisch (nach Befruchtung: Hybridsterilität, -lethalität)
-- Allopatrisch (geografische Barriere → Divergenz) vs. sympatrisch (im selben Gebiet, v. a. Polyploidie)
-- Autopolyploidie (Verdoppelung innerhalb einer Art) vs. Allopolyploidie (Hybridisierung zwischen Arten + Verdoppelung)
-- Maultier (Pferdestute × Eselhengst, steril) vs. Maulesel (Eselstute × Pferdehengst, ebenfalls steril)
-- Biologischer Artbegriff versagt bei Asexuellen (Bakterien) und Fossilien
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Ernst Mayr: biologischer Artbegriff (1942)
-- Darwin-Finken: 13–15 Arten durch adaptive Radiation auf Galapagos
-- Weizen (Triticum aestivum): hexaploid 6n = 42, Allopolyploidie aus 3 diploiden Vorfahren
-- Pferd: 2n = 64; Esel: 2n = 62; Maultier: 2n = 63 (steril, keine Meiose-Paarung möglich)
-- Polyploidie beim Menschen: letal (Triploide/Tetraploide → Frühabort)
+**Typische Fallen:**
+- Präzygotisch (vor Befruchtung) vs. postzygotisch (nach Befruchtung: Hybridsterilität, -lethalität) verwechseln.
+- Allopatrisch (geografische Trennung) vs. sympatrisch (im selben Gebiet, v. a. Polyploidie) verwechseln.
+- Biologischer Artbegriff versagt bei asexuellen Organismen (Bakterien) und Fossilien.
 
 ---
 
@@ -2238,15 +2202,13 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Evolutionsfaktoren**: Mutation, Selektion, **Gendrift**, **Genfluss**. **Hardy-Weinberg** = Gleichgewicht ohne Evolution (p²+2pq+q²=1). **Warum für den MedAT relevant?** Die vier Faktoren und Hardy-Weinberg (Abweichungen interpretieren) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Welche Faktoren ändern Allelfrequenzen?“; „Hardy-Weinberg — wann gilt es?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Evolutionsfaktoren abgedeckt.
+Stell dir eine kleine Insel vor, auf der nur 20 Menschen leben. Durch reinen Zufall könnte es passieren, dass in wenigen Generationen alle dieselbe Blutgruppe haben, obwohl es dafür keinen biologischen Vorteil gibt. Das ist Gendrift, und sie ist nur einer von vier Faktoren, die Allelfrequenzen verändern. Das Hardy-Weinberg-Gleichgewicht beschreibt den theoretischen Idealzustand, in dem keiner dieser Faktoren wirkt. Jede Abweichung davon verrät, welche Kraft gerade am Werk ist.
 
 **In diesem Kapitel lernst du:**
-- **Mutation, Selektion, Gendrift, Genfluss** — was jede Kraft bewirkt
-- **Hardy-Weinberg**: p² + 2pq + q² = 1; Voraussetzungen (keine Evolution)
-- Wann welche Abweichung welchen Faktor anzeigt
-- **Gründereffekt**, **Flaschenhals**
-
-**Kontext:** Warum sich Populationen verändern — und wann sie (theoretisch) gleich bleiben.
+- welche vier Kräfte die Allelfrequenzen einer Population verändern und wie sie sich unterscheiden
+- warum Gendrift in kleinen Populationen zum dominierenden Faktor wird
+- was das Hardy-Weinberg-Gleichgewicht beschreibt und warum Abweichungen davon auf aktive Evolution hindeuten
+- wie Gründereffekt und Flaschenhalseffekt die genetische Vielfalt reduzieren
 
 ---
 
@@ -2294,37 +2256,22 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Zentral prüfungsrelevant:** Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss), Gendrift (kleine Populationen, zufällige Änderung), Hardy-Weinberg (p²+2pq+q²=1), Gründer- und Flaschenhalseffekt.
-
-**Ergänzend vertiefend:** Selektionstypen.
-
-**Häufige Fragen:**
-- Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift)
-- Was besagt das Hardy-Weinberg-Gleichgewicht? (p² + 2pq + q² = 1; keine Evolution bei idealen Bedingungen)
-- Was ist der Unterschied zwischen Flaschenhals und Gründereffekt? (Bestehende Population reduziert vs. neue Population gegründet)
+**Typische Prüfungsfragen:**
+- Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift.)
+- Was besagt das Hardy-Weinberg-Gleichgewicht? (p2 + 2pq + q2 = 1; keine Evolution bei idealen Bedingungen.)
+- Was ist der Unterschied zwischen Flaschenhals und Gründereffekt?
 
 | Faktor | Wirkung | Gerichtet? | Stärke in kleinen Pop. |
 | --- | --- | --- | --- |
 | Mutation | Neue Allele (Rohstoff) | Nein (zufällig) | Gleich |
-| Selektion | Fitness-Allele ↑ | Ja | Schwächer (Drift überwiegt) |
+| Selektion | Fitness-Allele steigen | Ja | Schwächer (Drift überwiegt) |
 | Gendrift | Zufällige Frequenzänderung | Nein | Sehr stark |
 | Genfluss | Homogenisierung | Nein | Stark (wirkt gegen Divergenz) |
 
-**Typische Prüfungsfallen:**
-- Flaschenhals (bestehende große Population wird durch Katastrophe reduziert) vs. Gründereffekt (kleine Gruppe gründet neue Population)
-- Gendrift (zufällig, ungerichtet, stark in kleinen Populationen) vs. Selektion (gerichtet, stärker in großen Populationen)
-- Genfluss (homogenisiert Populationen, wirkt gegen Artbildung) vs. Gendrift (führt zu Divergenz)
-- Hardy-Weinberg-Abweichung = Evolution aktiv, NICHT ein Fehler im Experiment
-- Heterozygotenvorteil (HbA/HbS resistenter gegen Malaria) vs. Sichelzellanämie (HbS/HbS homozygot krank)
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Hardy-Weinberg: p² + 2pq + q² = 1 (Genotypfrequenzen); p + q = 1 (Allelfrequenzen)
-- 5 Bedingungen: große Population, keine Mutation, keine Selektion, keine Migration, Panmixie
-- Sichelzellanämie: HbS-Allel durch Heterozygotenvorteil in Malariaregionen erhalten
-- Amische: Ellis-van-Creveld-Syndrom durch Gründereffekt gehäuft
-- Northern Elephant Seal: klassisches Flaschenhals-Beispiel (fast ausgerottet, geringe Diversität)
+**Typische Fallen:**
+- Flaschenhals (bestehende Population wird reduziert) vs. Gründereffekt (kleine Gruppe gründet neue Population) verwechseln.
+- Gendrift (zufällig, stark in kleinen Populationen) vs. Selektion (gerichtet, stark in großen Populationen) verwechseln.
+- Hardy-Weinberg-Abweichung bedeutet, dass Evolution aktiv ist, NICHT dass ein Messfehler vorliegt.
 
 ---
 
@@ -2466,15 +2413,13 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       ],
       content: `## Einleitung
 
-**Worum geht es?** Mensch und Schimpanse haben einen **gemeinsamen Vorfahren** (ca. 6–7 Mio. Jahre). **Hominisation**: Bipedie zuerst, dann Gehirnvergrößerung. **Warum für den MedAT relevant?** Homininen, Out-of-Africa, Neandertaler-Gene und Bipedie werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Stammt der Mensch vom Schimpansen ab?“; „Hominisation — was zuerst?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zur Stammesgeschichte des Menschen abgedeckt.
+Der Satz “Der Mensch stammt vom Affen ab” klingt eingängig, ist aber falsch. Mensch und Schimpanse teilen einen gemeinsamen Vorfahren, der vor rund 6 bis 7 Millionen Jahren lebte, aber keiner stammt vom anderen ab. Überraschend: Unsere Vorfahren liefen bereits aufrecht, lange bevor ihr Gehirn deutlich wuchs. Lucy, das berühmte Fossil aus Äthiopien, war schon biped, hatte aber ein schimpansengroßes Gehirn. Die Stammesgeschichte des Menschen ist voller solcher überraschender Befunde.
 
 **In diesem Kapitel lernst du:**
-- **Bipedie vor Gehirnvergrößerung** (Australopithecus vs. Homo)
-- Wichtige **Homininen** (Australopithecus, H. erectus, H. neanderthalensis, H. sapiens) und typische Merkmale
-- **Out-of-Africa-Theorie** und **Neandertaler-Anteil** im modernen Menschen
-- **Hirnvolumina** (Schimpanse ~450, H. sapiens ~1400 ccm)
-
-**Kontext:** Woher wir kommen und warum „der Mensch stammt vom Affen ab“ falsch formuliert ist.
+- warum der aufrechte Gang lange vor der Gehirnvergrößerung evolvierte
+- welche Homininen in welcher Reihenfolge auftraten und was sie voneinander unterschied
+- was die Out-of-Africa-Theorie besagt und warum wir Neandertaler-DNA in uns tragen
+- warum die Aussage “Der Mensch stammt vom Affen ab” biologisch falsch ist
 
 ---
 
@@ -2526,30 +2471,15 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- In welcher Reihenfolge erschienen die Homininen? (Australopithecus, H. habilis, H. erectus, H. sapiens.)
+- Was evolvierte zuerst: aufrechter Gang oder großes Gehirn? (Bipedie vor Gehirnvergrößerung.)
+- Wie viel Neandertaler-DNA tragen moderne Nicht-Afrikaner? (1 bis 4 Prozent.)
 
-**Zentral prüfungsrelevant:** Homininen (Australopithecus → H. habilis → H. erectus → H. sapiens), Bipedie vor Gehirnvergrößerung, Werkzeuggebrauch, Out-of-Africa, menschliche Evolution.
-
-**Ergänzend vertiefend:** Neandertaler.
-
-**Häufige Fragen:**
-- In welcher Reihenfolge erschienen die Homininen? (Australopithecus → H. habilis → H. erectus → H. sapiens)
-- Was evolvierte zuerst: aufrechter Gang oder großes Gehirn? (Bipedie vor Gehirnvergrößerung)
-- Wie viel Neanderthaler-DNA tragen moderne Nicht-Afrikaner? (1–4 %)
-
-**Typische Prüfungsfallen:**
-- Neanderthaler sind NICHT Vorfahren des modernen Menschen, sondern eine eigenständige, parallel existierende Art
-- Bipedie evolvierte VOR der Gehirnvergrößerung (Australopithecus: aufrecht, aber kleines Gehirn)
-- Homo erectus (erster Auswanderer aus Afrika, ~1,8 Mya) vs. Homo sapiens (Out-of-Africa ~60.000–70.000 Jahre)
-- Hominidae (gesamte Familie der Menschenaffen) vs. Hominini (Tribus: Mensch + Schimpanse)
-- Mensch stammt NICHT vom Affen ab — beide teilen gemeinsame Vorfahren
-
-**Prüfungsrelevante Zahlen & Fakten:**
-- Divergenz Mensch/Schimpanse: ca. 6–7 Millionen Jahre
-- Lucy (A. afarensis): ~3,2 Mya, Hirnvolumen ~450 ccm, biped
-- H. erectus: ~1,9 Mya, Hirnvolumen ~1.000 ccm, erster Out-of-Africa
-- H. sapiens: ~300.000 Jahre, Hirnvolumen ~1.350 ccm
-- Svante Pääbo: Nobelpreis 2022 für Paläogenomik (Neanderthaler-DNA-Sequenzierung)
+**Typische Fallen:**
+- Neandertaler sind NICHT Vorfahren des modernen Menschen, sondern eine eigenständige, parallel existierende Art.
+- Bipedie evolvierte VOR der Gehirnvergrößerung (Australopithecus: aufrecht, aber schimpansengroßes Gehirn).
+- Mensch stammt NICHT vom Affen ab; beide teilen gemeinsame Vorfahren.
 
 ---
 

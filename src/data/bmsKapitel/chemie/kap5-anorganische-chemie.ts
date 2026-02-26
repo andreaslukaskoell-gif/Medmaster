@@ -684,13 +684,13 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Stickstoff** (N₂ mit N≡N, 945 kJ/mol) wird biologisch (Nitrogenase) oder industriell (**Haber-Bosch**: N₂ + 3 H₂ ⇌ 2 NH₃, Fe-Kat., 400–500 °C, 150–300 bar) fixiert. **NO** (aus L-Arginin, NOS) → Guanylatzyklase → cGMP → Vasodilatation. **Schwefel:** Disulfidbrücken (Cys-S-S-Cys), H₂S (hemmt Komplex IV, Geruchslähmung ab ~100 ppm). **Halogene:** Oxidationskraft F₂ > Cl₂ > Br₂ > I₂; **F⁻** → Fluorapatit (Kariesprophylaxe); **Cl⁻** → Magensäure, Desinfektion; **I⁻** → T₃/T₄ (TPO, Iodmangel → Struma). **Warum für den MedAT relevant?** Haber-Bosch (Le Chatelier, Kompromiss T/Druck), NO-Signalweg, H₂S-Toxizität, Halogen-E°-Reihe, Fluorapatit, Iod und Schilddrüsenhormone werden geprüft. **Welche Fragen werden beantwortet?** „Haber-Bosch Kompromiss?“; „NO-Wirkung?“; „H₂S tückisch?“; „F⁻ Karies?“; „T₃ vs. T₄?“; „Oxidationskraft Halogene?“; „Königswasser?“.
+Nitroglyzerin lindert Angina-pectoris-Schmerzen innerhalb von Minuten — weil es im Körper zu **Stickstoffmonoxid (NO)** zerfällt, das die Blutgefäße erweitert. Der gleiche Signalstoff, den dein Endothel ständig produziert. Stickstoff begegnet dir in der Chemie noch als N₂ (mit einer der stärksten Bindungen überhaupt: 945 kJ/mol), als Ammoniak (Haber-Bosch, Harnstoffzyklus) und in jeder Aminosäure. Dieses Kapitel behandelt auch **Schwefel** (Disulfidbrücken, H₂S-Toxizität), die **Halogene** (Fluor für Zahnschmelz, Iod für Schilddrüsenhormone) und wichtige Industriesäuren.
 
 **In diesem Kapitel lernst du:**
-- **Stickstoff:** N≡N 945 kJ/mol; **Haber-Bosch** N₂ + 3 H₂ ⇌ 2 NH₃ (exotherm, Δn &lt; 0); 400–500 °C, 150–300 bar, Fe-Kat.; **NO** aus L-Arginin → cGMP → Vasodilatation
-- **Schwefel:** Disulfidbrücken (Proteinstabilität); **H₂S** hemmt Komplex IV; ab ~100 ppm **Geruchslähmung** (tückisch)
-- **Halogene:** **F₂ > Cl₂ > Br₂ > I₂** (Oxidationskraft abnehmend); F⁻ → Fluorapatit (Kariesprophylaxe); Cl⁻ Magensäure; I⁻ → **T₃** (3 I), **T₄** (4 I) via TPO; Iodmangel → Struma
-- **Säuren:** konz. HNO₃ → NO₂ (braun); verd. HNO₃ → NO; **Königswasser** (3 HCl + 1 HNO₃) löst Au, Pt; Kontaktverfahren H₂SO₄ (SO₂ → SO₃, V₂O₅)
+- warum der Haber-Bosch-Prozess ein Kompromiss aus Kinetik und Thermodynamik ist und warum er die wichtigste Reaktion der Menschheitsgeschichte ist
+- wie NO als Signalmolekül wirkt und welche Medikamente diesen Weg nutzen
+- warum H₂S besonders tückisch ist (Geruchslähmung ab ~100 ppm) und welche Enzyme es hemmt
+- wie Fluorid den Zahnschmelz schützt, Iod die Schilddrüsenhormone T₃/T₄ bildet und welche Folgen Iodmangel hat
 
 ---
 
@@ -757,35 +757,15 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Haber-Bosch Kompromiss? → Exotherm + Δn < 0; niedrige T gut für K, aber zu langsam → 400-500 °C + hoher Druck + Fe-Katalysator
+- Warum ist H₂S besonders tückisch? → Ab ~100 ppm Geruchslähmung → kein Warngeruch mehr; hemmt Komplex IV
+- T₃ vs. T₄? → T₃ = 3 Iod, biologisch aktiv; T₄ = 4 Iod, Prohormon (wird peripher zu T₃ konvertiert)
 
-**Zentral prüfungsrelevant:**
-- **Haber-Bosch:** N₂ + 3 H₂ ⇌ 2 NH₃ (exotherm, Δn &lt; 0); **Kompromiss** 400–500 °C, 150–300 bar, Fe-Kat. (niedrige T = gut für K, aber langsam; hoher Druck begünstigt NH₃)
-- **NO:** L-Arginin → NOS → NO → **Guanylatzyklase** → cGMP → **Vasodilatation** (Nitrate, PDE5-Hemmer)
-- **N≡N** 945 kJ/mol; Nitrogenase (biologisch) vs. Haber-Bosch (industriell)
-- **Schwefel:** Disulfidbrücken (Cys-S-S-Cys); **H₂S** hemmt **Komplex IV**; ab **~100 ppm Geruchslähmung** (kein Warngeruch!)
-- **Halogene:** **F₂ > Cl₂ > Br₂ > I₂** (Oxidationskraft abnehmend); F⁻ → **Fluorapatit** (Kariesprophylaxe); I⁻ → T₃/T₄ (TPO); **Iodmangel** → Struma, fetal → Kretinismus
-- **T₃** (3 I, aktiv) vs. **T₄** (4 I, Prohormon); Hypothyreose TSH↑, Hyperthyreose TSH↓
-- **Königswasser:** 3 HCl + 1 HNO₃ → löst Au, Pt; konz. HNO₃ → NO₂ (braun), verd. → NO
-
-**Ergänzend vertiefend:** Kontaktverfahren H₂SO₄. Typische Fallen: Halogene F₂ > Cl₂ > Br₂ > I₂ (abnehmend); NO ≠ NO₂; konz. HNO₃ → NO₂, verd. → NO; Hypothyreose TSH↑, Hyperthyreose TSH↓.
-
-**Häufige Prüfungsfragen:**
-- "Haber-Bosch Kompromiss?" → Exotherm + Δn&lt;0; niedrige T gut für K, aber langsam → 400–500 °C + hoher Druck + Katalysator
-- "H₂S tückisch?" → Ab ~100 ppm Geruchslähmung; hemmt Komplex IV
-- "F⁻ Karies?" → Fluorapatit säurefester als Hydroxylapatit (pH &lt; 4,5 vs. 5,5)
-- "T₃ vs. T₄?" → T₃ = 3 I, aktiv; T₄ = 4 I, Prohormon
-
-**Typische Prüfungsfallen:**
-- Halogene: F₂ &gt; Cl₂ &gt; Br₂ &gt; I₂ (abnehmend!); NO ≠ NO₂; konz. HNO₃ → NO₂, verd. → NO; T₃ ≠ T₄; Hypothyreose TSH hoch, Hyperthyreose TSH niedrig
-
-**Wichtige Begriffe & Definitionen:**
-- **Haber-Bosch-Prozess:** N₂ + 3 H₂ ⇌ 2 NH₃; industrielle Ammoniaksynthese; Fe-Katalysator, 400–500 °C, 150–300 bar (Le-Chatelier-Kompromiss).
-- **Fluorapatit:** Ca₁₀(PO₄)₆F₂; säurefester als Hydroxylapatit → Kariesprophylaxe durch F⁻.
-- **TPO (Thyreoperoxidase):** oxidiert I⁻ zu I₂; iodiert Thyreoglobulin → MIT/DIT → T₃/T₄; gehemmt durch Thyreostatika (Methimazol, PTU).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- N≡N 945 kJ/mol; Haber-Bosch 400–500 °C, 150–300 bar; H₂S ~100 ppm Geruchslähmung; Halogene E° F₂ +2,87 V bis I₂ +0,54 V; Königswasser 3 HCl + 1 HNO₃; Iodmangel → Struma
+**Typische Fallen:**
+- Oxidationskraft der Halogene nimmt von oben nach unten ab: F₂ > Cl₂ > Br₂ > I₂
+- NO (Signalmolekül) ist nicht NO₂ (braunes, giftiges Gas); konz. HNO₃ → NO₂, verd. → NO
+- Hypothyreose: TSH hoch (Stimulation); Hyperthyreose: TSH niedrig (negative Rückkopplung)
 
 ---
 
@@ -1030,13 +1010,13 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Säuren und Basen** werden nach **Arrhenius** (H⁺/OH⁻ in Wasser), **Brønsted-Lowry** (Protonendonator/-akzeptor) und **Lewis** (Elektronenpaarakzeptor/-donor) definiert. **pH = −log[H₃O⁺]**; **Kw = [H₃O⁺][OH⁻] = 10⁻¹⁴** (25 °C); **pH + pOH = 14**. Korrespondierende Paare (HA/A⁻), Ampholyte (H₂O, HCO₃⁻), Autoprotolyse des Wassers. **Warum für den MedAT relevant?** Brønsted vs. Lewis, pH-Berechnung, Kw bei 37 °C (Neutralpunkt ≈ 6,8), Blut-pH 7,35–7,45 (Azidose/Alkalose) werden geprüft. **Welche Fragen werden beantwortet?** „Brønsted-Säure?“; „Lewis-Säure?“; „Ampholyt?“; „Neutral bei 37 °C?“; „pH 3 → [H₃O⁺]?“; „Blut-pH Norm?“.
+Warum schmeckt Zitronensaft sauer und warum fühlt sich Seife glitschig an? Hinter diesen Alltagsphänomenen stecken **Säuren und Basen** — zwei der wichtigsten Stoffklassen der Chemie. Im menschlichen Körper entscheidet ein winziger pH-Unterschied im Blut (7,35 vs. 7,45) über Gesundheit und Lebensgefahr. Drei historische Definitionen — von Arrhenius über Brønsted-Lowry bis Lewis — beschreiben Säuren und Basen mit zunehmender Allgemeinheit. Dieses Kapitel zeigt dir, warum ein Verständnis dieser Konzepte für die Medizin unverzichtbar ist.
 
 **In diesem Kapitel lernst du:**
-- **Brønsted:** Säure = Protonendonator (H⁺ abgeben), Base = Protonenakzeptor; konjugierte Paare (HA/A⁻); starke Säure → schwache konjugierte Base
-- **Lewis:** Säure = Elektronenpaarakzeptor (BF₃, Fe³⁺), Base = Elektronenpaardonor; alle Brønsted-Säuren sind Lewis-Säuren, nicht umgekehrt
-- **Kw, pH, pOH:** Kw = 10⁻¹⁴ (25 °C); pH + pOH = 14; bei 37 °C Neutralpunkt ≈ 6,8; pH ±1 = Faktor 10 in [H₃O⁺]
-- **Ampholyte:** H₂O, HCO₃⁻, HPO₄²⁻ können H⁺ abgeben und aufnehmen
+- worin sich die drei Säure-Base-Definitionen (Arrhenius, Brønsted, Lewis) unterscheiden und welche die allgemeinste ist
+- was konjugierte Säure-Base-Paare sind und warum eine starke Säure immer eine schwache konjugierte Base hat
+- wie der pH-Wert berechnet wird und warum eine pH-Einheit den Faktor 10 bedeutet
+- warum der Neutralpunkt bei Körpertemperatur nicht bei pH 7 liegt und was das klinisch bedeutet
 
 ---
 
@@ -1129,35 +1109,16 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was ist eine Brønsted-Säure?" → Protonendonator (gibt H⁺ ab)
+- „Was ist eine Lewis-Säure?" → Elektronenpaarakzeptor (BF₃, Fe³⁺); kein H⁺ nötig
+- „Neutralpunkt bei 37 °C?" → pH ≈ 6,8 (Kw steigt mit Temperatur)
+- „Was ist ein Ampholyt?" → Kann H⁺ abgeben und aufnehmen (H₂O, HCO₃⁻)
 
-**Zentral prüfungsrelevant:**
-- **Brønsted:** Säure = Protonendonator (H⁺ abgeben), Base = Protonenakzeptor; konjugierte Paare HA/A⁻ (unterscheiden sich um 1 H⁺); starke Säure → schwache konjugierte Base
-- **Lewis:** Säure = Elektronenpaarakzeptor (BF₃, AlCl₃, Fe³⁺), Base = Elektronenpaardonor; **alle Brønsted-Säuren sind Lewis-Säuren, nicht umgekehrt**
-- **Ampholyte:** H₂O, HCO₃⁻, HPO₄²⁻ können sowohl H⁺ abgeben als auch aufnehmen
-- **Autoprotolyse:** 2 H₂O ⇌ H₃O⁺ + OH⁻; **Kw = 10⁻¹⁴** (25 °C); bei 37 °C Kw ≈ 2,4×10⁻¹⁴ → **Neutralpunkt pH ≈ 6,8**
-- **pH = −log[H₃O⁺]**; [H₃O⁺] = 10⁻pH (mol/L); **pH + pOH = 14**; ±1 pH = Faktor 10 in [H₃O⁺]
-- **Blut-pH** 7,35–7,45; Azidose &lt; 7,35; Alkalose &gt; 7,45
-
-**Ergänzend vertiefend:** Arrhenius (nur wässrig); Gase in Wasser (HCl, SO₂ → Säuren; NH₃ → Base).
-
-**Häufige Prüfungsfragen:**
-- "Brønsted-Säure?" → Protonendonator (gibt H⁺ ab)
-- "Lewis-Säure?" → Elektronenpaarakzeptor (BF₃, Fe³⁺); kein H⁺ nötig
-- "Neutral bei 37 °C?" → pH ≈ 6,8 (Kw steigt mit T)
-- "Ampholyt?" → Kann H⁺ abgeben und aufnehmen (H₂O, HCO₃⁻)
-
-**Typische Prüfungsfallen:**
-- Brønsted-Säuren ⊆ Lewis-Säuren, aber BF₃ nur Lewis; Neutral = [H₃O⁺]=[OH⁻], nicht immer pH 7; Kw temperaturabhängig
-
-**Wichtige Begriffe & Definitionen:**
-- **Brønsted-Säure/Base:** Säure = Protonendonator, Base = Protonenakzeptor; konjugiertes Paar: HA und A⁻ unterscheiden sich um 1 H⁺.
-- **Lewis-Säure/Base:** Säure = Elektronenpaarakzeptor (leeres Orbital), Base = Elektronenpaardonor.
-- **Ampholyt:** Teilchen, das sowohl als Säure als auch als Base reagieren kann (H₂O, HCO₃⁻).
-- **Ionenprodukt Kw:** [H₃O⁺][OH⁻] = 10⁻¹⁴ (25 °C); temperaturabhängig (bei 37 °C ≈ 2,4×10⁻¹⁴).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- pH = −log[H₃O⁺]; pH 3 → [H₃O⁺] = 10⁻³ mol/L; pH + pOH = 14; Kw = 10⁻¹⁴ (25 °C); Neutralpunkt 37 °C ≈ 6,8; Blut-pH 7,35–7,45; Gase: HCl, SO₂ → Säuren, NH₃ → Base
+**Typische Fallen:**
+- BF₃ ist Lewis-Säure, aber keine Brønsted-Säure — Brønsted ⊆ Lewis, nicht umgekehrt
+- „Neutral" bedeutet [H₃O⁺] = [OH⁻], nicht automatisch pH 7 — bei 37 °C ist neutral pH ≈ 6,8
+- pH-Differenz von 1 = Faktor 10 in der H₃O⁺-Konzentration (logarithmische Skala)
 
 ---
 
@@ -1393,13 +1354,13 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Starke Säuren** (HCl, HNO₃) dissoziieren vollständig → [H₃O⁺] = c₀, pH = −log c₀. **Schwache Säuren** (Essigsäure) im Gleichgewicht → **Ka**, **pKa** (kleiner pKa = stärkere Säure); **pH = ½(pKa − log c₀)** bzw. [H₃O⁺] = √(Ka·c₀). **Mehrprotonige Säuren** (H₃PO₄, H₂CO₃) mit Ka1 ≫ Ka2 ≫ Ka3; **pKa + pKb = 14** für konjugierte Paare. **Warum für den MedAT relevant?** pH-Berechnung stark/schwach, Halbäquivalenzpunkt pH = pKa, Salz-Hydrolyse (Acetat basisch, NH₄⁺ sauer), biologische pKa-Werte (H₂CO₃, Phosphat, NH₄⁺) werden geprüft. **Welche Fragen werden beantwortet?** „pH schwache Säure?“; „pKa NH₄⁺ aus pKb NH₃?“; „Welche Spezies bei pH 7 bei Phosphat?“; „Salz sauer oder basisch?“; „H₂CO₃ pKa im Blut?“.
+Magensäure (HCl) hat einen pH von etwa 1 — sie löst Fleisch und Knochen auf. Essigsäure im Salatdressing hat dagegen einen ähnlichen Säuregehalt, aber einen pH von knapp 3. Warum ist die eine so viel „stärker” als die andere, obwohl beide sauer schmecken? Der Unterschied liegt in der **Dissoziation**: Starke Säuren geben all ihre Protonen ab, schwache Säuren nur einen Bruchteil. Mit der Säurekonstante Ka und dem pKa-Wert kannst du quantitativ beschreiben, wie stark eine Säure wirklich ist — und das ist entscheidend für Pufferberechnungen, Medikamentenwirkung und das Verständnis des Blut-pH.
 
 **In diesem Kapitel lernst du:**
-- **Starke Säure:** α ≈ 1, pH = −log c₀; **schwache Säure:** pH = ½(pKa − log c₀), [H₃O⁺] = √(Ka·c₀)
-- **pKa:** kleiner = stärkere Säure; pKa + pKb = 14 (konjugiertes Paar)
-- **Mehrprotonig:** H₃PO₄ pKa1≈2,1, pKa2≈7,2 (Puffer!), pKa3≈12,4; H₂CO₃ pKa1≈6,35 (eff. Blut 6,1), pKa2≈10,33
-- **Salze:** schwache Säure + starke Base → basisch (Acetat); starke Säure + schwache Base → sauer (NH₄⁺)
+- worin sich starke und schwache Säuren grundsätzlich unterscheiden und wann man welche Formel zur pH-Berechnung braucht
+- was der pKa-Wert aussagt und warum ein kleinerer pKa eine stärkere Säure bedeutet
+- wie mehrprotonige Säuren (Phosphorsäure, Kohlensäure) stufenweise dissoziieren und welche Stufe klinisch relevant ist
+- warum manche Salzlösungen sauer oder basisch reagieren (Hydrolyse)
 
 ---
 
@@ -1522,33 +1483,16 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „pH einer schwachen Säure?" → pH = ½(pKa − log c₀)
+- „pKa von NH₄⁺ aus pKb von NH₃?" → 14 − 4,75 = 9,25
+- „Welche Spezies bei pH 7 für Phosphat?" → pKa2 ≈ 7,2 → etwa 50:50 H₂PO₄⁻/HPO₄²⁻
+- „Natriumacetat-Lösung sauer oder basisch?" → basisch (konjugierte Base der schwachen Essigsäure)
 
-**Zentral prüfungsrelevant:**
-- **Starke Säure:** [H₃O⁺] = c₀, pH = −log c₀; **schwache Säure:** pH = ½(pKa − log c₀), [H₃O⁺] = √(Ka·c₀)
-- **pKa:** kleiner = stärkere Säure; **pKa + pKb = 14** (konjugiertes Paar); Halbäquivalenzpunkt **pH = pKa**
-- **Mehrprotonig:** Ka1 ≫ Ka2 ≫ Ka3; H₃PO₄ pKa2 ≈ 7,2 (Phosphatpuffer); H₂CO₃ pKa1 ≈ 6,35 (eff. Blut 6,1)
-- **Salz-Hydrolyse:** schwache Säure + starke Base → basisch (CH₃COONa); starke Säure + schwache Base → sauer (NH₄Cl)
-- **NH₄⁺** pKa = 9,25 (NH₃ pKb = 4,75); Essigsäure pKa = 4,75
-
-**Ergänzend vertiefend:** Dissoziationsgrad α (steigt bei Verdünnung). Typische Fallen: Kleiner pKa = stärkere Säure; Konzentration ≠ Stärke; α steigt bei Verdünnung; H₂CO₃ im Blut pKa eff. 6,1 (nicht 6,35).
-
-**Häufige Prüfungsfragen:**
-- "pH schwache Säure?" → pH = ½(pKa − log c₀)
-- "pKa NH₄⁺?" → 14 − pKb(NH₃) = 9,25
-- "Spezies bei pH 7 für Phosphat?" → pKa2 ≈ 7,2 → etwa 50:50 H₂PO₄⁻/HPO₄²⁻
-- "Salz Acetat?" → basisch (konjugierte Base der schwachen Essigsäure)
-
-**Typische Prüfungsfallen:**
-- Kleiner pKa = stärkere Säure; Konzentration ≠ Stärke; α steigt bei Verdünnung; H₂CO₃ im Blut pKa eff. 6,1 (nicht 6,35)
-
-**Wichtige Begriffe & Definitionen:**
-- **Säurekonstante Ka:** Gleichgewichtskonstante HA + H₂O ⇌ H₃O⁺ + A⁻; pKa = −log Ka.
-- **Dissoziationsgrad α:** Anteil dissoziierter Säure; bei Verdünnung größer (Le Chatelier).
-- **Halbäquivalenzpunkt:** Bei Titration [HA] = [A⁻] → pH = pKa.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Starke Säuren: vollständige Dissoziation; Essigsäure pKa 4,75; H₂CO₃ pKa1 6,35 (Blut eff. 6,1), pKa2 10,33; NH₄⁺ pKa 9,25; H₃PO₄ pKa1≈2,1, pKa2≈7,2, pKa3≈12,4; Ka1 ≫ Ka2 ≫ Ka3
+**Typische Fallen:**
+- Kleiner pKa = stärkere Säure (nicht umgekehrt!) — Konzentration und Stärke sind verschiedene Dinge
+- Dissoziationsgrad α steigt bei Verdünnung (Le Chatelier), nicht bei Konzentrierung
+- H₂CO₃ hat im Blut einen effektiven pKa von 6,1, nicht den Tabellenwert 6,35
 
 ---
 
@@ -1793,13 +1737,13 @@ Die **Magensäure** (HCl, pH ≈ 1–2) ist die einzige starke Säure im Körper
       ],
       content: `## Einleitung
 
-**Worum geht es?** Ein **Puffer** besteht aus schwacher Säure (HA) und konjugierter Base (A⁻); er fängt H⁺ (durch A⁻) und OH⁻ (durch HA) ab und hält den pH stabil. **Henderson-Hasselbalch:** pH = pKa + log([A⁻]/[HA]); bei [A⁻] = [HA] gilt **pH = pKa** (maximale Pufferkapazität). **Pufferbereich** etwa pKa ± 1. **Carbonat-Puffer** (CO₂/HCO₃⁻) ist der wichtigste Blutpuffer (pKa eff. ≈ 6,1); **Lunge** reguliert CO₂ (schnell), **Niere** HCO₃⁻ (langsam). **Phosphatpuffer** (H₂PO₄⁻/HPO₄²⁻, pKa ≈ 7,2) intrazellulär und im Urin. **Warum für den MedAT relevant?** HH-Gleichung, Blut-pH 7,4 trotz pKa 6,1 ([HCO₃⁻]/[CO₂] ≈ 20:1), Azidose/Alkalose (respiratorisch vs. metabolisch) werden geprüft. **Welche Fragen werden beantwortet?** „HH-Formel?“; „Warum Blut-pH 7,4?“; „Lunge vs. Niere?“; „Pufferbereich?“; „Azidose Ursache?“.
+Ein Marathonläufer produziert enorme Mengen Milchsäure — trotzdem bleibt sein Blut-pH erstaunlich stabil bei 7,4. Wie schafft der Körper das? Die Antwort sind **Puffersysteme**: Mischungen aus schwacher Säure und ihrer konjugierten Base, die sowohl zugesetzte Säure als auch Base abfangen. Der wichtigste Blutpuffer ist das Carbonat-System (CO₂/HCO₃⁻), reguliert durch Lunge und Niere. Versagt dieses System, drohen lebensbedrohliche Azidose oder Alkalose. Die **Henderson-Hasselbalch-Gleichung** ist das zentrale Werkzeug, um Puffergleichgewichte zu berechnen.
 
 **In diesem Kapitel lernst du:**
-- **Henderson-Hasselbalch:** pH = pKa + log([A⁻]/[HA]); bei 1:1 → pH = pKa; Pufferbereich pKa ± 1
-- **Carbonat-Puffer:** pKa(eff.) ≈ 6,1; pH 7,4 → [HCO₃⁻]/[CO₂] ≈ 20:1; Lunge (CO₂), Niere (HCO₃⁻)
-- **Phosphatpuffer:** H₂PO₄⁻/HPO₄²⁻, pKa ≈ 7,2; wichtig intrazellulär und im Urin
-- **Azidose/Alkalose:** pH &lt; 7,35 bzw. &gt; 7,45; respiratorisch (pCO₂) vs. metabolisch (HCO₃⁻)
+- wie ein Puffer funktioniert und warum er den pH-Wert stabil hält
+- wie du mit der Henderson-Hasselbalch-Gleichung den pH einer Pufferlösung berechnest
+- warum der Blut-pH 7,4 beträgt, obwohl der pKa des Carbonatpuffers nur 6,1 ist
+- welche Rolle Lunge (schnell, CO₂) und Niere (langsam, HCO₃⁻) bei der pH-Regulation spielen
 
 ---
 
@@ -1909,33 +1853,16 @@ Der Carbonat-Puffer kann versagen, wenn:
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Henderson-Hasselbalch-Formel?" → pH = pKa + log([A⁻]/[HA])
+- „Warum Blut-pH 7,4 bei pKa 6,1?" → [HCO₃⁻]/[CO₂] ≈ 20:1 → pH = 6,1 + log(20) ≈ 7,4
+- „Lunge vs. Niere bei pH-Regulation?" → Lunge reguliert CO₂ (schnell, Minuten), Niere HCO₃⁻ (langsam, Stunden–Tage)
+- „Pufferbereich?" → pKa ± 1
 
-**Zentral prüfungsrelevant:**
-- **Henderson-Hasselbalch:** pH = pKa + log([A⁻]/[HA]); bei [A⁻] = [HA] → **pH = pKa** (max. Pufferkapazität); **Pufferbereich pKa ± 1**
-- **Carbonat-Puffer:** pKa(eff.) = **6,1** (nicht 6,35!); pH 7,4 → [HCO₃⁻]/[CO₂] ≈ **20:1**; [HCO₃⁻] ≈ 24 mmol/L, pCO₂ ≈ 40 mmHg
-- **Lunge** reguliert CO₂ (schnell, Minuten); **Niere** reguliert HCO₃⁻ (langsam, Stunden–Tage)
-- **Phosphatpuffer:** H₂PO₄⁻/HPO₄²⁻, pKa ≈ 7,2; wichtig **intrazellulär und im Urin**, nicht primär Plasma
-- **Azidose** pH &lt; 7,35; **Alkalose** pH &gt; 7,45; respiratorisch (pCO₂) vs. metabolisch (HCO₃⁻)
-
-**Ergänzend vertiefend:** Proteinpuffer (Hb, Histidin); Pufferkapazität erschöpft bei Verbrauch von HA oder A⁻.
-
-**Häufige Prüfungsfragen:**
-- "HH-Formel?" → pH = pKa + log([A⁻]/[HA])
-- "Warum Blut-pH 7,4 bei pKa 6,1?" → Verhältnis [HCO₃⁻]/[CO₂] ≈ 20:1 → pH = 6,1 + log(20) ≈ 7,4
-- "Lunge vs. Niere?" → Lunge CO₂ (schnell), Niere HCO₃⁻ (langsam)
-- "Pufferbereich?" → pKa ± 1
-
-**Typische Prüfungsfallen:**
-- pKa im Blut 6,1 (nicht 6,35); Phosphatpuffer = Urin/intrazellulär; max. Kapazität bei pH = pKa
-
-**Wichtige Begriffe & Definitionen:**
-- **Henderson-Hasselbalch:** pH = pKa + log([Base]/[Säure]); gilt für Puffergleichgewicht.
-- **Pufferbereich:** etwa pKa ± 1; außerhalb versagt der Puffer.
-- **Respiratorische Störung:** primär pCO₂-Änderung; **metabolische Störung:** primär HCO₃⁻-Änderung.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- HH: pH = pKa + log([A⁻]/[HA]); Blut pKa(eff.) 6,1, [HCO₃⁻] 24 mmol/L, Verhältnis 20:1; pCO₂ 35–45 mmHg; Pufferbereich pKa ± 1; Phosphat pKa 7,2
+**Typische Fallen:**
+- Im Blut gilt pKa(eff.) = 6,1 (nicht der Tabellenwert 6,35 für reine H₂CO₃)
+- Phosphatpuffer wirkt v.a. intrazellulär und im Urin, nicht primär im Plasma
+- Maximale Pufferkapazität liegt bei pH = pKa (Verhältnis 1:1), nicht bei pH 7
 
 ---
 
@@ -2152,12 +2079,13 @@ Der Carbonat-Puffer kann versagen, wenn:
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Titration** = quantitative Bestimmung durch Zugabe von Titrant bis zum **Äquivalenzpunkt** (n(Säure) = n(Base) → **c₁V₁ = c₂V₂**). **Titrationskurve** (S-förmig); **Halbäquivalenzpunkt** (50 % titriert) → **pH = pKa**. **Äquivalenzpunkt-pH** hängt vom Salz ab: stark/stark → pH 7; schwache Säure + starke Base → pH &gt; 7 (Acetat hydrolysiert basisch); starke Säure + schwache Base → pH &lt; 7. **Indikatoren** (Phenolphthalein pH 8,2–10; Methylorange 3,1–4,4) müssen zum Äquivalenzpunkt-pH passen. **Klinisch:** Blutgasanalyse (BGA), vier Säure-Base-Störungen (resp./metab., Azidose/Alkalose), Kompensation. **Warum für den MedAT relevant?** Äquivalenz-/Halbäquivalenzpunkt, Indikatorwahl, BGA-Interpretation werden geprüft. **Welche Fragen werden beantwortet?** „Äquivalenzpunkt pH bei schwacher Säure + starker Base?“; „Welcher Indikator?“; „Kussmaul-Atmung?“; „BGA lesen?“.
+In der Apotheke steht auf einer Flasche „Salzsäure, unbekannte Konzentration”. Wie findest du heraus, wie viel Säure tatsächlich enthalten ist? Die Antwort ist die **Titration** — ein klassisches Verfahren, bei dem du tropfenweise eine Base bekannter Konzentration zugibst, bis die Säure exakt neutralisiert ist. Der Farbumschlag eines Indikators zeigt den Endpunkt an. Die dabei entstehende S-förmige Titrationskurve verrät nicht nur die Konzentration, sondern auch die Stärke der Säure. Klinisch nutzt die Medizin dasselbe Prinzip: Die Blutgasanalyse (BGA) misst den Säure-Base-Status des Blutes und erkennt lebensbedrohliche Azidosen und Alkalosen.
 
 **In diesem Kapitel lernst du:**
-- **Titration:** c₁V₁ = c₂V₂; **Halbäquivalenzpunkt** → pH = pKa; **Äquivalenzpunkt** stark/stark → pH 7, schwach/stark → pH &gt; 7, stark/schwach → pH &lt; 7
-- **Indikatoren:** Phenolphthalein (8,2–10) für basische ÄP; Methylorange (3,1–4,4) für saure ÄP
-- **BGA:** pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L; vier Störungen + Kompensation
+- wie eine Titration abläuft und warum der Äquivalenzpunkt nicht immer bei pH 7 liegt
+- woran du den Halbäquivalenzpunkt erkennst und warum dort pH = pKa gilt
+- wie du den passenden Indikator für eine Titration auswählst
+- wie du eine Blutgasanalyse (BGA) liest und die vier Säure-Base-Störungen unterscheidest
 
 ---
 
@@ -2274,32 +2202,16 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Äquivalenzpunkt-pH bei schwacher Säure + starker Base?" → pH > 7 (Acetat hydrolysiert basisch)
+- „Welcher Indikator für Essigsäure-Titration mit NaOH?" → Phenolphthalein (basischer ÄP)
+- „Was ist Kussmaul-Atmung?" → Kompensatorische Hyperventilation bei metabolischer Azidose
+- „BGA: Ist die Störung respiratorisch oder metabolisch?" → pCO₂ primär verändert = respiratorisch; HCO₃⁻ primär verändert = metabolisch
 
-**Zentral prüfungsrelevant:**
-- **Titration:** c₁V₁ = c₂V₂; **Äquivalenzpunkt:** stark/stark → pH 7; **schwache Säure + starke Base → pH &gt; 7** (Salz hydrolysiert basisch); starke Säure + schwache Base → pH &lt; 7
-- **Halbäquivalenzpunkt:** 50 % titriert → **pH = pKa**
-- **Indikatoren:** **Phenolphthalein** (pH 8,2–10) für basische ÄP; **Methylorange** (3,1–4,4) für saure ÄP
-- **BGA:** pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L; **vier Störungen:** resp. Azidose (pCO₂↑), resp. Alkalose (pCO₂↓), met. Azidose (HCO₃⁻↓), met. Alkalose (HCO₃⁻↑)
-- **Kussmaul-Atmung:** Hyperventilation = Kompensation bei **metabolischer Azidose**
-
-**Ergänzend vertiefend:** Anionenlücke; Kompensation (primäre Störung + Gegenrichtung bei Kompensation).
-
-**Häufige Prüfungsfragen:**
-- "Äquivalenzpunkt pH bei schwacher Säure + starker Base?" → pH &gt; 7 (Phenolphthalein)
-- "Kussmaul-Atmung?" → Kompensation bei metabolischer Azidose (CO₂ ↓)
-- "BGA: primär pCO₂ oder HCO₃⁻?" → pCO₂ = respiratorisch, HCO₃⁻ = metabolisch
-
-**Typische Prüfungsfallen:**
-- Schwach/stark → ÄP basisch (nicht pH 7); Halbäquivalenz ≠ Äquivalenz; met. Azidose → Kompensation Hyperventilation
-
-**Wichtige Begriffe & Definitionen:**
-- **Äquivalenzpunkt:** Stöchiometrisch gleiche Stoffmengen Titrant und Analyt; c₁V₁ = c₂V₂.
-- **Halbäquivalenzpunkt:** [HA] = [A⁻] → pH = pKa.
-- **Anionenlücke:** AG = Na⁺ − (Cl⁻ + HCO₃⁻); erhöht bei Keto-/Laktazidose.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- c₁V₁ = c₂V₂; Halbäquivalenz pH = pKa; Phenolphthalein 8,2–10; Methylorange 3,1–4,4; BGA pH 7,35–7,45, pCO₂ 35–45, HCO₃⁻ 22–26
+**Typische Fallen:**
+- Schwache Säure + starke Base ergibt am Äquivalenzpunkt pH > 7 (nicht pH 7!)
+- Halbäquivalenzpunkt (pH = pKa) ist nicht dasselbe wie Äquivalenzpunkt (n(Säure) = n(Base))
+- Metabolische Azidose wird respiratorisch kompensiert (Hyperventilation → pCO₂ sinkt), nicht renal
 
 ---
 
@@ -2534,13 +2446,13 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Redox-Reaktionen** = Elektronenübertragung. **OIL RIG:** Oxidation Is Loss (Elektronenabgabe, OZ steigt), Reduction Is Gain (Elektronenaufnahme, OZ sinkt). **Reduktionsmittel** wird oxidiert; **Oxidationsmittel** wird reduziert. **Oxidationszahlen** (OZ) nach Regeln: F = −1, O = −2 (Peroxide −1), H = +1 (Hydride −1); Summenregel. **Halbreaktion-Methode** zum Ausgleichen; **Disproportionierung** (gleiches Element oxidiert und reduziert, z. B. 2H₂O₂ → 2H₂O + O₂). **Warum für den MedAT relevant?** OIL RIG, OZ (H₂SO₄, KMnO₄, K₂Cr₂O₇), Redox-Gleichungen, NADH/FADH₂ als Reduktionsmittel werden geprüft. **Welche Fragen werden beantwortet?** „OIL RIG?“; „OZ S in H₂SO₄?“; „Disproportionierung?“; „Oxidationsmittel wird …?“; „MnO₄⁻ sauer?“.
+Warum rostet Eisen, aber Gold nicht? Warum liefern unsere Mitochondrien Energie aus Nahrung? Die Antwort liegt in **Redox-Reaktionen** — dem Transfer von Elektronen zwischen Teilchen. Jedes Mal, wenn du atmest, laufen in deinen Zellen Tausende Redox-Reaktionen ab: NADH gibt Elektronen an die Atmungskette ab und treibt so die ATP-Synthese an. Das Verständnis von Oxidation, Reduktion und Oxidationszahlen ist daher nicht nur Prüfungsstoff, sondern der Schlüssel zur Biochemie des Lebens.
 
 **In diesem Kapitel lernst du:**
-- **OIL RIG:** Oxidation = e⁻ abgeben (OZ steigt), Reduktion = e⁻ aufnehmen (OZ sinkt); Oxidationsmittel wird reduziert, Reduktionsmittel wird oxidiert
-- **Oxidationszahlen:** F −1, O −2 (Peroxide −1), H +1 (Hydride −1); Summenregel Σ(OZ×n) = Ladung
-- **Halbreaktion-Methode:** Atome → O (H₂O) → H (H⁺) → e⁻ angleichen → addieren
-- **Disproportionierung:** ein Element gleichzeitig oxidiert und reduziert (H₂O₂); KMnO₄: Mn +7 → +2 (sauer), +4 (neutral), +6 (basisch)
+- was Oxidation und Reduktion auf Elektronenebene bedeuten (OIL RIG) und warum beides immer gekoppelt ist
+- wie du Oxidationszahlen systematisch bestimmst, auch bei komplexen Verbindungen wie KMnO₄
+- wie du Redox-Gleichungen mit der Halbreaktion-Methode Schritt für Schritt ausgleichst
+- was Disproportionierung ist und warum sie bei H₂O₂ und in der Biologie (Superoxiddismutase) vorkommt
 
 ---
 
@@ -2602,34 +2514,16 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was bedeutet OIL RIG?" → Oxidation Is Loss (e⁻ abgeben), Reduction Is Gain (e⁻ aufnehmen)
+- „OZ von Schwefel in H₂SO₄?" → +6 (Summenregel: 2(+1) + x + 4(−2) = 0 → x = +6)
+- „Was ist eine Disproportionierung?" → Ein Element wird gleichzeitig oxidiert und reduziert (z. B. H₂O₂)
+- „Oxidationsmittel wird ...?" → reduziert (es nimmt Elektronen auf)
 
-**Zentral prüfungsrelevant:**
-- **OIL RIG:** Oxidation = e⁻ abgeben (OZ steigt), Reduktion = e⁻ aufnehmen (OZ sinkt); **Oxidationsmittel** wird reduziert, **Reduktionsmittel** wird oxidiert
-- **Oxidationszahlen:** F = −1, O = −2 (Peroxide −1), H = +1 (Hydride −1); **Summenregel** Σ(OZ×n) = Ladung
-- **H₂SO₄** S = +6; **HNO₃** N = +5; **KMnO₄** Mn = +7; **K₂Cr₂O₇** Cr = +6
-- **Halbreaktion-Methode:** Atome → O (H₂O) → H (H⁺) → e⁻ → angleichen → addieren
-- **Disproportionierung:** gleiches Element gleichzeitig oxidiert und reduziert (2H₂O₂ → 2H₂O + O₂)
-- **KMnO₄:** Mn +7 → +2 (sauer, 5e⁻), +4 (neutral), +6 (basisch); NADH/FADH₂ = biologische Reduktionsmittel
-
-**Ergänzend vertiefend:** Komproportionierung. Typische Fallen: Schwach/stark titriert → ÄP basisch (nicht pH 7); Halbäquivalenz [HA]=[A⁻] → pH=pKa ≠ Äquivalenz; metabolische Azidose → Kompensation Hyperventilation.
-
-**Häufige Prüfungsfragen:**
-- "OIL RIG?" → Oxidation Is Loss (e⁻ ab), Reduction Is Gain (e⁻ auf)
-- "OZ S in H₂SO₄?" → +6
-- "Disproportionierung?" → gleiches Element oxidiert und reduziert (H₂O₂)
-- "Oxidationsmittel wird …?" → reduziert (nimmt e⁻ auf)
-
-**Typische Prüfungsfallen:**
-- Oxidationsmittel wird reduziert (nicht oxidiert); OZ O in Peroxiden −1; H in Hydriden −1; KMnO₄ je nach Medium +2/+4/+6
-
-**Wichtige Begriffe & Definitionen:**
-- **Oxidationsmittel:** nimmt Elektronen auf, wird dabei reduziert.
-- **Reduktionsmittel:** gibt Elektronen ab, wird dabei oxidiert.
-- **Disproportionierung:** ein Element wird in derselben Reaktion teils oxidiert, teils reduziert.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- OZ: F −1, O −2 (Peroxide −1), H +1 (Hydride −1); H₂SO₄ S +6, KMnO₄ Mn +7; F₂ stärkstes OM, Li stärkstes RM; NADH/FADH₂ Reduktionsmittel
+**Typische Fallen:**
+- Oxidationsmittel wird reduziert, nicht oxidiert — der Name beschreibt, was es mit anderen macht
+- Sauerstoff hat in Peroxiden (H₂O₂) die OZ −1, nicht −2
+- KMnO₄ reduziert Mn zu verschiedenen Stufen je nach Medium: +2 (sauer), +4 (neutral), +6 (basisch)
 
 ---
 
@@ -2851,12 +2745,13 @@ Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschieden
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Galvanische Zelle:** spontane Redoxreaktion erzeugt Strom. **Anode** = Oxidation (AnOx), **Kathode** = Reduktion (RedKat); Elektronen fließen von Anode (−) zu Kathode (+). **E°Zelle = E°Kathode − E°Anode**; E° &gt; 0 → spontan, **ΔG° = −n·F·E°Zelle** (F = 96485 C/mol). **Elektrolyse:** erzwungene nicht-spontane Redoxreaktion; **m = M·I·t/(n·F)**. **Warum für den MedAT relevant?** AnOx RedKat, E°Zelle-Berechnung, Daniell-Element, ΔG°-Formel, Faraday, Spannungsreihe werden geprüft. **Welche Fragen werden beantwortet?** „AnOx RedKat?“; „E°Zelle?“; „Galvanisch vs. Elektrolyse?“; „ΔG° aus E°?“; „Faraday-Konstante?“.
+Dein Smartphone-Akku, die Batterie in deiner Fernbedienung, die Goldgewinnung durch Elektrolyse — all das sind Anwendungen der **Elektrochemie**. In einer galvanischen Zelle läuft eine Redox-Reaktion spontan ab und erzeugt dabei elektrischen Strom. Bei der Elektrolyse ist es umgekehrt: Man zwingt eine nicht-spontane Reaktion mit externem Strom. Beide Prinzipien lassen sich mit den Standardelektrodenpotenzialen quantitativ vorhersagen. Klinisch relevant ist etwa die Korrosion von Implantaten oder die elektrochemische Grundlage von Nervensignalen.
 
 **In diesem Kapitel lernst du:**
-- **AnOx RedKat:** Anode = Oxidation, Kathode = Reduktion; galvanisch: Anode negativ, Kathode positiv; Elektrolyse: Polarität umgekehrt
-- **E°Zelle = E°Kathode − E°Anode**; positiv = spontan; **ΔG° = −n·F·E°Zelle**
-- **Daniell:** Zn/Cu → E°Zelle = 0,34 − (−0,76) = +1,10 V; **Faraday** F = 96485 C/mol; **m = M·I·t/(n·F)**
+- was Anode und Kathode bedeuten und warum an der Anode immer Oxidation stattfindet (AnOx RedKat)
+- wie du die Zellspannung aus den Standardpotenzialen berechnest und ob eine Reaktion spontan abläuft
+- den Zusammenhang zwischen Zellspannung und freier Enthalpie (ΔG° = −nFE°)
+- wie Elektrolyse funktioniert und wie du die abgeschiedene Masse mit dem Faraday-Gesetz berechnest
 
 ---
 
@@ -2953,31 +2848,15 @@ Negativer ΔG°-Wert bestätigt: Die Reaktion Zn + Cu²⁺ → Zn²⁺ + Cu ist 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was ist AnOx RedKat?" → Anode = Oxidation, Kathode = Reduktion
+- „Wie berechnet man E°Zelle?" → E°Kathode − E°Anode (Daniell: 0,34 − (−0,76) = +1,10 V)
+- „Galvanische Zelle vs. Elektrolyse?" → Galvanisch: spontan, Anode negativ; Elektrolyse: erzwungen, Anode positiv
 
-**Zentral prüfungsrelevant:**
-- **AnOx RedKat:** Anode = Oxidation, Kathode = Reduktion; galvanisch: Anode negativ, Kathode positiv; Elektrolyse: Anode positiv
-- **E°Zelle = E°Kathode − E°Anode** (nicht Addition!); positiv = spontan; **ΔG° = −n·F·E°Zelle**
-- **Daniell:** Zn (−0,76 V) / Cu (+0,34 V) → E°Zelle = **+1,10 V**; **F = 96485 C/mol**
-- **Elektrolyse:** m = M·I·t/(n·F); Salzbrücke = Ionentransfer (Ladungsausgleich)
-- Höheres E° = stärkeres Oxidationsmittel; Spannungsreihe F₂ &gt; … &gt; Zn &gt; Li
-
-**Ergänzend vertiefend:** Blei-Akku, Brennstoffzelle. Typische Fallen: Oxidationsmittel wird reduziert (nicht oxidiert); OZ O in Peroxiden −1, H in Hydriden −1; KMnO₄ je nach Medium +2/+4/+6.
-
-**Häufige Prüfungsfragen:**
-- "AnOx RedKat?" → Anode Oxidation, Kathode Reduktion
-- "E°Zelle?" → E°Kathode − E°Anode; Daniell +1,10 V
-- "Galvanisch vs. Elektrolyse?" → Galvanisch spontan, Anode negativ; Elektrolyse erzwungen, Anode positiv
-
-**Typische Prüfungsfallen:**
-- E°Zelle = Kathode − Anode (nicht +); galvanisch Anode negativ, bei Elektrolyse Anode positiv; F = 96485 C/mol
-
-**Wichtige Begriffe & Definitionen:**
-- **Standardelektrodenpotenzial E°:** Reduktionsneigung gegen SHE (E° = 0 V); höheres E° = stärkeres Oxidationsmittel.
-- **Faraday-Konstante F:** 96485 C/mol; 1 mol Elektronen = F Coulomb.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- F = 96485 C/mol; Daniell E°Zelle +1,10 V; ΔG° = −nFE°Zelle; m = M·I·t/(n·F); SHE 0,00 V; Spannungsreihe F₂ bis Li
+**Typische Fallen:**
+- E°Zelle = Kathode minus Anode (Subtraktion, nicht Addition!)
+- In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse ist sie positiv — AnOx RedKat gilt aber in beiden Fällen
+- Die Faraday-Konstante F = 96 485 C/mol ist nicht dasselbe wie die Faraday-Gesetze (m = MIt/nF)
 
 ---
 
@@ -3520,13 +3399,13 @@ Wäre die Membran *nur* für K⁺ durchlässig, läge das Potenzial bei −90 mV
       ],
       content: `## Einleitung
 
-**Worum geht es?** **ROS** (reaktive Sauerstoffspezies) entstehen als Nebenprodukte der Atmungskette: **O₂ → O₂·⁻** (1e⁻) → **H₂O₂** (SOD) → **·OH** (**Fenton-Reaktion:** Fe²⁺ + H₂O₂ → ·OH + OH⁻ + Fe³⁺). **·OH** ist das reaktivste ROS. **Antioxidantien:** SOD (O₂·⁻ → H₂O₂), Katalase/GPx (H₂O₂ → H₂O); GPx braucht **GSH**, regeneriert durch **Glutathion-Reduktase** mit **NADPH** (Pentosephosphatweg, **G6PD**). **G6PD-Mangel** → NADPH-Mangel → hämolytische Anämie bei Oxidantien. **Warum für den MedAT relevant?** Fenton, SOD/Katalase/GPx, G6PD-Mangel, Vitamin E/C werden geprüft. **Welche Fragen werden beantwortet?** „Fenton-Produkt?“; „SOD macht …?“; „G6PD-Mangel Folge?“; „Welches ROS Signalmolekül?“.
+Sauerstoff ist lebenswichtig — aber gleichzeitig gefährlich. Bei jedem Atemzug entstehen als Nebenprodukte der mitochondrialen Atmungskette **reaktive Sauerstoffspezies (ROS)**, die DNA, Proteine und Membranlipide zerstören können. Der Körper besitzt daher ein ausgeklügeltes Schutzsystem: Enzyme wie SOD, Katalase und Glutathion-Peroxidase fangen ROS ab, bevor sie Schaden anrichten. Versagt dieses System — etwa beim G6PD-Mangel, der weltweit 400 Millionen Menschen betrifft — können bestimmte Medikamente oder Nahrungsmittel eine schwere hämolytische Anämie auslösen.
 
 **In diesem Kapitel lernst du:**
-- **ROS-Kaskade:** O₂·⁻ → H₂O₂ (SOD) → ·OH (Fenton: Fe²⁺); ·OH reaktivstes ROS
-- **Fenton:** Fe²⁺ + H₂O₂ → ·OH + OH⁻ + Fe³⁺
-- **Antioxidantien:** SOD (H₂O₂!), Katalase/GPx (H₂O → H₂O); GPx + GSH; GSH-Reduktase + NADPH (G6PD)
-- **G6PD-Mangel:** X-chromosomal, hämolytische Anämie bei Oxidantien (Primaquin, Favabohnen)
+- wie ROS in der Atmungskette entstehen und welches Radikal das gefährlichste ist
+- wie die Fenton-Reaktion aus „harmlosem" H₂O₂ das hochreaktive Hydroxyl-Radikal erzeugt
+- wie SOD, Katalase und Glutathion-Peroxidase als Enzymkaskade zusammenarbeiten
+- warum G6PD-Mangel zu hämolytischer Anämie führt und welche Substanzen gefährlich sind
 
 ---
 
@@ -3593,32 +3472,16 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was entsteht bei der Fenton-Reaktion?" → Hydroxyl-Radikal (·OH) — das reaktivste ROS
+- „Was macht SOD?" → Wandelt O₂·⁻ in H₂O₂ um (Disproportionierung, nicht direkt H₂O!)
+- „Folge eines G6PD-Mangels?" → NADPH fehlt → GSH wird nicht regeneriert → oxidative Hämolyse
+- „Welches ROS wirkt als Signalmolekül?" → H₂O₂ in niedrigen Konzentrationen
 
-**Zentral prüfungsrelevant:**
-- **Fenton-Reaktion:** Fe²⁺ + H₂O₂ → **·OH** + OH⁻ + Fe³⁺; ·OH = reaktivstes ROS
-- **ROS-Kaskade:** O₂·⁻ → H₂O₂ (SOD) → ·OH (Fenton); **SOD** macht H₂O₂ (nicht H₂O!), Katalase/GPx bauen H₂O₂ ab
-- **GPx:** H₂O₂ + 2GSH → 2H₂O + GSSG; **Glutathion-Reduktase** regeneriert GSH mit **NADPH** (G6PD im PPW)
-- **G6PD-Mangel:** X-chromosomal → NADPH↓ → GSH↓ → hämolytische Anämie bei Oxidantien (Primaquin, Favabohnen)
-- **Vitamin E** (Membran) + **Vitamin C** (regeneriert Vit. E); H₂O₂ als Signalmolekül (niedrige Konz.)
-
-**Ergänzend vertiefend:** Katalase (peroxisomal, hohe Umsatzzahl). Typische Fallen: SOD liefert H₂O₂ (nicht H₂O); GSSG→2GSH durch Glutathion-Reduktase (nicht Katalase); G6PD X-chromosomal; Vit. E fettlöslich, Vit. C wasserlöslich.
-
-**Häufige Prüfungsfragen:**
-- "Fenton-Produkt?" → ·OH (Hydroxyl-Radikal)
-- "SOD macht …?" → H₂O₂ (Disproportionierung O₂·⁻)
-- "G6PD-Mangel Folge?" → NADPH-Mangel → GSH nicht regeneriert → oxidative Hämolyse
-- "ROS als Signalmolekül?" → H₂O₂ (niedrige Konzentration)
-
-**Typische Prüfungsfallen:**
-- SOD liefert H₂O₂ (nicht H₂O); GSSG → 2GSH durch Glutathion-Reduktase (nicht Katalase); G6PD X-chromosomal; Vit. E fettlöslich, Vit. C wasserlöslich
-
-**Wichtige Begriffe & Definitionen:**
-- **Fenton-Reaktion:** Fe²⁺ + H₂O₂ → ·OH + OH⁻ + Fe³⁺; katalysiert Bildung des reaktivsten ROS.
-- **G6PD-Mangel:** Defekt im ersten Schritt des Pentosephosphatwegs → NADPH-Mangel → reduzierte antioxidative Kapazität (v. a. Erythrozyten).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Fenton: Fe²⁺ + H₂O₂ → ·OH; SOD → H₂O₂; GPx + GSH; G6PD-Mangel X-chromosomal, Favabohnen/Primaquin; Vit. E/C; Katalase ~10⁷/s
+**Typische Fallen:**
+- SOD produziert H₂O₂, nicht H₂O — erst Katalase/GPx bauen H₂O₂ zu H₂O ab
+- GSSG wird durch Glutathion-Reduktase (nicht Katalase) zu GSH regeneriert
+- Vitamin E ist fettlöslich (Membranschutz), Vitamin C ist wasserlöslich (regeneriert Vitamin E)
 
 ---
 

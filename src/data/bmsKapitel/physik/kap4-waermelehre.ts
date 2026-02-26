@@ -43,9 +43,9 @@ Hier geht es um **Temperatur und Wärmeübertragung**: Wie misst man Temperatur 
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:thermodynamics}}
 
-{{DIAGRAM:em-spectrum}}
+{{DIAGRAM:coordinate-system}}
 
 ## Temperaturskalen
 
@@ -706,9 +706,9 @@ Hier geht es um **Energie und Richtung** thermischer Prozesse: Der 1. Hauptsatz 
 
 ---
 
-{{DIAGRAM:coordinate-system}}
+{{DIAGRAM:thermodynamics}}
 
-{{DIAGRAM:em-spectrum}}
+{{DIAGRAM:coordinate-system}}
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 

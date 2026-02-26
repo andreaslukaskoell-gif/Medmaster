@@ -16,13 +16,13 @@ export const chemKapOrganisch: Kapitel = {
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       content: `## Einleitung
 
-**Worum geht es?** Die **Organische Chemie** ist die Chemie des Kohlenstoffs; **Kohlenwasserstoffe** (nur C und H) bilden die Basis: **Alkane** (gesättigt, CₙH₂ₙ₊₂), **Alkene** (Doppelbindung, CₙH₂ₙ), **Alkine** (Dreifachbindung, CₙH₂ₙ₋₂). **Warum für den MedAT relevant?** Hybridisierung (sp³, sp², sp), Bindungswinkel, Bromwassertest, Markovnikov-Regel und die Unterscheidung Benzol vs. Alken sind häufig geprüft. **Welche Fragen werden beantwortet?** „Welche Hybridisierung in Ethen/Ethin?“; „Was zeigt der Bromwassertest?“; „Sekundäres C-Atom — Definition?“; „Warum siedet verzweigtes Alkan tiefer?“; „Gehört Benzol zu den Alkenen?“; „Alkan- vs. Alken-Formel?“.
+Erdgas, Kerzenwachs, Polyethylen-Folie — all das sind **Kohlenwasserstoffe**, Verbindungen aus nur Kohlenstoff und Wasserstoff. Sie bilden das Grundgerüst der organischen Chemie und damit auch der Biochemie. Ob ein Molekül nur Einfachbindungen hat (Alkan), eine Doppelbindung (Alken) oder eine Dreifachbindung (Alkin), bestimmt seine Reaktivität, seine Hybridisierung und sogar seinen Siedepunkt. Das Verständnis dieser Grundbausteine ist der Schlüssel zu funktionellen Gruppen, Arzneistoffen und Biomolekülen.
 
 **In diesem Kapitel lernst du:**
-- **Alkane** (gesättigt, nur σ-Bindungen), **Alkene** (C=C, σ+π) und **Alkine** (C≡C) mit allgemeinen Formeln und IUPAC-Namen
-- **Hybridisierung** (sp³ 109,5°, sp² 120°, sp 180°) und typische Reaktionen (radikalische Substitution vs. elektrophile Addition)
-- **Markovnikov-Regel** und **Bromwassertest** (Nachweis ungesättigter Verbindungen)
-- Siedepunkte: Kettenlänge ↑ und Verzweigung ↓; **Benzol ist Aromat, kein Alken**
+- wie sich Alkane, Alkene und Alkine in Bindung, Hybridisierung und Reaktivität unterscheiden
+- warum sp³ den Tetraederwinkel ergibt, sp² planar ist und sp linear
+- wie du mit dem Bromwassertest Doppelbindungen nachweist und was die Markovnikov-Regel besagt
+- warum Kettenlänge und Verzweigung den Siedepunkt bestimmen und weshalb Benzol kein Alken ist
 
 ---
 
@@ -108,47 +108,16 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Hybridisierung von C in Ethen?” → sp² (120°, trigonal-planar); in Ethin → sp (180°, linear)
+- „Was zeigt der Bromwassertest?” → Entfärbung = Nachweis für C=C oder C≡C
+- „Markovnikov-Regel?” → H addiert an das C mit mehr H-Atomen (stabileres Carbokation)
+- „Was ist ein sekundäres C-Atom?” → An genau zwei weitere C-Atome gebunden
 
-**Zentral prüfungsrelevant:**
-- **Alkane** CₙH₂ₙ₊₂: gesättigt, sp³, nur σ-Bindungen; radikalische Substitution (UV, Halogen)
-- **Alkene** CₙH₂ₙ: C=C (σ+π), sp², 120°; elektrophile Addition; **Alkine** CₙH₂ₙ₋₂: C≡C, sp, 180°
-- **Hybridisierung:** sp³ (Tetraeder 109,5°), sp² (planar 120°), sp (linear 180°) — Ethen sp², Ethin sp
-- **Bromwassertest:** Entfärbung = Nachweis für C=C oder C≡C (elektrophile Addition von Br₂)
-- **Markovnikov-Regel:** H addiert an das C mit mehr H-Atomen; stabileres Carbokation als Intermediat
-- **Sekundäres C-Atom:** an **zwei weitere C-Atome** gebunden (nicht „Position 2“, nicht „2 OH“ oder „2 NH₂“)
-- Siedepunkt: Kettenlänge ↑ → Sdp. ↑; Verzweigung ↑ → Sdp. ↓ (kleinere Kontaktfläche, schwächere VdW)
-- **Benzol (Benzen) ist ein Aromat**, kein Alken — delokalisierte 6 π-Elektronen, Hückel-Regel
-- Cycloalkane und Alkene haben gleiche Summenformel CₙH₂ₙ (Vorsicht bei Aufgaben!)
-- Klinisch: Benzol → AML; Disulfiram hemmt ALDH (Acetaldehyd); FCKW → Ozonabbau
-
-**Ergänzend vertiefend:** Konstitutionsisomerie, Polymerisation (PE, PP, PVC). Typische Fallen: Benzen (Benzol) = Aromat, nicht Alken; Cycloalkane und Alkene beide CₙH₂ₙ — nicht verwechseln.
-
-**Häufige Prüfungsfragen:**
-- "Welche Hybridisierung hat C in Ethen?" → sp² (120°, trigonal-planar); in Ethin → sp (180°, linear)
-- "Was zeigt der Bromwassertest?" → Entfärbung bei C=C oder C≡C (elektrophile Addition von Br₂)
-- "Wie lautet die Markovnikov-Regel?" → H addiert an das C mit mehr H-Atomen; stabileres Carbokation
-- "Warum siedet verzweigtes Alkan tiefer als lineares?" → Kleinere Kontaktfläche → schwächere van-der-Waals-Kräfte
-- "Was ist ein sekundäres C-Atom?" → C-Atom, das an zwei weitere C-Atome gebunden ist
-
-**Typische Prüfungsfallen:**
-- **Benzen (Benzol) gehört NICHT zu den Alkenen** — Benzol ist Aromat. Alkene: Buten, Cyclohexen; nicht: Benzen.
-- Alkan CₙH₂ₙ₊₂ vs. Alken CₙH₂ₙ — Cycloalkane und Alkene haben GLEICHE Formel CₙH₂ₙ!
-- Radikalische Substitution (Alkane) ≠ elektrophile Addition (Alkene)
-- Sieden ≠ Erstarren: Pentan Sdp. 36 °C = bei 36 °C siedet Pentan (flüssig → gas)
-- n-Butan (Sdp. −1°C) siedet HÖHER als Isobutan (Sdp. −12°C) trotz C₄H₁₀
-
-**Wichtige Begriffe & Definitionen:**
-- **Alkan:** gesättigter Kohlenwasserstoff, nur C-C- und C-H-Einfachbindungen; CₙH₂ₙ₊₂.
-- **Alken:** mindestens eine C=C-Doppelbindung; CₙH₂ₙ; elektrophile Addition.
-- **Sekundäres C-Atom:** Kohlenstoff, der an genau zwei weitere C-Atome gebunden ist.
-- **Markovnikov-Regel:** Bei Addition von HX an unsymmetrisches Alken geht H an das C mit mehr H-Atomen.
-- **Bromwassertest:** Entfärbung von orange → farblos bei C=C oder C≡C (Addition von Br₂).
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Bindungswinkel: sp³ → 109,5°; sp² → 120°; sp → 180°
-- Alkan-Siedepunkte: Methan −162°C, Butan −1°C, Pentan 36°C, Heptan 98°C
-- Benzol: 6 π-Elektronen, krebserregend (AML); Disulfiram hemmt ALDH
+**Typische Fallen:**
+- Benzol ist ein Aromat, kein Alken — trotz ungesättigter Bindungen keine elektrophile Addition
+- Cycloalkane und Alkene haben beide die Formel CnH2n — nicht verwechseln!
+- Verzweigtes Alkan siedet tiefer als lineares (kleinere Kontaktfläche, schwächere van-der-Waals-Kräfte)
 
 ---
 
@@ -372,14 +341,13 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
       title: "Isomerie und Stereochemie",
       content: `## Einleitung
 
-**Worum geht es?** **Isomerie** umfasst Verbindungen mit gleicher Summenformel, aber unterschiedlicher Struktur oder räumlicher Anordnung. **Konstitutionsisomere** haben verschiedene Verknüpfung (z. B. n-Butan vs. Isobutan); **Stereoisomere** gleiche Verknüpfung, andere räumliche Anordnung — dazu zählen **Enantiomere** (Spiegelbilder, R/S), **Diastereomere** und **cis/trans-Isomerie**. **Warum für den MedAT relevant?** Chiralität, R/S-Nomenklatur, Racemat und die biologische Bedeutung (nur ein Enantiomer wirksam oder toxisch) werden häufig geprüft. **Welche Fragen werden beantwortet?** „Was ist ein Chiralitätszentrum?“; „Enantiomere vs. Diastereomere?“; „Was ist ein Racemat?“; „Thalidomid — R vs. S?“; „Warum L-Dopa und nicht D-Dopa?“; „R/S und (+)/(−) — Zusammenhang?“.
+Das Schlafmittel Thalidomid (Contergan) wurde in den 1960er-Jahren zur Katastrophe: Das eine Spiegelbild-Isomer wirkt beruhigend, das andere verursacht schwere Missbildungen. Diese Tragödie zeigt, wie entscheidend die räumliche Anordnung von Atomen in einem Molekül sein kann. **Isomerie** — gleiche Summenformel, aber verschiedene Struktur — ist kein abstraktes Konzept, sondern bestimmt, ob ein Arzneistoff heilt oder schadet. Von der Konstitutionsisomerie über Chiralität bis hin zur R/S-Nomenklatur bildet dieses Kapitel das Fundament der Stereochemie.
 
 **In diesem Kapitel lernst du:**
-- **Konstitutionsisomere** (gleiche Formel, verschiedene Konnektivität) und **Stereoisomere** (gleiche Konnektivität, verschiedene räumliche Anordnung)
-- **Chiralitätszentrum** (sp³-C mit vier verschiedenen Substituenten), **Enantiomere** (Spiegelbilder) und **R/S-Nomenklatur** (CIP)
-- **Diastereomere** (keine Spiegelbilder), **cis/trans-** und **Epimere/Anomere**
-- **Racemat** (1:1-Gemisch, optisch inaktiv) und **optische Aktivität** ((+)/(−))
-- Biologische Relevanz: Thalidomid (R/S), L-Dopa, proteinogene Aminosäuren (L)
+- den Unterschied zwischen Konstitutionsisomeren und Stereoisomeren und warum das medizinisch relevant ist
+- was ein Chiralitätszentrum ist und wie du mit der R/S-Nomenklatur (CIP-Regeln) konfigurierst
+- warum Enantiomere gleiche physikalische Eigenschaften haben, aber biologisch verschieden wirken
+- was ein Racemat ist, warum es optisch inaktiv ist und warum moderne Arzneimittel reine Enantiomere bevorzugen
 
 ---
 
@@ -474,39 +442,16 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was ist ein Chiralitätszentrum?" → sp³-C mit vier verschiedenen Substituenten
+- „Warum sind Enantiomere biologisch relevant?" → Enzyme/Rezeptoren sind chiral und erkennen Spiegelbilder unterschiedlich
+- „Was ist ein Racemat?" → 1:1-Gemisch aus R- und S-Enantiomer, optisch inaktiv
+- „Thalidomid: R vs. S?" → R = Sedativum, S = teratogen; in vivo Racemisierung
 
-**Zentral prüfungsrelevant:**
-- **Konstitutionsisomere:** gleiche Summenformel, verschiedene Konnektivität (n-Butan vs. Isobutan)
-- **Stereoisomere:** gleiche Konnektivität, verschiedene räumliche Anordnung; Enantiomere + Diastereomere
-- **Chiralitätszentrum:** sp³-C mit **vier verschiedenen Substituenten** → nicht-superponierbare Spiegelbilder (Enantiomere)
-- **Enantiomere:** Spiegelbilder, gleiche physikochem. Eigenschaften, **entgegengesetzte optische Aktivität** (+)/(−)
-- **R/S-Nomenklatur:** CIP-Priorität; Gruppe 4 nach hinten; Uhrzeigersinn = R, gegen Uhrzeigersinn = S
-- **R/S sagt NICHTS über (+)/(−)** — Drehrichtung experimentell (Polarimeter) bestimmen
-- **Racemat:** 1:1-Gemisch aus R- und S-Enantiomer → **optisch inaktiv**
-- **Diastereomere:** Stereoisomere, die keine Spiegelbilder sind; verschiedene Eigenschaften, chromatographisch trennbar
-- **cis/trans** an C=C: π-Bindung verhindert Rotation; **Konformation** (z. B. Ethan): Rotation möglich
-- **Klinisch:** Thalidomid (R = Sedativum, S = teratogen; Racemisierung in vivo!); L-Dopa nur L-Form wirksam; proteinogene AS = L
-
-**Ergänzend vertiefend:** Epimere, Anomere, meso-Verbindungen, Sesselkonformation. Typische Fallen: Enantiomere (Spiegelbilder, gleiche Eigenschaften) ≠ Diastereomere (trennbar); R/S-Konfiguration ≠ (+)/(−)-Drehung — experimentell bestimmen.
-
-**Häufige Prüfungsfragen:**
-- "Was ist ein Chiralitätszentrum?" → sp³-C mit vier verschiedenen Substituenten → Enantiomere möglich
-- "Warum sind Enantiomere biologisch relevant?" → Enzyme/Rezeptoren chiral → stereoselektive Erkennung (L-Aminosäuren, L-Dopa)
-- "Was ist ein Racemat?" → 1:1-Gemisch R + S → optisch inaktiv
-- "Thalidomid: R vs. S?" → R Sedativum, S teratogen; in vivo Racemisierung
-
-**Typische Prüfungsfallen:**
-- Enantiomere (Spiegelbilder, gleiche Eigenschaften) ≠ Diastereomere (verschiedene Eigenschaften, trennbar)
-- R/S-Konfiguration ≠ (+)/(−)-Drehung — experimentell bestimmen!
-- cis/trans an C=C (π blockiert Rotation) ≠ Konformationsisomerie (Rotation um σ)
-
-**Wichtige Begriffe & Definitionen:**
-- **Chiralitätszentrum:** sp³-Kohlenstoff mit vier verschiedenen Substituenten; führt zu Enantiomeren.
-- **Enantiomere:** Spiegelbildisomere, nicht superponierbar; gleiche physikochem. Eigenschaften, entgegengesetzte optische Aktivität.
-- **Racemat:** 1:1-Gemisch aus R- und S-Enantiomer; optisch inaktiv.
-- **Diastereomere:** Stereoisomere, die keine Spiegelbilder voneinander sind.
-- **Epimere:** Diastereomere, die sich an genau einem Chiralitätszentrum unterscheiden (z. B. D-Glucose vs. D-Galactose).
+**Typische Fallen:**
+- R/S-Konfiguration sagt nichts über (+)/(−)-Drehrichtung — die wird experimentell bestimmt
+- Enantiomere haben gleiche physikalische Eigenschaften, Diastereomere nicht (trennbar!)
+- cis/trans an C=C ist Konfigurationsisomerie (keine Rotation), nicht Konformationsisomerie
 
 **Prüfungsrelevante Zahlen/Fakten:**
 - n Chiralitätszentren → max. 2ⁿ Stereoisomere (Ausnahme: meso mit Spiegelebene)
@@ -723,14 +668,13 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       title: "Funktionelle Gruppen der Organik",
       content: `## Einleitung
 
-**Worum geht es?** **Funktionelle Gruppen** (–OH, –COOH, –CHO, C=O, –NH₂, –O–, –SH) bestimmen Reaktivität, Löslichkeit und Acidität organischer Verbindungen. Dazu zählen **Alkohole**, **Aldehyde**, **Ketone**, **Carbonsäuren**, **Ester**, **Amine** und **Thiole**; die **Oxidationsreihe** (primärer Alkohol → Aldehyd → Carbonsäure) und **Veresterung** sind zentral. **Warum für den MedAT relevant?** Bezeichnungen (Carbonsäure, Ether, Amin, Alkin), Oxidationsstufen und klinische Beispiele (Ethanolabbau, Ketonkörper, Peptidbindung, Disulfidbrücken) werden häufig abgefragt. **Welche Fragen werden beantwortet?** „Oxidation primärer Alkohol?“; „Veresterung — was entsteht?“; „Warum sind Amine basisch?“; „Aldehyd vs. Keton — Fehling?“; „Ketonkörper bei Diabetes?“; „Peptidbindung = …?“.
+Ethanol macht betrunken, Methanol macht blind — obwohl sich die beiden Alkohole nur um eine CH₂-Gruppe unterscheiden. Der entscheidende Unterschied liegt im Abbauprodukt: Ethanol wird zu Acetaldehyd oxidiert, Methanol zu giftigem Formaldehyd. Dieses Beispiel zeigt, wie **funktionelle Gruppen** die Eigenschaften und Reaktivität eines Moleküls bestimmen. Von der Hydroxylgruppe des Alkohols über die Carbonylgruppe der Aldehyde und Ketone bis zur Peptidbindung in Proteinen — funktionelle Gruppen sind das Alphabet der organischen Chemie.
 
 **In diesem Kapitel lernst du:**
-- **Alkohole** (–OH), **Aldehyde** (–CHO), **Ketone** (C=O in Kette), **Carbonsäuren** (–COOH) und **Ester** (–COO–)
-- **Oxidationsreihe:** primärer Alkohol → Aldehyd → Carbonsäure; sekundär → Keton; tertiär nicht oxidierbar
-- **Veresterung** (Carbonsäure + Alkohol ⇌ Ester + H₂O) und **Verseifung** (basische Esterspaltung)
-- **Amine** (–NH₂, basisch), **Amide** (Peptidbindung), **Thiole** (–SH, Disulfidbrücken)
-- Klinisch: Ethanolabbau (ADH, ALDH), Ketonkörper, Aspirin, biogene Amine
+- welche funktionellen Gruppen es gibt und wie sie Löslichkeit, Acidität und Reaktivität bestimmen
+- die Oxidationsreihe: warum primäre Alkohole zu Aldehyden und dann zu Carbonsäuren oxidiert werden
+- wie Veresterung und Verseifung ablaufen und warum Fette Ester aus Glycerin und Fettsäuren sind
+- warum Amine basisch sind, was die Peptidbindung chemisch ist und wie Disulfidbrücken Proteine stabilisieren
 
 ---
 
@@ -842,41 +786,16 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was entsteht bei Oxidation eines primären Alkohols?" → Aldehyd, dann Carbonsäure (sekundär → Keton)
+- „Was ist Veresterung?" → Carbonsäure + Alkohol ⇌ Ester + H₂O
+- „Warum sind Amine basisch?" → Freies Elektronenpaar am N nimmt H⁺ auf
+- „Aldehyd vs. Keton bei Fehling?" → Nur Aldehyde geben positiven Fehling-/Tollens-Test
 
-**Zentral prüfungsrelevant:**
-- **Oxidationsreihe:** primärer Alkohol → **Aldehyd** (–CHO) → **Carbonsäure** (–COOH); sekundärer Alkohol → **Keton** (C=O); tertiärer Alkohol nicht oxidierbar
-- **Carbonsäure** (−COOH): pKₐ 4–5, Veresterung mit Alkoholen; **Ether** (R−O−R′): z. B. Diethylether; **Amin** (−NH₂): basisch (freies e⁻-Paar am N)
-- **Veresterung:** R-COOH + R′-OH ⇌ R-COO-R′ + H₂O (Gleichgewicht); **Verseifung:** Ester + NaOH → Carboxylat + Alkohol (irreversibel)
-- **Aldehyde** reduzieren Fehling/Tollens, **Ketone** nicht (C=O in Kette, kein H am Carbonyl-C)
-- **Amine** basisch: R-NH₂ + H₂O ⇌ R-NH₃⁺ + OH⁻; **Peptidbindung** = Amid (−CO−NH−); **Disulfidbrücke** = −S−S− aus zwei Thiolen
-- **Ketonkörper:** Aceton, Acetoacetat, β-Hydroxybutyrat bei Fasten/Diabetes → Ketoazidose (pH < 7,35), Acetongeruch, Kussmaul-Atmung
-- Ethanolabbau: Ethanol →[ADH] Acetaldehyd →[ALDH] Acetat → Acetyl-CoA; Methanol → Formaldehyd (toxisch!)
-- **Thiole** (–SH): Cystein, Disulfidbrücken; Glutathion (GSH) als Antioxidans
-
-**Ergänzend vertiefend:** Oxidationsmittel (PCC, CrO₃), biogene Amine (Dopamin, Serotonin, Histamin). Typische Fallen: Aldehyde Fehling/Tollens positiv, Ketone keine Reduktion (C=O-Position); Methanol→Formaldehyd (Erblindung) ≠ Ethanol→Acetaldehyd.
-
-**Häufige Prüfungsfragen:**
-- "Was entsteht bei Oxidation eines primären Alkohols?" → Aldehyd → Carbonsäure (sekundär → Keton)
-- "Was ist Veresterung?" → Carbonsäure + Alkohol ⇌ Ester + H₂O
-- "Warum sind Amine basisch?" → Freies Elektronenpaar am N nimmt H⁺ auf
-- "Aldehyd vs. Keton — Fehling?" → Nur Aldehyde reduzieren Fehling/Tollens
-- "Ketonkörper bei Diabetes?" → Aceton, Acetoacetat, β-Hydroxybutyrat; Ketoazidose
-
-**Typische Prüfungsfallen:**
-- Aldehyde (Fehling/Tollens positiv) vs. Ketone (keine Reduktion) — C=O-Position!
-- Methanol → Formaldehyd (Erblindung) ≠ Ethanol → Acetaldehyd → Acetat
-- Verseifung (NaOH, irreversibel) ≠ saure Esterspaltung (reversibel)
-
-**Wichtige Begriffe & Definitionen:**
-- **Carbonsäure:** –COOH; Brønsted-Säure, pKₐ 4–5; Veresterung mit Alkoholen.
-- **Veresterung:** Carbonsäure + Alkohol ⇌ Ester + H₂O (Gleichgewicht, säurekatalysiert).
-- **Peptidbindung:** Amidbindung −CO−NH− zwischen Aminosäuren; planar, partieller Doppelbindungscharakter.
-- **Ketonkörper:** Acetoacetat, β-Hydroxybutyrat, Aceton; aus Acetyl-CoA bei Glucose-Mangel.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Carbonsäure-pKₐ: 4–5; Ethanol →[ADH] Acetaldehyd →[ALDH] Acetat
-- Ketonkörper: Aceton (Atemgeruch), Ketoazidose pH < 7,35; Aspirin = Ester; Peptidbindung = Amid
+**Typische Fallen:**
+- Aldehyde reduzieren Fehling/Tollens, Ketone nicht — entscheidend ist die C=O-Position (endständig vs. mittelständig)
+- Methanol wird zu Formaldehyd abgebaut (giftig, Erblindung!), Ethanol zu Acetaldehyd — nicht verwechseln
+- Verseifung (NaOH, irreversibel) ist nicht dasselbe wie saure Esterspaltung (reversibles Gleichgewicht)
 
 ---
 
@@ -1092,14 +1011,13 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Einleitung
 
-**Worum geht es?** **Aromatizität** (Hückel-Regel: 4n+2 π-Elektronen, planar, konjugiert) verleiht Ringsystemen wie **Benzol** besondere Stabilität; Aromaten reagieren durch **elektrophile aromatische Substitution (EAS)**, nicht durch Addition. Das Kapitel verbindet Aromaten mit **Aminosäuren** (Grundstruktur, Zwitterion), **Peptidbindung**, **Purinen/Pyrimidinen** (DNA-Basen) und **Purinstoffwechsel** (Harnsäure, Gicht). **Warum für den MedAT relevant?** Hückel-Regel, EAS vs. Addition, Purine vs. Pyrimidine, Gicht/Allopurinol und Vorläufer von Neurotransmittern werden häufig geprüft. **Welche Fragen werden beantwortet?** „Was besagt die Hückel-Regel?“; „Warum EAS statt Addition?“; „Purine vs. Pyrimidine?“; „Was ist Gicht?“; „Tyrosin → welche Botenstoffe?“; „Cyclooctatetraen aromatisch?“.
+Benzol riecht süßlich, ist krebserregend — und verblüffend stabil. Obwohl es drei Doppelbindungen enthält, lässt es sich nicht wie ein Alken bromieren. Diese ungewöhnliche Stabilität heißt **Aromatizität** und wird durch die Hückel-Regel erklärt. Aromatische Ringsysteme sind allgegenwärtig in der Biologie: Die DNA-Basen Adenin, Guanin, Cytosin und Thymin sind alle Aromaten. Aminosäuren wie Phenylalanin und Tryptophan tragen aromatische Seitenketten. Und der Abbau von Purinen zu Harnsäure kann bei Gicht schmerzhafte Kristalle in den Gelenken bilden.
 
 **In diesem Kapitel lernst du:**
-- **Benzol** und **Hückel-Regel** (4n+2 π-Elektronen); Aromat vs. Alken; **elektrophile aromatische Substitution**
-- **Heteroaromaten:** Pyridin, Pyrrol, Purin, Pyrimidin; **dirigierende Effekte** (ortho/para vs. meta)
-- **Aminosäuren** als Bausteine der Proteine (α-C, –NH₂, –COOH, –R); **Peptidbindung** (–CO–NH–)
-- **Purine** (Adenin, Guanin) vs. **Pyrimidine** (Cytosin, Thymin, Uracil); **Purinstoffwechsel** → Harnsäure, Gicht
-- Klinisch: Gicht (Allopurinol), PKU, Tyrosin → Catecholamine, Tryptophan → Serotonin
+- was Aromatizität ist, warum Benzol so stabil ist und was die Hückel-Regel besagt
+- warum Aromaten durch Substitution reagieren (EAS) statt durch Addition wie Alkene
+- den Unterschied zwischen Purinen (Doppelring: A, G) und Pyrimidinen (Einzelring: C, T, U)
+- wie aus Aminosäuren Neurotransmitter entstehen und warum Gicht ein Problem des Purinstoffwechsels ist
 
 ---
 
@@ -1208,37 +1126,16 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- „Was besagt die Hückel-Regel?" → 4n+2 π-Elektronen, planar, konjugiert = aromatisch (Benzol: 6)
+- „Warum EAS statt Addition bei Benzol?" → Addition zerstört die Aromatizität; Substitution erhält sie
+- „Purine vs. Pyrimidine?" → Purine = Doppelring (A, G); Pyrimidine = Einzelring (C, T, U)
+- „Was ist Gicht?" → Harnsäure-Ablagerung in Gelenken; Allopurinol hemmt Xanthinoxidase
 
-**Zentral prüfungsrelevant:**
-- **Hückel-Regel:** planarer, vollständig konjugierter Ring mit **4n+2 π-Elektronen** ist aromatisch (n=1: Benzol 6 π-e⁻; n=2: Naphthalin 10)
-- **Benzol** (C₆H₆): 6 delokalisierte π-Elektronen, Mesomerieenergie ≈150 kJ/mol; **EAS** (Substitution) statt Addition
-- **Cyclooctatetraen** (8 π-e⁻) ist **nicht** aromatisch (4n+2=8 hat kein ganzzahliges n)
-- **Purine** (Doppelring): Adenin, Guanin; **Pyrimidine** (Einzelring): Cytosin, Thymin, Uracil — Eselsbrücke: CUT
-- **Purinstoffwechsel:** Purine → Xanthin →[Xanthinoxidase] **Harnsäure**; Gicht bei Hyperurikämie >6,8 mg/dL; **Allopurinol** hemmt Xanthinoxidase
-- **Aminosäuren:** Bausteine der Proteine (α-C mit –NH₂, –COOH, –R); **Peptidbindung** –CO–NH– (planar, Amid)
-- **Tyrosin** → L-DOPA → Dopamin → Noradrenalin → Adrenalin; **Tryptophan** → Serotonin, Melatonin; **PKU** = Phe-Hydroxylase-Defekt
-
-**Ergänzend vertiefend:** Heteroaromaten (Pyridin, Pyrrol, Imidazol), EAS-Mechanismus, dirigierende Effekte. Typische Fallen: Purine (A, G) ≠ Pyrimidine (C, T, U); Cyclooctatetraen nicht aromatisch; Allopurinol hemmt Xanthinoxidase, löst keine Kristalle auf.
-
-**Häufige Prüfungsfragen:**
-- "Was besagt die Hückel-Regel?" → 4n+2 π-Elektronen, planar, konjugiert → aromatisch (Benzol: 6)
-- "Warum EAS statt Addition?" → Aromatizität bleibt erhalten; Addition zerstört π-System
-- "Purine vs. Pyrimidine?" → Purine = Doppelring (A, G); Pyrimidine = Einzelring (C, T, U)
-- "Was ist Gicht?" → Harnsäureablagerung in Gelenken bei Hyperurikämie; Allopurinol hemmt Xanthinoxidase
-
-**Typische Prüfungsfallen:**
-- Purine (A, G) ≠ Pyrimidine (C, T, U); Cyclooctatetraen (8 π-e⁻) nicht aromatisch
-- Allopurinol hemmt Xanthinoxidase (Senkung Harnsäure), löst keine Kristalle auf
-
-**Wichtige Begriffe & Definitionen:**
-- **Aromatizität (Hückel):** planarer, konjugierter Ring mit 4n+2 π-Elektronen (n = 0, 1, 2, …).
-- **EAS:** elektrophile aromatische Substitution; ein H wird durch ein Elektrophil ersetzt, Aromatizität bleibt erhalten.
-- **Purine:** zweiringige Stickstoffbasen (Adenin, Guanin). **Pyrimidine:** einringig (Cytosin, Thymin, Uracil).
-- **Peptidbindung:** Amidbindung –CO–NH– zwischen Aminosäuren; planar, partieller Doppelbindungscharakter.
-
-**Prüfungsrelevante Zahlen/Fakten:**
-- Hückel: 4n+2 → n=1: 6 (Benzol), n=2: 10 (Naphthalin); Gicht >6,8 mg/dL Harnsäure; PKU = Phe-Hydroxylase-Defekt; Tyrosin → Catecholamine
+**Typische Fallen:**
+- Cyclooctatetraen (8 π-Elektronen) ist nicht aromatisch (4n+2 ergibt kein ganzzahliges n)
+- Allopurinol senkt die Harnsäurebildung, löst aber keine bereits abgelagerten Kristalle auf
+- Purine (A, G) haben den Doppelring, Pyrimidine (C, T, U) den Einzelring — nicht umgekehrt
 
 ---
 

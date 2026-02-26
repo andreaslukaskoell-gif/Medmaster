@@ -23,13 +23,13 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Ökologie** beschreibt Wechselbeziehungen zwischen Organismen und Umwelt; Ebenen: Organismus → Population → Biozönose → Ökosystem. **Warum für den MedAT relevant?** Biotop (unbelebter Lebensraum) vs. Biozönose (alle Arten), Ökosystem = Biotop + Biozönose und Population (eine Art) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Biotop vs. Biozönose?“; „Was ist ein Ökosystem?“; „Population — eine oder viele Arten?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu ökologischen Grundbegriffen abgedeckt.
+Wenn in einem See die Wassertemperatur steigt, verändert sich nicht nur die Physik des Gewässers, sondern auch die gesamte Lebensgemeinschaft: Manche Algenarten vermehren sich explosionsartig, Fische wandern ab, Sauerstoff wird knapp. Um solche Zusammenhänge zu verstehen, braucht man die Grundbegriffe der Ökologie, die von der einzelnen Art bis zum ganzen Ökosystem reichen.
 
 **In diesem Kapitel lernst du:**
-- die **Definition** von Ökologie und die **Ebenen** (Organismus → Population → Biozönose → Ökosystem)
-- **Biotop** (unbelebter Lebensraum) vs. **Biozönose** (Lebensgemeinschaft aller Arten)
-- **Ökosystem** = Biotop + Biozönose in Wechselwirkung
-- warum diese Begriffe für Ökologie und Artinteraktionen grundlegend sind
+- wie die Ökologie von der Ebene des Einzelorganismus bis zum Ökosystem aufgebaut ist
+- worin sich Biotop (der Lebensraum) und Biozönose (die Lebensgemeinschaft) unterscheiden
+- warum ein Ökosystem mehr ist als die Summe seiner Teile
+- warum diese Begriffe die Grundlage für alle weiteren ökologischen Themen bilden
 
 ---
 
@@ -79,41 +79,15 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Typische Prüfungsfragen:**
+- Was ist der Unterschied zwischen Biotop und Biozönose?
+- Was versteht man unter einem Ökosystem?
+- Was ist eine Population und wie unterscheidet sie sich von einer Biozönose?
 
-**Zentral prüfungsrelevant:**
-- Ökologie = Wissenschaft von den Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
-- Ebenen: Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem (Biozönose + Biotop).
-- **Biotop** = unbelebter Lebensraum (Boden, Wasser, Klima, Licht, Nährstoffe).
-- **Biozönose** = Lebensgemeinschaft aller Arten in einem Gebiet; Wechselwirkungen untereinander.
-- **Ökosystem** = Biotop + Biozönose in Wechselwirkung; Stoff- und Energieflüsse.
-- Population = alle Individuen **einer Art** in einem Gebiet; Biozönose = **alle Arten**.
-- Ohne diese Begriffe sind Nahrungsketten, Stoffkreisläufe und Artinteraktionen nicht einzuordnen.
-- Ökologische Nische beschreibt die Rolle einer Art in der Biozönose (kommt in späteren UK).
-
-**Ergänzend vertiefend:**
-- Umweltfaktoren wirken im Biotop auf die Biozönose; Nahrungsketten und Stoffkreisläufe laufen im Ökosystem ab.
-
-**Häufige Prüfungsfragen:**
-- Was ist der Unterschied zwischen Biotop und Biozönose? → Biotop = unbelebt, Biozönose = alle Lebewesen.
-- Was versteht man unter einem Ökosystem? → Biotop + Biozönose in Wechselwirkung.
-- Nenne die ökologischen Ebenen. → Organismus, Population, Biozönose, Ökosystem.
-- Was ist eine Population? → Alle Individuen einer Art in einem definierten Gebiet.
-- Welche Ebene umfasst „alle Arten“ in einem Gebiet? → Biozönose.
-
-**Typische Prüfungsfallen:**
-- Biotop ≠ Biozönose (Biotop = unbelebt, Biozönose = alle Lebewesen).
-- Ökosystem = Biotop + Biozönose, nicht nur „Natur“ oder „Lebensraum“.
-- Population = **eine** Art; Biozönose = **viele** Arten — oft verwechselt.
-- „Biotop = alle Lebewesen“ ist falsch (das ist die Biozönose).
-- Organismus ist die unterste Ebene; Ökosystem die übergeordnete funktionelle Einheit.
-
-**Wichtige Begriffe & Definitionen:**
-- **Ökologie:** Wissenschaft von den Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
-- **Biotop:** Unbelebter Lebensraum (Boden, Wasser, Klima, Licht).
-- **Biozönose:** Lebensgemeinschaft aller Arten in einem Gebiet.
-- **Ökosystem:** Biotop + Biozönose; funktionelle Einheit mit Stoff- und Energieflüssen.
-- **Population:** Alle Individuen einer Art in einem Gebiet (fortpflanzungsfähig).
+**Typische Fallen:**
+- Biotop (unbelebter Lebensraum) und Biozönose (alle Lebewesen) verwechseln.
+- Population umfasst nur eine Art; Biozönose umfasst alle Arten eines Gebiets.
+- Ökosystem ist Biotop plus Biozönose, nicht einfach nur “Natur”.
 
 ---
 
@@ -168,13 +142,13 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
       ],
       content: `## Einleitung
 
-**Worum geht es?** Umweltfaktoren bestimmen, wo eine Art leben kann und wie gut sie gedeiht. Man unterscheidet **abiotische** (unbelebte: Temperatur, Licht, Wasser, Boden, pH) und **biotische** (belebte: Konkurrenz, Räuber, Symbionten) Faktoren. Die **Toleranzkurve** beschreibt die Leistung in Abhängigkeit von einem Faktor; **Liebig** und **Shelford** erklären limitierende Faktoren. **Warum MedAT-relevant?** Toleranzkurve, euryök vs. stenök und Bioindikatoren werden häufig abgefragt; Liebig/Shelford tauchen in Szenarien zu Landwirtschaft und Gewässern auf. **Typische Fragetypen:** Abiotisch vs. biotisch zuordnen, Toleranzkurve beschreiben, euryök/stenök mit Beispielen, Liebig/Shelford anwenden.
+Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser und Licht vorhanden ist? Die Antwort liegt in den Umweltfaktoren: Jede Art hat für jeden Faktor einen Toleranzbereich, und schon ein einziger Faktor im Mangel kann das Wachstum begrenzen. Das beschrieb Justus von Liebig bereits im 19. Jahrhundert. Die Toleranzkurve zeigt, wie die Leistung einer Art von einem Umweltfaktor abhängt, und sie ist einer der am häufigsten gefragten Zusammenhänge im MedAT.
 
 **In diesem Kapitel lernst du:**
-- **Abiotische** und **biotische** Umweltfaktoren zu unterscheiden und Beispiele zu nennen
-- Die **Toleranzkurve** zu beschreiben (Optimum, Pessimum, Todespunkt, ökologische Amplitude)
-- **Euryök** (Generalist) und **stenök** (Spezialist) zu unterscheiden und als Bioindikatoren einzuordnen
-- **Liebigs Minimumgesetz** (limitierender Faktor = Minimum) und **Shelfords Toleranzgesetz** (auch Maximum limitiert) anzuwenden
+- warum Umweltfaktoren in abiotische und biotische eingeteilt werden und was das für eine Art bedeutet
+- wie die Toleranzkurve aufgebaut ist und was Optimum, Pessimum und Todespunkt aussagen
+- warum Generalisten (euryök) und Spezialisten (stenök) sich in ihrer ökologischen Amplitude unterscheiden
+- wie Liebigs Minimumgesetz und Shelfords Toleranzgesetz limitierende Faktoren beschreiben
 
 ---
 
@@ -243,29 +217,15 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
-**Zentral prüfungsrelevant:**
-- **Abiotisch** = unbelebte Faktoren (Temperatur, Licht, Wasser, pH); **biotisch** = Einfluss durch andere Lebewesen (Konkurrenz, Prädation, Symbiose).
-- **Toleranzkurve:** Optimum (max. Leistung), Pessimum (Stress), Todespunkt; **ökologische Amplitude** = Toleranzbreite zwischen den Todespunkten.
-- **Euryök** (Generalist) = breite Amplitude; **stenök** (Spezialist) = enge Amplitude; **Bioindikator** = stenöke Zeigerart.
-- **Liebigs Minimumgesetz:** Wachstum wird durch den **knappsten** Faktor limitiert.
-- **Shelfords Toleranzgesetz:** Auch **Überschuss** kann limitieren; Erweiterung von Liebig.
-- In Gewässern oft Phosphor limitierend (Eutrophierung); in Landwirtschaft oft Stickstoff.
+**Typische Prüfungsfragen:**
+- Was zeigt die Toleranzkurve? (Optimum, Pessimum, Todespunkt, ökologische Amplitude.)
+- Euryök vs. stenök mit Beispielen?
+- Warum sind stenöke Arten gute Bioindikatoren?
 
-**Ergänzend vertiefend:** Ellenberg-Zeigerwerte; Saprobiensystem (Ephemeroptera = sauber, Tubificiden = belastet).
-
-**Häufige Prüfungsfragen:**
-- Was zeigt die Toleranzkurve? → Optimum, Pessimum, Todespunkt, ökologische Amplitude.
-- Euryök vs. stenök mit Beispielen? → Euryök = Generalist (Fuchs); stenök = Spezialist (Flechten).
-- Warum sind stenöke Arten gute Bioindikatoren? → Enge Toleranz → präziser Umweltzeiger.
-- Liebig/Shelford anwenden (Landwirtschaft, Gewässer).
-
-**Typische Prüfungsfallen:**
-- Liebig (nur Mangel) vs. Shelford (auch Überschuss).
-- Euryök = breit, stenök = eng. Bioindikator = stenöke Art, nicht „häufigste Art“.
-- Ökologische Amplitude = Toleranzbreite für einen Faktor, nicht Lebensraum.
-
-**Wichtige Begriffe & Definitionen:**
-- **Abiotisch:** Unbelebte Faktoren. **Biotisch:** Einflüsse durch Lebewesen. **Toleranzkurve:** Leistung vs. Faktor (Glockenkurve). **Ökologische Amplitude:** Toleranzbreite. **Euryök/stenök:** Generalist vs. Spezialist. **Bioindikator:** Stenöke Zeigerart. **Liebig:** Minimum limitiert. **Shelford:** Minimum und Maximum.
+**Typische Fallen:**
+- Liebig (nur Mangel limitiert) vs. Shelford (auch Überschuss kann limitieren) verwechseln.
+- Euryök (breite Amplitude) und stenök (enge Amplitude) verwechseln.
+- Ökologische Amplitude ist die Toleranzbreite für einen Faktor, nicht der Lebensraum selbst.
 
 ---
 
@@ -384,13 +344,13 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Ökologische Nische** = alle Umweltansprüche + Rolle der Art (nicht nur Ort); **Lebensraum (Habitat)** = physischer Ort. **Warum für den MedAT relevant?** Nische ≠ Lebensraum, fundamentale vs. realisierte Nische (Connell-Seepocken) und Nischendifferenzierung werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Nische vs. Lebensraum?“; „Fundamentale vs. realisierte Nische?“; „Connell-Experiment — was belegt es?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nische und Lebensraum abgedeckt.
+Wenn man sagt, der Lebensraum des Eichhörnchens sei der Wald, beschreibt man nur die halbe Wahrheit. Die ökologische Nische umfasst nicht nur den Ort, sondern auch die Rolle: Was frisst es, wann ist es aktiv, mit wem konkurriert es? Diese Unterscheidung zwischen Lebensraum und Nische ist ein klassischer MedAT-Stolperstein, denn die beiden Begriffe werden oft verwechselt.
 
 **In diesem Kapitel lernst du:**
-- **Ökologische Nische** von **Lebensraum (Habitat)** zu unterscheiden
-- **Fundamentale Nische** (theoretisch möglich) und **realisierte Nische** (tatsächlich genutzt) zu erklären
-- Wie **Nischendifferenzierung** Koexistenz konkurrierender Arten ermöglicht
-- Das Connell-Seepocken-Experiment als Beleg für fundamentale vs. realisierte Nische
+- warum die ökologische Nische mehr ist als nur ein Ort
+- worin sich die fundamentale Nische (theoretisch möglich) von der realisierten Nische (tatsächlich genutzt) unterscheidet
+- wie Nischendifferenzierung es konkurrierenden Arten ermöglicht, nebeneinander zu existieren
+- was das Connell-Seepocken-Experiment über fundamentale und realisierte Nischen belegt
 
 ---
 

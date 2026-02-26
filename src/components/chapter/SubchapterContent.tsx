@@ -322,43 +322,76 @@ export function SubchapterContent({
   const segments = useMemo(() => parseMedATAndSummary(cleanedContent), [cleanedContent]);
 
   const diagramRendered = useMemo(
-    () => segments.some((s) => s.type === "markdown" && s.content.includes("{{DIAGRAM}}")),
+    () =>
+      segments.some(
+        (s) => s.type === "markdown" && /\{\{DIAGRAM(?::([a-z0-9-]+))?\}\}/.test(s.content)
+      ),
     [segments]
   );
 
-  /** Renders markdown text; injects DiagramSVG when {{DIAGRAM}} placeholder present. */
+  /** Renders markdown text; injects DiagramSVG when {{DIAGRAM}} or {{DIAGRAM:type}} placeholders present. */
   function renderSectionContent(text: string): ReactNode {
     if (!text.trim()) return null;
-    const hasDiagramPlaceholder = uk.diagram && text.includes("{{DIAGRAM}}");
-    if (hasDiagramPlaceholder && uk.diagram) {
-      const [before, after] = text.split("{{DIAGRAM}}");
+
+    // Split on {{DIAGRAM}} (uses uk.diagram) and {{DIAGRAM:specific-type}} markers
+    const diagramPattern = /\{\{DIAGRAM(?::([a-z0-9-]+))?\}\}/g;
+    const hasAnyDiagram = diagramPattern.test(text);
+    if (!hasAnyDiagram) {
       return (
-        <div className="space-y-4">
+        <MarkdownContent
+          text={text}
+          hinterfragMode={hinterfragMode}
+          keywordLinkEntries={keywordLinkEntries}
+        />
+      );
+    }
+
+    // Reset lastIndex after test()
+    diagramPattern.lastIndex = 0;
+    const parts: ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+    let partKey = 0;
+
+    while ((match = diagramPattern.exec(text)) !== null) {
+      const before = text.slice(lastIndex, match.index);
+      if (before.trim()) {
+        parts.push(
           <MarkdownContent
+            key={`md-${partKey}`}
             text={before.trim()}
             hinterfragMode={hinterfragMode}
             keywordLinkEntries={keywordLinkEntries}
           />
-          <div className="content-svg-wrap">
-            <DiagramSVG type={uk.diagram} />
+        );
+        partKey++;
+      }
+      // match[1] is the specific type from {{DIAGRAM:type}}, or undefined for {{DIAGRAM}}
+      const diagramType = match[1] || uk.diagram;
+      if (diagramType) {
+        parts.push(
+          <div key={`diag-${partKey}`} className="content-svg-wrap">
+            <DiagramSVG type={diagramType} />
           </div>
-          {after.trim() ? (
-            <MarkdownContent
-              text={after.trim()}
-              hinterfragMode={hinterfragMode}
-              keywordLinkEntries={keywordLinkEntries}
-            />
-          ) : null}
-        </div>
+        );
+        partKey++;
+      }
+      lastIndex = match.index + match[0].length;
+    }
+
+    const after = text.slice(lastIndex);
+    if (after.trim()) {
+      parts.push(
+        <MarkdownContent
+          key={`md-${partKey}`}
+          text={after.trim()}
+          hinterfragMode={hinterfragMode}
+          keywordLinkEntries={keywordLinkEntries}
+        />
       );
     }
-    return (
-      <MarkdownContent
-        text={text}
-        hinterfragMode={hinterfragMode}
-        keywordLinkEntries={keywordLinkEntries}
-      />
-    );
+
+    return <div className="space-y-4">{parts}</div>;
   }
 
   // Unified section list: intro + H2 sections + MedAT-Fokus + Zusammenfassung (same order as segments)

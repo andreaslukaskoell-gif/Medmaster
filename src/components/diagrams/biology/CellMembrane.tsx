@@ -9,8 +9,15 @@ const parts = [
   },
   {
     id: "integral",
-    label: "Integrales Protein",
-    detail: "Durchspannt die gesamte Membran. Funktion: Kanäle, Transporter, Rezeptoren.",
+    label: "Integrales Protein (Kanal)",
+    detail:
+      "Durchspannt die gesamte Membran als Multisubunit-Komplex. Bildet eine wassergefüllte Pore für Ionentransport.",
+  },
+  {
+    id: "carrier",
+    label: "Carrier / Transporter",
+    detail:
+      "Integrales Membranprotein mit Konformationsänderung. Transportiert Moleküle aktiv oder passiv (z. B. Glucose-Transporter, Na⁺/K⁺-ATPase).",
   },
   {
     id: "peripheral",
@@ -20,7 +27,8 @@ const parts = [
   {
     id: "cholesterol",
     label: "Cholesterin",
-    detail: "Reguliert die Membranfluidität. Verhindert zu starkes Erstarren oder Verflüssigen.",
+    detail:
+      "Reguliert die Membranfluidität. Steroidringstruktur eingelagert zwischen Phospholipiden. Verhindert zu starkes Erstarren oder Verflüssigen.",
   },
   {
     id: "glycoprotein",
@@ -41,36 +49,78 @@ export default function CellMembrane() {
 
   const handleHover = (part: PartInfo | null) => setActive(part);
 
-  /* Draw a phospholipid at (x,y): circle head + two wavy tails going down */
-  const Phospholipid = ({ x, y, flip }: { x: number; y: number; flip?: boolean }) => {
+  /* Phospholipid: circle head + two distinct tails (saturated=straighter, unsaturated=kinked) */
+  const Phospholipid = ({
+    x,
+    y,
+    flip,
+    seed,
+  }: {
+    x: number;
+    y: number;
+    flip?: boolean;
+    seed?: number;
+  }) => {
     const dir = flip ? -1 : 1;
+    /* Slight variation per lipid for fluidity feel */
+    const s = seed ?? 0;
+    const wobble = Math.sin(s * 1.7) * 1.5;
+    const lenVar = Math.cos(s * 2.3) * 2;
+
+    /* Saturated tail (left): relatively straight with gentle wave */
+    const satTail = `M${x - 3},${y + 7 * dir}
+      Q${x - 4 + wobble},${y + 16 * dir} ${x - 3},${y + 24 * dir}
+      Q${x - 2 + wobble * 0.5},${y + 32 * dir} ${x - 3},${y + (38 + lenVar) * dir}`;
+
+    /* Unsaturated tail (right): distinct kink at cis double bond */
+    const unsatTail = `M${x + 3},${y + 7 * dir}
+      Q${x + 4 - wobble},${y + 13 * dir} ${x + 5},${y + 18 * dir}
+      L${x + 8 + wobble},${y + 23 * dir}
+      Q${x + 5},${y + 28 * dir} ${x + 4},${y + 33 * dir}
+      Q${x + 3 - wobble * 0.3},${y + 36 * dir} ${x + 3},${y + (37 + lenVar) * dir}`;
+
     return (
       <g
         className="cursor-pointer"
         onMouseEnter={() => handleHover(parts[0])}
         onMouseLeave={() => handleHover(null)}
       >
-        <circle cx={x} cy={y} r="6" fill="#14b8a6" stroke="#0f766e" strokeWidth="1" />
+        {/* Tail fills — thicker strokes with round caps for visible fatty acid chains */}
         <path
-          d={`M${x - 2},${y + 6 * dir} Q${x - 4},${y + 14 * dir} ${x - 2},${y + 22 * dir} Q${x},${y + 28 * dir} ${x - 2},${y + 34 * dir}`}
+          d={satTail}
           fill="none"
-          stroke="#eab308"
-          strokeWidth="1.5"
+          stroke="url(#tailGradient)"
+          strokeWidth="2.8"
+          strokeLinecap="round"
         />
         <path
-          d={`M${x + 2},${y + 6 * dir} Q${x + 4},${y + 14 * dir} ${x + 2},${y + 22 * dir} Q${x},${y + 28 * dir} ${x + 2},${y + 34 * dir}`}
+          d={unsatTail}
           fill="none"
-          stroke="#eab308"
-          strokeWidth="1.5"
+          stroke="url(#tailGradient)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+        {/* Hydrophilic head */}
+        <circle
+          cx={x}
+          cy={y}
+          r="6.5"
+          fill="url(#headGradient)"
+          stroke="#0e7468"
+          strokeWidth="0.8"
         />
       </g>
     );
   };
 
-  const topY = 100;
-  const botY = 180;
-  const spacing = 18;
-  const startX = 30;
+  const topY = 95;
+  const botY = 190;
+  const spacing = 17;
+  const startX = 22;
+
+  /* Skip ranges for proteins */
+  const skipTop = (i: number) => (i >= 6 && i <= 8) || (i >= 14 && i <= 16) || (i >= 21 && i <= 23);
+  const skipBot = (i: number) => (i >= 6 && i <= 8) || (i >= 14 && i <= 16);
 
   return (
     <div className="space-y-3">
@@ -82,112 +132,457 @@ export default function CellMembrane() {
       </p>
 
       <svg viewBox="0 0 500 310" className="w-full max-w-xl mx-auto">
+        <defs>
+          {/* Head gradient — teal with depth */}
+          <radialGradient id="headGradient" cx="35%" cy="35%">
+            <stop offset="0%" stopColor="#5eead4" />
+            <stop offset="70%" stopColor="#14b8a6" />
+            <stop offset="100%" stopColor="#0d9488" />
+          </radialGradient>
+
+          {/* Tail gradient — warm amber/yellow */}
+          <linearGradient id="tailGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#fbbf24" />
+            <stop offset="50%" stopColor="#f59e0b" />
+            <stop offset="100%" stopColor="#d97706" />
+          </linearGradient>
+
+          {/* Hydrophobic core band */}
+          <linearGradient id="coreGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#fef3c7" stopOpacity="0.5" />
+            <stop offset="50%" stopColor="#fde68a" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#fef3c7" stopOpacity="0.5" />
+          </linearGradient>
+
+          {/* Channel protein gradient */}
+          <linearGradient id="channelGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#818cf8" />
+            <stop offset="50%" stopColor="#6366f1" />
+            <stop offset="100%" stopColor="#4f46e5" />
+          </linearGradient>
+
+          {/* Carrier protein gradient */}
+          <linearGradient id="carrierGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#a78bfa" />
+            <stop offset="50%" stopColor="#8b5cf6" />
+            <stop offset="100%" stopColor="#7c3aed" />
+          </linearGradient>
+
+          {/* Cholesterol gradient */}
+          <linearGradient id="cholGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#fcd34d" />
+            <stop offset="100%" stopColor="#d97706" />
+          </linearGradient>
+
+          {/* Glycoprotein gradient */}
+          <linearGradient id="glycoGradient" x1="0" y1="0" x2="0.5" y2="1">
+            <stop offset="0%" stopColor="#a78bfa" />
+            <stop offset="100%" stopColor="#7c3aed" />
+          </linearGradient>
+        </defs>
+
         {/* Extrazellular label */}
-        <text x="250" y="18" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">
+        <text x="250" y="16" textAnchor="middle" fontSize="12" fill="#0d9488" fontWeight="bold">
           Extrazellulärer Raum
         </text>
+
         {/* Intrazellular label */}
-        <text x="250" y="300" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">
+        <text x="250" y="298" textAnchor="middle" fontSize="12" fill="#0d9488" fontWeight="bold">
           Intrazellulärer Raum (Zytoplasma)
         </text>
 
-        {/* Hydrophilic / Hydrophobic labels */}
-        <text x="470" y="98" textAnchor="end" fontSize="7" fill="#14b8a6">
+        {/* ─── Hydrophobic core band (visual thickness) ─── */}
+        <rect
+          x="10"
+          y={topY + 8}
+          width="480"
+          height={botY - topY - 16}
+          rx="4"
+          fill="url(#coreGradient)"
+        />
+
+        {/* Hydrophilic / Hydrophobic region labels */}
+        <text x="488" y={topY - 2} textAnchor="end" fontSize="6.5" fill="#14b8a6" fontWeight="600">
           hydrophil
         </text>
-        <text x="470" y="145" textAnchor="end" fontSize="7" fill="#eab308">
+        <text
+          x="488"
+          y={(topY + botY) / 2 + 2}
+          textAnchor="end"
+          fontSize="6.5"
+          fill="#b45309"
+          fontWeight="600"
+        >
           hydrophob
         </text>
-        <text x="470" y="188" textAnchor="end" fontSize="7" fill="#14b8a6">
+        <text x="488" y={botY + 12} textAnchor="end" fontSize="6.5" fill="#14b8a6" fontWeight="600">
           hydrophil
         </text>
 
-        {/* Upper leaflet: heads up, tails down */}
-        {Array.from({ length: 24 }, (_, i) => {
+        {/* ─── Upper leaflet phospholipids ─── */}
+        {Array.from({ length: 27 }, (_, i) => {
           const x = startX + i * spacing;
-          /* Skip positions where proteins go */
-          if (i >= 6 && i <= 8) return null;
-          if (i >= 16 && i <= 17) return null;
-          return <Phospholipid key={`top-${i}`} x={x} y={topY} />;
+          if (skipTop(i)) return null;
+          return <Phospholipid key={`top-${i}`} x={x} y={topY} seed={i} />;
         })}
 
-        {/* Lower leaflet: heads down, tails up */}
-        {Array.from({ length: 24 }, (_, i) => {
+        {/* ─── Lower leaflet phospholipids ─── */}
+        {Array.from({ length: 27 }, (_, i) => {
           const x = startX + i * spacing;
-          if (i >= 6 && i <= 8) return null;
-          if (i >= 16 && i <= 17) return null;
-          return <Phospholipid key={`bot-${i}`} x={x} y={botY} flip />;
+          if (skipBot(i)) return null;
+          return <Phospholipid key={`bot-${i}`} x={x} y={botY} flip seed={i + 30} />;
         })}
 
-        {/* Integral protein (channel) */}
+        {/* ═══════════ INTEGRAL PROTEIN — ION CHANNEL (multi-subunit barrel) ═══════════ */}
         <g
           className="cursor-pointer"
           onMouseEnter={() => handleHover(parts[1])}
           onMouseLeave={() => handleHover(null)}
         >
-          <rect
-            x={startX + 6 * spacing - 16}
-            y={topY - 8}
-            width="52"
-            height="96"
-            rx="12"
-            fill="#6366f1"
-            opacity="0.8"
-            stroke="#4f46e5"
-            strokeWidth="1.5"
+          {/* Left subunit — curved stave */}
+          <path
+            d={`M${startX + 6 * spacing - 12},${topY - 4}
+                C${startX + 6 * spacing - 18},${topY + 20}
+                 ${startX + 6 * spacing - 18},${botY - 20}
+                 ${startX + 6 * spacing - 12},${botY + 4}
+                L${startX + 6 * spacing - 4},${botY + 6}
+                C${startX + 6 * spacing - 8},${botY - 18}
+                 ${startX + 6 * spacing - 8},${topY + 18}
+                 ${startX + 6 * spacing - 4},${topY - 6}
+                Z`}
+            fill="url(#channelGradient)"
+            stroke="#4338ca"
+            strokeWidth="0.8"
+            opacity="0.9"
           />
-          {/* Channel pore */}
-          <rect
-            x={startX + 6 * spacing - 2}
-            y={topY + 5}
-            width="24"
-            height="70"
-            rx="8"
-            fill="#f0fdfa"
-            opacity="0.6"
+          {/* Right subunit — curved stave */}
+          <path
+            d={`M${startX + 8 * spacing + 12},${topY - 4}
+                C${startX + 8 * spacing + 18},${topY + 20}
+                 ${startX + 8 * spacing + 18},${botY - 20}
+                 ${startX + 8 * spacing + 12},${botY + 4}
+                L${startX + 8 * spacing + 4},${botY + 6}
+                C${startX + 8 * spacing + 8},${botY - 18}
+                 ${startX + 8 * spacing + 8},${topY + 18}
+                 ${startX + 8 * spacing + 4},${topY - 6}
+                Z`}
+            fill="url(#channelGradient)"
+            stroke="#4338ca"
+            strokeWidth="0.8"
+            opacity="0.9"
           />
-          <text
-            x={startX + 7 * spacing}
-            y={topY + 45}
-            textAnchor="middle"
-            fontSize="7"
-            fill="#312e81"
-            fontWeight="bold"
-          >
-            Kanal
-          </text>
+          {/* Front-left helical subunit */}
+          <path
+            d={`M${startX + 7 * spacing - 8},${topY - 6}
+                C${startX + 7 * spacing - 13},${topY + 15}
+                 ${startX + 7 * spacing - 13},${botY - 15}
+                 ${startX + 7 * spacing - 8},${botY + 6}
+                L${startX + 7 * spacing - 2},${botY + 4}
+                C${startX + 7 * spacing - 5},${botY - 18}
+                 ${startX + 7 * spacing - 5},${topY + 18}
+                 ${startX + 7 * spacing - 2},${topY - 4}
+                Z`}
+            fill="#818cf8"
+            stroke="#4338ca"
+            strokeWidth="0.6"
+            opacity="0.85"
+          />
+          {/* Front-right helical subunit */}
+          <path
+            d={`M${startX + 7 * spacing + 8},${topY - 6}
+                C${startX + 7 * spacing + 13},${topY + 15}
+                 ${startX + 7 * spacing + 13},${botY - 15}
+                 ${startX + 7 * spacing + 8},${botY + 6}
+                L${startX + 7 * spacing + 2},${botY + 4}
+                C${startX + 7 * spacing + 5},${botY - 18}
+                 ${startX + 7 * spacing + 5},${topY + 18}
+                 ${startX + 7 * spacing + 2},${topY - 4}
+                Z`}
+            fill="#818cf8"
+            stroke="#4338ca"
+            strokeWidth="0.6"
+            opacity="0.85"
+          />
+          {/* Central pore (water channel) */}
+          <ellipse
+            cx={startX + 7 * spacing}
+            cy={topY - 2}
+            rx="5"
+            ry="3"
+            fill="#dbeafe"
+            stroke="#6366f1"
+            strokeWidth="0.6"
+          />
+          <rect
+            x={startX + 7 * spacing - 4}
+            y={topY}
+            width="8"
+            height={botY - topY - 2}
+            fill="#dbeafe"
+            opacity="0.5"
+          />
+          <ellipse
+            cx={startX + 7 * spacing}
+            cy={botY}
+            rx="5"
+            ry="3"
+            fill="#dbeafe"
+            stroke="#6366f1"
+            strokeWidth="0.6"
+          />
+          {/* Ion movement arrows inside pore */}
+          <path
+            d={`M${startX + 7 * spacing},${topY + 15} L${startX + 7 * spacing},${botY - 18}`}
+            fill="none"
+            stroke="#3b82f6"
+            strokeWidth="0.8"
+            strokeDasharray="2 2"
+            markerEnd="url(#arrowBlue)"
+          />
+          {/* Helical ridges across subunits */}
+          {[0.2, 0.4, 0.6, 0.8].map((frac) => {
+            const cy = topY + frac * (botY - topY);
+            return (
+              <g key={`helix-${frac}`}>
+                <path
+                  d={`M${startX + 7 * spacing - 12},${cy - 2} Q${startX + 7 * spacing - 7},${cy + 3} ${startX + 7 * spacing - 5},${cy}`}
+                  fill="none"
+                  stroke="#c7d2fe"
+                  strokeWidth="0.6"
+                />
+                <path
+                  d={`M${startX + 7 * spacing + 12},${cy - 2} Q${startX + 7 * spacing + 7},${cy + 3} ${startX + 7 * spacing + 5},${cy}`}
+                  fill="none"
+                  stroke="#c7d2fe"
+                  strokeWidth="0.6"
+                />
+              </g>
+            );
+          })}
         </g>
+        {/* Channel label */}
         <text
           x={startX + 7 * spacing}
           y={topY - 14}
           textAnchor="middle"
           fontSize="7"
-          fill="#6366f1"
+          fill="#4f46e5"
+          fontWeight="bold"
+          stroke="white"
+          strokeWidth="2.5"
+          paintOrder="stroke"
+        >
+          Ionenkanal
+        </text>
+        <text
+          x={startX + 7 * spacing}
+          y={topY - 14}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#4f46e5"
           fontWeight="bold"
         >
-          Integrales Protein
+          Ionenkanal
         </text>
 
-        {/* Peripheral protein (top) */}
+        {/* Arrow marker for ion flow */}
+        <defs>
+          <marker id="arrowBlue" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,1 L3,3 L0,5" fill="none" stroke="#3b82f6" strokeWidth="0.8" />
+          </marker>
+        </defs>
+
+        {/* ═══════════ CARRIER / TRANSPORTER PROTEIN ═══════════ */}
         <g
           className="cursor-pointer"
           onMouseEnter={() => handleHover(parts[2])}
           onMouseLeave={() => handleHover(null)}
         >
-          <ellipse
-            cx={startX + 12 * spacing}
-            cy={topY - 12}
-            rx="20"
-            ry="10"
-            fill="#ec4899"
+          {/* Left half of carrier */}
+          <path
+            d={`M${startX + 14 * spacing - 6},${topY - 6}
+                C${startX + 14 * spacing - 20},${topY + 10}
+                 ${startX + 14 * spacing - 22},${botY - 10}
+                 ${startX + 14 * spacing - 6},${botY + 6}
+                L${startX + 15 * spacing - 2},${botY + 2}
+                C${startX + 15 * spacing - 4},${botY - 20}
+                 ${startX + 15 * spacing - 4},${topY + 20}
+                 ${startX + 15 * spacing - 2},${topY - 2}
+                Z`}
+            fill="url(#carrierGradient)"
+            stroke="#6d28d9"
+            strokeWidth="0.8"
+            opacity="0.9"
+          />
+          {/* Right half of carrier */}
+          <path
+            d={`M${startX + 16 * spacing + 6},${topY - 6}
+                C${startX + 16 * spacing + 20},${topY + 10}
+                 ${startX + 16 * spacing + 22},${botY - 10}
+                 ${startX + 16 * spacing + 6},${botY + 6}
+                L${startX + 15 * spacing + 2},${botY + 2}
+                C${startX + 15 * spacing + 4},${botY - 20}
+                 ${startX + 15 * spacing + 4},${topY + 20}
+                 ${startX + 15 * spacing + 2},${topY - 2}
+                Z`}
+            fill="url(#carrierGradient)"
+            stroke="#6d28d9"
+            strokeWidth="0.8"
+            opacity="0.9"
+          />
+          {/* Binding pocket / cleft between halves — extracellular opening */}
+          <path
+            d={`M${startX + 15 * spacing - 2},${topY - 2}
+                Q${startX + 15 * spacing},${topY + 18}
+                 ${startX + 15 * spacing + 2},${topY - 2}`}
+            fill="#ede9fe"
+            stroke="#7c3aed"
+            strokeWidth="0.5"
             opacity="0.7"
+          />
+          {/* Substrate dot in binding site */}
+          <circle
+            cx={startX + 15 * spacing}
+            cy={topY + 10}
+            r="3"
+            fill="#fbbf24"
+            stroke="#d97706"
+            strokeWidth="0.6"
+            opacity="0.8"
+          />
+          {/* Conformational change arrows */}
+          <path
+            d={`M${startX + 14 * spacing - 16},${(topY + botY) / 2} L${startX + 14 * spacing - 10},${(topY + botY) / 2}`}
+            fill="none"
+            stroke="#c4b5fd"
+            strokeWidth="0.7"
+            markerEnd="url(#arrowPurple)"
+          />
+          <path
+            d={`M${startX + 16 * spacing + 16},${(topY + botY) / 2} L${startX + 16 * spacing + 10},${(topY + botY) / 2}`}
+            fill="none"
+            stroke="#c4b5fd"
+            strokeWidth="0.7"
+            markerEnd="url(#arrowPurple)"
+          />
+          {/* Helical texture on left half */}
+          {[0.25, 0.5, 0.75].map((frac) => {
+            const cy = topY + frac * (botY - topY);
+            return (
+              <path
+                key={`carrier-helix-l-${frac}`}
+                d={`M${startX + 14 * spacing - 14},${cy} Q${startX + 14 * spacing - 6},${cy + 4} ${startX + 15 * spacing - 3},${cy}`}
+                fill="none"
+                stroke="#ddd6fe"
+                strokeWidth="0.5"
+              />
+            );
+          })}
+          {/* Helical texture on right half */}
+          {[0.25, 0.5, 0.75].map((frac) => {
+            const cy = topY + frac * (botY - topY);
+            return (
+              <path
+                key={`carrier-helix-r-${frac}`}
+                d={`M${startX + 16 * spacing + 14},${cy} Q${startX + 16 * spacing + 6},${cy + 4} ${startX + 15 * spacing + 3},${cy}`}
+                fill="none"
+                stroke="#ddd6fe"
+                strokeWidth="0.5"
+              />
+            );
+          })}
+        </g>
+        {/* Carrier label */}
+        <text
+          x={startX + 15 * spacing}
+          y={topY - 14}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#7c3aed"
+          fontWeight="bold"
+          stroke="white"
+          strokeWidth="2.5"
+          paintOrder="stroke"
+        >
+          Carrier / Transporter
+        </text>
+        <text
+          x={startX + 15 * spacing}
+          y={topY - 14}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#7c3aed"
+          fontWeight="bold"
+        >
+          Carrier / Transporter
+        </text>
+
+        {/* Purple arrow marker */}
+        <defs>
+          <marker
+            id="arrowPurple"
+            markerWidth="5"
+            markerHeight="5"
+            refX="3"
+            refY="2.5"
+            orient="auto"
+          >
+            <path d="M0,0.5 L3,2.5 L0,4.5" fill="none" stroke="#c4b5fd" strokeWidth="0.7" />
+          </marker>
+        </defs>
+
+        {/* ═══════════ PERIPHERAL PROTEIN (top surface) ═══════════ */}
+        <g
+          className="cursor-pointer"
+          onMouseEnter={() => handleHover(parts[3])}
+          onMouseLeave={() => handleHover(null)}
+        >
+          <ellipse
+            cx={startX + 11 * spacing}
+            cy={topY - 10}
+            rx="18"
+            ry="9"
+            fill="#ec4899"
+            opacity="0.75"
             stroke="#db2777"
-            strokeWidth="1.5"
+            strokeWidth="1.2"
+          />
+          {/* Secondary structure suggestion */}
+          <ellipse
+            cx={startX + 11 * spacing - 5}
+            cy={topY - 10}
+            rx="5"
+            ry="7"
+            fill="none"
+            stroke="#fbcfe8"
+            strokeWidth="0.5"
+          />
+          <ellipse
+            cx={startX + 11 * spacing + 5}
+            cy={topY - 10}
+            rx="5"
+            ry="7"
+            fill="none"
+            stroke="#fbcfe8"
+            strokeWidth="0.5"
           />
         </g>
         <text
-          x={startX + 12 * spacing}
-          y={topY - 26}
+          x={startX + 11 * spacing}
+          y={topY - 24}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#db2777"
+          fontWeight="bold"
+          stroke="white"
+          strokeWidth="2.5"
+          paintOrder="stroke"
+        >
+          Peripheres Protein
+        </text>
+        <text
+          x={startX + 11 * spacing}
+          y={topY - 24}
           textAnchor="middle"
           fontSize="7"
           fill="#db2777"
@@ -196,109 +591,298 @@ export default function CellMembrane() {
           Peripheres Protein
         </text>
 
-        {/* Cholesterol */}
-        <g
-          className="cursor-pointer"
-          onMouseEnter={() => handleHover(parts[3])}
-          onMouseLeave={() => handleHover(null)}
-        >
-          <path
-            d={`M${startX + 3 * spacing},${topY + 8} L${startX + 3 * spacing - 5},${topY + 28} L${startX + 3 * spacing + 5},${topY + 28} Z`}
-            fill="#f59e0b"
-            stroke="#d97706"
-            strokeWidth="1"
-          />
-          <circle
-            cx={startX + 3 * spacing}
-            cy={topY + 8}
-            r="4"
-            fill="#fbbf24"
-            stroke="#d97706"
-            strokeWidth="1"
-          />
-        </g>
+        {/* ═══════════ CHOLESTEROL 1 (upper leaflet) — steroid ring structure ═══════════ */}
+        {(() => {
+          const cx = startX + 3 * spacing;
+          const cy0 = topY + 10;
+          return (
+            <g
+              className="cursor-pointer"
+              onMouseEnter={() => handleHover(parts[4])}
+              onMouseLeave={() => handleHover(null)}
+            >
+              {/* Steroid ring system: 4 fused rings (A-B-C-D) */}
+              {/* Ring A (6-membered) */}
+              <path
+                d={`M${cx - 6},${cy0} L${cx - 3},${cy0 - 5} L${cx + 3},${cy0 - 5} L${cx + 6},${cy0} L${cx + 3},${cy0 + 5} L${cx - 3},${cy0 + 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+              />
+              {/* Ring B (6-membered, fused to A) */}
+              <path
+                d={`M${cx + 6},${cy0} L${cx + 9},${cy0 - 5} L${cx + 14},${cy0 - 4} L${cx + 15},${cy0 + 1} L${cx + 12},${cy0 + 5} L${cx + 6},${cy0 + 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.9"
+              />
+              {/* Ring C (6-membered) */}
+              <path
+                d={`M${cx - 6},${cy0} L${cx - 3},${cy0 + 5} L${cx - 6},${cy0 + 10} L${cx - 3},${cy0 + 15} L${cx + 3},${cy0 + 15} L${cx + 6},${cy0 + 10} L${cx + 3},${cy0 + 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.85"
+              />
+              {/* Ring D (5-membered, fused to C) */}
+              <path
+                d={`M${cx + 6},${cy0 + 10} L${cx + 10},${cy0 + 8} L${cx + 12},${cy0 + 13} L${cx + 9},${cy0 + 16} L${cx + 3},${cy0 + 15} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.8"
+              />
+              {/* Hydroxyl group (OH) at top */}
+              <circle
+                cx={cx}
+                cy={cy0 - 7}
+                r="3"
+                fill="#fef3c7"
+                stroke="#b45309"
+                strokeWidth="0.7"
+              />
+              <text
+                x={cx}
+                y={cy0 - 5.5}
+                textAnchor="middle"
+                fontSize="3.5"
+                fill="#92400e"
+                fontWeight="bold"
+              >
+                OH
+              </text>
+              {/* Short hydrocarbon tail */}
+              <path
+                d={`M${cx},${cy0 + 15} L${cx - 1},${cy0 + 21} L${cx + 1},${cy0 + 26}`}
+                fill="none"
+                stroke="#d97706"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </g>
+          );
+        })()}
         <text
           x={startX + 3 * spacing}
           y={topY + 42}
           textAnchor="middle"
           fontSize="6"
-          fill="#d97706"
+          fill="#b45309"
+          fontWeight="600"
         >
           Cholesterin
         </text>
 
-        {/* Second cholesterol */}
-        <g
-          className="cursor-pointer"
-          onMouseEnter={() => handleHover(parts[3])}
-          onMouseLeave={() => handleHover(null)}
-        >
-          <path
-            d={`M${startX + 21 * spacing},${botY - 8} L${startX + 21 * spacing - 5},${botY - 28} L${startX + 21 * spacing + 5},${botY - 28} Z`}
-            fill="#f59e0b"
-            stroke="#d97706"
-            strokeWidth="1"
-          />
-          <circle
-            cx={startX + 21 * spacing}
-            cy={botY - 8}
-            r="4"
-            fill="#fbbf24"
-            stroke="#d97706"
-            strokeWidth="1"
-          />
-        </g>
-
-        {/* Glycoprotein (integral + sugar chains) */}
-        <g
-          className="cursor-pointer"
-          onMouseEnter={() => handleHover(parts[4])}
-          onMouseLeave={() => handleHover(null)}
-        >
-          <rect
-            x={startX + 16 * spacing - 10}
-            y={topY - 6}
-            width="38"
-            height="92"
-            rx="10"
-            fill="#8b5cf6"
-            opacity="0.7"
-            stroke="#7c3aed"
-            strokeWidth="1.5"
-          />
-          {/* Sugar chains */}
-          {[0, 10, 20].map((dx) => (
-            <g key={`sugar-${dx}`}>
-              <line
-                x1={startX + 16 * spacing - 4 + dx}
-                y1={topY - 6}
-                x2={startX + 16 * spacing - 4 + dx}
-                y2={topY - 24}
-                stroke="#7c3aed"
-                strokeWidth="1"
+        {/* ═══════════ CHOLESTEROL 2 (lower leaflet) ═══════════ */}
+        {(() => {
+          const cx = startX + 20 * spacing;
+          const cy0 = botY - 10;
+          return (
+            <g
+              className="cursor-pointer"
+              onMouseEnter={() => handleHover(parts[4])}
+              onMouseLeave={() => handleHover(null)}
+            >
+              {/* Ring A */}
+              <path
+                d={`M${cx - 6},${cy0} L${cx - 3},${cy0 + 5} L${cx + 3},${cy0 + 5} L${cx + 6},${cy0} L${cx + 3},${cy0 - 5} L${cx - 3},${cy0 - 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
               />
-              <circle
-                cx={startX + 16 * spacing - 4 + dx}
-                cy={topY - 26}
-                r="4"
-                fill="#c4b5fd"
-                stroke="#7c3aed"
-                strokeWidth="1"
+              {/* Ring B */}
+              <path
+                d={`M${cx + 6},${cy0} L${cx + 9},${cy0 + 5} L${cx + 14},${cy0 + 4} L${cx + 15},${cy0 - 1} L${cx + 12},${cy0 - 5} L${cx + 6},${cy0 - 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.9"
               />
+              {/* Ring C */}
+              <path
+                d={`M${cx - 6},${cy0} L${cx - 3},${cy0 - 5} L${cx - 6},${cy0 - 10} L${cx - 3},${cy0 - 15} L${cx + 3},${cy0 - 15} L${cx + 6},${cy0 - 10} L${cx + 3},${cy0 - 5} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.85"
+              />
+              {/* Ring D */}
+              <path
+                d={`M${cx + 6},${cy0 - 10} L${cx + 10},${cy0 - 8} L${cx + 12},${cy0 - 13} L${cx + 9},${cy0 - 16} L${cx + 3},${cy0 - 15} Z`}
+                fill="url(#cholGradient)"
+                stroke="#b45309"
+                strokeWidth="0.7"
+                opacity="0.8"
+              />
+              {/* OH group */}
               <circle
-                cx={startX + 16 * spacing - 4 + dx}
-                cy={topY - 34}
+                cx={cx}
+                cy={cy0 + 7}
                 r="3"
-                fill="#ddd6fe"
-                stroke="#7c3aed"
-                strokeWidth="0.8"
+                fill="#fef3c7"
+                stroke="#b45309"
+                strokeWidth="0.7"
+              />
+              <text
+                x={cx}
+                y={cy0 + 8.5}
+                textAnchor="middle"
+                fontSize="3.5"
+                fill="#92400e"
+                fontWeight="bold"
+              >
+                OH
+              </text>
+              {/* Short tail going up into hydrophobic core */}
+              <path
+                d={`M${cx},${cy0 - 15} L${cx - 1},${cy0 - 21} L${cx + 1},${cy0 - 26}`}
+                fill="none"
+                stroke="#d97706"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               />
             </g>
-          ))}
+          );
+        })()}
+
+        {/* ═══════════ GLYCOPROTEIN (integral + sugar chains) ═══════════ */}
+        <g
+          className="cursor-pointer"
+          onMouseEnter={() => handleHover(parts[5])}
+          onMouseLeave={() => handleHover(null)}
+        >
+          {/* Protein body spanning membrane — barrel shape */}
+          <path
+            d={`M${startX + 21 * spacing - 8},${topY - 4}
+                C${startX + 21 * spacing - 14},${topY + 15}
+                 ${startX + 21 * spacing - 14},${botY - 15}
+                 ${startX + 21 * spacing - 8},${botY + 4}
+                L${startX + 23 * spacing + 8},${botY + 4}
+                C${startX + 23 * spacing + 14},${botY - 15}
+                 ${startX + 23 * spacing + 14},${topY + 15}
+                 ${startX + 23 * spacing + 8},${topY - 4}
+                Z`}
+            fill="url(#glycoGradient)"
+            stroke="#6d28d9"
+            strokeWidth="0.8"
+            opacity="0.8"
+          />
+          {/* Helical texture lines */}
+          {[0.3, 0.55, 0.8].map((frac) => {
+            const cy = topY + frac * (botY - topY);
+            return (
+              <path
+                key={`glyco-helix-${frac}`}
+                d={`M${startX + 21 * spacing - 10},${cy} Q${startX + 22 * spacing},${cy + 5} ${startX + 23 * spacing + 10},${cy}`}
+                fill="none"
+                stroke="#ddd6fe"
+                strokeWidth="0.5"
+              />
+            );
+          })}
+          {/* Branching sugar chains (Y-shaped, more detailed) */}
+          {[
+            { dx: 0, spread: false },
+            { dx: 12, spread: true },
+            { dx: 24, spread: false },
+          ].map(({ dx, spread }, idx) => {
+            const sx = startX + 21 * spacing - 2 + dx;
+            return (
+              <g key={`sugar-chain-${idx}`}>
+                {/* Main stem */}
+                <line
+                  x1={sx}
+                  y1={topY - 4}
+                  x2={sx}
+                  y2={topY - 22}
+                  stroke="#7c3aed"
+                  strokeWidth="1"
+                />
+                {/* Branch sugar balls */}
+                <circle
+                  cx={sx}
+                  cy={topY - 24}
+                  r="3.5"
+                  fill="#c4b5fd"
+                  stroke="#7c3aed"
+                  strokeWidth="0.7"
+                />
+                {spread ? (
+                  <>
+                    <line
+                      x1={sx}
+                      y1={topY - 27}
+                      x2={sx - 5}
+                      y2={topY - 34}
+                      stroke="#7c3aed"
+                      strokeWidth="0.7"
+                    />
+                    <line
+                      x1={sx}
+                      y1={topY - 27}
+                      x2={sx + 5}
+                      y2={topY - 34}
+                      stroke="#7c3aed"
+                      strokeWidth="0.7"
+                    />
+                    <circle
+                      cx={sx - 5}
+                      cy={topY - 36}
+                      r="2.5"
+                      fill="#ddd6fe"
+                      stroke="#7c3aed"
+                      strokeWidth="0.6"
+                    />
+                    <circle
+                      cx={sx + 5}
+                      cy={topY - 36}
+                      r="2.5"
+                      fill="#ede9fe"
+                      stroke="#7c3aed"
+                      strokeWidth="0.6"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <line
+                      x1={sx}
+                      y1={topY - 27}
+                      x2={sx}
+                      y2={topY - 33}
+                      stroke="#7c3aed"
+                      strokeWidth="0.7"
+                    />
+                    <circle
+                      cx={sx}
+                      cy={topY - 35}
+                      r="2.5"
+                      fill="#ddd6fe"
+                      stroke="#7c3aed"
+                      strokeWidth="0.6"
+                    />
+                  </>
+                )}
+              </g>
+            );
+          })}
         </g>
         <text
-          x={startX + 17 * spacing}
-          y={topY - 42}
+          x={startX + 22 * spacing}
+          y={topY - 44}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#7c3aed"
+          fontWeight="bold"
+          stroke="white"
+          strokeWidth="2.5"
+          paintOrder="stroke"
+        >
+          Glykoprotein
+        </text>
+        <text
+          x={startX + 22 * spacing}
+          y={topY - 44}
           textAnchor="middle"
           fontSize="7"
           fill="#7c3aed"
@@ -307,48 +891,107 @@ export default function CellMembrane() {
           Glykoprotein
         </text>
 
-        {/* Glycolipid */}
+        {/* ═══════════ GLYCOLIPID ═══════════ */}
         <g
           className="cursor-pointer"
-          onMouseEnter={() => handleHover(parts[5])}
+          onMouseEnter={() => handleHover(parts[6])}
           onMouseLeave={() => handleHover(null)}
         >
+          {/* Lipid head */}
           <circle
-            cx={startX + 22 * spacing}
+            cx={startX + 25 * spacing}
             cy={topY}
-            r="6"
-            fill="#14b8a6"
-            stroke="#0f766e"
-            strokeWidth="1"
+            r="6.5"
+            fill="url(#headGradient)"
+            stroke="#0e7468"
+            strokeWidth="0.8"
           />
+          {/* Tails */}
+          <path
+            d={`M${startX + 25 * spacing - 3},${topY + 7}
+                Q${startX + 25 * spacing - 4},${topY + 16} ${startX + 25 * spacing - 3},${topY + 24}
+                Q${startX + 25 * spacing - 2},${topY + 32} ${startX + 25 * spacing - 3},${topY + 38}`}
+            fill="none"
+            stroke="url(#tailGradient)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+          <path
+            d={`M${startX + 25 * spacing + 3},${topY + 7}
+                Q${startX + 25 * spacing + 5},${topY + 14} ${startX + 25 * spacing + 6},${topY + 18}
+                L${startX + 25 * spacing + 8},${topY + 22}
+                Q${startX + 25 * spacing + 5},${topY + 28} ${startX + 25 * spacing + 4},${topY + 36}`}
+            fill="none"
+            stroke="url(#tailGradient)"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+          />
+          {/* Sugar chain */}
           <line
-            x1={startX + 22 * spacing}
-            y1={topY - 6}
-            x2={startX + 22 * spacing}
+            x1={startX + 25 * spacing}
+            y1={topY - 7}
+            x2={startX + 25 * spacing}
             y2={topY - 20}
             stroke="#0f766e"
             strokeWidth="1"
           />
           <circle
-            cx={startX + 22 * spacing}
+            cx={startX + 25 * spacing}
             cy={topY - 22}
-            r="4"
+            r="3.5"
             fill="#99f6e4"
             stroke="#0f766e"
-            strokeWidth="1"
+            strokeWidth="0.7"
+          />
+          <line
+            x1={startX + 25 * spacing}
+            y1={topY - 25}
+            x2={startX + 25 * spacing - 4}
+            y2={topY - 32}
+            stroke="#0f766e"
+            strokeWidth="0.7"
+          />
+          <line
+            x1={startX + 25 * spacing}
+            y1={topY - 25}
+            x2={startX + 25 * spacing + 4}
+            y2={topY - 32}
+            stroke="#0f766e"
+            strokeWidth="0.7"
           />
           <circle
-            cx={startX + 22 * spacing}
-            cy={topY - 30}
-            r="3"
+            cx={startX + 25 * spacing - 4}
+            cy={topY - 34}
+            r="2.5"
             fill="#ccfbf1"
             stroke="#0f766e"
-            strokeWidth="0.8"
+            strokeWidth="0.6"
+          />
+          <circle
+            cx={startX + 25 * spacing + 4}
+            cy={topY - 34}
+            r="2.5"
+            fill="#ccfbf1"
+            stroke="#0f766e"
+            strokeWidth="0.6"
           />
         </g>
         <text
-          x={startX + 22 * spacing}
-          y={topY - 36}
+          x={startX + 25 * spacing}
+          y={topY - 40}
+          textAnchor="middle"
+          fontSize="7"
+          fill="#0f766e"
+          fontWeight="bold"
+          stroke="white"
+          strokeWidth="2.5"
+          paintOrder="stroke"
+        >
+          Glykolipid
+        </text>
+        <text
+          x={startX + 25 * spacing}
+          y={topY - 40}
           textAnchor="middle"
           fontSize="7"
           fill="#0f766e"
@@ -357,14 +1000,46 @@ export default function CellMembrane() {
           Glykolipid
         </text>
 
-        {/* Legend */}
-        <circle cx="30" cy="270" r="5" fill="#14b8a6" />
-        <text x="40" y="273" fontSize="7" fill="#115e59">
+        {/* ═══════════ LEGEND ═══════════ */}
+        <circle
+          cx="28"
+          cy="270"
+          r="5"
+          fill="url(#headGradient)"
+          stroke="#0e7468"
+          strokeWidth="0.6"
+        />
+        <text x="38" y="273" fontSize="7" fill="#115e59">
           Hydrophiler Kopf
         </text>
-        <line x1="120" y1="265" x2="120" y2="275" stroke="#eab308" strokeWidth="2" />
-        <text x="128" y="273" fontSize="7" fill="#115e59">
+        <line
+          x1="130"
+          y1="265"
+          x2="130"
+          y2="275"
+          stroke="url(#tailGradient)"
+          strokeWidth="2.8"
+          strokeLinecap="round"
+        />
+        <text x="138" y="273" fontSize="7" fill="#115e59">
           Hydrophobe Schwänze
+        </text>
+        <rect
+          x="252"
+          y="265"
+          width="10"
+          height="10"
+          rx="2"
+          fill="url(#cholGradient)"
+          stroke="#b45309"
+          strokeWidth="0.6"
+        />
+        <text x="267" y="273" fontSize="7" fill="#115e59">
+          Cholesterin
+        </text>
+        <circle cx="338" cy="270" r="3" fill="#c4b5fd" stroke="#7c3aed" strokeWidth="0.6" />
+        <text x="345" y="273" fontSize="7" fill="#115e59">
+          Zuckerkette
         </text>
       </svg>
 
