@@ -18,7 +18,7 @@ interface FachRoadmapProps {
  *
  * Displays chapters in lernlogische Abfolge (learning order) with:
  * - Sequence numbers (1, 2, 3...)
- * - Short titles (sequenceTitle fallback to title)
+ * - Full chapter titles (title)
  * - Arrow connectors between chapters
  * - Current chapter highlighted
  * - Subject-specific color theming
@@ -73,7 +73,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
                 }`}
               >
                 {chapter.sequence ? `${chapter.sequence}. ` : ""}
-                {chapter.sequenceTitle || chapter.title}
+                {chapter.title}
               </motion.button>
 
               {idx < sorted.length - 1 && (

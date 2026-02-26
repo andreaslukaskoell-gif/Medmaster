@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { CheckCircle2, XCircle, RotateCcw } from "lucide-react";
 import { Button } from "../ui/button";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
 interface KontrollFrage {
   question: string;
@@ -330,7 +331,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
                 <p className="font-medium text-emerald-800 dark:text-emerald-300 mb-1">
                   Lösungsweg
                 </p>
-                {q?.explanation ?? ""}
+                {stripMarkdownAsterisks(q?.explanation ?? "")}
               </div>
             )}
           </div>

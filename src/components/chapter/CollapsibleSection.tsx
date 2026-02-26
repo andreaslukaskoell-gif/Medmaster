@@ -143,7 +143,11 @@ export function CollapsibleSection({
     <Collapsible
       open={open}
       onOpenChange={handleOpenChange}
-      className={cn("rounded-lg border bg-[var(--card)] overflow-hidden", styles.border, className)}
+      className={cn(
+        "rounded-none first:rounded-t-lg last:rounded-b-lg border-x border-b first:border-t border-[var(--border)] bg-[var(--card)] overflow-hidden",
+        styles.border,
+        className
+      )}
     >
       <div id={id} className="scroll-mt-24" aria-hidden>
         {/* Scroll target for #hash */}
@@ -151,10 +155,9 @@ export function CollapsibleSection({
       <CollapsibleTrigger
         asChild
         className={cn(
-          "flex items-center gap-2 w-full text-left px-4 py-3",
+          "flex items-center gap-2 w-full text-left px-3 py-2",
           "hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2",
-          "rounded-lg"
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2"
         )}
       >
         <button
@@ -223,7 +226,7 @@ export function CollapsibleSection({
               transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
               className="overflow-hidden"
             >
-              <div className="px-4 pb-4 pt-0 border-t border-[var(--border)]/50">
+              <div className="px-3 pb-3 pt-0 border-t border-[var(--border)]/50">
                 {children}
                 {onCompleted && <div ref={sentinelRef} className="h-1 w-full" aria-hidden />}
               </div>

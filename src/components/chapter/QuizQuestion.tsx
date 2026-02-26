@@ -59,6 +59,12 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
     setIsSecondAttempt(true);
   };
 
+  /** Tipp anzeigen und sofort erneute Antwortwahl ermöglichen */
+  const handleMitTippLoesen = () => {
+    if (hintIndex < hints.length) setHintIndex((i) => i + 1);
+    handleSecondTry();
+  };
+
   const showNextHint = () => {
     if (hintIndex < hints.length) setHintIndex((i) => i + 1);
   };
@@ -80,7 +86,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
           <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
             {questionNumber}
           </span>
-          <p className="text-base font-semibold text-slate-950 dark:text-white leading-relaxed flex-1">
+          <p className="text-sm font-semibold text-slate-950 dark:text-white leading-relaxed flex-1">
             {question.question}
           </p>
         </div>
@@ -110,10 +116,10 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                           : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-slate-900 dark:text-slate-100 cursor-pointer"
                   }`}
               >
-                <span className="font-bold mr-3 text-base shrink-0">
+                <span className="font-bold mr-3 text-sm shrink-0">
                   {String.fromCharCode(65 + oi)})
                 </span>
-                <span className="text-base break-words">{option}</span>
+                <span className="text-sm break-words">{option}</span>
                 {showAsCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 float-right mt-0.5 shrink-0" />
                 )}
@@ -146,7 +152,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
             )}
             <div className="flex-1 min-w-0">
               <p
-                className={`font-bold text-base mb-2 ${
+                className={`font-bold text-sm mb-2 ${
                   isCorrect
                     ? "text-green-800 dark:text-green-200"
                     : "text-red-800 dark:text-red-200"
@@ -233,7 +239,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                         {hasMoreHints ? (
                           <motion.button
                             type="button"
-                            onClick={showNextHint}
+                            onClick={hintIndex === 0 ? handleMitTippLoesen : showNextHint}
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}

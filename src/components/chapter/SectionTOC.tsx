@@ -9,7 +9,6 @@ type SectionTOCProps = {
   progress: Record<string, SectionProgressStatus>;
   currentSectionId: string | null;
   onSelect: (id: string) => void;
-  readingMode: "learn" | "read";
   /** "left" = Amboss-style: narrow, Inhalt, slate-300, active white + accent marker */
   variant?: "default" | "left";
   className?: string;
@@ -40,7 +39,6 @@ export function SectionTOC({
   progress,
   currentSectionId,
   onSelect,
-  readingMode,
   variant = "default",
   className,
 }: SectionTOCProps) {
@@ -58,14 +56,14 @@ export function SectionTOC({
           : "bg-white dark:bg-slate-900",
         className
       )}
-      aria-label={readingMode === "learn" ? "Dein Lernpfad" : "Inhaltsverzeichnis"}
+      aria-label="Inhaltsverzeichnis"
     >
       <h3
         className={cn(
           "text-xs font-semibold uppercase tracking-wider mb-3 text-slate-900 dark:text-slate-100"
         )}
       >
-        {isLeft ? "Inhalt" : readingMode === "learn" ? "Dein Lernpfad" : "Inhalt"}
+        Inhalt
       </h3>
       <ul className="space-y-0.5">
         {sections.map((section) => {

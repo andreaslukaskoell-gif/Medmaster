@@ -32,7 +32,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY_PROGRESS = (ukId: string) => `medmaster-section-progress-${ukId}`;
-const STORAGE_KEY_READING_MODE = "medmaster-reading-mode";
 
 /** Single section in the unified accordion (intro, H2, MedAT-Fokus, Zusammenfassung). */
 type Section = {
@@ -224,7 +223,7 @@ function MarkdownContent({
   if (blocks.length === 0) {
     return (
       <div
-        className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
+        className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processedBase}
@@ -236,7 +235,7 @@ function MarkdownContent({
   const segments = processedBase.split(PLACEHOLDER_REGEX);
   return (
     <div
-      className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
+      className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
     >
       {segments.map((part, i) => {
         if (i % 2 === 0) {
@@ -453,23 +452,7 @@ export function SubchapterContent({
     }
   }, [uk.id, sectionProgress]);
 
-  // Reading mode: learn (only intro open) vs read (all open)
-  const [readingMode, setReadingMode] = useState<"learn" | "read">(() => {
-    try {
-      const v = localStorage.getItem(STORAGE_KEY_READING_MODE);
-      return v === "read" ? "read" : "learn";
-    } catch {
-      return "learn";
-    }
-  });
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY_READING_MODE, readingMode);
-    } catch {
-      /* ignore */
-    }
-  }, [readingMode]);
-
+  // Open state: only first section open initially; user opens others via header or TOC
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const openSectionsInitialized = useRef(false);
   const prevUkId = useRef(uk.id);
@@ -481,50 +464,19 @@ export function SubchapterContent({
     }
   }, [uk.id]);
 
-  // Initialize open state when sections are ready: learn = only first open, read = all open
   useEffect(() => {
     if (unifiedSections.length === 0 || !firstSectionId) return;
     if (openSectionsInitialized.current) return;
     openSectionsInitialized.current = true;
-    if (readingMode === "read") {
-      const next = allSectionIds.reduce<Record<string, boolean>>(
-        (acc, id) => ({ ...acc, [id]: true }),
-        {}
-      );
-      const t = setTimeout(() => setOpenSections(next), 0);
-      return () => clearTimeout(t);
-    }
     const t = setTimeout(() => setOpenSections({ [firstSectionId]: true }), 0);
     return () => clearTimeout(t);
-  }, [unifiedSections, firstSectionId, readingMode, allSectionIds]);
+  }, [unifiedSections, firstSectionId, allSectionIds]);
 
-  // When switching reading mode: sync open state
-  const setReadingModeAndSyncOpen = useCallback(
-    (mode: "learn" | "read") => {
-      setReadingMode(mode);
-      if (mode === "read") {
-        setOpenSections(
-          allSectionIds.reduce<Record<string, boolean>>((acc, id) => ({ ...acc, [id]: true }), {})
-        );
-      } else if (firstSectionId) {
-        setOpenSections({ [firstSectionId]: true });
-      }
-    },
-    [allSectionIds, firstSectionId]
-  );
+  const effectiveOpen = useCallback((id: string) => openSections[id] ?? false, [openSections]);
 
-  const effectiveOpen = useCallback(
-    (id: string) => (readingMode === "read" ? true : (openSections[id] ?? false)),
-    [readingMode, openSections]
-  );
-
-  const handleSectionOpenChange = useCallback(
-    (id: string, open: boolean) => {
-      if (readingMode === "read") return; // all stay open
-      setOpenSections((prev) => ({ ...prev, [id]: open }));
-    },
-    [readingMode]
-  );
+  const handleSectionOpenChange = useCallback((id: string, open: boolean) => {
+    setOpenSections((prev) => ({ ...prev, [id]: open }));
+  }, []);
 
   const handleOpened = useCallback((id: string) => {
     setSectionProgress((prev) =>
@@ -599,9 +551,8 @@ export function SubchapterContent({
   }, [allSectionIds]);
 
   const collapseAll = useCallback(() => {
-    if (readingMode === "read") return;
-    setOpenSections(firstSectionId ? { [firstSectionId]: true } : {});
-  }, [readingMode, firstSectionId]);
+    setOpenSections({});
+  }, []);
 
   const tocSections = useMemo(
     () => unifiedSections.map((s) => ({ id: s.id, title: s.title })),
@@ -626,38 +577,8 @@ export function SubchapterContent({
         </div>
       )}
 
-      {/* Lernmodus / Lesemodus + Alle aufklappen/schließen */}
+      {/* Alle aufklappen / Alle schließen */}
       <div className="flex flex-wrap items-center gap-3">
-        <div
-          className="inline-flex rounded-lg border border-[var(--border)] bg-[var(--card)] p-0.5"
-          role="group"
-          aria-label="Modus"
-        >
-          <button
-            type="button"
-            onClick={() => setReadingModeAndSyncOpen("learn")}
-            className={cn(
-              "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-              readingMode === "learn"
-                ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
-                : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
-            )}
-          >
-            Lernmodus
-          </button>
-          <button
-            type="button"
-            onClick={() => setReadingModeAndSyncOpen("read")}
-            className={cn(
-              "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-              readingMode === "read"
-                ? "bg-[var(--accent)] text-[var(--accent-foreground)]"
-                : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
-            )}
-          >
-            Lesemodus
-          </button>
-        </div>
         {allSectionIds.length > 0 && (
           <>
             <Button
@@ -689,14 +610,14 @@ export function SubchapterContent({
             progress={sectionProgress}
             currentSectionId={currentSectionId}
             onSelect={handleTOCSelect}
-            readingMode={readingMode}
             variant="left"
           />
         </aside>
-        <div className="space-y-4 min-w-0">
-          {unifiedSections.map((section) => (
+        <div className="space-y-0 min-w-0">
+          {unifiedSections.map((section, index) => (
             <div
               key={section.id}
+              className={index === 0 ? undefined : "-mt-px"}
               ref={(el) => {
                 sectionRefsMap.current[section.id] = el;
               }}
