@@ -40,8 +40,12 @@ export default function RegisterPage() {
     const { error } = await signUp(email, password, username);
     setLoading(false);
 
-    if (error) setError(error.message);
-    else setSuccess(true);
+    if (error) {
+      setError(error.message);
+    } else {
+      sessionStorage.setItem("medmaster_fresh_register", "1");
+      setSuccess(true);
+    }
   };
 
   if (success) {

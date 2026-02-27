@@ -4,6 +4,7 @@ import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
+import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function LoginPage() {
@@ -14,6 +15,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const { signIn, signInWithGoogle } = useAuth();
+  const { setMedATOnboardingComplete } = useStore();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,8 +24,19 @@ export default function LoginPage() {
     setLoading(true);
     const { error } = await signIn(email, password);
     setLoading(false);
-    if (error) setError(error.message);
-    else navigate("/");
+    if (error) {
+      setError(error.message);
+    } else {
+      // Fresh registration → onboarding; returning login → dashboard
+      const freshRegister = sessionStorage.getItem("medmaster_fresh_register");
+      if (freshRegister) {
+        sessionStorage.removeItem("medmaster_fresh_register");
+        navigate("/onboarding/medat");
+      } else {
+        setMedATOnboardingComplete();
+        navigate("/dashboard");
+      }
+    }
   };
 
   const handleGoogle = async () => {

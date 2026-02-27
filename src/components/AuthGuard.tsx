@@ -1,15 +1,11 @@
-import { lazy, Suspense } from "react";
 import type { ReactNode } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
-
-const LandingPage = lazy(() => import("@/pages/LandingPage"));
 
 export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
-  const location = useLocation();
 
-  // Development: kein Redirect zur Login-Seite, geschützte Seiten (KFF, BMS) direkt erreichbar
+  // Development: skip auth check so protected pages are directly reachable
   if (import.meta.env.DEV) {
     return <>{children}</>;
   }
@@ -23,20 +19,6 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   }
 
   if (!isAuthenticated) {
-    // Show landing page at root, redirect to login for all other protected routes
-    if (location.pathname === "/") {
-      return (
-        <Suspense
-          fallback={
-            <div className="flex items-center justify-center min-h-screen">
-              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500" />
-            </div>
-          }
-        >
-          <LandingPage />
-        </Suspense>
-      );
-    }
     return <Navigate to="/login" replace />;
   }
 

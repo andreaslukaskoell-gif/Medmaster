@@ -169,7 +169,7 @@ export default function DailyChallengePage() {
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/dashboard")}
             className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -258,7 +258,7 @@ export default function DailyChallengePage() {
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/dashboard")}
             className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -409,7 +409,7 @@ export default function DailyChallengePage() {
       <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
         {/* Back */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/dashboard")}
           className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
         >
           <ArrowLeft className="w-4 h-4" />

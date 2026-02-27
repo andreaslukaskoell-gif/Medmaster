@@ -122,7 +122,7 @@ export default function TodayPage() {
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
       <div className="max-w-2xl mx-auto px-4 py-6 pb-24">
         <Link
-          to="/"
+          to="/dashboard"
           className="inline-flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] mb-6"
         >
           <ArrowLeft className="w-4 h-4" />

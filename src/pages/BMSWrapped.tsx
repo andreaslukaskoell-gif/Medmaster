@@ -411,7 +411,7 @@ function Slide5Share({ data, onBack }: { data: SlideData; onBack: () => void }) 
 
   const handleDashboard = (e: React.MouseEvent) => {
     e.stopPropagation();
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (

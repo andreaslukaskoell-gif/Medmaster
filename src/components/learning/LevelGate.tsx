@@ -36,7 +36,7 @@ export function LevelGate({ requiredLevel, featureLabel, children }: LevelGatePr
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            to="/"
+            to="/dashboard"
             className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-medium transition-colors"
           >
             <Trophy className="w-4 h-4" />

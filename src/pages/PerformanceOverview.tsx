@@ -179,7 +179,7 @@ export default function PerformanceOverview() {
 
       <div className="flex items-center gap-4">
         <Link
-          to="/"
+          to="/dashboard"
           className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />

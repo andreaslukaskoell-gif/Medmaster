@@ -39,7 +39,7 @@ export default function Legal() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
-          <Link to="/" className="text-gray-500 hover:text-gray-800 transition-colors">
+          <Link to="/dashboard" className="text-gray-500 hover:text-gray-800 transition-colors">
             <ArrowLeft className="w-5 h-5" />
           </Link>
           <span className="text-lg font-bold text-gray-900">MedMaster</span>

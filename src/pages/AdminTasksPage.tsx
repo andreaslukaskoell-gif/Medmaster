@@ -91,7 +91,7 @@ export default function AdminTasksPage() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4">
       <div className="max-w-5xl mx-auto space-y-4">
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" onClick={() => navigate("/")}>
+          <Button variant="ghost" size="sm" onClick={() => navigate("/dashboard")}>
             ← Zurück
           </Button>
           <h1 className="text-xl font-bold">Task-DB Admin</h1>

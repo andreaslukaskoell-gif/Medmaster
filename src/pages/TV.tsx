@@ -84,7 +84,7 @@ export default function TV() {
           message="Keine TV-Texte geladen."
           action={
             <Button asChild variant="outline" className="gap-2">
-              <Link to="/">
+              <Link to="/dashboard">
                 <BookOpen className="w-4 h-4" />
                 Zum Dashboard
               </Link>

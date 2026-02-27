@@ -91,7 +91,7 @@ export function TopBar({
         </button>
 
         <Link
-          to="/"
+          to="/dashboard"
           className={cn(
             "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors shrink-0"
           )}

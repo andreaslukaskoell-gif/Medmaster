@@ -12,9 +12,11 @@ import {
 } from "react-router-dom";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
+import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
+const LandingPage = lazy(() => import("@/pages/LandingPage"));
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const MedATOnboarding = lazy(() => import("@/pages/MedATOnboarding"));
 const PlacementTest = lazy(() => import("@/pages/PlacementTest"));
@@ -76,7 +78,7 @@ function ScrollToTop() {
 
 function OnboardingGuard() {
   const { onboardingCompleted } = useStore();
-  if (onboardingCompleted) return <Navigate to="/" replace />;
+  if (onboardingCompleted) return <Navigate to="/dashboard" replace />;
   return <Onboarding />;
 }
 
@@ -96,7 +98,7 @@ function MedATGuard({ children }: { children: ReactNode }) {
 function AdminGuard({ children }: { children: React.ReactNode }) {
   const isDev = import.meta.env.DEV;
   if (!isDev) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
   return <>{children}</>;
 }
@@ -106,6 +108,24 @@ function BMSQuizWrapper() {
   const navigate = useNavigate();
   if (!fach) return <Navigate to="/bms" replace />;
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
+}
+
+/** `/` — LandingPage für Gäste, Redirect für eingeloggte User. */
+function RootRoute() {
+  const { isAuthenticated, loading } = useAuth();
+
+  // DEV: immer LandingPage zeigen (DEV_USER faked Auth)
+  if (import.meta.env.DEV) {
+    return <LandingPage />;
+  }
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />;
+  }
+  return <LandingPage />;
 }
 
 function NotFound404() {
@@ -118,7 +138,7 @@ function NotFound404() {
           Diese Seite existiert nicht oder wurde verschoben.
         </p>
         <a
-          href="/"
+          href="/dashboard"
           className="inline-block mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
         >
           → Zurück zum Dashboard
@@ -135,6 +155,7 @@ export default function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           {/* Public routes */}
+          <Route path="/" element={<RootRoute />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -161,8 +182,7 @@ export default function App() {
                 </MedATGuard>
               }
             >
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Navigate to="/" replace />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/today" element={<TodayPage />} />
               <Route path="/onboarding" element={<OnboardingGuard />} />
               <Route path="/bms" element={<BMS />} />

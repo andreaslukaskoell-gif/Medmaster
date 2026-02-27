@@ -156,6 +156,7 @@ export function useAuth() {
     setUser(null);
     setProfile(null);
     setSession(null);
+    window.location.href = "/";
   }
 
   async function resetPassword(email: string) {

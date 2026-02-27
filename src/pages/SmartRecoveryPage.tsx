@@ -189,7 +189,7 @@ export default function SmartRecoveryPage() {
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Zurück zu Schwachstellen
               </Button>
-              <Button onClick={() => navigate("/")}>Zum Dashboard</Button>
+              <Button onClick={() => navigate("/dashboard")}>Zum Dashboard</Button>
             </div>
           </CardContent>
         </Card>

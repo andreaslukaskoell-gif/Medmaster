@@ -13,7 +13,7 @@ export default function LernplanChoice() {
   const { onboardingCompleted, completeOnboarding } = useStore();
 
   if (onboardingCompleted) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   const handleNow = () => {
@@ -22,7 +22,7 @@ export default function LernplanChoice() {
 
   const handleLater = () => {
     completeOnboarding(null);
-    navigate("/", { replace: true });
+    navigate("/dashboard", { replace: true });
   };
 
   return (

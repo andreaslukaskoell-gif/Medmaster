@@ -59,7 +59,7 @@ export default function SEK() {
           message="Keine SEK-Aufgaben geladen."
           action={
             <Button asChild variant="outline" className="gap-2">
-              <Link to="/">
+              <Link to="/dashboard">
                 <BookOpen className="w-4 h-4" />
                 Zum Dashboard
               </Link>

@@ -442,7 +442,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
         {/* Dashboard – fix oben, visuell hervorgehoben */}
         <div className="mb-3">
-          <NavLink to="/" end onClick={onClose}>
+          <NavLink to="/dashboard" end onClick={onClose}>
             {({ isActive: dashboardActive }) => (
               <div
                 className={cn(
