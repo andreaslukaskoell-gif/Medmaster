@@ -102,6 +102,19 @@ Die 6 Anordnungen: ANNA, ANAN, AANN, NANA, NAAN, NNAA.
 
 > **Merke:** Bei Permutationen mit Wiederholung teilt man durch die Fakultäten der identischen Elemente, weil ihre Vertauschungen nicht unterscheidbar sind.
 
+**Weitere Rechenbeispiele — Permutationen:**
+
+**Beispiel: Sitzordnung am runden Tisch:**
+6 Ärzte setzen sich an einen runden Tisch. Beim runden Tisch zählt nur die relative Anordnung (da man den Tisch drehen kann). Kreispermutation: (n−1)! = 5! = **120** Anordnungen. (Bei linearer Anordnung wären es 6! = 720.)
+
+**Beispiel: Buchstaben von MISSISSIPPI:**
+n = 11 Buchstaben: M(1×), I(4×), S(4×), P(2×).
+P = 11! / (1! × 4! × 4! × 2!) = 39.916.800 / (1 × 24 × 24 × 2) = 39.916.800 / 1.152 = **34.650** verschiedene Anordnungen.
+
+**Beispiel (MedAT): DNA-Sequenz mit Basenwiederholungen:**
+Wie viele verschiedene Reihenfolgen gibt es für eine DNA-Sequenz mit 3×A, 2×T, 1×G, 1×C (7 Basen)?
+P = 7! / (3! × 2! × 1! × 1!) = 5.040 / (6 × 2 × 1 × 1) = 5.040 / 12 = **420** verschiedene Sequenzen.
+
 ---
 
 ## Variationen
@@ -122,6 +135,14 @@ V(10, 4) = 10^4 = 10.000
 
 Beispiel: Wie viele Möglichkeiten hat ein Schloss mit 3 Walzen, jede mit 8 Symbolen?
 V(8, 3) = 8^3 = 512
+
+**Rechenbeispiel — Multiple-Choice-Test (MedAT-Kontext):**
+Ein BMS-Test hat 40 Fragen mit je 5 Antwortmöglichkeiten (A–E). Ein Student rät bei jeder Frage zufällig.
+Wie viele verschiedene Antwortbögen sind möglich?
+Reihenfolge zählt (Frage 1 ≠ Frage 2), Wiederholung erlaubt (A darf mehrfach gewählt werden).
+→ Variation mit Wiederholung: V(5, 40) = 5⁴⁰ ≈ 9,09 × 10²⁷ Möglichkeiten.
+P(eine bestimmte Frage richtig durch Raten) = 1/5 = 20%.
+Erwartungswert richtig geratener Fragen: 40 × 1/5 = **8 von 40**.
 
 > **Merke:** "Mit Wiederholung" heißt: Jede Stelle kann unabhängig von den anderen belegt werden — Multiplikationsprinzip: n × n × n × ... (k-mal) = n^k.
 
@@ -145,6 +166,23 @@ Nenner = 6! = 720
 Ergebnis = 13.983.816
 
 > **Merke:** Beim Binomialkoeffizienten gilt C(n,k) = C(n, n-k). Es spielt keine Rolle, ob man "6 aus 49" oder "43 aus 49" wählt — die Anzahl ist identisch. Diese Symmetrie ist nützlich für schnelle Prüfungsberechnungen.
+
+**Kurzrechnung mit der Symmetrie:**
+C(10, 8) = C(10, 2) = (10 × 9)/(2 × 1) = 45. Statt 8 Faktoren im Zähler und 8! im Nenner rechnet man mit dem kleineren k = 2 — viel schneller!
+
+**Weitere Rechenbeispiele — Binomialkoeffizient:**
+
+C(6,2) = (6 × 5)/(2 × 1) = 30/2 = **15**
+C(7,3) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = **35**
+C(8,4) = (8 × 7 × 6 × 5)/(4 × 3 × 2 × 1) = 1680/24 = **70**
+C(10,3) = (10 × 9 × 8)/(3 × 2 × 1) = 720/6 = **120**
+C(12,4) = (12 × 11 × 10 × 9)/(4 × 3 × 2 × 1) = 11880/24 = **495**
+
+**Rechenbeispiel — Blutuntersuchungen auswählen:**
+Aus 12 verfügbaren Bluttests soll der Arzt 4 für ein Screening-Panel auswählen. Reihenfolge egal, kein Test doppelt.
+C(12, 4) = 495 verschiedene Panels. Würde die Reihenfolge zählen (z. B. Prioritätsreihung): V(12,4) = 12 × 11 × 10 × 9 = 11.880 — Faktor 24 = 4! mehr als bei Kombination.
+
+> **Merke:** Für schnelles Kopfrechnen im MedAT lerne die häufigsten Binomialkoeffizienten auswendig: C(4,2)=6, C(5,2)=10, C(5,3)=10, C(6,2)=15, C(6,3)=20, C(7,3)=35, C(8,3)=56, C(10,3)=120. Das spart wertvolle Prüfungszeit.
 
 **Mit Wiederholung** (Multisets): C(n+k-1, k) — seltener im MedAT, aber für Vollständigkeit:
 
@@ -172,7 +210,17 @@ Wichtige Eigenschaften:
 - C(n,0) = C(n,n) = 1 (leere Menge und Gesamtmenge)
 - C(n,1) = n
 
-> **Merke:** Das Pascalsche Dreieck erlaubt das schnelle Ablesen kleiner Binomialkoeffizienten ohne Rechnung — nützlich für die Binomialverteilung in Wahrscheinlichkeitsaufgaben.
+**Pascalsches Dreieck als Schnellreferenz:**
+Für die Binomialverteilung B(n, p) braucht man C(n, k). Bei kleinem n liest man die Werte direkt ab:
+- C(3,0)=1, C(3,1)=3, C(3,2)=3, C(3,3)=1 → Zeile 3
+- C(4,0)=1, C(4,1)=4, C(4,2)=6, C(4,3)=4, C(4,4)=1 → Zeile 4
+- C(5,0)=1, C(5,1)=5, C(5,2)=10, C(5,3)=10, C(5,4)=5, C(5,5)=1 → Zeile 5
+
+**Rechenbeispiel — Binomialkoeffizient über Pascalsches Dreieck:**
+P(genau 3 von 5 Münzwürfen = Kopf)? → C(5,3) × (1/2)³ × (1/2)² = 10 × 1/32 = **10/32 = 5/16 ≈ 31,3%**.
+C(5,3) = 10 direkt aus Zeile 5 abgelesen — kein Rechnen nötig!
+
+> **Merke:** Das Pascalsche Dreieck erlaubt das schnelle Ablesen kleiner Binomialkoeffizienten ohne Rechnung — nützlich für die Binomialverteilung in Wahrscheinlichkeitsaufgaben. Für n ≤ 5 ist Auswendiglernen der Zeilen effizienter als jede Formel.
 
 ---
 
@@ -197,6 +245,35 @@ Wichtige Eigenschaften:
 - **Kombination (k aus n, ungeordnet):** C(n,k) = n!/(k!(n−k)!) = (n·(n−1)·…·(n−k+1))/k!. Symmetrie: C(n,k) = C(n,n−k).
 - **Erst fragen:** Reihenfolge? → Ja = V/P, Nein = C. Wiederholung? → mit = Potenz/n^k, ohne = Fakultät.
 
+**Strategiebox — So löst du Kombinatorik-Aufgaben im MedAT (5 Schritte):**
+
+1. **Lies die Aufgabe und identifiziere n und k.** n = Gesamtmenge (z. B. 10 Medikamente). k = Ausgewählte (z. B. 3 daraus).
+2. **Frage 1: Reihenfolge wichtig?** Gibt es verschiedene Rollen/Positionen (Vorsitz, 1. Assistent…)? → Ja = Variation. Nur „Team zusammenstellen"? → Nein = Kombination.
+3. **Frage 2: Wiederholung erlaubt?** Kann dasselbe Element mehrfach vorkommen (z. B. PIN-Ziffern)? → Ja = mit Wiederholung. Wird jedes Element nur einmal verwendet? → Nein = ohne.
+4. **Formel einsetzen.** Bei Kombination: C(n,k) = n!/(k!(n−k)!). Bei Variation ohne Wdh.: n!/(n−k)!. Bei Variation mit Wdh.: nᵏ.
+5. **Plausibilität prüfen.** Kombination < Variation (bei gleichen n, k) — da Reihenfolge Faktor k! hinzufügt. Ergebnis muss ganzzahlig > 0 sein.
+
+**Häufige Signalwörter im MedAT:**
+- „Anordnung", „Reihenfolge", „Rang", „Position" → **Variation/Permutation** (geordnet)
+- „Auswahl", „Zusammensetzung", „Team", „Gruppe" → **Kombination** (ungeordnet)
+- „mit Zurücklegen", „darf wiederholt werden", „unabhängig" → **mit Wiederholung**
+- „ohne Zurücklegen", „verschiedene", „jedes nur einmal" → **ohne Wiederholung**
+
+---
+
+## Übersichtstabelle: Alle vier Formeltypen
+
+| | **Ohne Wiederholung** | **Mit Wiederholung** |
+|---|---|---|
+| **Geordnet (Reihenfolge zählt)** | **Variation** V(n,k) = n!/(n−k)! | **Variation** V(n,k) = nᵏ |
+| | *Beispiel:* 3 Buchstaben aus 5 → 5!/2! = 60 | *Beispiel:* 4-stellige PIN (0–9) → 10⁴ = 10.000 |
+| **Ungeordnet (Reihenfolge egal)** | **Kombination** C(n,k) = n!/(k!·(n−k)!) | **Kombination** C(n+k−1,k) |
+| | *Beispiel:* Lotto 6/45 → C(45,6) ≈ 8 Mio | *Beispiel:* 3 Kugeln aus 4 Farben → C(6,3) = 20 |
+| **Alle n anordnen** | **Permutation** P = n! | **Permutation** P = n!/(k₁!·k₂!·…) |
+| | *Beispiel:* 5 Personen → 5! = 120 | *Beispiel:* MAMA → 4!/(2!·2!) = 6 |
+
+> **Merke:** Lerne diese Tabelle auswendig — im MedAT reicht es, die zwei Entscheidungsfragen zu beantworten (Reihenfolge? Wiederholung?), um die richtige Formel sofort aus der Tabelle abzulesen.
+
 ---
 
 ## Rechenbeispiele
@@ -209,6 +286,36 @@ In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig 
 
 **Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
 4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.
+
+**Beispiel 4 — Chirurgisches Team zusammenstellen:**
+Aus 12 Chirurgen sollen ein Operateur, ein 1. Assistent und ein 2. Assistent bestimmt werden.
+Reihenfolge zählt (verschiedene Rollen) → Variation ohne Wiederholung.
+V(12, 3) = 12!/(12−3)! = 12 × 11 × 10 = **1.320 Möglichkeiten**.
+Vergleich: Würde man nur ein 3er-Team ohne Rollenverteilung wählen → C(12,3) = (12 × 11 × 10)/(3 × 2 × 1) = 1.320/6 = **220**. Das Verhältnis 1.320/220 = 6 = 3! bestätigt: Variation = Kombination × k!.
+
+**Beispiel 5 — Genetik: Heterozygote Genotypen bei 4 Allelen:**
+Ein Gen hat 4 Allele (A₁, A₂, A₃, A₄). Wie viele heterozygote Genotypen gibt es?
+Heterozygot = 2 verschiedene Allele, Reihenfolge egal (A₁A₂ = A₂A₁) → Kombination ohne Wiederholung.
+C(4, 2) = (4 × 3)/(2 × 1) = **6 heterozygote Genotypen**.
+Homozygot: 4 Genotypen (A₁A₁, …). Gesamt: 6 + 4 = 10. Allgemein bei n Allelen: C(n,2) + n = n(n+1)/2.
+
+**Beispiel 6 — Passwort-Sicherheit: Kombination vs. Variation:**
+Ein Passwort hat 8 Zeichen aus 62 Symbolen (a–z, A–Z, 0–9), Wiederholung erlaubt, Reihenfolge zählt.
+V(62, 8) = 62⁸ = 62 × 62 × 62 × 62 × 62 × 62 × 62 × 62 ≈ **2,18 × 10¹⁴** Möglichkeiten.
+Zum Vergleich: Nur Kleinbuchstaben (26 Zeichen): V(26,8) = 26⁸ ≈ 2,09 × 10¹¹ — Faktor 1.000 weniger sicher.
+
+**Beispiel 7 — Prüfungskommission (Kombination mit Einschränkung):**
+Aus 10 Professoren (6 Männer, 4 Frauen) soll eine 3er-Kommission mit mindestens 1 Frau gebildet werden.
+Gesamt ohne Einschränkung: C(10,3) = (10×9×8)/(3×2×1) = 720/6 = **120**.
+Nur Männer (kein Frau): C(6,3) = (6×5×4)/(3×2×1) = 120/6 = **20**.
+Mit mindestens 1 Frau = Gesamt − nur Männer = 120 − 20 = **100 Kommissionen**.
+Methode: **Komplementstrategie** — einfacher als alle Fälle (1F+2M, 2F+1M, 3F) einzeln zu zählen.
+
+**Beispiel 8 — Multiplikationsprinzip (Diagnostik-Algorithmus):**
+Ein Diagnosepfad hat 3 Stufen: Stufe 1 (4 Bluttests), Stufe 2 (3 Bildgebungen), Stufe 3 (2 Biopsietypen).
+Wie viele verschiedene diagnostische Pfade gibt es?
+Multiplikationsprinzip: 4 × 3 × 2 = **24 verschiedene Pfade**.
+Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der fundamentalste Zählbaustein.
 
 ## Zusammenfassung (ultrakompakt)
 
@@ -391,7 +498,29 @@ Beispiel Würfel: P(gerade) = |{2,4,6}| / |{1,2,3,4,5,6}| = 3/6 = 1/2 = 0,5 = 50
 
 Beispiel Kartenspiel (32 Karten): P(Ass) = 4/32 = 1/8 = 12,5%
 
+**Rechenbeispiel — Zwei Würfel gleichzeitig:**
+Zwei faire Würfel werden geworfen. Ω hat 6 × 6 = 36 gleich wahrscheinliche Ergebnisse (Paare).
+P(Augensumme = 7) = ? Günstige Paare: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 Paare.
+P(Summe = 7) = 6/36 = **1/6 ≈ 16,7%** — die häufigste Augensumme!
+P(Augensumme = 12) = ? Nur (6,6) → 1 Paar. P = 1/36 ≈ **2,8%**.
+P(Augensumme ≥ 10) = ? Paare: (4,6),(5,5),(5,6),(6,4),(6,5),(6,6) → 6 Paare. P = 6/36 = **1/6**.
+
+**Rechenbeispiel — Laplace in der Genetik:**
+Mendel'sche Spaltung: Kreuzung Aa × Aa. Ergebnisraum: {AA, Aa, aA, aa} → 4 gleich wahrscheinliche Genotypen.
+P(homozygot dominant = AA) = 1/4 = **25%**.
+P(heterozygot = Aa oder aA) = 2/4 = **50%**.
+P(homozygot rezessiv = aa) = 1/4 = **25%**.
+P(phänotypisch dominant = AA, Aa oder aA) = 3/4 = **75%** (Mendel'sche 3:1-Spaltung).
+
 > **Merke:** Die klassische Wahrscheinlichkeit gilt nur bei Laplace-Experimenten (gleichwahrscheinliche Ergebnisse). Bei einem gezinkten Würfel muss man relative Häufigkeiten aus Beobachtungen verwenden.
+
+**Grundregeln — Zusammenfassung:**
+- 0 ≤ P(A) ≤ 1 für jedes Ereignis A
+- P(Ω) = 1 (sicheres Ereignis)
+- P(∅) = 0 (unmögliches Ereignis)
+- P(Ā) = 1 − P(A) (Komplementregel)
+- P(A ∪ B) = P(A) + P(B) − P(A ∩ B) (Additionssatz)
+- Bei Unabhängigkeit: P(A ∩ B) = P(A) × P(B)
 
 ---
 
@@ -426,6 +555,18 @@ Beispiel Würfel: A = "gerade" = {2,4,6}, B = "größer als 4" = {5,6}
 - P(A ∩ B) = P({6}) = 1/6
 - P(A ∪ B) = 1/2 + 1/3 − 1/6 = 3/6 + 2/6 − 1/6 = 4/6 = 2/3
 
+**Rechenbeispiel Additionssatz — Blutgruppen:**
+In Österreich: P(Blutgruppe A) ≈ 0,44, P(Blutgruppe B) ≈ 0,13, P(Blutgruppe AB) ≈ 0,06.
+Blutgruppen sind paarweise disjunkt (eine Person hat genau eine AB0-Blutgruppe).
+P(A oder B) = P(A) + P(B) = 0,44 + 0,13 = **0,57 = 57%**.
+P(A oder B oder AB) = 0,44 + 0,13 + 0,06 = **0,63 = 63%**.
+P(Blutgruppe 0) = 1 − 0,63 = **0,37 = 37%** (Komplementregel!).
+
+**Rechenbeispiel Additionssatz — nicht disjunkt (Medikamenten-Nebenwirkungen):**
+Ein Medikament verursacht Kopfschmerzen (K) mit P(K) = 0,30 und Übelkeit (Ü) mit P(Ü) = 0,20. Beide treten gleichzeitig auf mit P(K ∩ Ü) = 0,08.
+P(K oder Ü) = P(K) + P(Ü) − P(K ∩ Ü) = 0,30 + 0,20 − 0,08 = **0,42 = 42%**.
+Ohne Abzug des Schnitts hätte man 50% berechnet — falsch, weil die 8% mit beiden Nebenwirkungen doppelt gezählt würden.
+
 > **Merke:** Bei der Vereinigung immer prüfen: Überschneiden sich A und B? Wenn ja, wird P(A∩B) einmal abgezogen. Wenn A und B disjunkt sind (kein gemeinsames Element), einfach addieren.
 
 ### Multiplikationssatz (Schnittmenge bei unabhängigen Ereignissen)
@@ -434,19 +575,46 @@ Beispiel Würfel: A = "gerade" = {2,4,6}, B = "größer als 4" = {5,6}
 
 P(A ∩ B) = P(A) × P(B)
 
+**Formale Definition der Unabhängigkeit:** A und B sind unabhängig genau dann, wenn P(A ∩ B) = P(A) × P(B). Äquivalent: P(A|B) = P(A) — das Wissen über B ändert nichts an der Wahrscheinlichkeit von A.
+
 Beispiel: Zwei unabhängige Münzwürfe. P(beide Kopf) = 1/2 × 1/2 = 1/4
 
 Beispiel klinisch: Ein Gendefekt tritt mit P = 0,01 auf, unabhängig in zwei verschiedenen Genen. P(beide defekt) = 0,01 × 0,01 = 0,0001 = 0,01%.
 
 Erweiterung auf n unabhängige Ereignisse: P(A1 ∩ A2 ∩ ... ∩ An) = P(A1) × P(A2) × ... × P(An)
 
+**Rechenbeispiel — Unabhängigkeit prüfen:**
+Würfelwurf: A = "gerade" = {2,4,6}, B = "≤ 3" = {1,2,3}.
+P(A) = 3/6 = 1/2. P(B) = 3/6 = 1/2. P(A ∩ B) = P({2}) = 1/6.
+Prüfung: P(A) × P(B) = 1/2 × 1/2 = 1/4 = 3/12. Aber P(A ∩ B) = 1/6 = 2/12. Da 2/12 ≠ 3/12 → **A und B sind abhängig**. Intuition: Wenn du weißt, dass die Zahl ≤ 3 ist, sinkt die Chance auf „gerade" von 1/2 auf 1/3 (nur die 2 von {1,2,3}).
+
+**Rechenbeispiel — Multiplikation bei Mehrfach-Tests (klinisch):**
+Ein Patient erhält 3 unabhängige Laborwerte. Jeder einzelne hat 5% Chance auf ein falsch-positives Ergebnis (normaler Laborwert, aber Ergebnis „auffällig").
+P(mindestens 1 falsch-positiv) = 1 − P(alle 3 normal) = 1 − 0,95³ = 1 − 0,857 = **0,143 ≈ 14,3%**.
+Bei 20 unabhängigen Laborwerten: P(mind. 1 falsch-positiv) = 1 − 0,95²⁰ = 1 − 0,358 = **0,642 ≈ 64%**.
+Klinisch: Bei einem „Check-up" mit 20 Laborwerten ist es wahrscheinlicher als nicht, dass mindestens ein Wert ohne Krankheit auffällig ist!
+
 > **Merke:** Unabhängige Ereignisse: Wahrscheinlichkeiten multiplizieren. Achtung: Unabhängigkeit ≠ Disjunktheit! Zwei Ereignisse können gleichzeitig eintreten (nicht disjunkt) und trotzdem unabhängig sein.
+
+### Bedingte Wahrscheinlichkeit — Vorschau
+
+Die **bedingte Wahrscheinlichkeit** P(A|B) beschreibt, wie sich die Wahrscheinlichkeit von A ändert, wenn B bekannt ist:
+
+P(A|B) = P(A ∩ B) / P(B)
+
+**Rechenbeispiel — Urne ohne Zurücklegen:**
+Urne mit 4 roten und 6 blauen Kugeln. Zwei Ziehungen ohne Zurücklegen.
+P(2. rot | 1. rot) = 3/9 = 1/3 (nach Entnahme einer roten: 3 rote von 9 übrig).
+P(2. rot | 1. blau) = 4/9 (nach Entnahme einer blauen: 4 rote von 9 übrig).
+P(beide rot) = P(1. rot) × P(2. rot | 1. rot) = 4/10 × 3/9 = 12/90 = **2/15 ≈ 13,3%**.
+
+> **Merke:** Bei Ziehen ohne Zurücklegen ändern sich die Wahrscheinlichkeiten nach jeder Ziehung — das ist bedingte Wahrscheinlichkeit in Aktion. Im Baumdiagramm sieht man das an den sich ändernden Brüchen auf der zweiten Stufe.
 
 ---
 
 ## Baumdiagramme und Pfadregeln
 
-Baumdiagramme visualisieren mehrstufige Zufallsexperimente.
+Baumdiagramme visualisieren mehrstufige Zufallsexperimente. Sie sind besonders hilfreich bei Aufgaben mit bedingten Wahrscheinlichkeiten und mehrstufigem Ziehen.
 
 **Pfadregel 1 (Pfad-Wahrscheinlichkeit):** Wahrscheinlichkeit eines Pfades = Produkt der Kantenwahrscheinlichkeiten entlang des Pfades.
 
@@ -459,9 +627,35 @@ Stufe 1: P(rot) = 3/5, P(blau) = 2/5
 Stufe 2 nach rot: P(rot|1.rot) = 2/4 = 1/2, P(blau|1.rot) = 2/4 = 1/2
 Stufe 2 nach blau: P(rot|1.blau) = 3/4, P(blau|1.blau) = 1/4
 
-P(genau eine rote) = P(rot,blau) + P(blau,rot) = (3/5 × 2/4) + (2/5 × 3/4) = 6/20 + 6/20 = 12/20 = 3/5
+Alle 4 Pfade:
+- rot-rot: 3/5 × 2/4 = 6/20 = 3/10 = **30%**
+- rot-blau: 3/5 × 2/4 = 6/20 = 3/10 = **30%**
+- blau-rot: 2/5 × 3/4 = 6/20 = 3/10 = **30%**
+- blau-blau: 2/5 × 1/4 = 2/20 = 1/10 = **10%**
+- Kontrolle: 30% + 30% + 30% + 10% = **100%** ✓
 
-> **Merke:** Im Baumdiagramm: Entlang eines Astes multiplizieren (UND), zwischen parallelen Ästen addieren (ODER).
+P(genau eine rote) = P(rot,blau) + P(blau,rot) = 3/10 + 3/10 = 6/10 = 3/5 = **60%**
+
+> **Merke:** Im Baumdiagramm: Entlang eines Astes multiplizieren (UND), zwischen parallelen Ästen addieren (ODER). Kontrolle: Alle Pfadwahrscheinlichkeiten müssen sich zu 1 (= 100%) addieren.
+
+**Rechenbeispiel — Zweistufiges Baumdiagramm mit klinischem Bezug:**
+Ein Gentest wird an zwei aufeinanderfolgenden Tagen durchgeführt. P(positiv) = 0,8 pro Tag (unabhängig).
+Pfade:
+- (+, +): 0,8 × 0,8 = **0,64** — beide Tage positiv
+- (+, −): 0,8 × 0,2 = **0,16** — nur Tag 1 positiv
+- (−, +): 0,2 × 0,8 = **0,16** — nur Tag 2 positiv
+- (−, −): 0,2 × 0,2 = **0,04** — beide negativ
+Kontrolle: 0,64 + 0,16 + 0,16 + 0,04 = 1,00 ✓
+
+P(genau 1 positiv) = 0,16 + 0,16 = **0,32 = 32%**.
+P(mindestens 1 positiv) = 1 − P(keiner positiv) = 1 − 0,04 = **0,96 = 96%**.
+
+**Rechenbeispiel — Dreistufiges Baumdiagramm: Antikörpertest (IgG) über 3 Zeitpunkte:**
+Serokonversionsrate pro Woche: p = 0,3. Nach 3 Wochen: P(noch keine Serokonversion)?
+P(3× negativ) = (1−0,3)³ = 0,7³ = **0,343 = 34,3%**.
+P(erstmals in Woche 3 positiv) = 0,7 × 0,7 × 0,3 = **0,147 = 14,7%** (ein einziger Pfad im Baum).
+
+> **Merke:** Bei unabhängigen Wiederholungen (gleiche p in jeder Stufe) vereinfacht sich das Baumdiagramm zur Binomialverteilung. Bei abhängigen Stufen (z. B. ohne Zurücklegen) muss man die bedingten Wahrscheinlichkeiten an jeder Verzweigung anpassen.
 
 ---
 
@@ -488,7 +682,53 @@ Erwartungswert: μ = 4 × 0,9 = 3,6 (im Schnitt 3,6 korrekte Ergebnisse)
 
 > **Merke:** Binomialverteilung gilt nur wenn: (1) n Versuche sind unabhängig, (2) jeder Versuch hat genau zwei Ausgänge (Erfolg/Misserfolg), (3) p ist konstant. Wird eine Kugel ohne Zurücklegen gezogen, gilt Binomial nicht mehr!
 
+**Ausführliches Binomial-Rechenbeispiel — Geschwister mit Erbkrankheit:**
+Autosomal-rezessive Erkrankung: Beide Eltern heterozygot (Carrier). P(Kind krank) = 1/4 = 0,25.
+Das Paar bekommt n = 4 Kinder. Wie wahrscheinlich ist es, dass genau 2 der 4 Kinder krank sind?
+
+Schritt 1: Binomialkoeffizient C(4,2) = 4!/(2!×2!) = (4×3)/(2×1) = 6
+Schritt 2: Erfolgswahrscheinlichkeit p^k = 0,25² = 0,0625
+Schritt 3: Misserfolgswahrscheinlichkeit (1−p)^(n−k) = 0,75² = 0,5625
+Schritt 4: P(X=2) = 6 × 0,0625 × 0,5625 = 6 × 0,03516 = **0,2109 ≈ 21,1%**
+
+Vollständige Verteilung für dieses Beispiel:
+- P(X=0) = C(4,0) × 0,25⁰ × 0,75⁴ = 1 × 1 × 0,3164 = **31,6%** (kein Kind krank)
+- P(X=1) = C(4,1) × 0,25¹ × 0,75³ = 4 × 0,25 × 0,4219 = **42,2%** (genau 1 Kind)
+- P(X=2) = **21,1%** (genau 2 Kinder)
+- P(X=3) = C(4,3) × 0,25³ × 0,75¹ = 4 × 0,0156 × 0,75 = **4,7%**
+- P(X=4) = C(4,4) × 0,25⁴ × 0,75⁰ = 1 × 0,0039 = **0,4%** (alle 4 krank)
+- Kontrolle: 31,6 + 42,2 + 21,1 + 4,7 + 0,4 = 100% ✓
+
+Erwartungswert: μ = 4 × 0,25 = **1 Kind** im Mittel.
+Standardabweichung: σ = √(4 × 0,25 × 0,75) = √0,75 ≈ **0,87**.
+
+> **Merke:** Bei Binomial-Aufgaben im MedAT immer die drei Voraussetzungen prüfen: (1) festes n, (2) konstantes p, (3) unabhängige Versuche. Dann: C(n,k) berechnen, p^k und (1−p)^(n−k) multiplizieren, fertig. Die vollständige Verteilung aufzulisten ist eine gute Kontrolle (Summe = 1).
+
 ---
+
+## MedAT-Fokus: Wahrscheinlichkeitsrechnung
+
+**Zur gezielten Prüfungsvorbereitung:**
+
+**Häufigste Aufgabentypen:**
+- „Wie wahrscheinlich ist mindestens ein Treffer in n Versuchen?" → **Komplement: 1 − (1−p)ⁿ**
+- „Wie wahrscheinlich sind genau k Treffer in n Versuchen?" → **Binomialformel: C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ**
+- „A und B unabhängig: P(A und B)?" → **Multiplikation: P(A) × P(B)**
+- „A oder B: P(A ∪ B)?" → **Addition: P(A) + P(B) − P(A ∩ B)**
+- „Baumdiagramm: mehrstufiges Experiment" → **Pfadregeln: multiplizieren entlang, addieren zwischen Ästen**
+
+**Zentral prüfungsrelevant (auswendig):**
+- P(Ā) = 1 − P(A)
+- P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+- Unabhängig: P(A ∩ B) = P(A) × P(B)
+- Binomial: P(X=k) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ; μ = n×p
+- Komplement bei „mindestens": 1 − P(keines) = 1 − (1−p)ⁿ
+
+**Typische Fallen:**
+- Komplement vergessen: P(mind. 1) direkt berechnen ist aufwändig → immer 1−P(keines) verwenden
+- Additionssatz: P(A∩B) nicht abziehen → Doppelzählung
+- Binomial nur bei konstanter p und unabhängigen Versuchen
+- Unabhängigkeit ≠ Disjunktheit: Disjunkte Ereignisse (A∩B=∅) sind immer abhängig (wenn P(A)>0, P(B)>0)
 
 ---
 
@@ -503,14 +743,30 @@ Ein Medikament verursacht pro Dosis mit P = 0,15 eine Nebenwirkung (unabhängig)
 **Beispiel 3 — Binomialverteilung: Impf-Wirksamkeit:**
 Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 geschützt) = C(6,6) × 0,92⁶ × 0,08⁰ = 1 × 0,92⁶ × 1 ≈ 0,92⁶. Rechnung: 0,92² = 0,8464; 0,92³ ≈ 0,7787; 0,92⁶ = (0,92³)² ≈ 0,7787² ≈ **0,606 ≈ 60,6%**. Erwartungswert: μ = 6 × 0,92 = **5,52** geschützte Personen.
 
+**Beispiel 4 — Additionssatz: Diagnostik mit zwei Symptomen:**
+Bei einer Infektionskrankheit tritt Fieber (F) mit P(F) = 0,70 und Husten (H) mit P(H) = 0,50 auf. Beide zusammen: P(F ∩ H) = 0,35.
+P(Fieber oder Husten) = P(F) + P(H) − P(F ∩ H) = 0,70 + 0,50 − 0,35 = **0,85 = 85%**.
+Kontrolle: P(weder Fieber noch Husten) = 1 − 0,85 = 0,15 = 15%.
+
+**Beispiel 5 — Bedingte Wahrscheinlichkeit: Geschlecht und Farbenblindheit:**
+Rot-Grün-Schwäche: P(farbenblind | Mann) = 0,08, P(farbenblind | Frau) = 0,005. Bevölkerung: 50% M, 50% F.
+Totale Wahrscheinlichkeit: P(farbenblind) = 0,08 × 0,5 + 0,005 × 0,5 = 0,04 + 0,0025 = **0,0425 = 4,25%**.
+Bayes: P(Mann | farbenblind) = 0,04 / 0,0425 = **0,941 ≈ 94%**. Wenn eine Person farbenblind ist, ist sie mit 94% Wahrscheinlichkeit männlich.
+
+**Beispiel 6 — Binomialverteilung: Blutspender mit Blutgruppe 0:**
+P(Blutgruppe 0) = 0,37 in Österreich. Von n = 8 Spendern: P(genau 3 mit Blutgruppe 0)?
+C(8,3) = 56. 0,37³ ≈ 0,0507. 0,63⁵ ≈ 0,0992.
+P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 × 0,37 = **2,96** ≈ 3 Spender.
+
 ## Zusammenfassung (ultrakompakt)
 
 - **Laplace**: P(A) = günstige/mögliche Ergebnisse; nur wenn alle Ergebnisse gleich wahrscheinlich
 - **Additionssatz**: P(A∪B) = P(A)+P(B)−P(A∩B); bei disjunkten Ereignissen: P(A∩B) = 0
 - **Komplementregel**: P(Ā) = 1−P(A); "mindestens einmal" = 1 − P(keinmal)
 - **Unabhängigkeit**: P(A∩B) = P(A)×P(B); Kettenregel: P(A∩B∩C) = P(A)×P(B)×P(C)
+- **Bedingte W.**: P(A|B) = P(A∩B)/P(B); bei Ziehen ohne Zurücklegen ändern sich die Brüche
 - **Binomialverteilung**: P(X=k) = C(n,k)×pᵏ×(1−p)^(n−k); μ = n×p; σ² = n×p×(1−p)
-- **Klinisch**: Autosomal-rezessiv P(krank)=1/4; Nebenwirkungen kumulieren; Impfschutz C(6,6)×p⁶`,
+- **Klinisch**: Autosomal-rezessiv P(krank)=1/4; Nebenwirkungen kumulieren; 20 Labortests → 64% mind. 1 falsch-positiv`,
       lernziele: [
         "Die klassische Wahrscheinlichkeit als P(A) = |A|/|Ω| berechnen und die Laplace-Bedingung prüfen",
         "Komplementregel, Additionssatz und Multiplikationssatz korrekt anwenden und dabei unvereinbare von unabhängigen Ereignissen unterscheiden",
@@ -611,6 +867,39 @@ Impfung hat Schutzrate p = 0,92. In einer Gruppe von n = 6 Geimpften: P(alle 6 g
           difficulty: 3,
           tags: ["binomialverteilung", "wahrscheinlichkeit", "kombinatorik"],
         },
+        {
+          question:
+            "Ein Medikament hat 20% Nebenwirkungsrate pro Einnahme. Nach 3 unabhängigen Einnahmen: P(mindestens eine Nebenwirkung)?",
+          options: ["48,8%", "60%", "20%", "51,2%", "8%"],
+          correctIndex: 0,
+          explanation:
+            "Komplementstrategie: P(mind. 1 NW) = 1 − P(keine NW in 3 Einnahmen). P(keine NW) = (1−0,2)³ = 0,8³ = 0,512. P(mind. 1 NW) = 1 − 0,512 = 0,488 = 48,8%. Merke: Auch bei 'nur' 20% Einzelrisiko kumuliert das Risiko über mehrere Einnahmen erheblich.",
+          hints: [
+            "'Mindestens eine' → Komplement: 1 − P('keine').",
+            "P(keine NW) = 0,8³ = 0,512. P(mind. 1) = 1 − 0,512 = ?",
+          ],
+          difficulty: 2,
+          tags: ["komplement", "kumulatives-risiko", "klinisch"],
+        },
+        {
+          question: "P(A) = 0,3, P(B) = 0,5, P(A ∩ B) = 0,15. Sind A und B unabhängig?",
+          options: [
+            "Ja, denn P(A)×P(B) = 0,15 = P(A∩B)",
+            "Nein, denn 0,3 × 0,5 = 0,10 ≠ 0,15",
+            "Ja, denn A und B sind disjunkt",
+            "Nein, denn P(A∩B) > 0",
+            "Kann nicht entschieden werden",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Unabhängigkeit: P(A∩B) = P(A) × P(B)? Prüfung: P(A) × P(B) = 0,3 × 0,5 = 0,15. Und P(A∩B) = 0,15. Da 0,15 = 0,15, sind A und B unabhängig. Das Eintreten von A ändert nichts an der Wahrscheinlichkeit von B: P(B|A) = P(A∩B)/P(A) = 0,15/0,3 = 0,5 = P(B).",
+          hints: [
+            "Unabhängigkeit prüfen: Gilt P(A∩B) = P(A) × P(B)?",
+            "0,3 × 0,5 = 0,15. Vergleiche mit P(A∩B) = 0,15.",
+          ],
+          difficulty: 2,
+          tags: ["unabhängigkeit", "definition", "wahrscheinlichkeit"],
+        },
       ],
       altfrage: {
         question:
@@ -685,6 +974,23 @@ P(A ∩ B) = P(A|B) × P(B) = P(B|A) × P(A)
 
 > **Merke:** Bedingte Wahrscheinlichkeit verkleinert den Ergebnisraum. P(A|B) ≠ P(B|A) — diese Verwechslung ist der klassische "Prosecutors' Fallacy"-Fehler in der forensischen Medizin!
 
+**Rechenbeispiel — P(A|B) vs. P(B|A) anhand klinischer Daten:**
+In einer Studie mit 500 Patienten: 100 haben Diabetes (D), 400 nicht. Von den 100 Diabetikern haben 60 einen HbA1c > 6,5% (H+). Von den 400 Nicht-Diabetikern haben 20 einen HbA1c > 6,5%.
+
+P(H+|D) = 60/100 = **0,60 = 60%** (Sensitivität des HbA1c-Tests für Diabetes).
+P(D|H+) = 60/(60+20) = 60/80 = **0,75 = 75%** (PPV — wer von den Positiven hat wirklich Diabetes).
+
+Hier gilt: P(H+|D) = 60% ≠ P(D|H+) = 75%. Die Richtung der Bedingung ändert das Ergebnis fundamental.
+
+**Rechenbeispiel — Totale Wahrscheinlichkeit mit drei Bedingungen:**
+Ein Krankenhaus hat 3 Stationen: Station A (50% der Patienten), B (30%), C (20%).
+Infektionsraten: P(Infektion|A) = 3%, P(Infektion|B) = 5%, P(Infektion|C) = 8%.
+P(Infektion) = P(I|A)×P(A) + P(I|B)×P(B) + P(I|C)×P(C)
+= 0,03 × 0,50 + 0,05 × 0,30 + 0,08 × 0,20
+= 0,015 + 0,015 + 0,016 = **0,046 = 4,6%**.
+Bayes: P(C | Infektion) = P(I|C)×P(C) / P(I) = 0,016/0,046 = **0,348 ≈ 34,8%**.
+Obwohl Station C nur 20% der Patienten hat, stammen 35% aller Infektionen von dort — weil die Infektionsrate dort am höchsten ist.
+
 ---
 
 ## Satz der totalen Wahrscheinlichkeit
@@ -734,6 +1040,25 @@ Ergebnis: Bei einem positiven Test ist die Person nur mit ca. 49% Wahrscheinlich
 
 > **Merke:** Bayes-Theorem zeigt: Ein positiver Test bedeutet nicht "krank". Bei niedriger Prävalenz ist der PPV erschreckend niedrig. Das ist der häufigste Irrtum beim Lesen von Testergebnissen — klinisch hochrelevant!
 
+**Schritt-für-Schritt: Bayes-Formel anwenden (Rezept für Klausur):**
+
+1. **Identifiziere die Größen:** Prävalenz P(K), Sensitivität P(T+|K), Spezifität P(T−|K̄).
+2. **Berechne P(T+|K̄)** = 1 − Spezifität (Falsch-positiv-Rate).
+3. **Berechne P(T+)** mit totaler Wahrscheinlichkeit:
+   P(T+) = Sens × Prävalenz + (1−Spez) × (1−Prävalenz)
+4. **Bayes einsetzen:** PPV = P(K|T+) = (Sens × Prävalenz) / P(T+).
+5. **Kontrolle:** PPV muss zwischen 0 und 1 liegen. Bei niedriger Prävalenz ist PPV immer kleiner als Sensitivität.
+
+**Negativer prädiktiver Wert (NPV) mit Bayes:**
+NPV = P(K̄|T−) = P(T−|K̄) × P(K̄) / P(T−)
+Wobei: P(T−) = (1−Sens) × Prävalenz + Spez × (1−Prävalenz)
+
+**Rechenbeispiel — NPV bei Streptokokken-Schnelltest:**
+Prävalenz Strep-Angina bei Halsschmerzen: P(K) = 25%. Schnelltest: Sens 85%, Spez 97%.
+P(T−) = (1−0,85) × 0,25 + 0,97 × 0,75 = 0,15 × 0,25 + 0,97 × 0,75 = 0,0375 + 0,7275 = 0,765.
+NPV = Spez × (1−Prävalenz) / P(T−) = 0,7275 / 0,765 = **0,951 ≈ 95,1%**.
+Interpretation: Bei negativem Schnelltest sind 95% wirklich gesund. Die restlichen 5% haben trotzdem Strep → klinischer Verdacht bleibt bei typischen Symptomen relevant.
+
 ---
 
 ## Vierfeldertafel — die visuelle Rechenhilfe
@@ -762,6 +1087,88 @@ Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
 
 ---
 
+## Natürliche Häufigkeiten — die 1000-Personen-Methode
+
+Die 1000-Personen-Methode (auch: natürliche Häufigkeiten) ist die intuitivste Art, Bayes-Aufgaben zu lösen. Statt mit Prozenten zu rechnen, denkt man in konkreten Personenzahlen.
+
+**Schritt-für-Schritt-Rezept:**
+
+1. **Wähle eine runde Stichprobengröße** (z. B. 1.000 oder 10.000 Personen)
+2. **Teile in Kranke und Gesunde** anhand der Prävalenz
+3. **Wende Sensitivität auf die Kranken an** → TP und FN
+4. **Wende Spezifität auf die Gesunden an** → TN und FP
+5. **Lies die gesuchte Größe ab** (PPV = TP / alle Positiven)
+
+**Ausführliches Rechenbeispiel — Zöliakie-Screening:**
+Prävalenz der Zöliakie in Österreich: ca. 1% = 0,01. Antikörper-Test (tTG-IgA): Sensitivität 95%, Spezifität 98%.
+
+**Schritt 1:** n = 10.000 Personen.
+**Schritt 2:** Krank: 10.000 × 0,01 = 100. Gesund: 9.900.
+**Schritt 3:** TP = 100 × 0,95 = 95. FN = 100 × 0,05 = 5.
+**Schritt 4:** TN = 9.900 × 0,98 = 9.702. FP = 9.900 × 0,02 = 198.
+**Schritt 5:**
+
+| | Test + | Test − | Gesamt |
+|---|---|---|---|
+| Krank (Zöliakie) | 95 (TP) | 5 (FN) | 100 |
+| Gesund | 198 (FP) | 9.702 (TN) | 9.900 |
+| Gesamt | 293 | 9.707 | 10.000 |
+
+PPV = 95 / 293 = **0,324 ≈ 32,4%**. Nur jeder dritte positive Antikörper-Test bestätigt sich als Zöliakie.
+NPV = 9.702 / 9.707 = **0,9995 ≈ 99,95%**. Ein negativer Test schließt Zöliakie praktisch aus.
+
+> **Merke:** Die 1000-Personen-Methode vermeidet Bruchrechnung und macht die Verhältnisse greifbar. MedAT-Tipp: Immer mit einer runden Zahl starten (1.000 oder 10.000), die durch die Prävalenz glatt teilbar ist.
+
+---
+
+## Baumdiagramm-Methode für Bayes
+
+Das Baumdiagramm stellt denselben Sachverhalt grafisch dar. Die Äste des Baums repräsentieren die schrittweisen Verzweigungen.
+
+**Aufbau für einen Screening-Test:**
+
+Stufe 1 (Krankheitsstatus):
+- Ast „krank": Wahrscheinlichkeit = Prävalenz
+- Ast „gesund": Wahrscheinlichkeit = 1 − Prävalenz
+
+Stufe 2 (Testergebnis):
+- Von „krank" → „Test+" mit P = Sensitivität
+- Von „krank" → „Test−" mit P = 1 − Sensitivität
+- Von „gesund" → „Test+" mit P = 1 − Spezifität (FPR)
+- Von „gesund" → „Test−" mit P = Spezifität
+
+**Pfadregel 1 (multiplizieren):** P(krank UND Test+) = Prävalenz × Sensitivität = 0,01 × 0,95 = 0,0095
+**Pfadregel 1:** P(gesund UND Test+) = (1−Prävalenz) × (1−Spezifität) = 0,99 × 0,02 = 0,0198
+**Pfadregel 2 (addieren):** P(Test+) = 0,0095 + 0,0198 = 0,0293
+
+PPV = P(krank UND Test+) / P(Test+) = 0,0095 / 0,0293 = **0,324 ≈ 32,4%** — identisch mit der Vierfeldertafel!
+
+> **Merke:** Baumdiagramm und Vierfeldertafel liefern immer dasselbe Ergebnis. Wähle die Methode, die dir leichter fällt. Für MedAT-Klausuren empfehlen wir die Vierfeldertafel — sie ist schneller und weniger fehleranfällig.
+
+---
+
+## Sensitivität, Spezifität, PPV, NPV — Formelsammlung
+
+| Kennzahl | Formel | Berechnet aus | Abhängig von Prävalenz? |
+|---|---|---|---|
+| **Sensitivität** | TP / (TP + FN) | Spalte „krank" | Nein |
+| **Spezifität** | TN / (TN + FP) | Spalte „gesund" | Nein |
+| **PPV** | TP / (TP + FP) | Zeile „Test+" | **Ja** |
+| **NPV** | TN / (TN + FN) | Zeile „Test−" | **Ja** |
+| **FPR (Falsch-positiv-Rate)** | FP / (FP + TN) = 1 − Spez | Spalte „gesund" | Nein |
+| **FNR (Falsch-negativ-Rate)** | FN / (TP + FN) = 1 − Sens | Spalte „krank" | Nein |
+
+**Zusammenhang PPV und Prävalenz — warum der PPV so stark variiert:**
+
+| Prävalenz | TP (Sens 95%) | FP (Spez 98%) | PPV |
+|---|---|---|---|
+| 0,1% (10 von 10.000) | 9,5 ≈ 10 | 199,8 ≈ 200 | 10/210 ≈ **4,8%** |
+| 1% (100 von 10.000) | 95 | 198 | 95/293 ≈ **32%** |
+| 5% (500 von 10.000) | 475 | 190 | 475/665 ≈ **71%** |
+| 20% (2.000 von 10.000) | 1.900 | 160 | 1.900/2.060 ≈ **92%** |
+
+> **Merke:** Bei Prävalenz 0,1% ist der PPV nur 5% — 19 von 20 Positiven sind falsch positiv. Bei 20% Prävalenz (Risikogruppe) steigt der PPV auf 92%. Deshalb screent man nur in Risikogruppen, nicht in der Allgemeinbevölkerung.
+
 ---
 
 ## Rechenbeispiele
@@ -776,14 +1183,78 @@ Prävalenz 0,1% (Allgemeinbevölkerung). ELISA: Sens 99,7%, Spez 99,5%. n = 100.
 **Beispiel 3 — Carrier-Test: P(Carrier | positiver Test) bei CF:**
 A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 + 0,01 × 0,96 = 0,036 + 0,0096 = 0,0456. P(Carrier|T+) = 0,036 / 0,0456 = **0,789 ≈ 79%**. Trotz 99% Spezifität: 1 von 5 positiv Getesteten ist kein Carrier. Bestätigungsdiagnostik (DNA-Analyse) nötig.
 
+**Beispiel 4 — Drogentest am Arbeitsplatz (1000-Personen-Methode):**
+Drogenkonsum-Prävalenz: 3%. Urin-Schnelltest: Sens 97%, Spez 95%.
+n = 10.000: Konsumenten = 300. Nicht-Konsumenten = 9.700.
+TP = 300 × 0,97 = 291. FN = 9. FP = 9.700 × 0,05 = 485. TN = 9.215.
+PPV = 291 / (291 + 485) = 291 / 776 = **0,375 ≈ 37,5%**.
+Ergebnis: Ohne Bestätigungstest wären fast 2 von 3 positiv Getesteten fälschlich als Drogenkonsumenten eingestuft! Deshalb: positiver Schnelltest → immer Bestätigungstest (GC-MS).
+
+**Beispiel 5 — NPV berechnen: Ausschlussdiagnostik bei Lungenembolie:**
+D-Dimer-Test: Sens 97%, Spez 40%. Prävalenz LE in der Notaufnahme: 15%.
+n = 1.000: LE-Patienten = 150. Keine LE = 850.
+TP = 150 × 0,97 = 145,5 ≈ 146. FN = 4.
+FP = 850 × 0,60 = 510. TN = 340.
+NPV = 340 / (340 + 4) = 340 / 344 = **0,988 ≈ 98,8%**.
+PPV = 146 / (146 + 510) = 146 / 656 = **0,223 ≈ 22,3%** — schlecht.
+Klinische Konsequenz: D-Dimer ist ein Ausschlusstest (hohe Sens → hoher NPV). Negativer D-Dimer → LE praktisch ausgeschlossen. Positiver D-Dimer → weitere Diagnostik (CT-Angiografie) nötig. Das ist **SnNout** in Aktion.
+
+**Beispiel 6 — Effekt einer Vorselektion auf den PPV:**
+PSA-Test für Prostatakarzinom: Sens 80%, Spez 70%.
+**Ohne Selektion** (Allgemeinbevölkerung, Prävalenz 1%): n = 10.000. Krank: 100. TP = 80. FP = 2.970. PPV = 80/3.050 ≈ **2,6%**.
+**Mit Selektion** (Männer >50 mit erhöhtem Risiko, Prävalenz 10%): n = 10.000. Krank: 1.000. TP = 800. FP = 2.700. PPV = 800/3.500 ≈ **22,9%**.
+**Doppelte Selektion** (familiäre Belastung + erhöhtes PSA, Prävalenz 30%): TP = 2.400. FP = 2.100. PPV = 2.400/4.500 ≈ **53,3%**.
+Die Vorselektion (= Erhöhung der Vortestwahrscheinlichkeit) ist die effektivste Methode, den PPV zu verbessern.
+
+## Häufige Fragen & Typische Fallen
+
+**Frage: Warum ist der PPV bei seltenen Krankheiten so niedrig?**
+Weil es in absoluten Zahlen viel mehr Gesunde als Kranke gibt. Selbst ein sehr spezifischer Test (99%) produziert bei 10.000 Gesunden 100 Falsch-Positive — aber bei nur 10 Kranken (Prävalenz 0,1%) gibt es maximal 10 Richtig-Positive. FP >> TP → PPV niedrig.
+
+**Frage: Was ist der Unterschied zwischen Sensitivität und PPV?**
+Sensitivität = „Unter den Kranken: wie viele erkennt der Test?" → spaltenbasiert (nur Kranke betrachtet).
+PPV = „Unter den Positiven: wie viele sind krank?" → zeilenbasiert (nur positive Tests betrachtet).
+Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hängt von der Prävalenz ab.
+
+**Frage: Wann verwendet man welchen Test?**
+- **Screening** (Ausschlussdiagnostik): hohe Sensitivität → SnNout. Negativer Test = Krankheit unwahrscheinlich.
+- **Bestätigung** (Einschlussdiagnostik): hohe Spezifität → SpPin. Positiver Test = Krankheit sehr wahrscheinlich.
+- **Optimaler Workflow:** Erst sensitiver Schnelltest, dann spezifischer Bestätigungstest (z. B. ELISA → Western Blot; D-Dimer → CT-Angio).
+
+**Typische Fallen im MedAT:**
+- P(Krank | Test+) ≠ P(Test+ | Krank): Das ist der Kern des Bayes-Theorems!
+- „95% Sensitivität" bedeutet NICHT „95% Chance, dass man krank ist, wenn der Test positiv ist"
+- Bei 2-Stufen-Strategie: Der zweite Test verbessert den PPV dramatisch, weil die Vortestwahrscheinlichkeit jetzt hoch ist (nur die Positiven des ersten Tests werden getestet)
+- Vierfeldertafel: Summe aller Zellen = n (Gesamtstichprobe) — nutze das zur Kontrolle
+
+## Prüfungsrelevante Zahlen und Formeln (Cheat-Sheet)
+
+| Formel | Bedeutung | Wann verwenden? |
+|---|---|---|
+| P(A\|B) = P(A∩B)/P(B) | Bedingte Wahrscheinlichkeit | Wenn Information über B gegeben ist |
+| P(B) = Σ P(B\|Aᵢ)×P(Aᵢ) | Totale Wahrscheinlichkeit | Um P(T+) zu berechnen |
+| PPV = Sens×Präv / P(T+) | Satz von Bayes (PPV-Form) | Positiver Vorhersagewert |
+| Sens = TP/(TP+FN) | Sensitivität | Erkennungsrate bei Kranken |
+| Spez = TN/(TN+FP) | Spezifität | Ausschlussrate bei Gesunden |
+| PPV = TP/(TP+FP) | Positiver prädiktiver Wert | Sicherheit bei positivem Test |
+| NPV = TN/(TN+FN) | Negativer prädiktiver Wert | Sicherheit bei negativem Test |
+
+**Typische PPV-Werte im klinischen Alltag:**
+- Mammographie (Präv 0,8%): PPV ≈ 10–15%
+- HIV-ELISA (Allgemeinbevölkerung, Präv 0,1%): PPV ≈ 17% → Bestätigungstest nötig
+- HIV-ELISA (Risikogruppe, Präv 5%): PPV ≈ 91%
+- Troponin in Notaufnahme (Präv 10%): PPV ≈ 50–60%
+- D-Dimer (Präv 15%): PPV ≈ 22%, aber NPV ≈ 99% → Ausschlusstest
+
 ## Zusammenfassung (ultrakompakt)
 
 - **Bedingte Wahrscheinlichkeit**: P(A|B) = P(A∩B)/P(B); "A gegeben B ist eingetreten"
 - **Satz von Bayes**: P(A|B) = P(B|A)×P(A) / P(B); kehrt die Bedingung um
 - **Totale Wahrscheinlichkeit**: P(B) = P(B|A₁)×P(A₁) + P(B|A₂)×P(A₂) + ...
 - **Vierfeldertafel**: TP, FP, FN, TN; Sens = TP/(TP+FN); Spez = TN/(TN+FP); PPV = TP/(TP+FP); NPV = TN/(TN+FN)
-- **Merkhilfe SpPin/SnNout**: Hohe Spezifität → positiver Test = krank (bestätigt); hohe Sensitivität → negativer Test = gesund (ausschließt)
-- **Klinisch**: Mammographie PPV ~12%; HIV-Screening 2-Stufen (ELISA + Western Blot); CF-Carrier-Test`,
+- **1000-Personen-Methode**: Runde Zahl wählen → Kranke/Gesunde → TP/FP/TN/FN → PPV ablesen
+- **Merkhilfe SpPin/SnNout**: Hohe Spezifität → positiver Test bestätigt; hohe Sensitivität → negativer Test schließt aus
+- **Klinisch**: Mammographie PPV ~12%; HIV 2-Stufen; D-Dimer NPV 99%; Vorselektion erhöht PPV dramatisch`,
       lernziele: [
         "Bedingte Wahrscheinlichkeit P(A|B) = P(A∩B)/P(B) berechnen und den Unterschied zu P(B|A) erklären",
         "Den Satz der totalen Wahrscheinlichkeit auf medizinische Testszenarien anwenden",
@@ -884,6 +1355,39 @@ A priori P(Carrier) = 1/25 = 4%. Test: Sens 90%, Spez 99%. P(T+) = 0,90 × 0,04 
           difficulty: 3,
           tags: ["bayes", "ppv", "prävalenz", "klinisch"],
         },
+        {
+          question:
+            "1000-Personen-Methode: Prävalenz 5%, Sens 90%, Spez 80%. Von 1000 Personen: Wie viele sind falsch positiv (FP)?",
+          options: ["190", "45", "50", "760", "95"],
+          correctIndex: 0,
+          explanation:
+            "1000 Personen. Krank: 1000 × 0,05 = 50. Gesund: 950. FP = Gesunde × (1 − Spezifität) = 950 × 0,20 = 190. Zur Kontrolle: TP = 50 × 0,90 = 45. TN = 950 × 0,80 = 760. FN = 50 × 0,10 = 5. Summe: 45 + 190 + 5 + 760 = 1000. PPV = 45/(45+190) = 45/235 ≈ 19,1%.",
+          hints: [
+            "Gesunde = 1000 × (1 − 0,05) = 950.",
+            "FP = Gesunde × (1 − Spezifität) = 950 × 0,20 = ?",
+          ],
+          difficulty: 2,
+          tags: ["vierfeldertafel", "falsch-positiv", "1000-personen"],
+        },
+        {
+          question: "Welche Maßnahme erhöht den PPV eines Screeningtests am stärksten?",
+          options: [
+            "Nur Risikogruppen testen (höhere Prävalenz in der Teststichprobe)",
+            "Sensitivität des Tests erhöhen",
+            "Mehr Personen testen (größere Stichprobe)",
+            "Den Test mehrfach am selben Tag wiederholen",
+            "Den Cutoff-Wert senken (empfindlicher machen)",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Der PPV hängt stark von der Prävalenz ab (Bayes-Paradox). Die effektivste Methode ist die Vorselektion: Testet man nur Risikogruppen (z. B. Familienanamnese, Symptome), steigt die Prävalenz in der Teststichprobe und damit der PPV dramatisch. Sensitivität erhöhen verändert den PPV nur wenig. Stichprobengröße hat keinen Einfluss auf den PPV. Cutoff senken erhöht Sensitivität, senkt aber Spezifität und damit den PPV.",
+          hints: [
+            "PPV = TP/(TP+FP). Was reduziert FP relativ zu TP am stärksten?",
+            "Höhere Prävalenz = mehr TP relativ zu FP → höherer PPV.",
+          ],
+          difficulty: 2,
+          tags: ["ppv", "prävalenz", "screening", "klinisch"],
+        },
       ],
       altfrage: {
         question:
@@ -982,6 +1486,23 @@ Beispiel: s = √4 = 2. Interpretation: Die Messwerte weichen im Schnitt etwa 2 
 
 Eigenschaft: Gleiche Einheit wie die Daten (im Gegensatz zur Varianz, die in Einheit² ist). Deshalb ist s die praxisnähere Maßzahl.
 
+**Ausführliches Rechenbeispiel — Varianz Schritt für Schritt:**
+Blutzuckerwerte (mg/dL) von 6 Patienten: {85, 90, 92, 88, 95, 100}.
+Schritt 1: Mittelwert x̄ = (85+90+92+88+95+100)/6 = 550/6 = **91,67 mg/dL**.
+Schritt 2: Abweichungen und Quadrate:
+- (85 − 91,67)² = (−6,67)² = 44,49
+- (90 − 91,67)² = (−1,67)² = 2,79
+- (92 − 91,67)² = (0,33)² = 0,11
+- (88 − 91,67)² = (−3,67)² = 13,47
+- (95 − 91,67)² = (3,33)² = 11,09
+- (100 − 91,67)² = (8,33)² = 69,39
+Schritt 3: Summe der Abweichungsquadrate = 44,49 + 2,79 + 0,11 + 13,47 + 11,09 + 69,39 = **141,34**.
+Schritt 4: Varianz s² = 141,34 / (6−1) = 141,34 / 5 = **28,27 (mg/dL)²**.
+Schritt 5: Standardabweichung s = √28,27 ≈ **5,32 mg/dL**.
+Interpretation: Die Blutzuckerwerte streuen im Mittel um ca. 5,3 mg/dL um den Mittelwert von 91,7 mg/dL.
+
+> **Merke:** Im Nenner steht n−1 (nicht n!) — die sogenannte Bessel-Korrektur. Bei Stichproben (nicht Grundgesamtheit) teilt man durch n−1, weil die Stichprobe die Streuung systematisch unterschätzt. Im MedAT wird fast immer n−1 verwendet.
+
 **Interquartilsabstand (IQA):**
 IQA = Q3 − Q1 (75. Perzentil − 25. Perzentil). Robust gegen Ausreißer. Wird im Boxplot dargestellt.
 
@@ -1040,6 +1561,101 @@ z = (x − μ) / σ
 Der z-Wert gibt an, wie viele Standardabweichungen ein Wert vom Mittelwert entfernt ist.
 z = 0 → am Mittelwert; z = 2 → 2 Standardabweichungen oberhalb
 
+Die **Standardnormalverteilung** ist N(0, 1) — Mittelwert 0, Standardabweichung 1. Jede Normalverteilung wird durch z-Transformation darauf zurückgeführt.
+
+### z-Tabelle — wichtige Werte auswendig lernen
+
+| z-Wert | Φ(z) = P(Z ≤ z) | Bedeutung |
+|---|---|---|
+| −3,0 | 0,0013 (0,13%) | Extrem niedrig |
+| −2,0 | 0,0228 (2,3%) | Untere 2,3% |
+| −1,645 | 0,0500 (5%) | Untere 5% (einseitiges 5%-Quantil) |
+| −1,0 | 0,1587 (15,9%) | Untere 16% |
+| 0,0 | 0,5000 (50%) | Median = Mittelwert |
+| 1,0 | 0,8413 (84,1%) | Obere 16% beginnt |
+| 1,645 | 0,9500 (95%) | Obere 5% beginnt |
+| 1,96 | 0,9750 (97,5%) | Grenze für 95%-KI (beidseitig) |
+| 2,0 | 0,9772 (97,7%) | Obere 2,3% |
+| 2,576 | 0,9950 (99,5%) | Grenze für 99%-KI (beidseitig) |
+| 3,0 | 0,9987 (99,87%) | Obere 0,13% |
+
+> **Merke:** Für MedAT die wichtigsten z-Werte merken: z = ±1,96 für 95%-Konfidenzintervall, z = ±1,645 für einseitige 5%-Grenze, z = ±2,576 für 99%-KI. Die 68-95-99,7-Regel nutzt die gerundeten Werte z = ±1, ±2, ±3.
+
+### z-Transformation — Rechenbeispiele Schritt für Schritt
+
+**Beispiel 1: Ist ein Laborwert auffällig?**
+Hämoglobin bei Frauen: N(μ = 13,5 g/dL, σ = 1,2 g/dL). Patientin hat Hb = 10,5 g/dL.
+z = (10,5 − 13,5) / 1,2 = −3,0 / 1,2 = **−2,5**.
+Interpretation: 2,5 Standardabweichungen unter dem Mittelwert. Φ(−2,5) ≈ 0,006 → nur 0,6% der gesunden Frauen haben so niedrige Werte → **klinisch auffällig (Anämie-Verdacht)**.
+
+**Beispiel 2: Perzentil-Berechnung mit z-Wert:**
+Geburtsgewicht: N(μ = 3.400 g, σ = 450 g). Ab welchem Gewicht gehört ein Baby zu den leichtesten 5%?
+Gesucht: x, sodass P(X ≤ x) = 0,05. Aus z-Tabelle: z = −1,645.
+x = μ + z × σ = 3.400 + (−1,645) × 450 = 3.400 − 740 = **2.660 g**.
+Babys unter 2.660 g gehören zu den leichtesten 5% → klinisch: SGA (Small for Gestational Age).
+
+**Beispiel 3: Wie viel Prozent liegen zwischen zwei Werten?**
+Cholesterin: N(μ = 200, σ = 35) mg/dL. P(180 ≤ X ≤ 250)?
+z₁ = (180 − 200)/35 = −20/35 = −0,57. z₂ = (250 − 200)/35 = 50/35 = 1,43.
+Aus z-Tabelle: Φ(1,43) ≈ 0,9236. Φ(−0,57) ≈ 0,2843.
+P(180 ≤ X ≤ 250) = 0,9236 − 0,2843 = **0,639 ≈ 63,9%**.
+
+**Beispiel 4: 68-95-99,7-Regel mit konkreten Zahlen:**
+Körpertemperatur: N(μ = 36,8°C, σ = 0,4°C).
+- μ ± 1σ = 36,4 – 37,2°C → 68% der Gesunden
+- μ ± 2σ = 36,0 – 37,6°C → 95% der Gesunden
+- μ ± 3σ = 35,6 – 38,0°C → 99,7% der Gesunden
+- Temperatur > 37,6°C (> μ+2σ): obere 2,3% → erhöhte Temperatur
+- Temperatur > 38,0°C (> μ+3σ): obere 0,15% → Fieber
+
+> **Merke:** Die z-Transformation z = (x−μ)/σ übersetzt jeden Messwert in eine universelle Skala. Ein z-Wert von ±2 oder darüber ist bei normalverteilten Daten stets auffällig (< 5% Wahrscheinlichkeit). Das gilt für Laborwerte, Körpermaße und Studienergebnisse gleichermaßen.
+
+---
+
+### Konfidenzintervall — Kurzüberblick für den MedAT
+
+Das **95%-Konfidenzintervall (KI)** für den Mittelwert einer Stichprobe gibt an, in welchem Bereich der wahre Populationsmittelwert mit 95% Wahrscheinlichkeit liegt:
+
+KI = x̄ ± z × (σ / √n) = x̄ ± 1,96 × (σ / √n)
+
+Dabei ist σ/√n der **Standardfehler** (SE) — die Standardabweichung des Stichprobenmittelwerts.
+
+**Rechenbeispiel:** In einer Studie mit n = 100 Patienten wird ein mittlerer Blutdruck von x̄ = 135 mmHg gemessen, σ = 20 mmHg.
+SE = σ/√n = 20/√100 = 20/10 = 2,0.
+95%-KI = 135 ± 1,96 × 2,0 = 135 ± 3,92 = **[131,1 ; 138,9] mmHg**.
+Interpretation: Der wahre Mittelwert der Population liegt mit 95% Wahrscheinlichkeit zwischen 131 und 139 mmHg.
+
+**Für 99%-KI:** z = 2,576 statt 1,96 → KI = 135 ± 2,576 × 2,0 = 135 ± 5,15 = [129,8 ; 140,2] mmHg (breiter, aber sicherer).
+
+> **Merke:** Größere Stichprobe (n↑) → kleinerer Standardfehler → schmaleres KI → genauere Schätzung. SE = σ/√n — beim Vervierfachen der Stichprobe halbiert sich der Standardfehler.
+
+---
+
+## Referenzbereiche und klinische Interpretation
+
+Laborwerte werden als Referenzbereiche angegeben, typischerweise als μ ± 2σ (umfasst 95% der Gesunden).
+
+**Wichtige Konsequenz:** Bei 20 unabhängigen Laborwerten fällt jeder einzelne mit 5% Wahrscheinlichkeit aus dem Referenzbereich — selbst bei einem völlig gesunden Patienten. P(mind. 1 auffällig) = 1 − 0,95²⁰ = 1 − 0,358 = **64%**. Mehr als jeder zweite Gesunde hat mindestens einen „auffälligen" Wert!
+
+**Typische Referenzbereiche (normalverteilt):**
+
+| Laborwert | μ | σ | Referenzbereich (μ±2σ) |
+|---|---|---|---|
+| Hb Männer | 15,0 g/dL | 1,5 | 12,0–18,0 |
+| Hb Frauen | 13,5 g/dL | 1,2 | 11,1–15,9 |
+| Cholesterin | 200 mg/dL | 35 | 130–270 |
+| Nüchternglukose | 90 mg/dL | 12 | 66–114 |
+| Kreatinin Männer | 0,9 mg/dL | 0,15 | 0,6–1,2 |
+
+> **Merke:** Ein einzelner Wert außerhalb des Referenzbereichs ist NICHT automatisch pathologisch — per Definition fallen 5% der Gesunden außerhalb. Erst ein Wert außerhalb μ±3σ (0,3% der Gesunden) ist hochverdächtig. Klinische Interpretation erfordert immer den Gesamtkontext.
+
+**Rechenbeispiel — Einstufung eines Laborwerts:**
+Serumnatrium: N(μ = 140 mmol/L, σ = 3 mmol/L). Patient hat Na = 148 mmol/L.
+z = (148 − 140) / 3 = 8/3 = **2,67**.
+Interpretation: Φ(2,67) ≈ 0,9962 → 99,6% der Gesunden haben einen niedrigeren Wert → obere 0,4% → **Hypernatriämie wahrscheinlich**.
+Vergleich: Na = 146 → z = 2,0 → obere 2,3% → grenzwertig, Kontrolle empfohlen.
+Na = 143 → z = 1,0 → obere 16% → unauffällig, innerhalb Referenzbereich.
+
 ---
 
 ## Sensitivität und Spezifität (Vertiefung)
@@ -1072,12 +1688,58 @@ Diese Kennzahlen beschreiben die diagnostische Güte eines Tests:
 
 > **Merke:** Sensitivität und Spezifität sind Eigenschaften des Tests — unabhängig von der Prävalenz. PPV und NPV sind abhängig von der Prävalenz — sie verändern sich je nach Bevölkerungsgruppe.
 
+**Rechenbeispiel — Vierfeldertafel aus Studiendaten aufstellen:**
+In einer Studie werden 500 Personen getestet. 200 sind krank (durch Goldstandard bestätigt), 300 sind gesund.
+Der Test ist bei 180 der 200 Kranken positiv und bei 240 der 300 Gesunden negativ.
+
+Schritt 1: Identifiziere die Zellen.
+- TP = 180 (krank und positiv)
+- FN = 200 − 180 = 20 (krank aber negativ)
+- TN = 240 (gesund und negativ)
+- FP = 300 − 240 = 60 (gesund aber positiv)
+
+Schritt 2: Berechne die Kennzahlen.
+- Sensitivität = 180/200 = **90%**
+- Spezifität = 240/300 = **80%**
+- PPV = 180/(180+60) = 180/240 = **75%**
+- NPV = 240/(240+20) = 240/260 = **92,3%**
+
+Schritt 3: Kontrolle — Summen.
+| | Test + | Test − | Gesamt |
+|---|---|---|---|
+| Krank | 180 | 20 | 200 |
+| Gesund | 60 | 240 | 300 |
+| Gesamt | 240 | 260 | 500 ✓ |
+
+> **Merke:** Bei Studiendaten (nicht Screening) ist die Stichprobenprävalenz oft künstlich hoch (z. B. 40% hier). Die PPV/NPV-Werte gelten nur für diese Prävalenz. Für die Praxis (niedrigere Prävalenz) muss man mit Vierfeldertafel oder Bayes umrechnen.
+
 | Kennzahl | Formel | Bedeutung |
 |----------|--------|-----------|
 | Sensitivität | TP/(TP+FN) | Kranke korrekt als krank erkannt |
 | Spezifität | TN/(TN+FP) | Gesunde korrekt als gesund erkannt |
 | PPV | TP/(TP+FP) | Sicherheit eines positiven Befunds |
 | NPV | TN/(TN+FN) | Sicherheit eines negativen Befunds |
+
+---
+
+## MedAT-Fokus: Normalverteilung und Statistik
+
+**Zur gezielten Prüfungsvorbereitung:**
+
+**Typische Aufgabentypen im MedAT:**
+- „Wie viel Prozent der Population liegen oberhalb/unterhalb von x?" → z-Wert berechnen, 68-95-99,7-Regel
+- „Berechnen Sie den Referenzbereich" → μ ± 2σ
+- „Wie groß ist die Varianz/Standardabweichung?" → Schritt-für-Schritt ausrechnen
+- „Berechnen Sie Sensitivität/Spezifität/PPV aus einer Vierfeldertafel" → Formeln anwenden
+- „Was bedeutet p = 0,03?" → Interpretation des p-Werts
+
+**Prüfungsrelevante Zahlen zum Auswendiglernen:**
+- 68-95-99,7: μ±1σ/2σ/3σ
+- Einseitig: 16% / 2,3% / 0,15% je Seite
+- z = 1,96 → 95%-KI (beidseitig)
+- z = 1,645 → einseitige 5%-Grenze
+- SE = σ/√n → Standardfehler
+- p < 0,05 → statistisch signifikant
 
 ---
 
@@ -1098,7 +1760,51 @@ Der **p-Wert** ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis z
 
 > **Merke:** p < 0,05 = statistisch signifikant (die konventionelle Grenze). Der p-Wert sagt nichts über die klinische Relevanz oder die Größe des Effekts — dafür braucht man das Konfidenzintervall.
 
+**Fehler vom Typ I und Typ II:**
+- **Typ-I-Fehler (α-Fehler):** H0 ablehnen, obwohl H0 wahr ist → „falsch positives" Studienergebnis. Konvention: α = 0,05 = 5%.
+- **Typ-II-Fehler (β-Fehler):** H0 nicht ablehnen, obwohl H0 falsch ist → „falsch negatives" Studienergebnis. Typisch: β = 0,20 = 20%.
+- **Power (Teststärke):** 1 − β = Wahrscheinlichkeit, einen tatsächlichen Effekt zu entdecken. Konvention: Power ≥ 80%.
+
+| | H0 wahr | H0 falsch |
+|---|---|---|
+| **H0 ablehnen** | Typ-I-Fehler (α) | Korrekt (Power) |
+| **H0 nicht ablehnen** | Korrekt | Typ-II-Fehler (β) |
+
+> **Merke:** Der Zusammenhang zwischen Fehlertypen und diagnostischen Tests: Typ-I-Fehler ≈ falsch positiv (Gesunder als krank), Typ-II-Fehler ≈ falsch negativ (Kranker als gesund). α senken → β steigt (und umgekehrt) — genau wie bei Sens/Spez-Tradeoff.
+
+**Rechenbeispiel — p-Wert und Konfidenzintervall zusammen:**
+Studie: Neues Blutdruckmedikament senkt systolischen Blutdruck um x̄ = 8 mmHg (n = 100, σ = 20).
+SE = 20/√100 = 2,0. 95%-KI = 8 ± 1,96 × 2 = **[4,1 ; 11,9] mmHg**.
+z-Wert für Test gegen H0 (μ = 0): z = 8/2 = 4,0 → p < 0,0001 (hochsignifikant).
+Interpretation: Die Senkung ist statistisch signifikant (p < 0,05) UND das KI zeigt klinische Relevanz (mindestens 4 mmHg Senkung). Beides zusammen = überzeugend.
+
+Vergleich: Studie 2 mit n = 10.000: x̄ = 0,5 mmHg, σ = 20. SE = 20/100 = 0,2. z = 0,5/0,2 = 2,5 → p = 0,012 (signifikant!). 95%-KI = [0,1 ; 0,9] mmHg. Statistisch signifikant, aber klinisch irrelevant (nur 0,5 mmHg Senkung). Das zeigt: p-Wert allein reicht nicht — das KI zeigt die Effektgröße.
+
 ---
+
+## ROC-Kurve — Kurzüberblick
+
+Die **ROC-Kurve** (Receiver Operating Characteristic) stellt den Zusammenhang zwischen Sensitivität und Falsch-Positiv-Rate (1 − Spezifität) für verschiedene Cutoff-Werte eines Tests dar.
+
+**Aufbau:**
+- x-Achse: FPR = 1 − Spezifität (von 0 bis 1)
+- y-Achse: Sensitivität = TPR (von 0 bis 1)
+- Jeder Punkt auf der Kurve entspricht einem Cutoff-Wert
+
+**AUC (Area Under the Curve):**
+- AUC = 0,5: Test nicht besser als Zufall (Diagonale)
+- AUC = 0,7–0,8: akzeptable Trennfähigkeit
+- AUC = 0,8–0,9: gute Trennfähigkeit
+- AUC > 0,9: exzellente Trennfähigkeit
+- AUC = 1,0: perfekter Test (kein Überlapp)
+
+**Klinischer Nutzen:**
+- Cutoff nach links verschieben (strenger) → Spezifität↑, Sensitivität↓ → weniger FP, mehr FN
+- Cutoff nach rechts verschieben (empfindlicher) → Sensitivität↑, Spezifität↓ → weniger FN, mehr FP
+- Screening: Punkt oben links (hohe Sens) bevorzugen
+- Bestätigung: Punkt mit hoher Spez bevorzugen
+
+> **Merke:** Die ROC-Kurve zeigt alle möglichen Sens/Spez-Kombinationen eines Tests. Je näher die Kurve an der oberen linken Ecke, desto besser der Test. AUC > 0,8 gilt als gut. Im MedAT wird typischerweise das Konzept „Cutoff verschieben → Sens/Spez-Tradeoff" geprüft.
 
 ---
 
@@ -1113,20 +1819,45 @@ Population: N(μ = 90, σ = 12) mg/dL. Patient misst 126 mg/dL. z = (126 − 90)
 **Beispiel 3 — Sens/Spez-Tradeoff: Troponin-Schwellenwert verschieben:**
 Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt man den Cutoff (empfindlicher): Sens steigt auf 95%, Spez sinkt auf 80%. In einer Notaufnahme (Prävalenz 10%, n = 1.000): Alter Cutoff: TP = 85, FP = 72, PPV = 85/157 ≈ **54%**. Neuer Cutoff: TP = 95, FP = 180, PPV = 95/275 ≈ **34,5%**. Klinische Entscheidung: höherer Sens-Cutoff in der Notaufnahme (kein Infarkt verpassen), dann Bestätigung mit spezifischerem Test.
 
+**Beispiel 4 — z-Transformation: BMI in einer Studie bewerten:**
+BMI bei 20–30-Jährigen: N(μ = 23,5 kg/m², σ = 3,2 kg/m²). Person mit BMI = 31,5.
+z = (31,5 − 23,5) / 3,2 = 8,0 / 3,2 = **2,5**.
+Interpretation: 2,5 Standardabweichungen über dem Mittelwert → obere 0,6% der Altersgruppe.
+Umgekehrt: Ab welchem BMI gehört man zu den oberen 5%?
+z = 1,645 (aus z-Tabelle für 95. Perzentil).
+x = μ + z × σ = 23,5 + 1,645 × 3,2 = 23,5 + 5,26 = **28,76 kg/m²** ≈ Übergangsbereich Übergewicht/Adipositas.
+
+**Beispiel 5 — Konfidenzintervall einer klinischen Studie:**
+Medikament senkt den LDL-Cholesterinwert. Studie mit n = 64 Patienten: x̄ = −32 mg/dL (Mittelwert der Senkung), σ = 16 mg/dL.
+SE = σ/√n = 16/√64 = 16/8 = 2,0 mg/dL.
+95%-KI = −32 ± 1,96 × 2,0 = −32 ± 3,92 = **[−35,9 ; −28,1] mg/dL**.
+Interpretation: Das Medikament senkt LDL im Mittel um 28–36 mg/dL (mit 95% Sicherheit). Da die 0 nicht im KI liegt, ist die Senkung statistisch signifikant.
+
+**Beispiel 6 — 68-95-99,7-Regel: Referenzbereich für Kreatinin:**
+Serumkreatinin bei Männern: N(μ = 0,9 mg/dL, σ = 0,15 mg/dL).
+Referenzbereich = μ ± 2σ = 0,9 ± 0,30 = **0,60 – 1,20 mg/dL** (umfasst 95% der Gesunden).
+Wert 1,5 mg/dL: z = (1,5 − 0,9)/0,15 = 0,6/0,15 = **4,0** → weit außerhalb 3σ → hochpathologisch (Niereninsuffizienz).
+Wert 1,1 mg/dL: z = (1,1 − 0,9)/0,15 = 0,2/0,15 = **1,33** → innerhalb μ+2σ → Referenzbereich, unauffällig.
+
 ## Zusammenfassung (ultrakompakt)
 
 - **Lagemaße**: Mittelwert x̄ = Σxᵢ/n; Median = mittlerer Wert (bei Ausreißern bevorzugt); Modus = häufigster Wert
 - **Streumaße**: Varianz s² = Σ(xᵢ−x̄)²/(n−1); Standardabweichung s = √s²; IQR = Q3−Q1
 - **Normalverteilung**: Glockenkurve; μ±1σ → 68%; μ±2σ → 95%; μ±3σ → 99,7%
-- **z-Transformation**: z = (x−μ)/σ; z = 2 bedeutet 97,7% der Daten sind darunter (2,3% oberhalb)
+- **z-Transformation**: z = (x−μ)/σ; z = ±2 → 2,3% je Seite; z = ±1,96 → exakt 2,5% je Seite (95%-KI)
+- **z-Tabelle**: z = 1,645 (einseitig 5%), z = 1,96 (beidseitig 5%), z = 2,576 (beidseitig 1%)
+- **Konfidenzintervall**: KI = x̄ ± z × (σ/√n); SE = σ/√n halbiert sich bei Vervierfachung von n
 - **Referenzbereich**: μ±2σ umfasst 95% → 5% gesunder Personen fallen heraus (falsch-positiv)
 - **ROC-Kurve**: Cutoff-Verschiebung → Sens↑ Spez↓ und umgekehrt; AUC = Trennfähigkeit des Tests`,
       lernziele: [
         "Mittelwert, Median und Modus aus einem gegebenen Datensatz berechnen und bei schiefer Verteilung den geeigneteren Lageparameter auswählen",
         "Varianz und Standardabweichung berechnen und interpretieren",
         "Die 68-95-99,7-Regel auf konkrete Normalverteilungsaufgaben anwenden",
+        "Die z-Transformation z=(x-μ)/σ durchführen und z-Werte interpretieren",
         "Sensitivität, Spezifität, PPV und NPV aus einer Vierfeldertafel berechnen und klinisch interpretieren",
+        "Ein 95%-Konfidenzintervall berechnen und die Rolle des Standardfehlers erklären",
         "Den p-Wert konzeptuell erklären und den Unterschied zu klinischer Bedeutsamkeit benennen",
+        "Typ-I- und Typ-II-Fehler unterscheiden und den Zusammenhang zu Sens/Spez erkennen",
       ],
       sections: [
         {
@@ -1141,6 +1872,12 @@ Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt 
           merksatz:
             "SnNout: Hohe Sensitivität → Negativbefund schließt Krankheit aus. SpPin: Hohe Spezifität → Positivbefund bestätigt Krankheit.",
         },
+        {
+          heading: "z-Transformation und Konfidenzintervall — Schritt für Schritt",
+          text: "Die z-Transformation z=(x-μ)/σ übersetzt jeden Wert in die Standardnormalverteilung. Drei Anwendungen: (1) Laborwert bewerten: z berechnen, mit 68-95-99,7 vergleichen. z>2 = auffällig. (2) Perzentil finden: z aus Tabelle ablesen, x=μ+z×σ rückrechnen. (3) Konfidenzintervall: KI = x̄ ± 1,96 × (σ/√n). Der Standardfehler SE = σ/√n wird kleiner bei größerem n → schmaleres KI → genauere Schätzung. Beim Vervierfachen von n halbiert sich der SE.",
+          merksatz:
+            "z = (x−μ)/σ: Universelle Skala. z = ±1 → 68%, z = ±2 → 95%, z = ±3 → 99,7%. KI = x̄ ± 1,96 × σ/√n für 95%-Konfidenz.",
+        },
       ],
       merksätze: [
         "Mittelwert = Σxi/n; Median = mittlerer Wert (sortiert); Modus = häufigster Wert",
@@ -1151,6 +1888,10 @@ Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt 
         "PPV = TP/(TP+FP) — von Positiven: wirklich krank? (prävalenzabhängig!)",
         "p < 0,05 = statistisch signifikant; p-Wert ≠ klinische Bedeutsamkeit",
         "SnNout: hohe Sensitivität → Negativtest schließt aus. SpPin: hohe Spezifität → Positivtest bestätigt.",
+        "z-Transformation: z = (x−μ)/σ; z > 2 → obere 2,3% → klinisch auffällig",
+        "Konfidenzintervall: KI = x̄ ± 1,96 × σ/√n (95%); SE = σ/√n",
+        "Typ-I-Fehler (α = 0,05): H0 fälschlich ablehnen; Typ-II-Fehler (β = 0,20): H0 fälschlich beibehalten",
+        "ROC-Kurve: AUC > 0,8 = guter Test; Cutoff-Verschiebung = Sens/Spez-Tradeoff",
       ],
       selfTest: [
         {
@@ -1222,6 +1963,28 @@ Troponin-Test für Herzinfarkt, aktueller Cutoff: Sens = 85%, Spez = 92%. Senkt 
           ],
           difficulty: 2,
           tags: ["p-wert", "statistik", "signifikanz"],
+        },
+        {
+          question:
+            "Hämoglobin bei Männern: N(μ=15, σ=1,5) g/dL. Ein Patient hat Hb = 12 g/dL. Wie groß ist der z-Wert?",
+          options: ["−2,0", "−1,5", "−3,0", "+2,0", "−1,0"],
+          correctIndex: 0,
+          explanation:
+            "z = (x − μ) / σ = (12 − 15) / 1,5 = −3 / 1,5 = −2,0. Der Wert liegt 2 Standardabweichungen unter dem Mittelwert (untere 2,3%). Klinisch: Hb von 12 bei Männern liegt unterhalb des Referenzbereichs (μ−2σ = 12,0) — gerade an der Grenze zur Anämie.",
+          hints: ["z = (x − μ) / σ = (12 − 15) / 1,5.", "−3 / 1,5 = −2,0. Was bedeutet z = −2?"],
+          difficulty: 2,
+          tags: ["z-transformation", "normalverteilung", "laborwerte"],
+        },
+        {
+          question:
+            "Eine Studie misst x̄ = 80 mmHg (n = 25, σ = 10). Was ist das 95%-Konfidenzintervall?",
+          options: ["[76,1 ; 83,9]", "[70 ; 90]", "[78 ; 82]", "[60 ; 100]", "[75,1 ; 84,9]"],
+          correctIndex: 0,
+          explanation:
+            "SE = σ/√n = 10/√25 = 10/5 = 2,0. 95%-KI = x̄ ± 1,96 × SE = 80 ± 1,96 × 2,0 = 80 ± 3,92 = [76,08 ; 83,92] ≈ [76,1 ; 83,9]. Interpretation: Der wahre Populationsmittelwert liegt mit 95% Sicherheit in diesem Intervall.",
+          hints: ["SE = σ/√n = 10/√25 = 2,0.", "95%-KI = 80 ± 1,96 × 2,0 = 80 ± 3,92."],
+          difficulty: 3,
+          tags: ["konfidenzintervall", "standardfehler", "statistik"],
         },
       ],
       altfrage: {

@@ -5,7 +5,7 @@ export const bioKapGenetik: Kapitel = {
   title: "Genetik",
   subject: "biologie",
   icon: "🧬",
-  estimatedTime: "180 min",
+  estimatedTime: "240 min",
   unterkapitel: [
     // ─── 1. DNA, Gene und Chromosomen ───────────────────────────────────────
     {
@@ -150,6 +150,36 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           difficulty: 1,
           tags: ["dna", "zellkern", "chromosom"],
         },
+        {
+          question: "Wie viele proteincodierende Gene hat der Mensch ungefähr?",
+          options: [
+            "Etwa 200–500",
+            "Etwa 2.000–5.000",
+            "Etwa 20.000–25.000",
+            "Etwa 200.000–250.000",
+            "Etwa 6 Milliarden",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Mensch hat etwa **20.000–25.000 proteincodierende Gene**, verteilt auf 46 Chromosomen. Die Zahl 6 Milliarden bezieht sich auf die Basenpaare der DNA, nicht auf die Gene.",
+          difficulty: 1,
+          tags: ["gen", "genom", "chromosom"],
+        },
+        {
+          question: "Welche Basenpaarungsregel gilt in der DNA?",
+          options: [
+            "A-G und T-C",
+            "A-T und G-C (komplementäre Basenpaarung)",
+            "A-C und G-T",
+            "A-U und G-C",
+            "Alle Basen paaren mit allen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "In der DNA gilt: **A paart mit T** (2 Wasserstoffbrücken) und **G paart mit C** (3 Wasserstoffbrücken). A-U gilt für RNA (Uracil ersetzt Thymin).",
+          difficulty: 1,
+          tags: ["basenpaarung", "dna", "chargaff"],
+        },
       ],
     },
 
@@ -257,6 +287,66 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
             "Trisomie 21 (Down-Syndrom) bedeutet drei Kopien von Chromosom 21. Die Notation gibt zuerst die Gesamtzahl der Chromosomen an (47), dann die Gonosomen (XX = weiblich), dann die Aberration (+21). 47,XY,+21 wäre ein Mann mit Trisomie 21.",
           difficulty: 1,
           tags: ["karyotyp", "trisomie 21", "down-syndrom"],
+        },
+        {
+          question: "Was verbindet die beiden Schwesterchromatiden eines Chromosoms?",
+          options: [
+            "Die Telomere",
+            "Das Zentromer",
+            "Der p-Arm",
+            "Die Kernmembran",
+            "Die Spindelfasern",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die beiden **Schwesterchromatiden** (identische DNA-Kopien nach Replikation) sind am **Zentromer** verbunden. Dort sitzt auch der **Kinetochor**, an dem die Spindelfasern bei der Zellteilung angreifen.",
+          difficulty: 1,
+          tags: ["zentromer", "schwesterchromatiden", "chromosom"],
+        },
+        {
+          question: "Was bedeutet die Karyotyp-Notation 47,XXY?",
+          options: [
+            "Weiblich mit Trisomie 21",
+            "Männlich, normal",
+            "Klinefelter-Syndrom (männlich, ein zusätzliches X)",
+            "Turner-Syndrom",
+            "Weiblich mit drei X-Chromosomen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**47,XXY** = 47 Chromosomen, Gonosomen XXY → **Klinefelter-Syndrom** (phänotypisch männlich, da Y vorhanden, aber mit einem zusätzlichen X-Chromosom). Turner wäre 45,X; Triple-X wäre 47,XXX.",
+          difficulty: 1,
+          tags: ["karyotyp", "klinefelter", "gonosomen"],
+        },
+        {
+          question: "Was sind Telomere und welche Funktion haben sie?",
+          options: [
+            "Proteine, die die DNA verpacken",
+            "Repetitive DNA-Sequenzen an den Chromosomenenden, die die Enden vor Abbau schützen",
+            "Enzyme, die die DNA verdoppeln",
+            "Strukturen, die die Geschlechtschromosomen verbinden",
+            "Teile der Kernmembran",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Telomere** sind repetitive DNA-Sequenzen (beim Menschen **TTAGGG**) an den **Chromosomenenden**. Sie schützen die Enden vor Abbau und Fusion. Bei jeder Zellteilung werden sie etwas kürzer (ohne Telomerase).",
+          difficulty: 1,
+          tags: ["telomere", "chromosom", "TTAGGG"],
+        },
+        {
+          question: "In welcher Phase des Zellzyklus wird der Karyotyp erstellt?",
+          options: [
+            "In der S-Phase (DNA-Replikation)",
+            "In der G1-Phase",
+            "In der Metaphase der Mitose (Chromosomen maximal kondensiert)",
+            "In der Interphase",
+            "In der Telophase",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Karyotyp wird in der **Metaphase** erstellt, weil die Chromosomen dann **maximal kondensiert** und unter dem Mikroskop am besten sichtbar und unterscheidbar sind.",
+          difficulty: 2,
+          tags: ["karyotyp", "metaphase", "zellzyklus"],
         },
       ],
     },
@@ -421,6 +511,53 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           difficulty: 1,
           tags: ["crossing-over", "meiose", "rekombination"],
         },
+        {
+          question:
+            "Wie viele Tochterzellen entstehen bei der Meiose und welchen Chromosomensatz haben sie?",
+          options: [
+            "2 Zellen, diploid (2n)",
+            "4 Zellen, diploid (2n)",
+            "4 Zellen, haploid (n)",
+            "2 Zellen, haploid (n)",
+            "1 Zelle, tetraploid (4n)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Meiose erzeugt **4 haploide Zellen (n)** aus einer diploiden Ausgangszelle (2n). Meiose I halbiert den Chromosomensatz (2n → n), Meiose II trennt die Schwesterchromatiden. Bei der Oogenese entsteht allerdings nur 1 Eizelle + 3 Polkörper.",
+          difficulty: 1,
+          tags: ["meiose", "haploid", "keimzelle"],
+        },
+        {
+          question: "Wodurch steigt das Risiko für Trisomie 21 (Down-Syndrom)?",
+          options: [
+            "Durch Crossing-over",
+            "Durch das Alter des Vaters",
+            "Durch steigendes mütterliches Alter (Nicht-Disjunktion in der Meiose)",
+            "Durch zu viel Mitose",
+            "Durch X-Inaktivierung",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Das Risiko für **Nicht-Disjunktion** (fehlerhafte Chromosomentrennung in der Meiose) steigt mit dem **mütterlichen Alter**. Eizellen verharren jahrzehntelang in der Meiose I; je älter die Frau, desto häufiger Trennungsfehler → Trisomie 21.",
+          difficulty: 2,
+          tags: ["trisomie 21", "nicht-disjunktion", "mütterliches alter"],
+        },
+        {
+          question:
+            "Was ist der entscheidende Unterschied zwischen Mitose und Meiose I bezüglich der Chromosomentrennung?",
+          options: [
+            "In der Mitose werden homologe Chromosomen getrennt, in Meiose I die Schwesterchromatiden",
+            "In der Mitose werden Schwesterchromatiden getrennt, in Meiose I die homologen Chromosomen",
+            "Beide trennen Schwesterchromatiden",
+            "Beide trennen homologe Chromosomen",
+            "Nur in der Meiose II werden Chromosomen getrennt",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Mitose:** Trennung der **Schwesterchromatiden** → 2 identische Tochterzellen (2n). **Meiose I:** Trennung der **homologen Chromosomen** → Reduktion auf haploid (n). Meiose II ähnelt der Mitose (Trennung der Schwesterchromatiden).",
+          difficulty: 1,
+          tags: ["mitose", "meiose", "vergleich"],
+        },
       ],
     },
 
@@ -527,6 +664,55 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
             "Bei dominant-rezessivem Erbgang (A dominant über a) zeigen AA und Aa denselben Phänotyp. In F₂ entstehen 1/4 AA, 2/4 Aa, 1/4 aa → Phänotyp 3 dominant : 1 rezessiv = **3:1**. Das **Genotyp**-Verhältnis ist 1:2:1.",
           difficulty: 1,
           tags: ["mendel", "spaltungsregel", "f2"],
+        },
+        {
+          question: "Was besagt die 1. Mendelsche Regel (Uniformitätsregel)?",
+          options: [
+            "In F₂ spalten die Merkmale 3:1 auf",
+            "Kreuzt man reinerbige (homozygote) Eltern mit verschiedenen Merkmalen, sind alle F₁-Nachkommen uniform (gleicher Genotyp und Phänotyp)",
+            "Gene auf verschiedenen Chromosomen werden unabhängig vererbt",
+            "Alle Nachkommen sind homozygot",
+            "Dominante Allele sind häufiger als rezessive",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die **1. Mendelsche Regel** besagt: Kreuzt man **reinerbige** Eltern (AA × aa), sind alle F₁-Nachkommen **uniform** heterozygot (Aa) und zeigen den gleichen Phänotyp (das dominante Merkmal).",
+          difficulty: 1,
+          tags: ["mendel", "uniformitätsregel", "f1"],
+        },
+        {
+          question: "Bei einem dihybriden Erbgang (RrGg × RrGg) beträgt das Phänotyp-Verhältnis:",
+          options: ["3:1", "1:2:1", "1:1:1:1", "9:3:3:1", "1:1"],
+          correctIndex: 3,
+          explanation:
+            "Bei zwei unabhängigen Genen (dihybrid) ergibt RrGg × RrGg das Phänotyp-Verhältnis **9:3:3:1** (9 beide dominant, 3 erstes dominant/zweites rezessiv, 3 umgekehrt, 1 beide rezessiv). Das Punnett-Quadrat hat 4×4 = 16 Felder.",
+          difficulty: 2,
+          tags: ["mendel", "dihybrid", "9:3:3:1"],
+        },
+        {
+          question: "Was ist die Voraussetzung für die 3. Mendelsche Regel (Unabhängigkeitsregel)?",
+          options: [
+            "Die Gene müssen auf demselben Chromosom liegen",
+            "Die Gene müssen auf verschiedenen Chromosomen liegen (oder nicht gekoppelt sein)",
+            "Beide Eltern müssen heterozygot sein",
+            "Nur ein Gen darf betrachtet werden",
+            "Es darf kein Crossing-over stattfinden",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die **3. Mendelsche Regel** gilt nur, wenn die betrachteten Gene **auf verschiedenen Chromosomen** liegen oder so weit auseinander, dass sie **nicht gekoppelt** sind. Bei Genkopplung (Gene nahe beieinander auf demselben Chromosom) weicht das Verhältnis von 9:3:3:1 ab.",
+          difficulty: 2,
+          tags: ["mendel", "unabhängigkeitsregel", "genkopplung"],
+        },
+        {
+          question:
+            "Wie hoch ist die Wahrscheinlichkeit, bei RrGg × RrGg ein Kind mit Genotyp rrgg zu bekommen?",
+          options: ["1/2", "1/4", "1/8", "1/16", "1/32"],
+          correctIndex: 3,
+          explanation:
+            "Bei unabhängigen Genen gilt die **Produktregel**: P(rr) = 1/4 und P(gg) = 1/4. P(rrgg) = 1/4 × 1/4 = **1/16**. Im 4×4-Punnett-Quadrat (16 Felder) gibt es genau 1 Feld mit rrgg.",
+          difficulty: 2,
+          tags: ["produktregel", "dihybrid", "wahrscheinlichkeit"],
         },
       ],
     },
@@ -646,6 +832,57 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
           difficulty: 1,
           tags: ["intermediär", "dominanz", "phänotyp"],
         },
+        {
+          question:
+            "Ein Individuum mit dominantem Phänotyp wird mit einem homozygot rezessiven Partner gekreuzt. Die Nachkommen spalten 1:1 (dominant : rezessiv). Welchen Genotyp hatte das erste Individuum?",
+          options: [
+            "AA (homozygot dominant)",
+            "aa (homozygot rezessiv)",
+            "Aa (heterozygot)",
+            "A (hemizygot)",
+            "Der Genotyp kann nicht bestimmt werden",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Bei der **Testkreuzung** (× aa): Wenn die Nachkommen **1:1** aufspalten (dominant : rezessiv), muss das getestete Individuum **heterozygot (Aa)** gewesen sein. Bei AA wären **alle** Nachkommen dominant.",
+          difficulty: 1,
+          tags: ["testkreuzung", "heterozygot", "genotyp"],
+        },
+        {
+          question:
+            "Bei welchem Dominanzverhältnis sind im Heterozygoten beide Allele gleichzeitig phänotypisch sichtbar (nicht gemischt)?",
+          options: ["Dominant-rezessiv", "Intermediär", "Kodominant", "Rezessiv", "Epistasie"],
+          correctIndex: 2,
+          explanation:
+            "**Kodominanz** bedeutet: Beide Allele werden **gleichzeitig** exprimiert und sind im Phänotyp sichtbar (z. B. Blutgruppe AB: A-Antigen UND B-Antigen). Das ist anders als **intermediär**, wo ein **Mischphänotyp** entsteht (z. B. rosa).",
+          difficulty: 1,
+          tags: ["kodominant", "blutgruppe", "phänotyp"],
+        },
+        {
+          question:
+            "Welches Phänotyp-Verhältnis zeigt die F₂-Generation bei intermediärer Vererbung (Aa × Aa)?",
+          options: ["3:1", "1:2:1 (entspricht dem Genotyp-Verhältnis)", "9:3:3:1", "1:1", "2:1"],
+          correctIndex: 1,
+          explanation:
+            "Bei **intermediärer** Dominanz zeigt jeder Genotyp einen eigenen Phänotyp: AA = rot, Aa = rosa, aa = weiß. Daher entspricht das **Phänotyp-Verhältnis** dem **Genotyp-Verhältnis: 1:2:1**. Bei dominant-rezessiv wäre es 3:1.",
+          difficulty: 2,
+          tags: ["intermediär", "1:2:1", "f2"],
+        },
+        {
+          question: "Warum bedeutet 'dominant' NICHT automatisch 'häufig in der Population'?",
+          options: [
+            "Weil dominante Allele immer letal sind",
+            "Weil Dominanz die Phänotyp-Ausprägung im Heterozygoten beschreibt, nicht die Häufigkeit eines Allels in der Population",
+            "Weil rezessive Allele immer häufiger sind",
+            "Weil Dominanz nur bei X-chromosomalen Genen vorkommt",
+            "Weil alle Allele gleich häufig sind",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Dominanz** beschreibt, wie sich Allele im **Heterozygoten** (Aa) auswirken — ob A den Phänotyp allein bestimmt oder nicht. Die **Häufigkeit** eines Allels in der Population ist davon unabhängig. Beispiel: Polydaktylie ist dominant, aber selten.",
+          difficulty: 2,
+          tags: ["dominant", "häufigkeit", "population"],
+        },
       ],
     },
 
@@ -730,21 +967,102 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 
 **Bisher haben wir gesehen:** Die vier Haupterbgänge (autosomal-dominant/rezessiv, X-dominant/rezessiv) und ihre typischen Muster. **Um einen unbekannten Stammbaum einzuordnen,** braucht man die **Symbole** und eine **systematische Auswertung**.
 
-**Symbole:** Quadrat = Mann, Kreis = Frau; ausgefüllt = betroffen; halb ausgefüllt = Konduktor/Träger; Doppellinie = Konsanguinität. **Systematische Erbgangbestimmung:** Beide Geschlechter betroffen? → autosomal möglich. Nur Männer? → Y-chromosomal oder X-rezessiv prüfen. Keine Vater-Sohn-Übertragung? → X-chromosomal. Jede Generation betroffen? → dominant. Generationensprünge? → rezessiv.
+**Symbole im Stammbaum:**
+
+| Symbol | Bedeutung |
+|--------|-----------|
+| □ (Quadrat) | Mann |
+| ○ (Kreis) | Frau |
+| ■ / ● (ausgefüllt) | Betroffen (erkrankt) |
+| ◧ / ◑ (halb ausgefüllt) | Konduktor/Überträger (heterozygot, phänotypisch gesund) |
+| □—○ (Verbindungslinie) | Paarung/Eltern |
+| □══○ (Doppellinie) | Konsanguinität (Verwandtenehe) |
+| ◇ (Raute) | Geschlecht unbekannt |
+| ∅ oder / (durchgestrichen) | Verstorben |
+
+**Generationen** werden mit römischen Zahlen (I, II, III) beschriftet; Individuen innerhalb einer Generation mit arabischen Zahlen (II-1, II-2 …). Nachkommen hängen an einer horizontalen Geschwisterlinie.
+
+> **Merke:** □ = Mann, ○ = Frau; ausgefüllt = betroffen; halb = Überträger; Doppellinie = Konsanguinität. Generationen: I, II, III.
+
+---
+
+## Stammbaumanalyse: Systematisches Vorgehen (MedAT-Standardaufgabe)
+
+**Bisher haben wir gesehen:** Die Symbole und Erbgänge. **Die Stammbaumanalyse** ist eine der häufigsten BMS-Aufgaben im MedAT. Ein systematisches Schema verhindert Fehler.
+
+{{DIAGRAM:pedigree-analysis}}
+
+**Schritt-für-Schritt-Analyse:**
+
+**Schritt 1 — Geschlechterverteilung prüfen:**
+- Sind beide Geschlechter betroffen? → **autosomal** wahrscheinlich.
+- Sind fast nur Männer betroffen? → **X-chromosomal rezessiv** prüfen.
+
+**Schritt 2 — Generationenmuster prüfen:**
+- In **jeder** Generation Betroffene (vertikale Weitergabe)? → **dominant**.
+- Generationen werden **übersprungen** (gesunde Eltern, kranke Kinder)? → **rezessiv**.
+
+**Schritt 3 — Vater-Sohn-Übertragung prüfen:**
+- Gibt ein betroffener Vater die Krankheit an Söhne weiter? → Falls **ja**: **nicht X-chromosomal** (Vater gibt Y, nicht X an Söhne).
+- Gibt ein betroffener Vater die Krankheit **nur an Töchter** weiter? → **X-chromosomal dominant** prüfen.
+
+**Schritt 4 — Konsanguinität und Überträger:**
+- Verwandtenehe im Stammbaum? → Hinweis auf **autosomal-rezessiv** (seltenes Allel wird homozygot).
+
+> **Merke:** Schema: 1) Geschlechterverteilung → 2) Generationenmuster → 3) Vater-Sohn-Übertragung → 4) Konsanguinität. Damit lässt sich der Erbgang in >90 % der Fälle eindeutig bestimmen.
+
+---
+
+## Entscheidungsbaum der vier Erbgänge
+
+| Kriterium | Autosomal-dominant | Autosomal-rezessiv | X-rezessiv | X-dominant |
+|-----------|-------------------|--------------------|------------|------------|
+| **Geschlechter** | ♂ = ♀ betroffen | ♂ = ♀ betroffen | fast nur ♂ | ♀ häufiger als ♂ |
+| **Generationen** | jede Generation | Sprünge möglich | Sprünge (Diagonal) | jede Generation |
+| **Vater → Sohn** | ja, möglich | ja, möglich | **nein** (nie!) | **nein** |
+| **Kranker Vater** | 50 % aller Kinder | nur wenn Mutter Aa | Töchter = Konduktorinnen | 100 % Töchter krank |
+| **Konsanguinität** | selten relevant | Risiko ↑ | selten relevant | selten relevant |
+| **Beispiele** | Huntington, Marfan | Mukoviszidose, PKU | Hämophilie, Duchenne | Rett-Syndrom, Vit-D-Rachitis |
+
+---
+
+## Stammbaumanalyse: Durchgerechnetes Beispiel
+
+**Bisher haben wir gesehen:** Das systematische Schema. **Jetzt wenden wir es auf ein konkretes Beispiel an.**
+
+**Stammbaum:** Eine Familie mit einer Erbkrankheit. In Generation I sind beide Eltern gesund. In Generation II haben sie vier Kinder: zwei gesunde Töchter, einen gesunden Sohn und einen betroffenen Sohn. Eine der gesunden Töchter heiratet einen gesunden Mann; sie haben einen betroffenen Sohn.
+
+**Analyse nach Schema:**
+1. **Geschlechter:** Nur Männer betroffen → X-rezessiv oder autosomal-rezessiv möglich.
+2. **Generationen:** Generationensprung (I gesund, II betroffen) → rezessiv.
+3. **Vater-Sohn:** Vater in Gen. I ist gesund, trotzdem betroffener Sohn → Gen muss von der Mutter kommen. In Gen. III: betroffener Enkel hat gesunden Vater → keine Vater-Sohn-Übertragung → **X-chromosomal rezessiv** wahrscheinlich.
+4. **Genotypen:** Großmutter (Gen. I) = X^A X^a (Konduktorin); Großvater = X^A Y (gesund). Betroffene Söhne = X^a Y. Gesunde Tochter in Gen. II, die betroffenen Sohn hat = X^A X^a (Konduktorin wie Großmutter).
+
+**Wahrscheinlichkeiten:** Konduktorin (X^A X^a) × gesunder Mann (X^A Y): Töchter 50 % Konduktorinnen, 50 % gesund (X^A X^A); Söhne 50 % betroffen (X^a Y), 50 % gesund (X^A Y).
+
+> **Merke:** X-chromosomal rezessiv erkennt man am Diagonal-Muster: Großvater mütterlicherseits → Enkel über Konduktorin-Tochter. Keine Vater-Sohn-Übertragung ist das Schlüsselkriterium gegen autosomal.
 
 ---
 
 ## MedAT-Fokus
 
+**Zentral prüfungsrelevant:**
+- Stammbaumanalyse mit Schema (Geschlecht → Generation → Vater-Sohn → Konsanguinität)
+- Erkennung des Erbgangs aus Stammbaum-Muster
+- Berechnung von Wiederholungsrisiken (z. B. Aa × Aa → 25 % krank)
+- Konduktorin-Wahrscheinlichkeit bei X-rezessiv
+
 **Typische Prüfungsfragen:**
 - Warum sind bei X-chromosomal rezessiv mehr Männer betroffen?
 - Welcher Erbgang liegt vor, wenn ein kranker Vater nur kranke Töchter und gesunde Söhne hat?
 - Aa x Aa: Wie hoch ist das Erkrankungsrisiko? (25 %)
+- Stammbaum gegeben: Bestimmen Sie den wahrscheinlichsten Erbgang.
 
 **Typische Fallen:**
 - Autosomal-dominant (jede Generation betroffen) vs. autosomal-rezessiv (Generationensprünge) verwechseln.
-- X-rezessiv: Vater gibt Y an Söhne, daher keine Vater-Sohn-Übertragung.
+- X-rezessiv: Vater gibt Y an Söhne, daher **keine** Vater-Sohn-Übertragung — das wichtigste Ausschlusskriterium.
 - Konduktorin ist heterozygot und phänotypisch meist gesund, kann aber kranke Söhne haben.
+- „Nur Männer betroffen" schließt autosomal-rezessiv nicht aus (kann Zufall sein bei kleiner Familie) — Vater-Sohn-Übertragung ist entscheidend.
 
 ---
 
@@ -752,15 +1070,20 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 
 - **Autosomal-dominant:** jede Generation; 50 % Risiko bei betroffenem Elternteil (Aa).
 - **Autosomal-rezessiv:** aa krank; Aa × Aa → 25 % krank; Generationensprünge; Konsanguinität ↑ Risiko.
-- **X-chromosomal rezessiv:** Männer häufiger; keine Vater-Sohn-Übertragung; Konduktorin (X^A X^a).
-- **X-chromosomal dominant:** kranker Vater → 100 % Töchter krank, 100 % Söhne gesund.`,
+- **X-chromosomal rezessiv:** Männer häufiger; keine Vater-Sohn-Übertragung; Konduktorin (X^A X^a); Diagonal-Muster.
+- **X-chromosomal dominant:** kranker Vater → 100 % Töchter krank, 100 % Söhne gesund.
+- **Stammbaum-Schema:** Geschlecht → Generationenmuster → Vater-Sohn → Konsanguinität → Erbgang bestimmen.
+- **Symbole:** □ Mann, ○ Frau, ausgefüllt = betroffen, halb = Überträger, Doppellinie = Verwandtenehe.`,
       lernziele: [
         "Autosomal und X-chromosomal sowie dominant und rezessiv zuordnen.",
         "Die vier Haupterbgänge an Stammbaum-Mustern erkennen und Risiken berechnen.",
+        "Stammbaum-Symbole lesen und das systematische Analyse-Schema anwenden.",
+        "Konduktorin-Status und Wiederholungsrisiken berechnen.",
       ],
       sections: [],
       merksätze: [
         "Autosomal-rezessiv: Aa × Aa → 25 % krank. X-rezessiv: Männer häufiger, keine Vater-Sohn-Übertragung. X-dominant: kranker Vater → alle Töchter krank.",
+        "Stammbaum-Schema: 1) Geschlecht, 2) Generationen, 3) Vater-Sohn, 4) Konsanguinität → Erbgang.",
       ],
       selfTest: [
         {
@@ -778,6 +1101,68 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
             "Das Muster **kranker Vater → 100 % Töchter krank, 100 % Söhne gesund** ist typisch für **X-chromosomal dominante** Vererbung. Der Vater (X^A Y) gibt sein X^A an alle Töchter (→ krank) und sein Y an alle Söhne (→ gesund, da sie das X der Mutter erhalten).",
           difficulty: 2,
           tags: ["x-chromosomal dominant", "erbgang", "stammbaum"],
+        },
+        {
+          question:
+            "Beide Eltern sind phänotypisch gesund, aber zwei von vier Kindern sind von einer Erbkrankheit betroffen. Beide Geschlechter sind betroffen. Welcher Erbgang ist am wahrscheinlichsten?",
+          options: [
+            "Autosomal-dominant",
+            "X-chromosomal dominant",
+            "Autosomal-rezessiv",
+            "X-chromosomal rezessiv",
+            "Mitochondrial",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Gesunde Eltern mit betroffenen Kindern → **rezessiver** Erbgang (Eltern sind Überträger Aa). Beide Geschlechter betroffen → **autosomal** (nicht X-chromosomal, dort wären fast nur Jungen krank). Aa × Aa → 25 % der Kinder betroffen (aa).",
+          difficulty: 2,
+          tags: ["autosomal-rezessiv", "stammbaum", "überträger"],
+        },
+        {
+          question: "Welches Kriterium schließt einen X-chromosomalen Erbgang am sichersten aus?",
+          options: [
+            "Mehr Frauen als Männer sind betroffen",
+            "Die Krankheit überspringt eine Generation",
+            "Ein betroffener Vater hat betroffene Söhne (Vater-Sohn-Übertragung)",
+            "Konsanguinität liegt vor",
+            "Nur eine Generation ist betroffen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**Vater-Sohn-Übertragung** schließt X-chromosomal aus, weil der Vater sein **Y-Chromosom** (nicht das X) an den Sohn weitergibt. Ein betroffener Sohn kann sein X-chromosomales Allel daher nicht vom Vater, sondern nur von der Mutter erhalten haben.",
+          difficulty: 2,
+          tags: ["x-chromosomal", "vater-sohn", "stammbaum"],
+        },
+        {
+          question:
+            "In einem Stammbaum ist der Großvater mütterlicherseits betroffen, die Mutter gesund, und der Enkel (Sohn der Mutter) ist betroffen. Welcher Erbgang liegt vor?",
+          options: [
+            "Autosomal-dominant",
+            "Autosomal-rezessiv",
+            "X-chromosomal rezessiv (Diagonal-Muster)",
+            "X-chromosomal dominant",
+            "Y-chromosomal",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Das **Diagonal-Muster** (betroffener Großvater mütterlicherseits → gesunde Tochter als Konduktorin → betroffener Enkel) ist typisch für **X-chromosomal rezessiv**. Der Großvater (X^a Y) gibt X^a an alle Töchter → die Mutter ist Konduktorin (X^A X^a) → 50 % ihrer Söhne erhalten X^a und sind betroffen.",
+          difficulty: 2,
+          tags: ["x-chromosomal rezessiv", "diagonal-muster", "konduktorin"],
+        },
+        {
+          question: "Welches Symbol im Stammbaum kennzeichnet eine Konsanguinität (Verwandtenehe)?",
+          options: [
+            "Einfache waagerechte Linie zwischen den Partnern",
+            "Doppellinie (══) zwischen den Partnern",
+            "Gestrichelte Linie",
+            "Halb ausgefülltes Symbol",
+            "Kreuz (✝) neben dem Symbol",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Eine **Doppellinie** (══) zwischen zwei Partnern zeigt eine **Konsanguinität** (Verwandtenehe) an. Dies ist besonders relevant bei **autosomal-rezessiven** Erbgängen, da verwandte Eltern häufiger dasselbe rezessive Allel tragen.",
+          difficulty: 1,
+          tags: ["stammbaum", "symbole", "konsanguinität"],
         },
       ],
     },
@@ -884,6 +1269,62 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
             "Vater gibt I^A oder i, Mutter gibt I^B oder i. Kombinationen: I^A I^B (AB), I^A i (A), I^B i (B), i i (0). Alle vier Blutgruppen sind mit je 25 % möglich.",
           difficulty: 1,
           tags: ["blutgruppe", "ab0", "kreuzung"],
+        },
+        {
+          question:
+            "Können Eltern mit Blutgruppe 0 (ii) und AB (I^A I^B) ein Kind mit Blutgruppe 0 haben?",
+          options: [
+            "Ja, mit 25 % Wahrscheinlichkeit",
+            "Ja, mit 50 % Wahrscheinlichkeit",
+            "Nein — Kinder können nur Blutgruppe A oder B haben",
+            "Ja, mit 12,5 % Wahrscheinlichkeit",
+            "Nein — alle Kinder haben Blutgruppe AB",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Elternteil 0 (ii) gibt immer i weiter. Elternteil AB (I^A I^B) gibt I^A oder I^B weiter. Kinder: I^A i (Blutgruppe A) oder I^B i (Blutgruppe B). Blutgruppe 0 (ii) oder AB (I^A I^B) ist **nicht** möglich.",
+          difficulty: 1,
+          tags: ["blutgruppe", "ab0", "kreuzung"],
+        },
+        {
+          question: "Was bedeutet Kodominanz beim AB0-System?",
+          options: [
+            "I^A unterdrückt I^B",
+            "I^A und I^B werden beide gleichzeitig exprimiert — Blutgruppe AB hat A- UND B-Antigene",
+            "I^A und I^B bilden einen Mischphänotyp",
+            "Nur i wird exprimiert",
+            "Kodominanz gibt es beim AB0-System nicht",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Kodominanz** bei AB0: I^A und I^B sind **kodominant** — bei Genotyp I^A I^B werden **beide** Antigene (A und B) auf der Erythrozytenoberfläche exprimiert → Blutgruppe **AB**. Das ist keine Mischung (intermediär), sondern beide Merkmale gleichzeitig.",
+          difficulty: 1,
+          tags: ["kodominant", "ab0", "blutgruppe"],
+        },
+        {
+          question:
+            "Eine Rh-negative Mutter (dd) bekommt ein Rh-positives Kind (Dd). Welches Risiko besteht?",
+          options: [
+            "Kein Risiko",
+            "Das Kind wird Blutgruppe 0",
+            "Die Mutter kann Anti-D-Antikörper bilden → Gefahr für Morbus haemolyticus neonatorum bei Folgeschwangerschaften",
+            "Das Kind wird automatisch Rh-negativ",
+            "Die Mutter wird Rh-positiv",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Rh-negative Mutter (dd) kann gegen das D-Antigen des Kindes **Anti-D-Antikörper** bilden (Sensibilisierung, meist bei der Geburt). Bei einer **erneuten Schwangerschaft** mit Rh-positivem Kind können diese Antikörper die Plazenta passieren → **Morbus haemolyticus neonatorum**. Prävention: **Anti-D-Prophylaxe**.",
+          difficulty: 2,
+          tags: ["rhesus", "anti-d", "schwangerschaft"],
+        },
+        {
+          question: "Wie viele verschiedene Genotypen gibt es beim AB0-System?",
+          options: ["3", "4", "5", "6", "8"],
+          correctIndex: 3,
+          explanation:
+            "Es gibt **6 Genotypen**: I^A I^A, I^A i, I^B I^B, I^B i, I^A I^B, ii. Diese ergeben **4 Phänotypen** (Blutgruppen): A, B, AB, 0. Der Unterschied zwischen Genotyp- und Phänotyp-Anzahl ist typisch bei Dominanz.",
+          difficulty: 1,
+          tags: ["ab0", "genotyp", "phänotyp"],
         },
       ],
     },
@@ -1001,6 +1442,66 @@ In jedem Zellteilungszyklus werden rund sechs Milliarden Basenpaare kopiert. Dab
           difficulty: 1,
           tags: ["trisomie", "nicht-disjunktion", "meiose"],
         },
+        {
+          question: "Welche Mutationsebene liegt bei Cri-du-chat-Syndrom vor?",
+          options: [
+            "Genmutation (Punktmutation)",
+            "Genommutation (Trisomie)",
+            "Chromosomenmutation (Deletion 5p)",
+            "Polyploidie",
+            "Frameshift-Mutation",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Cri-du-chat (Katzenschrei-Syndrom) entsteht durch eine **Deletion** am kurzen Arm von Chromosom 5 (**5p-Deletion**). Das ist eine **Chromosomenmutation** (strukturelle Veränderung eines Chromosomenabschnitts), keine Genmutation (Sequenz) und keine Genommutation (Zahl).",
+          difficulty: 1,
+          tags: ["chromosomenmutation", "deletion", "cri-du-chat"],
+        },
+        {
+          question: "Was ist eine Nonsense-Mutation?",
+          options: [
+            "Eine Mutation, die keine Auswirkung hat",
+            "Eine Punktmutation, die ein Stopp-Codon erzeugt → verkürztes Protein",
+            "Eine Deletion eines ganzen Chromosoms",
+            "Eine Verdopplung eines DNA-Abschnitts",
+            "Eine Inversion eines Chromosomenarms",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Eine **Nonsense-Mutation** ist eine Punktmutation, die ein normales Codon in ein **Stopp-Codon** umwandelt. Die Translation bricht vorzeitig ab → das Protein ist **verkürzt** und meist nicht funktional. Beispiel: Viele Fälle von Mukoviszidose.",
+          difficulty: 1,
+          tags: ["nonsense-mutation", "stopp-codon", "genmutation"],
+        },
+        {
+          question: "Wann entsteht eine Frameshift-Mutation?",
+          options: [
+            "Bei Austausch einer einzelnen Base",
+            "Bei Einfügung oder Deletion von Basen, deren Zahl NICHT durch 3 teilbar ist",
+            "Bei Polyploidie",
+            "Bei Translokation",
+            "Bei Einfügung von genau 3 Basen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Eine **Frameshift-Mutation** entsteht, wenn Basen eingefügt oder deletiert werden und die Zahl **nicht durch 3 teilbar** ist. Dadurch verschiebt sich das **Leseraster** → alle nachfolgenden Codons werden falsch gelesen → meist schwer defektes Protein. Bei Einfügung/Deletion von 3 Basen bleibt das Leseraster erhalten (kein Frameshift).",
+          difficulty: 2,
+          tags: ["frameshift", "genmutation", "leseraster"],
+        },
+        {
+          question: "Was ist eine balancierte Translokation?",
+          options: [
+            "Ein kompletter Verlust eines Chromosoms",
+            "Eine Verlagerung von Chromosomenmaterial ohne Nettoverlust — Träger oft phänotypisch unauffällig",
+            "Eine Verdopplung des gesamten Genoms",
+            "Eine Punktmutation ohne Auswirkung",
+            "Eine Trisomie",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Bei einer **balancierten Translokation** wird Chromosomenmaterial auf ein anderes Chromosom verlagert, aber es geht **kein Material verloren**. Der Träger ist phänotypisch meist unauffällig, hat aber ein **erhöhtes Risiko** für unbalancierte Keimzellen → Nachkommen mit Über- oder Unterdosierung (z. B. Translokations-Trisomie 21).",
+          difficulty: 2,
+          tags: ["translokation", "chromosomenmutation", "balanciert"],
+        },
       ],
     },
 
@@ -1104,6 +1605,555 @@ Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (oder Regu
             "Das **Zentraldogma** beschreibt den Informationsfluss **DNA → RNA → Protein**. Zuerst wird die DNA in RNA umgeschrieben (**Transkription**), dann wird die RNA an den Ribosomen in Protein übersetzt (**Translation**). Die Umkehrung (Protein → RNA → DNA) gilt nicht als normaler Weg der Genexpression.",
           difficulty: 1,
           tags: ["zentraldogma", "genexpression", "transkription"],
+        },
+        {
+          question: "Wo findet bei Eukaryoten die Transkription statt?",
+          options: [
+            "An den Ribosomen im Zytoplasma",
+            "Im Zellkern",
+            "In den Mitochondrien (ausschließlich)",
+            "An der Zellmembran",
+            "Im endoplasmatischen Retikulum",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die **Transkription** (DNA → mRNA) findet bei Eukaryoten im **Zellkern** statt. Die fertige mRNA wird dann ins **Zytoplasma** transportiert, wo die **Translation** (mRNA → Protein) an den **Ribosomen** stattfindet.",
+          difficulty: 1,
+          tags: ["transkription", "zellkern", "eukaryoten"],
+        },
+        {
+          question: "Was bestimmt die Aminosäuresequenz eines Proteins?",
+          options: [
+            "Die Lipidmembran der Zelle",
+            "Die Basensequenz der mRNA (über den genetischen Code: je 3 Basen = 1 Codon = 1 Aminosäure)",
+            "Die Form der Ribosomen",
+            "Die Anzahl der Chromosomen",
+            "Die Histonproteine",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die **Basensequenz** der mRNA wird in Dreiergruppen (**Codons**) gelesen. Jedes Codon steht für eine bestimmte **Aminosäure** (genetischer Code). So bestimmt die DNA-Sequenz (über die mRNA) die Proteinsequenz und damit die Funktion des Proteins.",
+          difficulty: 1,
+          tags: ["genetischer code", "codon", "translation"],
+        },
+        {
+          question: "Welche Aussage zum Zentraldogma ist korrekt?",
+          options: [
+            "Proteine können in DNA rückübersetzt werden",
+            "RNA wird direkt aus Proteinen hergestellt",
+            "Reverse Transkriptase schreibt RNA in DNA um — eine Ausnahme vom klassischen Fluss",
+            "Translation findet immer im Zellkern statt",
+            "Transkription und Translation finden gleichzeitig am selben Ort statt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die **Reverse Transkriptase** (z. B. bei Retroviren wie HIV) schreibt RNA in DNA um — das ist eine bekannte Ausnahme vom klassischen Zentraldogma (DNA → RNA → Protein). Proteine werden jedoch nie in Nukleinsäuren rückübersetzt.",
+          difficulty: 2,
+          tags: ["zentraldogma", "reverse transkriptase", "retrovirus"],
+        },
+      ],
+    },
+
+    // ─── 10. Hardy-Weinberg-Gleichgewicht ──────────────────────────────────────
+    {
+      id: "bio-4-10",
+      title: "Hardy-Weinberg-Gleichgewicht",
+      stichworte: [
+        "Hardy-Weinberg",
+        "Allelfrequenz",
+        "Genotypfrequenz",
+        "Heterozygotenfrequenz",
+        "Panmixie",
+        "Populationsgenetik",
+        "p² + 2pq + q²",
+      ],
+      content: `## Einleitung
+
+Wenn in einer Population 4 % der Menschen an einer autosomal-rezessiven Erkrankung leiden, wie viele sind dann symptomlose Überträger? Die Antwort liefert das Hardy-Weinberg-Gleichgewicht — ein mathematisches Modell, das den Zusammenhang zwischen Allelfrequenzen und Genotypfrequenzen beschreibt. Es ist eines der meistgeprüften Rechenthemen im MedAT-BMS und verbindet klassische Genetik mit Populationsgenetik.
+
+**In diesem Kapitel lernst du:**
+- was Allelfrequenzen und Genotypfrequenzen sind und wie sie zusammenhängen
+- die beiden Grundformeln: p + q = 1 und p² + 2pq + q² = 1
+- unter welchen Voraussetzungen das Hardy-Weinberg-Gleichgewicht gilt
+- wie man aus einer Phänotyp-Häufigkeit die Überträgerfrequenz berechnet (MedAT-Rechenaufgabe!)
+- klinische Anwendung: Heterozygotenfrequenz bei Mukoviszidose und Sichelzellanämie
+
+{{DIAGRAM:pedigree-analysis}}
+
+---
+
+## Grundbegriffe der Populationsgenetik
+
+In der **Populationsgenetik** betrachtet man nicht einzelne Familien, sondern ganze **Populationen**. Statt nach dem Genotyp eines Individuums zu fragen, fragt man: Wie häufig ist ein bestimmtes **Allel** in der gesamten Population?
+
+**Allelfrequenz (= Allelhäufigkeit):** Der Anteil eines bestimmten Allels an allen Allelen eines Genorts in der Population. Bei einem Gen mit zwei Allelen (A und a) gilt:
+- **p** = Frequenz des dominanten Allels A
+- **q** = Frequenz des rezessiven Allels a
+- Es gilt immer: **p + q = 1** (da es nur zwei Allele gibt)
+
+**Genotypfrequenz:** Der Anteil eines bestimmten Genotyps (AA, Aa oder aa) in der Population.
+
+> **Merke:** p = Frequenz von A, q = Frequenz von a. p + q = 1 (die Summe aller Allelfrequenzen ist immer 1).
+
+---
+
+## Die Hardy-Weinberg-Gleichung
+
+**Bisher haben wir gesehen:** Allelfrequenzen (p, q) beschreiben, wie häufig Allele in einer Population sind. **Das Hardy-Weinberg-Gesetz** verknüpft Allelfrequenzen mit Genotypfrequenzen.
+
+{{DIAGRAM:dna-helix}}
+
+Wenn bestimmte Voraussetzungen erfüllt sind (siehe unten), lassen sich die **Genotypfrequenzen** direkt aus den Allelfrequenzen berechnen:
+
+**p² + 2pq + q² = 1**
+
+| Genotyp | Frequenz | Bedeutung |
+|---------|----------|-----------|
+| **AA** (homozygot dominant) | p² | Häufigkeit der Homozygoten für A |
+| **Aa** (heterozygot) | 2pq | Häufigkeit der Überträger/Heterozygoten |
+| **aa** (homozygot rezessiv) | q² | Häufigkeit der Homozygoten für a (bei rezessiven Erkrankungen = Erkrankte) |
+
+Die Formel entspricht dem Ausmultiplizieren von **(p + q)²** — sie beschreibt die zufällige Kombination von Gameten bei der Befruchtung.
+
+> **Merke:** p² + 2pq + q² = 1 verknüpft Allelfrequenzen (p, q) mit Genotypfrequenzen (AA, Aa, aa). Die Heterozygotenfrequenz ist 2pq.
+
+---
+
+## Voraussetzungen des Hardy-Weinberg-Gleichgewichts
+
+**Bisher haben wir gesehen:** Die Formel p² + 2pq + q² = 1. **Damit sie gilt**, müssen fünf Voraussetzungen erfüllt sein — sogenannte **ideale Population**:
+
+1. **Große Population** — kein genetischer Drift (keine zufälligen Schwankungen durch kleine Populationsgrößen)
+2. **Keine Selektion** — kein Genotyp hat einen Überlebens- oder Fortpflanzungsvorteil
+3. **Keine Mutation** — keine neuen Allele entstehen
+4. **Panmixie** (Zufallspaarung) — die Partnerwahl ist nicht vom Genotyp abhängig (keine Assortative Paarung, keine Inzucht)
+5. **Keine Migration** — kein Zu- oder Abwandern von Individuen mit anderen Allelfrequenzen
+
+In der Realität sind diese Bedingungen nie vollständig erfüllt. Das Hardy-Weinberg-Gleichgewicht dient als **Nullmodell**: Abweichungen deuten auf Evolution (Selektion, Drift, Migration, Mutation) hin.
+
+> **Merke:** 5 Voraussetzungen: große Population, keine Selektion, keine Mutation, Panmixie, keine Migration. In der Natur nie vollständig erfüllt — aber als Modell für Berechnungen im MedAT unverzichtbar.
+
+---
+
+## Rechenbeispiel: Von der Phänotyp-Häufigkeit zur Überträgerfrequenz
+
+**Bisher haben wir gesehen:** Die Formel und ihre Voraussetzungen. **Jetzt wenden wir sie auf eine typische MedAT-Aufgabe an.**
+
+**Aufgabe:** Mukoviszidose (CF) ist autosomal-rezessiv. In Österreich ist etwa 1 von 3.500 Neugeborenen betroffen. Wie hoch ist die Überträgerfrequenz?
+
+**Schritt 1:** Erkrankte sind homozygot rezessiv (aa). Deren Frequenz ist q².
+q² = 1/3.500 ≈ 0,000286
+
+**Schritt 2:** q berechnen (Wurzel ziehen):
+q = √(1/3.500) ≈ √0,000286 ≈ 0,0169 ≈ 1/59
+
+**Schritt 3:** p berechnen:
+p = 1 − q = 1 − 0,0169 ≈ 0,983
+
+**Schritt 4:** Heterozygotenfrequenz (Überträger) berechnen:
+2pq = 2 × 0,983 × 0,0169 ≈ 0,0332 ≈ **1 in 30**
+
+**Ergebnis:** Etwa **jeder 30. Mensch in Österreich** ist symptomloser Überträger (Aa) für Mukoviszidose — obwohl nur 1 von 3.500 erkrankt ist!
+
+> **Merke:** Rechenschema: q² (Erkrankte) → q = √q² → p = 1 − q → 2pq (Überträger). Bei CF: q² = 1/3.500, Überträgerfrequenz ≈ 1/30. Die Überträger sind viel häufiger als die Erkrankten!
+
+---
+
+## Weiteres Rechenbeispiel: Sichelzellanämie
+
+**Bisher haben wir gesehen:** Das Rechenschema am Beispiel Mukoviszidose. **Ein weiteres klassisches Beispiel** ist die Sichelzellanämie in Malariagebieten.
+
+**Aufgabe:** In einer westafrikanischen Population sind 2 % der Bevölkerung homozygot für das Sichelzellallel (HbS/HbS = krank). Wie viele sind Überträger (HbA/HbS)?
+
+q² = 0,02 → q = √0,02 ≈ 0,141
+p = 1 − 0,141 = 0,859
+2pq = 2 × 0,859 × 0,141 ≈ **0,242 ≈ 24,2 %**
+
+Fast ein Viertel der Population sind Überträger! Der Grund: Heterozygote (HbA/HbS) haben einen **Selektionsvorteil** gegen Malaria (**Heterozygotenvorteil**). Dieser Vorteil hält das „kranke" Allel in der Population, obwohl Homozygote (HbS/HbS) schwer krank sind.
+
+> **Merke:** Sichelzellanämie: Heterozygotenvorteil (Malariaresistenz) hält HbS-Allel in der Population. q² = 0,02 → 2pq ≈ 24 % Überträger. Der Heterozygotenvorteil ist eine Form der Selektion, die das HW-Gleichgewicht beeinflusst.
+
+---
+
+## Klinische Anwendungen
+
+| Erkrankung | q² (Erkrankte) | q | 2pq (Überträger) | Besonderheit |
+|-----------|---------------|---|-------------------|-------------|
+| **Mukoviszidose** | 1/3.500 | 1/59 | ~1/30 | Häufigste autosomal-rezessive Erkrankung in Österreich |
+| **Sichelzellanämie** | ~2 % (Westafrika) | ~0,14 | ~24 % | Heterozygotenvorteil (Malaria) |
+| **Phenylketonurie** | 1/10.000 | 1/100 | ~1/50 | PKU-Screening bei Neugeborenen |
+| **Hämochromatose** | ~1/200 (Nordeuropa) | ~1/14 | ~1/7 | Sehr häufige Überträger |
+
+---
+
+## MedAT-Fokus
+
+**Zentral prüfungsrelevant:**
+- Die Formeln p + q = 1 und p² + 2pq + q² = 1
+- Rechenschema: q² → q → p → 2pq
+- Die 5 Voraussetzungen (vor allem Panmixie und große Population)
+- Anwendung auf Mukoviszidose und Sichelzellanämie
+
+**Typische Prüfungsfragen:**
+- Aus q² die Überträgerfrequenz berechnen
+- Welche Voraussetzungen müssen für HW erfüllt sein?
+- Warum ist die Überträgerfrequenz so viel höher als die Erkrankungsfrequenz?
+
+**Typische Fallen:**
+- q² ist die Frequenz der **homozygot Rezessiven**, nicht die Allelfrequenz!
+- p und q sind **Allelfrequenzen**, nicht Genotypfrequenzen.
+- Heterozygotenfrequenz (2pq) ist fast immer viel größer als die Erkrankungsfrequenz (q²).
+- Vergessen, die Wurzel aus q² zu ziehen, bevor man 2pq berechnet.
+
+**Prüfungsrelevante Zahlen:**
+- Mukoviszidose: q² ≈ 1/3.500, Überträger ≈ 1/30
+- PKU: q² ≈ 1/10.000, Überträger ≈ 1/50
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Allelfrequenzen:** p (dominant) + q (rezessiv) = 1.
+- **Genotypfrequenzen:** p² (AA) + 2pq (Aa) + q² (aa) = 1.
+- **Rechenschema:** q² (Erkrankte) bekannt → q = √q² → p = 1 − q → 2pq (Überträger).
+- **Voraussetzungen:** Große Population, keine Selektion/Mutation/Migration, Panmixie.
+- **Mukoviszidose:** q² = 1/3.500 → Überträger ≈ 1/30. Überträger sind 100× häufiger als Erkrankte!
+- **Heterozygotenvorteil:** Sichelzellanämie — Überträger resistent gegen Malaria, daher q bleibt hoch.`,
+      lernziele: [
+        "Die Hardy-Weinberg-Gleichung (p² + 2pq + q² = 1) anwenden.",
+        "Aus Phänotyp-Häufigkeiten Allel- und Genotypfrequenzen berechnen.",
+        "Die fünf Voraussetzungen des HW-Gleichgewichts nennen.",
+        "Heterozygotenfrequenz für klinisch relevante Erkrankungen berechnen.",
+      ],
+      sections: [],
+      merksätze: [
+        "p + q = 1 (Allelfrequenzen); p² + 2pq + q² = 1 (Genotypfrequenzen). Rechenschema: q² → q → p → 2pq.",
+        "5 Voraussetzungen: große Population, keine Selektion, keine Mutation, Panmixie, keine Migration.",
+        "Mukoviszidose: q² = 1/3.500 → Überträger 2pq ≈ 1/30 (viel häufiger als Erkrankte!).",
+      ],
+      selfTest: [
+        {
+          question:
+            "In einer Population sind 1 % der Individuen von einer autosomal-rezessiven Erkrankung betroffen (aa). Wie hoch ist q?",
+          options: ["0,01", "0,1", "0,5", "0,99", "0,001"],
+          correctIndex: 1,
+          explanation:
+            "q² = 0,01 (1 % sind homozygot rezessiv). Daraus folgt q = √0,01 = **0,1**. Die Allelfrequenz des rezessiven Allels beträgt also 10 %, obwohl nur 1 % erkrankt sind.",
+          difficulty: 1,
+          tags: ["hardy-weinberg", "allelfrequenz", "rechnung"],
+        },
+        {
+          question:
+            "Welche Formel beschreibt die Genotypfrequenzen im Hardy-Weinberg-Gleichgewicht?",
+          options: ["p + q = 2", "p² + q² = 1", "p² + 2pq + q² = 1", "2p + 2q = 1", "p³ + q³ = 1"],
+          correctIndex: 2,
+          explanation:
+            "Die **Hardy-Weinberg-Gleichung** lautet **p² + 2pq + q² = 1**. p² = Frequenz von AA, 2pq = Frequenz von Aa (Heterozygote), q² = Frequenz von aa. Die Summe aller Genotypfrequenzen ist 1.",
+          difficulty: 1,
+          tags: ["hardy-weinberg", "formel", "genotypfrequenz"],
+        },
+        {
+          question:
+            "Mukoviszidose betrifft 1 von 3.500 Neugeborenen (autosomal-rezessiv). Wie hoch ist ungefähr die Überträgerfrequenz (2pq)?",
+          options: ["1 von 3.500", "1 von 350", "1 von 30", "1 von 3", "1 von 59"],
+          correctIndex: 2,
+          explanation:
+            "q² = 1/3.500 → q = √(1/3.500) ≈ 1/59 → p ≈ 1 − 1/59 ≈ 58/59 ≈ 1. Überträger: 2pq ≈ 2 × 1 × 1/59 ≈ 2/59 ≈ **1/30**. Etwa jeder 30. Mensch in Österreich ist symptomloser CF-Überträger.",
+          difficulty: 2,
+          tags: ["hardy-weinberg", "mukoviszidose", "überträger", "rechnung"],
+        },
+        {
+          question:
+            "Welche der folgenden Bedingungen ist KEINE Voraussetzung des Hardy-Weinberg-Gleichgewichts?",
+          options: [
+            "Große Population",
+            "Keine Selektion",
+            "Panmixie (Zufallspaarung)",
+            "Hohe Mutationsrate",
+            "Keine Migration",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Eine **hohe Mutationsrate** ist keine Voraussetzung — im Gegenteil: HW setzt **keine Mutation** voraus. Die fünf Voraussetzungen sind: große Population, keine Selektion, keine Mutation, Panmixie und keine Migration.",
+          difficulty: 1,
+          tags: ["hardy-weinberg", "voraussetzungen"],
+        },
+        {
+          question:
+            "Warum bleibt das Sichelzellallel (HbS) in Malariagebieten so häufig, obwohl homozygote Träger (HbS/HbS) schwer erkranken?",
+          options: [
+            "Weil HbS dominant über HbA ist",
+            "Weil es keine Selektion gegen HbS gibt",
+            "Weil heterozygote Träger (HbA/HbS) einen Selektionsvorteil gegen Malaria haben (Heterozygotenvorteil)",
+            "Weil HbS durch häufige Neumutationen entsteht",
+            "Weil homozygote HbS/HbS immun gegen Malaria sind",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Heterozygote (HbA/HbS) haben einen **Überlebensvorteil** in Malariagebieten (Malariaparasiten können sich in Sichelzellen schlechter vermehren). Dieser **Heterozygotenvorteil** (= balancierende Selektion) hält das HbS-Allel in der Population, obwohl HbS/HbS homozygot krank macht.",
+          difficulty: 2,
+          tags: ["sichelzellanämie", "heterozygotenvorteil", "selektion"],
+        },
+      ],
+    },
+
+    // ─── 11. Epigenetik ────────────────────────────────────────────────────────
+    {
+      id: "bio-4-11",
+      title: "Epigenetik",
+      stichworte: [
+        "Epigenetik",
+        "DNA-Methylierung",
+        "Histonmodifikation",
+        "Imprinting",
+        "X-Inaktivierung",
+        "CpG-Inseln",
+        "Barr-Körperchen",
+        "Prader-Willi",
+        "Angelman",
+      ],
+      content: `## Einleitung
+
+Jede Zelle deines Körpers enthält dieselbe DNA — und doch unterscheidet sich eine Nervenzelle grundlegend von einer Leberzelle. Wie ist das möglich, wenn der genetische Code identisch ist? Die Antwort liegt in der **Epigenetik**: chemische Markierungen auf der DNA und den Histonen entscheiden, welche Gene in einer Zelle aktiv sind und welche stumm bleiben — ohne die DNA-Sequenz selbst zu verändern. Diese Markierungen können sogar an die nächste Generation weitergegeben werden und spielen bei mehreren MedAT-relevanten Krankheitsbildern eine zentrale Rolle.
+
+**In diesem Kapitel lernst du:**
+- was Epigenetik bedeutet und warum sie die klassische Genetik ergänzt
+- wie DNA-Methylierung und Histonmodifikation die Genaktivität steuern
+- was genomisches Imprinting ist und warum Prader-Willi und Angelman spiegelbildliche Syndrome sind
+- wie die X-Inaktivierung funktioniert und was Barr-Körperchen und Schildpattkatzen damit zu tun haben
+
+{{DIAGRAM:dna-helix}}
+
+---
+
+## Was ist Epigenetik?
+
+**Epigenetik** (griech. epi = „über, darüber") beschreibt **vererbbare Veränderungen der Genaktivität**, die **nicht** auf einer Änderung der **DNA-Sequenz** beruhen. Stattdessen werden **chemische Markierungen** auf der DNA oder den Histonen angebracht oder entfernt, die bestimmen, ob ein Gen **abgelesen** (exprimiert) oder **stillgelegt** (silenced) wird.
+
+**Schlüsselunterschied zur Genetik:**
+- **Genetik:** Veränderung der DNA-Sequenz (z. B. Mutation A → G) → dauerhaft, in jeder Zelle gleich.
+- **Epigenetik:** Veränderung **über** der DNA (Methylierung, Histonmodifikation) → potenziell **reversibel**, kann **zelltypspezifisch** und **umweltabhängig** sein.
+
+Epigenetische Markierungen werden bei der **Zellteilung** an Tochterzellen weitergegeben (mitotisch vererbbar) und können teilweise auch über die **Keimbahn** an die nächste Generation vererbt werden (meiotisch vererbbar — transgenerationelle Epigenetik).
+
+> **Merke:** Epigenetik = Steuerung der Genaktivität ohne Änderung der DNA-Sequenz. Mechanismen: DNA-Methylierung und Histonmodifikation. Potenziell reversibel und zelltypspezifisch.
+
+---
+
+## DNA-Methylierung
+
+**Bisher haben wir gesehen:** Epigenetik verändert die Genaktivität ohne die DNA-Sequenz zu ändern. **Der wichtigste Mechanismus** ist die **DNA-Methylierung**.
+
+{{DIAGRAM:transcription-translation}}
+
+Bei der **DNA-Methylierung** wird eine **Methylgruppe (-CH₃)** an die Base **Cytosin** angehängt, und zwar an **CpG-Dinukleotiden** (Cytosin-Guanin-Abfolge). In **Promotorregionen** von Genen liegen oft viele CpG-Dinukleotide gehäuft — sogenannte **CpG-Inseln**.
+
+**Grundregel:** Methylierung einer CpG-Insel im Promotor → **Gen wird stillgelegt** (silenced). Demethylierung → Gen kann abgelesen werden.
+
+**Wie funktioniert das?**
+- Methylgruppen verändern die DNA-Oberfläche → **Transkriptionsfaktoren** können nicht mehr binden.
+- Methylierte DNA rekrutiert Proteine, die die **Chromatinstruktur verdichten** → das Gen wird unzugänglich.
+
+**Enzyme:** **DNA-Methyltransferasen (DNMTs)** fügen die Methylgruppen an. DNMT1 erhält die Methylierung bei der DNA-Replikation (kopiert das Muster auf den neuen Strang → **Vererbung** der Markierung).
+
+> **Merke:** CpG-Inseln im Promotor methyliert → Gen stumm. Demethyliert → Gen aktiv. DNMT1 kopiert das Methylierungsmuster bei Zellteilung → epigenetische Vererbung.
+
+---
+
+## Histonmodifikation
+
+**Bisher haben wir gesehen:** DNA-Methylierung reguliert Gene über CpG-Inseln. **Ein zweiter wichtiger Mechanismus** ist die **Histonmodifikation**.
+
+Die DNA ist um **Histonproteine** gewickelt (Nukleosomen). Histone haben „Schwänze" (N-terminale Enden), die aus dem Nukleosom herausragen. An diesen Schwänzen können verschiedene **chemische Gruppen** angehängt werden:
+
+| Modifikation | Effekt | Enzym |
+|-------------|--------|-------|
+| **Acetylierung** (Lysinreste) | Öffnet Chromatin → **Gen aktiv** (Euchromatin) | Histonacetyltransferasen (HATs) |
+| **Deacetylierung** | Verdichtet Chromatin → **Gen stumm** (Heterochromatin) | Histondeacetylasen (HDACs) |
+| **Methylierung** (Lysin/Arginin) | Kann aktivierend **oder** stilllegend wirken, je nach Position | Histonmethyltransferasen |
+
+**Zusammenspiel:** DNA-Methylierung und Histonmodifikation wirken oft **zusammen**: Methylierte DNA zieht HDACs an → Histone werden deacetyliert → Chromatin verdichtet → Gen stumm.
+
+> **Merke:** Histonacetylierung → offenes Chromatin → Gen AN. Deacetylierung → geschlossenes Chromatin → Gen AUS. DNA-Methylierung und Histonmodifikation verstärken sich gegenseitig.
+
+---
+
+## Genomisches Imprinting (Prader-Willi vs. Angelman)
+
+**Bisher haben wir gesehen:** DNA-Methylierung und Histonmodifikation als Mechanismen. **Eine besonders faszinierende Anwendung** der Epigenetik ist das **genomische Imprinting**.
+
+{{DIAGRAM:meiosis}}
+
+Beim **genomischen Imprinting** (dt. genomische Prägung) wird eines der beiden **elterlichen Allele** durch epigenetische Markierung **stillgelegt** — und zwar abhängig davon, ob es vom **Vater** oder von der **Mutter** stammt. Das Kind exprimiert also nur **ein** Allel (monoallelische Expression), obwohl es zwei hat.
+
+**Beispiel: Chromosom 15q11-13:**
+- Auf diesem Bereich liegen Gene, die normalerweise nur vom **väterlichen** Chromosom exprimiert werden (mütterliches Allel ist imprinted/stillgelegt) → **UBE3A** ist die Ausnahme (nur mütterliches Allel aktiv).
+
+| Syndrom | Ursache | Betroffenes Allel | Klinik |
+|---------|---------|-------------------|--------|
+| **Prader-Willi-Syndrom** | Verlust/Defekt des **väterlichen** 15q11-13 | Väterliche Gene fehlen (mütterliche sind imprinted) | Hypotonie, Adipositas, Kleinwuchs, Hypogonadismus |
+| **Angelman-Syndrom** | Verlust/Defekt des **mütterlichen** 15q11-13 (UBE3A) | Mütterliches UBE3A fehlt (väterliches ist imprinted) | Schwere geistige Behinderung, Ataxie, „Happy Puppet" |
+
+**Spiegelbild:** Derselbe chromosomale Bereich — aber je nachdem, welches **elterliche Allel** betroffen ist, entsteht ein **völlig anderes Krankheitsbild**. Das ist nur durch Imprinting erklärbar.
+
+**Mechanismus:** Imprinting-Markierungen werden in der **Keimzellentwicklung** gesetzt (Methylierung) und in der **Embryonalentwicklung** aufrechterhalten. In jeder Generation werden sie zuerst gelöscht und dann geschlechtsspezifisch neu gesetzt.
+
+> **Merke:** Imprinting = elternspezifische Stilllegung eines Allels. Prader-Willi: väterliches 15q fehlt. Angelman: mütterliches UBE3A fehlt. Gleiche Region, verschiedene Krankheit — je nach elterlicher Herkunft.
+
+---
+
+## X-Inaktivierung (Barr-Körperchen und Schildpattkatze)
+
+**Bisher haben wir gesehen:** Imprinting als elternspezifische Genregulation. **Ein weiteres wichtiges epigenetisches Phänomen** betrifft das X-Chromosom bei Frauen.
+
+{{DIAGRAM:cell-cycle}}
+
+Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht **doppelt so viel** X-chromosomale Genprodukte haben wie Männer, wird in jeder weiblichen Zelle eines der beiden X-Chromosomen **inaktiviert** — es wird zu einem dichten, methylierten **Barr-Körperchen** (fakultatives Heterochromatin), das im Zellkern als dunkler Punkt sichtbar ist.
+
+**Schlüsselpunkte:**
+- **Zeitpunkt:** Früh in der Embryonalentwicklung (ca. Tag 5–7, Blastocyste).
+- **Zufällig:** In jeder Zelle wird **zufällig** das mütterliche ODER das väterliche X inaktiviert.
+- **Stabil:** Einmal inaktiviert, bleibt dasselbe X in allen Tochterzellen inaktiviert (klonale Vererbung).
+- **Mechanismus:** Das **XIST-Gen** auf dem zu inaktivierenden X produziert eine lange nichtcodierende RNA, die das Chromosom „ummantelt" → Methylierung → Heterochromatinbildung.
+- **Folge:** Jede Frau ist ein **Mosaik** aus Zellen, in denen das mütterliche oder das väterliche X aktiv ist.
+
+**Schildpattkatze als Beispiel:** Das Gen für die Fellfarbe liegt auf dem X-Chromosom (Orange vs. Nicht-Orange). Heterozygote Katzen (X^O X^o) inaktivieren zufällig eines der beiden X-Chromosomen → manche Hautbereiche exprimieren Orange, andere Nicht-Orange → **Schildpattmuster** (Calico). Deshalb sind Schildpattkatzen fast immer **weiblich** (XX).
+
+**Barr-Körperchen und Chromosomenzahl:**
+- **Anzahl Barr-Körperchen = Anzahl X-Chromosomen − 1**
+- XX (Frau): 1 Barr-Körperchen
+- XY (Mann): 0
+- XXX: 2 Barr-Körperchen
+- XXY (Klinefelter): 1 Barr-Körperchen
+
+> **Merke:** X-Inaktivierung: Eines von zwei X-Chromosomen wird in jeder weiblichen Zelle stillgelegt (Barr-Körperchen). Zufällig und stabil → Mosaik. Barr-Körperchen = X − 1. Schildpattkatze = X-Mosaik.
+
+---
+
+## Klinische Relevanz der Epigenetik
+
+**Bisher haben wir gesehen:** Die drei großen epigenetischen Phänomene (Methylierung, Imprinting, X-Inaktivierung). **In der klinischen Medizin** gewinnt die Epigenetik zunehmend an Bedeutung:
+
+- **Krebs:** Tumorsuppressorgene können durch **Hypermethylierung** stillgelegt werden (z. B. p16, BRCA1) → kein Schutz vor unkontrolliertem Wachstum. Umgekehrt: **Hypomethylierung** kann Onkogene aktivieren.
+- **Epigenetische Therapie:** DNMT-Inhibitoren (z. B. Azacitidin bei MDS/AML) und HDAC-Inhibitoren können epigenetische Markierungen rückgängig machen → Gene werden wieder aktiviert.
+- **Umwelt und Epigenetik:** Ernährung, Stress, Toxine können epigenetische Markierungen verändern → potenziell transgenerationelle Effekte (Forschungsgebiet).
+
+> **Merke:** Krebsentstehung: Tumorsuppressoren durch Hypermethylierung stillgelegt. Epigenetische Therapie (DNMT-/HDAC-Inhibitoren) kann Markierungen reversibel rückgängig machen — im Gegensatz zu genetischen Mutationen.
+
+---
+
+## MedAT-Fokus
+
+**Zentral prüfungsrelevant:**
+- DNA-Methylierung → Gen stumm; Histonacetylierung → Gen aktiv
+- Imprinting: Prader-Willi (väterlich) vs. Angelman (mütterlich)
+- X-Inaktivierung, Barr-Körperchen (= X − 1)
+- Unterschied Genetik (Sequenzänderung) vs. Epigenetik (keine Sequenzänderung)
+
+**Häufige Fragen:**
+- Was sind CpG-Inseln und wie beeinflusst Methylierung die Genexpression?
+- Wie viele Barr-Körperchen hat eine Frau mit 47,XXX?
+- Warum sind Prader-Willi und Angelman unterschiedliche Krankheiten, obwohl dieselbe Region betroffen ist?
+
+**Typische Fallen:**
+- Epigenetik verändert NICHT die DNA-Sequenz — nur die Genaktivität.
+- X-Inaktivierung ist zufällig, aber einmal festgelegt stabil (klonal).
+- Methylierung = Gen AUS (im Promotor); Acetylierung = Gen AN.
+- Barr-Körperchen = X − 1 (nicht X − 2!).
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Epigenetik:** Steuerung der Genaktivität ohne DNA-Sequenzänderung; potenziell reversibel.
+- **DNA-Methylierung:** CpG-Inseln im Promotor methyliert → Gen stumm. DNMT1 erhält Muster.
+- **Histonmodifikation:** Acetylierung → offen/aktiv; Deacetylierung → geschlossen/stumm.
+- **Imprinting:** Elternspezifische Stilllegung; Prader-Willi = väterliches 15q fehlt; Angelman = mütterliches UBE3A fehlt.
+- **X-Inaktivierung:** 1 von 2 X-Chromosomen wird stillgelegt → Barr-Körperchen (X − 1); Mosaik; Schildpattkatze.
+- **Klinik:** Tumorsuppressor-Methylierung bei Krebs; epigenetische Therapie (DNMT-/HDAC-Inhibitoren).`,
+      lernziele: [
+        "DNA-Methylierung und Histonmodifikation als epigenetische Mechanismen beschreiben.",
+        "Genomisches Imprinting am Beispiel Prader-Willi vs. Angelman erklären.",
+        "X-Inaktivierung, Barr-Körperchen und die Mosaik-Folge verstehen.",
+        "Epigenetik von Genetik (Sequenzänderung) abgrenzen.",
+      ],
+      sections: [],
+      merksätze: [
+        "Epigenetik ≠ Genetik: keine Sequenzänderung, aber Steuerung der Genaktivität (Methylierung, Histonmodifikation).",
+        "Imprinting: Prader-Willi (väterliches 15q fehlt) vs. Angelman (mütterliches UBE3A fehlt) — gleiche Region, unterschiedliches Syndrom.",
+        "X-Inaktivierung: 1 X wird zum Barr-Körperchen (X − 1); zufällig, stabil, klonal → Mosaik.",
+      ],
+      selfTest: [
+        {
+          question: "Was bewirkt die Methylierung einer CpG-Insel im Promotorbereich eines Gens?",
+          options: [
+            "Das Gen wird stärker exprimiert",
+            "Die DNA-Sequenz wird verändert",
+            "Das Gen wird stillgelegt (silenced)",
+            "Das Protein wird phosphoryliert",
+            "Das Chromosom wird verdoppelt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Methylierung der **CpG-Insel** im Promotor verhindert die Bindung von Transkriptionsfaktoren und rekrutiert Proteine, die das Chromatin verdichten → das Gen wird **stillgelegt** (silenced). Die DNA-Sequenz selbst wird dabei **nicht** verändert.",
+          difficulty: 1,
+          tags: ["dna-methylierung", "cpg-insel", "genregulation"],
+        },
+        {
+          question:
+            "Ein Kind zeigt Hypotonie, Adipositas und Hypogonadismus. Eine Deletion auf Chromosom 15q11-13 wird nachgewiesen. Welches Syndrom liegt vor, wenn die Deletion das VÄTERLICHE Chromosom betrifft?",
+          options: [
+            "Angelman-Syndrom",
+            "Turner-Syndrom",
+            "Prader-Willi-Syndrom",
+            "Klinefelter-Syndrom",
+            "Down-Syndrom",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**Prader-Willi-Syndrom** entsteht durch Verlust des **väterlichen** 15q11-13. Die mütterlichen Gene in dieser Region sind durch **Imprinting** stillgelegt, daher fehlt bei Verlust des väterlichen Allels die Genexpression vollständig. **Angelman** entsteht dagegen bei Verlust des **mütterlichen** UBE3A in derselben Region.",
+          difficulty: 2,
+          tags: ["imprinting", "prader-willi", "chromosom 15"],
+        },
+        {
+          question: "Wie viele Barr-Körperchen findet man in einer Zelle mit dem Karyotyp 47,XXX?",
+          options: ["0", "1", "2", "3", "47"],
+          correctIndex: 2,
+          explanation:
+            "Die Formel lautet: **Barr-Körperchen = Anzahl X-Chromosomen − 1**. Bei 47,XXX sind es 3 X-Chromosomen, also **3 − 1 = 2 Barr-Körperchen**. Bei einer normalen Frau (46,XX): 2 − 1 = 1. Bei einem normalen Mann (46,XY): 1 − 1 = 0.",
+          difficulty: 1,
+          tags: ["x-inaktivierung", "barr-körperchen", "karyotyp"],
+        },
+        {
+          question: "Warum sind Schildpattkatzen fast immer weiblich?",
+          options: [
+            "Weil das Schildpattgen autosomal-rezessiv ist",
+            "Weil das Fellfarben-Gen auf dem Y-Chromosom liegt",
+            "Weil weibliche Katzen (XX) durch zufällige X-Inaktivierung ein Mosaik aus zwei Fellfarben bilden",
+            "Weil männliche Katzen immer schwarz sind",
+            "Weil Schildpatt durch eine Genommutation entsteht",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Das Gen für Orange/Nicht-Orange liegt auf dem **X-Chromosom**. Heterozygote Katzen (X^O X^o) inaktivieren zufällig ein X pro Zelle → manche Hautzellen exprimieren Orange, andere Nicht-Orange → **Schildpattmuster**. Männliche Katzen (XY) haben nur ein X und können daher kein Mosaik bilden (Ausnahme: XXY-Kater).",
+          difficulty: 2,
+          tags: ["x-inaktivierung", "mosaik", "schildpattkatze"],
+        },
+        {
+          question:
+            "Was unterscheidet epigenetische Veränderungen grundsätzlich von genetischen Mutationen?",
+          options: [
+            "Epigenetische Veränderungen betreffen nur Mitochondrien",
+            "Epigenetische Veränderungen sind immer letal",
+            "Epigenetische Veränderungen verändern die DNA-Sequenz nicht, sondern die Genaktivität — und sind potenziell reversibel",
+            "Genetische Mutationen sind immer reversibel, epigenetische nicht",
+            "Epigenetische Veränderungen betreffen nur Prokaryoten",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der **Schlüsselunterschied**: Genetische Mutationen verändern die **DNA-Sequenz** (z. B. A → G) und sind meist dauerhaft. Epigenetische Veränderungen betreffen **Markierungen** auf/über der DNA (Methylierung, Histonmodifikation) ohne die Sequenz zu ändern — sie sind potenziell **reversibel** (z. B. durch epigenetische Therapie).",
+          difficulty: 1,
+          tags: ["epigenetik", "mutation", "reversibel"],
         },
       ],
     },

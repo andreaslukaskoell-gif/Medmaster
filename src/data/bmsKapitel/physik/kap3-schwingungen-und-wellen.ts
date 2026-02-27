@@ -5,7 +5,7 @@ export const physKap3: Kapitel = {
   title: "Schwingungen und Wellen",
   subject: "physik",
   icon: "〰️",
-  estimatedTime: "80 min",
+  estimatedTime: "120 min",
   unterkapitel: [
     // ─────────────────────────────────────────────────────────────────────────
     // UK 1: Harmonische Schwingungen
@@ -141,6 +141,59 @@ Bei schwacher Dämpfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfreq
 
 In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel als Stossdämpfer, Trommelfell-Dämpfung verhindert Nachschwingen).
 
+## Gedämpfte Schwingung — Vertiefung
+
+Bisher haben wir die idealisierte, ungedämpfte Schwingung betrachtet. In der Realität verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedämpfte Schwingung** beschreibt diesen Energieverlust mathematisch:
+
+**x(t) = A₀ · e^(−δt) · cos(ω_d · t + φ₀)**
+
+- **δ** (Abklingkoeffizient) – gibt an, wie schnell die Amplitude abnimmt [1/s]
+- **A₀ · e^(−δt)** – die **Einhüllende**: die Amplitude nimmt exponentiell ab
+- **ω_d** (gedämpfte Kreisfrequenz) – ω_d = √(ω₀² − δ²), immer kleiner als ω₀
+
+Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Hälfte absinkt) beträgt: t½ = ln(2)/δ ≈ 0,693/δ.
+
+**Drei Dämpfungsfälle im Vergleich:**
+
+| Fall | Bedingung | Verhalten | Beispiel |
+|------|-----------|-----------|----------|
+| **Schwingfall** | δ < ω₀ | Oszillation mit abnehmender Amplitude | Stimmgabel in Luft |
+| **Aperiodischer Grenzfall** | δ = ω₀ | Schnellste Rückkehr ohne Überschwingen | Autofederung, Türschliesser |
+| **Kriechfall** | δ > ω₀ | Sehr langsame Rückkehr, kein Schwingen | Überdämpftes Galvanometer |
+
+> **Merke:** Der **aperiodische Grenzfall** (δ = ω₀) ist technisch besonders wichtig: Er beschreibt die schnellste Rückkehr zur Ruhelage ohne Überschwingen. Krankenwagen-Federung ist darauf abgestimmt, um den Patienten nicht durch Nachschwingen zu belasten.
+
+**Gütefaktor Q:** Q = ω₀/(2δ) gibt an, wie viele Schwingungen ein System ausführt, bevor die Amplitude auf e^(−π) ≈ 4,3 % abfällt. Hohe Güte (Q > 100): Stimmgabel, Quarzoszillator. Niedrige Güte (Q < 1): Krankenwagen-Stossdämpfer.
+
+---
+
+## Erzwungene Schwingung und Resonanzkatastrophe
+
+Wird einem gedämpften Oszillator durch eine **periodische äussere Kraft** F(t) = F₀·cos(Ω·t) Energie zugeführt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Ω** (nicht mit seiner Eigenfrequenz ω₀).
+
+Die Amplitude der stationären erzwungenen Schwingung hängt vom Frequenzverhältnis Ω/ω₀ ab:
+
+**A(Ω) = F₀ / √((ω₀² − Ω²)² + (2δΩ)²)**
+
+Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
+- **Ω_res = √(ω₀² − 2δ²)** ≈ ω₀ für schwache Dämpfung
+- Bei schwacher Dämpfung: A_max ≈ F₀/(2δω₀) – die Amplitude wird sehr gross
+
+**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Dämpfung strebt die Amplitude bei Ω = ω₀ theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
+- **Tacoma-Narrows-Brücke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Brücke an → Resonanzkatastrophe → Einsturz
+- **Millennium Bridge London (2000):** Fussgänger synchronisierten ihren Gang mit der Brückenfrequenz → seitliches Schwanken
+- **Marschieren auf Brücken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
+
+> **Merke:** **Resonanz** = Anregungsfrequenz ≈ Eigenfrequenz → maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Dämpfung → Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz); in der Technik muss sie kontrolliert oder vermieden werden.
+
+**Resonanz in der Medizin und Biologie:**
+- **MRT:** Kernspinresonanz – Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T × Feldstärke)
+- **Mikrowelle:** Wassermoleküle absorbieren bei ~2,45 GHz maximal (Resonanzfrequenz der Rotation)
+- **Trommelfell:** Die Eigenresonanz bei ~3 kHz erklärt die maximale Hörempfindlichkeit in diesem Bereich
+- **Cochleärer Verstärker:** Äussere Haarzellen nutzen aktive Resonanzverstärkung (Prestin-Protein)
+
+---
+
 ## Rechenbeispiele
 
 **Beispiel 1 — Fadenpendel auf Erde und Mond:**
@@ -158,6 +211,12 @@ Die Larmorfrequenz eines Wasserstoffkerns im MRT berechnet sich als f = γ · B�
 
 **Beispiel 5 — Federkonstante bestimmen:**
 An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Δx = 0,3 · 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer beträgt dann T = 2π√(0,3/49,1) = 0,491 s.
+
+**Beispiel 6 — Gedämpfte Schwingung:**
+Ein Federpendel hat ω₀ = 10 rad/s und δ = 0,5 s⁻¹. Die gedämpfte Frequenz: ω_d = √(100 − 0,25) = √99,75 ≈ 9,99 rad/s (kaum verändert bei schwacher Dämpfung). Die Halbwertszeit der Amplitude: t½ = ln(2)/0,5 = 1,39 s. Der Gütefaktor: Q = 10/(2·0,5) = 10 → das System führt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
+
+**Beispiel 7 — Resonanzfrequenz einer erzwungenen Schwingung:**
+Ein Oszillator hat ω₀ = 20 rad/s und δ = 2 s⁻¹. Die Resonanzfrequenz: Ω_res = √(400 − 8) = √392 ≈ 19,8 rad/s. Bei schwacher Dämpfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
 
 ## Klinische Vertiefung
 
@@ -195,7 +254,10 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 - **Fadenpendel**: T = 2π√(l/g) — unabhängig von Masse und Amplitude (Isochronie)
 - **Federpendel**: T = 2π√(m/k) — unabhängig von Amplitude; T steigt mit Masse, sinkt mit Federhärte
 - **Resonanz**: maximale Energieübertragung bei f_Anregung = f_Eigen; im MRT: Larmorfrequenz γ·B₀
-- **Dämpfung**: D < 1 → Schwingfall (Nachschwingen); D = 1 → aperiodischer Grenzfall (Krankenwagen); D > 1 → Kriechfall`,
+- **Dämpfung**: D < 1 → Schwingfall (Nachschwingen); D = 1 → aperiodischer Grenzfall (Krankenwagen); D > 1 → Kriechfall
+- **Gedämpfte Schwingung**: x(t) = A₀·e^(−δt)·cos(ω_d·t); Amplitude klingt exponentiell ab; t½ = ln(2)/δ
+- **Erzwungene Schwingung**: System schwingt mit Anregungsfrequenz Ω; Resonanzkurve hat Maximum bei Ω ≈ ω₀
+- **Resonanzkatastrophe**: Resonanz ohne ausreichende Dämpfung → Strukturversagen (Tacoma-Brücke)`,
 
       lernziele: [
         "Die Schwingungsgleichung x(t) = A·cos(ωt+φ) aufschreiben und Amplitude, Kreisfrequenz und Phase benennen.",
@@ -234,6 +296,10 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
         "Dämpfung: Amplitude nimmt exponentiell ab, Energie wird in Wärme umgewandelt.",
         "Resonanz tritt auf, wenn Anregungsfrequenz = Eigenfrequenz – Amplitude wird maximal.",
         "Isochronie: Periodendauer unabhängig von der Amplitude (bei kleinen Auslenkungen).",
+        "Gedämpfte Schwingung: A(t) = A₀·e^(−δt); drei Fälle: Schwingfall (δ<ω₀), aperiodischer Grenzfall (δ=ω₀), Kriechfall (δ>ω₀).",
+        "Aperiodischer Grenzfall: schnellste Rückkehr ohne Überschwingen – ideal für Autofederung, Türschliesser.",
+        "Resonanzkatastrophe: Resonanz ohne Dämpfung → theoretisch unendliche Amplitude → Strukturversagen.",
+        "Gütefaktor Q = ω₀/(2δ): hohe Q → scharfe Resonanz; niedrige Q → breite, gedämpfte Resonanz.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -359,6 +425,60 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
           ],
           difficulty: 2,
           tags: ["kreisfrequenz", "periodendauer", "schwingung"],
+        },
+        {
+          question:
+            "Ein Federpendel (ω₀ = 10 rad/s, δ = 0,5 s⁻¹) führt eine gedämpfte Schwingung aus. Nach welcher Zeit ist die Amplitude auf die Hälfte des Anfangswertes gesunken?",
+          options: ["0,35 s", "0,69 s", "1,00 s", "1,39 s", "2,00 s"],
+          correctIndex: 3,
+          explanation:
+            "Die Amplitude klingt nach A(t) = A₀·e^(−δt) ab. Halbwertszeit: A₀/2 = A₀·e^(−δ·t½) → e^(−δ·t½) = 0,5 → δ·t½ = ln(2) → t½ = ln(2)/δ = 0,693/0,5 = 1,39 s. Typischer Fehler: t½ = 1/δ setzen (das wäre die Zeitkonstante τ = 1/δ, nach der A auf 1/e ≈ 36,8 % fällt, nicht auf 50 %).",
+          hints: [
+            "Exponentieller Abfall: t½ = ln(2)/δ, nicht 1/δ.",
+            "ln(2) ≈ 0,693 ist ein Standardwert – wie bei radioaktivem Zerfall.",
+          ],
+          difficulty: 2,
+          tags: ["gedämpfte-schwingung", "halbwertszeit", "dämpfung"],
+        },
+        {
+          question:
+            "Was geschieht bei einer erzwungenen Schwingung, wenn die Anregungsfrequenz genau der Eigenfrequenz des Systems entspricht?",
+          options: [
+            "Die Schwingung hört auf.",
+            "Die Amplitude wird minimal (destruktive Interferenz).",
+            "Die Amplitude wird maximal (Resonanz).",
+            "Die Frequenz des Systems verdoppelt sich.",
+            "Das System geht in den Kriechfall über.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Bei Ω = ω₀ tritt Resonanz auf: Die Energieübertragung von der äusseren Kraft auf das System ist maximal, die Amplitude erreicht ihren Höchstwert. Bei schwacher Dämpfung kann die Amplitude extrem gross werden (Resonanzkatastrophe). Beispiel: Tacoma-Narrows-Brücke (1940) – Wind regte die Eigenfrequenz der Brücke an → Einsturz. In der Medizin wird Resonanz gezielt genutzt: MRT regt Protonen mit der Larmorfrequenz an.",
+          hints: [
+            "Resonanz = Anregungsfrequenz trifft Eigenfrequenz → was passiert mit der Amplitude?",
+            "Denke an das MRT: Protonen absorbieren Energie maximal bei der Larmorfrequenz.",
+          ],
+          difficulty: 1,
+          tags: ["resonanz", "erzwungene-schwingung", "eigenfrequenz"],
+        },
+        {
+          question:
+            "Welcher Dämpfungsfall beschreibt die schnellstmögliche Rückkehr zur Ruhelage ohne Überschwingen?",
+          options: [
+            "Schwingfall (δ < ω₀)",
+            "Resonanzfall",
+            "Aperiodischer Grenzfall (δ = ω₀)",
+            "Kriechfall (δ > ω₀)",
+            "Ungedämpfter Fall (δ = 0)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der aperiodische Grenzfall (δ = ω₀) ist die kritische Dämpfung: Das System kehrt so schnell wie möglich zur Ruhelage zurück, ohne zu überschwingen. Im Schwingfall (δ < ω₀) oszilliert das System; im Kriechfall (δ > ω₀) kehrt es zu langsam zurück. Anwendung: Krankenwagen-Federung, Türschliesser, Messinstrumente (Galvanometer).",
+          hints: [
+            "Drei Fälle: Schwingfall, Grenzfall, Kriechfall – welcher ist am schnellsten ohne Überschwingen?",
+            "Optimal für Stossdämpfer: nicht schwingen, nicht kriechen → Grenzfall.",
+          ],
+          difficulty: 2,
+          tags: ["aperiodischer-grenzfall", "dämpfung", "schwingung"],
         },
       ],
     },
@@ -1418,6 +1538,879 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
           ],
           difficulty: 3,
           tags: ["c5-senke", "lärmschwerhörigkeit", "audiogramm"],
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK 5: Geometrische Optik und das Auge
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: "ph-3-05",
+      title: "Geometrische Optik und das Auge",
+      stichworte: [
+        "Brechungsgesetz",
+        "Snellius",
+        "Totalreflexion",
+        "Grenzwinkel",
+        "Sammellinse",
+        "Zerstreuungslinse",
+        "Linsengleichung",
+        "Brechkraft",
+        "Dioptrie",
+        "Abbildungsmaßstab",
+        "Akkommodation",
+        "Myopie",
+        "Hyperopie",
+        "Lupe",
+        "Mikroskop",
+        "Endoskopie",
+        "Glasfaser",
+      ],
+      diagram: "lens-imaging",
+      content: `## Einleitung
+
+Warum braucht ein kurzsichtiger Mensch eine Brille mit Zerstreuungslinsen -- und ein weitsichtiger eine mit Sammellinsen? Und wie erzeugt eine einfache Lupe ein vergrössertes Bild? Die **geometrische Optik** beschreibt Licht als Strahlen, die an Grenzflächen gebrochen und reflektiert werden. Mit nur zwei Formeln -- dem **Brechungsgesetz** und der **Linsengleichung** -- lassen sich Brillen, Lupen, Mikroskope und das menschliche Auge vollständig erklären.
+
+**In diesem Kapitel lernst du:**
+- wie das Brechungsgesetz von Snellius n₁·sin(θ₁) = n₂·sin(θ₂) funktioniert und was der Brechungsindex physikalisch bedeutet
+- wann Totalreflexion auftritt, wie der Grenzwinkel berechnet wird und warum Glasfaser-Endoskope darauf basieren
+- wie die Linsengleichung 1/f = 1/g + 1/b Bildlage und -grösse bei Sammel- und Zerstreuungslinsen bestimmt
+- wie das Auge als optisches System funktioniert: Akkommodation, Nah-/Fernpunkt, Fehlsichtigkeiten
+- wie Lupe und Mikroskop Vergrösserungen erzielen und welche Formeln gelten
+
+**Kontext — worum geht es und wofür brauchst du das?**
+Im vorherigen Unterkapitel hast du Brechung und Totalreflexion als Wellenphänomene kennengelernt. Hier vertiefen wir die **Strahlenoptik**: Linsen, Abbildungen und das Auge. In der Medizin: Augenoptik (Brillen, Kontaktlinsen, Augen-Laser), Endoskopie (Totalreflexion), Mikroskopie. Für den MedAT sind Linsengleichung, Brechkraft und Fehlsichtigkeiten zentrale Prüfungsthemen.
+
+---
+
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:wave-types}}
+
+
+
+## Brechungsgesetz (Snellius)
+
+Bisher haben wir die Brechung qualitativ beschrieben. Quantitativ gilt das **Snellius'sche Brechungsgesetz**:
+
+**n₁ · sin(θ₁) = n₂ · sin(θ₂)**
+
+- **n** = Brechungsindex = c₀/c_Medium (dimensionslos); je grösser n, desto „optisch dichter" das Medium
+- **θ₁** = Einfallswinkel (gemessen zum Lot auf die Grenzfläche)
+- **θ₂** = Brechungswinkel
+
+**Formelklartext:** Das Produkt aus Brechungsindex und Sinus des Winkels ist auf beiden Seiten der Grenzfläche gleich. In einem optisch dichteren Medium (grösseres n) ist sin(θ) kleiner → der Strahl wird **zum Lot hin** gebrochen. In einem optisch dünneren Medium wird er **vom Lot weg** gebrochen.
+
+Wichtige Brechungsindizes:
+
+| Material | n | Klinische Relevanz |
+|----------|---|-------------------|
+| Vakuum | 1,000 | Referenz |
+| Luft | 1,0003 | ≈ 1 für Berechnungen |
+| Wasser | 1,333 | Grundmedium des Körpers |
+| Hornhaut (Cornea) | 1,376 | Hauptbrechkraft des Auges |
+| Kammerwasser | 1,336 | Zwischen Hornhaut und Linse |
+| Augenlinse | 1,386–1,406 | Variable Brechkraft (Akkommodation) |
+| Glaskörper | 1,336 | Zwischen Linse und Retina |
+| Glas (Brille) | 1,50–1,90 | Korrekturgläser |
+| Diamant | 2,42 | Hohe Totalreflexion → Funkeln |
+
+> **Merke:** n₁·sin(θ₁) = n₂·sin(θ₂) — der Brechungsindex n = c₀/c gibt an, um welchen Faktor Licht im Medium langsamer ist als im Vakuum. Grösseres n → langsameres Licht → Brechung zum Lot hin.
+
+---
+
+## Totalreflexion und Grenzwinkel
+
+Beim Übergang vom optisch **dichteren** ins optisch **dünnere** Medium (n₁ > n₂) wird der Strahl vom Lot weg gebrochen. Ab einem bestimmten Einfallswinkel -- dem **Grenzwinkel θ_c** -- wird der Brechungswinkel 90° und der Strahl läuft parallel zur Grenzfläche. Für θ > θ_c findet keine Brechung mehr statt — die Welle wird **vollständig reflektiert**:
+
+**sin(θ_c) = n₂/n₁**
+
+**Rechenbeispiel — Glasfaser:**
+Glasfaserkern (n₁ = 1,50) und Mantel (n₂ = 1,46): sin(θ_c) = 1,46/1,50 = 0,973 → θ_c = 76,7°. Jeder Strahl, der unter einem Winkel > 76,7° (gemessen zum Lot) auf die Kern-Mantel-Grenze trifft, wird total reflektiert und bleibt in der Faser.
+
+**Klinische Anwendung — Endoskopie:** Moderne Endoskope nutzen Glasfaserbündel mit Totalreflexion: Licht wird durch einen Faserbündel zum Untersuchungsort geleitet, das reflektierte Bild über ein zweites Bündel zurückgeführt. Die Flexibilität der Fasern ermöglicht die Untersuchung von Magen, Darm und Bronchien. In aktuellen Endoskopen wird das Bild oft zusätzlich digital mit einer Miniaturkamera am Faserneende erfasst.
+
+**Rechenbeispiel — Diamant:**
+n₁ = 2,42 (Diamant), n₂ = 1,00 (Luft): sin(θ_c) = 1,00/2,42 = 0,413 → θ_c = 24,4°. Der sehr niedrige Grenzwinkel bedeutet, dass Licht im Diamant bei fast allen Einfallswinkeln total reflektiert wird — daher das intensive Funkeln.
+
+> **Merke:** Totalreflexion tritt nur beim Übergang vom optisch **dichteren** ins **dünnere** Medium auf. Der Grenzwinkel ist sin(θ_c) = n₂/n₁. Anwendungen: Glasfaser-Endoskopie, Lichtleiter, Prismenglas.
+
+---
+
+## Linsen und Linsengleichung
+
+Bisher haben wir Brechung an ebenen Grenzflächen betrachtet. Linsen sind **gekrümmte** Grenzflächen, die Licht gezielt bündeln oder zerstreuen.
+
+### Sammellinse (konvex, Pluslinse)
+- Bündelt paralleles Licht im **Brennpunkt F** (Brennweite f > 0)
+- Erzeugt bei g > f ein **reelles, umgekehrtes Bild** auf der anderen Seite
+- Erzeugt bei g < f ein **virtuelles, aufrechtes, vergrössertes Bild** (Lupe!)
+- Brechkraft: **D = 1/f** [Dioptrien, dpt; f in Metern]
+
+### Zerstreuungslinse (konkav, Minuslinse)
+- Zerstreut paralleles Licht → Strahlen scheinen aus einem virtuellen Brennpunkt vor der Linse zu kommen
+- Brennweite f < 0 → Brechkraft D < 0 dpt
+- Erzeugt immer ein **virtuelles, aufrechtes, verkleinertes Bild**
+
+### Die Linsengleichung (dünne Linse)
+
+**1/f = 1/g + 1/b**
+
+- **f** = Brennweite [m] (positiv für Sammellinse, negativ für Zerstreuungslinse)
+- **g** = Gegenstandsweite (Abstand Objekt–Linse) [m]
+- **b** = Bildweite (Abstand Bild–Linse) [m] (positiv = reelles Bild; negativ = virtuelles Bild)
+
+**Abbildungsmaßstab:**
+
+**V = B/G = b/g**
+
+- B = Bildgrösse, G = Gegenstandsgrösse
+- |V| > 1: Vergrösserung; |V| < 1: Verkleinerung
+- V > 0: aufrechtes Bild; V < 0: umgekehrtes Bild
+
+**Formelklartext:** 1/f = 1/g + 1/b bedeutet: Wer Brennweite f und Gegenstandsweite g kennt, kann die Bildweite b berechnen: b = g·f/(g − f). Das Vorzeichen von b zeigt, ob das Bild reell (b > 0, auf der Schirmseite) oder virtuell (b < 0, auf der Gegenstandsseite) ist.
+
+> **Merke:** Die **Brechkraft D = 1/f** [dpt] beschreibt, wie stark eine Linse bricht. Sammellinse: D > 0; Zerstreuungslinse: D < 0. Bei Kombination mehrerer dünner Linsen addieren sich die Brechkräfte: D_ges = D₁ + D₂ + ...
+
+### Spezialfälle der Abbildung (Sammellinse)
+
+| Gegenstandsweite g | Bildweite b | Bild | Beispiel |
+|---------------------|-------------|------|----------|
+| g → ∞ (sehr fern) | b = f | reell, stark verkleinert | Fernsicht |
+| g = 2f | b = 2f | reell, gleich gross (V = −1) | 1:1-Kopie |
+| g = f | b → ±∞ | kein Bild (Parallelstrahlen) | Scheinwerfer |
+| g < f | b < 0 (virtuell) | virtuell, vergrössert | Lupe |
+
+---
+
+## Das Auge als optisches System
+
+Das menschliche Auge ist ein zusammengesetztes optisches System mit einer Gesamtbrechkraft von ca. **60 Dioptrien** (D = 1/f → f ≈ 17 mm):
+
+- **Hornhaut (Cornea):** D ≈ 43 dpt → liefert ca. 2/3 der Gesamtbrechkraft (grösster Brechungsindex-Sprung: Luft → Hornhaut)
+- **Augenlinse:** D ≈ 17–30 dpt (variabel durch Akkommodation)
+- **Kammerwasser und Glaskörper:** Geringe zusätzliche Brechung
+
+### Akkommodation
+
+Die **Akkommodation** ist die Fähigkeit der Augenlinse, ihre Brennweite zu verändern, um Objekte in verschiedenen Entfernungen scharf auf der Netzhaut abzubilden:
+
+- **Fernakkommodation** (entspannt): Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach → f maximal → ferne Objekte scharf
+- **Nahakkommodation** (angespannt): Ziliarmuskel kontrahiert → Zonulafasern locker → Linse rundet sich → f kürzer → nahe Objekte scharf
+
+**Nahpunkt:** Kürzeste Entfernung, bei der scharfes Sehen möglich ist. Beim jungen Erwachsenen: ~10 cm; bei 45-Jährigen: ~25 cm (konventionelle Bezugssehweite s₀ = 25 cm); bei 60-Jährigen: ~100 cm. Diese Abnahme heisst **Presbyopie** (Altersweitsichtigkeit) und entsteht durch zunehmende Starrheit der Linse.
+
+**Fernpunkt:** Entfernung, die bei maximaler Entspannung des Ziliarmuskels scharf gesehen wird. Normal: ∞ (Emmetropie). Bei Kurzsichtigkeit: endlicher Fernpunkt.
+
+> **Merke:** Die Hornhaut liefert ca. 2/3 der Brechkraft des Auges (~43 dpt). Die Augenlinse variiert ihre Brechkraft durch Formänderung (Akkommodation): flach für Ferne, rund für Nähe. Presbyopie: ab ~45 Jahren brauchen die meisten eine Lesebrille.
+
+### Fehlsichtigkeiten und Korrektur
+
+**Myopie (Kurzsichtigkeit):**
+- Augapfel zu lang oder Brechkraft zu gross → Bild fällt **vor** die Netzhaut
+- Fernpunkt endlich (z. B. 2 m statt ∞)
+- Korrektur: **Zerstreuungslinse** (D < 0 dpt) → verlängert die Brennweite
+- Berechnung: D = −1/Fernpunkt (z. B. Fernpunkt 2 m → D = −0,5 dpt)
+- Alternative: LASIK (Hornhaut wird abgeflacht → Brechkraft verringert)
+
+**Hyperopie (Weitsichtigkeit):**
+- Augapfel zu kurz oder Brechkraft zu gering → Bild fällt **hinter** die Netzhaut
+- Nahpunkt weiter entfernt als normal
+- Korrektur: **Sammellinse** (D > 0 dpt) → verkürzt die Brennweite
+- Alternative: LASIK (Hornhaut wird steiler gewölbt)
+
+**Astigmatismus (Stabsichtigkeit):**
+- Hornhaut nicht gleichmässig gekrümmt (torusförmig statt sphärisch) → verschiedene Brechkraft in verschiedenen Achsen
+- Korrektur: **zylindrische Linse** (Toruslinse), die nur in einer Achse bricht
+
+> **Merke:** **Myopie → Zerstreuungslinse (Minus-Glas)**; **Hyperopie → Sammellinse (Plus-Glas)**. Eselsbrücke: Kurzsichtig = zu viel Brechung = Minus-Linse reduziert. Weitsichtig = zu wenig Brechung = Plus-Linse verstärkt.
+
+### Rechenbeispiel — Korrekturlinse bei Myopie:
+Fernpunkt eines Kurzsichtigen: g_fern = 50 cm = 0,5 m. Die Brille soll ermöglichen, dass unendlich ferne Objekte (g → ∞) auf dem Fernpunkt abgebildet werden: 1/f = 1/∞ + 1/(−0,5) = −2 dpt. Die Brille benötigt Gläser mit D = −2,0 dpt.
+
+### Rechenbeispiel — Korrekturlinse bei Hyperopie:
+Nahpunkt eines Weitsichtigen: 100 cm (statt normaler 25 cm). Die Lesebrille soll ein Objekt bei 25 cm auf den Nahpunkt bei 100 cm abbilden: 1/f = 1/25 − 1/100 = 4/100 − 1/100 = 3/100 → f = 33,3 cm → D = +3,0 dpt (Achtung: hier vereinfacht; exakte Berechnung berücksichtigt HSA = Hornhautscheitelabstand).
+
+---
+
+## Lupe und Mikroskop
+
+### Lupe
+Eine Lupe ist eine einfache Sammellinse mit kurzer Brennweite (f typisch 2–10 cm). Das Objekt wird innerhalb der Brennweite platziert (g < f) → virtuelles, aufrechtes, vergrössertes Bild.
+
+**Vergrösserung der Lupe:**
+
+**M = s₀/f** (bei Betrachtung im Unendlichen, entspanntes Auge)
+
+mit s₀ = 25 cm (konventionelle Bezugssehweite).
+
+Beispiel: Lupe mit f = 5 cm → M = 25/5 = 5×.
+
+Bei Betrachtung im Nahpunkt (angestrengtes Auge): M = s₀/f + 1.
+
+### Mikroskop
+Ein Lichtmikroskop besteht aus zwei Linsensystemen:
+1. **Objektiv** (kurze Brennweite f_obj, nahe am Präparat): erzeugt ein reelles, vergrössertes Zwischenbild
+2. **Okular** (wirkt als Lupe, Brennweite f_ok): vergrössert das Zwischenbild nochmals
+
+**Gesamtvergrösserung:**
+
+**M_ges = M_obj × M_ok = (t/f_obj) × (s₀/f_ok)**
+
+mit t = Tubuslänge (Abstand Brennpunkt Objektiv – Brennpunkt Okular, typisch 16 cm).
+
+Beispiel: f_obj = 4 mm, f_ok = 25 mm, t = 160 mm: M_ges = (160/4) × (250/25) = 40 × 10 = 400×.
+
+**Auflösungsgrenze:** Das Lichtmikroskop kann Strukturen nur bis ca. λ/2 ≈ 200 nm auflösen (Abbe'sche Beugungsgrenze). Für kleinere Strukturen: Elektronenmikroskop (λ_Elektron << λ_Licht).
+
+> **Merke:** Lupe: M = s₀/f (einfach); Mikroskop: M = (t/f_obj) × (s₀/f_ok) (zweistufig). Die Auflösungsgrenze des Lichtmikroskops beträgt ca. 200 nm (Abbe-Limit).
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Brechung Luft → Glas:**
+Lichtstrahl von Luft (n₁ = 1,00) in Glas (n₂ = 1,50) unter θ₁ = 45°:
+sin(θ₂) = n₁·sin(θ₁)/n₂ = 1,00·sin(45°)/1,50 = 0,707/1,50 = 0,471 → θ₂ = 28,1°.
+Der Strahl wird zum Lot hin gebrochen (langsameres Medium).
+
+**Beispiel 2 — Grenzwinkel Wasser → Luft:**
+sin(θ_c) = n₂/n₁ = 1,00/1,333 = 0,750 → θ_c = 48,6°.
+Ab 48,6° wird Licht an der Wasseroberfläche total reflektiert — deshalb sieht man unter Wasser die Oberfläche ab einem bestimmten Winkel als Spiegel.
+
+**Beispiel 3 — Sammellinse (Abbildung):**
+f = 10 cm, Gegenstand bei g = 30 cm: 1/b = 1/f − 1/g = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 → b = 15 cm.
+Abbildungsmaßstab: V = b/g = 15/30 = 0,5 → Bild ist halb so gross, reell und umgekehrt.
+
+**Beispiel 4 — Lupe:**
+Sammellinse f = 4 cm. Vergrösserung: M = 25/4 = 6,25× (bei entspanntem Auge). Ein 1 mm grosses Objekt erscheint wie 6,25 mm.
+
+**Beispiel 5 — Brechkraft des Auges:**
+Gesamtbrechkraft D = 60 dpt → f = 1/60 m ≈ 16,7 mm. Beim Blick in die Ferne (g → ∞) muss b = f = 16,7 mm sein, was der Augenlänge entspricht. Bei Myopie ist das Auge z. B. 25 mm lang → b_Auge > f → Bild vor der Netzhaut.
+
+**Beispiel 6 — Brechkraft einer Brille bei Myopie:**
+Fernpunkt 33 cm → D_Brille = −1/0,33 = −3,0 dpt. Die Zerstreuungslinse verschiebt den Fernpunkt auf unendlich.
+
+## Klinische Vertiefung
+
+**LASIK (Laser-Assisted In Situ Keratomileusis):** Ein Excimer-Laser trägt Hornhautgewebe ab und verändert so die Krümmung: Bei Myopie wird die Hornhaut abgeflacht (weniger Brechkraft); bei Hyperopie wird sie steiler geformt. Die Korrektur ist dauerhaft und ersetzt die Brille.
+
+**Katarakt (Grauer Star):** Trübung der Augenlinse durch Proteindenaturierung (Alter, UV, Diabetes). Die Therapie ist eine Operation: Die trübe Linse wird durch eine künstliche Intraokularlinse (IOL) mit definierter Brechkraft ersetzt.
+
+**Glaukom (Grüner Star):** Erhöhter Augeninnendruck schädigt den Sehnerv. Nicht direkt ein optisches Problem, aber der Druck wird mit dem Goldmann-Applanationstonometer gemessen, das auf dem Zusammenhang zwischen Kraft und Fläche basiert.
+
+**Funduskopie (Augenhintergrundspiegelung):** Mit einer Lupe und Lichtquelle wird die Netzhaut betrachtet. Durch die Linse des Auges sieht der Arzt ein vergrössertes Bild der Retina — direkte klinische Anwendung der Linsenoptik.
+
+---
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:**
+- Snellius: n₁·sin(θ₁) = n₂·sin(θ₂) — Brechung zum Lot im dichteren Medium
+- Totalreflexion: sin(θ_c) = n₂/n₁, nur vom dichteren ins dünnere Medium
+- Linsengleichung: 1/f = 1/g + 1/b, Brechkraft D = 1/f [dpt]
+- Abbildungsmaßstab: V = b/g = B/G
+- Myopie → Zerstreuungslinse (D < 0); Hyperopie → Sammellinse (D > 0)
+- Hornhaut liefert ~2/3 der Brechkraft (~43 dpt); Linse ~1/3 (variabel)
+
+**Häufige Fragen:**
+- "Welche Linse korrigiert Kurzsichtigkeit?" → Zerstreuungslinse (Minus-Glas, D < 0)
+- "Wo entsteht die meiste Brechung im Auge?" → An der Hornhaut (grösster n-Sprung: Luft → Hornhaut)
+- "Wann tritt Totalreflexion auf?" → Übergang dichter → dünner, θ > θ_c
+- "Wie berechnet man die Brechkraft einer Brille bei Myopie?" → D = −1/Fernpunkt [dpt]
+
+**Typische Prüfungsfallen / Verwechslungen:**
+- Totalreflexion nur vom **dichteren** ins **dünnere** Medium — nicht umgekehrt
+- Myopie = zu starke Brechung → **Minus**-Linse (Zerstreuungslinse); nicht Plus-Linse
+- Brechkraft D = 1/f mit f in **Metern** → f = 10 cm → D = 1/0,1 = 10 dpt (nicht 1/10 = 0,1)
+- Bildweite b **negativ** = virtuelles Bild (gleiche Seite wie Gegenstand); **positiv** = reelles Bild
+- Hornhaut, nicht Linse, liefert den Grossteil der Brechkraft des Auges
+
+---
+## Zusammenfassung (ultrakompakt)
+
+- **Snellius**: n₁·sin(θ₁) = n₂·sin(θ₂); n = c₀/c_Medium; grösseres n → langsameres Licht → Brechung zum Lot
+- **Totalreflexion**: sin(θ_c) = n₂/n₁; nur dicht → dünn; Endoskopie, Glasfaser, Diamantschliff
+- **Linsengleichung**: 1/f = 1/g + 1/b; Sammellinse f > 0, Zerstreuungslinse f < 0
+- **Brechkraft**: D = 1/f [dpt]; Kombination: D_ges = D₁ + D₂
+- **Abbildungsmaßstab**: V = b/g; |V| > 1 → Vergrösserung; V < 0 → umgekehrtes Bild
+- **Auge**: ~60 dpt gesamt; Hornhaut ~43 dpt; Akkommodation durch Linsenformänderung; Myopie → Minus-Glas; Hyperopie → Plus-Glas
+- **Lupe**: M = s₀/f; **Mikroskop**: M = (t/f_obj) × (s₀/f_ok); Auflösungsgrenze ~200 nm`,
+
+      lernziele: [
+        "Das Brechungsgesetz (Snellius) anwenden und den Brechungsindex erklären.",
+        "Den Grenzwinkel der Totalreflexion berechnen und Anwendungen nennen (Endoskopie, Glasfaser).",
+        "Die Linsengleichung 1/f = 1/g + 1/b anwenden und zwischen Sammel- und Zerstreuungslinse unterscheiden.",
+        "Das Auge als optisches System beschreiben: Akkommodation, Nah-/Fernpunkt, Fehlsichtigkeiten und deren Korrektur.",
+        "Die Vergrösserung von Lupe und Mikroskop berechnen.",
+      ],
+
+      sections: [
+        {
+          heading: "Brechungsgesetz und Totalreflexion",
+          text: "An der Grenzfläche zweier Medien mit verschiedenen Brechungsindizes ändert Licht seine Richtung (Snellius: n₁·sin θ₁ = n₂·sin θ₂). Im optisch dichteren Medium (grösseres n) wird der Strahl zum Lot gebrochen. Beim Übergang vom dichteren ins dünnere Medium kann ab dem Grenzwinkel θ_c = arcsin(n₂/n₁) Totalreflexion auftreten – die physikalische Grundlage von Glasfaser-Endoskopen und Lichtleitern.",
+          merksatz: "n₁·sin θ₁ = n₂·sin θ₂; Totalreflexion nur vom dichteren ins dünnere Medium.",
+        },
+        {
+          heading: "Linsengleichung und Abbildungsmaßstab",
+          text: "Für dünne Linsen gilt 1/f = 1/g + 1/b. Sammellinsen (f > 0) erzeugen bei g > f reelle umgekehrte Bilder, bei g < f virtuelle vergrösserte Bilder (Lupe). Zerstreuungslinsen (f < 0) erzeugen stets virtuelle, verkleinerte Bilder. Die Brechkraft D = 1/f [Dioptrien] gibt an, wie stark die Linse bricht; bei Linsenkombinationen addieren sich die Brechkräfte.",
+          merksatz: "D = 1/f [dpt]; Sammellinse D > 0; Zerstreuungslinse D < 0.",
+        },
+        {
+          heading: "Das Auge und seine Fehlsichtigkeiten",
+          text: "Das Auge hat eine Gesamtbrechkraft von ~60 dpt, wovon die Hornhaut ~43 dpt beiträgt. Durch Akkommodation (Formänderung der Linse via Ziliarmuskel) kann die Brechkraft variiert werden: flache Linse für Ferne, runde Linse für Nähe. Bei Myopie (Kurzsichtigkeit) ist der Augapfel zu lang → Bild vor der Netzhaut → Korrektur durch Zerstreuungslinse. Bei Hyperopie (Weitsichtigkeit) ist er zu kurz → Bild hinter Netzhaut → Korrektur durch Sammellinse.",
+          merksatz:
+            "Myopie → Minus-Glas; Hyperopie → Plus-Glas; Hornhaut liefert 2/3 der Brechkraft.",
+        },
+      ],
+
+      merksätze: [
+        "Snellius: n₁·sin(θ₁) = n₂·sin(θ₂) – der zentrale Satz der geometrischen Optik.",
+        "Brechungsindex n = c₀/c_Medium – je grösser n, desto langsamer das Licht, desto stärker die Brechung zum Lot.",
+        "Totalreflexion: sin(θ_c) = n₂/n₁; nur beim Übergang vom optisch dichteren ins dünnere Medium.",
+        "Linsengleichung: 1/f = 1/g + 1/b; Brechkraft D = 1/f [Dioptrien].",
+        "Sammellinse: f > 0, bündelt Licht; Zerstreuungslinse: f < 0, zerstreut Licht.",
+        "Abbildungsmaßstab V = b/g = B/G; V < 0 → umgekehrtes Bild; |V| > 1 → vergrössert.",
+        "Auge: ~60 dpt Gesamtbrechkraft; Hornhaut ~43 dpt (Hauptanteil), Linse ~17–30 dpt (variabel).",
+        "Myopie → Zerstreuungslinse (D < 0); Hyperopie → Sammellinse (D > 0).",
+        "Akkommodation: Ziliarmuskel ändert Linsenform → Brennweite variabel → scharfes Sehen in verschiedenen Entfernungen.",
+        "Lupe: M = s₀/f; Mikroskop: M_ges = (t/f_obj) × (s₀/f_ok); Auflösungsgrenze ~200 nm.",
+      ],
+
+      altfrage: {
+        question:
+          "Erläutern Sie die Funktionsweise des Auges als optisches System. Beschreiben Sie Akkommodation, die häufigsten Fehlsichtigkeiten und deren Korrektur mit Linsen.",
+        answer:
+          "Das Auge funktioniert wie eine Kamera mit variablem Linsensystem. Die Hornhaut liefert mit ~43 dpt den Grossteil der Brechkraft (~2/3), da hier der grösste Brechungsindex-Sprung (Luft n=1 → Hornhaut n=1,376) auftritt. Die Augenlinse ergänzt weitere 17–30 dpt; ihre Brechkraft wird durch den Ziliarmuskel variiert (Akkommodation): Kontraktion → Linse rundet sich → mehr Brechkraft → Nahsicht; Relaxation → Linse flacht ab → Fernsicht. Bei Myopie (Kurzsichtigkeit) ist der Augapfel zu lang oder die Brechkraft zu gross – das Bild entsteht vor der Netzhaut. Korrektur: Zerstreuungslinse (D < 0), die die Gesamtbrechkraft verringert. Berechnung: D = −1/Fernpunkt. Bei Hyperopie (Weitsichtigkeit) ist der Augapfel zu kurz – das Bild würde hinter der Netzhaut entstehen. Korrektur: Sammellinse (D > 0). Presbyopie (Altersweitsichtigkeit) entsteht durch zunehmende Linsenverhärtung → reduzierte Akkommodation → Lesebrille nötig. Die Linsengleichung 1/f = 1/g + 1/b beschreibt quantitativ, wo das Bild eines Objekts durch die Linse entsteht.",
+      },
+
+      klinischerBezug:
+        "Augenheilkunde: Brillenverordnung (Myopie, Hyperopie, Astigmatismus), LASIK (Hornhautkorrektur), Katarakt-OP (Intraokularlinse), Funduskopie. Endoskopie nutzt Totalreflexion in Glasfasern. Mikroskopie in Histologie/Pathologie.",
+
+      selfTest: [
+        {
+          question:
+            "Ein Lichtstrahl tritt von Luft (n = 1,00) unter einem Winkel von 30° in Glas (n = 1,50) ein. Wie gross ist der Brechungswinkel?",
+          options: ["48,6°", "30,0°", "19,5°", "15,0°", "41,8°"],
+          correctIndex: 2,
+          explanation:
+            "Snellius: sin(θ₂) = n₁·sin(θ₁)/n₂ = 1,00·sin(30°)/1,50 = 0,5/1,50 = 0,333 → θ₂ = arcsin(0,333) = 19,5°. Der Strahl wird zum Lot hin gebrochen (in das optisch dichtere Medium). Typischer Fehler: sin und arcsin verwechseln oder den Winkel zur Oberfläche statt zum Lot messen.",
+          hints: [
+            "sin(θ₂) = n₁·sin(θ₁)/n₂ — den Bruch berechnen, dann arcsin.",
+            "Optisch dichteres Medium → Brechung zum Lot → θ₂ < θ₁.",
+          ],
+          difficulty: 2,
+          tags: ["brechung", "snellius", "brechungsindex"],
+        },
+        {
+          question:
+            "Ab welchem Einfallswinkel tritt Totalreflexion an der Grenzfläche Glas (n = 1,50) → Luft (n = 1,00) auf?",
+          options: ["19,5°", "30,0°", "41,8°", "48,6°", "60,0°"],
+          correctIndex: 2,
+          explanation:
+            "sin(θ_c) = n₂/n₁ = 1,00/1,50 = 0,667 → θ_c = arcsin(0,667) = 41,8°. Für jeden Einfallswinkel > 41,8° wird das Licht vollständig reflektiert. Dieses Prinzip nutzen Glasfaser-Endoskope: Licht wird durch wiederholte Totalreflexion im Glasfaserkern geführt, auch wenn die Faser gebogen ist.",
+          hints: [
+            "sin(θ_c) = n₂/n₁ – das dünnere Medium im Zähler.",
+            "Totalreflexion nur vom dichteren ins dünnere Medium möglich.",
+          ],
+          difficulty: 2,
+          tags: ["totalreflexion", "grenzwinkel", "glasfaser"],
+        },
+        {
+          question:
+            "Eine Sammellinse hat f = 20 cm. Ein Gegenstand steht bei g = 60 cm. Wo entsteht das Bild?",
+          options: ["b = 10 cm", "b = 20 cm", "b = 30 cm", "b = 40 cm", "b = 60 cm"],
+          correctIndex: 2,
+          explanation:
+            "1/b = 1/f − 1/g = 1/20 − 1/60 = 3/60 − 1/60 = 2/60 → b = 30 cm. Das Bild ist reell (b > 0), umgekehrt und verkleinert (V = 30/60 = 0,5). Bei g = 2f = 40 cm wäre b = 40 cm (V = −1, gleich gross). Bei g = f = 20 cm wäre b → ∞ (Parallelstrahlen, kein Bild).",
+          hints: [
+            "1/b = 1/f − 1/g; erst gemeinsamen Nenner bilden.",
+            "g > 2f → b liegt zwischen f und 2f; Bild ist verkleinert.",
+          ],
+          difficulty: 2,
+          tags: ["linsengleichung", "sammellinse", "bildweite"],
+        },
+        {
+          question:
+            "Ein Patient hat einen Fernpunkt von 50 cm (Myopie). Welche Brechkraft muss seine Brille haben?",
+          options: ["+2,0 dpt", "−2,0 dpt", "+0,5 dpt", "−0,5 dpt", "−5,0 dpt"],
+          correctIndex: 1,
+          explanation:
+            "Bei Myopie korrigiert eine Zerstreuungslinse: D = −1/Fernpunkt = −1/0,50 m = −2,0 dpt. Die Minus-Linse verschiebt den Fernpunkt von 50 cm auf unendlich, sodass ferne Objekte wieder scharf gesehen werden. Plus-Linsen (Sammellinsen) würden die Kurzsichtigkeit verschlimmern. Häufiger Fehler: Fernpunkt in cm statt in m einsetzen → 1/50 = 0,02 statt 1/0,5 = 2.",
+          hints: [
+            "Myopie → Zerstreuungslinse → D negativ.",
+            "D = −1/Fernpunkt; Fernpunkt in Metern einsetzen!",
+          ],
+          difficulty: 2,
+          tags: ["myopie", "brechkraft", "brille"],
+        },
+        {
+          question: "Wo entsteht die meiste Lichtbrechung im menschlichen Auge?",
+          options: [
+            "An der Augenlinse",
+            "Am Glaskörper",
+            "An der Hornhaut (Cornea)",
+            "Am Kammerwasser",
+            "An der Netzhaut (Retina)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Hornhaut liefert ca. 43 von 60 Dioptrien Gesamtbrechkraft – also rund 2/3. Der Grund: An der Hornhaut-Luft-Grenzfläche ist der Brechungsindex-Sprung am grössten (n = 1,000 → 1,376). Die Augenlinse trägt nur ca. 17–30 dpt bei (variabel durch Akkommodation). Unter Wasser (n_Wasser ≈ n_Hornhaut) entfällt die Hornhautbrechung fast vollständig → Bild unscharf → deshalb braucht man eine Taucherbrille (Luftschicht vor dem Auge).",
+          hints: [
+            "Grösster Brechungsindex-Sprung = grösste Brechung.",
+            "Luft (n=1) → Hornhaut (n=1,376) ist der grösste Sprung im optischen System des Auges.",
+          ],
+          difficulty: 1,
+          tags: ["auge", "hornhaut", "brechkraft"],
+        },
+        {
+          question: "Welche Linse korrigiert Weitsichtigkeit (Hyperopie)?",
+          options: [
+            "Zerstreuungslinse (Minus-Glas)",
+            "Sammellinse (Plus-Glas)",
+            "Zylindrische Linse",
+            "Plankonvexe Linse mit D = 0",
+            "Bifokale Zerstreuungslinse",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Bei Hyperopie ist der Augapfel zu kurz → das Bild entsteht hinter der Netzhaut. Eine Sammellinse (D > 0, Plus-Glas) erhöht die Gesamtbrechkraft und verschiebt das Bild nach vorne auf die Netzhaut. Zerstreuungslinsen (Minus-Gläser) korrigieren Myopie (Kurzsichtigkeit). Zylindrische Linsen korrigieren Astigmatismus.",
+          hints: [
+            "Hyperopie = zu wenig Brechkraft → was muss die Brille tun?",
+            "Sammellinse = Plus-Glas = mehr Brechkraft.",
+          ],
+          difficulty: 1,
+          tags: ["hyperopie", "sammellinse", "brille"],
+        },
+        {
+          question:
+            "Eine Lupe hat eine Brennweite von 5 cm. Welche Vergrösserung erzielt sie (bei entspanntem Auge, s₀ = 25 cm)?",
+          options: ["2×", "3×", "5×", "10×", "25×"],
+          correctIndex: 2,
+          explanation:
+            "M = s₀/f = 25 cm / 5 cm = 5×. Ein 1 mm grosses Objekt erscheint durch die Lupe wie 5 mm. Bei kürzerer Brennweite steigt die Vergrösserung: f = 2,5 cm → M = 10×. Die Bezugssehweite s₀ = 25 cm ist der konventionelle Nahpunkt eines normalsichtigen Erwachsenen.",
+          hints: [
+            "M = s₀/f — einfacher Quotient.",
+            "s₀ = 25 cm ist die konventionelle Bezugssehweite.",
+          ],
+          difficulty: 1,
+          tags: ["lupe", "vergrösserung", "optik"],
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK 6: Akustik Vertiefung — Schallimpedanz, Doppler-Ultraschall, Frequenzbereiche
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: "ph-3-06",
+      title: "Akustik Vertiefung — Schallpegel, Impedanz und Doppler-Ultraschall",
+      stichworte: [
+        "Schallpegel",
+        "Dezibel-Rechnung",
+        "Schallimpedanz",
+        "Reflexionskoeffizient",
+        "Doppler-Effekt",
+        "Doppler-Sonographie",
+        "Ultraschall-Diagnostik",
+        "Frequenzbereiche",
+        "Infraschall",
+        "Hörschall",
+        "Ultraschall",
+        "Blutflussmessung",
+      ],
+      diagram: "doppler-effect",
+      content: `## Einleitung
+
+Im vorherigen Kapitel hast du die Grundlagen der Akustik und Hörphysiologie kennengelernt -- Dezibel-Skala, Cochlea und Audiometrie. Hier vertiefen wir drei Bereiche, die für den MedAT besonders relevant sind: die **quantitative Schallpegel-Rechnung**, die **Schallimpedanz** als Schlüssel zur Ultraschalldiagnostik und den **Doppler-Effekt** als physikalische Grundlage der Blutflussmessung.
+
+**In diesem Kapitel lernst du:**
+- wie man Dezibel-Aufgaben systematisch löst: Addition von Quellen, Abstandsgesetz, Pegelunterschiede
+- was Schallimpedanz Z = ρ·c physikalisch bedeutet und wie sie die Reflexion an Grenzflächen bestimmt
+- wie der Doppler-Effekt quantitativ funktioniert: f' = f·(c ± v_E)/(c ∓ v_S)
+- wie die Doppler-Sonographie Blutflussgeschwindigkeit und -richtung misst (Δf = 2f₀v·cos θ/c)
+- welche Frequenzbereiche (Infraschall, Hörschall, Ultraschall) in der Medizin relevant sind
+
+**Kontext — worum geht es und wofür brauchst du das?**
+Bisher hast du Schallpegel (dB), Frequenzbereiche und Hörphysiologie auf konzeptioneller Ebene kennengelernt. Hier geht es um die **quantitative Vertiefung**: Rechenaufgaben zu dB, Impedanz und Doppler sind MedAT-Klassiker. Du brauchst das für Ultraschall-Diagnostik, Audiometrie und alle Physik-Rechenaufgaben zum Thema Akustik.
+
+---
+
+{{DIAGRAM:doppler-effect}}
+
+{{DIAGRAM:wave-types}}
+
+
+
+## Dezibel-Rechnung — Vertiefung
+
+Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen für Berechnungen:
+
+### Addition mehrerer Schallquellen
+
+Zwei gleich laute Quellen (jeweils L dB) ergeben **nicht** 2L dB, sondern L + 3 dB:
+- 2 Quellen à 60 dB → 63 dB (nicht 120 dB!)
+- 10 Quellen à 60 dB → 70 dB (10·log₁₀(10) = +10 dB)
+- 100 Quellen à 60 dB → 80 dB
+
+**Formelklartext:** Intensitäten addieren sich linear (I_ges = I₁ + I₂ + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensität → +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensität → +10 dB.
+
+> **Merke:** Zwei gleich laute Quellen → +3 dB, nicht doppelte dB! Zehn gleich laute Quellen → +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
+
+### Abstandsgesetz (Freifeld)
+
+Im freien Schallfeld (keine Reflexionen) nimmt die Intensität mit dem Quadrat der Entfernung ab:
+
+**I ∝ 1/r²** → **ΔL = −20·log₁₀(r₂/r₁) dB**
+
+Verdopplung des Abstands: ΔL = −20·log₁₀(2) = −6 dB. Verzehnfachung: ΔL = −20 dB.
+
+Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 − 20 = 60 dB. In 100 m: 80 − 40 = 40 dB.
+
+### Wichtige Dezibel-Merkregeln (Zusammenfassung)
+
+| Änderung | Schalldruck | Intensität | Wahrnehmung |
+|----------|-------------|------------|-------------|
+| +3 dB | × 1,41 | × 2 | Kaum merkbar |
+| +6 dB | × 2 | × 4 | Leicht lauter |
+| +10 dB | × 3,16 | × 10 | Doppelt so laut |
+| +20 dB | × 10 | × 100 | 4× so laut |
+| −6 dB/Distanzverdopplung | | | Abstandsgesetz |
+
+---
+
+## Schallimpedanz — Vertiefung
+
+Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird:
+
+**Z = ρ · c** [kg/(m²·s) = Rayl]
+
+| Medium | ρ [kg/m³] | c [m/s] | Z [×10⁶ Rayl] |
+|--------|-----------|---------|----------------|
+| Luft | 1,2 | 340 | 0,000408 |
+| Wasser | 1000 | 1480 | 1,48 |
+| Fett | 920 | 1450 | 1,33 |
+| Weichgewebe | 1060 | 1540 | 1,63 |
+| Knochen | 1800 | 3500 | 6,30 |
+| Leber | 1060 | 1550 | 1,64 |
+| Blut | 1060 | 1570 | 1,66 |
+
+### Reflexionskoeffizient
+
+**R = [(Z₂ − Z₁)/(Z₂ + Z₁)]²**
+
+- **Luft → Weichgewebe:** R = [(1,63×10⁶ − 408)/(1,63×10⁶ + 408)]² ≈ 0,999 → 99,9 % Reflexion → **ohne Gel kein Ultraschall-Bild!**
+- **Weichgewebe → Knochen:** R = [(6,30 − 1,63)/(6,30 + 1,63)]² ≈ 0,35 → 35 % Reflexion → starkes Echo, Knochen schwer durchschallbar
+- **Leber → Blut:** R = [(1,66 − 1,64)/(1,66 + 1,64)]² ≈ 0,000037 → 0,004 % Reflexion → kaum Echo → gut durchschallbar
+- **Gel → Haut:** R ≈ 0 → nahezu vollständige Transmission → deshalb Ultraschallgel essenziell
+
+> **Merke:** Kleine Impedanzdifferenz → wenig Reflexion → gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz → starke Reflexion → schwer durchschallbar (z. B. Gewebe–Knochen, Gewebe–Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
+
+---
+
+## Doppler-Effekt — Vertiefung
+
+### Allgemeine Doppler-Formel
+
+**f' = f₀ · (c ± v_E) / (c ∓ v_S)**
+
+- f₀ = Sendefrequenz der Quelle
+- c = Schallgeschwindigkeit im Medium
+- v_E = Geschwindigkeit des Empfängers
+- v_S = Geschwindigkeit der Quelle/Senders
+
+**Vorzeichenkonvention:**
+- Zähler: + wenn Empfänger sich **zur** Quelle bewegt, − wenn **weg**
+- Nenner: − wenn Quelle sich **zum** Empfänger bewegt, + wenn **weg**
+
+> **Merke:** Annäherung → f' > f₀ (höherer Ton / Blauverschiebung); Entfernung → f' < f₀ (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt für **alle** Wellen: Schall, Licht, Ultraschall.
+
+### Doppler-Sonographie — quantitativ
+
+In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfänger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
+
+**Δf = 2 · f₀ · v · cos(θ) / c**
+
+- **v** = Blutflussgeschwindigkeit [m/s]
+- **θ** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
+- **c** = Schallgeschwindigkeit in Gewebe (≈ 1540 m/s)
+- **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
+
+**Wichtig:** Bei θ = 90° (Schallstrahl senkrecht zum Blutfluss) ist cos(90°) = 0 → Δf = 0 → **kein Signal!** Deshalb muss der Schallkopf immer schräg zum Gefäss gehalten werden (optimal: θ = 30–60°).
+
+### Umstellung nach v (Blutflussgeschwindigkeit):
+
+**v = Δf · c / (2 · f₀ · cos θ)**
+
+### Rechenbeispiel — Doppler-Sonographie:
+f₀ = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), θ = 45°:
+Δf = 2 × 5×10⁶ × 0,3 × cos(45°) / 1540 = 2 × 5×10⁶ × 0,3 × 0,707 / 1540 ≈ 1379 Hz
+
+Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
+
+### Farbdoppler-Kodierung:
+- **Rot:** Blut fliesst auf den Schallkopf zu (Δf > 0)
+- **Blau:** Blut fliesst vom Schallkopf weg (Δf < 0)
+- **Mosaik/Turbulenz:** Ungeordnete Strömung (z. B. an Stenosen, Klappeninsuffizienzen)
+
+Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
+
+---
+
+## Frequenzbereiche in der Medizin
+
+| Bereich | Frequenz | Medizinische Relevanz |
+|---------|----------|----------------------|
+| **Infraschall** | < 20 Hz | Nicht hörbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
+| **Hörschall** | 20 Hz – 20 kHz | Sprache (300–3400 Hz), Audiometrie, Stimmgabel-Tests |
+| **Ultraschall** | > 20 kHz | Sonographie (2–20 MHz), Doppler (2–10 MHz), Lithotripsie |
+
+### Ultraschall-Frequenzwahl in der Diagnostik:
+
+| Frequenz | Eindringtiefe | Auflösung | Anwendung |
+|----------|---------------|-----------|-----------|
+| 2–3,5 MHz | 15–20 cm | ~1 mm | Abdomen, Herz (tief) |
+| 5–7,5 MHz | 5–10 cm | ~0,5 mm | Schilddrüse, Gefässe |
+| 10–15 MHz | 2–4 cm | ~0,2 mm | Haut, oberflächliche Strukturen |
+| 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
+
+**Zusammenhang:** Höhere Frequenz → kürzere Wellenlänge (λ = c/f) → bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung ∝ f²) → geringere Eindringtiefe.
+
+> **Merke:** Diagnostischer Ultraschall: 2–20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, grosse Tiefe. Kompromiss je nach Fragestellung.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Zwei Schallquellen addieren:**
+Zwei Maschinen à 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10·log₁₀(2) = 80 + 3 = 83 dB. Nicht 160 dB!
+
+**Beispiel 2 — Abstandsgesetz:**
+Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10× weiter):
+ΔL = −20·log₁₀(50/5) = −20·log₁₀(10) = −20 dB → L = 100 − 20 = 80 dB.
+
+**Beispiel 3 — Reflexionskoeffizient berechnen:**
+Gewebe (Z₁ = 1,63×10⁶) → Knochen (Z₂ = 6,30×10⁶):
+R = [(6,30 − 1,63)/(6,30 + 1,63)]² = [4,67/7,93]² = [0,589]² = 0,347 → 34,7 % werden reflektiert.
+Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum möglich (akustischer Schatten).
+
+**Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
+Δf = 2000 Hz, f₀ = 4 MHz, θ = 60°, c = 1540 m/s:
+v = Δf · c / (2 · f₀ · cos θ) = 2000 × 1540 / (2 × 4×10⁶ × 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
+Normaler arterieller Blutfluss: 0,2–1,0 m/s → Wert ist plausibel.
+
+**Beispiel 5 — Ultraschall-Wellenlänge und Auflösung:**
+f = 7,5 MHz in Gewebe (c = 1540 m/s): λ = 1540 / 7,5×10⁶ = 0,205 mm.
+Axiale Auflösung ≈ λ/2 ≈ 0,1 mm. Ausreichend für Schilddrüsenknoten (typisch 5–30 mm).
+
+## Klinische Vertiefung
+
+**Doppler bei Gefässstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitätsgleichung: A₁v₁ = A₂v₂). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit → erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+
+**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5–5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
+
+**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8–3,5 MHz bei sehr hoher Intensität zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert → lokale Erwärmung auf > 60°C → Koagulationsnekrose.
+
+**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen (nicht Ultraschall im engeren Sinne) zertrümmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein → Fragmentierung.
+
+---
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Zentral prüfungsrelevant:**
+- Dezibel-Rechnung: L = 20·log(p/p₀) = 10·log(I/I₀); +3 dB → I×2; +6 dB → p×2
+- Schallimpedanz: Z = ρ·c; Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]²
+- Doppler: f' = f₀·(c±v_E)/(c∓v_S); Δf = 2f₀v·cos θ/c (Sonographie)
+- Frequenzwahl: hohe f → bessere Auflösung, weniger Tiefe
+
+**Häufige Fragen:**
+- "Zwei gleich laute Quellen — Gesamtpegel?" → L + 3 dB (nicht L + L!)
+- "Warum Ultraschallgel?" → Z_Luft ≈ 0,0004 ×10⁶ Rayl; Z_Gewebe ≈ 1,63 ×10⁶ Rayl → R ≈ 99,9 % ohne Gel
+- "Bei welchem Winkel kein Doppler-Signal?" → θ = 90° (cos 90° = 0)
+- "Hohe Frequenz im Ultraschall — Vor-/Nachteile?" → bessere Auflösung, geringere Eindringtiefe
+
+**Typische Prüfungsfallen / Verwechslungen:**
+- Dezibel addieren sich **nicht** linear: 60 dB + 60 dB ≠ 120 dB, sondern 63 dB
+- Impedanzunterschied bestimmt Reflexion — nicht die Dichte allein und nicht die Schallgeschwindigkeit allein
+- Doppler: θ = 90° → kein Signal! Schallkopf muss schräg zum Gefäss stehen
+- Höhere US-Frequenz → bessere Auflösung, aber **weniger** Eindringtiefe (nicht mehr)
+- +3 dB = Intensitätsverdopplung (I); +6 dB = Schalldruckverdopplung (p) — I ∝ p², daher Faktor 2
+
+---
+## Zusammenfassung (ultrakompakt)
+
+- **Dezibel**: L = 20·log(p/p₀); +3 dB → I×2; +6 dB → p×2; +10 dB → doppelt so laut; 2 Quellen → +3 dB
+- **Abstandsgesetz**: Verdopplung des Abstands → −6 dB (I ∝ 1/r²)
+- **Schallimpedanz**: Z = ρ·c [Rayl]; R = [(Z₂−Z₁)/(Z₂+Z₁)]²; Gel eliminiert Luft-Haut-Grenzfläche
+- **Doppler**: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → höhere Frequenz; Entfernung → tiefere Frequenz
+- **Doppler-Sonographie**: Δf = 2f₀v·cos θ/c; θ = 90° → kein Signal; Rot = zum Schallkopf, Blau = weg
+- **Frequenzwahl**: 2–5 MHz (tief), 5–10 MHz (mittel), 10–20 MHz (oberflächlich); Auflösung ∝ f, Tiefe ∝ 1/f²`,
+
+      lernziele: [
+        "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",
+        "Die Schallimpedanz Z = ρ·c und den Reflexionskoeffizienten berechnen und klinisch interpretieren.",
+        "Den Doppler-Effekt quantitativ beschreiben und auf Doppler-Sonographie anwenden.",
+        "Frequenzbereiche des Ultraschalls kennen und die Wahl der Frequenz begründen.",
+        "Die Bedeutung der Impedanzanpassung (Ultraschallgel) physikalisch erklären.",
+      ],
+
+      sections: [
+        {
+          heading: "Dezibel-Rechnung: Nicht-lineare Addition",
+          text: "Die Dezibel-Skala ist logarithmisch: Intensitäten addieren sich linear (I_ges = I₁ + I₂), aber in der dB-Skala ergibt die Verdopplung der Intensität nur +3 dB. Zwei identische Schallquellen à 80 dB erzeugen 83 dB, nicht 160 dB. Pro Verdopplung des Abstands nimmt der Pegel um 6 dB ab (I ∝ 1/r²). Diese Rechenregeln sind MedAT-Klassiker.",
+          merksatz: "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB; 2× Abstand → −6 dB.",
+        },
+        {
+          heading: "Schallimpedanz und Ultraschall-Bildgebung",
+          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Grosser Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
+          merksatz:
+            "Z = ρ·c; grosser Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
+        },
+        {
+          heading: "Doppler-Sonographie: Blutfluss messen",
+          text: "Der Doppler-Shift Δf = 2f₀v·cos θ/c ist proportional zur Blutflussgeschwindigkeit v. Der Winkel θ zwischen Schallstrahl und Blutfluss ist entscheidend: Bei θ = 90° (senkrecht) ist cos(90°) = 0 → kein Signal. Optimal: θ = 30–60°. Farbkodierung: Rot = Fluss zum Schallkopf, Blau = weg. Erhöhte Flussgeschwindigkeit an Stenosen → erhöhter Doppler-Shift → klinische Diagnose.",
+          merksatz: "Δf = 2f₀v·cosθ/c; θ = 90° → kein Signal; Rot = Fluss zum Schallkopf.",
+        },
+      ],
+
+      merksätze: [
+        "L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 20 µPa, I₀ = 10⁻¹² W/m².",
+        "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB (logarithmische Addition).",
+        "Abstandsgesetz: Verdopplung des Abstands → −6 dB (I ∝ 1/r²).",
+        "Z = ρ·c [Rayl]; grosser Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
+        "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — Reflexionskoeffizient an Grenzflächen.",
+        "Doppler allgemein: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → f↑, Entfernung → f↓.",
+        "Doppler-Sonographie: Δf = 2f₀v·cosθ/c; Faktor 2 wegen Hin- und Rückweg.",
+        "θ = 90° → Δf = 0 → kein Signal! Schallkopf immer schräg zum Gefäss.",
+        "Farbdoppler: Rot = zum Schallkopf; Blau = vom Schallkopf weg; Mosaik = Turbulenz.",
+        "US-Frequenzwahl: hohe f → gute Auflösung, wenig Tiefe; niedrige f → schlechte Auflösung, viel Tiefe.",
+      ],
+
+      altfrage: {
+        question:
+          "Erläutern Sie das physikalische Prinzip der Doppler-Sonographie zur Blutflussmessung. Gehen Sie auf die Rolle des Winkels θ, die Farbkodierung und typische klinische Anwendungen ein.",
+        answer:
+          "Die Doppler-Sonographie nutzt den Doppler-Effekt: Ein Ultraschallkopf sendet Schallwellen einer definierten Frequenz f₀ (typisch 2–10 MHz) in Richtung eines Blutgefässes. Bewegte Erythrozyten reflektieren den Schall mit veränderter Frequenz. Der Frequenzunterschied (Doppler-Shift) beträgt Δf = 2f₀v·cos θ/c, wobei v die Blutflussgeschwindigkeit, θ der Winkel zwischen Schallstrahl und Gefäss und c die Schallgeschwindigkeit im Gewebe (~1540 m/s) ist. Der Faktor 2 entsteht, weil der Schall den Weg zweimal durchläuft (zum Erythrozyten und zurück). Entscheidend: Bei θ = 90° ist cos 90° = 0 → kein Signal → der Schallkopf muss schräg zum Gefäss stehen (optimal 30–60°). In der Farbdoppler-Darstellung wird Blut, das auf den Schallkopf zufliesst, rot kodiert (positives Δf), Blut, das sich entfernt, blau (negatives Δf). Turbulente Strömung (z. B. an Stenosen) erscheint als Farbmosaik. Klinisch: Diagnose von Karotisstenosen (erhöhte v), Venenthrombosen (fehlendes Signal), Herzklappenfehler (Regurgitation), fetale Durchblutung (Nabelschnur-Doppler).",
+      },
+
+      klinischerBezug:
+        "Doppler-Sonographie: Karotisstenose-Diagnostik, tiefe Venenthrombose, Echokardiographie (Klappenvitien, Regurgitation). Ultraschall-Impedanzanpassung mit Gel. Obstetrik: fetaler Doppler (Nabelschnurarterie). Therapeutisch: HIFU (fokussierter Ultraschall für Tumorablation), ESWL (Lithotripsie).",
+
+      selfTest: [
+        {
+          question:
+            "Zwei identische Maschinen erzeugen jeweils 85 dB. Wie hoch ist der Gesamtpegel?",
+          options: ["85 dB", "88 dB", "90 dB", "170 dB", "82 dB"],
+          correctIndex: 1,
+          explanation:
+            "Zwei gleich laute Quellen verdoppeln die Intensität: L_ges = 85 + 10·log₁₀(2) = 85 + 3 = 88 dB. Nicht 170 dB (das wäre lineare Addition der Pegel – ein fundamentaler Fehler). Auch nicht 90 dB – die 3-dB-Regel gilt für Intensitätsverdopplung, nicht +5 dB. Merke: Dezibel addieren sich logarithmisch, nicht linear!",
+          hints: [
+            "Intensitäten addieren sich: I_ges = 2·I → wie viel dB ist das mehr?",
+            "+3 dB = Intensitätsverdopplung → 85 + 3 = ?",
+          ],
+          difficulty: 2,
+          tags: ["dezibel", "quellenaddition", "logarithmus"],
+        },
+        {
+          question:
+            "Ein Lautsprecher erzeugt 90 dB in 2 m Abstand. Welcher Pegel herrscht in 20 m Abstand (Freifeld)?",
+          options: ["70 dB", "80 dB", "84 dB", "45 dB", "88 dB"],
+          correctIndex: 0,
+          explanation:
+            "Abstandsgesetz: ΔL = −20·log₁₀(r₂/r₁) = −20·log₁₀(20/2) = −20·log₁₀(10) = −20 dB. L = 90 − 20 = 70 dB. Der Abstand verzehnfacht sich, die Intensität sinkt um Faktor 100 (I ∝ 1/r²), was −20 dB entspricht. Pro Verdopplung des Abstands: −6 dB.",
+          hints: ["Verzehnfachung des Abstands → welche dB-Änderung?", "−20·log₁₀(10) = −20 dB."],
+          difficulty: 2,
+          tags: ["abstandsgesetz", "dezibel", "schallpegel"],
+        },
+        {
+          question: "Warum ist Ultraschallgel für die Sonographie unverzichtbar?",
+          options: [
+            "Es kühlt den Schallkopf und verhindert Überhitzung.",
+            "Es gleicht die akustische Impedanz zwischen Schallkopf/Luft und Haut an und verhindert fast vollständige Reflexion.",
+            "Es verstärkt die Ultraschallfrequenz um den Faktor 10.",
+            "Es filtert Störfrequenzen aus dem Umgebungslärm.",
+            "Es erhöht die Schallgeschwindigkeit im Gewebe.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die akustische Impedanz von Luft (Z ≈ 408 Rayl) ist rund 4000-mal kleiner als die von Gewebe (Z ≈ 1,63×10⁶ Rayl). Der Reflexionskoeffizient an der Luft-Haut-Grenze beträgt R ≈ 99,9 % — fast der gesamte Ultraschall wird reflektiert, bevor er ins Gewebe eindringt. Das Gel hat eine Impedanz ähnlich wie Gewebe und eliminiert die Luftschicht → nahezu vollständige Transmission. Ohne Gel: kein Ultraschallbild.",
+          hints: [
+            "Z_Luft vs. Z_Gewebe — Faktor ~4000 Unterschied → wie viel wird reflektiert?",
+            "Gel hat Z ≈ Z_Gewebe → minimaler Impedanzsprung → Transmission.",
+          ],
+          difficulty: 1,
+          tags: ["ultraschallgel", "impedanz", "reflexion"],
+        },
+        {
+          question:
+            "Bei der Doppler-Sonographie wird der Schallkopf senkrecht (θ = 90°) zum Blutgefäss gehalten. Was passiert?",
+          options: [
+            "Das Signal wird maximal stark.",
+            "Die Frequenzverschiebung ist maximal.",
+            "Es wird kein Doppler-Signal detektiert (Δf = 0).",
+            "Die Farbkodierung zeigt Rot.",
+            "Der Ultraschall wird total reflektiert.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Δf = 2f₀v·cos(θ)/c. Bei θ = 90° ist cos(90°) = 0 → Δf = 0 → kein Doppler-Signal, obwohl Blut fliesst. Der Schallkopf muss schräg zum Gefäss gehalten werden (optimal 30–60°), damit cos(θ) > 0 und ein messbares Signal entsteht. Dies ist ein klassischer MedAT-Prüfungspunkt.",
+          hints: [
+            "cos(90°) = 0 — was passiert mit der Formel Δf = 2f₀v·cos(θ)/c?",
+            "Kein Doppler-Signal ≠ kein Blutfluss! Es bedeutet nur: falscher Winkel.",
+          ],
+          difficulty: 2,
+          tags: ["doppler", "winkel", "sonographie"],
+        },
+        {
+          question:
+            "Ein Ultraschall mit f = 3,5 MHz wird für die Untersuchung der Leber gewählt. Warum nicht 15 MHz?",
+          options: [
+            "15 MHz ist zu teuer für den klinischen Einsatz.",
+            "Die Leber liegt tief im Abdomen; 15 MHz wird zu stark gedämpft und dringt nicht tief genug ein.",
+            "15 MHz erzeugt Artefakte an der Leberoberfläche.",
+            "Die Wellenlänge bei 15 MHz ist zu gross für die Leber.",
+            "15 MHz ist Infraschall und wird nicht reflektiert.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Ultraschalldämpfung im Gewebe steigt mit dem Quadrat der Frequenz (Dämpfung ∝ f²). Bei 15 MHz wäre die Eindringtiefe nur ca. 2–3 cm — viel zu wenig für die Leber (typische Tiefe 5–15 cm). Bei 3,5 MHz beträgt die Eindringtiefe ~15 cm bei einer Auflösung von ~0,5 mm — ein guter Kompromiss. Für oberflächliche Strukturen (Schilddrüse, 1–3 cm tief) ist 10–15 MHz ideal.",
+          hints: [
+            "Dämpfung ∝ f² — hohe Frequenz wird stark absorbiert → geringe Eindringtiefe.",
+            "3,5 MHz dringt ~15 cm tief ein; 15 MHz nur ~2–3 cm.",
+          ],
+          difficulty: 2,
+          tags: ["ultraschall", "frequenzwahl", "eindringtiefe"],
+        },
+        {
+          question:
+            "Bei einer Doppler-Untersuchung der A. carotis beträgt die Frequenzverschiebung 3000 Hz (f₀ = 5 MHz, θ = 60°, c = 1540 m/s). Wie gross ist die Blutflussgeschwindigkeit?",
+          options: ["0,23 m/s", "0,46 m/s", "0,92 m/s", "1,54 m/s", "0,06 m/s"],
+          correctIndex: 2,
+          explanation:
+            "v = Δf·c / (2·f₀·cos θ) = 3000 × 1540 / (2 × 5×10⁶ × cos 60°) = 4.620.000 / (2 × 5×10⁶ × 0,5) = 4.620.000 / 5.000.000 = 0,924 m/s ≈ 0,92 m/s. Normale systolische Spitzengeschwindigkeit in der A. carotis interna: 0,6–1,0 m/s. Werte > 1,2 m/s deuten auf eine Stenose hin (> 50 %). > 2,3 m/s → hochgradige Stenose (> 70 %).",
+          hints: [
+            "Formel nach v umstellen: v = Δf·c / (2·f₀·cos θ).",
+            "cos(60°) = 0,5 → einsetzen und berechnen.",
+          ],
+          difficulty: 3,
+          tags: ["doppler-sonographie", "blutfluss", "karotis"],
+        },
+        {
+          question:
+            "Welcher Reflexionskoeffizient ergibt sich an der Grenzfläche Weichgewebe (Z = 1,63×10⁶ Rayl) → Knochen (Z = 6,30×10⁶ Rayl)?",
+          options: ["R ≈ 0,001", "R ≈ 0,05", "R ≈ 0,15", "R ≈ 0,35", "R ≈ 0,99"],
+          correctIndex: 3,
+          explanation:
+            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² = [(6,30−1,63)/(6,30+1,63)]² = [4,67/7,93]² = [0,589]² ≈ 0,347. Etwa 35 % des Ultraschalls werden an der Gewebe-Knochen-Grenze reflektiert — deshalb erzeugt Knochen ein starkes Echo und dahinterliegende Strukturen sind schwer darstellbar (akustischer Schatten). Zum Vergleich: an der Luft-Gewebe-Grenze ist R ≈ 0,999.",
+          hints: [
+            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — erst die Differenz, dann den Quotienten, dann quadrieren.",
+            "Grosser Z-Unterschied → grosses R.",
+          ],
+          difficulty: 3,
+          tags: ["reflexionskoeffizient", "impedanz", "knochen"],
         },
       ],
     },

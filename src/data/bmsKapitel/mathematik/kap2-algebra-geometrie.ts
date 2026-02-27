@@ -2671,5 +2671,296 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
         },
       ],
     },
+    // === Trigonometrie ===
+    {
+      id: "ma-2-05",
+      diagram: "unit-circle",
+      title: "Trigonometrie-Grundlagen",
+      stichworte: [
+        "Sinus",
+        "Kosinus",
+        "Tangens",
+        "Einheitskreis",
+        "Bogenmaß",
+        "Gradmaß",
+        "SOH-CAH-TOA",
+        "Trigonometrischer Pythagoras",
+        "Rechtwinkliges Dreieck",
+        "Kräftezerlegung",
+        "Winkelfunktion",
+        "Umrechnung Grad Bogenmaß",
+      ],
+      content: `## Einleitung
+
+Wie zerlegt man eine Muskelkraft in zwei senkrechte Komponenten? Warum berechnet der Physiker das Drehmoment mit dem Sinus des Winkels? Und wie bestimmt man aus einem EKG-Vektor den Winkel der Herzachse? Hinter all diesen Fragen steckt die **Trigonometrie** — die Lehre von den Beziehungen zwischen Winkeln und Seitenlängen in Dreiecken. Wer Sinus, Kosinus und Tangens sicher beherrscht, löst Kräftezerlegungen, Vektoraufgaben und geometrische MedAT-Fragen routiniert.
+
+**In diesem Kapitel lernst du:**
+- wie Sinus, Kosinus und Tangens am rechtwinkligen Dreieck definiert sind (SOH-CAH-TOA)
+- was der Einheitskreis ist und warum sin/cos als Koordinaten auf dem Kreis dargestellt werden
+- wie du zwischen Gradmaß und Bogenmaß umrechnest (360° = 2π rad)
+- welche Werte sin, cos und tan für die wichtigsten Winkel (0°, 30°, 45°, 60°, 90°) annehmen
+- warum sin²α + cos²α = 1 gilt und wie du diesen trigonometrischen Pythagoras anwendest
+
+---
+
+{{DIAGRAM:unit-circle}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
+
+**Idee:** In jedem rechtwinkligen Dreieck stehen die Seitenlängen in einem festen Verhältnis zueinander, das nur vom Winkel abhängt — nicht von der Größe des Dreiecks. Dieses Verhältnis beschreiben die drei trigonometrischen Funktionen Sinus, Kosinus und Tangens.
+
+**Verfahren — SOH-CAH-TOA (Merkhilfe):**
+
+- **S**inus = **O**pposite / **H**ypotenuse → sin α = Gegenkathete / Hypotenuse
+- **C**osinus = **A**djacent / **H**ypotenuse → cos α = Ankathete / Hypotenuse
+- **T**angens = **O**pposite / **A**djacent → tan α = Gegenkathete / Ankathete
+
+Dabei ist:
+- **Hypotenuse:** die längste Seite, gegenüber dem rechten Winkel (90°)
+- **Gegenkathete:** die Seite gegenüber dem betrachteten Winkel α
+- **Ankathete:** die Seite neben dem betrachteten Winkel α (nicht die Hypotenuse)
+
+Zusätzlich gilt: **tan α = sin α / cos α** (solange cos α ≠ 0).
+
+> **Merke:** SOH-CAH-TOA — Sinus = Gegenkathete/Hypotenuse, Cosinus = Ankathete/Hypotenuse, Tangens = Gegenkathete/Ankathete. Die Hypotenuse liegt IMMER gegenüber dem rechten Winkel und ist die längste Seite.
+
+---
+
+## Rechenbeispiel 1 — Seitenlänge bestimmen
+
+**Aufgabe:** Ein rechtwinkliges Dreieck hat eine Hypotenuse von 10 cm und einen Winkel α = 30°. Berechne die Gegenkathete und die Ankathete.
+
+**Schritt 1:** Gegenkathete über Sinus: sin 30° = Gegenkathete / 10 cm.
+sin 30° = 0,5 → Gegenkathete = 10 cm × 0,5 = **5 cm**.
+
+**Schritt 2:** Ankathete über Kosinus: cos 30° = Ankathete / 10 cm.
+cos 30° = √3/2 ≈ 0,866 → Ankathete = 10 cm × 0,866 = **8,66 cm**.
+
+**Probe:** 5² + 8,66² = 25 + 75 = 100 = 10² ✓ (Satz des Pythagoras bestätigt)
+
+---
+
+## Rechenbeispiel 2 — Winkelberechnung
+
+**Aufgabe:** In einem rechtwinkligen Dreieck sind Gegenkathete = 6 cm und Ankathete = 6 cm. Bestimme den Winkel α.
+
+**Lösung:** tan α = Gegenkathete / Ankathete = 6/6 = 1.
+α = arctan(1) = **45°**.
+
+**Kontrolle:** sin 45° = 6 / Hypotenuse → Hypotenuse = 6 / sin 45° = 6 / (√2/2) = 6√2 ≈ 8,49 cm.
+Probe: 6² + 6² = 72 = (6√2)² ✓
+
+---
+
+## Der Einheitskreis
+
+**Idee:** Der Einheitskreis hat den Radius r = 1 und den Mittelpunkt im Koordinatenursprung. Jeder Punkt P auf dem Kreis hat die Koordinaten P = (cos α, sin α), wobei α der Winkel zur positiven x-Achse ist (gegen den Uhrzeigersinn gemessen).
+
+**Verfahren:** Zeichne den Einheitskreis (r = 1). Der Winkel α wird vom positiven x-Achsenabschnitt gegen den Uhrzeigersinn gemessen. Die x-Koordinate des Punktes auf dem Kreis ist cos α, die y-Koordinate ist sin α.
+
+Daraus folgt direkt:
+- cos α liegt immer zwischen −1 und +1
+- sin α liegt immer zwischen −1 und +1
+- Am Einheitskreis gilt: x² + y² = r² = 1 → **sin²α + cos²α = 1**
+
+**Vorzeichen in den Quadranten:**
+- I. Quadrant (0°–90°): sin > 0, cos > 0 → tan > 0
+- II. Quadrant (90°–180°): sin > 0, cos < 0 → tan < 0
+- III. Quadrant (180°–270°): sin < 0, cos < 0 → tan > 0
+- IV. Quadrant (270°–360°): sin < 0, cos > 0 → tan < 0
+
+> **Merke:** Am Einheitskreis ist die x-Koordinate = cos α und die y-Koordinate = sin α. Daraus folgt der trigonometrische Pythagoras: sin²α + cos²α = 1 — diese Identität gilt für JEDEN Winkel α.
+
+---
+
+## Bogenmaß vs. Gradmaß
+
+**Idee:** Das Bogenmaß (Radiant, rad) misst Winkel über die Bogenlänge auf dem Einheitskreis. Ein voller Kreis = Umfang 2π → **360° = 2π rad**.
+
+**Umrechnungsformeln:**
+- Grad → Bogenmaß: **α(rad) = α(°) × π / 180**
+- Bogenmaß → Grad: **α(°) = α(rad) × 180 / π**
+
+**Wichtige Umrechnungen:**
+
+| Grad | Bogenmaß |
+|------|----------|
+| 0° | 0 |
+| 30° | π/6 |
+| 45° | π/4 |
+| 60° | π/3 |
+| 90° | π/2 |
+| 180° | π |
+| 270° | 3π/2 |
+| 360° | 2π |
+
+**Rechenbeispiel:** 120° in Bogenmaß: 120 × π/180 = 2π/3 rad.
+Rückrechnung: 2π/3 × 180/π = 120° ✓
+
+> **Merke:** 360° = 2π rad; 180° = π rad; 90° = π/2 rad. Umrechnung: Grad × π/180 = Bogenmaß; Bogenmaß × 180/π = Grad. In der Physik wird fast immer das Bogenmaß verwendet.
+
+---
+
+## Wichtige Werte — Merktabelle
+
+Die Werte für die fünf Standard-Winkel solltest du auswendig kennen:
+
+| Winkel α | sin α | cos α | tan α |
+|----------|-------|-------|-------|
+| 0° | 0 | 1 | 0 |
+| 30° | 1/2 | √3/2 ≈ 0,866 | 1/√3 ≈ 0,577 |
+| 45° | √2/2 ≈ 0,707 | √2/2 ≈ 0,707 | 1 |
+| 60° | √3/2 ≈ 0,866 | 1/2 | √3 ≈ 1,732 |
+| 90° | 1 | 0 | nicht definiert |
+
+**Merkschema für Sinus:** Die Zähler von sin lauten: √0/2, √1/2, √2/2, √3/2, √4/2 = 0, 1/2, √2/2, √3/2, 1. Für Kosinus: dieselbe Folge rückwärts.
+
+**Rechenbeispiel:** Bestätige sin 60° = √3/2 über ein rechtwinkliges Dreieck mit 30°-60°-90°: Seitenverhältnisse 1 : √3 : 2 (kurze Kathete : lange Kathete : Hypotenuse). sin 60° = lange Kathete / Hypotenuse = √3/2 ✓
+
+> **Merke:** 30-60-90-Dreieck: Seiten im Verhältnis 1 : √3 : 2. 45-45-90-Dreieck: Seiten im Verhältnis 1 : 1 : √2. Diese beiden Spezial-Dreiecke liefern alle wichtigen Werte für sin, cos, tan.
+
+---
+
+## Trigonometrischer Pythagoras und Identitäten
+
+**sin²α + cos²α = 1** — gilt für alle Winkel α.
+
+Daraus abgeleitet:
+- sin²α = 1 − cos²α
+- cos²α = 1 − sin²α
+- 1 + tan²α = 1/cos²α (durch Division mit cos²α)
+
+**Rechenbeispiel:** Gegeben: sin α = 3/5. Bestimme cos α (für α im I. Quadranten).
+cos²α = 1 − sin²α = 1 − 9/25 = 16/25 → cos α = 4/5.
+Dann: tan α = sin α / cos α = (3/5) / (4/5) = 3/4.
+
+**Probe:** sin²α + cos²α = (3/5)² + (4/5)² = 9/25 + 16/25 = 25/25 = 1 ✓. Außerdem: Gegenkathete = 3, Ankathete = 4, Hypotenuse = 5 — das klassische 3-4-5-Dreieck.
+
+---
+
+## Medizinische Anwendung: Kräftezerlegung
+
+**Idee:** In der Orthopädie und Biomechanik wird eine Kraft F häufig in zwei senkrechte Komponenten zerlegt: eine Komponente entlang der Knochenachse und eine senkrecht dazu.
+
+**Verfahren:** Wenn die Kraft F unter dem Winkel α zur Bezugsrichtung wirkt:
+- Komponente parallel: F_parallel = F × cos α
+- Komponente senkrecht: F_senkrecht = F × sin α
+
+**Rechenbeispiel:** Ein Muskel übt eine Kraft von F = 500 N unter einem Winkel von α = 30° zur Knochenachse aus.
+F_parallel = 500 × cos 30° = 500 × 0,866 = **433 N** (Zugkraft entlang des Knochens)
+F_senkrecht = 500 × sin 30° = 500 × 0,5 = **250 N** (Kompressionskraft senkrecht zum Knochen)
+
+Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
+
+**Drehmoment:** M = r × F × sin θ, wobei θ der Winkel zwischen Hebelarm und Kraftvektor ist. Bei senkrechtem Angriff (θ = 90°): sin 90° = 1 → M = r × F.
+
+---
+
+## MedAT-Fokus
+
+**Zentral prüfungsrelevant:**
+- Definition sin, cos, tan am rechtwinkligen Dreieck (SOH-CAH-TOA)
+- Berechnung fehlender Seiten und Winkel im rechtwinkligen Dreieck
+- Trigonometrischer Pythagoras: sin²α + cos²α = 1
+- Umrechnung Grad ↔ Bogenmaß
+- Werte für 0°, 30°, 45°, 60°, 90° (Merktabelle)
+- Kräftezerlegung mit sin/cos
+
+**Häufige Prüfungsfragen:**
+- „Berechne die Seitenlänge eines rechtwinkligen Dreiecks bei gegebenem Winkel und einer Seite."
+- „Rechne 150° in Bogenmaß um." → 150 × π/180 = 5π/6
+- „Gegeben sin α = 0,6. Bestimme cos α." → cos α = √(1 − 0,36) = 0,8
+- „Zerlege die Kraft F = 400 N unter α = 60° in Parallel- und Senkrechtkomponente."
+
+**Typische Prüfungsfallen:**
+- Gegenkathete und Ankathete verwechseln — immer vom betrachteten Winkel α ausgehen
+- Tangens bei 90° ist NICHT 1, sondern undefiniert (Division durch 0)
+- Bogenmaß und Gradmaß mischen: Taschenrechner auf richtige Einheit prüfen
+- sin²α + cos²α = 1, NICHT sin α + cos α = 1
+- Im II. Quadranten ist cos negativ: cos 120° = −cos 60° = −1/2
+
+---
+
+## Zusammenfassung
+
+Trigonometrie beschreibt die Beziehung zwischen Winkeln und Seitenlängen. Am rechtwinkligen Dreieck gilt SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete. Der Einheitskreis verallgemeinert: sin²α + cos²α = 1. Gradmaß und Bogenmaß werden über 360° = 2π rad umgerechnet. Die fünf Standard-Winkel (0°, 30°, 45°, 60°, 90°) und ihre sin/cos/tan-Werte sind Pflicht. In der Medizin findet Trigonometrie Anwendung bei Kräftezerlegung, Drehmoment und Vektorzerlegung. Probe immer über den Satz des Pythagoras.`,
+      merksätze: [
+        "SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete.",
+        "Trigonometrischer Pythagoras: sin²α + cos²α = 1 — gilt für JEDEN Winkel.",
+        "360° = 2π rad; Grad → Bogenmaß: × π/180; Bogenmaß → Grad: × 180/π.",
+        "30-60-90-Dreieck: Seiten 1 : √3 : 2. 45-45-90-Dreieck: Seiten 1 : 1 : √2.",
+        "Kräftezerlegung: F_parallel = F × cos α; F_senkrecht = F × sin α.",
+      ],
+      klinischerBezug:
+        "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
+      selfTest: [
+        {
+          question:
+            "Ein rechtwinkliges Dreieck hat eine Hypotenuse von 13 cm und eine Gegenkathete von 5 cm. Wie groß ist sin α?",
+          options: ["5/12", "5/13", "12/13", "13/5", "12/5"],
+          correctIndex: 1,
+          explanation:
+            "sin α = Gegenkathete / Hypotenuse = 5/13. Die Ankathete ergibt sich aus dem Satz des Pythagoras: √(13² − 5²) = √(169 − 25) = √144 = 12 cm. Also: sin α = 5/13, cos α = 12/13, tan α = 5/12. Das 5-12-13-Dreieck ist ein pythagoreisches Tripel (5² + 12² = 25 + 144 = 169 = 13²).",
+          hints: ["sin α = Gegenkathete / Hypotenuse.", "Gegenkathete = 5 cm, Hypotenuse = 13 cm."],
+          tags: ["sinus", "rechtwinkliges-dreieck", "soh-cah-toa"],
+          difficulty: 1,
+        },
+        {
+          question: "Wie viel Bogenmaß entsprechen 150°?",
+          options: ["π/3", "2π/3", "3π/4", "5π/6", "5π/4"],
+          correctIndex: 3,
+          explanation:
+            "Umrechnung: 150° × π/180 = 150π/180 = 5π/6. Zur Kontrolle: 5π/6 × 180/π = 5 × 180/6 = 5 × 30 = 150° ✓. Merkhilfe: 150° = 180° − 30° = π − π/6 = 5π/6. Alternativ: 30° = π/6, also 150° = 5 × 30° = 5 × π/6 = 5π/6.",
+          hints: [
+            "Formel: Grad × π/180 = Bogenmaß.",
+            "150 × π / 180 vereinfachen: kürze durch 30.",
+          ],
+          tags: ["bogenmass", "gradmass", "umrechnung"],
+          difficulty: 1,
+        },
+        {
+          question: "Gegeben: sin α = 0,6 und α liegt im I. Quadranten. Wie groß ist cos α?",
+          options: ["0,4", "0,5", "0,6", "0,8", "1,0"],
+          correctIndex: 3,
+          explanation:
+            "Trigonometrischer Pythagoras: sin²α + cos²α = 1. Also cos²α = 1 − sin²α = 1 − 0,36 = 0,64. cos α = √0,64 = 0,8. (Positiv, da I. Quadrant.) Probe: 0,6² + 0,8² = 0,36 + 0,64 = 1 ✓. Das entspricht einem 3-4-5-Dreieck (sin = 3/5 = 0,6; cos = 4/5 = 0,8).",
+          hints: ["Nutze sin²α + cos²α = 1.", "cos²α = 1 − 0,6² = 1 − 0,36 = ?"],
+          tags: ["trigonometrischer-pythagoras", "sinus", "kosinus"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Eine Kraft F = 200 N wirkt unter α = 60° zur Horizontalen. Wie groß ist die horizontale Komponente F_x?",
+          options: ["100 N", "141 N", "173 N", "200 N", "50 N"],
+          correctIndex: 0,
+          explanation:
+            "Die horizontale Komponente berechnet sich als F_x = F × cos α = 200 N × cos 60° = 200 × 0,5 = 100 N. Die vertikale Komponente wäre F_y = F × sin 60° = 200 × √3/2 ≈ 173 N. Probe: √(100² + 173²) = √(10000 + 29929) = √39929 ≈ 200 N ✓. Bei 60° zur Horizontalen ist die vertikale Komponente größer als die horizontale.",
+          hints: ["Horizontale Komponente = F × cos α.", "cos 60° = 1/2 = 0,5."],
+          tags: ["kraeftezerlegung", "kosinus", "biomechanik"],
+          difficulty: 2,
+        },
+        {
+          question: "Welcher Wert von tan α ist NICHT definiert?",
+          options: [
+            "tan 0° = 0",
+            "tan 30° = 1/√3",
+            "tan 45° = 1",
+            "tan 60° = √3",
+            "tan 90° — nicht definiert",
+          ],
+          correctIndex: 4,
+          explanation:
+            "tan α = sin α / cos α. Bei α = 90° gilt cos 90° = 0, daher ist die Division durch null nicht definiert. Geometrisch: Bei 90° ist die Ankathete gleich null, und Gegenkathete/Ankathete = Gegenkathete/0 ist undefiniert. Am Einheitskreis nähert sich tan α für α → 90° dem Wert +∞ (von links). Analog ist tan 270° nicht definiert. Alle anderen Werte in den Optionen sind korrekt: tan 0° = 0/1 = 0; tan 30° = (1/2)/(√3/2) = 1/√3; tan 45° = (√2/2)/(√2/2) = 1; tan 60° = (√3/2)/(1/2) = √3.",
+          hints: [
+            "tan α = sin α / cos α — wann wird der Nenner null?",
+            "cos 90° = 0, also Division durch null.",
+          ],
+          tags: ["tangens", "definition", "einheitskreis"],
+          difficulty: 1,
+        },
+      ],
+    },
   ],
 };

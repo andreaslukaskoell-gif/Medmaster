@@ -72,9 +72,20 @@ Die erlaubten Bahnen entsprechen Hauptquantenzahlen n = 1, 2, 3, ... mit Energie
 
 > **Merke:** Das Bohrsche Modell funktioniert exakt nur für Ein-Elektronen-Systeme (H, He⁺, Li²⁺). Für Mehrelektronensysteme ist die Quantenmechanik nötig.
 
-
+Um die Grenzen des Bohrschen Modells zu überwinden, entwickelten Schrödinger und Heisenberg in den 1920er-Jahren die Quantenmechanik.
 
 Das **quantenmechanische Modell** (Schrödinger, Heisenberg, 1920er) ersetzt feste Bahnen durch **Orbitale** – Raumgebiete, in denen die Aufenthaltswahrscheinlichkeit des Elektrons ≥ 90 % beträgt. Die Wellenfunktion ψ beschreibt den Quantenzustand; |ψ|² ist die Wahrscheinlichkeitsdichte. Vier Quantenzahlen charakterisieren jeden Zustand: Hauptquantenzahl n (Schale), Nebenquantenzahl l (Orbitalform: s, p, d, f), magnetische Quantenzahl mₗ (Orientierung) und Spinquantenzahl mₛ (±½). **Pauli-Prinzip:** Keine zwei Elektronen dürfen in allen vier Quantenzahlen übereinstimmen. **Daraus folgt: Jedes Orbital der Atomhülle kann nur maximal 2 Elektronen aufnehmen** (mit entgegengesetztem Spin).
+
+| Quantenzahl | Symbol | Werte | Bedeutung |
+|-------------|--------|-------|-----------|
+| Hauptquantenzahl | n | 1, 2, 3, ... | Schale (Energieniveau, Größe des Orbitals) |
+| Nebenquantenzahl | l | 0 bis n−1 | Orbitalform (s=0, p=1, d=2, f=3) |
+| Magnetische QZ | mₗ | −l bis +l | Orientierung im Raum |
+| Spin-QZ | mₛ | +½ oder −½ | Eigendrehimpuls des Elektrons |
+
+Die **Heisenbergsche Unschärferelation** setzt dem gleichzeitigen Wissen über Ort und Impuls eine fundamentale Grenze: **Δx · Δp ≥ ℏ/2** (ℏ = h/2π = 1,055 × 10⁻³⁴ J·s). Je genauer der Ort bekannt ist, desto unbestimmter der Impuls — und umgekehrt. Dies ist keine technische Beschränkung, sondern eine fundamentale Eigenschaft der Natur.
+
+> **Merke:** Vier Quantenzahlen (n, l, mₗ, mₛ) beschreiben jeden Elektronenzustand. Pauli: Maximal 2 Elektronen pro Orbital (entgegengesetzter Spin). Heisenberg: Δx·Δp ≥ ℏ/2.
 
 ## Emission und Absorption – Spektrallinien
 
@@ -141,6 +152,13 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 - "Was besagt das Bohrsche Modell?" → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
 - "Formel Lambert-Beer?" → A = ε·c·d; A = log₁₀(I₀/I)
 - "Welche Wellenlängen nutzt die Pulsoximetrie?" → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
+- "Vier Quantenzahlen?" → n (Schale), l (Orbitalform), mₗ (Orientierung), mₛ (Spin ±½); Pauli: keine 2 Elektronen mit gleichen 4 QZ
+- "Heisenberg-Unschärfe?" → Δx·Δp ≥ ℏ/2; je genauer der Ort, desto unbestimmter der Impuls
+
+**Prüfungsrelevante Zahlen:**
+- h = 6,626 × 10⁻³⁴ J·s; 1 eV = 1,602 × 10⁻¹⁹ J; c = 3 × 10⁸ m/s
+- Ionisierungsenergie H: 13,6 eV; Hα: 656 nm (1,89 eV); Hβ: 486 nm (2,55 eV)
+- Pulsoximetrie: 660 nm (Hb) + 940 nm (HbO₂); isobestischer Punkt: 805 nm
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Emissionsspektrum** (helle Linien auf dunklem Hintergrund) ≠ **Absorptionsspektrum** (dunkle Linien im Kontinuum). Emission = Atom gibt Photon ab (Übergang nach unten); Absorption = Atom nimmt Photon auf (Übergang nach oben).
@@ -339,100 +357,304 @@ Warum ist das Einatmen von Radongas gefährlicher als das Stehen neben einem Gam
 
 
 
-Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV.
+Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV. Der α-Zerfall tritt bevorzugt bei schweren Kernen (Z > 82) auf, da diese durch Ausstoßen eines α-Teilchens ihre Bindungsenergie pro Nukleon erhöhen und somit stabiler werden.
 
-Beim α-Zerfall gilt:
+Beim α-Zerfall gilt die **Kerngleichung**:
 > ᴬ_Z X → ᴬ⁻⁴_(Z-2) Y + ⁴₂He
 
-Ordnungszahl sinkt um 2, Massenzahl sinkt um 4. Beispiel: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He (T½ = 4,47 × 10⁹ Jahre). Weiteres Beispiel: ²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂He (Radon-Entstehung).
+Ordnungszahl sinkt um 2 (zwei Positionen nach links im PSE), Massenzahl sinkt um 4.
+
+**Wichtige Zerfallsbeispiele mit Kerngleichungen:**
+- ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He (T½ = 4,47 × 10⁹ Jahre) — Beginn der Uran-Radium-Zerfallsreihe
+- ²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂He (T½ = 1600 Jahre) — Radon-Entstehung, klinisch relevant wegen Radonbelastung in Gebäuden
+- ²¹⁰₈₄Po → ²⁰⁶₈₂Pb + ⁴₂He (T½ = 138 Tage) — Polonium-210, bekannt durch den Fall Litwinenko (2006)
+- ²⁴¹₉₅Am → ²³⁷₉₃Np + ⁴₂He (T½ = 432 Jahre) — Americium in Rauchmeldern
+
+**Mechanismus:** Das α-Teilchen überwindet die Coulomb-Barriere des Kerns durch den **quantenmechanischen Tunneleffekt** (Gamow, 1928). Klassisch hat das Teilchen nicht genug Energie, um die Potenzialbarriere (≈ 25–30 MeV) zu überwinden, aber quantenmechanisch besteht eine endliche Tunnelwahrscheinlichkeit. Je höher die Energie des α-Teilchens und je schmaler die Barriere, desto größer die Tunnelwahrscheinlichkeit → kürzere Halbwertszeit. Diese Beziehung beschreibt das **Geiger-Nuttall-Gesetz**: log T½ ∝ 1/√E_α (höhere α-Energie → kürzere Halbwertszeit).
 
 **Eigenschaften:**
-- Reichweite: 3–7 cm in Luft, < 0,1 mm in Gewebe
+- Reichweite: 3–7 cm in Luft, < 0,1 mm in Gewebe (≈ 40 μm, Dicke der Epidermis)
 - Abschirmung: Blatt Papier oder Hornhaut der Haut genügt
-- Ionisierungsdichte: sehr hoch (≈ 10⁵ Ionenpaare/cm in Luft)
+- Ionisierungsdichte: sehr hoch (≈ 10⁵ Ionenpaare/cm in Luft) — höchster **LET** (linearer Energietransfer) aller Strahlungsarten
 - Äußerlich: ungefährlich (wird von der toten Hautschicht gestoppt)
 - Innerlich (Inhalation, Ingestion): extrem gefährlich wegen hoher lokaler Energieabgabe
+- Biologische Wirksamkeit: erzeugt **clustered DNA damage** — mehrere Doppelstrangbrüche auf engem Raum, kaum reparierbar
 
-> **Merke:** α-Strahlung ist äußerlich harmlos, innerlich (Radon, Polonium-210) aber hochgefährlich – Strahlungs-Wichtungsfaktor w_R = 20!
+> **Merke:** α-Strahlung ist äußerlich harmlos, innerlich (Radon, Polonium-210) aber hochgefährlich – Strahlungs-Wichtungsfaktor w_R = 20! Radon (²²²Rn) ist in Österreich nach Rauchen die zweithäufigste Ursache für Lungenkrebs.
+
+**Klinische Relevanz des Radon-Problems:** In Österreich liegt die mittlere Radonkonzentration in Wohnräumen bei ca. 99 Bq/m³, in manchen Regionen (z. B. Mühlviertel, Teile der Steiermark) deutlich höher. Der EU-Referenzwert beträgt 300 Bq/m³. Radon (²²²Rn) ist ein Edelgas, das aus dem Boden in Gebäude diffundiert. Es zerfällt weiter zu kurzlebigen α-Strahlern (²¹⁸Po, ²¹⁴Po), die sich an Aerosolpartikel anlagern und eingeatmet werden → α-Strahlung direkt im Lungenepithel.
+
+---
 
 ## Beta-minus-Strahlung (β⁻)
 
-Ein Neutron im Kern wandelt sich um:
+Bisher haben wir gesehen, wie schwere Kerne durch α-Zerfall Stabilität erreichen. Leichtere instabile Kerne mit **Neutronenüberschuss** nutzen einen anderen Weg: den β⁻-Zerfall.
+
+Ein Neutron im Kern wandelt sich um (vermittelt durch die **schwache Wechselwirkung**):
 > n → p + e⁻ + ν̄ₑ (Antineutrino)
 
+Die vollständige **Kerngleichung** lautet:
 > ᴬ_Z X → ᴬ_(Z+1) Y + e⁻ + ν̄ₑ
 
-Ordnungszahl steigt um 1, Massenzahl bleibt konstant. Beispiel: ¹⁴₆C → ¹⁴₇N + e⁻ + ν̄ₑ.
+Ordnungszahl steigt um 1 (eine Position nach rechts im PSE), Massenzahl bleibt konstant.
+
+**Wichtige Zerfallsbeispiele mit Kerngleichungen:**
+- ¹⁴₆C → ¹⁴₇N + e⁻ + ν̄ₑ (T½ = 5730 Jahre) — Grundlage der **Radiokarbon-Datierung**
+- ¹³¹₅₃I → ¹³¹₅₄Xe + e⁻ + ν̄ₑ (T½ = 8,02 Tage) — **Schilddrüsentherapie** (Radiojodtherapie)
+- ³H (Tritium) → ³₂He + e⁻ + ν̄ₑ (T½ = 12,3 Jahre) — Markierungssubstanz in der Biochemie
+- ⁹⁰₃₈Sr → ⁹⁰₃₉Y + e⁻ + ν̄ₑ (T½ = 28,8 Jahre) — Fallout-Isotop, lagert sich in Knochen ein (chemisch ähnlich Ca)
+- ³²₁₅P → ³²₁₆S + e⁻ + ν̄ₑ (T½ = 14,3 Tage) — radioaktiver Tracer in der Molekularbiologie
 
 **Eigenschaften:**
-- Reichweite: einige Meter in Luft, wenige cm in Gewebe
+- Reichweite: einige Meter in Luft, wenige mm bis cm in Gewebe (abhängig von E_max)
 - Abschirmung: Aluminium-Platte (~3 mm) oder dünnes Plexiglas
-- Kontinuierliches Energiespektrum (Neutrino trägt variablen Anteil der Energie – Pauli postulierte deshalb 1930 das Neutrino)
-- Strahlungs-Wichtungsfaktor: w_R = 1
+- **Kontinuierliches Energiespektrum** — das ist ein entscheidender Unterschied zum α-Zerfall! Die Zerfallsenergie wird zwischen Elektron und Antineutrino aufgeteilt. Das Elektron kann jede Energie zwischen 0 und E_max erhalten. Das mittlere E_β beträgt ca. E_max/3. Pauli postulierte 1930 das Neutrino, um die Energieerhaltung zu retten — entdeckt wurde es erst 1956 (Cowan-Reines-Experiment).
+- Strahlungs-Wichtungsfaktor: w_R = 1 (niedrigere Ionisierungsdichte als α)
 
-Es gibt auch den **β⁺-Zerfall** (Positronenemission): p → n + e⁺ + νₑ. Z sinkt um 1, A bleibt gleich. Beispiel: ¹⁸₉F → ¹⁸₈O + e⁺ + νₑ. Medizinisch wichtig für PET-Diagnostik.
+> **Merke:** β⁻-Zerfall: Neutron → Proton + Elektron + Antineutrino. Z steigt um 1, A bleibt gleich. Kontinuierliches Energiespektrum (Neutrino teilt sich die Energie). Abschirmung: Aluminium.
+
+**Klinisch: ¹³¹I-Radiojodtherapie** — Die β⁻-Strahlung des ¹³¹I hat E_max = 0,606 MeV und eine mittlere Reichweite von ca. 0,4 mm im Gewebe — ideal, um selektiv Schilddrüsengewebe zu zerstören, ohne umliegendes Gewebe stark zu schädigen. Anwendung: Morbus Basedow, Schilddrüsenkarzinom. In Österreich wird die Radiojodtherapie stationär durchgeführt (Strahlenschutzgesetz); Patienten werden erst entlassen, wenn die Aktivität unter 250 MBq gefallen ist.
+
+---
+
+## Beta-plus-Strahlung (β⁺) — Positronenemission
+
+Um das Bild der Betazerfälle zu vervollständigen: Kerne mit **Protonenüberschuss** können den β⁺-Zerfall durchlaufen.
+
+Ein Proton im Kern wandelt sich um:
+> p → n + e⁺ + νₑ (Neutrino)
+
+Die vollständige **Kerngleichung** lautet:
+> ᴬ_Z X → ᴬ_(Z-1) Y + e⁺ + νₑ
+
+Ordnungszahl sinkt um 1, Massenzahl bleibt konstant.
+
+**Wichtige Zerfallsbeispiele:**
+- ¹⁸₉F → ¹⁸₈O + e⁺ + νₑ (T½ = 109,77 min) — wichtigstes PET-Nuklid (¹⁸F-FDG)
+- ¹¹₆C → ¹¹₅B + e⁺ + νₑ (T½ = 20,4 min) — PET-Neuroimaging
+- ¹³₇N → ¹³₆C + e⁺ + νₑ (T½ = 9,97 min) — PET-Myokardperfusion
+- ¹⁵₈O → ¹⁵₇N + e⁺ + νₑ (T½ = 2,04 min) — PET-Blutfluss-Messung
+- ⁶⁸₃₁Ga → ⁶⁸₃₀Zn + e⁺ + νₑ (T½ = 67,7 min) — ⁶⁸Ga-DOTATATE für neuroendokrine Tumoren
+
+**Besonderheit:** Beim β⁺-Zerfall muss die Massenenergie des Mutterkerns mindestens 2 × m_e·c² = 1,022 MeV größer sein als die des Tochterkerns (da ein Positron erzeugt wird und ein Proton durch ein leichteres Neutron ersetzt wird). Ist diese Energiebedingung nicht erfüllt, kann alternativ **Elektroneneinfang** (EC, electron capture) stattfinden: p + e⁻ → n + νₑ (Ergebnis identisch: Z−1, A gleich), z. B. ¹²⁵₅₃I → ¹²⁵₅₂Te + νₑ.
+
+Das emittierte Positron (Antiteilchen des Elektrons, Masse = m_e, Ladung +e) bewegt sich wenige Millimeter durch das Gewebe, verliert kinetische Energie durch Ionisation und trifft schließlich auf ein Elektron → **Annihilation** (Paarvernichtung):
+
+> e⁺ + e⁻ → 2 γ-Photonen mit je 511 keV (exakt antiparallel, 180°)
+
+Diese Annihilationsstrahlung ist die Grundlage der **PET-Diagnostik** (Positronen-Emissions-Tomographie, UK ph-7-04).
+
+> **Merke:** β⁺-Zerfall: Proton → Neutron + Positron + Neutrino. Z sinkt um 1, A bleibt gleich. Das Positron annihiliert mit einem Elektron → 2 × 511 keV Gammaphotonen unter 180° → PET-Bildgebung.
+
+---
 
 ## Gamma-Strahlung (γ)
 
+Bisher haben wir gesehen, wie sich Kerne durch Teilchenemission (α, β) umwandeln. Gamma-Strahlung ergänzt dieses Bild: Sie ändert die Kernzusammensetzung nicht, sondern entlädt nur überschüssige Energie.
+
 Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen, E > 100 keV, typisch 100 keV – 10 MeV). Sie entsteht, wenn ein nach einem α- oder β-Zerfall im angeregten Zustand verbleibender Tochterkern in den Grundzustand übergeht (**isomerer Übergang**). Keine Änderung von Z oder A.
 
+**Entstehungsmechanismen:**
+1. **Isomerer Übergang (IT):** Angeregter Kern → Grundzustand + γ-Photon. Beispiel: ⁹⁹ᵐTc → ⁹⁹Tc + γ (140 keV, T½ = 6,01 h). Das “m” steht für metastabil (langlebiger angeregter Zustand).
+2. **Begleitstrahlung bei α- und β-Zerfall:** Häufig geht der Tochterkern nicht direkt in den Grundzustand, sondern in einen angeregten Zustand → γ-Emission als Folgestufe. Beispiel: ⁶⁰₂₇Co → ⁶⁰₂₈Ni* + β⁻ → ⁶⁰₂₈Ni + γ₁ (1,173 MeV) + γ₂ (1,332 MeV). Cobalt-60 wird in der Strahlentherapie genutzt.
+
 **Eigenschaften:**
-- Reichweite: sehr hoch (theoretisch unendlich, exponentiell geschwächt)
-- Abschirmung: dicke Schichten Blei (mehrere cm) oder Beton (mehrere Dezimeter)
-- Ionisierungsdichte: gering pro Wegstrecke, aber große Reichweite in Gewebe
+- Reichweite: sehr hoch (theoretisch unendlich, exponentiell geschwächt nach I = I₀·e^(−μx))
+- Abschirmung: dicke Schichten Blei (mehrere cm) oder Beton (mehrere Dezimeter) — γ-Strahlung wird **nie** vollständig abgeschirmt, nur exponentiell reduziert
+- Ionisierungsdichte: gering pro Wegstrecke (niedriger LET), aber große Reichweite in Gewebe → Ganzkörperbestrahlung möglich
 - Strahlungs-Wichtungsfaktor: w_R = 1
+- **Wechselwirkungen:** Photoeffekt (< 100 keV, ∝ Z⁴), Compton-Effekt (100 keV–10 MeV), Paarbildung (> 1,022 MeV)
 
-| Strahlung | Teilchen | Ladung | Abschirmung | Z-Änderung | A-Änderung | w_R |
-|-----------|----------|--------|-------------|------------|------------|-----|
-| α | He-4-Kern | +2e | Papier | −2 | −4 | 20 |
-| β⁻ | Elektron | −1e | Aluminium | +1 | 0 | 1 |
-| β⁺ | Positron | +1e | Aluminium | −1 | 0 | 1 |
-| γ | Photon | 0 | Blei/Beton | 0 | 0 | 1 |
+> **Merke:** γ-Strahlung ändert weder Ordnungs- noch Massenzahl. Sie begleitet oft α- oder β-Zerfall als Folgeprozess. Abschirmung durch Blei oder Beton (exponentielle Schwächung). Klinisch: ⁹⁹ᵐTc (140 keV γ) ist der Goldstandard der nuklearmedizinischen Diagnostik.
 
-**Ionisierende Strahlung beim radioaktiven Zerfall:** Beim Zerfall radioaktiver Substanzen können **Alpha-, Beta- und Gamma-Strahlung** freigesetzt werden – alle drei sind **ionisierend** (können Elektronen aus Atomen lösen). **Infrarotstrahlung** ist **nicht** ionisierend und gehört nicht zu den beim Kernzerfall freigesetzten Strahlungsarten. Typische Falle: „Infrarot ist eine ionisierende Strahlungsart beim Zerfall“ ist **falsch**.
+| Strahlung | Teilchen | Ladung | Abschirmung | Z-Änderung | A-Änderung | w_R | LET |
+|-----------|----------|--------|-------------|------------|------------|-----|-----|
+| α | He-4-Kern | +2e | Papier | −2 | −4 | 20 | hoch |
+| β⁻ | Elektron | −1e | Aluminium | +1 | 0 | 1 | niedrig |
+| β⁺ | Positron | +1e | Aluminium | −1 | 0 | 1 | niedrig |
+| γ | Photon | 0 | Blei/Beton | 0 | 0 | 1 | sehr niedrig |
+| Neutronen | Neutron | 0 | Wasser/Paraffin | variabel | variabel | 5–20 | mittel–hoch |
 
-**Kernspaltung (z. B. Uran):** Bei der **Kernspaltung** zur Energiegewinnung werden **Neutronen** benötigt – ein Neutron trifft auf einen schweren Kern (z. B. ²³⁵U) und löst die Spaltung aus. Nicht Alpha-, Beta-Teilchen, Protonen oder Neutrinos; **Neutronen** lösen die Kettenreaktion aus.
+**Neutronenstrahlung** entsteht bei Kernspaltung und Kernfusion. Neutronen sind ungeladen und durchdringen Materie leicht; sie werden am besten durch **wasserstoffreiche Materialien** (Wasser, Paraffin, Polyethylen) abgebremst (Moderation). Der w_R für Neutronen ist energieabhängig (5–20), weil langsame Neutronen eingefangen werden und dabei α- oder γ-Strahlung erzeugen.
 
-**Massendefekt:** Die **Masse des Atomkerns** ist **etwas geringer** als die Summe der Massen der in ihm enthaltenen Nukleonen (Protonen + Neutronen). Diese Massendifferenz (Massendefekt) entspricht der **Bindungsenergie** des Kerns (E = Δm·c²). Nicht: „Die Masse des Atoms ist größer als die Summe der Nukleonen“ (das wäre falsch); auch nicht die Massenzunahme bei hohen Geschwindigkeiten oder der Massenunterschied zwischen Proton und Elektron.
+**Ionisierende Strahlung beim radioaktiven Zerfall:** Beim Zerfall radioaktiver Substanzen können **Alpha-, Beta- und Gamma-Strahlung** freigesetzt werden – alle drei sind **ionisierend** (können Elektronen aus Atomen lösen). **Infrarotstrahlung** ist **nicht** ionisierend und gehört nicht zu den beim Kernzerfall freigesetzten Strahlungsarten. Typische Falle: „Infrarot ist eine ionisierende Strahlungsart beim Zerfall” ist **falsch**.
+
+---
+
+## Zerfallsreihen
+
+Ein radioaktiver Kern zerfällt oft nicht in ein stabiles Nuklid, sondern in ein weiteres instabiles Nuklid, das erneut zerfällt. Es bilden sich **Zerfallsreihen**, die erst bei einem stabilen Endnuklid enden. In der Natur gibt es vier Zerfallsreihen (benannt nach ihrem langlebigsten Glied):
+
+| Reihe | Startnuklid | Endnuklid (stabil) | A mod 4 |
+|-------|-------------|---------------------|---------|
+| Uran-Radium | ²³⁸U | ²⁰⁶Pb | 4n+2 |
+| Actinium | ²³⁵U | ²⁰⁷Pb | 4n+3 |
+| Thorium | ²³²Th | ²⁰⁸Pb | 4n |
+| Neptunium | ²³⁷Np | ²⁰⁹Bi | 4n+1 |
+
+Die Uran-Radium-Reihe ist klinisch am relevantesten, weil sie ²²²Rn (Radon) enthält:
+²³⁸U → (α) → ²³⁴Th → (β⁻) → ²³⁴Pa → (β⁻) → ²³⁴U → ... → ²²⁶Ra → (α) → **²²²Rn** → (α) → ²¹⁸Po → ... → ²⁰⁶Pb (stabil).
+
+> **Merke:** Alle natürlichen Zerfallsreihen enden bei einem stabilen Blei-Isotop (²⁰⁶Pb, ²⁰⁷Pb, ²⁰⁸Pb) oder ²⁰⁹Bi. Die Massenzahl A ändert sich nur bei α-Zerfall (−4), nicht bei β-Zerfall → die Reihen sind durch A mod 4 klassifiziert.
+
+---
+
+## Kernspaltung und Massendefekt
+
+**Kernspaltung (z. B. Uran):** Bei der **Kernspaltung** zur Energiegewinnung werden **Neutronen** benötigt – ein thermisches Neutron trifft auf einen schweren Kern (z. B. ²³⁵U) und löst die Spaltung aus:
+
+> ²³⁵₉₂U + ¹₀n → ²³⁶₉₂U* → Spaltfragmente + 2–3 Neutronen + ~200 MeV
+
+Die freigesetzten Neutronen können weitere ²³⁵U-Kerne spalten → **Kettenreaktion** (kontrolliert im Reaktor, unkontrolliert in der Atombombe). Nicht Alpha-, Beta-Teilchen, Protonen oder Neutrinos; **Neutronen** lösen die Kettenreaktion aus.
+
+**Massendefekt und Bindungsenergie:** Die **Masse des Atomkerns** ist **etwas geringer** als die Summe der Massen der in ihm enthaltenen Nukleonen (Protonen + Neutronen). Diese Massendifferenz (Massendefekt Δm) entspricht der **Bindungsenergie** des Kerns nach Einstein:
+
+> **E_B = Δm · c²**
+
+Beispiel: ⁴He-Kern: m(2p + 2n) = 2 × 1,00728 u + 2 × 1,00866 u = 4,03188 u. Tatsächliche Kernmasse: 4,00151 u. Δm = 0,03037 u = 0,03037 × 931,5 MeV/u = 28,3 MeV. Bindungsenergie pro Nukleon: 28,3/4 = 7,07 MeV/Nukleon.
+
+Die **Bindungsenergie pro Nukleon** erreicht ein Maximum bei ⁵⁶Fe (8,79 MeV/Nukleon). Leichtere Kerne gewinnen Energie durch **Fusion** (Sonne: 4¹H → ⁴He), schwerere durch **Spaltung** (²³⁵U → Fragmente). Beide Prozesse bewegen sich auf dem Maximum der Bindungsenergiekurve zu.
+
+> **Merke:** Massendefekt: Kernmasse < Summe der Nukleonenmassen. Die Differenz ist als Bindungsenergie E_B = Δm·c² „gespeichert”. Fusion und Spaltung setzen Energie frei, weil die Produkte eine höhere Bindungsenergie pro Nukleon haben als die Ausgangskerne.
 
 
 
 ## Exponentieller Zerfall und Halbwertszeit
 
-Radioaktiver Zerfall ist ein statistischer Prozess. Die Anzahl N(t) noch nicht zerfallener Kerne nimmt exponentiell ab:
+Bisher haben wir die verschiedenen Zerfallsarten kennengelernt. Nun betrachten wir die **Kinetik** des radioaktiven Zerfalls — wie schnell ein Nuklid zerfällt.
+
+Radioaktiver Zerfall ist ein **statistischer Prozess**. Jeder einzelne Kern hat in jedem Zeitintervall die gleiche Zerfallswahrscheinlichkeit, unabhängig von seinem Alter, seiner Umgebung (Temperatur, Druck, chemische Bindung) und der Anwesenheit anderer Kerne. Die Anzahl N(t) noch nicht zerfallener Kerne nimmt exponentiell ab:
 
 > **N(t) = N₀ · e^(−λt)**
 
-λ = Zerfallskonstante [s⁻¹], charakteristisch für jedes Nuklid.
+λ = Zerfallskonstante [s⁻¹], charakteristisch für jedes Nuklid. Sie gibt die Zerfallswahrscheinlichkeit pro Zeiteinheit an.
+
+**Herleitung:** Die Änderungsrate dN/dt ist proportional zur Anzahl der vorhandenen Kerne: dN/dt = −λ·N. Lösung dieser Differentialgleichung: N(t) = N₀·e^(−λt). Das Minuszeichen drückt aus, dass N mit der Zeit abnimmt.
 
 Die **Halbwertszeit** T½ ist die Zeit, nach der die Hälfte der Kerne zerfallen ist:
 
 > **T½ = ln 2 / λ = 0,693 / λ**
 
-Äquivalent: N(T½) = N₀/2.
+**Herleitung:** N(T½) = N₀/2 → N₀·e^(−λ·T½) = N₀/2 → e^(−λ·T½) = 1/2 → −λ·T½ = −ln 2 → T½ = ln 2/λ.
 
-Nach n Halbwertszeiten gilt: N(t) = N₀ · (1/2)ⁿ mit n = t/T½.
+Nach n Halbwertszeiten gilt die praktische Formel: **N(t) = N₀ · (1/2)ⁿ** mit n = t/T½. Diese Formel ist für MedAT-Aufgaben besonders nützlich, da n oft ganzzahlig ist.
+
+**Tabelle: Restanteil nach n Halbwertszeiten**
+
+| n (HWZ) | Restanteil | Prozent |
+|---------|-----------|---------|
+| 0 | 1 | 100 % |
+| 1 | 1/2 | 50 % |
+| 2 | 1/4 | 25 % |
+| 3 | 1/8 | 12,5 % |
+| 4 | 1/16 | 6,25 % |
+| 5 | 1/32 | 3,125 % |
+| 10 | 1/1024 | ≈ 0,1 % |
+
+Die **mittlere Lebensdauer** τ = 1/λ = T½/ln 2 ≈ 1,443 · T½ ist die durchschnittliche Zeit, die ein Kern bis zu seinem Zerfall existiert. Sie ist etwas länger als T½, da einige Kerne sehr spät zerfallen.
+
+> **Merke:** T½ = 0,693/λ. Nach n Halbwertszeiten: N = N₀·(½)ⁿ. Faustregel: Nach 10 HWZ sind < 0,1 % übrig. Nach 7 HWZ ≈ 1 %. Radioaktiver Zerfall ist unabhängig von Temperatur, Druck und chemischer Umgebung!
+
+**Wichtige Halbwertszeiten für MedAT:**
+
+| Nuklid | T½ | Zerfallsart | Medizinische Anwendung |
+|--------|-----|------------|----------------------|
+| ⁹⁹ᵐTc | 6,01 h | γ (IT) | Szintigraphie (Knochen, Herz, Lunge) |
+| ¹³¹I | 8,02 d | β⁻ + γ | Schilddrüsentherapie |
+| ¹⁸F | 109,77 min | β⁺ | PET (FDG) |
+| ⁶⁰Co | 5,27 a | β⁻ + γ | Strahlentherapie |
+| ¹⁴C | 5730 a | β⁻ | Radiokarbon-Datierung |
+| ²²⁶Ra | 1600 a | α | Historisch: Brachytherapie |
+| ²³⁸U | 4,47 × 10⁹ a | α | Uran-Blei-Datierung |
+| ²²²Rn | 3,82 d | α | Natürliche Strahlenbelastung |
+
+---
 
 ## Aktivität
 
 Die **Aktivität** A gibt die Anzahl der Zerfälle pro Sekunde an:
 
-> **A = λ · N [Bq]**
+> **A = λ · N = (ln 2 / T½) · N [Bq]**
 
-1 Becquerel (Bq) = 1 Zerfall/s. Frühere Einheit: 1 Curie (Ci) = 3,7 × 10¹⁰ Bq (Aktivität von 1 g ²²⁶Ra).
+1 Becquerel (Bq) = 1 Zerfall/s. Frühere Einheit: 1 Curie (Ci) = 3,7 × 10¹⁰ Bq (= Aktivität von 1 g ²²⁶Ra — daher der historische Name).
 
-Da N(t) = N₀ · e^(−λt), gilt auch A(t) = A₀ · e^(−λt).
+Da N(t) = N₀ · e^(−λt), gilt auch **A(t) = A₀ · e^(−λt)** — die Aktivität nimmt mit derselben Halbwertszeit ab wie die Teilchenzahl.
 
-## Dosimetrie – Gray und Sievert
+**Zusammenhang Aktivität – Masse:** Die Anzahl der Atome in einer Masse m eines Nuklids mit Massenzahl A ist: N = (m/M) · N_A = (m · N_A) / A, wobei N_A = 6,022 × 10²³ mol⁻¹ (Avogadro-Zahl) und M = A g/mol (molare Masse). Damit: A = λ · N = (ln 2 / T½) · (m · N_A / A_r).
 
-Strahlendosen werden in verschiedenen Einheiten gemessen:
-- **Energiedosis D** [Gray, Gy]: absorbierte Energie pro Masse (1 Gy = 1 J/kg)
-- **Äquivalentdosis H** [Sievert, Sv]: biologische Wirksamkeit = D × Strahlungs-Wichtungsfaktor w_R
-- **Effektive Dosis E** [Sievert, Sv]: berücksichtigt zusätzlich Gewebewichtungsfaktoren w_T
+**Spezifische Aktivität:** Aktivität pro Masse [Bq/g]. Kurzlebige Nuklide haben eine hohe spezifische Aktivität (großes λ). ⁹⁹ᵐTc: A_spez ≈ 1,95 × 10¹⁷ Bq/g — schon Nanogramm-Mengen haben GBq-Aktivitäten!
 
-Für γ- und β-Strahlung gilt w_R = 1 (1 Gy = 1 Sv); für α-Strahlung w_R = 20 (0,05 Gy α = 1 Sv!); für Neutronen w_R = 5–20 (energieabhängig).
+> **Merke:** A = λ·N in Becquerel. Kurzlebige Nuklide (kleines T½ → großes λ) haben bei gleicher Teilchenzahl eine höhere Aktivität. 1 Ci = 3,7 × 10¹⁰ Bq.
 
-> **Merke:** Gleiche absorbierte Dosis (Gy) → α-Strahlung verursacht 20× mehr biologischen Schaden als γ-Strahlung (wegen hoher Ionisierungsdichte auf kurzer Strecke).
+---
+
+## Dosimetrie – Gray, Sievert und Strahlungsmessung
+
+Um das zu verstehen, warum verschiedene Strahlungsarten unterschiedlich gefährlich sind, müssen wir das **Dosissystem** der Strahlenschutzphysik kennen. Es unterscheidet drei hierarchische Dosisgrößen:
+
+### 1. Energiedosis D [Gray, Gy]
+
+Die Energiedosis misst die **absorbierte Energie pro Masse**:
+
+> **D = ΔE / Δm [Gray, 1 Gy = 1 J/kg]**
+
+Die Energiedosis ist eine rein physikalische Größe — sie sagt nichts über die biologische Wirkung aus. Alte Einheit: 1 rad = 0,01 Gy (heute veraltet, aber in älterer Literatur noch anzutreffen).
+
+### 2. Äquivalentdosis H [Sievert, Sv]
+
+Die Äquivalentdosis berücksichtigt die **unterschiedliche biologische Wirksamkeit** verschiedener Strahlenarten:
+
+> **H = D × w_R [Sievert, Sv]**
+
+w_R = **Strahlungs-Wichtungsfaktor** (radiation weighting factor). Er korrigiert für die unterschiedliche Ionisierungsdichte (LET = linearer Energietransfer) verschiedener Strahlenarten.
+
+| Strahlenart | w_R | Begründung |
+|-------------|-----|-----------|
+| Röntgen- und γ-Strahlung | 1 | niedriger LET, gleichmäßige Ionisation |
+| β-Strahlung (β⁻ und β⁺) | 1 | niedriger LET |
+| Neutronen (< 10 keV) | 5 | mittlerer LET nach Kernreaktionen |
+| Neutronen (100 keV–2 MeV) | 20 | hoher LET der Rückstoßprotonen |
+| Neutronen (> 20 MeV) | 5 | abnehmender LET |
+| Protonen (> 2 MeV) | 2 | mittlerer LET |
+| α-Teilchen, schwere Ionen | **20** | **sehr hoher LET → clustered DNA damage** |
+
+Alte Einheit: 1 rem = 0,01 Sv.
+
+**Rechenbeispiel:** Eine Person wird mit 5 mGy α-Strahlung und 10 mGy γ-Strahlung bestrahlt.
+- H_α = 5 mGy × 20 = 100 mSv
+- H_γ = 10 mGy × 1 = 10 mSv
+- Gesamte Äquivalentdosis: 110 mSv — obwohl die α-Dosis physikalisch nur halb so groß war, dominiert sie die biologische Wirkung!
+
+### 3. Effektive Dosis E [Sievert, Sv]
+
+Die effektive Dosis berücksichtigt zusätzlich, dass verschiedene Organe unterschiedlich strahlenempfindlich sind:
+
+> **E = Σ (w_T × H_T) [Sv]**
+
+w_T = **Gewebewichtungsfaktor** (tissue weighting factor). Die Summe aller w_T = 1.
+
+| Organ/Gewebe | w_T | Begründung |
+|-------------|-----|-----------|
+| Knochenmark (rot) | 0,12 | Hämatopoese, hohe Teilungsrate |
+| Dickdarm | 0,12 | Schnell proliferierendes Epithel |
+| Lunge | 0,12 | Große Oberfläche, Radon-Inhalation |
+| Magen | 0,12 | Schnell proliferierendes Epithel |
+| Brust | 0,12 | Hohes Strahlen-Karzinomrisiko |
+| Gonaden | 0,08 | Keimzellen, genetisches Risiko |
+| Schilddrüse | 0,04 | Radiojod-Empfindlichkeit |
+| Haut | 0,01 | Niedrigere Empfindlichkeit |
+
+> **Merke:** Drei Dosisgrößen: **Gray (Gy)** = absorbierte Energie (J/kg), physikalisch. **Sievert (Sv)** = Gy × w_R, biologisch gewichtet. **Effektive Dosis** = Σ(w_T × H_T), organgewichtet. Für γ und β gilt: 1 Gy = 1 Sv. Für α: **1 Gy = 20 Sv!**
+
+### Strahlungsmessgeräte
+
+| Detektor | Messprinzip | Einsatz |
+|----------|------------|---------|
+| **Geiger-Müller-Zähler** | Gasentladung durch ionisierende Strahlung | Kontaminationskontrolle |
+| **Szintillationszähler** | Lichtblitze in NaI(Tl)-Kristall → Photomultiplier | Gammaspektroskopie, Schilddrüse |
+| **Filmdosimeter** | Schwärzung von Filmemulsion ∝ Dosis | Personendosimetrie (monatlich) |
+| **Thermolumineszenzdosimeter (TLD)** | Gespeicherte Energie in LiF → Licht bei Erhitzung | Personendosimetrie |
+| **Ionisationskammer** | Ionisationsstrom in Gas ∝ Dosisleistung | Referenzdosimetrie, Therapie |
 
 ## Rechenbeispiele
 
@@ -447,8 +669,31 @@ T½ = 8,02 Tage = 8,02 × 24 × 3600 s = 692 928 s.
 **Beispiel 3 — Äquivalentdosis (α vs. γ):**
 Absorbierte Dosis: D = 0,5 mGy. Für γ-Strahlung (w_R = 1): H = 0,5 mSv. Für α-Strahlung (w_R = 20): H = 0,5 × 20 = 10 mSv — 20-fach höhere biologische Wirksamkeit! Deshalb ist die interne Kontamination mit α-Strahlern (Radon, Polonium) besonders gefährlich.
 
-**Beispiel 4 — C-14-Datierung (Prinzip):**
-Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre. Eine Knochenprobe zeigt nur 25 % der normalen ¹⁴C-Aktivität: 25 % = (½)ⁿ → n = 2 Halbwertszeiten → Alter ≈ 2 × 5730 = 11 460 Jahre.
+**Beispiel 4 — C-14-Datierung (Radiokarbon-Methode):**
+Lebende Organismen nehmen ¹⁴C auf (durch CO₂ aus der Atmosphäre); das Verhältnis ¹⁴C/¹²C ≈ 1,2 × 10⁻¹² bleibt konstant, solange der Organismus lebt. Nach dem Tod hört die Aufnahme auf, und ¹⁴C zerfällt mit T½ = 5730 Jahre. Eine Knochenprobe zeigt nur 25 % der normalen ¹⁴C-Aktivität:
+Schritt 1: A/A₀ = 0,25 = (½)ⁿ → n = 2 Halbwertszeiten.
+Schritt 2: Alter = n × T½ = 2 × 5730 = 11 460 Jahre.
+Alternativ mit Exponentialformel: A = A₀·e^(−λt) → t = −ln(A/A₀)/λ = −ln(0,25)/(0,693/5730) = 1,386/1,21×10⁻⁴ = 11 460 Jahre ✓.
+
+**Beispiel 5 — ¹³¹I-Therapie: Wann darf der Patient entlassen werden?**
+Aktivität bei Gabe: A₀ = 3700 MBq (= 100 mCi). Entlassung bei A ≤ 250 MBq (österr. Strahlenschutzverordnung).
+A(t) = A₀ · (½)^(t/T½) → 250 = 3700 · (½)^(t/8,02d) → (½)^(t/8,02) = 250/3700 = 0,0676.
+log(0,0676)/log(0,5) = 3,89 → t = 3,89 × 8,02 d ≈ 31,2 Tage.
+In der Praxis: Patienten werden ca. 2–5 Tage stationär gehalten (effektive HWZ kürzer als physikalische HWZ wegen biologischer Ausscheidung: T_eff = T_phys × T_bio / (T_phys + T_bio)).
+
+**Beispiel 6 — Effektive Halbwertszeit:**
+¹³¹I: T_phys = 8,02 d; biologische HWZ der Schilddrüse: T_bio = 80 d.
+T_eff = (T_phys × T_bio)/(T_phys + T_bio) = (8,02 × 80)/(8,02 + 80) = 641,6/88,02 = **7,29 d** — kürzer als T_phys!
+Für ⁹⁹ᵐTc: T_phys = 6 h; T_bio ≈ 24 h → T_eff = (6 × 24)/(6 + 24) = 144/30 = 4,8 h.
+
+> **Merke:** Effektive Halbwertszeit: 1/T_eff = 1/T_phys + 1/T_bio. Die effektive HWZ ist immer **kürzer** als die kürzere der beiden Einzel-HWZ. Für Strahlenschutz-Berechnungen am Patienten ist T_eff relevant, nicht T_phys allein.
+
+**Beispiel 7 — Aktivitätsberechnung aus Masse:**
+Wie viel Aktivität haben 1 μg ¹³¹I? M(¹³¹I) = 131 g/mol; T½ = 8,02 d = 692 928 s.
+N = m/M × N_A = (10⁻⁶ g / 131 g/mol) × 6,022 × 10²³ = 4,597 × 10¹⁵ Atome.
+λ = ln2/T½ = 0,693/692 928 s = 1,0 × 10⁻⁶ s⁻¹.
+A = λ × N = 1,0 × 10⁻⁶ × 4,597 × 10¹⁵ = 4,6 × 10⁹ Bq = **4,6 GBq ≈ 124 mCi**.
+Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivität!
 
 ## MedAT-Fokus
 
@@ -457,78 +702,96 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
 **Häufige Fragen:**
 - "Was ändert sich bei α-Zerfall?" → Z−2, A−4 (Tochterkern 2 Positionen links im PSE)
 - "Was ändert sich bei β⁻-Zerfall?" → Z+1, A gleich (Neutron → Proton + e⁻ + ν̄ₑ)
+- "Was ändert sich bei β⁺-Zerfall?" → Z−1, A gleich (Proton → Neutron + e⁺ + νₑ) — wichtig für PET!
 - "Formel Halbwertszeit?" → T½ = ln2/λ = 0,693/λ; nach n Halbwertszeiten: N = N₀·(½)ⁿ
 - "Warum ist ⁹⁹ᵐTc ideal für Diagnostik?" → reiner γ-Strahler (140 keV), T½ = 6 h → niedrige Strahlendosis, gute Kameradetektion
+- "Was ist der Massendefekt?" → Kernmasse < Summe der Nukleonenmassen; Differenz = Bindungsenergie (E = Δm·c²)
+- "Effektive Halbwertszeit?" → 1/T_eff = 1/T_phys + 1/T_bio; immer kürzer als die kürzere Einzel-HWZ
+- "Energiedosis vs. Äquivalentdosis?" → Gy = J/kg (physikalisch); Sv = Gy × w_R (biologisch gewichtet)
+
+**Prüfungsrelevante Zahlen:**
+- w_R: α = 20; β = 1; γ = 1; Neutronen = 5–20
+- T½: ⁹⁹ᵐTc = 6 h; ¹³¹I = 8 d; ¹⁸F = 110 min; ¹⁴C = 5730 a
+- 1 Gy = 1 J/kg; 1 Sv = 1 Gy × w_R; 1 Bq = 1 Zerfall/s; 1 Ci = 3,7 × 10¹⁰ Bq
+- Grenzwerte: Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a; natürliche Strahlung ≈ 2,1 mSv/a
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Ionisierend** beim Zerfall: nur **Alpha, Beta, Gamma** – **Infrarot ist nicht ionisierend** und keine Zerfallsstrahlung.
 - **Kernspaltung:** Auslösung durch **Neutronen** (nicht Alpha, Beta, Protonen, Neutrinos).
 - **Massendefekt:** Kernmasse **kleiner** als Summe der Nukleonen (nicht größer; nicht Massenzunahme bei hoher Geschwindigkeit).
-- Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit)
+- Gray (Gy) ≠ Sievert (Sv): Gy = absorbierte Energie (J/kg); Sv = Gy × w_R (biologische Wirksamkeit). Für α: 1 Gy = **20 Sv**!
 - α äußerlich harmlos (Papier stoppt), aber innerlich extrem gefährlich (w_R = 20!)
 - β⁺-Zerfall (Positronenemitter, Z−1, für PET) ≠ β⁻-Zerfall (Elektronemitter, Z+1, für Therapie)
+- **Effektive HWZ** ≠ physikalische HWZ: T_eff ist immer kürzer (biologische Ausscheidung beschleunigt den Aktivitätsabfall)
+- **Neutronenabschirmung:** Wasser/Paraffin (wasserstoffreich), nicht Blei! Neutronen werden durch leichte Kerne moderiert.
+- **Bindungsenergie pro Nukleon:** Maximum bei ⁵⁶Fe → Fusion leichter Kerne UND Spaltung schwerer Kerne setzen Energie frei
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **α-Strahlung**: ⁴He-Kern; +2e; 4–8 MeV; Reichweite cm in Luft, µm in Gewebe; Abschirmung: Papier; w_R = 20
-- **β⁻-Strahlung**: Elektron; −e; bis MeV; Reichweite m in Luft, mm in Gewebe; Abschirmung: Aluminium; w_R = 1
-- **γ-Strahlung**: Photon; keine Ladung; hohe Energie; Reichweite m–km; Abschirmung: Blei; w_R = 1
-- **Zerfallsgesetz**: N(t) = N₀·e^(−λt); T½ = ln2/λ; A = λ·N [Becquerel = 1 Zerfall/s]
-- **Äquivalentdosis**: H = D·w_R [Sievert]; α 20× biologisch wirksamer als γ!
-- **Strahlenschutz**: Zeit ↓, Abstand ↑ (1/r²-Gesetz!), Abschirmung ↑`,
+- **α-Zerfall**: ⁴He-Kern; Z−2, A−4; 4–8 MeV; Reichweite cm in Luft, µm in Gewebe; Abschirmung: Papier; w_R = 20; Tunneleffekt
+- **β⁻-Zerfall**: Elektron + Antineutrino; Z+1, A gleich; kontinuierliches Spektrum; Abschirmung: Aluminium; w_R = 1
+- **β⁺-Zerfall**: Positron + Neutrino; Z−1, A gleich; Annihilation → 2×511 keV; PET-Grundlage; w_R = 1
+- **γ-Strahlung**: Photon; Z und A unverändert; Isomerer Übergang; Abschirmung: Blei/Beton; w_R = 1
+- **Zerfallsgesetz**: N(t) = N₀·e^(−λt); T½ = ln2/λ; nach n HWZ: N = N₀·(½)ⁿ; A = λ·N [Bq = 1/s]
+- **Dosimetrie**: Gy = J/kg (physikalisch); Sv = Gy × w_R (biologisch); α: 1 Gy = 20 Sv!
+- **Effektive HWZ**: 1/T_eff = 1/T_phys + 1/T_bio; immer kürzer als die kürzere Einzel-HWZ
+- **Massendefekt**: E_B = Δm·c²; Maximum bei ⁵⁶Fe; Fusion und Spaltung setzen Energie frei
+- **Strahlenschutz**: Zeit ↓, Abstand ↑ (1/r²-Gesetz!), Abschirmung ↑; Abschirmregel: PAB (Papier–Alu–Blei für α–β–γ)`,
       lernziele: [
-        "Die drei Strahlungsarten (α, β⁻, γ) hinsichtlich Teilchenart, Ladung, Reichweite und Abschirmung beschreiben.",
-        "Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ = ln2/λ anwenden.",
-        "Aktivität A = λ·N in Becquerel berechnen und auf n Halbwertszeiten bezogene Berechnungen durchführen.",
-        "Die Änderung von Ordnungszahl und Massenzahl bei α- und β-Zerfällen angeben.",
-        "Medizinisch relevante Isotope (⁹⁹ᵐTc, ¹³¹I, ¹⁸F) und ihre Anwendungen kennen.",
+        "Die vier Strahlungsarten (α, β⁻, β⁺, γ) hinsichtlich Teilchenart, Ladung, Reichweite, LET und Abschirmung beschreiben.",
+        "Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ = ln2/λ herleiten und anwenden.",
+        "Aktivität A = λ·N in Becquerel berechnen und die effektive Halbwertszeit T_eff bestimmen.",
+        "Die Kerngleichungen für α-, β⁻- und β⁺-Zerfall aufstellen und A/Z-Änderungen angeben.",
+        "Energiedosis (Gray), Äquivalentdosis (Sievert) und effektive Dosis unterscheiden und Strahlungs-Wichtungsfaktoren kennen.",
+        "Medizinisch relevante Isotope (⁹⁹ᵐTc, ¹³¹I, ¹⁸F, ⁶⁰Co) und ihre Anwendungen nennen.",
+        "Das Konzept des Massendefekts und der Bindungsenergie (E = Δm·c²) erklären.",
       ],
       sections: [
         {
-          heading: "Die drei klassischen Strahlungsarten",
-          text: 'Alpha-Strahlung: He-4-Kern, Ladung +2, geringe Reichweite (Papier), hohe Ionisierungsdichte, Z−2, A−4. Beta-minus: Elektron, Ladung −1, mittlere Reichweite (Aluminium), Z+1, A konstant. Gamma: Photon, keine Ladung, sehr hohe Reichweite (Blei/Beton nötig), keine Änderung von Z oder A. Merkregel Abschirmung: "PapierAluminiumBlei" für α, β, γ.',
+          heading: "Die Strahlungsarten im Detail",
+          text: 'Alpha-Zerfall: He-4-Kern, +2e, Z−2, A−4, Tunneleffekt, hoher LET. Beispiel: ²³⁸U → ²³⁴Th + ⁴He. Beta-minus: Elektron + Antineutrino, Z+1, A gleich, kontinuierliches Spektrum. Beispiel: ¹⁴C → ¹⁴N. Beta-plus: Positron + Neutrino, Z−1, A gleich, Annihilation → 2×511 keV. Beispiel: ¹⁸F → ¹⁸O. Gamma: Photon, Z und A unverändert, isomerer Übergang. Beispiel: ⁹⁹ᵐTc → ⁹⁹Tc + γ. Merkregel Abschirmung: "PapierAluminiumBlei" (PAB) für α, β, γ.',
           merksatz:
-            "α: Papier stoppt; β: Aluminium stoppt; γ: Blei/Beton nötig. α: Z−2, A−4; β⁻: Z+1, A gleich.",
+            "α: Z−2, A−4, Papier stoppt; β⁻: Z+1, A gleich, Alu stoppt; β⁺: Z−1, A gleich, Annihilation→PET; γ: Z/A unverändert, Blei nötig.",
         },
         {
-          heading: "Exponentieller Zerfall und Halbwertszeit",
-          text: "N(t) = N₀·e^(−λt) ist das fundamentale Zerfallsgesetz. Die Zerfallskonstante λ und die Halbwertszeit T½ sind verknüpft durch T½ = ln2/λ ≈ 0,693/λ. Praktisch: Nach n = t/T½ Halbwertszeiten gilt N = N₀·(1/2)ⁿ. Aktivität A = λ·N nimmt ebenso exponentiell ab. Einheit: Becquerel (Bq) = 1/s. 1 Ci = 3,7×10¹⁰ Bq.",
-          merksatz: "T½ = 0,693/λ; nach n Halbwertszeiten: N = N₀·(½)ⁿ; Aktivität A = λ·N in Bq.",
+          heading: "Exponentieller Zerfall, Aktivität und Halbwertszeit",
+          text: "N(t) = N₀·e^(−λt) ist das fundamentale Zerfallsgesetz. T½ = ln2/λ. Praktisch: N = N₀·(½)ⁿ mit n = t/T½. Aktivität A = λ·N [Bq = 1/s]. 1 Ci = 3,7×10¹⁰ Bq. Effektive HWZ: 1/T_eff = 1/T_phys + 1/T_bio — berücksichtigt biologische Ausscheidung. Spezifische Aktivität: kurzlebige Nuklide (großes λ) → hohe Aktivität pro Gramm.",
+          merksatz:
+            "T½ = 0,693/λ; N = N₀·(½)ⁿ; A = λ·N in Bq; T_eff immer kürzer als kürzere Einzel-HWZ.",
         },
         {
-          heading: "Medizinische Radionuklide",
-          text: "⁹⁹ᵐTc (T½=6h) ist das wichtigste Nuklid der Nuklearmedizin: reiner γ-Strahler, kurze HWZ → niedrige Strahlungsbelastung, gut verfügbar aus ⁹⁹Mo-Generator. ¹³¹I (β⁻+γ, T½=8d) wird für Schilddrüsentherapie genutzt: β⁻-Strahlung zerstört lokal Schilddrüsengewebe. ¹⁸F (β⁺, T½=110min) für PET: Positron trifft Elektron → zwei 511-keV-Gammaphotonen (Vernichtungsstrahlung). Strahlendosis: Gray (Gy) = J/kg absorbiert; Sievert (Sv) = Gy × w_R berücksichtigt biologische Wirksamkeit.",
+          heading: "Dosimetrie: Gray, Sievert, effektive Dosis",
+          text: "Energiedosis D [Gy = J/kg]: rein physikalisch. Äquivalentdosis H = D × w_R [Sv]: biologisch gewichtet. Effektive Dosis E = Σ(w_T × H_T) [Sv]: organgewichtet. w_R-Werte: α = 20, β/γ = 1, Neutronen = 5–20. w_T-Werte: Knochenmark/Lunge/Brust/Dickdarm/Magen je 0,12; Gonaden 0,08; Schilddrüse 0,04. Messgeräte: Geiger-Müller (Kontamination), Szintillator (Spektroskopie), Film-/TLD (Personendosimetrie).",
           merksatz:
-            "⁹⁹ᵐTc: γ-Strahler, T½=6h, Szintigraphie. ¹³¹I: β⁻+γ, T½=8d, Schilddrüse. ¹⁸F: β⁺, T½=110min, PET.",
+            "Gy = J/kg (physikalisch); Sv = Gy × w_R (biologisch); α: w_R = 20 → 1 Gy α = 20 Sv! Effektive Dosis berücksichtigt Organempfindlichkeit (w_T).",
         },
         {
-          heading: "Medizinische Isotope im Überblick",
-          text: "Die wichtigsten medizinisch genutzten Radionuklide unterscheiden sich in Zerfallsart, Halbwertszeit und klinischer Anwendung.",
-          table: {
-            headers: ["Isotop", "Zerfall", "T½", "Anwendung"],
-            rows: [
-              ["⁹⁹ᵐTc", "γ (isomer)", "6 h", "Szintigraphie (Knochen, Herz, Lunge)"],
-              ["¹³¹I", "β⁻ + γ", "8 d", "Schilddrüsen-Therapie, -Diagnostik"],
-              ["¹⁸F", "β⁺", "110 min", "PET (FDG)"],
-              ["⁶⁷Ga", "γ", "3,3 d", "Infektions-/Tumorlokalisation"],
-              ["²⁰¹Tl", "γ (EC)", "3,0 d", "Myokard-Szintigraphie"],
-            ],
-          },
+          heading: "Medizinische Radionuklide und klinische Anwendung",
+          text: "⁹⁹ᵐTc: reiner γ-Strahler, T½=6h, aus ⁹⁹Mo-Generator, Szintigraphie (Knochen/Herz/Lunge/Niere). ¹³¹I: β⁻+γ, T½=8d, Radiojodtherapie (Schilddrüse), Reichweite β im Gewebe ~0,4 mm. ¹⁸F: β⁺, T½=110min, PET-FDG (Tumorstaging, Warburg-Effekt). ⁶⁰Co: β⁻+γ(1,17+1,33 MeV), T½=5,27a, Strahlentherapie (Teletherapie). ¹⁴C: β⁻, T½=5730a, Radiokarbon-Datierung.",
           merksatz:
-            "⁹⁹ᵐTc: γ-Strahler, T½=6h, Szintigraphie. ¹³¹I: β⁻+γ, T½=8d, Schilddrüse. ¹⁸F: β⁺, T½=110min, PET.",
+            "⁹⁹ᵐTc: γ, 6h, Szintigraphie. ¹³¹I: β⁻+γ, 8d, Schilddrüse. ¹⁸F: β⁺, 110min, PET. ⁶⁰Co: γ, 5,27a, Strahlentherapie.",
+        },
+        {
+          heading: "Massendefekt, Bindungsenergie und Kernreaktionen",
+          text: "Massendefekt Δm: Kernmasse < Summe der Nukleonenmassen. Bindungsenergie E_B = Δm·c² (1 u = 931,5 MeV/c²). Maximale Bindungsenergie/Nukleon bei ⁵⁶Fe (8,79 MeV). Leichte Kerne → Fusion freisetzt Energie (Sonne). Schwere Kerne → Spaltung freisetzt Energie (Kernkraftwerk). Kernspaltung: ²³⁵U + n → Fragmente + 2–3 Neutronen + ~200 MeV; ausgelöst durch thermische Neutronen.",
+          merksatz:
+            "E_B = Δm·c²; Maximum bei ⁵⁶Fe. Fusion (leichte Kerne) und Spaltung (schwere Kerne) setzen Energie frei. Kettenreaktion durch Neutronen.",
         },
       ],
       merksätze: [
-        "α-Zerfall: A−4, Z−2 (Tochterkern 2 Positionen links im PSE); Abschirmung: Papier.",
-        "β⁻-Zerfall: A gleich, Z+1 (Tochterkern 1 Position rechts im PSE); Abschirmung: Aluminium.",
-        "γ-Strahlung: keine Änderung von A oder Z; Abschirmung: Blei (mehrere cm) oder Beton.",
+        "α-Zerfall: A−4, Z−2; Tunneleffekt; Abschirmung: Papier; w_R = 20; hoher LET.",
+        "β⁻-Zerfall: A gleich, Z+1; Elektron + Antineutrino; kontinuierliches Spektrum; Abschirmung: Aluminium.",
+        "β⁺-Zerfall: A gleich, Z−1; Positron + Neutrino; Annihilation → 2×511 keV unter 180°; Grundlage der PET.",
+        "γ-Strahlung: keine Änderung von A oder Z; isomerer Übergang; Abschirmung: Blei/Beton.",
         "Zerfallsgesetz: N(t) = N₀·e^(−λt); Halbwertszeit T½ = ln2/λ ≈ 0,693/λ.",
-        "n Halbwertszeiten: N = N₀·(½)ⁿ – praktisch für Kopfrechnen.",
+        "n Halbwertszeiten: N = N₀·(½)ⁿ – nach 10 HWZ < 0,1 % übrig.",
         "Aktivität A = λ·N [Bq]; 1 Bq = 1 Zerfall/s; 1 Ci = 3,7×10¹⁰ Bq.",
-        "¹³¹I: T½ = 8 d, β⁻+γ, Schilddrüsentherapie (destruktiv) und -diagnostik.",
-        "¹⁸F: T½ = 110 min, β⁺-Strahler (Positronenemitter), Grundlage der PET.",
-        "Energiedosis in Gray (Gy = J/kg); Äquivalentdosis in Sievert (Sv = Gy × w_R); α: w_R = 20.",
+        "Effektive HWZ: 1/T_eff = 1/T_phys + 1/T_bio; immer kürzer als die kürzere Einzel-HWZ.",
+        "Energiedosis [Gy = J/kg]; Äquivalentdosis [Sv = Gy × w_R]; effektive Dosis [Sv = Σ(w_T × H_T)].",
+        "Massendefekt: Kernmasse < Nukleonensumme; E_B = Δm·c²; Maximum bei ⁵⁶Fe.",
+        "Neutronenabschirmung: Wasser/Paraffin (nicht Blei!); Neutronen lösen Kernspaltung aus.",
+        "Zerfallsreihen enden bei stabilem Blei: ²³⁸U → ... → ²⁰⁶Pb; ²³⁵U → ... → ²⁰⁷Pb.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -617,6 +880,58 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
           tags: ["jod-131", "halbwertszeit", "aktivitätsabfall"],
           difficulty: 2,
         },
+        {
+          question: "Was beschreibt der Massendefekt eines Atomkerns?",
+          options: [
+            "Die Masse des Kerns ist größer als die Summe der Massen seiner Nukleonen",
+            "Die Masse des Kerns ist etwas geringer als die Summe der Massen seiner freien Nukleonen — die Differenz entspricht der Bindungsenergie",
+            "Die Masse eines Protons ist geringer als die eines Neutrons",
+            "Der Massenverlust eines Atoms bei hohen Geschwindigkeiten durch relativistische Effekte",
+            "Die Massendifferenz zwischen einem Atom und seinem Ion nach Ionisierung",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Massendefekt beschreibt die Tatsache, dass die Masse eines gebundenen Atomkerns etwas geringer ist als die Summe der Massen der einzelnen (freien) Nukleonen. Diese Massendifferenz Δm entspricht nach Einstein (E = Δm·c²) der Bindungsenergie des Kerns — also der Energie, die nötig wäre, um den Kern in seine einzelnen Nukleonen zu zerlegen. Beispiel: Helium-4-Kern: Δm = 0,0304 u = 28,3 MeV. Die Bindungsenergie pro Nukleon erreicht ihr Maximum bei ⁵⁶Fe (8,79 MeV/Nukleon), weshalb sowohl Kernfusion (leichte Kerne) als auch Kernspaltung (schwere Kerne) Energie freisetzen.",
+          hints: [
+            "Bindungsenergie = Energie, die den Kern zusammenhält. Woher kommt diese Energie laut E = mc²?",
+            "Die Masse geht 'verloren', weil sie als Bindungsenergie im Kern gespeichert ist.",
+          ],
+          tags: ["massendefekt", "bindungsenergie", "einstein"],
+          difficulty: 2,
+        },
+        {
+          question: "Welche Strahlung wird beim radioaktiven Zerfall NICHT freigesetzt?",
+          options: [
+            "Alpha-Strahlung",
+            "Beta-Strahlung",
+            "Gamma-Strahlung",
+            "Infrarotstrahlung",
+            "Neutronenstrahlung (bei Kernspaltung)",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Beim radioaktiven Zerfall werden Alpha- (⁴He-Kerne), Beta- (Elektronen/Positronen) und Gamma-Strahlung (hochenergetische Photonen) freigesetzt — alle drei sind ionisierend. Bei Kernspaltung werden zusätzlich Neutronen emittiert. Infrarotstrahlung hingegen ist elektromagnetische Strahlung niedriger Energie (Wärmestrahlung), sie ist NICHT ionisierend und entsteht nicht beim Kernzerfall. Dies ist eine klassische MedAT-Falle.",
+          hints: [
+            "Ionisierende Strahlung: Alpha, Beta, Gamma, Neutronenstrahlung. Was passt nicht dazu?",
+            "Infrarotstrahlung ist Wärmestrahlung — viel zu wenig Energie, um Atome zu ionisieren.",
+          ],
+          tags: ["ionisierende-strahlung", "infrarot", "zerfallsarten"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Die effektive Halbwertszeit von ¹³¹I in der Schilddrüse beträgt ca. 7,3 Tage (physikalische HWZ: 8,02 Tage). Wie groß ist die biologische Halbwertszeit der Schilddrüse für Jod?",
+          options: ["ca. 15 Tage", "ca. 40 Tage", "ca. 80 Tage", "ca. 120 Tage", "ca. 200 Tage"],
+          correctIndex: 2,
+          explanation:
+            "Die effektive Halbwertszeit ist: 1/T_eff = 1/T_phys + 1/T_bio. Umgestellt: 1/T_bio = 1/T_eff − 1/T_phys = 1/7,3 − 1/8,02 = 0,1370 − 0,1247 = 0,0123 d⁻¹. T_bio = 1/0,0123 ≈ 81 Tage ≈ 80 Tage. Die biologische Halbwertszeit beschreibt, wie schnell der Körper Jod auf natürlichem Weg (über Urin und Fäzes) ausscheidet. Sie ist mit ~80 Tagen deutlich länger als die physikalische HWZ, daher wird T_eff hauptsächlich durch T_phys bestimmt.",
+          hints: [
+            "Formel: 1/T_eff = 1/T_phys + 1/T_bio. Stelle nach T_bio um.",
+            "T_eff ist immer kürzer als die kürzere der beiden Einzel-HWZ. Hier: T_eff ≈ T_phys → T_bio muss viel größer sein.",
+          ],
+          tags: ["effektive-halbwertszeit", "jod-131", "schilddrüse"],
+          difficulty: 3,
+        },
       ],
     },
 
@@ -635,11 +950,15 @@ Lebende Organismen: ¹⁴C/¹²C ≈ 1,2 × 10⁻¹². T½(¹⁴C) = 5730 Jahre.
         "Halbwertsschichtdicke",
         "Photoelektrischer Effekt",
         "Compton-Effekt",
+        "Paarbildung",
         "DNA-Doppelstrangbruch",
         "Stochastische Effekte",
         "Deterministische Effekte",
         "ALARA-Prinzip",
         "Bergonié-Tribondeau",
+        "Computertomographie CT",
+        "Hounsfield-Einheiten",
+        "Sauerstoffeffekt OER",
       ],
       content: `## Einleitung
 
@@ -647,7 +966,8 @@ Warum erscheinen Knochen im Röntgenbild weiß, Lunge aber fast schwarz? Calcium
 
 **In diesem Kapitel lernst du:**
 - wie Bremsstrahlung und charakteristische Strahlung in der Röntgenröhre entstehen
-- warum Röntgenstrahlung exponentiell im Gewebe geschwächt wird
+- wie die Computertomographie aus Röntgenprojektionen Schnittbilder berechnet
+- warum Röntgenstrahlung exponentiell im Gewebe geschwächt wird (Schwächungsgesetz)
 - wie direkte und indirekte Strahlenwirkung DNA-Schäden verursachen
 - was deterministische von stochastischen Strahlenschäden unterscheidet
 - warum das ALARA-Prinzip Abstand, Zeit und Abschirmung kombiniert
@@ -672,6 +992,31 @@ In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert u
 
 > **Merke:** Bremsstrahlung = kontinuierliches Spektrum (abhängig von Beschleunigungsspannung). Charakteristische Strahlung = diskrete Linien (abhängig vom Anodenmaterial). Kurzregel: λ_min [pm] ≈ 1240/U [kV].
 
+**Effizienz der Röntgenerzeugung:** Nur ca. 1 % der kinetischen Energie der Elektronen wird in Röntgenstrahlung umgewandelt — die restlichen 99 % werden als Wärme an die Anode abgegeben. Deshalb benötigt die Anode intensive Kühlung (Drehanode mit ≈ 3000 U/min, Ölbad).
+
+**Steuerung der Bildqualität:**
+- **Röhrenspannung U (kV):** Bestimmt die maximale Photonenenergie und damit die Durchdringungsfähigkeit (Härte). Höhere Spannung → härtere Strahlung → weniger Kontrast, aber geringere Dosis.
+- **Röhrenstrom I (mA):** Bestimmt die Anzahl der Elektronen pro Zeiteinheit und damit die Strahlungsintensität (Menge). Höherer Strom → mehr Photonen → besseres Signal-Rausch-Verhältnis, aber höhere Dosis.
+- **Filterung (Al, Cu):** Absorbiert niederenergetische ("weiche") Photonen, die nicht zum Bild beitragen, aber die Hautdosis erhöhen → Aufhärtung des Strahls.
+
+## Computertomographie (CT) — Prinzip
+
+Die CT nutzt Röntgenstrahlung, um Querschnittsbilder (Schnittbilder) des Körpers zu erzeugen. Eine Röntgenröhre rotiert um den Patienten und sendet Strahlung durch den Körper. Gegenüberliegende Detektoren messen die transmittierte Intensität aus vielen Winkeln. Aus diesen Projektionsdaten berechnet ein Computer mittels **Rückprojektion** oder **iterativer Rekonstruktion** ein Querschnittsbild.
+
+**CT-Zahlen (Hounsfield-Einheiten, HU):** Jedes Pixel erhält einen Wert proportional zum linearen Schwächungskoeffizienten μ des Gewebes:
+> HU = 1000 × (μ_Gewebe − μ_Wasser) / μ_Wasser
+
+| Gewebe | HU-Wert |
+|--------|---------|
+| Luft | −1000 |
+| Fett | −100 bis −50 |
+| Wasser | 0 |
+| Weichgewebe | +20 bis +80 |
+| Knochen | +200 bis +3000 |
+| Metall | > +3000 |
+
+> **Merke:** CT = viele Röntgenaufnahmen aus verschiedenen Winkeln → computerberechnetes Schnittbild. HU-Skala: Wasser = 0, Luft = −1000, Knochen = +200 bis +3000. Typische Dosis: CT Abdomen ~10 mSv.
+
 ## Röntgenabsorption im Gewebe
 
 Röntgenphotonen werden durch drei Wechselwirkungen geschwächt:
@@ -695,10 +1040,14 @@ Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, di
 
 **Indirekte Wirkung (dominant, ≈70 %):** Strahlung ionisiert Wasser → Bildung freier Radikale (OH•, H•, e_aq). Diese reaktiven Spezies greifen dann die DNA an.
 
-**DNA-Schäden:**
-- Einzelstrangbrüche: oft reparierbar (Matrize vorhanden)
-- Doppelstrangbrüche: schwer zu reparieren, führen zu Chromosomenaberrationen, Mutation oder Zelltod
-- Bei hohen Dosen: Zelluntergang, bei mittleren: genomische Instabilität
+**DNA-Schäden nach Schweregrad:**
+- **Basenmodifikationen:** Oxidierte oder desaminierte Basen; meist korrekt reparierbar durch Basenexzisionsreparatur (BER)
+- **Einzelstrangbrüche (SSB):** Ein Strang unterbrochen; Gegenstrang als Matrize → fehlerfreie Reparatur möglich
+- **Doppelstrangbrüche (DSB):** Beide Stränge gebrochen — **kritischste Läsion!** Reparatur durch homologe Rekombination (HR, fehlerfrei, nur in S/G2-Phase) oder nicht-homologe Endverknüpfung (NHEJ, fehleranfällig → Deletionen, Translokationen)
+- **DNA-Protein-Crosslinks und Clusterläsionen:** Besonders bei Strahlung mit hohem LET (α-Strahlung) → mehrere Schäden auf engem Raum → kaum reparierbar
+- Bei hohen Dosen: Zelluntergang (Apoptose, Nekrose), bei mittleren: genomische Instabilität → Karzinogenese
+
+**Sauerstoffeffekt:** Zellen sind bei Anwesenheit von Sauerstoff ca. 2,5–3× strahlenempfindlicher als unter Hypoxie. Der OER (Oxygen Enhancement Ratio) beträgt für Photonen ~2,5–3,0. Grund: O₂ fixiert strahleninduzierte Radikale (macht Schäden irreversibel). Klinische Konsequenz: Hypoxische Tumoranteile sind strahlenresistenter → Fraktionierung der Strahlentherapie (Reoxygenierung zwischen den Fraktionen).
 
 **Strahlenempfindlichkeit** (Bergonié-Tribondeau-Gesetz, 1906): Zellen sind umso strahlenempfindlicher, je höher ihre Mitoserate und je geringer ihre Differenzierung. Reihenfolge (abnehmend):
 
@@ -710,9 +1059,27 @@ Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, di
 | Niedrig | Muskelzellen | > 10 Gy |
 | Sehr niedrig | Nervenzellen | > 20 Gy |
 
-**Strahlenwirkungstypen:**
-- **Stochastische Effekte:** kein Schwellenwert, Wahrscheinlichkeit steigt linear mit Dosis; Beispiele: Krebsinduktion, Erbgutveränderungen.
-- **Deterministische (nicht-stochastische) Effekte:** treten erst oberhalb einer Schwellendosis auf; Schwere nimmt mit der Dosis zu; Beispiele: Strahlenkater, Epilation, Strahlenkatarrh, akutes Strahlensyndrom.
+**Strahlenwirkungstypen — ein fundamentaler Unterschied:**
+
+**Stochastische Effekte:**
+- **Kein Schwellenwert** — jede noch so kleine Dosis erhöht das Risiko (lineares Modell ohne Schwelle, LNT)
+- **Wahrscheinlichkeit** steigt mit der Dosis, nicht die Schwere
+- Beispiele: Krebsinduktion (Latenzzeit: Jahre bis Jahrzehnte), Erbgutveränderungen (Keimzellmutationen)
+- Risikoabschätzung: ca. 5 % pro Sievert zusätzliches Lebenszeitkrebsrisiko (ICRP-Schätzung)
+
+**Deterministische (nicht-stochastische) Effekte:**
+- **Schwellendosis** muss überschritten werden, bevor der Effekt auftritt
+- Über der Schwelle: **Schwere** nimmt mit der Dosis zu
+- Beispiele: Hautrötung (Erythem, ab ~2 Gy), Epilation (ab ~3 Gy), Katarakt (Augenlinse, ab ~0,5 Gy), Sterilität (Gonaden, ab ~2–6 Gy), akutes Strahlensyndrom (ab ~1 Gy Ganzkörper)
+
+| Eigenschaft | Stochastisch | Deterministisch |
+|------------|-------------|-----------------|
+| Schwellendosis | Keine | Ja (organtypisch) |
+| Dosis-Wirkungs-Beziehung | Wahrscheinlichkeit ↑ | Schwere ↑ |
+| Latenzzeit | Jahre–Jahrzehnte | Stunden–Wochen |
+| Beispiele | Krebs, Mutation | Erythem, ARS, Katarakt |
+
+> **Merke:** Stochastisch = kein Schwellenwert, Wahrscheinlichkeit steigt (Krebs!). Deterministisch = Schwellendosis, Schwere steigt (ARS, Epilation). Die Unterscheidung ist eine MedAT-Klassikerfrage!
 
 ## Strahlenschutzgrundsätze
 
@@ -721,7 +1088,12 @@ Die drei ALARA-Prinzipien (As Low As Reasonably Achievable):
 2. **Zeit:** Dosis D = Dosisleistung Ḋ × Zeit t – Expositionszeit minimieren
 3. **Abschirmung:** geeignetes Material zwischen Quelle und Person (Blei, Beton, Wasser)
 
-Zusätzlich gilt das **Rechtfertigungsprinzip** (jede Strahlenexposition muss einen Nutzen haben, der das Risiko überwiegt) und das **Dosislimit** (Berufsexposition ≤ 20 mSv/Jahr, Bevölkerung ≤ 1 mSv/Jahr).
+Zusätzlich gelten die **drei Grundsätze des Strahlenschutzes** (ICRP):
+1. **Rechtfertigung:** Jede Strahlenexposition muss einen Nutzen haben, der das Risiko überwiegt. Beispiel: Ein CT Abdomen bei unklarem akutem Abdomen ist gerechtfertigt; ein CT als Routine-Check-up ohne Indikation nicht.
+2. **Optimierung (ALARA):** Die Exposition soll so niedrig wie vernünftigerweise erreichbar gehalten werden.
+3. **Dosislimitation:** Grenzwerte dürfen nicht überschritten werden (Berufsexposition ≤ 20 mSv/Jahr, Bevölkerung ≤ 1 mSv/Jahr zusätzlich zur natürlichen Strahlung).
+
+> **Merke:** Drei ICRP-Grundsätze: Rechtfertigung (Indikation prüfen!), Optimierung (ALARA), Dosislimitation. In Österreich geregelt durch das Strahlenschutzgesetz (StrSchG) und die Strahlenschutzverordnung (StrSchV).
 
 Typische effektive Dosen:
 
@@ -745,6 +1117,20 @@ Beschleunigungsspannung U = 80 kV: E_max = eU = 80 keV = 80 000 × 1,602 × 10�
 **Beispiel 3 — Abstandsquadratgesetz:**
 Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/9 = 1,1 μSv/h. Verdopplung des Abstands reduziert die Dosis auf 1/4. Wichtig im Strahlenschutz: Den Abstand zu einer Quelle zu verdoppeln ist eine einfache und effektive Schutzmaßnahme.
 
+**Beispiel 4 — CT-Dosis vs. Röntgen Thorax:**
+Ein CT Abdomen hat eine effektive Dosis von ca. 10 mSv. Ein Röntgen Thorax hat ca. 0,02 mSv. Wie viele Thorax-Röntgenaufnahmen entsprechen einem CT Abdomen? 10 mSv / 0,02 mSv = **500 Thorax-Röntgenaufnahmen**. Das bedeutet: Ein CT Abdomen ist dosismäßig erheblich — die Indikation muss gerechtfertigt sein (Rechtfertigungsprinzip).
+
+**Beispiel 5 — Compton-Effekt (Wellenlängenverschiebung):**
+Ein Röntgenphoton (E = 100 keV, λ = 0,0124 nm) wird an einem Elektron unter θ = 90° gestreut.
+Δλ = (h/m_e·c)(1−cosθ) = 0,00243 nm × (1−cos 90°) = 0,00243 nm × (1−0) = 0,00243 nm.
+λ' = λ + Δλ = 0,0124 + 0,0024 = 0,0148 nm. E' = hc/λ' = 1240 eV·nm / 0,0148 nm = 83,8 keV.
+Energieübertrag aufs Elektron: 100 − 83,8 = 16,2 keV. Bei 180°-Streuung: Δλ = 2 × 0,00243 = 0,00486 nm (maximal).
+
+**Beispiel 6 — Hounsfield-Einheiten (CT):**
+Fettgewebe hat μ = 0,193 cm⁻¹; Wasser hat μ = 0,206 cm⁻¹.
+HU = 1000 × (0,193 − 0,206) / 0,206 = 1000 × (−0,013/0,206) = 1000 × (−0,063) = **−63 HU**.
+Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen (μ ≈ 0,528 cm⁻¹): HU = 1000 × (0,528 − 0,206)/0,206 = 1000 × 1,563 = **+1563 HU**.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
@@ -754,61 +1140,86 @@ Dosisleistung in 1 m Abstand: 10 μSv/h. In 3 m Abstand: D = 10 × (1/3)² = 10/
 - "Warum erscheinen Knochen hell im Röntgenbild?" → höheres μ durch Ca (Z=20) → mehr Absorption → weniger Photonen erreichen Detektor
 - "Unterschied stochastisch vs. deterministisch?" → stochastisch: kein Schwellenwert, Krebsrisiko ∝ Dosis; deterministisch: Schwellendosis, Schwere wächst mit Dosis
 - "ALARA-Prinzip?" → Abstand ↑ (1/r²), Zeit ↓, Abschirmung ↑
+- "CT: Was bedeuten Hounsfield-Einheiten?" → HU = 1000 × (μ − μ_Wasser)/μ_Wasser; Wasser = 0, Luft = −1000, Knochen > +200
+- "Was ist der Sauerstoffeffekt?" → Zellen mit O₂ sind 2,5–3× strahlenempfindlicher (OER); O₂ fixiert Radikalschäden
+
+**Prüfungsrelevante Zahlen:**
+- λ_min [pm] ≈ 1240/U [kV]; bei 100 kV → 12,4 pm
+- HVL Blei bei 100 keV ≈ 0,12 mm; Bleischürze 0,25–0,5 mm
+- CT Abdomen ≈ 10 mSv ≈ 500 Thorax-Röntgen; natürliche Strahlung ≈ 2,1 mSv/a
+- Deterministische Schwellendosen: Erythem ~2 Gy; Epilation ~3 Gy; Katarakt ~0,5 Gy; ARS ~1 Gy
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - Bremsstrahlung (kontinuierlich) ≠ charakteristische Strahlung (Linienspektrum, elementspezifisch)
 - Stochastisch (kein Schwellenwert, Krebsinduktion) ≠ deterministisch (Schwellendosis, Strahlenkater)
 - Halbwertsschichtdicke HVL = ln2/μ — analog zur Halbwertszeit, aber für Röntgenabschirmung
 - Berufsgrenzwert: ≤ 20 mSv/Jahr; Bevölkerungsgrenzwert: ≤ 1 mSv/Jahr
+- **Photoeffekt** (∝ Z⁴, niedrige Energien, hoher Kontrast) ≠ **Compton** (mittlere Energien, weniger Kontrast) ≠ **Paarbildung** (> 1,02 MeV)
+- **Indirekte** Strahlenwirkung (OH•-Radikale, ~70 %) überwiegt die **direkte** Wirkung (~30 %)
+- Sauerstoffeffekt: Hypoxische Tumorzellen sind **strahlenresistenter** → Fraktionierung ermöglicht Reoxygenierung
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
 - **Röntgenröhre**: Elektronen werden mit U beschleunigt → Wolfram-Anode; λ_min = hc/(eU) ≈ 1240/U[kV] pm
 - **Bremsstrahlung**: kontinuierliches Spektrum; **charakteristische Strahlung**: diskrete Linien (elementspezifisch)
+- **CT**: Röntgenprojektion aus vielen Winkeln → Schnittbild; HU-Skala: Wasser = 0, Luft = −1000, Knochen > +200
 - **Schwächungsgesetz**: I = I₀·e^(−μx); HVL = ln2/μ; Blei 0,12 mm HVL bei 100 keV
-- **Deterministische Effekte**: Schwellendosis (z.B. Strahlenkater ab 1 Gy, Knochenmark ab 3–5 Gy)
-- **Stochastische Effekte**: kein Schwellenwert; Karzinogenese, Mutagenese; Risiko ∝ Dosis
-- **Bergonié-Tribondeau**: strahlensensitivste Zellen = schnell teilend, undifferenziert (Keimzellen, Knochen mark, Darmepithel)
-- **ALARA**: Abstand↑, Zeit↓, Abschirmung↑; Abstandsquadratgesetz: Dosis ∝ 1/r²`,
+- **Photoeffekt** (∝ Z⁴, < 100 keV, Kontrast), **Compton** (100 keV–10 MeV), **Paarbildung** (> 1,02 MeV)
+- **Deterministische Effekte**: Schwellendosis (Erythem ~2 Gy, Katarakt ~0,5 Gy, ARS ~1 Gy)
+- **Stochastische Effekte**: kein Schwellenwert; Karzinogenese, Mutagenese; Risiko ∝ Dosis; ~5 %/Sv Krebsrisiko
+- **Bergonié-Tribondeau**: strahlensensitivste Zellen = schnell teilend, undifferenziert (Lymphozyten > Knochenmark > Darmepithel)
+- **ALARA**: Abstand↑ (1/r²), Zeit↓, Abschirmung↑; Grenzwerte: Beruf ≤ 20 mSv/a, Bevölkerung ≤ 1 mSv/a
+- **Sauerstoffeffekt**: OER ~2,5–3; hypoxische Tumorzellen strahlenresistenter → Fraktionierung`,
       lernziele: [
         "Die Entstehung von Bremsstrahlung und charakteristischer Strahlung in der Röntgenröhre erklären.",
         "Das Schwächungsgesetz I = I₀·e^(−μx) und die Halbwertsschichtdicke anwenden.",
+        "Das Prinzip der Computertomographie und Hounsfield-Einheiten erklären.",
+        "Die drei Wechselwirkungsmechanismen (Photoeffekt, Compton, Paarbildung) nach Energiebereich unterscheiden.",
         "Die direkte und indirekte Strahlenwirkung auf DNA unterscheiden und DNA-Schadenstypen nennen.",
         "Stochastische und deterministische Strahleneffekte definieren und das Schwellenwertkonzept erklären.",
-        "Die Strahlenschutzgrundsätze (Abstand, Zeit, Abschirmung) anwenden und typische Strahlendosen kennen.",
+        "Die Strahlenschutzgrundsätze (Rechtfertigung, ALARA, Dosislimitation) anwenden und typische Strahlendosen kennen.",
       ],
       sections: [
         {
           heading: "Röntgenröhre: Brems- und charakteristische Strahlung",
-          text: "Elektronen werden auf Wolfram-Anode beschleunigt (U = 30–150 kV). Bremsstrahlung: kontinuierliches Spektrum, E_max = eU. Charakteristische Strahlung: diskrete Linien bei spezifischen Energien des Anodenmaterials. λ_min = hc/(eU). Das resultierende Spektrum ist die Überlagerung beider Anteile. Je höher die Spannung, desto kürzer λ_min (härtere, durchdringendere Strahlung).",
+          text: "Elektronen werden auf Wolfram-Anode beschleunigt (U = 30–150 kV). Bremsstrahlung: kontinuierliches Spektrum, E_max = eU. Charakteristische Strahlung: diskrete Linien bei spezifischen Energien des Anodenmaterials. λ_min = hc/(eU). Kurzregel: λ_min [pm] ≈ 1240/U [kV]. Nur ~1 % der Energie wird zu Röntgenstrahlung — Rest = Wärme (Drehanode nötig). Steuerung: kV = Härte (Durchdringung), mA = Menge (Intensität).",
           merksatz:
-            "Röntgenröhre: Bremsstrahlung (kontinuierlich) + charakteristische Strahlung (Linien); E_max = eU; λ_min = hc/(eU).",
+            "Röntgenröhre: Bremsstrahlung (kontinuierlich) + charakteristische Strahlung (Linien); E_max = eU; λ_min = hc/(eU) ≈ 1240/U[kV] pm.",
         },
         {
-          heading: "Schwächungsgesetz und Gewebskontrast",
-          text: "I = I₀·e^(−μx): Je größer μ (dichtes Material, hohe Ordnungszahl), desto stärker die Abschwächung. Knochen (Ca): μ groß → erscheint hell im Röntgenbild. Lunge (Luft): μ klein → erscheint dunkel. Kontrast im Röntgenbild basiert auf Unterschieden in μ zwischen verschiedenen Geweben. Blei (Z=82) hat das höchste μ und ist bestes Abschirmmaterial. Halbwertsschichtdicke HVL = ln2/μ.",
+          heading: "Computertomographie und Gewebskontrast",
+          text: "CT: Röntgenröhre rotiert um Patient, Detektoren messen Transmission aus vielen Winkeln → Rückprojektion → Schnittbild. Hounsfield-Einheiten: HU = 1000 × (μ−μ_Wasser)/μ_Wasser. Wasser = 0, Luft = −1000, Knochen = +200 bis +3000. I = I₀·e^(−μx): Je größer μ (hohes Z, hohe Dichte), desto stärker die Schwächung. Knochen (Ca, Z=20): hell; Lunge: dunkel. Blei (Z=82): bestes Abschirmmaterial. HVL = ln2/μ.",
           merksatz:
-            "I = I₀·e^(−μx); großes μ = starke Schwächung (Knochen/Blei hell im Röntgen). HVL = ln2/μ.",
+            "CT: HU = 1000×(μ−μ_H₂O)/μ_H₂O; Wasser=0, Luft=−1000, Knochen>+200. I = I₀·e^(−μx); HVL = ln2/μ.",
+        },
+        {
+          heading: "Wechselwirkungen: Photoeffekt, Compton, Paarbildung",
+          text: "Photoeffekt: Photon überträgt gesamte Energie auf Hüllenelektron (< 100 keV, ∝ Z⁴ → hoher Kontrast). Compton-Effekt: Photon wird an quasi-freiem Elektron gestreut, gibt Teil der Energie ab (100 keV–10 MeV, dominiert bei CT). Paarbildung: Photon erzeugt e⁻/e⁺-Paar im Kernfeld (> 1,02 MeV, relevant in Strahlentherapie). In der diagnostischen Bildgebung dominieren Photoeffekt und Compton-Streuung.",
+          merksatz:
+            "Photoeffekt (∝ Z⁴, Kontrast), Compton (mittlere E, CT), Paarbildung (> 1,02 MeV, Therapie).",
         },
         {
           heading: "Biologische Wirkung und Strahlenschutz",
-          text: "Direkte Wirkung: Strahlung trifft direkt DNA → Ionisation. Indirekte Wirkung (70 %): Radiolyse von Wasser → OH•-Radikale → DNA-Schäden. Doppelstrangbrüche sind die kritischsten Läsionen. Stochastische Effekte (Krebs, Mutation): kein Schwellenwert. Deterministische Effekte (Strahlenkater, Knochenmarksdepression): Schwellendosis. Strahlenschutz: ALARA – Abstand (1/r²), Zeit minimieren, Abschirmung.",
+          text: "Direkte Wirkung (~30 %): Strahlung trifft direkt DNA → SSB, DSB. Indirekte Wirkung (~70 %): H₂O → OH•-Radikale → DNA-Schäden. DSB = kritischste Läsion (fehlerhaft repariert → Mutation/Krebs). Sauerstoffeffekt: OER ~2,5–3,0 (O₂ fixiert Radikale). Stochastische Effekte: kein Schwellenwert, Krebs (~5 %/Sv). Deterministische Effekte: Schwellendosis (Erythem ~2 Gy, ARS ~1 Gy). ALARA + Rechtfertigung + Dosislimitation (20 mSv/a beruflich, 1 mSv/a Bevölkerung).",
           merksatz:
-            "Indirekte Wirkung dominiert (70 %): H₂O + Strahlung → OH• → DNA-Schäden. Doppelstrangbrüche = kritischste Läsion.",
+            "Indirekte Wirkung dominiert (70 %): OH•-Radikale → DSB. Stochastisch: kein Schwellenwert (Krebs). Deterministisch: Schwellendosis (ARS).",
         },
       ],
       merksätze: [
         "Röntgenröhre: Bremsstrahlung (kontinuierlich) + charakteristische Strahlung (elementspezifische Linien).",
-        "E_max (Photon) = eU; λ_min = hc/(eU) – höhere Spannung = kurzwelligere (härtere) Strahlung.",
+        "E_max (Photon) = eU; λ_min = hc/(eU) ≈ 1240/U[kV] pm – höhere Spannung = härtere Strahlung.",
+        "CT: HU-Skala mit Wasser = 0, Luft = −1000, Knochen > +200; Dosis: CT Abdomen ~10 mSv.",
         "Schwächungsgesetz: I = I₀·e^(−μx); HVL = Halbwertsschichtdicke = ln2/μ.",
+        "Photoeffekt ∝ Z⁴ (Bildkontrast); Compton dominiert bei CT-Energien; Paarbildung > 1,02 MeV.",
         "Knochen (hohe Dichte, Ca): großes μ → hell im Röntgenbild. Lunge (Luft): kleines μ → dunkel.",
-        "Direkte Strahlenwirkung: Ionisation von DNA. Indirekte Wirkung (≈70 %): OH•-Radikale aus Radiolyse von Wasser.",
-        "Doppelstrangbrüche der DNA: schwer reparierbar → Mutation, Chromosomenaberration oder Zelltod.",
+        "Direkte Strahlenwirkung (~30 %): Ionisation von DNA. Indirekte Wirkung (~70 %): OH•-Radikale aus H₂O.",
+        "Doppelstrangbrüche (DSB): schwer reparierbar → Mutation, Chromosomenaberration oder Zelltod.",
+        "Sauerstoffeffekt: OER ~2,5–3; hypoxische Tumorzellen sind strahlenresistenter → Fraktionierung.",
         "Bergonié-Tribondeau: Teilende Zellen strahlenempfindlicher. Lymphozyten > Knochenmark > Darmepithel > Muskel > Nerv.",
-        "Stochastische Effekte: kein Schwellenwert, Beispiel Krebsentstehung (lineare Dosis-Wirkungs-Beziehung).",
-        "Deterministische Effekte: Schwellendosis, Beispiel akutes Strahlensyndrom (Schwere wächst mit Dosis).",
-        "ALARA: Abstand (I ∝ 1/r²), Zeit (D = Ḋ·t), Abschirmung. CT Abdomen ≈ 10 mSv; natürliche Strahlung ≈ 2 mSv/Jahr.",
+        "Stochastische Effekte: kein Schwellenwert, ~5 %/Sv Krebsrisiko (lineare Dosis-Wirkungs-Beziehung).",
+        "Deterministische Effekte: Schwellendosis (Erythem ~2 Gy, Katarakt ~0,5 Gy, ARS ~1 Gy).",
+        "ALARA: Abstand (I ∝ 1/r²), Zeit (D = Ḋ·t), Abschirmung. Grenzwerte: 20 mSv/a (Beruf), 1 mSv/a (Bevölkerung).",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -1190,6 +1601,399 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
           ],
           tags: ["pet", "koinzidenzdetektion", "lor"],
           difficulty: 2,
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // UK ph-7-05: Strahlenschutz und klinische Strahlenanwendungen
+    // ─────────────────────────────────────────────────────────────────────────
+    {
+      id: "ph-7-05",
+      diagram: "radioactive-decay",
+      title: "Strahlenschutz und klinische Strahlenanwendungen",
+      stichworte: [
+        "ALARA-Prinzip",
+        "Abstandsquadratgesetz",
+        "Abschirmung",
+        "Strahlenschutzverordnung",
+        "Dosisgrenzwerte",
+        "Strahlentherapie",
+        "Brachytherapie",
+        "Teletherapie",
+        "Linearbeschleuniger",
+        "Nuklearmedizin Übersicht",
+        "Strahlenunfall",
+        "Akutes Strahlensyndrom",
+        "Radon Österreich",
+      ],
+      content: `## Einleitung
+
+Bisher haben wir die physikalischen Grundlagen der Strahlung kennengelernt — Zerfallsarten, Dosimetrie und Bildgebung. Nun wenden wir dieses Wissen auf die klinische Praxis an: Wie schützen wir Patienten und Personal vor unnötiger Strahlung, und wie nutzen wir ionisierende Strahlung gezielt zur Therapie?
+
+**In diesem Kapitel lernst du:**
+- wie das ALARA-Prinzip (Abstand, Abschirmung, Zeit) den Strahlenschutz im klinischen Alltag leitet
+- welche gesetzlichen Dosisgrenzwerte in Österreich gelten
+- wie Strahlentherapie (Teletherapie, Brachytherapie) Tumore gezielt bestrahlt
+- welche nuklearmedizinischen Verfahren in der Diagnostik und Therapie eingesetzt werden
+- was beim akuten Strahlensyndrom passiert und welche Organe zuerst betroffen sind
+
+---
+
+{{DIAGRAM:radioactive-decay}}
+
+{{DIAGRAM:em-spectrum}}
+
+## Strahlenschutz — die drei Grundprinzipien
+
+Der Strahlenschutz folgt international dem **ALARA-Prinzip** (As Low As Reasonably Achievable) und beruht auf drei Säulen:
+
+### 1. Abstand — Das Abstandsquadratgesetz
+
+Die Dosisleistung einer Punktquelle nimmt mit dem **Quadrat des Abstands** ab:
+
+> **Ḋ(r) = Ḋ₀ / r²**
+
+Verdopplung des Abstands → Dosis sinkt auf **¼**. Verdreifachung → Dosis auf **1/9**. Dies ist die effektivste und einfachste Strahlenschutzmaßnahme!
+
+**Rechenbeispiel:** In 1 m Abstand von einer ⁶⁰Co-Quelle beträgt die Dosisleistung 2 mSv/h. In 5 m Abstand: Ḋ = 2 × (1/5)² = 2 × 1/25 = 0,08 mSv/h — eine Reduktion um Faktor 25.
+
+> **Merke:** Abstandsquadratgesetz: I ∝ 1/r². Verdopplung des Abstands → ¼ der Dosis. Dies ist die wichtigste und einfachste Schutzmaßnahme. Gilt exakt nur für Punktquellen im Vakuum, ist aber eine gute Näherung.
+
+### 2. Abschirmung — Material zwischen Quelle und Person
+
+Verschiedene Strahlenarten erfordern unterschiedliche Abschirmungen:
+
+| Strahlenart | Effektive Abschirmung | Beispiel |
+|-------------|----------------------|----------|
+| α-Strahlung | Papier, Haut, Luft (cm) | Keine externe Abschirmung nötig |
+| β-Strahlung | Aluminium (mm), Plexiglas | Laborbrillen, Plexiglasschirme |
+| γ-Strahlung | Blei (cm), Beton (dm) | Bleischürzen, Betonwände |
+| Röntgenstrahlung | Blei (0,25–0,5 mm) | Bleischürzen, Schilddrüsenschutz |
+| Neutronenstrahlung | Wasser, Paraffin, Polyethylen | Wassertanks, PE-Blöcke |
+
+**Wichtig bei β-Abschirmung:** Hochenergetische β-Strahlung erzeugt beim Auftreffen auf schwere Kerne **Bremsstrahlung** (sekundäre Röntgenstrahlung). Deshalb: β-Strahler zuerst mit leichtem Material (Plexiglas, Aluminium) abschirmen, dann ggf. Blei für die Bremsstrahlung. Niemals direkt Blei für β-Abschirmung verwenden!
+
+**Halbwertsschichtdicke (HVL):** Die Materialdicke, die die Intensität auf die Hälfte reduziert: HVL = ln 2/μ. Nach n HVL-Schichten: I = I₀ · (½)ⁿ — analog zur Halbwertszeit!
+
+### 3. Zeit — Expositionsdauer minimieren
+
+> **D = Ḋ × t**
+
+Die Gesamtdosis ist proportional zur Expositionszeit. Schnelles Arbeiten, gute Vorbereitung und klare Handlungsabläufe reduzieren die Strahlenbelastung. In der Nuklearmedizin: Patienten erst injizieren, dann erst in den Scanner → Wartezeit nutzen, um Abstand zu halten.
+
+> **Merke:** ALARA = Abstand ↑ (1/r²), Abschirmung ↑ (Blei/Beton), Zeit ↓ (D = Ḋ·t). Merkhilfe: "AAZ" — Abstand, Abschirmung, Zeit.
+
+---
+
+## Gesetzliche Dosisgrenzwerte (Österreich / EU)
+
+Die österreichische **Strahlenschutzverordnung** (StrSchV) legt Grenzwerte für die effektive Dosis fest:
+
+| Personengruppe | Grenzwert effektive Dosis | Details |
+|---------------|--------------------------|---------|
+| Beruflich strahlenexponiert (Kat. A) | ≤ 20 mSv/Jahr | Ärzte, Radiologen, Nuklearmediziner |
+| Beruflich strahlenexponiert (Kat. B) | ≤ 6 mSv/Jahr | Sonstiges Krankenhauspersonal |
+| Allgemeinbevölkerung | ≤ 1 mSv/Jahr | Zusätzlich zur natürlichen Strahlung |
+| Schwangere (ab Meldung) | ≤ 1 mSv für restliche Schwangerschaft | Strenger Schutz des Embryos |
+| Augenlinse (beruflich) | ≤ 20 mSv/Jahr | Schutz vor Strahlenkatarakt |
+
+**Natürliche Strahlenbelastung in Österreich:** ca. 2,1 mSv/Jahr (kosmische Strahlung ~0,3; terrestrische ~0,5; Radon-Inhalation ~1,0; interne Strahlung ~0,3). Medizinische Diagnostik addiert durchschnittlich weitere ~1,5 mSv/Jahr.
+
+**Dosisvergleiche für MedAT:**
+
+| Exposition | Effektive Dosis | Vergleich |
+|-----------|----------------|-----------|
+| Röntgen Thorax (2 Ebenen) | 0,02–0,1 mSv | 1–5 Tage natürliche Strahlung |
+| Mammographie | 0,4 mSv | 2 Monate |
+| CT Schädel | 2 mSv | 1 Jahr |
+| CT Thorax | 7 mSv | 3 Jahre |
+| CT Abdomen | 10 mSv | 4–5 Jahre |
+| PET/CT (¹⁸F-FDG) | 10–25 mSv | 5–12 Jahre |
+| Koronarangiographie | 5–15 mSv | 2–7 Jahre |
+| Transatlantikflug | 0,05 mSv | 2–3 Tage |
+
+> **Merke:** Beruflich: ≤ 20 mSv/a; Bevölkerung: ≤ 1 mSv/a. Natürliche Strahlung in Österreich: ~2,1 mSv/a (davon ~1 mSv Radon). CT Abdomen: ~10 mSv = 5 Jahre natürliche Strahlung!
+
+---
+
+## Strahlentherapie — Ionisierende Strahlung gegen Krebs
+
+Die Strahlentherapie nutzt die DNA-schädigende Wirkung ionisierender Strahlung gezielt zur Tumorzerstörung. Ziel: maximale Dosis im Tumor, minimale Dosis im gesunden Gewebe.
+
+### Teletherapie (externe Bestrahlung)
+
+Die Strahlenquelle befindet sich **außerhalb** des Körpers:
+
+- **Linearbeschleuniger (LINAC):** Erzeugt hochenergetische Photonen (4–25 MV) oder Elektronen durch Beschleunigung in einem Hohlraumresonator. Modernster Standard. Vorteile: variable Energie, kein radioaktives Material, IMRT/VMAT möglich.
+- **⁶⁰Co-Gerät (Telekobalt):** Historisch wichtig; γ-Strahlung mit 1,17 + 1,33 MeV. Nachteil: Quelle muss regelmäßig ausgetauscht werden (T½ = 5,27 a), niedrigere Dosisrate als LINAC. In Entwicklungsländern noch verbreitet.
+- **Protonentherapie:** Protonen haben einen **Bragg-Peak** — sie geben den Großteil ihrer Energie am Ende ihrer Reichweite ab. Vorteil: scharf begrenztes Dosismaximum, weniger Dosis hinter dem Tumor. Ideal für Tumoren nahe empfindlicher Strukturen (Auge, ZNS, Kinder).
+
+**Moderne Techniken:**
+- **IMRT** (Intensity-Modulated Radiation Therapy): Moduliert die Dosisverteilung über Multileaf-Kollimatoren (MLC) → Tumor erhält hohe, gleichmäßige Dosis; Risikoorgane werden geschont.
+- **VMAT** (Volumetric Modulated Arc Therapy): IMRT bei rotierendem Gantry → schnellere Behandlung.
+- **Stereotaktische Radiochirurgie (SRS/SBRT):** Sehr hohe Einzeldosen auf kleine Volumina, extreme Präzision (< 1 mm). Anwendung: Hirnmetastasen, Lungentumore.
+
+### Brachytherapie (Kontaktbestrahlung)
+
+Die Strahlenquelle wird **im oder direkt am Tumor** platziert:
+
+- **Intrakavitäre Brachytherapie:** Strahlenquellen in Körperhöhlen (z. B. Uterus bei Zervixkarzinom)
+- **Interstitielle Brachytherapie:** Strahlenquellen direkt ins Tumorgewebe (z. B. Prostatakarzinom, Seeds mit ¹²⁵I oder ¹⁰³Pd)
+- Vorteil: Sehr hohe lokale Dosis, schneller Dosisabfall mit Abstand (1/r²) → wenig Belastung für umliegendes Gewebe
+
+**Verwendete Nuklide:** ¹⁹²Ir (T½ = 73,8 d, γ), ¹²⁵I (T½ = 59,4 d, γ), ¹⁰³Pd (T½ = 17 d, γ), ⁶⁰Co (T½ = 5,27 a, γ).
+
+> **Merke:** Teletherapie = Quelle außerhalb (LINAC, Kobalt); Brachytherapie = Quelle im/am Tumor (hohe lokale Dosis, schneller Abfall). Protonentherapie: Bragg-Peak → Dosismaximum im Tumor, wenig dahinter.
+
+---
+
+## Nuklearmedizin — Diagnostik und Therapie im Überblick
+
+### Diagnostische Nuklearmedizin
+
+| Verfahren | Nuklid | Prinzip | Hauptanwendungen |
+|-----------|--------|---------|------------------|
+| Szintigraphie | ⁹⁹ᵐTc (γ, 140 keV, 6h) | Gammakamera, planares Bild | Knochen, Schilddrüse, Niere |
+| SPECT | ⁹⁹ᵐTc, ²⁰¹Tl | Rotierende Gammakamera, 3D | Myokardperfusion, Hirnperfusion |
+| PET | ¹⁸F (β⁺, 511 keV, 110min) | Koinzidenzdetektion, 3D | Tumorstaging, Neurologie |
+| PET/CT | ¹⁸F-FDG | PET + CT fusioniert | Tumorstaging, Therapiekontrolle |
+| PET/MRT | ¹⁸F-FDG | PET + MRT fusioniert | Neurologie, Pädiatrie |
+
+### Therapeutische Nuklearmedizin
+
+| Verfahren | Nuklid | Prinzip | Indikation |
+|-----------|--------|---------|-----------|
+| Radiojodtherapie | ¹³¹I (β⁻+γ, 8d) | β⁻-Strahlung zerstört Schilddrüsengewebe | M. Basedow, Schilddrüsen-Ca |
+| PSMA-Therapie | ¹⁷⁷Lu (β⁻, 6,65d) | β⁻-Strahlung, PSMA-Ligand | Metastasiertes Prostata-Ca |
+| DOTATATE-Therapie | ¹⁷⁷Lu (β⁻, 6,65d) | β⁻-Strahlung, Somatostatinrezeptor | Neuroendokrine Tumoren |
+| Radiosynoviorthese | ⁹⁰Y, ¹⁸⁶Re, ¹⁶⁹Er | β⁻-Strahlung intraartikulär | Chronische Gelenksentzündungen |
+| Ra-223-Therapie | ²²³Ra (α, 11,4d) | α-Strahlung, knochenaffin | Knochenmetastasen (Prostata-Ca) |
+
+> **Merke:** Diagnostik: γ-Strahler (Photonen verlassen den Körper → Detektion). Therapie: β⁻- oder α-Strahler (kurze Reichweite → lokale Gewebezerstörung). Moderne Theragnostik: gleicher Ligand, verschiedene Nuklide (z. B. ⁶⁸Ga-PSMA für PET-Diagnostik, ¹⁷⁷Lu-PSMA für Therapie).
+
+---
+
+## Akutes Strahlensyndrom (ARS)
+
+Das akute Strahlensyndrom tritt nach einer Ganzkörperbestrahlung mit hoher Dosis in kurzer Zeit auf. Es ist ein deterministischer Effekt mit Schwellendosis.
+
+| Phase | Dosis (Ganzkörper) | Symptome | Prognose |
+|-------|-------------------|----------|----------|
+| Prodromalphase (h) | ab 1 Gy | Übelkeit, Erbrechen, Durchfall | Reversibel |
+| Hämatopoetisches Syndrom | 1–6 Gy | Leukopenie, Thrombopenie, Anämie | Überlebbar mit Therapie |
+| Gastrointestinales Syndrom | 6–10 Gy | Zottenatrophie, blutiger Durchfall, Sepsis | Meist letal |
+| Zerebrovaskuläres Syndrom | > 10 Gy | Hirnödem, Koma, Kreislaufkollaps | Immer letal |
+
+Die Reihenfolge der Organbeteiligung folgt dem **Bergonié-Tribondeau-Gesetz**: schnell teilende Zellen (Lymphozyten, Knochenmark, Darmepithel) sind am empfindlichsten. Nervenzellen (kaum Teilung) sind am widerstandsfähigsten.
+
+**Lymphozytenabfall als Biomarker:** Der schnelle Abfall der Lymphozytenzahl in den ersten 48 h nach Exposition korreliert mit der Strahlendosis und dient als einfacher biologischer Dosimeter.
+
+> **Merke:** ARS: Schwellendosis ~1 Gy Ganzkörper. Reihenfolge: hämatopoetisch (1–6 Gy) → gastrointestinal (6–10 Gy) → zerebrovaskulär (>10 Gy). Lymphozyten sind die strahlenempfindlichsten Zellen. LD₅₀/₆₀ (ohne Therapie): ca. 3,5–4 Gy.
+
+---
+
+## Radon in Österreich — klinische Relevanz
+
+Radon (²²²Rn) ist ein radioaktives Edelgas aus der Uran-Radium-Zerfallsreihe (²²⁶Ra → ²²²Rn + α). Es ist geruchlos, farblos und kann aus dem Boden in Gebäude diffundieren.
+
+**Warum ist Radon gefährlich?**
+1. ²²²Rn zerfällt (T½ = 3,82 d) zu kurzlebigen α-Strahlern: ²¹⁸Po (T½ = 3,1 min) → ²¹⁴Pb → ²¹⁴Bi → ²¹⁴Po (T½ = 164 μs)
+2. Diese Zerfallsprodukte lagern sich an Aerosolpartikel an und werden eingeatmet
+3. In der Lunge geben sie α-Strahlung direkt ins Bronchialepithel ab (w_R = 20!)
+4. Folge: **Lungenkrebs** — nach Rauchen die zweithäufigste Ursache
+
+**Radon in Österreich:**
+- Mittlere Raumluftkonzentration: ~99 Bq/m³
+- EU-Referenzwert: 300 Bq/m³
+- Radon-Risikogebiete: Mühlviertel, Waldviertel, Teile der Steiermark und Salzburgs (kristallines Grundgestein)
+- Maßnahmen: Radon-Messung in Gebäuden, Abdichtung von Kellerböden, Belüftung
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Abstandsquadratgesetz im klinischen Kontext:**
+Ein ⁶⁰Co-Präparat hat in 1 m Abstand eine Dosisleistung von 0,5 mSv/h. In welchem Abstand beträgt die Dosisleistung nur noch 0,02 mSv/h?
+Lösung: Ḋ₁·r₁² = Ḋ₂·r₂² → r₂ = r₁ · √(Ḋ₁/Ḋ₂) = 1 m · √(0,5/0,02) = 1 m · √25 = 1 m · 5 = **5 m**.
+
+**Beispiel 2 — Abschirmberechnung mit HVL:**
+Eine ¹³⁷Cs-Quelle (γ, 662 keV) hat eine Dosisleistung von 100 mSv/h. Die Halbwertsschichtdicke in Blei beträgt HVL = 6,5 mm. Wie viel Blei braucht man, um die Dosis auf < 1 mSv/h zu senken?
+Lösung: 100 · (½)ⁿ < 1 → (½)ⁿ < 0,01 → n > log(0,01)/log(0,5) = −2/(−0,301) = 6,64 → n = 7 HVL.
+Bleidicke: 7 × 6,5 mm = **45,5 mm ≈ 4,6 cm**.
+
+**Beispiel 3 — Jahresdosis eines Radiologen:**
+Ein Radiologe steht 8 Stunden/Tag in 3 m Abstand von einer Röntgenquelle (Dosisleistung in 1 m: 0,1 mSv/h). Arbeitstage: 250/Jahr.
+Dosisleistung in 3 m: 0,1 × (1/3)² = 0,1/9 = 0,0111 mSv/h.
+Tagesdosis: 0,0111 × 8 = 0,089 mSv/Tag.
+Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 20 mSv! Maßnahme: zusätzliche Bleischürze oder größerer Abstand.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Häufige Fragen:**
+- "Wie lautet das Abstandsquadratgesetz?" → I ∝ 1/r²; Verdopplung des Abstands → ¼ der Dosis
+- "Welche Abschirmung für α, β, γ?" → Papier–Aluminium–Blei (PAB); Neutronen: Wasser/Paraffin
+- "Grenzwert beruflich/Bevölkerung?" → 20 mSv/a bzw. 1 mSv/a
+- "Was ist der Bragg-Peak?" → Dosismaximum am Ende der Protonenreichweite → gezielte Tumorbestrahlung
+- "Reihenfolge ARS?" → hämatopoetisch → gastrointestinal → zerebrovaskulär (ab 1 / 6 / 10 Gy)
+
+**Typische Prüfungsfallen / Verwechslungen:**
+- **Neutronenabschirmung:** Wasser/Paraffin (wasserstoffreiche Materialien), NICHT Blei!
+- **β-Abschirmung:** Zuerst leichtes Material (Plexiglas), dann ggf. Blei für Bremsstrahlung
+- Teletherapie (außen) ≠ Brachytherapie (im/am Tumor)
+- PET = Diagnostik (β⁺-Strahler) ≠ Radiojodtherapie = Therapie (β⁻-Strahler)
+- Akutes Strahlensyndrom: Schwellendosis ~1 Gy; stochastische Effekte (Krebs): KEINE Schwellendosis
+- Radon: Edelgas, α-Strahler, Inhalation → Lungenkrebs; zweitwichtigste Ursache nach Rauchen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **ALARA**: Abstand ↑ (1/r²), Abschirmung ↑ (PAB: Papier–Alu–Blei), Zeit ↓ (D = Ḋ·t)
+- **Grenzwerte**: Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a; natürliche Strahlung ~2,1 mSv/a
+- **Teletherapie**: LINAC (4–25 MV Photonen), ⁶⁰Co, Protonentherapie (Bragg-Peak)
+- **Brachytherapie**: Quelle im/am Tumor; ¹⁹²Ir, ¹²⁵I; schneller Dosisabfall (1/r²)
+- **Diagnostik**: γ-Strahler (⁹⁹ᵐTc, SPECT); β⁺-Strahler (¹⁸F, PET); Photonen verlassen Körper
+- **Therapie**: β⁻-Strahler (¹³¹I, ¹⁷⁷Lu); α-Strahler (²²³Ra); kurze Reichweite → lokale Zerstörung
+- **ARS**: ≥1 Gy Ganzkörper; hämatopoetisch → GI → zerebrovaskulär; LD₅₀ ~3,5–4 Gy
+- **Radon**: ²²²Rn, α-Strahler, Inhalation, Lungenkrebs; Österreich ~99 Bq/m³ im Mittel`,
+      lernziele: [
+        "Das ALARA-Prinzip (Abstand, Abschirmung, Zeit) erklären und das Abstandsquadratgesetz auf Strahlenschutzszenarien anwenden.",
+        "Die gesetzlichen Dosisgrenzwerte für beruflich Strahlenexponierte und die Allgemeinbevölkerung kennen.",
+        "Teletherapie (LINAC, Protonentherapie) und Brachytherapie hinsichtlich Prinzip und Anwendungsgebiet vergleichen.",
+        "Diagnostische und therapeutische Nuklearmedizin-Verfahren mit den jeweiligen Nukliden zuordnen.",
+        "Das akute Strahlensyndrom in seinen Phasen und die Bedeutung von Radon als natürlichem Strahlenrisiko beschreiben.",
+      ],
+      sections: [
+        {
+          heading: "ALARA-Prinzip und Dosisgrenzwerte",
+          text: "ALARA: Abstand (I ∝ 1/r²), Abschirmung (PAB: Papier–Alu–Blei für α–β–γ; Neutronen: Wasser), Zeit (D = Ḋ·t). Grenzwerte Österreich/EU: beruflich ≤ 20 mSv/a, Bevölkerung ≤ 1 mSv/a, Schwangere ≤ 1 mSv restliche Schwangerschaft, Augenlinse ≤ 20 mSv/a. Natürliche Strahlung ~2,1 mSv/a (davon ~1 mSv Radon).",
+          merksatz:
+            "ALARA: Abstand ↑ (1/r²), Abschirmung ↑, Zeit ↓. Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a.",
+        },
+        {
+          heading: "Strahlentherapie: Teletherapie und Brachytherapie",
+          text: "Teletherapie: Quelle außerhalb (LINAC: variable Energie 4–25 MV; ⁶⁰Co-Gerät: 1,17+1,33 MeV γ; Protonentherapie: Bragg-Peak → präzises Dosismaximum). Brachytherapie: Quelle im/am Tumor (¹⁹²Ir, ¹²⁵I), hohe lokale Dosis, schneller Abfall. IMRT/VMAT: modulierte Dosisverteilung, Schonung von Risikoorganen.",
+          merksatz:
+            "Teletherapie = Quelle außen (LINAC, ⁶⁰Co, Protonen). Brachytherapie = Quelle im Tumor (¹⁹²Ir, ¹²⁵I). Bragg-Peak: Dosismaximum der Protonen am Zielort.",
+        },
+        {
+          heading: "Akutes Strahlensyndrom und Radon",
+          text: "ARS: ab ~1 Gy Ganzkörper; hämatopoetisch (1–6 Gy), gastrointestinal (6–10 Gy), zerebrovaskulär (>10 Gy). LD₅₀/₆₀ ohne Therapie: ~3,5–4 Gy. Lymphozytenabfall als Biomarker. Radon (²²²Rn): α-strahlendes Edelgas, Inhalation → Zerfallsprodukte → α-Strahlung im Lungenepithel → Lungenkrebs. Zweitwichtigste Ursache nach Rauchen in Österreich.",
+          merksatz:
+            "ARS: hämatopoetisch (1–6 Gy) → GI (6–10 Gy) → zerebrovaskulär (>10 Gy). Radon: α-Edelgas, Lungenkrebs, Nr. 2 nach Rauchen.",
+        },
+      ],
+      merksätze: [
+        "ALARA: Abstand (1/r²), Abschirmung (PAB für α/β/γ), Zeit (D = Ḋ·t) — die drei Säulen des Strahlenschutzes.",
+        "Abstandsquadratgesetz: Verdopplung des Abstands → ¼ der Dosis; Verdreifachung → 1/9.",
+        "Abschirmregel: α → Papier; β → Aluminium/Plexiglas; γ → Blei/Beton; Neutronen → Wasser/Paraffin.",
+        "Dosisgrenzwerte: Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a; natürliche Strahlung ~2,1 mSv/a.",
+        "Teletherapie: LINAC (4–25 MV), ⁶⁰Co (1,17+1,33 MeV), Protonentherapie (Bragg-Peak).",
+        "Brachytherapie: Strahlenquelle im/am Tumor (¹⁹²Ir, ¹²⁵I); hohe lokale Dosis, schneller Abfall.",
+        "Diagnostik: γ-Strahler (verlassen den Körper). Therapie: β⁻-/α-Strahler (kurze Reichweite, lokal).",
+        "Akutes Strahlensyndrom: ab ~1 Gy Ganzkörper; hämatopoetisch → GI → zerebrovaskulär.",
+        "Radon (²²²Rn): α-strahlendes Edelgas, Inhalation → Lungenkrebs; ~1 mSv/a in Österreich.",
+      ],
+      altfrage: {
+        question:
+          "Erläutern Sie die Grundprinzipien des Strahlenschutzes und beschreiben Sie die Unterschiede zwischen Teletherapie und Brachytherapie.",
+        answer:
+          "Der Strahlenschutz basiert auf dem ALARA-Prinzip (As Low As Reasonably Achievable) mit drei Grundprinzipien: Erstens Abstand — die Dosisleistung nimmt mit dem Quadrat des Abstands ab (Abstandsquadratgesetz I ∝ 1/r²), eine Verdopplung des Abstands reduziert die Dosis auf ein Viertel. Zweitens Abschirmung — verschiedene Strahlenarten erfordern unterschiedliche Materialien: α-Strahlung wird von Papier gestoppt, β-Strahlung von Aluminium oder Plexiglas, γ-Strahlung von Blei oder Beton, und Neutronenstrahlung von wasserstoffreichen Materialien (Wasser, Paraffin). Drittens Zeit — die Gesamtdosis ist proportional zur Expositionszeit (D = Ḋ·t), daher soll die Aufenthaltszeit in Strahlenbereichen minimiert werden. Bei der Strahlentherapie unterscheidet man Teletherapie und Brachytherapie. Bei der Teletherapie befindet sich die Strahlenquelle außerhalb des Körpers — moderne Linearbeschleuniger (LINAC) erzeugen Photonen- oder Elektronenstrahlen variabler Energie (4–25 MV), alternativ werden Protonentherapiegeräte eingesetzt, deren Bragg-Peak eine präzise Dosisdeposition im Tumor ermöglicht. Historisch kam ⁶⁰Co (γ-Strahlung) zum Einsatz. IMRT und VMAT ermöglichen eine computergesteuerte Dosismodulation zum Schutz gesunder Organe. Bei der Brachytherapie wird die radioaktive Quelle (z. B. ¹⁹²Ir, ¹²⁵I) direkt im oder am Tumor platziert. Vorteil: sehr hohe lokale Dosis mit schnellem Dosisabfall (1/r²), dadurch Schonung des umgebenden Gewebes. Anwendungen: Zervix-Ca (intrakavitär), Prostata-Ca (Seeds), Endobronchiales Karzinom.",
+      },
+      klinischerBezug:
+        "Strahlenschutz ist im klinischen Alltag allgegenwärtig: Bleischürzen in der Radiologie, Dosimeter für Personal, Radon-Messungen in Krankenhäusern. Moderne Strahlentherapie (IMRT/VMAT, Protonentherapie) ermöglicht präzise Tumorbestrahlung bei minimaler Schädigung gesunder Organe. Nuklearmedizinische Theragnostik (⁶⁸Ga/¹⁷⁷Lu-PSMA) revolutioniert die Behandlung metastasierter Karzinome.",
+      selfTest: [
+        {
+          question:
+            "In 2 Meter Abstand von einer radioaktiven Quelle beträgt die Dosisleistung 8 mSv/h. Wie hoch ist die Dosisleistung in 4 Meter Abstand?",
+          options: ["4 mSv/h", "2 mSv/h", "1 mSv/h", "0,5 mSv/h", "0,25 mSv/h"],
+          correctIndex: 1,
+          explanation:
+            "Das Abstandsquadratgesetz besagt: Ḋ ∝ 1/r². Wird der Abstand von 2 m auf 4 m verdoppelt, sinkt die Dosisleistung auf (2/4)² = 1/4 des Ausgangswerts: 8 × 1/4 = 2 mSv/h. Alternativ: Ḋ₁·r₁² = Ḋ₂·r₂² → Ḋ₂ = 8 × 4/16 = 2 mSv/h. Das Abstandsquadratgesetz gilt exakt nur für Punktquellen ohne Abschirmung, ist aber eine gute Näherung für klinische Szenarien.",
+          hints: [
+            "Abstandsquadratgesetz: I ∝ 1/r². Abstand verdoppelt → Dosis geviertelt.",
+            "Ḋ₂ = Ḋ₁ × (r₁/r₂)² = 8 × (2/4)² = 8 × 1/4 = 2 mSv/h.",
+          ],
+          tags: ["abstandsgesetz", "strahlenschutz", "dosisleistung"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Welches Material ist am besten zur Abschirmung von Neutronenstrahlung geeignet?",
+          options: ["Blei", "Aluminium", "Wasser oder Paraffin", "Beton", "Kupfer"],
+          correctIndex: 2,
+          explanation:
+            "Neutronen werden am effektivsten durch Materialien mit leichten Kernen (insbesondere Wasserstoff) moderiert (abgebremst). Wasser und Paraffin (Kohlenwasserstoffe) enthalten viele Wasserstoffatome und sind daher ideale Neutronenabschirmer. Bei einem Stoß mit einem Proton (gleiche Masse wie Neutron) kann das Neutron bis zu 100 % seiner kinetischen Energie übertragen — bei einem Stoß mit einem schweren Bleikern nur wenige Prozent. Blei ist dagegen ideal für γ-Strahlung (hohe Elektronendichte). Dies ist eine klassische MedAT-Falle: Blei für Neutronen ist ineffektiv!",
+          hints: [
+            "Neutronen sind ungeladen → keine Coulomb-Wechselwirkung mit Elektronenhülle. Was bremst sie am besten?",
+            "Elastischer Stoß: maximaler Energieübertrag bei gleichen Massen. Neutron ≈ Proton (Wasserstoff).",
+          ],
+          tags: ["neutronenabschirmung", "strahlenschutz", "wasser"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Welcher der folgenden Dosisgrenzwerte gilt für beruflich strahlenexponierte Personen (Kategorie A) in Österreich?",
+          options: [
+            "≤ 1 mSv pro Jahr",
+            "≤ 6 mSv pro Jahr",
+            "≤ 20 mSv pro Jahr",
+            "≤ 50 mSv pro Jahr",
+            "≤ 100 mSv pro Jahr",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Dosisgrenzwert für beruflich strahlenexponierte Personen der Kategorie A (z. B. Radiologen, Nuklearmediziner, Strahlentherapie-Personal) beträgt in Österreich und der EU ≤ 20 mSv effektive Dosis pro Jahr (gemittelt über 5 Jahre, mit max. 50 mSv in einem Einzeljahr). Für die Allgemeinbevölkerung gilt ≤ 1 mSv/Jahr (zusätzlich zur natürlichen Strahlung von ~2,1 mSv/a). Kategorie B (geringere Exposition): ≤ 6 mSv/a.",
+          hints: [
+            "Beruflich strahlenexponiert Kat. A: der höchste Grenzwert für reguläre Beschäftigung.",
+            "1 mSv = Bevölkerung; 6 mSv = Kat. B; 20 mSv = Kat. A.",
+          ],
+          tags: ["dosisgrenzwert", "strahlenschutz", "österreich"],
+          difficulty: 1,
+        },
+        {
+          question: "Was ist der Bragg-Peak in der Protonentherapie?",
+          options: [
+            "Die maximale Eindringtiefe von Protonen in Blei",
+            "Der Punkt maximaler Dosisabgabe am Ende der Protonenreichweite im Gewebe",
+            "Die Frequenz, bei der Protonen in Resonanz geraten",
+            "Die Schwellenenergie für Kernreaktionen mit Protonen",
+            "Der maximale Dosisabfall hinter einer Bleiabschirmung",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Bragg-Peak ist eine charakteristische Eigenschaft geladener Teilchen (Protonen, Schwerionen): Sie geben den Großteil ihrer Energie am Ende ihrer Reichweite ab, bevor sie zum Stillstand kommen. Dies führt zu einem scharfen Dosismaximum in einer definierten Tiefe, während die Dosis davor (Eingangsbereich) relativ niedrig ist und dahinter fast null beträgt. Für die Strahlentherapie ist dies ideal: Der Tumor erhält die maximale Dosis, das gesunde Gewebe vor und hinter dem Tumor wird geschont. Im Gegensatz dazu zeigen Photonen (Röntgen, γ) ein exponentielles Dosisprofil mit Maximum nahe der Oberfläche und kontinuierlichem Abfall in der Tiefe.",
+          hints: [
+            "Protonen werden im Gewebe immer langsamer (Ionisationsverluste). Wo geben sie die meiste Energie ab?",
+            "Am Ende der Reichweite: Geschwindigkeit → 0, Ionisierungsdichte maximal → Bragg-Peak.",
+          ],
+          tags: ["bragg-peak", "protonentherapie", "strahlentherapie"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Welches nuklearmedizinische Verfahren nutzt die Annihilationsstrahlung zweier 511-keV-Photonen zur Bildgebung?",
+          options: [
+            "SPECT (Single Photon Emission CT)",
+            "Planare Szintigraphie",
+            "PET (Positronen-Emissions-Tomographie)",
+            "Röntgen-Computertomographie",
+            "Magnetresonanztomographie",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die PET (Positronen-Emissions-Tomographie) beruht auf β⁺-Zerfall: Das emittierte Positron annihiliert mit einem Elektron → 2 Gammaphotonen mit je 511 keV, emittiert unter 180°. Der PET-Scanner detektiert Koinzidenzpaare — zwei 511-keV-Photonen, die gleichzeitig auf gegenüberliegenden Detektoren registriert werden. SPECT nutzt dagegen einzelne γ-Photonen (z. B. ⁹⁹ᵐTc, 140 keV) mit einem mechanischen Kollimator. CT und MRT nutzen keine Radionuklide.",
+          hints: [
+            "Welches Verfahren basiert auf β⁺-Zerfall → Annihilation → Koinzidenzdetektion?",
+            "511 keV = Ruheenergie eines Elektrons. Annihilation: e⁺ + e⁻ → 2 × 511 keV.",
+          ],
+          tags: ["pet", "annihilation", "nuklearmedizin"],
+          difficulty: 1,
         },
       ],
     },
