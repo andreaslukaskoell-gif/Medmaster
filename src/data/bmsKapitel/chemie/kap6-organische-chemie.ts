@@ -779,6 +779,10 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
 - **Histamin**: aus Histidin (Decarboxylierung); Entzündungsmediator, Magensäuresekretion, allergische Reaktionen. Antihistaminika blockieren H₁-/H₂-Rezeptoren
 - **GABA** (γ-Aminobuttersäure): wichtigster inhibitorischer Neurotransmitter im ZNS; Benzodiazepine verstärken GABA-Wirkung
 
+> **Merke:** Alkohole (–OH) werden nach der Anzahl der C-Atome am funktionellen C klassifiziert: primär, sekundär, tertiär. Primäre Alkohole können zu Aldehyden und weiter zu Carbonsäuren oxidiert werden, sekundäre zu Ketonen — tertiäre sind unter milden Bedingungen nicht oxidierbar.
+
+> **Merke:** Ether (R–O–R) entstehen durch Kondensation zweier Alkohole. Diethylether war historisch eines der ersten Narkosemittel. Ether sind relativ reaktionsträge, aber leicht entzündlich und bilden explosive Peroxide.
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -1118,6 +1122,10 @@ Phenylalanin, Tyrosin und Tryptophan sind aromatische Aminosäuren mit besondere
 Die **Peptidbindung** (−CO−NH−) entsteht durch Kondensation zwischen der α-Carboxylgruppe einer Aminosäure und der α-Aminogruppe der nächsten unter Wasserabspaltung. Die Peptidbindung ist **planar** (partieller Doppelbindungscharakter durch Mesomerie: C=O ↔ C−O⁻/N⁺) und nicht frei drehbar. Die Rotationswinkel Φ (um N−Cα) und Ψ (um Cα−C) bestimmen die Sekundärstruktur.
 
 Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein (>100 AS, gefaltete 3D-Struktur). Proteinstrukturebenen: Primär (AS-Sequenz), Sekundär (α-Helix, β-Faltblatt durch H-Brücken im Rückgrat), Tertiär (3D-Faltung durch hydrophobe WW, ionische WW, Disulfidbrücken, H-Brücken der Seitenketten), Quartär (Anordnung mehrerer Untereinheiten, z.B. Hämoglobin α₂β₂).
+
+> **Merke:** Aldehyde (–CHO) und Ketone (–CO–) enthalten die Carbonylgruppe C=O. Aldehyde sind leichter oxidierbar als Ketone — sie reagieren positiv mit Fehling- und Tollens-Reagenz (Silberspiegelprobe).
+
+> **Merke:** Die Carbonylgruppe ist polar (δ⁺ am C, δ⁻ am O) und ermöglicht nucleophile Additionen. Glucose liegt in wässriger Lösung als Halbacetal (Ringform) vor — ein Gleichgewicht aus offenkettiger Aldehydform und cyclischer Form.
 
 ## MedAT-Fokus
 
@@ -2411,6 +2419,10 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
 - **Nukleotid-Exzisionsreparatur (NER)**: Entfernt sperrige DNA-Läsionen (z.B. UV-induzierte Thymin-Dimere). Defekt → Xeroderma pigmentosum (extreme UV-Empfindlichkeit, Hautkrebs)
 - **Basen-Exzisionsreparatur (BER)**: Entfernt oxidierte oder desaminierte Basen durch DNA-Glykosylasen
 - **Homologe Rekombination / NHEJ**: Reparatur von Doppelstrangbrüchen. BRCA1/BRCA2-Mutationen → gestörte homologe Rekombination → erhöhtes Brust-/Ovarialkarzinomrisiko
+
+> **Merke:** Nucleinsäuren (DNA/RNA) bestehen aus Nukleotiden: Base + Zucker + Phosphat. DNA enthält Desoxyribose und Thymin, RNA enthält Ribose und Uracil. Die Doppelhelix wird durch Wasserstoffbrücken zwischen komplementären Basenpaaren (A–T: 2 H-Brücken, G–C: 3 H-Brücken) stabilisiert.
+
+> **Merke:** ATP (Adenosintriphosphat) ist die universelle Energiewährung der Zelle. Die Hydrolyse der Phosphoanhydridbindung (ATP → ADP + Pᵢ) setzt ca. −30,5 kJ/mol frei und treibt endergone Reaktionen an.
 
 ## MedAT-Fokus
 

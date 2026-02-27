@@ -1107,6 +1107,10 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 ---
 
+> **Merke:** Brønsted-Säure = Protonendonor (gibt H⁺ ab), Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf). Lewis erweitert: Säure = Elektronenpaarakzeptor, Base = Elektronenpaardonor — keine H⁺-Übertragung nötig.
+
+> **Merke:** pH = −log[H₃O⁺]; eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration. Bei 37 °C (Körpertemperatur) liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -1851,6 +1855,10 @@ Der Carbonat-Puffer kann versagen, wenn:
 
 ---
 
+> **Merke:** Henderson-Hasselbalch: pH = pK_a + log([A⁻]/[HA]). Bei [A⁻] = [HA] ist pH = pK_a (maximale Pufferkapazität). Effektiver Pufferbereich: pK_a ± 1.
+
+> **Merke:** Blut-pH 7,4 entsteht durch [HCO₃⁻]/[CO₂] ≈ 20:1 bei pK_a(eff.) = 6,1. Lunge reguliert pCO₂ schnell (Minuten), Niere reguliert HCO₃⁻ langsam (Stunden bis Tage). Versagt die Kompensation, drohen Azidose (pH < 7,35) oder Alkalose (pH > 7,45).
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -2200,6 +2208,10 @@ Der normale Blut-pH liegt bei **7,35–7,45**. Vier primäre Störungen sind zu 
 
 ---
 
+> **Merke:** Am Halbäquivalenzpunkt einer Titration (Volumen = ½ des Äquivalenzvolumens) gilt pH = pK_a — dort liegt die maximale Pufferkapazität. Der Äquivalenzpunkt liegt bei pH = 7 nur für starke Säure + starke Base; bei schwacher Säure + starker Base liegt er im Basischen.
+
+> **Merke:** BGA-Diagnostik: pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Primär pCO₂ verändert = respiratorisch; primär HCO₃⁻ verändert = metabolisch. Kompensation erfolgt jeweils durch das andere Organ (Lunge ↔ Niere).
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -2511,6 +2523,8 @@ Bei der **Disproportionierung** reagiert ein Element gleichzeitig als Oxidans un
 Bei der **Komproportionierung** (Synproportionierung) reagieren zwei verschiedene Oxidationsstufen desselben Elements zur einheitlichen Mittelstufe: Cu⁰ + Cu²⁺ → 2Cu⁺ oder 5HNO₂ + 2KMnO₄ → ... (N: +3 geht teilweise zu +5).
 
 ---
+
+> **Merke:** Wasser ist ein gewinkeltes Molekül (104,5°) mit starker Polarität (Dipolmoment 1,85 D). Die Wasserstoffbrückenbindungen zwischen H₂O-Molekülen erklären den anomal hohen Siedepunkt (100 °C) und die Dichteanomalie (Maximum bei 4 °C).
 
 ## MedAT-Fokus
 
@@ -3465,6 +3479,10 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 - Mitochondriale ROS regulieren Apoptose und Autophagie
 
 ---
+
+> **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel — ihre Reaktivität nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
+
+> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid härtet Zahnschmelz, Chlorid ist das wichtigste extrazelluläre Anion, Iodid ist essenziell für die Schilddrüsenhormonsynthese (T₃, T₄).
 
 ## MedAT-Fokus
 

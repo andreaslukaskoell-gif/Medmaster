@@ -1168,6 +1168,11 @@ Thoraxmasse ~20 kg: F = m × a = 20 × 1,11 ≈ **22 N** (dynamischer Anteil) + 
 Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominiert über Trägheitskraft).
 
 ---
+
+> **Merke:** Newtons Gesetze: (1) Trägheit — ohne Kraft keine Beschleunigung; (2) F = m · a — Kraft ist Masse mal Beschleunigung; (3) Actio = Reactio — Kräfte treten immer paarweise auf.
+
+> **Merke:** Die Gewichtskraft F_G = m · g (g ≈ 9,81 m/s²) ist die Gravitationskraft an der Erdoberfläche. Masse (kg) ist ortsunabhängig, Gewichtskraft (N) hängt vom Gravitationsfeld ab.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:

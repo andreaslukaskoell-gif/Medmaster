@@ -479,6 +479,10 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 **Gegenstrom-Wärmeaustausch:** In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt Wärme an das kühle venöse Blut ab, bevor es die Peripherie erreicht. Dies minimiert den Wärmeverlust über die Akren bei Kälte und ist ein wichtiger Überlebensmechanismus. Das gleiche Prinzip wird in der Dialyse (Bluterwärmung) und bei Herz-Lungen-Maschinen eingesetzt.
 
+> **Merke:** Der erste Hauptsatz der Thermodynamik (Energieerhaltung): ΔU = Q + W. Die innere Energie eines Systems ändert sich durch Wärmezufuhr (Q) und/oder verrichtete Arbeit (W).
+
+> **Merke:** Wärmekapazität c gibt an, wie viel Energie nötig ist, um 1 kg eines Stoffes um 1 K zu erwärmen: Q = m · c · ΔT. Wasser hat mit c = 4,18 kJ/(kg·K) eine besonders hohe Wärmekapazität — deshalb stabilisiert es das Körperklima.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
@@ -811,6 +815,10 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 **Kryotherapie und Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem Stickstoff). Der Phasenübergang Wasser→Eis in den Zellen zerstört diese durch Eiskristallbildung und osmotischen Stress. Nutzung: Warzenentfernung, Tumortherapie (Leber, Prostata). Thermodynamisch: Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f), die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.
 
+> **Merke:** Der zweite Hauptsatz der Thermodynamik: Die Entropie eines abgeschlossenen Systems nimmt nie ab (ΔS ≥ 0). Wärme fließt spontan nur von warm nach kalt — nie umgekehrt.
+
+> **Merke:** Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der maximal mögliche Wirkungsgrad einer Wärmekraftmaschine. Kein realer Prozess kann diesen Wert übertreffen.
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
@@ -1112,6 +1120,10 @@ V₂ = V₁ × T₂/T₁ = 500 × 310/293 = 529 mL. Die eingeatmete Luft expandi
 **Pulsoxymetrie und Gaspartialdrücke:** Die O₂-Sättigung des Hämoglobins hängt vom pO₂ ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO₂ auch die physikalisch gelöste O₂-Menge im Plasma (≈ 0,3 mL O₂ pro 100 mL Blut bei pO₂ = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O₂) steigt der physikalisch gelöste Anteil auf ≈ 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
 
 **Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation haltbar gemacht: Einfrieren → Druck senken unter den Tripelpunkt → Eis sublimiert direkt zu Dampf. Das Produkt behält seine Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefügt — die ursprüngliche Lösung entsteht wieder.
+
+> **Merke:** Phasenübergänge (Schmelzen, Verdampfen, Sublimieren) benötigen Energie (latente Wärme), ohne dass sich die Temperatur ändert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
+
+> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Flüssigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg früher (niedrigerer Luftdruck).
 
 ## MedAT-Fokus
 

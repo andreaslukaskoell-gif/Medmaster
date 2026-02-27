@@ -2132,6 +2132,10 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 
 **Calciumstoffwechsel:** Ca²⁺ + HPO₄²⁻ ⇌ CaHPO₄(s). Beim Knochenbau wird CaHPO₄ ausgefällt — Produktentzug verschiebt das Gleichgewicht in Richtung Mineralisation. Parathormon und Calcitonin steuern die Gleichgewichtslage über [Ca²⁺] im Blut.
 
+> **Merke:** Le Chatelier: Wird ein Gleichgewicht gestört, verschiebt es sich so, dass die Störung verkleinert wird. Konzentrations- und Druckänderungen ändern nur Q, nicht K — nur Temperatur ändert K selbst.
+
+> **Merke:** Haber-Bosch (N₂ + 3H₂ ⇌ 2NH₃): Hoher Druck begünstigt Produkte (Δn = −2), moderate Temperatur ist Kompromiss zwischen Thermodynamik und Kinetik. Katalysatoren verschieben das Gleichgewicht nie — sie beschleunigen nur die Einstellung.
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -2480,6 +2484,10 @@ Ohne CA würde der CO₂-Transport im Blut und die pH-Regulierung zusammenbreche
 Die BGA bestimmt: pH, pCO₂, pO₂, HCO₃⁻, Base Excess (BE), O₂-Sättigung. Aus diesen Werten lassen sich alle Säure-Base-Störungen klassifizieren. Normalwerte arteriell: pH 7,35–7,45; pCO₂ 35–45 mmHg; HCO₃⁻ 22–26 mmol/L; BE ±2 mmol/L.
 
 Der **Base Excess (BE)** gibt an, wie viel starke Säure oder Base nötig wäre, um pH 7,4 bei 37 °C und pCO₂ 40 mmHg wiederherzustellen. BE < −2 = metabolische Azidose; BE > +2 = metabolische Alkalose.
+
+> **Merke:** Henderson-Hasselbalch: pH = pK_a + log([A⁻]/[HA]). Bei [A⁻] = [HA] ist pH = pK_a (maximale Pufferkapazität). Effektiver Pufferbereich: pK_a ± 1.
+
+> **Merke:** Blut-pH 7,4 entsteht durch das Verhältnis [HCO₃⁻]/[CO₂] ≈ 20:1 bei pK_a = 6,1. Lunge reguliert pCO₂ schnell (Minuten), Niere reguliert HCO₃⁻ langsam (Stunden bis Tage).
 
 ## MedAT-Fokus
 

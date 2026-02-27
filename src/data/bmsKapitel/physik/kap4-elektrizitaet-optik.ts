@@ -2186,6 +2186,10 @@ Akkommodationsbreite: **10 dpt** (60 dpt → 70 dpt Gesamtbrechkraft).
 Korrektur −3 dpt, optische Zone d = 6 mm. Ablationstiefe: t = D · d² / 3 = 3 · (6)² / 3 = 3 · 36 / 3 = **36 µm**.
 Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µm Restdicke → max. Ablation ~150 µm → ca. −12 dpt Obergrenze.
 
+> **Merke:** Elektromagnetische Wellen brauchen kein Medium und breiten sich im Vakuum mit Lichtgeschwindigkeit c ≈ 3 × 10⁸ m/s aus. Es gilt: c = λ · f und E = h · f (Photonenenergie).
+
+> **Merke:** Das elektromagnetische Spektrum reicht von Radiowellen (λ ~ m, niedrige Energie) über sichtbares Licht (380–780 nm) bis zu Gammastrahlung (λ ~ pm, hohe Energie). Medizinisch relevant: UV (Hautkarzinom), Röntgen (Diagnostik), Gamma (Strahlentherapie).
+
 ## MedAT-Fokus
 
 **Zur gezielten Prüfungsvorbereitung** im Überblick:

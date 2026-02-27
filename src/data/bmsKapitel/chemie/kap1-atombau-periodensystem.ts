@@ -2437,6 +2437,10 @@ Der **Metallcharakter** nimmt zu: in einer Periode von rechts nach links und in 
 
 Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI): stark karzinogen.
 
+> **Merke:** Die Ordnungszahl (Protonenzahl) bestimmt die Stellung im PSE und damit die chemischen Eigenschaften eines Elements. Elemente derselben Gruppe haben gleich viele Valenzelektronen und verhalten sich chemisch ähnlich.
+
+> **Merke:** s-Block (Gruppen 1–2): 1–2 Valenzelektronen, starke Reduktionsmittel. p-Block (Gruppen 13–18): vielfältige Chemie. d-Block (Gruppen 3–12): Übergangsmetalle mit variablen Oxidationsstufen.
+
 ## MedAT-Fokus
 
 **Typische Prüfungsfragen:**
@@ -2756,6 +2760,10 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - ΔEN < 0,4: unpolare kovalente Bindung (H₂, Cl₂, C-C)
 - 0,4 ≤ ΔEN < 1,7: polare kovalente Bindung (H₂O: ΔEN=1,24; HCl: ΔEN=0,96)
 - ΔEN ≥ 1,7: überwiegend ionisch (NaCl: ΔEN=2,23; MgO: ΔEN=2,13)
+
+> **Merke:** Innerhalb einer Periode nimmt der Atomradius von links nach rechts ab (steigende Kernladung zieht Elektronen stärker an). Innerhalb einer Gruppe nimmt er von oben nach unten zu (neue Schalen).
+
+> **Merke:** Die Elektronegativität steigt im PSE nach rechts oben (Fluor = höchster Wert 4,0). Sie bestimmt die Polarität von Bindungen und damit Löslichkeit, Reaktivität und biologische Wechselwirkungen.
 
 ## MedAT-Fokus
 
@@ -3097,6 +3105,10 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 - **Mn**: Mn-SOD (mitochondriale Superoxiddismutase, SOD2). Arginase (Harnstoffzyklus). Manganismus (Mn-Toxizität) → Parkinson-ähnliches Syndrom.
 - **Mo**: Xanthinoxidase (Hypoxanthin → Xanthin → Harnsäure). Gicht-Therapie: Allopurinol hemmt Xanthinoxidase.
 - **Pt**: Cisplatin, Carboplatin (Pt(II)-Komplexe) quervernetzen DNA (Guanin-Guanin intrastrand crosslinks) → Apoptose. Wichtige Zytostatika bei Hoden-, Ovarial-, Lungen-, Blasenkarzinomen.
+
+> **Merke:** Hauptgruppenelemente erreichen die Edelgaskonfiguration durch Aufnahme oder Abgabe von Elektronen (Oktettregel). Übergangsmetalle können variable Oxidationsstufen annehmen, da d-Orbitale energetisch nah beieinander liegen.
+
+> **Merke:** Die Ionisierungsenergie steigt im PSE nach rechts oben (kleiner Radius, hohe Kernladung). Elemente mit niedriger Ionisierungsenergie (Alkalimetalle) sind starke Reduktionsmittel.
 
 ## MedAT-Fokus
 
