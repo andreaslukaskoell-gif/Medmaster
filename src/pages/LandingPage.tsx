@@ -78,7 +78,7 @@ const pricingPlans = [
     price: "€12.90",
     period: "/Monat",
     features: [
-      "Alle 1.200+ BMS-Fragen",
+      "Alle 1.060+ BMS-Fragen",
       "Adaptives Lernsystem",
       "Unbegrenzte Simulationen",
       "Stichwortlisten-Tracking",
@@ -243,7 +243,7 @@ export default function LandingPage() {
             className="grid grid-cols-3 gap-6 sm:gap-8 max-w-lg mx-auto mt-16 sm:mt-20"
           >
             {[
-              { value: "1.200+", label: "Übungsfragen" },
+              { value: "1.060+", label: "Übungsfragen" },
               { value: "106", label: "Stichworte" },
               { value: "4", label: "MedAT-Bereiche" },
             ].map((stat, i) => (

@@ -373,7 +373,7 @@ export const useStore = create<AppState>()(
       lastActiveAt: "",
       errorEvents: [] as ErrorEvent[],
       isPro: false,
-      hasCompletedMedATOnboarding: false,
+      hasCompletedMedATOnboarding: import.meta.env.DEV ? true : false,
       skillRating: 500,
       kffFailedTasks: {},
       kffDomainIntroSeen: {},

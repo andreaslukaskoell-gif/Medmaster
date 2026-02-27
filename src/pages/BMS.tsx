@@ -170,13 +170,13 @@ export default function BMS() {
       setLastPath(pathForSubject(selectedSubject));
       const subjectData = subjects.find((s) => s.id === selectedSubject);
       setBreadcrumbs([
-        { label: "Dashboard", href: "/" },
+        { label: "Dashboard", href: "/dashboard" },
         { label: "BMS", href: "/bms" },
         { label: subjectData?.label ?? selectedSubject, href: pathForSubject(selectedSubject) },
       ]);
     } else {
       setLastPath("/bms");
-      setBreadcrumbs([{ label: "Dashboard", href: "/" }, { label: "BMS" }]);
+      setBreadcrumbs([{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]);
     }
   }, [activeKapitel, selectedSubject, setBreadcrumbs, setLastPath]);
 
@@ -418,7 +418,7 @@ export default function BMS() {
   if (error && supabaseChapters.length === 0) {
     return (
       <div className="max-w-6xl mx-auto p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
         <PageError message={error} onRetry={() => window.location.reload()} />
       </div>
     );
@@ -428,7 +428,7 @@ export default function BMS() {
   if (isLoading && supabaseChapters.length === 0) {
     return (
       <div className="max-w-6xl mx-auto space-y-6 p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
         <PageLoadingSkeleton />
       </div>
     );
@@ -508,7 +508,7 @@ export default function BMS() {
         <div className="max-w-5xl mx-auto p-6">
           <BreadcrumbNav
             items={[
-              { label: "Dashboard", href: "/" },
+              { label: "Dashboard", href: "/dashboard" },
               { label: "BMS", href: "/bms" },
               { label: subjectData.label },
             ]}
@@ -556,7 +556,7 @@ export default function BMS() {
       <div className="max-w-5xl mx-auto space-y-6 p-6">
         <BreadcrumbNav
           items={[
-            { label: "Dashboard", href: "/" },
+            { label: "Dashboard", href: "/dashboard" },
             { label: "BMS", href: "/bms" },
             { label: subjectData.label },
           ]}
@@ -755,7 +755,7 @@ export default function BMS() {
   const filterParam = searchParams.get("filter");
   return (
     <div className="max-w-4xl mx-auto space-y-8 px-6 py-8">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "BMS" }]} />
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
 
       {/* filter=due banner */}
       {filterParam === "due" && (

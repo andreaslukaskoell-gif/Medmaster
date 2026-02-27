@@ -7,6 +7,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getTasksForUserOrFill, taskToData } from "@/lib/taskDb";
+import { supabase } from "@/lib/supabase";
 import { useStore } from "@/store/useStore";
 import type { Task } from "@/lib/taskDb/types";
 import type { SequenceTask } from "@/data/kffZahlenfolgenMedAT";
@@ -92,25 +93,26 @@ export default function PlacementTest() {
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      // 1. Try Supabase task DB
+      // 1. Try Supabase task DB (skip if no connection)
       let dbTasks: Task[] = [];
-      try {
-        const zf = await getTasksForUserOrFill("kff-zahlenfolgen", INITIAL_RATING, 5, 200);
-        const imp = await getTasksForUserOrFill("kff-implikationen", INITIAL_RATING, 5, 200);
-        const combined = [...zf, ...imp].sort(() => Math.random() - 0.5);
-        for (const t of combined) {
-          if (t.type === "sequence") {
-            const data = taskToData<SequenceTask>(t);
-            if (filterValidSequenceTasks([data]).length > 0) dbTasks.push(t);
-          } else if (t.type === "implikationen") {
-            const data = taskToData<ImplikationTask>(t);
-            if (filterValidImplikationTasks([data]).length > 0) dbTasks.push(t);
+      if (supabase)
+        try {
+          const zf = await getTasksForUserOrFill("kff-zahlenfolgen", INITIAL_RATING, 5, 200);
+          const imp = await getTasksForUserOrFill("kff-implikationen", INITIAL_RATING, 5, 200);
+          const combined = [...zf, ...imp].sort(() => Math.random() - 0.5);
+          for (const t of combined) {
+            if (t.type === "sequence") {
+              const data = taskToData<SequenceTask>(t);
+              if (filterValidSequenceTasks([data]).length > 0) dbTasks.push(t);
+            } else if (t.type === "implikationen") {
+              const data = taskToData<ImplikationTask>(t);
+              if (filterValidImplikationTasks([data]).length > 0) dbTasks.push(t);
+            }
+            if (dbTasks.length >= PLACEMENT_COUNT) break;
           }
-          if (dbTasks.length >= PLACEMENT_COUNT) break;
+        } catch {
+          // Supabase unavailable — fall through to local fallback
         }
-      } catch {
-        // Supabase unavailable — fall through to local fallback
-      }
 
       if (cancelled) return;
 
