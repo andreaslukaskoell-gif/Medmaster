@@ -36,7 +36,7 @@ Ein Patient erhält eine Glucose-Infusion: 500 mL einer 5%-Lösung. Wie viele Gl
 
 ---
 
-{{DIAGRAM:molecular-structure}}
+{{DIAGRAM:periodic-table}}
 
 ## Das Mol — die SI-Einheit der Stoffmenge
 
@@ -133,7 +133,7 @@ Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Um das zu verste
       ],
       klinischerBezug:
         "In der Klinik werden Medikamentendosen in mg oder g angegeben, Laborwerte jedoch oft in mmol/L (z. B. Glucose: 3,9–5,5 mmol/L nüchtern). Das Mol-Konzept ist unentbehrlich für die Umrechnung zwischen Masse- und Stoffmengenkonzentration. Infusionslösungen (z. B. Glucose 5 %, NaCl 0,9 %) werden über n = m/M auf ihren molaren Gehalt berechnet, um isotone Bedingungen sicherzustellen.",
-      diagram: "molecular-structure",
+      diagram: "periodic-table",
       selfTest: [
         {
           question: "Wie viel Mol Glucose (M = 180 g/mol) sind in 36 g Glucose enthalten?",
@@ -246,7 +246,7 @@ Bei einer Überdosierung mit Magensäure-bedingten Beschwerden verschreibt der A
 
 ---
 
-{{DIAGRAM:reaction-energy-diagram}}
+{{DIAGRAM:thermodynamics}}
 
 ## Chemische Reaktionsgleichungen
 
@@ -277,7 +277,7 @@ Die Koeffizienten (1, 2, 1, 2) geben die **Stoffmengenverhältnisse** an: 1 mol 
 Beispiel — Neutralisation: **Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O**
 - Mg: 1 = 1 ✓, O: 2 = 2 ✓, H: 2+2 = 4 = 4 ✓, Cl: 2 = 2 ✓
 
-{{DIAGRAM:molecular-structure}}
+{{DIAGRAM:periodic-table}}
 
 ## Stöchiometrisches Rechnen
 
@@ -364,7 +364,7 @@ Bisher haben wir gelernt, wie Mengenbeziehungen in Reaktionen funktionieren. Um 
       ],
       klinischerBezug:
         "Stöchiometrische Berechnungen sind in der Pharmazie (Wirkstoff-Synthese, Dosierung) und Klinik allgegenwärtig. Antacida neutralisieren Magensäure in definiertem Molverhältnis. Der respiratorische Quotient (RQ) — das stöchiometrische Verhältnis CO₂/O₂ — gibt Auskunft über den Substratmix der Energiegewinnung (RQ = 1,0 für KH, 0,7 für Fette). In der Dialyse wird die Harnstoff-Clearance stöchiometrisch aus der Dialysatmenge berechnet.",
-      diagram: "reaction-energy-diagram",
+      diagram: "thermodynamics",
       selfTest: [
         {
           question:
@@ -491,7 +491,7 @@ Ein Arzt ordnet eine „NaCl 0,9 %-Infusion" an — eine der häufigsten Anordnu
 
 ---
 
-{{DIAGRAM:molecular-structure}}
+{{DIAGRAM:periodic-table}}
 
 ## Konzentrationsangaben im Überblick
 
@@ -633,7 +633,7 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)
       ],
       klinischerBezug:
         "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol).",
-      diagram: "molecular-structure",
+      diagram: "periodic-table",
       selfTest: [
         {
           question:
@@ -807,7 +807,7 @@ Deshalb wird NaCl als Streusalz verwendet! CaCl₂ (i = 3) ist noch wirksamer: �
 
 > **Merke:** K_f(Wasser) = 1,86 °C·kg/mol (≈ 2); K_b(Wasser) = 0,512 °C·kg/mol (≈ 0,5). Gefrierpunktserniedrigung ist ca. 3,6× stärker als Siedepunktserhöhung — daher für Messzwecke bevorzugt (Kryoskopie).
 
-{{DIAGRAM:reaction-energy-diagram}}
+{{DIAGRAM:thermodynamics}}
 
 ---
 

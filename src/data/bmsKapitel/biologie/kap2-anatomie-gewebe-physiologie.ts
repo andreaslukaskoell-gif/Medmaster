@@ -1284,8 +1284,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-{{DIAGRAM:sinnesorgane}}
-
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
 **Um die Sinnesorgane zu vergleichen,** betrachten wir zuerst das gemeinsame Prinzip: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
@@ -1572,8 +1570,6 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
 {{DIAGRAM:hormonsystem}}
 
 {{DIAGRAM:menstrual-cycle}}
-
-{{DIAGRAM:hormonsystem}}
 
 ## Hormonklassen und Wirkungsmechanismen
 

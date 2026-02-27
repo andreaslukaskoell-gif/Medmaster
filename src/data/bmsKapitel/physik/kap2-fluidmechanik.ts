@@ -23,7 +23,7 @@ export const physKapFluid: Kapitel = {
         "Herzhöhe",
         "hydraulische Presse",
       ],
-      diagram: "newton-forces",
+      diagram: "coordinate-system",
       content: `## Einleitung
 
 Warum muss die Blutdruckmanschette immer auf Herzhöhe angelegt werden? Die Antwort liefert die **Hydrostatik** — die Physik des Drucks in ruhenden Flüssigkeiten. Jeder Zentimeter Höhenunterschied erzeugt einen messbaren Druckunterschied, der in der Medizin über korrekte oder falsche Diagnosen entscheiden kann.
@@ -37,9 +37,9 @@ Warum muss die Blutdruckmanschette immer auf Herzhöhe angelegt werden? Die Antw
 
 ---
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:coordinate-system}}
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:geometric-shapes}}
 
 ## Druck — Wiederholung und Grundbegriff
 
@@ -301,7 +301,7 @@ Warum schwimmt ein Stahlschiff, obwohl Stahl dichter als Wasser ist? Und warum k
 
 {{DIAGRAM:newton-forces}}
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:geometric-shapes}}
 
 ## Archimedisches Prinzip
 
@@ -544,7 +544,7 @@ Typ-II-Pneumozyten produzieren **Surfactant** — eine Mischung aus Phospholipid
         "Strömungsgeräusche",
         "Volumenstrom",
       ],
-      diagram: "newton-forces",
+      diagram: "thermodynamics",
       content: `## Einleitung
 
 Warum hört man bei einer Gefäßstenose mit dem Stethoskop ein Strömungsgeräusch? Warum platzt ein Aneurysma leichter als ein normales Gefäß? Die Antworten liefern die **Kontinuitätsgleichung** und die **Bernoulli-Gleichung** — zwei Grundpfeiler der Strömungsmechanik, die im MedAT regelmäßig abgefragt werden.
@@ -558,9 +558,9 @@ Warum hört man bei einer Gefäßstenose mit dem Stethoskop ein Strömungsgeräu
 
 ---
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:thermodynamics}}
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:coordinate-system}}
 
 ## Ideale Fluide und Volumenstrom
 
@@ -834,7 +834,7 @@ Dabei ist d der Rohrdurchmesser und η die dynamische Viskosität.
         "Blut als Fluid",
         "Scherverdünnung",
       ],
-      diagram: "newton-forces",
+      diagram: "circuit",
       content: `## Einleitung
 
 Warum sinkt der Blutfluss bei einer Arteriosklerose so dramatisch — selbst bei nur geringer Gefäßverengung? Die Antwort liegt im **Hagen-Poiseuille-Gesetz**: Der Volumenstrom hängt von der **vierten Potenz** des Radius ab. Eine Halbierung des Radius reduziert den Fluss auf **1/16** — das hat enorme klinische Konsequenzen!
@@ -848,9 +848,9 @@ Warum sinkt der Blutfluss bei einer Arteriosklerose so dramatisch — selbst bei
 
 ---
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:circuit}}
 
-{{DIAGRAM:newton-forces}}
+{{DIAGRAM:coordinate-system}}
 
 ## Viskosität — innere Reibung von Fluiden
 
