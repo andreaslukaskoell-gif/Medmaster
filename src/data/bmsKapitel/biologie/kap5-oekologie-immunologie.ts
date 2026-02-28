@@ -691,6 +691,67 @@ Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konk
       ],
       content: `## Einleitung
 
+Stell dir zwei Imbissbuden nebeneinander vor, die beide Doener verkaufen. Sie konkurrieren um dieselben Kunden -- irgendwann muss eine aufgeben. Genau so funktioniert Konkurrenz in der Natur. Aber es gibt auch Zusammenarbeit: Der Pilz hilft der Pflanze, und die Pflanze fuettert den Pilz.
+
+**In diesem Kapitel lernst du:**
+- was intraspezifische und interspezifische Konkurrenz bedeuten
+- das Gauss-Prinzip: Gleiche Nische → eine Art verdraengt die andere
+- die Vorzeichen der Symbioseformen
+- wie Raeuber-Beute-Zyklen funktionieren
+
+---
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+## Konkurrenz: innerhalb und zwischen Arten
+
+**Konkurrenz** entsteht, wenn zwei um das Gleiche kaempfen (Nahrung, Platz, Partner).
+
+- **Intraspezifisch** = innerhalb einer Art (z. B. zwei Hirsche kaempfen um ein Revier)
+- **Interspezifisch** = zwischen Arten (z. B. Fuchs und Marder jagen dieselben Maeuse)
+
+**Gauss-Prinzip (1934):** Zwei Arten mit exakt derselben Nische koennen nicht dauerhaft zusammenleben. Im Experiment mit Pantoffeltierchen hat eine Art die andere komplett verdraengt.
+
+> **Merke:** Intraspezifisch = innerhalb einer Art. Interspezifisch = zwischen Arten. Gleiche Nische → eine Art gewinnt.
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Symbioseformen: Wer gewinnt, wer verliert?
+
+Jede Beziehung in der Natur hat Vorzeichen (+ Nutzen, - Schaden, 0 neutral):
+
+| Interaktion | Partner 1 | Partner 2 | Beispiel |
+|-------------|--------|--------|----------|
+| **Mutualismus** | + | + | Pilz + Pflanze (Mykorrhiza) -- beide profitieren |
+| **Kommensalismus** | + | 0 | Vogel sitzt auf Kuh -- Vogel profitiert, Kuh egal |
+| **Parasitismus** | + | - | Zecke saugt Blut -- Zecke profitiert, Wirt leidet |
+| **Praedation** | + | - | Fuchs frisst Hase -- Fuchs profitiert, Hase stirbt |
+| **Konkurrenz** | - | - | Beide leiden -- Kampf um dieselbe Ressource |
+
+**Wichtig:** Parasit und Raeuber sind beide +/-, aber der **Parasit toetet den Wirt nicht sofort**. Der **Raeuber toetet die Beute direkt**.
+
+> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/-), Praedation (+/-), Konkurrenz (-/-).
+
+---
+
+## Raeuber-Beute-Zyklen (Lotka-Volterra)
+
+Raeuber und Beute schwanken zyklisch: Viel Beute → Raeuber vermehren sich → Beute wird dezimiert → Raeuber verhungern → Beute erholt sich → Zyklus wiederholt sich. Wichtig: Die **Raeuberpopulation hinkt der Beute zeitlich hinterher**.
+
+> **Merke:** Raeuber-Beute: zyklisches Schwanken; Raeuber hinkt der Beute nach.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Intraspezifische Konkurrenz** = innerhalb einer Art; **interspezifische** = zwischen Arten
+- **Gauss:** Identische Nische → eine Art verdraengt die andere
+- **Mutualismus** (+/+), **Kommensalismus** (+/0), **Parasitismus** (+/-), **Praedation** (+/-). Parasit toetet nicht sofort.
+- **Raeuber-Beute:** Zyklen; Raeuberpopulation hinkt Beute zeitlich nach`,
+      contentExtended: `## Einleitung
+
 Warum können zwei Bakterienarten nicht dauerhaft denselben Nährboden besiedeln, wenn sie exakt dasselbe fressen? Gauß hat das 1934 mit Pantoffeltierchen gezeigt -- und das Prinzip gilt genauso für Krankenhauskeime. Gleichzeitig existieren in der Natur unzählige Formen des Zusammenlebens: Pilze, die Pflanzen beim Wachsen helfen, Zecken, die Blut saugen, und Luchse, deren Populationsgipfel immer ein paar Jahre hinter dem der Schneehasen herhinkt. Dieses Kapitel klärt, welche Vorzeichen hinter welcher Beziehung stecken.
 
 **In diesem Kapitel lernst du:**
@@ -875,6 +936,71 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
         "Trophieebenen",
       ],
       content: `## Einleitung
+
+Stell dir vor, ein Feld produziert 10.000 Kalorien Pflanzenmaterial. Das Rind, das davon frisst, behaelt nur 1.000. Und du, der das Steak isst, bekommst gerade einmal 100. Warum? Weil auf jeder Stufe der Nahrungskette rund 90 % als Waerme verloren gehen. Diese einfache Rechnung erklaert, warum es viel mehr Pflanzen als Raubtiere gibt.
+
+**In diesem Kapitel lernst du:**
+- wie Nahrungsketten und Nahrungsnetze aufgebaut sind
+- warum auf jeder Stufe 90 % der Energie verloren gehen (10%-Regel)
+- was GPP und NPP bedeuten
+- warum Phosphor als einziger Kreislauf kein Gas-Reservoir hat
+
+---
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+## Trophieebenen -- Wer frisst wen?
+
+In jedem Oekosystem gibt es Ernaehrungsstufen:
+
+- **Produzenten** (Stufe 1): Pflanzen, Algen -- sie machen aus Sonnenlicht Biomasse (Photosynthese)
+- **Primaerkonsumenten** (Stufe 2): Pflanzenfresser (Rehe, Raupen)
+- **Sekundaerkonsumenten** (Stufe 3): Fleischfresser, die Pflanzenfresser jagen (Froesche, kleine Fische)
+- **Tertiaerkonsumenten** (Stufe 4): Top-Raeuber (Adler, Haie)
+- **Destruenten:** Pilze und Bakterien, die totes Material zersetzen und Naehrstoffe zurueckgeben
+
+Eine **Nahrungskette** (Gras → Hase → Fuchs) ist vereinfacht. In der Realitaet bilden die Beziehungen ein **Nahrungsnetz** mit vielen Querverbindungen.
+
+> **Merke:** Produzenten → Konsumenten I → II → III → Destruenten. Nahrungsnetz ist realistischer als Nahrungskette.
+
+---
+
+## Die 10%-Regel
+
+{{DIAGRAM:double-membrane-organelles}}
+
+Auf jeder Stufe gehen ca. **90 %** der Energie als Waerme verloren (Atmung, Bewegung, unverdauliche Teile). Nur **10 %** erreichen die naechste Stufe.
+
+**Rechenbeispiel:** 10.000 kJ Pflanze → 1.000 kJ Heuschrecke → 100 kJ Frosch → 10 kJ Schlange → 1 kJ Adler. Deshalb gibt es selten mehr als 4-5 Stufen.
+
+**GPP und NPP:**
+- **GPP** (Brutto-Primaerproduktion) = Gesamte Photosynthese
+- **NPP** (Netto-Primaerproduktion) = GPP minus Eigenatmung der Pflanze = fuer Konsumenten verfuegbar
+
+> **Merke:** 10%-Regel: ~10 % Energie pro Stufe weiter. Vegetarische Ernaehrung ist 10x effizienter als Fleisch.
+
+---
+
+## Stoffkreislaeufe (Kurzueberblick)
+
+Energie fliesst **einseitig** (Sonne → Waerme), aber **Materie kreist**:
+
+- **Kohlenstoffkreislauf:** CO2 → Photosynthese → Biomasse → Zellatmung → CO2. Ozeane als groesstes Reservoir.
+- **Stickstoffkreislauf:** N2-Fixierung (Rhizobien) → Ammonifikation → Nitrifikation → Denitrifikation → N2
+- **Phosphorkreislauf:** Hat als einziger **kein Gas-Reservoir**. Phosphor ist oft limitierend in Suesswasser. Zuviel Phosphat → Eutrophierung → Algenblüte → Sauerstoffmangel → Fischsterben
+
+> **Merke:** Phosphorkreislauf: kein gasfoermiges Reservoir! Limitierend in Suesswasser. Phosphatueberschuss → Eutrophierung.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Trophiestufen:** Produzenten → Konsumenten I, II, III → Destruenten
+- **10%-Regel:** ~90 % Energie geht als Waerme verloren
+- **NPP** = GPP - Eigenatmung = fuer Konsumenten verfuegbar
+- **Phosphorkreislauf:** einziger ohne Gas-Reservoir; limitierend in Suesswasser
+- **Eutrophierung:** Phosphatueberschuss → Algenblüte → O2-Abbau → Fischsterben`,
+      contentExtended: `## Einleitung
 
 Stell dir vor, ein Feld produziert 10.000 Kilokalorien Pflanzenmaterial. Davon kommen beim Rind nur 1.000 an, und beim Menschen, der das Steak isst, gerade einmal 100. Warum? Weil auf jeder Stufe der Nahrungskette rund 90 % der Energie als Wärme verloren gehen. Diese einfache Rechnung -- die 10%-Regel -- erklärt, warum es auf der Erde so viel mehr Pflanzen als Raubtiere gibt und warum vegetarische Ernährung zehnmal effizienter ist.
 
@@ -1150,6 +1276,67 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
       ],
       content: `## Einleitung
 
+Stell dir vor, ein Vulkan bricht aus und bedeckt alles mit Lava. Kein Boden, kein Samen, kein Leben. Und trotzdem steht dort Jahrhunderte spaeter ein Wald. Dieser Wiederaufbau heisst **Sukzession**. Gleichzeitig fragt man sich: Warum ist kein See jemals komplett mit Bakterien gefuellt, obwohl die sich alle 20 Minuten verdoppeln? Weil Ressourcen begrenzt sind.
+
+**In diesem Kapitel lernst du:**
+- den Unterschied zwischen primaerer und sekundaerer Sukzession
+- was die Klimaxgesellschaft ist
+- exponentielles vs. logistisches Wachstum und die Kapazitaetsgrenze K
+- r-Strategen vs. K-Strategen
+
+---
+
+{{DIAGRAM:cell-cycle}}
+
+## Sukzession: Natur baut sich wieder auf
+
+**Sukzession** = die schrittweise Besiedlung einer Flaeche ueber die Zeit.
+
+**Primaere Sukzession:** Startet auf voellig nacktem Boden (Lava, Gletscher). Zuerst kommen **Pionierorganismen** wie Flechten und Moose, die Gestein zersetzen und Humus bilden. Dann Graeser, Straeucher, und irgendwann Baeume. Das dauert Jahrhunderte.
+
+**Sekundaere Sukzession:** Startet nach einer Stoerung, bei der der Boden noch da ist (z. B. Waldbrand, Sturmwurf). Geht **schneller**, weil Naehrstoffe und Samen schon vorhanden sind.
+
+**Klimaxgesellschaft:** Das stabile Endstadium (z. B. Buchenwald in Mitteleuropa).
+
+| Typ | Ausgangslage | Geschwindigkeit |
+|-----|--------------|-----------------|
+| **Primaer** | Nacktes Substrat (Lava) | Langsam |
+| **Sekundaer** | Boden + Samen vorhanden | Schneller |
+
+> **Merke:** Primaer = nacktes Substrat, Flechten zuerst. Sekundaer = Boden da, schneller. Endstadium = Klimaxgesellschaft.
+
+---
+
+{{DIAGRAM:pedigree-analysis}}
+
+## Populationswachstum: J-Kurve und S-Kurve
+
+**Exponentielles Wachstum (J-Kurve):** Wenn Ressourcen unbegrenzt sind, waechst die Population immer schneller. Kommt in der Natur nur kurzfristig vor (z. B. Bakterien in frischem Naehrboden).
+
+**Logistisches Wachstum (S-Kurve):** In der Realitaet werden Ressourcen knapp. Die Population naehert sich einer **Kapazitaetsgrenze K** -- der maximalen Anzahl, die das Habitat tragen kann. Bei N = K ist das Wachstum null.
+
+> **Merke:** Exponentiell = J-Kurve, unbegrenzte Ressourcen. Logistisch = S-Kurve, K = Kapazitaetsgrenze.
+
+---
+
+## r-Strategen und K-Strategen
+
+Zwei Ueberlebensstrategien:
+
+- **r-Strategen:** Viele Nachkommen, wenig Brutpflege, kurze Generation. Beispiele: Insekten, Maeuse, Loewenzahn. Ueberleben durch **Quantitaet**.
+- **K-Strategen:** Wenige Nachkommen, intensive Brutpflege, lange Generation. Beispiele: Elefant, Mensch, Adler. Ueberleben durch **Qualitaet**.
+
+> **Merke:** r = viele Kinder, wenig Fuersorge. K = wenige Kinder, viel Fuersorge.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Primaere Sukzession:** nacktes Substrat → Flechten → Klimax. **Sekundaere:** Boden da → schneller.
+- **Exponentiell:** J-Kurve. **Logistisch:** S-Kurve, Annaeherung an K.
+- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege.`,
+      contentExtended: `## Einleitung
+
 Nach einem Vulkanausbruch bleibt nur nackte Lava zurück -- kein Boden, kein Samen, kein Leben. Trotzdem stehen Jahrhunderte später Wälder an derselben Stelle. Dieser vorhersagbare Wiederaufbau heißt Sukzession. Gleichzeitig stellt sich die Frage, wie schnell eine Population wachsen kann: Bakterien verdoppeln sich alle 20 Minuten, aber kein See ist jemals vollständig mit Bakterien gefüllt. Den Unterschied zwischen unbegrenztem Wachstum und der Realität beschreibt die Kapazitätsgrenze K.
 
 **In diesem Kapitel lernst du:**
@@ -1307,6 +1494,71 @@ Zwei grundlegende Lebensstrategien:
         "Neutralisierung",
       ],
       content: `## Einleitung
+
+Stell dir vor, ein Virus dringt in deinen Koerper ein. Dein Immunsystem muss es irgendwie markieren -- wie ein Etikett, das sagt: "Hier, Fresszelle, das musst du beseitigen." Genau das tun **Antikoerper**. Sie sind Y-foermige Proteine: Die oberen Arme (Fab) erkennen den Eindringling, der Stamm (Fc) ruft die Fresszellen.
+
+**In diesem Kapitel lernst du:**
+- warum Antikoerper Y-foermig sind und was Fab und Fc machen
+- die fuenf Immunglobulin-Klassen (IgG, IgM, IgA, IgE, IgD)
+- warum IgM auf eine akute Infektion hinweist und IgG auf eine durchgemachte
+- welches Ig als einziges die Plazenta passieren kann (IgG)
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Antikoerper-Aufbau: Das Y
+
+Ein Antikoerper besteht aus **2 schweren + 2 leichten Ketten**, verbunden durch Disulfidbruecken:
+
+- **Fab-Region** (die zwei Arme): Hier sitzt die **Antigenbindestelle** -- hochspezifisch, wie ein Schluessel zum Schloss
+- **Fc-Region** (der Stamm): Hier docken Fresszellen an. Bestimmt auch die Antikoerper-Klasse.
+
+**Was Antikoerper tun:**
+- **Neutralisierung:** Fab blockiert das Virus direkt
+- **Opsonisierung:** IgG markiert Erreger → Fresszellen erkennen die Markierung und fressen den Erreger
+- **Komplementaktivierung:** IgM/IgG loesen eine Zerstoerungskaskade aus (MAC → Loch in der Bakterienwand)
+
+> **Merke:** Fab = variabel (Antigenerkennung). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplement, Plazentatransfer).
+
+---
+
+{{DIAGRAM:blood-groups}}
+
+## Die fuenf Immunglobulin-Klassen
+
+| Klasse | Wo? | Besonderheit |
+| --- | --- | --- |
+| **IgG** | Blut (75%) | Haeufigster Ak, einziger der die Plazenta passiert → Schutz fuers Baby |
+| **IgA** | Sekrete (Speichel, Muttermilch) | Schuetzt Schleimhaeute |
+| **IgM** | Blut | Pentamer (5 Y-Einheiten), erster Responder bei Infektion |
+| **IgE** | Wenig im Blut | Allergie (Mastzellen), Parasitenabwehr |
+| **IgD** | B-Zell-Oberflaeche | Signal fuer B-Zell-Aktivierung |
+
+**Merkhilfe:** IgM = akute Infektion (M wie "Momentan krank"). IgG = durchgemacht oder geimpft (G wie "Geschichte").
+
+> **Merke:** IgM = Primaer (akut), IgG = Sekundaer (dauerhaft, plazentagaengig), IgA = Schleimhaut, IgE = Allergie.
+
+---
+
+{{DIAGRAM:blutbestandteile}}
+
+## Komplementsystem (Kurzueberblick)
+
+Das Komplementsystem sind ca. 30 Proteine im Blut, die eine Zerstoerungskaskade bilden: C1q bindet an IgG/IgM → C3b markiert Erreger (Opsonin) → MAC bohrt Loecher in Bakterien → Lyse.
+
+> **Merke:** Komplement: C3b = Opsonisierung; MAC = Lyse. Klassischer Weg ueber IgG/IgM.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- Antikoerper: Y-Form; **Fab** (Antigenerkennung) + **Fc** (Effektorfunktionen)
+- **IgG:** haeufigster, plazentagaengig, Sekundaerantwort
+- **IgM:** Pentamer, erster Responder, Primaer, akute Infektion
+- **IgA:** Schleimhaeute/Sekrete; **IgE:** Allergie; **IgD:** B-Zell-Signal
+- Serologie: IgM = akut, IgG = durchgemacht/geimpft`,
+      contentExtended: `## Einleitung
 
 Wenn ein Virus in deinen Körper eindringt, muss das Immunsystem es irgendwie markieren -- wie ein Etikett, das sagt: “Hier, Fresszelle, das musst du beseitigen.” Genau das tun Antikörper. Sie sind Y-förmige Proteine, deren obere Arme (Fab) das Virus erkennen und deren Stamm (Fc) den Fresszellen signalisiert: “Zugreifen!” Ob ein Arzt bei dir eine akute Infektion oder eine durchgemachte Erkrankung feststellt, hängt davon ab, welche Antikörperklasse er im Blut findet -- IgM oder IgG.
 
@@ -1535,6 +1787,67 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `## Einleitung
 
+Dein Koerper kann Antikoerper gegen praktisch alles bilden -- gegen Pollen, neue Viren, sogar kuenstliche Molekuele. Aber du hast nur 20.000 Gene. Wie schafft dein Immunsystem ueber 10 Milliarden verschiedene Antikoerper? Die Antwort: **V(D)J-Rekombination** -- ein molekulares Kartenmischen.
+
+**In diesem Kapitel lernst du:**
+- wie aus wenigen Gensegmenten Milliarden Antikoerper entstehen
+- was klonale Selektion bedeutet
+- warum die Sekundaerantwort schneller und staerker ist
+- wie Antikoerper in Keimzentren immer besser werden (Affinitaetsreifung)
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## V(D)J-Rekombination -- Das Kartenmischen
+
+Stell dir drei Kartenstapel vor: **V** (Variable), **D** (Diversity), **J** (Joining). Aus jedem Stapel wird zufaellig eine Karte gezogen und zusammengesetzt. Allein die Kombinationsmoeglichkeiten sind riesig. Zusaetzlich fuegt ein Enzym (TdT) an den Schnittstellen zufaellige Buchstaben ein -- das erhoeht die Vielfalt enorm.
+
+- **RAG1/RAG2** schneidet die DNA an den richtigen Stellen
+- **TdT** fuegt zufaellige Nukleotide ein (junctionale Diversitaet)
+- Nur produktive Kombinationen (richtiger Leserahmen) fuehren zu funktionalen Antikoerpern
+
+> **Merke:** V(D)J-Rekombination: RAG1/RAG2 schneidet, TdT fuegt N-Nukleotide ein → ueber 10 Milliarden verschiedene Antikoerper.
+
+---
+
+{{DIAGRAM:dna-helix}}
+
+## Klonale Selektion und Gedaechtniszellen
+
+Jede B-Zelle traegt **vor** dem Kontakt mit einem Erreger schon einen einzigartigen Antikoerper (BCR). Wenn ein Antigen genau zu diesem BCR passt, wird die B-Zelle aktiviert und **klonal expandiert** -- sie teilt sich in viele identische Kopien. Diese werden zu:
+
+- **Plasmazellen:** Produzieren massenhaft Antikoerper
+- **Gedaechtnis-B-Zellen:** Bleiben jahrelang erhalten fuer die naechste Begegnung
+
+> **Merke:** Klonale Selektion: Antigen waehlt passende B-Zelle aus → klonale Expansion → Plasmazellen + Gedaechtnis.
+
+---
+
+{{DIAGRAM:transcription-translation}}
+
+## Affinitaetsreifung und Klassenwechsel
+
+In **Keimzentren** (Lymphknoten, Milz) werden Antikoerper immer besser:
+
+- **Somatische Hypermutation:** Das Enzym AID veraendert die Antigenbindestelle zufaellig. B-Zellen mit besserer Bindung ueberleben, die anderen sterben.
+- **Klassenwechsel (CSR):** Die Antikoerperklasse wechselt (z. B. IgM → IgG), aber die Antigenbindestelle bleibt gleich. Gesteuert durch Zytokine.
+
+Deshalb ist die **Sekundaerantwort** (zweiter Kontakt) schneller, staerker und praeziser -- Gedaechtnis-B-Zellen sind schon da und ihre Antikoerper sind bereits optimiert.
+
+> **Merke:** Affinitaetsreifung: Hypermutation (AID) + Selektion → bessere Antikoerper. Sekundaerantwort = Basis der Impfung.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **V(D)J-Rekombination:** V, D, J-Segmente zufaellig kombiniert → >10 Milliarden Varianten
+- **TdT:** N-Nukleotide an Schnittstellen → junctionale Diversitaet
+- **Klonale Selektion:** Antigen waehlt passende B-Zelle aus → Plasmazellen + Gedaechtnis
+- **Affinitaetsreifung:** Somatische Hypermutation (AID) in Keimzentren → bessere Antikoerper
+- **Sekundaerantwort:** Schneller, staerker, hoehere Affinitaet -- Basis der Impfung`,
+      contentExtended: `## Einleitung
+
 Dein Körper kann Antikörper gegen praktisch jede Substanz bilden -- gegen Pollen, gegen ein neues Virus, sogar gegen Moleküle, die in der Natur gar nicht vorkommen. Das ist erstaunlich, denn das menschliche Genom enthält nur rund 20.000 Gene. Wie schafft es das Immunsystem, mehr als 10 Milliarden verschiedene Antikörper-Varianten zu erzeugen? Die Antwort liegt in einem molekularen Kartenmischen: der V(D)J-Rekombination. Stell dir vor, du hast drei Stapel Spielkarten (V, D, J) und ziehst aus jedem zufällig eine -- schon die Kombinationsmöglichkeiten sind enorm. Dazu kommt noch ein “Joker-Enzym” (TdT), das an den Schnittstellen zufällige Buchstaben einfügt.
 
 **In diesem Kapitel lernst du:**
@@ -1736,6 +2049,72 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## Einleitung
+
+Vor jeder Bluttransfusion gibt es eine lebenswichtige Frage: Vertraegt der Empfaenger das Spenderblut? Gibt man einer Person mit Blutgruppe 0 versehentlich Blut der Gruppe A, kann das toedlich enden. Warum? Wir bilden Antikoerper gegen genau die Blutgruppen, die wir selbst **nicht** haben.
+
+**In diesem Kapitel lernst du:**
+- warum drei Allele vier Blutgruppen ergeben
+- was Kodominanz bei Blutgruppe AB bedeutet
+- wie du Punnett-Quadrate fuer AB0-Kreuzungen aufstellst
+- warum 0 der universelle Spender und AB der universelle Empfaenger ist
+
+---
+
+{{DIAGRAM:blood-groups}}
+
+## AB0-System: Drei Allele, vier Blutgruppen
+
+Das AB0-System wird durch ein Gen mit **drei Allelen** bestimmt:
+
+- **I^A:** Baut A-Antigen auf die roten Blutkoerperchen
+- **I^B:** Baut B-Antigen auf
+- **i0:** Baut kein Antigen auf (Blutgruppe 0)
+
+**Vererbung:** I^A und I^B sind **kodominant** (bei AB werden beide Antigene gleichzeitig exprimiert). Beide sind **dominant** ueber i0.
+
+| Blutgruppe | Genotypen | Antigen | Antikoerper |
+| --- | --- | --- | --- |
+| A | I^A I^A oder I^A i0 | A | Anti-B |
+| B | I^B I^B oder I^B i0 | B | Anti-A |
+| AB | I^A I^B | A + B | Keine |
+| 0 | i0 i0 | Keines | Anti-A + Anti-B |
+
+> **Merke:** Du hast Antikoerper gegen das, was du NICHT hast. Blutgruppe A → Anti-B. Blutgruppe 0 → Anti-A + Anti-B.
+
+---
+
+{{DIAGRAM:pedigree-analysis}}
+
+## Kodominanz -- Beide Allele voll exprimiert
+
+Bei Blutgruppe AB sind **beide** Antigene auf den Erythrozyten vorhanden. Das ist Kodominanz: Keines ueberdeckt das andere. Unterschied zur unvollstaendigen Dominanz (Zwischenstufe) und zur Dominanz/Rezessivitaet (eines ueberdeckt das andere).
+
+**Alltagsbeispiel Punnett-Quadrat:** Vater AB (I^A I^B), Mutter 0 (i0 i0). Vater gibt I^A oder I^B weiter, Mutter immer i0. Kinder: I^A i0 (Blutgruppe A) oder I^B i0 (Blutgruppe B). AB und 0 sind nicht moeglich!
+
+> **Merke:** Kodominanz: I^A und I^B beide voll exprimiert. AB-Elternteil kann kein 0-Kind haben.
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Universeller Spender und Empfaenger
+
+- **0 Rh-negativ** = universeller Spender: Keine A/B-Antigene → kein Angriff durch Empfaenger-Antikoerper
+- **AB Rh-positiv** = universeller Empfaenger: Keine Anti-A/B → greift kein Spenderblut an
+
+In der Praxis trotzdem immer blutgruppenidentisch transfundieren!
+
+> **Merke:** 0-: universeller Spender. AB+: universeller Empfaenger. Inkompatibilitaet → Haemolyse!
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **AB0-System:** 3 Allele (I^A, I^B, i0); I^A und I^B kodominant, beide dominant ueber i0
+- Antikoerper gegen fehlende Antigene: A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A + Anti-B
+- **0 Rh-:** universeller Spender; **AB Rh+:** universeller Empfaenger
+- AB0-Fehltransfusion → akute Haemolyse → lebensbedrohlich`,
+      contentExtended: `## Einleitung
 
 Vor jeder Bluttransfusion stellt sich eine lebenswichtige Frage: Verträgt der Empfänger das Spenderblut? Gibt man einer Person mit Blutgruppe 0 versehentlich Blut der Gruppe A, kann das innerhalb von Minuten zur tödlichen Hämolyse führen. Der Grund: Wir bilden Antikörper gegen genau die Blutgruppen-Antigene, die wir selbst nicht tragen. Die Genetik dahinter ist ein Paradebeispiel für Kodominanz und multiple Allelie -- und ein Klassiker im MedAT.
 
@@ -1961,6 +2340,65 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
         "Anti-D-Prophylaxe",
       ],
       content: `## Einleitung
+
+Warum ist bei einer Schwangerschaft meist das erste Kind gesund, aber das zweite koennte in Gefahr sein? Die Antwort liegt im **Rhesusfaktor**. Ist die Mutter Rh-negativ und das Kind Rh-positiv, "merkt" sich ihr Immunsystem das fremde D-Antigen. Beim zweiten Kind sind dann gefaehrliche IgG-Antikoerper da, die die Plazenta passieren. Zum Glueck kann eine Spritze -- die **Anti-D-Prophylaxe** -- das verhindern.
+
+**In diesem Kapitel lernst du:**
+- warum Rh autosomal dominant vererbt wird (nur dd = Rh-negativ)
+- warum die Gefahr erst ab der zweiten Schwangerschaft entsteht
+- wie die Anti-D-Prophylaxe funktioniert
+- warum IgG die Plazenta passiert, IgM aber nicht
+
+---
+
+{{DIAGRAM:blood-groups}}
+
+## Rhesusfaktor -- Was ist das?
+
+Das **D-Antigen** auf roten Blutkoerperchen bestimmt den Rhesusfaktor:
+
+- **Rh-positiv (Rh+):** D-Antigen vorhanden. Dominant -- ein D-Allel reicht
+- **Rh-negativ (Rh-):** Kein D-Antigen. Nur bei dd (homozygot rezessiv)
+
+Ca. 85 % der Europaeer sind Rh+, 15 % Rh-.
+
+> **Merke:** RhD = autosomal dominant. Rh+ kann DD oder Dd sein. Rh- ist nur dd.
+
+---
+
+{{DIAGRAM:pedigree-analysis}}
+
+## Rhesus-Inkompatibilitaet -- Zwei Phasen
+
+**Phase 1 -- Sensibilisierung (1. Schwangerschaft):**
+Rh-negative Mutter traegt Rh-positives Kind. Bei der Geburt gelangen kindliche Rh+ Erythrozyten ins muetterliche Blut. Die Mutter bildet zunaechst IgM-Antikoerper (die die Plazenta NICHT passieren koennen). Erstes Kind → meist kein Problem.
+
+**Phase 2 -- Reaktion (2. Schwangerschaft):**
+Bei erneutem Rh+ Kind sind jetzt **IgG-Anti-D-Antikoerper** da. IgG passiert die Plazenta (ueber FcRn-Rezeptor) → bindet an kindliche Erythrozyten → **Haemolyse** → schwere Anaemie → schlimmstenfalls Hydrops fetalis.
+
+> **Merke:** 1. Schwangerschaft = Sensibilisierung (IgM, ungefaehrlich). 2. Schwangerschaft = IgG passiert Plazenta → Haemolyse beim Kind.
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Anti-D-Prophylaxe -- Die Loesung
+
+Der Mutter werden **Anti-D-IgG-Antikoerper** gespritzt. Diese binden an die kindlichen Rh+ Erythrozyten im muetterlichen Blut und sorgen fuer deren schnelle Beseitigung durch Fresszellen -- **bevor** das muetterliche Immunsystem selbst reagiert. Keine Sensibilisierung → keine Gefahr bei naechster Schwangerschaft.
+
+**Zeitpunkte:** 28. SSW (vorsorglich) + innerhalb von 72 Stunden nach der Geburt.
+
+> **Merke:** Anti-D-Prophylaxe: 28. SSW + unter 72h nach Geburt. Verhindert Sensibilisierung.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Rhesusfaktor D:** autosomal dominant; dd = Rh-negativ (~15 % Europa)
+- **Rh-Inkompatibilitaet:** 1. Schwangerschaft = Sensibilisierung (IgM); 2. Schwangerschaft = IgG-Anti-D passiert Plazenta → fetale Haemolyse
+- **Anti-D-Prophylaxe:** 28. SSW + unter 72h nach Geburt → keine Sensibilisierung
+- IgG = plazentagaengig (FcRn); IgM = NICHT plazentagaengig (zu gross als Pentamer)`,
+      contentExtended: `## Einleitung
 
 Warum ist bei einer Schwangerschaft meist das erste Kind gesund, aber das zweite könnte in Gefahr sein? Die Antwort liegt im Rhesusfaktor: Trägt eine Rh-negative Mutter ein Rh-positives Kind aus, “merkt” sich ihr Immunsystem das fremde D-Antigen. Beim ersten Kind passiert noch wenig -- die Mutter bildet zunächst IgM, das die Plazenta nicht passieren kann. Doch bei der nächsten Schwangerschaft mit einem Rh-positiven Kind sind bereits IgG-Antikörper da, die durch die Plazenta gelangen und die roten Blutkörperchen des Kindes zerstören. Eine einfache Spritze -- die Anti-D-Prophylaxe -- kann das verhindern.
 

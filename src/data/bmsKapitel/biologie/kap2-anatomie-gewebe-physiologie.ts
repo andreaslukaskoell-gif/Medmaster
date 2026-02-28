@@ -21,9 +21,108 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Flimmerepithel",
         "Apikale Polarität",
       ],
-      content: `## Einleitung
+      content: `## Epithelgewebe -- einfach erklaert
 
-**Worum geht es?** **Epithelgewebe** bedeckt alle inneren und äußeren Oberflächen — Haut, Darm, Gefäße, Harnblase, Atemwege. **Hauptfunktion:** Barriere und gerichteter Transport (Resorption, Sekretion). **Warum für den MedAT relevant?** Die Zuordnung „welches Epithel in welchem Organ“, Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) werden regelmäßig abgefragt. **Welche Fragen werden beantwortet?** „Welches Epithel kleidet die Trachea aus?“; „Urothel — wo?“; „Merokrin vs. apokrin vs. holokrin?“; „Tight Junctions — Funktion?“; „Pseudostratifiziert — was bedeutet das?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Epithelgewebe abgedeckt.
+Stell dir Epithelgewebe wie die Tapete in deiner Wohnung vor: Es bedeckt alle Oberflaechen -- aussen die Haut, innen den Darm, die Blutgefaesse, die Harnblase und die Atemwege. Die Hauptaufgabe ist Schutz und Transport.
+
+**In diesem Kapitel lernst du:**
+- Warum alle Epithelien polar und gefaesslos sind
+- Wie Zellkontakte die Zellen zusammenhalten
+- Welches Epithel in welchem Organ sitzt
+- Wie Druesen ihre Sekrete abgeben
+
+---
+
+{{DIAGRAM:cell-membrane}}
+
+## Drei Grundeigenschaften aller Epithelien
+
+Jede Epithelzelle hat eine **Oberseite** (apikal -- zur Koerperhoehle hin) und eine **Unterseite** (basolateral -- zum Bindegewebe hin). Stell dir das wie ein Spiegelei in der Pfanne vor: Oben und unten sind verschieden. Das nennt man **Polaritaet**. Dadurch koennen Stoffe gezielt in eine Richtung transportiert werden.
+
+Alle Epithelien sitzen auf einer **Basalmembran** -- wie ein Teppich unter der Tapete. Sie verbindet das Epithel mit dem Bindegewebe darunter und besteht aus Kollagen IV und Laminin.
+
+Epithelien haben **keine eigenen Blutgefaesse** (avaskular). Sie werden nur durch Naehrstoffe versorgt, die von unten durchsickern. Deshalb muessen sich Epithelzellen staendig erneuern -- im Duenndarm alle 3-5 Tage.
+
+**Vier wichtige Zellkontakte:**
+- **Tight Junctions**: Sitzen ganz oben (apikal) und dichten den Spalt zwischen den Zellen ab -- wie Silikon zwischen Fliesen. Sie trennen auch die obere von der unteren Membranhaelfte (Fence-Funktion)
+- **Desmosomen**: Halten die Zellen mechanisch zusammen, wie Nieten in einer Jeans
+- **Gap Junctions**: Kleine Kanaele, durch die Ionen direkt zwischen Nachbarzellen fliessen koennen -- wichtig im Herzmuskel, damit sich die Erregung ausbreitet
+- **Hemidesmosomen**: Verankern die Zelle an der Basalmembran
+
+> **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
+
+---
+
+## Welches Epithel sitzt wo?
+
+Epithelien werden nach ihrer **Form** (flach, wuerfelfoermig, saeulenartig) und **Schichtung** (ein- oder mehrschichtig) eingeteilt:
+
+| Epitheltyp | Vorkommen | Funktion |
+|---|---|---|
+| Einschichtiges **Plattenepithel** | Blutgefaesse, Alveolen | Schnelle Diffusion |
+| Einschichtiges **kubisches** Epithel | Schilddruese, Nierentubuli | Sekretion, Resorption |
+| Einschichtiges **Zylinderepithel** | Duenndarm (mit Mikrovilli!) | Resorption |
+| **Mehrreihiges** Flimmerepithel | Trachea, Bronchien | Schleimtransport |
+| Mehrschichtiges **verhorntes** Plattenepithel | Haut (Epidermis) | Mechanischer Schutz |
+| Mehrschichtiges **unverhorntes** Plattenepithel | Speiseroehre, Vagina, Mund | Feuchter Schutz |
+| **Urothel** (Uebergangsepithel) | Harnblase, Harnleiter | Dehnbarkeit |
+
+Ein haeufiger Stolperstein: Das **mehrreihige** (pseudostratifizierte) Epithel in der Trachea **sieht** mehrschichtig aus, ist es aber nicht. Alle Zellen beruehren die Basalmembran -- die Kerne liegen nur auf verschiedenen Hoehen. Stell dir Menschen unterschiedlicher Groesse vor, die alle mit den Fuessen auf dem Boden stehen.
+
+Das **Urothel** in der Harnblase hat spezielle Schirmzellen. Wenn die Blase sich fuellt, flachen sie sich ab -- wie ein Regenschirm, der sich oeffnet. So kann sich die Blase dehnen, ohne zu reissen.
+
+> **Merke:** Pseudostratifiziert ≠ mehrschichtig -- alle Zellen beruehren die Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
+
+---
+
+{{DIAGRAM:stem-cells}}
+
+## Druesen und Sekretionsarten
+
+Viele Epithelzellen bilden **Druesen**. Es gibt zwei Grundtypen: **Exokrine Druesen** haben einen Ausfuehrungsgang (wie ein Wasserhahn), **endokrine Druesen** geben ihr Sekret direkt ins Blut ab (wie Hormone).
+
+Bei exokrinen Druesen unterscheidet man drei Sekretionsarten:
+
+| Typ | Mechanismus | Beispiel |
+|---|---|---|
+| **Merokrin** | Zelle gibt Sekret per Exozytose ab, bleibt intakt | Schweissdruesen, Bauchspeicheldruese -- **haeufigste Form** |
+| **Apokrin** | Die Zellspitze wird abgeschnuert | Milchdruese beim Stillen |
+| **Holokrin** | Die ganze Zelle zerfaellt und wird zum Sekret | **Talgdruesen** -- die Zelle opfert sich sozusagen |
+
+Stell dir das so vor: Merokrin ist wie Seife aus einem Spender (Spender bleibt heil). Holokrin ist wie eine Badebombe -- sie loest sich komplett auf und wird selbst zum Produkt.
+
+**Kartagener-Syndrom:** Bei dieser Erbkrankheit funktionieren die Flimmerhaerchen (Zilien) in den Atemwegen nicht, weil das Motorprotein Dynein defekt ist. Die Folge: Der Schleim wird nicht abtransportiert, chronische Bronchitis entsteht. Bei der Haelfte der Betroffenen liegen die Organe spiegelverkehrt (Situs inversus).
+
+> **Merke:** Merokrin = Exozytose (haeufig). Apokrin = Zellspitze ab. Holokrin = ganze Zelle wird Sekret (Talgdruese). Kartagener: Dynein-Defekt, Zilien bewegen sich nicht.
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Pruefungsfragen:**
+- Trachea-Epithel? Mehrreihiges Flimmerepithel
+- Harnblasen-Dehnung? Urothel mit Schirmzellen
+- Holokrine Sekretion? Talgdruesen
+- Tight Junctions? Apikale Barriere + Fence
+
+**Typische Fallen:**
+- Pseudostratifiziert ≠ mehrschichtig
+- Verhorntes (Haut) vs. unverhorntes (Speiseroehre) Plattenepithel
+- Tight Junctions (Barriere) vs. Gap Junctions (Ionenaustausch)
+- Ca. 85 % aller Karzinome entstehen aus Epithelgewebe
+
+---
+
+## Zusammenfassung
+
+- Epithel ist polar, avaskular und sitzt auf der Basalmembran
+- Zellkontakte: Tight Junctions (Barriere), Desmosomen (Halt), Gap Junctions (Ionenaustausch), Hemidesmosomen (Verankerung)
+- Pseudostratifiziert: Sieht mehrschichtig aus, ist es aber nicht
+- Druesen: merokrin (Exozytose), apokrin (Zellspitze), holokrin (ganze Zelle)
+- Kartagener-Syndrom: Dynein-Defekt, Zilien funktionieren nicht`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** **Epithelgewebe** bedeckt alle inneren und äußeren Oberflächen — Haut, Darm, Gefäße, Harnblase, Atemwege. **Hauptfunktion:** Barriere und gerichteter Transport (Resorption, Sekretion). **Warum für den MedAT relevant?** Die Zuordnung „welches Epithel in welchem Organ", Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) werden regelmäßig abgefragt. **Welche Fragen werden beantwortet?** „Welches Epithel kleidet die Trachea aus?"; „Urothel — wo?"; „Merokrin vs. apokrin vs. holokrin?"; „Tight Junctions — Funktion?"; „Pseudostratifiziert — was bedeutet das?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Epithelgewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **Grundprinzipien** aller Epithelien (Polarität, Basalmembran, avaskulär) und **Zellkontakte** (Tight Junctions, Desmosomen, Gap Junctions, Hemidesmosomen)
@@ -253,9 +352,123 @@ Sekretionsmechanismen exokriner Drüsen:
         "Fibroblasten",
         "Straffes Bindegewebe",
       ],
-      content: `## Einleitung
+      content: `## Binde- und Stuetzgewebe -- einfach erklaert
 
-**Worum geht es?** **Binde- und Stützgewebe** umfasst Gewebe, bei denen die **extrazelluläre Matrix (EZM)** die Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe. **Warum für den MedAT relevant?** Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) werden regelmäßig geprüft; Osteoporose, Arthrose, Skorbut sind Bindegewebserkrankungen. **Welche Fragen werden beantwortet?** „Welcher Kollagentyp in der Basalmembran?“; „Osteoblast vs. Osteoklast?“; „Welche Knorpelart wo?“; „Skorbut — Ursache?“; „Braunes Fett — UCP-1?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Binde- und Stützgewebe abgedeckt.
+Stell dir dein Bindegewebe wie das Geruest eines Hauses vor: Es gibt Traeger (Knochen), flexible Polster (Knorpel), Seile (Sehnen) und Isolierung (Fettgewebe). Das Besondere: Hier bestimmt nicht die Zelle, sondern das Material dazwischen -- die **extrazellulaere Matrix** -- die Eigenschaften.
+
+**In diesem Kapitel lernst du:**
+- Was die extrazellulaere Matrix ist und woraus sie besteht
+- Die vier Kollagentypen und wo du sie findest
+- Wie Knochen staendig umgebaut wird
+- Warum Knorpel so schlecht heilt
+- Den Unterschied zwischen weissem und braunem Fett
+
+---
+
+{{DIAGRAM:stem-cells}}
+
+## Die extrazellulaere Matrix -- das Material zwischen den Zellen
+
+Im Bindegewebe gibt es viel mehr Zwischenmaterial als Zellen. Dieses Material heisst **extrazellulaere Matrix (EZM)** und besteht aus drei Hauptbestandteilen:
+
+- **Kollagenfasern** geben Festigkeit -- wie die Stahlseile in einer Haengebruecke
+- **Elastinfasern** sorgen fuer Elastizitaet -- wie ein Gummiband, das immer zurueckschnappt
+- **Proteoglykane** binden Wasser und polstern gegen Druck ab -- wie ein nasser Schwamm
+
+Die wichtigsten Zellen sind **Fibroblasten** (produzieren die Matrix), **Osteoblasten** (bauen Knochen auf), **Osteoklasten** (bauen Knochen ab) und **Chondrozyten** (Knorpelzellen).
+
+> **Merke:** Bindegewebe = Matrix dominiert ueber Zellen. Kollagen gibt Festigkeit, Proteoglykane polstern gegen Druck.
+
+---
+
+## Kollagen -- das haeufigste Protein deines Koerpers
+
+Kollagen macht etwa 30 % des gesamten Koerperproteins aus. Es besteht aus drei Ketten, die sich wie ein Seil umeinander winden -- die **Tripelhelix**. Fuer die Herstellung braucht dein Koerper **Vitamin C**. Ohne Vitamin C wird das Kollagen instabil, und es kommt zu **Skorbut** -- Zahnfleisch blutet, Wunden heilen schlecht.
+
+Es gibt vier wichtige Typen -- stell dir das wie verschiedene Sorten Seil vor:
+
+| Typ | Wo? | Eigenschaft |
+|---|---|---|
+| **I** | Knochen, Sehnen, Haut | Zugfest -- **haeufigster Typ** |
+| **II** | Knorpel (Gelenke) | Druckresistent |
+| **III** | Gefaesse, Wundheilung | Dehnbar |
+| **IV** | Basalmembran | Netzartig |
+
+> **Merke:** Kollagen I = Knochen/Sehnen. II = Knorpel. III = Gefaesse. IV = Basalmembran. Vitamin C ist fuer die Herstellung unverzichtbar.
+
+---
+
+## Knochen -- staendig im Umbau
+
+Knochen bestehen aus Kollagen I (gibt Flexibilitaet, 30 %) und **Hydroxyapatit** (gibt Haerte, 70 %). Stell dir das vor wie Stahlbeton: Stahl (Kollagen) plus Beton (Mineral).
+
+Dein Koerper baut jedes Jahr etwa 10 % der Knochenmasse um. Dabei arbeiten zwei Zelltypen zusammen:
+
+- **Osteoblasten** bauen Knochen auf (Eselsbruecke: OsteoBlast = Baut)
+- **Osteoklasten** bauen Knochen ab (Eselsbruecke: OsteoKlast = Klaut)
+
+Die Balance wird durch das **RANKL/OPG-System** gesteuert: RANKL aktiviert die Osteoklasten, OPG hemmt sie. **Oestrogen** foerdert OPG und schuetzt so den Knochen. Nach der Menopause sinkt das Oestrogen, RANKL ueberwiegt, und es kann zu **Osteoporose** kommen.
+
+> **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut. Oestrogen schuetzt Knochen. Osteoporose = zu viel Abbau.
+
+---
+
+{{DIAGRAM:animal-cell}}
+
+## Drei Knorpeltypen -- und warum Knorpel schlecht heilt
+
+Alle Knorpeltypen haben etwas gemeinsam: Sie haben **keine Blutgefaesse** (avaskular). Naehrstoffe muessen durch das Gewebe sickern. Das bedeutet: Wenn Knorpel kaputt geht, heilt er kaum -- deshalb ist Arthrose so problematisch.
+
+| Knorpeltyp | Wo? | Eigenschaft |
+|---|---|---|
+| **Hyalin** | Gelenkflaechen, Trachea | Druckfest und glatt |
+| **Faser** | Bandscheiben, Menisken | Zugfest und druckfest |
+| **Elastisch** | Ohrmuschel, Kehldeckel | Biegsam |
+
+Stell dir hyalinen Knorpel wie eine glatte Eisflaeche vor, auf der Gelenke reibungslos gleiten. Faserknorpel ist wie ein stabiles Seil, und elastischer Knorpel wie eine biegsame Gummiplatte.
+
+> **Merke:** Hyalin = Gelenk. Faser = Bandscheibe. Elastisch = Ohr. Alle avaskular = schlechte Heilung!
+
+---
+
+## Fettgewebe -- mehr als nur Energiespeicher
+
+Es gibt zwei Arten von Fettgewebe:
+
+**Weisses Fett** hat einen grossen Fetttropfen pro Zelle -- wie ein prall gefuellter Luftballon. Es speichert Energie und wirkt als Polster. Aber es ist auch ein Hormon-Produzent: **Leptin** meldet dem Gehirn “Ich bin satt”, und **Adiponektin** macht Zellen empfindlicher fuer Insulin.
+
+**Braunes Fett** hat viele kleine Fetttroepfchen und viele Mitochondrien (daher die braune Farbe). Es erzeugt Waerme statt ATP -- dank dem Protein **UCP-1**, das die Atmungskette “kurzschliesst”. Stell dir das vor wie einen Ofen, der Fett verbrennt, um Waerme zu machen. Besonders wichtig bei Neugeborenen, die noch nicht zittern koennen.
+
+> **Merke:** Weisses Fett = Energiespeicher + Leptin. Braunes Fett = Waerme durch UCP-1.
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Pruefungsfragen:**
+- Kollagen I = Knochen und Sehnen (zugfest)
+- Osteoklasten bauen ab (haematopoetischer Ursprung)
+- Knorpel heilt schlecht weil avaskular
+- UCP-1 entkoppelt die Atmungskette im braunen Fett
+
+**Typische Fallen:**
+- Kollagen I (Knochen) und Kollagen II (Knorpel) nicht verwechseln
+- Osteoblasten (mesenchymal, bauen auf) vs. Osteoklasten (haematopoetisch, bauen ab)
+- Weisses Fett (ein Tropfen, Leptin) vs. braunes Fett (viele Mitochondrien, UCP-1)
+
+---
+
+## Zusammenfassung
+
+- EZM = Kollagen + Proteoglykane + Fibronektin, dominiert ueber Zellen
+- Kollagen I (Knochen), II (Knorpel), III (Gefaesse), IV (Basalmembran)
+- Vitamin C noetig fuer Kollagensynthese, Mangel = Skorbut
+- OsteoBlast baut auf, OsteoKlast baut ab, Oestrogen schuetzt
+- Knorpel ist avaskular und heilt deshalb kaum
+- Braunes Fett erzeugt Waerme (UCP-1), weisses Fett speichert Energie (Leptin)`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** **Binde- und Stützgewebe** umfasst Gewebe, bei denen die **extrazelluläre Matrix (EZM)** die Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe. **Warum für den MedAT relevant?** Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) werden regelmäßig geprüft; Osteoporose, Arthrose, Skorbut sind Bindegewebserkrankungen. **Welche Fragen werden beantwortet?** „Welcher Kollagentyp in der Basalmembran?"; „Osteoblast vs. Osteoklast?"; „Welche Knorpelart wo?"; „Skorbut — Ursache?"; „Braunes Fett — UCP-1?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Binde- und Stützgewebe abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - die **extrazelluläre Matrix (EZM)** (Kollagen, Elastin, Proteoglykane) und die wichtigsten Zellen (Fibroblasten, Osteoblasten/Osteoklasten, Chondrozyten)
@@ -523,14 +736,109 @@ Sekretionsmechanismen exokriner Drüsen:
         "Myosin",
         "Querstreifung",
       ],
-      content: `## Einleitung
+      content: `## Muskelgewebe -- einfach erklaert
 
-**Worum geht es?** **Muskelgewebe** ermöglicht Kontraktion; es gibt **drei Typen**: Skelettmuskel (willkürlich), Herzmuskel (unwillkürlich, Pumpe), glatte Muskulatur (unwillkürlich). **Warum für den MedAT relevant?** Sarkomeraufbau (I-Bande, A-Bande, H-Zone), Ca²⁺-Schalter (Troponin/Tropomyosin), Rolle von ATP, Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) und Troponin als Herzinfarkt-Marker werden geprüft. **Welche Fragen werden beantwortet?** „Sarkomer — was wird bei Kontraktion kürzer?“; „Herzmuskel — warum kein Tetanus?“; „ATP — wofür bei Kontraktion?“; „Welcher Muskeltyp hat Gap Junctions?“; „Glatte Muskulatur — Troponin oder Calmodulin?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Muskelgewebe abgedeckt.
+Dein Koerper hat drei Arten von Muskeln: Skelettmuskeln (die du bewusst steuerst, z. B. beim Armheben), den Herzmuskel (pumpt automatisch) und glatte Muskulatur (z. B. im Darm -- arbeitet im Hintergrund). Alle nutzen dasselbe Grundprinzip: Zwei Eiweisse, Aktin und Myosin, gleiten aneinander vorbei wie zwei ineinandergreifende Buersten.
 
 **In diesem Kapitel lernst du:**
-- die **drei Muskeltypen** (Skelett, Herz, glatt) und ihre Steuerung (willkürlich/unwillkürlich)
-- **Sarkomeraufbau** (Z-Scheibe, A-Bande, I-Bande, H-Zone) und **Gleitfilamenttheorie** (bei Kontraktion: I und H kürzer, A konstant)
-- den **Ca²⁺-Schalter** (Troponin/Tropomyosin) und die Rolle von **ATP** (Lösen des Myosins nach dem Kraftschlag; Rigor mortis bei Fehlen)
+- Die drei Muskeltypen und ihre Unterschiede
+- Wie das Sarkomer aufgebaut ist und was sich bei Kontraktion verkuerzt
+- Warum Calcium der “Startschuss” fuer die Kontraktion ist
+- Warum ATP zum Loesen gebraucht wird (und was bei Rigor mortis passiert)
+
+---
+
+{{DIAGRAM:sarkomer}}
+
+## Drei Muskeltypen im Vergleich
+
+| Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
+|---|---|---|---|
+| Steuerung | Willkuerlich | Automatisch | Automatisch |
+| Aussehen | Quergestreift | Quergestreift | Keine Streifen |
+| Kerne | Viele (am Rand) | 1-2 (zentral) | Einer (zentral) |
+| Verbindung | Nervensignal (NMJ) | Gap Junctions | Gap Junctions |
+| Dauerkrampf (Tetanus) | Moeglich | Unmoeglich | Tonisch moeglich |
+
+Der Herzmuskel ist besonders: Er sieht aus wie der Skelettmuskel (quergestreift), arbeitet aber automatisch. Die Zellen sind ueber **Gap Junctions** elektrisch verbunden -- wie Haueser in einer Lichterkette. Dadurch schlaegt das ganze Herz gleichzeitig. Ein Tetanus (Dauerkrampf) ist beim Herzen unmoeglich, weil es nach jedem Schlag eine lange Pause braucht (Refraktaerzeit).
+
+> **Merke:** Herzmuskel = quergestreift + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur hat kein Troponin, sondern Calmodulin.
+
+---
+
+## Das Sarkomer -- die kleinste Einheit der Kontraktion
+
+Das Sarkomer reicht von einer Z-Scheibe zur naechsten. Stell dir das vor wie ein Ziehharmonika-Abschnitt:
+
+- **I-Bande** (hell): Nur Aktin -- wird bei Kontraktion **kuerzer**
+- **A-Bande** (dunkel): Myosin plus ueberlappende Aktinfilamente -- bleibt **immer gleich lang** (das ist die haeufigste Pruefungsfalle!)
+- **H-Zone** (Mitte): Nur Myosin -- **verschwindet** bei voller Kontraktion
+
+Die Filamente gleiten aneinander vorbei wie zwei ineinandergeschobene Kaemme. Sie werden dabei nicht kuerzer -- sie ueberlappen sich nur mehr.
+
+> **Merke:** Bei Kontraktion: I-Bande kuerzer, H-Zone kuerzer, A-Bande bleibt konstant! Filamente gleiten, sie schrumpfen nicht.
+
+---
+
+{{DIAGRAM:action-potential}}
+
+## Calcium als Startschuss
+
+Im Ruhezustand blockiert **Tropomyosin** die Bindungsstellen auf Aktin -- wie ein Riegel vor einer Tuer. Wenn ein Signal kommt, passiert Folgendes:
+
+1. Calcium stroemt aus dem Speicher (sarkoplasmatisches Retikulum) ins Zellinnere
+2. Calcium bindet an **Troponin C** -- der Riegel wird zur Seite geschoben
+3. Myosin kann jetzt an Aktin andocken und zieht daran -- das ist der **Kraftschlag**
+
+Danach muss sich Myosin wieder loesen. Und genau dafuer braucht es **ATP**: ATP bindet an den Myosinkopf und loest ihn vom Aktin. Ohne ATP bleibt Myosin festgeklemmt -- das ist **Rigor mortis** (Totenstarre). Stell dir das vor wie einen Klettverschluss, den du nur mit Energie wieder oeffnen kannst.
+
+Bei der **glatten Muskulatur** (z. B. Darm, Gefaesse) gibt es kein Troponin. Stattdessen bindet Calcium an **Calmodulin**, das dann die MLCK aktiviert -- ein anderer Schalter fuer dasselbe Ergebnis.
+
+> **Merke:** Calcium -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. ATP loest Myosin. Kein ATP = Rigor mortis.
+
+---
+
+## Kraftdosierung
+
+Dein Koerper dosiert die Muskelkraft auf zwei Wegen:
+- **Rekrutierung**: Mehr motorische Einheiten (Nervenzelle + ihre Muskelfasern) werden aktiviert
+- **Frequenz**: Schnellere Signale, sodass sich die Kontraktionen ueberlagern
+
+Feine Muskeln (Finger, Augen) haben kleine Einheiten mit wenigen Fasern -- fuer praezise Bewegungen. Grobe Muskeln (Wade) haben grosse Einheiten mit tausenden Fasern -- fuer rohe Kraft.
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Pruefungsfragen:**
+- Was wird bei Kontraktion kuerzer? I-Bande und H-Zone (A-Bande bleibt!)
+- Wofuer braucht man ATP? Zum Loesen des Myosins von Aktin
+- Warum kein Tetanus am Herzen? Lange Refraktaerzeit
+- Glatte Muskulatur? Calmodulin statt Troponin
+
+**Typische Fallen:**
+- A-Bande bleibt konstant (= Myosinlaenge)
+- ATP = Loesen, nicht Kraftschlag
+- Herzmuskel ist quergestreift, aber einkernig und unwillkuerlich
+- Troponin I/T steigt 3-6 h nach Herzinfarkt im Blut an
+
+---
+
+## Zusammenfassung
+
+- Drei Muskeltypen: Skelett (willkuerlich), Herz (automatisch, Gap Junctions, kein Tetanus), glatt (Calmodulin)
+- Sarkomer: I-Bande und H-Zone werden kuerzer, A-Bande bleibt gleich
+- Calcium loest die Kontraktion aus, ATP loest den Myosinkopf
+- Ohne ATP: Rigor mortis (Totenstarre)
+- Troponin I/T im Blut = Herzinfarktmarker`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** **Muskelgewebe** ermöglicht Kontraktion; es gibt **drei Typen**: Skelettmuskel (willkürlich), Herzmuskel (unwillkürlich, Pumpe), glatte Muskulatur (unwillkürlich). **Warum für den MedAT relevant?** Sarkomeraufbau (I-Bande, A-Bande, H-Zone), Ca2+-Schalter (Troponin/Tropomyosin), Rolle von ATP, Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) und Troponin als Herzinfarkt-Marker werden geprüft. **Welche Fragen werden beantwortet?** "Sarkomer -- was wird bei Kontraktion kuerzer?"; "Herzmuskel -- warum kein Tetanus?"; "ATP -- wofuer bei Kontraktion?"; "Welcher Muskeltyp hat Gap Junctions?"; "Glatte Muskulatur -- Troponin oder Calmodulin?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Muskelgewebe abgedeckt.
+
+**In diesem Kapitel lernst du:**
+- die **drei Muskeltypen** (Skelett, Herz, glatt) und ihre Steuerung (willkuerlich/unwillkuerlich)
+- **Sarkomeraufbau** (Z-Scheibe, A-Bande, I-Bande, H-Zone) und **Gleitfilamenttheorie** (bei Kontraktion: I und H kuerzer, A konstant)
+- den **Ca2+-Schalter** (Troponin/Tropomyosin) und die Rolle von **ATP** (Loesen des Myosins nach dem Kraftschlag; Rigor mortis bei Fehlen)
 - **Herzmuskel** (Gap Junctions, Glanzstreifen, kein Tetanus) und **glatte Muskulatur** (Calmodulin/MLCK statt Troponin)
 
 ---
@@ -539,111 +847,111 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ## Grundprinzip: Die drei Muskeltypen
 
-**Um die folgenden Abschnitte einzuordnen:** Zuerst der Überblick — welche Muskeltypen gibt es und wie unterscheiden sie sich?
+**Um die folgenden Abschnitte einzuordnen:** Zuerst der Ueberblick -- welche Muskeltypen gibt es und wie unterscheiden sie sich?
 
 | Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
 |---|---|---|---|
 | Streifung | Quergestreift | Quergestreift | Keine Sarkomere |
-| Steuerung | **Willkürlich** | Unwillkürlich | Unwillkürlich |
-| Kerne | Mehrkernig (peripher) | **1–2 (zentral)** | Einkernig (zentral) |
+| Steuerung | **Willkuerlich** | Unwillkuerlich | Unwillkuerlich |
+| Kerne | Mehrkernig (peripher) | **1-2 (zentral)** | Einkernig (zentral) |
 | Kopplung | NMJ (ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
-| Ca²⁺-Schalter | **Troponin C** | **Troponin C** | **Calmodulin → MLCK** |
-| Tetanus | Möglich | **Unmöglich** (lange Refraktärzeit) | Tonisch möglich |
-| Biomarker | CK-MM | **Troponin I/T**, CK-MB | — |
+| Ca2+-Schalter | **Troponin C** | **Troponin C** | **Calmodulin -> MLCK** |
+| Tetanus | Moeglich | **Unmoeglich** (lange Refraktaerzeit) | Tonisch moeglich |
+| Biomarker | CK-MM | **Troponin I/T**, CK-MB | -- |
 
-> **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin → Calmodulin stattdessen.
+> **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
 
 ---
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
 
-**Bisher haben wir gesehen:** Drei Muskeltypen, alle mit Aktin und Myosin. **Wo** genau gleiten die Filamente? Im **Sarkomer** — der kleinsten kontraktilen Einheit. Das **Sarkomer** ist die kleinste kontraktile Einheit — von **Z-Scheibe zu Z-Scheibe** (~2,2 µm in Ruhe):
+**Bisher haben wir gesehen:** Drei Muskeltypen, alle mit Aktin und Myosin. **Wo** genau gleiten die Filamente? Im **Sarkomer** -- der kleinsten kontraktilen Einheit. Das **Sarkomer** ist die kleinste kontraktile Einheit -- von **Z-Scheibe zu Z-Scheibe** (~2,2 um in Ruhe):
 
 **Aufbau (von Z zu Z):**
-- **I-Bande** (hell): Nur Aktin-Dünnfilamente → **wird bei Kontraktion kürzer**
-- **A-Bande** (dunkel): Myosin-Dickfilamente + überlappende Aktinfilamente → **bleibt konstant** (Myosinlänge ändert sich nicht!)
-- **H-Zone** (in der Mitte der A-Bande): Nur Myosin, kein Aktin → **verschwindet bei maximaler Kontraktion**
+- **I-Bande** (hell): Nur Aktin-Duennfilamente -> **wird bei Kontraktion kuerzer**
+- **A-Bande** (dunkel): Myosin-Dickfilamente + ueberlappende Aktinfilamente -> **bleibt konstant** (Myosinlaenge aendert sich nicht!)
+- **H-Zone** (in der Mitte der A-Bande): Nur Myosin, kein Aktin -> **verschwindet bei maximaler Kontraktion**
 - **M-Linie**: Verankert Myosinfilamente in der Mitte
-- **Z-Scheiben** rücken zusammen → Sarkomer wird kürzer
+- **Z-Scheiben** ruecken zusammen -> Sarkomer wird kuerzer
 
 **Strukturproteine:**
-- **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) → Ruhespannung + Schutz vor Überdehnung
-- **Nebulin**: Parallel zu Aktin, legt Filamentlänge fest
+- **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) -> Ruhespannung + Schutz vor Ueberdehnung
+- **Nebulin**: Parallel zu Aktin, legt Filamentlaenge fest
 
-> **Merke:** Bei Kontraktion: **I-Bande ↓, H-Zone ↓, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
+> **Merke:** Bei Kontraktion: **I-Bande kuerzer, H-Zone kuerzer, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
 
 ---
 
 {{DIAGRAM:action-potential}}
 
-## Troponin-Tropomyosin-Schalter: Wie Ca²⁺ Kontraktion auslöst
+## Troponin-Tropomyosin-Schalter: Wie Ca2+ Kontraktion ausloest
 
-**Bisher haben wir gesehen:** Die Struktur des Sarkomers. **Aber was löst die Kontraktion aus?** Der Schalter ist **Ca²⁺** — es bindet an Troponin und gibt die Myosin-Bindungsstellen frei.
+**Bisher haben wir gesehen:** Die Struktur des Sarkomers. **Aber was loest die Kontraktion aus?** Der Schalter ist **Ca2+** -- es bindet an Troponin und gibt die Myosin-Bindungsstellen frei.
 
 **Ruhezustand:** Tropomyosin liegt in der Furche des Aktinstrangs und **blockiert** die Myosin-Bindungsstellen.
 
-**Aktivierung — Schritt für Schritt:**
+**Aktivierung -- Schritt fuer Schritt:**
 1. Aktionspotential erreicht das T-Tubulus-System
 2. Spannungsgesteuerte Rezeptoren (DHPR) aktivieren **Ryanodin-Rezeptoren (RyR1)** im sarkoplasmatischen Retikulum (SR)
-3. **Ca²⁺ strömt aus SR** ins Zytosol (0,1 µM → ~10 µM)
-4. Ca²⁺ bindet **Troponin C** → Konformationsänderung des Troponin-Komplexes
-5. **Tropomyosin verschiebt sich** → Myosin-Bindungsstellen auf Aktin freigegeben
-6. **Kreuzbrückenbildung**: Myosinkopf bindet Aktin → Kraftschlag (Power Stroke)
+3. **Ca2+ stroemt aus SR** ins Zytosol (0,1 uM -> ~10 uM)
+4. Ca2+ bindet **Troponin C** -> Konformationsaenderung des Troponin-Komplexes
+5. **Tropomyosin verschiebt sich** -> Myosin-Bindungsstellen auf Aktin freigegeben
+6. **Kreuzbrueckenbildung**: Myosinkopf bindet Aktin -> Kraftschlag (Power Stroke)
 
-**Kreuzbrückenzyklus — ATP-Rolle:**
-- Kraftschlag: ADP + Pi werden freigesetzt (gespeicherte Energie → mechanische Arbeit)
-- **ATP bindet Myosinkopf → Lösen von Aktin** (Rigor mortis: kein ATP → Myosin bleibt haften!)
-- ATP-Hydrolyse → Myosinkopf wiederaufgespannt → neuer Zyklus
+**Kreuzbrueckenzyklus -- ATP-Rolle:**
+- Kraftschlag: ADP + Pi werden freigesetzt (gespeicherte Energie -> mechanische Arbeit)
+- **ATP bindet Myosinkopf -> Loesen von Aktin** (Rigor mortis: kein ATP -> Myosin bleibt haften!)
+- ATP-Hydrolyse -> Myosinkopf wiederaufgespannt -> neuer Zyklus
 
-**Entspannung:** SERCA (SR-Ca²⁺-ATPase) pumpt Ca²⁺ zurück ins SR → Troponin/Tropomyosin blockiert wieder.
+**Entspannung:** SERCA (SR-Ca2+-ATPase) pumpt Ca2+ zurueck ins SR -> Troponin/Tropomyosin blockiert wieder.
 
-> **Merke:** Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag. **ATP löst Myosin** (nicht für den Kraftschlag selbst!). Kein ATP = Rigor mortis.
+> **Merke:** Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. **ATP loest Myosin** (nicht fuer den Kraftschlag selbst!). Kein ATP = Rigor mortis.
 
 ---
 
 ## Motorische Einheit und Kraftregulation
 
-**Bisher haben wir gesehen:** Wie eine einzelne Faser kontrahiert. **Wie dosiert der Körper die Kraft?** Über **Rekrutierung** und **Frequenz**. **Motorische Einheit** = 1 Alpha-Motoneuron + alle seine Muskelfasern. Übertragung am NMJ (neuromuskuläre Endplatte): ACh → nikotinerge Rezeptoren → Endplattenpotential → AP.
+**Bisher haben wir gesehen:** Wie eine einzelne Faser kontrahiert. **Wie dosiert der Koerper die Kraft?** Ueber **Rekrutierung** und **Frequenz**. **Motorische Einheit** = 1 Alpha-Motoneuron + alle seine Muskelfasern. Uebertragung am NMJ (neuromuskuaere Endplatte): ACh -> nikotinerge Rezeptoren -> Endplattenpotential -> AP.
 
 **Kraftregulation durch zwei Mechanismen:**
-1. **Rekrutierung** (Spatial Summation): Mehr motorische Einheiten aktivieren → mehr Kraft
-2. **Frequenzerhöhung** (Temporal Summation): Schnellere AP-Folge → Summation → Tetanus
+1. **Rekrutierung** (Spatial Summation): Mehr motorische Einheiten aktivieren -> mehr Kraft
+2. **Frequenzerhoehung** (Temporal Summation): Schnellere AP-Folge -> Summation -> Tetanus
 
-**Einheitsgröße und Funktion:**
-- Klein (M. interossei, Augenmuskel: ~10 Fasern) → feine Kraftdosierung (Schreiben, Blickbewegungen)
-- Groß (M. gastrocnemius: bis 2000 Fasern) → grobe Kraft
+**Einheitsgroesse und Funktion:**
+- Klein (M. interossei, Augenmuskel: ~10 Fasern) -> feine Kraftdosierung (Schreiben, Blickbewegungen)
+- Gross (M. gastrocnemius: bis 2000 Fasern) -> grobe Kraft
 
-**Glatte Muskulatur — anderer Ca²⁺-Schalter:**
-Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leichtketten-Kinase) → phosphoryliert Myosin → Kontraktion. Gesteuert durch ANS, Hormone, Dehnung.
+**Glatte Muskulatur -- anderer Ca2+-Schalter:**
+Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtketten-Kinase) -> phosphoryliert Myosin -> Kontraktion. Gesteuert durch ANS, Hormone, Dehnung.
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Welche Sarkomerbanden werden bei Kontraktion kürzer? → I-Bande und H-Zone; A-Bande konstant
-- Wofür wird ATP im Kreuzbrückenzyklus benötigt? → Zum Lösen des Myosins von Aktin (nicht für den Kraftschlag!)
-- Warum kann der Herzmuskel keinen Tetanus entwickeln? → Lange absolute Refraktärzeit
-- Was unterscheidet glatte von quergestreifter Muskulatur? → Kein Troponin, Calmodulin/MLCK statt Troponin; keine Sarkomere
+**Typische Pruefungsfragen:**
+- Welche Sarkomerbanden werden bei Kontraktion kuerzer? -> I-Bande und H-Zone; A-Bande konstant
+- Wofuer wird ATP im Kreuzbrueckenzyklus benoetigt? -> Zum Loesen des Myosins von Aktin (nicht fuer den Kraftschlag!)
+- Warum kann der Herzmuskel keinen Tetanus entwickeln? -> Lange absolute Refraktaerzeit
+- Was unterscheidet glatte von quergestreifter Muskulatur? -> Kein Troponin, Calmodulin/MLCK statt Troponin; keine Sarkomere
 
-**Typische Prüfungsfallen:**
-- A-Bande bleibt konstant (= Myosinlänge) -- I-Bande und H-Zone werden kürzer
-- ATP = Lösen, nicht Kraftschlag; Rigor mortis = kein ATP
+**Typische Pruefungsfallen:**
+- A-Bande bleibt konstant (= Myosinlaenge) -- I-Bande und H-Zone werden kuerzer
+- ATP = Loesen, nicht Kraftschlag; Rigor mortis = kein ATP
 - Herzmuskel: quergestreift, aber einkernig + Gap Junctions + kein Tetanus
 - Glatte Muskulatur: Calmodulin/MLCK, keine Sarkomere, kein Troponin
-- Troponin I/T: 3-6 h nach Infarkt, bis ~14 Tage erhöht; Rigor mortis nach 24-48 h
+- Troponin I/T: 3-6 h nach Infarkt, bis ~14 Tage erhoeht; Rigor mortis nach 24-48 h
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Grundprinzip**: Gleitfilamenttheorie — Aktin und Myosin gleiten aneinander, Sarkomer kürzer; Filamente selbst bleiben gleich lang
-- **Sarkomer**: Z–Z; **I-Bande** (Aktin, ↓) + **A-Bande** (Myosin, = konstant!) + **H-Zone** (Myosin, ↓ bis weg)
-- **Ca²⁺-Schalter**: Ca²⁺ → Troponin C → Tropomyosin verschiebt → Myosin bindet Aktin → Kraftschlag
-- **ATP**: Löst Myosinkopf nach Kraftschlag (nicht für den Schlag selbst). Fehlt ATP → **Rigor mortis**
-- **Herzmuskel**: quergestreift, einkernig, Gap Junctions (Glanzstreifen), kein Tetanus (lange Refraktärzeit)
-- **Glatte Muskulatur**: kein Troponin → Ca²⁺/Calmodulin → MLCK → Myosin-Phosphorylierung → Kontraktion
-- **Klinisch**: Kardiales Troponin I/T = sensitiver Herzinfarktmarker (3–6 h nach Infarkt)`,
+- **Grundprinzip**: Gleitfilamenttheorie -- Aktin und Myosin gleiten aneinander, Sarkomer kuerzer; Filamente selbst bleiben gleich lang
+- **Sarkomer**: Z-Z; **I-Bande** (Aktin, kuerzer) + **A-Bande** (Myosin, = konstant!) + **H-Zone** (Myosin, kuerzer bis weg)
+- **Ca2+-Schalter**: Ca2+ -> Troponin C -> Tropomyosin verschiebt -> Myosin bindet Aktin -> Kraftschlag
+- **ATP**: Loest Myosinkopf nach Kraftschlag (nicht fuer den Schlag selbst). Fehlt ATP -> **Rigor mortis**
+- **Herzmuskel**: quergestreift, einkernig, Gap Junctions (Glanzstreifen), kein Tetanus (lange Refraktaerzeit)
+- **Glatte Muskulatur**: kein Troponin -> Ca2+/Calmodulin -> MLCK -> Myosin-Phosphorylierung -> Kontraktion
+- **Klinisch**: Kardiales Troponin I/T = sensitiver Herzinfarktmarker (3-6 h nach Infarkt)`,
       lernziele: [
         "Sarkomerstruktur (Z-Scheibe, A-Bande, I-Bande, H-Zone) und Veränderungen bei Kontraktion beschreiben",
         "Gleitfilamenttheorie mit Rolle von Ca²⁺, Troponin und Tropomyosin erklären",
@@ -774,129 +1082,92 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Myelinscheide",
         "Axon",
         "Dendrit",
-        "Ranvier-Schnürringe",
+        “Ranvier-Schnürringe”,
       ],
-      content: `## Einleitung
+      content: `## Nervengewebe -- einfach erklaert
 
-**Worum geht es?** **Nervengewebe** besteht aus **Neuronen** (Signalleitung) und **Gliazellen** (Myelinisierung, Stützung). Erregung entsteht am Axonhügel, das **Axon** leitet vom Soma weg; bei Myelin **saltatorisch** (Schnürring zu Schnürring). **Warum für den MedAT relevant?** Neuronaufbau (Axon vs. Dendrit), Myelinisierung (Schwann-Zelle PNS: 1 Segment; Oligodendrozyt ZNS: bis 50 Segmente) und Gliazellen (Astrozyten: BHS; Mikroglia: mesodermale Gliazelle) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Axon — wohin leitet es?“; „Schwann-Zelle vs. Oligodendrozyt?“; „Saltatorische Leitung — wo?“; „Welche Gliazelle bildet die Blut-Hirn-Schranke?“; „Multiple Sklerose — was wird zerstört?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Nervengewebe abgedeckt.
+Dein Nervensystem besteht aus zwei Zelltypen: **Neuronen** (leiten Signale) und **Gliazellen** (unterstuetzen und schuetzen die Neuronen). Stell dir Neuronen wie elektrische Kabel vor und Gliazellen wie die Isolierung drumherum.
 
 **In diesem Kapitel lernst du:**
-- den **Aufbau des Neurons** (Soma, Dendriten, Axon, Axonhügel) und dass Erregung **vom Zellkörper weg** über das **Axon** geleitet wird
-- **Myelinisierung**: Schwann-Zelle (PNS, 1 Axon-Segment pro Zelle) vs. Oligodendrozyt (ZNS, bis 50 Segmente an verschiedenen Axonen)
-- **Saltatorische Leitung** (Sprung von Ranvier-Schnürring zu Schnürring) und warum sie schneller und energiesparender ist
-- **Gliazellen** (Astrozyten, Oligodendrozyten, Mikroglia, Ependym) und ihre Funktionen (BHS, Myelin, Immunität, Liquor)
+- Warum Myelin-Isolierung Signale schneller macht
+- Welche Gliazellen es gibt und was sie tun
 
 ---
 
 {{DIAGRAM:action-potential}}
 
-## Grundprinzip: Aufbau eines Neurons
+## Aufbau eines Neurons
 
-**Um Nervenleitung zu verstehen,** brauchst du zuerst den Bauplan einer Nervenzelle. **Neuron = Grundbaustein der Nervenleitung:**
-- **Soma** (Zellkörper): Zellkern, Synthese, Metabolismus
-- **Dendriten**: Kurze, stark verzweigte Fortsätze → empfangen Signale (Input)
-- **Axon**: Langer Fortsatz → leitet Erregungen **vom Zellkörper weg** (Output). **Dendriten** leiten zum Zellkörper hin (Input). Die Fortsätze, über die Erregungen **vom Zellkörper weg**geleitet werden, heißen **Axone** (nicht Dendriten, Synapsen, Aktionspotentiale oder Ranvier-Schnürringe).
-- **Axonhügel** (Axon Initial Segment): Höchste Na⁺-Kanalddichte → hier wird das Aktionspotential initiiert (Schwellenwert ~-55 mV)
-- **Präsynaptische Endknöpfchen**: Vesikel mit Neurotransmittern → Synapse zum nächsten Neuron
+Ein Neuron hat vier wichtige Teile -- stell dir einen Baum vor:
 
-**Neurontypen:** sensorisch (Input), motorisch (Output), Interneuron (Verarbeitung)
+- **Dendriten** sind wie die Aeste: Sie empfangen Signale von anderen Zellen (Input)
+- **Soma** (Zellkoerper) ist der Stamm: Hier sitzt der Zellkern
+- **Axon** ist wie die Wurzel, die in die Tiefe geht: Es leitet das Signal **vom Koerper weg** (Output)
+- **Axonhuegel**: Hier entscheidet sich, ob ein Signal stark genug ist, um weitergeleitet zu werden (Schwelle ca. -55 mV)
+
+Am Ende des Axons sitzen kleine Knoepfchen mit Neurotransmitter-Blaeschen -- dort wird das Signal an die naechste Zelle uebergeben (Synapse).
 
 ---
 
-## Myelinisierung: Schwann-Zellen vs. Oligodendrozyten
+## Myelin -- die Isolierung fuer schnelle Signale
 
-**Bisher haben wir gesehen:** Wie ein Neuron aufgebaut ist. **Damit Signale schnell laufen,** werden viele Axone mit **Myelin** umhüllt. Die **Myelinscheide** ist eine Lipid-Protein-Isolationsschicht um das Axon. Zwischen Myelinsegmenten liegen die **Ranvier-Schnürringe** — unbedeckte Stellen mit hoher Na⁺-Kanaldichte (Nav1.6).
+Viele Axone sind mit einer Fettschicht umwickelt, dem **Myelin**. Stell dir das vor wie die Gummiisolierung um ein Stromkabel. Zwischen den Myelin-Abschnitten gibt es kleine nackte Stellen -- die **Ranvier-Schnuerringe**. Das Signal springt von Schnuerring zu Schnuerring, anstatt langsam durch das ganze Kabel zu kriechen. Das nennt man **saltatorische Leitung**.
 
-| Merkmal | **Schwann-Zelle** | **Oligodendrozyt** |
+| | **Schwann-Zelle** | **Oligodendrozyt** |
 |---|---|---|
-| Lokalisation | **PNS** | **ZNS** |
-| Segmente/Zelle | **1** (ein Segment, ein Axon) | **Bis zu 50** (verschiedene Axone!) |
-| Zellkern | Außerhalb der Myelinscheide | — |
-| Regeneration | **Gut** (Büngner-Bänder + BDNF/NGF) | **Schlecht** (Nogo-A, MAG hemmen) |
-| Klinisch | Guillain-Barré-Syndrom | **Multiple Sklerose** |
+| Wo? | Peripheres NS (PNS) | Zentrales NS (ZNS) |
+| Wie viele Segmente? | **1** Segment pro Zelle | Bis zu **50** Segmente |
+| Heilung? | Gut (PNS regeneriert) | Schlecht (ZNS regeneriert kaum) |
 
-**Klinisch — Multiple Sklerose (MS):** Autoreaktive T-Zellen zerstören Oligodendrozyten → Demyelinisierung im ZNS → Leitungsverlangsamung/-block → wechselnde neurologische Ausfälle (Sehstörungen, Paresen, Sensibilitätsverlust). Plaques (Vernarbungen) typischerweise periventrikular, im Corpus callosum und im Rückenmark.
+Ohne Myelin: Signal kriecht mit 0,5-2 m/s (wie Schneckentempo). Mit Myelin: Signal springt mit 70-120 m/s (wie ein ICE). Ausserdem spart die saltatorische Leitung Energie, weil die Natrium-Kalium-Pumpe nur an den Schnuerringen arbeiten muss.
 
-> **Merke:** Schwann-Zelle (PNS) = **1 Segment**. Oligodendrozyt (ZNS) = **bis 50 Segmente**. PNS regeneriert (Büngner-Bänder), ZNS nicht (Nogo-A).
+Bei **Multipler Sklerose** greift das Immunsystem die Oligodendrozyten im ZNS an. Die Myelin-Isolierung geht kaputt, und Signale werden langsamer oder brechen ganz ab.
+
+> **Merke:** Schwann-Zelle (PNS) = 1 Segment. Oligodendrozyt (ZNS) = bis 50 Segmente. PNS heilt, ZNS kaum.
 
 ---
-
-## Saltatorische Erregungsleitung
-
-**Bisher haben wir gesehen:** Myelin umhüllt Axone. **Was bringt das für die Leitungsgeschwindigkeit?** Das AP springt von Schnürring zu Schnürring statt kontinuierlich zu laufen.
-
-**Kontinuierlich** (unmyelinisierte C-Fasern): Jede Membranstelle muss depolarisiert werden → 0,5–2 m/s, energieintensiv.
-
-**Saltatorisch** (myelinisiert): Aktionspotential springt von Schnürring zu Schnürring:
-1. Zwischen Schnürringen: Myelin isoliert → kein Ionenstrom → Signal wird elektrotonisch (passiv) weitergegeben
-2. An Ranvier-Schnürring: Na⁺-Kanäle regenerieren das AP
-3. Na⁺/K⁺-ATPase muss nur an Schnürringen arbeiten → **energiesparend**
-
-**Geschwindigkeit nach Fasertyp:**
-- **Aα-Fasern** (motorisch, propriozeptiv, dick myelinisiert): **70–120 m/s**
-- **Aβ-Fasern** (Berührung, Vibration): 30–70 m/s
-- **Aδ-Fasern** (schneller Schmerz, Temperatur): 5–30 m/s
-- **C-Fasern** (langsamer Schmerz, Temperatur, unmyelinisiert): **0,5–2 m/s**
-
-> **Merke:** Saltatorisch = springt von Schnürring zu Schnürring: **120 m/s** vs. **2 m/s** kontinuierlich. Energiesparend, weil Na⁺/K⁺-ATPase nur an Schnürringen aktiv.
 
 {{DIAGRAM:synapse}}
 
----
+## Gliazellen -- die Helfer im Nervensystem
 
-## Gliazellen im ZNS — Übersicht und Funktionen
+Neben den Neuronen gibt es vier Typen von Gliazellen:
 
-**Bisher haben wir gesehen:** Neuronen und Myelinisierung. **Neben Oligodendrozyten** gibt es im ZNS weitere **Gliazellen** mit unterschiedlichen Aufgaben.
+| Gliazelle | Aufgabe |
+|---|---|
+| **Astrozyten** | Bilden die Blut-Hirn-Schranke (induzieren Tight Junctions), raumen Glutamat auf, puffern Kalium |
+| **Oligodendrozyten** | Myelinisieren Axone im ZNS |
+| **Mikroglia** | Immunzellen des Gehirns -- die einzigen Gliazellen, die aus dem **Mesoderm** stammen (alle anderen aus dem Neuroektoderm) |
+| **Ependymzellen** | Produzieren Hirnwasser (Liquor, ca. 500 ml pro Tag) |
 
-| Gliazelle | Herkunft | Hauptfunktion |
-|---|---|---|
-| **Astrozyten** | Neuroektoderm | BHS-Induktion, K⁺-Puffer, Glutamat-Reuptake, Glianarbe |
-| **Oligodendrozyten** | Neuroektoderm | Myelinisierung (bis 50 Segmente) |
-| **Mikroglia** | **Mesoderm** (Dottersack-Makrophagen!) | Immunabwehr, Phagozytose |
-| **Ependymzellen** | Neuroektoderm | Liquorproduktion (Plexus choroideus, ~500 mL/Tag) |
+Ein haeufiger Pruefungsfehler: Astrozyten **induzieren** die Tight Junctions der Blut-Hirn-Schranke, aber sie **bilden** sie nicht selbst. Die Tight Junctions sitzen im Endothel der Blutgefaesse.
 
-**Astrozyten — Details:**
-- Perivaskuläre Endfüße umhüllen Kapillaren → **induzieren Tight Junctions** im Endothel → Blut-Hirn-Schranke (BHS). Astrozyten bilden Tight Junctions nicht selbst!
-- Puffern K⁺ nach Aktionspotentialen (verhindert Überexzitation)
-- **Glutamat-Reuptake** (EAAT-Transporter) → zu Glutamin → zurück an Neuron → verhindert Exzitotoxizität
-- Bei ZNS-Verletzung: reaktive Astrogliose → **Glianarbe** (behindert Axonregeneration)
-
-**Mikroglia — Details:**
-- Einzige Gliazelle **mesodermalen Ursprungs** (alle anderen neuroektodermal!)
-- Ruhezustand: ramifiziert (verzweigt), überwacht Parenchym
-- Aktiviert: amöboid → phagozytiert Trümmer, sezerniert IL-1β, TNF-α, IL-6
-- Chronische Aktivierung → neurodegenerativ (Alzheimer, Parkinson)
-
-> **Merke:** Mikroglia = **mesodermale Makrophagen** des ZNS — einzige nicht-neuroektodermale Gliazelle. Astrozyten: BHS-Induktion + Glutamat-Reuptake + K⁺-Puffer.
+> **Merke:** Mikroglia = mesodermale Makrophagen des Gehirns (einzige nicht-neuroektodermale Gliazelle). Astrozyten induzieren die BHS.
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Erregung vom Zellkörper weg -- welcher Fortsatz? → Axon (nicht Dendriten)
-- Schwann-Zelle vs. Oligodendrozyt? → Schwann: PNS, 1 Segment; Oligodendrozyt: ZNS, bis 50 Segmente
-- Warum ist saltatorische Leitung schneller? → AP springt an Schnürringen, dazwischen passive Ausbreitung
-- Welche Gliazelle ist mesodermalen Ursprungs? → Mikroglia (Makrophagen des ZNS)
-- Wer induziert die Blut-Hirn-Schranke? → Astrozyten (induzieren Tight Junctions im Endothel)
+**Haeufige Pruefungsfragen:**
+- Axon leitet vom Koerper weg (nicht Dendriten!)
+- Schwann-Zelle: PNS, 1 Segment vs. Oligodendrozyt: ZNS, bis 50
+- Mikroglia stammt aus dem Mesoderm
+- Astrozyten induzieren die Blut-Hirn-Schranke
 
-**Typische Prüfungsfallen:**
-- Schwann-Zelle = **1** Segment (PNS); Oligodendrozyt = **bis 50** Segmente (ZNS) -- nicht vertauschen
-- Astrozyten **induzieren** Tight Junctions der BHS, bilden sie aber **nicht selbst**
-- Mikroglia = mesoderm; alle anderen Gliazellen = neuroektodermal
-- Aα-Fasern: 70-120 m/s; C-Fasern: 0,5-2 m/s
+**Typische Fallen:**
+- Schwann-Zelle und Oligodendrozyt nicht verwechseln
+- Astrozyten induzieren Tight Junctions, bilden sie aber nicht
+- Saltatorisch: 120 m/s vs. kontinuierlich: 2 m/s
 
 ---
 
-## Zusammenfassung (ultrakompakt)
+## Zusammenfassung
 
-- **Neuron**: Soma + Dendriten (Input) + Axon (Output); AP-Initiation am Axonhügel (höchste Na⁺-Kanaldichte)
-- **Myelinisierung**: Schwann-Zelle (PNS, **1 Segment**) vs. Oligodendrozyt (ZNS, **bis 50 Segmente**)
-- **Saltatorisch**: AP springt von Ranvier-Schnürring zu Schnürring → **70–120 m/s** vs. 0,5–2 m/s kontinuierlich; energiesparend
-- **PNS regeneriert** (Büngner-Bänder + neurotrophe Faktoren); **ZNS nicht** (Nogo-A, Glianarbe)
-- **Multiple Sklerose**: T-Zellen → Demyelinisierung von Oligodendrozyten → neurologische Ausfälle
-- **Astrozyten**: BHS-Induktion (Tight Junctions induzieren), K⁺-Puffer, Glutamat-Reuptake, Glianarbe
-- **Mikroglia**: Einzige mesodermale Gliazelle = Makrophagen des ZNS (ramifiziert → amöboid)`,
+- Neuron: Dendriten (Input), Soma, Axon (Output), Axonhuegel (Entscheidungsstelle)
+- Myelin isoliert das Axon, Signal springt von Schnuerring zu Schnuerring (saltatorisch, bis 120 m/s)
+- Schwann-Zelle = PNS (1 Segment), Oligodendrozyt = ZNS (bis 50)
+- PNS regeneriert, ZNS kaum (Multiple Sklerose)
+- Gliazellen: Astrozyten (BHS), Mikroglia (Immunzellen, mesoderm), Ependym (Liquor)`,
       lernziele: [
         "Aufbau des Neurons (Soma, Axon, Dendriten, Axonhügel) und seine Funktion erklären",
         "Gliazellen des ZNS und PNS benennen und ihre Aufgaben (besonders Myelinisierung) beschreiben",
@@ -1032,79 +1303,76 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
         "Neurotransmitter",
         "Reflexbogen",
       ],
-      content: `## Einleitung
+      content: `## Nervensystem -- einfach erklaert
 
-**Worum geht es?** Das Nervensystem gliedert sich in **ZNS** (Gehirn + Rückenmark) und **PNS**; das vegetative System in **Sympathikus** (fight-or-flight) und **Parasympathikus** (rest-and-digest). **Warum für den MedAT relevant?** Aktionspotential, Synapse (SNARE, ionotrop/metabotrop), Sympathikus vs. Parasympathikus (Wirkung auf Herz, Bronchien, Pupille) und Reflexbogen sind Schwerpunktthemen. **Welche Fragen werden beantwortet?** „Sympathikus — Wirkung auf Herz?“; „Ablauf der synaptischen Transmission?“; „Ruhepotential, Schwelle, Refraktärzeit?“; „Monosynaptisch vs. polysynaptisch?“; „EPSP vs. IPSP?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Nervensystem abgedeckt.
+Dein Nervensystem ist wie das Kommunikationsnetz deines Koerpers. Es hat zwei grosse Teile: Das **ZNS** (Gehirn + Rueckenmark) ist die Zentrale, das **PNS** sind die Leitungen zu den Organen. Innerhalb des PNS gibt es das **vegetative Nervensystem**, das automatisch arbeitet -- mit zwei Gegenspielern: **Sympathikus** (Stressmodus) und **Parasympathikus** (Ruhemodus).
 
 **In diesem Kapitel lernst du:**
-- **Sympathikus** und **Parasympathikus** (Ursprung, Neurotransmitter, Wirkung auf Herz, Bronchien, Pupille, GI)
-- **Synaptische Transmission** (Ca²⁺, SNARE, ionotrop/metabotrop, EPSP/IPSP)
-- **Aktionspotential** (Ruhepotential, Schwelle, Refraktärzeit, Alles-oder-Nichts)
-- **Reflexbogen** (monosynaptisch vs. polysynaptisch)
+- Sympathikus vs. Parasympathikus und ihre Wirkung auf die Organe
+- Wie eine Synapse funktioniert
+- Was bei einem Aktionspotential passiert
+- Reflexbogen: monosynaptisch vs. polysynaptisch
 
 ---
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-## Autonomes Nervensystem — Sympathikus und Parasympathikus
+## Sympathikus und Parasympathikus -- zwei Gegenspieler
 
-**Um das vegetative Nervensystem einzuordnen,** betrachten wir zuerst Aufbau und Gegenspieler. Das vegetative Nervensystem (ANS) reguliert Herzfrequenz, Blutdruck, Atmung, Verdauung und Sekretion ohne bewusste Kontrolle. Beide Systeme besitzen eine **zweineuronalige Verschaltung**: präganglionäres Neuron → Ganglion → postganglionäres Neuron → Effektor. Der grundlegende Unterschied liegt in Ursprung, Ganglionlage, Neurotransmitter und Rezeptoren:
+Stell dir zwei Fernbedienungen vor: Eine fuer Vollgas (**Sympathikus** -- fight or flight), eine fuer Entspannung (**Parasympathikus** -- rest and digest). Beide steuern dieselben Organe, aber in gegensaetzliche Richtungen.
 
-- **Sympathikus** (thorakolumbal, T1–L2): kurze präganglionäre Fasern → para- oder prävertebrale Ganglien → lange postganglionäre Fasern. Postganglionärer NT: **Noradrenalin** (Ausnahme: Schweißdrüsen → ACh). Rezeptoren: α₁ (Vasokonstriktion, Mydriasis), α₂ (Peristaltik ↓), β₁ (Herz ↑), β₂ (Bronchodilatation, Glykogenolyse), β₃ (Lipolyse)
-- **Parasympathikus** (kraniosakral, CN III/VII/IX/X + S2–S4): lange präganglionäre Fasern → organnahe oder intramuralen Ganglien → kurze postganglionäre Fasern. NT: **Acetylcholin** (prä- und postganglionär). Rezeptoren: M₂ (Herz ↓ via K⁺-Kanäle), M₃ (Drüsen, glatte Muskulatur)
+Der **Sympathikus** kommt aus dem Brustmark (T1-L2) und nutzt **Noradrenalin** als Botenstoff. Der **Parasympathikus** kommt aus Hirnnerven und Kreuzmark (S2-S4) und nutzt **Acetylcholin**.
 
-**Wichtig:** Präganglionäre Fasern beider Systeme verwenden ACh an nikotinischen Rezeptoren (Ganglion). Der Unterschied liegt im postganglionären NT!
-
-> **Merke:** **Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).
-
-| Organ | Sympathikus | Parasympathikus |
+| Organ | Sympathikus (Stress) | Parasympathikus (Ruhe) |
 | --- | --- | --- |
-| Herz | Frequenz ↑, Kontraktilität ↑ (β1) | Frequenz ↓ (M2, Vagus) |
-| Bronchien | Erweiterung (β2) | Konstriktion (M3) |
-| Pupille | Mydriasis (α1) | Miosis (M3) |
-| GI-Trakt | Peristaltik ↓ (α2) | Peristaltik ↑ (M3) |
-| Blase | Sphinkter-Kontraktion (α1) | Detrusor-Kontraktion (M3) |
-| Leber | Glykogenolyse ↑ (β2) | — |
-| Neurotransmitter | Noradrenalin | Acetylcholin |
+| Herz | Schneller und kraeftiger (beta-1) | Langsamer (M2, Vagus) |
+| Bronchien | Weiter (beta-2) | Enger (M3) |
+| Pupille | Weit (Mydriasis, alpha-1) | Eng (Miosis, M3) |
+| Darm | Peristaltik langsamer | Peristaltik schneller |
+| Blase | Schliesst den Schliessmuskel | Entleert (Detrusor kontrahiert) |
+
+Stell dir vor, du wirst von einem Hund gejagt (Sympathikus an): Dein Herz rast, die Bronchien weiten sich fuer mehr Luft, die Pupillen werden gross, die Verdauung wird heruntergefahren. Wenn du dann sicher auf dem Sofa sitzt (Parasympathikus an): Herz beruhigt sich, Verdauung laeuft, Pupillen verengen sich.
+
+> **Merke:** Sympathikus = Stress, Noradrenalin. Parasympathikus = Ruhe, Acetylcholin. Herz: Sympathikus beschleunigt (beta-1), Parasympathikus bremst (M2, Vagus).
 
 ---
 
-## Synaptische Transmission
+## Die Synapse -- Signaluebergabe zwischen Neuronen
 
-**Bisher haben wir gesehen:** Sympathikus und Parasympathikus mit ihren Neurotransmittern. **Wie wird ein elektrisches Signal von Neuron zu Neuron weitergegeben?** An der **chemischen Synapse** wird es in ein chemisches umgewandelt. An einer **chemischen Synapse** wird ein elektrisches Signal (Aktionspotential) in ein chemisches Signal (Neurotransmitter-Freisetzung) umgewandelt und postsynaptisch wieder in ein elektrisches Signal (EPSP oder IPSP). Jede Synapse besteht aus präsynaptischem Endknöpfchen, synaptischem Spalt (~20–40 nm) und postsynaptischer Membran.
+An der **Synapse** wird das elektrische Signal in ein chemisches umgewandelt und wieder zurueck. Stell dir das wie einen Staffellauf vor: Der Laeufer (elektrisches Signal) gibt den Stab (Neurotransmitter) weiter, und der naechste Laeufer rennt los.
 
-**Ablauf der synaptischen Transmission:**
-1. AP erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** (P/Q-Typ im ZNS) öffnen
-2. Ca²⁺ strömt ein → bindet **Synaptotagmin** (Ca²⁺-Sensor an Vesikeln)
-3. **SNARE-Komplex** (Synaptobrevin/VAMP [vesikulär] + Syntaxin + SNAP-25 [Membran]) zieht Membranen zusammen → **Exozytose** (Quantal Release: ~5.000 NT-Moleküle/Vesikel)
-4. Neurotransmitter diffundiert durch Spalt → bindet postsynaptische **Rezeptoren**
-5. Postsynaptisches Potential: **EPSP** (Depolarisation; Glutamat/ACh → Na⁺ rein) oder **IPSP** (Hyperpolarisation; GABA → Cl⁻ rein)
+**So laeuft es ab:**
+1. Das Signal kommt am Axon-Ende an, **Calcium-Kanaele** oeffnen sich
+2. Calcium stroemt ein und loest die Verschmelzung von Neurotransmitter-Blaeschen mit der Membran aus (ueber den **SNARE-Komplex**)
+3. Neurotransmitter werden in den Spalt freigesetzt
+4. Sie binden an Rezeptoren auf der naechsten Zelle
 
-**Rezeptortypen:**
-- **Ionotrop** (ligandengesteuerte Ionenkanäle, schnell ms): AMPA (Glutamat → Na⁺), NMDA (Glutamat → Na⁺/Ca²⁺, Mg²⁺-Block!), GABA_A (→ Cl⁻), nikotinisch (ACh → Na⁺)
-- **Metabotrop** (G-Protein-gekoppelt, langsam Sek.–Min.): D1/D2 (Dopamin), mGluR, M1–M5 (ACh), α/β (Noradrenalin)
+Das Ergebnis ist entweder erregend (**EPSP** -- Glutamat macht die naechste Zelle aktiver) oder hemmend (**IPSP** -- GABA beruhigt die naechste Zelle).
 
-**Klinisch:** Botulinum-Toxin spaltet SNARE (Synaptobrevin) → keine Exozytose → **schlaffe Lähmung**. Tetanus-Toxin hemmt GABA/Glycin-Freisetzung → **spastische Krämpfe**.
+Es gibt zwei Arten von Rezeptoren:
+- **Ionotrope** Rezeptoren oeffnen direkt einen Kanal (schnell, Millisekunden)
+- **Metabotrope** Rezeptoren loesen eine Signalkette aus (langsam, Sekunden)
 
-> **Merke:** **Synapse:** Präsynaptisch (Ca²⁺-Kanäle, SNARE [Synaptobrevin + Syntaxin + SNAP-25], Synaptotagmin [Ca²⁺-Sensor]) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). **EPSP** (Depolarisation, Glutamat/Acetylcholin) vs. **IPSP** (Hyperpolarisation, GABA/Glycin).
+**Botulinumtoxin** zerstoert den SNARE-Komplex -- keine Neurotransmitter-Freisetzung mehr, die Muskeln erschlaffen. **Tetanustoxin** blockiert die hemmenden Botenstoffe (GABA) -- die Muskeln verkrampfen.
+
+> **Merke:** Signal kommt an, Calcium oeffnet die Blaeschen (SNARE), Neurotransmitter uebergibt die Botschaft. EPSP = erregend (Glutamat), IPSP = hemmend (GABA).
 
 ---
 
 {{DIAGRAM:synapse}}
 
-## Aktionspotential
+## Das Aktionspotential -- wie ein Signal ueber weite Strecken laeuft
 
-**Bisher haben wir gesehen:** An der Synapse entstehen EPSP und IPSP. **Damit ein Signal über weite Strecken läuft,** wird es als **Aktionspotential** codiert. Das Ruhepotential beträgt ~-70 mV und wird durch Na⁺/K⁺-ATPase und K⁺-Leckkanäle aufrechterhalten. Bei Schwellenreizung (~-55 mV) öffnen spannungsgesteuerte Na⁺-Kanäle, Depolarisation auf +40 mV, dann Repolarisation durch K⁺-Kanäle und Inaktivierung der Na⁺-Kanäle.
+Im Ruhezustand liegt die Spannung an der Nervenzelle bei etwa **-70 mV** (innen negativ). Das wird durch die Natrium-Kalium-Pumpe aufrechterhalten (3 Na+ raus, 2 K+ rein).
 
-> **Merke:** **Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → **Na⁺-Kanäle öffnen** (Depolarisation +40 mV) → Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (Repolarisation) → Hyperpolarisation. **Refraktärzeit:** Absolut (Na⁺-Kanäle inaktiviert, KEIN AP) + relativ (Na⁺-Kanäle erholen, K⁺-Kanäle offen, überschwellig). **Alles-oder-Nichts-Prinzip** (Schwelle überschritten → volles AP).
+Wenn ein ausreichend starker Reiz kommt (Schwelle ca. -55 mV), passiert alles auf einmal -- wie ein Dominoeffekt:
+1. **Natrium-Kanaele oeffnen sich** -- Na+ stroemt rein, die Spannung steigt auf +40 mV
+2. Na+-Kanaele schliessen sich, **Kalium-Kanaele oeffnen sich** -- K+ stroemt raus, Spannung faellt zurueck
+3. Kurzzeitig faellt die Spannung sogar unter -70 mV (**Hyperpolarisation**)
 
----
+Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip**: Entweder es feuert ganz oder gar nicht. Waehrend der **absoluten Refraktaerzeit** (Na+-Kanaele inaktiviert) kann kein zweites Signal kommen. Das verhindert, dass das Signal rueckwaerts laeuft.
 
-## Saltatorische Erregungsleitung
-
-**Bisher haben wir gesehen:** Aktionspotential entsteht am Axonhügel und läuft das Axon entlang. **Bei myeliniserten Axonen** springt es von Schnürring zu Schnürring — das ist schneller und spart Energie. Myelinisierte Axone leiten Aktionspotentiale saltatorisch: Das Aktionspotential springt von Ranvier-Schnürring zu Ranvier-Schnürring, da die Internodien elektrisch isoliert sind. Dies ermöglicht Leitungsgeschwindigkeiten von ~120 m/s und ist energieeffizienter als kontinuierliche Leitung.
-
-> **Merke:** **Saltatorische Erregungsleitung** (myelinisierte Axone): **Ranvier-Schnürringe** (unmyelinisiert, ~1 μm, Na⁺-Kanäle ↑↑↑ [Nav1.6]) → Aktionspotential regeneriert. **Internodien** (~1 mm, Myelin [80% Lipide], Isolation) → Depolarisation breitet sich passiv aus (elektrotonisch, kein Ionenverlust). Aktionspotential **springt** von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen).
+> **Merke:** Ruhepotential -70 mV. Schwelle -55 mV. Na+ rein = Depolarisation (+40 mV). K+ raus = Repolarisation. Alles-oder-Nichts.
 
 ---
 
@@ -1557,6 +1825,102 @@ Kein Troponin! Ca²⁺ bindet **Calmodulin** → aktiviert **MLCK** (Myosin-Leic
       ],
       content: `## Einleitung
 
+Hormone sind chemische Botenstoffe, die ueber das Blut transportiert werden. In diesem Kapitel lernst du, wie dein Koerper Hormone steuert und welche Druesen welche Hormone produzieren.
+
+**In diesem Kapitel lernst du:**
+- Wie die Hypothalamus-Hypophyse-Achse funktioniert
+- Den Unterschied zwischen Peptid- und Steroidhormonen
+- Die Schilddruese und ihren Regelkreis
+- Insulin, Glukagon und Blutzuckerregulation
+
+---
+
+{{DIAGRAM:hormonsystem}}
+
+{{DIAGRAM:menstrual-cycle}}
+
+## Zwei Hormonklassen -- Peptid vs. Steroid
+
+Es gibt zwei grosse Gruppen von Hormonen. Der Unterschied liegt darin, ob sie wasserloeslich oder fettloeslich sind.
+
+**Peptidhormone** (z. B. Insulin, ACTH, TSH) sind wasserloeslich. Sie koennen die Zellmembran nicht durchdringen und docken deshalb aussen an Membranrezeptoren an. Dort loesen sie Second Messenger aus (cAMP, Ca2+). Die Wirkung tritt schnell ein -- innerhalb von Minuten.
+
+**Steroidhormone** (z. B. Cortisol, Testosteron, Oestrogen) und T3/T4 sind fettloeslich. Sie wandern durch die Membran und binden im Zellkern an Rezeptoren. Dort veraendern sie die Genexpression. Das dauert Stunden, wirkt aber laenger.
+
+> **Merke:** Peptidhormone = wasserloeslich, Membranrezeptor, Second Messenger, schnell (Minuten). Steroidhormone + T3/T4 = fettloeslich, intrazellulaerer Rezeptor, Genexpression, langsam (Stunden).
+
+---
+
+## Schilddruese und Nebenniere
+
+Die Schilddruese bildet T3 und T4. Das Enzym TPO jodiert Tyrosin-Reste in Thyreoglobulin: 2x DIT ergibt T4, MIT + DIT ergibt T3. T3 ist 3-5x potenter -- T4 ist nur das Prohormon.
+
+Die Nebenniere hat eine Rinde (80 %) und ein Mark (20 %). Die Rinde hat drei Zonen:
+- **Zona glomerulosa** -- Aldosteron (Na+ zurueckhalten, K+ ausscheiden, Blutdruck steigt)
+- **Zona fasciculata** -- Cortisol (Stresshormon, Blutzucker steigt, Immunsuppression)
+- **Zona reticularis** -- Androgene (DHEA)
+
+Das Nebennierenmark produziert Adrenalin (80 %) und Noradrenalin (20 %) bei Stress (Fight-or-Flight).
+
+Cortisol steigert die Glukoneogenese in der Leber, unterdrueckt das Immunsystem und hemmt langfristig Osteoblasten -- das ergibt ein Osteoporoserisiko.
+
+> **Merke:** T3 (aktiv, 3 Jod) + T4 (Prohormon, 4 Jod). Hashimoto: T3/T4 sinken, TSH steigt. Nebennierenrinde: Aldosteron / Cortisol / Androgene. Mark: Adrenalin + Noradrenalin.
+
+---
+
+## Pankreas und Blutzucker
+
+Die Langerhans-Inseln im Pankreas regulieren den Blutzucker mit zwei Gegenspielern:
+
+- **Insulin** (beta-Zellen, 65-80 %): Wird nach dem Essen ausgeschuettet. Es sorgt dafuer, dass Muskel- und Fettzellen Glukose aufnehmen (GLUT4-Translokation), und foerdert die Glykogensynthese in der Leber. Blutzucker sinkt.
+- **Glukagon** (alpha-Zellen, 15-20 %): Wird beim Fasten aktiv. Es foerdert Glykogenolyse und Glukoneogenese in der Leber. Blutzucker steigt.
+
+Der Insulin-Sekretionsmechanismus: Glukose gelangt ueber GLUT2 in die beta-Zelle, ATP steigt, K-ATP-Kanaele schliessen, Depolarisation, Ca2+ stroemt ein, Exozytose von Insulin.
+
+> **Merke:** Insulin (beta-Zellen) senkt Blutzucker durch GLUT4 und Glykogensynthese. Glukagon (alpha-Zellen) hebt Blutzucker durch Glykogenolyse und Glukoneogenese. Typ-1-DM: beta-Zell-Zerstoerung. Typ-2-DM: Insulinresistenz.
+
+{{DIAGRAM:nervensystem-uebersicht}}
+
+---
+
+## Regelkreise und negative Rueckkopplung
+
+Damit Hormonspiegel stabil bleiben, nutzt das endokrine System negative Rueckkopplung. Der Hypothalamus schickt Releasing-Hormone an die Hypophyse, die trophe Hormone an die periphere Druese sendet. Die Druesenhormone hemmen dann Hypothalamus und Hypophyse zurueck.
+
+Beispiel Schilddruese: Hypothalamus (TRH) -- Hypophyse (TSH) -- Schilddruese (T3/T4) -- T3/T4 hemmen TRH + TSH zurueck.
+
+Bei **primaerer Hypothyreose** ist die Schilddruese selbst kaputt: T3/T4 sinken, die Hemmung faellt weg, TSH steigt kompensatorisch an. Bei **sekundaerer Hypothyreose** ist die Hypophyse defekt: TSH sinkt, T3/T4 sinken.
+
+> **Merke:** Hypothalamus -- Hypophyse -- periphere Druese -- negative Rueckkopplung hemmt zurueck. Primaere Insuffizienz: Druese sinkt, trophe Hormone steigen.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Peptidhormone vs. Steroidhormone: Rezeptortyp, Wirkgeschwindigkeit
+- Primaere vs. sekundaere Hypothyreose: TSH hoch vs. TSH tief
+- Insulin vs. Glukagon: Wirkung auf Blutzucker
+- Cortisol: Glukoneogenese hoch, Immunsuppression, Osteoporose
+
+**Typische Fallen:**
+- T3 ist aktiver als T4 (T4 = Prohormon)
+- Insulin senkt, Glukagon hebt Blutzucker
+- Aldosteron (Zona glomerulosa, RAAS) vs. Cortisol (Zona fasciculata, CRH-ACTH)
+- PTH erhoeht Ca2+, Calcitonin senkt Ca2+
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Peptidhormone**: wasserloeslich, Membranrezeptor, Second Messenger, schnell
+- **Steroidhormone + T3/T4**: fettloeslich, intrazellulaerer Rezeptor, Genexpression, langsam
+- **Regelkreis**: Hypothalamus -- Hypophyse -- Druese -- negative Rueckkopplung
+- **Schilddruese**: T3 aktiv, T4 Prohormon. Primaere Hypothyreose: TSH hoch. Sekundaere: TSH tief
+- **Blutzucker**: Insulin (beta-Zellen) senkt, Glukagon (alpha-Zellen) hebt
+- **Cortisol**: Glukoneogenese hoch, Immunsuppression, Osteoporose-Risiko`,
+      contentExtended: `## Einleitung
+
 **Worum geht es?** **Hormone** sind chemische Botenstoffe über das Blut; die **Hypothalamus-Hypophyse-Achse** steuert periphere Drüsen mit negativer Rückkopplung. **Warum für den MedAT relevant?** Peptid- vs. Steroidhormone, Insulin/Glukagon, Schilddrüsen-Regelkreis (TRH → TSH → T₃/T₄), primäre vs. sekundäre Hypothyreose und Cortisol werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Peptid- vs. Steroidhormon — Rezeptor?“; „Wo wird Somatotropin/Glukagon gebildet?“; „Primäre Hypothyreose — TSH?“; „Insulin senkt oder hebt Blutzucker?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Hormonsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
@@ -1769,6 +2133,91 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
       ],
       content: `## Einleitung
 
+Dein Herz pumpt Blut durch zwei Kreislaeufe: den grossen (Koerper) und den kleinen (Lunge). In diesem Kapitel lernst du, wie das Herz aufgebaut ist, wie die Erregung laeuft und wie der Blutdruck reguliert wird.
+
+**In diesem Kapitel lernst du:**
+- Herzaufbau (Kammern, Klappen, Systole/Diastole) und Erregungsleitung
+- Grosser vs. kleiner Kreislauf und Blutdruckregulation
+
+---
+
+{{DIAGRAM:blutkreislauf}}
+
+## Herzaufbau und Klappen
+
+Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (innen), Myokard (Muskel), Epikard (aussen). Der linke Ventrikel hat die dickste Wand (~10-15 mm vs. ~3-5 mm rechts), weil er gegen den hohen Systemwiderstand pumpt.
+
+Es gibt zwei Typen von Klappen:
+- **AV-Klappen** haben Sehnenfaeden an Papillarmuskeln: Trikuspidal (3 Segel, rechts) und Mitral (2 Segel, links)
+- **Taschenklappen** haben keine Sehnenfaeden und oeffnen passiv: Pulmonal und Aorta (je 3 Taschen)
+
+In der **Systole** pumpen die Ventrikel Blut aus, in der **Diastole** fuellen sie sich. Die Auswurffraktion betraegt in Ruhe ~55-70 %.
+
+> **Merke:** AV-Klappen haben Sehnenfaeden (Trikuspidal 3, Mitral 2), Taschenklappen nicht (Pulmonal, Aorta je 3). Beide stoppen Rueckfluss.
+
+---
+
+## Erregungsleitung
+
+Der SA-Knoten im rechten Vorhof gibt den Takt vor (60-80/min). Die Erregung laeuft zum AV-Knoten, der sie ~100 ms verzoegert -- so haben die Vorhoefe Zeit, ihr Blut in die Kammern zu pumpen. Dann geht es ueber His-Buendel, Tawara-Schenkel und Purkinje-Fasern (schnellste Leitung, 2-4 m/s) zur Ventrikelmuskulatur.
+
+> **Merke:** SA-Knoten startet (60-80/min), AV-Knoten verzoegert, His leitet, Tawara teilt, Purkinje sprintet von Spitze nach oben.
+
+{{DIAGRAM:heart-anatomy}}
+
+---
+
+## Kreislauf und Blutgefaesse
+
+Das Blut fliesst in zwei Kreislaeufen in Serie:
+- **Kleiner Kreislauf**: RV -- Lungenarterien (O2-arm!) -- Lunge -- Lungenvenen (O2-reich!) -- LA
+- **Grosser Kreislauf**: LV -- Aorta -- Koerper -- Venen -- RA
+
+Wichtig: Lungenarterien fuehren O2-armes Blut, Lungenvenen O2-reiches. Arterie = vom Herzen weg, nicht = O2-reich!
+
+Die Gefaesstypen: Arteriolen sind Widerstandsgefaesse (regulieren den peripheren Widerstand), Kapillaren ermoeglichen Stoffaustausch, Venen sind Kapazitaetsgefaesse (~70 % des Blutvolumens).
+
+> **Merke:** Kleiner Kreislauf = Lunge (niedrig), grosser = Koerper (hoch). Lungenarterie hat O2-armes Blut!
+
+---
+
+{{DIAGRAM:cardiac-conduction}}
+
+## Blutdruckregulation
+
+Kurzfristig regeln Barorezeptoren (Aortenbogen, Karotis-Sinus) den Blutdruck: Druck steigt -- Parasympathikus steigt -- Herzfrequenz sinkt.
+
+Langfristig wirkt das RAAS: Druck faellt -- Renin -- Angiotensin II -- Vasokonstriktion + Aldosteron steigt -- Na+/H2O-Retention -- Volumen steigt.
+
+Formel: Blutdruck = HZV x TPR = (SV x HF) x TPR.
+
+> **Merke:** Barorezeptoren messen kurzfristig, RAAS rettet langfristig Salz und Wasser. Angiotensin II macht eng, Aldosteron speichert.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Erregungsleitung: SA -- AV -- His -- Tawara -- Purkinje
+- Kleiner vs. grosser Kreislauf: Verlauf und Druckverhaeltnisse
+- Blutdruckregulation: Barorezeptorreflex vs. RAAS
+
+**Typische Fallen:**
+- Lungenarterien fuehren O2-armes Blut
+- AV-Klappen haben Sehnenfaeden, Taschenklappen nicht
+- LV-Wanddicke 10-15 mm (3x RV); Normaler Blutdruck ~120/80 mmHg
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Herzaufbau**: 4 Kammern; LV ~10-15 mm (3x dicker als RV)
+- **Klappen**: AV-Klappen mit Sehnenfaeden; Taschenklappen ohne
+- **Kreislaeufe**: Klein: RV -- Lunge -- LA. Gross: LV -- Koerper -- RA. In Serie!
+- **Erregungsleitung**: SA (60-80) -- AV (Verzoegerung) -- His -- Tawara -- Purkinje
+- **Blutdruck**: MAP = HZV x TPR. Kurzfristig: Barorezeptoren. Langfristig: RAAS`,
+      contentExtended: `## Einleitung
+
 **Worum geht es?** Das Herz pumpt in zwei Kreisläufen in Serie: **großer Kreislauf** (Körper) und **kleiner Kreislauf** (Lunge); Erregungsleitung SA-Knoten → AV-Knoten → His/Purkinje. **Warum für den MedAT relevant?** Erregungsleitung, Herzklappen (AV vs. Taschenklappen), Systole/Diastole, Blutdruckregulation (RAAS, Barorezeptoren) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Erregungsleitung — Reihenfolge?“; „Welche Klappe zwischen Vorhof und Kammer links?“; „Großer vs. kleiner Kreislauf?“; „RAAS — was wird stimuliert?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Herz und Kreislauf abgedeckt.
 
 **In diesem Kapitel lernst du:**
@@ -1964,6 +2413,90 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Blutplasma",
       ],
       content: `## Einleitung
+
+Blut besteht aus Plasma (~55 %) und zellulaeren Elementen (Erythrozyten, Leukozyten, Thrombozyten). In diesem Kapitel lernst du alles ueber Haemoglobin, den Bohr-Effekt, Blutgruppen und die Gerinnungskaskade.
+
+**In diesem Kapitel lernst du:**
+- Blutbestandteile (Plasma, Erythrozyten, Leukozyten, Thrombozyten) und Haemoglobin (Bohr-Effekt)
+- AB0- und Rhesus-System (Antigene, Antikoerper, Transfusion)
+- Gerinnungskaskade (intrinsisch/extrinsisch, Fibrin) und Bilirubin-Stoffwechsel
+
+---
+
+{{DIAGRAM:blutbestandteile}}
+
+## Erythrozyten und Haemoglobin
+
+Erythrozyten sind bikonkave Scheiben ohne Zellkern (reife menschliche Erythrozyten haben keinen Kern!) mit Haemoglobin (Tetramer 2alpha2beta, Fe2+). Ihr Durchmesser betraegt ~7,5 Mikrometer.
+
+Der **Bohr-Effekt** beschreibt die Rechtsverschiebung der O2-Bindungskurve bei CO2 hoch / pH tief / Temperatur hoch. Das bedeutet: Im metabolisch aktiven Gewebe gibt Haemoglobin mehr O2 ab.
+
+Erythrozyten leben ~120 Tage und werden in der Milz abgebaut: Haemoglobin -- Bilirubin (unkonjugiert) -- Leber -- konjugiertes Bilirubin -- Galle -- Stuhl (Sterkobilin) + Urin (Urobilin).
+
+> **Merke:** Haematokrit: Maenner ~45 %, Frauen ~42 %. Bohr-Effekt: CO2 hoch / pH tief -- Rechtsverschiebung -- O2-Abgabe steigt.
+
+---
+
+## Leukozyten
+
+Leukozyten sind die Immunzellen des Blutes. Die 5 Typen im Differentialblutbild:
+- **Neutrophile** (~60 %): Erste Linie gegen Bakterien, Phagozytose
+- **Lymphozyten** (~25 %): B-Zellen (Antikoerper), T-Zellen (zellulaer), NK-Zellen
+- **Monozyten** (~5 %): Vorlaeufer von Makrophagen
+- **Eosinophile** (~3 %): Parasitenabwehr, Allergie
+- **Basophile** (~1 %): Histaminfreisetzung
+
+Linksverschiebung (mehr stabkernige Neutrophile) = Zeichen akuter Bakterieninfektion.
+
+---
+
+## Gerinnung und Haemostase
+
+Bei Gefaessverletzung laeuft die Gerinnung in zwei Phasen:
+
+**Primaere Haemostase**: Vasokonstriktion -- Thrombozytenadhäsion (vWF-GPIb) -- Aggregation (Fibrinogen-GPIIb/IIIa) -- Plaettchenpfropf.
+
+**Sekundaere Haemostase** (Koagulationskaskade): Extrinsisch (TF+VIIa, schnell) + Intrinsisch (XIIa, langsam) -- Gemeinsam: Xa+Va -- Thrombin -- Fibrinogen -- Fibrin. Vitamin K aktiviert Faktoren II, VII, IX, X.
+
+> **Merke:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va -- Thrombin -- Fibrin!
+
+{{DIAGRAM:immune-response}}
+
+---
+
+## Blutgruppen
+
+AB0-System: Blutgruppe A (Antigen A, Anti-B), B (Antigen B, Anti-A), AB (A+B, keine Antikoerper = Universalempfaenger), 0 (keine Antigene, Anti-A+B = Universalspender). Die Antikoerper sind natuerliche IgM.
+
+Rhesus-System: Rh+ (~85 %). Rh-Inkompatibilitaet: Rh-minus-Mutter + Rh-plus-Kind -- 1. Geburt: Sensibilisierung -- 2. Schwangerschaft: Anti-D (IgG) ueberquert Plazenta -- fetale Haemolyse. Prophylaxe: Anti-D-Immunglobulin.
+
+> **Merke:** 0 = Universalspender (keine Antigene), AB = Universalempfaenger (keine Antikoerper). AB0 = natuerliche IgM, Rhesus = erst nach Sensibilisierung IgG.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Bohr-Effekt: Rechtsverschiebung bei CO2 hoch, pH tief, Temperatur hoch
+- AB0-Blutgruppen: Antigene, Antikoerper, Universalspender/-empfaenger
+- Gerinnungskaskade: Extrinsisch vs. intrinsisch
+
+**Typische Fallen:**
+- Serum vs. Plasma: Serum = Plasma ohne Gerinnungsfaktoren
+- Haemophilie A = Faktor VIII-Mangel, Haemophilie B = Faktor IX
+- Fe2+ in Haemoglobin (O2-bindend) vs. Fe3+ = Methaemoglobin (kein O2)
+- Erythrozyten ~120 Tage; Vitamin K-Faktoren: II, VII, IX, X
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Blut**: Plasma (55 %) + zellulaere Elemente (45 %); Serum = Plasma ohne Fibrinogen
+- **Erythrozyten**: kernlos, bikonkav, Haemoglobin (2alpha2beta, Fe2+); Bohr-Effekt: CO2 hoch / pH tief -- O2-Abgabe steigt
+- **Haemostase**: primaer (Thrombozyten, vWF) -- sekundaer (Gerinnungskaskade -- Fibrin). Vitamin K: Faktoren II, VII, IX, X
+- **AB0**: 0 = Universalspender, AB = Universalempfaenger. Natuerliche IgM
+- **Rhesus**: Rh-minus-Mutter + Rh-plus-Kind -- Anti-D-Prophylaxe`,
+      contentExtended: `## Einleitung
 
 **Worum geht es?** **Blut** besteht aus **Plasma** (~55%) und **zellulären Elementen** (Erythrozyten, Leukozyten, Thrombozyten). **Warum für den MedAT relevant?** Bohr-Effekt, AB0/Rhesus-System, Gerinnungskaskade (extrinsisch/intrinsisch), Serum vs. Plasma und Blutgruppen werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Bohr-Effekt — Rechtsverschiebung bei?“; „Universalspender/Universalempfänger?“; „Extrinsisch vs. intrinsisch — welcher Faktor?“; „Serum vs. Plasma?“; „Vitamin K — welche Faktoren?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Blut abgedeckt.
 
@@ -2161,13 +2694,105 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Antikörper",
         "T-Zellen",
         "B-Zellen",
-        "Impfung",
-        "Allergie",
-        "MHC",
+        “Impfung”,
+        “Allergie”,
+        “MHC”,
       ],
       content: `## Einleitung
 
-**Worum geht es?** Das Immunsystem unterscheidet „selbst“ von „fremd“: **angeborene Immunität** (sofort, unspezifisch) und **erworbene Immunität** (spezifisch, Gedächtnis). **Warum für den MedAT relevant?** MHC I vs. II, Antikörperklassen (IgG, IgM, IgA, IgE), Allergie Typ I, Komplementsystem und angeborene vs. erworbene Abwehr werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „MHC I vs. MHC II — wer präsentiert?“; „Welche Antikörperklasse bei Allergie Typ I?“; „Angeborene vs. erworbene — Gedächtnis?“; „Komplement — klassischer Weg?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Immunsystem abgedeckt.
+Dein Immunsystem unterscheidet “selbst” von “fremd”. Es hat zwei Arme: die angeborene Immunitaet (sofort, unspezifisch) und die erworbene Immunitaet (spezifisch, mit Gedaechtnis). In diesem Kapitel lernst du die wichtigsten Zellen, Antikoerper und Allergietypen kennen.
+
+**In diesem Kapitel lernst du:**
+- Angeborene vs. erworbene Immunitaet und zentrale Zellen
+- MHC I vs. MHC II (Praesentation, Zielzellen) und Komplementsystem
+- Antikoerperklassen (IgG, IgM, IgA, IgE) und Allergie Typ I
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Angeborene Immunitaet
+
+Die angeborene Immunitaet reagiert sofort (Minuten bis Stunden), ist unspezifisch und hat kein Gedaechtnis. Ihre wichtigsten Zellen:
+- **Neutrophile**: Phagozytose und Respiratory Burst gegen Bakterien
+- **Makrophagen**: Phagozytose und Antigenpraesentation ueber MHC II
+- **NK-Zellen**: Toeten Zellen ohne MHC-I (“Missing Self”) ueber Perforin/Granzyme
+- **Dendritische Zellen**: Bruecke zur adaptiven Immunitaet
+
+Das **Komplementsystem** kann ueber drei Wege aktiviert werden: klassisch (Antikoerper-Komplexe), Lektin-Weg (MBL) und alternativ (spontane C3-Hydrolyse). Alle fuehren zu: C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse).
+
+> **Merke:** Angeboren = schnell, unspezifisch, kein Gedaechtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam, spezifisch, Gedaechtnis (T-/B-Zellen, Antikoerper).
+
+---
+
+## Erworbene Immunitaet und T-Zellen
+
+Die spezifische Abwehr liefern T- und B-Zellen:
+- **CD4+ T-Helferzellen** erkennen Antigene auf MHC II (APCs) und koordinieren die Immunantwort
+- **CD8+ zytotoxische T-Zellen** erkennen Antigene auf MHC I (alle kernhaltigen Zellen) und toeten virusinfizierte Zellen
+- **Treg** sorgen fuer Selbsttoleranz
+- **B-Zellen** werden zu Plasmazellen (Antikoerper) und Gedaechtniszellen
+
+> **Merke:** MHC I auf ALLEN kernhaltigen Zellen zeigt CD8+ intrazellulaere Pathogene (Viren). MHC II auf APCs zeigt CD4+ extrazellulaere Pathogene (Bakterien).
+
+{{DIAGRAM:blutbestandteile}}
+
+---
+
+## Antikoerper und Impfung
+
+Die wichtigsten Antikoerperklassen:
+- **IgM**: Pentamer, Primaer-Antwort (akut), aktiviert Komplement
+- **IgG**: Monomer, Sekundaer-Antwort (Gedaechtnis), plazentagaengig (~75 % der Serum-Ig)
+- **IgA**: Dimer, Schleimhaut-Sekretion (Speichel, Muttermilch)
+- **IgE**: Allergie, bindet an Mastzellen/Basophile
+
+**Aktive Impfung**: Antigen wird gegeben -- eigene Antikoerper + Gedaechtnis (dauerhaft, aber Wochen bis Wirkung).
+**Passive Immunisierung**: Fertige Antikoerper -- sofortiger Schutz, kein Gedaechtnis, kurzfristig.
+
+> **Merke:** IgM = Erste (Pentamer, Primaer), IgG = Gedaechtnis (Sekundaer, Plazenta), IgA = Schleimhaut (Dimer), IgE = Allergie (Mastzellen).
+
+---
+
+{{DIAGRAM:blood-groups}}
+
+## Allergie und Autoimmunitaet
+
+Eine **Autoimmunerkrankung** entsteht durch eine Immunreaktion auf koerpereigene Antigene.
+
+**Typ-I-Allergie** (IgE-vermittelt): Bei Erstkontakt bilden sich IgE-Antikoerper, die an Mastzellen binden. Bei erneutem Kontakt vernetzt das Allergen die IgE -- Mastzell-Degranulation -- Histamin, Leukotriene. Folgen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie: Adrenalin i.m.
+
+Weitere Typen: Typ II (zytotoxisch), Typ III (Immunkomplexe), Typ IV (verzoegert, T-Zell-vermittelt). Nur Typ I ist IgE-vermittelt.
+
+> **Merke:** Aktiv = Antigen, eigene Antikoerper, Gedaechtnis (Wochen, Jahre). Passiv = fertige Antikoerper, sofort, kurz (kein Gedaechtnis).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Angeboren vs. erworben: Geschwindigkeit, Spezifitaet, Gedaechtnis
+- MHC I (alle Zellen, CD8+) vs. MHC II (APCs, CD4+)
+- Antikoerperklassen: IgM, IgG, IgA, IgE
+
+**Typische Fallen:**
+- NK-Zellen: angeboren, toeten bei fehlendem MHC I
+- IgM = akut, IgG = chronisch/Impfung, plazentagaengig
+- Lebendimpfstoffe kontraindiziert bei Immunsuppression
+- Anaphylaxie-Therapie: Adrenalin i.m. (erste Wahl!)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Angeboren**: sofort, unspezifisch, kein Gedaechtnis -- Neutrophile, Makrophagen, NK-Zellen, Komplement
+- **Erworben**: Tage, spezifisch, Gedaechtnis -- T-Zellen, B-Zellen, Antikoerper
+- **MHC I** (alle Zellen) -- CD8+ (Viren). **MHC II** (APCs) -- CD4+ (Bakterien)
+- **Antikoerper**: IgM (Pentamer, akut), IgG (plazentagaengig), IgA (Schleimhaut), IgE (Allergie)
+- **Allergie Typ I**: IgE auf Mastzellen -- Histamin -- Anaphylaxie -- Adrenalin i.m.!`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** Das Immunsystem unterscheidet „selbst” von „fremd”: **angeborene Immunität** (sofort, unspezifisch) und **erworbene Immunität** (spezifisch, Gedächtnis). **Warum für den MedAT relevant?** MHC I vs. II, Antikörperklassen (IgG, IgM, IgA, IgE), Allergie Typ I, Komplementsystem und angeborene vs. erworbene Abwehr werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „MHC I vs. MHC II — wer präsentiert?“; „Welche Antikörperklasse bei Allergie Typ I?“; „Angeborene vs. erworbene — Gedächtnis?“; „Komplement — klassischer Weg?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Immunsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Angeborene vs. erworbene Immunität** und zentrale Zellen (Neutrophile, Makrophagen, NK, T/B)
@@ -2357,6 +2982,83 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
       content: `## Einleitung
 
+Das Lymphsystem hat drei Hauptfunktionen: Es transportiert taeglich ~2-4 L Fluessigkeit zurueck ins Blut, es dient der Immunabwehr (Lymphknoten, Milz, Thymus) und es transportiert Fette (Chylomikronen ueber die Lymphe). In diesem Kapitel lernst du den Aufbau von Lymphknoten, Milz und Thymus kennen.
+
+**In diesem Kapitel lernst du:**
+- Funktionen des Lymphsystems (Fluessigkeitsruecktransport, Immunitaet, Fettresorption)
+- Lymphknoten (Rinde/Mark, B- und T-Zell-Zonen) und Milz (weisse/rote Pulpa)
+- Thymus (T-Zell-Reifung, positive/negative Selektion)
+
+---
+
+{{DIAGRAM:immune-response}}
+
+## Lymphknoten -- Aufbau
+
+Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Er hat drei Zonen:
+- **Cortex** (Rinde): Hier sitzen **B-Zellen** in Follikeln. Primaerfollikel sind ruhend, Sekundaerfollikel mit Keimzentrum sind aktiv und produzieren Antikoerper.
+- **Paracortex**: Hier sitzen **T-Zellen** (CD4+ und CD8+) und dendritische Zellen. Hier werden T-Zellen aktiviert.
+- **Mark** (Medulla): Hier sitzen **Plasmazellen** (sezernieren Antikoerper) und Makrophagen.
+
+Lymphe tritt ueber mehrere afferente Gefaesse ein und verlaesst den Knoten ueber ein efferentes Gefaess am Hilus.
+
+> **Merke:** Cortex = B-Zellen (Follikel, Antikoerper), Paracortex = T-Zellen + dendritische Zellen, Mark = Plasmazellen. Afferenz: mehrere Gefaesse. Efferenz: ein Gefaess.
+
+---
+
+## Milz und Thymus
+
+Die **Milz** (~150 g) filtert ~1 L Blut/min und hat zwei Kompartimente:
+- **Rote Pulpa** (~80 %): Filtert alte/defekte Erythrozyten (Makrophagen), speichert ~30 % aller Thrombozyten
+- **Weisse Pulpa** (~20 %): Immunabwehr gegen Blutpathogene; PALS (T-Zellen) + Follikel (B-Zellen)
+
+Ohne Milz (Splenektomie) droht **OPSI** -- eine lebensbedrohliche Sepsis durch bekapselte Bakterien (Pneumokokken, Meningokokken, H. influenzae). Prophylaxe: Impfung + Penicillin.
+
+Der **Thymus** liegt im oberen Mediastinum und ist der Reifungsort der T-Zellen. Er ist vor der Pubertaet am groessten und bildet sich danach zurueck.
+1. **Positive Selektion** (Cortex): T-Zellen, die MHC erkennen, ueberleben (~5 %)
+2. **Negative Selektion** (Mark): T-Zellen, die Selbst-Antigene zu stark erkennen, sterben (zentrale Toleranz)
+
+B-Zellen reifen dagegen im Knochenmark.
+
+> **Merke:** Milz: rote Pulpa (Ery-Abbau + Thrombozyten) vs. weisse Pulpa (Immunabwehr). Splenektomie = OPSI-Risiko! Thymus: positive Selektion (MHC) + negative Selektion (Selbsttoleranz), nur ~5 % ueberleben.
+
+---
+
+{{DIAGRAM:blutkreislauf}}
+
+## Lymphgefaesse und Lymphtransport
+
+Lymphkapillaren (blind endend, ohne Basalmembran) sammeln ueberschuessige Fluessigkeit aus dem Gewebe. Ueber Lymphgefaesse (mit Klappen) fliesst die Lymphe zum Ductus thoracicus oder Ductus lymphaticus dexter und muendet in die Venae subclaviae.
+
+Der **Ductus thoracicus** sammelt ~75 % der Koerperlymphe und muendet in den linken Venenwinkel. Aus dem Darm transportieren Chylusgefaesse resorbierte Fette (Chylomikronen) direkt ins Blut, unter Umgehung der Leber.
+
+> **Merke:** Ductus thoracicus = 75 % der Koerperlymphe -- linker Venenwinkel. Lymphangion-Pumpe + Klappen + Muskelpumpe treiben den Fluss an.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- 3 Funktionen: Fluessigkeitsruecktransport, Immunabwehr, Fetttransport
+- Lymphknoten-Architektur: Cortex (B), Paracortex (T), Mark (Plasmazellen)
+- Milz: weisse vs. rote Pulpa und OPSI nach Splenektomie
+
+**Typische Fallen:**
+- Cortex (B-Zellen) vs. Paracortex (T-Zellen) im Lymphknoten
+- Positive Selektion (Thymus-Cortex) vs. negative Selektion (Thymus-Mark)
+- Nur ~5 % der Thymozyten ueberleben
+- OPSI: bekapselte Bakterien (Pneumokokken, Meningokokken, H. influenzae)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **3 Funktionen**: Fluessigkeitsruecktransport (2-4 L/Tag), Immunabwehr, Fetttransport (Chylomikronen)
+- **Lymphknoten**: Cortex (B-Zellen), Paracortex (T-Zellen), Mark (Plasmazellen)
+- **Milz**: Weisse Pulpa (Immunabwehr) + Rote Pulpa (Ery-Abbau). OPSI-Risiko nach Splenektomie
+- **Thymus**: Positive + negative Selektion, nur ~5 % ueberleben, zentrale Toleranz`,
+      contentExtended: `## Einleitung
+
 **Worum geht es?** Das **Lymphsystem** transportiert täglich ~2–4 L Flüssigkeit zurück ins Blut, dient der Immunabwehr (Lymphknoten, Milz, Thymus) und dem Fetttransport (Chylomikronen über Lymphe). **Warum für den MedAT relevant?** Lymphknoten-Zonierung (Cortex/Paracortex/Mark), Milz (weiße vs. rote Pulpa), Thymus (positive/negative Selektion) und OPSI-Risiko werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Drei Funktionen des Lymphsystems?“; „Wo B-Zellen, wo T-Zellen im Lymphknoten?“; „Weiße vs. rote Pulpa der Milz?“; „Positive vs. negative Selektion im Thymus?“; „OPSI nach Splenektomie — welche Bakterien?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Lymphsystem abgedeckt.
 
 **In diesem Kapitel lernst du:**
@@ -2543,6 +3245,79 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
         "Bronchien",
       ],
       content: `## Einleitung
+
+Das Atmungssystem ermoeglicht den Gasaustausch (O2/CO2) in den Alveolen. Surfactant haelt die Alveolen offen, und die Atemregulation erfolgt primaer ueber CO2/pH. In diesem Kapitel lernst du alles ueber Alveolen, Atemmechanik und CO2-Transport.
+
+**In diesem Kapitel lernst du:**
+- Alveolen, Surfactant (Typ-II-Pneumozyten) und Blut-Luft-Schranke
+- Atemmechanik (Inspiration/Exspiration) und Gasaustausch
+- CO2-Transport (Bikarbonat, Bohr-Effekt) und Atemregulation
+
+---
+
+{{DIAGRAM:atmungssystem}}
+
+## Surfactant und Alveolarstruktur
+
+Der Gasaustausch findet in den Alveolen statt, nicht in den Bronchien. Die ~300 Millionen Alveolen haben zwei Zelltypen:
+- **Typ-I-Pneumozyten** (~95 % der Oberflaeche): Hauchduenn (0,2 Mikrometer), ermoeglichen den Gasaustausch
+- **Typ-II-Pneumozyten** (~5 % der Oberflaeche): Produzieren **Surfactant** (hauptsaechlich DPPC, ~90 % Phospholipide)
+
+Surfactant senkt die Oberflaechenspannung an der Luft-Fluessigkeits-Grenze. Ohne Surfactant wuerden kleine Alveolen nach dem Laplace-Gesetz (P = 2T/r) kollabieren.
+
+Bei Fruehgeborenen (<28 SSW) sind die Typ-II-Pneumozyten unreif -- Surfactant-Mangel fuehrt zu Atelektase und Hypoxie (neonatales Atemnotsyndrom, RDS). Prophylaxe: Betamethason antenatal.
+
+> **Merke:** Surfactant: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide), Oberflaechenspannung sinkt, Atelektase verhindert. RDS bei Fruehgeborenen: Surfactant-Mangel.
+
+---
+
+## Atemmechanik, Gasaustausch und Atemregulation
+
+**Atemmechanik:**
+- **Inspiration** (aktiv): Diaphragma + aeussere Interkostalmuskeln kontrahieren, Thoraxvolumen steigt, Unterdruck entsteht, Luft stroemt ein. Der intrapleurale Druck ist immer negativ (~-5 mmHg in Ruhe).
+- **Exspiration in Ruhe** (passiv): Muskelentspannung, elastische Rueckstellung, Luft stroemt aus. Nur bei forcierter Exspiration aktiv (Bauchmuskeln).
+
+**Gasaustausch durch Diffusion:**
+- O2: Alveolen ~100 mmHg, venoeses Blut ~40 mmHg -- Gradient 60 mmHg, O2 diffundiert ins Blut
+- CO2: Venoeses Blut ~46 mmHg, Alveolen ~40 mmHg -- Gradient nur 6 mmHg, aber CO2 diffundiert ~20x schneller (hoehere Loeslichkeit)
+
+**CO2-Transport** im Blut:
+- 70 % als Bikarbonat (HCO3-): Carboanhydrase in Erythrozyten wandelt CO2 + H2O um. Chlorid-Shift. Haldane-Effekt: Desoxy-Hb bindet mehr CO2.
+- 23 % als Carbaminohaemoglobin (CO2 an Globin)
+- 7 % geloest im Plasma
+
+**Atemregulation:** Zentrale Chemorezeptoren (Medulla) reagieren auf CO2/pH = Hauptantrieb. Periphere Chemorezeptoren (Karotiskoerper) reagieren auf O2, aber erst bei pO2 <60 mmHg relevant. Bei COPD: Anpassung an hohes CO2, O2 wird Hauptantrieb -- unkontrollierte O2-Gabe kann Apnoe ausloesen!
+
+> **Merke:** CO2-Transport: 70 % Bikarbonat, 23 % Carbamino-Hb, 7 % geloest. Atemantrieb: primaer CO2/pH (zentral), O2 erst bei pO2 <60 mmHg (peripher).
+
+{{DIAGRAM:blutkreislauf}}
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Surfactant: Typ-II-Pneumozyten, DPPC, Oberflaechenspannung
+- CO2-Transport: 70 % Bikarbonat, 23 % Carbamino-Hb, 7 % geloest
+- Bohr-Effekt: CO2 hoch / pH tief -- Rechtsverschiebung -- O2-Abgabe steigt
+
+**Typische Fallen:**
+- Typ-I (Gasaustausch, 95 %) vs. Typ-II (Surfactant, 5 %)
+- Aktive Inspiration vs. passive Exspiration in Ruhe
+- Bohr-Effekt (O2-Abgabe) vs. Haldane-Effekt (CO2-Transport)
+- Intrapleuraler Druck immer negativ
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Alveolen**: ~300 Mio., Typ-I (Gasaustausch), Typ-II (Surfactant)
+- **Surfactant** (DPPC, ~90 %): Oberflaechenspannung sinkt, Alveolarkollaps verhindert. Mangel bei Fruehgeborenen -- RDS
+- **Atemmechanik**: Inspiration aktiv (Diaphragma). Exspiration in Ruhe passiv
+- **CO2-Transport**: 70 % Bikarbonat, 23 % Carbamino-Hb, 7 % geloest
+- **Atemregulation**: Hauptantrieb CO2/pH (zentral). O2 erst bei pO2 <60 mmHg
+- **Bohr-Effekt**: CO2 hoch / pH tief / Temp hoch -- Rechtsverschiebung -- O2-Abgabe steigt`,
+      contentExtended: `## Einleitung
 
 **Worum geht es?** Das **Atmungssystem** ermöglicht Gasaustausch (O₂/CO₂) in den Alveolen; Surfactant stabilisiert die Alveolen, die Atemregulation erfolgt primär über CO₂/pH. **Warum für den MedAT relevant?** Surfactant (Typ-II-Pneumozyten, DPPC), CO₂-Transport (Bikarbonat, Haldane-Effekt), Bohr-Effekt und Atemmechanik (aktiv/passiv) werden regelmäßig geprüft. **Welche Fragen werden beantwortet?** „Wer produziert Surfactant?“; „CO₂-Transport — Anteile?“; „Bohr-Effekt — Rechtsverschiebung bei?“; „Inspiration aktiv oder passiv?“; „Hauptantrieb der Atmung?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Atmungssystem abgedeckt.
 

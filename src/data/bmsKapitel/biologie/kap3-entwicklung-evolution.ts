@@ -22,6 +22,90 @@ export const bioKapEntwicklung: Kapitel = {
       ],
       content: `## Einleitung
 
+Damit ein neues Leben entstehen kann, braucht es zwei besondere Zellen: eine Eizelle und ein Spermium. Beide muessen haploid sein -- also nur einen einfachen Chromosomensatz (n) haben. Wenn sie verschmelzen, ergibt das wieder einen doppelten Satz (2n). Der Weg von einer normalen Koerperzelle zur fertigen Keimzelle heisst **Gametogenese**. Stell dir vor: Aus einer Stammzelle im Hoden werden vier Spermien, aber aus einer Eizell-Vorstufe wird nur eine einzige Eizelle. Warum? Weil die Eizelle das gesamte Zytoplasma bekommt, waehrend die drei “Restprodukte” (Polkoerperchen) verworfen werden.
+
+**In diesem Kapitel lernst du:**
+- warum Keimzellen haploid sein muessen und wie die Meiose das sicherstellt
+- weshalb aus einer Stammzelle vier Spermien, aber nur eine Eizelle entsteht
+- an welchen Punkten die Eizellreifung pausiert und was sie wieder anstosst
+- wie sich der zeitliche Ablauf von Spermatogenese und Oogenese unterscheidet
+
+{{DIAGRAM:meiosis}}
+
+---
+
+## Spermatogenese -- Vier aus einer
+
+{{DIAGRAM:cell-cycle}}
+
+Die **Spermatogenese** laeuft ab der Pubertaet ununterbrochen in den Samenkanaelchen (Tubuli seminiferi) des Hodens ab. Stell es dir wie ein Fliessband vor:
+
+- **Spermatogonium** (2n, Stammzelle) teilt sich mitotisch
+- **Meiose I:** Eine primaere Spermatozyte (2n) wird zu zwei sekundaeren (n)
+- **Meiose II:** Jede sekundaere Spermatozyte (n) wird zu zwei Spermatiden (n)
+- **Ergebnis:** 4 reife Spermien aus einer Ausgangszelle
+- **Dauer:** Etwa 74 Tage von Stammzelle bis Spermium
+
+Jedes Spermium hat einen Kopf (mit Akrosom und Erbgut), ein Mittelstueck (mit Mitochondrien fuer Energie) und einen Schwanz zum Schwimmen.
+
+> **Merke:** Spermatogenese: 1 Spermatogonium ergibt ueber Meiose I und II **4 reife Spermien** (n). Laeuft ab Pubertaet ununterbrochen im Hoden.
+
+---
+
+## Oogenese -- Eine aus vier, mit zwei Pausen
+
+Die **Oogenese** funktioniert ganz anders. Denk an eine Fabrik, die immer wieder pausiert:
+
+**1. Pause (Prophase I):** Schon vor der Geburt treten primaere Oozyten in die Meiose I ein und bleiben dann in Prophase I stehen -- jahrzehntelang, bis zur Pubertaet.
+
+**2. Aktivierung bei Eisprung:** Bei jeder Ovulation wird eine Oozyte “geweckt”. Meiose I endet, es entstehen eine sekundaere Oozyte (n) und ein erstes Polkoerperchen (n).
+
+**3. Pause (Metaphase II):** Die sekundaere Oozyte bleibt in Metaphase II stehen.
+
+**4. Abschluss bei Befruchtung:** Erst wenn ein Spermium eindringt, endet Meiose II. Es entstehen die reife Eizelle (n) und ein zweites Polkoerperchen.
+
+Die drei Polkoerperchen enthalten kaum Zytoplasma und werden abgebaut -- nur die eine Eizelle zaehlt.
+
+| Aspekt | Spermatogenese | Oogenese |
+|--------|----------------|----------|
+| Beginn | Ab Pubertaet | Praenatal |
+| Ergebnis | 4 Spermien | 1 Eizelle + 3 Polkoerperchen |
+| Meiose-Arrests | Keine | Prophase I + Metaphase II |
+
+> **Merke:** Oogenese: 1 Eizelle + 3 Polkoerperchen. Erster Arrest in Prophase I (bis Eisprung), zweiter in Metaphase II (bis Befruchtung).
+
+---
+
+## Bedeutung fuer die Embryonalentwicklung
+
+{{DIAGRAM:hormonsystem}}
+
+Die fertige Eizelle (n) und das Spermium (n) sind die Ausgangspunkte der Befruchtung. Ihre Verschmelzung ergibt die Zygote (2n). Das Geschlecht bestimmt das Spermium (X oder Y).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- 4 Spermien vs. 1 Eizelle pro Ausgangszelle
+- Oogenese-Arrests: Prophase I (bis Ovulation), Metaphase II (bis Befruchtung)
+- Ort: Spermatogenese in Tubuli seminiferi, Oogenese im Ovar
+
+**Typische Fallen:**
+- “Aus einer Oozyte entstehen vier Eizellen” ist falsch (nur eine + drei Polkoerperchen)
+- Prophase-I-Arrest (bis Ovulation) nicht verwechseln mit Metaphase-II-Arrest (bis Befruchtung)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Gametogenese** = Bildung von Spermien und Eizellen ueber Meiose
+- **Spermatogenese:** 1 Spermatogonium ergibt 4 Spermien (n); ab Pubertaet, ~74 Tage
+- **Oogenese:** 1 Oozyte ergibt 1 Eizelle + 3 Polkoerperchen; Arrest in Prophase I und Metaphase II
+- Eizelle wird erst bei Befruchtung fertiggestellt
+`,
+      contentExtended: `## Einleitung
+
 Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer Eizelle und eines Spermiums. Doch wie entstehen diese Keimzellen überhaupt, und warum sind sie so grundlegend verschieden? Die **Gametogenese** beschreibt genau diesen Weg: Aus einer normalen Körperzelle mit doppeltem Chromosomensatz wird durch Meiose eine haploide Keimzelle. Dabei zeigt sich ein überraschender Gegensatz — ein Mann produziert aus einer Stammzelle vier gleichwertige Spermien, eine Frau aus derselben Ausgangslage nur eine einzige befruchtungsfähige Eizelle. Warum das so ist und in welchen Phasen die Eizellreifung über Jahrzehnte pausiert, ist nicht nur biologisch faszinierend, sondern gehört zu den meistgeprüften Themen im MedAT.
 
 **In diesem Kapitel lernst du:**
@@ -65,7 +149,7 @@ Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer 
 
 **Oogenese** ist die Bildung der Eizelle. Sie unterscheidet sich von der Spermatogenese durch **zwei Meiose-Arrests** und durch ein **asymmetrisches Teilungsergebnis**.
 
-**Zeitliche Einordnung:** Bereits während der **Embryonalentwicklung** (pränatal) entstehen aus Oogonien **primäre Oozyten** (2n), die in die **Meiose I** eintreten und dann in **Prophase I arretieren** — bis zur Pubertät. Bei jeder Ovulation wird eine primäre Oozyte „geweckt“, beendet Meiose I und gibt **eine sekundäre Oozyte** (n) und **ein erstes Polkörperchen** (n) ab. Die sekundäre Oozyte wird aus dem Ovar freigesetzt und arretiert in **Metaphase II**. **Meiose II** wird erst bei **Befruchtung** abgeschlossen: Es entstehen die reife **Eizelle** (n) und ein **zweites Polkörperchen** (n). Die Polkörperchen enthalten kaum Zytoplasma und degenerieren; nur die Eizelle ist befruchtungsfähig.
+**Zeitliche Einordnung:** Bereits während der **Embryonalentwicklung** (pränatal) entstehen aus Oogonien **primäre Oozyten** (2n), die in die **Meiose I** eintreten und dann in **Prophase I arretieren** — bis zur Pubertät. Bei jeder Ovulation wird eine primäre Oozyte „geweckt”, beendet Meiose I und gibt **eine sekundäre Oozyte** (n) und **ein erstes Polkörperchen** (n) ab. Die sekundäre Oozyte wird aus dem Ovar freigesetzt und arretiert in **Metaphase II**. **Meiose II** wird erst bei **Befruchtung** abgeschlossen: Es entstehen die reife **Eizelle** (n) und ein **zweites Polkörperchen** (n). Die Polkörperchen enthalten kaum Zytoplasma und degenerieren; nur die Eizelle ist befruchtungsfähig.
 
 | Aspekt | Spermatogenese | Oogenese |
 |--------|----------------|----------|
@@ -82,7 +166,7 @@ Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer 
 
 {{DIAGRAM:hormonsystem}}
 
-Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …“ solltest du sicher beherrschen.
+Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …” solltest du sicher beherrschen.
 
 ---
 
@@ -209,7 +293,65 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
         "Syngamie",
         "Polyspermie-Block",
       ],
-      content: `## Einleitung
+      content: `## Befruchtung -- wie Spermium und Eizelle verschmelzen
+
+Beim Geschlechtsverkehr werden Hunderte Millionen Spermien freigesetzt, aber nur eines darf in die Eizelle eindringen. Die Befruchtung ist ein genau abgestimmter Ablauf mit mehreren Schritten.
+
+{{DIAGRAM:meiosis}}
+
+**In diesem Kapitel lernst du:**
+- wo die Befruchtung stattfindet
+- wie Spermium und Eizelle Schritt fuer Schritt verschmelzen
+- wie die Eizelle sich vor mehreren Spermien schuetzt
+- was die Zygote ist
+
+---
+
+## Wo findet die Befruchtung statt?
+
+Die Befruchtung findet in der **Ampulle des Eileiters** statt -- das ist der aeussere, weiteste Teil des Eileiters. Die Eizelle wandert nach dem Eisprung vom Eierstock in den Eileiter. Die Spermien schwimmen von der Scheide durch die Gebaermutter in den Eileiter. Wenn sich die Eizelle im Eileiter statt in der Gebaermutter einnistet, entsteht eine **Eileiterschwangerschaft** -- das ist lebensbedrohlich.
+
+---
+
+## Kapazitation -- die Reifung des Spermiums
+
+{{DIAGRAM:menstrual-cycle}}
+
+Bevor ein Spermium die Eizelle erreichen kann, muss es im weiblichen Koerper reifen. Diesen Vorgang nennt man **Kapazitation**. Er dauert etwa **7 Stunden**. Dabei wird die Spermienmembran veraendert und das Spermium wird schneller und kraeftiger. Erst nach der Kapazitation kann das Spermium die Eizellhuelle durchdringen.
+
+> **Merke:** Kapazitation = Reifung des Spermiums im weiblichen Genitaltrakt (~7 h). Ohne Kapazitation keine Befruchtung.
+
+---
+
+## Die fuenf Schritte der Befruchtung
+
+{{DIAGRAM:cell-membrane}}
+
+1. **Bindung an die Zona pellucida:** Das reife Spermium bindet an die **Zona pellucida** -- eine Schutzhuelle um die Eizelle. Das Protein **ZP3** loest den naechsten Schritt aus.
+
+2. **Akrosomreaktion (Spermium):** Im Kopf des Spermiums liegt das **Akrosom**. Es setzt Enzyme frei (**Akrosin**, **Hyaluronidase**), die die Zona pellucida aufloesen. So kann das Spermium zur Eizelle vordringen.
+
+3. **Kortikalreaktion (Eizelle):** Sobald ein Spermium mit der Eizelle verschmilzt, steigt in der Eizelle der Calcium-Spiegel. Daraufhin schuettet die Eizelle den Inhalt ihrer **kortikalen Granula** aus. Die Zona pellucida wird dadurch veraendert und fuer weitere Spermien undurchlaessig -- das ist der **Polyspermie-Block**. Ohne diesen Block koennten mehrere Spermien eindringen, was zum Tod des Embryos fuehrt.
+
+4. **Abschluss der Meiose II:** Die Eizelle beendet jetzt erst ihre zweite Reifeteilung. Es entstehen die reife Eizelle und ein zweites Polkoerperchen.
+
+5. **Syngamie:** Die Vorkerne von Eizelle und Spermium verschmelzen. Die neue Zelle heisst **Zygote** -- sie ist diploid (2n). Das Geschlecht bestimmt das Spermium: Es traegt ein X- oder ein Y-Chromosom.
+
+> **Merke:** Akrosomreaktion = Spermium setzt Enzyme frei. Kortikalreaktion = Eizelle blockiert weitere Spermien. Syngamie = Vorkerne verschmelzen zur Zygote (2n).
+
+---
+
+## Zusammenfassung
+
+- Befruchtung in der **Ampulle des Eileiters**
+- **Kapazitation** (~7 h): Spermium reift im weiblichen Koerper
+- **Akrosomreaktion**: Enzyme durchbrechen die Zona pellucida
+- **Kortikalreaktion**: Eizelle verhindert Polyspermie
+- **Meiose II** wird bei Befruchtung abgeschlossen
+- **Syngamie**: Vorkerne verschmelzen zur **Zygote** (2n)
+- Geschlecht wird durch das Spermium bestimmt (X oder Y)
+`,
+      contentExtended: `## Einleitung
 
 Von den Hunderten Millionen Spermien, die beim Geschlechtsverkehr freigesetzt werden, erreichen nur wenige Hundert die Eizelle im Eileiter -- und genau eines davon darf eindringen. Die Befruchtung ist kein passiver Vorgang, sondern ein präzise choreografierter Prozess: Das Spermium muss erst reifen (Kapazitation), dann die Eizellhülle enzymatisch durchdringen (Akrosomreaktion), und die Eizelle muss sofort alle weiteren Spermien abwehren (Kortikalreaktion). Dass die Eizelle dabei ihre eigene Meiose erst abschließt, macht den Vorgang noch komplexer.
 
@@ -368,7 +510,63 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
         "hCG",
         "Blastozoel",
       ],
-      content: `## Einleitung
+      content: `## Von der Zygote zur Einnistung
+
+Aus der Zygote soll ein ganzer Mensch werden. In den ersten Tagen passiert etwas Besonderes: Die Zelle teilt sich immer wieder, aber der Keim wird dabei nicht groesser. Diese Teilungen ohne Wachstum heissen **Furchung**.
+
+{{DIAGRAM:stem-cells}}
+
+**In diesem Kapitel lernst du:**
+- warum die Zellen bei der Furchung immer kleiner werden
+- was Morula und Blastozyste unterscheidet
+- welche Zellen spaeter zum Embryo und welche zur Plazenta werden
+- wie die Einnistung funktioniert und warum hCG so wichtig ist
+
+---
+
+## Furchung -- Teilung ohne Wachstum
+
+Nach der Befruchtung teilt sich die Zygote schnell: 2, 4, 8, 16 Zellen. Dabei waechst der Keim aber nicht -- die Tochterzellen (**Blastomeren**) werden mit jeder Teilung kleiner. Das ist ein wichtiger Unterschied zu normalem Zellwachstum. Den kompakten Zellhaufen aus 16-32 Zellen nennt man **Morula** (Tag 3-4, lateinisch fuer “Maulbeere”).
+
+> **Merke:** Furchung = Teilungen ohne Wachstum. Morula = kompakter Zellhaufen (Tag 3-4).
+
+---
+
+## Blastozyste -- die hohle Kugel
+
+{{DIAGRAM:animal-cell}}
+
+In der Morula bildet sich ein Hohlraum (**Blastozoel**). Jetzt spricht man von einer **Blastozyste** (Tag 5-6). Sie hat drei wichtige Strukturen:
+
+- **Trophoblast** (aussen): Wird spaeter zur **Plazenta** und produziert **hCG**
+- **Embryoblast** (innen): Wird zum **Embryo**. Spaeter teilt er sich in **Epiblast** (alle drei Keimblaetter) und **Hypoblast**
+- **Blastozoel**: Der Hohlraum
+
+> **Merke:** Trophoblast (aussen) = Plazenta + hCG. Embryoblast (innen) = Embryo.
+
+---
+
+## Implantation -- die Einnistung
+
+Am **Tag 6-7** nistet sich die Blastozyste in die **Gebaermutterschleimhaut** (Endometrium) ein. Der **Synzytiotrophoblast** dringt in die Schleimhaut ein und verankert den Keim.
+
+Gleichzeitig produziert der Trophoblast **hCG** (humanes Choriongonadotropin). hCG haelt den **Gelbkoerper** (Corpus luteum) am Leben, der weiter **Progesteron** produziert. Progesteron erhaelt die Gebaermutterschleimhaut und **verhindert die Menstruation**. Ohne hCG wuerde der Gelbkoerper absterben und die Schleimhaut wuerde abgestossen.
+
+hCG kann im Urin nachgewiesen werden -- das ist die Grundlage des **Schwangerschaftstests**. Ab der 8.-12. Woche uebernimmt die Plazenta die Progesteronproduktion und hCG sinkt.
+
+> **Merke:** Implantation Tag 6-7. hCG erhaelt Corpus luteum, Progesteron verhindert Menstruation.
+
+---
+
+## Zusammenfassung
+
+- **Furchung**: Teilungen ohne Wachstum, Zellen werden kleiner
+- **Morula** (Tag 3-4): kompakter Zellhaufen
+- **Blastozyste** (Tag 5-6): Hohlraum + Trophoblast (aussen, wird Plazenta) + Embryoblast (innen, wird Embryo)
+- **Implantation** (Tag 6-7): Einnistung in die Gebaermutterschleimhaut
+- **hCG** erhaelt Corpus luteum und damit die Schwangerschaft
+`,
+      contentExtended: `## Einleitung
 
 Stell dir vor: Aus einer einzigen Zelle -- der Zygote -- soll ein ganzer Mensch werden. Die ersten Tage nach der Befruchtung sind dabei paradox: Die Zygote teilt sich immer wieder, doch der Keim wird dabei nicht größer. Diese raschen Teilungen ohne Wachstum heißen Furchung, und sie formen aus einer Zelle zunächst einen kompakten Zellhaufen (Morula), dann eine hohle Kugel mit zwei völlig verschiedenen Zelltypen (Blastozyste). Der eine wird zur Plazenta, der andere zum Embryo. Etwa am sechsten Tag nach der Befruchtung bohrt sich diese Blastozyste in die Gebärmutterschleimhaut ein -- die Implantation, ohne die keine Schwangerschaft bestehen kann.
 
@@ -386,7 +584,7 @@ Stell dir vor: Aus einer einzigen Zelle -- der Zygote -- soll ein ganzer Mensch 
 
 **Bisher haben wir gesehen:** Die Zygote ist die erste Zelle des neuen Individuums. **Damit sich ein vielzelliger Keim bildet,** teilt sie sich wiederholt. Diese Teilungen heißen **Furchung**: Sie finden in rascher Folge statt, **ohne** dass die Zellen zwischen den Teilungen nennenswert wachsen. Die Tochterzellen (**Blastomeren**) werden also mit jeder Runde kleiner. Es gibt **kein** Gesamtwachstum des Keims in dieser Phase — Furchung ist **nicht** mit Wachstum gleichzusetzen (typische Prüfungsfalle).
 
-Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere“). Die Morula wandert weiter im Eileiter in Richtung Uterus.
+Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere"). Die Morula wandert weiter im Eileiter in Richtung Uterus.
 
 > **Merke:** Furchung = wiederholte Teilungen der Zygote/Blastomeren **ohne** Wachstum. Morula = kompakter Zellhaufen (Tag 3–4).
 
@@ -523,7 +721,81 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
         "Notochord",
         "Epiblast",
       ],
-      content: `## Einleitung
+      content: `## Gastrulation -- drei Keimblaetter entstehen
+
+In der dritten Woche passiert ein entscheidender Schritt: Aus einer flachen Zellscheibe mit zwei Schichten werden drei Schichten -- die **Keimblaetter**. Aus ihnen entstehen spaeter alle Organe.
+
+{{DIAGRAM:stem-cells}}
+
+**In diesem Kapitel lernst du:**
+- wie aus zwei Zellschichten drei Keimblaetter werden
+- welche Organe aus welchem Keimblatt entstehen
+- was das Notochord macht
+- was Somiten sind
+
+---
+
+## Ausgangspunkt
+
+Der Embryoblast hat sich in **Epiblast** (oben) und **Hypoblast** (unten) geteilt. Jetzt muessen daraus drei Schichten werden: **Ektoderm**, **Mesoderm** und **Endoderm**.
+
+---
+
+## So laeuft die Gastrulation ab
+
+Die **Gastrulation** findet in **Woche 3** (Tag 15-21) statt:
+
+1. Am unteren Ende der Keimscheibe bildet sich der **Primitivstreifen** -- eine Verdickung in der Mitte
+2. Epiblastzellen wandern durch den Primitivstreifen nach innen und bilden das **Mesoderm** (mittlere Schicht)
+3. Andere eingewanderte Zellen verdraengen den Hypoblast und werden zum **Endoderm** (innere Schicht)
+4. Die Zellen, die oben bleiben, werden zum **Ektoderm** (aeussere Schicht)
+
+Wichtig: Alle drei Keimblaetter stammen vom **Epiblast** ab.
+
+Aus dem **Primitivknoten** entsteht das **Notochord** -- es loest spaeter die Bildung des Nervensystems aus (Neurulation).
+
+> **Merke:** Gastrulation = drei Keimblaetter aus dem Epiblast. Notochord induziert Neurulation.
+
+---
+
+## Welches Keimblatt wird zu was?
+
+| Keimblatt | Wichtige Organe |
+|-----------|----------------|
+| **Ektoderm** | Haut (Epidermis), Gehirn, Rueckenmark, Sinnesorgane, Zahnschmelz |
+| **Mesoderm** | Muskeln, Knochen, Herz, Nieren, Blut, Bindegewebe |
+| **Endoderm** | Darm, Lunge, Leber, Bauchspeicheldruese, Schilddruese |
+
+Achtung: Die **Epidermis** (Oberhaut) kommt vom Ektoderm, nicht vom Endoderm!
+
+> **Merke:** Ektoderm = Haut + Nerven. Mesoderm = Muskel + Knochen + Herz. Endoderm = Darm + Lunge + Druesen.
+
+---
+
+## Somiten
+
+{{DIAGRAM:animal-cell}}
+
+**Somiten** sind Mesoderm-Bloecke, die beidseitig neben dem Neuralrohr entstehen (42-44 Paare). Jeder Somit hat drei Teile:
+
+- **Sklerotom**: wird zu Knochen (Wirbel, Rippen)
+- **Myotom**: wird zu Skelettmuskulatur
+- **Dermatom**: wird zu Bindegewebe der Haut (aber nicht zur Epidermis -- die kommt vom Ektoderm!)
+
+> **Merke:** Somiten: Sklerotom = Knochen, Myotom = Muskel, Dermatom = Bindegewebe (nicht Epidermis!).
+
+---
+
+## Zusammenfassung
+
+- **Gastrulation** (Woche 3): Epiblast bildet alle drei Keimblaetter
+- **Ektoderm**: Haut, Nervensystem, Sinnesorgane
+- **Mesoderm**: Muskeln, Knochen, Herz, Nieren, Blut
+- **Endoderm**: Darm, Lunge, Leber, Druesen
+- **Notochord**: loest Neurulation aus
+- **Somiten**: Knochen + Muskel + Bindegewebe
+`,
+      contentExtended: `## Einleitung
 
 Wie wird aus einer flachen Zellscheibe ein dreidimensionaler Embryo mit Haut, Muskeln und inneren Organen? In der dritten Entwicklungswoche geschieht einer der spektakulärsten Schritte der Embryologie: Durch die Gastrulation wandern Zellen ins Innere der Keimscheibe ein und schaffen drei übereinanderliegende Zellschichten -- die Keimblätter. Aus dem Ektoderm werden später Haut und Nervensystem, aus dem Mesoderm Muskeln und Knochen, aus dem Endoderm Darm und Lunge. Das Erstaunliche: Alle drei Blätter gehen auf dieselbe Zellschicht zurück, den Epiblast.
 
@@ -735,7 +1007,78 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
         "Anenzephalie",
         "Folsäure",
       ],
-      content: `## Einleitung
+      content: `## Neurulation -- wie das Nervensystem entsteht
+
+Gehirn und Rueckenmark gehoeren zu den ersten Organen, die angelegt werden. Das **Notochord** unter dem Ektoderm sendet Signale, die eine flache Zellplatte dazu bringen, sich zu einer Roehre zu falten -- dem **Neuralrohr**.
+
+{{DIAGRAM:stem-cells}}
+
+{{DIAGRAM:nervensystem-übersicht}}
+
+**In diesem Kapitel lernst du:**
+- wie das Neuralrohr entsteht
+- was passiert, wenn es sich nicht schliesst
+- was die Neuralleiste ist und welche Zellen daraus entstehen
+- warum Folsaeure so wichtig ist
+
+---
+
+## So entsteht das Neuralrohr
+
+{{DIAGRAM:nervensystem-übersicht}}
+
+Das Notochord sendet Signale an das darueber liegende Ektoderm. Dadurch passiert folgendes:
+
+1. **Neuralplatte**: Das Ektoderm verdickt sich zu einer Platte
+2. **Neuralrinne**: Die Raender heben sich, die Mitte senkt sich ein
+3. **Neuralrohr**: Die Raender verschmelzen zur Roehre -- das ist die Anlage von **Gehirn und Rueckenmark**
+
+Die offenen Enden heissen **Neuroporen**:
+- **Vorderer Neuroporus** schliesst am **Tag 25**
+- **Hinterer Neuroporus** schliesst am **Tag 27**
+
+Bleibt ein Neuroporus offen, entstehen schwere Fehlbildungen.
+
+> **Merke:** Neuralplatte, Neuralrinne, Neuralrohr. Vorderer Neuroporus Tag 25, hinterer Tag 27.
+
+---
+
+## Neuralleiste -- vielseitige Wanderzellen
+
+{{DIAGRAM:stem-cells}}
+
+Waehrend sich das Neuralrohr schliesst, loesen sich Zellen vom Rand der Neuralplatte und wandern in den Koerper. Diese **Neuralleiste** stammt vom **Ektoderm** (nicht vom Mesoderm -- haeufige Pruefungsfalle!).
+
+Aus der Neuralleiste entstehen:
+- **Ganglien** und **Schwann-Zellen** (peripheres Nervensystem)
+- **Melanozyten** (Pigmentzellen der Haut)
+- **Nebennierenmark** (produziert Adrenalin)
+- Teile des Gesichtsschaedels (Kieferknochen, Knorpel)
+
+> **Merke:** Neuralleiste = Ektoderm. Daraus: Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark.
+
+---
+
+## Neuralrohrdefekte und Folsaeure
+
+Wenn der hintere Neuroporus offen bleibt: **Spina bifida** (offener Ruecken). Wenn der vordere offen bleibt: **Anenzephalie** (Fehlen von Grosshirnteilen, nicht ueberlebensfaehig).
+
+**Folsaeure** (Vitamin B9) ist fuer den Verschluss des Neuralrohrs wichtig. **0,4 mg pro Tag** vor und in der fruehen Schwangerschaft senkt das Risiko um etwa **70 %**.
+
+> **Merke:** Folsaeure 0,4 mg/Tag vor der Schwangerschaft senkt Neuralrohrdefekt-Risiko um ~70 %.
+
+---
+
+## Zusammenfassung
+
+- **Notochord** loest die Neurulation aus
+- **Neuralrohr** = Anlage von Gehirn und Rueckenmark
+- Vorderer Neuroporus schliesst Tag 25, hinterer Tag 27
+- Offen = **Spina bifida** oder **Anenzephalie**
+- **Neuralleiste** (Ektoderm): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark
+- **Folsaeure** 0,4 mg/Tag senkt das Risiko um ~70 %
+`,
+      contentExtended: `## Einleitung
 
 Gehirn und Rückenmark gehören zu den ersten Organen, die im Embryo angelegt werden -- und der Prozess, der sie formt, ist erstaunlich elegant. Das Notochord, eine stäbchenförmige Struktur unter dem Ektoderm, sendet Signale nach oben und bringt eine flache Zellplatte dazu, sich zu einer Röhre zusammenzufalten: dem Neuralrohr, der Anlage des gesamten zentralen Nervensystems. Wenn dieser Verschluss an einer Stelle ausbleibt, entstehen schwerwiegende Fehlbildungen wie Spina bifida oder Anenzephalie. Die gute Nachricht: Eine einfache Vitaminergänzung mit Folsäure kann das Risiko um rund 70 % senken -- eine der wirksamsten Präventionsmaßnahmen der Medizin.
 
@@ -791,7 +1134,7 @@ Während sich das Neuralrohr schließt, lösen sich Zellen vom Rand der Neuralpl
 
 ## Neuralrohrdefekte (BMS-Level)
 
-Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida** („offener Rücken“) kommen — eine Fehlbildung im Bereich der Wirbelsäule mit unterschiedlichem Schweregrad. Wenn der **anteriore Neuroporus** offen bleibt, kann **Anenzephalie** (Fehlen von Großhirnanteilen, nicht überlebensfähig) entstehen. **Folsäure** (Folat, Vitamin B9) ist für die Zellteilung und den Neuralrohrschluss essenziell. Eine **Folsäure-Supplementierung** von **0,4 mg/Tag** (idealerweise **präkonzeptionell**, also vor der Schwangerschaft, und in der Frühschwangerschaft) reduziert das Risiko für Neuralrohrdefekte um etwa **70 %**. Da der Neuralrohrschluss sehr früh erfolgt (3.–4. Woche), ist die Einnahme vor und zu Beginn der Schwangerschaft entscheidend.
+Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida** („offener Rücken") kommen — eine Fehlbildung im Bereich der Wirbelsäule mit unterschiedlichem Schweregrad. Wenn der **anteriore Neuroporus** offen bleibt, kann **Anenzephalie** (Fehlen von Großhirnanteilen, nicht überlebensfähig) entstehen. **Folsäure** (Folat, Vitamin B9) ist für die Zellteilung und den Neuralrohrschluss essenziell. Eine **Folsäure-Supplementierung** von **0,4 mg/Tag** (idealerweise **präkonzeptionell**, also vor der Schwangerschaft, und in der Frühschwangerschaft) reduziert das Risiko für Neuralrohrdefekte um etwa **70 %**. Da der Neuralrohrschluss sehr früh erfolgt (3.–4. Woche), ist die Einnahme vor und zu Beginn der Schwangerschaft entscheidend.
 
 > **Merke:** Offener Neuroporus → Neuralrohrdefekt. Folsäure 0,4 mg/Tag präkonzeptionell und früh in der SS senkt das Risiko um ~70 %.
 
@@ -887,7 +1230,61 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
         "Kritische Perioden",
         "Scheitel-Steiß-Länge",
       ],
-      content: `## Einleitung
+      content: `## Organogenese und kritische Phasen
+
+In nur acht Wochen werden aus den drei Keimblaettern alle Organe angelegt. Danach waechst und reift der Fetus bis zur Geburt. Gerade in der Zeit der Organanlage ist der Embryo besonders empfindlich gegenueber schaedlichen Stoffen.
+
+{{DIAGRAM:stem-cells}}
+
+**In diesem Kapitel lernst du:**
+- wann die Organanlage endet und was danach passiert
+- warum Woche 4-8 besonders gefaehrlich fuer Fehlbildungen ist
+- was das Alles-oder-Nichts-Prinzip bedeutet
+- ab wann die Lunge reif genug ist
+
+---
+
+## Embryonalperiode (Woche 1-8)
+
+{{DIAGRAM:heart-anatomy}}
+
+In den ersten **8 Wochen** werden alle Organe angelegt -- das nennt man **Organogenese**. Das Herz beginnt bereits in **Woche 4 (Tag 22-23)** zu schlagen (nicht erst in Woche 8 -- Pruefungsfalle!). Am Ende der Woche 8 ist der Embryo etwa **3 cm** gross und alle Organsysteme sind zumindest angelegt.
+
+> **Merke:** Embryonalperiode (Woche 1-8) = Organogenese. Fetalperiode (ab Woche 9) = Wachstum und Reifung.
+
+---
+
+## Teratogene und das Alles-oder-Nichts-Prinzip
+
+**Teratogene** sind Stoffe, die Fehlbildungen verursachen: z. B. Alkohol, Thalidomid (Contergan), Roeteln-Viren.
+
+In **Woche 1-2** gilt das **Alles-oder-Nichts-Prinzip**: Eine schwere Schaedigung fuehrt entweder zum Tod des Embryos oder zur voellig normalen Entwicklung (weil die fruehen Zellen sich gegenseitig ersetzen koennen). Ab **Woche 3** koennen Teratogene gezielt einzelne Organe schaedigen -- je nachdem, welches Organ gerade in seiner **kritischen Phase** ist.
+
+Das **ZNS** hat die laengste kritische Phase aller Organe (Woche 3 bis nach der Geburt).
+
+> **Merke:** Alles-oder-Nichts gilt nur Woche 1-2. Kritische Periode = hoechste Empfindlichkeit eines Organs.
+
+---
+
+## Fetalperiode (ab Woche 9)
+
+Ab Woche 9 werden keine neuen Organe mehr angelegt -- der Fetus waechst und reift. Ab **Woche 24** produzieren **Typ-II-Pneumozyten** in der Lunge **Surfactant**. Surfactant haelt die Lungenblaesechen (Alveolen) offen. Ohne Surfactant (Fruehgeburt) kollabieren die Alveolen und es kommt zum **Atemnotsyndrom**.
+
+> **Merke:** Surfactant ab Woche 24. Fruehgeburt ohne Surfactant fuehrt zum Atemnotsyndrom.
+
+---
+
+## Zusammenfassung
+
+- **Embryonalperiode** (Woche 1-8): alle Organe werden angelegt
+- **Fetalperiode** (ab Woche 9): Wachstum und Reifung
+- Herzschlag beginnt **Tag 22-23**
+- **Alles-oder-Nichts** (Woche 1-2): Tod oder normale Entwicklung
+- **Kritische Periode**: hoechste Empfindlichkeit bei aktivster Differenzierung
+- **Surfactant** ab Woche 24 fuer die Lungenreife
+- Wichtige Teratogene: Thalidomid, Alkohol, Roeteln
+`,
+      contentExtended: `## Einleitung
 
 Innerhalb von nur acht Wochen entsteht aus drei Zellschichten ein Embryo, in dem alle Organsysteme angelegt sind -- vom schlagenden Herz (ab Tag 22) bis zu den ersten Fingeransätzen. Danach folgt eine Phase des Wachstums und der Reifung, die bis zur Geburt dauert. Besonders brisant: In genau dieser Zeitspanne der Organogenese ist der Embryo extrem empfindlich gegenüber schädlichen Einflüssen. Ein Medikament, das in Woche 5 eingenommen wird, kann ganz andere Folgen haben als dasselbe Medikament in Woche 12. Die Geschichte von Thalidomid (Contergan) zeigt auf tragische Weise, wie organspezifisch diese Empfindlichkeit ist.
 
@@ -949,7 +1346,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 - Ab wann produzieren Typ-II-Pneumozyten Surfactant?
 
 **Typische Fallen:**
-- “Das Herz beginnt am Ende der 8. Woche zu schlagen” ist FALSCH -- es schlägt bereits in Woche 4 (Tag 22--23)
+- "Das Herz beginnt am Ende der 8. Woche zu schlagen" ist FALSCH -- es schlägt bereits in Woche 4 (Tag 22--23)
 - Alles-oder-Nichts-Prinzip gilt nur Woche 1--2, nicht danach
 - Viabilität (~Woche 22--24) vs. volle Lungenreife (Woche 35--37)
 - Teratogen (verursacht Fehlbildungen) vs. Mutagen (verursacht DNA-Schäden)
@@ -1086,7 +1483,74 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
         "Decidua",
         "Chorionzotten",
       ],
-      content: `## Einleitung
+      content: `## Plazenta und Nabelschnur
+
+Die **Plazenta** versorgt den Fetus neun Monate lang mit Sauerstoff und Naehrstoffen. Muetterliches und kindliches Blut mischen sich dabei nie -- der Austausch laeuft ueber eine duenne Schranke.
+
+{{DIAGRAM:menstrual-cycle}}
+
+**In diesem Kapitel lernst du:**
+- wie die Plazenta aufgebaut ist
+- warum sich das Blut von Mutter und Kind nie mischt
+- wie die Nabelschnur aufgebaut ist (Merkhilfe AVA)
+- was die Plazentaschranke durchlaesst und was nicht
+
+---
+
+## Aufbau der Plazenta
+
+Die Plazenta besteht aus zwei Teilen:
+- **Fetaler Anteil**: **Chorionzotten** (Chorion frondosum) -- fingerartige Ausstuelungen des Trophoblasten
+- **Muetterlicher Anteil**: **Decidua basalis** -- die umgebaute Gebaermutterschleimhaut
+
+Die Chorionzotten tauchen in Raeume mit muetterlichem Blut ein. Der Austausch erfolgt ueber die **Plazentaschranke** -- das Blut mischt sich aber nie direkt.
+
+> **Merke:** Plazenta = fetal (Chorionzotten) + muetterlich (Decidua basalis). Kein direkter Blutkontakt.
+
+---
+
+## Nabelschnur -- Merkhilfe AVA
+
+{{DIAGRAM:blutkreislauf}}
+
+Die Nabelschnur hat **2 Arterien** und **1 Vene** -- Merkhilfe: **AVA** (Arterie-Vene-Arterie).
+
+- **Nabelarterien** (2x): fuehren sauerstoffarmes Blut vom Kind zur Plazenta
+- **Nabelvene** (1x): fuehrt sauerstoffreiches Blut von der Plazenta zum Kind
+
+Das ist umgekehrt zur normalen Konvention! Die Vene bringt das "gute" Blut.
+
+> **Merke:** 2 Arterien (sauerstoffarm vom Kind) + 1 Vene (sauerstoffreich zum Kind) = AVA.
+
+---
+
+## Was passiert die Plazentaschranke?
+
+**Fettloesliche Stoffe** wie Alkohol, Nikotin und viele Medikamente koennen die Schranke leicht passieren und den Fetus schaedigen.
+
+Von den Antikoerpern passiert nur **IgG** die Plazenta -- ueber aktiven Transport (FcRn-Rezeptor). Das gibt dem Neugeborenen einen **Nestschutz** (passive Immunitaet). IgM, IgA und IgE passieren die Plazenta nicht.
+
+> **Merke:** Lipophile Stoffe passieren leicht. Nur IgG wird aktiv uebertragen (Nestschutz).
+
+---
+
+## Hormone der Plazenta
+
+In der fruehen Schwangerschaft produziert die Plazenta **hCG**, das den Gelbkoerper erhaelt. Ab Woche 8-10 uebernimmt die Plazenta selbst die **Progesteronproduktion** und hCG sinkt.
+
+---
+
+## Zusammenfassung
+
+- **Plazenta**: fetaler Anteil (Chorionzotten) + muetterlicher Anteil (Decidua basalis)
+- Blut mischt sich **nie** direkt
+- **Nabelschnur**: 2 Arterien + 1 Vene (AVA)
+- Nabelvene fuehrt sauerstoffreiches Blut zum Kind
+- Lipophile Stoffe (Alkohol, Nikotin) passieren die Schranke
+- Nur **IgG** wird aktiv uebertragen (Nestschutz)
+- hCG erhaelt Corpus luteum, ab Woche 8-10 produziert Plazenta selbst Progesteron
+`,
+      contentExtended: `## Einleitung
 
 Neun Monate lang versorgt ein einziges Organ den heranwachsenden Fetus mit Sauerstoff und Nährstoffen, entsorgt seinen Abfall und schützt ihn vor den meisten Krankheitserregern der Mutter -- die Plazenta. Das Besondere: Obwohl mütterliches und kindliches Blut nur durch eine hauchdünne Zellschicht getrennt sind, mischen sie sich nie. Durch die Nabelschnur fließt sauerstoffreiches Blut zum Kind und sauerstoffarmes zurück -- und zwar in einer Anordnung, die genau umgekehrt ist, als man erwarten würde: Die Vene bringt das gute Blut, die Arterien das schlechte.
 
@@ -1311,13 +1775,72 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
         "Chloroplasten",
         "Lynn Margulis",
       ],
-      content: `## Einleitung
+      content: `## Entstehung des Lebens und Endosymbiontentheorie
+
+Wie konnte aus einer leblosen Erde das erste Leben entstehen? Das Miller-Urey-Experiment, die RNA-Welt-Hypothese und die Endosymbiontentheorie liefern Antworten.
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+**In diesem Kapitel lernst du:**
+- was das Miller-Urey-Experiment gezeigt hat
+- warum RNA als erstes Lebensmolekuel gilt
+- warum Mitochondrien von Bakterien abstammen
+
+---
+
+## Miller-Urey-Experiment (1953)
+
+Miller und Urey mischten Gase der fruehen Erdatmosphaere (**Methan, Ammoniak, Wasserstoff, Wasserdampf**) und erzeugten elektrische Entladungen (Blitze). Nach wenigen Tagen fanden sie **Aminosaeuren** in der Loesung. Das bewies: Organische Molekuele koennen ohne Lebewesen aus einfachen Gasen entstehen (**abiotische Synthese**).
+
+Achtung: Das Experiment bewies nicht die Entstehung von Leben selbst, nur die Bildung von Bausteinen.
+
+> **Merke:** Miller-Urey: CH4 + NH3 + H2 + H2O + Blitz ergibt Aminosaeuren. Abiotische Synthese, nicht Leben selbst.
+
+---
+
+## RNA-Welt -- das Henne-Ei-Problem
+
+{{DIAGRAM:cell-membrane}}
+
+Proteine brauchen DNA/RNA fuer ihre Herstellung, aber DNA/RNA brauchen Proteine. Was kam zuerst? Die Loesung: **RNA** kann beides -- Information speichern und als Enzym wirken (**Ribozyme**). RNA war wahrscheinlich das erste Molekuel, das sich selbst kopieren und Reaktionen beschleunigen konnte. Spaeter uebernahmen DNA (stabiler) und Proteine (bessere Katalysatoren) diese Aufgaben.
+
+> **Merke:** RNA-Welt: RNA speichert Information UND katalysiert Reaktionen. Loest das Henne-Ei-Problem.
+
+---
+
+## Endosymbiontentheorie
+
+{{DIAGRAM:animal-cell}}
+
+**Lynn Margulis** (1967) stellte die Theorie auf, dass **Mitochondrien** von **Alphaproteobakterien** und **Chloroplasten** von **Cyanobakterien** abstammen. Diese Bakterien wurden von einer Urzelle aufgenommen und lebten als Endosymbionten weiter.
+
+Die Belege sind stark:
+- Eigenes **ringfoermiges Genom** (ohne Histone, wie Bakterien)
+- Eigene **70S-Ribosomen** (wie Bakterien, nicht 80S wie im Zytoplasma)
+- **Doppelmembran** (innere = ehemalige Bakterienmembran)
+- Vermehrung durch **binaere Teilung** (wie Bakterien)
+- Antibiotika hemmen auch mitochondriale Ribosomen
+
+Mitochondriale DNA wird **nur muetterlich** (maternal) vererbt.
+
+> **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Doppelmembran, binaere Teilung.
+
+---
+
+## Zusammenfassung
+
+- **Miller-Urey** (1953): Aminosaeuren aus anorganischen Gasen (abiotische Synthese)
+- **RNA-Welt**: RNA als erstes Informations- und Katalysemolekuel
+- **Endosymbiose**: Mitochondrien stammen von Alphaproteobakterien, Chloroplasten von Cyanobakterien
+- Belege: eigenes Genom, 70S-Ribosomen, Doppelmembran, Antibiotikasensitivitaet
+- Mitochondriale DNA wird nur maternal vererbt`,
+      contentExtended: `## Einleitung
 
 Wie konnte aus einer leblosen Urerde das erste Leben entstehen? Diese Frage klingt philosophisch, doch die Biologie hat handfeste experimentelle Antworten. 1953 zeigten Miller und Urey, dass einfache Gase und Blitze ausreichen, um Aminosäuren zu bilden -- die Bausteine des Lebens. Die RNA-Welt-Hypothese erklärt, wie ein einziges Molekül gleichzeitig Information speichern und chemische Reaktionen katalysieren konnte. Und die Endosymbiontentheorie enthüllt eine erstaunliche Wahrheit: Unsere Mitochondrien waren einst frei lebende Bakterien, die von einer Urzelle aufgenommen wurden. Diese bakterielle Herkunft hat bis heute medizinische Konsequenzen -- etwa wenn Antibiotika unbeabsichtigt unsere Mitochondrien schädigen.
 
 **In diesem Kapitel lernst du:**
 - wie das Miller-Urey-Experiment die Brücke zwischen Chemie und Biologie schlug
-- warum RNA als “erstes Lebensmolekül” gilt und was das Henne-Ei-Problem löst
+- warum RNA als "erstes Lebensmolekül" gilt und was das Henne-Ei-Problem löst
 - welche Belege für die bakterielle Herkunft von Mitochondrien und Chloroplasten sprechen
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
@@ -1525,9 +2048,9 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Einleitung
+      content: `## Stammbaeume, Homologie und Analogie
 
-Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
+Der Arm eines Menschen und die Flosse eines Wals sehen verschieden aus, haben aber den gleichen Bauplan. Vogelflügel und Insektenfluegel sehen aehnlich aus, sind aber voellig unabhaengig entstanden. Diesen Unterschied zu verstehen ist der Schluessel zur Verwandtschaftsforschung.
 
 **In diesem Kapitel lernst du:**
 - warum gleicher Bauplan noch lange nicht gleiche Funktion bedeutet und umgekehrt
@@ -1539,6 +2062,90 @@ Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus s
 
 G_Z (z. B. Vogelflügel – Menschenarm)
 -X B. Flügel 
+
+## Homologie vs. Analogie — Ein kritischer Unterschied
+
+Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft ähnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell ähnlich (durch konvergente Evolution auf dasselbe Problem gestoßen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, ähnlicher Bau; Analogie → unabhängige Entstehung, ähnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
+
+> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
+
+| Merkmal | Homologie | Analogie |
+| --- | --- | --- |
+| Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
+| Bauplan | Ähnlich (Grundstruktur) | Verschieden |
+| Funktion | Oft verschieden | Gleich |
+| Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
+| Nachweis | Embryologie, Anatomie | Funktionsanalyse |
+| Fachbegriff | Divergente Evolution | Konvergente Evolution |
+
+---
+
+## Molekulare Uhr — Evolution zeitlich datieren
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6–7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
+
+> **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
+
+---
+
+## Kladistik und Stammbäume lesen
+
+{{DIAGRAM:dna-helix}}
+
+Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
+- **Äste** = Evolutionslinien der abstammenden Taxa
+- **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
+- **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
+- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
+
+Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: „Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
+
+> **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
+
+---
+
+## Klinischer Bezug
+
+Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.
+
+---
+
+## MedAT-Fokus
+
+**Typische Prüfungsfragen:**
+- Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution.)
+- Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen.)
+- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen.)
+
+**Typische Fallen:**
+- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion) verwechseln.
+- Monophyletisch (Clade: alle Nachkommen eingeschlossen) vs. paraphyletisch (nicht alle Nachkommen) verwechseln.
+- Synapomorphie (abgeleitetes Merkmal, relevant für Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ für Verwandtschaft).
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Homologie**: gleicher evolutionärer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelflügel = homologe Vorderextremitäten)
+- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelflügel vs. Insektenflügel)
+- Im **Stammbaum**: Äste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
+- **Cladistik**: Klassifikation ausschließlich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
+- **Monophyletische** Gruppe = gemeinsamer Vorfahre + ALLE Nachkommen (korrekte Klassifikation); paraphyletisch = ohne manche Nachkommen
+- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmäßig → Kalibrierung mit Fossilien → Datierung von Artseparationen
+- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermöglichen die Verfolgung von Resistenzgen-Ausbreitung`,
+      contentExtended: `## Einleitung
+
+Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
+
+**In diesem Kapitel lernst du:**
+- den Unterschied zwischen Homologie und Analogie
+- wie du Stammbaeume liest
+- was die molekulare Uhr misst
+
+---
+-X B. Flügel
 
 ## Homologie vs. Analogie — Ein kritischer Unterschied
 
