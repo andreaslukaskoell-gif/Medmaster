@@ -28,13 +28,132 @@ export const physKapMechanik: Kapitel = {
       diagram: "coordinate-system",
       content: `## Einleitung
 
+Stell dir vor, du kaufst ein Kilogramm Aepfel -- woher weisst du, dass das ueberall gleich viel ist? Dafuer gibt es das **SI-System** (Internationales Einheitensystem). Es legt fest, wie wir Laenge, Masse, Zeit und andere Groessen einheitlich messen. Ohne dieses System waere jede Messung Chaos.
+
+**In diesem Kapitel lernst du:**
+- die **sieben SI-Basisgroessen** und ihre Einheiten (Meter, Kilogramm, Sekunde ...)
+- wie sich **abgeleitete Einheiten** (Newton, Pascal, Joule, Watt) daraus ergeben
+- den Unterschied zwischen **Skalaren** (nur Betrag) und **Vektoren** (Betrag + Richtung)
+- warum **Masse** und **Gewichtskraft** nicht dasselbe sind
+- was **intensive** und **extensive** Groessen unterscheidet
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:newton-forces}}
+
+## Die sieben SI-Basisgroessen
+
+Die Physik misst alles mit **sieben Grundgroessen**. Aus ihnen leitet man alle anderen ab:
+
+| Basisgroesse | Einheit | Zeichen |
+|---|---|---|
+| Laenge | Meter | m |
+| Masse | Kilogramm | kg |
+| Zeit | Sekunde | s |
+| Stromstaerke | Ampere | A |
+| Temperatur | Kelvin | K |
+| Stoffmenge | Mol | mol |
+| Lichtstaerke | Candela | cd |
+
+> **Merke:** Es gibt **genau 7** SI-Basisgroessen. Alle anderen Einheiten (Newton, Pascal, Joule) sind **abgeleitet**.
+
+---
+
+## Abgeleitete Einheiten
+
+Aus den Basiseinheiten baust du weitere Einheiten zusammen:
+
+- **Kraft:** Newton (N) = kg·m/s² -- Beispiel: Du drueckst einen Einkaufswagen an, er beschleunigt.
+- **Druck:** Pascal (Pa) = N/m² -- Beispiel: Dein Gewicht verteilt auf die Schuhsohle.
+- **Energie:** Joule (J) = N·m -- Beispiel: Du hebst einen Ball 1 m hoch.
+- **Leistung:** Watt (W) = J/s -- Beispiel: Wie schnell du Treppen steigst.
+
+**Wichtig:** Joule kann man in Newtonmeter oder Kalorien umrechnen -- aber **nicht** in Watt (das ist Leistung, nicht Energie).
+
+> **Merke:** N = kg·m/s². Pa = N/m². J = N·m. W = J/s. Diese Kette musst du sicher beherrschen.
+
+---
+
+## Skalare und Vektoren
+
+- **Skalar** = nur ein Zahlenwert mit Einheit, keine Richtung. Beispiele: Temperatur (20 °C), Masse (5 kg).
+- **Vektor** = Zahlenwert mit Einheit **plus Richtung**. Beispiele: Kraft (10 N nach rechts), Geschwindigkeit (30 km/h nach Norden).
+
+Wenn du einen Ball wirfst, ist die Wurfkraft ein Vektor (Staerke + Richtung). Die Temperatur des Balls ist ein Skalar.
+
+> **Merke:** Skalar = nur Betrag. Vektor = Betrag + Richtung. Vektoren addiert man wie Pfeile, nicht einfach als Zahlen.
+
+---
+
+## Intensive und extensive Groessen
+
+- **Extensiv** = waechst mit der Menge: Zwei Flaschen Wasser haben doppelt so viel Volumen wie eine.
+- **Intensiv** = bleibt gleich: Zwei Flaschen Wasser mit je 20 °C ergeben zusammen immer noch 20 °C -- nicht 40 °C!
+
+Beispiele extensiv: Masse, Volumen, Energie. Beispiele intensiv: Temperatur, Druck, Dichte.
+
+> **Merke:** Extensiv = proportional zur Menge. Intensiv = unabhaengig von der Menge. Zwei Tassen Kaffee = doppeltes Volumen, aber gleiche Temperatur.
+
+---
+
+## Masse und Gewichtskraft
+
+Im Alltag sagen wir "ich wiege 70 kg". Physikalisch ist das die **Masse**. Die **Gewichtskraft** ist etwas anderes:
+
+- **Masse** (kg): Wie viel Stoff in dir steckt -- ueberall gleich, ob auf der Erde oder dem Mond.
+- **Gewichtskraft** (N): Die Kraft, mit der die Erde dich anzieht: F_G = m · g (g ≈ 9,81 m/s²).
+
+Ein Mensch mit 70 kg Masse hat auf der Erde eine Gewichtskraft von 70 × 9,81 ≈ **687 N**. Auf dem Mond waere sie nur ca. 113 N -- die Masse bleibt aber 70 kg.
+
+> **Merke:** Masse (kg) ist nicht gleich Gewichtskraft (N). F_G = m · g. Newton ist keine Basiseinheit: N = kg·m/s².
+
+---
+
+## Alltagsbeispiele
+
+**Beispiel 1:** Dein Fahrrad wiegt 15 kg. Gewichtskraft: 15 × 10 = 150 N.
+
+**Beispiel 2:** Du hebst einen 5-kg-Rucksack 1 m hoch. Arbeit: W = m·g·h = 5 × 10 × 1 = 50 J.
+
+**Beispiel 3:** Du laeuft 100 Treppenstufen (30 m Hoehe, 70 kg) in 60 s. Leistung: P = m·g·h / t = 70 × 10 × 30 / 60 = 350 W.
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Fragen:**
+- "Wie viele SI-Basisgroessen gibt es?" --> 7
+- "Was ist die Einheit des Drucks?" --> Pascal (Pa = N/m²)
+- "Unterschied Skalar vs. Vektor?" --> Skalar nur Betrag, Vektor Betrag + Richtung
+- "Kann man Joule in Watt umrechnen?" --> Nein, verschiedene Groessen (Energie vs. Leistung)
+
+**Typische Fallen:**
+- Newton ist KEINE Basiseinheit (N = kg·m/s²)
+- Masse (kg) und Gewichtskraft (N) sind verschiedene Dinge
+- 2 × 20 °C Wasser ergibt NICHT 40 °C (Temperatur ist intensiv)
+- Joule ist NICHT in Watt umrechenbar (W = J/s ist eine andere Groesse)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **7 SI-Basisgroessen**: Laenge (m), Masse (kg), Zeit (s), Strom (A), Temperatur (K), Stoffmenge (mol), Lichtstaerke (cd)
+- **Abgeleitet**: N = kg·m/s², Pa = N/m², J = N·m, W = J/s
+- **Skalar** = nur Betrag; **Vektor** = Betrag + Richtung
+- **Extensiv** = waechst mit Menge; **intensiv** = bleibt gleich
+- **Masse** (kg) ≠ **Gewichtskraft** (N): F_G = m·g
+- **Fallen**: Joule nicht in Watt; Newton keine Basiseinheit; 2 × 20 °C ≠ 40 °C`,
+      contentExtended: `## Einleitung
+
 Was hat eine Blutdruckmessung mit dem Kilogramm zu tun? Mehr als du denkst: Ohne ein einheitliches System von **Einheiten** wären Laborwerte, Medikamentendosierungen und Vitalparameter nicht vergleichbar. Das **SI (Internationales Einheitensystem)** ist diese gemeinsame Sprache -- es definiert sieben Basisgrößen und alle abgeleiteten Einheiten, die in Physik und Medizin gleichermaßen gelten.
 
 **In diesem Kapitel lernst du:**
 - die **sieben SI-Basisgrößen** und warum sie das Fundament jeder Messung bilden
 - wie sich **abgeleitete Einheiten** (Newton, Pascal, Joule, Watt) aus den Basiseinheiten zusammensetzen
 - den Unterschied zwischen **Skalaren** (nur Betrag) und **Vektoren** (Betrag + Richtung) -- und warum das für Blutdruck vs. Blutströmung wichtig ist
-- warum **Masse** und **Gewichtskraft** nicht dasselbe sind -- auch wenn wir im Alltag beides “Gewicht” nennen
+- warum **Masse** und **Gewichtskraft** nicht dasselbe sind -- auch wenn wir im Alltag beides "Gewicht" nennen
 - wie du Einheiten in klinischen Situationen sicher umrechnest (Blutdruck, Infusionsrate, Grundumsatz)
 
 ---
@@ -73,7 +192,7 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 ## Abgeleitete Einheiten
 
-**Definition (prüfungssicher):** **Abgeleitete Größen** sind physikalische Größen, die aus den **Basiseinheiten** (bzw. Basisgrößen) durch algebraische Verknüpfung (Produkt, Quotient, Potenzen) hervorgehen. Sie **besitzen** SI-Einheiten (abgeleitete SI-Einheiten wie N, Pa, J, W) und sind messbar. Beispiele: Kraft (N = kg·m/s²), Druck (Pa), Energie (J), Leistung (W). Nicht: „nicht messbar“, „keine SI-Einheiten“, „aus Differentialquotienten entstanden“ als Definition — abgeleitete Größen sind messbar und haben SI-Einheiten.
+**Definition (prüfungssicher):** **Abgeleitete Größen** sind physikalische Größen, die aus den **Basiseinheiten** (bzw. Basisgrößen) durch algebraische Verknüpfung (Produkt, Quotient, Potenzen) hervorgehen. Sie **besitzen** SI-Einheiten (abgeleitete SI-Einheiten wie N, Pa, J, W) und sind messbar. Beispiele: Kraft (N = kg·m/s²), Druck (Pa), Energie (J), Leistung (W). Nicht: „nicht messbar", „keine SI-Einheiten", „aus Differentialquotienten entstanden" als Definition — abgeleitete Größen sind messbar und haben SI-Einheiten.
 
 **Bisher haben wir gesehen:** Die sieben Basisgrößen bilden das Fundament. **Alle weiteren** physikalischen Größen werden daraus durch Multiplikation und Division gebildet — das sind die **abgeleiteten Einheiten**; sie tragen oft eigene Namen und sind für Klinik und MedAT zentral.
 
@@ -86,7 +205,7 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 **Kraft wird in der Physik in der Einheit kg·m/s² angegeben** (= Newton, N). Nicht in m/s² (das ist Beschleunigung), nicht in Coulomb, Nm (das ist Arbeit) oder Ampere.
 
-**Umrechnung von Joule:** Man kann **Joule in Newtonmeter** umrechnen (1 J = 1 N·m), **Joule in Elektronenvolt** (1 eV ≈ 1,602×10⁻¹⁹ J) und **Joule in Kalorien** (1 cal = 4,184 J). **Nicht** umrechenbar: **Joule in Watt** — Watt ist die Einheit der **Leistung** (Energie pro Zeit, W = J/s), keine Energieeinheit. Typische Falle: „Joule in Watt umrechnen“ ist falsch.
+**Umrechnung von Joule:** Man kann **Joule in Newtonmeter** umrechnen (1 J = 1 N·m), **Joule in Elektronenvolt** (1 eV ≈ 1,602×10⁻¹⁹ J) und **Joule in Kalorien** (1 cal = 4,184 J). **Nicht** umrechenbar: **Joule in Watt** — Watt ist die Einheit der **Leistung** (Energie pro Zeit, W = J/s), keine Energieeinheit. Typische Falle: „Joule in Watt umrechnen" ist falsch.
 | **Elektrische Spannung** | Volt (V) | Leistung / Stromstärke | kg·m²·A⁻¹·s⁻³ |
 | **Frequenz** | Hertz (Hz) | Schwingungen pro Sekunde | s⁻¹ |
 
@@ -128,7 +247,7 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 ## Intensive und extensive Größen
 
-**Bisher haben wir gesehen:** Skalare und Vektoren. **Eine weitere wichtige Unterscheidung** betrifft die Abhängigkeit von der **Systemgröße** — also ob eine Größe mit der Menge „mitwächst“ oder nicht.
+**Bisher haben wir gesehen:** Skalare und Vektoren. **Eine weitere wichtige Unterscheidung** betrifft die Abhängigkeit von der **Systemgröße** — also ob eine Größe mit der Menge „mitwächst" oder nicht.
 
 - **Extensive Größen** sind **abhängig von der Systemgröße**: Sie **addieren sich**, wenn man Teilsysteme zusammenfügt. Beispiele: Masse, Volumen, Energie, Stoffmenge. Ein Liter Wasser + ein Liter Wasser = **zwei** Liter Wasser.
 
@@ -144,11 +263,11 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 **Bisher haben wir gesehen:** Verschiedene Arten von Größen. **Im Alltag** werden zwei Begriffe oft verwechselt: **Masse** und **Gewicht**. Physikalisch sind sie unterschieden.
 
-- Die **Masse** (Einheit kg) ist eine **intrinsische, ortsunabhängige** Eigenschaft des Körpers — sie gibt an, wie viel „Stoff“ vorhanden ist und ändert sich nicht mit dem Ort.
+- Die **Masse** (Einheit kg) ist eine **intrinsische, ortsunabhängige** Eigenschaft des Körpers — sie gibt an, wie viel „Stoff" vorhanden ist und ändert sich nicht mit dem Ort.
 
 - Die **Gewichtskraft** F_G (Einheit N) ist die **Kraft**, mit der die Erde (oder ein anderer Himmelskörper) den Körper anzieht. Sie berechnet sich zu **F_G = m · g**, wobei **g** die **Fallbeschleunigung** am Ort ist (auf der Erde g ≈ 9,81 m/s²).
 
-Ein Mensch mit **Masse** 70 kg hat auf der Erde eine **Gewichtskraft** F_G = 70 × 9,81 ≈ **687 N**. Auf dem Mond (g ≈ 1,62 m/s²) wäre F_G ≈ 113 N — die **Masse** bleibt 70 kg. Umgangssprachlich „ich wiege 70 kg“ meint physikalisch die Masse; die Gewichtskraft beträgt etwa 687 N.
+Ein Mensch mit **Masse** 70 kg hat auf der Erde eine **Gewichtskraft** F_G = 70 × 9,81 ≈ **687 N**. Auf dem Mond (g ≈ 1,62 m/s²) wäre F_G ≈ 113 N — die **Masse** bleibt 70 kg. Umgangssprachlich „ich wiege 70 kg" meint physikalisch die Masse; die Gewichtskraft beträgt etwa 687 N.
 
 > **Merke:** **Masse (kg) ≠ Gewichtskraft (N).** Masse ortsunabhängig, Gewichtskraft F_G = m·g (g abhängig vom Ort). Newton ist **keine** Basiseinheit: N = kg·m·s⁻².
 
@@ -393,6 +512,104 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
       ],
       content: `## Einleitung
 
+Stell dir vor, du sollst 0,000 001 Gramm aufschreiben. Das ist unuebersichtlich. Deshalb gibt es **Praefixe**: Du schreibst einfach 1 µg (Mikrogramm). Und fuer riesige oder winzige Zahlen nutzt du die **wissenschaftliche Notation**: 3 000 000 wird zu 3 × 10⁶. Beides brauchst du staendig -- ob beim Rechnen mit Kilometern, Milligramm oder Mikrosekunden.
+
+**In diesem Kapitel lernst du:**
+- wie du **SI-Praefixe** (k, m, µ, n ...) und ihre Zehnerpotenzen sicher zuordnest
+- die **wissenschaftliche Notation** (a × 10ⁿ) als kompakte Schreibweise
+- warum bei **Flaechen und Volumen** der Faktor quadriert bzw. kubiert werden muss
+- die wichtigsten **Rechenregeln** fuer Zehnerpotenzen
+- typische Groessenordnungen im Alltag
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:newton-forces}}
+
+## SI-Praefixe -- die wichtigsten
+
+Praefixe sind Vorsaetze vor einer Einheit: "Kilo" heisst 1000, "Milli" heisst ein Tausendstel.
+
+| Praefix | Zeichen | Faktor | Beispiel |
+|---|---|---|---|
+| Kilo | k | 10³ = 1 000 | 1 km = 1 000 m |
+| Milli | m | 10⁻³ = 0,001 | 1 mm = 0,001 m |
+| Mikro | µ | 10⁻⁶ | 1 µm = 0,000 001 m |
+| Nano | n | 10⁻⁹ | 1 nm = 0,000 000 001 m |
+| Mega | M | 10⁶ | 1 MHz = 1 000 000 Hz |
+
+**Achtung:** Gross-/Kleinschreibung ist entscheidend! M (Mega) = 10⁶, aber m (Milli) = 10⁻³. Der Unterschied ist Faktor 10⁹ -- eine Milliarde!
+
+> **Merke:** Jeder Praefixsprung (z. B. mg zu µg) ist Faktor 1000. Milli → Mikro → Nano: jeweils mal 1000 kleiner.
+
+---
+
+## Wissenschaftliche Notation
+
+Sehr grosse oder kleine Zahlen schreibst du als **a × 10ⁿ**. Die Zahl a (Mantisse) liegt zwischen 1 und 10.
+
+- 5 000 = 5 × 10³
+- 0,003 = 3 × 10⁻³
+- 0,000 045 = 4,5 × 10⁻⁵
+
+**Rechenregeln:**
+- Multiplizieren: Exponenten addieren. 10³ × 10⁵ = 10⁸
+- Dividieren: Exponenten subtrahieren. 10⁷ / 10³ = 10⁴
+- Potenzieren: Exponenten multiplizieren. (10³)² = 10⁶
+
+**Beispiel:** (3 × 10⁴) × (2 × 10³) = 6 × 10⁷. Wenn die Mantisse groesser als 10 wird, normieren: 20 × 10⁷ = 2 × 10⁸.
+
+---
+
+## Flaechen und Volumen -- die haeufigste Falle
+
+Bei Flaechen wird der Faktor **quadriert**, bei Volumen **kubiert**:
+
+- 1 cm² = (10⁻² m)² = 10⁻⁴ m² (nicht 10⁻² m²!)
+- 1 cm³ = (10⁻² m)³ = 10⁻⁶ m³
+
+Merke dir: **1 mL = 1 cm³ = 10⁻⁶ m³**. Und **1 L = 1000 mL = 10⁻³ m³**.
+
+> **Merke:** Beim Umrechnen von Flaechen den Exponenten quadrieren, bei Volumen kubieren. 1 cm² ist NICHT 10⁻² m², sondern 10⁻⁴ m²!
+
+---
+
+## Alltagsbeispiele
+
+**Beispiel 1:** Dein Fahrradtacho zeigt 25 km/h. In Metern pro Sekunde: 25 000 m / 3600 s ≈ 6,9 m/s.
+
+**Beispiel 2:** Eine Wasserflache hat 500 mL. In Litern: 0,5 L. In m³: 500 × 10⁻⁶ = 5 × 10⁻⁴ m³.
+
+**Beispiel 3:** (3 × 10⁴) × (4 × 10⁻⁷) = 12 × 10⁻³ = 1,2 × 10⁻² (normiert).
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Fragen:**
+- "Was ist 0,000 045 m in wissenschaftlicher Notation?" --> 4,5 × 10⁻⁵ m = 45 µm
+- "Wie viele µg sind 1 mg?" --> 1000 µg
+- "Was ist 1 cm² in m²?" --> 10⁻⁴ m²
+- "Was bedeutet M vs. m?" --> M (Mega) = 10⁶; m (Milli) = 10⁻³
+
+**Typische Fallen:**
+- 1 cm² = 10⁻⁴ m² (nicht 10⁻² m²!) -- Exponent quadrieren
+- 1 mL = 10⁻⁶ m³ (nicht 10⁻³ m³!) -- Exponent kubieren
+- Mantisse muss zwischen 1 und 10 liegen: 4,5 × 10⁻⁵ (richtig), nicht 45 × 10⁻⁶
+- ng --> µg --> mg: jeder Schritt Faktor 1000
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Praefixe**: n (10⁻⁹), µ (10⁻⁶), m (10⁻³), k (10³), M (10⁶) -- Gross-/Kleinschreibung beachten!
+- **Wissenschaftliche Notation**: a × 10ⁿ (1 ≤ a < 10); Mult: Exponenten addieren; Div: subtrahieren
+- **Flaechen**: Exponent quadrieren (1 cm² = 10⁻⁴ m²)
+- **Volumen**: Exponent kubieren (1 mL = 1 cm³ = 10⁻⁶ m³; 1 L = 10⁻³ m³)
+- **Sprung** mg --> µg --> ng: jeweils Faktor 1000`,
+      contentExtended: `## Einleitung
+
 Eine Verwechslung von Milligramm und Mikrogramm kann bei Fentanyl oder Adrenalin toedlich sein -- der Unterschied ist Faktor 1000. **SI-Präfixe** und die **wissenschaftliche Notation** sind deshalb keine abstrakte Mathematik, sondern ein klinisches Sicherheitswerkzeug, das du sicher beherrschen musst.
 
 **In diesem Kapitel lernst du:**
@@ -402,7 +619,7 @@ Eine Verwechslung von Milligramm und Mikrogramm kann bei Fentanyl oder Adrenalin
 - welche **Größenordnungen** in der Medizin typisch sind -- vom DNA-Durchmesser (2 nm) bis zum Grundumsatz (7500 kJ/d)
 - wie du mit der **Kettenmultiplikation** sicher umrechnest und Dosierungsfehler vermeidest
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um die **kompakte Darstellung sehr großer und sehr kleiner Zahlen**: Präfixe (z. B. Mikro µ = 10⁻⁶) und die wissenschaftliche Schreibweise (z. B. 4,5 × 10⁻⁵). Das ist in der Medizin überall präsent — von Laborwerten (mmol/L, ng/mL) über Dosierungen (µg, mg) bis zu Volumina (µL, mL). Ohne sicheres Präfix-Verständnis drohen Größenordnungsfehler; solche Fehler zählen zu den häufigsten vermeidbaren Medikationsfehlern. Später brauchst du das in allen naturwissenschaftlichen Fächern (Chemie, Physik, Pharmakologie) und für jede Einheitenumrechnung im MedAT.
 
 ---
@@ -421,11 +638,11 @@ Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffa
 
 **Bisher haben wir gesehen:** Warum wir Präfixe und eine einheitliche Schreibweise brauchen. **Jetzt konkret:** Was sind Präfixe und wie schreibt man Zahlen kompakt?
 
-**SI-Präfixe** sind Vorsätze (z. B. Kilo, Milli, Mikro), die vor eine Einheit gestellt werden und sie mit einer **Zehnerpotenz** (z. B. 10³, 10⁻⁶) multiplizieren — so wird „1000 Meter“ zu „1 Kilometer“ (1 km) und „0,000 001 Gramm“ zu „1 Mikrogramm“ (1 µg).
+**SI-Präfixe** sind Vorsätze (z. B. Kilo, Milli, Mikro), die vor eine Einheit gestellt werden und sie mit einer **Zehnerpotenz** (z. B. 10³, 10⁻⁶) multiplizieren — so wird „1000 Meter" zu „1 Kilometer" (1 km) und „0,000 001 Gramm" zu „1 Mikrogramm" (1 µg).
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
 
-**Um das Rechnen mit sehr großen und sehr kleinen Zahlen zu vereinheitlichen,** verwendet man die **wissenschaftliche Notation**. Jede Zahl lässt sich darin schreiben als **a × 10ⁿ**, wobei die **Mantisse** a zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** n eine ganze Zahl ist. Die **Mantisse** (a) ist die „Ziffernfolge vor der Zehnerpotenz“, der **Exponent** (n) gibt an, „wie oft 10 mit sich selbst multipliziert wird“ (bzw. bei negativem n: dividiert wird).
+**Um das Rechnen mit sehr großen und sehr kleinen Zahlen zu vereinheitlichen,** verwendet man die **wissenschaftliche Notation**. Jede Zahl lässt sich darin schreiben als **a × 10ⁿ**, wobei die **Mantisse** a zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** n eine ganze Zahl ist. Die **Mantisse** (a) ist die „Ziffernfolge vor der Zehnerpotenz", der **Exponent** (n) gibt an, „wie oft 10 mit sich selbst multipliziert wird" (bzw. bei negativem n: dividiert wird).
 
 **Beispiele:**
 - 0,000 053 m = 5,3 × 10⁻⁵ m = 53 µm (Durchmesser einer menschlichen Eizelle)
@@ -736,7 +953,86 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
       ],
       content: `## Einleitung
 
-Stell dir vor, du berechnest eine Infusionsrate und das Ergebnis hat die Einheit “Meter pro Sekunde” statt “Milliliter pro Stunde” -- offensichtlich ist etwas schiefgelaufen. Die **Dimensionsanalyse** ist ein einfaches, aber mächtiges Werkzeug, das solche Fehler sofort entlarvt: Beide Seiten einer Gleichung müssen dieselbe physikalische “Natur” (Dimension) haben.
+Stell dir vor, du rechnest etwas aus und bekommst als Ergebnis "Meter pro Sekunde" -- obwohl du eigentlich Milliliter pro Stunde brauchst. Da ist offensichtlich etwas schiefgelaufen! Die **Dimensionsanalyse** hilft dir, solche Fehler sofort zu erkennen: Beide Seiten einer Gleichung muessen die gleiche "Art" von Groesse haben.
+
+**In diesem Kapitel lernst du:**
+- wie du mit der **Dimensionsanalyse** pruefen kannst, ob eine Formel stimmt
+- welche **Basisdimensionen** (Masse, Laenge, Zeit) hinter Kraft, Druck und Energie stecken
+- das **Kettenmultiplikationsverfahren** -- das sicherste Werkzeug zum Umrechnen von Einheiten
+- die wichtigsten **Umrechnungen** fuer Temperatur, Druck und Naehrwerte
+- was **dimensionslose Groessen** wie die Reynolds-Zahl bedeuten
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:newton-forces}}
+
+## Was ist Dimensionsanalyse?
+
+Jede physikalische Groesse hat eine **Dimension** -- ihre "Natur". Laenge hat die Dimension L, Masse die Dimension M, Zeit die Dimension T. Daraus baust du alle anderen zusammen:
+
+- Kraft = M·L·T⁻² (Newton)
+- Druck = M·L⁻¹·T⁻² (Pascal)
+- Energie = M·L²·T⁻² (Joule)
+
+Die Grundregel ist einfach: **Beide Seiten einer Gleichung muessen die gleiche Dimension haben.** Wenn links "Energie" steht und rechts "Impuls" rauskommt, ist die Formel falsch.
+
+**Beispiel:** Jemand behauptet, kinetische Energie sei E = m·v. Pruefe die Dimensionen: Links steht Energie = M·L²·T⁻². Rechts steht m·v = M·L·T⁻¹ -- das ist Impuls, nicht Energie! Die Formel ist falsch. Richtig waere E = ½·m·v².
+
+> **Merke:** Dimensionsanalyse = Formelcheck ueber die Einheiten. Stimmen die Dimensionen links und rechts nicht ueberein, ist die Formel garantiert falsch.
+
+---
+
+## Einheiten umrechnen mit Kettenmultiplikation
+
+Beim Umrechnen multiplizierst du mit "cleveren Einsern" -- Bruechen, die den Wert 1 haben. Zum Beispiel ist (1000 m / 1 km) = 1. Du kettest so viele Faktoren aneinander, bis die alte Einheit weg ist und die neue da steht.
+
+**Beispiel:** 72 km/h in m/s: 72 km/h × (1000 m / 1 km) × (1 h / 3600 s) = 20 m/s. Kurzregel: km/h geteilt durch 3,6 = m/s.
+
+**Wichtige Umrechnungen:**
+- 1 mmHg = 133,3 Pa (Blutdruck)
+- 1 kcal = 4,184 kJ (Naehrwert)
+- T(K) = T(°C) + 273,15 (Temperatur)
+- 1 g Fett liefert ca. 9 kcal, 1 g Kohlenhydrate oder Protein ca. 4 kcal
+
+> **Merke:** km/h ÷ 3,6 = m/s. 1 mmHg ≈ 133 Pa. 1 kcal = 4,184 kJ. Diese Umrechnungen kommen staendig im MedAT.
+
+---
+
+## Dimensionslose Groessen
+
+Manche Groessen haben gar keine Einheit -- sie sind reine Zahlen. Ein Beispiel ist die **Reynolds-Zahl** Re = (Dichte × Geschwindigkeit × Durchmesser) / Viskositaet. Alle Einheiten kuerzen sich weg. Re sagt dir, ob eine Stroemung geordnet (laminar, Re kleiner 2300) oder wirbelnd (turbulent, Re groesser 4000) ist. Auch der **Wirkungsgrad** (Nutzenergie geteilt durch Gesamtenergie) ist dimensionslos.
+
+> **Merke:** Dimensionslose Groessen wie Reynolds-Zahl, Wirkungsgrad und pH-Wert haben keine Einheit -- sie sind reine Verhaeltniszahlen.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+- "Welche Dimension hat Druck?" -- M·L⁻¹·T⁻²
+- "72 km/h in m/s?" -- 72 ÷ 3,6 = 20 m/s
+- "2500 kcal in kJ?" -- 2500 × 4,184 = 10 460 kJ
+
+**Typische Fallen:**
+- m·v = Impuls (nicht Energie!) -- Energie braucht v²
+- 1 mmHg ist nicht gleich 1 cmH₂O (Faktor 1,36)
+- Dimensionsanalyse bestaetigt eine Formel, aber schliesst nicht alle Fehler aus
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Dimensionsanalyse**: beide Seiten einer Gleichung muessen gleiche Dimension haben
+- **Basisdimensionen**: L (Laenge), M (Masse), T (Zeit) -- daraus leiten sich alle anderen ab
+- **Kettenmultiplikation**: Umrechnungsfaktoren als Brueche aneinanderreihen, alte Einheit kuerzt sich
+- **Wichtige Umrechnungen**: 1 mmHg = 133,3 Pa; 1 kcal = 4,184 kJ; km/h ÷ 3,6 = m/s
+- **Dimensionslose Groessen**: Reynolds-Zahl, Wirkungsgrad, pH -- keine Einheit, reiner Zahlenwert`,
+      contentExtended: `## Einleitung
+
+Stell dir vor, du berechnest eine Infusionsrate und das Ergebnis hat die Einheit "Meter pro Sekunde" statt "Milliliter pro Stunde" -- offensichtlich ist etwas schiefgelaufen. Die **Dimensionsanalyse** ist ein einfaches, aber mächtiges Werkzeug, das solche Fehler sofort entlarvt: Beide Seiten einer Gleichung müssen dieselbe physikalische "Natur" (Dimension) haben.
 
 **In diesem Kapitel lernst du:**
 - wie du mit der **Dimensionsanalyse** Formeln auf Korrektheit prüfst -- ohne sie lösen zu müssen
@@ -745,8 +1041,8 @@ Stell dir vor, du berechnest eine Infusionsrate und das Ergebnis hat die Einheit
 - die wichtigsten **klinischen Umrechnungen** für Temperatur, Druck und Nährwerte
 - was **dimensionslose Größen** wie die Reynolds-Zahl über Blutströmung verraten
 
-**Kontext — worum geht es und wofür brauchst du das?**  
-Hier geht es um **Einheiten-Konsistenz und sicheres Umrechnen**: Jede physikalische Gleichung muss „dimensionshomogen“ sein (linke und rechte Seite haben dieselbe „Natur“: Masse×Länge/Zeit² usw.). Das nutzt man einerseits zur **Fehlerprüfung** von Formeln, andererseits zum **systematischen Umrechnen** (z. B. Blutdruck mmHg in Pascal, Kalorien in Joule). In der Medizin sind Einheitenfehler eine der häufigsten vermeidbaren Fehlerquellen; die Kettenmultiplikation und das Wissen um typische Umrechnungen (1 mmHg ≈ 133 Pa, 1 kcal = 4,184 kJ) sind daher direkt prüfungs- und praxisrelevant. Später brauchst du das in allen naturwissenschaftlichen Fächern und bei jeder Dosierungs- oder Druckberechnung.
+**Kontext — worum geht es und wofür brauchst du das?**
+Hier geht es um **Einheiten-Konsistenz und sicheres Umrechnen**: Jede physikalische Gleichung muss „dimensionshomogen" sein (linke und rechte Seite haben dieselbe „Natur": Masse×Länge/Zeit² usw.). Das nutzt man einerseits zur **Fehlerprüfung** von Formeln, andererseits zum **systematischen Umrechnen** (z. B. Blutdruck mmHg in Pascal, Kalorien in Joule). In der Medizin sind Einheitenfehler eine der häufigsten vermeidbaren Fehlerquellen; die Kettenmultiplikation und das Wissen um typische Umrechnungen (1 mmHg ≈ 133 Pa, 1 kcal = 4,184 kJ) sind daher direkt prüfungs- und praxisrelevant. Später brauchst du das in allen naturwissenschaftlichen Fächern und bei jeder Dosierungs- oder Druckberechnung.
 
 ---
 
@@ -760,7 +1056,7 @@ Hier geht es um **Einheiten-Konsistenz und sicheres Umrechnen**: Jede physikalis
 
 Die **Dimensionsanalyse** (Methode, Gleichungen anhand ihrer Einheiten auf Konsistenz zu prüfen) beruht auf einer einfachen Regel: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
-Die **Dimension** einer Größe (ihre „physikalische Natur“: Länge, Masse, Zeit usw., unabhängig von Zahlenwert oder Einheit) wird in eckigen Klammern angegeben. Die **Basisdimensionen** (die sieben Grundbausteine des SI-Systems: Länge L, Masse M, Zeit T, Stromstärke I, Temperatur Θ, Stoffmenge N, Lichtstärke J) entsprechen den sieben SI-Basisgrößen.
+Die **Dimension** einer Größe (ihre „physikalische Natur": Länge, Masse, Zeit usw., unabhängig von Zahlenwert oder Einheit) wird in eckigen Klammern angegeben. Die **Basisdimensionen** (die sieben Grundbausteine des SI-Systems: Länge L, Masse M, Zeit T, Stromstärke I, Temperatur Θ, Stoffmenge N, Lichtstärke J) entsprechen den sieben SI-Basisgrößen.
 
 Die Dimension einer abgeleiteten Größe wird in eckigen Klammern angegeben:
 - [Kraft] = M·L·T⁻² (entspricht Newton)
@@ -786,7 +1082,7 @@ Ebenso: Wenn eine Herleitung zum Ergebnis "Meter plus Sekunden" führt, ist gara
 
 ## Einheitenumrechnung mit dem Kettenmultiplikationsverfahren
 
-**Um das Gelernte praktisch zu nutzen:** Mit der Dimensionsanalyse prüfen wir Formeln — zum **Umrechnen** von Einheiten brauchen wir ein klares Rechenverfahren. Das sicherste ist die **Kettenmultiplikation** („Multiplikation mit 1“ in Form von Umrechnungsfaktoren). Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
+**Um das Gelernte praktisch zu nutzen:** Mit der Dimensionsanalyse prüfen wir Formeln — zum **Umrechnen** von Einheiten brauchen wir ein klares Rechenverfahren. Das sicherste ist die **Kettenmultiplikation** („Multiplikation mit 1" in Form von Umrechnungsfaktoren). Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
 
 **Beispiel: 72 km/h in m/s:**
 72 km/h × (1000 m / 1 km) × (1 h / 3600 s) = 72 × 1000/3600 m/s = 20 m/s
@@ -849,7 +1145,7 @@ Klinische Anwendung: Bei Anämie sinkt die Blutviskosität η, Re steigt, Turbul
 
 ## Wirkungsgrad: Ein weiterer dimensionsloser Quotient
 
-**Ein weiteres Beispiel** für eine dimensionslose Größe ist der **Wirkungsgrad** (η, gesprochen „Eta“): das Verhältnis von nutzbar abgegebener zu zugeführter Energie. Er ist dimensionslos (Energie/Energie = 1) und wird oft in Prozent angegeben. Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
+**Ein weiteres Beispiel** für eine dimensionslose Größe ist der **Wirkungsgrad** (η, gesprochen „Eta"): das Verhältnis von nutzbar abgegebener zu zugeführter Energie. Er ist dimensionslos (Energie/Energie = 1) und wird oft in Prozent angegeben. Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
 
 ## Rechenbeispiele
 
@@ -1083,6 +1379,85 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
       ],
       content: `## Einleitung
 
+Warum faellt ein Apfel nach unten? Warum fliegst du beim Bremsen nach vorne? Und warum hilft ein Airbag? Mit nur **drei Gesetzen** erklaert Isaac Newton fast alles, was sich bewegt -- vom fallenden Ball bis zum bremsenden Auto.
+
+**In diesem Kapitel lernst du:**
+- die **drei Newtonschen Gesetze** und was sie im Alltag bedeuten
+- wie du Bewegungen beschreibst: gleichfoermig, beschleunigt und im **freien Fall**
+- warum Aktions- und Reaktionskraft sich **nicht aufheben**
+- warum ein Airbag bei einem Unfall schuetzt
+- die typischen Pruefungsfallen rund um Kraft und Beschleunigung
+
+---
+
+{{DIAGRAM:newton-forces}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Wie beschreibt man Bewegung?
+
+Zuerst schauen wir nur, **wie** sich etwas bewegt -- ohne zu fragen warum. Die wichtigsten Groessen sind:
+
+- **Geschwindigkeit** v = Weg / Zeit (Einheit: m/s)
+- **Beschleunigung** a = Aenderung der Geschwindigkeit / Zeit (Einheit: m/s²)
+
+**Gleichfoermige Bewegung:** Du faehrst mit 50 km/h geradeaus. Weg = Geschwindigkeit × Zeit, also s = v · t.
+
+**Beschleunigte Bewegung:** Du gibst Gas. Die Geschwindigkeit waechst: v = v₀ + a·t. Der Weg folgt: s = v₀·t + ½·a·t². Beim **freien Fall** ist die Beschleunigung g ≈ 10 m/s². Nach 1 Sekunde faellst du mit 10 m/s und hast 5 m zurueckgelegt.
+
+> **Merke:** Gleichfoermig: s = v·t. Beschleunigt: v = v₀ + a·t und s = v₀·t + ½·a·t². Freier Fall: a = g ≈ 10 m/s².
+
+---
+
+## Die drei Newtonschen Gesetze
+
+**1. Traegheitsgesetz:** Ein Koerper bleibt in Ruhe oder bewegt sich geradeaus weiter, solange keine Kraft auf ihn wirkt. Stell dir vor, du sitzt im Bus -- wenn der Bus bremst, fliegst du nach vorne, weil dein Koerper sich mit der alten Geschwindigkeit weiterbewegen will.
+
+**2. Kraft = Masse × Beschleunigung: F = m · a.** Je schwerer ein Gegenstand, desto mehr Kraft brauchst du, um ihn zu beschleunigen. Ein Einkaufswagen mit 10 kg braucht weniger Kraft als einer mit 50 kg. Die Einheit der Kraft ist Newton: 1 N = 1 kg·m/s².
+
+**3. Actio = Reactio:** Wenn du gegen eine Wand drueckst, drueckt die Wand genauso stark zurueck. Die zwei Kraefte wirken aber auf **verschiedene Koerper** -- deshalb heben sie sich nicht auf. Beim Laufen drueckt dein Fuss die Erde nach hinten, die Erde drueckt dich nach vorne.
+
+> **Merke:** (1) Ohne Kraft keine Aenderung. (2) F = m·a -- Kraft = Masse × Beschleunigung. (3) Jede Kraft erzeugt eine gleich grosse Gegenkraft am anderen Koerper.
+
+---
+
+## Die Gewichtskraft
+
+Dein Koerper wird von der Erde angezogen: F_G = m·g. Bei 70 kg: F_G = 70 × 10 = 700 N. Masse (kg) ist ueberall gleich, aber die Gewichtskraft (N) haengt davon ab, wo du bist -- auf dem Mond waerst du viel leichter.
+
+---
+
+## Warum schuetzt ein Airbag?
+
+Beim Aufprall aendert sich dein Impuls (Masse × Geschwindigkeit) in sehr kurzer Zeit. Ein Airbag verlaengert die Bremszeit -- dadurch wird die Kraft auf deinen Koerper kleiner, obwohl die Geschwindigkeitsaenderung gleich bleibt. Laengerer Bremsweg bedeutet kleinere Verzoegerung, also kleinere Kraft.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+- "Was besagt das 1. Newtonsche Gesetz?" -- Ohne Kraft keine Aenderung der Bewegung
+- "Was ist die Einheit der Kraft?" -- Newton: N = kg·m/s²
+- "Wie gross ist g?" -- ca. 10 m/s²; nach 1 s Fall: v = 10 m/s, s = 5 m
+- "Actio = Reactio?" -- Gleich gross, entgegengesetzt, verschiedene Koerper
+
+**Typische Fallen:**
+- Actio = Reactio hebt sich NICHT auf (verschiedene Koerper!)
+- v = v₀ + at (Geschwindigkeit) ist nicht das Gleiche wie s = v₀t + ½at² (Weg)
+- Doppelte Geschwindigkeit bedeutet **vierfache** kinetische Energie (E ∝ v²)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **1. Gesetz (Traegheit)**: ohne Kraft keine Aenderung der Bewegung
+- **2. Gesetz**: F = m·a; 1 N = 1 kg·m/s²; mehr Masse = mehr Kraft noetig
+- **3. Gesetz**: actio = reactio; Kraefte immer paarweise an verschiedenen Koerpern
+- **Freier Fall**: a = g ≈ 10 m/s²; v = √(2gh); nach 1 s: v ≈ 10 m/s, s = 5 m
+- **Airbag**: verlaengert Bremszeit → kleinere Kraft bei gleicher Impulsaenderung`,
+      contentExtended: `## Einleitung
+
 Warum fällt ein Apfel nach unten? Warum bremst ein Auto? Und warum reißt bei einem Aufprall die Aorta, obwohl der Brustkorb schon stillsteht? Die **Newtonsche Mechanik** beantwortet all diese Fragen mit nur drei Gesetzen -- und erklärt dabei alles von der Herzdruckmassage bis zum Airbag.
 
 **In diesem Kapitel lernst du:**
@@ -1092,7 +1467,7 @@ Warum fällt ein Apfel nach unten? Warum bremst ein Auto? Und warum reißt bei e
 - was bei einem **Dezelerationstrauma** mit den inneren Organen passiert (und warum Airbags helfen)
 - die typischen Prüfungsfallen rund um Kraft, Beschleunigung und Geschwindigkeit
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um **Bewegung und Kräfte**: Wie beschreibt man Weg, Geschwindigkeit und Beschleunigung (Kinematik), und wie hängen Kraft, Masse und Beschleunigung zusammen (Newtonsche Gesetze)? Das ist die Basis aller Mechanik — von Sturz und Unfall (Dezelerationstrauma, Airbag) über Reanimation (Herzdruckmassage) bis zu Injektion und Punktion. Du brauchst es für Erhaltungssätze (Energie, Impuls), für Wärme und Strömung und für sicheres Lösen von MedAT-Aufgaben zu Kraft, Fall und Bremsweg.
 
 ---
@@ -1188,7 +1563,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 - actio = reactio: Beide Kräfte wirken auf VERSCHIEDENE Körper — deshalb heben sie sich nicht auf!
 - v(t) = v₀ + at (Geschwindigkeit, linear) vs. s(t) = v₀t + ½at² (Weg, parabolisch) — nicht verwechseln
 - Freier Fall: a = g (Beschleunigung in m/s²), nicht F = g (g ist keine Kraft!)
-- Trägheitsgesetz: Körper ohne Nettokraft bewegt sich geradlinig mit konstanter Geschwindigkeit — bleibt nicht „automatisch stehen“
+- Trägheitsgesetz: Körper ohne Nettokraft bewegt sich geradlinig mit konstanter Geschwindigkeit — bleibt nicht „automatisch stehen"
 - **E_kin = ½·m·v²:** Doppelte Geschwindigkeit → **vierfache** kinetische Energie (E ∝ v²), nicht doppelt
 - **N = kg·m/s²** — Newton ist **abgeleitete** Einheit, keine der 7 SI-Basiseinheiten
 
@@ -1350,16 +1725,89 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
       diagram: "coordinate-system",
       content: `## Einleitung
 
+Warum vervierfacht sich die Aufprallenergie, wenn du doppelt so schnell faehrst? Und warum ist es keine physikalische Arbeit, eine Hantel ueber dem Kopf zu halten -- obwohl es total anstrengend ist? Die **Erhaltungssaetze** fuer Energie und Impuls sind maechtige Werkzeuge: Sie erlauben Berechnungen, ohne jede einzelne Kraft zu kennen.
+
+**In diesem Kapitel lernst du:**
+- warum **Energie** nie verloren geht -- sie wandelt sich nur um (Bewegung, Hoehe, Waerme)
+- was **Impuls** ist und warum er bei Stoessen erhalten bleibt
+- den Unterschied zwischen elastischem und inelastischem Stoss
+- was **Arbeit** und **Leistung** in der Physik bedeuten
+- die klassische Falle: Warum Halten keine Arbeit ist
+
+---
+
+{{DIAGRAM:newton-forces}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Energie: Sie geht nie verloren
+
+Energie kann nicht erzeugt oder zerstoert werden -- sie wandelt sich nur um. Wenn ein Ball aus 2 Metern Hoehe faellt, wird seine **Lageenergie** (E_pot = m·g·h) in **Bewegungsenergie** (E_kin = ½·m·v²) umgewandelt. Am Boden ist die gesamte Hoehe "aufgebraucht" und steckt jetzt in der Geschwindigkeit.
+
+**Wichtig:** Bei doppelter Geschwindigkeit hast du **vierfache** kinetische Energie (wegen v²). Deshalb ist ein Aufprall bei 100 km/h viermal so heftig wie bei 50 km/h -- nicht doppelt!
+
+Auftreffgeschwindigkeit beim freien Fall: v = √(2·g·h). Aus 5 m Hoehe: v = √(2 × 10 × 5) = 10 m/s = 36 km/h.
+
+> **Merke:** Energie geht nie verloren, sie wandelt sich nur um. E_kin = ½·m·v² (doppelte Geschwindigkeit = vierfache Energie!). E_pot = m·g·h.
+
+---
+
+## Impuls: Masse × Geschwindigkeit
+
+Der **Impuls** p = m·v beschreibt, wie viel "Wucht" ein Koerper hat. Ein schwerer LKW bei 30 km/h hat mehr Impuls als ein Fahrrad bei 30 km/h.
+
+Bei jedem Stoss bleibt der **Gesamtimpuls** erhalten -- egal ob die Koerper abprallen (elastischer Stoss) oder zusammenkleben (inelastischer Stoss). Beim elastischen Stoss bleibt auch die kinetische Energie erhalten; beim inelastischen wird ein Teil in Waerme und Verformung umgewandelt.
+
+> **Merke:** Impuls p = m·v ist immer erhalten. Elastischer Stoss: auch Energie erhalten. Inelastischer Stoss: nur Impuls erhalten, Energie geht in Waerme/Verformung.
+
+---
+
+## Arbeit und Leistung
+
+**Arbeit** = Kraft × Weg: W = F·s. Einheit: Joule (J). Wichtig: Wenn du etwas nur haeltst (Weg = 0), verrichtest du **keine** physikalische Arbeit -- egal wie anstrengend es ist!
+
+**Leistung** = Arbeit pro Zeit: P = W/t. Einheit: Watt (W = J/s). Leistung sagt dir, wie schnell du Arbeit verrichtest.
+
+**Wirkungsgrad** = Nutzenergie / Gesamtenergie. Beim Laufen betraegt er nur ca. 25 % -- der Rest wird Waerme. Deshalb schwitzt du beim Sport.
+
+> **Merke:** Arbeit W = F·s (nur bei Bewegung!). Leistung P = W/t. Halten = keine Arbeit (Weg = 0).
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+- "E_kin bei doppelter Geschwindigkeit?" -- Vierfach (E ∝ v²)
+- "Welche Groesse bleibt beim inelastischen Stoss erhalten?" -- Impuls (nicht Energie!)
+- "Wann wird keine Arbeit verrichtet?" -- Wenn die Kraft senkrecht zum Weg steht oder Weg = 0
+
+**Typische Fallen:**
+- Impuls p = m·v ist nicht dasselbe wie Energie E = ½·m·v²
+- Beim Halten (s = 0) wird keine Arbeit verrichtet -- egal wie lange
+- Elastisch = Energie erhalten; inelastisch = nur Impuls erhalten
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Energieerhaltung**: E_kin + E_pot = const (ohne Reibung); Energie wandelt sich um, verschwindet nie
+- **Kinetische Energie**: E_kin = ½·m·v²; doppelte Geschwindigkeit = vierfache Energie
+- **Impuls**: p = m·v; bleibt bei jedem Stoss erhalten
+- **Arbeit**: W = F·s (nur bei Bewegung!); **Leistung**: P = W/t
+- **Wirkungsgrad**: Nutzenergie / Gesamtenergie; Koerper beim Laufen ca. 25 %`,
+      contentExtended: `## Einleitung
+
 Warum verdoppelt doppelte Geschwindigkeit nicht einfach die Aufprallenergie, sondern vervierfacht sie? Und warum verrichtet ein Gewichtheber keine physikalische Arbeit, wenn er die Hantel regungslos über dem Kopf hält? Die **Erhaltungssätze** -- Energie, Impuls und Drehimpuls -- gehören zu den mächtigsten Werkzeugen der Physik: Sie erlauben Berechnungen, ohne jede einzelne Kraft zu kennen.
 
 **In diesem Kapitel lernst du:**
 - warum **Energie** weder erzeugt noch vernichtet werden kann -- und wie sie zwischen Bewegung und Lage pendelt
 - was **Impuls** ist, warum er bei Stößen erhalten bleibt und wie Airbags den **Kraftstoß** reduzieren
-- den Unterschied zwischen elastischem und inelastischem Stoß -- und wann Energie “verloren” geht (Verformung, Wärme)
+- den Unterschied zwischen elastischem und inelastischem Stoß -- und wann Energie "verloren" geht (Verformung, Wärme)
 - wie das **Herz** mechanische Arbeit leistet und warum sein Wirkungsgrad nur 20-25 % beträgt
 - die klassische Falle: Warum Halten keine Arbeit ist, obwohl es anstrengend ist
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um **Erhaltungsgrößen**: In abgeschlossenen Systemen bleiben Gesamtenergie, Gesamtimpuls und Drehimpuls konstant. Damit lassen sich Stöße, Fallhöhen, Bremswege und Herzarbeit berechnen, ohne jede Einzelkraft zu kennen. In der Medizin: Sturztrauma (potenzielle → kinetische Energie), Herzarbeit (Druck × Volumenänderung), Wirkungsgrad des Herzens. Du brauchst das für alle weiteren Physikthemen (Wärme, Wellen, Atomphysik) und für MedAT-Aufgaben zu Energie, Stoß und Leistung.
 
 ---
@@ -1376,7 +1824,7 @@ Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, da
 
 ## Impuls und Impulserhaltung
 
-**Um Stöße und Kollisionen zu verstehen,** starten wir mit dem **Impuls**. Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge“ beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
+**Um Stöße und Kollisionen zu verstehen,** starten wir mit dem **Impuls**. Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge" beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
 
 Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
 
@@ -1386,9 +1834,9 @@ Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als 
 
 **Arbeit** ist definiert als **W = F · s** (bzw. W = F·s·cos θ bei schrägem Kraftvektor) — Einheit Joule (J = N·m). **Mechanische Arbeit wird nur bei einer Verschiebung (Weg s ≠ 0) verrichtet.**
 
-**Formelklartext:** W = F·s heißt: **Arbeit** = **Kraft** × **Weg** (in Kraftrichtung). **Beim Halten** (s = 0) wird **keine** Arbeit verrichtet — unabhängig von der Dauer. Beim Heben: W = F_G·h = m·g·h = Zunahme der potenziellen Energie. **Einheiten:** [W] = J = N·m = kg·m²/s². **Leistung** P = W/t = Arbeit pro Zeit [W = J/s]. **MedAT-Falle:** „Halten kostet Kraft, also wird Arbeit geleistet“ — falsch; nur **Bewegung** (s ≠ 0) verrichtet Arbeit.
+**Formelklartext:** W = F·s heißt: **Arbeit** = **Kraft** × **Weg** (in Kraftrichtung). **Beim Halten** (s = 0) wird **keine** Arbeit verrichtet — unabhängig von der Dauer. Beim Heben: W = F_G·h = m·g·h = Zunahme der potenziellen Energie. **Einheiten:** [W] = J = N·m = kg·m²/s². **Leistung** P = W/t = Arbeit pro Zeit [W = J/s]. **MedAT-Falle:** „Halten kostet Kraft, also wird Arbeit geleistet" — falsch; nur **Bewegung** (s ≠ 0) verrichtet Arbeit.
 
-Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr“ ist **falsch**.
+Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr" ist **falsch**.
 
 **Kinetische Energie** (Bewegungsenergie): E_kin = ½·m·v². Sie ist proportional zum Quadrat der Geschwindigkeit — bei doppelter Geschwindigkeit viermal so viel kinetische Energie. Das erklärt, warum Hochgeschwindigkeitsprojektile so verheerend sind und warum der Bremsweg bei Kraftfahrzeugen quadratisch mit der Geschwindigkeit wächst.
 
@@ -1609,6 +2057,77 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
       diagram: "newton-forces",
       content: `## Einleitung
 
+Warum muss dein Bizeps 700 Newton aufbringen, um nur 10 Kilogramm in der Hand zu halten? Und warum kann ein Blutgefaess, das nur ein bisschen enger wird, den Blutfluss dramatisch reduzieren? Hier geht es um **Hebel** (Kraefte im Koerper) und **Stroemung** (Blut in Gefaessen) -- zwei MedAT-Dauerbrenner.
+
+**In diesem Kapitel lernst du:**
+- warum Muskeln nahe am Gelenk ansetzen und deshalb enorme Kraefte aufbringen muessen (Hebelgesetz)
+- wie Druck in Fluessigkeiten funktioniert und warum der Blutdruck am Fuss hoeher ist als am Kopf
+- warum Blut in den Kapillaren 1000-mal langsamer fliesst als in der Aorta (Kontinuitaetsgleichung)
+- warum eine kleine Gefaessverengung den Blutfluss so stark reduziert (Poiseuille: Durchfluss haengt von r hoch 4 ab!)
+- wann Stroemung ruhig (laminar) oder wirbelnd (turbulent) ist
+
+---
+
+{{DIAGRAM:newton-forces}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Das Hebelgesetz: Warum Muskeln so stark sein muessen
+
+Stell dir deinen Unterarm als Wippe vor. Das Gelenk (Ellenbogen) ist der Drehpunkt. Der Bizeps greift **nah** am Gelenk an (ca. 5 cm), die Last in deiner Hand ist **weit weg** (ca. 35 cm). Damit die Wippe im Gleichgewicht bleibt, gilt: Kraft × Abstand auf der einen Seite = Kraft × Abstand auf der anderen. Also: Bizepskraft × 5 = Lastkraft × 35. Bei 10 kg Last (100 N) muss der Bizeps 700 N aufbringen -- das Siebenfache!
+
+> **Merke:** Hebelgesetz: F₁ × d₁ = F₂ × d₂. Kleiner Hebelarm (Muskelansatz nah am Gelenk) bedeutet: Der Muskel braucht viel mehr Kraft als die Last.
+
+---
+
+## Druck in Fluessigkeiten
+
+**Druck** = Kraft pro Flaeche: p = F/A. Einheit: Pascal (Pa = N/m²). In einer Fluessigkeit waechst der Druck mit der Tiefe: p = Dichte × g × Hoehe. Deshalb ist der Blutdruck an deinen Fuessen (weit unter dem Herzen) hoeher als am Kopf. Im Stehen betraegt der Druckunterschied zwischen Kopf und Fuessen ueber 100 mmHg!
+
+**Auftrieb:** Ein Koerper im Wasser wird nach oben gedrueckt -- mit einer Kraft, die dem Gewicht des verdraengten Wassers entspricht. Deshalb fuehlt man sich im Schwimmbad leichter.
+
+> **Merke:** Druck p = F/A. Hydrostatisch: p = Dichte × g × h. Am Fuss im Stehen: Blutdruck deutlich hoeher als am Kopf.
+
+---
+
+## Stroemung: Kontinuitaet und Poiseuille
+
+**Kontinuitaetsgleichung:** Was reinfliesst, muss auch rausfliessen. A₁ × v₁ = A₂ × v₂. Wenn ein Rohr enger wird, fliesst die Fluessigkeit schneller. Die Kapillaren haben zusammen einen riesigen Gesamtquerschnitt -- deshalb fliesst das Blut dort extrem langsam (gut fuer den Stoffaustausch!).
+
+**Poiseuille-Gesetz:** Der Durchfluss durch ein Rohr haengt von der **vierten Potenz** des Radius ab: Q ~ r⁴. Halbierst du den Radius, sinkt der Durchfluss auf 1/16! Deshalb sind Gefaessverengungen so gefaehrlich -- schon eine kleine Verengung bremst den Blutfluss enorm.
+
+**Bernoulli:** Wo die Stroemung schnell ist (enge Stelle), ist der Druck niedrig. Das erklaert, warum hinter einer Gefaessverengung der Druck abfaellt.
+
+> **Merke:** Poiseuille: Q ~ r⁴. Radius halbiert = Durchfluss auf 1/16! Das ist die 4.-Potenz-Regel -- MedAT-Lieblingsthema.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+- "Poiseuille-Gesetz?" -- Q ~ r⁴; Radius ist der wichtigste Faktor
+- "Kontinuitaet bei Verengung?" -- Enger = schneller (A₁v₁ = A₂v₂)
+- "Was bedeutet Re kleiner 2300?" -- Laminare (ruhige) Stroemung
+- "Bernoulli bei Stenosen?" -- Schnellere Stroemung = niedrigerer Druck
+
+**Typische Fallen:**
+- Poiseuille: Q ~ r⁴ (vierte Potenz!), nicht r²
+- Bernoulli: Enge Stelle = hohe Geschwindigkeit, aber NIEDRIGER Druck
+- Auftrieb = Gewicht des verdraengten Fluids (nicht des Koerpers!)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Hebelgesetz**: F₁·d₁ = F₂·d₂; Muskelansatz nah am Gelenk = grosse Muskelkraft noetig
+- **Druck**: p = F/A (Pa); hydrostatisch: p = Dichte·g·h; am Fuss im Stehen +100 mmHg
+- **Poiseuille**: Q ~ r⁴; Radius halbiert = Fluss auf 1/16
+- **Kontinuitaet**: A₁·v₁ = A₂·v₂; Kapillaren (riesiger Querschnitt) = sehr langsamer Blutfluss
+- **Bernoulli**: schnelle Stroemung = niedriger Druck (enge Stelle im Gefaess)
+- **Reynolds**: Re kleiner 2300 = laminar; Re groesser 4000 = turbulent`,
+      contentExtended: `## Einleitung
+
 Warum muss der Bizeps 700 Newton aufbringen, um 10 Kilogramm in der Hand zu halten? Und warum kann eine Koronarstenose, die den Gefäßradius nur um ein Drittel verengt, den Blutfluss auf 20 % reduzieren? Die Antworten liegen in zwei eng verwandten Gebieten: **Statik** (Gleichgewicht und Hebel im Skelett) und **Hydrodynamik** (Druck, Strömung und Viskosität im Blutkreislauf). Diese Prinzipien verbinden Biomechanik mit Kardiologie und sind MedAT-Dauerbrenner.
 
 **In diesem Kapitel lernst du:**
@@ -1618,7 +2137,7 @@ Warum muss der Bizeps 700 Newton aufbringen, um 10 Kilogramm in der Hand zu halt
 - warum eine geringe Gefäßverengung den Blutfluss dramatisch reduziert (Poiseuille: Q proportional zu r hoch 4)
 - wann Strömung laminar bleibt und wann Turbulenzen entstehen (Reynolds-Zahl)
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um **Kräfte im Gleichgewicht** (Statik) und um **Flüssigkeiten und Gase in Bewegung** (Hydrodynamik): Blutdruck, Blutfluss, Beatmung, Infusion. Das Hebelgesetz erklärt Muskelkräfte im Körper; Poiseuille und Bernoulli erklären Stenosen, Shunts und Druckverläufe. Du brauchst das für Kardiologie, Intensivmedizin und für MedAT-Aufgaben zu Druck, Durchfluss und Strömungstyp.
 
 ---
@@ -1864,6 +2383,84 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
       diagram: "coordinate-system",
       content: `## Einleitung
 
+Warum wiegt ein Astronaut auf der Raumstation nichts, obwohl er genauso schwer ist wie auf der Erde? Und wie schafft es eine Zentrifuge im Labor, Blut in wenigen Minuten in seine Bestandteile zu trennen? Hier geht es um **Schwerkraft** und **Kreisbewegung** -- beides begegnet dir im Labor (Zentrifuge) und im MedAT.
+
+**In diesem Kapitel lernst du:**
+- warum **Masse** und **Gewichtskraft** nicht dasselbe sind
+- wie die Schwerkraft vom Abstand abhaengt und warum man auf dem Mond leichter ist
+- was einen Koerper auf einer Kreisbahn haelt (Zentripetalkraft)
+- wie eine Laborzentrifuge Blut trennt und was **RCF** bedeutet
+- wann ein Koerper stabil steht und wann er kippt
+
+---
+
+{{DIAGRAM:newton-forces}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Masse ist nicht Gewicht!
+
+Deine **Masse** (in kg) ist ueberall gleich -- auf der Erde, auf dem Mond, im Weltraum. Dein **Gewicht** (in Newton) ist die Kraft, mit der die Erde dich anzieht: F_G = m × g. Auf der Erde: g ≈ 10 m/s². Auf dem Mond: g ≈ 1,6 m/s² -- du wiegst nur ein Sechstel! Im Weltraum: g ≈ 0 -- du bist schwerelos, aber deine Masse ist unveraendert.
+
+Die Schwerkraft nimmt mit dem Abstand ab: Doppelter Abstand = nur ein Viertel der Kraft (Abstandsquadratgesetz).
+
+> **Merke:** Masse (kg) = ueberall gleich. Gewichtskraft (N) = m × g = abhaengig vom Ort. Auf dem Mond wiegst du 1/6.
+
+---
+
+## Kreisbewegung und Zentripetalkraft
+
+Wenn sich etwas im Kreis dreht, aendert sich staendig die Richtung -- dafuer braucht man eine Kraft zur Mitte hin: die **Zentripetalkraft**. Beispiel: Ein Karussell drueckt dich nach aussen -- aber das ist nur eine Scheinkraft (Zentrifugalkraft). Die echte Kraft zeigt nach innen.
+
+Zentripetalbeschleunigung: a = v²/r. Je schneller und je enger der Kreis, desto groesser die Beschleunigung.
+
+> **Merke:** Zentripetalkraft zeigt zur Kreismitte (echte Kraft). Zentrifugalkraft ist eine Scheinkraft (existiert nur im mitdrehenden System).
+
+---
+
+## Die Zentrifuge im Labor
+
+Eine Zentrifuge dreht Blutproben sehr schnell. Die Beschleunigung kann das 1000-fache der Erdbeschleunigung erreichen. Schwere Bestandteile (rote Blutkoerperchen) sinken schnell nach unten, leichte (Plasma) bleiben oben. So trennt man Blut in seine Schichten.
+
+Die Kennzahl **RCF** (Relative Zentrifugalbeschleunigung) gibt an, wie viel mal staerker als die Erdanziehung die Zentrifuge wirkt: RCF = (Winkelgeschwindigkeit)² × Radius / g. Bei 3000 Umdrehungen pro Minute und 10 cm Radius: RCF ≈ 1000 g.
+
+> **Merke:** RCF = wie viel mal staerker als die Erdbeschleunigung. 1000 × g reicht, um Blut in Plasma und Zellen zu trennen.
+
+---
+
+## Stabiles Gleichgewicht
+
+Ein Koerper steht stabil, wenn die senkrechte Linie von seinem Schwerpunkt innerhalb der Standflaeche faellt. Tiefer Schwerpunkt + grosse Standflaeche = stabil. Ein Gehstock vergroessert die Standflaeche und macht dich deutlich kippsicherer.
+
+> **Merke:** Stabiles Gleichgewicht: Projektion des Schwerpunkts innerhalb der Standflaeche. Tiefer Schwerpunkt und breite Standflaeche helfen.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+- "Masse vs. Gewichtskraft?" -- Masse (kg): ortsunabhaengig. Gewicht (N) = m·g: ortsabhaengig
+- "Was ist RCF?" -- Zentrifugalbeschleunigung als Vielfaches von g
+- "Was haelt einen Satelliten auf seiner Bahn?" -- Die Gravitationskraft (als Zentripetalkraft)
+- "Zentripetalbeschleunigung?" -- a = v²/r
+
+**Typische Fallen:**
+- Zentrifugalkraft ist eine Scheinkraft -- sie existiert nur im mitdrehenden System
+- Im Weltraum: Gewicht ≈ 0, aber Masse bleibt gleich
+- Stabiles Gleichgewicht: die PROJEKTION des Schwerpunkts zaehlt, nicht der Schwerpunkt selbst
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Masse** (kg) ≠ **Gewicht** (N): F_G = m·g; auf dem Mond nur 1/6 des Erdgewichts
+- **Kreisbewegung**: a = v²/r; Zentripetalkraft zeigt zur Mitte (echte Kraft)
+- **Zentrifuge**: RCF = Beschleunigung / g; bei 3000 rpm ≈ 1000 × g; trennt Blutbestandteile
+- **Stabiles Gleichgewicht**: Schwerpunkt tief + Standflaeche gross; Gehstock erhoet Stabilitaet
+- **Schwerkraft**: nimmt mit Abstand² ab; haelt Planeten und Satelliten auf ihren Bahnen`,
+      contentExtended: `## Einleitung
+
 Warum wiegt ein Astronaut auf der ISS nichts, obwohl seine Masse sich nicht verändert hat? Und wie schafft es eine Laborzentrifuge, Blutbestandteile in Minuten nach Dichte zu trennen? Die Antworten führen zu zwei Grundpfeilern der Mechanik: **Gravitation** (Massenanziehung, Gewichtskraft) und **Rotation** (Kreisbewegung, Zentripetalkraft). Beides begegnet dir in der Labormedizin (Zentrifuge, RCF), in der Orthopädie (Schwerpunkt, Sturzprophylaxe) und in MedAT-Aufgaben.
 
 **In diesem Kapitel lernst du:**
@@ -1873,7 +2470,7 @@ Warum wiegt ein Astronaut auf der ISS nichts, obwohl seine Masse sich nicht ver�
 - wie eine Laborzentrifuge Blutbestandteile trennt und was die Kennzahl RCF bedeutet
 - welche Bedingungen stabiles Gleichgewicht erfordert und warum Gehstöcke Stürze verhindern
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um **Schwerkraft** und **Kreisbewegung**: Wie hängt die Gewichtskraft von Ort und Masse ab? Was hält einen Körper auf einer Kreisbahn (Zentripetalkraft)? Das brauchst du für Zentrifugation im Labor, für g-Kräfte bei Unfall und Flug, für Gleichgewicht und Sturzprophylaxe (Schwerpunkt, Standfläche). Du brauchst es auch für spätere Themen (Energie, Wellen) und für MedAT-Aufgaben zu Masse/Gewicht, RCF und Gleichgewicht.
 
 ---

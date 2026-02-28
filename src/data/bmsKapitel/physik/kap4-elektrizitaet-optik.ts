@@ -28,6 +28,92 @@ export const physKapElektrizitaet: Kapitel = {
       ],
       content: `## Einleitung
 
+Stell dir eine Batterie vor: Sie hat einen Plus- und einen Minuspol. Schliesst du eine Lampe an, fliesst Strom -- weil die **Spannung** die Ladungen antreibt. Das ist wie Wasserdruck in einem Schlauch: Ohne Druck kein Fluss, ohne Spannung kein Strom.
+
+**In diesem Kapitel lernst du:**
+- warum sich gleiche Ladungen abstossen und verschiedene anziehen
+- wie das Coulomb-Gesetz die Kraft zwischen Ladungen beschreibt
+- was Spannung bedeutet und warum sie Ladungen zum Fliessen bringt
+- wie ein Kondensator Energie speichert
+- warum Feldlinien von Plus nach Minus zeigen
+
+---
+
+{{DIAGRAM:circuit}}
+
+{{DIAGRAM:em-spectrum}}
+
+## Elektrische Ladung
+
+Es gibt zwei Arten von Ladung: **positiv** (Protonen) und **negativ** (Elektronen). Gleiche Ladungen stossen sich ab, verschiedene ziehen sich an. Denk an zwei Magnete -- aehnliches Prinzip.
+
+Die kleinste Ladung ist die **Elementarladung** e = 1,602 x 10⁻¹⁹ C. Alle Ladungen sind ein Vielfaches davon. Wichtig: Ladung geht nie verloren -- sie wird nur verschoben. Wenn du einen Luftballon an deinen Pullover reibst, wandern Elektronen vom Pullover auf den Ballon. Der Ballon wird negativ, der Pullover positiv -- aber insgesamt bleibt die Ladung gleich.
+
+- **Leiter** (z. B. Kupferdraht): Elektronen bewegen sich frei
+- **Isolatoren** (z. B. Gummi, Plastik): Ladungen koennen sich nicht bewegen
+- **Halbleiter** (z. B. Silizium): Leiten je nach Temperatur besser oder schlechter
+
+> **Merke:** Ladung ist immer in ganzen Vielfachen von e vorhanden und geht nie verloren -- nur verschoben.
+
+---
+
+## Das Coulomb-Gesetz
+
+Die Kraft zwischen zwei Ladungen berechnet sich mit:
+
+**F = k · |q₁ · q₂| / r²**
+
+k = 8,99 x 10⁹ (Konstante). Die Kraft haengt vom **Produkt der Ladungen** ab und wird mit dem **Quadrat des Abstands** schwaecker. Doppelter Abstand bedeutet: Kraft auf ein Viertel. Halber Abstand: Kraft vervierfacht sich.
+
+In Wasser ist die Kraft etwa 80-mal schwaecker als in Luft. Deshalb loest sich Kochsalz in Wasser auf -- die Anziehung zwischen Na+ und Cl- reicht nicht mehr, um sie zusammenzuhalten.
+
+> **Merke:** F = k · q₁ · q₂ / r². Doppelter Abstand = Kraft auf 1/4. In Wasser: Kraft 80x schwaecker.
+
+---
+
+## Elektrisches Feld und Spannung
+
+Das **elektrische Feld E** beschreibt die Kraft, die eine Ladung an einem bestimmten Ort spuert: **E = F / q** (Einheit: V/m). **Feldlinien** zeigen immer von Plus nach Minus. Im Inneren eines Metalgehaeuses ist das Feld null -- das nennt man **Faraday-Kaefig**.
+
+Die **Spannung U** ist der Unterschied im elektrischen Druck zwischen zwei Punkten. Eine Batterie mit 1,5 V drueckt Ladungen staerker als eine mit 1 V. Einheit: **Volt (V)**. Positive Ladungen fliessen immer von hoher zu niedriger Spannung -- wie Wasser bergab.
+
+Zwischen zwei Metallplatten (Plattenkondensator) ist das Feld gleichmaessig: **E = U / d** (Spannung geteilt durch Abstand).
+
+> **Merke:** Spannung treibt den Ladungsfluss an. Positive Ladungen fliessen von hoch nach niedrig.
+
+---
+
+## Kondensator
+
+Ein **Kondensator** besteht aus zwei Platten und speichert Energie. Seine Kapazitaet: **C = Q/U** (Einheit: Farad). Gespeicherte Energie: **W = 1/2 · C · U²**. Doppelte Spannung bedeutet vierfache Energie! Ein Defibrillator ist im Grunde ein grosser Kondensator (200 uF, 1500 V), der seine Energie in Millisekunden abgibt.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Coulomb-Gesetz: F = k · q₁ · q₂ / r² -- doppelter Abstand = Kraft auf 1/4
+- In Wasser (Permittivitaet 80) ist die Kraft 80x schwaecker
+- Faraday-Kaefig: Feld innen = null
+- Plattenkondensator: E = U/d
+- Kondensatorenergie: W = 1/2 · C · U² -- doppelte Spannung = vierfache Energie
+
+**Typische Fallen:**
+- Spannung U (Volt) ist nicht dasselbe wie Feldstaerke E (V/m)
+- Doppelter Abstand = Kraft auf 1/4 (nicht 1/2!)
+- Kondensator: doppelte Spannung = vierfache Energie (nicht doppelt)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Ladung**: positiv/negativ; Elementarladung e; Ladung bleibt erhalten
+- **Coulomb**: F = k · q₁ · q₂ / r²; in Wasser 80x schwaecker
+- **Feld**: E = F/q [V/m]; Feldlinien von + nach -; Faraday-Kaefig: E = 0
+- **Spannung**: U = Potentialdifferenz [V]; treibt Ladungsfluss an
+- **Kondensator**: C = Q/U; Energie W = 1/2 · C · U²`,
+      contentExtended: `## Einleitung
+
 Stell dir einen Gartenschlauch vor: Wasser fließt, weil am Hahn Druck herrscht. In der Elektrizität übernimmt die **Spannung** die Rolle des Drucks und die **Ladung** die Rolle des Wassers. Warum dissoziiert Kochsalz in Wasser, aber nicht in Luft? Warum erzeugt das Herz ein elektrisches Signal, das ein EKG messen kann? Und warum reichen 70 Millivolt über einer hauchdünnen Zellmembran aus, um ein elektrisches Feld zu erzeugen, das stärker ist als die Durchschlagsfeldstärke von Luft?
 
 **In diesem Kapitel lernst du:**
@@ -88,7 +174,7 @@ Das Feld einer Punktladung Q: **E = k · Q / r²** (radiales Feld, nimmt mit r²
 
 Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro Ladung an: φ = E_pot / q. Die **elektrische Spannung U** zwischen zwei Punkten ist die **Potentialdifferenz**: **U = Δφ = φ₂ − φ₁** (wobei φ₂ das Potential am Punkt mit dem Pluspol des Voltmeters, φ₁ am Minuspol). Einheit: **Volt = J/C** (1 V = 1 J/C).
 
-**Formelklartext:** U = φ₂ − φ₁ bedeutet: **Spannung** ist die **Differenz** der Potentiale („Potentialgefälle“). Sie treibt den Ladungsfluss an: positive Ladungen fließen von **hohem** zu **niedrigem** Potential. **Vorzeichen:** Voltmeter-Plus an die Klemme mit **höherem** Potential → Anzeige positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an 2, Minus an 1 → U = (+7) − (−3) = **+10 V**. **Einheiten:** [U] = V = J/C.
+**Formelklartext:** U = φ₂ − φ₁ bedeutet: **Spannung** ist die **Differenz** der Potentiale („Potentialgefälle”). Sie treibt den Ladungsfluss an: positive Ladungen fließen von **hohem** zu **niedrigem** Potential. **Vorzeichen:** Voltmeter-Plus an die Klemme mit **höherem** Potential → Anzeige positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an 2, Minus an 1 → U = (+7) − (−3) = **+10 V**. **Einheiten:** [U] = V = J/C.
 
 **Vorzeichen:** Wird der Plus-Eingang des Voltmeters an die Klemme mit höherem Potential angeschlossen, zeigt die Spannung positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an Klemme 2, Minus an Klemme 1 → U = φ₂ − φ₁ = (+7) − (−3) = **+10 V** (bzw. +10 J/C). Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung.
 
@@ -114,7 +200,7 @@ In Wasser (εᵣ = 80): F_W = 2,94 nN / 80 ≈ **0,037 nN** — deshalb dissozii
 **Beispiel 2 — Elektrisches Feld über der Zellmembran:**
 Ruhemembranpotential U = 70 mV = 0,070 V, Membrandicke d = 7 nm = 7×10⁻⁹ m.
 E = U/d = 0,070 / 7×10⁻⁹ = **10⁷ V/m = 10 MV/m**.
-Zum Vergleich: Durchschlagsfeldstärke von Luft ≈ 3×10⁶ V/m → die Membran „hält" ein 3× stärkeres Feld aus.
+Zum Vergleich: Durchschlagsfeldstärke von Luft ≈ 3×10⁶ V/m → die Membran „hält” ein 3× stärkeres Feld aus.
 
 **Beispiel 3 — Gelelektrophorese: Kraft auf DNA-Fragment:**
 Gel-Feldstärke E = 5 V/cm = 500 V/m. Ein DNA-Fragment (1000 bp) trägt ~2000 Elementarladungen (je 2 Phosphatgruppen pro bp).
@@ -127,14 +213,14 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Häufige Fragen:**
-- "Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?" → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
-- "In welchem Medium ist die Coulombkraft zwischen Ionen am schwächsten?" → Wasser (εᵣ ≈ 80 → Kraft 80× reduziert)
-- "Was ist das elektrische Feld im Innern eines Faraday-Käfigs?" → Exakt null
-- "Wie groß ist das Membranpotential einer Nervenzelle in Ruhe?" → ca. −70 mV (innen negativ)
+- “Wie ändert sich die Coulombkraft, wenn der Abstand verdoppelt wird?” → Kraft wird auf ¼ reduziert (1/r²-Gesetz)
+- “In welchem Medium ist die Coulombkraft zwischen Ionen am schwächsten?” → Wasser (εᵣ ≈ 80 → Kraft 80× reduziert)
+- “Was ist das elektrische Feld im Innern eines Faraday-Käfigs?” → Exakt null
+- “Wie groß ist das Membranpotential einer Nervenzelle in Ruhe?” → ca. −70 mV (innen negativ)
 
 **Typische Prüfungsfallen / Verwechslungen:**
 - **Spannung U = φ₂ − φ₁**; 1 V = 1 J/C; Pluspol an Klemme mit höherem Potential → positive Anzeige (z. B. −3 V und +7 V → U = +10 V).
-- **Coulomb:** Doppelter Abstand r → Kraft auf **¼** (F ∝ 1/r²). Halber Abstand → **vierfache** Kraft. Nicht „halbe Kraft“ bei doppeltem Abstand!
+- **Coulomb:** Doppelter Abstand r → Kraft auf **¼** (F ∝ 1/r²). Halber Abstand → **vierfache** Kraft. Nicht „halbe Kraft” bei doppeltem Abstand!
 - Spannung ≠ Feld: U [V] ist Potentialdifferenz, E [V/m] ist Feldstärke (E = U/d für Plattenkondensator).
 - Coulombkraft wirkt entlang der Verbindungslinie — Lorentz-Kraft (Magnetfeld) senkrecht zur Bewegungsrichtung.
 - Im Medium erscheint εᵣ **im Nenner** (Kraft wird geschwächt: F/εᵣ), nicht im Zähler. Wasser εᵣ ≈ 80 → Kraft 80× kleiner.
@@ -321,6 +407,110 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
       ],
       content: `## Einleitung
 
+Warum ist ein Stromschlag mit nassen Haenden gefaehrlicher als mit trockenen? Beide Male kommen 230 Volt aus der Steckdose. Aber nasse Haut hat viel weniger **Widerstand** -- also fliesst viel mehr Strom. Und der Strom ist es, der gefaehrlich wird.
+
+**In diesem Kapitel lernst du:**
+- wie Spannung, Strom und Widerstand zusammenhaengen (Ohmsches Gesetz)
+- warum ein laengerer oder duennerer Draht mehr Widerstand hat
+- was elektrische Leistung bedeutet und warum Strom Waerme erzeugt
+- ab welcher Stromstaerke es lebensgefaehrlich wird
+- warum Metalle bei Hitze schlechter leiten, Halbleiter aber besser
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:circuit}}
+
+## Elektrischer Strom
+
+**Strom** bedeutet: Ladungen fliessen gerichtet durch einen Leiter. Die Stromstaerke misst, wie viel Ladung pro Sekunde fliesst:
+
+**I = Q / t** (Einheit: Ampere, A)
+
+In einem Kupferdraht bewegen sich Elektronen. In Koerperfluessigkeiten (Blut, Zellwasser) sind es Ionen. Die technische Stromrichtung geht von Plus nach Minus -- auch wenn die Elektronen eigentlich andersherum fliessen.
+
+- **Gleichstrom (DC)**: fliesst immer in eine Richtung (Batterie, Taschenlampe)
+- **Wechselstrom (AC)**: aendert 50-mal pro Sekunde die Richtung (Steckdose)
+
+> **Merke:** Strom = fliessende Ladung. I = Q/t. Ampere = Coulomb pro Sekunde.
+
+---
+
+## Ohmsches Gesetz
+
+Das wichtigste Gesetz der Elektrizitaet:
+
+**U = R · I**
+
+Spannung (U, in Volt) = Widerstand (R, in Ohm) mal Stromstaerke (I, in Ampere). Mehr Spannung bei gleichem Widerstand bedeutet mehr Strom. Mehr Widerstand bei gleicher Spannung bedeutet weniger Strom.
+
+Der Widerstand eines Drahtes haengt ab von:
+
+**R = rho · L / A**
+
+- **Laenge L**: laengerer Draht = mehr Widerstand
+- **Querschnitt A**: dickerer Draht = weniger Widerstand (doppelter Durchmesser = vierfacher Querschnitt = R auf 1/4)
+- **Material (rho)**: Kupfer leitet super, Gummi fast gar nicht
+
+> **Merke:** U = R · I. R = rho · L / A. Laenger = mehr R, dicker = weniger R.
+
+---
+
+## Elektrische Leistung und Waerme
+
+Die Leistung im Stromkreis:
+
+**P = U · I = I² · R = U² / R** (Einheit: Watt)
+
+Strom durch einen Widerstand erzeugt Waerme. Das kennst du vom Toaster oder Wasserkocher. Die Waermeenergie: Q = P · t = I² · R · t.
+
+**Gefaehrliche Stromstaerken:**
+
+| Strom | Wirkung |
+|---|---|
+| 1-2 mA | Kribbeln (spuerbar) |
+| 10-20 mA | Muskeln verkrampfen, du kannst nicht loslassen |
+| ab 100 mA | Herz kann flimmern -- lebensgefaehrlich! |
+
+Beispiel Steckdose (230 V): Trockene Haut (R = 50.000 Ohm) ergibt I = 230/50.000 = 4,6 mA -- unangenehm, aber nicht gefaehrlich. Nasse Haut (R = 1.000 Ohm) ergibt I = 230/1.000 = 230 mA -- lebensgefaehrlich!
+
+> **Merke:** Gefaehrlich ist der Strom, nicht die Spannung allein. Nasse Haut = weniger Widerstand = mehr Strom.
+
+---
+
+## Temperaturabhaengigkeit
+
+- **Metalle**: Widerstand steigt bei Erwaermung (Draht wird heisser = leitet schlechter)
+- **Halbleiter**: Widerstand sinkt bei Erwaermung (wird heisser = leitet besser)
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- U = R · I (Ohmsches Gesetz)
+- R = rho · L / A (doppelte Laenge = doppelter Widerstand)
+- P = U · I = I² · R = U² / R
+- Ab 100 mA Koerperstrom: Kammerflimmern
+- Nasse Haut: R sinkt von 50.000 auf 1.000 Ohm
+
+**Typische Fallen:**
+- Metalle: R steigt mit Temperatur; Halbleiter: R sinkt (umgekehrt!)
+- P = U · I = I² · R = U² / R -- alle drei Formen sind gleichwertig
+- 230 V an der Steckdose ist der Effektivwert; die Spitzenspannung ist hoeher (etwa 325 V)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Strom**: I = Q/t [A]; Ladungsfluss durch Leiter
+- **Ohmsches Gesetz**: U = R · I; R = rho · L / A
+- **Leistung**: P = U · I = I² · R = U² / R [W]
+- **Gefahr**: ab 100 mA Kammerflimmern; nasse Haut: R 50x kleiner
+- **Temperatur**: Metall-R steigt, Halbleiter-R sinkt`,
+      contentExtended: `## Einleitung
+
 Warum ist ein Stromschlag mit nassen Händen so viel gefährlicher als mit trockenen? Die Steckdose liefert immer 230 Volt -- doch der entscheidende Faktor ist der **Widerstand** der Haut: Nasse Haut hat nur ein Fünfzigstel des Widerstands trockener Haut, sodass ein 50-fach höherer Strom durch den Körper fließen kann. Ab 100 Milliampere droht Kammerflimmern.
 
 **In diesem Kapitel lernst du:**
@@ -405,14 +595,14 @@ Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²
 
 ## Elektrochemische Spannungsquellen und Nernst-Potential
 
-**EMK (elektromotorische Kraft)**: Die Spannung, die eine Energiequelle (Batterie, Zelle) im Leerlauf — also ohne Stromfluss — an ihren Klemmen bereitstellt. Sie ist die treibende "Kraft" (eigentlich Energie pro Ladung) im Stromkreis.
+**EMK (elektromotorische Kraft)**: Die Spannung, die eine Energiequelle (Batterie, Zelle) im Leerlauf — also ohne Stromfluss — an ihren Klemmen bereitstellt. Sie ist die treibende “Kraft” (eigentlich Energie pro Ladung) im Stromkreis.
 
 Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine EMK **ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).
 
 ## Rechenbeispiele
 
 **Beispiel 1 — Elektrounfall: trockene vs. nasse Haut:**
-**Wechselspannung (Steckdose):** Die Angabe **„230 V“** an der Steckdose bezeichnet den **Effektivwert** der sinusförmigen Wechselspannung. **Effektivwert** = die Gleichspannung, die an einem ohmschen Widerstand die **gleiche elektrische Leistung** ergeben würde. Die **Amplitude** (Maximalwert) der Sinusspannung ist **größer als 230 V**: U_amplitude = 230 V × √2 ≈ **325 V**; die Spannung wechselt also zwischen etwa +325 V und −325 V. Der **Mittelwert** der Spannung über eine Periodendauer bei Sinus ist **0** (nicht 230 V). Typische Falle: „230 V Effektivwert bedeutet, die Spannung wechselt zwischen +230 V und −230 V“ ist **falsch** (das wären Amplitude = 230 V); richtig: Amplitude > 230 V, Effektivwert = 230 V.
+**Wechselspannung (Steckdose):** Die Angabe **„230 V”** an der Steckdose bezeichnet den **Effektivwert** der sinusförmigen Wechselspannung. **Effektivwert** = die Gleichspannung, die an einem ohmschen Widerstand die **gleiche elektrische Leistung** ergeben würde. Die **Amplitude** (Maximalwert) der Sinusspannung ist **größer als 230 V**: U_amplitude = 230 V × √2 ≈ **325 V**; die Spannung wechselt also zwischen etwa +325 V und −325 V. Der **Mittelwert** der Spannung über eine Periodendauer bei Sinus ist **0** (nicht 230 V). Typische Falle: „230 V Effektivwert bedeutet, die Spannung wechselt zwischen +230 V und −230 V” ist **falsch** (das wären Amplitude = 230 V); richtig: Amplitude > 230 V, Effektivwert = 230 V.
 
 230 V Netzspannung (Effektivwert). Trockene Haut: R ≈ 50 kΩ → I = U/R = 230/50.000 = **4,6 mA** (spürbar, nicht gefährlich).
 Nasse Haut: R ≈ 1 kΩ → I = 230/1.000 = **230 mA** → akut lebensgefährlich (Kammerflimmern ab ~100 mA).
@@ -433,13 +623,13 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Häufige Fragen:**
-- "Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?" → Kammerflimmern ab ~100 mA
-- "Wie ändert sich der Widerstand eines Drahtes bei Verdopplung der Länge?" → R verdoppelt sich (R = ρ·L/A)
-- "Warum ist nasse Haut gefährlicher bei Stromberührung?" → R sinkt von ~50 kΩ auf ~1 kΩ → Strom ~50× höher
-- "Welche Anwendung nutzt Joulesche Wärme therapeutisch?" → HF-Ablation, Elektrochirurgie
+- “Welcher Strom ist ab ~100 mA durch den Körper lebensgefährlich?” → Kammerflimmern ab ~100 mA
+- “Wie ändert sich der Widerstand eines Drahtes bei Verdopplung der Länge?” → R verdoppelt sich (R = ρ·L/A)
+- “Warum ist nasse Haut gefährlicher bei Stromberührung?” → R sinkt von ~50 kΩ auf ~1 kΩ → Strom ~50× höher
+- “Welche Anwendung nutzt Joulesche Wärme therapeutisch?” → HF-Ablation, Elektrochirurgie
 
 **Typische Prüfungsfallen / Verwechslungen:**
-- **230 V Effektivwert:** Amplitude der Sinusspannung ist **größer als 230 V** (≈ 325 V); Mittelwert über eine Periode = 0. „Spannung wechselt zwischen +230 V und −230 V“ ist falsch (das wäre Amplitude 230 V). Richtig: Effektivwert = Gleichspannung mit gleicher Leistung; Amplitude = 230√2 V.
+- **230 V Effektivwert:** Amplitude der Sinusspannung ist **größer als 230 V** (≈ 325 V); Mittelwert über eine Periode = 0. „Spannung wechselt zwischen +230 V und −230 V” ist falsch (das wäre Amplitude 230 V). Richtig: Effektivwert = Gleichspannung mit gleicher Leistung; Amplitude = 230√2 V.
 - P = U·I = I²·R = U²/R — alle drei Formen äquivalent, aber unterschiedliche Variablen nötig
 - Metalle: R steigt mit T; Halbleiter/NTC: R sinkt mit T (entgegengesetzt!)
 - Leitwert G = 1/R [Siemens] — wird bei Ionenkanälen statt R verwendet
@@ -623,6 +813,96 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         "Spannungsteiler",
       ],
       content: `## Einleitung
+
+Stell dir eine Lichterkette vor: Geht eine Birne kaputt, sind alle aus -- das ist eine Reihenschaltung. In deiner Wohnung dagegen funktioniert jede Lampe unabhaengig -- das ist eine Parallelschaltung. Diese zwei Grundtypen bestimmen, wie Strom und Spannung sich aufteilen.
+
+**In diesem Kapitel lernst du:**
+- wie sich Widerstaende in Reihen- und Parallelschaltung verhalten
+- warum die Knotenregel und die Maschenregel die Basis jeder Schaltungsanalyse sind
+- wie ein Kondensator sich ueber einen Widerstand laedt und entlaedt
+- was die Zeitkonstante bedeutet und warum der Defibrillator ein RC-Kreis ist
+
+---
+
+{{DIAGRAM:circuit}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Reihenschaltung
+
+Bei einer **Reihenschaltung** sind alle Bauteile hintereinander geschaltet. Der Strom ist ueberall gleich -- wie Wasser in einem Schlauch ohne Abzweigung. Die Widerstaende addieren sich einfach:
+
+**R_ges = R₁ + R₂ + ...**
+
+Das Ergebnis ist immer groesser als jeder einzelne Widerstand. Die Spannung teilt sich dabei auf: Jeder Widerstand bekommt seinen Anteil (groesserer Widerstand = mehr Spannung).
+
+---
+
+## Parallelschaltung
+
+Bei einer **Parallelschaltung** liegen die Bauteile nebeneinander. Die Spannung ist ueberall gleich, aber der Strom teilt sich auf -- wie Wasser, das sich an einer Gabelung aufteilt. Die Formel:
+
+**1/R_ges = 1/R₁ + 1/R₂ + ...**
+
+Das Ergebnis ist immer kleiner als der kleinste Einzelwiderstand. Fuer zwei Widerstaende gilt auch: R_ges = (R₁ mal R₂) / (R₁ + R₂).
+
+> **Merke:** Reihenschaltung: Strom gleich, Spannung teilt sich, R_ges = Summe. Parallelschaltung: Spannung gleich, Strom teilt sich, R_ges kleiner als der kleinste.
+
+---
+
+## Kirchhoffsche Gesetze
+
+Zwei einfache Regeln genuegen, um jede Schaltung zu verstehen:
+
+**Knotenregel:** Was an einer Verzweigung reinfliegt, muss auch rausfliessen. Das ist einfach Ladungserhaltung.
+
+**Maschenregel:** Gehst du im Kreis durch eine Schaltung, summieren sich alle Spannungen zu null. Das ist Energieerhaltung.
+
+Zusammen mit dem Ohmschen Gesetz (U = R mal I) kannst du damit jede Schaltung loesen.
+
+---
+
+## Kondensator und RC-Kreis
+
+Ein **Kondensator** speichert Energie zwischen zwei Platten: **C = Q/U** (Einheit Farad). Die gespeicherte Energie: **W = 1/2 mal C mal U²**. Doppelte Spannung bedeutet vierfache Energie!
+
+Wird ein Kondensator ueber einen Widerstand geladen, steigt die Spannung nicht sofort, sondern langsam -- wie eine Badewanne, die sich fuellt. Die **Zeitkonstante** bestimmt das Tempo:
+
+**tau = R mal C**
+
+Nach einer Zeitkonstante ist der Kondensator zu **63 %** geladen. Nach fuenf Zeitkonstanten ist er praktisch voll.
+
+Beim Entladen gilt das Umgekehrte: Nach tau sind noch **37 %** uebrig.
+
+**Defibrillator:** Ein grosser Kondensator (200 uF) wird auf etwa 1500 V geladen und gibt seine Energie (ca. 225 J) in Millisekunden ueber den Brustkorb ab. Die Zeitkonstante tau = R mal C bestimmt, wie schnell das geht.
+
+> **Merke:** tau = R mal C. Nach tau: 63 % geladen. Kondensator-Energie: W = 1/2 mal C mal U². Kondensatoren in Reihe: 1/C_ges = 1/C₁ + 1/C₂ (umgekehrt wie Widerstaende!).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Reihenschaltung: R_ges = R₁ + R₂; Strom ueberall gleich
+- Parallelschaltung: 1/R_ges = 1/R₁ + 1/R₂; Spannung ueberall gleich
+- Kirchhoff: Knotenregel = Ladungserhaltung; Maschenregel = Energieerhaltung
+- RC-Zeitkonstante: tau = R mal C; nach tau: 63 % geladen
+
+**Typische Fallen:**
+- Kondensatoren in Reihe verhalten sich umgekehrt wie Widerstaende in Reihe!
+- Nach tau: 63 %, nicht 50 % oder 100 %
+- Knotenregel = Ladungserhaltung (nicht Energieerhaltung)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Reihenschaltung**: R_ges = R₁+R₂; Strom gleich; Spannung teilt sich auf
+- **Parallelschaltung**: 1/R_ges = 1/R₁+1/R₂; Spannung gleich; Strom teilt sich auf
+- **Kirchhoff**: Knotenregel (Ladungserhaltung); Maschenregel (Energieerhaltung)
+- **RC-Kreis**: tau = R mal C; nach tau: 63 % geladen; nach 5 tau: praktisch voll
+- **Defibrillator**: Kondensator entlaedt sich ueber Brustkorb; W = 1/2 mal C mal U²`,
+      contentExtended: `## Einleitung
 
 Warum entlädt ein Defibrillator seine gesamte Energie in nur 10 Millisekunden -- und warum genügt das, um Kammerflimmern zu beenden? Ein Defibrillator ist im Kern ein Kondensator, der sich über den Thoraxwiderstand entlädt. Die Entladezeit hängt von der Zeitkonstante des RC-Kreises ab. Um solche Schaltungen zu verstehen, braucht man Reihen- und Parallelschaltungen sowie die Kirchhoffschen Gesetze.
 
@@ -901,6 +1181,108 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         "Selbstinduktion",
       ],
       content: `## Einleitung
+
+Warst du schon einmal im MRT? Das laute Klopfen kommt daher, dass starke Stroeme im Magnetfeld eine Kraft auf die Spulen ausueben -- sie vibrieren wie ein Lautsprecher. Magnetismus und Induktion stecken hinter der wichtigsten strahlungsfreien Bildgebung der Medizin.
+
+**In diesem Kapitel lernst du:**
+- wie bewegte Ladungen Magnetfelder erzeugen und umgekehrt abgelenkt werden
+- warum die Lorentz-Kraft Ladungen auf Kreisbahnen zwingt
+- wie eine Aenderung des Magnetfelds eine Spannung erzeugt (Induktion)
+- wie das MRT mit Magnetfeldern und Radiowellen Bilder macht
+- welche Teile das elektromagnetische Spektrum hat
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:circuit}}
+
+## Magnetismus -- Grundlagen
+
+Magnetismus entsteht durch **bewegte Ladungen** (also durch Strom). Jeder Magnet hat einen Nord- und einen Suedpol -- einen Einzelpol gibt es nicht. Das Magnetfeld hat das Zeichen **B** und wird in **Tesla (T)** gemessen.
+
+Ein stromdurchflossener Draht erzeugt ringfoermige Feldlinien. In einer Spule (viele Drahtwindungen) ist das Feld innen gleichmaessig und aussen schwach. Die **Rechte-Hand-Regel** hilft: Daumen in Stromrichtung, Finger zeigen die Feldrichtung.
+
+> **Merke:** Magnetfeldlinien sind immer geschlossen -- es gibt keine magnetischen Einzelpole. Einheit: Tesla (T).
+
+---
+
+## Lorentz-Kraft
+
+Fliegt eine geladene Teilchen durch ein Magnetfeld, wird es abgelenkt -- aber nicht schneller oder langsamer. Die **Lorentz-Kraft** steht senkrecht auf der Bewegung und zwingt die Ladung auf eine **Kreisbahn**:
+
+**r = m mal v / (q mal B)**
+
+Je schwerer das Teilchen oder je schneller es ist, desto groesser der Kreis. Dieses Prinzip nutzen:
+- **Massenspektrometer:** Ionen fliegen auf Kreisbahnen -- aus dem Radius bestimmt man die Masse
+- **Zyklotron:** Beschleunigt Protonen fuer PET-Bildgebung
+- **MRT-Klopfen:** Stroeme in Gradientenspulen erfahren eine Kraft im starken Hauptfeld
+
+---
+
+## Induktion -- Magnetfeldaenderung erzeugt Spannung
+
+Wenn sich das Magnetfeld durch eine Leiterschleife aendert, entsteht eine Spannung. Das ist das **Faradaysche Induktionsgesetz**. Wichtig: Nicht das Feld selbst, sondern seine **Aenderung** erzeugt die Spannung. Ein konstantes Magnetfeld induziert nichts!
+
+Die **Lenzsche Regel** sagt: Der erzeugte Strom wirkt der Aenderung entgegen -- wie ein Widerstand gegen Veraenderung. Das ist Energieerhaltung.
+
+**Transformator:** Zwei Spulen auf einem Eisenkern. Wechselstrom in der ersten Spule erzeugt ein wechselndes Magnetfeld, das in der zweiten Spule eine Spannung induziert. Spannungsverhaeltnis = Windungsverhaeltnis: **U₁/U₂ = N₁/N₂**.
+
+> **Merke:** Induktion: Nur ein sich aenderndes Magnetfeld erzeugt Spannung. Lenzsche Regel: Der Strom wirkt seiner Ursache entgegen.
+
+---
+
+## Elektromagnetisches Spektrum
+
+Licht, Roentgenstrahlung und Radiowellen sind alle **elektromagnetische Wellen** -- sie unterscheiden sich nur in der Wellenlaenge. Fuer alle gilt: **c = Wellenlaenge mal Frequenz** (c = 3 mal 10⁸ m/s).
+
+| Bereich | Wellenlaenge | Beispiel |
+|---|---|---|
+| Radiowellen | ueber 1 m | MRT |
+| Sichtbares Licht | 380--780 nm | Endoskopie |
+| UV | 10--380 nm | Desinfektion |
+| Roentgen | 0,01--10 nm | Roentgenbilder, CT |
+| Gamma | unter 0,01 nm | PET, Strahlentherapie |
+
+Kurzwelliger = mehr Energie. Darum ist UV-Strahlung schaedlicher als sichtbares Licht.
+
+---
+
+## MRT -- Wie funktioniert es?
+
+Das MRT nutzt ein starkes Magnetfeld (1,5 bis 3 T), um Wasserstoffkerne im Koerper auszurichten. Ein Radiopuls kippt sie kurz um. Wenn sie zurueckkippen, senden sie ein Signal -- das wird gemessen.
+
+Die **Larmor-Frequenz** bestimmt, welche Radiofrequenz du brauchst: **f = 42,58 MHz/T mal B**. Bei 1,5 T also etwa 64 MHz -- das ist wie ein UKW-Radiosender.
+
+Verschiedene Gewebe kippen unterschiedlich schnell zurueck. So entstehen die Kontraste im Bild: Fett erscheint anders als Wasser, Tumor anders als gesundes Gewebe.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Lorentz-Kraft: senkrecht auf Bewegung, keine Arbeit, Kreisbahn
+- Lenzsche Regel: Induzierter Strom wirkt seiner Ursache entgegen
+- Transformator: U₁/U₂ = N₁/N₂
+- Larmor-Frequenz: f = 42,58 MHz/T mal B; bei 1,5 T: etwa 64 MHz
+- EM-Spektrum: Radiowellen, sichtbar, UV, Roentgen, Gamma
+
+**Typische Fallen:**
+- Lorentz-Kraft aendert nur die Richtung, nicht die Geschwindigkeit
+- Konstantes Magnetfeld induziert KEINE Spannung (nur Aenderung zaehlt!)
+- MRT nutzt Radiowellen, keine Roentgenstrahlung
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Magnetfeld**: B [Tesla]; entsteht durch bewegte Ladungen; immer geschlossene Feldlinien
+- **Lorentz-Kraft**: senkrecht auf Bewegung und Feld; Kreisbahn mit r = mv/(qB)
+- **Induktion**: Aenderung des Magnetflusses erzeugt Spannung; Lenz: wirkt der Ursache entgegen
+- **Transformator**: U₁/U₂ = N₁/N₂; Leistung bleibt gleich
+- **EM-Spektrum**: Radiowellen bis Gamma; c = Wellenlaenge mal Frequenz
+- **MRT**: Magnetfeld + Radiopuls; Larmor-Frequenz bei 1,5 T etwa 64 MHz`,
+      contentExtended: `## Einleitung
 
 Warum klopft ein MRT-Gerät so laut? Die Gradientenspulen führen starke Wechselströme im Hauptmagnetfeld -- die Lorentz-Kraft lässt sie vibrieren wie eine Lautsprechermembran. Magnetismus, Induktion und Larmor-Frequenz stecken hinter der wichtigsten strahlungsfreien Bildgebung der modernen Medizin.
 
@@ -1189,6 +1571,101 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
         "Dioptrie",
       ],
       content: `## Einleitung
+
+Halt einen Loeffel ins Wasserglas -- er sieht an der Wasseroberflaeche geknickt aus. Das passiert, weil Licht beim Uebergang von Wasser zu Luft seine Richtung aendert. Dieses Phaenomen heisst **Brechung** und ist die Grundlage fuer Brillen, Endoskope und Glasfaserkabel.
+
+**In diesem Kapitel lernst du:**
+- wie Reflexion funktioniert und warum der Einfallswinkel gleich dem Ausfallswinkel ist
+- wie das Brechungsgesetz erklaert, warum Licht an Grenzflaechen abknickt
+- wann Totalreflexion auftritt und warum sie fuer Glasfasern so wichtig ist
+- wie die Linsengleichung Brennweite, Gegenstandsweite und Bildweite verknuepft
+- was Dioptrien bedeuten und warum das Auge etwa 60 davon hat
+
+---
+
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:em-spectrum}}
+
+## Reflexion
+
+Wenn Licht auf eine glatte Flaeche trifft, wird es zurueckgeworfen. Die Regel ist simpel:
+
+**Einfallswinkel = Ausfallswinkel**
+
+Wichtig: Die Winkel misst du immer zum **Lot** (der Senkrechten auf die Flaeche), nicht zur Flaeche selbst. Ein Spiegel zeigt dir ein Bild, das genauso gross ist wie du -- nur seitenverkehrt.
+
+> **Merke:** Einfallswinkel = Ausfallswinkel, immer zum Lot gemessen. Raue Oberflaechen streuen das Licht in alle Richtungen (diffuse Reflexion).
+
+---
+
+## Brechung (Snellius)
+
+Licht aendert seine Richtung, wenn es von einem Material ins andere uebergeht. Die Formel dafuer:
+
+**n₁ mal sin(alpha₁) = n₂ mal sin(alpha₂)**
+
+Der **Brechungsindex n** sagt dir, wie stark ein Material das Licht bremst:
+- Luft: n = 1
+- Wasser: n = 1,33
+- Glas: n = 1,5
+
+Faustregel: Geht Licht in ein dichteres Material (groesseres n), knickt es **zum Lot hin**. Geht es ins duennere Material, knickt es **vom Lot weg**.
+
+---
+
+## Totalreflexion
+
+Geht Licht von einem dichten in ein duenneres Material (z. B. Glas nach Luft), wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel -- dem **Grenzwinkel** -- kommt gar kein Licht mehr durch: Es wird komplett zurueckgeworfen.
+
+**sin(Grenzwinkel) = n₂ / n₁** (nur wenn n₁ groesser als n₂)
+
+Fuer Glas nach Luft: Grenzwinkel etwa 42 Grad. Glasfasern nutzen dieses Prinzip: Das Licht springt immer wieder an der Innenwand ab und bleibt im Kern gefangen -- so leiten Endoskope Licht um Kurven durch den Koerper.
+
+> **Merke:** Totalreflexion nur vom dichteren ins duennere Medium. Endoskope nutzen dieses Prinzip in Glasfasern.
+
+---
+
+## Linsen und Brechkraft
+
+Eine **Sammellinse** (in der Mitte dick) buendelt Licht in einem Brennpunkt. Eine **Zerstreuungslinse** (am Rand dick) streut Licht auseinander.
+
+Die **Linsengleichung** verknuepft Brennweite f, Gegenstandsweite g und Bildweite b:
+
+**1/f = 1/g + 1/b**
+
+Kennst du zwei Groessen, rechnest du die dritte aus. Die **Brechkraft** D ist der Kehrwert der Brennweite in Metern: **D = 1/f** (Einheit: Dioptrien, dpt). f = 20 cm = 0,2 m ergibt D = 5 dpt.
+
+Das Auge hat etwa 60 dpt Gesamtbrechkraft -- die Hornhaut liefert zwei Drittel davon, die Linse den Rest. Brillenglaeser addieren Brechkraft dazu (plus fuer Weitsichtigkeit) oder ziehen sie ab (minus fuer Kurzsichtigkeit).
+
+> **Merke:** Linsengleichung: 1/f = 1/g + 1/b. Brechkraft D = 1/f [dpt]. Sammellinse: f positiv. Zerstreuungslinse: f negativ.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Snellius: n₁ mal sin(alpha₁) = n₂ mal sin(alpha₂)
+- In dichterem Medium bricht Licht zum Lot hin
+- Totalreflexion: nur von dichterem zu duennerem Medium; Grenzwinkel = arcsin(n₂/n₁)
+- Linsengleichung: 1/f = 1/g + 1/b; Brechkraft D = 1/f [dpt]
+
+**Typische Fallen:**
+- Totalreflexion geht NUR vom dichteren ins duennere Medium, nie umgekehrt
+- Winkel immer zum Lot messen, nicht zur Oberflaeche
+- Positives b = reelles Bild hinter der Linse; negatives b = virtuelles Bild
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Reflexion**: Einfallswinkel = Ausfallswinkel (zum Lot gemessen)
+- **Snellius**: n₁ mal sin(alpha₁) = n₂ mal sin(alpha₂); dichteres Medium = Brechung zum Lot
+- **Brechungsindex**: Luft 1; Wasser 1,33; Glas 1,5
+- **Totalreflexion**: nur von dicht nach duenn; Grenzwinkel = arcsin(n₂/n₁); Basis fuer Glasfasern
+- **Linsengleichung**: 1/f = 1/g + 1/b; Brechkraft D = 1/f [dpt]
+- **Auge**: etwa 60 dpt gesamt; Hornhaut liefert den groessten Anteil`,
+      contentExtended: `## Einleitung
 
 Warum sieht ein Bleistift im Wasserglas geknickt aus? Der Lichtstrahl ändert beim Übergang von Wasser zu Luft seine Richtung -- Brechung. Dasselbe Prinzip ermöglicht es, Licht durch haarfeine Glasfasern um Kurven zu leiten: Totalreflexion hält das Licht im Kern gefangen. Ohne dieses Phänomen gäbe es keine flexible Endoskopie.
 
@@ -1495,6 +1972,93 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.
       ],
       content: `## Einleitung
 
+Warum kann ein Mikroskop keine Viren zeigen, egal wie stark du die Vergroesserung aufdrehst? Die Antwort liegt in der Natur des Lichts: Es verhaelt sich wie eine Welle und wird an kleinen Strukturen gebeugt. Ab etwa 200 Nanometern ist Schluss -- das ist kein technisches Problem, sondern ein physikalisches Limit.
+
+**In diesem Kapitel lernst du:**
+- warum Licht als Welle Interferenz und Beugung zeigt
+- wann sich Wellen verstaerken und wann sie sich ausloeschen
+- wie das Abbe-Kriterium die Aufloesungsgrenze eines Mikroskops bestimmt
+- warum Oelimmersion die Aufloesung verbessert
+- wie die optische Kohaerenz-Tomographie (OCT) Netzhautschichten sichtbar macht
+
+---
+
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:wave-types}}
+
+## Licht als Welle
+
+Licht ist eine elektromagnetische Welle. Es hat eine **Wellenlaenge** (Abstand zwischen zwei Wellenbergen) und eine **Frequenz** (wie oft es pro Sekunde schwingt). Der Zusammenhang: **c = Wellenlaenge mal Frequenz**.
+
+Sichtbares Licht geht von etwa 380 nm (violett) bis 780 nm (rot). Kuerzere Wellen sind UV, laengere sind Infrarot.
+
+**Dispersion** bedeutet, dass verschiedene Farben unterschiedlich stark gebrochen werden. Blaues Licht wird staerker gebrochen als rotes -- das erzeugt den Regenbogen, wenn weisses Licht durch Wassertropfen faellt.
+
+> **Merke:** c = Wellenlaenge mal Frequenz. Im Medium wird die Wellenlaenge kuerzer, die Frequenz bleibt gleich.
+
+---
+
+## Interferenz
+
+Treffen zwei Wellen aufeinander, ueberlagern sie sich. Wenn die Wellenberge zusammenfallen, verstaerken sie sich -- das heisst **konstruktive Interferenz**. Wenn Berg auf Tal trifft, loeschen sie sich aus -- **destruktive Interferenz**.
+
+- **Konstruktiv** (hell): Gangunterschied = ganzzahliges Vielfaches der Wellenlaenge
+- **Destruktiv** (dunkel): Gangunterschied = halbzahliges Vielfaches
+
+Das beruehmt **Doppelspaltexperiment** von Young zeigt das: Licht faellt durch zwei enge Spalte und erzeugt auf einem Schirm ein Streifenmuster aus hellen und dunklen Streifen. Der Abstand der Streifen: **Abstand = Wellenlaenge mal Schirmabstand / Spaltabstand**.
+
+---
+
+## Beugung und Aufloesungsgrenze
+
+**Beugung** bedeutet: Licht biegt sich um Hindernisse und durch kleine Oeffnungen. Je laenger die Wellenlaenge, desto staerker die Beugung.
+
+Das begrenzt, wie fein ein Mikroskop Details erkennen kann. Das **Abbe-Kriterium** gibt die kleinste noch erkennbare Struktur an:
+
+**d_min = Wellenlaenge / (2 mal NA)**
+
+**NA** ist die numerische Apertur -- ein Mass dafuer, wie viel Licht das Objektiv einfaengt. Oelimmersion (Oel zwischen Probe und Objektiv) erhoeht die NA von etwa 0,95 auf 1,3, weil Oel einen hoeheren Brechungsindex hat als Luft.
+
+Mit sichtbarem Licht und Oelimmersion erreichst du bestenfalls etwa **200 nm** Aufloesung. Bakterien (1--10 um) siehst du gut, Viren (20--300 nm) nicht mehr zuverlaessig.
+
+> **Merke:** Abbe-Kriterium: d_min = Wellenlaenge / (2 mal NA). Oelimmersion verbessert NA und damit die Aufloesung.
+
+---
+
+## OCT -- Optische Kohaerenz-Tomographie
+
+Die OCT nutzt Interferenz, um Schichtbilder zu erzeugen -- aehnlich wie Ultraschall, aber mit Licht. Ein Lichtstrahl wird aufgeteilt: Ein Teil geht in die Probe, der andere dient als Referenz. Nur wenn beide Strahlen den gleichen Weg zurueckgelegt haben, entsteht Interferenz. So erhaeltst du ein tiefenaufgeloestes Bild mit etwa 10 um Aufloesung.
+
+In der Augenheilkunde ist OCT Standard: Netzhautschichten, Makuladegeneration und Glaukom lassen sich damit beurteilen.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Konstruktive Interferenz: Gangunterschied = ganzzahliges Vielfaches der Wellenlaenge
+- Destruktive Interferenz: Gangunterschied = halbzahliges Vielfaches
+- Abbe-Kriterium: d_min = Wellenlaenge / (2 mal NA)
+- Oelimmersion erhoeht NA und verbessert die Aufloesung
+
+**Typische Fallen:**
+- Konstruktiv = ganzzahlig (hell), destruktiv = halbzahlig (dunkel) -- nicht verwechseln!
+- Laengere Wellenlaenge = MEHR Beugung (nicht weniger)
+- OCT nutzt Interferenz, nicht Beugung
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Interferenz**: konstruktiv bei ganzzahligem Vielfachen der Wellenlaenge; destruktiv bei halbzahligem
+- **Doppelspalt**: Streifenabstand = Wellenlaenge mal L / d
+- **Beugung**: Licht biegt sich um Hindernisse; staerker bei laengerer Wellenlaenge
+- **Abbe-Kriterium**: d_min = Wellenlaenge / (2 mal NA); Mikroskop-Limit etwa 200 nm
+- **Oelimmersion**: erhoeht NA von 0,95 auf 1,3 -- bessere Aufloesung
+- **OCT**: Interferenz-basierte Bildgebung; 10 um Aufloesung; Standard in der Augenheilkunde`,
+      contentExtended: `## Einleitung
+
 Warum kann ein Lichtmikroskop Viren nicht sichtbar machen, egal wie stark es vergrößert? Die Antwort liegt im Wellencharakter des Lichts: Beugung setzt eine fundamentale Auflösungsgrenze bei etwa 200 Nanometern. Strukturen darunter verschwimmen -- nicht wegen schlechter Optik, sondern wegen der Physik.
 
 **In diesem Kapitel lernst du:**
@@ -1778,6 +2342,95 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
         "Glasfaser",
       ],
       content: `## Einleitung
+
+Wie erkennt ein Arzt einzelne Zellen in einer Gewebeprobe, die mit blossem Auge nur ein rosa Fleck waere? Mit dem Mikroskop -- es kombiniert zwei Linsensysteme und vergroessert bis zu 1000-fach. Aber Vergroesserung allein genuegt nicht: Ohne gute Aufloesung bleibt alles unscharf.
+
+**In diesem Kapitel lernst du:**
+- wie eine Lupe funktioniert und warum M = 25 cm / f gilt
+- warum die Gesamtvergroesserung eines Mikroskops Objektiv mal Okular ist
+- wie Endoskope Licht und Bild durch den Koerper leiten
+- welche Rolle Spaltlampe und Augenspiegel in der Augenuntersuchung spielen
+- warum Elektronenmikroskope viel feiner aufloesen als Lichtmikroskope
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:lens-imaging}}
+
+## Lupe
+
+Die Lupe ist die einfachste Vergroesserungshilfe: eine einzelne **Sammellinse**. Du haltst den Gegenstand **innerhalb der Brennweite** und siehst ein vergroessertes, aufrechtes Bild.
+
+Die Vergroesserung: **M = 25 cm / f** (f = Brennweite in cm). Je kuerzer die Brennweite, desto staerker die Vergroesserung. Eine Lupe mit f = 5 cm vergroessert 5-fach. Das Dermatoskop (f etwa 4 cm, 6-fache Vergroesserung) ist ein Beispiel aus dem Alltag.
+
+> **Merke:** Lupe = Sammellinse; Gegenstand muss innerhalb der Brennweite sein. M = 25 cm / f.
+
+---
+
+## Lichtmikroskop
+
+Das Mikroskop hat zwei Linsensysteme:
+- **Objektiv** (nahe an der Probe, kurze Brennweite): erzeugt ein vergroessertes Zwischenbild
+- **Okular** (am Auge, laengere Brennweite): wirkt wie eine Lupe fuer das Zwischenbild
+
+Die **Gesamtvergroesserung** ist das Produkt: **M_ges = M_Objektiv mal M_Okular**. Zum Beispiel: 40x-Objektiv mal 10x-Okular = 400-fache Vergroesserung.
+
+Die kleinste erkennbare Struktur liegt bei etwa **200 nm** (mit Oelimmersion und sichtbarem Licht). Bakterien siehst du gut, Viren nicht mehr.
+
+---
+
+## Endoskop
+
+Ein Endoskop schaut in den Koerper hinein, ohne ihn gross aufzuschneiden. Es besteht aus:
+- **Lichtleitung**: Glasfasern bringen Licht zum Untersuchungsort (Totalreflexion)
+- **Kamerachip**: Am vorderen Ende sitzt ein winziger Sensor, der das Bild aufnimmt
+- **Arbeitskanal**: Fuer Biopsie-Zangen oder kleine Instrumente
+
+Einsatzgebiete: Magenspiegelung, Darmspiegelung, Lungenspiegelung, Bauchspiegelung (Laparoskopie).
+
+---
+
+## Augenspiegel und Spaltlampe
+
+Der **Augenspiegel** (Ophthalmoskop) leuchtet durch die Pupille auf die Netzhaut. So sieht der Arzt Blutgefaesse, den Sehnerv und die Stelle des schaerfsten Sehens.
+
+Die **Spaltlampe** ist ein Spezialmikroskop fuer das Auge. Ein feiner Lichtspalt beleuchtet nacheinander Hornhaut, Linse und Glaskoerper -- wie ein optischer Schnitt durch das Auge.
+
+---
+
+## Elektronenmikroskop
+
+Elektronenmikroskope nutzen Elektronen statt Licht. Da Elektronen eine viel kuerzere Wellenlaenge haben, erreichen sie eine Aufloesung bis hinunter zu **0,1 nm** -- das ist Atom-Niveau. Damit lassen sich Viren und feinste Zellstrukturen sichtbar machen.
+
+> **Merke:** Elektronenmikroskop schlaegt die Abbe-Grenze durch extrem kurze Wellenlaenge der Elektronen.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Lupe: M = 25 cm / f; Gegenstand innerhalb der Brennweite
+- Mikroskop: M_ges = M_Objektiv mal M_Okular (Produkt, nicht Summe!)
+- Aufloesungsgrenze Lichtmikroskop: etwa 200 nm
+- Endoskop: Glasfasern nutzen Totalreflexion fuer Lichtleitung
+
+**Typische Fallen:**
+- Lupe: Gegenstand muss INNERHALB der Brennweite liegen (nicht ausserhalb!)
+- Mikroskop: Vergroesserung ist ein Produkt, keine Summe
+- Konfokalmikroskop verbessert den Kontrast (optische Schnitte), nicht die Vergroesserung
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Lupe**: M = 25 cm / f; aufrechtes virtuelles Bild; Gegenstand innerhalb der Brennweite
+- **Mikroskop**: M_ges = Objektiv mal Okular; Aufloesungsgrenze etwa 200 nm
+- **Endoskop**: Glasfasern (Totalreflexion) + Kamerachip; flexibel oder starr
+- **Augenspiegel**: Blick durch die Pupille auf die Netzhaut
+- **Spaltlampe**: Lichtspalt-Mikroskop fuer Hornhaut und Linse
+- **Elektronenmikroskop**: Aufloesung bis 0,1 nm; fuer Viren und Ultrastruktur`,
+      contentExtended: `## Einleitung
 
 Wie kann ein Pathologe einzelne Zellen in einer Gewebeprobe erkennen, die mit bloßem Auge nur ein rosa Fleck wäre? Das Lichtmikroskop kombiniert zwei Linsensysteme -- Objektiv und Okular -- und erreicht Vergrößerungen bis 1000-fach. Doch Vergrößerung allein nützt nichts ohne ausreichende Auflösung.
 
@@ -2068,6 +2721,96 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         "Dioptrie",
       ],
       content: `## Einleitung
+
+Warum brauchen fast alle Menschen ab 45 eine Lesebrille -- selbst wer vorher perfekt gesehen hat? Die Linse im Auge wird mit den Jahren steifer und kann sich nicht mehr genug woelben. Das nennt man Alterssichtigkeit (Presbyopie). Sie ist nur einer von vier haeufigen Sehfehlern, die alle mit den Gesetzen der Optik zusammenhaengen.
+
+**In diesem Kapitel lernst du:**
+- wie das Auge mit Hornhaut und Linse zusammen etwa 60 Dioptrien Brechkraft erzeugt
+- wie die Scharfstellung auf Naehe funktioniert (Akkommodation)
+- wie Kurzsichtigkeit, Weitsichtigkeit, Alterssichtigkeit und Hornhautverkruemmung entstehen
+- welche Brille welchen Sehfehler korrigiert
+- wie LASIK die Hornhaut dauerhaft veraendert
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:wave-types}}
+
+## Wie das Auge Licht buendelt
+
+Dein Auge funktioniert wie eine Kamera. Die **Hornhaut** (Kornea) liefert etwa zwei Drittel der Brechkraft (ca. 43 dpt) -- sie ist der Hauptteil der Optik. Die **Linse** steuert das restliche Drittel (ca. 20 dpt) bei und kann ihre Form aendern.
+
+Insgesamt hat das entspannte Auge etwa **60 Dioptrien** Brechkraft. Der Augapfel ist etwa 24 mm lang.
+
+---
+
+## Akkommodation -- Scharfstellen auf verschiedene Entfernungen
+
+Dein Auge kann zwischen nah und fern umschalten:
+- **Ferne:** Der Ziliarmuskel ist entspannt. Die Linse wird flach gezogen -- geringe Brechkraft.
+- **Naehe:** Der Ziliarmuskel zieht sich zusammen. Die Linse woelbt sich -- staerkere Brechkraft.
+
+Jung kannst du bis auf 10 cm scharf sehen. Mit 40 Jahren funktioniert das nur noch bis 25 cm, mit 60 Jahren kaum noch unter 1 Meter.
+
+> **Merke:** Ziliarmuskel zieht sich zusammen = Linse woelbt sich = Nahsicht. Entspannt = Linse flach = Fernsicht.
+
+---
+
+## Die vier haeufigen Sehfehler
+
+**Kurzsichtigkeit (Myopie):** Augapfel zu lang. Licht aus der Ferne wird VOR der Netzhaut gebuendelt. Korrektur: **Zerstreuungslinse** (minus-Dioptrien).
+
+**Weitsichtigkeit (Hyperopie):** Augapfel zu kurz. Licht wird HINTER der Netzhaut gebuendelt. Korrektur: **Sammellinse** (plus-Dioptrien).
+
+**Alterssichtigkeit (Presbyopie):** Die Linse wird steif und kann sich nicht mehr woelben. Fernsicht bleibt gut, Nahsicht wird schlecht. Korrektur: **Lesebrille** (plus-Dioptrien fuer Naehe).
+
+**Hornhautverkruemmung (Astigmatismus):** Die Hornhaut ist nicht gleichmaessig gewoelbt -- wie ein Rugbyball statt einer Kugel. Punkte erscheinen als Striche. Korrektur: **Zylinderlinse**.
+
+> **Merke:** Kurzsichtig = Auge zu lang = Zerstreuungslinse (minus). Weitsichtig = Auge zu kurz = Sammellinse (plus). Alterssichtig = Linse steif = Lesebrille (plus).
+
+---
+
+## Brillenrezept lesen
+
+Ein Brillenrezept enthaelt pro Auge:
+- **sph** (sphaerisch): Grundkorrektur in Dioptrien (minus = kurzsichtig, plus = weitsichtig)
+- **cyl** (zylindrisch): Korrektur fuer Hornhautverkruemmung
+- **Achse**: Richtung der Zylinderkorrektur in Grad
+
+---
+
+## LASIK
+
+Bei der LASIK traegt ein Laser duenne Schichten der Hornhaut ab und veraendert so ihre Kruemmung dauerhaft. Bei Kurzsichtigkeit wird die Mitte abgeflacht, bei Weitsichtigkeit der Rand. Typisch korrigierbar: bis etwa minus 10 Dioptrien.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Kurzsichtigkeit: Auge zu lang, Zerstreuungslinse (minus)
+- Weitsichtigkeit: Auge zu kurz, Sammellinse (plus)
+- Akkommodation: Ziliarmuskel kontrahiert = Linse woelbt sich
+- Presbyopie ist NICHT dasselbe wie Hyperopie (andere Ursache, gleiche Korrektur fuer Naehe)
+
+**Typische Fallen:**
+- Ziliarmuskel kontrahiert = Linse woelbt sich (nicht flacher!)
+- Presbyopie und Hyperopie nicht verwechseln: Presbyopie = Linse steif; Hyperopie = Auge zu kurz
+- Fernpunkt bei 50 cm: D = minus 1/0,5 m = minus 2 dpt
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Brechkraft Auge**: etwa 60 dpt; Hornhaut ca. 43, Linse ca. 17--20
+- **Akkommodation**: Ziliarmuskel kontrahiert = Linse woelbt sich = Nahsicht
+- **Myopie**: Auge zu lang; Fokus vor Netzhaut; Zerstreuungslinse (minus)
+- **Hyperopie**: Auge zu kurz; Fokus hinter Netzhaut; Sammellinse (plus)
+- **Presbyopie**: Linse steif; Nahpunkt rueckt weg; Lesebrille (plus)
+- **Astigmatismus**: ungleichmaessige Hornhaut; Zylinderlinse
+- **LASIK**: Hornhaut-Laser veraendert Kruemmung dauerhaft`,
+      contentExtended: `## Einleitung
 
 Warum brauchen fast alle Menschen ab 45 eine Lesebrille -- selbst wer vorher perfekt gesehen hat? Die Augenlinse verliert mit den Jahren ihre Elastizität und kann sich nicht mehr ausreichend wölben. Das ist Presbyopie, und sie ist nur eine von vier häufigen Fehlsichtigkeiten, die alle mit den optischen Gesetzen von Linsen und Brechkraft zusammenhängen.
 

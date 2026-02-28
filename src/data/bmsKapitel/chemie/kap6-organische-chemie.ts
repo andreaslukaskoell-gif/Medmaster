@@ -16,6 +16,91 @@ export const chemKapOrganisch: Kapitel = {
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       content: `## Einleitung
 
+Erdgas zum Heizen, Kerzenwachs, Plastiktueten -- das alles besteht aus **Kohlenwasserstoffen**. Das sind Molekuele nur aus Kohlenstoff (C) und Wasserstoff (H). Je nachdem, ob nur Einfachbindungen, eine Doppelbindung oder eine Dreifachbindung vorhanden ist, unterscheidet man drei Gruppen: Alkane, Alkene, Alkine.
+
+**In diesem Kapitel lernst du:**
+- den Unterschied zwischen Alkanen, Alkenen und Alkinen
+- warum laengere Ketten hoehere Siedepunkte haben
+- wie du mit dem Bromwassertest eine Doppelbindung nachweist
+- die Markovnikov-Regel und die wichtigsten Reaktionstypen
+
+---
+
+## Alkane -- nur Einfachbindungen
+
+Formel: CnH2n+2. Alle C-Atome haben vier Bindungspartner (Tetraeder, 109,5 Grad).
+
+Alkane sind unpolar. Sie halten nur durch schwache van-der-Waals-Kraefte zusammen. Je laenger die Kette, desto groesser die Oberflaeche, desto staerker die Kraefte, desto hoeher der Siedepunkt. Methan ist ein Gas, Pentan eine Fluessigkeit, Kerzenwachs ist fest.
+
+**Namen lernen:** Methan (C1), Ethan (C2), Propan (C3), Butan (C4), Pentan (C5), Hexan (C6), Heptan (C7), Octan (C8), Nonan (C9), Decan (C10).
+
+**Verzweigung senkt den Siedepunkt.** n-Pentan siedet bei 36 Grad, das verzweigte Neopentan schon bei 9,5 Grad -- weil die kugelfoermige Form weniger Oberflaeche bietet.
+
+**Typische Reaktion:** Radikalische Substitution. Unter UV-Licht tauscht ein Halogen ein H-Atom aus: CH4 + Cl2 --> CH3Cl + HCl. Die Reaktion laeuft in drei Phasen: Start, Kettenfortpflanzung, Abbruch.
+
+{{DIAGRAM:covalent-bond}}
+
+---
+
+## Alkene -- eine Doppelbindung
+
+Formel: CnH2n. Die C=C-Doppelbindung ist nicht frei drehbar. Deshalb gibt es cis/trans-Isomere (z. B. cis-Buten und trans-Buten).
+
+**Typische Reaktion:** Elektrophile Addition. Brom-Wasser (orange) wird entfaerbt, weil Br2 sich an die Doppelbindung anlagert. Das ist der klassische Nachweis fuer Doppelbindungen.
+
+**Markovnikov-Regel:** Bei der Addition von HBr an ein Alken geht das H an das C-Atom mit mehr H-Atomen. Merkhilfe: “Das Reiche wird reicher.”
+
+---
+
+## Alkine -- eine Dreifachbindung
+
+Formel: CnH2n-2. Das Molekuel ist linear (180 Grad). Wichtigstes Beispiel: Ethin (Acetylen) -- wird zum Schweissen verwendet.
+
+{{DIAGRAM:functional-groups}}
+
+| Eigenschaft | Alkan | Alken | Alkin |
+|---|---|---|---|
+| Bindung | nur Einfach | eine Doppel | eine Dreifach |
+| Bindungswinkel | 109,5 Grad | 120 Grad | 180 Grad |
+| Formel | CnH2n+2 | CnH2n | CnH2n-2 |
+| Typische Reaktion | Substitution | Addition | Addition |
+
+---
+
+## Polymerisation
+
+Viele Alkene aneinandergereiht ergeben Kunststoffe: Polyethylen (PE) fuer Tueten, PVC fuer Rohre, Polystyrol (PS) fuer Verpackungen.
+
+---
+
+> **Merke:** Alkane sind gesaettigt und reagieren nur unter UV-Licht (Substitution). Alkene und Alkine haben Doppel- bzw. Dreifachbindungen und reagieren durch Addition. Bromwasser entfaerbt sich bei Doppelbindungen. Laengere Kette = hoeherer Siedepunkt. Verzweigung = niedrigerer Siedepunkt.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Formeln: Alkan CnH2n+2, Alken CnH2n, Alkin CnH2n-2
+- Bromwassertest: Entfaerbung = Doppelbindung vorhanden
+- Markovnikov: H geht an das C mit mehr H-Atomen
+- Verzweigung senkt den Siedepunkt
+
+**Typische Fallen:**
+- Benzol ist kein Alken, sondern ein Aromat
+- Cycloalkane und Alkene haben beide CnH2n -- nicht verwechseln!
+- Siedepunkt: laengere Kette = hoeher, mehr Verzweigung = niedriger
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Alkane** (CnH2n+2): nur Einfachbindungen, unpolar, Substitution unter UV
+- **Alkene** (CnH2n): eine Doppelbindung, Addition, Bromwassertest
+- **Alkine** (CnH2n-2): Dreifachbindung, linear, Addition
+- **Siedepunkt**: laengere Kette = hoeher; Verzweigung = niedriger
+- **Namen**: Met-Eth-Prop-But-Pent-Hex-Hept-Oct-Non-Dec`,
+      contentExtended: `## Einleitung
+
 Erdgas, Kerzenwachs, Polyethylen-Folie — all das sind **Kohlenwasserstoffe**, Verbindungen aus nur Kohlenstoff und Wasserstoff. Sie bilden das Grundgerüst der organischen Chemie und damit auch der Biochemie. Ob ein Molekül nur Einfachbindungen hat (Alkan), eine Doppelbindung (Alken) oder eine Dreifachbindung (Alkin), bestimmt seine Reaktivität, seine Hybridisierung und sogar seinen Siedepunkt. Das Verständnis dieser Grundbausteine ist der Schlüssel zu funktionellen Gruppen, Arzneistoffen und Biomolekülen.
 
 **In diesem Kapitel lernst du:**
@@ -37,7 +122,7 @@ Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen s
 
 **Nomenklatur (IUPAC)**: Längste Kette = Stammname (Methan, Ethan, Propan...). Seitenketten als Präfix: Methyl-, Ethyl-. Nummerierung so, dass Substituenten die niedrigsten Ziffern erhalten. Beispiel: 2-Methylpropan = Isobutan (C₄H₁₀, verzweigt).
 
-**Klassifikation von C-Atomen (prüfungsrelevant):** Ein **sekundäres C-Atom** ist an **zwei weitere C-Atome** gebunden (nicht „an Position 2“, nicht „trägt 2 OH-Gruppen“, nicht „2 NH₂-Gruppen“). Primäres C: an 1 C gebunden; sekundäres C: an 2 C-Atome gebunden; tertiäres C: an 3 C-Atome gebunden.
+**Klassifikation von C-Atomen (prüfungsrelevant):** Ein **sekundäres C-Atom** ist an **zwei weitere C-Atome** gebunden (nicht „an Position 2”, nicht „trägt 2 OH-Gruppen”, nicht „2 NH₂-Gruppen”). Primäres C: an 1 C gebunden; sekundäres C: an 2 C-Atome gebunden; tertiäres C: an 3 C-Atome gebunden.
 
 **Konstitutionsisomerie**: Ab Butan (C₄H₁₀) existieren Konstitutionsisomere: n-Butan (linear) und Isobutan (verzweigt). Die Zahl der Isomere steigt stark: C₅ hat 3, C₆ hat 5, C₁₀ hat 75 Isomere.
 
@@ -100,7 +185,7 @@ In der homologen Reihe der Alkane gilt: Je länger die Kette, desto größer die
 
 ## Klinischer Bezug
 
-Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform CHCl₃, Diethylether). Ethanol (ein alkoholischer KW-Abkömmling) wird in der Leber zweistufig abgebaut: Ethanol →[ADH] Acetaldehyd (toxisch!) →[ALDH] Essigsäure → Acetyl-CoA. Disulfiram (Antabus) hemmt ALDH → Acetaldehydakkumulation → Aversionstherapie bei Alkoholismus. Kohlenwasserstoffe in der Atemluft (z.B. Ethan, Pentan) gelten als Biomarker für Lipidperoxidation und oxidativen Stress. **Benzol (Benzen)** ist ein **Aromat** (6 π-Elektronen, Hückel-Regel), **kein Alken**. Alkene haben lokalisierte C=C-Doppelbindungen; Benzol hat delokalisierte π-Elektronen und gehört **nicht** zu den Alkenen. MedAT-Falle: „Welche Verbindung gehört NICHT zu den Alkenen?“ → **Benzen (Benzol)**. Benzol ist krebserregend (akute myeloische Leukämie bei chronischer Exposition). **Methan (CH₄)** als Treibhausgas: 80× stärkerer Treibhauseffekt als CO₂ (auf 20 Jahre), entsteht bei anaerober Zersetzung. **Halogenkohlenwasserstoffe**: Chloroform (CHCl₃, historisches Narkotikum, hepatotoxisch), Tetrachlorkohlenstoff (CCl₄, lebertoxisch → radikalische Metabolisierung in Leber). **FCKW** (Fluorchlorkohlenwasserstoffe): zerstören Ozonschicht durch Freisetzung von Cl-Radikalen in der Stratosphäre (Montreal-Protokoll 1987).
+Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform CHCl₃, Diethylether). Ethanol (ein alkoholischer KW-Abkömmling) wird in der Leber zweistufig abgebaut: Ethanol →[ADH] Acetaldehyd (toxisch!) →[ALDH] Essigsäure → Acetyl-CoA. Disulfiram (Antabus) hemmt ALDH → Acetaldehydakkumulation → Aversionstherapie bei Alkoholismus. Kohlenwasserstoffe in der Atemluft (z.B. Ethan, Pentan) gelten als Biomarker für Lipidperoxidation und oxidativen Stress. **Benzol (Benzen)** ist ein **Aromat** (6 π-Elektronen, Hückel-Regel), **kein Alken**. Alkene haben lokalisierte C=C-Doppelbindungen; Benzol hat delokalisierte π-Elektronen und gehört **nicht** zu den Alkenen. MedAT-Falle: „Welche Verbindung gehört NICHT zu den Alkenen?” → **Benzen (Benzol)**. Benzol ist krebserregend (akute myeloische Leukämie bei chronischer Exposition). **Methan (CH₄)** als Treibhausgas: 80× stärkerer Treibhauseffekt als CO₂ (auf 20 Jahre), entsteht bei anaerober Zersetzung. **Halogenkohlenwasserstoffe**: Chloroform (CHCl₃, historisches Narkotikum, hepatotoxisch), Tetrachlorkohlenstoff (CCl₄, lebertoxisch → radikalische Metabolisierung in Leber). **FCKW** (Fluorchlorkohlenwasserstoffe): zerstören Ozonschicht durch Freisetzung von Cl-Radikalen in der Stratosphäre (Montreal-Protokoll 1987).
 
 > **Merke:** Ethanol →[ADH] Acetaldehyd (Kater!) →[ALDH] Acetat. Disulfiram hemmt ALDH. Benzol → AML. FCKW → Ozonabbau.
 
@@ -340,6 +425,87 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
       id: "ch-12-02",
       title: "Isomerie und Stereochemie",
       content: `## Einleitung
+
+Deine linke und deine rechte Hand sehen gleich aus -- aber du kannst sie nicht deckungsgleich aufeinanderlegen. Genau das passiert auch bei manchen Molekuelen: Sie haben die gleiche Formel, aber ihre Atome sind raeumlich anders angeordnet. Das nennt man **Isomerie**. Im schlimmsten Fall wirkt die eine Form eines Medikaments heilend, die andere schaedlich -- wie beim Contergan-Skandal.
+
+**In diesem Kapitel lernst du:**
+- was Konstitutionsisomere und Stereoisomere sind
+- wann ein Molekuel ein Spiegelbild hat, das nicht deckungsgleich ist (Chiralitaet)
+- was ein Racemat ist und warum es optisch inaktiv ist
+- warum Spiegelbildformen bei Medikamenten eine grosse Rolle spielen
+
+---
+
+## Konstitutionsisomere
+
+{{DIAGRAM:functional-groups}}
+
+Gleiche Formel, aber die Atome sind anders verbunden. Beispiel: n-Butan (gerade Kette) und Isobutan (verzweigt) -- beide C4H10, aber verschiedene Siedepunkte.
+
+Drei Untertypen:
+- **Skelettisomere:** anderes Geruest (n-Butan vs. Isobutan)
+- **Stellungsisomere:** gleiche Gruppe, andere Position (1-Propanol vs. 2-Propanol)
+- **Funktionsisomere:** andere Stoffklasse (Ethanol vs. Dimethylether, beide C2H6O)
+
+---
+
+## Stereoisomere -- gleiche Verbindung, anderer Raum
+
+Hier sind die Atome gleich verbunden, aber raeumlich anders angeordnet.
+
+### cis/trans-Isomerie
+
+An einer C=C-Doppelbindung kann man nicht drehen. Sitzen gleiche Gruppen auf der gleichen Seite, heisst es **cis**. Auf gegenueberliegenden Seiten heisst es **trans**.
+
+### Chiralitaet -- das Spiegelbild-Problem
+
+Traegt ein C-Atom vier verschiedene Gruppen, dann gibt es zwei Spiegelbilder, die nicht deckungsgleich sind. Diese heissen **Enantiomere**. Man bestimmt die Anordnung mit den R/S-Regeln (im Uhrzeigersinn = R, gegen den Uhrzeigersinn = S).
+
+{{DIAGRAM:covalent-bond}}
+
+Enantiomere haben dieselben Siedepunkte und Loeslichkeiten. Aber sie drehen Licht in entgegengesetzte Richtungen und wirken im Koerper verschieden -- weil Enzyme selbst "haendig" (chiral) sind.
+
+---
+
+## Racemat
+
+Ein **Racemat** ist ein 1:1-Gemisch beider Spiegelbildformen. Die Lichtdrehungen heben sich auf -- das Gemisch ist optisch inaktiv.
+
+> **Merke:** Vier verschiedene Gruppen am C = chirales Zentrum. Enantiomere sind Spiegelbilder mit gleichen physikalischen Eigenschaften, aber verschiedener biologischer Wirkung. Ein Racemat (1:1-Gemisch) ist optisch inaktiv.
+
+---
+
+## Warum Isomerie bei Medikamenten wichtig ist
+
+Beim Medikament **Contergan** (Thalidomid) wirkt die R-Form beruhigend, die S-Form verursacht Fehlbildungen. Im Koerper wandeln sich beide Formen ineinander um -- darum half es nicht, nur die "gute" Form zu geben.
+
+Auch bei **Ibuprofen** ist nur die S-Form wirksam. Und bei Parkinson-Medikamenten (L-Dopa) wirkt nur die L-Form.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Chirales C = vier verschiedene Gruppen
+- Enantiomere: gleiche physikalische Eigenschaften, verschiedene biologische Wirkung
+- Racemat = 1:1-Gemisch, optisch inaktiv
+- Thalidomid: R = beruhigend, S = schaedlich
+
+**Typische Fallen:**
+- R/S sagt nichts ueber die Drehrichtung des Lichts -- das muss man messen
+- Enantiomere haben gleiche Siedepunkte; Diastereomere haben verschiedene
+- cis/trans entsteht an Doppelbindungen (keine Drehung moeglich)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Konstitutionsisomere**: gleiche Formel, andere Verknuepfung (n-Butan vs. Isobutan)
+- **Stereoisomere**: gleiche Verknuepfung, andere raeumliche Anordnung
+- **Chiralitaet**: C mit 4 verschiedenen Gruppen = Spiegelbilder (Enantiomere)
+- **Racemat**: 1:1-Gemisch = optisch inaktiv
+- **Klinisch**: Contergan (R beruhigend, S schaedlich), Ibuprofen (nur S wirksam)`,
+      contentExtended: `## Einleitung
 
 Das Schlafmittel Thalidomid (Contergan) wurde in den 1960er-Jahren zur Katastrophe: Das eine Spiegelbild-Isomer wirkt beruhigend, das andere verursacht schwere Missbildungen. Diese Tragödie zeigt, wie entscheidend die räumliche Anordnung von Atomen in einem Molekül sein kann. **Isomerie** — gleiche Summenformel, aber verschiedene Struktur — ist kein abstraktes Konzept, sondern bestimmt, ob ein Arzneistoff heilt oder schadet. Von der Konstitutionsisomerie über Chiralität bis hin zur R/S-Nomenklatur bildet dieses Kapitel das Fundament der Stereochemie.
 
@@ -662,6 +828,92 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       id: "ch-12-03",
       title: "Funktionelle Gruppen der Organik",
       content: `## Einleitung
+
+Warum riecht Essig sauer, warum klebt Seife und warum macht Nagellackentferner Fett weg? All das haengt mit **funktionellen Gruppen** zusammen -- das sind kleine Atomgruppen an Kohlenstoffketten, die bestimmen, wie ein Stoff reagiert. Ob Alkohol, Saeure, Ester oder Amin -- die funktionelle Gruppe entscheidet ueber Geruch, Loeslichkeit und Reaktivitaet.
+
+**In diesem Kapitel lernst du:**
+- die wichtigsten funktionellen Gruppen und ihre Eigenschaften
+- die Oxidationsreihe: Alkohol --> Aldehyd --> Carbonsaeure
+- was Veresterung ist und warum Seife durch Fettspaltung entsteht
+- warum Amine basisch sind und was die Peptidbindung in Proteinen ist
+
+---
+
+## Alkohole (-OH)
+
+{{DIAGRAM:functional-groups}}
+
+Die OH-Gruppe macht Molekuele polar und wasserloeslich (kleine Alkohole). Methanol ist giftig (wird zu Formaldehyd abgebaut --> Erblindung). Ethanol ist Trinkalkohol. Glycerin steckt in Fetten und Cremes.
+
+**Oxidationsreihe -- zentral fuer die Pruefung:**
+- Primaerer Alkohol --> Aldehyd --> Carbonsaeure
+- Sekundaerer Alkohol --> Keton (Sackgasse)
+- Tertiaerer Alkohol --> keine Oxidation
+
+Beispiel: Ethanol wird in der Leber erst zu Acetaldehyd (Kater!), dann zu Essigsaeure abgebaut.
+
+---
+
+## Aldehyde und Ketone (C=O)
+
+Ein **Aldehyd** hat die C=O-Gruppe am Kettenende (-CHO). Formaldehyd konserviert, Acetaldehyd entsteht beim Alkoholabbau. Aldehyde reagieren positiv mit der Fehling-Probe (orange Loesung wird ziegelrot).
+
+Ein **Keton** hat die C=O-Gruppe mitten in der Kette. Aceton ist der bekannteste Vertreter -- du riechst es bei Nagellackentferner. Ketone reagieren NICHT mit Fehling.
+
+---
+
+## Carbonsaeuren (-COOH)
+
+{{DIAGRAM:ph-scale}}
+
+Carbonsaeuren geben ein Proton ab -- sie sind schwache Saeuren. Alltagsbeispiele: Essigsaeure (Essig), Ameisensaeure (Ameisenbiss), Zitronensaeure (Zitrone), Milchsaeure (Muskelkater nach Sport).
+
+---
+
+## Ester (-COO-)
+
+{{DIAGRAM:covalent-bond}}
+
+Carbonsaeure + Alkohol --> Ester + Wasser. Das heisst **Veresterung**. Fette (Triglyceride) sind Ester aus Glycerin und drei Fettsaeuren. Aspirin ist auch ein Ester. Seife entsteht, wenn man Fett mit Lauge spaltet (**Verseifung**).
+
+---
+
+## Amine (-NH2)
+
+Amine sind basisch, weil der Stickstoff ein freies Elektronenpaar hat und Protonen aufnimmt. Wichtige Amine im Koerper: Dopamin, Serotonin, Histamin (Allergien), GABA (Beruhigung im Gehirn).
+
+Die **Peptidbindung** (-CO-NH-) ist eine spezielle Amid-Bindung und haelt Proteine zusammen.
+
+> **Merke:** Die Oxidationsreihe ist das Wichtigste: primaerer Alkohol --> Aldehyd --> Carbonsaeure. Sekundaerer Alkohol --> Keton (Endstation). Fehling-Probe: nur Aldehyde positiv, Ketone nicht. Veresterung: Saeure + Alkohol = Ester + Wasser. Amine sind basisch (freies Elektronenpaar am N).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Oxidationsreihe: primaer --> Aldehyd --> Carbonsaeure
+- Veresterung: Carbonsaeure + Alkohol = Ester + Wasser
+- Amine sind basisch (Elektronenpaar am N)
+- Fehling-Probe: nur Aldehyde positiv
+
+**Typische Fallen:**
+- Methanol --> Formaldehyd (giftig!), Ethanol --> Acetaldehyd -- nicht verwechseln
+- Verseifung (mit Lauge, nicht umkehrbar) ist nicht dasselbe wie saure Ester-Spaltung (umkehrbar)
+- Aldehyde reagieren mit Fehling, Ketone nicht
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+| Gruppe | Stoffklasse | Beispiel |
+|---|---|---|
+| -OH | Alkohol | Ethanol |
+| -CHO | Aldehyd | Acetaldehyd |
+| C=O (Kette) | Keton | Aceton |
+| -COOH | Carbonsaeure | Essigsaeure |
+| -COO- | Ester | Fette |
+| -NH2 | Amin | Dopamin |`,
+      contentExtended: `## Einleitung
 
 Ethanol macht betrunken, Methanol macht blind — obwohl sich die beiden Alkohole nur um eine CH₂-Gruppe unterscheiden. Der entscheidende Unterschied liegt im Abbauprodukt: Ethanol wird zu Acetaldehyd oxidiert, Methanol zu giftigem Formaldehyd. Dieses Beispiel zeigt, wie **funktionelle Gruppen** die Eigenschaften und Reaktivität eines Moleküls bestimmen. Von der Hydroxylgruppe des Alkohols über die Carbonylgruppe der Aldehyde und Ketone bis zur Peptidbindung in Proteinen — funktionelle Gruppen sind das Alphabet der organischen Chemie.
 
@@ -1010,6 +1262,85 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Einleitung
 
+Benzol ist ein besonderer Ringkoerper: Obwohl es Doppelbindungen enthaelt, reagiert es ganz anders als Alkene. Es ist extrem stabil, weil die Elektronen ueber den ganzen Ring verteilt sind. Solche Ringe heissen **Aromaten** und kommen ueberall in der Biologie vor -- in DNA-Basen, in Aminosaeuren und sogar in Vitaminen.
+
+**In diesem Kapitel lernst du:**
+- was Aromatizitaet ist und warum Benzol so stabil ist (Hueckel-Regel: 4n+2 Elektronen)
+- warum Aromaten durch Austausch (Substitution) reagieren statt durch Anlagerung (Addition)
+- den Unterschied zwischen Purinen (Doppelring: A, G) und Pyrimidinen (Einzelring: C, T, U)
+- wie aus Aminosaeuren Botenstoffe wie Dopamin und Serotonin entstehen
+
+---
+
+## Benzol und Aromatizitaet
+
+{{DIAGRAM:covalent-bond}}
+
+Benzol (C6H6) ist ein flacher Sechsring mit 6 Elektronen, die ueber den ganzen Ring verteilt sind. Deshalb sind alle C-C-Bindungen gleich lang -- weder Einfach- noch Doppelbindung.
+
+**Hueckel-Regel:** Ein Ring ist aromatisch, wenn er 4n+2 Elektronen hat (n = 0, 1, 2, ...). Benzol hat 6 Elektronen (n=1) -- aromatisch. Ein Ring mit 8 Elektronen (wie Cyclooctatetraen) ist NICHT aromatisch.
+
+**Aromaten reagieren durch Austausch (Substitution), nicht durch Anlagerung (Addition).** Warum? Addition wuerde die stabilen verteilten Elektronen zerstoeren. Stattdessen wird ein H durch eine andere Gruppe ersetzt -- der Ring bleibt stabil.
+
+---
+
+## DNA-Basen sind Aromaten
+
+{{DIAGRAM:functional-groups}}
+
+Die Basen der DNA und RNA sind aromatische Ringe mit Stickstoff:
+- **Purine** (Doppelring): Adenin (A), Guanin (G)
+- **Pyrimidine** (Einzelring): Cytosin (C), Thymin (T, nur DNA), Uracil (U, nur RNA)
+
+Merkhilfe: Purine = groesser (2 Ringe), Pyrimidine = kleiner (1 Ring).
+
+In der DNA paaren sich: A mit T (2 Wasserstoffbruecken), G mit C (3 Wasserstoffbruecken). Das ist die Chargaff-Regel.
+
+---
+
+## Aminosaeuren -- Bausteine der Proteine
+
+Aminosaeuren tragen am zentralen C-Atom vier Gruppen: -NH2, -COOH, -H und eine variable Seitenkette (-R). Es gibt 20 verschiedene, 9 davon sind essenziell (muessen wir essen). In Loesung liegen sie als Zwitterion vor: -NH3+ und -COO-.
+
+Aus bestimmten Aminosaeuren entstehen Botenstoffe:
+- Tyrosin --> Dopamin --> Noradrenalin --> Adrenalin
+- Tryptophan --> Serotonin (Stimmung) und Melatonin (Schlaf)
+- Histidin --> Histamin (Allergien)
+
+---
+
+## Gicht -- zu viel Harnsaeure
+
+Purine (A, G) werden im Koerper zu Harnsaeure abgebaut. Steigt der Harnsaeurespiegel zu hoch, bilden sich Kristalle in den Gelenken -- das ist **Gicht**. Therapie: Allopurinol hemmt das Enzym Xanthinoxidase und senkt so die Harnsaeure.
+
+> **Merke:** Aromatisch = flacher Ring mit 4n+2 Elektronen (Benzol: 6). Aromaten reagieren durch Substitution, nicht Addition. Purine = Doppelring (A, G), Pyrimidine = Einzelring (C, T, U). Gicht = zu viel Harnsaeure in den Gelenken. Allopurinol hemmt Xanthinoxidase.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Hueckel-Regel: 4n+2 = aromatisch (Benzol: 6 Elektronen, n=1)
+- Benzol reagiert durch Substitution (nicht Addition)
+- Purine (A, G) = Doppelring; Pyrimidine (C, T, U) = Einzelring
+- Gicht: Harnsaeure-Kristalle; Allopurinol hemmt Xanthinoxidase
+
+**Typische Fallen:**
+- 8 Elektronen (Cyclooctatetraen) = nicht aromatisch
+- Purine haben den Doppelring, Pyrimidine den Einzelring -- nicht umgekehrt!
+- Allopurinol senkt die Bildung, loest aber keine bestehenden Kristalle
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Benzol**: 6 Elektronen, flacher Ring, aromatisch, reagiert durch Substitution
+- **Purine**: Adenin, Guanin (Doppelring); **Pyrimidine**: Cytosin, Thymin, Uracil (Einzelring)
+- **Aminosaeuren**: 20 Stueck, 9 essenziell, Zwitterion in Loesung
+- **Botenstoffe**: Tyrosin --> Dopamin/Adrenalin; Tryptophan --> Serotonin
+- **Gicht**: Harnsaeure-Ablagerung, Allopurinol hemmt Xanthinoxidase`,
+      contentExtended: `## Einleitung
+
 Benzol riecht süßlich, ist krebserregend — und verblüffend stabil. Obwohl es drei Doppelbindungen enthält, lässt es sich nicht wie ein Alken bromieren. Diese ungewöhnliche Stabilität heißt **Aromatizität** und wird durch die Hückel-Regel erklärt. Aromatische Ringsysteme sind allgegenwärtig in der Biologie: Die DNA-Basen Adenin, Guanin, Cytosin und Thymin sind alle Aromaten. Aminosäuren wie Phenylalanin und Tryptophan tragen aromatische Seitenketten. Und der Abbau von Purinen zu Harnsäure kann bei Gicht schmerzhafte Kristalle in den Gelenken bilden.
 
 **In diesem Kapitel lernst du:**
@@ -1354,6 +1685,85 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
       title: "Aminosäuren und Proteine",
       content: `## Einleitung
 
+Proteine sind die Alleskoenner in deinem Koerper: Sie beschleunigen Reaktionen (Enzyme), transportieren Sauerstoff (Haemoglobin), bilden Haare und Naegel (Keratin) und wehren Krankheitserreger ab (Antikoerper). Alle Proteine bestehen aus **Aminosaeuren** -- wie Perlen auf einer Kette. Schon eine einzige falsche Perle kann eine Krankheit ausloesen.
+
+**In diesem Kapitel lernst du:**
+- wie Aminosaeuren aufgebaut sind und warum sie in Wasser als Zwitterionen vorliegen
+- die vier Ebenen der Proteinstruktur und was sie zusammenhaelt
+- was Denaturierung bedeutet (wenn du ein Ei kochst, passiert genau das)
+- warum ein einziger Fehler im Bauplan Sichelzellanaemie verursacht
+
+---
+
+## Aminosaeuren -- der Grundbaustein
+
+{{DIAGRAM:functional-groups}}
+
+Jede Aminosaeure hat am zentralen C-Atom vier Gruppen: -NH2 (basisch), -COOH (sauer), -H und eine variable Seitenkette (-R). Es gibt 20 verschiedene Aminosaeuren. 9 davon sind essenziell -- du musst sie essen, dein Koerper kann sie nicht selber bauen.
+
+In Wasser liegen sie als **Zwitterion** vor: -NH3+ und -COO- gleichzeitig. Am **isoelektrischen Punkt (pI)** ist die Nettoladung null.
+
+{{DIAGRAM:ph-scale}}
+
+---
+
+## Peptidbindung -- das Rueckgrat der Proteine
+
+Wenn zwei Aminosaeuren sich verbinden, spalten sie Wasser ab. Die entstehende Bindung heisst **Peptidbindung** (-CO-NH-). Sie ist steif und flach -- man kann nicht frei um sie drehen.
+
+---
+
+## Vier Ebenen der Proteinstruktur
+
+- **Primaer:** Die Reihenfolge der Aminosaeuren (wie Buchstaben in einem Wort)
+- **Sekundaer:** Lokale Muster durch Wasserstoffbruecken: Helix (Spirale) oder Faltblatt (Zickzack)
+- **Tertiaer:** Die gesamte 3D-Form, gehalten durch verschiedene Kraefte (auch Disulfidbruecken zwischen Cysteinen)
+- **Quartaer:** Mehrere Ketten zusammen, z. B. Haemoglobin (4 Ketten)
+
+---
+
+## Denaturierung -- wenn Proteine kaputtgehen
+
+{{DIAGRAM:enzyme-substrate}}
+
+Beim Kochen eines Eies wird das Eiweiss fest -- das ist **Denaturierung**. Die Faltung (Sekundaer- bis Quartaerstruktur) geht verloren, aber die Aminosaeurekette bleibt intakt. Ausloser: Hitze, extreme Saeure/Base, Alkohol.
+
+Wichtig: Denaturierung bricht keine Peptidbindungen -- das waere Hydrolyse (Spaltung).
+
+---
+
+## Sichelzellanaemie -- ein einziger Fehler
+
+Bei der Sichelzellanaemie ist eine einzige Aminosaeure im Haemoglobin falsch: Glutamat wird durch Valin ersetzt. Das veraendert die Form der roten Blutkoerperchen -- sie werden sichelfoermig und verstopfen Blutgefaesse.
+
+> **Merke:** Aminosaeuren haben -NH2 + -COOH + Seitenkette. In Wasser: Zwitterion. 20 Stueck, 9 essenziell. Proteinstruktur: Primaer (Sequenz) --> Sekundaer (Helix/Faltblatt) --> Tertiaer (3D) --> Quartaer (mehrere Ketten). Denaturierung = Verlust der Faltung, Kette bleibt. Troponin = Herzinfarkt-Marker.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Vier Proteinstrukturebenen und was sie stabilisiert
+- Denaturierung: Faltung weg, Primaerstruktur bleibt
+- Disulfidbruecken (Cystein-Cystein) gehoeren zur Tertiaerstruktur
+- Troponin = Goldstandard Herzinfarkt
+
+**Typische Fallen:**
+- Denaturierung bricht keine Peptidbindungen (das waere Hydrolyse)
+- Disulfidbruecken sind kovalente Bindungen, keine Wasserstoffbruecken
+- Sekundaerstruktur: H-Bruecken im Rueckgrat; Tertiaerstruktur: Seitenketten-Wechselwirkungen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Aminosaeuren**: 20 Stueck, Zwitterion in Loesung, 9 essenziell
+- **Peptidbindung**: steif, flach, entsteht durch Wasserabspaltung
+- **Proteinstruktur**: Primaer --> Sekundaer --> Tertiaer --> Quartaer
+- **Denaturierung**: Faltung geht verloren (Ei kochen), Kette bleibt
+- **Sichelzellanaemie**: ein Aminosaeurenaustausch veraendert alles`,
+      contentExtended: `## Einleitung
+
 Ein einziger Aminosäureaustausch — Glutamat zu Valin an Position 6 der beta-Kette — verwandelt normales Hämoglobin in Sichelzell-Hämoglobin und verursacht eine schwere Erbkrankheit. Dieses Beispiel zeigt eindrucksvoll, wie die **Proteinstruktur** von der exakten Aminosäuresequenz abhängt. Proteine sind die vielseitigsten Makromoleküle des Lebens: Sie katalysieren Reaktionen (Enzyme), transportieren Sauerstoff (Hämoglobin), bilden Strukturen (Kollagen) und übertragen Signale (Rezeptoren). Ihr Verständnis beginnt bei den 20 proteinogenen Aminosäuren und den vier Strukturebenen.
 
 **In diesem Kapitel lernst du:**
@@ -1691,6 +2101,96 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       content: `## Einleitung
 
+Kartoffeln und Holz bestehen beide aus Glucose -- aber Kartoffelstaerke kannst du verdauen, Holz nicht. Der Unterschied? Eine winzige Aenderung in der Verknuepfung (alpha vs. beta). **Kohlenhydrate** sind dein wichtigster Energielieferant: Der Zucker in deinem Blut ist Glucose, Brot liefert Staerke, und Milchzucker (Laktose) macht manchen Leuten Bauchschmerzen.
+
+**In diesem Kapitel lernst du:**
+- was Aldosen und Ketosen sind und worin sich alpha- und beta-Anomere unterscheiden
+- aus welchen Bausteinen die drei wichtigsten Disaccharide bestehen
+- warum du Staerke verdauen kannst, Cellulose aber nicht
+- was HbA1c ist und warum der Arzt diesen Wert bei Diabetes misst
+
+---
+
+## Monosaccharide -- die Grundbausteine
+
+{{DIAGRAM:functional-groups}}
+
+Monosaccharide sind die einfachsten Zucker. Man teilt sie ein nach Laenge und nach ihrer funktionellen Gruppe:
+
+- **Aldosen** haben eine Aldehydgruppe (z. B. Glucose)
+- **Ketosen** haben eine Ketogruppe (z. B. Fructose -- der suesseste natuerliche Zucker)
+- **Hexosen** (6 C-Atome): Glucose, Fructose, Galactose
+- **Pentosen** (5 C-Atome): Ribose (in RNA), Desoxyribose (in DNA)
+
+In Wasser bilden Hexosen einen Ring. Dabei entsteht ein neues Zentrum am C1:
+- **alpha-Anomer**: OH am C1 zeigt nach unten (in der Haworth-Zeichnung)
+- **beta-Anomer**: OH am C1 zeigt nach oben
+
+Stell dir das so vor: alpha = "ab" (nach unten), beta = "bei" (nach oben).
+
+---
+
+## Disaccharide -- zwei Bausteine verbunden
+
+{{DIAGRAM:covalent-bond}}
+
+Zwei Einfachzucker verbinden sich unter Wasserabspaltung durch eine **glykosidische Bindung**.
+
+| Disaccharid | Bausteine | Bindung | Reduzierend? |
+|---|---|---|---|
+| Maltose (Malzbier) | Glucose + Glucose | alpha-1,4 | Ja |
+| Saccharose (Haushaltszucker) | Glucose + Fructose | alpha-1,beta-2 | Nein |
+| Laktose (Milchzucker) | Galactose + Glucose | beta-1,4 | Ja |
+
+**Reduzierend** heisst: Ein Ende des Zuckers kann in der Fehling-Probe Cu2+ zu Cu2O reduzieren (ziegelroter Niederschlag). Saccharose ist **nicht reduzierend**, weil beide aktiven Enden an der Bindung beteiligt sind.
+
+---
+
+## Polysaccharide -- lange Ketten
+
+- **Staerke** (Pflanzen): alpha-1,4-Bindungen. Dein Speichel (Amylase) kann sie spalten. Zwei Anteile: Amylose (linear) und Amylopektin (verzweigt mit alpha-1,6-Verzweigungen)
+- **Glykogen** (Tiere): Wie Amylopektin, aber noch staerker verzweigt. Gespeichert in Leber (~100 g) und Muskeln (~400 g). Schnell verfuegbare Energie
+- **Cellulose** (Holz, Baumwolle): beta-1,4-Bindungen. Dein Koerper hat kein Enzym dafuer -- deshalb ist Cellulose ein Ballaststoff
+
+> **Merke:** Staerke (alpha-1,4) = verdaulich. Cellulose (beta-1,4) = unverdaulich. Der einzige Unterschied: alpha vs. beta!
+
+---
+
+## Laktoseintoleranz und HbA1c
+
+**Laktoseintoleranz**: Das Enzym Laktase fehlt oder ist zu wenig aktiv. Milchzucker (Laktose) gelangt unverdaut in den Dickdarm. Dort vergaeren Bakterien ihn -- es entstehen Gase (Blaehungen) und Wasser wird in den Darm gezogen (Durchfall). Betrifft ca. 75 % der Weltbevoelkerung.
+
+**HbA1c**: Wenn dauerhaft zu viel Zucker im Blut ist (Diabetes), lagert sich Glucose an Haemoglobin an. Das Ergebnis heisst HbA1c. Weil rote Blutkoerperchen ca. 120 Tage leben, zeigt HbA1c den Blutzucker der letzten 8--12 Wochen. Zielwert bei Diabetes Typ 2: unter 7 %.
+
+> **Merke:** HbA1c = Langzeit-Blutzucker (8--12 Wochen). Saccharose = einziges nicht reduzierendes haeufiges Disaccharid.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- alpha- vs. beta-Anomere (OH-Position am C1 in Haworth)
+- Drei Disaccharide: Maltose, Saccharose, Laktose -- Bausteine und Bindungstyp
+- Staerke vs. Cellulose: alpha-1,4 vs. beta-1,4
+- HbA1c als Langzeitmarker (8--12 Wochen)
+
+**Typische Fallen:**
+- Laktoseintoleranz (harmlos, Laktasemangel) ist nicht dasselbe wie Galaktosaemie (gefaehrlich, Enzymdefekt)
+- Amylose (linear, macht Iod-Loesung blau) und Amylopektin (verzweigt) sind nicht dasselbe
+- Glykierung (nicht-enzymatisch, HbA1c) und Glykosylierung (enzymatisch) sind verschiedene Prozesse
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Aldosen** (Aldehydgruppe, z. B. Glucose) vs. **Ketosen** (Ketogruppe, z. B. Fructose)
+- **alpha-Anomer**: OH unten; **beta-Anomer**: OH oben (Haworth)
+- **Disaccharide**: Maltose (Glc+Glc), Saccharose (Glc+Fru, nicht reduzierend), Laktose (Gal+Glc)
+- **Polysaccharide**: Staerke (alpha, verdaulich), Glykogen (alpha, stark verzweigt), Cellulose (beta, unverdaulich)
+- **Laktoseintoleranz**: Laktasemangel, Blaehungen, Durchfall
+- **HbA1c**: Glykiertes Haemoglobin, Langzeitmarker 8--12 Wochen`,
+      contentExtended: `## Einleitung
+
 Kartoffeln und Holz bestehen beide aus Glucose-Einheiten — aber Kartoffelstärke kannst du verdauen, Holzcellulose nicht. Der einzige Unterschied: die Verknüpfung der Zuckerbausteine (alpha vs. beta). Diese scheinbar kleine chemische Nuance hat enorme biologische Konsequenzen. **Kohlenhydrate** sind die wichtigste Energiequelle des Körpers und gleichzeitig Strukturmaterial, Erkennungssignale auf Zelloberflächen und Bestandteile der DNA. Vom Blutzucker über den Langzeitmarker HbA1c bis zur Laktoseintoleranz — Kohlenhydratchemie ist Alltagsmedizin.
 
 **In diesem Kapitel lernst du:**
@@ -2004,6 +2504,95 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
         "Trans-Fettsäuren",
       ],
       content: `## Einleitung
+
+Warum ist Olivenoel fluessig, aber Butter fest? Warum sind Trans-Fette aus der Friteuse so ungesund? Und woraus besteht eigentlich jede Zellmembran in deinem Koerper? Die Antwort: **Lipide**. Das sind wasserunloesliche Molekuele, die viel mehr koennen als nur Energie speichern. Phospholipide bilden die Huelle jeder Zelle, Cholesterin ist der Rohstoff fuer Hormone, und Fettsaeuren liefern doppelt so viel Energie wie Zucker.
+
+**In diesem Kapitel lernst du:**
+- den Unterschied zwischen gesaettigten und ungesaettigten Fettsaeuren
+- warum Phospholipide automatisch Membranen bilden
+- wofuer Cholesterin gut ist und was Statine machen
+- was Ketonkoerper sind und warum sie bei Diabetes gefaehrlich werden koennen
+
+---
+
+{{DIAGRAM:functional-groups}}
+
+{{DIAGRAM:cell-membrane}}
+
+## Fettsaeuren -- gesaettigt vs. ungesaettigt
+
+Fettsaeuren sind lange Kohlenstoffketten mit einer Saeuregruppe (-COOH) am Ende.
+
+- **Gesaettigte Fettsaeuren**: Keine Doppelbindung. Die Ketten liegen gerade und eng nebeneinander -- deshalb ist Butter bei Raumtemperatur fest. Beispiel: Palmitinsaeure (C16)
+- **Ungesaettigte Fettsaeuren**: Haben mindestens eine Doppelbindung. In der **cis-Form** entsteht ein Knick von ca. 30 Grad -- die Ketten koennen sich nicht eng packen. Deshalb ist Olivenoel fluessig. Beispiel: Oelsaeure (C18, eine Doppelbindung)
+- **Trans-Fettsaeuren**: Entstehen bei industrieller Fethaertung. Trotz Doppelbindung sind sie gestreckt wie gesaettigte FS. Sie erhoehen das "schlechte" LDL-Cholesterin und senken das "gute" HDL -- sehr ungesund
+
+**Essentielle Fettsaeuren** kann dein Koerper nicht selbst herstellen: Linolsaeure (Omega-6) und alpha-Linolensaeure (Omega-3). Du musst sie ueber die Nahrung aufnehmen (Nuesse, Fisch, Pflanzenoel).
+
+**Energie**: Fett liefert 38 kJ/g -- mehr als doppelt so viel wie Kohlenhydrate (17 kJ/g). Deshalb ist Fettgewebe ein so effektiver Energiespeicher.
+
+---
+
+## Triglyceride und Phospholipide
+
+**Triglyceride** = Glycerin + 3 Fettsaeuren (durch Esterbindung). Sie sind der Hauptenergiespeicher im Fettgewebe. Ein durchschnittlicher Mensch traegt ca. 15 kg Fett -- genug Energie fuer 40 Tage Fasten.
+
+**Phospholipide** = Glycerin + 2 Fettsaeuren + 1 Phosphatgruppe mit polarem Kopf. Der Kopf ist wasserliebend, die Schwanzteile wasserabstossend. In Wasser bilden sie automatisch eine **Doppelschicht** -- das ist die Grundstruktur jeder Zellmembran.
+
+Stell dir eine Seifenblase vor: Die Seifenmolekuele ordnen sich von selbst an, weil ein Ende Wasser mag und das andere nicht. Genau so funktionieren Phospholipide.
+
+---
+
+## Cholesterin und Steroide
+
+**Cholesterin** ist kein Gift -- dein Koerper braucht es:
+- Als Baustein jeder Zellmembran (reguliert die Beweglichkeit)
+- Als Rohstoff fuer Gallensaeuren (verdauen Fett im Darm)
+- Als Vorstufe fuer Steroidhormone (Cortisol, Testosteron, Oestrogen)
+- Fuer Vitamin D (entsteht in der Haut durch Sonnenlicht aus Cholesterin)
+
+Transport im Blut: Fette sind wasserunloeslich und brauchen Transporter (Lipoproteine).
+- **LDL** ("schlechtes" Cholesterin): bringt Cholesterin zu den Geweben -- zu viel fuehrt zu Ablagerungen in den Gefaessen
+- **HDL** ("gutes" Cholesterin): bringt ueberschuessiges Cholesterin zurueck zur Leber
+
+**Statine** sind Medikamente, die die Cholesterin-Produktion in der Leber bremsen. Dadurch baut die Leber mehr LDL-Rezeptoren ein und der LDL-Spiegel im Blut sinkt.
+
+---
+
+## Ketonkoerper
+
+Wenn du fastest oder bei unkontrolliertem Diabetes, verbrennt der Koerper viel Fett. Dabei entsteht so viel Acetyl-CoA, dass die Leber daraus **Ketonkoerper** macht. In Massen ist das normal. Bei Typ-1-Diabetes ohne Insulintherapie kann es aber zur **Ketoazidose** kommen: Das Blut wird sauer (pH unter 7,3), der Atem riecht nach Aceton, die Atmung wird tief und schnell. Das ist lebensbedrohlich.
+
+> **Merke:** Gesaettigte FS = gerade, fest (Butter). Ungesaettigte FS = Knick, fluessig (Oel). Phospholipide bilden automatisch Membranen. LDL = "schlecht", HDL = "gut". Statine senken LDL. Ketoazidose bei Typ-1-Diabetes ist gefaehrlich.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Gesaettigte vs. ungesaettigte Fettsaeuren (Schmelzpunkt, cis/trans)
+- Phospholipide = amphipathisch, bilden Doppelschicht
+- LDL (atherogen) vs. HDL (protektiv)
+- Statine hemmen HMG-CoA-Reduktase
+- Energiedichte: Fett 38 kJ/g vs. Kohlenhydrate/Protein 17 kJ/g
+
+**Typische Fallen:**
+- cis-FS (fluessig, Knick) und trans-FS (fest, atherogen) nicht verwechseln
+- Ketoazidose (lebensbedrohlich) ist nicht dasselbe wie normales Fasten-Keton
+- Cholesterin ist nicht nur "schlecht" -- es ist Rohstoff fuer Hormone und Vitamin D
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Gesaettigte FS**: keine Doppelbindung, fest (Butter, Palmitinsaeure)
+- **Ungesaettigte FS**: cis-Doppelbindung, Knick, fluessig (Olivenoel, Oelsaeure)
+- **Essentielle FS**: Linolsaeure (Omega-6), alpha-Linolensaeure (Omega-3)
+- **Phospholipide**: polarer Kopf + unpolare Schwanzteile = Membran-Doppelschicht
+- **Cholesterin**: Membran, Hormone, Vitamin D, Gallensaeuren; LDL schlecht, HDL gut
+- **Statine**: hemmen Cholesterinproduktion, senken LDL
+- **Ketonkoerper**: Fasten/Diabetes; Ketoazidose = pH unter 7,3, Acetongeruch`,
+      contentExtended: `## Einleitung
 
 Warum ist Olivenöl flüssig, aber Butter fest? Warum verschreibt der Arzt Statine bei hohem Cholesterin? Und warum sind industrielle Trans-Fette so gefährlich? Die Antworten liegen in der Chemie der **Lipide**. Diese wasserunlöslichen Biomoleküle sind weit mehr als nur Energiespeicher: Phospholipide bilden die Grundstruktur jeder Zellmembran, Cholesterin ist der Vorläufer aller Steroidhormone und Gallensäuren, und Fettsäuren liefern mit 38 kJ/g mehr als doppelt so viel Energie wie Kohlenhydrate.
 
@@ -2326,6 +2915,116 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
         "Phosphodiesterbindung",
       ],
       content: `## Einleitung
+
+Wenn du einen COVID-Test machst, nutzt das Labor eine Methode namens PCR. Sie erkennt das Virus anhand seiner RNA -- also seines Erbguts. Um das zu verstehen, musst du wissen, wie **DNA und RNA** aufgebaut sind. Beide bestehen aus kleinen Bausteinen (Nukleotiden), die sich nach festen Regeln paaren: A mit T (in der DNA) oder A mit U (in der RNA), und G immer mit C. Diese einfache Paarungsregel ist die Grundlage der Vererbung -- und auch der Ansatzpunkt fuer Medikamente gegen Viren.
+
+**In diesem Kapitel lernst du:**
+- was Nukleotide sind und warum ATP die Energiewaehrung deiner Zellen ist
+- wie die Basenpaarung funktioniert und warum GC-reiche DNA stabiler ist
+- den Aufbau der DNA-Doppelhelix und die vier wichtigsten RNA-Typen
+- wie der COVID-PCR-Test funktioniert und wie antivirale Medikamente die Virus-DNA stoppen
+
+---
+
+{{DIAGRAM:dna-helix}}
+
+{{DIAGRAM:covalent-bond}}
+
+## Nukleotide -- die Bausteine
+
+Stell dir DNA und RNA wie eine Perlenkette vor. Jede Perle ist ein **Nukleotid**, das aus drei Teilen besteht:
+1. Einer **Base** (der "Buchstabe" des genetischen Codes)
+2. Einem **Zucker** (Desoxyribose bei DNA, Ribose bei RNA)
+3. Einer **Phosphatgruppe** (verbindet die Bausteine zur Kette)
+
+Ohne Phosphat heisst der Baustein **Nukleosid**. Mit Phosphat wird daraus ein **Nukleotid**. Und wenn drei Phosphatgruppen draufstecken, hast du **ATP** -- das universelle Energiemolekuel deiner Zellen. Bei jeder Muskelkontraktion, jedem Nervensignal wird ATP gespalten.
+
+---
+
+## Die vier Basen
+
+Es gibt zwei Gruppen:
+- **Purine** (grosser Doppelring): **Adenin (A)** und **Guanin (G)**
+- **Pyrimidine** (kleiner Einzelring): **Cytosin (C)**, **Thymin (T)** nur in DNA, **Uracil (U)** nur in RNA
+
+Eselsbruecke: Die laengeren Woerter (Purine) haben den groesseren Ring.
+
+---
+
+## Basenpaarung und Chargaff-Regeln
+
+In der DNA paaren sich die Basen nach festen Regeln:
+- **A mit T** -- verbunden durch 2 Wasserstoffbruecken
+- **G mit C** -- verbunden durch 3 Wasserstoffbruecken (deshalb stabiler!)
+
+Daraus folgt: In jeder DNA ist die Menge A = T und G = C. Je mehr GC-Paare, desto stabiler die DNA (mehr H-Bruecken).
+
+---
+
+## DNA-Doppelhelix
+
+Die DNA besteht aus zwei Straengen, die sich wie eine Wendeltreppe umeinander winden:
+- Die Straenge laufen **antiparallel** (einer 5 nach 3, der andere 3 nach 5)
+- Aussen: das Zucker-Phosphat-Geruest (negativ geladen)
+- Innen: die Basenpaare (wie Sprossen einer Leiter)
+
+---
+
+## RNA -- vier wichtige Typen
+
+RNA ist meist einzelstraengig und enthaelt Uracil statt Thymin:
+- **mRNA**: traegt die Bauanleitung vom Zellkern zum Ribosom
+- **tRNA**: bringt die passende Aminosaeure zum Ribosom (hat ein Anticodon)
+- **rRNA**: ist Hauptbestandteil des Ribosoms selbst
+- **miRNA**: reguliert, welche Gene abgelesen werden
+
+---
+
+## PCR -- der COVID-Test erklaert
+
+Die PCR vervielfaeltigt ein bestimmtes DNA-Stueck millionenfach:
+1. **Erhitzen** (95 Grad C): Die Doppelhelix trennt sich in Einzelstraenge
+2. **Abkuehlen** (55-65 Grad C): Kurze Startmolekuele (Primer) binden an
+3. **Verlaengern** (72 Grad C): Ein hitzebestaendiges Enzym baut den neuen Strang
+
+Nach 30 Runden hast du ueber eine Milliarde Kopien. Beim COVID-Test wird zuerst RNA in DNA umgeschrieben (RT-PCR), dann vervielfaeltigt.
+
+---
+
+## Medikamente gegen Viren
+
+**Aciclovir** (gegen Herpes) sieht aus wie ein normaler DNA-Baustein, hat aber kein 3-OH-Ende. Wenn das Virus diesen falschen Baustein einbaut, kann die DNA-Kette nicht weitergebaut werden -- Kettenabbruch. Aehnlich funktionieren Remdesivir (COVID-19) und Tenofovir (HIV).
+
+> **Merke:** DNA = Desoxyribose + Thymin, RNA = Ribose + Uracil. A paart mit T (2 H-Bruecken), G paart mit C (3 H-Bruecken). PCR vervielfaeltigt DNA in 3 Schritten: Hitze, Primer, Verlaengerung. Nukleosid-Analoga stoppen die Virus-DNA durch Kettenabbruch.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Nukleosid vs. Nukleotid (mit/ohne Phosphat)
+- Basenpaarung: A-T (2 H-Bruecken), G-C (3 H-Bruecken)
+- DNA: antiparallel, rechtsgaengig, Desoxyribose, Thymin
+- RNA: einzelstraengig, Ribose, Uracil
+- PCR: Denaturierung, Annealing, Elongation
+
+**Typische Fallen:**
+- Thymin nur in DNA, Uracil nur in RNA -- nicht verwechseln
+- Purine (A, G) haben den Doppelring, Pyrimidine den Einzelring
+- Nukleosid = ohne Phosphat, Nukleotid = mit Phosphat
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Nukleotid**: Base + Zucker + Phosphat; ohne Phosphat = Nukleosid; ATP = Adenosin + 3 Phosphate
+- **Basen**: Purine (A, G) = Doppelring; Pyrimidine (C, T, U) = Einzelring
+- **Chargaff**: A=T (2 H-Bruecken), G=C (3 H-Bruecken); mehr GC = stabiler
+- **DNA**: Doppelhelix, antiparallel, Desoxyribose, Thymin
+- **RNA**: einzelstraengig, Ribose, Uracil; mRNA/tRNA/rRNA/miRNA
+- **PCR**: 95 Grad C trennen, Primer binden, Taq-Polymerase verlaengert; RT-PCR fuer RNA
+- **Virostatika**: Aciclovir/Remdesivir = falscher Baustein ohne 3-OH = Kettenabbruch`,
+      contentExtended: `## Einleitung
 
 Der COVID-19-Test beruht auf der RT-PCR — einer Methode, die RNA-Sequenzen des Virus nachweist. Um zu verstehen, wie dieser Test funktioniert, musst du die Grundlagen der **Nukleinsäuren** kennen: DNA und RNA bestehen aus Nukleotiden, die durch Basenpaarung (A mit T bzw. U, G mit C) zusammengehalten werden. Diese komplementäre Paarung ist nicht nur die Grundlage der Vererbung, sondern auch der Ansatzpunkt für antivirale Medikamente wie Aciclovir, die als falsche Bausteine die virale DNA-Synthese stoppen.
 

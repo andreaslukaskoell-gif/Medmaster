@@ -34,7 +34,7 @@ export function TopBar({
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
   const onboardingCompleted = store?.onboardingCompleted ?? false;
   const hasCompletedMedATOnboarding = store?.hasCompletedMedATOnboarding ?? false;
-  const showEinstufungstest = hasCompletedMedATOnboarding && !onboardingCompleted;
+  const showEinstufungstest = !onboardingCompleted && hasCompletedMedATOnboarding;
   const showStoreValues = mounted;
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
@@ -102,7 +102,7 @@ export function TopBar({
         </Link>
 
         {showEinstufungstest && (
-          <Link to="/onboarding" className="shrink-0">
+          <Link to="/placement-test" className="shrink-0">
             <Button
               size="sm"
               className="gap-1.5 bg-[var(--color-primary-500)] hover:bg-[var(--color-primary-600)] text-white border-0"

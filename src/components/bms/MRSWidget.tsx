@@ -121,7 +121,7 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
           <TrendingUp className="w-6 h-6 mx-auto text-gray-300 dark:text-gray-600" />
           <p className="text-xs text-muted-foreground font-medium">MedAT Readiness Score</p>
           <p className="text-xs text-muted-foreground">
-            Melde dich an und beantworte BMS-Fragen im Fragen-Trainer, um deinen Score zu sehen.
+            Beantworte BMS-Fragen im Fragen-Trainer, um deinen Score zu sehen.
           </p>
         </CardContent>
       </Card>

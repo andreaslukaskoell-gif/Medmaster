@@ -29,6 +29,113 @@ export const mathKap6: Kapitel = {
       ],
       content: `## Einleitung
 
+Stell dir vor, du navigierst mit deinem Handy: Es zeigt dir nicht nur die Entfernung zum Ziel, sondern auch die Richtung — genau das ist ein Vektor. Vektoren beschreiben Größen, die Betrag und Richtung haben: zum Beispiel Kräfte, Geschwindigkeiten oder Verschiebungen.
+
+**In diesem Kapitel lernst du:**
+- worin sich Vektoren (Betrag + Richtung) von Skalaren (reine Zahlenwerte) unterscheiden
+- wie du Vektoren komponentenweise addierst und als Kräfteparallelogramm interpretierst
+- wie du den Betrag eines Vektors mit dem Pythagoras berechnest
+- wie du Einheitsvektoren und Verbindungsvektoren bestimmst
+- wann Vektoren linear abhängig oder unabhängig sind
+
+---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Vektor vs. Skalar
+
+Ein **Vektor** hat Betrag **und** Richtung (z. B. Kraft, Geschwindigkeit). Ein **Skalar** ist nur eine Zahl ohne Richtung (z. B. Temperatur, Masse). Vektoren werden als Pfeile gezeichnet und als Spaltenvektoren geschrieben: $\vec{a} = (a_1, a_2, a_3)^\top$.
+
+Der **Betrag** (die Länge) eines Vektors folgt aus dem Satz des Pythagoras:
+
+$$|\vec{v}| = \sqrt{v_1^2 + v_2^2 + v_3^2}$$
+
+In 2D entfällt die dritte Komponente: $|\vec{v}| = \sqrt{v_1^2 + v_2^2}$.
+
+> **Merke:** Vektoren beschreiben gerichtete Größen (Kraft, Geschwindigkeit, Verschiebung). Skalare beschreiben ungerichtete Größen (Temperatur, Masse, Energie).
+
+---
+
+## Vektoroperationen
+
+**Addition:** komponentenweise: $\vec{a} + \vec{b} = (a_1+b_1, a_2+b_2, a_3+b_3)^\top$. Geometrisch: **Parallelogrammregel** — die Diagonale ist der Summenvektor.
+
+**Subtraktion:** $\vec{a} - \vec{b} = \vec{a} + (-\vec{b})$.
+
+**Skalare Multiplikation:** $\lambda \cdot \vec{v}$ streckt ($|\lambda|>1$), staucht ($|\lambda|<1$) oder spiegelt ($\lambda<0$) den Vektor. Zwei Vektoren sind **parallel**, wenn $\vec{a} = k \cdot \vec{b}$.
+
+> **Merke:** Zwei Vektoren sind genau dann linear abhängig, wenn sie parallel (kollinear) sind. Drei Vektoren im Raum sind linear abhängig, wenn sie in einer Ebene liegen.
+
+---
+
+## Einheitsvektor
+
+Der **Einheitsvektor** zeigt in dieselbe Richtung wie $\vec{v}$, hat aber Betrag 1:
+
+$$\hat{e} = \frac{\vec{v}}{|\vec{v}|}$$
+
+**Beispiel:** $\vec{v} = (3, 4)$ → Betrag = 5 → $\hat{e} = (0{,}6;\; 0{,}8)$. Probe: $|\hat{e}| = 1$ ✓
+
+---
+
+## Ortsvektor und Verbindungsvektor
+
+Der **Ortsvektor** zeigt vom Ursprung zum Punkt: $\vec{r}_P = (x, y, z)^\top$. Der **Verbindungsvektor** von A nach B:
+
+$$\vec{AB} = \vec{r}_B - \vec{r}_A$$
+
+> **Merke:** Verbindungsvektor = Ziel − Start. Der Abstand ist $d(A,B) = |\vec{AB}|$. Achtung: $\vec{AB} = -\vec{BA}$!
+
+**Mittelpunkt:** $M = \frac{1}{2}(\vec{r}_A + \vec{r}_B)$.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Abstand:** $A(1, 3, -2)$, $B(4, 1, 2)$ → $\vec{AB} = (3, -2, 4)$ → $d = \sqrt{9+4+16} = \sqrt{29} \approx 5{,}39$.
+
+**Beispiel 2 — Kräftezerlegung:** Eine Kraft $\vec{F} = (30, 40)$ N wirkt auf einen Gegenstand. Entlang der x-Achse wirken 30 N, senkrecht dazu 40 N. So kannst du jede Kraft in ihre Anteile zerlegen.
+
+**Beispiel 3 — Lineare Unabhängigkeit:** $\vec{a} = (1, 2)$ und $\vec{b} = (3, 6)$: Da $\vec{b} = 3 \cdot \vec{a}$ → linear **abhängig**. Dagegen: $\vec{a} = (1, 2)$ und $\vec{c} = (2, -1)$ → kein $k$ → linear **unabhängig**.
+
+**Typische Prüfungsfehler:** Betrag als v₁+v₂ statt √(v₁²+v₂²). Verbindungsvektor AB als A−B statt B−A. Einheitsvektor durch Betrag² teilen statt durch Betrag.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Betrag eines Vektors (Pythagoras)
+- Einheitsvektor: v/|v|
+- Addition/Subtraktion komponentenweise
+- Verbindungsvektor AB = B − A und Abstand
+- Lineare Abhängigkeit prüfen: Ist b = k·a?
+
+**Typische Fallen:**
+- Betrag ≠ Summe der Komponenten
+- Verbindungsvektor: **AB = B − A** (Ziel minus Start)
+- Einheitsvektor: durch **Betrag** dividieren (nicht Betrag²)
+
+**Minimal-Rechenrezepte:**
+- **Betrag:** |v| = √(v₁² + v₂² + v₃²)
+- **Einheitsvektor:** ê = v/|v|. Probe: |ê| = 1
+- **Addition:** (a₁+b₁, a₂+b₂, a₃+b₃)
+- **Verbindungsvektor:** AB = B − A. Abstand: d = |AB|
+- **Pythagoras-Tripel:** 3-4-5, 5-12-13
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Vektor**: Betrag + Richtung; **Skalar**: nur Betrag
+- **Betrag**: |a| = √(a₁²+a₂²+a₃²); **Einheitsvektor**: e = a/|a|
+- **Addition**: komponentenweise; Parallelogrammregel
+- **Verbindungsvektor**: AB = B − A; Abstand = |AB|
+- **Linear abhängig**: Vektoren sind parallel (a = k·b)`,
+      contentExtended: `## Einleitung
+
 Ein Navigationssystem berechnet nicht nur die Entfernung zum Ziel, sondern auch die Richtung — genau das leistet ein Vektor. In der Medizin begegnen dir Vektoren überall: Die Herzachse im EKG ist ein Summenvektor der elektrischen Erregung, Muskelkräfte am Kniegelenk werden als Kräfteparallelogramm addiert, und der Blutfluss in einem Gefäß hat sowohl Geschwindigkeit als auch Richtung. Wer Vektoren sicher addiert, Beträge berechnet und Einheitsvektoren bestimmt, kann diese klinischen Größen quantitativ erfassen.
 
 **In diesem Kapitel lernst du:**
@@ -355,6 +462,113 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Parallelogrammfläche",
       ],
       content: `## Einleitung
+
+Stell dir vor, du ziehst einen Schlitten mit einem Seil, das schräg nach oben zeigt. Nur der Teil deiner Zugkraft, der in Bewegungsrichtung wirkt, bringt den Schlitten vorwärts — das ist im Kern ein Skalarprodukt. Und wenn du eine Schraube eindrehst, erzeugst du ein Drehmoment — das steckt hinter dem Kreuzprodukt. Dieses Kapitel zeigt dir die zwei wichtigsten Verknüpfungen von Vektoren.
+
+**In diesem Kapitel lernst du:**
+- wie das Skalarprodukt den Winkel zwischen zwei Vektoren bestimmt und wann es null wird (Orthogonalität)
+- wie das Kreuzprodukt einen Vektor senkrecht zu beiden Ausgangsvektoren erzeugt
+- wie du die Projektion eines Vektors auf einen anderen berechnest
+- worin sich Skalarprodukt (Ergebnis: Zahl) und Kreuzprodukt (Ergebnis: Vektor) unterscheiden
+
+---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Skalarprodukt
+
+Das **Skalarprodukt** zweier Vektoren liefert eine **Zahl** (Skalar):
+
+$$\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\vec{a}| \cdot |\vec{b}| \cdot \cos \theta$$
+
+Es misst, wie sehr zwei Vektoren in dieselbe Richtung zeigen.
+
+**Spezialfälle:**
+- $\vec{a} \cdot \vec{b} = 0$ → Vektoren stehen **senkrecht** (orthogonal, $\theta = 90°$)
+- $\vec{a} \cdot \vec{b} > 0$ → spitzer Winkel
+- $\vec{a} \cdot \vec{b} < 0$ → stumpfer Winkel
+
+> **Merke:** Das Skalarprodukt $\vec{a} \cdot \vec{b} = 0$ ist DAS zentrale Kriterium für Orthogonalität. Im MedAT wird häufig gefragt, ob zwei Vektoren senkrecht stehen — immer über das Skalarprodukt prüfen!
+
+**Winkelberechnung:**
+$$\cos \theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}$$
+
+Wichtige Werte: $\cos(0°) = 1$, $\cos(60°) = 1/2$, $\cos(90°) = 0$, $\cos(120°) = -1/2$.
+
+---
+
+## Kreuzprodukt
+
+Das **Kreuzprodukt** ist nur im 3D definiert und liefert einen **Vektor** senkrecht auf beiden:
+
+$$\vec{a} \times \vec{b} = \begin{pmatrix} a_2 b_3 - a_3 b_2 \\ a_3 b_1 - a_1 b_3 \\ a_1 b_2 - a_2 b_1 \end{pmatrix}$$
+
+**Betrag:** $|\vec{a} \times \vec{b}| = |\vec{a}| \cdot |\vec{b}| \cdot \sin \theta$ = Fläche des Parallelogramms.
+
+**Eigenschaften:**
+- **Antikommutativ**: $\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$ — Reihenfolge vertauschen ändert das Vorzeichen
+- Parallele Vektoren: $\vec{a} \times \vec{b} = \vec{0}$
+- **Rechte-Hand-Regel**: Finger von $\vec{a}$ zu $\vec{b}$ einrollen, Daumen zeigt Richtung
+
+| Eigenschaft | Skalarprodukt | Kreuzprodukt |
+|------------|---------------|--------------|
+| Ergebnis | Skalar | Vektor |
+| Null bei | Orthogonalität | Parallelität |
+
+> **Merke:** Skalarprodukt = Skalar (Zahl). Kreuzprodukt = Vektor. Nicht verwechseln! Orthogonal: Skalarprodukt = 0. Parallel: Kreuzprodukt = Nullvektor.
+
+---
+
+## Projektion
+
+Die **Projektion** von $\vec{a}$ auf $\vec{b}$ zerlegt $\vec{a}$ in einen parallelen und einen senkrechten Anteil:
+
+$$\text{proj}_{\vec{b}} \vec{a} = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}$$
+
+> **Merke:** Positive Projektion = spitzer Winkel; negative = stumpfer Winkel; Projektion = 0 → Orthogonalität.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Winkel:** $\vec{a} = (2, 1, -1)$, $\vec{b} = (1, -1, 2)$. Skalarprodukt: $2-1-2 = -1$. Beträge: je $\sqrt{6}$. $\cos \theta = -1/6$ → $\theta \approx 99{,}6°$ (stumpf).
+
+**Beispiel 2 — Kreuzprodukt:** $\vec{a} = (1, 2, 0)$, $\vec{b} = (3, 0, 1)$. $\vec{a} \times \vec{b} = (2, -1, -6)$. Fläche: $\sqrt{41} \approx 6{,}40$.
+
+**Beispiel 3 — Drehmoment:** Kraft $\vec{F} = (0, 120, 0)$ N am Hebelarm $\vec{r} = (0{,}05, 0, 0)$ m → Drehmoment $|\vec{M}| = 0{,}05 \cdot 120 = 6$ Nm.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Skalarprodukt berechnen und Orthogonalität prüfen (a·b = 0?)
+- Winkel zwischen Vektoren: cos θ = (a·b)/(|a||b|)
+- Kreuzprodukt komponentenweise; Betrag = Parallelogrammfläche
+
+**Typische Fallen:**
+- Skalarprodukt = Skalar; Kreuzprodukt = Vektor — nicht verwechseln
+- Kreuzprodukt antikommutativ: a×b = −(b×a)
+- Orthogonal: Skalarprodukt = 0; Parallel: Kreuzprodukt = Nullvektor
+
+**Minimal-Rechenrezepte:**
+- **Skalarprodukt:** a·b = a₁b₁ + a₂b₂ + a₃b₃
+- **Winkel:** cos θ = (a·b)/(|a||b|)
+- **Kreuzprodukt:** (a₂b₃−a₃b₂, a₃b₁−a₁b₃, a₁b₂−a₂b₁)
+- **Projektion:** proj_b(a) = (a·b/|b|²)·b
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Skalarprodukt**: a·b = a₁b₁+a₂b₂+a₃b₃ = |a|·|b|·cos φ; Ergebnis = Skalar
+- **Orthogonalität**: a⊥b genau dann wenn a·b = 0
+- **Kreuzprodukt**: a×b steht senkrecht auf a und b; |a×b| = |a|·|b|·sin φ = Parallelogrammfläche
+- **Projektion**: proj_b(a) = (a·b/|b|²)·b
+- **Drehmoment**: M = r×F; maximal bei 90°`,
+      contentExtended: `## Einleitung
 
 Wenn ein Physiotherapeut die Kraft misst, die ein Patient entlang einer bestimmten Bewegungsachse aufbringt, berechnet er im Grunde ein Skalarprodukt: die Projektion der Kraftrichtung auf die Achse. Und wenn ein Chirurg das Drehmoment an einem Gelenk abschätzt, steckt dahinter das Kreuzprodukt — ein Vektor senkrecht zur Kraftebene, dessen Betrag der Parallelogrammfläche entspricht. Diese beiden Verknüpfungen von Vektoren — eine liefert eine Zahl (Skalar), die andere einen neuen Vektor — sind das zentrale Werkzeug für Winkelberechnungen, Orthogonalitätsprüfungen und Kraftzerlegungen.
 
@@ -719,6 +933,126 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
         "CT-Bildrekonstruktion",
       ],
       content: `## Einleitung
+
+Wenn du im Koordinatensystem eine gerade Linie beschreiben willst, brauchst du einen Startpunkt und eine Richtung — das ist eine Geradengleichung. Willst du eine flache Fläche beschreiben, brauchst du zusätzlich einen zweiten Richtungsvektor — das ist eine Ebene. Matrizen sind Zahlentabellen, mit denen du solche Gleichungssysteme kompakt aufschreiben und lösen kannst.
+
+**In diesem Kapitel lernst du:**
+- wie du eine Gerade im Raum durch Stützvektor und Richtungsvektor aufstellst
+- wie Ebenen in Normalenform und Koordinatenform beschrieben werden
+- wie du die Determinante einer 2x2-Matrix berechnest und was det = 0 bedeutet
+- wie du die Inverse einer 2x2-Matrix bestimmst
+- wie du lineare Gleichungssysteme mit Matrizen löst
+
+---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Geradengleichung im Raum
+
+Eine Gerade wird durch die **Parameterform** beschrieben:
+
+$$\vec{r} = \vec{r_0} + t \cdot \vec{d}, \quad t \in \mathbb{R}$$
+
+$\vec{r_0}$ ist der **Stützvektor** (ein Punkt auf der Geraden), $\vec{d}$ der **Richtungsvektor**. Für $t = 0$ bekommst du den Stützpunkt, für $t = 1$ den Punkt $\vec{r_0} + \vec{d}$.
+
+**Gerade durch zwei Punkte:** $\vec{r_0} = A$, $\vec{d} = B - A$.
+
+> **Merke:** Eine Gerade im Raum hat einen Freiheitsgrad (Parameter $t$). Zwei Punkte bestimmen genau eine Gerade.
+
+---
+
+## Ebenengleichungen
+
+Eine Ebene im Raum kann so dargestellt werden:
+
+**Normalenform:** $\vec{n} \cdot (\vec{r} - \vec{r_0}) = 0$ — der Normalenvektor $\vec{n}$ steht senkrecht auf der Ebene.
+
+**Koordinatenform:** $ax + by + cz = d$ — die Koeffizienten $(a, b, c)$ bilden den Normalenvektor.
+
+**Parameterform:** $\vec{r} = \vec{r_0} + s\cdot\vec{d_1} + t\cdot\vec{d_2}$ — zwei Richtungsvektoren spannen die Ebene auf. Normalenvektor: $\vec{n} = \vec{d_1} \times \vec{d_2}$.
+
+---
+
+## Matrizenrechnung — Grundlagen
+
+Eine **Matrix** ist ein Zahlenschema mit Zeilen und Spalten. Damit kannst du Gleichungssysteme kompakt aufschreiben.
+
+**Matrizenprodukt:** $(m\times n) \times (n\times p) = (m\times p)$. Die inneren Dimensionen müssen übereinstimmen! Matrizenmultiplikation ist **nicht kommutativ**: $A \cdot B \neq B \cdot A$.
+
+> **Merke:** Dimensionsregel: (m×n) × (n×p) = (m×p). Die inneren Dimensionen müssen übereinstimmen!
+
+---
+
+## Determinante und Inverse
+
+**Determinante einer 2×2-Matrix:**
+$$\det(A) = \det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc$$
+
+- $\det(A) = 0$: Matrix ist **singulär** — kein eindeutiges Gleichungssystem lösbar
+- $\det(A) \neq 0$: Matrix ist **regulär** — genau eine Lösung
+
+**Inverse 2×2-Matrix:**
+$$A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
+
+Merkhilfe: Hauptdiagonale tauschen, Nebendiagonale negieren, durch Determinante teilen.
+
+---
+
+## Lineare Gleichungssysteme (LGS)
+
+Ein LGS $A\vec{x} = \vec{b}$ löst du bei regulärer Matrix mit $\vec{x} = A^{-1} \cdot \vec{b}$.
+
+| Bedingung | Lösung |
+|-----------|--------|
+| det(A) ≠ 0 | Genau eine Lösung |
+| det(A) = 0, konsistent | Unendlich viele Lösungen |
+| det(A) = 0, inkonsistent | Keine Lösung |
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Gerade:** Durch $A(1, 2, 3)$ und $B(4, 0, 1)$: $\vec{d} = (3, -2, -2)$ → $\vec{r} = (1, 2, 3) + t \cdot (3, -2, -2)$.
+
+**Beispiel 2 — Determinante:** $A = \begin{pmatrix}3 & 5\\1 & 2\end{pmatrix}$: $\det = 3 \cdot 2 - 5 \cdot 1 = 1$ → regulär.
+
+**Beispiel 3 — Inverse:** $A = \begin{pmatrix}2 & 1\\5 & 3\end{pmatrix}$, $\det = 1$ → $A^{-1} = \begin{pmatrix}3 & -1\\-5 & 2\end{pmatrix}$.
+
+**Typische Prüfungsfehler:** Gerade: $\vec{d} = B-A$ (nicht $A-B$). Inverse nur bei $\det \neq 0$. Nebendiagonale **negieren**.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Gerade durch zwei Punkte aufstellen (Parameterform)
+- Normalenvektor aus Koordinatenform ablesen: ax+by+cz=d → n=(a,b,c)
+- Determinante 2x2 berechnen: ad−bc
+- Inverse 2x2 bestimmen
+
+**Typische Fallen:**
+- det = 0 → singuläre Matrix (keine Inverse)
+- Matrizenmultiplikation ist NICHT kommutativ
+- Normalenvektor steht senkrecht AUF der Ebene, nicht in ihr
+
+**Minimal-Rechenrezepte:**
+- **Gerade:** x = p + t·v
+- **Ebene:** n·(x−p) = 0 oder ax+by+cz = d
+- **det(2×2):** ad−bc
+- **Inverse:** (1/det)·[[d,−b],[−c,a]]
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Gerade**: x = p + t·v; Stützpunkt + Richtung
+- **Ebene**: Normalenform n·(x−p) = 0; Koordinatenform ax+by+cz = d
+- **Determinante 2×2**: ad−bc; det = 0 → singulär
+- **Inverse 2×2**: (1/det)·[[d,−b],[−c,a]]
+- **LGS**: x = A⁻¹·b (bei det ≠ 0)`,
+      contentExtended: `## Einleitung
 
 Stell dir einen CT-Scanner vor, der Röntgenstrahlen als gerade Linien durch den Körper schickt: Jeder Strahl ist mathematisch eine Gerade im Raum, und die Schnittebene des Bildes ist eine Ebene. Die Bildrekonstruktion löst ein riesiges lineares Gleichungssystem — im Kern stecken Matrizen, Determinanten und inverse Matrizen. In diesem Kapitel lernst du die Werkzeuge, mit denen Geraden und Ebenen im dreidimensionalen Raum beschrieben werden und wie Matrizen lineare Gleichungssysteme kompakt darstellen und lösen.
 
@@ -1096,6 +1430,115 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         "Stereotaxie",
       ],
       content: `## Einleitung
+
+Wie weit ist ein Punkt von einer Geraden oder einer Ebene entfernt? Diese Frage kommt im Alltag oft vor — etwa wenn du den kürzesten Weg von deinem Standort zu einer Straße suchst. In der Mathematik gibt es für jede dieser Situationen eine klare Formel.
+
+**In diesem Kapitel lernst du:**
+- wie du den Abstand zwischen zwei Punkten im Raum berechnest
+- wie der Abstand eines Punktes von einer Geraden bestimmt wird
+- wie die Hessesche Normalform den Abstand eines Punktes von einer Ebene liefert
+- wie du Schnittwinkel zwischen Geraden und Ebenen berechnest
+- wann Geraden windschief sind
+
+---
+
+{{DIAGRAM:vector-addition}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Abstand Punkt–Punkt
+
+Der Abstand zweier Punkte $A$ und $B$ ist der Betrag des Verbindungsvektors:
+
+$$d(A, B) = |\vec{AB}| = \sqrt{(b_1-a_1)^2 + (b_2-a_2)^2 + (b_3-a_3)^2}$$
+
+Das ist die **euklidische Distanz** — die direkte Luftlinie.
+
+> **Merke:** Abstand = Betrag des Verbindungsvektors. Immer: Ziel − Start, dann Betrag. $(b_i - a_i)^2$ ist immer positiv!
+
+**Beispiel:** $A(2, 3, -1)$, $B(5, 7, -1)$ → $d = \sqrt{9 + 16 + 0} = 5$ (3-4-5-Tripel).
+
+---
+
+## Abstand Punkt–Gerade
+
+Der Abstand eines Punktes $P$ von einer Geraden $g: \vec{r} = \vec{r_0} + t \cdot \vec{d}$:
+
+$$d(P, g) = \frac{|\vec{r_0 P} \times \vec{d}|}{|\vec{d}|}$$
+
+Der Zähler ist die Parallelogrammfläche, der Nenner die Grundseite — das Ergebnis ist die Höhe (= senkrechter Abstand).
+
+---
+
+## Abstand Punkt–Ebene
+
+Für eine Ebene $ax + by + cz = d$ und einen Punkt $P(p_1, p_2, p_3)$:
+
+$$d(P, E) = \frac{|a \cdot p_1 + b \cdot p_2 + c \cdot p_3 - d|}{\sqrt{a^2 + b^2 + c^2}}$$
+
+> **Merke:** Punkt-Ebene-Abstand: Koordinaten einsetzen, Betrag nehmen, durch $|\vec{n}|$ teilen. Das ist eine der häufigsten MedAT-Aufgaben!
+
+**Schritt für Schritt:**
+1. Ebene in Koordinatenform: $ax + by + cz = d$
+2. Punkt einsetzen: $a \cdot p_1 + b \cdot p_2 + c \cdot p_3 - d$
+3. Betrag nehmen
+4. Durch $\sqrt{a^2 + b^2 + c^2}$ teilen
+
+---
+
+## Lagebeziehungen und Schnittwinkel
+
+| Objekte | Mögliche Lagen |
+|---------|---------------|
+| Zwei Geraden | parallel, identisch, schneidend, windschief |
+| Gerade & Ebene | parallel, in Ebene, schneidend |
+
+**Windschief:** Geraden im Raum, die sich weder schneiden noch parallel sind — gibt es nur in 3D!
+
+**Schnittwinkel:**
+- Gerade ↔ Gerade: $\cos \alpha = \frac{|\vec{d_1} \cdot \vec{d_2}|}{|\vec{d_1}| \cdot |\vec{d_2}|}$
+- Gerade ↔ Ebene: $\sin \alpha = \frac{|\vec{d} \cdot \vec{n}|}{|\vec{d}| \cdot |\vec{n}|}$ (Achtung: **sin**, nicht cos!)
+
+> **Merke:** Schnittwinkel: Geraden → cos; Gerade/Ebene → sin; Ebenen → cos (mit Normalenvektoren).
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Punkt-Ebene:** $P(3, 1, -2)$, $E: 2x - y + 2z = 4$. Einsetzen: $|6-1-4-4| = 3$. $|\vec{n}| = 3$. Abstand: $d = 1$.
+
+**Beispiel 2 — Schnittwinkel:** Richtungen $(1, 2, 0)$ und $(2, -1, 0)$: Skalarprodukt $= 0$ → $\alpha = 90°$ (senkrecht).
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Euklidische Distanz zweier 3D-Punkte
+- Punkt-Ebene-Abstand (Hessesche Normalform)
+- Schnittwinkel Gerade-Gerade bzw. Gerade-Ebene
+
+**Typische Fallen:**
+- Gerade-Ebene-Winkel: **sin** verwenden, NICHT cos
+- Windschief gibt es nur im 3D
+- Punkt-Ebene: Betrag UND durch |n| teilen
+
+**Minimal-Rechenrezepte:**
+- **Punkt-Punkt:** d = √((b₁−a₁)²+(b₂−a₂)²+(b₃−a₃)²)
+- **Punkt-Gerade:** d = |(a−p)×v|/|v|
+- **Punkt-Ebene:** d = |ax₀+by₀+cz₀−d|/√(a²+b²+c²)
+- **Schnittwinkel:** G↔G: cos; G↔E: sin
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Punkt-Punkt**: d = |B−A| (Pythagoras)
+- **Punkt-Gerade**: d = |(a−p)×v|/|v| (Kreuzprodukt-Formel)
+- **Punkt-Ebene**: d = |ax₀+by₀+cz₀−d|/√(a²+b²+c²)
+- **Schnittwinkel**: Geraden → cos; Gerade/Ebene → sin
+- **Windschief**: nicht parallel + kein Schnittpunkt (nur 3D)`,
+      contentExtended: `## Einleitung
 
 In der stereotaktischen Neurochirurgie muss der Abstand einer Nadel zu einem Tumor auf Bruchteile von Millimetern bekannt sein. Bei der Bestrahlungsplanung wird der Abstand eines Organs von der Strahlenebene berechnet, um Kollateralschäden zu minimieren. All diese Probleme reduzieren sich auf drei geometrische Grundaufgaben: Abstand Punkt-Punkt, Punkt-Gerade und Punkt-Ebene. Wer die zugehörigen Formeln beherrscht, kann solche räumlichen Fragen systematisch lösen.
 

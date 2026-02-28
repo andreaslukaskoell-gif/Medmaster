@@ -30,17 +30,122 @@ export const physKap3: Kapitel = {
       ],
       content: `## Einleitung
 
-Warum schwingt ein langes Pendel langsamer als ein kurzes -- aber die Masse spielt keine Rolle? Und wie nutzt ein MRT-Gerät das Phänomen der Resonanz, um Bilder aus dem Körperinneren zu erzeugen? Die **harmonische Schwingung** ist das Grundmodell aller periodischen Bewegungen: vom Herzrhythmus über den Federpendel bis zur Kernspinresonanz. Wer Amplitude, Frequenz und Dämpfung versteht, kann Wellen, Akustik und MRT-Physik leichter einordnen.
+Stell dir eine Schaukel auf dem Spielplatz vor. Du ziehst sie zur Seite und laesst los -- sie schwingt hin und her und wird dabei langsam langsamer. Das ist schon eine **Schwingung**. In der Physik beschreiben wir solche Hin-und-her-Bewegungen mit wenigen Groessen: wie weit die Schaukel ausschlaegt (Amplitude), wie lange ein Durchgang dauert (Periodendauer) und wie oft sie pro Sekunde schwingt (Frequenz).
 
 **In diesem Kapitel lernst du:**
-- was Amplitude, Frequenz und Kreisfrequenz beschreiben und wie sie zusammenhängen
-- warum beim Fadenpendel nur Länge und Erdbeschleunigung die Schwingungsdauer bestimmen (Isochronie)
-- worin sich Faden- und Federpendel physikalisch unterscheiden und wovon jeweils T abhängt
-- wie Energie im Oszillator zwischen kinetischer und potentieller Form pendelt (und warum E proportional zu A-Quadrat ist)
-- wann Resonanz auftritt und warum Dämpfung in biologischen Systemen Schutzfunktion hat
+- was Amplitude, Frequenz und Periodendauer bedeuten und wie sie zusammenhaengen
+- warum ein laengeres Pendel langsamer schwingt als ein kurzes -- aber das Gewicht keine Rolle spielt
+- wie sich eine Feder mit einem Gewicht daran anders verhaelt als ein Pendel
+- warum die Energie in einer Schwingung staendig zwischen Bewegungsenergie und Lageenergie wechselt
+- was Resonanz ist und wann Daempfung nuetzlich wird
 
-**Kontext — worum geht es und wofür brauchst du das?**  
-Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rückstellkraft proportional zur Auslenkung (F = −k·x) führt zu Sinus-/Kosinus-Schwingungen. Das beschreibt Pendel, Federn, aber auch Schwingkreise in der Technik und Kernspin im MRT. Du brauchst es für Wellen (nächstes Unterkapitel), für Akustik und für MedAT-Aufgaben zu T, f, ω und Resonanz.
+---
+
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Was ist eine Schwingung?
+
+Eine Schwingung ist eine Bewegung, die sich regelmaessig wiederholt. Denke an eine Schaukel, eine Gitarrensaite oder ein Trampolin. Der Koerper bewegt sich immer wieder um eine Ruhelage herum.
+
+Die wichtigsten Groessen:
+- **Amplitude A** -- wie weit der Koerper maximal von der Mitte weg ist
+- **Periodendauer T** -- wie lange eine volle Hin-und-her-Bewegung dauert (in Sekunden)
+- **Frequenz f** -- wie viele Schwingungen pro Sekunde passieren (in Hertz, Hz). Es gilt: f = 1/T
+- **Kreisfrequenz** -- verbindet alles: sie ist 2 mal Pi mal f
+
+> **Merke:** T und f sind Kehrwerte: f = 1/T. Schwingt etwas mit T = 2 s, ist die Frequenz 0,5 Hz (eine halbe Schwingung pro Sekunde).
+
+---
+
+## Fadenpendel -- die Schaukel
+
+Haenge einen Gegenstand an einen Faden und lasse ihn schwingen. Die Schwingungsdauer haengt nur von der **Fadenlaenge** und der **Schwerkraft** ab:
+
+**T = 2 Pi mal Wurzel(l/g)**
+
+Weder das Gewicht noch die Ausschlagweite aendern die Dauer -- das nennt man **Isochronie**. Laengerer Faden bedeutet langsamere Schwingung. Auf dem Mond (weniger Schwerkraft) schwingt dasselbe Pendel viel langsamer.
+
+> **Merke:** Fadenpendel: Nur Laenge und Schwerkraft bestimmen T. Masse und Amplitude spielen keine Rolle.
+
+---
+
+## Federpendel -- die Sprungfeder
+
+Haengst du ein Gewicht an eine Feder, schwingt es auf und ab. Hier gilt:
+
+**T = 2 Pi mal Wurzel(m/k)**
+
+Schwereres Gewicht schwingt langsamer. Steifere Feder schwingt schneller. Auch hier ist die Amplitude egal (Isochronie).
+
+---
+
+## Energie in der Schwingung
+
+Waehrend einer Schwingung wandelt sich Energie staendig um. Am hoechsten Punkt hat die Schaukel nur Lageenergie und steht kurz still. Unten in der Mitte hat sie nur Bewegungsenergie und ist am schnellsten. Die Gesamtenergie bleibt gleich und waechst mit dem Quadrat der Amplitude: doppelte Amplitude bedeutet **vierfache** Energie.
+
+> **Merke:** E ist proportional zu A-Quadrat. Doppelte Amplitude bedeutet vierfache Energie -- nicht doppelte!
+
+---
+
+## Daempfung -- wenn die Schaukel langsamer wird
+
+In der Realitaet wird jede Schwingung durch Reibung langsamer. Die Amplitude nimmt ab, die Energie geht in Waerme ueber. Es gibt drei Faelle:
+- **Schwingfall:** Die Bewegung schwingt weiter, wird aber kleiner (z. B. Stimmgabel)
+- **Aperiodischer Grenzfall:** Schnellste Rueckkehr ohne Nachschwingen (z. B. Autofederung, Tuerschliesser)
+- **Kriechfall:** Sehr langsame Rueckkehr, kein Schwingen mehr
+
+---
+
+## Resonanz -- Schaukeln im Takt
+
+Wenn du eine Schaukel immer genau im richtigen Moment antippst, wird sie immer hoeher. Das ist **Resonanz**: Die Anregung trifft genau die Eigenfrequenz des Systems. Die Amplitude wird dann maximal.
+
+Ohne Daempfung kann Resonanz gefaehrlich werden -- die beruehmte Tacoma-Bruecke stuerzte 1940 ein, weil Wind sie in Resonanz versetzte.
+
+> **Merke:** Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist. Dann wird die Amplitude maximal.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Haeufige Fragen:**
+- “Laenge des Fadenpendels vervierfacht -- was passiert mit T?” -- T verdoppelt sich (Wurzel aus 4 ist 2)
+- “Wovon haengt T beim Fadenpendel ab?” -- nur von l und g, nicht von Masse oder Amplitude
+- “Was ist Resonanz?” -- Anregungsfrequenz = Eigenfrequenz, Amplitude wird maximal
+
+**Typische Fallen:**
+- Fadenpendel: T haengt NICHT von der Masse ab. Federpendel: T haengt von der Masse ab
+- Doppelte Amplitude bedeutet vierfache Energie (nicht doppelte)
+- Kreisfrequenz ist nicht dasselbe wie Frequenz (Faktor 2 Pi)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Schwingung**: regelmaessige Hin-und-her-Bewegung um eine Ruhelage
+- **Frequenz und Periodendauer**: f = 1/T -- Kehrwerte
+- **Fadenpendel**: T = 2 Pi mal Wurzel(l/g) -- unabhaengig von Masse und Amplitude
+- **Federpendel**: T = 2 Pi mal Wurzel(m/k) -- mehr Masse = langsamer, steifere Feder = schneller
+- **Energie**: E proportional zu A-Quadrat; pendelt zwischen Bewegungs- und Lageenergie
+- **Daempfung**: Amplitude nimmt ab; drei Faelle (Schwingfall, Grenzfall, Kriechfall)
+- **Resonanz**: Anregungsfrequenz = Eigenfrequenz -- maximale Amplitude`,
+      contentExtended: `## Einleitung
+
+Warum schwingt ein langes Pendel langsamer als ein kurzes -- aber die Masse spielt keine Rolle? Und wie nutzt ein MRT-Geraet das Phaenomen der Resonanz, um Bilder aus dem Koerperinneren zu erzeugen? Die **harmonische Schwingung** ist das Grundmodell aller periodischen Bewegungen: vom Herzrhythmus ueber den Federpendel bis zur Kernspinresonanz. Wer Amplitude, Frequenz und Daempfung versteht, kann Wellen, Akustik und MRT-Physik leichter einordnen.
+
+**In diesem Kapitel lernst du:**
+- was Amplitude, Frequenz und Kreisfrequenz beschreiben und wie sie zusammenhaengen
+- warum beim Fadenpendel nur Laenge und Erdbeschleunigung die Schwingungsdauer bestimmen (Isochronie)
+- worin sich Faden- und Federpendel physikalisch unterscheiden und wovon jeweils T abhaengt
+- wie Energie im Oszillator zwischen kinetischer und potentieller Form pendelt (und warum E proportional zu A-Quadrat ist)
+- wann Resonanz auftritt und warum Daempfung in biologischen Systemen Schutzfunktion hat
+
+**Kontext -- worum geht es und wofuer brauchst du das?**
+Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rueckstellkraft proportional zur Auslenkung (F = -k*x) fuehrt zu Sinus-/Kosinus-Schwingungen. Das beschreibt Pendel, Federn, aber auch Schwingkreise in der Technik und Kernspin im MRT. Du brauchst es fuer Wellen (naechstes Unterkapitel), fuer Akustik und fuer MedAT-Aufgaben zu T, f, omega und Resonanz.
 
 ---
 
@@ -50,214 +155,214 @@ Hier geht es um **periodische Bewegungen** um eine Ruhelage: Rückstellkraft pro
 
 
 
-Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = −k·x** (Hooke'sches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
+Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Koerpers um eine Gleichgewichtslage. Die Rueckstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = -k*x** (Hookesches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
-**x(t) = A · cos(ωt + φ₀)**
+**x(t) = A * cos(omega*t + phi_0)**
 
-- **A** (Amplitude) – maximale Auslenkung aus der Ruhelage [m]
-- **ω** (Kreisfrequenz) – ω = 2πf = 2π/T [rad/s]
-- **T** (Periodendauer) – Zeit für eine vollständige Schwingung [s]
-- **f** (Frequenz) – Anzahl der Schwingungen pro Sekunde [Hz = 1/s]
-- **φ₀** (Anfangsphase) – bestimmt den Zustand zur Zeit t = 0
+- **A** (Amplitude) -- maximale Auslenkung aus der Ruhelage [m]
+- **omega** (Kreisfrequenz) -- omega = 2*Pi*f = 2*Pi/T [rad/s]
+- **T** (Periodendauer) -- Zeit fuer eine vollstaendige Schwingung [s]
+- **f** (Frequenz) -- Anzahl der Schwingungen pro Sekunde [Hz = 1/s]
+- **phi_0** (Anfangsphase) -- bestimmt den Zustand zur Zeit t = 0
 
-**Formelklartext:** x(t) = A·cos(ωt+φ₀) beschreibt, *wo* sich der Körper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und −A; ωt ist der „Phasenwinkel“ (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = −k·x** bedeutet: Die Rückstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (größeres k), desto größer die Kraft bei gleicher Auslenkung.
+**Formelklartext:** x(t) = A*cos(omega*t+phi_0) beschreibt, *wo* sich der Koerper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und -A; omega*t ist der Phasenwinkel (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = -k*x** bedeutet: Die Rueckstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (groesseres k), desto groesser die Kraft bei gleicher Auslenkung.
 
-> **Merke:** Die Kreisfrequenz ω = 2πf = 2π/T ist die zentrale Verknüpfungsgrösse zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
+> **Merke:** Die Kreisfrequenz omega = 2*Pi*f = 2*Pi/T ist die zentrale Verknuepfungsgroesse zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchlaeuft.
 
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
-- v(t) = −A·ω·sin(ωt + φ₀)  →  v_max = A·ω (bei Durchgang durch Ruhelage)
-- a(t) = −A·ω²·cos(ωt + φ₀) = −ω²·x(t)  →  a_max = A·ω² (bei maximaler Auslenkung)
+- v(t) = -A*omega*sin(omega*t + phi_0)  -->  v_max = A*omega (bei Durchgang durch Ruhelage)
+- a(t) = -A*omega^2*cos(omega*t + phi_0) = -omega^2*x(t)  -->  a_max = A*omega^2 (bei maximaler Auslenkung)
 
-Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rückstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators ist. Dieses Merkmal a = −ω²·x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsächlich harmonisch schwingt.
+Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rueckstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators ist. Dieses Merkmal a = -omega^2*x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsaechlich harmonisch schwingt.
 
-## Schwingungsgrößen-Tabelle
+## Schwingungsgroessen-Tabelle
 
-| Grösse | Symbol | Einheit | Zusammenhang |
+| Groesse | Symbol | Einheit | Zusammenhang |
 |--------|--------|---------|--------------|
 | Amplitude | A | m | Maximale Auslenkung |
-| Periodendauer | T | s | T = 1/f = 2π/ω |
-| Frequenz | f | Hz | f = 1/T = ω/(2π) |
-| Kreisfrequenz | ω | rad/s | ω = 2πf = 2π/T |
-| Phase | φ₀ | rad | Anfangsbedingung |
+| Periodendauer | T | s | T = 1/f = 2*Pi/omega |
+| Frequenz | f | Hz | f = 1/T = omega/(2*Pi) |
+| Kreisfrequenz | omega | rad/s | omega = 2*Pi*f = 2*Pi/T |
+| Phase | phi_0 | rad | Anfangsbedingung |
 
 ## Fadenpendel
 
-Für kleine Winkel (< 5°, Kleinwinkelnäherung sin θ ≈ θ) verhält sich ein Pendel der Länge l harmonisch:
+Fuer kleine Winkel (< 5 Grad, Kleinwinkelnaeherung sin theta ungefaehr theta) verhaelt sich ein Pendel der Laenge l harmonisch:
 
-**T = 2π · √(l/g)**
+**T = 2*Pi * Wurzel(l/g)**
 
-Die Periodendauer ist **unabhängig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhängig von der Amplitude, solange die Auslenkung klein bleibt; gilt für Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor √2 ≈ 1,41. Auf dem Mond (g ≈ 1,62 m/s²) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
+Die Periodendauer ist **unabhaengig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhaengig von der Amplitude, solange die Auslenkung klein bleibt; gilt fuer Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Laenge, steigt T um den Faktor Wurzel(2) ungefaehr 1,41. Auf dem Mond (g ungefaehr 1,62 m/s^2) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
 
-**Formelklartext:** T = 2π√(l/g) heißt: Die Schwingungsdauer wird nur von der **Fadenlänge** l und der **Fallbeschleunigung** g bestimmt. Längeres Pendel → längere T; größeres g (z. B. auf der Erde vs. Mond) → kürzere T. Masse und Amplitude (bei kleinen Winkeln) spielen keine Rolle – das ist die Isochronie.
+**Formelklartext:** T = 2*Pi*Wurzel(l/g) heisst: Die Schwingungsdauer wird nur von der **Fadenlaenge** l und der **Fallbeschleunigung** g bestimmt. Laengeres Pendel --> laengere T; groesseres g (z. B. auf der Erde vs. Mond) --> kuerzere T. Masse und Amplitude (bei kleinen Winkeln) spielen keine Rolle -- das ist die Isochronie.
 
-**Größenordnung:** Pendel l = 1 m auf der Erde → T ≈ 2,0 s („Sekundenpendel“). l = 25 cm → T ≈ 1 s.
+**Groessenordnung:** Pendel l = 1 m auf der Erde --> T ungefaehr 2,0 s (Sekundenpendel). l = 25 cm --> T ungefaehr 1 s.
 
-> **Merke:** Beim Fadenpendel bestimmen nur Fadenlänge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
+> **Merke:** Beim Fadenpendel bestimmen nur Fadenlaenge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
 
-**Gültigkeitsgrenze:** Bei Auslenkungen > 15° weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Für θ_max = 30° beträgt der Fehler bereits ~2 %.
+**Gueltigkeitsgrenze:** Bei Auslenkungen > 15 Grad weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Fuer theta_max = 30 Grad betraegt der Fehler bereits ~2 %.
 
 ## Federpendel (harmonischer Oszillator)
 
 Eine Masse m an einer Feder mit Federkonstante k schwingt mit:
 
-**T = 2π · √(m/k)**
+**T = 2*Pi * Wurzel(m/k)**
 
-Hier ist T unabhängig von der Amplitude (gleiche Isochronie), aber abhängig von der Masse. Größere Masse → längere Periodendauer; steifere Feder (größeres k) → kürzere Periodendauer.
+Hier ist T unabhaengig von der Amplitude (gleiche Isochronie), aber abhaengig von der Masse. Groessere Masse --> laengere Periodendauer; steifere Feder (groesseres k) --> kuerzere Periodendauer.
 
-**Formelklartext:** T = 2π√(m/k) bedeutet: Schwerere Masse (m ↑) schwingt langsamer (T ↑); steifere Feder (k ↑) schwingt schneller (T ↓). Die Amplitude beeinflusst T nicht (Isochronie). Einheitlich: [m] = kg, [k] = N/m → √(kg/(N/m)) = √(kg·m/N) = √(s²) = s ✓.
+**Formelklartext:** T = 2*Pi*Wurzel(m/k) bedeutet: Schwerere Masse (m steigt) schwingt langsamer (T steigt); steifere Feder (k steigt) schwingt schneller (T sinkt). Die Amplitude beeinflusst T nicht (Isochronie). Einheitlich: [m] = kg, [k] = N/m --> Wurzel(kg/(N/m)) = Wurzel(kg*m/N) = Wurzel(s^2) = s.
 
-Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Hängt man eine Masse m an die Feder und misst die statische Dehnung Δx, gilt k = mg/Δx.
+Die **Federkonstante k** (auch Federhaerte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie laesst sich experimentell bestimmen: Haengt man eine Masse m an die Feder und misst die statische Dehnung Delta-x, gilt k = mg/Delta-x.
 
 ## Energie im harmonischen Oszillator
 
-Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwischen kinetischer und potentieller Energie:
+Die Gesamtmechanik-Energie bleibt konstant (ungedaempfter Fall) und pendelt zwischen kinetischer und potentieller Energie:
 
-- E_kin = ½ · m · v² = ½ · m · ω² · A² · sin²(ωt)
-- E_pot = ½ · k · x² = ½ · k · A² · cos²(ωt)
-- E_ges = ½ · k · A² = const.
+- E_kin = 1/2 * m * v^2 = 1/2 * m * omega^2 * A^2 * sin^2(omega*t)
+- E_pot = 1/2 * k * x^2 = 1/2 * k * A^2 * cos^2(omega*t)
+- E_ges = 1/2 * k * A^2 = const.
 
-**Formelklartext:** E_ges = ½·k·A² heißt: Die **Gesamtenergie** des ungedämpften Oszillators ist konstant und wird allein durch **Federkonstante k** und **Amplitude A** bestimmt. Verdoppelte Amplitude → **viermal** mehr Energie (E ∝ A²). In der Ruhelage (x = 0) ist die gesamte Energie kinetisch (v maximal); in den Umkehrpunkten (x = ±A) ist sie vollständig potentiell.
+**Formelklartext:** E_ges = 1/2*k*A^2 heisst: Die **Gesamtenergie** des ungedaempften Oszillators ist konstant und wird allein durch **Federkonstante k** und **Amplitude A** bestimmt. Verdoppelte Amplitude --> **viermal** mehr Energie (E proportional A^2). In der Ruhelage (x = 0) ist die gesamte Energie kinetisch (v maximal); in den Umkehrpunkten (x = +/-A) ist sie vollstaendig potentiell.
 
-**Einheiten:** E_kin, E_pot, E_ges in **Joule [J]**; k in **N/m**, A in **m** → ½·k·A² hat Einheit (N/m)·m² = N·m = J ✓.
+**Einheiten:** E_kin, E_pot, E_ges in **Joule [J]**; k in **N/m**, A in **m** --> 1/2*k*A^2 hat Einheit (N/m)*m^2 = N*m = J.
 
-**Gleichstand** (E_kin = E_pot) herrscht bei x = ±A/√2 ≈ ±0,707·A.
+**Gleichstand** (E_kin = E_pot) herrscht bei x = +/-A/Wurzel(2) ungefaehr +/-0,707*A.
 
-> **Merke:** E_ges ∝ A² — verdoppelt man die Amplitude, vervierfacht sich die Gesamtenergie des Oszillators. In der Ruhelage (x = 0) ist alle Energie kinetisch; bei maximaler Auslenkung (x = ±A) ist alle Energie potentiell.
+> **Merke:** E_ges proportional A^2 -- verdoppelt man die Amplitude, vervierfacht sich die Gesamtenergie des Oszillators. In der Ruhelage (x = 0) ist alle Energie kinetisch; bei maximaler Auslenkung (x = +/-A) ist alle Energie potentiell.
 
-Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer Form in die andere über. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin² und cos² schwingen.
+Die Schwingungsenergie geht waehrend jeder Viertelperiode vollstaendig von einer Form in die andere ueber. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin^2 und cos^2 schwingen.
 
 
 
-## Resonanz und Dämpfung
+## Resonanz und Daempfung
 
-**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f₀ durch eine externe periodische Kraft angeregt wird – die Amplitude wächst dann stark an. Beispiele: MRT-Gerät (Kernspinresonanz), Tacoma-Narrows-Brücke (Windresonanz), Mikrowelle (Resonanzfrequenz des Wassermoleküls).
+**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f_0 durch eine externe periodische Kraft angeregt wird -- die Amplitude waechst dann stark an. Beispiele: MRT-Geraet (Kernspinresonanz), Tacoma-Narrows-Bruecke (Windresonanz), Mikrowelle (Resonanzfrequenz des Wassermolekuels).
 
-Bei schwacher Dämpfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfrequenz) ein scharfes Maximum bei f₀. Die **Güte Q** des Oszillators beschreibt, wie scharf die Resonanzkurve ist: hohe Güte → scharfe Resonanz, niedrige Güte → breite Resonanz. Q = f₀/Δf, wobei Δf die Halbwertsbreite ist.
+Bei schwacher Daempfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfrequenz) ein scharfes Maximum bei f_0. Die **Guete Q** des Oszillators beschreibt, wie scharf die Resonanzkurve ist: hohe Guete --> scharfe Resonanz, niedrige Guete --> breite Resonanz. Q = f_0/Delta-f, wobei Delta-f die Halbwertsbreite ist.
 
-**Dämpfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A₀ · e^(−δt). Man unterscheidet:
-- **Schwache Dämpfung** (δ < ω₀): Abklingende Schwingung, Amplitude nimmt langsam ab
-- **Aperiodischer Grenzfall** (δ = ω₀): Schnellstmögliche Rückkehr ohne Überschwinger
-- **Kriechfall** (δ > ω₀): Langsame Rückkehr ohne Schwingung
+**Daempfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A_0 * e^(-delta*t). Man unterscheidet:
+- **Schwache Daempfung** (delta < omega_0): Abklingende Schwingung, Amplitude nimmt langsam ab
+- **Aperiodischer Grenzfall** (delta = omega_0): Schnellstmoegliche Rueckkehr ohne Ueberschwinger
+- **Kriechfall** (delta > omega_0): Langsame Rueckkehr ohne Schwingung
 
-In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel als Stossdämpfer, Trommelfell-Dämpfung verhindert Nachschwingen).
+In biologischen Systemen sorgt Daempfung fuer Stabilitaet (z. B. Gelenkknorpel als Stossdaempfer, Trommelfell-Daempfung verhindert Nachschwingen).
 
-## Gedämpfte Schwingung — Vertiefung
+## Gedaempfte Schwingung -- Vertiefung
 
-Bisher haben wir die idealisierte, ungedämpfte Schwingung betrachtet. In der Realität verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedämpfte Schwingung** beschreibt diesen Energieverlust mathematisch:
+Bisher haben wir die idealisierte, ungedaempfte Schwingung betrachtet. In der Realitaet verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedaempfte Schwingung** beschreibt diesen Energieverlust mathematisch:
 
-**x(t) = A₀ · e^(−δt) · cos(ω_d · t + φ₀)**
+**x(t) = A_0 * e^(-delta*t) * cos(omega_d * t + phi_0)**
 
-- **δ** (Abklingkoeffizient) – gibt an, wie schnell die Amplitude abnimmt [1/s]
-- **A₀ · e^(−δt)** – die **Einhüllende**: die Amplitude nimmt exponentiell ab
-- **ω_d** (gedämpfte Kreisfrequenz) – ω_d = √(ω₀² − δ²), immer kleiner als ω₀
+- **delta** (Abklingkoeffizient) -- gibt an, wie schnell die Amplitude abnimmt [1/s]
+- **A_0 * e^(-delta*t)** -- die **Einhuellende**: die Amplitude nimmt exponentiell ab
+- **omega_d** (gedaempfte Kreisfrequenz) -- omega_d = Wurzel(omega_0^2 - delta^2), immer kleiner als omega_0
 
-Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Hälfte absinkt) beträgt: t½ = ln(2)/δ ≈ 0,693/δ.
+Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Haelfte absinkt) betraegt: t_halb = ln(2)/delta ungefaehr 0,693/delta.
 
-**Drei Dämpfungsfälle im Vergleich:**
+**Drei Daempfungsfaelle im Vergleich:**
 
 | Fall | Bedingung | Verhalten | Beispiel |
 |------|-----------|-----------|----------|
-| **Schwingfall** | δ < ω₀ | Oszillation mit abnehmender Amplitude | Stimmgabel in Luft |
-| **Aperiodischer Grenzfall** | δ = ω₀ | Schnellste Rückkehr ohne Überschwingen | Autofederung, Türschliesser |
-| **Kriechfall** | δ > ω₀ | Sehr langsame Rückkehr, kein Schwingen | Überdämpftes Galvanometer |
+| **Schwingfall** | delta < omega_0 | Oszillation mit abnehmender Amplitude | Stimmgabel in Luft |
+| **Aperiodischer Grenzfall** | delta = omega_0 | Schnellste Rueckkehr ohne Ueberschwingen | Autofederung, Tuerschliesser |
+| **Kriechfall** | delta > omega_0 | Sehr langsame Rueckkehr, kein Schwingen | Ueberdaempftes Galvanometer |
 
-> **Merke:** Der **aperiodische Grenzfall** (δ = ω₀) ist technisch besonders wichtig: Er beschreibt die schnellste Rückkehr zur Ruhelage ohne Überschwingen. Krankenwagen-Federung ist darauf abgestimmt, um den Patienten nicht durch Nachschwingen zu belasten.
+> **Merke:** Der **aperiodische Grenzfall** (delta = omega_0) ist technisch besonders wichtig: Er beschreibt die schnellste Rueckkehr zur Ruhelage ohne Ueberschwingen. Krankenwagen-Federung ist darauf abgestimmt, um den Patienten nicht durch Nachschwingen zu belasten.
 
-**Gütefaktor Q:** Q = ω₀/(2δ) gibt an, wie viele Schwingungen ein System ausführt, bevor die Amplitude auf e^(−π) ≈ 4,3 % abfällt. Hohe Güte (Q > 100): Stimmgabel, Quarzoszillator. Niedrige Güte (Q < 1): Krankenwagen-Stossdämpfer.
+**Guetefaktor Q:** Q = omega_0/(2*delta) gibt an, wie viele Schwingungen ein System ausfuehrt, bevor die Amplitude auf e^(-Pi) ungefaehr 4,3 % abfaellt. Hohe Guete (Q > 100): Stimmgabel, Quarzoszillator. Niedrige Guete (Q < 1): Krankenwagen-Stossdaempfer.
 
 ---
 
 ## Erzwungene Schwingung und Resonanzkatastrophe
 
-Wird einem gedämpften Oszillator durch eine **periodische äussere Kraft** F(t) = F₀·cos(Ω·t) Energie zugeführt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Ω** (nicht mit seiner Eigenfrequenz ω₀).
+Wird einem gedaempften Oszillator durch eine **periodische aeussere Kraft** F(t) = F_0*cos(Omega*t) Energie zugefuehrt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Omega** (nicht mit seiner Eigenfrequenz omega_0).
 
-Die Amplitude der stationären erzwungenen Schwingung hängt vom Frequenzverhältnis Ω/ω₀ ab:
+Die Amplitude der stationaeren erzwungenen Schwingung haengt vom Frequenzverhaeltnis Omega/omega_0 ab:
 
-**A(Ω) = F₀ / √((ω₀² − Ω²)² + (2δΩ)²)**
+**A(Omega) = F_0 / Wurzel((omega_0^2 - Omega^2)^2 + (2*delta*Omega)^2)**
 
 Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
-- **Ω_res = √(ω₀² − 2δ²)** ≈ ω₀ für schwache Dämpfung
-- Bei schwacher Dämpfung: A_max ≈ F₀/(2δω₀) – die Amplitude wird sehr gross
+- **Omega_res = Wurzel(omega_0^2 - 2*delta^2)** ungefaehr omega_0 fuer schwache Daempfung
+- Bei schwacher Daempfung: A_max ungefaehr F_0/(2*delta*omega_0) -- die Amplitude wird sehr gross
 
-**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Dämpfung strebt die Amplitude bei Ω = ω₀ theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
-- **Tacoma-Narrows-Brücke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Brücke an → Resonanzkatastrophe → Einsturz
-- **Millennium Bridge London (2000):** Fussgänger synchronisierten ihren Gang mit der Brückenfrequenz → seitliches Schwanken
-- **Marschieren auf Brücken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
+**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Daempfung strebt die Amplitude bei Omega = omega_0 theoretisch gegen unendlich. In der Praxis fuehrt dies zu Strukturversagen:
+- **Tacoma-Narrows-Bruecke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Bruecke an --> Resonanzkatastrophe --> Einsturz
+- **Millennium Bridge London (2000):** Fussgaenger synchronisierten ihren Gang mit der Brueckenfrequenz --> seitliches Schwanken
+- **Marschieren auf Bruecken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
 
-> **Merke:** **Resonanz** = Anregungsfrequenz ≈ Eigenfrequenz → maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Dämpfung → Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz); in der Technik muss sie kontrolliert oder vermieden werden.
+> **Merke:** **Resonanz** = Anregungsfrequenz ungefaehr Eigenfrequenz --> maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Daempfung --> Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz); in der Technik muss sie kontrolliert oder vermieden werden.
 
 **Resonanz in der Medizin und Biologie:**
-- **MRT:** Kernspinresonanz – Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T × Feldstärke)
-- **Mikrowelle:** Wassermoleküle absorbieren bei ~2,45 GHz maximal (Resonanzfrequenz der Rotation)
-- **Trommelfell:** Die Eigenresonanz bei ~3 kHz erklärt die maximale Hörempfindlichkeit in diesem Bereich
-- **Cochleärer Verstärker:** Äussere Haarzellen nutzen aktive Resonanzverstärkung (Prestin-Protein)
+- **MRT:** Kernspinresonanz -- Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T mal Feldstaerke)
+- **Mikrowelle:** Wassermolekuele absorbieren bei ~2,45 GHz maximal (Resonanzfrequenz der Rotation)
+- **Trommelfell:** Die Eigenresonanz bei ~3 kHz erklaert die maximale Hoerempfindlichkeit in diesem Bereich
+- **Cochleaerer Verstaerker:** Aeussere Haarzellen nutzen aktive Resonanzverstaerkung (Prestin-Protein)
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Fadenpendel auf Erde und Mond:**
-Pendellänge l = 1 m. Auf der Erde (g = 9,81 m/s²): T = 2π√(1/9,81) = 2π · 0,319 = 2,01 s.
-Auf dem Mond (g = 1,62 m/s²): T = 2π√(1/1,62) = 2π · 0,786 = 4,94 s — fast 2,5-mal langsamer.
+**Beispiel 1 -- Fadenpendel auf Erde und Mond:**
+Pendellaenge l = 1 m. Auf der Erde (g = 9,81 m/s^2): T = 2*Pi*Wurzel(1/9,81) = 2*Pi * 0,319 = 2,01 s.
+Auf dem Mond (g = 1,62 m/s^2): T = 2*Pi*Wurzel(1/1,62) = 2*Pi * 0,786 = 4,94 s -- fast 2,5-mal langsamer.
 
-**Beispiel 2 — Federpendel mit bekannter Masse:**
-m = 0,5 kg, Federkonstante k = 200 N/m. T = 2π√(0,5/200) = 2π · 0,05 = 0,314 s → f = 1/0,314 = 3,18 Hz. v_max = A · ω = A · 2πf = 0,1 · 2π · 3,18 = 2,0 m/s (bei A = 10 cm).
+**Beispiel 2 -- Federpendel mit bekannter Masse:**
+m = 0,5 kg, Federkonstante k = 200 N/m. T = 2*Pi*Wurzel(0,5/200) = 2*Pi * 0,05 = 0,314 s --> f = 1/0,314 = 3,18 Hz. v_max = A * omega = A * 2*Pi*f = 0,1 * 2*Pi * 3,18 = 2,0 m/s (bei A = 10 cm).
 
-**Beispiel 3 — Energiegleichstand:**
-Federpendel mit k = 100 N/m, A = 0,2 m. E_ges = ½ · 100 · 0,04 = 2 J. Gleichstand E_kin = E_pot bei x = A/√2 = 0,2/1,414 = 0,141 m. An diesem Punkt: E_kin = E_pot = 1 J.
+**Beispiel 3 -- Energiegleichstand:**
+Federpendel mit k = 100 N/m, A = 0,2 m. E_ges = 1/2 * 100 * 0,04 = 2 J. Gleichstand E_kin = E_pot bei x = A/Wurzel(2) = 0,2/1,414 = 0,141 m. An diesem Punkt: E_kin = E_pot = 1 J.
 
-**Beispiel 4 — Resonanzfrequenz im MRT:**
-Die Larmorfrequenz eines Wasserstoffkerns im MRT berechnet sich als f = γ · B₀. Mit γ = 42,58 MHz/T und B₀ = 1,5 T: f = 42,58 · 1,5 = 63,87 MHz. Bei 3 T: f = 127,74 MHz. Die Anregung mit genau dieser Frequenz versetzt die Protonen in Resonanz — sie absorbieren die RF-Energie maximal.
+**Beispiel 4 -- Resonanzfrequenz im MRT:**
+Die Larmorfrequenz eines Wasserstoffkerns im MRT berechnet sich als f = gamma * B_0. Mit gamma = 42,58 MHz/T und B_0 = 1,5 T: f = 42,58 * 1,5 = 63,87 MHz. Bei 3 T: f = 127,74 MHz. Die Anregung mit genau dieser Frequenz versetzt die Protonen in Resonanz -- sie absorbieren die RF-Energie maximal.
 
-**Beispiel 5 — Federkonstante bestimmen:**
-An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Δx = 0,3 · 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer beträgt dann T = 2π√(0,3/49,1) = 0,491 s.
+**Beispiel 5 -- Federkonstante bestimmen:**
+An einer vertikalen Feder haengt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Delta-x = 0,3 * 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer betraegt dann T = 2*Pi*Wurzel(0,3/49,1) = 0,491 s.
 
-**Beispiel 6 — Gedämpfte Schwingung:**
-Ein Federpendel hat ω₀ = 10 rad/s und δ = 0,5 s⁻¹. Die gedämpfte Frequenz: ω_d = √(100 − 0,25) = √99,75 ≈ 9,99 rad/s (kaum verändert bei schwacher Dämpfung). Die Halbwertszeit der Amplitude: t½ = ln(2)/0,5 = 1,39 s. Der Gütefaktor: Q = 10/(2·0,5) = 10 → das System führt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
+**Beispiel 6 -- Gedaempfte Schwingung:**
+Ein Federpendel hat omega_0 = 10 rad/s und delta = 0,5 s^(-1). Die gedaempfte Frequenz: omega_d = Wurzel(100 - 0,25) = Wurzel(99,75) ungefaehr 9,99 rad/s (kaum veraendert bei schwacher Daempfung). Die Halbwertszeit der Amplitude: t_halb = ln(2)/0,5 = 1,39 s. Der Guetefaktor: Q = 10/(2*0,5) = 10 --> das System fuehrt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
 
-**Beispiel 7 — Resonanzfrequenz einer erzwungenen Schwingung:**
-Ein Oszillator hat ω₀ = 20 rad/s und δ = 2 s⁻¹. Die Resonanzfrequenz: Ω_res = √(400 − 8) = √392 ≈ 19,8 rad/s. Bei schwacher Dämpfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
+**Beispiel 7 -- Resonanzfrequenz einer erzwungenen Schwingung:**
+Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz: Omega_res = Wurzel(400 - 8) = Wurzel(392) ungefaehr 19,8 rad/s. Bei schwacher Daempfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
 
 ## Klinische Vertiefung
 
-**Herzfrequenzvariabilität (HRV):** Der Herzrhythmus ist annähernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor für kardiovaskuläre Ereignisse.
+**Herzfrequenzvariabilitaet (HRV):** Der Herzrhythmus ist annaehernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor fuer kardiovaskulaere Ereignisse.
 
-**Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1–20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Auflösung des Ultraschalls.
+**Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1-20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Aufloesung des Ultraschalls.
 
-**Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stösse auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stösse (Dämpfung) und verhindert so Resonanzschäden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschränkt.
+**Gelenkknorpel als Daempfer:** Bei jedem Schritt wirken Stoesse auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stoesse (Daempfung) und verhindert so Resonanzschaeden am Knochen. Bei Arthrose ist diese Daempfungsfunktion eingeschraenkt.
 
-**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt — der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.
+**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt -- der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusaetzlich zu belasten.
 
 ---
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Häufige Fragen:**
-- "Wie ändert sich T beim Fadenpendel, wenn die Länge vervierfacht wird?" → T verdoppelt sich (T ∝ √l; √4 = 2)
-- "Bei welcher Auslenkung sind E_kin und E_pot gleich?" → x = A/√2 ≈ 0,707·A
-- "Wovon hängt die Periodendauer des Fadenpendels ab?" → nur von l und g (nicht von Masse oder Amplitude)
-- "Was ist Resonanz?" → Anregungsfrequenz = Eigenfrequenz → maximale Amplitudenzunahme
+**Haeufige Fragen:**
+- “Wie aendert sich T beim Fadenpendel, wenn die Laenge vervierfacht wird?” --> T verdoppelt sich (T proportional Wurzel(l); Wurzel(4) = 2)
+- “Bei welcher Auslenkung sind E_kin und E_pot gleich?” --> x = A/Wurzel(2) ungefaehr 0,707*A
+- “Wovon haengt die Periodendauer des Fadenpendels ab?” --> nur von l und g (nicht von Masse oder Amplitude)
+- “Was ist Resonanz?” --> Anregungsfrequenz = Eigenfrequenz --> maximale Amplitudenzunahme
 
 **Typische Denkfehler (MedAT):**
-- **ω ≠ f:** Kreisfrequenz ω [rad/s] ist 2π mal die Frequenz f [Hz]. „ω = 10 rad/s“ bedeutet nicht „10 Hz“, sondern f = ω/(2π) ≈ 1,59 Hz.
-- **E ∝ A (falsch):** Energie geht mit **A²**; doppelte Amplitude = vierfache Energie. Nicht „doppelte Amplitude → doppelte Energie“.
-- **Faden vs. Feder:** Beim Fadenpendel hängt T **nur** von l und g ab (nicht von m). Beim Federpendel hängt T von m **und** k ab. Beide: T unabhängig von A (Isochronie).
-- **Resonanz:** Maximale Amplitude nur bei **f_Anregung = f_Eigen**. Nicht „bei höchster Anregungsfrequenz“ oder „bei kleinster Dämpfung“ (Dämpfung bestimmt nur die Breite der Resonanzkurve).
-- **Gleichstand E_kin = E_pot:** Bei x = ±A/√2 ≈ ±0,707·A, **nicht** bei x = A/2.
+- **omega ungleich f:** Kreisfrequenz omega [rad/s] ist 2*Pi mal die Frequenz f [Hz]. omega = 10 rad/s bedeutet nicht 10 Hz, sondern f = omega/(2*Pi) ungefaehr 1,59 Hz.
+- **E proportional A (falsch):** Energie geht mit **A^2**; doppelte Amplitude = vierfache Energie. Nicht doppelte Amplitude --> doppelte Energie.
+- **Faden vs. Feder:** Beim Fadenpendel haengt T **nur** von l und g ab (nicht von m). Beim Federpendel haengt T von m **und** k ab. Beide: T unabhaengig von A (Isochronie).
+- **Resonanz:** Maximale Amplitude nur bei **f_Anregung = f_Eigen**. Nicht bei hoechster Anregungsfrequenz oder bei kleinster Daempfung (Daempfung bestimmt nur die Breite der Resonanzkurve).
+- **Gleichstand E_kin = E_pot:** Bei x = +/-A/Wurzel(2) ungefaehr +/-0,707*A, **nicht** bei x = A/2.
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Harmonische Schwingung**: x(t) = A·cos(ωt + φ₀); Rückstellkraft F = −k·x (Hooke)
-- **Kreisfrequenz**: ω = 2πf = 2π/T [rad/s] — verbindet alle Schwingungsparameter
-- **Fadenpendel**: T = 2π√(l/g) — unabhängig von Masse und Amplitude (Isochronie)
-- **Federpendel**: T = 2π√(m/k) — unabhängig von Amplitude; T steigt mit Masse, sinkt mit Federhärte
-- **Resonanz**: maximale Energieübertragung bei f_Anregung = f_Eigen; im MRT: Larmorfrequenz γ·B₀
-- **Dämpfung**: D < 1 → Schwingfall (Nachschwingen); D = 1 → aperiodischer Grenzfall (Krankenwagen); D > 1 → Kriechfall
-- **Gedämpfte Schwingung**: x(t) = A₀·e^(−δt)·cos(ω_d·t); Amplitude klingt exponentiell ab; t½ = ln(2)/δ
-- **Erzwungene Schwingung**: System schwingt mit Anregungsfrequenz Ω; Resonanzkurve hat Maximum bei Ω ≈ ω₀
-- **Resonanzkatastrophe**: Resonanz ohne ausreichende Dämpfung → Strukturversagen (Tacoma-Brücke)`,
+- **Harmonische Schwingung**: x(t) = A*cos(omega*t + phi_0); Rueckstellkraft F = -k*x (Hooke)
+- **Kreisfrequenz**: omega = 2*Pi*f = 2*Pi/T [rad/s] -- verbindet alle Schwingungsparameter
+- **Fadenpendel**: T = 2*Pi*Wurzel(l/g) -- unabhaengig von Masse und Amplitude (Isochronie)
+- **Federpendel**: T = 2*Pi*Wurzel(m/k) -- unabhaengig von Amplitude; T steigt mit Masse, sinkt mit Federhaerte
+- **Resonanz**: maximale Energieuebertragung bei f_Anregung = f_Eigen; im MRT: Larmorfrequenz gamma*B_0
+- **Daempfung**: D < 1 --> Schwingfall (Nachschwingen); D = 1 --> aperiodischer Grenzfall (Krankenwagen); D > 1 --> Kriechfall
+- **Gedaempfte Schwingung**: x(t) = A_0*e^(-delta*t)*cos(omega_d*t); Amplitude klingt exponentiell ab; t_halb = ln(2)/delta
+- **Erzwungene Schwingung**: System schwingt mit Anregungsfrequenz Omega; Resonanzkurve hat Maximum bei Omega ungefaehr omega_0
+- **Resonanzkatastrophe**: Resonanz ohne ausreichende Daempfung --> Strukturversagen (Tacoma-Bruecke)`,
 
       lernziele: [
         "Die Schwingungsgleichung x(t) = A·cos(ωt+φ) aufschreiben und Amplitude, Kreisfrequenz und Phase benennen.",
@@ -505,17 +610,110 @@ Ein Oszillator hat ω₀ = 20 rad/s und δ = 2 s⁻¹. Die Resonanzfrequenz: Ω_
       ],
       content: `## Einleitung
 
-Wirf einen Stein ins Wasser: Kreisförmige Wellen breiten sich aus, aber der Korken auf der Oberfläche bewegt sich nur auf und ab -- er wandert nicht mit der Welle mit. Dieses einfache Bild zeigt das Grundprinzip aller **Wellen**: Sie transportieren **Energie, aber keine Materie**. Ob Schall, Licht oder Ultraschall -- die gleiche Gleichung c = f mal Lambda beschreibt sie alle. Wer versteht, was beim Medienwechsel passiert und was akustische Impedanz bedeutet, kann Ultraschalldiagnostik, MRT und Röntgen physikalisch einordnen.
+Wirf einen Stein ins Wasser und beobachte: Die Ringe breiten sich aus, aber ein Korken auf der Oberflaeche huepft nur auf und ab -- er wandert nicht mit. Das ist das Grundprinzip jeder **Welle**: Sie transportiert **Energie, aber keine Materie**. Ob der Schall deiner Stimme, das Licht einer Lampe oder der Ultraschall beim Arzt -- alle folgen derselben einfachen Gleichung.
 
 **In diesem Kapitel lernst du:**
-- was die Wellengleichung c = f mal Lambda aussagt und welche Größe zum Medium, welche zur Quelle gehört
+- was die Gleichung c = f mal Lambda bedeutet und welche Groesse zum Medium gehoert, welche zur Quelle
+- worin sich Schallwellen und Lichtwellen unterscheiden
+- warum Schall in Wasser viel schneller ist als in Luft
+- warum der Arzt beim Ultraschall Gel auf die Haut tut
+- wie das Spektrum von Radiowellen bis Roentgenstrahlen aufgebaut ist
+
+---
+
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Die Grundformel: c = f mal Lambda
+
+Jede Welle laesst sich mit drei Groessen beschreiben:
+- **c** (Geschwindigkeit) -- haengt vom Material ab, nicht von der Quelle. Schall in Luft: ca. 340 m/s. Schall in Wasser: ca. 1480 m/s.
+- **f** (Frequenz) -- wird von der Quelle bestimmt. Eine Stimmgabel schwingt immer mit derselben Frequenz, egal in welchem Medium.
+- **Lambda** (Wellenlaenge) -- der Abstand von Wellenberg zu Wellenberg. Sie passt sich an: Lambda = c/f.
+
+Wechselt eine Welle das Medium (z. B. Schall von Luft in Wasser), aendert sich die Geschwindigkeit c und damit auch die Wellenlaenge. Die Frequenz bleibt aber gleich.
+
+> **Merke:** c gehoert zum Medium, f gehoert zur Quelle, Lambda passt sich an. Beim Medienwechsel aendert sich die Wellenlaenge, nicht die Frequenz!
+
+---
+
+## Zwei Wellentypen
+
+**Transversalwellen:** Die Schwingung geht quer zur Ausbreitungsrichtung -- wie ein Seil, das du auf und ab bewegst. Beispiele: Licht, Seilwellen. Sie koennen polarisiert werden (Sonnenbrille!).
+
+**Longitudinalwellen:** Die Schwingung geht laengs, in Ausbreitungsrichtung -- wie eine zusammengedrueckte Sprungfeder. Beispiele: Schall, Druckwellen. Sie koennen NICHT polarisiert werden.
+
+In Gasen und Fluessigkeiten gibt es nur Laengswellen. In Festkoerpern gibt es beide.
+
+> **Merke:** Schall = Laengswelle (braucht ein Medium). Licht = Querwelle (braucht kein Medium). Schall im Vakuum? Geht nicht!
+
+---
+
+## Schallgeschwindigkeit
+
+Schall breitet sich in verschiedenen Materialien verschieden schnell aus:
+- Luft: ca. 340 m/s
+- Wasser: ca. 1480 m/s
+- Koerpergewebe: ca. 1540 m/s
+- Knochen: ca. 3500 m/s
+
+Je steifer das Material, desto schneller der Schall. Wir hoeren Toene von 20 Hz bis 20000 Hz. Ultraschall liegt darueber -- Fledermaeuse nutzen ihn, und der Arzt setzt ihn fuer Bilder ein.
+
+---
+
+## Licht und das Spektrum
+
+Licht ist eine Welle, die **kein Medium braucht** -- es bewegt sich auch durchs Vakuum, mit c = 300000 km/s. Je nach Wellenlaenge unterscheiden wir: Radiowellen, Mikrowellen, Infrarot, sichtbares Licht (380-750 nm), UV, Roentgen und Gammastrahlung. Kuerzere Wellenlaenge bedeutet mehr Energie.
+
+---
+
+## Warum braucht man Ultraschallgel?
+
+Wenn Schall von Luft auf Haut trifft, wird fast alles reflektiert (99,9 %), weil der Widerstand (die Impedanz) voellig verschieden ist. Das Gel hat eine aehnliche Impedanz wie Koerpergewebe und schliesst die Luftluecke. So kann der Ultraschall ins Gewebe eindringen und ein Bild erzeugen.
+
+> **Merke:** Grosse Impedanzdifferenz = starke Reflexion = kein Bild. Gel beseitigt die Luft-Haut-Grenze.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Haeufige Fragen:**
+- “Was aendert sich beim Medienwechsel?” -- Die Wellenlaenge, nicht die Frequenz
+- “Warum Ultraschallgel?” -- Luft-Haut-Impedanzsprung beseitigen
+- “Transversalwellen in Fluessigkeiten?” -- Nein, nur Laengswellen
+
+**Typische Fallen:**
+- Sichtbares Licht: 380-750 **Nanometer** (nicht Millimeter!)
+- c gehoert zum Medium, f zur Quelle -- nicht umgekehrt
+- Schall = Laengswelle, Licht = Querwelle -- nicht verwechseln
+- Hoehere Ultraschallfrequenz = bessere Aufloesung, aber weniger Eindringtiefe
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Wellengleichung**: c = f mal Lambda; c haengt vom Medium ab
+- **Transversal** (Licht): Schwingung quer, polarisierbar; **Longitudinal** (Schall): Schwingung laengs, nicht polarisierbar
+- **Schallgeschwindigkeit**: Luft ~340 m/s, Wasser ~1480 m/s, Gewebe ~1540 m/s, Knochen ~3500 m/s
+- **EM-Spektrum**: Radio, Mikrowelle, IR, sichtbares Licht, UV, Roentgen, Gamma
+- **Impedanz**: Z = Dichte mal c; grosser Z-Unterschied = starke Reflexion; Ultraschallgel noetig
+- **Medienwechsel**: f bleibt gleich, Lambda aendert sich`,
+      contentExtended: `## Einleitung
+
+Wirf einen Stein ins Wasser: Kreisfoermige Wellen breiten sich aus, aber der Korken auf der Oberflaeche bewegt sich nur auf und ab -- er wandert nicht mit der Welle mit. Dieses einfache Bild zeigt das Grundprinzip aller **Wellen**: Sie transportieren **Energie, aber keine Materie**. Ob Schall, Licht oder Ultraschall -- die gleiche Gleichung c = f mal Lambda beschreibt sie alle. Wer versteht, was beim Medienwechsel passiert und was akustische Impedanz bedeutet, kann Ultraschalldiagnostik, MRT und Roentgen physikalisch einordnen.
+
+**In diesem Kapitel lernst du:**
+- was die Wellengleichung c = f mal Lambda aussagt und welche Groesse zum Medium, welche zur Quelle gehoert
 - worin sich Transversalwellen (Licht, Seilwellen) und Longitudinalwellen (Schall) grundlegend unterscheiden
 - warum Schall in Wasser viermal schneller ist als in Luft und wie sich das auf Ultraschall auswirkt
 - was akustische Impedanz bedeutet und warum ohne Ultraschallgel kein Bild entsteht
 - wie das elektromagnetische Spektrum aufgebaut ist -- von Radiowellen bis Gammastrahlung
 
-**Kontext — worum geht es und wofür brauchst du das?**  
-Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie, nicht Materie. Schall (Longitudinalwelle), Licht und Röntgen (Transversalwellen) folgen c = f·λ. In der Medizin: Ultraschall (Echografie), MRT (Radiowellen), Röntgen. Du brauchst das für Optik, Atomphysik und für MedAT-Aufgaben zu Wellenlänge, Frequenz und Impedanz.
+**Kontext -- worum geht es und wofuer brauchst du das?**
+Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie, nicht Materie. Schall (Longitudinalwelle), Licht und Roentgen (Transversalwellen) folgen c = f*Lambda. In der Medizin: Ultraschall (Echografie), MRT (Radiowellen), Roentgen. Du brauchst das fuer Optik, Atomphysik und fuer MedAT-Aufgaben zu Wellenlaenge, Frequenz und Impedanz.
 
 ---
 
@@ -525,158 +723,158 @@ Hier geht es um **Ausbreitung von Schwingungen**: Wellen transportieren Energie,
 
 
 
-Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** – die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
+Eine Welle ist die raeumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums fuehren nur lokale Schwingungen aus, waehrend die Stoerung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 
 
-## Grundgrößen der Welle
+## Grundgroessen der Welle
 
-**c = f · λ** – die fundamentale Wellengleichung (bzw. **c = λ · f**)
+**c = f * Lambda** -- die fundamentale Wellengleichung (bzw. **c = Lambda * f**)
 
-- **c** (Wellengeschwindigkeit) [m/s] – wird durch das Medium bestimmt, nicht durch die Quelle
-- **f** (Frequenz) [Hz] – wird von der Quelle festgelegt und ändert sich beim Medienwechsel nicht
-- **λ** (Wellenlänge) [m] – Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
+- **c** (Wellengeschwindigkeit) [m/s] -- wird durch das Medium bestimmt, nicht durch die Quelle
+- **f** (Frequenz) [Hz] -- wird von der Quelle festgelegt und aendert sich beim Medienwechsel nicht
+- **Lambda** (Wellenlaenge) [m] -- Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
 
-**Formelklartext:** c = f·λ bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** × **Wellenlänge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt λ = c/f – die Wellenlänge **passt sich** an. Beim Übergang in ein schnelleres Medium (z. B. Schall: Luft → Wasser) wird λ **größer**; in ein langsameres Medium wird λ **kleiner**. Die Frequenz bleibt dabei immer gleich („Quelle schwingt weiter mit derselben Rate“).
+**Formelklartext:** c = f*Lambda bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** x **Wellenlaenge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt Lambda = c/f -- die Wellenlaenge **passt sich** an. Beim Uebergang in ein schnelleres Medium (z. B. Schall: Luft --> Wasser) wird Lambda **groesser**; in ein langsameres Medium wird Lambda **kleiner**. Die Frequenz bleibt dabei immer gleich (Quelle schwingt weiter mit derselben Rate).
 
-> **Merke:** c gehört zum Medium, f gehört zur Quelle, λ = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
+> **Merke:** c gehoert zum Medium, f gehoert zur Quelle, Lambda = c/f passt sich an. Beim Medienwechsel aendert sich die Wellenlaenge, nicht die Frequenz!
 
-Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge λ = c/f. In einem schnelleren Medium wird λ grösser, in einem langsameren kleiner – bei identischer Frequenz. Dieses Prinzip erklärt sowohl Brechung als auch die unterschiedlichen Wellenlängen von Ultraschall in verschiedenen Geweben.
+Da c medium-spezifisch und f quellenspezifisch ist, aendert sich beim Medienwechsel die Wellenlaenge Lambda = c/f. In einem schnelleren Medium wird Lambda groesser, in einem langsameren kleiner -- bei identischer Frequenz. Dieses Prinzip erklaert sowohl Brechung als auch die unterschiedlichen Wellenlaengen von Ultraschall in verschiedenen Geweben.
 
 ## Transversal- vs. Longitudinalwellen
 
 | Eigenschaft | Transversalwelle | Longitudinalwelle |
 |-------------|-----------------|-------------------|
 | Schwingungsrichtung | senkrecht zur Ausbreitung | parallel zur Ausbreitung |
-| Polarisation | möglich | nicht möglich |
-| Medium | Festkörper + EM-Feld | Gase, Flüssigkeiten, Festkörper |
+| Polarisation | moeglich | nicht moeglich |
+| Medium | Festkoerper + EM-Feld | Gase, Fluessigkeiten, Festkoerper |
 | Beispiele | Licht, Seilwellen | Schall, Druckwellen |
 
 **Transversalwellen**: Schwingungsrichtung **senkrecht** zur Ausbreitungsrichtung.
-Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflächenwellen, seismische S-Wellen.
-Transversalwellen können **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phänomen.
+Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflaechen­wellen, seismische S-Wellen.
+Transversalwellen koennen **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phaenomen.
 
-**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verdünnungen im Medium.
-Beispiele: Schallwellen, Druckwellen in Gasen und Flüssigkeiten, seismische P-Wellen.
-In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Scherkräfte → keine Transversalwellen). In Festkörpern existieren beide Typen.
+**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verduennungen im Medium.
+Beispiele: Schallwellen, Druckwellen in Gasen und Fluessigkeiten, seismische P-Wellen.
+In Gasen und Fluessigkeiten koennen nur Longitudinalwellen existieren (keine Scherkraefte --> keine Transversalwellen). In Festkoerpern existieren beide Typen.
 
 ## Schallwellen
 
-Schall ist eine **mechanische Längswelle** – sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
+Schall ist eine **mechanische Laengswelle** -- sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
 
 Schallgeschwindigkeiten:
-- Luft (20 °C): **c ≈ 340 m/s** (temperaturabhängig: c ≈ 331 + 0,6·T [°C] m/s)
-- Wasser: c ≈ 1480 m/s
-- Weichgewebe: c ≈ 1540 m/s
-- Knochen: c ≈ 3000–4000 m/s
-- Stahl: c ≈ 5900 m/s
+- Luft (20 Grad C): **c ungefaehr 340 m/s** (temperaturabhaengig: c ungefaehr 331 + 0,6*T [Grad C] m/s)
+- Wasser: c ungefaehr 1480 m/s
+- Weichgewebe: c ungefaehr 1540 m/s
+- Knochen: c ungefaehr 3000-4000 m/s
+- Stahl: c ungefaehr 5900 m/s
 
-> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro °C Temperaturerhöhung.
+> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro Grad C Temperaturerhoehung.
 
-Der Hörbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermäusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hörgrenze ab (Presbyakusis): 60-Jährige hören typischerweise nur noch bis ~12 kHz.
+Der Hoerbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermaeusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hoergrenze ab (Presbyakusis): 60-Jaehrige hoeren typischerweise nur noch bis ~12 kHz.
 
 ## Elektromagnetische Wellen
 
-Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benötigen **kein Medium** und breiten sich im Vakuum mit **c = 3 × 10⁸ m/s** aus. Die Frequenz bestimmt die Energie eines Photons: **E = h·f** (Planck'sche Beziehung, h = 6,626 × 10⁻³⁴ J·s).
+Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benoetigen **kein Medium** und breiten sich im Vakuum mit **c = 3 x 10^8 m/s** aus. Die Frequenz bestimmt die Energie eines Photons: **E = h*f** (Plancksche Beziehung, h = 6,626 x 10^(-34) J*s).
 
 Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz):
 - **Radiowellen** (< 300 MHz): MRT-Anregung, Radio
-- **Mikrowellen** (300 MHz – 300 GHz): Mikrowellenherd, WLAN
-- **Infrarot** (300 GHz – 400 THz): Wärmestrahlung, Thermographie
-- **Sichtbares Licht** (**380–750 nm**): Augendiagnostik, Endoskopie; Wellenlänge in **Nanometern** (nm), nicht mm, cm oder m
-- **UV** (10–400 nm): Desinfektion, Vitamin-D-Synthese
-- **Röntgenstrahlung** (0,01–10 nm): Röntgendiagnostik, CT
+- **Mikrowellen** (300 MHz - 300 GHz): Mikrowellenherd, WLAN
+- **Infrarot** (300 GHz - 400 THz): Waermestrahlung, Thermographie
+- **Sichtbares Licht** (**380-750 nm**): Augendiagnostik, Endoskopie; Wellenlaenge in **Nanometern** (nm), nicht mm, cm oder m
+- **UV** (10-400 nm): Desinfektion, Vitamin-D-Synthese
+- **Roentgenstrahlung** (0,01-10 nm): Roentgendiagnostik, CT
 - **Gammastrahlung** (< 0,01 nm): Nuklearmedizin, PET
 
 ## Medizinischer Ultraschall
 
-Diagnostischer Ultraschall nutzt Frequenzen von **2–20 MHz** (weit über menschliches Hören hinaus). Hochfrequenter Ultraschall hat kurze Wellenlänge → bessere Ortsauflösung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ≈ 1540 m/s aus.
+Diagnostischer Ultraschall nutzt Frequenzen von **2-20 MHz** (weit ueber menschliches Hoeren hinaus). Hochfrequenter Ultraschall hat kurze Wellenlaenge --> bessere Ortsaufloesung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ungefaehr 1540 m/s aus.
 
-Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstärke hängt vom Impedanzunterschied der Gewebe ab. Je grösser der Impedanzunterschied an einer Grenzfläche, desto stärker das Echo.
+Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstaerke haengt vom Impedanzunterschied der Gewebe ab. Je groesser der Impedanzunterschied an einer Grenzflaeche, desto staerker das Echo.
 
-## Akustische Impedanz — Widerstand gegen Schallausbreitung
+## Akustische Impedanz -- Widerstand gegen Schallausbreitung
 
 Die **akustische Impedanz** Z beschreibt, wie leicht sich Schall in einem Medium ausbreitet:
 
-**Z = ρ · c** (mit ρ = Dichte des Mediums in kg/m³, c = Schallgeschwindigkeit in m/s, Einheit: Pa·s/m = Rayl)
+**Z = Dichte * c** (mit Dichte = Dichte des Mediums in kg/m^3, c = Schallgeschwindigkeit in m/s, Einheit: Pa*s/m = Rayl)
 
-**Formelklartext:** Z = ρ·c ist der „Widerstand“ des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit → hohe Impedanz. An Grenzflächen mit **großem Z-Unterschied** (z. B. Luft–Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [ρ]·[c] = (kg/m³)·(m/s) = kg/(m²·s) = Pa·s/m (Rayl).
+**Formelklartext:** Z = Dichte*c ist der Widerstand des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit --> hohe Impedanz. An Grenzflaechen mit **grossem Z-Unterschied** (z. B. Luft-Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [Dichte]*[c] = (kg/m^3)*(m/s) = kg/(m^2*s) = Pa*s/m (Rayl).
 
-Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschiedlicher Impedanz (Z₁ ≠ Z₂), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
+Trifft eine Schallwelle auf eine Grenzflaeche zwischen zwei Medien mit unterschiedlicher Impedanz (Z_1 ungleich Z_2), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
 
-**Reflexionskoeffizient:** R = [(Z₂ − Z₁)/(Z₂ + Z₁)]²
+**Reflexionskoeffizient:** R = [(Z_2 - Z_1)/(Z_2 + Z_1)]^2
 
-- Luft/Gewebe-Grenzfläche: R ≈ 0,998 → fast vollständige Reflexion → deshalb Ultraschall-Gel nötig
-- Weichteil/Knochen-Grenzfläche: R ≈ 0,4 → starke Reflexion
+- Luft/Gewebe-Grenzflaeche: R ungefaehr 0,998 --> fast vollstaendige Reflexion --> deshalb Ultraschall-Gel noetig
+- Weichteil/Knochen-Grenzflaeche: R ungefaehr 0,4 --> starke Reflexion
 
-> **Merke:** Große Impedanzdifferenz → starke Reflexion → schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzfläche und ermöglicht optimale Schallkopplung.
+> **Merke:** Grosse Impedanzdifferenz --> starke Reflexion --> schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzflaeche und ermoeglicht optimale Schallkopplung.
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Wellenlänge berechnen:**
+**Beispiel 1 -- Wellenlaenge berechnen:**
 Ultraschall mit f = 5 MHz in Gewebe (c = 1540 m/s):
-λ = c/f = 1540 / (5 × 10⁶) = 3,08 × 10⁻⁴ m = 0,308 mm.
-Die Auflösung liegt grössenordnungsmässig bei λ, also ca. 0,3 mm — ausreichend für die meisten diagnostischen Zwecke.
+Lambda = c/f = 1540 / (5 x 10^6) = 3,08 x 10^(-4) m = 0,308 mm.
+Die Aufloesung liegt groessenordnungsmaessig bei Lambda, also ca. 0,3 mm -- ausreichend fuer die meisten diagnostischen Zwecke.
 
-**Beispiel 2 — Schallgeschwindigkeit und Eindringtiefe:**
+**Beispiel 2 -- Schallgeschwindigkeit und Eindringtiefe:**
 Ultraschallpuls in Gewebe, Echo nach t = 0,13 ms empfangen. Reflexionsort:
-d = c · t / 2 = 1540 · 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rückweg → durch 2).
+d = c * t / 2 = 1540 * 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rueckweg --> durch 2).
 
-**Beispiel 3 — EM-Spektrum:**
-Sichtbares Licht (λ = 550 nm, grün): f = c/λ = (3 × 10⁸)/(550 × 10⁻⁹) = 5,45 × 10¹⁴ Hz.
-Röntgenstrahlung (λ = 0,1 nm): f = (3 × 10⁸)/(10⁻¹⁰) = 3 × 10¹⁸ Hz → 10.000× höhere Frequenz und Energie als Licht.
+**Beispiel 3 -- EM-Spektrum:**
+Sichtbares Licht (Lambda = 550 nm, gruen): f = c/Lambda = (3 x 10^8)/(550 x 10^(-9)) = 5,45 x 10^14 Hz.
+Roentgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --> 10.000x hoehere Frequenz und Energie als Licht.
 
-**Beispiel 4 — Schallgeschwindigkeiten vergleichen:**
+**Beispiel 4 -- Schallgeschwindigkeiten vergleichen:**
 
-| Medium | c [m/s] | Impedanz Z [kg/m²s] |
+| Medium | c [m/s] | Impedanz Z [kg/m^2*s] |
 |--------|---------|---------------------|
 | Luft | 340 | 420 |
-| Wasser | 1480 | 1,48 × 10⁶ |
-| Weichgewebe | 1540 | 1,63 × 10⁶ |
-| Knochen | 3500 | 6,3 × 10⁶ |
+| Wasser | 1480 | 1,48 x 10^6 |
+| Weichgewebe | 1540 | 1,63 x 10^6 |
+| Knochen | 3500 | 6,3 x 10^6 |
 
-Die akustische Impedanz Z = ρ · c bestimmt die Reflexion an Grenzflächen. Je grösser der Impedanzunterschied, desto stärker die Reflexion (z. B. Gewebe–Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z₂ − Z₁)/(Z₂ + Z₁))².
+Die akustische Impedanz Z = Dichte * c bestimmt die Reflexion an Grenzflaechen. Je groesser der Impedanzunterschied, desto staerker die Reflexion (z. B. Gewebe-Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z_2 - Z_1)/(Z_2 + Z_1))^2.
 
-**Beispiel 5 — Reflexionskoeffizient Gewebe–Knochen:**
-R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347 → 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe–Luft wäre R ≈ 99,9 % — deshalb ist Ultraschallgel essenziell.
+**Beispiel 5 -- Reflexionskoeffizient Gewebe-Knochen:**
+R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefaehr 0,347 --> 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe-Luft waere R ungefaehr 99,9 % -- deshalb ist Ultraschallgel essenziell.
 
 ## Klinische Vertiefung
 
-**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzfläche (Impedanzunterschied Luft–Haut wäre riesig → fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
+**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzflaeche (Impedanzunterschied Luft-Haut waere riesig --> fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
 
-**Röntgen- vs. Ultraschall-Wellenlänge:** Röntgenstrahlen (λ ~ 0,01–10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (λ ~ 0,1–1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
+**Roentgen- vs. Ultraschall-Wellenlaenge:** Roentgenstrahlen (Lambda ~ 0,01-10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (Lambda ~ 0,1-1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
 
-**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an – ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.
+**Temperaturabhaengigkeit im Alltag:** In einem Konzertsaal erwaermt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden muessen.
 
 ---
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Häufige Fragen:**
-- "Was ändert sich beim Medienwechsel einer Welle?" → λ ändert sich, f bleibt gleich (c ist mediumspezifisch)
-- "Welche Wellenlänge hat Ultraschall (5 MHz) in Gewebe (c = 1540 m/s)?" → λ = 1540/5×10⁶ ≈ 0,3 mm
-- "Können Transversalwellen in Flüssigkeiten existieren?" → Nein, nur Longitudinalwellen (keine Scherkräfte)
-- "Warum braucht man Ultraschallgel?" → Luft-Haut-Impedanzsprung eliminieren (R ≈ 99,9 % ohne Gel)
+**Haeufige Fragen:**
+- “Was aendert sich beim Medienwechsel einer Welle?” --> Lambda aendert sich, f bleibt gleich (c ist mediumspezifisch)
+- “Welche Wellenlaenge hat Ultraschall (5 MHz) in Gewebe (c = 1540 m/s)?” --> Lambda = 1540/5x10^6 ungefaehr 0,3 mm
+- “Koennen Transversalwellen in Fluessigkeiten existieren?” --> Nein, nur Longitudinalwellen (keine Scherkraefte)
+- “Warum braucht man Ultraschallgel?” --> Luft-Haut-Impedanzsprung eliminieren (R ungefaehr 99,9 % ohne Gel)
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- **Sichtbares Licht:** Wellenlänge **380–750 nm** (Nanometer), nicht 380–750 mm, cm, m oder km.
-- **c = λ·f** mit c ≈ 3·10⁸ m/s; z. B. 2 GHz → λ = 0,15 m = 15 cm.
-- c gehört zum **Medium** (nicht zur Quelle); f gehört zur **Quelle** (nicht zum Medium). **Beim Medienwechsel:** f bleibt gleich, c und λ ändern sich – nicht „f ändert sich“ oder „c bleibt gleich“.
-- Schall = Longitudinalwelle; Licht = Transversalwelle — nicht umgekehrt!
-- Höhere US-Frequenz → bessere Auflösung, **aber** geringere Eindringtiefe (Dämpfung ∝ f²)
-- Schall breitet sich in Festkörpern am schnellsten aus; im Vakuum existiert er gar nicht
-- **Impedanz:** Große Z-Differenz → starke Reflexion (Luft–Gewebe ohne Gel → fast 100 % Reflexion)
+**Typische Pruefungsfallen / Verwechslungen:**
+- **Sichtbares Licht:** Wellenlaenge **380-750 nm** (Nanometer), nicht 380-750 mm, cm, m oder km.
+- **c = Lambda*f** mit c ungefaehr 3*10^8 m/s; z. B. 2 GHz --> Lambda = 0,15 m = 15 cm.
+- c gehoert zum **Medium** (nicht zur Quelle); f gehoert zur **Quelle** (nicht zum Medium). **Beim Medienwechsel:** f bleibt gleich, c und Lambda aendern sich -- nicht “f aendert sich” oder “c bleibt gleich”.
+- Schall = Longitudinalwelle; Licht = Transversalwelle -- nicht umgekehrt!
+- Hoehere US-Frequenz --> bessere Aufloesung, **aber** geringere Eindringtiefe (Daempfung proportional f^2)
+- Schall breitet sich in Festkoerpern am schnellsten aus; im Vakuum existiert er gar nicht
+- **Impedanz:** Grosse Z-Differenz --> starke Reflexion (Luft-Gewebe ohne Gel --> fast 100 % Reflexion)
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Wellengleichung**: c = f·λ; c hängt vom Medium ab (nicht von f oder λ)
-- **Transversal** (z.B. Licht): Schwingung ⊥ Ausbreitung → polarisierbar; **Longitudinal** (Schall): Schwingung ∥ Ausbreitung → nicht polarisierbar
+- **Wellengleichung**: c = f*Lambda; c haengt vom Medium ab (nicht von f oder Lambda)
+- **Transversal** (z.B. Licht): Schwingung senkrecht zur Ausbreitung --> polarisierbar; **Longitudinal** (Schall): Schwingung parallel zur Ausbreitung --> nicht polarisierbar
 - **Schallgeschwindigkeit**: Luft ~340 m/s, Wasser ~1480 m/s, Gewebe ~1540 m/s, Knochen ~3500 m/s
-- **Elektromagnetisches Spektrum**: Radiowellen (MRT) → Mikrowellen → IR → sichtbares Licht → UV → Röntgen → Gamma
-- **Akustische Impedanz**: Z = ρ·c; R = ((Z₂−Z₁)/(Z₂+Z₁))²; große Impedanzdifferenz → starke Reflexion (Ultraschallgel nötig!)
-- **Klinisch**: Ultraschall 1–20 MHz; Impedanzanpassung mit Gel; A-Modus (Auge), B-Modus (2D-Bild)`,
+- **Elektromagnetisches Spektrum**: Radiowellen (MRT) --> Mikrowellen --> IR --> sichtbares Licht --> UV --> Roentgen --> Gamma
+- **Akustische Impedanz**: Z = Dichte*c; R = ((Z_2-Z_1)/(Z_2+Z_1))^2; grosse Impedanzdifferenz --> starke Reflexion (Ultraschallgel noetig!)
+- **Klinisch**: Ultraschall 1-20 MHz; Impedanzanpassung mit Gel; A-Modus (Auge), B-Modus (2D-Bild)`,
 
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
@@ -873,6 +1071,102 @@ R = ((6,3 − 1,63)/(6,3 + 1,63))² × 10¹² / 10¹² = (4,67/7,93)² ≈ 0,347
       diagram: "wave-types",
       content: `## Einleitung
 
+Hast du schon mal bemerkt, dass die Sirene eines Rettungswagens hoeher klingt, wenn er auf dich zufaehrt -- und tiefer, sobald er vorbei ist? Das ist der **Doppler-Effekt**. Wellen koennen sich aber auch gegenseitig verstaerken oder ausloeschen, an Hindernissen abknicken und in Glasfasern gefangen bleiben. Diese Phaenomene sind die Grundlage vieler Geraete in der Medizin.
+
+**In diesem Kapitel lernst du:**
+- wann sich zwei Wellen **verstaerken** und wann sie sich **ausloeschen** (Interferenz)
+- was passiert, wenn eine Welle hin- und zuruecklaeuft (stehende Wellen)
+- warum der Rettungswagen anders klingt, wenn er sich bewegt (Doppler-Effekt)
+- wann Licht komplett in einer Glasfaser gefangen bleibt (Totalreflexion)
+- warum ein Strohhalm im Wasserglas geknickt aussieht (Brechung)
+
+---
+
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:doppler-effect}}
+
+## Wellen koennen sich verstaerken oder ausloeschen
+
+Wenn zwei Wellen am selben Ort aufeinandertreffen, ueberlagern sie sich. Die Ausschlaege addieren sich einfach zusammen.
+
+**Verstaerkung (konstruktive Interferenz):** Wenn beide Wellenberge gleichzeitig ankommen, wird der Ausschlag groesser. Das passiert, wenn der Wegunterschied genau 0, 1, 2, 3 ... Wellenlaengen betraegt.
+
+**Ausloeschung (destruktive Interferenz):** Wenn ein Berg auf ein Tal trifft, heben sie sich auf. Das passiert bei einem Wegunterschied von einer halben Wellenlaenge (oder 1,5 oder 2,5 ...).
+
+So funktionieren **Noise-Cancelling-Kopfhoerer**: Sie erzeugen genau die Gegenwelle zum Laerm -- und der Laerm verschwindet!
+
+> **Merke:** Gleicher Takt = Verstaerkung. Gegentakt = Ausloeschung. Das ist Interferenz.
+
+---
+
+## Stehende Wellen: Schwingende Saiten
+
+Zupfst du eine Gitarrensaite, laeuft eine Welle hin und zurueck. Die Ueberlagerung ergibt eine **stehende Welle** mit festen Punkten, die sich nicht bewegen (**Knoten**), und Punkten mit maximaler Bewegung (**Baeuche**).
+
+Der tiefste Ton (Grundton) hat die Wellenlaenge 2 mal die Saitenlaenge. Hoehere Toene (Obertoene) entstehen, wenn die Saite in 2, 3, 4 ... Teile schwingt.
+
+Formel fuer die n-te Schwingung: Wellenlaenge = 2L/n und Frequenz = n mal Grundfrequenz.
+
+> **Merke:** Grundton: Wellenlaenge = 2 mal Saitenlaenge. n-ter Oberton: n-mal hoehere Frequenz, (n-1) Knoten dazwischen.
+
+---
+
+## Doppler-Effekt: Warum sich Toene aendern
+
+Wenn sich eine Schallquelle auf dich **zubewegt**, werden die Wellen zusammengedrueckt -- du hoerst einen **hoeheren** Ton. Entfernt sie sich, werden die Wellen auseinandergezogen -- der Ton wird **tiefer**.
+
+Das kennst du vom Rettungswagen: Zuerst hoher Ton, dann ploetzlich tiefer, sobald er vorbei ist.
+
+In der Medizin nutzt man das beim **Ultraschall**: Der Schallkopf schickt Schallwellen auf fliessendes Blut. Die zurueckgeworfenen Wellen haben eine leicht andere Frequenz -- daraus berechnet man die Geschwindigkeit des Blutes. Wichtig: Der Schallkopf muss **schraeg** zum Blutgefaess stehen. Bei senkrechtem Winkel (90 Grad) gibt es kein Signal, weil der Effekt dann null ist.
+
+> **Merke:** Quelle kommt naeher = hoeherer Ton. Quelle entfernt sich = tieferer Ton. Beim Ultraschall: schraeger Winkel noetig, sonst kein Signal!
+
+---
+
+## Brechung: Warum der Strohhalm geknickt aussieht
+
+Wenn Licht von einem Material in ein anderes wechselt (z. B. von Luft in Wasser), aendert es seine Richtung. Das nennt man **Brechung**. Deshalb sieht ein Strohhalm im Glas Wasser geknickt aus.
+
+Die Regel: In einem dichteren Material (wie Glas oder Wasser) wird der Strahl **zum Lot hin** abgelenkt. Das beschreibt das Gesetz von Snellius: n1 mal sin(Winkel1) = n2 mal sin(Winkel2).
+
+---
+
+## Totalreflexion: Licht gefangen in Glasfasern
+
+Wechselt Licht von einem dichteren in ein duenneres Material (z. B. Glas nach Luft), wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel -- dem **Grenzwinkel** -- wird das Licht gar nicht mehr durchgelassen, sondern komplett zurueckgeworfen. Das ist **Totalreflexion**.
+
+So funktionieren Glasfasern in der Medizin: Licht wird im Inneren der Faser hin- und herreflektiert und kann sogar um Kurven geleitet werden. Damit arbeiten z. B. Endoskope fuer Magenspiegelungen.
+
+> **Merke:** Totalreflexion gibt es nur vom dichteren ins duennere Material. Glasfasern und Endoskope nutzen diesen Effekt.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Interferenz: Wegunterschied = ganze Wellenlaenge = Verstaerkung; halbe = Ausloeschung
+- Doppler: naeher = hoeher, weiter weg = tiefer; beim Ultraschall schraeger Winkel noetig
+- Totalreflexion: nur vom dichteren ins duennere Material; Grundlage von Glasfasern
+- Brechung: zum Lot hin im dichteren Material
+
+**Typische Fallen:**
+- Gangunterschied n mal lambda = konstruktiv, NICHT destruktiv
+- Doppler bei 90 Grad = kein Signal (cos 90 = 0)
+- Totalreflexion funktioniert NUR in eine Richtung (dicht nach duenn)
+
+---
+
+## Zusammenfassung
+
+- **Interferenz**: Gleicher Takt = Verstaerkung; Gegentakt = Ausloeschung
+- **Stehende Wellen**: Grundton hat Wellenlaenge = 2 mal Saitenlaenge; hoehere Toene teilen die Saite in mehr Abschnitte
+- **Doppler**: Annaeherung = hoeherer Ton; Entfernung = tieferer Ton; Ultraschall nutzt das fuer Blutflussmessung
+- **Brechung**: Licht knickt ab beim Materialwechsel; zum Lot hin im dichteren Material
+- **Totalreflexion**: Ab dem Grenzwinkel wird Licht komplett zurueckgeworfen -- Grundlage der Endoskopie`,
+
+      contentExtended: `## Einleitung
+
 Warum klingt die Sirene eines Rettungswagens höher, solange er auf dich zufährt -- und tiefer, sobald er vorbei ist? Und wie kann ein Ultraschallgerät die Blutflussgeschwindigkeit messen, ohne den Patienten zu berühren? Die Antwort liegt im **Doppler-Effekt**, einem von mehreren faszinierenden Wellenphänomenen. Zusammen mit **Interferenz**, **Brechung** und **Totalreflexion** bilden sie das physikalische Fundament für Doppler-Sonographie, Endoskopie und Pulsoximetrie.
 
 **In diesem Kapitel lernst du:**
@@ -882,7 +1176,7 @@ Warum klingt die Sirene eines Rettungswagens höher, solange er auf dich zufähr
 - unter welchen Bedingungen Totalreflexion auftritt und warum Glasfaser-Endoskope darauf basieren
 - wie Brechung und Beugung die Ausbreitung von Licht und Schall im Körper beeinflussen
 
-**Kontext — worum geht es und wofür brauchst du das?**  
+**Kontext — worum geht es und wofür brauchst du das?**
 Hier geht es um **Überlagerung und Ausbreitung von Wellen**: Interferenz (Verstärkung/Auslöschung), stehende Wellen, Doppler (Frequenzänderung durch Bewegung), Reflexion und Brechung. In der Medizin: Doppler-Ultraschall (Blutfluss), Endoskopie (Totalreflexion in Lichtleitern), Pulsoximetrie. Du brauchst das für Akustik (nächstes UK) und für MedAT-Aufgaben zu Doppler, Interferenz und Brechung.
 
 ---
@@ -1032,7 +1326,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 - **Doppler-Sonographie**: Blutflussgeschwindigkeit aus Frequenzverschiebung; rot = Fluss zum Schallkopf, blau = weg
 - **Reflexion**: Einfallswinkel = Ausfallswinkel; **Brechung**: n₁·sin(α₁) = n₂·sin(α₂) (Snellius)
 - **Totalreflexion**: bei Übergang in optisch dünneres Medium; Grenzwinkel α_G = arcsin(n₂/n₁); Basis der Endoskopie
-- **Polarisation**: nur Transversalwellen polarisierbar; Pulsoximetrie nutzt wellenlängenspezifische Absorption`,
+- **Polarisation**: nur Transversalwellen polarisierbar; Pulsoximetrie nutzt wellenlaengenspezifische Absorption`,
 
       lernziele: [
         "Konstruktive und destruktive Interferenz anhand des Gangunterschieds erklären und berechnen.",
@@ -1236,20 +1530,11 @@ Warum klingt ein normales Gespräch bei 60 Dezibel harmlos, während 85 Dezibel 
 - worin sich Schallleitungs- und Schallempfindungsschwerhörigkeit unterscheiden
 - ab welcher Lautstärke Gehörschäden auftreten und wie Audiometrie funktioniert
 
-**Kontext — worum geht es und wofür brauchst du das?**  
-Hier geht es um **Schall und Hören**: Schalldruck, Dezibel, wie das Ohr Frequenzen und Pegel verarbeitet (Cochlea, Tonotopie, Haarzellen). Klinisch: Hörverlust, Lärmschaden, Audiometrie, Schallleitungs- vs. Schallempfindungsstörung. Du brauchst das für Anamnese und Diagnostik und für MedAT-Aufgaben zu dB, Hörschwelle und Cochlea.
-
 ---
 
 {{DIAGRAM:wave-types}}
 
 {{DIAGRAM:doppler-effect}}
-
-
-
-Akustik ist die Lehre vom Schall und seinen physiologischen sowie psychophysischen Wirkungen. Die menschliche Hörbahn ist ein aussergewöhnliches Messsystem, das Druckschwankungen von weniger als einem Milliardstel des atmosphärischen Drucks wahrnehmen kann. Das Ohr deckt dabei einen Dynamikbereich von 10⁶ im Schalldruck ab – vom leisesten wahrnehmbaren Ton bis zur Schmerzgrenze.
-
-
 
 ## Schallpegel und die Dezibel-Skala
 
@@ -1260,76 +1545,23 @@ Der Schalldruck p einer Welle wird relativ zur Hörschwelle p₀ = 2×10⁻⁵ P
 Alternativ über die Intensität I (Leistung pro Fläche):
 **L = 10 · log₁₀(I / I₀)**   mit I₀ = 10⁻¹² W/m²
 
-> **Merke:** Da Intensität ∝ p² gilt, hat die Schalldruck-Formel den Faktor 20, die Intensitäts-Formel den Faktor 10. Beide ergeben denselben Pegelwert.
-
-Der Zusammenhang zwischen den beiden Formeln: L = 10·log(I/I₀) = 10·log(p²/p₀²) = 20·log(p/p₀).
-
 Wichtige Pegelwerte:
 
 | Situation | Pegel | Schalldruck |
 |-----------|-------|-------------|
 | Hörschwelle (1 kHz) | 0 dB | 2×10⁻⁵ Pa |
-| Stille Nacht | 20 dB | 2×10⁻⁴ Pa |
 | Normales Gespräch | 60 dB | 0,02 Pa |
-| Strassenverkehr | 75 dB | 0,11 Pa |
 | Lärmschwelle | **85 dB** | 0,36 Pa |
 | Schmerzgrenze | 120 dB | 20 Pa |
-| Düsentriebwerk | 140 dB | 200 Pa |
-
-Entscheidend für die Schädlichkeit ist die **Exposition**: gleichmässige kurzzeitige Spitzen vs. dauerhafter Lärm über 85 dB. Die **Äquivalenzdosis** berücksichtigt: +3 dB halbiert die erlaubte Expositionszeit (bei 88 dB nur noch 4 h statt 8 h).
-
-## Lautstärke und Tonhöhe: Psychoakustik
-
-**Tonhöhe** (Pitch) entspricht physikalisch der Frequenz. Das menschliche Ohr hört Frequenzen von 20 Hz bis 20 kHz, mit grösster Empfindlichkeit zwischen 1–4 kHz (Sprachbereich). Diese Empfindlichkeit ist evolutionär durch Sprachkommunikation geprägt.
-
-**Lautstärke** (Loudness) entspricht der Schallintensität/dem Schalldruck. Die subjektive Wahrnehmung ist frequenzabhängig – gleiche Dezibel-Werte klingen bei verschiedenen Frequenzen unterschiedlich laut (Lautheits-Konturlinien nach Fletcher-Munson). Bei 100 Hz muss der Pegel ca. 40 dB höher sein als bei 1 kHz, damit der Ton gleich laut empfunden wird.
-
-**Klangfarbe** (Timbre) wird durch das Oberton-Spektrum bestimmt. Derselbe Ton (z. B. 440 Hz) klingt auf einer Geige anders als auf einer Klarinette, weil die Obertöne (Harmonische) unterschiedliche Amplituden haben.
 
 ## Anatomie und Physiologie der Cochlea
 
-Das Innenohr (Cochlea) ist der eigentliche Wandler von Schallschwingungen in Nervenimpulse:
-
-1. **Schallleitung**: Trommelfell → Gehörknöchelchen (Hammer, Amboss, Steigbügel) → Ovales Fenster
-2. **Verstärkung**: Das Mittelohr verstärkt den Schalldruck durch das Flächenverhältnis Trommelfell/ovales Fenster (×17) und den Hebeleffekt der Gehörknöchelchen (×1,3) – gesamt ca. 22-fach (~27 dB). Diese **Impedanzanpassung** ist nötig, da ohne sie 99,9 % der Schallenergie an der Luft-Flüssigkeit-Grenze reflektiert würden.
-3. **Wanderwellen in der Cochlea**: Der Steigbügel regt Perilymphe im Schneckengang an. Es entstehen Wanderwellen auf der Basilarmembran, deren Maximum je nach Frequenz an unterschiedlichen Orten liegt: **Tonotopie**.
-4. **Tonotopie**: Hohe Frequenzen (z. B. 20 kHz) erregen die Basis der Cochlea (steife, schmale Membran); tiefe Frequenzen (z. B. 100 Hz) erregen die Apex (elastische, breite Membran). Dies ermöglicht Frequenzunterscheidung.
-5. **Haarzellen**: An der Basilarmembran befinden sich ca. 3500 innere Haarzellen (IHC), die mechanische Auslenkung in elektrische Signale umwandeln (Mechanoelektrik). Ca. 12.000 äussere Haarzellen (OHC) verstärken aktiv durch Motilität (Prestin-Protein) – der **cochleäre Verstärker** verbessert die Empfindlichkeit um den Faktor 1000 (60 dB).
-
-> **Merke:** Innere Haarzellen = Signalwandler (95 % der afferenten Nervenfasern); äussere Haarzellen = aktive Verstärker (empfindlich gegenüber Lärm und ototoxischen Medikamenten).
+Das Innenohr (Cochlea) ist der eigentliche Wandler von Schallschwingungen in Nervenimpulse. Tonotopie: Hohe Frequenzen erregen die Basis der Cochlea (steife Membran); tiefe Frequenzen erregen die Apex (elastische Membran). Innere Haarzellen = Signalwandler; äussere Haarzellen = aktive Verstärker.
 
 ## Klinische Audiologie
 
-**Audiometrie**: Messung des Hörvermögens durch Reintonaudiogramm oder Sprachaudiogramm. Normalhörige haben eine Hörschwelle von ≤ 20 dB HL (Hearing Level) über alle Frequenzen.
-
-**Schallleitungsschwerhörigkeit**: Beeinträchtigung in Mittelohr (Trommelfell, Gehörknöchelchen, Otosklerose, Paukenerguss). Knochenleitung intakt, Luftleitung gestört. Weber-Versuch: Lateralisation zum kranken Ohr. Rinne-Versuch: negativ (Knochen > Luft).
-
-**Schallempfindungsschwerhörigkeit (SNHL)**: Schäden an Haarzellen (Lärm, Alter, ototoxische Medikamente wie Aminoglykoside/Cisplatin) oder Hörnerv. Knochen- und Luftleitung gleich gestört. Weber: Lateralisation zum gesunden Ohr. Rinne: positiv (Luft > Knochen, aber beides reduziert). Häufigste Form der Lärmschwerhörigkeit: Schaden bei 4 kHz (C5-Senke im Audiogramm).
-
-**Cochlea-Implantat**: Bei vollständiger Taubheit umgeht ein Elektrodenarray die defekten Haarzellen und stimuliert den Hörnerv direkt mit tonotop kodierten Impulsen. Elektroden an der Basis kodieren hohe, an der Apex tiefe Frequenzen.
-
-## Rechenbeispiele
-
-**Beispiel 1 — Dezibel-Rechnung:**
-Schallintensität eines Gespräches: I = 10⁻⁶ W/m².
-L = 10 · log₁₀(10⁻⁶ / 10⁻¹²) = 10 · log₁₀(10⁶) = 10 · 6 = 60 dB — normales Gespräch.
-
-Verdopplung der Intensität: L_neu = 10 · log₁₀(2 × 10⁻⁶ / 10⁻¹²) = 10 · (6 + log₁₀ 2) = 10 · 6,3 = 63 dB.
-Verdopplung der Intensität entspricht +3 dB. Verzehnfachung = +10 dB.
-
-**Beispiel 2 — Verstärkung im Mittelohr:**
-Trommelfell-Fläche: ca. 55 mm². Ovales-Fenster-Fläche: ca. 3,2 mm². Verhältnis: 55/3,2 ≈ 17.
-Hebeleffekt Gehörknöchelchen: ≈ 1,3. Gesamtverstärkung: 17 × 1,3 ≈ 22-fach (Schalldruck).
-In Dezibel: 20 · log₁₀(22) = 20 · 1,34 ≈ 27 dB — diese Verstärkung kompensiert den Impedanzunterschied zwischen Luft und Flüssigkeit im Innenohr.
-
-**Beispiel 3 — Tonotopie:**
-Frequenz 500 Hz → Maximum der Wanderwelle ca. 7 mm vom Apex.
-Frequenz 4000 Hz → Maximum ca. 11 mm vom Apex (näher an der Basis).
-Frequenz 16000 Hz → Maximum direkt an der Basis der Cochlea.
-Bei Lärmschwerhörigkeit sind die Haarzellen im 4-kHz-Bereich zuerst betroffen → typische C5-Senke im Audiogramm.
-
-**Beispiel 4 — Expositionszeit bei Lärm:**
-Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 88 dB → 4 h, 91 dB → 2 h, 94 dB → 1 h, 100 dB → 15 min, 110 dB → 1,5 min. Ein Rockkonzert mit 110 dB schädigt die Haarzellen bereits nach wenigen Minuten irreversibel.
+**Schallleitungsschwerhörigkeit**: Mittelohr-Problem. Knochenleitung intakt, Luftleitung gestört.
+**Schallempfindungsschwerhörigkeit**: Innenohr/Haarzellproblem. Knochen- und Luftleitung gleich gestört. Häufigste Form: Lärmschwerhörigkeit bei 4 kHz (C5-Senke).
 
 ## Dezibel-Merkregel
 
@@ -1340,35 +1572,122 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
 | +10 dB | Intensität × 10 | Doppelt so laut empfunden |
 | +20 dB | Schalldruck × 10 | 4× so laut empfunden |
 
-> **Merke:** 3-dB-Regel für Intensität, 6-dB-Regel für Schalldruck, 10-dB-Regel für subjektive Lautstärke. Diese drei Regeln sind MedAT-Klassiker!
-
 ---
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
 **Häufige Fragen:**
-- "Wie viel dB entspricht einer Verdopplung der Schallintensität?" → +3 dB (I×2 → 10·log 2 ≈ 3 dB)
-- "Wie viel dB entspricht einer Verdopplung des Schalldrucks?" → +6 dB (p×2 → 20·log 2 ≈ 6 dB)
-- "Welcher Pegel gilt als Gehörschaden-Grenzwert?" → 85 dB (> 8 Stunden täglich → irreversibler Haarzellschaden)
-- "Hohe Frequenzen in der Cochlea — wo?" → Basis (nahe ovalem Fenster, steife Membran); tiefe Frequenzen → Apex
+- Verdopplung der Schallintensität → +3 dB
+- Verdopplung des Schalldrucks → +6 dB
+- Gehörschaden-Grenzwert → 85 dB
+- Hohe Frequenzen in der Cochlea → Basis; tiefe → Apex
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- +3 dB ≠ +6 dB: Intensitätsverdopplung (+3 dB) vs. Schalldruckverdopplung (+6 dB) — I ∝ p², daher der Faktor 2
-- Schallleitungsschwerhörigkeit = **Mittelohrproblem** (Knochenleitung intakt!) — Weber lateralisiert zum kranken Ohr
-- Schallempfindungsschwerhörigkeit = **Innenohr/Haarzellproblem** (Knochen- und Luftleitung gleich gestört)
-- Tonotopie: HOHE Frequenzen → BASIS (steif/schmal); TIEFE Frequenzen → APEX (elastisch/breit)
+**Typische Prüfungsfallen:**
+- +3 dB ≠ +6 dB: Intensitätsverdopplung (+3 dB) vs. Schalldruckverdopplung (+6 dB)
+- Schallleitungsschwerhörigkeit = Mittelohrproblem; Schallempfindungsschwerhörigkeit = Innenohrproblem
+- Tonotopie: HOHE Frequenzen → BASIS; TIEFE Frequenzen → APEX
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Dezibel**: L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 2×10⁻⁵ Pa, I₀ = 10⁻¹² W/m²
-- **3-dB-Regel**: +3 dB → I×2; **6-dB-Regel**: +6 dB → p×2; **10-dB-Regel**: +10 dB → doppelt so laut empfunden
-- **Hörbereich**: 20 Hz – 20 000 Hz; Sprache 300–3400 Hz; maximale Empfindlichkeit ~1000–4000 Hz
-- **Cochlea/Tonotopie**: hohe Frequenzen am ovalen Fenster, tiefe Frequenzen am Apex; Haarzellen = Sensorepithel
-- **Schallleitungsschwerhörigkeit**: Mittelohr-Problem (Mittelohrentzündung, Tympanosklerose) → Rinne-Test negativ
-- **Schallempfindungsschwerhörigkeit**: Innenohr/Cochlea/Nerv (Lärm, Altersschwerhörigkeit) → C5-Senke bei 4 kHz
-- **Lärm**: 85 dB → max. 8h; pro +3 dB halbiert sich die zulässige Expositionszeit`,
+- **Dezibel**: L = 20·log(p/p₀) = 10·log(I/I₀)
+- **3-dB-Regel**: +3 dB → I×2; **6-dB-Regel**: +6 dB → p×2; **10-dB-Regel**: +10 dB → doppelt so laut
+- **Hörbereich**: 20 Hz – 20 000 Hz; maximale Empfindlichkeit ~1000–4000 Hz
+- **Cochlea/Tonotopie**: hohe Frequenzen an Basis, tiefe an Apex
+- **Schallleitungsschwerhörigkeit**: Mittelohr-Problem → Rinne-Test negativ
+- **Schallempfindungsschwerhörigkeit**: Innenohr (Lärm, Alter) → C5-Senke bei 4 kHz
+- **Laerm**: 85 dB -> max. 8h; pro +3 dB halbiert sich die zulaessige Expositionszeit`,
+
+      contentExtended: `## Einleitung
+
+Stell dir vor, du redest mit einem Freund -- das hat etwa 60 Dezibel. Jetzt stell dir Strassenlaerm vor: 85 Dezibel. Der Unterschied klingt klein, aber 85 dB ist schon gefaehrlich fuer deine Ohren! Warum? Weil die Dezibel-Skala **nicht gleichmaessig** ansteigt: Jede 10-dB-Erhoehung bedeutet 10-mal mehr Schallenergie.
+
+**In diesem Kapitel lernst du:**
+- warum die Dezibel-Skala so speziell ist und was +3 dB, +6 dB und +10 dB jeweils bedeuten
+- wie dein Ohr hohe und tiefe Toene unterscheidet (Schnecke im Innenohr)
+- ab welcher Lautstaerke dein Gehoer Schaden nimmt
+- worin sich zwei Arten von Schwerhoerigkeit unterscheiden
+
+---
+
+{{DIAGRAM:wave-types}}
+
+{{DIAGRAM:doppler-effect}}
+
+## Dezibel: Lautstaerke messen
+
+Unser Ohr kann unglaublich leise und extrem laute Geraeusche hoeren. Um diesen riesigen Bereich handlich zu machen, benutzt man die **Dezibel-Skala** (dB). Sie ist **logarithmisch** -- das heisst, gleiche dB-Schritte bedeuten immer eine Vervielfachung der Schallenergie.
+
+Die wichtigsten Werte:
+- 0 dB: Hoerschwelle (gerade noch hoerbar)
+- 60 dB: normales Gespraech
+- 85 dB: ab hier drohen Gehoerschaeden bei Dauerbelastung
+- 120 dB: Schmerzgrenze
+
+**Die drei goldenen Regeln:**
+- **+3 dB** = doppelte Schallenergie (kaum hoerbar)
+- **+10 dB** = 10-fache Schallenergie (klingt doppelt so laut)
+- **+20 dB** = 100-fache Schallenergie
+
+> **Merke:** +3 dB = doppelte Energie. +10 dB = 10-fache Energie und klingt doppelt so laut. Ab 85 dB wird es bei Dauerbelastung gefaehrlich.
+
+---
+
+## Wie dein Ohr funktioniert
+
+Schall trifft auf dein Trommelfell und wird ueber drei winzige Knoechelchen (Hammer, Amboss, Steigbuegel) ins Innenohr weitergeleitet. Die Knoechelchen verstaerken den Druck dabei um das 22-Fache -- das ist noetig, weil im Innenohr Fluessigkeit statt Luft ist.
+
+Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Floetenroehre. An verschiedenen Stellen reagiert sie auf verschiedene Toene:
+- **Am Eingang** (Basis): hohe Toene (z. B. Pfeiftoene)
+- **Am Ende** (Spitze/Apex): tiefe Toene (z. B. Brummen)
+
+Das nennt man **Tonotopie** -- jede Tonhoehe hat ihren eigenen Platz in der Schnecke.
+
+Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Laerm kann sie unwiderruflich zerstoeren!
+
+> **Merke:** Hohe Toene am Eingang der Schnecke, tiefe Toene am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
+
+---
+
+## Zwei Arten von Schwerhoerigkeit
+
+**Schallleitungs-Schwerhoerigkeit:** Das Problem sitzt im Mittelohr (z. B. verstopfter Gehoergang, defektes Trommelfell). Der Schall kommt nicht richtig zum Innenohr durch. Aber wenn du eine Stimmgabel auf den Kopf setzt, hoerst du den Ton trotzdem -- weil der Schall ueber den Knochen direkt zum Innenohr kommt.
+
+**Schallempfindungs-Schwerhoerigkeit:** Das Problem sitzt im Innenohr -- die Haarzellen sind beschaedigt (z. B. durch Laerm oder Alter). Hier hilft auch die Knochenleitung nicht, weil das Innenohr selbst betroffen ist. Typisch: Ein Hoerverlust speziell bei 4000 Hz (sogenannte C5-Senke), verursacht durch zu laute Musik oder Maschinenlaerm.
+
+> **Merke:** Mittelohr-Problem = Schallleitungs-Schwerhoerigkeit (Knochenleitung funktioniert noch). Innenohr-Problem = Schallempfindungs-Schwerhoerigkeit (beides gestoert).
+
+---
+
+## Wann wird Laerm gefaehrlich?
+
+Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schaedigen -- und zwar fuer immer.
+
+> **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschaeden sind nicht heilbar!
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- +3 dB = doppelte Intensitaet; +6 dB = doppelter Schalldruck; +10 dB = doppelt so laut
+- Hohe Toene an der Basis der Schnecke, tiefe am Apex (Tonotopie)
+- 85 dB = Grenzwert fuer Gehoerschaeden
+- Schallleitungs- vs. Schallempfindungs-Schwerhoerigkeit unterscheiden
+
+**Typische Fallen:**
+- +3 dB ist NICHT +6 dB (Intensitaet vs. Schalldruck)
+- Hohe Frequenzen an der Basis, NICHT am Apex
+- Schallleitungsproblem = Mittelohr, NICHT Innenohr
+
+---
+
+## Zusammenfassung
+
+- **Dezibel**: logarithmische Skala; +3 dB = doppelte Energie; +10 dB = klingt doppelt so laut
+- **Hoeren**: Schall geht ueber Trommelfell und Knoechelchen zur Schnecke; dort wandeln Haarzellen ihn in Nervenimpulse um
+- **Tonotopie**: hohe Toene am Eingang der Schnecke, tiefe am Ende
+- **Schwerhoerigkeit**: Mittelohr-Problem (Schalleitung) vs. Innenohr-Problem (Schallempfindung)
+- **Laerm**: ab 85 dB gefaehrlich; Haarzellen regenerieren sich nicht`,
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",
@@ -1568,19 +1887,16 @@ Bei 85 dB sind 8 Stunden Exposition erlaubt. Pro +3 dB halbiert sich die Zeit: 8
         "Glasfaser",
       ],
       diagram: "lens-imaging",
-      content: `## Einleitung
+      content: `## Geometrische Optik — einfach erklaert
 
-Warum braucht ein kurzsichtiger Mensch eine Brille mit Zerstreuungslinsen -- und ein weitsichtiger eine mit Sammellinsen? Und wie erzeugt eine einfache Lupe ein vergrössertes Bild? Die **geometrische Optik** beschreibt Licht als Strahlen, die an Grenzflächen gebrochen und reflektiert werden. Mit nur zwei Formeln -- dem **Brechungsgesetz** und der **Linsengleichung** -- lassen sich Brillen, Lupen, Mikroskope und das menschliche Auge vollständig erklären.
+Stell dir vor, du steckst einen Strohhalm ins Wasserglas — er sieht geknickt aus. Das ist **Brechung**: Licht aendert seine Richtung, wenn es von einem Material ins andere wechselt. Mit diesem einfachen Prinzip lassen sich Brillen, Lupen und sogar das menschliche Auge erklaeren.
 
 **In diesem Kapitel lernst du:**
-- wie das Brechungsgesetz von Snellius n₁·sin(θ₁) = n₂·sin(θ₂) funktioniert und was der Brechungsindex physikalisch bedeutet
-- wann Totalreflexion auftritt, wie der Grenzwinkel berechnet wird und warum Glasfaser-Endoskope darauf basieren
-- wie die Linsengleichung 1/f = 1/g + 1/b Bildlage und -grösse bei Sammel- und Zerstreuungslinsen bestimmt
-- wie das Auge als optisches System funktioniert: Akkommodation, Nah-/Fernpunkt, Fehlsichtigkeiten
-- wie Lupe und Mikroskop Vergrösserungen erzielen und welche Formeln gelten
-
-**Kontext — worum geht es und wofür brauchst du das?**
-Im vorherigen Unterkapitel hast du Brechung und Totalreflexion als Wellenphänomene kennengelernt. Hier vertiefen wir die **Strahlenoptik**: Linsen, Abbildungen und das Auge. In der Medizin: Augenoptik (Brillen, Kontaktlinsen, Augen-Laser), Endoskopie (Totalreflexion), Mikroskopie. Für den MedAT sind Linsengleichung, Brechkraft und Fehlsichtigkeiten zentrale Prüfungsthemen.
+- wie Licht an Grenzflaechen gebrochen wird (Snellius-Gesetz)
+- wann Totalreflexion auftritt und wozu man sie nutzt
+- wie Linsen Bilder erzeugen und was Dioptrien bedeuten
+- wie dein Auge funktioniert und warum manche Menschen eine Brille brauchen
+- wie Lupe und Mikroskop vergroessern
 
 ---
 
@@ -1588,256 +1904,372 @@ Im vorherigen Unterkapitel hast du Brechung und Totalreflexion als Wellenphänom
 
 {{DIAGRAM:wave-types}}
 
+## Brechung — der geknickte Strohhalm
 
+Wenn Licht von Luft ins Wasser trifft, wird es langsamer und aendert die Richtung. Das beschreibt das **Brechungsgesetz von Snellius**:
+
+**n1 mal sin(theta1) = n2 mal sin(theta2)**
+
+Der **Brechungsindex n** sagt dir, wie stark ein Material Licht bremst. Luft hat n = 1, Wasser n = 1,33, Glas n = 1,5. Je groesser n, desto staerker wird der Lichtstrahl zum Lot hin abgelenkt.
+
+**Alltagsbeispiel:** Deshalb sieht der Strohhalm im Glas geknickt aus — das Licht aendert an der Wasser-Luft-Grenze seine Richtung.
+
+> **Merke:** Licht wird beim Eintritt in ein dichteres Material (groesseres n) zum Lot hin gebrochen. Das Brechungsgesetz lautet: n1 mal sin(theta1) = n2 mal sin(theta2).
+
+---
+
+## Totalreflexion — Licht gefangen im Glas
+
+Wenn Licht vom dichteren ins duennere Medium wechselt (z. B. Glas nach Luft), wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel — dem **Grenzwinkel** — kommt das Licht gar nicht mehr raus: Es wird komplett reflektiert. Das nennt man **Totalreflexion**.
+
+**Formel:** sin(theta_c) = n2/n1
+
+**Wozu braucht man das?** Glasfaserkabel und Endoskope nutzen Totalreflexion. Das Licht huepft im Glasfaserkern hin und her und kommt nicht raus — so kann man Licht um Ecken leiten. Aerzte koennen damit in den Magen oder Darm schauen.
+
+> **Merke:** Totalreflexion gibt es nur beim Uebergang vom dichteren ins duennere Medium. Anwendung: Glasfaser-Endoskope in der Medizin.
+
+---
+
+## Linsen — Licht buendeln oder zerstreuen
+
+Eine **Sammellinse** (Lupe, Plus-Glas) buendelt Licht in einem Brennpunkt. Eine **Zerstreuungslinse** (Minus-Glas) streut Licht auseinander.
+
+Die **Linsengleichung** beschreibt, wo das Bild entsteht:
+
+**1/f = 1/g + 1/b**
+
+- f = Brennweite (Sammellinse: positiv, Zerstreuungslinse: negativ)
+- g = Abstand Gegenstand zur Linse
+- b = Abstand Bild zur Linse
+
+Die **Brechkraft** in Dioptrien (dpt) ist einfach: **D = 1/f** (f in Metern). Eine Linse mit f = 10 cm hat D = 10 dpt.
+
+**Alltagsbeispiel:** Deine Lesebrille hat z. B. +2 dpt — das ist eine Sammellinse mit f = 50 cm.
+
+> **Merke:** Brechkraft D = 1/f in Dioptrien. Sammellinse: D positiv (buendelt Licht). Zerstreuungslinse: D negativ (zerstreut Licht).
+
+---
+
+## Dein Auge — eine lebende Kamera
+
+Dein Auge hat eine Gesamtbrechkraft von etwa **60 Dioptrien**. Davon liefert die **Hornhaut** allein ca. 43 dpt — also zwei Drittel! Die **Augenlinse** steuert den Rest bei.
+
+Das Besondere: Dein Auge kann die Brennweite anpassen (**Akkommodation**). Der Ziliarmuskel veraendert die Form der Linse:
+- **Ferne schauen:** Muskel entspannt, Linse flach, lange Brennweite
+- **Nahe schauen:** Muskel angespannt, Linse rund, kurze Brennweite
+
+Ab etwa 45 Jahren wird die Linse steifer — du brauchst eine Lesebrille (**Presbyopie**).
+
+### Fehlsichtigkeiten
+
+**Kurzsichtigkeit (Myopie):** Auge zu lang, Bild entsteht VOR der Netzhaut. Korrektur: **Zerstreuungslinse** (Minus-Glas). Formel: D = -1/Fernpunkt.
+
+**Weitsichtigkeit (Hyperopie):** Auge zu kurz, Bild entsteht HINTER der Netzhaut. Korrektur: **Sammellinse** (Plus-Glas).
+
+**Eselbruecke:** Kurzsichtig = zu viel Brechung = Minus-Linse bremst. Weitsichtig = zu wenig Brechung = Plus-Linse hilft.
+
+> **Merke:** Hornhaut liefert 2/3 der Brechkraft. Myopie: Minus-Glas. Hyperopie: Plus-Glas. Akkommodation = Linse aendert Form fuer Nah/Fern.
+
+---
+
+## Lupe und Mikroskop
+
+Eine **Lupe** ist eine Sammellinse mit kurzer Brennweite. Vergroesserung: **M = 25 cm / f**. Eine Lupe mit f = 5 cm vergroessert also 5-fach.
+
+Ein **Mikroskop** hat zwei Linsen: Das Objektiv erzeugt ein vergroessertes Zwischenbild, das Okular vergroessert nochmals. Gesamtvergroesserung: **M = (t/f_obj) mal (25 cm/f_ok)**.
+
+Die kleinsten Strukturen, die ein Lichtmikroskop sehen kann: etwa **200 nm** (Abbe-Limit). Fuer noch kleinere Dinge braucht man ein Elektronenmikroskop.
+
+> **Merke:** Lupe: M = 25 cm/f. Mikroskop: M = (t/f_obj) mal (25 cm/f_ok). Aufloesung maximal 200 nm.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Snellius: n1 mal sin(theta1) = n2 mal sin(theta2)
+- Totalreflexion: nur vom dichteren ins duennere Medium
+- Linsengleichung: 1/f = 1/g + 1/b; Brechkraft D = 1/f [dpt]
+- Myopie: Zerstreuungslinse (D negativ); Hyperopie: Sammellinse (D positiv)
+- Hornhaut liefert ~2/3 der Brechkraft (~43 dpt)
+
+**Typische Fallen:**
+- Totalreflexion funktioniert NUR vom dichteren ins duennere Medium
+- Brechkraft: f muss in Metern stehen! f = 10 cm bedeutet D = 1/0,1 = 10 dpt
+- Die Hornhaut (nicht die Linse!) macht den Grossteil der Brechung
+
+## Zusammenfassung
+
+- **Brechung:** Licht aendert Richtung an Grenzflaechen; n1 sin(theta1) = n2 sin(theta2)
+- **Totalreflexion:** Ab dem Grenzwinkel wird Licht komplett reflektiert (Glasfaser, Endoskop)
+- **Linsen:** Sammellinse (f positiv, D positiv) buendelt; Zerstreuungslinse (f negativ, D negativ) zerstreut
+- **Auge:** 60 dpt gesamt, Hornhaut 43 dpt, Akkommodation durch Linsenform
+- **Fehlsichtigkeit:** Myopie: Minus-Glas; Hyperopie: Plus-Glas
+- **Lupe/Mikroskop:** M = 25/f bzw. M = (t/f_obj) mal (25/f_ok); Limit 200 nm`,
+
+      contentExtended: `## Einleitung
+
+Warum braucht ein kurzsichtiger Mensch eine Brille mit Zerstreuungslinsen -- und ein weitsichtiger eine mit Sammellinsen? Und wie erzeugt eine einfache Lupe ein vergrössertes Bild? Die **geometrische Optik** beschreibt Licht als Strahlen, die an Grenzflächen gebrochen und reflektiert werden. Mit nur zwei Formeln -- dem **Brechungsgesetz** und der **Linsengleichung** -- lassen sich Brillen, Lupen, Mikroskope und das menschliche Auge vollständig erklären.
+
+**In diesem Kapitel lernst du:**
+- wie das Brechungsgesetz von Snellius n1 sin(theta1) = n2 sin(theta2) funktioniert und was der Brechungsindex physikalisch bedeutet
+- wann Totalreflexion auftritt, wie der Grenzwinkel berechnet wird und warum Glasfaser-Endoskope darauf basieren
+- wie die Linsengleichung 1/f = 1/g + 1/b Bildlage und -groesse bei Sammel- und Zerstreuungslinsen bestimmt
+- wie das Auge als optisches System funktioniert: Akkommodation, Nah-/Fernpunkt, Fehlsichtigkeiten
+- wie Lupe und Mikroskop Vergroesserungen erzielen und welche Formeln gelten
+
+**Kontext — worum geht es und wofuer brauchst du das?**
+Im vorherigen Unterkapitel hast du Brechung und Totalreflexion als Wellenphänomene kennengelernt. Hier vertiefen wir die **Strahlenoptik**: Linsen, Abbildungen und das Auge. In der Medizin: Augenoptik (Brillen, Kontaktlinsen, Augen-Laser), Endoskopie (Totalreflexion), Mikroskopie. Fuer den MedAT sind Linsengleichung, Brechkraft und Fehlsichtigkeiten zentrale Pruefungsthemen.
+
+---
+
+{{DIAGRAM:lens-imaging}}
+
+{{DIAGRAM:wave-types}}
 
 ## Brechungsgesetz (Snellius)
 
 Bisher haben wir die Brechung qualitativ beschrieben. Quantitativ gilt das **Snellius'sche Brechungsgesetz**:
 
-**n₁ · sin(θ₁) = n₂ · sin(θ₂)**
+**n1 sin(theta1) = n2 sin(theta2)**
 
-- **n** = Brechungsindex = c₀/c_Medium (dimensionslos); je grösser n, desto „optisch dichter" das Medium
-- **θ₁** = Einfallswinkel (gemessen zum Lot auf die Grenzfläche)
-- **θ₂** = Brechungswinkel
+- **n** = Brechungsindex = c0/c_Medium (dimensionslos); je groesser n, desto optisch dichter das Medium
+- **theta1** = Einfallswinkel (gemessen zum Lot auf die Grenzflaeche)
+- **theta2** = Brechungswinkel
 
-**Formelklartext:** Das Produkt aus Brechungsindex und Sinus des Winkels ist auf beiden Seiten der Grenzfläche gleich. In einem optisch dichteren Medium (grösseres n) ist sin(θ) kleiner → der Strahl wird **zum Lot hin** gebrochen. In einem optisch dünneren Medium wird er **vom Lot weg** gebrochen.
+**Formelklartext:** Das Produkt aus Brechungsindex und Sinus des Winkels ist auf beiden Seiten der Grenzflaeche gleich. In einem optisch dichteren Medium (groesseres n) ist sin(theta) kleiner, der Strahl wird **zum Lot hin** gebrochen. In einem optisch duenneren Medium wird er **vom Lot weg** gebrochen.
 
 Wichtige Brechungsindizes:
 
 | Material | n | Klinische Relevanz |
 |----------|---|-------------------|
 | Vakuum | 1,000 | Referenz |
-| Luft | 1,0003 | ≈ 1 für Berechnungen |
-| Wasser | 1,333 | Grundmedium des Körpers |
+| Luft | 1,0003 | ca. 1 fuer Berechnungen |
+| Wasser | 1,333 | Grundmedium des Koerpers |
 | Hornhaut (Cornea) | 1,376 | Hauptbrechkraft des Auges |
 | Kammerwasser | 1,336 | Zwischen Hornhaut und Linse |
-| Augenlinse | 1,386–1,406 | Variable Brechkraft (Akkommodation) |
-| Glaskörper | 1,336 | Zwischen Linse und Retina |
-| Glas (Brille) | 1,50–1,90 | Korrekturgläser |
-| Diamant | 2,42 | Hohe Totalreflexion → Funkeln |
+| Augenlinse | 1,386-1,406 | Variable Brechkraft (Akkommodation) |
+| Glaskoerper | 1,336 | Zwischen Linse und Retina |
+| Glas (Brille) | 1,50-1,90 | Korrekturglaeser |
+| Diamant | 2,42 | Hohe Totalreflexion, Funkeln |
 
-> **Merke:** n₁·sin(θ₁) = n₂·sin(θ₂) — der Brechungsindex n = c₀/c gibt an, um welchen Faktor Licht im Medium langsamer ist als im Vakuum. Grösseres n → langsameres Licht → Brechung zum Lot hin.
+> **Merke:** n1 sin(theta1) = n2 sin(theta2) — der Brechungsindex n = c0/c gibt an, um welchen Faktor Licht im Medium langsamer ist als im Vakuum. Groesseres n, langsameres Licht, Brechung zum Lot hin.
 
 ---
 
 ## Totalreflexion und Grenzwinkel
 
-Beim Übergang vom optisch **dichteren** ins optisch **dünnere** Medium (n₁ > n₂) wird der Strahl vom Lot weg gebrochen. Ab einem bestimmten Einfallswinkel -- dem **Grenzwinkel θ_c** -- wird der Brechungswinkel 90° und der Strahl läuft parallel zur Grenzfläche. Für θ > θ_c findet keine Brechung mehr statt — die Welle wird **vollständig reflektiert**:
+Beim Uebergang vom optisch **dichteren** ins optisch **duennere** Medium (n1 > n2) wird der Strahl vom Lot weg gebrochen. Ab einem bestimmten Einfallswinkel -- dem **Grenzwinkel theta_c** -- wird der Brechungswinkel 90 Grad und der Strahl laeuft parallel zur Grenzflaeche. Fuer theta > theta_c findet keine Brechung mehr statt — die Welle wird **vollstaendig reflektiert**:
 
-**sin(θ_c) = n₂/n₁**
+**sin(theta_c) = n2/n1**
 
 **Rechenbeispiel — Glasfaser:**
-Glasfaserkern (n₁ = 1,50) und Mantel (n₂ = 1,46): sin(θ_c) = 1,46/1,50 = 0,973 → θ_c = 76,7°. Jeder Strahl, der unter einem Winkel > 76,7° (gemessen zum Lot) auf die Kern-Mantel-Grenze trifft, wird total reflektiert und bleibt in der Faser.
+Glasfaserkern (n1 = 1,50) und Mantel (n2 = 1,46): sin(theta_c) = 1,46/1,50 = 0,973, theta_c = 76,7 Grad. Jeder Strahl, der unter einem Winkel > 76,7 Grad (gemessen zum Lot) auf die Kern-Mantel-Grenze trifft, wird total reflektiert und bleibt in der Faser.
 
-**Klinische Anwendung — Endoskopie:** Moderne Endoskope nutzen Glasfaserbündel mit Totalreflexion: Licht wird durch einen Faserbündel zum Untersuchungsort geleitet, das reflektierte Bild über ein zweites Bündel zurückgeführt. Die Flexibilität der Fasern ermöglicht die Untersuchung von Magen, Darm und Bronchien. In aktuellen Endoskopen wird das Bild oft zusätzlich digital mit einer Miniaturkamera am Faserneende erfasst.
+**Klinische Anwendung — Endoskopie:** Moderne Endoskope nutzen Glasfaserbuendel mit Totalreflexion: Licht wird durch einen Faserbuendel zum Untersuchungsort geleitet, das reflektierte Bild ueber ein zweites Buendel zurueckgefuehrt.
 
 **Rechenbeispiel — Diamant:**
-n₁ = 2,42 (Diamant), n₂ = 1,00 (Luft): sin(θ_c) = 1,00/2,42 = 0,413 → θ_c = 24,4°. Der sehr niedrige Grenzwinkel bedeutet, dass Licht im Diamant bei fast allen Einfallswinkeln total reflektiert wird — daher das intensive Funkeln.
+n1 = 2,42 (Diamant), n2 = 1,00 (Luft): sin(theta_c) = 1,00/2,42 = 0,413, theta_c = 24,4 Grad. Der sehr niedrige Grenzwinkel bedeutet, dass Licht im Diamant bei fast allen Einfallswinkeln total reflektiert wird — daher das intensive Funkeln.
 
-> **Merke:** Totalreflexion tritt nur beim Übergang vom optisch **dichteren** ins **dünnere** Medium auf. Der Grenzwinkel ist sin(θ_c) = n₂/n₁. Anwendungen: Glasfaser-Endoskopie, Lichtleiter, Prismenglas.
+> **Merke:** Totalreflexion tritt nur beim Uebergang vom optisch **dichteren** ins **duennere** Medium auf. Der Grenzwinkel ist sin(theta_c) = n2/n1. Anwendungen: Glasfaser-Endoskopie, Lichtleiter, Prismenglas.
 
 ---
 
 ## Linsen und Linsengleichung
 
-Bisher haben wir Brechung an ebenen Grenzflächen betrachtet. Linsen sind **gekrümmte** Grenzflächen, die Licht gezielt bündeln oder zerstreuen.
+Bisher haben wir Brechung an ebenen Grenzflaechen betrachtet. Linsen sind **gekruemmte** Grenzflaechen, die Licht gezielt buendeln oder zerstreuen.
 
 ### Sammellinse (konvex, Pluslinse)
-- Bündelt paralleles Licht im **Brennpunkt F** (Brennweite f > 0)
+- Buendelt paralleles Licht im **Brennpunkt F** (Brennweite f > 0)
 - Erzeugt bei g > f ein **reelles, umgekehrtes Bild** auf der anderen Seite
-- Erzeugt bei g < f ein **virtuelles, aufrechtes, vergrössertes Bild** (Lupe!)
+- Erzeugt bei g < f ein **virtuelles, aufrechtes, vergroessertes Bild** (Lupe!)
 - Brechkraft: **D = 1/f** [Dioptrien, dpt; f in Metern]
 
 ### Zerstreuungslinse (konkav, Minuslinse)
-- Zerstreut paralleles Licht → Strahlen scheinen aus einem virtuellen Brennpunkt vor der Linse zu kommen
-- Brennweite f < 0 → Brechkraft D < 0 dpt
+- Zerstreut paralleles Licht, Strahlen scheinen aus einem virtuellen Brennpunkt vor der Linse zu kommen
+- Brennweite f < 0, Brechkraft D < 0 dpt
 - Erzeugt immer ein **virtuelles, aufrechtes, verkleinertes Bild**
 
-### Die Linsengleichung (dünne Linse)
+### Die Linsengleichung (duenne Linse)
 
 **1/f = 1/g + 1/b**
 
-- **f** = Brennweite [m] (positiv für Sammellinse, negativ für Zerstreuungslinse)
-- **g** = Gegenstandsweite (Abstand Objekt–Linse) [m]
-- **b** = Bildweite (Abstand Bild–Linse) [m] (positiv = reelles Bild; negativ = virtuelles Bild)
+- **f** = Brennweite [m] (positiv fuer Sammellinse, negativ fuer Zerstreuungslinse)
+- **g** = Gegenstandsweite (Abstand Objekt-Linse) [m]
+- **b** = Bildweite (Abstand Bild-Linse) [m] (positiv = reelles Bild; negativ = virtuelles Bild)
 
-**Abbildungsmaßstab:**
+**Abbildungsmassstab:**
 
 **V = B/G = b/g**
 
-- B = Bildgrösse, G = Gegenstandsgrösse
-- |V| > 1: Vergrösserung; |V| < 1: Verkleinerung
+- B = Bildgroesse, G = Gegenstandsgroesse
+- |V| > 1: Vergroesserung; |V| < 1: Verkleinerung
 - V > 0: aufrechtes Bild; V < 0: umgekehrtes Bild
 
-**Formelklartext:** 1/f = 1/g + 1/b bedeutet: Wer Brennweite f und Gegenstandsweite g kennt, kann die Bildweite b berechnen: b = g·f/(g − f). Das Vorzeichen von b zeigt, ob das Bild reell (b > 0, auf der Schirmseite) oder virtuell (b < 0, auf der Gegenstandsseite) ist.
+> **Merke:** Die **Brechkraft D = 1/f** [dpt] beschreibt, wie stark eine Linse bricht. Sammellinse: D > 0; Zerstreuungslinse: D < 0. Bei Kombination mehrerer duenner Linsen addieren sich die Brechkraefte: D_ges = D1 + D2 + ...
 
-> **Merke:** Die **Brechkraft D = 1/f** [dpt] beschreibt, wie stark eine Linse bricht. Sammellinse: D > 0; Zerstreuungslinse: D < 0. Bei Kombination mehrerer dünner Linsen addieren sich die Brechkräfte: D_ges = D₁ + D₂ + ...
-
-### Spezialfälle der Abbildung (Sammellinse)
+### Spezialfaelle der Abbildung (Sammellinse)
 
 | Gegenstandsweite g | Bildweite b | Bild | Beispiel |
 |---------------------|-------------|------|----------|
-| g → ∞ (sehr fern) | b = f | reell, stark verkleinert | Fernsicht |
-| g = 2f | b = 2f | reell, gleich gross (V = −1) | 1:1-Kopie |
-| g = f | b → ±∞ | kein Bild (Parallelstrahlen) | Scheinwerfer |
-| g < f | b < 0 (virtuell) | virtuell, vergrössert | Lupe |
+| g sehr gross (fern) | b = f | reell, stark verkleinert | Fernsicht |
+| g = 2f | b = 2f | reell, gleich gross (V = -1) | 1:1-Kopie |
+| g = f | b sehr gross | kein Bild (Parallelstrahlen) | Scheinwerfer |
+| g < f | b < 0 (virtuell) | virtuell, vergroessert | Lupe |
 
 ---
 
 ## Das Auge als optisches System
 
-Das menschliche Auge ist ein zusammengesetztes optisches System mit einer Gesamtbrechkraft von ca. **60 Dioptrien** (D = 1/f → f ≈ 17 mm):
+Das menschliche Auge ist ein zusammengesetztes optisches System mit einer Gesamtbrechkraft von ca. **60 Dioptrien** (D = 1/f, f ca. 17 mm):
 
-- **Hornhaut (Cornea):** D ≈ 43 dpt → liefert ca. 2/3 der Gesamtbrechkraft (grösster Brechungsindex-Sprung: Luft → Hornhaut)
-- **Augenlinse:** D ≈ 17–30 dpt (variabel durch Akkommodation)
-- **Kammerwasser und Glaskörper:** Geringe zusätzliche Brechung
+- **Hornhaut (Cornea):** D ca. 43 dpt, liefert ca. 2/3 der Gesamtbrechkraft (groesster Brechungsindex-Sprung: Luft zu Hornhaut)
+- **Augenlinse:** D ca. 17-30 dpt (variabel durch Akkommodation)
+- **Kammerwasser und Glaskoerper:** Geringe zusaetzliche Brechung
 
 ### Akkommodation
 
-Die **Akkommodation** ist die Fähigkeit der Augenlinse, ihre Brennweite zu verändern, um Objekte in verschiedenen Entfernungen scharf auf der Netzhaut abzubilden:
+Die **Akkommodation** ist die Faehigkeit der Augenlinse, ihre Brennweite zu veraendern, um Objekte in verschiedenen Entfernungen scharf auf der Netzhaut abzubilden:
 
-- **Fernakkommodation** (entspannt): Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach → f maximal → ferne Objekte scharf
-- **Nahakkommodation** (angespannt): Ziliarmuskel kontrahiert → Zonulafasern locker → Linse rundet sich → f kürzer → nahe Objekte scharf
+- **Fernakkommodation** (entspannt): Ziliarmuskel relaxiert, Zonulafasern gespannt, Linse flach, f maximal, ferne Objekte scharf
+- **Nahakkommodation** (angespannt): Ziliarmuskel kontrahiert, Zonulafasern locker, Linse rundet sich, f kuerzer, nahe Objekte scharf
 
-**Nahpunkt:** Kürzeste Entfernung, bei der scharfes Sehen möglich ist. Beim jungen Erwachsenen: ~10 cm; bei 45-Jährigen: ~25 cm (konventionelle Bezugssehweite s₀ = 25 cm); bei 60-Jährigen: ~100 cm. Diese Abnahme heisst **Presbyopie** (Altersweitsichtigkeit) und entsteht durch zunehmende Starrheit der Linse.
+**Nahpunkt:** Kuerzeste Entfernung, bei der scharfes Sehen moeglich ist. Beim jungen Erwachsenen: ~10 cm; bei 45-Jaehrigen: ~25 cm; bei 60-Jaehrigen: ~100 cm. Diese Abnahme heisst **Presbyopie** (Altersweitsichtigkeit).
 
-**Fernpunkt:** Entfernung, die bei maximaler Entspannung des Ziliarmuskels scharf gesehen wird. Normal: ∞ (Emmetropie). Bei Kurzsichtigkeit: endlicher Fernpunkt.
+**Fernpunkt:** Entfernung, die bei maximaler Entspannung des Ziliarmuskels scharf gesehen wird. Normal: unendlich (Emmetropie). Bei Kurzsichtigkeit: endlicher Fernpunkt.
 
-> **Merke:** Die Hornhaut liefert ca. 2/3 der Brechkraft des Auges (~43 dpt). Die Augenlinse variiert ihre Brechkraft durch Formänderung (Akkommodation): flach für Ferne, rund für Nähe. Presbyopie: ab ~45 Jahren brauchen die meisten eine Lesebrille.
+> **Merke:** Die Hornhaut liefert ca. 2/3 der Brechkraft des Auges (~43 dpt). Die Augenlinse variiert ihre Brechkraft durch Formaenderung (Akkommodation): flach fuer Ferne, rund fuer Naehe. Presbyopie: ab ~45 Jahren brauchen die meisten eine Lesebrille.
 
 ### Fehlsichtigkeiten und Korrektur
 
 **Myopie (Kurzsichtigkeit):**
-- Augapfel zu lang oder Brechkraft zu gross → Bild fällt **vor** die Netzhaut
-- Fernpunkt endlich (z. B. 2 m statt ∞)
-- Korrektur: **Zerstreuungslinse** (D < 0 dpt) → verlängert die Brennweite
-- Berechnung: D = −1/Fernpunkt (z. B. Fernpunkt 2 m → D = −0,5 dpt)
-- Alternative: LASIK (Hornhaut wird abgeflacht → Brechkraft verringert)
+- Augapfel zu lang oder Brechkraft zu gross, Bild faellt **vor** die Netzhaut
+- Korrektur: **Zerstreuungslinse** (D < 0 dpt), verlaengert die Brennweite
+- Berechnung: D = -1/Fernpunkt (z. B. Fernpunkt 2 m, D = -0,5 dpt)
+- Alternative: LASIK (Hornhaut wird abgeflacht, Brechkraft verringert)
 
 **Hyperopie (Weitsichtigkeit):**
-- Augapfel zu kurz oder Brechkraft zu gering → Bild fällt **hinter** die Netzhaut
-- Nahpunkt weiter entfernt als normal
-- Korrektur: **Sammellinse** (D > 0 dpt) → verkürzt die Brennweite
-- Alternative: LASIK (Hornhaut wird steiler gewölbt)
+- Augapfel zu kurz oder Brechkraft zu gering, Bild faellt **hinter** die Netzhaut
+- Korrektur: **Sammellinse** (D > 0 dpt), verkuerzt die Brennweite
+- Alternative: LASIK (Hornhaut wird steiler gewoelbt)
 
 **Astigmatismus (Stabsichtigkeit):**
-- Hornhaut nicht gleichmässig gekrümmt (torusförmig statt sphärisch) → verschiedene Brechkraft in verschiedenen Achsen
+- Hornhaut nicht gleichmaessig gekruemmt, verschiedene Brechkraft in verschiedenen Achsen
 - Korrektur: **zylindrische Linse** (Toruslinse), die nur in einer Achse bricht
 
-> **Merke:** **Myopie → Zerstreuungslinse (Minus-Glas)**; **Hyperopie → Sammellinse (Plus-Glas)**. Eselsbrücke: Kurzsichtig = zu viel Brechung = Minus-Linse reduziert. Weitsichtig = zu wenig Brechung = Plus-Linse verstärkt.
+> **Merke:** **Myopie: Zerstreuungslinse (Minus-Glas)**; **Hyperopie: Sammellinse (Plus-Glas)**. Kurzsichtig = zu viel Brechung = Minus-Linse reduziert. Weitsichtig = zu wenig Brechung = Plus-Linse verstaerkt.
 
 ### Rechenbeispiel — Korrekturlinse bei Myopie:
-Fernpunkt eines Kurzsichtigen: g_fern = 50 cm = 0,5 m. Die Brille soll ermöglichen, dass unendlich ferne Objekte (g → ∞) auf dem Fernpunkt abgebildet werden: 1/f = 1/∞ + 1/(−0,5) = −2 dpt. Die Brille benötigt Gläser mit D = −2,0 dpt.
+Fernpunkt eines Kurzsichtigen: g_fern = 50 cm = 0,5 m. Die Brille soll ermoeglichen, dass unendlich ferne Objekte (g sehr gross) auf dem Fernpunkt abgebildet werden: 1/f = 1/unendlich + 1/(-0,5) = -2 dpt. Die Brille benoetigt Glaeser mit D = -2,0 dpt.
 
 ### Rechenbeispiel — Korrekturlinse bei Hyperopie:
-Nahpunkt eines Weitsichtigen: 100 cm (statt normaler 25 cm). Die Lesebrille soll ein Objekt bei 25 cm auf den Nahpunkt bei 100 cm abbilden: 1/f = 1/25 − 1/100 = 4/100 − 1/100 = 3/100 → f = 33,3 cm → D = +3,0 dpt (Achtung: hier vereinfacht; exakte Berechnung berücksichtigt HSA = Hornhautscheitelabstand).
+Nahpunkt eines Weitsichtigen: 100 cm (statt normaler 25 cm). Die Lesebrille soll ein Objekt bei 25 cm auf den Nahpunkt bei 100 cm abbilden: 1/f = 1/25 - 1/100 = 4/100 - 1/100 = 3/100, f = 33,3 cm, D = +3,0 dpt.
 
 ---
 
 ## Lupe und Mikroskop
 
 ### Lupe
-Eine Lupe ist eine einfache Sammellinse mit kurzer Brennweite (f typisch 2–10 cm). Das Objekt wird innerhalb der Brennweite platziert (g < f) → virtuelles, aufrechtes, vergrössertes Bild.
+Eine Lupe ist eine einfache Sammellinse mit kurzer Brennweite (f typisch 2-10 cm). Das Objekt wird innerhalb der Brennweite platziert (g < f), virtuelles, aufrechtes, vergroessertes Bild.
 
-**Vergrösserung der Lupe:**
+**Vergroesserung der Lupe:**
 
-**M = s₀/f** (bei Betrachtung im Unendlichen, entspanntes Auge)
+**M = s0/f** (bei Betrachtung im Unendlichen, entspanntes Auge)
 
-mit s₀ = 25 cm (konventionelle Bezugssehweite).
+mit s0 = 25 cm (konventionelle Bezugssehweite).
 
-Beispiel: Lupe mit f = 5 cm → M = 25/5 = 5×.
+Beispiel: Lupe mit f = 5 cm, M = 25/5 = 5x.
 
-Bei Betrachtung im Nahpunkt (angestrengtes Auge): M = s₀/f + 1.
+Bei Betrachtung im Nahpunkt (angestrengtes Auge): M = s0/f + 1.
 
 ### Mikroskop
 Ein Lichtmikroskop besteht aus zwei Linsensystemen:
-1. **Objektiv** (kurze Brennweite f_obj, nahe am Präparat): erzeugt ein reelles, vergrössertes Zwischenbild
-2. **Okular** (wirkt als Lupe, Brennweite f_ok): vergrössert das Zwischenbild nochmals
+1. **Objektiv** (kurze Brennweite f_obj, nahe am Praeparat): erzeugt ein reelles, vergroessertes Zwischenbild
+2. **Okular** (wirkt als Lupe, Brennweite f_ok): vergroessert das Zwischenbild nochmals
 
-**Gesamtvergrösserung:**
+**Gesamtvergroesserung:**
 
-**M_ges = M_obj × M_ok = (t/f_obj) × (s₀/f_ok)**
+**M_ges = M_obj x M_ok = (t/f_obj) x (s0/f_ok)**
 
-mit t = Tubuslänge (Abstand Brennpunkt Objektiv – Brennpunkt Okular, typisch 16 cm).
+mit t = Tubuslaenge (Abstand Brennpunkt Objektiv - Brennpunkt Okular, typisch 16 cm).
 
-Beispiel: f_obj = 4 mm, f_ok = 25 mm, t = 160 mm: M_ges = (160/4) × (250/25) = 40 × 10 = 400×.
+Beispiel: f_obj = 4 mm, f_ok = 25 mm, t = 160 mm: M_ges = (160/4) x (250/25) = 40 x 10 = 400x.
 
-**Auflösungsgrenze:** Das Lichtmikroskop kann Strukturen nur bis ca. λ/2 ≈ 200 nm auflösen (Abbe'sche Beugungsgrenze). Für kleinere Strukturen: Elektronenmikroskop (λ_Elektron << λ_Licht).
+**Aufloesungsgrenze:** Das Lichtmikroskop kann Strukturen nur bis ca. lambda/2, ungefaehr 200 nm, aufloesen (Abbe'sche Beugungsgrenze). Fuer kleinere Strukturen: Elektronenmikroskop.
 
-> **Merke:** Lupe: M = s₀/f (einfach); Mikroskop: M = (t/f_obj) × (s₀/f_ok) (zweistufig). Die Auflösungsgrenze des Lichtmikroskops beträgt ca. 200 nm (Abbe-Limit).
+> **Merke:** Lupe: M = s0/f (einfach); Mikroskop: M = (t/f_obj) x (s0/f_ok) (zweistufig). Die Aufloesungsgrenze des Lichtmikroskops betraegt ca. 200 nm (Abbe-Limit).
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Brechung Luft → Glas:**
-Lichtstrahl von Luft (n₁ = 1,00) in Glas (n₂ = 1,50) unter θ₁ = 45°:
-sin(θ₂) = n₁·sin(θ₁)/n₂ = 1,00·sin(45°)/1,50 = 0,707/1,50 = 0,471 → θ₂ = 28,1°.
+**Beispiel 1 — Brechung Luft zu Glas:**
+Lichtstrahl von Luft (n1 = 1,00) in Glas (n2 = 1,50) unter theta1 = 45 Grad:
+sin(theta2) = n1 sin(theta1)/n2 = 1,00 sin(45 Grad)/1,50 = 0,707/1,50 = 0,471, theta2 = 28,1 Grad.
 Der Strahl wird zum Lot hin gebrochen (langsameres Medium).
 
-**Beispiel 2 — Grenzwinkel Wasser → Luft:**
-sin(θ_c) = n₂/n₁ = 1,00/1,333 = 0,750 → θ_c = 48,6°.
-Ab 48,6° wird Licht an der Wasseroberfläche total reflektiert — deshalb sieht man unter Wasser die Oberfläche ab einem bestimmten Winkel als Spiegel.
+**Beispiel 2 — Grenzwinkel Wasser zu Luft:**
+sin(theta_c) = n2/n1 = 1,00/1,333 = 0,750, theta_c = 48,6 Grad.
+Ab 48,6 Grad wird Licht an der Wasseroberflaeche total reflektiert — deshalb sieht man unter Wasser die Oberflaeche ab einem bestimmten Winkel als Spiegel.
 
 **Beispiel 3 — Sammellinse (Abbildung):**
-f = 10 cm, Gegenstand bei g = 30 cm: 1/b = 1/f − 1/g = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 → b = 15 cm.
-Abbildungsmaßstab: V = b/g = 15/30 = 0,5 → Bild ist halb so gross, reell und umgekehrt.
+f = 10 cm, Gegenstand bei g = 30 cm: 1/b = 1/f - 1/g = 1/10 - 1/30 = 3/30 - 1/30 = 2/30, b = 15 cm.
+Abbildungsmassstab: V = b/g = 15/30 = 0,5, Bild ist halb so gross, reell und umgekehrt.
 
 **Beispiel 4 — Lupe:**
-Sammellinse f = 4 cm. Vergrösserung: M = 25/4 = 6,25× (bei entspanntem Auge). Ein 1 mm grosses Objekt erscheint wie 6,25 mm.
+Sammellinse f = 4 cm. Vergroesserung: M = 25/4 = 6,25x (bei entspanntem Auge). Ein 1 mm grosses Objekt erscheint wie 6,25 mm.
 
 **Beispiel 5 — Brechkraft des Auges:**
-Gesamtbrechkraft D = 60 dpt → f = 1/60 m ≈ 16,7 mm. Beim Blick in die Ferne (g → ∞) muss b = f = 16,7 mm sein, was der Augenlänge entspricht. Bei Myopie ist das Auge z. B. 25 mm lang → b_Auge > f → Bild vor der Netzhaut.
+Gesamtbrechkraft D = 60 dpt, f = 1/60 m ungefaehr 16,7 mm. Beim Blick in die Ferne (g sehr gross) muss b = f = 16,7 mm sein, was der Augenlaenge entspricht. Bei Myopie ist das Auge z. B. 25 mm lang, b_Auge > f, Bild vor der Netzhaut.
 
 **Beispiel 6 — Brechkraft einer Brille bei Myopie:**
-Fernpunkt 33 cm → D_Brille = −1/0,33 = −3,0 dpt. Die Zerstreuungslinse verschiebt den Fernpunkt auf unendlich.
+Fernpunkt 33 cm, D_Brille = -1/0,33 = -3,0 dpt. Die Zerstreuungslinse verschiebt den Fernpunkt auf unendlich.
 
 ## Klinische Vertiefung
 
-**LASIK (Laser-Assisted In Situ Keratomileusis):** Ein Excimer-Laser trägt Hornhautgewebe ab und verändert so die Krümmung: Bei Myopie wird die Hornhaut abgeflacht (weniger Brechkraft); bei Hyperopie wird sie steiler geformt. Die Korrektur ist dauerhaft und ersetzt die Brille.
+**LASIK (Laser-Assisted In Situ Keratomileusis):** Ein Excimer-Laser traegt Hornhautgewebe ab und veraendert so die Kruemmung: Bei Myopie wird die Hornhaut abgeflacht (weniger Brechkraft); bei Hyperopie wird sie steiler geformt. Die Korrektur ist dauerhaft und ersetzt die Brille.
 
-**Katarakt (Grauer Star):** Trübung der Augenlinse durch Proteindenaturierung (Alter, UV, Diabetes). Die Therapie ist eine Operation: Die trübe Linse wird durch eine künstliche Intraokularlinse (IOL) mit definierter Brechkraft ersetzt.
+**Katarakt (Grauer Star):** Truebung der Augenlinse durch Proteindenaturierung (Alter, UV, Diabetes). Die Therapie ist eine Operation: Die truebe Linse wird durch eine kuenstliche Intraokularlinse (IOL) mit definierter Brechkraft ersetzt.
 
-**Glaukom (Grüner Star):** Erhöhter Augeninnendruck schädigt den Sehnerv. Nicht direkt ein optisches Problem, aber der Druck wird mit dem Goldmann-Applanationstonometer gemessen, das auf dem Zusammenhang zwischen Kraft und Fläche basiert.
+**Glaukom (Gruener Star):** Erhoehter Augeninnendruck schaedigt den Sehnerv. Der Druck wird mit dem Goldmann-Applanationstonometer gemessen.
 
-**Funduskopie (Augenhintergrundspiegelung):** Mit einer Lupe und Lichtquelle wird die Netzhaut betrachtet. Durch die Linse des Auges sieht der Arzt ein vergrössertes Bild der Retina — direkte klinische Anwendung der Linsenoptik.
+**Funduskopie (Augenhintergrundspiegelung):** Mit einer Lupe und Lichtquelle wird die Netzhaut betrachtet. Direkte klinische Anwendung der Linsenoptik.
 
 ---
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Zentral prüfungsrelevant:**
-- Snellius: n₁·sin(θ₁) = n₂·sin(θ₂) — Brechung zum Lot im dichteren Medium
-- Totalreflexion: sin(θ_c) = n₂/n₁, nur vom dichteren ins dünnere Medium
+**Zentral pruefungsrelevant:**
+- Snellius: n1 sin(theta1) = n2 sin(theta2) — Brechung zum Lot im dichteren Medium
+- Totalreflexion: sin(theta_c) = n2/n1, nur vom dichteren ins duennere Medium
 - Linsengleichung: 1/f = 1/g + 1/b, Brechkraft D = 1/f [dpt]
-- Abbildungsmaßstab: V = b/g = B/G
-- Myopie → Zerstreuungslinse (D < 0); Hyperopie → Sammellinse (D > 0)
+- Abbildungsmassstab: V = b/g = B/G
+- Myopie: Zerstreuungslinse (D < 0); Hyperopie: Sammellinse (D > 0)
 - Hornhaut liefert ~2/3 der Brechkraft (~43 dpt); Linse ~1/3 (variabel)
 
-**Häufige Fragen:**
-- "Welche Linse korrigiert Kurzsichtigkeit?" → Zerstreuungslinse (Minus-Glas, D < 0)
-- "Wo entsteht die meiste Brechung im Auge?" → An der Hornhaut (grösster n-Sprung: Luft → Hornhaut)
-- "Wann tritt Totalreflexion auf?" → Übergang dichter → dünner, θ > θ_c
-- "Wie berechnet man die Brechkraft einer Brille bei Myopie?" → D = −1/Fernpunkt [dpt]
+**Haeufige Fragen:**
+- "Welche Linse korrigiert Kurzsichtigkeit?" Zerstreuungslinse (Minus-Glas, D < 0)
+- "Wo entsteht die meiste Brechung im Auge?" An der Hornhaut (groesster n-Sprung: Luft zu Hornhaut)
+- "Wann tritt Totalreflexion auf?" Uebergang dichter zu duenner, theta > theta_c
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Totalreflexion nur vom **dichteren** ins **dünnere** Medium — nicht umgekehrt
-- Myopie = zu starke Brechung → **Minus**-Linse (Zerstreuungslinse); nicht Plus-Linse
-- Brechkraft D = 1/f mit f in **Metern** → f = 10 cm → D = 1/0,1 = 10 dpt (nicht 1/10 = 0,1)
-- Bildweite b **negativ** = virtuelles Bild (gleiche Seite wie Gegenstand); **positiv** = reelles Bild
+**Typische Pruefungsfallen / Verwechslungen:**
+- Totalreflexion nur vom **dichteren** ins **duennere** Medium — nicht umgekehrt
+- Myopie = zu starke Brechung: **Minus**-Linse (Zerstreuungslinse); nicht Plus-Linse
+- Brechkraft D = 1/f mit f in **Metern**: f = 10 cm, D = 1/0,1 = 10 dpt (nicht 1/10 = 0,1)
+- Bildweite b **negativ** = virtuelles Bild; **positiv** = reelles Bild
 - Hornhaut, nicht Linse, liefert den Grossteil der Brechkraft des Auges
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Snellius**: n₁·sin(θ₁) = n₂·sin(θ₂); n = c₀/c_Medium; grösseres n → langsameres Licht → Brechung zum Lot
-- **Totalreflexion**: sin(θ_c) = n₂/n₁; nur dicht → dünn; Endoskopie, Glasfaser, Diamantschliff
+- **Snellius**: n1 sin(theta1) = n2 sin(theta2); n = c0/c_Medium; groesseres n, langsameres Licht, Brechung zum Lot
+- **Totalreflexion**: sin(theta_c) = n2/n1; nur dicht zu duenn; Endoskopie, Glasfaser, Diamantschliff
 - **Linsengleichung**: 1/f = 1/g + 1/b; Sammellinse f > 0, Zerstreuungslinse f < 0
-- **Brechkraft**: D = 1/f [dpt]; Kombination: D_ges = D₁ + D₂
-- **Abbildungsmaßstab**: V = b/g; |V| > 1 → Vergrösserung; V < 0 → umgekehrtes Bild
-- **Auge**: ~60 dpt gesamt; Hornhaut ~43 dpt; Akkommodation durch Linsenformänderung; Myopie → Minus-Glas; Hyperopie → Plus-Glas
-- **Lupe**: M = s₀/f; **Mikroskop**: M = (t/f_obj) × (s₀/f_ok); Auflösungsgrenze ~200 nm`,
+- **Brechkraft**: D = 1/f [dpt]; Kombination: D_ges = D1 + D2
+- **Abbildungsmassstab**: V = b/g; |V| > 1: Vergroesserung; V < 0: umgekehrtes Bild
+- **Auge**: ~60 dpt gesamt; Hornhaut ~43 dpt; Akkommodation durch Linsenformaenderung; Myopie: Minus-Glas; Hyperopie: Plus-Glas
+- **Lupe**: M = s0/f; **Mikroskop**: M = (t/f_obj) x (s0/f_ok); Aufloesungsgrenze ~200 nm`,
 
       lernziele: [
         "Das Brechungsgesetz (Snellius) anwenden und den Brechungsindex erklären.",
@@ -2022,19 +2454,15 @@ Fernpunkt 33 cm → D_Brille = −1/0,33 = −3,0 dpt. Die Zerstreuungslinse ver
         "Blutflussmessung",
       ],
       diagram: "doppler-effect",
-      content: `## Einleitung
+      content: `## Akustik-Vertiefung — einfach erklaert
 
-Im vorherigen Kapitel hast du die Grundlagen der Akustik und Hörphysiologie kennengelernt -- Dezibel-Skala, Cochlea und Audiometrie. Hier vertiefen wir drei Bereiche, die für den MedAT besonders relevant sind: die **quantitative Schallpegel-Rechnung**, die **Schallimpedanz** als Schlüssel zur Ultraschalldiagnostik und den **Doppler-Effekt** als physikalische Grundlage der Blutflussmessung.
+Du kennst schon die Dezibel-Skala und den Doppler-Effekt. Hier lernst du, damit zu **rechnen** — und verstehst, warum beim Ultraschall immer Gel auf die Haut kommt.
 
 **In diesem Kapitel lernst du:**
-- wie man Dezibel-Aufgaben systematisch löst: Addition von Quellen, Abstandsgesetz, Pegelunterschiede
-- was Schallimpedanz Z = ρ·c physikalisch bedeutet und wie sie die Reflexion an Grenzflächen bestimmt
-- wie der Doppler-Effekt quantitativ funktioniert: f' = f·(c ± v_E)/(c ∓ v_S)
-- wie die Doppler-Sonographie Blutflussgeschwindigkeit und -richtung misst (Δf = 2f₀v·cos θ/c)
-- welche Frequenzbereiche (Infraschall, Hörschall, Ultraschall) in der Medizin relevant sind
-
-**Kontext — worum geht es und wofür brauchst du das?**
-Bisher hast du Schallpegel (dB), Frequenzbereiche und Hörphysiologie auf konzeptioneller Ebene kennengelernt. Hier geht es um die **quantitative Vertiefung**: Rechenaufgaben zu dB, Impedanz und Doppler sind MedAT-Klassiker. Du brauchst das für Ultraschall-Diagnostik, Audiometrie und alle Physik-Rechenaufgaben zum Thema Akustik.
+- wie man Dezibel-Aufgaben loest (zwei Quellen, Abstand, Pegel)
+- was Schallimpedanz ist und warum Ultraschallgel unverzichtbar ist
+- wie der Doppler-Effekt Blutfluss messen kann
+- welche Ultraschall-Frequenzen wofuer geeignet sind
 
 ---
 
@@ -2042,52 +2470,165 @@ Bisher hast du Schallpegel (dB), Frequenzbereiche und Hörphysiologie auf konzep
 
 {{DIAGRAM:wave-types}}
 
+## Dezibel rechnen — Achtung, nicht einfach addieren!
 
+Die Dezibel-Skala ist **logarithmisch**. Das bedeutet: Zwei gleich laute Maschinen zusammen sind NICHT doppelt so viele dB!
+
+**Wichtigste Regeln:**
+- Zwei gleich laute Quellen: **+3 dB** (nicht das Doppelte!)
+- Zehn gleich laute Quellen: **+10 dB**
+- Doppelter Abstand: **-6 dB**
+
+**Alltagsbeispiel:** Zwei Staubsauger mit je 80 dB zusammen ergeben 83 dB — nicht 160 dB! Das liegt daran, dass sich die Schallenergie zwar verdoppelt, aber auf der logarithmischen Skala ist das nur +3.
+
+**Abstandsgesetz:** Wenn du dich doppelt so weit von einer Laermquelle entfernst, sinkt der Pegel um 6 dB. Zehnmal so weit: -20 dB.
+
+> **Merke:** Dezibel addieren sich NICHT linear. 2 Quellen = +3 dB. 10 Quellen = +10 dB. Doppelter Abstand = -6 dB.
+
+---
+
+## Schallimpedanz — warum Ultraschallgel?
+
+Die **Schallimpedanz** Z beschreibt, wie gut ein Material Schall weiterleitet. Die Formel: **Z = Dichte mal Schallgeschwindigkeit**.
+
+Wenn zwei Materialien sehr unterschiedliche Impedanz haben, wird der Schall an der Grenze fast komplett reflektiert.
+
+**Das Problem ohne Gel:** Luft hat eine extrem niedrige Impedanz, Gewebe eine hohe. An der Luft-Haut-Grenze werden **99,9 %** des Ultraschalls reflektiert — es kommt praktisch nichts durch!
+
+**Die Loesung:** Ultraschallgel hat eine aehnliche Impedanz wie Haut. Es eliminiert die Luftschicht, und der Schall kann ins Gewebe eindringen.
+
+**Reflexionsformel:** R = [(Z2 - Z1)/(Z2 + Z1)]^2
+
+- Aehnliche Impedanz (z. B. Leber zu Blut): kaum Reflexion, gut durchschallbar
+- Grosse Impedanzdifferenz (z. B. Gewebe zu Knochen): 35 % Reflexion, starker Schatten
+
+> **Merke:** Grosser Impedanzunterschied = starke Reflexion. Ultraschallgel beseitigt die Luft zwischen Schallkopf und Haut. Ohne Gel: kein Bild!
+
+---
+
+## Doppler-Sonographie — Blutfluss hoerbar machen
+
+Der **Doppler-Effekt** kennst du vom Krankenwagen: Kommt er naeher, klingt die Sirene hoeher; faehrt er weg, tiefer.
+
+Beim **Doppler-Ultraschall** nutzt man dasselbe Prinzip: Schallwellen prallen an roten Blutkoerperchen ab. Je nachdem, ob das Blut auf den Schallkopf zu oder weg fliesst, aendert sich die Frequenz.
+
+**Die Formel:** Delta_f = 2 mal f0 mal v mal cos(theta) / c
+
+- v = Blutgeschwindigkeit
+- theta = Winkel zwischen Schallkopf und Blutfluss
+- Faktor 2: Schall geht hin UND zurueck
+
+**Ganz wichtig:** Bei theta = 90 Grad (Schallkopf genau senkrecht zum Gefaess) ist cos(90) = 0, also kein Signal! Deshalb muss der Schallkopf immer **schraeg** gehalten werden (30-60 Grad).
+
+**Farbkodierung:** Rot = Blut fliesst zum Schallkopf. Blau = Blut fliesst weg.
+
+> **Merke:** Doppler-Formel: Delta_f = 2 f0 v cos(theta) / c. Bei 90 Grad kein Signal! Rot = zum Schallkopf, Blau = weg.
+
+---
+
+## Welche Frequenz fuer welches Organ?
+
+Beim Ultraschall gilt ein wichtiger Kompromiss:
+- **Hohe Frequenz** (10-15 MHz): Scharfes Bild, aber nur wenig Tiefe (2-4 cm). Gut fuer Schilddruese, Haut.
+- **Niedrige Frequenz** (2-3,5 MHz): Unscharferes Bild, aber viel Tiefe (15-20 cm). Gut fuer Bauchorgane, Herz.
+
+**Alltagsvergleich:** Wie bei einem Fernglas — starke Vergroesserung zeigt Details, aber nur einen kleinen Bereich.
+
+| Frequenz | Tiefe | Verwendung |
+|----------|-------|------------|
+| 2-3,5 MHz | 15-20 cm | Bauch, Herz |
+| 5-7,5 MHz | 5-10 cm | Schilddruese, Gefaesse |
+| 10-15 MHz | 2-4 cm | Haut, oberflaechliche Strukturen |
+
+> **Merke:** Hohe Frequenz = gutes Bild, wenig Tiefe. Niedrige Frequenz = weniger Detail, viel Tiefe.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Dezibel: 2 Quellen = +3 dB; doppelter Abstand = -6 dB
+- Schallimpedanz: Z = Dichte mal Schallgeschwindigkeit; grosser Z-Sprung = starke Reflexion
+- Doppler: Delta_f = 2 f0 v cos(theta) / c; theta = 90 Grad = kein Signal
+- Ultraschall-Frequenzwahl: hoehere Frequenz = besser aufgeloest, weniger tief
+
+**Typische Fallen:**
+- 60 dB + 60 dB ist NICHT 120 dB, sondern 63 dB
+- Ohne Gel: 99,9 % Reflexion an der Haut — kein Ultraschallbild
+- Schallkopf nie senkrecht zum Gefaess halten (sonst kein Doppler-Signal)
+- Hohe Frequenz = WENIGER Eindringtiefe (nicht mehr!)
+
+## Zusammenfassung
+
+- **Dezibel:** Logarithmisch! 2 Quellen = +3 dB; 10 Quellen = +10 dB; doppelter Abstand = -6 dB
+- **Impedanz:** Z = Dichte mal c; grosser Unterschied = starke Reflexion; Gel beseitigt Luftschicht
+- **Doppler:** Delta_f = 2 f0 v cos(theta) / c; 90 Grad = kein Signal; Rot = zu, Blau = weg
+- **Frequenzwahl:** Hoch = scharf aber flach; Niedrig = tief aber unscharf`,
+
+      contentExtended: `## Einleitung
+
+Im vorherigen Kapitel hast du die Grundlagen der Akustik und Hoerphysiologie kennengelernt -- Dezibel-Skala, Cochlea und Audiometrie. Hier vertiefen wir drei Bereiche, die fuer den MedAT besonders relevant sind: die **quantitative Schallpegel-Rechnung**, die **Schallimpedanz** als Schluessel zur Ultraschalldiagnostik und den **Doppler-Effekt** als physikalische Grundlage der Blutflussmessung.
+
+**In diesem Kapitel lernst du:**
+- wie man Dezibel-Aufgaben systematisch loest: Addition von Quellen, Abstandsgesetz, Pegelunterschiede
+- was Schallimpedanz Z = rho mal c physikalisch bedeutet und wie sie die Reflexion an Grenzflaechen bestimmt
+- wie der Doppler-Effekt quantitativ funktioniert: f' = f mal (c +/- v_E)/(c -/+ v_S)
+- wie die Doppler-Sonographie Blutflussgeschwindigkeit und -richtung misst (Delta_f = 2f0 v cos theta / c)
+- welche Frequenzbereiche (Infraschall, Hoerschall, Ultraschall) in der Medizin relevant sind
+
+**Kontext — worum geht es und wofuer brauchst du das?**
+Bisher hast du Schallpegel (dB), Frequenzbereiche und Hoerphysiologie auf konzeptioneller Ebene kennengelernt. Hier geht es um die **quantitative Vertiefung**: Rechenaufgaben zu dB, Impedanz und Doppler sind MedAT-Klassiker.
+
+---
+
+{{DIAGRAM:doppler-effect}}
+
+{{DIAGRAM:wave-types}}
 
 ## Dezibel-Rechnung — Vertiefung
 
-Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen für Berechnungen:
+Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen fuer Berechnungen:
 
 ### Addition mehrerer Schallquellen
 
 Zwei gleich laute Quellen (jeweils L dB) ergeben **nicht** 2L dB, sondern L + 3 dB:
-- 2 Quellen à 60 dB → 63 dB (nicht 120 dB!)
-- 10 Quellen à 60 dB → 70 dB (10·log₁₀(10) = +10 dB)
-- 100 Quellen à 60 dB → 80 dB
+- 2 Quellen a 60 dB: 63 dB (nicht 120 dB!)
+- 10 Quellen a 60 dB: 70 dB (10 log10(10) = +10 dB)
+- 100 Quellen a 60 dB: 80 dB
 
-**Formelklartext:** Intensitäten addieren sich linear (I_ges = I₁ + I₂ + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensität → +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensität → +10 dB.
+**Formelklartext:** Intensitaeten addieren sich linear (I_ges = I1 + I2 + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensitaet: +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensitaet: +10 dB.
 
-> **Merke:** Zwei gleich laute Quellen → +3 dB, nicht doppelte dB! Zehn gleich laute Quellen → +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
+> **Merke:** Zwei gleich laute Quellen: +3 dB, nicht doppelte dB! Zehn gleich laute Quellen: +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
 
 ### Abstandsgesetz (Freifeld)
 
-Im freien Schallfeld (keine Reflexionen) nimmt die Intensität mit dem Quadrat der Entfernung ab:
+Im freien Schallfeld (keine Reflexionen) nimmt die Intensitaet mit dem Quadrat der Entfernung ab:
 
-**I ∝ 1/r²** → **ΔL = −20·log₁₀(r₂/r₁) dB**
+**I proportional 1/r^2** also **Delta_L = -20 log10(r2/r1) dB**
 
-Verdopplung des Abstands: ΔL = −20·log₁₀(2) = −6 dB. Verzehnfachung: ΔL = −20 dB.
+Verdopplung des Abstands: Delta_L = -20 log10(2) = -6 dB. Verzehnfachung: Delta_L = -20 dB.
 
-Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 − 20 = 60 dB. In 100 m: 80 − 40 = 40 dB.
+Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 20 = 60 dB. In 100 m: 80 - 40 = 40 dB.
 
 ### Wichtige Dezibel-Merkregeln (Zusammenfassung)
 
-| Änderung | Schalldruck | Intensität | Wahrnehmung |
+| Aenderung | Schalldruck | Intensitaet | Wahrnehmung |
 |----------|-------------|------------|-------------|
-| +3 dB | × 1,41 | × 2 | Kaum merkbar |
-| +6 dB | × 2 | × 4 | Leicht lauter |
-| +10 dB | × 3,16 | × 10 | Doppelt so laut |
-| +20 dB | × 10 | × 100 | 4× so laut |
-| −6 dB/Distanzverdopplung | | | Abstandsgesetz |
+| +3 dB | x 1,41 | x 2 | Kaum merkbar |
+| +6 dB | x 2 | x 4 | Leicht lauter |
+| +10 dB | x 3,16 | x 10 | Doppelt so laut |
+| +20 dB | x 10 | x 100 | 4x so laut |
+| -6 dB/Distanzverdopplung | | | Abstandsgesetz |
 
 ---
 
 ## Schallimpedanz — Vertiefung
 
-Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird:
+Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche reflektiert wird:
 
-**Z = ρ · c** [kg/(m²·s) = Rayl]
+**Z = rho mal c** [kg/(m^2 s) = Rayl]
 
-| Medium | ρ [kg/m³] | c [m/s] | Z [×10⁶ Rayl] |
+| Medium | rho [kg/m^3] | c [m/s] | Z [x10^6 Rayl] |
 |--------|-----------|---------|----------------|
 | Luft | 1,2 | 340 | 0,000408 |
 | Wasser | 1000 | 1480 | 1,48 |
@@ -2099,14 +2640,14 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche re
 
 ### Reflexionskoeffizient
 
-**R = [(Z₂ − Z₁)/(Z₂ + Z₁)]²**
+**R = [(Z2 - Z1)/(Z2 + Z1)]^2**
 
-- **Luft → Weichgewebe:** R = [(1,63×10⁶ − 408)/(1,63×10⁶ + 408)]² ≈ 0,999 → 99,9 % Reflexion → **ohne Gel kein Ultraschall-Bild!**
-- **Weichgewebe → Knochen:** R = [(6,30 − 1,63)/(6,30 + 1,63)]² ≈ 0,35 → 35 % Reflexion → starkes Echo, Knochen schwer durchschallbar
-- **Leber → Blut:** R = [(1,66 − 1,64)/(1,66 + 1,64)]² ≈ 0,000037 → 0,004 % Reflexion → kaum Echo → gut durchschallbar
-- **Gel → Haut:** R ≈ 0 → nahezu vollständige Transmission → deshalb Ultraschallgel essenziell
+- **Luft zu Weichgewebe:** R ungefaehr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
+- **Weichgewebe zu Knochen:** R ungefaehr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
+- **Leber zu Blut:** R ungefaehr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
+- **Gel zu Haut:** R ungefaehr 0: nahezu vollstaendige Transmission: deshalb Ultraschallgel essenziell
 
-> **Merke:** Kleine Impedanzdifferenz → wenig Reflexion → gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz → starke Reflexion → schwer durchschallbar (z. B. Gewebe–Knochen, Gewebe–Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
+> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
 
 ---
 
@@ -2114,46 +2655,46 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche re
 
 ### Allgemeine Doppler-Formel
 
-**f' = f₀ · (c ± v_E) / (c ∓ v_S)**
+**f' = f0 mal (c +/- v_E) / (c -/+ v_S)**
 
-- f₀ = Sendefrequenz der Quelle
+- f0 = Sendefrequenz der Quelle
 - c = Schallgeschwindigkeit im Medium
-- v_E = Geschwindigkeit des Empfängers
+- v_E = Geschwindigkeit des Empfaengers
 - v_S = Geschwindigkeit der Quelle/Senders
 
 **Vorzeichenkonvention:**
-- Zähler: + wenn Empfänger sich **zur** Quelle bewegt, − wenn **weg**
-- Nenner: − wenn Quelle sich **zum** Empfänger bewegt, + wenn **weg**
+- Zaehler: + wenn Empfaenger sich **zur** Quelle bewegt, - wenn **weg**
+- Nenner: - wenn Quelle sich **zum** Empfaenger bewegt, + wenn **weg**
 
-> **Merke:** Annäherung → f' > f₀ (höherer Ton / Blauverschiebung); Entfernung → f' < f₀ (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt für **alle** Wellen: Schall, Licht, Ultraschall.
+> **Merke:** Annaeherung: f' > f0 (hoeherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt fuer **alle** Wellen: Schall, Licht, Ultraschall.
 
 ### Doppler-Sonographie — quantitativ
 
-In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfänger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
+In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zuruecklegt (hin und zurueck), ist der Doppler-Shift:
 
-**Δf = 2 · f₀ · v · cos(θ) / c**
+**Delta_f = 2 mal f0 mal v mal cos(theta) / c**
 
 - **v** = Blutflussgeschwindigkeit [m/s]
-- **θ** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
-- **c** = Schallgeschwindigkeit in Gewebe (≈ 1540 m/s)
-- **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
+- **theta** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
+- **c** = Schallgeschwindigkeit in Gewebe (ungefaehr 1540 m/s)
+- **Faktor 2**: weil der Schall zweimal den Weg durchlaeuft (Hin- und Rueckweg)
 
-**Wichtig:** Bei θ = 90° (Schallstrahl senkrecht zum Blutfluss) ist cos(90°) = 0 → Δf = 0 → **kein Signal!** Deshalb muss der Schallkopf immer schräg zum Gefäss gehalten werden (optimal: θ = 30–60°).
+**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefaess gehalten werden (optimal: theta = 30-60 Grad).
 
 ### Umstellung nach v (Blutflussgeschwindigkeit):
 
-**v = Δf · c / (2 · f₀ · cos θ)**
+**v = Delta_f mal c / (2 mal f0 mal cos theta)**
 
 ### Rechenbeispiel — Doppler-Sonographie:
-f₀ = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), θ = 45°:
-Δf = 2 × 5×10⁶ × 0,3 × cos(45°) / 1540 = 2 × 5×10⁶ × 0,3 × 0,707 / 1540 ≈ 1379 Hz
+f0 = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), theta = 45 Grad:
+Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefaehr 1379 Hz
 
-Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
+Die Frequenzverschiebung von ~1,4 kHz liegt im **hoerbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
 
 ### Farbdoppler-Kodierung:
-- **Rot:** Blut fliesst auf den Schallkopf zu (Δf > 0)
-- **Blau:** Blut fliesst vom Schallkopf weg (Δf < 0)
-- **Mosaik/Turbulenz:** Ungeordnete Strömung (z. B. an Stenosen, Klappeninsuffizienzen)
+- **Rot:** Blut fliesst auf den Schallkopf zu (Delta_f > 0)
+- **Blau:** Blut fliesst vom Schallkopf weg (Delta_f < 0)
+- **Mosaik/Turbulenz:** Ungeordnete Stroemung (z. B. an Stenosen, Klappeninsuffizienzen)
 
 Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
 
@@ -2163,91 +2704,91 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 
 | Bereich | Frequenz | Medizinische Relevanz |
 |---------|----------|----------------------|
-| **Infraschall** | < 20 Hz | Nicht hörbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
-| **Hörschall** | 20 Hz – 20 kHz | Sprache (300–3400 Hz), Audiometrie, Stimmgabel-Tests |
-| **Ultraschall** | > 20 kHz | Sonographie (2–20 MHz), Doppler (2–10 MHz), Lithotripsie |
+| **Infraschall** | < 20 Hz | Nicht hoerbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
+| **Hoerschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
+| **Ultraschall** | > 20 kHz | Sonographie (2-20 MHz), Doppler (2-10 MHz), Lithotripsie |
 
 ### Ultraschall-Frequenzwahl in der Diagnostik:
 
-| Frequenz | Eindringtiefe | Auflösung | Anwendung |
+| Frequenz | Eindringtiefe | Aufloesung | Anwendung |
 |----------|---------------|-----------|-----------|
-| 2–3,5 MHz | 15–20 cm | ~1 mm | Abdomen, Herz (tief) |
-| 5–7,5 MHz | 5–10 cm | ~0,5 mm | Schilddrüse, Gefässe |
-| 10–15 MHz | 2–4 cm | ~0,2 mm | Haut, oberflächliche Strukturen |
+| 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
+| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefaesse |
+| 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
 | 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
 
-**Zusammenhang:** Höhere Frequenz → kürzere Wellenlänge (λ = c/f) → bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung ∝ f²) → geringere Eindringtiefe.
+**Zusammenhang:** Hoehere Frequenz: kuerzere Wellenlaenge (lambda = c/f): bessere Aufloesung, aber staerkere Daempfung im Gewebe (Daempfung proportional f^2): geringere Eindringtiefe.
 
-> **Merke:** Diagnostischer Ultraschall: 2–20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, grosse Tiefe. Kompromiss je nach Fragestellung.
+> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Aufloesung, geringe Tiefe. Niedrige Frequenz = schlechte Aufloesung, grosse Tiefe. Kompromiss je nach Fragestellung.
 
 ---
 
 ## Rechenbeispiele
 
 **Beispiel 1 — Zwei Schallquellen addieren:**
-Zwei Maschinen à 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10·log₁₀(2) = 80 + 3 = 83 dB. Nicht 160 dB!
+Zwei Maschinen a 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10 log10(2) = 80 + 3 = 83 dB. Nicht 160 dB!
 
 **Beispiel 2 — Abstandsgesetz:**
-Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10× weiter):
-ΔL = −20·log₁₀(50/5) = −20·log₁₀(10) = −20 dB → L = 100 − 20 = 80 dB.
+Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10x weiter):
+Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB: L = 100 - 20 = 80 dB.
 
 **Beispiel 3 — Reflexionskoeffizient berechnen:**
-Gewebe (Z₁ = 1,63×10⁶) → Knochen (Z₂ = 6,30×10⁶):
-R = [(6,30 − 1,63)/(6,30 + 1,63)]² = [4,67/7,93]² = [0,589]² = 0,347 → 34,7 % werden reflektiert.
-Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum möglich (akustischer Schatten).
+Gewebe (Z1 = 1,63x10^6) zu Knochen (Z2 = 6,30x10^6):
+R = [(6,30 - 1,63)/(6,30 + 1,63)]^2 = [4,67/7,93]^2 = [0,589]^2 = 0,347: 34,7 % werden reflektiert.
+Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum moeglich (akustischer Schatten).
 
 **Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
-Δf = 2000 Hz, f₀ = 4 MHz, θ = 60°, c = 1540 m/s:
-v = Δf · c / (2 · f₀ · cos θ) = 2000 × 1540 / (2 × 4×10⁶ × 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
-Normaler arterieller Blutfluss: 0,2–1,0 m/s → Wert ist plausibel.
+Delta_f = 2000 Hz, f0 = 4 MHz, theta = 60 Grad, c = 1540 m/s:
+v = Delta_f mal c / (2 mal f0 mal cos theta) = 2000 x 1540 / (2 x 4x10^6 x 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
+Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
 
-**Beispiel 5 — Ultraschall-Wellenlänge und Auflösung:**
-f = 7,5 MHz in Gewebe (c = 1540 m/s): λ = 1540 / 7,5×10⁶ = 0,205 mm.
-Axiale Auflösung ≈ λ/2 ≈ 0,1 mm. Ausreichend für Schilddrüsenknoten (typisch 5–30 mm).
+**Beispiel 5 — Ultraschall-Wellenlaenge und Aufloesung:**
+f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
+Axiale Aufloesung ungefaehr lambda/2 ungefaehr 0,1 mm. Ausreichend fuer Schilddruesenknoten (typisch 5-30 mm).
 
 ## Klinische Vertiefung
 
-**Doppler bei Gefässstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitätsgleichung: A₁v₁ = A₂v₂). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit → erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhoehter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
 
-**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5–5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
+**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe fuer den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft ueber die plazentare Durchblutung und damit die fetale Versorgung.
 
-**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8–3,5 MHz bei sehr hoher Intensität zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert → lokale Erwärmung auf > 60°C → Koagulationsnekrose.
+**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwaermung auf > 60 Grad C: Koagulationsnekrose.
 
-**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen (nicht Ultraschall im engeren Sinne) zertrümmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein → Fragmentierung.
+**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.
 
 ---
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Zentral prüfungsrelevant:**
-- Dezibel-Rechnung: L = 20·log(p/p₀) = 10·log(I/I₀); +3 dB → I×2; +6 dB → p×2
-- Schallimpedanz: Z = ρ·c; Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]²
-- Doppler: f' = f₀·(c±v_E)/(c∓v_S); Δf = 2f₀v·cos θ/c (Sonographie)
-- Frequenzwahl: hohe f → bessere Auflösung, weniger Tiefe
+**Zentral pruefungsrelevant:**
+- Dezibel-Rechnung: L = 20 log(p/p0) = 10 log(I/I0); +3 dB: I x 2; +6 dB: p x 2
+- Schallimpedanz: Z = rho mal c; Reflexionskoeffizient R = [(Z2-Z1)/(Z2+Z1)]^2
+- Doppler: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Delta_f = 2f0 v cos theta / c (Sonographie)
+- Frequenzwahl: hohe f: bessere Aufloesung, weniger Tiefe
 
-**Häufige Fragen:**
-- "Zwei gleich laute Quellen — Gesamtpegel?" → L + 3 dB (nicht L + L!)
-- "Warum Ultraschallgel?" → Z_Luft ≈ 0,0004 ×10⁶ Rayl; Z_Gewebe ≈ 1,63 ×10⁶ Rayl → R ≈ 99,9 % ohne Gel
-- "Bei welchem Winkel kein Doppler-Signal?" → θ = 90° (cos 90° = 0)
-- "Hohe Frequenz im Ultraschall — Vor-/Nachteile?" → bessere Auflösung, geringere Eindringtiefe
+**Haeufige Fragen:**
+- "Zwei gleich laute Quellen — Gesamtpegel?" L + 3 dB (nicht L + L!)
+- "Warum Ultraschallgel?" Z_Luft ungefaehr 0,0004 x10^6 Rayl; Z_Gewebe ungefaehr 1,63 x10^6 Rayl: R ungefaehr 99,9 % ohne Gel
+- "Bei welchem Winkel kein Doppler-Signal?" theta = 90 Grad (cos 90 Grad = 0)
+- "Hohe Frequenz im Ultraschall — Vor-/Nachteile?" bessere Aufloesung, geringere Eindringtiefe
 
-**Typische Prüfungsfallen / Verwechslungen:**
-- Dezibel addieren sich **nicht** linear: 60 dB + 60 dB ≠ 120 dB, sondern 63 dB
+**Typische Pruefungsfallen / Verwechslungen:**
+- Dezibel addieren sich **nicht** linear: 60 dB + 60 dB ist nicht 120 dB, sondern 63 dB
 - Impedanzunterschied bestimmt Reflexion — nicht die Dichte allein und nicht die Schallgeschwindigkeit allein
-- Doppler: θ = 90° → kein Signal! Schallkopf muss schräg zum Gefäss stehen
-- Höhere US-Frequenz → bessere Auflösung, aber **weniger** Eindringtiefe (nicht mehr)
-- +3 dB = Intensitätsverdopplung (I); +6 dB = Schalldruckverdopplung (p) — I ∝ p², daher Faktor 2
+- Doppler: theta = 90 Grad: kein Signal! Schallkopf muss schraeg zum Gefaess stehen
+- Hoehere US-Frequenz: bessere Aufloesung, aber **weniger** Eindringtiefe (nicht mehr)
+- +3 dB = Intensitaetsverdopplung (I); +6 dB = Schalldruckverdopplung (p) — I proportional p^2, daher Faktor 2
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Dezibel**: L = 20·log(p/p₀); +3 dB → I×2; +6 dB → p×2; +10 dB → doppelt so laut; 2 Quellen → +3 dB
-- **Abstandsgesetz**: Verdopplung des Abstands → −6 dB (I ∝ 1/r²)
-- **Schallimpedanz**: Z = ρ·c [Rayl]; R = [(Z₂−Z₁)/(Z₂+Z₁)]²; Gel eliminiert Luft-Haut-Grenzfläche
-- **Doppler**: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → höhere Frequenz; Entfernung → tiefere Frequenz
-- **Doppler-Sonographie**: Δf = 2f₀v·cos θ/c; θ = 90° → kein Signal; Rot = zum Schallkopf, Blau = weg
-- **Frequenzwahl**: 2–5 MHz (tief), 5–10 MHz (mittel), 10–20 MHz (oberflächlich); Auflösung ∝ f, Tiefe ∝ 1/f²`,
+- **Dezibel**: L = 20 log(p/p0); +3 dB: I x 2; +6 dB: p x 2; +10 dB: doppelt so laut; 2 Quellen: +3 dB
+- **Abstandsgesetz**: Verdopplung des Abstands: -6 dB (I proportional 1/r^2)
+- **Schallimpedanz**: Z = rho mal c [Rayl]; R = [(Z2-Z1)/(Z2+Z1)]^2; Gel eliminiert Luft-Haut-Grenzflaeche
+- **Doppler**: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Annaeherung: hoehere Frequenz; Entfernung: tiefere Frequenz
+- **Doppler-Sonographie**: Delta_f = 2f0 v cos theta / c; theta = 90 Grad: kein Signal; Rot = zum Schallkopf, Blau = weg
+- **Frequenzwahl**: 2-5 MHz (tief), 5-10 MHz (mittel), 10-20 MHz (oberflaechlich); Aufloesung proportional f, Tiefe proportional 1/f^2`,
 
       lernziele: [
         "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",

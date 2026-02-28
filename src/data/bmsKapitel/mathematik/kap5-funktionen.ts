@@ -26,6 +26,114 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
+Stell dir vor, du faehrst mit dem Fahrrad einen gleichmaessig ansteigenden Huegel hinauf. Pro Minute legst du immer dieselbe Hoehe zurueck -- das ist ein **linearer Zusammenhang**. Lineare Funktionen beschreiben genau solche gleichmaessigen Veraenderungen: Die Steigung sagt dir “wie viel pro Schritt”, der Achsenabschnitt gibt den Startwert an. Ob Handytarife, Temperaturumrechnungen oder Geschwindigkeit -- ueberall steckt die Formel y = mx + b.
+
+**In diesem Kapitel lernst du:**
+- was Steigung und Achsenabschnitt einer Geraden bedeuten
+- wie du die Nullstelle einer linearen Funktion berechnest
+- wie du den Schnittpunkt zweier Geraden findest
+- woran du parallele und senkrechte Geraden erkennst
+- wie du eine Geradengleichung aus zwei Punkten aufstellst
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Grundform und Begriffe
+
+Eine lineare Funktion hat die Form **f(x) = mx + b**. Dabei ist m die **Steigung** und b der **y-Achsenabschnitt**. Der Graph ist immer eine **Gerade**.
+
+Die Steigung m beschreibt, um wie viel sich f(x) aendert, wenn x um 1 zunimmt. Formel: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade; ist m < 0, faellt sie; ist m = 0, ist sie horizontal.
+
+> **Merke:** Die Steigung m = Δy/Δx gibt die Aenderung pro Einheit an. Beispiel: Ein Handytarif mit m = 0,10 bedeutet 10 Cent pro Minute.
+
+---
+
+## Steigung und Achsenabschnitt
+
+Der **y-Achsenabschnitt b** ist der Wert bei x = 0, also f(0) = b. Die **Nullstelle** ist der x-Wert, bei dem f(x) = 0: x₀ = −b/m.
+
+Zwei Geraden sind **parallel**, wenn m₁ = m₂. Sie stehen **senkrecht**, wenn m₁ × m₂ = −1.
+
+| Eigenschaft | Formel | Bedeutung |
+|---|---|---|
+| Steigung | m = Δy/Δx | Aenderungsrate |
+| y-Achsenabschnitt | b = f(0) | Startwert |
+| Nullstelle | x₀ = −b/m | Schnittpunkt mit x-Achse |
+| Parallel | m₁ = m₂ | Geraden schneiden sich nie |
+| Senkrecht | m₁ × m₂ = −1 | 90°-Winkel |
+
+> **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Zuerst m berechnen, dann b durch Einsetzen eines Punktes.
+
+---
+
+## Gerade aufstellen
+
+**Aus zwei Punkten:** P₁(x₁|y₁) und P₂(x₂|y₂). Zuerst m = (y₂ − y₁)/(x₂ − x₁), dann b = y₁ − m×x₁.
+
+**Aus Steigung und Punkt:** Gegeben m und P(x₀|y₀). Dann b = y₀ − m×x₀.
+
+**Steigungsdreieck:** Um m grafisch abzulesen, zeichnest du ein rechtwinkliges Dreieck unter der Geraden: m = Δy/Δx.
+
+---
+
+## Besondere Geraden
+
+- **Horizontale Gerade** (m = 0, f(x) = b): z. B. konstante Temperatur
+- **Ursprungsgerade** (b = 0, f(x) = mx): direkte Proportionalitaet, z. B. Preis pro Stueck
+- **Vertikale Gerade** (x = a): keine Funktion, da einem x-Wert mehrere y-Werte zugeordnet sind
+
+---
+
+## Schnittpunkt zweier Geraden
+
+Zwei Geraden f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich bei m₁ ≠ m₂. Du setzt sie gleich: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Dann y berechnen durch Einsetzen.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Handytarif:** Kosten K(x) = 0,10x + 5 (x = Minuten, K in Euro). Grundgebuehr b = 5 Euro, pro Minute 10 Cent. Bei 30 Minuten: K = 0,10 × 30 + 5 = **8 Euro**. Nullstelle: x₀ = −5/0,10 = −50 (kein sinnvoller Wert → Kosten sind immer ≥ 5).
+
+**Beispiel 2 — Senkrechte Gerade:** g₁: y = 3x − 2. Senkrechte g₂ durch P(6|1). m₂ = −1/3. b₂ = 1 − (−1/3)×6 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: 3 × (−1/3) = −1.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Typische Aufgabentypen:**
+- Geradengleichung aus 2 Punkten aufstellen
+- Nullstelle berechnen: x₀ = −b/m
+- Schnittpunkt zweier Geraden durch Gleichsetzen
+- Steigung oder y-Achsenabschnitt aus Graph ablesen
+
+**Typische Fallen:**
+- Nullstelle linear: x₀ = **−b/m** (nicht Mitternachtsformel!)
+- Senkrechte: m₂ = **−1/m₁** (nicht −m₁)
+- Steigung: Δy/Δx — y im Zaehler, x im Nenner
+
+**Minimal-Rechenrezepte:**
+- **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁.
+- **Nullstelle:** x₀ = −b/m.
+- **Schnittpunkt:** m₁x + b₁ = m₂x + b₂ → x = (b₂−b₁)/(m₁−m₂).
+- **Senkrechte zu m₁:** m₂ = −1/m₁.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **f(x) = mx + b**: m = Steigung, b = y-Achsenabschnitt
+- **m > 0** → steigend; **m < 0** → fallend; **m = 0** → horizontal
+- **Nullstelle:** x₀ = −b/m
+- **Gerade aus 2 Punkten:** zuerst m, dann b
+- **Parallel:** m₁ = m₂; **senkrecht:** m₁ × m₂ = −1
+- **Fehler vermeiden:** Nullstelle = −b/m; senkrecht = −1/m₁`,
+      contentExtended: `## Einleitung
+
 Im Labor zeigt das Photometer eine Absorption von 0,77 -- wie hoch ist die Konzentration der Probe? Wenn du die Kalibrierkurve als Gerade kennst, genuegt eine einfache Umstellung. **Lineare Funktionen** beschreiben Zusammenhaenge, bei denen sich y gleichmaessig mit x aendert: Die Steigung sagt “wie viel pro Einheit”, der Achsenabschnitt gibt den Startwert an. Von der Infusionsrate ueber die Regressionsgerade bis zum Alkoholabbau im Blut (Kinetik 0. Ordnung) -- ueberall steckt y = mx + b.
 
 **In diesem Kapitel lernst du:**
@@ -43,7 +151,7 @@ Im Labor zeigt das Photometer eine Absorption von 0,77 -- wie hoch ist die Konze
 
 ## Grundform und Begriffe
 
-**Idee:** Eine lineare Funktion beschreibt einen Zusammenhang, bei dem die Änderung von y proportional zur Änderung von x ist — der Graph ist eine **Gerade**. Die Steigung m sagt „wie viel y pro x“, der Achsenabschnitt b sagt „wo die Gerade die y-Achse schneidet“. Damit lassen sich Kalibrierkurven, Dosis-Wirkungs-Beziehungen im linearen Bereich und Infusionsraten modellieren.
+**Idee:** Eine lineare Funktion beschreibt einen Zusammenhang, bei dem die Änderung von y proportional zur Änderung von x ist — der Graph ist eine **Gerade**. Die Steigung m sagt „wie viel y pro x”, der Achsenabschnitt b sagt „wo die Gerade die y-Achse schneidet”. Damit lassen sich Kalibrierkurven, Dosis-Wirkungs-Beziehungen im linearen Bereich und Infusionsraten modellieren.
 
 **Verfahren:** Allgemeine Form **f(x) = mx + b**: m = Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁); b = y-Achsenabschnitt = f(0). Gerade aus zwei Punkten: zuerst m berechnen, dann b = y₁ − m·x₁. Nullstelle: f(x) = 0 ⇒ x₀ = −b/m. Senkrechte Gerade zu m₁: m₂ = −1/m₁. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.
 
@@ -51,11 +159,11 @@ Im Labor zeigt das Photometer eine Absorption von 0,77 -- wie hoch ist die Konze
 
 
 
-Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name "linear" leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
+Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt) ist. Der Name “linear” leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
 
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
 
-> **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. "mg/L pro Stunde" oder "mmHg pro BMI-Punkt".
+> **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. “mg/L pro Stunde” oder “mmHg pro BMI-Punkt”.
 
 **Typische Prüfungsfehler:** Nullstelle mit Mitternachtsformel verwechseln (bei linear: x₀ = −b/m). Senkrechte Gerade: m₂ = −1/m₁ setzen (nicht m₂ = −m₁). Steigung: Δy/Δx — y-Differenz im Zähler, x-Differenz im Nenner (nicht vertauschen). b ist der y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle.
 
@@ -305,7 +413,123 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-Ein Wurfgeschoss fliegt eine Parabel, und die Wirkstoffkonzentration im Blut erreicht nach einiger Zeit ein Maximum -- beides sind **quadratische Funktionen**. Ihre Graphen sind Parabeln, und der Scheitelpunkt ist der Hoch- oder Tiefpunkt. Am MedAT tauchen sie als Rechenaufgaben (“Wie viele Nullstellen?”) und als Graphen-Interpretation (“Oeffnung nach oben oder unten?”) auf. Der Schluessel ist die **Diskriminante**: Sie verraet mit einem Blick, ob die Parabel die x-Achse schneidet.
+Wirfst du einen Ball in die Luft, fliegt er eine Kurve -- eine **Parabel**. Quadratische Funktionen beschreiben genau solche Vorgaenge: Der Graph ist eine Parabel, und der hoechste (oder tiefste) Punkt heisst **Scheitelpunkt**. Am MedAT tauchen Parabeln als Rechenaufgaben auf (“Wie viele Nullstellen?”) und als Graphen (“Oeffnung oben oder unten?”). Der Schluessel ist die **Diskriminante** -- sie verraet dir sofort, ob und wie oft die Parabel die x-Achse schneidet.
+
+**In diesem Kapitel lernst du:**
+- wie der Vorfaktor a die Oeffnungsrichtung und Breite bestimmt
+- wie du den Scheitelpunkt berechnest
+- was die Diskriminante ueber die Nullstellen aussagt
+- wann du die pq-Formel oder die Mitternachtsformel verwendest
+- wie der Satz von Vieta das Nullstellenraten vereinfacht
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:quadratic-function}}
+
+## Allgemeine und Scheitelpunktform
+
+
+Eine quadratische Funktion hat die Form **f(x) = ax² + bx + c** mit a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, oeffnet sie nach oben (Minimum); ist a < 0, nach unten (Maximum).
+
+Die **Scheitelpunktform** f(x) = a(x − xs)² + ys zeigt den Scheitelpunkt direkt. Die Umrechnung erfolgt ueber die Formel xs = −b/(2a).
+
+> **Merke:** a > 0 → Parabel oeffnet nach oben (Minimum). a < 0 → nach unten (Maximum). Grosses |a| → schmale Parabel; kleines |a| → breite Parabel.
+
+| Form | Darstellung | Vorteil |
+|---|---|---|
+| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt c direkt ablesbar |
+| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt direkt ablesbar |
+| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen direkt ablesbar |
+
+---
+
+## Scheitelpunkt berechnen
+
+- **xs = −b/(2a)**
+- **ys = f(xs)**
+
+Beispiel: f(x) = 2x² − 8x + 3. xs = −(−8)/(2×2) = 2. ys = f(2) = 8 − 16 + 3 = −5. Scheitelpunkt: S(2|−5).
+
+> **Merke:** Am MedAT spart die Formel xs = −b/(2a) viel Zeit. Minus vor b nicht vergessen!
+
+---
+
+## Nullstellen und Diskriminante
+
+**Mitternachtsformel**: x₁₂ = (−b ± √(b² − 4ac)) / (2a)
+
+Die **Diskriminante** D = b² − 4ac entscheidet:
+- D > 0: **zwei Nullstellen**
+- D = 0: **eine Nullstelle** (Scheitel auf x-Achse)
+- D < 0: **keine reelle Nullstelle**
+
+**pq-Formel** (nur bei x² + px + q = 0): x₁₂ = −p/2 ± √((p/2)² − q)
+
+**Achtung:** Die pq-Formel gilt nur, wenn vor x² eine 1 steht. Sonst zuerst durch a teilen!
+
+---
+
+## Satz von Vieta
+
+Bei x² + px + q = 0 gilt:
+- x₁ + x₂ = −p (Summe)
+- x₁ × x₂ = q (Produkt)
+
+> **Merke:** Vieta ist schnell bei ganzzahligen Nullstellen. Beispiel: x² − 7x + 12 = 0 → Summe 7, Produkt 12 → x₁ = 3, x₂ = 4.
+
+---
+
+## Anwendungen
+
+- **Wurfparabel:** h(t) = −½g×t² + v₀×t + h₀. Scheitelpunkt = maximale Hoehe. a < 0, also Oeffnung nach unten.
+- **Kreisflaeche:** A = πr² — quadratisch in r. Halbierst du den Radius, wird die Flaeche nur noch ein Viertel so gross.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Ballwurf:** h(t) = −5t² + 20t + 1. Hoechster Punkt: t = −20/(2×(−5)) = **2 s**. h(2) = −20 + 40 + 1 = **21 m**.
+
+**Beispiel 2 — Vieta:** x² − 11x + 28 = 0. Summe = 11, Produkt = 28. → 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Typische Aufgabentypen:**
+- Scheitelpunkt: x_S = −b/(2a), y_S = f(x_S)
+- Nullstellen mit Diskriminante D = b² − 4ac
+- Vieta bei ganzzahligen Loesungen
+- Oeffnungsrichtung aus dem Vorzeichen von a
+
+**Typische Fallen:**
+- D = b² − **4ac** (nicht 2ac)
+- Scheitel xs = **−**b/(2a) (Minus!)
+- pq-Formel nur bei normierter Form (a = 1)
+
+**Minimal-Rechenrezepte:**
+- **Scheitelpunkt:** xs = −b/(2a), dann ys = f(xs).
+- **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
+- **Vieta:** Summe = −p, Produkt = q.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **f(x) = ax² + bx + c**: a > 0 → oben offen (Min); a < 0 → unten offen (Max)
+- **Scheitelpunkt:** xs = −b/(2a), ys = f(xs)
+- **Diskriminante:** D = b²−4ac; D > 0 → 2 NS; D = 0 → 1 NS; D < 0 → keine
+- **Mitternachtsformel:** x = (−b ± √D)/(2a)
+- **pq-Formel:** nur bei x² + px + q = 0
+- **Vieta:** x₁ + x₂ = −p, x₁ × x₂ = q
+- **Fehler vermeiden:** D = b²−4ac; Scheitel −b/(2a) mit Minus`,
+      contentExtended: `## Einleitung
+
+Ein Wurfgeschoss fliegt eine Parabel, und die Wirkstoffkonzentration im Blut erreicht nach einiger Zeit ein Maximum -- beides sind **quadratische Funktionen**. Ihre Graphen sind Parabeln, und der Scheitelpunkt ist der Hoch- oder Tiefpunkt. Am MedAT tauchen sie als Rechenaufgaben ("Wie viele Nullstellen?") und als Graphen-Interpretation ("Oeffnung nach oben oder unten?") auf. Der Schluessel ist die **Diskriminante**: Sie verraet mit einem Blick, ob die Parabel die x-Achse schneidet.
 
 **In diesem Kapitel lernst du:**
 - wie der Leitkoeffizient a die Oeffnungsrichtung und Breite einer Parabel bestimmt
@@ -597,6 +821,125 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
       ],
       content: `## Einleitung
 
+Stell dir vor, du legst 100 Euro auf ein Sparkonto mit Zinseszins. Jedes Jahr kommen nicht nur Zinsen auf dein Startkapital, sondern auch Zinsen auf die bisherigen Zinsen -- das Geld waechst immer schneller. Genau das ist **exponentielles Wachstum**. Umgekehrt gibt es **exponentiellen Zerfall**: Eine heisse Tasse Tee kuehlt anfangs schnell ab, dann immer langsamer. Die **Halbwertszeit** sagt dir, nach welcher Zeit die Haelfte uebrig ist.
+
+**In diesem Kapitel lernst du:**
+- was exponentielles Wachstum und Zerfall unterscheidet
+- warum die e-Funktion nie den Wert null erreicht
+- wie du die Halbwertszeit berechnest
+- wie viel nach 1, 3 oder 5 Halbwertszeiten noch uebrig ist
+- was die Verdopplungszeit bedeutet
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:exponential-function}}
+
+## Grundform und Eigenschaften
+
+
+
+
+
+Die Exponentialfunktion hat die Form **f(x) = a × bˣ**. Die wichtigste Basis ist **e ≈ 2,718** (Eulersche Zahl).
+
+Wichtige Eigenschaften:
+- **Wertebereich**: immer positiv (nie 0 oder negativ!)
+- **y-Achsenabschnitt**: f(0) = a
+- **Asymptote**: y = 0 (die Kurve naehert sich der x-Achse, erreicht sie aber nie)
+- b > 1 → Wachstum; 0 < b < 1 → Zerfall
+
+> **Merke:** Die Exponentialfunktion ist **immer positiv** -- sie erreicht nie den Wert 0. Das ist eine haeufige MedAT-Falle!
+
+---
+
+## Wachstum und Zerfall
+
+**Wachstum** (Basis > 1): f(t) = f₀ × eᵏᵗ (k > 0). Beispiel: Zinseszins, Pflanzenwachstum.
+
+**Zerfall** (negativer Exponent): f(t) = f₀ × e⁻ᵏᵗ (k > 0). Beispiel: Abkuehlung, radioaktiver Zerfall.
+
+| Typ | Formel | Beispiel |
+|---|---|---|
+| Wachstum | f(t) = f₀ × eᵏᵗ | Zinseszins |
+| Zerfall | f(t) = f₀ × e⁻ᵏᵗ | Abkuehlung |
+
+---
+
+## Halbwertszeit
+
+Die **Halbwertszeit T½** ist die Zeit, nach der die Haelfte uebrig ist:
+
+**T½ = ln(2)/k ≈ 0,693/k**
+
+Nach n Halbwertszeiten verbleiben: f₀ × (½)ⁿ
+
+| Anzahl T½ | Restmenge |
+|---|---|
+| 1 | 50 % |
+| 2 | 25 % |
+| 3 | 12,5 % |
+| 4 | 6,25 % |
+| 5 | 3,1 % |
+
+> **Merke:** Nach **5 Halbwertszeiten** sind weniger als 3,2 % uebrig. Diese Faustregel kommt haeufig am MedAT.
+
+---
+
+## Verdopplungszeit
+
+Beim Wachstum heisst das Gegenstueck **Verdopplungszeit**: T₂ = ln(2)/k. Dieselbe Formel wie die Halbwertszeit, nur im Wachstumskontext.
+
+---
+
+## Potenzregeln (Wiederholung)
+
+- aˣ × aʸ = aˣ⁺ʸ
+- aˣ / aʸ = aˣ⁻ʸ
+- (aˣ)ʸ = aˣ×ʸ
+- a⁰ = 1
+- a⁻ˣ = 1/aˣ
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Zinseszins:** 1000 Euro bei 5 % jaehrlich. Nach 10 Jahren: K = 1000 × 1,05¹⁰ ≈ **1629 Euro**. Verdopplungszeit: T₂ = ln(2)/ln(1,05) ≈ 0,693/0,049 ≈ **14 Jahre**.
+
+**Beispiel 2 — Abkuehlung:** Eine Tasse Tee hat 80 °C ueber Raumtemperatur. Halbwertszeit T½ = 15 min. Nach 45 min (= 3 × T½): 80 × (½)³ = **10 °C** ueber Raumtemperatur.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Typische Aufgabentypen:**
+- Zerfall: f(t) = f₀ × e^(−kt); T½ = ln(2)/k
+- Rest nach n Halbwertszeiten: f₀ × (½)ⁿ
+- Wachstum: f(t) = f₀ × eᵏᵗ; Verdopplungszeit = ln(2)/k
+
+**Typische Fallen:**
+- e-Funktion wird nie exakt 0
+- T½ = ln(2)/k (nicht 1/k)
+- Nach 3 × T½ bleiben 12,5 % (nicht 1/3)
+
+**Minimal-Rechenrezepte:**
+- **T½** = ln(2)/k ≈ 0,693/k. **k** = ln(2)/T½.
+- **Rest nach n × T½:** f₀ × (½)ⁿ.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Wachstum:** f(t) = f₀ × eᵏᵗ; **Zerfall:** f(t) = f₀ × e⁻ᵏᵗ
+- **T½ = ln(2)/k ≈ 0,693/k**; nach n × T½: (½)ⁿ uebrig
+- **e ≈ 2,718**; e-Funktion ist immer positiv
+- **Nach 5 × T½:** weniger als 3,2 % Rest
+- **Fehler vermeiden:** T½ = ln(2)/k, nicht 1/k`,
+      contentExtended: `## Einleitung
+
 Paracetamol hat eine Halbwertszeit von etwa 2 Stunden -- nach 2 Stunden ist die Haelfte abgebaut, nach 4 Stunden ein Viertel, nach 10 Stunden weniger als 3 %. Dieses Muster ist kein Zufall, sondern eine **Exponentialfunktion**: Die Aenderungsrate ist proportional zum aktuellen Bestand. Ob Bakterienwachstum, radioaktiver Zerfall oder der Medikamentenspiegel im Blut -- ueberall beschreibt f(t) = f_0 mal e hoch (plus oder minus kt) den Verlauf. Die **Halbwertszeit** ist dabei der zentrale Parameter.
 
 **In diesem Kapitel lernst du:**
@@ -884,6 +1227,134 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
         "Quotientenregel",
       ],
       content: `## Einleitung
+
+Warum ist die Richterskala fuer Erdbeben logarithmisch? Weil ein Beben der Staerke 6 zehnmal so stark ist wie Staerke 5. Der **Logarithmus** verwandelt riesige Zahlenbereiche in handliche Skalen. Du kennst das vom pH-Wert in der Chemie oder von der Dezibel-Skala fuer Lautstaerke. Wer die drei Logarithmengesetze beherrscht, kann Exponentialgleichungen loesen und viele MedAT-Aufgaben schnell knacken.
+
+**In diesem Kapitel lernst du:**
+- wie der Logarithmus als Umkehrung der Exponentialfunktion funktioniert
+- wann du log, ln oder ld verwendest
+- wie du mit den drei Logarithmengesetzen (Produkt, Quotient, Potenz) rechnest
+- wie der pH-Wert mit dem Logarithmus zusammenhaengt
+- wie du den Basiswechsel anwendest
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:logarithm-function}}
+
+## Definition und Grundbegriffe
+
+
+
+
+
+Der Logarithmus ist die **Umkehrung der Exponentialfunktion**:
+
+**log_b(x) = y bedeutet: b^y = x**
+
+In einfachen Worten: "Wie oft muss ich b mit sich selbst multiplizieren, um x zu erhalten?"
+
+Wichtige Varianten:
+- **log₁₀(x)** (Zehnerlogarithmus, kurz "log"): Basis 10 -- fuer pH-Wert, Dezibel
+- **ln(x)** (natuerlicher Logarithmus): Basis e ≈ 2,718
+- **log₂(x)** bzw. **ld(x)**: Basis 2 -- z. B. ld(16) = 4 (weil 2⁴ = 16)
+
+> **Merke:** Der Logarithmus ist nur fuer **positive Zahlen** definiert. ln(0) und ln(negativ) existieren nicht -- haeufige MedAT-Falle! Ausserdem: log(a + b) ≠ log a + log b.
+
+---
+
+## Logarithmengesetze
+
+Die drei wichtigsten Regeln (gelten fuer alle Basen):
+
+1. **Produktregel**: log(a × b) = log(a) + log(b)
+2. **Quotientenregel**: log(a/b) = log(a) − log(b)
+3. **Potenzregel**: log(aⁿ) = n × log(a)
+
+**Basiswechsel**: log_b(x) = ln(x)/ln(b)
+
+| Regel | Formel | Beispiel |
+|---|---|---|
+| Produktregel | log(a×b) = log a + log b | log(2×5) = log 10 = 1 |
+| Quotientenregel | log(a/b) = log a − log b | ln(1/2) = −ln 2 |
+| Potenzregel | log(aⁿ) = n × log a | log(10³) = 3 |
+| Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8/ln 2 = 3 |
+
+**Spezialwerte**: log(1) = 0; ln(e) = 1; log(10) = 1
+
+---
+
+## Eigenschaften der Logarithmusfunktion
+
+- **Definitionsbereich**: nur positive Zahlen (x > 0)
+- **Nullstelle**: x = 1 (weil log(1) = 0)
+- **Asymptote**: x = 0 (die Kurve geht gegen −∞)
+- Waechst unbegrenzt, aber sehr langsam
+
+---
+
+## pH-Wert
+
+Der **pH-Wert** nutzt den Zehnerlogarithmus: **pH = −log₁₀([H⁺])**
+
+Beispiele:
+- [H⁺] = 10⁻⁷ mol/L → pH = 7 (neutral)
+- [H⁺] = 10⁻² mol/L → pH = 2 (sauer)
+
+Umkehrung: **[H⁺] = 10^(−pH)**
+
+> **Merke:** Eine pH-Aenderung um 1 bedeutet eine **10-fache** Aenderung der Protonenkonzentration. Eine Aenderung um 2 Einheiten = Faktor 100.
+
+---
+
+## Nuetzliche Merkwerte
+
+- ln(2) ≈ 0,693
+- log(2) ≈ 0,301
+- log(3) ≈ 0,477
+- ln(10) ≈ 2,303
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Exponentialgleichung loesen:** Gesucht: x aus 5ˣ = 200. Logarithmieren: x = ln(200)/ln(5) = 5,298/1,609 = **3,29**.
+
+**Beispiel 2 — Dezibel:** Lautstaerke steigt um 20 dB. Intensitaetsfaktor: 10^(20/10) = 10² = **100-fach** lauter. Merke: +10 dB = Faktor 10, +3 dB ≈ Faktor 2.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Typische Aufgabentypen:**
+- Logarithmengesetze anwenden (Produkt, Quotient, Potenz)
+- pH = −log([H⁺]); [H⁺] = 10^(−pH)
+- Dezibel: +10 dB = Faktor 10; +3 dB ≈ Faktor 2
+- Basiswechsel; ln nur fuer x > 0
+
+**Typische Fallen:**
+- ln(0) existiert nicht
+- log(a + b) ≠ log a + log b
+- pH: Minus nicht vergessen
+
+**Minimal-Rechenrezepte:**
+- **Gesetze:** log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n × log a.
+- **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **log_b(x) = y bedeutet b^y = x**
+- **Gesetze:** Produkt → Summe; Quotient → Differenz; Potenz → Faktor
+- **Basiswechsel:** log_b(x) = ln(x)/ln(b)
+- **pH = −log₁₀([H⁺])**; 1 pH-Einheit = Faktor 10
+- **Dezibel:** +10 dB = 10-fach; +3 dB ≈ 2-fach
+- **Fehler vermeiden:** ln nur fuer x > 0; log(a+b) ≠ log a + log b`,
+      contentExtended: `## Einleitung
 
 Warum hat Blut einen pH von 7,4 — und warum ist bereits ein Abfall auf 7,0 lebensbedrohlich? Die Antwort steckt im Logarithmus: Eine pH-Einheit entspricht einem Faktor 10 bei der Protonenkonzentration. Der Logarithmus verwandelt riesige Zahlenbereiche in handliche Skalen — vom pH-Wert über die Dezibel-Skala des Gehörs bis zur Halbwertszeitberechnung in der Pharmakokinetik. Wer die drei Logarithmengesetze sicher beherrscht, kann Exponentialgleichungen lösen und klinische Pufferprobleme (Henderson-Hasselbalch) bearbeiten.
 
@@ -1191,14 +1662,14 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
       ],
       content: `## Einleitung
 
-Auf dem Monitor einer Intensivstation laufen Kurven: Herzfrequenz, Sauerstoffsättigung, Medikamentenspiegel. In der Pharmakologie zeigen Dosis-Wirkungskurven eine sigmoidale Form mit EC₅₀, und die Michaelis-Menten-Kinetik nähert sich asymptotisch einem Maximum. All diese Graphen zu lesen — Asymptoten erkennen, Monotonie beurteilen, Extrempunkte identifizieren — ist eine Kernkompetenz, die im MedAT ebenso gefragt wird wie später am Krankenbett. In diesem Kapitel lernst du, aus einem Kurvenverlauf auf den Funktionstyp zu schließen und klinisch relevante Kenngrößen abzulesen.
+Im Alltag begegnest du ueberall Graphen: die Temperaturkurve im Wetterbericht, das Akku-Diagramm auf dem Handy oder der Verlauf einer Zugfahrt auf dem Fahrplan. Graphen lesen heisst: auf einen Blick erkennen, ob etwas steigt, faellt, ein Maximum hat oder sich einem Grenzwert naehert.
 
 **In diesem Kapitel lernst du:**
-- was Asymptoten (horizontal, vertikal, schräg) aussagen und wie du sie aus dem Graphen oder der Funktionsgleichung bestimmst
-- wie du Monotonie und Krümmung eines Graphen beurteilst und Extrempunkte identifizierst
-- wie ein Semilog-Plot exponentielle Abklingkurven linearisiert und was die Steigung verrät
-- wie du die Michaelis-Menten-Sättigungskinetik und EC₅₀ aus Dosis-Wirkungskurven abliest
-- wie du aus einem unbekannten Graphen den Funktionstyp erschließt (linear, quadratisch, exponentiell, sigmoidal)
+- was Asymptoten (horizontal, vertikal) aussagen
+- wie du Monotonie und Extrempunkte aus einem Graphen abliest
+- wie du den Funktionstyp aus dem Kurvenverlauf erkennst (linear, quadratisch, exponentiell)
+- was Graphentransformationen (Verschiebung, Spiegelung, Streckung) bewirken
+- wie ein Semilog-Plot funktioniert
 
 ---
 
@@ -1206,19 +1677,111 @@ Auf dem Monitor einer Intensivstation laufen Kurven: Herzfrequenz, Sauerstoffsä
 
 {{DIAGRAM:exponential-function}}
 
-**Idee:** **Asymptote** = Grenzlinie, der sich der Graph annähert (horizontal: y = const für x→±∞; vertikal: x = const, wo f→±∞). **Semilog-Plot** (y-Achse log): Exponentialfunktion wird zur Geraden; **EC₅₀** = Konzentration bei halbmaximaler Wirkung (Steilster Anstieg bei sigmoider Kurve). **Michaelis-Menten:** Sättigungskinetik, maximale Reaktionsgeschwindigkeit v_max.
+## Graphen lesen
 
-**Verfahren — Schrittfolge:** (1) **Asymptoten:** lim(x→±∞) f(x) für horizontal; Nenner null für vertikal. (2) **Semilog:** ln(C) vs. t → Gerade bei C = C₀×e^(−kt); Steigung = −k. (3) **EC₅₀** aus Dosis-Wirkungskurve ablesen (50 % der max. Wirkung). (4) **Monotonie/Extrempunkte** aus Kurvenverlauf (steigend/fallend, Hoch-/Tiefpunkt).
+Aus einem Graphen kannst du verschiedene Eigenschaften ablesen:
+- **Nullstellen**: wo die Kurve die x-Achse schneidet
+- **Monotonie**: ob die Kurve steigt oder faellt
+- **Extrempunkte**: Hochpunkte und Tiefpunkte
+- **Asymptoten**: Linien, denen sich die Kurve immer weiter naehert, ohne sie zu erreichen
 
-**Typische Prüfungsfehler:** Asymptote ≠ Nullstelle. Semilog: Achse ist logarithmisch (nicht linear). EC₅₀ = 50 % Wirkung, nicht 50 % der Dosis.
+> **Merke:** Am MedAT werden Graphen oft ohne Formel gezeigt. Aus dem Kurvenverlauf musst du den Funktionstyp erkennen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal, flache Annaehrung = exponentiell.
 
 ---
 
+## Asymptoten
+
+Eine **horizontale Asymptote** ist eine waagerechte Linie, der sich der Graph fuer sehr grosse x-Werte naehert. Beispiel: f(x) = 1/x naehert sich y = 0.
+
+Eine **vertikale Asymptote** ist eine senkrechte Linie, bei der der Graph ins Unendliche geht. Beispiel: f(x) = 1/x hat eine vertikale Asymptote bei x = 0.
+
+**Faustregel fuer Bruchfunktionen (Zaehler/Nenner):**
+- Zaehler-Grad < Nenner-Grad: horizontale Asymptote y = 0
+- Zaehler-Grad = Nenner-Grad: horizontale Asymptote y = fuehrender Koeffizient oben / unten
+
+---
+
+## Monotonie und Extrempunkte
+
+- **Monoton steigend**: Kurve geht nach rechts oben
+- **Monoton fallend**: Kurve geht nach rechts unten
+- **Hochpunkt**: Kurve wechselt von steigend zu fallend
+- **Tiefpunkt**: Kurve wechselt von fallend zu steigend
+- **Wendepunkt**: Kurve aendert die Kruemmungsrichtung (Huegel wird Mulde oder umgekehrt)
+
+---
+
+## Semilog-Plot
+
+Wenn Werte ueber viele Groessenordnungen gehen (z. B. 1, 10, 100, 1000), hilft ein **Semilog-Plot**: Die y-Achse wird logarithmisch skaliert. Dann erscheinen **Exponentialfunktionen als Geraden**.
+
+**Beispiel:** Du misst, wie ein Stoff zerfaellt: 100 → 50 → 25 → 12,5. Im normalen Diagramm ist das eine Kurve. Im Semilog-Plot wird es eine Gerade -- und aus der Steigung liest du die Zerfallskonstante ab.
+
+> **Merke:** Semilog-Plot macht Exponentialfunktionen gerade. Log-Log-Plot macht Potenzfunktionen gerade.
+
+---
+
+## Graphentransformationen
+
+So verschiebst oder spiegelst du einen Graphen:
+- f(x) + c: Graph um c nach **oben**
+- f(x − c): Graph um c nach **rechts**
+- −f(x): Spiegelung an der **x-Achse**
+- f(−x): Spiegelung an der **y-Achse**
+- a × f(x): Streckung in y-Richtung (a > 1: hoeher; 0 < a < 1: flacher)
+
+**Beispiel:** f(x) = eˣ wird zu g(x) = eˣ + 3: Der Graph verschiebt sich 3 Einheiten nach oben. Die Asymptote aendert sich von y = 0 auf y = 3.
+
+---
+
+## Alltagsbeispiele
+
+**Beispiel 1 -- Asymptote:** f(x) = (3x² + 6)/(x² − 4). Zaehler-Grad = Nenner-Grad = 2 → horizontale Asymptote y = 3/1 = **3**. Nenner = 0 bei x = ±2 → vertikale Asymptoten.
+
+**Beispiel 2 -- Semilog-Plot:** Ein Wert halbiert sich alle 10 Stunden. Im Semilog-Plot: Gerade mit Steigung −0,0693. Halbwertszeit = ln(2)/0,0693 = **10 h**.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Asymptoten aus Graph oder Formel bestimmen
+- Monotonie und Extrempunkte ablesen
+- Semilog-Plot: Steigung = −k, Halbwertszeit = ln(2)/k
+- Graphentransformationen erkennen (Verschiebung, Spiegelung, Streckung)
+
+**Typische Fallen:**
+- Horizontale Asymptote mit y-Achsenabschnitt verwechseln
+- Semilog-Plot: Kurve (nicht Gerade) heisst KEIN reiner Zerfall
+- Transformation: f(x − 3) verschiebt nach RECHTS (nicht links!)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Asymptoten**: horizontal (y = c fuer grosse x); vertikal (x = a, wo Nenner = 0)
+- **Monotonie**: steigend/fallend; Extrempunkt = Wechsel der Richtung
+- **Semilog-Plot**: y-Achse logarithmisch; Exponentialzerfall wird zur Geraden; Steigung = −k
+- **Transformationen**: f(x−a): nach rechts; −f(x): Spiegelung x-Achse; a×f(x): Streckung
+- **Typische Fehler**: f(x−3) ist Verschiebung nach rechts, nicht links`,
+      contentExtended: `## Einleitung
+
+Im Alltag begegnest du ueberall Graphen: die Temperaturkurve im Wetterbericht, das Akku-Diagramm auf dem Handy oder der Verlauf einer Zugfahrt auf dem Fahrplan. Graphen lesen heisst: auf einen Blick erkennen, ob etwas steigt, faellt, ein Maximum hat oder sich einem Grenzwert naehert. Am MedAT musst du aus einem Kurvenverlauf auf den Funktionstyp schliessen und wichtige Punkte ablesen.
+
+**In diesem Kapitel lernst du:**
+- was Asymptoten (horizontal, vertikal) aussagen
+- wie du Monotonie und Extrempunkte aus einem Graphen abliest
+- wie du den Funktionstyp aus dem Kurvenverlauf erkennst (linear, quadratisch, exponentiell)
+- was Graphentransformationen (Verschiebung, Spiegelung, Streckung) bewirken
+- wie ein Semilog-Plot funktioniert
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:exponential-function}}
+
 ## Graphen und ihre Eigenschaften ablesen
-
-
-
-
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
 

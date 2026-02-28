@@ -23,82 +23,151 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `## Einleitung
 
-Wenn in einem See die Wassertemperatur steigt, verändert sich nicht nur die Physik des Gewässers, sondern auch die gesamte Lebensgemeinschaft: Manche Algenarten vermehren sich explosionsartig, Fische wandern ab, Sauerstoff wird knapp. Um solche Zusammenhänge zu verstehen, braucht man die Grundbegriffe der Ökologie, die von der einzelnen Art bis zum ganzen Ökosystem reichen.
+Stell dir einen Teich in deiner Naehe vor. Da gibt es Wasser, Schlamm und Sonnenlicht -- das ist die “Buehne”. Und auf dieser Buehne leben Frosche, Fische, Algen und Bakterien -- das sind die “Schauspieler”. In der Oekologie untersuchen wir, wie Buehne und Schauspieler zusammenhaengen.
 
 **In diesem Kapitel lernst du:**
-- wie die Ökologie von der Ebene des Einzelorganismus bis zum Ökosystem aufgebaut ist
-- worin sich Biotop (der Lebensraum) und Biozönose (die Lebensgemeinschaft) unterscheiden
-- warum ein Ökosystem mehr ist als die Summe seiner Teile
-- warum diese Begriffe die Grundlage für alle weiteren ökologischen Themen bilden
+- wie die Oekologie vom einzelnen Tier bis zum ganzen Oekosystem aufgebaut ist
+- was Biotop (der Ort) und Biozoeonose (die Lebewesen) bedeuten
+- warum ein Oekosystem beides zusammen ist
+- warum diese Begriffe die Basis fuer alles Weitere sind
 
 ---
-
-## Ökologie: Definition und Ebenen
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
-**Um die Ökologie einzuführen,** beginnen wir mit der Definition und den Ebenen. **Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
+## Oekologie: Was ist das?
 
-Die Ökologie arbeitet auf mehreren **Ebenen**:
-- **Organismus:** Einzelnes Individuum; Anpassung an Umweltfaktoren (Toleranz, Verhalten).
-- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen können.
-- **Biozönose** (Lebensgemeinschaft): Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) in einem Gebiet und ihre Wechselwirkungen.
-- **Ökosystem:** **Biozönose** + **Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energieflüssen.
+**Oekologie** bedeutet woertlich “Lehre vom Haushalt der Natur”. Sie fragt: Wo lebt welches Tier, warum dort, und wie haengen die Arten untereinander und mit ihrer Umgebung zusammen?
 
-> **Merke:** Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem (Biozönose + Biotop).
+Es gibt vier **Ebenen** -- wie eine Treppe von klein nach gross:
+
+- **Organismus:** Ein einzelnes Lebewesen, z. B. ein Frosch
+- **Population:** Alle Froesche **einer Art** in deinem Teich
+- **Biozoeonose:** **Alle Arten** zusammen -- Froesche, Fische, Algen, Bakterien
+- **Oekosystem:** Die Biozoeonose **plus** der Teich selbst (Wasser, Boden, Licht)
+
+> **Merke:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem (Biozoeonose + Biotop).
 
 ---
 
-## Biotop und Biozönose
-
 {{DIAGRAM:animal-cell}}
 
-**Bisher haben wir gesehen:** Die ökologischen Ebenen von Organismus bis Ökosystem. **Um sie anzuwenden,** müssen Biotop und Biozönose klar getrennt werden.
+## Biotop und Biozoeonose -- der grosse Unterschied
 
-**Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Nährstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
+Stell dir eine WG vor: Die **Wohnung** (Raeume, Heizung, Kueche) ist das **Biotop** -- der unbelebte Lebensraum. Die **Mitbewohner** sind die **Biozoeonose** -- alle Lebewesen an diesem Ort.
 
-**Biozönose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Prädation, Symbiose).
-
-**Ökosystem** = **Biotop + Biozönose** in Wechselwirkung. Im Ökosystem fließen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreisläufe).
+- **Biotop** = unbelebter Lebensraum: Boden, Wasser, Klima, Licht, Naehrstoffe
+- **Biozoeonose** = alle Lebewesen (Pflanzen, Tiere, Pilze, Bakterien) und ihre Beziehungen
+- **Oekosystem** = Biotop + Biozoeonose zusammen, mit Energie- und Stofffluss
 
 | Begriff | Bedeutung |
 |--------|-----------|
 | **Biotop** | Unbelebter Lebensraum (Boden, Wasser, Klima, Licht) |
-| **Biozönose** | Lebensgemeinschaft aller Arten in einem Gebiet |
-| **Ökosystem** | Biotop + Biozönose; funktionelle Einheit mit Stoff- und Energieflüssen |
+| **Biozoeonose** | Lebensgemeinschaft aller Arten in einem Gebiet |
+| **Oekosystem** | Biotop + Biozoeonose; funktionelle Einheit |
 
-> **Merke:** Biotop = unbelebt (Ort). Biozönose = belebt (alle Arten). Ökosystem = beides zusammen.
-
----
-
-## Zusammenhang für die Prüfung
-
-**Bisher haben wir gesehen:** Ökologie, Ebenen, Biotop, Biozönose und Ökosystem. **Damit ist das Fundament gelegt.** Aus diesen Grundbegriffen leiten sich alle weiteren Themen ab: **Umweltfaktoren** wirken im Biotop auf die Biozönose; die **ökologische Nische** beschreibt die Rolle einer Art in der Biozönose; **Nahrungsketten** und **Stoffkreisläufe** laufen im Ökosystem ab. Wer Biotop und Biozönose sicher trennt, vermeidet typische Prüfungsfehler (z. B. „Biotop = alle Lebewesen“ — falsch, das ist die Biozönose).
+> **Merke:** Biotop = unbelebt (Ort). Biozoeonose = belebt (alle Arten). Oekosystem = beides zusammen.
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Was ist der Unterschied zwischen Biotop und Biozönose?
-- Was versteht man unter einem Ökosystem?
-- Was ist eine Population und wie unterscheidet sie sich von einer Biozönose?
+**Typische Pruefungsfragen:**
+- Was ist der Unterschied zwischen Biotop und Biozoeonose?
+- Was versteht man unter einem Oekosystem?
+- Population vs. Biozoeonose?
 
 **Typische Fallen:**
-- Biotop (unbelebter Lebensraum) und Biozönose (alle Lebewesen) verwechseln.
-- Population umfasst nur eine Art; Biozönose umfasst alle Arten eines Gebiets.
-- Ökosystem ist Biotop plus Biozönose, nicht einfach nur “Natur”.
+- Biotop und Biozoeonose verwechseln -- Biotop ist der Ort, nicht die Lebewesen
+- Population = nur eine Art; Biozoeonose = alle Arten
+- Oekosystem ist nicht einfach “Natur”, sondern Biotop + Biozoeonose
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Ökologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
-- **Ebenen:** Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem.
-- **Biotop** = unbelebter Lebensraum; **Biozönose** = Lebensgemeinschaft aller Arten; **Ökosystem** = Biotop + Biozönose.
-- Population = eine Art; Biozönose = alle Arten in einem Gebiet.
-- Aus diesen Grundbegriffen leiten sich Umweltfaktoren, ökologische Nische, Nahrungsketten und Stoffkreisläufe ab.
-- Für die Prüfung: Biotop und Biozönose sicher trennen (unbelebt vs. belebt).`,
+- **Oekologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch)
+- **Ebenen:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem
+- **Biotop** = unbelebter Lebensraum; **Biozoeonose** = Lebensgemeinschaft; **Oekosystem** = Biotop + Biozoeonose
+- Fuer die Pruefung: Biotop und Biozoeonose sicher trennen (unbelebt vs. belebt)`,
+      contentExtended: `## Einleitung
+
+Wenn in einem See die Wassertemperatur steigt, veraendert sich nicht nur die Physik des Gewaessers, sondern auch die gesamte Lebensgemeinschaft: Manche Algenarten vermehren sich explosionsartig, Fische wandern ab, Sauerstoff wird knapp. Um solche Zusammenhaenge zu verstehen, braucht man die Grundbegriffe der Oekologie, die von der einzelnen Art bis zum ganzen Oekosystem reichen.
+
+**In diesem Kapitel lernst du:**
+- wie die Oekologie von der Ebene des Einzelorganismus bis zum Oekosystem aufgebaut ist
+- worin sich Biotop (der Lebensraum) und Biozoeonose (die Lebensgemeinschaft) unterscheiden
+- warum ein Oekosystem mehr ist als die Summe seiner Teile
+- warum diese Begriffe die Grundlage fuer alle weiteren oekologischen Themen bilden
+
+---
+
+## Oekologie: Definition und Ebenen
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+**Um die Oekologie einzufuehren,** beginnen wir mit der Definition und den Ebenen. **Oekologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie haengen Arten und Lebensraeume zusammen?
+
+Die Oekologie arbeitet auf mehreren **Ebenen**:
+- **Organismus:** Einzelnes Individuum; Anpassung an Umweltfaktoren (Toleranz, Verhalten).
+- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen koennen.
+- **Biozoeonose** (Lebensgemeinschaft): Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) in einem Gebiet und ihre Wechselwirkungen.
+- **Oekosystem:** **Biozoeonose** + **Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energiefluessen.
+
+> **Merke:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem (Biozoeonose + Biotop).
+
+---
+
+## Biotop und Biozoeonose
+
+{{DIAGRAM:animal-cell}}
+
+**Bisher haben wir gesehen:** Die oekologischen Ebenen von Organismus bis Oekosystem. **Um sie anzuwenden,** muessen Biotop und Biozoeonose klar getrennt werden.
+
+**Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Naehrstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
+
+**Biozoeonose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Praedation, Symbiose).
+
+**Oekosystem** = **Biotop + Biozoeonose** in Wechselwirkung. Im Oekosystem fliessen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreislaeufe).
+
+| Begriff | Bedeutung |
+|--------|-----------|
+| **Biotop** | Unbelebter Lebensraum (Boden, Wasser, Klima, Licht) |
+| **Biozoeonose** | Lebensgemeinschaft aller Arten in einem Gebiet |
+| **Oekosystem** | Biotop + Biozoeonose; funktionelle Einheit mit Stoff- und Energiefluessen |
+
+> **Merke:** Biotop = unbelebt (Ort). Biozoeonose = belebt (alle Arten). Oekosystem = beides zusammen.
+
+---
+
+## Zusammenhang fuer die Pruefung
+
+**Bisher haben wir gesehen:** Oekologie, Ebenen, Biotop, Biozoeonose und Oekosystem. **Damit ist das Fundament gelegt.** Aus diesen Grundbegriffen leiten sich alle weiteren Themen ab: **Umweltfaktoren** wirken im Biotop auf die Biozoeonose; die **oekologische Nische** beschreibt die Rolle einer Art in der Biozoeonose; **Nahrungsketten** und **Stoffkreislaeufe** laufen im Oekosystem ab. Wer Biotop und Biozoeonose sicher trennt, vermeidet typische Pruefungsfehler (z. B. “Biotop = alle Lebewesen” -- falsch, das ist die Biozoeonose).
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfragen:**
+- Was ist der Unterschied zwischen Biotop und Biozoeonose?
+- Was versteht man unter einem Oekosystem?
+- Was ist eine Population und wie unterscheidet sie sich von einer Biozoeonose?
+
+**Typische Fallen:**
+- Biotop (unbelebter Lebensraum) und Biozoeonose (alle Lebewesen) verwechseln.
+- Population umfasst nur eine Art; Biozoeonose umfasst alle Arten eines Gebiets.
+- Oekosystem ist Biotop plus Biozoeonose, nicht einfach nur “Natur”.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Oekologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
+- **Ebenen:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem.
+- **Biotop** = unbelebter Lebensraum; **Biozoeonose** = Lebensgemeinschaft aller Arten; **Oekosystem** = Biotop + Biozoeonose.
+- Population = eine Art; Biozoeonose = alle Arten in einem Gebiet.
+- Aus diesen Grundbegriffen leiten sich Umweltfaktoren, oekologische Nische, Nahrungsketten und Stoffkreislaeufe ab.
+- Fuer die Pruefung: Biotop und Biozoeonose sicher trennen (unbelebt vs. belebt).`,
       lernziele: [
         "Ökologie definieren und die Ebenen Organismus, Population, Biozönose, Ökosystem beschreiben.",
         "Biotop und Biozönose unterscheiden und dem Ökosystem zuordnen.",
@@ -142,12 +211,86 @@ Die Ökologie arbeitet auf mehreren **Ebenen**:
       ],
       content: `## Einleitung
 
-Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser und Licht vorhanden ist? Die Antwort liegt in den Umweltfaktoren: Jede Art hat für jeden Faktor einen Toleranzbereich, und schon ein einziger Faktor im Mangel kann das Wachstum begrenzen. Das beschrieb Justus von Liebig bereits im 19. Jahrhundert. Die Toleranzkurve zeigt, wie die Leistung einer Art von einem Umweltfaktor abhängt, und sie ist einer der am häufigsten gefragten Zusammenhänge im MedAT.
+Warum wachsen Palmen nicht in den Alpen, obwohl es dort Wasser und Licht gibt? Weil es zu kalt ist -- die Temperatur ist der begrenzende Faktor. Jede Art hat fuer jeden Umweltfaktor einen Wohlfuehlbereich. Ist auch nur ein einziger Faktor zu wenig oder zu viel, leidet die Art.
 
 **In diesem Kapitel lernst du:**
-- warum Umweltfaktoren in abiotische und biotische eingeteilt werden und was das für eine Art bedeutet
+- was abiotische und biotische Faktoren sind
+- wie die Toleranzkurve funktioniert (Optimum, Pessimum, Todespunkt)
+- warum Generalisten (euryoek) und Spezialisten (stenoek) sich unterscheiden
+- was Liebigs Minimumgesetz und Shelfords Toleranzgesetz bedeuten
+
+---
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+## Abiotische und biotische Faktoren
+
+Alles, was auf ein Lebewesen einwirkt, ist ein **Umweltfaktor**. Man teilt sie in zwei Gruppen:
+
+- **Abiotisch** (= unbelebt): Temperatur, Licht, Wasser, Boden, Wind. Beispiel: Ein Fisch braucht Wasser mit genug Sauerstoff.
+- **Biotisch** (= durch andere Lebewesen): Konkurrenz, Raeuber, Parasiten, Symbiose. Beispiel: Ein Hase wird vom Fuchs gejagt.
+
+| Typ | Beispiele |
+|-----|-----------|
+| **Abiotisch** | Temperatur, Licht, Wasser, pH, Naehrstoffe |
+| **Biotisch** | Konkurrenz, Raeuber-Beute, Symbiose, Parasitismus |
+
+> **Merke:** Abiotisch = unbelebt. Biotisch = Einfluss durch andere Lebewesen.
+
+---
+
+## Toleranzkurve: Der Wohlfuehlbereich
+
+{{DIAGRAM:cell-membrane}}
+
+Stell dir vor, du stellst die Heizung ein. Bei 21 Grad fuehlst du dich am besten (**Optimum**). Bei 10 oder 35 Grad geht es dir schlecht (**Pessimum**). Bei minus 20 oder plus 50 Grad wuerdest du sterben (**Todespunkt**). Genau so funktioniert die **Toleranzkurve** fuer jede Art und jeden Faktor.
+
+- **Optimum:** Bester Bereich, maximale Leistung
+- **Pessimum:** Randbereiche mit Stress
+- **Todespunkte:** Grenzen, jenseits derer die Art stirbt
+- **Oekologische Amplitude:** Gesamtbreite zwischen beiden Todespunkten
+
+**Euryoek vs. stenoek:**
+- **Euryoek** (breit) = **Generalist** -- haelt viel aus (z. B. Fuchs, Ratte)
+- **Stenoek** (eng) = **Spezialist** -- braucht ganz bestimmte Bedingungen (z. B. Flechten fuer saubere Luft). Spezialisten sind gute **Bioindikatoren**, weil ihr Vorkommen verraet, wie die Umwelt beschaffen ist.
+
+> **Merke:** Euryoek = Generalist, breite Toleranz. Stenoek = Spezialist, enge Toleranz, guter Bioindikator.
+
+---
+
+## Liebig und Shelford -- Was begrenzt das Wachstum?
+
+**Liebigs Minimumgesetz:** Das Wachstum wird durch den **knappsten** Faktor begrenzt. Stell dir ein Fass mit unterschiedlich hohen Brettern vor -- das Wasser laeuft beim kuerzesten Brett ueber. Selbst wenn Licht und Wasser reichen, waechst die Pflanze nicht, wenn Stickstoff fehlt.
+
+**Shelfords Toleranzgesetz:** Nicht nur zu wenig, auch **zu viel** schadet. Zu viel Duenger vergiftet den Boden. Shelford ergaenzt Liebig also um die Obergrenze.
+
+> **Merke:** Liebig: Minimum limitiert. Shelford: Minimum UND Maximum limitieren.
+
+---
+
+## MedAT-Fokus
+
+**Typische Fallen:**
+- Liebig (nur Mangel) vs. Shelford (auch Ueberschuss) verwechseln
+- Euryoek (breit) und stenoek (eng) verwechseln
+- Oekologische Amplitude ist die Toleranzbreite, nicht der Lebensraum selbst
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Abiotisch** = unbelebt; **biotisch** = durch Lebewesen
+- **Toleranzkurve:** Optimum → Pessimum → Todespunkt; **oekologische Amplitude** = Toleranzbreite
+- **Euryoek** = Generalist; **stenoek** = Spezialist, Bioindikator
+- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Ueberschuss kann limitieren`,
+      contentExtended: `## Einleitung
+
+Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser und Licht vorhanden ist? Die Antwort liegt in den Umweltfaktoren: Jede Art hat fuer jeden Faktor einen Toleranzbereich, und schon ein einziger Faktor im Mangel kann das Wachstum begrenzen. Das beschrieb Justus von Liebig bereits im 19. Jahrhundert. Die Toleranzkurve zeigt, wie die Leistung einer Art von einem Umweltfaktor abhaengt, und sie ist einer der am haeufigsten gefragten Zusammenhaenge im MedAT.
+
+**In diesem Kapitel lernst du:**
+- warum Umweltfaktoren in abiotische und biotische eingeteilt werden und was das fuer eine Art bedeutet
 - wie die Toleranzkurve aufgebaut ist und was Optimum, Pessimum und Todespunkt aussagen
-- warum Generalisten (euryök) und Spezialisten (stenök) sich in ihrer ökologischen Amplitude unterscheiden
+- warum Generalisten (euryoek) und Spezialisten (stenoek) sich in ihrer oekologischen Amplitude unterscheiden
 - wie Liebigs Minimumgesetz und Shelfords Toleranzgesetz limitierende Faktoren beschreiben
 
 ---
@@ -156,16 +299,16 @@ Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser un
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
-**Um zu verstehen,** warum Arten nur in bestimmten Lebensräumen vorkommen, betrachtet man die **Umweltfaktoren** — unterteilt in abiotisch und biotisch.
+**Um zu verstehen,** warum Arten nur in bestimmten Lebensraeumen vorkommen, betrachtet man die **Umweltfaktoren** -- unterteilt in abiotisch und biotisch.
 
-**Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensität, Wellenlänge), Wasser (Verfügbarkeit, Salzgehalt, pH), Boden (Textur, pH, Nährstoffe), Wind, Strömung. Sie wirken direkt auf Überleben, Wachstum und Reproduktion.
+**Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensitaet, Wellenlaenge), Wasser (Verfuegbarkeit, Salzgehalt, pH), Boden (Textur, pH, Naehrstoffe), Wind, Stroemung. Sie wirken direkt auf Ueberleben, Wachstum und Reproduktion.
 
-**Biotische Faktoren** sind alle Einflüsse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Prädation (Räuber–Beute), Symbiose (Mutualismus, Parasitismus, Kommensalismus). Sie strukturieren Lebensgemeinschaften (Biozönosen) und begrenzen Verbreitung und Dichte von Arten.
+**Biotische Faktoren** sind alle Einfluesse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Praedation (Raeuber-Beute), Symbiose (Mutualismus, Parasitismus, Kommensalismus). Sie strukturieren Lebensgemeinschaften (Biozoeonosen) und begrenzen Verbreitung und Dichte von Arten.
 
 | Typ | Beispiele |
 |-----|-----------|
-| **Abiotisch** | Temperatur, Licht, Wasser, pH, Nährstoffe, Salzgehalt |
-| **Biotisch** | Konkurrenz, Prädation, Symbiose, Parasitismus |
+| **Abiotisch** | Temperatur, Licht, Wasser, pH, Naehrstoffe, Salzgehalt |
+| **Biotisch** | Konkurrenz, Praedation, Symbiose, Parasitismus |
 
 > **Merke:** Abiotisch = unbelebt. Biotisch = Einfluss durch andere Lebewesen.
 
@@ -173,35 +316,35 @@ Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser un
 
 ## Toleranzkurve: Optimum, Pessimum, Todespunkt
 
-Die **Toleranzkurve** zeigt die Leistungsfähigkeit (Wachstum, Reproduktion, Aktivität) eines Organismus in Abhängigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve:
+Die **Toleranzkurve** zeigt die Leistungsfaehigkeit (Wachstum, Reproduktion, Aktivitaet) eines Organismus in Abhaengigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve:
 
 - **Optimum:** Bereich maximaler Leistung und Fitness (mittlere Faktorstufe).
-- **Pessimum:** Randbereiche mit stark verminderter, aber noch möglicher Leistung (Stress).
+- **Pessimum:** Randbereiche mit stark verminderter, aber noch moeglicher Leistung (Stress).
 - **Todespunkte (letale Grenzen):** Werte jenseits derer der Organismus stirbt.
-- **Ökologische Amplitude:** Gesamtbereich zwischen beiden Todespunkten — die **Toleranzbreite** für diesen Faktor.
+- **Oekologische Amplitude:** Gesamtbereich zwischen beiden Todespunkten -- die **Toleranzbreite** fuer diesen Faktor.
 
-Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
+Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
-> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, Überleben) → Todespunkt. Ökologische Amplitude = Breite des Toleranzbereichs.
+> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, Ueberleben) → Todespunkt. Oekologische Amplitude = Breite des Toleranzbereichs.
 
 ---
 
-## Euryök und stenök — Generalisten und Spezialisten
+## Euryoek und stenoek -- Generalisten und Spezialisten
 
 {{DIAGRAM:cell-membrane}}
 
-- **Euryök** (griech. eurys = breit): breite ökologische Amplitude = **Generalist** — toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Krähe, Ratte).
-- **Stenök** (griech. stenos = eng): enge Amplitude = **Spezialist** — nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen präzise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven = sauberes Wasser).
+- **Euryoek** (griech. eurys = breit): breite oekologische Amplitude = **Generalist** -- toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Kraehe, Ratte).
+- **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen praezise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven = sauberes Wasser).
 
-> **Merke:** Euryök = Generalist, breite Toleranz. Stenök = Spezialist, enge Toleranz, guter Bioindikator.
+> **Merke:** Euryoek = Generalist, breite Toleranz. Stenoek = Spezialist, enge Toleranz, guter Bioindikator.
 
 ---
 
 ## Liebigs Minimumgesetz und Shelfords Toleranzgesetz
 
-**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt — nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffdünger steigert den Ertrag. In Süßwasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
+**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt -- nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffduenger steigert den Ertrag. In Suesswasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
 
-**Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Überschuss** eines Faktors kann limitierend wirken (Toxizität). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
+**Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Ueberschuss** eines Faktors kann limitierend wirken (Toxizitaet). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
 
 > **Merke:** Liebig: Minimum limitiert. Shelford: Minimum und Maximum limitieren (gesamte Toleranzkurve).
 
@@ -209,33 +352,33 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 
 ## Bioindikatoren
 
-**Bioindikatoren** (Zeigerorganismen) sind stenöke Arten, deren Vorkommen oder Fehlen Rückschlüsse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Böden (Ellenberg N8–N9); Flechten = Luftqualität; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).
+**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Typische Prüfungsfragen:**
-- Was zeigt die Toleranzkurve? (Optimum, Pessimum, Todespunkt, ökologische Amplitude.)
-- Euryök vs. stenök mit Beispielen?
-- Warum sind stenöke Arten gute Bioindikatoren?
+**Typische Pruefungsfragen:**
+- Was zeigt die Toleranzkurve? (Optimum, Pessimum, Todespunkt, oekologische Amplitude.)
+- Euryoek vs. stenoek mit Beispielen?
+- Warum sind stenoeke Arten gute Bioindikatoren?
 
 **Typische Fallen:**
-- Liebig (nur Mangel limitiert) vs. Shelford (auch Überschuss kann limitieren) verwechseln.
-- Euryök (breite Amplitude) und stenök (enge Amplitude) verwechseln.
-- Ökologische Amplitude ist die Toleranzbreite für einen Faktor, nicht der Lebensraum selbst.
+- Liebig (nur Mangel limitiert) vs. Shelford (auch Ueberschuss kann limitieren) verwechseln.
+- Euryoek (breite Amplitude) und stenoek (enge Amplitude) verwechseln.
+- Oekologische Amplitude ist die Toleranzbreite fuer einen Faktor, nicht der Lebensraum selbst.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
 - **Abiotisch** = unbelebt; **biotisch** = Einfluss durch Lebewesen.
-- **Toleranzkurve:** Optimum → Pessimum → Todespunkt; **ökologische Amplitude** = Toleranzbreite.
-- **Euryök** = Generalist; **stenök** = Spezialist, Bioindikator.
-- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Überschuss kann limitieren.
-- Stenöke Arten = gute Bioindikatoren. Ökologische Amplitude ≠ Lebensraum.`,
+- **Toleranzkurve:** Optimum → Pessimum → Todespunkt; **oekologische Amplitude** = Toleranzbreite.
+- **Euryoek** = Generalist; **stenoek** = Spezialist, Bioindikator.
+- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Ueberschuss kann limitieren.
+- Stenoeke Arten = gute Bioindikatoren. Oekologische Amplitude ≠ Lebensraum.`,
       lernziele: [
         "Abiotische und biotische Faktoren unterscheiden und Beispiele nennen.",
         "Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) beschreiben und euryök vs. stenök erklären.",
@@ -344,13 +487,81 @@ Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
       ],
       content: `## Einleitung
 
-Wenn man sagt, der Lebensraum des Eichhörnchens sei der Wald, beschreibt man nur die halbe Wahrheit. Die ökologische Nische umfasst nicht nur den Ort, sondern auch die Rolle: Was frisst es, wann ist es aktiv, mit wem konkurriert es? Diese Unterscheidung zwischen Lebensraum und Nische ist ein klassischer MedAT-Stolperstein, denn die beiden Begriffe werden oft verwechselt.
+Wenn du sagst, das Eichhoernchen lebt im Wald, dann beschreibst du nur seine “Adresse”. Aber was frisst es? Wann ist es aktiv? Mit wem konkurriert es? All das zusammen ist seine **oekologische Nische** -- sein “Beruf” im Oekosystem. Diese Unterscheidung ist ein klassischer MedAT-Stolperstein.
 
 **In diesem Kapitel lernst du:**
-- warum die ökologische Nische mehr ist als nur ein Ort
-- worin sich die fundamentale Nische (theoretisch möglich) von der realisierten Nische (tatsächlich genutzt) unterscheidet
-- wie Nischendifferenzierung es konkurrierenden Arten ermöglicht, nebeneinander zu existieren
-- was das Connell-Seepocken-Experiment über fundamentale und realisierte Nischen belegt
+- warum die oekologische Nische mehr als ein Ort ist
+- was fundamentale und realisierte Nische bedeuten
+- wie Nischendifferenzierung Koexistenz ermoeglicht
+
+---
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+## Nische vs. Lebensraum
+
+Stell dir eine Wohngemeinschaft vor: Deine **Adresse** ist dein Lebensraum (Habitat) -- wo du wohnst. Dein **Job, dein Tagesablauf, deine Ernaehrung** -- das alles zusammen ist deine Nische.
+
+| Begriff | Bedeutung |
+|--------|-----------|
+| **Lebensraum (Habitat)** | Physischer Ort (“Adresse”) |
+| **Oekologische Nische** | Alle Umweltansprueche und die Rolle der Art (“Beruf”) |
+
+> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Oekosystem.
+
+---
+
+## Fundamentale und realisierte Nische
+
+- **Fundamentale Nische:** Wo die Art **theoretisch** leben koennte, wenn es keine Konkurrenten gaebe
+- **Realisierte Nische:** Wo sie **tatsaechlich** lebt -- immer kleiner oder gleich der fundamentalen Nische, weil Konkurrenz sie einschraenkt
+
+**Alltagsbeispiel:** Du koenntest theoretisch in jeder Stadt Oesterreichs leben (fundamentale Nische). Aber wegen Mietpreisen und Jobstandort wohnst du nur in Wien (realisierte Nische).
+
+**Connell-Experiment (1961):** Zwei Seepockenarten an schottischen Felsen. Art 1 lebt oben, Art 2 unten. Entfernt man Art 2, breitet sich Art 1 auch nach unten aus. Die Konkurrenz hatte Art 1 eingeschraenkt.
+
+> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz schraenkt die realisierte Nische ein.
+
+---
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+## Nischendifferenzierung -- Wie Arten zusammenleben
+
+Zwei Arten mit exakt derselben Nische koennen nicht dauerhaft nebeneinander leben. Aber sie koennen **die Ressourcen aufteilen** (Nischendifferenzierung):
+
+- **Zeitlich:** Falke jagt am Tag, Eule in der Nacht
+- **Raeumlich:** Verschiedene Baumhoehen im selben Wald
+- **Trophisch:** Verschiedene Beutegroessen (z. B. Darwinfinken mit verschiedenen Schnaebeln)
+
+> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.
+
+---
+
+## MedAT-Fokus
+
+**Typische Fallen:**
+- Nische ≠ Lebensraum (Nische = Rolle + alle Ansprueche, nicht nur der Ort)
+- Realisierte Nische ist nie groesser als die fundamentale Nische
+- Nischendifferenzierung ≠ Konkurrenzausschluss -- Differenzierung ist der Weg zur Koexistenz
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Lebensraum** = Ort; **oekologische Nische** = alle Ansprueche + Rolle der Art
+- **Fundamentale Nische** = theoretisch moeglich; **realisierte Nische** = tatsaechlich genutzt (immer ≤ fundamental)
+- Konkurrenz schraenkt die realisierte Nische ein (Connell-Experiment)
+- **Nischendifferenzierung** (zeitlich, raeumlich, trophisch) ermoeglicht Koexistenz`,
+      contentExtended: `## Einleitung
+
+Wenn man sagt, der Lebensraum des Eichhoernchens sei der Wald, beschreibt man nur die halbe Wahrheit. Die oekologische Nische umfasst nicht nur den Ort, sondern auch die Rolle: Was frisst es, wann ist es aktiv, mit wem konkurriert es? Diese Unterscheidung zwischen Lebensraum und Nische ist ein klassischer MedAT-Stolperstein, denn die beiden Begriffe werden oft verwechselt.
+
+**In diesem Kapitel lernst du:**
+- warum die oekologische Nische mehr ist als nur ein Ort
+- worin sich die fundamentale Nische (theoretisch moeglich) von der realisierten Nische (tatsaechlich genutzt) unterscheidet
+- wie Nischendifferenzierung es konkurrierenden Arten ermoeglicht, nebeneinander zu existieren
+- was das Connell-Seepocken-Experiment ueber fundamentale und realisierte Nischen belegt
 
 ---
 
@@ -358,28 +569,28 @@ Wenn man sagt, der Lebensraum des Eichhörnchens sei der Wald, beschreibt man nu
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
-**Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt „wo“ die Art lebt.
+**Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt “wo” die Art lebt.
 
-**Ökologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die für das Überleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Räuber, Parasiten, Brutplätze usw. Beschreibt „wie“ die Art lebt und welche Rolle sie im Ökosystem hat — also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
+**Oekologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die fuer das Ueberleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Raeuber, Parasiten, Brutplaetze usw. Beschreibt “wie” die Art lebt und welche Rolle sie im Oekosystem hat -- also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
 
 | Begriff | Bedeutung |
 |--------|-----------|
-| **Lebensraum (Habitat)** | Physischer Ort („Adresse“) |
-| **Ökologische Nische** | Alle Umweltansprüche und die Rolle der Art („Beruf“) |
+| **Lebensraum (Habitat)** | Physischer Ort (“Adresse”) |
+| **Oekologische Nische** | Alle Umweltansprueche und die Rolle der Art (“Beruf”) |
 
-> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Ökosystem.
+> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Oekosystem.
 
 ---
 
 ## Fundamentale und realisierte Nische
 
-**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen könnte, wenn keine Konkurrenten oder Feinde da wären — begrenzt nur durch ihre physiologischen Toleranzen.
+**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen koennte, wenn keine Konkurrenten oder Feinde da waeren -- begrenzt nur durch ihre physiologischen Toleranzen.
 
-**Realisierte Nische:** Der **tatsächlich** von der Art genutzte Bereich. Er ist durch Konkurrenz, Prädation und andere biotische Faktoren **eingeschränkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen Nische.
+**Realisierte Nische:** Der **tatsaechlich** von der Art genutzte Bereich. Er ist durch Konkurrenz, Praedation und andere biotische Faktoren **eingeschraenkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen Nische.
 
-**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: *Chthamalus* in der oberen, *Balanus* in der unteren Gezeitenzone. Wird *Balanus* entfernt, besiedelt *Chthamalus* auch die untere Zone. Folgerung: Die **fundamentale** Nische von *Chthamalus* umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit *Balanus* auf die obere Zone beschränkt.
+**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: Chthamalus in der oberen, Balanus in der unteren Gezeitenzone. Wird Balanus entfernt, besiedelt Chthamalus auch die untere Zone. Folgerung: Die **fundamentale** Nische von Chthamalus umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit Balanus auf die obere Zone beschraenkt.
 
-> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz (und andere biotische Faktoren) schränken die realisierte Nische ein.
+> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz (und andere biotische Faktoren) schraenken die realisierte Nische ein.
 
 ---
 
@@ -387,36 +598,36 @@ Wenn man sagt, der Lebensraum des Eichhörnchens sei der Wald, beschreibt man nu
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
-Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist möglich durch **Nischendifferenzierung** — die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
+Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist moeglich durch **Nischendifferenzierung** -- die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
 
 - **Zeitlich:** Tag- vs. nachtaktiv (z. B. Falke vs. Eule)
-- **Räumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhöhen)
-- **Trophisch:** Verschiedene Beutegrößen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
+- **Raeumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhoehen)
+- **Trophisch:** Verschiedene Beutegroessen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
 
-> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, räumlich oder trophisch) → ermöglicht Koexistenz.
+> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Was ist der Unterschied zwischen ökologischer Nische und Lebensraum?
-- Erkläre fundamentale und realisierte Nische. Was zeigt das Connell-Seepocken-Experiment?
-- Wie ermöglicht Nischendifferenzierung das Zusammenleben konkurrierender Arten?
+**Typische Pruefungsfragen:**
+- Was ist der Unterschied zwischen oekologischer Nische und Lebensraum?
+- Erklaere fundamentale und realisierte Nische. Was zeigt das Connell-Seepocken-Experiment?
+- Wie ermoeglicht Nischendifferenzierung das Zusammenleben konkurrierender Arten?
 
 **Typische Fallen:**
-- Nische ≠ Lebensraum (Nische ist die „Rolle” und alle Ansprüche, nicht nur der Ort).
-- Realisierte Nische ist nie größer als die fundamentale Nische.
-- Nischendifferenzierung ≠ Konkurrenzausschluss — Differenzierung ist der Weg zur Koexistenz.
+- Nische ≠ Lebensraum (Nische ist die “Rolle” und alle Ansprueche, nicht nur der Ort).
+- Realisierte Nische ist nie groesser als die fundamentale Nische.
+- Nischendifferenzierung ≠ Konkurrenzausschluss -- Differenzierung ist der Weg zur Koexistenz.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Lebensraum** = physischer Ort; **ökologische Nische** = alle Umweltansprüche + Rolle der Art.
-- **Fundamentale Nische** = theoretisch möglicher Bereich; **realisierte Nische** = tatsächlich genutzter Bereich (immer ≤ fundamental).
-- Konkurrenz schränkt die realisierte Nische ein (Connell: *Chthamalus* ohne *Balanus* → größere Nutzung).
-- **Nischendifferenzierung** (zeitlich, räumlich, trophisch) ermöglicht Koexistenz konkurrierender Arten.`,
+- **Lebensraum** = physischer Ort; **oekologische Nische** = alle Umweltansprueche + Rolle der Art.
+- **Fundamentale Nische** = theoretisch moeglicher Bereich; **realisierte Nische** = tatsaechlich genutzter Bereich (immer ≤ fundamental).
+- Konkurrenz schraenkt die realisierte Nische ein (Connell: Chthamalus ohne Balanus → groessere Nutzung).
+- **Nischendifferenzierung** (zeitlich, raeumlich, trophisch) ermoeglicht Koexistenz konkurrierender Arten.`,
       lernziele: [
         "Ökologische Nische und Lebensraum (Habitat) unterscheiden.",
         "Fundamentale und realisierte Nische erklären und das Connell-Experiment zuordnen.",

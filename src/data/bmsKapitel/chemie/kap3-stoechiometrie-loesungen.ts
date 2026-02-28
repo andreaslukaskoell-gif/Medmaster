@@ -25,6 +25,107 @@ export const chemKapStoech: Kapitel = {
       ],
       content: `## Einleitung
 
+Stell dir vor, du willst wissen, wie viele Zuckerkoerner in einer Tuete sind. Zaehlen waere unmoeglich -- es sind einfach zu viele. Genau dafuer gibt es das **Mol-Konzept**: eine Abkuerzung, um riesige Teilchenzahlen handlich zu machen. Das Mol verbindet die Welt der Gramm (die du auf der Waage siehst) mit der Welt der Atome und Molekuele (die du nicht sehen kannst).
+
+**In diesem Kapitel lernst du:**
+- was ein Mol ist und warum die Avogadro-Zahl 6,022 x 10²³ so wichtig ist
+- wie du die molare Masse M aus dem Periodensystem abliest
+- wie du zwischen Masse (g), Stoffmenge (mol) und Teilchenzahl (N) umrechnest
+- was Dalton (Da) bedeutet
+- wie du einfache Rechenaufgaben mit n = m/M loest
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+## Das Mol -- eine Zaehleinheit
+
+Ein **Dutzend** sind 12 Stueck. Ein **Mol** sind 6,022 x 10²³ Stueck -- egal ob Atome, Molekuele oder Ionen. Das ist die **Avogadro-Zahl N_A**.
+
+Warum so eine seltsame Zahl? Weil man sie so gewaehlt hat, dass 1 Mol Kohlenstoff-Atome genau 12 g wiegt. Damit kannst du direkt vom Periodensystem ablesen, wie schwer 1 Mol eines Stoffes ist.
+
+> **Merke:** 1 Mol = 6,022 x 10²³ Teilchen. Die Avogadro-Zahl verbindet Gramm mit Teilchenzahl.
+
+---
+
+## Molare Masse M
+
+Die **molare Masse M** sagt dir: So viel Gramm wiegt 1 Mol eines Stoffes. Du liest sie aus dem Periodensystem ab:
+
+- Wasserstoff H: 1 g/mol
+- Kohlenstoff C: 12 g/mol
+- Sauerstoff O: 16 g/mol
+
+Bei Molekuelen addierst du einfach alle Atommassen:
+- Wasser H₂O: 2 x 1 + 16 = **18 g/mol**
+- Kochsalz NaCl: 23 + 35,5 = **58,5 g/mol**
+- Zucker (Glucose) C₆H₁₂O₆: 6 x 12 + 12 x 1 + 6 x 16 = **180 g/mol**
+
+In der Biochemie schreibt man oft **Dalton (Da)** statt g/mol. Zahlenwert ist gleich: 180 g/mol = 180 Da.
+
+> **Merke:** Molare Masse = Summe aller Atommassen aus dem PSE. Glucose: 180, NaCl: 58,5, Wasser: 18 -- auswendig lernen!
+
+---
+
+## Die drei Grundformeln
+
+Das Umrechnungsdreieck:
+
+- **n = m / M** -- Stoffmenge aus Masse berechnen
+- **m = n x M** -- Masse aus Stoffmenge berechnen
+- **N = n x N_A** -- Teilchenzahl aus Stoffmenge berechnen
+
+{{DIAGRAM:periodic-table}}
+
+## Rechenbeispiel: Zucker in einer Tuete
+
+**Aufgabe:** Du hast 36 g Zucker (Glucose, M = 180 g/mol). Wie viel Mol ist das?
+
+**Loesung:** n = m / M = 36 / 180 = **0,2 mol**
+
+Wie viele Molekuele? N = 0,2 x 6,022 x 10²³ = **1,2 x 10²³ Molekuele**
+
+## Rechenbeispiel: Kopfschmerztablette
+
+**Aufgabe:** Eine Tablette enthaelt 500 mg Paracetamol (M = 151 g/mol). Wie viel Mol?
+
+**Loesung:** Erst mg in g: 500 mg = 0,5 g. Dann n = 0,5 / 151 = **0,0033 mol = 3,3 mmol**
+
+> **Merke:** Rechenweg immer gleich: Masse (g) -> Stoffmenge (mol) ueber n = m/M -> Teilchenzahl ueber N = n x N_A. Immer mg in g umrechnen!
+
+---
+
+## Alltagsbeispiele
+
+**Backen:** 100 g Mehl enthalten ca. 0,6 mol Staerke-Einheiten. Die Molare Masse hilft dir, Stoffmengen zu verstehen.
+
+**Salz im Kochwasser:** 10 g NaCl in 1 L Wasser sind n = 10/58,5 = 0,17 mol NaCl.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Avogadro-Zahl: N_A = 6,022 x 10²³ mol⁻¹
+- Umrechnungsdreieck: n = m/M, N = n x N_A
+- Molare Massen berechnen (Summenformel + PSE)
+- Glucose: 180 g/mol, H₂O: 18 g/mol, NaCl: 58,5 g/mol
+
+**Typische Fallen:**
+- mg nicht in g umgerechnet -> Faktor 1000 Fehler
+- 1 Mol H₂O enthaelt 2 Mol H-Atome und 1 Mol O-Atome (nicht 1 Mol H!)
+- Dalton und g/mol sind zahlenwertgleich, aber verschiedene Einheiten
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **1 Mol = 6,022 x 10²³ Teilchen** (Avogadro-Zahl)
+- **Molare Masse M** = Summe der Atommassen [g/mol]; 1 Da = 1 g/mol
+- **Umrechnungen:** n = m/M; N = n x N_A
+- **Wichtige Werte:** Glucose 180, NaCl 58,5, Wasser 18 g/mol`,
+      contentExtended: `## Einleitung
+
 Ein Patient erhält eine Glucose-Infusion: 500 mL einer 5%-Lösung. Wie viele Glucose-Moleküle gelangen dabei in den Blutkreislauf? Die Antwort liefert das **Mol-Konzept** — das zentrale Bindeglied zwischen der makroskopischen Welt (Gramm, Liter) und der atomaren Welt (einzelne Teilchen). Ohne das Mol wäre es unmöglich, chemische Reaktionen quantitativ zu beschreiben, Medikamente korrekt zu dosieren oder Laborwerte zu interpretieren.
 
 **In diesem Kapitel lernst du:**
@@ -133,6 +234,14 @@ Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Um das zu verste
       ],
       klinischerBezug:
         "In der Klinik werden Medikamentendosen in mg oder g angegeben, Laborwerte jedoch oft in mmol/L (z. B. Glucose: 3,9–5,5 mmol/L nüchtern). Das Mol-Konzept ist unentbehrlich für die Umrechnung zwischen Masse- und Stoffmengenkonzentration. Infusionslösungen (z. B. Glucose 5 %, NaCl 0,9 %) werden über n = m/M auf ihren molaren Gehalt berechnet, um isotone Bedingungen sicherzustellen.",
+
+      altfrage: {
+        question:
+          "Wie viele Moleküle Glucose sind in 0,5 mol Glucose enthalten? (N_A = 6,022 × 10²³ mol⁻¹)\n\nA) 3,011 × 10²³\nB) 6,022 × 10²³\nC) 1,204 × 10²⁴\nD) 3,011 × 10²²\nE) 6,022 × 10²²",
+        answer:
+          "Richtige Antwort: A) 3,011 × 10²³\n\nDie Teilchenanzahl N berechnet sich aus N = n × N_A. Mit n = 0,5 mol und N_A = 6,022 × 10²³ mol⁻¹ ergibt sich: N = 0,5 × 6,022 × 10²³ = 3,011 × 10²³ Moleküle. Option B entspräche 1 mol, Option C entspräche 2 mol. Die Avogadro-Konstante N_A ist definiert als die Anzahl der Teilchen in genau 1 mol eines Stoffes — sie verknüpft die makroskopische Stoffmenge mit der Teilchenzahl auf atomarer Ebene.",
+      },
+
       diagram: "periodic-table",
       selfTest: [
         {
@@ -234,6 +343,102 @@ Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Um das zu verste
         "Verbrennungsreaktion",
       ],
       content: `## Einleitung
+
+Du backst einen Kuchen: Das Rezept sagt 3 Eier und 200 g Mehl. Hast du nur 2 Eier, bestimmen die Eier, wie viel Kuchen du machen kannst -- egal wie viel Mehl du hast. Genau so funktioniert **Stoechiometrie** in der Chemie: Reaktionsgleichungen sagen dir, in welchem Verhaeltnis Stoffe miteinander reagieren.
+
+**In diesem Kapitel lernst du:**
+- wie du chemische Reaktionsgleichungen ausgleichst
+- was die Koeffizienten (Zahlen vor den Formeln) bedeuten
+- wie du aus der Masse eines Stoffs die Masse eines anderen berechnest
+- was ein limitierendes Reagenz ist
+- wie du die Ausbeute einer Reaktion bestimmst
+
+---
+
+{{DIAGRAM:thermodynamics}}
+
+## Reaktionsgleichungen ausgleichen
+
+Bei einer chemischen Reaktion werden Atome neu angeordnet -- aber kein Atom geht verloren oder kommt dazu. Das heisst: **Links und rechts vom Pfeil muessen gleich viele Atome jeder Sorte stehen.**
+
+Beispiel -- Verbrennung von Erdgas (Methan):
+- Unausgeglichen: CH₄ + O₂ -> CO₂ + H₂O
+- Ausgeglichen: **CH₄ + 2 O₂ -> CO₂ + 2 H₂O**
+- Pruefung: C: 1=1, H: 4=4, O: 4=4 ✓
+
+Die Zahlen vor den Formeln heissen **Koeffizienten**. Sie geben **Mol-Verhaeltnisse** an: 1 Mol CH₄ reagiert mit 2 Mol O₂.
+
+> **Merke:** Koeffizienten sind Mol-Verhaeltnisse, nicht Gramm-Verhaeltnisse! Immer Atome links und rechts zaehlen und vergleichen.
+
+---
+
+## So rechnest du: Das Drei-Schritte-Schema
+
+Jede Stoechiometrie-Aufgabe loest du in drei Schritten:
+
+**Gramm -> Mol (dividiere durch M) -> Koeffizientenverhaeltnis -> Mol -> Gramm (multipliziere mit M)**
+
+{{DIAGRAM:periodic-table}}
+
+## Rechenbeispiel: Wie viel CO₂ entsteht?
+
+**Aufgabe:** 90 g Zucker (Glucose, M = 180) verbrennen vollstaendig. Wie viel Gramm CO₂ entstehen?
+
+Gleichung: C₆H₁₂O₆ + 6 O₂ -> 6 CO₂ + 6 H₂O
+
+1. n(Glucose) = 90 / 180 = **0,5 mol**
+2. Verhaeltnis: 1 Glucose -> 6 CO₂, also n(CO₂) = 6 x 0,5 = **3 mol**
+3. m(CO₂) = 3 x 44 = **132 g**
+
+> **Merke:** Schema: g -> mol (durch M teilen) -> Verhaeltnis anwenden -> mol -> g (mal M). Die Koeffizienten sind der Schluessel!
+
+---
+
+## Limitierendes Reagenz
+
+Wenn die Zutaten nicht perfekt zueinander passen, bestimmt der Stoff, der zuerst aufgebraucht wird, wie viel Produkt maximal entstehen kann. Das ist das **limitierende Reagenz** (Mangelreagenz).
+
+**Beispiel:** Du hast 4 g H₂ und 16 g O₂. Reaktion: 2 H₂ + O₂ -> 2 H₂O.
+- n(H₂) = 4/2 = 2 mol, n(O₂) = 16/32 = 0,5 mol
+- Laut Gleichung brauchen 2 mol H₂ genau 1 mol O₂ -- du hast aber nur 0,5 mol O₂
+- O₂ ist limitierend: Nur 1 mol H₂ kann reagieren -> 1 mol H₂O = 18 g
+
+**Ausbeute:** Theoretisch (aus der Rechnung) vs. tatsaechlich (in der Praxis oft weniger). Prozentuale Ausbeute = (tatsaechlich / theoretisch) x 100 %.
+
+> **Merke:** Das limitierende Reagenz bestimmt die maximale Produktmenge. Fuer jedes Edukt: n/Koeffizient berechnen -- der kleinste Wert zeigt das Mangelreagenz.
+
+---
+
+## Alltagsbeispiele
+
+**Grillen:** Holzkohle (C) braucht Sauerstoff: C + O₂ -> CO₂. Wenn die Luft nicht reicht, entsteht nur CO (giftiges Kohlenmonoxid) statt CO₂ -- Sauerstoff ist limitierend.
+
+**Essig und Backpulver:** NaHCO₃ + Essig -> CO₂ + Wasser + Natriumacetat. Je mehr Backpulver, desto mehr Blubber -- bis der Essig aufgebraucht ist.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Reaktionsgleichungen ausgleichen (Atome zaehlen!)
+- Stoechiometrisches Rechnen: g -> mol -> Verhaeltnis -> mol -> g
+- Limitierendes Reagenz identifizieren
+- Massenerhaltung: Gesamtmasse links = Gesamtmasse rechts
+
+**Typische Fallen:**
+- Koeffizienten als Gramm-Verhaeltnisse missverstanden (sie sind Mol-Verhaeltnisse!)
+- Vergessen, beide Seiten auf Atomgleichheit zu pruefen
+- Nicht beide Edukte auf Limitierung pruefen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Massenerhaltung:** Atome links = Atome rechts; Koeffizienten = Mol-Verhaeltnisse
+- **Rechenweg:** m -> n (durch M) -> Koeffizientenverhaeltnis -> n -> m (mal M)
+- **Limitierendes Reagenz:** wird zuerst aufgebraucht, bestimmt maximale Produktmenge
+- **Ausbeute:** theoretisch vs. tatsaechlich; % = (real/theoretisch) x 100`,
+      contentExtended: `## Einleitung
 
 Bei einer Überdosierung mit Magensäure-bedingten Beschwerden verschreibt der Arzt ein Antacidum: Magnesiumhydroxid Mg(OH)₂ neutralisiert die Salzsäure HCl im Magen. Doch wie viel Antacidum wird benötigt, um eine bestimmte Menge HCl zu neutralisieren? Die Antwort liefert die **Stöchiometrie** — die quantitative Sprache der Chemie, die mithilfe ausgeglichener Reaktionsgleichungen exakte Mengenbeziehungen zwischen Edukten und Produkten herstellt.
 
@@ -364,6 +569,14 @@ Bisher haben wir gelernt, wie Mengenbeziehungen in Reaktionen funktionieren. Um 
       ],
       klinischerBezug:
         "Stöchiometrische Berechnungen sind in der Pharmazie (Wirkstoff-Synthese, Dosierung) und Klinik allgegenwärtig. Antacida neutralisieren Magensäure in definiertem Molverhältnis. Der respiratorische Quotient (RQ) — das stöchiometrische Verhältnis CO₂/O₂ — gibt Auskunft über den Substratmix der Energiegewinnung (RQ = 1,0 für KH, 0,7 für Fette). In der Dialyse wird die Harnstoff-Clearance stöchiometrisch aus der Dialysatmenge berechnet.",
+
+      altfrage: {
+        question:
+          "Für die vollständige Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Mol O₂ werden benötigt, um 3 mol CH₄ vollständig zu verbrennen?\n\nA) 2 mol\nB) 3 mol\nC) 4 mol\nD) 6 mol\nE) 8 mol",
+        answer:
+          "Richtige Antwort: D) 6 mol\n\nLaut der ausgeglichenen Reaktionsgleichung reagiert 1 mol CH₄ mit 2 mol O₂. Die Koeffizienten geben das Molverhältnis der Reaktionspartner an. Für 3 mol CH₄ werden daher 3 × 2 = 6 mol O₂ benötigt. Das stöchiometrische Rechnen mit Molverhältnissen ist die Grundlage jeder quantitativen Chemie — von der Synthese eines Arzneistoffs bis zur Berechnung der benötigten Sauerstoffmenge bei der Zellatmung.",
+      },
+
       diagram: "thermodynamics",
       selfTest: [
         {
@@ -480,6 +693,121 @@ Bisher haben wir gelernt, wie Mengenbeziehungen in Reaktionen funktionieren. Um 
       ],
       content: `## Einleitung
 
+Wenn du Salz ins Kochwasser gibst, loest es sich auf. Aber wie viel Salz ist eigentlich drin? Das drueckst du mit **Konzentrationsangaben** aus. In der Chemie und im Alltag gibt es verschiedene Moeglichkeiten: Prozent, Gramm pro Liter oder Mol pro Liter. Alle beschreiben dasselbe -- wie viel Stoff in einer bestimmten Menge Loesung steckt.
+
+**In diesem Kapitel lernst du:**
+- welche Konzentrationsangaben es gibt (Molaritaet, Prozent, g/L)
+- wie du zwischen ihnen umrechnest
+- wie die Verduennungsformel c₁V₁ = c₂V₂ funktioniert
+- was Loeslichkeit und Loeslichkeitsprodukt bedeuten
+- wichtige Werte: NaCl 0,9 % = 154 mmol/L
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+## Die drei wichtigsten Konzentrationsangaben
+
+**1. Molaritaet c = n / V [mol/L]**
+
+Wie viel Mol Stoff pro Liter Loesung. Das ist die Standardangabe in der Chemie.
+- 1 M = 1 mol/L
+- Im Alltag oft mmol/L (tausendstel Mol pro Liter)
+
+**2. Massenanteil w (Prozent)**
+
+w = m(Stoff) / m(Loesung) x 100 %. Beispiel: "NaCl 0,9 %" heisst 0,9 g Salz in 100 g Loesung.
+
+**3. Massenkonzentration (g/L oder mg/dL)**
+
+Masse pro Volumen. Wird oft im Alltag und in der Medizin benutzt.
+
+> **Merke:** Prozent und mol/L sind verschiedene Dinge! NaCl 0,9 % ist nicht das gleiche wie 0,9 mol/L. Immer umrechnen!
+
+---
+
+## Rechenbeispiel: NaCl 0,9 % in mol/L
+
+0,9 % heisst: 9 g NaCl in 1 L Loesung (ungefaehr). Die molare Masse von NaCl ist 58,5 g/mol.
+
+n = 9 / 58,5 = 0,154 mol -> c = **154 mmol/L**
+
+Das Salz zerfaellt in Na⁺ und Cl⁻ -> insgesamt 308 mmol/L Teilchen. Das ist gleich viel wie im Blut (isoton).
+
+> **Merke:** NaCl 0,9 % = 154 mmol/L NaCl = 308 mosmol/L (isoton zum Blut).
+
+{{DIAGRAM:ph-scale}}
+
+---
+
+## Verduennungsformel
+
+Wenn du eine starke Loesung mit Wasser verduennst, bleibt die Stoffmenge gleich -- nur das Volumen aendert sich:
+
+**c₁ x V₁ = c₂ x V₂**
+
+**Beispiel:** Aus 10 %-iger Salzloesung sollst du 500 mL einer 0,9 %-igen machen. Wie viel Stammlosung brauchst du?
+
+V₁ = c₂ x V₂ / c₁ = 0,9 x 500 / 10 = **45 mL**
+
+Nimm 45 mL der starken Loesung und fuelle mit Wasser auf 500 mL auf.
+
+> **Merke:** c₁V₁ = c₂V₂ gilt nur fuer Verduennungen (reines Wasser dazu). Bei Mischungen zweier Loesungen brauchst du die Mischungsregel.
+
+---
+
+## Loeslichkeit und Loeslichkeitsprodukt
+
+Jeder Stoff hat eine maximale Loeslichkeit -- mehr geht nicht rein. Gibst du mehr dazu, faellt der Ueberschuss als Niederschlag aus.
+
+Fuer schwer loesliche Salze gibt es das **Loeslichkeitsprodukt K_sp**:
+
+Beispiel: AgCl loest sich in Wasser: AgCl <-> Ag⁺ + Cl⁻
+
+K_sp = [Ag⁺] x [Cl⁻]
+
+Wenn das Produkt der Ionenkonzentrationen groesser als K_sp wird, faellt ein Niederschlag aus.
+
+> **Merke:** Ionenprodukt Q > K_sp -> Niederschlag faellt aus. Q < K_sp -> Loesung noch nicht gesaettigt.
+
+---
+
+## Alltagsbeispiel: Blutzucker umrechnen
+
+Blutzucker = 90 mg/dL. Wie viel ist das in mmol/L?
+
+90 mg/dL = 900 mg/L = 0,9 g/L. n = 0,9 / 180 = 0,005 mol/L = **5,0 mmol/L**
+
+Kurzformel: mmol/L = mg/dL geteilt durch 18.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Molaritaet c = n/V; Massenanteil w = m/m(Loesung) x 100 %
+- Verduennungsformel c₁V₁ = c₂V₂
+- NaCl 0,9 % = 154 mmol/L = isoton
+- Loeslichkeitsprodukt K_sp
+- Blutzucker: mg/dL geteilt durch 18 = mmol/L
+
+**Typische Fallen:**
+- Prozent und mol/L nicht verwechseln
+- Verduennungsformel gilt nur mit reinem Loesungsmittel
+- NaCl zerfaellt in 2 Ionen: 154 mmol/L NaCl = 308 mosmol/L
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Molaritaet** c = n/V [mol/L] -- Standardangabe in der Chemie
+- **Massenanteil** w = m(Stoff)/m(Loesung) x 100 % -- NaCl 0,9 %
+- **Verdunnung:** c₁V₁ = c₂V₂ (Stoffmenge bleibt gleich)
+- **Loeslichkeit:** K_sp = Ionenprodukt bei Saettigung; Q > K_sp -> Niederschlag
+- **NaCl 0,9 %** = 154 mmol/L = 308 mosmol/L = isoton zum Blut
+- **Blutzucker:** mmol/L = mg/dL / 18`,
+      contentExtended: `## Einleitung
+
 Ein Arzt ordnet eine „NaCl 0,9 %-Infusion" an — eine der häufigsten Anordnungen im Krankenhaus. Doch was bedeutet „0,9 %" genau? Wie viel NaCl steckt in einem Liter? Und wie rechnet man das in mmol/L um, um die Werte mit dem Blutbefund zu vergleichen? Die Antworten liefern die **Konzentrationsangaben** — unverzichtbare Werkzeuge für Medizin, Pharmazie und Labordiagnostik.
 
 **In diesem Kapitel lernst du:**
@@ -545,7 +873,7 @@ Bisher haben wir die Definitionen kennengelernt. Um das zu verstehen, wie man zw
 
 > **Merke:** NaCl 0,9 % ≈ 154 mmol/L NaCl → 154 mmol/L Na⁺ + 154 mmol/L Cl⁻ = 308 mmol/L Gesamtionenkonzentration (≈ 308 mosmol/L — isoton zum Blutplasma!).
 
-{{DIAGRAM:periodic-table}}
+{{DIAGRAM:ph-scale}}
 
 ---
 
@@ -633,6 +961,14 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)
       ],
       klinischerBezug:
         "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol).",
+
+      altfrage: {
+        question:
+          "Welche Konzentration hat eine Lösung, die durch Auflösen von 5,85 g NaCl (M = 58,5 g/mol) in Wasser auf ein Gesamtvolumen von 500 mL hergestellt wird?\n\nA) 0,01 mol/L\nB) 0,1 mol/L\nC) 0,2 mol/L\nD) 1,0 mol/L\nE) 0,5 mol/L",
+        answer:
+          "Richtige Antwort: C) 0,2 mol/L\n\nZuerst wird die Stoffmenge berechnet: n = m/M = 5,85 g / 58,5 g/mol = 0,1 mol. Die Molarität (Stoffmengenkonzentration) ist c = n/V. Das Volumen muss in Liter umgerechnet werden: 500 mL = 0,5 L. Damit: c = 0,1 mol / 0,5 L = 0,2 mol/L. Ein häufiger Fehler ist, das Volumen nicht in Liter umzurechnen (was fälschlich 0,1/500 = 0,0002 mol/L ergeben würde). Die Molarität c = n/V ist die in der Chemie und Klinik am häufigsten verwendete Konzentrationsangabe.",
+      },
+
       diagram: "periodic-table",
       selfTest: [
         {
@@ -745,6 +1081,120 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)
         "Dialyse",
       ],
       content: `## Einleitung
+
+Warum platzt eine Kirsche im Regen? Weil das Regenwasser weniger geloeste Stoffe hat als das Innere der Kirsche. Wasser stroemt durch die Schale nach innen -- bis sie reisst. Dasselbe Prinzip erklaert, warum Salzwasser spaeter gefriert als reines Wasser und warum man bei Glatteis Salz streut. All das sind **kolligative Eigenschaften**: Sie haengen nur davon ab, **wie viele** Teilchen geloest sind -- nicht welche.
+
+**In diesem Kapitel lernst du:**
+- was kolligative Eigenschaften sind und warum nur die Teilchenzahl zaehlt
+- warum Salzwasser spaeter gefriert und spaeter kocht als reines Wasser
+- was Osmose ist und wie der osmotische Druck funktioniert
+- den Unterschied zwischen isoton, hypoton und hyperton
+- was mit Zellen passiert, wenn die Loesung "falsch" konzentriert ist
+
+---
+
+{{DIAGRAM:covalent-bond}}
+
+## Was sind kolligative Eigenschaften?
+
+Wenn du etwas in Wasser loest, aendert sich das Verhalten des Wassers:
+- Der **Gefrierpunkt sinkt** (darum streut man Salz im Winter)
+- Der **Siedepunkt steigt** (Salzwasser kocht etwas spaeter)
+- Es entsteht ein **osmotischer Druck** (Wasser wandert durch Membranen)
+
+Diese Effekte haengen nur von der **Anzahl der geloesten Teilchen** ab. Ob es Zucker oder Salz ist, spielt keine Rolle -- nur wie viele Teilchen.
+
+Der **van't Hoff-Faktor i** gibt an, in wie viele Teilchen ein Stoff zerfaellt:
+- Zucker (Glucose): i = 1 (zerfaellt nicht)
+- Kochsalz NaCl: i = 2 (zerfaellt in Na⁺ und Cl⁻)
+- CaCl₂: i = 3 (zerfaellt in Ca²⁺ + 2 Cl⁻)
+
+> **Merke:** Kolligative Eigenschaften haengen NUR von der Teilchenzahl ab. NaCl (i = 2) hat den doppelten Effekt wie Glucose (i = 1) bei gleicher Mol-Konzentration.
+
+---
+
+## Gefrierpunktserniedrigung
+
+Geloeste Teilchen stoeren die Eisbildung. Darum gefriert Salzwasser spaeter.
+
+**Formel:** Gefrierpunktsenkung = K_f x Molalitaet x i
+
+Fuer Wasser: K_f = 1,86 Grad pro mol/kg.
+
+**Beispiel Streusalz:** 1 mol NaCl in 1 kg Wasser: 1,86 x 1 x 2 = **3,72 Grad**. Das Wasser gefriert erst bei -3,72 Grad statt 0 Grad.
+
+> **Merke:** K_f(Wasser) = 1,86. Gefrierpunktsenkung ist staerker als Siedepunkterhoehung (K_b = 0,512).
+
+{{DIAGRAM:thermodynamics}}
+
+---
+
+## Osmose und osmotischer Druck
+
+**Osmose** heisst: Wasser wandert durch eine halbdurchlaessige Membran -- immer von der duennen zur konzentrierten Seite. Die Membran laesst Wasser durch, aber nicht die geloesten Teilchen.
+
+Der **osmotische Druck** ist der Druck, den man braeuchte, um diese Wasserwanderung zu stoppen:
+
+**Formel:** pi = i x c x R x T
+
+- i = van't Hoff-Faktor
+- c = Konzentration [mol/L]
+- R = Gaskonstante
+- T = Temperatur in Kelvin
+
+> **Merke:** pi = i x c x R x T. NaCl 0,9 % und Glucose 5 % haben ungefaehr den gleichen osmotischen Druck wie Blut (isoton).
+
+---
+
+## Isoton, Hypoton, Hyperton
+
+| Loesung | Bedeutung | Was passiert mit Zellen? | Beispiel |
+|---------|-----------|-------------------------|----------|
+| **Isoton** | gleich wie Blut | Zelle bleibt normal | NaCl 0,9 % |
+| **Hypoton** | weniger Teilchen als Blut | Wasser stroemt IN die Zelle -> sie schwillt an und platzt | Reines Wasser |
+| **Hyperton** | mehr Teilchen als Blut | Wasser stroemt AUS der Zelle -> sie schrumpft | NaCl 3 % |
+
+**Kirsche im Regen:** Die Kirsche ist innen "hyperton" gegenueber dem Regenwasser. Wasser stroemt rein -> Kirsche platzt. Genau so platzen rote Blutkoerperchen in reinem Wasser (**Haemolyse**).
+
+> **Merke:** Hypoton = Zelle schwillt an (Haemolyse). Hyperton = Zelle schrumpft (Krenation). Isoton = Zelle bleibt normal.
+
+---
+
+## Alltagsbeispiele
+
+**Streusalz:** NaCl senkt den Gefrierpunkt von Wasser. CaCl₂ (i = 3) wirkt noch staerker als NaCl (i = 2).
+
+**Nudelwasser:** Salz im Kochwasser erhoeht den Siedepunkt minimal -- das ist aber so wenig, dass es beim Kochen kaum auffaellt.
+
+**Eingelegte Gurken:** Gurken in Salzlake schrumpfen, weil die Salzloesung hyperton ist und Wasser aus der Gurke zieht.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Kolligative Eigenschaften haengen von der Teilchenzahl ab (van't Hoff-Faktor i)
+- pi = i x c x R x T (osmotischer Druck)
+- Gefrierpunktserniedrigung: K_f(Wasser) = 1,86
+- Isoton/hypoton/hyperton und Zellverhalten
+- NaCl 0,9 % = isoton = ca. 308 mosmol/L
+
+**Typische Fallen:**
+- Van't Hoff-Faktor i vergessen: NaCl hat i = 2, nicht 1!
+- Hypoton = Zelle schwillt AN (nicht schrumpft!)
+- Osmolaritaet und Osmolalitaet sind aehnlich, aber nicht identisch
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kolligative Eigenschaften** haengen nur von der Teilchenzahl ab (van't Hoff-Faktor i)
+- **Gefrierpunkt sinkt:** K_f x Molalitaet x i (K_f Wasser = 1,86)
+- **Siedepunkt steigt:** K_b x Molalitaet x i (K_b Wasser = 0,512)
+- **Osmotischer Druck:** pi = i x c x R x T
+- **Isoton** (NaCl 0,9 %): Zelle OK; **hypoton**: Haemolyse; **hyperton**: Krenation
+- **Plasma-Osmolalitaet** ca. 290 mosmol/kg`,
+      contentExtended: `## Einleitung
 
 Warum platzen rote Blutkörperchen in destilliertem Wasser, schrumpfen in Salzlake, bleiben aber in physiologischer Kochsalzlösung intakt? Die Antwort liegt in den **kolligativen Eigenschaften** — Lösungseigenschaften, die nur von der **Teilchenanzahl** abhängen, nicht von der chemischen Natur des gelösten Stoffes. Osmose, Siedepunktserhöhung und Gefrierpunktserniedrigung gehören zu den wichtigsten Konzepten für das Verständnis von Infusionstherapie, Dialyse und Zellfunktion.
 
@@ -921,6 +1371,14 @@ Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat
       ],
       klinischerBezug:
         "Kolligative Eigenschaften sind in der klinischen Medizin von zentraler Bedeutung: Infusionstherapie (isotone vs. hypertone Lösungen), Dialyse (osmotischer Ausgleich), Mannitol-Therapie bei erhöhtem Hirndruck (osmotische Diurese), Kryoskopie zur Bestimmung der Urin-Osmolalität und Beurteilung der Nierenfunktion. Die osmolale Lücke (gemessen minus berechnet) ist ein Notfall-Screeningwert für Vergiftungen mit Methanol oder Ethylenglykol.",
+
+      altfrage: {
+        question:
+          "Welche Aussage zu kolligativen Eigenschaften ist FALSCH?\n\nA) Der osmotische Druck ist proportional zur Teilchenkonzentration des gelösten Stoffes.\nB) NaCl hat in Wasser einen Van't-Hoff-Faktor von i = 2, weil es in Na⁺ und Cl⁻ dissoziiert.\nC) Kolligative Eigenschaften hängen von der Art der gelösten Teilchen ab, nicht von ihrer Anzahl.\nD) Durch Zugabe eines gelösten Stoffes wird der Gefrierpunkt des Lösungsmittels erniedrigt.\nE) Physiologische Kochsalzlösung (0,9 % NaCl) ist isoton zum Blutplasma (~290 mOsmol/L).",
+        answer:
+          "Richtige Antwort: C) — diese Aussage ist falsch.\n\nKolligative Eigenschaften (Siedepunktserhöhung, Gefrierpunktserniedrigung, osmotischer Druck, Dampfdruckerniedrigung) hängen ausschließlich von der Anzahl der gelösten Teilchen ab, NICHT von deren Art. Option C kehrt diesen Zusammenhang um und ist daher falsch. NaCl (i = 2) erzeugt doppelt so viele Teilchen wie Glucose (i = 1) bei gleicher molarer Konzentration, weshalb 0,9 % NaCl und 5 % Glucose annähernd die gleiche Osmolarität haben.",
+      },
+
       diagram: "covalent-bond",
       selfTest: [
         {

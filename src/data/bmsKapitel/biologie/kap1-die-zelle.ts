@@ -28,7 +28,96 @@ export const bioKap1: Kapitel = {
       ],
       content: `## Einleitung
 
-**Worum geht es?** Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. **Warum für den MedAT relevant?** Wann gilt ein Organ als „tot“? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur, pH). **Welche Fragen werden beantwortet?** Typische BMS-Fragen: „Welche Kennzeichen des Lebens?“; „Warum sind Viren keine Lebewesen?“; „Negativ vs. positiv Rückkopplung?“; „Was ist Emergenz?“ Dieses Kapitel legt das Fundament für alle weiteren Zellthemen.
+Was unterscheidet eine lebende Zelle von einem Stein? Das ist keine dumme Frage -- die Biologie definiert Leben ueber **sieben Kennzeichen**. Erst wenn alle zusammenspielen, spricht man von einem Lebewesen. Stell dir vor, du kochst: Einzelne Zutaten sind noch kein Gericht -- erst zusammen ergibt sich etwas Neues.
+
+**In diesem Kapitel lernst du:**
+- die **sieben Kennzeichen des Lebens** und eine Eselsbruecke dazu
+- was **Homoeoostase** und **Rueckkopplung** bedeuten
+- warum **Viren** ein Grenzfall sind
+- was **Emergenz** fuer die Medizin bedeutet
+
+---
+
+## Die sieben Kennzeichen des Lebens
+
+Merke dir die Anfangsbuchstaben: **StReForWaEvoBeHo**
+
+1. **Stoffwechsel** -- Die Zelle baut Stoffe auf und ab. Der Treibstoff heisst **ATP** -- ohne ATP laeuft nichts.
+2. **Reizbarkeit** -- Lebewesen reagieren auf ihre Umwelt. Deine Hand zuckt zurueck, wenn du eine heisse Herdplatte beruehrst.
+3. **Fortpflanzung** -- Gene werden weitergegeben, sexuell oder asexuell.
+4. **Wachstum** -- Aus einer befruchteten Eizelle entstehen ueber 200 verschiedene Zelltypen.
+5. **Evolution** -- Ueber Generationen passen sich Lebewesen an. Deshalb werden manche Bakterien antibiotikaresistent.
+6. **Bewegung** -- Von der Muskelkontraktion bis zum Transport innerhalb der Zelle.
+7. **Homoeoostase** -- Der Koerper haelt innere Werte (Blutzucker, Temperatur, pH) stabil. Das wichtigste Kennzeichen fuer die Medizin.
+
+> **Merke:** **StReForWaEvoBeHo**: Stoffwechsel -- Reizbarkeit -- Fortpflanzung -- Wachstum -- Evolution -- Bewegung -- Homoeoostase
+
+{{DIAGRAM:animal-cell}}
+
+---
+
+## Homoeoostase und Rueckkopplung
+
+Dein Koerper funktioniert wie eine Heizung mit Thermostat: Wird es zu kalt, springt die Heizung an. Wird es zu warm, schaltet sie ab. Das ist **negative Rueckkopplung** -- der Effekt wirkt dem Ausloser entgegen.
+
+Beispiel Blutzucker: Blutzucker zu hoch, Insulin wird ausgeschuettet, Blutzucker sinkt. Einfach.
+
+**Positive Rueckkopplung** ist das Gegenteil: Der Effekt verstaerkt den Reiz. Beispiele: Blutgerinnung (immer mehr Thrombin), Wehen (immer staerkere Kontraktionen) und das Aktionspotential (immer mehr Natriumkanaele oeffnen).
+
+**Klinisch:** Bei Diabetes Typ 2 versagt der Blutzucker-Regelkreis -- das ist eine klassische Homoeoostasestoerung.
+
+> **Merke:** Negative Rueckkopplung = stabilisiert (Homoeoostase). Positive Rueckkopplung = verstaerkt (Blutgerinnung, Wehen, Aktionspotential).
+
+---
+
+## Viren -- ein Grenzfall
+
+Viren koennen sich vermehren und evolvieren -- aber sie haben keinen eigenen Stoffwechsel und keine Zellstruktur. Deshalb sind sie kein echtes Lebewesen, sondern ein **Grenzfall**. Ausserhalb einer Wirtszelle sind Viren komplett inaktiv. Stell dir vor, eine Virus-Partikel ist wie eine USB-Stick: Sie enthaelt Information, kann aber allein nichts tun -- sie braucht einen Computer (die Wirtszelle).
+
+Deshalb wirken **Antibiotika nicht gegen Viren** -- Antibiotika greifen Bakterienstrukturen an, die Viren gar nicht haben.
+
+> **Merke:** Viren: Fortpflanzung und Evolution ja, aber kein Stoffwechsel und keine Zellstruktur. Kein Ansprechen auf Antibiotika.
+
+---
+
+## Emergenz und hierarchische Organisation
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+Keine einzelne Nervenzelle kann denken -- aber Milliarden vernetzte Neuronen bilden ein Gehirn, das denken kann. Das nennt man **Emergenz**: Auf hoeherer Ebene entstehen neue Eigenschaften, die die Einzelteile nicht haben.
+
+Die Hierarchie: **Atom, Molekuel, Organell, Zelle, Gewebe, Organ, Organsystem, Organismus**
+
+Fuer die Medizin heisst das: Krankheiten koennen auf jeder Ebene entstehen -- von der Genmutation (Krebs) bis zum Systemversagen (Sepsis).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Sieben Kennzeichen: StReForWaEvoBeHo
+- Negative Rueckkopplung haelt Homoeoostase aufrecht
+- Viren: kein Stoffwechsel, keine Zellstruktur, keine Antibiotika
+
+**Typische Fallen:**
+- Negative Rueckkopplung ist nicht “schlecht” -- sie ist der Normalfall
+- Kristallisation ist KEIN biologisches Wachstum (haeufiger Distraktor)
+- Homoeoostase-Werte: Blutzucker 4--6 mmol/L; Temperatur 36,5--37,5 Grad C; Blut-pH 7,35--7,45
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Sieben Kennzeichen** (StReForWaEvoBeHo): Erst ihre Kombination definiert Leben
+- **Homoeoostase** = innere Gleichgewichte durch **negative Rueckkopplung** stabil halten
+- **Positive Rueckkopplung** verstaerkt: Blutgerinnung, Wehen, Aktionspotential
+- **Viren = Grenzfall**: Fortpflanzung + Evolution ja, Stoffwechsel + Zellstruktur nein
+- **Emergenz**: Neue Eigenschaften auf hoeherer Ebene (Gehirn denkt, Nervenzelle nicht)
+- **Hierarchie**: Atom, Molekuel, Organell, Zelle, Gewebe, Organ, Organismus
+- **Klinisch**: Diabetes Typ 2 = Homoeoostasestoerung`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** Was unterscheidet eine lebende Zelle von einem Stein? Was macht einen Virus zum Grenzfall? Die Biologie definiert Leben über **sieben Kennzeichen** — erst ihr Zusammenspiel kennzeichnet ein lebendes System. **Warum für den MedAT relevant?** Wann gilt ein Organ als „tot”? Warum wirken Antibiotika nicht gegen Viren? Warum entstehen Krankheiten wie Krebs auf Systemebene? Das Herzstück ist die **Homöostase** (aktive Aufrechterhaltung innerer Gleichgewichte wie Blutzucker, Temperatur, pH). **Welche Fragen werden beantwortet?** Typische BMS-Fragen: „Welche Kennzeichen des Lebens?”; „Warum sind Viren keine Lebewesen?”; „Negativ vs. positiv Rückkopplung?”; „Was ist Emergenz?” Dieses Kapitel legt das Fundament für alle weiteren Zellthemen.
 
 **In diesem Kapitel lernst du:**
 - die **sieben Kennzeichen des Lebens** (StReForWaEvoBeHo) und warum kein einzelnes allein reicht
@@ -79,7 +168,7 @@ Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertempera
 - Schilddrüsenachse: T3/T4 ↑ → TSH ↓ (hypothalamo-hypophysäre Hemmung)
 - Blutdruck: Druck ↑ → Barorezeptoren → Parasympathikus → Herzfrequenz ↓
 
-**Positive Rückkopplung** bedeutet: Der Effekt **verstärkt** den ursprünglichen Reiz — sinnvoll für schnelle "Alles-oder-Nichts"-Reaktionen:
+**Positive Rückkopplung** bedeutet: Der Effekt **verstärkt** den ursprünglichen Reiz — sinnvoll für schnelle “Alles-oder-Nichts”-Reaktionen:
 - **Blutgerinnung**: Thrombin bildet → aktiviert mehr Thrombin
 - **Wehen**: Oxytocin → Kontraktion → mehr Oxytocin → stärkere Kontraktion
 - **Aktionspotential**: Na⁺-Einstrom → Depolarisation → mehr Na⁺-Kanäle öffnen
@@ -124,7 +213,7 @@ Leben ist hierarchisch aufgebaut — auf jeder Ebene entstehen neue Eigenschafte
 
 **Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus**
 
-Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): Das Ganze ist mehr als die Summe seiner Teile — die neuen Eigenschaften „kommen hervor“, wenn man die nächsthöhere Ebene betrachtet.
+Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): Das Ganze ist mehr als die Summe seiner Teile — die neuen Eigenschaften „kommen hervor”, wenn man die nächsthöhere Ebene betrachtet.
 - Keine einzelne Nervenzelle denkt — aber das Gehirn (Milliarden vernetzte Neuronen) denkt
 - Kein einzelner Herzmuskel pumpt Blut — aber das Herzorgan pumpt
 - Keine einzelne Immunzelle schützt vollständig — aber das Immunsystem schützt
@@ -306,7 +395,111 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       ],
       content: `## Einleitung
 
-**Worum geht es?** Welche **Baupläne** haben Lebewesen? **Prokaryoten** (Bakterien, Archäen) haben keinen membranumschlossenen Zellkern, **Eukaryoten** (Pflanzen, Tiere, Pilze, unsere Zellen) schon — daraus folgen Gram-Färbung, 70S- vs. 80S-Ribosomen und die gezielte Wirkung von Antibiotika. **Warum für den MedAT relevant?** Penicillin und Chloramphenicol wirken über bakterielle Strukturen (Peptidoglykan, 70S-Ribosomen); Endosymbiontentheorie und Archäen werden häufig geprüft. **Welche Fragen werden beantwortet?** „Was unterscheidet Prokaryoten von Eukaryoten?“; „Gram-positiv vs. Gram-negativ?“; „Welche Ribosomengröße?“; „Welche Belege für Endosymbiontentheorie?“; „Warum wirkt Penicillin nicht gegen Archäen?“ Mit diesem Kapitel kannst du alle typischen BMS-Fragen zu Prokaryoten/Eukaryoten und Antibiotika sicher beantworten.
+Stell dir vor, du vergleichst eine WG-Wohnung mit einem Einzimmerapartment. Die **Eukaryoten** (unsere Zellen, Tiere, Pflanzen, Pilze) haben separate Zimmer fuer verschiedene Aufgaben -- das nennt man Kompartimentierung. **Prokaryoten** (Bakterien, Archaeen) leben dagegen in einem offenen Raum ohne Tueren. Der wichtigste Unterschied: Prokaryoten haben **keinen Zellkern**.
+
+**In diesem Kapitel lernst du:**
+- den **Grundunterschied** Prokaryot vs. Eukaryot und warum Antibiotika gezielt wirken
+- **Gram-Faerbung** und warum sie fuer die Antibiotikawahl wichtig ist
+- **70S vs. 80S Ribosomen** und Antibiotika-Zielstrukturen
+- die **Endosymbiontentheorie** (5 Belege) und **Archaeen** als dritte Domaene
+
+---
+
+## Grundstruktur im Vergleich
+
+| Merkmal | Prokaryoten | Eukaryoten |
+|---|---|---|
+| Zellkern | Kein Kern (Nukleoid) | Membranumschlossener Kern |
+| DNA | Zirkulaer, keine Histone | Linear, Histone |
+| Ribosomen | **70S** (30S + 50S) | **80S** (40S + 60S) |
+| Organellen | Keine (kein Mito, ER, Golgi) | Mitochondrien, ER, Golgi |
+| Zellwand | Peptidoglykan (Bakterien) | Keine (Tiere); Cellulose (Pflanzen) |
+| Zellteilung | Binaere Fission | Mitose / Meiose |
+| Groesse | 0,5--5 Mikrometer | 10--100 Mikrometer |
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+{{DIAGRAM:animal-cell}}
+
+> **Merke:** Pro = kein Kern. Prokaryoten = Nukleoid, 70S, binaere Fission. Eukaryoten = echter Kern, 80S, Mitose.
+
+---
+
+## Zellwand und Gram-Faerbung
+
+Bakterien haben eine Zellwand aus **Peptidoglykan** -- menschliche Zellen nicht. Deshalb kann Penicillin gezielt Bakterien angreifen, ohne uns zu schaden. Wie ein Schluessel, der nur in ein bestimmtes Schloss passt.
+
+Mit der **Gram-Faerbung** unterscheidet man Bakterien schnell in zwei Gruppen:
+
+- **Gram-positiv (violett):** Dicke Peptidoglykanschicht aussen. Gut fuer Penicillin erreichbar. Beispiele: Staphylokokken, Streptokokken.
+- **Gram-negativ (rosa):** Duenne Peptidoglykanschicht plus eine aeussere Membran mit **LPS**. LPS kann bei einer Blutvergiftung septischen Schock ausloesen. Beispiele: E. coli, Salmonellen.
+
+> **Merke:** Gram-positiv (violett) = dicke Peptidoglykanschicht. Gram-negativ (rosa) = duenn + LPS-Aussenmembran. LPS kann septischen Schock ausloesen!
+
+---
+
+## Ribosomen 70S vs. 80S
+
+Bakterien haben **70S-Ribosomen** (30S + 50S), unsere Zellen **80S** (40S + 60S). Viele Antibiotika greifen gezielt die 70S-Ribosomen an und stoeren die bakterielle Proteinsynthese, ohne unsere 80S-Ribosomen zu treffen.
+
+**Wichtige Ausnahme:** Mitochondrien haben ebenfalls **70S-Ribosomen** (weil sie von Bakterien abstammen). Deshalb kann Chloramphenicol in hohen Dosen auch unsere Mitochondrien schaedigen.
+
+> **Merke:** 70S (Prokaryoten) vs. 80S (Eukaryoten) = Antibiotika-Selektivitaet. Cave: Mitochondrien haben 70S!
+
+---
+
+## Endosymbiontentheorie
+
+Woher kommen unsere Mitochondrien? Die Theorie: Vor ca. 2 Milliarden Jahren hat eine Urzelle ein Bakterium aufgenommen -- nicht verdaut, sondern behalten. Aus diesem Bakterium wurden die Mitochondrien. 5 Belege stuetzen das:
+
+1. Eigene **zirkulaere DNA** (wie Bakterien)
+2. **70S-Ribosomen** (bakteriell)
+3. **Doppelmembran** (innere = ehemalige Bakterienmembran)
+4. Teilung durch **binaere Fission** (nicht Mitose)
+5. **Antibiotika-Empfindlichkeit** (Chloramphenicol)
+
+Die mtDNA wird uebrigens **nur von der Mutter** vererbt (maternale Vererbung).
+
+> **Merke:** 5 Belege: zirkulaere DNA, 70S-Ribosomen, Doppelmembran, binaere Fission, Antibiotika-Empfindlichkeit.
+
+---
+
+## Archaeen -- die dritte Domaene
+
+Neben Bakterien gibt es noch die **Archaeen**. Sie sehen aehnlich aus wie Bakterien (auch Prokaryoten), sind aber biochemisch voellig anders. Wichtigstes Detail fuer die Pruefung: Archaeen haben **kein Peptidoglykan** und sind daher **Penicillin-resistent**.
+
+Das Leben hat drei Domaenen: Bacteria, Archaea, Eukarya.
+
+> **Merke:** Archaeen = Prokaryoten ohne Peptidoglykan. Penicillin-resistent. Dritte Domaene.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Grundunterschied: Prokaryoten = kein Kern, 70S; Eukaryoten = Kern, 80S
+- Gram-Faerbung: positiv = violett = dick; negativ = rosa = LPS
+- Endosymbiontentheorie: 5 Belege merken
+
+**Typische Fallen:**
+- Prokaryoten haben Ribosomen (70S) -- nur keinen Zellkern
+- Archaeen sind Prokaryoten, aber KEINE Bakterien (eigene Domaene)
+- Gram-negativ heisst NICHT “keine Zellwand” -- sie ist nur duenn + LPS aussen
+- Mitochondrien haben 70S -- deshalb Chloramphenicol-Toxizitaet moeglich
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Prokaryoten** = kein Kern, 70S-Ribosomen, binaere Fission
+- **Eukaryoten** = Kern, 80S-Ribosomen, Mitose
+- **Gram-positiv** (violett) = dicke Peptidoglykanschicht; **Gram-negativ** (rosa) = duenn + LPS
+- **Antibiotika** greifen 70S-Ribosomen an -- 80S bleibt verschont
+- **Endosymbiontentheorie**: 5 Belege (zirkulaere DNA, 70S, Doppelmembran, binaere Fission, Antibiotika)
+- **Archaeen**: dritte Domaene, kein Peptidoglykan, Penicillin-resistent`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** Welche **Baupläne** haben Lebewesen? **Prokaryoten** (Bakterien, Archäen) haben keinen membranumschlossenen Zellkern, **Eukaryoten** (Pflanzen, Tiere, Pilze, unsere Zellen) schon — daraus folgen Gram-Färbung, 70S- vs. 80S-Ribosomen und die gezielte Wirkung von Antibiotika. **Warum für den MedAT relevant?** Penicillin und Chloramphenicol wirken über bakterielle Strukturen (Peptidoglykan, 70S-Ribosomen); Endosymbiontentheorie und Archäen werden häufig geprüft. **Welche Fragen werden beantwortet?** „Was unterscheidet Prokaryoten von Eukaryoten?”; „Gram-positiv vs. Gram-negativ?”; „Welche Ribosomengröße?”; „Welche Belege für Endosymbiontentheorie?”; „Warum wirkt Penicillin nicht gegen Archäen?” Mit diesem Kapitel kannst du alle typischen BMS-Fragen zu Prokaryoten/Eukaryoten und Antibiotika sicher beantworten.
 
 **In diesem Kapitel lernst du:**
 - den **Grundunterschied** Prokaryot vs. Eukaryot (Kern, Ribosomen, Zellteilung) und warum Antibiotika gezielt wirken können

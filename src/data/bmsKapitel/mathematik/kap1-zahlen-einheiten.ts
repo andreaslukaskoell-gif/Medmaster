@@ -27,6 +27,148 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
+Von der winzigen Ameise bis zur riesigen Entfernung Erde--Sonne -- ueberall begegnen dir extrem grosse und extrem kleine Zahlen. Statt 1.000.000 auszuschreiben, schreibst du einfach 10⁶. **Zehnerpotenzen** sind das Werkzeug, um mit solchen Zahlen sicher und schnell zu rechnen.
+
+**In diesem Kapitel lernst du:**
+- wie du grosse und kleine Zahlen als Zehnerpotenzen schreibst
+- die vier Rechenregeln fuer Zehnerpotenzen (Exponenten addieren, subtrahieren, multiplizieren, halbieren)
+- wie du Ausdruecke mit Vorfaktor und Zehnerpotenz in normalisierte Form bringst
+- wie du durch Exponenten-Subtraktion schnell Verhaeltnisse abschaetzt
+- welche typischen Denkfallen bei Zehnerpotenzen lauern
+
+---
+
+{{DIAGRAM:exponential-function}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Grunddefinition und positive Exponenten
+
+Eine **Zehnerpotenz** 10ⁿ bedeutet: die Zahl 10 wird **n-mal** mit sich selbst multipliziert. Die Zahl **n** heisst **Exponent** (Hochzahl).
+
+| Schreibweise | Bedeutung | Dezimal |
+|--------------|------------|---------|
+| 10¹ | 10 | 10 |
+| 10² | 10 × 10 | 100 |
+| 10³ | 10 × 10 × 10 | 1.000 |
+| 10⁶ | 10 × … × 10 (6-mal) | 1.000.000 |
+
+**Eselsbruecke:** Bei **positivem** Exponenten gibt **n** die Anzahl der **Nullen hinter der 1** an. Bei 10⁶ stehen sechs Nullen.
+
+> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** bestimmt die **Groessenordnung** der Zahl.
+
+---
+
+## Negative Exponenten und 10⁰
+
+Positive Exponenten beschreiben grosse Zahlen. Fuer Zahlen **kleiner als 1** brauchst du **negative Exponenten**: **10⁻ⁿ = 1 / 10ⁿ**.
+
+| Schreibweise | Bedeutung | Dezimal |
+|--------------|------------|---------|
+| 10⁻¹ | 1/10 | 0,1 |
+| 10⁻² | 1/100 | 0,01 |
+| 10⁻³ | 1/1.000 | 0,001 |
+
+**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) — nicht verwechseln mit −10³ (= −1.000)!
+
+**Sonderfall:** 10⁰ = 1. Jede Zahl (ausser 0) hoch null ergibt 1.
+
+> **Merke:** **10⁻ⁿ = 1/10ⁿ** — negativer Exponent = Kehrbruch, Ergebnis ist **positiv** und kleiner als 1. **10⁰ = 1**.
+
+## Die vier Rechenregeln
+
+| Operation | Regel | Beispiel |
+|-----------|-------|----------|
+| **Multiplikation** | 10ᵃ × 10ᵇ = 10^(a+b) | 10³ × 10⁴ = 10⁷ |
+| **Division** | 10ᵃ / 10ᵇ = 10^(a−b) | 10⁶ / 10² = 10⁴ |
+| **Potenzieren** | (10ᵃ)ᵇ = 10^(a×b) | (10³)² = 10⁶ |
+| **Wurzel** | √(10ⁿ) = 10^(n/2) | √(10⁶) = 10³ |
+
+> **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren.
+
+---
+
+## Rechnen mit Vorfaktor
+
+In der Praxis stehen oft Ausdruecke wie **3 × 10⁴**. Um solche Produkte zu berechnen:
+
+1. **Vorfaktoren** normal multiplizieren (z. B. 3 × 4 = 12).
+2. **Exponenten** addieren (z. B. 10⁴ × 10⁻² = 10²).
+3. **Normalisieren**, falls der Vorfaktor ≥ 10 oder < 1 ist: 12 × 10² = **1,2 × 10³**.
+
+**Beispiel:** (3 × 10⁴) × (4 × 10⁻²) = 12 × 10² = **1,2 × 10³**.
+
+> **Merke:** Zuerst **Vorfaktoren** verrechnen, dann **Exponenten** addieren. Am Ende **normalisieren** (Vorfaktor zwischen 1 und 10).
+
+## Groessenordnungen vergleichen
+
+Ein grosser Vorteil der Zehnerpotenzen: du kannst **schnell vergleichen**, wie viel groesser A als B ist. Dafuer subtrahierst du die Exponenten.
+
+- Beispiel: 10⁻³ / 10⁻⁶ = 10³ → A ist **1.000-mal** groesser als B.
+
+| Objekt | Groessenordnung |
+|--------|----------------|
+| Sandkorn | 10⁻³ m (1 mm) |
+| Ameise | 10⁻² m (1 cm) |
+| Mensch | 10⁰ m (1 m) |
+| Berg | 10³ m (1 km) |
+
+> **Merke:** **Verhaeltnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. Exponentendifferenz abschaetzen — nicht lange ausrechnen!
+
+---
+
+## Fehlerquellen
+
+| Fallstrick | Falsch | Richtig |
+|------------|--------|---------|
+| Negativer Exponent ≠ negative Zahl | 10⁻³ = „−1000” | 10⁻³ = 0,001 (positiv!) |
+| Addition: nicht Exponenten addieren | 3×10³ + 2×10² = 5×10⁵ | Erst angleichen: 3×10³ + 0,2×10³ = 3,2×10³ |
+| Multiplikation: Exponenten addieren! | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
+
+> **Merke:** 10⁻³ ≠ −10³. Bei **Addition** zuerst auf **gleichen Exponenten** bringen. Bei **Multiplikation** Exponenten **addieren**, nicht multiplizieren.
+
+---
+
+## Rechenbeispiele
+
+**Aufgabe 1:** Ein Schulbus legt 30 km zurueck. Wie viele Meter sind das in Zehnerpotenzen?
+Loesung: 30 km = 30 × 10³ m = 3 × 10⁴ m.
+
+**Aufgabe 2:** Ein Apfel wiegt 200 g = 2 × 10² g. Eine Kiste hat 50 Aepfel. Gesamtgewicht?
+Loesung: 50 × (2 × 10²) = 100 × 10² = 1 × 10⁴ g = 10 kg.
+
+**Aufgabe 3:** Ein Sandkorn misst 10⁻³ m, ein Fussballfeld 10² m. Verhaeltnis?
+Loesung: 10² / 10⁻³ = 10⁵ = 100.000-mal groesser.
+
+> **Merke:** Die Kernkompetenz bei Zehnerpotenzen ist das schnelle Abschaetzen von Verhaeltnissen durch Exponenten-Subtraktion.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Dezimal ↔ Zehnerpotenz umrechnen (z. B. 10⁻⁶ = ?, 0,001 = ?)
+- Rechenaufgaben: 10³ × 10⁻⁵, 10⁶ / 10², (10²)³
+- Verhaeltnis: „Wie oft groesser?” → Exponentendifferenz
+- Vorfaktor × Zehnerpotenz berechnen und normalisieren
+
+**Typische Fallen:**
+- 10⁻³ ≠ −10³ — negativer Exponent ergibt positive Zahl
+- 10ᵃ × 10ᵇ: Exponenten **addieren**, nicht multiplizieren
+- Bei Addition erst auf gleichen Exponenten bringen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Zehnerpotenzen:** 10ⁿ (n positiv) = 1 mit n Nullen; 10⁻ⁿ = 1/10ⁿ; 10⁰ = 1
+- **Multiplikation:** Exponenten addieren; **Division:** subtrahieren; **Potenzieren:** multiplizieren; **Wurzel:** halbieren
+- **Vorfaktor:** (a×10ᵐ)×(b×10ⁿ) = (a×b)×10^(m+n); danach normalisieren
+- **Verhaeltnisse:** Exponentendifferenz = Faktor
+- **Addition:** erst gleiche Exponenten, dann Vorfaktoren addieren
+- **Typische Fehler:** 10⁻³ ≠ −10³; bei Multiplikation Exponenten addieren`,
+      contentExtended: `## Einleitung
+
 Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) -- in der Medizin begegnest du staendig extrem grossen und extrem kleinen Zahlen. Ein Erythrozyt misst 8 Mikrometer, ein Virus gerade einmal 100 Nanometer, und die Glukose im Blut liegt bei 5 Millimol pro Liter. **Zehnerpotenzen** sind das Werkzeug, um mit diesen Groessenordnungen sicher zu rechnen -- ob bei Dosierungen, Laborwerten oder Einheitenumrechnungen.
 
 **In diesem Kapitel lernst du:**
@@ -38,13 +180,13 @@ Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) --
 
 ---
 
-{{DIAGRAM:percent-fractions}}
+{{DIAGRAM:exponential-function}}
 
 {{DIAGRAM:coordinate-system}}
 
 ## Grunddefinition und positive Exponenten
 
-**Idee:** Zehnerpotenzen 10ⁿ fassen „Größenordnungen“ in einer Zahl zusammen: Statt 1.000.000 zu schreiben, schreibst du 10⁶. So lassen sich sehr große und sehr kleine Werte (Labor, Dosierung, Zellgrößen) einheitlich darstellen und **mit Rechenregeln** schnell vergleichen. Der **Exponent** n sagt dir: Wie viele Nullen hinter der 1 (positiv) bzw. wie viele Dezimalstellen bis zur 1 (negativ).
+**Idee:** Zehnerpotenzen 10ⁿ fassen „Größenordnungen" in einer Zahl zusammen: Statt 1.000.000 zu schreiben, schreibst du 10⁶. So lassen sich sehr große und sehr kleine Werte (Labor, Dosierung, Zellgrößen) einheitlich darstellen und **mit Rechenregeln** schnell vergleichen. Der **Exponent** n sagt dir: Wie viele Nullen hinter der 1 (positiv) bzw. wie viele Dezimalstellen bis zur 1 (negativ).
 
 **Verfahren:** 10ⁿ (n positiv) = 1 mit **n Nullen** dahinter. Tabelle auswendig können: 10¹=10, 10²=100, 10³=1.000, 10⁶=1.000.000. Umrechnung Dezimal → Zehnerpotenz: Zähle die Nullen bzw. Kommastellen; das ist der Exponent. Umrechnung Zehnerpotenz → Dezimal: Schreibe 1 und setze n Nullen (positiv) oder n Nachkommastellen mit einer 1 (negativ).
 
@@ -60,9 +202,9 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 **Eselsbrücke:** Bei **positivem** Exponenten gibt **n** an, wie viele **Nullen hinter der 1** stehen. Bei 10¹² stehen zwölf Nullen. Im Blut zirkulieren beim Erwachsenen ca. **5 × 10¹²** rote Blutkörperchen pro Liter — eine Zahl, die man nur mit Zehnerpotenzen handhabbar macht.
 
-> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn“) der Zahl.
+> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn") der Zahl.
 
-**Typische Prüfungsfehler:** 10⁻ⁿ mit „negativer Zahl“ verwechseln (10⁻³ ist 0,001, nicht −1000). Bei Multiplikation fälschlich Exponenten multiplizieren statt addieren. Bei Addition Vorfaktoren addieren, ohne vorher auf gleichen Exponenten zu bringen. Siehe dazu ausführlich den Abschnitt „Fehlerquellen und häufige Missverständnisse“ unten.
+**Typische Prüfungsfehler:** 10⁻ⁿ mit „negativer Zahl" verwechseln (10⁻³ ist 0,001, nicht −1000). Bei Multiplikation fälschlich Exponenten multiplizieren statt addieren. Bei Addition Vorfaktoren addieren, ohne vorher auf gleichen Exponenten zu bringen. Siehe dazu ausführlich den Abschnitt „Fehlerquellen und häufige Missverständnisse" unten.
 
 ---
 
@@ -107,7 +249,7 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 ## Multiplikation von Zahlen in Zehnerpotenzen-Form
 
-**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „×“) × eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
+**Bisher haben wir gesehen:** Reine Zehnerpotenzen 10ᵃ × 10ᵇ. **In der Praxis** stehen oft Ausdrücke wie **3 × 10⁴** oder **1,4 × 10⁻¹** — hier ist die Zahl in **Zehnerpotenzen-Form** geschrieben: ein **Vorfaktor** (die Zahl vor dem „×") × eine Zehnerpotenz. **Um solche Produkte zu berechnen,** gehst du in zwei Schritten vor.
 
 Wenn Ausdrücke der Form **(a × 10ᵐ) × (b × 10ⁿ)** multipliziert werden:
 
@@ -150,7 +292,7 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
 
 | Fallstrick | Falsch | Richtig |
 |------------|--------|---------|
-| **1** Negativer Exponent ≠ negative Zahl | 10⁻³ = „−1000“ | 10⁻³ = 0,001 (positiv!) |
+| **1** Negativer Exponent ≠ negative Zahl | 10⁻³ = „−1000" | 10⁻³ = 0,001 (positiv!) |
 | **2** Addition: Exponenten nicht addieren | 3×10³ + 2×10² = 5×10⁵ | Erst auf gleichen Exponenten: 3×10³ + 0,2×10³ = 3,2×10³ |
 | **3** Multiplikation: Exponenten addieren, nicht multiplizieren | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
 
@@ -191,9 +333,9 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Typische Aufgabentypen:**
-- Dezimal ↔ Zehnerpotenz umrechnen (z. B. 10⁻⁶ = ?, 0,001 = ?)
+- Dezimal ↔ Zehnerpotenz umrechnen (z. B. 10⁻⁶ = ?, 0,001 = ?)
 - Rechenaufgaben: 10³ × 10⁻⁵, 10⁶ / 10², (10²)³ — nur Potenzgesetze anwenden
-- Verhältnis/Konzentration: „Wie oft konzentrierter?“ → Exponentendifferenz
+- Verhältnis/Konzentration: „Wie oft konzentrierter?" → Exponentendifferenz
 - Vorfaktor × Zehnerpotenz: (a×10ᵐ)×(b×10ⁿ) berechnen und normalisieren
 - Größenordnungen vergleichen (Virus vs. Zelle vs. Mensch)
 
@@ -206,7 +348,7 @@ Zur **schnellen Wiederholung** die vier Regeln im Überblick:
 **Minimal-Rechenrezepte:**
 - **Multiplikation:** 10ᵃ × 10ᵇ = 10^(a+b). Vorfaktoren getrennt multiplizieren, dann Exponenten addieren, ggf. normalisieren (Vorfaktor 1 bis <10).
 - **Division:** 10ᵃ / 10ᵇ = 10^(a−b). Verhältnis = eine Zehnerpotenz mit Exponent = Differenz.
-- **Verhältnis „wie oft?“:** Exponent von A minus Exponent von B → 10^(A−B) = Faktor.
+- **Verhältnis „wie oft?":** Exponent von A minus Exponent von B → 10^(A−B) = Faktor.
 - **Normalisierung:** Vorfaktor ≥10 → eine Zehnerpotenz nach rechts (Exponent +1); Vorfaktor <1 → nach links (Exponent −1).
 
 ---
@@ -422,24 +564,117 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
       ],
       content: `## Einleitung
 
-Eine Tablette enthaelt 500 mg Wirkstoff, ein Laborwert zeigt 4,2 µmol/L, das mittlere Erythrozytenvolumen betraegt 90 fL -- ueberall stecken **SI-Praefixe** wie Milli, Mikro und Femto. Sie stehen fuer feste Zehnerpotenzen und machen extrem grosse oder kleine Zahlen handhabbar. Wer Mikro und Milli verwechselt, liegt um den Faktor 1.000 daneben -- bei einer Dosierung kann das lebensgefaehrlich sein.
+Ein Kilogramm Mehl, ein Millimeter auf dem Lineal, ein Kilometer Schulweg -- ueberall stecken **SI-Praefixe** wie Kilo, Milli und Mikro. Sie stehen fuer feste Zehnerpotenzen und machen extrem grosse oder kleine Zahlen handhabbar. Wer Mikro und Milli verwechselt, liegt um den Faktor 1.000 daneben!
 
 **In diesem Kapitel lernst du:**
-- wie die SI-Praefixe in Dreierschritten aufgebaut sind und warum jede Stufe dem Faktor 1.000 entspricht
-- welche Praefixe in der Medizin staendig vorkommen und wie du sie sicher den richtigen Zehnerpotenzen zuordnest
-- wie du zwischen Praefixen umrechnest -- mit der einfachen Regel “wer kleiner misst, zaehlt mehr”
-- warum die Verwechslung von µg und mg einer der gefaehrlichsten Dosierungsfehler ist
-- wie du typische MedAT-Umrechnungsaufgaben (mmol/L in µmol/L, mg in µg) fehlerfrei loest
+- wie die SI-Praefixe in Dreierschritten aufgebaut sind (jede Stufe = Faktor 1.000)
+- welche Praefixe am haeufigsten vorkommen und welche Zehnerpotenz dahintersteckt
+- wie du zwischen Praefixen umrechnest -- mit der Regel “wer kleiner misst, zaehlt mehr”
+- wie du typische Umrechnungsaufgaben (mm in m, mg in g, km in m) sicher loest
 
 ---
 
+{{DIAGRAM:exponential-function}}
+
 {{DIAGRAM:percent-fractions}}
 
-{{DIAGRAM:coordinate-system}}
+## Die Systematik der SI-Praefixe
 
-**Idee:** SI-Präfixe sind feste Zehnerpotenzen (10³ pro Stufe) vor der Basiseinheit — sie machen sehr große oder sehr kleine Zahlen handhabbar (mg, µg, nm, fL). **Warum für den MedAT:** Dosierungen, Laborwerte und Einheitenumrechnungen verlangen sichere Zuordnung Präfix ↔ Faktor und die richtige **Richtung** beim Umrechnen (kleinere Einheit → größere Zahl).
+**SI-Praefixe** sind feste Abkuerzungen fuer Zehnerpotenzen. Sie werden **vor** eine Einheit gesetzt (Meter, Gramm, Liter usw.). Die Praefixe sind in **Dreierschritten** angeordnet -- jede Stufe ist **Faktor 1.000**.
 
-**Verfahren — Umrechnung zwischen Präfixen (Schrittfolge):**
+| Richtung | Praefixe | Zehnerpotenz |
+|----------|----------|--------------|
+| **Klein** | Femto (f) → Piko (p) → Nano (n) → Mikro (µ) → Milli (m) | 10⁻¹⁵ → 10⁻¹² → 10⁻⁹ → 10⁻⁶ → 10⁻³ |
+| **Basis** | (kein Praefix) | 10⁰ |
+| **Gross** | Kilo (k) → Mega (M) → Giga (G) → Tera (T) | 10³ → 10⁶ → 10⁹ → 10¹² |
+
+> **Merke:** **Dreierschritte:** Jede Praefix-Stufe = Faktor **1.000** (10³). Klein→gross: f → p → n → µ → m → [Basis] → k → M → G → T.
+
+## Die wichtigsten Praefixe
+
+### Milli (m) -- 10⁻³
+
+**Milli** = ein **Tausendstel**. Beispiele aus dem Alltag:
+- **Millimeter (mm):** 1 mm = 0,001 m (Dicke einer Muenze)
+- **Milligramm (mg):** 1 mg = 0,001 g (Menge Salz auf einer Messerspitze)
+- **Milliliter (mL):** 1 mL = 0,001 L (ein Tropfen Wasser ist ca. 0,05 mL)
+
+> **Merke:** **Milli (m) = 10⁻³** = ein Tausendstel der Basiseinheit.
+
+### Mikro (µ) -- 10⁻⁶
+
+**Mikro** = ein **Millionstel**. Beispiel: Ein Haar ist ca. 70 µm dick. 1 µm = 0,001 mm.
+
+**Wichtig:** 1 mg = 1.000 µg. Milli und Mikro nicht verwechseln -- Faktor 1.000 Unterschied!
+
+> **Merke:** µ ≠ m! 1 mg = 1.000 µg. Mikro (µ) = 10⁻⁶, Milli (m) = 10⁻³.
+
+### Nano (n) -- 10⁻⁹ und kleiner
+
+**Nano** = ein Milliardstel. Viren messen ca. 100 nm. **Piko (p)** = 10⁻¹², **Femto (f)** = 10⁻¹⁵.
+
+### Kilo (k), Mega (M) und darueber
+
+- **Kilo (k) = 10³:** 1 km = 1.000 m; 1 kg = 1.000 g
+- **Mega (M) = 10⁶:** 1 Megabyte = 1.000.000 Byte
+- **Giga (G) = 10⁹; Tera (T) = 10¹²**
+
+> **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Grossbuchstabe!).
+
+---
+
+## Umrechnung zwischen Praefixen
+
+Die wichtigste Regel: Kleinere Einheit → **groessere Zahl**; groessere Einheit → **kleinere Zahl**.
+
+**Schrittfolge:**
+1. Ausgangseinheit als Zehnerpotenz schreiben (z. B. 1 km = 10³ m)
+2. Zieleinheit als Zehnerpotenz schreiben (z. B. 1 m = 10⁰ m)
+3. Verhaeltnis bilden: 10³/10⁰ = 10³ → 1 km = 1.000 m
+
+**Beispiele:**
+- 2,5 kg = 2.500 g (× 1.000)
+- 500 mg = 0,5 g (÷ 1.000)
+- 3 km = 3.000 m (× 1.000)
+
+> **Merke:** **Kleinere Einheit → groessere Zahl; groessere Einheit → kleinere Zahl.** Eselsbruecke: “Wer kleiner misst, zaehlt mehr.”
+
+---
+
+## Umrechnungstabelle
+
+| Von → Nach | Faktor | Beispiel |
+|------------|--------|----------|
+| km → m | × 1.000 | 2 km = 2.000 m |
+| m → mm | × 1.000 | 1,5 m = 1.500 mm |
+| kg → g | × 1.000 | 0,5 kg = 500 g |
+| g → mg | × 1.000 | 0,5 g = 500 mg |
+| mg → µg | × 1.000 | 0,1 mg = 100 µg |
+| L → mL | × 1.000 | 5 L = 5.000 mL |
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- „Welcher Faktor entspricht Praefix X?” (n = 10⁻⁹, µ = 10⁻⁶, m = 10⁻³)
+- Umrechnung mg ↔ µg ↔ ng, km ↔ m ↔ mm
+- Richtung: kleinere Einheit → groessere Zahl
+
+**Typische Fallen:**
+- µ (Mikro, 10⁻⁶) mit m (Milli, 10⁻³) verwechseln
+- Umrechnungsrichtung falsch (mg → µg muss × 1.000 sein, nicht ÷)
+- M (Mega, gross) vs. m (Milli, klein) -- Gross-/Kleinschreibung beachten
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kleine Praefixe**: m (Milli, 10⁻³), µ (Mikro, 10⁻⁶), n (Nano, 10⁻⁹), p (Piko, 10⁻¹²), f (Femto, 10⁻¹⁵)
+- **Grosse Praefixe**: k (Kilo, 10³), M (Mega, 10⁶), G (Giga, 10⁹), T (Tera, 10¹²)
+- **Umrechnung**: kleinere Einheit → groessere Zahl (“wer kleiner misst, zaehlt mehr”)
+- **Falle**: µg ≠ mg! 1 mg = 1.000 µg; eine Stufe = Faktor 1.000 (10³ pro Stufe)`,
+      contentExtended: `**Verfahren — Umrechnung zwischen Präfixen (Schrittfolge):**
 1. **Ausgangs- und Zieleinheit** als Zehnerpotenz zur **gleichen** Basiseinheit schreiben (z. B. 1 mg = 10⁻³ g, 1 µg = 10⁻⁶ g).
 2. **Verhältnis bilden:** Exponent Ausgang minus Exponent Ziel → Faktor 10^(Differenz). Von mg (10⁻³) nach µg (10⁻⁶): 10⁻³/10⁻⁶ = 10³ → 1 mg = 1.000 µg.
 3. **Richtung merken:** Kleinere Einheit (z. B. µg) → **größere Zahl** (× 1.000). Größere Einheit (mg) → **kleinere Zahl** (÷ 1.000). Eselsbrücke: „Wer kleiner misst, zählt mehr.“
@@ -599,7 +834,7 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
 - **Große Präfixe**: k (Kilo, 10³), M (Mega, 10⁶), G (Giga, 10⁹), T (Tera, 10¹²)
 - **Umrechnung**: kleiner Präfix → größere Zahl; größerer Präfix → kleinere Zahl ("wer kleiner misst, zählt mehr")
 - **MedAT-Falle**: µg ≠ mg! 1 mg = 1.000 µg; 1 µg = 1.000 ng; Dosis-Fehler hier sind lebensgefährlich
-- **Klinisch relevant**: Glukose in mmol/L; Hormone in nmol/L bis pmol/L; Druck in mmHg; Dosierungen in µg/kg/min`,
+- **Falle**: µg ≠ mg! 1 mg = 1.000 µg; eine Stufe = Faktor 1.000`,
       lernziele: [
         "Die SI-Präfixe von Femto (10⁻¹⁵) bis Tera (10¹²) mit Symbol, Faktor und Zehnerpotenz nennen und anwenden.",
         "Medizinisch häufige Präfixe (Milli, Mikro, Nano, Piko) in klinischen Kontexten korrekt interpretieren.",
@@ -828,6 +1063,111 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
       ],
       content: `## Einleitung
 
+Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen -- solche Zahlen aufzuschreiben waere ein Albtraum. Die **wissenschaftliche Notation** (z. B. 6,022 x 10²³) loest dieses Problem: Ein kompakter Vorfaktor zwischen 1 und 10 und eine Zehnerpotenz reichen aus. Am MedAT begegnet dir diese Schreibweise bei Rechenaufgaben -- wer sie beherrscht, rechnet sicher und schnell.
+
+**In diesem Kapitel lernst du:**
+- wie die normalisierte Form (Vorfaktor zwischen 1 und 10) funktioniert
+- wie du jede Dezimalzahl durch Kommaverschiebung in wissenschaftliche Notation bringst und zurueck
+- wie du in wissenschaftlicher Notation multiplizierst, dividierst und addierst
+- warum bei der Addition erst der Exponent angeglichen werden muss
+- was der pH-Wert mit Zehnerpotenzen zu tun hat
+
+---
+
+{{DIAGRAM:exponential-function}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Was ist die wissenschaftliche Notation?
+
+Jede Zahl laesst sich schreiben als **a x 10ⁿ** -- dabei ist **a** der **Vorfaktor** und **n** der **Exponent** (eine ganze Zahl). In der **normalisierten Form** liegt a zwischen 1 und 10 (also z. B. 4,56, nicht 45,6 oder 0,456).
+
+| Dezimalzahl | Normalisierte Form | Vorfaktor | Exponent |
+|-------------|-------------------|-----------|----------|
+| 45.300 | 4,53 x 10⁴ | 4,53 | +4 |
+| 0,0045 | 4,5 x 10⁻³ | 4,5 | -3 |
+| 602.200.000.000.000.000.000.000 | 6,022 x 10²³ | 6,022 | +23 |
+
+> **Merke:** **Normalisierte Form:** a x 10ⁿ mit **1 ≤ a < 10**. Grosse Zahl → Komma nach **links** → **positiver** Exponent. Kleine Zahl (< 1) → Komma nach **rechts** → **negativer** Exponent.
+
+---
+
+## Umrechnung: Dezimalzahl ↔ Notation
+
+**Dezimal → Notation:** Verschiebe das Komma, bis eine Zahl zwischen 1 und 10 dasteht. Zaehle die Stellen -- das ist der Exponent. Richtung links = positiv, Richtung rechts = negativ.
+
+- 45.300.000 → Komma 7 Stellen nach links → **4,53 x 10⁷**
+- 0,000072 → Komma 5 Stellen nach rechts → **7,2 x 10⁻⁵**
+
+**Notation → Dezimal:** Lies den Exponenten als Anweisung, das Komma zu verschieben.
+- 3,7 x 10⁴ → Komma 4 nach rechts → **37.000**
+- 5,1 x 10⁻³ → Komma 3 nach links → **0,0051**
+
+---
+
+## Multiplizieren und Dividieren
+
+Hier ist die wissenschaftliche Notation besonders praktisch: Vorfaktoren und Exponenten **getrennt** verrechnen.
+
+**Multiplikation:** (a x 10ᵐ) x (b x 10ⁿ) = **(a x b) x 10^(m+n)**
+- Beispiel: (4,0 x 10⁻³) x (3,0 x 10⁵) = 12 x 10² = **1,2 x 10³** (normalisiert)
+
+**Division:** (a x 10ᵐ) / (b x 10ⁿ) = **(a/b) x 10^(m-n)**
+- Beispiel: (8,4 x 10⁶) / (2,1 x 10²) = 4,0 x 10⁴
+
+> **Merke:** **Multiplikation:** Vorfaktoren multiplizieren, Exponenten **addieren**. **Division:** Vorfaktoren dividieren, Exponenten **subtrahieren**. Danach **normalisieren** (Vorfaktor zwischen 1 und 10 bringen).
+
+---
+
+## Addieren und Subtrahieren
+
+Hier gilt eine eiserne Regel: Nur Zahlen mit **gleichem Exponenten** duerfen direkt addiert werden!
+
+**Schrittfolge:**
+1. Exponenten angleichen (den kleineren an den groesseren anpassen)
+2. Vorfaktoren addieren/subtrahieren
+3. Normalisieren
+
+**Beispiel:** 3,5 x 10⁴ + 2,1 x 10³ → erst angleichen: 3,5 x 10⁴ + 0,21 x 10⁴ = **3,71 x 10⁴**
+
+> **Merke:** **Addition/Subtraktion:** erst auf **gleichen Exponenten** angleichen, dann Vorfaktoren verrechnen. Danach normalisieren.
+
+---
+
+## pH-Wert und Logarithmus (Kurzfassung)
+
+Der **pH-Wert** nutzt den **Logarithmus**: pH = -log₁₀([H⁺]). Das bedeutet:
+- [H⁺] = 10⁻⁷ mol/L → pH = 7 (neutrales Wasser)
+- 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration
+- pH 6 hat zehnmal mehr H⁺ als pH 7
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgaben:**
+- Dezimalzahl in normalisierte Form bringen und umgekehrt
+- Multiplikation/Division: Vorfaktoren getrennt, Exponenten getrennt, normalisieren
+- Addition: erst Exponenten angleichen!
+- pH aus [H⁺] berechnen oder umgekehrt
+
+**Typische Fallen:**
+- Bei Addition Vorfaktoren addieren ohne gleichen Exponenten (3x10³ + 4x10² ≠ 7x10⁵)
+- Normalisierung vergessen (12x10⁴ → muss 1,2x10⁵ werden)
+- pH: Vorzeichen vergessen (pH = **minus** log)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Normierte Form**: a x 10ⁿ mit 1 ≤ a < 10
+- **Multiplikation**: Vorfaktoren x, Exponenten addieren, normieren
+- **Division**: Vorfaktoren ÷, Exponenten subtrahieren, normieren
+- **Addition/Subtraktion**: erst gleiche Exponenten herstellen, dann Vorfaktoren verrechnen
+- **Dreischritt MedAT**: (1) Vorfaktoren, (2) Exponenten, (3) Normieren
+- **pH = -log₁₀([H⁺])**: 1 pH-Einheit = Faktor 10 in der H⁺-Konzentration`,
+      contentExtended: `## Einleitung
+
 Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen -- solche Zahlen aufzuschreiben waere ein Albtraum. Die **wissenschaftliche Notation** (z. B. 6,022 x 10²³) loest dieses Problem: Ein kompakter Vorfaktor zwischen 1 und 10 und eine Zehnerpotenz reichen aus. In der Medizin begegnet dir diese Schreibweise bei Laborwerten, Zellzahlen und dem pH-Wert -- und am MedAT wird sicher gerechnet, wer sie beherrscht.
 
 **In diesem Kapitel lernst du:**
@@ -839,7 +1179,7 @@ Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen --
 
 ---
 
-{{DIAGRAM:percent-fractions}}
+{{DIAGRAM:exponential-function}}
 
 {{DIAGRAM:coordinate-system}}
 
@@ -856,7 +1196,7 @@ Die Avogadro-Zahl hat 24 Stellen, die Masse eines Protons 27 Nachkommastellen --
 **Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
 
 Die **wissenschaftliche Notation** schreibt jede Zahl in der Form **a × 10ⁿ**, wobei:
-- **a** der **Vorfaktor** ist (die Zahl vor „× 10ⁿ“) und
+- **a** der **Vorfaktor** ist (die Zahl vor „× 10ⁿ”) und
 - **n** der **Exponent** (ganze Zahl) ist.
 
 In der **normalisierten Form** gilt zusätzlich: **1 ≤ a < 10** — der Vorfaktor hat also genau **eine Stelle vor dem Komma** (1 bis 9,…). So ist die Schreibweise **eindeutig** und der Exponent gibt direkt die **Größenordnung** an.
@@ -941,8 +1281,6 @@ Falls das Ergebnis nicht normalisiert ist (Vorfaktor ≥ 10 oder < 1), muss man 
 
 > **Merke:** **Multiplikation:** Vorfaktoren ×, Exponenten **addieren**. **Division:** Vorfaktoren ÷, Exponenten **subtrahieren**. Danach **normalisieren**.
 
-
-
 ---
 
 ## Logarithmen und Zehnerpotenzen: der natürliche Zusammenhang
@@ -966,8 +1304,6 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 **pH-Wert als Logarithmus:** pH = −log₁₀([H⁺]), wobei [H⁺] in mol/L. Das bedeutet: Bei [H⁺] = 10⁻⁷ mol/L ist pH = 7 (neutrales Wasser). Eine Änderung des pH um 1 entspricht einer zehnfachen Änderung der H⁺-Konzentration. pH 6 hat zehnmal mehr H⁺ als pH 7, pH 5 hat hundertmal mehr H⁺ als pH 7.
 
 > **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
-
-
 
 ---
 
@@ -1252,6 +1588,126 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         "Deziliter",
       ],
       content: `## Einleitung
+
+Wie viele Quadratzentimeter hat ein Quadratmeter? Viele antworten spontan 100 -- aber die richtige Antwort ist **10.000**. Denn bei Flaechen wird der Laengenfaktor **quadriert**. Diese Falle ist einer der haeufigsten Fehler am MedAT.
+
+**In diesem Kapitel lernst du:**
+- wie die metrischen Laengeneinheiten zusammenhaengen (km bis nm)
+- warum bei Flaechen der Faktor quadriert und bei Volumen kubiert wird
+- wie Liter, Milliliter und Kubikzentimeter zusammenhaengen (1 mL = 1 cm³)
+- wie du g/dL in g/L umrechnest
+- die Mosteller-Formel fuer die Koerperoberflaeche
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Laengeneinheiten
+
+Die metrischen Laengeneinheiten haengen ueber Zehnerpotenzen zusammen:
+
+1 km = 1.000 m; 1 m = 100 cm = 1.000 mm
+1 mm = 1.000 µm; 1 µm = 1.000 nm
+
+Eselsbruecke: km -> m -> mm -> µm -> nm, je drei Stufen = Faktor 1.000.
+
+> **Merke:** 1 m = 10⁶ µm = 10⁹ nm. Jede Stufe Faktor 10.
+
+---
+
+## Flaecheneinheiten -- Faktor quadrieren!
+
+ACHTUNG: Bei Flaechen wird der Umrechnungsfaktor **quadriert**!
+
+**1 m² = 10.000 cm²** (NICHT 100 cm²!)
+
+Warum? 1 m² = 1 m x 1 m = 100 cm x 100 cm = 10.000 cm². Stell dir ein Quadrat von 1 m x 1 m vor -- da passen 100 x 100 = 10.000 kleine Quadrate von 1 cm x 1 cm hinein.
+
+Allgemeine Regel: Ist 1 Einheit_A = k x Einheit_B, dann 1 Einheit_A² = k² x Einheit_B².
+
+Weitere Flaechen:
+- 1 cm² = 100 mm²
+- 1 mm² = 10⁶ µm²
+
+> **Merke:** Flaeche: Umrechnungsfaktor **quadrieren**! 1 m² = 100² cm² = **10.000** cm². Das ist der haeufigste MedAT-Fehler!
+
+---
+
+## Volumeneinheiten -- Faktor kubieren!
+
+Bei Volumen wird der Faktor **kubiert**:
+
+**1 m³ = 10⁶ cm³** (NICHT 10³!)
+
+1 m³ = 100 cm x 100 cm x 100 cm = 1.000.000 cm³
+
+Wichtige Beziehungen:
+- **1 L = 1 dm³ = 1.000 mL = 1.000 cm³**
+- **1 mL = 1 cm³** (sehr wichtig!)
+- 1 dL = 100 mL
+
+> **Merke:** 1 L = 1 dm³ = 1.000 cm³; **1 mL = 1 cm³**; 1 dL = 100 mL. Volumen: Faktor **kubieren**!
+
+---
+
+## Umrechnungsalgorithmus
+
+Merk dir die Regel: **Dimension bestimmt die Potenz.**
+
+1. **Laenge:** Faktor k -> k¹
+2. **Flaeche:** Faktor k -> k²
+3. **Volumen:** Faktor k -> k³
+
+Beispiel: 1 km = 10³ m -> 1 km² = 10⁶ m²; 1 km³ = 10⁹ m³.
+
+---
+
+## Koerperoberflaeche (Mosteller-Formel)
+
+BSA [m²] = Wurzel(Groesse[cm] x Gewicht[kg] / 3.600)
+
+Beispiel: 170 cm, 70 kg: BSA = Wurzel(170 x 70 / 3.600) = Wurzel(3,306) ≈ 1,82 m².
+
+---
+
+## Rechenbeispiele
+
+**Aufgabe 1:** 0,15 m² in cm²?
+Loesung: 0,15 x 10.000 = 1.500 cm².
+
+**Aufgabe 2:** 250 cm³ in mL und L?
+Loesung: 1 cm³ = 1 mL -> 250 mL = 0,25 L.
+
+**Aufgabe 3:** 14 g/dL in g/L?
+Loesung: 1 L = 10 dL -> 14 x 10 = 140 g/L.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- "1 m² = ? cm²" / "1 m³ = ? cm³" (Faktor quadrieren/kubieren)
+- Laenge/Flaeche/Volumen umrechnen
+- 1 mL = 1 cm³; g/dL -> g/L (x 10)
+
+**Typische Fallen:**
+- 1 m² = 10.000 cm² (nicht 100!)
+- 1 m³ = 10⁶ cm³ (nicht 10³!)
+- 1 mL = 1 cm³ (nicht 10!)
+- g/dL -> g/L: x 10
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Laenge**: 1 m = 100 cm = 1.000 mm = 10⁶ µm = 10⁹ nm
+- **Flaeche**: Faktor **quadrieren**! 1 m² = 10.000 cm² = 10⁶ mm²
+- **Volumen**: Faktor **kubieren**! 1 m³ = 10⁶ cm³; 1 L = 1 dm³ = 1.000 mL
+- **1 mL = 1 cm³**; 1 dL = 100 mL
+- **BSA (Mosteller)**: Wurzel(Groesse[cm] x Gewicht[kg] / 3.600)`,
+      contentExtended: `## Einleitung
 
 Wie gross ist eine menschliche Zelle? Etwa 10 Mikrometer -- das ist ein Hundertstel Millimeter. Und wie viele Quadratzentimeter hat ein Quadratmeter? Die Antwort ist 10.000, nicht 100 -- denn bei Flaechen wird der Laengenfaktor **quadriert**. Diese Falle ist einer der haeufigsten Fehler am MedAT. Ob Zellgroessen, Infusionsvolumina oder die Koerperoberflaeche fuer die Chemotherapie-Dosierung: **Laenge, Flaeche und Volumen** sicher umzurechnen ist medizinischer Alltag.
 
@@ -1599,6 +2055,112 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
       ],
       content: `## Einleitung
 
+Wie schnell faehrt ein Auto mit 72 km/h in Metern pro Sekunde? Antwort: 72 / 3,6 = **20 m/s**. Und wie lange braucht ein Ball beim freien Fall aus 5 Metern Hoehe? Das loest du mit v = Wurzel(2 x g x h). **Zeit und Geschwindigkeit** kommen am MedAT haeufig vor.
+
+**In diesem Kapitel lernst du:**
+- wie du zwischen Sekunden, Minuten und Stunden sicher umrechnest (60er-System)
+- wie du km/h in m/s umrechnest (Faktor 3,6)
+- die drei Formeln fuer gleichmaessig beschleunigte Bewegung
+- wie du beim freien Fall Aufprallgeschwindigkeit und Fallhoehe berechnest
+- was Herzfrequenz und Periodendauer miteinander zu tun haben
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Zeiteinheiten -- Das 60er-System
+
+Anders als Laengen folgen Zeiteinheiten dem **60er-System**:
+
+1 min = 60 s; 1 h = 60 min = 3.600 s
+1 Tag = 24 h = 86.400 s
+
+> **Merke:** 1 h = **3.600 s**; 1 Tag = **86.400 s**.
+
+---
+
+## Geschwindigkeit -- km/h und m/s
+
+Geschwindigkeit = Weg pro Zeit: **v = s/t**. SI-Einheit: **m/s**.
+
+Umrechnung:
+- **km/h -> m/s:** durch **3,6**
+- **m/s -> km/h:** mal **3,6**
+
+Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s; 108 km/h = 30 m/s.
+
+> **Merke:** km/h -> m/s: durch 3,6. m/s -> km/h: mal 3,6. Merke: 36 km/h = 10 m/s.
+
+---
+
+## Gleichmaessig beschleunigte Bewegung
+
+Beschleunigung a gibt an, um wie viel sich die Geschwindigkeit pro Sekunde aendert (Einheit: m/s²).
+
+Die drei Formeln:
+1. v = v₀ + a x t
+2. s = v₀ x t + ½ x a x t²
+3. v² = v₀² + 2 x a x s
+
+**Freier Fall** (v₀ = 0, a = g ≈ 10 m/s²):
+- v = g x t
+- s = ½ x g x t²
+- **Aufprallgeschwindigkeit:** v = Wurzel(2 x g x h)
+
+Beispiele:
+- Nach 1 s: v = 10 m/s, s = 5 m
+- Aus 5 m: v = Wurzel(100) = 10 m/s = 36 km/h
+
+> **Merke:** Freier Fall: v = g x t; s = ½ x g x t²; Aufprall v = Wurzel(2 x g x h). g ≈ 10 m/s².
+
+---
+
+## Herzfrequenz und Periodendauer
+
+Herzfrequenz in Hz = HF pro Minute / 60. Periodendauer T = 1/f.
+
+Beispiel: HF = 75/min -> f = 75/60 = 1,25 Hz -> T = 1/1,25 = 0,8 s = 800 ms.
+
+---
+
+## Rechenbeispiele
+
+**Aufgabe 1:** 108 km/h in m/s?
+Loesung: 108 / 3,6 = 30 m/s.
+
+**Aufgabe 2:** HF = 90/min. Periodendauer?
+Loesung: f = 90/60 = 1,5 Hz. T = 1/1,5 ≈ 0,667 s = 667 ms.
+
+**Aufgabe 3:** Fall aus 3 m Hoehe. Aufprallgeschwindigkeit?
+Loesung: v = Wurzel(2 x 10 x 3) = Wurzel(60) ≈ 7,7 m/s ≈ 28 km/h.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- km/h in m/s (/ 3,6) und umgekehrt
+- Freier Fall: v = Wurzel(2gh)
+- Herzfrequenz -> Hz, Periodendauer
+
+**Typische Fallen:**
+- km/h -> m/s: **durch** 3,6 (nicht mal!)
+- s (Weg) und v (Geschwindigkeit) verwechseln
+- HF in Hz: durch 60 nicht vergessen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Zeitumrechnung**: 1 min = 60 s; 1 h = 3.600 s
+- **Geschwindigkeit**: v = s/t; km/h -> m/s: durch 3,6; m/s -> km/h: x 3,6
+- **Beschleunigung**: a = Deltav/Deltat; g ≈ 10 m/s²
+- **Freier Fall**: v = g x t; s = ½ x g x t²; Aufprall v = Wurzel(2 x g x h)
+- **Herzfrequenz**: HF/min / 60 = f [Hz]; T = 1/f`,
+      contentExtended: `## Einleitung
+
 Ein EKG-Intervall dauert 200 Millisekunden, eine Halbwertszeit Stunden bis Tage, und die Nervenleitgeschwindigkeit erreicht 120 m/s -- **Zeit und Geschwindigkeit** begegnen dir in der Medizin in voellig unterschiedlichen Groessenordnungen. Anders als Laengen und Massen folgen Zeiteinheiten keinem Dezimalsystem, sondern dem babylonischen 60er-System. Wer km/h und m/s sicher umrechnet und die Formeln fuer gleichmaessige Beschleunigung kennt, loest die typischen MedAT-Rechenaufgaben zuegig.
 
 **In diesem Kapitel lernst du:**
@@ -1782,8 +2344,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
 | Frequenz | f = 1/T | Hz (= 1/s) | Herz: 1,25 Hz bei 75/min |
 | Beschleunigung | a = Δv/Δt | m/s² | g = 9,81 m/s² |
 | Fallhöhe | s = ½gt² | m | 5 m nach 1 s |
-| Aufprall-v | v = √(2gh) | m/s | 10 m/s aus 5 m |
-`,
+| Aufprall-v | v = √(2gh) | m/s | 10 m/s aus 5 m |`,
       lernziele: [
         "Zeiteinheiten (Stunden, Minuten, Sekunden) sicher umrechnen und für medizinische Zeitintervalle (EKG, Halbwertszeit) anwenden",
         "Geschwindigkeiten zwischen km/h und m/s mit dem Faktor 3,6 umrechnen",
@@ -1957,6 +2518,115 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "abgeleitete Einheiten",
       ],
       content: `## Einleitung
+
+Kraft in Newton, Druck in Pascal, Energie in Joule -- all diese Einheiten lassen sich aus nur **sieben SI-Grundeinheiten** ableiten. Wer die Ableitungskette kennt, kann jede Einheit in ihre Bausteine zerlegen. Die **Dimensionsanalyse** hilft dir ausserdem, Formeln auf Richtigkeit zu pruefen.
+
+**In diesem Kapitel lernst du:**
+- welche sieben Grundeinheiten das SI-System bilden
+- wie sich Newton, Pascal, Joule und Watt aus den Grundeinheiten ableiten
+- welche Nicht-SI-Einheiten wichtig sind (mmHg, kcal) und wie du sie umrechnest
+- wie du mit der Dimensionsanalyse Formeln pruefst
+- typische MedAT-Aufgaben zu Druck und Energie
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Die sieben SI-Grundeinheiten
+
+| Groesse | Einheit | Symbol |
+|---------|---------|--------|
+| Laenge | Meter | m |
+| Masse | **Kilogramm** | **kg** |
+| Zeit | Sekunde | s |
+| Stromstaerke | Ampere | A |
+| Temperatur | Kelvin | K |
+| Stoffmenge | Mol | mol |
+| Lichtstaerke | Candela | cd |
+
+Besonderheit: **kg** ist die einzige Grundeinheit mit Vorsilbe!
+
+Temperatur: T[K] = T[°C] + 273. Koerpertemperatur 37 °C = 310 K.
+
+**Mol:** 1 mol = 6,022 x 10²³ Teilchen (Avogadro-Zahl).
+
+> **Merke:** 7 SI-Grundeinheiten: m, kg, s, A, K, mol, cd. kg ist die einzige mit Vorsilbe!
+
+---
+
+## Abgeleitete SI-Einheiten
+
+Die wichtigste Ableitungskette:
+
+- **Newton (N)** = kg x m/s² (Kraft)
+- **Pascal (Pa)** = N/m² (Druck)
+- **Joule (J)** = N x m (Energie)
+- **Watt (W)** = J/s (Leistung)
+
+Weitere: Hz = 1/s (Frequenz); V = J/C (Spannung); Gy = J/kg (Strahlendosis).
+
+> **Merke:** Ableitungskette: N = kg x m/s² -> Pa = N/m² -> J = N x m -> W = J/s.
+
+---
+
+## Wichtige Nicht-SI-Einheiten
+
+- **Druck:** 1 mmHg ≈ 133 Pa; 1 atm = 760 mmHg
+- **Energie:** 1 kcal = 4,184 kJ
+- **Temperatur:** T[K] = T[°C] + 273
+- **Masse:** 1 Da = 1 g/mol = 1,66 x 10⁻²⁷ kg
+
+---
+
+## Dimensionsanalyse
+
+Pruefe, ob die Einheiten auf beiden Seiten einer Gleichung uebereinstimmen.
+
+Beispiel: W = F x s -> [N] x [m] = [kg x m/s²] x [m] = kg x m²/s² = [J] ✓
+
+Beispiel: p = Dichte x g x h -> [kg/m³] x [m/s²] x [m] = kg/(m x s²) = [Pa] ✓
+
+> **Merke:** Dimensionsanalyse: Einheiten beider Seiten pruefen. Stimmen sie, ist die Formel plausibel.
+
+---
+
+## Rechenbeispiele
+
+**Aufgabe 1:** 80 mmHg in Pa?
+Loesung: 80 x 133 = 10.640 Pa ≈ 10,6 kPa.
+
+**Aufgabe 2:** 2.000 kcal in kJ?
+Loesung: 2.000 x 4,184 = 8.368 kJ.
+
+**Aufgabe 3:** Formel p = Dichte x g x h pruefen.
+Loesung: [kg/m³] x [m/s²] x [m] = kg/(m x s²) = Pa ✓
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- N, Pa, J, W in Grundeinheiten ausdruecken
+- Druck mmHg in Pa (x 133); Energie kcal in kJ (x 4,184)
+- Dimensionsanalyse: Formeln pruefen
+
+**Typische Fallen:**
+- SI-Grundeinheit der Masse = kg (nicht g!)
+- J (Energie) vs. W (Leistung = Energie/Zeit) verwechseln
+- 1 mmHg ≈ 133 Pa (nicht 100 Pa)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **7 Grundeinheiten**: m, kg, s, A, K, mol, cd
+- **Ableitungskette**: N = kg x m/s² -> Pa = N/m² -> J = N x m -> W = J/s
+- **Dimensionsanalyse**: Einheiten beider Seiten pruefen
+- **Nicht-SI**: 1 mmHg ≈ 133 Pa; 1 kcal ≈ 4,184 kJ; T[K] = T[°C] + 273
+- **Mol**: 1 mol = 6,022 x 10²³ Teilchen (Avogadro-Zahl)`,
+      contentExtended: `## Einleitung
 
 Blutdruck in mmHg, Energie in Kilokalorien, Dosierung in mg/kg -- die Medizin benutzt viele Einheiten, und sie alle lassen sich auf genau **sieben SI-Grundeinheiten** zurueckfuehren: Meter, Kilogramm, Sekunde, Ampere, Kelvin, Mol und Candela. Wer die Ableitungskette von Newton ueber Pascal bis Joule und Watt kennt, kann jede Einheit in ihre Grundbausteine zerlegen. Die **Dimensionsanalyse** -- also der Vergleich der Einheiten auf beiden Seiten einer Gleichung -- ist zugleich das zuverlaessigste Werkzeug, um Rechenfehler aufzudecken.
 

@@ -8,7 +8,7 @@ export const mathKapGrundlagen: Kapitel = {
   estimatedTime: "90 min",
   unterkapitel: [
     {
-      id: "ma-3-01",
+      id: "ma-grund-01",
       diagram: "percent-fractions",
       title: "Bruchrechnung & Termumformung",
       stichworte: [
@@ -26,6 +26,108 @@ export const mathKapGrundlagen: Kapitel = {
         "Bruchdivision",
       ],
       content: `## Einleitung
+
+Wie rechnest du 3/8 + 5/12 im Kopf? Im MedAT kommen Brueche staendig vor. Wer sicher kuerzt, erweitert und den Kehrwert-Trick beherrscht, spart kostbare Pruefungsminuten.
+
+**In diesem Kapitel lernst du:**
+- wie du Brueche erweiterst und kuerzt
+- wie Addition, Subtraktion, Multiplikation und Division von Bruechen funktionieren
+- wie du Doppelbrueche vereinfachst
+- was Kehrwert und Betrag bedeuten
+
+---
+
+{{DIAGRAM:percent-fractions}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Grundbegriffe
+
+Ein Bruch a/b beschreibt eine Teilung: Zaehler a geteilt durch Nenner b (b \u2260 0). Zwei Brueche sind **gleichwertig**, wenn du sie durch Erweitern oder Kuerzen ineinander ueberfuehren kannst: 2/4 = 1/2.
+
+- **Kuerzen:** Zaehler und Nenner durch denselben Faktor teilen. Beispiel: 12/18 = 2/3 (durch 6 gekuerzt).
+- **Erweitern:** Zaehler und Nenner mit demselben Faktor multiplizieren. Beispiel: 2/5 = 8/20 (mit 4 erweitert).
+- **Hauptnenner:** Das kgV der Nenner finden, dann alle Brueche darauf erweitern.
+
+> **Merke:** Kuerzen und Erweitern aendern den **Wert** des Bruchs nicht -- nur seine **Darstellung**. Immer so weit wie moeglich kuerzen, bevor du weiterrechnest.
+
+---
+
+## Addition und Subtraktion
+
+Um Brueche zu addieren oder subtrahieren, brauchen sie denselben Nenner -- sonst vergleichst du Aepfel mit Birnen.
+
+1. Hauptnenner (kgV) bestimmen
+2. Jeden Bruch erweitern
+3. Zaehler verrechnen, Nenner bleibt
+4. Ergebnis kuerzen
+
+**Beispiel:** 3/8 + 5/12. kgV(8,12) = 24. Also 9/24 + 10/24 = **19/24**.
+
+> **Merke:** Brueche addieren: **Erst gleichnamig machen**, dann nur die Zaehler verrechnen. Nie die Nenner addieren!
+
+---
+
+## Multiplikation und Division
+
+**Multiplikation:** Zaehler mal Zaehler, Nenner mal Nenner. Vorher kreuzweise kuerzen spart Arbeit.
+
+**Beispiel:** 3/8 \u00d7 4/9. Kreuzkuerzen: 3 und 9 durch 3, dann 4 und 8 durch 4 ergibt 1/2 \u00d7 1/3 = **1/6**.
+
+**Division -- der Kehrwert-Trick:** (a/b) \u00f7 (c/d) = (a/b) \u00d7 (d/c). Du **dividierst nie durch einen Bruch** -- du multiplizierst mit dem **Kehrwert**.
+
+**Beispiel:** (5/6) \u00f7 (15/8) = (5/6) \u00d7 (8/15). Kreuzkuerzen ergibt **4/9**.
+
+> **Merke:** Division durch einen Bruch = Multiplikation mit dem Kehrwert. Vor der Multiplikation immer kreuzweise kuerzen!
+
+---
+
+## Doppelbrueche
+
+Ein Doppelbruch hat im Zaehler oder Nenner nochmal einen Bruch. Strategie: Den Hauptbruchstrich finden und als Division lesen.
+
+**Beispiel:** (2/3) / (4/5) = (2/3) \u00d7 (5/4) = 10/12 = **5/6**.
+
+**Alltagsbeispiel:** Du kaufst 0,5 kg Aepfel und bezahlst 1/4 des Kilopreises doppelt? Doppelbruch: 0,5 / (1/4) = 0,5 \u00d7 4 = **2**.
+
+**Kehrwert und Betrag:**
+- **Kehrwert** von a/b ist b/a (Zaehler und Nenner tauschen).
+- **Betrag** |a/b| = |a|/|b|, immer \u2265 0. Beispiel: |3 \u2212 5| = 2.
+
+> **Merke:** Doppelbruch = oberer Bruch \u00f7 unterer Bruch = oberer Bruch \u00d7 Kehrwert des unteren. |x| = Abstand zu Null.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 -- Bruchgleichung:** x/3 + x/4 = 7. Hauptnenner 12: 4x + 3x = 84, also 7x = 84, **x = 12**.
+
+**Beispiel 2 -- Kreuzweise kuerzen:** 14/25 \u00d7 15/28. Kuerze 14 und 28 durch 14; kuerze 15 und 25 durch 5. Ergebnis: **3/10**.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Bruchaddition/-subtraktion mit Hauptnenner (kgV)
+- Division durch einen Bruch = Multiplikation mit Kehrwert
+- Doppelbrueche als Division lesen und vereinfachen
+
+**Typische Pruefungsfallen:**
+- Nenner addieren statt Zaehler
+- Kehrwert vergessen bei Bruchdivision
+- kgV und ggT verwechseln (kgV fuer Hauptnenner, ggT fuer Kuerzen)
+- Doppelbruch falsch aufloesen: Hauptbruchstrich genau identifizieren
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kuerzen/Erweitern:** Wert bleibt gleich; immer mit ggT kuerzen
+- **Addition/Subtraktion:** Erst gleichnamig (kgV), dann Zaehler verrechnen
+- **Multiplikation:** Zaehler \u00d7 Zaehler / Nenner \u00d7 Nenner; vorher kreuzweise kuerzen
+- **Division:** Mit Kehrwert multiplizieren: (a/b)\u00f7(c/d) = (a/b)\u00d7(d/c)
+- **Doppelbruch:** Oberer \u00f7 unterer Bruch; Kehrwert-Trick
+- **Kehrwert:** (a/b)\u207b\u00b9 = b/a; **Betrag:** |a/b| \u2265 0`,
+      contentExtended: `## Einleitung
 
 Wie verduennt man eine Stammlosung im Verhaeltnis 1:4? Wie rechnet man 3/8 + 5/12 im Kopf? Im MedAT sind Brueche allgegenwaertig -- ob bei Konzentrationsangaben, Verduennungen oder Dosierungsberechnungen. Wer sicher kuerzt, erweitert und den Kehrwert-Trick beherrscht, spart kostbare Pruefungsminuten.
 
@@ -261,7 +363,7 @@ Wie verduennt man eine Stammlosung im Verhaeltnis 1:4? Wie rechnet man 3/8 + 5/1
       ],
     },
     {
-      id: "ma-3-02",
+      id: "ma-grund-02",
       diagram: "percent-fractions",
       title: "Prozentrechnung",
       stichworte: [
@@ -279,6 +381,98 @@ Wie verduennt man eine Stammlosung im Verhaeltnis 1:4? Wie rechnet man 3/8 + 5/1
         "Blutalkoholkonzentration",
       ],
       content: `## Einleitung
+
+\u201eDer Preis sank von 120 Euro auf 90 Euro\u201c -- um wie viel Prozent ist das? Die absolute Senkung betraegt 30 Euro, die relative Senkung 25 %. Im MedAT musst du solche Angaben blitzschnell auseinanderhalten.
+
+**In diesem Kapitel lernst du:**
+- wie die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) funktionieren
+- wie du prozentuale Aenderungen berechnest und von Prozentpunkten unterscheidest
+- was Promille (\u2030) bedeutet und wie du zwischen Prozent und Promille umrechnest
+
+---
+
+{{DIAGRAM:percent-fractions}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## Das Grundprinzip: P = G \u00d7 p/100
+
+Prozent bedeutet \u201evon Hundert\u201c. Die Formel **P = G \u00d7 p/100** verbindet drei Groessen: **P** (Prozentwert), **G** (Grundwert) und **p** (Prozentsatz).
+
+| Gesucht | Formel | Beispiel |
+|---------|--------|----------|
+| Prozentwert P | P = G \u00d7 p/100 | 15 % von 320 = 320 \u00d7 0,15 = **48** |
+| Grundwert G | G = P \u00d7 100/p | 36 ist 12 % von G \u2192 G = **300** |
+| Prozentsatz p | p = P/G \u00d7 100 | 45 von 180 \u2192 p = **25 %** |
+
+**Kopfrechentrick:** 10 % = G \u00f7 10; 5 % = halbe 10 %; 1 % = G \u00f7 100. So setzt du fast jeden Prozentsatz zusammen: 15 % = 10 % + 5 %.
+
+> **Merke:** P = G \u00d7 p/100 ist die Universalformel. Durch Umstellen erhaeltst du alle drei Grundfragen. Rechentrick: 10 % = G\u00f710, 5 % = halbe 10 %, 1 % = G\u00f7100.
+
+---
+
+## Prozentuale Aenderung vs. Prozentpunkte
+
+Hier lauert die groesste MedAT-Falle: **absolute** vs. **relative** Aenderung.
+
+**Absolute Aenderung (Prozentpunkte):** Die schlichte Differenz zweier Prozentwerte.
+Beispiel: Trefferquote sinkt von 40 % auf 30 %. Absolute Aenderung = **10 Prozentpunkte**.
+
+**Relative Aenderung:** Die Differenz bezogen auf den **Ausgangswert**.
+Formel: \u0394% = (Endwert \u2212 Anfangswert) / Anfangswert \u00d7 100 %.
+Beispiel: (30 \u2212 40) / 40 \u00d7 100 = **\u221225 %** relative Senkung.
+
+**Wichtige Asymmetrie:** +50 % und danach \u221250 % ergibt **nicht** den Ausgangswert!
+100 \u2192 +50 % \u2192 150 \u2192 \u221250 % \u2192 75 (nicht 100!).
+
+> **Merke:** Prozentpunkte = schlichte Differenz. Prozentuale Aenderung = Differenz/Ausgangswert \u00d7 100 %. Von 40 % auf 30 % = 10 Prozentpunkte, aber 25 % relative Senkung!
+
+---
+
+## Promille (\u2030)
+
+Promille (\u2030) = \u201evon Tausend\u201c. 1 \u2030 = 0,1 % = 0,001.
+
+**Umrechnung:** Prozent zu Promille: \u00d7 10. Promille zu Prozent: \u00f7 10.
+
+**Beispiel:** 8 \u2030 = 8/10 % = **0,8 %**. Umgekehrt: 0,5 % = 5 \u2030.
+
+> **Merke:** 1 \u2030 = 0,1 % = 1/1000. Promille zu Prozent: durch 10 teilen.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 -- Grundwert gesucht:** 56 Schueler (= 14 % der Klasse) haben bestanden. Wie gross war die Klasse? G = 56 \u00d7 100/14 = **400**.
+
+**Beispiel 2 -- Prozentuale Aenderung:** Ein Preis sinkt von 160 auf 120 Euro. Relativ: (160\u2212120)/160 \u00d7 100 = **25 %** Senkung. Nicht 33 % (das waere 40/120 -- falscher Bezugswert!).
+
+**Beispiel 3 -- Asymmetrie:** Ein Wert steigt um 25 % und faellt dann um 20 %. 100 \u00d7 1,25 = 125. Dann 125 \u00d7 0,80 = **100** (Spezialfall!). Bei +50 % und \u221250 % waere es nur 75.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Drei Grundfragen: P, G oder p gesucht -- sicher umstellen
+- Prozentuale Aenderung vs. Prozentpunkte (groesste Falle!)
+- Promille \u2194 Prozent umrechnen
+
+**Typische Pruefungsfallen:**
+- Prozentpunkte mit relativer Aenderung verwechseln
+- Bezugswert falsch waehlen (Ausgangswert vs. Endwert)
+- Asymmetrie vergessen: +50 % und dann \u221250 % \u2260 Ausgangswert
+- Promille als Prozent lesen (1 \u2030 = 0,1 %, nicht 1 %)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Grundformel:** P = G \u00d7 p/100; G = P \u00d7 100/p; p = P/G \u00d7 100
+- **Prozentuale Aenderung:** (Endwert \u2212 Anfangswert) / Anfangswert \u00d7 100 %
+- **Prozentpunkte:** Schlichte Differenz zweier Prozentwerte
+- **Promille:** 1 \u2030 = 0,1 % = 1/1000
+- **Asymmetrie:** +50 % dann \u221250 % ergibt 75, nicht 100
+- **Kopfrechentrick:** 10 % = G\u00f710; 5 % = halbe 10 %; 1 % = G\u00f7100`,
+      contentExtended: `## Einleitung
 
 \u201eDie Mortalitaet sank von 12 % auf 9 %\u201c -- ist das viel oder wenig? Die absolute Senkung betraegt 3 Prozentpunkte, die relative Senkung aber 25 %. Beide Aussagen sind korrekt, klingen aber voellig verschieden. Im MedAT-BMS musst du solche Angaben blitzschnell auseinanderhalten und Prozentwert, Grundwert oder Prozentsatz berechnen koennen.
 
@@ -498,7 +692,7 @@ Reduktionsfaktor r: Maenner \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
       ],
     },
     {
-      id: "ma-3-03",
+      id: "ma-grund-03",
       diagram: "percent-fractions",
       title: "Dreisatz & Proportionen",
       stichworte: [
@@ -516,6 +710,117 @@ Reduktionsfaktor r: Maenner \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
         "mL/h",
       ],
       content: `## Einleitung
+
+3 Aepfel kosten 1,50 Euro -- wie viel kosten 7 Aepfel? Der **Dreisatz** (Schlussrechnung) ist das einfachste Werkzeug fuer solche Aufgaben: In drei Schritten von einer bekannten zu einer gesuchten Groesse. Im MedAT kommt er staendig vor.
+
+**In diesem Kapitel lernst du:**
+- wie der direkte Dreisatz funktioniert (proportionale Groessen)
+- wie der indirekte Dreisatz funktioniert (antiproportionale Groessen)
+- wie du erkennst, ob direkt oder indirekt
+- wie der zusammengesetzte Dreisatz bei zwei Groessen funktioniert
+
+---
+
+{{DIAGRAM:percent-fractions}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Direkter Dreisatz (proportional)
+
+Zwei Groessen sind **direkt proportional**, wenn sie im selben Verhaeltnis steigen und fallen. Doppelt so viel von A ergibt doppelt so viel von B.
+
+**Drei Schritte:**
+1. **Gegeben:** Bekannte Zuordnung aufschreiben (z. B. 3 Aepfel kosten 1,50 Euro)
+2. **Auf 1 zurueckfuehren:** Durch die bekannte Menge teilen (1 Apfel kostet 0,50 Euro)
+3. **Hochrechnen:** Mit der gesuchten Menge multiplizieren (7 Aepfel kosten 3,50 Euro)
+
+**Formel:** a/b = c/x \u2192 **x = b \u00d7 c / a**.
+
+**Beispiel:** 4 Liter Benzin kosten 8 Euro. Wie viel kosten 10 Liter?
+- 1 L kostet 8/4 = 2 Euro. 10 L kosten 10 \u00d7 2 = **20 Euro**.
+
+> **Merke:** Direkter Dreisatz: Mehr ergibt mehr. Quotient A/B = konstant. Schema: Gegeben \u2192 auf 1 \u2192 hochrechnen.
+
+---
+
+## Indirekter Dreisatz (antiproportional)
+
+Was, wenn mehr von A zu weniger von B fuehrt? Dann ist das **Produkt** A \u00d7 B konstant.
+
+**Erkennungsfrage:** Wenn A groesser wird, wird B **kleiner**? \u2192 Indirekter Dreisatz!
+Beispiele: Mehr Helfer \u2192 weniger Zeit. Schnelleres Tempo \u2192 kuerzere Fahrt.
+
+**Verfahren:**
+1. Bekannte Zuordnung: 6 Helfer brauchen 4 Stunden
+2. Gesamtarbeit: 6 \u00d7 4 = 24 Helferstunden (konstant!)
+3. Neue Groesse: 8 Helfer brauchen 24/8 = **3 Stunden**
+
+**Formel:** a \u00d7 b = c \u00d7 x \u2192 **x = a \u00d7 b / c**.
+
+> **Merke:** Indirekter Dreisatz: Mehr ergibt weniger. Produkt A \u00d7 B = konstant. Frage dich: \u201eWenn A doppelt so gross wird, wird B halb so gross?\u201c \u2192 indirekt!
+
+---
+
+## Zusammengesetzter Dreisatz
+
+Manchmal aendern sich **zwei** Groessen gleichzeitig. Dann loest du schrittweise: Erst eine Variable anpassen, dann die andere.
+
+**Beispiel:** 5 Maler brauchen 8 Tage fuer 200 m\u00b2. Wie viele Tage brauchen 4 Maler fuer 300 m\u00b2?
+
+Schritt 1 -- Maler anpassen (indirekt): 5 Maler = 8 Tage. 4 Maler = 8 \u00d7 5/4 = **10 Tage** (fuer 200 m\u00b2).
+
+Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 = 10 Tage. 300 m\u00b2 = 10 \u00d7 300/200 = **15 Tage**.
+
+> **Merke:** Zusammengesetzter Dreisatz: Schrittweise loesen. Bei jedem Schritt pruefen: direkt oder indirekt?
+
+---
+
+## Verhaeltnisse und Kreuzprodukt
+
+**Ein Verhaeltnis a:b** beschreibt die relative Groesse zweier Werte.
+
+**Kreuzprodukt:** Wenn a/b = c/d, dann a \u00d7 d = b \u00d7 c. Sehr nuetzlich zum Loesen von Verhaeltnisgleichungen.
+
+**Beispiel:** x:4 = 9:12. Kreuzprodukt: 12x = 36, also x = **3**.
+
+**Mischungsbeispiel:** Du mischst Saft (100 %) mit Wasser. Verhaeltnis 1:3 bedeutet: 1 Teil Saft + 3 Teile Wasser = 4 Teile gesamt. Fuer 2 Liter: 0,5 L Saft + 1,5 L Wasser.
+
+> **Merke:** Kreuzprodukt: a/b = c/d \u21d4 a\u00d7d = b\u00d7c.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 -- Direkter Dreisatz:** 5 kg Kartoffeln kosten 4 Euro. 12 kg kosten: 1 kg = 0,80 Euro, 12 kg = **9,60 Euro**.
+
+**Beispiel 2 -- Indirekter Dreisatz:** Ein Auto faehrt mit 80 km/h und braucht 3 Stunden. Mit 120 km/h: Strecke = 240 km (konstant). Zeit = 240/120 = **2 Stunden**.
+
+**Beispiel 3 -- Zusammengesetzt:** 6 Maschinen produzieren in 5 Stunden 900 Stueck. 4 Maschinen fuer 1200 Stueck? Schritt 1 (indirekt): 4 Maschinen = 5 \u00d7 6/4 = 7,5 h fuer 900 Stueck. Schritt 2 (direkt): 1200 Stueck = 7,5 \u00d7 1200/900 = **10 h**.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Direkter Dreisatz erkennen und anwenden
+- Indirekter Dreisatz erkennen und anwenden
+- Zusammengesetzter Dreisatz schrittweise loesen
+- Kreuzprodukt bei Verhaeltnisgleichungen
+
+**Typische Pruefungsfallen:**
+- Direkt und indirekt verwechseln: Immer Erkennungsfrage stellen!
+- Beim indirekten Dreisatz multiplizieren statt dividieren
+- Einheiten nicht mitfuehren
+- Zusammengesetzten Dreisatz in einem Schritt loesen wollen (immer schrittweise!)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Direkter Dreisatz:** Quotient A/B = konstant; mehr A \u2192 mehr B; x = b\u00d7c/a
+- **Indirekter Dreisatz:** Produkt A\u00d7B = konstant; mehr A \u2192 weniger B; x = a\u00d7b/c
+- **Erkennungsfrage:** \u201eWird B groesser oder kleiner, wenn A steigt?\u201c
+- **Zusammengesetzt:** Schrittweise loesen, jeden Schritt auf direkt/indirekt pruefen
+- **Kreuzprodukt:** a/b = c/d \u21d4 a\u00d7d = b\u00d7c`,
+      contentExtended: `## Einleitung
 
 \u201eEin Patient wiegt 85 kg und soll 3 mg/kg erhalten -- wie viel Milligramm brauchen wir?\u201c Solche Aufgaben gehoeren zum klinischen Alltag und zum MedAT-BMS. Der **Dreisatz** (Schlussrechnung) ist das einfachste und zuverlaessigste Werkzeug dafuer: In drei Schritten von einer bekannten zu einer gesuchten Groesse.
 
@@ -742,7 +1047,7 @@ Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
       ],
     },
     {
-      id: "ma-3-04",
+      id: "ma-grund-04",
       diagram: "geometric-shapes",
       title: "Einheitenumrechnung & Groessenordnungen",
       stichworte: [
@@ -761,6 +1066,138 @@ Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
         "mL/min L/h",
       ],
       content: `## Einleitung
+
+Wie viel sind 0,5 mg in Mikrogramm? Wie rechnest du km/h in m/s um? Am MedAT musst du sicher zwischen Einheiten umrechnen koennen. Die **Kettenmethode** ist dabei dein zuverlaessigstes Werkzeug.
+
+**In diesem Kapitel lernst du:**
+- die wichtigsten SI-Praefixe und ihre Zehnerpotenzen (nano bis mega)
+- wie die Kettenmethode funktioniert und warum sie Fehler verhindert
+- wie du zwischen verschiedenen Einheiten sicher umrechnest
+
+---
+
+{{DIAGRAM:percent-fractions}}
+
+{{DIAGRAM:geometric-shapes}}
+
+## SI-Praefixe: Die Zehnerpotenz-Leiter
+
+Das SI-System verwendet **Praefixe**, um Vielfache und Bruchteile auszudruecken. Zwischen benachbarten Praefixen liegen immer **3 Zehnerpotenzen** (Faktor 1000).
+
+| Praefix | Symbol | Faktor | Beispiel |
+|---------|--------|--------|----------|
+| Mega | M | 10\u2076 | 1 MHz = 1.000.000 Hz |
+| Kilo | k | 10\u00b3 | 1 kg = 1000 g |
+| (Basis) | -- | 10\u2070 | 1 g, 1 m, 1 L |
+| Milli | m | 10\u207b\u00b3 | 1 mm = 0,001 m |
+| Mikro | \u00b5 | 10\u207b\u2076 | 1 \u00b5g = 0,000001 g |
+| Nano | n | 10\u207b\u2079 | 1 nm = 0,000000001 m |
+
+**Umrechnung:**
+- Von gross nach klein: **multiplizieren** (1 mg = 1000 \u00b5g).
+- Von klein nach gross: **dividieren** (500 \u00b5g = 0,5 mg).
+
+> **Merke:** Zwischen Nachbar-Praefixen liegen immer 3 Zehnerpotenzen (Faktor 1000). 1 mg = 1000 \u00b5g = 1.000.000 ng. Von gross nach klein: multiplizieren. Von klein nach gross: dividieren.
+
+---
+
+## Die Kettenmethode
+
+Wie rechnet man zusammengesetzte Einheiten um (z. B. km/h \u2192 m/s)? Die **Kettenmethode**: Du schreibst Umrechnungsfaktoren als Brueche und die Einheiten kuerzen sich wie Variablen.
+
+**Verfahren:**
+1. Ausgangswert mit Einheit aufschreiben
+2. Umrechnungsfaktoren als Brueche anhaengen
+3. Ungewuenschte Einheiten kuerzen sich weg
+
+**Beispiel 1:** 72 km/h \u2192 ? m/s.
+72 km/h \u00d7 (1000 m / 1 km) \u00d7 (1 h / 3600 s) = 72.000/3600 = **20 m/s**.
+
+**Beispiel 2:** 500 mL/h \u2192 ? L/h.
+500 mL/h \u00d7 (1 L / 1000 mL) = **0,5 L/h**.
+
+**Beispiel 3:** 120 mL/min \u2192 ? L/h.
+120 \u00d7 60 / 1000 = **7,2 L/h**. Zwei Schritte in einer Kette.
+
+> **Merke:** Kettenmethode: Umrechnungsfaktoren als Brueche schreiben, ungewollte Einheiten kuerzen sich weg. Du siehst sofort, ob du multiplizieren oder dividieren musst.
+
+---
+
+## Wichtige Umrechnungen
+
+### mg \u2194 \u00b5g \u2194 ng
+
+- 1 mg = 1000 \u00b5g = 1.000.000 ng
+- 1 \u00b5g = 0,001 mg = 1000 ng
+
+**Beispiel:** 0,25 mg = 0,25 \u00d7 1000 = **250 \u00b5g**.
+
+### Laengen und Flaechen
+
+- 1 km = 1000 m; 1 m = 100 cm = 1000 mm
+- 1 m\u00b2 = 10.000 cm\u00b2 (Achtung: Quadrat des Faktors!)
+
+**Beispiel:** 3,5 m\u00b2 = 3,5 \u00d7 10.000 = **35.000 cm\u00b2**.
+
+### Zeit
+
+- 1 h = 60 min = 3600 s
+- 1 Tag = 24 h = 1440 min
+
+**Beispiel:** 90 min = 90/60 = **1,5 h**.
+
+> **Merke:** Bei Flaecheneinheiten den Faktor quadrieren (1 m = 100 cm, aber 1 m\u00b2 = 10.000 cm\u00b2). Bei Volumen den Faktor hoch 3 nehmen.
+
+---
+
+## Groessenordnungen abschaetzen
+
+Es hilft, typische Groessen im Kopf zu haben:
+
+| Objekt | Groessenordnung |
+|--------|-----------------|
+| Ameise | ca. 1 mm |
+| Muenze (1 Cent) | ca. 16 mm Durchmesser |
+| Mensch | ca. 1,7 m |
+| Fussballfeld | ca. 7000 m\u00b2 |
+| Geschwindigkeit Auto | ca. 50--130 km/h |
+| Lichtgeschwindigkeit | 300.000 km/s |
+
+> **Merke:** Groessenordnungen helfen beim Plausibilitaetscheck: Wenn dein Ergebnis voellig unrealistisch klingt, hast du wahrscheinlich in die falsche Richtung umgerechnet.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 -- Praefixsprung:** 0,35 mg = ? \u00b5g. mg \u2192 \u00b5g = \u00d71000. Also 0,35 \u00d7 1000 = **350 \u00b5g**.
+
+**Beispiel 2 -- Geschwindigkeit:** 108 km/h in m/s: 108 \u00d7 1000 / 3600 = **30 m/s**. Merke: km/h \u00f7 3,6 = m/s.
+
+**Beispiel 3 -- Kette:** 2,5 L/min \u2192 mL/h. 2,5 \u00d7 1000 \u00d7 60 = **150.000 mL/h**. Oder: 2,5 L/min = 2500 mL/min \u00d7 60 = 150.000 mL/h.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- SI-Praefixe: mg, \u00b5g, ng sicher umrechnen (Faktor 1000 je Stufe)
+- Kettenmethode fuer zusammengesetzte Einheiten
+- Flaecheneinheiten: Faktor quadrieren!
+
+**Typische Pruefungsfallen:**
+- Umrechnungsrichtung verwechseln: Von mg zu \u00b5g = \u00d71000 (nicht \u00f71000!)
+- Bei zusammengesetzten Einheiten nur Zaehler oder nur Nenner umrechnen
+- Bei Flaechen/Volumen vergessen, den Faktor zu quadrieren/kubieren
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **SI-Praefixe:** kilo (10\u00b3) \u2192 Basis \u2192 milli (10\u207b\u00b3) \u2192 mikro (10\u207b\u2076) \u2192 nano (10\u207b\u2079); Faktor 1000 je Stufe
+- **Kettenmethode:** Umrechnungsfaktoren als Brueche, Einheiten kuerzen sich
+- **mg \u2194 \u00b5g:** \u00d7 1000 (runter); \u00f7 1000 (rauf)
+- **km/h \u2192 m/s:** \u00f7 3,6; **m/s \u2192 km/h:** \u00d7 3,6
+- **Flaeche:** Faktor quadrieren (1 m\u00b2 = 10.000 cm\u00b2)
+- **Pruefungstipp:** Immer Einheiten mitfuehren -- sie sind dein Fehlerdetektor!`,
+      contentExtended: `## Einleitung
 
 Ein Laborwert von 5,5 mmol/L Glucose -- sind das viel oder wenig? In mg/dL umgerechnet (= 99 mg/dL) sieht man sofort: Normalbereich. Am MedAT-BMS musst du sicher zwischen Einheiten umrechnen koennen -- von mg in \u00b5g, von mmol/L in mg/dL, von mL/min in L/h. Die **Kettenmethode** (Dimensional Analysis) ist dabei dein zuverlaessigstes Werkzeug.
 

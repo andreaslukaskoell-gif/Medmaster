@@ -27,207 +27,273 @@ export const chemKap6: Kapitel = {
       ],
       content: `## Einleitung
 
-Warum steht an jedem Krankenbett ein Beutel mit NaCl-Lösung — und warum löst sich dieses Salz überhaupt so gut in Wasser? Die Antwort führt zur **Ionenbindung**: Natrium übergibt sein Valenzelektron komplett an Chlor, und die entstehenden Na⁺- und Cl⁻-Ionen ordnen sich in einem Kristallgitter an, das durch enorme elektrostatische Kräfte zusammengehalten wird. Diese **Gitterenergie** bestimmt Schmelzpunkt, Härte und Löslichkeit — und erklärt, warum MgO bei 2852 °C schmilzt, während NaCl bereits bei 801 °C flüssig wird.
+Stell dir Kochsalz vor: Wenn du es in Wasser gibst, loest es sich sofort auf. Aber versuch mal, einen Salzkristall zu zerbrechen -- er ist steinhart. Warum? Die Antwort ist die **Ionenbindung**. Natrium gibt ein Elektron komplett an Chlor ab. Dabei entstehen geladene Teilchen (Ionen), die sich gegenseitig anziehen wie Magnete und ein festes Gitter bilden.
 
 **In diesem Kapitel lernst du:**
-- wie die Ionenbindung durch vollständige Elektronenübertragung entsteht und warum Metall-Nichtmetall-Paare besonders stabil sind
-- warum doppelte Ladung und kleinerer Radius die Gitterenergie drastisch erhöhen (Coulomb-Gesetz)
+- wie die Ionenbindung entsteht (Metall gibt Elektronen ab, Nichtmetall nimmt sie auf)
+- warum manche Salze extrem hohe Schmelzpunkte haben (Gitterenergie!)
+- warum Salzkristalle hart aber sproede sind
+- warum Salz in Wasser Strom leitet, als Kristall aber nicht
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+## So entsteht die Ionenbindung
+
+Natrium hat ein einsames Elektron in der aeusseren Schale -- das gibt es gerne ab. Chlor fehlt genau ein Elektron zur vollen Schale -- das nimmt es gerne auf. Ergebnis: Na wird zu Na+ (positiv), Cl wird zu Cl- (negativ). Beide haben jetzt eine stabile Edelgas-Huelle.
+
+{{DIAGRAM:atomic-orbitals}}
+
+Diese Plus- und Minus-Ionen ziehen sich gegenseitig an und ordnen sich in einem regelmaessigen **Kristallgitter** an. Im Kochsalz ist jedes Na+ von 6 Cl- umgeben und umgekehrt.
+
+> **Merke:** Ionenbindung = Metall gibt Elektronen komplett an Nichtmetall ab. Beide erreichen eine volle Aussenschale (Edelgaskonfiguration). Das funktioniert bei grossem Elektronegativitaetsunterschied (groesser als 1,7).
+
+---
+
+## Gitterenergie -- warum manche Salze so stabil sind
+
+Die **Gitterenergie** ist die Energie, die freigesetzt wird, wenn sich die Ionen zum Kristall zusammenfuegen. Je staerker sich die Ionen anziehen, desto hoeher die Gitterenergie und desto hoeher der Schmelzpunkt.
+
+Die Anziehung haengt von zwei Dingen ab (Coulomb-Gesetz):
+- **Ladung**: Doppelte Ladung beider Ionen = 4-fache Gitterenergie (nicht 2-fach! Haeufige Pruefungsfalle)
+- **Groesse**: Kleinere Ionen = staerkere Anziehung
+
+{{DIAGRAM:ionic-bond}}
+
+**Alltagsbeispiel**: NaCl (je 1-fach geladen) schmilzt bei 801 Grad C. MgO (je 2-fach geladen, kleiner) schmilzt erst bei 2852 Grad C -- fast wie Keramik.
+
+---
+
+## Eigenschaften von Salzen
+
+- **Hart aber sproede**: Wenn du mit dem Hammer draufschlaegst, verschieben sich die Ionenschichten. Ploetzlich liegen Plus neben Plus -- sie stossen sich ab und der Kristall bricht
+- **Hohe Schmelzpunkte**: Wegen der starken Gitterenergie
+- **Loeslich in Wasser**: Wasser-Molekuele umhuellen die einzelnen Ionen (Hydratation). NaCl loest sich gut, MgO kaum (Gitterenergie zu gross)
+- **Stromleitung**: Als Kristall = Nichtleiter (Ionen fixiert). In Wasser geloest oder geschmolzen = Leiter (Ionen bewegen sich frei)
+
+> **Merke:** Alkalimetallsalze (Na+, K+) und Nitrate sind IMMER loeslich. Carbonate und Phosphate sind meist unloeslich. BaSO4 ist so unloeslich, dass man es als Roentgenkontrastmittel trinken kann, obwohl Ba2+ giftig ist.
+
+---
+
+## Klinisch wichtige Salze
+
+Dein Blut ist eine Elektrolytloesung. Die wichtigsten Ionen: Na+ (135-145 mmol/L, reguliert Wasserdruck), K+ (3,5-5,0 mmol/L, Herzrhythmus), Ca2+ (2,2-2,6 mmol/L, Knochen und Muskelkontraktion). Wenn diese Werte zu stark abweichen, drohen Herzrhythmusstoerungen oder Muskelkraempfe.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Ionenbindung = Elektronenuebertragung (Metall an Nichtmetall)
+- Gitterenergie: hoehere Ladung + kleinerer Radius = viel groesser
+- Coulomb-Falle: doppelte Ladung BEIDER Ionen = 4-fach (nicht 2-fach!)
+- NaCl-Kristall leitet keinen Strom; geloest in Wasser schon
+- Kationen kleiner als ihre Atome, Anionen groesser
+
+**Typische Fallen:**
+- Gitterenergie und Hydratationsenthalpie sind nicht dasselbe
+- Ionenkristalle sind hart ABER sproede (nicht plastisch verformbar)
+- Kationen schrumpfen, Anionen wachsen -- nicht umgekehrt
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Ionenbindung**: Metall gibt Elektronen an Nichtmetall; beide erreichen Edelgaskonfiguration
+- **Gitterenergie**: hohe Ladung + kleiner Radius = riesige Anziehung (Coulomb)
+- **NaCl**: Schmelzpunkt 801 Grad C, Gitterenergie 786 kJ/mol; **MgO**: 2852 Grad C, 3795 kJ/mol
+- **Eigenschaften**: hart, sproede, hoher Schmelzpunkt, leiten nur geloest/geschmolzen
+- **Loeslichkeit**: Alkalimetallsalze/Nitrate immer loeslich; Carbonate/Phosphate meist unloeslich
+- **Klinisch**: Na+, K+, Ca2+ sind lebensnotwendige Elektrolyte mit engen Normbereichen`,
+      contentExtended: `## Einleitung
+
+Warum steht an jedem Krankenbett ein Beutel mit NaCl-Loesung -- und warum loest sich dieses Salz ueberhaupt so gut in Wasser? Die Antwort fuehrt zur **Ionenbindung**: Natrium uebergibt sein Valenzelektron komplett an Chlor, und die entstehenden Na+- und Cl--Ionen ordnen sich in einem Kristallgitter an, das durch enorme elektrostatische Kraefte zusammengehalten wird. Diese **Gitterenergie** bestimmt Schmelzpunkt, Haerte und Loeslichkeit -- und erklaert, warum MgO bei 2852 Grad C schmilzt, waehrend NaCl bereits bei 801 Grad C fluessig wird.
+
+**In diesem Kapitel lernst du:**
+- wie die Ionenbindung durch vollstaendige Elektronenuebertragung entsteht und warum Metall-Nichtmetall-Paare besonders stabil sind
+- warum doppelte Ladung und kleinerer Radius die Gitterenergie drastisch erhoehen (Coulomb-Gesetz)
 - wie der Born-Haber-Kreisprozess die Gitterenergie indirekt berechnet
-- warum Ionenkristalle hart, aber spröde sind und erst in Lösung oder Schmelze Strom leiten
+- warum Ionenkristalle hart, aber sproede sind und erst in Loesung oder Schmelze Strom leiten
 
 ---
 
 ## Entstehung der Ionenbindung
 
-Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollständige **Elektronenübertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitäten und nehmen Elektronen bereitwillig auf. Die Elektronegativitätsdifferenz (ΔEN) zwischen den Bindungspartnern beträgt typischerweise > 1,7 auf der Pauling-Skala.
+Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollstaendige **Elektronenuebertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitaeten und nehmen Elektronen bereitwillig auf. Die Elektronegativitaetsdifferenz (Delta-EN) zwischen den Bindungspartnern betraegt typischerweise > 1,7 auf der Pauling-Skala.
 
 **Beispiel NaCl:**
-Na (2-8-1) + Cl (2-8-7) → Na⁺ (2-8) + Cl⁻ (2-8-8)
+Na (2-8-1) + Cl (2-8-7) -> Na+ (2-8) + Cl- (2-8-8)
 
-Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na⁺-Kation; Chlor nimmt dieses Elektron auf und wird zum Cl⁻-Anion. Beide besitzen nun die Elektronenkonfiguration von Edelgasen (Neon bzw. Argon).
+Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nimmt dieses Elektron auf und wird zum Cl--Anion. Beide besitzen nun die Elektronenkonfiguration von Edelgasen (Neon bzw. Argon).
 
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
 {{DIAGRAM:periodic-table}}
 
 **Weitere Beispiele:**
-- **MgCl₂:** Mg gibt 2 Elektronen ab → Mg²⁺ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf → 2 Cl⁻ (Ar-Konfiguration)
-- **CaO:** Ca gibt 2 Elektronen ab → Ca²⁺; O nimmt 2 Elektronen auf → O²⁻ — beide erreichen die Ar- bzw. Ne-Konfiguration
-- **Al₂O₃:** Aluminium gibt 3 Elektronen ab → Al³⁺; hohe Ladung → extrem hohe Gitterenergie → Schmelzpunkt 2072 °C
+- **MgCl2:** Mg gibt 2 Elektronen ab -> Mg2+ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf -> 2 Cl- (Ar-Konfiguration)
+- **CaO:** Ca gibt 2 Elektronen ab -> Ca2+; O nimmt 2 Elektronen auf -> O2- -- beide erreichen die Ar- bzw. Ne-Konfiguration
+- **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 Grad C
 
 {{DIAGRAM:atomic-orbitals}}
 
 ## Born-Haber-Kreisprozess und Gitterenergie
 
-Die **Gitterenergie** U ist die Energie, die freigesetzt wird, wenn gasförmige Ionen zu einem Ionenkristall zusammentreten. Sie ist der entscheidende Energiebeitrag bei der Ionenbindung und kann experimentell nicht direkt gemessen werden. Im Born-Haber-Kreisprozess wird die Bildungsenthalpie einer Ionenverbindung schrittweise aus messbaren Teilenthalpien berechnet:
+Die **Gitterenergie** U ist die Energie, die freigesetzt wird, wenn gasfoermige Ionen zu einem Ionenkristall zusammentreten. Sie ist der entscheidende Energiebeitrag bei der Ionenbindung und kann experimentell nicht direkt gemessen werden. Im Born-Haber-Kreisprozess wird die Bildungsenthalpie einer Ionenverbindung schrittweise aus messbaren Teilenthalpien berechnet:
 
-1. Sublimationsenergie des Metalls (endotherm): Na(s) → Na(g), ΔH = +107 kJ/mol
-2. Ionisierungsenergie des Metalls (endotherm): Na(g) → Na⁺(g) + e⁻, ΔH = +496 kJ/mol
-3. Bindungsenergie des Nichtmetalls (endotherm): ½ Cl₂(g) → Cl(g), ΔH = +122 kJ/mol
-4. Elektronenaffinität des Nichtmetalls (exotherm): Cl(g) + e⁻ → Cl⁻(g), ΔH = −349 kJ/mol
-5. **Gitterenergie** (stark exotherm): Na⁺(g) + Cl⁻(g) → NaCl(s), ΔH = −786 kJ/mol
+1. Sublimationsenergie des Metalls (endotherm): Na(s) -> Na(g), Delta-H = +107 kJ/mol
+2. Ionisierungsenergie des Metalls (endotherm): Na(g) -> Na+(g) + e-, Delta-H = +496 kJ/mol
+3. Bindungsenergie des Nichtmetalls (endotherm): 1/2 Cl2(g) -> Cl(g), Delta-H = +122 kJ/mol
+4. Elektronenaffinitaet des Nichtmetalls (exotherm): Cl(g) + e- -> Cl-(g), Delta-H = -349 kJ/mol
+5. **Gitterenergie** (stark exotherm): Na+(g) + Cl-(g) -> NaCl(s), Delta-H = -786 kJ/mol
 
-Die Summe aller Teilschritte ergibt die Bildungsenthalpie: ΔHf(NaCl) = −411 kJ/mol. Die Gitterenergie dominiert als größter exothermer Term und macht die Gesamtreaktion thermodynamisch günstig.
+Die Summe aller Teilschritte ergibt die Bildungsenthalpie: Delta-Hf(NaCl) = -411 kJ/mol. Die Gitterenergie dominiert als groesster exothermer Term und macht die Gesamtreaktion thermodynamisch guenstig.
 
-Je kleiner der Ionenradius und je höher die Ladung der Ionen, desto größer die Gitterenergie. Das **Coulombsche Gesetz** beschreibt die elektrostatische Kraft zwischen zwei Punktladungen:
+Je kleiner der Ionenradius und je hoeher die Ladung der Ionen, desto groesser die Gitterenergie. Das **Coulombsche Gesetz** beschreibt die elektrostatische Kraft zwischen zwei Punktladungen:
 
-**F = k · (q₁ · q₂) / r²**
+**F = k * (q1 * q2) / r2**
 
-wobei k die Coulomb-Konstante (8,99 × 10⁹ N·m²/C²), q₁ und q₂ die Ladungen und r der Abstand ist. Die Gitterenergie ist proportional zu q₁·q₂/r. Daraus folgt:
+wobei k die Coulomb-Konstante (8,99 * 10 hoch 9 N*m2/C2), q1 und q2 die Ladungen und r der Abstand ist. Die Gitterenergie ist proportional zu q1*q2/r. Daraus folgt:
 
-- **Verdoppelung der Ladung beider Ionen** → Gitterenergie **4× größer** (nicht 2×!) → Typische Prüfungsfalle!
-- **Halbierung des Ionenabstands** → Gitterenergie **2× größer**
-- **MgO vs. NaCl:** Mg²⁺·O²⁻ = 4 Ladungseinheiten² vs. Na⁺·Cl⁻ = 1 → allein durch Ladung 4× stärker; zusätzlich kleinere Radien → Faktor ~5 insgesamt
+- **Verdoppelung der Ladung beider Ionen** -> Gitterenergie **4x groesser** (nicht 2x!) -> Typische Pruefungsfalle!
+- **Halbierung des Ionenabstands** -> Gitterenergie **2x groesser**
+- **MgO vs. NaCl:** Mg2+*O2- = 4 Ladungseinheiten2 vs. Na+*Cl- = 1 -> allein durch Ladung 4x staerker; zusaetzlich kleinere Radien -> Faktor ~5 insgesamt
 
 {{DIAGRAM:ionic-bond}}
 
-| Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
+| Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (Grad C) | Begruendung |
 |---|---|---|---|
-| NaCl | −786 | 801 | Einfach geladen, mittlere Radien |
-| MgO | −3795 | 2852 | Doppelt geladen, kleine Radien |
-| CaF₂ | −2630 | 1418 | Ca²⁺ doppelt geladen, F⁻ sehr klein |
-| LiF | −1037 | 845 | Kleinste Ionen bei Einfachladung |
-| KBr | −682 | 734 | Größere Ionen → geringere Gitterenergie |
+| NaCl | -786 | 801 | Einfach geladen, mittlere Radien |
+| MgO | -3795 | 2852 | Doppelt geladen, kleine Radien |
+| CaF2 | -2630 | 1418 | Ca2+ doppelt geladen, F- sehr klein |
+| LiF | -1037 | 845 | Kleinste Ionen bei Einfachladung |
+| KBr | -682 | 734 | Groessere Ionen -> geringere Gitterenergie |
 
-## Ionenradien — Trends und Bedeutung
+## Ionenradien -- Trends und Bedeutung
 
-Der **Ionenradius** ist ein zentraler Parameter für Gitterenergie, Koordination und Löslichkeit. Wichtige Trends im Periodensystem:
+Der **Ionenradius** ist ein zentraler Parameter fuer Gitterenergie, Koordination und Loeslichkeit. Wichtige Trends im Periodensystem:
 
-- **Kationen sind kleiner als ihre Atome:** Elektronenverlust → weniger Elektronenschalen oder gleiche Schale mit weniger Elektronen → stärkere effektive Kernladung → Kontraktion. Beispiel: Na (186 pm) → Na⁺ (102 pm); Mg (160 pm) → Mg²⁺ (72 pm)
-- **Anionen sind größer als ihre Atome:** Elektronengewinn → zusätzliche Abstoßung → Expansion. Beispiel: Cl (99 pm) → Cl⁻ (181 pm); O (60 pm) → O²⁻ (140 pm)
-- **Innerhalb einer Gruppe (PSE abwärts):** Ionenradien nehmen zu (zusätzliche Schalen). Li⁺ (76 pm) < Na⁺ (102 pm) < K⁺ (138 pm) < Rb⁺ (152 pm) < Cs⁺ (167 pm)
-- **Innerhalb einer Periode (links → rechts):** Kationenradien nehmen ab bei gleicher Ladung (steigende Kernladung). Na⁺ (102 pm) > Mg²⁺ (72 pm) > Al³⁺ (53,5 pm)
-- **Höhere Ladung → kleinerer Radius:** Fe²⁺ (78 pm) > Fe³⁺ (64,5 pm); Mn²⁺ (83 pm) > Mn⁴⁺ (53 pm)
+- **Kationen sind kleiner als ihre Atome:** Elektronenverlust -> weniger Elektronenschalen oder gleiche Schale mit weniger Elektronen -> staerkere effektive Kernladung -> Kontraktion. Beispiel: Na (186 pm) -> Na+ (102 pm); Mg (160 pm) -> Mg2+ (72 pm)
+- **Anionen sind groesser als ihre Atome:** Elektronengewinn -> zusaetzliche Abstossung -> Expansion. Beispiel: Cl (99 pm) -> Cl- (181 pm); O (60 pm) -> O2- (140 pm)
+- **Innerhalb einer Gruppe (PSE abwaerts):** Ionenradien nehmen zu (zusaetzliche Schalen). Li+ (76 pm) < Na+ (102 pm) < K+ (138 pm) < Rb+ (152 pm) < Cs+ (167 pm)
+- **Innerhalb einer Periode (links -> rechts):** Kationenradien nehmen ab bei gleicher Ladung (steigende Kernladung). Na+ (102 pm) > Mg2+ (72 pm) > Al3+ (53,5 pm)
+- **Hoehere Ladung -> kleinerer Radius:** Fe2+ (78 pm) > Fe3+ (64,5 pm); Mn2+ (83 pm) > Mn4+ (53 pm)
 
 | Ion | Radius (pm) | Edelgaskonfiguration | Ladung |
 |---|---|---|---|
-| Li⁺ | 76 | He | +1 |
-| Na⁺ | 102 | Ne | +1 |
-| K⁺ | 138 | Ar | +1 |
-| Mg²⁺ | 72 | Ne | +2 |
-| Ca²⁺ | 100 | Ar | +2 |
-| Al³⁺ | 53,5 | Ne | +3 |
-| F⁻ | 133 | Ne | −1 |
-| Cl⁻ | 181 | Ar | −1 |
-| O²⁻ | 140 | Ne | −2 |
-| S²⁻ | 184 | Ar | −2 |
+| Li+ | 76 | He | +1 |
+| Na+ | 102 | Ne | +1 |
+| K+ | 138 | Ar | +1 |
+| Mg2+ | 72 | Ne | +2 |
+| Ca2+ | 100 | Ar | +2 |
+| Al3+ | 53,5 | Ne | +3 |
+| F- | 133 | Ne | -1 |
+| Cl- | 181 | Ar | -1 |
+| O2- | 140 | Ne | -2 |
+| S2- | 184 | Ar | -2 |
 
-> **Merke:** Kationen schrumpfen (Elektronenverlust → weniger Abstoßung), Anionen wachsen (Elektronengewinn → mehr Abstoßung). Diese Radienunterschiede bestimmen direkt die Gitterenergie (Coulomb: E ∝ 1/r) und die Koordinationszahl im Kristall.
+> **Merke:** Kationen schrumpfen (Elektronenverlust -> weniger Abstossung), Anionen wachsen (Elektronengewinn -> mehr Abstossung). Diese Radienunterschiede bestimmen direkt die Gitterenergie (Coulomb: E proportional 1/r) und die Koordinationszahl im Kristall.
 
-**Isoelektronische Reihen** (gleiche Elektronenzahl, verschiedene Kernladung): O²⁻ (140 pm) > F⁻ (133 pm) > Ne (keine Ionenform) > Na⁺ (102 pm) > Mg²⁺ (72 pm) > Al³⁺ (53,5 pm). Je höher die Kernladungszahl bei gleicher Elektronenzahl, desto kleiner der Radius — die steigende Kernladung zieht die Elektronen stärker an.
+**Isoelektronische Reihen** (gleiche Elektronenzahl, verschiedene Kernladung): O2- (140 pm) > F- (133 pm) > Ne (keine Ionenform) > Na+ (102 pm) > Mg2+ (72 pm) > Al3+ (53,5 pm). Je hoeher die Kernladungszahl bei gleicher Elektronenzahl, desto kleiner der Radius -- die steigende Kernladung zieht die Elektronen staerker an.
 
 ---
 
 ## Struktur des Ionenkristalls
 
-Ionenverbindungen bilden **Ionengitter** mit regelmäßiger, periodischer Anordnung. Im **NaCl-Gitter** (kubisch-flächenzentriert) ist jedes Na⁺ von 6 Cl⁻ umgeben und umgekehrt — Koordinationszahl 6. Im CsCl-Gitter (kubisch-raumzentriert) beträgt die Koordinationszahl 8 (größere Ionen passen besser).
+Ionenverbindungen bilden **Ionengitter** mit regelmaessiger, periodischer Anordnung. Im **NaCl-Gitter** (kubisch-flaechenzentriert) ist jedes Na+ von 6 Cl- umgeben und umgekehrt -- Koordinationszahl 6. Im CsCl-Gitter (kubisch-raumzentriert) betraegt die Koordinationszahl 8 (groessere Ionen passen besser).
 
-Die Packungsgeometrie hängt vom **Radienverhältnis** r⁺/r⁻ ab:
-- r⁺/r⁻ < 0,41 → tetraedrische Koordination (Zinkblende-Typ, KZ = 4)
-- 0,41–0,73 → oktaedrische Koordination (NaCl-Typ, KZ = 6)
-- \\> 0,73 → kubische Koordination (CsCl-Typ, KZ = 8)
+Die Packungsgeometrie haengt vom **Radienverhältnis** r+/r- ab:
+- r+/r- < 0,41 -> tetraedrische Koordination (Zinkblende-Typ, KZ = 4)
+- 0,41-0,73 -> oktaedrische Koordination (NaCl-Typ, KZ = 6)
+- > 0,73 -> kubische Koordination (CsCl-Typ, KZ = 8)
 
-| Gittertyp | Koordinationszahl | Radienverhältnis r⁺/r⁻ | Madelung-Konstante | Beispiele |
+| Gittertyp | Koordinationszahl | Radienverhältnis r+/r- | Madelung-Konstante | Beispiele |
 |---|---|---|---|---|
 | Zinkblende (ZnS) | 4 | < 0,41 | 1,638 | ZnS, CuCl |
-| NaCl | 6 | 0,41–0,73 | 1,748 | NaCl, MgO, LiF, KBr |
-| CsCl | 8 | > 0,73 | 1,763 | CsCl, CsBr, NH₄Cl |
-| Fluorit (CaF₂) | 8 (Ca²⁺) / 4 (F⁻) | — | 2,519 | CaF₂, BaF₂, UO₂ |
+| NaCl | 6 | 0,41-0,73 | 1,748 | NaCl, MgO, LiF, KBr |
+| CsCl | 8 | > 0,73 | 1,763 | CsCl, CsBr, NH4Cl |
+| Fluorit (CaF2) | 8 (Ca2+) / 4 (F-) | -- | 2,519 | CaF2, BaF2, UO2 |
 
-Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gitter und geht als Faktor in die Berechnung der Gitterenergie nach Born-Landé ein. Sie ist für jeden Gittertyp charakteristisch.
+Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gitter und geht als Faktor in die Berechnung der Gitterenergie nach Born-Lande ein. Sie ist fuer jeden Gittertyp charakteristisch.
 
-> **Merke:** Höhere Koordinationszahlen bedeuten mehr nächste Nachbarn und tendenziell höhere Gitterenergie — allerdings nur, wenn das Radienverhältnis die entsprechende Koordination erlaubt. Das Radienverhältnis bestimmt die Kristallstruktur.
+> **Merke:** Hoehere Koordinationszahlen bedeuten mehr naechste Nachbarn und tendenziell hoehere Gitterenergie -- allerdings nur, wenn das Radienverhaeltnis die entsprechende Koordination erlaubt. Das Radienverhaeltnis bestimmt die Kristallstruktur.
 
 ## Eigenschaften ionischer Verbindungen
 
-**Hohe Schmelz- und Siedepunkte:** Die Gitterenergie muss vollständig überwunden werden. NaCl schmilzt bei 801 °C, MgO erst bei 2852 °C (höhere Gitterenergie). Zum Vergleich: Molekulare Verbindungen wie Wasser (0/100 °C) oder Ethanol (−114/78 °C) haben wesentlich niedrigere Werte, da dort nur schwache intermolekulare Kräfte überwunden werden müssen.
+**Hohe Schmelz- und Siedepunkte:** Die Gitterenergie muss vollstaendig ueberwunden werden. NaCl schmilzt bei 801 Grad C, MgO erst bei 2852 Grad C (hoehere Gitterenergie). Zum Vergleich: Molekulare Verbindungen wie Wasser (0/100 Grad C) oder Ethanol (-114/78 Grad C) haben wesentlich niedrigere Werte, da dort nur schwache intermolekulare Kraefte ueberwunden werden muessen.
 
-**Sprödigkeit:** Werden die Ionen durch mechanische Einwirkung verschoben, kommen gleichnamig geladene Ionen nebeneinander zu liegen → elektrostatische Abstoßung → Bruch. Ionenkristalle lassen sich nicht plastisch verformen (im Gegensatz zu Metallen, wo das Elektronengas ein Gleiten der Schichten erlaubt).
+**Sproedigkeit:** Werden die Ionen durch mechanische Einwirkung verschoben, kommen gleichnamig geladene Ionen nebeneinander zu liegen -> elektrostatische Abstossung -> Bruch. Ionenkristalle lassen sich nicht plastisch verformen (im Gegensatz zu Metallen, wo das Elektronengas ein Gleiten der Schichten erlaubt).
 
-**Löslichkeit in Wasser:** Polare Wassermoleküle umhüllen die Ionen (Hydratation/Solvatation). Die **Hydratationsenthalpie** muss die Gitterenergie überwiegen, damit sich die Verbindung löst. NaCl: Gitterenergie 786 kJ/mol, Hydratationsenthalpie 783 kJ/mol → löslich (leicht endotherm, wird durch Entropiegewinn der frei werdenden Ionen kompensiert). MgO: kaum löslich (sehr hohe Gitterenergie übersteigt Hydratationsenthalpie bei Weitem).
+**Loeslichkeit in Wasser:** Polare Wassermolekuele umhuellen die Ionen (Hydratation/Solvatation). Die **Hydratationsenthalpie** muss die Gitterenergie ueberwiegen, damit sich die Verbindung loest. NaCl: Gitterenergie 786 kJ/mol, Hydratationsenthalpie 783 kJ/mol -> loeslich (leicht endotherm, wird durch Entropiegewinn der frei werdenden Ionen kompensiert). MgO: kaum loeslich (sehr hohe Gitterenergie uebersteigt Hydratationsenthalpie bei Weitem).
 
-**Elektrische Leitfähigkeit:** Ionenkristalle leiten im Festzustand **nicht** (Ionen fixiert). Im geschmolzenen Zustand oder in wässriger Lösung bewegen sich Ionen frei → Elektrolyte leiten Strom. Man unterscheidet starke Elektrolyte (vollständige Dissoziation, z. B. NaCl, HCl) und schwache Elektrolyte (teilweise Dissoziation, z. B. CH₃COOH). Wichtig für Biologie: Körperflüssigkeiten sind Elektrolytlösungen.
+**Elektrische Leitfaehigkeit:** Ionenkristalle leiten im Festzustand **nicht** (Ionen fixiert). Im geschmolzenen Zustand oder in waessriger Loesung bewegen sich Ionen frei -> Elektrolyte leiten Strom. Man unterscheidet starke Elektrolyte (vollstaendige Dissoziation, z. B. NaCl, HCl) und schwache Elektrolyte (teilweise Dissoziation, z. B. CH3COOH). Wichtig fuer Biologie: Koerperfluessigkeiten sind Elektrolytloesungen.
 
-**Bildung von Kristallwasser:** Viele Ionenverbindungen lagern Wassermoleküle in ihre Gitterstruktur ein (Hydrate), z. B. CuSO₄·5H₂O (blau) vs. wasserfreies CuSO₄ (weiß). Das Kristallwasser stabilisiert das Gitter zusätzlich durch Koordination an die Kationen.
+**Loeslichkeitsregeln fuer Ionenverbindungen (pruefungsrelevant):**
 
-**Löslichkeitsregeln für Ionenverbindungen (prüfungsrelevant):**
-
-| Regel | Löslich | Schwerlöslich/Unlöslich |
+| Regel | Loeslich | Schwerloeslich/Unloeslich |
 |---|---|---|
-| Alkalimetall-Salze (Na⁺, K⁺) | Immer löslich | — |
-| Ammonium-Salze (NH₄⁺) | Immer löslich | — |
-| Nitrate (NO₃⁻) | Immer löslich | — |
-| Chloride (Cl⁻) | Meistens löslich | AgCl, PbCl₂, Hg₂Cl₂ |
-| Sulfate (SO₄²⁻) | Meistens löslich | BaSO₄, PbSO₄, CaSO₄ (wenig) |
-| Carbonate (CO₃²⁻) | Nur mit Na⁺, K⁺, NH₄⁺ | CaCO₃, BaCO₃, MgCO₃ |
-| Hydroxide (OH⁻) | NaOH, KOH, Ca(OH)₂ (wenig) | Mg(OH)₂, Fe(OH)₃, Al(OH)₃ |
-| Phosphate (PO₄³⁻) | Nur mit Na⁺, K⁺, NH₄⁺ | Ca₃(PO₄)₂ (Knochen!), FePO₄ |
+| Alkalimetall-Salze (Na+, K+) | Immer loeslich | -- |
+| Ammonium-Salze (NH4+) | Immer loeslich | -- |
+| Nitrate (NO3-) | Immer loeslich | -- |
+| Chloride (Cl-) | Meistens loeslich | AgCl, PbCl2, Hg2Cl2 |
+| Sulfate (SO42-) | Meistens loeslich | BaSO4, PbSO4, CaSO4 (wenig) |
+| Carbonate (CO32-) | Nur mit Na+, K+, NH4+ | CaCO3, BaCO3, MgCO3 |
+| Hydroxide (OH-) | NaOH, KOH, Ca(OH)2 (wenig) | Mg(OH)2, Fe(OH)3, Al(OH)3 |
+| Phosphate (PO43-) | Nur mit Na+, K+, NH4+ | Ca3(PO4)2 (Knochen!), FePO4 |
 
-> **Merke:** Alkalimetallsalze und Nitrate sind IMMER löslich. Carbonate und Phosphate sind meist unlöslich (Ausnahme: Na⁺, K⁺, NH₄⁺). BaSO₄ ist unlöslich → Röntgenkontrastmittel. AgCl ist unlöslich → Credé-Prophylaxe nutzt dies therapeutisch.
+> **Merke:** Alkalimetallsalze und Nitrate sind IMMER loeslich. Carbonate und Phosphate sind meist unloeslich (Ausnahme: Na+, K+, NH4+). BaSO4 ist unloeslich -> Roentgenkontrastmittel. AgCl ist unloeslich.
 
 ## Klinisch relevante Ionenverbindungen
 
-- **NaCl (Natriumchlorid):** physiologische Kochsalzlösung (0,9 %), Osmolalitätsregulation, Infusionstherapie
-- **KCl (Kaliumchlorid):** Elektrolytsubstitution, Herzrhythmus (Hypokaliämie → Arrhythmie)
-- **CaCO₃ (Calciumcarbonat):** Knochensubstanz (mit Hydroxylapatit), Antazidum, Phosphatbinder bei Niereninsuffizienz
-- **MgO/Mg(OH)₂:** Antazidum, Laxans; Mg²⁺ wichtig als Cofaktor für >300 Enzyme
-- **CaF₂ (Calciumfluorid):** Zahnschmelzstruktur; Fluorid-Ionen ersetzen OH⁻ im Hydroxylapatit → stabileres Fluorapatit
-- **FeSO₄ (Eisensulfat):** Eisen(II)-Supplement bei Eisenmangelanämie
-- **BaSO₄ (Bariumsulfat):** Röntgenkontrastmittel (extrem geringe Löslichkeit → nicht resorbiert, ungiftig trotz toxischer Ba²⁺-Ionen)
-- **AgNO₃ (Silbernitrat):** Credé-Prophylaxe (historisch), antimikrobielle Wirkung
+- **NaCl (Natriumchlorid):** physiologische Kochsalzloesung (0,9 %), Osmolalitaetsregulation, Infusionstherapie
+- **KCl (Kaliumchlorid):** Elektrolytsubstitution, Herzrhythmus (Hypokaliamie -> Arrhythmie)
+- **CaCO3 (Calciumcarbonat):** Knochensubstanz (mit Hydroxylapatit), Antazidum
+- **BaSO4 (Bariumsulfat):** Roentgenkontrastmittel (extrem geringe Loeslichkeit -> nicht resorbiert, ungiftig trotz toxischer Ba2+-Ionen)
 
-> **Merke:** NaCl, KCl, CaCl₂ → gut löslich (mittlere Gitterenergie); MgO, Al₂O₃ → kaum löslich (extrem hohe Gitterenergie, hohe Ionenladungen). Klinisch: Na⁺, K⁺, Ca²⁺, Cl⁻ sind essentielle Elektrolyte mit engen Normalbereichen.
+**Elektrolyt-Normwerte im Blutplasma:**
 
-**Elektrolyt-Normwerte im Blutplasma (prüfungsrelevant):**
-
-| Elektrolyt | Normalbereich | Funktion | Störung bei Mangel |
+| Elektrolyt | Normalbereich | Funktion | Stoerung bei Mangel |
 |---|---|---|---|
-| Na⁺ | 135–145 mmol/L | Osmotischer Druck, Nervenleitung | Hyponatriämie: Hirnödem, Verwirrtheit |
-| K⁺ | 3,5–5,0 mmol/L | Membranpotenzial, Herzrhythmus | Hypokaliämie: Arrhythmie, Muskelschwäche |
-| Ca²⁺ | 2,2–2,6 mmol/L (gesamt) | Knochen, Gerinnung, Muskelkontraktion | Hypokalzämie: Tetanie, Krämpfe |
-| Mg²⁺ | 0,7–1,0 mmol/L | Enzym-Cofaktor (>300 Enzyme), ATP-Bindung | Hypomagnesiämie: Arrhythmie, Tremor |
-| Cl⁻ | 96–106 mmol/L | Säure-Base-Haushalt, Osmolalität | Hypochlorämie: metabol. Alkalose |
-| HCO₃⁻ | 22–26 mmol/L | Puffersystem (CO₂/HCO₃⁻) | Azidose/Alkalose |
-| PO₄³⁻ | 0,8–1,5 mmol/L | ATP, DNA, Knochen (Hydroxylapatit) | Hypophosphatämie: Muskelschwäche |
+| Na+ | 135-145 mmol/L | Osmotischer Druck, Nervenleitung | Hyponatriaemie: Hirnoedem |
+| K+ | 3,5-5,0 mmol/L | Membranpotenzial, Herzrhythmus | Hypokaliamie: Arrhythmie |
+| Ca2+ | 2,2-2,6 mmol/L | Knochen, Gerinnung, Muskelkontraktion | Hypocalcaemie: Tetanie |
+| Mg2+ | 0,7-1,0 mmol/L | Enzym-Cofaktor (>300 Enzyme) | Hypomagnesiamie: Tremor |
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Warum hat MgO einen viel höheren Schmelzpunkt als NaCl? → Doppelte Ladung beider Ionen + kleinerer Radius → ~5x größere Gitterenergie
-- Warum leitet NaCl-Kristall keinen Strom? → Ionen sind im Gitter fixiert; erst in Lösung oder Schmelze frei beweglich
-- Welcher Schritt im Born-Haber-Kreisprozess ist am stärksten exotherm? → Gitterenergie (Zusammentritt der Ionen zum Kristall)
-- Welches Ion ist größer: Na⁺ oder Cl⁻? → Cl⁻ (181 pm vs. 102 pm) — Anionen sind immer größer als Kationen gleicher Periode
-- Warum ist BaSO₄ ein sicheres Kontrastmittel? → Extrem geringe Löslichkeit → Ba²⁺ wird nicht resorbiert → ungiftig trotz toxischer Ba²⁺-Ionen
-- Isoelektronische Reihe O²⁻, F⁻, Na⁺, Mg²⁺ — welches Ion ist am kleinsten? → Mg²⁺ (höchste Kernladung bei gleicher Elektronenzahl)
+**Typische Pruefungsfragen:**
+- Warum hat MgO einen viel hoeheren Schmelzpunkt als NaCl? -> Doppelte Ladung beider Ionen + kleinerer Radius -> ~5x groessere Gitterenergie
+- Warum leitet NaCl-Kristall keinen Strom? -> Ionen sind im Gitter fixiert; erst in Loesung oder Schmelze frei beweglich
+- Welcher Schritt im Born-Haber-Kreisprozess ist am staerksten exotherm? -> Gitterenergie (Zusammentritt der Ionen zum Kristall)
+- Welches Ion ist groesser: Na+ oder Cl-? -> Cl- (181 pm vs. 102 pm) -- Anionen sind immer groesser als Kationen gleicher Periode
 
 **Typische Fallen:**
-- Gitterenergie ist nicht Hydratationsenthalpie — für Löslichkeit müssen beide bilanziert werden
-- Ionenkristalle sind hart, aber spröde (nicht weil sie schwach gebunden sind, sondern weil gleichnamige Ladungen sich abstoßen)
-- Coulomb: Verdoppelt man die Ladung beider Ionen, wird E 4x größer (nicht 2x) — häufiger Rechenfehler!
-- Kationen sind KLEINER als ihre Atome, Anionen GRÖSSER — nicht umgekehrt!
-- Isoelektronische Ionen: höhere Kernladung = kleinerer Radius (nicht größerer!)
-- NaCl löst sich in Wasser nur weil ΔS > 0 (Entropiegewinn) die leicht endotherme Enthalpie kompensiert
+- Gitterenergie ist nicht Hydratationsenthalpie -- fuer Loeslichkeit muessen beide bilanziert werden
+- Ionenkristalle sind hart, aber sproede (nicht weil sie schwach gebunden sind, sondern weil gleichnamige Ladungen sich abstossen)
+- Coulomb: Verdoppelt man die Ladung beider Ionen, wird E 4x groesser (nicht 2x) -- haeufiger Rechenfehler!
+- Kationen sind KLEINER als ihre Atome, Anionen GROESSER -- nicht umgekehrt!
 
-**Prüfungsrelevante Zahlen:**
-- NaCl: Gitterenergie −786 kJ/mol, Schmelzpunkt 801 °C, KZ 6
-- MgO: Gitterenergie −3795 kJ/mol, Schmelzpunkt 2852 °C, KZ 6
-- Ionenradien: Na⁺ = 102 pm, Cl⁻ = 181 pm, Mg²⁺ = 72 pm, O²⁻ = 140 pm
-- Elektrolyte: Na⁺ 135–145, K⁺ 3,5–5,0, Ca²⁺ 2,2–2,6 mmol/L
+**Pruefungsrelevante Zahlen:**
+- NaCl: Gitterenergie -786 kJ/mol, Schmelzpunkt 801 Grad C, KZ 6
+- MgO: Gitterenergie -3795 kJ/mol, Schmelzpunkt 2852 Grad C, KZ 6
+- Ionenradien: Na+ = 102 pm, Cl- = 181 pm, Mg2+ = 72 pm, O2- = 140 pm
+- Elektrolyte: Na+ 135-145, K+ 3,5-5,0, Ca2+ 2,2-2,6 mmol/L
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Ionenbindung**: vollständige Elektronenübertragung Metall → Nichtmetall; beide erreichen Edelgaskonfiguration
-- **Triebkraft**: Gitterenergie überwiegt Ionisierungsenergie + Elektronenaffinität → Reaktion exotherm
-- **Coulomb-Gesetz**: F ∝ q₁·q₂/r²; Gitterenergie ∝ q₁·q₂/r → hohe Ladung + kleiner Radius → riesige Gitterenergie
+- **Ionenbindung**: vollstaendige Elektronenuebertragung Metall -> Nichtmetall; beide erreichen Edelgaskonfiguration
+- **Triebkraft**: Gitterenergie ueberwiegt Ionisierungsenergie + Elektronenaffinitaet -> Reaktion exotherm
+- **Coulomb-Gesetz**: F proportional q1*q2/r2; Gitterenergie proportional q1*q2/r -> hohe Ladung + kleiner Radius -> riesige Gitterenergie
 - **Born-Haber-Kreisprozess**: indirekte Berechnung der Gitterenergie aus messbaren Enthalpien (5 Teilschritte)
-- **Ionenradien**: Kationen < Atome (Elektronenverlust → Kontraktion); Anionen > Atome (Elektronengewinn → Expansion)
-- **Isoelektronische Reihe**: gleiche Elektronenzahl → höhere Kernladung = kleinerer Radius (O²⁻ > F⁻ > Na⁺ > Mg²⁺ > Al³⁺)
-- **Koordinationszahl**: r⁺/r⁻ bestimmt KZ (< 0,41 → KZ 4; 0,41–0,73 → KZ 6; > 0,73 → KZ 8)
-- **Eigenschaften**: hohe Schmelzpunkte, spröde, im Festzustand Nichtleiter; in Lösung → Elektrolyte leiten Strom
-- **Löslichkeit**: Hydratationsenthalpie muss Gitterenergie kompensieren; Alkalimetallsalze/Nitrate immer löslich
-- **Klinisch**: Na⁺, K⁺, Ca²⁺, Cl⁻ sind essentielle Elektrolyte; Imbalancen → Arrhythmie, Muskelkrämpfe, Tetanie`,
+- **Ionenradien**: Kationen < Atome (Elektronenverlust -> Kontraktion); Anionen > Atome (Elektronengewinn -> Expansion)
+- **Isoelektronische Reihe**: gleiche Elektronenzahl -> hoehere Kernladung = kleinerer Radius (O2- > F- > Na+ > Mg2+ > Al3+)
+- **Koordinationszahl**: r+/r- bestimmt KZ (< 0,41 -> KZ 4; 0,41-0,73 -> KZ 6; > 0,73 -> KZ 8)
+- **Eigenschaften**: hohe Schmelzpunkte, sproede, im Festzustand Nichtleiter; in Loesung -> Elektrolyte leiten Strom
+- **Loeslichkeit**: Hydratationsenthalpie muss Gitterenergie kompensieren; Alkalimetallsalze/Nitrate immer loeslich
+- **Klinisch**: Na+, K+, Ca2+, Cl- sind essentielle Elektrolyte; Imbalancen -> Arrhythmie, Muskelkraempfe, Tetanie`,
 
       lernziele: [
         "Die Entstehung der Ionenbindung durch Elektronenübertragung und die Rolle der Edelgaskonfiguration erklären können.",
@@ -467,13 +533,128 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Einleitung
 
-CO₂ hat zwei stark polare C=O-Bindungen — trotzdem ist das Molekül insgesamt unpolar. H₂O hat ebenfalls polare Bindungen — und ist extrem polar. Der Unterschied? Die **Geometrie**. Genau hier zeigt sich die Stärke der kovalenten Bindung: Atome teilen sich Elektronenpaare, und die räumliche Anordnung dieser Paare bestimmt Gestalt, Polarität und Funktion des Moleküls. Von der Peptidbindung in Proteinen bis zur Doppelbindung in Fettsäuren — die kovalente Chemie ist das Fundament der Biochemie.
+Warum loest sich Zucker in Wasser, aber Oel nicht? Warum ist CO2 ein Gas, obwohl es schwerer ist als Wasser? Die Antwort liegt in der **kovalenten Bindung**: Atome teilen sich Elektronenpaare, statt sie komplett abzugeben. Die Form der Molekuele, die dabei entsteht, bestimmt alles -- ob ein Stoff polar oder unpolar ist, ob er sich in Wasser loest, und wie Proteine in deinem Koerper gefaltet sind.
 
 **In diesem Kapitel lernst du:**
-- warum Atome bei kovalenter Bindung Elektronen teilen statt übertragen und wie die Elektronegativitätsdifferenz den Bindungscharakter bestimmt
-- wie VSEPR die Molekülgestalt vorhersagt und warum freie Elektronenpaare die Bindungswinkel verkleinern
-- was Hybridisierung (sp³, sp², sp) über Geometrie und biologische Funktion verrät
-- worin sich σ- und π-Bindungen unterscheiden und warum π-Bindungen die freie Rotation verhindern
+- warum Atome Elektronen teilen statt uebertragen und was das mit Elektronegativitaet zu tun hat
+- wie du die Form eines Molekuels vorhersagen kannst (VSEPR-Modell)
+- was Hybridisierung bedeutet und warum die Peptidbindung flach ist
+- warum Doppelbindungen die freie Drehung verhindern (wichtig fuer cis/trans bei Fettsaeuren!)
+
+---
+
+{{DIAGRAM:covalent-bond}}
+
+## Kovalente Bindung -- Elektronen teilen
+
+Bei der **Ionenbindung** gibt ein Atom Elektronen komplett ab (z. B. NaCl). Bei der **kovalenten Bindung** teilen sich zwei Atome ein oder mehrere Elektronenpaare. Das passiert vor allem zwischen Nichtmetallen (z. B. H2O, CO2, Zucker).
+
+**Faustregel:** Elektronegativitaetsdifferenz (Delta-EN) unter 1,7 = kovalent. Ueber 1,7 = ionisch.
+
+Beispiele kovalenter Verbindungen: Wasser (H2O), Kohlendioxid (CO2), Methan (CH4), Alkohol. Beispiele ionischer Verbindungen: Kochsalz (NaCl), Magnesiumoxid (MgO).
+
+**Einfach-, Doppel- und Dreifachbindungen:** Je mehr Elektronenpaare geteilt werden, desto kuerzer und staerker die Bindung: C-C (Einfach, 347 kJ/mol) < C=C (Doppel, 614 kJ/mol) < C dreifach C (839 kJ/mol).
+
+> **Merke:** Kovalente Bindung = Elektronenteilung zwischen Nichtmetallen. Je mehr geteilte Elektronenpaare, desto staerker und kuerzer die Bindung. Die Elektronegativitaetsdifferenz bestimmt, ob kovalent oder ionisch.
+
+---
+
+## Elektronegativitaet -- wer zieht staerker?
+
+**Elektronegativitaet (EN)** misst, wie stark ein Atom die gemeinsamen Elektronen anzieht. Fluor ist der Spitzenreiter (EN = 4,0), dann Sauerstoff (3,5), Stickstoff und Chlor (3,0). Im Periodensystem steigt die EN nach rechts oben.
+
+Wenn die EN-Differenz gross ist (z. B. O-H: 1,4), sind die Elektronen ungleich verteilt -- es entsteht eine **polare Bindung**. Wenn sie klein ist (z. B. C-H: 0,4), ist die Bindung fast unpolar. Deshalb sind Fette (viele C-H-Bindungen) wasserabstossend.
+
+---
+
+## Molekuelform -- VSEPR in 4 Schritten
+
+{{DIAGRAM:atomic-orbitals}}
+
+Die **Form** eines Molekuels bestimmst du so:
+1. Zaehle Bindungspaare und freie Elektronenpaare am Zentralatom
+2. Alle Elektronenpaare stossen sich ab und gehen moeglichst weit auseinander
+3. Freie Elektronenpaare brauchen mehr Platz als bindende
+
+Beispiele:
+- **Methan (CH4)**: 4 Bindungen, 0 frei = **Tetraeder** (109,5 Grad)
+- **Wasser (H2O)**: 2 Bindungen + 2 freie = **gewinkelt** (104,5 Grad)
+- **CO2**: 2 Doppelbindungen, 0 frei = **linear** (180 Grad)
+
+> **Merke:** Freie Elektronenpaare druecken Bindungswinkel zusammen. Wasser ist gewinkelt (nicht linear!), weil Sauerstoff 2 freie Elektronenpaare hat.
+
+---
+
+## Hybridisierung -- warum ist die Peptidbindung flach?
+
+- **sp3** (4 Bindungsrichtungen, Tetraeder): Kohlenstoff in Alkanen, das C-alpha in Aminosaeuren
+- **sp2** (3 Richtungen, flach/trigonal): Kohlenstoff in Doppelbindungen und in der **Peptidbindung** -- deshalb ist die Peptidbindung flach und bestimmt die Proteinstruktur
+- **sp** (2 Richtungen, linear): Kohlenstoff in CO2 oder Dreifachbindungen
+
+**Schnellregel fuer die Pruefung:** Zaehle Sigma-Bindungen + freie EP am Atom: 4 = sp3, 3 = sp2, 2 = sp.
+
+---
+
+## Sigma- und Pi-Bindungen
+
+- **Sigma (Sigma-Bindung)**: Ueberlappung entlang der Bindungsachse. Jede Einfachbindung ist eine Sigma-Bindung. Freie Drehung moeglich
+- **Pi (Pi-Bindung)**: seitliche Ueberlappung, nur bei Doppel-/Dreifachbindungen. Verhindert freie Drehung!
+
+Das ist biologisch extrem wichtig:
+- **Fettsaeuren**: Die Doppelbindung bei Oelsaeure kann cis (Knick) oder trans (gerade) sein -- das bestimmt, ob das Fett fluessig oder fest ist
+- **Peptidbindung**: partieller Pi-Charakter -> flach -> bestimmt die Proteinform
+- **Sehen**: Licht dreht eine Doppelbindung in Retinal von cis nach trans -> Nervensignal
+
+> **Merke:** Einfachbindung = 1 Sigma. Doppelbindung = 1 Sigma + 1 Pi. Dreifachbindung = 1 Sigma + 2 Pi. Pi-Bindungen verhindern Rotation -- deshalb gibt es cis/trans-Isomerie nur bei Doppelbindungen.
+
+---
+
+## Polaritaet ganzer Molekuele
+
+Polare Bindungen allein reichen nicht -- die Form muss auch passen:
+- **Wasser (gewinkelt)**: polare Bindungen addieren sich -> polar -> loest Salze
+- **CO2 (linear)**: polare Bindungen heben sich auf -> unpolar -> loest sich nicht in Wasser
+
+Deshalb gilt: "Gleiches loest Gleiches" -- polare Stoffe loesen sich in Wasser, unpolare in Fett/Oel.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Kovalent vs. ionisch: Delta-EN < 1,7 = kovalent, > 1,7 = ionisch
+- EN im PSE: steigt nach rechts oben; F = 4,0 (Maximum)
+- VSEPR: freie EP druecken Winkel zusammen; Wasser gewinkelt, CO2 linear
+- sp3 = Tetraeder, sp2 = flach/trigonal, sp = linear
+- Sigma = Einfachbindung; Pi = zusaetzlich bei Mehrfachbindung; Pi verhindert Drehung
+- Polares Molekuel nur wenn Dipole sich NICHT aufheben (H2O ja, CO2 nein)
+
+**Typische Fallen:**
+- Polare Bindungen ergeben nicht automatisch ein polares Molekuel (CO2, CCl4!)
+- Pi-Bindung verhindert Rotation -> cis/trans nur bei Doppelbindungen
+- EN-Trend: Fluor ist elektronegativer als Sauerstoff!
+- C-H ist fast unpolar -> Kohlenwasserstoffe sind wasserabstossend
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kovalente Bindung**: Elektronenteilung zwischen Nichtmetallen; Delta-EN < 1,7
+- **EN**: steigt nach rechts oben im PSE; F = 4,0 (Maximum)
+- **VSEPR**: Elektronenpaare gehen auseinander; freie EP druecken Winkel zusammen
+- **Hybridisierung**: sp3 = Tetraeder (109,5 Grad), sp2 = flach (120 Grad), sp = linear (180 Grad)
+- **Sigma + Pi**: Einfachbindung = Sigma; Doppel = Sigma + Pi; Pi verhindert Drehung
+- **Molekuelpolaritaet**: polare Bindungen + asymmetrische Form = polar (H2O ja, CO2 nein)
+- **Peptidbindung**: sp2, partieller Pi-Charakter, flach -> bestimmt Proteinstruktur`,
+      contentExtended: `## Einleitung
+
+CO2 hat zwei stark polare C=O-Bindungen -- trotzdem ist das Molekuel insgesamt unpolar. H2O hat ebenfalls polare Bindungen -- und ist extrem polar. Der Unterschied? Die **Geometrie**. Genau hier zeigt sich die Staerke der kovalenten Bindung: Atome teilen sich Elektronenpaare, und die raeumliche Anordnung dieser Paare bestimmt Gestalt, Polaritaet und Funktion des Molekuels. Von der Peptidbindung in Proteinen bis zur Doppelbindung in Fettsaeuren -- die kovalente Chemie ist das Fundament der Biochemie.
+
+**In diesem Kapitel lernst du:**
+- warum Atome bei kovalenter Bindung Elektronen teilen statt uebertragen und wie die Elektronegativitaetsdifferenz den Bindungscharakter bestimmt
+- wie VSEPR die Molekuelgestalt vorhersagt und warum freie Elektronenpaare die Bindungswinkel verkleinern
+- was Hybridisierung (sp3, sp2, sp) ueber Geometrie und biologische Funktion verraet
+- worin sich Sigma- und Pi-Bindungen unterscheiden und warum Pi-Bindungen die freie Rotation verhindern
 
 ---
 
@@ -1083,14 +1264,99 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Einleitung
 
-Warum siedet Wasser erst bei 100 °C, obwohl das vergleichbar schwere H₂S schon bei −60 °C gasförmig ist? Die Antwort: **Wasserstoffbrücken**. Jedes Wassermolekül kann bis zu vier davon ausbilden und wird dadurch in ein dreidimensionales Netzwerk eingebunden. Diese „schwachen" Kräfte zwischen Molekülen bestimmen enorm viel: Sie halten die DNA-Doppelhelix zusammen (A-T: 2 H-Brücken, G-C: 3), treiben die Proteinfaltung an und sorgen dafür, dass Eis auf Seen schwimmt. Neben H-Brücken gibt es London-Dispersionskräfte und Dipol-Dipol-Wechselwirkungen — zusammen erklären sie Siedepunkte, Löslichkeiten und biologische Strukturen.
+Warum siedet Wasser erst bei 100 Grad C, obwohl das aehnlich schwere H2S schon bei minus 60 Grad C ein Gas ist? Die Antwort: **Wasserstoffbruecken**. Diese "schwachen" Kraefte zwischen Molekuelen bestimmen enorm viel in der Biologie. Sie halten die DNA zusammen, falten Proteine und sorgen dafuer, dass Eis auf Seen schwimmt (und nicht untergeht).
 
 **In diesem Kapitel lernst du:**
-- welche drei Arten intermolekularer Kräfte es gibt und wie sie sich in der Stärke unterscheiden (Hierarchie: kovalent >> H-Brücke > Dipol-Dipol > London)
-- warum nur N, O und F als H-Brücken-Donoren wirken und welche biologischen Strukturen davon abhängen
-- wie die Anomalien des Wassers (Siedepunkt, Dichteanomalie, Wärmekapazität) mit H-Brücken zusammenhängen
-- wie das Elektronengas-Modell und das Bändermodell die besonderen Eigenschaften von Metallen und Halbleitern erklären
-- wie Van-der-Waals-Kräfte die Membranfluidität bestimmen (gesättigt vs. ungesättigt)
+- welche Kraefte zwischen Molekuelen wirken und wie stark sie sind
+- warum Wasser so besonders ist (hoher Siedepunkt, Dichteanomalie)
+- wie Metalle aufgebaut sind und warum sie Strom leiten
+- welche Kraft fuer welches biologische Phaenomen verantwortlich ist
+
+---
+
+{{DIAGRAM:covalent-bond}}
+
+## Drei Arten von Kraeften zwischen Molekuelen
+
+Neben den starken Bindungen innerhalb von Molekuelen (kovalent, ionisch) gibt es schwaehere Kraefte **zwischen** Molekuelen. Sie bestimmen Siedepunkte, Loeslichkeiten und biologische Strukturen:
+
+**1. London-Dispersionskraefte** (schwaechste)
+Entstehen durch kurzzeitige, zufaellige Ladungsverschiebungen in jedem Molekuel. Selbst komplett unpolare Molekuele wie Fett oder Edelgase haben sie. Je groesser das Molekuel (mehr Elektronen), desto staerker. Deshalb sind langkettige Fettsaeuren fester als kurzkettige.
+
+**2. Dipol-Dipol-Wechselwirkungen** (mittelstark)
+Treten zwischen polaren Molekuelen auf. Das positive Ende eines Molekuels zieht das negative Ende eines anderen an. Beispiel: Aceton (Nagellackentferner) hat einen hoeheren Siedepunkt als unpolares Butan.
+
+**3. Wasserstoffbruecken** (staerkste zwischenmolekulare Kraft)
+Entstehen, wenn ein H-Atom an O, N oder F gebunden ist und ein freies Elektronenpaar eines anderen O, N oder F anzieht. Beispiele ueberall in der Biologie:
+- **Wasser**: Jedes Molekuel bildet bis zu 4 H-Bruecken -> hoher Siedepunkt
+- **DNA**: A-T = 2 H-Bruecken, G-C = 3 H-Bruecken -> GC-reiche DNA stabiler
+- **Proteine**: H-Bruecken stabilisieren Alpha-Helix und Beta-Faltblatt
+
+> **Merke:** Staerke-Hierarchie: kovalente Bindung (200-800 kJ/mol) >> Wasserstoffbruecke (10-40 kJ/mol) > Dipol-Dipol (5-25 kJ/mol) > London-Dispersion (0,5-10 kJ/mol). Einzeln schwach, aber in der Summe entscheidend!
+
+---
+
+## Warum Wasser so besonders ist
+
+Wasser bildet ein Netzwerk aus H-Bruecken. Das erklaert seine ungewoehnlichen Eigenschaften:
+- **Hoher Siedepunkt** (100 Grad C statt ca. minus 80 Grad C ohne H-Bruecken)
+- **Dichteanomalie**: Eis ist leichter als fluessiges Wasser (H-Bruecken bilden offene Struktur) -> Eis schwimmt oben -> Seen frieren von oben zu -> Fische ueberleben
+- **Hohe Waermekapazitaet**: Viel Energie noetig, um Wasser zu erwaermen -> stabilisiert Koerpertemperatur
+
+---
+
+{{DIAGRAM:ionic-bond}}
+
+## Metallbindung -- warum leiten Metalle Strom?
+
+In Metallen geben die Atome ihre Valenzelektronen in ein gemeinsames **Elektronengas** ab. Die positiven Atomruempfe sitzen in einem Gitter, die Elektronen bewegen sich frei dazwischen.
+
+Das erklaert alle typischen Metalleigenschaften:
+- **Stromleitung**: Elektronen fliessen frei
+- **Waermeleitung**: Elektronen transportieren Waerme
+- **Verformbarkeit**: Atomschichten gleiten uebereinander (kein Bruch wie bei Ionenkristallen)
+- **Metallischer Glanz**: Elektronen absorbieren und re-emittieren Licht
+
+**Medizinisch wichtige Metalle**: Eisen (Haemoglobin), Zink (Cofaktor fuer ueber 300 Enzyme), Titan (Implantate), Platin (Cisplatin, Krebstherapie).
+
+> **Merke:** Drei Bindungstypen im Vergleich: Ionenbindung (Metall + Nichtmetall, Elektronenuebertragung, sproede), kovalente Bindung (Nichtmetall + Nichtmetall, Elektronenteilung, gerichtet), Metallbindung (Metall + Metall, Elektronengas, verformbar).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- H-Bruecken: O-H...O, N-H...O, N-H...N (DNA, Proteine, Wasser)
+- London-Kraefte: je groesser das Molekuel, desto staerker
+- Dichteanomalie des Wassers: Eis schwimmt (offene H-Bruecken-Struktur)
+- DNA-Basenpaarung: A-T (2 H-Bruecken), G-C (3 H-Bruecken)
+- Metallbindung: Elektronengas -> Leitfaehigkeit, Verformbarkeit
+
+**Typische Fallen:**
+- Wasserstoffbruecken sind KEINE kovalenten Bindungen (viel schwaecher!)
+- London-Kraefte wirken auch zwischen unpolaren Molekuelen (Fette!)
+- Metalle leiten, weil Elektronen frei sind; Ionenkristalle nicht (Ionen fixiert)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **London-Kraefte**: schwach, ueberall; staerker bei groesseren Molekuelen; halten Fettsaeuren zusammen
+- **Dipol-Dipol**: zwischen polaren Molekuelen; mittelstark
+- **H-Bruecken**: H an O/N/F zieht freies EP an; DNA, Proteine, Wasser; 10-40 kJ/mol
+- **Wasser-Anomalien**: hoher Siedepunkt, Dichteanomalie (Eis schwimmt), hohe Waermekapazitaet
+- **Metallbindung**: Elektronengas -> leitet Strom/Waerme, verformbar, glaenzend
+- **Hierarchie**: kovalent >> H-Bruecke > Dipol-Dipol > London`,
+      contentExtended: `## Einleitung
+
+Warum siedet Wasser erst bei 100 Grad C, obwohl das vergleichbar schwere H2S schon bei minus 60 Grad C gasfoermig ist? Die Antwort: **Wasserstoffbruecken**. Jedes Wassermolekuel kann bis zu vier davon ausbilden und wird dadurch in ein dreidimensionales Netzwerk eingebunden. Diese "schwachen" Kraefte zwischen Molekuelen bestimmen enorm viel: Sie halten die DNA-Doppelhelix zusammen (A-T: 2 H-Bruecken, G-C: 3), treiben die Proteinfaltung an und sorgen dafuer, dass Eis auf Seen schwimmt. Neben H-Bruecken gibt es London-Dispersionskraefte und Dipol-Dipol-Wechselwirkungen -- zusammen erklaeren sie Siedepunkte, Loeslichkeiten und biologische Strukturen.
+
+**In diesem Kapitel lernst du:**
+- welche drei Arten intermolekularer Kraefte es gibt und wie sie sich in der Staerke unterscheiden (Hierarchie: kovalent >> H-Bruecke > Dipol-Dipol > London)
+- warum nur N, O und F als H-Bruecken-Donoren wirken und welche biologischen Strukturen davon abhaengen
+- wie die Anomalien des Wassers (Siedepunkt, Dichteanomalie, Waermekapazitaet) mit H-Bruecken zusammenhaengen
+- wie das Elektronengas-Modell und das Baendermodell die besonderen Eigenschaften von Metallen und Halbleitern erklaeren
+- wie Van-der-Waals-Kraefte die Membranfluiditaet bestimmen (gesaettigt vs. ungesaettigt)
 
 ---
 
@@ -1826,13 +2092,95 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Einleitung
 
-Warum kann der Mensch Stärke verdauen, aber keine Cellulose — obwohl beide aus den gleichen Glucosemolekülen bestehen? Der Unterschied liegt in einem einzigen Bindungswinkel: **α-glycosidisch** (Stärke) vs. **β-glycosidisch** (Cellulose). Unsere α-Amylase erkennt nur die α-Verknüpfung. Solche feinen Unterschiede in **kovalenten Bindungen** bestimmen die gesamte Biologie: Die planare Peptidbindung erzwingt die Sekundärstruktur von Proteinen, Disulfidbrücken stabilisieren Insulin, und **nichtkovalente Wechselwirkungen** treiben die Proteinfaltung und DNA-Basenpaarung.
+Warum kannst du Kartoffelstaerke verdauen, aber kein Holz -- obwohl beide aus Zucker (Glucose) bestehen? Der Unterschied liegt in einem einzigen Bindungswinkel. Solche feinen Details in **kovalenten Bindungen** bestimmen die gesamte Biologie. In diesem Kapitel verbinden wir alles, was du ueber Bindungen gelernt hast, und schauen, wie es in lebenden Systemen zusammenspielt.
 
 **In diesem Kapitel lernst du:**
-- welche kovalenten Bindungstypen in Biomolekülen vorkommen und warum die Peptidbindung planar ist
-- warum α- und β-glycosidische Bindung über Verdaulichkeit entscheiden
-- wie nichtkovalente Wechselwirkungen (H-Brücken, hydrophober Effekt, Salzbrücken) die dreidimensionale Struktur bestimmen
-- warum Denaturierung die Primärstruktur intakt lässt und was den hydrophoben Effekt wirklich antreibt
+- welche Bindungen Proteine, DNA, Zucker und Fette zusammenhalten
+- warum du Staerke verdauen kannst, aber nicht Cellulose
+- wie schwache Kraefte (H-Bruecken, hydrophober Effekt) Proteine falten
+- was bei einer Denaturierung (z. B. Eierkochen) passiert
+
+---
+
+{{DIAGRAM:functional-groups}}
+
+## Kovalente Bindungen in Biomolekuelen
+
+Die starken kovalenten Bindungen bilden das Geruest aller Biomolekuele:
+
+**Peptidbindung** (Proteine): Verknuepft Aminosaeuren. Sie ist **flach** (planar), weil die Elektronen des Stickstoffs in das Pi-System der C=O-Gruppe delokalisieren. Deshalb kann sich die Peptidbindung nicht frei drehen -- das bestimmt die gesamte Proteinform.
+
+{{DIAGRAM:covalent-bond}}
+
+**Glycosidische Bindung** (Zucker): Verknuepft Zuckermolekuele. Hier liegt der Schluessel zur Verdaulichkeit:
+- **Alpha-glycosidisch** (Staerke, Glykogen): Dein Enzym Alpha-Amylase kann diese Bindung spalten -> du kannst Kartoffeln und Reis verdauen
+- **Beta-glycosidisch** (Cellulose im Holz, Salat): Dein Koerper hat kein Enzym dafuer -> Ballaststoffe
+
+**Disulfidbruecke** (S-S): Verknuepft zwei Cystein-Aminosaeuren. Stabilisiert z. B. Insulin und Antikoerper. Kann durch Reduktion gebrochen werden.
+
+**Phosphodiesterbindung** (DNA/RNA): Verknuepft Nukleotide zum DNA-Rueckgrat. Negativ geladen -> bindet an basische Histone.
+
+---
+
+{{DIAGRAM:enzyme-substrate}}
+
+## Nichtkovalente Kraefte -- die Feinsteuerung
+
+Schwache, aber entscheidende Kraefte bestimmen die 3D-Struktur:
+
+- **Wasserstoffbruecken**: Stabilisieren Alpha-Helix und Beta-Faltblatt in Proteinen; halten DNA-Basenpaare zusammen
+- **Hydrophober Effekt**: Unpolare Seitenketten von Aminosaeuren "fluechten" ins Proteininnere, weg vom Wasser. Das ist die wichtigste Triebkraft der Proteinfaltung! (Entropisch getrieben: das Wasser gewinnt Ordnung zurueck)
+- **Ionische Wechselwirkungen (Salzbruecken)**: Plus-geladene und minus-geladene Aminosaeuren ziehen sich an
+- **Van-der-Waals/London-Kraefte**: Schwach einzeln, aber viele zusammen stabilisieren Fettmembranen und Proteine
+
+> **Merke:** Kovalente Bindungen bauen die Kette (Primaerstruktur). Nichtkovalente Kraefte falten sie zur funktionalen Form. Deshalb zerstoert Denaturierung (Hitze, Saeure) die Form, aber nicht die Aminosaeurekette selbst.
+
+---
+
+## Proteinstruktur -- 4 Ebenen
+
+1. **Primaerstruktur**: Aminosaeure-Reihenfolge (kovalent, Peptidbindung)
+2. **Sekundaerstruktur**: Alpha-Helix, Beta-Faltblatt (H-Bruecken)
+3. **Tertiaerstruktur**: 3D-Faltung (alle Kraefte: hydrophob, H-Bruecken, Salzbruecken, Disulfid)
+4. **Quartaerstruktur**: Mehrere Proteinketten zusammen (z. B. Haemoglobin = 4 Untereinheiten)
+
+**Denaturierung** (z. B. Eierkochen): Die nichtkovalenten Kraefte brechen -> Protein entfaltet sich -> Funktion weg. Aber die Peptidbindungen bleiben intakt (Primaerstruktur erhalten).
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Peptidbindung: planar, partieller Doppelbindungscharakter, keine freie Rotation
+- Alpha-glycosidisch (Staerke) = verdaulich; beta-glycosidisch (Cellulose) = unverdaulich
+- Hydrophober Effekt = wichtigste Triebkraft der Proteinfaltung
+- Denaturierung: 3D-Struktur weg, Primaerstruktur bleibt
+- 4 Ebenen der Proteinstruktur und welche Bindungen jeweils
+
+**Typische Fallen:**
+- Cellulose und Staerke bestehen BEIDE aus Glucose -- nur die Bindung ist anders
+- Hydrophober Effekt ist entropisch (nicht enthalpisch!)
+- Denaturierung zerstoert NICHT die Peptidbindungen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Peptidbindung**: planar (sp2), keine freie Rotation; baut Proteinrueckgrat
+- **Glycosidische Bindung**: alpha = verdaulich (Staerke); beta = unverdaulich (Cellulose)
+- **Disulfidbruecke**: S-S zwischen Cysteinen; stabilisiert Proteine (Insulin, Antikoerper)
+- **Nichtkovalente Kraefte**: H-Bruecken (Sekundaerstruktur), hydrophober Effekt (Tertiaer), Salzbruecken, London
+- **Proteinebenen**: Primaer (kovalent) -> Sekundaer (H-Bruecken) -> Tertiaer (alle) -> Quartaer (Untereinheiten)
+- **Denaturierung**: nichtkovalente Kraefte gestoert -> Funktionsverlust; Primaerstruktur bleibt`,
+      contentExtended: `## Einleitung
+
+Warum kann der Mensch Staerke verdauen, aber keine Cellulose -- obwohl beide aus den gleichen Glucosemolekuelen bestehen? Der Unterschied liegt in einem einzigen Bindungswinkel: **alpha-glycosidisch** (Staerke) vs. **beta-glycosidisch** (Cellulose). Unsere alpha-Amylase erkennt nur die alpha-Verknuepfung. Solche feinen Unterschiede in **kovalenten Bindungen** bestimmen die gesamte Biologie: Die planare Peptidbindung erzwingt die Sekundaerstruktur von Proteinen, Disulfidbruecken stabilisieren Insulin, und **nichtkovalente Wechselwirkungen** treiben die Proteinfaltung und DNA-Basenpaarung.
+
+**In diesem Kapitel lernst du:**
+- welche kovalenten Bindungstypen in Biomolekuelen vorkommen und warum die Peptidbindung planar ist
+- warum alpha- und beta-glycosidische Bindung ueber Verdaulichkeit entscheiden
+- wie nichtkovalente Wechselwirkungen (H-Bruecken, hydrophober Effekt, Salzbruecken) die dreidimensionale Struktur bestimmen
+- warum Denaturierung die Primaerstruktur intakt laesst und was den hydrophoben Effekt wirklich antreibt
 
 ---
 

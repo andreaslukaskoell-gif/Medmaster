@@ -49,6 +49,8 @@ export interface Unterkapitel {
   id: string;
   title: string;
   content: string;
+  /** Original ausführlicher Content (StudyMed-Niveau: content gekürzt, Original hier bewahrt). */
+  contentExtended?: string;
   /** Einheitliche Struktur im content: Einleitung (Worum geht es, MedAT-Relevanz) → „In diesem Kapitel lernst du:“ (4–5 Bullets) → Kern mit --- zwischen Abschnitten → Übergänge („Bisher …“, „Um …“) → Merksätze → MedAT-Fokus (Zentral prüfungsrelevant, Häufige Fragen, Typische Prüfungsfallen, Zusammenfassung). Keine „siehe oben“/„siehe unten“ – klare Definitionen. */
   /** Themen/Stichworte, die in diesem Unterkapitel abgedeckt werden. Wird oben im Kapitel als Chips angezeigt. Wenn nicht gesetzt, werden automatisch die ## Überschriften aus dem Content extrahiert. */
   stichworte?: string[];

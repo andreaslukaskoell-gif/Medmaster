@@ -24,6 +24,143 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Einleitung
 
+Wie viele PIN-Codes gibt es? Wie viele Lotto-Kombinationen? Kombinatorik beantwortet solche Fragen — durch systematisches Zählen. Der Schlüssel: Zwei Fragen stellen. Zählt die Reihenfolge? Darf etwas mehrfach vorkommen? Daraus ergeben sich vier Formeltypen.
+
+**In diesem Kapitel lernst du:**
+- wie du mit zwei Fragen (Reihenfolge? Wiederholung?) die richtige Formel findest
+- was Permutationen, Variationen und Kombinationen sind
+- wie der Binomialkoeffizient funktioniert
+- wie du das Pascalsche Dreieck nutzt
+
+---
+
+{{DIAGRAM:combinatorics-tree}}
+
+{{DIAGRAM:probability-distribution}}
+
+## Grundbegriffe und Entscheidungsbaum
+
+Bevor du eine Formel anwendest, beantworte zwei Fragen:
+
+1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
+2. **Darf ein Objekt mehrfach vorkommen?** (mit vs. ohne Wiederholung)
+
+| Reihenfolge | Wiederholung | Begriff | Formel |
+|-------------|--------------|---------|--------|
+| Ja | Nein | Variation ohne Wdh. | n! / (n-k)! |
+| Ja | Ja | Variation mit Wdh. | n^k |
+| Nein | Nein | Kombination ohne Wdh. | n! / (k! × (n-k)!) |
+| Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! × (n-1)!) |
+
+> **Merke:** Die Entscheidung "geordnet oder ungeordnet" ist der wichtigste erste Schritt — sie bestimmt, ob du Variation oder Kombination verwendest.
+
+---
+
+## Die Fakultät
+
+Die **Fakultät** n! ist das Produkt aller Zahlen von 1 bis n:
+
+n! = 1 × 2 × 3 × ... × n
+
+Wichtige Werte: 0! = 1, 1! = 1, 3! = 6, 4! = 24, 5! = 120, 6! = 720
+
+> **Merke:** 0! = 1 — das ist per Definition so und wichtig für viele Formeln.
+
+---
+
+## Permutationen
+
+Eine **Permutation** ordnet alle n Objekte an. P(n) = n!
+
+Beispiel: 4 Buchstaben A, B, C, D anordnen → P(4) = 4! = 24
+
+**Mit identischen Elementen:** P = n! / (k₁! × k₂! × ...)
+
+Beispiel ANNA: n = 4, A kommt 2×, N kommt 2× vor → P = 4!/(2!×2!) = 24/4 = **6**
+
+> **Merke:** Bei identischen Elementen teilst du durch die Fakultäten der Wiederholungen.
+
+---
+
+## Variationen
+
+Eine **Variation** wählt k aus n Elementen — Reihenfolge zählt.
+
+**Ohne Wiederholung:** V(n,k) = n!/(n-k)!
+Beispiel: 3-stellige Zahl aus 1–5 → V(5,3) = 5×4×3 = 60
+
+**Mit Wiederholung:** V(n,k) = n^k
+Beispiel: 4-stelliger PIN aus 0–9 → V(10,4) = 10⁴ = 10.000
+
+> **Merke:** "Mit Wiederholung" = Multiplikationsprinzip: n × n × ... (k-mal) = n^k.
+
+---
+
+## Kombinationen und Binomialkoeffizient
+
+Eine **Kombination** wählt k aus n — Reihenfolge egal.
+
+C(n,k) = n! / (k! × (n-k)!)
+
+Beispiel Lotto "6 aus 45": C(45,6) = (45×44×43×42×41×40)/(6!) ≈ **8.145.060**
+
+**Kurzrechnung:** Immer das kleinere k nehmen! C(10,8) = C(10,2) = (10×9)/(2×1) = 45
+
+Häufige Werte: C(4,2)=6, C(5,2)=10, C(6,3)=20, C(7,3)=35, C(10,3)=120
+
+> **Merke:** C(n,k) = C(n,n-k) — diese Symmetrie spart dir Rechenzeit in der Prüfung.
+
+---
+
+## Pascalsches Dreieck
+
+Jede Zahl ist die Summe der zwei darüberliegenden:
+
+    Zeile 0:          1
+    Zeile 1:        1   1
+    Zeile 2:      1   2   1
+    Zeile 3:    1   3   3   1
+    Zeile 4:  1   4   6   4   1
+    Zeile 5: 1  5  10  10   5  1
+
+> **Merke:** Für kleine n liest du C(n,k) direkt aus dem Dreieck ab — kein Rechnen nötig.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- „Anordnen" → Permutation: n!
+- „k aus n, Reihenfolge wichtig" (PIN, Passwort) → Variation
+- „k aus n, Reihenfolge egal" (Lotto, Team) → Kombination
+
+**Signalwörter:** „Reihenfolge/Rang/Position" → geordnet. „Auswahl/Team/Gruppe" → ungeordnet. „Mit Zurücklegen" → Wiederholung.
+
+**5-Schritte-Rezept:**
+1. Finde n (Gesamtmenge) und k (Auswahl)
+2. Reihenfolge wichtig? → Ja = Variation, Nein = Kombination
+3. Wiederholung erlaubt? → Ja = n^k bzw. Multiset, Nein = Fakultät
+4. Formel einsetzen
+5. Plausibilität: Kombination < Variation (bei gleichem n, k)
+
+---
+
+## Rechenbeispiele
+
+**DNA-Codons:** 4 Basen, 3 Positionen, Wdh. erlaubt, Reihenfolge zählt → V(4,3) = 4³ = **64 Codons**
+
+**Team bilden:** 3 aus 12 Personen ohne Rollen → C(12,3) = 220. Mit Rollen (Vorsitz etc.) → V(12,3) = 1.320
+
+**Kommission mit Bedingung:** 3er-Kommission aus 10 Personen, mind. 1 Frau (4 Frauen): Gesamt C(10,3)=120 minus nur Männer C(6,3)=20 = **100** (Komplementstrategie)
+
+## Zusammenfassung (ultrakompakt)
+
+- **Permutation** (alle n anordnen): P = n!; mit identischen: n!/(k₁!×k₂!×...)
+- **Variation** (k aus n, geordnet): ohne Wdh. n!/(n−k)!; mit Wdh. nᵏ
+- **Kombination** (k aus n, ungeordnet): C(n,k) = n!/(k!×(n−k)!)
+- **Erst fragen:** Reihenfolge? Wiederholung? → richtige Formel wählen`,
+      contentExtended: `## Einleitung
+
 Wie viele verschiedene DNA-Codons gibt es aus vier Basen? Auf wie viele Arten kann ein Chirurg drei von acht verfügbaren Instrumenten auswählen? Und warum ist die Chance, im Lotto zu gewinnen, so verschwindend gering? All diese Fragen beantwortet die Kombinatorik — die Kunst des systematischen Zählens, ohne jede Möglichkeit einzeln aufzulisten. Der Schlüssel liegt in zwei Entscheidungen: Zählt die Reihenfolge? Und darf ein Element mehrfach vorkommen? Aus diesen zwei Fragen ergeben sich vier Formeltypen, die im MedAT regelmäßig geprüft werden.
 
 **In diesem Kapitel lernst du:**
@@ -450,6 +587,134 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
         "Binomialverteilung",
       ],
       content: `## Einleitung
+
+Wenn du einen fairen Würfel wirfst, ist die Chance auf eine Sechs genau 1/6. Aber wie wahrscheinlich ist es, bei 5 Münzwürfen mindestens einmal Kopf zu bekommen? Dafür brauchst du die Rechenregeln der Wahrscheinlichkeit: Laplace-Formel, Additionssatz, Komplementregel und Binomialverteilung.
+
+**In diesem Kapitel lernst du:**
+- wie die Laplace-Formel bei gleichwahrscheinlichen Ergebnissen funktioniert
+- wie Additions- und Komplementregel zusammengesetzte Ereignisse behandeln
+- wann Ereignisse unabhängig sind und wie du dann multiplizierst
+- wie die Binomialverteilung Treffer in n Versuchen zählt
+- wie Baumdiagramme mehrstufige Experimente übersichtlich machen
+
+---
+
+{{DIAGRAM:combinatorics-tree}}
+
+{{DIAGRAM:probability-distribution}}
+
+## Grundbegriffe
+
+Das **Laplace-Experiment** hat gleich wahrscheinliche Ergebnisse (z. B. fairer Würfel).
+
+- **Ergebnisraum Ω**: Menge aller Ergebnisse, z. B. Würfel: Ω = {1,2,3,4,5,6}
+- **Ereignis A**: Teilmenge von Ω, z. B. "gerade" = {2,4,6}
+
+**Laplace-Formel:** P(A) = günstige / alle Ergebnisse
+
+Beispiel: P(gerade beim Würfel) = 3/6 = 1/2 = 50%
+
+**Grundregeln:**
+- 0 ≤ P(A) ≤ 1
+- P(Ω) = 1, P(∅) = 0
+- P(Ā) = 1 − P(A) (Komplementregel)
+- P(A ∪ B) = P(A) + P(B) − P(A ∩ B) (Additionssatz)
+
+> **Merke:** Die klassische Wahrscheinlichkeit gilt nur bei Laplace-Experimenten (gleichwahrscheinliche Ergebnisse). Bei einem gezinkten Würfel muss man relative Häufigkeiten aus Beobachtungen verwenden.
+
+---
+
+## Komplementregel
+
+P(Ā) = 1 − P(A)
+
+**Trick:** Bei "mindestens eines" berechne das Komplement "keines":
+P(mind. 1 Kopf in 3 Würfen) = 1 − P(3× Zahl) = 1 − (1/2)³ = 7/8
+
+> **Merke:** "Mindestens eines" → Komplement berechnen ist fast immer der schnellere Weg!
+
+---
+
+## Additionssatz
+
+P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+
+**Bei disjunkten Ereignissen** (kein gemeinsames Element): P(A ∪ B) = P(A) + P(B)
+
+Beispiel Blutgruppen: P(A) = 0,44, P(B) = 0,13. Blutgruppen sind disjunkt → P(A oder B) = 0,57
+
+> **Merke:** Bei der Vereinigung immer prüfen: Überschneiden sich A und B? Wenn ja, P(A∩B) abziehen!
+
+---
+
+## Unabhängige Ereignisse
+
+**Unabhängig** heißt: Das Eintreten von A beeinflusst B nicht.
+
+P(A ∩ B) = P(A) × P(B)
+
+Beispiel: Zwei Münzwürfe → P(beide Kopf) = 1/2 × 1/2 = 1/4
+
+> **Merke:** Unabhängig ≠ Disjunkt! Disjunkte Ereignisse (A∩B=∅) sind immer abhängig, wenn P(A)>0 und P(B)>0.
+
+---
+
+## Baumdiagramme und Pfadregeln
+
+**Pfadregel 1:** Entlang eines Astes **multiplizieren** (UND)
+**Pfadregel 2:** Zwischen parallelen Ästen **addieren** (ODER)
+
+Beispiel: Urne mit 3 roten, 2 blauen Kugeln, 2 Ziehungen ohne Zurücklegen:
+- rot-rot: 3/5 × 2/4 = 6/20 = **30%**
+- rot-blau: 3/5 × 2/4 = **30%**
+- blau-rot: 2/5 × 3/4 = **30%**
+- blau-blau: 2/5 × 1/4 = **10%**
+- Kontrolle: 30+30+30+10 = 100% ✓
+
+> **Merke:** Im Baumdiagramm: Entlang eines Astes multiplizieren (UND), zwischen parallelen Ästen addieren (ODER). Kontrolle: Alle Pfadwahrscheinlichkeiten müssen sich zu 1 (= 100%) addieren.
+
+---
+
+## Binomialverteilung
+
+Die **Binomialverteilung** beschreibt die Wahrscheinlichkeit von genau k Treffern in n Versuchen:
+
+P(X = k) = C(n,k) × p^k × (1−p)^(n−k)
+
+- n = Anzahl Versuche, p = Trefferwahrscheinlichkeit, k = gewünschte Treffer
+- **Erwartungswert:** μ = n × p
+
+Beispiel: Beide Eltern sind Carrier (Aa). P(Kind krank) = 1/4. Bei 4 Kindern: P(genau 2 krank)?
+C(4,2) × 0,25² × 0,75² = 6 × 0,0625 × 0,5625 = **0,211 ≈ 21,1%**
+
+> **Merke:** Binomialverteilung gilt nur wenn: (1) n Versuche sind unabhängig, (2) jeder Versuch hat zwei Ausgänge, (3) p ist konstant. Ohne Zurücklegen → Binomial gilt nicht!
+
+---
+
+## MedAT-Fokus
+
+**Häufigste Aufgabentypen:**
+- „Mindestens ein Treffer in n Versuchen?" → **1 − (1−p)ⁿ**
+- „Genau k Treffer in n Versuchen?" → **Binomialformel**
+- „A und B unabhängig: P(A und B)?" → **P(A) × P(B)**
+- „A oder B?" → **P(A) + P(B) − P(A ∩ B)**
+
+**Typische Fallen:**
+- Komplement vergessen bei "mindestens"
+- Additionssatz: P(A∩B) nicht abziehen
+- Unabhängigkeit ≠ Disjunktheit
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Laplace**: P(A) = günstige/alle; nur bei gleichwahrscheinlichen Ergebnissen
+- **Komplementregel**: P(Ā) = 1−P(A); "mindestens einmal" = 1 − P(keinmal)
+- **Additionssatz**: P(A∪B) = P(A)+P(B)−P(A∩B)
+- **Unabhängigkeit**: P(A∩B) = P(A)×P(B)
+- **Binomialverteilung**: P(X=k) = C(n,k)×pᵏ×(1−p)^(n−k); μ = n×p
+- **Baumdiagramm**: Ast entlang = multiplizieren, Äste addieren = ODER`,
+      contentExtended: `## Einleitung
 
 Wenn du einen fairen Würfel wirfst, ist die Chance auf eine Sechs genau 1/6 — das klingt einfach. Aber wie wahrscheinlich ist es, bei einem Gentest ein falsch-positives Ergebnis zu erhalten? Oder dass unter fünf Geschwistern genau zwei eine Erbkrankheit tragen? Solche Fragen beantworten die Rechenregeln der Wahrscheinlichkeitstheorie: Laplace-Formel, Additionssatz, Komplementregel und Binomialverteilung. Diese Werkzeuge verbinden Münzwurf-Logik mit klinisch entscheidenden Fragestellungen.
 
@@ -923,6 +1188,135 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         "Positiver prädiktiver Wert",
       ],
       content: `## Einleitung
+
+Ein Test hat 99% Treffsicherheit — klingt perfekt. Aber wenn die Krankheit selten ist (z. B. 0,1%), sind die meisten positiven Tests trotzdem falsch! Dieses überraschende Ergebnis erklärt der Satz von Bayes. Bayes, bedingte Wahrscheinlichkeit und die Vierfeldertafel helfen dir, Testergebnisse richtig zu interpretieren.
+
+**In diesem Kapitel lernst du:**
+- was bedingte Wahrscheinlichkeit P(A|B) bedeutet
+- wie der Satz von Bayes die Bedingungsrichtung umdreht
+- wie du eine Vierfeldertafel mit TP, TN, FP, FN aufstellst
+- was Sensitivität, Spezifität, PPV und NPV bedeuten
+- warum der PPV bei seltenen Krankheiten so niedrig ist
+
+---
+
+{{DIAGRAM:combinatorics-tree}}
+
+{{DIAGRAM:probability-distribution}}
+
+## Bedingte Wahrscheinlichkeit
+
+P(A|B) = P(A ∩ B) / P(B)
+
+Das bedeutet: Wie wahrscheinlich ist A, wenn B schon eingetreten ist?
+
+Beispiel Würfel: A = ">4" = {5,6}, B = "gerade" = {2,4,6}
+P(A|B) = P({6}) / P({2,4,6}) = (1/6)/(3/6) = 1/3
+
+> **Merke:** P(A|B) ≠ P(B|A) — diese Verwechslung ist ein klassischer Fehler! "Wahrscheinlichkeit krank bei positivem Test" ist nicht dasselbe wie "Wahrscheinlichkeit positiver Test bei Krankem".
+
+---
+
+## Satz der totalen Wahrscheinlichkeit
+
+P(A) = P(A|B₁) × P(B₁) + P(A|B₂) × P(B₂) + ...
+
+Beispiel: Krankheit K mit Prävalenz 5%. Sensitivität 90%, Spezifität 95%.
+P(Test+) = 0,90 × 0,05 + 0,05 × 0,95 = 0,045 + 0,0475 = **0,0925 = 9,25%**
+
+> **Merke:** Totale Wahrscheinlichkeit: Die Gewichte P(Bᵢ) müssen sich zu 1 addieren.
+
+---
+
+## Satz von Bayes
+
+P(A|B) = P(B|A) × P(A) / P(B)
+
+**Für PPV:** P(Krank|Test+) = Sens × Prävalenz / P(Test+)
+
+Fortsetzung obiges Beispiel:
+PPV = 0,045 / 0,0925 = **0,486 ≈ 49%**
+
+Nur jeder zweite mit positivem Test ist wirklich krank — trotz 90% Sensitivität!
+
+> **Merke:** Bei niedriger Prävalenz ist der PPV erschreckend niedrig. Das ist der häufigste Irrtum beim Lesen von Testergebnissen!
+
+---
+
+## Vierfeldertafel — die 1000-Personen-Methode
+
+Die einfachste Art, Bayes-Aufgaben zu lösen: Mit konkreten Zahlen rechnen statt mit Prozenten.
+
+**Rezept:**
+1. Runde Stichprobe wählen (z. B. 10.000)
+2. Kranke/Gesunde berechnen (Prävalenz)
+3. TP, FN mit Sensitivität; TN, FP mit Spezifität berechnen
+4. PPV = TP/(TP+FP), NPV = TN/(TN+FN) ablesen
+
+**Beispiel:** n=10.000, Prävalenz 5%, Sens 90%, Spez 95%
+
+| | Test + | Test − | Gesamt |
+|---|---|---|---|
+| Krank | 450 (TP) | 50 (FN) | 500 |
+| Gesund | 475 (FP) | 9.025 (TN) | 9.500 |
+| Gesamt | 925 | 9.075 | 10.000 |
+
+PPV = 450/925 ≈ **48,6%** — identisch zum Bayes-Ergebnis!
+
+> **Merke:** Bei MedAT-Aufgaben immer zuerst die Vierfeldertafel aufstellen — das verhindert Verwechslungen und macht das Ergebnis sofort sichtbar.
+
+---
+
+## Sensitivität, Spezifität, PPV, NPV
+
+| Kennzahl | Formel | Abhängig von Prävalenz? |
+|---|---|---|
+| **Sensitivität** | TP / (TP + FN) | Nein |
+| **Spezifität** | TN / (TN + FP) | Nein |
+| **PPV** | TP / (TP + FP) | **Ja** |
+| **NPV** | TN / (TN + FN) | **Ja** |
+
+**Merkhilfe:**
+- **SnNout**: hohe Sensitivität → negativer Test schließt Krankheit **aus**
+- **SpPin**: hohe Spezifität → positiver Test bestätigt Krankheit
+
+> **Merke:** Sensitivität und Spezifität sind Testeigenschaften. PPV und NPV hängen von der Prävalenz ab — sie ändern sich je nach Population.
+
+---
+
+## PPV und Prävalenz
+
+| Prävalenz | PPV (bei Sens 95%, Spez 98%) |
+|---|---|
+| 0,1% | ca. **5%** |
+| 1% | ca. **32%** |
+| 5% | ca. **71%** |
+| 20% | ca. **92%** |
+
+> **Merke:** Bei Prävalenz 0,1% ist der PPV nur 5% — 19 von 20 Positiven sind falsch positiv! Deshalb screent man nur in Risikogruppen.
+
+---
+
+## MedAT-Fokus
+
+**Zentral prüfungsrelevant:**
+- Vierfeldertafel aufstellen und PPV/NPV/Sens/Spez ablesen
+- Bayes: P(Krank|Test+) = Sens × Präv / P(T+)
+- PPV sinkt bei niedriger Prävalenz drastisch
+- SnNout / SpPin
+- 1000-Personen-Methode als schnellster Rechenweg
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **P(A|B)** = P(A∩B)/P(B) — Bedingung verkleinert den Ergebnisraum
+- **Bayes**: P(A|B) = P(B|A)×P(A)/P(B) — kehrt die Bedingung um
+- **Vierfeldertafel**: TP, FP, FN, TN → Sens, Spez, PPV, NPV ablesen
+- **1000-Personen-Methode**: Runde Zahl → Kranke/Gesunde → TP/FP → PPV
+- **SnNout/SpPin**: hohe Sens → neg. schließt aus; hohe Spez → pos. bestätigt
+- **Niedrige Prävalenz → niedriger PPV** — das Bayes-Paradox`,
+      contentExtended: `## Einleitung
 
 Ein HIV-Test hat eine Sensitivität von 99,5 % und eine Spezifität von 99,5 % — klingt fast perfekt. Doch wenn du 10.000 Personen mit niedriger Prävalenz (0,1 %) testest, erhältst du 10 richtig positive, aber auch 50 falsch positive Ergebnisse. Die Mehrheit der positiven Tests ist also falsch! Dieses kontraintuitive Ergebnis erklärt der Satz von Bayes, der die Bedingung umdreht: von P(Test+|Krank) zu P(Krank|Test+). Bayes, bedingte Wahrscheinlichkeit und die Vierfeldertafel sind die Werkzeuge, mit denen Ärzte Testergebnisse korrekt interpretieren — und sie gehören zu den am häufigsten geprüften Themen im MedAT.
 
@@ -1416,6 +1810,153 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
         "p-Wert",
       ],
       content: `## Einleitung
+
+Wenn ein Labor den Referenzbereich für Blutzucker mit 70–100 mg/dL angibt, steckt dahinter die Normalverteilung: Der Bereich umfasst den Mittelwert ± 2 Standardabweichungen und schließt 95% der gesunden Population ein. In diesem Kapitel lernst du die wichtigsten statistischen Grundbegriffe für den MedAT.
+
+**In diesem Kapitel lernst du:**
+- wie Mittelwert, Median und Modus Daten zusammenfassen
+- wie Varianz und Standardabweichung die Streuung messen
+- was die 68-95-99,7-Regel bedeutet
+- was der p-Wert aussagt
+- wie die ROC-Kurve Sens/Spez-Tradeoff zeigt
+
+---
+
+{{DIAGRAM:combinatorics-tree}}
+
+{{DIAGRAM:probability-distribution}}
+
+## Lagemaße
+
+**Mittelwert (x̄):** Summe aller Werte / Anzahl → x̄ = Σxᵢ/n
+Empfindlich gegenüber Ausreißern.
+
+**Median:** Mittlerer Wert der sortierten Reihe. Robust gegen Ausreißer.
+
+**Modus:** Häufigster Wert.
+
+Beispiel {3, 5, 7, 7, 8}: Mittelwert = 6, Median = 7, Modus = 7
+
+> **Merke:** Bei symmetrischer Verteilung: Mittelwert = Median = Modus. Bei schiefer Verteilung: Modus < Median < Mittelwert (rechtsschiefe). Ausreißer ziehen den Mittelwert stärker als den Median.
+
+---
+
+## Streumaße
+
+**Varianz:** s² = Σ(xᵢ − x̄)² / (n−1)
+
+**Standardabweichung:** s = √s² — gleiche Einheit wie die Daten.
+
+Beispiel {3,5,7,7,8}, x̄=6: Abweichungsquadrate: 9+1+1+1+4=16. s²=16/4=4. s=2.
+
+> **Merke:** Im Nenner steht n−1 (nicht n!) — die Bessel-Korrektur. Im MedAT wird fast immer n−1 verwendet.
+
+---
+
+## Normalverteilung
+
+Die **Normalverteilung** (Glockenkurve) wird durch μ (Mittelwert) und σ (Standardabweichung) bestimmt.
+
+### Die 68-95-99,7-Regel
+
+| Bereich | Anteil der Daten |
+|---------|-----------------|
+| μ ± 1σ | ca. 68% |
+| μ ± 2σ | ca. 95% |
+| μ ± 3σ | ca. 99,7% |
+
+Beispiel Blutdruck N(120, 10): 95% zwischen 100 und 140 mmHg. Werte >140 (>μ+2σ) → obere 2,3%.
+
+> **Merke:** 68-95-99,7 auswendig lernen! Durch die Symmetrie: Oberhalb μ+2σ liegen 2,3% (nicht 4,6%).
+
+---
+
+## z-Transformation
+
+z = (x − μ) / σ
+
+Gibt an, wie viele Standardabweichungen x vom Mittelwert entfernt ist.
+
+**Beispiel:** Hb bei Frauen N(13,5; 1,2). Patientin hat 10,5: z = (10,5−13,5)/1,2 = **−2,5** → nur 0,6% der Gesunden so niedrig → auffällig.
+
+Wichtige z-Werte: z=1,96 → 95%-KI; z=1,645 → einseitige 5%-Grenze
+
+> **Merke:** z = ±2 oder darüber ist bei normalverteilten Daten stets auffällig (< 5% Wahrscheinlichkeit).
+
+---
+
+## Konfidenzintervall
+
+95%-KI = x̄ ± 1,96 × (σ/√n)
+
+Dabei ist σ/√n der **Standardfehler** (SE).
+
+Beispiel: x̄=135, σ=20, n=100 → SE=2,0 → KI = [131,1 ; 138,9] mmHg
+
+> **Merke:** Größere Stichprobe → kleinerer SE → schmaleres KI. Beim Vervierfachen von n halbiert sich der SE.
+
+---
+
+## Referenzbereiche
+
+Laborwerte: Referenzbereich = μ ± 2σ (95% der Gesunden).
+
+**Wichtig:** Bei 20 Laborwerten hat ein Gesunder mit 64% Wahrscheinlichkeit mindestens einen "auffälligen" Wert!
+
+> **Merke:** Ein Wert außerhalb des Referenzbereichs ist NICHT automatisch pathologisch — 5% der Gesunden fallen per Definition heraus.
+
+---
+
+## p-Wert
+
+Der **p-Wert** = Wahrscheinlichkeit, ein so extremes Ergebnis zu sehen, wenn kein Effekt vorliegt (H0 wahr).
+
+- p < 0,05 → statistisch signifikant → H0 ablehnen
+- p < 0,05 bedeutet NICHT "klinisch bedeutsam"
+
+**Fehlertypen:**
+- **Typ-I (α):** H0 fälschlich ablehnen (falsch positiv). Konvention: α = 5%
+- **Typ-II (β):** Echten Effekt übersehen (falsch negativ). Power = 1−β ≥ 80%
+
+> **Merke:** p < 0,05 = statistisch signifikant. Der p-Wert sagt nichts über die klinische Relevanz — dafür braucht man das Konfidenzintervall.
+
+---
+
+## ROC-Kurve (Kurzüberblick)
+
+Zeigt den Zusammenhang zwischen Sensitivität und 1−Spezifität für verschiedene Cutoff-Werte.
+
+- AUC = 0,5 → Test = Zufall
+- AUC > 0,8 → guter Test
+- AUC > 0,9 → exzellent
+
+Cutoff verschieben: empfindlicher → Sens↑, Spez↓ (und umgekehrt).
+
+> **Merke:** Die ROC-Kurve zeigt den Sens/Spez-Tradeoff. Je näher an der oberen linken Ecke, desto besser.
+
+---
+
+## MedAT-Fokus
+
+**Prüfungsrelevant:**
+- 68-95-99,7-Regel anwenden
+- z-Wert berechnen und interpretieren
+- Vierfeldertafel: Sens, Spez, PPV, NPV berechnen
+- p-Wert korrekt interpretieren
+- SE = σ/√n und 95%-KI berechnen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Lagemaße**: Mittelwert = Σxᵢ/n; Median = robust; Modus = häufigster
+- **Streumaße**: s² = Σ(xᵢ−x̄)²/(n−1); s = √s²
+- **Normalverteilung**: μ±1σ → 68%; μ±2σ → 95%; μ±3σ → 99,7%
+- **z-Wert**: z = (x−μ)/σ; z > 2 → auffällig (obere 2,3%)
+- **KI**: x̄ ± 1,96 × σ/√n; SE = σ/√n
+- **p < 0,05** = signifikant; sagt nichts über klinische Relevanz
+- **ROC**: AUC > 0,8 = gut; Cutoff = Sens/Spez-Tradeoff`,
+      contentExtended: `## Einleitung
 
 Wenn ein Labor den Referenzbereich für Blutzucker mit 70-100 mg/dL angibt, steckt dahinter die Normalverteilung: Der Bereich umfasst typischerweise den Mittelwert plus/minus zwei Standardabweichungen und schließt 95 % der gesunden Population ein. Ob ein Messwert auffällig ist, entscheidet die Streuung. Ob ein Studienmedikament besser wirkt als ein Placebo, sagt der p-Wert. Und ob ein diagnostischer Test taugt, messen Sensitivität und Spezifität. All diese statistischen Grundbegriffe begegnen dir täglich in der klinischen Medizin und regelmäßig im MedAT.
 

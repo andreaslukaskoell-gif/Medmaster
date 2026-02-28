@@ -30,6 +30,117 @@ export const chemKapAtom: Kapitel = {
       ],
       content: `## Einleitung
 
+Alles um dich herum besteht aus Atomen. Aber was ist ein Atom genau? Im Lauf der Zeit haben Wissenschaftler immer genauere Modelle entwickelt -- vom einfachen “Kugelmodell” bis zum modernen Orbitalmodell. Fuer den MedAT musst du die wichtigsten Modelle kennen und verstehen, wie Protonen, Neutronen und Elektronen zusammenspielen.
+
+**In diesem Kapitel lernst du:**
+- wie sich das Bild vom Atom entwickelt hat (Thomson, Rutherford, Bohr, Orbitale)
+- warum Rutherford bewies, dass Atome fast nur leerer Raum sind
+- wie Elektronen in Schalen und Orbitalen angeordnet sind
+- was Ordnungszahl Z, Massenzahl A und Isotope bedeuten
+- warum die Atommasse im PSE oft keine glatte Zahl ist
+
+---
+
+## Thomson-Modell (1904)
+
+J. J. Thomson entdeckte 1897 das **Elektron**. Er stellte sich das Atom als positive Kugel vor, in die negative Elektronen eingebettet sind -- wie Rosinen in einem Kuchen. Daher heisst es auch **Rosinenmodell**.
+
+> **Merke:** Thomson: Atom = positive Kugel mit eingebetteten negativen Elektronen (Rosinenmodell).
+
+---
+
+## Rutherford-Streuversuch (1911)
+
+Rutherford beschoss eine duenne **Goldfolie** mit positiven Alphateilchen:
+
+| Beobachtung | Deutung |
+|-------------|---------|
+| Meiste Teilchen fliegen durch | Atom ist fast nur **leerer Raum** |
+| Wenige werden stark abgelenkt | Es gibt einen **kleinen, schweren Kern** |
+| Einzelne prallen zurueck | Kern ist **positiv und extrem dicht** |
+
+Ergebnis: Das Atom hat einen winzigen, positiven **Kern** (ca. 10 hoch -15 m) und eine grosse **Huelle** (ca. 10 hoch -10 m). Das Verhaeltnis ist wie eine Murmel in einem Fussballstadion.
+
+> **Merke:** Rutherford: Kern winzig, positiv und schwer. Das Atom besteht zu ueber 99 % aus leerem Raum.
+
+{{DIAGRAM:atomic-orbitals}}
+
+---
+
+## Bohrsches Modell (1913)
+
+Bohr erklaerte: Elektronen kreisen auf **festen Schalen** um den Kern. Jede Schale fasst maximal **2n Quadrat** Elektronen:
+
+| Schale | n | Max. Elektronen |
+|--------|---|-----------------|
+| K | 1 | 2 |
+| L | 2 | 8 |
+| M | 3 | 18 |
+| N | 4 | 32 |
+
+Springt ein Elektron von einer hoeheren auf eine niedrigere Schale, wird **Licht** (ein Photon) abgegeben. Das erklaert die Spektrallinien.
+
+> **Merke:** Bohr: Elektronen auf Schalen K, L, M, N. Max. 2n Quadrat pro Schale. Uebergaenge erzeugen Licht.
+
+---
+
+## Orbitalmodell (ab 1925)
+
+Das moderne Modell ersetzt feste Bahnen durch **Orbitale** -- das sind Raumbereiche, in denen ein Elektron mit 90 % Wahrscheinlichkeit zu finden ist.
+
+| Orbital | Form | Anzahl pro Schale | Max. Elektronen |
+|---------|------|-------------------|-----------------|
+| s | Kugel | 1 | 2 |
+| p | Hantel | 3 | 6 |
+| d | Kleeblatt | 5 | 10 |
+| f | komplex | 7 | 14 |
+
+> **Merke:** Orbital ist NICHT gleich Bahn. Ein Orbital ist ein Aufenthaltswahrscheinlichkeitsraum fuer Elektronen.
+
+---
+
+## Atomkern: Protonen, Neutronen, Isotope
+
+| Teilchen | Ladung | Ort | Bestimmt |
+|----------|--------|-----|----------|
+| Proton | +1 | Kern | Ordnungszahl Z (= welches Element) |
+| Neutron | 0 | Kern | Neutronenzahl N |
+| Elektron | -1 | Huelle | Chemische Eigenschaften |
+
+**Massenzahl A = Z + N** (Protonen + Neutronen). **Isotope** sind Atome mit gleicher Protonenzahl, aber verschiedener Neutronenzahl -- gleiche Chemie, verschiedene Masse.
+
+Beispiel: Kohlenstoff hat die Isotope C-12 (6 Protonen, 6 Neutronen), C-13, C-14 (radioaktiv).
+
+{{DIAGRAM:periodic-table}}
+
+> **Merke:** Z = Protonenzahl = definiert das Element. A = Z + N. Isotope: gleiche Z, verschiedene N.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Rutherfords Schlussfolgerung: Kern winzig und positiv, Atom fast leer
+- Schalen und 2n Quadrat-Regel
+- Z, A, N berechnen und Isotope erkennen
+- Orbital-Formen: s = Kugel, p = Hantel
+
+**Typische Fallen:**
+- Ordnungszahl Z ist NICHT gleich Massenzahl A
+- Thomson (Rosinen) ist NICHT Rutherford (Kern)
+- Isotope sind chemisch fast gleich, physikalisch verschieden
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kern** (Protonen + Neutronen, winzig) + **Huelle** (Elektronen, gross)
+- **Z** = Protonenzahl, **A** = Z + N, **Isotope** = gleiche Z, verschiedene N
+- Thomson: Rosinenmodell; Rutherford: Kern-Modell; Bohr: Schalenmodell; Quantenmechanik: Orbitale
+- Schalen: max. 2n Quadrat; Orbitale: s(1), p(3), d(5), f(7), je 2 Elektronen
+- Atommasse im PSE = gewichtetes Mittel der Isotope`,
+      contentExtended: `## Einleitung
+
 Stell dir vor, du hältst einen Goldring in der Hand. Er sieht massiv aus — doch wenn du ihn auf atomarer Ebene betrachten könntest, wäre er zu über 99,9 % leerer Raum. Diese verblüffende Erkenntnis verdanken wir dem Rutherford-Streuversuch, einem der elegantesten Experimente der Physik. Von den antiken Philosophen, die sich erstmals ein „unteilbares Teilchen” vorstellten, bis zum modernen Orbitalmodell hat sich unser Bild vom Atom in gut 100 Jahren radikal gewandelt. Für die Medizin sind Atommodelle kein abstraktes Thema: Radioisotope wie ⁹⁹ᵐTc (Szintigraphie) oder ¹⁸F (PET) basieren direkt auf dem Verständnis von Kernaufbau und Isotopen.
 
 **In diesem Kapitel lernst du:**
@@ -43,7 +154,7 @@ Stell dir vor, du hältst einen Goldring in der Hand. Er sieht massiv aus — do
 
 ## Demokrit und Dalton — die Anfänge
 
-**Um zu verstehen,** wie wir zum heutigen Bild vom Atom kamen, lohnt ein kurzer Blick auf die Anfänge: Ohne die Idee des „unteilbaren Teilchens“ gäbe es keine Atommodelle.
+**Um zu verstehen,** wie wir zum heutigen Bild vom Atom kamen, lohnt ein kurzer Blick auf die Anfänge: Ohne die Idee des „unteilbaren Teilchens” gäbe es keine Atommodelle.
 
 Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen (griech. *átomos* = unteilbar). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808) begründet: Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen sind Umlagerungen von Atomen — keine Erzeugung oder Vernichtung.
 
@@ -137,7 +248,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 **Nuklid-Notation:** ᴬ_Z X. Beispiel: ²³⁸₉₂U = Uran mit 92 Protonen und 146 Neutronen (A − Z = 146).
 
-**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** zusammengehalten — eine Anziehung mit sehr kurzer Reichweite (≈ 10⁻¹⁵ m), die den Kern gegen die elektrische Abstoßung der Protonen stabilisiert. Der **Massendefekt** ist die Differenz zwischen der Summe der Massen der einzelnen Nukleonen und der tatsächlichen Kernmasse; diese „fehlende“ Masse steckt als **Kernbindungsenergie** (E = mc²) im Kern. Bei Fe-56 ist die Bindungsenergie pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
+**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** zusammengehalten — eine Anziehung mit sehr kurzer Reichweite (≈ 10⁻¹⁵ m), die den Kern gegen die elektrische Abstoßung der Protonen stabilisiert. Der **Massendefekt** ist die Differenz zwischen der Summe der Massen der einzelnen Nukleonen und der tatsächlichen Kernmasse; diese „fehlende” Masse steckt als **Kernbindungsenergie** (E = mc²) im Kern. Bei Fe-56 ist die Bindungsenergie pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
 
 **Isotope** sind Atome desselben Elements (gleiche **Ordnungszahl Z**) mit unterschiedlicher **Neutronenzahl N** — also gleiche Chemie, unterschiedliche Massenzahl A und unterschiedliche Kernstabilität. Chemische Eigenschaften sind (nahezu) identisch, physikalische (Masse, Radioaktivität) unterscheiden sich.
 
@@ -392,10 +503,109 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
       ],
       content: `## Einleitung
 
+Jedes Element hat eine bestimmte Anzahl an Elektronen. Aber wie verteilen sich diese Elektronen auf die verschiedenen Schalen und Orbitale? Das bestimmt die gesamte Chemie eines Elements -- welche Bindungen es eingeht, wie es reagiert und wo es im Periodensystem steht.
+
+**In diesem Kapitel lernst du:**
+- welche vier Quantenzahlen ein Elektron beschreiben
+- wie du die Elektronenkonfiguration eines Atoms aufstellst
+- welche Regeln dabei gelten (Aufbauprinzip, Pauli, Hund)
+- was Valenz- und Kernelektronen sind und warum das fuer Bindungen wichtig ist
+
+---
+
+## Die vier Quantenzahlen
+
+Jedes Elektron wird durch vier Zahlen eindeutig beschrieben:
+
+| Quantenzahl | Symbol | Werte | Bedeutet |
+|-------------|--------|-------|----------|
+| Hauptquantenzahl | n | 1, 2, 3, ... | Schale (Energieniveau) |
+| Nebenquantenzahl | l | 0 bis n-1 | Orbitaltyp (s, p, d, f) |
+| Magnetquantenzahl | m_l | -l bis +l | Orientierung im Raum |
+| Spinquantenzahl | m_s | +1/2 oder -1/2 | Drehrichtung |
+
+Beispiel: n=2, l=1 bedeutet ein p-Orbital in der zweiten Schale (2p).
+
+> **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig. n = Schale, l = Orbitalform, m_l = Richtung, m_s = Spin.
+
+{{DIAGRAM:electron-configuration}}
+
+---
+
+## Drei Regeln fuer die Besetzung
+
+**1. Aufbauprinzip (Niedrigste Energie zuerst):**
+Elektronen fuellen Orbitale von niedrig nach hoch: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, ...
+
+Merkhilfe: Die Reihenfolge geht diagonal -- 4s kommt VOR 3d!
+
+**2. Pauli-Prinzip:**
+Jedes Orbital fasst maximal **2 Elektronen** mit entgegengesetztem Spin. Keine zwei Elektronen duerfen in allen vier Quantenzahlen uebereinstimmen.
+
+**3. Hundsche Regel:**
+Gleichartige Orbitale (z. B. die drei p-Orbitale) werden erst **einzeln** besetzt, bevor ein zweites Elektron dazukommt. Das ist wie Bushaltestellen: Erst setzt sich in jede Reihe einer, bevor jemand dazusitzt.
+
+> **Merke:** Aufbau: niedrigste Energie zuerst. Pauli: max. 2 Elektronen pro Orbital. Hund: erst einfach besetzen, dann paaren.
+
+---
+
+## Elektronenkonfiguration aufstellen
+
+**Sauerstoff (O, Z = 8):** 8 Elektronen verteilen: 1s2 2s2 2p4.
+
+**Eisen (Fe, Z = 26):** 1s2 2s2 2p6 3s2 3p6 4s2 3d6.
+
+Kurzschreibweise mit Edelgaskern: Fe = [Ar] 4s2 3d6.
+
+**Achtung bei Chrom und Kupfer:** Halbvolle und volle d-Schalen sind besonders stabil. Deshalb: Cr = [Ar] 4s1 3d5 (nicht 4s2 3d4).
+
+> **Merke:** Kurzschreibweise nutzt den Edelgaskern. Ausnahmen: Cr und Cu bevorzugen halbvolle/volle d-Schalen.
+
+{{DIAGRAM:periodic-table}}
+
+---
+
+## Valenzelektronen
+
+Die Elektronen in der **aeussersten Schale** heissen **Valenzelektronen**. Sie bestimmen:
+- die chemischen Eigenschaften
+- die Stellung im PSE (Hauptgruppe = Anzahl der Valenzelektronen)
+- welche Bindungen moeglich sind
+
+Beispiel: Natrium (Na) hat 1 Valenzelektron -- es gibt dieses gerne ab und wird zum Na-Plus-Ion.
+
+> **Merke:** Valenzelektronen = aeusserste Schale = bestimmen die Chemie. Hauptgruppennummer = Valenzelektronenzahl.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Quantenzahlen und ihre Bedeutung
+- Aufbauprinzip, Pauli, Hund
+- Elektronenkonfiguration fuer Elemente bis Z = 36
+- Valenzelektronen und Hauptgruppe
+
+**Typische Fallen:**
+- 4s wird VOR 3d gefuellt, aber bei Ionen wird 4s ZUERST entfernt
+- Cr und Cu sind Ausnahmen vom Aufbauprinzip
+- Anzahl der Valenzelektronen ist NICHT gleich Gesamtelektronenzahl
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- 4 Quantenzahlen: n (Schale), l (Form), m_l (Richtung), m_s (Spin)
+- Aufbauprinzip: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, ...
+- Pauli: max. 2 Elektronen pro Orbital; Hund: erst einzeln, dann paaren
+- Valenzelektronen = aeusserste Schale = Hauptgruppennummer
+- Ausnahmen: Cr ([Ar] 4s1 3d5), Cu ([Ar] 4s1 3d10)`,
+      contentExtended: `## Einleitung
+
 Warum kann ein MRT-Gerät einen Tumor sichtbar machen, obwohl kein Skalpell den Körper berührt? Die Antwort liegt in der **Elektronenkonfiguration**: Gadolinium-Ionen (Gd³⁺) besitzen sieben ungepaarte Elektronen, die ein starkes Magnetfeld erzeugen — und genau diese Eigenschaft nutzt das MRT-Kontrastmittel. Ob ein Atom magnetisch, reaktionsfreudig oder stabil ist, hängt davon ab, wie seine Elektronen auf Schalen und Orbitale verteilt sind. Drei einfache Regeln — das Pauliprinzip, das Aufbauprinzip und die Hundsche Regel — bestimmen diese Verteilung für jedes Element im Periodensystem. Übergangsmetalle wie Eisen (Hämoglobin), Kupfer (Zytochrom-c-Oxidase) und Zink (>300 Enzyme) verdanken ihre biologische Schlüsselrolle genau diesen Elektronenverteilungen.
 
 **In diesem Kapitel lernst du:**
-- was die vier Quantenzahlen über den „Aufenthaltsort” eines Elektrons verraten
+- was die vier Quantenzahlen über den „Aufenthaltsort" eines Elektrons verraten
 - warum maximal zwei Elektronen in ein Orbital passen — und warum sie gegensätzlich rotieren müssen
 - nach welcher Reihenfolge Elektronen die Orbitale besetzen (und warum 4s vor 3d kommt)
 - warum Eisen-Ionen beim Ionisieren zuerst die 4s-Elektronen verlieren, obwohl diese zuerst eingebaut wurden
@@ -703,14 +913,105 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
       ],
       content: `## Einleitung
 
-Nach dem Reaktorunfall von Tschernobyl 1986 verteilten Behörden in ganz Europa Kaliumiodid-Tabletten an die Bevölkerung. Warum ausgerechnet Iod? Die Schilddrüse kann nicht zwischen stabilem und radioaktivem Iod (¹³¹I) unterscheiden — wer sie vorher mit stabilem Iod sättigt, blockiert die Aufnahme des gefährlichen Isotops. Hinter dieser lebensrettenden Maßnahme steckt das Verständnis von **Radioaktivität**: instabile Kerne wandeln sich spontan um und senden dabei Strahlung aus, die in der Medizin sowohl zur Diagnose (PET, Szintigraphie) als auch zur Therapie (Radiojodtherapie) genutzt wird. Das Wissen um Zerfallsarten, Halbwertszeiten und Strahlenschutz ist deshalb nicht nur prüfungsrelevant, sondern klinisch unverzichtbar.
+Manche Atomkerne sind instabil -- sie zerfallen von selbst und senden dabei Strahlung aus. Das klingt gefaehrlich, und das kann es auch sein. Aber Aerzte nutzen diese Strahlung gezielt: Mit einem PET-Scan koennen sie Tumore sichtbar machen, und mit radioaktivem Iod behandeln sie Schilddruesenerkrankungen. Fuer den MedAT musst du die Zerfallsarten, die Halbwertszeit und den Strahlenschutz kennen.
 
 **In diesem Kapitel lernst du:**
-- welche vier Strahlungsarten es gibt — und warum jede unterschiedlich tief in Gewebe eindringt
-- wie das Zerfallsgesetz vorhersagt, wann ein radioaktives Medikament im Körper „abgeklungen” ist
-- warum PET-Scans funktionieren — und was Positronen damit zu tun haben
-- den Unterschied zwischen Gray und Sievert — also zwischen physikalischer und biologischer Dosis
-- welche Radionuklide in der Klinik eingesetzt werden und warum Kaliumiodid bei Atomunfällen schützt
+- welche Strahlungsarten es gibt und wie tief sie ins Gewebe eindringen
+- wie du mit der Halbwertszeit berechnest, wie viel von einem Stoff noch uebrig ist
+- warum PET-Scans funktionieren
+- den Unterschied zwischen Gray und Sievert
+- warum Kaliumiodid bei Atomunfaellen schuetzt
+
+---
+
+{{DIAGRAM:atomic-orbitals}}
+
+## Die vier Strahlungsarten
+
+Stell dir den Atomkern wie einen ueberfuellten Rucksack vor -- er wird leichter, indem er verschiedene Dinge “rauswirft”:
+
+**Alpha-Strahlung:** Der Kern wirft ein grosses Paket ab (2 Protonen + 2 Neutronen = Heliumkern). Die Ordnungszahl Z sinkt um 2, die Massenzahl A um 4. Beispiel: Uran-238 wird zu Thorium-234. Alpha-Strahlung ist langsam und schwer -- schon ein Blatt Papier stoppt sie. Aber wenn du Alpha-Strahler einatmest (z.B. Radon in Kellern), ist das sehr gefaehrlich.
+
+**Beta-minus-Strahlung:** Ein Neutron verwandelt sich in ein Proton und schickt ein Elektron raus. Z steigt um 1, A bleibt gleich. Beispiel: C-14 wird zu N-14. Aluminium-Folie stoppt Beta-Strahlung.
+
+**Beta-plus-Strahlung (Positronen):** Ein Proton verwandelt sich in ein Neutron und schickt ein Positron raus (das Antiteilchen des Elektrons). Z sinkt um 1, A bleibt gleich. Das Positron trifft sofort auf ein Elektron -- beide verschwinden und erzeugen **zwei Gammastrahlen** in entgegengesetzte Richtungen. Genau das nutzt der **PET-Scan**: Die zwei Strahlen werden gleichzeitig von Detektoren erfasst und so der Ort bestimmt.
+
+**Gamma-Strahlung:** Reine Energie (elektromagnetische Welle, kein Teilchen). Z und A aendern sich nicht. Gamma-Strahlung durchdringt fast alles -- nur dickes Blei oder Beton stoppt sie.
+
+> **Merke:** Alpha stoppt Papier. Beta stoppt Aluminium. Gamma stoppt Blei/Beton. PET basiert auf Beta-plus-Zerfall.
+
+---
+
+## Halbwertszeit
+
+Die **Halbwertszeit** ist die Zeit, nach der die Haelfte aller Kerne zerfallen ist. Nach 1 Halbwertszeit sind 50 % uebrig, nach 2 sind es 25 %, nach 3 sind es 12,5 %.
+
+**Formel:** N(t) = N0 mal (1/2) hoch (t / T-halb)
+
+Stell dir vor, du hast 100 Bonbons und gibst jede Stunde die Haelfte weg: nach 1 h hast du 50, nach 2 h hast du 25, nach 3 h hast du ca. 13.
+
+| Nuklid | Halbwertszeit | Verwendung |
+|--------|---------------|------------|
+| Tc-99m | 6 Stunden | Szintigraphie |
+| F-18 | 110 Minuten | PET-Scan |
+| I-131 | 8 Tage | Schilddruesentherapie |
+| C-14 | 5730 Jahre | Altersbestimmung |
+
+> **Merke:** Nach n Halbwertszeiten bleibt N0 / 2 hoch n uebrig. Nach 4 Halbwertszeiten: 1/16 = 6,25 %.
+
+---
+
+## Strahlenschutz
+
+Drei einfache Regeln:
+1. **Abstand** halten -- doppelter Abstand bedeutet nur noch 1/4 der Dosis
+2. **Zeit** minimieren -- so kurz wie moeglich in der Naehe bleiben
+3. **Abschirmung** -- das richtige Material waehlen (Papier, Alu oder Blei)
+
+**Einheiten:**
+- **Gray (Gy)** = wie viel Energie dein Koerper aufnimmt (physikalisch)
+- **Sievert (Sv)** = wie stark die biologische Wirkung ist. Alpha-Strahlung schaedigt 20-mal staerker als Gamma bei gleicher Energiemenge!
+
+{{DIAGRAM:periodic-table}}
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Alpha: Z-2, A-4; Beta-minus: Z+1; Beta-plus: Z-1; Gamma: Z und A gleich
+- Halbwertszeit-Berechnungen (nach n HWZ: 1/2 hoch n)
+- PET = Beta-plus-Zerfall mit Annihilation
+- Gray vs. Sievert (Faktor 20 fuer Alpha!)
+
+**Typische Fallen:**
+- Beta-minus (Z+1) und Beta-plus (Z-1) nicht verwechseln!
+- Gamma ist kein Teilchen -- Z und A aendern sich NICHT
+- Abschirmung: Alpha braucht Papier, nicht Blei; Gamma braucht Blei, nicht Papier
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Alpha**: Z-2, A-4; Heliumkern; Papier stoppt; gefaehrlich bei Einatmen
+- **Beta-minus**: Z+1, A gleich; Elektron; Aluminium stoppt
+- **Beta-plus**: Z-1, A gleich; Positron trifft Elektron, 2 Gamma-Strahlen = PET-Prinzip
+- **Gamma**: reine Energie, Z und A gleich; Blei/Beton stoppt
+- **Halbwertszeit**: N(t) = N0 mal (1/2) hoch (t/T-halb); nach 4 HWZ = 6,25 %
+- Wichtige Nuklide: Tc-99m (6 h), F-18 (110 min), I-131 (8 d), C-14 (5730 a)
+- Strahlenschutz: Abstand, Zeit, Abschirmung
+- Gray = physikalische Dosis; Sievert = biologische Dosis (Alpha-Faktor: 20)
+- Kaliumiodid bei Atomunfall: saettigt Schilddruese, blockiert radioaktives Iod`,
+      contentExtended: `## Einleitung
+
+Nach dem Reaktorunfall von Tschernobyl 1986 verteilten Behoerden in ganz Europa Kaliumiodid-Tabletten an die Bevoelkerung. Warum ausgerechnet Iod? Die Schilddruese kann nicht zwischen stabilem und radioaktivem Iod (I-131) unterscheiden -- wer sie vorher mit stabilem Iod saettigt, blockiert die Aufnahme des gefaehrlichen Isotops. Hinter dieser lebensrettenden Massnahme steckt das Verstaendnis von **Radioaktivitaet**: instabile Kerne wandeln sich spontan um und senden dabei Strahlung aus, die in der Medizin sowohl zur Diagnose (PET, Szintigraphie) als auch zur Therapie (Radiojodtherapie) genutzt wird. Das Wissen um Zerfallsarten, Halbwertszeiten und Strahlenschutz ist deshalb nicht nur pruefungsrelevant, sondern klinisch unverzichtbar.
+
+**In diesem Kapitel lernst du:**
+- welche vier Strahlungsarten es gibt -- und warum jede unterschiedlich tief in Gewebe eindringt
+- wie das Zerfallsgesetz vorhersagt, wann ein radioaktives Medikament im Koerper “abgeklungen” ist
+- warum PET-Scans funktionieren -- und was Positronen damit zu tun haben
+- den Unterschied zwischen Gray und Sievert -- also zwischen physikalischer und biologischer Dosis
+- welche Radionuklide in der Klinik eingesetzt werden und warum Kaliumiodid bei Atomunfaellen schuetzt
 
 ---
 
@@ -718,113 +1019,113 @@ Nach dem Reaktorunfall von Tschernobyl 1986 verteilten Behörden in ganz Europa 
 
 ## Arten der Strahlung
 
-### Alpha-Strahlung (α)
-- Emission eines **Alphateilchens** (⁴₂He-Kern: 2 Protonen + 2 Neutronen)
+### Alpha-Strahlung
+- Emission eines **Alphateilchens** (He-4-Kern: 2 Protonen + 2 Neutronen)
 - Umwandlung: Z sinkt um 2, A sinkt um 4
-- Beispiel: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He
-- Eigenschaften: geringe Reichweite (wenige cm in Luft), stoppt bereits durch ein Blatt Papier oder die Haut; hohes Ionisierungsvermögen
-- Biologisch: gefährlich bei Inkorporation (Inhalation von Radon → Lungenkrebs)
+- Beispiel: U-238 wird zu Th-234 + He-4
+- Eigenschaften: geringe Reichweite (wenige cm in Luft), stoppt bereits durch ein Blatt Papier oder die Haut; hohes Ionisierungsvermoegen
+- Biologisch: gefaehrlich bei Inkorporation (Inhalation von Radon fuehrt zu Lungenkrebs)
 
-### Beta-minus-Strahlung (β⁻)
-- Emission eines **Elektrons** und eines **Antineutrinos** (ν̄ₑ) durch Umwandlung eines Neutrons in ein Proton im Kern
-- Kernreaktion: n → p + e⁻ + ν̄ₑ → Z erhöht sich um 1, A bleibt gleich
-- Beispiel: ¹⁴₆C → ¹⁴₇N + e⁻ + ν̄ₑ (Basis der Radiokohlenstoffdatierung)
+### Beta-minus-Strahlung
+- Emission eines **Elektrons** und eines **Antineutrinos** durch Umwandlung eines Neutrons in ein Proton im Kern
+- Kernreaktion: n wird zu p + e- + Antineutrino; Z erhoehrt sich um 1, A bleibt gleich
+- Beispiel: C-14 wird zu N-14 + e- + Antineutrino (Basis der Radiokohlenstoffdatierung)
 - Reichweite: einige Meter in Luft, stoppt durch Aluminium (mm-Bereich)
 
-### Beta-plus-Strahlung (β⁺, Positronenemission)
-- Emission eines **Positrons** (e⁺, Antiteilchen des Elektrons) und eines **Neutrinos** (νₑ)
-- Kernreaktion: p → n + e⁺ + νₑ → Z sinkt um 1, A bleibt gleich
-- Positron annihiliert sofort mit einem Elektron → **zwei Gammaquanten** (je 511 keV, 180° entgegengesetzt)
+### Beta-plus-Strahlung (Positronenemission)
+- Emission eines **Positrons** (e+, Antiteilchen des Elektrons) und eines **Neutrinos**
+- Kernreaktion: p wird zu n + e+ + Neutrino; Z sinkt um 1, A bleibt gleich
+- Positron annihiliert sofort mit einem Elektron und erzeugt **zwei Gammaquanten** (je 511 keV, 180 Grad entgegengesetzt)
 - Medizinisch: **PET** (Positronen-Emissionstomographie) nutzt diese Annihilationsstrahlung zur Bildgebung
-- Beispiel: ¹⁸F → ¹⁸O + e⁺ + νₑ (¹⁸F-FDG-PET in der Onkologie und Neurologie)
+- Beispiel: F-18 wird zu O-18 + e+ + Neutrino (F-18-FDG-PET in der Onkologie und Neurologie)
 
-### Gamma-Strahlung (γ)
+### Gamma-Strahlung
 - Hochenergetische **elektromagnetische Strahlung** (kein Teilchen!)
-- Entsteht nach α- oder β-Zerfall, wenn der Tochterkern noch in einem angeregten Zustand ist
-- Z und A bleiben unverändert (kein Kernzerfall, nur Energieabgabe)
+- Entsteht nach Alpha- oder Beta-Zerfall, wenn der Tochterkern noch in einem angeregten Zustand ist
+- Z und A bleiben unveraendert (kein Kernzerfall, nur Energieabgabe)
 - Sehr hohe Reichweite (viele Meter in Luft), braucht Blei oder mehrere cm Beton zur Abschirmung
-- Metastabile Kerne: ⁹⁹ᵐTc → ⁹⁹Tc + γ (Knochenszintigraphie, Schilddrüsenszintigraphie)
+- Metastabile Kerne: Tc-99m wird zu Tc-99 + Gamma (Knochenszintigraphie, Schilddruesenszintigraphie)
 
-## Halbwertszeit T½ und Zerfallsgesetz
+## Halbwertszeit und Zerfallsgesetz
 
-Die **Halbwertszeit T½** ist die Zeit, nach der genau die Hälfte aller ursprünglich vorhandenen Kerne zerfallen ist. Sie ist charakteristisch für jedes Nuklid und temperaturunabhängig (kein chemischer Prozess!).
+Die **Halbwertszeit T-halb** ist die Zeit, nach der genau die Haelfte aller urspruenglich vorhandenen Kerne zerfallen ist. Sie ist charakteristisch fuer jedes Nuklid und temperaturunabhaengig (kein chemischer Prozess!).
 
 **Zerfallsgesetz:**
-N(t) = N₀ × (½)^(t / T½) = N₀ × e^(−λt)
+N(t) = N0 mal (1/2) hoch (t / T-halb) = N0 mal e hoch (-lambda mal t)
 
-Dabei ist λ = ln2 / T½ ≈ 0,693 / T½ die **Zerfallskonstante** (s⁻¹).
+Dabei ist lambda = ln2 / T-halb ungefaehr 0,693 / T-halb die **Zerfallskonstante** (pro Sekunde).
 
-> **Merke:** Nach n Halbwertszeiten verbleibt noch N₀/2ⁿ. Nach 1 HWZ: 50 %; nach 2: 25 %; nach 3: 12,5 %; nach 10: ca. 0,1 %.
+> **Merke:** Nach n Halbwertszeiten verbleibt noch N0/2 hoch n. Nach 1 HWZ: 50 %; nach 2: 25 %; nach 3: 12,5 %; nach 10: ca. 0,1 %.
 
-**Aktivität A** = λ × N(t) [Einheit: Becquerel, Bq = 1 Zerfall/s; älter: Curie, Ci = 3,7 × 10¹⁰ Bq]
+**Aktivitaet A** = lambda mal N(t) [Einheit: Becquerel, Bq = 1 Zerfall/s; aelter: Curie, Ci = 3,7 mal 10 hoch 10 Bq]
 
 Medizinisch relevante Halbwertszeiten:
 
-| Nuklid | T½ | Anwendung |
-|--------|-----|-----------|
-| ⁹⁹ᵐTc | 6 h | Szintigraphie (Knochen, Schilddrüse) |
-| ¹⁸F | 110 min | PET (FDG, Onkologie) |
-| ¹³¹I | 8 d | Radiojodtherapie (Schilddrüse) |
-| ⁶⁰Co | 5,27 a | Gamma Knife (Strahlentherapie) |
-| ¹⁴C | 5730 a | Radiokohlenstoffdatierung |
-| ²³⁸U | 4,5 × 10⁹ a | Geologische Datierung |
+| Nuklid | T-halb | Anwendung |
+|--------|--------|-----------|
+| Tc-99m | 6 h | Szintigraphie (Knochen, Schilddruese) |
+| F-18 | 110 min | PET (FDG, Onkologie) |
+| I-131 | 8 d | Radiojodtherapie (Schilddruese) |
+| Co-60 | 5,27 a | Gamma Knife (Strahlentherapie) |
+| C-14 | 5730 a | Radiokohlenstoffdatierung |
+| U-238 | 4,5 mal 10 hoch 9 a | Geologische Datierung |
 
-**Beispielrechnung:** Ein Patient erhält ⁹⁹ᵐTc (T½ = 6 h). Wie viel Aktivität verbleibt nach 24 h? n = 24/6 = 4 Halbwertszeiten → Restaktivität = 1/2⁴ = 1/16 = 6,25 % der Ausgangsdosis.
+**Beispielrechnung:** Ein Patient erhaelt Tc-99m (T-halb = 6 h). Wie viel Aktivitaet verbleibt nach 24 h? n = 24/6 = 4 Halbwertszeiten. Restaktivitaet = 1/2 hoch 4 = 1/16 = 6,25 % der Ausgangsdosis.
 
 ## Kernspaltung und Kernfusion
 
-**Kernspaltung:** Schwere Kerne (z. B. ²³⁵U) werden durch Neutronenbeschuss in zwei leichtere Kerne gespalten → Freisetzung von 2–3 Neutronen + ca. 200 MeV Energie pro Spaltung. Kettenreaktion möglich → Kernreaktor (kontrolliert) oder Atombombe (unkontrolliert). Medizinisch relevant: Spaltprodukte wie ¹³¹I und ⁹⁰Sr bei Reaktorunfällen.
+**Kernspaltung:** Schwere Kerne (z. B. U-235) werden durch Neutronenbeschuss in zwei leichtere Kerne gespalten. Freisetzung von 2-3 Neutronen + ca. 200 MeV Energie pro Spaltung. Kettenreaktion moeglich: Kernreaktor (kontrolliert) oder Atombombe (unkontrolliert). Medizinisch relevant: Spaltprodukte wie I-131 und Sr-90 bei Reaktorunfaellen.
 
-**Kernfusion:** Leichte Kerne (z. B. ²H + ³H → ⁴He + n) verschmelzen unter extremen Bedingungen (>10⁷ K) → Energiequelle der Sonne. Noch nicht als kontrollierte Energiequelle realisiert.
+**Kernfusion:** Leichte Kerne (z. B. H-2 + H-3 wird zu He-4 + n) verschmelzen unter extremen Bedingungen (ueber 10 hoch 7 K). Energiequelle der Sonne. Noch nicht als kontrollierte Energiequelle realisiert.
 
 ## Strahlenschutz
 
 Die drei Grundprinzipien des Strahlenschutzes:
-1. **Abstand**: Intensität nimmt mit 1/r² ab (Abstandsgesetz) — doppelter Abstand → 1/4 der Dosis
-2. **Zeit**: Exposition so kurz wie möglich halten (ALARA-Prinzip: As Low As Reasonably Achievable)
-3. **Abschirmung**: Material je nach Strahlungsart (Papier → α; Al → β; Pb/Beton → γ/n)
+1. **Abstand**: Intensitaet nimmt mit 1/r Quadrat ab (Abstandsgesetz) -- doppelter Abstand ergibt 1/4 der Dosis
+2. **Zeit**: Exposition so kurz wie moeglich halten (ALARA-Prinzip: As Low As Reasonably Achievable)
+3. **Abschirmung**: Material je nach Strahlungsart (Papier fuer Alpha; Al fuer Beta; Pb/Beton fuer Gamma/Neutronen)
 
 Internationale Einheiten:
 - **Gray (Gy)**: absorbierte Energiedosis = J/kg (physikalische Dosis)
-- **Sievert (Sv)**: effektive Dosis = Gy × Strahlungs-Wichtungsfaktor (biologische Dosis; für α: 20; für β/γ: 1)
+- **Sievert (Sv)**: effektive Dosis = Gy mal Strahlungs-Wichtungsfaktor (biologische Dosis; fuer Alpha: 20; fuer Beta/Gamma: 1)
 
-Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische Strahlung, Nahrung). Ein Thorax-Röntgen: ca. 0,02 mSv; CT-Abdomen: ca. 10 mSv.
+Natuerliche Strahlenbelastung in Oesterreich: ca. 2,5 mSv/Jahr (Radon, kosmische Strahlung, Nahrung). Ein Thorax-Roentgen: ca. 0,02 mSv; CT-Abdomen: ca. 10 mSv.
 
 {{DIAGRAM:periodic-table}}
 
 ## Klinische Anwendungen und Gefahren
 
-- **Diagnostisch**: Szintigraphie (⁹⁹ᵐTc), PET (¹⁸F-FDG), SPECT, Röntgen/CT (X-Strahlen, kein Kernzerfall)
-- **Therapeutisch**: ¹³¹I-Therapie (Schilddrüsenkarzinom, M. Basedow), ⁹⁰Y-Mikrosphären (hepatozelluläres Karzinom), ²²³Ra-Dichlorid (Xofigo, Knochenmetastasen), externe Strahlentherapie (Linearbeschleuniger, Gamma Knife)
-- **Gefahren**: Radon-222 (Alphazerfall, Inhalation → zweitgrößte Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung → DNA-Doppelstrangbrüche → Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
-- **Schutzmaßnahme nach Atomunfall**: Kaliumiodid (KI) sättigt die Schilddrüse mit stabilem Iod → verhindert Einbau von radioaktivem ¹³¹I. Besonders wichtig für Kinder (höherer Jodumsatz, längere Restlebenserwartung)
+- **Diagnostisch**: Szintigraphie (Tc-99m), PET (F-18-FDG), SPECT, Roentgen/CT (X-Strahlen, kein Kernzerfall)
+- **Therapeutisch**: I-131-Therapie (Schilddruesenkarzinom, M. Basedow), Y-90-Mikrosphaeren (hepatozellulaeres Karzinom), Ra-223-Dichlorid (Xofigo, Knochenmetastasen), externe Strahlentherapie (Linearbeschleuniger, Gamma Knife)
+- **Gefahren**: Radon-222 (Alphazerfall, Inhalation fuehrt zu zweitgroesster Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung fuehrt zu DNA-Doppelstrangbruechen und Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
+- **Schutzmassnahme nach Atomunfall**: Kaliumiodid (KI) saettigt die Schilddruese mit stabilem Iod und verhindert Einbau von radioaktivem I-131. Besonders wichtig fuer Kinder (hoeherer Jodumsatz, laengere Restlebenserwartung)
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
-- Was verändert sich beim α-Zerfall? → Z sinkt um 2, A sinkt um 4
-- Wie funktioniert PET? → β⁺-Zerfall → Positron + Elektron → 2×γ 511 keV → Koinzidenzdetektion
-- Nach wie vielen Halbwertszeiten sind 6,25 % übrig? → 4 (1/2⁴ = 1/16)
-- Was ist der Unterschied zwischen Gray und Sievert? → Gy = physikalische Dosis; Sv = biologisch gewichtet (α: Faktor 20)
+**Typische Pruefungsfragen:**
+- Was veraendert sich beim Alpha-Zerfall? Z sinkt um 2, A sinkt um 4
+- Wie funktioniert PET? Beta-plus-Zerfall ergibt Positron + Elektron ergibt 2 mal Gamma 511 keV, Koinzidenzdetektion
+- Nach wie vielen Halbwertszeiten sind 6,25 % uebrig? 4 (1/2 hoch 4 = 1/16)
+- Was ist der Unterschied zwischen Gray und Sievert? Gy = physikalische Dosis; Sv = biologisch gewichtet (Alpha: Faktor 20)
 
 **Typische Fallen:**
-- β⁻ (Z+1) ≠ β⁺ (Z−1) — Z-Änderung ist umgekehrt
-- Gray ≠ Sievert: Sv = Gy × Wichtungsfaktor (α = 20)
-- γ ist kein Kernteilchen → Z und A bleiben gleich
-- Abschirmung: α → Papier; β → Al; γ → Blei/Beton (nicht verwechseln)
+- Beta-minus (Z+1) und Beta-plus (Z-1) nicht verwechseln -- Z-Aenderung ist umgekehrt
+- Gray ist nicht gleich Sievert: Sv = Gy mal Wichtungsfaktor (Alpha = 20)
+- Gamma ist kein Kernteilchen, Z und A bleiben gleich
+- Abschirmung: Alpha braucht Papier; Beta braucht Al; Gamma braucht Blei/Beton (nicht verwechseln)
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **α-Zerfall**: Z−2, A−4; Teilchen = ⁴He; Reichweite nur cm in Luft → stoppt bei Papier; gefährlich bei Inhalation
-- **β⁻-Zerfall**: n → p + e⁻ + ν̄ₑ; Z+1, A gleich; Reichweite mm–cm; stoppt bei Aluminiumfolie
-- **β⁺-Zerfall**: p → n + e⁺ + νₑ; Z−1, A gleich; Positron + Elektron → 2×γ (511 keV, 180°) = **Basis der PET**
-- **γ-Strahlung**: elektromagnetisch (kein Teilchen), Z und A unverändert; sehr hohe Reichweite → Abschirmung: Blei/Beton
-- **Halbwertszeit T½**: N(t) = N₀ × (½)^(t/T½); nach n HWZ verbleiben N₀/2ⁿ
-- Wichtige Nuklide: **⁹⁹ᵐTc** (T½ 6 h, Szintigraphie), **¹⁸F** (110 min, PET), **¹³¹I** (8 d, Schilddrüsentherapie), **¹⁴C** (5730 a, Datierung)
-- Strahlenschutz: Abstand (Intensität ∝ 1/r²), Zeit minimieren, Material abschirmen
-- Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (α-Faktor: 20!)
-- Bei Kernatomunfall: **Kaliumiodid (KI)** sättigt Schilddrüse → verhindert ¹³¹I-Aufnahme`,
+- **Alpha-Zerfall**: Z-2, A-4; Teilchen = He-4; Reichweite nur cm in Luft, stoppt bei Papier; gefaehrlich bei Inhalation
+- **Beta-minus-Zerfall**: n wird zu p + e- + Antineutrino; Z+1, A gleich; Reichweite mm-cm; stoppt bei Aluminiumfolie
+- **Beta-plus-Zerfall**: p wird zu n + e+ + Neutrino; Z-1, A gleich; Positron + Elektron ergibt 2 mal Gamma (511 keV, 180 Grad) = **Basis der PET**
+- **Gamma-Strahlung**: elektromagnetisch (kein Teilchen), Z und A unveraendert; sehr hohe Reichweite, Abschirmung: Blei/Beton
+- **Halbwertszeit**: N(t) = N0 mal (1/2) hoch (t/T-halb); nach n HWZ verbleiben N0/2 hoch n
+- Wichtige Nuklide: **Tc-99m** (6 h, Szintigraphie), **F-18** (110 min, PET), **I-131** (8 d, Schilddruesentherapie), **C-14** (5730 a, Datierung)
+- Strahlenschutz: Abstand (Intensitaet proportional 1/r Quadrat), Zeit minimieren, Material abschirmen
+- Einheiten: **Gray (Gy)** = absorbierte Dosis; **Sievert (Sv)** = biologisch gewichtete Dosis (Alpha-Faktor: 20!)
+- Bei Kernatomunfall: **Kaliumiodid (KI)** saettigt Schilddruese und verhindert I-131-Aufnahme`,
 
       lernziele: [
         "Die drei Hauptarten der radioaktiven Strahlung (α, β, γ) hinsichtlich Natur, Reichweite, Abschirmung und Veränderung von Z und A beschreiben.",
@@ -1034,13 +1335,105 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
       ],
       content: `## Einleitung
 
-Auf dem Laborbericht steht „Kalium: 4,2 mmol/L” — doch was bedeutet das eigentlich? Millimol pro Liter ist eine Konzentrationsangabe, die auf dem **Mol-Konzept** basiert: der genialen Idee, die unvorstellbar große Zahl von 6,022 × 10²³ Teilchen in eine handliche Einheit zu packen. Ohne dieses Konzept könnten wir weder Infusionslösungen dosieren noch Reaktionsgleichungen berechnen noch Laborwerte interpretieren. Im klinischen Alltag begegnet dir das Mol bei jeder Blutgasanalyse, jeder Infusion und jedem Medikamentenspiegel — es ist die Brücke zwischen der atomaren Welt und der messbaren Realität.
+Stell dir vor, du backst einen Kuchen: Das Rezept sagt “200 g Mehl”. Aber was, wenn das Rezept stattdessen sagen wuerde “3,3 mal 10 hoch 24 Mehlmolekuele”? Unpraktisch! Genau deshalb gibt es das **Mol** -- eine handliche Einheit, die eine riesige Zahl von Teilchen (6,022 mal 10 hoch 23) zusammenfasst. Auf dem Laborbericht steht “Kalium: 4,2 mmol/L” -- das bedeutet: so viele Kalium-Ionen pro Liter Blut. Ohne das Mol koenntest du weder Infusionen berechnen noch Laborwerte verstehen.
 
 **In diesem Kapitel lernst du:**
-- warum die atomare Masseneinheit u ausgerechnet auf ¹²C bezogen ist — und was sie mit der molaren Masse verbindet
+- was die atomare Masseneinheit u ist und wie sie mit der molaren Masse zusammenhaengt
+- die drei wichtigsten Formeln: n = m/M, n = N/Na, c = n/V
+- was Osmolaritaet bedeutet und warum NaCl doppelt so stark “zieht” wie Zucker
+- wie die Verduennungsformel c1 mal V1 = c2 mal V2 funktioniert
+- was Stoechiometrie ist und warum der limitierende Reaktand die Ausbeute bestimmt
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+## Atommasse und molare Masse
+
+Die **atomare Masseneinheit u** ist winzig klein: 1 u ist ungefaehr die Masse eines Protons oder Neutrons. Elektronen sind so leicht (ca. 1/2000 eines Protons), dass sie praktisch nichts zur Atommasse beitragen.
+
+Die **molare Masse M** gibt an, wie viel 1 Mol eines Stoffes in Gramm wiegt. Der Trick: Die Zahl ist gleich der Atommasse in u!
+- M(H2O) = 2 mal 1 + 16 = 18 g/mol
+- M(NaCl) = 23 + 35,5 = 58,5 g/mol
+- M(Glukose C6H12O6) = 6 mal 12 + 12 mal 1 + 6 mal 16 = 180 g/mol
+
+> **Merke:** Atommasse in u = molare Masse in g/mol (numerisch gleich). Elektronen sind so leicht, dass sie vernachlaessigt werden.
+
+---
+
+## Das Mol-Konzept -- drei Formeln
+
+**1 Mol = 6,022 mal 10 hoch 23 Teilchen** (Avogadro-Konstante Na). Wie ein “Dutzend” fuer Eier, nur viel groesser.
+
+Die drei Grundformeln:
+
+**n = m / M** -- Stoffmenge = Masse geteilt durch molare Masse
+Beispiel: 90 g Wasser: n = 90 / 18 = 5 mol
+
+**n = N / Na** -- Stoffmenge = Teilchenzahl geteilt durch Avogadro-Konstante
+
+**c = n / V** -- Konzentration = Stoffmenge geteilt durch Volumen (in Liter)
+
+> **Merke:** n = m/M ist die wichtigste Formel. Merke dir: mol = Gramm geteilt durch Gramm pro mol.
+
+---
+
+## Osmolaritaet -- warum NaCl doppelt zaehlt
+
+{{DIAGRAM:atomic-orbitals}}
+
+**Osmolaritaet** gibt an, wie viele Teilchen insgesamt in einer Loesung geloest sind. Der Clou: Wenn sich NaCl in Wasser aufloest, zerfaellt es in Na+ und Cl-. Aus 1 Teilchen werden 2! Deshalb hat 1 mol/L NaCl eine Osmolaritaet von 2000 mosmol/L. Zucker (Glukose) zerfaellt nicht -- 1 mol/L bleibt 1000 mosmol/L.
+
+Dein Blut hat eine Osmolaritaet von etwa 290 mosmol/L. Die “physiologische Kochsalzloesung” (0,9 % NaCl) liegt bei ca. 308 mosmol/L -- nah genug, damit sie isoton ist.
+
+**Verduennungsformel:** c1 mal V1 = c2 mal V2. Damit berechnest du, wie viel Wasser du zu einer Loesung geben musst, um eine bestimmte Konzentration zu erreichen.
+
+---
+
+## Stoechiometrie -- Kochen nach Rezept
+
+In einer chemischen Gleichung geben die Koeffizienten die Mol-Verhaeltnisse an, genau wie ein Kochrezept. 2 H2 + O2 wird zu 2 H2O bedeutet: 2 mol Wasserstoff + 1 mol Sauerstoff ergibt 2 mol Wasser.
+
+**Rechenweg:** (1) Gleichung ausgleichen, (2) gegebene Masse in mol umrechnen (n = m/M), (3) Mol-Verhaeltnis aus Koeffizienten ablesen, (4) gesuchte mol in Masse umrechnen (m = n mal M).
+
+Der **limitierende Reaktand** ist der Stoff, der zuerst aufgebraucht ist -- er bestimmt, wie viel Produkt maximal entstehen kann.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- n = m/M Rechnungen (z.B. 90 g H2O = 5 mol)
+- Osmolaritaet: NaCl zerfaellt in 2 Ionen, Glukose nicht
+- Molare Masse aus Summenformel berechnen
+- Verduennungsformel c1 mal V1 = c2 mal V2
+
+**Typische Fallen:**
+- Molaritaet ist NICHT dasselbe wie Osmolaritaet (NaCl: i = 2!)
+- Formel: n = m/M (nicht m = M/n!)
+- Relative Atommasse im PSE ist oft keine ganze Zahl (wegen Isotopengemisch)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **1 u** = ca. Masse eines Protons/Neutrons; Elektron vernachlaessigbar
+- **Molare Masse M** in g/mol = Atommasse in u; M(H2O) = 18, M(NaCl) = 58,5, M(Glukose) = 180
+- **Na** = 6,022 mal 10 hoch 23 Teilchen pro Mol
+- Formeln: **n = m/M**, **n = N/Na**, **c = n/V**
+- **Osmolaritaet**: alle Teilchen einzeln zaehlen; NaCl gibt 2 Ionen, Glukose bleibt 1
+- Blutplasma ungefaehr 290 mosmol/L; 0,9 % NaCl ungefaehr 308 mosmol/L (isoton)
+- **Verduennung**: c1 mal V1 = c2 mal V2 (Stoffmenge bleibt konstant)
+- **Stoechiometrie**: Koeffizienten = Mol-Verhaeltnisse; limitierender Reaktand bestimmt max. Ausbeute`,
+      contentExtended: `## Einleitung
+
+Auf dem Laborbericht steht “Kalium: 4,2 mmol/L” -- doch was bedeutet das eigentlich? Millimol pro Liter ist eine Konzentrationsangabe, die auf dem **Mol-Konzept** basiert: der genialen Idee, die unvorstellbar grosse Zahl von 6,022 mal 10 hoch 23 Teilchen in eine handliche Einheit zu packen. Ohne dieses Konzept koennten wir weder Infusionsloesungen dosieren noch Reaktionsgleichungen berechnen noch Laborwerte interpretieren. Im klinischen Alltag begegnet dir das Mol bei jeder Blutgasanalyse, jeder Infusion und jedem Medikamentenspiegel -- es ist die Bruecke zwischen der atomaren Welt und der messbaren Realitaet.
+
+**In diesem Kapitel lernst du:**
+- warum die atomare Masseneinheit u ausgerechnet auf C-12 bezogen ist -- und was sie mit der molaren Masse verbindet
 - wie du mit drei einfachen Formeln zwischen Masse, Stoffmenge und Teilchenzahl umrechnest
-- was Molarität und Osmolarität unterscheidet — und warum NaCl doppelt so stark „zieht” wie Glukose
-- wie die Verdünnungsformel c₁V₁ = c₂V₂ in Labor und Klinik eingesetzt wird
+- was Molaritaet und Osmolaritaet unterscheidet -- und warum NaCl doppelt so stark “zieht” wie Glukose
+- wie die Verduennungsformel c1V1 = c2V2 in Labor und Klinik eingesetzt wird
 - was ein limitierender Reaktand ist und warum er bestimmt, wie viel Produkt maximal entstehen kann
 
 ---
@@ -1049,132 +1442,132 @@ Auf dem Laborbericht steht „Kalium: 4,2 mmol/L” — doch was bedeutet das ei
 
 ## Atomare Masseneinheit u
 
-Die **atomare Masseneinheit** (u, unified atomic mass unit; IUPAC: Da, Dalton) ist definiert als **1/12 der Masse eines ¹²C-Atoms**:
-1 u = 1,66054 × 10⁻²⁷ kg
+Die **atomare Masseneinheit** (u, unified atomic mass unit; IUPAC: Da, Dalton) ist definiert als **1/12 der Masse eines C-12-Atoms**:
+1 u = 1,66054 mal 10 hoch -27 kg
 
 Massen der subatomaren Teilchen:
-- Proton: 1,00728 u ≈ 1 u (positiv geladen)
-- Neutron: 1,00867 u ≈ 1 u (neutral)
-- Elektron: 0,000549 u (vernachlässigbar! → Faktor 1836 leichter als Proton)
+- Proton: 1,00728 u, ungefaehr 1 u (positiv geladen)
+- Neutron: 1,00867 u, ungefaehr 1 u (neutral)
+- Elektron: 0,000549 u (vernachlaessigbar! Faktor 1836 leichter als Proton)
 
-> **Merke:** Die Elektronenmasse ist ~1/2000 der Protonenmasse → sie trägt praktisch nichts zur Atommasse bei. Deshalb gilt: **Atommasse in u ≈ Massenzahl A** (Nukleonenanzahl).
+> **Merke:** Die Elektronenmasse ist ca. 1/2000 der Protonenmasse und traegt praktisch nichts zur Atommasse bei. Deshalb gilt: **Atommasse in u ist ungefaehr gleich der Massenzahl A** (Nukleonenanzahl).
 
-Die **relative Atommasse Aᵣ** ist das gewichtete Mittel aller Isotopenmengen im natürlichen Vorkommen (daher oft keine ganze Zahl):
+Die **relative Atommasse Ar** ist das gewichtete Mittel aller Isotopenmengen im natuerlichen Vorkommen (daher oft keine ganze Zahl):
 
-| Element | Aᵣ [u] | Häufigste Isotope |
-|---------|---------|-------------------|
-| H | 1,008 | ¹H (99,98 %), ²H (0,02 %) |
-| C | 12,011 | ¹²C (98,9 %), ¹³C (1,1 %) |
-| N | 14,007 | ¹⁴N (99,6 %), ¹⁵N (0,4 %) |
-| O | 15,999 | ¹⁶O (99,8 %), ¹⁸O (0,2 %) |
-| Cl | 35,453 | ³⁵Cl (75,8 %), ³⁷Cl (24,2 %) |
+| Element | Ar [u] | Haeufigste Isotope |
+|---------|--------|-------------------|
+| H | 1,008 | H-1 (99,98 %), H-2 (0,02 %) |
+| C | 12,011 | C-12 (98,9 %), C-13 (1,1 %) |
+| N | 14,007 | N-14 (99,6 %), N-15 (0,4 %) |
+| O | 15,999 | O-16 (99,8 %), O-18 (0,2 %) |
+| Cl | 35,453 | Cl-35 (75,8 %), Cl-37 (24,2 %) |
 
 ## Molare Masse M
 
 Die **molare Masse M** [Einheit: g/mol] eines Elements ist numerisch gleich der relativen Atommasse in u:
 - M(C) = 12,011 g/mol | M(O) = 15,999 g/mol | M(Na) = 22,990 g/mol
 
-Für Moleküle: M(Molekül) = Summe der molaren Massen aller Atome.
-- M(H₂O) = 2 × 1,008 + 15,999 = 18,015 g/mol
+Fuer Molekuele: M(Molekuel) = Summe der molaren Massen aller Atome.
+- M(H2O) = 2 mal 1,008 + 15,999 = 18,015 g/mol
 - M(NaCl) = 22,990 + 35,453 = 58,443 g/mol
-- M(Glukose C₆H₁₂O₆) = 6×12,011 + 12×1,008 + 6×15,999 = 180,159 g/mol
+- M(Glukose C6H12O6) = 6 mal 12,011 + 12 mal 1,008 + 6 mal 15,999 = 180,159 g/mol
 - M(NaOH) = 22,990 + 15,999 + 1,008 = 39,997 g/mol
 
 ## Avogadro-Konstante und Mol
 
-Die **Avogadro-Konstante** Nₐ = 6,022 × 10²³ mol⁻¹ gibt die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol an.
+Die **Avogadro-Konstante** Na = 6,022 mal 10 hoch 23 pro mol gibt die Anzahl der Teilchen (Atome, Molekuele, Ionen) in einem Mol an.
 
-**Definition Mol:** 1 Mol ist die Stoffmenge, die genauso viele Formeleinheiten enthält wie Atome in 12 g ¹²C enthalten sind (= Nₐ Teilchen).
+**Definition Mol:** 1 Mol ist die Stoffmenge, die genauso viele Formeleinheiten enthaelt wie Atome in 12 g C-12 enthalten sind (= Na Teilchen).
 
-## Das Mol-Konzept – zentrale Formeln
+## Das Mol-Konzept -- zentrale Formeln
 
 Die drei grundlegenden Beziehungen:
 
 **1.** n = m / M
-(Stoffmenge n [mol] = Masse m [g] ÷ molare Masse M [g/mol])
+(Stoffmenge n [mol] = Masse m [g] geteilt durch molare Masse M [g/mol])
 
-**2.** n = N / Nₐ
-(Stoffmenge n [mol] = Teilchenzahl N ÷ Avogadro-Konstante Nₐ)
+**2.** n = N / Na
+(Stoffmenge n [mol] = Teilchenzahl N geteilt durch Avogadro-Konstante Na)
 
-**3.** Für ideale Gase bei Standardbedingungen (STP: 0 °C, 1 atm): V = n × 22,4 L/mol (molares Volumen)
+**3.** Fuer ideale Gase bei Standardbedingungen (STP: 0 Grad C, 1 atm): V = n mal 22,4 L/mol (molares Volumen)
 
 Beispielrechnung: Wie viele Mol NaCl sind in 11,7 g?
-n = 11,7 g ÷ 58,44 g/mol = 0,200 mol = 200 mmol
+n = 11,7 g geteilt durch 58,44 g/mol = 0,200 mol = 200 mmol
 
-## Molkonzentration (Molarität) und klinische Relevanz
+## Molkonzentration (Molaritaet) und klinische Relevanz
 
-**Molarität c [mol/L = M]:** c = n / V
+**Molaritaet c [mol/L = M]:** c = n / V
 
-Physiologische Kochsalzlösung: 0,9 % NaCl ≈ 154 mmol/L Na⁺ + 154 mmol/L Cl⁻ ≈ 308 mosmol/L → isoton zum Blutplasma (≈ 290 mosmol/L).
+Physiologische Kochsalzloesung: 0,9 % NaCl ist ungefaehr 154 mmol/L Na+ plus 154 mmol/L Cl- und ergibt ungefaehr 308 mosmol/L, isoton zum Blutplasma (ungefaehr 290 mosmol/L).
 
-**Osmolarität** [mosmol/L] = Summe aller gelösten Teilchenkonzentrationen (Ionen zählen einzeln).
-Beispiel: 1 mol/L NaCl → 2 mosmol/L (Na⁺ + Cl⁻ getrennt).
+**Osmolaritaet** [mosmol/L] = Summe aller geloesten Teilchenkonzentrationen (Ionen zaehlen einzeln).
+Beispiel: 1 mol/L NaCl ergibt 2 mosmol/L (Na+ + Cl- getrennt).
 
 ## Klinische Anwendungen in der Pharmakologie
 
-**Dosisberechnung:** Arzneimittel werden in mg oder µg pro kg KG angegeben. Die molare Masse ermöglicht die Umrechnung zwischen Massenangabe und Mol-Menge:
-- Aspirin (Acetylsalicylsäure, C₉H₈O₄): M = 180,16 g/mol; 500 mg = 500/180,16 = 2,78 mmol
-- Insulin (Peptid, M ≈ 5808 g/mol): 1 IE ≈ 34,7 µg ≈ 6 nmol
+**Dosisberechnung:** Arzneimittel werden in mg oder ug pro kg KG angegeben. Die molare Masse ermoeglicht die Umrechnung zwischen Massenangabe und Mol-Menge:
+- Aspirin (Acetylsalicylsaeure, C9H8O4): M = 180,16 g/mol; 500 mg = 500/180,16 = 2,78 mmol
+- Insulin (Peptid, M ungefaehr 5808 g/mol): 1 IE ungefaehr 34,7 ug ungefaehr 6 nmol
 
-**Infusionsberechnungen:** Elektrolytlösungen und Infusionsgeschwindigkeiten basieren auf Mol-Konzentration (mmol/L).
+**Infusionsberechnungen:** Elektrolytloesungen und Infusionsgeschwindigkeiten basieren auf Mol-Konzentration (mmol/L).
 
-**Serumchemie:** Laborwerte oft in mmol/L: Na⁺ 135–145 mmol/L, K⁺ 3,5–5,0 mmol/L, Glukose 3,9–6,1 mmol/L, Kreatinin 62–115 µmol/L.
+**Serumchemie:** Laborwerte oft in mmol/L: Na+ 135-145 mmol/L, K+ 3,5-5,0 mmol/L, Glukose 3,9-6,1 mmol/L, Kreatinin 62-115 umol/L.
 
-## Verdünnungsformel
+## Verduennungsformel
 
-Bei der Verdünnung einer Lösung bleibt die Stoffmenge n konstant:
-**c₁ × V₁ = c₂ × V₂**
+Bei der Verduennung einer Loesung bleibt die Stoffmenge n konstant:
+**c1 mal V1 = c2 mal V2**
 
-Beispiel: 50 mL einer 2 mol/L HCl-Lösung sollen auf 0,1 mol/L verdünnt werden. V₂ = (c₁ × V₁)/c₂ = (2 × 50)/0,1 = 1000 mL. Also mit Wasser auf 1000 mL auffüllen.
+Beispiel: 50 mL einer 2 mol/L HCl-Loesung sollen auf 0,1 mol/L verduennt werden. V2 = (c1 mal V1)/c2 = (2 mal 50)/0,1 = 1000 mL. Also mit Wasser auf 1000 mL auffuellen.
 
-> **Merke:** Die Verdünnungsformel c₁V₁ = c₂V₂ gilt für alle Konzentrationsberechnungen bei Verdünnung — klinisch wichtig bei Medikamentenherstellung und Infusionsansatz.
+> **Merke:** Die Verduennungsformel c1V1 = c2V2 gilt fuer alle Konzentrationsberechnungen bei Verduennung -- klinisch wichtig bei Medikamentenherstellung und Infusionsansatz.
 
 {{DIAGRAM:atomic-orbitals}}
 
-## Stöchiometrie — Mol-Verhältnisse in Reaktionsgleichungen
+## Stoechiometrie -- Mol-Verhaeltnisse in Reaktionsgleichungen
 
-Die Koeffizienten in einer Reaktionsgleichung geben direkt die Mol-Verhältnisse an:
-2 H₂ + O₂ → 2 H₂O bedeutet: 2 mol H₂ + 1 mol O₂ → 2 mol H₂O
+Die Koeffizienten in einer Reaktionsgleichung geben direkt die Mol-Verhaeltnisse an:
+2 H2 + O2 wird zu 2 H2O bedeutet: 2 mol H2 + 1 mol O2 ergibt 2 mol H2O
 
-**Schrittweises Vorgehen bei stöchiometrischen Berechnungen:**
+**Schrittweises Vorgehen bei stoechiometrischen Berechnungen:**
 1. Reaktionsgleichung ausgleichen (Massenerhaltung)
 2. Gegebene Masse in mol umrechnen: n = m/M
-3. Mol-Verhältnis aus Koeffizienten ablesen
-4. Gesuchte mol in Masse umrechnen: m = n × M
+3. Mol-Verhaeltnis aus Koeffizienten ablesen
+4. Gesuchte mol in Masse umrechnen: m = n mal M
 
 Beispiel in der Medizin:
-C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Glukose, ΔG° = −2870 kJ/mol)
-1 mol Glukose (180 g) reagiert mit 6 mol O₂ (192 g) und liefert 6 mol CO₂ + 6 mol H₂O.
+C6H12O6 + 6 O2 wird zu 6 CO2 + 6 H2O (vollstaendige Oxidation von Glukose, Delta-G ungefaehr -2870 kJ/mol)
+1 mol Glukose (180 g) reagiert mit 6 mol O2 (192 g) und liefert 6 mol CO2 + 6 mol H2O.
 
-**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.
+**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die uebrigen Edukte verbleiben als Ueberschuss.
 
 ## MedAT-Fokus
 
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
 
-**Typische Prüfungsfragen:**
-- Wie viele Mol sind in 90 g H₂O? → n = 90/18 = 5 mol
-- Welche Osmolarität hat 1 mol/L NaCl? → 2000 mosmol/L (i = 2)
-- Was ist die molare Masse von Glukose C₆H₁₂O₆? → 6×12 + 12×1 + 6×16 = 180 g/mol
-- Wie verdünnt man von c₁ auf c₂? → c₁V₁ = c₂V₂
+**Typische Pruefungsfragen:**
+- Wie viele Mol sind in 90 g H2O? n = 90/18 = 5 mol
+- Welche Osmolaritaet hat 1 mol/L NaCl? 2000 mosmol/L (i = 2)
+- Was ist die molare Masse von Glukose C6H12O6? 6 mal 12 + 12 mal 1 + 6 mal 16 = 180 g/mol
+- Wie verduennt man von c1 auf c2? c1V1 = c2V2
 
 **Typische Fallen:**
-- Molarität ≠ Osmolarität: NaCl 1 M → 2 osmol/L (i = 2); Glukose 1 M → 1 osmol/L (i = 1)
-- Verdünnung: n bleibt konstant → c₁V₁ = c₂V₂ (nicht Masse!)
+- Molaritaet ist nicht gleich Osmolaritaet: NaCl 1 M ergibt 2 osmol/L (i = 2); Glukose 1 M ergibt 1 osmol/L (i = 1)
+- Verduennung: n bleibt konstant, also c1V1 = c2V2 (nicht Masse!)
 - Relative Atommasse im PSE oft keine ganze Zahl (Isotopengemisch)
-- Formel: n = m/M (mol = g ÷ g/mol) — nicht m = M/n!
+- Formel: n = m/M (mol = g geteilt durch g/mol) -- nicht m = M/n!
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **1 u** (atomare Masseneinheit) = 1/12 der Masse von ¹²C; Proton ≈ Neutron ≈ 1 u; Elektron vernachlässigbar (~1/2000 Protonmasse)
-- **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H₂O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
-- **Avogadro-Konstante**: Nₐ = 6,022 × 10²³ mol⁻¹ — so viele Teilchen enthält 1 Mol
-- Formeln: **n = m/M** (mol = g ÷ g/mol); **n = N/Nₐ**; **c = n/V** (Molarität in mol/L)
-- **Osmolarität** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zählen (NaCl: i = 2)
-- Blutplasma-Osmolarität ≈ **290 mosmol/L**; 0,9 % NaCl ≈ 308 mosmol/L (klinisch als isoton verwendet)
-- **Verdünnungsformel**: c₁ × V₁ = c₂ × V₂ (Stoffmenge bleibt konstant)
-- **Stöchiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse; limitierender Reaktand bestimmt max. Ausbeute`,
+- **1 u** (atomare Masseneinheit) = 1/12 der Masse von C-12; Proton ungefaehr Neutron ungefaehr 1 u; Elektron vernachlaessigbar (ca. 1/2000 Protonmasse)
+- **Molare Masse M** [g/mol]: numerisch gleich der relativen Atommasse; M(H2O) = 18 g/mol, M(NaCl) = 58,4 g/mol, M(Glukose) = 180 g/mol
+- **Avogadro-Konstante**: Na = 6,022 mal 10 hoch 23 pro mol -- so viele Teilchen enthaelt 1 Mol
+- Formeln: **n = m/M** (mol = g geteilt durch g/mol); **n = N/Na**; **c = n/V** (Molaritaet in mol/L)
+- **Osmolaritaet** [mosmol/L] = Summe aller Teilchenkonzentrationen; Ionen einzeln zaehlen (NaCl: i = 2)
+- Blutplasma-Osmolaritaet ungefaehr **290 mosmol/L**; 0,9 % NaCl ungefaehr 308 mosmol/L (klinisch als isoton verwendet)
+- **Verduennungsformel**: c1 mal V1 = c2 mal V2 (Stoffmenge bleibt konstant)
+- **Stoechiometrie**: Koeffizienten in Reaktionsgleichungen = Mol-Verhaeltnisse; limitierender Reaktand bestimmt max. Ausbeute`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1361,6 +1754,90 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
       ],
       content: `## Einleitung
 
+Hast du dich je gefragt, warum Wasser bei 100 Grad siedet, Schwefelwasserstoff (H2S) aber schon bei minus 60 Grad ein Gas ist? Der Unterschied sind **Wasserstoffbruecken** -- unsichtbare Kraefte zwischen Molekuelen. Denk an nassen Zucker in der Kueche: Er klebt, weil OH-Gruppen ueber Wasserstoffbruecken zusammenhalten. Solche Kraefte bestimmen auch, warum ein Spiegelei beim Braten fest wird und warum Oel auf Wasser schwimmt.
+
+**In diesem Kapitel lernst du:**
+- warum selbst voellig unpolare Molekuele aneinander haften (London-Kraefte)
+- woran du erkennst, ob ein Molekuel H-Bruecken bilden kann (Schluessel: N, O, F)
+- wie das Staerkeranking der Wechselwirkungen aussieht
+- warum ein Spiegelei beim Braten fest wird (Denaturierung)
+- was die Siedetemperatur mit der Groesse eines Molekuels zu tun hat
+
+---
+
+{{DIAGRAM:covalent-bond}}
+
+## Van-der-Waals-Kraefte
+
+Stell dir vor, du reibst einen Luftballon an deinem Pullover -- er bleibt an der Wand kleben, weil sich Ladungen kurz verschieben. Aehnlich funktionieren **London-Dispersionskraefte**: Elektronen in einem Molekuel verteilen sich fuer Sekundenbruchteile ungleich. So entsteht ein kurzzeitiger Dipol, der im Nachbarmolekuel einen Gegendipol erzeugt -- und beide ziehen sich an.
+
+London-Kraefte gibt es in **allen** Molekuelen (auch polaren!). Je groesser das Molekuel (mehr Elektronen), desto staerker. Deshalb ist eine lange Kerze (langkettige Kohlenwasserstoffe) bei Raumtemperatur fest, waehrend kurzkettiges Methan ein Gas ist.
+
+**Dipol-Dipol-Kraefte** wirken zusaetzlich bei Molekuelen mit dauerhaftem Plus- und Minuspol. Beispiel: Aceton siedet bei 56 Grad, obwohl unpolares Butan (gleiche Masse!) schon bei minus 1 Grad ein Gas ist.
+
+> **Merke:** London-Kraefte wirken in ALLEN Molekuelen. Je groesser und langkettiger, desto staerker. Dipol-Dipol kommt bei polaren Molekuelen dazu.
+
+---
+
+## Staerkeranking
+
+| Wechselwirkung | Staerke (kJ/mol) | Alltagsbeispiel |
+|----------------|-------------------|-----------------|
+| Ionenbindung | 400--4000 | Kochsalz (NaCl) haelt fest zusammen |
+| Kovalente Bindung | 150--800 | Plastik ist stabil (C-C-Bindungen) |
+| Wasserstoffbruecke | 10--40 | Wasser bleibt bis 100 Grad fluessig |
+| Dipol-Dipol | 3--10 | Aceton verdampft langsamer als Butan |
+| London | 0,05--40 | Kerzen bestehen aus langen Ketten |
+
+{{DIAGRAM:ionic-bond}}
+
+## Wasserstoffbruecken
+
+Wasserstoffbruecken sind die wichtigste nicht-kovalente Kraft in der Natur. Sie entstehen, wenn ein H-Atom an **N, O oder F** gebunden ist und mit einem freien Elektronenpaar eines anderen N, O oder F wechselwirkt.
+
+Einfach gemerkt: **N, O, F** -- nur diese drei sind elektronegativ genug.
+
+**Alltagsbeispiele:**
+- **Wasser**: Jedes Molekuel kann bis zu 4 H-Bruecken bilden -- deshalb siedet Wasser erst bei 100 Grad (ohne H-Bruecken waere es bei minus 80 Grad schon Gas!)
+- **Nasse Haare** kleben zusammen: H-Bruecken zwischen Keratinfasern
+- **DNA**: Die beiden Straenge werden durch H-Bruecken zusammengehalten (A-T: 2, G-C: 3)
+
+> **Merke:** H-Bruecken-Donor = X-H (mit X = N, O, F). Akzeptor = freies Elektronenpaar von Y (auch N, O, F). C-H bildet KEINE H-Bruecken.
+
+---
+
+## Hydrophober Effekt
+
+Gib einen Tropfen Oel in Wasser -- das Oel bildet sofort eine Kugel. Unpolare Molekuele koennen keine H-Bruecken mit Wasser bilden. Die Wassermolekuele muessen sich um das Oel ordnen (wie ein Kaefig), das kostet Energie. Deshalb lagern sich unpolare Teile zusammen -- so entsteht die Oelkugel. Das gleiche Prinzip treibt die Faltung von Proteinen und die Bildung von Zellmembranen an.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Staerkeranking: Ionenbindung > kovalent > H-Bruecke > Dipol-Dipol > London
+- H-Bruecken: nur mit N, O, F als Partner
+- DNA-Basenpaarung: A-T = 2 H-Bruecken, G-C = 3
+- Denaturierung (z. B. Spiegelei braten) zerstoert H-Bruecken, NICHT kovalente Bindungen
+
+**Typische Fallen:**
+- London-Kraefte gibt es in ALLEN Molekuelen -- auch in polaren
+- Denaturierung zerstoert NICHT die Primaerstruktur (Peptidbindungen bleiben)
+- H-Bruecken-Donor (X-H) ist NICHT dasselbe wie Akzeptor (freies e-Paar)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Van-der-Waals-Kraefte**: London (alle Molekuele), Dipol-Dipol (polare), Debye (Dipol + unpolares Nachbar)
+- Staerkeranking: Ionenbindung > kovalent > **H-Bruecke** (10--40 kJ/mol) > Dipol-Dipol > London
+- **H-Bruecken**: X-H...Y mit X, Y = N, O, F; gerichtet und kooperativ
+- Wasser: 4 H-Bruecken pro Molekuel -- erklaert hohen Siedepunkt und Schwitzen als Kuehlung
+- DNA: A-T = 2, G-C = 3 H-Bruecken -- GC-reiche DNA ist stabiler
+- **Hydrophober Effekt**: Unpolare Gruppen lagern sich in Wasser zusammen (Oel im Wasser)
+- Denaturierung (Hitze, Saeure): zerstoert H-Bruecken und hydrophobe Kontakte, nicht Peptidbindungen`,
+      contentExtended: `## Einleitung
+
 Wasser siedet bei 100 °C — Schwefelwasserstoff (H₂S), ein ähnlich aufgebautes Molekül, bereits bei −60 °C. Der Grund für diesen enormen Unterschied von 160 Grad sind **Wasserstoffbrücken**: unsichtbare Kräfte zwischen Molekülen, die im Wasser ein dichtes Netzwerk bilden. Diese und andere intermolekulare Wechselwirkungen bestimmen nicht nur Siedepunkte und Löslichkeit, sondern halten auch die DNA-Doppelhelix zusammen, stabilisieren die dreidimensionale Struktur von Proteinen und entscheiden darüber, ob ein Medikament wasserlöslich ist oder im Fettgewebe landet. Wer intermolekulare Kräfte versteht, versteht Biochemie.
 
 **In diesem Kapitel lernst du:**
@@ -1454,6 +1931,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
+
         "Wasserstoffbrückenbindungen (X–H···Y, X/Y = N, O, F) in ihrer Stärke, Geometrie und biologischen Bedeutung beschreiben können.",
         "Das Stärkeranking intermolekularer Wechselwirkungen kennen und auf Siedepunkte und Löslichkeit anwenden können.",
         "Den Einfluss intermolekularer Kräfte auf Proteinfaltung, DNA-Stabilität und Pharmakologie erläutern können.",
@@ -1682,12 +2160,90 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
       ],
       content: `## Einleitung
 
+Stell dir vor, du legst eine Rosine in ein Glas Wasser. Nach ein paar Stunden ist sie prall aufgequollen -- Wasser ist durch die duenne Haut der Rosine eingedrungen. Das ist **Osmose**: Wasser wandert immer dorthin, wo mehr Teilchen geloest sind. Das gleiche Prinzip erklaert, warum Kirschen im Regen platzen und warum du Salzwasser gurgeln kannst, um geschwollenes Zahnfleisch zu beruhigen.
+
+**In diesem Kapitel lernst du:**
+- warum sich Zucker in Wasser loest, Oel aber nicht (Gleiches loest sich in Gleichem)
+- wie Osmose funktioniert und warum Kirschen im Regen platzen
+- was der van-t-Hoff-Faktor i bedeutet -- und warum Kochsalz doppelt so stark “zieht” wie Zucker
+- warum 0,9 % Kochsalzloesung die Standard-Infusion ist
+- was passiert, wenn du eine Gurke in Salzwasser legst (sie schrumpft!)
+
+---
+
+{{DIAGRAM:ionic-bond}}
+
+## Gleiches loest sich in Gleichem
+
+**Polares loest Polares:** Zucker loest sich in Wasser (beide polar), aber nicht in Oel. Kochsalz loest sich in Wasser, weil Wassermolekuele die Ionen umhuellen (Hydrathuelle).
+
+**Unpolares loest Unpolares:** Fettflecken gehen mit Spuelmittel weg, aber nicht mit reinem Wasser. Nagellack loest sich in Aceton, nicht in Wasser.
+
+> **Merke:** Gleiches loest sich in Gleichem. Polar in polar (Zucker in Wasser), unpolar in unpolar (Fett in Oel).
+
+---
+
+## Osmose -- Wasser wandert zu den Teilchen
+
+{{DIAGRAM:covalent-bond}}
+
+**Osmose** bedeutet: Wasser wandert durch eine halbdurchlaessige Membran (Wand, die Wasser durchlaesst, aber nicht die geloesten Teilchen) von der Seite mit **weniger** Teilchen zur Seite mit **mehr** Teilchen.
+
+Alltagsbeispiel: Eine Rosine in Wasser quillt auf, weil innen mehr Zucker geloest ist als aussen -- Wasser stroemt hinein. Eine Gurke in Salzwasser schrumpft, weil aussen mehr Salz ist -- Wasser stroemt hinaus.
+
+**Van-t-Hoff-Faktor i:** Wie viele Teilchen entstehen, wenn sich eine Substanz in Wasser loest?
+- Zucker (Glukose): loest sich, zerfaellt aber nicht -- i = 1
+- Kochsalz NaCl: zerfaellt in Na und Cl -- i = 2
+- CaCl2: zerfaellt in Ca und 2 Cl -- i = 3
+
+> **Merke:** Osmolaritaet = Molaritaet mal i mal 1000. Kochsalz (i=2) "zieht" doppelt so stark wie Zucker (i=1).
+
+---
+
+## Isoton, hypoton, hyperton
+
+Unser Blut hat eine Osmolaritaet von etwa 290 mOsmol/L. Was passiert mit roten Blutkoerperchen in verschiedenen Loesungen?
+
+- **Isoton** (etwa 290): Zelle bleibt gleich -- z. B. 0,9 % Kochsalz
+- **Hypoton** (zu wenig Teilchen): Wasser stroemt IN die Zelle -- sie platzt! (wie die Rosine)
+- **Hyperton** (zu viele Teilchen): Wasser stroemt AUS der Zelle -- sie schrumpft (wie die Gurke)
+
+> **Merke:** Reines Wasser als Infusion waere toedlich -- die roten Blutkoerperchen wuerden platzen (Haemolyse). Deshalb immer 0,9 % NaCl!
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Osmose: Wasser wandert von wenig zu viel Teilchen (NICHT umgekehrt)
+- Van-t-Hoff-Faktor: NaCl = 2, Glukose = 1, CaCl2 = 3
+- Hypoton = Zelle platzt; hyperton = Zelle schrumpft
+- 0,9 % NaCl = isotonische Standardinfusion
+
+**Typische Fallen:**
+- Osmose: Wasser zu den VIELEN Teilchen, nicht weg davon
+- Hypoton ist nicht gleich hyperton (Verwechslungsgefahr!)
+- Onkotischer Druck (durch Eiweisse) ist nicht dasselbe wie osmotischer Druck (durch alle Teilchen)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Gleiches loest sich in Gleichem**: Zucker in Wasser (polar+polar), Fett in Oel (unpolar+unpolar)
+- **Osmose**: Wasser wandert durch halbdurchlaessige Membran von wenig zu viel Teilchen
+- **Van-t-Hoff-Faktor i**: Glukose = 1, NaCl = 2, CaCl2 = 3
+- **Blut-Osmolaritaet**: ca. 290 mOsmol/L
+- Hypoton = Zelle platzt (Rosine in Wasser); hyperton = Zelle schrumpft (Gurke in Salzwasser)
+- **0,9 % NaCl** = isotonische Standardinfusion (ca. 308 mOsmol/L)
+- Albumin haelt Wasser in den Blutgefaessen (onkotischer Druck)`,
+      contentExtended: `## Einleitung
+
 Stell dir vor, du gibst einen Tropfen Blut in ein Glas destilliertes Wasser — innerhalb von Sekunden platzen die roten Blutkörperchen. Der Grund: **Osmose**. Wasser strömt durch die Zellmembran in die Erythrozyten, weil die Teilchenkonzentration innen höher ist als außen. Genau deshalb werden Infusionen nie mit reinem Wasser, sondern mit isotonischer Kochsalzlösung (0,9 % NaCl) verabreicht. Löslichkeit und Osmose sind keine abstrakten Konzepte — sie bestimmen, ob ein Kontrastmittel (BaSO₄) im Darm bleibt oder resorbiert wird, warum Patienten mit Leberzirrhose Ödeme entwickeln und wie Nierensteine aus Calcium-Oxalat entstehen.
 
 **In diesem Kapitel lernst du:**
-- warum „Gleiches sich in Gleichem löst” — und was das für Medikamente und Kontrastmittel bedeutet
+- warum „Gleiches sich in Gleichem löst" — und was das für Medikamente und Kontrastmittel bedeutet
 - wie Osmose funktioniert und warum Erythrozyten in Wasser platzen, in Kochsalzlösung aber nicht
-- was der van't-Hoff-Faktor aussagt — und warum NaCl doppelt so stark „zieht” wie Glukose
+- was der van't-Hoff-Faktor aussagt — und warum NaCl doppelt so stark „zieht" wie Glukose
 - warum Albumin das Wasser in den Blutgefäßen hält — und was passiert, wenn es fehlt
 - wie das Löslichkeitsprodukt Ksp vorhersagt, ob ein Salz ausfällt oder gelöst bleibt
 
@@ -2012,6 +2568,84 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
       ],
       content: `## Einleitung
 
+Hast du dich schon mal gefragt, warum eine Dampfverbrennung schlimmer ist als heisses Wasser? Der Dampf gibt beim Abkuehlen auf der Haut zusaetzlich Energie ab -- das ist ein Phasenuebergang. Solche Uebergaenge zwischen fest, fluessig und gasfoermig begegnen dir ueberall in der Medizin: vom Schwitzen (Verdampfen kuehlt) bis zum Surfactant in der Lunge. Dazu kommen **Kolloide** -- winzige Teilchen, die in vielen Infusionsloesungen stecken.
+
+**In diesem Kapitel lernst du:**
+- warum Verdampfen Energie kostet und Kondensieren Energie freisetzt
+- warum Wasser im Gebirge frueher siedet
+- was Kolloide von echten Loesungen unterscheidet
+- warum Fruehgeborene ohne Surfactant Atemprobleme bekommen
+
+---
+
+{{DIAGRAM:covalent-bond}}
+
+## Die drei Aggregatzustaende
+
+Stell dir Wasser vor: Als Eis sind die Teilchen fest in einem Gitter eingesperrt -- sie schwingen nur ein bisschen. Als fluessiges Wasser gleiten sie aneinander vorbei, bleiben aber dicht zusammen. Als Dampf fliegen sie frei und schnell umher.
+
+- **Fest:** Teilchen in geordneter Struktur, feste Form und festes Volumen
+- **Fluessig:** Teilchen dicht, aber beweglich -- passt sich dem Behaelter an
+- **Gasfoermig:** Teilchen weit auseinander, schnelle Bewegung, kein festes Volumen
+
+> **Merke:** Es gibt noch einen 4. Zustand -- Plasma (ionisiertes Gas). In der Medizin nutzt man es bei der Argon-Plasma-Koagulation zur Blutstillung.
+
+## Phasenuebergaenge
+
+Stell dir vor, du erwaermst Eis: Erst schmilzt es (fest zu fluessig), dann verdampft es (fluessig zu gasfoermig). Beide Schritte brauchen Energie -- sie sind **endotherm**. In die andere Richtung wird Energie frei (**exotherm**):
+
+- **Schmelzen** (fest nach fluessig): braucht Energie (endotherm)
+- **Verdampfen** (fluessig nach gasfoermig): braucht viel Energie -- deshalb kuehlt Schwitzen!
+- **Kondensieren** (gasfoermig nach fluessig): gibt Energie ab -- deshalb sind Dampfverbrennungen so schlimm
+- **Sublimation** (fest direkt nach gasfoermig): z.B. Trockeneis (CO2); Gefriertrocknung fuer Impfstoffe
+
+> **Merke:** Uebergang zu "freierem" Zustand = endotherm (Energie noetig). Uebergang zu "geordnetem" Zustand = exotherm (Energie frei). Waehrend des Uebergangs bleibt die Temperatur konstant!
+
+## Dampfdruck und Siedepunkt
+
+Wasser siedet, wenn sein Dampfdruck dem aeusseren Luftdruck entspricht:
+- Auf dem Berg (weniger Luftdruck): Wasser siedet unter 100 Grad C -- laengere Kochzeit!
+- Im Schnellkochtopf (mehr Druck): Wasser siedet ueber 100 Grad C -- schnelleres Kochen
+
+{{DIAGRAM:ionic-bond}}
+
+## Kolloide -- zwischen Loesung und Suspension
+
+Stell dir drei Glaeser vor: In einem loest sich Zucker komplett auf (echte Loesung, Teilchen unter 1 nm). Im zweiten schweben Fetttroepfchen (Kolloid, 1 nm bis 1 Mikrometer). Im dritten sinkt Sand zu Boden (Suspension, ueber 1 Mikrometer).
+
+Kolloide erkennst du am **Tyndall-Effekt**: Wenn du mit einer Taschenlampe durchleuchtest, wird der Lichtstrahl sichtbar -- wie Sonnenstrahlen im Nebel. Bei einer echten Loesung passiert das nicht.
+
+**Brownsche Bewegung:** Die winzigen Kolloid-Teilchen zittern staendig, weil Loesungsmittel-Molekuele sie anstossen -- das verhindert, dass sie absinken.
+
+## Kolloide in der Medizin
+
+- **Blut** enthaelt kolloidale Proteine (Albumin, Fibrinogen)
+- **HAES und Albumin:** kolloidale Infusionsloesungen bleiben laenger im Blutgefaess als Kochsalzloesung
+- **Surfactant:** Phospholipid-Gemisch in den Lungenblaeserchen, senkt die Oberflaechenspannung -- ohne Surfactant kollabieren die Alveolen. Fruehgeborene haben noch zu wenig davon und entwickeln ein Atemnotsyndrom (RDS).
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Phasenuebergaenge: endo- vs. exotherm (Verdampfen = endotherm, Kondensieren = exotherm)
+- Siedepunkt haengt vom aeusseren Druck ab
+- Kolloide: Tyndall-Effekt als Erkennungsmerkmal, Groesse 1 nm bis 1 Mikrometer
+- Surfactant und Atemnotsyndrom bei Fruehgeborenen
+
+**Typische Fallen:**
+- Sublimation (fest nach gas) ist endotherm -- nicht exotherm!
+- Dampfverbrennung schlimmer als Wasserverbrennung gleicher Temperatur
+
+---
+## Zusammenfassung
+
+- Fest, fluessig, gasfoermig -- unterschieden durch Teilchenbewegung
+- Uebergaenge zu "freierem" Zustand brauchen Energie (endotherm)
+- Siedepunkt = Dampfdruck gleich aeusserer Druck; im Gebirge niedriger
+- Kolloide (1 nm bis 1 Mikrometer): Tyndall-Effekt, Brownsche Bewegung
+- Surfactant schuetzt Alveolen; Mangel bei Fruehgeborenen fuehrt zu RDS`,
+
+      contentExtended: `## Einleitung
+
 Warum ist eine Dampfverbrennung schlimmer als eine Verbrennung mit gleich heißem Wasser? Weil beim Kondensieren des Dampfes auf der Haut zusätzlich die gesamte Verdampfungswärme freigesetzt wird — ein Phasenübergang, der enorme Energie abgibt. Solche Übergänge zwischen fest, flüssig und gasförmig begegnen dir in der Medizin ständig: von der Gefriertrocknung von Impfstoffen über die Thermoregulation durch Schwitzen bis zum Surfactant, der in den Lungenbläschen das Kollabieren der Alveolen verhindert. Dazwischen liegen **Kolloide** — Partikel zwischen Lösung und Suspension —, die als Blutbestandteile und Infusionslösungen klinisch allgegenwärtig sind.
 
 **In diesem Kapitel lernst du:**
@@ -2114,7 +2748,7 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - **Siedepunkt** = wenn Dampfdruck = äußerer Druck; im Gebirge (↓ Luftdruck) → niedrigerer Siedepunkt
 - **Kolloide**: Partikel 1–1000 nm; zwischen echter Lösung und Suspension; zeigen Brownsche Bewegung und Tyndall-Effekt
 - Kolloide: Typen — Sol, Emulsion, Gel, Aerosol; medizinisch: HAES, Albumin als Volumenersatz
-- **Surfactant** (Dipalmitoylphosphatidylcholin): senkt Alveolen-Oberflächenspannung; Frühgeborene: fehlend → Atemnotsyndrom (RDS)`,
+- **Surfactant** (DPPC): senkt Alveolen-Oberflaechenspannung; Fruehgeborene: fehlend -- Atemnotsyndrom (RDS)`,
 
       lernziele: [
         "Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.",
@@ -2364,6 +2998,96 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
         "Valenzelektron",
       ],
       content: `## Einleitung
+
+Stell dir das Periodensystem wie einen Sitzplan vor: Elemente, die sich aehnlich verhalten, sitzen in derselben Spalte (Gruppe). Natrium und Kalium stehen beide in Gruppe 1 -- und beide reagieren heftig mit Wasser. Fluor und Chlor stehen in Gruppe 17 -- beide sind aggressive Oxidationsmittel. Wenn du dieses Ordnungsprinzip verstehst, kannst du Eigenschaften vorhersagen, statt sie auswendig zu lernen.
+
+**In diesem Kapitel lernst du:**
+- wie das PSE aufgebaut ist: 7 Perioden, 18 Gruppen, 4 Bloecke
+- warum Elemente derselben Gruppe aehnliche Eigenschaften haben
+- wo Metalle, Nichtmetalle und Halbmetalle liegen
+- welche biologisch wichtigen Elemente in welchem Block stehen
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+## Das Ordnungsprinzip: Kernladungszahl
+
+Mendelejew ordnete 1869 die Elemente nach ihrer Atommasse und bemerkte: Die Eigenschaften wiederholen sich periodisch. Er sagte sogar unentdeckte Elemente vorher! Heute wissen wir: Nicht die Masse, sondern die **Ordnungszahl Z** (= Protonenzahl) bestimmt die Position. Das klaerte Moseley 1913.
+
+## Perioden: Die 7 Zeilen
+
+Die Periodennummer sagt dir, wie viele Elektronenschalen ein Atom hat:
+
+- **Periode 1** (H, He): nur 1 Schale, 2 Elemente
+- **Periode 2** (Li bis Ne): 2 Schalen, 8 Elemente
+- **Periode 3** (Na bis Ar): 3 Schalen, 8 Elemente
+- **Periode 4-5**: je 18 Elemente (erstmals d-Orbitale)
+- **Periode 6-7**: je 32 Elemente (f-Orbitale dazu)
+
+Merkregel fuer die Periodenlaengen: 2 - 8 - 8 - 18 - 18 - 32 - 32
+
+> **Merke:** Achtung Falle: Magnesium (Mg) steht in Periode 3, NICHT in Periode 2! Das wird im MedAT gerne verwechselt.
+
+## Gruppen: Die 18 Spalten
+
+Elemente derselben Gruppe haben gleich viele Valenzelektronen und verhalten sich chemisch aehnlich:
+
+- **Gruppe 1** (Alkalimetalle): 1 Valenzelektron, bilden +1-Ionen
+- **Gruppe 2** (Erdalkalimetalle): 2 Valenzelektronen, bilden +2-Ionen
+- **Gruppe 17** (Halogene): 7 Valenzelektronen, bilden -1-Ionen
+- **Gruppe 18** (Edelgase): 8 Valenzelektronen (Oktett), chemisch inert
+
+Fuer den p-Block gilt eine praktische Regel: Gruppennummer = 10 + Valenzelektronen.
+
+{{DIAGRAM:atomic-orbitals}}
+
+## Die 4 Bloecke
+
+Die PSE-Position verraet, welches Orbital zuletzt besetzt wird:
+
+- **s-Block** (Gruppen 1-2): s-Orbitale; z.B. Na, Ca
+- **p-Block** (Gruppen 13-18): p-Orbitale; z.B. C, N, O, Cl
+- **d-Block** (Gruppen 3-12): d-Orbitale; Uebergangsmetalle wie Fe, Cu, Zn
+- **f-Block** (Lanthanoide/Actinoide): f-Orbitale; unten ausgelagert
+
+## Metallcharakter und Halbmetalle
+
+Eine Treppenlinie (B, Si, Ge, As, Sb, Te) trennt Metalle (links/unten) von Nichtmetallen (rechts/oben). An der Linie sitzen die **Halbmetalle** -- sie leiten Strom mittelmassig und werden als Halbleiter genutzt (Silicium fuer Computerchips).
+
+Der Metallcharakter nimmt in der Periode von links nach rechts ab und in der Gruppe von oben nach unten zu.
+
+## Ausnahmen: Chrom und Kupfer
+
+Zwei Elemente weichen vom erwarteten Aufbau ab:
+- **Chrom (Z=24):** [Ar] 3d5 4s1 statt 3d4 4s2 -- halbgefuelltes d5 ist besonders stabil
+- **Kupfer (Z=29):** [Ar] 3d10 4s1 statt 3d9 4s2 -- vollgefuelltes d10 ist besonders stabil
+
+> **Merke:** Die Ordnungszahl bestimmt die Stellung im PSE. Elemente derselben Gruppe haben gleich viele Valenzelektronen und verhalten sich chemisch aehnlich.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- 7 Perioden, 18 Gruppen, 4 Bloecke (s, p, d, f)
+- p-Block: Gruppennummer = 10 + Valenzelektronen
+- Cr: [Ar] 3d5 4s1; Cu: [Ar] 3d10 4s1
+- Mg gehoert zu Periode 3, nicht zu Periode 2
+
+**Typische Fallen:**
+- Perioden (7, horizontal) und Gruppen (18, vertikal) nicht verwechseln
+- Halbmetalle sind KEINE Metalle -- sie sind Halbleiter
+
+---
+## Zusammenfassung
+
+- PSE: 7 Perioden (Zeilen = Schalenzahl), 18 Gruppen (Spalten = Valenzelektronen)
+- Periodenlaengen: 2-8-8-18-18-32-32
+- Gleiche Gruppe = gleiche Valenzelektronen = aehnliche Chemie
+- 4 Bloecke: s (Gr. 1-2), p (Gr. 13-18), d (Gr. 3-12), f (Lanthanoide/Actinoide)
+- Halbmetalle (B, Si, Ge, As, Sb, Te) liegen an der Treppenlinie
+- Cr und Cu: Ausnahmen vom Aufbauprinzip (halbgefuelltes/vollgefuelltes d)`,
+
+      contentExtended: `## Einleitung
 
 Das Periodensystem hängt in jedem Chemiesaal — doch hinter der bunten Tabelle steckt ein geniales Ordnungsprinzip: Elemente mit gleicher Anzahl an Valenzelektronen stehen untereinander und verhalten sich chemisch ähnlich. Deshalb reagieren Natrium und Kalium beide heftig mit Wasser, und Fluor, Chlor und Brom sind alle aggressive Oxidationsmittel. Für die Medizin ist das PSE ein tägliches Werkzeug: Elektrolyte (Na⁺, K⁺, Ca²⁺, Cl⁻), Spurenelemente (Fe, Zn, Cu) und sogar Kontrastmittel (Ba, Gd) lassen sich über ihre Position im PSE verstehen. Wer Gruppen, Perioden und Blöcke kennt, kann Eigenschaften vorhersagen, ohne sie auswendig zu lernen.
 
@@ -2690,6 +3414,90 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "Fluorierte Arzneistoffe",
       ],
       content: `## Einleitung
+
+Warum ist Fluor das aggressivste Element? Und warum ist es schwerer, ein Elektron von Stickstoff zu entfernen als von Sauerstoff -- obwohl Sauerstoff weiter rechts steht? Die Antwort steckt in einer einzigen Groesse: der **effektiven Kernladung**. Wenn du dieses Konzept verstehst, kannst du fast alle Eigenschaften im PSE vorhersagen.
+
+**In diesem Kapitel lernst du:**
+- warum die effektive Kernladung alle Trends erklaert
+- wie sich Atomradius, Ionisierungsenergie und Elektronegativitaet im PSE veraendern
+- warum es Ausnahmen gibt (z.B. Sauerstoff vs. Stickstoff)
+- wie die Elektronegativitaetsdifferenz den Bindungstyp bestimmt
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+{{DIAGRAM:atomic-orbitals}}
+
+## Effektive Kernladung: Der Schluessel zu allem
+
+Stell dir vor, du bist ein Valenzelektron. Du spuerst die positive Ladung des Kerns -- aber die inneren Elektronen schirmen einen Teil davon ab, wie eine Mauer. Was bei dir ankommt, ist die **effektive Kernladung Z_eff**.
+
+**Z_eff = Z - Abschirmung**
+
+In einer Periode (von links nach rechts): Die Kernladung Z steigt, aber die Abschirmung bleibt fast gleich. Also steigt Z_eff -- die Elektronen werden staerker angezogen.
+
+In einer Gruppe (von oben nach unten): Neue Schalen kommen dazu und schirmen ab. Die Valenzelektronen sind weiter weg vom Kern.
+
+## Atomradius
+
+- **In der Periode nach rechts:** Radius wird kleiner (staerkere Anziehung durch hoehere Z_eff)
+- **In der Gruppe nach unten:** Radius wird groesser (mehr Schalen, Elektronen weiter weg)
+
+Beispiel Periode 3: Na (186 pm) ist viel groesser als Cl (99 pm).
+
+Bei Ionen: Kationen sind kleiner als das Neutralatom (Elektronen weg = weniger Abstossung). Anionen sind groesser (mehr Elektronen = mehr Abstossung).
+
+## Ionisierungsenergie (IE)
+
+Die Ionisierungsenergie ist die Energie, die du brauchst, um ein Elektron zu entfernen.
+
+- **In der Periode nach rechts:** IE steigt (Z_eff hoeher, Elektron sitzt fester)
+- **In der Gruppe nach unten:** IE sinkt (Elektron weiter weg, leichter zu entfernen)
+
+**Wichtige Ausnahme:** IE von Sauerstoff ist NIEDRIGER als die von Stickstoff! Warum? Stickstoff hat ein halbgefuelltes 2p3 -- das ist besonders stabil. Sauerstoffs 4. Elektron muss sich ein Orbital teilen und wird abgestossen (**Pairing Penalty**).
+
+> **Merke:** Successive Ionisierungsenergien zeigen einen grossen Sprung, wenn alle Valenzelektronen entfernt sind. Das verraet die Gruppennummer!
+
+## Elektronegativitaet (EN) nach Pauling
+
+Die EN sagt dir, wie stark ein Atom Elektronen in einer Bindung anzieht:
+
+- Hoechster Wert: **Fluor (4,0)** -- kleinstes Atom, hoechste Z_eff
+- Trend: In der Periode nach rechts oben steigend
+
+Wichtige Werte: F(4,0) > O(3,44) > Cl(3,16) > N(3,04) > C(2,55) > H(2,20)
+
+**Bindungstyp aus der EN-Differenz:**
+- Kleiner als 0,4: unpolar kovalent (z.B. H2, Cl2)
+- 0,4 bis 1,7: polar kovalent (z.B. H2O, HCl)
+- Ab 1,7: ueberwiegend ionisch (z.B. NaCl)
+
+> **Merke:** Innerhalb einer Periode nimmt der Atomradius ab und die Ionisierungsenergie zu. Beides folgt aus steigender effektiver Kernladung.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Z_eff erklaert alle Trends: Radius, IE, EN
+- Atomradius: in Periode kleiner, in Gruppe groesser
+- IE-Ausnahme: IE(O) kleiner als IE(N) wegen Pairing Penalty
+- EN-Differenz bestimmt Bindungstyp (unpolar / polar kovalent / ionisch)
+- Fluor hat hoechste EN (4,0), aber Chlor hat hoehere EA
+
+**Typische Fallen:**
+- Hoechste EA ist NICHT Fluor, sondern Chlor (Fluors 2p-Orbitale zu eng)
+- Atomradius nimmt in der Periode AB, nicht zu
+
+---
+## Zusammenfassung
+
+- Z_eff = Z minus Abschirmung; steigt in Periode, bleibt aehnlich in Gruppe
+- Atomradius: in Periode kleiner, in Gruppe groesser; Kationen kleiner als Anionen
+- IE: in Periode hoeher, in Gruppe niedriger; Ausnahme O kleiner N (Pairing Penalty)
+- EN nach Pauling: F(4,0) ist Maximum; bestimmt Bindungspolaritaet
+- EN-Differenz: unter 0,4 unpolar; 0,4-1,7 polar kovalent; ab 1,7 ionisch`,
+
+      contentExtended: `## Einleitung
 
 Warum ist Fluor das aggressivste Element im Periodensystem? Und warum braucht man mehr Energie, um ein Elektron von Stickstoff zu entfernen als von Sauerstoff — obwohl Sauerstoff weiter rechts steht? Die Antwort liegt in den **periodischen Trends**: systematischen Mustern, die sich aus einer einzigen Größe ableiten lassen — der effektiven Kernladung. Wer diese Trends versteht, kann vorhersagen, wie groß ein Atom ist, wie stark es Elektronen anzieht und ob eine Bindung ionisch oder kovalent sein wird. In der Medizin zeigen sich diese Trends bei der Reaktivität von Elektrolyten, bei fluorierten Arzneistoffen und sogar bei der Frage, warum Calcium leichter Elektronen abgibt als Magnesium.
 
@@ -3025,6 +3833,91 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Schilddrüse",
       ],
       content: `## Einleitung
+
+Ein Blutbild zeigt Kalium 2,8 mmol/L -- der Patient hat Herzrhythmusstoerungen. Ein Neugeborenes in einer Jodmangelregion entwickelt Kretinismus. All das wird verstaendlich, wenn du die **Elementgruppen** des PSE kennst: Alkalimetalle wie Natrium steuern das Membranpotenzial, Halogene wie Jod sind unverzichtbar fuer die Schilddruese, und Uebergangsmetalle wie Eisen transportieren Sauerstoff im Blut.
+
+**In diesem Kapitel lernst du:**
+- warum Alkalimetalle immer +1-Ionen bilden
+- welche Rolle Calcium und Magnesium im Koerper spielen
+- warum die Schilddruese Jod braucht
+- welche Metalle in Haemoglobin und Vitamin B12 stecken
+
+---
+
+{{DIAGRAM:periodic-table}}
+
+{{DIAGRAM:ionic-bond}}
+
+## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
+
+Stell dir vor, du wirfst ein Stueck Natrium ins Wasser -- es zischt, schmilzt und eine gelbe Flamme entsteht. Kalium reagiert noch heftiger mit violetter Flamme. Warum? Alle Alkalimetalle haben nur 1 Valenzelektron und geben es extrem leicht ab.
+
+**Biologisch wichtig:**
+- **Na+ (Natrium):** Hauptkation im Blut (ca. 140 mmol/L). Die Na/K-ATPase pumpt 3 Na+ raus und 2 K+ rein -- das erzeugt das Membranpotenzial
+- **K+ (Kalium):** Hauptkation in der Zelle (ca. 150 mmol/L). Zu wenig K+ im Blut (Hypokaliaemie) fuehrt zu Herzrhythmusstoerungen!
+- **Li+ (Lithium):** Medikament bei bipolaren Stoerungen, aber enger therapeutischer Bereich
+
+## Erdalkalimetalle (Gruppe 2): Knochen und Enzyme
+
+Erdalkalimetalle haben 2 Valenzelektronen und bilden +2-Ionen:
+
+- **Ca2+ (Calcium):** 99% stecken in Knochen und Zaehnen (als Hydroxyapatit). Der Rest ist essenziell fuer Muskelkontraktion, Blutgerinnung und Signalwege. Zu wenig Ca2+ fuehrt zu Muskelkraempfen (Tetanie).
+- **Mg2+ (Magnesium):** Kofaktor von ueber 300 Enzymen! Alle Reaktionen, die ATP brauchen, benoetigen einen Mg-ATP-Komplex. MgSO4 wird bei Praeeklampsie gegeben.
+- **BaSO4:** Unloeslich und deshalb sicher als Roentgenkontrastmittel fuer den Magen-Darm-Trakt. Aber Achtung: loesliche Barium-Salze sind hochgiftig!
+
+## Halogene (Gruppe 17): Salzbildner
+
+Halogene haben 7 Valenzelektronen und bilden -1-Ionen. Sie sind starke Oxidationsmittel.
+
+- **Fluor (F):** Schuetzt Zaehne -- Fluorapatit ist saeureresistenter als Hydroxyapatit. Viele Medikamente enthalten Fluor (Ciprofloxacin, 5-Fluoruracil)
+- **Chlor (Cl):** Cl- ist das Hauptanion im Blut. HCl im Magensaft sorgt fuer pH 1,5
+- **Jod (I):** Unverzichtbar fuer Schilddruesenhormone T3 (3 Jod-Atome) und T4 (4 Jod-Atome). Jodmangel fuehrt zu Struma und bei Neugeborenen zu Kretinismus
+
+## Edelgase (Gruppe 18): Fast immer inert
+
+Edelgase haben ein volles Oktett und reagieren fast nie. Trotzdem sind einige medizinisch nuetzlich:
+
+- **Helium:** Kuehlt MRT-Magnete auf 4 Kelvin; Heliox (He/O2) senkt den Atemwegswiderstand
+- **Xenon:** Zugelassenes Narkotikum in Europa -- wird komplett abgeatmet, keine Stoffwechselprodukte
+- **Radon:** Radioaktiv, zweithaefigste Ursache fuer Lungenkrebs nach Rauchen
+
+## Uebergangsmetalle: Die Redox-Kuenstler
+
+Uebergangsmetalle haben variable Oxidationsstufen, weil ihre d-Orbitale energetisch nah beieinander liegen:
+
+- **Eisen (Fe):** Fe2+ im Haemoglobin bindet Sauerstoff. Fe3+ (Methaemoglobin) kann das NICHT! Eisenmangel fuehrt zu Anaemie.
+- **Kupfer (Cu):** In Komplex IV der Atmungskette. Wilson-Krankheit: Cu-Ueberladung schaedigt Leber und Gehirn
+- **Zink (Zn):** Kofaktor in ueber 300 Enzymen; Zinkmangel stoert Wundheilung und Immunsystem
+- **Cobalt (Co):** Zentralatom in Vitamin B12; Mangel fuehrt zu megaloblastaerer Anaemie
+- **Platin (Pt):** Cisplatin vernetzt DNA und toetet Tumorzellen
+
+> **Merke:** Hauptgruppenelemente bilden vorhersagbare Ionen (Gruppe 1 = +1, Gruppe 2 = +2, Gruppe 17 = -1). Uebergangsmetalle haben variable Oxidationsstufen.
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Na+ extrazellular (140 mmol/L), K+ intrazellular (150 mmol/L)
+- Ca2+ fuer Muskelkontraktion, Knochen, Gerinnung
+- Jod fuer T3/T4; Jodmangel = Struma/Kretinismus
+- Fe2+ bindet O2 im Haemoglobin; Fe3+ (Methaemoglobin) NICHT
+- CHNOPS = Grundbausteine des Lebens
+
+**Typische Fallen:**
+- Fe2+ bindet O2, Fe3+ (Methaemoglobin) NICHT -- oft verwechselt!
+- BaSO4 sicher (unloeslich); loesliche Ba-Salze giftig
+- Na+ ist EXTRAzellular, K+ ist INTRAzellular
+
+---
+## Zusammenfassung
+
+- Alkalimetalle (Gr. 1): 1 VE, +1-Ionen; Na+ aussen, K+ innen; Na/K-ATPase erzeugt Membranpotenzial
+- Erdalkalimetalle (Gr. 2): 2 VE, +2-Ionen; Ca2+ fuer Knochen und Muskeln; Mg2+ Enzymkofaktor
+- Halogene (Gr. 17): 7 VE, -1-Ionen; Jod fuer Schilddruese; Fluor fuer Zaehne
+- Edelgase (Gr. 18): volles Oktett, fast inert; Xe als Narkotikum
+- Uebergangsmetalle: variable Oxidationsstufen; Fe im Haemoglobin, Cu in Atmungskette, Zn in 300+ Enzymen
+- Merkregel Hauptelemente: CHNOPS`,
+
+      contentExtended: `## Einleitung
 
 Ein Blutbild zeigt: Kalium 2,8 mmol/L — der Patient hat Herzrhythmusstörungen. Ein Neugeborenes in einer Jodmangelregion entwickelt Kretinismus. Eine Chemotherapie mit Cisplatin nutzt die DNA-vernetzende Wirkung von Platin. All diese klinischen Szenarien werden verständlich, wenn man die **Elementgruppen** des Periodensystems kennt: Alkalimetalle (Gruppe 1) wie Natrium und Kalium regulieren das Membranpotenzial, Erdalkalimetalle (Gruppe 2) wie Calcium bauen Knochen auf und steuern Signalwege, Halogene (Gruppe 17) wie Jod sind unverzichtbar für die Schilddrüse, und Übergangsmetalle wie Eisen transportieren den Sauerstoff im Blut. Die Position im PSE verrät dabei nicht nur die typische Ionenladung, sondern auch die biologische Rolle.
 

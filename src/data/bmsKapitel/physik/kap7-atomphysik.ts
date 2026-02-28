@@ -30,6 +30,97 @@ export const physKap7: Kapitel = {
       ],
       content: `## Einleitung
 
+Warum leuchtet eine Neonroehre orange und eine Natriumlampe gelb? Jedes Element hat seine eigenen Energiestufen -- wie ein Fingerabdruck. Wenn Elektronen zwischen diesen Stufen springen, entsteht Licht mit ganz bestimmten Farben. Dieses Prinzip nutzt zum Beispiel der Clip am Finger im Krankenhaus (Pulsoximeter): Zwei Lichtfarben reichen, um den Sauerstoffgehalt im Blut zu messen.
+
+**In diesem Kapitel lernst du:**
+- wie das Bohrsche Atommodell Energiestufen und Lichtfarben erklaert
+- warum kurzwelliges Licht mehr Energie traegt als langwelliges
+- wie Emissions- und Absorptionsspektren als Fingerabdruck von Elementen dienen
+- wie das Lambert-Beer-Gesetz Lichtabsorption mit Konzentration verknuepft
+- warum der Pulsoximeter-Clip genau rotes und infrarotes Licht verwendet
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:radioactive-decay}}
+
+## Atommodelle -- vom Kuchenbild zum Schalenmodell
+
+Fruehe Forscher dachten, das Atom sei eine gleichmaessig verteilte positive Masse mit eingebetteten Elektronen -- wie Rosinen im Kuchen. Dann schoss man kleine Teilchen auf eine duenne Goldfolie. Die meisten flogen glatt durch, aber einige prallten zurueck. Das bewies: Fast die gesamte Masse sitzt in einem winzigen Kern, drumherum ist fast leerer Raum.
+
+Das **Bohrsche Modell** erklaert, warum Atome nur bestimmte Lichtfarben aussenden. Elektronen kreisen auf festen Schalen (n = 1, 2, 3 ...) um den Kern. Die Energie jeder Schale beim Wasserstoff: **E_n = -13,6 eV / n²**. Springt ein Elektron von einer aeusseren auf eine innere Schale, wird ein Lichtteilchen (Photon) abgestrahlt.
+
+| Schale | n | Energie (H-Atom) | Max. Elektronen |
+|--------|---|-----------------|-----------------|
+| K | 1 | -13,6 eV | 2 |
+| L | 2 | -3,4 eV | 8 |
+| M | 3 | -1,51 eV | 18 |
+
+> **Merke:** Bohr-Modell: Elektronen auf festen Schalen, Licht entsteht nur beim Sprung zwischen Schalen. Funktioniert exakt nur fuer Wasserstoff.
+
+Das moderne Modell ersetzt feste Bahnen durch **Orbitale** -- Bereiche, in denen sich das Elektron mit hoher Wahrscheinlichkeit aufhaelt. Vier Zahlen (n, l, m_l, m_s) beschreiben jeden Zustand. **Pauli-Prinzip:** Maximal 2 Elektronen pro Orbital.
+
+---
+
+## Spektrallinien und Photonenenergie
+
+Springt ein Elektron nach unten, wird ein **Photon** abgegeben:
+
+> **E = hf = hc/Wellenlaenge**
+
+Kurze Wellenlaenge (z. B. UV) = viel Energie. Lange Wellenlaenge (z. B. Infrarot) = wenig Energie. Fuer Wasserstoff liefern Spruenge auf Schale 2 die **Balmer-Serie** -- die einzige im sichtbaren Bereich:
+- H-alpha: 656 nm (rot), Sprung 3 nach 2
+- H-beta: 486 nm (blau-gruen), Sprung 4 nach 2
+
+Beim **Emissionsspektrum** siehst du helle Linien auf dunklem Grund. Beim **Absorptionsspektrum** fehlen genau diese Farben im weissen Licht (dunkle Linien).
+
+> **Merke:** Balmer-Serie (Spruenge auf n = 2) ist die einzige Wasserstoff-Serie im sichtbaren Licht -- MedAT-Klassiker!
+
+---
+
+## Lambert-Beer-Gesetz und Pulsoximetrie
+
+Wenn Licht durch eine Fluessigkeit geht, wird ein Teil geschluckt. Wie viel, haengt von Konzentration und Weglaenge ab:
+
+> **A = Epsilon mal c mal d**
+
+A = Extinktion (wie stark das Licht geschwaecht wird), c = Konzentration, d = Schichtdicke. Doppelte Konzentration bedeutet doppelte Extinktion.
+
+Der **Pulsoximeter-Clip** nutzt dieses Prinzip: Sauerstoffreiches Blut (HbO2) und sauerstoffarmes Blut (Hb) schlucken Licht unterschiedlich. Bei 660 nm (rot) schluckt Hb staerker, bei 940 nm (infrarot) schluckt HbO2 staerker. Aus dem Verhaeltnis errechnet das Geraet den Sauerstoffgehalt.
+
+> **Merke:** Lambert-Beer: A = Epsilon mal c mal d. Pulsoximetrie: 660 nm (Hb) + 940 nm (HbO2) -- zwei Wellenlaengen genuegen fuer die Sauerstoffmessung.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Zentral pruefungsrelevant:**
+- Bohr-Modell: E_n = -13,6 eV/n² fuer Wasserstoff
+- Photonenenergie: E = hf = hc/Wellenlaenge; kuerzere Wellenlaenge = mehr Energie
+- Balmer-Serie: einzige sichtbare H-Serie (656 nm rot, 486 nm blau-gruen)
+- Lambert-Beer: A = Epsilon mal c mal d
+- Pulsoximetrie: 660 nm + 940 nm
+
+**Typische Fallen:**
+- Emission (helle Linien) und Absorption (dunkle Linien) nicht verwechseln
+- Lyman = UV, Balmer = sichtbar, Paschen = IR
+- Extinktion A ist nicht “Absorption in Prozent” -- bei A = 1 kommen nur 10 % des Lichts durch
+- Pauli: maximal 2 Elektronen pro Orbital
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Bohr-Modell**: E_n = -13,6 eV/n²; Licht beim Schalensprung; E_Photon = Energiedifferenz
+- **Photonenenergie**: E = hf = hc/Wellenlaenge; Balmer (sichtbar), Lyman (UV), Paschen (IR)
+- **Lambert-Beer**: A = Epsilon mal c mal d; Extinktion proportional zur Konzentration
+- **Pulsoximetrie**: 660 nm (Hb) + 940 nm (HbO2); Sauerstoffmessung am Finger
+- **Orbitale**: 4 Quantenzahlen; Pauli: max. 2 Elektronen pro Orbital`,
+      contentExtended: `## Einleitung
+
 Warum leuchtet Neon orange und Natrium gelb -- aber niemals umgekehrt? Jedes Element besitzt einen einzigartigen Satz von Energieniveaus, die wie eine Fingerabdruck-Signatur wirken. Wenn Elektronen zwischen diesen Niveaus springen, entsteht Licht ganz bestimmter Wellenlängen. Dieses Prinzip nutzt die Pulsoximetrie an deinem Finger: Zwei Wellenlängen reichen aus, um die Sauerstoffsättigung des Blutes zu messen.
 
 **In diesem Kapitel lernst du:**
@@ -49,7 +140,7 @@ Warum leuchtet Neon orange und Natrium gelb -- aber niemals umgekehrt? Jedes Ele
 
 
 
-Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind ("Plum-Pudding-Modell"). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
+Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind (“Plum-Pudding-Modell”). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
 Das **Rutherfordsche Kernmodell** (1911) folgte aus dem berühmten Streuexperiment: Alpha-Teilchen (⁴He²⁺, E ≈ 5 MeV) wurden an einer dünnen Goldfolie (wenige μm) gestreut. Die meisten Teilchen passierten nahezu ungehindert, doch etwa 1 von 8 000 wurde unter Winkeln > 90° zurückgeworfen. Rutherford schloss auf einen winzigen, massereichen, positiv geladenen Kern (Radius ≈ 10⁻¹⁵ m = 1 fm) umgeben von einer weitgehend leeren Elektronenhülle (Radius ≈ 10⁻¹⁰ m = 1 Å). Der Kern enthält damit > 99,9 % der Atommasse auf nur 10⁻¹⁵ des Volumens. Nachteil: Ein spiralförmig in den Kern fallendes Elektron würde nach der klassischen Elektrodynamik kontinuierlich Energie abstrahlen – das Atom wäre instabil (Kollapsproblem innerhalb von ≈ 10⁻¹¹ s).
 
@@ -99,7 +190,7 @@ mit h = 6,626 × 10⁻³⁴ J·s (Plancksches Wirkungsquantum), f = Frequenz, c 
 
 Die Energie des Photons entspricht der Energiedifferenz: ΔE = Eₙ₂ − Eₙ₁ = hf.
 
-Beim **Absorptionsspektrum** werden aus einem kontinuierlichen Spektrum bestimmte Wellenlängen absorbiert (dunkle Linien = Fraunhofer-Linien bei der Sonne). Beim **Emissionsspektrum** leuchten nur bestimmte Wellenlängen (helle Linien auf dunklem Hintergrund). Jedes Element besitzt ein einzigartiges Linienspektrum – ein "Fingerabdruck", der in der analytischen Chemie und Astrophysik zur Identifikation genutzt wird.
+Beim **Absorptionsspektrum** werden aus einem kontinuierlichen Spektrum bestimmte Wellenlängen absorbiert (dunkle Linien = Fraunhofer-Linien bei der Sonne). Beim **Emissionsspektrum** leuchten nur bestimmte Wellenlängen (helle Linien auf dunklem Hintergrund). Jedes Element besitzt ein einzigartiges Linienspektrum – ein “Fingerabdruck”, der in der analytischen Chemie und Astrophysik zur Identifikation genutzt wird.
 
 Für **Wasserstoff** liefern Übergänge zur n = 2-Schale die **Balmer-Serie** (sichtbares Licht):
 - Hα: 656 nm (rot), Übergang 3→2, ΔE = 1,89 eV
@@ -123,7 +214,7 @@ In der Praxis misst die **Spektrophotometrie** die Extinktion (Absorbanz) einer 
 
 mit A = Extinktion (dimensionslos), ε = molarer Extinktionskoeffizient [L·mol⁻¹·cm⁻¹], c = Konzentration [mol/L], d = Schichtdicke [cm].
 
-**Formelklartext:** A = ε·c·d heißt: **Extinktion** („optische Dichte“) ist proportional zur **Konzentration** c und zur **Schichtdicke** d. Doppelte Konzentration oder doppelte Weglänge → **doppelte** Extinktion. **A = log₁₀(I₀/I)** — nicht „Absorption in %“: Bei A = 1 ist T = I/I₀ = 10 %; bei A = 2 ist T = 1 %. **Einheiten:** [ε] = L/(mol·cm), [c] = mol/L, [d] = cm → A dimensionslos. Gilt nur bei **verdünnten** Lösungen und **monochromatischem** Licht.
+**Formelklartext:** A = ε·c·d heißt: **Extinktion** („optische Dichte”) ist proportional zur **Konzentration** c und zur **Schichtdicke** d. Doppelte Konzentration oder doppelte Weglänge → **doppelte** Extinktion. **A = log₁₀(I₀/I)** — nicht „Absorption in %”: Bei A = 1 ist T = I/I₀ = 10 %; bei A = 2 ist T = 1 %. **Einheiten:** [ε] = L/(mol·cm), [c] = mol/L, [d] = cm → A dimensionslos. Gilt nur bei **verdünnten** Lösungen und **monochromatischem** Licht.
 
 Je mehr chromophore Moleküle in der Lösung und je länger der optische Weg, desto mehr Licht wird absorbiert. Die Transmission T = I/I₀ und Extinktion A = −log T = log(I₀/I) sind verknüpft. Bei A = 1 beträgt T = 10 %, bei A = 2 nur noch T = 1 %. Das Gesetz gilt nur bei monochromatischem Licht, verdünnten Lösungen und Abwesenheit von Streuung oder Fluoreszenz.
 
@@ -148,12 +239,12 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
 **Zur gezielten Prüfungsvorbereitung** im Überblick:
 
 **Häufige Fragen:**
-- "Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?" → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
-- "Was besagt das Bohrsche Modell?" → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
-- "Formel Lambert-Beer?" → A = ε·c·d; A = log₁₀(I₀/I)
-- "Welche Wellenlängen nutzt die Pulsoximetrie?" → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
-- "Vier Quantenzahlen?" → n (Schale), l (Orbitalform), mₗ (Orientierung), mₛ (Spin ±½); Pauli: keine 2 Elektronen mit gleichen 4 QZ
-- "Heisenberg-Unschärfe?" → Δx·Δp ≥ ℏ/2; je genauer der Ort, desto unbestimmter der Impuls
+- “Welche Wellenlänge hat die Hα-Linie der Balmer-Serie?” → 656 nm (rot); Übergang n=3→2; ΔE = 1,89 eV
+- “Was besagt das Bohrsche Modell?” → Elektronen auf diskreten Schalen; Eₙ = −13,6 eV/n²; Emission/Absorption nur beim Schalensprung
+- “Formel Lambert-Beer?” → A = ε·c·d; A = log₁₀(I₀/I)
+- “Welche Wellenlängen nutzt die Pulsoximetrie?” → 660 nm (Hb absorbiert stark) + 940 nm (HbO₂ absorbiert stärker)
+- “Vier Quantenzahlen?” → n (Schale), l (Orbitalform), mₗ (Orientierung), mₛ (Spin ±½); Pauli: keine 2 Elektronen mit gleichen 4 QZ
+- “Heisenberg-Unschärfe?” → Δx·Δp ≥ ℏ/2; je genauer der Ort, desto unbestimmter der Impuls
 
 **Prüfungsrelevante Zahlen:**
 - h = 6,626 × 10⁻³⁴ J·s; 1 eV = 1,602 × 10⁻¹⁹ J; c = 3 × 10⁸ m/s
@@ -337,6 +428,116 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "C-14-Datierung",
       ],
       content: `## Einleitung
+
+Stell dir vor, du haeltst ein Blatt Papier vor eine radioaktive Quelle -- und schon ist die eine Strahlenart komplett gestoppt. Eine andere braucht eine dicke Bleiwand. Radioaktive Stoffe senden verschiedene Strahlenarten aus, die sich stark in Reichweite und Gefaehrlichkeit unterscheiden. Dieses Wissen nutzt die Medizin: In der Schilddruesentherapie zerstoert gezielte Strahlung krankes Gewebe, waehrend ein Rauchmelder zu Hause winzige Mengen eines radioaktiven Stoffes enthaelt.
+
+**In diesem Kapitel lernst du:**
+- wie sich Alpha-, Beta- und Gamma-Strahlung unterscheiden und was sie jeweils stoppt
+- warum radioaktive Stoffe mit der Zeit schwaecker werden (Halbwertszeit)
+- wie man Strahlenaktivitaet in Becquerel und biologische Wirkung in Sievert misst
+- welche radioaktiven Stoffe in der Medizin eingesetzt werden
+- warum Alpha-Strahlung aeusserlich harmlos, aber eingeatmet extrem gefaehrlich ist
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:radioactive-decay}}
+
+## Die drei Strahlenarten im Ueberblick
+
+| Strahlung | Was ist es? | Gestoppt durch | Gefaehrlichkeit |
+|-----------|-------------|----------------|-----------------|
+| Alpha | Helium-Kern (2p + 2n) | Papier, Haut | aeusserlich harmlos, innerlich sehr gefaehrlich |
+| Beta | Elektron (oder Positron) | Aluminium (mm) | mittlere Reichweite |
+| Gamma | Lichtteilchen (Photon) | Blei, Beton | durchdringt Koerper |
+
+**Alpha-Zerfall:** Ein schwerer Kern stoesst einen Helium-Kern aus. Die Ordnungszahl sinkt um 2, die Massenzahl um 4. Beispiel: Uran-238 wird zu Thorium-234. Alpha-Teilchen fliegen nur wenige Zentimeter in Luft. Deine Haut stoppt sie. Aber eingeatmet (z. B. Radon-Gas in Kellern) richten sie in der Lunge schwere Schaeden an -- daher der hohe Wichtungsfaktor von 20.
+
+**Beta-Zerfall:** Ein Neutron wandelt sich in ein Proton um und schickt ein Elektron weg. Ordnungszahl steigt um 1, Massenzahl bleibt gleich. Beispiel: Jod-131 (genutzt in der Schilddruesentherapie). Beta-Strahlung reicht einige Meter in Luft, ein paar Millimeter Aluminium stoppen sie.
+
+**Gamma-Strahlung:** Hochenergetisches Licht, das nach Alpha- oder Beta-Zerfall uebrig bleibt. Aendert nichts an Ordnungs- oder Massenzahl. Durchdringt den Koerper -- nur dickes Blei oder Beton schwaecht sie deutlich ab.
+
+> **Merke:** Abschirmregel "PAB": Papier stoppt Alpha, Aluminium stoppt Beta, Blei stoppt Gamma. Alpha ist innerlich am gefaehrlichsten (Wichtungsfaktor 20).
+
+---
+
+## Halbwertszeit und Zerfallsgesetz
+
+Radioaktiver Zerfall ist zufaellig, aber vorhersagbar. Nach einer **Halbwertszeit** ist die Haelfte der Atome zerfallen:
+
+> **N(t) = N_0 mal (1/2)^n** mit n = t / T_halb
+
+| Halbwertszeiten | Rest |
+|-----------------|------|
+| 1 | 50 % |
+| 2 | 25 % |
+| 3 | 12,5 % |
+| 10 | ca. 0,1 % |
+
+Die Halbwertszeit haengt nicht von Temperatur, Druck oder chemischer Umgebung ab -- sie ist fuer jedes Nuklid fest. Formel: **T_halb = 0,693 / Lambda** (Lambda = Zerfallskonstante).
+
+> **Merke:** Nach n Halbwertszeiten: Rest = (1/2)^n. Faustregel: Nach 10 Halbwertszeiten ist praktisch nichts mehr uebrig.
+
+---
+
+## Aktivitaet und Dosis
+
+Die **Aktivitaet** zaehlt die Zerfaelle pro Sekunde: A = Lambda mal N, gemessen in **Becquerel** (1 Bq = 1 Zerfall/s).
+
+Fuer die biologische Wirkung zaehlt nicht nur die aufgenommene Energie (Gray = J/kg), sondern auch die Strahlenart. Die **Aequivalentdosis** in **Sievert** beruecksichtigt das:
+
+> **H = D mal w_R**
+
+Fuer Gamma und Beta: w_R = 1, also 1 Gray = 1 Sievert. Fuer Alpha: w_R = 20, also 1 Gray = 20 Sievert!
+
+Die **effektive Halbwertszeit** beruecksichtigt, dass der Koerper radioaktive Stoffe auch ausscheidet: 1/T_eff = 1/T_phys + 1/T_bio. Sie ist immer kuerzer als die kuerzere der beiden Einzelwerte.
+
+---
+
+## Wichtige medizinische Nuklide
+
+| Nuklid | Halbwertszeit | Zerfall | Einsatz |
+|--------|---------------|---------|---------|
+| Tc-99m | 6 h | Gamma | Knochenszintigraphie |
+| I-131 | 8 Tage | Beta | Schilddruesentherapie |
+| F-18 | 110 min | Beta+ | PET-Scan |
+| C-14 | 5730 Jahre | Beta | Altersbestimmung |
+
+> **Merke:** Tc-99m: reiner Gammastrahler, kurze Halbwertszeit -- ideal fuer Bildgebung (niedrige Dosis, gute Erkennung). I-131: Betastrahlung zerstoert gezielt Schilddruesengewebe.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Zentral pruefungsrelevant:**
+- Alpha: Z-2, A-4, Papier stoppt, w_R = 20
+- Beta-minus: Z+1, A gleich, Aluminium stoppt
+- Gamma: Z und A unveraendert, Blei/Beton
+- T_halb = 0,693/Lambda; N = N_0 mal (1/2)^n
+- Gray = physikalische Dosis; Sievert = biologisch gewichtet
+- Effektive HWZ immer kuerzer als die kuerzere Einzel-HWZ
+
+**Typische Fallen:**
+- Infrarot ist NICHT ionisierend und entsteht NICHT beim Kernzerfall
+- Kernspaltung wird durch Neutronen ausgeloest (nicht durch Alpha oder Beta)
+- Massendefekt: Kernmasse ist kleiner als die Summe der Nukleonen (nicht groesser)
+- Neutronenabschirmung: Wasser oder Paraffin, NICHT Blei
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Alpha**: He-Kern, Z-2, A-4, Papier stoppt, w_R = 20, innerlich extrem gefaehrlich
+- **Beta-minus**: Elektron + Antineutrino, Z+1, A gleich, Alu stoppt, w_R = 1
+- **Beta-plus**: Positron + Neutrino, Z-1, A gleich, PET-Grundlage (2 x 511 keV)
+- **Gamma**: Photon, Z/A unveraendert, Blei/Beton, w_R = 1
+- **Zerfallsgesetz**: N = N_0 mal (1/2)^n; T_halb = 0,693/Lambda
+- **Dosis**: Gray = J/kg; Sievert = Gray mal w_R; Alpha: 1 Gy = 20 Sv
+- **Effektive HWZ**: 1/T_eff = 1/T_phys + 1/T_bio`,
+      contentExtended: `## Einleitung
 
 Warum ist das Einatmen von Radongas gefährlicher als das Stehen neben einem Gammastrahler -- obwohl Alpha-Teilchen nicht einmal ein Blatt Papier durchdringen? Alpha-Strahlung gibt ihre gesamte Energie auf wenigen Mikrometern ab. Im Lungengewebe bedeutet das: massive lokale DNA-Schäden mit 20-facher biologischer Wirksamkeit im Vergleich zu Gamma-Strahlung.
 
@@ -962,6 +1163,125 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
       ],
       content: `## Einleitung
 
+Warum siehst du auf einem Roentgenbild die Knochen weiss und die Lunge fast schwarz? Knochen enthalten Calcium -- das schluckt Roentgenstrahlung viel staerker als die luftgefuellte Lunge. Roentgenstrahlung ist also extrem nuetzlich fuer die Diagnose, kann aber auch Zellen schaedigen. Deshalb ist Strahlenschutz so wichtig.
+
+**In diesem Kapitel lernst du:**
+- wie Roentgenstrahlung in einer Roentgenroehre entsteht
+- wie ein CT-Geraet aus vielen Roentgenbildern Schnittbilder berechnet
+- warum Roentgenstrahlung beim Durchgang durch Gewebe schwaecker wird
+- wie Strahlung die DNA direkt und indirekt schaedigt
+- was den Unterschied zwischen Strahlenschaeden mit und ohne Schwellendosis ausmacht
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:radioactive-decay}}
+
+## So entsteht Roentgenstrahlung
+
+In einer **Roentgenroehre** werden Elektronen mit hoher Spannung (30--150 kV) auf eine Metallanode (meist Wolfram) geschossen. Dabei entstehen zwei Arten von Strahlung:
+
+- **Bremsstrahlung**: Die Elektronen werden im Feld der Atome abgebremst und geben Energie als Licht (Photonen) ab. Es entsteht ein breites Spektrum -- wie weisses Licht mit vielen Farben.
+- **Charakteristische Strahlung**: Wenn ein kernnahes Elektron herausgeschlagen wird, rueckt eines von aussen nach und sendet ein Photon mit einer ganz bestimmten Energie aus -- typisch fuer das jeweilige Metall.
+
+Nur etwa 1 % der Energie wird zu Roentgenstrahlung -- der Rest ist Waerme.
+
+> **Merke:** Bremsstrahlung = breites Spektrum (haengt von der Spannung ab). Charakteristische Strahlung = scharfe Linien (haengt vom Anodenmaterial ab).
+
+---
+
+## CT -- Computertomographie
+
+Ein CT-Geraet dreht eine Roentgenroehre um den Patienten und macht Aufnahmen aus vielen Winkeln. Ein Computer errechnet daraus Schnittbilder. Jeder Bildpunkt bekommt einen Wert in **Hounsfield-Einheiten (HU)**:
+
+| Gewebe | HU-Wert |
+|--------|---------|
+| Luft | -1000 |
+| Wasser | 0 |
+| Knochen | +200 bis +3000 |
+
+> **Merke:** HU-Skala: Wasser = 0, Luft = -1000, Knochen > +200. Ein CT-Abdomen bedeutet etwa 10 mSv Dosis -- das entspricht rund 5 Jahren natuerlicher Hintergrundstrahlung.
+
+---
+
+## Roentgenabsorption im Gewebe
+
+Roentgenstrahlung wird beim Durchgang durch Gewebe exponentiell schwaecker: **I = I_0 mal e^(-Mu mal x)**. Die **Halbwertsschichtdicke** ist die Materialdicke, die die Intensitaet halbiert: HVL = 0,693/Mu.
+
+Drei Mechanismen schwaehen Roentgenstrahlung:
+- **Photoeffekt** (niedrige Energien): Photon wird komplett verschluckt -- verantwortlich fuer den Kontrast zwischen Knochen und Weichgewebe
+- **Compton-Effekt** (mittlere Energien): Photon wird abgelenkt und gibt einen Teil seiner Energie ab -- dominiert bei CT
+- **Paarbildung** (sehr hohe Energien > 1,02 MeV): nur in der Strahlentherapie relevant
+
+> **Merke:** Knochen (Calcium, hohe Ordnungszahl) schluckt viel mehr Roentgenstrahlung als Weichgewebe -- deshalb erscheinen Knochen hell im Roentgenbild.
+
+---
+
+## Biologische Strahlenwirkung
+
+Strahlung schaedigt die DNA auf zwei Wegen:
+- **Direkt** (~30 %): Strahlung trifft die DNA selbst
+- **Indirekt** (~70 %): Strahlung spaltet Wasser in aggressive Teilchen (OH-Radikale), die dann die DNA angreifen
+
+Der schlimmste Schaden ist der **Doppelstrangbruch** -- beide Straenge der DNA sind durchtrennt. Das ist schwer zu reparieren und kann zu Krebs fuehren.
+
+**Zwei Arten von Strahlenschaeden:**
+
+| Eigenschaft | Stochastisch | Deterministisch |
+|------------|-------------|-----------------|
+| Schwellendosis | Keine | Ja |
+| Beispiele | Krebs | Hautrötung, Haarausfall |
+| Was steigt mit Dosis? | Wahrscheinlichkeit | Schwere |
+
+Schnell teilende Zellen sind besonders empfindlich: Lymphozyten > Knochenmark > Darmzellen > Muskel > Nerven.
+
+> **Merke:** Stochastisch = kein Schwellenwert, Krebs. Deterministisch = Schwellendosis, z. B. Hautroetung ab ca. 2 Gray. MedAT-Klassiker!
+
+---
+
+## Strahlenschutz -- ALARA
+
+Drei Regeln schuetzen vor Strahlung:
+1. **Abstand**: Doppelter Abstand = nur noch ein Viertel der Dosis (1/r²-Gesetz)
+2. **Abschirmung**: Bleischuerze bei Roentgen
+3. **Zeit**: Kurze Exposition = weniger Dosis
+
+Grenzwerte: Beruflich maximal 20 mSv pro Jahr, Bevoelkerung maximal 1 mSv pro Jahr.
+
+> **Merke:** ALARA = Abstand hoch, Abschirmung hoch, Zeit runter. Roentgen Thorax ~ 0,02 mSv, CT Abdomen ~ 10 mSv.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Zentral pruefungsrelevant:**
+- Bremsstrahlung (kontinuierlich) vs. charakteristische Strahlung (Linien)
+- Knochen hell, Lunge dunkel im Roentgenbild (Photoeffekt, Z-Abhaengigkeit)
+- CT: Hounsfield-Einheiten (Wasser = 0, Luft = -1000)
+- Stochastisch (kein Schwellenwert, Krebs) vs. deterministisch (Schwellendosis, Roetung)
+- ALARA: Abstand, Abschirmung, Zeit
+
+**Typische Fallen:**
+- Indirekte Wirkung (OH-Radikale, 70 %) ueberwiegt die direkte Wirkung
+- Photoeffekt (Kontrast) und Compton-Effekt (CT) nicht verwechseln
+- Paarbildung erst ab 1,02 MeV -- in der Diagnostik irrelevant
+- Sauerstoffeffekt: Zellen mit Sauerstoff sind empfindlicher, hypoxische Tumoranteile sind resistenter
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Roentgenroehre**: Bremsstrahlung (breit) + charakteristische Strahlung (Linien); E_max = eU
+- **CT**: viele Roentgenbilder aus verschiedenen Winkeln; HU-Skala: Wasser 0, Luft -1000, Knochen >+200
+- **Schwaechung**: I = I_0 mal e^(-Mu mal x); Knochen schluckt mehr als Weichgewebe
+- **DNA-Schaeden**: indirekt (OH-Radikale, 70 %) > direkt (30 %); Doppelstrangbruch am gefaehrlichsten
+- **Stochastisch**: kein Schwellenwert, Krebs; **Deterministisch**: Schwellendosis, Roetung/ARS
+- **ALARA**: Abstand (1/r²), Abschirmung, Zeit; Beruf max. 20 mSv/a, Bevoelkerung max. 1 mSv/a`,
+      contentExtended: `## Einleitung
+
 Warum erscheinen Knochen im Röntgenbild weiß, Lunge aber fast schwarz? Calcium hat eine hohe Ordnungszahl und absorbiert Röntgenstrahlung viel stärker als luftgefülltes Lungengewebe. Aber Röntgenstrahlung kann auch Schäden verursachen: Wie unterscheidet man einen Strahlenschaden, der erst ab einer Schwellendosis auftritt, von einem Krebsrisiko, das mit jeder noch so kleinen Dosis steigt?
 
 **In diesem Kapitel lernst du:**
@@ -1342,6 +1662,104 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
       ],
       content: `## Einleitung
 
+Stell dir vor, ein Tumor ist im normalen Roentgenbild kaum sichtbar -- aber im PET-Bild leuchtet er hell auf. Warum? PET zeigt nicht die Form, sondern den Stoffwechsel: Tumorzellen verbrauchen besonders viel Zucker. Gibt man dem Patienten radioaktiv markierten Zucker, sammelt sich dieser im Tumor an. Die dabei entstehende Strahlung verraet die genaue Stelle.
+
+**In diesem Kapitel lernst du:**
+- wie PET funktioniert: Positron trifft Elektron, beide verschwinden und erzeugen zwei Lichtteilchen
+- warum SPECT ein Bleiraster braucht, PET aber nicht
+- wie die MRT ohne Strahlung Bilder vom Koerperinneren erzeugt
+- warum der Photoeffekt beweist, dass Licht aus Teilchen besteht
+
+---
+
+{{DIAGRAM:em-spectrum}}
+
+{{DIAGRAM:radioactive-decay}}
+
+## PET -- So werden Tumore sichtbar
+
+Dem Patienten wird radioaktiv markierter Zucker (F-18-FDG) gespritzt. F-18 ist ein Beta-plus-Strahler: Es sendet ein **Positron** aus (das Antiteilchen des Elektrons). Dieses Positron fliegt wenige Millimeter durch das Gewebe und trifft dann auf ein normales Elektron. Beide vernichten sich gegenseitig -- das nennt man **Annihilation**:
+
+> Positron + Elektron ergibt 2 Gammaphotonen mit je 511 keV in genau entgegengesetzte Richtungen (180 Grad)
+
+Der PET-Scanner erkennt diese Photonenpaare gleichzeitig auf gegenueberliegenden Detektoren. Aus vielen solcher Messungen wird ein 3D-Bild berechnet.
+
+Warum reichert sich FDG in Tumoren an? Tumorzellen verbrauchen besonders viel Zucker (Warburg-Effekt). FDG wird wie normaler Zucker aufgenommen, aber nach dem ersten Schritt nicht weiterverarbeitet -- es bleibt in der Zelle stecken.
+
+> **Merke:** PET zeigt Stoffwechsel, nicht Anatomie. Deshalb kombiniert man PET mit CT oder MRT fuer genaue Zuordnung.
+
+---
+
+## SPECT -- Szintigraphie in 3D
+
+Bei SPECT wird ein Gammastrahler (meist Tc-99m) injiziert. Eine Kamera mit einem **Blei-Raster** (Kollimator) dreht um den Patienten und sammelt Bilder aus vielen Winkeln.
+
+| Eigenschaft | PET | SPECT |
+|------------|-----|-------|
+| Strahler | Beta-plus (F-18) | Gamma (Tc-99m) |
+| Aufloesung | 4--7 mm | 8--15 mm |
+| Bleiraster noetig? | Nein | Ja |
+| Kosten | Hoch | Niedriger |
+
+---
+
+## MRT -- Bilder ohne Strahlung
+
+Die MRT nutzt starke Magnete und Radiowellen -- keine ionisierende Strahlung. Wasserstoffkerne im Koerper verhalten sich wie kleine Magnete. Im starken Magnetfeld richten sie sich aus und schwingen mit der **Larmor-Frequenz**:
+
+> **f = 42,58 MHz/T mal B_0**
+
+Bei einem 1,5-Tesla-Geraet: f = ca. 64 MHz. Ein Radiopuls kippt die Kerne um, danach kehren sie zurueck -- und senden ein Signal aus.
+
+- **T1-Bild**: Fett erscheint hell, Wasser dunkel
+- **T2-Bild**: Wasser erscheint hell, Fett dunkel
+- Eselsbruecke: "Wasser = Weiss in T2"
+
+**Gadolinium** als Kontrastmittel verkuerzt T1 -- Gewebe mit Kontrastmittel wird heller im T1-Bild. Vorsicht bei Nierenschwaeeche!
+
+> **Merke:** MRT: keine Strahlung, bester Weichteilkontrast. T1: Fett hell. T2: Wasser hell. Kontraindikation: ferromagnetische Implantate, alte Herzschrittmacher.
+
+---
+
+## Photoelektrischer Effekt
+
+Wenn Licht auf eine Metalloberflaeche trifft, koennen Elektronen herausgeschlagen werden -- aber nur wenn die Frequenz hoch genug ist:
+
+> **E_kin = hf - Phi** (Phi = Austrittsarbeit des Metalls)
+
+Ist die Frequenz zu niedrig, passiert gar nichts -- egal wie hell das Licht ist. Das beweist: Licht besteht aus einzelnen Energiepaketen (Photonen).
+
+> **Merke:** Photoeffekt: Emission nur wenn die Frequenz hoch genug ist. Helligkeit beeinflusst die Anzahl der Elektronen, nicht ihre Energie.
+
+---
+
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung:**
+
+**Zentral pruefungsrelevant:**
+- PET: Annihilation ergibt 2 mal 511 keV unter 180 Grad; FDG reichert sich in Tumoren an (Warburg-Effekt)
+- SPECT: Tc-99m, Blei-Kollimator noetig; PET: F-18, kein Kollimator
+- MRT: Larmor f = 42,58 MHz/T mal B_0; T1 = Fett hell; T2 = Wasser hell
+- Photoeffekt: E_kin = hf - Phi; keine Emission unter Grenzfrequenz
+
+**Typische Fallen:**
+- PET (Beta-plus, kein Kollimator) und SPECT (Gamma, Kollimator) nicht verwechseln
+- Lichtintensitaet beeinflusst Elektronenzahl, nicht Elektronenenergie
+- MRT ist KEINE ionisierende Strahlung
+- Gadolinium: Vorsicht bei Niereninsuffizienz
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **PET**: Beta-plus-Zerfall, Annihilation ergibt 2 mal 511 keV; FDG zeigt Stoffwechsel (Warburg-Effekt)
+- **SPECT**: Tc-99m (Gamma, 6 h); Kollimator noetig; Knochen, Herz, Schilddruese
+- **MRT**: Larmor f = 42,58 MHz/T mal B; T1 Fett hell, T2 Wasser hell; keine Strahlung
+- **Gadolinium**: paramagnetisch, verkuerzt T1, heller in T1-Bild; Cave bei Nierenschwaeeche
+- **Photoeffekt**: E_kin = hf - Phi; keine Emission unter Grenzfrequenz; beweist Photonennatur`,
+      contentExtended: `## Einleitung
+
 Warum leuchtet ein Tumor im PET-Bild hell auf, obwohl er anatomisch im CT kaum sichtbar ist? PET misst Stoffwechselaktivität, nicht Struktur: Tumorzellen verbrauchen mehr Glukose als normales Gewebe. Ein radioaktiv markiertes Glukoseanalogon reichert sich dort an, und die beim Zerfall entstehenden Gammaphotonen verraten die genaue Position.
 
 **In diesem Kapitel lernst du:**
@@ -1628,6 +2046,134 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Radon Österreich",
       ],
       content: `## Einleitung
+
+Du weisst jetzt, wie radioaktive Strahlung entsteht und wie man Dosen misst. Aber wie schuetzt man sich davor — und wie setzt man Strahlung gezielt gegen Krebs ein?
+
+**In diesem Kapitel lernst du:**
+- wie du dich mit drei einfachen Regeln vor Strahlung schuetzen kannst (ALARA)
+- welche Grenzwerte in Oesterreich gelten
+- wie Aerzte Strahlung zur Krebsbehandlung nutzen
+- was bei einer Strahlenvergiftung im Koerper passiert
+- warum Radon in oesterreichischen Haeusern ein Problem sein kann
+
+---
+
+{{DIAGRAM:radioactive-decay}}
+
+{{DIAGRAM:em-spectrum}}
+
+## Strahlenschutz — drei einfache Regeln
+
+Das **ALARA-Prinzip** (As Low As Reasonably Achievable) hat drei Saeulen. Stell dir vor, du stehst neben einem Lagerfeuer:
+
+### 1. Abstand halten
+
+Je weiter du vom Feuer weggehst, desto weniger Hitze spuerst du. Bei Strahlung gilt das **Abstandsquadratgesetz**: Doppelter Abstand bedeutet nur noch ein Viertel der Dosis. Dreifacher Abstand? Nur noch ein Neuntel.
+
+> **Merke:** Abstandsquadratgesetz: Doppelter Abstand = 1/4 der Dosis. Die einfachste und wirksamste Schutzmassnahme.
+
+### 2. Abschirmung — etwas dazwischenstellen
+
+Verschiedene Strahlenarten brauchen unterschiedliche Schilde:
+
+| Strahlenart | Was schuetzt? | Alltags-Beispiel |
+|-------------|--------------|-----------------|
+| Alpha | Ein Blatt Papier genuegt | Wird schon von Haut gestoppt |
+| Beta | Aluminium oder Plexiglas | Laborbrille |
+| Gamma | Blei oder dicker Beton | Bleischuerze beim Roentgen |
+| Neutronen | Wasser oder Paraffin | Wassertanks (nicht Blei!) |
+
+> **Merke:** Merkhilfe PAB: Papier stoppt Alpha, Aluminium stoppt Beta, Blei stoppt Gamma. Neutronen brauchen wasserstoffreiche Materialien (Wasser, Paraffin).
+
+### 3. Zeit — schnell arbeiten
+
+Je kuerzer du der Strahlung ausgesetzt bist, desto weniger Dosis bekommst du. Dosis = Dosisleistung mal Zeit.
+
+> **Merke:** ALARA = Abstand vergroessern, Abschirmung verwenden, Zeit verkuerzen. Merkhilfe: "AAZ".
+
+---
+
+## Grenzwerte in Oesterreich
+
+| Wer? | Maximal pro Jahr |
+|------|-----------------|
+| Aerzte/Radiologen (Kat. A) | 20 mSv |
+| Sonstiges Krankenhauspersonal (Kat. B) | 6 mSv |
+| Normalbevoelkerung | 1 mSv |
+| Schwangere (ab Meldung) | 1 mSv fuer restliche Schwangerschaft |
+
+Die natuerliche Strahlung in Oesterreich betraegt ca. 2,1 mSv pro Jahr — das ist die Hintergrundstrahlung aus Weltall, Boden und Radon.
+
+Zum Vergleich: Ein Roentgenbild der Lunge macht nur 0,02–0,1 mSv. Ein CT des Bauchs dagegen ca. 10 mSv — das entspricht etwa 5 Jahren natuerlicher Strahlung!
+
+> **Merke:** Beruflich: max. 20 mSv/Jahr. Bevoelkerung: max. 1 mSv/Jahr. Natuerliche Strahlung in Oesterreich: ca. 2,1 mSv/Jahr.
+
+---
+
+## Strahlentherapie — Strahlung gegen Krebs
+
+Strahlung kann DNA zerstoeren. Bei Krebs nutzt man das gezielt: moeglichst viel Dosis im Tumor, moeglichst wenig im gesunden Gewebe.
+
+### Teletherapie — Bestrahlung von aussen
+
+Die Strahlenquelle ist ausserhalb des Koerpers:
+- **Linearbeschleuniger (LINAC):** Der moderne Standard. Erzeugt hochenergetische Roentgenstrahlung.
+- **Protonentherapie:** Protonen geben ihre Energie erst am Ende ihrer Reichweite ab — das nennt man den **Bragg-Peak**. Ideal, wenn der Tumor nahe an empfindlichen Organen liegt (Auge, Gehirn, bei Kindern).
+
+### Brachytherapie — Bestrahlung von innen
+
+Die Strahlenquelle wird direkt in oder neben den Tumor gebracht. Vorteil: Sehr hohe Dosis am Tumor, aber die Dosis faellt mit dem Abstand schnell ab — das gesunde Gewebe wird geschont.
+
+> **Merke:** Teletherapie = Quelle aussen (LINAC, Protonen). Brachytherapie = Quelle im/am Tumor. Bragg-Peak: Protonen geben ihre Energie erst am Zielort ab.
+
+---
+
+## Nuklearmedizin — Diagnostik und Therapie
+
+Fuer die Diagnostik verwendet man Gammastrahler — die Photonen verlassen den Koerper und werden von einer Kamera aufgefangen (z.B. PET, SPECT, Szintigraphie).
+
+Fuer die Therapie verwendet man Beta- oder Alphastrahler — die haben eine kurze Reichweite und zerstoeren das Gewebe nur lokal. Beispiel: Radiojodtherapie mit Jod-131 bei Schilddruesenerkrankungen.
+
+> **Merke:** Diagnostik = Gammastrahler (Photonen verlassen Koerper). Therapie = Beta-/Alphastrahler (kurze Reichweite, lokale Wirkung).
+
+---
+
+## Akutes Strahlensyndrom
+
+Wenn der ganze Koerper auf einmal eine hohe Dosis abbekommt (ab ca. 1 Gy), werden nacheinander verschiedene Organe geschaedigt:
+
+| Stufe | Dosis | Was passiert? |
+|-------|-------|--------------|
+| Blut und Knochenmark | 1–6 Gy | Weniger Blutzellen, Infektionsgefahr |
+| Darm | 6–10 Gy | Darmschleimhaut stirbt ab, Durchfall, meist toedlich |
+| Gehirn | ueber 10 Gy | Hirnschwellung, Koma, immer toedlich |
+
+Die Reihenfolge erklaert sich einfach: Zellen, die sich schnell teilen (Blut, Darm), sind am empfindlichsten. Nervenzellen teilen sich kaum und sind daher am widerstandsfaehigsten.
+
+> **Merke:** ARS ab ca. 1 Gy: Blut (1–6 Gy) dann Darm (6–10 Gy) dann Gehirn (ueber 10 Gy). Schnell teilende Zellen sind am empfindlichsten.
+
+---
+
+## Radon in Oesterreich
+
+Radon ist ein radioaktives Edelgas, das aus dem Boden in Gebaeude aufsteigen kann. Du kannst es weder sehen noch riechen. In der Lunge zerfaellt es und gibt Alphastrahlung ab — das kann Lungenkrebs verursachen. Radon ist nach dem Rauchen die zweithaeufigste Ursache fuer Lungenkrebs.
+
+In Oesterreich ist die mittlere Radonkonzentration ca. 99 Bq/m3. Risikogebiete: Muehlviertel, Waldviertel, Teile der Steiermark und Salzburgs.
+
+> **Merke:** Radon: unsichtbares radioaktives Gas, Alpha-Strahler, Lungenkrebs-Risiko Nr. 2 nach Rauchen. In Oesterreich ca. 99 Bq/m3.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **ALARA**: Abstand (1/r2), Abschirmung (PAB), Zeit minimieren
+- **Grenzwerte**: Beruf 20 mSv/a, Bevoelkerung 1 mSv/a, natuerlich 2,1 mSv/a
+- **Teletherapie**: LINAC, Protonentherapie (Bragg-Peak)
+- **Brachytherapie**: Quelle im/am Tumor, schneller Dosisabfall
+- **Diagnostik**: Gammastrahler (PET, SPECT). Therapie: Beta-/Alphastrahler
+- **ARS**: ab 1 Gy — Blut, dann Darm, dann Gehirn
+- **Radon**: Edelgas, Alphastrahler, Lungenkrebs, Oesterreich ca. 99 Bq/m3`,
+      contentExtended: `## Einleitung
 
 Bisher haben wir die physikalischen Grundlagen der Strahlung kennengelernt — Zerfallsarten, Dosimetrie und Bildgebung. Nun wenden wir dieses Wissen auf die klinische Praxis an: Wie schützen wir Patienten und Personal vor unnötiger Strahlung, und wie nutzen wir ionisierende Strahlung gezielt zur Therapie?
 
