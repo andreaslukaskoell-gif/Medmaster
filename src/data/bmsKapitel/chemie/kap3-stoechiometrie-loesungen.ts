@@ -39,7 +39,7 @@ Das Mol ist eine Zähleinheit — ähnlich wie „ein Dutzend = 12 Stück", nur 
 
 ## Molare Masse M
 
-Die **molare Masse M** gibt die Masse von 1 Mol eines Stoffes in g/mol an. Sie entspricht numerisch der relativen Atommasse (aus dem PSE) bzw. der Summenformel-Masse bei Molekülen:
+Die **molare Masse M** gibt die Masse von 1 Mol eines Stoffes in g/mol an. Sie entspricht numerisch der relativen Atommasse (aus dem PSE, Periodensystem der Elemente) bzw. der Summenformel-Masse bei Molekülen:
 
 - **Elemente:** M(C) = 12,01 g/mol, M(O) = 16,00 g/mol, M(H) = 1,008 g/mol, M(Na) = 22,99 g/mol
 - **Moleküle:** M(H₂O) = 2 × 1,008 + 16,00 = **18,02 g/mol**; M(C₆H₁₂O₆, Glucose) = 6 × 12,01 + 12 × 1,008 + 6 × 16,00 = **180,16 g/mol**; M(NaCl) = 22,99 + 35,45 = **58,44 g/mol**
@@ -281,7 +281,7 @@ Wäre nur 1,5 mol O₂ vorhanden: Nur 3 mol H₂ können reagieren → O₂ ist 
 
 ## Klinische Anwendungen
 
-**Neutralisation von Magensäure:** Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Ein Antacidum-Tablette mit 300 mg Mg(OH)₂ neutralisiert: n = 0,300/58,3 = 5,15 mmol → neutralisiert 10,3 mmol HCl.
+**Neutralisation von Magensäure:** Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Eine Antacidum-Tablette (Mittel gegen Magensäure) mit 300 mg Mg(OH)₂ neutralisiert: n = 0,300/58,3 = 5,15 mmol → neutralisiert 10,3 mmol HCl.
 
 **CO₂-Produktion im Stoffwechsel:** Bei vollständiger Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g). Der **respiratorische Quotient** RQ = CO₂ produziert / O₂ verbraucht = 6/6 = 1,0 für Kohlenhydrate.
 
@@ -447,7 +447,7 @@ Masse des gelösten Stoffes pro Volumen der Lösung. Klinisch relevant: Blutgluc
 ### Weitere Angaben
 
 - **Molalität b** = n(Stoff) / m(Lösungsmittel) [mol/kg] — temperaturunabhängig (kein Volumen!)
-- **Molenbruch x** = n(Stoff) / n(gesamt) — dimensionslos, Summe aller x = 1
+- **Molenbruch x** (Stoffmengenanteil) = n(Stoff) / n(gesamt) — dimensionslos, Summe aller x = 1
 - **ppm** = mg/kg = mg/L (bei verdünnten wässrigen Lösungen) — für Spurenkonzentrationen
 
 > **Merke:** Molarität (mol/L) ist volumenbasiert und temperaturabhängig. Molalität (mol/kg) ist massebasiert und temperaturunabhängig — wichtig für kolligative Eigenschaften!
@@ -469,7 +469,7 @@ Bisher haben wir die Definitionen kennengelernt. Um das zu verstehen, wie man zw
 4. n(NaCl) = 9/58,44 = 0,154 mol
 5. c = n/V = 0,154 mol / 0,995 L ≈ **0,154 mol/L ≈ 154 mmol/L**
 
-> **Merke:** NaCl 0,9 % ≈ 154 mmol/L NaCl → 154 mmol/L Na⁺ + 154 mmol/L Cl⁻ = 308 mmol/L Gesamtionenkonzentration (≈ 308 mosmol/L — isoton zum Blutplasma!).
+> **Merke:** NaCl 0,9 % ≈ 154 mmol/L NaCl → 154 mmol/L Na⁺ + 154 mmol/L Cl⁻ = 308 mmol/L Gesamtionenkonzentration (≈ 308 mosmol/L — isoton, d. h. gleicher osmotischer Druck wie Blutplasma).
 
 <!-- DIAGRAM:ph-scale -->
 
@@ -678,7 +678,7 @@ Gelöste Teilchen senken den Dampfdruck des Lösungsmittels (Raoult). Daher muss
 
 **ΔT_b = K_b × b × i**
 
-- K_b = ebullioskopische Konstante [°C·kg/mol]; für Wasser: K_b = 0,512 °C·kg/mol
+- K_b = ebullioskopische Konstante (Siedepunkts-Konstante) [°C·kg/mol]; für Wasser: K_b = 0,512 °C·kg/mol
 - b = Molalität [mol/kg Lösungsmittel]
 - i = van't Hoff-Faktor
 
@@ -688,7 +688,7 @@ Gelöste Teilchen stören die Kristallbildung → **Gefrierpunkt sinkt**.
 
 **ΔT_f = K_f × b × i**
 
-- K_f = kryoskopische Konstante; für Wasser: K_f = 1,86 °C·kg/mol
+- K_f = kryoskopische Konstante (Gefrierpunkts-Konstante); für Wasser: K_f = 1,86 °C·kg/mol
 
 ### Rechenbeispiel: Streusalz
 
@@ -698,7 +698,7 @@ Gelöste Teilchen stören die Kristallbildung → **Gefrierpunkt sinkt**.
 
 Deshalb wird NaCl als Streusalz verwendet! CaCl₂ (i = 3) ist noch wirksamer: ΔT_f = 1,86 × 1 × 3 = 5,58 °C.
 
-> **Merke:** K_f(Wasser) = 1,86 °C·kg/mol (≈ 2); K_b(Wasser) = 0,512 °C·kg/mol (≈ 0,5). Gefrierpunktserniedrigung ist ca. 3,6× stärker als Siedepunktserhöhung — daher für Messzwecke bevorzugt (Kryoskopie).
+> **Merke:** K_f(Wasser) = 1,86 °C·kg/mol (≈ 2); K_b(Wasser) = 0,512 °C·kg/mol (≈ 0,5). Gefrierpunktserniedrigung ist ca. 3,6× stärker als Siedepunktserhöhung — daher für Messzwecke bevorzugt (Kryoskopie, Gefrierpunktsmessung).
 
 <!-- DIAGRAM:thermodynamics -->
 
@@ -768,11 +768,11 @@ Der Faktor 2 vor Na⁺ berücksichtigt die begleitenden Anionen (Cl⁻, HCO₃�
 
 ### Dialyse
 
-Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat in Kontakt gebracht. Harnstoff und Kreatinin (kleine Moleküle) diffundieren entlang ihres Konzentrationsgefälles ins Dialysat. Plasmaproteine (zu groß) bleiben im Blut. Die Dialysat-Osmolalität wird isoton eingestellt, um unkontrollierte Wasserverschiebungen zu vermeiden.
+Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat in Kontakt gebracht. Harnstoff und Kreatinin (Abbauprodukt des Muskelstoffwechsels, kleine Moleküle) diffundieren entlang ihres Konzentrationsgefälles ins Dialysat. Plasmaproteine (zu groß) bleiben im Blut. Die Dialysat-Osmolalität wird isoton eingestellt, um unkontrollierte Wasserverschiebungen zu vermeiden.
 
 ### Infusionstherapie
 
-- **Volumenersatz:** isotone Lösungen (NaCl 0,9 %, Ringer-Laktat)
+- **Volumenersatz:** isotone Lösungen (NaCl 0,9 %, Ringer-Laktat, eine elektrolythaltige Infusionslösung)
 - **Hirndrucksenkung:** hypertone Lösungen (Mannitol 20 %, NaCl 3 %)
 - **Hypoglykämie:** Glucose 40 % i.v. (stark hyperton → langsam applizieren!)`,
       merksätze: [

@@ -411,7 +411,7 @@ Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²
 
 ### Mikro (µ) — 10⁻⁶
 
-**Mikro** (Symbol **µ**, griech. "my") steht für **10⁻⁶ = 0,000001** — ein Millionstel. Es tritt v. a. bei sehr potenten Substanzen und biologischen Maßen auf:
+**Mikro** (Symbol **µ**, griech. „my" = klein) steht für **10⁻⁶ = 0,000001** — ein Millionstel. Es tritt v. a. bei sehr potenten Substanzen und biologischen Maßen auf:
 - **Mikrometer (µm):** Zelldurchmesser (Erythrozyt: 6–8 µm; Lymphozyt: 10–14 µm; Hepatozyt: 20–30 µm)
 - **Mikrogramm (µg):** Hochpotente Hormone und Medikamente (z. B. Fentanyl: 1–2 µg/kg; L-Thyroxin: 25–200 µg/Tag)
 - **Mikromol (µmol):** Bilirubinkonzentration (Normwert <17 µmol/L), Serumkupfer (~15–24 µmol/L)
@@ -419,7 +419,7 @@ Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²
 
 Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspricht einem Fehler um den Faktor 1.000 — klinisch lebensbedrohlich.
 
-> **Merke:** µg ≠ mg! 1 mg = 1.000 µg. Das µ-Zeichen wird handschriftlich oft als m gelesen — deshalb empfiehlt die ISMP "mcg" statt "µg" in der Verschreibung.
+> **Merke:** µg ≠ mg! 1 mg = 1.000 µg. Das µ-Zeichen wird handschriftlich oft als m gelesen — deshalb empfiehlt die ISMP (Institute for Safe Medication Practices) "mcg" statt "µg" in der Verschreibung.
 
 ### Nano (n) — 10⁻⁹
 
@@ -436,7 +436,7 @@ Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspri
 **Piko** (Symbol **p**) steht für **10⁻¹²** — ein Billionstel. Piko-Einheiten tauchen bei ultrasensitiven Laboranalysen auf:
 - **Picomol (pmol):** T3 (freies Trijodthyronin: 2,6–5,7 pmol/L), Insulin-Wachstumsfaktor IGF-1
 - **Pikogramm (pg):** Zytokinbestimmungen (z. B. IL-6: <7 pg/mL im Serum)
-- 1 pg = 10⁻¹² g. Moderne ELISA- und Luminex-Assays können Konzentrationen im Pikogramm-Bereich nachweisen.
+- 1 pg = 10⁻¹² g. Moderne ELISA- (Enzyme-linked Immunosorbent Assay) und Luminex-Assays können Konzentrationen im Pikogramm-Bereich nachweisen.
 
 ### Femto (f) — 10⁻¹⁵
 
@@ -747,7 +747,7 @@ Die **wissenschaftliche Notation** schreibt jede Zahl in der Form **a × 10ⁿ**
 - **a** der **Vorfaktor** ist (die Zahl vor „× 10ⁿ”) und
 - **n** der **Exponent** (ganze Zahl) ist.
 
-In der **normalisierten Form** gilt zusätzlich: **1 ≤ a < 10** — der Vorfaktor hat also genau **eine Stelle vor dem Komma** (1 bis 9,…). So ist die Schreibweise **eindeutig** und der Exponent gibt direkt die **Größenordnung** an.
+In der **normalisierten Form** (eindeutige Standarddarstellung) gilt zusätzlich: **1 ≤ a < 10** — der Vorfaktor hat also genau **eine Stelle vor dem Komma** (1 bis 9,…). So ist die Schreibweise **eindeutig** und der Exponent gibt direkt die **Größenordnung** an.
 
 | Dezimal | Normalisierte Form | Vorfaktor a | Exponent n |
 |---------|--------------------|-------------|------------|
@@ -854,11 +854,11 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 **Um die Notation im Kontext zu sehen,** folgen kurze Anwendungen: Avogadro-Zahl, Halbwertszeiten, Henderson-Hasselbalch.
 
-**Avogadro-Zahl (Nₐ = 6,022 × 10²³ mol⁻¹):** Gibt an, wie viele Teilchen in einem Mol enthalten sind. Wenn 1 mmol = 10⁻³ mol Na⁺ in 1 L Lösung vorliegen, dann enthält diese Lösung 6,022 × 10²³ × 10⁻³ = 6,022 × 10²⁰ Na⁺-Ionen pro Liter.
+**Avogadro-Zahl (Nₐ = 6,022 × 10²³ mol⁻¹):** Gibt an, wie viele Teilchen (Atome, Moleküle oder Ionen) in einem Mol enthalten sind. Wenn 1 mmol = 10⁻³ mol Na⁺ in 1 L Lösung vorliegen, dann enthält diese Lösung 6,022 × 10²³ × 10⁻³ = 6,022 × 10²⁰ Na⁺-Ionen pro Liter.
 
 **Halbwertszeiten:** Tc-99m hat eine Halbwertszeit von 6 h = 6 × 60 × 60 s = 2,16 × 10⁴ s. Die Aktivität nimmt exponentiell ab: A(t) = A₀ × (1/2)^(t/t½). Logarithmen sind nötig, um zu berechnen, nach welcher Zeit eine bestimmte Restaktivität vorliegt.
 
-**Henderson-Hasselbalch-Gleichung:** pH = pKₐ + log([A⁻]/[HA]), die Grundformel für Puffersysteme im Blut. Der Logarithmus verknüpft pH, pKₐ und das Konzentrationsverhältnis von Base zu Säure.
+**Henderson-Hasselbalch-Gleichung** (Beziehung zwischen pH und Pufferkonzentrationen)**:** pH = pKₐ + log([A⁻]/[HA]), die Grundformel für Puffersysteme im Blut. Der Logarithmus verknüpft pH, pKₐ und das Konzentrationsverhältnis von Base zu Säure.
 
 ---
 
@@ -866,7 +866,7 @@ Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 **Um das Gelernte anzuwenden,** folgen zwei typische MedAT-Aufgaben. **Kernkompetenz** ist der **Dreischritt:** (1) Vorfaktoren getrennt, (2) Exponenten getrennt, (3) Ergebnis normalisieren.
 
-**Aufgabe 1 — Infusionsberechnung:** Eine NaCl-Infusion (0,9 %) enthält 9 g NaCl pro Liter. Molmasse NaCl = 58,5 g/mol. Molarität: c = 9 / 58,5 = 0,154 mol/L = 1,54 × 10⁻¹ mol/L = 154 mmol/L. Diese Berechnung verbindet wissenschaftliche Notation, Molkonzentration und klinischen Alltag.
+**Aufgabe 1 — Infusionsberechnung:** Eine NaCl-Infusion (0,9 %) enthält 9 g NaCl pro Liter. Molmasse (Masse pro Mol) NaCl = 58,5 g/mol. Molarität (Stoffmengenkonzentration): c = 9 / 58,5 = 0,154 mol/L = 1,54 × 10⁻¹ mol/L = 154 mmol/L. Diese Berechnung verbindet wissenschaftliche Notation, Molkonzentration und klinischen Alltag.
 
 **Aufgabe 2 — Erythrozytenzahl:** Das Blut enthält ~5 × 10¹² Erythrozyten pro Liter. Bei einem Blutvolumen von 5 L: Gesamtzahl = 5 × 10¹² × 5 = 25 × 10¹² = 2,5 × 10¹³ rote Blutkörperchen. Normalisierung: Vorfaktor 25 → 2,5 × 10¹ → Gesamtexponent 12 + 1 = 13.
 

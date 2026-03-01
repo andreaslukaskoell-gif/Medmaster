@@ -66,7 +66,7 @@ Zwei Geraden sind **parallel**, wenn sie dieselbe Steigung m besitzen. Sie sind 
 
 **Aus Steigung und einem Punkt:** Gegeben m und P(x₀|y₀). Dann gilt b = y₀ − m×x₀.
 
-**Punkt-Steigungs-Form:** Manchmal ist es bequemer, die Gerade direkt als y − y₀ = m × (x − x₀) zu schreiben. Diese Form wird in der Statistik bei **Regressionsgeraden** verwendet: Die Regressionsgerade verläuft immer durch den Schwerpunkt (x̄|ȳ) der Daten.
+**Punkt-Steigungs-Form:** Manchmal ist es bequemer, die Gerade direkt als y − y₀ = m × (x − x₀) zu schreiben. Diese Form wird in der Statistik bei **Regressionsgeraden** (Ausgleichsgeraden durch Messdaten) verwendet: Die Regressionsgerade verläuft immer durch den Schwerpunkt (x̄|ȳ) der Daten.
 
 > **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Immer zuerst m berechnen, dann b durch Einsetzen eines Punktes ermitteln.
 
@@ -274,7 +274,7 @@ Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit 
 
 Die **Scheitelpunktform** f(x) = a(x − xs)² + ys ist besonders anschaulich: Der Scheitelpunkt S(xs|ys) ist der Hoch- oder Tiefpunkt der Parabel. Die Umformung von der allgemeinen in die Scheitelpunktform erfolgt durch **quadratische Ergänzung**.
 
-> **Merke:** Der Leitkoeffizient a bestimmt **zwei** Eigenschaften gleichzeitig: das Vorzeichen entscheidet über die Öffnungsrichtung (a > 0: oben, a < 0: unten), der Betrag |a| über die Breite (|a| > 1: schmaler als Normalparabel, |a| < 1: breiter).
+> **Merke:** Der Leitkoeffizient a bestimmt **zwei** Eigenschaften gleichzeitig: das Vorzeichen entscheidet über die Öffnungsrichtung (a > 0: oben, a < 0: unten), der Betrag |a| über die Breite (|a| > 1: schmaler als Normalparabel (Parabel mit a = 1), |a| < 1: breiter).
 
 | Form | Darstellung | Vorteil |
 |---|---|---|
@@ -331,9 +331,9 @@ Dies ermöglicht oft eine schnelle Bestimmung der Nullstellen ohne Rechnung. **M
 
 ## Anwendungen in Physik und Medizin
 
-Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in komplexeren Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit bei bestimmten Freisetzungskinetiken.
+Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in komplexeren Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit (resorbierter Wirkstoffanteil) bei bestimmten Freisetzungskinetiken.
 
-**Hagen-Poiseuille-Gesetz:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴ (Radius hoch 4). Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose.
+**Hagen-Poiseuille-Gesetz** (Strömungsgesetz für Röhren)**:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴ (Radius hoch 4). Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose (Gefäßverkalkung).
 
 **Wurfparabel:** Die Höhe h eines geworfenen Körpers folgt h(t) = −½g×t² + v₀×t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt des Erreichens an. Diese Parabel ist ein Standardbeispiel für a < 0 (Öffnung nach unten).
 
@@ -542,7 +542,7 @@ Typische Beispiele: Bakterienwachstum, Zinseszins, unkontrollierte Zellvermehrun
 
 **Exponentieller Zerfall** (0 < b < 1 oder negativer Exponent): f(t) = f₀ × e⁻ᵏᵗ (k > 0)
 
-Typische Beispiele: Radioaktiver Zerfall, Medikamentenabbau im Blut (Pharmakokinetik erster Ordnung), Abklingen elektrischer Ströme.
+Typische Beispiele: Radioaktiver Zerfall, Medikamentenabbau im Blut (Pharmakokinetik (Arzneimittelverteilung im Körper) erster Ordnung), Abklingen elektrischer Ströme.
 
 | Typ | Formel | k-Wert | Beispiel |
 |---|---|---|---|
@@ -762,7 +762,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
 
 **Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
 
-**Verfahren — Schrittfolge:** (1) **pH aus [H⁺]:** pH = −log₁₀([H⁺]). **[H⁺] aus pH:** [H⁺] = 10^(−pH). (2) **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). (3) **Dezibel:** L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10. (4) **Basiswechsel:** log_b(x) = ln(x)/ln(b).
+**Verfahren — Schrittfolge:** (1) **pH aus [H⁺]:** pH = −log₁₀([H⁺]). **[H⁺] aus pH:** [H⁺] = 10^(−pH). (2) **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). (3) **Dezibel** (logarithmische Lautstärkeeinheit)**:** L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10. (4) **Basiswechsel:** log_b(x) = ln(x)/ln(b).
 
 **Typische Prüfungsfehler:** ln(0) und ln(negativ) existieren nicht. log(a+b) ≠ log a + log b. pH: Vorzeichen nicht vergessen (pH = **−**log([H⁺])).
 
@@ -843,7 +843,7 @@ Beispiele:
 
 Eine pH-Änderung um 1 entspricht einer **10-fachen** Änderung der [H⁺]! Eine Änderung um 2 Einheiten entspricht einem Faktor 100.
 
-> **Merke:** pH = 7,4 (Normalblut) entspricht [H⁺] ≈ 40 nmol/L. Eine Verdoppelung der [H⁺] auf 80 nmol/L senkt den pH nur um log(2) ≈ 0,3 auf pH 7,1 — bereits eine lebensbedrohliche Azidose. Der logarithmische Maßstab "versteckt" große absolute Änderungen.
+> **Merke:** pH = 7,4 (Normalblut) entspricht [H⁺] ≈ 40 nmol/L. Eine Verdoppelung der [H⁺] auf 80 nmol/L senkt den pH nur um log(2) ≈ 0,3 auf pH 7,1 — bereits eine lebensbedrohliche Azidose (Blutübersäuerung). Der logarithmische Maßstab "versteckt" große absolute Änderungen.
 
 ## Henderson-Hasselbalch-Gleichung
 
@@ -851,7 +851,7 @@ Die Henderson-Hasselbalch-Gleichung beschreibt den pH einer Pufferlösung:
 
 **pH = pKₐ + log₁₀([A⁻]/[HA])**
 
-wobei [A⁻] die Konzentration der konjugierten Base und [HA] die Konzentration der schwachen Säure ist. Bei pH = pKₐ liegt genau ein 1:1-Verhältnis vor — der Puffer ist am effektivsten in einem pH-Bereich von pKₐ ± 1.
+wobei [A⁻] die Konzentration der konjugierten Base (nach Protonenabgabe entstehende Base) und [HA] die Konzentration der schwachen Säure ist. Bei pH = pKₐ liegt genau ein 1:1-Verhältnis vor — der Puffer ist am effektivsten in einem pH-Bereich von pKₐ ± 1.
 
 Für den **Bicarbonatpuffer im Blut** gilt speziell: pH = 6,1 + log([HCO₃⁻] / (0,03 × pCO₂)). Die Normwerte HCO₃⁻ = 24 mmol/L und pCO₂ = 40 mmHg ergeben: pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,3 = **7,4**.
 
@@ -860,7 +860,7 @@ Für den **Bicarbonatpuffer im Blut** gilt speziell: pH = 6,1 + log([HCO₃⁻] 
 Wenn man f(t) = C₀ × e^(−kt) logarithmiert:
 ln(C) = ln(C₀) − k×t
 
-Das heißt: **ln(C) ist eine lineare Funktion von t** mit Steigung −k und Achsenabschnitt ln(C₀). Trägt man Konzentrationswerte in einem **semilogarithmischen Diagramm** (y-Achse: log-Skala, x-Achse: lineare Skala) auf, erscheint eine Kinetik erster Ordnung als Gerade. Dies ist die experimentelle Methode zur Bestimmung von k und T½.
+Das heißt: **ln(C) ist eine lineare Funktion von t** mit Steigung −k und Achsenabschnitt ln(C₀). Trägt man Konzentrationswerte in einem **semilogarithmischen Diagramm** (Semilog-Plot) (y-Achse: log-Skala, x-Achse: lineare Skala) auf, erscheint eine Kinetik erster Ordnung als Gerade. Dies ist die experimentelle Methode zur Bestimmung von k und T½.
 
 ## Basiswechsel und Umrechnung
 
@@ -1054,7 +1054,7 @@ Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematisch
 - **Wendepunkte**: Stellen, an denen die Kurve ihre Krümmungsrichtung wechselt
 - **Asymptoten**: Grenzlinien, an die sich der Graph annähert, ohne sie zu erreichen
 
-> **Merke:** Beim MedAT werden Graphen oft ohne explizite Funktionsgleichung gezeigt. Man muss dann aus dem **Kurvenverlauf** auf den Funktionstyp schließen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal, asymptotische Annäherung = exponentiell oder Sättigungskinetik.
+> **Merke:** Beim MedAT werden Graphen oft ohne explizite Funktionsgleichung gezeigt. Man muss dann aus dem **Kurvenverlauf** auf den Funktionstyp schließen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal (S-förmig), asymptotische Annäherung = exponentiell oder Sättigungskinetik.
 
 ## Asymptoten im Detail
 
@@ -1082,7 +1082,7 @@ Krümmung beschreibt, ob sich die Steigung ändert:
 - **Konkav (rechtsgekrümmt)**: Kurve liegt wie eine Schüssel, Steigung nimmt zu
 - **Wendepunkt**: Übergang zwischen Konvex und Konkav
 
-**Zusammenhang Monotonie und Extrempunkte:** Ein lokales Maximum liegt vor, wenn die Funktion von steigend auf fallend wechselt. Ein lokales Minimum liegt vor, wenn die Funktion von fallend auf steigend wechselt. Der Wendepunkt einer sigmoiden Kurve (z. B. Dosis-Wirkungskurve) markiert den Punkt der steilsten Steigung — bei der Hill-Gleichung liegt er bei der EC₅₀.
+**Zusammenhang Monotonie und Extrempunkte:** Ein lokales Maximum liegt vor, wenn die Funktion von steigend auf fallend wechselt. Ein lokales Minimum liegt vor, wenn die Funktion von fallend auf steigend wechselt. Der Wendepunkt einer sigmoiden Kurve (z. B. Dosis-Wirkungskurve) markiert den Punkt der steilsten Steigung — bei der Hill-Gleichung liegt er bei der EC₅₀ (halbmaximale Wirkkonzentration).
 
 ## Semilogarithmische und doppelt-logarithmische Darstellung
 
@@ -1096,7 +1096,7 @@ In Naturwissenschaften und Medizin begegnet man häufig Daten, die sich über vi
 **Doppelt-logarithmischer Plot (Log-Log-Plot)**:
 - Beide Achsen logarithmisch
 - Potenzfunktionen y = A×xⁿ erscheinen als Geraden: log y = log A + n×log x
-- Anwendung: Skalierungsgesetze in der Biologie (Allometrie), Dosis-Wirkungskurven
+- Anwendung: Skalierungsgesetze in der Biologie (Allometrie (Körpergrößen-Skalierung)), Dosis-Wirkungskurven
 
 > **Merke:** **Welcher Plot für welche Funktion?** Semilog-Plot linearisiert Exponentialfunktionen. Log-Log-Plot linearisiert Potenzfunktionen. Linearer Plot zeigt lineare Funktionen als Gerade. Wenn eine Kurve im Semilog-Plot keine Gerade ist, liegt **keine** reine Kinetik erster Ordnung vor.
 
@@ -1111,7 +1111,7 @@ In einem ln C vs. t Diagramm ergibt sich eine Gerade mit:
 - Achsenabschnitt: b = ln C₀ → C₀ = eᵇ
 - Aus k: T½ = ln(2)/k = 0,693/k
 
-**Lineweaver-Burk-Linearisierung** der Michaelis-Menten-Gleichung: 1/v = (Km/(v_max)) × 1/[S] + 1/v_max. In einem 1/v vs. 1/[S] Diagramm ergibt sich eine Gerade mit Steigung Km/v_max und y-Achsenabschnitt 1/v_max. Der x-Achsenabschnitt liegt bei −1/Km.
+**Lineweaver-Burk-Linearisierung** (doppelt-reziprokes Enzymkinetik-Diagramm) der Michaelis-Menten-Gleichung: 1/v = (Km/(v_max)) × 1/[S] + 1/v_max. In einem 1/v vs. 1/[S] Diagramm ergibt sich eine Gerade mit Steigung Km/v_max und y-Achsenabschnitt 1/v_max. Der x-Achsenabschnitt liegt bei −1/Km.
 
 ## Graphische Kurvenarten in der Medizin
 
@@ -1129,7 +1129,7 @@ v = v_max × [S] / (Km + [S]) — hyperbolische Sättigungskurve
 - v = v_max/2 bei [S] = Km (Definition von Km!)
 
 **Überlebensfunktionen und Kaplan-Meier-Kurven**:
-In der klinischen Epidemiologie zeigen Kaplan-Meier-Kurven den zeitlichen Verlauf des Überlebens in einer Patientengruppe — treppenartige Abfälle, die in Form und Steigung pharmakokinetischen Zerfallskurven ähneln. Ein steiler Abfall zeigt hohe Mortalität, ein flacher Verlauf gute Prognose.
+In der klinischen Epidemiologie zeigen Kaplan-Meier-Kurven (Überlebenszeit-Darstellung) den zeitlichen Verlauf des Überlebens in einer Patientengruppe — treppenartige Abfälle, die in Form und Steigung pharmakokinetischen Zerfallskurven ähneln. Ein steiler Abfall zeigt hohe Mortalität, ein flacher Verlauf gute Prognose.
 
 ## Graphen vergleichen und interpretieren
 
@@ -1425,7 +1425,7 @@ Die **geometrische Reihe** ist die unendliche Summe einer geometrischen Folge. F
 
 **Beispiel 2:** 3 + 3×(0,1) + 3×(0,01) + ... = 3/(1 − 0,1) = 3/0,9 = **10/3 ≈ 3,33**.
 
-Für |q| ≥ 1 divergiert die Reihe (die Partialsummen wachsen über alle Grenzen).
+Für |q| ≥ 1 divergiert die Reihe (die Partialsummen (Summen der ersten n Glieder) wachsen über alle Grenzen).
 
 **Medizinischer Kontext:** Die geometrische Reihe beschreibt die Kumulation eines Medikaments bei wiederholter Gabe: C_ss = D/(1 − e^(−k×τ)), wobei τ das Dosierungsintervall und k die Eliminationskonstante ist. Für k×τ klein (kurzes Intervall, langsame Elimination) nähert sich dies einer geometrischen Reihe.
 

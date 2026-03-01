@@ -44,7 +44,7 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 
 **Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Naehrstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
 
-**Biozoeonose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Praedation, Symbiose).
+**Biozoeonose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Praedation (Raeuber-Beute-Beziehung), Symbiose (dauerhaftes Zusammenleben von Arten)).
 
 **Oekosystem** = **Biotop + Biozoeonose** in Wechselwirkung. Im Oekosystem fliessen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreislaeufe).
 
@@ -108,7 +108,7 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 
 **Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensitaet, Wellenlaenge), Wasser (Verfuegbarkeit, Salzgehalt, pH), Boden (Textur, pH, Naehrstoffe), Wind, Stroemung. Sie wirken direkt auf Ueberleben, Wachstum und Reproduktion.
 
-**Biotische Faktoren** sind alle Einfluesse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Praedation (Raeuber-Beute), Symbiose (Mutualismus, Parasitismus, Kommensalismus). Sie strukturieren Lebensgemeinschaften (Biozoeonosen) und begrenzen Verbreitung und Dichte von Arten.
+**Biotische Faktoren** sind alle Einfluesse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Praedation (Raeuber-Beute), Symbiose (Mutualismus (wechselseitiger Nutzen), Parasitismus (ein Partner schaedigt den anderen), Kommensalismus (ein Partner profitiert, der andere unbeeinflusst)). Sie strukturieren Lebensgemeinschaften (Biozoeonosen) und begrenzen Verbreitung und Dichte von Arten.
 
 | Typ | Beispiele |
 |-----|-----------|
@@ -139,7 +139,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 {{DIAGRAM:cell-membrane}}
 
 - **Euryoek** (griech. eurys = breit): breite oekologische Amplitude = **Generalist** -- toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Kraehe, Ratte).
-- **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen praezise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven = sauberes Wasser).
+- **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen praezise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven (Eintagsfliegenlarven) = sauberes Wasser).
 
 > **Merke:** Euryoek = Generalist, breite Toleranz. Stenoek = Spezialist, enge Toleranz, guter Bioindikator.
 
@@ -147,7 +147,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 ## Liebigs Minimumgesetz und Shelfords Toleranzgesetz
 
-**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt -- nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffduenger steigert den Ertrag. In Suesswasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
+**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt -- nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffduenger steigert den Ertrag. In Suesswasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung (Naehrstoffueberversorgung eines Gewaessers) bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
 
 **Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Ueberschuss** eines Faktors kann limitierend wirken (Toxizitaet). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
 
@@ -157,7 +157,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 ## Bioindikatoren
 
-**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).`,
+**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden (Schlammroehrenwuermer) = stark verschmutztes Wasser (Saprobiensystem (Bewertungssystem der Gewaesserguete)).`,
       lernziele: [
         "Abiotische und biotische Faktoren unterscheiden und Beispiele nennen.",
         "Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) beschreiben und euryök vs. stenök erklären.",
@@ -301,7 +301,7 @@ Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konk
 
 - **Zeitlich:** Tag- vs. nachtaktiv (z. B. Falke vs. Eule)
 - **Raeumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhoehen)
-- **Trophisch:** Verschiedene Beutegroessen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
+- **Trophisch (ernaehrungsbezogen):** Verschiedene Beutegroessen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
 
 > **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.`,
       lernziele: [
@@ -396,9 +396,9 @@ Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifizie
 
 | Interaktion | Partner 1 | Partner 2 | Beispiel |
 |-------------|--------|--------|----------|
-| **Mutualismus** | + | + | Mykorrhiza (Pilz + Pflanze), Bestäubung, Leguminosen + Rhizobien |
-| **Kommensalismus** | + | 0 | Epiphyten auf Bäumen, Remoren an Haien |
-| **Parasitismus** | + | − | Plasmodium (Malaria), Bandwurm, Zecke |
+| **Mutualismus** | + | + | Mykorrhiza (Pilz-Wurzel-Symbiose), Bestäubung, Leguminosen (Hülsenfrüchtler) + Rhizobien (stickstofffixierende Bodenbakterien) |
+| **Kommensalismus** | + | 0 | Epiphyten (Aufsitzerpflanzen) auf Bäumen, Remoren (Schiffshalter-Fische) an Haien |
+| **Parasitismus** | + | − | Plasmodium (Malaria-Erreger), Bandwurm, Zecke |
 | **Prädation** | + | − | Fuchs frisst Hase, Adler frisst Maus |
 | **Konkurrenz** | − | − | Zwei Arten um dieselbe Ressource |
 
@@ -521,7 +521,7 @@ Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eine
 
 **Trophieebenen (Ernährungsebenen):**
 
-**Produzenten (Trophieebene 1):** Autotrophe Organismen, die Sonnenenergie (Photosynthese) oder chemische Energie (Chemosynthese) zur Biomassesynthese nutzen. Grüne Pflanzen, Algen, Cyanobakterien (Photosynthese); schwefeloxidierende Bakterien, Nitrifikanten (Chemosynthese, Tiefsee-Hydrothermalquellen).
+**Produzenten (Trophieebene 1):** Autotrophe (sich selbst ernährende) Organismen, die Sonnenenergie (Photosynthese) oder chemische Energie (Chemosynthese) zur Biomassesynthese nutzen. Grüne Pflanzen, Algen, Cyanobakterien (photosynthetische Bakterien); schwefeloxidierende Bakterien, Nitrifikanten (Chemosynthese, Tiefsee-Hydrothermalquellen).
 
 **Primärkonsumenten (Herbivoren, Trophieebene 2):** Fressen Produzenten direkt. Rehe, Raupen, Heuschrecken, Zooplankton.
 
@@ -576,7 +576,7 @@ Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und 
 **Rückführung:**
 - Zellatmung (Produzenten, Konsumenten, Destruenten): organische Verbindungen → CO₂ + H₂O + ATP
 - Verbrennung (Combustion): Fossile Brennstoffe, Waldbrände → CO₂
-- Methanogenese: Anaerobe Zersetzung → CH₄ (Sumpfgas, Reisfelder, Rinderpansen)
+- Methanogenese (mikrobielle Methanbildung): Anaerobe Zersetzung → CH₄ (Sumpfgas, Reisfelder, Rinderpansen)
 
 **Reservoire:**
 - Atmosphäre: ~830 GtC (Gigatonnen Kohlenstoff), steigt durch fossile Brennstoffe
@@ -585,14 +585,14 @@ Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und 
 - Ozeane: ~38.000 GtC (größtes aktives Reservoir; CO₂ → H₂CO₃ → HCO₃⁻ → CO₃²⁻)
 - Fossile Brennstoffe: ~5.000 GtC (passiv, außer bei Verbrennung)
 
-**Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen).
+**Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen (kalkschalige Einzeller)).
 
 ### Stickstoffkreislauf
 
 Stickstoff (N) ist essentiell für Aminosäuren, Nucleotide und Chlorophyll. Obwohl N₂ 78% der Atmosphäre ausmacht, kann er von den meisten Organismen nicht direkt genutzt werden.
 
 **N₂-Fixierung:**
-- *Biologische Fixierung:* Diazotrophe Bakterien (Rhizobium, Bradyrhizobium in Leguminosen-Wurzelknöllchen; Cyanobakterien; Azotobacter im Boden) katalysieren via Nitrogenase: N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2NH₃ + H₂ + 16 ADP + 16 Pᵢ
+- *Biologische Fixierung:* Diazotrophe (stickstofffixierende) Bakterien (Rhizobium, Bradyrhizobium in Leguminosen-Wurzelknöllchen; Cyanobakterien; Azotobacter im Boden) katalysieren via Nitrogenase (Stickstofffixierungs-Enzym): N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2NH₃ + H₂ + 16 ADP + 16 Pᵢ
 - *Abiotische Fixierung:* Blitzentladungen; industrielle Haber-Bosch-Synthese (ca. 120 TgN/Jahr für Dünger)
 
 **Ammonifikation:** Mikroorganismen bauen organische N-Verbindungen (Aminosäuren, Nucleotide) aus toter Biomasse zu NH₄⁺ (Ammonium) ab.
@@ -611,17 +611,17 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 
 **Kreislauf:** Gestein → Verwitterung → Phosphat im Boden → Pflanzenaufnahme → organisches P in Biomasse → Mineralisation durch Destruenten → Phosphat → Auswaschung ins Gewässer → Sedimentation im Meeresboden.
 
-**Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie/Anoxie → Fischsterben.
+**Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie (Sauerstoffmangel)/Anoxie (voelliger Sauerstoffentzug) → Fischsterben.
 
 ### Wasserkreislauf
 
 - **Verdunstung** (Evaporation): Meere, Seen, Flüsse → Wasserdampf
-- **Transpiration:** Pflanzen geben Wasser über Stomata ab
+- **Transpiration:** Pflanzen geben Wasser über Stomata (Spaltöffnungen der Blätter) ab
 - **Kondensation und Niederschlag:** Wolkenbildung → Regen, Schnee
 - **Versickerung und Grundwasserneubildung**
 - **Oberflächenabfluss:** Flüsse, Bäche → Meere
 
-Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration).`,
+Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration (Verdunstung von Boden und Pflanzen)).`,
       merksätze: [
         "Trophieebenen: Produzenten → Konsumenten I, II, III → Destruenten. Destruenten schließen den Kreislauf durch Detritus-Abbau.",
         "10%-Regel (Lindeman 1942): ~10% der Energie gelangt von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, Unverdauliches.",
@@ -775,7 +775,7 @@ Eine **Population** ist die Gesamtheit aller Individuen **einer Art** in einem d
 
 **Exponentielles Wachstum (J-Kurve):** Wenn Ressourcen praktisch unbegrenzt sind, wächst die Population exponentiell: dN/dt = r·N. Die Wachstumsrate ist proportional zur aktuellen Größe N. Grafisch: **J-förmige Kurve**. Tritt in der Natur nur kurzfristig auf (Pionierphase, invasive Arten, Bakterien in Logphase).
 
-**Logistisches Wachstum (S-Kurve):** In der Realität limitieren Ressourcen das Wachstum. Die Population nähert sich einer **Kapazitätsgrenze K** (carrying capacity): dN/dt = r·N·(K−N)/K. Grafisch: **S-förmige (sigmoidale) Kurve**. Bei N = K ist das Wachstum null (Gleichgewicht). Die maximale absolute Wachstumsrate liegt bei N = K/2.
+**Logistisches Wachstum (S-Kurve):** In der Realität limitieren Ressourcen das Wachstum. Die Population nähert sich einer **Kapazitätsgrenze K** (carrying capacity): dN/dt = r·N·(K−N)/K. Grafisch: **S-förmige (sigmoidale, also S-förmig verlaufende) Kurve**. Bei N = K ist das Wachstum null (Gleichgewicht). Die maximale absolute Wachstumsrate liegt bei N = K/2.
 
 **Kapazitätsgrenze K:** Die maximale Populationsgröße, die ein Habitat dauerhaft tragen kann (Nahrung, Raum, Nester etc.).
 
@@ -875,9 +875,9 @@ Zwei grundlegende Lebensstrategien:
 
 {{DIAGRAM:immune-response}}
 
-Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein. Der klassische IgG-Antikörper besteht aus:
+Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein (Protein mit Zuckerketten). Der klassische IgG-Antikörper besteht aus:
 
-- **2 schwere Ketten (H = Heavy)** und **2 leichte Ketten (L = Light)**, je durch Disulfidbrücken verbunden
+- **2 schwere Ketten (H = Heavy)** und **2 leichte Ketten (L = Light)**, je durch Disulfidbrücken (kovalente S-S-Bindungen) verbunden
 - Jede Kette besitzt **variable (V) und konstante (C) Domänen**
 
 **Fab-Fragment (Fragment antigen-binding):**
@@ -887,13 +887,13 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein. Der kl
 
 **Fc-Fragment (Fragment crystallizable):**
 - Der „Stamm" des Y — enthält konstante Regionen der schweren Ketten
-- Vermittelt **Effektorfunktionen**: Fc-Rezeptoren auf Makrophagen (Opsonisierung), C1q-Bindung (Komplementaktivierung), FcRn (Plazentatransfer bei IgG)
+- Vermittelt **Effektorfunktionen**: Fc-Rezeptoren auf Makrophagen (Fresszellen) (Opsonisierung (Markierung fuer Phagozytose)), C1q-Bindung (Komplementaktivierung), FcRn (Plazentatransfer bei IgG)
 - Isotyp-spezifisch — bestimmt die Ig-Klasse (IgG, IgA, IgM, IgE, IgD)
 
 **Effektorfunktionen im Überblick:**
 - **Neutralisierung**: Fab blockiert Toxine oder Virusbindestellen direkt → Inaktivierung
 - **Opsonisierung**: IgG markiert Pathogene → Phagozytose durch Makrophagen/Neutrophile (via Fc-Rezeptoren)
-- **Komplementaktivierung (klassischer Weg)**: IgM/IgG + Antigen → C1q bindet Fc → Kaskade → MAC (Lyse)
+- **Komplementaktivierung (klassischer Weg)**: IgM/IgG + Antigen → C1q bindet Fc → Kaskade → MAC (Membranangriffskomplex, Lyse)
 
 > **Merke:** IgG: 2 schwere + 2 leichte Ketten, Y-Form. Fab = variabel (Antigenerkennung). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplementaktivierung, Plazentatransfer).
 

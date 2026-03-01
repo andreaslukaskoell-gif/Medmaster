@@ -43,7 +43,7 @@ Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese 
 
 {{DIAGRAM:cell-membrane}}
 
-Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
+Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler (zugleich wasser- und fettlöslicher) Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
 
 > **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
 
@@ -53,7 +53,7 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
 
 {{DIAGRAM:animal-cell}}
 
-Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
+Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing (Herausschneiden von Introns aus der prä-mRNA)). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen (stammesgeschichtliche Verwandtschaftsvergleiche) zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales, einer Ordnung intrazellulärer Bakterien) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
 
 > **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Antibiotikasensitivität, Doppelmembran, binäre Teilung, phylogenetische Ähnlichkeit zu Bakterien.
 
@@ -61,7 +61,7 @@ Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert
 
 ## Klinischer Bezug
 
-Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.`,
+Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie (Versagen der Blutbildung im Knochenmark) als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom (mitochondriale Enzephalomyopathie mit Laktatazidose und schlaganfallähnlichen Episoden).`,
       lernziele: [
         "Das Miller-Urey-Experiment und seine Bedeutung für die chemische Evolution erläutern",
         "Die RNA-Welt-Hypothese und ihre Begründung beschreiben",
@@ -217,7 +217,7 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 
 {{DIAGRAM:pedigree-analysis}}
 
-Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
+Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection, Verwandtenselektion). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
 
 > **Merke:** **Fitness = Fortpflanzungserfolg** (nicht Körperkraft, nicht Schnelligkeit). Nach Darwin sind die **erfolgreichsten Individuen die mit den meisten fortpflanzungsfähigen Nachkommen**. Inklusive Fitness = eigene + indirekte Reproduktion durch Verwandte (Kin Selection).
 
@@ -239,7 +239,7 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 
 **Stabilisierende Selektion**: Der Mittelwert des Merkmals wird bevorzugt, Extreme werden benachteiligt. Die Varianz nimmt ab, der Mittelwert bleibt konstant. Beispiel: **Geburtsgewicht** beim Menschen — zu leichte Babys haben unreife Organe, zu schwere Babys verursachen Geburtskomplikationen; Babys mit mittlerem Gewicht überleben am besten.
 
-**Gerichtete Selektion**: Ein Extrem des Merkmalsspektrums wird bevorzugt; der Mittelwert verschiebt sich schrittweise in eine Richtung. Beispiel: **Antibiotikaresistenz** — Bakterien mit Resistenzgen überleben den Antibiotika-Einsatz und vermehren sich; der Anteil resistenter Stämme steigt von Generation zu Generation (MRSA).
+**Gerichtete Selektion**: Ein Extrem des Merkmalsspektrums wird bevorzugt; der Mittelwert verschiebt sich schrittweise in eine Richtung. Beispiel: **Antibiotikaresistenz** — Bakterien mit Resistenzgen überleben den Antibiotika-Einsatz und vermehren sich; der Anteil resistenter Stämme steigt von Generation zu Generation (MRSA, Methicillin-resistenter *Staphylococcus aureus*).
 
 **Disruptive Selektion**: Beide Extreme werden bevorzugt, der Mittelwert wird benachteiligt. Die Merkmalsverteilung spaltet sich auf. Beispiel: Schnabelgröße bei Vögeln mit zwei verschiedenen Nahrungsquellen — sehr große Schnäbel (harte Samen) und sehr kleine Schnäbel (Insekten) sind vorteilhaft, mittlere nicht. Disruptive Selektion kann zur **Artaufspaltung** führen.
 
@@ -249,7 +249,7 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 
 ## Klinischer Bezug
 
-Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship, Therapierotation).`,
+Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship (rationaler Antibiotikaeinsatz), Therapierotation).`,
       lernziele: [
         "Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern",
         "Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen",
@@ -417,7 +417,7 @@ Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene
 
 {{DIAGRAM:pedigree-analysis}}
 
-Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population — einen Referenzzustand ohne Evolution. Abweichungen zeigen, welche evolutionären Kräfte aktiv sind. Ein wichtiges Abweichungsbeispiel ist der Heterozygotenvorteil (Überdominanz): In Malariaregionen Afrikas sind Sichelzellanämie-Allele (HbS) in höherer Frequenz vorhanden als durch Mutation allein zu erwarten wäre. Der Grund: Heterozygote (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt (Heterozygotenvorteil). Dies ist ein Beispiel für balancierte Polymorphismus.
+Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population — einen Referenzzustand ohne Evolution. Abweichungen zeigen, welche evolutionären Kräfte aktiv sind. Ein wichtiges Abweichungsbeispiel ist der Heterozygotenvorteil (Überdominanz): In Malariaregionen Afrikas sind Sichelzellanämie-Allele (HbS, verformte Erythrozyten durch mutiertes Hämoglobin) in höherer Frequenz vorhanden als durch Mutation allein zu erwarten wäre. Der Grund: Heterozygote (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt (Heterozygotenvorteil). Dies ist ein Beispiel für balancierten Polymorphismus (stabiles Nebeneinander mehrerer Allele).
 
 > **Merke:** Heterozygotenvorteil: HbA/HbS (Sichelzellträger) widerstandsfähiger gegen Malaria → HbS-Allel bleibt häufig in Malariaregionen (balancierte Selektion).
 
@@ -425,7 +425,7 @@ Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population —
 
 ## Klinischer Bezug
 
-Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom bei Amischen. In der Pharmakogenetik erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele).`,
+Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs (lysosomale Speicherkrankheit mit Neurodegeneration) bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom (Kleinwuchs mit Polydaktylie) bei Amischen. In der Pharmakogenetik (genetisch bedingte Arzneimittelwirkung) erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele (Cytochrom-P450-Enzym für Arzneimittelabbau)).`,
       lernziele: [
         "Die vier Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss) und ihre Wirkungsweisen beschreiben",
         "Flaschenhals-Effekt und Gründereffekt als Formen des Gendrifts unterscheiden",
@@ -593,7 +593,7 @@ Polyploidie ist der wichtigste Mechanismus sympatrischer Artbildung, besonders b
 
 ## Klinischer Bezug
 
-Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.`,
+Polyploidie ist in der Humanmedizin teratogen (fruchtschädigend): Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid (mit abweichender Chromosomenzahl) oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.`,
       lernziele: [
         "Den biologischen Artbegriff (Mayr) definieren und seine Grenzen benennen",
         "Präzygotische von postzygotischen Isolationsmechanismen unterscheiden und Beispiele nennen",
@@ -753,7 +753,7 @@ Homologie und Analogie werden haeufig verwechselt. Der entscheidende Unterschied
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto laenger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien koennen absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die fruehere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
+Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto laenger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien koennen absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die fruehere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
 
@@ -764,7 +764,7 @@ Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutation
 {{DIAGRAM:dna-helix}}
 
 Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschliesslich nach **Synapomorphien** -- gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
-- **Aeste** = Evolutionslinien der abstammenden Taxa
+- **Aeste** = Evolutionslinien der abstammenden Taxa (systematische Einheiten wie Art, Gattung, Familie)
 - **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
 - **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
 - **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
@@ -917,7 +917,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ## Bipedie vor Gehirnvergrößerung — Eine wichtige Erkenntnis
 
-Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvierten. Die Fossil-Befunde zeigen jedoch klar: Frühe Homininen wie Australopithecus afarensis (Lucy, 3,2 Mya) gingen bereits aufrecht, hatten aber ein Hirnvolumen von nur ~450 ccm (ähnlich einem Schimpansen). Die Gehirnvergrößerung folgte deutlich später. Warum Bipedie? Mehrere Hypothesen: Freisetzen der Hände für Werkzeuge (aber Werkzeuge kamen viel später), thermoregulatorische Vorteile (aufrechter Gang reduziert Sonneneinstrahlung auf den Körper), effizientere Fortbewegung über lange Strecken in offener Savanne, bessere Übersicht in der Savanne. Wahrscheinlich kombinierten mehrere Selektionsvorteile. Die bipede Anatomie hat auch Nachteile: Beckenerweiterung für Geburt kollidiert mit großem Kopf (Neugeborenenkopf muss gedreht werden), erhöhte Risiken für Rückenschmerzen, Krampfadern, Leistenbrüche.
+Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvierten. Die Fossil-Befunde zeigen jedoch klar: Frühe Homininen (Menschenartige, die Abstammungslinie nach der Trennung von Schimpansen) wie Australopithecus afarensis (Lucy, 3,2 Mya (Million years ago, Millionen Jahre)) gingen bereits aufrecht, hatten aber ein Hirnvolumen von nur ~450 ccm (Kubikzentimeter) (ähnlich einem Schimpansen). Die Gehirnvergrößerung folgte deutlich später. Warum Bipedie? Mehrere Hypothesen: Freisetzen der Hände für Werkzeuge (aber Werkzeuge kamen viel später), thermoregulatorische Vorteile (aufrechter Gang reduziert Sonneneinstrahlung auf den Körper), effizientere Fortbewegung über lange Strecken in offener Savanne, bessere Übersicht in der Savanne. Wahrscheinlich kombinierten mehrere Selektionsvorteile. Die bipede Anatomie hat auch Nachteile: Beckenerweiterung für Geburt kollidiert mit großem Kopf (Neugeborenenkopf muss gedreht werden), erhöhte Risiken für Rückenschmerzen, Krampfadern, Leistenbrüche.
 
 > **Merke:** Bipedie evolvierte vor Gehirnvergrößerung: Australopithecus aufrecht (3,9 Mya), Hirnvolumen erst ab Homo (1,5 Mya) deutlich vergrößert.
 
@@ -927,7 +927,7 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
-**Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
+**Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** (älteste Steinwerkzeugtradition, benannt nach der Olduvai-Schlucht) als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
 
 > **Merke:** H. habilis: ~2,4 Mya; Hirnvolumen ~630 ccm; erster Steinwerkzeugbenutzer (Oldowan-Kultur); erster Vertreter der Gattung Homo.
 
@@ -945,7 +945,7 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
+Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Toll-like-Rezeptoren, Sensoren der angeborenen Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
 
 > **Merke:** Neanderthaler: eigenständige Art, nicht Vorstufe. 1–4% ihrer DNA in modernen Menschen. Svante Pääbo: Paläogenomik, Nobelpreis 2022.
 
@@ -953,7 +953,7 @@ Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sonder
 
 ## Klinischer Bezug
 
-Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.`,
+Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik (Erbgutanalyse ausgestorbener Arten) der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.`,
       lernziele: [
         "Die wichtigsten Homininen (Australopithecus afarensis, H. habilis, H. erectus, H. neanderthalensis, H. sapiens) in chronologische Reihenfolge bringen und ihre Merkmale nennen",
         "Die Out-of-Africa-Theorie und genetische Belege (Neanderthaler-DNA) beschreiben",
@@ -1106,7 +1106,7 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
 1. **Spermatogonium** (2n) teilt sich mitotisch → weitere Spermatogonien und **primäre Spermatozyten** (2n).
 2. **Meiose I:** Primäre Spermatozyte (2n) → zwei **sekundäre Spermatozyten** (n).
 3. **Meiose II:** Jede sekundäre Spermatozyte (n) → zwei **Spermatiden** (n) → insgesamt **vier Spermatiden** aus einer primären Spermatozyte.
-4. **Spermiogenese:** Umwandlung der Spermatiden zu reifen **Spermien** (mit Kopf inkl. Akrosom, Mittelstück mit Mitochondrien, Schwanz/Flagellum). Die Dauer von der Stammzelle bis zum reifen Spermium beträgt etwa **74 Tage**.
+4. **Spermiogenese:** Umwandlung der Spermatiden zu reifen **Spermien** (mit Kopf inkl. Akrosom (Enzymkappe für Eizellpenetration), Mittelstück mit Mitochondrien, Schwanz/Flagellum (Geißel zur Fortbewegung)). Die Dauer von der Stammzelle bis zum reifen Spermium beträgt etwa **74 Tage**.
 
 > **Merke:** Aus einem Spermatogonium entstehen über Meiose I und II **vier reife Spermien** (n). Spermatogenese ist kontinuierlich ab Pubertät, Ort: Tubuli seminiferi (Hoden).
 
@@ -1237,7 +1237,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Ort und zeitliche Einordnung
 
-**Um die Befruchtung einzuordnen,** betrachten wir zuerst **Ort** und **Zeitpunkt**. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität) und ist lebensbedrohlich.
+**Um die Befruchtung einzuordnen,** betrachten wir zuerst **Ort** und **Zeitpunkt**. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
 
 ---
 

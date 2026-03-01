@@ -27,16 +27,16 @@ export const bioKapAnatomieGewebe: Kapitel = {
 
 **Um zu verstehen,** warum Epithelien so unterschiedlich aussehen können, schauen wir zuerst, was **alle** Epithelien gemeinsam haben. Alle Epithelien teilen drei Grundeigenschaften:
 
-1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
+1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium (Zwischengewebe)). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
 
-2. **Basalmembran**: Das Epithelgewebe ist durch die **Basalmembran** mit dem darunterliegenden Bindegewebe verbunden (Kollagen IV, Laminin, Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar. **Prüfungssicher:** Die Verbindung Epithel–Bindegewebe ist die Basalmembran (nicht apikale Fortsätze, nicht Lipid-Doppelschicht, nicht Bürstensaum).
+2. **Basalmembran**: Das Epithelgewebe ist durch die **Basalmembran** mit dem darunterliegenden Bindegewebe verbunden (Kollagen IV, Laminin (Verankerungsprotein), Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar. **Prüfungssicher:** Die Verbindung Epithel–Bindegewebe ist die Basalmembran (nicht apikale Fortsätze, nicht Lipid-Doppelschicht, nicht Bürstensaum).
 
 3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt durch Diffusion aus darunter liegenden Kapillaren. → Hohe Zellerneuerungsrate nötig (Dünndarm alle 3–5 Tage, Haut alle ~2 Wochen)
 
 **Zellkontakte in Epithelien:**
-- **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin.
+- **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin (Transmembranproteine).
 - **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
-- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
+- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine (Kanalproteine)). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
@@ -51,7 +51,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
 | Einschichtiges **Plattenepithel** | Endothel (Blutgefäße), Mesothel (Serosa), Alveolen | Schnelle Diffusion |
 | Einschichtiges **kubisches** Epithel | Schilddrüsenfollikel, Nierentubuli, Gallengänge | Sekretion, Resorption |
 | Einschichtiges **Zylinderepithel** | Dünndarm (Mikrovilli!), Magen, Dickdarm | Resorption, Sekretion |
-| **Mehrreihiges** (pseudo-) Flimmerepithel | Trachea, Bronchien, Eileiter | Mukoziliäre Clearance |
+| **Mehrreihiges** (pseudo-) Flimmerepithel | Trachea, Bronchien, Eileiter | Mukoziliäre Clearance (Schleimtransport durch Flimmerhärchen) |
 | Mehrschichtiges **verhorntes** Plattenepithel | Epidermis (Haut) | Mechanischer Schutz |
 | Mehrschichtiges **unverhorntes** Plattenepithel | Ösophagus, Vagina, Mundhöhle | Schutz, bleibt feucht |
 | **Urothel** (Übergangsepithel) | Harnblase, Ureter | Dehnbarkeit |
@@ -80,9 +80,9 @@ Sekretionsmechanismen exokriner Drüsen:
 | **Apokrin** | Abschnürung des apikalen Zellpols | Laktierende Brustdrüse, apokriner Schweiß (Axilla) |
 | **Holokrin** | Gesamte Zelle zerfällt und wird zum Sekret | **Talgdrüsen** (Glandulae sebaceae) |
 
-**Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
+**Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (schleimbildendes Glykoprotein) (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
 
-**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schlimtransport → chronische Bronchitis, Bronchiektasen, Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
+**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schlimtransport → chronische Bronchitis, Bronchiektasen (dauerhafte Erweiterung der Bronchien), Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
 
 > **Merke:** Merokrin = Exozytose (häufig); apokrin = Zellspitze abgeschnürt; holokrin = ganze Zelle = Sekret (Talgdrüse). Kartagener: Dynein-Defekt → Zilien bewegungslos.`,
       lernziele: [
@@ -219,8 +219,8 @@ Sekretionsmechanismen exokriner Drüsen:
 
 1. **Kollagenfasern** (strukturelle Festigkeit — Zugfestigkeit und Druckresistenz)
 2. **Elastinfasern** (Elastizität, Rückkehr in Ausgangsform)
-3. **Proteoglykane** (Hyaluronsäure, Chondroitinsulfat, Heparansulfat): negativ geladen → binden Wasser → verleihen Druckresistenz. Beispiel: Aggrecan im Knorpel.
-4. **Glykoproteine** (Fibronektin, Laminin): verknüpfen Zellen über **Integrine** mit der Matrix → Zelladhäsion, Wundheilung, Migration
+3. **Proteoglykane** (Hyaluronsäure, Chondroitinsulfat, Heparansulfat): negativ geladen → binden Wasser → verleihen Druckresistenz. Beispiel: Aggrecan (Hauptproteoglykan des Knorpels) im Knorpel.
+4. **Glykoproteine** (Fibronektin, Laminin): verknüpfen Zellen über **Integrine** (Adhäsionsrezeptoren) mit der Matrix → Zelladhäsion, Wundheilung, Migration
 
 **Zellen des Bindegewebes:**
 - **Fibroblasten**: Hauptproduzenten der EZM in lockerem/straffem Bindegewebe
@@ -257,16 +257,16 @@ Sekretionsmechanismen exokriner Drüsen:
 
 | Zelle | Herkunft | Funktion | Marker |
 |---|---|---|---|
-| **Osteoblast** | Mesenchym (Stroma) | Baut Osteoid auf, mineralisiert | ALP ↑, Osteocalcin |
+| **Osteoblast** | Mesenchym (Stroma) | Baut Osteoid (unmineralisierte Knochengrundsubstanz) auf, mineralisiert | ALP (alkalische Phosphatase) ↑, Osteocalcin |
 | **Osteozyten** | Eingemauerter Osteoblast | Mechanorezeption, Signalgebung über Canaliculi | — |
-| **Osteoklasten** | Hämatopoetisch (Monozyten/Makrophagen) | Resorbiert Knochen über HCl (pH ~4,5) + Kathepsin K an Ruffled Border | TRAP ↑ |
+| **Osteoklasten** | Hämatopoetisch (Monozyten/Makrophagen) | Resorbiert Knochen über HCl (pH ~4,5) + Kathepsin K (kollagenabbauendes Enzym) an Ruffled Border (Faltensaum) | TRAP (tartratresistente saure Phosphatase) ↑ |
 
 **Regulation — RANKL/OPG-System:**
 - Osteoblasten sezernieren **RANKL** → bindet an RANK auf Osteoklasten → aktiviert Resorption
 - Osteoblasten sezernieren auch **OPG** (Osteoprotegerin) → fängt RANKL ab → hemmt Osteoklasten
 - **Östrogen** ↑ OPG → weniger Resorption. Östrogenmangel (Menopause) → OPG ↓, RANKL dominiert → **Osteoporose**
 
-**Therapeutisch:** Bisphosphonate (hemmen Osteoklasten, direkt), Denosumab (RANKL-Antikörper).
+**Therapeutisch:** Bisphosphonate (Knochenschwund-Hemmer, hemmen Osteoklasten direkt), Denosumab (RANKL-Antikörper).
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
@@ -280,10 +280,10 @@ Sekretionsmechanismen exokriner Drüsen:
 | Knorpeltyp | Zusammensetzung | Eigenschaften | Vorkommen |
 |---|---|---|---|
 | **Hyalin** | Kollagen II + viel Aggrecan | Druckresistent, glatt | Gelenkflächen, Trachealringe, fetales Skelett |
-| **Faser** | Kollagen I dominiert | Zugfest UND druckresistent | Bandscheiben (Anulus fibrosus), Menisci, Symphysis pubica |
+| **Faser** | Kollagen I dominiert | Zugfest UND druckresistent | Bandscheiben (Anulus fibrosus), Menisci (Gelenkzwischenscheiben), Symphysis pubica (Schambeinfuge) |
 | **Elastisch** | Kollagen II + **Elastinfasern** | Biegsam, kehrt zurück | Ohrmuschel, Epiglottis, Auricula |
 
-**Klinisch:** Arthrose = Degeneration des Hyalinknorpels der Gelenke → da avaskulär, kaum Selbstheilung → Gelenkersatz. Bandscheibenvorfall = Prolaps des Nucleus pulposus (gallertartiger Kern aus Proteoglykanen) durch den Faserknorpel-Anulus.
+**Klinisch:** Arthrose (Gelenkverschleiß) = Degeneration des Hyalinknorpels der Gelenke → da avaskulär, kaum Selbstheilung → Gelenkersatz. Bandscheibenvorfall = Prolaps des Nucleus pulposus (gallertartiger Kern aus Proteoglykanen) durch den Faserknorpel-Anulus.
 
 > **Merke:** Hyalin = Gelenk (Kollagen II). Faser = Bandscheibe/Meniskus (Kollagen I). Elastisch = Ohr/Epiglottis. Alle avaskulär = schlechte Heilung!
 
@@ -295,15 +295,15 @@ Sekretionsmechanismen exokriner Drüsen:
 **Weißes Fettgewebe** (univakuolär):
 - Einzelner großer Lipidtropfen → Zellkern an Rand gedrängt (Siegelringform)
 - Energiespeicher (~80 % des Körperfetts), Schutzpolster (perirenal, retroorbital), Isolation
-- **Endokrines Organ**: sezerniert Adipokine:
+- **Endokrines Organ**: sezerniert Adipokine (Fettgewebshormone):
   - **Leptin** → Sättigungssignal an Hypothalamus (Hunger hemmen)
-  - **Adiponektin** → insulinsensibilisierend, antiinflammatorisch (↓ bei Adipositas!)
+  - **Adiponektin** (Schutzhormon des Fettgewebes) → insulinsensibilisierend, antiinflammatorisch (↓ bei Adipositas!)
   - **TNF-α** → proinflammatorisch (↑ bei Adipositas → chronische Inflammation → Insulinresistenz)
 
 **Braunes Fettgewebe** (multivakuolär):
 - Viele kleine Lipidtropfen + viele Mitochondrien (daher braun)
 - **UCP-1 (Thermogenin)**: Entkoppelt oxidative Phosphorylierung → Protonen fließen zurück ohne ATP zu machen → Energie als **Wärme** (Thermogenese)
-- Wichtig bei Neugeborenen (interscapulär) → nimmt mit Alter ab
+- Wichtig bei Neugeborenen (interscapulär (zwischen den Schulterblättern)) → nimmt mit Alter ab
 
 > **Merke:** Weißes Fett = Energiespeicher + Leptin (endokrin). Braunes Fett = Thermogenese via UCP-1 (entkoppelt Atmungskette).`,
       lernziele: [
@@ -447,7 +447,7 @@ Sekretionsmechanismen exokriner Drüsen:
 | Streifung | Quergestreift | Quergestreift | Keine Sarkomere |
 | Steuerung | **Willkuerlich** | Unwillkuerlich | Unwillkuerlich |
 | Kerne | Mehrkernig (peripher) | **1-2 (zentral)** | Einkernig (zentral) |
-| Kopplung | NMJ (ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
+| Kopplung | NMJ (neuromuskuläre Junktion, ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
 | Ca2+-Schalter | **Troponin C** | **Troponin C** | **Calmodulin -> MLCK** |
 | Tetanus | Moeglich | **Unmoeglich** (lange Refraktaerzeit) | Tonisch moeglich |
 | Biomarker | CK-MM | **Troponin I/T**, CK-MB | -- |

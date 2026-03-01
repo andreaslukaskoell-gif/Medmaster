@@ -92,7 +92,7 @@ An einem Kolben mit kleiner Flaeche A1 wird die Kraft F1 aufgebracht. Da der Dru
 
 Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der grosse Kolben nur 1/10 des Weges (Energieerhaltung: W = F*s = const).
 
-**Klinisch:** Das Pascalsche Prinzip erklaert, warum ein erhoehter intraabdomineller Druck (z. B. bei Aszites) gleichmaessig auf alle umliegenden Organe wirkt und die Zwerchfellbewegung einschraenken kann.
+**Klinisch:** Das Pascalsche Prinzip erklaert, warum ein erhoehter intraabdomineller Druck (Druck im Bauchraum, z. B. bei Aszites, einer Fluessigkeitsansammlung im Bauchraum) gleichmaessig auf alle umliegenden Organe wirkt und die Zwerchfellbewegung einschraenken kann.
 
 > **Merke:** Pascalsches Prinzip: Druck in einer eingeschlossenen Fluessigkeit breitet sich allseitig gleich aus. Hydraulische Presse: Kraftverstaerkung F2 = F1 * (A2/A1), aber s2 = s1 * (A1/A2).
 
@@ -100,13 +100,13 @@ Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der gro
 
 ## Manometer und Blutdruckmessung nach Riva-Rocci
 
-**Um den Druck zu messen,** verwendet man Manometer. In der Medizin ist das **Quecksilber-Manometer** (Sphygmomanometer) nach **Riva-Rocci** historisch bedeutend:
+**Um den Druck zu messen,** verwendet man Manometer. In der Medizin ist das **Quecksilber-Manometer** (Sphygmomanometer, griech. Pulsmesser) nach **Riva-Rocci** historisch bedeutend:
 
-Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria brachialis komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geraeusche** auskultiert:
-- **Systolischer Wert**: erstes hoerbares Klopfen (Blut presst sich durch die Stenose)
+Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geraeusche** (pulssynchrone Stroemungsgeraeusche) auskultiert (abgehoert):
+- **Systolischer Wert**: erstes hoerbares Klopfen (Blut presst sich durch die Stenose, d. h. Gefaessverengung)
 - **Diastolischer Wert**: Verschwinden der Geraeusche (freier Blutfluss)
 
-**Warum Herzhoehe?** Liegt die Manschette 15 cm unter Herzhoehe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbeduertig" ausmachen!
+**Warum Herzhoehe?** Liegt die Manschette 15 cm unter Herzhoehe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Bluthochdruck, Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbeduertig" ausmachen!
 
 > **Merke:** Blutdruckmessung immer auf Herzhoehe! Jeder Zentimeter Abweichung verfaelscht das Ergebnis um ca. 0,8 mmHg (ca. rho_Blut * g * 0,01 m / 133 Pa/mmHg).`,
 
@@ -283,7 +283,7 @@ Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
 
 ## Oberflaechenspannung
 
-**Um das zu verstehen,** muss man die molekularen Kraefte an der Oberflaeche einer Fluessigkeit betrachten. Molekuele im Inneren werden allseitig von Nachbarmolekuelen angezogen (Kohaesionskraefte heben sich auf). An der **Oberflaeche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberflaeche verhaelt sich wie eine **gespannte elastische Haut**.
+**Um das zu verstehen,** muss man die molekularen Kraefte an der Oberflaeche einer Fluessigkeit betrachten. Molekuele im Inneren werden allseitig von Nachbarmolekuelen angezogen (Kohaesionskraefte, d. h. Anziehungskraefte zwischen gleichartigen Molekuelen, heben sich auf). An der **Oberflaeche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberflaeche verhaelt sich wie eine **gespannte elastische Haut**.
 
 Die **Oberflaechenspannung sigma** ist definiert als Kraft pro Laenge entlang einer gedachten Linie auf der Oberflaeche:
 
@@ -295,7 +295,7 @@ Typische Werte:
 - Surfactant-Loesung: sigma ca. 0,025 N/m (stark erniedrigt!)
 
 **Kapillaritaet:** In engen Roehren (Kapillaren) steigt oder sinkt die Fluessigkeit je nach dem Verhaeltnis von Adhaesions- (Fluid-Wand) zu Kohaesionskraeften (Fluid-Fluid):
-- **Adhaesion > Kohaesion** -> konkaver Meniskus -> Fluessigkeit steigt (Wasser in Glasroehre)
+- **Adhaesion > Kohaesion** -> konkaver Meniskus (nach innen gewoelbte Fluessigkeitsoberflaeche) -> Fluessigkeit steigt (Wasser in Glasroehre)
 - **Kohaesion > Adhaesion** -> konvexer Meniskus -> Fluessigkeit sinkt (Quecksilber in Glasroehre)
 
 > **Merke:** Oberflaechenspannung sigma = F/l entsteht durch unausgeglichene Kohaesionskraefte an der Oberflaeche. Kapillaritaet: Adhaesion > Kohaesion -> Steigen; Kohaesion > Adhaesion -> Sinken.
@@ -305,7 +305,7 @@ Typische Werte:
 ## Laplace-Gesetz und Surfactant
 
 
-Fuer eine Kugelblase mit einer Wand (z. B. Alveole):
+Fuer eine Kugelblase mit einer Wand (z. B. Alveole, Lungenblaeschen):
 
 **Delta-p = 2*sigma / r**
 
@@ -317,12 +317,12 @@ Dabei ist:
 **Entscheidende Konsequenz:** Je **kleiner** der Radius r, desto **groesser** der Innendruck Delta-p. Kleine Alveolen haetten ohne Gegenmassnahme einen viel hoeheren Innendruck als grosse -> sie wuerden in die grossen Alveolen "hineinblasen" -> **Kollaps** der kleinen Alveolen (= **Atelektase**).
 
 **Surfactant (Surface Active Agent):**
-Typ-II-Pneumozyten produzieren **Surfactant** -- eine Mischung aus Phospholipiden und Proteinen. Surfactant:
+Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mischung aus Phospholipiden und Proteinen. Surfactant:
 - **senkt die Oberflaechenspannung** an der Luft-Wasser-Grenzflaeche der Alveolen
 - wirkt **radiusabhaengig**: In kleinen Alveolen (Surfactant-Molekuele dichter gepackt) ist sigma staerker reduziert als in grossen -> **Druckausgleich** zwischen verschieden grossen Alveolen
 - verhindert **Atelektase** (Alveolarkollaps)
 
-**Klinisch -- Fruehgeborene:** Ab der ca. 24. SSW beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Fruehgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution ueber den Tubus + CPAP-Beatmung.
+**Klinisch -- Fruehgeborene:** Ab der ca. 24. SSW (Schwangerschaftswoche) beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Fruehgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution ueber den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure, kontinuierlicher Atemwegsuebberdruck).
 
 > **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben hoeheren Innendruck! Surfactant senkt sigma radiusabhaengig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Fruehgeborene: Surfactant-Mangel -> IRDS.`,
 
@@ -529,7 +529,7 @@ Der statische Druck sinkt um ca. **3 mmHg** an der Stenose. Bei staerkerer Steno
 
 **Um das zu verstehen,** betrachten wir zwei grundlegend verschiedene Stroemungsformen:
 
-**Laminare Stroemung:** Die Fluidteilchen bewegen sich in parallelen Schichten (Laminae); die Stroemung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
+**Laminare Stroemung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blaettchen); die Stroemung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
 
 **Turbulente Stroemung:** Die Fluidteilchen bewegen sich chaotisch mit Wirbeln und Fluktuationen. Hoeherer Energieverlust, hoeherer Stroemungswiderstand, **auskultierbare Geraeusche** (Stroemungsgeraeusche, Stenosegeraeusche).
 
@@ -545,7 +545,7 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskositaet.
 | 2300 < Re < 4000 | Uebergangsbereich |
 | Re > 4000 | **turbulent** |
 
-**Klinisch relevant:** Normalerweise ist die Blutstroemung in den meisten Gefaessen **laminar**. Bei Stenosen steigt v -> Re steigt -> Uebergang zu **turbulenter** Stroemung -> **Stroemungsgeraeusche** (z. B. Karotisstenose). Auch bei Anaemie (niedrige Viskositaet eta) steigt Re und kann zu funktionellen Herzgeraeuchen fuehren.
+**Klinisch relevant:** Normalerweise ist die Blutstroemung in den meisten Gefaessen **laminar**. Bei Stenosen steigt v -> Re steigt -> Uebergang zu **turbulenter** Stroemung -> **Stroemungsgeraeusche** (z. B. Karotisstenose). Auch bei Anaemie (Blutarmut, niedrige Viskositaet eta) steigt Re und kann zu funktionellen Herzgeraeuchen fuehren.
 
 > **Merke:** Re = rho*v*d/eta. Re < 2300: laminar (geordnet, parabolisches Profil). Re > 4000: turbulent (chaotisch, Geraeusche). Stenose -> v steigt -> Re steigt -> turbulent -> auskultierbare Geraeusche.
 
@@ -557,13 +557,13 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskositaet.
 - A sinkt -> v steigt (Kontinuitaet)
 - p sinkt an der Engstelle (Bernoulli)
 - Re steigt -> turbulente Stroemung -> **Stenosegeraeusche**
-- Beispiel: Karotisstenose -> Stroemungsgeraeusch ueber der A. carotis
+- Beispiel: Karotisstenose (Verengung der Halsschlagader) -> Stroemungsgeraeusch ueber der A. carotis
 
 **Aneurysma (Aussackung):**
 - A steigt -> v sinkt (Kontinuitaet)
 - p steigt in der Aussackung (Bernoulli)
 - Die Wandspannung sigma = p*r/(2d) steigt mit dem Radius (Laplace!)
-- **Teufelskreis**: Aussackung -> hoeherer Druck -> Wand dehnt sich weiter -> noch groessere Aussackung -> **Ruptur**
+- **Teufelskreis**: Aussackung -> hoeherer Druck -> Wand dehnt sich weiter -> noch groessere Aussackung -> **Ruptur** (Gefaessriss)
 
 > **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geraeusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklaerbar durch Kontinuitaet + Bernoulli.`,
 
@@ -744,8 +744,8 @@ Die **kinematische Viskosität ν** (nü) = η/ρ (Einheit: m²/s) — tritt in 
 **Newtonsches Fluid:** Die Viskosität η ist **konstant** — unabhängig von der Scherrate dv/dy. Die Scherspannung ist linear proportional zur Scherrate. Beispiele: Wasser, Blutplasma, Kochsalzlösung, die meisten Gase.
 
 **Nicht-Newtonsches Fluid:** Die **Viskosität** hängt von der Scherrate ab. Es gibt verschiedene Typen:
-- **Scherverdünnung** (Pseudoplastizität): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
-- **Scherverdickung** (Dilatanz): η steigt bei steigender Scherrate. Beispiel: Maisstärke-Wasser-Gemisch.
+- **Scherverdünnung** (Pseudoplastizität, scheinbare Fliessfaehigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
+- **Scherverdickung** (Dilatanz, Aufweitung unter Belastung): η steigt bei steigender Scherrate. Beispiel: Maisstärke-Wasser-Gemisch.
 - **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze). Beispiel: Zahnpasta.
 
 **Blut als nicht-Newtonsches Fluid:**
@@ -804,7 +804,7 @@ Die Analogie zum Ohmschen Gesetz ist vollständig:
 **Reihen- und Parallelschaltung:** Bei hintereinander geschalteten Gefäßen addieren sich die Widerstände: R_gesamt = R₁ + R₂ + ... Bei parallelen Gefäßen: 1/R_gesamt = 1/R₁ + 1/R₂ + ...
 
 **Klinisch — Totaler peripherer Widerstand (TPR):**
-Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** bestimmt (kleine r → großes R). Vasokonstriktion (r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (r↑) senkt den TPR → Blutdruck sinkt.
+Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** (kleinste Arterien) bestimmt (kleine r → großes R). Vasokonstriktion (Gefaessverengung, r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (r↑) senkt den TPR → Blutdruck sinkt.
 
 > **Merke:** Strömungswiderstand R = 8ηL/(πr⁴) — analog zum Ohmschen Gesetz: Δp = R·Q. Arteriolen bestimmen den TPR. Vasokonstriktion → R↑ → Blutdruck↑.
 

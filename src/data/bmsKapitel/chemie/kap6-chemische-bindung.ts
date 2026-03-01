@@ -27,7 +27,7 @@ export const chemKap6: Kapitel = {
       ],
       content: `## Entstehung der Ionenbindung
 
-Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollstaendige **Elektronenuebertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitaeten und nehmen Elektronen bereitwillig auf. Die Elektronegativitaetsdifferenz (Delta-EN) zwischen den Bindungspartnern betraegt typischerweise > 1,7 auf der Pauling-Skala.
+Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollstaendige **Elektronenuebertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitaeten (Energiegewinn bei Elektronenaufnahme) und nehmen Elektronen bereitwillig auf. Die Elektronegativitaetsdifferenz (Delta-EN) zwischen den Bindungspartnern betraegt typischerweise > 1,7 auf der Pauling-Skala.
 
 **Beispiel NaCl:**
 Na (2-8-1) + Cl (2-8-7) -> Na+ (2-8) + Cl- (2-8-8)
@@ -49,13 +49,13 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 
 Die **Gitterenergie** U ist die Energie, die freigesetzt wird, wenn gasfoermige Ionen zu einem Ionenkristall zusammentreten. Sie ist der entscheidende Energiebeitrag bei der Ionenbindung und kann experimentell nicht direkt gemessen werden. Im Born-Haber-Kreisprozess wird die Bildungsenthalpie einer Ionenverbindung schrittweise aus messbaren Teilenthalpien berechnet:
 
-1. Sublimationsenergie des Metalls (endotherm): Na(s) -> Na(g), Delta-H = +107 kJ/mol
+1. Sublimationsenergie (Energie fuer den Uebergang fest→gasfoermig) des Metalls (endotherm): Na(s) -> Na(g), Delta-H = +107 kJ/mol
 2. Ionisierungsenergie des Metalls (endotherm): Na(g) -> Na+(g) + e-, Delta-H = +496 kJ/mol
 3. Bindungsenergie des Nichtmetalls (endotherm): 1/2 Cl2(g) -> Cl(g), Delta-H = +122 kJ/mol
 4. Elektronenaffinitaet des Nichtmetalls (exotherm): Cl(g) + e- -> Cl-(g), Delta-H = -349 kJ/mol
 5. **Gitterenergie** (stark exotherm): Na+(g) + Cl-(g) -> NaCl(s), Delta-H = -786 kJ/mol
 
-Die Summe aller Teilschritte ergibt die Bildungsenthalpie: Delta-Hf(NaCl) = -411 kJ/mol. Die Gitterenergie dominiert als groesster exothermer Term und macht die Gesamtreaktion thermodynamisch guenstig.
+Die Summe aller Teilschritte ergibt die Bildungsenthalpie (Waermetonung bei Bildung aus den Elementen): Delta-Hf(NaCl) = -411 kJ/mol. Die Gitterenergie dominiert als groesster exothermer Term und macht die Gesamtreaktion thermodynamisch guenstig.
 
 Je kleiner der Ionenradius und je hoeher die Ladung der Ionen, desto groesser die Gitterenergie. Das **Coulombsche Gesetz** beschreibt die elektrostatische Kraft zwischen zwei Punktladungen:
 
@@ -134,7 +134,7 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 **Loeslichkeit in Wasser:** Polare Wassermolekuele umhuellen die Ionen (Hydratation/Solvatation). Die **Hydratationsenthalpie** muss die Gitterenergie ueberwiegen, damit sich die Verbindung loest. NaCl: Gitterenergie 786 kJ/mol, Hydratationsenthalpie 783 kJ/mol -> loeslich (leicht endotherm, wird durch Entropiegewinn der frei werdenden Ionen kompensiert). MgO: kaum loeslich (sehr hohe Gitterenergie uebersteigt Hydratationsenthalpie bei Weitem).
 
-**Elektrische Leitfaehigkeit:** Ionenkristalle leiten im Festzustand **nicht** (Ionen fixiert). Im geschmolzenen Zustand oder in waessriger Loesung bewegen sich Ionen frei -> Elektrolyte leiten Strom. Man unterscheidet starke Elektrolyte (vollstaendige Dissoziation, z. B. NaCl, HCl) und schwache Elektrolyte (teilweise Dissoziation, z. B. CH3COOH). Wichtig fuer Biologie: Koerperfluessigkeiten sind Elektrolytloesungen.
+**Elektrische Leitfaehigkeit:** Ionenkristalle leiten im Festzustand **nicht** (Ionen fixiert). Im geschmolzenen Zustand oder in waessriger Loesung bewegen sich Ionen frei -> Elektrolyte leiten Strom. Man unterscheidet starke Elektrolyte (vollstaendige Dissoziation/Zerfall in Ionen, z. B. NaCl, HCl) und schwache Elektrolyte (teilweise Dissoziation, z. B. CH3COOH). Wichtig fuer Biologie: Koerperfluessigkeiten sind Elektrolytloesungen.
 
 **Loeslichkeitsregeln fuer Ionenverbindungen (pruefungsrelevant):**
 
@@ -409,11 +409,11 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
-Lewis-Schreibweise: Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
+Lewis-Schreibweise (Darstellung der Valenzelektronen als Punkte/Striche): Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
 
 **Ausnahmen von der Oktettregel:**
 - **H, He:** Duett-Regel (nur 2 Elektronen nötig, 1s-Orbital)
-- **Be, B:** Elektronenmangel-Verbindungen (BeCl₂: 4 VE, BF₃: 6 VE → Lewis-Säuren, reagieren gerne mit Elektronenpaardonoren)
+- **Be, B:** Elektronenmangel-Verbindungen (BeCl₂: 4 VE, BF₃: 6 VE → Lewis-Säuren/Elektronenpaarakzeptoren, reagieren gerne mit Elektronenpaardonoren)
 - **Elemente der 3. Periode und höher:** Können die Oktett-Regel überschreiten (d-Orbitale verfügbar): PCl₅ (10 VE), SF₆ (12 VE)
 - **Radikale:** Ungerade Elektronenzahl → ein ungepaartes Elektron (NO, NO₂) → besonders reaktiv
 
@@ -483,7 +483,7 @@ Die **Stärke der π-Bindung** lässt sich aus der Differenz berechnen: Energie 
 
 > **Merke:** Die EN steigt im PSE nach rechts oben (Fluor = Maximum 4,0). Metalle links unten geben Elektronen ab (niedrige EN), Nichtmetalle rechts oben ziehen Elektronen an (hohe EN). Der Übergang von kovalent zu ionisch ist fließend — die ΔEN-Grenzen sind Richtwerte, keine scharfen Grenzen.
 
-Bei polaren kovalenten Bindungen sind die Elektronen zum elektronegativeren Atom hin verschoben → **Partialladungen** (δ+ und δ−) → **Dipolmoment** μ = q · d (in Debye, D). Die C–H-Bindung (ΔEN = 0,4) gilt als nahezu unpolar, weshalb Kohlenwasserstoffe hydrophob sind.
+Bei polaren kovalenten Bindungen sind die Elektronen zum elektronegativeren Atom hin verschoben → **Partialladungen** (δ+ und δ−) → **Dipolmoment** (Mass fuer die Ladungstrennung im Molekuel) μ = q · d (in Debye, D). Die C–H-Bindung (ΔEN = 0,4) gilt als nahezu unpolar, weshalb Kohlenwasserstoffe hydrophob sind.
 
 **Dipolmoment μ:** Produkt aus Ladung (q) und Abstand (d). Einheit: Debye (D), wobei 1 D = 3,336 × 10⁻³⁰ C·m. Polare Bindungen mit großem ΔEN und großem Bindungsabstand haben große Dipolmomente. Das Gesamtdipolmoment eines Moleküls ist die Vektorsumme aller Bindungsdipole — entscheidend ist die Geometrie (siehe Molekülpolarität).
 
@@ -632,7 +632,7 @@ Bindungsstärken: C–C (347 kJ/mol, 154 pm) < C=C (614 kJ/mol, 134 pm) < C≡C 
 
 ## Resonanz und mesomere Grenzstrukturen
 
-Bisher haben wir gesehen, dass σ-Bindungen die freie Rotation erlauben und π-Bindungen sie verhindern. Doch manche Moleküle lassen sich nicht durch eine einzige Lewis-Struktur beschreiben — die π-Elektronen sind über mehrere Atome **delokalisiert**. Der tatsächliche Zustand ist ein **Resonanzhybrid** (Mischung aller Grenzstrukturen). Die Grenzstrukturen sind nur Hilfskonstruktionen — das reale Molekül hat Eigenschaften, die zwischen allen Grenzstrukturen liegen.
+Bisher haben wir gesehen, dass σ-Bindungen die freie Rotation erlauben und π-Bindungen sie verhindern. Doch manche Moleküle lassen sich nicht durch eine einzige Lewis-Struktur beschreiben — die π-Elektronen sind über mehrere Atome **delokalisiert**. Der tatsächliche Zustand ist ein **Resonanzhybrid** (Mittelzustand aller Grenzstrukturen). Die Grenzstrukturen sind nur Hilfskonstruktionen — das reale Molekül hat Eigenschaften, die zwischen allen Grenzstrukturen liegen.
 
 **Regeln für Resonanzstrukturen:**
 1. Nur π-Elektronen und freie Elektronenpaare werden verschoben — σ-Gerüst bleibt unverändert
@@ -653,7 +653,7 @@ Bisher haben wir gesehen, dass σ-Bindungen die freie Rotation erlauben und π-B
 - **Ozon (O₃):** Gewinkelt, 2 äquivalente O–O-Bindungen (Bindungsordnung 1,5). Resonanz zwischen zwei Grenzstrukturen mit alternierenden Einfach-/Doppelbindungen.
 
 **Aromatizität — Sonderfall der Resonanz:**
-Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** erfüllt: zyklisch, planar, konjugiert, mit **4n+2 π-Elektronen** (n = 0, 1, 2, ...). Benzol: 6 π-Elektronen (n = 1) → aromatisch. Cyclooctatetraen (C₈H₈): 8 π-Elektronen → antiaromatisch (4n, instabil), daher nicht planar. Biologisch aromatisch: Purine (A, G), Pyrimidine (C, T, U), Tryptophan, Phenylalanin, Tyrosin, Histidin.
+Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (Kriterium fuer Aromatizitaet) erfüllt: zyklisch, planar, konjugiert, mit **4n+2 π-Elektronen** (n = 0, 1, 2, ...). Benzol: 6 π-Elektronen (n = 1) → aromatisch. Cyclooctatetraen (C₈H₈): 8 π-Elektronen → antiaromatisch (4n, instabil), daher nicht planar. Biologisch aromatisch: Purine (A, G), Pyrimidine (C, T, U), Tryptophan, Phenylalanin, Tyrosin, Histidin.
 
 > **Merke:** Resonanzstrukturen (z. B. Benzol, Peptidbindung) sind nicht real existierend — der tatsächliche Zustand ist ein Hybrid. Delokalisierung = Stabilisierung. Benzol reagiert deshalb lieber durch Substitution als Addition. Aromatizität (Hückel: 4n+2 π-Elektronen) ist der stärkste Stabilisierungseffekt durch Resonanz.`,
 
@@ -997,7 +997,7 @@ Entscheidend: Beim **Verdampfen** von Wasser werden nur die intermolekularen H-B
 4. Diese Fluktuation wiederholt sich ständig → im Mittel eine schwache, aber stets vorhandene Anziehung
 
 Einflussfaktoren:
-- **Polarisierbarkeit:** Größere Atome/Moleküle mit mehr Elektronen sind stärker polarisierbar → stärkere Dispersionskräfte. Beispiel: He siedet bei −269 °C, Xe bei −108 °C (mehr Elektronen). Iod (I₂) ist bei Raumtemperatur ein Feststoff — die hohe Polarisierbarkeit der 106 Elektronen erzeugt starke London-Kräfte.
+- **Polarisierbarkeit** (Verformbarkeit der Elektronenwolke durch aeussere Felder)**:** Größere Atome/Moleküle mit mehr Elektronen sind stärker polarisierbar → stärkere Dispersionskräfte. Beispiel: He siedet bei −269 °C, Xe bei −108 °C (mehr Elektronen). Iod (I₂) ist bei Raumtemperatur ein Feststoff — die hohe Polarisierbarkeit der 106 Elektronen erzeugt starke London-Kräfte.
 - **Kontaktfläche:** Längerkettige, unverzweigte Moleküle haben größere Kontaktfläche → stärkere Wechselwirkung (n-Pentan siedet bei 36 °C; Neopentan bei 9,5 °C trotz gleicher Summenformel C₅H₁₂).
 - **Abstandsabhängigkeit:** London-Kräfte fallen mit r⁻⁶ ab — sie wirken nur auf sehr kurze Distanzen (< 500 pm).
 
@@ -1053,7 +1053,7 @@ Bisher haben wir gesehen, dass London-Kräfte zwischen allen Molekülen wirken �
 
 > **Merke:** Dipol-Dipol-Kräfte wirken zusätzlich zu London-Kräften bei polaren Molekülen. Je größer das permanente Dipolmoment und je niedriger die Temperatur, desto stärker ist die Wechselwirkung. Für unpolare Moleküle spielen sie keine Rolle — dort dominieren ausschließlich London-Kräfte.
 
-Ein Spezialfall ist die **Keesom-Wechselwirkung** (permanenter Dipol–permanenter Dipol) und die **Debye-Wechselwirkung** (permanenter Dipol–induzierter Dipol). Alle drei Beiträge (London + Keesom + Debye) werden zusammen als **Van-der-Waals-Kräfte** bezeichnet, wobei London-Kräfte fast immer den größten Anteil ausmachen.
+Ein Spezialfall ist die **Keesom-Wechselwirkung** (Anziehung zwischen zwei permanenten Dipolen) und die **Debye-Wechselwirkung** (permanenter Dipol erzeugt induzierten Dipol im Nachbarmolekuel). Alle drei Beiträge (London + Keesom + Debye) werden zusammen als **Van-der-Waals-Kräfte** bezeichnet, wobei London-Kräfte fast immer den größten Anteil ausmachen.
 
 | Van-der-Waals-Typ | Beteiligte Dipole | Stärke | Beispiel |
 |---|---|---|---|
@@ -1194,10 +1194,10 @@ Die Anomalie ist bei H₂O am größten (4 H-Brücken pro Molekül), bei HF eben
 **Weitere biologische Beispiele für H-Brücken:**
 - **Cellulose-Mikrofibrillen:** Hunderte paralleler β-1,4-Glucanketten, verknüpft durch O–H···O-Brücken → enorme Zugfestigkeit (stärker als Stahl bezogen auf die Dichte). Baumwolle, Holz, Papier — alles H-Brücken-basiert.
 - **Kohlenhydrat-Erkennung:** Lektine (Zucker-bindende Proteine) erkennen spezifische Kohlenhydrate an Zelloberflächen über H-Brücken → Immunabwehr, Blutgruppenbestimmung (Anti-A/B-Antikörper), Infektionsprozesse (Bakterien-Lektine binden an Darm-Glykoproteine).
-- **Wasser-Kanal Aquaporin:** Selektiv permeabel für H₂O, aber nicht für H₃O⁺ (Hydronium). Mechanismus: Die H-Brücken-Kette wird im Inneren des Kanals unterbrochen — Wasser passiert einzeln, Protonen können die H-Brücken-Kette nicht durchlaufen (Grotthuss-Mechanismus blockiert).
+- **Wasser-Kanal Aquaporin:** Selektiv permeabel für H₂O, aber nicht für H₃O⁺ (Hydronium). Mechanismus: Die H-Brücken-Kette wird im Inneren des Kanals unterbrochen — Wasser passiert einzeln, Protonen können die H-Brücken-Kette nicht durchlaufen (Grotthuss-Mechanismus/Protonenweitergabe ueber H-Bruecken-Ketten blockiert).
 - **Anästhesie:** Inhalationsanästhetika (Sevofluran, Desfluran) wirken u. a. durch Störung von H-Brücken an GABA-Rezeptoren und Ionenkanälen → veränderte Protein-Konformation → Bewusstlosigkeit.
 
-**Pharmaka:** H-Brücken-Donoren und -Akzeptoren sind entscheidend für Lipinski's Rule of Five (Bioverfügbarkeit): ≤5 HBD, ≤10 HBA. Zu viele H-Brücken-Gruppen → schlechte Membranpermeabilität.
+**Pharmaka:** H-Brücken-Donoren und -Akzeptoren sind entscheidend für Lipinski's Rule of Five (Faustregeln fuer orale Bioverfuegbarkeit von Arzneistoffen): ≤5 HBD, ≤10 HBA. Zu viele H-Brücken-Gruppen → schlechte Membranpermeabilität.
 
 **Tabellarischer Überblick: H-Brücken in biologischen Systemen:**
 
@@ -1296,7 +1296,7 @@ Bei **Metallen** überlappen Valenz- und Leitungsband → Elektronen können ohn
 
 ### Supraleitung und besondere Metallphänomene (Vertiefung)
 
-Einige Metalle zeigen bei sehr niedrigen Temperaturen **Supraleitung**: Der elektrische Widerstand sinkt schlagartig auf exakt null (z. B. Quecksilber unter 4,2 K, Niob unter 9,3 K). Im supraleitenden Zustand bilden Elektronen Cooper-Paare, die sich widerstandsfrei durch das Gitter bewegen. Medizinisch relevant: Supraleitende Magnete in **MRT-Geräten** (NbTi-Legierungen bei 4 K → extrem starke, homogene Magnetfelder von 1,5–7 Tesla). Die Kühlung erfolgt mit flüssigem Helium (4,2 K).
+Einige Metalle zeigen bei sehr niedrigen Temperaturen **Supraleitung**: Der elektrische Widerstand sinkt schlagartig auf exakt null (z. B. Quecksilber unter 4,2 K, Niob unter 9,3 K). Im supraleitenden Zustand bilden Elektronen Cooper-Paare (gekoppelte Elektronenpaare mit entgegengesetztem Spin), die sich widerstandsfrei durch das Gitter bewegen. Medizinisch relevant: Supraleitende Magnete in **MRT-Geräten** (NbTi-Legierungen bei 4 K → extrem starke, homogene Magnetfelder von 1,5–7 Tesla). Die Kühlung erfolgt mit flüssigem Helium (4,2 K).
 
 **Halbleiter in der Medizintechnik:**
 - **Photodioden** (Si, Ge): Detektoren in CT-Scannern, Röntgengeräten, Pulsoximetern

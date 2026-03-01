@@ -64,10 +64,10 @@ Beispiel: 2 H₂O₂ → 2 H₂O + O₂ (Abbau von Wasserstoffperoxid durch Kata
 Klinisch: Katalase-Mangel (Akatalasämie) führt zu Gewebeschäden durch H₂O₂-Akkumulation — besonders in der Mundschleimhaut.
 
 **3. Substitutionsreaktion:** Ein Atom oder eine Gruppe ersetzt ein anderes Atom oder eine andere Gruppe.
-- **Nukleophile Substitution (Sₙ):** Ein Nukleophil (elektronenreicher Angreifer) ersetzt eine Abgangsgruppe. Beispiel: CH₃Br + OH⁻ → CH₃OH + Br⁻
+- **Nukleophile Substitution (Sₙ):** Ein Nukleophil (elektronenreicher Angreifer) ersetzt eine Abgangsgruppe (die austretende Gruppe). Beispiel: CH₃Br + OH⁻ → CH₃OH + Br⁻
 - **Elektrophile Substitution:** Typisch für Aromaten (z. B. Nitrierung von Benzol)
-- **Radikalische Substitution:** Über Radikale (z. B. Halogenierung von Alkanen: CH₄ + Cl₂ → CH₃Cl + HCl)
-Biologisch: Enzymatische Transaminierungen (ALT, AST); Methylierungsreaktionen (SAM als Methylgruppendonor)
+- **Radikalische Substitution:** Über Radikale (Teilchen mit ungepaarten Elektronen), z. B. Halogenierung von Alkanen: CH₄ + Cl₂ → CH₃Cl + HCl)
+Biologisch: Enzymatische Transaminierungen (ALT, AST); Methylierungsreaktionen (SAM, S-Adenosylmethionin, als Methylgruppendonor)
 
 **4. Metathese (Doppelumsatz / Doppelsubstitution):** Zwei Verbindungen tauschen Partner.
 Allgemein: AB + CD → AD + CB
@@ -94,8 +94,8 @@ Biologisch: Die Atmungskette ist eine Kaskade von Redoxreaktionen, bei der Elekt
 
 <!-- DIAGRAM:ionic-bond -->
 
-**Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat). Die Löslichkeit wird durch das **Löslichkeitsprodukt K_sp** beschrieben: Ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
-Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn bei Hyperoxalurie), Röntgenkontrastmittel (BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺), Gichtanfälle (Harnsäurekristall-Fällung in Gelenken).
+**Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat, ausgefallener Feststoff). Die Löslichkeit wird durch das **Löslichkeitsprodukt K_sp** beschrieben: Ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
+Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn bei Hyperoxalurie, erhöhter Oxalatausscheidung), Röntgenkontrastmittel (BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺), Gichtanfälle (Harnsäurekristall-Fällung in Gelenken).
 
 ## Katalyse
 
@@ -103,7 +103,7 @@ Ein **Katalysator** erhöht die Reaktionsgeschwindigkeit, indem er die Aktivieru
 
 - **Homogene Katalyse:** Katalysator und Reaktanten in derselben Phase (z. B. H⁺ als Katalysator in wässriger Lösung; NO bei der Ozonzerstörung in der Stratosphäre).
 - **Heterogene Katalyse:** Unterschiedliche Phasen — meist Feststoffkatalysator, gasförmige/flüssige Reaktanten (z. B. Platin im Autokatalysator; Eisen beim Haber-Bosch-Verfahren: N₂ + 3 H₂ → 2 NH₃ bei 400–500 °C, 150–300 bar).
-- **Enzymkatalyse:** Hochspezifische biologische Katalyse durch Proteine. Enzyme senken die Aktivierungsenergie durch Ausbildung eines Enzym-Substrat-Komplexes im aktiven Zentrum (Schlüssel-Schloss- bzw. induced-fit-Modell). Beschleunigung: Faktor 10⁶–10¹². Coenzyme (z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
+- **Enzymkatalyse:** Hochspezifische biologische Katalyse durch Proteine. Enzyme senken die Aktivierungsenergie durch Ausbildung eines Enzym-Substrat-Komplexes im aktiven Zentrum (Schlüssel-Schloss- bzw. induced-fit-Modell). Beschleunigung: Faktor 10⁶–10¹². Coenzyme (nicht-proteinartige Enzymhelfer, z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
 
 > **Merke:** Katalysatoren beschleunigen Hin- UND Rückreaktion gleichermaßen. Sie verschieben das Gleichgewicht nicht, sondern verkürzen nur die Zeit bis zur Einstellung.
 
@@ -346,7 +346,7 @@ Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen 
 
 **v = Δ[Produkt] / Δt = −Δ[Edukt] / Δt** [mol·L⁻¹·s⁻¹]
 
-Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
+Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Steigung der Sekante) (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
 <!-- DIAGRAM:thermodynamics -->
 
@@ -371,8 +371,8 @@ Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
 | 1. | v = k·[A] | exponentiell | ln 2/k | s⁻¹ | Radioakt. Zerfall |
 | 2. | v = k·[A]² | hyperbolisch | 1/(k·[A]₀) | L·mol⁻¹·s⁻¹ | 2 NO₂ → 2 NO + O₂ |
 
-- **0. Ordnung (v = k):** v konzentrationsunabhängig. [A] sinkt linear. Halbwertszeit t₁/₂ = [A]₀/(2k) — konzentrationsabhängig. Beispiel: Ethanol-Abbau in der Leber (~0,1–0,15 ‰/h, enzymgesättigt durch ADH/ALDH).
-- **1. Ordnung (v = k · [A]):** Verdopplung von [A] verdoppelt v. [A] = [A]₀ · e^(−kt), sinkt exponentiell. t₁/₂ = ln 2/k ≈ 0,693/k ist konzentrationsunabhängig. Beispiel: radioaktiver Zerfall, Pharmakokinetik.
+- **0. Ordnung (v = k):** v konzentrationsunabhängig. [A] sinkt linear. Halbwertszeit t₁/₂ = [A]₀/(2k) — konzentrationsabhängig. Beispiel: Ethanol-Abbau in der Leber (~0,1–0,15 ‰/h, enzymgesättigt durch ADH/ALDH, Alkohol-/Aldehyddehydrogenase).
+- **1. Ordnung (v = k · [A]):** Verdopplung von [A] verdoppelt v. [A] = [A]₀ · e^(−kt), sinkt exponentiell. t₁/₂ = ln 2/k ≈ 0,693/k ist konzentrationsunabhängig. Beispiel: radioaktiver Zerfall, Pharmakokinetik (Lehre vom Arzneimittelabbau im Körper).
 - **2. Ordnung (v = k · [A]²):** Verdopplung von [A] vervierfacht v. t₁/₂ = 1/(k·[A]₀) — konzentrationsabhängig.
 
 **Rechenbeispiel — Halbwertszeit 1. Ordnung:**
@@ -382,7 +382,7 @@ Medikament mit k = 0,0693 h⁻¹. t₁/₂ = 0,693 / 0,0693 = 10 h. Nach 10 h: 5
 
 **1. Konzentration:** Höhere Konzentration → mehr Kollisionen pro Zeiteinheit → höheres v (gilt nicht für 0. Ordnung). Grundlage: Stoßtheorie — nur wirksame Zusammenstöße (Energie ≥ E_A + richtige Orientierung) führen zur Reaktion.
 
-**2. Temperatur (RGT-Regel):** Erhöhung um 10 °C verdoppelt bis verdreifacht v (Q₁₀ = 2–3). Begründung: Maxwell-Boltzmann-Verteilung verschiebt sich — mehr Moleküle überschreiten E_A. Bei Enzymen gilt dies nur bis zur Denaturierungstemperatur (~42 °C beim Menschen).
+**2. Temperatur (RGT-Regel):** Erhöhung um 10 °C verdoppelt bis verdreifacht v (Q₁₀ = 2–3). Begründung: Maxwell-Boltzmann-Verteilung (Geschwindigkeitsverteilung der Teilchen) verschiebt sich — mehr Moleküle überschreiten E_A. Bei Enzymen gilt dies nur bis zur Denaturierungstemperatur (~42 °C beim Menschen).
 
 **Rechenbeispiel — RGT:** v₂₀°C = 2 mmol/s, Q₁₀ = 2,5. Bei 40 °C (+20 °C): v = 2 × 2,5² = 12,5 mmol/s — über 6× schneller.
 
@@ -394,7 +394,7 @@ k = A · e^(−E_A / RT)
 - Katalysatoren senken E_A → k steigt exponentiell → Reaktion wird schneller.
 - E_A ist die Differenz zwischen Eduktniveau und Übergangszustand — nicht identisch mit ΔH!
 
-**4. Oberfläche:** Bei heterogenen Reaktionen: Größere Kontaktfläche → höheres v. Fein pulverisierte Feststoffe reagieren deutlich schneller (Staubexplosionen). Klinisch: Mikronisierung von Tabletten erhöht die Bioverfügbarkeit schlecht löslicher Wirkstoffe.
+**4. Oberfläche:** Bei heterogenen Reaktionen: Größere Kontaktfläche → höheres v. Fein pulverisierte Feststoffe reagieren deutlich schneller (Staubexplosionen). Klinisch: Mikronisierung (Zerkleinerung in Mikropartikel) von Tabletten erhöht die Bioverfügbarkeit (Anteil des Wirkstoffs, der ins Blut gelangt) schlecht löslicher Wirkstoffe.
 
 **5. Lösungsmittel und Ionenstärke:** Beeinflussen die effektive Konzentration und Aktivität der Reaktanten. Höhere Ionenstärke kann beschleunigend oder hemmend wirken je nach Ladung der Reaktanten.
 
@@ -418,7 +418,7 @@ Für Enzymreaktionen gilt eine spezielle Kinetik:
 |---|---|---|---|---|
 | Kompetitiv | ↑ | gleich | ja (↑[S]) | Methotrexat/DHFR |
 | Nicht-kompetitiv | gleich | ↓ | nein | Schwermetalle (Pb²⁺) |
-| Unkompetitiv | ↓ | ↓ | nein | Lithium/IMPase |
+| Unkompetitiv | ↓ | ↓ | nein | Lithium/IMPase (Inositolmonophosphatase) |
 
 ## Halbwertszeit und Pharmaka
 

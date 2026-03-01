@@ -38,7 +38,7 @@ Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Mater
 
 Die kleinste frei vorkommende Ladung ist die **Elementarladung** e = 1,602 × 10⁻¹⁹ C. Alle beobachtbaren Ladungen sind ganzzahlige Vielfache davon — dieses Prinzip nennt man **Ladungsquantisierung**. Die SI-Einheit der Ladung ist das **Coulomb (C)**; 1 C entspricht der Ladung von ca. 6,24 × 10¹⁸ Elektronen. Das **Ladungserhaltungsgesetz** besagt: In einem abgeschlossenen System bleibt die Gesamtladung konstant. Ladung kann weder erzeugt noch vernichtet, sondern nur getrennt oder übertragen werden.
 
-Körper werden durch **Reibung** (Triboelektrizität), **Influenz** (Ladungsverschiebung ohne Kontakt) oder **Kontakt** mit geladenen Körpern elektrisiert. Bei der Influenz wird ein leitender Körper in ein externes Feld gebracht; freie Elektronen verschieben sich, sodass eine Seite negativ und die andere positiv wird — ohne dass Ladung übertragen wird.
+Körper werden durch **Reibung** (Triboelektrizität, Aufladung durch Reibungskontakt), **Influenz** (Ladungsverschiebung ohne Kontakt) oder **Kontakt** mit geladenen Körpern elektrisiert. Bei der Influenz wird ein leitender Körper in ein externes Feld gebracht; freie Elektronen verschieben sich, sodass eine Seite negativ und die andere positiv wird — ohne dass Ladung übertragen wird.
 
 > **Merke:** Ladung ist immer quantisiert (ganzzahlige Vielfache von e) und in abgeschlossenen Systemen erhalten — zwei Grundprinzipien der Elektrostatik.
 
@@ -334,7 +334,7 @@ Die elektrische Leistung:
 
 **Formelklartext:** P = U·I = **Leistung** (Energie pro Zeit) im Stromkreis. Äquivalent: P = I²·R (wenn I und R bekannt) oder P = U²/R (wenn U und R bekannt). **Joulesche Wärme** Q = P·t = I²·R·t — der Widerstand erwärmt sich. **Einheiten:** [P] = W = J/s = V·A. **MedAT-Falle:** Gefährlich ist die **Stromstärke** (ab ~100 mA Kammerflimmern), nicht allein die Spannung; I = U/R — nasse Haut (R klein) → großer I bei gleicher U.
 
-Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²·R. Dieser Effekt wird genutzt in Heizkörpern und Glühlampen — und ist in medizinischen Anwendungen relevant: Elektrochirurgie (HF-Strom → lokale Wärme → Gewebeschnitt/Koagulation), Ablationstherapie bei Herzrhythmusstörungen, Diathermie.
+Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²·R. Dieser Effekt wird genutzt in Heizkörpern und Glühlampen — und ist in medizinischen Anwendungen relevant: Elektrochirurgie (HF-Strom → lokale Wärme → Gewebeschnitt/Koagulation), Ablationstherapie (gezielte Gewebeverödung) bei Herzrhythmusstörungen, Diathermie (therapeutische Tiefenerwärmung).
 
 > **Merke:** P = U·I = I²·R = U²/R. Die Joulesche Wärme Q = I²·R·t ist Grundlage der Elektrochirurgie und Ablationstherapie.
 
@@ -561,7 +561,7 @@ In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente i
 - Spannung an allen Widerständen gleich: U₁ = U₂ = ... = U
 - Stromaufteilung: I₁ = U/R₁, I₂ = U/R₂
 
-Biologische Zellmembranen sind elektrisch äquivalent zu einem **RC-Parallelglied**: Die Lipiddoppelschicht wirkt als Kondensator C_m (lädt/entlädt sich bei Spannungsänderungen), die Ionenkanäle als variable Widerstände R_m (genauer: Leitfähigkeiten). Das Hodgkin-Huxley-Modell formalisiert dies als Schaltkreis mit spannungsgesteuerten Leitfähigkeiten für Na⁺, K⁺ und Leckstrom.
+Biologische Zellmembranen sind elektrisch äquivalent zu einem **RC-Parallelglied**: Die Lipiddoppelschicht wirkt als Kondensator C_m (lädt/entlädt sich bei Spannungsänderungen), die Ionenkanäle als variable Widerstände R_m (genauer: Leitfähigkeiten). Das Hodgkin-Huxley-Modell (mathematische Beschreibung der Erregungsleitung) formalisiert dies als Schaltkreis mit spannungsgesteuerten Leitfähigkeiten für Na⁺, K⁺ und Leckstrom.
 
 ## Die Kirchhoffschen Gesetze
 
@@ -840,7 +840,7 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 
 
 
-**MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
+**MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession (Kreiselbewegung der Spins um B₀) induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
 
 ## Rechenbeispiele
 
@@ -854,7 +854,7 @@ Bei 7 T: f_L = 42,58 × 7 = **298,06 MHz** — höheres SNR, aber stärkere HF-A
 Zyklotron B = 1,2 T, Austrittsradius r = 0,4 m. Protonengeschwindigkeit: v = q·B·r/m = (1,6×10⁻¹⁹ · 1,2 · 0,4) / 1,67×10⁻²⁷ = 7,68×10⁻²⁰ / 1,67×10⁻²⁷ ≈ **4,6×10⁷ m/s** (≈ 15 % c).
 Kinetische Energie: E_kin = ½mv² = ½ · 1,67×10⁻²⁷ · (4,6×10⁷)² ≈ 1,77×10⁻¹² J ≈ **11 MeV** — ausreichend für ¹⁸O(p,n)¹⁸F-Reaktion (Schwelle ~2,6 MeV).
 
-**Beispiel 3 — TMS: induzierte Feldstärke im Kortex:**
+**Beispiel 3 — TMS (transkranielle Magnetstimulation): induzierte Feldstärke im Kortex:**
 TMS-Spule erzeugt dB/dt = 10⁴ T/s über einer Fläche A ≈ 25 cm² = 25×10⁻⁴ m².
 Induzierte EMK (einzelne Windung): |ε| = A · dB/dt = 25×10⁻⁴ · 10⁴ = **25 V**.
 Induzierte Feldstärke im Gewebe (Radius ~2 cm): E ≈ ε/(2π·r) = 25/(2π·0,02) ≈ **200 V/m**.
@@ -1594,7 +1594,7 @@ Beispiel: f_ob = 1000 mm, f_ok = 25 mm → M = 40x. Das erzeugte Bild ist umgeke
 Das Endoskop ist das wichtigste minimal-invasive optische Instrument in der Medizin. Es kombiniert:
 
 1. **Lichtleitung**: Glasfaserbündel leiten weißes LED- oder Xenon-Licht (Kaltlicht) zum Untersuchungsort ohne thermische Gewebelast.
-2. **Bildübertragung**: Früher durch kohärente Glasfaserbündel (Faseroptik), heute fast ausschließlich durch CCD/CMOS-Chip am distalen Ende (Videoendoskop).
+2. **Bildübertragung**: Früher durch kohärente Glasfaserbündel (Faseroptik), heute fast ausschließlich durch CCD/CMOS-Chip (digitale Bildsensoren) am distalen Ende (Videoendoskop).
 3. **Arbeitskanal**: Für Biopsiezangen, Polypektomieschlingen, Laser.
 4. **Spülung und Absaugung**: Für klares Sichtfeld.
 
@@ -1602,7 +1602,7 @@ Das distale Ende ist biegbar (Steuerdraht-Mechanismus), sodass Windungen im Gast
 - **Gastroskopie**: Speiseröhre, Magen, Duodenum
 - **Koloskopie**: Dickdarm (Polyp-Screening)
 - **Bronchoskopie**: Bronchien (Biopsie, Lavage)
-- **Laparoskopie**: Bauchhöhle (minimalinvasive Chirurgie)
+- **Laparoskopie** (Bauchspiegelung): Bauchhöhle (minimalinvasive Chirurgie)
 - **Zystoskopie**: Blase
 
 ## Ophthalmoskop und Spaltlampe
@@ -1811,7 +1811,7 @@ Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt be
 **Akkommodation** ist die Fähigkeit des Auges, durch Änderung der Linsenkrümmung auf unterschiedliche Entfernungen scharf zu stellen.
 
 **Mechanismus:**
-1. Ferne Objekte: Ziliarmuskel **entspannt** → Zonulafasern spannen die Linse flach → geringe Brechkraft (~60 dpt) → Fernpunkt liegt im Unendlichen.
+1. Ferne Objekte: Ziliarmuskel **entspannt** → Zonulafasern (Aufhängebänder der Linse) spannen die Linse flach → geringe Brechkraft (~60 dpt) → Fernpunkt liegt im Unendlichen.
 2. Nahe Objekte: Ziliarmuskel **kontrahiert** → Zonulafasern erschlaffen → Linse wölbt sich durch Eigenelastizität → höhere Brechkraft (~70 dpt) → Nahpunkt ca. 10 cm (junges Auge).
 
 **Akkommodationsbreite** = Differenz zwischen maximaler und minimaler Brechkraft des Auges. Mit dem Alter nimmt die Linsenelastizität ab (Presbyopie).
@@ -1913,7 +1913,7 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
         },
         {
           heading: "LASIK und Glaukom-Diagnostik",
-          text: "LASIK verändert dauerhaft die Hornhautkrümmung durch Excimer-Laser-Photoablation. Für Myopie wird die Hornhautmitte abgetragen (Abflachung), für Hyperopie die Peripherie. Das Glaukom schädigt den Sehnerv durch erhöhten Augeninnendruck (IOP >21 mmHg). Diagnostik: Applanationstonometrie misst IOP; OCT quantifiziert die peripapilläre Nervenfaserschichtdicke; Gesichtsfelduntersuchung erfasst Skotome. Therapie: drucksenkende Augentropfen, Lasertrabekuloplastik oder operative Fistulierung.",
+          text: "LASIK verändert dauerhaft die Hornhautkrümmung durch Excimer-Laser-Photoablation. Für Myopie wird die Hornhautmitte abgetragen (Abflachung), für Hyperopie die Peripherie. Das Glaukom schädigt den Sehnerv durch erhöhten Augeninnendruck (IOP >21 mmHg). Diagnostik: Applanationstonometrie misst IOP; OCT quantifiziert die peripapilläre Nervenfaserschichtdicke; Gesichtsfelduntersuchung erfasst Skotome (blinde Flecken im Gesichtsfeld). Therapie: drucksenkende Augentropfen, Lasertrabekuloplastik oder operative Fistulierung.",
           merksatz:
             "Glaukom: IOP >21 mmHg schädigt Sehnerv; OCT misst Nervenfaserschichtdicke für Diagnose.",
         },

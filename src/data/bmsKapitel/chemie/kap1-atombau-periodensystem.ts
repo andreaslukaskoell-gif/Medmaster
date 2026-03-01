@@ -41,7 +41,7 @@ Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** untei
 ## Thomson-Modell (Rosinenmodell, 1904)
 
 
-J. J. Thomson entdeckte 1897 das **Elektron** (Kathodenstrahlröhre, Bestimmung des e/m-Verhältnisses) und widerlegte damit die Vorstellung vom unteilbaren Atom. Er stellte sich das Atom als eine **gleichmäßig positiv geladene Kugel** vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt **Ionisation** (Abgabe von Elektronen) und elektrische Neutralität des Atoms, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
+J. J. Thomson entdeckte 1897 das **Elektron** (Kathodenstrahlröhre (evakuierte Glasröhre mit Elektroden), Bestimmung des e/m-Verhältnisses) und widerlegte damit die Vorstellung vom unteilbaren Atom. Er stellte sich das Atom als eine **gleichmäßig positiv geladene Kugel** vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt **Ionisation** (Abgabe von Elektronen) und elektrische Neutralität des Atoms, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
 
 > **Merke:** Thomson wies nach, dass Elektronen negativ geladene Teilchen mit definierter Masse sind. Seine Entdeckung widerlegte die Vorstellung vom unteilbaren Atom.
 
@@ -80,7 +80,7 @@ Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen** um den Kern k
 | M | 3 | 18 |
 | N | 4 | 32 |
 
-Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein **Photon** ab — ein **Lichtquant**, die kleinste Einheit elektromagnetischer Strahlung, mit der Energie **ΔE = h·f** (h = Planck-Konstante 6,626 × 10⁻³⁴ J·s). Das erklärt die Spektrallinien des Wasserstoffs (Lyman-Serie: n→1, UV; Balmer-Serie: n→2, sichtbar; Paschen-Serie: n→3, IR). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon aufgenommen.
+Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt das Elektron ein **Photon** ab — ein **Lichtquant**, die kleinste Einheit elektromagnetischer Strahlung, mit der Energie **ΔE = h·f** (h = Planck-Konstante 6,626 × 10⁻³⁴ J·s). Das erklärt die Spektrallinien des Wasserstoffs (Lyman-Serie (Übergänge auf n=1, UV-Bereich); Balmer-Serie (auf n=2, sichtbares Licht); Paschen-Serie (auf n=3, Infrarot)). Beim Übergang auf höhere Schalen (Absorption) wird ein Photon aufgenommen.
 
 > **Merke:** Bohr: Elektronen auf **Schalen** (K, L, M, N); max. **2n²** Elektronen pro Schale. Übergänge zwischen Schalen → Photon abgegeben oder aufgenommen → Spektrallinien.
 
@@ -119,7 +119,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 **Nuklid-Notation:** ᴬ_Z X. Beispiel: ²³⁸₉₂U = Uran mit 92 Protonen und 146 Neutronen (A − Z = 146).
 
-**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** zusammengehalten — eine Anziehung mit sehr kurzer Reichweite (≈ 10⁻¹⁵ m), die den Kern gegen die elektrische Abstoßung der Protonen stabilisiert. Der **Massendefekt** ist die Differenz zwischen der Summe der Massen der einzelnen Nukleonen und der tatsächlichen Kernmasse; diese „fehlende” Masse steckt als **Kernbindungsenergie** (E = mc²) im Kern. Bei Fe-56 ist die Bindungsenergie pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
+**Kernkraft und Massendefekt:** Protonen und Neutronen werden durch die **starke Kernkraft** zusammengehalten — eine Anziehung mit sehr kurzer Reichweite (≈ 10⁻¹⁵ m), die den Kern gegen die elektrische Abstoßung der Protonen stabilisiert. Der **Massendefekt** ist die Differenz zwischen der Summe der Massen der einzelnen Nukleonen (Protonen und Neutronen) und der tatsächlichen Kernmasse; diese „fehlende” Masse steckt als **Kernbindungsenergie** (E = mc²) im Kern. Bei Fe-56 ist die Bindungsenergie pro Nukleon am höchsten (8,8 MeV/Nukleon) → stabilster Kern.
 
 **Isotope** sind Atome desselben Elements (gleiche **Ordnungszahl Z**) mit unterschiedlicher **Neutronenzahl N** — also gleiche Chemie, unterschiedliche Massenzahl A und unterschiedliche Kernstabilität. Chemische Eigenschaften sind (nahezu) identisch, physikalische (Masse, Radioaktivität) unterscheiden sich.
 
@@ -366,7 +366,7 @@ Bestimmt die Unterschale (Subschale) und die Form des Orbitals:
 Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0, +1 → drei p-Orbitale (pₓ, p_y, p_z). Anzahl der Orbitale pro Unterschale: 2l + 1.
 
 **4. Spinquantenzahl mₛ** (mₛ = +½ oder −½):
-Beschreibt den Eigendrehimpuls (Spin) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922) wies den Elektronenspin experimentell nach.
+Beschreibt den Eigendrehimpuls (Spin) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922, Ablenkung eines Silberatomstrahls im Magnetfeld) wies den Elektronenspin experimentell nach.
 
 > **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig: n = Schale, l = Form, mₗ = Richtung, mₛ = Spin. Kein Quantenzahlen-Quartett darf doppelt vorkommen (Pauli).
 
@@ -381,7 +381,7 @@ Bei gleichem n + l wird das kleinere n zuerst besetzt. Achtung: 4s liegt energet
 
 > **Merke:** Aufbau: 4s vor 3d füllen. Ionisierung: 4s vor 3d entfernen. Fe → Fe²⁺: [Ar]3d⁶4s² → [Ar]3d⁶ (beide 4s-Elektronen weg).
 
-**Hundsche Regel (1925):** Orbitale einer Unterschale werden zunächst einfach (mit parallelem Spin ↑↑↑) besetzt, bevor eine Doppelbesetzung stattfindet. Das Ergebnis ist die maximal mögliche Spinmultiplizität → paramagnetisch. Beispiel: Stickstoff (Z=7) hat 3 ungepaarte Elektronen in den 2p-Orbitalen: ↑|↑|↑. Kohlenstoff (Z=6) hat 2 ungepaarte p-Elektronen: ↑|↑|_.
+**Hundsche Regel (1925):** Orbitale einer Unterschale werden zunächst einfach (mit parallelem Spin ↑↑↑) besetzt, bevor eine Doppelbesetzung stattfindet. Das Ergebnis ist die maximal mögliche Spinmultiplizität (Gesamtspinzustand mit meisten ungepaarten Elektronen) → paramagnetisch. Beispiel: Stickstoff (Z=7) hat 3 ungepaarte Elektronen in den 2p-Orbitalen: ↑|↑|↑. Kohlenstoff (Z=6) hat 2 ungepaarte p-Elektronen: ↑|↑|_.
 
 ## Elektronenkonfigurationen schreiben
 
@@ -416,7 +416,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für katalytische und koordinative Funktionen:
 - **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette), Katalase
-- **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Ceruloplasmin, Superoxid-Dismutase
+- **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Ceruloplasmin (Kupfer-Transportprotein im Blut), Superoxid-Dismutase
 - **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme (Carboanhydrase, Alkohol-Dehydrogenase), Zinkfinger-Proteine (Transkriptionsfaktoren)
 - **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin), essenziell für Methylierungsreaktionen
 - **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)`,
@@ -626,7 +626,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - Biologisch: gefaehrlich bei Inkorporation (Inhalation von Radon fuehrt zu Lungenkrebs)
 
 ### Beta-minus-Strahlung
-- Emission eines **Elektrons** und eines **Antineutrinos** durch Umwandlung eines Neutrons in ein Proton im Kern
+- Emission eines **Elektrons** und eines **Antineutrinos** (nahezu masseloses Elementarteilchen) durch Umwandlung eines Neutrons in ein Proton im Kern
 - Kernreaktion: n wird zu p + e- + Antineutrino; Z erhoehrt sich um 1, A bleibt gleich
 - Beispiel: C-14 wird zu N-14 + e- + Antineutrino (Basis der Radiokohlenstoffdatierung)
 - Reichweite: einige Meter in Luft, stoppt durch Aluminium (mm-Bereich)
@@ -643,7 +643,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - Entsteht nach Alpha- oder Beta-Zerfall, wenn der Tochterkern noch in einem angeregten Zustand ist
 - Z und A bleiben unveraendert (kein Kernzerfall, nur Energieabgabe)
 - Sehr hohe Reichweite (viele Meter in Luft), braucht Blei oder mehrere cm Beton zur Abschirmung
-- Metastabile Kerne: Tc-99m wird zu Tc-99 + Gamma (Knochenszintigraphie, Schilddruesenszintigraphie)
+- Metastabile Kerne (angeregte Kerne mit verzoegertem Zerfall): Tc-99m wird zu Tc-99 + Gamma (Knochenszintigraphie (nuklearmedizinische Bildgebung), Schilddruesenszintigraphie)
 
 ## Halbwertszeit und Zerfallsgesetz
 
@@ -694,9 +694,9 @@ Natuerliche Strahlenbelastung in Oesterreich: ca. 2,5 mSv/Jahr (Radon, kosmische
 
 ## Klinische Anwendungen und Gefahren
 
-- **Diagnostisch**: Szintigraphie (Tc-99m), PET (F-18-FDG), SPECT, Roentgen/CT (X-Strahlen, kein Kernzerfall)
+- **Diagnostisch**: Szintigraphie (Tc-99m), PET (F-18-FDG), SPECT (Einzelphotonen-Emissionstomographie), Roentgen/CT (X-Strahlen, kein Kernzerfall)
 - **Therapeutisch**: I-131-Therapie (Schilddruesenkarzinom, M. Basedow), Y-90-Mikrosphaeren (hepatozellulaeres Karzinom), Ra-223-Dichlorid (Xofigo, Knochenmetastasen), externe Strahlentherapie (Linearbeschleuniger, Gamma Knife)
-- **Gefahren**: Radon-222 (Alphazerfall, Inhalation fuehrt zu zweitgroesster Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung fuehrt zu DNA-Doppelstrangbruechen und Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell)
+- **Gefahren**: Radon-222 (Alphazerfall, Inhalation fuehrt zu zweitgroesster Ursache von Lungenkrebs nach Rauchen in Europa); ionisierende Strahlung fuehrt zu DNA-Doppelstrangbruechen und Krebsrisiko (stochastisch, kein Schwellenwert nach LNT-Modell (Linear-No-Threshold, lineares Modell ohne Schwellendosis))
 - **Schutzmassnahme nach Atomunfall**: Kaliumiodid (KI) saettigt die Schilddruese mit stabilem Iod und verhindert Einbau von radioaktivem I-131. Besonders wichtig fuer Kinder (hoeherer Jodumsatz, laengere Restlebenserwartung)`,
 
       lernziele: [
@@ -991,7 +991,7 @@ Beispiel: 50 mL einer 2 mol/L HCl-Loesung sollen auf 0,1 mol/L verduennt werden.
 
 <!-- DIAGRAM:atomic-orbitals -->
 
-## Stoechiometrie -- Mol-Verhaeltnisse in Reaktionsgleichungen
+## Stoechiometrie (mengenmässige Berechnung chemischer Reaktionen) -- Mol-Verhaeltnisse in Reaktionsgleichungen
 
 Die Koeffizienten in einer Reaktionsgleichung geben direkt die Mol-Verhaeltnisse an:
 2 H2 + O2 wird zu 2 H2O bedeutet: 2 mol H2 + 1 mol O2 ergibt 2 mol H2O
@@ -1196,14 +1196,14 @@ C6H12O6 + 6 O2 wird zu 6 CO2 + 6 H2O (vollstaendige Oxidation von Glukose, Delta
 ## Van-der-Waals-Kräfte
 
 **London-Dispersionskräfte** (induziert-Dipol–induziert-Dipol):
-Entstehen durch kurzzeitige Unsymmetrien in der Elektronenverteilung, die in Nachbarmolekülen einen **induzierten Dipol** erzeugen. Sie existieren in *allen* Molekülen (polar wie unpolar). Ihre Stärke steigt mit zunehmender **Molmasse** (mehr Elektronen → größere Polarisierbarkeit) und mit größerer Moleküloberfläche.
+Entstehen durch kurzzeitige Unsymmetrien in der Elektronenverteilung, die in Nachbarmolekülen einen **induzierten Dipol** erzeugen. Sie existieren in *allen* Molekülen (polar wie unpolar). Ihre Stärke steigt mit zunehmender **Molmasse** (mehr Elektronen → größere Polarisierbarkeit (Verformbarkeit der Elektronenhülle)) und mit größerer Moleküloberfläche.
 
 > **Merke:** London-Kräfte sind die einzige Wechselwirkung bei völlig unpolaren Molekülen (Edelgase, O₂, N₂, CH₄). Bei großen Molekülen können sie erstaunlich stark werden.
 
 Beispiel: n-Pentan (Siedepunkt 36 °C) siedet höher als Neopentan (9,5 °C) trotz gleicher Summenformel C₅H₁₂, weil n-Pentan (linear) mehr Kontaktfläche besitzt als Neopentan (kugelförmig).
 
 **Keesom-Wechselwirkungen** (Dipol–Dipol):
-Wirken zwischen Molekülen mit permanentem Dipolmoment. Die positiven Enden zweier Dipole ordnen sich zu den negativen Enden benachbarter Moleküle aus. Stärke ∝ μ²/r⁶ (μ = Dipolmoment, r = Abstand). Beispiele: HCl (μ = 1,08 D), Aceton (μ = 2,88 D). Aceton siedet bei 56 °C, obwohl seine Molmasse nur 58 g/mol beträgt — deutlich höher als bei unpolarem Butan (M = 58, Sdp. −1 °C).
+Wirken zwischen Molekülen mit permanentem Dipolmoment (Maß für die Ladungstrennung im Molekül). Die positiven Enden zweier Dipole ordnen sich zu den negativen Enden benachbarter Moleküle aus. Stärke ∝ μ²/r⁶ (μ = Dipolmoment, r = Abstand). Beispiele: HCl (μ = 1,08 D), Aceton (μ = 2,88 D). Aceton siedet bei 56 °C, obwohl seine Molmasse nur 58 g/mol beträgt — deutlich höher als bei unpolarem Butan (M = 58, Sdp. −1 °C).
 
 **Debye-Wechselwirkungen** (Dipol–induzierter Dipol):
 Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer als London- und Keesom-Kräfte, aber stets vorhanden, wenn polare und unpolare Moleküle benachbart sind. Klinisch relevant bei der Löslichkeit von O₂ in Wasser (polares Wasser induziert Dipol in O₂).
@@ -1232,8 +1232,8 @@ H-Brücken sind **nicht kovalent**, aber deutlich stärker als gewöhnliche van-
 
 **Biologische Beispiele:**
 - *Wasser*: jedes Molekül kann bis zu 4 H-Brücken ausbilden (2 Donoren über O–H, 2 Akzeptoren über freie e⁻-Paare) → hohe Siedetemperatur (100 °C statt der nach Molmasse erwarteten ca. −80 °C), hohe Verdampfungswärme (2257 J/g → Thermoregulation durch Schwitzen), Anomalie des Wassers (Dichtemaximum bei 4 °C)
-- *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (Schmelztemperatur Tm ≈ 69,3 + 0,41 × %GC). Relevant für PCR-Primer-Design
-- *Proteine*: α-Helix (i–i+4 H-Brücken entlang der Helix, C=O···H–N) und β-Faltblatt (intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
+- *DNA-Doppelhelix*: A–T bildet 2 H-Brücken, G–C bildet 3 → G-C-reiche DNA ist thermisch stabiler (Schmelztemperatur Tm ≈ 69,3 + 0,41 × %GC). Relevant für PCR-Primer-Design (PCR = Polymerase-Kettenreaktion, Methode zur DNA-Vervielfältigung)
+- *Proteine*: α-Helix (schraubenförmige Sekundärstruktur, i–i+4 H-Brücken entlang der Helix, C=O···H–N) und β-Faltblatt (flächige Sekundärstruktur, intermolekulare H-Brücken zwischen Strängen) werden durch H-Brücken stabilisiert
 - *Enzym-Substrat-Bindung*: H-Brücken vermitteln Substratspezifität im aktiven Zentrum
 
 ## Hydrophober Effekt
@@ -1242,7 +1242,7 @@ Unpolare Moleküle in Wasser erzwingen eine geordnete Wasserstruktur um sich her
 
 ## Klinische Relevanz
 
-Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP ≤5.
+Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five, Faustregel für orale Arzneistoff-Aufnahme): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP (Maß für Lipophilie) ≤5.
 
 Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.`,
 
@@ -1479,20 +1479,20 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
 
 ## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
-**Polare Lösungsmittel** (z. B. Wasser, ε = 80) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen durch Ausbildung von Hydrathüllen (Ion-Dipol-Wechselwirkung) und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
+**Polare Lösungsmittel** (z. B. Wasser, ε = 80 (Dielektrizitätskonstante, Maß für elektrische Abschirmfähigkeit)) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen durch Ausbildung von Hydrathüllen (Ion-Dipol-Wechselwirkung) und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
 
 > **Merke:** Ein Salz löst sich in Wasser, wenn die Hydratationsenthalpie (Energie beim Umhüllen der Ionen mit Wasser) die Gitterenergie (Energie zum Aufbrechen des Ionengitters) übersteigt oder annähernd erreicht.
 
 **Unpolare Lösungsmittel** (Hexan, Dichlormethan) lösen **unpolare** Substanzen (Lipide, Steroide, Wachse) über London-Wechselwirkungen. Die Dielektrizitätskonstante ε ist niedrig (Hexan: ε = 1,9), was die Abschwächung von Coulomb-Kräften zwischen Ionen verhindert — ionische Verbindungen bleiben unlöslich.
 
-**Amphiphile Moleküle** (Detergenzien, Phospholipide, Gallensäuren) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen. Kritische Mizellkonzentration (CMC): Mindestkonzentration für Mizellenbildung. Gallensäuren im Darm bilden Mizellen, die Fettverdauungsprodukte (Monoglyzeride, Fettsäuren) solubilisieren und zur Resorption an die Enterozytenmembran transportieren.
+**Amphiphile Moleküle** (Detergenzien, Phospholipide, Gallensäuren) besitzen einen polaren Kopf und einen unpolaren Schwanz → Mizellenbildung in Wasser: Schwänze innen, Köpfe außen. Kritische Mizellkonzentration (CMC): Mindestkonzentration für Mizellenbildung. Gallensäuren im Darm bilden Mizellen, die Fettverdauungsprodukte (Monoglyzeride, Fettsäuren) solubilisieren und zur Resorption an die Enterozytenmembran (Membran der Dünndarmepithelzellen) transportieren.
 
 ## Löslichkeitsprodukt Ksp
 
-Für schwerlösliche Salze gilt: Ksp = [Kation]^n × [Anion]^m (bei Sättigung).
+Für schwerlösliche Salze gilt das **Löslichkeitsprodukt** Ksp (Gleichgewichtskonstante der Sättigung): Ksp = [Kation]^n × [Anion]^m (bei Sättigung).
 - BaSO₄: Ksp ≈ 1,1 × 10⁻¹⁰ → extrem schwerlöslich → sicheres GI-Kontrastmittel
 - CaSO₄: Ksp ≈ 4,9 × 10⁻⁵ → leicht löslich
-- Ca-Oxalat: Ksp ≈ 2,3 × 10⁻⁹ → Nierensteinbildung bei Hyperoxalurie
+- Ca-Oxalat: Ksp ≈ 2,3 × 10⁻⁹ → Nierensteinbildung bei Hyperoxalurie (erhöhte Oxalsäure-Ausscheidung im Urin)
 
 Wenn das Ionenprodukt Q > Ksp → Ausfällung (Kristallisation). Wenn Q < Ksp → Lösung noch nicht gesättigt.
 
@@ -1512,7 +1512,7 @@ Beispiel: 0,9 % NaCl (m/v) = 9 g NaCl / L; M(NaCl) = 58,44 g/mol → c = 9/58,44
 
 **Osmolarität** [mOsmol/L] = Summe aller osmotisch aktiven Teilchen pro Liter.
 
-Blutplasma-Osmolarität: **285–295 mOsmol/L** (Normbereich, geregelt durch ADH und Durst)
+Blutplasma-Osmolarität: **285–295 mOsmol/L** (Normbereich, geregelt durch ADH (antidiuretisches Hormon) und Durst)
 
 Beispielrechnung für 0,154 mol/L NaCl: Osmolarität = 0,154 × 2 × 1000 = 308 mOsmol/L (≈ isoosmolar mit Blut)
 Für 5 % Glukose: 50 g/L ÷ 180 g/mol = 0,278 mol/L × 1 = 278 mOsmol/L (≈ isoosmolar)

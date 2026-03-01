@@ -33,7 +33,7 @@ export const chemKapAnorganisch: Kapitel = {
       ],
       content: `## Struktur des Wassermoleküls
 
-Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** resultiert — einer der höchsten Werte kleiner Moleküle.
+Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** (Einheit der Polarität) resultiert — einer der höchsten Werte kleiner Moleküle.
 
 > **Merke:** Wasser hat eine gewinkelte Geometrie (104,5°), nicht linear wie CO₂. Die freien Elektronenpaare am O komprimieren den Winkel unter den Tetraederwinkel.
 
@@ -57,7 +57,7 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 
 **Hohe Verdampfungsenthalpie:** ~2430 kJ/kg bei 37 °C. 1 mL verdunstender Schweiß entzieht dem Körper ~2,4 kJ — entscheidend für Thermoregulation. Bei maximaler Schweißproduktion (~2 L/h) können ~1300 W Wärme abgeführt werden.
 
-**Hohe Oberflächenspannung:** γ = 72 mN/m. Ermöglicht Kapillarkräfte im Xylem (Wassertransport bis 100 m Höhe in Mammutbäumen) und schützt Lungenalveolen. Pulmonales **Surfactant** (Dipalmitoylphosphatidylcholin, DPPC) senkt γ und verhindert Alveolarkollaps beim Ausatmen. Frühgeborenen-Atemnotsyndrom (IRDS) entsteht bei Surfactant-Mangel.
+**Hohe Oberflächenspannung:** γ = 72 mN/m. Ermöglicht Kapillarkräfte im Xylem (Wassertransport bis 100 m Höhe in Mammutbäumen) und schützt Lungenalveolen. Pulmonales **Surfactant** (oberflächenaktive Substanz; Dipalmitoylphosphatidylcholin, DPPC) senkt γ und verhindert Alveolarkollaps beim Ausatmen. Frühgeborenen-Atemnotsyndrom (IRDS, Infant Respiratory Distress Syndrome) entsteht bei Surfactant-Mangel.
 
 ## Dichteanomalie — Eis schwimmt
 
@@ -95,12 +95,12 @@ Wasser solvatisiert Ionen durch **Ion-Dipol-Wechselwirkungen**: Der δ⁻-Sauers
 
 ## Hydrophober Effekt
 
-Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in Wasser erzwingen geordnete Wasserkäfige (Clathrate) — ΔS_Wasser < 0 (ungünstig). Aggregation apolarer Gruppen minimiert die Kontaktfläche → geordnete Wassermoleküle werden freigesetzt → ΔS_gesamt > 0 → spontan (ΔG < 0).
+Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in Wasser erzwingen geordnete Wasserkäfige (Clathrate, käfigartige Wasserstrukturen) — ΔS_Wasser < 0 (ungünstig). Aggregation apolarer Gruppen minimiert die Kontaktfläche → geordnete Wassermoleküle werden freigesetzt → ΔS_gesamt > 0 → spontan (ΔG < 0).
 
 **Biologisch fundamental:**
 - Phospholipid-Doppelschichten: hydrophile Köpfe außen, hydrophobe Schwänze innen
 - Proteinfaltung: hydrophobe Aminosäuren im Inneren, hydrophile außen
-- Mizellbildung von Gallensalzen und Detergenzien
+- Mizellbildung (kugelförmige Lipidaggregate) von Gallensalzen und Detergenzien
 
 > **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.`,
       sections: [
@@ -355,7 +355,7 @@ Die C-C-Einfachbindung hat eine Bindungsenergie von ~347 kJ/mol und eine Länge 
 
 ## Allotrope des Kohlenstoffs
 
-Kohlenstoff kommt in mehreren Allotropen vor, deren Eigenschaften sich dramatisch unterscheiden — allein durch die Hybridisierung:
+Kohlenstoff kommt in mehreren Allotropen (verschiedene Strukturformen desselben Elements) vor, deren Eigenschaften sich dramatisch unterscheiden — allein durch die Hybridisierung:
 
 **Diamant (sp³):** Dreidimensionales Tetraedernetzwerk — härtestes natürliches Material (Mohs 10), elektrischer Isolator (alle 4 Valenzelektronen in σ-Bindungen lokalisiert), transparent, höchste Wärmeleitfähigkeit. Bindungslänge C-C: 154 pm. Thermodynamisch metastabil (Graphit ist stabiler; ΔG°f = +2,9 kJ/mol), aber Umwandlung kinetisch gehemmt.
 
@@ -367,7 +367,7 @@ Kohlenstoff kommt in mehreren Allotropen vor, deren Eigenschaften sich dramatisc
 
 ## CO₂ — Kohlenstoffdioxid
 
-CO₂ ist **sp-hybridisiert** (linear, 180°) und apolar (die beiden C=O-Dipole kompensieren sich, Gesamtdipolmoment = 0). CO₂ entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (eines der schnellsten Enzyme, kcat ~10⁶ s⁻¹):
+CO₂ ist **sp-hybridisiert** (linear, 180°) und apolar (die beiden C=O-Dipole kompensieren sich, Gesamtdipolmoment = 0). CO₂ entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (Zn²⁺-haltiges Enzym, eines der schnellsten, kcat ~10⁶ s⁻¹):
 
 **CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺**
 
@@ -376,20 +376,20 @@ pH = pKa + log([HCO₃⁻] / [H₂CO₃]) = 6,1 + log(24/1,2) = 6,1 + log(20) = 
 
 **CO₂-Transport im Blut** erfolgt über drei Wege:
 - ~70 % als HCO₃⁻ (via Chloride-Shift durch Band-3-Protein ins Plasma)
-- ~23 % als Carbaminohämoglobin (CO₂ bindet an NH₂-Gruppen des Hb)
+- ~23 % als Carbaminohämoglobin (CO₂ kovalent an NH₂-Gruppen des Hb gebunden)
 - ~7 % physikalisch gelöst
 
-Bei Hypoventilation steigt CO₂ → pH sinkt (respiratorische Azidose); bei Hyperventilation sinkt CO₂ → pH steigt (respiratorische Alkalose).
+Bei Hypoventilation (verminderte Atmung) steigt CO₂ → pH sinkt (respiratorische Azidose); bei Hyperventilation (gesteigerte Atmung) sinkt CO₂ → pH steigt (respiratorische Alkalose).
 
 > **Merke:** pH_Blut = 6,1 + log(24/1,2) = 7,4. Lunge reguliert CO₂ (schnell), Niere reguliert HCO₃⁻ (langsam).
 
 ## CO — Kohlenstoffmonoxid
 
-CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂ und bildet Carboxyhämoglobin (HbCO). HbCO kann kein O₂ transportieren (funktionelle Anämie). Zusätzlich verschiebt CO die O₂-Bindungskurve nach links → O₂-Abgabe ans Gewebe praktisch unmöglich → histotoxische Hypoxie. CO hemmt auch Cytochrom-c-Oxidase (Komplex IV).
+CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂ und bildet Carboxyhämoglobin (HbCO). HbCO kann kein O₂ transportieren (funktionelle Anämie). Zusätzlich verschiebt CO die O₂-Bindungskurve nach links → O₂-Abgabe ans Gewebe praktisch unmöglich → histotoxische Hypoxie (Gewebserstickung trotz O₂-Angebot). CO hemmt auch Cytochrom-c-Oxidase (Komplex IV der Atmungskette).
 
-**Klinische Zeichen:** Kopfschmerz, Schwindel, Übelkeit; kirschrote Haut (HbCO — Spätzeichen). Diagnose: Co-Oximetrie.
+**Klinische Zeichen:** Kopfschmerz, Schwindel, Übelkeit; kirschrote Haut (HbCO — Spätzeichen). Diagnose: Co-Oximetrie (spektralphotometrische Hb-Analyse).
 
-**Behandlung:** 100 % O₂ (Verdrängung durch Massenwirkungsgesetz); hyperbar bei schwerer Vergiftung. HWZ von HbCO: ~300 min (Raumluft), ~60 min (100 % O₂), ~20 min (hyperbar).
+**Behandlung:** 100 % O₂ (Verdrängung durch Massenwirkungsgesetz); hyperbar (Überdruckkammer) bei schwerer Vergiftung. HWZ von HbCO: ~300 min (Raumluft), ~60 min (100 % O₂), ~20 min (hyperbar).
 
 ## Carbonate und Metabolismus
 
@@ -398,10 +398,10 @@ CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Häm
 **CaCO₃ (Calciumcarbonat)** bildet zusammen mit Hydroxylapatit die mineralische Matrix der Knochen und Zähne. CaCO₃ findet sich auch in Marmor, Kalkstein und Muschelschalen.
 
 Metabolisch zentrale Kohlenstoffverbindungen:
-- **Pyruvat:** Endprodukt der Glykolyse → PDH-Komplex (irreversibel) → Acetyl-CoA
-- **Acetyl-CoA:** Zentrale Schnittstelle — Glykolyse, β-Oxidation, Aminosäureabbau → Zitratzyklus
-- **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1
-- **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (blockiert FA-Import ins Mitochondrium)
+- **Pyruvat:** Endprodukt der Glykolyse (Zuckerabbau) → PDH-Komplex (Pyruvatdehydrogenase, irreversibel) → Acetyl-CoA
+- **Acetyl-CoA** (aktivierte Essigsäure)**:** Zentrale Schnittstelle — Glykolyse, β-Oxidation (Fettsäureabbau), Aminosäureabbau → Zitratzyklus
+- **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1 (Phosphofructokinase-1, Schlüsselenzym der Glykolyse)
+- **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (Carnitin-Palmitoyltransferase 1, blockiert Fettsäure-Import ins Mitochondrium)
 
 > **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.`,
       sections: [
@@ -613,14 +613,14 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
 Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Gas. Das N₂-Molekül besitzt eine Dreifachbindung (N≡N, 945 kJ/mol — eine der stärksten Bindungen überhaupt) und ist daher extrem reaktionsträge. Stickstoff ist Bestandteil aller Aminosäuren, Nukleotide und zahlreicher Cofaktoren — ein unverzichtbares Bioelement.
 
 **Stickstoffixierung — zwei Wege:**
-- **Biologisch:** Nitrogenase (Rhizobien in Leguminosen-Wurzelknöllchen): N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2 NH₃ + H₂ + 16 ADP + 16 Pi. Der hohe ATP-Verbrauch spiegelt die Aktivierungsenergie wider, die zum Brechen der N≡N-Bindung nötig ist.
+- **Biologisch:** Nitrogenase (Rhizobien [stickstofffixierende Bakterien] in Leguminosen-Wurzelknöllchen [Hülsenfrüchtler]): N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2 NH₃ + H₂ + 16 ADP + 16 Pi. Der hohe ATP-Verbrauch spiegelt die Aktivierungsenergie wider, die zum Brechen der N≡N-Bindung nötig ist.
 - **Industriell (Haber-Bosch):** N₂ + 3 H₂ ⇌ 2 NH₃; 400–500 °C, 150–300 bar, Fe/K₂O/Al₂O₃-Katalysator; ~15–25 % Gleichgewichtsausbeute (Kompromiss zwischen Kinetik und Thermodynamik nach Le Chatelier). Versorgt ~50 % der Weltbevölkerung mit Stickstoffdünger — die wichtigste chemische Reaktion der Menschheitsgeschichte.
 
 > **Merke:** Haber-Bosch-Kompromiss: Exotherme Reaktion (ΔH = −92 kJ/mol) + Volumenabnahme (4 → 2 mol Gas) → niedrige T und hoher Druck begünstigen NH₃, aber niedrige T macht Reaktion zu langsam → 400–500 °C + 150–300 bar + Fe-Katalysator.
 
-**NO (Stickstoffmonoxid):** Endogener Signalstoff, gebildet aus L-Arginin durch **NO-Synthase (NOS)** in drei Isoformen (nNOS/neuronal, eNOS/endothelial, iNOS/induzierbar). NO aktiviert lösliche Guanylatzyklase → cGMP ↑ → Proteinkinase G → Vasodilatation der glatten Muskulatur. Pharmazeutisch: Glycerintrinitrat (Nitroglyzerin) → NO → Antiangina-Therapie (Koronargefäßerweiterung, Vorlastsenkung). PDE5-Hemmer (Sildenafil, Tadalafil) hemmen cGMP-Abbau → Verstärkung des NO-Effekts → Einsatz bei erektiler Dysfunktion und pulmonaler arterieller Hypertonie.
+**NO (Stickstoffmonoxid):** Endogener Signalstoff, gebildet aus L-Arginin durch **NO-Synthase (NOS)** in drei Isoformen (nNOS/neuronal, eNOS/endothelial, iNOS/induzierbar). NO aktiviert lösliche Guanylatzyklase (Enzym zur cGMP-Synthese) → cGMP ↑ (zyklisches Guanosinmonophosphat, Second Messenger) → Proteinkinase G → Vasodilatation (Gefäßerweiterung) der glatten Muskulatur. Pharmazeutisch: Glycerintrinitrat (Nitroglyzerin) → NO → Antiangina-Therapie (Koronargefäßerweiterung, Vorlastsenkung). PDE5-Hemmer (Phosphodiesterase-5-Hemmer; Sildenafil, Tadalafil) hemmen cGMP-Abbau → Verstärkung des NO-Effekts → Einsatz bei erektiler Dysfunktion und pulmonaler arterieller Hypertonie.
 
-**NH₃ (Ammoniak):** Pyramidale Geometrie (sp³, Bindungswinkel 107°), stark riechend. Im Blut toxisch als NH₄⁺: stört Glutamat/GABA-Gleichgewicht im ZNS. Entgiftung im **Harnstoffzyklus** (Leber): 2 NH₃ + CO₂ + 3 ATP → Harnstoff (H₂N-CO-NH₂) + H₂O + 3 ADP. Leberversagen → Hyperammonämie → hepatische Enzephalopathie (Bewusstseinsstörungen, Asterixis).
+**NH₃ (Ammoniak):** Pyramidale Geometrie (sp³, Bindungswinkel 107°), stark riechend. Im Blut toxisch als NH₄⁺: stört Glutamat/GABA-Gleichgewicht im ZNS. Entgiftung im **Harnstoffzyklus** (Stoffwechselweg der Leber zur NH₃-Entsorgung): 2 NH₃ + CO₂ + 3 ATP → Harnstoff (H₂N-CO-NH₂) + H₂O + 3 ADP. Leberversagen → Hyperammonämie (erhöhter Blut-Ammoniak) → hepatische Enzephalopathie (Bewusstseinsstörungen, Asterixis [Flapping Tremor]).
 
 **Salpetersäure (HNO₃):** Starke Säure (pKa ≈ −1,4) + starkes Oxidationsmittel (N in OZ +5). Konz. HNO₃ + Metall → NO₂ (braunes Gas, N: +4); verd. HNO₃ + Metall → NO (farbloses Gas, N: +2). **Königswasser:** 3 HCl + 1 HNO₃ → löst Au und Pt durch Bildung von [AuCl₄]⁻- und [PtCl₆]²⁻-Komplexen. Fe und Al werden durch konz. HNO₃ **passiviert** (schützende Oxidschicht).
 

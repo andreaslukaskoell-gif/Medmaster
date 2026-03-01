@@ -27,14 +27,14 @@ Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen s
 
 **Klassifikation von C-Atomen (prüfungsrelevant):** Ein **sekundäres C-Atom** ist an **zwei weitere C-Atome** gebunden (nicht „an Position 2”, nicht „trägt 2 OH-Gruppen”, nicht „2 NH₂-Gruppen”). Primäres C: an 1 C gebunden; sekundäres C: an 2 C-Atome gebunden; tertiäres C: an 3 C-Atome gebunden.
 
-**Konstitutionsisomerie**: Ab Butan (C₄H₁₀) existieren Konstitutionsisomere: n-Butan (linear) und Isobutan (verzweigt). Die Zahl der Isomere steigt stark: C₅ hat 3, C₆ hat 5, C₁₀ hat 75 Isomere.
+**Konstitutionsisomerie** (gleiche Summenformel, verschiedene Atomverknuepfung)**:** Ab Butan (C₄H₁₀) existieren Konstitutionsisomere: n-Butan (linear) und Isobutan (verzweigt). Die Zahl der Isomere steigt stark: C₅ hat 3, C₆ hat 5, C₁₀ hat 75 Isomere.
 
 **Cycloalkane**: Ringförmige Alkane (CₙH₂ₙ, gleiche Formel wie Alkene!). Cyclohexan (Sesselkonformation) ist spannungsfrei. Cyclopropan hat hohe Ringspannung (Bindungswinkel 60° statt 109,5°) → reaktiver. **cis/trans-Isomerie** bei disubstituierten Cycloalkanen: cis = Substituenten auf gleicher Seite, trans = gegenüberliegend.
 
 **Typische Reaktion:** Radikalische Substitution (SR)
 Alkane reagieren unter UV-Licht oder hohen Temperaturen mit Halogenen. Dabei wird ein H-Atom durch ein Halogenatom ersetzt:
 CH₄ + Cl₂ → CH₃Cl + HCl
-Die Reaktion läuft über drei Phasen: **Kettenstart** (Cl₂ →[hν] 2 Cl• , homolytische Spaltung), **Kettenfortpflanzung** (Cl• + CH₄ → CH₃• + HCl; CH₃• + Cl₂ → CH₃Cl + Cl•), **Kettenabbruch** (Radikalkombination: 2 Cl• → Cl₂ oder CH₃• + Cl• → CH₃Cl). Die Reaktivität tertiärer C-H > sekundärer > primärer (Stabilität der Radikale durch Hyperkonjugation).
+Die Reaktion läuft über drei Phasen: **Kettenstart** (Cl₂ →[hν] 2 Cl• , homolytische Spaltung), **Kettenfortpflanzung** (Cl• + CH₄ → CH₃• + HCl; CH₃• + Cl₂ → CH₃Cl + Cl•), **Kettenabbruch** (Radikalkombination: 2 Cl• → Cl₂ oder CH₃• + Cl• → CH₃Cl). Die Reaktivität tertiärer C-H > sekundärer > primärer (Stabilität der Radikale durch Hyperkonjugation/Stabilisierung durch benachbarte C-H-Bindungen).
 
 ## Alkene — einfach ungesättigte Kohlenwasserstoffe
 
@@ -50,9 +50,9 @@ C₂H₄ + Br₂ → C₂H₄Br₂ (1,2-Dibromethan)
 
 <!-- DIAGRAM:covalent-bond -->
 
-**Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation wird als Intermediat bevorzugt.
+**Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation (positiv geladenes C-Atom) wird als Intermediat bevorzugt.
 
-**cis/trans-Isomerie bei Alkenen**: Die C=C-Doppelbindung ist nicht frei drehbar → wenn beide C-Atome jeweils zwei verschiedene Substituenten tragen, existieren cis- und trans-Isomere. cis-But-2-en: beide Methylgruppen auf gleicher Seite; trans-But-2-en: gegenüberliegende Seite. Bei komplexeren Fällen: E/Z-Nomenklatur (nach CIP-Prioritätsregeln).
+**cis/trans-Isomerie bei Alkenen**: Die C=C-Doppelbindung ist nicht frei drehbar → wenn beide C-Atome jeweils zwei verschiedene Substituenten tragen, existieren cis- und trans-Isomere. cis-But-2-en: beide Methylgruppen auf gleicher Seite; trans-But-2-en: gegenüberliegende Seite. Bei komplexeren Fällen: E/Z-Nomenklatur (nach CIP-Prioritätsregeln/Cahn-Ingold-Prelog: hoehere Ordnungszahl = hoehere Prioritaet).
 
 ## Alkine — zweifach ungesättigte Kohlenwasserstoffe
 
@@ -370,7 +370,7 @@ Für die Z/E-Nomenklatur werden Prioritäten nach CIP-Regeln vergeben: höhere O
 
 ### Chiralität und R/S-Isomerie (Enantiomere)
 
-Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene Substituenten trägt. Das Molekül ist dann nicht mit seinem Spiegelbild identisch (nicht superponierbar).
+Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene Substituenten trägt. Das Molekül ist dann nicht mit seinem Spiegelbild identisch (nicht superponierbar/nicht deckungsgleich).
 
 **Merke:** Chiral = asymmetrisch = vier verschiedene Gruppen am C-Atom.
 
@@ -398,7 +398,7 @@ Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene 
 
 - **Racemisches Gemisch:** 1:1-Gemisch aus R- und S-Enantiomer; optisch inaktiv (Drehungen heben sich auf)
 - **Meso-Verbindung:** Molekül mit Chiralitätszentren, aber innerer Spiegelebene → achiral, optisch inaktiv trotz Stereozentren. Beispiel: meso-Weinsäure (zwei Chiralitätszentren, aber innere Spiegelebene → kein Enantiomer, nur Diastereomere möglich)
-- **Prochiralität**: Ein sp³-C mit zwei gleichen Substituenten kann durch eine einzige Reaktion chiral werden (relevant für enzymatische Stereospezifität, z.B. Citrat im Citratzyklus)
+- **Prochiralität** (Vorstufe der Chiralitaet)**:** Ein sp³-C mit zwei gleichen Substituenten kann durch eine einzige Reaktion chiral werden (relevant für enzymatische Stereospezifität, z.B. Citrat im Citratzyklus)
 
 ## Diastereomere
 

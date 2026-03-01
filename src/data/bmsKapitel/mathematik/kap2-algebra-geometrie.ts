@@ -56,11 +56,11 @@ Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite 
 
 Eine **lineare Gleichung** in einer Unbekannten x hat die Form **ax + b = c** (a, b, c reelle Zahlen, a ≠ 0). **Rechenweg immer in dieser Reihenfolge:**
 
-1. **Klammern** ausmultiplizieren (Distributivgesetz)
-2. **Brüche** beseitigen: mit dem **Hauptnenner** (kgV aller Nenner) multiplizieren
+1. **Klammern** ausmultiplizieren (Distributivgesetz: a(b+c) = ab+ac)
+2. **Brüche** beseitigen: mit dem **Hauptnenner** (kgV = kleinstes gemeinsames Vielfaches aller Nenner) multiplizieren
 3. Alle **Terme mit x** auf eine Seite bringen (Addition/Subtraktion)
 4. Alle **Zahlen** auf die andere Seite bringen
-5. Durch den **Koeffizienten von x** dividieren
+5. Durch den **Koeffizienten** (Vorfaktor) **von x** dividieren
 6. **Probe:** Lösung in die Ausgangsgleichung einsetzen
 
 **Beispiel (Schritt für Schritt):** 5x − 3 = 2x + 9.  
@@ -80,7 +80,7 @@ Gleichungen mit Klammern: Zuerst ausmultiplizieren (Distributivgesetz), dann wie
 
 Ein lineares Gleichungssystem mit zwei Gleichungen und zwei Unbekannten (x, y) hat im Allgemeinen genau eine Lösung.
 
-Substitutionsverfahren: Eine Gleichung nach einer Variablen auflösen, Ergebnis einsetzen.
+Substitutionsverfahren (Einsetzmethode): Eine Gleichung nach einer Variablen auflösen, Ergebnis einsetzen.
 
 Beispiel: (I) x + y = 10 und (II) 3x − y = 6. Aus (I): y = 10 − x. Einsetzen in (II): 3x − (10 − x) = 6, also 4x = 16, x = 4. Dann y = 10 − 4 = 6.
 
@@ -94,11 +94,11 @@ Beispiel: (I) 2x + 3y = 12 und (II) 4x − y = 10. Multipliziere (II) mit 3: 12x
 
 > **Vertiefung:** Ausführliche Behandlung inkl. binomischer Formeln, pq-Formel und Anwendungen im UK **Quadratische Gleichungen und binomische Formeln** (ma-2-03). Hier: Kurzüberblick für den Zusammenhang mit linearen Gleichungen und Ungleichungen.
 
-Eine quadratische Gleichung hat die Normalform ax² + bx + c = 0 (a ungleich null). Die allgemeine Lösungsformel (Mitternachtsformel) lautet:
+Eine quadratische Gleichung hat die Normalform ax² + bx + c = 0 (a ungleich null). Die allgemeine Lösungsformel (Mitternachtsformel, auch abc-Formel genannt) lautet:
 
 x = (−b +/- Wurzel aus (b² − 4ac)) / (2a)
 
-Der Ausdruck D = b² − 4ac heißt Diskriminante:
+Der Ausdruck D = b² − 4ac heißt **Diskriminante** (lat. „Unterscheider" -- entscheidet über Lösungsanzahl):
 - D > 0: zwei verschiedene reelle Lösungen
 - D = 0: genau eine Lösung (Doppellösung): x = − b / (2a)
 - D < 0: keine reelle Lösung
@@ -372,7 +372,7 @@ Beispiel: Wurzel aus (9/16) = 3/4.
 Potenz und Wurzel: (Wurzel aus a) hoch 2 = a und Wurzel aus (a hoch 2) = Betrag von a.
 Wichtig: Wurzel aus (a hoch 2) = Betrag von a, denn Wurzel aus 9 = 3 = Betrag von 3 = Betrag von (−3). Die Quadratwurzel ist immer nicht-negativ.
 
-Rationalisierung: Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
+**Rationalisierung** (Wurzeln aus dem Nenner entfernen): Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
 
 > **Merke:** Produktregel erlaubt: √(a×b) = √a×√b. VERBOTEN: √(a+b) ≠ √a+√b und √(a²) = |a| (nicht ±a — Wurzel ist immer nicht-negativ!).
 
@@ -383,7 +383,7 @@ Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Die Frage, die d
 Definition: log_a(x) = y genau dann, wenn a hoch y = x (für a > 0, a ungleich 1, x > 0).
 
 Wichtige Spezialfälle:
-- log Basis 10 von x = dekadischer Logarithmus lg(x)
+- log Basis 10 von x = dekadischer Logarithmus (Zehnerlogarithmus) lg(x)
 - log Basis e von x = natürlicher Logarithmus ln(x) mit e ungefähr gleich 2,71828
 - ln(e) = 1; ln(1) = 0; ln(e hoch x) = x; e hoch (ln x) = x
 
@@ -405,7 +405,7 @@ Wichtigste Anwendung: ln(x) = lg(x) / lg(e) ungefähr gleich lg(x) / 0,4343 unge
 
 ## Der natürliche Logarithmus und die Euler'sche Zahl
 
-Die Euler'sche Zahl e ungefähr gleich 2,71828 ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
+Die **Euler'sche Zahl** e ungefähr gleich 2,71828 (benannt nach Leonhard Euler) ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
 
 In der Biologie und Medizin folgen das Wachstum von Bakterienkulturen, die Abnahme von Medikamenten im Blut und der radioaktive Zerfall dem Gesetz N(t) = N0 × e hoch (k × t), wobei k > 0 für Wachstum und k < 0 für Zerfall steht.
 
@@ -417,7 +417,7 @@ Die Halbwertszeit T(1/2) ist die Zeit, nach der eine Größe auf die Hälfte ihr
 
 N(t) = N0 × (1/2) hoch (t / T(1/2)) = N0 × 2 hoch (−t / T(1/2)) = N0 × e hoch (−lambda × t),
 
-wobei lambda = ln(2) / T(1/2) ungefähr gleich 0,693 / T(1/2) die Zerfallskonstante ist.
+wobei lambda = ln(2) / T(1/2) ungefähr gleich 0,693 / T(1/2) die **Zerfallskonstante** (Geschwindigkeit des Abbaus) ist.
 
 Beispiele:
 - Nach 1 Halbwertszeit: 50%
@@ -439,7 +439,7 @@ Sehr große und sehr kleine Zahlen werden als Produkt einer Zahl zwischen 1 und 
 a × 10 hoch n (wissenschaftliche Notation oder Exponentialschreibweise).
 
 Beispiele:
-- Avogadro-Konstante: 6,022 × 10 hoch 23 pro Mol
+- Avogadro-Konstante (Teilchenzahl pro Mol): 6,022 × 10 hoch 23 pro Mol
 - Elementarladung: 1,602 × 10 hoch (−19) C
 - Erythrozytendurchmesser: ungefähr 8 Mikrometer = 8 × 10 hoch (−6) m
 
@@ -968,7 +968,7 @@ Beispiel: 1 / (Wurzel aus 3 − 1). Erweitern mit (Wurzel aus 3 + 1):
 
 Jede quadratische Funktion f(x) = ax² + bx + c lässt sich durch quadratisches Ergänzen in die Scheitelpunktform umschreiben:
 
-f(x) = a(x − d)² + e, wobei (d, e) der Scheitelpunkt (Vertex) der Parabel ist.
+f(x) = a(x − d)² + e, wobei (d, e) der **Scheitelpunkt** (Vertex, Umkehrpunkt) der Parabel ist.
 
 Der Scheitelpunkt ist das Minimum (wenn a > 0) oder das Maximum (wenn a < 0) der Funktion.
 

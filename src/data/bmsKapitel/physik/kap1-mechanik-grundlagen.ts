@@ -50,7 +50,7 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 | Stoffmenge | n | Mol | mol |
 | Lichtstärke | I_v | Candela | cd |
 
-**Definitionen (Auszug):** Die **Länge** wird in **Meter (m)** gemessen — heute definiert über die Lichtgeschwindigkeit: 1 m ist die Strecke, die Licht im Vakuum in 1/299 792 458 s zurücklegt. Die **Masse** hat die Einheit **Kilogramm (kg)**; seit 2019 wird sie über die Planck-Konstante definiert (nicht mehr über einen physischen Zylinder). Die **Zeit** in **Sekunden (s)** wird durch Atomuhren realisiert — 1 s entspricht 9 192 631 770 Schwingungen der Cäsium-133-Hyperfeinstruktur.
+**Definitionen (Auszug):** Die **Länge** wird in **Meter (m)** gemessen — heute definiert über die Lichtgeschwindigkeit: 1 m ist die Strecke, die Licht im Vakuum in 1/299 792 458 s zurücklegt. Die **Masse** hat die Einheit **Kilogramm (kg)**; seit 2019 wird sie über die Planck-Konstante (fundamentale Naturkonstante der Quantenphysik) definiert (nicht mehr über einen physischen Zylinder). Die **Zeit** in **Sekunden (s)** wird durch Atomuhren realisiert — 1 s entspricht 9 192 631 770 Schwingungen der Cäsium-133-Hyperfeinstruktur (Energieaufspaltung durch Kern-Elektron-Wechselwirkung).
 
 > **Merke:** Es gibt **genau 7** SI-Basisgrößen. Alle anderen Einheiten (z. B. Newton, Pascal, Joule) sind **abgeleitet** — sie lassen sich als Produkt von Potenzen der Basiseinheiten schreiben.
 
@@ -119,7 +119,7 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 > **Merke:** **Extensiv** = proportional zur Menge (Masse, Volumen). **Intensiv** = unabhängig von der Menge (Temperatur, Konzentration). Zwei Tassen Kaffee → doppeltes Volumen, aber dieselbe Temperatur.
 
-**Klinisch:** Die **Konzentration** eines Medikaments (intensiv, z. B. mg/L) ist für die Wirkung entscheidend, nicht die absolute Dosis allein. Die **Dosis** (extensiv, in mg) wird so gewählt, dass die gewünschte Plasmakonzentration erreicht wird — unter Berücksichtigung von Verteilungsvolumen und Nierenclearance.
+**Klinisch:** Die **Konzentration** eines Medikaments (intensiv, z. B. mg/L) ist für die Wirkung entscheidend, nicht die absolute Dosis allein. Die **Dosis** (extensiv, in mg) wird so gewählt, dass die gewünschte Plasmakonzentration erreicht wird — unter Berücksichtigung von Verteilungsvolumen und Nierenclearance (Fähigkeit der Niere, einen Stoff aus dem Blut zu entfernen).
 
 ---
 
@@ -418,9 +418,9 @@ Klinisch wichtig:
 - Energie pro Mol ATP: ~30,5 kJ/mol
 
 **Zeit:**
-- Halbwertszeit von ¹⁸F (PET-Tracer): ~110 min = 6600 s
+- Halbwertszeit von ¹⁸F (PET-Tracer, Positronen-Emissions-Tomographie): ~110 min = 6600 s
 - Halbwertszeit von ¹³¹I (Schilddrüsentherapie): ~8 Tage = ~6,9 × 10⁵ s
-- Aktionspotentialdauer: ~1–5 ms = 10⁻³ s
+- Aktionspotentialdauer (elektrischer Nerven-/Muskelimpuls): ~1–5 ms = 10⁻³ s
 
 Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitätsprüfung im klinischen Alltag: Wenn ein Laborwert "außerhalb des Rahmens" erscheint, könnte ein Einheitenfehler vorliegen.
 
@@ -453,7 +453,7 @@ Gesamtmenge = 8 µg/mL × 17 500 mL = 140 000 µg = 140 mg = **0,14 g**.
 Einheitenkette: µg/mL × mL = µg → ÷ 10³ = mg → ÷ 10³ = g.
 
 **Beispiel 3 — Röntgenstrahlung Frequenz in Wellenlänge:**
-Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.`,
+Röntgenstrahlung f = 3 × 10¹⁸ Hz. Wellenlänge λ = c/f = (3 × 10⁸ m/s) / (3 × 10¹⁸ s⁻¹) = 10⁻¹⁰ m = **0,1 nm = 1 Å** (Ångström, historische Längeneinheit = 10⁻¹⁰ m). Diese Wellenlänge liegt im Bereich atomarer Abstände — erklärt, warum Röntgenstrahlung Kristallstrukturen auflösen kann.`,
 
       lernziele: [
         "Die SI-Präfixe von Femto (10⁻¹⁵) bis Tera (10¹²) mit Symbolen und Faktoren nennen können",
@@ -743,12 +743,12 @@ Zahlenbeispiel: Sturz aus h = 3 m → v = √(2 × 9,81 × 3) = √58,86 ≈ **7
 
 **Beispiel 2 — Blutdruck: mmHg → cmH₂O → Pa:**
 Systolischer Blutdruck 140 mmHg.
-In cmH₂O: 140 × 1,36 = **190,4 cmH₂O** (Vergleich: Beatmungsdruck PEEP ~5–15 cmH₂O).
+In cmH₂O: 140 × 1,36 = **190,4 cmH₂O** (Vergleich: Beatmungsdruck PEEP (positiver endexspiratorischer Druck) ~5–15 cmH₂O).
 In Pascal: 140 × 133,3 = **18 662 Pa ≈ 18,7 kPa**.
 Dimensionscheck: mmHg × (Pa/mmHg) = Pa ✓.
 
 **Beispiel 3 — Kalorimetrische Berechnung einer Mahlzeit:**
-Mahlzeit: 80 g Kohlenhydrate, 30 g Fett, 25 g Protein.
+Mahlzeit: 80 g Kohlenhydrate (KH), 30 g Fett, 25 g Protein.
 KH: 80 × 17 kJ/g = 1 360 kJ. Fett: 30 × 37 kJ/g = 1 110 kJ. Protein: 25 × 17 kJ/g = 425 kJ.
 Gesamt: 1 360 + 1 110 + 425 = **2 895 kJ ≈ 692 kcal** (÷ 4,184).
 Bei Grundumsatz ~7 500 kJ/d deckt diese Mahlzeit ~38,6 % des Tagesbedarfs.
@@ -964,7 +964,7 @@ Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich K�
 
 Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, solange keine resultierende äußere Kraft auf ihn wirkt. Trägheit (lat. inertia) bedeutet Widerstandsfähigkeit gegen Zustandsänderung. Die Trägheit ist proportional zur Masse: Ein 80-kg-Mensch hat die doppelte Trägheit eines 40-kg-Kindes.
 
-Im klinischen Kontext ist das Trägheitsgesetz bei Dezelerationstraumen entscheidend: Bei einem Frontalaufprall bremst das Fahrzeug schlagartig ab, aber Organe (Leber, Milz, Aorta) bewegen sich aufgrund ihrer Trägheit weiter vorwärts. Dabei können Gefäßstiele abreißen — besonders die Aorta descendens ist anfällig für Transektionen, weil sie an der Wirbelsäule fixiert ist, während der Aortenbogen sich weiter vorwärts bewegt.
+Im klinischen Kontext ist das Trägheitsgesetz bei Dezelerationstraumen entscheidend: Bei einem Frontalaufprall bremst das Fahrzeug schlagartig ab, aber Organe (Leber, Milz, Aorta) bewegen sich aufgrund ihrer Trägheit weiter vorwärts. Dabei können Gefäßstiele abreißen — besonders die Aorta descendens (absteigender Teil der Hauptschlagader) ist anfällig für Transektionen (vollständige Gefäßdurchtrennung), weil sie an der Wirbelsäule fixiert ist, während der Aortenbogen sich weiter vorwärts bewegt.
 
 ## Das zweite Newtonsche Gesetz — Aktionsprinzip
 
@@ -984,7 +984,7 @@ Beim Laufen: Der Fuß drückt die Erde nach hinten-unten (Aktionskraft). Die Erd
 
 ## Freie und erzwungene Schwingungen
 
-Ein Pendel schwingt mit seiner Eigenfrequenz f₀ = (1/2π)·√(g/l). Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist — dann wächst die Amplitude dramatisch. Im Körper: Knochen und Gelenke haben mechanische Eigenfrequenzen. Vibrationstraining nutzt Resonanzeffekte zur Muskelstimulation.
+Ein Pendel schwingt mit seiner Eigenfrequenz (natürliche Schwingungsfrequenz eines Systems) f₀ = (1/2π)·√(g/l). Resonanz (Mitschwingen bei passender Frequenz) tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist — dann wächst die Amplitude dramatisch. Im Körper: Knochen und Gelenke haben mechanische Eigenfrequenzen. Vibrationstraining nutzt Resonanzeffekte zur Muskelstimulation.
 
 ## Rechenbeispiele
 
@@ -1174,7 +1174,7 @@ Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, da
 
 Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
 
-Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als auch kinetische Energie erhalten. Bei einem inelastischen Stoß (Knetmasse-Kollision) ist nur der Impuls erhalten — kinetische Energie wird in Wärme, Verformungsenergie umgewandelt. Beim vollkommen unelastischen Stoß vereinigen sich beide Körper: m₁·v₁ + m₂·v₂ = (m₁+m₂)·v'. In der Medizin: Ballistisches Trauma — ein Projektil überträgt seinen Impuls auf das Gewebe: F·Δt = Δp. Hohle Projektile (Deformationsgeschosse) verlängern den Kontaktzeitraum und erhöhen die Gewebedeformation.
+Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als auch kinetische Energie erhalten. Bei einem inelastischen Stoß (Knetmasse-Kollision) ist nur der Impuls erhalten — kinetische Energie wird in Wärme, Verformungsenergie umgewandelt. Beim vollkommen unelastischen Stoß vereinigen sich beide Körper: m₁·v₁ + m₂·v₂ = (m₁+m₂)·v'. In der Medizin: Ballistisches Trauma — ein Projektil überträgt seinen Impuls auf das Gewebe: F·Δt = Δp. Hohle Projektile (Deformationsgeschosse, die sich beim Aufprall aufpilzen) verlängern den Kontaktzeitraum und erhöhen die Gewebedeformation.
 
 ## Arbeit, Energie und der Energieerhaltungssatz
 
@@ -1202,7 +1202,7 @@ Wirkungsgrad η = P_nutz / P_ges · 100 %. Der menschliche Körper hat beim Lauf
 
 ## Federkraft und elastische Energie
 
-In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Federkraft** folgt dem Hookeschen Gesetz: F = -k·x, wobei k die Federkonstante (N/m) und x die Auslenkung aus der Ruheposition ist. Die in einer gedehnten Feder gespeicherte elastische Energie beträgt E_el = ½·k·x². Sehnen und Bänder verhalten sich näherungsweise wie Federn — sie speichern bei Dehnung Energie, die bei Entlastung wieder freigegeben wird. Die Achillessehne speichert beim Laufen pro Schritt ca. 35 J elastische Energie und gibt sie beim Abstoß zurück — ein wichtiger Beitrag zur Laufeffizienz. Auch die Aortenwand fungiert als elastisches Reservoir (Windkesselfunktion): Während der Systole dehnt sich die Aorta und speichert Energie, die während der Diastole den Blutfluss aufrechterhält.
+In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Federkraft** folgt dem Hookeschen Gesetz (Kraft proportional zur Auslenkung): F = -k·x, wobei k die Federkonstante (N/m) und x die Auslenkung aus der Ruheposition ist. Die in einer gedehnten Feder gespeicherte elastische Energie beträgt E_el = ½·k·x². Sehnen und Bänder verhalten sich näherungsweise wie Federn — sie speichern bei Dehnung Energie, die bei Entlastung wieder freigegeben wird. Die Achillessehne speichert beim Laufen pro Schritt ca. 35 J elastische Energie und gibt sie beim Abstoß zurück — ein wichtiger Beitrag zur Laufeffizienz. Auch die Aortenwand fungiert als elastisches Reservoir (Windkesselfunktion, Pufferung der pulsatilen Herzauswurfkraft): Während der Systole dehnt sich die Aorta und speichert Energie, die während der Diastole den Blutfluss aufrechterhält.
 
 ## Drehimpuls und Rotationsenergie
 
@@ -1379,7 +1379,7 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
 
 
 
-Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
+Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik (Lehre von strömenden Flüssigkeiten und Gasen) die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
 
 ## Statik und Gleichgewichtsbedingungen
 
@@ -1393,13 +1393,13 @@ Im Körper: Der Unterarm ist ein einarmiger Hebel (Typ 3). Der Bizeps (Kraft F_B
 
 ## Druck in Flüssigkeiten
 
-Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen gleich (Pascal'sches Prinzip). Der hydrostatische Druck in einer Flüssigkeit der Dichte ρ in Tiefe h beträgt p = ρ·g·h. Im menschlichen Körper: Der arterielle Blutdruck (systolisch ca. 120 mmHg) überwindet den peripheren Gefäßwiderstand und treibt das Blut durch den Kreislauf. Der venöse Druck (ca. 5 mmHg) ist viel niedriger — Klappen verhindern Rückfluss.
+Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen gleich (Pascal'sches Prinzip, gleichmäßige Druckausbreitung in Fluiden). Der hydrostatische Druck in einer Flüssigkeit der Dichte ρ in Tiefe h beträgt p = ρ·g·h. Im menschlichen Körper: Der arterielle Blutdruck (systolisch ca. 120 mmHg) überwindet den peripheren Gefäßwiderstand und treibt das Blut durch den Kreislauf. Der venöse Druck (ca. 5 mmHg) ist viel niedriger — Klappen verhindern Rückfluss.
 
 **Auftrieb:** Ein in eine Flüssigkeit eingetauchter Körper erfährt eine Auftriebskraft F_A = ρ_Fl · g · V_verdrängt (Archimedisches Prinzip). Für den menschlichen Körper (Dichte ca. 0,98 kg/dm³ im Wasser) ist der Auftrieb fast vollständig gleich dem Gewicht — das ermöglicht therapeutisches Schwimmen und Rehabilitationsübungen im Wasser.
 
 ## Strömungslehre (Kurzüberblick)
 
-Die Kernformeln der Strömungslehre — Kontinuitätsgleichung (A₁v₁ = A₂v₂), Bernoulli-Gleichung (½ρv² + ρgh + p = const) und Poiseuille-Gesetz (Q = πr⁴Δp/(8ηl)) — werden ausführlich im **Fluidmechanik-Kapitel** behandelt. Dort findest du Herleitungen, Rechenbeispiele und klinische Anwendungen (Koronarstenosen, Blutfluss in Kapillaren, Reynolds-Zahl).
+Die Kernformeln der Strömungslehre — Kontinuitätsgleichung (Massenerhaltung: A₁v₁ = A₂v₂), Bernoulli-Gleichung (Energieerhaltung in Strömungen: ½ρv² + ρgh + p = const) und Poiseuille-Gesetz (Durchfluss durch Rohre: Q = πr⁴Δp/(8ηl)) — werden ausführlich im **Fluidmechanik-Kapitel** behandelt. Dort findest du Herleitungen, Rechenbeispiele und klinische Anwendungen (Koronarstenosen, Blutfluss in Kapillaren, Reynolds-Zahl).
 
 > **Merke:** Poiseuille: Q ~ r⁴. Radius halbiert → Fluss auf 1/16. → Details siehe Fluidmechanik-Kapitel.
 
@@ -1584,13 +1584,13 @@ Gleichförmige Kreisbewegung bedeutet konstante Bahngeschwindigkeit v bei sich s
 
 Wichtige Beziehungen: Umlaufzeit T = 2π/ω. Frequenz f = 1/T. Bahngeschwindigkeit v = ω·r = 2πr/T.
 
-**Scheinkräfte bei Rotation:** Im rotierenden Bezugssystem wirken Scheinkräfte (Trägheitskräfte): Zentrifugalkraft F_cf = m·ω²·r (nach außen gerichtet) und Corioliskraft (bei Bewegungen im rotierenden System).
+**Scheinkräfte bei Rotation:** Im rotierenden Bezugssystem wirken Scheinkräfte (Trägheitskräfte): Zentrifugalkraft F_cf = m·ω²·r (nach außen gerichtet) und Corioliskraft (Ablenkungskraft bei Bewegungen im rotierenden System).
 
 
 
 ## Labormedizin: Zentrifugation
 
-Die Zentrifuge nutzt die Zentrifugalkraft zur Trennung von Blutbestandteilen. Bei r = 10 cm und ω = 300 rad/s berechnet sich die Zentrifugalbeschleunigung: a = ω²·r = 90000 · 0,1 = 9000 m/s² ≈ 918 g. In diesem Feld sedimentieren Erythrozyten (dichteste Komponente), dann Leukozyten und Thrombozyten (Buffy coat), dann Plasma (hellgelb) von unten nach oben. Der Hämatokrit wird durch Mikrohämatokrit-Zentrifugation bestimmt.
+Die Zentrifuge nutzt die Zentrifugalkraft zur Trennung von Blutbestandteilen. Bei r = 10 cm und ω = 300 rad/s berechnet sich die Zentrifugalbeschleunigung: a = ω²·r = 90000 · 0,1 = 9000 m/s² ≈ 918 g. In diesem Feld sedimentieren Erythrozyten (dichteste Komponente), dann Leukozyten und Thrombozyten (Buffy coat, helle Zwischenschicht), dann Plasma (hellgelb) von unten nach oben. Der Hämatokrit (Anteil der Erythrozyten am Blutvolumen) wird durch Mikrohämatokrit-Zentrifugation bestimmt.
 
 **Relative Zentrifugalbeschleunigung (RCF):** RCF = (ω²·r)/g. Gängige Vereinfachung: RCF = 1,118 · 10⁻⁵ · n² · r (mit n in rpm und r in mm).
 
@@ -1606,7 +1606,7 @@ Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische 
 
 ## g-Kräfte in der Medizin
 
-Die Belastung des menschlichen Körpers durch Beschleunigung wird häufig in Vielfachen der Erdbeschleunigung g angegeben. Im Alltag erfahren wir 1 g. In einer Achterbahn wirken kurzzeitig 3–5 g. Piloten von Kampfjets erleben bis zu 9 g — dabei wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling.
+Die Belastung des menschlichen Körpers durch Beschleunigung wird häufig in Vielfachen der Erdbeschleunigung g angegeben. Im Alltag erfahren wir 1 g. In einer Achterbahn wirken kurzzeitig 3–5 g. Piloten von Kampfjets erleben bis zu 9 g — dabei wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling (Blutversacken in den Beinen).
 
 In der Notfallmedizin sind g-Kräfte bei Dezelerationstraumen zentral: Ein Frontalaufprall bei 50 km/h mit Bremsstrecke 50 cm erzeugt ca. 20 g. Die dabei auf innere Organe wirkenden Kräfte (F = m·a = m·20g) können Gefäßabrisse (Aortentranssektion), Leberrupturen und diffuse axonale Hirnverletzungen verursachen. Sicherheitsgurte und Airbags verlängern die Bremsstrecke und reduzieren damit die maximale g-Belastung — ein direktes Resultat von F = m·a.
 

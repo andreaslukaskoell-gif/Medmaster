@@ -1069,17 +1069,49 @@ export function validateFigurenTask(task: FigureAssembleTask): boolean {
 }
 
 // =============================================================================
-// DISTRACTORS – nur exakte Formen aus den 14 Strategie-Formen
+// DISTRACTORS – ähnliche Formen wie offiziell (gleiche Formfamilie bevorzugt)
 // =============================================================================
-// Keine Skalierung, keine Verzerrung: Falsche Optionen = andere Formen aus der Liste.
-// Korrekte Antwort = exakt die ursprüngliche Lösungsform (gleicher Fingerprint).
+// Offizielles Prinzip: Distraktoren sind der richtigen Antwort ÄHNLICH.
+// Halbkreis → Viertelkreis, Dreiviertelkreis, Vollkreis (nicht Siebeneck).
+// Quadrat → Raute, Parallelogramm, Trapez (nicht L-Form).
+
+/** Formfamilien: Distraktoren kommen bevorzugt aus derselben Familie. */
+const SHAPE_FAMILIES: Record<string, Polygon[]> = {
+  circles: [QUARTER_CIRCLE, HALF_CIRCLE, THREE_QUARTER_CIRCLE, FULL_CIRCLE],
+  quads: [SQUARE, RHOMBUS, PARALLELOGRAM, TRAPEZ],
+  polygons: [PENTAGON, HEXAGON, HEPTAGON, OCTAGON],
+  triangle: [TRIANGLE],
+  lshape: [L_SHAPE],
+};
+
+/** Findet die Familie einer Form. */
+function getShapeFamily(poly: Polygon): string {
+  const fp = polygonFingerprint(poly);
+  for (const [family, shapes] of Object.entries(SHAPE_FAMILIES)) {
+    if (shapes.some((s) => polygonFingerprint(s) === fp)) return family;
+  }
+  return "unknown";
+}
 
 /** Kopie eines Polygons (exakte Geometrie, keine Änderung). */
 function copyPolygon(poly: Polygon): Polygon {
   return { points: poly.points.map((p) => ({ x: p.x, y: p.y })) };
 }
 
-/** Erzeugt 3 Distraktoren: exakt 3 andere Formen aus ALLOWED_SOLUTION_SHAPES. */
+/** Fisher-Yates shuffle (in-place). */
+function shuffleArray<T>(arr: T[], rng: () => number): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [arr[i], arr[j]] = [arr[j]!, arr[i]!];
+  }
+  return arr;
+}
+
+/**
+ * Erzeugt 3 Distraktoren: bevorzugt aus derselben Formfamilie, dann auffüllen.
+ * Offizielles Prinzip: Wenn Antwort = Halbkreis → Distraktoren = Viertelkreis, 3/4-Kreis, Vollkreis.
+ * Wenn Antwort = Quadrat → Distraktoren = Raute, Parallelogramm, Trapez.
+ */
 function buildDistractors(
   target: Polygon,
   count: number,
@@ -1088,13 +1120,43 @@ function buildDistractors(
 ): Polygon[] {
   void _excludeFingerprint;
   const targetFp = polygonFingerprint(target);
-  const others = ALLOWED_SOLUTION_SHAPES.filter((s) => polygonFingerprint(s) !== targetFp);
-  const shuffled = [...others];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  const family = getShapeFamily(target);
+
+  // 1. Formen aus gleicher Familie (ohne die richtige Antwort)
+  const sameFamily = (SHAPE_FAMILIES[family] ?? []).filter(
+    (s) => polygonFingerprint(s) !== targetFp
+  );
+  shuffleArray(sameFamily, rng);
+
+  // 2. Formen aus benachbarter Familie (quads↔polygons, circles↔lshape)
+  const neighborMap: Record<string, string[]> = {
+    circles: ["lshape", "quads"],
+    quads: ["polygons", "triangle"],
+    polygons: ["quads", "triangle"],
+    triangle: ["quads", "polygons"],
+    lshape: ["quads", "circles"],
+  };
+  const neighborFamilies = neighborMap[family] ?? [];
+  const neighbors: Polygon[] = [];
+  for (const nf of neighborFamilies) {
+    for (const s of SHAPE_FAMILIES[nf] ?? []) {
+      if (polygonFingerprint(s) !== targetFp) neighbors.push(s);
+    }
   }
-  return shuffled.slice(0, count).map((s) => copyPolygon(s));
+  shuffleArray(neighbors, rng);
+
+  // 3. Rest (alle anderen)
+  const rest = ALLOWED_SOLUTION_SHAPES.filter(
+    (s) =>
+      polygonFingerprint(s) !== targetFp &&
+      !sameFamily.some((f) => polygonFingerprint(f) === polygonFingerprint(s)) &&
+      !neighbors.some((f) => polygonFingerprint(f) === polygonFingerprint(s))
+  );
+  shuffleArray(rest, rng);
+
+  // Priorität: gleiche Familie → Nachbarn → Rest
+  const pool = [...sameFamily, ...neighbors, ...rest];
+  return pool.slice(0, count).map((s) => copyPolygon(s));
 }
 
 // =============================================================================
@@ -1244,7 +1306,26 @@ export function generateFigurenTrainingSet(
 // OFFIZIELLE BEISPIELAUFGABEN – 1:1 aus IB_FZ_26.pdf
 // =============================================================================
 
-const SQUARE_PIECES_2: Polygon[] = (() => {
+// Offizielle Beispiele – Strukturen nach IB_FZ_26.pdf
+// Geometrie approximiert, Distraktoren nach offiziellem Muster (ähnliche Formen).
+
+const PENTAGON_PIECES_2: Polygon[] = (() => {
+  const pts = PENTAGON.points;
+  // Diagonale von Ecke 0 zu Ecke 2
+  return [{ points: [pts[0], pts[1], pts[2]] }, { points: [pts[0], pts[2], pts[3], pts[4]] }];
+})();
+
+const HEXAGON_PIECES_3: Polygon[] = (() => {
+  const pts = HEXAGON.points;
+  const c = centroid(HEXAGON);
+  return [
+    { points: [{ ...c }, pts[0], pts[1], pts[2]] },
+    { points: [{ ...c }, pts[2], pts[3], pts[4]] },
+    { points: [{ ...c }, pts[4], pts[5], pts[0]] },
+  ];
+})();
+
+const SQUARE_PIECES_DIAGONAL: Polygon[] = (() => {
   const [p0, p1, p2, p3] = SQUARE.points;
   return [{ points: [p0, p1, p2] }, { points: [p0, p2, p3] }];
 })();
@@ -1260,28 +1341,76 @@ const SQUARE_PIECES_4: Polygon[] = (() => {
   ];
 })();
 
+const TRIANGLE_PIECES_3: Polygon[] = (() => {
+  const pts = TRIANGLE.points;
+  const m01 = mid(pts[0], pts[1]);
+  const m12 = mid(pts[1], pts[2]);
+  const m20 = mid(pts[2], pts[0]);
+  return [
+    { points: [pts[0], m01, m20] },
+    { points: [m01, pts[1], m12] },
+    { points: [m20, m12, pts[2]] },
+  ];
+})();
+
 export const OFFICIAL_FZ_EXAMPLES: readonly FigureAssembleTask[] = [
+  // Beispiel (S.2): 2 Teile → Fünfeck (A). Distraktoren: Sechseck, Quadrat, Achteck.
   {
-    id: "fz-off-1",
-    pieces: SQUARE_PIECES_2,
-    target: SQUARE,
-    options: [SQUARE, RHOMBUS, TRAPEZ, PARALLELOGRAM, OPTION_E],
+    id: "fz-off-intro",
+    pieces: PENTAGON_PIECES_2,
+    target: PENTAGON,
+    options: [PENTAGON, HEXAGON, SQUARE, OCTAGON, OPTION_E],
     correctIndex: 0,
     difficulty: "easy",
-    explanation:
-      "Die zwei Dreiecke ergeben zusammengesetzt ein Quadrat. Die Diagonale verläuft von einer Ecke zur gegenüberliegenden.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 1 (Platzhalter; aus PDF 1:1 übernehmen)",
+    explanation: "Die zwei Teile (Dreieck + Trapez) ergeben zusammen ein regelmäßiges Fünfeck.",
+    source: "IB_FZ_26.pdf – Einführungsbeispiel",
   },
+  // Beispielaufgabe 1 (S.2): Teile → Sechseck (C). Distraktoren: ähnliche Vielecke.
   {
-    id: "fz-off-2",
-    pieces: SQUARE_PIECES_4,
-    target: SQUARE,
-    options: [RHOMBUS, SQUARE, TRAPEZ, PARALLELOGRAM, OPTION_E],
-    correctIndex: 1,
+    id: "fz-off-1",
+    pieces: HEXAGON_PIECES_3,
+    target: HEXAGON,
+    options: [PENTAGON, HEPTAGON, HEXAGON, OCTAGON, OPTION_E],
+    correctIndex: 2,
     difficulty: "easy",
     explanation:
-      "Die vier Teile sind gleich große Dreiecke und setzen sich zu einem Quadrat zusammen.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 2 (Platzhalter; aus PDF 1:1 übernehmen)",
+      "Die drei Teile ergeben ein regelmäßiges Sechseck. Die Distraktoren sind andere Vielecke mit ähnlicher Form.",
+    source: "IB_FZ_26.pdf – Beispielaufgabe 1 (Antwort C)",
+  },
+  // Beispielaufgabe 3 (S.3): 4–5 Teile → Rechteck/Quadrat (D). Distraktoren: Fünfeck, Fünfeck, Trapez.
+  {
+    id: "fz-off-3",
+    pieces: SQUARE_PIECES_DIAGONAL,
+    target: SQUARE,
+    options: [PENTAGON, HEXAGON, TRAPEZ, SQUARE, OPTION_E],
+    correctIndex: 3,
+    difficulty: "medium",
+    explanation: "Die Teile ergeben ein Quadrat (D). Fünfeck, Sechseck und Trapez passen nicht.",
+    source: "IB_FZ_26.pdf – Beispielaufgabe 3 (Antwort D)",
+  },
+  // Beispielaufgabe 4 (S.4): Viele Teile → Quadrat (B). Distraktoren: Parallelogramm, Fünfeck, Raute.
+  {
+    id: "fz-off-4",
+    pieces: SQUARE_PIECES_4,
+    target: SQUARE,
+    options: [PARALLELOGRAM, SQUARE, PENTAGON, RHOMBUS, OPTION_E],
+    correctIndex: 1,
+    difficulty: "medium",
+    explanation:
+      "Die vier Dreiecke setzen sich zu einem Quadrat (B) zusammen. Die Distraktoren sind ähnliche Vierecke und ein Fünfeck.",
+    source: "IB_FZ_26.pdf – Beispielaufgabe 4 (Antwort B)",
+  },
+  // Beispielaufgabe 5 (S.4): Teile → Dreieck = E (keine der Optionen A–D).
+  {
+    id: "fz-off-5",
+    pieces: TRIANGLE_PIECES_3,
+    target: TRIANGLE,
+    options: [SQUARE, PENTAGON, TRAPEZ, HEXAGON, OPTION_E],
+    correctIndex: 4,
+    difficulty: "medium",
+    explanation:
+      "Die Teile ergeben ein Dreieck, das in keiner der Optionen A–D vorkommt. Daher ist E richtig.",
+    source: "IB_FZ_26.pdf – Beispielaufgabe 5 (Antwort E = Dreieck)",
   },
 ];
 

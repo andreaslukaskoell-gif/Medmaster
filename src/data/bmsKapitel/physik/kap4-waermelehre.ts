@@ -360,7 +360,7 @@ Konvektion überträgt Wärme durch Materialtransport (Strömung) in Flüssigkei
 
 **Erzwungene Konvektion**: Externes Gebläse oder Pumpe beschleunigt den Transport (z. B. Luftkühlung von Fieber durch Ventilator, Blutkreislauf als Wärmetransportsystem).
 
-Im menschlichen Körper transportiert das Blut Wärme aus dem Körperkern zur Peripherie (Haut). Bei Kälte wird die Hautdurchblutung durch Vasokonstriktion reduziert, um Wärmeverlust zu minimieren.
+Im menschlichen Körper transportiert das Blut Wärme aus dem Körperkern zur Peripherie (Haut). Bei Kälte wird die Hautdurchblutung durch Vasokonstriktion (Engstellung der Blutgefäße) reduziert, um Wärmeverlust zu minimieren.
 
 ## Wärmestrahlung
 
@@ -391,7 +391,7 @@ Mechanismen:
 2. **Wärmeabgabe**: Strahlung (≈50 %), Konvektion/Konduktion (≈25 %), Verdunstung/Schwitzen (≈25 %)
 3. **Regulation**: Hypothalamus als Thermostat, Vasomotorik, Schweißproduktion
 
-Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglandin E₂) nach oben verstellt. Antipyretika (z. B. Paracetamol, ASS) hemmen die Prostaglandin-Synthese (COX-Hemmung) und senken den Sollwert wieder.
+Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglandin E₂) nach oben verstellt. Antipyretika (fiebersenkende Mittel, z. B. Paracetamol, ASS) hemmen die Prostaglandin-Synthese (COX-Hemmung, Cyclooxygenase-Blockade) und senken den Sollwert wieder.
 
 ## Rechenbeispiele
 
@@ -416,7 +416,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 ## Klinische Vertiefung
 
-**Therapeutische Hypothermie:** Nach Herzstillstand wird die Körperkerntemperatur auf 32–34 °C gesenkt (konvektive Kühlung durch gekühlte Infusionslösung + externe Kühlpads). Dies senkt den Hirnmetabolismus um ~6 % pro °C und schützt Neurone vor Reperfusionsschäden.
+**Therapeutische Hypothermie:** Nach Herzstillstand wird die Körperkerntemperatur auf 32–34 °C gesenkt (konvektive Kühlung durch gekühlte Infusionslösung + externe Kühlpads). Dies senkt den Hirnmetabolismus um ~6 % pro °C und schützt Neurone vor Reperfusionsschäden (Zellschäden durch Wiederdurchblutung).
 
 **Wärmflasche vs. Rotlichtlampe:** Wärmflasche überträgt Wärme durch Konduktion (direkter Kontakt, λ_Wasser = 0,6 W/(m·K)) und Konvektion (Wasserströmung im Inneren). Rotlichtlampe überträgt durch Infrarotstrahlung (berührungslos, tiefere Gewebepenetration bei λ = 780–1400 nm). Die Infrarotlampe hat den Vorteil, dass sie Wärme direkt im Gewebe deponiert, ohne die Hautoberfläche zuerst maximal zu erwärmen — geringeres Verbrennungsrisiko.
 
@@ -976,7 +976,7 @@ V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ung
 
 **Pulsoxymetrie und Gaspartialdruecke:** Die O2-Saettigung des Haemoglobins haengt vom pO2 ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO2 auch die physikalisch geloeste O2-Menge im Plasma (ungefaehr 0,3 mL O2 pro 100 mL Blut bei pO2 = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O2) steigt der physikalisch geloeste Anteil auf ungefaehr 6 mL/100 mL — genug, um Gewebe auch ohne Haemoglobin zu versorgen.
 
-**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation haltbar gemacht: Einfrieren: Druck senken unter den Tripelpunkt: Eis sublimiert direkt zu Dampf. Das Produkt behaelt seine Struktur (Proteine bleiben funktionsfaehig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefuegt — die urspruengliche Loesung entsteht wieder.
+**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation (Gefriertrocknung) haltbar gemacht: Einfrieren: Druck senken unter den Tripelpunkt: Eis sublimiert direkt zu Dampf. Das Produkt behaelt seine Struktur (Proteine bleiben funktionsfaehig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefuegt — die urspruengliche Loesung entsteht wieder.
 
 > **Merke:** Phasenuebergaenge (Schmelzen, Verdampfen, Sublimieren) benoetigen Energie (latente Waerme), ohne dass sich die Temperatur aendert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
 

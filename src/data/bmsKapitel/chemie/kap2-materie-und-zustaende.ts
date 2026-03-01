@@ -27,7 +27,7 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Die Ideale Gasgleichung
 
-Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknuepft vier makroskopische Zustandsgroessen:
+Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknuepft vier makroskopische (mit bloßem Auge messbare) Zustandsgroessen:
 
 - **p** = Druck [Pa = N/m2] oder [bar, atm, mmHg]: Der Druck ist die Kraft pro Flaeche, die Gasteilchen durch Kollisionen auf die Behaelterwand ausueben.
 - **V** = Volumen [m3 oder L]: Das vom Gas eingenommene Raumvolumen.
@@ -80,7 +80,7 @@ Ein **ideales Gas** basiert auf zwei Modellannahmen:
 **Reale Gase** weichen davon ab, besonders bei:
 - **Hohem Druck**: Eigenvolumen der Molekuele wird relevant -> Gas schwerer komprimierbar -> Kompressibilitaetsfaktor Z = pV/(nRT) > 1.
 - **Tiefer Temperatur**: Van-der-Waals-Anziehungskraefte dominieren -> Gas leichter komprimierbar -> Z < 1.
-- **Nahe dem Kondensationspunkt**: Phasenuebergaenge treten auf.
+- **Nahe dem Kondensationspunkt** (Temperatur der Verfluessigung): Phasenuebergaenge treten auf.
 
 ## Van-der-Waals-Gleichung
 
@@ -107,7 +107,7 @@ Fuer H2O: a = 5,537, b = 0,03049. Fuer He: a = 0,0346, b = 0,0238 (fast ideales 
 
 ## Klinische Relevanz: Beatmungsmedizin
 
-In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (V_T ungefaehr 6-8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck haengt von der Compliance (Dehnbarkeit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch -- der gleiche Volumenhub erzeugt hoehere Druecke, was Barotrauma verursachen kann.
+In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ungefaehr 6-8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck haengt von der Compliance (Dehnbarkeit, Volumenänderung pro Druckeinheit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch -- der gleiche Volumenhub erzeugt hoehere Druecke, was Barotrauma (druckbedingte Gewebeschaedigung) verursachen kann.
 
 > **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck -> Barotrauma-Risiko bei ARDS.
 
@@ -126,7 +126,7 @@ Die mikroskopische Erklaerung liefert die **kinetische Gastheorie** (Maxwell, Bo
 - Mittlere kinetische Energie: E_kin = (3/2)*k_B*T, wobei k_B = 1,381 x 10 hoch -23 J/K.
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = Wurzel(3*R*T/M).
 - Bei 25 Grad C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefaehr 515 m/s.
-- Die **Maxwell-Boltzmann-Verteilung** beschreibt die Geschwindigkeitsverteilung: Die meisten Molekuele bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Molekuele ermoeglichen die Verdunstung unterhalb des Siedepunkts.
+- Die **Maxwell-Boltzmann-Verteilung** (statistische Verteilungsfunktion der Teilchengeschwindigkeiten) beschreibt die Geschwindigkeitsverteilung: Die meisten Molekuele bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Molekuele ermoeglichen die Verdunstung unterhalb des Siedepunkts.
 
 > **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = Wurzel(3RT/M) -- M muss in kg/mol eingesetzt werden!
 
@@ -377,7 +377,7 @@ Das Daltonsche Gesetz gilt exakt fuer ideale Gase, da ideale Gasteilchen keine W
 
 ## Alveolarer Gasaustausch
 
-In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** bei 37 Grad C und 101,325 kPa (nach Wasserdampfsaettigung):
+In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in den Lungenblaechen) bei 37 Grad C und 101,325 kPa (nach Wasserdampfsaettigung):
 
 - p(O2)_alveolar ungefaehr 13,3 kPa (100 mmHg)
 - p(CO2)_alveolar ungefaehr 5,3 kPa (40 mmHg)
@@ -406,7 +406,7 @@ wobei kH die substanzspezifische Henry-Konstante ist. Bei erhoehtem O2-Partialdr
 ## Gasgemische in der Medizin
 
 - **Raumluft:** O2 21 % -> p(O2) ungefaehr 21 kPa
-- **Sauerstofftherapie:** F_IO2 = 0,4-1,0 -> deutlich erhoehte p(O2) -> mehr physikalisch geloestes O2
+- **Sauerstofftherapie:** F_IO2 (inspiratorische O2-Fraktion) = 0,4-1,0 -> deutlich erhoehte p(O2) -> mehr physikalisch geloestes O2
 - **Lachgas/O2 (Entonox):** 50:50 N2O/O2 als Analgetikum
 - **Heliox (He/O2):** Bei obstruktiver Atemwegserkrankung -- He (leichter als N2) senkt den Gasstrooemungswiderstand
 - **Tauchgas:** Komprimierte Luft -> erhoehte Partialdrucke aller Gase -> N2-Narkose (Tiefenrausch) ab p(N2) > 3-4 bar
@@ -426,9 +426,9 @@ wobei kH die substanzspezifische Henry-Konstante ist. Bei erhoehtem O2-Partialdr
 ## Sauerstofftoxizitaet und Hyperoxie
 
 Zu hohe O2-Partialdrucke sind schaedlich! Bei F_IO2 > 0,6 ueber laengere Zeit drohen:
-- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizitaet -- Entzuendung der Alveolarepithelien, Surfactant-Schaedigung, ARDS-aehnliches Bild
+- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizitaet -- Entzuendung der Alveolarepithelien, Surfactant-Schaedigung (oberflaechenaktive Substanz der Alveolen), ARDS-aehnliches Bild
 - **Paul-Bert-Effekt**: Zerebrale O2-Toxizitaet bei p(O2) > 160 kPa (Tauchen mit reinem O2 tiefer als 6 m) -- Krampfanfaelle
-- **Retinopathia praematurorum**: Bei Fruehgeborenen fuehrt hoher p(O2) zu pathologischer Gefaessneubildung in der Retina -> Erblindungsgefahr
+- **Retinopathia praematurorum** (Netzhauterkrankung Fruehgeborener): Bei Fruehgeborenen fuehrt hoher p(O2) zu pathologischer Gefaessneubildung in der Retina (Netzhaut) -> Erblindungsgefahr
 
 > **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schaedigt Lunge, Gehirn und Retina. Zielwert: p(O2)_art = 8-13 kPa (60-100 mmHg).
 
@@ -645,7 +645,7 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
       ],
       content: `## Diffusion von Gasen
 
-**Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme: Systeme streben zum Zustand maximaler Unordnung.
+**Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme (Zunahme der Unordnung): Systeme streben zum Zustand maximaler Unordnung.
 
 Makroskopisch beschreibt das **erste Ficksche Diffusionsgesetz** die Diffusion:
 
@@ -739,15 +739,15 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 - Der gemessene CO-Uptake reflektiert ausschließlich die Membranparameter (A, d, D)
 
 **Erniedrigter DLCO** bei:
-- Lungenfibrose (d↑ → dickere Membran)
-- Emphysem (A↓ → zerstörte Alveolarfläche)
-- Pulmonale Hypertonie (Gefäßverdickung)
+- Lungenfibrose (narbiger Umbau des Lungengewebes; d↑ → dickere Membran)
+- Emphysem (Zerstoerung der Lungenblaechen; A↓ → zerstörte Alveolarfläche)
+- Pulmonale Hypertonie (Lungenhochdruck; Gefäßverdickung)
 - Anämie (weniger Hb zur CO-Bindung)
 
 **Erhöhter DLCO** bei:
-- Alveolärer Hämorrhagie (Blut in Alveolen bindet CO)
-- Polyzythämie (mehr Hb)
-- Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen)
+- Alveolaerer Haemorrhagie (Lungenblutung; Blut in Alveolen bindet CO)
+- Polyzythaemie (krankhafte Vermehrung roter Blutkoerperchen; mehr Hb)
+- Links-Rechts-Shunt (Kurzschlussverbindung im Herzen; erhöhtes pulmonales Blutvolumen)
 
 > **Merke:** DLCO ↓ bei Fibrose (d↑) und Emphysem (A↓) — beide Erkrankungen schädigen die Diffusionsstrecke durch verschiedene Mechanismen.`,
 
@@ -960,21 +960,21 @@ Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energ
 
 ### Fester Aggregatzustand (solid)
 
-Im festen Zustand überwiegen die intermolekularen Anziehungskräfte bei weitem über die thermische Bewegungsenergie. Die Teilchen sind in einer geordneten dreidimensionalen Struktur – dem **Kristallgitter** – fixiert. Sie verlassen ihre Gleichgewichtslage nicht, sondern führen nur kleine Schwingungen um diese aus (**Gitterschwingungen**). Feste Stoffe haben ein **definiertes Volumen** und eine **definierte Form**, sie sind praktisch **inkompressibel**.
+Im festen Zustand überwiegen die intermolekularen Anziehungskräfte bei weitem über die thermische Bewegungsenergie. Die Teilchen sind in einer geordneten dreidimensionalen Struktur – dem **Kristallgitter** – fixiert. Sie verlassen ihre Gleichgewichtslage nicht, sondern führen nur kleine Schwingungen um diese aus (**Gitterschwingungen**, auch Phononen genannt). Feste Stoffe haben ein **definiertes Volumen** und eine **definierte Form**, sie sind praktisch **inkompressibel**.
 
 Es werden mehrere Kristalltypen unterschieden:
 - **Ionenkristalle** (NaCl, CaCO₃): Kationen und Anionen wechselwirken elektrostatisch. Hohe Schmelzpunkte (NaCl: 801°C), hart, spröde, leitend nur in Schmelze/Lösung.
 - **Molekülkristalle** (Eis, Naphthalin, I₂): Moleküle werden durch Van-der-Waals-Kräfte oder Wasserstoffbrücken zusammengehalten. Niedrige Schmelzpunkte, weich.
 - **Kovalente Netzwerkkristalle** (Diamant, SiO₂): Atome durch kovalente Bindungen verknüpft. Extrem hart, sehr hohe Schmelzpunkte (Diamant: >3550°C).
-- **Metallkristalle** (Fe, Cu, Al): Positive Ionenrümpfe in einem Elektronengas. Gut elektrisch leitend, duktil, metallischer Glanz.
+- **Metallkristalle** (Fe, Cu, Al): Positive Ionenrümpfe in einem Elektronengas. Gut elektrisch leitend, duktil (verformbar ohne zu brechen), metallischer Glanz.
 
 ### Flüssiger Aggregatzustand (liquid)
 
-Im flüssigen Zustand sind kinetische und potentielle Energie ähnlich groß. Teilchen befinden sich in unmittelbarer Nachbarschaft (**Nahordnung** statt Fernordnung), können sich aber relativ zueinander bewegen. Flüssigkeiten haben ein **definiertes Volumen**, aber **keine eigene Form** – sie nehmen die Form ihres Behälters an.
+Im flüssigen Zustand sind kinetische und potentielle Energie ähnlich groß. Teilchen befinden sich in unmittelbarer Nachbarschaft (**Nahordnung**, also nur lokale Struktur, statt Fernordnung), können sich aber relativ zueinander bewegen. Flüssigkeiten haben ein **definiertes Volumen**, aber **keine eigene Form** – sie nehmen die Form ihres Behälters an.
 
-Die **Oberflächenspannung** ist eine direkte Folge der intermolekularen Kohäsionskräfte: Moleküle an der Oberfläche haben nach außen hin keine Nachbarn und erfahren eine resultierende Kraft nach innen. Wasser hat eine besonders hohe Oberflächenspannung (72 mN/m bei 20°C) aufgrund seiner Wasserstoffbrücken – dies ermöglicht den Kapillartransport in Pflanzen und im menschlichen Gefäßsystem.
+Die **Oberflächenspannung** ist eine direkte Folge der intermolekularen Kohäsionskräfte (Anziehung gleichartiger Teilchen): Moleküle an der Oberfläche haben nach außen hin keine Nachbarn und erfahren eine resultierende Kraft nach innen. Wasser hat eine besonders hohe Oberflächenspannung (72 mN/m bei 20°C) aufgrund seiner Wasserstoffbrücken – dies ermöglicht den Kapillartransport (Aufstieg von Fluessigkeit in engen Roehrchen) in Pflanzen und im menschlichen Gefäßsystem.
 
-Die **Viskosität** beschreibt den Fließwiderstand einer Flüssigkeit. Wasser hat bei 20°C eine dynamische Viskosität von 1,002 mPa·s, Blut etwa 3–4 mPa·s (bedingt durch Erythrozyten und Plasmaproteine). Erhöhte Blutviskosität (Polyzythämie, Paraproteinämie) erhöht den peripheren Gefäßwiderstand und belastet das Herz.
+Die **Viskosität** beschreibt den Fließwiderstand einer Flüssigkeit. Wasser hat bei 20°C eine dynamische Viskosität von 1,002 mPa·s, Blut etwa 3–4 mPa·s (bedingt durch Erythrozyten und Plasmaproteine). Erhöhte Blutviskosität (Polyzythaemie, Paraproteinaemie (krankhaft erhoehte Eiweiße im Blut)) erhöht den peripheren Gefäßwiderstand und belastet das Herz.
 
 ### Gasförmiger Aggregatzustand (gaseous)
 
@@ -1034,7 +1034,7 @@ Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgend
 
 ## Amorphe Feststoffe vs. Kristalline Feststoffe
 
-Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.
+Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g, Temperatur des Erweichens), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.
 
 > **Merke:** Amorph = keine Fernordnung, kein scharfer Schmelzpunkt, höhere Löslichkeit → pharmazeutisch bedeutsam für Bioverfügbarkeit von Arzneistoffen.`,
 
