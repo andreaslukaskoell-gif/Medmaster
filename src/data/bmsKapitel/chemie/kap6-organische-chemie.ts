@@ -48,7 +48,7 @@ C₂H₄ + Br₂ → C₂H₄Br₂ (1,2-Dibromethan)
 
 **Bromwasser-Nachweis:** Bromwasser (orange) entfärbt sich bei Anwesenheit einer Doppelbindung — die klassische Nachweisreaktion für Alkene und Alkine.
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 **Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation wird als Intermediat bevorzugt.
 
@@ -72,7 +72,7 @@ Alkine besitzen eine C≡C-Dreifachbindung (eine σ- und zwei π-Bindungen). Die
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 ## Polymerisation
 
@@ -336,7 +336,7 @@ Kohlenwasserstoffe spielten historisch als Narkosemittel eine Rolle (Chloroform 
       title: "Isomerie und Stereochemie",
       content: `## Konstitutionsisomere (Strukturisomere)
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Konstitutionsisomere unterscheiden sich in der Reihenfolge (Konnektivität) der Atome. Sie haben die gleiche Summenformel, aber verschiedene Bindungspartner und damit unterschiedliche chemische und physikalische Eigenschaften.
 
@@ -374,7 +374,7 @@ Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene 
 
 **Merke:** Chiral = asymmetrisch = vier verschiedene Gruppen am C-Atom.
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 **Enantiomere** sind nicht superponierbare Spiegelbilder. Sie haben:
 - Gleiche physikalische Eigenschaften (Siedepunkt, Schmelzpunkt, Löslichkeit, IR/UV-Spektrum)
@@ -619,7 +619,7 @@ Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transpo
       title: "Funktionelle Gruppen der Organik",
       content: `## Alkohole (−OH, Hydroxylgruppe)
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Alkohole enthalten eine Hydroxylgruppe (-OH) an einem Kohlenstoffatom. Die OH-Gruppe macht das Molekül polar und ermöglicht Wasserstoffbrückenbindungen.
 
@@ -677,7 +677,7 @@ Carbonsäuren enthalten die Carboxylgruppe -COOH (Kombination aus Carbonyl C=O u
 
 **Typische pKₐ-Werte:** 4–5 (deutlich schwächer als Salzsäure pKₐ = -7, aber Protonen-Donor!)
 
-{{DIAGRAM:ph-scale}}
+<!-- DIAGRAM:ph-scale -->
 
 **Wichtige Carbonsäuren:**
 - Ameisensäure (HCOOH, Methansäure): Ameisengift, Brennnesseln
@@ -693,7 +693,7 @@ Carbonsäuren enthalten die Carboxylgruppe -COOH (Kombination aus Carbonyl C=O u
 Ester entstehen durch Veresterung (Kondensationsreaktion) zwischen einer Carbonsäure und einem Alkohol unter Wasserabspaltung (Gleichgewichtsreaktion):
 R-COOH + R'-OH ⇌ R-COO-R' + H₂O
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 **Wichtige Ester:**
 - Triglyceride: Glycerin + 3 Fettsäuren → Neutralfette (Fette und Öle); Energiespeicher
@@ -925,7 +925,7 @@ Amine sind basisch (freies Elektronenpaar am N nimmt Protonen auf): R-NH₂ + H�
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Benzol und Aromatizität
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 Benzol (C₆H₆) ist die einfachste aromatische Verbindung. Es besitzt eine ringförmige planare Struktur mit sechs Kohlenstoffatomen und sechs π-Elektronen (delokalisiert über den gesamten Ring).
 
@@ -959,7 +959,7 @@ Aromate erhalten ihre Stabilität durch die delokalisierten π-Elektronen. Um di
 
 ## Heteroaromaten — Stickstoffhaltige Ringsysteme
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Heteroaromaten enthalten neben Kohlenstoff mindestens ein Heteroatom (N, O, S) im aromatischen Ring:
 - **Pyridin** (6-Ring, 1 N): Stickstoff-Analogon des Benzols, basisch (freies Elektronenpaar am N steht senkrecht zum π-System). Bestandteil von NAD⁺/NADH, Vitamin B₃ (Niacin)
@@ -1232,7 +1232,7 @@ Peptide: Dipeptid (2 AS), Oligopeptid (3–10 AS), Polypeptid (>10 AS), Protein 
       title: "Aminosäuren und Proteine",
       content: `## Grundstruktur der Aminosäuren
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Alle 20 proteinogenen Aminosäuren besitzen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen liegen als L-Enantiomere vor.
 
@@ -1262,7 +1262,7 @@ Die räumliche Organisation von Proteinen wird in vier Ebenen beschrieben:
 
 ## Isoelektrischer Punkt und Zwitterion
 
-{{DIAGRAM:ph-scale}}
+<!-- DIAGRAM:ph-scale -->
 
 Aminosäuren sind **Ampholyte** — sie tragen sowohl eine Amino- als auch eine Carboxylgruppe und existieren in Lösung als **Zwitterion**: bei physiologischem pH liegt die Aminogruppe protoniert (–NH₃⁺) und die Carboxylgruppe deprotoniert (–COO⁻) vor. Die Nettoladung hängt vom pH ab:
 
@@ -1303,7 +1303,7 @@ Nach der Translation werden viele Proteine chemisch modifiziert:
 
 ## Denaturierung
 
-{{DIAGRAM:enzyme-substrate}}
+<!-- DIAGRAM:enzyme-substrate -->
 
 Denaturierung = **Verlust der nativen Raumstruktur** (Sekundär- bis Quartärstruktur) bei erhaltener Primärstruktur.
 
@@ -1531,7 +1531,7 @@ Denaturierung kann **reversibel** sein (Renaturierung durch langsames Entfernen 
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       content: `## Monosaccharide — Grundbausteine
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Monosaccharide sind nicht weiter hydrolysierbare Zucker mit der allgemeinen Formel (CH₂O)ₙ. Einteilung nach Kettenlänge: **Triosen** (n=3, z.B. Glycerinaldehyd), Tetrosen, **Pentosen** (n=5: Ribose, Desoxyribose), **Hexosen** (n=6: Glucose, Fructose, Galactose). Einteilung nach funktioneller Gruppe: **Aldosen** (Aldehydgruppe am C1, z.B. Glucose) vs. **Ketosen** (Ketogruppe am C2, z.B. Fructose).
 
@@ -1555,7 +1555,7 @@ Die Glykolyse (Embden-Meyerhof-Weg) ist der zentrale Glucoseabbauweg im Zytoplas
 
 ## Disaccharide und glykosidische Bindung
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidische Bindung** (O-glykosidisch) zwischen dem anomeren C und einer OH-Gruppe des zweiten Zuckers. Die Nomenklatur gibt an: Anomerie (α oder β), C-Nummer des ersten Zuckers → C-Nummer des zweiten (z.B. α-1,4-glykosidisch).
 
@@ -1805,9 +1805,9 @@ Zwei Monosaccharide verbinden sich unter Wasserabspaltung durch eine **glykosidi
         "Essentielle Fettsäuren",
         "Trans-Fettsäuren",
       ],
-      content: `{{DIAGRAM:functional-groups}}
+      content: `<!-- DIAGRAM:functional-groups -->
 
-{{DIAGRAM:cell-membrane}}
+<!-- DIAGRAM:cell-membrane -->
 
 ## Fettsäuren
 
@@ -2088,9 +2088,9 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
         "DNA-Reparatur",
         "Phosphodiesterbindung",
       ],
-      content: `{{DIAGRAM:dna-helix}}
+      content: `<!-- DIAGRAM:dna-helix -->
 
-{{DIAGRAM:dna-helix}}
+<!-- DIAGRAM:dna-helix -->
 
 ## Nukleotid-Aufbau
 

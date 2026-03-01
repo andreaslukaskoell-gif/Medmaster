@@ -51,7 +51,7 @@ Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen g
 | Substitution | A + BC → AC + B | CH₃Br + OH⁻ → CH₃OH + Br⁻ | Transaminierung (ALT, AST) |
 | Metathese | AB + CD → AD + CB | NaCl + AgNO₃ → AgCl↓ + NaNO₃ | CaC₂O₄-Fällung bei Nierensteinen |
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 **1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
 Allgemein: A + B → AB
@@ -92,7 +92,7 @@ Zn + CuSO₄ → ZnSO₄ + Cu
 
 Biologisch: Die Atmungskette ist eine Kaskade von Redoxreaktionen, bei der Elektronen von NADH (E° = −0,32 V) über Cytochrome auf O₂ (E° = +0,82 V) übertragen werden. Die Spannung ΔE° = 1,14 V treibt die ATP-Synthese an.
 
-{{DIAGRAM:ionic-bond}}
+<!-- DIAGRAM:ionic-bond -->
 
 **Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat). Die Löslichkeit wird durch das **Löslichkeitsprodukt K_sp** beschrieben: Ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
 Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn bei Hyperoxalurie), Röntgenkontrastmittel (BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺), Gichtanfälle (Harnsäurekristall-Fällung in Gelenken).
@@ -130,7 +130,6 @@ Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Der physiologische Brennwert von
 **Satz von Hess:** Die Reaktionsenthalpie ist wegunabhängig — nur Anfangs- und Endzustand zählen. ΔH_gesamt = ΣΔH_Teilschritte. Dies erlaubt die Berechnung von ΔH aus Bildungsenthalpien.
 
 Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).`,
-
 
       lernziele: [
         "Die vier klassischen Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) anhand von Beispielen unterscheiden.",
@@ -349,7 +348,7 @@ Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen 
 
 Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 > **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
 
@@ -401,7 +400,7 @@ k = A · e^(−E_A / RT)
 
 ## Michaelis-Menten-Kinetik
 
-{{DIAGRAM:enzyme-substrate}}
+<!-- DIAGRAM:enzyme-substrate -->
 
 Für Enzymreaktionen gilt eine spezielle Kinetik:
 
@@ -429,7 +428,6 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 - Faustregel: Nach 5 Halbwertszeiten ist der Wirkstoff praktisch eliminiert (< 3 % verbleibend).
 - Ethanol hingegen: 0. Ordnung wegen Enzymkapazitätssättigung → konstante Abnahme (~0,1–0,15 ‰/h).
 - Klinisch: Ibuprofen (t₁/₂ ≈ 2 h, häufige Gabe) vs. Amlodipin (t₁/₂ ≈ 35 h, 1× täglich). Dosierungsintervall ≈ 1–2 × t₁/₂.`,
-
 
       lernziele: [
         "Die Reaktionsgeschwindigkeit formal definieren und das Geschwindigkeitsgesetz v = k·[A]ᵐ·[B]ⁿ interpretieren.",
@@ -633,7 +631,7 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
 
 Die **Stöchiometrie** (von griech. stoicheion = Element, metron = Maß) beschreibt die quantitativen Verhältnisse der an einer chemischen Reaktion beteiligten Stoffe. Basis ist die ausgeglichene Reaktionsgleichung, die Atome, Ladungen und Massen erhält. Die Stöchiometrie ist das mathematische Fundament der Chemie und essenziell für Dosierungen in der Medizin.
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 > **Merke:** Stöchiometrische Koeffizienten geben Mol-Verhältnisse an, NICHT Massenverhältnisse! Die Grundformeln: n = m/M, m = n × M, c = n/V.
 
@@ -664,7 +662,7 @@ Fe₂O₃ + CO → Fe + CO₂ (unausgeglichen)
 - Versuch: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂
 - Prüfung: Fe: 2=2 ✓, C: 3=3 ✓, O: 3+3=6 und 3×2=6 ✓ → ausgeglichen!
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 ## Mol-zu-Mol-Umrechnungen und Stöchiometrische Berechnungen
 
@@ -726,7 +724,6 @@ Beispiel NaCl 0,9 %: 9 g NaCl pro 1 L → c = 9 / 58,5 = 0,154 mol/L ≈ 154 mmo
 | Ethanol | 0,67 | 7,1 kcal/g |
 
 Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.`,
-
 
       lernziele: [
         "Reaktionsgleichungen korrekt ausgleichen und stöchiometrische Koeffizienten als Mol-Verhältnisse interpretieren.",
@@ -924,7 +921,7 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 > **Merke:** Dynamisches Gleichgewicht = v_hin = v_rück. Konzentrationen sind konstant (aber nicht gleich!). Beide Reaktionsrichtungen laufen weiterhin ab.
 
-{{DIAGRAM:enzyme-substrate}}
+<!-- DIAGRAM:enzyme-substrate -->
 
 **Zeitlicher Verlauf bis zum Gleichgewicht:**
 - Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
@@ -974,7 +971,7 @@ Der Zusammenhang: **K_p = K_c · (RT)^Δn**
 
 wobei Δn = (c + d) − (a + b) die Änderung der Molzahl an Gasen ist. Bei Δn = 0 ist K_p = K_c.
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Temperaturabhängigkeit von K
 
@@ -996,7 +993,6 @@ Diese Beziehung verbindet die Kinetik (über K) mit der Thermodynamik (über ΔG
 ## Hämoglobin und das MWG
 
 Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Die Michaelis-Konstante K_M bei Enzymreaktionen ist ebenfalls eine Gleichgewichtskonstante und gibt die Substrataffinität von Enzymen an.`,
-
 
       lernziele: [
         "Das dynamische Gleichgewicht definieren und von einem statischen Zustand abgrenzen.",
@@ -1226,7 +1222,7 @@ Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) laut
 
 Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — es erlaubt qualitative Vorhersagen über die Verschiebung von Gleichgewichten ohne aufwendige Berechnungen.
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Konzentration als Störgröße
 
@@ -1271,7 +1267,7 @@ Die Ammoniaksynthese N₂ + 3H₂ ⇌ 2NH₃ (ΔH = −92 kJ/mol, exotherm) illu
 
 ## Puffergleichgewichte und Le Chatelier
 
-{{DIAGRAM:ph-scale}}
+<!-- DIAGRAM:ph-scale -->
 
 Blutpuffer (H₂CO₃/HCO₃⁻) funktionieren nach Le Chatelier:
 
@@ -1289,7 +1285,6 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
 > **Merke:** Le Chatelier: Wird ein Gleichgewicht gestört, verschiebt es sich so, dass die Störung verkleinert wird. Konzentrations- und Druckänderungen ändern nur Q, nicht K — nur Temperatur ändert K selbst.
 
 > **Merke:** Haber-Bosch (N₂ + 3H₂ ⇌ 2NH₃): Hoher Druck begünstigt Produkte (Δn = −2), moderate Temperatur ist Kompromiss zwischen Thermodynamik und Kinetik. Katalysatoren verschieben das Gleichgewicht nie — sie beschleunigen nur die Einstellung.`,
-
 
       lernziele: [
         "Das Prinzip von Le Chatelier präzise formulieren und auf Konzentrationsänderungen anwenden.",
@@ -1529,7 +1524,7 @@ Wichtige Bildungsenthalpien:
 | CH₄(g) | −74,8 |
 | C₆H₁₂O₆(s) | −1274 |
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 ### Hess'scher Satz (Satz der konstanten Wärmesumme)
 
@@ -1582,7 +1577,7 @@ Die **Gibbs-Energie** (auch: freie Enthalpie) kombiniert beide Triebkräfte in e
 | > 0 | Reaktion ist nicht spontan (endergon) |
 | = 0 | System im Gleichgewicht |
 
-{{DIAGRAM:ph-scale}}
+<!-- DIAGRAM:ph-scale -->
 
 ### Die vier Fälle der Spontaneität
 
@@ -1634,7 +1629,6 @@ Solange |ΔG(ATP)| > |ΔG(endergon)|, ist ΔG_gesamt < 0 → die gekoppelte Reak
 > **Merke:** ΔG = ΔH − T·ΔS. Nur ΔG < 0 heißt spontan. Exotherm allein reicht nicht — die Entropie zählt mit! Die vier Fälle auswendig lernen: exotherm+ΔS>0 → immer; endotherm+ΔS<0 → nie; Rest → temperaturabhängig.
 
 > **Merke:** Einheiten-Falle: ΔH in kJ, ΔS in J → vor Rechnung ΔS durch 1000 teilen. ATP-Kopplung: endergone + exergone Reaktion → ΔG_gesamt < 0 wenn |ΔG_ATP| > |ΔG_endergon|.`,
-
 
       lernziele: [
         "Die Begriffe Enthalpie, Entropie und Gibbs-Energie definieren und voneinander abgrenzen.",

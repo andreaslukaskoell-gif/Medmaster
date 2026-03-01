@@ -24,9 +24,9 @@ export const physKapFluid: Kapitel = {
         "hydraulische Presse",
       ],
       diagram: "coordinate-system",
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 ## Druck -- Wiederholung und Grundbegriff
 
@@ -109,7 +109,6 @@ Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria bra
 **Warum Herzhoehe?** Liegt die Manschette 15 cm unter Herzhoehe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbeduertig" ausmachen!
 
 > **Merke:** Blutdruckmessung immer auf Herzhoehe! Jeder Zentimeter Abweichung verfaelscht das Ergebnis um ca. 0,8 mmHg (ca. rho_Blut * g * 0,01 m / 133 Pa/mmHg).`,
-
 
       lernziele: [
         "Den hydrostatischen Druck mit p = ρ·g·h berechnen können",
@@ -244,9 +243,9 @@ Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria bra
         "Atelektase",
       ],
       diagram: "newton-forces",
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 ## Archimedisches Prinzip
 
@@ -326,7 +325,6 @@ Typ-II-Pneumozyten produzieren **Surfactant** -- eine Mischung aus Phospholipide
 **Klinisch -- Fruehgeborene:** Ab der ca. 24. SSW beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Fruehgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution ueber den Tubus + CPAP-Beatmung.
 
 > **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben hoeheren Innendruck! Surfactant senkt sigma radiusabhaengig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Fruehgeborene: Surfactant-Mangel -> IRDS.`,
-
 
       lernziele: [
         "Das Archimedische Prinzip mathematisch anwenden und Auftriebskräfte berechnen können",
@@ -461,9 +459,9 @@ Typ-II-Pneumozyten produzieren **Surfactant** -- eine Mischung aus Phospholipide
         "Volumenstrom",
       ],
       diagram: "newton-forces",
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Ideale Fluide und Volumenstrom
 
@@ -568,7 +566,6 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskositaet.
 - **Teufelskreis**: Aussackung -> hoeherer Druck -> Wand dehnt sich weiter -> noch groessere Aussackung -> **Ruptur**
 
 > **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geraeusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklaerbar durch Kontinuitaet + Bernoulli.`,
-
 
       lernziele: [
         "Die Kontinuitätsgleichung anwenden und Geschwindigkeitsänderungen bei Querschnittsänderungen berechnen können",
@@ -709,9 +706,9 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskositaet.
         "Scherverdünnung",
       ],
       diagram: "circuit",
-      content: `{{DIAGRAM:circuit}}
+      content: `<!-- DIAGRAM:circuit -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Viskosität — innere Reibung von Fluiden
 
@@ -844,7 +841,6 @@ Q = π · (6×10⁻⁴)⁴ · 10 000 / (8 · 10⁻³ · 0,05) = π · 1,296×10�
 In der Praxis ist der Fluss durch Turbulenzen und nicht-ideale Bedingungen deutlich niedriger, aber die r⁴-Abhängigkeit bleibt der dominierende Faktor.
 
 > **Merke:** Infusionsrate optimieren: größere Kanüle (r⁴-Effekt!), höherer Druck, kürzere Leitung, niedrigere Viskosität. Im Schock: großlumige Zugänge (14G/16G) → maximaler Volumenstrom.`,
-
 
       lernziele: [
         "Die dynamische Viskosität definieren und Newtonsche von nicht-Newtonschen Fluiden unterscheiden können",

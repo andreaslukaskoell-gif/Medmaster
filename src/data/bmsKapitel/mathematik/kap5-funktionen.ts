@@ -24,9 +24,9 @@ export const mathKap5: Kapitel = {
         "Infusionsrate",
         "Kalibrierkurve",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:logarithm-function}}
+<!-- DIAGRAM:logarithm-function -->
 
 ## Grundform und Begriffe
 
@@ -252,9 +252,9 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Leitkoeffizient",
         "Wurfparabel",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:quadratic-function}}
+<!-- DIAGRAM:quadratic-function -->
 
 **Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
 
@@ -504,9 +504,9 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:exponential-function}}
+<!-- DIAGRAM:exponential-function -->
 
 **Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
 
@@ -756,9 +756,9 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:logarithm-function}}
+<!-- DIAGRAM:logarithm-function -->
 
 **Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
 
@@ -1038,9 +1038,9 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
         "Rationale Funktion",
         "Kaplan-Meier-Kurve",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:exponential-function}}
+<!-- DIAGRAM:exponential-function -->
 
 ## Graphen und ihre Eigenschaften ablesen
 
@@ -1319,9 +1319,9 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
         "Geometrische Reihe",
         "Summenformel",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Arithmetische Folgen — gleicher Abstand
 

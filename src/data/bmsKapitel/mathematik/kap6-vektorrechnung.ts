@@ -27,9 +27,9 @@ export const mathKap6: Kapitel = {
         "Skalare Multiplikation",
         "Kraftzerlegung",
       ],
-      content: `{{DIAGRAM:vector-addition}}
+      content: `<!-- DIAGRAM:vector-addition -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 **Idee:** Ein **Vektor** beschreibt eine gerichtete Größe (Kraft, Geschwindigkeit, Verschiebung) — also Betrag **und** Richtung. Ein **Skalar** ist nur eine Zahl (Temperatur, Masse). Rechnen mit Vektoren: komponentenweise (Addition, Skalarmultiplikation), Betrag mit Pythagoras, Einheitsvektor = Richtung mit Betrag 1. So lassen sich Kräfte zerlegen, Abstände und Verbindungsvektoren berechnen.
 
@@ -307,9 +307,9 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Lorentz-Kraft",
         "Parallelogrammfläche",
       ],
-      content: `{{DIAGRAM:vector-addition}}
+      content: `<!-- DIAGRAM:vector-addition -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 **Idee:** **Skalarprodukt** a·b = Zahl (Projektion, Winkel); **orthogonal** ⇔ a·b = 0. **Kreuzprodukt** a×b = Vektor ⊥ zu beiden; **Betrag** = Fläche Parallelogramm; **Rechte-Hand-Regel**; a×b = −(b×a). **Projektion** von a auf b: (a·b/|b|²)×b.
 
@@ -627,9 +627,9 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
         "Eigenvektor",
         "CT-Bildrekonstruktion",
       ],
-      content: `{{DIAGRAM:vector-addition}}
+      content: `<!-- DIAGRAM:vector-addition -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 **Idee:** **Gerade** r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor). **Ebene** n·(r−r₀) = 0 (Normalenform) oder r = r₀ + s·d₁ + t·d₂ (Parameterform). **Determinante** det(A) = ad−bc (2×2); det = 0 ⇒ singulär (keine eindeutige Lösung). **Inverse** 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.
 
@@ -961,9 +961,9 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         "Ganganalyse",
         "Stereotaxie",
       ],
-      content: `{{DIAGRAM:vector-addition}}
+      content: `<!-- DIAGRAM:vector-addition -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 **Idee:** **Abstand Punkt–Punkt** = |AB| = |B−A|. **Punkt–Gerade:** d = |r₀P×d|/|d| (Kreuzprodukt) oder Lotfußpunkt t_F = (r₀P·d)/|d|². **Punkt–Ebene:** Hessesche Normalform d = |n·r_P−d|/|n| (n normiert) bzw. |ax+by+cz−d|/√(a²+b²+c²). **Schnittwinkel** Gerade–Gerade: cos α = |d₁·d₂|/(|d₁||d₂|); Gerade–Ebene: sin α = |d·n|/(|d||n|).
 

@@ -36,14 +36,14 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 **Weitere Beispiele:**
 - **MgCl2:** Mg gibt 2 Elektronen ab -> Mg2+ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf -> 2 Cl- (Ar-Konfiguration)
 - **CaO:** Ca gibt 2 Elektronen ab -> Ca2+; O nimmt 2 Elektronen auf -> O2- -- beide erreichen die Ar- bzw. Ne-Konfiguration
 - **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 Grad C
 
-{{DIAGRAM:atomic-orbitals}}
+<!-- DIAGRAM:atomic-orbitals -->
 
 ## Born-Haber-Kreisprozess und Gitterenergie
 
@@ -67,7 +67,7 @@ wobei k die Coulomb-Konstante (8,99 * 10 hoch 9 N*m2/C2), q1 und q2 die Ladungen
 - **Halbierung des Ionenabstands** -> Gitterenergie **2x groesser**
 - **MgO vs. NaCl:** Mg2+*O2- = 4 Ladungseinheiten2 vs. Na+*Cl- = 1 -> allein durch Ladung 4x staerker; zusaetzlich kleinere Radien -> Faktor ~5 insgesamt
 
-{{DIAGRAM:ionic-bond}}
+<!-- DIAGRAM:ionic-bond -->
 
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (Grad C) | Begruendung |
 |---|---|---|---|
@@ -405,7 +405,7 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Grundprinzip der kovalenten Bindung
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -563,7 +563,7 @@ Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindend
 
 ## Hybridisierung
 
-{{DIAGRAM:atomic-orbitals}}
+<!-- DIAGRAM:atomic-orbitals -->
 
 Bisher haben wir mit dem VSEPR-Modell die Molekülgeometrie aus der Elektronenpaar-Abstoßung abgeleitet. Um zu verstehen, **warum** Kohlenstoff vier gleichwertige Bindungen bilden kann (obwohl er nur 2 ungepaarte Elektronen im Grundzustand hat), brauchen wir das Konzept der **Hybridisierung**.
 
@@ -968,7 +968,7 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Überblick: Zwischenmolekulare Kräfte
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen.
 
@@ -1224,7 +1224,7 @@ Die Integrität der Lipiddoppelschicht hängt nicht nur vom hydrophoben Effekt a
 | Trans-ungesättigt (z. B. Elaidinsäure) | Nahezu gerade | Stark (wie gesättigt) | Niedrig (pathologisch) |
 | + Cholesterol | Lücken gefüllt | Reguliert | Optimal bei 37 °C |
 
-{{DIAGRAM:ionic-bond}}
+<!-- DIAGRAM:ionic-bond -->
 
 ## Metallbindung
 
@@ -1665,7 +1665,7 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Bindungstypen in Biomolekülen
 
-{{DIAGRAM:functional-groups}}
+<!-- DIAGRAM:functional-groups -->
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 
@@ -1705,7 +1705,7 @@ Konsequenzen:
 - Einfach ungesättigt (Ölsäure, 18:1 cis-Δ9): Knick durch cis-Doppelbindung → lockere Packung, schwächere London-Kräfte → niedrigerer Schmelzpunkt, flüssig bei RT (Olivenöl)
 - Trans-Fettsäuren (Elaidinsäure): kein Knick → ähnliche Packung wie gesättigt → erhöhtes kardiovaskuläres Risiko
 
-{{DIAGRAM:covalent-bond}}
+<!-- DIAGRAM:covalent-bond -->
 
 ## Aminosäuren, Peptide und Proteinstruktur
 
@@ -1744,7 +1744,7 @@ Klinisch: Autoklav-Sterilisation (121 °C, 15 min) denaturiert alle mikrobiellen
 
 **RNA-Struktur:** RNA ist einsträngig, kann aber intramolekular H-Brücken bilden → Sekundärstrukturen (Haarnadelschleifen, Stamm-Schleifen) → tRNA, rRNA, Ribozyme, microRNA.
 
-{{DIAGRAM:enzyme-substrate}}
+<!-- DIAGRAM:enzyme-substrate -->
 
 ## Enzyme: Bindung und Katalyse
 

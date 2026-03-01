@@ -25,9 +25,9 @@ export const physKap3: Kapitel = {
         "Energieerhaltung",
         "Schwingungsenergie",
       ],
-      content: `{{DIAGRAM:wave-types}}
+      content: `<!-- DIAGRAM:wave-types -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 
 
@@ -449,9 +449,9 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
         "Akustische Impedanz",
         "Medienwechsel",
       ],
-      content: `{{DIAGRAM:wave-types}}
+      content: `<!-- DIAGRAM:wave-types -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 
 
@@ -767,9 +767,9 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefaehr 0,34
         "Doppler-Sonographie",
       ],
       diagram: "wave-types",
-      content: `{{DIAGRAM:wave-types}}
+      content: `<!-- DIAGRAM:wave-types -->
 
-{{DIAGRAM:doppler-effect}}
+<!-- DIAGRAM:doppler-effect -->
 
 
 
@@ -886,7 +886,6 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 **Laser in der Medizin:** LASER (Light Amplification by Stimulated Emission of Radiation) erzeugt kohärentes Licht durch stimulierte Emission in einem optischen Resonator (stehende Wellen!). Anwendungen: Augen-LASIK (Hornhaut-Remodelling), Laser-Koagulation (Retina), Laser-Lithotripsie (Nierensteine).
 
 **Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.`,
-
 
       lernziele: [
         "Konstruktive und destruktive Interferenz anhand des Gangunterschieds erklären und berechnen.",
@@ -1075,9 +1074,9 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
         "Lärmschwerhörigkeit",
       ],
       diagram: "doppler-effect",
-      content: `{{DIAGRAM:wave-types}}
+      content: `<!-- DIAGRAM:wave-types -->
 
-{{DIAGRAM:doppler-effect}}
+<!-- DIAGRAM:doppler-effect -->
 
 ## Dezibel: Lautstaerke messen
 
@@ -1129,7 +1128,6 @@ Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die z
 Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schaedigen -- und zwar fuer immer.
 
 > **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschaeden sind nicht heilbar!`,
-
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",
@@ -1320,9 +1318,9 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 d
         "Blutflussmessung",
       ],
       diagram: "doppler-effect",
-      content: `{{DIAGRAM:doppler-effect}}
+      content: `<!-- DIAGRAM:doppler-effect -->
 
-{{DIAGRAM:wave-types}}
+<!-- DIAGRAM:wave-types -->
 
 ## Dezibel-Rechnung — Vertiefung
 
@@ -1494,7 +1492,6 @@ Axiale Aufloesung ungefaehr lambda/2 ungefaehr 0,1 mm. Ausreichend fuer Schilddr
 **Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwaermung auf > 60 Grad C: Koagulationsnekrose.
 
 **Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.`,
-
 
       lernziele: [
         "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",

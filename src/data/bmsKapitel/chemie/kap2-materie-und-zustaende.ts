@@ -49,7 +49,7 @@ Kombiniert: p*V/(n*T) = R = const -> **pV = nRT**.
 
 **Pruefungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unveraendert**: p = nRT/V -> p' = nR*(2T)/(2V) = nRT/V = p.
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Umrechnungen und praktische Anwendung
 
@@ -69,7 +69,7 @@ Haeufige Umformungen:
 - Normaldruck der Atmosphaere ungefaehr 101.300 Pa ungefaehr 1 bar
 - Partialdruck: p_i = n_i*R*T/V (Anteil der Komponente i im Gemisch)
 
-{{DIAGRAM:temperature-scales}}
+<!-- DIAGRAM:temperature-scales -->
 
 ## Ideales vs. Reales Gas
 
@@ -365,7 +365,7 @@ pi = ni * R * T / V = xi * p_gesamt
 
 **xi = Molenbruch** der Komponente i: xi = ni / n_gesamt (dimensionslos, zwischen 0 und 1, Summe = 1).
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Physikalische Begruendung
 
@@ -373,7 +373,7 @@ Das Daltonsche Gesetz gilt exakt fuer ideale Gase, da ideale Gasteilchen keine W
 
 **Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck beruecksichtigt werden! Bei 37 Grad C (Koerpertemperatur) betraegt p(H2O) ungefaehr 6,27 kPa (47 mmHg).
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Alveolarer Gasaustausch
 
@@ -661,11 +661,11 @@ Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt p
 
 **r₁/r₂ = √(M₂/M₁)**
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 **Beispiele:**
 - H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
@@ -986,7 +986,7 @@ Das **ideale Gasgesetz** (pV = nRT) gilt für verdünnte Gase gut: p = Druck (Pa
 
 Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es ist der bei weitem häufigste Zustand sichtbarer Materie im Universum (Sterne, Blitze, Fluoreszenzlampen). Im medizinischen Sprachgebrauch bezeichnet "Blutplasma" den flüssigen Bestandteil des Blutes nach Entfernung der Zellen – ein biologischer Begriff ohne Bezug zum physikalischen Plasma.
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
 
@@ -994,7 +994,7 @@ Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim A
 
 **Ursache**: Wassermoleküle sind gewinkelt (Bindungswinkel 104,5°) und stark polar (Dipolmoment 1,85 D). Im flüssigen Wasser bestehen dynamische Wasserstoffbrückennetzwerke – jedes Molekül bildet im Mittel 3,4 Wasserstoffbrücken. Im Eiskristall (hexagonale Struktur) sind es genau 4 Wasserstoffbrücken pro Molekül, die ein offenes, weiträumiges hexagonales Gitter bilden. Diese Gitterstruktur ist weniger dicht gepackt als die Flüssigkeit.
 
-{{DIAGRAM:temperature-scales}}
+<!-- DIAGRAM:temperature-scales -->
 
 **Biologische Bedeutung**: Diese Anomalie ist entscheidend für das Leben in gemäßigten Klimazonen:
 1. Im Winter sinkt das dichtere 4°C-Wasser auf den Grund von Gewässern (Dichteausgleich)
@@ -1287,14 +1287,14 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
 
 **Schmelzenthalpie**: ΔH_s(H₂O) = **6,01 kJ/mol = 333 J/g** (bei 0°C, 1 bar)
 Zum Schmelzen von 1 g Eis bei 0°C werden 333 J benötigt – deutlich mehr als zum Erwärmen von 1 g flüssigem Wasser um 1°C (4,18 J). Ein Gramm schmelzendes Eis bei 0°C entnimmt der Umgebung dieselbe Wärmemenge wie die Abkühlung von 80 g Wasser um 1°C – deshalb kühlt Eis im Getränk so effizient.
 
-{{DIAGRAM:temperature-scales}}
+<!-- DIAGRAM:temperature-scales -->
 
 **Verdampfungsenthalpie**: ΔH_v(H₂O) = **40,7 kJ/mol = 2257 J/g** (bei 100°C, 1 bar)
 Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasserstoffbrücken, die beim Verdampfen vollständig gebrochen werden müssen. Verglichen mit: Methanol: 1104 J/g; Benzol: 393 J/g; Diethylether: 358 J/g.

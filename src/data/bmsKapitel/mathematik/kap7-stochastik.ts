@@ -22,9 +22,9 @@ export const mathKapStochastik: Kapitel = {
         "mit Wiederholung",
         "ohne Wiederholung",
       ],
-      content: `{{DIAGRAM:combinatorics-tree}}
+      content: `<!-- DIAGRAM:combinatorics-tree -->
 
-{{DIAGRAM:probability-distribution}}
+<!-- DIAGRAM:probability-distribution -->
 
 ## Grundbegriffe und Entscheidungsbaum
 
@@ -392,9 +392,9 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
         "Baumdiagramm",
         "Binomialverteilung",
       ],
-      content: `{{DIAGRAM:combinatorics-tree}}
+      content: `<!-- DIAGRAM:combinatorics-tree -->
 
-{{DIAGRAM:probability-distribution}}
+<!-- DIAGRAM:probability-distribution -->
 
 **Idee:** **Laplace** P(A) = (günstige)/(alle) bei gleichwahrscheinlichen Ergebnissen. **Komplement** P(nicht A) = 1−P(A) — bei „mindestens eines“ zuerst „keines“ berechnen. **Additionssatz** P(A∪B) = P(A)+P(B)−P(A∩B). **Unabhängig** ⇔ P(A∩B) = P(A)×P(B). **Binomial** B(n,p): P(X=k) = (n über k)×p^k×(1−p)^(n−k); μ = n×p.
 
@@ -842,9 +842,9 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         "Prävalenz",
         "Positiver prädiktiver Wert",
       ],
-      content: `{{DIAGRAM:combinatorics-tree}}
+      content: `<!-- DIAGRAM:combinatorics-tree -->
 
-{{DIAGRAM:probability-distribution}}
+<!-- DIAGRAM:probability-distribution -->
 
 **Idee:** **P(A|B)** = Wahrscheinlichkeit von A unter der Bedingung B; P(A|B) = P(A∩B)/P(B). **Bayes** kehrt die Bedingung um: P(Krank|Test+) aus P(Test+|Krank), Prävalenz und Spezifität. **Totale Wahrscheinlichkeit:** P(A) = Σ P(A|Bᵢ)×P(Bᵢ). **Vierfeldertafel:** TP, TN, FP, FN → Sensitivität, Spezifität, PPV, NPV.
 
@@ -1312,9 +1312,9 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
         "Spezifität",
         "p-Wert",
       ],
-      content: `{{DIAGRAM:combinatorics-tree}}
+      content: `<!-- DIAGRAM:combinatorics-tree -->
 
-{{DIAGRAM:probability-distribution}}
+<!-- DIAGRAM:probability-distribution -->
 
 **Idee:** **Lagemaße:** Mittelwert x̄ = Σxᵢ/n (anfällig für Ausreißer), **Median** = mittlerer Wert sortiert (robust), **Modus** = häufigster Wert. **Streuung:** Varianz s² = Σ(xᵢ−x̄)²/(n−1), **Standardabweichung** s = √s². **Normalverteilung:** 68 % innerhalb μ±σ, 95 % innerhalb μ±2σ, 99,7 % innerhalb μ±3σ. **Sensitivität** = TP/(TP+FN), **Spezifität** = TN/(TN+FP). **p-Wert** < 0,05 → signifikant.
 

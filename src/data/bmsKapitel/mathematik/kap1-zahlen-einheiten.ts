@@ -25,9 +25,9 @@ export const mathKapZahlen: Kapitel = {
         "medizinische Größenordnungen",
         "pH-Wert Exponenten",
       ],
-      content: `{{DIAGRAM:exponential-function}}
+      content: `<!-- DIAGRAM:exponential-function -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Grunddefinition und positive Exponenten
 
@@ -727,9 +727,9 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
         "Avogadro-Zahl",
         "Halbwertszeit",
       ],
-      content: `{{DIAGRAM:exponential-function}}
+      content: `<!-- DIAGRAM:exponential-function -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 **Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
 
@@ -1102,9 +1102,9 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         "Alveolenfläche",
         "Deziliter",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 **Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
 
@@ -1408,9 +1408,9 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         "Sexagesimalsystem",
         "Traumamechanismus",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 **Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
 
@@ -1716,9 +1716,9 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "Dimensionsanalyse",
         "abgeleitete Einheiten",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 **Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
 

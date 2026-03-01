@@ -26,9 +26,9 @@ export const physKapElektrizitaet: Kapitel = {
         "Membranpotential",
         "Gelelektrophorese",
       ],
-      content: `{{DIAGRAM:circuit}}
+      content: `<!-- DIAGRAM:circuit -->
 
-{{DIAGRAM:em-spectrum}}
+<!-- DIAGRAM:em-spectrum -->
 
 ## Elektrische Ladung
 
@@ -277,9 +277,9 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
         "Ionenkanal",
         "Leitwert",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:circuit}}
+<!-- DIAGRAM:circuit -->
 
 ## Elektrischer Strom
 
@@ -541,9 +541,9 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         "Wheatstone-Brücke",
         "Spannungsteiler",
       ],
-      content: `{{DIAGRAM:circuit}}
+      content: `<!-- DIAGRAM:circuit -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Grundlegende Schaltungstypen
 
@@ -779,9 +779,9 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         "TMS",
         "Selbstinduktion",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:circuit}}
+<!-- DIAGRAM:circuit -->
 
 ## Grundlagen des Magnetismus
 
@@ -1027,9 +1027,9 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
         "Brechkraft",
         "Dioptrie",
       ],
-      content: `{{DIAGRAM:lens-imaging}}
+      content: `<!-- DIAGRAM:lens-imaging -->
 
-{{DIAGRAM:em-spectrum}}
+<!-- DIAGRAM:em-spectrum -->
 
 ## Reflexionsgesetz
 
@@ -1292,9 +1292,9 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Superposition",
         "Ölimmersion",
       ],
-      content: `{{DIAGRAM:lens-imaging}}
+      content: `<!-- DIAGRAM:lens-imaging -->
 
-{{DIAGRAM:wave-types}}
+<!-- DIAGRAM:wave-types -->
 
 ## Licht als elektromagnetische Welle
 
@@ -1537,9 +1537,9 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
         "CCD-Sensor",
         "Glasfaser",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:lens-imaging}}
+<!-- DIAGRAM:lens-imaging -->
 
 ## Lupe
 
@@ -1786,9 +1786,9 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         "Brillenrezept",
         "Dioptrie",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:wave-types}}
+<!-- DIAGRAM:wave-types -->
 
 ## Anatomie und Optik des normalen Auges
 

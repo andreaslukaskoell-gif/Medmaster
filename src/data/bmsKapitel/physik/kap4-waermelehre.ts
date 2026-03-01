@@ -28,9 +28,9 @@ export const physKap4: Kapitel = {
         "Ausdehnungskoeffizient",
         "Absoluter Nullpunkt",
       ],
-      content: `{{DIAGRAM:thermodynamics}}
+      content: `<!-- DIAGRAM:thermodynamics -->
 
-{{DIAGRAM:temperature-scales}}
+<!-- DIAGRAM:temperature-scales -->
 
 ## Temperaturskalen
 
@@ -326,9 +326,9 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Wiensches Verschiebungsgesetz",
         "Gegenstrom-Wärmeaustausch",
       ],
-      content: `{{DIAGRAM:temperature-scales}}
+      content: `<!-- DIAGRAM:temperature-scales -->
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Wärmeleitung (Konduktion)
 
@@ -613,9 +613,9 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
         "ATP-Synthese",
         "Perpetuum mobile",
       ],
-      content: `{{DIAGRAM:thermodynamics}}
+      content: `<!-- DIAGRAM:thermodynamics -->
 
-{{DIAGRAM:temperature-scales}}
+<!-- DIAGRAM:temperature-scales -->
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
@@ -886,9 +886,9 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `{{DIAGRAM:temperature-scales}}
+      content: `<!-- DIAGRAM:temperature-scales -->
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ## Ideales Gasgesetz
 
@@ -981,7 +981,6 @@ V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ung
 > **Merke:** Phasenuebergaenge (Schmelzen, Verdampfen, Sublimieren) benoetigen Energie (latente Waerme), ohne dass sich die Temperatur aendert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
 
 > **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Fluessigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg frueher (niedrigerer Luftdruck).`,
-
 
       lernziele: [
         "Die allgemeine Zustandsgleichung des idealen Gases pV = nRT anwenden und Sonderfälle ableiten",

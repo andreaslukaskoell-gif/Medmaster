@@ -28,9 +28,9 @@ export const physKap7: Kapitel = {
         "Absorptionsspektrum",
         "Plancksches Wirkungsquantum",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:radioactive-decay}}
+<!-- DIAGRAM:radioactive-decay -->
 
 ## Entwicklung der Atommodelle
 
@@ -289,9 +289,9 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:radioactive-decay}}
+<!-- DIAGRAM:radioactive-decay -->
 
 ## Alpha-Strahlung (α)
 
@@ -856,9 +856,9 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         "Hounsfield-Einheiten",
         "Sauerstoffeffekt OER",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:radioactive-decay}}
+<!-- DIAGRAM:radioactive-decay -->
 
 ## Entstehung von Röntgenstrahlung
 
@@ -1181,9 +1181,9 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Welle-Teilchen-Dualismus",
         "Warburg-Effekt",
       ],
-      content: `{{DIAGRAM:em-spectrum}}
+      content: `<!-- DIAGRAM:em-spectrum -->
 
-{{DIAGRAM:radioactive-decay}}
+<!-- DIAGRAM:radioactive-decay -->
 
 ## PET – Positronen-Emissions-Tomographie
 
@@ -1426,9 +1426,9 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Akutes Strahlensyndrom",
         "Radon Österreich",
       ],
-      content: `{{DIAGRAM:radioactive-decay}}
+      content: `<!-- DIAGRAM:radioactive-decay -->
 
-{{DIAGRAM:em-spectrum}}
+<!-- DIAGRAM:em-spectrum -->
 
 ## Strahlenschutz — die drei Grundprinzipien
 

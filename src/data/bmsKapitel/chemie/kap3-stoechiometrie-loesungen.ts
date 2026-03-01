@@ -23,7 +23,7 @@ export const chemKapStoech: Kapitel = {
         "Dalton",
         "Atommasse",
       ],
-      content: `{{DIAGRAM:periodic-table}}
+      content: `<!-- DIAGRAM:periodic-table -->
 
 ## Das Mol — die SI-Einheit der Stoffmenge
 
@@ -60,7 +60,7 @@ Das Dreieck der Umrechnungen:
 
 Daraus auch: **n = N / N_A** und **m = N × M / N_A**
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 ## Rechenbeispiel 1: Glucose-Infusion
 
@@ -203,7 +203,7 @@ Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Um das zu verste
         "Neutralisation",
         "Verbrennungsreaktion",
       ],
-      content: `{{DIAGRAM:thermodynamics}}
+      content: `<!-- DIAGRAM:thermodynamics -->
 
 ## Chemische Reaktionsgleichungen
 
@@ -234,7 +234,7 @@ Die Koeffizienten (1, 2, 1, 2) geben die **Stoffmengenverhältnisse** an: 1 mol 
 Beispiel — Neutralisation: **Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O**
 - Mg: 1 = 1 ✓, O: 2 = 2 ✓, H: 2+2 = 4 = 4 ✓, Cl: 2 = 2 ✓
 
-{{DIAGRAM:periodic-table}}
+<!-- DIAGRAM:periodic-table -->
 
 ## Stöchiometrisches Rechnen
 
@@ -417,7 +417,7 @@ Bisher haben wir gelernt, wie Mengenbeziehungen in Reaktionen funktionieren. Um 
         "NaCl 0,9%",
         "Blutglucose",
       ],
-      content: `{{DIAGRAM:periodic-table}}
+      content: `<!-- DIAGRAM:periodic-table -->
 
 ## Konzentrationsangaben im Überblick
 
@@ -471,7 +471,7 @@ Bisher haben wir die Definitionen kennengelernt. Um das zu verstehen, wie man zw
 
 > **Merke:** NaCl 0,9 % ≈ 154 mmol/L NaCl → 154 mmol/L Na⁺ + 154 mmol/L Cl⁻ = 308 mmol/L Gesamtionenkonzentration (≈ 308 mosmol/L — isoton zum Blutplasma!).
 
-{{DIAGRAM:ph-scale}}
+<!-- DIAGRAM:ph-scale -->
 
 ---
 
@@ -650,7 +650,7 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
         "Hämolyse",
         "Dialyse",
       ],
-      content: `{{DIAGRAM:covalent-bond}}
+      content: `<!-- DIAGRAM:covalent-bond -->
 
 ## Kolligative Eigenschaften — Überblick
 
@@ -700,7 +700,7 @@ Deshalb wird NaCl als Streusalz verwendet! CaCl₂ (i = 3) ist noch wirksamer: �
 
 > **Merke:** K_f(Wasser) = 1,86 °C·kg/mol (≈ 2); K_b(Wasser) = 0,512 °C·kg/mol (≈ 0,5). Gefrierpunktserniedrigung ist ca. 3,6× stärker als Siedepunktserhöhung — daher für Messzwecke bevorzugt (Kryoskopie).
 
-{{DIAGRAM:thermodynamics}}
+<!-- DIAGRAM:thermodynamics -->
 
 ---
 

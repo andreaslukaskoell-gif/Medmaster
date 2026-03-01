@@ -25,9 +25,9 @@ export const mathKapGrundlagen: Kapitel = {
         "Termumformung",
         "Bruchdivision",
       ],
-      content: `{{DIAGRAM:percent-fractions}}
+      content: `<!-- DIAGRAM:percent-fractions -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 ## Grundbegriffe
 
@@ -231,9 +231,9 @@ export const mathKapGrundlagen: Kapitel = {
         "NaCl 0,9%",
         "Blutalkoholkonzentration",
       ],
-      content: `{{DIAGRAM:percent-fractions}}
+      content: `<!-- DIAGRAM:percent-fractions -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 ## Das Grundprinzip: P = G \u00d7 p/100
 
@@ -421,9 +421,9 @@ Reduktionsfaktor r: Maenner \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
         "mg/kg",
         "mL/h",
       ],
-      content: `{{DIAGRAM:percent-fractions}}
+      content: `<!-- DIAGRAM:percent-fractions -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Direkter Dreisatz (proportional)
 
@@ -619,9 +619,9 @@ Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
         "Glucose",
         "mL/min L/h",
       ],
-      content: `{{DIAGRAM:percent-fractions}}
+      content: `<!-- DIAGRAM:percent-fractions -->
 
-{{DIAGRAM:geometric-shapes}}
+<!-- DIAGRAM:geometric-shapes -->
 
 ## SI-Praefixe: Die Zehnerpotenz-Leiter
 

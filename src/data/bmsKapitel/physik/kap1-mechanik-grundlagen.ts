@@ -26,9 +26,9 @@ export const physKapMechanik: Kapitel = {
         "Gewichtskraft",
       ],
       diagram: "coordinate-system",
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:newton-forces}}
+<!-- DIAGRAM:newton-forces -->
 
 ## Das Internationale Einheitensystem (SI)
 
@@ -337,9 +337,9 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
         "Größenordnungen",
         "Dosierungsfehler",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:newton-forces}}
+<!-- DIAGRAM:newton-forces -->
 
 ## Warum brauchen wir Präfixe?
 
@@ -634,9 +634,9 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
         "Temperaturumrechnung",
         "dimensionslose Größen",
       ],
-      content: `{{DIAGRAM:coordinate-system}}
+      content: `<!-- DIAGRAM:coordinate-system -->
 
-{{DIAGRAM:newton-forces}}
+<!-- DIAGRAM:newton-forces -->
 
 ## Was ist Dimensionsanalyse?
 
@@ -936,9 +936,9 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
         "gleichförmige Bewegung",
         "Vektoren",
       ],
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Newtonsche Gesetze und Kinematik
 
@@ -1158,9 +1158,9 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
         "Herzarbeit",
       ],
       diagram: "coordinate-system",
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
@@ -1371,9 +1371,9 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
         "laminare Strömung",
       ],
       diagram: "newton-forces",
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Statik, Druck und Hydrodynamik
 
@@ -1560,9 +1560,9 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
         "Schwerpunkt",
       ],
       diagram: "coordinate-system",
-      content: `{{DIAGRAM:newton-forces}}
+      content: `<!-- DIAGRAM:newton-forces -->
 
-{{DIAGRAM:coordinate-system}}
+<!-- DIAGRAM:coordinate-system -->
 
 ## Gravitation und Rotation
 
