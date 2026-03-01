@@ -24,103 +24,7 @@ export const mathKap5: Kapitel = {
         "Infusionsrate",
         "Kalibrierkurve",
       ],
-      content: `## Einleitung
-
-Stell dir vor, du faehrst mit dem Fahrrad einen gleichmaessig ansteigenden Huegel hinauf. Pro Minute legst du immer dieselbe Hoehe zurueck -- das ist ein **linearer Zusammenhang**. Lineare Funktionen beschreiben genau solche gleichmaessigen Veraenderungen: Die Steigung sagt dir "wie viel pro Schritt", der Achsenabschnitt gibt den Startwert an.
-
-**In diesem Kapitel lernst du:**
-- was Steigung und Achsenabschnitt einer Geraden bedeuten
-- wie du die Nullstelle einer linearen Funktion berechnest
-- wie du den Schnittpunkt zweier Geraden findest
-- woran du parallele und senkrechte Geraden erkennst
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:coordinate-system}}
-
-## Grundform und Begriffe
-
-Eine lineare Funktion hat die Form **f(x) = mx + b**. Dabei ist m die **Steigung** und b der **y-Achsenabschnitt**. Der Graph ist immer eine **Gerade**.
-
-Die Steigung m beschreibt, um wie viel sich f(x) aendert, wenn x um 1 zunimmt. Formel: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade; ist m < 0, faellt sie; ist m = 0, ist sie horizontal.
-
-> **Merke:** Die Steigung m = Δy/Δx gibt die Aenderung pro Einheit an. Beispiel: Ein Handytarif mit m = 0,10 bedeutet 10 Cent pro Minute.
-
----
-
-## Steigung und Achsenabschnitt
-
-Der **y-Achsenabschnitt b** ist der Wert bei x = 0, also f(0) = b. Die **Nullstelle** ist der x-Wert, bei dem f(x) = 0: x₀ = −b/m.
-
-Zwei Geraden sind **parallel**, wenn m₁ = m₂. Sie stehen **senkrecht**, wenn m₁ × m₂ = −1.
-
-> **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Zuerst m berechnen, dann b durch Einsetzen eines Punktes.
-
----
-
-## Gerade aufstellen
-
-**Aus zwei Punkten:** P₁(x₁|y₁) und P₂(x₂|y₂).
-1. m = (y₂ − y₁)/(x₂ − x₁)
-2. b = y₁ − m×x₁
-
-**Aus Steigung und Punkt:** m und P(x₀|y₀) gegeben → b = y₀ − m×x₀.
-
----
-
-## Schnittpunkt zweier Geraden
-
-f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich bei m₁ ≠ m₂.
-
-Gleichsetzen: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Dann y berechnen.
-
----
-
-## MedAT-Fokus
-
-**Typische Aufgabentypen:**
-- Geradengleichung aus 2 Punkten aufstellen
-- Nullstelle berechnen: x₀ = −b/m
-- Schnittpunkt zweier Geraden durch Gleichsetzen
-- Steigung aus Graph ablesen
-
-**Typische Fallen:**
-- Nullstelle linear: x₀ = **−b/m** (nicht Mitternachtsformel!)
-- Senkrechte: m₂ = **−1/m₁** (nicht −m₁)
-- Steigung: Δy/Δx -- y im Zaehler, x im Nenner
-
-**Minimal-Rechenrezepte:**
-- **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁.
-- **Nullstelle:** x₀ = −b/m.
-- **Schnittpunkt:** m₁x + b₁ = m₂x + b₂ → x = (b₂−b₁)/(m₁−m₂).
-- **Senkrechte zu m₁:** m₂ = −1/m₁.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **f(x) = mx + b**: m = Steigung, b = y-Achsenabschnitt
-- **m > 0** → steigend; **m < 0** → fallend; **m = 0** → horizontal
-- **Nullstelle:** x₀ = −b/m
-- **Gerade aus 2 Punkten:** zuerst m, dann b
-- **Parallel:** m₁ = m₂; **senkrecht:** m₁ × m₂ = −1
-- **Fehler vermeiden:** Nullstelle = −b/m; senkrecht = −1/m₁`,
-      contentExtended: `## Einleitung
-
-Im Labor zeigt das Photometer eine Absorption von 0,77 -- wie hoch ist die Konzentration der Probe? Wenn du die Kalibrierkurve als Gerade kennst, genuegt eine einfache Umstellung. **Lineare Funktionen** beschreiben Zusammenhaenge, bei denen sich y gleichmaessig mit x aendert: Die Steigung sagt “wie viel pro Einheit”, der Achsenabschnitt gibt den Startwert an. Von der Infusionsrate ueber die Regressionsgerade bis zum Alkoholabbau im Blut (Kinetik 0. Ordnung) -- ueberall steckt y = mx + b.
-
-**In diesem Kapitel lernst du:**
-- was Steigung und Achsenabschnitt einer Geraden bedeuten und wie du sie aus einem Graphen oder zwei Punkten bestimmst
-- wie du die Nullstelle einer linearen Funktion berechnest und geometrisch deutest
-- wie du den Schnittpunkt zweier Geraden durch Gleichsetzen findest
-- woran du erkennst, ob zwei Geraden parallel oder senkrecht zueinander stehen
-- wie lineare Funktionen in der Labormedizin (Kalibrierkurve, Lambert-Beer) und Pharmakokinetik (Ethanolabbau) eingesetzt werden
-
----
-
-{{DIAGRAM:coordinate-system}}
+      content: `{{DIAGRAM:coordinate-system}}
 
 {{DIAGRAM:logarithm-function}}
 
@@ -207,45 +111,7 @@ y = 1,8x + 85 (x = BMI, y = RR_sys in mmHg). Patient BMI = 30: RR = 1,8 × 30 + 
 Elimination: C(t) = C₀ − k₀ × t (Kinetik nullter Ordnung). k₀ = 10 mg/h. Dauertropfrate R = 10 mg/h → Gleichgewicht: Zufuhr = Abbau. Bei R = 15 mg/h: Akkumulation mit 5 mg/h. Bei R = 8 mg/h: C sinkt um 2 mg/h. Steady-State nur bei **R = k₀ = 10 mg/h**.
 
 **Beispiel 4 — Senkrechte Geraden bestimmen:**
-Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂×x₀ = 1 − (−1/3)×6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁×m₂ = 3×(−1/3) = −1.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- Geradengleichung aus 2 Punkten aufstellen (zuerst m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁)
-- Nullstelle berechnen: f(x) = 0 ⇒ x₀ = −b/m
-- Schnittpunkt zweier Geraden: Gleichsetzen, nach x auflösen, y einsetzen
-- Kalibrierkurve: Konzentration aus Absorption (A = ε·c·d → c = A/(ε·d) im linearen Bereich)
-- Steigung oder y-Achsenabschnitt aus Graph ablesen (Steigungsdreieck Δy/Δx)
-- Senkrechte Gerade zu gegebener Gerade durch einen Punkt (m₂ = −1/m₁, dann b₂ aus Punkt)
-
-**Typische Fallen:**
-- Nullstelle **linearer** Funktion: x₀ = **−b/m** (nicht Mitternachtsformel!)
-- Senkrechte Geraden: m₂ = **−1/m₁** (nicht m₂ = −m₁)
-- Steigung m = **Δy/Δx** — Zähler = y-Differenz, Nenner = x-Differenz (nicht umgekehrt)
-- b = y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle
-
-**Minimal-Rechenrezepte:**
-- **Gerade aus 2 Punkten P₁(x₁|y₁), P₂(x₂|y₂):** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁ ⇒ y = mx + b.
-- **Nullstelle:** 0 = mx + b ⇒ x₀ = −b/m (m ≠ 0).
-- **Schnittpunkt:** m₁x + b₁ = m₂x + b₂ ⇒ x = (b₂−b₁)/(m₁−m₂), dann y = m₁x + b₁.
-- **Senkrechte zu m₁:** m₂ = −1/m₁; durch P(x₀|y₀): b₂ = y₀ − m₂·x₀.
-- **Lambert-Beer (linear):** A = ε·c·d ⇒ c = A/(ε·d); aus Kalibrierkurve: c = (A − A₀)/Steigung.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Lineare Funktion:** f(x) = m×x + b; m = Steigung (Δy/Δx), b = y-Achsenabschnitt
-- **Steigung:** m > 0 → steigend; m < 0 → fallend; m = 0 → konstant (horizontale Gerade)
-- **Nullstelle:** f(x) = 0 → x₀ = −b/m (nicht Mitternachtsformel!)
-- **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m×x₁
-- **Schnittpunkt:** Gleichsetzen → x berechnen → y einsetzen
-- **Parallel:** gleiche Steigung m; **senkrecht:** m₁×m₂ = −1 → m₂ = −1/m₁
-- **Lambert-Beer:** A = ε×c×d (linear in c); Kalibrierkurve zur Konzentrationsbestimmung
-- **Typische Fehler:** Nullstelle linear = −b/m; Senkrechte: m₂ = −1/m₁ (nicht −m₁)`,
+Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂×x₀ = 1 − (−1/3)×6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁×m₂ = 3×(−1/3) = −1.`,
       lernziele: [
         "Die Geradengleichung f(x) = mx + b aufstellen, wenn zwei Punkte oder Steigung und ein Punkt gegeben sind.",
         "Steigung und y-Achsenabschnitt aus einem Graphen oder einer Gleichung ablesen und interpretieren.",
@@ -386,120 +252,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Leitkoeffizient",
         "Wurfparabel",
       ],
-      content: `## Einleitung
-
-Wirfst du einen Ball in die Luft, fliegt er eine Kurve -- eine **Parabel**. Quadratische Funktionen beschreiben genau solche Vorgaenge: Der Graph ist eine Parabel mit einem Hoch- oder Tiefpunkt, dem **Scheitelpunkt**. Die **Diskriminante** verraet dir sofort, ob und wie oft die Parabel die x-Achse schneidet.
-
-**In diesem Kapitel lernst du:**
-- wie der Vorfaktor a die Oeffnungsrichtung und Breite bestimmt
-- wie du den Scheitelpunkt berechnest
-- was die Diskriminante ueber die Nullstellen aussagt
-- wie der Satz von Vieta das Nullstellenraten vereinfacht
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:quadratic-function}}
-
-## Allgemeine und Scheitelpunktform
-
-Eine quadratische Funktion hat die Form **f(x) = ax² + bx + c** mit a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, oeffnet sie nach oben (Minimum); ist a < 0, nach unten (Maximum).
-
-Die **Scheitelpunktform** f(x) = a(x − xₛ)² + yₛ zeigt den Scheitelpunkt direkt. Die Umrechnung: xₛ = −b/(2a).
-
-> **Merke:** a > 0 → Parabel oeffnet nach oben (Minimum). a < 0 → nach unten (Maximum). Grosses |a| → schmale Parabel; kleines |a| → breite Parabel.
-
----
-
-## Scheitelpunkt berechnen
-
-- **xₛ = −b/(2a)**
-- **yₛ = f(xₛ)**
-
-Beispiel: f(x) = 2x² − 8x + 3. xₛ = −(−8)/(2×2) = 2. yₛ = f(2) = 8 − 16 + 3 = −5. Scheitelpunkt: S(2|−5).
-
-> **Merke:** xₛ = −b/(2a) -- Minus vor b nicht vergessen!
-
----
-
-## Nullstellen und Diskriminante
-
-**Mitternachtsformel:** x₁₂ = (−b ± √(b² − 4ac)) / (2a)
-
-Die **Diskriminante** D = b² − 4ac entscheidet:
-- D > 0: **zwei Nullstellen**
-- D = 0: **eine Nullstelle** (Scheitel auf x-Achse)
-- D < 0: **keine reelle Nullstelle**
-
-**pq-Formel** (nur bei x² + px + q = 0): x₁₂ = −p/2 ± √((p/2)² − q)
-
-Achtung: Die pq-Formel gilt nur wenn vor x² eine 1 steht. Sonst zuerst durch a teilen!
-
----
-
-## Satz von Vieta
-
-Bei x² + px + q = 0 gilt:
-- x₁ + x₂ = −p (Summe)
-- x₁ × x₂ = q (Produkt)
-
-**Beispiel:** x² − 7x + 12 = 0. Summe = 7, Produkt = 12. → 3 + 4 = 7, 3 × 4 = 12 → **x₁ = 3, x₂ = 4**.
-
-> **Merke:** Vieta ist schnell bei ganzzahligen Nullstellen. Zwei Zahlen finden mit gegebener Summe und Produkt.
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 -- Ballwurf:** h(t) = −5t² + 20t + 1. Hoechster Punkt: t = −20/(2×(−5)) = **2 s**. h(2) = −20 + 40 + 1 = **21 m**.
-
-**Beispiel 2 -- Vieta:** x² − 11x + 28 = 0. Summe = 11, Produkt = 28. → 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**.
-
----
-
-## MedAT-Fokus
-
-**Typische Aufgabentypen:**
-- Scheitelpunkt: xₛ = −b/(2a), yₛ = f(xₛ)
-- Nullstellen mit Diskriminante D = b² − 4ac
-- Vieta bei ganzzahligen Loesungen
-- Oeffnungsrichtung aus dem Vorzeichen von a
-
-**Typische Fallen:**
-- D = b² − **4ac** (nicht 2ac)
-- Scheitel xₛ = **−**b/(2a) (Minus!)
-- pq-Formel nur bei normierter Form (a = 1)
-
-**Minimal-Rechenrezepte:**
-- **Scheitelpunkt:** xₛ = −b/(2a), dann yₛ = f(xₛ).
-- **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
-- **Vieta:** Summe = −p, Produkt = q.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **f(x) = ax² + bx + c**: a > 0 → oben offen (Min); a < 0 → unten offen (Max)
-- **Scheitelpunkt:** xₛ = −b/(2a), yₛ = f(xₛ)
-- **Diskriminante:** D = b²−4ac; D > 0 → 2 NS; D = 0 → 1 NS; D < 0 → keine
-- **Mitternachtsformel:** x = (−b ± √D)/(2a)
-- **Vieta:** x₁ + x₂ = −p, x₁ × x₂ = q
-- **Fehler vermeiden:** D = b²−4ac; Scheitel −b/(2a) mit Minus`,
-      contentExtended: `## Einleitung
-
-Ein Wurfgeschoss fliegt eine Parabel, und die Wirkstoffkonzentration im Blut erreicht nach einiger Zeit ein Maximum -- beides sind **quadratische Funktionen**. Ihre Graphen sind Parabeln, und der Scheitelpunkt ist der Hoch- oder Tiefpunkt. Am MedAT tauchen sie als Rechenaufgaben ("Wie viele Nullstellen?") und als Graphen-Interpretation ("Oeffnung nach oben oder unten?") auf. Der Schluessel ist die **Diskriminante**: Sie verraet mit einem Blick, ob die Parabel die x-Achse schneidet.
-
-**In diesem Kapitel lernst du:**
-- wie der Leitkoeffizient a die Oeffnungsrichtung und Breite einer Parabel bestimmt
-- wie du den Scheitelpunkt berechnest -- den Punkt, an dem die Funktion ihr Maximum oder Minimum erreicht
-- was die Diskriminante ueber die Anzahl der Nullstellen aussagt und wie du sie mit der Mitternachtsformel findest
-- wann du die pq-Formel statt der Mitternachtsformel einsetzt
-- wie der Satz von Vieta Summe und Produkt der Nullstellen mit den Koeffizienten verbindet
-
----
-
-{{DIAGRAM:coordinate-system}}
+      content: `{{DIAGRAM:coordinate-system}}
 
 {{DIAGRAM:quadratic-function}}
 
@@ -600,34 +353,7 @@ Näherung p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −20
 HMV = RR / TPR. Wenn RR = −0,4×HMV² + 14×HMV (nicht-lineare Beziehung). Nullstellen: HMV×(−0,4×HMV + 14) = 0 → HMV = 0 oder **35 L/min** (physiologisches Limit bei Leistungssportlern). Maximum: HMV = −14/(2×(−0,4)) = **17,5 L/min** mit RR_max = −0,4×306,25 + 14×17,5 = **122,5 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 60 mmHg (Ruhewert auf der Kurve).
 
 **Beispiel 4 — Vieta-Schnellmethode:**
-x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- Scheitelpunkt x_S = −b/(2a), y_S = f(x_S); Öffnung (a>0 oben, a<0 unten)
-- Nullstellen: D = b²−4ac; x = (−b±√D)/(2a); D>0: 2, D=0: 1, D<0: keine
-- pq-Formel (nur bei x²+px+q=0); Vieta: x₁+x₂ = −p, x₁×x₂ = q
-- Parabel aus Graph (Wurf, Optimierung, Dosis-Wirkung)
-
-**Minimal-Rechenrezepte:**
-- **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
-- **pq-Formel** (x²+px+q=0): x = −p/2 ± √((p/2)²−q). **Vieta:** Summe = −p, Produkt = q.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Quadratische Funktion:** f(x) = ax²+bx+c; **a** (Leitkoeffizient): a>0 → Parabel nach oben (Minimum), a<0 → nach unten (Maximum)
-- **Scheitelpunktform:** f(x) = a(x−d)²+e; Scheitel S(d|e); Symmetrieachse x = d
-- **Scheitelpunkt:** xs = −b/(2a), ys = f(xs); über quadratische Ergänzung oder Formel
-- **Nullstellen:** x = (−b ± √D)/(2a) mit **D = b²−4ac**; D>0: 2, D=0: 1 (Doppellösung), D<0: keine reelle
-- **pq-Formel** (für x²+px+q=0): x = −p/2 ± √((p/2)²−q)
-- **Vieta:** x₁+x₂ = −b/a, x₁×x₂ = c/a; bei ganzzahligen Nullstellen schneller
-- **Graphen interpretieren:** Öffnung, Scheitel, Symmetrieachse, Nullstellenanzahl aus D
-- **Typische Fehler:** D = b²−4ac (nicht 2ac); Scheitel xs = −b/(2a) (Minus nicht vergessen)`,
+x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",
         "Scheitelpunkt, Öffnungsrichtung und Symmetrieachse einer Parabel bestimmen.",
@@ -778,139 +504,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `## Einleitung
-
-Stell dir vor, du legst 100 Euro auf ein Sparkonto mit Zinseszins. Jedes Jahr kommen nicht nur Zinsen auf dein Startkapital, sondern auch Zinsen auf die bisherigen Zinsen -- das Geld waechst immer schneller. Genau das ist **exponentielles Wachstum**. Umgekehrt gibt es **exponentiellen Zerfall**: Eine heisse Tasse Tee kuehlt anfangs schnell ab, dann immer langsamer. Die **Halbwertszeit** sagt dir, nach welcher Zeit die Haelfte uebrig ist.
-
-**In diesem Kapitel lernst du:**
-- was exponentielles Wachstum und Zerfall unterscheidet
-- warum die e-Funktion nie den Wert null erreicht
-- wie du die Halbwertszeit berechnest
-- wie viel nach 1, 3 oder 5 Halbwertszeiten noch uebrig ist
-- was die Verdopplungszeit bedeutet
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:exponential-function}}
-
-## Grundform und Eigenschaften
-
-
-
-
-
-Die Exponentialfunktion hat die Form **f(x) = a × bˣ**. Die wichtigste Basis ist **e ≈ 2,718** (Eulersche Zahl).
-
-Wichtige Eigenschaften:
-- **Wertebereich**: immer positiv (nie 0 oder negativ!)
-- **y-Achsenabschnitt**: f(0) = a
-- **Asymptote**: y = 0 (die Kurve naehert sich der x-Achse, erreicht sie aber nie)
-- b > 1 → Wachstum; 0 < b < 1 → Zerfall
-
-> **Merke:** Die Exponentialfunktion ist **immer positiv** -- sie erreicht nie den Wert 0. Das ist eine haeufige MedAT-Falle!
-
----
-
-## Wachstum und Zerfall
-
-**Wachstum** (Basis > 1): f(t) = f₀ × eᵏᵗ (k > 0). Beispiel: Zinseszins, Pflanzenwachstum.
-
-**Zerfall** (negativer Exponent): f(t) = f₀ × e⁻ᵏᵗ (k > 0). Beispiel: Abkuehlung, radioaktiver Zerfall.
-
-| Typ | Formel | Beispiel |
-|---|---|---|
-| Wachstum | f(t) = f₀ × eᵏᵗ | Zinseszins |
-| Zerfall | f(t) = f₀ × e⁻ᵏᵗ | Abkuehlung |
-
----
-
-## Halbwertszeit
-
-Die **Halbwertszeit T½** ist die Zeit, nach der die Haelfte uebrig ist:
-
-**T½ = ln(2)/k ≈ 0,693/k**
-
-Nach n Halbwertszeiten verbleiben: f₀ × (½)ⁿ
-
-| Anzahl T½ | Restmenge |
-|---|---|
-| 1 | 50 % |
-| 2 | 25 % |
-| 3 | 12,5 % |
-| 4 | 6,25 % |
-| 5 | 3,1 % |
-
-> **Merke:** Nach **5 Halbwertszeiten** sind weniger als 3,2 % uebrig. Diese Faustregel kommt haeufig am MedAT.
-
----
-
-## Verdopplungszeit
-
-Beim Wachstum heisst das Gegenstueck **Verdopplungszeit**: T₂ = ln(2)/k. Dieselbe Formel wie die Halbwertszeit, nur im Wachstumskontext.
-
----
-
-## Potenzregeln (Wiederholung)
-
-- aˣ × aʸ = aˣ⁺ʸ
-- aˣ / aʸ = aˣ⁻ʸ
-- (aˣ)ʸ = aˣ×ʸ
-- a⁰ = 1
-- a⁻ˣ = 1/aˣ
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 — Zinseszins:** 1000 Euro bei 5 % jaehrlich. Nach 10 Jahren: K = 1000 × 1,05¹⁰ ≈ **1629 Euro**. Verdopplungszeit: T₂ = ln(2)/ln(1,05) ≈ 0,693/0,049 ≈ **14 Jahre**.
-
-**Beispiel 2 — Abkuehlung:** Eine Tasse Tee hat 80 °C ueber Raumtemperatur. Halbwertszeit T½ = 15 min. Nach 45 min (= 3 × T½): 80 × (½)³ = **10 °C** ueber Raumtemperatur.
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung:**
-
-**Typische Aufgabentypen:**
-- Zerfall: f(t) = f₀ × e^(−kt); T½ = ln(2)/k
-- Rest nach n Halbwertszeiten: f₀ × (½)ⁿ
-- Wachstum: f(t) = f₀ × eᵏᵗ; Verdopplungszeit = ln(2)/k
-
-**Typische Fallen:**
-- e-Funktion wird nie exakt 0
-- T½ = ln(2)/k (nicht 1/k)
-- Nach 3 × T½ bleiben 12,5 % (nicht 1/3)
-
-**Minimal-Rechenrezepte:**
-- **T½** = ln(2)/k ≈ 0,693/k. **k** = ln(2)/T½.
-- **Rest nach n × T½:** f₀ × (½)ⁿ.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Wachstum:** f(t) = f₀ × eᵏᵗ; **Zerfall:** f(t) = f₀ × e⁻ᵏᵗ
-- **T½ = ln(2)/k ≈ 0,693/k**; nach n × T½: (½)ⁿ uebrig
-- **e ≈ 2,718**; e-Funktion ist immer positiv
-- **Nach 5 × T½:** weniger als 3,2 % Rest
-- **Fehler vermeiden:** T½ = ln(2)/k, nicht 1/k`,
-      contentExtended: `## Einleitung
-
-Paracetamol hat eine Halbwertszeit von etwa 2 Stunden -- nach 2 Stunden ist die Haelfte abgebaut, nach 4 Stunden ein Viertel, nach 10 Stunden weniger als 3 %. Dieses Muster ist kein Zufall, sondern eine **Exponentialfunktion**: Die Aenderungsrate ist proportional zum aktuellen Bestand. Ob Bakterienwachstum, radioaktiver Zerfall oder der Medikamentenspiegel im Blut -- ueberall beschreibt f(t) = f_0 mal e hoch (plus oder minus kt) den Verlauf. Die **Halbwertszeit** ist dabei der zentrale Parameter.
-
-**In diesem Kapitel lernst du:**
-- was exponentielles Wachstum und exponentiellen Zerfall unterscheidet und wie die Grundformel aufgebaut ist
-- warum die Exponentialfunktion nie den Wert null erreicht -- auch wenn sie sich ihm beliebig naehert
-- wie du die Halbwertszeit aus der Zerfallskonstante berechnest und umgekehrt
-- wie viel nach einer, drei oder fuenf Halbwertszeiten noch uebrig ist (die 50-12,5-3-Prozent-Regel)
-- was Steady-State bedeutet und wann er bei Dauertherapie erreicht wird
-
----
-
-{{DIAGRAM:coordinate-system}}
+      content: `{{DIAGRAM:coordinate-system}}
 
 {{DIAGRAM:exponential-function}}
 
@@ -1029,30 +623,7 @@ Ausgangskolonie: N₀ = 1000. Verdopplungszeit 30 min → k = ln2/30 = 0,0231 mi
 T½ = 6,01 h, Injektionsaktivität A₀ = 740 MBq. k = ln2/6,01 = 0,1153 h⁻¹. Nach 24 h: A = 740 × e^(−0,1153×24) = 740 × e^(−2,767) = 740 × 0,0628 = **46,5 MBq**. Restaktivität = 46,5/740 = **6,3%** — Patient kann nach 24 h bedenkenlos Kontakt mit Kindern haben (<5% gilt als unbedenklich, hier knapp darüber).
 
 **Beispiel 4 — Steady-State-Aufbau:**
-Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n Dosen: 1 − (½)ⁿ. Nach 1 Dosis: 50 %, nach 2: 75 %, nach 3: 87,5 %, nach 4: 93,75 %, nach 5: 96,9 %. Klinische Faustregel: **Steady State nach 4–5 T½** (94–97 % erreicht).
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- Zerfall f(t) = f₀×e^(−kt); T½ = ln(2)/k; k aus T½; Rest nach n×T½ = f₀×(½)ⁿ
-- Pharmakokinetik C(t) = C₀×e^(−kt); Steady-State nach 4–5×T½
-- Wachstum f(t) = f₀×e^(kt); Verdopplungszeit T₂ = ln(2)/k
-
-**Minimal-Rechenrezepte:**
-- **Zerfall:** C(t) = C₀×e^(−kt). **T½** = ln(2)/k ≈ 0,693/k. **k** = ln(2)/T½.
-- **Rest nach n×T½:** f = f₀×(½)ⁿ. Nach 5×T½: < 3,2 %. **Steady-State:** nach 4–5×T½.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Wachstum**: N(t) = N₀×eᵏᵗ (k > 0); **Zerfall**: C(t) = C₀×e⁻ᵏᵗ (k > 0)
-- **Halbwertszeit**: T½ = ln(2)/k ≈ 0,693/k; k = ln(2)/T½; N(t) = N₀×(½)^(t/T½)
-- **Eulersche Zahl**: e ≈ 2,718; f(x) = eˣ ist ihre eigene Ableitung
-- **Steady State**: nach 4–5 Halbwertszeiten werden 94–97% erreicht; nach 1×T½: 50%, 2×T½: 75%, ...
-- **Klinisch**: Paracetamol T½ = 2h; ⁹⁹ᵐTc T½ = 6h; Bakterienverdopplungszeit; Kapitalverzinsung`,
+Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n Dosen: 1 − (½)ⁿ. Nach 1 Dosis: 50 %, nach 2: 75 %, nach 3: 87,5 %, nach 4: 93,75 %, nach 5: 96,9 %. Klinische Faustregel: **Steady State nach 4–5 T½** (94–97 % erreicht).`,
       lernziele: [
         "Exponentialfunktionen in der Form f(t) = f₀ × e^(kt) aufstellen und Wachstum von Zerfall unterscheiden.",
         "Die Halbwertszeit T₁/₂ = ln(2)/k aus der Eliminationskonstante berechnen und umgekehrt.",
@@ -1185,148 +756,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `## Einleitung
-
-Warum ist die Richterskala fuer Erdbeben logarithmisch? Weil ein Beben der Staerke 6 zehnmal so stark ist wie Staerke 5. Der **Logarithmus** verwandelt riesige Zahlenbereiche in handliche Skalen. Du kennst das vom pH-Wert in der Chemie oder von der Dezibel-Skala fuer Lautstaerke. Wer die drei Logarithmengesetze beherrscht, kann Exponentialgleichungen loesen und viele MedAT-Aufgaben schnell knacken.
-
-**In diesem Kapitel lernst du:**
-- wie der Logarithmus als Umkehrung der Exponentialfunktion funktioniert
-- wann du log, ln oder ld verwendest
-- wie du mit den drei Logarithmengesetzen (Produkt, Quotient, Potenz) rechnest
-- wie der pH-Wert mit dem Logarithmus zusammenhaengt
-- wie du den Basiswechsel anwendest
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:logarithm-function}}
-
-## Definition und Grundbegriffe
-
-
-
-
-
-Der Logarithmus ist die **Umkehrung der Exponentialfunktion**:
-
-**log_b(x) = y bedeutet: b^y = x**
-
-In einfachen Worten: "Wie oft muss ich b mit sich selbst multiplizieren, um x zu erhalten?"
-
-Wichtige Varianten:
-- **log₁₀(x)** (Zehnerlogarithmus, kurz "log"): Basis 10 -- fuer pH-Wert, Dezibel
-- **ln(x)** (natuerlicher Logarithmus): Basis e ≈ 2,718
-- **log₂(x)** bzw. **ld(x)**: Basis 2 -- z. B. ld(16) = 4 (weil 2⁴ = 16)
-
-> **Merke:** Der Logarithmus ist nur fuer **positive Zahlen** definiert. ln(0) und ln(negativ) existieren nicht -- haeufige MedAT-Falle! Ausserdem: log(a + b) ≠ log a + log b.
-
----
-
-## Logarithmengesetze
-
-Die drei wichtigsten Regeln (gelten fuer alle Basen):
-
-1. **Produktregel**: log(a × b) = log(a) + log(b)
-2. **Quotientenregel**: log(a/b) = log(a) − log(b)
-3. **Potenzregel**: log(aⁿ) = n × log(a)
-
-**Basiswechsel**: log_b(x) = ln(x)/ln(b)
-
-| Regel | Formel | Beispiel |
-|---|---|---|
-| Produktregel | log(a×b) = log a + log b | log(2×5) = log 10 = 1 |
-| Quotientenregel | log(a/b) = log a − log b | ln(1/2) = −ln 2 |
-| Potenzregel | log(aⁿ) = n × log a | log(10³) = 3 |
-| Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8/ln 2 = 3 |
-
-**Spezialwerte**: log(1) = 0; ln(e) = 1; log(10) = 1
-
----
-
-## Eigenschaften der Logarithmusfunktion
-
-- **Definitionsbereich**: nur positive Zahlen (x > 0)
-- **Nullstelle**: x = 1 (weil log(1) = 0)
-- **Asymptote**: x = 0 (die Kurve geht gegen −∞)
-- Waechst unbegrenzt, aber sehr langsam
-
----
-
-## pH-Wert
-
-Der **pH-Wert** nutzt den Zehnerlogarithmus: **pH = −log₁₀([H⁺])**
-
-Beispiele:
-- [H⁺] = 10⁻⁷ mol/L → pH = 7 (neutral)
-- [H⁺] = 10⁻² mol/L → pH = 2 (sauer)
-
-Umkehrung: **[H⁺] = 10^(−pH)**
-
-> **Merke:** Eine pH-Aenderung um 1 bedeutet eine **10-fache** Aenderung der Protonenkonzentration. Eine Aenderung um 2 Einheiten = Faktor 100.
-
----
-
-## Nuetzliche Merkwerte
-
-- ln(2) ≈ 0,693
-- log(2) ≈ 0,301
-- log(3) ≈ 0,477
-- ln(10) ≈ 2,303
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 — Exponentialgleichung loesen:** Gesucht: x aus 5ˣ = 200. Logarithmieren: x = ln(200)/ln(5) = 5,298/1,609 = **3,29**.
-
-**Beispiel 2 — Dezibel:** Lautstaerke steigt um 20 dB. Intensitaetsfaktor: 10^(20/10) = 10² = **100-fach** lauter. Merke: +10 dB = Faktor 10, +3 dB ≈ Faktor 2.
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung:**
-
-**Typische Aufgabentypen:**
-- Logarithmengesetze anwenden (Produkt, Quotient, Potenz)
-- pH = −log([H⁺]); [H⁺] = 10^(−pH)
-- Dezibel: +10 dB = Faktor 10; +3 dB ≈ Faktor 2
-- Basiswechsel; ln nur fuer x > 0
-
-**Typische Fallen:**
-- ln(0) existiert nicht
-- log(a + b) ≠ log a + log b
-- pH: Minus nicht vergessen
-
-**Minimal-Rechenrezepte:**
-- **Gesetze:** log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n × log a.
-- **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **log_b(x) = y bedeutet b^y = x**
-- **Gesetze:** Produkt → Summe; Quotient → Differenz; Potenz → Faktor
-- **Basiswechsel:** log_b(x) = ln(x)/ln(b)
-- **pH = −log₁₀([H⁺])**; 1 pH-Einheit = Faktor 10
-- **Dezibel:** +10 dB = 10-fach; +3 dB ≈ 2-fach
-- **Fehler vermeiden:** ln nur fuer x > 0; log(a+b) ≠ log a + log b`,
-      contentExtended: `## Einleitung
-
-Warum hat Blut einen pH von 7,4 — und warum ist bereits ein Abfall auf 7,0 lebensbedrohlich? Die Antwort steckt im Logarithmus: Eine pH-Einheit entspricht einem Faktor 10 bei der Protonenkonzentration. Der Logarithmus verwandelt riesige Zahlenbereiche in handliche Skalen — vom pH-Wert über die Dezibel-Skala des Gehörs bis zur Halbwertszeitberechnung in der Pharmakokinetik. Wer die drei Logarithmengesetze sicher beherrscht, kann Exponentialgleichungen lösen und klinische Pufferprobleme (Henderson-Hasselbalch) bearbeiten.
-
-**In diesem Kapitel lernst du:**
-- wie der Logarithmus als Umkehrung der Exponentialfunktion funktioniert und wann du log, ln oder ld verwendest
-- wie du mit den drei Logarithmengesetzen (Produkt, Quotient, Potenz) Gleichungen vereinfachst
-- wie der pH-Wert aus der Protonenkonzentration berechnet wird und warum kleine pH-Änderungen klinisch dramatisch sind
-- wie die Henderson-Hasselbalch-Gleichung den Puffer im Blut beschreibt
-- wie logarithmische Skalen (Dezibel, Semilog-Plot) exponentielle Zusammenhänge linearisieren
-
----
-
-{{DIAGRAM:coordinate-system}}
+      content: `{{DIAGRAM:coordinate-system}}
 
 {{DIAGRAM:logarithm-function}}
 
@@ -1373,6 +803,19 @@ Die wichtigsten Logarithmengesetze (für alle Basen gleich):
 | Quotientenregel | log(a/b) = log a − log b | ln(1/2) = ln 1 − ln 2 = −ln 2 |
 | Potenzregel | log(aⁿ) = n × log a | log(10³) = 3 × log 10 = 3 |
 | Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8 / ln 2 = 3 |
+
+## Vorzeichen von Logarithmen
+
+Das Vorzeichen eines Logarithmus lässt sich direkt am Argument ablesen:
+
+- ln(x) > 0 wenn x > 1
+- ln(x) = 0 wenn x = 1
+- ln(x) < 0 wenn 0 < x < 1
+
+**Beispiel:** „Welches Vorzeichen hat ln(1/e²) + ln(e³)?"
+Lösung: ln(1/e²) = ln(e⁻²) = −2. ln(e³) = 3. Summe = −2 + 3 = **+1 > 0** (positiv).
+
+> **Merke:** Schnelltest: Argument > 1 → ln positiv; Argument = 1 → ln null; Argument zwischen 0 und 1 → ln negativ. Bei Summen/Differenzen jeden Term einzeln auswerten, dann verrechnen.
 
 ## Eigenschaften der Logarithmusfunktion
 
@@ -1446,31 +889,7 @@ Messwerte: C(0) = 100 mg/L, C(3h) = 50 mg/L. Steigung im Semilog: m = (ln50 − 
 Normalgehör: 0 dB HL. Patient hört erst ab 40 dB HL (Schwerhörigkeit). Intensitätsverhältnis: I₂/I₁ = 10^(40/10) = 10⁴ = **10.000-fach** höhere Intensität nötig. Verbesserung durch Hörgerät um 30 dB: Verstärkungsfaktor = 10^(30/10) = **1000-fach**.
 
 **Beispiel 4 — Logarithmengesetze zur Gleichungslösung:**
-Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ: x = log(200)/log(5) = 2,301/0,699 = **3,29**. Basiswechsel liefert identische Ergebnisse.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- log(a×b), log(a/b), log(aⁿ); pH = −log([H⁺]); [H⁺] = 10^(−pH); Henderson-Hasselbalch
-- Dezibel L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10
-- Basiswechsel; ln nur für x > 0
-
-**Minimal-Rechenrezepte:**
-- **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
-- **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). **Dezibel:** +10 dB = Faktor 10; +3 dB ≈ Faktor 2.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Definition**: log_b(x) = y ↔ bʸ = x; log₁₀ = lg; log_e = ln; log(1) = 0; log(b) = 1
-- **Logarithmengesetze**: log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a
-- **Basiswechsel**: log_b(x) = ln(x)/ln(b) = log(x)/log(b)
-- **pH**: pH = −log₁₀([H⁺]); [H⁺] = 10⁻ᵖᴴ; ΔpH = 0,3 → Faktor 2 bei [H⁺]
-- **Henderson-Hasselbalch**: pH = pKs + log([A⁻]/[HA]); Blut: pH = 6,1 + log([HCO₃⁻]/(0,03×pCO₂))
-- **Dezibel**: L = 10×log(I/I₀); +10 dB → ×10; +3 dB → ×2`,
+Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ: x = log(200)/log(5) = 2,301/0,699 = **3,29**. Basiswechsel liefert identische Ergebnisse.`,
       lernziele: [
         "Den Logarithmus als Umkehrfunktion der Exponentialfunktion verstehen und Logarithmengesetze sicher anwenden.",
         "Den pH-Wert aus der Protonenkonzentration berechnen und die Bedeutung des negativen dekadischen Logarithmus erklären.",
@@ -1619,124 +1038,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
         "Rationale Funktion",
         "Kaplan-Meier-Kurve",
       ],
-      content: `## Einleitung
-
-Im Alltag begegnest du ueberall Graphen: die Temperaturkurve im Wetterbericht, das Akku-Diagramm auf dem Handy oder der Verlauf einer Zugfahrt auf dem Fahrplan. Graphen lesen heisst: auf einen Blick erkennen, ob etwas steigt, faellt, ein Maximum hat oder sich einem Grenzwert naehert.
-
-**In diesem Kapitel lernst du:**
-- was Asymptoten (horizontal, vertikal) aussagen
-- wie du Monotonie und Extrempunkte aus einem Graphen abliest
-- wie du den Funktionstyp aus dem Kurvenverlauf erkennst (linear, quadratisch, exponentiell)
-- was Graphentransformationen (Verschiebung, Spiegelung, Streckung) bewirken
-- wie ein Semilog-Plot funktioniert
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:exponential-function}}
-
-## Graphen lesen
-
-Aus einem Graphen kannst du verschiedene Eigenschaften ablesen:
-- **Nullstellen**: wo die Kurve die x-Achse schneidet
-- **Monotonie**: ob die Kurve steigt oder faellt
-- **Extrempunkte**: Hochpunkte und Tiefpunkte
-- **Asymptoten**: Linien, denen sich die Kurve immer weiter naehert, ohne sie zu erreichen
-
-> **Merke:** Am MedAT werden Graphen oft ohne Formel gezeigt. Aus dem Kurvenverlauf musst du den Funktionstyp erkennen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal, flache Annaehrung = exponentiell.
-
----
-
-## Asymptoten
-
-Eine **horizontale Asymptote** ist eine waagerechte Linie, der sich der Graph fuer sehr grosse x-Werte naehert. Beispiel: f(x) = 1/x naehert sich y = 0.
-
-Eine **vertikale Asymptote** ist eine senkrechte Linie, bei der der Graph ins Unendliche geht. Beispiel: f(x) = 1/x hat eine vertikale Asymptote bei x = 0.
-
-**Faustregel fuer Bruchfunktionen (Zaehler/Nenner):**
-- Zaehler-Grad < Nenner-Grad: horizontale Asymptote y = 0
-- Zaehler-Grad = Nenner-Grad: horizontale Asymptote y = fuehrender Koeffizient oben / unten
-
----
-
-## Monotonie und Extrempunkte
-
-- **Monoton steigend**: Kurve geht nach rechts oben
-- **Monoton fallend**: Kurve geht nach rechts unten
-- **Hochpunkt**: Kurve wechselt von steigend zu fallend
-- **Tiefpunkt**: Kurve wechselt von fallend zu steigend
-- **Wendepunkt**: Kurve aendert die Kruemmungsrichtung (Huegel wird Mulde oder umgekehrt)
-
----
-
-## Semilog-Plot
-
-Wenn Werte ueber viele Groessenordnungen gehen (z. B. 1, 10, 100, 1000), hilft ein **Semilog-Plot**: Die y-Achse wird logarithmisch skaliert. Dann erscheinen **Exponentialfunktionen als Geraden**.
-
-**Beispiel:** Du misst, wie ein Stoff zerfaellt: 100 → 50 → 25 → 12,5. Im normalen Diagramm ist das eine Kurve. Im Semilog-Plot wird es eine Gerade -- und aus der Steigung liest du die Zerfallskonstante ab.
-
-> **Merke:** Semilog-Plot macht Exponentialfunktionen gerade. Log-Log-Plot macht Potenzfunktionen gerade.
-
----
-
-## Graphentransformationen
-
-So verschiebst oder spiegelst du einen Graphen:
-- f(x) + c: Graph um c nach **oben**
-- f(x − c): Graph um c nach **rechts**
-- −f(x): Spiegelung an der **x-Achse**
-- f(−x): Spiegelung an der **y-Achse**
-- a × f(x): Streckung in y-Richtung (a > 1: hoeher; 0 < a < 1: flacher)
-
-**Beispiel:** f(x) = eˣ wird zu g(x) = eˣ + 3: Der Graph verschiebt sich 3 Einheiten nach oben. Die Asymptote aendert sich von y = 0 auf y = 3.
-
----
-
-## Alltagsbeispiele
-
-**Beispiel 1 -- Asymptote:** f(x) = (3x² + 6)/(x² − 4). Zaehler-Grad = Nenner-Grad = 2 → horizontale Asymptote y = 3/1 = **3**. Nenner = 0 bei x = ±2 → vertikale Asymptoten.
-
-**Beispiel 2 -- Semilog-Plot:** Ein Wert halbiert sich alle 10 Stunden. Im Semilog-Plot: Gerade mit Steigung −0,0693. Halbwertszeit = ln(2)/0,0693 = **10 h**.
-
----
-
-## MedAT-Fokus
-
-**Typische Aufgabentypen:**
-- Asymptoten aus Graph oder Formel bestimmen
-- Monotonie und Extrempunkte ablesen
-- Semilog-Plot: Steigung = −k, Halbwertszeit = ln(2)/k
-- Graphentransformationen erkennen (Verschiebung, Spiegelung, Streckung)
-
-**Typische Fallen:**
-- Horizontale Asymptote mit y-Achsenabschnitt verwechseln
-- Semilog-Plot: Kurve (nicht Gerade) heisst KEIN reiner Zerfall
-- Transformation: f(x − 3) verschiebt nach RECHTS (nicht links!)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Asymptoten**: horizontal (y = c fuer grosse x); vertikal (x = a, wo Nenner = 0)
-- **Monotonie**: steigend/fallend; Extrempunkt = Wechsel der Richtung
-- **Semilog-Plot**: y-Achse logarithmisch; Exponentialzerfall wird zur Geraden; Steigung = −k
-- **Transformationen**: f(x−a): nach rechts; −f(x): Spiegelung x-Achse; a×f(x): Streckung
-- **Typische Fehler**: f(x−3) ist Verschiebung nach rechts, nicht links`,
-      contentExtended: `## Einleitung
-
-Im Alltag begegnest du ueberall Graphen: die Temperaturkurve im Wetterbericht, das Akku-Diagramm auf dem Handy oder der Verlauf einer Zugfahrt auf dem Fahrplan. Graphen lesen heisst: auf einen Blick erkennen, ob etwas steigt, faellt, ein Maximum hat oder sich einem Grenzwert naehert. Am MedAT musst du aus einem Kurvenverlauf auf den Funktionstyp schliessen und wichtige Punkte ablesen.
-
-**In diesem Kapitel lernst du:**
-- was Asymptoten (horizontal, vertikal) aussagen
-- wie du Monotonie und Extrempunkte aus einem Graphen abliest
-- wie du den Funktionstyp aus dem Kurvenverlauf erkennst (linear, quadratisch, exponentiell)
-- was Graphentransformationen (Verschiebung, Spiegelung, Streckung) bewirken
-- wie ein Semilog-Plot funktioniert
-
----
-
-{{DIAGRAM:coordinate-system}}
+      content: `{{DIAGRAM:coordinate-system}}
 
 {{DIAGRAM:exponential-function}}
 
@@ -1856,31 +1158,7 @@ C(t) nach i.v.-Bolus zeigt im Semilog-Plot eine biphasische Kurve. Alpha-Phase (
 f(x) = (3x² + 6)/(x² − 4). Horizontale Asymptote: Grad Zähler = Grad Nenner → y = 3/1 = **y = 3**. Vertikale Asymptoten: x² − 4 = 0 → x = ±2. Für x = 2: Nenner → 0, Zähler = 18 ≠ 0 → **VA bei x = 2 und x = −2**. Klinisch relevant bei Dosis-Wirkungs-Kurven: horizontale Asymptote = maximale Wirkung (E_max).
 
 **Beispiel 4 — Graphentransformation erkennen:**
-Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x−3 → Verschiebung 3 nach rechts, (2) negatives Vorzeichen im Exponenten → Spiegelung an der y-Achse (Zerfall statt Wachstum), (3) Faktor 2 → Streckung in y-Richtung, (4) +1 → Verschiebung 1 nach oben. Neue Asymptote: **y = 1** (statt y = 0). y-Wert bei x = 3: g(3) = 2×e⁰ + 1 = **3**.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- Horizontale/vertikale Asymptoten; Monotonie; Extrempunkte aus Graph
-- Semilog-Plot: ln C vs. t → Gerade bei C = C₀×e^(−kt); Steigung = −k, T½ = 0,693/k
-- Michaelis-Menten v = v_max×[S]/(Km+[S]); EC₅₀; Dosis-Wirkungskurve
-- Graphentransformationen (Verschiebung, Spiegelung, Streckung)
-
-**Minimal-Rechenrezepte:**
-- **Asymptote:** lim(x→±∞) f(x) für horizontal; Nenner = 0 für vertikal. **Semilog:** Steigung = −k; T½ = ln(2)/k.
-- **Michaelis-Menten:** v = v_max×[S]/(Km+[S]); bei [S] = Km ist v = v_max/2. **EC₅₀** = 50 % der max. Wirkung.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Asymptoten**: horizontal (y = c, wenn x → ±∞); vertikal (x = a, wenn f → ∞); schräg (bei Polynomdivision)
-- **Monotonie**: f steigt, wo f' > 0; fällt, wo f' < 0; Extrempunkt, wo f' = 0 und Vorzeichenwechsel
-- **Semilog-Plot**: y-Achse logarithmisch; Exponentialzerfall wird zur Geraden; Steigung = −k; Abszisse = Zeit
-- **Michaelis-Menten**: v = v_max×[S]/(Km+[S]); Asymptote y = v_max; bei [S] = Km: v = v_max/2
-- **Transformationen**: f(x−a): Verschiebung nach rechts; −f(x): Spiegelung x-Achse; a×f(x): Streckung`,
+Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x−3 → Verschiebung 3 nach rechts, (2) negatives Vorzeichen im Exponenten → Spiegelung an der y-Achse (Zerfall statt Wachstum), (3) Faktor 2 → Streckung in y-Richtung, (4) +1 → Verschiebung 1 nach oben. Neue Asymptote: **y = 1** (statt y = 0). y-Wert bei x = 3: g(3) = 2×e⁰ + 1 = **3**.`,
       lernziele: [
         "Horizontale, vertikale und schräge Asymptoten aus Graphen ablesen und berechnen.",
         "Monotoniebereiche, Extrempunkte und Wendepunkte in Funktionsgraphen identifizieren.",
@@ -2022,6 +1300,263 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
           ],
           difficulty: 3,
           tags: ["asymptote", "rationale-funktion", "grenzwert"],
+        },
+      ],
+    },
+    {
+      id: "ma-5-06",
+      title: "Folgen und Reihen",
+      stichworte: [
+        "Arithmetische Folge",
+        "Geometrische Folge",
+        "Differenz",
+        "Quotient",
+        "Gauss-Summe",
+        "Partialsumme",
+        "Zinseszins",
+        "Konvergenz",
+        "Grenzwert",
+        "Geometrische Reihe",
+        "Summenformel",
+      ],
+      content: `{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Arithmetische Folgen — gleicher Abstand
+
+Eine Folge (a_n) heißt **arithmetisch**, wenn die Differenz d = a_{n+1} − a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist. Man sagt auch: Die Folge wächst (oder fällt) linear.
+
+**Formel für das n-te Glied:**
+
+a_n = a₁ + (n − 1) × d
+
+**Beispiel 1:** a₁ = 3, d = 5 → Folge: 3, 8, 13, 18, 23, ... Das 10. Glied: a₁₀ = 3 + 9 × 5 = **48**. Das 100. Glied: a₁₀₀ = 3 + 99 × 5 = **498**.
+
+**Beispiel 2:** Die geraden Zahlen 2, 4, 6, 8, ... sind eine arithmetische Folge mit a₁ = 2, d = 2. a_n = 2 + (n−1)×2 = 2n.
+
+**Eigenschaft:** Jedes Glied einer arithmetischen Folge ist das **arithmetische Mittel** seiner beiden Nachbarn: a_n = (a_{n−1} + a_{n+1})/2.
+
+> **Merke:** Arithmetische Folge: gleicher Abstand d. Formel: a_n = a₁ + (n−1)·d. Jedes Glied ist das arithmetische Mittel seiner Nachbarn. Lineares Wachstum.
+
+---
+
+## Summe arithmetischer Folgen — die Gauss-Summe
+
+Die Summe der ersten n Glieder einer arithmetischen Folge ist:
+
+**S_n = n/2 × (a₁ + a_n)**
+
+Oder, wenn a_n nicht bekannt: **S_n = n/2 × (2a₁ + (n−1)·d)**
+
+**Der legendäre Gauss-Trick:** Der junge Carl Friedrich Gauss (ca. 9 Jahre alt) sollte die Zahlen 1 bis 100 addieren. Statt mühsam zu rechnen, bildete er Paare: (1+100) + (2+99) + (3+98) + ... + (50+51) = 50 Paare × 101 = **5050**. Die allgemeine Formel S_n = n(n+1)/2 für die Summe 1+2+...+n folgt direkt daraus.
+
+**Rechenbeispiel:** Summe der ersten 20 ungeraden Zahlen (1, 3, 5, ..., 39). Hier a₁ = 1, d = 2, n = 20, a₂₀ = 1 + 19×2 = 39. S₂₀ = 20/2 × (1 + 39) = 10 × 40 = **400**. Überraschung: Die Summe der ersten n ungeraden Zahlen ist immer n² (hier 20² = 400).
+
+**Medizinischer Kontext:** In der Dosiseskalation (Phase-I-Studien) wird die Dosis oft in gleichen Schritten erhöht — eine arithmetische Folge. Die kumulative Gesamtdosis ist dann die Gauss-Summe.
+
+> **Merke:** Gauss-Summe: S_n = n/2 × (erstes + letztes Glied). Spezialfall: 1+2+...+n = n(n+1)/2.
+
+---
+
+## Geometrische Folgen — gleicher Faktor
+
+Eine Folge (a_n) heißt **geometrisch**, wenn der Quotient q = a_{n+1}/a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist. Man sagt auch: Die Folge wächst (oder fällt) exponentiell.
+
+**Formel für das n-te Glied:**
+
+a_n = a₁ × q^(n−1)
+
+**Beispiel 1:** a₁ = 2, q = 3 → Folge: 2, 6, 18, 54, 162, ... Das 6. Glied: a₆ = 2 × 3⁵ = 2 × 243 = **486**.
+
+**Beispiel 2:** Verdünnungsreihe im Labor: 1:2-Verdünnung → q = 1/2. Ausgangskonzentration 100 mg/L: 100, 50, 25, 12,5, 6,25, ... Das n-te Glied: a_n = 100 × (1/2)^(n−1).
+
+**Eigenschaft:** Jedes Glied einer geometrischen Folge ist das **geometrische Mittel** seiner beiden Nachbarn: a_n = √(a_{n−1} × a_{n+1}).
+
+**Summe der ersten n Glieder:**
+
+S_n = a₁ × (q^n − 1) / (q − 1) für q ≠ 1
+
+**Beispiel:** S₅ = 2 × (3⁵ − 1)/(3 − 1) = 2 × 242/2 = **242**.
+
+> **Merke:** Geometrische Folge: gleicher Faktor q. Formel: a_n = a₁ × q^(n−1). Exponentielles Wachstum (q > 1) oder Zerfall (0 < q < 1).
+
+---
+
+## Zinseszins — Anwendung geometrischer Folgen
+
+Der Zinseszins ist die wichtigste praktische Anwendung geometrischer Folgen. Ein Anfangskapital K₀ wächst bei einem jährlichen Zinssatz p (in Prozent) nach n Jahren auf:
+
+**K_n = K₀ × (1 + p/100)^n**
+
+Hier ist der Wachstumsfaktor q = 1 + p/100.
+
+**Beispiel 1:** K₀ = 1000 €, p = 5 %, n = 10 Jahre. K₁₀ = 1000 × 1,05¹⁰ = 1000 × 1,6289 ≈ **1628,89 €**. Ohne Zinseszins (einfacher Zins): K₁₀ = 1000 + 10 × 50 = 1500 €. Differenz: **128,89 € Zinseszinseffekt**.
+
+**Beispiel 2:** Wie lange dauert es, bis sich ein Kapital bei 3 % Zinsen verdoppelt? K_n = 2K₀ → (1,03)^n = 2 → n = ln(2)/ln(1,03) = 0,693/0,0296 ≈ **23,4 Jahre**. Faustregel: **72er-Regel** — 72/p ≈ Verdopplungszeit → 72/3 = 24 Jahre (gute Näherung!).
+
+**Medizinischer Kontext:** Bakterienvermehrung folgt (in der exponentiellen Phase) einer geometrischen Folge. Bei Verdopplungszeit T_d: N(t) = N₀ × 2^(t/T_d). Ebenso: Kumulation eines Medikaments bei wiederholter Gabe vor Erreichen des Steady State.
+
+> **Merke:** Zinseszins: K_n = K₀ × (1+p/100)^n. 72er-Regel: Verdopplungszeit ≈ 72/p Jahre.
+
+---
+
+## Konvergenz und Grenzwerte von Folgen
+
+Eine Folge (a_n) **konvergiert** gegen einen Grenzwert L, wenn sich die Glieder für wachsendes n dem Wert L beliebig nähern: lim(n→∞) a_n = L. Andernfalls **divergiert** die Folge.
+
+**Wichtige Beispiele:**
+- a_n = 1/n → lim = 0 (harmonische Nullfolge)
+- a_n = (2n+1)/(n+3) → lim = 2 (höchste Potenzen kürzen)
+- a_n = (−1)^n → divergiert (springt zwischen −1 und 1, kein fester Grenzwert)
+- a_n = q^n: konvergiert gegen 0 für |q| < 1; divergiert für |q| > 1; a_n = 1 für q = 1
+
+**Rechenregeln für Grenzwerte:** Wenn lim a_n = A und lim b_n = B, dann: lim(a_n ± b_n) = A ± B; lim(a_n × b_n) = A × B; lim(a_n/b_n) = A/B (falls B ≠ 0).
+
+---
+
+## Geometrische Reihe — unendliche Summe
+
+Die **geometrische Reihe** ist die unendliche Summe einer geometrischen Folge. Für |q| < 1 konvergiert sie:
+
+**S = a₁ / (1 − q)**
+
+**Beispiel 1:** 1 + 1/2 + 1/4 + 1/8 + ... = 1/(1 − 1/2) = **2**.
+
+**Beispiel 2:** 3 + 3×(0,1) + 3×(0,01) + ... = 3/(1 − 0,1) = 3/0,9 = **10/3 ≈ 3,33**.
+
+Für |q| ≥ 1 divergiert die Reihe (die Partialsummen wachsen über alle Grenzen).
+
+**Medizinischer Kontext:** Die geometrische Reihe beschreibt die Kumulation eines Medikaments bei wiederholter Gabe: C_ss = D/(1 − e^(−k×τ)), wobei τ das Dosierungsintervall und k die Eliminationskonstante ist. Für k×τ klein (kurzes Intervall, langsame Elimination) nähert sich dies einer geometrischen Reihe.
+
+> **Merke:** Geometrische Reihe: S = a₁/(1−q) nur für |q| < 1. Für |q| ≥ 1 divergiert die Reihe. Medizinische Anwendung: Medikamentenkumulation.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Gauss-Summe:** Berechne 5 + 10 + 15 + ... + 200. Arithmetische Folge mit a₁ = 5, d = 5, a_n = 200. n = (200−5)/5 + 1 = 40. S₄₀ = 40/2 × (5+200) = 20 × 205 = **4100**.
+
+**Beispiel 2 — Zinseszins:** 5000 € werden zu 4 % p.a. angelegt. Nach 15 Jahren: K₁₅ = 5000 × 1,04¹⁵ = 5000 × 1,8009 ≈ **9005 €**. Zinsen insgesamt: 9005 − 5000 = **4005 €**.
+
+**Beispiel 3 — Geometrische Reihe:** Ein Medikament hat eine Bioverfügbarkeit von 80 % pro Dosis. Kumulative Wirkung bei unendlicher Wiederholung: S = 1/(1−0,8) = **5** (d. h. 5-fache Einzeldosis als Steady-State-Effekt).
+
+**Beispiel 4 — Verdopplungszeit:** Eine Bakterienkultur verdoppelt sich alle 30 min. Wie viele Bakterien nach 5 h (ausgehend von 500)? Anzahl Verdopplungen: 5×60/30 = 10. N = 500 × 2¹⁰ = 500 × 1024 = **512 000**.`,
+      lernziele: [
+        "Das n-te Glied arithmetischer und geometrischer Folgen berechnen.",
+        "Die Gauss-Summe und die geometrische Partialsumme anwenden.",
+        "Zinseszinsaufgaben als geometrische Folge modellieren und berechnen.",
+        "Konvergenz einer Folge/Reihe beurteilen und den Grenzwert der geometrischen Reihe bestimmen.",
+        "Folgen und Reihen auf medizinische Kontexte (Verdünnungsreihe, Bakterienwachstum, Kumulation) übertragen.",
+      ],
+      sections: [
+        {
+          heading: "Arithmetische Folgen und Gauss-Summe",
+          text: "Eine arithmetische Folge hat eine konstante Differenz d. Das n-te Glied ist a_n = a₁ + (n−1)·d. Die Summe der ersten n Glieder beträgt S_n = n/2 × (a₁ + a_n). Der Spezialfall 1+2+...+n = n(n+1)/2 heißt Gauss-Summe. In der Medizin begegnet man arithmetischen Folgen bei linearer Dosiseskalation.",
+          merksatz:
+            "Arithmetische Folge: a_n = a₁ + (n−1)·d. Gauss-Summe: S_n = n/2 × (a₁ + a_n). 1+2+...+n = n(n+1)/2.",
+        },
+        {
+          heading: "Geometrische Folgen und Zinseszins",
+          text: "Eine geometrische Folge hat einen konstanten Quotienten q. Das n-te Glied ist a_n = a₁ × q^(n−1). Die Partialsumme ist S_n = a₁(q^n−1)/(q−1). Zinseszins: K_n = K₀(1+p/100)^n. Verdopplungszeit ≈ 72/p (72er-Regel). Bakterienwachstum und Medikamentenkumulation folgen geometrischen Folgen.",
+          merksatz:
+            "Geometrische Folge: a_n = a₁ × q^(n−1). Zinseszins: K_n = K₀(1+p/100)^n. 72er-Regel: T_doppel ≈ 72/p.",
+        },
+        {
+          heading: "Konvergenz und geometrische Reihe",
+          text: "Eine Folge konvergiert, wenn ihre Glieder sich einem Grenzwert nähern. Die geometrische Reihe konvergiert für |q| < 1 gegen S = a₁/(1−q). Für |q| ≥ 1 divergiert sie. In der Pharmakokinetik beschreibt die geometrische Reihe die Kumulation bei wiederholter Medikamentengabe bis zum Steady State.",
+          merksatz:
+            "Geometrische Reihe: S = a₁/(1−q) für |q| < 1. Divergenz für |q| ≥ 1. Kumulation = geometrische Reihe.",
+        },
+      ],
+      diagram: "coordinate-system",
+      merksätze: [
+        "Arithmetische Folge: a_n = a₁ + (n−1)·d. Konstante Differenz, lineares Wachstum.",
+        "Gauss-Summe: S_n = n/2 × (a₁ + a_n). Spezialfall: 1+2+...+n = n(n+1)/2 = 5050 für n=100.",
+        "Geometrische Folge: a_n = a₁ × q^(n−1). Konstanter Quotient, exponentielles Wachstum.",
+        "Geometrische Partialsumme: S_n = a₁(q^n − 1)/(q − 1).",
+        "Zinseszins: K_n = K₀ × (1+p/100)^n. Verdopplungszeit ≈ 72/p (72er-Regel).",
+        "Geometrische Reihe konvergiert für |q| < 1: S = a₁/(1−q).",
+        "Konvergenz: lim a_n existiert → Folge konvergent. |q| < 1 → q^n → 0.",
+      ],
+      altfrage: {
+        question:
+          "Ein Sparbuch enthält 2000 Euro bei 3 % Jahreszinsen (Zinseszins). Wie viel Euro sind nach 20 Jahren auf dem Konto?",
+        answer:
+          "K₂₀ = 2000 × 1,03²⁰. 1,03²⁰ ≈ 1,8061. K₂₀ ≈ 2000 × 1,8061 = 3612,22 Euro. Der Zinseszinseffekt macht ca. 412 Euro aus (vs. einfacher Zins: 2000 + 20×60 = 3200 Euro).",
+      },
+      klinischerBezug:
+        "Geometrische Folgen beschreiben das exponentielle Wachstum von Bakterienkulturen in der Log-Phase (Verdopplungszeit = konstant). In der Pharmakokinetik modelliert die geometrische Reihe die Medikamentenkumulation bei wiederholter Gabe: Nach 4–5 Halbwertszeiten ist der Steady State erreicht (ca. 94–97 % des Endniveaus). Verdünnungsreihen im Labor (1:2, 1:10) sind geometrische Folgen mit q = 1/2 bzw. q = 1/10 — sie bestimmen Titer (z. B. Antikörper-Titer) und MIC (minimale Hemmkonzentration).",
+      selfTest: [
+        {
+          question: "Was ist das 15. Glied der arithmetischen Folge mit a₁ = 7 und d = 4?",
+          options: ["63", "56", "67", "60", "53"],
+          correctIndex: 0,
+          explanation:
+            "a₁₅ = a₁ + (n−1)·d = 7 + 14×4 = 7 + 56 = 63. Die Formel lautet a_n = a₁ + (n−1)·d. Häufiger Fehler: (n) statt (n−1) verwenden → 7 + 15×4 = 67 (falsch).",
+          hints: ["a_n = a₁ + (n−1)·d", "n−1 = 14, also 7 + 14×4"],
+          difficulty: 1,
+          tags: ["arithmetische-folge", "n-tes-glied"],
+        },
+        {
+          question: "Wie lautet die Summe 1 + 2 + 3 + ... + 50?",
+          options: ["1250", "1275", "1225", "1300", "2550"],
+          correctIndex: 1,
+          explanation:
+            "Gauss-Summe: S = n(n+1)/2 = 50×51/2 = 2550/2 = 1275. Alternativ: S₅₀ = 50/2 × (1+50) = 25 × 51 = 1275. Der Gauss-Trick: 50 Paare zu je 51 wären 2550 — aber nur 25 Paare (nicht 50!), denn jede Zahl kommt nur einmal vor.",
+          hints: ["S = n(n+1)/2", "50 × 51 / 2 = ?"],
+          difficulty: 1,
+          tags: ["gauss-summe", "arithmetische-reihe"],
+        },
+        {
+          question:
+            "Ein Kapital von 5000 Euro wird zu 6 % p.a. mit Zinseszins angelegt. Wie hoch ist das Kapital nach 12 Jahren (auf ganze Euro gerundet)?",
+          options: ["8600 €", "10 061 €", "9500 €", "11 000 €", "8800 €"],
+          correctIndex: 1,
+          explanation:
+            "K₁₂ = 5000 × 1,06¹² = 5000 × 2,0122 ≈ 10 061 €. Ohne Zinseszins wären es nur 5000 + 12×300 = 8600 € (Option A). Der Zinseszinseffekt beträgt 10 061 − 8600 = 1461 €. 1,06¹² kann man über 72er-Regel abschätzen: Verdopplung nach ca. 72/6 = 12 Jahren → K ≈ 10 000 € (gute Näherung!).",
+          hints: [
+            "K_n = K₀ × (1+p/100)^n = 5000 × 1,06¹²",
+            "72er-Regel: 72/6 = 12 → Verdopplung nach 12 Jahren",
+          ],
+          difficulty: 2,
+          tags: ["zinseszins", "geometrische-folge", "72er-regel"],
+        },
+        {
+          question:
+            "Welchen Wert hat die unendliche geometrische Reihe 4 + 2 + 1 + 1/2 + 1/4 + ...?",
+          options: ["6", "7", "8", "10", "Die Reihe divergiert"],
+          correctIndex: 2,
+          explanation:
+            "Geometrische Reihe mit a₁ = 4, q = 1/2. Da |q| = 1/2 < 1, konvergiert die Reihe. S = a₁/(1−q) = 4/(1−1/2) = 4/0,5 = 8. Probe: 4+2+1+0,5+0,25+... nähert sich tatsächlich 8 an. Bei |q| ≥ 1 würde die Reihe divergieren.",
+          hints: ["q = 2/4 = 1/2; |q| < 1 → konvergent", "S = a₁/(1−q) = 4/(1−0,5)"],
+          difficulty: 2,
+          tags: ["geometrische-reihe", "konvergenz", "grenzwert"],
+        },
+        {
+          question:
+            "Eine Bakterienkultur startet mit 200 Bakterien und verdoppelt sich alle 40 Minuten. Wie viele Bakterien sind nach 4 Stunden vorhanden?",
+          options: ["12 800", "25 600", "51 200", "6400", "102 400"],
+          correctIndex: 0,
+          explanation:
+            "4 Stunden = 240 Minuten. Anzahl Verdopplungen: 240/40 = 6. N = 200 × 2⁶ = 200 × 64 = 12 800. Das ist eine geometrische Folge mit a₁ = 200, q = 2. Häufiger Fehler: 240/40 = 6, aber dann 2⁷ statt 2⁶ verwenden (n−1 vs. n Verdopplungen).",
+          hints: ["240 min / 40 min = 6 Verdopplungen", "N = 200 × 2⁶ = 200 × 64"],
+          difficulty: 2,
+          tags: ["geometrische-folge", "bakterienwachstum", "verdopplung"],
+        },
+        {
+          question:
+            "Für welche Werte von q konvergiert die geometrische Reihe Σ a₁ × q^n (n = 0, 1, 2, ...)?",
+          options: ["q < 1", "|q| < 1", "q > 0", "0 < q < 1", "|q| ≤ 1"],
+          correctIndex: 1,
+          explanation:
+            "Die geometrische Reihe konvergiert genau dann, wenn |q| < 1, also −1 < q < 1. Auch negative Werte von q sind erlaubt (z. B. q = −0,5: alternierende Reihe, konvergiert). Für q = −1 springt die Folge und die Partialsummen konvergieren nicht. Für |q| = 1 divergiert die Reihe (konstante oder alternierende Terme).",
+          hints: [
+            "Auch negative q sind möglich — entscheidend ist der Betrag",
+            "|q| < 1 bedeutet −1 < q < 1",
+          ],
+          difficulty: 3,
+          tags: ["konvergenz", "geometrische-reihe", "betrag"],
         },
       ],
     },

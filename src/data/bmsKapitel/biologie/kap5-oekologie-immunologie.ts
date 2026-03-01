@@ -21,90 +21,7 @@ export const bioKapOekologie: Kapitel = {
         "Organismus",
         "Lebensgemeinschaft",
       ],
-      content: `## Einleitung
-
-Stell dir vor, ein See erwaermt sich im Sommer ungewoehnlich stark. Was passiert? Bestimmte Algen bluehen massenweise auf, Fische wandern ab, und der Sauerstoffgehalt sinkt. Damit du solche Zusammenhaenge verstehst, braucht man die Grundbegriffe der Oekologie -- von der einzelnen Art bis zum ganzen Oekosystem.
-
-**In diesem Kapitel lernst du:**
-- wie die Oekologie vom einzelnen Tier bis zum ganzen Oekosystem aufgebaut ist (vier Ebenen)
-- was Biotop (der unbelebte Lebensraum) und Biozoeonose (die Lebensgemeinschaft) bedeuten
-- warum ein Oekosystem mehr ist als die Summe seiner Teile
-- wie diese Grundbegriffe alle weiteren oekologischen Themen fundieren
-
----
-
-{{DIAGRAM:plant-vs-animal-cell}}
-
-## Oekologie: Definition und Ebenen
-
-**Oekologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft der **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer unbelebten (abiotischen) und belebten (biotischen) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie haengen Arten und Lebensraeume zusammen?
-
-Die Oekologie arbeitet auf vier **Ebenen**, die aufeinander aufbauen:
-
-- **Organismus:** Ein einzelnes Lebewesen (z. B. ein Frosch). Wie passt es sich an Umweltfaktoren an?
-- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen koennen (z. B. alle Froesche im Teich).
-- **Biozoeonose (Lebensgemeinschaft):** Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) an einem Ort und ihre Wechselwirkungen. Froesche, Fische, Algen und Bakterien zusammen.
-- **Oekosystem:** Biozoeonose **plus** der unbelebte Lebensraum (Biotop) als funktionelle Einheit, mit Stoff- und Energiefluessen.
-
-> **Merke:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem (Biozoeonose + Biotop).
-
----
-
-{{DIAGRAM:animal-cell}}
-
-## Biotop und Biozoeonose -- der entscheidende Unterschied
-
-Stell dir eine WG vor: Die **Wohnung** (Raeume, Heizung, Kueche) ist das **Biotop** -- der unbelebte Lebensraum mit all seinen physikalisch-chemischen Eigenschaften. Die **Mitbewohner** (Menschen mit ihren Beziehungen) sind die **Biozoeonose** -- alle Lebewesen an diesem Ort.
-
-- **Biotop** = der **unbelebte Lebensraum**: Boden, Wasser, Klima, Licht, pH, Naehrstoffe. Beispiel: ein Teich, eine Wiese, ein Felsblock.
-- **Biozoeonose** = die **Lebensgemeinschaft**: alle Arten (Pflanzen, Tiere, Pilze, Bakterien) und ihre Wechselwirkungen (Konkurrenz, Symbiose, Praedation).
-- **Oekosystem** = Biotop + Biozoeonose **in Wechselwirkung** -- Energie und Stoffe fliessen zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreislaeufe).
-
-| Begriff | Bedeutung |
-|--------|-----------|
-| **Biotop** | Unbelebter Lebensraum (Boden, Wasser, Klima, Licht) |
-| **Biozoeonose** | Lebensgemeinschaft aller Arten in einem Gebiet |
-| **Oekosystem** | Biotop + Biozoeonose; funktionelle Einheit mit Stoff- und Energiefluessen |
-
-> **Merke:** Biotop = unbelebt (Ort). Biozoeonose = alle Lebewesen (Arten). Oekosystem = beides zusammen.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Was ist der Unterschied zwischen Biotop und Biozoeonose?
-- Was versteht man unter einem Oekosystem?
-- Population vs. Biozoeonose: Worin besteht der Unterschied?
-
-**Typische Fallen:**
-- Biotop und Biozoeonose verwechseln: Biotop = unbelebter Ort, Biozoeonose = alle Lebewesen
-- Population umfasst nur **eine Art**; Biozoeonose umfasst **alle Arten** eines Gebiets
-- Oekosystem ist Biotop + Biozoeonose -- nicht einfach “die Natur”
-- Aus diesen Grundbegriffen leiten sich alle weiteren Themen ab: Umweltfaktoren wirken im Biotop auf die Biozoeonose; Nahrungsketten und Stoffkreislaeufe laufen im Oekosystem ab
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Oekologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch)
-- **Ebenen:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem
-- **Biotop** = unbelebter Lebensraum; **Biozoeonose** = Lebensgemeinschaft aller Arten; **Oekosystem** = Biotop + Biozoeonose
-- Population = eine Art; Biozoeonose = alle Arten in einem Gebiet
-- Fuer die Pruefung: Biotop (unbelebt) und Biozoeonose (belebt) sicher trennen`,
-      contentExtended: `## Einleitung
-
-Wenn in einem See die Wassertemperatur steigt, veraendert sich nicht nur die Physik des Gewaessers, sondern auch die gesamte Lebensgemeinschaft: Manche Algenarten vermehren sich explosionsartig, Fische wandern ab, Sauerstoff wird knapp. Um solche Zusammenhaenge zu verstehen, braucht man die Grundbegriffe der Oekologie, die von der einzelnen Art bis zum ganzen Oekosystem reichen.
-
-**In diesem Kapitel lernst du:**
-- wie die Oekologie von der Ebene des Einzelorganismus bis zum Oekosystem aufgebaut ist
-- worin sich Biotop (der Lebensraum) und Biozoeonose (die Lebensgemeinschaft) unterscheiden
-- warum ein Oekosystem mehr ist als die Summe seiner Teile
-- warum diese Begriffe die Grundlage fuer alle weiteren oekologischen Themen bilden
-
----
-
-## Oekologie: Definition und Ebenen
+      content: `## Oekologie: Definition und Ebenen
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
@@ -124,7 +41,6 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 
 {{DIAGRAM:animal-cell}}
 
-**Bisher haben wir gesehen:** Die oekologischen Ebenen von Organismus bis Oekosystem. **Um sie anzuwenden,** muessen Biotop und Biozoeonose klar getrennt werden.
 
 **Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Naehrstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
 
@@ -142,34 +58,7 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 
 ---
 
-## Zusammenhang fuer die Pruefung
-
-**Bisher haben wir gesehen:** Oekologie, Ebenen, Biotop, Biozoeonose und Oekosystem. **Damit ist das Fundament gelegt.** Aus diesen Grundbegriffen leiten sich alle weiteren Themen ab: **Umweltfaktoren** wirken im Biotop auf die Biozoeonose; die **oekologische Nische** beschreibt die Rolle einer Art in der Biozoeonose; **Nahrungsketten** und **Stoffkreislaeufe** laufen im Oekosystem ab. Wer Biotop und Biozoeonose sicher trennt, vermeidet typische Pruefungsfehler (z. B. “Biotop = alle Lebewesen” -- falsch, das ist die Biozoeonose).
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Was ist der Unterschied zwischen Biotop und Biozoeonose?
-- Was versteht man unter einem Oekosystem?
-- Was ist eine Population und wie unterscheidet sie sich von einer Biozoeonose?
-
-**Typische Fallen:**
-- Biotop (unbelebter Lebensraum) und Biozoeonose (alle Lebewesen) verwechseln.
-- Population umfasst nur eine Art; Biozoeonose umfasst alle Arten eines Gebiets.
-- Oekosystem ist Biotop plus Biozoeonose, nicht einfach nur “Natur”.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Oekologie** = Wechselbeziehungen Organismus ↔ Umwelt (abiotisch + biotisch).
-- **Ebenen:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem.
-- **Biotop** = unbelebter Lebensraum; **Biozoeonose** = Lebensgemeinschaft aller Arten; **Oekosystem** = Biotop + Biozoeonose.
-- Population = eine Art; Biozoeonose = alle Arten in einem Gebiet.
-- Aus diesen Grundbegriffen leiten sich Umweltfaktoren, oekologische Nische, Nahrungsketten und Stoffkreislaeufe ab.
-- Fuer die Pruefung: Biotop und Biozoeonose sicher trennen (unbelebt vs. belebt).`,
+## Zusammenhang fuer die Pruefung`,
       lernziele: [
         "Ökologie definieren und die Ebenen Organismus, Population, Biozönose, Ökosystem beschreiben.",
         "Biotop und Biozönose unterscheiden und dem Ökosystem zuordnen.",
@@ -211,95 +100,7 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
         "Shelford",
         "Bioindikator",
       ],
-      content: `## Einleitung
-
-Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser und Licht vorhanden ist? Weil die Temperatur unter ihrem Mindestbereich liegt -- ein einziger Umweltfaktor reicht aus, um das Wachstum zu stoppen. Das beschrieb Justus von Liebig bereits im 19. Jahrhundert. Die Toleranzkurve zeigt, wie die Leistung einer Art von einem Umweltfaktor abhaengt -- und sie gehoert zu den am haeufigsten gefragten Themen im MedAT.
-
-**In diesem Kapitel lernst du:**
-- warum Umweltfaktoren in abiotische (unbelebt) und biotische (durch Lebewesen) eingeteilt werden
-- wie die Toleranzkurve aufgebaut ist: Optimum, Pessimum und Todespunkt
-- warum Generalisten (euryoek) und Spezialisten (stenoek) eine unterschiedliche oekologische Amplitude haben
-- wie Liebigs Minimumgesetz und Shelfords Toleranzgesetz zusammenhaengen
-
----
-
-{{DIAGRAM:plant-vs-animal-cell}}
-
-## Abiotische und biotische Faktoren
-
-Alles, was auf ein Lebewesen einwirkt, ist ein **Umweltfaktor**. Man unterscheidet zwei Gruppen:
-
-- **Abiotische Faktoren** (= unbelebt): Temperatur, Licht, Wasser, Boden, pH, Naehrstoffe, Wind, Salzgehalt. Sie wirken direkt auf Wachstum, Ueberleben und Fortpflanzung.
-- **Biotische Faktoren** (= durch andere Lebewesen): Konkurrenz, Raeuber-Beute, Symbiose, Parasitismus. Sie strukturieren Lebensgemeinschaften und begrenzen die Verbreitung von Arten.
-
-| Typ | Beispiele |
-|-----|-----------|
-| **Abiotisch** | Temperatur, Licht, Wasser, pH, Naehrstoffe, Salzgehalt |
-| **Biotisch** | Konkurrenz, Praedation, Symbiose, Parasitismus |
-
-> **Merke:** Abiotisch = unbelebt. Biotisch = Einfluss durch andere Lebewesen.
-
----
-
-## Toleranzkurve: Optimum, Pessimum, Todespunkt
-
-{{DIAGRAM:cell-membrane}}
-
-Die **Toleranzkurve** zeigt die Leistungsfaehigkeit (Wachstum, Reproduktion) eines Organismus in Abhaengigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve mit drei Bereichen:
-
-- **Optimum:** Der Bereich maximaler Leistung und Fitness -- die Art waechst am besten.
-- **Pessimum:** Die Randbereiche mit stark verminderter, aber noch moeglicher Leistung -- die Art leidet unter Stress.
-- **Todespunkte (letale Grenzen):** Werte, jenseits derer der Organismus stirbt.
-- **Oekologische Amplitude:** Die Gesamtbreite des Toleranzbereichs zwischen beiden Todespunkten.
-
-**Euryoek vs. stenoek:**
-- **Euryoek** (griech. eurys = breit): breite oekologische Amplitude = **Generalist** -- toleriert starke Schwankungen (z. B. Fuchs, Ratte, Kraehe).
-- **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen lebensfaehig. Spezialisten sind hervorragende **Bioindikatoren** (Zeigerorganismen), weil ihr Vorkommen oder Fehlen praezise auf Umweltbedingungen hinweist. Beispiele: Flechten zeigen saubere Luft an; die Brennnessel zeigt stickstoffreiche Boeden an.
-
-> **Merke:** Euryoek = Generalist, breite Toleranz. Stenoek = Spezialist, enge Toleranz, guter Bioindikator.
-
----
-
-## Liebigs Minimumgesetz und Shelfords Toleranzgesetz
-
-**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** essenziellen Faktor begrenzt -- nicht durch die reichlich vorhandenen. Stell dir ein Fass mit unterschiedlich hohen Brettern vor: Das Wasser laeuft beim **kuerzesten Brett** ueber. In Suesswasserseen ist oft **Phosphor** der limitierende Faktor (daher fuehrt Phosphateintrag zur Eutrophierung); in der Landwirtschaft oft **Stickstoff**.
-
-**Shelfords Toleranzgesetz (1913):** Nicht nur Mangel, auch **Ueberschuss** eines Faktors kann limitierend wirken. Zu viel Kupfer, Zink oder Licht schadet genauso wie zu wenig. Shelford erweitert Liebig um die obere Grenze: Es gibt **zwei** letale Grenzen, nicht nur eine.
-
-> **Merke:** Liebig: knappster Faktor limitiert (Minimum). Shelford: auch Ueberschuss limitiert (Minimum UND Maximum).
-
----
-
-## MedAT-Fokus
-
-**Typische Fallen:**
-- Liebig (nur Mangel limitiert) vs. Shelford (auch Ueberschuss kann limitieren) verwechseln
-- Euryoek (breite Amplitude = Generalist) und stenoek (enge Amplitude = Spezialist) vertauschen
-- Oekologische Amplitude ist die Toleranzbreite fuer einen Faktor -- nicht der Lebensraum selbst
-- Stenoeke Arten sind gute Bioindikatoren -- euryoeke nicht
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Abiotisch** = unbelebt (Temperatur, Licht, pH usw.); **biotisch** = Einfluss durch Lebewesen
-- **Toleranzkurve:** Optimum (max. Leistung) → Pessimum (Stress) → Todespunkt; **Amplitude** = Toleranzbreite
-- **Euryoek** = Generalist, breite Amplitude; **stenoek** = Spezialist, enge Amplitude, Bioindikator
-- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Ueberschuss limitiert (Toleranzkurve hat zwei Grenzen)
-- Bioindikatoren (Brennnessel = N-reich; Flechten = saubere Luft) sind stenoeke Arten`,
-      contentExtended: `## Einleitung
-
-Warum wachsen tropische Pflanzen nicht in den Alpen, obwohl dort genug Wasser und Licht vorhanden ist? Die Antwort liegt in den Umweltfaktoren: Jede Art hat fuer jeden Faktor einen Toleranzbereich, und schon ein einziger Faktor im Mangel kann das Wachstum begrenzen. Das beschrieb Justus von Liebig bereits im 19. Jahrhundert. Die Toleranzkurve zeigt, wie die Leistung einer Art von einem Umweltfaktor abhaengt, und sie ist einer der am haeufigsten gefragten Zusammenhaenge im MedAT.
-
-**In diesem Kapitel lernst du:**
-- warum Umweltfaktoren in abiotische und biotische eingeteilt werden und was das fuer eine Art bedeutet
-- wie die Toleranzkurve aufgebaut ist und was Optimum, Pessimum und Todespunkt aussagen
-- warum Generalisten (euryoek) und Spezialisten (stenoek) sich in ihrer oekologischen Amplitude unterscheiden
-- wie Liebigs Minimumgesetz und Shelfords Toleranzgesetz limitierende Faktoren beschreiben
-
----
-
-## Abiotische und biotische Faktoren
+      content: `## Abiotische und biotische Faktoren
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
@@ -356,33 +157,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 ## Bioindikatoren
 
-**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
-
-**Typische Pruefungsfragen:**
-- Was zeigt die Toleranzkurve? (Optimum, Pessimum, Todespunkt, oekologische Amplitude.)
-- Euryoek vs. stenoek mit Beispielen?
-- Warum sind stenoeke Arten gute Bioindikatoren?
-
-**Typische Fallen:**
-- Liebig (nur Mangel limitiert) vs. Shelford (auch Ueberschuss kann limitieren) verwechseln.
-- Euryoek (breite Amplitude) und stenoek (enge Amplitude) verwechseln.
-- Oekologische Amplitude ist die Toleranzbreite fuer einen Faktor, nicht der Lebensraum selbst.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Abiotisch** = unbelebt; **biotisch** = Einfluss durch Lebewesen.
-- **Toleranzkurve:** Optimum → Pessimum → Todespunkt; **oekologische Amplitude** = Toleranzbreite.
-- **Euryoek** = Generalist; **stenoek** = Spezialist, Bioindikator.
-- **Liebig:** knappster Faktor limitiert. **Shelford:** auch Ueberschuss kann limitieren.
-- Stenoeke Arten = gute Bioindikatoren. Oekologische Amplitude ≠ Lebensraum.`,
+**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden = stark verschmutztes Wasser (Saprobiensystem).`,
       lernziele: [
         "Abiotische und biotische Faktoren unterscheiden und Beispiele nennen.",
         "Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) beschreiben und euryök vs. stenök erklären.",
@@ -489,88 +264,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
         "Realisierte Nische",
         "Nischendifferenzierung",
       ],
-      content: `## Einleitung
-
-Wenn man sagt, das Eichhoernchen lebt im Wald, beschreibt man nur seine “Adresse”. Aber was frisst es, wann ist es aktiv, mit wem konkurriert es? Das zusammen ist seine **oekologische Nische** -- sein “Beruf” im Oekosystem. Diese Unterscheidung zwischen Lebensraum und Nische ist ein klassischer MedAT-Stolperstein, weil die beiden Begriffe oft verwechselt werden.
-
-**In diesem Kapitel lernst du:**
-- warum die oekologische Nische mehr ist als nur ein Ort
-- worin sich die fundamentale Nische von der realisierten Nische unterscheidet
-- wie Nischendifferenzierung es konkurrierenden Arten ermoeglicht, nebeneinander zu existieren
-- was das Connell-Seepocken-Experiment belegt
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
----
-
-## Nische vs. Lebensraum (Habitat)
-
-**Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt “wo” die Art lebt.
-
-**Oekologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die fuer Ueberleben und Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Raeuber, Parasiten, Brutplaetze. Die Nische beschreibt also nicht nur den Ort, sondern alle Bedingungen und Wechselwirkungen -- die Rolle der Art im Oekosystem.
-
-| Begriff | Bedeutung |
-|--------|-----------|
-| **Lebensraum (Habitat)** | Physischer Ort (“Adresse”) |
-| **Oekologische Nische** | Alle Umweltansprueche und Rolle (“Beruf”) |
-
-> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Oekosystem.
-
----
-
-## Fundamentale und realisierte Nische
-
-**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen koennte, wenn keine Konkurrenten oder Feinde da waeren -- begrenzt nur durch physiologische Toleranzen.
-
-**Realisierte Nische:** Der **tatsaechlich** genutzte Bereich. Durch Konkurrenz, Praedation und andere biotische Faktoren **eingeschraenkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen.
-
-**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: Chthamalus in der oberen, Balanus in der unteren Gezeitenzone. Wird Balanus entfernt, besiedelt Chthamalus auch die untere Zone. Folgerung: Die **fundamentale** Nische von Chthamalus umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit Balanus eingeschraenkt.
-
-> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz und biotische Faktoren schraenken die realisierte Nische ein.
-
----
-
-## Nischendifferenzierung und Koexistenz
-
-{{DIAGRAM:plant-vs-animal-cell}}
-
-Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (**Konkurrenzausschlussprinzip**). Koexistenz ist moeglich durch **Nischendifferenzierung** -- die Arten teilen die Ressourcen in mindestens einer Dimension unterschiedlich auf:
-
-- **Zeitlich:** Tag- vs. nachtaktiv (z. B. Falke vs. Eule)
-- **Raeumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhoehen)
-- **Trophisch:** Verschiedene Beutegroessen oder -typen (z. B. verschiedene Schnabelformen bei Darwinfinken)
-
-> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich, trophisch) -> ermoeglicht Koexistenz.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:** Nische vs. Habitat, fundamentale vs. realisierte Nische, Connell-Experiment, Konkurrenzausschlussprinzip, Nischendifferenzierung.
-
-**Typische Fallen:** “Nische = Ort” ist falsch -- Nische ist die Gesamtheit der Umweltfaktoren + Rolle.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Lebensraum** = Ort; **Nische** = Umweltansprueche + Rolle
-- **Fundamentale Nische** ≥ **realisierte Nische** (eingeschraenkt durch Konkurrenz)
-- Connell: Entfernung von Balanus -> Chthamalus breitet sich aus
-- Nischendifferenzierung (zeitlich, raeumlich, trophisch) ermoeglicht Koexistenz`,
-      contentExtended: `## Einleitung
-
-Wenn man sagt, der Lebensraum des Eichhoernchens sei der Wald, beschreibt man nur die halbe Wahrheit. Die oekologische Nische umfasst nicht nur den Ort, sondern auch die Rolle: Was frisst es, wann ist es aktiv, mit wem konkurriert es? Diese Unterscheidung zwischen Lebensraum und Nische ist ein klassischer MedAT-Stolperstein, denn die beiden Begriffe werden oft verwechselt.
-
-**In diesem Kapitel lernst du:**
-- warum die oekologische Nische mehr ist als nur ein Ort
-- worin sich die fundamentale Nische (theoretisch moeglich) von der realisierten Nische (tatsaechlich genutzt) unterscheidet
-- wie Nischendifferenzierung es konkurrierenden Arten ermoeglicht, nebeneinander zu existieren
-- was das Connell-Seepocken-Experiment ueber fundamentale und realisierte Nischen belegt
-
----
-
-## Nische vs. Lebensraum (Habitat)
+      content: `## Nische vs. Lebensraum (Habitat)
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
@@ -609,30 +303,7 @@ Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konk
 - **Raeumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhoehen)
 - **Trophisch:** Verschiedene Beutegroessen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
 
-> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Was ist der Unterschied zwischen oekologischer Nische und Lebensraum?
-- Erklaere fundamentale und realisierte Nische. Was zeigt das Connell-Seepocken-Experiment?
-- Wie ermoeglicht Nischendifferenzierung das Zusammenleben konkurrierender Arten?
-
-**Typische Fallen:**
-- Nische ≠ Lebensraum (Nische ist die “Rolle” und alle Ansprueche, nicht nur der Ort).
-- Realisierte Nische ist nie groesser als die fundamentale Nische.
-- Nischendifferenzierung ≠ Konkurrenzausschluss -- Differenzierung ist der Weg zur Koexistenz.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Lebensraum** = physischer Ort; **oekologische Nische** = alle Umweltansprueche + Rolle der Art.
-- **Fundamentale Nische** = theoretisch moeglicher Bereich; **realisierte Nische** = tatsaechlich genutzter Bereich (immer ≤ fundamental).
-- Konkurrenz schraenkt die realisierte Nische ein (Connell: Chthamalus ohne Balanus → groessere Nutzung).
-- **Nischendifferenzierung** (zeitlich, raeumlich, trophisch) ermoeglicht Koexistenz konkurrierender Arten.`,
+> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.`,
       lernziele: [
         "Ökologische Nische und Lebensraum (Habitat) unterscheiden.",
         "Fundamentale und realisierte Nische erklären und das Connell-Experiment zuordnen.",
@@ -694,99 +365,7 @@ Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konk
         "Prädation",
         "Räuber-Beute",
       ],
-      content: `## Einleitung
-
-Warum koennen zwei Bakterienarten nicht dauerhaft denselben Naehrboden besiedeln, wenn sie exakt dasselbe fressen? Gauß hat das 1934 mit Pantoffeltierchen gezeigt -- und das Prinzip gilt genauso fuer Krankenhauskeime. Gleichzeitig gibt es unzaehlige Formen des Zusammenlebens in der Natur: Pilze helfen Pflanzen beim Wachsen, Zecken saugen Blut, und Luchse, deren Populationsgipfel immer einige Jahre hinter dem der Schneehasen herhinkt. Dieses Kapitel klaert, welche Vorzeichen hinter welcher Beziehung stecken.
-
-**In diesem Kapitel lernst du:**
-- warum intraspezifische Konkurrenz intensiver ist als interspezifische
-- was das Gauss-Prinzip (Konkurrenzausschluss) besagt und welches Experiment es belegt
-- wie man Mutualismus, Kommensalismus, Parasitismus und Praedation an ihren Vorzeichen (+/0/-) erkennt
-- worin sich ein Parasit grundlegend von einem Raeuber unterscheidet
-- warum bei Raeuber-Beute-Zyklen die Raeuberpopulation der Beute immer hinterherhinkt
-
----
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-## Konkurrenz: intraspezifisch und interspezifisch
-
-**Konkurrenz** entsteht, wenn Individuen dieselbe begrenzte Ressource benoetigen.
-
-- **Intraspezifische Konkurrenz:** innerhalb **einer Art**. Besonders intensiv, weil die Nieschenueberlappung vollstaendig ist; fuehrt zu dichteabhaengiger Regulation und logistischem Wachstum (Annaeherung an K, die Kapazitaetsgrenze).
-- **Interspezifische Konkurrenz:** **zwischen Arten**. Treibt Nischendifferenzierung und Evolution an.
-
-**Gauß-Prinzip (Konkurrenzausschluss, 1934):** Zwei Arten mit **identischer oekologischer Nische** koennen nicht dauerhaft im selben Habitat koexistieren -- eine Art verdraengt die andere. Koexistenz ist nur durch **Nischendifferenzierung** moeglich. Klassisches Experiment: *Paramecium aurelia* und *P. caudatum* in Mischkultur bei gleicher Nahrung → *P. aurelia* verdraengt *P. caudatum* vollstaendig.
-
-> **Merke:** Intraspezifisch = innerhalb einer Art. Interspezifisch = zwischen Arten. Gauß: Identische Nische → eine Art verdraengt die andere.
-
----
-
-{{DIAGRAM:immune-response}}
-
-## Symbioseformen: Wer profitiert, wer verliert?
-
-Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifiziert (+ = Nutzen, − = Schaden, 0 = unbeeinflusst):
-
-| Interaktion | Partner 1 | Partner 2 | Beispiel |
-|-------------|--------|--------|----------|
-| **Mutualismus** | + | + | Mykorrhiza (Pilz + Pflanze), Leguminosen + Rhizobien |
-| **Kommensalismus** | + | 0 | Epiphyten auf Baeumen, Remoren an Haien |
-| **Parasitismus** | + | − | Plasmodium (Malaria), Bandwurm, Zecke |
-| **Praedation** | + | − | Fuchs frisst Hase, Adler frisst Maus |
-| **Konkurrenz** | − | − | Beide leiden -- Kampf um dieselbe Ressource |
-
-**Parasitismus vs. Praedation (beide +/-):** Der **Parasit** lebt auf oder im Wirt und schaedigt ihn -- toetet ihn aber normalerweise **nicht sofort**, denn ein toter Wirt waere fuer den Parasiten nachteilig. Der **Raeuber** toetet die Beute **direkt** und frißt sie. Parasiten sind meist kleiner als der Wirt; Raeuber oft gleich groß oder groesser.
-
-> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/-), Praedation (+/-), Konkurrenz (-/-). Parasit toetet Wirt nicht sofort -- Raeuber toetet Beute sofort.
-
----
-
-## Raeuber-Beute-Dynamik (Lotka-Volterra)
-
-Raeuber- und Beutepopulationen beeinflussen sich wechselseitig und schwingen **zyklisch**:
-
-1. Viel Beute → Raeuber finden genug Nahrung → Raeuberpopulation waechst.
-2. Viele Raeuber → Beutepopulation wird stark dezimiert → sinkt.
-3. Wenig Beute → Raeuber verhaungern → Raeuberpopulation sinkt.
-4. Wenige Raeuber → Beutepopulation erholt sich → Zyklus beginnt von vorn.
-
-Die **Raeuberpopulation hinkt der Beutepopulation zeitlich nach** -- der Hoehepunkt der Raeuber folgt auf den Hoehepunkt der Beute. Klassisches Beispiel: Luchs und Schneehase (ca. 10-Jahres-Zyklus).
-
-> **Merke:** Lotka-Volterra: Raeuber- und Beutepopulationen schwingen zyklisch. Raeuberpopulation hinkt Beutepopulation zeitlich nach.
-
----
-
-## MedAT-Fokus
-
-**Typische Fallen:**
-- Parasitismus (+/-) und Praedation (+/-) haben dieselben Vorzeichen, aber: Parasit toetet Wirt nicht sofort; Raeuber toetet Beute sofort.
-- Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst.
-- Intraspezifisch = innerhalb einer Art (intensiver), interspezifisch = zwischen Arten.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Intraspezifische Konkurrenz** = innerhalb einer Art; **interspezifische** = zwischen Arten
-- **Gauß:** Zwei Arten in identischer Nische koennen nicht dauerhaft koexistieren (Paramecium-Experiment)
-- **Mutualismus** (+/+), **Kommensalismus** (+/0), **Parasitismus** (+/-), **Praedation** (+/-), **Konkurrenz** (-/-)
-- Parasit toetet Wirt nicht sofort -- Raeuber toetet Beute sofort
-- **Raeuber-Beute:** Zyklen; Raeuberpopulation hinkt Beutepopulation zeitlich nach`,
-      contentExtended: `## Einleitung
-
-Warum können zwei Bakterienarten nicht dauerhaft denselben Nährboden besiedeln, wenn sie exakt dasselbe fressen? Gauß hat das 1934 mit Pantoffeltierchen gezeigt -- und das Prinzip gilt genauso für Krankenhauskeime. Gleichzeitig existieren in der Natur unzählige Formen des Zusammenlebens: Pilze, die Pflanzen beim Wachsen helfen, Zecken, die Blut saugen, und Luchse, deren Populationsgipfel immer ein paar Jahre hinter dem der Schneehasen herhinkt. Dieses Kapitel klärt, welche Vorzeichen hinter welcher Beziehung stecken.
-
-**In diesem Kapitel lernst du:**
-- Warum Konkurrenz innerhalb einer Art intensiver ist als zwischen Arten
-- Was passiert, wenn zwei Arten exakt dieselbe Nische besetzen (Gauß-Prinzip)
-- Wie man Mutualismus, Kommensalismus, Parasitismus und Prädation an ihren Vorzeichen erkennt
-- Worin sich ein Parasit grundlegend von einem Räuber unterscheidet
-- Warum bei Räuber-Beute-Zyklen die Räuberpopulation der Beute immer hinterherhinkt
-
----
-
-## Konkurrenz: intraspezifisch und interspezifisch
+      content: `## Konkurrenz: intraspezifisch und interspezifisch
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
@@ -840,31 +419,7 @@ Räuber- und Beutepopulationen beeinflussen sich wechselseitig und können **zyk
 
 Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt der Räuber folgt auf den Höhepunkt der Beute). Klassisches Beispiel: Luchs und Schneehase (ca. 10-Jahres-Zyklus).
 
-> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen schwingen; Räuber-Zyklus hinkt Beute-Zyklus nach.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was besagt das Konkurrenzausschlussprinzip? Nenne ein Experiment.
-- Ordne Symbioseformen mit Vorzeichen zu (Mutualismus, Kommensalismus, Parasitismus, Prädation).
-- Worin unterscheiden sich Parasitismus und Prädation?
-- Bei Räuber-Beute-Zyklen: Welche Population hinkt nach? (Räuber)
-
-**Typische Fallen:**
-- Parasitismus (+/−) und Prädation (+/−) verwechseln: Parasit tötet nicht sofort, Räuber schon.
-- Kommensalismus (+/0) vs. Mutualismus (+/+): Beim Kommensalismus ist der zweite Partner unbeeinflusst.
-- Intraspezifisch = innerhalb einer Art, interspezifisch = zwischen Arten.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Intraspezifische Konkurrenz** = innerhalb einer Art; **interspezifische** = zwischen Arten.
-- **Gauß:** Zwei Arten in identischer Nische können nicht dauerhaft koexistieren (Paramecium-Experiment).
-- **Mutualismus** (+/+), **Kommensalismus** (+/0), **Parasitismus** (+/−), **Prädation** (+/−). Parasit tötet Wirt nicht sofort, Räuber tötet Beute sofort.
-- **Räuber-Beute:** Zyklen; Räuberpopulation hinkt Beutepopulation zeitlich nach.`,
+> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen schwingen; Räuber-Zyklus hinkt Beute-Zyklus nach.`,
       lernziele: [
         "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Konkurrenzausschlussprinzip (Gauß) erklären.",
         "Symbioseformen (Mutualismus, Kommensalismus, Parasitismus, Prädation) mit Vorzeichen und Beispielen zuordnen.",
@@ -958,89 +513,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
         "Wasserkreislauf",
         "Trophieebenen",
       ],
-      content: `## Einleitung
-
-Stell dir vor, ein Feld produziert 10.000 Kilokalorien Pflanzenmaterial. Das Rind, das davon frisst, behaelt nur 1.000. Du, der das Steak isst, bekommst gerade einmal 100. Der Adler, der eine Maus frisst, die Gras frisst, hat am Ende noch weniger. Warum? Weil auf jeder Stufe der Nahrungskette rund 90 % der Energie als Waerme verloren gehen -- die **10%-Regel**. Sie erklaert, warum es auf der Erde viel mehr Pflanzen als Raubtiere gibt und warum vegetarische Ernaehrung zehnmal effizienter ist.
-
-**In diesem Kapitel lernst du:**
-- wie Trophieebenen und Nahrungsnetze aufgebaut sind und warum Nahrungsnetze realistischer sind
-- warum auf jeder Stufe rund 90 % der Energie verloren gehen (10%-Regel)
-- was GPP (Bruttoproduktion) und NPP (Nettoproduktion) voneinander unterscheidet
-- warum Materie kreist, Energie aber einseitig fliesst
-- warum Phosphor als einziger Kreislauf kein gasfoermiges Reservoir hat und daher in Suesswasser limitierend ist
-
----
-
-{{DIAGRAM:plant-vs-animal-cell}}
-
-## Trophieebenen -- Wer frisst wen?
-
-Ein Oekosystem besteht aus verschiedenen Ernaehrungsstufen (Trophieebenen):
-
-- **Produzenten (Ebene 1):** Pflanzen, Algen, Cyanobakterien -- sie binden Sonnenenergie durch Photosynthese und bauen Biomasse auf. Autotrophe Organismen.
-- **Primaerkonsumenten (Ebene 2):** Pflanzenfresser (Herbivoren): Rehe, Raupen, Heuschrecken, Zooplankton.
-- **Sekundaerkonsumenten (Ebene 3):** Fressen Primaerkonsumenten: Froesche, kleine Fische.
-- **Tertiaerkonsumenten (Ebene 4):** Top-Raeuber: Adler, Haie, grosse Raubkatzen.
-- **Destruenten (Zersetzer):** Pilze und Bakterien zersetzen tote organische Substanz (Detritus) → anorganische Naehrstoffe werden zurueckgegeben. Werden oft vergessen, sind aber quantitativ am wichtigsten: ca. 90 % der Primaerproduktion landet als Detritus bei den Destruenten!
-
-Eine **Nahrungskette** (Gras → Hase → Fuchs) ist eine Vereinfachung. In der Realitaet bilden die Beziehungen ein komplexes **Nahrungsnetz** mit vielen Querverbindungen -- stabiler, weil der Verlust einer Art geringere Auswirkungen hat.
-
-> **Merke:** Produzenten → Konsumenten I → II → III → Destruenten. Destruenten schliessen den Kreislauf. Nahrungsnetz ist realistischer und stabiler als Nahrungskette.
-
----
-
-## Die 10%-Regel und Primaerproduktion
-
-{{DIAGRAM:double-membrane-organelles}}
-
-Auf jeder Trophieebene gehen ca. **90 %** der Energie verloren -- durch Atmung, Bewegung, Waermeabgabe und unverdauliche Teile. Nur **10 %** erreichen die naechste Stufe.
-
-**Rechenbeispiel:** 10.000 kJ Pflanze → 1.000 kJ Heuschrecke → 100 kJ Frosch → 10 kJ Schlange → 1 kJ Adler. Deshalb gibt es selten mehr als 4-5 Trophieebenen, und Top-Raeuber sind immer selten.
-
-**GPP und NPP:**
-- **GPP** (Brutto-Primaerproduktion) = gesamte durch Photosynthese gebundene Energie.
-- **NPP** (Netto-Primaerproduktion) = GPP minus Eigenatmung der Produzenten = die Energie, die tatsaechlich fuer Konsumenten verfuegbar ist.
-
-Merksatz: NPP = GPP − Eigenatmung. In tropischen Regenwaeldern kann die Eigenatmung der Pflanzen 50-70 % des GPP ausmachen.
-
-> **Merke:** 10%-Regel: ~10 % Energie pro Stufe. GPP = Gesamtphotosynthese; NPP = GPP - Eigenatmung = fuer Konsumenten verfuegbar. Vegetarische Ernaehrung ist 10x effizienter als Fleischkonsum.
-
----
-
-## Stoffkreislaeufe
-
-Energie fliesst **einseitig** (Sonne → Waerme). Materie dagegen **kreist** in biogeochemischen Kreislaeufen:
-
-- **Kohlenstoffkreislauf:** CO2 → Photosynthese → Biomasse → Zellatmung/Verbrennung → CO2. Ozeane sind das groesste aktive Reservoir (~38.000 GtC). Ozeane nehmen ca. 30 % anthropogener CO2-Emissionen auf → Ozeanversauerung (pH sinkt → Probleme fuer kalkbildende Organismen).
-- **Stickstoffkreislauf:** N2-Fixierung (Rhizobien in Leguminosen) → Ammonifikation → Nitrifikation (NH4+ → NO3-) → Assimilation → Denitrifikation (→ N2). Stickstoff (N2 = 78 % der Luft) kann von den meisten Organismen nicht direkt genutzt werden.
-- **Phosphorkreislauf:** Hat als einziger **kein gasfoermiges Reservoir**! Phosphor zirkuliert nur zwischen Gestein, Boden, Wasser und Biomasse. Phosphor ist oft der **limitierende Naehrstoff** in Suesswasser. Zuviel Phosphat (aus Duengern, Waschmitteln) → Eutrophierung → Algenbluete → Algentod → bakterieller Abbau → Sauerstoffzehrung → Fischsterben.
-
-> **Merke:** Phosphorkreislauf: kein gasfoermiges Reservoir (als einziger)! Phosphat = limitierend in Suesswasser. Phosphatueberschuss → Eutrophierung → Fischsterben.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Trophiestufen:** Produzenten → Konsumenten I, II, III → Destruenten; Nahrungsnetz stabiler als Nahrungskette
-- **10%-Regel:** ~90 % Energie geht als Waerme verloren; selten mehr als 4-5 Stufen
-- **NPP** = GPP - Eigenatmung = fuer Konsumenten verfuegbar
-- Energie fliesst **einseitig**; Materie **kreist** in Kreislaeufen
-- **Phosphorkreislauf:** einziger ohne gasfoermiges Reservoir; Phosphat = limitierend in Suesswasser → Eutrophierung
-- **Stickstoffkreislauf:** N2-Fixierung (Rhizobien) → Nitrifikation → Denitrifikation`,
-      contentExtended: `## Einleitung
-
-Stell dir vor, ein Feld produziert 10.000 Kilokalorien Pflanzenmaterial. Davon kommen beim Rind nur 1.000 an, und beim Menschen, der das Steak isst, gerade einmal 100. Warum? Weil auf jeder Stufe der Nahrungskette rund 90 % der Energie als Wärme verloren gehen. Diese einfache Rechnung -- die 10%-Regel -- erklärt, warum es auf der Erde so viel mehr Pflanzen als Raubtiere gibt und warum vegetarische Ernährung zehnmal effizienter ist.
-
-**In diesem Kapitel lernst du:**
-- Warum Nahrungsnetze realistischer sind als lineare Nahrungsketten
-- Weshalb auf jeder Trophieebene rund 90 % der Energie verloren gehen (10%-Regel)
-- Was den gerichteten Energiefluss von den geschlossenen Stoffkreisläufen unterscheidet
-- Wie man GPP (Bruttoproduktion) und NPP (Nettoproduktion) voneinander abgrenzt
-- Warum Phosphor als einziger Kreislauf kein gasförmiges Reservoir besitzt
-
----
-
-## Ökosystem-Ebenen und Trophiestruktur
+      content: `## Ökosystem-Ebenen und Trophiestruktur
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
@@ -1148,33 +621,7 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 - **Versickerung und Grundwasserneubildung**
 - **Oberflächenabfluss:** Flüsse, Bäche → Meere
 
-Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration).
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- 10%-Regel erklären und auf konkrete Nahrungsketten anwenden (Berechnung über mehrere Stufen)
-- GPP vs. NPP definieren: NPP = GPP − autotrophe Respiration
-- Stickstoffkreislauf-Schritte in korrekter Reihenfolge aufzählen und beteiligte Organismen nennen
-
-**Typische Fallen:**
-- Energiefluss (einrichtungsgerichtet, 10%-Regel) ≠ Stoffkreislauf (Materie zirkuliert).
-- GPP (gesamte Photosynthese) vs. NPP (nach Abzug der Pflanzeneigen-Atmung) — NPP ist für Konsumenten verfügbar.
-- Phosphorkreislauf hat kein gasförmiges Reservoir — im Gegensatz zu C- und N-Kreislauf.
-- Nahrungskette (linear) vs. Nahrungsnetz (komplex, realistisch). Destruenten nicht vergessen.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Ökosystem** = Biozönose (alle Lebewesen) + Biotop (abiotische Umwelt); Energie fließt einseitig, Materie kreist
-- **Trophiestufen**: Produzenten (Pflanzen) → Konsumenten I, II, III → Destruenten; **10%-Regel**: ~90% Energie geht als Wärme verloren
-- **GPP** (Bruttoprimärproduktion) = Gesamtphotosynthese; **NPP** = GPP − Eigenatmung = für Konsumenten verfügbar
-- **Phosphorkreislauf**: einziger biogeochemischer Kreislauf ohne gasförmiges Reservoir → Phosphor = limitierender Faktor in Süßwasser
-- **Eutrophierung**: Phosphatüberschuss (Dünger, Abwasser) → Algenblüte → O₂-Abbau → Fischsterben
-- CO₂-Anstieg (fossile Brennstoffe), Stickstoff-Fixierung (Haber-Bosch), Eutrophierung: drei wichtige menschliche Eingriffe in Biogeochemie`,
+Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration).`,
       merksätze: [
         "Trophieebenen: Produzenten → Konsumenten I, II, III → Destruenten. Destruenten schließen den Kreislauf durch Detritus-Abbau.",
         "10%-Regel (Lindeman 1942): ~10% der Energie gelangt von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, Unverdauliches.",
@@ -1301,94 +748,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
         "r-Strategen",
         "K-Strategen",
       ],
-      content: `## Einleitung
-
-Nach einem Vulkanausbruch bleibt nur nackte Lava zurueck -- kein Boden, kein Samen, kein Leben. Trotzdem stehen Jahrhunderte spaeter Waelder an derselben Stelle. Dieser vorhersagbare Wiederaufbau heisst **Sukzession**. Gleichzeitig fragt man sich: Warum ist kein See jemals vollstaendig mit Bakterien gefuellt, obwohl die sich alle 20 Minuten verdoppeln? Den Unterschied zwischen unbegrenztem Wachstum und der Realitaet beschreibt die **Kapazitaetsgrenze K**.
-
-**In diesem Kapitel lernst du:**
-- warum primaere Sukzession auf nacktem Gestein beginnt und sekundaere Sukzession schneller ablaeuft
-- was die Klimaxgesellschaft vom Pionierstadium unterscheidet
-- warum exponentielles Wachstum (J-Kurve) in der Natur nur kurzfristig auftritt
-- wie logistisches Wachstum (S-Kurve) und die Kapazitaetsgrenze K zusammenhaengen
-- worin r-Strategen (viele Nachkommen) und K-Strategen (intensive Brutpflege) sich grundlegend unterscheiden
-
----
-
-{{DIAGRAM:cell-cycle}}
-
-## Sukzession: Primaer und Sekundaer
-
-**Sukzession** = die gerichtete, vorhersagbare Abfolge von Lebensgemeinschaften (Biozoeonosen) auf einer Flaeche ueber die Zeit.
-
-**Primaere Sukzession:** Beginnt auf **voellig unbelebtem Substrat** ohne Boden und ohne Samenbankevon -- z. B. nach Gletscherrueckzug, Vulkanausbruch (Lava) oder auf einem neuen Sanddueenfeld. **Pionierorganismen** (Flechten, Moose, Cyanobakterien) besiedeln als erste: Sie verwittern Gestein und bilden nach und nach Humus. Dann folgen Graeser, Kraeuter, Straeucher und schliesslich Baeume. Dieser Prozess dauert **Jahrzehnte bis Jahrhunderte**.
-
-**Sekundaere Sukzession:** Beginnt nach einer **Stoerung** auf Flaechen mit vorhandenem Boden und Samenbaenken -- z. B. nach Waldbrand, Sturmwurf oder auf Brachen. Viel **schneller** als die primaere Sukzession, weil Naehrstoffe und Samen bereits vorhanden sind.
-
-**Klimaxgesellschaft:** Das **stabile Endstadium**, das vom regionalen Klima bestimmt wird (z. B. Buchenwald in Mitteleuropa). Die Artenzusammensetzung aendert sich ohne weitere Stoerung nur noch wenig.
-
-| Typ | Ausgangslage | Geschwindigkeit | Erstbesiedler |
-|-----|--------------|-----------------|---------------|
-| **Primaer** | Nacktes Substrat (Lava, Gletscher) | Langsam (Jahrhunderte) | Flechten, Moose, Cyanobakterien |
-| **Sekundaer** | Boden + Samen vorhanden | Schneller | Graeser, Kraeuter, Pionierbaeume |
-
-> **Merke:** Primaere Sukzession = nacktes Substrat, Pionierorganismen zuerst. Sekundaere Sukzession = Boden da, schneller. Endstadium = Klimaxgesellschaft.
-
----
-
-{{DIAGRAM:pedigree-analysis}}
-
-## Populationswachstum: J-Kurve und S-Kurve
-
-Eine **Population** ist die Gesamtheit aller Individuen **einer Art** in einem definierten Gebiet. Ihr Wachstum haengt von Geburten, Todesfaellen, Ein- und Auswanderung ab.
-
-**Exponentielles Wachstum (J-Kurve):** Wenn Ressourcen praktisch unbegrenzt sind, waechst die Population exponentiell: dN/dt = r·N. Die Wachstumsrate ist proportional zur aktuellen Groesse. Grafisch: **J-foermige Kurve**. Tritt in der Natur nur kurzfristig auf (Pionierphase, invasive Arten, Bakterien in Logphase).
-
-**Logistisches Wachstum (S-Kurve):** In der Realitaet limitieren Ressourcen das Wachstum. Die Population naehert sich einer **Kapazitaetsgrenze K** (carrying capacity): dN/dt = r·N·(K-N)/K. Grafisch: **S-foermige (sigmoide) Kurve**. Bei N = K ist das Wachstum null (Gleichgewicht). Die maximale absolute Wachstumsrate liegt bei N = K/2.
-
-> **Merke:** Exponentiell = J-Kurve, unbegrenzte Ressourcen. Logistisch = S-Kurve, Annaeherung an K. Bei N = K: Wachstum = 0.
-
----
-
-## r-Strategen und K-Strategen
-
-Zwei grundlegende Lebensstrategien in Abhaengigkeit von der Umweltstabilitaet:
-
-- **r-Strategen:** Viele Nachkommen, wenig Brutpflege, kurze Generationszeit, kleiner Koerper, instabile Habitate. Ueberleben durch **Quantitaet**. Beispiele: Insekten, Maeuse, Loewenzahn.
-- **K-Strategen:** Wenige Nachkommen, intensive Brutpflege, lange Generationszeit, grosser Koerper, stabile Habitate nahe K. Ueberleben durch **Qualitaet**. Beispiele: Elefant, Mensch, Adler.
-
-> **Merke:** r-Strategen = viele Kinder, wenig Fuersorge, kurze Generation. K-Strategen = wenige Kinder, viel Fuersorge, lange Generation.
-
----
-
-## MedAT-Fokus
-
-**Typische Fallen:**
-- Primaere Sukzession = auf **nacktem Substrat** (Lava, Gletscher). Nach Waldbrand ist der Boden noch da → das ist **sekundaere** Sukzession!
-- Exponentiell (J) vs. logistisch (S): In der Natur dominiert logistisches Wachstum.
-- r = intrinsische Wachstumsrate; K = Kapazitaetsgrenze. Nicht verwechseln.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Primaere Sukzession:** nacktes Substrat → Flechten/Moose → ... → Klimaxgesellschaft
-- **Sekundaere Sukzession:** Boden vorhanden → schneller (z. B. nach Waldbrand)
-- **Exponentiell:** J-Kurve, r·N. **Logistisch:** S-Kurve, K = Kapazitaetsgrenze; bei N = K: Wachstum = 0
-- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege`,
-      contentExtended: `## Einleitung
-
-Nach einem Vulkanausbruch bleibt nur nackte Lava zurück -- kein Boden, kein Samen, kein Leben. Trotzdem stehen Jahrhunderte später Wälder an derselben Stelle. Dieser vorhersagbare Wiederaufbau heißt Sukzession. Gleichzeitig stellt sich die Frage, wie schnell eine Population wachsen kann: Bakterien verdoppeln sich alle 20 Minuten, aber kein See ist jemals vollständig mit Bakterien gefüllt. Den Unterschied zwischen unbegrenztem Wachstum und der Realität beschreibt die Kapazitätsgrenze K.
-
-**In diesem Kapitel lernst du:**
-- Warum primäre Sukzession auf nacktem Gestein beginnt und sekundäre schneller abläuft
-- Was die Klimaxgesellschaft vom Pionierstadium unterscheidet
-- Weshalb exponentielles Wachstum (J-Kurve) in der Natur nur kurzfristig auftritt
-- Was die Kapazitätsgrenze K begrenzt und wie sich logistisches Wachstum (S-Kurve) davon ableitet
-- Worin sich r-Strategen (viele Nachkommen, wenig Fürsorge) von K-Strategen grundlegend unterscheiden
-
----
-
-## Sukzession: Primär und Sekundär
+      content: `## Sukzession: Primär und Sekundär
 
 {{DIAGRAM:cell-cycle}}
 
@@ -1432,29 +792,7 @@ Zwei grundlegende Lebensstrategien:
 - **r-Strategen:** Viele Nachkommen, wenig Brutpflege, kurze Generationszeit, kleine Körper, instabile Habitate. Beispiele: Insekten, Mäuse, Löwenzahn. Überleben durch **Quantität**.
 - **K-Strategen:** Wenige Nachkommen, intensive Brutpflege, lange Generationszeit, große Körper, stabile Habitate nahe K. Beispiele: Elefant, Mensch, Adler. Überleben durch **Qualität**.
 
-> **Merke:** r-Strategen = viele Kinder, wenig Fürsorge, kurze Generation. K-Strategen = wenige Kinder, viel Fürsorge, lange Generation.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Primär vs. sekundäre Sukzession unterscheiden. Was sind Pionierorganismen?
-- J-Kurve vs. S-Kurve zuordnen. Was ist K?
-- r- vs. K-Strategen mit Beispielen zuordnen.
-
-**Typische Fallen:**
-- Primäre Sukzession = auf nacktem Substrat (nicht „nach Waldbrand” — das ist sekundär).
-- Exponentiell (J) vs. logistisch (S): In der Natur dominiert logistisches Wachstum.
-- r = Wachstumsrate, K = Kapazitätsgrenze (nicht verwechseln).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Primäre Sukzession:** nacktes Substrat → Flechten/Moose → … → Klimax. **Sekundäre Sukzession:** Boden vorhanden → schneller.
-- **Exponentiell:** J-Kurve, r·N. **Logistisch:** S-Kurve, Annäherung an K.
-- **r-Strategen:** viele Nachkommen, wenig Brutpflege. **K-Strategen:** wenige Nachkommen, viel Brutpflege.`,
+> **Merke:** r-Strategen = viele Kinder, wenig Fürsorge, kurze Generation. K-Strategen = wenige Kinder, viel Fürsorge, lange Generation.`,
       lernziele: [
         "Primäre und sekundäre Sukzession unterscheiden und Pionierorganismen nennen.",
         "Exponentielles und logistisches Wachstum sowie Kapazitätsgrenze K beschreiben.",
@@ -1533,97 +871,7 @@ Zwei grundlegende Lebensstrategien:
         "Opsonisierung",
         "Neutralisierung",
       ],
-      content: `## Einleitung
-
-Wenn ein Virus in deinen Koerper eindringt, muss das Immunsystem es markieren -- wie ein Etikett, das sagt: "Hier, Fresszelle, das musst du beseitigen." Genau das tun **Antikoerper (Immunglobuline)**. Sie sind Y-foermige Proteine, deren obere Arme (Fab-Region) das Virus erkennen und deren Stamm (Fc-Region) den Effektorzellen signalisiert: "Zugreifen!" Ob ein Arzt bei dir eine akute Infektion oder eine durchgemachte Erkrankung feststellt, haengt davon ab, welche Antikoerperklasse er im Blut findet -- IgM oder IgG.
-
-**In diesem Kapitel lernst du:**
-- warum Antikoerper Y-foermig sind und welche Aufgabe Fab- und Fc-Region jeweils erfuellen
-- wie sich die fuenf Immunglobulin-Klassen (IgG, IgM, IgA, IgE, IgD) in Funktion und Vorkommen unterscheiden
-- warum IgM auf eine akute Infektion hinweist und IgG auf eine durchgemachte
-- welches Immunglobulin als einziges die Plazenta passieren kann und warum
-- wie Opsonisierung, Neutralisierung und Komplementaktivierung zusammenwirken
-
----
-
-{{DIAGRAM:immune-response}}
-
-## Antikoerper-Aufbau: Y-Form, Fab und Fc
-
-Ein **Antikoerper (Immunglobulin, Ig)** ist ein Y-foermiges Glykoprotein. Der klassische IgG-Antikoerper besteht aus **2 schweren Ketten (H = Heavy)** und **2 leichten Ketten (L = Light)**, verbunden durch Disulfidbruecken.
-
-**Fab-Fragment (Fragment antigen-binding):**
-- Die zwei "Arme" des Y -- enthaelt variable Regionen von H- und L-Kette
-- Bildet die hochspezifische **Antigenbindestelle** (wie ein Schluessel zum Schloss)
-- Jeder Antikoerper hat eine einzigartige Fab-Region
-
-**Fc-Fragment (Fragment crystallizable):**
-- Der "Stamm" des Y -- enthaelt konstante Regionen der schweren Ketten
-- Vermittelt **Effektorfunktionen**: Bindung an Fc-Rezeptoren auf Makrophagen (Opsonisierung), Komplementaktivierung (C1q-Bindung), Plazentatransfer bei IgG (FcRn-Rezeptor)
-- Bestimmt die Ig-Klasse (IgG, IgA, IgM, IgE, IgD)
-
-**Die drei wichtigsten Effektorfunktionen:**
-- **Neutralisierung:** Fab blockiert Toxine oder Virusbindestellen direkt → Inaktivierung
-- **Opsonisierung:** IgG markiert Pathogene → Phagozytose durch Makrophagen/Neutrophile via Fc-Rezeptoren
-- **Komplementaktivierung (klassischer Weg):** IgM/IgG + Antigen → C1q bindet Fc → Kaskade → C3b (Opsonin) + MAC (Lyse)
-
-> **Merke:** Fab = variabel (Antigenerkennung, Schluessel-Schloss). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplement, Plazentatransfer).
-
----
-
-{{DIAGRAM:blood-groups}}
-
-## Die fuenf Immunglobulin-Klassen
-
-Das Immunsystem produziert fuenf Klassen von Immunglobulinen:
-
-| Klasse | Vorkommen | Besonderheiten |
-| --- | --- | --- |
-| **IgG** | Serum (75 %), plazentagaengig | Haeufigster Antikoerper, Sekundaerantwort, einziger der die Plazenta (via FcRn) passiert → Nestschutz |
-| **IgA** | Sekrete (Speichel, Muttermilch, Traenen) | Schuetzt Schleimhaeute; dimerisch in Sekreten |
-| **IgM** | Serum | Pentamer (10 Bindestellen), erster Responder (Primaer), starker Komplementaktivator |
-| **IgE** | Wenig im Serum, an Mastzellen | Allergie (Typ I), Parasitenabwehr |
-| **IgD** | B-Zell-Oberflaeche | B-Zell-Aktivierungssignal, kaum im Serum |
-
-**Merkhilfe fuer die Serologie:** IgM = akute Infektion (M wie "Momentan krank"). IgG = durchgemacht oder geimpft (G wie "Geschichte"). Und: **M kommt im Alphabet vor G** -- IgM kommt zuerst bei der Primaer-, IgG dominiert die Sekundaerantwort.
-
-**IgM als Pentamer:** IgM besteht aus 5 Y-Einheiten, verbunden durch eine J-Kette -- es hat daher **10 Antigenbindestellen** und ist ein besonders starker Komplementaktivator. Als Pentamer ist IgM zu gross, um die Plazenta zu passieren (Pentamer: ~900 kDa).
-
-> **Merke:** IgM = Primaer (akut), Pentamer, plazentagaengig: NEIN. IgG = Sekundaer, Schutzdauer, plazentagaengig: JA. IgA = Schleimhaut/Sekrete. IgE = Allergie.
-
----
-
-{{DIAGRAM:blutbestandteile}}
-
-## Komplementsystem (Kurzueberblick)
-
-Das Komplementsystem umfasst ca. 30 Plasmaproteine, die kaskadenfoermig aktiviert werden. **Klassischer Weg:** Ag-Ak-Komplex → C1q bindet Fc (IgG/IgM) → C3-Konvertase → C3b lagert sich auf Pathogenoberflaeche ab (Opsonin → Phagozytose) → C5-Konvertase → C5b-9 = **Membrane Attack Complex (MAC)** → Loch in bakterieller Membran → Lyse. Nebenprodukte C3a und C5a sind Anaphylatoxine (→ Mastzellaktivierung, Entzuendung).
-
-> **Merke:** Komplementklassischer Weg: Ag-Ak → C1q → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Antikoerper: Y-Form; **Fab** (variabel, Antigenerkennung) + **Fc** (konstant, Effektorfunktionen)
-- **IgG:** haeufigster, plazentagaengig (FcRn), Sekundaerantwort, Opsonisierung
-- **IgM:** Pentamer (10 Bindestellen), erster Responder (Primaer), starker Komplementaktivator, nicht plazentagaengig
-- **IgA:** Schleimhaeute/Sekrete; **IgE:** Allergie (Mastzellen); **IgD:** B-Zell-Signal
-- Klinische Serologie: IgM = akute Infektion; IgG = durchgemacht oder Impfimmunitaet`,
-      contentExtended: `## Einleitung
-
-Wenn ein Virus in deinen Körper eindringt, muss das Immunsystem es irgendwie markieren -- wie ein Etikett, das sagt: “Hier, Fresszelle, das musst du beseitigen.” Genau das tun Antikörper. Sie sind Y-förmige Proteine, deren obere Arme (Fab) das Virus erkennen und deren Stamm (Fc) den Fresszellen signalisiert: “Zugreifen!” Ob ein Arzt bei dir eine akute Infektion oder eine durchgemachte Erkrankung feststellt, hängt davon ab, welche Antikörperklasse er im Blut findet -- IgM oder IgG.
-
-**In diesem Kapitel lernst du:**
-- Warum Antikörper Y-förmig sind und welche Aufgabe Fab- und Fc-Region jeweils erfüllen
-- Wie sich die fünf Immunglobulin-Klassen (IgG, IgM, IgA, IgE, IgD) in Funktion und Vorkommen unterscheiden
-- Warum IgM auf eine akute Infektion hinweist und IgG auf eine durchgemachte
-- Welches Immunglobulin als einziges die Plazenta passieren kann und weshalb
-- Wie Opsonisierung, Neutralisierung und Komplementaktivierung zusammenwirken
-
----
-
-## IgG-Grundstruktur — Fab und Fc
+      content: `## IgG-Grundstruktur — Fab und Fc
 
 {{DIAGRAM:immune-response}}
 
@@ -1684,36 +932,7 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
-> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- IgG-Aufbau beschreiben: 2 schwere + 2 leichte Ketten, Fab (Antigenbindung) vs. Fc (Effektorfunktion)
-- Die fünf Ig-Klassen mit jeweiliger Hauptfunktion und Vorkommen nennen
-- Serologische Diagnostik: IgM (akute Infektion) vs. IgG (durchgemachte Infektion/Immunität)
-
-**Typische Fallen:**
-- IgM (Primärantwort, akut) vs. IgG (Sekundärantwort, dauerhaft) — Reihenfolge merken: M kommt vor G im Alphabet, M kommt zuerst
-- IgA (Schleimhautschutz, Sekrete) vs. IgE (Allergie, Mastzellen) — verschiedene Lokalisation und Funktion
-- Fab (Fragment antigen-binding, variabel) vs. Fc (Fragment crystallizable, konstant) — nicht verwechseln
-- IgM kann die Plazenta NICHT passieren (zu groß als Pentamer), nur IgG wird aktiv über FcRn transportiert
-- Opsonisierung (Markierung für Phagozytose) ≠ Neutralisierung (direkte Blockade des Pathogens)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Antikörper (Ig): Y-förmig; **Fab-Region** (variabel, Antigenerkennung) + **Fc-Region** (konstant, Effektorfunktionen)
-- **IgG**: dominiert Serum; einziges Ig das die Plazenta passiert → Nestschutz; Sekundärantwort
-- **IgM**: Pentamer; zuerst bei Primärantwort; effektivste Komplementaktivierung; Nachweis = akute Infektion
-- **IgA**: Schleimhäute und Sekrete (Tränen, Speichel, Muttermilch); Dimere in Sekreten
-- **IgE**: Mastzellen-Bindung; allergische Reaktionen (Typ I); Parasiten-Abwehr
-- **IgD**: B-Zell-Rezeptor; wenig im Serum
-- Klinische Serologie: IgM = akute Infektion; IgG = durchgemacht oder Impfimmunität
-- **Komplementsystem**: C3b → Opsonisierung; MAC → Lyse; klassischer Weg (IgG/IgM), alternativer Weg (direkt)`,
+> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.`,
       lernziele: [
         "Den Aufbau eines IgG-Antikörpers (schwere/leichte Ketten, Fab/Fc, Disulfidbrücken) beschreiben",
         "Die fünf Immunglobulin-Klassen und ihre jeweiligen Hauptfunktionen nennen",
@@ -1837,95 +1056,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
         "Klonale Selektion",
         "Affinitätsreifung",
       ],
-      content: `## Einleitung
-
-Dein Koerper kann Antikoerper gegen praktisch jede Substanz bilden -- gegen Pollen, neue Viren, sogar Molekuele, die in der Natur gar nicht vorkommen. Das ist erstaunlich, denn das menschliche Genom enthaelt nur rund 20.000 Gene. Wie schafft das Immunsystem mehr als 10 Milliarden verschiedene Antikoerper-Varianten? Die Antwort liegt in einem **molekularen Kartenmischen**: der V(D)J-Rekombination. Stell dir drei Stapel Spielkarten vor (V, D, J) und ziehst aus jedem zufaellig eine -- schon die Kombinationsmoeglichkeiten sind riesig. Dazu kommt ein "Joker-Enzym" (TdT), das an den Schnittstellen zufaellige Buchstaben einfuegt.
-
-**In diesem Kapitel lernst du:**
-- wie aus wenigen Gensegmenten (V, D, J) Milliarden Antikoerper entstehen und welche Enzyme daran beteiligt sind
-- was die drei Quellen der Antikoerperdiversitaet sind (kombinatorisch, junctional, somatische Hypermutation)
-- was klonale Selektion bedeutet und warum das Antigen den passenden Klon "auswaehlt"
-- wie Antikoerper in Keimzentren durch somatische Hypermutation immer besser werden (Affinitaetsreifung)
-- warum die Sekundaerantwort schneller, staerker und praeziser ist -- und warum das die Grundlage der Impfung ist
-
----
-
-{{DIAGRAM:immune-response}}
-
-## V(D)J-Rekombination -- Das Kartenmischen
-
-Jedes Antikoerpergen wird nicht als ganzes vererbt, sondern aus **Gensegmenten zusammengebaut**:
-- **V-Segmente** (Variable): viele Varianten vorhanden
-- **D-Segmente** (Diversity): fuer die schwere Kette
-- **J-Segmente** (Joining): verbindende Segmente
-
-Das Enzym **RAG1/RAG2** erkennt spezifische Signalsequenzen und schneidet die DNA -- dann wird je ein V-, D- und J-Segment zufaellig ausgewaehlt und ligiert. Das Enzym **TdT** (Terminal deoxynucleotidyl Transferase) fuegt an den Verbindungsstellen zufaellige Nukleotide (N-Nukleotide) ein -- das erhoet die Vielfalt enorm (junctionale Diversitaet). Nur Rearrangements im richtigen Leserahmen ("produktiv") fuehren zu einem funktionalen Antikoerperprotein.
-
-**Drei Quellen der Diversitaet:**
-1. **Kombinatorische Diversitaet:** Zufaellige Wahl der V, D, J-Segmente
-2. **Junctionale Diversitaet:** N-Nukleotide durch TdT an den Verbindungsstellen
-3. **Somatische Hypermutation:** In Keimzentren nach Antigenkontakt (s. unten)
-
-> **Merke:** V(D)J-Rekombination: RAG1/RAG2 schneidet, TdT fuegt N-Nukleotide ein → > 10 Milliarden verschiedene Antikoerper-Varianten.
-
----
-
-{{DIAGRAM:dna-helix}}
-
-## Klonale Selektion und Gedaechtniszellen
-
-Die **klonale Selektionstheorie (Burnet, 1957)** erklaert, wie das Immunsystem auf ein Antigen antwortet:
-
-1. Jede B-Zelle traegt bereits **vor dem Antigenkontakt** einen einzigartigen BCR (B-Zell-Rezeptor) -- generiert durch V(D)J-Rekombination.
-2. Bindet ein Antigen an genau diesen BCR, wird die B-Zelle aktiviert.
-3. Sie teilt sich in viele identische Kopien: **klonale Expansion**.
-4. Diese Tochterzellen differenzieren zu:
-   - **Plasmazellen:** Produzieren massenhaft identische Antikoerper
-   - **Gedaechtnis-B-Zellen:** Langlebig; bereit fuer schnelle Reaktion beim naechsten Kontakt
-
-Das Antigen "waehlt" also den passenden Klon aus einer bereits vorhandenen Bibliothek -- Antikoerper werden nicht nach Bedarf neu erfunden!
-
-> **Merke:** Klonale Selektion (Burnet): Antigen waehlt passende B-Zelle aus → klonale Expansion → Plasmazellen (Antikoerperproduktion) + Gedaechtnis-B-Zellen.
-
----
-
-{{DIAGRAM:transcription-translation}}
-
-## Affinitaetsreifung und Klassenwechsel
-
-In **Keimzentren** der sekundaeren Lymphorgane (Lymphknoten, Milz) werden Antikoerper nach Antigenkontakt optimiert:
-
-**Somatische Hypermutation:** Das Enzym AID (Activation-Induced Cytidine Deaminase) veraendert die V-Regionen der Antikoerpergene hochfrequent (10⁵-10⁶× haeufiger als normale Mutationsrate). B-Zellen mit **besserer Antigenbindung** erhalten Ueberlebenssignale; die anderen sterben durch Apoptose. Ergebnis: progressive Verbesserung der Antikoerperqualitaet.
-
-**Klassenwechsel (CSR):** Die Antikoerperklasse wechselt (z. B. IgM → IgG oder IgA), aber die **Antigenbindestelle bleibt identisch**. Gesteuert durch Zytokine (IL-4 → IgE; IFN-gamma → IgG). Auch CSR wird durch AID katalysiert.
-
-Die **Sekundaerantwort** (zweiter Antigenkontakt) ist deshalb schneller, staerker und praeziser: Gedaechtnis-B-Zellen sind bereits vorhanden, und ihre Antikoerper wurden schon durch Affinitaetsreifung optimiert. Das ist die **molekulare Basis der Impfung**.
-
-> **Merke:** Affinitaetsreifung: Somatische Hypermutation (AID) in Keimzentren + Selektion auf hoehere Affinitaet. Sekundaerantwort = schneller, staerker, hoehere Affinitaet → Grundlage der Impfung.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **V(D)J-Rekombination:** RAG1/RAG2 kombiniert V, D, J-Segmente zufaellig; TdT fuegt N-Nukleotide ein → > 10 Milliarden Varianten
-- **Drei Diversitaetsquellen:** kombinatorisch + junctional (TdT) + somatische Hypermutation (nach Antigenkontakt)
-- **Klonale Selektion (Burnet):** Antigen waehlt passende B-Zelle → klonale Expansion → Plasmazellen + Gedaechtniszellen
-- **Affinitaetsreifung:** Somatische Hypermutation (AID) in Keimzentren → bessere Antikoerper
-- **Sekundaerantwort:** schneller, staerker, hoehere Affinitaet -- Basis der Impfung`,
-      contentExtended: `## Einleitung
-
-Dein Körper kann Antikörper gegen praktisch jede Substanz bilden -- gegen Pollen, gegen ein neues Virus, sogar gegen Moleküle, die in der Natur gar nicht vorkommen. Das ist erstaunlich, denn das menschliche Genom enthält nur rund 20.000 Gene. Wie schafft es das Immunsystem, mehr als 10 Milliarden verschiedene Antikörper-Varianten zu erzeugen? Die Antwort liegt in einem molekularen Kartenmischen: der V(D)J-Rekombination. Stell dir vor, du hast drei Stapel Spielkarten (V, D, J) und ziehst aus jedem zufällig eine -- schon die Kombinationsmöglichkeiten sind enorm. Dazu kommt noch ein “Joker-Enzym” (TdT), das an den Schnittstellen zufällige Buchstaben einfügt.
-
-**In diesem Kapitel lernst du:**
-- Wie aus nur wenigen Gensegmenten Milliarden verschiedener Antikörper entstehen (V(D)J-Rekombination)
-- Was das Antigen bei der klonalen Selektion tatsächlich “auswählt”
-- Warum die Sekundärantwort schneller, stärker und präziser ist als die Primärantwort
-- Wie Antikörper in Keimzentren durch somatische Hypermutation immer besser werden
-- Was den Klassenwechsel (IgM zu IgG) auslöst und warum sich dabei die Spezifität nicht ändert
-
----
-
-## Antikörperdiversität — Das Grundproblem
+      content: `## Antikörperdiversität — Das Grundproblem
 
 {{DIAGRAM:immune-response}}
 
@@ -1957,34 +1088,7 @@ Die Affinitätsreifung findet in Keimzentren der sekundären Lymphorgane (Lymphk
 
 Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Immunsystem über einen dritten Mechanismus zur Antikörperanpassung: den Klassenwechsel (Class Switch Recombination, CSR). Dabei wird die konstante Region der schweren Kette ausgetauscht, ohne die Antigenbindestelle zu verändern — die Spezifität bleibt erhalten, aber die Effektorfunktion ändert sich. Der Klassenwechsel wird durch Zytokine gesteuert: IL-4 induziert den Switch zu IgE (relevant bei Allergien und Parasitenabwehr), IFN-gamma fördert den Switch zu IgG (Opsonierung, Komplementaktivierung), TGF-beta fördert IgA (Schleimhautimmunität). Auch der Klassenwechsel erfordert das Enzym AID (Activation-Induced Cytidine Deaminase), das DNA-Brüche in den Switch-Regionen erzeugt. Fehlerhafte CSR kann ebenso wie fehlerhafte V(D)J-Rekombination zu chromosomalen Translokationen und damit zu Lymphomen beitragen.
 
-> **Merke:** Klassenwechsel (CSR): Austausch der konstanten Region (IgM → IgG, IgA, IgE) ohne Änderung der Antigenbindestelle. Gesteuert durch Zytokine, katalysiert durch AID.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Das Prinzip der V(D)J-Rekombination und die beteiligten Enzyme (RAG1/RAG2, TdT) erklären
-- Die drei Quellen der Antikörperdiversität unterscheiden (kombinatorisch, junctional, somatische Hypermutation)
-- Primärantwort (IgM, niedrige Affinität) vs. Sekundärantwort (IgG, hohe Affinität durch Gedächtniszellen) vergleichen
-
-**Typische Fallen:**
-- V(D)J-Rekombination (vor Antigenkontakt, Knochenmark) vs. somatische Hypermutation (nach Antigenkontakt, Keimzentren)
-- Kombinatorische Diversität (Segmentwahl) vs. junctionale Diversität (N-Nukleotide durch TdT an Schnittstellen)
-- Klonale Selektion: das Antigen wählt den passenden Klon aus — Antikörper werden nicht nach Bedarf neu konstruiert
-- Affinitätsreifung findet nur in Keimzentren statt, nicht im Knochenmark
-- Somatische Hypermutation betrifft nur V-Regionen der Antikörpergene, nicht das gesamte Genom
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **V(D)J-Rekombination** (B-Zellen): RAG1/RAG2 kombiniert V-, D- und J-Gensegmente zufällig → ~10¹¹ mögliche Antikörper-Varianten
-- **TdT**: fügt N-Nukleotide an Verbindungsstellen ein → erhöht Diversität (junctionale Diversität)
-- **Klonale Selektionstheorie** (Burnet): jede B-Zelle hat bereits vor Antigenkontakt einzigartigen BCR; Antigen selektiert passenden Klon
-- **Klonale Expansion**: selektierter Klon teilt sich → Differenzierung zu Plasmazellen (Antikörperproduktion) und Gedächtniszellen
-- **Affinitätsreifung** (Keimzentren): somatische Hypermutation durch AID + Selektion auf höhere Antigenaffinität → Antikörperqualität steigt
-- **Sekundärantwort**: schneller (Gedächtniszellen), stärker (mehr Antikörper), höhere Affinität; Basis der Impfung`,
+> **Merke:** Klassenwechsel (CSR): Austausch der konstanten Region (IgM → IgG, IgA, IgE) ohne Änderung der Antigenbindestelle. Gesteuert durch Zytokine, katalysiert durch AID.`,
       lernziele: [
         "Das Prinzip der V(D)J-Rekombination zur Erzeugung von Antikörperdiversität erklären",
         "Die Quellen der Antikörperdiversität (kombinatorisch, junctional, somatische Hypermutation) beschreiben",
@@ -2114,98 +1218,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
-      content: `## Einleitung
-
-Vor jeder Bluttransfusion stellt sich eine lebenswichtige Frage: Vertraegt der Empfaenger das Spenderblut? Gibt man einer Person mit Blutgruppe 0 versehentlich Blut der Gruppe A, kann das innerhalb von Minuten zur toedlichen Haemolyse fuehren. Der Grund: Wir bilden Antikoerper gegen genau die Blutgruppen-Antigene, die wir selbst **nicht** tragen. Die Genetik dahinter ist ein Paradebeispiel fuer **Kodominanz** und **multiple Allelie** -- und ein Klassiker im MedAT.
-
-**In diesem Kapitel lernst du:**
-- warum drei Allele (I^A, I^B, i⁰) vier Blutgruppen ergeben und was Kodominanz bei Blutgruppe AB bedeutet
-- wie man Punnett-Quadrate fuer AB0-Kreuzungen aufstellt und moegliche Kindergenotypen ableitet
-- nach welcher Regel der Koerper Antikoerper gegen AB0-Antigene bildet
-- warum Blutgruppe 0 als universeller Spender und AB als universeller Empfaenger gilt
-- was passiert, wenn eine AB0-inkompatible Transfusion durchgefuehrt wird
-
----
-
-{{DIAGRAM:blood-groups}}
-
-## AB0-System: Drei Allele, vier Blutgruppen
-
-Das **AB0-Blutgruppensystem** wird durch das ABO-Gen auf Chromosom 9 bestimmt. Das Gen kodiert fuer Glykosyltransferasen, die Kohlenhydrat-Antigene (A- und B-Antigene) auf der Oberflaeche roter Blutkoerperchen aufbauen.
-
-**Drei Allele (multiple Allelie):**
-- **I^A:** Kodiert fuer A-Transferase → baut A-Antigen auf die Erythrozyten
-- **I^B:** Kodiert fuer B-Transferase → baut B-Antigen auf
-- **i⁰:** Kodiert fuer kein funktionales Enzym → kein Antigen (Blutgruppe 0)
-
-**Vererbungsmuster:** I^A und I^B sind **kodominant** zueinander (bei AB werden beide Antigene gleichzeitig exprimiert). Beide I^A und I^B sind **dominant** ueber i⁰ (rezessiv).
-
-| Blutgruppe | Genotypen | Antigen | Antikoerper im Serum |
-| --- | --- | --- | --- |
-| A | I^A I^A oder I^A i⁰ | A | Anti-B |
-| B | I^B I^B oder I^B i⁰ | B | Anti-A |
-| AB | I^A I^B | A + B | Keine |
-| 0 | i⁰ i⁰ | Keines | Anti-A + Anti-B |
-
-**Grundregel:** Man hat Antikoerper gegen das, was man **NICHT** auf seinen Erythrozyten hat. Blutgruppe A → Anti-B; Blutgruppe 0 → Anti-A + Anti-B (alle).
-
-> **Merke:** Du hast Antikoerper gegen die Antigene, die du NICHT hast. A → Anti-B. 0 → Anti-A + Anti-B.
-
----
-
-{{DIAGRAM:pedigree-analysis}}
-
-## Kodominanz -- Beide Allele voll exprimiert
-
-**Kodominanz** bedeutet, dass beide Allele eines heterozygoten Individuums vollstaendig exprimiert werden und im Phaenotyp erkennbar sind. Bei Blutgruppe AB (Genotyp I^A I^B) werden sowohl A-Antigen als auch B-Antigen auf den Erythrozyten exprimiert -- **keines** ueberdeckt das andere.
-
-Unterschied zu anderen Erbgaengen:
-- **Dominanz/Rezessivitaet:** Ein Allel ueberdeckt das andere vollstaendig (i⁰ ist rezessiv gegenueber I^A und I^B)
-- **Unvollstaendige Dominanz:** Beide Allele fuehren zu einem **Zwischentyp** (kein Beispiel im AB0-System)
-- **Kodominanz:** Beide Allele voll exprimiert → zwei klar erkennbare Merkmale gleichzeitig
-
-**Punnett-Quadrat Beispiel:** Vater AB (I^A I^B), Mutter 0 (i⁰ i⁰). Vater gibt I^A oder I^B weiter, Mutter immer i⁰. Kinder: I^A i⁰ (Blutgruppe A) oder I^B i⁰ (Blutgruppe B) -- AB und 0 sind bei dieser Kreuzung **nicht moeglich**!
-
-**Wichtig fuer Vaterschaftstests:** Ein AB-Elternteil kann kein Kind mit Blutgruppe 0 haben, da AB kein i⁰-Allel besitzt. Blutgruppen-Mismatch kann Vaterschaft **ausschliessen**, aber nie beweisen.
-
-> **Merke:** Kodominanz: I^A und I^B beide voll exprimiert → Blutgruppe AB hat A- UND B-Antigen. AB-Elternteil kann kein 0-Kind (i⁰ i⁰) haben.
-
----
-
-{{DIAGRAM:immune-response}}
-
-## Universeller Spender und Empfaenger
-
-- **0 Rh-negativ** = universeller Spender: Keine A-, B- oder D-Antigene auf Erythrozyten → kein Angriff durch Empfaenger-Antikoerper in Notfallsituationen
-- **AB Rh-positiv** = universeller Empfaenger: Keine Anti-A oder Anti-B im Serum → kein Angriff auf Spendererythrozyten
-
-**Aber:** In der modernen Transfusionsmedizin wird diese Vereinfachung vermieden -- weitere Blutgruppensysteme (Kell, Duffy, Kidd) koennen auch bei 0- und AB+ zu Inkompatibilitaeten fuehren. In der Praxis gilt: immer **blutgruppenidentisch** transfundieren, wenn moeglich! AB0-inkompatible Transfusion → akute haemolytische Reaktion → Haemolyse, DIC, Nierenversagen → lebensbedrohlich.
-
-> **Merke:** 0-: universeller Spender (kein Antigen). AB+: universeller Empfaenger (kein Anti-A/B). In der Praxis: blutgruppenidentisch bevorzugen. Inkompatibilitaet → Haemolyse!
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **AB0-System:** 3 Allele (I^A, I^B, i⁰); I^A und I^B kodominant, beide dominant ueber i⁰ → 4 Phaenotypen
-- Antikoerper gegen fehlende Antigene: A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A + Anti-B
-- **Kodominanz:** beide Allele voll exprimiert (AB hat A- UND B-Antigen, kein Intermediaetyp)
-- **0 Rh-:** universeller Spender; **AB Rh+:** universeller Empfaenger (Notfall)
-- AB0-Fehltransfusion → akute Haemolyse, DIC, Nierenversagen → lebensbedrohlich`,
-      contentExtended: `## Einleitung
-
-Vor jeder Bluttransfusion stellt sich eine lebenswichtige Frage: Verträgt der Empfänger das Spenderblut? Gibt man einer Person mit Blutgruppe 0 versehentlich Blut der Gruppe A, kann das innerhalb von Minuten zur tödlichen Hämolyse führen. Der Grund: Wir bilden Antikörper gegen genau die Blutgruppen-Antigene, die wir selbst nicht tragen. Die Genetik dahinter ist ein Paradebeispiel für Kodominanz und multiple Allelie -- und ein Klassiker im MedAT.
-
-**In diesem Kapitel lernst du:**
-- Warum drei Allele (I^A, I^B, i^0) vier Blutgruppen ergeben und was Kodominanz bei AB bedeutet
-- Wie man Punnett-Quadrate für AB0-Kreuzungen aufstellt und mögliche Kindergenotypen ableitet
-- Nach welcher Regel der Körper Antikörper gegen AB0-Antigene bildet
-- Warum Blutgruppe 0 als universeller Spender und AB als universeller Empfänger gilt
-- Was der Bombay-Phänotyp über die Rolle des H-Antigens verrät
-
----
-
-## AB0-Blutgruppensystem — Genetische Grundlagen
+      content: `## AB0-Blutgruppensystem — Genetische Grundlagen
 
 {{DIAGRAM:blood-groups}}
 
@@ -2259,34 +1272,7 @@ Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollstän
 
 In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als universeller Spender (keine A-, B- oder D-Antigene auf Erythrozyten → kein Angriff durch Empfänger-Antikörper). Blutgruppe AB Rh-positiv (AB+) als universeller Empfänger (keine Anti-A oder Anti-B im Serum → kein Angriff auf Spendererythrozyten). In der modernen Transfusionsmedizin wird diese Vereinfachung vermieden — durch weitere Blutgruppensysteme (Kell, Duffy, Kidd, Lewis etc.) sind auch 0- und AB+-Blut inkompatibel möglich. Dennoch werden 0-Präparate in Notfallsituationen ohne Kreuzprobe eingesetzt. Pro Jahr werden Millionen von Transfusionen durchgeführt — AB0-Fehler durch Verwechslung sind eine vermeidbare Hauptursache schwerer Transfusionszwischenfälle.
 
-> **Merke:** 0 Rh-: universeller Spender (keine Antigene). AB Rh+: universeller Empfänger (keine Anti-A/B). In der Praxis: immer blutgruppenidentisch transfundieren wenn möglich.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Genotypen aller vier Blutgruppen aufzählen und Kreuzungsschemata mit Punnett-Quadrat lösen
-- Den Unterschied zwischen Kodominanz und unvollständiger Dominanz am Beispiel AB0 erklären
-- Antikörper-Antigen-Zuordnung: Wer hat welche Antikörper und warum?
-
-**Typische Fallen:**
-- Kodominanz (beide Allele voll exprimiert: AB zeigt A UND B) vs. unvollständige Dominanz (Intermediärphänotyp)
-- Blutgruppe 0 hat H-Antigen auf den Erythrozyten, nicht "kein Antigen"
-- I^A und I^B sind kodominant zueinander, aber beide dominant über i⁰
-- Universeller Spender (0-) vs. universeller Empfänger (AB+) — in der Praxis dennoch blutgruppenidentisch transfundieren
-- Ein AB-Elternteil kann kein Kind mit Blutgruppe 0 haben (kein i⁰-Allel vorhanden)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **AB0-System**: 3 Allele (I^A, I^B, i⁰); I^A und I^B kodominant, beide dominant über i⁰ → 4 Phänotypen (A, B, AB, 0)
-- Natürliche Antikörper: Blutgruppe A → Anti-B; B → Anti-A; AB → keine; 0 → Anti-A + Anti-B
-- **Regel**: Antikörper gegen fehlende AB0-Antigene; Basis der Transfusionsverträglichkeit
-- **Universeller Spender**: 0 Rh-negativ (keine A/B-Antigene, kein D-Antigen)
-- **Universeller Empfänger**: AB Rh-positiv (keine Anti-A/B-Antikörper, vertägt D-Antigen)
-- AB0-inkompatible Transfusion: akute hämolytische Reaktion → Hämolyse, DIC, Nierenversagen → lebensbedrohlich`,
+> **Merke:** 0 Rh-: universeller Spender (keine Antigene). AB Rh+: universeller Empfänger (keine Anti-A/B). In der Praxis: immer blutgruppenidentisch transfundieren wenn möglich.`,
       lernziele: [
         "Die genetische Grundlage des AB0-Systems (drei Allele, Kodominanz) erklären",
         "Genotypen der vier Blutgruppen aufzählen und Blutgruppenvererbung berechnen",
@@ -2417,89 +1403,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
         "Morbus haemolyticus neonatorum",
         "Anti-D-Prophylaxe",
       ],
-      content: `## Einleitung
-
-Warum ist bei einer Schwangerschaft meist das erste Kind gesund, aber das zweite koennte in Gefahr sein? Die Antwort liegt im **Rhesusfaktor**: Traegt eine Rh-negative Mutter ein Rh-positives Kind aus, "merkt" sich ihr Immunsystem das fremde D-Antigen. Beim ersten Kind passiert noch wenig -- die Mutter bildet zunaechst IgM, das die Plazenta nicht passieren kann. Doch bei der naechsten Rh-positiven Schwangerschaft sind bereits IgG-Antikoerper da, die durch die Plazenta gelangen und die roten Blutkoerperchen des Kindes zerstoeren. Eine einfache Spritze -- die **Anti-D-Prophylaxe** -- kann das verhindern.
-
-**In diesem Kapitel lernst du:**
-- warum der Rhesusfaktor autosomal dominant vererbt wird und nur dd-Individuen Rh-negativ sind
-- warum die Rh-Inkompatibilitaet erst ab der zweiten Schwangerschaft gefaehrlich wird (Zweiphasen-Mechanismus)
-- wie die Anti-D-Prophylaxe die Sensibilisierung der Mutter verhindert
-- warum IgG die Plazenta passieren kann, IgM aber nicht
-- was Morbus haemolyticus neonatorum und Hydrops fetalis bedeuten
-
----
-
-{{DIAGRAM:blood-groups}}
-
-## Rhesusfaktor -- Was ist das?
-
-Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB0. Das wichtigste Antigen ist das **D-Antigen (Rh-D)**, kodiert durch das RHD-Gen auf Chromosom 1.
-
-- **Rh-positiv (Rh+):** D-Antigen vorhanden. **Autosomal dominant** -- schon ein einziges funktionales RHD-Allel fuehrt zur D-Antigen-Expression. Rh+ kann homozygot (DD) oder heterozygot (Dd) sein.
-- **Rh-negativ (Rh-):** Kein D-Antigen. Nur bei Homozygotie fuer das nicht-funktionale Allel (dd). In Europa haeufig durch Deletion des RHD-Gens.
-
-Ca. **85 % der Europaeer sind Rh+**, 15 % Rh-. Beim Rh-positiven Vater ist klinisch relevant: Ist er DD → alle Kinder Rh+; ist er Dd → 50 % Rh+, 50 % Rh- (diese sind nicht gefaehrdet).
-
-> **Merke:** RhD = autosomal dominant. Rh+ kann DD oder Dd sein. Rh- ist nur dd. ~85 % Europaeer Rh+.
-
----
-
-{{DIAGRAM:pedigree-analysis}}
-
-## Rhesus-Inkompatibilitaet -- Zwei Phasen
-
-Der Pathomechanismus verlaeuft in zwei Phasen -- deshalb ist typischerweise erst die zweite Schwangerschaft gefaehrlich:
-
-**Phase 1 -- Sensibilisierung (1. Schwangerschaft):**
-Bei einer Rh-negativen Mutter mit Rh-positivem Kind gelangen bei der Geburt (oder durch stille fetomaternale Blutungen) kindliche Rh+ Erythrozyten ins muetterliche Blut. Das D-Antigen ist stark immunogen. Die Mutter bildet zunaechst **IgM-Anti-D-Antikoerper** (IgM ist als Pentamer zu gross, um die Plazenta zu passieren). Erstes Kind → meist kein Problem.
-
-**Phase 2 -- Reaktion (2. Schwangerschaft):**
-Bei erneutem Rh+ Kind sind jetzt **IgG-Anti-D-Antikoerper** (aus der Sekundaerantwort) vorhanden. IgG passiert die Plazenta **aktiv** (ueber den FcRn-Rezeptor auf Trophoblasten) → bindet an D-Antigen auf fetalen Erythrozyten → **Haemolyse** → schwere Anaemie → extramedullaere Erythropoese (Leber, Milz) → im schwersten Fall **Hydrops fetalis** (generalisiertes Oedem, Herzinsuffizienz) oder **Morbus haemolyticus neonatorum**.
-
-> **Merke:** 1. Schwangerschaft = Sensibilisierung (IgM, Plazenta NICHT passierbar, Kind sicher). 2. Schwangerschaft = IgG passiert Plazenta (FcRn) → Haemolyse beim Kind.
-
----
-
-{{DIAGRAM:immune-response}}
-
-## Anti-D-Prophylaxe -- Die Loesung
-
-Die Anti-D-Prophylaxe ist eine der groessten Errungenschaften der praenatalen Medizin. Vor ihrer Einfuehrung (1968) war Rhesusinkompatibilitaet eine der haeufigsten Ursachen fuer perinatale Mortalitaet.
-
-**Wirkmechanismus:** Der Mutter werden **exogene Anti-D-IgG-Antikoerper** (Immunglobulin) verabreicht. Diese binden an Rh+ Erythrozyten des Kindes, die sich im muetterlichen Blut befinden, und fuehren zu deren schneller **Phagozytose durch Milzmakrophagen** -- **bevor** das muetterliche Immunsystem eine eigene Primaer immunantwort (Sensibilisierung) aufbauen kann. Keine Sensibilisierung → keine IgG-Anti-D bei naechster Schwangerschaft → kein Risiko fuer das naechste Kind.
-
-**Zeitpunkte der Gabe:**
-- **28. SSW** (praenatal, da ca. 2 % der Muetter sich bereits vor der Geburt sensibilisieren)
-- **Innerhalb von 72 Stunden nach der Geburt** (postpartale Hauptsensibilisierung verhindern)
-- Auch nach invasiven Eingriffen (Amniozentese, Chorionzottenbiopsie) oder Blutungen
-
-**Wichtig:** Die Anti-D-Prophylaxe **verhindert** die Sensibilisierung -- sie kann eine bereits bestehende Sensibilisierung nicht rueckgaengig machen!
-
-> **Merke:** Anti-D-Prophylaxe: 28. SSW + innerhalb 72h nach Geburt. Exogene IgG → Phagozytose fetaler Rh+ Erythrozyten → keine muetterliche Sensibilisierung → kein Risiko fuer Folgeschwangerschaft.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Rhesusfaktor D:** autosomal dominant; ein RHD-Allel reicht fuer Rh+; nur dd = Rh-negativ (~15 % Europa)
-- **Rh-Inkompatibilitaet (2 Phasen):** 1. Schwangerschaft = Sensibilisierung (IgM, ungefaehrlich); 2. Schwangerschaft = IgG-Anti-D passiert Plazenta (FcRn) → fetale Haemolyse → Hydrops fetalis
-- **Anti-D-Prophylaxe:** exogene Anti-D-IgG → Phagozytose Rh+ Erythrozyten → keine Sensibilisierung. Zeitpunkte: 28. SSW + < 72h post partum
-- IgG = plazentagaengig (FcRn-Rezeptor); IgM = NICHT plazentagaengig (Pentamer, zu gross)`,
-      contentExtended: `## Einleitung
-
-Warum ist bei einer Schwangerschaft meist das erste Kind gesund, aber das zweite könnte in Gefahr sein? Die Antwort liegt im Rhesusfaktor: Trägt eine Rh-negative Mutter ein Rh-positives Kind aus, “merkt” sich ihr Immunsystem das fremde D-Antigen. Beim ersten Kind passiert noch wenig -- die Mutter bildet zunächst IgM, das die Plazenta nicht passieren kann. Doch bei der nächsten Schwangerschaft mit einem Rh-positiven Kind sind bereits IgG-Antikörper da, die durch die Plazenta gelangen und die roten Blutkörperchen des Kindes zerstören. Eine einfache Spritze -- die Anti-D-Prophylaxe -- kann das verhindern.
-
-**In diesem Kapitel lernst du:**
-- Warum der Rhesusfaktor autosomal dominant vererbt wird und nur dd-Individuen Rh-negativ sind
-- Weshalb die Rhesus-Inkompatibilität erst ab der zweiten Schwangerschaft gefährlich wird (Zweiphasen-Mechanismus)
-- Wie die Anti-D-Prophylaxe die Sensibilisierung der Mutter verhindert
-- Warum IgG die Plazenta passieren kann, IgM aber nicht
-- Was Morbus haemolyticus neonatorum und Hydrops fetalis bedeuten
-
----
-
-## Rhesusfaktor — Definition
+      content: `## Rhesusfaktor — Definition
 
 {{DIAGRAM:blood-groups}}
 
@@ -2536,34 +1440,7 @@ Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phas
 
 Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medizin. Vor ihrer Einführung (1968) war Rhesusinkompatibilität eine der häufigsten Ursachen für perinatale Mortalität. Der Wirkmechanismus basiert auf dem Prinzip der Antikörper-vermittelten Suppression der Immunantwort: Exogen verabreichte Anti-D-IgG-Antikörper binden an Rh+ Erythrozyten in der mütterlichen Zirkulation und führen zu ihrer schnellen Clearance durch Makrophagen der Milz, bevor B-Zellen eine Primärantwort aufbauen können. Der genaue Mechanismus ist nicht vollständig geklärt — möglicherweise spielen auch FcgRIIb (inhibitorische Fc-Rezeptoren auf B-Zellen) eine Rolle. Die Prophylaxe wird in der 28. SSW (pränatale Prophylaxe, da 2% der Mütter sich bereits antepartum sensibilisieren) und innerhalb von 72 Stunden postpartal verabreicht.
 
-> **Merke:** Anti-D-Prophylaxe: verabreichte Anti-D-IgG → Phagozytose fetaler Rh+ Erythrozyten vor mütterlicher Immunantwort → keine Sensibilisierung. 28. SSW + <72h postpartal.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Den Zweiphasen-Mechanismus der Rhesus-Inkompatibilität erklären (Sensibilisierung → Reaktion)
-- Warum ist das erste Kind meist nicht betroffen, das zweite aber gefährdet?
-- Wirkmechanismus und Zeitpunkt der Anti-D-Prophylaxe beschreiben
-
-**Typische Fallen:**
-- 1. Schwangerschaft = Sensibilisierung (IgM, kann Plazenta nicht passieren), 2. Schwangerschaft = Reaktion (IgG, passiert Plazenta)
-- RhD ist autosomal dominant (nicht kodominant wie AB0), dd = Rh-negativ
-- Anti-D-Prophylaxe verhindert die Sensibilisierung, sie behandelt nicht eine bereits bestehende
-- IgG passiert die Plazenta aktiv über FcRn, nicht durch einfache Diffusion
-- Rh-negativ = Deletion des RHD-Gens (in Europa), nicht nur ein "schwaches" Allel
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Rhesusfaktor D**: autosomal dominant; ein RHD-Allel reicht für Rh-positiv; nur dd = Rh-negativ (~15% Europa)
-- **Rh-Inkompatibilität** (2 Phasen): 1. Schwangerschaft → mütterliche Sensibilisierung (IgM, keine Gefahr); 2. Schwangerschaft → IgG-Anti-D passieren Plazenta → fetale Hämolyse
-- Schwere Folge: **Hydrops fetalis** (schwere fetale Anämie, Herzinsuffizienz, generalisiertes Ödem) bis Morbus haemolyticus neonatorum
-- **Anti-D-Prophylaxe**: exogene Anti-D-IgG eliminieren fetale Rh-pos. Erythrozyten schnell → keine eigene Immunisierung der Mutter
-- Zeitpunkte der Prophylaxe: SSW 28 + **innerhalb 72 h nach Geburt** (oder Blutung/Amniozentese)
-- Merke: IgG = plazentagängig (FcRn-Rezeptor); IgM = NICHT plazentagängig → 1. Schwangerschaft sicher`,
+> **Merke:** Anti-D-Prophylaxe: verabreichte Anti-D-IgG → Phagozytose fetaler Rh+ Erythrozyten vor mütterlicher Immunantwort → keine Sensibilisierung. 28. SSW + <72h postpartal.`,
       lernziele: [
         "Die Vererbung des Rh-D-Antigens und die Bedeutung von Homozygotie/Heterozygotie erklären",
         "Den Mechanismus der Rhesus-Inkompatibilität und die Pathogenese des Morbus haemolyticus neonatorum beschreiben",

@@ -21,96 +21,7 @@ export const bioKapEntwicklung: Kapitel = {
         "Chloroplasten",
         "Lynn Margulis",
       ],
-      content: `## Entstehung des Lebens und Endosymbiontentheorie
-
-Wie konnte aus einer leblosen Urerde das erste Leben entstehen? Drei Theorien liefern Antworten: das Miller-Urey-Experiment zeigt, wie organische Bausteine abiotisch entstehen koennen. Die RNA-Welt-Hypothese erklaert, welches Molekuel zuerst da war. Und die Endosymbiontentheorie enthuellt, dass unsere Mitochondrien einst freie Bakterien waren.
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-**In diesem Kapitel lernst du:**
-- was das Miller-Urey-Experiment (1953) gezeigt hat -- und was nicht
-- warum RNA das Henne-Ei-Problem zwischen DNA und Protein loest
-- welche Belege beweisen, dass Mitochondrien von Bakterien abstammen
-- warum Antibiotika manchmal Mitochondrien schaedigen koennen
-
----
-
-## Miller-Urey-Experiment (1953) -- Bausteine des Lebens
-
-Stanley Miller und Harold Urey simulierten die fruehe Erde: Sie mischten **Methan (CH4), Ammoniak (NH3), Wasserstoff (H2)** und **Wasserdampf (H2O)** -- die damals angenommenen Gase der Uratmosphaere -- und erzeugten durch elektrische Entladungen kuenstliche Blitze. Nach nur wenigen Tagen fanden sie **Aminosaeuren** und andere organische Verbindungen in der Loesung. Das war ein Durchbruch: Organische Molekuele -- die Bausteine des Lebens -- koennen ohne Lebewesen aus einfachen anorganischen Gasen entstehen. Diesen Vorgang nennt man **abiotische Synthese**.
-
-Wichtig: Das Experiment bewies nicht, dass Leben selbst entstand -- sondern nur, dass seine Bausteine auf einer leblosen Erde entstehen koennen. Das nennt man **chemische Evolution**.
-
-> **Merke:** Miller-Urey (1953): CH4 + NH3 + H2 + H2O + elektrische Entladungen ergibt Aminosaeuren. Beweist abiotische Synthese der Lebensbausteine -- nicht das Leben selbst.
-
----
-
-## RNA-Welt -- das Henne-Ei-Problem loesen
-
-{{DIAGRAM:cell-membrane}}
-
-Hier liegt ein Paradox: Proteine brauchen DNA/RNA fuer ihre Herstellung -- aber DNA/RNA brauchen Proteine (Enzyme), damit sie sich kopieren. Was kam zuerst? Die **RNA-Welt-Hypothese** loest dieses Problem: RNA kann beides gleichzeitig. Als **Ribozyme** wirkt RNA wie ein Enzym -- sie kann Reaktionen katalysieren. Gleichzeitig speichert RNA genetische Information wie DNA. RNA war wahrscheinlich das erste Molekuel, das sich selbst kopieren und gleichzeitig Reaktionen beschleunigen konnte.
-
-Erst spaeter uebernahmen DNA (chemisch stabiler, besser fuer Langzeitspeicherung) und Proteine (effektivere Katalysatoren) diese Aufgaben. RNA blieb als wichtige Zwischenstufe erhalten -- noch heute ist das Ribosom im Kern ein RNA-Enzym (rRNA katalysiert die Proteinbindung).
-
-> **Merke:** RNA-Welt: RNA speichert Information UND katalysiert Reaktionen (Ribozyme). Loest das Henne-Ei-Problem zwischen DNA und Protein.
-
----
-
-## Endosymbiontentheorie -- Mitochondrien als ehemalige Bakterien
-
-{{DIAGRAM:animal-cell}}
-
-**Lynn Margulis** (1967) stellte eine revolutionaere Theorie auf: **Mitochondrien** stammen von **Alphaproteobakterien**, **Chloroplasten** von **Cyanobakterien**. Diese Bakterien wurden vor etwa 1,5--2 Milliarden Jahren von einer Urzelle aufgenommen und lebten fortan als Endosymbionten (symbiotische Gaste im Inneren einer Zelle) weiter. Die Belege sind ueberzeugend:
-
-- Eigenes **ringfoermiges Genom** ohne Histone (genau wie Bakterien)
-- Eigene **70S-Ribosomen** (wie Bakterien -- nicht 80S wie die Ribosomen im Zytoplasma eukaryotischer Zellen)
-- **Doppelmembran** (innere Membran = ehemalige Bakterienmembran)
-- Vermehrung durch **binaere Teilung** unabhaengig vom Zellzyklus
-- Antibiotika, die 70S-Ribosomen hemmen, hemmen auch mitochondriale Ribosomen
-
-Mitochondriale DNA wird **nur muetterlich (maternal)** vererbt -- weil Spermien fast keine Mitochondrien in die Eizelle einbringen.
-
-> **Merke:** Endosymbiose-Belege: eigenes ringfoermiges Genom, 70S-Ribosomen, Doppelmembran, binaere Teilung, Antibiotika-Empfindlichkeit. Mitochondriale DNA = nur maternal vererbt.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- Miller-Urey: Was wurde bewiesen? (Abiotische Synthese von Aminosaeuren -- NICHT Entstehung von Leben)
-- RNA-Welt: Warum loest sie das Henne-Ei-Problem? (RNA speichert Information UND katalysiert)
-- Endosymbiose: Mindestens 3 Belege nennen koennen
-- 70S (Bakterien + Mitochondrien) vs. 80S (eukaryotisches Zytoplasma) nicht verwechseln
-
-**Typische Fallen:**
-- Endosymbiose betrifft Mitochondrien und Chloroplasten -- NICHT Zellkern oder ER
-- Miller-Urey: kein Beweis fuer Leben selbst, nur fuer abiotische Synthese
-- Chloramphenicol hemmt 70S-Ribosomen → hemmt auch Mitochondrien → kann aplastische Anaemie verursachen
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Miller-Urey** (1953): CH4 + NH3 + H2 + H2O + Blitz ergibt Aminosaeuren -- abiotische Synthese organischer Molekuele
-- **RNA-Welt**: RNA als erstes Informations- UND Katalysemolekuel (Ribozyme) -- loest das Henne-Ei-Problem
-- **Endosymbiontentheorie** (Margulis, 1967): Mitochondrien von Alphaproteobakterien, Chloroplasten von Cyanobakterien
-- Belege: eigenes Genom, 70S-Ribosomen, Doppelmembran, binaere Teilung, Antibiotika-Empfindlichkeit
-- Mitochondriale DNA: nur maternal vererbt`,
-      contentExtended: `## Einleitung
-
-Wie konnte aus einer leblosen Urerde das erste Leben entstehen? Diese Frage klingt philosophisch, doch die Biologie hat handfeste experimentelle Antworten. 1953 zeigten Miller und Urey, dass einfache Gase und Blitze ausreichen, um Aminosäuren zu bilden -- die Bausteine des Lebens. Die RNA-Welt-Hypothese erklärt, wie ein einziges Molekül gleichzeitig Information speichern und chemische Reaktionen katalysieren konnte. Und die Endosymbiontentheorie enthüllt eine erstaunliche Wahrheit: Unsere Mitochondrien waren einst frei lebende Bakterien, die von einer Urzelle aufgenommen wurden. Diese bakterielle Herkunft hat bis heute medizinische Konsequenzen -- etwa wenn Antibiotika unbeabsichtigt unsere Mitochondrien schädigen.
-
-**In diesem Kapitel lernst du:**
-- wie das Miller-Urey-Experiment die Brücke zwischen Chemie und Biologie schlug
-- warum RNA als "erstes Lebensmolekül" gilt und was das Henne-Ei-Problem löst
-- welche Belege für die bakterielle Herkunft von Mitochondrien und Chloroplasten sprechen
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
----
-
-## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
+      content: `## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
 
 Stanley Miller und Harold Urey simulierten 1953 die Bedingungen der frühen Erde: Sie mischten **CH₄ (Methan), NH₃ (Ammoniak), H₂ (Wasserstoff)** und **H₂O (Wasserdampf)** — die damals angenommenen Bestandteile der Uratmosphäre — in einem geschlossenen Kolben und erzeugten durch elektrische Entladungen Blitze. Nach wenigen Tagen enthielt die Lösung diverse **Aminosäuren** sowie weitere organische Verbindungen (Blausäure, Formaldehyd, Zuckervorstufen). Das Experiment bewies erstmals, dass organische Bausteine des Lebens **ohne Lebewesen** aus anorganischen Vorstufen entstehen können — **abiotische Synthese**.
 
@@ -150,33 +61,7 @@ Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert
 
 ## Klinischer Bezug
 
-Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was bewies das Miller-Urey-Experiment? (Abiotische Synthese von Aminosäuren aus anorganischen Gasen.)
-- Warum löst die RNA-Welt-Hypothese das Henne-Ei-Problem? (RNA speichert Information UND katalysiert.)
-- Nennen Sie drei Belege für die Endosymbiontentheorie. (Eigenes Genom, 70S-Ribosomen, Doppelmembran.)
-
-**Typische Fallen:**
-- Miller-Urey bewies NICHT die Entstehung von Leben, sondern nur die abiotische Synthese organischer Moleküle.
-- 70S-Ribosomen (Mitochondrien, Bakterien) vs. 80S-Ribosomen (eukaryotisches Zytoplasma) verwechseln.
-- Endosymbiose betrifft Mitochondrien und Chloroplasten, NICHT den Zellkern oder das ER.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Miller-Urey** (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren → abiotische Entstehung organischer Moleküle ist möglich
-- **RNA-Welt-Hypothese**: RNA kann als **Ribozym** Informationen speichern UND Reaktionen katalysieren → löst das Henne-Ei-Problem zwischen DNA und Protein
-- **Endosymbiontentheorie** (Lynn Margulis, 1967): Mitochondrien stammen von **Alphaproteobakterien**; Chloroplasten von **Cyanobakterien**
-- Belege für Endosymbiose: eigenes ringförmiges Genom (ohne Histone), 70S-Ribosomen, Doppelmembran, binäre Teilung, Antibiotikasensitivität, phylogenetische Ähnlichkeit zu Bakterien
-- Mitochondriale DNA wird **ausschließlich maternal** vererbt
-- Antibiotika (z. B. Chloramphenicol) hemmen bakterielle 70S-Ribosomen → hemmen auch mitochondriale Ribosomen → mitochondriale Toxizität
-- Erste Lebensformen (~3,8 Mrd. Jahre): Prokaryoten; Eukaryoten entstanden durch Endosymbiose (~1,5–2 Mrd. Jahre)`,
+Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.`,
       lernziele: [
         "Das Miller-Urey-Experiment und seine Bedeutung für die chemische Evolution erläutern",
         "Die RNA-Welt-Hypothese und ihre Begründung beschreiben",
@@ -311,113 +196,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
         "Überproduktion",
         "Fitness",
       ],
-      content: `## Evolutionstheorie -- Darwin, Selektion und Synthetische Theorie
-
-Warum werden Bakterien immer resistenter gegen Antibiotika? Weil ein Antibiotikum alle empfindlichen Bakterien abtoetest -- und nur die wenigen, die zufaellig eine Resistenz tragen, ueberleben und sich vermehren. Genau das ist **natuerliche Selektion**: kein Plan, kein Ziel -- nur Ueberleben und Fortpflanzen der Besser-Angepassten. Darwin hat dieses Prinzip 1859 beschrieben, und es ist heute eine der am besten belegten Theorien der Biologie.
-
-**In diesem Kapitel lernst du:**
-- warum vier Bedingungen gleichzeitig erfuellt sein muessen, damit natuerliche Selektion wirkt
-- wie Lamarck und Darwin sich grundlegend unterscheiden -- und warum Lamarck widerlegt ist
-- was Fitness in der Biologie wirklich bedeutet (Hinweis: nicht Koerperkraft)
-- wie stabilisierende, gerichtete und disruptive Selektion auf Populationen wirken
-- wie die Synthetische Evolutionstheorie Darwin und Mendel verbindet
-
----
-
-## Darwin vs. Lamarck -- zwei grundverschiedene Ideen
-
-Der Franzose **Jean-Baptiste de Lamarck** (1744--1829) glaubte: Tiere veraendern sich durch Gebrauch oder Nichtgebrauch von Koerperteilen, und diese erworbenen Veraenderungen werden vererbt. Giraffen strecken den Hals immer weiter -- und ihre Kinder erben den laengeren Hals. Das klingt intuitiv, ist aber **widerlegt**: Was du trainierst, landet nicht in deinen Genen.
-
-**Charles Darwin** (1809--1882) hatte eine voellig andere Idee, gestuetzt auf jahrelange Beobachtungen. Sein Modell beruht auf vier Voraussetzungen, die gleichzeitig erfuellt sein muessen:
-
-1. **Variation**: Individuen einer Population unterscheiden sich in vererbbaren Merkmalen (durch Mutationen und Rekombination)
-2. **Erblichkeit**: Diese Merkmale werden an Nachkommen weitergegeben
-3. **Ueberproduktion**: Es werden mehr Individuen geboren, als die verfuegbaren Ressourcen ernaehren koennen
-4. **Differentialreproduktion**: Individuen mit vorteilhaften Merkmalen ueberleben haeufiger und haben mehr Nachkommen
-
-Das Ergebnis: Vorteilhafte Merkmale nehmen in der Population ueber Generationen zu -- die Population veraendert sich.
-
-> **Merke:** Lamarck = Vererbung erworbener Eigenschaften (widerlegt). Darwin: Variation + Erblichkeit + Ueberproduktion + Differentialreproduktion = natuerliche Selektion.
-
----
-
-## Fitness -- was bedeutet das wirklich?
-
-{{DIAGRAM:pedigree-analysis}}
-
-"Survival of the fittest" wird oft missverstanden. In der Evolutionsbiologie bedeutet **Fitness** nicht Koerperkraft oder Schnelligkeit, sondern: **reproduktiver Erfolg** -- die Faehigkeit, ueberlebensfaehige, fertile Nachkommen zu erzeugen.
-
-Ein Bodybuilder mit keinen Kindern hat biologisch niedrigere Fitness als ein krankes, duennes Individuum mit zehn gesunden Kindern. Was zaehlt, ist, wessen Gene in der naechsten Generation haeufiger vorkommen.
-
-Erweiterung: **Inklusive Fitness**. Eine Biene, die auf eigene Reproduktion verzichtet und der Koenigin hilft, verbreitet indirekt dieselben Gene (weil sie mit der Koenigin verwandt ist). Das nennt man **Verwandtenselektion (Kin Selection)**. Fitness ist immer relativ zur aktuellen Umwelt -- was heute vorteilhaft ist, kann morgen neutral oder schaedlich sein.
-
-> **Merke:** Fitness = Fortpflanzungserfolg, nicht Koerperkraft. Wer mehr fertile Nachkommen hat, ist biologisch fitter.
-
----
-
-## Die drei Selektionsarten
-
-{{DIAGRAM:dna-helix}}
-
-Natuerliche Selektion wirkt auf drei verschiedene Weisen auf die Merkmalsverteilung einer Population:
-
-**Stabilisierende Selektion** -- die Mitte wird bevorzugt: Extreme werden benachteiligt, der Mittelwert bleibt konstant, die Varianz sinkt. Beispiel: **Geburtsgewicht** -- zu leichte Babys haben unreife Organe, zu schwere Babys verursachen Geburtskomplikationen; Babys mit mittlerem Gewicht ueberleben am besten.
-
-**Gerichtete Selektion** -- ein Extrem wird bevorzugt: Der Mittelwert verschiebt sich mit jeder Generation in eine Richtung. Beispiel: **Antibiotikaresistenz** -- Antibiotika toeten empfindliche Bakterien, resistente ueberleben und vermehren sich; der Anteil resistenter Staemme steigt (MRSA).
-
-**Disruptive Selektion** -- beide Extreme werden bevorzugt, die Mitte benachteiligt: Die Merkmalsverteilung kann sich aufspalten. Beispiel: **Schnabelgroesse bei Voegeln** mit zwei verschiedenen Nahrungsquellen -- sehr grosse Schnaebel (harte Samen) und sehr kleine Schnaebel (Insekten) sind vorteilhaft, mittlere Schnaebel nicht. Disruptive Selektion kann zur **Artaufspaltung** fuehren.
-
-> **Merke:** Stabilisierend = Mittelwert bleibt (Varianz sinkt). Gerichtet = Mittelwert verschiebt sich. Disruptiv = Extreme bevorzugt, Mitte benachteiligt.
-
----
-
-## Synthetische Evolutionstheorie -- Darwin plus Mendel
-
-Darwin kannte Mendels Genetik nicht (obwohl Mendel 1866 veroeffentlichte). Erst in den 1930--1950er Jahren verbanden Forscher wie R.A. Fisher, Theodosius Dobzhansky und Ernst Mayr beide Erkenntnisse: Die **Synthetische Evolutionstheorie** (Neue Synthese) kombiniert Darwins natuerliche Selektion mit Mendels Genetik und der Populationsgenetik. Evolution wird damit praezise definiert als: **Veraenderung der Allelfrequenzen in einer Population ueber Zeit**.
-
-Diese Definition ist messbar und quantifizierbar -- ein grosser Vorteil gegenueberDarwins urspruenglicher, qualitativer Beschreibung.
-
-> **Merke:** Neue Synthese = Darwin (Selektion) + Mendel (Genetik) + Populationsgenetik. Evolution = Veraenderung der Allelfrequenzen in Populationen.
-
----
-
-## MedAT-Fokus
-
-| Selektionsart | Wirkung | Beispiel |
-| --- | --- | --- |
-| Stabilisierend | Mittelwert bleibt, Varianz sinkt | Geburtsgewicht |
-| Gerichtet | Mittelwert verschiebt sich | Antibiotikaresistenz (MRSA) |
-| Disruptiv | Extreme bevorzugt, Mitte benachteiligt | Schnabelgroesse (2 Nischen) |
-
-**Typische Fallen:**
-- Fitness = Fortpflanzungserfolg, NICHT physische Staerke oder Ueberlebensrate allein
-- Darwin (Selektion, 1859) vs. Lamarck (erworbene Eigenschaften, widerlegt)
-- Synthetische Theorie (Neue Synthese) integriert Genetik -- Darwin kannte Mendel nicht
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Darwins 4 Prinzipien**: Variation + Erblichkeit + Ueberproduktion + Differentialreproduktion → natuerliche Selektion
-- **Lamarck**: Vererbung erworbener Eigenschaften -- widerlegt
-- **Fitness** = reproduktiver Erfolg (nicht Koerperkraft); inklusive Fitness = + Verwandtenselektion
-- **Stabilisierend**: Mittelwert konstant, Extreme benachteiligt (Geburtsgewicht)
-- **Gerichtet**: Mittelwert verschiebt sich (Antibiotikaresistenz)
-- **Disruptiv**: Extreme bevorzugt → kann Artaufspaltung einleiten
-- **Synthetische Evolutionstheorie**: Darwin + Mendel + Populationsgenetik → Evolution = Allelfrequenzveraenderung`,
-      contentExtended: `## Einleitung
-
-Warum werden Bakterien immer resistenter gegen Antibiotika? Die Antwort liegt in demselben Prinzip, das Darwin vor über 150 Jahren beschrieben hat: natürliche Selektion. Wenn ein Antibiotikum alle empfindlichen Bakterien abtötet, überleben nur die wenigen, die zufällig eine Resistenz tragen, und vermehren sich ungestört weiter. Dieses einfache Prinzip erklärt, wie sich Populationen über Generationen verändern.
-
-**In diesem Kapitel lernst du:**
-- warum vier Bedingungen gleichzeitig erfüllt sein müssen, damit natürliche Selektion wirkt
-- wie sich stabilisierende, gerichtete und disruptive Selektion auf die Merkmalsverteilung einer Population auswirken
-- warum Fitness in der Biologie etwas ganz anderes bedeutet als im Fitnessstudio
-- wie die Synthetische Evolutionstheorie Darwin und Mendel unter einen Hut bringt
-
----
-
-## Darwins 4 Kernprinzipien und Lamarck im Vergleich
+      content: `## Darwins 4 Kernprinzipien und Lamarck im Vergleich
 
 Bevor Darwin die **natürliche Selektion** formulierte, war die Theorie von **Jean-Baptiste de Lamarck** (1744–1829) einflussreich: Lamarck glaubte, dass Merkmale durch Gebrauch oder Nichtgebrauch verändert werden (*use and disuse*) und diese erworbenen Merkmale an Nachkommen weitergegeben werden. Beispiel: Giraffen strecken den Hals und vererben einen längeren Hals. Lamarcks Theorie ist **widerlegt** — erworbene Körperveränderungen werden nicht ins Erbmaterial übertragen.
 
@@ -470,40 +249,7 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 
 ## Klinischer Bezug
 
-Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship, Therapierotation).
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was sind Darwins vier Voraussetzungen für natürliche Selektion?
-- Was bedeutet Fitness in der Evolutionsbiologie? (Reproduktiver Erfolg, NICHT physische Stärke.)
-- Welche Selektionsart liegt vor, wenn der Mittelwert eines Merkmals bevorzugt wird? (Stabilisierend.)
-
-| Selektionsart | Wirkung auf Verteilung | Bevorzugt | Beispiel |
-| --- | --- | --- | --- |
-| Stabilisierend | Varianz sinkt, Mittelwert bleibt | Mittelwert | Geburtsgewicht |
-| Gerichtet | Mittelwert verschiebt sich | Ein Extrem | Antibiotikaresistenz (MRSA) |
-| Disruptiv | Verteilung spaltet sich | Beide Extreme | Schnabelgröße (2 Nischen) |
-
-**Typische Fallen:**
-- Fitness bedeutet reproduktiver Erfolg, NICHT physische Kraft oder Überlebensrate.
-- Stabilisierende, gerichtete und disruptive Selektion verwechseln (Mittelwert bleibt / verschiebt sich / Extreme bevorzugt).
-- Darwin (natürliche Selektion, 1859) vs. Lamarck (Vererbung erworbener Eigenschaften, widerlegt) verwechseln.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Darwins **4 Kernprinzipien**: Variation (vererbbar) + Überproduktion (mehr Nachkommen als möglich überleben) + Differentialreproduktion → **natürliche Selektion**
-- **Fitness** = reproduktiver Erfolg (nicht körperliche Stärke); wer mehr überlebensfähige Nachkommen hat, ist fitter
-- **Stabilisierende Selektion**: Mittelwert wird bevorzugt, Extreme benachteiligt (Beispiel: Geburtsgewicht)
-- **Gerichtete Selektion**: Mittelwert verschiebt sich in eine Richtung (Beispiel: Antibiotikaresistenz)
-- **Disruptive Selektion**: Extreme werden bevorzugt, Mittelwert benachteiligt → kann zu Artaufspaltung führen
-- **Synthetische Evolutionstheorie** (1930–1950er): Darwin + Mendel + Populationsgenetik → Evolution = **Veränderung der Allelfrequenzen** in einer Population über Zeit
-- **Sexuelle Selektion**: intrasexuell (Kampf um Paarungspartner) vs. intersexuell (Partnerwahl) → sexueller Dimorphismus
-- Evolutionaere Medizin: Antibiotikaresistenz ist gerichtete Selektion in Echtzeit — dasselbe Prinzip wie bei Darwin`,
+Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship, Therapierotation).`,
       lernziele: [
         "Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern",
         "Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen",
@@ -641,98 +387,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
         "Allelfrequenz",
         "Flaschenhalseffekt",
       ],
-      content: `## Evolutionsfaktoren -- Mutation, Drift und Hardy-Weinberg
-
-Stell dir eine kleine Insel vor, auf der nur 20 Menschen leben. Durch puren Zufall koennte es passieren, dass nach ein paar Generationen alle dieselbe Blutgruppe haben -- ohne dass das irgendeinen biologischen Vorteil haette. Das nennt man **Gendrift**: zufaellige Schwankungen der Allelfrequenzen. Sie ist einer von vier Faktoren, die Populationen genetisch veraendern. Das **Hardy-Weinberg-Gleichgewicht** beschreibt den theoretischen Idealzustand, wenn keiner dieser Faktoren wirkt -- und jede Abweichung davon zeigt an, dass Evolution gerade stattfindet.
-
-**In diesem Kapitel lernst du:**
-- welche vier Kraefte die Allelfrequenzen einer Population veraendern -- und wie sie sich unterscheiden
-- warum Gendrift in kleinen Populationen zur dominierenden Kraft wird
-- was Flaschenhals-Effekt und Gruendereffekt unterscheidet
-- was das Hardy-Weinberg-Gleichgewicht aussagt und warum Abweichungen auf aktive Evolution hindeuten
-
----
-
-## Die vier Evolutionsfaktoren
-
-{{DIAGRAM:dna-helix}}
-
-Evolution bedeutet: Die Haeufigkeit von Allelen in einer Population veraendert sich. Vier Kraefte koennen das antreiben:
-
-**1. Mutation** -- der Rohstoff: Mutationen erschaffen neue Allele durch Aenderungen der DNA-Sequenz. Ohne Mutation gaebe es keine genetische Variation und damit keine Evolution. Einzelne Mutationen sind zufaellig und meist neutral oder schaedlich; selten sind sie vorteilhaft. Die Mutationsrate pro Gen betraegt ca. 10⁻⁵ bis 10⁻⁸ pro Generation -- sehr langsam.
-
-**2. Selektion** -- gerichtet und fitnessbezogen: Selektion bevorzugt Allele, die mit hoeherem Fortpflanzungserfolg verbunden sind. Sie ist die einzige **gerichtete** Kraft unter den vier Faktoren. In grossen Populationen dominiert Selektion ueber die zufaelligen Kraefte.
-
-**3. Gendrift** -- purer Zufall: In endlichen Populationen schwanken Allelfrequenzen zufaellig von Generation zu Generation -- einfach weil bei der Reproduktion nur ein Ausschnitt aller Allele weitergegeben wird. In **kleinen Populationen** sind diese Schwankungen gross und koennen dazu fuehren, dass ein Allel zufaellig komplett verschwindet (Elimination) oder bei 100 % endet (Fixierung) -- unabhaengig davon, ob es vorteilhaft ist oder nicht.
-
-**4. Genfluss** -- homogenisierend: Wenn Individuen zwischen Populationen wandern, bringen sie ihre Allele mit. Das gleicht Unterschiede zwischen Populationen aus und wirkt der Artbildung entgegen. Eine geografische Barriere, die den Genfluss unterbricht, ist oft der erste Schritt zur Artaufspaltung.
-
-> **Merke:** Mutation (Rohstoff, zufaellig), Selektion (gerichtet, fitnessbezogen), Gendrift (zufaellig, stark in kleinen Populationen), Genfluss (homogenisierend, verhindert Artbildung).
-
----
-
-## Flaschenhals-Effekt vs. Gruendereffekt
-
-Beide sind Sonderformen der Gendrift in kleinen Populationen -- aber mit unterschiedlicher Ursache.
-
-**Flaschenhals-Effekt**: Eine bestehende grosse Population wird durch ein Ereignis (Epidemie, Naturkatastrophe, Jagd) drastisch auf wenige Individuen reduziert. Die Ueberlebenden repraesentieren nur einen zufaelligen Ausschnitt der urspruenglichen genetischen Vielfalt -- viele Allele gehen fuer immer verloren. Beispiel: Nördliche Seeelefanten wurden fast ausgerottet; heute zeigen sie extrem geringe genetische Diversitaet.
-
-**Gruendereffekt**: Eine kleine Gruppe von Individuen verlaeesst die urspruengliche Population und gruendet eine neue -- zum Beispiel auf einer Insel oder in einem neuen Gebiet. Die Allele dieser Gruender praeegen die gesamte Nachfolgepopulation, auch wenn sie nicht typisch fuer die Ursprungsgruppe waren. Beispiel: Die Amischen in Pennsylvania zeigen hohe Haeufigkeit seltener Erbkrankheiten wegen Gruendereffekt.
-
-> **Merke:** Flaschenhals = bestehende Population wird stark reduziert (Katastrophe). Gruendereffekt = kleine Gruppe gruendet neue Population (Migration). Beide → Gendrift, genetische Verarmung.
-
----
-
-## Hardy-Weinberg-Gleichgewicht
-
-{{DIAGRAM:pedigree-analysis}}
-
-Das **Hardy-Weinberg-Gesetz** beschreibt eine Population **ohne Evolution** -- einen theoretischen Referenzzustand. Die Gleichung lautet: **p² + 2pq + q² = 1** (wobei p und q die Haeufigkeiten zweier Allele sind). Das Gleichgewicht gilt nur, wenn fuenf Bedingungen erfuellt sind: grosse Population, kein Genfluss, keine Selektion, keine Mutation, zufaellige Paarung. In der Natur ist das nie vollstaendig erfuellt -- aber das ist der Clou: Jede Abweichung vom Hardy-Weinberg-Gleichgewicht zeigt an, dass mindestens einer dieser Faktoren wirkt -- also dass Evolution stattfindet.
-
-Praxisbeispiel: In Malariaregionen Afrikas kommen Sichelzelltraeger (HbA/HbS) haeufiger vor als das Hardy-Weinberg-Gleichgewicht vorhersagen wuerde. Der Grund: Traeger sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA). Selektion haelt das Sichelzellallel in der Population (**Heterozygotenvorteil** -- balancierte Selektion).
-
-> **Merke:** Hardy-Weinberg: p² + 2pq + q² = 1; kein Evolutionsdruck im Gleichgewicht. Abweichung = mindestens ein Evolutionsfaktor ist aktiv.
-
----
-
-## MedAT-Fokus
-
-| Faktor | Wirkung | Gerichtet? | Staerke in kleinen Populationen |
-| --- | --- | --- | --- |
-| Mutation | Neue Allele erschaffen | Nein | Gleich |
-| Selektion | Fitness-Allele nehmen zu | Ja | Schwaecher (Drift dominiert) |
-| Gendrift | Zufaellige Schwankungen | Nein | Sehr stark |
-| Genfluss | Gleicht Unterschiede aus | Nein | Stark (wirkt gegen Artbildung) |
-
-**Typische Fallen:**
-- Flaschenhals (bestehende Population wird reduziert) vs. Gruendereffekt (neue Population wird gegruendet)
-- Gendrift (zufaellig, stark in kleinen Populationen) vs. Selektion (gerichtet, dominiert in grossen Populationen)
-- Hardy-Weinberg-Abweichung = Evolution aktiv, kein Messfehler
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **4 Evolutionsfaktoren**: Mutation (Rohstoff), Selektion (gerichtet), **Gendrift** (zufaellig, stark in kleinen Populationen), Genfluss (homogenisierend)
-- **Flaschenhals-Effekt**: bestehende Population wird drastisch reduziert → zufaelliger Verlust genetischer Vielfalt
-- **Gruendereffekt**: kleine Gruppe kolonisiert neue Nische → Allele der Gruender praeegen Nachfolgepopulation
-- **Hardy-Weinberg**: p² + 2pq + q² = 1; kein Evolutionsdruck im Gleichgewicht; fuenf Bedingungen muessen erfuellt sein
-- Abweichung vom Hardy-Weinberg = mindestens ein Evolutionsfaktor ist aktiv
-- **Heterozygotenvorteil**: Sichelzellatraeger (HbAS) in Malariaregionen resistenter → balancierte Selektion haelt beide Allele
-- Klinisch: Gruendereffekt erklaert gehaeuftes Auftreten seltener Erbkrankheiten in isolierten Gemeinschaften`,
-      contentExtended: `## Einleitung
-
-Stell dir eine kleine Insel vor, auf der nur 20 Menschen leben. Durch reinen Zufall könnte es passieren, dass in wenigen Generationen alle dieselbe Blutgruppe haben, obwohl es dafür keinen biologischen Vorteil gibt. Das ist Gendrift, und sie ist nur einer von vier Faktoren, die Allelfrequenzen verändern. Das Hardy-Weinberg-Gleichgewicht beschreibt den theoretischen Idealzustand, in dem keiner dieser Faktoren wirkt. Jede Abweichung davon verrät, welche Kraft gerade am Werk ist.
-
-**In diesem Kapitel lernst du:**
-- welche vier Kräfte die Allelfrequenzen einer Population verändern und wie sie sich unterscheiden
-- warum Gendrift in kleinen Populationen zum dominierenden Faktor wird
-- was das Hardy-Weinberg-Gleichgewicht beschreibt und warum Abweichungen davon auf aktive Evolution hindeuten
-- wie Gründereffekt und Flaschenhalseffekt die genetische Vielfalt reduzieren
-
----
-
-## Die vier Evolutionsfaktoren
+      content: `## Die vier Evolutionsfaktoren
 
 {{DIAGRAM:dna-helix}}
 
@@ -770,40 +425,7 @@ Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population —
 
 ## Klinischer Bezug
 
-Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom bei Amischen. In der Pharmakogenetik erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele).
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift.)
-- Was besagt das Hardy-Weinberg-Gleichgewicht? (p2 + 2pq + q2 = 1; keine Evolution bei idealen Bedingungen.)
-- Was ist der Unterschied zwischen Flaschenhals und Gründereffekt?
-
-| Faktor | Wirkung | Gerichtet? | Stärke in kleinen Pop. |
-| --- | --- | --- | --- |
-| Mutation | Neue Allele (Rohstoff) | Nein (zufällig) | Gleich |
-| Selektion | Fitness-Allele steigen | Ja | Schwächer (Drift überwiegt) |
-| Gendrift | Zufällige Frequenzänderung | Nein | Sehr stark |
-| Genfluss | Homogenisierung | Nein | Stark (wirkt gegen Divergenz) |
-
-**Typische Fallen:**
-- Flaschenhals (bestehende Population wird reduziert) vs. Gründereffekt (kleine Gruppe gründet neue Population) verwechseln.
-- Gendrift (zufällig, stark in kleinen Populationen) vs. Selektion (gerichtet, stark in großen Populationen) verwechseln.
-- Hardy-Weinberg-Abweichung bedeutet, dass Evolution aktiv ist, NICHT dass ein Messfehler vorliegt.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **4 Evolutionsfaktoren**: Mutation (Rohstoff neuer Varianten), Selektion (gerichtet, fitnessbezogen), **Gendrift** (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend zwischen Populationen)
-- **Flaschenhals-Effekt**: bestehende Population wird drastisch reduziert → zufälliger Verlust genetischer Vielfalt
-- **Gründereffekt**: kleine Gruppe kolonisiert neue Nische → Allele der Gründer prägen die neue Population (Sonderfall des Gendrifts)
-- **Hardy-Weinberg-Gleichgewicht**: p² + 2pq + q² = 1; beschreibt Referenzzustand **ohne Evolution** (große Population, kein Genfluss, keine Selektion, keine Mutation, Random Mating)
-- Abweichung vom Hardy-Weinberg = mindestens ein Evolutionsfaktor ist aktiv
-- **Heterozygotenvorteil** (balancierte Selektion): Sichelzellanämie-Träger (HbAS) haben in Malariaregionen höhere Fitness als beide Homozygoten → beide Allele bleiben in der Population erhalten
-- Hardy-Weinberg klinisch: aus der Erkrankungshaeufigkeit (q2) die Anlagetraegerhaeufigkeit (2pq) berechnen`,
+Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom bei Amischen. In der Pharmakogenetik erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele).`,
       lernziele: [
         "Die vier Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss) und ihre Wirkungsweisen beschreiben",
         "Flaschenhals-Effekt und Gründereffekt als Formen des Gendrifts unterscheiden",
@@ -930,114 +552,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
         "Speziation",
         "Isolationsmechanismen",
       ],
-      content: `## Artbegriff und Artbildung -- Isolationsmechanismen
-
-Ein Pferd und ein Esel koennen sich paaren und ein Maultier zeugen -- aber das Maultier ist steril. Sind Pferd und Esel also dieselbe Art? Nach dem **biologischen Artbegriff** von Ernst Mayr nicht: Eine Art ist eine Gruppe von Individuen, die sich untereinander fortpflanzen koennen und deren Nachkommen selbst fruchtbar sind. Das Maultier faellt damit raus -- Hybridsteritlitaet ist eine postzygotische Barriere. Dieses Kapitel erklaert, wie Arten definiert werden, welche Barrieren zwischen Populationen entstehen und wie aus einer Art zwei neue Arten werden.
-
-**In diesem Kapitel lernst du:**
-- was den biologischen Artbegriff ausmacht und wo er versagt (Bakterien, Fossilien)
-- was praezygotische und postzygotische Isolationsmechanismen sind -- mit konkreten Beispielen
-- warum das Maultier lebt aber steril ist -- und was das ueber Artgrenzen sagt
-- wie allopatrische Artbildung (geografische Trennung) und sympatrische Artbildung (Polyploidie) funktionieren
-
----
-
-## Biologischer Artbegriff -- und seine Grenzen
-
-{{DIAGRAM:pedigree-analysis}}
-
-Der **biologische Artbegriff** (Ernst Mayr) lautet: Eine Art umfasst Individuen, die sich tatsaechlich oder potenziell untereinander fortpflanzen und von anderen Gruppen **reproduktiv isoliert** sind. Das klingt klar -- hat aber Schwachstellen:
-
-- **Asexuelle Organismen** wie Bakterien vermehren sich ohne Sex: Es gibt keine Paarung und damit keine reproduktive Isolation, die man messen koennte. Fuer Bakterien ist der biologische Artbegriff unbrauchbar.
-- **Fossilien** kann man nicht kreuzen -- man kann ihr Fortpflanzungsverhalten nicht direkt beobachten.
-
-Fuer diese Faelle gibt es andere Artbegriffe (z.B. morphologischer Artbegriff: definiert durch Aussehen). Fuer sexuell reproduzierende, lebende Organismen ist der biologische Artbegriff jedoch der Standard.
-
-> **Merke:** Biologischer Artbegriff (Mayr): Reproduktionsgemeinschaft + reproduktive Isolation. Grenzen: versagt bei asexuellen Organismen und Fossilien.
-
----
-
-## Isolationsmechanismen -- praezygotisch und postzygotisch
-
-Wenn zwei Populationen auseinanderdriften, entstehen Barrieren -- sogenannte **Isolationsmechanismen**. Je nachdem, ob sie vor oder nach der Befruchtung wirken, unterscheidet man:
-
-**Praezygotische Isolation** (vor Bildung der Zygote) -- verhindert die Befruchtung selbst:
-- **Geografisch**: Gebirge, Ozean oder Fluss trennen Populationen raeumlich
-- **Zeitlich**: Populationen paaren sich zu verschiedenen Jahreszeiten (z.B. Fruehjaehrsblueher vs. Herbstblueher)
-- **Verhalten**: Verschiedene Balzrituale -- die Signale passen nicht zueinander
-- **Mechanisch**: Genitalien oder Bluetenstrukturen passen morphologisch nicht zusammen
-
-**Postzygotische Isolation** (nach Bildung der Zygote) -- Befruchtung klappt, aber das Ergebnis scheitert:
-- **Hybridsteritlitaet**: Der Hybrid lebt, kann sich aber nicht fortpflanzen -- klassisches Beispiel: das **Maultier** (Pferd: 2n=64, Esel: 2n=62, Maultier: 2n=63 → ungerader Chromosomensatz, keine normale Meiose moeglich → steril)
-- **Hybridlethalitaet**: Der Hybrid stirbt als Embryo oder kurz nach der Geburt
-
-> **Merke:** Praezygotisch = vor Befruchtung (verhindert Energieverschwendung). Postzygotisch = nach Befruchtung; Maultier = Hybridsteritlitaet.
-
----
-
-## Allopatrische Artbildung -- durch geografische Trennung
-
-**Allopatrische Artbildung** (allos = verschieden, patria = Heimat) ist der haeufigste Weg zu neuen Arten. Sie laeuft so ab:
-
-1. Eine Ausgangspopulation wird durch eine **geografische Barriere** geteilt (Gebirge, Fluss, Meereseinbruch, Gletschervorstoß)
-2. Beide Teilpopulationen entwickeln sich unabhaengig -- akkumulieren verschiedene Mutationen, unterliegen verschiedenem Selektionsdruck, erleben Gendrift
-3. Nach vielen Generationen sind sie so verschieden, dass sie sich bei Wiedervereinigung nicht mehr fortpflanzen koennen → **zwei Arten**
-
-{{DIAGRAM:dna-helix}}
-
-Klassisches Beispiel: **Darwin-Finken** auf den Galapagos-Inseln. Aus einer einzigen Gruenderpopulation entstanden 13--15 verschiedene Finkenarten, jede angepasst an eine andere Nahrungsquelle -- das nennt man **adaptive Radiation**.
-
-> **Merke:** Allopatrisch = geografische Barriere → unabhaengige Divergenz → reproduktive Isolation → neue Arten.
-
----
-
-## Sympatrische Artbildung -- ohne geografische Trennung
-
-Wie kann eine neue Art im selben geografischen Gebiet entstehen? Der wichtigste Mechanismus bei Pflanzen ist **Polyploidie**: Fehler bei der Zellteilung fuehren zur Verdopplung des Chromosomensatzes. Ein solches polyploides Individuum kann sich nicht mehr mit den Ausgangsdiploiden kreuzen (Kreuzung ergibt sterile Hybriden), aber mit anderen Polyploiden derselben Art -- eine **neue Art in einer einzigen Generation**.
-
-Beispiel: **Weizen** (Triticum aestivum) ist hexaploid (6n=42) und entstand aus drei diploiden Vorfahrenarten durch zweimalige Polyploidisierung. Beim Menschen ist Polyploidie nicht mit dem Leben vereinbar -- triploide Embryonen (3n=69) fuehren zu Fruehaborten.
-
-> **Merke:** Sympatrisch = im selben Gebiet, hauptsaechlich durch Polyploidie bei Pflanzen. Neue Art in einer Generation moeglich.
-
----
-
-## MedAT-Fokus
-
-| Merkmal | Allopatrisch | Sympatrisch |
-| --- | --- | --- |
-| Geografische Trennung | Ja (Barriere noetig) | Nein (gleiches Gebiet) |
-| Hauptmechanismus | Divergenz + Selektion + Drift | Polyploidie (Pflanzen) |
-| Geschwindigkeit | Langsam (viele Generationen) | Schnell (1 Generation moeglich) |
-| Beispiel | Darwin-Finken (Galapagos) | Weizen (6n=42) |
-
-**Typische Fallen:**
-- Praezygotisch (vor Befruchtung) vs. postzygotisch (nach Befruchtung) verwechseln
-- Maultier: lebensfaehig (lebt!), aber steril (kann keine Kinder bekommen)
-- Biologischer Artbegriff gilt NICHT fuer Bakterien und Fossilien
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Biologischer Artbegriff** (Mayr): Reproduktionsgemeinschaft + reproduktive Isolation; versagt bei Asexuellen und Fossilien
-- **Praezygotisch**: geografisch, zeitlich, Verhalten, mechanisch -- verhindert die Befruchtung
-- **Postzygotisch**: Hybridsteritlitaet (Maultier) oder Hybridlethalitaet -- Befruchtung klappt, Nachkommen aber steril oder nicht lebensfaehig
-- **Allopatrische Artbildung**: geografische Barriere → unabhaengige Divergenz → Reproduktionsisolation (haeufigster Mechanismus)
-- **Sympatrische Artbildung**: Polyploidie bei Pflanzen → neue Art in einer Generation moeglich
-- **Adaptive Radiation**: rasche Artaufspaltung aus einer Gruenderpopulation in viele Nischen (Darwin-Finken, Galapagos)`,
-      contentExtended: `## Einleitung
-
-Pferde und Esel können sich paaren und ein Maultier zeugen, aber das Maultier ist steril. Sind Pferd und Esel dann dieselbe Art? Nach dem biologischen Artbegriff nicht, denn echte Arten sind reproduktiv isoliert: Ihre Nachkommen müssen selbst fruchtbar sein. Dieses Kapitel erklärt, wie man Arten definiert, warum Isolationsmechanismen der Schlüssel zur Artbildung sind und wie aus einer Art zwei werden.
-
-**In diesem Kapitel lernst du:**
-- was den biologischen Artbegriff ausmacht und wo er an seine Grenzen stößt
-- welche Barrieren verhindern, dass sich zwei Populationen erfolgreich fortpflanzen (prä- vs. postzygotisch)
-- warum das Maultier lebt, sich aber nicht fortpflanzen kann, und was das über Artgrenzen aussagt
-- wie neue Arten durch geografische Trennung oder Polyploidie entstehen
-
----
-
-## Reproduktive Isolation — Präzygotisch und Postzygotisch
+      content: `## Reproduktive Isolation — Präzygotisch und Postzygotisch
 
 {{DIAGRAM:pedigree-analysis}}
 
@@ -1078,40 +593,7 @@ Polyploidie ist der wichtigste Mechanismus sympatrischer Artbildung, besonders b
 
 ## Klinischer Bezug
 
-Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was besagt der biologische Artbegriff? (Reproduktionsgemeinschaft + reproduktive Isolation.)
-- Warum ist das Maultier steril? (Pferd 64 + Esel 62 Chromosomen, Maultier 63: keine reguläre Meiose möglich.)
-- Was ist der Unterschied zwischen allopatrischer und sympatrischer Artbildung?
-
-| Merkmal | Allopatrische Artbildung | Sympatrische Artbildung |
-| --- | --- | --- |
-| Geografische Trennung | Ja (Barriere) | Nein (selbes Gebiet) |
-| Hauptmechanismus | Divergenz + Drift + Selektion | Polyploidie (Pflanzen) |
-| Geschwindigkeit | Langsam (viele Generationen) | Schnell (1 Generation möglich) |
-| Beispiel | Darwin-Finken (Galapagos) | Weizen (6n = 42) |
-
-**Typische Fallen:**
-- Präzygotisch (vor Befruchtung) vs. postzygotisch (nach Befruchtung: Hybridsterilität, -lethalität) verwechseln.
-- Allopatrisch (geografische Trennung) vs. sympatrisch (im selben Gebiet, v. a. Polyploidie) verwechseln.
-- Biologischer Artbegriff versagt bei asexuellen Organismen (Bakterien) und Fossilien.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Biologischer Artbegriff** (Ernst Mayr): Populationen, die sich tatsächlich oder potenziell untereinander fortpflanzen und von anderen reproduktiv isoliert sind; Grenzen: nicht anwendbar auf asexuelle Organismen oder Fossilien
-- **Präzygotische Isolation** (vor Befruchtung): geografisch, zeitlich (Blütezeit), Verhaltens- (Balzritual), mechanisch (Genitalien passen nicht)
-- **Postzygotische Isolation** (nach Befruchtung): Hybridsterilität (Maultier = steril) oder Hybridlethalität (Hybrid stirbt)
-- **Allopatrische Artbildung**: geografische Trennung → unabhängige Mutation/Selektion/Drift → reproduktive Isolation (häufigster Mechanismus; Beispiel: Darwin-Finken)
-- **Sympatrische Artbildung**: ohne geografische Trennung; v. a. durch **Polyploidie** bei Pflanzen (reproduktive Isolation in einer Generation möglich)
-- Polyploidie beim Menschen: nicht mit dem Leben vereinbar → führt zu Frühaborten
-- **Adaptive Radiation**: rasche Artaufspaltung in verschiedene Nischen aus einer Gründerpopulation (Darwin-Finken auf Galapagos)`,
+Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.`,
       lernziele: [
         "Den biologischen Artbegriff (Mayr) definieren und seine Grenzen benennen",
         "Präzygotische von postzygotischen Isolationsmechanismen unterscheiden und Beispiele nennen",
@@ -1245,102 +727,10 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Phylogenetik -- Stammbaeume, Homologie und Analogie
-
-Der Arm eines Menschen und die Flosse eines Wals sehen ganz verschieden aus -- und haben trotzdem exakt denselben Knochen-Bauplan: Humerus, Radius, Ulna, Handknochen. Das ist **Homologie** -- gleicher evolutionaerer Ursprung, auch wenn die Funktion heute verschieden ist. Im Gegensatz dazu sehen Vogelfluegel und Insektenfluegel aehnlich aus, sind aber grundverschieden gebaut und entstanden unabhaengig voneinander -- das ist **Analogie**. Den Unterschied zu verstehen ist der Schluessel dazu, Verwandtschaftsbeziehungen korrekt zu lesen.
-
-**In diesem Kapitel lernst du:**
-- was Homologie und Analogie sind und wie man sie sicher unterscheidet
-- wie man phylogenetische Stammbaeume (Kladogramme) liest und welche Information in den Verzweigungspunkten steckt
-- was ein Clade ist und warum "Reptilien ohne Voegel" eine problematische Gruppe ist
-- was die molekulare Uhr misst und wie sie zur Datierung von Arttrennung eingesetzt wird
-
----
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-## Homologie vs. Analogie -- der Ursprung entscheidet
-
-Der Schluesselbegriff ist **Ursprung**. Nicht Aussehen, nicht Funktion -- sondern woher eine Struktur evolutionaer kommt.
-
-**Homologie** = gleicher evolutionaerer Ursprung (gemeinsamer Vorfahre), unabhaengig von der heutigen Funktion. Menschenarm, Walflosse und Vogelfluegel -- alle drei haben Humerus, Radius, Ulna und Handknochen. Bauplan gleich, Funktion verschieden (greifen, schwimmen, fliegen). Sie entstanden durch **divergente Evolution** aus einem gemeinsamen Vorfahren.
-
-**Analogie** = verschiedener evolutionaerer Ursprung, aber gleiche Funktion durch **konvergente Evolution**. Vogelfluegel (modifizierter Knochenarm mit Federn) und Insektenfluegel (Ausstuelping des Exoskeletts) -- beide zum Fliegen, aber grundverschieden gebaut und unabhaengig entstanden. Ein noch eindrucksvolleres Beispiel: Das Linsenauge von Tintenfischen und Wirbeltieren -- beide entwickelten unabhaengig eine Linse mit Netzhaut.
-
-> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (divergente Evolution). Analogie = verschiedener Ursprung, gleiche Funktion (konvergente Evolution).
-
-| Merkmal | Homologie | Analogie |
-| --- | --- | --- |
-| Ursprung | Gemeinsamer Vorfahre | Unabhaengig entstanden |
-| Bauplan | Aehnlich (Grundstruktur) | Verschieden |
-| Funktion | Oft verschieden | Gleich |
-| Evolution | Divergent | Konvergent |
-| Beispiel | Arm / Flosse / Fluegel (Wirbeltiere) | Vogelfluegel / Insektenfluegel |
-
----
-
-{{DIAGRAM:dna-helix}}
-
-## Stammbaeume lesen -- Kladistik
-
-Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschliesslich nach **Synapomorphien** -- das sind gemeinsame, **abgeleitete** Merkmale, die nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)** bedeutet das:
-
-- **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
-- **Aeste** = Evolutionslinien der abstammenden Gruppen
-- **Astspitzen** = heute lebende Arten
-- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
-
-Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre plus **ALLE** seine Nachkommen. Nur solche Gruppen sind in der Kladistik akzeptiert. Eine **paraphyletische** Gruppe schliesst den gemeinsamen Vorfahren ein, aber nicht alle Nachkommen -- Beispiel: "Reptilien" ohne Voegel ist paraphyletisch, weil Voegel evolutionaere Nachkommen der Dinosaurier sind und zum Reptilien-Clade gehoeren. Eine **polyphyletische** Gruppe vereint Organismen ohne gemeinsamen Vorfahren -- entstanden durch konvergente Evolution (Analogie).
-
-> **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen. Paraphyletisch = nicht alle Nachkommen eingeschlossen.
-
----
-
-## Molekulare Uhr -- Evolution zeitlich datieren
-
-Neutrale Mutationen akkumulieren in bestimmten Genen mit nahezu konstanter Rate -- wie eine biologische Uhr. Je mehr Sequenzunterschiede zwei Arten zeigen, desto laenger liegt ihr gemeinsamer Vorfahre zurueck. Durch **Kalibrierung mit Fossilien** (datierte Funde) laesst sich aus Sequenzunterschieden ein absolutes Datum berechnen.
-
-Beispiel: Mensch und Schimpanse zeigen im Cytochrom-c-Gen sehr geringe Unterschiede -- molekulare Uhr und Fossilien ergeben eine Divergenz vor ca. 6--7 Millionen Jahren. Einschraenkung: Mutationsraten sind nicht immer exakt konstant (Generation-Time-Effect, unterschiedlicher Selektionsdruck).
-
-In der Infektionsmedizin ist die molekulare Phylogenie essenziell: Phylogenetische Analysen von Virussequenzen (z.B. SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien und zeigen, ob Viren einmalig oder mehrfach in Menschen eingetreten sind.
-
-> **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren gleichmaessig → Sequenzunterschiede proportional zur Zeit seit Divergenz. Kalibrierung mit Fossilien noetig.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Homologie vs. Analogie: gleicher Ursprung vs. konvergente Evolution -- Beispiele nennen
-- Was ist ein Clade? (Gemeinsamer Vorfahre + ALLE Nachkommen = monophyletisch)
-- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzen)
-
-**Typische Fallen:**
-- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (gleiche Funktion, verschiedener Ursprung) verwechseln
-- Monophyletisch (alle Nachkommen) vs. paraphyletisch (nicht alle) vs. polyphyletisch (kein gemeinsamer Vorfahre)
-- Synapomorphie (abgeleitetes Merkmal, fuer Kladistik relevant) vs. Symplesiomorphie (primitives Merkmal, nicht informativ)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Homologie**: gleicher evolutionaerer Ursprung, ggf. verschiedene Funktion (Menschenarm, Walflosse, Vogelfluegel = homologe Vorderextremitaeten)
-- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Vogelfluegel vs. Insektenfluegel)
-- Im **Stammbaum**: Knoten = gemeinsame Vorfahren, Aeste = Evolutionslinien, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
-- **Kladistik**: Klassifikation nach Synapomorphien; Clade = gemeinsamer Vorfahre + alle Nachkommen (monophyletisch)
-- **Paraphyletisch**: gemeinsamer Vorfahre, aber nicht alle Nachkommen eingeschlossen (z.B. Reptilien ohne Voegel)
-- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmaessig → Kalibrierung mit Fossilien → Datierung von Arttrennung`,
-      contentExtended: `## Stammbaeume, Homologie und Analogie
+      content: `## Stammbaeume, Homologie und Analogie
 
 Der Arm eines Menschen, die Flosse eines Wals und der Fluegel einer Fledermaus sehen voellig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelfluegel und Insektenfluegel verblüffend aehnlich aus, obwohl sie unabhaengig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schluessel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbaeume richtig zu lesen.
 
-**In diesem Kapitel lernst du:**
-- warum gleicher Bauplan noch lange nicht gleiche Funktion bedeutet und umgekehrt
-- wie man Homologie von Analogie unterscheidet und warum das fuer Stammbaeume entscheidend ist
-- wie man phylogenetische Stammbaeume liest und welche Informationen in den Verzweigungspunkten stecken
-- wie die molekulare Uhr evolutionaere Zeitraeume datieren kann
-
----
 
 ## Homologie vs. Analogie -- Ein kritischer Unterschied
 
@@ -1387,33 +777,7 @@ Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfa
 
 ## Klinischer Bezug
 
-Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution.)
-- Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen.)
-- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen.)
-
-**Typische Fallen:**
-- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion) verwechseln.
-- Monophyletisch (Clade: alle Nachkommen eingeschlossen) vs. paraphyletisch (nicht alle Nachkommen) verwechseln.
-- Synapomorphie (abgeleitetes Merkmal, relevant fuer Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ fuer Verwandtschaft).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Homologie**: gleicher evolutionaerer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelfluegel = homologe Vorderextremitaeten)
-- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelfluegel vs. Insektenfluegel)
-- Im **Stammbaum**: Aeste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
-- **Cladistik**: Klassifikation ausschliesslich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
-- **Monophyletische** Gruppe = gemeinsamer Vorfahre + ALLE Nachkommen (korrekte Klassifikation); paraphyletisch = ohne manche Nachkommen
-- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmaessig → Kalibrierung mit Fossilien → Datierung von Artseparationen
-- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermoeglichen die Verfolgung von Resistenzgen-Ausbreitung`,
+Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.`,
       lernziele: [
         "Homologe von analogen Strukturen anhand von Beispielen unterscheiden",
         "Phylogenetische Stammbäume lesen und Verwandtschaftsbeziehungen ableiten",
@@ -1547,102 +911,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
         "Hominisation",
         "Aufrechter Gang",
       ],
-      content: `## Entwicklung des Menschen -- Hominiden
-
-“Der Mensch stammt vom Affen ab” -- stimmt das? Nein, nicht ganz. Menschen und Schimpansen teilen einen gemeinsamen Vorfahren, der vor etwa 6--7 Millionen Jahren lebte. Keiner stammt vom anderen ab -- wir sind evolutionaere Cousins, nicht Vorfahren und Nachkommen. Noch faszinierender: Unsere Vorfahren liefen schon auf zwei Beinen, als ihr Gehirn noch genauso klein war wie das eines Schimpansen. Das Fossil “Lucy” beweist es. Die Geschichte des Menschen steckt voller solcher Ueberraschungen.
-
-**In diesem Kapitel lernst du:**
-- warum der aufrechte Gang lange vor der Gehirnvergroesserung evolvierte
-- welche Homininen in welcher Reihenfolge auftraten und was sie voneinander unterschied
-- was die Out-of-Africa-Theorie besagt und welche Belege sie stuetzen
-- warum wir 1--4 % Neandertaler-DNA in uns tragen -- und was das bedeutet
-
----
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-{{DIAGRAM:dna-helix}}
-
-## Bipedie vor Gehirnvergroesserung -- eine wichtige Erkenntnis
-
-Lange glaubte man, dass aufrechter Gang und groesseres Gehirn Hand in Hand gingen -- dass der Mensch zuerst klug wurde und dann aufrecht lief. Die Fossilien zeigen: Es war umgekehrt. **Australopithecus afarensis** (bekannt als “Lucy”, gefunden in Aethiopien, ca. 3,2 Millionen Jahre alt) lief bereits auf zwei Beinen -- hatte aber ein Hirnvolumen von nur ~450 ccm, etwa so gross wie das eines heutigen Schimpansen. Die Gehirnvergroesserung folgte erst viel spaeter, als die Gattung Homo entstand.
-
-Warum war aufrechter Gang so vorteilhaft? Mehrere Hypothesen werden diskutiert: freie Haende fuer Werkzeuge, bessere Kuehlung in der heissen Savanne (aufrechter Gang reduziert Sonneneinstrahlung), effizientere Fortbewegung ueber weite Strecken. Der aufrechte Gang brachte aber auch Nachteile: Rueckenschmerzen, Leistenbrueche und Komplikationen bei der Geburt (grosser Kopf, enges Becken).
-
-> **Merke:** Bipedie evolvierte VOR der Gehirnvergroesserung. Lucy (Australopithecus, ~3,2 Mya) lief aufrecht, hatte aber ein schimpansengroesses Gehirn (~450 ccm).
-
----
-
-## Die Homininen-Reihe -- vier entscheidende Schritte
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-**Australopithecus afarensis** (~3,9--2,9 Mya): Bereits vollstaendig bipede, Hirnvolumen ~450 ccm. Kein nachgewiesener Werkzeuggebrauch. “Lucy” ist das bekannteste Fossil.
-
-**Homo habilis** (~2,4--1,5 Mya): Erster Vertreter der Gattung Homo. Hirnvolumen ~630 ccm. Benutzte einfache Steinwerkzeuge der **Oldowan-Kultur** (einfache Schlagsteine). Name bedeutet “geschickter Mensch”.
-
-**Homo erectus** (~1,9 Mya bis vor ca. 100.000 Jahren): Erster Hominin, der Afrika verliess und weite Teile Asiens und Europas besiedelte -- Fossilien in **Java** und **China** gefunden. Hirnvolumen ~900--1.100 ccm. Nutzte **Feuer** und komplexere Werkzeuge der **Acheulean-Kultur** (symmetrische Faustkeile). Mit fast zwei Millionen Jahren Existenz einer der erfolgreichsten Homininen ueberhaupt.
-
-**Homo sapiens** (ab ~300.000 Jahren): Entstand in Afrika, migrierte vor ca. 60.000--70.000 Jahren in den Rest der Welt (**Out-of-Africa**). Hirnvolumen ~1.350 ccm. Entwickelte komplexe Sprache, Kunst und Kultur.
-
-> **Merke:** Reihenfolge: Australopithecus → H. habilis → H. erectus → H. sapiens. Hirnvolumen: ~450 → ~630 → ~1.000 → ~1.350 ccm.
-
----
-
-## Neandertaler -- eigenstaendige Art, keine Vorstufe
-
-{{DIAGRAM:nervensystem-übersicht}}
-
-Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine **eigenstaendige, hochentwickelte Art**, die sich an das kalte Europa und Westasien angepasst hatte. Neandertaler hatten sogar ein **etwas groesseres Hirnvolumen** als wir (~1.400--1.600 ccm), begrueben ihre Toten, trugen Schmuck (Muschelperlen, Pigmente) und pflegten Kranke.
-
-Die entscheidende Entdeckung: Genetische Analysen von **Svante Paeaebo** (Max-Planck-Institut; **Nobelpreis fuer Medizin 2022**) zeigen, dass Menschen ausserhalb Afrikas **1--4 % Neandertaler-DNA** tragen. Unsere Vorfahren kreuzten sich mit Neandertalern, nachdem sie aus Afrika auswanderten -- etwa vor 50.000--60.000 Jahren im Nahen Osten oder Europa. Menschen, die heute in Afrika leben, haben kaum Neandertaler-DNA, weil ihre Vorfahren Afrika nicht verliessen. Einige Neandertaler-Allele haben klinische Konsequenzen: Ein Chromosom-3-Risikohaplotyt erhoht das Risiko fuer schwere COVID-19-Verlaeufe.
-
-> **Merke:** Neandertaler: eigenstaendige Art, kein Vorfahre. 1--4 % ihrer DNA in Nicht-Afrikanern. Svante Paeaebo: Nobelpreis 2022 fuer Palaaeogenomik.
-
----
-
-## Out-of-Africa -- und genetische Belege
-
-Die **Out-of-Africa-Theorie** besagt: Homo sapiens entstand in Afrika (vor ca. 300.000 Jahren) und migrierte vor ca. 60.000--70.000 Jahren in den Rest der Welt. Belege: Maximale genetische Diversitaet in afrikanischen Populationen -- alle anderen Populationen sind genetisch aermere Teilmengen (Gruendereffekt bei Auswanderung). Mitochondriale DNA und Y-Chromosom-Analysen zeigen afrikanische Urspruenge. 1--4 % Neandertaler-DNA in Nicht-Afrikanern beweist Hybridisierung nach der Auswanderung aus Afrika.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Reihenfolge der Homininen?
-- Was evolvierte zuerst: aufrechter Gang oder grosses Gehirn? (Bipedie zuerst!)
-- Wie viel Neandertaler-DNA tragen Nicht-Afrikaner? (1--4 %)
-
-**Typische Fallen:**
-- Neandertaler sind NICHT Vorfahren des modernen Menschen -- sie existierten parallel
-- Bipedie evolvierte VOR der Gehirnvergroesserung (Lucy-Beweis)
-- “Der Mensch stammt vom Affen ab” ist biologisch falsch -- beide teilen gemeinsame Vorfahren
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Bipedie vor Gehirnvergroesserung**: Lucy (Australopithecus, ~3,2 Mya) aufrecht, aber Hirnvolumen nur ~450 ccm
-- **H. habilis** (~2,4 Mya): erste Steinwerkzeuge (Oldowan), Hirnvolumen ~630 ccm
-- **H. erectus** (~1,9 Mya): erster Hominin ausserhalb Afrikas; Feuer; Hirnvolumen ~1.000 ccm
-- **H. sapiens**: ab ~300.000 Jahren in Afrika; Out-of-Africa vor ~60.000--70.000 Jahren; Hirnvolumen ~1.350 ccm
-- **Out-of-Africa**: maximale genetische Diversitaet in Afrika belegt afrikanischen Ursprung
-- Nicht-Afrikaner tragen **1--4 % Neandertaler-DNA** (Hybridisierung nach Migration; Paeaebo, Nobelpreis 2022)
-- Divergenz Mensch/Schimpanse: vor ca. 6--7 Millionen Jahren -- kein gemeinsamer Schimpansen-Vorfahre`,
-      contentExtended: `## Einleitung
-
-Der Satz "Der Mensch stammt vom Affen ab" klingt eingängig, ist aber falsch. Mensch und Schimpanse teilen einen gemeinsamen Vorfahren, der vor rund 6 bis 7 Millionen Jahren lebte, aber keiner stammt vom anderen ab. Überraschend: Unsere Vorfahren liefen bereits aufrecht, lange bevor ihr Gehirn deutlich wuchs. Lucy, das berühmte Fossil aus Äthiopien, war schon biped, hatte aber ein schimpansengroßes Gehirn. Die Stammesgeschichte des Menschen ist voller solcher überraschender Befunde.
-
-**In diesem Kapitel lernst du:**
-- warum der aufrechte Gang lange vor der Gehirnvergrößerung evolvierte
-- welche Homininen in welcher Reihenfolge auftraten und was sie voneinander unterschied
-- was die Out-of-Africa-Theorie besagt und warum wir Neandertaler-DNA in uns tragen
-- warum die Aussage "Der Mensch stammt vom Affen ab" biologisch falsch ist
-
----
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
+      content: `{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 {{DIAGRAM:dna-helix}}
 
@@ -1684,34 +953,7 @@ Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sonder
 
 ## Klinischer Bezug
 
-Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- In welcher Reihenfolge erschienen die Homininen? (Australopithecus, H. habilis, H. erectus, H. sapiens.)
-- Was evolvierte zuerst: aufrechter Gang oder großes Gehirn? (Bipedie vor Gehirnvergrößerung.)
-- Wie viel Neandertaler-DNA tragen moderne Nicht-Afrikaner? (1 bis 4 Prozent.)
-
-**Typische Fallen:**
-- Neandertaler sind NICHT Vorfahren des modernen Menschen, sondern eine eigenständige, parallel existierende Art.
-- Bipedie evolvierte VOR der Gehirnvergrößerung (Australopithecus: aufrecht, aber schimpansengroßes Gehirn).
-- Mensch stammt NICHT vom Affen ab; beide teilen gemeinsame Vorfahren.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Bipedie ging der Gehirnvergrößerung voraus** — erster evolutionärer Schritt der Hominisation
-- **Australopithecus afarensis** (Lucy, ~3,2 Mya): bereits bipede, Hirnvolumen ~450 ccm (schimpansenähnlich)
-- **Homo habilis** (~2,4 Mya): erster Steinwerkzeugbenutzer (Oldowan-Kultur), Hirnvolumen ~630 ccm
-- **Homo erectus** (~1,9 Mya–70.000 Jahre): erster Hominine, der Afrika verließ; Feuernutzung; Hirnvolumen ~1.000 ccm
-- **Homo sapiens**: vor ~300.000 Jahren in Afrika entstanden; anatomisch modern; Hirnvolumen ~1.350 ccm
-- **Out-of-Africa-Theorie**: gestützt durch maximale genetische Diversität afrikanischer Populationen (Bottleneck bei Migration)
-- Moderne Menschen außerhalb Afrikas tragen **1–4 % neanderthalische DNA** → Beleg für Hybridisierung nach Migration (vor ~60.000–70.000 Jahren; Paläogenomik von Svante Pääbo, Nobelpreis 2022)
-- Divergenz Mensch/Schimpanse: vor ca. 6–7 Millionen Jahren — kein gemeinsamer Schimpansen-Vorfahre!`,
+Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.`,
       lernziele: [
         "Die wichtigsten Homininen (Australopithecus afarensis, H. habilis, H. erectus, H. neanderthalensis, H. sapiens) in chronologische Reihenfolge bringen und ihre Merkmale nennen",
         "Die Out-of-Africa-Theorie und genetische Belege (Neanderthaler-DNA) beschreiben",
@@ -1844,101 +1086,8 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderth
         "Oozyte",
         "Polkörperchen",
       ],
-      content: `## Gametogenese -- Spermatogenese und Oogenese
+      content: `## Voraussetzungen: Meiose und Keimzellen
 
-Damit ein neues Leben entstehen kann, braucht es zwei besondere Zellen: eine Eizelle und ein Spermium. Beide muessen **haploid** sein -- also nur einen einfachen Chromosomensatz (n) haben. Wenn sie bei der Befruchtung verschmelzen, entsteht wieder eine diploide Zelle (2n). Den Weg von einer normalen Koerperzelle zur fertigen Keimzelle nennt man **Gametogenese**. Dabei gibt es einen verbluffenden Unterschied: Aus einer Stammzelle im Hoden entstehen **vier reife Spermien**, aber aus einer Eizell-Vorstufe nur **eine einzige Eizelle** -- weil die drei “Restprodukte” (Polkoerperchen) das gesamte Zytoplasma an die Eizelle abgeben und dann abgebaut werden.
-
-**In diesem Kapitel lernst du:**
-- warum Keimzellen haploid sein muessen und wie die Meiose das sicherstellt
-- wie aus einem Spermatogonium vier reife Spermien entstehen -- Schritt fuer Schritt
-- an welchen zwei Punkten die Oogenese pausiert -- und was sie jeweils wieder in Gang setzt
-- wie sich Spermatogenese und Oogenese zeitlich und im Ergebnis unterscheiden
-
-{{DIAGRAM:meiosis}}
-
----
-
-## Spermatogenese -- vier aus einer Stammzelle
-
-{{DIAGRAM:cell-cycle}}
-
-Die **Spermatogenese** laeuft ab der Pubertaet ununterbrochen in den **Tubuli seminiferi** (Samenkaenalchen) des Hodens ab -- wie ein Fliessband. Die einzelnen Schritte:
-
-1. **Spermatogonium** (2n, Stammzelle) teilt sich mitotisch: Ein Teil bleibt als Stammzelle erhalten, der andere wird zur **primaeren Spermatozyte** (2n).
-2. **Meiose I**: Primaere Spermatozyte (2n) → zwei **sekundaere Spermatozyten** (n).
-3. **Meiose II**: Jede sekundaere Spermatozyte (n) → zwei **Spermatiden** (n); insgesamt **4 Spermatiden** aus einer primaeren Spermatozyte.
-4. **Spermiogenese**: Spermatiden reifen zu fertigen **Spermien** aus. Jedes Spermium hat einen Kopf (mit **Akrosom** und DNA), ein Mittelstueck (mit **Mitochondrien** fuer Energie) und einen Schwanz (Flagellum) zum Schwimmen. Dauer: ~74 Tage von Stammzelle bis reifem Spermium.
-
-> **Merke:** Spermatogenese: 1 Spermatogonium → Meiose I/II → **4 reife Spermien** (n). Ort: Tubuli seminiferi, ab Pubertaet, ununterbrochen, ~74 Tage.
-
----
-
-## Oogenese -- eine aus vier, mit zwei Pausen
-
-Die **Oogenese** ist deutlich komplexer als die Spermatogenese -- sie startet bereits vor der Geburt und hat zwei einzigartige Stopppunkte.
-
-**Zeitlicher Ablauf:**
-- **Praenatal**: Aus Oogonien entstehen **primaere Oozyten** (2n), die in die Meiose I eintreten und dann in **Prophase I** pausieren -- jahrzehntelang, bis zur Pubertaet.
-- **Bei jeder Ovulation**: Eine primaere Oozyte wird “geweckt” und beendet Meiose I. Es entstehen eine **sekundaere Oozyte** (n) und ein erstes **Polkoerperchen** (n). Die sekundaere Oozyte wird in den Eileiter freigesetzt und pausiert erneut in **Metaphase II**.
-- **Bei Befruchtung**: Erst wenn ein Spermium eindringt, endet Meiose II. Es entstehen die reife **Eizelle** (n) und ein zweites Polkoerperchen. Die Polkoerperchen enthalten kaum Zytoplasma und werden abgebaut -- nur die Eizelle zaehlt.
-
-| Aspekt | Spermatogenese | Oogenese |
-|--------|----------------|----------|
-| Beginn | Ab Pubertaet | Praenatal (Oozyten bereits angelegt) |
-| Ergebnis | 4 Spermien | 1 Eizelle + 3 Polkoerperchen |
-| Meiose-Arrests | Keine | Prophase I (bis Ovulation) + Metaphase II (bis Befruchtung) |
-| Ort | Tubuli seminiferi (Hoden) | Ovar (Follikel) |
-
-> **Merke:** Oogenese: 1 Eizelle + 3 Polkoerperchen. Arrest 1: Prophase I (bis Ovulation). Arrest 2: Metaphase II (bis Befruchtung).
-
----
-
-## Bedeutung fuer die Embryonalentwicklung
-
-{{DIAGRAM:hormonsystem}}
-
-Die reife Eizelle (n) und das Spermium (n) sind die Ausgangspunkte der Befruchtung. Ihre Verschmelzung ergibt die **Zygote** (2n). Das Geschlecht wird durch das Spermium bestimmt: Es traegt entweder ein X- oder ein Y-Chromosom; die Eizelle liefert stets ein X-Chromosom.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- 4 Spermien vs. 1 Eizelle + 3 Polkoerperchen pro Ausgangszelle
-- Oogenese-Arrests: **Prophase I** (bis Ovulation) und **Metaphase II** (bis Befruchtung)
-- Ort: Spermatogenese in Tubuli seminiferi, Oogenese im Ovar (Follikel)
-
-**Typische Fallen:**
-- “Aus einer Oozyte entstehen vier Eizellen” ist falsch -- nur eine Eizelle + drei Polkoerperchen
-- Prophase-I-Arrest (bis Ovulation) nicht verwechseln mit Metaphase-II-Arrest (bis Befruchtung)
-- Eizelle wird erst bei Befruchtung endgueltig fertiggestellt
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gametogenese** = Bildung von Keimzellen ueber Meiose (Spermatogenese + Oogenese)
-- **Spermatogenese**: 1 Spermatogonium → Meiose I + II → 4 Spermien (n); Tubuli seminiferi, ab Pubertaet, ~74 Tage
-- **Oogenese**: primaere Oozyte (2n) pausiert in Prophase I → Ovulation → sekundaere Oozyte pausiert in Metaphase II → Befruchtung → 1 Eizelle (n) + 3 Polkoerperchen
-- Nur eine funktionale Eizelle pro Oogonium; Polkoerperchen degenerieren
-`,
-      contentExtended: `## Einleitung
-
-Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer Eizelle und eines Spermiums. Doch wie entstehen diese Keimzellen überhaupt, und warum sind sie so grundlegend verschieden? Die **Gametogenese** beschreibt genau diesen Weg: Aus einer normalen Körperzelle mit doppeltem Chromosomensatz wird durch Meiose eine haploide Keimzelle. Dabei zeigt sich ein überraschender Gegensatz — ein Mann produziert aus einer Stammzelle vier gleichwertige Spermien, eine Frau aus derselben Ausgangslage nur eine einzige befruchtungsfähige Eizelle. Warum das so ist und in welchen Phasen die Eizellreifung über Jahrzehnte pausiert, ist nicht nur biologisch faszinierend, sondern gehört zu den meistgeprüften Themen im MedAT.
-
-**In diesem Kapitel lernst du:**
-- warum Spermien und Eizellen haploid sein müssen und wie die Meiose das sicherstellt
-- weshalb aus einer Stammzelle vier Spermien, aber nur eine Eizelle entsteht
-- an welchen Punkten die Eizellreifung pausiert — und was sie jeweils wieder in Gang setzt
-- wie sich der zeitliche Ablauf von Spermatogenese und Oogenese grundlegend unterscheidet
-
-{{DIAGRAM:meiosis}}
-
----
-
-## Voraussetzungen: Meiose und Keimzellen
-
-**Bisher haben wir gesehen:** Gametogenese liefert die Zellen für die Befruchtung. **Damit die Chromosomenzahl nach der Verschmelzung von Ei- und Samenzelle wieder diploid (2n) ist,** müssen die Gameten **haploid (n)** sein. Dafür sorgt die **Meiose** (Reduktionsteilung): Zwei aufeinanderfolgende Teilungen ohne dazwischenliegende DNA-Replikation ergeben aus einer diploiden Ausgangszelle vier haploide Zellen — beim Mann vier Spermien, bei der Frau eine Eizelle und drei kleine **Polkörperchen** (Richtungskörperchen), die keine Rolle mehr spielen und abgebaut werden.
 
 **Begriffe beim ersten Auftreten:**
 - **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n).
@@ -1984,32 +1133,7 @@ Jedes neue Leben beginnt mit der Verschmelzung zweier winziger Zellen — einer 
 
 {{DIAGRAM:hormonsystem}}
 
-Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …” solltest du sicher beherrschen.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Wie viele Spermien/Eizellen entstehen aus einer Ausgangszelle?
-- In welcher Phase arretiert die Oozyte bis zur Ovulation?
-- Wann wird Meiose II der Oozyte abgeschlossen?
-
-**Typische Fallen:**
-- „Aus einer Oozyte entstehen vier Eizellen” -- falsch (nur eine Eizelle + drei Polkörperchen)
-- Spermatogenese (4 Gameten) vs. Oogenese (1 Gamet) -- Ergebnis nicht verwechseln
-- Meiose-Arrest Prophase I (bis Ovulation) vs. Metaphase II (bis Befruchtung)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gametogenese** = Bildung von Spermien (Spermatogenese) und Eizellen (Oogenese) über Meiose
-- **Spermatogenese:** Spermatogonium (2n) → Meiose I/II → **4 Spermien** (n); Tubuli seminiferi, ab Pubertät, ~74 Tage
-- **Oogenese:** Primäre Oozyte (2n) in **Prophase I** arretiert bis Ovulation → Meiose I → sekundäre Oozyte (n) in **Metaphase II** arretiert bis Befruchtung → Meiose II → **1 Eizelle (n) + 3 Polkörperchen**
-- Nur **eine** funktionsfähige Eizelle pro Oogonium; Polkörperchen degenerieren
-- Zeitliche Einordnung: Oogenese beginnt embryonal; Spermatogenese ab Pubertät; Eizelle wird erst bei Befruchtung fertiggestellt
-`,
+Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …” solltest du sicher beherrschen.`,
       lernziele: [
         "Gametogenese als Oberbegriff und den Unterschied zwischen Spermatogenese (4 Spermien) und Oogenese (1 Eizelle + 3 Polkörperchen) erklären.",
         "Die beiden Meiose-Arrests der Oogenese (Prophase I, Metaphase II) und deren Auflösung (Ovulation, Befruchtung) benennen.",
@@ -2111,94 +1235,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
         "Syngamie",
         "Polyspermie-Block",
       ],
-      content: `## Befruchtung -- wie Spermium und Eizelle verschmelzen
-
-Von den Hunderten Millionen Spermien, die beim Geschlechtsverkehr freigesetzt werden, erreichen nur wenige Hundert die Eizelle im Eileiter -- und genau eines davon darf eindringen. Die Befruchtung ist kein passiver Vorgang, sondern eine praezise koordinierte Abfolge: Zuerst muss das Spermium im weiblichen Koerper reifen (**Kapazitation**), dann die Eizellhuelle enzymatisch durchdringen (**Akrosomreaktion**), und die Eizelle muss sofort alle weiteren Spermien abwehren (**Kortikalreaktion**). Erst danach wird die Eizelle fertig geteilt und die Vorkerne verschmelzen zur Zygote.
-
-{{DIAGRAM:meiosis}}
-
-**In diesem Kapitel lernst du:**
-- wo die Befruchtung stattfindet und warum das der Eileiter und nicht die Gebaermutter ist
-- was Kapazitation ist und warum sie Voraussetzung fuer die Befruchtung ist
-- wie Akrosomreaktion und Kortikalreaktion zusammenarbeiten -- und wie die Eizelle sich schuetzt
-- was bei Syngamie passiert und was eine Zygote ist
-
----
-
-## Wo findet die Befruchtung statt?
-
-Die Befruchtung findet in der **Ampulle des Eileiters** (Tuba uterina) statt -- dem aeuesseren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam Richtung Gebaermutter. Die Spermien schwimmen von der Scheide durch die Gebaermutter in den Eileiter. Das Zusammentreffen erfolgt in der Ampulle.
-
-Wichtig: Wenn sich die Eizelle nicht in der Gebaermutter, sondern im Eileiter einnistet, entsteht eine **Eileiterschwangerschaft** -- das ist lebensbedrohlich (Ruptur, innere Blutung).
-
----
-
-## Kapazitation -- die Reifung des Spermiums
-
-{{DIAGRAM:menstrual-cycle}}
-
-Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** (gereift) sein. **Kapazitation** ist eine biochemische Reifung im weiblichen Genitaltrakt, die etwa **7 Stunden** dauert. Dabei wird u.a. Cholesterin aus der Spermienmembran entfernt, was die Membranfluiditaet erhoeht. Das Spermium wird dadurch hyperaktiv -- schneller und kraeftiger. Ohne Kapazitation kann das Spermium die Zona pellucida nicht durchdringen und die Eizelle nicht befruchten.
-
-> **Merke:** Kapazitation = biochemische Reifung des Spermiums im weiblichen Genitaltrakt (~7 h). Voraussetzung fuer die Akrosomreaktion und Befruchtung.
-
----
-
-## Die fuenf Schritte der Befruchtung
-
-{{DIAGRAM:cell-membrane}}
-
-1. **Bindung an die Zona pellucida**: Das kapazitierte Spermium bindet an die **Zona pellucida** -- eine glykoproteinreiche Huelleschicht um die Eizelle. Das Protein **ZP3** loest dabei den naechsten Schritt aus.
-
-2. **Akrosomreaktion (Spermium)**: Das **Akrosom** (ein Organell im Kopf des Spermiums) entleert seine Enzyme: **Akrosin** und **Hyaluronidase** werden freigesetzt und loesen die Zona pellucida auf, damit das Spermium bis zur Eizellmembran vordringen kann.
-
-3. **Kortikalreaktion (Eizelle)**: Sobald die Membranen von Spermium und Eizelle fusionieren, steigt in der Eizelle der Calcium-Spiegel an. Daraufhin schuettet die Eizelle den Inhalt ihrer **kortikalen Granula** (Vesikel unter der Membran) aus. Die Zona pellucida veraendert sich chemisch und wird fuer weitere Spermien undurchlaessig -- das ist der **Polyspermie-Block**. Ohne diesen Block wuerden mehrere Spermien eindringen, was zu Triploidie und Tod des Embryos fuehrt.
-
-4. **Abschluss der Meiose II**: Die Eizelle hatte bis zur Befruchtung in Metaphase II pausiert. Jetzt wird Meiose II abgeschlossen: Es entstehen die reife Eizelle (n) und ein zweites Polkoerperchen.
-
-5. **Syngamie**: Die **Vorkerne** (Pronuclei) von Eizelle und Spermium verschmelzen. Die entstandene Zelle heisst **Zygote** (2n, diploid) -- sie ist die erste Zelle des neuen Individuums. Das Geschlecht wird durch das Spermium festgelegt: X-Spermium → Maedchen (XX), Y-Spermium → Junge (XY).
-
-> **Merke:** Akrosomreaktion = Spermium setzt Enzyme frei (Zona aufloesen). Kortikalreaktion = Eizelle blockiert weitere Spermien (Polyspermie-Block). Syngamie = Vorkerne verschmelzen zur Zygote (2n).
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- Ort der Befruchtung: Ampulle des Eileiters (nicht Gebaermutter)
-- Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
-- Kapazitation (Reifung Spermium) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt) -- zwei verschiedene Schritte!
-- Meiose II der Eizelle wird erst bei Befruchtung abgeschlossen
-
-**Typische Fallen:**
-- Kapazitation (langfristige Reifung, ~7h) NICHT mit Akrosomreaktion (sofort bei Zona-Kontakt) verwechseln
-- Eileiterschwangerschaft = Implantation im Eileiter statt Gebaermutter
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Befruchtung in der **Ampulle des Eileiters** (nicht im Uterus)
-- **Kapazitation** (~7 h): Reifung des Spermiums → Voraussetzung fuer Akrosomreaktion
-- **Akrosomreaktion** (Spermium): ZP3-Bindung → Akrosin/Hyaluronidase → Zona pellucida wird aufgeloest
-- **Kortikalreaktion** (Eizelle): Ca2+ → kortikale Granula → **Polyspermie-Block** (Zona undurchlaessig)
-- Eizelle beendet **Meiose II** bei Befruchtung → reife Eizelle (n) + zweites Polkoerperchen
-- **Syngamie**: Vorkerne verschmelzen → **Zygote** (2n); Geschlecht durch Spermium (X oder Y)
-`,
-      contentExtended: `## Einleitung
-
-Von den Hunderten Millionen Spermien, die beim Geschlechtsverkehr freigesetzt werden, erreichen nur wenige Hundert die Eizelle im Eileiter -- und genau eines davon darf eindringen. Die Befruchtung ist kein passiver Vorgang, sondern ein präzise choreografierter Prozess: Das Spermium muss erst reifen (Kapazitation), dann die Eizellhülle enzymatisch durchdringen (Akrosomreaktion), und die Eizelle muss sofort alle weiteren Spermien abwehren (Kortikalreaktion). Dass die Eizelle dabei ihre eigene Meiose erst abschließt, macht den Vorgang noch komplexer.
-
-**In diesem Kapitel lernst du:**
-- warum die Befruchtung im Eileiter stattfindet und nicht in der Gebärmutter
-- wie Spermium und Eizelle in einer koordinierten Abfolge von Reaktionen verschmelzen
-- warum nur ein einziges Spermium eindringen darf und wie die Eizelle sich schützt
-- wie aus der Verschmelzung der Vorkerne die erste Zelle des neuen Individuums entsteht
-
-{{DIAGRAM:meiosis}}
-
----
-
-## Ort und zeitliche Einordnung
+      content: `## Ort und zeitliche Einordnung
 
 **Um die Befruchtung einzuordnen,** betrachten wir zuerst **Ort** und **Zeitpunkt**. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität) und ist lebensbedrohlich.
 
@@ -2235,33 +1272,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 ## Typische Fehler/Fehlentwicklungen (BMS-Level)
 
 - **Polyspermie:** Wenn die Kortikalreaktion ausbleibt, können mehrere Spermien eindringen → Triploidie (3n) → Embryo meist nicht lebensfähig.
-- **Eileiterschwangerschaft:** Implantation in der Tube statt im Uterus → Risiko für Tubarruptur und innere Blutung; Diagnostik u. a. über hCG-Verlauf.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Wo findet die Befruchtung beim Menschen statt?
-- Welche Reaktion verhindert Polyspermie?
-- Wann wird die Meiose II der Eizelle abgeschlossen?
-
-**Typische Fallen:**
-- Akrosomreaktion (Spermium, Enzymfreisetzung) vs. Kortikalreaktion (Eizelle, Polyspermie-Block)
-- Kapazitation (Reifung Spermium) vs. Akrosomreaktion (Enzymfreisetzung bei Zona-Kontakt)
-- Befruchtung (Ampulle) vs. Implantation (Uterus, Tag 6--7)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Befruchtung in der **Ampulle des Eileiters** (nicht im Uterus)
-- **Kapazitation** (~7 h): Reifung des Spermiums → Voraussetzung für Akrosomreaktion
-- **Akrosomreaktion** (Spermium): ZP3-Bindung → Akrosin/Hyaluronidase → Durchdringung der Zona pellucida
-- **Kortikalreaktion** (Eizelle): Ca²⁺ → kortikale Granula → Zona-Reaktion = **Polyspermie-Block**
-- Eizelle beendet **Meiose II** bei Befruchtung → reife Eizelle (n) + 2. Polkörperchen
-- **Syngamie**: Vorkerne verschmelzen → **Zygote** (2n); Geschlecht durch Spermium (X oder Y)
-`,
+- **Eileiterschwangerschaft:** Implantation in der Tube statt im Uterus → Risiko für Tubarruptur und innere Blutung; Diagnostik u. a. über hCG-Verlauf.`,
       lernziele: [
         "Ort der Befruchtung (Ampulle des Eileiters) und die Rolle von Kapazitation, Akrosomreaktion und Kortikalreaktion erklären.",
         "Syngamie und Zygote definieren und den Polyspermie-Block begründen.",
@@ -2343,94 +1354,10 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
         "hCG",
         "Blastozoel",
       ],
-      content: `## Furchung, Morula, Blastozyste und Implantation
-
-Aus der Zygote soll ein ganzer Mensch werden. In den ersten Tagen nach der Befruchtung passiert etwas Paradoxes: Die Zelle teilt sich immer wieder, aber der Keim wird dabei **nicht groesser** -- die Tochterzellen werden mit jeder Runde kleiner. Diese Teilungen ohne Wachstum heissen **Furchung**. Aus dem kompakten Zellhaufen (Morula) wird eine hohle Kugel mit zwei voellig verschiedenen Zelltypen (Blastozyste) -- einer wird zur Plazenta, der andere zum Embryo. Etwa am sechsten Tag bohrt sich die Blastozyste in die Gebaermutterschleimhaut ein -- die Implantation, die Grundlage jeder Schwangerschaft.
+      content: `## Furchung — Teilungen ohne Wachstum
 
 {{DIAGRAM:stem-cells}}
 
-**In diesem Kapitel lernst du:**
-- warum die Zellen bei der Furchung immer kleiner werden -- und was das ueber den Keim sagt
-- was Morula und Blastozyste unterscheidet und wann jede entsteht
-- welche zwei Zelltypen in der Blastozyste welche Aufgabe uebernehmen
-- wie die Einnistung ablaeuft und warum hCG die Schwangerschaft erhaelt
-
----
-
-## Furchung -- Teilung ohne Wachstum
-
-Nach der Befruchtung teilt sich die Zygote schnell: 2, 4, 8, 16 Zellen. Der Keim waechst dabei aber nicht -- die Tochterzellen (**Blastomeren**) werden mit jeder Teilung kleiner. Das ist ein wichtiger Unterschied zu normalem Zellwachstum und ein haeufiger Pruefungspunkt: **Furchung ist nicht gleich Wachstum**. Den kompakten, soliden Zellhaufen aus ca. 16--32 Zellen nennt man **Morula** (Tag 3--4; lateinisch fuer “Maulbeere”). Die Morula wandert waehrend dieser Zeit von der Ampulle Richtung Gebaermutter.
-
-> **Merke:** Furchung = wiederholte Teilungen der Zygote OHNE Wachstum. Morula = kompakter Zellhaufen, Tag 3--4.
-
----
-
-## Blastozyste -- die hohle Kugel
-
-{{DIAGRAM:animal-cell}}
-
-In der Morula bildet sich ein fluessigkeitsgefuellter Hohlraum -- das **Blastozoel**. Sobald dieser Hohlraum erkennbar ist und sich zwei verschiedene Zelltypen gebildet haben, spricht man von einer **Blastozyste** (Tag 5--6). Sie hat drei wichtige Strukturen:
-
-- **Trophoblast** (aeuessere Zellschicht): Umhuellt die Blastozyste. Er wird spaeter zur **Plazenta** und zu den Eihuellen. Er produziert **hCG** (humanes Choriongonadotropin). Der Synzytiotrophoblast dringt bei der Implantation in die Schleimhaut ein.
-- **Embryoblast** (innere Zellmasse, ICM): Liegt innen. Aus ihm entwickelt sich der **Embryo**. Er differenziert sich ab Tag 8 in **Epiblast** (Quelle aller drei Keimblaetter) und **Hypoblast** (u.a. Dottersack).
-- **Blastozoel**: Der Hohlraum, charakteristisch fuer die Blastozyste.
-
-> **Merke:** Trophoblast (aussen) = Plazenta + hCG. Embryoblast (innen) = Embryo.
-
----
-
-## Implantation -- die Einnistung
-
-Am **Tag 6--7** nistet sich die Blastozyste in die **Gebaermutterschleimhaut** (Endometrium) ein. Der **Synzytiotrophoblast** dringt in das Endometrium ein und verankert den Keim. Die Implantation beginnt die Schwangerschaft in anatomischem Sinne.
-
-Gleichzeitig beginnt der Trophoblast mit der Produktion von **hCG** (humanes Choriongonadotropin). hCG bindet an LH-Rezeptoren des **Gelbkoerpers (Corpus luteum)** im Ovar und haelt ihn am Leben. Das Corpus luteum produziert weiter **Progesteron**, das die Gebaermutterschleimhaut im sekretorischen Zustand haelt und die **Menstruation verhindert**. Ohne hCG wuerde das Corpus luteum gegen Ende des Zyklus absterben und die Schleimhaut wuerde abgestossen -- die Schwangerschaft ginge verloren.
-
-hCG ist im Urin nachweisbar -- das ist die Grundlage des **Schwangerschaftstests**. Ab der 8.--12. Woche uebernimmt die Plazenta selbst die Progesteronproduktion und hCG sinkt ab.
-
-> **Merke:** Implantation Tag 6--7. hCG (vom Trophoblast) erhaelt Corpus luteum → Progesteron verhindert Menstruation. Schwangerschaftstest = hCG im Urin.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- Furchung = Teilungen OHNE Wachstum (Blastomeren werden kleiner -- Pruefungsfalle!)
-- Morula (kompakt, Tag 3--4) vs. Blastozyste (Hohlraum, Tag 5--6)
-- Trophoblast (Plazenta, hCG) vs. Embryoblast (Embryo)
-- Implantation: Tag 6--7; hCG erhaelt Corpus luteum → Progesteron → kein Menstruation
-
-**Typische Fallen:**
-- “Bei der Furchung wird der Keim groesser” -- FALSCH (Blastomeren werden kleiner)
-- Trophoblast (aussen = Plazenta) vs. Embryoblast (innen = Embryo) verwechseln
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Furchung**: Teilungen OHNE Wachstum; Blastomeren werden kleiner
-- **Morula** (Tag 3--4): kompakter Zellhaufen aus ~16--32 Zellen
-- **Blastozyste** (Tag 5--6): **Trophoblast** (aussen → Plazenta, hCG) + **Embryoblast** (innen → Embryo) + **Blastozoel** (Hohlraum)
-- **Implantation** (Tag 6--7): Synzytiotrophoblast dringt ins Endometrium ein
-- **hCG** erhaelt Corpus luteum → Progesteron → keine Menstruation → Schwangerschaft bleibt erhalten
-- Schwangerschaftstest weist hCG im Urin nach
-`,
-      contentExtended: `## Einleitung
-
-Stell dir vor: Aus einer einzigen Zelle -- der Zygote -- soll ein ganzer Mensch werden. Die ersten Tage nach der Befruchtung sind dabei paradox: Die Zygote teilt sich immer wieder, doch der Keim wird dabei nicht größer. Diese raschen Teilungen ohne Wachstum heißen Furchung, und sie formen aus einer Zelle zunächst einen kompakten Zellhaufen (Morula), dann eine hohle Kugel mit zwei völlig verschiedenen Zelltypen (Blastozyste). Der eine wird zur Plazenta, der andere zum Embryo. Etwa am sechsten Tag nach der Befruchtung bohrt sich diese Blastozyste in die Gebärmutterschleimhaut ein -- die Implantation, ohne die keine Schwangerschaft bestehen kann.
-
-**In diesem Kapitel lernst du:**
-- warum die Zygote sich teilt, ohne dabei zu wachsen, und was das für die Zellgröße bedeutet
-- worin sich Morula und Blastozyste unterscheiden und warum der Hohlraum entscheidend ist
-- welche Zellen den Embryo und welche die Plazenta bilden werden
-- wie die Einnistung in die Gebärmutterschleimhaut abläuft und warum hCG die Schwangerschaft erhält
-
----
-
-## Furchung — Teilungen ohne Wachstum
-
-{{DIAGRAM:stem-cells}}
-
-**Bisher haben wir gesehen:** Die Zygote ist die erste Zelle des neuen Individuums. **Damit sich ein vielzelliger Keim bildet,** teilt sie sich wiederholt. Diese Teilungen heißen **Furchung**: Sie finden in rascher Folge statt, **ohne** dass die Zellen zwischen den Teilungen nennenswert wachsen. Die Tochterzellen (**Blastomeren**) werden also mit jeder Runde kleiner. Es gibt **kein** Gesamtwachstum des Keims in dieser Phase — Furchung ist **nicht** mit Wachstum gleichzusetzen (typische Prüfungsfalle).
 
 Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere"). Die Morula wandert weiter im Eileiter in Richtung Uterus.
 
@@ -2465,32 +1392,7 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 
 ## Typische Fehler/Fehlentwicklungen (BMS-Level)
 
-- **Eileiterschwangerschaft (Extrauteringravidität):** Die Blastozyste nistet sich außerhalb des Uterus ein (meist in der Tube). Das kann zur Eileiterruptur und lebensbedrohlicher Blutung führen. Der hCG-Verlauf und die Sonografie dienen der Diagnostik.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Morula vs. Blastozyste -- was ist der Unterschied?
-- Welche Struktur der Blastozyste wird zur Plazenta?
-- Wann findet die Implantation statt?
-
-**Typische Fallen:**
-- Morula (kompakt, Tag 3--4) vs. Blastozyste (Hohlraum, Tag 5--6)
-- Trophoblast (Plazenta, hCG) vs. Embryoblast (Embryo)
-- Furchung = Teilungen ohne Wachstum (Zellen werden kleiner, kein Gesamtwachstum)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Furchung**: Teilungen der Zygote/Blastomeren **ohne** Wachstum → Morula (Tag 3–4) → Blastozyste (Tag 5–6)
-- **Blastozyste**: **Trophoblast** (außen) → Plazenta, hCG; **Embryoblast** (innen) → Embryo; **Blastozoel** = Hohlraum
-- **Implantation** (Tag 6–7): Synzytiotrophoblast dringt ins Endometrium ein; Trophoblast produziert **hCG**
-- **hCG** erhält Corpus luteum → Progesteron ↑ → Endometrium bleibt erhalten → keine Menstruation
-- Schwangerschaftstest weist hCG im Urin nach
-`,
+- **Eileiterschwangerschaft (Extrauteringravidität):** Die Blastozyste nistet sich außerhalb des Uterus ein (meist in der Tube). Das kann zur Eileiterruptur und lebensbedrohlicher Blutung führen. Der hCG-Verlauf und die Sonografie dienen der Diagnostik.`,
       lernziele: [
         "Furchung (ohne Wachstum), Morula und Blastozyste mit Trophoblast/Embryoblast/Blastozoel beschreiben.",
         "Implantation (Tag 6–7) und die Rolle von hCG für die Corpus-luteum-Erhaltung erläutern.",
@@ -2569,112 +1471,8 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
         "Notochord",
         "Epiblast",
       ],
-      content: `## Gastrulation und die drei Keimblaetter
+      content: `## Voraussetzungen: Zweischichtige Keimscheibe
 
-In der dritten Schwangerschaftswoche passiert ein entscheidender Schritt: Aus einer flachen Zellscheibe mit zwei Schichten werden drei Schichten -- die **Keimblaetter** (Ektoderm, Mesoderm, Endoderm). Dieser Vorgang heisst **Gastrulation**. Die drei Keimblaetter sind der Bauplan fuer alle Organe: Aus dem Ektoderm werden Haut und Nervensystem, aus dem Mesoderm Muskeln und Knochen, aus dem Endoderm Darm und Lunge. Das Erstaunliche: Alle drei gehen auf dieselbe Ausgangszellschicht zurueck -- den **Epiblast**.
-
-{{DIAGRAM:stem-cells}}
-
-**In diesem Kapitel lernst du:**
-- wie der Primitivstreifen als "Einwanderungstor" der Gastrulation funktioniert
-- warum alle drei Keimblaetter aus dem Epiblast stammen
-- welche Organe und Gewebe aus welchem Keimblatt entstehen -- inklusive der haeufigen Verwechslungen
-- was das Notochord tut und was Somiten sind
-
----
-
-## Ausgangspunkt: Zweischichtige Keimscheibe
-
-Der Embryoblast hat sich in **Epiblast** (obere Schicht) und **Hypoblast** (untere Schicht) geteilt. Daraus muessen drei Schichten werden. Der Prozess, der das erreicht, ist die Gastrulation.
-
----
-
-## So laeuft die Gastrulation ab
-
-Die **Gastrulation** findet in **Woche 3** (Tag 15--21) statt:
-
-1. Am **kaudalen** (schwanzwaertigen) Ende der Keimscheibe bildet sich der **Primitivstreifen** -- eine Verdickung von Epiblastzellen in der Mittellinie. Er legt die Koerperachsen fest (kranial-kaudal, dorsal-ventral).
-2. Epiblastzellen wandern zum Primitivstreifen und dringen durch die Primitivrinne nach innen ein -- eine Invagination. Diese eingewanderten Zellen bilden das **Mesoderm** (mittlere Schicht).
-3. Ein Teil der eingewanderten Zellen verdraengt den Hypoblast und bildet das **definitive Endoderm** (innere Schicht).
-4. Die auf der Oberfläche verbleibenden Epiblastzellen werden zum **Ektoderm** (aeussere Schicht).
-
-**Wichtig:** Alle drei Keimblaetter stammen vom **Epiblast** ab -- auch das Endoderm, das den Hypoblast verdraengt.
-
-Aus dem **Primitivknoten** (kraniales Ende des Primitivstreifens) entsteht das **Notochord** (Chorda dorsalis): eine staebehenfoermige Struktur in der Mittellinie des Mesoderms. Das Notochord sendet Signale an das darueber liegende Ektoderm und loest die **Neurulation** (Bildung des Nervensystems) aus. Spaeter wird das Notochord zu den **Nuclei pulposi** der Bandscheiben.
-
-> **Merke:** Gastrulation = alle drei Keimblaetter entstehen aus dem Epiblast durch den Primitivstreifen. Notochord induziert Neurulation.
-
----
-
-## Die drei Keimblaetter und ihre Derivate
-
-Aus welchem Keimblatt welches Organ entsteht, ist ein klassischer Pruefungspunkt:
-
-| Keimblatt | Wichtige Derivate |
-|-----------|------------------|
-| **Ektoderm** | **Epidermis** (Oberhaut), Gehirn, Rueckenmark (via Neuralrohr), Sinnesorgane, Zahnschmelz, Neuralleiste |
-| **Mesoderm** | Skelett, **Muskulatur**, **Herz**, **Nieren**, Gonaden, Blut, Gefaesse, dermales Bindegewebe (Somiten) |
-| **Endoderm** | **Darmepithel**, **Lunge** (Epithel), **Leber**, **Bauchspeicheldruese**, Schilddruese, Blase (Epithel) |
-
-Klassische Verwechslung: Die **Epidermis** (Oberhaut) kommt vom **Ektoderm**, NICHT vom Endoderm! Das dermale Bindegewebe (Lederhaut) kommt vom Mesoderm (Dermatom der Somiten).
-
-> **Merke:** Ektoderm = Haut (Epidermis) + Nervensystem. Mesoderm = Muskel + Knochen + Herz + Niere. Endoderm = Darm + Lunge + Leber + Druesen.
-
----
-
-## Somiten -- segmentierte Mesoderm-Derivate
-
-{{DIAGRAM:animal-cell}}
-
-**Somiten** sind paarige, segmentierte Mesoderm-Bloecke, die beidseits des Neuralrohrs entstehen (ca. 42--44 Paare, Woche 3--5). Jeder Somit gliedert sich in drei Bereiche:
-
-- **Sklerotom** (ventral): Liefert Zellen fuer **Wirbelkoerper**, Rippen und Teile des Schaedels
-- **Myotom** (mittig): Liefert die **Skelettmuskulatur** des Rumpfes und der Gliedmassen
-- **Dermatom** (dorsal): Liefert das **dermale Bindegewebe** der Haut -- **NICHT** die Epidermis (die kommt vom Ektoderm)
-
-> **Merke:** Somiten: Sklerotom → Knochen; Myotom → Skelettmuskel; Dermatom → dermales Bindegewebe (nicht Epidermis!).
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Aus welchem Keimblatt entstehen Gehirn und Rueckenmark? (Ektoderm via Neuralrohr)
-- Welche Organe sind Mesoderm-Derivate? (Skelett, Muskel, Herz, Nieren, Blut)
-- Was liefert das Dermatom -- und was nicht? (Bindegewebe, NICHT Epidermis)
-
-**Typische Fallen:**
-- Epidermis = Ektoderm (NICHT Endoderm)
-- Dermatom = Mesoderm-Derivat → liefert dermales Bindegewebe, NICHT Epidermis
-- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS) -- zwei verschiedene Strukturen
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gastrulation** (Woche 3): Epiblastzellen wandern durch **Primitivstreifen** → Mesoderm + Endoderm; Oberfläche bleibt Ektoderm
-- Alle drei Keimblaetter stammen vom **Epiblast**
-- **Ektoderm** → Epidermis, ZNS, PNS, Sinnesorgane, Zahnschmelz
-- **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
-- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddruese, Blase
-- **Notochord** (aus Primitivknoten) induziert Neurulation → wird zu Nuclei pulposi
-- **Somiten**: Sklerotom (Knochen), Myotom (Muskel), Dermatom (dermales Bindegewebe, nicht Epidermis)
-`,
-      contentExtended: `## Einleitung
-
-Wie wird aus einer flachen Zellscheibe ein dreidimensionaler Embryo mit Haut, Muskeln und inneren Organen? In der dritten Entwicklungswoche geschieht einer der spektakulärsten Schritte der Embryologie: Durch die Gastrulation wandern Zellen ins Innere der Keimscheibe ein und schaffen drei übereinanderliegende Zellschichten -- die Keimblätter. Aus dem Ektoderm werden später Haut und Nervensystem, aus dem Mesoderm Muskeln und Knochen, aus dem Endoderm Darm und Lunge. Das Erstaunliche: Alle drei Blätter gehen auf dieselbe Zellschicht zurück, den Epiblast.
-
-**In diesem Kapitel lernst du:**
-- wie aus einer zweischichtigen Keimscheibe durch Zellwanderung drei Keimblätter entstehen
-- welche Organe und Gewebe sich aus welchem Keimblatt entwickeln
-- warum das Notochord als Organisator des Nervensystems so bedeutend ist
-- wie Somiten den Bauplan von Wirbelsäule, Muskeln und Haut vorgeben
-
----
-
-## Voraussetzungen: Zweischichtige Keimscheibe
-
-**Bisher haben wir gesehen:** Blastozyste mit Trophoblast und Embryoblast; der Embryoblast differenziert sich in **Epiblast** (obere Schicht) und **Hypoblast** (untere Schicht). **Damit alle Organanlagen entstehen können,** muss aus diesen zwei Schichten eine **dreischichtige** Anordnung werden: die drei **Keimblätter** (Ektoderm, Mesoderm, Endoderm). Die Gastrulation ist der Schritt, in dem diese drei Blätter gebildet werden.
 
 ---
 
@@ -2724,34 +1522,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 - **Myotom** (mittig): Liefert die **Skelettmuskulatur** des Rumpfes und der Gliedmaßen.
 - **Dermatom** (dorsal): Liefert das **dermale Bindegewebe** der Haut (Unterhaut, Bindegewebe) — **nicht** die Epidermis; die Epidermis kommt vom Ektoderm.
 
-> **Merke:** Somiten: Sklerotom → Knochen; Myotom → Skelettmuskel; Dermatom → dermales Bindegewebe (nicht Epidermis!).
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Aus welchem Keimblatt entstehen Gehirn und Rückenmark?
-- Welche Organe sind Mesoderm-Derivate?
-- Was liefert das Dermatom -- und was nicht?
-
-**Typische Fallen:**
-- Ektoderm (Epidermis + Nervensystem) vs. Endoderm (Darm, Lunge, Drüsen) -- Epidermis ist nicht Endoderm
-- Dermatom (Mesoderm) liefert dermales Bindegewebe, nicht die Epidermis (Ektoderm)
-- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) -- verschiedene Prozesse
-- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gastrulation** (3. Woche): Epiblastzellen wandern durch **Primitivstreifen** ein → **Mesoderm** + **Endoderm**; Oberfläche → **Ektoderm** (alle drei aus Epiblast)
-- **Ektoderm** → Epidermis, ZNS, PNS, Sinnesorgane, Zahnschmelz
-- **Mesoderm** → Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe, Blut
-- **Endoderm** → Darmepithel, Lunge, Leber, Pankreas, Schilddrüse, Blase
-- **Notochord** (aus Primitivknoten) induziert Neurulation; Rest → Nuclei pulposi
-- **Somiten**: Sklerotom (Knochen), Myotom (Muskel), Dermatom (dermales Bindegewebe, nicht Epidermis)
-`,
+> **Merke:** Somiten: Sklerotom → Knochen; Myotom → Skelettmuskel; Dermatom → dermales Bindegewebe (nicht Epidermis!).`,
       lernziele: [
         "Den Ablauf der Gastrulation (Primitivstreifen, drei Keimblätter) und die Herkunft jedes Keimblattes aus dem Epiblast erklären.",
         "Die wichtigsten Derivate von Ektoderm, Mesoderm und Endoderm aufzählen und korrekt zuordnen.",
@@ -2872,122 +1643,12 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
         "Anenzephalie",
         "Folsäure",
       ],
-      content: `## Neurulation -- wie das Nervensystem entsteht
-
-Gehirn und Rueckenmark gehoeren zu den ersten Organen, die in der Embryonalentwicklung angelegt werden. Der Prozess, der sie formt, heisst **Neurulation**: Das **Notochord** -- eine stab-artige Struktur unter dem Ektoderm -- sendet Signale nach oben und veranlasst eine flache Zellplatte, sich zu einer Roehre zusammenzufalten. Diese Roehre, das **Neuralrohr**, ist die Anlage des gesamten Zentralnervensystems. Schliesst sich das Neuralrohr nicht vollstaendig, entstehen schwerwiegende Fehlbildungen. Eine einfache Massnahme kann das Risiko deutlich senken: Folsaeure.
-
-{{DIAGRAM:stem-cells}}
-
-{{DIAGRAM:nervensystem-übersicht}}
-
-**In diesem Kapitel lernst du:**
-- welche Rolle das Notochord bei der Neurulation spielt und warum es dafuer noetig ist
-- wie aus der Neuralplatte Schritt fuer Schritt das Neuralrohr entsteht
-- wann die Neuroporen schliessen und was passiert, wenn sie offen bleiben
-- welche ueberraschend vielfaeltigen Zelltypen aus der Neuralleiste hervorgehen
-- warum Folsaeure vor der Schwangerschaft so entscheidend ist
-
----
-
-## Voraussetzung: das Notochord
-
-{{DIAGRAM:nervensystem-übersicht}}
-
-Das **Notochord** (Chorda dorsalis) entsteht aus dem Primitivknoten waehrend der Gastrulation und ist ein Mesoderm-Derivat. Es liegt als stabfoermige Struktur in der Mittelachse des Embryos unter dem Ektoderm. Seine Aufgabe: Es sendet Signalmolekuele aus -- darunter **Sonic Hedgehog (SHH)** -- die das darueberliegende Ektoderm zur Verdickung und Faltung anregen. **Ohne Notochord findet keine normale Neurulation statt.** Spaeter wird das Notochord groesstenteils rueckgebildet; als Ueberbleibsel bleibt der **Nucleus pulposus** in den Bandscheiben der Wirbelsaeule.
-
-> **Merke:** Notochord = Mesoderm-Derivat aus Primitivknoten. Induziert die Neurulation und wird spaeter zum Nucleus pulposus.
-
----
-
-## Ablauf der Neurulation: drei Schritte
-
-{{DIAGRAM:stem-cells}}
-
-Das Ektoderm ueber dem Notochord durchlaeuft drei aufeinanderfolgende Schritte:
-
-1. **Neuralplatte**: Das Ektoderm verdickt sich zu einer bandfoermigen Zellplatte in der Mittellinie.
-2. **Neuralrinne und Neuralwuelste**: Die Raender heben sich als **Neuralwuelste** an, die Mitte senkt sich zur **Neuralrinne** ein -- wie ein Buch, das sich schliesst.
-3. **Neuralrohr**: Die Neuralwuelste verschmelzen in der Mittellinie (zuerst in der Mitte, dann nach oben und unten fortschreitend) -- es entsteht das **Neuralrohr**, Anlage von Gehirn und Rueckenmark.
-
-Die voruebergehend offenen Enden des Neuralrohrs heissen **Neuroporen**:
-- **Vorderer (anteriorer) Neuroporus** schliesst am **Tag 25**
-- **Hinterer (posteriorer) Neuroporus** schliesst am **Tag 27**
-
-Bleibt ein Neuroporus offen, entsteht ein Neuralrohrdefekt.
-
-> **Merke:** Neuralplatte → Neuralrinne → Neuralrohr. Vorderer Neuroporus Tag 25, hinterer Tag 27.
-
----
-
-## Neuralrohrdefekte und Folsaeure
-
-Wenn der **hintere Neuroporus** offen bleibt: **Spina bifida** (offener Ruecken) -- ein Defekt im kaudalen Wirbelsaeulenbereich mit unterschiedlichem Schweregrad. Wenn der **vordere Neuroporus** offen bleibt: **Anenzephalie** -- das Fehlen von Grosshirnanteilen, das nicht ueberlebensfaehig ist.
-
-**Folsaeure** (Vitamin B9) ist fuer die Zellteilung und den korrekten Verschluss des Neuralrohrs unverzichtbar. Da der Neuralrohrschluss bereits in der **3.--4. Woche** (bevor viele Frauen wissen, dass sie schwanger sind) erfolgt, muss die Einnahme **praekonautionell** beginnen:
-
-**0,4 mg Folsaeure pro Tag** vor und in der fruehen Schwangerschaft senkt das Risiko von Neuralrohrdefekten um etwa **70 %** -- eine der wirksamsten Praeventionsmassnahmen der Medizin.
-
-> **Merke:** Folsaeure 0,4 mg/Tag praekonautionell (= vor Schwangerschaftsbeginn) senkt Neuralrohrdefekt-Risiko um ~70 %.
-
----
-
-## Neuralleiste -- vielseitige Wanderzellen
-
-Waehrend das Neuralrohr entsteht, loesen sich Zellen vom Rand der Neuralplatte (an der Grenze zum normalen Ektoderm) und wandern in den Koerper aus. Diese Zellen bilden die **Neuralleiste**.
-
-Wichtig: Die Neuralleiste stammt vom **Ektoderm** -- nicht vom Mesoderm! Das ist eine haeufige Pruefungsfalle.
-
-Aus der Neuralleiste entstehen erstaunlich viele verschiedene Zelltypen:
-- **Ganglien** und **Schwann-Zellen** -- peripheres Nervensystem (sensorische und autonome Nervenfasern)
-- **Melanozyten** -- Pigmentzellen der Haut
-- **Nebennierenmark** -- chromaffine Zellen, produzieren Adrenalin und Noradrenalin
-- Teile des **Kopfmesenchyms** -- Kieferknochen, Knorpel und Bindegewebe des Gesichts
-
-> **Merke:** Neuralleiste = Ektoderm-Derivat. Liefert: Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Gesichtsschaedels.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Was induziert die Neuralplatte? (Notochord -- Mesoderm-Derivat)
-- Wann schliessen die Neuroporen? (Vorne Tag 25, hinten Tag 27)
-- Aus welcher Struktur stammen Melanozyten und Nebennierenmark? (Neuralleiste = Ektoderm)
-
-**Typische Fallen:**
-- Neuralleiste stammt vom Ektoderm, nicht vom Mesoderm
-- Notochord (induziert Neurulation, wird zu Nucleus pulposus) ≠ Neuralrohr (wird zu Gehirn + Rueckenmark)
-- Primitivstreifen (Gastrulation) ≠ Neuralrinne (Neurulation) -- zwei verschiedene Prozesse
-
----
-
-## Zusammenfassung
-
-- **Notochord** (Mesoderm) induziert die Neurulation mit Signalmolekuelen (Sonic Hedgehog)
-- **Neuralrohr** entsteht aus Ektoderm: Neuralplatte → Neuralrinne → Neuralrohr = Anlage von Gehirn und Rueckenmark
-- Vorderer Neuroporus schliesst **Tag 25**, hinterer **Tag 27**; offen = **Spina bifida** oder **Anenzephalie**
-- **Neuralleiste** (Ektoderm!): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Kieferknochen
-- **Folsaeure** 0,4 mg/Tag praekonautionell senkt das Neuralrohrdefekt-Risiko um ~70 %
-`,
-      contentExtended: `## Einleitung
-
-Gehirn und Rückenmark gehören zu den ersten Organen, die im Embryo angelegt werden -- und der Prozess, der sie formt, ist erstaunlich elegant. Das Notochord, eine stäbchenförmige Struktur unter dem Ektoderm, sendet Signale nach oben und bringt eine flache Zellplatte dazu, sich zu einer Röhre zusammenzufalten: dem Neuralrohr, der Anlage des gesamten zentralen Nervensystems. Wenn dieser Verschluss an einer Stelle ausbleibt, entstehen schwerwiegende Fehlbildungen wie Spina bifida oder Anenzephalie. Die gute Nachricht: Eine einfache Vitaminergänzung mit Folsäure kann das Risiko um rund 70 % senken -- eine der wirksamsten Präventionsmaßnahmen der Medizin.
-
-**In diesem Kapitel lernst du:**
-- wie aus einer flachen Zellplatte das Neuralrohr entsteht und warum das Notochord dafür nötig ist
-- wann sich die offenen Enden des Neuralrohrs schließen müssen und was passiert, wenn sie es nicht tun
-- welche überraschend vielfältigen Zelltypen aus der Neuralleiste hervorgehen -- von Pigmentzellen bis zum Nebennierenmark
-- warum Folsäure vor der Schwangerschaft so entscheidend ist
-
----
-
-{{DIAGRAM:stem-cells}}
+      content: `{{DIAGRAM:stem-cells}}
 
 {{DIAGRAM:nervensystem-übersicht}}
 
 ## Voraussetzung: Notochord
 
-**Bisher haben wir gesehen:** Gastrulation liefert die drei Keimblätter; das **Notochord** (Chorda dorsalis) entsteht aus dem Primitivknoten. **Damit sich das Nervensystem anlegt,** induziert das Notochord das darüber liegende **Ektoderm**: Es sendet Signale aus (u. a. Sonic Hedgehog), die die Zellen zur Verdickung und Faltung anregen. Ohne Notochord findet keine normale Neurulation statt.
 
 ---
 
@@ -3027,31 +1688,7 @@ Während sich das Neuralrohr schließt, lösen sich Zellen vom Rand der Neuralpl
 
 Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida** („offener Rücken") kommen — eine Fehlbildung im Bereich der Wirbelsäule mit unterschiedlichem Schweregrad. Wenn der **anteriore Neuroporus** offen bleibt, kann **Anenzephalie** (Fehlen von Großhirnanteilen, nicht überlebensfähig) entstehen. **Folsäure** (Folat, Vitamin B9) ist für die Zellteilung und den Neuralrohrschluss essenziell. Eine **Folsäure-Supplementierung** von **0,4 mg/Tag** (idealerweise **präkonzeptionell**, also vor der Schwangerschaft, und in der Frühschwangerschaft) reduziert das Risiko für Neuralrohrdefekte um etwa **70 %**. Da der Neuralrohrschluss sehr früh erfolgt (3.–4. Woche), ist die Einnahme vor und zu Beginn der Schwangerschaft entscheidend.
 
-> **Merke:** Offener Neuroporus → Neuralrohrdefekt. Folsäure 0,4 mg/Tag präkonzeptionell und früh in der SS senkt das Risiko um ~70 %.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was induziert die Neuralplatte?
-- Wann schließen die Neuroporen?
-- Aus welcher Struktur stammen Melanozyten und Nebennierenmark?
-
-**Typische Fallen:**
-- Neuralleiste stammt vom Ektoderm, nicht vom Mesoderm -- Melanozyten und Nebennierenmark kommen von der Neuralleiste
-- Primitivstreifen (Gastrulation) vs. Neuralrinne (Neurulation) -- verschiedene Prozesse
-- Notochord (induziert Neurulation) vs. Neuralrohr (wird zu ZNS)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Neurulation**: Notochord induziert **Neuralplatte** (Ektoderm) → **Neuralrinne** → **Neuralrohr** (= Anlage Gehirn + Rückenmark)
-- **Neuroporen**: anterior Tag 25, posterior Tag 27; offen = Neuralrohrdefekt (Spina bifida, Anenzephalie)
-- **Neuralleiste** (Ektoderm): Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark, Teile des Kopfes
-- **Folsäure** 0,4 mg/Tag präkonzeptionell/frühe SS senkt Neuralrohrdefekt-Risiko um ~70 %
-`,
+> **Merke:** Offener Neuroporus → Neuralrohrdefekt. Folsäure 0,4 mg/Tag präkonzeptionell und früh in der SS senkt das Risiko um ~70 %.`,
       lernziele: [
         "Die Neurulation (Neuralplatte → Neuralrohr) und die Rolle des Notochords beschreiben.",
         "Neuralleiste als Ektoderm-Derivat und ihre wichtigsten Derivate (Melanozyten, Ganglien, Nebennierenmark) nennen.",
@@ -3121,123 +1758,8 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
         "Kritische Perioden",
         "Scheitel-Steiß-Länge",
       ],
-      content: `## Organogenese und kritische Phasen
+      content: `## Embryonalperiode (Wochen 1–8)
 
-Innerhalb von nur acht Wochen entstehen aus drei Zellschichten alle Organe des menschlichen Koerpers -- vom schlagenden Herzen bis zu den ersten Fingeransaetzen. Danach folgt eine Phase des Wachstums und der Reifung. Das Entscheidende: Genau waehrend dieser Organanlage ist der Embryo am empfindlichsten gegenueber schaedlichen Einfluessen. Ein Medikament in Woche 5 kann gaenzlich andere Folgen haben als dasselbe in Woche 12. Die Geschichte von Thalidomid (Contergan) zeigt auf tragische Weise, wie organspezifisch diese Empfindlichkeit ist.
-
-{{DIAGRAM:stem-cells}}
-
-**In diesem Kapitel lernst du:**
-- was die Embryonalperiode von der Fetalperiode unterscheidet
-- warum die Wochen 4--8 als besonders gefaehrlich fuer Fehlbildungen gelten
-- was das Alles-oder-Nichts-Prinzip in den allerersten Tagen bedeutet
-- welche kritischen Perioden es gibt und welche Teratogene wichtig sind
-- ab wann die Lunge des Fetus reif genug fuer das Ueberleben ausserhalb des Mutterleibs ist
-
----
-
-## Embryonalperiode (Woche 1--8): Organogenese
-
-{{DIAGRAM:heart-anatomy}}
-
-Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. In dieser Zeit findet die **Organogenese** statt: Aus den drei Keimblaettern entstehen alle primaeren Organanlagen. Die Entwicklung schreitet vom Kopf zum Schwanz (cephalo-caudal) und von der Koerpermitte zu den Extremitaeten (proximo-distal) fort.
-
-Wichtige Meilensteine:
-- **Woche 3**: Neuralrohr und Herzschlauch bilden sich
-- **Woche 4 (Tag 22--23)**: Das Herz beginnt zu schlagen -- **nicht** erst Ende Woche 8 (typische Pruefungsfalle!)
-- **Woche 4--5**: Arm- und Beinleisten entstehen, Augen- und Ohranlagen bilden sich
-- **Woche 8**: Alle Organsysteme angelegt, Finger und Zehen durch Apoptose sichtbar; SSL (Scheitel-Steiß-Laenge) ca. **3 cm**
-
-In dieser Zeit ist der Embryo besonders **vulnerabel** gegenueber schaedlichen Einfluessen.
-
-> **Merke:** Embryonalperiode (Woche 1--8) = Organogenese. Fetalperiode (ab Woche 9) = Wachstum und Reifung. Herzschlag beginnt Tag 22--23!
-
----
-
-## Das Alles-oder-Nichts-Prinzip (Woche 1--2)
-
-In der **Praeimplantationsphase** (Woche 1--2) gilt das **Alles-oder-Nichts-Prinzip**: Die fruehen Blastomere (Zellen der Morula/Blastozyste) sind noch **totipotent** -- sie koennen einander ersetzen. Wird ein Teil der Zellen durch eine schaedliche Noxe (z. B. Strahlung) beschaedigt, koennen die verbleibenden gesunden Zellen die Luecke schliessen, und die Entwicklung laeuft voellig normal weiter. Werden zu viele Zellen geschaedigt, stirbt der Embryo.
-
-Ab **Woche 3** gilt dieses Prinzip nicht mehr: Die Zellen haben sich differenziert und koennen einander nicht mehr ersetzen. Ab jetzt koennen Teratogene spezifische Fehlbildungen verursachen.
-
-> **Merke:** Alles-oder-Nichts gilt NUR Woche 1--2. Ab Woche 3: organspezifische Fehlbildungen moeglich.
-
----
-
-## Teratogene und kritische Perioden
-
-**Teratogene** sind Faktoren, die Fehlbildungen verursachen:
-- **Chemisch**: Thalidomid (Contergan), Alkohol, Retinoide (Vitamin-A-Derivate)
-- **Biologisch**: Roetelnnviren (Herz, Augen, Gehoer), CMV, Toxoplasma
-- **Physikalisch**: ionisierende Strahlung
-
-Jedes Organ hat eine **kritische Periode** -- die Zeit seiner aktivsten Differenzierung, in der es am empfindlichsten gegenueber Teratogenen ist. Die Schwaere der Fehlbildung haengt davon ab, welches Organ gerade in seiner kritischen Phase ist.
-
-Besonders wichtig:
-- **ZNS**: hat die **laengste kritische Periode** aller Organe (Woche 3 bis postnatal) -- Alkohol schaaedigt es waehrend der gesamten Schwangerschaft
-- **Herz**: Woche 3--6 (kritisch fuer Herzfehler)
-- **Extremitaeten**: Woche 4--8 -- Thalidomid in dieser Phase → Phokomelie (flipperartige Extremitaeten)
-
-> **Merke:** Kritische Periode = hoechste Empfindlichkeit eines Organs. ZNS hat die laengste kritische Periode.
-
----
-
-## Fetalperiode (ab Woche 9): Wachstum und Reifung
-
-Ab **Woche 9** werden keine neuen Organe mehr angelegt -- der **Fetus** waechst und reift. Das Gewicht steigt von ca. 10 g (Woche 12) auf ca. 3.400 g (Woche 40).
-
-Klinisch wichtig:
-- **Woche 16--20**: Erste **Kindsbewegungen** (Quickening), Lanugo-Behaarung sichtbar
-- **Woche 22--24**: **Viabilitaet** -- ab hier kann ein Fruehgeborenes mit intensivmedizinischer Betreuung ueberleben
-- **Ab Woche 24**: **Typ-II-Pneumozyten** produzieren **Surfactant** -- ein oberflaechenaktives Mittel (hauptsaechlich Dipalmitoylphosphatidylcholin), das die **Alveolen** beim Ausatmen offen haelt
-- Ohne Surfactant (Fruehgeburt): Alveolen kollabieren → **Atemnotsyndrom (RDS)**
-- Kortikosteroide (Betamethason) beschleunigen die Surfactant-Produktion bei drohender Fruehgeburt
-
-> **Merke:** Surfactant (Typ-II-Pneumozyten) ab Woche 24. Fruehgeburt ohne Surfactant → Atemnotsyndrom.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Wann endet die Embryonalperiode? (Nach Woche 8)
-- Was besagt das Alles-oder-Nichts-Prinzip? (Woche 1--2: Tod oder normale Entwicklung)
-- Ab wann produzieren Typ-II-Pneumozyten Surfactant? (Woche 24)
-
-**Typische Fallen:**
-- "Das Herz beginnt am Ende der 8. Woche zu schlagen" ist FALSCH -- es schlaegt bereits Tag 22--23
-- Alles-oder-Nichts gilt NUR Woche 1--2, nicht spaeter
-- Teratogen (Fehlbildung) ≠ Mutagen (DNA-Schaden)
-- Viabilitaet (~Woche 22--24) ≠ volle Lungenreife (Woche 35--37)
-
----
-
-## Zusammenfassung
-
-- **Embryonalperiode** (Woche 1--8): Organogenese -- alle Organe werden angelegt; hoechste Vulnerabilitaet
-- **Fetalperiode** (ab Woche 9): Wachstum und Reifung; keine neue Organanlage
-- **Alles-oder-Nichts** (nur Woche 1--2): schwere Noxe → Fruchttod ODER normale Entwicklung (Totipotenz)
-- **Kritische Periode** = aktivste Differenzierungsphase = groesste Teratogen-Empfindlichkeit
-- **ZNS**: laengste kritische Periode (Woche 3 bis postnatal); Alkohol, Roetelnn, Thalidomid als wichtige Teratogene
-- **Surfactant** ab Woche 24; Herzschlag beginnt Tag 22--23; SSL Ende Woche 8 ca. 3 cm
-`,
-      contentExtended: `## Einleitung
-
-Innerhalb von nur acht Wochen entsteht aus drei Zellschichten ein Embryo, in dem alle Organsysteme angelegt sind -- vom schlagenden Herz (ab Tag 22) bis zu den ersten Fingeransätzen. Danach folgt eine Phase des Wachstums und der Reifung, die bis zur Geburt dauert. Besonders brisant: In genau dieser Zeitspanne der Organogenese ist der Embryo extrem empfindlich gegenüber schädlichen Einflüssen. Ein Medikament, das in Woche 5 eingenommen wird, kann ganz andere Folgen haben als dasselbe Medikament in Woche 12. Die Geschichte von Thalidomid (Contergan) zeigt auf tragische Weise, wie organspezifisch diese Empfindlichkeit ist.
-
-**In diesem Kapitel lernst du:**
-- warum nach der 8. Woche keine neuen Organe mehr angelegt werden und was danach passiert
-- weshalb die Wochen 4--8 als besonders gefährlich für Fehlbildungen gelten
-- was das Alles-oder-Nichts-Prinzip in den allerersten Tagen bedeutet
-- ab wann die Lunge des Fetus reif genug für ein Überleben außerhalb des Mutterleibs ist
-
-{{DIAGRAM:stem-cells}}
-
----
-
-## Embryonalperiode (Wochen 1–8)
-
-**Bisher haben wir gesehen:** Gastrulation und Neurulation legen Keimblätter und Neuralrohr fest. **In der Embryonalperiode** entstehen daraus alle Organanlagen.
 
 Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. In dieser Zeit findet die **Organogenese** (Organanlage) statt: Aus den drei Keimblättern (Ektoderm, Mesoderm, Endoderm) entstehen alle primären Organanlagen. Die Entwicklung schreitet cephalo-caudal (vom Kopf zum Schwanz) und proximo-distal (von der Körpermitte zu den Extremitäten) fort. In Woche 3 bilden sich Neuralrohr und Herzschlauch; in Woche 4 beginnt das Herz zu schlagen (der erste funktionelle Schlag erfolgt um Tag 22–23). In Woche 4–8 entstehen Gliedmaßenleisten (Arm- und Beinleisten), Augenlinsengruben, Ohrgrübchen und Gesichtsgaumen. Am Ende der Woche 8 sind alle wesentlichen Organsysteme angelegt, wenn auch noch nicht ausgereift. Das Embryo ist ca. 3 cm groß; die **SSL** (Scheitel-Steiß-Länge, Längenmaß vom Kopf bis zum Gesäß) beträgt am Ende der 8. Woche etwa 3 cm. Während dieser Periode ist der Embryo besonders **vulnerabel** gegenüber teratogenen Noxen.
 
@@ -3271,36 +1793,7 @@ In der Fetalperiode (Woche 9–40) nimmt das Gewicht exponentiell zu: von ca. 10
 
 ## Klinischer Bezug
 
-Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-artige Extremitäten), wenn es in der kritischen Periode der Extremitätenanlage (Woche 4–8) eingenommen wurde. Dies verdeutlicht, dass kritische Perioden organspezifisch sind und selbst kurze Exposition mit einem Teratogen irreversible Fehlbildungen hervorrufen kann.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Wann endet die Embryonalperiode?
-- Was besagt das Alles-oder-Nichts-Prinzip?
-- Ab wann produzieren Typ-II-Pneumozyten Surfactant?
-
-**Typische Fallen:**
-- "Das Herz beginnt am Ende der 8. Woche zu schlagen" ist FALSCH -- es schlägt bereits in Woche 4 (Tag 22--23)
-- Alles-oder-Nichts-Prinzip gilt nur Woche 1--2, nicht danach
-- Viabilität (~Woche 22--24) vs. volle Lungenreife (Woche 35--37)
-- Teratogen (verursacht Fehlbildungen) vs. Mutagen (verursacht DNA-Schäden)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Embryonalperiode** (Wochen 1–8): Organogenese — alle Organe werden angelegt; höchste Empfindlichkeit gegenüber Teratogenen
-- **Fetalperiode** (ab Woche 9): Wachstum und Reifung der angelegten Organe; keine neue Organanlage
-- **Alles-oder-Nichts-Prinzip** (nur Woche 1–2): schwere Noxe → Fruchttod ODER normale Entwicklung (Totipotenz der Blastomere)
-- **Kritische Periode** = Phase der aktivsten Differenzierung eines Organs → größte Teratogen-Empfindlichkeit
-- Das **ZNS** hat die längste kritische Periode aller Organe (Woche 3 bis postnatal)
-- Wichtige Teratogene: Thalidomid (Extremitäten, Woche 3–8), Alkohol (ZNS, gesamte Schwangerschaft), Röteln (Herz, Augen, Gehör)
-- **Surfactant** (Typ-II-Pneumozyten) ab Woche 24 → entscheidend für Lungenreife und extrauterine Überlebensfähigkeit
-- Herzschlag beginnt Tag 22–23; Ende Woche 8: Embryo ~3 cm (Scheitel-Steiß-Länge)
-`,
+Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-artige Extremitäten), wenn es in der kritischen Periode der Extremitätenanlage (Woche 4–8) eingenommen wurde. Dies verdeutlicht, dass kritische Perioden organspezifisch sind und selbst kurze Exposition mit einem Teratogen irreversible Fehlbildungen hervorrufen kann.`,
       lernziele: [
         "Embryonal- und Fetalperiode zeitlich und inhaltlich abgrenzen sowie die Organogenese in der Embryonalperiode beschreiben.",
         "Das Konzept der kritischen Perioden erklären und wichtige Teratogene mit ihren Zielorganen und -zeiträumen nennen.",
@@ -3420,127 +1913,8 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
         "Decidua",
         "Chorionzotten",
       ],
-      content: `## Plazenta, Nabelschnur und Embryonalhuelln
+      content: `## Voraussetzungen: Trophoblast und Eihüllen
 
-Neun Monate lang versorgt ein einziges Organ den heranwachsenden Fetus mit Sauerstoff und Naehrstoffen, entsorgt seinen Abfall und gibt ihm einen Startschutz fuer das Immunsystem: die **Plazenta**. Das Besondere: Obwohl muetterliches und kindliches Blut nur durch eine haucheduenne Zellschicht getrennt sind, mischen sie sich niemals direkt. Durch die Nabelschnur fliesst sauerstoffreiches Blut zum Kind und sauerstoffarmes zurueck -- dabei ist die Anordnung genau umgekehrt zur Koerperkonvention: Die Vene bringt das gute Blut.
-
-{{DIAGRAM:menstrual-cycle}}
-
-**In diesem Kapitel lernst du:**
-- wie die Plazenta aus fetalen und muetterlichen Anteilen zusammengesetzt ist
-- warum muetterliches und kindliches Blut sich nie mischen koennen
-- wie die Nabelschnur aufgebaut ist und warum die Merkhilfe AVA wichtig ist
-- was die Plazentaschranke durchlaesst (und was nicht)
-- welche Hormone die Plazenta produziert und wann
-
----
-
-## Aufbau der Plazenta: zwei Anteile
-
-Die **Plazenta** ist ein temporaeres Organ und besteht aus zwei Teilen:
-
-- **Fetaler Anteil**: Das **Chorion frondosum** -- fingerartige **Chorionzotten** des Trophoblasten, die in die muetterliche Seite ragen. Die Zotten sind von fetalem Bindegewebe und Blutgefaessen durchzogen.
-- **Muetterlicher Anteil**: Die **Decidua basalis** -- das umgebaute **Endometrium** (Gebaermutterschleimhaut) unter der Plazenta.
-
-Die Chorionzotten ragen in **intervilloese Raeume** -- Hohlraeume, die mit **muetterlichem Blut** gefuellt sind. Der Austausch von Sauerstoff, Kohlendioxid, Naehrstoffen und Abfallprodukten erfolgt ueber die **Plazentaschranke** (hauptsaechlich Synzytiotrophoblast). Das Blut von Mutter und Kind mischt sich dabei **niemals direkt**.
-
-> **Merke:** Plazenta = fetal (Chorion frondosum / Chorionzotten) + muetterlich (Decidua basalis). Kein direkter Blutkontakt!
-
----
-
-## Nabelschnur -- Merkhilfe AVA
-
-{{DIAGRAM:blutkreislauf}}
-
-Die **Nabelschnur** verbindet den Fetus mit der Plazenta und enthaelt:
-- **2 Nabelarterien** (Aa. umbilicales): fuehren **sauerstoffarmes**, CO₂-reiches Blut **vom Kind zur Plazenta**
-- **1 Nabelvene** (V. umbilicalis): fuehrt **sauerstoffreiches** Blut **von der Plazenta zum Kind**
-
-Das ist umgekehrt zur normalen Koerperkonvention -- normalerweise fuehren Arterien sauerstoffreiches und Venen sauerstoffarmes Blut. In der Nabelschnur ist es andersherum.
-
-**Merkhilfe: AVA** (Arterie -- Vene -- Arterie, von aussen nach innen oder schlicht die drei Buchstaben).
-
-Fehlt eine Nabelarterie (Single Umbilical Artery), ist dies mit erhoehtem Fehlbildungsrisiko assoziiert.
-
-> **Merke:** 2 Arterien (O₂-arm, vom Kind) + 1 Vene (O₂-reich, zum Kind) -- Merkhilfe AVA.
-
----
-
-## Plazentaschranke -- was passiert, was nicht?
-
-**Lipophile (fettloesliche) Stoffe** passieren die Plazentaschranke leicht durch Diffusion:
-- **Alkohol**, **Nikotin**, viele Medikamente → koennen den Fetus schaedigen
-- Sauerstoff und Kohlendioxid → passieren ebenfalls per Diffusion
-
-Von den **Antikoerpern** passiert nur **IgG** die Plazenta -- und zwar **aktiv** per **Transzytose** ueber den **FcRn-Rezeptor** im Synzytiotrophoblast. Dadurch erhaelt das Neugeborene einen **Nestschutz** (passive Immunitaet) fuer die ersten Lebenswochen.
-
-**IgM, IgA und IgE** passieren die Plazenta **nicht**.
-
-> **Merke:** Lipophile Stoffe passieren leicht. Nur IgG wird aktiv (FcRn-Transzytose) uebertragen → Nestschutz.
-
----
-
-## Hormone der Plazenta
-
-Die Plazenta ist ein endokrin aktives Organ:
-
-- **hCG** (humanes Choriongonadotropin): wird vom **Synzytiotrophoblast** produziert; erhaelt das **Corpus luteum** (Gelbkoerper), das Progesteron fuer den Endometrium-Erhalt produziert. Grundlage des Schwangerschaftstests! hCG steigt bis Woche 10, dann faellt es ab.
-- Ab **Woche 8--10**: Die Plazenta uebernimmt selbst die **Progesteronproduktion** (aus muetterlichem Cholesterin) -- das Corpus luteum wird nicht mehr benoetigt.
-- **hPL** (humanes Plazentalaktogen): wirkt insulin-antagonistisch (Glukose fuer den Fetus) und foerdert das Brustwachstum.
-
-> **Merke:** hCG erhaelt Corpus luteum (→ Progesteron). Ab Woche 8--10 produziert die Plazenta selbst Progesteron.
-
----
-
-## Eihuelln: Amnion und Chorion
-
-Der Embryo liegt in der **Amnionhoehle**, umgeben von **Fruchtwasser** (Amnionflussigkeit, ca. 800 ml am Termin):
-- **Amnion** (innere Huelle): produziert und umgibt das Fruchtwasser -- schuetzt den Fetus mechanisch, erlaubt Bewegung, foerdert Lungenreifung (der Fetus schluckt Fruchtwasser)
-- **Chorion** (aeussere Huelle): liegt dem Amnion aussen an, grenzt an die Decidua
-
-Amnionflussigkeit kann durch **Amniozentese** (Fruchtwasserpunktion) fuer praenatale Diagnostik gewonnen werden.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- Welches Blut fuehrt die Nabelvene? (Sauerstoffreiches Blut zum Foetus)
-- Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren)
-- Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten)
-
-**Typische Fallen:**
-- Nabelarterie fuehrt sauerstoffarmes Blut VOM Kind; Nabelvene fuehrt sauerstoffreiches Blut ZUM Kind
-- Chorion frondosum (fetal) ≠ Decidua basalis (muetterlich) -- wird oft verwechselt
-- Nur IgG passiert die Plazenta; IgM, IgA, IgE passieren sie nicht
-
----
-
-## Zusammenfassung
-
-- **Plazenta**: fetaler Anteil = Chorion frondosum (Chorionzotten); muetterlicher Anteil = Decidua basalis
-- Muetterliches und fetales Blut mischen sich **niemals** direkt -- Austausch ueber Plazentaschranke
-- **Nabelschnur**: 2 Arterien (O₂-arm, Kind → Plazenta) + 1 Vene (O₂-reich, Plazenta → Kind) -- Merkhilfe AVA
-- **Lipophile Stoffe** (Alkohol, Nikotin, viele Medikamente) passieren die Schranke leicht
-- Nur **IgG** wird aktiv per Transzytose (FcRn-Rezeptor) uebertragen → **Nestschutz** fuer Neugeborene
-- **hCG**: erhaelt Corpus luteum; ab Woche 8--10 produziert die Plazenta selbst Progesteron
-- **Amnion**: Fruchtwasser, Schutz und Lungenreifung; **Chorion**: aeussere Huelle
-`,
-      contentExtended: `## Einleitung
-
-Neun Monate lang versorgt ein einziges Organ den heranwachsenden Fetus mit Sauerstoff und Nährstoffen, entsorgt seinen Abfall und schützt ihn vor den meisten Krankheitserregern der Mutter -- die Plazenta. Das Besondere: Obwohl mütterliches und kindliches Blut nur durch eine hauchdünne Zellschicht getrennt sind, mischen sie sich nie. Durch die Nabelschnur fließt sauerstoffreiches Blut zum Kind und sauerstoffarmes zurück -- und zwar in einer Anordnung, die genau umgekehrt ist, als man erwarten würde: Die Vene bringt das gute Blut, die Arterien das schlechte.
-
-**In diesem Kapitel lernst du:**
-- wie die Plazenta aus fetalen und mütterlichen Anteilen aufgebaut ist
-- warum sich mütterliches und kindliches Blut nicht mischen und was trotzdem die Schranke passiert
-- wie die Nabelschnur aufgebaut ist und warum die Merkhilfe AVA so wichtig ist
-- welche Hormone die Plazenta produziert und warum sie für die Schwangerschaft unverzichtbar ist
-
----
-
-## Voraussetzungen: Trophoblast und Eihüllen
-
-**Bisher haben wir gesehen:** Der Trophoblast der Blastozyste wird zur Plazenta und zu Anteilen der Eihüllen; der Embryo liegt in der **Amnionhöhle** (von Fruchtwasser umgeben). **Damit der Fetus versorgt wird,** bilden sich die **Plazenta** und die **Eihäute** (Amnion, Chorion) aus.
 
 {{DIAGRAM:menstrual-cycle}}
 
@@ -3587,35 +1961,7 @@ Die Nabelschnur enthält 2 Nabelarterien (Aa. umbilicales) und 1 Nabelvene (V. u
 
 ## Klinischer Bezug
 
-Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren Blutungen sub partu führen und ist eine Indikation für einen Kaiserschnitt. Die Placenta accreta (abnormal tiefe Invasion der Chorionzotten in das Myometrium) führt zu schweren postpartalen Blutungen, da sich die Plazenta nicht spontan löst.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Welches Blut führt die Nabelvene? (Sauerstoffreiches Blut zum Fötus.)
-- Wie gelangt IgG von Mutter zu Kind? (Transzytose via FcRn-Rezeptoren.)
-- Was ist der fetale Anteil der Plazenta? (Chorion frondosum / Chorionzotten.)
-
-**Typische Fallen:**
-- Nabelarterie (sauerstoffarm, VOM Kind) vs. Nabelvene (sauerstoffreich, ZUM Kind): umgekehrt zur systemischen Konvention.
-- Chorion frondosum (fetaler Anteil) vs. Decidua basalis (mütterlicher Anteil) werden häufig vertauscht.
-- Nur IgG passiert die Plazenta (aktive Transzytose); IgM, IgA, IgE passieren sie NICHT.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- Plazenta: **fetaler Anteil** = Chorion frondosum (Chorionzotten); **mütterlicher Anteil** = Decidua basalis
-- Mütterliches und fetales Blut mischen sich **niemals direkt** — Austausch über Plazentaschranke (Synzytiotrophoblast) in intervillösen Räumen
-- **Nabelschnur**: 2 Arterien (O₂-arm, Kind → Plazenta) + 1 Vene (O₂-reich, Plazenta → Kind) — Merkhilfe: AVA
-- **Plazentaschranke** lässt lipophile Stoffe frei passieren: Alkohol, Nikotin, viele Medikamente → teratogenes Risiko
-- **IgG** ist das einzige Immunglobulin, das aktiv per Transzytose (FcRn-Rezeptor) übertragen wird → Nestschutz des Neugeborenen
-- Synzytiotrophoblast produziert **hCG** (bis Woche 8–10) → erhält Corpus luteum → Progesteron
-- Ab Woche 8–10 übernimmt die **Plazenta** selbst die Progesteronsynthese (Corpus luteum nicht mehr nötig)
-- **Amnionflüssigkeit**: Schutzpuffer, Thermoregulation, Lungenreifung durch Schlucken; Fruchtwasseranalyse (Amniozentese) für pränatale Diagnostik
-`,
+Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren Blutungen sub partu führen und ist eine Indikation für einen Kaiserschnitt. Die Placenta accreta (abnormal tiefe Invasion der Chorionzotten in das Myometrium) führt zu schweren postpartalen Blutungen, da sich die Plazenta nicht spontan löst.`,
       lernziele: [
         "Den fetalen und mütterlichen Anteil der Plazenta, den Aufbau der Chorionzotten und der Plazentaschranke beschreiben.",
         "Die Hauptfunktionen der Plazenta (Gasaustausch, Nährstofftransfer, Hormonsynthese) erläutern und die Hormone hCG und Progesteron zeitlich korrekt einordnen.",

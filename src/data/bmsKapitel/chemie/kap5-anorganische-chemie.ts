@@ -18,7 +18,7 @@ export const chemKapAnorganisch: Kapitel = {
         "Siedepunkt",
         "Wärmekapazität",
         "Verdampfungsenthalpie",
-        "Autoprotolysé",
+        "Autoprotolyse",
         "Ionenprodukt Kw",
         "Hydratation",
         "Hydrophober Effekt",
@@ -31,91 +31,7 @@ export const chemKapAnorganisch: Kapitel = {
         "Die Rolle von Wasser als Lösungsmittel, Reaktionsmedium und Temperaturpuffer im menschlichen Körper erklären",
         "Den Autoprotolyseprozess des Wassers und seine Bedeutung für den pH-Wert verstehen",
       ],
-      content: `## Einleitung
-
-Hast du dich schon einmal gefragt, warum Eis auf deinem Getränk schwimmt? Oder warum Schwitzen dich abkühlt? Das alles hat mit den besonderen Eigenschaften von **Wasser** zu tun. Dein Körper besteht zu über 60 % aus Wasser -- es ist das wichtigste Molekül in der Biologie.
-
-**In diesem Kapitel lernst du:**
-- warum Wasser so einen hohen Siedepunkt hat (obwohl es ein leichtes Molekül ist)
-- warum Eis schwimmt und warum das für Fische im Winter lebenswichtig ist
-- wie Wasser Kochsalz auflöst
-- warum Öl und Wasser sich nicht mischen
-
----
-
-## Das Wassermolekül -- gewinkelt und polar
-
-{{DIAGRAM:covalent-bond}}
-
-Stell dir Wasser (H₂O) vor: Ein Sauerstoffatom in der Mitte, zwei Wasserstoffatome daran -- aber nicht in einer geraden Linie, sondern **gewinkelt** (104,5°). Warum? Weil am Sauerstoff noch zwei freie Elektronenpaare sitzen, die Platz brauchen. Sauerstoff zieht die Elektronen viel stärker an als Wasserstoff. Dadurch entsteht ein **Dipol**: Der Sauerstoff ist leicht negativ geladen, die Wasserstoffe leicht positiv -- wie ein kleiner Magnet.
-
-> **Merke:** Wasser ist gewinkelt (104,5°) und ein starker Dipol. Das ist der Schlüssel zu allen seinen besonderen Eigenschaften.
-
----
-
-## Wasserstoffbrücken -- das Geheimnis des Wassers
-
-Das Besondere: Jedes Wassermolekül kann mit seinen Nachbarn bis zu **vier Wasserstoffbrücken** (H-Brücken) bilden. Stell dir ein Netz vor, das alle Wassermoleküle miteinander verbindet. Dieses Netzwerk erklärt alles:
-
-- **Hoher Siedepunkt (100 °C):** Beim Kochen musst du dieses Netzwerk aufbrechen -- das braucht viel Energie. Zum Vergleich: H₂S (ohne H-Brücken) siedet bei eisigen −60 °C.
-- **Schwitzen kühlt:** Wenn Schweiß verdunstet, entzieht er deinem Körper viel Wärme -- dank der hohen Verdampfungsenergie.
-- **Temperaturpuffer:** Wasser nimmt viel Wärme auf, bevor es sich erwärmt. Deshalb überhitzt dein Körper beim Sport nicht sofort.
-
----
-
-## Dichteanomalie -- warum Eis schwimmt
-
-Wasser hat eine kuriose Eigenschaft: Es ist bei **4 °C am dichtesten**. Unter 4 °C bilden die Moleküle eine lockere, hexagonale Struktur -- Eis braucht mehr Platz als flüssiges Wasser. Deshalb ist Eis ca. 9 % leichter und schwimmt.
-
-Das rettet im Winter Leben: Seen frieren von oben zu, das Eis isoliert, und Fische überleben im 4 °C warmen Wasser am Grund.
-
-> **Merke:** Dichtemaximum bei 4 °C -- Eis schwimmt -- Seen frieren von oben -- Fische überleben.
-
----
-
-## Wasser als Lösungsmittel -- warum löst sich Kochsalz?
-
-{{DIAGRAM:ionic-bond}}
-
-Wenn du Kochsalz (NaCl) in Wasser gibst, passiert Folgendes: Die Wasser-Dipole umgeben die Na⁺- und Cl⁻-Ionen wie kleine Magnete -- Sauerstoff zum positiven Na⁺, Wasserstoff zum negativen Cl⁻. Diese **Ion-Dipol-Kräfte** reissen das Salzkristall auseinander. Zucker (Glucose) löst sich über H-Brücken, Öl dagegen gar nicht -- es ist zu unpolar.
-
----
-
-## Warum mischen sich Öl und Wasser nicht?
-
-Unpolare Stoffe (wie Öl oder Fett) zwingen die Wassermoleküle, sich um sie herum zu ordnen -- das ist energetisch ungünstig. Also klumpen die unpolaren Teile zusammen, damit möglichst wenig Wasser "gestört" wird. Das ist der **hydrophobe Effekt**. Er treibt auch die Proteinfaltung an (hydrophobe Aminosäuren verstecken sich im Inneren) und erklärt, warum Zellmembranen Doppelschichten bilden.
-
-> **Merke:** Der hydrophobe Effekt sorgt dafür, dass unpolare Stoffe sich zusammenlagern. Das ist die Grundlage von Zellmembranen und Proteinfaltung.
-
----
-
-## Wasser reagiert mit sich selbst
-
-Wasser kann ein Proton an ein anderes Wassermolekül abgeben: 2 H₂O = H₃O⁺ + OH⁻. Das Ionenprodukt K_w = 10⁻¹⁴ (bei 25 °C) ergibt den Neutralpunkt pH = 7. Aber Achtung: Bei **Körpertemperatur (37 °C)** ist der Neutralpunkt etwa pH 6,8!
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gewinkelt** (104,5°), starker Dipol -- Grundlage aller Eigenschaften
-- **4 H-Brücken** pro Molekül -- erklärt hohen Siedepunkt, Wärmekapazität, Oberflächenspannung
-- **Dichtemaximum bei 4 °C** -- Eis schwimmt -- Seen frieren von oben
-- **Lösungsmittel**: löst Salze (Ion-Dipol) und polare Stoffe (H-Brücken), nicht Öl
-- **Hydrophober Effekt**: unpolare Stoffe klumpen zusammen -- treibt Membranbildung und Proteinfaltung
-- **K_w = 10⁻¹⁴** bei 25 °C (pH 7); bei 37 °C ist neutral ca. pH 6,8`,
-      contentExtended: `## Einleitung
-
-Warum frieren Seen im Winter von oben zu — und nicht von unten? Weil Wasser eine einzigartige **Dichteanomalie** zeigt: Bei 4 °C ist es am dichtesten, und Eis ist leichter als flüssiges Wasser. Ohne diese Eigenschaft würden Gewässer durchfrieren und aquatisches Leben wäre unmöglich. Hinter all den besonderen Eigenschaften des Wassers steckt seine Fähigkeit, bis zu **vier Wasserstoffbrücken** pro Molekül auszubilden — ein dreidimensionales Netzwerk, das Siedepunkt, Wärmekapazität und Lösungseigenschaften erklärt.
-
-**In diesem Kapitel lernst du:**
-- warum Wasser trotz seiner niedrigen Molmasse erst bei 100 °C siedet (H₂S bei −60 °C)
-- wie die Dichteanomalie mit dem H-Brücken-Netzwerk zusammenhängt und warum Eis schwimmt
-- warum der neutrale pH bei Körpertemperatur (37 °C) nicht 7 ist, sondern etwa 6,8
-- wie der hydrophobe Effekt Proteinfaltung und Membranbildung antreibt — und warum er entropisch ist
-
----
-
-## Struktur des Wassermoleküls
+      content: `## Struktur des Wassermoleküls
 
 Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** resultiert — einer der höchsten Werte kleiner Moleküle.
 
@@ -155,15 +71,15 @@ Wasser hat seine **maximale Dichte bei 4 °C** (ρ = 1,000 kg/L). Unterhalb von 
 
 > **Merke:** Dichtemaximum bei 4 °C → Eis schwimmt → Seen frieren von oben → aquatisches Leben überlebt den Winter.
 
-## Autoprotolysé und pH-Wert
+## Autoprotolyse und pH-Wert
 
-Wasser reagiert mit sich selbst (Autoprotolysé):
+Wasser reagiert mit sich selbst (Autoprotolyse):
 
 **2 H₂O ⇌ H₃O⁺ + OH⁻**
 
 Ionenprodukt: **K_w = [H₃O⁺] · [OH⁻] = 1,0 × 10⁻¹⁴** (25 °C). In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L → pH = 7,0 (neutral bei 25 °C).
 
-K_w ist **temperaturabhängig** (Autoprotolysé ist endotherm, ΔH > 0):
+K_w ist **temperaturabhängig** (Autoprotolyse ist endotherm, ΔH > 0):
 - Bei 37 °C (Körpertemperatur): K_w ≈ 2,4 × 10⁻¹⁴ → [H₃O⁺] = √(2,4 × 10⁻¹⁴) ≈ 1,55 × 10⁻⁷ → pH ≈ 6,8
 - „Neutral" bedeutet nicht automatisch pH 7, sondern [H₃O⁺] = [OH⁻]
 
@@ -186,33 +102,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 - Proteinfaltung: hydrophobe Aminosäuren im Inneren, hydrophile außen
 - Mizellbildung von Gallensalzen und Detergenzien
 
-> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Warum siedet Wasser bei 100 °C trotz niedriger Molmasse? → H-Brücken-Netzwerk (H₂S ohne H-Brücken siedet bei −60 °C)
-- Bei welcher Temperatur hat Wasser seine maximale Dichte? → 4 °C; Eis ist ~9 % weniger dicht → schwimmt
-- Welcher pH ist bei 37 °C neutral? → pH ≈ 6,8 (nicht 7, weil K_w temperaturabhängig ist)
-
-**Typische Fallen:**
-- Neutral heißt nicht immer pH 7 — bei 37 °C ist der Neutralpunkt bei pH ≈ 6,8
-- Hydrophober Effekt ist entropisch getrieben (Entropiegewinn des Wassers), nicht durch Abstoßung
-- CO₂ ist apolar (trotz polarer Bindungen), Wasser ist polar — nicht verwechseln
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Geometrie**: gewinkelt, 104,5° (VSEPR: 2 bindende + 2 freie Elektronenpaare am O); Dipolmoment μ = 1,85 D
-- **H-Brücken**: je Molekül bis zu 4 (2× Donor + 2× Akzeptor); ~20 kJ/mol; Netzwerk erklärt alle Anomalien
-- **Hoher Siedepunkt** (100 °C): H-Brücken müssen beim Verdampfen gebrochen werden; H₂S (keine H-Brücken) siedet bei −60 °C
-- **Dichtemaximum** bei 4 °C; Eis ~9 % weniger dicht → schwimmt; Seen frieren von oben → aquatisches Leben überlebt
-- **Hohe Wärmekapazität** 4182 J/(kg·K) → Temperaturpuffer im Körper; Schwitzen kühlt effizient
-- **Kw = 10⁻¹⁴** (25 °C) → pH-Neutralpunkt = 7; bei 37 °C pH ≈ 6,8; Wasser ist amphoter
-- **Hydrophober Effekt**: apolare Stoffe erzwingen geordnete Wasserkäfige → entropisch ungünstig → Aggregation apolarer Gruppen → Proteinfaltung, Membranbildung`,
+> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.`,
       sections: [
         {
           heading: "Dipolcharakter und H-Brücken",
@@ -227,7 +117,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
             "Wasser: Dichtemaximum 4 °C, Eis schwimmt → Seen frieren von oben → aquatisches Leben überlebt den Winter.",
         },
         {
-          heading: "Autoprotolysé und Amphoterie",
+          heading: "Autoprotolyse und Amphoterie",
           text: "Wasser ionisiert schwach zu H₃O⁺ und OH⁻. K_w = 10⁻¹⁴ (25 °C) → pH-Neutralpunkt = 7. Bei 37 °C K_w ≈ 2,4 × 10⁻¹⁴ → Neutralpunkt pH ≈ 6,8. Wasser ist amphoter — Proton-Donor oder -Akzeptor je nach Reaktionspartner.",
           merksatz:
             "K_w = [H₃O⁺][OH⁻] = 10⁻¹⁴ bei 25 °C → pH_neutral = 7; bei 37 °C pH_neutral ≈ 6,8.",
@@ -374,7 +264,7 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
           ],
           correctIndex: 1,
           explanation:
-            "Neutral bedeutet [H₃O⁺] = [OH⁻]. Bei 37 °C: K_w = 2,4 × 10⁻¹⁴. [H₃O⁺] = Wurzel(2,4 × 10⁻¹⁴) ≈ 1,55 × 10⁻⁷ mol/L. pH = −log(1,55 × 10⁻⁷) ≈ 6,81. Der Neutralpunkt liegt bei 37 °C bei pH ≈ 6,8, nicht 7,0. Der physiologische Blut-pH von 7,4 ist bei 37 °C daher leicht basisch. Neutral ist keine feste pH-Zahl — es ist der temperaturabhängige Punkt, an dem [H₃O⁺] = [OH⁻]. K_w steigt mit Temperatur (Autoprotolysé ist endotherm), weshalb der Neutralpunkt mit steigender T sinkt.",
+            "Neutral bedeutet [H₃O⁺] = [OH⁻]. Bei 37 °C: K_w = 2,4 × 10⁻¹⁴. [H₃O⁺] = Wurzel(2,4 × 10⁻¹⁴) ≈ 1,55 × 10⁻⁷ mol/L. pH = −log(1,55 × 10⁻⁷) ≈ 6,81. Der Neutralpunkt liegt bei 37 °C bei pH ≈ 6,8, nicht 7,0. Der physiologische Blut-pH von 7,4 ist bei 37 °C daher leicht basisch. Neutral ist keine feste pH-Zahl — es ist der temperaturabhängige Punkt, an dem [H₃O⁺] = [OH⁻]. K_w steigt mit Temperatur (Autoprotolyse ist endotherm), weshalb der Neutralpunkt mit steigender T sinkt.",
           hints: [
             "Neutral bedeutet [H₃O⁺] = [OH⁻]. Wenn K_w = [H₃O⁺]·[OH⁻] und beide gleich sind: [H₃O⁺] = Wurzel(K_w).",
             "K_w bei 37 °C ist größer als bei 25 °C — sinkt oder steigt der pH-Neutralpunkt bei höherer Temperatur?",
@@ -445,99 +335,7 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
         "Das Bicarbonat-Puffersystem und Henderson-Hasselbalch berechnen und interpretieren können",
         "Acetyl-CoA als zentrale metabolische Schnittstelle benennen",
       ],
-      content: `## Einleitung
-
-Kohlenstoff ist das wichtigste Element des Lebens -- und du begegnest ihm ueberall. Der Bleistift in deiner Hand enthaelt Graphit, der Ring am Finger vielleicht Diamant -- beides ist reiner Kohlenstoff, nur anders gebaut. Und wenn du ausatmest, pustest du CO2 in die Luft.
-
-{{DIAGRAM:covalent-bond}}
-
-**In diesem Kapitel lernst du:**
-- warum Diamant hart und Graphit weich ist, obwohl beide aus Kohlenstoff bestehen
-- wie CO2 im Blut den pH-Wert reguliert
-- warum CO-Vergiftung so gefaehrlich ist
-- was Acetyl-CoA mit deinem Energiestoffwechsel zu tun hat
-
----
-
-## Kohlenstoff -- vier Bindungen, unendliche Moeglichkeiten
-
-Kohlenstoff hat **4 Valenzelektronen** und kann deshalb 4 Bindungen eingehen. Ausserdem kann er sich mit anderen C-Atomen zu langen Ketten, Ringen und Verzweigungen verbinden -- das nennt man **Katenation**. Genau das macht Kohlenstoff zur Grundlage aller organischen Molekuele.
-
-Je nachdem, wie der Kohlenstoff seine Orbitale mischt (Hybridisierung), entstehen verschiedene Formen:
-
-| Hybridisierung | Form | Winkel | Beispiel |
-|---|---|---|---|
-| sp3 | Tetraeder | 109,5 Grad | Diamant, Methan |
-| sp2 | Flach-dreieckig | 120 Grad | Graphit, Benzol |
-| sp | Linear | 180 Grad | CO2 |
-
-> **Merke:** Kohlenstoff: 4 Valenzelektronen -- 4 Bindungen -- Katenation -- drei Hybridisierungstypen -- riesige Vielfalt.
-
-## Diamant vs. Graphit -- gleiches Element, andere Welt
-
-Stell dir vor: Diamant und Graphit bestehen aus exakt denselben Atomen!
-
-- **Diamant (sp3):** Jedes C-Atom ist mit 4 Nachbarn verbunden -- ein starres 3D-Netzwerk. Ergebnis: haertestes Mineral, durchsichtig, leitet keinen Strom (Isolator).
-- **Graphit (sp2):** Flache Schichten, die nur durch schwache Van-der-Waals-Kraefte zusammenhaengen. Ein Elektron pro C-Atom ist frei beweglich -- deshalb leitet Graphit Strom und ist weich (Bleistift!).
-
-## CO2 -- der pH-Regulator im Blut
-
-CO2 entsteht bei der Zellatmung und gelangt ins Blut. Dort wandelt **Carboanhydrase** es um:
-
-**CO2 + H2O --> H2CO3 --> HCO3- + H+**
-
-{{DIAGRAM:functional-groups}}
-
-Dieses **Bicarbonat-Puffersystem** haelt deinen Blut-pH bei 7,4. Einfach gerechnet: pH = 6,1 + log(24/1,2) = 7,4. Die Lunge steuert CO2 (schnell), die Niere steuert HCO3- (langsam).
-
-Uebrigens: CO2 ist trotz polarer C=O-Bindungen insgesamt **apolar** -- weil das Molekuel linear ist und sich die Dipole gegenseitig aufheben.
-
-## CO -- das unsichtbare Gift
-
-CO ist farb- und geruchlos, aber extrem giftig. Es bindet **250-mal staerker** an Haemoglobin als Sauerstoff. Das blockierte Haemoglobin (HbCO) kann keinen O2 mehr transportieren.
-
-Typisches Szenario: defekter Gasboiler im Bad. Symptome: Kopfschmerz, Schwindel, kirschrote Haut (Spaetzeichen). Behandlung: 100 % Sauerstoff -- das verdraengt CO vom Haemoglobin.
-
-## Acetyl-CoA -- das Stoffwechsel-Drehkreuz
-
-Acetyl-CoA ist der zentrale Knotenpunkt im Energiestoffwechsel. Es entsteht aus:
-- **Glykolyse** (ueber Pyruvat)
-- **Fettabbau** (beta-Oxidation)
-- **Aminosaeure-Abbau**
-
-Von dort geht es weiter in den **Zitratzyklus** -- das ist wie ein Kreisverkehr, in den alle Energiequellen einmuenden.
-
-> **Merke:** Acetyl-CoA = Drehkreuz -- Glykolyse, Fettabbau und Aminosaeureabbau muenden hier ein.
-
----
-
-## MedAT-Fokus
-
-- Diamant vs. Graphit: sp3 = Isolator, hart; sp2 = Leiter, weich
-- CO2 apolar: lineare Geometrie, Dipole heben sich auf
-- CO-Vergiftung: 250x staerkere Hb-Bindung als O2; Antidot = 100 % O2
-- pH-Berechnung: 6,1 + log(24/1,2) = 7,4
-
-## Zusammenfassung
-
-- Kohlenstoff: 4 Bindungen, Katenation, 3 Hybridisierungen
-- Diamant (sp3, hart, Isolator) vs. Graphit (sp2, weich, Leiter)
-- CO2: linear, apolar; im Blut als Bicarbonat-Puffer
-- CO: 250x staerkere Hb-Affinitaet als O2 -- Antidot: reiner Sauerstoff
-- Acetyl-CoA: zentrales Stoffwechsel-Drehkreuz`,
-      contentExtended: `## Einleitung
-
-Ein defekter Gasboiler produziert farb- und geruchloses **Kohlenmonoxid** — und jedes Jahr sterben Menschen daran, weil CO mit **250-fach höherer Affinität** als Sauerstoff an Hämoglobin bindet. Die Rettung: reiner Sauerstoff als Antidot. CO ist nur eine der vielen Erscheinungsformen des **Kohlenstoffs**: Dasselbe Element bildet den härtesten Stoff der Welt (Diamant, sp³) und einen der weichsten Feststoffe (Graphit, sp²). Im Blut liegt Kohlenstoff als CO₂ vor und wird über den Bicarbonat-Puffer zum zentralen pH-Regulator.
-
-**In diesem Kapitel lernst du:**
-- warum Diamant und Graphit trotz gleicher Atome völlig verschiedene Eigenschaften haben (Hybridisierung entscheidet)
-- warum CO₂ trotz polarer Bindungen insgesamt apolar ist und wie es im Blut als Puffer wirkt
-- wie CO-Vergiftung funktioniert und warum 100 % Sauerstoff das Antidot ist
-- welche Rolle Acetyl-CoA als Stoffwechsel-Drehkreuz spielt und wie Cyanid die Atmungskette blockiert
-
----
-
-## Kohlenstoff — das Element des Lebens
+      content: `## Kohlenstoff — das Element des Lebens
 
 {{DIAGRAM:covalent-bond}}
 
@@ -605,33 +403,7 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 - **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1
 - **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (blockiert FA-Import ins Mitochondrium)
 
-> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Diamant vs. Graphit? → Diamant sp³, Isolator, hart; Graphit sp², Leiter, weich (delokalisiertes π)
-- Warum ist CO₂ apolar? → Lineare Geometrie (sp) → zwei C=O-Dipole kompensieren sich
-- CO-Vergiftung: Antidot? → 100 % O₂ (hyperbar bei schweren Fällen); HWZ HbCO sinkt von 5 h auf ~60 min
-
-**Typische Fallen:**
-- CO₂ ist apolar trotz polarer C=O-Bindungen — lineare Geometrie hebt die Dipole auf
-- CO ist nicht CO₂: CO ist hochgiftig (Hb-Affinität 250x), CO₂ ist ein Stoffwechselprodukt
-- Diamant ist Isolator, Graphit ist Leiter — beide bestehen aus reinem Kohlenstoff
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Kohlenstoff**: 4 Valenzelektronen → tetravalent; Katenation = Fähigkeit zur C-C-Kettenbildung → Grundlage der organischen Chemie
-- **Hybridisierung**: sp³ (Tetraeder, 109,5°, Diamant/Alkane); sp² (trigonal-planar, 120°, Benzol/Graphit); sp (linear, 180°, CO₂)
-- **Allotrope**: Diamant (sp³, Isolator, hart); Graphit (sp², Leiter, weich); Graphen (Einzelschicht); Fullerene (C₆₀-Käfige)
-- **CO₂**: sp-hybridisiert, linear, apolar (Dipole kompensieren sich); Treibhausgas; CO₂ + H₂O ⇌ H⁺ + HCO₃⁻ (Puffersystem)
-- **CO-Toxizität**: 250× höhere Hb-Affinität als O₂ → HbCO → O₂-Transport blockiert; kirschrote Haut (Spätzeichen); Antidot: 100 % O₂
-- **Cyanid (CN⁻)**: hemmt Cytochrom-c-Oxidase (Komplex IV) → Atmungskette blockiert → histotoxische Hypoxie
-- **Acetyl-CoA**: Drehkreuz des Stoffwechsels — Glykolyse, β-Oxidation, Aminosäureabbau münden ein → Zitratzyklus`,
+> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.`,
       sections: [
         {
           heading: "Allotrope des Kohlenstoffs",
@@ -834,82 +606,7 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
         "Salpeter- und Schwefelsäure als Industriesäuren und ihre Reaktionen darstellen",
         "Die medizinische Bedeutung von Iod (Schilddrüse), Chlor (Desinfektion) und Fluor (Kariesprophylaxe) erläutern",
       ],
-      content: `## Einleitung
-
-Stickstoff, Schwefel und die Halogene -- drei Elementgruppen, die in deinem Koerper eine riesige Rolle spielen. Stickstoff steckt in jeder Aminosaeure. Schwefel haelt Proteine zusammen. Und ohne Iod wuerden deine Schilddruesenhormone fehlen.
-
-{{DIAGRAM:periodic-table}}
-
-**In diesem Kapitel lernst du:**
-- wie der Haber-Bosch-Prozess funktioniert und warum er so wichtig ist
-- warum NO ein wichtiges Signalmolekuel ist (und wie Nitroglyzerin gegen Herzschmerzen hilft)
-- warum H2S so tueckisch giftig ist
-- wofuer dein Koerper Fluor, Chlor und Iod braucht
-
----
-
-## Stickstoff -- in jeder Aminosaeure
-
-Stickstoff (N) macht 78 % der Luft aus. Das N2-Molekuel hat eine extrem starke Dreifachbindung (945 kJ/mol) -- deshalb ist es fast unreaktiv.
-
-Damit Pflanzen Stickstoff nutzen koennen, muss er erst "fixiert" werden:
-- **Biologisch:** Bakterien in Pflanzenwurzeln (Nitrogenase) -- braucht 16 ATP pro N2
-- **Industriell (Haber-Bosch):** N2 + 3 H2 --> 2 NH3 bei 400-500 Grad C, 150-300 bar, mit Eisen-Katalysator
-
-> **Merke:** Haber-Bosch = Kompromiss: Niedrige Temperatur waere fuer das Gleichgewicht besser, aber zu langsam. Also: mittlere Temperatur + hoher Druck + Katalysator.
-
-**NO (Stickstoffmonoxid)** ist ein Signalstoff in deinen Blutgefaessen. Es sorgt fuer Gefaesserweiterung. Nitroglyzerin-Tabletten bei Herzschmerzen wirken genau so: Sie setzen NO frei.
-
-**Ammoniak (NH3)** ist im Blut giftig -- die Leber entgiftet ihn ueber den **Harnstoffzyklus** zu Harnstoff, der ueber den Urin ausgeschieden wird.
-
-## Schwefel -- haelt Proteine zusammen
-
-Schwefel steckt in zwei Aminosaeuren: **Cystein** (-SH) und **Methionin** (-S-). Cystein kann **Disulfidbruecken** bilden -- das sind S-S-Bindungen zwischen zwei Cysteinen, die Proteine stabilisieren (z. B. Insulin, Antikoerper, Haare).
-
-{{DIAGRAM:ionic-bond}}
-
-**H2S (Schwefelwasserstoff)** riecht nach faulen Eiern -- aber Achtung: Ab ~100 ppm laehmt es deinen Geruchssinn! Du riechst nichts mehr, obwohl die Konzentration toedlich sein kann. H2S hemmt (wie Blausaeure) die Atmungskette.
-
-## Halogene -- von Zahnpasta bis Schilddruese
-
-Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel. Ihre Kraft nimmt von oben nach unten ab: **F2 > Cl2 > Br2 > I2**.
-
-| Halogen | Alltags-Rolle |
-|---|---|
-| **Fluor (F)** | Zahnpasta! F- ersetzt OH- im Zahnschmelz --> Fluorapatit = saeurefester |
-| **Chlor (Cl)** | Schwimmbad-Desinfektion; Cl- = wichtigstes Anion ausserhalb der Zellen; HCl im Magen |
-| **Iod (I)** | Schilddruesenhormone T3 (3 Iod-Atome) und T4 (4 Iod-Atome); Iodmangel --> Kropf |
-
-> **Merke:** F- schuetzt Zaehne, Cl- macht Magensaeure, I- baut Schilddruesenhormone. Oxidationskraft: F2 > Cl2 > Br2 > I2.
-
----
-
-## MedAT-Fokus
-
-- Haber-Bosch: exotherm + weniger Mol Gas --> niedrige T + hoher Druck gut, aber Kompromiss noetig
-- H2S: Geruchslaehmung ab 100 ppm -- besonders tueckisch!
-- T3 = 3 Iod, biologisch aktiv; T4 = 4 Iod, Prohormon
-- Halogene: Oxidationskraft nimmt von oben nach unten ab
-
-## Zusammenfassung
-
-- N2: Dreifachbindung, fast unreaktiv; Haber-Bosch fixiert N2 zu NH3
-- NO: Signalmolekuel fuer Gefaesserweiterung; Nitroglyzerin setzt NO frei
-- Schwefel: Disulfidbruecken stabilisieren Proteine; H2S laehmt Geruchssinn
-- Halogene: F- fuer Zaehne, Cl- fuer Magen, I- fuer Schilddruese`,
-      contentExtended: `## Einleitung
-
-Nitroglyzerin lindert Angina-pectoris-Schmerzen innerhalb von Minuten — weil es im Körper zu **Stickstoffmonoxid (NO)** zerfällt, das die Blutgefäße erweitert. Der gleiche Signalstoff, den dein Endothel ständig produziert. Stickstoff begegnet dir in der Chemie noch als N₂ (mit einer der stärksten Bindungen überhaupt: 945 kJ/mol), als Ammoniak (Haber-Bosch, Harnstoffzyklus) und in jeder Aminosäure. Dieses Kapitel behandelt auch **Schwefel** (Disulfidbrücken, H₂S-Toxizität), die **Halogene** (Fluor für Zahnschmelz, Iod für Schilddrüsenhormone) und wichtige Industriesäuren.
-
-**In diesem Kapitel lernst du:**
-- warum der Haber-Bosch-Prozess ein Kompromiss aus Kinetik und Thermodynamik ist und warum er die wichtigste Reaktion der Menschheitsgeschichte ist
-- wie NO als Signalmolekül wirkt und welche Medikamente diesen Weg nutzen
-- warum H₂S besonders tückisch ist (Geruchslähmung ab ~100 ppm) und welche Enzyme es hemmt
-- wie Fluorid den Zahnschmelz schützt, Iod die Schilddrüsenhormone T₃/T₄ bildet und welche Folgen Iodmangel hat
-
----
-
-## Stickstoff (N) — das häufigste Atmosphärengas
+      content: `## Stickstoff (N) — das häufigste Atmosphärengas
 
 {{DIAGRAM:periodic-table}}
 
@@ -966,33 +663,7 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 **Iod (I):** Sublimiert bei Raumtemperatur zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika:** Methimazol und PTU hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I.
 
-> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Haber-Bosch Kompromiss? → Exotherm + Δn < 0; niedrige T gut für K, aber zu langsam → 400-500 °C + hoher Druck + Fe-Katalysator
-- Warum ist H₂S besonders tückisch? → Ab ~100 ppm Geruchslähmung → kein Warngeruch mehr; hemmt Komplex IV
-- T₃ vs. T₄? → T₃ = 3 Iod, biologisch aktiv; T₄ = 4 Iod, Prohormon (wird peripher zu T₃ konvertiert)
-
-**Typische Fallen:**
-- Oxidationskraft der Halogene nimmt von oben nach unten ab: F₂ > Cl₂ > Br₂ > I₂
-- NO (Signalmolekül) ist nicht NO₂ (braunes, giftiges Gas); konz. HNO₃ → NO₂, verd. → NO
-- Hypothyreose: TSH hoch (Stimulation); Hyperthyreose: TSH niedrig (negative Rückkopplung)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **N₂**: N≡N (945 kJ/mol) → sehr stabil; Fixierung durch Nitrogenase (16 ATP) oder Haber-Bosch (Fe-Kat.)
-- **NO**: aus L-Arginin (NOS) → Guanylatzyklase → cGMP → Vasodilatation; Basis der Nitrat-Therapie (Nitroglyzerin) und PDE5-Hemmer (Sildenafil)
-- **Schwefel**: Cystein (-SH) + Methionin (-S-); Disulfidbrücken stabilisieren Proteine; H₂S hemmt Komplex IV (wie CN⁻); Geruchslähmung ab ~100 ppm
-- **Halogene Oxidationskraft**: F₂ > Cl₂ > Br₂ > I₂ (E° nimmt von oben nach unten ab)
-- **F⁻**: Fluorapatit (säurefester als Hydroxylapatit) → Kariesprophylaxe; Fluorose bei Überdosierung
-- **Cl₂/HClO**: Desinfektion; Cl⁻ = wichtigstes extrazelluläres Anion; HCl in Magensäure
-- **I⁻**: essenziell für T₃ (3 I) und T₄ (4 I); TPO oxidiert I⁻ zu I₂ → Iodierung von Thyreoglobulin; Iodmangel → Struma`,
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.`,
       sections: [
         {
           heading: "Stickstoff: Haber-Bosch und NO-Signaling",
@@ -1217,108 +888,13 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
         "Lewis-Säure Elektronenpaarakzeptor",
         "Korrespondierendes Säure-Base-Paar",
         "Ampholyt",
-        "Autoprotolysé",
+        "Autoprotolyse",
         "Ionenprodukt Kw",
         "pH-Wert Berechnung",
         "pH + pOH = 14",
         "Blut-pH 7,35-7,45",
       ],
-      content: `## Einleitung
-
-Warum schmeckt Zitronensaft sauer? Warum fuehlt sich Seife glitschig an? Das liegt an **Saeuren und Basen** -- zwei der wichtigsten Stoffklassen in der Chemie. Auch in deinem Blut spielt der pH-Wert eine lebenswichtige Rolle: Schon kleine Abweichungen koennen gefaehrlich werden.
-
-{{DIAGRAM:ph-scale}}
-
-**In diesem Kapitel lernst du:**
-- was Saeuren und Basen sind (drei verschiedene Definitionen)
-- was konjugierte Saeure-Base-Paare sind
-- wie du den pH-Wert berechnest
-- warum der Neutralpunkt bei Koerpertemperatur nicht bei pH 7 liegt
-
----
-
-## Drei Definitionen -- von eng bis weit
-
-**1. Arrhenius (die engste):** Saeure gibt H+ in Wasser ab, Base gibt OH- ab. Funktioniert nur in Wasser.
-
-**2. Broensted-Lowry (die wichtigste fuer den MedAT):**
-- **Saeure** = Protonendonor (gibt H+ ab)
-- **Base** = Protonenakzeptor (nimmt H+ auf)
-
-Beispiel: Essigsaeure gibt ein H+ an Wasser ab --> Acetat-Ion + H3O+.
-
-**3. Lewis (die weiteste):**
-- **Lewis-Saeure** = Elektronenpaarakzeptor
-- **Lewis-Base** = Elektronenpaardonor
-
-Lewis umfasst auch Reaktionen ganz ohne Protonen (z. B. BF3 + NH3).
-
-> **Merke:** Broensted: Saeure gibt H+ ab, Base nimmt H+ auf. Lewis: Saeure nimmt Elektronenpaar auf, Base gibt es ab -- keine Protonen noetig.
-
-## Konjugierte Paare und Ampholyte
-
-Wenn eine Saeure ein H+ abgibt, entsteht ihre **konjugierte Base**. Regel: **Starke Saeure = schwache konjugierte Base** (und umgekehrt).
-
-**Ampholyte** koennen sowohl als Saeure als auch als Base reagieren -- z. B. Wasser (H2O) und Hydrogencarbonat (HCO3-).
-
-{{DIAGRAM:ionic-bond}}
-
-## pH-Wert -- die Saeure-Skala
-
-**pH = -log[H3O+]**
-
-Das heisst: pH 3 bedeutet [H3O+] = 10^-3 mol/L. Eine Aenderung um **1 pH-Einheit = Faktor 10** in der H3O+-Konzentration!
-
-| pH | Charakter |
-|---|---|
-| 0-3 | stark sauer |
-| 7 | neutral (bei 25 Grad C) |
-| 11-14 | stark basisch |
-
-Wichtig: **pH + pOH = 14** (bei 25 Grad C)
-
-## Ionenprodukt des Wassers
-
-Wasser reagiert mit sich selbst (Autoprotolyse): H2O + H2O --> H3O+ + OH-
-
-**Kw = [H3O+] x [OH-] = 10^-14** (bei 25 Grad C)
-
-Bei **37 Grad C** (Koerpertemperatur) ist Kw groesser --> der Neutralpunkt liegt bei pH ca. 6,8, nicht bei 7!
-
-## Blut-pH
-
-Normbereich: **7,35-7,45**. Unter 7,35 = **Azidose**, ueber 7,45 = **Alkalose**. Lebensgefahr bei pH unter 7,0 oder ueber 7,7.
-
-> **Merke:** pH = -log[H3O+]; 1 pH-Einheit = Faktor 10. Bei 37 Grad C ist neutral ca. pH 6,8, nicht 7,0.
-
----
-
-## MedAT-Fokus
-
-- Broensted-Saeure = Protonendonor; Lewis-Saeure = Elektronenpaarakzeptor
-- Neutralpunkt bei 37 Grad C: pH ca. 6,8 (Kw steigt mit Temperatur)
-- Ampholyt = kann H+ abgeben und aufnehmen (H2O, HCO3-)
-- pH-Differenz von 1 = Faktor 10 in H3O+-Konzentration
-
-## Zusammenfassung
-
-- Arrhenius: nur in Wasser; Broensted: Protonen-Transfer; Lewis: Elektronenpaar-Transfer
-- Starke Saeure --> schwache konjugierte Base
-- pH = -log[H3O+]; pH + pOH = 14; Kw = 10^-14 (25 Grad C)
-- Blut-pH: 7,35-7,45; Azidose/Alkalose bei Abweichung`,
-      contentExtended: `## Einleitung
-
-Warum schmeckt Zitronensaft sauer und warum fühlt sich Seife glitschig an? Hinter diesen Alltagsphänomenen stecken **Säuren und Basen** — zwei der wichtigsten Stoffklassen der Chemie. Im menschlichen Körper entscheidet ein winziger pH-Unterschied im Blut (7,35 vs. 7,45) über Gesundheit und Lebensgefahr. Drei historische Definitionen — von Arrhenius über Brønsted-Lowry bis Lewis — beschreiben Säuren und Basen mit zunehmender Allgemeinheit. Dieses Kapitel zeigt dir, warum ein Verständnis dieser Konzepte für die Medizin unverzichtbar ist.
-
-**In diesem Kapitel lernst du:**
-- worin sich die drei Säure-Base-Definitionen (Arrhenius, Brønsted, Lewis) unterscheiden und welche die allgemeinste ist
-- was konjugierte Säure-Base-Paare sind und warum eine starke Säure immer eine schwache konjugierte Base hat
-- wie der pH-Wert berechnet wird und warum eine pH-Einheit den Faktor 10 bedeutet
-- warum der Neutralpunkt bei Körpertemperatur nicht bei pH 7 liegt und was das klinisch bedeutet
-
----
-
-## Historische Entwicklung der Säure-Base-Theorie
+      content: `## Historische Entwicklung der Säure-Base-Theorie
 
 Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzeptionelle Erweiterungen erfahren. Die älteste und engste Definition stammt von **Arrhenius** (1884): Säuren sind Substanzen, die in wässriger Lösung H⁺-Ionen (Protonen) freisetzen, Basen sind Substanzen, die OH⁻-Ionen freisetzen. Diese Definition ist nur auf wässrige Lösungen anwendbar und erklärt beispielsweise nicht, warum Ammoniak (NH₃) basisch reagiert, obwohl es keine OH⁻-Gruppe enthält.
 
@@ -1352,7 +928,7 @@ Diese Definition ist die weiteste und umfasst auch Reaktionen ohne Protonentrans
 
 Wichtige Lewis-Säure-Base-Reaktion: BF3 + :NH3 --> F3B<-NH3 (Addukt; Lewis-S. + Lewis-B.)
 
-{{DIAGRAM:ionic-bond}}
+{{DIAGRAM:ph-scale}}
 
 ## Das Ionenprodukt des Wassers (Kw) und die Autoprotolyse
 
@@ -1397,33 +973,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 > **Merke:** Brønsted-Säure = Protonendonor (gibt H⁺ ab), Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf). Lewis erweitert: Säure = Elektronenpaarakzeptor, Base = Elektronenpaardonor — keine H⁺-Übertragung nötig.
 
-> **Merke:** pH = −log[H₃O⁺]; eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration. Bei 37 °C (Körpertemperatur) liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- „Was ist eine Brønsted-Säure?" → Protonendonator (gibt H⁺ ab)
-- „Was ist eine Lewis-Säure?" → Elektronenpaarakzeptor (BF₃, Fe³⁺); kein H⁺ nötig
-- „Neutralpunkt bei 37 °C?" → pH ≈ 6,8 (Kw steigt mit Temperatur)
-- „Was ist ein Ampholyt?" → Kann H⁺ abgeben und aufnehmen (H₂O, HCO₃⁻)
-
-**Typische Fallen:**
-- BF₃ ist Lewis-Säure, aber keine Brønsted-Säure — Brønsted ⊆ Lewis, nicht umgekehrt
-- „Neutral" bedeutet [H₃O⁺] = [OH⁻], nicht automatisch pH 7 — bei 37 °C ist neutral pH ≈ 6,8
-- pH-Differenz von 1 = Faktor 10 in der H₃O⁺-Konzentration (logarithmische Skala)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Arrhenius**: Säure = H⁺ in Wasser; Base = OH⁻ in Wasser (engste Definition, nur wässrig)
-- **Brønsted-Lowry**: Säure = Protonendonator (gibt H⁺ ab); Base = Protonenakzeptor (nimmt H⁺ auf) — gilt auch in nicht-wässrigen Medien
-- **Lewis**: Säure = Elektronenpaar-Akzeptor; Base = Elektronenpaar-Donor (allgemeinste Definition, kein H⁺ nötig)
-- **Korrespondierendes Paar**: HA und A⁻ (unterscheiden sich um H⁺); starke Säure → schwache konjugierte Base
-- **Ampholyt**: kann sowohl H⁺ abgeben als auch aufnehmen (H₂O, HCO₃⁻, HPO₄²⁻)
-- **Kw = [H₃O⁺]·[OH⁻] = 10⁻¹⁴** (25 °C); pH + pOH = 14; pH = −log[H₃O⁺]
-- **pH ±1** = Faktor 10 in H₃O⁺-Konzentration; Blut-pH 7,35–7,45; < 7,35 = Azidose; > 7,45 = Alkalose
-- **Bei 37 °C**: Kw ≈ 2,4×10⁻¹⁴ → Neutralpunkt pH ≈ 6,8 (nicht 7)`,
+> **Merke:** pH = −log[H₃O⁺]; eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration. Bei 37 °C (Körpertemperatur) liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.`,
       lernziele: [
         "Die Säure-Base-Definitionen nach Arrhenius, Brønsted-Lowry und Lewis erklären und vergleichen können",
         "Korrespondierende Säure-Base-Paare identifizieren und den Begriff Ampholyt erklären",
@@ -1644,108 +1194,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
         "pKa + pKb = 14",
         "Dissoziationsgrad",
       ],
-      content: `## Einleitung
-
-Stell dir vor, du tropfst Zitronensaft in Wasser -- das wird sauer, klar. Aber warum ist Essig im Salat viel milder als deine Magensaeure, obwohl beides “Saeure” ist? Der Unterschied: **Starke Saeuren** geben alle ihre Protonen ab, **schwache Saeuren** nur einen kleinen Teil. Der **pKa-Wert** sagt dir, wie stark eine Saeure wirklich ist.
-
-**In diesem Kapitel lernst du:**
-- den Unterschied zwischen starken und schwachen Saeuren
-- was der pKa-Wert bedeutet und wie du den pH berechnest
-- warum Phosphorsaeure und Kohlensaeure mehrere Protonen in Stufen abgeben
-- warum Kochsalz neutral, Natriumacetat aber basisch reagiert
-
----
-
-## Starke Saeuren -- alles wird abgegeben
-
-{{DIAGRAM:ph-scale}}
-
-Wenn du Salzsaeure (HCl) in Wasser gibst, gibt jedes HCl-Molekuel sein Proton komplett ab. Das ist wie eine Tuete Bonbons, die du auf einmal auskippst -- **alles raus**. Deshalb ist die pH-Berechnung einfach:
-
-**pH = -log c(Saeure)**
-
-Beispiel: 0,01 mol/L HCl -> pH = -log(0,01) = **pH 2**. Die bekanntesten starken Saeuren: HCl (Magensaeure), HNO3, H2SO4.
-
----
-
-## Schwache Saeuren -- nur ein Bruchteil dissoziiert
-
-{{DIAGRAM:covalent-bond}}
-
-Essigsaeure (wie im Essig) gibt nur etwa 1 von 100 Protonen ab. Der Rest bleibt als Molekuel in der Loesung. Das Gleichgewicht beschreibt die **Saeurekonstante Ka**. Je groesser Ka, desto staerker die Saeure. Noch praktischer ist der **pKa = -log Ka**:
-
-- pKa < 0: starke Saeure (z. B. HCl)
-- pKa 4-7: schwache Saeure (z. B. Essigsaeure, pKa = 4,75)
-- pKa > 10: sehr schwache Saeure
-
-> **Merke:** Kleiner pKa = staerkere Saeure. Das ist wie bei pH: kleine Zahl = mehr Saeure.
-
-Fuer den pH einer schwachen Saeure gilt die Naeherung: **pH = 1/2 * (pKa - log c0)**. Beispiel: 0,1 mol/L Essigsaeure -> pH = 1/2 * (4,75 + 1) = 2,87.
-
----
-
-## Mehrprotonige Saeuren -- Stufe fuer Stufe
-
-Manche Saeuren koennen mehrere Protonen abgeben, aber immer nacheinander. Stell dir eine Treppe vor: Jede Stufe ist schwieriger als die vorige.
-
-**Phosphorsaeure (H3PO4):** pKa1 ~ 2,1 | pKa2 ~ 7,2 (wichtig fuer Puffer!) | pKa3 ~ 12,4
-
-**Kohlensaeure (H2CO3):** pKa1 ~ 6,35 (wichtig fuer Blutpuffer!) | pKa2 ~ 10,33
-
-Fuer die Medizin merke dir: Die Stufe nahe pH 7 ist die biologisch relevante.
-
----
-
-## Starke und schwache Basen
-
-Starke Basen wie **NaOH** (Natronlauge) dissoziieren komplett: pH = 14 - pOH. Beispiel: 0,1 mol/L NaOH -> pOH = 1 -> pH = 13.
-
-Schwache Basen wie **NH3** (Ammoniak, riecht stechend) reagieren nur teilweise. Die Beziehung: **pKa + pKb = 14**. NH3 hat pKb = 4,75, also hat NH4+ einen pKa = 9,25.
-
----
-
-## Warum reagiert Kochsalz neutral, Natriumacetat aber basisch?
-
-Wenn du Salz in Wasser loest, kann die Loesung neutral, sauer oder basisch sein -- je nach Herkunft:
-
-- **NaCl** (starke Saeure + starke Base): neutral, pH ~ 7
-- **Natriumacetat** (schwache Saeure + starke Base): basisch -- Acetat klaut sich H+ aus dem Wasser
-- **NH4Cl** (starke Saeure + schwache Base): sauer -- NH4+ gibt H+ ans Wasser ab
-
-> **Merke:** pKa + pKb = 14 fuer jedes korrespondierende Paar. Starke Saeure hat schwache konjugierte Base und umgekehrt.
-
----
-
-## MedAT-Fokus
-
-- pH schwache Saeure: pH = 1/2 * (pKa - log c0) -- diese Formel musst du koennen
-- Kleiner pKa = staerkere Saeure (nicht umgekehrt!)
-- Verduennung erhoeht den Dissoziationsgrad (Le Chatelier)
-- Im Blut: H2CO3 hat effektiven pKa von 6,1, Phosphat pKa2 von 7,2
-
----
-
-## Zusammenfassung
-
-- **Starke Saeuren** (HCl, HNO3, H2SO4): geben alles ab, pH = -log c0
-- **Schwache Saeuren**: nur Bruchteil dissoziiert, pH = 1/2(pKa - log c0)
-- **pKa**: kleiner = staerker; Essigsaeure 4,75; NH4+ 9,25
-- **Mehrprotonig**: Phosphorsaeure 3 Stufen, Kohlensaeure 2 Stufen
-- **pKa + pKb = 14**: starke Saeure <-> schwache konj. Base
-- **Salze**: NaCl neutral, Natriumacetat basisch, NH4Cl sauer`,
-      contentExtended: `## Einleitung
-
-Magensäure (HCl) hat einen pH von etwa 1 — sie löst Fleisch und Knochen auf. Essigsäure im Salatdressing hat dagegen einen ähnlichen Säuregehalt, aber einen pH von knapp 3. Warum ist die eine so viel "stärker" als die andere, obwohl beide sauer schmecken? Der Unterschied liegt in der **Dissoziation**: Starke Säuren geben all ihre Protonen ab, schwache Säuren nur einen Bruchteil. Mit der Säurekonstante Ka und dem pKa-Wert kannst du quantitativ beschreiben, wie stark eine Säure wirklich ist — und das ist entscheidend für Pufferberechnungen, Medikamentenwirkung und das Verständnis des Blut-pH.
-
-**In diesem Kapitel lernst du:**
-- worin sich starke und schwache Säuren grundsätzlich unterscheiden und wann man welche Formel zur pH-Berechnung braucht
-- was der pKa-Wert aussagt und warum ein kleinerer pKa eine stärkere Säure bedeutet
-- wie mehrprotonige Säuren (Phosphorsäure, Kohlensäure) stufenweise dissoziieren und welche Stufe klinisch relevant ist
-- warum manche Salzlösungen sauer oder basisch reagieren (Hydrolyse)
-
----
-
-## Starke Säuren: Vollständige Dissoziation
+      content: `## Starke Säuren: Vollständige Dissoziation
 
 {{DIAGRAM:ph-scale}}
 
@@ -1757,7 +1206,7 @@ Beispiel: 0,01 mol/L HCl -> [H3O+] = 0,01 = 10^-2 mol/L -> **pH = 2**
 
 ## Schwache Säuren: Gleichgewichtige Dissoziation
 
-{{DIAGRAM:covalent-bond}}
+{{DIAGRAM:ph-scale}}
 
 **Schwache Säuren** dissoziieren nur teilweise. Es stellt sich ein Gleichgewicht ein:
 
@@ -1854,34 +1303,7 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
 
 Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und wird von Belegzellen durch aktiven H+/K+-ATPase-Transport sezerniert. Protonenpumpeninhibitoren (PPI wie Omeprazol) hemmen dieses Enzym und erhöhen den Magen-pH -- Standardtherapie bei Refluxerkrankung und Magenulzera.
 
-> **Merke:** pKa + pKb = 14 (bei 25 Grad C) für jedes korrespondierende Säure-Base-Paar. Starke Säure -> schwache korrespondierende Base. Schwache Säure -> starke korrespondierende Base.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- "pH einer schwachen Säure?" -> pH = 1/2(pKa - log c0)
-- "pKa von NH4+ aus pKb von NH3?" -> 14 - 4,75 = 9,25
-- "Welche Spezies bei pH 7 für Phosphat?" -> pKa2 ~ 7,2 -> etwa 50:50 H2PO4-/HPO4 2-
-- "Natriumacetat-Lösung sauer oder basisch?" -> basisch (konjugierte Base der schwachen Essigsäure)
-
-**Typische Fallen:**
-- Kleiner pKa = stärkere Säure (nicht umgekehrt!) -- Konzentration und Stärke sind verschiedene Dinge
-- Dissoziationsgrad alpha steigt bei Verdünnung (Le Chatelier), nicht bei Konzentrierung
-- H2CO3 hat im Blut einen effektiven pKa von 6,1, nicht den Tabellenwert 6,35
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Starke Säuren** (HCl, HNO3, H2SO4): alpha ~ 1 (vollständige Dissoziation); pH = -log c0 direkt
-- **Schwache Säuren**: alpha << 1; pH = 1/2(pKa - log c0) (Näherung für c0 >> Ka); Ka = [H3O+][A-]/[HA]
-- **pKa**: kleiner = stärkere Säure; pKa < 0: stark; 4-7: schwach; > 10: sehr schwach
-- **Biologisch wichtig**: H2CO3 pKa1 = 6,35 (oder 6,1 effektiv); H3PO4 pKa2 = 7,2; NH4+ pKa = 9,25
-- **Mehrprotonige Säuren**: Ka1 >> Ka2 >> Ka3; pH durch Ka1 dominiert; Puffer nutzt relevante pKa-Stufe
-- **pKa + pKb = 14**: Starke Säure <-> schwache konjugierte Base; schwache Säure <-> starke konjugierte Base
-- **Halbäquivalenzpunkt** der Titration: pH = pKa (optimale Pufferzone)`,
+> **Merke:** pKa + pKb = 14 (bei 25 Grad C) für jedes korrespondierende Säure-Base-Paar. Starke Säure -> schwache korrespondierende Base. Schwache Säure -> starke korrespondierende Base.`,
       lernziele: [
         "Den Unterschied zwischen starken und schwachen Säuren anhand der Dissoziation und Ka/pKa erklären",
         "Den pH starker Säuren und Basen direkt berechnen",
@@ -2111,102 +1533,11 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Azidose Alkalose",
         "Lunge CO₂ Regulation",
         "Niere HCO₃⁻ Regulation",
+        "Bohr-Effekt",
+        "Carboanhydrase",
+        "Acetazolamid",
       ],
-      content: `## Einleitung
-
-Stell dir vor, du machst Sport und produzierst dabei Milchsaeure. Trotzdem bleibt dein Blut-pH bei 7,4 -- wie geht das? Dein Koerper hat **Puffer**: Das sind Mischungen, die Saeure und Base abfangen wie ein Schwamm. Der wichtigste Puffer im Blut heisst Kohlensaeure-Bicarbonat-System. Wenn er versagt, wird es lebensgefaehrlich.
-
-**In diesem Kapitel lernst du:**
-- wie ein Puffer funktioniert (schwache Saeure + ihre konjugierte Base)
-- die Henderson-Hasselbalch-Formel -- die wichtigste Puffergleichung
-- warum dein Blut-pH bei 7,4 liegt und wie Lunge und Niere das regeln
-- was bei Azidose und Alkalose passiert
-
----
-
-## Was ist ein Puffer?
-
-{{DIAGRAM:ph-scale}}
-
-Stell dir einen Eimer Wasser vor. Wenn du Saeure reinkippst, sinkt der pH sofort. Aber wenn im Eimer schon ein **Puffer** ist -- z. B. Backpulver (Natriumbicarbonat) -- passiert fast nichts. Der Puffer faengt die Saeure ab.
-
-Ein Puffer braucht immer zwei Partner:
-- Eine **schwache Saeure (HA)** -- faengt zugegebene Base ab
-- Ihre **konjugierte Base (A-)** -- faengt zugegebene Saeure ab
-
-> **Merke:** Henderson-Hasselbalch: pH = pKa + log([Base]/[Saeure]). Bei gleichen Mengen Base und Saeure ist pH = pKa -- dort puffert das System am besten.
-
----
-
-## Henderson-Hasselbalch -- die Pufferformel
-
-**pH = pKa + log([A-]/[HA])**
-
-Das ist die wichtigste Gleichung fuer Puffer. Was sie sagt:
-- Wenn [A-] = [HA] (50:50): pH = pKa (bester Pufferbereich)
-- Mehr Base als Saeure: pH steigt
-- Mehr Saeure als Base: pH sinkt
-- **Pufferbereich: pKa +/- 1** -- ausserhalb kann der Puffer nicht mehr helfen
-
----
-
-## Der Blutpuffer -- CO2 und Bicarbonat
-
-{{DIAGRAM:enzyme-substrate}}
-
-Dein Blut nutzt das System CO2/HCO3- mit einem effektiven pKa von 6,1. Warum ist der Blut-pH trotzdem 7,4? Weil das Verhaeltnis [HCO3-]/[CO2] = 20:1 ist! Henderson-Hasselbalch: 6,1 + log(20) = 6,1 + 1,3 = 7,4.
-
-Zwei Organe regeln das:
-- **Lunge** (schnell, Minuten): atmet CO2 ab oder haelt es zurueck
-- **Niere** (langsam, Stunden-Tage): scheidet H+ aus oder haelt HCO3- zurueck
-
-Daneben gibt es den **Phosphatpuffer** (pKa = 7,2, vor allem in Zellen und Urin) und **Proteinpuffer** (Haemoglobin, Histidin -- mengenmäßig am wichtigsten).
-
----
-
-## Wenn der Puffer versagt: Azidose und Alkalose
-
-| Stoerung | pH | Was passiert? | Beispiel |
-|---|---|---|---|
-| Resp. Azidose | < 7,35 | CO2 steigt | COPD, Lahmung |
-| Resp. Alkalose | > 7,45 | CO2 sinkt | Hyperventilation, Angst |
-| Met. Azidose | < 7,35 | HCO3- sinkt | Ketoazidose (Diabetes) |
-| Met. Alkalose | > 7,45 | HCO3- steigt | Erbrechen |
-
-> **Merke:** Blut-pH 7,4 = pKa(6,1) + log(20:1). Lunge reguliert CO2 schnell, Niere reguliert HCO3- langsam. Azidose = pH unter 7,35, Alkalose = pH ueber 7,45.
-
----
-
-## MedAT-Fokus
-
-- Henderson-Hasselbalch auswendig: pH = pKa + log([A-]/[HA])
-- Blut: pKa(eff.) = 6,1 (nicht 6,35!)
-- Pufferbereich: pKa +/- 1
-- Phosphatpuffer wirkt intrazellulaer, nicht im Plasma
-
----
-
-## Zusammenfassung
-
-- **Puffer** = schwache Saeure + konjugierte Base, faengt H+ und OH- ab
-- **Henderson-Hasselbalch**: pH = pKa + log([A-]/[HA])
-- **Pufferbereich**: pKa +/- 1; bester Puffer bei pH = pKa (50:50)
-- **Blutpuffer**: CO2/HCO3-, pKa = 6,1, Verhaeltnis 20:1 -> pH 7,4
-- **Lunge**: CO2 schnell; **Niere**: HCO3- langsam
-- **Azidose** (pH < 7,35) und **Alkalose** (pH > 7,45) bei Pufferversagen`,
-      contentExtended: `## Einleitung
-
-Ein Marathonläufer produziert enorme Mengen Milchsäure -- trotzdem bleibt sein Blut-pH erstaunlich stabil bei 7,4. Wie schafft der Körper das? Die Antwort sind **Puffersysteme**: Mischungen aus schwacher Säure und ihrer konjugierten Base, die sowohl zugesetzte Säure als auch Base abfangen. Der wichtigste Blutpuffer ist das Carbonat-System (CO2/HCO3-), reguliert durch Lunge und Niere. Versagt dieses System, drohen lebensbedrohliche Azidose oder Alkalose. Die **Henderson-Hasselbalch-Gleichung** ist das zentrale Werkzeug, um Puffergleichgewichte zu berechnen.
-
-**In diesem Kapitel lernst du:**
-- wie ein Puffer funktioniert und warum er den pH-Wert stabil hält
-- wie du mit der Henderson-Hasselbalch-Gleichung den pH einer Pufferlösung berechnest
-- warum der Blut-pH 7,4 beträgt, obwohl der pKa des Carbonatpuffers nur 6,1 ist
-- welche Rolle Lunge (schnell, CO2) und Niere (langsam, HCO3-) bei der pH-Regulation spielen
-
----
-
-## Was ist ein Puffer?
+      content: `## Was ist ein Puffer?
 
 {{DIAGRAM:ph-scale}}
 
@@ -2252,7 +1583,7 @@ Die **Pufferkapazität** gibt an, wie viel Säure oder Base ein Puffer aufnehmen
 
 ## Das Carbonat-Puffersystem im Blut
 
-{{DIAGRAM:enzyme-substrate}}
+{{DIAGRAM:ph-scale}}
 
 Das wichtigste Puffersystem im Blut ist das **Kohlensäure-Bicarbonat-System**:
 
@@ -2302,43 +1633,43 @@ Der Carbonat-Puffer kann versagen, wenn:
 - **CO2 sinkt** (respiratorische Alkalose: Hyperventilation)
 - **HCO3- steigt** (metabolische Alkalose: z. B. Erbrechen, Diuretika)
 
+## Hämoglobin als Puffer: Bohr-Effekt
+
+Hämoglobin (Hb) ist nach dem Carbonat-System der zweitwichtigste Blutpuffer:
+
+**HbO₂ + H⁺ ⇌ HHb⁺ + O₂**
+
+Abfallendes pH (saures Milieu bei Muskelarbeit, CO₂, Laktat) → Le Chatelier → mehr O₂ wird freigesetzt → Sauerstoffversorgung des aktiven Gewebes steigt. Bei hohem pH (Lunge) verschiebt sich das Gleichgewicht links → mehr O₂ wird gebunden.
+
+Zusätzlich beeinflusst 2,3-DPG (Diphosphoglycerat) die O₂-Affinität: Bei hohem 2,3-DPG (z. B. bei Hypoxie, Anämie) sinkt die O₂-Affinität → mehr O₂-Abgabe ins Gewebe.
+
+## Carboanhydrase
+
+{{DIAGRAM:enzyme-substrate}}
+
+Die **Carboanhydrase (CA)** katalysiert: CO₂ + H₂O ⇌ H₂CO₃
+
+- Beschleunigung: ca. 10⁶-fach (k_cat ≈ 10⁶/s — eines der schnellsten Enzyme)
+- Cofaktor: Zn²⁺ im aktiven Zentrum
+- Vorkommen: Erythrozyten (CO₂-Transport), Nierentubuli (Säure-Base), Augenkammerwasser (Glaukompathogenese)
+
+Ohne CA würde der CO₂-Transport im Blut und die pH-Regulierung zusammenbrechen. **Acetazolamid** hemmt CA und wird als Diuretikum und zur Glaukomtherapie eingesetzt.
+
 ---
 
 > **Merke:** Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]). Bei [A-] = [HA] ist pH = pKa (maximale Pufferkapazität). Effektiver Pufferbereich: pKa +/- 1.
 
 > **Merke:** Blut-pH 7,4 entsteht durch [HCO3-]/[CO2] ~ 20:1 bei pKa(eff.) = 6,1. Lunge reguliert pCO2 schnell (Minuten), Niere reguliert HCO3- langsam (Stunden bis Tage). Versagt die Kompensation, drohen Azidose (pH < 7,35) oder Alkalose (pH > 7,45).
 
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- "Henderson-Hasselbalch-Formel?" -> pH = pKa + log([A-]/[HA])
-- "Warum Blut-pH 7,4 bei pKa 6,1?" -> [HCO3-]/[CO2] ~ 20:1 -> pH = 6,1 + log(20) ~ 7,4
-- "Lunge vs. Niere bei pH-Regulation?" -> Lunge reguliert CO2 (schnell, Minuten), Niere HCO3- (langsam, Stunden-Tage)
-- "Pufferbereich?" -> pKa +/- 1
-
-**Typische Fallen:**
-- Im Blut gilt pKa(eff.) = 6,1 (nicht der Tabellenwert 6,35 für reine H2CO3)
-- Phosphatpuffer wirkt v.a. intrazellulär und im Urin, nicht primär im Plasma
-- Maximale Pufferkapazität liegt bei pH = pKa (Verhältnis 1:1), nicht bei pH 7
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Puffer** = schwache Säure + konjugierte Base; fängt H+ (durch A-) und OH- (durch HA) ab
-- **Henderson-Hasselbalch**: pH = pKa + log([A-]/[HA]); Pufferoptimum bei pH = pKa (Verhältnis 1:1)
-- **Pufferbereich**: pKa +/- 1 (Verhältnis 1:10 bis 10:1); außerhalb -> Puffer versagt
-- **Blut-Carbonat-Puffer**: pKa(eff.) = 6,1; pH 7,4 -> [HCO3-]/[CO2] ~ 20:1
-- **Lunge**: reguliert CO2 schnell (Minuten); **Niere**: reguliert HCO3- langsam (Stunden-Tage)
-- **Phosphatpuffer**: H2PO4-/HPO4 2-, pKa = 7,2; v.a. intrazellulär und im Urin
-- **Proteinpuffer**: quantitativ wichtigster Puffer; Histidinreste (pKa ~ 6); Bohr-Effekt bei Hb
-- **Azidose** (pH < 7,35): resp. (pCO2 hoch) oder metab. (HCO3- niedrig); **Alkalose** (pH > 7,45): resp. (pCO2 niedrig) oder metab. (HCO3- hoch)`,
+> **Merke:** Bohr-Effekt: pH ↓ / pCO₂ ↑ → Hb-O₂-Affinität ↓ → mehr O₂-Abgabe ans Gewebe. Le Chatelier auf molekularer Ebene.`,
       lernziele: [
         "Die Henderson-Hasselbalch-Gleichung anwenden und den pH von Pufferlösungen berechnen",
         "Den Pufferbereich (pH = pKa ± 1) und die Pufferkapazität erklären",
         "Das Carbonat-Puffersystem des Blutes mit der Henderson-Hasselbalch-Gleichung analysieren",
         "Die Rolle von Phosphat- und Proteinpuffern im Körper beschreiben",
         "Azidose und Alkalose auf das Versagen des Carbonat-Puffersystems zurückführen",
+        "Den Bohr-Effekt als Le-Chatelier-Prinzip in der Hämoglobin-O₂-Bindung erläutern.",
+        "Die Rolle der Carboanhydrase im CO₂-Transport und der pH-Regulierung erklären.",
       ],
       sections: [
         {
@@ -2359,6 +1690,12 @@ Der Carbonat-Puffer kann versagen, wenn:
           merksatz:
             "Pufferkapazität maximal bei pH = pKa. Konzentriertere Puffer = höhere Kapazität. Begrenzt: Erschöpfung möglich.",
         },
+        {
+          heading: "Bohr-Effekt und Carboanhydrase",
+          text: "Bohr-Effekt: HbO₂ + H⁺ ⇌ HHb⁺ + O₂. Niedriger pH in aktiven Geweben senkt O₂-Affinität von Hb → O₂-Abgabe steigt (Le Chatelier). In der Lunge (hoher pH) bindet Hb wieder O₂. Carboanhydrase (CA): Zn²⁺-Metalloenzym, beschleunigt CO₂ + H₂O ⇌ H₂CO₃ um 10⁶-fach. Vorkommen: Erythrozyten, Nierentubuli, Augenkammerwasser. Acetazolamid hemmt CA → Diuretikum und Glaukomtherapie.",
+          merksatz:
+            "Bohr-Effekt: pH ↓ → Hb gibt mehr O₂ ab. Carboanhydrase: Zn²⁺-Enzym, 10⁶× schneller, gehemmt durch Acetazolamid.",
+        },
       ],
 
       merksätze: [
@@ -2372,6 +1709,9 @@ Der Carbonat-Puffer kann versagen, wenn:
         "Zugabe von H⁺: A⁻ + H⁺ → HA. Zugabe von OH⁻: HA + OH⁻ → A⁻ + H₂O.",
         "Azidose: pH < 7,35; Alkalose: pH > 7,45 – Pufferversagen oder Überbelastung.",
         "Pufferkapazität erschöpft → pH fällt/steigt stark → medizinischer Notfall.",
+        "Bohr-Effekt: niedrigeres pH → Hb gibt mehr O₂ ab (Le Chatelier).",
+        "Carboanhydrase: CO₂ + H₂O ⇌ H₂CO₃ (10⁶× beschleunigt, Zn²⁺-Enzym).",
+        "Acetazolamid hemmt Carboanhydrase → Diuretikum und Glaukomtherapie.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -2534,99 +1874,7 @@ Der Carbonat-Puffer kann versagen, wenn:
         "Anionenlücke",
         "Kompensationsmechanismen",
       ],
-      content: `## Einleitung
-
-Du hast eine Flasche mit Saeure, aber weisst nicht wie stark sie ist. Wie findest du es heraus? Du tropfst langsam eine Base dazu, bis alles neutralisiert ist -- das ist eine **Titration**. Ein Farbindikator zeigt dir den Endpunkt an. Klinisch nutzen Aerzte dasselbe Prinzip: Die **Blutgasanalyse (BGA)** misst, ob dein Blut zu sauer (Azidose) oder zu basisch (Alkalose) ist.
-
-**In diesem Kapitel lernst du:**
-- wie eine Titration funktioniert und warum der Endpunkt nicht immer bei pH 7 liegt
-- was der Halbäquivalenzpunkt ist (dort gilt pH = pKa)
-- welchen Farbindikator du wann brauchst
-- wie du eine BGA liest und die vier Saeure-Base-Stoerungen erkennst
-
----
-
-## Titration -- Tropfen fuer Tropfen
-
-{{DIAGRAM:ph-scale}}
-
-Bei einer Titration gibst du tropfenweise Base zu einer Saeure (oder umgekehrt). Am **Äquivalenzpunkt** sind genau gleich viele Mol Saeure und Base vorhanden:
-
-**n(Saeure) = n(Base) -> c1 * V1 = c2 * V2**
-
-Aber Achtung: Der pH am Äquivalenzpunkt haengt von den Partnern ab!
-
-{{DIAGRAM:covalent-bond}}
-
-- **Starke Saeure + starke Base** (z. B. HCl + NaOH): pH = 7 (Kochsalz ist neutral)
-- **Schwache Saeure + starke Base** (z. B. Essig + NaOH): pH > 7 (Acetat reagiert basisch)
-- **Starke Saeure + schwache Base** (z. B. HCl + Ammoniak): pH < 7 (NH4+ reagiert sauer)
-
-Am **Halbäquivalenzpunkt** (halbes Volumen) ist genau die Haelfte neutralisiert, und es gilt: **pH = pKa**. Das ist der beste Pufferbereich.
-
-> **Merke:** Halbäquivalenzpunkt: pH = pKa. Äquivalenzpunkt: pH = 7 nur bei starke Saeure + starke Base.
-
----
-
-## Indikatoren -- Farbe zeigt den pH
-
-Indikatoren sind selbst schwache Saeuren, die in saurer Form eine andere Farbe haben als in basischer Form. Der Umschlag passiert bei ihrem pKa.
-
-| Indikator | Umschlag | Sauer | Basisch |
-|---|---|---|---|
-| Methylorange | pH 3-4 | Rot | Gelb |
-| Phenolphthalein | pH 8-10 | Farblos | Rot-violett |
-
-**Regel:** Waehle den Indikator passend zum Äquivalenzpunkt-pH. Essig + NaOH -> basischer ÄP -> Phenolphthalein. HCl + Ammoniak -> saurer ÄP -> Methylorange.
-
----
-
-## BGA -- Blutgasanalyse lesen
-
-Dein Blut hat normalerweise: pH 7,35-7,45 | pCO2 35-45 mmHg | HCO3- 22-26 mmol/L
-
-| Stoerung | pH | Primaer | Kompensation |
-|---|---|---|---|
-| Resp. Azidose | niedrig | CO2 hoch (Lunge) | Niere: HCO3- hoch |
-| Resp. Alkalose | hoch | CO2 niedrig (Lunge) | Niere: HCO3- niedrig |
-| Met. Azidose | niedrig | HCO3- niedrig | Lunge: CO2 niedrig (Kussmaul) |
-| Met. Alkalose | hoch | HCO3- hoch | Lunge: CO2 hoch |
-
-Beispiel: Diabetiker mit pH 7,2, HCO3- = 10, pCO2 = 25 -> metabolische Azidose (HCO3- niedrig) mit respiratorischer Kompensation (Kussmaul-Atmung).
-
-> **Merke:** pH < 7,35 = Azidose, pH > 7,45 = Alkalose. pCO2 veraendert = respiratorisch, HCO3- veraendert = metabolisch.
-
----
-
-## MedAT-Fokus
-
-- Schwache Saeure + starke Base: ÄP bei pH > 7 (nicht 7!)
-- Halbäquivalenzpunkt (pH = pKa) ist NICHT der Äquivalenzpunkt
-- Kussmaul-Atmung = tiefe Hyperventilation bei metabolischer Azidose
-
----
-
-## Zusammenfassung
-
-- **Titration**: c1*V1 = c2*V2 am Äquivalenzpunkt
-- **ÄP-pH**: starke+starke = 7; schwache Saeure+starke Base > 7; starke Saeure+schwache Base < 7
-- **Halbäquivalenzpunkt**: pH = pKa (50:50 Verhaeltnis)
-- **Phenolphthalein**: fuer basische ÄP; **Methylorange**: fuer saure ÄP
-- **BGA**: pH, pCO2, HCO3- -- 4 Stoerungen unterscheiden
-- **Normwerte**: pH 7,35-7,45; pCO2 35-45; HCO3- 22-26`,
-      contentExtended: `## Einleitung
-
-In der Apotheke steht auf einer Flasche "Salzsäure, unbekannte Konzentration". Wie findest du heraus, wie viel Säure tatsächlich enthalten ist? Die Antwort ist die **Titration** -- ein klassisches Verfahren, bei dem du tropfenweise eine Base bekannter Konzentration zugibst, bis die Säure exakt neutralisiert ist. Der Farbumschlag eines Indikators zeigt den Endpunkt an. Die dabei entstehende S-förmige Titrationskurve verrät nicht nur die Konzentration, sondern auch die Stärke der Säure. Klinisch nutzt die Medizin dasselbe Prinzip: Die Blutgasanalyse (BGA) misst den Säure-Base-Status des Blutes und erkennt lebensbedrohliche Azidosen und Alkalosen.
-
-**In diesem Kapitel lernst du:**
-- wie eine Titration abläuft und warum der Äquivalenzpunkt nicht immer bei pH 7 liegt
-- woran du den Halbäquivalenzpunkt erkennst und warum dort pH = pKa gilt
-- wie du den passenden Indikator für eine Titration auswählst
-- wie du eine Blutgasanalyse (BGA) liest und die vier Säure-Base-Störungen unterscheidest
-
----
-
-## Grundprinzip der Titration
+      content: `## Grundprinzip der Titration
 
 {{DIAGRAM:ph-scale}}
 
@@ -2638,7 +1886,7 @@ Eine **Titration** ist ein analytisches Verfahren zur quantitativen Bestimmung e
 
 ## Titrationskurven: Vier wichtige Fälle
 
-{{DIAGRAM:covalent-bond}}
+{{DIAGRAM:ph-scale}}
 
 ### 1. Starke Säure mit starker Base (z. B. HCl mit NaOH)
 
@@ -2737,33 +1985,7 @@ Der normale Blut-pH liegt bei **7,35-7,45**. Vier primäre Störungen sind zu un
 
 > **Merke:** Am Halbäquivalenzpunkt einer Titration (Volumen = 1/2 des Äquivalenzvolumens) gilt pH = pKa -- dort liegt die maximale Pufferkapazität. Der Äquivalenzpunkt liegt bei pH = 7 nur für starke Säure + starke Base; bei schwacher Säure + starker Base liegt er im Basischen.
 
-> **Merke:** BGA-Diagnostik: pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Primär pCO2 verändert = respiratorisch; primär HCO3- verändert = metabolisch. Kompensation erfolgt jeweils durch das andere Organ (Lunge <-> Niere).
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- "Äquivalenzpunkt-pH bei schwacher Säure + starker Base?" -> pH > 7 (Acetat hydrolysiert basisch)
-- "Welcher Indikator für Essigsäure-Titration mit NaOH?" -> Phenolphthalein (basischer ÄP)
-- "Was ist Kussmaul-Atmung?" -> Kompensatorische Hyperventilation bei metabolischer Azidose
-- "BGA: Ist die Störung respiratorisch oder metabolisch?" -> pCO2 primär verändert = respiratorisch; HCO3- primär verändert = metabolisch
-
-**Typische Fallen:**
-- Schwache Säure + starke Base ergibt am Äquivalenzpunkt pH > 7 (nicht pH 7!)
-- Halbäquivalenzpunkt (pH = pKa) ist nicht dasselbe wie Äquivalenzpunkt (n(Säure) = n(Base))
-- Metabolische Azidose wird respiratorisch kompensiert (Hyperventilation -> pCO2 sinkt), nicht renal
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Titration**: c1V1 = c2V2 am Äquivalenzpunkt (1:1-Stöchiometrie); n(Säure) = n(Base)
-- **Äquivalenzpunkt pH**: Starke Säure + starke Base -> pH 7; schwache Säure + starke Base -> pH > 7; schwache Base + starke Säure -> pH < 7
-- **Halbäquivalenzpunkt**: pH = pKa der Säure (Henderson-Hasselbalch, Verhältnis 1:1)
-- **Indikatoren**: schwache Säuren mit zwei Farbformen; Farbumschlag bei pKa(Indikator); muss mit Äquivalenzpunkt-pH übereinstimmen
-- **Phenolphthalein**: pH 8,2-10 (farblos -> rot-violett); für schwache Säure + starke Base
-- **Methylorange**: pH 3,1-4,4 (rot -> gelb); für starke Säure + schwache Base
-- **4 Säure-Base-Störungen**: Resp. Azidose (pCO2 hoch, pH niedrig); Resp. Alkalose (pCO2 niedrig, pH hoch); Met. Azidose (HCO3- niedrig, pH niedrig); Met. Alkalose (HCO3- hoch, pH hoch)
-- **BGA-Normwerte**: pH 7,35-7,45; pCO2 35-45 mmHg; HCO3- 22-26 mmol/L; BE +/-2`,
+> **Merke:** BGA-Diagnostik: pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Primär pCO2 verändert = respiratorisch; primär HCO3- verändert = metabolisch. Kompensation erfolgt jeweils durch das andere Organ (Lunge <-> Niere).`,
       lernziele: [
         "Titrationskurven für starke und schwache Säure/Base-Kombinationen beschreiben und den Äquivalenzpunkt lokalisieren",
         "Den pH am Äquivalenzpunkt vorhersagen (neutral, sauer oder basisch) und begründen",
@@ -2983,88 +2205,7 @@ Der normale Blut-pH liegt bei **7,35-7,45**. Vier primäre Störungen sind zu un
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
-      content: `## Einleitung
-
-Warum rostet ein Nagel, aber ein Goldring nicht? Warum liefert dein Essen Energie? Beides hat mit **Redox-Reaktionen** zu tun -- dem Austausch von Elektronen zwischen Stoffen. Jedes Mal wenn du atmest, laufen in deinen Zellen Tausende solcher Reaktionen ab.
-
-**In diesem Kapitel lernst du:**
-- was Oxidation und Reduktion bedeuten (Eselsbruecke: OIL RIG)
-- wie du Oxidationszahlen berechnest
-- wie du Redox-Gleichungen aufstellst
-- was Disproportionierung ist (z. B. bei Wasserstoffperoxid)
-
----
-
-## OIL RIG -- die Grundregel
-
-{{DIAGRAM:periodic-table}}
-
-Die Eselsbruecke **OIL RIG** sagt dir alles: **O**xidation **I**s **L**oss (Elektronenverlust), **R**eduction **I**s **G**ain (Elektronengewinn). Beides passiert immer gleichzeitig -- wie Geben und Nehmen.
-
-Stell dir vor, Zink gibt 2 Elektronen an Kupfer: Zn -> Zn2+ (oxidiert, Reduktionsmittel) und Cu2+ -> Cu (reduziert, Oxidationsmittel). Zink rostet, Kupfer wird glaenzend -- wie bei einem alten Cent.
-
-> **Merke:** Reduktionsmittel wird oxidiert (gibt Elektronen ab). Oxidationsmittel wird reduziert (nimmt Elektronen auf). Die Namen beschreiben, was sie mit dem Partner machen.
-
----
-
-## Oxidationszahlen -- Buchhaltung fuer Elektronen
-
-{{DIAGRAM:ionic-bond}}
-
-Oxidationszahlen (OZ) zeigen dir, wer Elektronen abgegeben oder aufgenommen hat. Die Regeln:
-
-1. Reine Elemente (Fe, O2): OZ = 0
-2. Ionen: OZ = Ladung (Na+ -> +1, Cl- -> -1)
-3. Fluor: immer -1
-4. Sauerstoff: meist -2 (Ausnahme: Wasserstoffperoxid H2O2 -> -1)
-5. Wasserstoff: meist +1
-6. **Summenregel**: alle OZ zusammen = Gesamtladung
-
-**Beispiel:** H2SO4: 2(+1) + S + 4(-2) = 0 -> S = **+6**. KMnO4: +1 + Mn + 4(-2) = 0 -> Mn = **+7**.
-
----
-
-## Redox-Gleichungen aufstellen
-
-Die **Halbreaktion-Methode** geht so: Schreibe Oxidation und Reduktion getrennt auf, gleiche Atome aus (erst Hauptatome, dann O mit H2O, dann H mit H+), dann Ladung mit Elektronen, dann multipliziere und addiere.
-
----
-
-## Disproportionierung
-
-Bei der **Disproportionierung** wird dasselbe Element gleichzeitig oxidiert UND reduziert. Beispiel: 2H2O2 -> 2H2O + O2. Das Sauerstoff-Atom in H2O2 (OZ = -1) geht teils zu -2 (in H2O) und teils zu 0 (in O2). Auch das Enzym Superoxiddismutase macht genau das.
-
----
-
-## MedAT-Fokus
-
-- OIL RIG: Oxidation = Elektronenverlust, Reduktion = Elektronengewinn
-- Oxidationsmittel wird reduziert (nicht oxidiert!)
-- O in Peroxiden: OZ = -1 (nicht -2)
-- KMnO4: Mn geht von +7 auf +2 (sauer), +4 (neutral), +6 (basisch)
-
----
-
-## Zusammenfassung
-
-- **OIL RIG**: Oxidation = Elektronen abgeben (OZ steigt), Reduktion = Elektronen aufnehmen (OZ sinkt)
-- **OZ-Regeln**: Elemente 0, F immer -1, O meist -2, H meist +1, Summe = Ladung
-- **Halbreaktion**: Atome -> O (H2O) -> H (H+) -> Elektronen -> angleichen -> addieren
-- **Disproportionierung**: ein Element wird gleichzeitig oxidiert und reduziert
-- **NADH/FADH2**: biologische Reduktionsmittel in der Atmungskette`,
-      contentExtended: `## Einleitung
-
-Warum rostet Eisen, aber Gold nicht? Warum liefern unsere Mitochondrien Energie aus Nahrung? Die Antwort liegt in **Redox-Reaktionen** -- dem Transfer von Elektronen zwischen Teilchen. Jedes Mal, wenn du atmest, laufen in deinen Zellen Tausende Redox-Reaktionen ab: NADH gibt Elektronen an die Atmungskette ab und treibt so die ATP-Synthese an. Das Verständnis von Oxidation, Reduktion und Oxidationszahlen ist daher nicht nur Prüfungsstoff, sondern der Schlüssel zur Biochemie des Lebens.
-
-**In diesem Kapitel lernst du:**
-- was Oxidation und Reduktion auf Elektronenebene bedeuten (OIL RIG) und warum beides immer gekoppelt ist
-- wie du Oxidationszahlen systematisch bestimmst, auch bei komplexen Verbindungen wie KMnO4
-- wie du Redox-Gleichungen mit der Halbreaktion-Methode Schritt für Schritt ausgleichst
-- was Disproportionierung ist und warum sie bei H2O2 und in der Biologie (Superoxiddismutase) vorkommt
-
----
-
-## Definitionen: OIL RIG
+      content: `## Definitionen: OIL RIG
 
 {{DIAGRAM:periodic-table}}
 
@@ -3115,33 +2256,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
 
 ---
 
-> **Merke:** OIL RIG: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt). Reduktionsmittel wird selbst oxidiert; Oxidationsmittel wird selbst reduziert.
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- "Was bedeutet OIL RIG?" -> Oxidation Is Loss, Reduction Is Gain
-- "OZ von Schwefel in H2SO4?" -> +6
-- "Was ist eine Disproportionierung?" -> Ein Element wird gleichzeitig oxidiert und reduziert
-- "Oxidationsmittel wird ...?" -> reduziert
-
-**Typische Fallen:**
-- Oxidationsmittel wird reduziert, nicht oxidiert
-- Sauerstoff hat in Peroxiden (H2O2) die OZ -1, nicht -2
-- KMnO4 reduziert Mn zu verschiedenen Stufen je nach Medium: +2 (sauer), +4 (neutral), +6 (basisch)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **OIL RIG**: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt)
-- **Reduktionsmittel** wird oxidiert; **Oxidationsmittel** wird reduziert -- immer gekoppelt
-- **OZ-Regeln**: Elemente = 0; Ionen = Ladung; F immer -1; O meist -2 (Peroxide -1); H meist +1 (Hydride -1)
-- **Summenregel**: Summe(OZ x n) = Gesamtladung; Neutralmolekül = 0
-- **Halbreaktion-Methode**: Atome -> O (H2O) -> H (H+) -> Ladung (e-) -> Elektronen angleichen -> addieren
-- **Disproportionierung**: ein Element wird gleichzeitig oxidiert UND reduziert (2H2O2 -> 2H2O + O2)
-- **NADH/FADH2**: biologische Reduktionsmittel; geben Elektronen an Atmungskette ab -> ATP-Synthese
-- **KMnO4**: Mn +7 -> +2 (sauer), +4 (neutral), +6 (basisch); starkes Oxidationsmittel`,
+> **Merke:** OIL RIG: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt). Reduktionsmittel wird selbst oxidiert; Oxidationsmittel wird selbst reduziert.`,
       lernziele: [
         "Oxidation und Reduktion mithilfe des Elektronen-Konzepts (OIL RIG) definieren und anwenden",
         "Oxidationszahlen für beliebige Verbindungen nach den Prioritätsregeln systematisch bestimmen",
@@ -3348,99 +2463,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
-      content: `## Einleitung
-
-Hast du dich schon mal gefragt, wie dein **Smartphone-Akku** Strom erzeugt? Oder warum ein Eisennagel rostet, aber ein Goldring nicht? Dahinter steckt die **Elektrochemie** -- sie verbindet chemische Reaktionen mit elektrischem Strom. Und das Beste: Dieselben Prinzipien erklaeren auch, warum deine Nervenzellen "feuern" koennen.
-
-**In diesem Kapitel lernst du:**
-- was eine galvanische Zelle ist und wie sie Strom erzeugt
-- die Eselsbruecke AnOx RedKat (Anode = Oxidation, Kathode = Reduktion)
-- wie du berechnest, ob eine Reaktion von alleine ablaeuft
-- was Elektrolyse ist und wie das Faraday-Gesetz funktioniert
-
----
-
-## Galvanische Zellen -- die "natuerliche Batterie"
-
-{{DIAGRAM:ionic-bond}}
-
-Stell dir zwei Metalle in Salzloesungen vor, verbunden durch einen Draht. Das unedlere Metall (z. B. Zink) gibt freiwillig Elektronen ab -- diese fliessen durch den Draht zum edleren Metall (z. B. Kupfer). Dieser Elektronenfluss ist elektrischer Strom.
-
-**Das Daniell-Element (Zn/Cu) -- das Standardbeispiel:**
-- **Anode (minus):** Zink loest sich auf: Zn -> Zn2+ + 2e- (Oxidation)
-- **Kathode (plus):** Kupfer scheidet sich ab: Cu2+ + 2e- -> Cu (Reduktion)
-- **Zellspannung:** E = E-Kathode - E-Anode = +0,34 V - (-0,76 V) = **+1,10 V**
-
-Die **Salzbruecke** gleicht die Ladung zwischen den Haelften aus -- ohne sie wuerde der Strom sofort stoppen.
-
-> **Merke:** **AnOx RedKat** -- AN-ode = OX-idation, RED-uktion = KAT-hode. Diese Regel gilt IMMER, egal ob galvanische Zelle oder Elektrolyse!
-
----
-
-## Standardpotenziale -- welches Metall ist "staerker"?
-
-{{DIAGRAM:periodic-table}}
-
-Die **Spannungsreihe** ordnet Metalle nach ihrer Bereitschaft, Elektronen abzugeben:
-- **Hoher E-Wert** = will Elektronen aufnehmen = starkes Oxidationsmittel (z. B. F2 mit +2,87 V)
-- **Niedriger E-Wert** = will Elektronen abgeben = starkes Reduktionsmittel (z. B. Li mit -3,04 V)
-
-**Ob eine Reaktion spontan ablaeuft:** E-Zelle = E-Kathode - E-Anode. Ist das Ergebnis **positiv**, laeuft die Reaktion von alleine. Die Verknuepfung zur Energie: DeltaG = -n * F * E-Zelle. Positives E bedeutet negatives DeltaG -- also spontan.
-
----
-
-## Elektrolyse -- Strom erzwingt eine Reaktion
-
-Elektrolyse ist das Gegenteil: Hier zwingt man eine Reaktion, die nicht von alleine laufen wuerde, durch externe Spannung. So gewinnt man z. B. Aluminium aus Erz oder beschichtet Schmuck mit Gold (Galvanik).
-
-**Faraday-Gesetz:** m = (M * I * t) / (n * F)
-- m = abgeschiedene Masse, M = Molmasse, I = Strom, t = Zeit, n = Elektronen, F = 96485 C/mol
-
----
-
-## Batterien und Korrosion
-
-**Primaerzellen** (Einwegbatterien): chemische Reaktion ist nicht umkehrbar. **Akkumulatoren** (wiederaufladbar): Blei-Akku im Auto, Li-Ionen-Akku im Handy.
-
-**Korrosion** ist eine ungewollte galvanische Reaktion -- z. B. Rost: Eisen gibt Elektronen ab und zerfaellt. Schutz: **Opferanode** (ein noch unedleres Metall wie Zink opfert sich stattdessen) oder **Passivierung** (Aluminium bildet eine schuetzende Oxidschicht).
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- "AnOx RedKat?" -> Anode = Oxidation, Kathode = Reduktion
-- "Zellspannung berechnen?" -> E-Kathode minus E-Anode (Daniell: 0,34 - (-0,76) = 1,10 V)
-- "Galvanisch vs. Elektrolyse?" -> Galvanisch = spontan, Anode negativ; Elektrolyse = erzwungen, Anode positiv
-
-**Typische Fallen:**
-- E-Zelle = Kathode MINUS Anode (nicht plus!)
-- In der galvanischen Zelle ist die Anode negativ, bei Elektrolyse positiv -- aber AnOx RedKat gilt immer
-- Faraday-Konstante (96485 C/mol) ist nicht dasselbe wie die Faraday-Gesetze
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Galvanische Zelle**: Anode (Oxidation, minus) + Kathode (Reduktion, plus); Elektronen fliessen Anode -> Kathode
-- **AnOx RedKat**: Anode = Oxidation, Kathode = Reduktion (gilt IMMER)
-- **E-Zelle = E-Kathode - E-Anode**: positiv = spontan; Daniell: 1,10 V
-- **DeltaG = -nFE**: negativ = spontan; F = 96485 C/mol
-- **Elektrolyse**: erzwungene Reaktion; m = M*I*t / (n*F)
-- **Korrosionsschutz**: Opferanode (unedles Metall wie Zn), Passivierung (Al2O3-Schutzschicht)`,
-      contentExtended: `## Einleitung
-
-Dein Smartphone-Akku, die Batterie in deiner Fernbedienung, die Goldgewinnung durch Elektrolyse — all das sind Anwendungen der **Elektrochemie**. In einer galvanischen Zelle laeuft eine Redox-Reaktion spontan ab und erzeugt dabei elektrischen Strom. Bei der Elektrolyse ist es umgekehrt: Man zwingt eine nicht-spontane Reaktion mit externem Strom. Beide Prinzipien lassen sich mit den Standardelektrodenpotenzialen quantitativ vorhersagen. Klinisch relevant ist etwa die Korrosion von Implantaten oder die elektrochemische Grundlage von Nervensignalen.
-
-**In diesem Kapitel lernst du:**
-- was Anode und Kathode bedeuten und warum an der Anode immer Oxidation stattfindet (AnOx RedKat)
-- wie du die Zellspannung aus den Standardpotenzialen berechnest und ob eine Reaktion spontan ablaeuft
-- den Zusammenhang zwischen Zellspannung und freier Enthalpie (DeltaG = -nFE)
-- wie Elektrolyse funktioniert und wie du die abgeschiedene Masse mit dem Faraday-Gesetz berechnest
-
----
-
-## Galvanische Zellen (Voltasche Elemente)
+      content: `## Galvanische Zellen (Voltasche Elemente)
 
 {{DIAGRAM:ionic-bond}}
 
@@ -3527,33 +2550,7 @@ Negativer DeltaG-Wert bestaetigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
 - **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
 - **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) koennen galvanische Elemente bilden -> Galvanischer Geschmack
 
-> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je groesser E-Zelle, desto mehr nutzbare elektrische Energie.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- "Was ist AnOx RedKat?" -> Anode = Oxidation, Kathode = Reduktion
-- "Wie berechnet man E-Zelle?" -> E-Kathode - E-Anode (Daniell: 0,34 - (-0,76) = +1,10 V)
-- "Galvanische Zelle vs. Elektrolyse?" -> Galvanisch: spontan, Anode negativ; Elektrolyse: erzwungen, Anode positiv
-
-**Typische Fallen:**
-- E-Zelle = Kathode minus Anode (Subtraktion, nicht Addition!)
-- In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse ist sie positiv -- AnOx RedKat gilt aber in beiden Faellen
-- Die Faraday-Konstante F = 96485 C/mol ist nicht dasselbe wie die Faraday-Gesetze (m = MIt/nF)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Galvanische Zelle**: Anode (Oxidation, negativ) + Kathode (Reduktion, positiv); Elektronen fliessen Anode -> Kathode
-- **AnOx RedKat**: Anode = Oxidation, Kathode = Reduktion (gilt auch bei Elektrolyse)
-- **E-Zelle = E-Kathode - E-Anode**: positiv = spontan; Daniell: 0,34 - (-0,76) = +1,10 V
-- **DeltaG = -n*F*E-Zelle**: n = Elektronen, F = 96485 C/mol; DeltaG < 0 = E-Zelle > 0 = spontan
-- **Spannungsreihe**: hoeheres E = staerkeres Oxidationsmittel; F2 (+2,87 V) > MnO4- > Cl2 > ... > Zn (-0,76 V) > Li (-3,04 V)
-- **Elektrolyse**: erzwungene nicht-spontane Reaktion; m = M*I*t / (n*F) (Faraday-Gesetz)
-- **Korrosionsschutz**: Opferanode (unedles Metall wie Zn), Passivierung (Al2O3-Schutzschicht)`,
+> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je groesser E-Zelle, desto mehr nutzbare elektrische Energie.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -3767,114 +2764,7 @@ Negativer DeltaG-Wert bestaetigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
         "Goldman-Gleichung",
         "K⁺-Nernst −90 mV",
       ],
-      content: `## Einleitung
-
-**Worum geht es?** Stell dir eine Batterie vor: Frisch geladen liefert sie volle Spannung, aber je laenger sie laeuft, desto schwaecher wird sie. *Warum?* Weil sich die Konzentrationen der beteiligten Stoffe aendern. Genau das beschreibt die **Nernst-Gleichung** -- sie beantwortet die Frage: **Wie haengt die elektrische Spannung von der Konzentration ab?**
-
-Und das ist keine rein chemische Spielerei: Deine **Nervenzellen** nutzen dasselbe Prinzip! Sie "feuern", weil auf beiden Seiten der Zellmembran unterschiedliche Ionenkonzentrationen herrschen.
-
-**In diesem Kapitel lernst du:**
-- warum sich die Spannung aendert, wenn man die Konzentrationen veraendert
-- die Nernst-Gleichung und was jeder Buchstabe bedeutet
-- wie ein pH-Messgeraet im Krankenhaus funktioniert
-- warum Nervenzellen ein Ruhemembranpotenzial von ca. -70 mV haben
-
----
-
-{{DIAGRAM:ionic-bond}}
-
-{{DIAGRAM:periodic-table}}
-
-## Warum reicht E_Standard allein nicht aus?
-
-Im letzten Unterkapitel hast du das **Standardpotenzial E** kennengelernt -- die Spannung unter idealen Laborbedingungen. In der Realitaet sind diese Bedingungen fast nie erfuellt. Also brauchen wir eine Formel, die das beruecksichtigt.
-
-**Die Grundidee:** Je mehr Oxidationsmittel vorhanden -> Spannung steigt. Je mehr Reduktionsmittel -> Spannung sinkt. Wie ein Wasserfall: Je groesser der Hoehenunterschied, desto mehr Kraft.
-
----
-
-## Die Nernst-Gleichung
-
-**E = E_Standard - (0,05916 V)/n * log(Q)** (bei 25 Grad C)
-
-| Symbol | Bedeutung |
-|--------|-----------|
-| **E** | Das tatsaechliche Potenzial (gesucht) |
-| **E_Standard** | Das Standardpotenzial (aus Tabelle) |
-| **0,05916 V** | Der "Nernst-Faktor" bei 25 Grad C |
-| **n** | Anzahl uebertragener Elektronen |
-| **Q** | Reaktionsquotient: [Produkte] / [Edukte] |
-
-**Das Minuszeichen ist der Schluessel:** Wenn Q gross wird (Batterie fast leer) -> E wird kleiner. Wenn Q klein ist (Batterie frisch) -> E bleibt hoch.
-
-> **Merke:** Mehr Oxidationsmittel = hoeheres E. Der Nernst-Faktor betraegt **59,16 mV pro Zehnerpotenz** (bei 25 Grad C). Bei Koerpertemperatur (37 Grad C): ca. **61,5 mV**.
-
----
-
-## pH-Messung im Krankenhaus
-
-Die **Glaselektrode** misst den pH-Wert ueber Spannungsaenderung. Pro **pH-Einheit** aendert sich die Spannung um genau **59,16 mV** (bei 25 Grad C).
-
-> **Merke:** Glaselektrode: -59 mV pro pH-Einheit. Klinisch: Blutgasanalysator misst Blut-pH (Norm: 7,35-7,45).
-
----
-
-## Biologische Membranpotenziale
-
-Stell dir eine Nervenzelle vor:
-- **Innerhalb:** viel K+ (ca. 140 mmol/L), wenig Na+ (ca. 15 mmol/L)
-- **Ausserhalb:** wenig K+ (ca. 4 mmol/L), viel Na+ (ca. 145 mmol/L)
-
-Dieser Konzentrationsunterschied erzeugt -- wie bei einer Batterie -- eine Spannung:
-
-| Ion | Nernst-Potenzial |
-|-----|----------|
-| **K+** | **ca. -90 mV** |
-| **Na+** | **ca. +62 mV** |
-
-Das **Ruhemembranpotenzial** liegt bei ca. **-70 mV** (naeher am K+-Wert, weil die Membran hauptsaechlich fuer K+ durchlaessig ist).
-
-> **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial ca. -70 mV (dazwischen, beschrieben durch die **Goldman-Gleichung**).
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- "Nernst-Gleichung?" -> E = E_Standard **minus** (0,05916/n) * log(Q) -- Minuszeichen!
-- "Nernst-Faktor?" -> 59,16 mV pro Zehnerpotenz (25 Grad C)
-- "K+-Nernst?" -> ca. -90 mV
-- "Ruhemembranpotenzial?" -> ca. -70 mV, zwischen K+ und Na+
-
-**Typische Fallen:**
-- Minuszeichen vergessen -> Vorzeichen umgedreht
-- Ruhemembranpotenzial ist NICHT gleich dem K+-Nernst
-- Bei 37 Grad C: Nernst-Faktor 61,5 mV (nicht 59,16 mV)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Nernst-Gleichung**: E = E_Standard - (0,05916/n) * log(Q) -- Konzentration veraendert Spannung
-- **Grundidee**: Mehr Oxidationsmittel -> E steigt. Mehr Reduktionsmittel -> E sinkt
-- **Nernst-Faktor**: 59,16 mV pro Zehnerpotenz (25 Grad C); bei 37 Grad C ca. 61,5 mV
-- **Glaselektrode**: misst pH durch Spannungsaenderung (-59 mV pro pH-Einheit)
-- **K+-Nernst**: ca. -90 mV | **Na+-Nernst**: ca. +62 mV | **Ruhemembranpotenzial**: ca. -70 mV`,
-      contentExtended: `## Einleitung
-
-**Worum geht es?** Stell dir eine Batterie vor: Frisch geladen liefert sie volle Spannung, aber je laenger sie laeuft, desto schwaecher wird sie. *Warum?* Weil sich die Konzentrationen der beteiligten Stoffe aendern. Genau das beschreibt die **Nernst-Gleichung** -- sie beantwortet die Frage: **Wie haengt die elektrische Spannung einer Redoxreaktion von der Konzentration ab?**
-
-Das ist keine rein chemische Spielerei: Dein Koerper nutzt dasselbe Prinzip. Nervenzellen "feuern", weil auf beiden Seiten der Membran unterschiedliche Ionenkonzentrationen herrschen -- und die Spannung, die daraus entsteht, laesst sich mit der Nernst-Gleichung berechnen.
-
-**In diesem Kapitel lernst du:**
-- warum sich die Spannung einer Redoxreaktion aendert, wenn man die Konzentrationen veraendert
-- die Nernst-Gleichung und was jeder Buchstabe darin bedeutet
-- wie ein pH-Messgeraet im Krankenhaus auf diesem Prinzip basiert
-- warum Nervenzellen ein Ruhemembranpotenzial von ca. -70 mV haben
-
----
-
-{{DIAGRAM:ionic-bond}}
+      content: `{{DIAGRAM:ionic-bond}}
 
 {{DIAGRAM:periodic-table}}
 
@@ -3945,33 +2835,7 @@ In der Praxis merkt man sich die Ergebnisse:
 
 Waere die Membran *nur* fuer K+ durchlaessig, laege das Potenzial bei -90 mV. Waere sie *nur* fuer Na+ durchlaessig, bei +62 mV. In der Realitaet ist sie vor allem fuer K+ durchlaessig -- daher liegt das **Ruhemembranpotenzial bei ca. -70 mV** (naeher am K+-Wert).
 
-> **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial (ca. -70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen und wie du sie loest:**
-- "Nernst-Gleichung?" -> E = E_Standard **minus** (0,05916/n) * log(Q) -- achte auf das Minuszeichen!
-- "Was ist der Nernst-Faktor?" -> 59,16 mV pro Zehnerpotenz (25 Grad C)
-- "Nernst-Potenzial fuer K+?" -> ca. -90 mV (viel innen, wenig aussen)
-- "Ruhemembranpotenzial?" -> ca. -70 mV, zwischen K+ und Na+
-
-**Typische Fallen:**
-- Minuszeichen vergessen -> Vorzeichen umgedreht
-- Hohes [Ox] -> E wird **groesser** (nicht kleiner!) -- mehr Oxidationsmittel = staerkerer Antrieb
-- Ruhemembranpotenzial ist **nicht** gleich dem K+-Nernst, sondern liegt zwischen K+ und Na+
-- Bei 37 Grad C: Nernst-Faktor 61,5 mV (nicht 59,16 mV)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Nernst-Gleichung**: E = E_Standard - (0,05916/n) * log(Q) -- beschreibt, wie Konzentration die Spannung veraendert
-- **Grundidee**: Mehr Oxidationsmittel -> staerkerer Antrieb -> E steigt. Mehr Reduktionsmittel -> E sinkt.
-- **Nernst-Faktor**: 59,16 mV pro Zehnerpotenz (25 Grad C); bei 37 Grad C ca. 61,5 mV
-- **Glaselektrode**: misst pH durch Spannungsaenderung (-59 mV pro pH-Einheit)
-- **K+-Nernst**: ca. -90 mV | **Na+-Nernst**: ca. +62 mV | **Ruhemembranpotenzial**: ca. -70 mV`,
+> **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial (ca. -70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.`,
       lernziele: [
         "Die Nernst-Gleichung formulieren und auf konkrete Elektroden- und Zellpotenziale anwenden",
         "Den Einfluss von Konzentration und Temperatur auf Elektrodenpotenziale berechnen und interpretieren",
@@ -4171,95 +3035,9 @@ Waere die Membran *nur* fuer K+ durchlaessig, laege das Potenzial bei -90 mV. Wa
         "Lipidperoxidation",
         "Oxidativer Burst NADPH-Oxidase",
       ],
-      content: `## Einleitung
-
-Sauerstoff ist lebenswichtig -- aber gleichzeitig gefaehrlich. Bei jedem Atemzug entstehen als Nebenprodukte der Atmungskette **reaktive Sauerstoffspezies (ROS)**, die DNA, Proteine und Membranlipide zerstoeren koennen. Der Koerper besitzt daher ein ausgekluegeltes Schutzsystem: Enzyme wie SOD, Katalase und Glutathion-Peroxidase fangen ROS ab. Versagt dieses System -- etwa beim **G6PD-Mangel** -- kann das zu einer schweren haemolytischen Anaemie fuehren.
-
-**In diesem Kapitel lernst du:**
-- wie ROS entstehen und welches Radikal das gefaehrlichste ist
-- wie die Fenton-Reaktion das hochreaktive Hydroxyl-Radikal erzeugt
-- wie SOD, Katalase und Glutathion-Peroxidase als Team zusammenarbeiten
-- warum G6PD-Mangel zu haemolytischer Anaemie fuehrt
-
----
+      content: `{{DIAGRAM:enzyme-substrate}}
 
 {{DIAGRAM:enzyme-substrate}}
-
-{{DIAGRAM:covalent-bond}}
-
-## Reaktive Sauerstoffspezies (ROS) -- die "gefaehrliche Seite" des Sauerstoffs
-
-ROS sind hochreaktive, sauerstoffhaltige Molekuele, die Zellbestandteile schaedigen koennen. Sie entstehen als unvermeidliche Nebenprodukte der Atmungskette.
-
-**Die wichtigsten ROS:**
-- **Superoxid (O2*-):** Entsteht an Komplex I und III der Atmungskette (1-Elektronen-Uebertragung auf O2)
-- **Wasserstoffperoxid (H2O2):** Entsteht aus Superoxid durch SOD. Weniger reaktiv, aber membrangaengig
-- **Hydroxyl-Radikal (*OH):** Das REAKTIVSTE ROS. Entsteht durch die **Fenton-Reaktion**: Fe2+ + H2O2 -> *OH + OH- + Fe3+
-- **Peroxynitrit (ONOO-):** Aus Superoxid + NO -- schaedigt Proteine
-
-> **Merke:** ROS-Kaskade: O2 ->(1e-)-> O2*- ->(SOD)-> H2O2 ->(Fenton: Fe2+)-> *OH (reaktivstes ROS). Deshalb ist Eisenueberschuss gefaehrlich!
-
----
-
-## Das Schutzsystem der Zelle
-
-**Enzymatische Antioxidantien (die "Enzymkaskade"):**
-- **SOD (Superoxiddismutase):** O2*- -> H2O2 + O2 (Achtung: SOD macht H2O2, NICHT H2O!)
-- **Katalase:** H2O2 -> H2O + O2 (schnellstes Enzym ueberhaupt)
-- **Glutathion-Peroxidase (GPx):** H2O2 + 2 GSH -> 2 H2O + GSSG (braucht Glutathion)
-- **Glutathion-Reduktase:** GSSG + NADPH -> 2 GSH (regeneriert Glutathion mit NADPH)
-
-**Nicht-enzymatische Antioxidantien:**
-- **Vitamin E** (fettloeslich): Schuetzt Membranen vor Lipidperoxidation
-- **Vitamin C** (wasserloeslich): Regeneriert Vitamin E
-- **Glutathion (GSH):** Wichtigstes intrazellulaeres Antioxidans
-
----
-
-## G6PD-Mangel -- warum manche Medikamente gefaehrlich sind
-
-NADPH kommt aus dem **Pentosephosphatweg**. Das Schluesselenzym ist **G6PD**. Bei G6PD-Mangel (haeufigste Enzymopathie weltweit, X-chromosomal):
-- Weniger NADPH -> GSH kann nicht regeneriert werden -> oxidativer Stress
-- Erythrozyten besonders betroffen (kein Zellkern, koennen Enzyme nicht nachproduzieren)
-- Bei Oxidantien-Exposition (Malaria-Medikament Primaquin, Favabohnen) -> **haemolytische Anaemie**
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- "Fenton-Reaktion?" -> Hydroxyl-Radikal (*OH) -- das reaktivste ROS
-- "Was macht SOD?" -> Wandelt O2*- in H2O2 um (NICHT direkt in H2O!)
-- "G6PD-Mangel?" -> NADPH fehlt -> GSH nicht regeneriert -> oxidative Haemolyse
-
-**Typische Fallen:**
-- SOD produziert H2O2, nicht H2O -- erst Katalase/GPx bauen H2O2 zu H2O ab
-- Vitamin E ist fettloeslich (Membranschutz), Vitamin C ist wasserloeslich (regeneriert Vitamin E)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **ROS-Kaskade**: O2 -> O2*- (SOD) -> H2O2 (Fenton: Fe2+) -> *OH (reaktivstes ROS)
-- **Enzymatische Abwehr**: SOD -> Katalase/GPx -> H2O; GPx braucht GSH; GSH-Reduktase braucht NADPH
-- **NADPH aus Pentosephosphatweg**: G6PD ist Schluesselenzym; G6PD-Mangel -> haemolytische Anaemie
-- **Nicht-enzymatisch**: Vitamin E (Membranschutz), Vitamin C (regeneriert Vit. E), Glutathion
-- **ROS als Signal**: Niedrige H2O2-Konzentrationen aktivieren Nrf2, HIF-1alpha; oxidativer Burst in Phagozyten gezielt`,
-      contentExtended: `## Einleitung
-
-Sauerstoff ist lebenswichtig -- aber gleichzeitig gefaehrlich. Bei jedem Atemzug entstehen als Nebenprodukte der mitochondrialen Atmungskette **reaktive Sauerstoffspezies (ROS)**, die DNA, Proteine und Membranlipide zerstoeren koennen. Der Koerper besitzt daher ein ausgekluegeltes Schutzsystem: Enzyme wie SOD, Katalase und Glutathion-Peroxidase fangen ROS ab, bevor sie Schaden anrichten. Versagt dieses System -- etwa beim G6PD-Mangel, der weltweit 400 Millionen Menschen betrifft -- koennen bestimmte Medikamente oder Nahrungsmittel eine schwere haemolytische Anaemie ausloesen.
-
-**In diesem Kapitel lernst du:**
-- wie ROS in der Atmungskette entstehen und welches Radikal das gefaehrlichste ist
-- wie die Fenton-Reaktion aus "harmlosem" H2O2 das hochreaktive Hydroxyl-Radikal erzeugt
-- wie SOD, Katalase und Glutathion-Peroxidase als Enzymkaskade zusammenarbeiten
-- warum G6PD-Mangel zu haemolytischer Anaemie fuehrt und welche Substanzen gefaehrlich sind
-
----
-
-{{DIAGRAM:enzyme-substrate}}
-
-{{DIAGRAM:covalent-bond}}
 
 ## Reaktive Sauerstoffspezies (ROS)
 
@@ -4319,32 +3097,7 @@ ROS haben nicht ausschliesslich schaedliche Funktionen. In physiologischen Konze
 
 > **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel -- ihre Reaktivitaet nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
 
-> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid haertet Zahnschmelz, Chlorid ist das wichtigste extrazellulaere Anion, Iodid ist essenziell fuer die Schilddruesenhormonsynthese (T3, T4).
-
-## MedAT-Fokus
-
-**Typische Pruefungsfragen:**
-- "Was entsteht bei der Fenton-Reaktion?" -> Hydroxyl-Radikal (*OH) -- das reaktivste ROS
-- "Was macht SOD?" -> Wandelt O2*- in H2O2 um (Disproportionierung, nicht direkt H2O!)
-- "Folge eines G6PD-Mangels?" -> NADPH fehlt -> GSH wird nicht regeneriert -> oxidative Haemolyse
-- "Welches ROS wirkt als Signalmolekuel?" -> H2O2 in niedrigen Konzentrationen
-
-**Typische Fallen:**
-- SOD produziert H2O2, nicht H2O -- erst Katalase/GPx bauen H2O2 zu H2O ab
-- GSSG wird durch Glutathion-Reduktase (nicht Katalase) zu GSH regeneriert
-- Vitamin E ist fettloeslich (Membranschutz), Vitamin C ist wasserloeslich (regeneriert Vitamin E)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **ROS-Kaskade**: O2 ->(1e-)-> O2*- ->(SOD)-> H2O2 ->(Fenton: Fe2+)-> *OH (reaktivstes ROS)
-- **Fenton-Reaktion**: Fe2+ + H2O2 -> *OH + OH- + Fe3+; erklaert, warum Eisenueberschuss gefaehrlich ist
-- **Oxidativer Stress**: ROS > Antioxidanskapazitaet -> Lipidperoxidation, DNA-Schaeden, Proteinoxidation
-- **Enzymatische Abwehr**: SOD (O2*- -> H2O2) -> Katalase/GPx (H2O2 -> H2O); GPx braucht GSH, GSH-Reduktase braucht NADPH
-- **NADPH aus PPW**: G6PD ist geschwindigkeitsbestimmend; G6PD-Mangel -> haemolytische Anaemie bei Oxidantienexposition
-- **Nicht-enzymatisch**: Vitamin E (Membranschutz), Vitamin C (regeneriert Vit. E), Glutathion, Harnsaeure
-- **ROS als Signal**: Niedrige H2O2-Konzentrationen aktivieren Nrf2, HIF-1alpha; oxidativer Burst in Phagozyten gezielt`,
+> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid haertet Zahnschmelz, Chlorid ist das wichtigste extrazellulaere Anion, Iodid ist essenziell fuer die Schilddruesenhormonsynthese (T3, T4).`,
       lernziele: [
         "Die wichtigsten reaktiven Sauerstoffspezies (ROS), ihre Bildungsmechanismen und Reaktivität benennen",
         "Oxidativen Stress definieren und seine Folgen auf Lipide, Proteine und DNA beschreiben",

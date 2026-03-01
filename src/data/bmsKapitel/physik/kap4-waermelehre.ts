@@ -28,121 +28,7 @@ export const physKap4: Kapitel = {
         "Ausdehnungskoeffizient",
         "Absoluter Nullpunkt",
       ],
-      content: `## Einleitung
-
-Stell dir vor, du kochst Wasser fuer Tee. Es dauert ziemlich lange, bis das Wasser heiss wird. Ein Metalltopf dagegen wird viel schneller heiss. Das liegt an der **Waermekapazitaet** -- Wasser braucht besonders viel Energie, um warm zu werden. Genau das macht Wasser so wichtig fuer deinen Koerper: Es haelt die Temperatur stabil.
-
-**In diesem Kapitel lernst du:**
-- wie du zwischen Celsius, Kelvin und Fahrenheit umrechnest
-- was Waermekapazitaet bedeutet und warum Wasser so langsam warm wird
-- warum sich Dinge beim Erwaermen ausdehnen (Dehnungsfugen, alpha-Koeffizient)
-- wie du Mischungstemperaturen berechnest (Energieerhaltung)
-- warum Wasser bei 4 °C am dichtesten ist und Seen von oben zufrieren
-
----
-
-{{DIAGRAM:thermodynamics}}
-
-{{DIAGRAM:temperature-scales}}
-
-## Temperaturskalen
-
-**Temperatur** misst, wie stark sich die kleinen Teilchen in einem Stoff bewegen. Es gibt drei wichtige Skalen:
-
-**Celsius (°C):** Die Alltagsskala. 0 °C = Wasser gefriert, 100 °C = Wasser kocht.
-
-**Kelvin (K):** Die Skala der Physik. Nullpunkt: 0 K = -273 °C (absoluter Nullpunkt, kaelteste moegliche Temperatur). Kelvin ist nie negativ.
-
-Umrechnung: **T [K] = T [°C] + 273**
-
-Koerpertemperatur: 37 °C = 310 K. Zimmertemperatur: 20 °C = 293 K.
-
-**Fahrenheit (°F):** In den USA ueblich. T [°F] = T [°C] × 1,8 + 32. Normal: 98,6 °F = 37 °C.
-
-> **Merke:** Kelvin = Celsius + 273. Kelvin ist nie negativ. Fuer Temperaturdifferenzen: 1 K = 1 °C (gleich gross!).
-
----
-
-## Thermische Ausdehnung
-
-Wenn du etwas erwaermst, bewegen sich die Teilchen schneller und brauchen mehr Platz -- der Koerper dehnt sich aus. Deshalb haben Bruecken **Dehnungsfugen**: Im Sommer sind sie laenger als im Winter.
-
-Formel fuer Laengenaenderung: **Delta-L = alpha · L0 · Delta-T**
-- L0 = Ausgangslaenge, Delta-T = Temperaturerhoehung, alpha = Ausdehnungskoeffizient [1/K]
-
-Fuer Volumen: Die Ausdehnung ist etwa dreimal so gross (gamma = 3·alpha).
-
-**Anomalie des Wassers:** Wasser ist bei **4 °C am dichtesten** -- nicht bei 0 °C! Zwischen 0 und 4 °C schrumpft Wasser beim Erwaermen (Wasserstoffbrueckenbindungen bilden offenes Gitter unter 4 °C). Deshalb frieren Seen **von oben** zu: Das schwere 4-°C-Wasser sinkt auf den Grund, und Fische ueberleben im Winter.
-
-> **Merke:** Wasser hat bei 4 °C die groesste Dichte. Seen frieren von oben -- das schuetzt die Tiere am Grund.
-
----
-
-## Waerme und Waermekapazitaet
-
-**Waerme Q** ist Energie, die von warm nach kalt fliesst (spontaner Prozess). Einheit: Joule [J].
-
-Die **spezifische Waermekapazitaet c** sagt, wie viel Energie 1 kg eines Stoffes braucht, um 1 K waermer zu werden:
-
-**Q = m · c · Delta-T**
-
-| Stoff | c [J/(kg·K)] |
-|-------|-------------|
-| Wasser | 4180 |
-| Eis | 2090 |
-| Aluminium | 900 |
-| Eisen | 450 |
-
-Wasser hat c = 4180 J/(kg·K) -- das ist sehr viel. Deshalb puffert Wasser Temperaturveraenderungen gut (Koerper, Ozeane, Klimaregulation). Metalle werden viel schneller heiss und kuehlen auch schneller ab.
-
-**Mischungstemperatur** (Energieerhaltung -- abgegebene Waerme = aufgenommene Waerme):
-
-**T_m = (m1·T1 + m2·T2) / (m1 + m2)**
-
-Beispiel: 200 g (80 °C) + 300 g (20 °C) → T_m = (200·80 + 300·20) / 500 = 44 °C.
-
-> **Merke:** Q = m·c·Delta-T. Wasser hat die hoechste Waermekapazitaet -- deshalb der beste Waermepuffer. c nicht verwechseln mit Waermeleitfaehigkeit lambda (Transport, nicht Speicherung)!
-
----
-
-## MedAT-Fokus
-
-**Haeufige Fragen:**
-- “37 °C in Kelvin?” → T = 37 + 273 = 310 K
-- “500 g Wasser um 60 K erwaermen?” → Q = 0,5 × 4180 × 60 = 125 400 J
-- “Mischtemperatur 300 g (80 °C) + 200 g (10 °C)?” → T_m = 52 °C
-
-**Typische Fallen:**
-- Temperaturdifferenzen in Kelvin und Celsius sind **gleich** (Delta-T = 10 K = 10 °C)
-- Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)
-- c (Waermekapazitaet = Speichern) ≠ Waermeleitfaehigkeit (Transport)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Temperaturskalen**: T[K] = T[°C] + 273; T[°F] = T[°C] × 1,8 + 32; 0 K absoluter Nullpunkt
-- **Waermemenge**: Q = m·c·Delta-T; c(Wasser) = 4180 J/(kg·K) -- hoechster Wert
-- **Ausdehnung**: Delta-L = alpha·L0·Delta-T; Volumen: gamma = 3·alpha
-- **Mischtemperatur**: T_m = (m1·T1 + m2·T2) / (m1 + m2)
-- **Dichteanomalie**: Wasser bei 4 °C am dichtesten; Seen frieren von oben`,
-      contentExtended: `## Einleitung
-
-Du legst ein Fieberthermometer unter die Zunge und wartest. Nach einer Minute zeigt es 38,5 Grad Celsius. Aber was genau misst das Thermometer eigentlich? Temperatur ist ein Maß für die mittlere Bewegungsenergie der Teilchen -- und **Wärme** ist die Energie, die dabei von einem wärmeren zu einem kälteren Körper fließt. Stell dir einen Kochtopf auf dem Herd vor: Die Flamme liefert Wärme Q, das Wasser nimmt sie auf, und die Temperatur steigt -- wie schnell, hängt von der spezifischen Wärmekapazität ab. Wasser braucht besonders viel Energie pro Grad, weshalb es so lange dauert, einen Topf zum Kochen zu bringen. Genau diese Eigenschaft macht Wasser zum idealen Temperaturpuffer im menschlichen Körper.
-
-**In diesem Kapitel lernst du:**
-- wie Celsius, Kelvin und Fahrenheit zusammenhängen und wann du welche Skala brauchst
-- was spezifische Wärmekapazität bedeutet und warum Wasser der beste Wärmepuffer der Natur ist
-- warum sich Körper bei Erwärmung ausdehnen und was die Dichteanomalie des Wassers für Ökosysteme bedeutet
-- wie man Mischungstemperaturen berechnet (Energieerhaltung bei gleichen und verschiedenen Stoffen)
-- warum Temperaturdifferenzen in Kelvin und Celsius identisch sind, absolute Werte aber nicht
-
-**Kontext — worum geht es und wofür brauchst du das?**
-Hier geht es um **Temperatur und Wärmeübertragung**: Wie misst man Temperatur (Skalen), wie viel Energie braucht Erwärmung (Wärmekapazität), und wie dehnen sich Körper aus (α, Dichteanomalie)? Klinisch: Fieber, Hypothermie, Wärmetherapie, Kalorimetrie. Du brauchst es für Wärmeübertragung und Thermodynamik (Hauptsätze) und für MedAT-Aufgaben zu Q, c und ΔT.
-
----
-
-{{DIAGRAM:thermodynamics}}
+      content: `{{DIAGRAM:thermodynamics}}
 
 {{DIAGRAM:temperature-scales}}
 
@@ -239,34 +125,7 @@ Körpertemperatur 37,0 °C: In Kelvin: T = 37,0 + 273,15 = 310,15 K. In Fahrenhe
 
 **Beispiel 3 — Energie zum Erwärmen eines Patienten:**
 Patient (70 kg, c ≈ 3500 J/(kg·K)) von 34 °C auf 37 °C erwärmen (Hypothermie-Behandlung):
-Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss der Körper durch Metabolismus, Wärmedecken oder Infusionserwärmer aufbringen.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Häufige Fragen:**
-- “Welche Temperatur in K entspricht 37 °C?” → T[K] = 37 + 273,15 = 310 K
-- “Wie viel Energie braucht man, um 500 g Wasser um 60 K zu erwärmen?” → Q = 0,5 · 4180 · 60 = 125 400 J
-- “Mischtemperatur zweier Wassermengen?” → T_m = (m₁·T₁ + m₂·T₂) / (m₁ + m₂)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- **Thermische Ausdehnung:** Ursache = mittlere Teilchengeschwindigkeit ↑ → heftigere Stöße → mittlerer Abstand ↑. Falsch: „Wärme braucht Platz”, „Körper wird weicher”, „Gase treiben aus dem Körper”.
-- **Anomalie des Wassers:** Dichte bei **4 °C** am größten; Seen frieren **von oben** zu (nicht von unten). Nicht: „Wasser verhält sich normal” oder „Dichte bei 0 °C am größten”.
-- **ΔT:** Temperaturdifferenzen sind in Kelvin und Celsius **gleich** (ΔT = 10 K = 10 °C). Nur bei absoluten Werten: T in Formeln (z. B. ideales Gas) in **Kelvin** einsetzen.
-- Wärmekapazität **c** [J/(kg·K)] = Speichern von Wärme — **nicht** verwechseln mit Wärmeleitfähigkeit **λ** [W/(m·K)] = Transport von Wärme.
-- Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!). Körpertemperatur **37 °C = 310 K** (nicht 273 + 37 = 310 — genau 310,15 K).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Temperaturskalen**: T[K] = T[°C] + 273,15; T[°F] = T[°C] · 9/5 + 32; 0 K = absoluter Nullpunkt
-- **Wärmemenge**: Q = m·c·ΔT; c(Wasser) = 4180 J/(kg·K) — höchste natürliche spez. Wärmekapazität
-- **Wärmekapazität des Körpers**: c ≈ 3500 J/(kg·K); Fieber 37→40 °C bei 70 kg = ~735 kJ
-- **Thermische Ausdehnung**: ΔL = α·L₀·ΔT; ΔV = γ·V₀·ΔT (γ ≈ 3α für isotrope Stoffe)
-- **Mischungstemperatur**: T_m = (m₁·c₁·T₁ + m₂·c₂·T₂) / (m₁·c₁ + m₂·c₂)
-- **Klinisch**: Fieber = T > 38 °C; Hypothermie = T < 35 °C; Schwitzen (Verdunstungskühlung) ≈ 2400 J/g`,
+Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss der Körper durch Metabolismus, Wärmedecken oder Infusionserwärmer aufbringen.`,
 
       lernziele: [
         "Die drei Temperaturskalen (Celsius, Kelvin, Fahrenheit) ineinanderumrechnen können",
@@ -467,104 +326,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Wiensches Verschiebungsgesetz",
         "Gegenstrom-Wärmeaustausch",
       ],
-      content: `## Einleitung
-
-Warum frierst du bei Wind schneller als bei Windstille, obwohl es gleich kalt ist? Und warum waermt eine dicke Daunenjacke besser als ein duennes T-Shirt? Es gibt drei Wege, wie Waerme von einem Ort zum anderen kommt: **Leitung**, **Stroemung** (Konvektion) und **Strahlung**. Dein Koerper nutzt alle drei gleichzeitig.
-
-**In diesem Kapitel lernst du:**
-- wie Waerme durch Material geleitet wird (z. B. Metalltopf vs. Holzloeffel)
-- warum warme Luft aufsteigt und was das mit der Heizung zu tun hat (Konvektion)
-- warum jeder Koerper Waerme abstrahlt und wie das von der Temperatur abhaengt
-- wie dein Koerper seine 37 °C haelt (Schwitzen, Frieren, Blutfluss)
-
----
-
-{{DIAGRAM:temperature-scales}}
-
-{{DIAGRAM:thermodynamics}}
-
-## Waermeleitung
-
-Wenn du einen Metalloeffel in heisse Suppe stellst, wird der Griff schnell heiss. Die Waerme wandert durch das Material -- das ist **Waermeleitung**. Die Formel dafuer:
-
-**Waermestrom = lambda x A x DeltaT / d**
-
-- lambda = Waermeleitfaehigkeit (wie gut ein Material Waerme leitet)
-- A = Flaeche
-- DeltaT = Temperaturdifferenz
-- d = Dicke der Schicht
-
-Metalle leiten Waerme sehr gut (hohe lambda). Luft leitet Waerme schlecht -- deshalb isolieren Daunenjacken so gut: Sie schliessen viel Luft ein.
-
-> **Merke:** Gute Waermeleiter: Metalle. Gute Isolatoren: Luft, Fett, Wolle. Je dicker die Schicht, desto weniger Waerme geht durch.
-
----
-
-## Konvektion (Stroemung)
-
-Bei der Konvektion wird Waerme durch bewegte Luft oder Fluessigkeit transportiert.
-
-**Natuerliche Konvektion:** Warme Luft steigt auf, kalte sinkt ab. So funktioniert eine Heizung -- die warme Luft verteilt sich im Raum.
-
-**Erzwungene Konvektion:** Ein Ventilator oder eine Pumpe bewegt die Luft oder Fluessigkeit. Dein Blutkreislauf ist ein gutes Beispiel: Das Blut transportiert Waerme vom Koerperinneren zur Haut.
-
-Bei Kaelte verengen sich die Blutgefaesse in der Haut -- so verlierst du weniger Waerme. Bei Hitze weiten sie sich.
-
----
-
-## Waermestrahlung
-
-Jeder Koerper gibt unsichtbare Waermestrahlung (Infrarot) ab. Je heisser der Koerper, desto mehr strahlt er ab. Die Formel:
-
-**P = sigma x epsilon x A x T hoch 4**
-
-Wichtig: T muss in **Kelvin** eingesetzt werden! Weil T hoch 4 in der Formel steht, wirkt sich schon eine kleine Temperaturaenderung stark aus.
-
-Waermestrahlung braucht kein Material -- sie funktioniert auch im leeren Raum (Vakuum). So kommt die Waerme der Sonne zu uns. Der Mensch verliert etwa die Haelfte seiner Koerperwaerme durch Strahlung.
-
-> **Merke:** Drei Wege der Waermeuebertragung: Leitung (durch Material), Konvektion (durch Stroemung), Strahlung (durch Infrarot, auch im Vakuum).
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung:**
-
-**Haeufige Fragen:**
-- "Waermestrom durch eine Fettschicht berechnen?" -- Formel: lambda x A x DeltaT / d
-- "Wie aendert sich Strahlung bei Fieber?" -- P ist proportional zu T hoch 4, schon 5 K mehr ergibt ca. 6-7 % mehr Strahlung
-
-**Typische Fallen:**
-- Stefan-Boltzmann: T immer in **Kelvin** (nicht °C!)
-- Leitung braucht Materialkontakt; **Strahlung** funktioniert auch im Vakuum
-- lambda = Waermeleitfaehigkeit (Transport), nicht verwechseln mit c = Waermekapazitaet (Speichern)
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Leitung**: Waermestrom = lambda x A x DeltaT / d; Metalle leiten gut, Luft isoliert
-- **Konvektion**: warme Luft steigt auf; Blutkreislauf = koerpereigene Konvektion
-- **Strahlung**: P = sigma x epsilon x A x T hoch 4; Mensch strahlt bei ca. 9,4 Mikrometer (Infrarot)
-- **Koerper**: 50 % Waermeverlust durch Strahlung, 25 % Konvektion, 25 % Verdunstung
-- **Isolation**: dicke Kleidung, Fettschicht, ruhende Luft = weniger Waermeverlust`,
-      contentExtended: `## Einleitung
-
-Warum friert man bei Wind viel schneller als bei Windstille -- obwohl die Lufttemperatur gleich ist? Und warum isoliert eine Daunenjacke besser als ein dünner Pullover, obwohl beide aus Stoff bestehen? Die Antworten liegen in den drei grundlegenden Wegen der **Wärmeübertragung**: Leitung (Konduktion), Mitführung durch strömende Medien (Konvektion) und Strahlung. Der menschliche Körper nutzt alle drei gleichzeitig, um seine Kerntemperatur konstant bei 37 Grad Celsius zu halten.
-
-**In diesem Kapitel lernst du:**
-- wie Wärmeleitung durch Material funktioniert und warum Fett und Luft gute Isolatoren sind
-- worin sich natürliche und erzwungene Konvektion unterscheiden (Heizung vs. Blutkreislauf)
-- warum Strahlungsleistung mit der vierten Potenz der Temperatur steigt und was das für Fieber bedeutet
-- wie der Gegenstrom-Wärmeaustausch in Extremitäten Wärmeverlust minimiert
-- warum Frühgeborene Inkubatoren brauchen und wie Infrarot-Thermografie funktioniert
-
-**Kontext — worum geht es und wofür brauchst du das?**
-Hier geht es um **wie Wärme von einem Ort zum anderen gelangt**: Leitung durch Material, Mitführung durch strömende Luft/Flüssigkeit, Strahlung (Infrarot). Im Körper: Isolierung durch Fett, Vasokonstriktion/Vasodilatation, Schwitzen. Du brauchst es für Thermodynamik (Hauptsätze) und für MedAT-Aufgaben zu λ, Stefan-Boltzmann und Gegenstrom.
-
----
-
-{{DIAGRAM:temperature-scales}}
+      content: `{{DIAGRAM:temperature-scales}}
 
 {{DIAGRAM:thermodynamics}}
 
@@ -662,32 +424,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
 
 > **Merke:** Der erste Hauptsatz der Thermodynamik (Energieerhaltung): ΔU = Q + W. Die innere Energie eines Systems ändert sich durch Wärmezufuhr (Q) und/oder verrichtete Arbeit (W).
 
-> **Merke:** Wärmekapazität c gibt an, wie viel Energie nötig ist, um 1 kg eines Stoffes um 1 K zu erwärmen: Q = m · c · ΔT. Wasser hat mit c = 4,18 kJ/(kg·K) eine besonders hohe Wärmekapazität — deshalb stabilisiert es das Körperklima.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Häufige Fragen:**
-- "Wärmestrom durch Fettschicht: λ = 0,2, A = 0,5 m², ΔT = 4 K, d = 2 cm?" → Q̇ = 0,2 · 0,5 · 4 / 0,02 = 20 W
-- "Wie ändert sich die Strahlungsleistung bei Fieber 37 → 42 °C?" → P ∝ T⁴; (315/310)⁴ ≈ 1,066 → +6,6 %
-- "Bei welcher Wellenlänge strahlt der Mensch maximal?" → λ_max = 2898/310 ≈ 9,4 μm (mittleres Infrarot)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Stefan-Boltzmann: T **unbedingt in Kelvin** einsetzen (nicht °C!)
-- Wärmeleitung (Konduktion) braucht Materialkontakt; **Strahlung** funktioniert auch im Vakuum
-- ε(Menschliche Haut) ≈ 0,97 — fast idealer Schwarzkörper im Infrarot, aber nicht exakt 1
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Konduktion**: Q̇ = λ·A·ΔT/d [W]; λ(Luft) = 0,025, λ(Wasser) = 0,6, λ(Fett) = 0,2, λ(Knochen) = 0,3 W/(m·K)
-- **Konvektion**: erzwungen (Wind, Blutfluss) effektiver als freie; Kühlung durch Luftbewegung am Körper
-- **Strahlung**: P = ε·σ·A·T⁴ (Stefan-Boltzmann); Wien: λ_max = 2897/T; Körper (37 °C = 310 K) strahlt bei ~9,4 µm (Infrarot)
-- **Wärmeleitfähigkeit Haut-Fett**: schlechte Wärmeleiter → thermische Isolation; Adipositas → schlechtere Wärmeabgabe
-- **Gegenstrom-Wärmeaustausch**: Arterien-Venen-Bündel in Extremitäten; reduziert Wärmeverlust; Prinzip auch in Dialyse/HLM
-- **Klinisch**: therapeutische Hypothermie (32–34 °C); Winterjacke 50× weniger Wärmeverlust als T-Shirt`,
+> **Merke:** Wärmekapazität c gibt an, wie viel Energie nötig ist, um 1 kg eines Stoffes um 1 K zu erwärmen: Q = m · c · ΔT. Wasser hat mit c = 4,18 kJ/(kg·K) eine besonders hohe Wärmekapazität — deshalb stabilisiert es das Körperklima.`,
 
       lernziele: [
         "Das Fouriersche Gesetz der Wärmeleitung anwenden und die Bedeutung der Wärmeleitfähigkeit λ erklären",
@@ -876,113 +613,7 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
         "ATP-Synthese",
         "Perpetuum mobile",
       ],
-      content: `## Einleitung
-
-Warum wird dein Tee kalt, aber nie von selbst wieder heiss? Und warum kann kein Motor der Welt alle Waerme in Bewegung umwandeln? Die Antwort geben die **Hauptsaetze der Thermodynamik**. Der erste sagt: Energie geht nie verloren. Der zweite sagt: Aber Waerme fliesst immer nur von warm nach kalt -- nie umgekehrt.
-
-**In diesem Kapitel lernst du:**
-- warum Energie nie verschwindet (1. Hauptsatz)
-- warum Waerme immer von warm nach kalt fliesst (2. Hauptsatz)
-- was der Carnot-Wirkungsgrad ist und wie du ihn berechnest
-- was bei verschiedenen Prozessen passiert (gleiches Volumen, gleicher Druck, gleiche Temperatur, keine Waerme)
-
----
-
-{{DIAGRAM:thermodynamics}}
-
-{{DIAGRAM:temperature-scales}}
-
-## Nullter Hauptsatz
-
-Wenn ein Thermometer die gleiche Temperatur wie dein Koerper hat, sind beide im **thermischen Gleichgewicht**. Das ist die Grundlage jeder Temperaturmessung.
-
----
-
-## Erster Hauptsatz: Energie geht nie verloren
-
-**DeltaU = Q + W**
-
-- DeltaU = Aenderung der inneren Energie
-- Q = zugefuehrte Waerme
-- W = Arbeit am System (z. B. Zusammendruecken)
-
-Stell dir einen Fahrradreifen vor: Wenn du die Pumpe drueckst (Arbeit W), wird die Luft waermer (DeltaU steigt). Die Energie verschwindet nicht -- sie wird nur umgewandelt.
-
-Vier wichtige Spezialfaelle:
-- **Gleiches Volumen** (isochor): Keine Arbeit moeglich, W = 0. Alle Waerme erhoet die innere Energie: DeltaU = Q
-- **Gleicher Druck** (isobar): Das Gas kann sich ausdehnen und Arbeit leisten
-- **Gleiche Temperatur** (isotherm): DeltaU = 0, Waerme wird komplett in Arbeit umgewandelt
-- **Keine Waerme** (adiabatisch): Q = 0. Wird das Gas zusammengedrueckt, wird es heisser
-
-> **Merke:** DeltaU = Q + W. Energie kann nicht erzeugt oder vernichtet werden -- nur umgewandelt. Eine Maschine, die Energie aus dem Nichts erzeugt (Perpetuum mobile), ist unmoeglich.
-
----
-
-## Zweiter Hauptsatz: Waerme fliesst nur in eine Richtung
-
-Waerme fliesst **immer** von warm nach kalt -- nie umgekehrt. Das ist wie ein Eiswuerfel im warmen Wasser: Er schmilzt, aber das Wasser gefriert nie von selbst.
-
-**Entropie** ist ein Mass fuer die Unordnung. In einem geschlossenen System nimmt die Unordnung immer zu. Deshalb kann keine Maschine Waerme zu 100 % in Arbeit umwandeln.
-
-Lebewesen scheinen Ordnung zu schaffen (z. B. Zellen bauen). Aber sie sind **offene Systeme** -- sie geben Waerme und Abfall an die Umgebung ab. Insgesamt nimmt die Unordnung trotzdem zu.
-
----
-
-## Carnot-Wirkungsgrad
-
-Der beste Wirkungsgrad, den ein Motor theoretisch erreichen kann:
-
-**eta = 1 - T_kalt / T_warm**
-
-Wichtig: T muss in **Kelvin** eingesetzt werden!
-
-Beispiel: T_warm = 600 K, T_kalt = 300 K. Dann eta = 1 - 300/600 = 50 %. Das heisst: Maximal die Haelfte der Waerme kann in Arbeit umgewandelt werden. In der Realitaet ist es wegen Reibung noch weniger.
-
-> **Merke:** Carnot-Wirkungsgrad eta = 1 - T_kalt/T_warm. T immer in Kelvin! Je groesser der Temperaturunterschied, desto besser der Wirkungsgrad.
-
----
-
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung:**
-
-**Haeufige Fragen:**
-- "Carnot bei T_warm = 600 K, T_kalt = 300 K?" -- eta = 1 - 300/600 = 50 %
-- "Was passiert bei adiabatischer Kompression?" -- Temperatur steigt (Q = 0, W > 0)
-- "Was passiert bei isochorer Erwaermung?" -- W = 0, daher DeltaU = Q
-
-**Typische Fallen:**
-- Carnot: T immer in **Kelvin** (nicht °C!)
-- Perpetuum mobile 1. Art (Energie aus nichts) verletzt den 1. Hauptsatz
-- Perpetuum mobile 2. Art (100 % Waerme in Arbeit) verletzt den 2. Hauptsatz
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **0. Hauptsatz**: Thermisches Gleichgewicht -- Grundlage der Temperaturmessung
-- **1. Hauptsatz**: DeltaU = Q + W (Energieerhaltung)
-- **Spezialfaelle**: isochor (W=0), isobar (p=const), isotherm (DeltaU=0), adiabatisch (Q=0)
-- **2. Hauptsatz**: Waerme fliesst nur von warm nach kalt; Entropie nimmt zu
-- **Carnot**: eta = 1 - T_kalt/T_warm (T in Kelvin!)
-- **Lebewesen**: offene Systeme, verletzen den 2. Hauptsatz nicht`,
-      contentExtended: `## Einleitung
-
-Warum wird ein Kaffee kalt, aber nie von selbst wieder heiß? Und warum kann kein Motor der Welt Wärme vollständig in Arbeit umwandeln? Die Antworten liefern die **Hauptsätze der Thermodynamik** -- die grundlegendsten Spielregeln der Energieumwandlung. Der erste Hauptsatz sagt: Energie kann nicht verloren gehen (Energieerhaltung). Der zweite Hauptsatz sagt: Aber sie fließt immer in eine bestimmte Richtung (Entropie nimmt zu). Beide Prinzipien bestimmen auch die Biochemie des Körpers, von der ATP-Synthese bis zur Körperwärme.
-
-**In diesem Kapitel lernst du:**
-- was der erste Hauptsatz der Thermodynamik aussagt und wie Wärme, Arbeit und innere Energie zusammenhängen
-- warum der zweite Hauptsatz eine Richtung vorgibt und was Entropie anschaulich bedeutet
-- warum kein realer Motor den Carnot-Wirkungsgrad erreichen kann und wie man ihn berechnet
-- wie sich isochore, isobare, isotherme und adiabatische Prozesse unterscheiden
-- warum lebende Organismen keine Widerlegung des zweiten Hauptsatzes sind (offene Systeme)
-
-**Kontext — worum geht es und wofür brauchst du das?**
-Hier geht es um **Energie und Richtung** thermischer Prozesse: Der 1. Hauptsatz (Energieerhaltung) und der 2. Hauptsatz (Entropie, irreversibler Ablauf) begrenzen, was möglich ist. Klinisch: ATP-Synthese, Körperwärme, Warum Kühlung Energie braucht. Du brauchst es für Biochemie und für MedAT-Aufgaben zu ΔU, Carnot und Entropie.
-
----
-
-{{DIAGRAM:thermodynamics}}
+      content: `{{DIAGRAM:thermodynamics}}
 
 {{DIAGRAM:temperature-scales}}
 
@@ -1089,32 +720,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 > **Merke:** Der zweite Hauptsatz der Thermodynamik: Die Entropie eines abgeschlossenen Systems nimmt nie ab (ΔS ≥ 0). Wärme fließt spontan nur von warm nach kalt — nie umgekehrt.
 
-> **Merke:** Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der maximal mögliche Wirkungsgrad einer Wärmekraftmaschine. Kein realer Prozess kann diesen Wert übertreffen.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Häufige Fragen:**
-- "Carnot-Wirkungsgrad bei T_warm = 600 K, T_kalt = 300 K?" → η = 1 − 300/600 = 50 %
-- "Was passiert bei adiabatischer Kompression?" → T steigt, weil ΔU = W > 0 (Q = 0)
-- "Was passiert bei isochorer Erwärmung?" → W = 0, daher ΔU = Q (gesamte Wärme erhöht innere Energie)
-
-**Typische Prüfungsfallen / Verwechslungen:**
-- Carnot-Formel: **T immer in Kelvin** — mit °C-Werten liefert die Formel falsche Ergebnisse!
-- 1. Hauptsatz-Vorzeichenkonvention: ΔU = Q + W (W = Arbeit AM System) — oder ΔU = Q − W_System (W = Arbeit DURCH das System); Konvention prüfen!
-- Perpetuum mobile 1. Art (Energie aus nichts) verletzt 1. HS; Perpetuum mobile 2. Art (vollständige Wärme→Arbeit) verletzt 2. HS
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **0. Hauptsatz**: Thermisches Gleichgewicht ist transitiv — Grundlage der Temperaturmessung
-- **1. Hauptsatz**: ΔU = Q + W (Energieerhaltung); Q > 0 = Wärme zugeführt, W > 0 = Arbeit am System
-- **Zustandsänderungen**: isochor (V=const, W=0), isobar (p=const), isotherm (T=const, ΔU=0), adiabatisch (Q=0)
-- **2. Hauptsatz**: Wärme fließt nie spontan von kalt nach warm; Entropie S nimmt in abgeschl. Systemen zu; kein Perpetuum mobile 2. Art
-- **Carnot-Wirkungsgrad**: η_max = 1 − T_kalt/T_warm; Körper (~37 °C) = keine Wärmekraftmaschine
-- **3. Hauptsatz**: S → 0 bei T → 0 K; absoluter Nullpunkt unerreichbar`,
+> **Merke:** Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der maximal mögliche Wirkungsgrad einer Wärmekraftmaschine. Kein realer Prozess kann diesen Wert übertreffen.`,
 
       lernziele: [
         "Die vier thermodynamischen Hauptsätze mit Formeln und Formulierungen wiedergeben",
@@ -1280,130 +886,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `## Einleitung
-
-Warum wird eine Luftblase beim Auftauchen groesser? Warum kocht Wasser auf dem Berg schneller? Und warum nutzt man im Krankenhaus einen Autoklav? Hinter allem steckt die Physik von Gasen und Phasenuebergaengen -- zwei Themen, die in Medizin und MedAT oft vorkommen.
-
-**In diesem Kapitel lernst du:**
-- wie Druck, Volumen und Temperatur von Gasen zusammenhaengen (pV = nRT)
-- die drei Spezialfaelle: Boyle-Mariotte, Gay-Lussac, Charles
-- was bei Schmelzen und Verdampfen passiert (latente Waerme, Temperatur bleibt konstant)
-- warum ein Autoklav heisser wird als ein normaler Topf (Dampfdruck)
-- warum Taucher langsam auftauchen muessen (Henry-Gesetz)
-
----
-
-{{DIAGRAM:temperature-scales}}
-
-{{DIAGRAM:thermodynamics}}
-
-## Das ideale Gasgesetz
-
-Stell dir eine Spritze mit Luft vor. Wenn du den Kolben reindrueckst, steigt der Druck -- das beschreibt:
-
-**p · V = n · R · T**
-
-- p = Druck [Pa], V = Volumen [m³], T = Temperatur (**IMMER in Kelvin!**)
-- n = Stoffmenge [mol], R = 8,314 J/(mol·K)
-
-**Drei Spezialfaelle:**
-- **Boyle-Mariotte** (T = const): p · V = const. Halb so viel Platz = doppelter Druck.
-- **Gay-Lussac** (p = const): V/T = const. Waermere Luft dehnt sich aus.
-- **Charles** (V = const): p/T = const. Waermere Luft = mehr Druck.
-
-Beispiel: Luftblase in 10 m Tiefe (2 bar) steigt auf 1 bar → Volumen verdoppelt sich.
-
-> **Merke:** pV = nRT. Temperatur IMMER in Kelvin! 0 °C = 273 K, 27 °C = 300 K.
-
----
-
-## Phasenuebergaenge und latente Waerme
-
-Wenn Eis schmilzt, bleibt die Temperatur bei 0 °C, obwohl du weiter Waerme zufuehrst. Die Energie wird gebraucht, um Bindungen zu loesen -- nicht um die Temperatur zu erhoehen. Das ist **latente Waerme** (Q = m · L).
-
-| Phasenuebergang | Temperatur | L [kJ/kg] |
-|----------------|------------|-----------|
-| Schmelzen (Eis → Wasser) | 0 °C | 334 |
-| Verdampfen (Wasser → Dampf) | 100 °C | 2260 (~7× mehr!) |
-| Verdunsten bei 37 °C | 37 °C | ~2430 |
-
-Deshalb kuehlt **Schwitzen** so effektiv: Pro Gramm Schweiss werden ~2430 J abgefuehrt.
-
-**Phasendiagramm:** Zeigt, welche Phase bei welchem Druck und welcher Temperatur vorliegt.
-- **Tripelpunkt**: Alle drei Phasen koexistieren (Wasser: 273,16 K, 611 Pa)
-- **Kritischer Punkt**: fluessig und gasfoermig nicht mehr unterscheidbar
-
-> **Merke:** Bei Phasenuebergaengen bleibt die Temperatur konstant! Energie geht in die Aenderung der Bindungen.
-
----
-
-## Dampfdruck und Siedepunkt
-
-Wasser siedet, wenn sein Dampfdruck den Aussendruck erreicht. Bei 1 bar = 100 °C. Deshalb:
-
-- **Auf dem Berg** (0,7 bar): Wasser siedet schon bei ~90 °C -- Essen wird nicht gar.
-- **Im Autoklav** (2 bar): Siedepunkt = 121 °C -- Keime und Sporen werden abgetoetet.
-- Prionen-Deaktivierung: 134 °C bei 3 bar noetig.
-
-> **Merke:** Hoeherer Druck = hoeherer Siedepunkt. Autoklav: 121 °C / 2 bar sterilisiert Sporen.
-
----
-
-## Henry-Gesetz -- Taucherkrankheit
-
-Das **Henry-Gesetz**: Je hoeher der Druck, desto mehr Gas loest sich in Fluessigkeit.
-
-**Formel:** c = k_H · p
-
-Beim Tauchen in 30 m Tiefe (4 bar) loest sich 4-fach mehr Stickstoff im Blut. Taucht man zu schnell auf, bilden sich Gasblasen -- die **Taucherkrankheit** (Dekompressionskrankheit): Embolien, Gelenkschmerzen, neurologische Ausfaelle.
-
-Loesung: Langsam auftauchen, Sicherheitsstopp bei 5 m, evtl. Druckkammer.
-
-> **Merke:** Henry: c = k_H · p. Schnelles Auftauchen = Gasblasen = Taucherkrankheit.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- Ideales Gasgesetz: pV = nRT (T immer in Kelvin!)
-- Boyle-Mariotte: p · V = const (nur bei T = const)
-- Latente Waerme: Q = m · L; T aendert sich beim Phasenuebergang NICHT
-- Henry: c = k_H · p (Taucherkrankheit)
-- Autoklav: 121 °C / 2 bar
-
-**Typische Fallen:**
-- Temperatur IMMER in Kelvin: 27 °C = 300 K (nicht 27!)
-- Boyle-Mariotte gilt NUR bei konstanter Temperatur
-- Beim Schmelzen/Verdampfen aendert sich T NICHT
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Gasgesetz**: pV = nRT; Boyle (T = const): pV = const; Gay-Lussac (p = const): V/T = const
-- **Latente Waerme**: Q = m · L; Schmelzen 334 kJ/kg; Verdampfen 2260 kJ/kg; T = const
-- **Phasendiagramm**: Tripelpunkt (3 Phasen); kritischer Punkt (fluessig = gasfoermig)
-- **Henry**: c = k_H · p; Taucherkrankheit bei schnellem Auftauchen
-- **Autoklav**: 121 °C / 2 bar; Prionen: 134 °C / 3 bar`,
-
-      contentExtended: `## Einleitung
-
-Warum platzt eine Luftblase beim Aufstieg aus 10 Metern Tauchtiefe auf das doppelte Volumen? Und warum sterilisiert ein Autoklav bei 121 Grad Celsius, obwohl Wasser normalerweise bei 100 Grad siedet? Die Antworten stecken im **idealen Gasgesetz** pV = nRT und in der Physik der **Phasenuebergaenge**. Vom Dampfkochtopf ueber die Tauchmedizin bis zur Narkose -- Gase, Druck und Phasenwechsel begegnen dir in der Medizin ueberall.
-
-**In diesem Kapitel lernst du:**
-- wie Druck, Volumen und Temperatur eines Gases zusammenhaengen und wann Boyle-Mariotte gilt
-- was bei Phasenuebergaengen passiert und warum dabei die Temperatur trotz Waermezufuhr konstant bleibt
-- warum ein Autoklav hoehere Temperaturen erreicht als ein offener Topf (Dampfdruck und Siedepunkt)
-- wie das Henry-Gesetz erklaert, warum Taucher Dekompressionskrankheit bekommen koennen
-- wo im Phasendiagramm Tripelpunkt und kritischer Punkt liegen und was sie bedeuten
-
-**Kontext — worum geht es und wofuer brauchst du das?**
-Hier geht es um **Gase und Phasen**: Wie haengen Druck, Volumen und Temperatur zusammen (ideales Gas)? Was passiert beim Schmelzen und Verdampfen (latente Waerme)? Klinisch: Autoklav, Atemgase, Henry-Gesetz (Tauchen, Narkose). Du brauchst es fuer Physiologie (Atmung, Partialdruecke) und fuer MedAT-Aufgaben zu pV = nRT und Phasenuebergaengen.
-
----
-
-{{DIAGRAM:temperature-scales}}
+      content: `{{DIAGRAM:temperature-scales}}
 
 {{DIAGRAM:thermodynamics}}
 
@@ -1497,32 +980,8 @@ V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ung
 
 > **Merke:** Phasenuebergaenge (Schmelzen, Verdampfen, Sublimieren) benoetigen Energie (latente Waerme), ohne dass sich die Temperatur aendert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
 
-> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Fluessigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg frueher (niedrigerer Luftdruck).
+> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Fluessigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg frueher (niedrigerer Luftdruck).`,
 
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
-
-**Haeufige Fragen:**
-- "Gas bei 27 Grad C und 2 bar, isochor auf 127 Grad C erhitzt — neuer Druck?" p2 = 2 x (400/300) ungefaehr 2,67 bar
-- "Energie zum Schmelzen von 200 g Eis?" Q = 0,2 mal 334 000 = 66 800 J
-- "Warum siedet Wasser im Autoklav bei 121 Grad C?" Aussendruck 2 bar verschiebt Siedepunkt nach oben
-
-**Typische Pruefungsfallen / Verwechslungen:**
-- Ideales Gasgesetz: **T immer in Kelvin** einsetzen! (27 Grad C = 300 K, 127 Grad C = 400 K)
-- Boyle-Mariotte (p mal V = const) gilt nur bei **konstanter Temperatur** (isotherm)
-- Latentwaerme (Q = m mal L): waehrend des Phasenuebergangs bleibt T konstant — keine Temperaturaenderung!
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Ideales Gasgesetz**: pV = nRT; R = 8,314 J/(mol K); Sonderfaelle: Boyle (T=const), Gay-Lussac (V=const), Charles (p=const)
-- **Latentwaerme**: Q = m mal L; waehrend Phasenuebergang konstante Temperatur; L_Schmelz(Eis) = 334 kJ/kg, L_Verdampf(Wasser) = 2260 kJ/kg
-- **Phasendiagramm**: Tripelpunkt (alle 3 Phasen koexistieren); kritischer Punkt (fluessig und gasfoermig ununterscheidbar)
-- **Henry-Gesetz**: c(geloest) = k_H mal p; N2-Loesung im Blut bei 4 bar (30 m Tiefe): 4x erhoeht: Dekompressionspflicht
-- **Autoklav**: 121 Grad C bei 2 bar (Siedepunkt Wasser erhoeht); 134 Grad C bei 3 bar fuer Prionen
-- **Gefriertrocknung (Lyophilisation)**: Unter Tripelpunkt-Druck: Eis sublimiert: Protein-/Impfstofferhalt bei RT`,
 
       lernziele: [
         "Die allgemeine Zustandsgleichung des idealen Gases pV = nRT anwenden und Sonderfälle ableiten",
