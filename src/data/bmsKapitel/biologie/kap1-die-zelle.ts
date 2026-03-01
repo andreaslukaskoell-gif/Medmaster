@@ -2029,7 +2029,108 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
       ],
       content: `## Einleitung
 
-**Worum geht es?** Der **Zellkern** ist die Steuerzentrale: Er bewahrt das Erbgut, kontrolliert Genaktivität und reguliert über **Kernporen** den Molekülaustausch. **Räumliche Trennung** von Transkription (Kern) und Translation (Zytoplasma) ermöglicht RNA-Prozessierung (Spleißen, 5′-Kappe, Poly-A-Schwanz). **Warum für den MedAT relevant?** Kernporen (<40 kDa frei, NLS/NES), Chromatin (Nukleosom, Euchromatin/Heterochromatin), Nucleolus und Barr-Körper werden häufig geprüft. **Welche Fragen werden beantwortet?** „Kernporen — wer diffundiert frei?“; „Nukleosom — was ist das?“; „Euchromatin vs. Heterochromatin?“; „Was ist ein Barr-Körper?“; „Transkription wo, Translation wo?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zum Zellkern abgedeckt.
+Der **Zellkern** ist die Steuerzentrale der Zelle: Er bewahrt das Erbgut, kontrolliert die Genaktivitaet und reguliert ueber **Kernporen** den Molekuelaustausch. Die raeumliche Trennung von Transkription (Kern) und Translation (Zytoplasma) ermoeglicht die RNA-Prozessierung.
+
+**In diesem Kapitel lernst du:**
+- **Kernhuelle** und **Kernporen** (freie Diffusion <40 kDa, aktiver Transport mit NLS/NES)
+- **Chromatin**-Verpackung (Nukleosom, Euchromatin/Heterochromatin, Histon-Modifikationen) und **Barr-Koerper**
+- den **Nucleolus** als Ribosomenfabrik (ohne eigene Membran)
+- klinische Bezuege: Progeria (Lamin-Defekt), HDAC-Inhibitoren
+
+---
+
+## Kernhuelle und Kernporen
+
+Der Zellkern ist von einer **Doppelmembran** (Kernhuelle) umhuellt:
+- **Aeussere Kernmembran**: direkt verbunden mit dem rauen ER
+- **Innere Kernmembran**: ausgekleidet durch die **Kernlamina** (Lamin-Intermediaerfilamente → mechanische Stuetze)
+- **Perinukleaerer Spalt**: Raum zwischen beiden Membranen
+
+**Kernporenkomplexe (NPC):**
+- **Freie Diffusion**: Molekuele <40 kDa
+- **Aktiver Transport** (>40 kDa): NLS (Import via Importin) oder NES (Export via Exportin/CRM1)
+- **RanGTPase-Gradient**: RanGTP (Kern) vs. RanGDP (Zytoplasma) treibt den gerichteten Transport
+
+> **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Aeussere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
+
+{{DIAGRAM:animal-cell}}
+
+---
+
+## Chromatin: 2 Meter DNA in 6 Mikrometer verpackt
+
+Das menschliche Genom: 3,2 Milliarden Basenpaare -- ausgestreckt ca. **2 Meter** -- muss in einen ~6 Mikrometer grossen Kern passen: **~10.000-fache Kompaktierung**.
+
+**Wichtige Begriffe:**
+- **Chromosom:** kondensierte DNA mit Histonen; sichtbar in Mitose/Meiose
+- **Centromer:** Einschnuerung; Ansatzpunkt fuer Spindelfasern
+- **Telomer:** Endregionen; schuetzen DNA vor Abbau
+- **Histone:** basische Proteine (Lysin, Arginin), um die die DNA gewickelt ist
+
+“Chromosomen erlauben die freie Kombination der Gene” ist **falsch** -- das passiert durch Crossing-over in der **Meiose**.
+
+{{DIAGRAM:dna-helix}}
+
+**Hierarchische Verpackung:**
+1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2x H2A, H2B, H3, H4) -- Perlen auf einer Schnur
+2. **Chromatinfaser** (~30 nm): Kompaktierung durch Histon H1
+3. **Schleifen und Domaenen** (TADs)
+4. **Metaphasechromosom**: maximale Kompaktierung
+
+**Euchromatin vs. Heterochromatin:**
+
+| | Euchromatin | Heterochromatin |
+|---|---|---|
+| Histone | acetyliert (HAT) | methyliert (HMT) |
+| Transkription | aktiv | inaktiv |
+| Beispiel | aktive Gene | Barr-Koerper |
+
+**Histon-Modifikationen:**
+- **Acetylierung** (HAT): Chromatin oeffnet sich → Transkription moeglich
+- **Deacetylierung** (HDAC): Chromatin schliesst sich → Gensilencing
+- **HDAC-Inhibitoren** (Vorinostat): epigenetische Krebstherapie
+
+**Barr-Koerper:** Inaktiviertes X-Chromosom bei XX-Individuen. Anzahl = X-Chromosomenanzahl - 1.
+
+> **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer. Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Koerper = inaktives X.
+
+---
+
+## Nucleolus: Ribosomenfabrik
+
+Keine Membranstruktur; organisiert um rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22. Synthetisiert rRNA (RNA-Pol I), assembliert 40S/60S-Untereinheiten → Export → 80S-Ribosomen. Grosser Nucleolus = hohe Proliferation = **Malignitaetsmerkmal**.
+
+> **Merke:** Nucleolus = Ribosomenfabrik, NICHT membranumschlossen.
+
+---
+
+## Klinisch: Progeria
+
+LMNA-Mutation → Progerin → Kernlamina destabilisiert → Kerndeformation. Vorzeitige Atherosklerose, Tod ~13 Jahre. Lonafarnib verlaengert Leben ~2,5 Jahre.
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfallen:**
+- “Chromosomen erlauben die freie Kombination der Gene” ist **FALSCH**
+- Transkription im Kern, Translation im Zytoplasma -- NICHT umgekehrt
+- Kernlamina = Lamine (NICHT Aktin)
+- Nucleolus ist NICHT membranumschlossen
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Kernhuelle**: Doppelmembran; aeussere = rER-Kontinuum; innere = Kernlamina
+- **Kernporen**: <40 kDa frei; >40 kDa mit NLS/NES; RanGTP-Gradient
+- **Nukleosom**: 147 bp + Histon-Oktamer = Grundeinheit Chromatinverpackung
+- **Euchromatin** = acetyliert, aktiv; **Heterochromatin** = methyliert, inaktiv; Barr-Koerper = inaktives X
+- **Nucleolus**: Ribosomenfabrik, nicht membranumschlossen
+- **Klinisch**: Progeria (LMNA), HDAC-Inhibitoren (Vorinostat)`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** Der **Zellkern** ist die Steuerzentrale: Er bewahrt das Erbgut, kontrolliert Genaktivität und reguliert über **Kernporen** den Molekülaustausch. **Räumliche Trennung** von Transkription (Kern) und Translation (Zytoplasma) ermöglicht RNA-Prozessierung (Spleißen, 5′-Kappe, Poly-A-Schwanz). **Warum für den MedAT relevant?** Kernporen (<40 kDa frei, NLS/NES), Chromatin (Nukleosom, Euchromatin/Heterochromatin), Nucleolus und Barr-Körper werden häufig geprüft. **Welche Fragen werden beantwortet?** „Kernporen — wer diffundiert frei?”; „Nukleosom — was ist das?”; „Euchromatin vs. Heterochromatin?”; „Was ist ein Barr-Körper?”; „Transkription wo, Translation wo?” Mit diesem Kapitel sind alle typischen BMS-Fragen zum Zellkern abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - **Kernhülle** und **Kernporen** (freie Diffusion <40 kDa, aktiver Transport mit NLS/NES)
@@ -2041,7 +2142,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 ## Kernhülle und Kernporen: die selektive Schleuse
 
-**Um zu verstehen,** wie der Kern mit dem Zytoplasma kommuniziert, schauen wir uns zuerst die Hülle und die „Schleusen“ an. Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
+**Um zu verstehen,** wie der Kern mit dem Zytoplasma kommuniziert, schauen wir uns zuerst die Hülle und die „Schleusen” an. Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
 - **Äußere Kernmembran**: direkt verbunden mit dem rauen ER (trägt ebenfalls Ribosomen)
 - **Innere Kernmembran**: innen ausgekleidet durch die **Kernlamina** (Netz aus Lamin-Intermediärfilamenten → mechanische Stütze + Heterochromatin-Verankerung)
 - **Perinukleärer Spalt**: Raum zwischen beiden Membranen (kontinuierlich mit ER-Lumen)
@@ -2050,7 +2151,7 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 - Einzige Kommunikationskanäle zwischen Kern und Zytoplasma
 - Aufbau: ~30 verschiedene Nucleoporine, ~120 MDa
 - **Freie Diffusion**: Moleküle <40 kDa (Ionen, kleine Proteine, Metabolite)
-- **Aktiver Transport** (>40 kDa): braucht ein "Ticket"
+- **Aktiver Transport** (>40 kDa): braucht ein “Ticket”
 
 **Kernimport und -export:**
 - **NLS** (Nuclear Localization Signal): basische Aminosäuren (Lys, Arg) → wird von **Importin-α** erkannt → Importin-α/β-Komplex trägt Protein durch NPC → im Kern: RanGTP bindet Importin → Cargo-Dissoziation
@@ -2077,12 +2178,12 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 - **Telomer:** die Endregionen der Chromosomen (repetitive DNA); **schützen die DNA vor Abbau** und verkürzen sich bei jeder Zellteilung (Alterung); Telomerase verlängert sie (Stammzellen, Keimzellen).
 - **Histone:** basische Proteine (reich an Lysin, Arginin), um die die DNA gewickelt ist (Nukleosom); Chromosomen **enthalten basische Proteine** (Histone).
 
-**Wichtig — typische Falschaussage:** „Chromosomen erlauben die freie Kombination der Gene“ ist **falsch**. Die **freie Kombination der Gene** erfolgt durch **Crossing-over** und zufällige Verteilung der homologen Chromosomen in der **Meiose**, nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform; die Neukombination ist ein Vorgang der Meiose.
+**Wichtig — typische Falschaussage:** „Chromosomen erlauben die freie Kombination der Gene” ist **falsch**. Die **freie Kombination der Gene** erfolgt durch **Crossing-over** und zufällige Verteilung der homologen Chromosomen in der **Meiose**, nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform; die Neukombination ist ein Vorgang der Meiose.
 
 {{DIAGRAM:dna-helix}}
 
 **Hierarchische Verpackung:**
-1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie "Perlen auf einer Schnur"
+1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie “Perlen auf einer Schnur”
 2. **Chromatinfaser** (~30 nm): Nukleosomen kompaktieren durch Histon H1 und Protein-Protein-Wechselwirkungen
 3. **Schleifen und Domänen**: regulatorische Einheiten (TADs — Topologically Associating Domains)
 4. **Metaphasechromosom**: maximale Kompaktierung (sichtbar in Mitose)
@@ -2168,107 +2269,6 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
 - **Euchromatin** (acetyliert, HAT) = offen, aktiv; **Heterochromatin** (methyliert, HDAC) = geschlossen, inaktiv; Barr-Körper = inaktives X
 - **Nucleolus**: Ribosomenfabrik (rRNA + Assemblierung), nicht membranumschlossen; groß = Malignitätsmerkmal
 - **Klinisch**: Progeria (LMNA-Mutation → Kerndeformation); HDAC-Inhibitoren (Vorinostat) reaktivieren Tumorsuppressor-Gene`,
-      contentExtended: `## Einleitung
-
-Der **Zellkern** ist die Steuerzentrale der Zelle: Er bewahrt das Erbgut, kontrolliert die Genaktivitaet und reguliert ueber **Kernporen** den Molekuelaustausch. Die raeumliche Trennung von Transkription (Kern) und Translation (Zytoplasma) ermoeglicht die RNA-Prozessierung.
-
-**In diesem Kapitel lernst du:**
-- **Kernhuelle** und **Kernporen** (freie Diffusion <40 kDa, aktiver Transport mit NLS/NES)
-- **Chromatin**-Verpackung (Nukleosom, Euchromatin/Heterochromatin, Histon-Modifikationen) und **Barr-Koerper**
-- den **Nucleolus** als Ribosomenfabrik (ohne eigene Membran)
-- klinische Bezuege: Progeria (Lamin-Defekt), HDAC-Inhibitoren
-
----
-
-## Kernhuelle und Kernporen
-
-Der Zellkern ist von einer **Doppelmembran** (Kernhuelle) umhuellt:
-- **Aeussere Kernmembran**: direkt verbunden mit dem rauen ER
-- **Innere Kernmembran**: ausgekleidet durch die **Kernlamina** (Lamin-Intermediaerfilamente → mechanische Stuetze)
-- **Perinukleaerer Spalt**: Raum zwischen beiden Membranen
-
-**Kernporenkomplexe (NPC):**
-- **Freie Diffusion**: Molekuele <40 kDa
-- **Aktiver Transport** (>40 kDa): NLS (Import via Importin) oder NES (Export via Exportin/CRM1)
-- **RanGTPase-Gradient**: RanGTP (Kern) vs. RanGDP (Zytoplasma) treibt den gerichteten Transport
-
-> **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Aeussere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
-
-{{DIAGRAM:animal-cell}}
-
----
-
-## Chromatin: 2 Meter DNA in 6 Mikrometer verpackt
-
-Das menschliche Genom: 3,2 Milliarden Basenpaare -- ausgestreckt ca. **2 Meter** -- muss in einen ~6 Mikrometer grossen Kern passen: **~10.000-fache Kompaktierung**.
-
-**Wichtige Begriffe:**
-- **Chromosom:** kondensierte DNA mit Histonen; sichtbar in Mitose/Meiose
-- **Centromer:** Einschnuerung; Ansatzpunkt fuer Spindelfasern
-- **Telomer:** Endregionen; schuetzen DNA vor Abbau
-- **Histone:** basische Proteine (Lysin, Arginin), um die die DNA gewickelt ist
-
-"Chromosomen erlauben die freie Kombination der Gene" ist **falsch** -- das passiert durch Crossing-over in der **Meiose**.
-
-{{DIAGRAM:dna-helix}}
-
-**Hierarchische Verpackung:**
-1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2x H2A, H2B, H3, H4) -- Perlen auf einer Schnur
-2. **Chromatinfaser** (~30 nm): Kompaktierung durch Histon H1
-3. **Schleifen und Domaenen** (TADs)
-4. **Metaphasechromosom**: maximale Kompaktierung
-
-**Euchromatin vs. Heterochromatin:**
-
-| | Euchromatin | Heterochromatin |
-|---|---|---|
-| Histone | acetyliert (HAT) | methyliert (HMT) |
-| Transkription | aktiv | inaktiv |
-| Beispiel | aktive Gene | Barr-Koerper |
-
-**Histon-Modifikationen:**
-- **Acetylierung** (HAT): Chromatin oeffnet sich → Transkription moeglich
-- **Deacetylierung** (HDAC): Chromatin schliesst sich → Gensilencing
-- **HDAC-Inhibitoren** (Vorinostat): epigenetische Krebstherapie
-
-**Barr-Koerper:** Inaktiviertes X-Chromosom bei XX-Individuen. Anzahl = X-Chromosomenanzahl - 1.
-
-> **Merke:** Nukleosom = 147 bp DNA um Histon-Oktamer. Acetylierung → offen (aktiv). Methylierung → geschlossen (inaktiv). Barr-Koerper = inaktives X.
-
----
-
-## Nucleolus: Ribosomenfabrik
-
-Keine Membranstruktur; organisiert um rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22. Synthetisiert rRNA (RNA-Pol I), assembliert 40S/60S-Untereinheiten → Export → 80S-Ribosomen. Grosser Nucleolus = hohe Proliferation = **Malignitaetsmerkmal**.
-
-> **Merke:** Nucleolus = Ribosomenfabrik, NICHT membranumschlossen.
-
----
-
-## Klinisch: Progeria
-
-LMNA-Mutation → Progerin → Kernlamina destabilisiert → Kerndeformation. Vorzeitige Atherosklerose, Tod ~13 Jahre. Lonafarnib verlaengert Leben ~2,5 Jahre.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfallen:**
-- "Chromosomen erlauben die freie Kombination der Gene" ist **FALSCH**
-- Transkription im Kern, Translation im Zytoplasma -- NICHT umgekehrt
-- Kernlamina = Lamine (NICHT Aktin)
-- Nucleolus ist NICHT membranumschlossen
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Kernhuelle**: Doppelmembran; aeussere = rER-Kontinuum; innere = Kernlamina
-- **Kernporen**: <40 kDa frei; >40 kDa mit NLS/NES; RanGTP-Gradient
-- **Nukleosom**: 147 bp + Histon-Oktamer = Grundeinheit Chromatinverpackung
-- **Euchromatin** = acetyliert, aktiv; **Heterochromatin** = methyliert, inaktiv; Barr-Koerper = inaktives X
-- **Nucleolus**: Ribosomenfabrik, nicht membranumschlossen
-- **Klinisch**: Progeria (LMNA), HDAC-Inhibitoren (Vorinostat)`,
       lernziele: [
         "Die Struktur des Zellkerns (Kernhülle, Kernporen, Kernlamina, Nucleolus) vollständig beschreiben",
         "Chromatin-Kompaktierung hierarchisch erklären und Euchromatin/Heterochromatin unterscheiden",
@@ -2407,7 +2407,122 @@ LMNA-Mutation → Progerin → Kernlamina destabilisiert → Kerndeformation. Vo
       ],
       content: `## Einleitung
 
-**Worum geht es?** **Wie** werden Zellen vermehrt? **Mitose** erzeugt zwei genetisch identische Tochterzellen (Körperzellen), **Meiose** genetisch verschiedene Keimzellen (Fortpflanzung). Der **Zellzyklus** (G1 → S → G2 → M) und **Checkpoints** (G1/S, G2/M, Spindel) steuern die Teilung. **Warum für den MedAT relevant?** Zellzyklus-Reihenfolge, Mitose- vs. Meiose-Anaphase, Crossing-over (nur Prophase I), Non-disjunction (Trisomie 21) und Checkpoints (Rb, p53) sind Standardthemen. **Welche Fragen werden beantwortet?** „Zellzyklus — richtige Reihenfolge?“; „Anaphase Mitose vs. Anaphase I Meiose?“; „Wo findet Crossing-over statt?“; „Trisomie 21 — Ursache?“; „Was ist ein Bivalent?“ Mit diesem Kapitel sind alle typischen BMS-Fragen zu Mitose/Meiose abgedeckt.
+**Wie** werden Zellen vermehrt? **Mitose** erzeugt zwei genetisch identische Tochterzellen (Koerperzellen), **Meiose** genetisch verschiedene Keimzellen (Fortpflanzung). Der **Zellzyklus** (G1 → S → G2 → M) und **Checkpoints** steuern die Teilung.
+
+**In diesem Kapitel lernst du:**
+- den **Zellzyklus** (G1, S, G2, M) und **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint)
+- **Mitose** (Prophase → Telophase, Zytokinese) und den Unterschied zu Meiose
+- **Meiose I** (Reduktion, Crossing-over) und **Meiose II** (Aequation) sowie **Non-disjunction** (Trisomie 21)
+- klinische Bezuege: Trisomie 21, Turner, Klinefelter, Krebs (p53, Rb)
+
+---
+
+## Der Zellzyklus
+
+Der Zellzyklus beschreibt den Lebenszyklus einer sich teilenden Zelle. Er gliedert sich in die **Interphase** (G1, S, G2) und die **M-Phase** (Mitose + Zytokinese). **Reihenfolge immer: G1 → S → G2 → M** (nicht G1-G2-S-M!).
+
+**G1-Phase (Gap 1):** Proteinsynthese, Zellwachstum. Zellen, die dauerhaft nicht teilen (Neuronen, Muskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase). **G1/S-Checkpoint** (Restriktionspunkt): **Cyclin D / CDK4** → Phosphorylierung von Rb → Freigabe von E2F → S-Phase-Gene. Bei Krebszellen oft defekt (Rb-Mutation).
+
+**S-Phase (Synthese):** DNA-Replikation: DNA-Menge verdoppelt sich (2n → 4n DNA-Gehalt, Chromosomenzahl bleibt 2n, aber jedes Chromosom besteht aus 2 Schwesterchromatiden).
+
+**G2-Phase (Gap 2):** Kontrolle der replizierten DNA. **G2/M-Checkpoint**: **Cyclin B / CDK1** (MPF) → loest Mitose aus.
+
+**M-Phase:** Kernteilung + Zellteilung. **Spindel-Checkpoint**: Alle Chromosomen an Spindelfasern angeheftet? → Sonst kein Anaphase-Beginn.
+
+> **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen ueberwinden Checkpoints durch Mutationen in p53, Rb.
+
+{{DIAGRAM:cell-cycle}}
+
+---
+
+## Mitose -- Somatische Zellteilung
+
+Die Mitose erzeugt zwei genetisch identische Tochterzellen.
+
+{{DIAGRAM:mitosis}}
+
+**Prophase:** Chromosomen kondensieren. Zentrosom dupliziert sich. Kernhuelle loest sich auf.
+**Prometaphase:** Spindelmikrotubuli heften sich an Kinetochore.
+**Metaphase:** Chromosomen an der **Metaphasenplatte** ausgerichtet. Spindel-Checkpoint aktiv.
+**Anaphase:** **Schwesterchromatiden trennen sich** (Separase spaltet Cohesin). 46 Chromosomen pro Pol.
+**Telophase:** Chromosomen dekondensieren. Kernhuelle bildet sich neu.
+**Zytokinese:** Kontraktiler Ring (Aktin + Myosin II) → 2 Tochterzellen.
+
+> **Merke:** Anaphase = Schwesterchromatiden trennen sich (Cohesin gespalten). NICHT die homologen Chromosomen! Das ist Meiose I.
+
+---
+
+## Meiose -- Keimzellteilung
+
+Die Meiose erzeugt 4 haploide, genetisch verschiedene Keimzellen aus einer diploiden Zelle.
+
+{{DIAGRAM:meiosis}}
+
+**Meiose I -- Reduktionsteilung:**
+- **Prophase I** (laengste Phase): Homologe Chromosomen lagern sich zusammen (**Bivalente/Tetraden**). **Crossing-over** in Pachytaen: DNA-Austausch zwischen homologen Chromosomen → genetische Vielfalt!
+- **Metaphase I:** **Bivalente** (nicht einzelne Chromosomen!) an Metaphasenplatte. Zufaellige Ausrichtung → 2 hoch 23 = 8,4 Millionen Kombinationen.
+- **Anaphase I:** **Homologe Chromosomen trennen sich** (nicht Schwesterchromatiden!).
+- **Telophase I:** 2 haploide Zellen mit je n Chromosomen (jedes = 2 Schwesterchromatiden).
+
+**Meiose II -- Aequationsteilung (wie Mitose):**
+Trennung der Schwesterchromatiden. Ergebnis: 4 haploide Zellen (n), genetisch verschieden.
+
+> **Merke:** Meiose I = homologe Chromosomen trennen sich (Reduktion). Meiose II = Schwesterchromatiden trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
+
+---
+
+## Vergleichstabelle: Mitose vs. Meiose
+
+| Merkmal | Mitose | Meiose |
+|---------|--------|--------|
+| Zelltyp | Somatische Zellen | Keimzellen |
+| Teilungen | 1 | 2 (I + II) |
+| Tochterzellen | 2 | 4 |
+| Chromosomensatz | 2n → 2x2n | 2n → 4xn |
+| Genetische Identitaet | Identisch | Verschieden |
+| Crossing-over | Nein | Ja (Prophase I) |
+| Bivalente | Nein | Ja (Meiose I) |
+
+---
+
+## Non-disjunction und Chromosomenaberrationen
+
+**Non-disjunction** = fehlerhafte Chromosomentrennung.
+- **Meiose I:** Homologe trennen sich nicht → alle 4 Tochterzellen betroffen
+- **Meiose II:** Schwesterchromatiden trennen sich nicht → 2 von 4 betroffen
+
+| Aberration | Syndrom | Haeufigkeit |
+|---|---|---|
+| Trisomie 21 | Down-Syndrom | 1:700, steigt mit Mutteralter |
+| Trisomie 18 | Edwards-Syndrom | 1:5.000 |
+| 45,X0 | Turner-Syndrom | 1:2.500 Frauen |
+| 47,XXY | Klinefelter-Syndrom | 1:1.000 Maenner |
+
+> **Merke:** Trisomie 21 = haeufigste Chromosomenaberration Lebendgeborener; Non-disjunction in Meiose I: alle 4 Keimzellen betroffen; in Meiose II: 2 von 4.
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfallen:**
+- Crossing-over findet NUR in Prophase I statt, NICHT in der Mitose
+- Zellzyklus-Reihenfolge: **G1 → S → G2 → M** (nicht G1-G2-S-M!)
+- Mitose-Anaphase: Schwesterchromatiden (NICHT homologe Chromosomen!)
+- Meiose-I-Anaphase: Homologe (Schwesterchromatiden bleiben verbunden!)
+- G0 ist nicht G1: G0 ist Ruhephase **ausserhalb** des aktiven Zellzyklus
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Zellzyklus**: G1 → S (DNA-Replikation) → G2 → M; Checkpoints: G1/S (Rb/E2F), G2/M (CyclinB/CDK1)
+- **Mitose** (2n → 2x2n): Prophase → Metaphase → Anaphase (Schwesterchromatiden trennen) → Telophase
+- **Meiose** (2n → 4xn): 2 Teilungen; Meiose I = Homologe trennen sich; Meiose II = Schwesterchromatiden
+- **Crossing-over**: Prophase I; genetische Vielfalt
+- **Non-disjunction**: Trisomie 21 (Down), Trisomie 18 (Edwards); Meiose I = alle 4 Keimzellen betroffen`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** **Wie** werden Zellen vermehrt? **Mitose** erzeugt zwei genetisch identische Tochterzellen (Körperzellen), **Meiose** genetisch verschiedene Keimzellen (Fortpflanzung). Der **Zellzyklus** (G1 → S → G2 → M) und **Checkpoints** (G1/S, G2/M, Spindel) steuern die Teilung. **Warum für den MedAT relevant?** Zellzyklus-Reihenfolge, Mitose- vs. Meiose-Anaphase, Crossing-over (nur Prophase I), Non-disjunction (Trisomie 21) und Checkpoints (Rb, p53) sind Standardthemen. **Welche Fragen werden beantwortet?** „Zellzyklus — richtige Reihenfolge?”; „Anaphase Mitose vs. Anaphase I Meiose?”; „Wo findet Crossing-over statt?”; „Trisomie 21 — Ursache?”; „Was ist ein Bivalent?” Mit diesem Kapitel sind alle typischen BMS-Fragen zu Mitose/Meiose abgedeckt.
 
 **In diesem Kapitel lernst du:**
 - den **Zellzyklus** (G1, S, G2, M) und **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint)
@@ -2564,121 +2679,6 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 - **Meiose** (2n → 4×n): 2 Teilungen; Meiose I = Homologe trennen sich (Reduktion); Meiose II = Schwesterchromatiden trennen
 - **Crossing-over**: Prophase I; DNA-Austausch zwischen homologen Chromosomen → genetische Vielfalt
 - **Non-disjunction**: Trisomie 21 (Down), Trisomie 18 (Edwards); Meiose I = alle 4 Keimzellen betroffen`,
-      contentExtended: `## Einleitung
-
-**Wie** werden Zellen vermehrt? **Mitose** erzeugt zwei genetisch identische Tochterzellen (Koerperzellen), **Meiose** genetisch verschiedene Keimzellen (Fortpflanzung). Der **Zellzyklus** (G1 → S → G2 → M) und **Checkpoints** steuern die Teilung.
-
-**In diesem Kapitel lernst du:**
-- den **Zellzyklus** (G1, S, G2, M) und **Checkpoints** (G1/S, G2/M, Spindel-Checkpoint)
-- **Mitose** (Prophase → Telophase, Zytokinese) und den Unterschied zu Meiose
-- **Meiose I** (Reduktion, Crossing-over) und **Meiose II** (Aequation) sowie **Non-disjunction** (Trisomie 21)
-- klinische Bezuege: Trisomie 21, Turner, Klinefelter, Krebs (p53, Rb)
-
----
-
-## Der Zellzyklus
-
-Der Zellzyklus beschreibt den Lebenszyklus einer sich teilenden Zelle. Er gliedert sich in die **Interphase** (G1, S, G2) und die **M-Phase** (Mitose + Zytokinese). **Reihenfolge immer: G1 → S → G2 → M** (nicht G1-G2-S-M!).
-
-**G1-Phase (Gap 1):** Proteinsynthese, Zellwachstum. Zellen, die dauerhaft nicht teilen (Neuronen, Muskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase). **G1/S-Checkpoint** (Restriktionspunkt): **Cyclin D / CDK4** → Phosphorylierung von Rb → Freigabe von E2F → S-Phase-Gene. Bei Krebszellen oft defekt (Rb-Mutation).
-
-**S-Phase (Synthese):** DNA-Replikation: DNA-Menge verdoppelt sich (2n → 4n DNA-Gehalt, Chromosomenzahl bleibt 2n, aber jedes Chromosom besteht aus 2 Schwesterchromatiden).
-
-**G2-Phase (Gap 2):** Kontrolle der replizierten DNA. **G2/M-Checkpoint**: **Cyclin B / CDK1** (MPF) → loest Mitose aus.
-
-**M-Phase:** Kernteilung + Zellteilung. **Spindel-Checkpoint**: Alle Chromosomen an Spindelfasern angeheftet? → Sonst kein Anaphase-Beginn.
-
-> **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen ueberwinden Checkpoints durch Mutationen in p53, Rb.
-
-{{DIAGRAM:cell-cycle}}
-
----
-
-## Mitose -- Somatische Zellteilung
-
-Die Mitose erzeugt zwei genetisch identische Tochterzellen.
-
-{{DIAGRAM:mitosis}}
-
-**Prophase:** Chromosomen kondensieren. Zentrosom dupliziert sich. Kernhuelle loest sich auf.
-**Prometaphase:** Spindelmikrotubuli heften sich an Kinetochore.
-**Metaphase:** Chromosomen an der **Metaphasenplatte** ausgerichtet. Spindel-Checkpoint aktiv.
-**Anaphase:** **Schwesterchromatiden trennen sich** (Separase spaltet Cohesin). 46 Chromosomen pro Pol.
-**Telophase:** Chromosomen dekondensieren. Kernhuelle bildet sich neu.
-**Zytokinese:** Kontraktiler Ring (Aktin + Myosin II) → 2 Tochterzellen.
-
-> **Merke:** Anaphase = Schwesterchromatiden trennen sich (Cohesin gespalten). NICHT die homologen Chromosomen! Das ist Meiose I.
-
----
-
-## Meiose -- Keimzellteilung
-
-Die Meiose erzeugt 4 haploide, genetisch verschiedene Keimzellen aus einer diploiden Zelle.
-
-{{DIAGRAM:meiosis}}
-
-**Meiose I -- Reduktionsteilung:**
-- **Prophase I** (laengste Phase): Homologe Chromosomen lagern sich zusammen (**Bivalente/Tetraden**). **Crossing-over** in Pachytaen: DNA-Austausch zwischen homologen Chromosomen → genetische Vielfalt!
-- **Metaphase I:** **Bivalente** (nicht einzelne Chromosomen!) an Metaphasenplatte. Zufaellige Ausrichtung → 2 hoch 23 = 8,4 Millionen Kombinationen.
-- **Anaphase I:** **Homologe Chromosomen trennen sich** (nicht Schwesterchromatiden!).
-- **Telophase I:** 2 haploide Zellen mit je n Chromosomen (jedes = 2 Schwesterchromatiden).
-
-**Meiose II -- Aequationsteilung (wie Mitose):**
-Trennung der Schwesterchromatiden. Ergebnis: 4 haploide Zellen (n), genetisch verschieden.
-
-> **Merke:** Meiose I = homologe Chromosomen trennen sich (Reduktion). Meiose II = Schwesterchromatiden trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
-
----
-
-## Vergleichstabelle: Mitose vs. Meiose
-
-| Merkmal | Mitose | Meiose |
-|---------|--------|--------|
-| Zelltyp | Somatische Zellen | Keimzellen |
-| Teilungen | 1 | 2 (I + II) |
-| Tochterzellen | 2 | 4 |
-| Chromosomensatz | 2n → 2x2n | 2n → 4xn |
-| Genetische Identitaet | Identisch | Verschieden |
-| Crossing-over | Nein | Ja (Prophase I) |
-| Bivalente | Nein | Ja (Meiose I) |
-
----
-
-## Non-disjunction und Chromosomenaberrationen
-
-**Non-disjunction** = fehlerhafte Chromosomentrennung.
-- **Meiose I:** Homologe trennen sich nicht → alle 4 Tochterzellen betroffen
-- **Meiose II:** Schwesterchromatiden trennen sich nicht → 2 von 4 betroffen
-
-| Aberration | Syndrom | Haeufigkeit |
-|---|---|---|
-| Trisomie 21 | Down-Syndrom | 1:700, steigt mit Mutteralter |
-| Trisomie 18 | Edwards-Syndrom | 1:5.000 |
-| 45,X0 | Turner-Syndrom | 1:2.500 Frauen |
-| 47,XXY | Klinefelter-Syndrom | 1:1.000 Maenner |
-
-> **Merke:** Trisomie 21 = haeufigste Chromosomenaberration Lebendgeborener; Non-disjunction in Meiose I: alle 4 Keimzellen betroffen; in Meiose II: 2 von 4.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfallen:**
-- Crossing-over findet NUR in Prophase I statt, NICHT in der Mitose
-- Zellzyklus-Reihenfolge: **G1 → S → G2 → M** (nicht G1-G2-S-M!)
-- Mitose-Anaphase: Schwesterchromatiden (NICHT homologe Chromosomen!)
-- Meiose-I-Anaphase: Homologe (Schwesterchromatiden bleiben verbunden!)
-- G0 ist nicht G1: G0 ist Ruhephase **ausserhalb** des aktiven Zellzyklus
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Zellzyklus**: G1 → S (DNA-Replikation) → G2 → M; Checkpoints: G1/S (Rb/E2F), G2/M (CyclinB/CDK1)
-- **Mitose** (2n → 2x2n): Prophase → Metaphase → Anaphase (Schwesterchromatiden trennen) → Telophase
-- **Meiose** (2n → 4xn): 2 Teilungen; Meiose I = Homologe trennen sich; Meiose II = Schwesterchromatiden
-- **Crossing-over**: Prophase I; genetische Vielfalt
-- **Non-disjunction**: Trisomie 21 (Down), Trisomie 18 (Edwards); Meiose I = alle 4 Keimzellen betroffen`,
       merksätze: [
         "Mitose: 2n → 2 × 2n (identisch). Meiose: 2n → 4 × n (genetisch verschieden). Der Schlüssel: Meiose hat 2 Teilungen!",
         "Crossing-over: Austausch von DNA-Segmenten zwischen homologen Chromosomen in der Prophase I. Erzeugt genetische Vielfalt.",
@@ -2820,7 +2820,131 @@ Trennung der Schwesterchromatiden. Ergebnis: 4 haploide Zellen (n), genetisch ve
       ],
       content: `## Einleitung
 
-**Worum geht es?** Woher kommt das ATP konkret? Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brückenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) — Bilanz ~30–32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto). **Warum für den MedAT relevant?** Ort der Schritte, PFK-1, Cyanid (Komplex IV), Thiamin (Brückenschritt), Laktatazidose und ATP-Bilanzen sind Standardthemen. **Welche Arten von Fragen werden beantwortet?** „Wo findet Glykolyse/Citratzyklus/Atmungskette statt?“; „Welche Aussage ist richtig/falsch?“ (z. B. Glykolyse im Mitochondrium); „Was blockiert Cyanid?“; „Warum FADH₂ weniger ATP als NADH?“; „Rechenfrage: ATP pro Glucose?“; „Kombination: Welche Aussagen treffen zu?“ Mit diesem Kapitel kannst du alle typischen BMS-Fragen zum Energiestoffwechsel sicher beantworten.
+Woher kommt das ATP konkret? Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brueckenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) -- Bilanz ~30--32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto).
+
+**In diesem Kapitel lernst du:**
+- **Glykolyse** (Zytoplasma, 1 Glucose → 2 Pyruvat, 2 ATP netto, PFK-1 als Schluesselenzym)
+- den **Brueckenschritt** (Pyruvat → Acetyl-CoA, Thiamin-abhaengig) und **Citratzyklus** (Bilanz pro Acetyl-CoA)
+- **Atmungskette** und **oxidative Phosphorylierung** (Chemiosmose, ~30--32 ATP/Glucose)
+- **Anaerober** Stoffwechsel (Laktat) und klinische Bezuege (Cyanid, Thiamin, Laktatazidose)
+
+---
+
+{{DIAGRAM:double-membrane-organelles}}
+
+{{DIAGRAM:animal-cell}}
+
+## Glykolyse -- Der erste Schritt
+
+Die **Glykolyse** ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C6) in 2 Pyruvat (C3) spaltet. Sie ist sowohl aerob als auch anaerob moeglich.
+
+**Energieinvestitionsphase (Schritte 1--5):** 2 ATP werden investiert. Glucose → Fructose-1,6-bisphosphat → Spaltung in 2 Triosen (G3P).
+**Energiekonversionsphase (Schritte 6--10):** 2 G3P → 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Gesamt: 4 ATP + 2 NADH.
+
+**Nettobilanz:** 1 Glucose → 2 Pyruvat, **2 ATP netto**, 2 NADH.
+
+**Schluesselenzyme:**
+- **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat. Faengt Glucose in der Zelle ein.
+- **PFK-1** (Schritt 3, Schluesselenzym!): Fructose-6-Phosphat → Fructose-1,6-bisphosphat. Gehemmt durch ATP, Citrat. Aktiviert durch AMP, Fructose-2,6-bisphosphat (Insulin).
+- **Pyruvat-Kinase** (Schritt 10): PEP → Pyruvat + ATP.
+
+> **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. “ATP bremst, wenn Energie da ist.”
+
+---
+
+## Pyruvat-Dehydrogenase -- Der Brueckenschritt
+
+Der **PDH-Komplex** (3 Enzyme, 5 Cofaktoren) in der **Mitochondrien-Matrix** katalysiert:
+
+**Reaktion:** Pyruvat + CoA + NAD+ → Acetyl-CoA + CO2 + NADH
+
+Pro Glucose: 2 Acetyl-CoA + 2 CO2 + 2 NADH.
+
+**Cofaktoren:** Thiaminpyrophosphat (TPP, Vitamin B1!), Liponsaeure, CoA (B5), FAD (B2), NAD+ (B3).
+
+**Klinisch:** Thiamin (B1)-Mangel → PDH-Funktionsverlust → Pyruvat akkumuliert → Laktat erhoet. Alkoholismus: Wernicke-Enzephalopathie.
+
+> **Merke:** Brueckenschritt = Pyruvat → Acetyl-CoA. Findet in Mitochondrien statt. Thiamin-Mangel → PDH-Defekt → Wernicke!
+
+---
+
+## Citratzyklus (Krebszyklus)
+
+Findet in der **Mitochondrien-Matrix** statt. Acetyl-CoA wird vollstaendig zu CO2 oxidiert -- dabei entstehen NADH und FADH2.
+
+**Bilanz pro Acetyl-CoA (1 Durchgang):** 3 NADH + 1 FADH2 + 1 GTP + 2 CO2
+
+**Bilanz pro Glucose (2 Durchgaenge):** 6 NADH + 2 FADH2 + 2 GTP + 4 CO2
+
+**Regulationsenzyme:** Citrat-Synthase (gehemmt durch NADH, ATP), Isocitrat-DH (gehemmt durch NADH, ATP; aktiviert durch ADP, Ca2+).
+
+**Amphibolismus:** Der Citratzyklus liefert auch Vorlaeufer fuer Biosynthesen: Alpha-Ketoglutarat → Glutamat, Oxalacetat → Aspartat, Succinyl-CoA → Haem-Synthese.
+
+> **Merke:** Pro Acetyl-CoA: 3 NADH, 1 FADH2, 1 GTP. Succinat-DH = Komplex II der Atmungskette.
+
+---
+
+## Atmungskette und Oxidative Phosphorylierung
+
+Die Atmungskette uebertraegt die in NADH und FADH2 gespeicherte Energie auf ATP. Sie befindet sich in der **inneren Mitochondrienmembran**.
+
+**Die Komplexe:**
+- **Komplex I** (NADH-Dehydrogenase): NADH → NAD+ + 2e-; pumpt 4 H+. Hemmer: Rotenon.
+- **Ubichinon (Q10):** Mobiler Elektronentraeger. Verbindet Komplex I/II mit III.
+- **Komplex II** (Succinat-DH): FADH2 → FAD + 2e-; pumpt **keine** H+ (deshalb weniger ATP!).
+- **Komplex III:** Elektronen von Q auf Cytochrom c; pumpt 4 H+.
+- **Cytochrom c:** Bei Apoptose: wird freigesetzt → Caspase-9-Aktivierung!
+- **Komplex IV** (Cytochrom-c-Oxidase): Elektronen auf O2 → H2O; pumpt 2 H+. **O2 = finaler Elektronenakzeptor!** Hemmer: **Cyanid**, CO.
+- **ATP-Synthase (Komplex V):** H+ fliessen zurueck → ADP + Pi → ATP. **Chemiosmose** (Mitchell, Nobelpreis 1978).
+
+**P/O-Verhaeltnis:** NADH: ~2,5 ATP; FADH2: ~1,5 ATP.
+
+> **Merke:** NADH → Komplex I → Q → III → Cyt c → IV → O2 → H2O. FADH2 → Komplex II → Q (kein H+-Pumpen → weniger ATP). Cyanid blockiert Komplex IV!
+
+---
+
+## Gesamtbilanz
+
+| Phase | ATP direkt | NADH | FADH2 | ATP aus OXPHOS |
+|-------|-----------|------|-------|----------------|
+| Glykolyse | 2 | 2 | 0 | ~5 |
+| Pyruvat-DH | 0 | 2 | 0 | ~5 |
+| Citratzyklus (x2) | 2 | 6 | 2 | ~19 |
+| **Gesamt** | **4** | **10** | **2** | **~30--32 ATP** |
+
+---
+
+## Anaerober Stoffwechsel
+
+Ohne Sauerstoff: NADH muss regeneriert werden, damit Glykolyse weiterlaufen kann.
+
+**Laktatgaerung (Muskel, Erythrozyten):** Pyruvat + NADH → Laktat + NAD+ (LDH). Nur 2 ATP pro Glucose.
+
+**Klinisch:** Laktatazidose bei Hypoxie (Sepsis, Schock), Metformin-Ueberdosierung, Thiamin-Mangel.
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfallen:**
+- Glykolyse = **Zytoplasma**; Citratzyklus = **Matrix**; Atmungskette = **innere Membran** -- nicht vertauschen
+- “30--32 ATP” ist die moderne Bilanz (alt: 36--38)
+- Succinat-DH = Komplex II der Atmungskette UND Citratzyklus-Enzym
+- FADH2 weniger ATP als NADH: Komplex II pumpt keine H+
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Glykolyse** (Zytoplasma): Glucose → 2 Pyruvat, **2 ATP netto**, 2 NADH; PFK-1 = Schluesselenzym
+- **Pyruvat-DH** (Matrix): Pyruvat → Acetyl-CoA + CO2 + NADH; Thiamin (B1) noetig
+- **Citratzyklus** (Matrix): pro Acetyl-CoA: 3 NADH + 1 FADH2 + 1 GTP + 2 CO2
+- **Atmungskette** (innere Membran): Komplex I → Q → III → Cyt c → IV → O2 → H2O; Chemiosmose
+- **ATP-Bilanz**: aerob ~30--32 ATP; anaerob nur 2 ATP; NADH ~2,5 ATP, FADH2 ~1,5 ATP
+- **Klinisch**: Cyanid → Komplex IV blockiert; Laktatazidose bei Hypoxie; Metformin schwach Komplex I`,
+      contentExtended: `## Einleitung
+
+**Worum geht es?** Woher kommt das ATP konkret? Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brückenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) — Bilanz ~30–32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto). **Warum für den MedAT relevant?** Ort der Schritte, PFK-1, Cyanid (Komplex IV), Thiamin (Brückenschritt), Laktatazidose und ATP-Bilanzen sind Standardthemen. **Welche Arten von Fragen werden beantwortet?** „Wo findet Glykolyse/Citratzyklus/Atmungskette statt?”; „Welche Aussage ist richtig/falsch?” (z. B. Glykolyse im Mitochondrium); „Was blockiert Cyanid?”; „Warum FADH₂ weniger ATP als NADH?”; „Rechenfrage: ATP pro Glucose?”; „Kombination: Welche Aussagen treffen zu?” Mit diesem Kapitel kannst du alle typischen BMS-Fragen zum Energiestoffwechsel sicher beantworten.
 
 **In diesem Kapitel lernst du:**
 - **Glykolyse** (Zytoplasma, 1 Glucose → 2 Pyruvat, 2 ATP netto, PFK-1 als Schlüsselenzym)
@@ -2852,11 +2976,11 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 - 2 NADH (im Zytoplasma)
 
 **Schlüsselenzyme der Glykolyse:**
-- **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat + ADP. Fängt Glucose in der Zelle "ein" (Phosphorylierung verhindert Rücktransport durch GLUT-Transporter). Isoform in der Leber: Glukokinase (niedrigere Affinität, nicht durch G6P gehemmt → funktioniert als Glucosesensor).
+- **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat + ADP. Fängt Glucose in der Zelle “ein” (Phosphorylierung verhindert Rücktransport durch GLUT-Transporter). Isoform in der Leber: Glukokinase (niedrigere Affinität, nicht durch G6P gehemmt → funktioniert als Glucosesensor).
 - **Phosphofructokinase-1 (PFK-1)** (Schritt 3, Schlüsselenzym!): Fructose-6-Phosphat → Fructose-1,6-bisphosphat. **Wichtigstes Regulationsenzym der Glykolyse.** Gehemmt durch ATP (hohe Energie → Glykolyse bremsen) und Citrat (Citratzyklus läuft bereits). Aktiviert durch AMP/ADP (niedrige Energie → Glykolyse beschleunigen) und Fructose-2,6-bisphosphat (Insulin-Signal). Irreversible Reaktion!
 - **Pyruvat-Kinase** (Schritt 10): Phosphoenolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
 
-> **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: "ATP bremst, wenn Energie da ist."
+> **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: “ATP bremst, wenn Energie da ist.”
 
 ---
 
@@ -2982,130 +3106,6 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
 - **Atmungskette** (innere Membran): Komplex I (NADH) → Ubichinon → Komplex III → Cytochrom c → **Komplex IV** → O₂ → H₂O; Protonengradient → ATP-Synthase (Chemiosmose)
 - **ATP-Bilanz**: aerob ~30–32 ATP; anaerob (Laktat) nur 2 ATP; NADH ≈ 2,5 ATP, FADH₂ ≈ 1,5 ATP
 - **Klinisch**: Cyanid → Komplex IV blockiert → keine Atmungskette; Laktatazidose bei Hypoxie (Sepsis, Schock); Metformin schwach Komplex I`,
-      contentExtended: `## Einleitung
-
-Woher kommt das ATP konkret? Der **Energiestoffwechsel** zerlegt Glucose in drei Schritten: Glykolyse (Zytoplasma), Brueckenschritt + Citratzyklus (Mitochondrien-Matrix), Atmungskette (innere Mitochondrienmembran) -- Bilanz ~30--32 ATP pro Glucose. Ohne Sauerstoff: nur Glykolyse + Laktatbildung (2 ATP netto).
-
-**In diesem Kapitel lernst du:**
-- **Glykolyse** (Zytoplasma, 1 Glucose → 2 Pyruvat, 2 ATP netto, PFK-1 als Schluesselenzym)
-- den **Brueckenschritt** (Pyruvat → Acetyl-CoA, Thiamin-abhaengig) und **Citratzyklus** (Bilanz pro Acetyl-CoA)
-- **Atmungskette** und **oxidative Phosphorylierung** (Chemiosmose, ~30--32 ATP/Glucose)
-- **Anaerober** Stoffwechsel (Laktat) und klinische Bezuege (Cyanid, Thiamin, Laktatazidose)
-
----
-
-{{DIAGRAM:double-membrane-organelles}}
-
-{{DIAGRAM:animal-cell}}
-
-## Glykolyse -- Der erste Schritt
-
-Die **Glykolyse** ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C6) in 2 Pyruvat (C3) spaltet. Sie ist sowohl aerob als auch anaerob moeglich.
-
-**Energieinvestitionsphase (Schritte 1--5):** 2 ATP werden investiert. Glucose → Fructose-1,6-bisphosphat → Spaltung in 2 Triosen (G3P).
-**Energiekonversionsphase (Schritte 6--10):** 2 G3P → 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Gesamt: 4 ATP + 2 NADH.
-
-**Nettobilanz:** 1 Glucose → 2 Pyruvat, **2 ATP netto**, 2 NADH.
-
-**Schluesselenzyme:**
-- **Hexokinase** (Schritt 1): Glucose + ATP → Glucose-6-Phosphat. Faengt Glucose in der Zelle ein.
-- **PFK-1** (Schritt 3, Schluesselenzym!): Fructose-6-Phosphat → Fructose-1,6-bisphosphat. Gehemmt durch ATP, Citrat. Aktiviert durch AMP, Fructose-2,6-bisphosphat (Insulin).
-- **Pyruvat-Kinase** (Schritt 10): PEP → Pyruvat + ATP.
-
-> **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. "ATP bremst, wenn Energie da ist."
-
----
-
-## Pyruvat-Dehydrogenase -- Der Brueckenschritt
-
-Der **PDH-Komplex** (3 Enzyme, 5 Cofaktoren) in der **Mitochondrien-Matrix** katalysiert:
-
-**Reaktion:** Pyruvat + CoA + NAD+ → Acetyl-CoA + CO2 + NADH
-
-Pro Glucose: 2 Acetyl-CoA + 2 CO2 + 2 NADH.
-
-**Cofaktoren:** Thiaminpyrophosphat (TPP, Vitamin B1!), Liponsaeure, CoA (B5), FAD (B2), NAD+ (B3).
-
-**Klinisch:** Thiamin (B1)-Mangel → PDH-Funktionsverlust → Pyruvat akkumuliert → Laktat erhoet. Alkoholismus: Wernicke-Enzephalopathie.
-
-> **Merke:** Brueckenschritt = Pyruvat → Acetyl-CoA. Findet in Mitochondrien statt. Thiamin-Mangel → PDH-Defekt → Wernicke!
-
----
-
-## Citratzyklus (Krebszyklus)
-
-Findet in der **Mitochondrien-Matrix** statt. Acetyl-CoA wird vollstaendig zu CO2 oxidiert -- dabei entstehen NADH und FADH2.
-
-**Bilanz pro Acetyl-CoA (1 Durchgang):** 3 NADH + 1 FADH2 + 1 GTP + 2 CO2
-
-**Bilanz pro Glucose (2 Durchgaenge):** 6 NADH + 2 FADH2 + 2 GTP + 4 CO2
-
-**Regulationsenzyme:** Citrat-Synthase (gehemmt durch NADH, ATP), Isocitrat-DH (gehemmt durch NADH, ATP; aktiviert durch ADP, Ca2+).
-
-**Amphibolismus:** Der Citratzyklus liefert auch Vorlaeufer fuer Biosynthesen: Alpha-Ketoglutarat → Glutamat, Oxalacetat → Aspartat, Succinyl-CoA → Haem-Synthese.
-
-> **Merke:** Pro Acetyl-CoA: 3 NADH, 1 FADH2, 1 GTP. Succinat-DH = Komplex II der Atmungskette.
-
----
-
-## Atmungskette und Oxidative Phosphorylierung
-
-Die Atmungskette uebertraegt die in NADH und FADH2 gespeicherte Energie auf ATP. Sie befindet sich in der **inneren Mitochondrienmembran**.
-
-**Die Komplexe:**
-- **Komplex I** (NADH-Dehydrogenase): NADH → NAD+ + 2e-; pumpt 4 H+. Hemmer: Rotenon.
-- **Ubichinon (Q10):** Mobiler Elektronentraeger. Verbindet Komplex I/II mit III.
-- **Komplex II** (Succinat-DH): FADH2 → FAD + 2e-; pumpt **keine** H+ (deshalb weniger ATP!).
-- **Komplex III:** Elektronen von Q auf Cytochrom c; pumpt 4 H+.
-- **Cytochrom c:** Bei Apoptose: wird freigesetzt → Caspase-9-Aktivierung!
-- **Komplex IV** (Cytochrom-c-Oxidase): Elektronen auf O2 → H2O; pumpt 2 H+. **O2 = finaler Elektronenakzeptor!** Hemmer: **Cyanid**, CO.
-- **ATP-Synthase (Komplex V):** H+ fliessen zurueck → ADP + Pi → ATP. **Chemiosmose** (Mitchell, Nobelpreis 1978).
-
-**P/O-Verhaeltnis:** NADH: ~2,5 ATP; FADH2: ~1,5 ATP.
-
-> **Merke:** NADH → Komplex I → Q → III → Cyt c → IV → O2 → H2O. FADH2 → Komplex II → Q (kein H+-Pumpen → weniger ATP). Cyanid blockiert Komplex IV!
-
----
-
-## Gesamtbilanz
-
-| Phase | ATP direkt | NADH | FADH2 | ATP aus OXPHOS |
-|-------|-----------|------|-------|----------------|
-| Glykolyse | 2 | 2 | 0 | ~5 |
-| Pyruvat-DH | 0 | 2 | 0 | ~5 |
-| Citratzyklus (x2) | 2 | 6 | 2 | ~19 |
-| **Gesamt** | **4** | **10** | **2** | **~30--32 ATP** |
-
----
-
-## Anaerober Stoffwechsel
-
-Ohne Sauerstoff: NADH muss regeneriert werden, damit Glykolyse weiterlaufen kann.
-
-**Laktatgaerung (Muskel, Erythrozyten):** Pyruvat + NADH → Laktat + NAD+ (LDH). Nur 2 ATP pro Glucose.
-
-**Klinisch:** Laktatazidose bei Hypoxie (Sepsis, Schock), Metformin-Ueberdosierung, Thiamin-Mangel.
-
----
-
-## MedAT-Fokus
-
-**Typische Pruefungsfallen:**
-- Glykolyse = **Zytoplasma**; Citratzyklus = **Matrix**; Atmungskette = **innere Membran** -- nicht vertauschen
-- "30--32 ATP" ist die moderne Bilanz (alt: 36--38)
-- Succinat-DH = Komplex II der Atmungskette UND Citratzyklus-Enzym
-- FADH2 weniger ATP als NADH: Komplex II pumpt keine H+
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Glykolyse** (Zytoplasma): Glucose → 2 Pyruvat, **2 ATP netto**, 2 NADH; PFK-1 = Schluesselenzym
-- **Pyruvat-DH** (Matrix): Pyruvat → Acetyl-CoA + CO2 + NADH; Thiamin (B1) noetig
-- **Citratzyklus** (Matrix): pro Acetyl-CoA: 3 NADH + 1 FADH2 + 1 GTP + 2 CO2
-- **Atmungskette** (innere Membran): Komplex I → Q → III → Cyt c → IV → O2 → H2O; Chemiosmose
-- **ATP-Bilanz**: aerob ~30--32 ATP; anaerob nur 2 ATP; NADH ~2,5 ATP, FADH2 ~1,5 ATP
-- **Klinisch**: Cyanid → Komplex IV blockiert; Laktatazidose bei Hypoxie; Metformin schwach Komplex I`,
       merksätze: [
         "Glykolyse = Zytoplasma, 2 ATP netto, 2 NADH. PFK-1 = Schlüsselenzym, ATP hemmt, AMP aktiviert.",
         "Pyruvat-DH: Pyruvat → Acetyl-CoA + CO₂ + NADH. Brückenschritt! Thiamin (B1) nötig. Wernicke bei B1-Mangel.",

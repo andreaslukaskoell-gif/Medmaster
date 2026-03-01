@@ -759,12 +759,13 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
       ],
       content: `## Mendelsche Regeln
 
-Gregor Mendel kreuzte Erbsen und entdeckte Gesetze, die bis heute Grundlage jeder Genetik-Pruefung sind. Die Verhaeltnisse 3:1, 1:2:1 und 9:3:3:1 musst du sicher beherrschen.
+Gregor Mendel kreuzte Erbsen und entdeckte Gesetze, die bis heute Grundlage jeder Genetik-Pruefung sind. Die Verhaeltnisse 3:1, 1:2:1 und 9:3:3:1 musst du sicher beherrschen. Stell dir vor: Mendel pflanzte tausende Erbsenpflanzen und zaehlte jahrelang Samen -- und entdeckte dabei Gesetze, die so przise sind, dass sie heute noch gelten.
 
 **In diesem Kapitel lernst du:**
-- die drei Mendelschen Regeln
+- die drei Mendelschen Regeln und wann sie gelten
 - wie du mit dem Punnett-Quadrat Kreuzungsergebnisse vorhersagst
-- wann 9:3:3:1 gilt und wann nicht
+- wann 9:3:3:1 gilt und wann Abweichungen auftreten
+- wie du Kreuzungsaufgaben Schritt fuer Schritt loest
 
 {{DIAGRAM:pedigree-analysis}}
 
@@ -772,17 +773,19 @@ Gregor Mendel kreuzte Erbsen und entdeckte Gesetze, die bis heute Grundlage jede
 
 ## 1. Regel (Uniformitaetsregel)
 
-Kreuzt du **reinerbige** Eltern (AA x aa), sind alle F1-Nachkommen **uniform heterozygot** (Aa) und zeigen das dominante Merkmal.
+Kreuzt du **reinerbige** Eltern (AA x aa) mit verschiedenen Merkmalen, sind alle F1-Nachkommen **uniform heterozygot** (Aa) und zeigen das dominante Merkmal. Das ist wie eine Familie mit einem grossen Vater (AA) und einer kleinen Mutter (aa) -- alle Kinder werden mittelgross (Aa), wenn Groesse dominant ist. Die F1 sieht also einheitlich aus, traegt aber das rezessive Allel "versteckt" in sich.
 
-> **Merke:** 1. Regel: AA x aa -> F1 zu 100 % Aa (uniform).
+> **Merke:** 1. Regel: Reinerbige Eltern (AA x aa) -> F1 zu 100 % uniform heterozygot (Aa) mit dominantem Merkmal.
 
 ---
 
 ## 2. Regel (Spaltungsregel)
 
-Kreuzt du die F1-Hybriden (Aa x Aa), spaltet die F2 auf: **Genotyp 1:2:1** (AA:Aa:aa), **Phaenotyp 3:1** (dominant:rezessiv). Das Punnett-Quadrat (2x2) zeigt die vier Kombinationen.
+Kreuzt du die F1-Hybriden (Aa x Aa), spaltet die F2 auf: **Genotyp 1:2:1** (AA : Aa : aa), **Phaenotyp 3:1** (dominant : rezessiv). Das versteckte rezessive Allel taucht in der Enkelgeneration wieder auf -- genau das hat Mendel ueberrascht! Das Punnett-Quadrat (2x2) zeigt alle vier Gameten-Kombinationen: AA, Aa, Aa, aa.
 
-> **Merke:** 2. Regel: Aa x Aa -> Genotyp 1:2:1, Phaenotyp 3:1.
+Merke dir: 3 von 4 Nachkommen zeigen den dominanten Phaenotyp (AA + Aa), 1 von 4 zeigt den rezessiven (aa). Das **Genotyp-Verhaeltnis** ist aber 1:2:1, weil sich AA und Aa zwar gleich aussehen, aber genetisch unterschiedlich sind.
+
+> **Merke:** 2. Regel: Aa x Aa -> Genotyp 1:2:1, Phaenotyp 3:1. Das rezessive Merkmal "springt" in der Enkelgeneration wieder auf.
 
 ---
 
@@ -790,24 +793,33 @@ Kreuzt du die F1-Hybriden (Aa x Aa), spaltet die F2 auf: **Genotyp 1:2:1** (AA:A
 
 {{DIAGRAM:meiosis}}
 
-Bei **zwei Genen auf verschiedenen Chromosomen** (RrGg x RrGg) ergibt die F2 das Phaenotyp-Verhaeltnis **9:3:3:1**. Das Punnett-Quadrat hat 4x4 = 16 Felder. Bei **gekoppelten Genen** (nah beieinander auf einem Chromosom) weicht das Verhaeltnis ab.
+Bei **zwei Genen auf verschiedenen Chromosomen** (RrGg x RrGg) ergibt die F2 das Phaenotyp-Verhaeltnis **9:3:3:1**. Stell dir vor: zwei Muenzen werden gleichzeitig geworfen -- jede Muenze ist unabhaengig von der anderen. Genauso werden Gene auf verschiedenen Chromosomen unabhaengig verteilt. Das Punnett-Quadrat hat 4x4 = 16 Felder.
 
-> **Merke:** 3. Regel: RrGg x RrGg -> F2 9:3:3:1 (nur bei unabhaengigen Genen).
+**Wichtig:** Bei **gekoppelten Genen** (eng beieinander auf demselben Chromosom) weicht das Verhaeltnis ab -- dann dominieren die Eltern-Kombinationen.
+
+> **Merke:** 3. Regel: RrGg x RrGg -> F2 9:3:3:1 nur bei Genen auf verschiedenen Chromosomen. Kopplung stoert dieses Verhaeltnis.
 
 ---
 
-## Punnett-Quadrat
+## Punnett-Quadrat -- das Werkzeug
 
-Das **Punnett-Quadrat** zeigt alle Gameten-Kombinationen. Monohybrid: 2x2 (4 Felder). Dihybrid: 4x4 (16 Felder). **Produktregel:** P(rrgg) = P(rr) x P(gg) = 1/4 x 1/4 = 1/16.
+Das **Punnett-Quadrat** zeigt alle Gameten-Kombinationen systematisch. Monohybrid: 2x2 (4 Felder). Dihybrid: 4x4 = 16 Felder. **Produktregel:** P(rrgg) = P(rr) x P(gg) = 1/4 x 1/4 = 1/16. Das Punnett-Quadrat hilft dir, keine Kombination zu vergessen -- zeichne es immer auf!
+
+---
+
+## MedAT-Fokus
+
+Beim MedAT kommen Kreuzungsaufgaben regelmaessig vor. Typische Fragen: Welchen Phaenotyp hat F2 bei Aa x Aa? (3:1). Was ist das Verhaeltnis bei RrGg x RrGg? (9:3:3:1). Wann gilt die 3. Regel nicht? (Bei Genkopplung). Die haeufigste Falle: **Genotyp-Verhaeltnis** (1:2:1) mit **Phaenotyp-Verhaeltnis** (3:1) verwechseln!
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- 1. Regel: AA x aa -> 100 % Aa
-- 2. Regel: Aa x Aa -> Genotyp 1:2:1, Phaenotyp 3:1
-- 3. Regel: 9:3:3:1 bei unabhaengigen Genen
-- Punnett-Quadrat fuer systematische Vorhersagen`,
+- 1. Regel: Reinerbige Eltern (AA x aa) -> F1 100 % Aa (uniform)
+- 2. Regel: Hybriden (Aa x Aa) -> Genotyp 1:2:1, Phaenotyp 3:1
+- 3. Regel: Zwei unabhaengige Gene (RrGg x RrGg) -> F2 Phaenotyp 9:3:3:1
+- Punnett-Quadrat: systematische Vorhersage aller Kreuzungsergebnisse
+- Kopplung: Abweichung von 9:3:3:1`,
       contentExtended: `## Einleitung
 
 Gregor Mendel kreuzte Erbsen und entdeckte dabei Gesetzmäßigkeiten, die bis heute die Grundlage jeder Genetik-Prüfung bilden. Wenn man reinerbig rote mit reinerbig weißen Erbsen kreuzt, sind alle Nachkommen rot -- aber in der nächsten Generation taucht Weiß wieder auf, in einem erstaunlich regelmäßigen Verhältnis. Diese Verhältnisse (3:1, 1:2:1, 9:3:3:1) zu kennen und mit dem Punnett-Quadrat berechnen zu können, ist für den BMS-Teil des MedAT unverzichtbar.
@@ -967,57 +979,70 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
       ],
       content: `## Genotyp, Phaenotyp und Dominanzverhaeltnisse
 
-Eine Pflanze mit roten Blueten kann AA oder Aa sein -- von aussen siehst du keinen Unterschied. Der **Phaenotyp** verraet nicht immer den **Genotyp**. Bei Blutgruppe AB sind beide Allele sichtbar (Kodominanz), bei manchen Blueten zeigt sich eine Mischform (Intermediaritaet).
+Eine Pflanze mit roten Blueten kann AA oder Aa sein -- von aussen siehst du keinen Unterschied. Der **Phaenotyp** verraet nicht immer den **Genotyp**. Bei Blutgruppe AB sind beide Allele sichtbar (Kodominanz), bei manchen Blueten zeigt sich eine Mischform (Intermediaritaet). Diese Unterschiede sind pruefungsrelevant!
 
 **In diesem Kapitel lernst du:**
 - warum gleicher Phaenotyp verschiedene Genotypen verbergen kann
-- die Dominanzverhaeltnisse (dominant-rezessiv, intermediaer, kodominant)
-- wie die Testkreuzung den Genotyp enthuellt
+- die Dominanzverhaeltnisse (dominant-rezessiv, intermediaer, kodominant) und ihre Merkmale
+- wie du homozygot und heterozygot unterscheidest
+- wie die Testkreuzung den verborgenen Genotyp enthuellt
 
 {{DIAGRAM:dna-helix}}
 
 ---
 
-## Genotyp und Phaenotyp
+## Genotyp und Phaenotyp -- der entscheidende Unterschied
 
-Der **Genotyp** ist deine Allel-Kombination (z. B. AA, Aa, aa). Der **Phaenotyp** ist das sichtbare Merkmal (z. B. rote Bluete). AA und Aa koennen denselben Phaenotyp zeigen, wenn A dominant ist.
+Der **Genotyp** ist deine Allel-Kombination (z. B. AA, Aa, aa) -- das was wirklich in deiner DNA steht. Der **Phaenotyp** ist das sichtbare Merkmal (z. B. rote Bluete, Blutgruppe A). Stell dir vor: Zwei Menschen sehen gleich aus, aber einer hat AA und der andere Aa -- der Genotyp unterscheidet sich, der Phaenotyp nicht. Das passiert immer dann, wenn das A-Allel **dominant** ist.
 
-> **Merke:** Genotyp = genetische Ausstattung. Phaenotyp = sichtbares Merkmal.
+Merke: Der Phaenotyp ist das Ergebnis von Genotyp + Umwelt. Beim MedAT werden meist direkte genetische Effekte abgefragt.
+
+> **Merke:** Genotyp = genetische Ausstattung (Allel-Kombination). Phaenotyp = sichtbares/messbares Merkmal.
 
 ---
 
 ## Homozygot und heterozygot
 
-**Homozygot** = beide Allele gleich (AA oder aa). **Heterozygot** = verschiedene Allele (Aa).
+**Homozygot** (reinerbig) = beide Allele gleich: **AA** (homozygot dominant) oder **aa** (homozygot rezessiv). **Heterozygot** (mischerbig) = verschiedene Allele: **Aa**. Bei der Vererbung gibt jedes Elternteil ein Allel weiter -- deshalb koennen heterozygote Eltern sowohl das dominante als auch das rezessive Allel weitergeben, was zu Aufspaltung in der Nachkommenschaft fuehrt.
 
 ---
 
-## Dominanzverhaeltnisse
-
-- **Dominant-rezessiv:** Aa zeigt denselben Phaenotyp wie AA. Das rezessive Allel (a) ist nur bei aa sichtbar.
-- **Intermediaer:** Aa zeigt einen **Mischphaenotyp** (z. B. rosa zwischen rot und weiss). F2-Phaenotyp = Genotyp: **1:2:1**.
-- **Kodominant:** Beide Allele gleichzeitig sichtbar (z. B. Blutgruppe **AB** -- A- und B-Antigen).
-
-> **Merke:** Dominant-rezessiv: Aa = AA. Intermediaer: Aa = Mischung (1:2:1). Kodominant: beide sichtbar (AB).
-
----
-
-## Testkreuzung
+## Dominanzverhaeltnisse -- drei wichtige Typen
 
 {{DIAGRAM:pedigree-analysis}}
 
-Um herauszufinden, ob ein Individuum AA oder Aa ist, kreuzt du es mit **aa**: Alle Nachkommen dominant -> **AA**. Spaltung **1:1** -> **Aa**.
+**Dominant-rezessiv:** Das dominante Allel (A) setzt sich im Heterozygoten durch. Aa zeigt denselben Phaenotyp wie AA. Das rezessive Allel (a) ist nur bei aa sichtbar. Beispiel: braune Augenfarbe (dominant) ueber blaue (rezessiv).
 
-> **Merke:** Testkreuzung x aa: 100 % dominant = AA; 1:1 = Aa.
+**Intermediaer (unvollstaendige Dominanz):** Aa zeigt einen **Mischphaenotyp** -- keiner der beiden Allele setzt sich vollstaendig durch. Beispiel: AA = rote Blume, aa = weisse Blume, Aa = **rosa** Blume. Wichtig: Bei intermediaerem Erbgang entspricht das F2-Phaenotyp-Verhaeltnis dem Genotyp-Verhaeltnis: **1:2:1** (nicht 3:1!).
+
+**Kodominant:** Beide Allele sind **gleichzeitig** sichtbar -- keine Mischung, sondern beide Merkmale nebeneinander. Bestes Beispiel: Blutgruppe **AB** (A- und B-Antigen auf den Erythrozyten). Nicht mit intermediaer verwechseln!
+
+> **Merke:** Dominant-rezessiv: Aa = AA im Phaenotyp. Intermediaer: Aa = Mischung (rosa), F2 = 1:2:1. Kodominant: beide Allele sichtbar (AB), kein Mischphaenotyp.
+
+---
+
+## Testkreuzung -- Genotyp enthuellen
+
+Um herauszufinden, ob ein Individuum mit dominantem Phaenotyp AA oder Aa ist, kreuzt du es mit **aa** (dem homozygot rezessiven Partner). **Alle Nachkommen dominant** -> das getestete Individuum war **AA**. **Spaltung 1:1** (halb dominant, halb rezessiv) -> es war **Aa**. Die Testkreuzung ist das klassische Werkzeug in der Genetik, um versteckte Allele aufzudecken.
+
+> **Merke:** Testkreuzung x aa: 100 % dominant = war AA; 1:1 Spaltung = war Aa.
+
+---
+
+## MedAT-Fokus
+
+Typische Fallen: Dominant bedeutet NICHT "haeufig in der Population". Intermediaer (Mischphaenotyp, 1:2:1) vs. kodominant (beide sichtbar, z. B. AB) -- diese Verwechslung kommt oft vor! Gen und Allel nicht vertauschen.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
 - Genotyp = Allel-Kombination; Phaenotyp = sichtbares Merkmal
-- Homozygot (AA/aa) vs. heterozygot (Aa)
-- Dominant-rezessiv, intermediaer (1:2:1), kodominant (AB)
-- Testkreuzung mit aa enthuellt den Genotyp`,
+- Homozygot (AA oder aa) vs. heterozygot (Aa)
+- Dominant-rezessiv: Aa = AA im Phaenotyp; F2 Phaenotyp 3:1
+- Intermediaer: Aa = Mischphaenotyp (rosa); F2 Phaenotyp 1:2:1
+- Kodominant: beide Allele gleichzeitig sichtbar (AB -- kein Misch-, sondern Doppelmerkmal)
+- Testkreuzung x aa: 100 % dominant = AA; 1:1 = Aa`,
       contentExtended: `## Einleitung
 
 Eine Pflanze mit roten Blüten kann genetisch reinerbig (AA) oder mischerbig (Aa) sein -- von außen sieht man keinen Unterschied. Der sichtbare Phänotyp verrät nicht immer den zugrunde liegenden Genotyp. Noch komplizierter wird es, wenn Allele nicht einfach dominant oder rezessiv sind: Bei der Blutgruppe AB sind beide Allele gleichzeitig sichtbar (Kodominanz), bei manchen Blütenfarben zeigt der Mischerbige eine Zwischenform (Intermediarität). Die Testkreuzung mit einem homozygot rezessiven Partner ist das klassische Werkzeug, um den verborgenen Genotyp zu enthüllen.
@@ -1532,41 +1557,48 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `## Blutgruppen: AB0-System
 
-Vor jeder Bluttransfusion wird die Blutgruppe bestimmt. Das AB0-System zeigt dir, wie **drei Allele** und **Kodominanz** vier Blutgruppen ergeben -- ein Klassiker im MedAT.
+Vor jeder Bluttransfusion wird die Blutgruppe bestimmt -- eine Verwechslung kann lebensbedrohlich sein. Das AB0-System zeigt dir, wie **drei Allele** und **Kodominanz** zusammen vier Blutgruppen ergeben -- ein echter MedAT-Klassiker, der Genetik und Medizin verbindet.
 
 **In diesem Kapitel lernst du:**
-- warum drei Allele vier Blutgruppen ergeben
-- wie du Kreuzungsaufgaben zu Blutgruppen loest
-- wie das Rhesus-System funktioniert
+- warum drei Allele sechs Genotypen aber nur vier Blutgruppen ergeben
+- was Kodominanz bedeutet und wie sie sich von Dominanz unterscheidet
+- wie du typische Kreuzungsaufgaben zu Blutgruppen loest
+- wie das Rhesus-System funktioniert und warum es in der Schwangerschaft wichtig ist
 
 {{DIAGRAM:blood-groups}}
 
 ---
 
-## Allele und Phaenotypen
+## Allele und Phaenotypen -- das Grundprinzip
 
-Drei Allele: **I^A** (Antigen A), **I^B** (Antigen B), **i** (kein Antigen, rezessiv). I^A und I^B sind **kodominant** (beide werden exprimiert), beide dominant ueber i.
+Beim AB0-System gibt es drei Allele an einem Genort: **I^A** (Antigen A auf der Erythrozytenoberflaeche), **I^B** (Antigen B) und **i** (kein Antigen -- rezessiv). Jeder Mensch hat genau zwei dieser Allele (einer vom Vater, einer von der Mutter).
+
+**Dominanzverhaeltnis:** I^A und I^B dominieren beide ueber i. Gegenueber sich selbst sind I^A und I^B **kodominant** -- beide werden gleichzeitig exprimiert, d. h. bei I^A I^B sind beide Antigene (A UND B) auf den Blutkoerperchen sichtbar.
 
 | Genotyp | Blutgruppe |
 |---------|-----------|
-| I^A I^A, I^A i | A |
-| I^B I^B, I^B i | B |
-| I^A I^B | AB |
-| i i | 0 |
+| I^A I^A oder I^A i | A |
+| I^B I^B oder I^B i | B |
+| I^A I^B | AB (kodominant) |
+| i i | 0 (kein Antigen) |
 
-> **Merke:** I^A und I^B kodominant -> AB. Beide dominant ueber i. 6 Genotypen -> 4 Phaenotypen.
+So entstehen aus 6 Genotypen nur 4 Phaenotypen (Blutgruppen).
+
+> **Merke:** I^A und I^B kodominant -> Blutgruppe AB (beide Antigene sichtbar). Beide dominant ueber i -> Blutgruppe 0 nur bei ii. 6 Genotypen -> 4 Phaenotypen.
 
 ---
 
-## Kreuzungsbeispiele
+## Kreuzungsbeispiele -- so loest du Aufgaben
 
 {{DIAGRAM:immune-response}}
 
-**I^A i x I^B i:** Kinder koennen A, B, AB oder 0 haben (je 25 %).
+**Aufgabe 1: Vater I^A i (Blutgruppe A), Mutter I^B i (Blutgruppe B).**
+Vater gibt I^A oder i, Mutter gibt I^B oder i weiter. Moegliche Genotypen der Kinder: I^A I^B (AB), I^A i (A), I^B i (B), ii (0) -- alle vier Blutgruppen je 25 % moeglich.
 
-**0 (ii) x AB (I^A I^B):** Kinder nur A oder B -- nie 0 oder AB.
+**Aufgabe 2: Vater ii (Blutgruppe 0), Mutter I^A I^B (Blutgruppe AB).**
+Vater gibt immer i, Mutter gibt immer I^A oder I^B. Kinder: I^A i (Blutgruppe A) oder I^B i (Blutgruppe B) -- **nie 0 oder AB**.
 
-> **Merke:** I^A i x I^B i -> alle vier Blutgruppen. 0 x AB -> nur A oder B.
+> **Merke:** I^A i x I^B i -> alle vier Blutgruppen moeglich (je 25 %). Blutgruppe 0 x AB -> nur A oder B, nie 0 oder AB.
 
 ---
 
@@ -1574,17 +1606,27 @@ Drei Allele: **I^A** (Antigen A), **I^B** (Antigen B), **i** (kein Antigen, reze
 
 {{DIAGRAM:pedigree-analysis}}
 
-**D** dominant ueber **d**. DD/Dd = Rh-positiv; dd = Rh-negativ. Rh-negative Mutter mit Rh-positivem Kind: Gefahr fuer **Anti-D-Antikoerper** -> bei naechster Schwangerschaft Morbus haemolyticus neonatorum. Loesung: **Anti-D-Prophylaxe**.
+Das Rhesus-System hat ein einfaches Muster: Das **D-Allel** (Rh-positiv) ist **dominant** ueber das **d-Allel** (Rh-negativ). DD und Dd = Rh-positiv; nur dd = Rh-negativ.
 
-> **Merke:** Rhesus: D dominant, dd = Rh-negativ. Anti-D-Prophylaxe bei Rh-negativer Mutter.
+**Medizinisch wichtig:** Wenn eine Rh-negative Mutter (dd) ein Rh-positives Kind (Dd, D vom Vater) bekommt, kann sie **Anti-D-Antikoerper** bilden. Bei einer zweiten Rh-positiven Schwangerschaft koennen diese Antikoerper die Plazenta passieren und das Blut des Kindes angreifen -- das nennt man **Morbus haemolyticus neonatorum**. Loesung: **Anti-D-Prophylaxe** in der Schwangerschaft.
+
+> **Merke:** Rhesus: D dominant (Rh+), dd = Rh-negativ. Anti-D-Prophylaxe schuetzt das Rh-positive Kind einer Rh-negativen Mutter.
+
+---
+
+## MedAT-Fokus
+
+Typische Pruefungsfragen: Welche Blutgruppen koennen Kinder von I^A i x I^B i haben? (Alle vier!) Warum koennen Eltern mit 0 und AB kein Kind mit 0 haben? (0-Elternteil gibt nur i weiter, AB-Elternteil nur I^A oder I^B.) Kodominant vs. intermediaer: Bei AB sind BEIDE Antigene da (nicht gemischt), bei intermediaer waere es ein Mischphaenotyp.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- AB0: I^A, I^B kodominant; beide dominant ueber i
-- I^A i x I^B i -> alle 4 Blutgruppen; 0 x AB -> nur A oder B
-- Rhesus: D dominant; Anti-D-Prophylaxe bei Rh-neg. Mutter`,
+- AB0: drei Allele (I^A, I^B, i), sechs Genotypen, vier Blutgruppen
+- I^A und I^B kodominant -> AB (beide Antigene); beide dominant ueber i -> 0 nur bei ii
+- I^A i x I^B i -> alle vier Blutgruppen moeglich (je 25 %)
+- 0 (ii) x AB (I^A I^B) -> Kinder nur A oder B, nie 0 oder AB
+- Rhesus: D dominant; dd = Rh-neg.; Anti-D-Prophylaxe bei Rh-neg. Mutter`,
       contentExtended: `## Einleitung
 
 Vor jeder Bluttransfusion wird die Blutgruppe bestimmt, denn eine Verwechslung kann lebensbedrohlich sein. Das AB0-System ist dabei das wichtigste: Es zeigt, wie drei Allele und das Prinzip der Kodominanz zusammen vier Blutgruppen ergeben. Gleichzeitig liefert es klassische Prüfungsaufgaben, weil sich damit Kreuzungsaufgaben und Kodominanz an einem greifbaren Beispiel trainieren lassen.
@@ -1757,56 +1799,75 @@ Das **Rhesus-System** (D/d) folgt einem **einfachen dominant-rezessiven** Erbgan
       ],
       content: `## Mutationen
 
-Bei jeder Zellteilung werden 6 Milliarden Basenpaare kopiert -- Fehler passieren. Entscheidend ist die **Ebene**: eine einzelne Base (Genmutation), ein Chromosomenstueck (Chromosomenmutation) oder die Gesamtzahl (Genommutation).
+Bei jeder Zellteilung werden 6 Milliarden Basenpaare kopiert -- Fehler passieren unvermeidlich. Doch nicht jeder Fehler ist gleich gefaehrlich: Entscheidend ist die **Ebene**, auf der er liegt -- eine einzelne Base (Genmutation), ein ganzes Chromosomenstueck (Chromosomenmutation) oder die Gesamtzahl der Chromosomen (Genommutation).
 
 **In diesem Kapitel lernst du:**
-- die drei Mutationsebenen (Gen, Chromosom, Genom)
-- welche Folgen eine Basenveraenderung haben kann
-- wie Trisomie 21 entsteht
+- die drei Mutationsebenen (Gen, Chromosom, Genom) und wie du sie unterscheidest
+- welche Folgen eine einzelne Basenveraenderung haben kann (von stumm bis letal)
+- wie Trisomie 21 und andere Chromosomenzahlveraenderungen entstehen
+- welche bekannten Krankheiten zu welcher Ebene gehoeren
 
 {{DIAGRAM:dna-helix}}
 
 ---
 
-## Genmutation
+## Genmutation -- Veraenderung der Sequenz
 
-Betrifft die **DNA-Sequenz** eines Gens. **Punktmutation:** Austausch einer Base -> **stumm** (gleiche Aminosaeure), **Missense** (andere Aminosaeure) oder **Nonsense** (Stopp-Codon -> verkuerztes Protein). **Frameshift:** Einfuegen/Loeschen von Basen (nicht durch 3 teilbar) -> Leseraster verschoben -> meist schwerer Defekt.
+Genmutationen betreffen die **DNA-Sequenz** eines Gens. Stell dir vor: Du tippst einen langen Text und veraenderst einen einzigen Buchstaben -- manchmal ergibt das noch Sinn (stumm), manchmal ein anderes Wort (Missense), manchmal macht der Satz keinen Sinn mehr (Nonsense).
 
-> **Merke:** Genmutation = Sequenzaenderung. Punktmutation vs. Frameshift. Nonsense = Stopp-Codon.
+**Punktmutation:** Austausch einer einzigen Base.
+- **Stille Mutation (stumm):** Code aendert sich, aber Aminosaeure bleibt gleich (Degeneration des Codes).
+- **Missense-Mutation:** Andere Aminosaeure -> Protein veraendert (z. B. Sichelzellanemie: Glu -> Val an Position 6 des Haemoglobins).
+- **Nonsense-Mutation:** Stopp-Codon entsteht -> Protein wird vorzeitig abgebrochen -> meist funktionslos.
+
+**Frameshift-Mutation:** Einfuegen oder Loeschen von Basen, deren Zahl NICHT durch 3 teilbar ist -> das gesamte **Leseraster** verschiebt sich -> alle nachfolgenden Codons falsch -> meist schwerer Defekt.
+
+> **Merke:** Genmutation = Aenderung der DNA-Sequenz. Punktmutation: stumm/Missense/Nonsense. Frameshift: Leserasterverschiebung durch n nicht durch 3 teilbare Basen.
 
 ---
 
-## Chromosomenmutation
+## Chromosomenmutation -- Veraenderung der Struktur
 
 {{DIAGRAM:cell-cycle}}
 
-**Strukturelle** Veraenderungen von Chromosomenabschnitten: **Deletion** (Verlust, z. B. Cri-du-chat = 5p-), **Duplikation** (Verdopplung), **Translokation** (Verlagerung auf anderes Chromosom), **Inversion** (Drehung um 180 Grad). **Balancierte** Translokation: kein Materialverlust, Traeger oft gesund, aber erhoehtes Risiko fuer Nachkommen.
+Chromosomenmutationen betreffen die **Struktur** von Chromosomenabschnitten, nicht die Gesamtzahl. Sie sind groesser als Genmutationen.
 
-> **Merke:** Chromosomenmutation = Struktur. Cri-du-chat = 5p-Deletion.
+- **Deletion:** Verlust eines Chromosomenabschnitts. Beispiel: **Cri-du-chat** (Katzenschrei-Syndrom) durch 5p-Deletion.
+- **Duplikation:** Verdopplung eines Abschnitts.
+- **Translokation:** Verlagerung eines Stuecks auf ein anderes Chromosom. **Balancierte** Translokation: kein Materialverlust, Traeger oft phaenotypisch unauffaellig, aber erhoehtes Risiko fuer unbalancierte Keimzellen (und damit fuer erkrankte Nachkommen).
+- **Inversion:** Drehung eines Abschnitts um 180 Grad.
+
+> **Merke:** Chromosomenmutation = strukturell (Deletion, Duplikation, Translokation, Inversion). Cri-du-chat = 5p-Deletion. Balancierte Translokation: Traeger gesund, aber Risiko fuer Nachkommen.
 
 ---
 
-## Genommutation
+## Genommutation -- Veraenderung der Chromosomenzahl
 
 {{DIAGRAM:transcription-translation}}
 
-Betrifft die **Anzahl** der Chromosomen. **Trisomie** (3 Kopien, z. B. Trisomie 21) oder **Monosomie** (1 Kopie, z. B. Turner 45,X). Ursache: **Nicht-Disjunktion** in der Meiose. **Polyploidie** (3n, 4n) beim Menschen meist letal. Trisomie-21-Risiko steigt mit muetterlichem Alter.
+Genommutationen betreffen die **Anzahl** der Chromosomen. Sie entstehen durch **Nicht-Disjunktion** in der Meiose -- die Chromosomen trennen sich nicht korrekt, so dass eine Keimzelle zwei Kopien eines Chromosoms erhaelt, die andere keine.
 
-> **Merke:** Genommutation = Zahl. Trisomie/Monosomie durch Nicht-Disjunktion.
+- **Trisomie** (3 Kopien eines Chromosoms): z. B. **Trisomie 21** (Down-Syndrom, 47 Chromosomen). Das Risiko steigt mit dem muetterlichen Alter.
+- **Monosomie** (1 Kopie): z. B. **Turner-Syndrom** (45,X -- nur ein X-Chromosom).
+- **Klinefelter-Syndrom:** 47,XXY -- ein X-Chromosom zu viel beim Mann.
+- **Polyploidie** (3n, 4n): Verdopplung des gesamten Chromosomensatzes -- beim Menschen meist letal.
 
-| Ebene | Typ | Beispiel |
-|-------|-----|----------|
-| Gen | Punkt-/Frameshift | Sichelzellanaemie |
-| Chromosom | Deletion/Translokation | Cri-du-chat (5p-) |
-| Genom | Trisomie/Monosomie | Trisomie 21, Turner |
+> **Merke:** Genommutation = falsche Chromosomenzahl (Trisomie/Monosomie/Polyploidie). Ursache: Nicht-Disjunktion in der Meiose. Trisomie 21 = Down-Syndrom, haeufigste lebensfaehige Autosom-Trisomie.
+
+| Ebene | Typ | Beispiele |
+|-------|-----|-----------|
+| Gen | Punkt-/Frameshift/Nonsense | Sichelzellanemie (Missense), Mukoviszidose |
+| Chromosom | Deletion, Translokation, Inversion | Cri-du-chat (5p-), Robertsonsche Translokation |
+| Genom | Trisomie, Monosomie, Polyploidie | Trisomie 21, Turner (45,X), Klinefelter (47,XXY) |
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- Genmutation: Sequenz (Punkt-, Frameshift, Nonsense)
-- Chromosomenmutation: Struktur (Deletion, Translokation, Inversion)
-- Genommutation: Zahl (Trisomie, Monosomie) durch Nicht-Disjunktion`,
+- **Genmutation** = Sequenzaenderung: Punktmutation (stumm, Missense, Nonsense) oder Frameshift
+- **Chromosomenmutation** = Strukturveraenderung: Deletion (Cri-du-chat), Duplikation, Translokation, Inversion
+- **Genommutation** = Zahlveraenderung: Trisomie/Monosomie (Nicht-Disjunktion); Trisomie 21, Turner, Klinefelter
+- Nicht-Disjunktion = Chromosomen trennen sich in der Meiose nicht -> falsche Verteilung`,
       contentExtended: `## Einleitung
 
 In jedem Zellteilungszyklus werden rund sechs Milliarden Basenpaare kopiert. Dabei passieren Fehler, und genau diese Fehler sind Mutationen. Manche bleiben unbemerkt, andere verursachen schwere Erkrankungen. Entscheidend ist, auf welcher Ebene der Fehler liegt: Ist nur eine einzelne Base betroffen, ein ganzes Chromosomenstück oder gleich die Gesamtzahl der Chromosomen? Diese drei Ebenen zu unterscheiden ist einer der klassischen MedAT-Stolpersteine.
@@ -1985,49 +2046,71 @@ In jedem Zellteilungszyklus werden rund sechs Milliarden Basenpaare kopiert. Dab
       ],
       content: `## Von der DNA zum Merkmal: Genexpression
 
-Stell dir die DNA als Kochbuch im Tresor (Zellkern) vor. Wenn die Zelle ein Protein braucht, wird das Rezept abgeschrieben (**Transkription**) und in der Kueche (Zytoplasma) umgesetzt (**Translation**). Dieser Fluss DNA -> RNA -> Protein ist das **Zentraldogma**.
+Stell dir die DNA als Kochbuch vor, das sicher im Tresor (Zellkern) liegt. Wenn die Zelle ein Protein braucht, wird das passende Rezept abgeschrieben (**Transkription**) und in die Kueche (Zytoplasma) gebracht, wo es umgesetzt wird (**Translation**). Dieser Informationsfluss DNA -> RNA -> Protein ist das **Zentraldogma der Molekularbiologie** -- und er erklaert, wie ein Gen ein sichtbares Merkmal erzeugt.
 
 **In diesem Kapitel lernst du:**
-- den Informationsfluss DNA -> RNA -> Protein
-- was bei Transkription und Translation passiert
-- warum Genexpression Genetik und Vererbung verbindet
+- den Informationsfluss DNA -> RNA -> Protein und warum er in diese Richtung geht
+- was bei Transkription und Translation konkret passiert und wo im Zellkern bzw. Zytoplasma
+- warum 3 Basen = 1 Codon = 1 Aminosaeure (genetischer Code)
+- wie Genexpression Genetik und Vererbung zusammenbringt
 
 {{DIAGRAM:transcription-translation}}
 
 ---
 
-## Zentraldogma
+## Das Zentraldogma -- Informationsfluss in eine Richtung
 
-**DNA -> RNA -> Protein.** Die DNA ist der Speicher, die **mRNA** die Kopie, das **Protein** das Produkt. So wird ein Gen in ein Protein umgesetzt, das den **Phaenotyp** mitpraegt.
+**DNA -> RNA -> Protein.** Das ist das Herzprinzip der Molekularbiologie. Die DNA im Zellkern ist der Speicher -- sie wird nie verbraucht. Die **mRNA** (Boten-RNA) ist die Kopie des Rezepts, die aus dem Zellkern ins Zytoplasma transportiert wird. Das **Protein** ist das Endprodukt, das die eigentliche Arbeit in der Zelle erledigt.
 
-> **Merke:** DNA -> (Transkription) -> RNA -> (Translation) -> Protein. Genexpression = Umsetzung der genetischen Info.
+Warum diese Reihenfolge? Die DNA bleibt sicher im Zellkern geschuetzt. Kopien (mRNA) werden bei Bedarf hergestellt und koennen nach Gebrauch abgebaut werden. So kann die Zelle schnell auf Bedarf reagieren.
+
+> **Merke:** DNA -> (Transkription) -> mRNA -> (Translation) -> Protein. Information fliesst nur in diese Richtung. Genexpression = Umsetzung eines Gens in ein Protein-Produkt.
 
 ---
 
-## Transkription und Translation
+## Transkription -- DNA in RNA umschreiben
 
 {{DIAGRAM:dna-helix}}
 
-**Transkription** (im Zellkern): DNA wird in **mRNA** umgeschrieben (A, U, G, C in RNA; U ersetzt T). **Translation** (im Zytoplasma): **Ribosomen** lesen die mRNA. Je 3 Basen = 1 **Codon** = 1 Aminosaeure -> **Protein**. Mutationen in der DNA koennen das Protein veraendern und so den Phaenotyp beeinflussen.
+**Transkription** findet im **Zellkern** statt. Die RNA-Polymerase liest den DNA-Strang und schreibt ihn in **mRNA** um. Dabei gelten aehnliche Basenpaarungsregeln wie bei der DNA, aber mit einem Unterschied: In der RNA ersetzt **Uracil (U)** das Thymin (T). Die mRNA-Sequenz entspricht der DNA-Sequenz des Gens (Codogen-Strang), nur eben mit U statt T.
 
-> **Merke:** Transkription = DNA -> RNA (im Kern). Translation = RNA -> Protein (an Ribosomen). Codon = 3 Basen = 1 Aminosaeure.
+Die fertige mRNA wird dann aus dem Zellkern durch die Kernporen ins Zytoplasma transportiert.
+
+> **Merke:** Transkription = DNA -> mRNA, findet im Zellkern statt. Basen in RNA: A, U, G, C (U statt T).
 
 ---
 
-## Zusammenhang mit Vererbung
+## Translation -- RNA in Protein uebersetzen
+
+**Translation** findet im **Zytoplasma** an den **Ribosomen** statt. Die Ribosomen lesen die mRNA in Dreiergruppen: Je **3 Basen** bilden ein **Codon**, das fuer eine bestimmte **Aminosaeure** codiert. So wird die mRNA-Sequenz Schritt fuer Schritt in eine Kette von Aminosaeuren -- das **Protein** -- uebersetzt.
+
+Mutationen in der DNA veraendern die mRNA-Sequenz und damit die Proteinstruktur -> moeglicherweise ein nicht-funktionales Protein -> Erbkrankheit oder Krebs.
+
+> **Merke:** Translation = mRNA -> Protein, findet an Ribosomen im Zytoplasma statt. Codon = 3 Basen = 1 Aminosaeure.
+
+---
+
+## Zusammenhang mit Genetik und Vererbung
 
 {{DIAGRAM:endomembrane-system}}
 
-**Allele** unterscheiden sich in ihrer DNA-Sequenz -> verschiedene Proteinvarianten -> unterschiedlicher Phaenotyp. Vererbung = DNA wird ueber Keimzellen weitergegeben und in der naechsten Generation exprimiert.
+Jetzt schliesst sich der Kreis: **Allele** unterscheiden sich in ihrer DNA-Sequenz -> verschiedene mRNA -> verschiedene Proteine -> unterschiedlicher **Phaenotyp**. Das erklaert, warum Dominanz und Rezessivitaet auf molekularer Ebene durch Proteinmenge und -funktion bestimmt werden. Vererbung bedeutet: DNA wird ueber Keimzellen von Generation zu Generation weitergegeben und in jeder neuen Zelle immer wieder exprimiert (DNA -> RNA -> Protein).
+
+---
+
+## MedAT-Fokus
+
+Typische Fragen: Wo findet die Transkription statt? (Zellkern.) Wo die Translation? (Zytoplasma, Ribosomen.) Was ist ein Codon? (3 Basen = 1 Aminosaeure.) Warum fliesst Information nur von DNA zu Protein, nicht umgekehrt? (Klassisches Zentraldogma -- Ausnahme: Reverse Transkriptase bei Retroviren.)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- Zentraldogma: DNA -> RNA -> Protein
-- Transkription im Kern, Translation an Ribosomen
-- Codon (3 Basen) -> Aminosaeure
-- Allele -> verschiedene Proteine -> verschiedene Phaenotypen`,
+- **Zentraldogma:** DNA -> RNA -> Protein (nur in diese Richtung)
+- **Transkription:** DNA -> mRNA im **Zellkern** (RNA-Polymerase, U statt T)
+- **Translation:** mRNA -> Protein im **Zytoplasma** an **Ribosomen** (Codon = 3 Basen = 1 Aminosaeure)
+- Allele -> verschiedene Proteine -> verschiedene Phaenotypen
+- Ausnahme vom Zentraldogma: Reverse Transkriptase (RNA -> DNA) bei Retroviren (z. B. HIV)`,
       contentExtended: `## Einleitung
 
 Stell dir die DNA als Kochbuch vor, das sicher im Tresor (Zellkern) liegt. Wenn die Zelle ein bestimmtes Gericht (Protein) braucht, wird nicht das ganze Buch herausgeholt, sondern nur das relevante Rezept abgeschrieben (Transkription) und in die Küche (Zytoplasma) gebracht, wo es umgesetzt wird (Translation). Dieser Informationsfluss von der DNA über RNA zum Protein ist das Zentraldogma der Molekularbiologie und die Grundlage dafür, dass aus Genen sichtbare Merkmale werden.
@@ -2179,68 +2262,95 @@ Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (oder Regu
       ],
       content: `## Hardy-Weinberg-Gleichgewicht
 
-Wenn 4 % an einer autosomal-rezessiven Erkrankung leiden -- wie viele sind symptomlose Uebertraeger? Das beantwortet das **Hardy-Weinberg-Gleichgewicht**: ein Rechenmodell, das Allelfrequenzen mit Genotypfrequenzen verknuepft. Ein MedAT-Klassiker!
+Wenn 1 von 3.500 Menschen an Mukoviszidose (CF) erkrankt -- wie viele sind dann symptomlose Uebertraeger? Das beantwortet das **Hardy-Weinberg-Gleichgewicht**: ein mathematisches Modell, das Allelfrequenzen mit Genotypfrequenzen verknuepft. Es ist eines der haeufigsten Rechenthemen im MedAT-BMS!
 
 **In diesem Kapitel lernst du:**
+- was Allelfrequenz (p, q) und Genotypfrequenz bedeuten
 - die Formeln p + q = 1 und p^2 + 2pq + q^2 = 1
-- das Rechenschema: q^2 -> q -> p -> 2pq
-- die fuenf Voraussetzungen
-- klinische Anwendung (Mukoviszidose, Sichelzellanaemie)
+- das Rechenschema: q^2 -> q -> p -> 2pq (Schritt fuer Schritt)
+- die fuenf Voraussetzungen des Gleichgewichts
+- klinische Anwendung an Mukoviszidose und Sichelzellanemie
 
 {{DIAGRAM:pedigree-analysis}}
 
 ---
 
-## Grundbegriffe
+## Grundbegriffe -- Allelfrequenz und Genotypfrequenz
 
-**Allelfrequenz:** p = Frequenz des dominanten Allels A, q = Frequenz des rezessiven Allels a. Es gilt immer: **p + q = 1**.
+In der Populationsgenetik betrachten wir nicht einzelne Personen, sondern ganze **Populationen**. Die zentrale Frage: Wie haeufig ist ein bestimmtes Allel in der Bevoelkerung?
 
-> **Merke:** p = Frequenz von A, q = Frequenz von a. Summe = 1.
+**Allelfrequenz:** p = Haeufigkeit des dominanten Allels A, q = Haeufigkeit des rezessiven Allels a. Da es nur zwei Allele gibt, gilt: **p + q = 1** (die Summe aller Allelfrequenzen = 100 %).
+
+**Genotypfrequenz:** Wie haeufig ist ein bestimmter Genotyp (AA, Aa, aa) in der Population?
+
+> **Merke:** p = Frequenz von Allel A, q = Frequenz von Allel a. p + q = 1 (immer!).
 
 ---
 
-## Die Formel
+## Die Hardy-Weinberg-Gleichung
 
 {{DIAGRAM:dna-helix}}
 
-**p^2 + 2pq + q^2 = 1** -- das ist (p + q)^2 aufgeloest.
+Das Hardy-Weinberg-Gesetz verknuepft Allelfrequenzen mit Genotypfrequenzen:
 
-| Genotyp | Frequenz |
-|---------|----------|
-| AA | p^2 |
-| Aa (Uebertraeger) | 2pq |
-| aa (Erkrankte) | q^2 |
+**p^2 + 2pq + q^2 = 1**
 
-> **Merke:** p^2 + 2pq + q^2 = 1. Heterozygotenfrequenz = 2pq.
+Das ist einfach (p + q)^2 ausmultipliziert -- es beschreibt, wie sich Gameten zufaellig kombinieren.
 
----
+| Genotyp | Frequenz | Bedeutung |
+|---------|----------|-----------|
+| AA (homozygot dominant) | p^2 | Gesunde, nicht Uebertraeger |
+| Aa (heterozygot) | 2pq | Symptomlose Uebertraeger! |
+| aa (homozygot rezessiv) | q^2 | Erkrankte (bei rez. Erkrankung) |
 
-## Voraussetzungen
+Die Heterozygotenfrequenz **2pq** ist besonders wichtig -- sie gibt an, wie viele Menschen Uebertraeger sind, ohne es zu wissen.
 
-Fuenf Bedingungen: **grosse Population**, **keine Selektion**, **keine Mutation**, **Panmixie** (Zufallspaarung), **keine Migration**. In der Realitaet nie perfekt erfuellt -- dient als Modell.
-
----
-
-## Rechenbeispiel: Mukoviszidose
-
-**q^2 = 1/3.500** (Erkrankte) -> **q = 1/59** -> **p = 58/59 ca. 1** -> **2pq ca. 2/59 ca. 1/30**. Etwa jeder 30. Mensch in Oesterreich ist CF-Uebertraeger!
-
-> **Merke:** CF: q^2 = 1/3.500 -> Uebertraeger ca. 1/30. Uebertraeger sind 100x haeufiger als Erkrankte!
+> **Merke:** p^2 + 2pq + q^2 = 1. Erkrankte (rez.) = q^2. Uebertraeger = 2pq. Immer zuerst q^2 ablesen!
 
 ---
 
-## Sichelzellanaemie
+## Fuenf Voraussetzungen des Gleichgewichts
 
-q^2 = 0,02 -> q = 0,141 -> 2pq ca. 24 %. Fast ein Viertel sind Uebertraeger! Grund: **Heterozygotenvorteil** gegen Malaria.
+Damit die Formel gilt, muss die Population "ideal" sein -- fuenf Bedingungen:
+1. **Grosse Population** -- kein genetischer Drift durch Zufall
+2. **Keine Selektion** -- kein Genotyp hat Ueberlebens- oder Fortpflanzungsvorteil
+3. **Keine Mutation** -- keine neuen Allele entstehen
+4. **Panmixie** (Zufallspaarung) -- Partner werden zufaellig gewaehlt
+5. **Keine Migration** -- kein Zuzug oder Wegzug von Individuen
+
+In der Realitaet sind diese Bedingungen nie perfekt erfuellt -- das Modell dient als mathematisches Hilfsmittel fuer Berechnungen.
+
+---
+
+## Rechenschema -- Schritt fuer Schritt
+
+**Aufgabe: Mukoviszidose (CF).** 1 von 3.500 Neugeborenen ist erkrankt.
+
+1. Erkrankte = q^2 -> q^2 = 1/3.500
+2. q = Wurzel aus (1/3.500) = ca. 1/59 = 0,017
+3. p = 1 - q = 1 - 0,017 = ca. 0,983
+4. Uebertraeger = 2pq = 2 x 0,983 x 0,017 = ca. **1/30**
+
+Ergebnis: Jeder 30. Mensch in Oesterreich ist CF-Uebertraeger -- das sind hundertmal mehr als die Erkrankten!
+
+> **Merke:** Rechenschema: q^2 (Erkrankte) -> q (Wurzel) -> p = 1-q -> 2pq (Uebertraeger). CF: 1/3.500 erkrankt, ca. 1/30 Uebertraeger.
+
+---
+
+## Sichelzellanemie -- Heterozygotenvorteil
+
+In westafrikanischen Populationen: q^2 = 0,02 (2 % erkrankt) -> q = 0,141 -> 2pq = ca. **24 %** Uebertraeger. Fast ein Viertel! Der Grund: Heterozygote (HbA/HbS) haben **Selektionsvorteil** gegen Malaria (**Heterozygotenvorteil**) -- das haelt das Allel trotz schwerer Erkrankung der Homozygoten in der Population.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
 - p + q = 1; p^2 + 2pq + q^2 = 1
-- Schema: q^2 -> q -> p -> 2pq
-- 5 Voraussetzungen: grosse Population, keine Selektion/Mutation/Migration, Panmixie
-- CF: Uebertraeger ca. 1/30; Sichelzelle: Heterozygotenvorteil`,
+- q^2 = Erkrankte (rez.); 2pq = Uebertraeger; p^2 = Homozygot dominant
+- Rechenschema: q^2 -> q -> p -> 2pq
+- 5 Voraussetzungen: grosse Population, keine Selektion, keine Mutation, Panmixie, keine Migration
+- CF: q^2 = 1/3.500 -> Uebertraeger ca. 1/30 (100x haeufiger als Erkrankte!)
+- Sichelzelle: Heterozygotenvorteil gegen Malaria -> q hoch trotz schwerer Erkrankung`,
       contentExtended: `## Einleitung
 
 Wenn in einer Population 4 % der Menschen an einer autosomal-rezessiven Erkrankung leiden, wie viele sind dann symptomlose Überträger? Die Antwort liefert das Hardy-Weinberg-Gleichgewicht — ein mathematisches Modell, das den Zusammenhang zwischen Allelfrequenzen und Genotypfrequenzen beschreibt. Es ist eines der meistgeprüften Rechenthemen im MedAT-BMS und verbindet klassische Genetik mit Populationsgenetik.

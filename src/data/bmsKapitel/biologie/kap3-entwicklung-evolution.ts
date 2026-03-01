@@ -2048,59 +2048,134 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Stammbaeume, Homologie und Analogie
+      content: `## Stammbaeume, Homologie und Analogie -- einfach erklaert
 
-Der Arm eines Menschen und die Flosse eines Wals sehen verschieden aus, haben aber den gleichen Bauplan. Vogelflügel und Insektenfluegel sehen aehnlich aus, sind aber voellig unabhaengig entstanden. Diesen Unterschied zu verstehen ist der Schluessel zur Verwandtschaftsforschung.
+Der Arm eines Menschen und die Flosse eines Wals sehen ganz verschieden aus -- und haben trotzdem denselben Bauplan. Vogelfluegel und Insektenfluegel sehen aehnlich aus, sind aber voellig unabhaengig entstanden. Diesen Unterschied zu verstehen ist der Schluessel zur Verwandtschaftsforschung.
+
+**In diesem Kapitel lernst du:**
+- was Homologie und Analogie sind und wie man sie unterscheidet
+- wie ein Stammbaum aufgebaut ist und was an den Knotenpunkten steckt
+- was die molekulare Uhr misst und wozu sie dient
+
+---
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+## Homologie vs. Analogie -- der wichtigste Unterschied
+
+Der Schluesselbegriff ist **Ursprung**:
+
+- **Homologie** = gleicher evolutionaerer Ursprung (gemeinsamer Vorfahre), egal ob die Funktion heute verschieden ist. Beispiel: Menschenarm, Walflosse, Vogelfluegel -- alle haben Humerus, Radius, Ulna und Handknochen. Der Bauplan ist gleich, die Funktion verschieden (greifen, schwimmen, fliegen).
+- **Analogie** = verschiedener Ursprung, aber gleiche Funktion durch konvergente Evolution. Beispiel: Vogelfluegel und Insektenfluegel -- beide dienen dem Fliegen, sind aber grundverschieden gebaut und entstanden unabhaengig voneinander.
+
+> **Merke:** Homologie = gleicher Ursprung, egal welche Funktion. Analogie = gleiche Funktion, verschiedener Ursprung (konvergente Evolution).
+
+| Merkmal | Homologie | Analogie |
+| --- | --- | --- |
+| Ursprung | Gemeinsamer Vorfahre | Unabhaengig entstanden |
+| Bauplan | Aehnlich | Verschieden |
+| Funktion | Oft verschieden | Gleich |
+| Evolution | Divergent | Konvergent |
+| Beispiel | Arm / Flosse / Fluegel (Wirbeltiere) | Vogelfluegel / Insektenfluegel |
+
+---
+
+{{DIAGRAM:dna-helix}}
+
+## Stammbaeume lesen -- Kladistik
+
+Die **Kladistik** klassifiziert Lebewesen nur nach gemeinsamen, abgeleiteten Merkmalen (**Synapomorphien**). Im Stammbaum (Kladogramm) bedeutet das:
+
+- **Knoten (Nodes)** = gemeinsame Vorfahren
+- **Aeste** = Evolutionslinien
+- **Astspitzen** = heutige Arten
+
+Ein **Clade** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre plus **ALLE** seine Nachkommen. Schliesse ich einige Nachkommen aus (z. B. "Reptilien" ohne Voegel), ist die Gruppe **paraphyletisch** -- das ist in der modernen Systematik nicht akzeptabel, weil Voegel evolutionaere Nachkommen der Dinosaurier sind.
+
+> **Merke:** Clade = monophyletisch = Vorfahre + ALLE Nachkommen. Paraphyletisch = nicht alle Nachkommen eingeschlossen.
+
+---
+
+## Molekulare Uhr
+
+Neutrale Mutationen akkumulieren in bestimmten Genen mit nahezu konstanter Rate. Je mehr Sequenzunterschiede zwei Arten zeigen, desto laenger ist ihr gemeinsamer Vorfahre her. Durch Kalibrierung mit Fossilien laesst sich daraus ein Datum berechnen.
+
+Beispiel: Mensch und Schimpanse teilen fast identisches Cytochrom c -- Divergenz vor ca. 6-7 Millionen Jahren. Problem: Mutationsraten sind nicht immer konstant (Generation Time Effect).
+
+> **Merke:** Molekulare Uhr: Sequenzunterschiede proportional zur Zeit seit Divergenz. Kalibrierung mit Fossilien noetig.
+
+---
+
+## MedAT-Fokus
+
+**Haeufige Pruefungsfragen:**
+- Homologie vs. Analogie: Gemeinsamer Ursprung vs. konvergente Evolution
+- Was ist ein Clade? (Gemeinsamer Vorfahre + ALLE Nachkommen = monophyletisch)
+- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen)
+
+**Typische Fallen:**
+- Homologie (gleicher Ursprung) mit Analogie (gleiche Funktion) verwechseln
+- Monophyletisch vs. paraphyletisch: Paraphyletisch = nicht alle Nachkommen eingeschlossen
+- Synapomorphie (abgeleitetes Merkmal) vs. Symplesiomorphie (primitives Merkmal)
+
+---
+
+## Zusammenfassung
+
+- **Homologie**: gleicher evolutionaerer Ursprung, oft verschiedene Funktion (Menschenarm, Walflosse, Vogelfluegel)
+- **Analogie**: verschiedener Ursprung, gleiche Funktion durch konvergente Evolution (Vogel- vs. Insektenfluegel)
+- **Cladistik**: klassifiziert nach Synapomorphien; Clade = monophyletisch (Vorfahre + alle Nachkommen)
+- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmaessig -- Datierung von Arttrennungen`,
+      contentExtended: `## Stammbaeume, Homologie und Analogie
+
+Der Arm eines Menschen, die Flosse eines Wals und der Fluegel einer Fledermaus sehen voellig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelfluegel und Insektenfluegel verblüffend aehnlich aus, obwohl sie unabhaengig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schluessel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbaeume richtig zu lesen.
 
 **In diesem Kapitel lernst du:**
 - warum gleicher Bauplan noch lange nicht gleiche Funktion bedeutet und umgekehrt
-- wie man Homologie von Analogie unterscheidet und warum das für Stammbäume entscheidend ist
-- wie man phylogenetische Stammbäume liest und welche Informationen in den Verzweigungspunkten stecken
-- wie die molekulare Uhr evolutionäre Zeiträume datieren kann
+- wie man Homologie von Analogie unterscheidet und warum das fuer Stammbaeume entscheidend ist
+- wie man phylogenetische Stammbaeume liest und welche Informationen in den Verzweigungspunkten stecken
+- wie die molekulare Uhr evolutionaere Zeitraeume datieren kann
 
 ---
 
-G_Z (z. B. Vogelflügel – Menschenarm)
--X B. Flügel 
+## Homologie vs. Analogie -- Ein kritischer Unterschied
 
-## Homologie vs. Analogie — Ein kritischer Unterschied
+Homologie und Analogie werden haeufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionaeren Ursprung (common ancestry) -- sie sind strukturell oft aehnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionaere Urspruenge -- sie sind funktionell aehnlich (durch konvergente Evolution auf dasselbe Problem gestossen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, aehnlicher Bau; Analogie → unabhaengige Entstehung, aehnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhaengig ein optisches System mit Linse, Retina und Iris entwickelt -- aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
 
-Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft ähnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell ähnlich (durch konvergente Evolution auf dasselbe Problem gestoßen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, ähnlicher Bau; Analogie → unabhängige Entstehung, ähnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
-
-> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
+> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelfluegel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelfluegel und Insektenfluegel).
 
 | Merkmal | Homologie | Analogie |
 | --- | --- | --- |
-| Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
-| Bauplan | Ähnlich (Grundstruktur) | Verschieden |
+| Ursprung | Gemeinsamer Vorfahre | Unabhaengig (konvergent) |
+| Bauplan | Aehnlich (Grundstruktur) | Verschieden |
 | Funktion | Oft verschieden | Gleich |
-| Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
+| Beispiel | Arm / Flosse / Fluegel (Wirbeltiere) | Vogelfluegel / Insektenfluegel |
 | Nachweis | Embryologie, Anatomie | Funktionsanalyse |
 | Fachbegriff | Divergente Evolution | Konvergente Evolution |
 
 ---
 
-## Molekulare Uhr — Evolution zeitlich datieren
+## Molekulare Uhr -- Evolution zeitlich datieren
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6–7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
+Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto laenger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien koennen absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die fruehere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
 
 ---
 
-## Kladistik und Stammbäume lesen
+## Kladistik und Stammbaeume lesen
 
 {{DIAGRAM:dna-helix}}
 
-Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
-- **Äste** = Evolutionslinien der abstammenden Taxa
+Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschliesslich nach **Synapomorphien** -- gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
+- **Aeste** = Evolutionslinien der abstammenden Taxa
 - **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
 - **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
 - **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
 
-Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: „Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
+Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schliessen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein -- sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: "Reptilien" ohne Voegel ist eine **paraphyletische** Gruppe, weil Voegel evolutionaere Nachkommen der Dinosaurier sind und daher zum selben Clade gehoeren. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen -- sie entstanden durch Analogie (konvergente Evolution).
 
 > **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
 
@@ -2114,7 +2189,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 
 ## MedAT-Fokus
 
-**Typische Prüfungsfragen:**
+**Typische Pruefungsfragen:**
 - Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution.)
 - Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen.)
 - Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen.)
@@ -2122,103 +2197,19 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
 **Typische Fallen:**
 - Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion) verwechseln.
 - Monophyletisch (Clade: alle Nachkommen eingeschlossen) vs. paraphyletisch (nicht alle Nachkommen) verwechseln.
-- Synapomorphie (abgeleitetes Merkmal, relevant für Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ für Verwandtschaft).
+- Synapomorphie (abgeleitetes Merkmal, relevant fuer Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ fuer Verwandtschaft).
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Homologie**: gleicher evolutionärer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelflügel = homologe Vorderextremitäten)
-- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelflügel vs. Insektenflügel)
-- Im **Stammbaum**: Äste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
-- **Cladistik**: Klassifikation ausschließlich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
+- **Homologie**: gleicher evolutionaerer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelfluegel = homologe Vorderextremitaeten)
+- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelfluegel vs. Insektenfluegel)
+- Im **Stammbaum**: Aeste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
+- **Cladistik**: Klassifikation ausschliesslich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
 - **Monophyletische** Gruppe = gemeinsamer Vorfahre + ALLE Nachkommen (korrekte Klassifikation); paraphyletisch = ohne manche Nachkommen
-- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmäßig → Kalibrierung mit Fossilien → Datierung von Artseparationen
-- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermöglichen die Verfolgung von Resistenzgen-Ausbreitung`,
-      contentExtended: `## Einleitung
-
-Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
-
-**In diesem Kapitel lernst du:**
-- den Unterschied zwischen Homologie und Analogie
-- wie du Stammbaeume liest
-- was die molekulare Uhr misst
-
----
--X B. Flügel
-
-## Homologie vs. Analogie — Ein kritischer Unterschied
-
-Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft ähnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell ähnlich (durch konvergente Evolution auf dasselbe Problem gestoßen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, ähnlicher Bau; Analogie → unabhängige Entstehung, ähnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
-
-> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
-
-| Merkmal | Homologie | Analogie |
-| --- | --- | --- |
-| Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
-| Bauplan | Ähnlich (Grundstruktur) | Verschieden |
-| Funktion | Oft verschieden | Gleich |
-| Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
-| Nachweis | Embryologie, Anatomie | Funktionsanalyse |
-| Fachbegriff | Divergente Evolution | Konvergente Evolution |
-
----
-
-## Molekulare Uhr — Evolution zeitlich datieren
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6–7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
-
-> **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
-
----
-
-## Kladistik und Stammbäume lesen
-
-{{DIAGRAM:dna-helix}}
-
-Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
-- **Äste** = Evolutionslinien der abstammenden Taxa
-- **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
-- **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
-- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
-
-Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: „Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
-
-> **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
-
----
-
-## Klinischer Bezug
-
-Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.
-
----
-
-## MedAT-Fokus
-
-**Typische Prüfungsfragen:**
-- Was ist der Unterschied zwischen Homologie und Analogie? (Gemeinsamer Ursprung vs. konvergente Evolution.)
-- Was ist ein Clade? (Monophyletische Gruppe: gemeinsamer Vorfahre + ALLE Nachkommen.)
-- Was misst die molekulare Uhr? (Akkumulation neutraler Mutationen zur Datierung von Divergenzereignissen.)
-
-**Typische Fallen:**
-- Homologie (gleicher Ursprung, evtl. verschiedene Funktion) vs. Analogie (verschiedener Ursprung, gleiche Funktion) verwechseln.
-- Monophyletisch (Clade: alle Nachkommen eingeschlossen) vs. paraphyletisch (nicht alle Nachkommen) verwechseln.
-- Synapomorphie (abgeleitetes Merkmal, relevant für Kladistik) vs. Symplesiomorphie (primitives Merkmal, nicht informativ für Verwandtschaft).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Homologie**: gleicher evolutionärer Ursprung, ggf. verschiedene Funktion (Beispiel: Menschenarm, Walflosse, Vogelflügel = homologe Vorderextremitäten)
-- **Analogie**: verschiedener Ursprung, gleiche Funktion durch **konvergente Evolution** (Beispiel: Vogelflügel vs. Insektenflügel)
-- Im **Stammbaum**: Äste = Evolutionslinien, Knoten (Nodes) = gemeinsame Vorfahren, Wurzel = letzter gemeinsamer Vorfahre aller Gruppen
-- **Cladistik**: Klassifikation ausschließlich nach **Synapomorphien** (gemeinsame abgeleitete Merkmale); Clade = gemeinsamer Vorfahre + alle Nachkommen
-- **Monophyletische** Gruppe = gemeinsamer Vorfahre + ALLE Nachkommen (korrekte Klassifikation); paraphyletisch = ohne manche Nachkommen
-- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmäßig → Kalibrierung mit Fossilien → Datierung von Artseparationen
-- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermöglichen die Verfolgung von Resistenzgen-Ausbreitung`,
+- **Molekulare Uhr**: neutrale Mutationen akkumulieren gleichmaessig → Kalibrierung mit Fossilien → Datierung von Artseparationen
+- Phylogenetische Analysen von Pathogenen rekonstruieren Transmissionsketten und ermoeglichen die Verfolgung von Resistenzgen-Ausbreitung`,
       lernziele: [
         "Homologe von analogen Strukturen anhand von Beispielen unterscheiden",
         "Phylogenetische Stammbäume lesen und Verwandtschaftsbeziehungen ableiten",
@@ -2354,6 +2345,98 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
       ],
       content: `## Einleitung
 
+Stell dir vor, du streust Zucker auf eine Ameisenkolonie: Nur die Ameisen, die zufaellig eine Zuckerresistenz haben, ueberleben. Ihre Kinder tragen dieselbe Eigenschaft — und nach vielen Generationen sind fast alle Ameisen zuckerresistent. Genau so funktioniert **natuerliche Selektion**. Darwin hat dieses Prinzip vor ueber 150 Jahren beschrieben, und es erklaert nicht nur Tiere und Pflanzen, sondern auch, warum Bakterien heute gegen Antibiotika resistent werden.
+
+**In diesem Kapitel lernst du:**
+- warum vier Bedingungen gleichzeitig erfuellt sein muessen, damit natuerliche Selektion wirkt
+- wie sich stabilisierende, gerichtete und disruptive Selektion auf die Merkmalsverteilung einer Population auswirken
+- warum Fitness in der Biologie etwas ganz anderes bedeutet als im Fitnessstudio
+- wie die Synthetische Evolutionstheorie Darwin und Mendel verbindet
+
+---
+
+## Darwin vs. Lamarck — Zwei sehr unterschiedliche Ideen
+
+Fruehers glaubten viele Menschen, dass Tiere sich durch Anstrengung veraendern und diese Veraenderungen vererben. Der Franzose **Lamarck** dachte zum Beispiel: Giraffen strecken ihren Hals, weil sie hoehere Blaetter fressen wollen — und ihre Kinder erben den laengeren Hals. Das klingt logisch, ist aber **widerlegt**. Was du im Sport trainierst, landet nicht in deinen Genen.
+
+**Charles Darwin** hatte eine ganz andere Idee. Er beobachtete auf seinen Reisen, dass immer mehr Individuen geboren werden, als ueberleben koennen — und dass jene ueberleben, die zufaellig besser geeignet sind. Dafuer braucht es vier Dinge gleichzeitig:
+
+1. **Variation**: Individuen unterscheiden sich — manche haben groessere Schnaebel, andere kleinere
+2. **Vererblichkeit**: Diese Unterschiede werden an Kinder weitergegeben
+3. **Ueberproduktion**: Es werden mehr Nachkommen geboren, als die Umwelt ernaehren kann
+4. **Differentialreproduktion**: Wer besser zur Umwelt passt, hat mehr Nachkommen
+
+> **Merke:** Lamarck = Vererbung erworbener Eigenschaften (widerlegt). Darwin = natuerliche Selektion: Variation + Vererbung + Ueberproduktion + Differentialreproduktion.
+
+---
+
+## Was bedeutet "Fitness" wirklich?
+
+{{DIAGRAM:pedigree-analysis}}
+
+Im Alltag bedeutet Fitness Muskeln und Ausdauer. In der Biologie meint es etwas voellig anderes: **Fitness = Fortpflanzungserfolg**. Wer mehr gesunde, reproduktionsfaehige Kinder hat, ist biologisch "fitter" — egal wie stark oder schnell er ist.
+
+Stell dir vor: Sportler A ist ein Bodybuilder, hat aber keine Kinder. Sportler B ist duenn und krank, hat aber 10 gesunde Kinder. Nach Darwin ist Sportler B der "Fittere" — weil seine Gene in der naechsten Generation haeufiger vorkommen.
+
+Noch eine Erweiterung: **Inklusive Fitness**. Eine Biene verzichtet auf eigene Kinder und hilft der Koenigin — dabei verbreitet sie indirekt dieselben Gene. Das nennt man Verwandtenselektion (kin selection).
+
+> **Merke:** Fitness = Fortpflanzungserfolg, nicht Koerperkraft. Wer mehr ueberlebensfaehige Nachkommen hat, ist fitter.
+
+---
+
+## Die drei Arten der Selektion
+
+{{DIAGRAM:dna-helix}}
+
+Natuerliche Selektion wirkt auf drei verschiedene Weisen auf eine Merkmalskurve:
+
+**Stabilisierende Selektion** — die Mitte wird bevorzugt: Stell dir Geburtsgewichte vor. Zu leichte Babys haben unreife Organe, zu schwere Babys machen Probleme bei der Geburt. Babys mit mittlerem Gewicht ueberleben am besten. Die Kurve wird schmaler, der Durchschnitt bleibt gleich.
+
+**Gerichtete Selektion** — ein Extrem wird bevorzugt: Wenn Antibiotika alle normalen Bakterien toeten, ueberleben nur die resistenten. Mit jeder Generation werden mehr Bakterien resistent. Die Kurve wandert in eine Richtung.
+
+**Disruptive Selektion** — beide Extreme werden bevorzugt: Bei Voegeln mit zwei Nahrungsquellen (harte Samen und weiche Insekten) sind sehr grosse und sehr kleine Schnaebel vorteilhaft — mittlere nicht. Die Kurve spaltet sich auf. Das kann zur Entstehung neuer Arten fuehren.
+
+> **Merke:** Stabilisierend = Mitte bleibt. Gerichtet = Kurve wandert. Disruptiv = Kurve spaltet sich auf.
+
+---
+
+## Die Synthetische Evolutionstheorie
+
+Darwin wusste noch nichts von Mendels Vererbungsgesetzen (obwohl Mendel 1866 publizierte). Erst in den 1930–1950er Jahren wurden beide Erkenntnisse zusammengefuehrt: Die **Synthetische Evolutionstheorie** verbindet Darwins Selektion mit Mendels Genetik und der Populationsgenetik. Das Ergebnis: Evolution bedeutet praezise die **Veraenderung von Allelfrequenzen in einer Population ueber Zeit**.
+
+> **Merke:** Neue Synthese = Darwin + Mendel + Populationsgenetik. Evolution = Veraenderung der Allelfrequenzen.
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfragen:**
+- Was sind Darwins vier Voraussetzungen fuer natuerliche Selektion?
+- Was bedeutet Fitness in der Evolutionsbiologie? (Reproduktiver Erfolg, NICHT physische Staerke.)
+- Welche Selektionsart liegt vor, wenn der Mittelwert eines Merkmals bevorzugt wird? (Stabilisierend.)
+
+| Selektionsart | Wirkung | Beispiel |
+| --- | --- | --- |
+| Stabilisierend | Mitte bevorzugt, Extreme benachteiligt | Geburtsgewicht |
+| Gerichtet | Kurve verschiebt sich in eine Richtung | Antibiotikaresistenz |
+| Disruptiv | Beide Extreme bevorzugt, Mitte benachteiligt | Schnabelgroesse (2 Nischen) |
+
+**Typische Fallen:**
+- Fitness = Fortpflanzungserfolg, NICHT Staerke oder Schnelligkeit
+- Darwin (Selektion, 1859) vs. Lamarck (erworbene Eigenschaften, widerlegt) nicht verwechseln
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Darwins 4 Prinzipien**: Variation + Vererblichkeit + Ueberproduktion + Differentialreproduktion → natuerliche Selektion
+- **Fitness** = Fortpflanzungserfolg (wer mehr ueberlebensfaehige Kinder hat, ist fitter)
+- **Stabilisierende Selektion**: Mitte wird bevorzugt (Geburtsgewicht)
+- **Gerichtete Selektion**: Kurve verschiebt sich (Antibiotikaresistenz)
+- **Disruptive Selektion**: Extreme bevorzugt → kann zu Artaufspaltung fuehren
+- **Synthetische Evolutionstheorie**: Darwin + Mendel + Populationsgenetik → Evolution = Veraenderung der Allelfrequenzen`,
+      contentExtended: `## Einleitung
+
 Warum werden Bakterien immer resistenter gegen Antibiotika? Die Antwort liegt in demselben Prinzip, das Darwin vor über 150 Jahren beschrieben hat: natürliche Selektion. Wenn ein Antibiotikum alle empfindlichen Bakterien abtötet, überleben nur die wenigen, die zufällig eine Resistenz tragen, und vermehren sich ungestört weiter. Dieses einfache Prinzip erklärt, wie sich Populationen über Generationen verändern.
 
 **In diesem Kapitel lernst du:**
@@ -2450,7 +2533,7 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 - **Disruptive Selektion**: Extreme werden bevorzugt, Mittelwert benachteiligt → kann zu Artaufspaltung führen
 - **Synthetische Evolutionstheorie** (1930–1950er): Darwin + Mendel + Populationsgenetik → Evolution = **Veränderung der Allelfrequenzen** in einer Population über Zeit
 - **Sexuelle Selektion**: intrasexuell (Kampf um Paarungspartner) vs. intersexuell (Partnerwahl) → sexueller Dimorphismus
-- Evolutionäre Medizin: Antibiotikaresistenz ist gerichtete Selektion in Echtzeit — dasselbe Prinzip wie bei Darwin`,
+- Evolutionaere Medizin: Antibiotikaresistenz ist gerichtete Selektion in Echtzeit — dasselbe Prinzip wie bei Darwin`,
       lernziele: [
         "Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern",
         "Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen",
@@ -2588,6 +2671,86 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
         "Isolationsmechanismen",
       ],
       content: `## Einleitung
+
+Stell dir vor: Ein Pferd und ein Esel koennen sich paaren — ihr Kind, das Maultier, lebt und ist gesund. Aber es kann keine eigenen Kinder bekommen. Sind Pferd und Esel also dieselbe Art? Nein — denn der **biologische Artbegriff** verlangt, dass Nachkommen auch wieder fortpflanzungsfaehig sein muessen. Dieses Kapitel erklaert, wie Biologen Arten definieren, welche Barrieren zwischen Populationen entstehen und wie aus einer Art zwei werden.
+
+**In diesem Kapitel lernst du:**
+- was den biologischen Artbegriff ausmacht und wo er an seine Grenzen stoesst
+- welche Barrieren verhindern, dass sich zwei Populationen erfolgreich fortpflanzen (praezygotisch vs. postzygotisch)
+- warum das Maultier lebt, sich aber nicht fortpflanzen kann
+- wie neue Arten durch geografische Trennung oder Polyploidie entstehen
+
+---
+
+## Wie definieren wir eine "Art"?
+
+{{DIAGRAM:pedigree-analysis}}
+
+Der **biologische Artbegriff** von Ernst Mayr lautet: Eine Art ist eine Gruppe von Individuen, die sich untereinander fortpflanzen koennen und von anderen Gruppen reproduktiv isoliert sind. Klingt einfach — aber er hat Schwachstellen. Bakterien vermehren sich asexuell: Kein Sex, kein Artbegriff. Fossilien kann man nicht kreuzen. Fuer diese Faelle braucht man andere Artbegriffe.
+
+---
+
+## Was verhindert, dass sich zwei Populationen vermischen?
+
+Wenn zwei Populationen auseinanderdriften, entstehen Barrieren. Diese nennt man **Isolationsmechanismen** — und sie wirken entweder vor oder nach der Befruchtung.
+
+**Praezygotische Isolation** (vor der Befruchtung) — verhindert, dass es ueberhaupt zur Befruchtung kommt:
+- **Geografisch**: Ein Gebirge oder ein Ozean trennt zwei Gruppen — kein Kontakt moeglich
+- **Zeitlich**: Populationen paaren sich zu verschiedenen Jahreszeiten (z. B. Fruehjaehrsblueher vs. Herbstblueher)
+- **Verhalten**: Verschiedene Balzrituale — die Signale passen nicht zueinander
+- **Mechanisch**: Koerperformen passen nicht zusammen
+
+**Postzygotische Isolation** (nach der Befruchtung) — die Befruchtung klappt, aber trotzdem scheitert es:
+- **Hybridlethalitaet**: Das Mischwesen stirbt als Embryo
+- **Hybridsteritlitaet**: Das Mischwesen lebt, kann aber keine Kinder bekommen — genau wie das **Maultier** (Pferd 2n=64, Esel 2n=62, Maultier 2n=63: die Chromosomen passen nicht fuer die Meiose)
+
+> **Merke:** Praezygotisch = vor der Befruchtung. Postzygotisch = nach der Befruchtung. Maultier = postzygotische Isolation durch Hybridsteritlitaet.
+
+---
+
+## Wie entstehen neue Arten?
+
+**Allopatrische Artbildung** — durch geografische Trennung: Stell dir eine Voegelpopulation vor, die durch einen Fluss getrennt wird. Beide Haelften entwickeln sich unabhaengig weiter — verschiedene Mutationen, verschiedene Selektion. Nach vielen Generationen koennen sie sich nicht mehr miteinander paaren: zwei Arten entstehen. Das klassische Beispiel sind die **Darwin-Finken** auf den Galapagos-Inseln: Aus einer einzigen Gruenderpopulation entstanden ueber 13 verschiedene Arten.
+
+{{DIAGRAM:dna-helix}}
+
+**Sympatrische Artbildung** — ohne geografische Trennung: Wie kann eine neue Art entstehen, ohne raeumlich getrennt zu sein? Die wichtigste Antwort bei Pflanzen: **Polyploidie**. Wenn bei der Zellteilung der gesamte Chromosomensatz verdoppelt wird, entsteht ein Individuum, das sich nicht mehr mit dem Original kreuzen kann — aber mit anderen Polyploiden schon. Eine neue Art entsteht innerhalb einer einzigen Generation. Weizen ist ein klassisches Beispiel: Er hat 6 Chromosomensaetze (6n=42) aus drei Vorfahrenarten.
+
+> **Merke:** Allopatrisch = geografische Trennung → Divergenz → neue Arten. Sympatrisch = Polyploidie → neue Art in einer Generation (bei Pflanzen).
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfragen:**
+- Was besagt der biologische Artbegriff?
+- Warum ist das Maultier steril?
+- Was unterscheidet allopatrische von sympatrischer Artbildung?
+
+| Merkmal | Allopatrisch | Sympatrisch |
+| --- | --- | --- |
+| Geografische Trennung | Ja (Barriere) | Nein (gleiches Gebiet) |
+| Hauptmechanismus | Divergenz + Selektion + Drift | Polyploidie |
+| Geschwindigkeit | Langsam | Schnell (1 Generation moeglich) |
+| Beispiel | Darwin-Finken | Weizen (6n=42) |
+
+**Typische Fallen:**
+- Praezygotisch vs. postzygotisch verwechseln
+- Maultier ist lebensfaehig (lebt!), aber steril (kann keine Kinder bekommen)
+- Biologischer Artbegriff gilt NICHT fuer Bakterien und Fossilien
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Biologischer Artbegriff** (Mayr): Populationen, die sich fortpflanzen koennen und von anderen reproduktiv isoliert sind; scheitert bei asexuellen Organismen und Fossilien
+- **Praezygotisch**: geografisch, zeitlich, Verhalten, mechanisch — verhindert Befruchtung
+- **Postzygotisch**: Hybridsteritlitaet (Maultier) oder Hybridlethalitaet — Befruchtung klappt, aber Nachkommen sind unfruchtbar oder lebensschwach
+- **Allopatrische Artbildung**: geografische Trennung → unabhaengige Entwicklung → Reproduktionsisolation
+- **Sympatrische Artbildung**: Polyploidie bei Pflanzen → neue Art in einer Generation moeglich
+- Polyploidie beim Menschen: nicht mit dem Leben vereinbar → fuehrt zu Fruehaborten
+- **Adaptive Radiation**: rasche Artaufspaltung in verschiedene Nischen aus einer Gruenderpopulation (Darwin-Finken auf Galapagos)`,
+      contentExtended: `## Einleitung
 
 Pferde und Esel können sich paaren und ein Maultier zeugen, aber das Maultier ist steril. Sind Pferd und Esel dann dieselbe Art? Nach dem biologischen Artbegriff nicht, denn echte Arten sind reproduktiv isoliert: Ihre Nachkommen müssen selbst fruchtbar sein. Dieses Kapitel erklärt, wie man Arten definiert, warum Isolationsmechanismen der Schlüssel zur Artbildung sind und wie aus einer Art zwei werden.
 
@@ -2809,6 +2972,89 @@ Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide
       ],
       content: `## Einleitung
 
+Stell dir eine kleine Inselgruppe vor, auf der nur 20 Menschen leben. Durch puren Zufall koennte es passieren, dass nach ein paar Generationen alle dieselbe Blutgruppe haben — ohne dass das irgendeinen Vorteil haette. Das nennt man **Gendrift**, und sie ist nur einer von vier Faktoren, die Populationen veraendern. Das **Hardy-Weinberg-Gleichgewicht** beschreibt den theoretischen Idealzustand, wenn keiner dieser Faktoren wirkt — wie ein Klassenzimmer, in dem sich niemand veraendert, weil keine Noten verteilt werden.
+
+**In diesem Kapitel lernst du:**
+- welche vier Kraefte die Allelfrequenzen einer Population veraendern
+- warum Gendrift in kleinen Populationen besonders stark ist
+- was das Hardy-Weinberg-Gleichgewicht beschreibt und was Abweichungen bedeuten
+- wie Gruendereffekt und Flaschenhalseffekt genetische Vielfalt reduzieren
+
+---
+
+## Die vier Evolutionsfaktoren
+
+{{DIAGRAM:dna-helix}}
+
+Evolution bedeutet: Die Haeufigkeit von Allelen in einer Population veraendert sich. Vier Kraefte treiben das an:
+
+**1. Mutation** — der Rohstoff: Mutationen erschaffen neue Allele. Ohne Mutation gaebe es keine Variation, ohne Variation keine Evolution. Einzelne Mutationen sind zufaellig und meist neutral oder schaedlich, selten vorteilhaft.
+
+**2. Selektion** — gerichtet und fitnessbezogen: Allele, die die Fortpflanzung foerdern, nehmen zu. Selektion ist die einzige **gerichtete** Kraft. In grossen Populationen dominiert sie die anderen Faktoren.
+
+**3. Gendrift** — purer Zufall: In kleinen Populationen koennen Allelfrequenzen allein durch Zufaelle schwanken. Ein Allel kann zufaellig verschwinden oder sich durchsetzen — egal ob es gut oder schlecht ist. Je kleiner die Gruppe, desto groesser der Zufallseinfluss.
+
+**4. Genfluss** — verbindet Populationen: Wenn Individuen zwischen Populationen wandern, bringen sie ihre Gene mit. Das gleicht Unterschiede aus und wirkt der Artbildung entgegen. Ein Gebirge, das Genfluss verhindert, ist oft der erste Schritt zur Artaufspaltung.
+
+> **Merke:** Mutation (Rohstoff, zufaellig), Selektion (gerichtet), Gendrift (Zufall, stark in kleinen Gruppen), Genfluss (gleicht aus, verhindert Artbildung).
+
+---
+
+## Flaschenhals vs. Gruendereffekt
+
+Beide sind Sonderformen der Gendrift, aber mit unterschiedlicher Ursache.
+
+**Flaschenhals-Effekt**: Eine grosse Population wird durch eine Katastrophe (Seuche, Naturkatastrophe) auf wenige Individuen reduziert. Die Ueberlebenden repraesentieren nur einen zufaelligen Ausschnitt der urspruenglichen Gene — viele Allele gehen fuer immer verloren. Stell dir eine Schulklasse vor, die fast alle ausfaellt: Die paar verbleibenden Kinder repraesentieren nicht den Durchschnitt.
+
+**Gruendereffekt**: Eine kleine Gruppe verlaeesst die urspruengliche Population und gruendet eine neue — wie eine Handvoll Studierenden, die in eine neue Stadt ziehen. Die Allele dieser Gruender praeegen die gesamte Nachfolgepopulation, auch wenn sie nicht typisch fuer die Ursprungsgruppe waren.
+
+> **Merke:** Flaschenhals = bestehende Population wird stark reduziert. Gruendereffekt = kleine Gruppe gruendet neue Population. Beide → Gendrift, genetische Verarmung.
+
+---
+
+## Hardy-Weinberg-Gleichgewicht
+
+{{DIAGRAM:pedigree-analysis}}
+
+Das Hardy-Weinberg-Gesetz beschreibt eine Population **ohne Evolution**: p2 + 2pq + q2 = 1. Es gilt nur, wenn alle fuenf Bedingungen erfuellt sind: grosse Population, kein Genfluss, keine Selektion, keine Mutation, zufaellige Paarung. Das ist in der Natur nie ganz so — aber es ist ein nuetzlicher Vergleichspunkt. Wenn eine reale Population vom Hardy-Weinberg-Gleichgewicht abweicht, weiss man: Mindestens einer der Evolutionsfaktoren ist aktiv.
+
+Beispiel: In Malariaregionen Afrikas kommen Sichelzelltraeger (HbA/HbS) haeufiger vor als erwartet. Der Grund: Traeger sind resistenter gegen Malaria. Selektion haelt das Sichelzellallel in der Population — das ist eine Abweichung vom Hardy-Weinberg durch **Heterozygotenvorteil**.
+
+> **Merke:** Hardy-Weinberg = kein Evolutionsdruck. Abweichung = mindestens ein Faktor ist aktiv. Heterozygotenvorteil = beide Allele bleiben erhalten (Sichelzell-Beispiel).
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfragen:**
+- Welcher Evolutionsfaktor dominiert in kleinen Populationen? (Gendrift)
+- Was besagt das Hardy-Weinberg-Gleichgewicht?
+- Was unterscheidet Flaschenhals von Gruendereffekt?
+
+| Faktor | Wirkung | Gerichtet? |
+| --- | --- | --- |
+| Mutation | Neue Allele | Nein |
+| Selektion | Fitness-Allele steigen | Ja |
+| Gendrift | Zufaellige Schwankungen | Nein |
+| Genfluss | Gleicht Unterschiede aus | Nein |
+
+**Typische Fallen:**
+- Flaschenhals (Reduktion einer grossen Population) vs. Gruendereffekt (neue kleine Population) verwechseln
+- Hardy-Weinberg-Abweichung = Evolution aktiv, kein Messfehler
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **4 Evolutionsfaktoren**: Mutation (Rohstoff), Selektion (gerichtet), Gendrift (Zufall, stark in kleinen Gruppen), Genfluss (gleicht aus)
+- **Flaschenhals**: grosse Population wird stark reduziert → zufaelliger Genverlust
+- **Gruendereffekt**: kleine Gruppe gruendet neue Population → Gruendergene dominieren
+- **Hardy-Weinberg**: p2 + 2pq + q2 = 1; kein Evolutionsdruck im Gleichgewicht
+- Abweichung = mindestens ein Evolutionsfaktor wirkt
+- **Heterozygotenvorteil**: Sichelzelltraeger (HbA/HbS) sind in Malariaregionen fititer → balancierte Selektion haelt beide Allele
+- Hardy-Weinberg klinisch: aus der Erkrankungshaeufigkeit (q2) die Anlagetraegerhaeufigkeit (2pq) berechnen`,
+      contentExtended: `## Einleitung
+
 Stell dir eine kleine Insel vor, auf der nur 20 Menschen leben. Durch reinen Zufall könnte es passieren, dass in wenigen Generationen alle dieselbe Blutgruppe haben, obwohl es dafür keinen biologischen Vorteil gibt. Das ist Gendrift, und sie ist nur einer von vier Faktoren, die Allelfrequenzen verändern. Das Hardy-Weinberg-Gleichgewicht beschreibt den theoretischen Idealzustand, in dem keiner dieser Faktoren wirkt. Jede Abweichung davon verrät, welche Kraft gerade am Werk ist.
 
 **In diesem Kapitel lernst du:**
@@ -2890,7 +3136,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 - **Hardy-Weinberg-Gleichgewicht**: p² + 2pq + q² = 1; beschreibt Referenzzustand **ohne Evolution** (große Population, kein Genfluss, keine Selektion, keine Mutation, Random Mating)
 - Abweichung vom Hardy-Weinberg = mindestens ein Evolutionsfaktor ist aktiv
 - **Heterozygotenvorteil** (balancierte Selektion): Sichelzellanämie-Träger (HbAS) haben in Malariaregionen höhere Fitness als beide Homozygoten → beide Allele bleiben in der Population erhalten
-- Hardy-Weinberg klinisch: aus der Erkrankungshäufigkeit (q²) die Anlageträgerhäufigkeit (2pq) berechnen`,
+- Hardy-Weinberg klinisch: aus der Erkrankungshaeufigkeit (q2) die Anlagetraegerhaeufigkeit (2pq) berechnen`,
       lernziele: [
         "Die vier Evolutionsfaktoren (Mutation, Selektion, Gendrift, Genfluss) und ihre Wirkungsweisen beschreiben",
         "Flaschenhals-Effekt und Gründereffekt als Formen des Gendrifts unterscheiden",
@@ -3020,13 +3266,90 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       ],
       content: `## Einleitung
 
-Der Satz “Der Mensch stammt vom Affen ab” klingt eingängig, ist aber falsch. Mensch und Schimpanse teilen einen gemeinsamen Vorfahren, der vor rund 6 bis 7 Millionen Jahren lebte, aber keiner stammt vom anderen ab. Überraschend: Unsere Vorfahren liefen bereits aufrecht, lange bevor ihr Gehirn deutlich wuchs. Lucy, das berühmte Fossil aus Äthiopien, war schon biped, hatte aber ein schimpansengroßes Gehirn. Die Stammesgeschichte des Menschen ist voller solcher überraschender Befunde.
+“Der Mensch stammt vom Affen ab” — stimmt das? Nein, nicht ganz. Menschen und Schimpansen teilen einen gemeinsamen Vorfahren, der vor etwa 6–7 Millionen Jahren lebte. Keiner stammt vom anderen ab — wir sind eher wie Cousins. Noch spannender: Unsere Vorfahren liefen schon aufrecht, als ihr Gehirn noch genauso gross war wie das eines Schimpansen. Das beruehmt-beruechtigt Fossil “Lucy” beweist genau das. Die Menschheitsgeschichte steckt voller ueberraschender Entdeckungen.
+
+**In diesem Kapitel lernst du:**
+- warum der aufrechte Gang lange vor der Gehirnvergroesserung evolvierte
+- welche Homininen in welcher Reihenfolge auftraten und was sie unterschied
+- was die Out-of-Africa-Theorie besagt und warum wir Neandertaler-DNA in uns tragen
+- warum “Der Mensch stammt vom Affen ab” biologisch falsch ist
+
+---
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+{{DIAGRAM:dna-helix}}
+
+## Erst aufrecht, dann groesseres Gehirn
+
+Frueher dachten viele, dass aufrechter Gang und groesseres Gehirn Hand in Hand gingen. Aber Fossilien zeigen: Das stimmt nicht. **Australopithecus afarensis** (“Lucy”, ca. 3,2 Millionen Jahre alt) lief bereits auf zwei Beinen — hatte aber ein Hirnvolumen von nur ca. 450 ccm, etwa so gross wie das eines heutigen Schimpansen. Das Gehirn wuchs erst viel spaeter, bei der Gattung Homo.
+
+Warum war aufrechter Gang so vorteilhaft? Mehrere Gruende werden diskutiert: freie Haende fuer andere Taetigkeiten, bessere Kuehlung in der heissen Savanne, effizientere Fortbewegung ueber weite Strecken. Der aufrechte Gang brachte aber auch Nachteile mit sich: Rueckenschmerzen, Komplikationen bei der Geburt (grosser Kopf, enger Becken).
+
+> **Merke:** Bipedie evolvierte VOR der Gehirnvergroesserung. Lucy (Australopithecus) lief aufrecht, hatte aber ein schimpansengroesses Gehirn (~450 ccm).
+
+---
+
+## Die Homininen-Reihe
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
+
+**Australopithecus afarensis** (~3,9–2,9 Mya): Schon aufrecht, Hirnvolumen ~450 ccm, noch kein Werkzeuggebrauch nachgewiesen.
+
+**Homo habilis** (~2,4–1,5 Mya): Erster Vertreter der Gattung Homo. Hirnvolumen ~630 ccm. Benutzte einfache Steinwerkzeuge der **Oldowan-Kultur**. Der Name bedeutet “geschickter Mensch”.
+
+**Homo erectus** (~1,9 Mya–100.000 Jahre): Erster Hominin, der Afrika verliess und Asien und Europa besiedelte. Fossilien wurden in Java und China gefunden. Hirnvolumen ~1.000 ccm. Nutzte **Feuer** und komplexere Werkzeuge (Acheuleen-Kultur).
+
+**Homo sapiens** (ab ~300.000 Jahren): Entstand in Afrika, migrierte vor ca. 60.000–70.000 Jahren in den Rest der Welt (Out-of-Africa). Hirnvolumen ~1.350 ccm.
+
+> **Merke:** Reihenfolge: Australopithecus → H. habilis → H. erectus → H. sapiens. Hirnvolumen: 450 → 630 → 1.000 → 1.350 ccm.
+
+---
+
+## Neandertaler — unsere Cousins, nicht unsere Vorfahren
+
+{{DIAGRAM:nervensystem-übersicht}}
+
+Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine **eigenstaendige Art**, die sich an das kalte Europa angepasst hatte. Neandertaler hatten sogar ein etwas groesseres Hirnvolumen als wir (~1.400–1.600 ccm), begruben ihre Toten und nutzten Schmuck.
+
+Genetische Analysen von Svante Paeaebo (Nobelpreis 2022) zeigen: Menschen ausserhalb Afrikas tragen **1–4 % Neandertaler-DNA**. Das bedeutet: Unsere Vorfahren kreuzten sich mit Neandertalern, nachdem sie aus Afrika auswanderten. In Afrika lebenden Menschen fehlt diese Neandertaler-DNA weitgehend.
+
+> **Merke:** Neandertaler: eigenstaendige Art, kein Vorfahre. 1–4 % ihrer DNA in Nicht-Afrikanern. Svante Paeaebo: Nobelpreis 2022 fuer Palaaeogenomik.
+
+---
+
+## MedAT-Fokus
+
+**Typische Pruefungsfragen:**
+- In welcher Reihenfolge erschienen die Homininen?
+- Was evolvierte zuerst: aufrechter Gang oder grosses Gehirn? (Bipedie zuerst!)
+- Wie viel Neandertaler-DNA tragen Nicht-Afrikaner? (1–4 %)
+
+**Typische Fallen:**
+- Neandertaler sind NICHT Vorfahren des modernen Menschen — sie lebten parallel
+- Bipedie evolvierte VOR der Gehirnvergroesserung
+- “Der Mensch stammt vom Affen ab” ist falsch — beide teilen gemeinsame Vorfahren
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Bipedie vor Gehirnvergroesserung** — Lucy (Australopithecus, ~3,2 Mya): aufrecht, Hirnvolumen ~450 ccm
+- **H. habilis** (~2,4 Mya): erste Steinwerkzeuge (Oldowan), Hirnvolumen ~630 ccm
+- **H. erectus** (~1,9 Mya): erster Hominin ausserhalb Afrikas; Feuer; Hirnvolumen ~1.000 ccm
+- **H. sapiens**: ab ~300.000 Jahren in Afrika; Out-of-Africa vor ~60.000–70.000 Jahren; Hirnvolumen ~1.350 ccm
+- **Out-of-Africa**: groesste genetische Diversitaet in afrikanischen Populationen belegt afrikanischen Ursprung
+- Nicht-Afrikaner tragen **1–4 % Neandertaler-DNA** (Hybridisierung nach Migration; Paeaebo, Nobelpreis 2022)
+- Divergenz Mensch/Schimpanse: vor ca. 6–7 Millionen Jahren — kein gemeinsamer Schimpansen-Vorfahre!`,
+      contentExtended: `## Einleitung
+
+Der Satz "Der Mensch stammt vom Affen ab" klingt eingängig, ist aber falsch. Mensch und Schimpanse teilen einen gemeinsamen Vorfahren, der vor rund 6 bis 7 Millionen Jahren lebte, aber keiner stammt vom anderen ab. Überraschend: Unsere Vorfahren liefen bereits aufrecht, lange bevor ihr Gehirn deutlich wuchs. Lucy, das berühmte Fossil aus Äthiopien, war schon biped, hatte aber ein schimpansengroßes Gehirn. Die Stammesgeschichte des Menschen ist voller solcher überraschender Befunde.
 
 **In diesem Kapitel lernst du:**
 - warum der aufrechte Gang lange vor der Gehirnvergrößerung evolvierte
 - welche Homininen in welcher Reihenfolge auftraten und was sie voneinander unterschied
 - was die Out-of-Africa-Theorie besagt und warum wir Neandertaler-DNA in uns tragen
-- warum die Aussage “Der Mensch stammt vom Affen ab” biologisch falsch ist
+- warum die Aussage "Der Mensch stammt vom Affen ab" biologisch falsch ist
 
 ---
 
