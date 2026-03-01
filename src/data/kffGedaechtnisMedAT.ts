@@ -30,6 +30,15 @@ export type OfficialGedaechtnisSet = {
   questions: GedaechtnisQuestion[];
 };
 
+/** Offizielle Instruktion aus IB GM 26.pdf */
+export const OFFICIAL_GM_INSTRUCTION = `Bei dieser Aufgabe sollen Sie sich Informationen auf Allergiepässen merken. Auf jedem der Allergiepässe finden Sie Informationen zu: Name, Geburtstag, Medikamenteneinnahme, Blutgruppe, bekannte Allergien, Ausweisnummer und Ausstellungsland. Sie sollen sich dabei die Inhalte mehrerer Pässe möglichst gut einprägen.
+
+Sie dürfen sich während der Lernphase keine Notizen machen und kein Schreibgerät (Textmarker etc. und andere Hilfsmittel) verwenden. Es ist auch untersagt, sich während der darauffolgenden zwei Untertests Notizen zu den Allergiepässen zu machen. Während der Prüfphase dürfen Sie sich wieder Notizen machen.
+
+Aufnahmeverfahren: Lernphase: 8 Allergiepässe, 8 Minuten. Prüfphase: 25 Aufgaben, 15 Minuten (Papier-Bleistift-Test).
+
+Bei einigen Aufgaben kann es auch vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist. In diesem Fall müssen Sie Antwortmöglichkeit E (Keine der Antwortmöglichkeiten ist richtig.) ankreuzen.`;
+
 // =============================================================================
 // OFFIZIELLE BEISPIELE – exakt aus MedAT-PDF übernehmen (nicht generieren!)
 // =============================================================================

@@ -34,6 +34,15 @@ export type FigureAssembleTask = {
   solutionOverlay?: { lines: SolutionOverlayLine[] };
 };
 
+/** Offizielle Instruktion aus IB FZ 26.pdf */
+export const OFFICIAL_FZ_INSTRUCTION = `Diese Aufgaben zeigen einfache geometrische Figuren (Kreis, Viertelkreis, Vieleck, Rechteck, Quadrat, Parallelogramm etc.), die in mehrere Teile zerschnitten wurden. Sie sollen herausfinden, welche der angeführten Figuren sich aus den jeweiligen Teilen zusammensetzen lässt. Dabei spielt das Größenverhältnis zwischen den Teilen und den Antwortfiguren keine Rolle. Die Teile müssen für den Vorgang des Zusammenfügens nicht gespiegelt werden.
+
+Bitte beachten Sie, dass Sie für diese Aufgaben weder Hilfslinien oder -punkte einzeichnen, noch Zeichnungen oder Notizen anfertigen dürfen. Ihre Aufgabe besteht darin, die Figuren gedanklich zusammenzufügen.
+
+Aufnahmeverfahren: 15 Aufgaben, 20 Minuten (Papier-Bleistift-Test).
+
+Bei einigen Aufgaben kann es auch vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist. In diesem Fall müssen Sie Antwortmöglichkeit E (Keine der Antwortmöglichkeiten ist richtig.) ankreuzen.`;
+
 // ─── Kern-Hilfsfunktionen ─────────────────────────────────────────────────
 
 const TAU = 2 * Math.PI;

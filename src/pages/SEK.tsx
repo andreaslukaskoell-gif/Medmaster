@@ -22,6 +22,9 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
+import { OFFICIAL_EE_INSTRUCTION } from "@/data/emotionenErkennenOffiziell";
+import { OFFICIAL_ER_INSTRUCTION, OFFICIAL_SE_INSTRUCTION } from "@/data/sekDataNew";
 import { emotionenRegulierenTasks, sozialesEntscheidenTasks } from "@/data/sekDataNew";
 import {
   emotionenErkennenOffiziellAlle,
@@ -146,8 +149,20 @@ export default function SEK() {
       </Card>
 
       <UebungsbeschreibungCard id="sek-emotionen-erkennen" collapsible defaultCollapsed />
+      <OfficialInstructionCard
+        title="Offizielle Instruktion: Emotionen erkennen"
+        instruction={OFFICIAL_EE_INSTRUCTION}
+      />
       <UebungsbeschreibungCard id="sek-emotionen-regulieren" collapsible defaultCollapsed />
+      <OfficialInstructionCard
+        title="Offizielle Instruktion: Emotionen regulieren"
+        instruction={OFFICIAL_ER_INSTRUCTION}
+      />
       <UebungsbeschreibungCard id="sek-soziales-entscheiden" collapsible defaultCollapsed />
+      <OfficialInstructionCard
+        title="Offizielle Instruktion: Soziales Entscheiden"
+        instruction={OFFICIAL_SE_INSTRUCTION}
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>

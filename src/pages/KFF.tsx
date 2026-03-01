@@ -80,6 +80,12 @@ import type { TaskDomain } from "@/lib/taskDb/types";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
+import { OFFICIAL_ZF_INSTRUCTION } from "@/data/kffZahlenfolgenMedAT";
+import { OFFICIAL_WF_INSTRUCTION } from "@/data/kffWortfluessigkeitMedAT";
+import { OFFICIAL_IMP_INSTRUCTION } from "@/data/kffImplikationen";
+import { OFFICIAL_FZ_INSTRUCTION } from "@/data/kffFigurenZusammensetzenMedAT";
+import { OFFICIAL_GM_INSTRUCTION } from "@/data/kffGedaechtnisMedAT";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 
 type KffView =
@@ -106,6 +112,26 @@ function formatZahlenfolgeDisplay(sequence: (number | "?")[] | undefined): strin
   if (!sequence?.length) return "?, ?";
   const numbers = sequence.filter((x): x is number => x !== "?");
   return numbers.length ? `${numbers.join(", ")}, ?, ?` : "?, ?";
+}
+
+/** Renders the sequence as evenly-spaced boxes (like the official MedAT paper format). */
+function ZahlenfolgeBoxes({ sequence }: { sequence: (number | "?")[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5 justify-center my-2">
+      {sequence.map((val, i) => (
+        <div
+          key={i}
+          className={`min-w-[3rem] px-2 py-2 border rounded-md text-center font-mono text-base font-semibold ${
+            val === "?"
+              ? "border-primary-400 dark:border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300"
+              : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+          }`}
+        >
+          {val}
+        </div>
+      ))}
+    </div>
+  );
 }
 
 /** Mischt ein Array und gibt bis zu limit Elemente zurück (Fallback wenn Task-DB leer). */
@@ -536,6 +562,7 @@ function ZahlenfolgenQuiz({
         </Button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
         <UebungsbeschreibungCard id="kff-zahlenfolgen" collapsible defaultCollapsed />
+        <OfficialInstructionCard instruction={OFFICIAL_ZF_INSTRUCTION} />
 
         <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
           <CardHeader>
@@ -868,10 +895,10 @@ function ZahlenfolgenQuiz({
               🏛️ Offizielles MedAT-Beispiel
             </Badge>
           )}
-          <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">
-            {formatZahlenfolgeDisplay(currentQ.sequence)}
+          <ZahlenfolgeBoxes sequence={currentQ.sequence} />
+          <p className="text-sm text-muted mb-6 text-center">
+            Welche zwei Zahlen folgen als nächstes?
           </p>
-          <p className="text-sm text-muted mb-6">Welche zwei Zahlen folgen als nächstes?</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
@@ -1036,6 +1063,7 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
         Antwortmöglichkeiten ist richtig.“
       </p>
       <UebungsbeschreibungCard id="kff-merkfaehigkeit" collapsible defaultCollapsed />
+      <OfficialInstructionCard instruction={OFFICIAL_GM_INSTRUCTION} />
 
       <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
         <CardHeader>
@@ -1555,6 +1583,7 @@ function ImplikationenQuiz({
           Schlussfolgerung ist korrekt?
         </p>
         <UebungsbeschreibungCard id="kff-implikationen" collapsible defaultCollapsed />
+        <OfficialInstructionCard instruction={OFFICIAL_IMP_INSTRUCTION} />
 
         <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
           <CardHeader>
@@ -2142,6 +2171,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           Wort beginnt (oder ob keine der Antworten passt)!
         </p>
         <UebungsbeschreibungCard id="kff-wortfluessigkeit" collapsible defaultCollapsed />
+        <OfficialInstructionCard instruction={OFFICIAL_WF_INSTRUCTION} />
 
         <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
           <CardHeader>
@@ -2710,6 +2740,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           pro Aufgabe.
         </p>
         <UebungsbeschreibungCard id="kff-figuren" collapsible defaultCollapsed />
+        <OfficialInstructionCard instruction={OFFICIAL_FZ_INSTRUCTION} />
 
         <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
           <CardHeader>

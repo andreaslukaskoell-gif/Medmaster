@@ -27,6 +27,13 @@ export type SequenceTask = {
   source?: string;
 };
 
+/** Offizielle Instruktion aus IB ZF 26.pdf */
+export const OFFICIAL_ZF_INSTRUCTION = `Bei den Aufgaben sehen Sie eine Folge von Zahlen, deren Abfolge nach bestimmten Regeln aufgebaut ist. Die Regeln beruhen ausschließlich auf den 4 Grundrechnungsarten Addition, Subtraktion, Multiplikation und Division (+, -, ×, /). Ihre Aufgabe besteht darin, die Regeln zu erkennen und die Zahlenfolge logisch zu ergänzen. Es müssen alle angeführten Zahlen in die Erstellung der Zahlenfolge miteinbezogen werden. Die Lösung muss sich zwingend logisch aus der Zahlenfolge ergeben (d.h. keine Teilzahlenfolgen). Die Zahlenfolgen sind in Leserichtung von links nach rechts zu lösen. Zur Lösung der Aufgaben werden nur ganze Zahlen benötigt, keine Kommazahlen.
+
+Aufnahmeverfahren: 10 Aufgaben, 15 Minuten (Papier-Bleistift-Test).
+
+Bei einigen Aufgaben kann es auch vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist. In diesem Fall müssen Sie Antwortmöglichkeit E (Keine der Antwortmöglichkeiten ist richtig.) ankreuzen.`;
+
 // =============================================================================
 // SKRIPT: Mehr Zahlenfolgen-Aufgaben generieren
 // =============================================================================

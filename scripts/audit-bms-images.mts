@@ -13,7 +13,7 @@ const TARGET_SUBJECTS = ["biologie", "chemie", "physik", "mathematik"] as const;
 function countImages(uk: Unterkapitel): { markdown: number; diagram: number; imageUrl: number; total: number } {
   const content = uk.content || "";
   const markdown = (content.match(/!\[/g) || []).length;
-  const diagram = content.includes("{{DIAGRAM}}") ? 1 : 0;
+  const diagram = (content.match(/\{\{DIAGRAM[^}]*\}\}/g) || []).length;
   const imageUrl = uk.imageUrl ? 1 : 0;
   return { markdown, diagram, imageUrl, total: markdown + diagram + imageUrl };
 }

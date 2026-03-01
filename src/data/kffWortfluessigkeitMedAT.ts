@@ -22,6 +22,13 @@ export type WordFluencyTask = {
   difficulty?: 1 | 2 | 3;
 };
 
+/** Offizielle Instruktion aus IB WF 26.pdf */
+export const OFFICIAL_WF_INSTRUCTION = `Bei den Aufgaben sehen Sie eine Reihe von Buchstaben. Diese Buchstaben lassen sich zu einem einzigen deutschen Hauptwort (1. Fall) zusammensetzen. Ihre Aufgabe besteht darin, herauszufinden, mit welchem Anfangsbuchstaben das Hauptwort beginnt, das sich aus den Buchstaben bilden lässt. Dabei müssen alle angeführten Buchstaben miteinbezogen werden. Die Wörter beinhalten keine Umlaute (Ä in Form von AE, Ö in Form von OE oder Ü in Form von UE) und kein scharfes S in Form von SZ. Bei den gesuchten Wörtern handelt es sich nie um Eigennamen oder regionale bzw. länderspezifische Begriffe. Es werden nur Wörter entsprechend dem deutschen Duden gesucht.
+
+Aufnahmeverfahren: 15 Aufgaben, 20 Minuten (Papier-Bleistift-Test).
+
+Bei einigen Aufgaben kann es vorkommen, dass das Hauptwort, das sich aus den Buchstaben erstellen lässt, mit keinem der Buchstaben beginnt, die als Antwortmöglichkeiten (A bis D) vorgeschlagen werden. In diesem Fall kreuzen Sie die Antwortmöglichkeit E (Keine der Antwortmöglichkeiten ist richtig.) an.`;
+
 // =============================================================================
 // SKRIPT: Mehr Wortflüssigkeit-Aufgaben generieren
 // =============================================================================

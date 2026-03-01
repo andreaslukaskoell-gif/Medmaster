@@ -50,6 +50,13 @@ Beispiele, die mit 0 bewertet werden:
 • Doppelte Markierung: Bei einer Emotion wurden sowohl „eher wahrscheinlich“ als auch „eher unwahrscheinlich“ angekreuzt → Aufgabe wird mit 0 bewertet.
 • Fehlende Auswahl: Für eine oder mehrere Emotionen wurde keine Auswahl getroffen → Aufgabe wird mit 0 bewertet.`;
 
+/** Offizielle Instruktion aus IB EE 26.pdf (Kurzfassung wie bei anderen Subtests) */
+export const OFFICIAL_EE_INSTRUCTION = `Bei den Aufgaben finden Sie kurze Situationsbeschreibungen, in denen geschildert wird, wie bestimmte Personen eine Situation sehen. Aus diesen Informationen sollen Sie herausfinden, wie sich eine bestimmte Person in dieser Situation wahrscheinlich fühlt. Unterhalb der Situationsbeschreibungen finden Sie fünf Möglichkeiten, wie sich die Person fühlen könnte. Sie sollten für jede der Möglichkeiten angeben, ob sie eher wahrscheinlich oder eher unwahrscheinlich ist.
+
+Eine Aufgabe gilt als richtig gelöst, wenn Sie alle eher wahrscheinlich auftretenden Emotionen und alle eher unwahrscheinlich auftretenden Emotionen richtig erkannt haben.
+
+Aufnahmeverfahren: 14 Aufgaben, 21 Minuten (Papier-Bleistift-Test).`;
+
 const OPTION_IDS: OptionId[] = ["A", "B", "C", "D", "E"];
 
 function task(

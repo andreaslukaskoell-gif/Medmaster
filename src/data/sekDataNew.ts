@@ -31,6 +31,20 @@ export interface SozialesEntscheidenTask {
   aussagen: { text: string; idealRank: number }[];
 }
 
+/** Offizielle Instruktion aus IB ER 26.pdf */
+export const OFFICIAL_ER_INSTRUCTION = `Alle Aufgaben beinhalten eine kurze Situationsbeschreibung, in der eine Person eine negative Emotion erlebt. Die Situationsbeschreibungen beinhalten immer auch die Rahmenbedingungen und Ziele, die diese Person erreichen möchte.
+
+Unterhalb der Situationsbeschreibungen finden Sie vier Möglichkeiten, wie man mit der negativen Emotion in dieser Situation umgehen könnte. Alle vier Möglichkeiten sind in Form von Vorsätzen in der Ich-Form formuliert. Sie sollen entscheiden, mit welcher dieser vier Möglichkeiten die Ziele der Person, unter den geschilderten Umständen, am besten erreicht werden können. Sie können sich nur für eine der Möglichkeiten entscheiden.
+
+Aufnahmeverfahren: 12 Aufgaben, 18 Minuten (Papier-Bleistift-Test).`;
+
+/** Offizielle Instruktion aus IB SE 26.pdf */
+export const OFFICIAL_SE_INSTRUCTION = `Bei den folgenden Aufgaben finden Sie Beschreibungen von unterschiedlichen sozialen Alltags- und Berufssituationen, in denen eine Person eine Entscheidung treffen muss. Unterhalb der Situationsbeschreibungen finden Sie fünf mögliche Überlegungen, die bei der Entscheidung eine Rolle spielen könnten.
+
+Überlegen Sie dabei, wie wichtig die einzelnen Überlegungen aus Ihrer Sicht für diese Entscheidungssituation wären. Ordnen Sie die fünf Überlegungen nach ihrer Wichtigkeit, wobei 1 die wichtigste und 5 die am wenigsten wichtige Überlegung ist. Sie können nicht zwei Überlegungen auf die gleiche Wichtigkeitsstufe stellen.
+
+Aufnahmeverfahren: 14 Aufgaben, 21 Minuten (Papier-Bleistift-Test).`;
+
 import { sozialesEntscheiden100 } from "@/data/sozialesEntscheiden100";
 
 // ============================================================

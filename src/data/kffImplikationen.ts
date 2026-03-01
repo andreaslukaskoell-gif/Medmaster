@@ -79,6 +79,13 @@ export function toCanonicalImplicationTask(task: ImplikationTask): ImplicationTa
   };
 }
 
+/** Offizielle Instruktion aus IB IE 26.pdf */
+export const OFFICIAL_IMP_INSTRUCTION = `Bei den folgenden Aufgaben sollen Sie herausfinden, welche Schlussfolgerung sich aus den beiden vorgegebenen Aussagen ableiten lässt, die logisch zwingend immer richtig sein muss. Gehen Sie bitte davon aus, dass die jeweils angegebenen beiden Aussagen wahr sind, auch wenn dies nicht Ihrer Erfahrung entsprechen sollte.
+
+Aufnahmeverfahren: 10 Aufgaben, 10 Minuten (Papier-Bleistift-Test).
+
+Bei einigen Aufgaben kann es vorkommen, dass sich aus den Aussagen keine Schlussfolgerung ableiten lässt, die zwingend richtig ist, also keine der Antwortmöglichkeiten (A bis D) richtig ist. In diesem Fall kreuzen Sie die Antwortmöglichkeit E (Keine der Schlussfolgerungen ist richtig.) an.`;
+
 // =============================================================================
 // OFFIZIELLE BEISPIELAUFGABEN – exakt aus MedAT 2026 PDF, niemals vom Generator verwendet
 // =============================================================================
