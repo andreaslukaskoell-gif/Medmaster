@@ -7,9 +7,6 @@ export const physKap3: Kapitel = {
   icon: "〰️",
   estimatedTime: "120 min",
   unterkapitel: [
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 1: Harmonische Schwingungen
-    // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
@@ -30,13 +27,13 @@ export const physKap3: Kapitel = {
       ],
       content: `## Einleitung
 
-Stell dir eine Schaukel auf dem Spielplatz vor. Du ziehst sie zur Seite und laesst los -- sie schwingt hin und her und wird dabei langsam langsamer. Das ist schon eine **Schwingung**. In der Physik beschreiben wir solche Hin-und-her-Bewegungen mit wenigen Groessen: wie weit die Schaukel ausschlaegt (Amplitude), wie lange ein Durchgang dauert (Periodendauer) und wie oft sie pro Sekunde schwingt (Frequenz).
+Stell dir eine Schaukel auf dem Spielplatz vor. Du ziehst sie zur Seite und laesst los -- sie schwingt hin und her und wird dabei langsam langsamer. Das ist eine **Schwingung**. In der Physik beschreiben wir solche Hin-und-her-Bewegungen mit wenigen Groessen: wie weit die Schaukel ausschlaegt (Amplitude), wie lange ein Durchgang dauert (Periodendauer) und wie oft sie pro Sekunde schwingt (Frequenz). Dieses Modell beschreibt auch das MRT, Herzrhythmen und Schallwellen.
 
 **In diesem Kapitel lernst du:**
 - was Amplitude, Frequenz und Periodendauer bedeuten und wie sie zusammenhaengen
-- warum ein laengeres Pendel langsamer schwingt als ein kurzes -- aber das Gewicht keine Rolle spielt
-- wie sich eine Feder mit einem Gewicht daran anders verhaelt als ein Pendel
-- warum die Energie in einer Schwingung staendig zwischen Bewegungsenergie und Lageenergie wechselt
+- warum ein laengeres Pendel langsamer schwingt -- aber das Gewicht keine Rolle spielt
+- wie sich Fadenpendel und Federpendel physikalisch unterscheiden
+- warum die Energie in einer Schwingung staendig zwischen Bewegungs- und Lageenergie wechselt
 - was Resonanz ist und wann Daempfung nuetzlich wird
 
 ---
@@ -45,94 +42,95 @@ Stell dir eine Schaukel auf dem Spielplatz vor. Du ziehst sie zur Seite und laes
 
 {{DIAGRAM:coordinate-system}}
 
-## Was ist eine Schwingung?
+## Schwingungsgroessen
 
-Eine Schwingung ist eine Bewegung, die sich regelmaessig wiederholt. Denke an eine Schaukel, eine Gitarrensaite oder ein Trampolin. Der Koerper bewegt sich immer wieder um eine Ruhelage herum.
+Eine Schwingung ist eine regelmaessige Hin-und-her-Bewegung um eine Ruhelage. Die Rueckstellkraft ist proportional zur Auslenkung (F = -k·x). Die wichtigsten Groessen:
 
-Die wichtigsten Groessen:
-- **Amplitude A** -- wie weit der Koerper maximal von der Mitte weg ist
-- **Periodendauer T** -- wie lange eine volle Hin-und-her-Bewegung dauert (in Sekunden)
-- **Frequenz f** -- wie viele Schwingungen pro Sekunde passieren (in Hertz, Hz). Es gilt: f = 1/T
-- **Kreisfrequenz** -- verbindet alles: sie ist 2 mal Pi mal f
+- **Amplitude A** -- maximale Auslenkung aus der Mitte
+- **Periodendauer T** -- Dauer einer vollen Hin-und-her-Bewegung (in Sekunden)
+- **Frequenz f** -- Schwingungen pro Sekunde (in Hz). Es gilt: **f = 1/T**
+- **Kreisfrequenz omega** -- omega = 2·Pi·f = 2·Pi/T (in rad/s)
 
-> **Merke:** T und f sind Kehrwerte: f = 1/T. Schwingt etwas mit T = 2 s, ist die Frequenz 0,5 Hz (eine halbe Schwingung pro Sekunde).
+In der Ruhelage (x = 0) ist die Geschwindigkeit maximal; bei maximaler Auslenkung (x = A) ist sie null.
 
----
-
-## Fadenpendel -- die Schaukel
-
-Haenge einen Gegenstand an einen Faden und lasse ihn schwingen. Die Schwingungsdauer haengt nur von der **Fadenlaenge** und der **Schwerkraft** ab:
-
-**T = 2 Pi mal Wurzel(l/g)**
-
-Weder das Gewicht noch die Ausschlagweite aendern die Dauer -- das nennt man **Isochronie**. Laengerer Faden bedeutet langsamere Schwingung. Auf dem Mond (weniger Schwerkraft) schwingt dasselbe Pendel viel langsamer.
-
-> **Merke:** Fadenpendel: Nur Laenge und Schwerkraft bestimmen T. Masse und Amplitude spielen keine Rolle.
+> **Merke:** T und f sind Kehrwerte: f = 1/T. Kreisfrequenz omega = 2·Pi·f -- nicht dasselbe wie f!
 
 ---
 
-## Federpendel -- die Sprungfeder
+## Fadenpendel
 
-Haengst du ein Gewicht an eine Feder, schwingt es auf und ab. Hier gilt:
+Haenge einen Gegenstand an einen Faden und lasse ihn schwingen. Die Schwingungsdauer haengt nur von der **Fadenlaenge l** und der **Erdbeschleunigung g** ab:
 
-**T = 2 Pi mal Wurzel(m/k)**
+**T = 2·Pi·Wurzel(l/g)**
 
-Schwereres Gewicht schwingt langsamer. Steifere Feder schwingt schneller. Auch hier ist die Amplitude egal (Isochronie).
+Weder Masse noch Ausschlagweite aendern T -- das nennt man **Isochronie**. Laengerer Faden bedeutet langsamere Schwingung. Auf dem Mond (g kleiner) schwingt dasselbe Pendel viel langsamer.
+
+Wenn du die Laenge vervierfachst, verdoppelt sich T (weil Wurzel(4) = 2).
+
+> **Merke:** Fadenpendel: Nur Laenge l und Erdbeschleunigung g bestimmen T. Masse und Amplitude spielen keine Rolle (Isochronie).
+
+---
+
+## Federpendel
+
+Haengst du eine Masse m an eine Feder (Federkonstante k), schwingt sie auf und ab:
+
+**T = 2·Pi·Wurzel(m/k)**
+
+Schwerere Masse schwingt langsamer. Steifere Feder (groesseres k) schwingt schneller. Die Amplitude ist auch hier egal (Isochronie). Anders als beim Fadenpendel haengt T hier von der Masse ab!
+
+> **Merke:** Fadenpendel: T von l und g. Federpendel: T von m und k. Beide: T unabhaengig von der Amplitude.
 
 ---
 
 ## Energie in der Schwingung
 
-Waehrend einer Schwingung wandelt sich Energie staendig um. Am hoechsten Punkt hat die Schaukel nur Lageenergie und steht kurz still. Unten in der Mitte hat sie nur Bewegungsenergie und ist am schnellsten. Die Gesamtenergie bleibt gleich und waechst mit dem Quadrat der Amplitude: doppelte Amplitude bedeutet **vierfache** Energie.
+Die Gesamtenergie des Oszillators bleibt konstant und wandert zwischen zwei Formen:
 
-> **Merke:** E ist proportional zu A-Quadrat. Doppelte Amplitude bedeutet vierfache Energie -- nicht doppelte!
+- **Bei maximaler Auslenkung**: Alle Energie ist Lageenergie (E_pot = 1/2·k·A²), Geschwindigkeit = 0
+- **In der Ruhelage**: Alle Energie ist Bewegungsenergie (E_kin = 1/2·m·v²), Geschwindigkeit maximal
 
----
+Wichtig: **E_ges = 1/2·k·A²**. Doppelte Amplitude bedeutet **vierfache** Gesamtenergie (E proportional A²).
 
-## Daempfung -- wenn die Schaukel langsamer wird
-
-In der Realitaet wird jede Schwingung durch Reibung langsamer. Die Amplitude nimmt ab, die Energie geht in Waerme ueber. Es gibt drei Faelle:
-- **Schwingfall:** Die Bewegung schwingt weiter, wird aber kleiner (z. B. Stimmgabel)
-- **Aperiodischer Grenzfall:** Schnellste Rueckkehr ohne Nachschwingen (z. B. Autofederung, Tuerschliesser)
-- **Kriechfall:** Sehr langsame Rueckkehr, kein Schwingen mehr
+> **Merke:** Doppelte Amplitude → vierfache Energie (nicht doppelte!). E_kin = E_pot bei x = A/Wurzel(2) ≈ 0,71·A.
 
 ---
 
-## Resonanz -- Schaukeln im Takt
+## Daempfung und Resonanz
 
-Wenn du eine Schaukel immer genau im richtigen Moment antippst, wird sie immer hoeher. Das ist **Resonanz**: Die Anregung trifft genau die Eigenfrequenz des Systems. Die Amplitude wird dann maximal.
+**Daempfung:** In der Realitaet verliert jede Schwingung Energie durch Reibung, die Amplitude nimmt ab. Drei Faelle:
+- **Schwingfall**: Amplitude nimmt langsam ab, System schwingt weiter (z. B. Stimmgabel)
+- **Aperiodischer Grenzfall**: Schnellste Rueckkehr ohne Nachschwingen (Krankenwagen-Federung, Tuerschliesser)
+- **Kriechfall**: Sehr langsame Rueckkehr, kein Schwingen
 
-Ohne Daempfung kann Resonanz gefaehrlich werden -- die beruehmte Tacoma-Bruecke stuerzte 1940 ein, weil Wind sie in Resonanz versetzte.
+**Resonanz:** Wenn die Anregungsfrequenz gleich der Eigenfrequenz ist, wird die Amplitude maximal. Anwendung: MRT nutzt Kernspinresonanz. Ohne Daempfung kann Resonanz gefaehrlich werden (Tacoma-Bruecke 1940).
 
-> **Merke:** Resonanz tritt auf, wenn die Anregungsfrequenz gleich der Eigenfrequenz ist. Dann wird die Amplitude maximal.
+> **Merke:** Resonanz: Anregungsfrequenz = Eigenfrequenz → maximale Amplitude. Daempfung verhindert Katastrophen.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Haeufige Fragen:**
-- “Laenge des Fadenpendels vervierfacht -- was passiert mit T?” -- T verdoppelt sich (Wurzel aus 4 ist 2)
-- “Wovon haengt T beim Fadenpendel ab?” -- nur von l und g, nicht von Masse oder Amplitude
-- “Was ist Resonanz?” -- Anregungsfrequenz = Eigenfrequenz, Amplitude wird maximal
+- “Laenge des Fadenpendels vervierfacht -- T?” → T verdoppelt sich (Wurzel(4) = 2)
+- “Wovon haengt T beim Fadenpendel ab?” → nur von l und g
+- “Doppelte Amplitude -- wie viel mehr Energie?” → vierfach
 
 **Typische Fallen:**
-- Fadenpendel: T haengt NICHT von der Masse ab. Federpendel: T haengt von der Masse ab
-- Doppelte Amplitude bedeutet vierfache Energie (nicht doppelte)
-- Kreisfrequenz ist nicht dasselbe wie Frequenz (Faktor 2 Pi)
+- Fadenpendel: T haengt NICHT von der Masse ab. Federpendel: schon
+- Doppelte Amplitude = vierfache Energie (nicht doppelte)
+- Kreisfrequenz omega ≠ Frequenz f (Faktor 2·Pi)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Schwingung**: regelmaessige Hin-und-her-Bewegung um eine Ruhelage
-- **Frequenz und Periodendauer**: f = 1/T -- Kehrwerte
-- **Fadenpendel**: T = 2 Pi mal Wurzel(l/g) -- unabhaengig von Masse und Amplitude
-- **Federpendel**: T = 2 Pi mal Wurzel(m/k) -- mehr Masse = langsamer, steifere Feder = schneller
-- **Energie**: E proportional zu A-Quadrat; pendelt zwischen Bewegungs- und Lageenergie
-- **Daempfung**: Amplitude nimmt ab; drei Faelle (Schwingfall, Grenzfall, Kriechfall)
-- **Resonanz**: Anregungsfrequenz = Eigenfrequenz -- maximale Amplitude`,
+- **Schwingung**: regelmaessige Hin-und-her-Bewegung; f = 1/T; omega = 2·Pi·f
+- **Fadenpendel**: T = 2·Pi·Wurzel(l/g) -- unabhaengig von Masse und Amplitude
+- **Federpendel**: T = 2·Pi·Wurzel(m/k) -- mehr Masse = langsamer, steifere Feder = schneller
+- **Energie**: E = 1/2·k·A²; proportional A²; E_kin ↔ E_pot staendig im Wechsel
+- **Daempfung**: drei Faelle (Schwingfall, Grenzfall, Kriechfall)
+- **Resonanz**: Anregungsfrequenz = Eigenfrequenz → maximale Amplitude`,
       contentExtended: `## Einleitung
 
 Warum schwingt ein langes Pendel langsamer als ein kurzes -- aber die Masse spielt keine Rolle? Und wie nutzt ein MRT-Geraet das Phaenomen der Resonanz, um Bilder aus dem Koerperinneren zu erzeugen? Die **harmonische Schwingung** ist das Grundmodell aller periodischen Bewegungen: vom Herzrhythmus ueber den Federpendel bis zur Kernspinresonanz. Wer Amplitude, Frequenz und Daempfung versteht, kann Wellen, Akustik und MRT-Physik leichter einordnen.
@@ -587,10 +585,6 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
         },
       ],
     },
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 2: Wellen – Grundgrößen und Typen
-    // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
@@ -1047,10 +1041,6 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefaehr 0,34
         },
       ],
     },
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 3: Wellenphänomene
-    // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-3-03",
       title: "Wellenphänomene",
@@ -1071,14 +1061,14 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefaehr 0,34
       diagram: "wave-types",
       content: `## Einleitung
 
-Hast du schon mal bemerkt, dass die Sirene eines Rettungswagens hoeher klingt, wenn er auf dich zufaehrt -- und tiefer, sobald er vorbei ist? Das ist der **Doppler-Effekt**. Wellen koennen sich aber auch gegenseitig verstaerken oder ausloeschen, an Hindernissen abknicken und in Glasfasern gefangen bleiben. Diese Phaenomene sind die Grundlage vieler Geraete in der Medizin.
+Hast du schon mal bemerkt, dass die Sirene eines Rettungswagens hoeher klingt, wenn er auf dich zufaehrt -- und tiefer, sobald er vorbei ist? Das ist der **Doppler-Effekt**. Wellen koennen sich aber auch gegenseitig verstaerken oder ausloeschen, an Hindernissen abknicken und in Glasfasern gefangen bleiben. Diese Phaenomene sind die physikalische Grundlage von Ultraschall, Endoskopie und MRT.
 
 **In diesem Kapitel lernst du:**
 - wann sich zwei Wellen **verstaerken** und wann sie sich **ausloeschen** (Interferenz)
 - was passiert, wenn eine Welle hin- und zuruecklaeuft (stehende Wellen)
-- warum der Rettungswagen anders klingt, wenn er sich bewegt (Doppler-Effekt)
+- warum der Rettungswagen anders klingt, wenn er sich bewegt (Doppler-Effekt und Formel)
 - wann Licht komplett in einer Glasfaser gefangen bleibt (Totalreflexion)
-- warum ein Strohhalm im Wasserglas geknickt aussieht (Brechung)
+- warum ein Strohhalm im Wasserglas geknickt aussieht (Brechung, Snellius)
 
 ---
 
@@ -1086,84 +1076,85 @@ Hast du schon mal bemerkt, dass die Sirene eines Rettungswagens hoeher klingt, w
 
 {{DIAGRAM:doppler-effect}}
 
-## Wellen koennen sich verstaerken oder ausloeschen
+## Interferenz: Wellen verstaerken oder ausloeschen sich
 
-Wenn zwei Wellen am selben Ort aufeinandertreffen, ueberlagern sie sich. Die Ausschlaege addieren sich einfach zusammen.
+Wenn zwei Wellen am selben Ort aufeinandertreffen, ueberlagern sie sich -- die Ausschlaege addieren sich (**Superpositionsprinzip**).
 
-**Verstaerkung (konstruktive Interferenz):** Wenn beide Wellenberge gleichzeitig ankommen, wird der Ausschlag groesser. Das passiert, wenn der Wegunterschied genau 0, 1, 2, 3 ... Wellenlaengen betraegt.
+**Konstruktive Interferenz (Verstaerkung):** Beide Wellen sind im gleichen Takt. Das passiert, wenn der Wegunterschied genau 0, 1, 2, ... Wellenlaengen betraegt (Gangunterschied = n·lambda).
 
-**Ausloeschung (destruktive Interferenz):** Wenn ein Berg auf ein Tal trifft, heben sie sich auf. Das passiert bei einem Wegunterschied von einer halben Wellenlaenge (oder 1,5 oder 2,5 ...).
+**Destruktive Interferenz (Ausloeschung):** Ein Wellenberg trifft ein Wellental. Das passiert bei einem Gangunterschied von lambda/2, 3lambda/2, ... Bei gleichen Amplituden loeschen sich die Wellen komplett aus.
 
-So funktionieren **Noise-Cancelling-Kopfhoerer**: Sie erzeugen genau die Gegenwelle zum Laerm -- und der Laerm verschwindet!
+Anwendung: **Noise-Cancelling-Kopfhoerer** erzeugen genau die Gegenwelle zum Laerm -- destruktive Interferenz = Stille.
 
-> **Merke:** Gleicher Takt = Verstaerkung. Gegentakt = Ausloeschung. Das ist Interferenz.
-
----
-
-## Stehende Wellen: Schwingende Saiten
-
-Zupfst du eine Gitarrensaite, laeuft eine Welle hin und zurueck. Die Ueberlagerung ergibt eine **stehende Welle** mit festen Punkten, die sich nicht bewegen (**Knoten**), und Punkten mit maximaler Bewegung (**Baeuche**).
-
-Der tiefste Ton (Grundton) hat die Wellenlaenge 2 mal die Saitenlaenge. Hoehere Toene (Obertoene) entstehen, wenn die Saite in 2, 3, 4 ... Teile schwingt.
-
-Formel fuer die n-te Schwingung: Wellenlaenge = 2L/n und Frequenz = n mal Grundfrequenz.
-
-> **Merke:** Grundton: Wellenlaenge = 2 mal Saitenlaenge. n-ter Oberton: n-mal hoehere Frequenz, (n-1) Knoten dazwischen.
+> **Merke:** Gangunterschied = n·lambda → konstruktiv (Verstaerkung). Gangunterschied = (n+1/2)·lambda → destruktiv (Ausloeschung).
 
 ---
 
-## Doppler-Effekt: Warum sich Toene aendern
+## Stehende Wellen auf Saiten
 
-Wenn sich eine Schallquelle auf dich **zubewegt**, werden die Wellen zusammengedrueckt -- du hoerst einen **hoeheren** Ton. Entfernt sie sich, werden die Wellen auseinandergezogen -- der Ton wird **tiefer**.
+Laeuft eine Welle auf einer Saite hin und wird am Ende reflektiert, ueberlagern sich hin- und ruecklaufende Welle. Es entsteht eine **stehende Welle** mit:
+- **Knoten**: Punkte ohne Auslenkung (stehen still)
+- **Baeuche**: Punkte mit maximaler Auslenkung
 
-Das kennst du vom Rettungswagen: Zuerst hoher Ton, dann ploetzlich tiefer, sobald er vorbei ist.
+Fuer die n-te Harmonische auf einer Saite der Laenge L gilt:
+- Wellenlaenge: lambda_n = 2L/n
+- Frequenz: f_n = n · f_1 (n-fache Grundfrequenz)
+- Anzahl innerer Knoten: (n-1)
 
-In der Medizin nutzt man das beim **Ultraschall**: Der Schallkopf schickt Schallwellen auf fliessendes Blut. Die zurueckgeworfenen Wellen haben eine leicht andere Frequenz -- daraus berechnet man die Geschwindigkeit des Blutes. Wichtig: Der Schallkopf muss **schraeg** zum Blutgefaess stehen. Bei senkrechtem Winkel (90 Grad) gibt es kein Signal, weil der Effekt dann null ist.
-
-> **Merke:** Quelle kommt naeher = hoeherer Ton. Quelle entfernt sich = tieferer Ton. Beim Ultraschall: schraeger Winkel noetig, sonst kein Signal!
-
----
-
-## Brechung: Warum der Strohhalm geknickt aussieht
-
-Wenn Licht von einem Material in ein anderes wechselt (z. B. von Luft in Wasser), aendert es seine Richtung. Das nennt man **Brechung**. Deshalb sieht ein Strohhalm im Glas Wasser geknickt aus.
-
-Die Regel: In einem dichteren Material (wie Glas oder Wasser) wird der Strahl **zum Lot hin** abgelenkt. Das beschreibt das Gesetz von Snellius: n1 mal sin(Winkel1) = n2 mal sin(Winkel2).
+> **Merke:** Grundton (n=1): lambda = 2L, ein Bauch, keine inneren Knoten. Jede hoehere Harmonische teilt die Saite in n gleiche Teile.
 
 ---
 
-## Totalreflexion: Licht gefangen in Glasfasern
+## Doppler-Effekt
 
-Wechselt Licht von einem dichteren in ein duenneres Material (z. B. Glas nach Luft), wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel -- dem **Grenzwinkel** -- wird das Licht gar nicht mehr durchgelassen, sondern komplett zurueckgeworfen. Das ist **Totalreflexion**.
+Wenn sich eine Schallquelle auf dich **zubewegt**, werden die Wellen zusammengedrueckt -- du hoerst einen **hoeheren** Ton. Entfernt sie sich, werden sie gedehnt -- der Ton wird **tiefer**.
 
-So funktionieren Glasfasern in der Medizin: Licht wird im Inneren der Faser hin- und herreflektiert und kann sogar um Kurven geleitet werden. Damit arbeiten z. B. Endoskope fuer Magenspiegelungen.
+Das kennst du vom Rettungswagen. In der Medizin nutzt man das beim **Ultraschall**:
+- Der Schallkopf schickt Ultraschallwellen auf fliessendes Blut
+- Die reflektierten Wellen haben eine leicht andere Frequenz (Frequenzverschiebung delta-f)
+- Daraus berechnet man die Blutgeschwindigkeit: **delta-f = 2·f_0·v·cos(theta)/c**
+- Wichtig: Schallkopf muss **schraeg** zum Gefaess stehen. Bei 90 Grad ist cos(90°) = 0 -- kein Signal!
 
-> **Merke:** Totalreflexion gibt es nur vom dichteren ins duennere Material. Glasfasern und Endoskope nutzen diesen Effekt.
+> **Merke:** Quelle naeher = hoeherer Ton; weiter weg = tieferer Ton. Doppler-Ultraschall: schraeger Winkel noetig.
+
+---
+
+## Brechung und Totalreflexion
+
+**Brechung:** Wechselt Licht zwischen zwei Medien, aendert es seine Richtung. Im dichteren Medium (groesserer Brechungsindex n) wird der Strahl **zum Lot hin** abgelenkt. Das Gesetz von Snellius lautet: **n1·sin(alpha1) = n2·sin(alpha2)**.
+
+Deshalb sieht ein Strohhalm im Wasserglas geknickt aus -- das Licht aendert an der Wasseroberflaeshe seine Richtung.
+
+**Totalreflexion:** Wechselt Licht vom dichteren ins duennere Medium und trifft unter einem grossen Winkel auf, wird es ab dem **Grenzwinkel** gar nicht mehr durchgelassen, sondern komplett zurueckgeworfen. Der Grenzwinkel: **sin(alpha_G) = n2/n1**.
+
+So funktionieren **Glasfasern**: Licht wird durch Totalreflexion im Inneren gefangen gehalten und sogar um Kurven geleitet. Endoskope nutzen genau diesen Effekt.
+
+> **Merke:** Totalreflexion nur vom dichteren ins duennere Material (n1 > n2). Glasfasern und Endoskope basieren darauf.
 
 ---
 
 ## MedAT-Fokus
 
-**Zentral pruefungsrelevant:**
-- Interferenz: Wegunterschied = ganze Wellenlaenge = Verstaerkung; halbe = Ausloeschung
-- Doppler: naeher = hoeher, weiter weg = tiefer; beim Ultraschall schraeger Winkel noetig
-- Totalreflexion: nur vom dichteren ins duennere Material; Grundlage von Glasfasern
-- Brechung: zum Lot hin im dichteren Material
+**Haeufige Fragen:**
+- "Gangunterschied lambda/2 -- konstruktiv oder destruktiv?" → destruktiv
+- "Doppler bei 90 Grad -- was misst man?" → nichts (cos 90° = 0)
+- "Totalreflexion: welche Bedingung?" → Uebergang vom dichteren ins duennere Medium mit alpha > Grenzwinkel
 
 **Typische Fallen:**
-- Gangunterschied n mal lambda = konstruktiv, NICHT destruktiv
-- Doppler bei 90 Grad = kein Signal (cos 90 = 0)
-- Totalreflexion funktioniert NUR in eine Richtung (dicht nach duenn)
+- Gangunterschied n·lambda = konstruktiv, NICHT destruktiv
+- Doppler: schraeger Winkel noetig (nicht senkrecht!)
+- Totalreflexion: funktioniert NUR in eine Richtung (dicht → duenn)
+- Brechung zum Lot hin = ins dichtere Medium (n2 > n1)
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
-- **Interferenz**: Gleicher Takt = Verstaerkung; Gegentakt = Ausloeschung
-- **Stehende Wellen**: Grundton hat Wellenlaenge = 2 mal Saitenlaenge; hoehere Toene teilen die Saite in mehr Abschnitte
-- **Doppler**: Annaeherung = hoeherer Ton; Entfernung = tieferer Ton; Ultraschall nutzt das fuer Blutflussmessung
-- **Brechung**: Licht knickt ab beim Materialwechsel; zum Lot hin im dichteren Material
-- **Totalreflexion**: Ab dem Grenzwinkel wird Licht komplett zurueckgeworfen -- Grundlage der Endoskopie`,
+- **Interferenz**: Gangunterschied n·lambda → konstruktiv; (n+1/2)·lambda → destruktiv
+- **Stehende Wellen**: lambda_n = 2L/n; f_n = n·f_1; (n-1) innere Knoten
+- **Doppler**: Annaeherung → hoeher; Entfernung → tiefer; delta-f = 2·f·v·cos(theta)/c
+- **Brechung**: n1·sin(alpha1) = n2·sin(alpha2); dichteres Medium → zum Lot hin
+- **Totalreflexion**: nur dicht → duenn; sin(alpha_G) = n2/n1; Basis der Endoskopie`,
 
       contentExtended: `## Einleitung
 
@@ -1497,10 +1488,6 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
         },
       ],
     },
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 4: Akustik und Hörphysiologie
-    // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-3-04",
       title: "Akustik und Hörphysiologie",
@@ -1544,6 +1531,8 @@ Der Schalldruck p einer Welle wird relativ zur Hörschwelle p₀ = 2×10⁻⁵ P
 
 Alternativ über die Intensität I (Leistung pro Fläche):
 **L = 10 · log₁₀(I / I₀)**   mit I₀ = 10⁻¹² W/m²
+
+> **Merke:** +3 dB = doppelte Schallintensitaet. +6 dB = doppelter Schalldruck. +10 dB = 10-fache Intensitaet und klingt doppelt so laut. Ab 85 dB drohen bei Dauerbelastung Gehoerschaeden.
 
 Wichtige Pegelwerte:
 
@@ -1860,10 +1849,528 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 d
         },
       ],
     },
+    {
+      id: "ph-3-06",
+      title: "Akustik Vertiefung — Schallpegel, Impedanz und Doppler-Ultraschall",
+      stichworte: [
+        "Schallpegel",
+        "Dezibel-Rechnung",
+        "Schallimpedanz",
+        "Reflexionskoeffizient",
+        "Doppler-Effekt",
+        "Doppler-Sonographie",
+        "Ultraschall-Diagnostik",
+        "Frequenzbereiche",
+        "Infraschall",
+        "Hörschall",
+        "Ultraschall",
+        "Blutflussmessung",
+      ],
+      diagram: "doppler-effect",
+      content: `## Einleitung
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 5: Geometrische Optik und das Auge
-    // ─────────────────────────────────────────────────────────────────────────
+Du kennst schon die Dezibel-Skala und den Doppler-Effekt. Hier lernst du, damit zu **rechnen** -- und verstehst, warum beim Ultraschall immer Gel auf die Haut kommt. Diese drei Themen sind MedAT-Klassiker: dB-Rechnung, Impedanz und Doppler-Formel.
+
+**In diesem Kapitel lernst du:**
+- wie man Dezibel-Aufgaben loest (Quellenaddition, Abstand, Pegel)
+- was Schallimpedanz ist und warum Ultraschallgel unverzichtbar ist (Reflexionsformel)
+- wie der Doppler-Effekt Blutfluss messen kann (Formel und Winkel)
+- welche Ultraschall-Frequenzen wofuer geeignet sind
+
+---
+
+{{DIAGRAM:doppler-effect}}
+
+{{DIAGRAM:wave-types}}
+
+## Dezibel rechnen -- nicht einfach addieren!
+
+Die Dezibel-Skala ist **logarithmisch**. Das hat grosse praktische Konsequenzen:
+
+**Quellenaddition:**
+- Zwei gleich laute Quellen: **+3 dB** (nicht das Doppelte!)
+- Zehn gleich laute Quellen: **+10 dB**
+
+Warum? Zwei Staubsauger mit je 80 dB verdoppeln die Schallenergie -- aber auf der logarithmischen Skala ist das nur +3 dB. Ergebnis: 83 dB, nicht 160 dB!
+
+**Abstandsgesetz:** Im freien Schallfeld sinkt die Intensitaet mit 1/r². Doppelter Abstand: **-6 dB**. Zehnfacher Abstand: **-20 dB**.
+
+| Aenderung | Pegel |
+|-----------|-------|
+| 2 gleiche Quellen | +3 dB |
+| 10 gleiche Quellen | +10 dB |
+| 2× Abstand | -6 dB |
+| 10× Abstand | -20 dB |
+
+> **Merke:** Dezibel addieren sich NICHT linear. 2 Quellen = +3 dB. Doppelter Abstand = -6 dB.
+
+---
+
+## Schallimpedanz -- warum Ultraschallgel?
+
+Die **Schallimpedanz** Z beschreibt, wie stark ein Material Schallwellen widersteht:
+**Z = rho · c** (Dichte × Schallgeschwindigkeit, Einheit: Rayl)
+
+Wenn zwei Materialien sehr unterschiedliche Impedanz haben, wird Schall an der Grenzflaeche reflektiert:
+
+**Reflexionsformel: R = [(Z2 - Z1) / (Z2 + Z1)]²**
+
+**Das Problem ohne Gel:** Luft hat Z ≈ 400 Rayl, Gewebe hat Z ≈ 1,6×10⁶ Rayl -- Faktor 4000 Unterschied! An der Luft-Haut-Grenze werden **99,9 %** des Ultraschalls reflektiert, kein Bild entsteht.
+
+**Die Loesung:** Ultraschallgel hat eine Impedanz aehnlich wie Gewebe. Es eliminiert die Luftschicht, und der Schall kann ins Gewebe eindringen.
+
+- Aehnliche Impedanz (Leber zu Blut): kaum Reflexion, gut durchschallbar
+- Grosse Differenz (Gewebe zu Knochen): ~35 % Reflexion, akustischer Schatten
+
+> **Merke:** Grosser Impedanzunterschied = starke Reflexion. Ultraschallgel eliminiert die Luft-Haut-Grenzflaeche. Ohne Gel: kein Bild!
+
+---
+
+## Doppler-Sonographie -- Blutfluss messen
+
+Der Doppler-Effekt: Bewegt sich eine Schallquelle auf dich zu, wird der Ton hoeher; entfernt sie sich, tiefer. Beim **Doppler-Ultraschall** schickt der Schallkopf Wellen auf fliessende Erythrozyten. Die reflektierten Wellen haben eine veraenderte Frequenz.
+
+**Die Formel:** **Delta_f = 2 · f0 · v · cos(theta) / c**
+- v = Blutflussgeschwindigkeit
+- theta = Winkel zwischen Schallkopf und Blutfluss
+- c ≈ 1540 m/s in Gewebe
+- Faktor 2: Schall geht hin UND zurueck
+
+**Kritischer Punkt:** Bei theta = 90° ist cos(90°) = 0, also **Delta_f = 0** -- kein Signal! Schallkopf muss immer schraeg zum Gefaess stehen (optimal 30-60°).
+
+**Farbkodierung:** Rot = Blut fliesst zum Schallkopf. Blau = Blut fliesst weg.
+
+> **Merke:** Delta_f = 2·f0·v·cos(theta)/c. Bei 90° kein Signal! Rot = zum Schallkopf, Blau = weg.
+
+---
+
+## Ultraschall-Frequenzwahl
+
+Hoehre Frequenz = kuerzere Wellenlaenge = bessere Aufloesung. Aber: Hoehere Frequenz wird auch staerker gedaempft = weniger Eindringtiefe. Das ist ein Kompromiss:
+
+| Frequenz | Tiefe | Verwendung |
+|----------|-------|------------|
+| 2-3,5 MHz | 15-20 cm | Bauch, Herz |
+| 5-7,5 MHz | 5-10 cm | Schilddruese, Gefaesse |
+| 10-15 MHz | 2-4 cm | Haut, oberflaechliche Strukturen |
+
+> **Merke:** Hohe Frequenz = gutes Bild, wenig Tiefe. Niedrige Frequenz = weniger Detail, viel Tiefe.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- Dezibel: 2 Quellen = +3 dB; doppelter Abstand = -6 dB
+- Impedanz: Z = rho·c; R = [(Z2-Z1)/(Z2+Z1)]²; Gel eliminiert Luft-Haut-Grenzflaeche
+- Doppler: Delta_f = 2·f0·v·cos(theta)/c; bei 90° kein Signal
+- Frequenzwahl: hoeher = besser aufgeloest, weniger tief
+
+**Typische Fallen:**
+- 60 dB + 60 dB = 63 dB (nicht 120 dB!)
+- Ohne Gel: 99,9 % Reflexion -- kein Bild
+- Schallkopf nie senkrecht zum Gefaess (cos 90° = 0)
+- Hohe Frequenz = WENIGER Tiefe (nicht mehr!)
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Dezibel**: Logarithmisch! 2 Quellen = +3 dB; 10× Abstand = -20 dB
+- **Impedanz**: Z = rho·c; R = [(Z2-Z1)/(Z2+Z1)]²; Gel verhindert 99,9 % Reflexion
+- **Doppler**: Delta_f = 2·f0·v·cos(theta)/c; 90° = kein Signal; Rot/Blau = Flussrichtung
+- **Frequenzwahl**: Hoch = scharf aber flach; Niedrig = tief aber unscharf`,
+
+      contentExtended: `## Einleitung
+
+Im vorherigen Kapitel hast du die Grundlagen der Akustik und Hoerphysiologie kennengelernt -- Dezibel-Skala, Cochlea und Audiometrie. Hier vertiefen wir drei Bereiche, die fuer den MedAT besonders relevant sind: die **quantitative Schallpegel-Rechnung**, die **Schallimpedanz** als Schluessel zur Ultraschalldiagnostik und den **Doppler-Effekt** als physikalische Grundlage der Blutflussmessung.
+
+**In diesem Kapitel lernst du:**
+- wie man Dezibel-Aufgaben systematisch loest: Addition von Quellen, Abstandsgesetz, Pegelunterschiede
+- was Schallimpedanz Z = rho mal c physikalisch bedeutet und wie sie die Reflexion an Grenzflaechen bestimmt
+- wie der Doppler-Effekt quantitativ funktioniert: f' = f mal (c +/- v_E)/(c -/+ v_S)
+- wie die Doppler-Sonographie Blutflussgeschwindigkeit und -richtung misst (Delta_f = 2f0 v cos theta / c)
+- welche Frequenzbereiche (Infraschall, Hoerschall, Ultraschall) in der Medizin relevant sind
+
+**Kontext — worum geht es und wofuer brauchst du das?**
+Bisher hast du Schallpegel (dB), Frequenzbereiche und Hoerphysiologie auf konzeptioneller Ebene kennengelernt. Hier geht es um die **quantitative Vertiefung**: Rechenaufgaben zu dB, Impedanz und Doppler sind MedAT-Klassiker.
+
+---
+
+{{DIAGRAM:doppler-effect}}
+
+{{DIAGRAM:wave-types}}
+
+## Dezibel-Rechnung — Vertiefung
+
+Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen fuer Berechnungen:
+
+### Addition mehrerer Schallquellen
+
+Zwei gleich laute Quellen (jeweils L dB) ergeben **nicht** 2L dB, sondern L + 3 dB:
+- 2 Quellen a 60 dB: 63 dB (nicht 120 dB!)
+- 10 Quellen a 60 dB: 70 dB (10 log10(10) = +10 dB)
+- 100 Quellen a 60 dB: 80 dB
+
+**Formelklartext:** Intensitaeten addieren sich linear (I_ges = I1 + I2 + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensitaet: +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensitaet: +10 dB.
+
+> **Merke:** Zwei gleich laute Quellen: +3 dB, nicht doppelte dB! Zehn gleich laute Quellen: +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
+
+### Abstandsgesetz (Freifeld)
+
+Im freien Schallfeld (keine Reflexionen) nimmt die Intensitaet mit dem Quadrat der Entfernung ab:
+
+**I proportional 1/r^2** also **Delta_L = -20 log10(r2/r1) dB**
+
+Verdopplung des Abstands: Delta_L = -20 log10(2) = -6 dB. Verzehnfachung: Delta_L = -20 dB.
+
+Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 20 = 60 dB. In 100 m: 80 - 40 = 40 dB.
+
+### Wichtige Dezibel-Merkregeln (Zusammenfassung)
+
+| Aenderung | Schalldruck | Intensitaet | Wahrnehmung |
+|----------|-------------|------------|-------------|
+| +3 dB | x 1,41 | x 2 | Kaum merkbar |
+| +6 dB | x 2 | x 4 | Leicht lauter |
+| +10 dB | x 3,16 | x 10 | Doppelt so laut |
+| +20 dB | x 10 | x 100 | 4x so laut |
+| -6 dB/Distanzverdopplung | | | Abstandsgesetz |
+
+---
+
+## Schallimpedanz — Vertiefung
+
+Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche reflektiert wird:
+
+**Z = rho mal c** [kg/(m^2 s) = Rayl]
+
+| Medium | rho [kg/m^3] | c [m/s] | Z [x10^6 Rayl] |
+|--------|-----------|---------|----------------|
+| Luft | 1,2 | 340 | 0,000408 |
+| Wasser | 1000 | 1480 | 1,48 |
+| Fett | 920 | 1450 | 1,33 |
+| Weichgewebe | 1060 | 1540 | 1,63 |
+| Knochen | 1800 | 3500 | 6,30 |
+| Leber | 1060 | 1550 | 1,64 |
+| Blut | 1060 | 1570 | 1,66 |
+
+### Reflexionskoeffizient
+
+**R = [(Z2 - Z1)/(Z2 + Z1)]^2**
+
+- **Luft zu Weichgewebe:** R ungefaehr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
+- **Weichgewebe zu Knochen:** R ungefaehr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
+- **Leber zu Blut:** R ungefaehr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
+- **Gel zu Haut:** R ungefaehr 0: nahezu vollstaendige Transmission: deshalb Ultraschallgel essenziell
+
+> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
+
+---
+
+## Doppler-Effekt — Vertiefung
+
+### Allgemeine Doppler-Formel
+
+**f' = f0 mal (c +/- v_E) / (c -/+ v_S)**
+
+- f0 = Sendefrequenz der Quelle
+- c = Schallgeschwindigkeit im Medium
+- v_E = Geschwindigkeit des Empfaengers
+- v_S = Geschwindigkeit der Quelle/Senders
+
+**Vorzeichenkonvention:**
+- Zaehler: + wenn Empfaenger sich **zur** Quelle bewegt, - wenn **weg**
+- Nenner: - wenn Quelle sich **zum** Empfaenger bewegt, + wenn **weg**
+
+> **Merke:** Annaeherung: f' > f0 (hoeherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt fuer **alle** Wellen: Schall, Licht, Ultraschall.
+
+### Doppler-Sonographie — quantitativ
+
+In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zuruecklegt (hin und zurueck), ist der Doppler-Shift:
+
+**Delta_f = 2 mal f0 mal v mal cos(theta) / c**
+
+- **v** = Blutflussgeschwindigkeit [m/s]
+- **theta** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
+- **c** = Schallgeschwindigkeit in Gewebe (ungefaehr 1540 m/s)
+- **Faktor 2**: weil der Schall zweimal den Weg durchlaeuft (Hin- und Rueckweg)
+
+**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefaess gehalten werden (optimal: theta = 30-60 Grad).
+
+### Umstellung nach v (Blutflussgeschwindigkeit):
+
+**v = Delta_f mal c / (2 mal f0 mal cos theta)**
+
+### Rechenbeispiel — Doppler-Sonographie:
+f0 = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), theta = 45 Grad:
+Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefaehr 1379 Hz
+
+Die Frequenzverschiebung von ~1,4 kHz liegt im **hoerbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
+
+### Farbdoppler-Kodierung:
+- **Rot:** Blut fliesst auf den Schallkopf zu (Delta_f > 0)
+- **Blau:** Blut fliesst vom Schallkopf weg (Delta_f < 0)
+- **Mosaik/Turbulenz:** Ungeordnete Stroemung (z. B. an Stenosen, Klappeninsuffizienzen)
+
+Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
+
+---
+
+## Frequenzbereiche in der Medizin
+
+| Bereich | Frequenz | Medizinische Relevanz |
+|---------|----------|----------------------|
+| **Infraschall** | < 20 Hz | Nicht hoerbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
+| **Hoerschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
+| **Ultraschall** | > 20 kHz | Sonographie (2-20 MHz), Doppler (2-10 MHz), Lithotripsie |
+
+### Ultraschall-Frequenzwahl in der Diagnostik:
+
+| Frequenz | Eindringtiefe | Aufloesung | Anwendung |
+|----------|---------------|-----------|-----------|
+| 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
+| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefaesse |
+| 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
+| 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
+
+**Zusammenhang:** Hoehere Frequenz: kuerzere Wellenlaenge (lambda = c/f): bessere Aufloesung, aber staerkere Daempfung im Gewebe (Daempfung proportional f^2): geringere Eindringtiefe.
+
+> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Aufloesung, geringe Tiefe. Niedrige Frequenz = schlechte Aufloesung, grosse Tiefe. Kompromiss je nach Fragestellung.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 — Zwei Schallquellen addieren:**
+Zwei Maschinen a 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10 log10(2) = 80 + 3 = 83 dB. Nicht 160 dB!
+
+**Beispiel 2 — Abstandsgesetz:**
+Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10x weiter):
+Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB: L = 100 - 20 = 80 dB.
+
+**Beispiel 3 — Reflexionskoeffizient berechnen:**
+Gewebe (Z1 = 1,63x10^6) zu Knochen (Z2 = 6,30x10^6):
+R = [(6,30 - 1,63)/(6,30 + 1,63)]^2 = [4,67/7,93]^2 = [0,589]^2 = 0,347: 34,7 % werden reflektiert.
+Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum moeglich (akustischer Schatten).
+
+**Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
+Delta_f = 2000 Hz, f0 = 4 MHz, theta = 60 Grad, c = 1540 m/s:
+v = Delta_f mal c / (2 mal f0 mal cos theta) = 2000 x 1540 / (2 x 4x10^6 x 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
+Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
+
+**Beispiel 5 — Ultraschall-Wellenlaenge und Aufloesung:**
+f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
+Axiale Aufloesung ungefaehr lambda/2 ungefaehr 0,1 mm. Ausreichend fuer Schilddruesenknoten (typisch 5-30 mm).
+
+## Klinische Vertiefung
+
+**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhoehter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+
+**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe fuer den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft ueber die plazentare Durchblutung und damit die fetale Versorgung.
+
+**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwaermung auf > 60 Grad C: Koagulationsnekrose.
+
+**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.
+
+---
+## MedAT-Fokus
+
+**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
+
+**Zentral pruefungsrelevant:**
+- Dezibel-Rechnung: L = 20 log(p/p0) = 10 log(I/I0); +3 dB: I x 2; +6 dB: p x 2
+- Schallimpedanz: Z = rho mal c; Reflexionskoeffizient R = [(Z2-Z1)/(Z2+Z1)]^2
+- Doppler: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Delta_f = 2f0 v cos theta / c (Sonographie)
+- Frequenzwahl: hohe f: bessere Aufloesung, weniger Tiefe
+
+**Haeufige Fragen:**
+- "Zwei gleich laute Quellen — Gesamtpegel?" L + 3 dB (nicht L + L!)
+- "Warum Ultraschallgel?" Z_Luft ungefaehr 0,0004 x10^6 Rayl; Z_Gewebe ungefaehr 1,63 x10^6 Rayl: R ungefaehr 99,9 % ohne Gel
+- "Bei welchem Winkel kein Doppler-Signal?" theta = 90 Grad (cos 90 Grad = 0)
+- "Hohe Frequenz im Ultraschall — Vor-/Nachteile?" bessere Aufloesung, geringere Eindringtiefe
+
+**Typische Pruefungsfallen / Verwechslungen:**
+- Dezibel addieren sich **nicht** linear: 60 dB + 60 dB ist nicht 120 dB, sondern 63 dB
+- Impedanzunterschied bestimmt Reflexion — nicht die Dichte allein und nicht die Schallgeschwindigkeit allein
+- Doppler: theta = 90 Grad: kein Signal! Schallkopf muss schraeg zum Gefaess stehen
+- Hoehere US-Frequenz: bessere Aufloesung, aber **weniger** Eindringtiefe (nicht mehr)
+- +3 dB = Intensitaetsverdopplung (I); +6 dB = Schalldruckverdopplung (p) — I proportional p^2, daher Faktor 2
+
+---
+## Zusammenfassung (ultrakompakt)
+
+- **Dezibel**: L = 20 log(p/p0); +3 dB: I x 2; +6 dB: p x 2; +10 dB: doppelt so laut; 2 Quellen: +3 dB
+- **Abstandsgesetz**: Verdopplung des Abstands: -6 dB (I proportional 1/r^2)
+- **Schallimpedanz**: Z = rho mal c [Rayl]; R = [(Z2-Z1)/(Z2+Z1)]^2; Gel eliminiert Luft-Haut-Grenzflaeche
+- **Doppler**: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Annaeherung: hoehere Frequenz; Entfernung: tiefere Frequenz
+- **Doppler-Sonographie**: Delta_f = 2f0 v cos theta / c; theta = 90 Grad: kein Signal; Rot = zum Schallkopf, Blau = weg
+- **Frequenzwahl**: 2-5 MHz (tief), 5-10 MHz (mittel), 10-20 MHz (oberflaechlich); Aufloesung proportional f, Tiefe proportional 1/f^2`,
+
+      lernziele: [
+        "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",
+        "Die Schallimpedanz Z = ρ·c und den Reflexionskoeffizienten berechnen und klinisch interpretieren.",
+        "Den Doppler-Effekt quantitativ beschreiben und auf Doppler-Sonographie anwenden.",
+        "Frequenzbereiche des Ultraschalls kennen und die Wahl der Frequenz begründen.",
+        "Die Bedeutung der Impedanzanpassung (Ultraschallgel) physikalisch erklären.",
+      ],
+
+      sections: [
+        {
+          heading: "Dezibel-Rechnung: Nicht-lineare Addition",
+          text: "Die Dezibel-Skala ist logarithmisch: Intensitäten addieren sich linear (I_ges = I₁ + I₂), aber in der dB-Skala ergibt die Verdopplung der Intensität nur +3 dB. Zwei identische Schallquellen à 80 dB erzeugen 83 dB, nicht 160 dB. Pro Verdopplung des Abstands nimmt der Pegel um 6 dB ab (I ∝ 1/r²). Diese Rechenregeln sind MedAT-Klassiker.",
+          merksatz: "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB; 2× Abstand → −6 dB.",
+        },
+        {
+          heading: "Schallimpedanz und Ultraschall-Bildgebung",
+          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Grosser Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
+          merksatz:
+            "Z = ρ·c; grosser Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
+        },
+        {
+          heading: "Doppler-Sonographie: Blutfluss messen",
+          text: "Der Doppler-Shift Δf = 2f₀v·cos θ/c ist proportional zur Blutflussgeschwindigkeit v. Der Winkel θ zwischen Schallstrahl und Blutfluss ist entscheidend: Bei θ = 90° (senkrecht) ist cos(90°) = 0 → kein Signal. Optimal: θ = 30–60°. Farbkodierung: Rot = Fluss zum Schallkopf, Blau = weg. Erhöhte Flussgeschwindigkeit an Stenosen → erhöhter Doppler-Shift → klinische Diagnose.",
+          merksatz: "Δf = 2f₀v·cosθ/c; θ = 90° → kein Signal; Rot = Fluss zum Schallkopf.",
+        },
+      ],
+
+      merksätze: [
+        "L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 20 µPa, I₀ = 10⁻¹² W/m².",
+        "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB (logarithmische Addition).",
+        "Abstandsgesetz: Verdopplung des Abstands → −6 dB (I ∝ 1/r²).",
+        "Z = ρ·c [Rayl]; grosser Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
+        "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — Reflexionskoeffizient an Grenzflächen.",
+        "Doppler allgemein: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → f↑, Entfernung → f↓.",
+        "Doppler-Sonographie: Δf = 2f₀v·cosθ/c; Faktor 2 wegen Hin- und Rückweg.",
+        "θ = 90° → Δf = 0 → kein Signal! Schallkopf immer schräg zum Gefäss.",
+        "Farbdoppler: Rot = zum Schallkopf; Blau = vom Schallkopf weg; Mosaik = Turbulenz.",
+        "US-Frequenzwahl: hohe f → gute Auflösung, wenig Tiefe; niedrige f → schlechte Auflösung, viel Tiefe.",
+      ],
+
+      altfrage: {
+        question:
+          "Erläutern Sie das physikalische Prinzip der Doppler-Sonographie zur Blutflussmessung. Gehen Sie auf die Rolle des Winkels θ, die Farbkodierung und typische klinische Anwendungen ein.",
+        answer:
+          "Die Doppler-Sonographie nutzt den Doppler-Effekt: Ein Ultraschallkopf sendet Schallwellen einer definierten Frequenz f₀ (typisch 2–10 MHz) in Richtung eines Blutgefässes. Bewegte Erythrozyten reflektieren den Schall mit veränderter Frequenz. Der Frequenzunterschied (Doppler-Shift) beträgt Δf = 2f₀v·cos θ/c, wobei v die Blutflussgeschwindigkeit, θ der Winkel zwischen Schallstrahl und Gefäss und c die Schallgeschwindigkeit im Gewebe (~1540 m/s) ist. Der Faktor 2 entsteht, weil der Schall den Weg zweimal durchläuft (zum Erythrozyten und zurück). Entscheidend: Bei θ = 90° ist cos 90° = 0 → kein Signal → der Schallkopf muss schräg zum Gefäss stehen (optimal 30–60°). In der Farbdoppler-Darstellung wird Blut, das auf den Schallkopf zufliesst, rot kodiert (positives Δf), Blut, das sich entfernt, blau (negatives Δf). Turbulente Strömung (z. B. an Stenosen) erscheint als Farbmosaik. Klinisch: Diagnose von Karotisstenosen (erhöhte v), Venenthrombosen (fehlendes Signal), Herzklappenfehler (Regurgitation), fetale Durchblutung (Nabelschnur-Doppler).",
+      },
+
+      klinischerBezug:
+        "Doppler-Sonographie: Karotisstenose-Diagnostik, tiefe Venenthrombose, Echokardiographie (Klappenvitien, Regurgitation). Ultraschall-Impedanzanpassung mit Gel. Obstetrik: fetaler Doppler (Nabelschnurarterie). Therapeutisch: HIFU (fokussierter Ultraschall für Tumorablation), ESWL (Lithotripsie).",
+
+      selfTest: [
+        {
+          question:
+            "Zwei identische Maschinen erzeugen jeweils 85 dB. Wie hoch ist der Gesamtpegel?",
+          options: ["85 dB", "88 dB", "90 dB", "170 dB", "82 dB"],
+          correctIndex: 1,
+          explanation:
+            "Zwei gleich laute Quellen verdoppeln die Intensität: L_ges = 85 + 10·log₁₀(2) = 85 + 3 = 88 dB. Nicht 170 dB (das wäre lineare Addition der Pegel – ein fundamentaler Fehler). Auch nicht 90 dB – die 3-dB-Regel gilt für Intensitätsverdopplung, nicht +5 dB. Merke: Dezibel addieren sich logarithmisch, nicht linear!",
+          hints: [
+            "Intensitäten addieren sich: I_ges = 2·I → wie viel dB ist das mehr?",
+            "+3 dB = Intensitätsverdopplung → 85 + 3 = ?",
+          ],
+          difficulty: 2,
+          tags: ["dezibel", "quellenaddition", "logarithmus"],
+        },
+        {
+          question:
+            "Ein Lautsprecher erzeugt 90 dB in 2 m Abstand. Welcher Pegel herrscht in 20 m Abstand (Freifeld)?",
+          options: ["70 dB", "80 dB", "84 dB", "45 dB", "88 dB"],
+          correctIndex: 0,
+          explanation:
+            "Abstandsgesetz: ΔL = −20·log₁₀(r₂/r₁) = −20·log₁₀(20/2) = −20·log₁₀(10) = −20 dB. L = 90 − 20 = 70 dB. Der Abstand verzehnfacht sich, die Intensität sinkt um Faktor 100 (I ∝ 1/r²), was −20 dB entspricht. Pro Verdopplung des Abstands: −6 dB.",
+          hints: ["Verzehnfachung des Abstands → welche dB-Änderung?", "−20·log₁₀(10) = −20 dB."],
+          difficulty: 2,
+          tags: ["abstandsgesetz", "dezibel", "schallpegel"],
+        },
+        {
+          question: "Warum ist Ultraschallgel für die Sonographie unverzichtbar?",
+          options: [
+            "Es kühlt den Schallkopf und verhindert Überhitzung.",
+            "Es gleicht die akustische Impedanz zwischen Schallkopf/Luft und Haut an und verhindert fast vollständige Reflexion.",
+            "Es verstärkt die Ultraschallfrequenz um den Faktor 10.",
+            "Es filtert Störfrequenzen aus dem Umgebungslärm.",
+            "Es erhöht die Schallgeschwindigkeit im Gewebe.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die akustische Impedanz von Luft (Z ≈ 408 Rayl) ist rund 4000-mal kleiner als die von Gewebe (Z ≈ 1,63×10⁶ Rayl). Der Reflexionskoeffizient an der Luft-Haut-Grenze beträgt R ≈ 99,9 % — fast der gesamte Ultraschall wird reflektiert, bevor er ins Gewebe eindringt. Das Gel hat eine Impedanz ähnlich wie Gewebe und eliminiert die Luftschicht → nahezu vollständige Transmission. Ohne Gel: kein Ultraschallbild.",
+          hints: [
+            "Z_Luft vs. Z_Gewebe — Faktor ~4000 Unterschied → wie viel wird reflektiert?",
+            "Gel hat Z ≈ Z_Gewebe → minimaler Impedanzsprung → Transmission.",
+          ],
+          difficulty: 1,
+          tags: ["ultraschallgel", "impedanz", "reflexion"],
+        },
+        {
+          question:
+            "Bei der Doppler-Sonographie wird der Schallkopf senkrecht (θ = 90°) zum Blutgefäss gehalten. Was passiert?",
+          options: [
+            "Das Signal wird maximal stark.",
+            "Die Frequenzverschiebung ist maximal.",
+            "Es wird kein Doppler-Signal detektiert (Δf = 0).",
+            "Die Farbkodierung zeigt Rot.",
+            "Der Ultraschall wird total reflektiert.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Δf = 2f₀v·cos(θ)/c. Bei θ = 90° ist cos(90°) = 0 → Δf = 0 → kein Doppler-Signal, obwohl Blut fliesst. Der Schallkopf muss schräg zum Gefäss gehalten werden (optimal 30–60°), damit cos(θ) > 0 und ein messbares Signal entsteht. Dies ist ein klassischer MedAT-Prüfungspunkt.",
+          hints: [
+            "cos(90°) = 0 — was passiert mit der Formel Δf = 2f₀v·cos(θ)/c?",
+            "Kein Doppler-Signal ≠ kein Blutfluss! Es bedeutet nur: falscher Winkel.",
+          ],
+          difficulty: 2,
+          tags: ["doppler", "winkel", "sonographie"],
+        },
+        {
+          question:
+            "Ein Ultraschall mit f = 3,5 MHz wird für die Untersuchung der Leber gewählt. Warum nicht 15 MHz?",
+          options: [
+            "15 MHz ist zu teuer für den klinischen Einsatz.",
+            "Die Leber liegt tief im Abdomen; 15 MHz wird zu stark gedämpft und dringt nicht tief genug ein.",
+            "15 MHz erzeugt Artefakte an der Leberoberfläche.",
+            "Die Wellenlänge bei 15 MHz ist zu gross für die Leber.",
+            "15 MHz ist Infraschall und wird nicht reflektiert.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Ultraschalldämpfung im Gewebe steigt mit dem Quadrat der Frequenz (Dämpfung ∝ f²). Bei 15 MHz wäre die Eindringtiefe nur ca. 2–3 cm — viel zu wenig für die Leber (typische Tiefe 5–15 cm). Bei 3,5 MHz beträgt die Eindringtiefe ~15 cm bei einer Auflösung von ~0,5 mm — ein guter Kompromiss. Für oberflächliche Strukturen (Schilddrüse, 1–3 cm tief) ist 10–15 MHz ideal.",
+          hints: [
+            "Dämpfung ∝ f² — hohe Frequenz wird stark absorbiert → geringe Eindringtiefe.",
+            "3,5 MHz dringt ~15 cm tief ein; 15 MHz nur ~2–3 cm.",
+          ],
+          difficulty: 2,
+          tags: ["ultraschall", "frequenzwahl", "eindringtiefe"],
+        },
+        {
+          question:
+            "Bei einer Doppler-Untersuchung der A. carotis beträgt die Frequenzverschiebung 3000 Hz (f₀ = 5 MHz, θ = 60°, c = 1540 m/s). Wie gross ist die Blutflussgeschwindigkeit?",
+          options: ["0,23 m/s", "0,46 m/s", "0,92 m/s", "1,54 m/s", "0,06 m/s"],
+          correctIndex: 2,
+          explanation:
+            "v = Δf·c / (2·f₀·cos θ) = 3000 × 1540 / (2 × 5×10⁶ × cos 60°) = 4.620.000 / (2 × 5×10⁶ × 0,5) = 4.620.000 / 5.000.000 = 0,924 m/s ≈ 0,92 m/s. Normale systolische Spitzengeschwindigkeit in der A. carotis interna: 0,6–1,0 m/s. Werte > 1,2 m/s deuten auf eine Stenose hin (> 50 %). > 2,3 m/s → hochgradige Stenose (> 70 %).",
+          hints: [
+            "Formel nach v umstellen: v = Δf·c / (2·f₀·cos θ).",
+            "cos(60°) = 0,5 → einsetzen und berechnen.",
+          ],
+          difficulty: 3,
+          tags: ["doppler-sonographie", "blutfluss", "karotis"],
+        },
+        {
+          question:
+            "Welcher Reflexionskoeffizient ergibt sich an der Grenzfläche Weichgewebe (Z = 1,63×10⁶ Rayl) → Knochen (Z = 6,30×10⁶ Rayl)?",
+          options: ["R ≈ 0,001", "R ≈ 0,05", "R ≈ 0,15", "R ≈ 0,35", "R ≈ 0,99"],
+          correctIndex: 3,
+          explanation:
+            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² = [(6,30−1,63)/(6,30+1,63)]² = [4,67/7,93]² = [0,589]² ≈ 0,347. Etwa 35 % des Ultraschalls werden an der Gewebe-Knochen-Grenze reflektiert — deshalb erzeugt Knochen ein starkes Echo und dahinterliegende Strukturen sind schwer darstellbar (akustischer Schatten). Zum Vergleich: an der Luft-Gewebe-Grenze ist R ≈ 0,999.",
+          hints: [
+            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — erst die Differenz, dann den Quotienten, dann quadrieren.",
+            "Grosser Z-Unterschied → grosses R.",
+          ],
+          difficulty: 3,
+          tags: ["reflexionskoeffizient", "impedanz", "knochen"],
+        },
+      ],
+    },
     {
       id: "ph-3-05",
       title: "Geometrische Optik und das Auge",
@@ -1887,14 +2394,14 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 d
         "Glasfaser",
       ],
       diagram: "lens-imaging",
-      content: `## Geometrische Optik — einfach erklaert
+      content: `## Einleitung
 
-Stell dir vor, du steckst einen Strohhalm ins Wasserglas — er sieht geknickt aus. Das ist **Brechung**: Licht aendert seine Richtung, wenn es von einem Material ins andere wechselt. Mit diesem einfachen Prinzip lassen sich Brillen, Lupen und sogar das menschliche Auge erklaeren.
+Stell dir vor, du steckst einen Strohhalm ins Wasserglas -- er sieht geknickt aus. Das ist **Brechung**: Licht aendert seine Richtung, wenn es von einem Material ins andere wechselt. Mit diesem Prinzip erklaert man Brillen, Lupen, das menschliche Auge und Endoskope. Zwei Formeln genuegen fuer die meisten MedAT-Aufgaben: Snellius und die Linsengleichung.
 
 **In diesem Kapitel lernst du:**
-- wie Licht an Grenzflaechen gebrochen wird (Snellius-Gesetz)
-- wann Totalreflexion auftritt und wozu man sie nutzt
-- wie Linsen Bilder erzeugen und was Dioptrien bedeuten
+- wie Licht an Grenzflaechen gebrochen wird (Snellius-Gesetz, Brechungsindex)
+- wann Totalreflexion auftritt und wie Glasfaser-Endoskope darauf basieren
+- wie Linsen Bilder erzeugen (Linsengleichung, Dioptrien, Sammel- vs. Zerstreuungslinse)
 - wie dein Auge funktioniert und warum manche Menschen eine Brille brauchen
 - wie Lupe und Mikroskop vergroessern
 
@@ -1904,108 +2411,96 @@ Stell dir vor, du steckst einen Strohhalm ins Wasserglas — er sieht geknickt a
 
 {{DIAGRAM:wave-types}}
 
-## Brechung — der geknickte Strohhalm
+## Brechung und Snellius-Gesetz
 
 Wenn Licht von Luft ins Wasser trifft, wird es langsamer und aendert die Richtung. Das beschreibt das **Brechungsgesetz von Snellius**:
 
-**n1 mal sin(theta1) = n2 mal sin(theta2)**
+**n1 · sin(theta1) = n2 · sin(theta2)**
 
-Der **Brechungsindex n** sagt dir, wie stark ein Material Licht bremst. Luft hat n = 1, Wasser n = 1,33, Glas n = 1,5. Je groesser n, desto staerker wird der Lichtstrahl zum Lot hin abgelenkt.
+Der **Brechungsindex n** gibt an, wie stark ein Material Licht bremst (n = c0/c_Medium). Luft: n ≈ 1. Wasser: n = 1,33. Glas: n = 1,5. Hornhaut: n = 1,376. Groesseres n → Brechung zum Lot hin (in dichteres Medium); kleineres n → Brechung vom Lot weg.
 
-**Alltagsbeispiel:** Deshalb sieht der Strohhalm im Glas geknickt aus — das Licht aendert an der Wasser-Luft-Grenze seine Richtung.
-
-> **Merke:** Licht wird beim Eintritt in ein dichteres Material (groesseres n) zum Lot hin gebrochen. Das Brechungsgesetz lautet: n1 mal sin(theta1) = n2 mal sin(theta2).
+> **Merke:** n1·sin(theta1) = n2·sin(theta2). Groesseres n → langsameres Licht → Brechung zum Lot hin.
 
 ---
 
-## Totalreflexion — Licht gefangen im Glas
+## Totalreflexion
 
-Wenn Licht vom dichteren ins duennere Medium wechselt (z. B. Glas nach Luft), wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel — dem **Grenzwinkel** — kommt das Licht gar nicht mehr raus: Es wird komplett reflektiert. Das nennt man **Totalreflexion**.
+Wenn Licht vom dichteren ins duennere Medium wechselt, wird es vom Lot weg gebrochen. Ab einem bestimmten Winkel -- dem **Grenzwinkel** -- kommt das Licht gar nicht mehr heraus: **Totalreflexion**.
 
 **Formel:** sin(theta_c) = n2/n1
 
-**Wozu braucht man das?** Glasfaserkabel und Endoskope nutzen Totalreflexion. Das Licht huepft im Glasfaserkern hin und her und kommt nicht raus — so kann man Licht um Ecken leiten. Aerzte koennen damit in den Magen oder Darm schauen.
+Glasfasern nutzen dieses Prinzip: Licht wird im Kern hin- und herreflektiert und kann um Kurven geleitet werden. **Endoskope** (Magenspiegelung) basieren darauf.
 
-> **Merke:** Totalreflexion gibt es nur beim Uebergang vom dichteren ins duennere Medium. Anwendung: Glasfaser-Endoskope in der Medizin.
+Wichtig: Totalreflexion nur beim Uebergang vom **dichteren ins duennere** Medium (n1 > n2). Andersherum gibt es sie nicht!
 
----
-
-## Linsen — Licht buendeln oder zerstreuen
-
-Eine **Sammellinse** (Lupe, Plus-Glas) buendelt Licht in einem Brennpunkt. Eine **Zerstreuungslinse** (Minus-Glas) streut Licht auseinander.
-
-Die **Linsengleichung** beschreibt, wo das Bild entsteht:
-
-**1/f = 1/g + 1/b**
-
-- f = Brennweite (Sammellinse: positiv, Zerstreuungslinse: negativ)
-- g = Abstand Gegenstand zur Linse
-- b = Abstand Bild zur Linse
-
-Die **Brechkraft** in Dioptrien (dpt) ist einfach: **D = 1/f** (f in Metern). Eine Linse mit f = 10 cm hat D = 10 dpt.
-
-**Alltagsbeispiel:** Deine Lesebrille hat z. B. +2 dpt — das ist eine Sammellinse mit f = 50 cm.
-
-> **Merke:** Brechkraft D = 1/f in Dioptrien. Sammellinse: D positiv (buendelt Licht). Zerstreuungslinse: D negativ (zerstreut Licht).
+> **Merke:** Totalreflexion nur dicht → duenn. sin(theta_c) = n2/n1. Basis der Glasfaser-Endoskopie.
 
 ---
 
-## Dein Auge — eine lebende Kamera
+## Linsen
 
-Dein Auge hat eine Gesamtbrechkraft von etwa **60 Dioptrien**. Davon liefert die **Hornhaut** allein ca. 43 dpt — also zwei Drittel! Die **Augenlinse** steuert den Rest bei.
+Eine **Sammellinse** (konvex, Plus-Glas) buendelt Licht in einem Brennpunkt (f > 0). Eine **Zerstreuungslinse** (konkav, Minus-Glas) zerstreut Licht (f < 0).
 
-Das Besondere: Dein Auge kann die Brennweite anpassen (**Akkommodation**). Der Ziliarmuskel veraendert die Form der Linse:
-- **Ferne schauen:** Muskel entspannt, Linse flach, lange Brennweite
-- **Nahe schauen:** Muskel angespannt, Linse rund, kurze Brennweite
+**Linsengleichung:** **1/f = 1/g + 1/b**
+- g = Gegenstandsabstand, b = Bildweite (positiv = reelles Bild)
 
-Ab etwa 45 Jahren wird die Linse steifer — du brauchst eine Lesebrille (**Presbyopie**).
+**Brechkraft:** **D = 1/f** (f in Metern!). Beispiel: f = 10 cm → D = 10 dpt. Bei kombinierten Linsen: D_ges = D1 + D2.
 
-### Fehlsichtigkeiten
+> **Merke:** D = 1/f [dpt], f in Metern! Sammellinse: D > 0. Zerstreuungslinse: D < 0.
 
-**Kurzsichtigkeit (Myopie):** Auge zu lang, Bild entsteht VOR der Netzhaut. Korrektur: **Zerstreuungslinse** (Minus-Glas). Formel: D = -1/Fernpunkt.
+---
 
-**Weitsichtigkeit (Hyperopie):** Auge zu kurz, Bild entsteht HINTER der Netzhaut. Korrektur: **Sammellinse** (Plus-Glas).
+## Das Auge
 
-**Eselbruecke:** Kurzsichtig = zu viel Brechung = Minus-Linse bremst. Weitsichtig = zu wenig Brechung = Plus-Linse hilft.
+Das Auge hat ~**60 Dioptrien** Gesamtbrechkraft. Davon liefert die **Hornhaut** ca. 43 dpt (~2/3) -- weil hier der groesste Brechungsindex-Sprung auftritt (Luft n=1 → Hornhaut n=1,376). Die Linse ergaenzt ~17 dpt.
 
-> **Merke:** Hornhaut liefert 2/3 der Brechkraft. Myopie: Minus-Glas. Hyperopie: Plus-Glas. Akkommodation = Linse aendert Form fuer Nah/Fern.
+**Akkommodation:** Der Ziliarmuskel aendert die Linsenform:
+- Ferne: Muskel entspannt, Linse flach, lange Brennweite
+- Naehe: Muskel angespannt, Linse rund, kurze Brennweite
+- Ab ~45 Jahren: Presbyopie (Linse steifer, Lesebrille noetig)
+
+**Fehlsichtigkeiten:**
+- **Myopie (Kurzsichtigkeit):** Augapfel zu lang → Bild vor Netzhaut. Korrektur: **Zerstreuungslinse** (D negativ).
+- **Hyperopie (Weitsichtigkeit):** Augapfel zu kurz → Bild hinter Netzhaut. Korrektur: **Sammellinse** (D positiv).
+
+> **Merke:** Hornhaut liefert 2/3 der Brechkraft. Myopie: Minus-Glas. Hyperopie: Plus-Glas.
 
 ---
 
 ## Lupe und Mikroskop
 
-Eine **Lupe** ist eine Sammellinse mit kurzer Brennweite. Vergroesserung: **M = 25 cm / f**. Eine Lupe mit f = 5 cm vergroessert also 5-fach.
+Eine **Lupe** ist eine Sammellinse mit kurzer Brennweite. Vergroesserung: **M = 25 cm / f**.
 
-Ein **Mikroskop** hat zwei Linsen: Das Objektiv erzeugt ein vergroessertes Zwischenbild, das Okular vergroessert nochmals. Gesamtvergroesserung: **M = (t/f_obj) mal (25 cm/f_ok)**.
+Ein **Mikroskop** hat Objektiv + Okular in Serie. Gesamtvergroesserung: **M = (t/f_obj) · (25/f_ok)** (t = Tubuslaenge ca. 16 cm). Kleinste aufloesbare Struktur: ~**200 nm** (Abbe-Limit).
 
-Die kleinsten Strukturen, die ein Lichtmikroskop sehen kann: etwa **200 nm** (Abbe-Limit). Fuer noch kleinere Dinge braucht man ein Elektronenmikroskop.
-
-> **Merke:** Lupe: M = 25 cm/f. Mikroskop: M = (t/f_obj) mal (25 cm/f_ok). Aufloesung maximal 200 nm.
+> **Merke:** Lupe: M = 25/f. Mikroskop: M = (t/f_obj)·(25/f_ok). Aufloesung maximal 200 nm.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Snellius: n1 mal sin(theta1) = n2 mal sin(theta2)
-- Totalreflexion: nur vom dichteren ins duennere Medium
-- Linsengleichung: 1/f = 1/g + 1/b; Brechkraft D = 1/f [dpt]
-- Myopie: Zerstreuungslinse (D negativ); Hyperopie: Sammellinse (D positiv)
-- Hornhaut liefert ~2/3 der Brechkraft (~43 dpt)
+- Snellius: n1·sin(theta1) = n2·sin(theta2)
+- Totalreflexion: nur dicht → duenn; sin(theta_c) = n2/n1
+- Linsengleichung: 1/f = 1/g + 1/b; D = 1/f [dpt], f in Metern!
+- Myopie: Zerstreuungslinse (D < 0); Hyperopie: Sammellinse (D > 0)
+- Hornhaut: ~43 dpt (~2/3 der Gesamtbrechkraft)
 
 **Typische Fallen:**
-- Totalreflexion funktioniert NUR vom dichteren ins duennere Medium
-- Brechkraft: f muss in Metern stehen! f = 10 cm bedeutet D = 1/0,1 = 10 dpt
-- Die Hornhaut (nicht die Linse!) macht den Grossteil der Brechung
+- Totalreflexion NUR vom dichteren ins duennere Medium
+- f = 10 cm → D = 10 dpt (nicht 0,1!)
+- Hornhaut macht den Grossteil der Brechung, nicht die Linse
+- Myopie: MINUS-Glas; Hyperopie: PLUS-Glas
 
-## Zusammenfassung
+---
 
-- **Brechung:** Licht aendert Richtung an Grenzflaechen; n1 sin(theta1) = n2 sin(theta2)
-- **Totalreflexion:** Ab dem Grenzwinkel wird Licht komplett reflektiert (Glasfaser, Endoskop)
-- **Linsen:** Sammellinse (f positiv, D positiv) buendelt; Zerstreuungslinse (f negativ, D negativ) zerstreut
-- **Auge:** 60 dpt gesamt, Hornhaut 43 dpt, Akkommodation durch Linsenform
-- **Fehlsichtigkeit:** Myopie: Minus-Glas; Hyperopie: Plus-Glas
-- **Lupe/Mikroskop:** M = 25/f bzw. M = (t/f_obj) mal (25/f_ok); Limit 200 nm`,
+## Zusammenfassung (ultrakompakt)
+
+- **Brechung:** n1·sin(theta1) = n2·sin(theta2); dichteres Medium → zum Lot hin
+- **Totalreflexion:** sin(theta_c) = n2/n1; nur dicht → duenn; Basis der Endoskopie
+- **Linsen:** 1/f = 1/g + 1/b; D = 1/f [dpt]; Sammellinse D > 0; Zerstreuungslinse D < 0
+- **Auge:** 60 dpt; Hornhaut ~43 dpt; Myopie: Minus-Glas; Hyperopie: Plus-Glas
+- **Lupe/Mikroskop:** M = 25/f bzw. (t/f_obj)·(25/f_ok); Limit 200 nm`,
 
       contentExtended: `## Einleitung
 
@@ -2429,529 +2924,6 @@ Fernpunkt 33 cm, D_Brille = -1/0,33 = -3,0 dpt. Die Zerstreuungslinse verschiebt
           ],
           difficulty: 1,
           tags: ["lupe", "vergrösserung", "optik"],
-        },
-      ],
-    },
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // UK 6: Akustik Vertiefung — Schallimpedanz, Doppler-Ultraschall, Frequenzbereiche
-    // ─────────────────────────────────────────────────────────────────────────
-    {
-      id: "ph-3-06",
-      title: "Akustik Vertiefung — Schallpegel, Impedanz und Doppler-Ultraschall",
-      stichworte: [
-        "Schallpegel",
-        "Dezibel-Rechnung",
-        "Schallimpedanz",
-        "Reflexionskoeffizient",
-        "Doppler-Effekt",
-        "Doppler-Sonographie",
-        "Ultraschall-Diagnostik",
-        "Frequenzbereiche",
-        "Infraschall",
-        "Hörschall",
-        "Ultraschall",
-        "Blutflussmessung",
-      ],
-      diagram: "doppler-effect",
-      content: `## Akustik-Vertiefung — einfach erklaert
-
-Du kennst schon die Dezibel-Skala und den Doppler-Effekt. Hier lernst du, damit zu **rechnen** — und verstehst, warum beim Ultraschall immer Gel auf die Haut kommt.
-
-**In diesem Kapitel lernst du:**
-- wie man Dezibel-Aufgaben loest (zwei Quellen, Abstand, Pegel)
-- was Schallimpedanz ist und warum Ultraschallgel unverzichtbar ist
-- wie der Doppler-Effekt Blutfluss messen kann
-- welche Ultraschall-Frequenzen wofuer geeignet sind
-
----
-
-{{DIAGRAM:doppler-effect}}
-
-{{DIAGRAM:wave-types}}
-
-## Dezibel rechnen — Achtung, nicht einfach addieren!
-
-Die Dezibel-Skala ist **logarithmisch**. Das bedeutet: Zwei gleich laute Maschinen zusammen sind NICHT doppelt so viele dB!
-
-**Wichtigste Regeln:**
-- Zwei gleich laute Quellen: **+3 dB** (nicht das Doppelte!)
-- Zehn gleich laute Quellen: **+10 dB**
-- Doppelter Abstand: **-6 dB**
-
-**Alltagsbeispiel:** Zwei Staubsauger mit je 80 dB zusammen ergeben 83 dB — nicht 160 dB! Das liegt daran, dass sich die Schallenergie zwar verdoppelt, aber auf der logarithmischen Skala ist das nur +3.
-
-**Abstandsgesetz:** Wenn du dich doppelt so weit von einer Laermquelle entfernst, sinkt der Pegel um 6 dB. Zehnmal so weit: -20 dB.
-
-> **Merke:** Dezibel addieren sich NICHT linear. 2 Quellen = +3 dB. 10 Quellen = +10 dB. Doppelter Abstand = -6 dB.
-
----
-
-## Schallimpedanz — warum Ultraschallgel?
-
-Die **Schallimpedanz** Z beschreibt, wie gut ein Material Schall weiterleitet. Die Formel: **Z = Dichte mal Schallgeschwindigkeit**.
-
-Wenn zwei Materialien sehr unterschiedliche Impedanz haben, wird der Schall an der Grenze fast komplett reflektiert.
-
-**Das Problem ohne Gel:** Luft hat eine extrem niedrige Impedanz, Gewebe eine hohe. An der Luft-Haut-Grenze werden **99,9 %** des Ultraschalls reflektiert — es kommt praktisch nichts durch!
-
-**Die Loesung:** Ultraschallgel hat eine aehnliche Impedanz wie Haut. Es eliminiert die Luftschicht, und der Schall kann ins Gewebe eindringen.
-
-**Reflexionsformel:** R = [(Z2 - Z1)/(Z2 + Z1)]^2
-
-- Aehnliche Impedanz (z. B. Leber zu Blut): kaum Reflexion, gut durchschallbar
-- Grosse Impedanzdifferenz (z. B. Gewebe zu Knochen): 35 % Reflexion, starker Schatten
-
-> **Merke:** Grosser Impedanzunterschied = starke Reflexion. Ultraschallgel beseitigt die Luft zwischen Schallkopf und Haut. Ohne Gel: kein Bild!
-
----
-
-## Doppler-Sonographie — Blutfluss hoerbar machen
-
-Der **Doppler-Effekt** kennst du vom Krankenwagen: Kommt er naeher, klingt die Sirene hoeher; faehrt er weg, tiefer.
-
-Beim **Doppler-Ultraschall** nutzt man dasselbe Prinzip: Schallwellen prallen an roten Blutkoerperchen ab. Je nachdem, ob das Blut auf den Schallkopf zu oder weg fliesst, aendert sich die Frequenz.
-
-**Die Formel:** Delta_f = 2 mal f0 mal v mal cos(theta) / c
-
-- v = Blutgeschwindigkeit
-- theta = Winkel zwischen Schallkopf und Blutfluss
-- Faktor 2: Schall geht hin UND zurueck
-
-**Ganz wichtig:** Bei theta = 90 Grad (Schallkopf genau senkrecht zum Gefaess) ist cos(90) = 0, also kein Signal! Deshalb muss der Schallkopf immer **schraeg** gehalten werden (30-60 Grad).
-
-**Farbkodierung:** Rot = Blut fliesst zum Schallkopf. Blau = Blut fliesst weg.
-
-> **Merke:** Doppler-Formel: Delta_f = 2 f0 v cos(theta) / c. Bei 90 Grad kein Signal! Rot = zum Schallkopf, Blau = weg.
-
----
-
-## Welche Frequenz fuer welches Organ?
-
-Beim Ultraschall gilt ein wichtiger Kompromiss:
-- **Hohe Frequenz** (10-15 MHz): Scharfes Bild, aber nur wenig Tiefe (2-4 cm). Gut fuer Schilddruese, Haut.
-- **Niedrige Frequenz** (2-3,5 MHz): Unscharferes Bild, aber viel Tiefe (15-20 cm). Gut fuer Bauchorgane, Herz.
-
-**Alltagsvergleich:** Wie bei einem Fernglas — starke Vergroesserung zeigt Details, aber nur einen kleinen Bereich.
-
-| Frequenz | Tiefe | Verwendung |
-|----------|-------|------------|
-| 2-3,5 MHz | 15-20 cm | Bauch, Herz |
-| 5-7,5 MHz | 5-10 cm | Schilddruese, Gefaesse |
-| 10-15 MHz | 2-4 cm | Haut, oberflaechliche Strukturen |
-
-> **Merke:** Hohe Frequenz = gutes Bild, wenig Tiefe. Niedrige Frequenz = weniger Detail, viel Tiefe.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- Dezibel: 2 Quellen = +3 dB; doppelter Abstand = -6 dB
-- Schallimpedanz: Z = Dichte mal Schallgeschwindigkeit; grosser Z-Sprung = starke Reflexion
-- Doppler: Delta_f = 2 f0 v cos(theta) / c; theta = 90 Grad = kein Signal
-- Ultraschall-Frequenzwahl: hoehere Frequenz = besser aufgeloest, weniger tief
-
-**Typische Fallen:**
-- 60 dB + 60 dB ist NICHT 120 dB, sondern 63 dB
-- Ohne Gel: 99,9 % Reflexion an der Haut — kein Ultraschallbild
-- Schallkopf nie senkrecht zum Gefaess halten (sonst kein Doppler-Signal)
-- Hohe Frequenz = WENIGER Eindringtiefe (nicht mehr!)
-
-## Zusammenfassung
-
-- **Dezibel:** Logarithmisch! 2 Quellen = +3 dB; 10 Quellen = +10 dB; doppelter Abstand = -6 dB
-- **Impedanz:** Z = Dichte mal c; grosser Unterschied = starke Reflexion; Gel beseitigt Luftschicht
-- **Doppler:** Delta_f = 2 f0 v cos(theta) / c; 90 Grad = kein Signal; Rot = zu, Blau = weg
-- **Frequenzwahl:** Hoch = scharf aber flach; Niedrig = tief aber unscharf`,
-
-      contentExtended: `## Einleitung
-
-Im vorherigen Kapitel hast du die Grundlagen der Akustik und Hoerphysiologie kennengelernt -- Dezibel-Skala, Cochlea und Audiometrie. Hier vertiefen wir drei Bereiche, die fuer den MedAT besonders relevant sind: die **quantitative Schallpegel-Rechnung**, die **Schallimpedanz** als Schluessel zur Ultraschalldiagnostik und den **Doppler-Effekt** als physikalische Grundlage der Blutflussmessung.
-
-**In diesem Kapitel lernst du:**
-- wie man Dezibel-Aufgaben systematisch loest: Addition von Quellen, Abstandsgesetz, Pegelunterschiede
-- was Schallimpedanz Z = rho mal c physikalisch bedeutet und wie sie die Reflexion an Grenzflaechen bestimmt
-- wie der Doppler-Effekt quantitativ funktioniert: f' = f mal (c +/- v_E)/(c -/+ v_S)
-- wie die Doppler-Sonographie Blutflussgeschwindigkeit und -richtung misst (Delta_f = 2f0 v cos theta / c)
-- welche Frequenzbereiche (Infraschall, Hoerschall, Ultraschall) in der Medizin relevant sind
-
-**Kontext — worum geht es und wofuer brauchst du das?**
-Bisher hast du Schallpegel (dB), Frequenzbereiche und Hoerphysiologie auf konzeptioneller Ebene kennengelernt. Hier geht es um die **quantitative Vertiefung**: Rechenaufgaben zu dB, Impedanz und Doppler sind MedAT-Klassiker.
-
----
-
-{{DIAGRAM:doppler-effect}}
-
-{{DIAGRAM:wave-types}}
-
-## Dezibel-Rechnung — Vertiefung
-
-Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen fuer Berechnungen:
-
-### Addition mehrerer Schallquellen
-
-Zwei gleich laute Quellen (jeweils L dB) ergeben **nicht** 2L dB, sondern L + 3 dB:
-- 2 Quellen a 60 dB: 63 dB (nicht 120 dB!)
-- 10 Quellen a 60 dB: 70 dB (10 log10(10) = +10 dB)
-- 100 Quellen a 60 dB: 80 dB
-
-**Formelklartext:** Intensitaeten addieren sich linear (I_ges = I1 + I2 + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensitaet: +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensitaet: +10 dB.
-
-> **Merke:** Zwei gleich laute Quellen: +3 dB, nicht doppelte dB! Zehn gleich laute Quellen: +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
-
-### Abstandsgesetz (Freifeld)
-
-Im freien Schallfeld (keine Reflexionen) nimmt die Intensitaet mit dem Quadrat der Entfernung ab:
-
-**I proportional 1/r^2** also **Delta_L = -20 log10(r2/r1) dB**
-
-Verdopplung des Abstands: Delta_L = -20 log10(2) = -6 dB. Verzehnfachung: Delta_L = -20 dB.
-
-Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 20 = 60 dB. In 100 m: 80 - 40 = 40 dB.
-
-### Wichtige Dezibel-Merkregeln (Zusammenfassung)
-
-| Aenderung | Schalldruck | Intensitaet | Wahrnehmung |
-|----------|-------------|------------|-------------|
-| +3 dB | x 1,41 | x 2 | Kaum merkbar |
-| +6 dB | x 2 | x 4 | Leicht lauter |
-| +10 dB | x 3,16 | x 10 | Doppelt so laut |
-| +20 dB | x 10 | x 100 | 4x so laut |
-| -6 dB/Distanzverdopplung | | | Abstandsgesetz |
-
----
-
-## Schallimpedanz — Vertiefung
-
-Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche reflektiert wird:
-
-**Z = rho mal c** [kg/(m^2 s) = Rayl]
-
-| Medium | rho [kg/m^3] | c [m/s] | Z [x10^6 Rayl] |
-|--------|-----------|---------|----------------|
-| Luft | 1,2 | 340 | 0,000408 |
-| Wasser | 1000 | 1480 | 1,48 |
-| Fett | 920 | 1450 | 1,33 |
-| Weichgewebe | 1060 | 1540 | 1,63 |
-| Knochen | 1800 | 3500 | 6,30 |
-| Leber | 1060 | 1550 | 1,64 |
-| Blut | 1060 | 1570 | 1,66 |
-
-### Reflexionskoeffizient
-
-**R = [(Z2 - Z1)/(Z2 + Z1)]^2**
-
-- **Luft zu Weichgewebe:** R ungefaehr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
-- **Weichgewebe zu Knochen:** R ungefaehr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
-- **Leber zu Blut:** R ungefaehr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
-- **Gel zu Haut:** R ungefaehr 0: nahezu vollstaendige Transmission: deshalb Ultraschallgel essenziell
-
-> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
-
----
-
-## Doppler-Effekt — Vertiefung
-
-### Allgemeine Doppler-Formel
-
-**f' = f0 mal (c +/- v_E) / (c -/+ v_S)**
-
-- f0 = Sendefrequenz der Quelle
-- c = Schallgeschwindigkeit im Medium
-- v_E = Geschwindigkeit des Empfaengers
-- v_S = Geschwindigkeit der Quelle/Senders
-
-**Vorzeichenkonvention:**
-- Zaehler: + wenn Empfaenger sich **zur** Quelle bewegt, - wenn **weg**
-- Nenner: - wenn Quelle sich **zum** Empfaenger bewegt, + wenn **weg**
-
-> **Merke:** Annaeherung: f' > f0 (hoeherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt fuer **alle** Wellen: Schall, Licht, Ultraschall.
-
-### Doppler-Sonographie — quantitativ
-
-In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zuruecklegt (hin und zurueck), ist der Doppler-Shift:
-
-**Delta_f = 2 mal f0 mal v mal cos(theta) / c**
-
-- **v** = Blutflussgeschwindigkeit [m/s]
-- **theta** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
-- **c** = Schallgeschwindigkeit in Gewebe (ungefaehr 1540 m/s)
-- **Faktor 2**: weil der Schall zweimal den Weg durchlaeuft (Hin- und Rueckweg)
-
-**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefaess gehalten werden (optimal: theta = 30-60 Grad).
-
-### Umstellung nach v (Blutflussgeschwindigkeit):
-
-**v = Delta_f mal c / (2 mal f0 mal cos theta)**
-
-### Rechenbeispiel — Doppler-Sonographie:
-f0 = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), theta = 45 Grad:
-Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefaehr 1379 Hz
-
-Die Frequenzverschiebung von ~1,4 kHz liegt im **hoerbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
-
-### Farbdoppler-Kodierung:
-- **Rot:** Blut fliesst auf den Schallkopf zu (Delta_f > 0)
-- **Blau:** Blut fliesst vom Schallkopf weg (Delta_f < 0)
-- **Mosaik/Turbulenz:** Ungeordnete Stroemung (z. B. an Stenosen, Klappeninsuffizienzen)
-
-Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
-
----
-
-## Frequenzbereiche in der Medizin
-
-| Bereich | Frequenz | Medizinische Relevanz |
-|---------|----------|----------------------|
-| **Infraschall** | < 20 Hz | Nicht hoerbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
-| **Hoerschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
-| **Ultraschall** | > 20 kHz | Sonographie (2-20 MHz), Doppler (2-10 MHz), Lithotripsie |
-
-### Ultraschall-Frequenzwahl in der Diagnostik:
-
-| Frequenz | Eindringtiefe | Aufloesung | Anwendung |
-|----------|---------------|-----------|-----------|
-| 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
-| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefaesse |
-| 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
-| 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
-
-**Zusammenhang:** Hoehere Frequenz: kuerzere Wellenlaenge (lambda = c/f): bessere Aufloesung, aber staerkere Daempfung im Gewebe (Daempfung proportional f^2): geringere Eindringtiefe.
-
-> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Aufloesung, geringe Tiefe. Niedrige Frequenz = schlechte Aufloesung, grosse Tiefe. Kompromiss je nach Fragestellung.
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 — Zwei Schallquellen addieren:**
-Zwei Maschinen a 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10 log10(2) = 80 + 3 = 83 dB. Nicht 160 dB!
-
-**Beispiel 2 — Abstandsgesetz:**
-Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10x weiter):
-Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB: L = 100 - 20 = 80 dB.
-
-**Beispiel 3 — Reflexionskoeffizient berechnen:**
-Gewebe (Z1 = 1,63x10^6) zu Knochen (Z2 = 6,30x10^6):
-R = [(6,30 - 1,63)/(6,30 + 1,63)]^2 = [4,67/7,93]^2 = [0,589]^2 = 0,347: 34,7 % werden reflektiert.
-Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum moeglich (akustischer Schatten).
-
-**Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
-Delta_f = 2000 Hz, f0 = 4 MHz, theta = 60 Grad, c = 1540 m/s:
-v = Delta_f mal c / (2 mal f0 mal cos theta) = 2000 x 1540 / (2 x 4x10^6 x 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
-Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
-
-**Beispiel 5 — Ultraschall-Wellenlaenge und Aufloesung:**
-f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
-Axiale Aufloesung ungefaehr lambda/2 ungefaehr 0,1 mm. Ausreichend fuer Schilddruesenknoten (typisch 5-30 mm).
-
-## Klinische Vertiefung
-
-**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhoehter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
-
-**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe fuer den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft ueber die plazentare Durchblutung und damit die fetale Versorgung.
-
-**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwaermung auf > 60 Grad C: Koagulationsnekrose.
-
-**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.
-
----
-## MedAT-Fokus
-
-**Zur gezielten Pruefungsvorbereitung** im Ueberblick:
-
-**Zentral pruefungsrelevant:**
-- Dezibel-Rechnung: L = 20 log(p/p0) = 10 log(I/I0); +3 dB: I x 2; +6 dB: p x 2
-- Schallimpedanz: Z = rho mal c; Reflexionskoeffizient R = [(Z2-Z1)/(Z2+Z1)]^2
-- Doppler: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Delta_f = 2f0 v cos theta / c (Sonographie)
-- Frequenzwahl: hohe f: bessere Aufloesung, weniger Tiefe
-
-**Haeufige Fragen:**
-- "Zwei gleich laute Quellen — Gesamtpegel?" L + 3 dB (nicht L + L!)
-- "Warum Ultraschallgel?" Z_Luft ungefaehr 0,0004 x10^6 Rayl; Z_Gewebe ungefaehr 1,63 x10^6 Rayl: R ungefaehr 99,9 % ohne Gel
-- "Bei welchem Winkel kein Doppler-Signal?" theta = 90 Grad (cos 90 Grad = 0)
-- "Hohe Frequenz im Ultraschall — Vor-/Nachteile?" bessere Aufloesung, geringere Eindringtiefe
-
-**Typische Pruefungsfallen / Verwechslungen:**
-- Dezibel addieren sich **nicht** linear: 60 dB + 60 dB ist nicht 120 dB, sondern 63 dB
-- Impedanzunterschied bestimmt Reflexion — nicht die Dichte allein und nicht die Schallgeschwindigkeit allein
-- Doppler: theta = 90 Grad: kein Signal! Schallkopf muss schraeg zum Gefaess stehen
-- Hoehere US-Frequenz: bessere Aufloesung, aber **weniger** Eindringtiefe (nicht mehr)
-- +3 dB = Intensitaetsverdopplung (I); +6 dB = Schalldruckverdopplung (p) — I proportional p^2, daher Faktor 2
-
----
-## Zusammenfassung (ultrakompakt)
-
-- **Dezibel**: L = 20 log(p/p0); +3 dB: I x 2; +6 dB: p x 2; +10 dB: doppelt so laut; 2 Quellen: +3 dB
-- **Abstandsgesetz**: Verdopplung des Abstands: -6 dB (I proportional 1/r^2)
-- **Schallimpedanz**: Z = rho mal c [Rayl]; R = [(Z2-Z1)/(Z2+Z1)]^2; Gel eliminiert Luft-Haut-Grenzflaeche
-- **Doppler**: f' = f0 mal (c +/- v_E)/(c -/+ v_S); Annaeherung: hoehere Frequenz; Entfernung: tiefere Frequenz
-- **Doppler-Sonographie**: Delta_f = 2f0 v cos theta / c; theta = 90 Grad: kein Signal; Rot = zum Schallkopf, Blau = weg
-- **Frequenzwahl**: 2-5 MHz (tief), 5-10 MHz (mittel), 10-20 MHz (oberflaechlich); Aufloesung proportional f, Tiefe proportional 1/f^2`,
-
-      lernziele: [
-        "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",
-        "Die Schallimpedanz Z = ρ·c und den Reflexionskoeffizienten berechnen und klinisch interpretieren.",
-        "Den Doppler-Effekt quantitativ beschreiben und auf Doppler-Sonographie anwenden.",
-        "Frequenzbereiche des Ultraschalls kennen und die Wahl der Frequenz begründen.",
-        "Die Bedeutung der Impedanzanpassung (Ultraschallgel) physikalisch erklären.",
-      ],
-
-      sections: [
-        {
-          heading: "Dezibel-Rechnung: Nicht-lineare Addition",
-          text: "Die Dezibel-Skala ist logarithmisch: Intensitäten addieren sich linear (I_ges = I₁ + I₂), aber in der dB-Skala ergibt die Verdopplung der Intensität nur +3 dB. Zwei identische Schallquellen à 80 dB erzeugen 83 dB, nicht 160 dB. Pro Verdopplung des Abstands nimmt der Pegel um 6 dB ab (I ∝ 1/r²). Diese Rechenregeln sind MedAT-Klassiker.",
-          merksatz: "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB; 2× Abstand → −6 dB.",
-        },
-        {
-          heading: "Schallimpedanz und Ultraschall-Bildgebung",
-          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Grosser Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
-          merksatz:
-            "Z = ρ·c; grosser Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
-        },
-        {
-          heading: "Doppler-Sonographie: Blutfluss messen",
-          text: "Der Doppler-Shift Δf = 2f₀v·cos θ/c ist proportional zur Blutflussgeschwindigkeit v. Der Winkel θ zwischen Schallstrahl und Blutfluss ist entscheidend: Bei θ = 90° (senkrecht) ist cos(90°) = 0 → kein Signal. Optimal: θ = 30–60°. Farbkodierung: Rot = Fluss zum Schallkopf, Blau = weg. Erhöhte Flussgeschwindigkeit an Stenosen → erhöhter Doppler-Shift → klinische Diagnose.",
-          merksatz: "Δf = 2f₀v·cosθ/c; θ = 90° → kein Signal; Rot = Fluss zum Schallkopf.",
-        },
-      ],
-
-      merksätze: [
-        "L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 20 µPa, I₀ = 10⁻¹² W/m².",
-        "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB (logarithmische Addition).",
-        "Abstandsgesetz: Verdopplung des Abstands → −6 dB (I ∝ 1/r²).",
-        "Z = ρ·c [Rayl]; grosser Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
-        "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — Reflexionskoeffizient an Grenzflächen.",
-        "Doppler allgemein: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → f↑, Entfernung → f↓.",
-        "Doppler-Sonographie: Δf = 2f₀v·cosθ/c; Faktor 2 wegen Hin- und Rückweg.",
-        "θ = 90° → Δf = 0 → kein Signal! Schallkopf immer schräg zum Gefäss.",
-        "Farbdoppler: Rot = zum Schallkopf; Blau = vom Schallkopf weg; Mosaik = Turbulenz.",
-        "US-Frequenzwahl: hohe f → gute Auflösung, wenig Tiefe; niedrige f → schlechte Auflösung, viel Tiefe.",
-      ],
-
-      altfrage: {
-        question:
-          "Erläutern Sie das physikalische Prinzip der Doppler-Sonographie zur Blutflussmessung. Gehen Sie auf die Rolle des Winkels θ, die Farbkodierung und typische klinische Anwendungen ein.",
-        answer:
-          "Die Doppler-Sonographie nutzt den Doppler-Effekt: Ein Ultraschallkopf sendet Schallwellen einer definierten Frequenz f₀ (typisch 2–10 MHz) in Richtung eines Blutgefässes. Bewegte Erythrozyten reflektieren den Schall mit veränderter Frequenz. Der Frequenzunterschied (Doppler-Shift) beträgt Δf = 2f₀v·cos θ/c, wobei v die Blutflussgeschwindigkeit, θ der Winkel zwischen Schallstrahl und Gefäss und c die Schallgeschwindigkeit im Gewebe (~1540 m/s) ist. Der Faktor 2 entsteht, weil der Schall den Weg zweimal durchläuft (zum Erythrozyten und zurück). Entscheidend: Bei θ = 90° ist cos 90° = 0 → kein Signal → der Schallkopf muss schräg zum Gefäss stehen (optimal 30–60°). In der Farbdoppler-Darstellung wird Blut, das auf den Schallkopf zufliesst, rot kodiert (positives Δf), Blut, das sich entfernt, blau (negatives Δf). Turbulente Strömung (z. B. an Stenosen) erscheint als Farbmosaik. Klinisch: Diagnose von Karotisstenosen (erhöhte v), Venenthrombosen (fehlendes Signal), Herzklappenfehler (Regurgitation), fetale Durchblutung (Nabelschnur-Doppler).",
-      },
-
-      klinischerBezug:
-        "Doppler-Sonographie: Karotisstenose-Diagnostik, tiefe Venenthrombose, Echokardiographie (Klappenvitien, Regurgitation). Ultraschall-Impedanzanpassung mit Gel. Obstetrik: fetaler Doppler (Nabelschnurarterie). Therapeutisch: HIFU (fokussierter Ultraschall für Tumorablation), ESWL (Lithotripsie).",
-
-      selfTest: [
-        {
-          question:
-            "Zwei identische Maschinen erzeugen jeweils 85 dB. Wie hoch ist der Gesamtpegel?",
-          options: ["85 dB", "88 dB", "90 dB", "170 dB", "82 dB"],
-          correctIndex: 1,
-          explanation:
-            "Zwei gleich laute Quellen verdoppeln die Intensität: L_ges = 85 + 10·log₁₀(2) = 85 + 3 = 88 dB. Nicht 170 dB (das wäre lineare Addition der Pegel – ein fundamentaler Fehler). Auch nicht 90 dB – die 3-dB-Regel gilt für Intensitätsverdopplung, nicht +5 dB. Merke: Dezibel addieren sich logarithmisch, nicht linear!",
-          hints: [
-            "Intensitäten addieren sich: I_ges = 2·I → wie viel dB ist das mehr?",
-            "+3 dB = Intensitätsverdopplung → 85 + 3 = ?",
-          ],
-          difficulty: 2,
-          tags: ["dezibel", "quellenaddition", "logarithmus"],
-        },
-        {
-          question:
-            "Ein Lautsprecher erzeugt 90 dB in 2 m Abstand. Welcher Pegel herrscht in 20 m Abstand (Freifeld)?",
-          options: ["70 dB", "80 dB", "84 dB", "45 dB", "88 dB"],
-          correctIndex: 0,
-          explanation:
-            "Abstandsgesetz: ΔL = −20·log₁₀(r₂/r₁) = −20·log₁₀(20/2) = −20·log₁₀(10) = −20 dB. L = 90 − 20 = 70 dB. Der Abstand verzehnfacht sich, die Intensität sinkt um Faktor 100 (I ∝ 1/r²), was −20 dB entspricht. Pro Verdopplung des Abstands: −6 dB.",
-          hints: ["Verzehnfachung des Abstands → welche dB-Änderung?", "−20·log₁₀(10) = −20 dB."],
-          difficulty: 2,
-          tags: ["abstandsgesetz", "dezibel", "schallpegel"],
-        },
-        {
-          question: "Warum ist Ultraschallgel für die Sonographie unverzichtbar?",
-          options: [
-            "Es kühlt den Schallkopf und verhindert Überhitzung.",
-            "Es gleicht die akustische Impedanz zwischen Schallkopf/Luft und Haut an und verhindert fast vollständige Reflexion.",
-            "Es verstärkt die Ultraschallfrequenz um den Faktor 10.",
-            "Es filtert Störfrequenzen aus dem Umgebungslärm.",
-            "Es erhöht die Schallgeschwindigkeit im Gewebe.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Die akustische Impedanz von Luft (Z ≈ 408 Rayl) ist rund 4000-mal kleiner als die von Gewebe (Z ≈ 1,63×10⁶ Rayl). Der Reflexionskoeffizient an der Luft-Haut-Grenze beträgt R ≈ 99,9 % — fast der gesamte Ultraschall wird reflektiert, bevor er ins Gewebe eindringt. Das Gel hat eine Impedanz ähnlich wie Gewebe und eliminiert die Luftschicht → nahezu vollständige Transmission. Ohne Gel: kein Ultraschallbild.",
-          hints: [
-            "Z_Luft vs. Z_Gewebe — Faktor ~4000 Unterschied → wie viel wird reflektiert?",
-            "Gel hat Z ≈ Z_Gewebe → minimaler Impedanzsprung → Transmission.",
-          ],
-          difficulty: 1,
-          tags: ["ultraschallgel", "impedanz", "reflexion"],
-        },
-        {
-          question:
-            "Bei der Doppler-Sonographie wird der Schallkopf senkrecht (θ = 90°) zum Blutgefäss gehalten. Was passiert?",
-          options: [
-            "Das Signal wird maximal stark.",
-            "Die Frequenzverschiebung ist maximal.",
-            "Es wird kein Doppler-Signal detektiert (Δf = 0).",
-            "Die Farbkodierung zeigt Rot.",
-            "Der Ultraschall wird total reflektiert.",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Δf = 2f₀v·cos(θ)/c. Bei θ = 90° ist cos(90°) = 0 → Δf = 0 → kein Doppler-Signal, obwohl Blut fliesst. Der Schallkopf muss schräg zum Gefäss gehalten werden (optimal 30–60°), damit cos(θ) > 0 und ein messbares Signal entsteht. Dies ist ein klassischer MedAT-Prüfungspunkt.",
-          hints: [
-            "cos(90°) = 0 — was passiert mit der Formel Δf = 2f₀v·cos(θ)/c?",
-            "Kein Doppler-Signal ≠ kein Blutfluss! Es bedeutet nur: falscher Winkel.",
-          ],
-          difficulty: 2,
-          tags: ["doppler", "winkel", "sonographie"],
-        },
-        {
-          question:
-            "Ein Ultraschall mit f = 3,5 MHz wird für die Untersuchung der Leber gewählt. Warum nicht 15 MHz?",
-          options: [
-            "15 MHz ist zu teuer für den klinischen Einsatz.",
-            "Die Leber liegt tief im Abdomen; 15 MHz wird zu stark gedämpft und dringt nicht tief genug ein.",
-            "15 MHz erzeugt Artefakte an der Leberoberfläche.",
-            "Die Wellenlänge bei 15 MHz ist zu gross für die Leber.",
-            "15 MHz ist Infraschall und wird nicht reflektiert.",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Ultraschalldämpfung im Gewebe steigt mit dem Quadrat der Frequenz (Dämpfung ∝ f²). Bei 15 MHz wäre die Eindringtiefe nur ca. 2–3 cm — viel zu wenig für die Leber (typische Tiefe 5–15 cm). Bei 3,5 MHz beträgt die Eindringtiefe ~15 cm bei einer Auflösung von ~0,5 mm — ein guter Kompromiss. Für oberflächliche Strukturen (Schilddrüse, 1–3 cm tief) ist 10–15 MHz ideal.",
-          hints: [
-            "Dämpfung ∝ f² — hohe Frequenz wird stark absorbiert → geringe Eindringtiefe.",
-            "3,5 MHz dringt ~15 cm tief ein; 15 MHz nur ~2–3 cm.",
-          ],
-          difficulty: 2,
-          tags: ["ultraschall", "frequenzwahl", "eindringtiefe"],
-        },
-        {
-          question:
-            "Bei einer Doppler-Untersuchung der A. carotis beträgt die Frequenzverschiebung 3000 Hz (f₀ = 5 MHz, θ = 60°, c = 1540 m/s). Wie gross ist die Blutflussgeschwindigkeit?",
-          options: ["0,23 m/s", "0,46 m/s", "0,92 m/s", "1,54 m/s", "0,06 m/s"],
-          correctIndex: 2,
-          explanation:
-            "v = Δf·c / (2·f₀·cos θ) = 3000 × 1540 / (2 × 5×10⁶ × cos 60°) = 4.620.000 / (2 × 5×10⁶ × 0,5) = 4.620.000 / 5.000.000 = 0,924 m/s ≈ 0,92 m/s. Normale systolische Spitzengeschwindigkeit in der A. carotis interna: 0,6–1,0 m/s. Werte > 1,2 m/s deuten auf eine Stenose hin (> 50 %). > 2,3 m/s → hochgradige Stenose (> 70 %).",
-          hints: [
-            "Formel nach v umstellen: v = Δf·c / (2·f₀·cos θ).",
-            "cos(60°) = 0,5 → einsetzen und berechnen.",
-          ],
-          difficulty: 3,
-          tags: ["doppler-sonographie", "blutfluss", "karotis"],
-        },
-        {
-          question:
-            "Welcher Reflexionskoeffizient ergibt sich an der Grenzfläche Weichgewebe (Z = 1,63×10⁶ Rayl) → Knochen (Z = 6,30×10⁶ Rayl)?",
-          options: ["R ≈ 0,001", "R ≈ 0,05", "R ≈ 0,15", "R ≈ 0,35", "R ≈ 0,99"],
-          correctIndex: 3,
-          explanation:
-            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² = [(6,30−1,63)/(6,30+1,63)]² = [4,67/7,93]² = [0,589]² ≈ 0,347. Etwa 35 % des Ultraschalls werden an der Gewebe-Knochen-Grenze reflektiert — deshalb erzeugt Knochen ein starkes Echo und dahinterliegende Strukturen sind schwer darstellbar (akustischer Schatten). Zum Vergleich: an der Luft-Gewebe-Grenze ist R ≈ 0,999.",
-          hints: [
-            "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — erst die Differenz, dann den Quotienten, dann quadrieren.",
-            "Grosser Z-Unterschied → grosses R.",
-          ],
-          difficulty: 3,
-          tags: ["reflexionskoeffizient", "impedanz", "knochen"],
         },
       ],
     },

@@ -2916,7 +2916,7 @@ Steroide basieren auf dem **Sterangerüst** (Cyclopentanoperhydrophenanthren): d
       ],
       content: `## Einleitung
 
-Wenn du einen COVID-Test machst, nutzt das Labor eine Methode namens PCR. Sie erkennt das Virus anhand seiner RNA -- also seines Erbguts. Um das zu verstehen, musst du wissen, wie **DNA und RNA** aufgebaut sind. Beide bestehen aus kleinen Bausteinen (Nukleotiden), die sich nach festen Regeln paaren: A mit T (in der DNA) oder A mit U (in der RNA), und G immer mit C. Diese einfache Paarungsregel ist die Grundlage der Vererbung -- und auch der Ansatzpunkt fuer Medikamente gegen Viren.
+Der COVID-PCR-Test erkennt das Virus anhand seiner RNA. Um das zu verstehen, musst du den Aufbau von **DNA und RNA** kennen. Beide bestehen aus Nukleotiden, die sich nach festen Regeln paaren: A mit T (DNA) oder A mit U (RNA), und G immer mit C. Diese Paarungsregel ist die Grundlage der Vererbung -- und der Ansatzpunkt fuer antivirale Medikamente.
 
 **In diesem Kapitel lernst du:**
 - was Nukleotide sind und warum ATP die Energiewaehrung deiner Zellen ist
@@ -3002,16 +3002,11 @@ Nach 30 Runden hast du ueber eine Milliarde Kopien. Beim COVID-Test wird zuerst 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Nukleosid vs. Nukleotid (mit/ohne Phosphat)
-- Basenpaarung: A-T (2 H-Bruecken), G-C (3 H-Bruecken)
-- DNA: antiparallel, rechtsgaengig, Desoxyribose, Thymin
-- RNA: einzelstraengig, Ribose, Uracil
-- PCR: Denaturierung, Annealing, Elongation
-
-**Typische Fallen:**
-- Thymin nur in DNA, Uracil nur in RNA -- nicht verwechseln
-- Purine (A, G) haben den Doppelring, Pyrimidine den Einzelring
-- Nukleosid = ohne Phosphat, Nukleotid = mit Phosphat
+- Nukleosid (ohne P) vs. Nukleotid (mit P); ATP = Adenosin + 3 Phosphate
+- Basenpaarung: A-T (2 H-Bruecken), G-C (3 H-Bruecken); mehr GC = stabiler
+- DNA: Desoxyribose, Thymin; RNA: Ribose, Uracil -- NICHT verwechseln
+- Purine (A, G) = Doppelring; Pyrimidine (C, T, U) = Einzelring
+- PCR: Denaturierung (95 Grad C), Annealing, Elongation
 
 ---
 
@@ -3022,8 +3017,8 @@ Nach 30 Runden hast du ueber eine Milliarde Kopien. Beim COVID-Test wird zuerst 
 - **Chargaff**: A=T (2 H-Bruecken), G=C (3 H-Bruecken); mehr GC = stabiler
 - **DNA**: Doppelhelix, antiparallel, Desoxyribose, Thymin
 - **RNA**: einzelstraengig, Ribose, Uracil; mRNA/tRNA/rRNA/miRNA
-- **PCR**: 95 Grad C trennen, Primer binden, Taq-Polymerase verlaengert; RT-PCR fuer RNA
-- **Virostatika**: Aciclovir/Remdesivir = falscher Baustein ohne 3-OH = Kettenabbruch`,
+- **PCR**: Denaturierung (95 Grad C), Primer, Elongation (72 Grad C); RT-PCR fuer RNA
+- **Virostatika**: Aciclovir/Remdesivir = falscher Baustein ohne 3-OH -> Kettenabbruch`,
       contentExtended: `## Einleitung
 
 Der COVID-19-Test beruht auf der RT-PCR — einer Methode, die RNA-Sequenzen des Virus nachweist. Um zu verstehen, wie dieser Test funktioniert, musst du die Grundlagen der **Nukleinsäuren** kennen: DNA und RNA bestehen aus Nukleotiden, die durch Basenpaarung (A mit T bzw. U, G mit C) zusammengehalten werden. Diese komplementäre Paarung ist nicht nur die Grundlage der Vererbung, sondern auch der Ansatzpunkt für antivirale Medikamente wie Aciclovir, die als falsche Bausteine die virale DNA-Synthese stoppen.

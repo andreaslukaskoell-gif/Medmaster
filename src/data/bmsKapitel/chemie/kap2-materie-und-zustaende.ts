@@ -27,24 +27,27 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Einleitung
 
-Stell dir ein Beatmungsgeraet auf der Intensivstation vor: Es muss Druck, Volumen und Temperatur der Atemluft praezise steuern. Genau diese drei Groessen verbindet die **ideale Gasgleichung pV = nRT**. Sie erklaert auch, warum ein Taucher beim schnellen Aufstieg eine Lungenueberblähung riskiert und warum man bei Gasberechnungen immer in Kelvin rechnen muss.
+Auf der Intensivstation steuert ein Beatmungsgeraet praezise Druck, Volumen und Temperatur der Atemluft. Genau diese Groessen verbindet die **ideale Gasgleichung pV = nRT** -- eine der wichtigsten Formeln der Chemie. Sie erklaert auch, warum ein Taucher beim schnellen Aufstieg eine Lungenueberdehnung riskiert (sinkender Druck = wachsende Gasblasen nach Boyle-Mariotte), warum Temperaturen in Kelvin angegeben werden muessen und warum 1 Mol jedes idealen Gases bei STP genau 22,4 Liter einnimmt.
 
 **In diesem Kapitel lernst du:**
-- wie pV = nRT Druck, Volumen, Temperatur und Stoffmenge verbindet
-- warum Boyle-Mariotte, Charles und Avogadro Spezialfaelle dieser Formel sind
-- wann das ideale Gasgesetz versagt und wie van der Waals es korrigiert
-- was die kinetische Gastheorie ueber Molekuelgeschwindigkeiten sagt
+- wie pV = nRT Druck, Volumen, Temperatur und Stoffmenge in einer Formel vereint
+- warum Boyle-Mariotte, Charles/Gay-Lussac und Avogadro Spezialfaelle dieser Formel sind
+- wann das ideale Gasgesetz versagt (hoher Druck, tiefe Temperatur) und wie van der Waals es korrigiert
+- welche Druckeinheiten in Medizin und Physik verwendet werden (Pa, bar, atm, mmHg)
+- was kinetische Gastheorie ueber Molekuelgeschwindigkeiten sagt
 
 ---
 
 ## Die ideale Gasgleichung
 
-**pV = nRT** verbindet vier Groessen:
-- **p** = Druck (in Pa oder bar)
-- **V** = Volumen (in Liter oder m3)
-- **n** = Stoffmenge (in mol)
-- **T** = Temperatur (IMMER in Kelvin! K = Grad C + 273)
-- **R** = Gaskonstante = 8,314 J/(mol*K)
+**pV = nRT** -- die vier Groessen:
+- **p** = Druck [Pa oder bar]
+- **V** = Volumen [Liter oder m hoch 3]
+- **n** = Stoffmenge [mol]
+- **T** = Temperatur -- IMMER in Kelvin! K = Grad Celsius + 273,15
+- **R** = universelle Gaskonstante = 8,314 J/(mol mal K)
+
+Wichtige Umrechnung: Dichte eines Gases: rho = m/V = M mal p / (R mal T). Konzentration: c = n/V = p/(R mal T).
 
 {{DIAGRAM:covalent-bond}}
 
@@ -52,51 +55,59 @@ Stell dir ein Beatmungsgeraet auf der Intensivstation vor: Es muss Druck, Volume
 
 ## Die drei Gasgesetze als Spezialfaelle
 
-**Boyle-Mariotte:** Bei konstanter Temperatur gilt p*V = const. Doppelter Druck ergibt halbes Volumen. Alltagsbeispiel: Taucher -- beim Auftauchen sinkt der Druck und Gasblasen dehnen sich aus.
+**Boyle-Mariotte (T = const):** p mal V = const. Doppelter Druck ergibt halbes Volumen. Taucher: beim Auftauchen sinkt Druck -- Gasblasen dehnen sich aus -- Lungenueberblahung-Risiko!
 
-**Charles/Gay-Lussac:** Bei konstantem Druck ist V/T = const. Heissere Gase nehmen mehr Platz ein. Deshalb zeigen Autoreifen im Sommer hoeheren Druck.
+**Charles/Gay-Lussac (p = const):** V/T = const. Heissere Gase nehmen mehr Platz ein; Autoreifen im Sommer haben hoehere Druck (T und p steigen, V konstant).
 
-**Avogadro:** Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina gleich viele Teilchen. Das **molare Volumen** bei STP (0 Grad C, 1 bar) betraegt 22,4 L/mol -- egal welches Gas.
+**Avogadro (p, T = const):** V/n = const. Gleiche Volumina enthalten gleich viele Teilchen. Das **molare Volumen** bei STP (0 Grad C, 1 bar) = **22,4 L/mol** -- egal welches ideale Gas.
 
-> **Merke:** Celsius NIEMALS direkt einsetzen! Immer zuerst in Kelvin umrechnen: K = Grad C + 273,15.
+**Sonderfall: V und T werden verdoppelt (bei n = const):** Dann bleibt p unveraendert! p' = nR(2T)/(2V) = nRT/V = p. Klassische Pruefungsfrage!
+
+> **Merke:** Celsius NIEMALS direkt einsetzen -- immer Kelvin! K = Grad C + 273. Molares Volumen STP = 22,4 L/mol. Gas ist komprimierbar! “Gas kann nicht komprimiert werden” ist FALSCH.
 
 {{DIAGRAM:periodic-table}}
 
 ---
 
-## Ideales vs. reales Gas
+## Ideales vs. reales Gas und van-der-Waals-Gleichung
 
-Ein ideales Gas hat Modellannahmen: keine Teilchengroesse, keine Anziehungskraefte. **Reale Gase** weichen ab bei hohem Druck (Eigenvolumen zaehlt) und tiefer Temperatur (Anziehungskraefte dominieren).
+Ein **ideales Gas** nimmt an: Teilchen punktfoermig (kein Eigenvolumen) und keine Wechselwirkungen. Reale Gase weichen ab bei:
+- **Hohem Druck:** Eigenvolumen der Molekuele wird wichtig -- schwerer komprimierbar -- Kompressibilitaetsfaktor Z = pV/(nRT) groesser 1
+- **Tiefer Temperatur:** van-der-Waals-Anziehung dominiert -- leichter komprimierbar -- Z kleiner 1
+- **Nahe Kondensationspunkt:** Phasenuebergaenge
 
-Die **van-der-Waals-Gleichung** korrigiert beides: (p + a*n2/V2) * (V - n*b) = nRT. Dabei korrigiert **a** den Druck (Anziehung) und **b** das Volumen (Eigenvolumen).
+Die **van-der-Waals-Gleichung** korrigiert: **(p + a mal n hoch 2/V hoch 2) mal (V minus n mal b) = nRT**
+
+Dabei korrigiert **a** den Druck (Anziehungskraefte reduzieren Wandstoesse) und **b** das Volumen (Kovolumen = Eigenvolumen der Molekuele). Grosse Molekuele (z.B. H2O: a=5,54) haben groessere a-Werte als kleine (He: a=0,035).
+
+---
+
+## Druckeinheiten und klinische Relevanz
+
+Druckeinheiten: 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg. Klinisch: Blutdruck in mmHg, Beatmungsdruck in mbar oder cmH2O, Partialdruck im Blut in kPa oder mmHg.
+
+Beatmung: Volumen-kontrolliert mit V_T ca. 6--8 ml/kg. Bei ARDS sinkt Lungencompliance -- gleicher Volumenhub erzeugt hoehere Druecke -- Barotrauma-Risiko. Tauchmedizin: Druckkammer-Therapie (Hyperbarie) bei Dekompressionskrankheit -- Boyle-Mariotte.
+
+> **Merke:** Partialdruck: p_i = Molanteil x Gesamtdruck. In der Blutgasanalyse: pO2 (arteriell normal 80--100 mmHg), pCO2 (normal 35--45 mmHg).
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Pruefungsfragen:**
-- Wenn V und T verdoppelt werden: p bleibt gleich
-- 1 mol ideales Gas bei STP: 22,4 L
-- Doppelter Druck bei T = const: halbes Volumen
+**Zentral pruefungsrelevant:**
+- pV=nRT; Celsius NIEMALS direkt -- immer Kelvin! K = °C + 273
+- V und T verdoppelt bei n=const: p bleibt gleich! (klassische Pruefungsfrage)
+- Molares Volumen STP = 22,4 L/mol; van-der-Waals: a = Anziehung, b = Eigenvolumen
 
-**Typische Fallen:**
-- Celsius NIEMALS direkt einsetzen
-- “Gas kann nicht komprimiert werden” ist FALSCH
-- van-der-Waals: a korrigiert Druck, b korrigiert Volumen
-
-**Pruefungsrelevante Zahlen:**
-- R = 8,314 J/(mol*K)
-- Molares Volumen bei STP = 22,4 L/mol
-- 1 atm = 101.325 Pa = 760 mmHg
+---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **pV = nRT**: Druck mal Volumen = Stoffmenge mal Gaskonstante mal Temperatur (in Kelvin!)
-- **Boyle-Mariotte**: p*V = const bei T = const (doppelter Druck ergibt halbes Volumen)
-- **Charles**: V/T = const bei p = const (heisser ergibt groesser)
-- **Avogadro**: Molares Volumen bei STP = 22,4 L/mol fuer alle idealen Gase
-- **Reale Gase**: van-der-Waals korrigiert fuer Eigenvolumen (b) und Anziehung (a)
-- **Klinisch**: Beatmung (pV-Zusammenhang), Tauchen (Boyle-Mariotte), Narkosegase`,
+- **pV = nRT**: T in Kelvin! R = 8,314 J/(mol·K); molares Volumen STP = 22,4 L/mol
+- **Boyle-Mariotte**: pV = const (T = const); doppelter Druck = halbes Volumen
+- **Charles**: V/T = const; **Avogadro**: V/n = const
+- V und T verdoppelt bei n=const: p unveraendert!
+- Reale Gase: van-der-Waals: (p + a*n²/V²)*(V - n*b) = nRT; a = Anziehung, b = Volumen`,
 
       contentExtended: `## Einleitung
 
@@ -461,80 +472,88 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
       ],
       content: `## Einleitung
 
-Auf dem Mount Everest enthaelt die Luft zwar noch 21 % Sauerstoff -- trotzdem wird man ohne Flasche bewusstlos. Warum? Weil der **Partialdruck** von O2 in 8.848 m Hoehe nur ein Drittel so hoch ist. Das **Daltonsche Gesetz** erklaert, warum jedes Gas in einem Gemisch seinen eigenen Druck ausuuebt -- und warum dieser Druck entscheidet, wie viel Sauerstoff ins Blut gelangt.
+Am Mount Everest enthaelt die Luft noch 21 % O2 -- trotzdem wird man bewusstlos. Der **Partialdruck** von O2 ist dort nur 1/3 des Meeresniveauwerts. Das **Daltonsche Partialdruck-Gesetz** erklaert, warum jedes Gas im Gemisch seinen eigenen Druck ausueebt und warum dieser Partialdruck den Gasaustausch antreibt.
 
 **In diesem Kapitel lernst du:**
 - was ein Partialdruck ist und wie du ihn mit dem Molenbruch berechnest
-- welche Partialdrucke von O2 und CO2 in der Lunge herrschen
-- wie das Henry-Gesetz die Taucherkrankheit erklaert
-- warum zu viel Sauerstoff schaedlich sein kann
+- welche Partialdrucke von O2 und CO2 in Alveole, Blut und Gewebe herrschen und wie die Gradienten den Gasaustausch antreiben
+- wie das Henry-Gesetz (c = kH * p) die Taucherkrankheit und die Sauerstofftherapie erklaert
+- warum zu viel Sauerstoff toxisch ist (Lorrain-Smith, Paul-Bert) und was der klinische Zielbereich ist
 
 ---
 
-## Das Daltonsche Gesetz
+## Das Daltonsche Partialdruck-Gesetz
 
-**Gesamtdruck = Summe aller Partialdrucke**: p_gesamt = p1 + p2 + p3 + ...
+**Der Gesamtdruck eines Gasgemisches ist gleich der Summe aller Partialdrucke:**
 
-Den Partialdruck einer Komponente berechnest du ueber den **Molenbruch**: pi = xi * p_gesamt. Der Molenbruch xi = ni / n_gesamt gibt den Anteil der Teilchen an (dimensionslos, alle zusammen = 1).
+p_gesamt = p1 + p2 + p3 + ... = Summe pi
 
-**Alltagsbeispiel:** Luft besteht aus 78 % N2 und 21 % O2. Bei 1 bar Gesamtdruck ist p(O2) = 0,21 * 1 bar = 0,21 bar.
+Den Partialdruck jeder Komponente berechnest du ueber den **Molenbruch** xi:
+
+pi = xi * p_gesamt, wobei xi = ni / n_gesamt
+
+Der Molenbruch ist dimensionslos (zwischen 0 und 1, alle zusammen = 1) und gibt den Anteil der Teilchen an -- nicht den Massenanteil!
+
+**Bsp.:** 2 mol N2, 1 mol O2 bei 3 bar: x(O2) = 1/3 = 0,333; p(O2) = 1 bar. Das Gesetz gilt exakt fuer ideale Gase ohne gegenseitige Wechselwirkungen.
 
 {{DIAGRAM:covalent-bond}}
 
 ---
 
-## Partialdrucke in der Lunge
+## Alveolarer Gasaustausch -- Partialdrucke als Antrieb
 
-In den Lungenblaschen (Alveolen) herrschen bei 37 Grad C:
-- p(O2) ungefaehr 13,3 kPa (100 mmHg)
-- p(CO2) ungefaehr 5,3 kPa (40 mmHg)
-- p(H2O) = 6,27 kPa (Wasserdampf bei Koerpertemperatur -- muss abgezogen werden!)
+Alveolarer p(O2) = 13,3 kPa (nicht 21,2) -- Wasserdampf (6,27 kPa) + CO2 (5,3 kPa) verdraengen O2. Alveolargasgleichung: 0,21*(101,3-6,27) - 5,3/0,8 = **13,3 kPa**. Venoes: p(O2) ~5,3 kPa → Gradient treibt Diffusion ins Blut; CO2 umgekehrt (venoes 6,1 > alveolar 5,3 kPa).
 
-O2 im venoesen Blut hat nur ungefaehr 5,3 kPa -- dadurch entsteht ein Druckgefaelle, und O2 diffundiert von der Alveole ins Blut. CO2 geht den umgekehrten Weg.
-
-> **Merke:** Der alveolaere p(O2) von 13,3 kPa ist deutlich niedriger als die 21 kPa der Aussenluft -- Wasserdampf und CO2 "verdraengen" O2. Das wird gern geprueft!
+> **Merke:** p(H2O) bei 37 Grad = 6,27 kPa -- immer abziehen bei alveolaren Berechnungen!
 
 {{DIAGRAM:atomic-orbitals}}
 
 ---
 
-## Henry-Gesetz: Gasloeslichkeit
+## Henry-Gesetz: Gasloeslichkeit in Fluessigkeiten
 
-Das Henry-Gesetz beschreibt, wie viel Gas sich in einer Fluessigkeit loest: **c = kH * p**. Mehr Druck bedeutet mehr geloestes Gas.
+Das Henry-Gesetz (William Henry, 1803) beschreibt, wie viel Gas sich in einer Fluessigkeit loest:
 
-**Alltagsbeispiel:** In einer Sprudelflasche steht CO2 unter Druck. Oeffnest du sie, sinkt der Druck und CO2 perlt aus. Genau das passiert auch im Blut eines Tauchers, der zu schnell auftaucht -- N2 bildet gefaehrliche Blasen (Taucherkrankheit).
+**c = kH * p**
+
+wobei kH die substanzspezifische Henry-Konstante ist. Mehr Druck = mehr Gas physikalisch geloest.
+
+**Alltagsbeispiele:**
+- Sprudelflasche: CO2 steht unter Druck geloest. Oeffnest du sie, sinkt der Druck und CO2 perlt aus.
+- Taucherkrankheit: Unter Wasser (4-5 bar) loest sich viel N2 im Blut. Taucht der Taucher zu schnell auf, sinkt der Druck und N2 bildet Blasen in Blutgefaessen und Gewebe -- wie das Perlenmuster im geoeffneten Sekt.
+- Sauerstofftherapie: F_IO2 auf 0,6-1,0 erhoehen --> alveolarer p(O2) steigt --> mehr physikalisch geloestes O2 im Plasma.
+- Hyperbare Oxygenierung (2-3 bar, 100 % O2): Physikalisch geloestes O2 steigt auf ueber 6 ml/dl (normal 0,3 ml/dl) -- Therapie bei CO-Vergiftung, Gasbrand.
+
+**Wichtig:** Bei hoeherer Temperatur sinkt die Gasloeslichkeit! (Anders als bei Feststoffen in Wasser.) Deshalb entweicht CO2 aus warmem Sprudel schneller.
 
 ---
 
-## Sauerstoff als Medikament
+## Sauerstoff als Medikament -- Hyperoxie-Risiken
 
-- **Sauerstofftherapie:** Erhoehte O2-Konzentration (FiO2 bis 1,0) steigert den Partialdruck -- mehr O2 im Blut
-- **Heliox (He/O2):** Helium ist leichter als N2 und senkt den Atemwiderstand bei Asthma
-- **Zu viel O2 ist schaedlich!** Lungenschaeden (Lorrain-Smith), Krampfanfaelle (Paul-Bert), Augenschaeden bei Fruehgeborenen
+Sauerstoff hat eine therapeutische Breite: Zu wenig ist lebensbedrohlich (Hypoxie), zu viel ist toxisch (Hyperoxie). Klinischer Zielwert: arterieller p(O2) = 8-13 kPa (60-100 mmHg).
+
+Bei F_IO2 ueber 0,6 ueber laengere Zeit drohen:
+- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizitaet -- Entzuendung der Alveolarepithelien, Surfactant-Schaedigung, ARDS-aehnliches Bild
+- **Paul-Bert-Effekt**: Zerebrale Toxizitaet bei p(O2) ueber 160 kPa (Tauchen mit reinem O2 tiefer als 6 m) -- Krampfanfaelle
+- **Retinopathia praematurorum**: Hoher p(O2) bei Fruehgeborenen foerdert pathologische Gefaessneubildung in der Retina -- Erblindungsgefahr
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Pruefungsfragen:**
-- p(O2) in Raumluft? 0,21 * 101,3 kPa = 21,2 kPa
-- Warum ist p(O2) in den Alveolen niedriger? Wasserdampf + CO2 verdraengen O2
-- Henry-Gesetz? Mehr Druck = mehr Gas geloest
-
-**Typische Fallen:**
-- Molenbruch (Teilchenanteil) ist nicht Massenanteil!
-- p(H2O) bei 37 Grad C = 6,27 kPa immer abziehen bei Alveolarberechnungen
-- Henry = Gasloeslichkeit; Dalton = Druckverteilung -- nicht verwechseln!
+**Zentral pruefungsrelevant:**
+- Molenbruch = Teilchenanteil (NICHT Massenanteil!) fuer Partialdrucke
+- alveolarer p(O2) = 13,3 kPa (nicht 21,2) -- Wasserdampf (6,27 kPa) + CO2 abziehen!
+- Henry: c = kH*p; mehr Druck = mehr geloest; Temperatur steigt = Loeslichkeit sinkt
+- 1 kPa = 7,5 mmHg; Ziel-pO2 arteriell = 8--13 kPa (60--100 mmHg)
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Dalton**: p_gesamt = Summe pi; pi = xi * p_gesamt
-- **Luft**: 78 % N2, 21 % O2; p(O2) ungefaehr 21 kPa
-- **Alveolen**: p(O2) ungefaehr 13,3 kPa; venoes ungefaehr 5,3 kPa -- O2 diffundiert ins Blut
-- **Wasserdampf** bei 37 Grad C: 6,27 kPa -- immer abziehen!
-- **Henry**: c = kH * p; mehr Druck = mehr Gas geloest (Taucherkrankheit, Sprudel)
-- **Sauerstoff**: Zu wenig = Hypoxie; zu viel = Lungenschaden, Krampfanfall
-- **Umrechnung**: 1 kPa = 7,5 mmHg`,
+- **Dalton**: p_ges = Summe pi; pi = xi*p_ges; xi = ni/n_ges (Molenbruch ≠ Massenanteil!)
+- Luft: 78% N2, 21% O2; p(O2)_alv = 13,3 kPa (Wasserdampf + CO2 verdraengen O2)
+- **Henry**: c = kH*p; Taucherkrankheit (N2-Blasen), CO-Vergiftung (Hyperbare O2)
+- Gasloeslichkeit sinkt mit Temperatur (anders als Feststoffe!)
+- Hyperoxie: Lorrain-Smith (Lunge), Paul-Bert (Krampf), Retinopathie (Fruehgeborene)`,
 
       contentExtended: `## Einleitung
 
@@ -865,89 +884,92 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
       ],
       content: `## Einleitung
 
-Oeffne ein Parfuem am einen Ende des Zimmers -- nach ein paar Sekunden riechst du es am anderen Ende. Das ist **Diffusion**: Gasteilchen wandern von dort, wo es viele gibt, dorthin, wo es wenige gibt. Genau so gelangt Sauerstoff in deiner Lunge aus der eingeatmeten Luft ins Blut. Wie schnell das geht und welche Faktoren dabei eine Rolle spielen, beschreibt das **Ficksche Gesetz**. Und warum leichtere Gase schneller wandern, erklaert das **Grahamsche Gesetz**.
+Parfuem am anderen Ende des Zimmers riechen -- das ist **Diffusion**: spontane Bewegung von Teilchen von hoch zu niedrig konzentriert. Genau so gelangt O2 in der Lunge passiv ins Blut. Das **Ficksche Gesetz** quantifiziert den Fluss, das **Grahamsche Gesetz** erklaert, warum leichtere Gase schneller diffundieren.
 
 **In diesem Kapitel lernst du:**
-- warum Diffusion immer von "viel" nach "wenig" laeuft -- wie Zucker, der sich im Tee von allein verteilt
-- wie das Ficksche Gesetz den Gasaustausch in deiner Lunge beschreibt
-- warum leichtere Gase schneller diffundieren (Graham) -- und CO2 trotzdem schneller durch die Lunge geht als O2
-- was der DLCO-Test in der Klinik misst
+- warum Diffusion immer von "viel" nach "wenig" laeuft -- wie Zucker, der sich im Tee von allein verteilt (Entropiezunahme)
+- wie das Ficksche Gesetz den pulmonalen Gasaustausch quantifiziert (Flaeche, Gradient, Membrandicke)
+- warum leichtere Gase schneller diffundieren (Graham: r proportional 1/Wurzel(M)) -- und CO2 trotzdem 20-mal schneller durch die Lunge geht als O2
+- was der DLCO-Test misst und warum er bei Emphysem und Fibrose erniedrigt ist
 
 ---
 
-## Was ist Diffusion?
+## Diffusion: Spontaner Transport entlang des Konzentrationsgradienten
 
-Stell dir vor, du oeffnest eine Tuete Chips in einem Raum. Der Geruch breitet sich von selbst aus -- ohne dass jemand faechelt. Das ist **Diffusion**: Teilchen bewegen sich zufaellig und verteilen sich dabei gleichmaessig. Die Natur strebt nach Unordnung (Entropie).
+**Diffusion** ist der spontane, thermisch getriebene Transport von Teilchen von Orten hoeherer zu Orten niedrigerer Konzentration. Die Triebkraft ist die Entropiezunahme -- das System strebt nach maximaler Unordnung.
 
-Das **Ficksche Gesetz** beschreibt das mathematisch:
-
-**J = -D * (dc/dx)**
-
-- J = wie viel Stoff pro Flaeche und Zeit fliesst
-- D = Diffusionskoeffizient (wie leicht der Stoff durch das Medium kommt)
-- dc/dx = Konzentrationsgefaelle (je steiler, desto mehr Fluss)
-
-Das Minuszeichen sagt: Der Fluss geht von hoher zu niedriger Konzentration -- immer bergab.
+**J = -D * (dc/dx):** J = Diffusionsstromdichte [mol/(m²·s)], D = Diffusionskoeffizient, dc/dx = Konzentrationsgradient (minus = Fluss von hoch zu niedrig). Diffusionszeitskala: t ~ x²/(2D) -- nm (Zellmembran): Nanosekunden; cm (Organ): Stunden. Grosse Organismen brauchen deshalb ein Kreislaufsystem!
 
 {{DIAGRAM:covalent-bond}}
 
 ---
 
-## Grahamsches Gesetz: Leichtere Gase sind schneller
+## Grahamsches Gesetz: Leichtere Gase diffundieren schneller
 
-Thomas Graham fand 1848 heraus: **Je leichter ein Gas, desto schneller diffundiert es.** Die Formel:
+Thomas Graham (1848) entdeckte: Die **Diffusionsrate** eines Gases ist umgekehrt proportional zur Wurzel seiner molaren Masse:
 
 **r1/r2 = Wurzel(M2/M1)**
 
+Das Gleiche gilt fuer **Effusion** (Ausstromen durch eine winzige Oeffnung ins Vakuum). Physikalische Erklaerung: Bei gleicher Temperatur haben alle Gasmolekuele dieselbe mittlere kinetische Energie (0,5*M*v2 = 3/2*kB*T), woraus folgt: v proportional 1/Wurzel(M).
+
 {{DIAGRAM:periodic-table}}
 
-Beispiel: Wasserstoff (H2, M = 2) vs. Sauerstoff (O2, M = 32). H2 diffundiert Wurzel(32/2) = Wurzel(16) = **4-mal schneller**! Das liegt daran, dass leichtere Molekuele bei gleicher Temperatur schneller fliegen.
+- H2 (M=2) vs. O2 (M=32): r(H2)/r(O2) = √(32/2) = **4** -- H2 diffundiert 4-mal schneller
+- NH3/HCl-Experiment: NH3 (M=17) schneller als HCl (M=36,5); NH4Cl-Niederschlag naeher an HCl-Seite
 
-**Klassisches Experiment:** NH3 (leicht) und HCl (schwer) werden an beiden Enden eines Rohrs freigesetzt. Der weisse Niederschlag bildet sich naeher an der HCl-Seite -- weil das leichtere NH3 schneller gewandert ist.
-
-> **Merke:** Graham: r ist proportional zu 1/Wurzel(M). Das Masseverhaeltnis muss GEWURZELT werden! Masse vierteln = doppelte Geschwindigkeit (nicht: Masse halbieren).
-
----
-
-## Gasaustausch in der Lunge
-
-Deine Lunge hat eine riesige Austauschflaeche (60-80 m2 -- so gross wie ein Tennisplatz!) und eine hauchduenne Membran (0,3-0,5 Mikrometer). Das Ficksche Gesetz fuer Membranen lautet:
-
-**Fluss = (D * A * Druckunterschied) / Dicke**
-
-Grosse Flaeche und duenne Membran = maximaler Gasaustausch. Bei **Lungenemphysem** (Flaeche kleiner) oder **Lungenfibrose** (Membran dicker) wird der Gasaustausch schlechter.
-
-Ueberraschung: **CO2 diffundiert 20-mal schneller als O2** in der Lunge -- obwohl es schwerer ist! Der Grund: CO2 loest sich viel besser in Wasser (24-mal besser). Die hoehere Loeslichkeit schlaegt die hoehere Masse deutlich.
+> **Merke:** Massenverhaeltnis WURZELN! 4-fache Masse = 2-fach langsamer (nicht 4-fach). Diffusion ≠ Effusion.
 
 ---
 
-## Diffusionskoeffizienten im Vergleich
+## Ficksches Gesetz in der Lunge: Gasaustausch optimiert
 
-In Luft diffundieren Gase etwa **10.000-mal schneller** als in Wasser. Deshalb muessen Zellen klein sein (unter 50 Mikrometer) -- damit Naehrstoffe per Diffusion ueberall hinkommen. Groessere Organismen brauchen ein Kreislaufsystem (Blutbahn), weil Diffusion ueber grosse Strecken viel zu langsam waere.
+Fuer den pulmonalen Gasaustausch gilt Ficks Gesetz fuer Membranen:
+
+**Fluss = (D * A * delta_p) / d**
+
+- A = Alveolarflaeche (60-80 m2 -- so gross wie ein Tennisplatz!)
+- D = Diffusionskoeffizient (proportional zu Loeslichkeit / Wurzel(Molmasse))
+- delta_p = Partialdruckgradient ueber der Membran
+- d = Diffusionsstrecke (alveolo-kapillaere Membran: 0,3-0,5 Mikrometer!)
+
+Grosse Flaeche und hauchduenne Membran = maximaler Gasaustausch. Bei **Lungenemphysem** wird die Alveolarflaeche zerstoert (A sinkt) -- bei **Lungenfibrose** verdickt sich die Membran (d steigt) -- beide verschlechtern die Diffusion.
+
+**Ueberraschung: CO2 diffundiert 20-mal schneller als O2** in der Lunge -- obwohl CO2 schwerer ist (44 vs. 32 g/mol)! Der Grund: CO2 ist 24-mal besser in Wasser loeslich. Da D proportional zu Loeslichkeit/Wurzel(M) ist, schlaegt die hoehere Loeslichkeit die hoehere Masse deutlich. Deshalb ist CO2-Abatmung selbst bei stark reduzierter Diffusionskapazitaet noch lange gewaehrleistet, waehrend O2-Aufnahme bereits frueh leidet.
+
+---
+
+## DLCO-Test und Diffusionskapazitaet
+
+Der **DLCO-Test** (Diffusionskapazitaet fuer CO) ist die wichtigste klinische Messung nach Fick:
+- Patient atmet kurz eine geringe CO-Konzentration ein und haelt 10 s die Luft an
+- CO hat 210-mal hoehere Haemoglobin-Affinitaet als O2 --> p_Blut(CO) ungefaehr 0 --> maximaler Gradient immer gewaehrleistet
+- Der gemessene CO-Uptake spiegelt ausschliesslich die Membranparameter (A, d, D) wider
+
+DLCO **erniedrigt** bei: Lungenfibrose (d groesser), Emphysem (A kleiner), pulmonale Hypertonie, Anaemie.
+DLCO **erhoeht** bei: alveolaere Haemorrhagie (Blut in Alveolen bindet CO), Polyzyth­aemie.
+
+---
+
+## Diffusion: biologische Konsequenzen
+
+D(Luft) ~10⁻⁵ m²/s vs. D(Wasser) ~10⁻⁹ m²/s (10.000-fach langsamer in Wasser). Zellen muessen kleiner als ~50 µm sein; groessere Organismen brauchen Kreislauf + Atemwege.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Graham: r proportional zu 1/Wurzel(M) -- Wurzel nicht vergessen!
-- H2 diffundiert 4-mal schneller als O2
-- CO2 schneller als O2 in der Lunge (Loeslichkeit schlaegt Masse)
-- Fick: Fluss = D * A * Druckdifferenz / Dicke
-- DLCO-Test misst die Diffusionskapazitaet der Lunge
-
-**Typische Fallen:**
-- Graham: Massenverhaeltnis WURZELN (nicht direkt verwenden)
-- Diffusion (durch ein Medium) ist nicht dasselbe wie Effusion (durch ein kleines Loch ins Vakuum)
+- Graham: r1/r2 = √(M2/M1) -- Massenverhaeltnis WURZELN! (4-fach groesser = 2-fach langsamer)
+- CO2 in der Lunge 20-mal schneller als O2: Loeslichkeit 24-fach hoeher schlaegt Masse
+- Fick in der Lunge: Fluss = D*A*Δp/d; DLCO erniedrigt bei Emphysem (A↓) und Fibrose (d↑)
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Diffusion**: spontane Verteilung von hoher zu niedriger Konzentration
-- **Fick**: J = -D * dc/dx; in der Lunge: Fluss = D * A * Druckdifferenz / Dicke
-- **Graham**: r1/r2 = Wurzel(M2/M1) -- leichtere Gase diffundieren schneller
-- CO2 diffundiert 20-mal schneller als O2 in der Lunge (hoehere Loeslichkeit)
-- In Wasser ist D 10.000-mal kleiner als in Luft -- deshalb muessen Zellen klein sein
-- DLCO erniedrigt bei Emphysem (Flaeche kleiner) und Fibrose (Membran dicker)`,
+- **Diffusion**: spontaner Transport von hoch nach niedrig (Entropiezunahme)
+- **Fick**: J = -D*dc/dx; Lunge: Fluss = D*A*Δp/d; A = 60--80 m², d = 0,3--0,5 µm
+- **Graham**: r ~ 1/√M; H2 4× schneller als O2; CO2 20× schneller in Lunge (Loeslichkeit!)
+- DLCO: erniedrigt bei Emphysem, Fibrose, Hypertonie, Anaemie
+- D(Luft) 10.000× > D(Wasser); Zellen muss < 50 µm sein`,
       contentExtended: `## Einleitung
 
 Die menschliche Lunge hat eine Austauschfläche von etwa 70 m² — so groß wie eine Einzimmerwohnung. Trotzdem ist die Barriere zwischen Luft und Blut nur 0,5 Mikrometer dünn. Genau diese Kombination aus riesiger Fläche und minimaler Dicke macht den Gasaustausch durch **Diffusion** so effizient: Sauerstoff wandert passiv entlang seines Partialdruckgradienten von der Alveole ins Blut, CO₂ nimmt den umgekehrten Weg. Das **Ficksche Gesetz** beschreibt diesen Prozess quantitativ und erklärt, warum ein Lungenemphysem (weniger Fläche) oder eine Fibrose (dickere Barriere) den Gasaustausch dramatisch verschlechtern.
@@ -1297,25 +1319,22 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
       ],
       content: `## Einleitung
 
-Warum schmilzt Eis im Getraenk, aber Salz bleibt fest? Warum schwimmt ein Eiswuerfel auf dem Wasser -- obwohl feste Stoffe normalerweise schwerer sind als fluessige? Die Antwort liegt in den **Aggregatzustaenden** und den Kraeften zwischen den Teilchen. Je staerker die Teilchen aneinander "kleben", desto heisser muss es werden, damit ein Stoff schmilzt oder siedet.
+Warum schmilzt Eis bei 0 Grad Celsius, aber Kochsalz erst bei 801 Grad? Warum schwimmt ein Eiswuerfel auf dem Wasser -- obwohl feste Stoffe normalerweise dichter als ihre Schmelze sind? Die Antwort liegt in den **Aggregatzustaenden** und den Kraefte zwischen den Teilchen. Je staerker die Teilchen aneinander gebunden sind, desto mehr Energie braucht es, um sie zu trennen. Dazu kommt die einzigartige **Dichteanomalie des Wassers**, die das Leben in Gewaessern erst moeglich macht.
 
 **In diesem Kapitel lernst du:**
-- was fest, fluessig, gasfoermig und Plasma auf Teilchenebene unterscheidet
-- warum Kochsalz erst bei 800 Grad schmilzt, Eis aber schon bei 0 Grad -- vier verschiedene Kristalltypen
-- warum Eis auf Wasser schwimmt und Fische im Winter ueberleben (Dichteanomalie)
-- welche Kraefte zwischen Molekuelen wirken und wie sie Siedepunkte bestimmen
+- was fest, fluessig, gasfoermig und Plasma auf Teilchenebene unterscheidet -- und was sich jeweils veraendert
+- warum NaCl bei 801 Grad schmilzt, Eis aber schon bei 0 Grad -- vier Kristalltypen mit grundlegend verschiedenen Bindungsverhaeltnissen
+- warum Eis auf Wasser schwimmt und Fische im Winter ueberleben (Dichteanomalie, Dichtemax. bei 4 Grad C)
+- welche intermolekularen Kraefte (ionisch, H-Bruecken, Dipol-Dipol, London) Siedepunkte und Loeslichkeit bestimmen
 
 ---
 
 ## Die vier Aggregatzustaende
 
-Stell dir einen Eiswuerfel vor: Die Wassermolekuele sitzen an festen Plaetzen und zittern nur leicht. Das ist der **feste Zustand** -- definierte Form, definiertes Volumen.
-
-Erwaermst du den Eiswuerfel, wird er zu Wasser: Die Teilchen koennen sich bewegen, bleiben aber beieinander. Das ist der **fluessige Zustand** -- nimmt die Form des Glases an, hat aber ein eigenes Volumen.
-
-Kochst du das Wasser, wird es zu Dampf: Die Teilchen fliegen frei herum. Das ist der **gasfoermige Zustand** -- fuellt jeden Raum vollstaendig aus.
-
-Der vierte Zustand ist **Plasma** -- extrem heisses, ionisiertes Gas wie in Sternen oder Blitzen. Nicht verwechseln mit Blutplasma (das ist einfach der fluessige Teil des Blutes).
+- **Fest:** Kristallgitter, nur Schwingung; definierte Form + Volumen, inkompressibel.
+- **Fluessig:** Nahordnung; definiertes Volumen (nicht kompressibel), keine eigene Form. Blut: Viskositaet 3--4 mPa·s > Wasser (1 mPa·s) → erhoeht Gefaesswiderstand.
+- **Gasfoermig:** chaotische Bewegung (N2 bei 25°C: ~515 m/s!); kompressibel, fuellt jeden Raum.
+- **Plasma:** ionisiertes Gas (Sterne, Blitze, APC-Koagulation). Nicht mit Blutplasma verwechseln!
 
 {{DIAGRAM:ionic-bond}}
 
@@ -1323,66 +1342,53 @@ Der vierte Zustand ist **Plasma** -- extrem heisses, ionisiertes Gas wie in Ster
 
 ## Vier Kristalltypen -- warum so unterschiedliche Schmelzpunkte?
 
-Nicht alle Feststoffe sind gleich. Es kommt darauf an, was die Teilchen zusammenhaelt:
-
-- **Ionenkristalle** (z.B. Kochsalz NaCl): Plus- und Minus-Ionen ziehen sich elektrisch an. Sehr hoher Schmelzpunkt (801 Grad), hart, sproede. Leiten Strom nur in Schmelze oder Loesung!
-- **Molekuelkristalle** (z.B. Eis): Schwache Kraefte zwischen den Molekuelen. Niedriger Schmelzpunkt, weich.
-- **Netzwerkkristalle** (z.B. Diamant): Atome durch starke kovalente Bindungen verknuepft. Extrem hart, ueber 3550 Grad Schmelzpunkt.
-- **Metallkristalle** (z.B. Kupfer): Metallionen in einem "Elektronengas". Leiten Strom und Waerme, lassen sich biegen und haemmern.
+| Kristalltyp | Bindung | Schmelzpunkt | Leitfaehigkeit | Beispiel |
+|------------|---------|--------------|----------------|---------|
+| **Ionenkristall** | elektrostatisch | hoch (NaCl: 801°C) | nur Schmelze/Loesung | NaCl, CaCO3 |
+| **Molekuelkristall** | VdW/H-Bruecken | niedrig | keine | Eis, Naphthalin |
+| **Netzwerkkristall** | kovalent | sehr hoch (>3550°C) | keine | Diamant, SiO2 |
+| **Metallkristall** | Elektronengas | mittel-hoch | gut (Elektronengas) | Cu, Fe, Al |
 
 {{DIAGRAM:covalent-bond}}
 
-> **Merke:** Ionenkristalle leiten im festen Zustand NICHT -- erst wenn die Ionen frei beweglich sind (Schmelze oder Loesung). Diamant ist der haerteste natuerliche Stoff, leitet aber keinen Strom.
+> **Merke:** Ionenkristall: leitet als Feststoff NICHT (Ionen fixiert). Diamant: haertester Stoff, kein Leiter. Metall: leitet + duktil.
 
 ---
 
-## Dichteanomalie des Wassers -- warum Eis schwimmt
+## Dichteanomalie des Wassers -- warum Eis schwimmt und Seen nicht komplett gefrieren
 
-Normalerweise ist ein fester Stoff dichter (schwerer pro Volumen) als sein fluessiger Zustand. Wasser ist anders: **Eis ist leichter als fluessiges Wasser** (0,917 vs. 1,0 g/cm3). Deshalb schwimmt der Eiswuerfel im Glas.
+Normalerweise ist ein Feststoff dichter als seine Schmelze. Wasser ist einzigartig: Das Dichtemaximum liegt bei **3,98 Grad C** (rho = 0,9998 g/cm3). Beim Abkuehlen unter 4 Grad sinkt die Dichte wieder. Beim Gefrieren faellt sie auf rho_Eis = 0,917 g/cm3 -- Eis ist also **leichter als fluessiges Wasser**.
 
-Der Grund: Im Eiskristall bilden die Wassermolekuele ein offenes, sechseckiges Gitter mit Luecken. Fluessiges Wasser ist dichter gepackt. Wasser hat seine hoechste Dichte bei **4 Grad Celsius**.
+**Ursache:** Eisgitter = offenes hexagonales H-Brueckennetzwerk (4 H-Bruecken/Molekuel) -- lockerer gepackt als fluessiges Wasser (3,4 H-Bruecken).
 
-**Warum ist das wichtig fuer das Leben?** Im Winter kuehlt ein See von oben ab. Das 4-Grad-Wasser sinkt nach unten (weil es am schwersten ist). Die Oberflaeche gefriert zu Eis -- aber das Eis isoliert wie eine Decke. Darunter bleibt das Wasser fluessig bei 4 Grad. Fische ueberleben.
+**Biologisch lebensnotwendig:** See kuehlt von oben; 4-Grad-Wasser sinkt (schwerster); weiter abkuehlendes Wasser bleibt oben; Oberflaecheis wirkt als Waermeisolator → Fische ueberleben darunter. Ohne Anomalie: Seen frieren von unten → kein aquatisches Leben.
 
 ---
 
-## Intermolekulare Kraefte -- die Rangliste
+## Intermolekulare Kraefte -- die Rangliste bestimmt Siedepunkt und Loeslichkeit
 
-Die Staerke der Kraefte zwischen Molekuelen bestimmt den Siedepunkt:
+Staerkeranking: ionisch (bis 1000 kJ/mol) > H-Bruecken (10--40) > Dipol-Dipol (1--10) > London (alle Molekuele).
 
-1. **Ionische Kraefte** (bis 1000 kJ/mol) -- staerkste: NaCl siedet bei 1413 Grad
-2. **Wasserstoffbruecken** (10-40 kJ/mol): H an N, O oder F gebunden. Deshalb siedet Wasser bei 100 Grad, obwohl es nur 18 g/mol wiegt!
-3. **Dipol-Dipol** (1-10 kJ/mol): zwischen polaren Molekuelen
-4. **London-Dispersionskraefte** (schwach): zwischen allen Molekuelen, staerker bei groesseren Molekuelen
+**H-Bruecken** (N,O,F--H...N,O,F): erklaeren, warum Wasser bei 100°C siedet, CH4 (aehnliche Masse) aber bei -162°C. Differenz 262°C -- allein durch H-Bruecken! Ethanol (46 g/mol, 78°C) vs. Dimethylether (46 g/mol, -24°C): 102°C Unterschied durch OH-Gruppe.
 
-Beispiel: Ethanol (46 g/mol, siedet bei 78 Grad) vs. Dimethylether (auch 46 g/mol, siedet bei -24 Grad). Gleiche Masse, aber 102 Grad Unterschied! Ethanol hat eine OH-Gruppe und bildet H-Bruecken. Dimethylether kann das nicht.
-
-> **Merke:** H-Bruecken nur zwischen H (gebunden an N, O, F) und freiem Elektronenpaar von N, O oder F. Nie mit C-H!
+> **Merke:** H-Bruecken: nur N,O,F -- nie C-H! London: auch in ALLEN unpolaren Molekuelen.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Fluessig = definiertes Volumen, keine eigene Form
-- H2O siedet bei 100 Grad wegen H-Bruecken (CH4 bei -162 Grad, aehnliche Masse!)
-- Dichtemaximum Wasser bei 4 Grad; Eis leichter als Wasser
-- Staerke: ionisch > H-Bruecken > Dipol-Dipol > London
-- NaCl leitet fest NICHT; Metallkristall leitet und ist verformbar
-
-**Typische Fallen:**
-- Eis ist LEICHTER als Wasser (nicht schwerer)
-- H-Bruecken nur N, O, F -- nie C-H
-- Diamant extrem hart, aber leitet NICHT
+- Eis LEICHTER als Wasser (0,917 g/cm³ < 1,0) -- deshalb schwimmt es; Dichtemaximum bei 4°C
+- H-Bruecken nur N,O,F--H; C-H bildet keine; Ionenkristall leitet als Feststoff NICHT
+- Kraeftehierarchie: ionisch > H-Bruecken > Dipol-Dipol > London
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Vier Zustaende**: fest (Gitter), fluessig (Nahordnung), gasfoermig (chaotisch), Plasma (ionisiert)
-- **Kristalltypen**: Ionenkristall (NaCl, hoher Smp.), Molekuelkristall (Eis, niedrig), Netzwerkkristall (Diamant, extrem), Metallkristall (leitend, biegbar)
-- **Dichteanomalie**: Wasser am dichtesten bei 4 Grad; Eis schwimmt; Seen frieren von oben
-- **Kraefte-Rangliste**: ionisch > H-Bruecken > Dipol-Dipol > London
-- H-Bruecken erklaeren: hoher Siedepunkt von Wasser, DNA-Stabilitaet, Proteinstruktur
-- Ethanol vs. Dimethylether: gleiche Masse, 102 Grad Siedepunktdifferenz durch H-Bruecken`,
+- **Aggregatzustaende**: fest (Gitter), fluessig (Nahordnung, def. Volumen), gas (kompressibel), Plasma
+- **Kristalltypen**: Ionenkristall (NaCl, 801°C, nur Schmelze/Loesung leitet); Molekuel (Eis, niedrig); Netzwerk (Diamant, >3550°C, kein Leiter); Metall (leitet, duktil)
+- **Dichteanomalie**: Wasser am dichtesten bei 4°C; Eis schwimmt (0,917 g/cm³); Seen frieren von oben
+- Kraeftehierarchie: ionisch > H-Bruecken (N,O,F) > Dipol-Dipol > London
+- Ethanol vs. Dimethylether (je 46 g/mol): 102°C Siedepunktdifferenz durch H-Bruecken`,
       contentExtended: `## Einleitung
 
 Warum gefrieren Seen im Winter von oben nach unten — und nie komplett durch? Die Antwort liegt in einer physikalischen Besonderheit, die Leben auf der Erde erst möglich macht: der **Dichteanomalie des Wassers**. Wasser erreicht seine höchste Dichte bei 4 °C, sodass das kalte Oberflächenwasser zu Eis wird und eine isolierende Schicht bildet, während darunter flüssiges Wasser bei 4 °C bleibt. Diese und andere faszinierende Eigenschaften der Aggregatzustände — warum Methan bei −162 °C siedet, Wasser aber erst bei 100 °C, oder warum Diamant der härteste natürliche Stoff ist — lassen sich alle auf die Stärke der Kräfte zwischen den Teilchen zurückführen.
@@ -1736,104 +1742,95 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       content: `## Einleitung
 
-Leg einen Eiswuerfel in eine Pfanne und dreh den Herd auf. Was passiert? Erst schmilzt das Eis -- und waehrend es schmilzt, bleibt die Temperatur bei genau 0 Grad, obwohl du staendig Waerme zufuehrst. Erst wenn alles Eis geschmolzen ist, steigt die Temperatur weiter. Diese "versteckte" Energie heisst **latente Waerme** -- und sie erklaert auch, warum eine Dampfverbrennung viel schlimmer ist als heisses Wasser bei der gleichen Temperatur.
+Warum bleibt die Temperatur beim Schmelzen von Eis konstant bei 0°C, obwohl man Waerme zufuehrt? Die Energie geht als **latente Waerme** in die Gitterumordnung -- erst wenn alles Eis geschmolzen ist, steigt die Temperatur. Dampfverbrennungen sind deshalb schlimmer als Wasserverbrennungen bei 100°C: Dampf gibt beim Kondensieren die gesamte Verdampfungswaerme (2257 J/g) extra ab.
 
 **In diesem Kapitel lernst du:**
-- warum die Temperatur waehrend eines Phasenuebergangs konstant bleibt -- obwohl du weiter heizt
-- wie du eine Heizkurve liest und die Plateaus verstehst
-- warum Dampf bei 100 Grad gefaehrlicher ist als Wasser bei 100 Grad
-- warum Streusalz den Gefrierpunkt senkt (kolligative Eigenschaften)
+- die sechs Phasenuebergaenge korrekt benennen (exotherm vs. endotherm) -- Namensverwechslungen sind eine haeufige Falle!
+- warum die Temperatur waehrend eines Phasenuebergangs konstant bleibt (Heizkurven-Plateau)
+- warum Dampf bei 100 Grad gefaehrlicher ist als Wasser bei 100 Grad (Verdampfungswaerme 2257 J/g)
+- wie kolligative Eigenschaften (Gefrierpunktserniedrigung, Siedepunktserhohung) funktionieren und was der Van-t-Hoff-Faktor bedeutet
+- was Tripelpunkt und Sublimation bedeuten (Gefriertrocknung von Impfstoffen)
 
 ---
 
-## Die sechs Phasenuebergaenge
+## Die sechs Phasenuebergaenge -- Nomenklatur ohne Verwechslung
+
+Es gibt genau sechs Uebergaenge zwischen den drei klassischen Aggregatzustaenden. Die Richtung bestimmt, ob Energie benoetigt (endotherm) oder abgegeben (exotherm) wird:
 
 {{DIAGRAM:ionic-bond}}
 
-Es gibt sechs Uebergaenge zwischen den Aggregatzustaenden. Drei davon brauchen Energie (endotherm), drei geben Energie ab (exotherm):
+**Endotherm (Energie wird aufgenommen -- zu "freierem" Zustand):**
+- **Schmelzen**: fest --> fluessig (Eis wird zu Wasser, 0 Grad)
+- **Verdampfen/Sieden**: fluessig --> gasfoermig (Wasser wird zu Dampf, 100 Grad bei 1 bar)
+- **Sublimieren**: fest --> direkt gasfoermig ohne fluessig zu werden (Trockeneis = CO2, Iod, Naphthalin)
 
-**Energie rein (endotherm):**
-- **Schmelzen**: fest nach fluessig (Eis wird zu Wasser)
-- **Verdampfen/Sieden**: fluessig nach gasfoermig (Wasser wird zu Dampf)
-- **Sublimieren**: fest direkt nach gasfoermig (Trockeneis "verdampft" ohne fluessig zu werden)
+**Exotherm (Energie wird abgegeben -- zu "geordneterem" Zustand):**
+- **Erstarren**: fluessig --> fest (Wasser gefriert zu Eis)
+- **Kondensieren**: gasfoermig --> fluessig (Dampf am Badezimmerspiegel)
+- **Resublimieren** (Desublimieren): gasfoermig --> direkt fest (Raureif an Fensterscheiben)
 
-**Energie raus (exotherm):**
-- **Erstarren**: fluessig nach fest (Wasser gefriert)
-- **Kondensieren**: gasfoermig nach fluessig (Dampf am Badezimmerspiegel)
-- **Resublimieren**: gasfoermig nach fest (Raureif am Fenster im Winter)
-
-> **Merke:** Fluessig nach fest heisst Erstarren -- nicht Sublimieren! Fest nach gasfoermig heisst Sublimieren -- nicht Verdampfen! Diese Namen werden gern verwechselt.
+> **Merke:** Fluessig --> fest heisst immer Erstarren, NICHT Sublimieren! Fest --> gasfoermig heisst Sublimieren, NICHT Verdampfen! Diese Verwechslungen kommen im MedAT haeufig vor. Der Umkehrubergang hat stets gleich viel Energie mit umgekehrtem Vorzeichen.
 
 ---
 
 ## Die Heizkurve -- warum bleibt die Temperatur stehen?
 
-Stell dir vor, du heizt Eis von -20 Grad bis ueber 100 Grad. Die Temperatur steigt, macht dann zwei "Pausen":
-
-1. **Pause bei 0 Grad** (Schmelzen): Die Energie bricht das Kristallgitter auf. Solange noch Eis da ist, bleibt es bei 0 Grad.
-2. **Pause bei 100 Grad** (Sieden): Die Energie trennt die Molekuele vollstaendig voneinander. Solange noch fluessiges Wasser da ist, bleibt es bei 100 Grad.
+Heizkurve: 2 Plateaus -- bei 0°C (Schmelzwaerme 333 J/g) und bei 100°C (Verdampfungswaerme 2257 J/g). Warum ist Verdampfungswaerme 7× groesser? Beim Schmelzen loesen sich nur Gitterplaetze; beim Verdampfen muessen ALLE H-Bruecken gebrochen werden.
 
 {{DIAGRAM:covalent-bond}}
 
-Die Siedepause ist etwa **7-mal laenger** als die Schmelzpause. Warum? Zum Verdampfen (2257 J/g) braucht man fast 7-mal mehr Energie als zum Schmelzen (333 J/g). Beim Schmelzen werden nur die Gitterplaetze aufgeloest, beim Verdampfen muessen ALLE Wasserstoffbruecken gebrochen werden.
+> **Merke:** Phasenuebergang: T konstant (latente Waerme). Schmelzen 333 J/g; Verdampfen 2257 J/g (Faktor ~7).
 
 ---
 
 ## Warum sind Dampfverbrennungen so gefaehrlich?
 
-100-Grad-Wasser auf der Haut ist schmerzhaft. Aber 100-Grad-Dampf verursacht viel schwerere Verbrennungen. Der Grund: Wenn Dampf auf deiner Haut kondensiert, gibt er seine gesamte Verdampfungswaerme (2257 J pro Gramm!) als Zusatzenergie ab. Das ist fast 7-mal mehr als die Waerme, die das fluessige Wasser uebertraegt.
-
-**Dein Koerper nutzt den gleichen Effekt umgekehrt:** Beim Schwitzen verdunstet Wasser auf deiner Haut und entzieht dabei Waerme. 1 Liter Schweiss kuehlt mit etwa 2,3 MJ -- das entspricht etwa 627 Watt Kuehlleistung!
+Dampfverbrennung schlimmer als Wasserverbrennung (100°C): Dampf gibt beim Kondensieren 2257 J/g Kondensationswaerme zusaetzlich ab. Schwitzen nutzt denselben Effekt umgekehrt: 1 L/h Schweiss = ~627 W Kuehlleistung. Bei Luftfeuchtigkeit 100% kann Wasser nicht verdunsten → Kuehleffekt entfaellt. Fieber: Perspiratio insensibilis steigt ~12%/°C → Fluessigkeitsbilanz beachten.
 
 ---
 
-## Streusalz und Gefrierpunktserniedrigung
+## Kolligative Eigenschaften: Gefrierpunktserniedrigung und Siedepunktserhohung
 
-Warum streut man im Winter Salz auf die Strasse? Geloeste Teilchen senken den Gefrierpunkt des Wassers. Das ist eine **kolligative Eigenschaft** -- es zaehlt nur, wie VIELE Teilchen geloest sind, nicht welche Art.
+**Kolligative Eigenschaften** haengen ausschliesslich von der Teilchenanzahl ab. **delta_T_f = K_f * b * i** (K_f Wasser = 1,86 K·kg/mol; i = van-t-Hoff-Faktor: Glucose i=1, NaCl i=2, CaCl2 i=3). CaCl2 ist deshalb besseres Streusalz als NaCl.
 
-Die Formel: **Gefrierpunktserniedrigung = K_f * Molalitaet * i**
+**Bsp.:** 0,9% NaCl: delta_T_f = 1,86 * 0,154 * 2 = 0,57°C → Gefrierpunkt -0,57°C ≈ Blutplasma (-0,52°C) → isoton!
 
-- K_f fuer Wasser = 1,86 Grad pro mol/kg
-- i = Van-t-Hoff-Faktor: wie viele Teilchen pro Formeleinheit
-
-Zucker (i = 1): bleibt als ein Teilchen im Wasser. NaCl (i = 2): zerfaellt in Na-Plus und Cl-Minus -- doppelte Wirkung! CaCl2 (i = 3): noch staerker.
-
-Deshalb ist CaCl2 ein besseres Streusalz als NaCl -- es erzeugt 3 Teilchen pro Formeleinheit statt 2.
-
-> **Merke:** Physiologische Kochsalzloesung (0,9 % NaCl) hat einen Gefrierpunkt von etwa -0,52 Grad -- fast gleich wie Blutplasma. Deshalb ist sie als Infusion vertraeglich (isoton).
+**Osmolalitaetslucke** (gemessen - berechnet > 10 mosmol/kg): Hinweis auf Fremdstoffe (Ethanol, Methanol bei Intoxikation).
 
 ---
 
 ## Tripelpunkt und Sublimation
 
-Es gibt genau einen Punkt, an dem Eis, Wasser und Dampf gleichzeitig existieren: den **Tripelpunkt** (0,01 Grad, 611 Pa). Unterhalb dieses Drucks kann Eis direkt zu Dampf werden (Sublimation) ohne fluessig zu werden.
+Es gibt genau einen Punkt, an dem Eis, fluessiges Wasser und Dampf gleichzeitig existieren: den **Tripelpunkt** (0,01 Grad C, 611 Pa). Unterhalb dieses Drucks ist die Fluessigphase nicht stabil -- Eis kann direkt zu Dampf sublimieren, ohne fluessig zu werden.
 
-Das nutzt die **Gefriertrocknung**: Impfstoffe oder Kaffee werden eingefroren, dann wird der Druck gesenkt. Das Eis sublimiert -- uebrig bleibt ein trockenes Pulver, das jahrelang haltbar ist.
+Die **Gefriertrocknung** (Lyophilisation) nutzt genau dieses Prinzip:
+1. Produkt wird eingefroren
+2. Druck wird unter 611 Pa gesenkt
+3. Das Eis sublimiert direkt zu Dampf -- das Wasser wird entzogen
+4. Ergebnis: trockenes Pulver, das jahrelang stabil bleibt
+
+Anwendungen: Impfstoffe, Kaffee, Antibiotika, Blutplasma.
+
+**Siedepunkt ist druckabhaengig:** Auf dem Mount Everest (ca. 340 hPa) siedet Wasser schon bei ca. 70 Grad C -- Nudeln kochen laenger! Im Schnellkochtopf (2 bar) siedet Wasser bei ca. 120 Grad C -- Kochzeit verkuerzt sich.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- 3 endotherm (Schmelzen, Verdampfen, Sublimieren), 3 exotherm
-- Schmelzwaerme Wasser: 333 J/g; Verdampfungswaerme: 2257 J/g (Faktor 7)
-- Dampfverbrennung gefaehrlicher als Wasserverbrennung (Kondensationswaerme)
-- Gefrierpunktserniedrigung: Teilchenanzahl zaehlt! NaCl i=2, CaCl2 i=3
-
-**Typische Fallen:**
-- Namen verwechseln: fluessig nach fest = Erstarren; fest nach gas = Sublimieren
-- Verdunstung (Oberflaeche, jede Temperatur) ist nicht dasselbe wie Sieden (Blasen, bei Siedepunkt)
-- Van-t-Hoff-Faktor i vergessen: Elektrolyte wirken staerker
+- 3 endotherm: Schmelzen, Verdampfen, Sublimieren; 3 exotherm: Erstarren, Kondensieren, Resublimieren
+- fluessig→fest = Erstarren (NICHT Sublimieren!); fest→gas = Sublimieren
+- Schmelzwaerme 333 J/g; Verdampfungswaerme 2257 J/g (Faktor 7); Dampfverbrennung gefaehrlicher!
+- delta_T_f = K_f*b*i; NaCl i=2 (nicht vergessen!); CaCl2 i=3 = bestes Streusalz
 
 ## Zusammenfassung (ultrakompakt)
 
-- **6 Phasenuebergaenge**: 3 endotherm (Schmelzen, Verdampfen, Sublimieren), 3 exotherm
-- Temperatur bleibt waehrend Phasenuebergang konstant (Heizkurven-Plateau)
-- Schmelzwaerme Wasser 333 J/g; Verdampfungswaerme 2257 J/g (7-mal mehr)
-- Dampfverbrennung schlimmer als Wasserverbrennung (Kondensationswaerme frei)
-- Schwitzen kuehlt durch Verdunstung (ca. 627 W bei 1 L/h)
-- Gefrierpunktserniedrigung: je mehr Teilchen, desto tiefer; NaCl i=2, CaCl2 i=3
-- Tripelpunkt Wasser: 0,01 Grad, 611 Pa; Sublimation nur unter Tripelpunktdruck`,
+- **6 Phasenuebergaenge**: endotherm (Schmelzen, Verdampfen, Sublimieren); exotherm (Erstarren, Kondensieren, Resublimieren)
+- Heizkurve: Plateaus bei 0°C (333 J/g) und 100°C (2257 J/g, Faktor ~7)
+- Dampfverbrennung: +2257 J/g Kondensationswaerme; Schwitzen: ~627 W/L
+- Kolligative Eigenschaften: delta_T_f = K_f*b*i; Glucose i=1, NaCl i=2, CaCl2 i=3
+- 0,9% NaCl: delta_T_f = -0,57°C ≈ Blutplasma (-0,52°C) = isoton
+- Tripelpunkt (0,01°C, 611 Pa): Gefriertrocknung = Sublimation unter 611 Pa`,
       contentExtended: `## Einleitung
 
 Wenn du 100 °C heißes Wasser auf die Haut schüttest, ist das schmerzhaft — aber 100 °C heißer Dampf verursacht eine deutlich schwerere Verbrennung. Der Grund: Beim Kondensieren gibt der Dampf seine gesamte **Verdampfungswärme** (2257 J/g) als zusätzliche Energie an die Haut ab. Dieses Beispiel zeigt, dass bei **Phasenübergängen** enorme Energiemengen umgesetzt werden, ohne dass sich die Temperatur ändert. Das Verständnis dieser latenten Wärme ist nicht nur für Verbrennungsmedizin relevant, sondern auch für die Thermoregulation (Schwitzen), die Gefriertrocknung von Impfstoffen und die Frage, warum Streusalz den Gefrierpunkt senkt.

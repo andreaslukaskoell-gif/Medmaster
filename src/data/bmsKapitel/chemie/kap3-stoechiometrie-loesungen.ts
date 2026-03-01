@@ -1160,16 +1160,6 @@ Der **osmotische Druck** ist der Druck, den man braeuchte, um diese Wasserwander
 
 ---
 
-## Alltagsbeispiele
-
-**Streusalz:** NaCl senkt den Gefrierpunkt von Wasser. CaCl₂ (i = 3) wirkt noch staerker als NaCl (i = 2).
-
-**Nudelwasser:** Salz im Kochwasser erhoeht den Siedepunkt minimal -- das ist aber so wenig, dass es beim Kochen kaum auffaellt.
-
-**Eingelegte Gurken:** Gurken in Salzlake schrumpfen, weil die Salzloesung hyperton ist und Wasser aus der Gurke zieht.
-
----
-
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
@@ -1192,8 +1182,7 @@ Der **osmotische Druck** ist der Druck, den man braeuchte, um diese Wasserwander
 - **Gefrierpunkt sinkt:** K_f x Molalitaet x i (K_f Wasser = 1,86)
 - **Siedepunkt steigt:** K_b x Molalitaet x i (K_b Wasser = 0,512)
 - **Osmotischer Druck:** pi = i x c x R x T
-- **Isoton** (NaCl 0,9 %): Zelle OK; **hypoton**: Haemolyse; **hyperton**: Krenation
-- **Plasma-Osmolalitaet** ca. 290 mosmol/kg`,
+- Isoton (NaCl 0,9%): Zelle OK; hypoton: Haemolyse; hyperton: Krenation; Plasma ~290 mosmol/kg`,
       contentExtended: `## Einleitung
 
 Warum platzen rote Blutkörperchen in destilliertem Wasser, schrumpfen in Salzlake, bleiben aber in physiologischer Kochsalzlösung intakt? Die Antwort liegt in den **kolligativen Eigenschaften** — Lösungseigenschaften, die nur von der **Teilchenanzahl** abhängen, nicht von der chemischen Natur des gelösten Stoffes. Osmose, Siedepunktserhöhung und Gefrierpunktserniedrigung gehören zu den wichtigsten Konzepten für das Verständnis von Infusionstherapie, Dialyse und Zellfunktion.

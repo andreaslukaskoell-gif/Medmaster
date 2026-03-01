@@ -28,14 +28,14 @@ export const mathKapAlgebra: Kapitel = {
       ],
       content: `## Einleitung
 
-Du hast 5 Aepfel pro Tuete und brauchst insgesamt 30 Aepfel -- wie viele Tueten brauchst du? Das ist schon eine **lineare Gleichung**: 5x = 30, also x = 6. Das Prinzip ist immer dasselbe: gleiche Operation auf beiden Seiten, bis die gesuchte Groesse allein steht. Ob Preisberechnung, Geschwindigkeitsaufgabe oder Gleichungssystem mit zwei Unbekannten -- wer sicher umformt, loest jede MedAT-Rechenaufgabe.
+Wie viel Milliliter einer Stammlosung brauchst du fuer 100 mL einer bestimmten Konzentration? Hinter solchen klinischen Fragen stecken **lineare Gleichungen** -- und das Prinzip ist immer dasselbe: gleiche Operation auf beiden Seiten, bis die gesuchte Groesse allein steht. Wer sicher umformt, loest jede MedAT-Rechenaufgabe.
 
 **In diesem Kapitel lernst du:**
-- wie Aequivalenzumformungen funktionieren und warum dieselbe Operation immer auf beide Seiten muss
-- wie du lineare Gleichungen Schritt fuer Schritt loest -- von Klammern ueber Brueche bis zur Probe
-- wann du bei zwei Unbekannten Substitution und wann Elimination einsetzt
-- warum bei Ungleichungen die Multiplikation mit einer negativen Zahl das Relationszeichen umdreht
-- wie du quadratische Gleichungen mit der Mitternachtsformel loest
+- wie Aequivalenzumformungen funktionieren (gleiche Operation auf beide Seiten)
+- lineare Gleichungen Schritt fuer Schritt loesen -- Klammern, Brueche, Probe
+- Gleichungssysteme mit zwei Unbekannten: Substitution und Elimination
+- Ungleichungen und die wichtige Vorzeichenumkehr bei negativen Zahlen
+- quadratische Gleichungen mit der Mitternachtsformel loesen
 
 ---
 
@@ -43,117 +43,100 @@ Du hast 5 Aepfel pro Tuete und brauchst insgesamt 30 Aepfel -- wie viele Tueten 
 
 {{DIAGRAM:vector-addition}}
 
-## Grundprinzip der Gleichungsumformung
+## Grundprinzip: Aequivalenzumformung
 
-Eine **Gleichung** ist eine Aussage der Form **A = B**. **Aequivalenzumformung** bedeutet: Du darfst auf **beiden Seiten** dieselbe Operation durchfuehren, ohne die Loesung zu aendern.
+Eine **Gleichung** A = B bleibt gueltig, wenn du auf **beiden Seiten** dieselbe Operation durchfuehrst. Erlaubt: +, −, ×, ÷ (nie durch null!). Ziel: x = ... (Variable isolieren).
 
-Erlaubte Operationen:
-- Addition oder Subtraktion derselben Zahl auf beiden Seiten
-- Multiplikation oder Division beider Seiten mit derselben Zahl (niemals durch null!)
+**Kehrwert-Regel:** (a/b)⁻¹ = b/a. Bruch invertieren = Zaehler und Nenner tauschen.
 
-Ziel ist immer, die gesuchte Variable allein auf einer Seite zu haben: x = ...
-
-**Kehrwert-Regel:** Ist a = b/c, dann ist der Kehrwert 1/a = c/b. Bruch invertieren = Zaehler und Nenner tauschen.
-
-> **Merke:** Was links passiert, passiert auch rechts -- jede Operation auf BEIDE Seiten anwenden. **a = b/c und d = a⁻¹ => d = c/b.**
+> **Merke:** Was links passiert, passiert auch rechts -- immer auf BEIDE Seiten anwenden. Nie durch null dividieren!
 
 ---
 
-## Lineare Gleichungen -- Schritt fuer Schritt
+## Lineare Gleichungen
 
-Eine **lineare Gleichung** hat die Form **ax + b = c**. Rechenweg:
+Eine **lineare Gleichung** hat die Form **ax + b = c**. Loesungsweg:
 
 1. **Klammern** ausmultiplizieren
 2. **Brueche** beseitigen: mit dem Hauptnenner multiplizieren
 3. Alle **x-Terme** auf eine Seite, alle **Zahlen** auf die andere
-4. Durch den **Koeffizienten von x** dividieren
+4. Durch den **Koeffizienten** von x dividieren
 5. **Probe:** Loesung einsetzen
 
-**Beispiel:** 5x − 3 = 2x + 9. Subtrahiere 2x: 3x − 3 = 9. Addiere 3: 3x = 12. Durch 3: **x = 4**. Probe: 5(4) − 3 = 17 = 2(4) + 9 ✓
+**Beispiel:** 5x − 3 = 2x + 9 → 3x = 12 → **x = 4**. Probe: 5(4)−3 = 17 = 2(4)+9 ✓
 
-**Mit Bruechen:** x/3 + x/4 = 7. Hauptnenner 12: 4x + 3x = 84, also x = 12.
+**Mit Bruechen:** x/3 + x/4 = 7 → Hauptnenner 12: 4x + 3x = 84 → x = 12.
 
-**Mit Klammern:** 3(2x − 4) = 2(x + 5) ergibt 6x − 12 = 2x + 10, dann 4x = 22, x = 5,5.
-
-> **Merke:** Schema: (1) Klammern ausmultiplizieren, (2) Brueche beseitigen (Hauptnenner), (3) x-Terme eine Seite, Zahlen andere Seite, (4) durch Koeffizient dividieren, (5) Probe.
+> **Merke:** Schema: Klammern → Brueche → x eine Seite → durch Koeffizient → Probe.
 
 ---
 
 ## Gleichungssysteme mit zwei Unbekannten
 
-Hast du zwei Gleichungen mit zwei Unbekannten (x, y), gibt es zwei Wege:
+Zwei Gleichungen, zwei Unbekannte -- zwei Methoden:
 
-**Substitution:** Eine Gleichung nach einer Variable aufloesen und in die andere einsetzen.
-Beispiel: (I) x + y = 10, (II) 3x − y = 6. Aus (I): y = 10 − x. In (II): 3x − (10 − x) = 6, also 4x = 16, x = 4, y = 6.
+**Substitution:** Eine Gleichung nach einer Variable aufloesen, in die andere einsetzen.
+Beispiel: x + y = 10 und 3x − y = 6. Aus erster: y = 10 − x. Einsetzen: 3x − (10 − x) = 6 → 4x = 16 → x = 4, y = 6.
 
-**Addition/Elimination:** Gleichungen so multiplizieren, dass eine Variable wegfaellt.
-Beispiel: (I) 2x + 3y = 12, (II) 4x − y = 10. Multipliziere (II) mit 3: 12x − 3y = 30. Addiere: 14x = 42, x = 3, y = 2.
+**Elimination:** Gleichungen addieren/subtrahieren, sodass eine Variable wegfaellt.
+Beispiel: 2x + 3y = 12 und 4x − y = 10. Zweite ×3: 12x − 3y = 30. Addieren: 14x = 42 → x = 3, y = 2.
 
-> **Merke:** Substitution passt, wenn eine Variable Koeffizient ±1 hat. Elimination passt, wenn sich Koeffizienten leicht aufheben lassen. Immer Probe in BEIDE Gleichungen!
-
----
-
-## Quadratische Gleichungen (Kurzueberblick)
-
-Die Form ax² + bx + c = 0 loest du mit der **Mitternachtsformel:**
-
-x = (−b ± Wurzel(b² − 4ac)) / (2a)
-
-Die **Diskriminante** D = b² − 4ac verraet dir:
-- D > 0: zwei Loesungen
-- D = 0: genau eine Loesung
-- D < 0: keine reelle Loesung
-
-**Beispiel:** x² − 7x + 12 = 0. Zwei Zahlen mit Summe 7 und Produkt 12 sind 3 und 4. Also x₁ = 3, x₂ = 4.
-
-> **Merke:** Diskriminante D = b² − 4ac entscheidet ueber die Anzahl der Loesungen. Mitternachtsformel: x = (−b ± √D) / (2a).
+> **Merke:** Substitution: gut wenn Koeffizient ±1. Elimination: gut wenn Koeffizienten sich aufheben. Probe in BEIDE Gleichungen!
 
 ---
 
 ## Ungleichungen
 
-Ungleichungen funktionieren wie Gleichungen -- mit einer **wichtigen Ausnahme:** Bei Multiplikation oder Division mit einer **negativen Zahl** dreht sich das Zeichen um!
+Funktionieren wie Gleichungen -- mit einer **kritischen Ausnahme:** Bei ×/÷ mit einer **negativen Zahl** dreht sich das Zeichen um!
 
-**Beispiel:** −3x + 6 > 12. Subtrahiere 6: −3x > 6. Durch −3 (Zeichen dreht!): **x < −2**.
+**Beispiel:** −3x + 6 > 12 → −3x > 6 → x < −2 (Zeichen dreht bei ÷(−3)!).
 
-**Doppelte Ungleichung:** 1 ≤ 2x − 3 < 7. Addiere 3: 4 ≤ 2x < 10. Durch 2: **2 ≤ x < 5**.
+**Doppelte Ungleichung:** 1 ≤ 2x − 3 < 7 → 4 ≤ 2x < 10 → **2 ≤ x < 5**.
 
-> **Merke:** Bei Multiplikation/Division mit einer NEGATIVEN Zahl dreht sich das Ungleichungszeichen um! Aus < wird >, aus ≥ wird ≤.
+> **Merke:** Multiplikation/Division mit NEGATIVER Zahl → Ungleichungszeichen umkehren! < wird >, ≥ wird ≤.
 
 ---
 
-## Alltagsbeispiele
+## Quadratische Gleichungen
 
-**Beispiel 1 -- Preisberechnung:** 5 Hefte kosten zusammen 12,50 €. Wie viel kostet ein Heft? 5x = 12,50, also x = 2,50 €.
+Form ax² + bx + c = 0. Loesung mit der **Mitternachtsformel:**
 
-**Beispiel 2 -- Mischungsaufgabe:** Saft A hat 5 % Zucker, Saft B hat 20 % Zucker. Ziel: 500 mL mit 8 % Zucker. System: V_A + V_B = 500 und 0,05·V_A + 0,20·V_B = 40. Loesung: V_B = 100 mL, V_A = 400 mL.
+x = (−b ± √(b² − 4ac)) / (2a)
+
+Die **Diskriminante** D = b² − 4ac entscheidet:
+- D > 0: zwei Loesungen
+- D = 0: eine Loesung (Doppelwurzel)
+- D < 0: keine reelle Loesung
+
+**Beispiel:** x² − 5x + 6 = 0. Zwei Zahlen mit Summe 5 und Produkt 6: 2 und 3. Loesungen x = 2 und x = 3.
+
+> **Merke:** D = b² − 4ac (nicht 2ac!). Bei D < 0 hat die Gleichung keine reellen Loesungen.
 
 ---
 
 ## MedAT-Fokus
 
 **Typische Aufgabentypen:**
-- „Loese nach x auf“ -- Klammern, Brueche, dann x isolieren
+- Lineare Gleichung nach x aufloesen (Klammern, Brueche)
 - Gleichungssystem mit zwei Unbekannten
 - Ungleichungen mit Vorzeichenumkehr
-- Quadratische Gleichung: Diskriminante, Mitternachtsformel
+- Quadratische Gleichung: D bestimmen, Mitternachtsformel anwenden
 
 **Typische Fallen:**
-- Ungleichung: Vorzeichenumkehr vergessen bei negativer Zahl
-- Diskriminante: D = b² − **4ac** (nicht 2ac)
-- Gleichungssystem: Probe in **beide** Gleichungen
-- Kehrwert: (a/b)⁻¹ = **b/a**
+- Ungleichung: Vorzeichenumkehr bei negativer Zahl vergessen
+- D = b² − **4ac** (nicht 2ac!)
+- Gleichungssystem: Probe nur in eine (nicht beide) Gleichungen
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Aequivalenzumformung:** Gleiche Operation auf beiden Seiten; nie durch null teilen
-- **Lineare Gleichung:** Klammern → Brueche (HN) → x-Terme eine Seite → durch Koeffizient → Probe
+- **Aequivalenzumformung:** Gleiche Operation auf BEIDE Seiten; nie durch null
+- **Lineare Gleichung:** Klammern → Brueche (HN) → x eine Seite → Koeffizient → Probe
 - **Gleichungssystem:** Substitution oder Elimination; Probe in beide Gleichungen
-- **Ungleichung:** Wie Gleichung, aber bei ×/÷ mit **negativer** Zahl Zeichen **umkehren**
+- **Ungleichung:** wie Gleichung, aber bei ×/÷ mit negativer Zahl Zeichen umkehren
 - **Quadratisch:** x = (−b ± √D)/(2a); D = b²−4ac; D>0: 2, D=0: 1, D<0: keine
-- **Typische Fehler:** Vorzeichenumkehr vergessen; D = b²−4ac (nicht 2ac)`,
+- **Typische Fehler:** Vorzeichenumkehr; D-Formel; Probe in beide Gleichungen`,
       contentExtended: `## Einleitung
 
 Wie viel Milliliter einer Stammlosung brauchst du, um 100 mL einer bestimmten Konzentration herzustellen? Welche Dosis erhaelt ein 72-kg-Patient bei 5 mg/kg? Hinter diesen klinischen Alltagsfragen stecken **lineare Gleichungen** -- und das Prinzip ist immer dasselbe: gleiche Operation auf beiden Seiten, bis die gesuchte Groesse allein steht. Ob Verduennungsformel, Dosierungsberechnung oder Gleichungssystem mit zwei Unbekannten -- wer sicher umformt, loest jede MedAT-Rechenaufgabe.
@@ -458,841 +441,6 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
           ],
           difficulty: 2,
           tags: ["dosierung", "morphin", "gleichung"],
-        },
-      ],
-    },
-    {
-      id: "ma-2-02",
-      title: "Prozent-, Bruch- und Schlussrechnung",
-      stichworte: [
-        "Prozentrechnung",
-        "Grundwert",
-        "Prozentwert",
-        "Prozentsatz",
-        "Bruchrechnung",
-        "Kehrwert",
-        "Dreisatz",
-        "Direkter Dreisatz",
-        "Indirekter Dreisatz",
-        "Verhältnis",
-        "Kreuzprodukt",
-        "Verdünnungsreihe",
-      ],
-      content: `## Einleitung
-
-Im Ausverkauf kostet eine Jacke 20 % weniger -- aber 20 % von was? Vom alten Preis oder vom neuen? Hinter solchen Alltagsfragen steckt die **Prozentrechnung**. Zusammen mit **Bruchrechnung** und **Dreisatz** bildet sie das Handwerkszeug fuer Preisvergleiche, Rabatte und Verhaeltnisaufgaben am MedAT.
-
-**In diesem Kapitel lernst du:**
-- wie du die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) mit einer einzigen Formel loest
-- wie Brueche addiert, multipliziert und dividiert werden -- und warum du beim Teilen den Kehrwert nimmst
-- wann du den direkten und wann den indirekten Dreisatz einsetzt
-- was der Unterschied zwischen absoluter und relativer Aenderung ist
-- wie Verduennungsreihen funktionieren
-
----
-
-{{DIAGRAM:percent-fractions}}
-
-{{DIAGRAM:percent-fractions}}
-
-## Prozentrechnung -- die drei Grundfragen
-
-Prozent kommt von „je Hundert“: p % = p/100. Die Grundformel ist: **P = G × p/100**, wobei P = Prozentwert, G = Grundwert, p = Prozentsatz.
-
-**Frage 1 -- Prozentwert:** P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = 48.
-
-**Frage 2 -- Grundwert:** G = P × 100/p. Beispiel: 36 sind 12 % von wie viel? G = 36 × 100/12 = 300.
-
-**Frage 3 -- Prozentsatz:** p = P/G × 100. Beispiel: 45 von 180 Personen = 45/180 × 100 = 25 %.
-
-**Rechentrick:** 10 % = Grundwert durch 10; 5 % = halbe 10 %; 1 % = Grundwert durch 100.
-
-> **Merke:** Drei Formeln aus einer: P = G×p/100; G = P×100/p; p = P/G×100. Rechentrick: 10 % = G÷10; 5 % = halbe 10 %; 1 % = G÷100.
-
----
-
-## Prozentuale Veraenderungen -- absolut vs. relativ
-
-**Absolute Aenderung:** Differenz der Werte (in derselben Einheit).
-**Relative Aenderung:** (Endwert − Anfangswert) / Anfangswert × 100 %.
-
-**Beispiel:** Der Preis steigt von 80 € auf 100 €. Absolute Steigerung: 20 €. Relative Steigerung: 20/80 × 100 = 25 %.
-
-**Achtung:** +50 % und danach −50 % ergibt NICHT den Ausgangswert! 100 → 150 → 75. Die 50 % werden auf den neuen Wert berechnet.
-
-> **Merke:** Absolute Aenderung = Differenz. Relative Aenderung = Differenz/Ausgangswert × 100 %. Von 40 % auf 30 % = 10 Prozentpunkte absolut, aber 25 % relative Senkung!
-
----
-
-## Bruchrechnung
-
-**Kuerzen und Erweitern:** Der Wert aendert sich nicht. 15/25 = 3/5 (durch 5 gekuerzt).
-
-**Addition/Subtraktion:** Erst gleichnamig machen (gemeinsamer Nenner = kgV). Beispiel: 1/6 + 1/4. kgV = 12. Ergebnis: 2/12 + 3/12 = 5/12.
-
-**Multiplikation:** Zaehler × Zaehler, Nenner × Nenner. Beispiel: 3/8 × 4/9 = 12/72 = 1/6.
-
-**Division -- Kehrwert-Trick:** Nie durch einen Bruch teilen! Stattdessen mit dem Kehrwert multiplizieren. Beispiel: (3/4) ÷ (9/16) = 3/4 × 16/9 = 48/36 = 4/3.
-
-> **Merke:** Bruchdivision: NIEMALS durch einen Bruch dividieren -- immer mit dem KEHRWERT multiplizieren.
-
----
-
-## Dreisatz (Schlussrechnung)
-
-**Direkter Dreisatz:** Mehr ergibt mehr. Schema: Auf 1 herunterrechnen, dann hochrechnen.
-Beispiel: 3 Hefte kosten 7,50 €. Was kosten 5? Pro Heft: 7,50/3 = 2,50. Fuer 5: 2,50 × 5 = 12,50 €.
-
-**Indirekter Dreisatz:** Mehr ergibt weniger. Das Produkt bleibt konstant.
-Beispiel: 6 Helfer brauchen 4 Stunden. Wie lange brauchen 4 Helfer? 6 × 4 = 24 Helferstunden. 24/4 = 6 Stunden.
-
-> **Merke:** Erkennungsfrage: „Wenn A groesser wird, wird B dann auch groesser (direkt) oder kleiner (indirekt)?“
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 -- Textaufgabe:** „Gibt man zu einer Zahl zwei Drittel ihrer selbst dazu und nimmt davon ein Drittel der Summe wieder weg, so bleibt 10.“ x + (2/3)x = (5/3)x. Davon 1/3 weg: (5/3)x × (2/3) = (10/9)x = 10. Also x = **9**. Probe: 9 + 6 = 15; 15 − 5 = 10 ✓
-
----
-
-## MedAT-Fokus
-
-**Typische Aufgabentypen:**
-- „X sind wie viel % von Y?“, „W % von G?“, „P ist W % von wie viel?“
-- Relative vs. absolute Aenderung (Prozentpunkte ≠ %-Aenderung)
-- Direkter/indirekter Dreisatz
-- Verduennungsreihen 1:kⁿ
-
-**Minimal-Rechenrezepte:**
-- **Prozent:** P = G×p/100; G = P×100/p; p = P/G×100
-- **Bruchdivision:** (a/b) ÷ (c/d) = (a/b)×(d/c)
-- **Dreisatz direkt:** a/b = c/x ⇒ x = b×c/a. **Indirekt:** a×b = c×x ⇒ x = a×b/c
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Prozentrechnung**: P = G×p/100; Prozentwert, Grundwert und Prozentsatz aus einer Formel
-- **Bruchrechnung**: Addition: gleichnamig machen; Multiplikation: Zaehler × Zaehler; Division: × Kehrwert
-- **Dreisatz**: direkt: a/b = c/x; indirekt: a×b = c×x
-- **Absolute vs. relative Aenderung**: Prozentpunkte ≠ prozentuale Aenderung
-- **Verduennungsreihe**: n Schritte 1:k → Gesamtverduennung 1:kⁿ`,
-      contentExtended: `## Einleitung
-
-Ein neues Medikament senkt die Sterblichkeit von 8 % auf 5 % -- klingt nach wenig, doch die **absolute Risikoreduktion** betraegt 3 Prozentpunkte und die **NNT** liegt bei 33: Du musst nur 33 Patienten behandeln, um einen Todesfall zu verhindern. Solche Fragen stehen am MedAT -- und hinter jeder steckt eine einfache **Prozentrechnung**. Zusammen mit **Bruchrechnung** und **Dreisatz** bildet sie das Handwerkszeug fuer Dosierungen, Verduennungen und die Bewertung klinischer Studien.
-
-**In diesem Kapitel lernst du:**
-- wie du die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) mit einer einzigen Formel loest
-- wie Brueche addiert, multipliziert und dividiert werden -- und warum du beim Teilen den Kehrwert nimmst
-- wann du den direkten und wann den indirekten Dreisatz einsetzt
-- wie du aus klinischen Studien ARR, RRR und NNT berechnest und interpretierst
-- wie Serienverduennungen im Labor funktionieren und was der Verduennungsfaktor bedeutet
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:percent-fractions}}
-
-**Idee:** Prozent ist ein **Verhältnis** („von Hundert“), kein absoluter Wert — p % = p/100; „x % von G“ = (x/100)×G. Die **drei Grundfragen** (Prozentwert P, Grundwert G, Prozentsatz p) leiten sich aus **einer** Formel P = G×p/100 durch Umstellen ab. Beim **Dreisatz** entscheidet die Frage „Wird die gesuchte Größe bei mehr von A größer (direkt) oder kleiner (indirekt)?“ über die Rechenrichtung.
-
-**Verfahren — Schrittfolge:**
-- **Prozentwert P:** P = G×p/100 (direkt). **Grundwert G:** G = P×100/p. **Prozentsatz p:** p = P/G×100.
-- **Bruchdivision:** Nie durch Bruch teilen — mit **Kehrwert** multiplizieren: (a/b) ÷ (c/d) = (a/b)×(d/c). Addition/Subtraktion: zuerst **gleichnamig** machen (kgV der Nenner).
-- **Dreisatz direkt:** Verhältnisgleichung a/b = c/x → x = b×c/a. **Indirekt:** a×b = c×x → x = a×b/c (Produkt konstant).
-- **ARR/NNT:** ARR = Risiko_Kontrolle − Risiko_Behandlung; NNT = 1/ARR (ARR als Dezimalzahl, z. B. 0,03 für 3 %).
-
-**Typische Prüfungsfehler:** Prozentpunkte mit relativer Änderung verwechseln (von 40 % auf 30 % = 10 Prozentpunkte, aber 25 % relative Senkung). Beim Dreisatz direkt vs. indirekt vertauschen (mehr Helfer → weniger Zeit = indirekt!). NNT: ARR zuerst in Dezimalzahl (3 % → 0,03), dann 1/0,03. Bruchdivision: Kehrwert nehmen (Zähler und Nenner tauschen), nicht einfach „durch Zähler teilen“.
-
----
-
-## Prozentrechnung — die drei Grundfragen
-
-
-
-
-
-Das Wort Prozent kommt von lateinisch pro centum, zu Deutsch je Hundert. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts gemeint sind.
-
-Die fundamentale Formel: P = G × p/100, wobei:
-- P = Prozentwert (der gesuchte Anteil)
-- G = Grundwert (die Ausgangsgröße, das Ganze)
-- p = Prozentsatz (in %)
-
-**Prozent als Verhältnis:** **p % = p/100** (z. B. 25 % = 0,25). **„x % von y“** = **(x/100) × y**. Prozent ist kein absoluter Wert, sondern ein Verhältnis zum Grundwert (MedAT-Falle).
-
-Die drei Grundfragen:
-
-Frage 1 — Den Prozentwert berechnen: P = G × p/100 = G × 0,01 × p.
-Beispiel: Wie viel sind 15% von 320 mg? P = 320 × 0,15 = 48 mg.
-Rechentrick: 10% = Grundwert durch 10; 5% = halbe 10%; 1% = Grundwert durch 100.
-15% = 10% + 5% = 32 + 16 = 48 mg.
-
-Frage 2 — Den Grundwert berechnen: G = P / (p/100) = P × 100/p.
-Beispiel: 36 mg sind 12% von wie viel? G = 36 × 100/12 = 300 mg.
-
-Frage 3 — Den Prozentsatz berechnen: p = P/G × 100.
-Beispiel: 45 von 180 Patienten haben eine Komplikation. Wie viel Prozent? p = 45/180 × 100 = 25%.
-
-> **Merke:** Drei Formeln aus einer: P = G×p/100; G = P×100/p; p = P/G×100. Rechentrick: 10% = G÷10; 5% = halbe 10%; 1% = G÷100 — schnell kombinierbar!
-
-## Prozentuale Veränderungen — absolut vs. relativ
-
-Absolute Änderung: Der arithmetische Unterschied zweier Werte (in derselben Einheit).
-
-Relative Änderung (prozentuale Änderung): Die absolute Änderung bezogen auf den Ausgangswert.
-
-Formel: relative Änderung = (Endwert − Anfangswert) / Anfangswert × 100%.
-
-Wichtige Asymmetrie: Eine Erhöhung um 50% gefolgt von einer Senkung um 50% ergibt nicht den Ausgangswert. Ausgangswert 100, nach +50%: 150, nach − 50%: 75. Die 50% Senkung wird auf den neuen Grundwert 150 berechnet.
-
-Beispiel: Blutdruck sinkt von 160 auf 120 mmHg. Absolute Senkung: 40 mmHg. Relative Senkung: 40/160 × 100 = 25%.
-
-> **Merke:** Absolute Änderung = Differenz der Werte (in Einheiten). Relative Änderung = Differenz/Ausgangswert × 100%. Von 40% auf 30% = 10 Prozentpunkte absolut, aber 25% relative Senkung — nicht dasselbe!
-
-## Bruchrechnung — vollständige Regeln
-
-Ein Bruch a/b (a = Zähler, b = Nenner) repräsentiert den Quotienten aus a und b.
-
-Kürzen und Erweitern: Ein Bruch ändert seinen Wert nicht, wenn Zähler und Nenner mit derselben Zahl multipliziert (erweitern) oder dividiert (kürzen) werden.
-15/25 = 3/5 (durch 5 gekürzt); 2/3 = 8/12 (mit 4 erweitert).
-
-Addition und Subtraktion — gleichnamig machen: Brüche können nur addiert/subtrahiert werden, wenn sie denselben Nenner haben. Der gemeinsame Nenner ist das kgV der Nenner.
-Beispiel: 1/6 + 1/4. kgV(6,4) = 12. Erweitern: 2/12 + 3/12 = 5/12.
-
-Multiplikation: a/b × c/d = (a × c) / (b × d). Kürzen vor dem Rechnen vereinfacht.
-Beispiel: 3/8 × 4/9 = 12/72 = 1/6.
-
-Division — Kehrwert-Trick: a/b geteilt durch c/d = a/b × d/c = (a × d) / (b × c).
-Man dividiert nie durch einen Bruch — man multipliziert mit dem Kehrwert.
-Beispiel: (3/4) geteilt durch (9/16) = 3/4 × 16/9 = 48/36 = 4/3.
-
-> **Merke:** Bruchdivision: NIEMALS durch einen Bruch dividieren — immer mit dem KEHRWERT multiplizieren. Addition/Subtraktion: erst gleichnamig machen (kgV der Nenner), dann Zähler verrechnen.
-
-## Dreisatz (Schlussrechnung)
-
-Der Dreisatz ist das universelle Werkzeug für Proportionalitätsaufgaben.
-
-Direkter Dreisatz: Die beiden Größen sind direkt proportional — wenn die eine wächst, wächst die andere im selben Verhältnis.
-
-Schema:
-1. Ausgangsangabe aufstellen (z.B. 3 Tabletten enthalten 750 mg Wirkstoff)
-2. Auf eine Einheit zurückführen (1 Tablette enthält 250 mg)
-3. Auf die gesuchte Menge hochrechnen (5 Tabletten enthalten 1250 mg)
-
-Beispiel Klinik: 50 kg Körpergewicht erfordern 100 mg. Für 70 kg: x = 100/50 × 70 = 140 mg.
-
-Indirekter Dreisatz: Die beiden Größen sind umgekehrt proportional — wenn die eine wächst, wird die andere kleiner. Das Produkt beider Größen bleibt konstant.
-
-Erkennungsmerkmal: Mehr Helfer, weniger Zeit. Höhere Konzentration, kleineres Volumen (bei gleicher Stoffmenge).
-
-Formel: x0 × y0 = x × y, also x = x0 × y0 / y.
-
-Beispiel: 6 Schwestern versorgen Patienten in 4 Stunden. Wie lange brauchen 4 Schwestern?
-Gesamtarbeit = 6 × 4 = 24 Schwesternstunden. Mit 4 Schwestern: 24/4 = 6 Stunden.
-
-Gemischter Dreisatz: Zwei verschiedene Proportionalitätsverhältnisse werden kombiniert. Schrittweise auf Einheitsgröße zurückführen.
-
-> **Merke:** Erkennungsfrage: „Wenn A größer wird, wird B dann auch größer (direkt) oder kleiner (indirekt)?" Direkt: Konstanter Quotient A/B. Indirekt: Konstantes Produkt A×B.
-
-## Verhältnisse und Proportionen
-
-Ein Verhältnis a:b gibt an, wie sich zwei Größen zueinander verhalten. Wichtige Eigenschaft:
-
-Kreuzprodukt: a/b = c/d ist gleichbedeutend mit a × d = b × c.
-
-Beispiel: Wenn x:4 = 9:12, dann 12 × x = 4 × 9 = 36, also x = 3.
-
-Verdünnungsverhältnisse in der Medizin:
-- Serumverdünnung 1:10: 1 Teil Serum, 9 Teile Puffer, Gesamtvolumen 10 Teile.
-- Konzentration der Verdünnung = c_original / 10.
-- Mehrfache Verdünnungen multiplizieren sich: zwei 1:10-Verdünnungen hintereinander ergeben 1:100.
-
-Clearance-Formel: Clearance [mL/min] = (U × V) / P, wobei U = Harnkonzentration, V = Harnfluss, P = Plasmakonzentration. Diese Proportion wird über direkten Dreisatz oder algebraische Umformung gelöst.
-
-## Epidemiologische Kennzahlen — ARR, RRR, NNT
-
-Diese Kennzahlen beschreiben den Nutzen einer Behandlung und kommen häufig im MedAT vor:
-
-- **ARR** (Absolute Risikoreduktion): ARR = Risiko_Kontrolle − Risiko_Behandlung. Gibt an, um wie viel Prozentpunkte das absolute Risiko sinkt.
-- **RRR** (Relative Risikoreduktion): RRR = ARR / Risiko_Kontrolle. Gibt die prozentuale Reduktion relativ zum Ausgangsrisiko an — wirkt größer als ARR.
-- **NNT** (Number Needed to Treat): NNT = 1 / ARR. Wie viele Patienten müssen behandelt werden, damit ein Ereignis verhindert wird? Niedrige NNT = wirksame Therapie.
-
-> **Merke:** ARR = absolut (ehrlich), RRR = relativ (wirkt eindrucksvoller), NNT = klinische Praxis. MedAT fragt meist: Berechne NNT aus gegebener Tabelle.
-
-## Rechenbeispiele
-
-**Beispiel 1 — NNT (Number Needed to Treat):**
-Studie: Medikament senkt Herzinfarktrisiko von 8% auf 5%. ARR (Absolute Risikoreduktion) = 8% − 5% = **3 Prozentpunkte**. RRR (Relative Risikoreduktion) = 3/8 × 100 = **37,5%**. NNT = 1/ARR = 1/0,03 = **33,3** — ca. 34 Patienten müssen behandelt werden, um einen Herzinfarkt zu verhindern.
-
-**Beispiel 2 — Serienverdünnung im Labor:**
-Ausgangstiter: 1:16. Dreifache 1:2-Verdünnung: 1:16 × 2 × 2 × 2 = **1:128**. Gemessene Konzentration: 5 mg/dL. Original: 5 × 128 = **640 mg/dL**. Alternativ: jede Stufe halbiert die Konzentration: 640 → 320 → 160 → 80 → 40 → 20 → 10 → 5 mg/dL (7 Stufen = 1:128).
-
-**Beispiel 3 — Kreatinin-Clearance (Dreisatz):**
-Kreatinin im Urin: U = 120 mg/dL. Harnfluss: V = 1,2 mL/min. Plasma-Kreatinin: P = 1,5 mg/dL. Clearance = (U × V) / P = (120 × 1,2) / 1,5 = 144 / 1,5 = **96 mL/min**. Normwert: 80–120 mL/min → Patient im Normalbereich.
-
-**Beispiel 4 — Textaufgabe „2/3 dazu, 1/3 weg“ (MedAT-typisch):**
-„Gibt man zu einer Zahl zwei Drittel ihrer selbst dazu und nimmt davon ein Drittel dieser Summe wieder weg, so bleibt 10. Wie lautet die Zahl?“ — Zahl = x. Zwei Drittel dazu: x + (2/3)x = (5/3)x. Davon ein Drittel weg: (5/3)x − (1/3)·(5/3)x = (5/3)x·(1 − 1/3) = (5/3)x·(2/3) = (10/9)x. Gleichung: (10/9)x = 10 ⇒ x = **9**. Probe: 9 + 6 = 15; 15 − 5 = 10 ✓.
-
-> **Merke:** „2/3 dazu“ = x + (2/3)x; „1/3 davon weg“ = Rest ist (2/3) der Summe. Sauber als Gleichung aufstellen, dann nach x auflösen.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- „X sind wie viel % von Y?“ → p = X/Y×100
-- „W % von G?“ → P = G×W/100
-- „P ist W % von wie viel?“ → G = P×100/W
-- Relative vs. absolute Änderung (Prozentpunkte ≠ %-Änderung)
-- Direkter/indirekter Dreisatz (Erkennungsfrage: mehr A → mehr oder weniger B?)
-- ARR, RRR, NNT aus Vierfeldertafel oder Risikoangaben
-- Serienverdünnung 1:kⁿ; Originalkonzentration aus Verdünnung zurückrechnen
-
-**Minimal-Rechenrezepte:**
-- **Prozent:** P = G×p/100; G = P×100/p; p = P/G×100. Rechentrick: 10 % = G÷10, 5 % = halbe 10 %, 1 % = G÷100.
-- **Bruchdivision:** (a/b) ÷ (c/d) = (a/b)×(d/c). Addition: gleichnamig (kgV), dann Zähler verrechnen.
-- **Dreisatz direkt:** a/b = c/x ⇒ x = b×c/a. **Indirekt:** a×b = c×x ⇒ x = a×b/c.
-- **ARR/NNT:** ARR = R_Kontrolle − R_Behandlung (als Dezimalzahl); NNT = 1/ARR.
-- **Verdünnung n× 1:k:** Gesamtfaktor 1:kⁿ; Konzentration nach Verdünnung × kⁿ = Original.
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Prozentrechnung**: P% = W/G×100; Prozentwert W = G×P/100; Grundwert G = W×100/P
-- **ARR**: Absoluter Risikountersch. = R_Kontrolle − R_Behandlung; **RRR** = ARR/R_Kontrolle; **NNT** = 1/ARR
-- **Bruchrechnung**: kürzen, erweitern; Mul: Zähler × Zähler / Nenner × Nenner; Div: × Kehrwert
-- **Dreisatz**: direkt: a/b = c/x → x = b×c/a; invers: a×b = c×x → x = a×b/c
-- **Serienverdünnung**: n Schritte 1:k → Gesamtverdünnung 1:kⁿ; Konzentration × Gesamtverdünnung = Original
-- **Klinisch**: Clearance = (U×V)/P; Hämatokrit als %; Ejektionsfraktion (EF) in %`,
-      lernziele: [
-        "Die drei Grundfragen der Prozentrechnung (Prozentwert, Grundwert, Prozentsatz) sicher und schnell lösen",
-        "Absoluten und relativen Unterschied unterscheiden und im klinischen Kontext korrekt interpretieren",
-        "Brüche addieren, subtrahieren, multiplizieren und dividieren, auch bei gemischten Zahlen und komplexen Ausdrücken",
-        "Direkten und indirekten Dreisatz erkennen, unterscheiden und auf klinische Dosierungsaufgaben anwenden",
-        "Verhältnisse und Proportionen mit der Kreuzprodukt-Eigenschaft lösen",
-      ],
-      sections: [
-        {
-          heading: "Prozentrechnung — drei Fragetypen sicher beherrschen",
-          text: "Die Grundformel P = G × p/100 ist der Ausgangspunkt aller drei Fragetypen. Typ 1 (Prozentwert): P = G × p/100 direkt ausrechnen. Typ 2 (Grundwert): Umstellen nach G = P × 100/p. Typ 3 (Prozentsatz): p = P/G × 100. Der häufigste klinische Fehler ist die Verwechslung von Prozentpunkten und prozentualer Änderung: Wenn die Überlebensrate von 80% auf 60% sinkt, ist das 20 Prozentpunkte weniger, aber eine relative Senkung von 25% (= 20/80 × 100). Für den MedAT gilt: genau lesen, welche Angabe gefordert ist.",
-          merksatz:
-            "P = G × p/100. Prozentwert = Grundwert × Prozentsatz/100. Umstellen nach G oder p für die anderen Fragetypen.",
-        },
-        {
-          heading: "Bruchrechnung — die vier Grundoperationen",
-          text: "Addition/Subtraktion: gleichnamig machen (kgV der Nenner finden), dann Zähler addieren/subtrahieren. Multiplikation: Zähler × Zähler, Nenner × Nenner — vorher kürzen spart Arbeit. Division: Kehrwert des zweiten Bruchs nehmen und multiplizieren. Merksatz: Niemals durch einen Bruch dividieren — immer mit dem Kehrwert multiplizieren. In der Medizin erscheinen Brüche überall: Hämatokrit = Erythrozytenvolumen / Gesamtblutvolumen, GFR-Berechnung nach Cockcroft-Gault, Clearance-Formeln.",
-          merksatz:
-            "Division durch Bruch = Multiplikation mit dem Kehrwert: a/b geteilt durch c/d = a/b × d/c.",
-        },
-        {
-          heading: "Dreisatz — direkter vs. indirekter Dreisatz erkennen",
-          text: "Der Schlüssel ist die Frage: Wenn Größe A steigt, steigt dann Größe B auch (direkt) oder sinkt sie (indirekt)? Beispiel direkt: Mehr Körpergewicht erfordert höhere Dosis. Beispiel indirekt: Mehr Schwestern brauchen weniger Zeit für dieselbe Arbeit. Im indirekten Dreisatz bleibt das Produkt beider Größen konstant. In der Klinik: Tropfrate ist direkt proportional zur Menge, indirekt proportional zur Zeit. Verdünnungsberechnung (c1 × V1 = c2 × V2) ist ein indirekter Dreisatz zwischen Konzentration und Volumen.",
-          merksatz:
-            "Direkt: mehr ergibt mehr (gleicher Faktor). Indirekt: mehr ergibt weniger (Produkt konstant). Erkennungsfrage: Wenn A doppelt so groß wird, wird B dann auch doppelt oder halb so groß?",
-        },
-      ],
-      merksätze: [
-        "P = G × p/100; G = P × 100/p; p = P/G × 100 — drei Formeln aus einer.",
-        "Absolute Änderung: Differenz der Werte. Relative Änderung: Differenz/Ausgangswert × 100%.",
-        "Bruchdivision: niemals durch einen Bruch dividieren — immer mit dem Kehrwert multiplizieren.",
-        "Direkter Dreisatz: x/y = const. (proportional). Indirekter Dreisatz: x × y = const. (antiproportional).",
-        "Verhältnis a:b = c:d ergibt Kreuzprodukt: a × d = b × c.",
-        "Verdünnungsformel: c1 × V1 = c2 × V2 ist ein indirekter Dreisatz zwischen c und V.",
-        "1% von G = G/100; 10% = G/10; 25% = G/4; 50% = G/2 — mentale Rechenwege.",
-        "Bruch kürzen: Zähler und Nenner durch denselben Faktor dividieren — Wert bleibt gleich.",
-        "Mehrfache Verdünnung 1:n multipliziert: 1:10 gefolgt von 1:10 ergibt 1:100 Gesamtverdünnung.",
-      ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
-      altfrage: {
-        question:
-          "Ein Labor führt eine 1:4-Verdünnung durch, indem es 1 Teil Serum mit 3 Teilen Puffer mischt. Der gemessene Antikörper-Titer in der Verdünnung beträgt 256 AU/mL. Wie hoch ist der Titer der unverdünnten Probe? Ein anderer Patient hat einen Hämatokrit von 27% (Normwert Frau: 38%). Um wie viel Prozent ist sein Hämatokrit relativ erniedrigt, und wie viele Prozentpunkte beträgt die absolute Erniedrigung?",
-        answer:
-          "Aufgabe 1 — Titer der Originalprobe: Bei einer 1:4-Verdünnung ist die Konzentration auf 1/4 des Originalwerts gesunken. Originalkonzentration = gemessener Wert × Verdünnungsfaktor = 256 × 4 = 1024 AU/mL. Allgemein: bei 1:n-Verdünnung gilt c_original = c_verdünnt × n. Aufgabe 2 — Hämatokrit: Absolute Erniedrigung: 38% − 27% = 11 Prozentpunkte. Relative Erniedrigung: 11/38 × 100 = 28,9%. Der Hämatokrit ist also um 11 Prozentpunkte (absolut) bzw. um etwa 29% (relativ) erniedrigt. Diese Unterscheidung ist klinisch bedeutsam: Eine relative Senkung von 29% klingt dramatischer als 11 Prozentpunkte, beschreibt aber denselben Befund aus unterschiedlicher Perspektive. Im klinischen Bericht sollten immer beide Angaben gemacht werden, um Missverständnisse zu vermeiden.",
-      },
-      klinischerBezug:
-        "Prozentrechnung ist in der Labormedizin allgegenwärtig: Sauerstoffsättigung SpO2 98%, Ejektionsfraktion EF über 55%, Hämatokrit 38 bis 50%, Lymphozytenanteil im Differentialblutbild. Die Verdünnungsformel c1V1 = c2V2 wird täglich bei der Zubereitung von Infusionslösungen, Chemotherapeutika und Antibiotika angewendet. Ein Fehler von 10% bei einer Zytostatikadosis kann die Wirksamkeit drastisch reduzieren oder schwere Nebenwirkungen verursachen.",
-      selfTest: [
-        {
-          question: "84 sind 35% von wie viel?",
-          options: ["240", "140", "420", "294", "196"],
-          correctIndex: 0,
-          explanation:
-            "Grundwert G = P × 100/p = 84 × 100/35 = 8400/35 = 240. Probe: 35% von 240 = 0,35 × 240 = 84. Korrekt. Der Grundwert ist immer größer als der Prozentwert, wenn der Prozentsatz unter 100% liegt. Diese Frage testet den zweiten Fragetyp der Prozentrechnung, der häufig verwechselt wird.",
-          hints: ["Grundwert = Prozentwert × 100 / Prozentsatz.", "84 × 100 / 35 = 8400 / 35 = ?"],
-          difficulty: 2,
-          tags: ["prozentrechnung", "grundwert", "algebra"],
-        },
-        {
-          question:
-            "Von 400 Studierenden bestehen 280 die Aufnahmeprüfung. Wie viel Prozent fallen durch?",
-          options: ["30%", "70%", "28%", "40%", "20%"],
-          correctIndex: 0,
-          explanation:
-            "Durchgefallen: 400 − 280 = 120 Studierende. Prozentsatz: 120/400 × 100 = 30%. Alternativ: Bestehensquote = 280/400 × 100 = 70%, also Durchfallquote = 100% − 70% = 30%. Beide Wege führen zum selben Ergebnis. Der zweite Weg über die Bestehensquote ist oft einfacher im Kopf zu berechnen.",
-          hints: [
-            "Zuerst: Wie viele fallen durch? 400 − 280 = ?",
-            "Prozentsatz = Durchgefallene / Gesamtzahl × 100.",
-          ],
-          difficulty: 1,
-          tags: ["prozentrechnung", "prozentsatz", "statistik"],
-        },
-        {
-          question:
-            "5 Infusionspumpen füllen einen Vorratsbehälter in 12 Stunden. Wie lange brauchen 3 Pumpen?",
-          options: ["20 h", "7,2 h", "36 h", "15 h", "4 h"],
-          correctIndex: 0,
-          explanation:
-            "Indirekter Dreisatz: Weniger Pumpen erfordern mehr Zeit. Gesamtarbeit = 5 × 12 = 60 Pumpenstunden (diese Größe ist konstant). Mit 3 Pumpen: t = 60/3 = 20 Stunden. Erkennungsmerkmal des indirekten Dreisatzes: Mehr Pumpen würden weniger Zeit brauchen — wenn A steigt, sinkt B. Das Produkt A × B bleibt konstant.",
-          hints: [
-            "Indirekter Dreisatz: Pumpen × Zeit = konstant.",
-            "5 × 12 = 3 × x, also x = 60/3.",
-          ],
-          difficulty: 2,
-          tags: ["dreisatz", "indirekt-proportional", "verhältnis"],
-        },
-        {
-          question:
-            "Ein Blutdruck steigt von 120 auf 150 mmHg. Wie groß ist die relative Steigerung?",
-          options: ["25%", "30 mmHg", "20%", "30%", "80%"],
-          correctIndex: 0,
-          explanation:
-            "Relative Änderung = (Endwert − Anfangswert) / Anfangswert × 100 = (150 − 120) / 120 × 100 = 30/120 × 100 = 25%. Die absolute Steigerung ist 30 mmHg, die relative Steigerung 25%. Wichtig: Der Ausgangswert 120 ist der Grundwert, nicht der Endwert 150. Die Frage fragt explizit nach der relativen (prozentualen) Steigerung.",
-          hints: [
-            "Relative Änderung = Differenz / Anfangswert × 100.",
-            "(150 − 120) / 120 × 100 = 30/120 × 100.",
-          ],
-          difficulty: 2,
-          tags: ["prozentrechnung", "relative-änderung", "blutdruck"],
-        },
-        {
-          question:
-            "Eine Serumverdünnung 1:100 zeigt einen Titer von 64 AU/mL. Was ist der Titer der unverdünnten Probe?",
-          options: ["6400 AU/mL", "64 AU/mL", "640 AU/mL", "6,4 AU/mL", "0,64 AU/mL"],
-          correctIndex: 0,
-          explanation:
-            "Bei 1:100-Verdünnung ist die Konzentration auf 1/100 des Originalwerts gesunken. Originalkonzentration = gemessener Wert × Verdünnungsfaktor = 64 × 100 = 6400 AU/mL. Formel: c_original = c_verdünnt × n für eine 1:n-Verdünnung. Dies ist ein direkter Dreisatz rückwärts: In der Verdünnung (100-fach verdünnt) wurden 64 gemessen, also im Original das 100-Fache.",
-          hints: [
-            "1:100-Verdünnung: die gemessene Konzentration ist 1/100 der Originalkonzentration.",
-            "c_original = 64 × 100 = ?",
-          ],
-          difficulty: 2,
-          tags: ["verdünnung", "titer", "dreisatz"],
-        },
-      ],
-    },
-    {
-      id: "ma-2-03",
-      diagram: "coordinate-system",
-      title: "Quadratische Gleichungen und binomische Formeln",
-      stichworte: [
-        "Binomische Formeln",
-        "Quadratische Ergänzung",
-        "Scheitelpunktform",
-        "Normalform",
-        "p-q-Formel",
-        "Faktorisierung",
-        "Nullstellen",
-        "Parabel",
-        "Vieta-Satz",
-        "Diskriminante",
-      ],
-      content: `## Einleitung
-
-Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat ax² + bx + c = 0? Die **Diskriminante** verraet es auf einen Blick.
-
-**In diesem Kapitel lernst du:**
-- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
-- wie du mit der Mitternachtsformel quadratische Gleichungen loest
-- was die Diskriminante ueber die Anzahl der Loesungen aussagt
-- wie du den Scheitelpunkt einer Parabel findest
-- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:percent-fractions}}
-
-## Die drei binomischen Formeln
-
-Alle drei entstehen durch einfaches Ausmultiplizieren:
-
-**1. Formel (Quadrat der Summe):** (a + b)² = a² + **2ab** + b²
-Beispiele: (x + 3)² = x² + 6x + 9; (2x + 5)² = 4x² + 20x + 25
-
-**2. Formel (Quadrat der Differenz):** (a − b)² = a² − **2ab** + b²
-Beispiele: (x − 4)² = x² − 8x + 16
-
-**3. Formel (Differenz der Quadrate):** (a + b)(a − b) = a² − b²
-Beispiele: (x + 5)(x − 5) = x² − 25; 99 × 101 = (100−1)(100+1) = 10000 − 1 = 9999
-
-> **Merke:** (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Haeufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
-
----
-
-## Rueckwaertsanwendung -- Faktorisieren
-
-Die Formeln rueckwaerts gelesen helfen beim Faktorisieren:
-- x² + 6x + 9 = (x+3)² -- erste Formel rueckwaerts
-- x² − 25 = (x+5)(x−5) -- dritte Formel rueckwaerts
-- 4x² − 1 = (2x+1)(2x−1)
-
-> **Merke:** Checkliste: (1) Vollstaendiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. Formel. (3) Vieta. (4) Mitternachtsformel.
-
----
-
-## Scheitelpunktform
-
-Jede quadratische Funktion f(x) = ax² + bx + c hat einen Scheitelpunkt (Hoch- oder Tiefpunkt):
-- **x-Koordinate:** d = −b / (2a)
-- **y-Koordinate:** e = f(d)
-
-Bei a > 0: Minimum (Tal). Bei a < 0: Maximum (Berg).
-
-**Beispiel:** f(x) = x² − 6x + 11. Scheitelpunkt: d = 6/2 = 3. f(3) = 9 − 18 + 11 = 2. Scheitelpunkt: (3, 2).
-
----
-
-## Vieta -- schnelles Loesen
-
-Fuer x² + px + q = 0 gilt: **x₁ + x₂ = −p** und **x₁ × x₂ = q**.
-
-Du suchst also zwei Zahlen, die addiert −p und multipliziert q ergeben.
-
-**Beispiel:** x² − 5x + 6 = 0. Summe = 5, Produkt = 6. Die Zahlen 2 und 3 passen! Also x₁ = 2, x₂ = 3.
-
-> **Merke:** Vieta fuer x² + px + q = 0: Summe = −p; Produkt = q. Funktioniert schnell bei ganzzahligen Loesungen.
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 -- Flaechendifferenz:** Ein quadratisches Beet hat Seitenlaenge (x+2) m, ein zweites (x+8) m. Flaechendifferenz: (x+8)² − (x+2)² = ((x+8)+(x+2))((x+8)−(x+2)) = (2x+10) × 6. Fuer x = 1: 12 × 6 = **72 m²**. Dritte binomische Formel vereinfacht die Rechnung!
-
----
-
-## MedAT-Fokus
-
-**Typische Aufgabentypen:**
-- (a±b)² ausmultiplizieren; faktorisieren
-- Quadratische Gleichung loesen (Mitternachtsformel, D = b²−4ac)
-- Scheitelpunkt berechnen (x_S = −b/(2a))
-- Vieta: zwei Zahlen mit gegebener Summe und Produkt
-
-**Minimal-Rechenrezepte:**
-- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b²
-- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a)
-- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
-- **Quadratische Gleichung**: D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Loesungen, D=0: 1, D<0: keine
-- **Scheitelpunkt**: x_S = −b/(2a); Minimum bei a>0, Maximum bei a<0
-- **Vieta**: x₁+x₂ = −p; x₁×x₂ = q -- Ergebnisse pruefen!
-- **Haeufigster Fehler**: (a+b)² = a²+b² (2ab vergessen)`,
-      contentExtended: `## Einleitung
-
-Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat eine Parabel? Die **Diskriminante** verraet es auf einen Blick. In der Medizin begegnen dir quadratische Zusammenhaenge etwa bei der Koerperoberflaeche (BSA) oder der Pharmakokinetik.
-
-**In diesem Kapitel lernst du:**
-- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
-- wie du mit der pq-Formel und der Mitternachtsformel quadratische Gleichungen loest
-- was die Diskriminante ueber die Anzahl der Loesungen aussagt
-- wie du den Scheitelpunkt einer Parabel findest und wofuer er steht
-- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
-
----
-
-{{DIAGRAM:coordinate-system}}
-
-{{DIAGRAM:percent-fractions}}
-
-**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
-
-**Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
-
-**Typische Prüfungsfehler:** (a+b)² = a²+b² (2ab vergessen). Vieta: Summe = −p (Minus!). Scheitelpunkt: x_S = −b/(2a), nicht b/(2a).
-
----
-
-## Die drei binomischen Formeln — Herleitung und Anwendung
-
-
-
-
-
-Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
-
-### Erste binomische Formel — Quadrat der Summe
-
-(a + b)² = a² + 2ab + b²
-
-Herleitung: (a+b)² = (a+b) × (a+b) = a × a + a × b + b × a + b × b = a² + ab + ba + b² = a² + 2ab + b².
-
-Der mittlere Term 2ab ist der häufigste Vergesskandidat! Der typische Fehler: (a+b)² = a² + b². Das ist falsch.
-
-Beispiele:
-- (x + 3)² = x² + 6x + 9
-- (2x + 5)² = 4x² + 20x + 25 (hier: a = 2x, b = 5)
-- (10 + 0,01)² = 100 + 0,2 + 0,0001 = 100,2001 (schnelle Näherungsrechnung)
-
-### Zweite binomische Formel — Quadrat der Differenz
-
-(a − b)² = a² − 2ab + b²
-
-Herleitung: (a − b)² = (a − b)(a − b) = a² − ab − ba + b² = a² − 2ab + b².
-
-Das mittlere Glied ist negativ (−2ab), die äußeren Quadrate sind positiv. Merkhilfe: Minus in der Mitte.
-
-Beispiele:
-- (x − 4)² = x² − 8x + 16
-- (3x − 2)² = 9x² − 12x + 4
-- (Wurzel aus 5 − 1)² = 5 − 2 Wurzel 5 + 1 = 6 − 2 Wurzel 5
-
-### Dritte binomische Formel — Differenz der Quadrate
-
-(a + b)(a − b) = a² − b²
-
-Herleitung: (a+b)(a − b) = a² − ab + ba − b² = a² − b². Die mittleren Terme heben sich auf.
-
-Diese Formel ist besonders wertvoll für schnelles Faktorisieren und mentale Arithmetik.
-
-Beispiele:
-- (x + 5)(x − 5) = x² − 25
-- (2x + 3)(2x − 3) = 4x² − 9
-- (Wurzel aus 7 + Wurzel aus 3)(Wurzel aus 7 − Wurzel aus 3) = 7 − 3 = 4
-- 99 × 101 = (100 − 1)(100 + 1) = 10000 − 1 = 9999 (mentale Arithmetik)
-
-> **Merke:** Die drei binomischen Formeln: (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Häufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
-
-## Rückwärtsanwendung — Faktorisieren
-
-Die binomischen Formeln rückwärts gelesen ermöglichen das Faktorisieren.
-
-Muster erkennen:
-- x² + 6x + 9 = (x+3)² — erste binomische Formel rückwärts
-- x² − 8x + 16 = (x − 4)² — zweite binomische Formel rückwärts
-- x² − 25 = (x+5)(x − 5) — dritte binomische Formel rückwärts
-- 4x² − 1 = (2x+1)(2x − 1) — dritte binomische Formel mit a=2x, b=1
-
-Vorgehen beim Faktorisieren:
-1. Liegt ein vollständiges Quadrat vor? (a² +/- 2ab + b²) — erste oder zweite binomische Formel.
-2. Liegt eine Differenz zweier Quadrate vor? (a² − b²) — dritte binomische Formel.
-3. Sonst: Vieta'sche Formeln oder allgemeine Lösungsformel verwenden.
-
-> **Merke:** Faktorisier-Checkliste: (1) Vollständiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. binomische Formel. (3) Ganzzahlige Lösungen erkennbar? → Vieta. (4) Sonst → Mitternachtsformel.
-
-## Rationalisierung von Nennern
-
-Mit der dritten binomischen Formel lassen sich Nenner rationalisieren (Wurzeln aus dem Nenner entfernen).
-
-Beispiel: 1 / (Wurzel aus 3 − 1). Erweitern mit (Wurzel aus 3 + 1):
-= (Wurzel aus 3 + 1) / ((Wurzel aus 3 − 1)(Wurzel aus 3 + 1)) = (Wurzel aus 3 + 1) / (3 − 1) = (Wurzel aus 3 + 1) / 2.
-
-## Scheitelpunktform und quadratisches Ergänzen
-
-Jede quadratische Funktion f(x) = ax² + bx + c lässt sich durch quadratisches Ergänzen in die Scheitelpunktform umschreiben:
-
-f(x) = a(x − d)² + e, wobei (d, e) der Scheitelpunkt (Vertex) der Parabel ist.
-
-Der Scheitelpunkt ist das Minimum (wenn a > 0) oder das Maximum (wenn a < 0) der Funktion.
-
-Berechnung des Scheitelpunkts:
-- x-Koordinate: d = − b / (2a)
-- y-Koordinate: e = f(d) = c − b² / (4a)
-
-Quadratisches Ergänzen — schrittweise:
-f(x) = x² + bx + c.
-Schritt 1: x² + bx = (x + b/2)² − (b/2)².
-Schritt 2: f(x) = (x + b/2)² − (b/2)² + c.
-Scheitelpunkt: d = − b/2, e = c − b² / 4.
-
-Beispiel: f(x) = x² − 6x + 11.
-Schritt 1: x² − 6x = (x − 3)² − 9.
-Schritt 2: f(x) = (x − 3)² − 9 + 11 = (x − 3)² + 2.
-Scheitelpunkt: (3, 2). Da a = 1 > 0 ist das Minimum der Funktion gleich 2, erreicht bei x = 3.
-
-## Vieta'sche Formeln
-
-Für eine quadratische Gleichung x² + px + q = 0 (führender Koeffizient 1) mit den Lösungen x1 und x2 gilt:
-
-- x1 + x2 = − p (Summe der Lösungen = negativer Koeffizient von x)
-- x1 × x2 = q (Produkt der Lösungen = konstantes Glied)
-
-Herleitung: x² + px + q = (x − x1)(x − x2) = x² − (x1+x2)x + x1 × x2. Koeffizientenvergleich ergibt die Formeln.
-
-Anwendung: x² − 5x + 6 = 0. Gesucht: zwei Zahlen mit Summe 5 und Produkt 6. Kandidaten: 2 und 3 (2+3=5, 2 × 3=6). Also x1=2, x2=3.
-
-Für allgemeine ax² + bx + c = 0 gilt: x1+x2 = − b/a und x1 × x2 = c/a.
-
-Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe und Produkt der gefundenen Lösungen müssen stimmen.
-
-> **Merke:** Vieta für x² + px + q = 0: Summe x₁+x₂ = −p; Produkt x₁×x₂ = q. Zwei Zahlen mit der richtigen Summe und dem richtigen Produkt finden → fertig. Funktioniert nur bei ganzzahligen/einfachen Lösungen schnell.
-
-## Rechenbeispiele
-
-**Beispiel 1 — BSA-Berechnung (Körperoberfläche nach Mosteller):**
-BSA = Wurzel aus (Größe [cm] × Gewicht [kg] / 3600). Patient: 180 cm, 75 kg. BSA = Wurzel aus (180 × 75 / 3600) = Wurzel aus (13500/3600) = Wurzel aus 3,75 = **1,94 m²**. Zytostatikum 150 mg/m²: Dosis = 150 × 1,94 = **291 mg**.
-
-**Beispiel 2 — Wundfläche und Skalierung (dritte binomische Formel):**
-Runde Wunde mit Radius (r+2) cm am Morgen und (r+8) cm am Abend. Flächendifferenz: pi × ((r+8)² − (r+2)²) = pi × ((r+8)+(r+2)) × ((r+8) − (r+2)) = pi × (2r+10) × 6. Für r = 1: Delta A = pi × 12 × 6 = **72 pi ungefähr 226 cm²**. Dritte binomische Formel vereinfacht die Berechnung erheblich.
-
-**Beispiel 3 — Parabel: Optimale Dosis (Scheitelpunkt):**
-Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_opt = − b/(2a) = − 10/(2 × (−0,5)) = **10 mg**. E_max = − 0,5 × 100 + 100 − 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.
-
-## MedAT-Fokus
-
-**Zur gezielten Prüfungsvorbereitung** im Überblick:
-
-**Typische Aufgabentypen:**
-- (a±b)² ausmultiplizieren; a²±2ab+b² faktorisieren; (a+b)(a−b) = a²−b²
-- Quadratische Gleichung lösen (Mitternachtsformel, D = b²−4ac)
-- Scheitelpunkt aus f(x) = ax²+bx+c (x_S = −b/(2a))
-- Vieta: zwei Zahlen mit gegebener Summe und Produkt; Gleichung aus Lösungen
-
-**Minimal-Rechenrezepte:**
-- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b².
-- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S).
-- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q. **BSA:** √(Größe[cm]×Gewicht[kg]/3600).
-
----
-
-## Zusammenfassung (ultrakompakt)
-
-- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
-- **pq-Formel**: x² + px + q = 0 → x = −p/2 ± √(p²/4 − q); Diskriminante D = p²/4 − q
-- **Scheitelpunktform**: ax² + bx + c; Scheitelpunkt x_S = −b/(2a); Dosisoptimum → Scheitelpunkt
-- **Vieta**: x₁+x₂ = −p; x₁×x₂ = q (für x² + px + q = 0) — Ergebnisse prüfen!
-- **BSA (Mosteller)**: √(Größe×Gewicht/3600); Zytostatikum-Dosierung in mg/m²`,
-      lernziele: [
-        "Die drei binomischen Formeln auswendig kennen, herleiten und vorwärts sowie rückwärts (zum Faktorisieren) anwenden",
-        "Quadratische Ausdrücke durch Erkennen des Musters faktorisieren (vollständige Quadrate und Differenz der Quadrate)",
-        "Den Scheitelpunkt einer Parabel durch quadratisches Ergänzen oder direkte Formel berechnen und die Scheitelpunktform interpretieren",
-        "Die Vieta'schen Formeln zum schnellen Lösen quadratischer Gleichungen und zur Lösungsprüfung nutzen",
-      ],
-      sections: [
-        {
-          heading: "Die drei binomischen Formeln — auswendig und sicher",
-          text: "Formel 1: (a+b)² = a² + 2ab + b². Formel 2: (a − b)² = a² − 2ab + b². Formel 3: (a+b)(a − b) = a² − b². Der häufigste Fehler ist (a+b)² = a² + b² ohne den mittleren Term. Zum Beweis: einfach ausmultiplizieren. Merkhilfe: Erstes Quadrat, doppeltes Produkt, zweites Quadrat für Formel 1 und 2. Formel 3 ist die Differenz der Quadrate — die mittleren Terme heben sich auf. Rückwärts gelesen ermöglicht Formel 3 das schnelle mentale Rechnen: 98 × 102 = (100 − 2)(100 + 2) = 10000 − 4 = 9996.",
-          merksatz:
-            "(a+b)² = a² + 2ab + b² — der mittlere Term 2ab ist der häufigste Vergesskandidat!",
-        },
-        {
-          heading: "Scheitelpunktform und quadratisches Ergänzen",
-          text: "Die Scheitelpunktform f(x) = a(x − d)² + e zeigt direkt das Minimum oder Maximum: (d, e) ist der Scheitelpunkt. Die x-Koordinate d = − b/(2a) ist leicht zu merken — sie entspricht der x-Koordinate der Symmetrieachse der Parabel. Quadratisches Ergänzen: x² + bx wird ergänzt zu (x + b/2)² − (b/2)². Dies ist die Herleitung der allgemeinen Lösungsformel. In der Medizin führen Optimierungsprobleme (minimale Kosten, maximale Wirkung bei minimaler Dosis) zu Parabeln, deren Scheitelpunkt das Optimum beschreibt.",
-          merksatz: "Scheitelpunkt: d = − b/(2a); e = f(d). Bei a>0: Minimum; bei a<0: Maximum.",
-        },
-        {
-          heading: "Vieta und Faktorisierung — schnelles Lösen",
-          text: "Für x² + px + q = 0 sucht man zwei Zahlen, die addiert − p und multipliziert q ergeben. Sind diese Zahlen ganze Zahlen, ist Faktorisieren schneller als die Lösungsformel. Beispiel: x² − 7x + 12 = 0: Summe = 7, Produkt = 12, gesucht sind 3 und 4. Also (x − 3)(x − 4) = 0. Wenn keine ganzzahligen Lösungen erkennbar sind, muss die allgemeine Lösungsformel verwendet werden. Vieta eignet sich auch zur Probe: Wenn x1+x2 ungleich − b/a oder x1 × x2 ungleich c/a, liegt ein Rechenfehler vor.",
-          merksatz:
-            "Vieta für x² + px + q = 0: Summe der Lösungen = − p; Produkt = q. Zwei Zahlen finden, die beides erfüllen.",
-        },
-      ],
-      merksätze: [
-        "(a+b)² = a² + 2ab + b² — nie vergessen: der mittlere Term 2ab!",
-        "(a − b)² = a² − 2ab + b² — mittlerer Term negativ.",
-        "(a+b)(a − b) = a² − b² — Differenz der Quadrate.",
-        "Scheitelpunkt: d = − b/(2a); e = f(d) = c − b² / (4a).",
-        "Vieta: x1+x2 = − b/a; x1 × x2 = c/a für ax² + bx + c = 0.",
-        "Quadratisches Ergänzen: x² + bx = (x + b/2)² − (b/2)².",
-        "Rationalisierung: Nenner mit konjugiertem Ausdruck erweitern und dritte binomische Formel anwenden.",
-        "Faktorisieren: erst a² +/- 2ab + b² oder a² − b² prüfen, dann Vieta, zuletzt Lösungsformel.",
-        "Mentale Arithmetik: 97 × 103 = (100 − 3)(100 + 3) = 10000 − 9 = 9991.",
-        "Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.",
-      ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
-      altfrage: {
-        question:
-          "Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?",
-        answer:
-          "Kreisfläche A = pi × r². Morgens: A1 = pi × (x+3)². Abends: A2 = pi × (x+7)². Bedingung: A2 = 4 × A1. Einsetzen: pi × (x+7)² = 4 × pi × (x+3)². Kürze pi: (x+7)² = 4 × (x+3)². Wurzel ziehen: x+7 = 2(x+3) oder x+7 = − 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = − 2x − 6, also 3x = − 13, x = − 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi × 16, A2 = pi × 64 = 4 × pi × 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.",
-      },
-      klinischerBezug:
-        "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
-      selfTest: [
-        {
-          question: "Was ergibt (3x − 4)²?",
-          options: [
-            "9x² − 24x + 16",
-            "9x² + 16",
-            "6x² − 24x + 16",
-            "9x² − 12x + 16",
-            "9x² − 24x − 16",
-          ],
-          correctIndex: 0,
-          explanation:
-            "(3x − 4)² = (3x)² − 2 × (3x) × 4 + 4² = 9x² − 24x + 16. Zweite binomische Formel mit a = 3x und b = 4. Mittlerer Term: − 2 × (3x) × 4 = − 24x. Äußere Quadrate: (3x)² = 9x² und 4² = 16. Der häufige Fehler wäre das Vergessen des mittleren Terms oder ein falsches Vorzeichen.",
-          hints: [
-            "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
-            "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
-          ],
-          difficulty: 2,
-          tags: ["binomische-formel", "quadrat", "algebra"],
-        },
-        {
-          question: "Welche Faktorisierung gilt für 4x² − 49?",
-          options: [
-            "(2x+7)(2x − 7)",
-            "(4x+7)(x − 7)",
-            "(2x − 7)²",
-            "(4x − 7)(x+7)",
-            "(2x+49)(2x − 1)",
-          ],
-          correctIndex: 0,
-          explanation:
-            "4x² − 49 = (2x)² − 7². Dritte binomische Formel: (2x+7)(2x − 7). Erkenne das Muster: Differenz zweier Quadrate a² − b² mit a = 2x und b = 7. Probe: (2x+7)(2x − 7) = 4x² − 14x + 14x − 49 = 4x² − 49. Korrekt.",
-          hints: ["Erkenne a² − b² mit 4x² = (2x)² und 49 = 7².", "(a+b)(a − b) = a² − b²."],
-          difficulty: 2,
-          tags: ["binomische-formel", "faktorisierung", "differenz-der-quadrate"],
-        },
-        {
-          question: "Was ist der Scheitelpunkt von f(x) = 2x² − 8x + 10?",
-          options: ["(2, 2)", "(−2, 2)", "(4, 10)", "(2, 10)", "(−4, 2)"],
-          correctIndex: 0,
-          explanation:
-            "Scheitelpunkt-x: d = − b / (2a) = − (−8) / (2 × 2) = 8/4 = 2. Scheitelpunkt-y: e = f(2) = 2 × 4 − 8 × 2 + 10 = 8 − 16 + 10 = 2. Scheitelpunkt: (2, 2). Da a = 2 > 0 ist das ein Minimum. Quadratisches Ergänzen bestätigt: 2(x² − 4x + 5) = 2((x − 2)² + 1) = 2(x − 2)² + 2.",
-          hints: ["d = − b/(2a) = 8/4 = 2.", "e = f(2) = 2 × 4 − 8 × 2 + 10 = ?"],
-          difficulty: 2,
-          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
-        },
-        {
-          question: "Mit Vieta: Welche Gleichung hat die Lösungen x1 = − 2 und x2 = 5?",
-          options: [
-            "x² − 3x − 10 = 0",
-            "x² + 3x − 10 = 0",
-            "x² − 3x + 10 = 0",
-            "x² + 7x − 10 = 0",
-            "x² − 7x + 10 = 0",
-          ],
-          correctIndex: 0,
-          explanation:
-            "Summe: x1 + x2 = − 2 + 5 = 3 = − p, also p = − 3. Produkt: x1 × x2 = − 2 × 5 = − 10 = q. Gleichung: x² − 3x − 10 = 0. Probe: (x + 2)(x − 5) = x² − 5x + 2x − 10 = x² − 3x − 10. Korrekt. Die Vieta-Methode liefert direkt die Gleichungskoeffizienten aus Summe und Produkt der Lösungen.",
-          hints: [
-            "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
-            "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
-          ],
-          difficulty: 2,
-          tags: ["vieta", "quadratische-gleichung", "algebra"],
-        },
-        {
-          question: "Was ergibt (Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2)?",
-          options: ["4", "Wurzel aus 8", "8", "Wurzel aus 4", "2 Wurzel aus 3"],
-          correctIndex: 0,
-          explanation:
-            "(Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2) = (Wurzel aus 6)² − (Wurzel aus 2)² = 6 − 2 = 4. Dritte binomische Formel mit a = Wurzel aus 6 und b = Wurzel aus 2. Diese Technik der Rationalisierung ist nützlich, um Nenner von Wurzelausdrücken zu bereinigen und exakte Ergebnisse zu erhalten.",
-          hints: [
-            "(a+b)(a − b) = a² − b² mit a = Wurzel aus 6 und b = Wurzel aus 2.",
-            "(Wurzel aus 6)² = 6; (Wurzel aus 2)² = 2.",
-          ],
-          difficulty: 2,
-          tags: ["binomische-formel", "rationalisierung", "wurzel"],
         },
       ],
     },
@@ -1735,6 +883,1235 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
           ],
           difficulty: 2,
           tags: ["ph-wert", "logarithmus", "säure-base"],
+        },
+      ],
+    },
+    {
+      id: "ma-2-02",
+      title: "Prozent-, Bruch- und Schlussrechnung",
+      stichworte: [
+        "Prozentrechnung",
+        "Grundwert",
+        "Prozentwert",
+        "Prozentsatz",
+        "Bruchrechnung",
+        "Kehrwert",
+        "Dreisatz",
+        "Direkter Dreisatz",
+        "Indirekter Dreisatz",
+        "Verhältnis",
+        "Kreuzprodukt",
+        "Verdünnungsreihe",
+      ],
+      content: `## Einleitung
+
+Im Ausverkauf kostet eine Jacke 20 % weniger -- aber 20 % von was? Hinter solchen Alltagsfragen steckt die **Prozentrechnung**. Zusammen mit **Bruchrechnung** und **Dreisatz** bildet sie das Handwerkszeug fuer Preisvergleiche, Dosierungen und Verhaeltnisaufgaben am MedAT.
+
+**In diesem Kapitel lernst du:**
+- die drei Grundfragen der Prozentrechnung mit einer Formel loesen
+- Brueche addieren, multiplizieren und dividieren (Kehrwert-Trick!)
+- direkten und indirekten Dreisatz erkennen und anwenden
+- den Unterschied zwischen absoluter und relativer Aenderung
+
+---
+
+{{DIAGRAM:percent-fractions}}
+
+{{DIAGRAM:percent-fractions}}
+
+## Prozentrechnung -- die drei Grundfragen
+
+Prozent = „je Hundert": p % = p/100. **Grundformel: P = G × p/100**, wobei P = Prozentwert, G = Grundwert, p = Prozentsatz.
+
+**Frage 1 -- Prozentwert:** P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**.
+
+**Frage 2 -- Grundwert:** G = P × 100/p. Beispiel: 36 sind 12 % von: 36 × 100/12 = **300**.
+
+**Frage 3 -- Prozentsatz:** p = P/G × 100. Beispiel: 45 von 180: 45/180 × 100 = **25 %**.
+
+**Rechentrick:** 10 % = G ÷ 10; 5 % = halbe 10 %; 1 % = G ÷ 100. Kombinierbar!
+
+> **Merke:** Drei Formeln aus einer: P = G×p/100; G = P×100/p; p = P/G×100.
+
+---
+
+## Prozentuale Veraenderungen -- absolut vs. relativ
+
+**Absolute Aenderung:** Differenz der Werte (in Einheiten). **Relative Aenderung:** Differenz/Ausgangswert × 100 %.
+
+**Beispiel:** Blutdruck von 160 auf 120 mmHg: absolut −40 mmHg, relativ −25 %.
+
+**Falle:** +50 % dann −50 % ≠ Ausgangswert! 100 → 150 → 75. Die Prozente beziehen sich auf den **aktuellen** Wert.
+
+> **Merke:** Von 40 % auf 30 % = 10 **Prozentpunkte** absolut, aber 25 % **relative** Senkung -- nicht dasselbe!
+
+---
+
+## Bruchrechnung
+
+**Kuerzen/Erweitern:** Wert aendert sich nicht. 15/25 = 3/5.
+
+**Addition/Subtraktion:** Erst gleichnamig machen (kgV der Nenner). 1/6 + 1/4: kgV = 12 → 2/12 + 3/12 = **5/12**.
+
+**Multiplikation:** Zaehler × Zaehler, Nenner × Nenner. 3/8 × 4/9 = 12/72 = **1/6**.
+
+**Division -- Kehrwert-Trick:** Nie durch einen Bruch dividieren -- mit dem Kehrwert multiplizieren!
+(3/4) ÷ (9/16) = 3/4 × 16/9 = 48/36 = **4/3**.
+
+> **Merke:** Bruchdivision: IMMER mit dem KEHRWERT multiplizieren: (a/b) ÷ (c/d) = (a×d)/(b×c).
+
+---
+
+## Dreisatz
+
+**Direkter Dreisatz:** Mehr von A → mehr von B. Auf 1 herunter, dann hochrechnen.
+Beispiel: 3 Hefte = 7,50 €. 5 Hefte? 7,50/3 × 5 = **12,50 €**.
+
+**Indirekter Dreisatz:** Mehr von A → weniger von B. Produkt A × B bleibt konstant.
+Beispiel: 6 Helfer brauchen 4 Stunden. 4 Helfer? 6 × 4/4 = **6 Stunden**.
+
+> **Merke:** Erkennungsfrage: „Wird B groesser oder kleiner, wenn A groesser wird?" Groesser = direkt, kleiner = indirekt.
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- Prozentwert, Grundwert, Prozentsatz berechnen
+- Absolute vs. relative Aenderung (Prozentpunkte ≠ %-Aenderung)
+- Direkter/indirekter Dreisatz unterscheiden
+- Bruchdivision mit Kehrwert
+
+**Typische Fallen:**
+- +50 %, dann −50 % ≠ Ausgangswert
+- Bruchdivision: Kehrwert nehmen, nicht einfach teilen
+- Dreisatz: direkt vs. indirekt verwechseln
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Prozent:** P = G×p/100; G = P×100/p; p = P/G×100
+- **Bruchrechnung:** Addition: kgV-Nenner; Multiplikation: Zaehler×Zaehler; Division: ×Kehrwert
+- **Dreisatz direkt:** a/b = c/x; **indirekt:** a×b = c×x
+- **Absolute vs. relative Aenderung:** Prozentpunkte ≠ prozentuale Aenderung
+- **Falle:** Sequenzielle Prozente: +50 %, −50 % ≠ 0 %`,
+      contentExtended: `## Einleitung
+
+Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat eine Parabel? Die **Diskriminante** verraet es auf einen Blick. In der Medizin begegnen dir quadratische Zusammenhaenge etwa bei der Koerperoberflaeche (BSA) oder der Pharmakokinetik.
+
+**In diesem Kapitel lernst du:**
+- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
+- wie du mit der pq-Formel und der Mitternachtsformel quadratische Gleichungen loest
+- was die Diskriminante ueber die Anzahl der Loesungen aussagt
+- wie du den Scheitelpunkt einer Parabel findest und wofuer er steht
+- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:percent-fractions}}
+
+**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+
+**Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
+
+**Typische Prüfungsfehler:** (a+b)² = a²+b² (2ab vergessen). Vieta: Summe = −p (Minus!). Scheitelpunkt: x_S = −b/(2a), nicht b/(2a).
+
+---
+
+## Die drei binomischen Formeln — Herleitung und Anwendung
+
+
+
+
+
+Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
+
+### Erste binomische Formel — Quadrat der Summe
+
+(a + b)² = a² + 2ab + b²
+
+Herleitung: (a+b)² = (a+b) × (a+b) = a × a + a × b + b × a + b × b = a² + ab + ba + b² = a² + 2ab + b².
+
+Der mittlere Term 2ab ist der häufigste Vergesskandidat! Der typische Fehler: (a+b)² = a² + b². Das ist falsch.
+
+Beispiele:
+- (x + 3)² = x² + 6x + 9
+- (2x + 5)² = 4x² + 20x + 25 (hier: a = 2x, b = 5)
+- (10 + 0,01)² = 100 + 0,2 + 0,0001 = 100,2001 (schnelle Näherungsrechnung)
+
+### Zweite binomische Formel — Quadrat der Differenz
+
+(a − b)² = a² − 2ab + b²
+
+Herleitung: (a − b)² = (a − b)(a − b) = a² − ab − ba + b² = a² − 2ab + b².
+
+Das mittlere Glied ist negativ (−2ab), die äußeren Quadrate sind positiv. Merkhilfe: Minus in der Mitte.
+
+Beispiele:
+- (x − 4)² = x² − 8x + 16
+- (3x − 2)² = 9x² − 12x + 4
+- (Wurzel aus 5 − 1)² = 5 − 2 Wurzel 5 + 1 = 6 − 2 Wurzel 5
+
+### Dritte binomische Formel — Differenz der Quadrate
+
+(a + b)(a − b) = a² − b²
+
+Herleitung: (a+b)(a − b) = a² − ab + ba − b² = a² − b². Die mittleren Terme heben sich auf.
+
+Diese Formel ist besonders wertvoll für schnelles Faktorisieren und mentale Arithmetik.
+
+Beispiele:
+- (x + 5)(x − 5) = x² − 25
+- (2x + 3)(2x − 3) = 4x² − 9
+- (Wurzel aus 7 + Wurzel aus 3)(Wurzel aus 7 − Wurzel aus 3) = 7 − 3 = 4
+- 99 × 101 = (100 − 1)(100 + 1) = 10000 − 1 = 9999 (mentale Arithmetik)
+
+> **Merke:** Die drei binomischen Formeln: (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Häufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
+
+## Rückwärtsanwendung — Faktorisieren
+
+Die binomischen Formeln rückwärts gelesen ermöglichen das Faktorisieren.
+
+Muster erkennen:
+- x² + 6x + 9 = (x+3)² — erste binomische Formel rückwärts
+- x² − 8x + 16 = (x − 4)² — zweite binomische Formel rückwärts
+- x² − 25 = (x+5)(x − 5) — dritte binomische Formel rückwärts
+- 4x² − 1 = (2x+1)(2x − 1) — dritte binomische Formel mit a=2x, b=1
+
+Vorgehen beim Faktorisieren:
+1. Liegt ein vollständiges Quadrat vor? (a² +/- 2ab + b²) — erste oder zweite binomische Formel.
+2. Liegt eine Differenz zweier Quadrate vor? (a² − b²) — dritte binomische Formel.
+3. Sonst: Vieta'sche Formeln oder allgemeine Lösungsformel verwenden.
+
+> **Merke:** Faktorisier-Checkliste: (1) Vollständiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. binomische Formel. (3) Ganzzahlige Lösungen erkennbar? → Vieta. (4) Sonst → Mitternachtsformel.
+
+## Rationalisierung von Nennern
+
+Mit der dritten binomischen Formel lassen sich Nenner rationalisieren (Wurzeln aus dem Nenner entfernen).
+
+Beispiel: 1 / (Wurzel aus 3 − 1). Erweitern mit (Wurzel aus 3 + 1):
+= (Wurzel aus 3 + 1) / ((Wurzel aus 3 − 1)(Wurzel aus 3 + 1)) = (Wurzel aus 3 + 1) / (3 − 1) = (Wurzel aus 3 + 1) / 2.
+
+## Scheitelpunktform und quadratisches Ergänzen
+
+Jede quadratische Funktion f(x) = ax² + bx + c lässt sich durch quadratisches Ergänzen in die Scheitelpunktform umschreiben:
+
+f(x) = a(x − d)² + e, wobei (d, e) der Scheitelpunkt (Vertex) der Parabel ist.
+
+Der Scheitelpunkt ist das Minimum (wenn a > 0) oder das Maximum (wenn a < 0) der Funktion.
+
+Berechnung des Scheitelpunkts:
+- x-Koordinate: d = − b / (2a)
+- y-Koordinate: e = f(d) = c − b² / (4a)
+
+Quadratisches Ergänzen — schrittweise:
+f(x) = x² + bx + c.
+Schritt 1: x² + bx = (x + b/2)² − (b/2)².
+Schritt 2: f(x) = (x + b/2)² − (b/2)² + c.
+Scheitelpunkt: d = − b/2, e = c − b² / 4.
+
+Beispiel: f(x) = x² − 6x + 11.
+Schritt 1: x² − 6x = (x − 3)² − 9.
+Schritt 2: f(x) = (x − 3)² − 9 + 11 = (x − 3)² + 2.
+Scheitelpunkt: (3, 2). Da a = 1 > 0 ist das Minimum der Funktion gleich 2, erreicht bei x = 3.
+
+## Vieta'sche Formeln
+
+Für eine quadratische Gleichung x² + px + q = 0 (führender Koeffizient 1) mit den Lösungen x1 und x2 gilt:
+
+- x1 + x2 = − p (Summe der Lösungen = negativer Koeffizient von x)
+- x1 × x2 = q (Produkt der Lösungen = konstantes Glied)
+
+Herleitung: x² + px + q = (x − x1)(x − x2) = x² − (x1+x2)x + x1 × x2. Koeffizientenvergleich ergibt die Formeln.
+
+Anwendung: x² − 5x + 6 = 0. Gesucht: zwei Zahlen mit Summe 5 und Produkt 6. Kandidaten: 2 und 3 (2+3=5, 2 × 3=6). Also x1=2, x2=3.
+
+Für allgemeine ax² + bx + c = 0 gilt: x1+x2 = − b/a und x1 × x2 = c/a.
+
+Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe und Produkt der gefundenen Lösungen müssen stimmen.
+
+> **Merke:** Vieta für x² + px + q = 0: Summe x₁+x₂ = −p; Produkt x₁×x₂ = q. Zwei Zahlen mit der richtigen Summe und dem richtigen Produkt finden → fertig. Funktioniert nur bei ganzzahligen/einfachen Lösungen schnell.
+
+## Rechenbeispiele
+
+**Beispiel 1 — BSA-Berechnung (Körperoberfläche nach Mosteller):**
+BSA = Wurzel aus (Größe [cm] × Gewicht [kg] / 3600). Patient: 180 cm, 75 kg. BSA = Wurzel aus (180 × 75 / 3600) = Wurzel aus (13500/3600) = Wurzel aus 3,75 = **1,94 m²**. Zytostatikum 150 mg/m²: Dosis = 150 × 1,94 = **291 mg**.
+
+**Beispiel 2 — Wundfläche und Skalierung (dritte binomische Formel):**
+Runde Wunde mit Radius (r+2) cm am Morgen und (r+8) cm am Abend. Flächendifferenz: pi × ((r+8)² − (r+2)²) = pi × ((r+8)+(r+2)) × ((r+8) − (r+2)) = pi × (2r+10) × 6. Für r = 1: Delta A = pi × 12 × 6 = **72 pi ungefähr 226 cm²**. Dritte binomische Formel vereinfacht die Berechnung erheblich.
+
+**Beispiel 3 — Parabel: Optimale Dosis (Scheitelpunkt):**
+Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_opt = − b/(2a) = − 10/(2 × (−0,5)) = **10 mg**. E_max = − 0,5 × 100 + 100 − 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- (a±b)² ausmultiplizieren; a²±2ab+b² faktorisieren; (a+b)(a−b) = a²−b²
+- Quadratische Gleichung lösen (Mitternachtsformel, D = b²−4ac)
+- Scheitelpunkt aus f(x) = ax²+bx+c (x_S = −b/(2a))
+- Vieta: zwei Zahlen mit gegebener Summe und Produkt; Gleichung aus Lösungen
+
+**Minimal-Rechenrezepte:**
+- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b².
+- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S).
+- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q. **BSA:** √(Größe[cm]×Gewicht[kg]/3600).
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
+- **pq-Formel**: x² + px + q = 0 → x = −p/2 ± √(p²/4 − q); Diskriminante D = p²/4 − q
+- **Scheitelpunktform**: ax² + bx + c; Scheitelpunkt x_S = −b/(2a); Dosisoptimum → Scheitelpunkt
+- **Vieta**: x₁+x₂ = −p; x₁×x₂ = q (für x² + px + q = 0) — Ergebnisse prüfen!
+- **BSA (Mosteller)**: √(Größe×Gewicht/3600); Zytostatikum-Dosierung in mg/m²`,
+      lernziele: [
+        "Die drei binomischen Formeln auswendig kennen, herleiten und vorwärts sowie rückwärts (zum Faktorisieren) anwenden",
+        "Quadratische Ausdrücke durch Erkennen des Musters faktorisieren (vollständige Quadrate und Differenz der Quadrate)",
+        "Den Scheitelpunkt einer Parabel durch quadratisches Ergänzen oder direkte Formel berechnen und die Scheitelpunktform interpretieren",
+        "Die Vieta'schen Formeln zum schnellen Lösen quadratischer Gleichungen und zur Lösungsprüfung nutzen",
+      ],
+      sections: [
+        {
+          heading: "Die drei binomischen Formeln — auswendig und sicher",
+          text: "Formel 1: (a+b)² = a² + 2ab + b². Formel 2: (a − b)² = a² − 2ab + b². Formel 3: (a+b)(a − b) = a² − b². Der häufigste Fehler ist (a+b)² = a² + b² ohne den mittleren Term. Zum Beweis: einfach ausmultiplizieren. Merkhilfe: Erstes Quadrat, doppeltes Produkt, zweites Quadrat für Formel 1 und 2. Formel 3 ist die Differenz der Quadrate — die mittleren Terme heben sich auf. Rückwärts gelesen ermöglicht Formel 3 das schnelle mentale Rechnen: 98 × 102 = (100 − 2)(100 + 2) = 10000 − 4 = 9996.",
+          merksatz:
+            "(a+b)² = a² + 2ab + b² — der mittlere Term 2ab ist der häufigste Vergesskandidat!",
+        },
+        {
+          heading: "Scheitelpunktform und quadratisches Ergänzen",
+          text: "Die Scheitelpunktform f(x) = a(x − d)² + e zeigt direkt das Minimum oder Maximum: (d, e) ist der Scheitelpunkt. Die x-Koordinate d = − b/(2a) ist leicht zu merken — sie entspricht der x-Koordinate der Symmetrieachse der Parabel. Quadratisches Ergänzen: x² + bx wird ergänzt zu (x + b/2)² − (b/2)². Dies ist die Herleitung der allgemeinen Lösungsformel. In der Medizin führen Optimierungsprobleme (minimale Kosten, maximale Wirkung bei minimaler Dosis) zu Parabeln, deren Scheitelpunkt das Optimum beschreibt.",
+          merksatz: "Scheitelpunkt: d = − b/(2a); e = f(d). Bei a>0: Minimum; bei a<0: Maximum.",
+        },
+        {
+          heading: "Vieta und Faktorisierung — schnelles Lösen",
+          text: "Für x² + px + q = 0 sucht man zwei Zahlen, die addiert − p und multipliziert q ergeben. Sind diese Zahlen ganze Zahlen, ist Faktorisieren schneller als die Lösungsformel. Beispiel: x² − 7x + 12 = 0: Summe = 7, Produkt = 12, gesucht sind 3 und 4. Also (x − 3)(x − 4) = 0. Wenn keine ganzzahligen Lösungen erkennbar sind, muss die allgemeine Lösungsformel verwendet werden. Vieta eignet sich auch zur Probe: Wenn x1+x2 ungleich − b/a oder x1 × x2 ungleich c/a, liegt ein Rechenfehler vor.",
+          merksatz:
+            "Vieta für x² + px + q = 0: Summe der Lösungen = − p; Produkt = q. Zwei Zahlen finden, die beides erfüllen.",
+        },
+      ],
+      merksätze: [
+        "(a+b)² = a² + 2ab + b² — nie vergessen: der mittlere Term 2ab!",
+        "(a − b)² = a² − 2ab + b² — mittlerer Term negativ.",
+        "(a+b)(a − b) = a² − b² — Differenz der Quadrate.",
+        "Scheitelpunkt: d = − b/(2a); e = f(d) = c − b² / (4a).",
+        "Vieta: x1+x2 = − b/a; x1 × x2 = c/a für ax² + bx + c = 0.",
+        "Quadratisches Ergänzen: x² + bx = (x + b/2)² − (b/2)².",
+        "Rationalisierung: Nenner mit konjugiertem Ausdruck erweitern und dritte binomische Formel anwenden.",
+        "Faktorisieren: erst a² +/- 2ab + b² oder a² − b² prüfen, dann Vieta, zuletzt Lösungsformel.",
+        "Mentale Arithmetik: 97 × 103 = (100 − 3)(100 + 3) = 10000 − 9 = 9991.",
+        "Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question:
+          "Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?",
+        answer:
+          "Kreisfläche A = pi × r². Morgens: A1 = pi × (x+3)². Abends: A2 = pi × (x+7)². Bedingung: A2 = 4 × A1. Einsetzen: pi × (x+7)² = 4 × pi × (x+3)². Kürze pi: (x+7)² = 4 × (x+3)². Wurzel ziehen: x+7 = 2(x+3) oder x+7 = − 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = − 2x − 6, also 3x = − 13, x = − 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi × 16, A2 = pi × 64 = 4 × pi × 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.",
+      },
+      klinischerBezug:
+        "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
+      selfTest: [
+        {
+          question: "Was ergibt (3x − 4)²?",
+          options: [
+            "9x² − 24x + 16",
+            "9x² + 16",
+            "6x² − 24x + 16",
+            "9x² − 12x + 16",
+            "9x² − 24x − 16",
+          ],
+          correctIndex: 0,
+          explanation:
+            "(3x − 4)² = (3x)² − 2 × (3x) × 4 + 4² = 9x² − 24x + 16. Zweite binomische Formel mit a = 3x und b = 4. Mittlerer Term: − 2 × (3x) × 4 = − 24x. Äußere Quadrate: (3x)² = 9x² und 4² = 16. Der häufige Fehler wäre das Vergessen des mittleren Terms oder ein falsches Vorzeichen.",
+          hints: [
+            "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
+            "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "quadrat", "algebra"],
+        },
+        {
+          question: "Welche Faktorisierung gilt für 4x² − 49?",
+          options: [
+            "(2x+7)(2x − 7)",
+            "(4x+7)(x − 7)",
+            "(2x − 7)²",
+            "(4x − 7)(x+7)",
+            "(2x+49)(2x − 1)",
+          ],
+          correctIndex: 0,
+          explanation:
+            "4x² − 49 = (2x)² − 7². Dritte binomische Formel: (2x+7)(2x − 7). Erkenne das Muster: Differenz zweier Quadrate a² − b² mit a = 2x und b = 7. Probe: (2x+7)(2x − 7) = 4x² − 14x + 14x − 49 = 4x² − 49. Korrekt.",
+          hints: ["Erkenne a² − b² mit 4x² = (2x)² und 49 = 7².", "(a+b)(a − b) = a² − b²."],
+          difficulty: 2,
+          tags: ["binomische-formel", "faktorisierung", "differenz-der-quadrate"],
+        },
+        {
+          question: "Was ist der Scheitelpunkt von f(x) = 2x² − 8x + 10?",
+          options: ["(2, 2)", "(−2, 2)", "(4, 10)", "(2, 10)", "(−4, 2)"],
+          correctIndex: 0,
+          explanation:
+            "Scheitelpunkt-x: d = − b / (2a) = − (−8) / (2 × 2) = 8/4 = 2. Scheitelpunkt-y: e = f(2) = 2 × 4 − 8 × 2 + 10 = 8 − 16 + 10 = 2. Scheitelpunkt: (2, 2). Da a = 2 > 0 ist das ein Minimum. Quadratisches Ergänzen bestätigt: 2(x² − 4x + 5) = 2((x − 2)² + 1) = 2(x − 2)² + 2.",
+          hints: ["d = − b/(2a) = 8/4 = 2.", "e = f(2) = 2 × 4 − 8 × 2 + 10 = ?"],
+          difficulty: 2,
+          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
+        },
+        {
+          question: "Mit Vieta: Welche Gleichung hat die Lösungen x1 = − 2 und x2 = 5?",
+          options: [
+            "x² − 3x − 10 = 0",
+            "x² + 3x − 10 = 0",
+            "x² − 3x + 10 = 0",
+            "x² + 7x − 10 = 0",
+            "x² − 7x + 10 = 0",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Summe: x1 + x2 = − 2 + 5 = 3 = − p, also p = − 3. Produkt: x1 × x2 = − 2 × 5 = − 10 = q. Gleichung: x² − 3x − 10 = 0. Probe: (x + 2)(x − 5) = x² − 5x + 2x − 10 = x² − 3x − 10. Korrekt. Die Vieta-Methode liefert direkt die Gleichungskoeffizienten aus Summe und Produkt der Lösungen.",
+          hints: [
+            "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
+            "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
+          ],
+          difficulty: 2,
+          tags: ["vieta", "quadratische-gleichung", "algebra"],
+        },
+        {
+          question: "Was ergibt (Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2)?",
+          options: ["4", "Wurzel aus 8", "8", "Wurzel aus 4", "2 Wurzel aus 3"],
+          correctIndex: 0,
+          explanation:
+            "(Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2) = (Wurzel aus 6)² − (Wurzel aus 2)² = 6 − 2 = 4. Dritte binomische Formel mit a = Wurzel aus 6 und b = Wurzel aus 2. Diese Technik der Rationalisierung ist nützlich, um Nenner von Wurzelausdrücken zu bereinigen und exakte Ergebnisse zu erhalten.",
+          hints: [
+            "(a+b)(a − b) = a² − b² mit a = Wurzel aus 6 und b = Wurzel aus 2.",
+            "(Wurzel aus 6)² = 6; (Wurzel aus 2)² = 2.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "rationalisierung", "wurzel"],
+        },
+      ],
+    },
+    {
+      id: "ma-2-03",
+      diagram: "coordinate-system",
+      title: "Quadratische Gleichungen und binomische Formeln",
+      stichworte: [
+        "Binomische Formeln",
+        "Quadratische Ergänzung",
+        "Scheitelpunktform",
+        "Normalform",
+        "p-q-Formel",
+        "Faktorisierung",
+        "Nullstellen",
+        "Parabel",
+        "Vieta-Satz",
+        "Diskriminante",
+      ],
+      content: `## Einleitung
+
+Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat ax² + bx + c = 0? Die **Diskriminante** verraet es auf einen Blick.
+
+**In diesem Kapitel lernst du:**
+- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
+- wie du mit der Mitternachtsformel quadratische Gleichungen loest
+- was die Diskriminante ueber die Anzahl der Loesungen aussagt
+- wie du den Scheitelpunkt einer Parabel findest
+- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:percent-fractions}}
+
+## Die drei binomischen Formeln
+
+Alle drei entstehen durch einfaches Ausmultiplizieren:
+
+**1. Formel (Quadrat der Summe):** (a + b)² = a² + **2ab** + b²
+Beispiele: (x + 3)² = x² + 6x + 9; (2x + 5)² = 4x² + 20x + 25
+
+**2. Formel (Quadrat der Differenz):** (a − b)² = a² − **2ab** + b²
+Beispiele: (x − 4)² = x² − 8x + 16
+
+**3. Formel (Differenz der Quadrate):** (a + b)(a − b) = a² − b²
+Beispiele: (x + 5)(x − 5) = x² − 25; 99 × 101 = (100−1)(100+1) = 10000 − 1 = 9999
+
+> **Merke:** (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Haeufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
+
+---
+
+## Rueckwaertsanwendung -- Faktorisieren
+
+Die Formeln rueckwaerts gelesen helfen beim Faktorisieren:
+- x² + 6x + 9 = (x+3)² -- erste Formel rueckwaerts
+- x² − 25 = (x+5)(x−5) -- dritte Formel rueckwaerts
+- 4x² − 1 = (2x+1)(2x−1)
+
+> **Merke:** Checkliste: (1) Vollstaendiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. Formel. (3) Vieta. (4) Mitternachtsformel.
+
+---
+
+## Scheitelpunktform
+
+Jede quadratische Funktion f(x) = ax² + bx + c hat einen Scheitelpunkt (Hoch- oder Tiefpunkt):
+- **x-Koordinate:** d = −b / (2a)
+- **y-Koordinate:** e = f(d)
+
+Bei a > 0: Minimum (Tal). Bei a < 0: Maximum (Berg).
+
+**Beispiel:** f(x) = x² − 6x + 11. Scheitelpunkt: d = 6/2 = 3. f(3) = 9 − 18 + 11 = 2. Scheitelpunkt: (3, 2).
+
+---
+
+## Vieta -- schnelles Loesen
+
+Fuer x² + px + q = 0 gilt: **x₁ + x₂ = −p** und **x₁ × x₂ = q**.
+
+Du suchst also zwei Zahlen, die addiert −p und multipliziert q ergeben.
+
+**Beispiel:** x² − 5x + 6 = 0. Summe = 5, Produkt = 6. Die Zahlen 2 und 3 passen! Also x₁ = 2, x₂ = 3.
+
+> **Merke:** Vieta fuer x² + px + q = 0: Summe = −p; Produkt = q. Funktioniert schnell bei ganzzahligen Loesungen.
+
+---
+
+## Rechenbeispiele
+
+**Beispiel 1 -- Flaechendifferenz:** Ein quadratisches Beet hat Seitenlaenge (x+2) m, ein zweites (x+8) m. Flaechendifferenz: (x+8)² − (x+2)² = ((x+8)+(x+2))((x+8)−(x+2)) = (2x+10) × 6. Fuer x = 1: 12 × 6 = **72 m²**. Dritte binomische Formel vereinfacht die Rechnung!
+
+---
+
+## MedAT-Fokus
+
+**Typische Aufgabentypen:**
+- (a±b)² ausmultiplizieren; faktorisieren
+- Quadratische Gleichung loesen (Mitternachtsformel, D = b²−4ac)
+- Scheitelpunkt berechnen (x_S = −b/(2a))
+- Vieta: zwei Zahlen mit gegebener Summe und Produkt
+
+**Minimal-Rechenrezepte:**
+- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b²
+- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a)
+- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
+- **Quadratische Gleichung**: D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Loesungen, D=0: 1, D<0: keine
+- **Scheitelpunkt**: x_S = −b/(2a); Minimum bei a>0, Maximum bei a<0
+- **Vieta**: x₁+x₂ = −p; x₁×x₂ = q -- Ergebnisse pruefen!
+- **Haeufigster Fehler**: (a+b)² = a²+b² (2ab vergessen)`,
+      contentExtended: `## Einleitung
+
+Warum ist (a+b)² nicht einfach a²+b²? Dieser Fehler -- das vergessene 2ab -- ist eine der haeufigsten Fallen am MedAT. Die **drei binomischen Formeln** sind Abkuerzungen fuer immer wiederkehrende Ausdruecke, und sie fuehren direkt zu **quadratischen Gleichungen**: Wie viele Loesungen hat eine Parabel? Die **Diskriminante** verraet es auf einen Blick. In der Medizin begegnen dir quadratische Zusammenhaenge etwa bei der Koerperoberflaeche (BSA) oder der Pharmakokinetik.
+
+**In diesem Kapitel lernst du:**
+- warum die drei binomischen Formeln funktionieren und wie du den haeufigsten Fehler (2ab vergessen) vermeidest
+- wie du mit der pq-Formel und der Mitternachtsformel quadratische Gleichungen loest
+- was die Diskriminante ueber die Anzahl der Loesungen aussagt
+- wie du den Scheitelpunkt einer Parabel findest und wofuer er steht
+- wie Vieta Summe und Produkt der Loesungen mit den Koeffizienten verbindet
+
+---
+
+{{DIAGRAM:coordinate-system}}
+
+{{DIAGRAM:percent-fractions}}
+
+**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+
+**Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
+
+**Typische Prüfungsfehler:** (a+b)² = a²+b² (2ab vergessen). Vieta: Summe = −p (Minus!). Scheitelpunkt: x_S = −b/(2a), nicht b/(2a).
+
+---
+
+## Die drei binomischen Formeln — Herleitung und Anwendung
+
+
+
+
+
+Alle drei binomischen Formeln entstehen durch einfaches Ausmultiplizieren. Ihre Gültigkeit kann jederzeit durch Ausmultiplizieren überprüft werden.
+
+### Erste binomische Formel — Quadrat der Summe
+
+(a + b)² = a² + 2ab + b²
+
+Herleitung: (a+b)² = (a+b) × (a+b) = a × a + a × b + b × a + b × b = a² + ab + ba + b² = a² + 2ab + b².
+
+Der mittlere Term 2ab ist der häufigste Vergesskandidat! Der typische Fehler: (a+b)² = a² + b². Das ist falsch.
+
+Beispiele:
+- (x + 3)² = x² + 6x + 9
+- (2x + 5)² = 4x² + 20x + 25 (hier: a = 2x, b = 5)
+- (10 + 0,01)² = 100 + 0,2 + 0,0001 = 100,2001 (schnelle Näherungsrechnung)
+
+### Zweite binomische Formel — Quadrat der Differenz
+
+(a − b)² = a² − 2ab + b²
+
+Herleitung: (a − b)² = (a − b)(a − b) = a² − ab − ba + b² = a² − 2ab + b².
+
+Das mittlere Glied ist negativ (−2ab), die äußeren Quadrate sind positiv. Merkhilfe: Minus in der Mitte.
+
+Beispiele:
+- (x − 4)² = x² − 8x + 16
+- (3x − 2)² = 9x² − 12x + 4
+- (Wurzel aus 5 − 1)² = 5 − 2 Wurzel 5 + 1 = 6 − 2 Wurzel 5
+
+### Dritte binomische Formel — Differenz der Quadrate
+
+(a + b)(a − b) = a² − b²
+
+Herleitung: (a+b)(a − b) = a² − ab + ba − b² = a² − b². Die mittleren Terme heben sich auf.
+
+Diese Formel ist besonders wertvoll für schnelles Faktorisieren und mentale Arithmetik.
+
+Beispiele:
+- (x + 5)(x − 5) = x² − 25
+- (2x + 3)(2x − 3) = 4x² − 9
+- (Wurzel aus 7 + Wurzel aus 3)(Wurzel aus 7 − Wurzel aus 3) = 7 − 3 = 4
+- 99 × 101 = (100 − 1)(100 + 1) = 10000 − 1 = 9999 (mentale Arithmetik)
+
+> **Merke:** Die drei binomischen Formeln: (1) (a+b)² = a²+2ab+b²; (2) (a−b)² = a²−2ab+b²; (3) (a+b)(a−b) = a²−b². Häufigster Fehler: (a+b)² = a²+b² (der mittlere Term 2ab fehlt!).
+
+## Rückwärtsanwendung — Faktorisieren
+
+Die binomischen Formeln rückwärts gelesen ermöglichen das Faktorisieren.
+
+Muster erkennen:
+- x² + 6x + 9 = (x+3)² — erste binomische Formel rückwärts
+- x² − 8x + 16 = (x − 4)² — zweite binomische Formel rückwärts
+- x² − 25 = (x+5)(x − 5) — dritte binomische Formel rückwärts
+- 4x² − 1 = (2x+1)(2x − 1) — dritte binomische Formel mit a=2x, b=1
+
+Vorgehen beim Faktorisieren:
+1. Liegt ein vollständiges Quadrat vor? (a² +/- 2ab + b²) — erste oder zweite binomische Formel.
+2. Liegt eine Differenz zweier Quadrate vor? (a² − b²) — dritte binomische Formel.
+3. Sonst: Vieta'sche Formeln oder allgemeine Lösungsformel verwenden.
+
+> **Merke:** Faktorisier-Checkliste: (1) Vollständiges Quadrat? → 1./2. binomische Formel. (2) Differenz zweier Quadrate? → 3. binomische Formel. (3) Ganzzahlige Lösungen erkennbar? → Vieta. (4) Sonst → Mitternachtsformel.
+
+## Rationalisierung von Nennern
+
+Mit der dritten binomischen Formel lassen sich Nenner rationalisieren (Wurzeln aus dem Nenner entfernen).
+
+Beispiel: 1 / (Wurzel aus 3 − 1). Erweitern mit (Wurzel aus 3 + 1):
+= (Wurzel aus 3 + 1) / ((Wurzel aus 3 − 1)(Wurzel aus 3 + 1)) = (Wurzel aus 3 + 1) / (3 − 1) = (Wurzel aus 3 + 1) / 2.
+
+## Scheitelpunktform und quadratisches Ergänzen
+
+Jede quadratische Funktion f(x) = ax² + bx + c lässt sich durch quadratisches Ergänzen in die Scheitelpunktform umschreiben:
+
+f(x) = a(x − d)² + e, wobei (d, e) der Scheitelpunkt (Vertex) der Parabel ist.
+
+Der Scheitelpunkt ist das Minimum (wenn a > 0) oder das Maximum (wenn a < 0) der Funktion.
+
+Berechnung des Scheitelpunkts:
+- x-Koordinate: d = − b / (2a)
+- y-Koordinate: e = f(d) = c − b² / (4a)
+
+Quadratisches Ergänzen — schrittweise:
+f(x) = x² + bx + c.
+Schritt 1: x² + bx = (x + b/2)² − (b/2)².
+Schritt 2: f(x) = (x + b/2)² − (b/2)² + c.
+Scheitelpunkt: d = − b/2, e = c − b² / 4.
+
+Beispiel: f(x) = x² − 6x + 11.
+Schritt 1: x² − 6x = (x − 3)² − 9.
+Schritt 2: f(x) = (x − 3)² − 9 + 11 = (x − 3)² + 2.
+Scheitelpunkt: (3, 2). Da a = 1 > 0 ist das Minimum der Funktion gleich 2, erreicht bei x = 3.
+
+## Vieta'sche Formeln
+
+Für eine quadratische Gleichung x² + px + q = 0 (führender Koeffizient 1) mit den Lösungen x1 und x2 gilt:
+
+- x1 + x2 = − p (Summe der Lösungen = negativer Koeffizient von x)
+- x1 × x2 = q (Produkt der Lösungen = konstantes Glied)
+
+Herleitung: x² + px + q = (x − x1)(x − x2) = x² − (x1+x2)x + x1 × x2. Koeffizientenvergleich ergibt die Formeln.
+
+Anwendung: x² − 5x + 6 = 0. Gesucht: zwei Zahlen mit Summe 5 und Produkt 6. Kandidaten: 2 und 3 (2+3=5, 2 × 3=6). Also x1=2, x2=3.
+
+Für allgemeine ax² + bx + c = 0 gilt: x1+x2 = − b/a und x1 × x2 = c/a.
+
+Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe und Produkt der gefundenen Lösungen müssen stimmen.
+
+> **Merke:** Vieta für x² + px + q = 0: Summe x₁+x₂ = −p; Produkt x₁×x₂ = q. Zwei Zahlen mit der richtigen Summe und dem richtigen Produkt finden → fertig. Funktioniert nur bei ganzzahligen/einfachen Lösungen schnell.
+
+## Rechenbeispiele
+
+**Beispiel 1 — BSA-Berechnung (Körperoberfläche nach Mosteller):**
+BSA = Wurzel aus (Größe [cm] × Gewicht [kg] / 3600). Patient: 180 cm, 75 kg. BSA = Wurzel aus (180 × 75 / 3600) = Wurzel aus (13500/3600) = Wurzel aus 3,75 = **1,94 m²**. Zytostatikum 150 mg/m²: Dosis = 150 × 1,94 = **291 mg**.
+
+**Beispiel 2 — Wundfläche und Skalierung (dritte binomische Formel):**
+Runde Wunde mit Radius (r+2) cm am Morgen und (r+8) cm am Abend. Flächendifferenz: pi × ((r+8)² − (r+2)²) = pi × ((r+8)+(r+2)) × ((r+8) − (r+2)) = pi × (2r+10) × 6. Für r = 1: Delta A = pi × 12 × 6 = **72 pi ungefähr 226 cm²**. Dritte binomische Formel vereinfacht die Berechnung erheblich.
+
+**Beispiel 3 — Parabel: Optimale Dosis (Scheitelpunkt):**
+Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_opt = − b/(2a) = − 10/(2 × (−0,5)) = **10 mg**. E_max = − 0,5 × 100 + 100 − 12 = **38 Einheiten**. Parabelform zeigt: zu wenig und zu viel Dosis reduzieren die Wirksamkeit.
+
+## MedAT-Fokus
+
+**Zur gezielten Prüfungsvorbereitung** im Überblick:
+
+**Typische Aufgabentypen:**
+- (a±b)² ausmultiplizieren; a²±2ab+b² faktorisieren; (a+b)(a−b) = a²−b²
+- Quadratische Gleichung lösen (Mitternachtsformel, D = b²−4ac)
+- Scheitelpunkt aus f(x) = ax²+bx+c (x_S = −b/(2a))
+- Vieta: zwei Zahlen mit gegebener Summe und Produkt; Gleichung aus Lösungen
+
+**Minimal-Rechenrezepte:**
+- **(a+b)²** = a²+**2ab**+b²; **(a−b)²** = a²−2ab+b²; **(a+b)(a−b)** = a²−b².
+- **Quadratisch:** D = b²−4ac; x = (−b±√D)/(2a). **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S).
+- **Vieta** (x²+px+q=0): x₁+x₂ = **−p**, x₁×x₂ = q. **BSA:** √(Größe[cm]×Gewicht[kg]/3600).
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+- **Binomische Formeln**: (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b²
+- **pq-Formel**: x² + px + q = 0 → x = −p/2 ± √(p²/4 − q); Diskriminante D = p²/4 − q
+- **Scheitelpunktform**: ax² + bx + c; Scheitelpunkt x_S = −b/(2a); Dosisoptimum → Scheitelpunkt
+- **Vieta**: x₁+x₂ = −p; x₁×x₂ = q (für x² + px + q = 0) — Ergebnisse prüfen!
+- **BSA (Mosteller)**: √(Größe×Gewicht/3600); Zytostatikum-Dosierung in mg/m²`,
+      lernziele: [
+        "Die drei binomischen Formeln auswendig kennen, herleiten und vorwärts sowie rückwärts (zum Faktorisieren) anwenden",
+        "Quadratische Ausdrücke durch Erkennen des Musters faktorisieren (vollständige Quadrate und Differenz der Quadrate)",
+        "Den Scheitelpunkt einer Parabel durch quadratisches Ergänzen oder direkte Formel berechnen und die Scheitelpunktform interpretieren",
+        "Die Vieta'schen Formeln zum schnellen Lösen quadratischer Gleichungen und zur Lösungsprüfung nutzen",
+      ],
+      sections: [
+        {
+          heading: "Die drei binomischen Formeln — auswendig und sicher",
+          text: "Formel 1: (a+b)² = a² + 2ab + b². Formel 2: (a − b)² = a² − 2ab + b². Formel 3: (a+b)(a − b) = a² − b². Der häufigste Fehler ist (a+b)² = a² + b² ohne den mittleren Term. Zum Beweis: einfach ausmultiplizieren. Merkhilfe: Erstes Quadrat, doppeltes Produkt, zweites Quadrat für Formel 1 und 2. Formel 3 ist die Differenz der Quadrate — die mittleren Terme heben sich auf. Rückwärts gelesen ermöglicht Formel 3 das schnelle mentale Rechnen: 98 × 102 = (100 − 2)(100 + 2) = 10000 − 4 = 9996.",
+          merksatz:
+            "(a+b)² = a² + 2ab + b² — der mittlere Term 2ab ist der häufigste Vergesskandidat!",
+        },
+        {
+          heading: "Scheitelpunktform und quadratisches Ergänzen",
+          text: "Die Scheitelpunktform f(x) = a(x − d)² + e zeigt direkt das Minimum oder Maximum: (d, e) ist der Scheitelpunkt. Die x-Koordinate d = − b/(2a) ist leicht zu merken — sie entspricht der x-Koordinate der Symmetrieachse der Parabel. Quadratisches Ergänzen: x² + bx wird ergänzt zu (x + b/2)² − (b/2)². Dies ist die Herleitung der allgemeinen Lösungsformel. In der Medizin führen Optimierungsprobleme (minimale Kosten, maximale Wirkung bei minimaler Dosis) zu Parabeln, deren Scheitelpunkt das Optimum beschreibt.",
+          merksatz: "Scheitelpunkt: d = − b/(2a); e = f(d). Bei a>0: Minimum; bei a<0: Maximum.",
+        },
+        {
+          heading: "Vieta und Faktorisierung — schnelles Lösen",
+          text: "Für x² + px + q = 0 sucht man zwei Zahlen, die addiert − p und multipliziert q ergeben. Sind diese Zahlen ganze Zahlen, ist Faktorisieren schneller als die Lösungsformel. Beispiel: x² − 7x + 12 = 0: Summe = 7, Produkt = 12, gesucht sind 3 und 4. Also (x − 3)(x − 4) = 0. Wenn keine ganzzahligen Lösungen erkennbar sind, muss die allgemeine Lösungsformel verwendet werden. Vieta eignet sich auch zur Probe: Wenn x1+x2 ungleich − b/a oder x1 × x2 ungleich c/a, liegt ein Rechenfehler vor.",
+          merksatz:
+            "Vieta für x² + px + q = 0: Summe der Lösungen = − p; Produkt = q. Zwei Zahlen finden, die beides erfüllen.",
+        },
+      ],
+      merksätze: [
+        "(a+b)² = a² + 2ab + b² — nie vergessen: der mittlere Term 2ab!",
+        "(a − b)² = a² − 2ab + b² — mittlerer Term negativ.",
+        "(a+b)(a − b) = a² − b² — Differenz der Quadrate.",
+        "Scheitelpunkt: d = − b/(2a); e = f(d) = c − b² / (4a).",
+        "Vieta: x1+x2 = − b/a; x1 × x2 = c/a für ax² + bx + c = 0.",
+        "Quadratisches Ergänzen: x² + bx = (x + b/2)² − (b/2)².",
+        "Rationalisierung: Nenner mit konjugiertem Ausdruck erweitern und dritte binomische Formel anwenden.",
+        "Faktorisieren: erst a² +/- 2ab + b² oder a² − b² prüfen, dann Vieta, zuletzt Lösungsformel.",
+        "Mentale Arithmetik: 97 × 103 = (100 − 3)(100 + 3) = 10000 − 9 = 9991.",
+        "Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.",
+      ],
+      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+      altfrage: {
+        question:
+          "Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?",
+        answer:
+          "Kreisfläche A = pi × r². Morgens: A1 = pi × (x+3)². Abends: A2 = pi × (x+7)². Bedingung: A2 = 4 × A1. Einsetzen: pi × (x+7)² = 4 × pi × (x+3)². Kürze pi: (x+7)² = 4 × (x+3)². Wurzel ziehen: x+7 = 2(x+3) oder x+7 = − 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = − 2x − 6, also 3x = − 13, x = − 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi × 16, A2 = pi × 64 = 4 × pi × 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.",
+      },
+      klinischerBezug:
+        "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
+      selfTest: [
+        {
+          question: "Was ergibt (3x − 4)²?",
+          options: [
+            "9x² − 24x + 16",
+            "9x² + 16",
+            "6x² − 24x + 16",
+            "9x² − 12x + 16",
+            "9x² − 24x − 16",
+          ],
+          correctIndex: 0,
+          explanation:
+            "(3x − 4)² = (3x)² − 2 × (3x) × 4 + 4² = 9x² − 24x + 16. Zweite binomische Formel mit a = 3x und b = 4. Mittlerer Term: − 2 × (3x) × 4 = − 24x. Äußere Quadrate: (3x)² = 9x² und 4² = 16. Der häufige Fehler wäre das Vergessen des mittleren Terms oder ein falsches Vorzeichen.",
+          hints: [
+            "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
+            "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "quadrat", "algebra"],
+        },
+        {
+          question: "Welche Faktorisierung gilt für 4x² − 49?",
+          options: [
+            "(2x+7)(2x − 7)",
+            "(4x+7)(x − 7)",
+            "(2x − 7)²",
+            "(4x − 7)(x+7)",
+            "(2x+49)(2x − 1)",
+          ],
+          correctIndex: 0,
+          explanation:
+            "4x² − 49 = (2x)² − 7². Dritte binomische Formel: (2x+7)(2x − 7). Erkenne das Muster: Differenz zweier Quadrate a² − b² mit a = 2x und b = 7. Probe: (2x+7)(2x − 7) = 4x² − 14x + 14x − 49 = 4x² − 49. Korrekt.",
+          hints: ["Erkenne a² − b² mit 4x² = (2x)² und 49 = 7².", "(a+b)(a − b) = a² − b²."],
+          difficulty: 2,
+          tags: ["binomische-formel", "faktorisierung", "differenz-der-quadrate"],
+        },
+        {
+          question: "Was ist der Scheitelpunkt von f(x) = 2x² − 8x + 10?",
+          options: ["(2, 2)", "(−2, 2)", "(4, 10)", "(2, 10)", "(−4, 2)"],
+          correctIndex: 0,
+          explanation:
+            "Scheitelpunkt-x: d = − b / (2a) = − (−8) / (2 × 2) = 8/4 = 2. Scheitelpunkt-y: e = f(2) = 2 × 4 − 8 × 2 + 10 = 8 − 16 + 10 = 2. Scheitelpunkt: (2, 2). Da a = 2 > 0 ist das ein Minimum. Quadratisches Ergänzen bestätigt: 2(x² − 4x + 5) = 2((x − 2)² + 1) = 2(x − 2)² + 2.",
+          hints: ["d = − b/(2a) = 8/4 = 2.", "e = f(2) = 2 × 4 − 8 × 2 + 10 = ?"],
+          difficulty: 2,
+          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
+        },
+        {
+          question: "Mit Vieta: Welche Gleichung hat die Lösungen x1 = − 2 und x2 = 5?",
+          options: [
+            "x² − 3x − 10 = 0",
+            "x² + 3x − 10 = 0",
+            "x² − 3x + 10 = 0",
+            "x² + 7x − 10 = 0",
+            "x² − 7x + 10 = 0",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Summe: x1 + x2 = − 2 + 5 = 3 = − p, also p = − 3. Produkt: x1 × x2 = − 2 × 5 = − 10 = q. Gleichung: x² − 3x − 10 = 0. Probe: (x + 2)(x − 5) = x² − 5x + 2x − 10 = x² − 3x − 10. Korrekt. Die Vieta-Methode liefert direkt die Gleichungskoeffizienten aus Summe und Produkt der Lösungen.",
+          hints: [
+            "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
+            "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
+          ],
+          difficulty: 2,
+          tags: ["vieta", "quadratische-gleichung", "algebra"],
+        },
+        {
+          question: "Was ergibt (Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2)?",
+          options: ["4", "Wurzel aus 8", "8", "Wurzel aus 4", "2 Wurzel aus 3"],
+          correctIndex: 0,
+          explanation:
+            "(Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2) = (Wurzel aus 6)² − (Wurzel aus 2)² = 6 − 2 = 4. Dritte binomische Formel mit a = Wurzel aus 6 und b = Wurzel aus 2. Diese Technik der Rationalisierung ist nützlich, um Nenner von Wurzelausdrücken zu bereinigen und exakte Ergebnisse zu erhalten.",
+          hints: [
+            "(a+b)(a − b) = a² − b² mit a = Wurzel aus 6 und b = Wurzel aus 2.",
+            "(Wurzel aus 6)² = 6; (Wurzel aus 2)² = 2.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "rationalisierung", "wurzel"],
+        },
+      ],
+    },
+
+    // === Trigonometrie ===
+    {
+      id: "ma-2-05",
+      diagram: "unit-circle",
+      title: "Trigonometrie-Grundlagen",
+      stichworte: [
+        "Sinus",
+        "Kosinus",
+        "Tangens",
+        "Einheitskreis",
+        "Bogenmaß",
+        "Gradmaß",
+        "SOH-CAH-TOA",
+        "Trigonometrischer Pythagoras",
+        "Rechtwinkliges Dreieck",
+        "Kräftezerlegung",
+        "Winkelfunktion",
+        "Umrechnung Grad Bogenmaß",
+      ],
+      content: `## Einleitung
+
+Wie hoch ist ein Baum, wenn du seinen Schatten und den Winkel der Sonne kennst? Hinter solchen Aufgaben steckt die **Trigonometrie** -- die Lehre von den Beziehungen zwischen Winkeln und Seitenlaengen in Dreiecken. Wer Sinus, Kosinus und Tangens sicher beherrscht, loest geometrische MedAT-Fragen routiniert.
+
+**In diesem Kapitel lernst du:**
+- wie Sinus, Kosinus und Tangens am rechtwinkligen Dreieck definiert sind (SOH-CAH-TOA)
+- was der Einheitskreis ist und warum sin²α + cos²α = 1 gilt
+- wie du zwischen Gradmass und Bogenmass umrechnest (360° = 2π rad)
+- welche Werte sin, cos und tan fuer die wichtigsten Winkel (0°, 30°, 45°, 60°, 90°) annehmen
+- wie du Kraefte in Komponenten zerlegst
+
+---
+
+{{DIAGRAM:unit-circle}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Sinus, Kosinus und Tangens
+
+Im **rechtwinkligen Dreieck** gilt (Merkhilfe SOH-CAH-TOA):
+
+- **sin α** = Gegenkathete / Hypotenuse
+- **cos α** = Ankathete / Hypotenuse
+- **tan α** = Gegenkathete / Ankathete = sin/cos
+
+Die **Hypotenuse** ist immer die laengste Seite (gegenueber dem rechten Winkel).
+
+> **Merke:** SOH-CAH-TOA: Sin = Gegen/Hyp, Cos = An/Hyp, Tan = Gegen/An.
+
+---
+
+## Rechenbeispiel -- Seitenlaenge
+
+Hypotenuse 10 cm, Winkel α = 30°. Gegenkathete = 10 × sin 30° = 10 × 0,5 = **5 cm**. Ankathete = 10 × cos 30° = 10 × 0,866 = **8,66 cm**. Probe: 5² + 8,66² = 100 = 10² ✓
+
+---
+
+## Einheitskreis
+
+Kreis mit Radius r = 1. Jeder Punkt P hat die Koordinaten (**cos α**, **sin α**).
+
+Daraus folgt: **sin²α + cos²α = 1** -- der trigonometrische Pythagoras, gilt fuer JEDEN Winkel.
+
+**Vorzeichen:** I. Quadrant: sin+, cos+. II: sin+, cos−. III: sin−, cos−. IV: sin−, cos+.
+
+> **Merke:** sin²α + cos²α = 1 -- diese Identitaet gilt immer!
+
+---
+
+## Bogenmass vs. Gradmass
+
+360° = 2π rad. Umrechnung: Grad × π/180 = Bogenmass.
+
+| Grad | Bogenmass |
+|------|----------|
+| 0° | 0 |
+| 30° | π/6 |
+| 45° | π/4 |
+| 60° | π/3 |
+| 90° | π/2 |
+| 180° | π |
+
+---
+
+## Wichtige Werte -- Merktabelle
+
+| Winkel | sin | cos | tan |
+|--------|-----|-----|-----|
+| 0° | 0 | 1 | 0 |
+| 30° | 1/2 | √3/2 | 1/√3 |
+| 45° | √2/2 | √2/2 | 1 |
+| 60° | √3/2 | 1/2 | √3 |
+| 90° | 1 | 0 | undefiniert |
+
+**Spezial-Dreiecke:** 30-60-90: Seiten 1 : √3 : 2. 45-45-90: Seiten 1 : 1 : √2.
+
+> **Merke:** Diese beiden Dreiecke liefern alle wichtigen Werte!
+
+---
+
+## Kraeftezerlegung
+
+Kraft F unter Winkel α zur Bezugsrichtung:
+- Parallele Komponente: Fₕ = F × cos α
+- Senkrechte Komponente: Fₖ = F × sin α
+
+**Beispiel:** F = 200 N, α = 60°. Fₕ = 200 × cos 60° = 200 × 0,5 = **100 N**. Fₖ = 200 × sin 60° ≈ **173 N**.
+
+---
+
+## MedAT-Fokus
+
+**Zentral pruefungsrelevant:**
+- sin, cos, tan am rechtwinkligen Dreieck (SOH-CAH-TOA)
+- Seitenlaengen und Winkel berechnen
+- sin²α + cos²α = 1
+- Umrechnung Grad ↔ Bogenmass
+- Werte fuer 0°, 30°, 45°, 60°, 90°
+- Kraeftezerlegung mit sin/cos
+
+**Typische Fallen:**
+- Gegen- und Ankathete verwechseln
+- tan 90° ist NICHT 1, sondern undefiniert
+- sin²α + cos²α = 1, NICHT sinα + cosα = 1
+
+---
+
+## Zusammenfassung
+
+- **SOH-CAH-TOA**: sin = Gegen/Hyp, cos = An/Hyp, tan = Gegen/An
+- **Trig. Pythagoras**: sin²α + cos²α = 1
+- **Bogenmass**: 360° = 2π; Grad × π/180 = Bogenmass
+- **Spezial-Dreiecke**: 30-60-90 (1:√3:2); 45-45-90 (1:1:√2)
+- **Kraeftezerlegung**: Fₕ = F×cosα; Fₖ = F×sinα`,
+      contentExtended: `## Einleitung
+
+Wie zerlegt man eine Muskelkraft in zwei senkrechte Komponenten? Warum berechnet der Physiker das Drehmoment mit dem Sinus des Winkels? Und wie bestimmt man aus einem EKG-Vektor den Winkel der Herzachse? Hinter all diesen Fragen steckt die **Trigonometrie** — die Lehre von den Beziehungen zwischen Winkeln und Seitenlängen in Dreiecken. Wer Sinus, Kosinus und Tangens sicher beherrscht, löst Kräftezerlegungen, Vektoraufgaben und geometrische MedAT-Fragen routiniert.
+
+**In diesem Kapitel lernst du:**
+- wie Sinus, Kosinus und Tangens am rechtwinkligen Dreieck definiert sind (SOH-CAH-TOA)
+- was der Einheitskreis ist und warum sin/cos als Koordinaten auf dem Kreis dargestellt werden
+- wie du zwischen Gradmaß und Bogenmaß umrechnest (360° = 2π rad)
+- welche Werte sin, cos und tan für die wichtigsten Winkel (0°, 30°, 45°, 60°, 90°) annehmen
+- warum sin²α + cos²α = 1 gilt und wie du diesen trigonometrischen Pythagoras anwendest
+
+---
+
+{{DIAGRAM:unit-circle}}
+
+{{DIAGRAM:coordinate-system}}
+
+## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
+
+**Idee:** In jedem rechtwinkligen Dreieck stehen die Seitenlängen in einem festen Verhältnis zueinander, das nur vom Winkel abhängt — nicht von der Größe des Dreiecks. Dieses Verhältnis beschreiben die drei trigonometrischen Funktionen Sinus, Kosinus und Tangens.
+
+**Verfahren — SOH-CAH-TOA (Merkhilfe):**
+
+- **S**inus = **O**pposite / **H**ypotenuse → sin α = Gegenkathete / Hypotenuse
+- **C**osinus = **A**djacent / **H**ypotenuse → cos α = Ankathete / Hypotenuse
+- **T**angens = **O**pposite / **A**djacent → tan α = Gegenkathete / Ankathete
+
+Dabei ist:
+- **Hypotenuse:** die längste Seite, gegenüber dem rechten Winkel (90°)
+- **Gegenkathete:** die Seite gegenüber dem betrachteten Winkel α
+- **Ankathete:** die Seite neben dem betrachteten Winkel α (nicht die Hypotenuse)
+
+Zusätzlich gilt: **tan α = sin α / cos α** (solange cos α ≠ 0).
+
+> **Merke:** SOH-CAH-TOA — Sinus = Gegenkathete/Hypotenuse, Cosinus = Ankathete/Hypotenuse, Tangens = Gegenkathete/Ankathete. Die Hypotenuse liegt IMMER gegenüber dem rechten Winkel und ist die längste Seite.
+
+---
+
+## Rechenbeispiel 1 — Seitenlänge bestimmen
+
+**Aufgabe:** Ein rechtwinkliges Dreieck hat eine Hypotenuse von 10 cm und einen Winkel α = 30°. Berechne die Gegenkathete und die Ankathete.
+
+**Schritt 1:** Gegenkathete über Sinus: sin 30° = Gegenkathete / 10 cm.
+sin 30° = 0,5 → Gegenkathete = 10 cm × 0,5 = **5 cm**.
+
+**Schritt 2:** Ankathete über Kosinus: cos 30° = Ankathete / 10 cm.
+cos 30° = √3/2 ≈ 0,866 → Ankathete = 10 cm × 0,866 = **8,66 cm**.
+
+**Probe:** 5² + 8,66² = 25 + 75 = 100 = 10² ✓ (Satz des Pythagoras bestätigt)
+
+---
+
+## Rechenbeispiel 2 — Winkelberechnung
+
+**Aufgabe:** In einem rechtwinkligen Dreieck sind Gegenkathete = 6 cm und Ankathete = 6 cm. Bestimme den Winkel α.
+
+**Lösung:** tan α = Gegenkathete / Ankathete = 6/6 = 1.
+α = arctan(1) = **45°**.
+
+**Kontrolle:** sin 45° = 6 / Hypotenuse → Hypotenuse = 6 / sin 45° = 6 / (√2/2) = 6√2 ≈ 8,49 cm.
+Probe: 6² + 6² = 72 = (6√2)² ✓
+
+---
+
+## Der Einheitskreis
+
+**Idee:** Der Einheitskreis hat den Radius r = 1 und den Mittelpunkt im Koordinatenursprung. Jeder Punkt P auf dem Kreis hat die Koordinaten P = (cos α, sin α), wobei α der Winkel zur positiven x-Achse ist (gegen den Uhrzeigersinn gemessen).
+
+**Verfahren:** Zeichne den Einheitskreis (r = 1). Der Winkel α wird vom positiven x-Achsenabschnitt gegen den Uhrzeigersinn gemessen. Die x-Koordinate des Punktes auf dem Kreis ist cos α, die y-Koordinate ist sin α.
+
+Daraus folgt direkt:
+- cos α liegt immer zwischen −1 und +1
+- sin α liegt immer zwischen −1 und +1
+- Am Einheitskreis gilt: x² + y² = r² = 1 → **sin²α + cos²α = 1**
+
+**Vorzeichen in den Quadranten:**
+- I. Quadrant (0°–90°): sin > 0, cos > 0 → tan > 0
+- II. Quadrant (90°–180°): sin > 0, cos < 0 → tan < 0
+- III. Quadrant (180°–270°): sin < 0, cos < 0 → tan > 0
+- IV. Quadrant (270°–360°): sin < 0, cos > 0 → tan < 0
+
+> **Merke:** Am Einheitskreis ist die x-Koordinate = cos α und die y-Koordinate = sin α. Daraus folgt der trigonometrische Pythagoras: sin²α + cos²α = 1 — diese Identität gilt für JEDEN Winkel α.
+
+---
+
+## Bogenmaß vs. Gradmaß
+
+**Idee:** Das Bogenmaß (Radiant, rad) misst Winkel über die Bogenlänge auf dem Einheitskreis. Ein voller Kreis = Umfang 2π → **360° = 2π rad**.
+
+**Umrechnungsformeln:**
+- Grad → Bogenmaß: **α(rad) = α(°) × π / 180**
+- Bogenmaß → Grad: **α(°) = α(rad) × 180 / π**
+
+**Wichtige Umrechnungen:**
+
+| Grad | Bogenmaß |
+|------|----------|
+| 0° | 0 |
+| 30° | π/6 |
+| 45° | π/4 |
+| 60° | π/3 |
+| 90° | π/2 |
+| 180° | π |
+| 270° | 3π/2 |
+| 360° | 2π |
+
+**Rechenbeispiel:** 120° in Bogenmaß: 120 × π/180 = 2π/3 rad.
+Rückrechnung: 2π/3 × 180/π = 120° ✓
+
+> **Merke:** 360° = 2π rad; 180° = π rad; 90° = π/2 rad. Umrechnung: Grad × π/180 = Bogenmaß; Bogenmaß × 180/π = Grad. In der Physik wird fast immer das Bogenmaß verwendet.
+
+---
+
+## Wichtige Werte — Merktabelle
+
+Die Werte für die fünf Standard-Winkel solltest du auswendig kennen:
+
+| Winkel α | sin α | cos α | tan α |
+|----------|-------|-------|-------|
+| 0° | 0 | 1 | 0 |
+| 30° | 1/2 | √3/2 ≈ 0,866 | 1/√3 ≈ 0,577 |
+| 45° | √2/2 ≈ 0,707 | √2/2 ≈ 0,707 | 1 |
+| 60° | √3/2 ≈ 0,866 | 1/2 | √3 ≈ 1,732 |
+| 90° | 1 | 0 | nicht definiert |
+
+**Merkschema für Sinus:** Die Zähler von sin lauten: √0/2, √1/2, √2/2, √3/2, √4/2 = 0, 1/2, √2/2, √3/2, 1. Für Kosinus: dieselbe Folge rückwärts.
+
+**Rechenbeispiel:** Bestätige sin 60° = √3/2 über ein rechtwinkliges Dreieck mit 30°-60°-90°: Seitenverhältnisse 1 : √3 : 2 (kurze Kathete : lange Kathete : Hypotenuse). sin 60° = lange Kathete / Hypotenuse = √3/2 ✓
+
+> **Merke:** 30-60-90-Dreieck: Seiten im Verhältnis 1 : √3 : 2. 45-45-90-Dreieck: Seiten im Verhältnis 1 : 1 : √2. Diese beiden Spezial-Dreiecke liefern alle wichtigen Werte für sin, cos, tan.
+
+---
+
+## Trigonometrischer Pythagoras und Identitäten
+
+**sin²α + cos²α = 1** — gilt für alle Winkel α.
+
+Daraus abgeleitet:
+- sin²α = 1 − cos²α
+- cos²α = 1 − sin²α
+- 1 + tan²α = 1/cos²α (durch Division mit cos²α)
+
+**Rechenbeispiel:** Gegeben: sin α = 3/5. Bestimme cos α (für α im I. Quadranten).
+cos²α = 1 − sin²α = 1 − 9/25 = 16/25 → cos α = 4/5.
+Dann: tan α = sin α / cos α = (3/5) / (4/5) = 3/4.
+
+**Probe:** sin²α + cos²α = (3/5)² + (4/5)² = 9/25 + 16/25 = 25/25 = 1 ✓. Außerdem: Gegenkathete = 3, Ankathete = 4, Hypotenuse = 5 — das klassische 3-4-5-Dreieck.
+
+---
+
+## Medizinische Anwendung: Kräftezerlegung
+
+**Idee:** In der Orthopädie und Biomechanik wird eine Kraft F häufig in zwei senkrechte Komponenten zerlegt: eine Komponente entlang der Knochenachse und eine senkrecht dazu.
+
+**Verfahren:** Wenn die Kraft F unter dem Winkel α zur Bezugsrichtung wirkt:
+- Komponente parallel: F_parallel = F × cos α
+- Komponente senkrecht: F_senkrecht = F × sin α
+
+**Rechenbeispiel:** Ein Muskel übt eine Kraft von F = 500 N unter einem Winkel von α = 30° zur Knochenachse aus.
+F_parallel = 500 × cos 30° = 500 × 0,866 = **433 N** (Zugkraft entlang des Knochens)
+F_senkrecht = 500 × sin 30° = 500 × 0,5 = **250 N** (Kompressionskraft senkrecht zum Knochen)
+
+Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
+
+**Drehmoment:** M = r × F × sin θ, wobei θ der Winkel zwischen Hebelarm und Kraftvektor ist. Bei senkrechtem Angriff (θ = 90°): sin 90° = 1 → M = r × F.
+
+---
+
+## MedAT-Fokus
+
+**Zentral prüfungsrelevant:**
+- Definition sin, cos, tan am rechtwinkligen Dreieck (SOH-CAH-TOA)
+- Berechnung fehlender Seiten und Winkel im rechtwinkligen Dreieck
+- Trigonometrischer Pythagoras: sin²α + cos²α = 1
+- Umrechnung Grad ↔ Bogenmaß
+- Werte für 0°, 30°, 45°, 60°, 90° (Merktabelle)
+- Kräftezerlegung mit sin/cos
+
+**Häufige Prüfungsfragen:**
+- „Berechne die Seitenlänge eines rechtwinkligen Dreiecks bei gegebenem Winkel und einer Seite."
+- „Rechne 150° in Bogenmaß um." → 150 × π/180 = 5π/6
+- „Gegeben sin α = 0,6. Bestimme cos α." → cos α = √(1 − 0,36) = 0,8
+- „Zerlege die Kraft F = 400 N unter α = 60° in Parallel- und Senkrechtkomponente."
+
+**Typische Prüfungsfallen:**
+- Gegenkathete und Ankathete verwechseln — immer vom betrachteten Winkel α ausgehen
+- Tangens bei 90° ist NICHT 1, sondern undefiniert (Division durch 0)
+- Bogenmaß und Gradmaß mischen: Taschenrechner auf richtige Einheit prüfen
+- sin²α + cos²α = 1, NICHT sin α + cos α = 1
+- Im II. Quadranten ist cos negativ: cos 120° = −cos 60° = −1/2
+
+---
+
+## Zusammenfassung
+
+Trigonometrie beschreibt die Beziehung zwischen Winkeln und Seitenlängen. Am rechtwinkligen Dreieck gilt SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete. Der Einheitskreis verallgemeinert: sin²α + cos²α = 1. Gradmaß und Bogenmaß werden über 360° = 2π rad umgerechnet. Die fünf Standard-Winkel (0°, 30°, 45°, 60°, 90°) und ihre sin/cos/tan-Werte sind Pflicht. In der Medizin findet Trigonometrie Anwendung bei Kräftezerlegung, Drehmoment und Vektorzerlegung. Probe immer über den Satz des Pythagoras.`,
+      merksätze: [
+        "SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete.",
+        "Trigonometrischer Pythagoras: sin²α + cos²α = 1 — gilt für JEDEN Winkel.",
+        "360° = 2π rad; Grad → Bogenmaß: × π/180; Bogenmaß → Grad: × 180/π.",
+        "30-60-90-Dreieck: Seiten 1 : √3 : 2. 45-45-90-Dreieck: Seiten 1 : 1 : √2.",
+        "Kräftezerlegung: F_parallel = F × cos α; F_senkrecht = F × sin α.",
+      ],
+      klinischerBezug:
+        "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
+      selfTest: [
+        {
+          question:
+            "Ein rechtwinkliges Dreieck hat eine Hypotenuse von 13 cm und eine Gegenkathete von 5 cm. Wie groß ist sin α?",
+          options: ["5/12", "5/13", "12/13", "13/5", "12/5"],
+          correctIndex: 1,
+          explanation:
+            "sin α = Gegenkathete / Hypotenuse = 5/13. Die Ankathete ergibt sich aus dem Satz des Pythagoras: √(13² − 5²) = √(169 − 25) = √144 = 12 cm. Also: sin α = 5/13, cos α = 12/13, tan α = 5/12. Das 5-12-13-Dreieck ist ein pythagoreisches Tripel (5² + 12² = 25 + 144 = 169 = 13²).",
+          hints: ["sin α = Gegenkathete / Hypotenuse.", "Gegenkathete = 5 cm, Hypotenuse = 13 cm."],
+          tags: ["sinus", "rechtwinkliges-dreieck", "soh-cah-toa"],
+          difficulty: 1,
+        },
+        {
+          question: "Wie viel Bogenmaß entsprechen 150°?",
+          options: ["π/3", "2π/3", "3π/4", "5π/6", "5π/4"],
+          correctIndex: 3,
+          explanation:
+            "Umrechnung: 150° × π/180 = 150π/180 = 5π/6. Zur Kontrolle: 5π/6 × 180/π = 5 × 180/6 = 5 × 30 = 150° ✓. Merkhilfe: 150° = 180° − 30° = π − π/6 = 5π/6. Alternativ: 30° = π/6, also 150° = 5 × 30° = 5 × π/6 = 5π/6.",
+          hints: [
+            "Formel: Grad × π/180 = Bogenmaß.",
+            "150 × π / 180 vereinfachen: kürze durch 30.",
+          ],
+          tags: ["bogenmass", "gradmass", "umrechnung"],
+          difficulty: 1,
+        },
+        {
+          question: "Gegeben: sin α = 0,6 und α liegt im I. Quadranten. Wie groß ist cos α?",
+          options: ["0,4", "0,5", "0,6", "0,8", "1,0"],
+          correctIndex: 3,
+          explanation:
+            "Trigonometrischer Pythagoras: sin²α + cos²α = 1. Also cos²α = 1 − sin²α = 1 − 0,36 = 0,64. cos α = √0,64 = 0,8. (Positiv, da I. Quadrant.) Probe: 0,6² + 0,8² = 0,36 + 0,64 = 1 ✓. Das entspricht einem 3-4-5-Dreieck (sin = 3/5 = 0,6; cos = 4/5 = 0,8).",
+          hints: ["Nutze sin²α + cos²α = 1.", "cos²α = 1 − 0,6² = 1 − 0,36 = ?"],
+          tags: ["trigonometrischer-pythagoras", "sinus", "kosinus"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Eine Kraft F = 200 N wirkt unter α = 60° zur Horizontalen. Wie groß ist die horizontale Komponente F_x?",
+          options: ["100 N", "141 N", "173 N", "200 N", "50 N"],
+          correctIndex: 0,
+          explanation:
+            "Die horizontale Komponente berechnet sich als F_x = F × cos α = 200 N × cos 60° = 200 × 0,5 = 100 N. Die vertikale Komponente wäre F_y = F × sin 60° = 200 × √3/2 ≈ 173 N. Probe: √(100² + 173²) = √(10000 + 29929) = √39929 ≈ 200 N ✓. Bei 60° zur Horizontalen ist die vertikale Komponente größer als die horizontale.",
+          hints: ["Horizontale Komponente = F × cos α.", "cos 60° = 1/2 = 0,5."],
+          tags: ["kraeftezerlegung", "kosinus", "biomechanik"],
+          difficulty: 2,
+        },
+        {
+          question: "Welcher Wert von tan α ist NICHT definiert?",
+          options: [
+            "tan 0° = 0",
+            "tan 30° = 1/√3",
+            "tan 45° = 1",
+            "tan 60° = √3",
+            "tan 90° — nicht definiert",
+          ],
+          correctIndex: 4,
+          explanation:
+            "tan α = sin α / cos α. Bei α = 90° gilt cos 90° = 0, daher ist die Division durch null nicht definiert. Geometrisch: Bei 90° ist die Ankathete gleich null, und Gegenkathete/Ankathete = Gegenkathete/0 ist undefiniert. Am Einheitskreis nähert sich tan α für α → 90° dem Wert +∞ (von links). Analog ist tan 270° nicht definiert. Alle anderen Werte in den Optionen sind korrekt: tan 0° = 0/1 = 0; tan 30° = (1/2)/(√3/2) = 1/√3; tan 45° = (√2/2)/(√2/2) = 1; tan 60° = (√3/2)/(1/2) = √3.",
+          hints: [
+            "tan α = sin α / cos α — wann wird der Nenner null?",
+            "cos 90° = 0, also Division durch null.",
+          ],
+          tags: ["tangens", "definition", "einheitskreis"],
+          difficulty: 1,
         },
       ],
     },
@@ -2245,12 +2622,13 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
       ],
       content: `## Einleitung
 
-Wie viel Wasser passt in eine zylindrische Flasche? Wie gross ist die Oberflaeche einer Kugel? Und warum haben kleine Koerper ein groesseres Oberflaeche-zu-Volumen-Verhaeltnis als grosse? Hinter diesen Fragen stehen die **Volumen- und Oberflaechenformeln** geometrischer Koerper. Die Formeln fuer Quader, Zylinder, Kugel und Kegel gehoeren zum Standardwissen am MedAT.
+Wie gross ist das Volumen einer zylindrischen Infusionsflasche? Wie schaetzt man die Groesse einer kugelfoermigen Zyste? Und warum haben kleine Zellen ein groesseres Oberflaeche-zu-Volumen-Verhaeltnis als grosse? Hinter diesen Fragen stehen **Volumen- und Oberflaechenformeln** -- Standardwissen am MedAT.
 
 **In diesem Kapitel lernst du:**
-- wie du Volumen und Oberflaeche von Quader, Zylinder, Kugel und Kegel berechnest
-- warum das Oberflaeche-zu-Volumen-Verhaeltnis bei kleinen Koerpern groesser ist
-- welche typischen Verwechslungen (V vs. O beim Quader, r³ vs. r² bei der Kugel) am MedAT lauern
+- Volumen und Oberflaeche von Quader, Zylinder, Kugel und Kegel berechnen
+- das Ellipsoid-Modell fuer Tumor- und Organvolumina (V ≈ 0,52 × a × b × c)
+- Oberflaeche-zu-Volumen-Verhaeltnis (O/V = 3/r) und seine biologische Bedeutung
+- typische Verwechslungen vermeiden (V vs. O beim Quader, r³ vs. r² bei der Kugel)
 
 ---
 
@@ -2260,14 +2638,13 @@ Wie viel Wasser passt in eine zylindrische Flasche? Wie gross ist die Oberflaech
 
 ## Quader und Wuerfel
 
-- **Volumen:** V = l × b × h (alle drei Kanten multiplizieren!)
+**Quader** (Kanten l, b, h):
+- **Volumen:** V = l × b × h
 - **Oberflaeche:** O = 2 × (l×b + b×h + l×h)
 - **Raumdiagonale:** d = √(l² + b² + h²)
-- **Wuerfel** (a = b = c): V = a³, O = 6a²
+- **Wuerfel** (a = l = b = h): V = a³, O = 6a²
 
-> **Merke:** V(Quader) = a·b·c. MedAT-Falle: Das ist NICHT 2(ab+ac+bc) -- das waere die Oberflaeche!
-
-**Beispiel:** Schachtel 12 × 8 × 3 cm. V = 288 cm³. O = 312 cm².
+> **Merke:** MedAT-Falle: V = l×b×h ≠ Oberflaeche! O = 2(lb+bh+lh).
 
 ---
 
@@ -2277,17 +2654,18 @@ Wie viel Wasser passt in eine zylindrische Flasche? Wie gross ist die Oberflaech
 - **Mantelflaeche:** M = 2 × π × r × h
 - **Gesamtoberflaeche:** O = 2πr(h + r)
 
-**Beispiel:** Flasche mit r = 3 cm, h = 20 cm. V = π × 9 × 20 ≈ 565 cm³ ≈ 565 mL.
+Beispiel: Infusionsflasche r = 3 cm, h = 20 cm → V ≈ 565 mL.
+Umkehraufgabe: r = 2 cm, 250 mL → h = 250/(π×4) ≈ 19,9 cm.
 
 ---
 
 ## Kegel und Pyramide
 
-**Kegel:** V = ⅓ × π × r² × h (ein Drittel des Zylinders!)
+**Kegel:** V = **⅓** × π × r² × h (ein Drittel des Zylinders!)
 
-**Pyramide:** V = ⅓ × Grundflaeche × h
+**Pyramide:** V = **⅓** × Grundflaeche × h
 
-> **Merke:** Das Kegelvolumen ist genau ein Drittel des Zylindervolumens mit gleichem Radius und gleicher Hoehe.
+> **Merke:** Kegel = ⅓ Zylinder. Pyramide = ⅓ Prisma. Das ⅓ gilt fuer alle spitzen Koerper!
 
 ---
 
@@ -2297,40 +2675,50 @@ Wie viel Wasser passt in eine zylindrische Flasche? Wie gross ist die Oberflaech
 - **Oberflaeche:** O = 4 × π × r²
 - **O/V-Verhaeltnis:** 3/r (je kleiner r, desto groesser!)
 
-**Beispiel:** Kugel mit d = 4 cm (r = 2). V = (4/3)π×8 ≈ 33,5 cm³.
+Beispiel -- Zyste: d = 4 cm (r = 2) → V = (4/3)π×8 ≈ **33,5 cm³**.
 
-**Umkehraufgabe:** V = 904 cm³. r³ = 3V/(4π) = 216. r = 6 cm (weil 6³ = 216).
+> **Merke:** Kugel: V ~ r³, O ~ r². Kleiner Radius = grosses O/V = effizienter Stoffaustausch (Lungenalveolen!).
 
 ---
 
-## Oberflaeche-Volumen-Verhaeltnis
+## Ellipsoid (medizinisch wichtig)
 
-O/V einer Kugel = 3/r. Je kleiner der Koerper, desto groesser das Verhaeltnis. Kleine Strukturen (z.B. kleine Zellen) tauschen Stoffe effizienter aus als grosse.
+Fuer Tumor-Volumetrie: **V ≈ 0,52 × a × b × c**, wobei a, b, c die drei Durchmesser aus Ultraschall oder MRT sind.
+
+Beispiel -- Harnblase: a = 8, b = 6, c = 5 cm → V = 0,52 × 240 = **125 mL**. Restharn > 100 mL → pathologisch.
+
+---
+
+## Hagen-Poiseuille
+
+Laminarer Fluss durch ein Rohr: **V̇ ~ r⁴**. Halbierung des Radius → Fluss auf (½)⁴ = **1/16** reduziert!
+
+> **Merke:** Kleiner Gefaessradius → drastisch weniger Fluss. Erklaert die Bedeutung hochgradiger Stenosen.
 
 ---
 
 ## MedAT-Fokus
 
 **Typische Aufgabentypen:**
-- V(Quader), V(Zylinder), V(Kugel), V(Kegel)
-- r aus V berechnen (Kugel: r³ = 3V/(4π))
-- O/V-Verhaeltnis
+- V und O fuer Quader, Zylinder, Kugel, Kegel
+- r aus Volumen berechnen (Kugel: r³ = 3V/(4π))
+- Ellipsoid-Volumen; O/V-Verhaeltnis; Hagen-Poiseuille (Fluss ~ r⁴)
 
-**Minimal-Rechenrezepte:**
-- **Quader:** V = a×b×c, O = 2(ab+ac+bc)
-- **Kugel:** V = (4/3)πr³, O = 4πr²
-- **Zylinder:** V = πr²h
-- **Kegel:** V = ⅓πr²h
+**Typische Fallen:**
+- Quader: V = l×b×h; O = 2(lb+lh+bh) -- nicht verwechseln!
+- Kugel: V hat r³ (nicht r²)
+- Kegel: ⅓ nicht vergessen
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Quader**: V = l×b×h; O = 2(lb+lh+bh)
-- **Zylinder**: V = πr²h; M = 2πrh
-- **Kegel**: V = ⅓πr²h
-- **Kugel**: V = (4/3)πr³; O = 4πr²; O/V = 3/r
-- **Typische Fehler**: Quader V ≠ O verwechseln; Kugel r³ (nicht r²)`,
+- **Quader:** V = l×b×h; O = 2(lb+lh+bh); d = √(l²+b²+h²)
+- **Zylinder:** V = πr²h; M = 2πrh; O = 2πr(h+r)
+- **Kegel:** V = ⅓πr²h; **Pyramide:** V = ⅓×G×h
+- **Kugel:** V = (4/3)πr³; O = 4πr²; O/V = 3/r
+- **Ellipsoid:** V ≈ 0,52×a×b×c (Tumor, Blase, Herz)
+- **Hagen-Poiseuille:** Fluss ~ r⁴; Radius halbiert → Fluss auf 1/16`,
       contentExtended: `## Einleitung
 
 Wie gross ist das Volumen einer zylindrischen Infusionsflasche? Wie schaetzt der Radiologe die Groesse einer kugelfoermigen Zyste? Und warum haben kleine Zellen ein groesseres Oberflaeche-zu-Volumen-Verhaeltnis als grosse? Hinter diesen Fragen stehen die **Volumen- und Oberflaechenformeln** geometrischer Koerper. Die Formeln fuer Quader, Zylinder, Kugel und Kegel gehoeren zum Standardwissen am MedAT -- und eine der beliebtesten Fallen ist die Verwechslung von Volumen und Oberflaeche beim Quader.
@@ -2650,13 +3038,13 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
       ],
       content: `## Einleitung
 
-Zwei Punkte auf einem Blatt -- wie weit sind sie voneinander entfernt? Und wie findest du die Gleichung der Geraden, die durch beide geht? Das **kartesische Koordinatensystem** macht Geometrie berechenbar: Punkte werden zu Zahlenpaaren, Geraden zu Gleichungen, und der Abstand zwischen zwei Punkten folgt dem Satz des Pythagoras.
+Zwei Messpunkte auf einem Laborbefund -- wie weit liegen sie auseinander? Das **kartesische Koordinatensystem** macht Geometrie berechenbar: Punkte werden zu Zahlenpaaren, Geraden zu Gleichungen, und der Abstand folgt dem Satz des Pythagoras. In der Medizin begegnet dir dieses System in Streudiagrammen, Dosis-Wirkungs-Kurven und bei der EKG-Herzachse.
 
 **In diesem Kapitel lernst du:**
-- wie du Punkte im Koordinatensystem beschreibst und den Abstand zwischen ihnen berechnest
-- wie du die Geradengleichung aus zwei Punkten aufstellst und die Steigung interpretierst
-- wie du Schnittpunkte zweier Geraden berechnest und wann Geraden parallel oder senkrecht sind
-- wie die Kreisgleichung aussieht
+- Abstand und Mittelpunkt zweier Punkte mit Pythagoras berechnen
+- Geradengleichung aus zwei Punkten aufstellen und Steigung interpretieren
+- Schnittpunkte zweier Geraden berechnen; parallele und senkrechte Geraden erkennen
+- Kreisgleichung lesen und aufstellen; Polarkoordinaten umrechnen
 
 ---
 
@@ -2666,33 +3054,33 @@ Zwei Punkte auf einem Blatt -- wie weit sind sie voneinander entfernt? Und wie f
 
 ## Kartesisches Koordinatensystem
 
-Ein Punkt P wird durch (x, y) beschrieben. Die vier Quadranten: I (+,+), II (−,+), III (−,−), IV (+,−).
+Ein Punkt P = (x, y): x-Achse horizontal, y-Achse vertikal. Vier Quadranten: I (+,+), II (−,+), III (−,−), IV (+,−).
 
-**Abstand:** d = √((x₂−x₁)² + (y₂−y₁)²) -- das ist Pythagoras im Koordinatensystem!
+**Abstandsformel** (aus Pythagoras): **d = √((x₂−x₁)² + (y₂−y₁)²)**
 
 **Mittelpunkt:** M = ((x₁+x₂)/2, (y₁+y₂)/2)
 
-**Beispiel:** P₁(−3, 1), P₂(5, 7). d = √(64+36) = √100 = 10. M = (1, 4).
+Beispiel: P₁(−3, 1), P₂(5, 7). Δx = 8, Δy = 6. d = √(64+36) = **10**. M = (1, 4).
 
-> **Merke:** Die Abstandsformel ist Pythagoras in Koordinatenform. Die Differenzen sind die Katheten, der Abstand die Hypotenuse.
+> **Merke:** Die Abstandsformel ist Pythagoras in Koordinatenform. Auch bei negativen Koordinaten gilt sie -- da die Differenzen quadriert werden.
 
 ---
 
 ## Geradengleichung
 
-**Form:** y = m × x + b. Dabei ist m = Steigung und b = y-Achsenabschnitt.
+**Normalform:** **y = m × x + b**, wobei m = Steigung und b = y-Achsenabschnitt.
 
-**Steigung aus zwei Punkten:** m = (y₂ − y₁) / (x₂ − x₁)
+**Steigung aus zwei Punkten:** m = (y₂ − y₁) / (x₂ − x₁) = Δy / Δx
 
-**Beispiel:** Durch P₁(2, 3) und P₂(6, 11). m = 8/4 = 2. b: 3 = 2×2 + b, b = −1. Gerade: y = 2x − 1.
+Steigung in Prozent = **tan(α) × 100** (Tangens, NICHT Sinus!). 16 % Steigung = bei 100 m horizontal 16 m Hoehenunterschied.
 
-**Schnittpunkt zweier Geraden:** Gleichsetzen und nach x aufloesen.
-Beispiel: y = 2x + 1 und y = −x + 7. Gleichsetzen: 3x = 6, x = 2, y = 5. Schnittpunkt: (2, 5).
+Beispiel: Durch P₁(2, 3) und P₂(6, 11): m = 8/4 = 2. b = 3 − 2×2 = −1. Gerade: y = 2x − 1.
 
-**Parallele Geraden:** gleiche Steigung (m₁ = m₂).
-**Senkrechte Geraden:** m₁ × m₂ = −1.
+**Schnittpunkt:** Geraden gleichsetzen. Beispiel: 2x + 1 = −x + 7 → 3x = 6, x = 2, y = 5.
 
-> **Merke:** Drei Standardaufgaben: (1) Gerade aus zwei Punkten, (2) Schnittpunkt, (3) parallel oder senkrecht?
+**Parallele Geraden:** gleiche Steigung m. **Senkrechte Geraden:** m₁ × m₂ = **−1**.
+
+> **Merke:** Senkrecht: m₂ = −1/m₁. Steigung in %: tan(α)×100, nicht sin(α)×100!
 
 ---
 
@@ -2700,15 +3088,19 @@ Beispiel: y = 2x + 1 und y = −x + 7. Gleichsetzen: 3x = 6, x = 2, y = 5. Schni
 
 Kreis mit Mittelpunkt M(x₀, y₀) und Radius r: **(x − x₀)² + (y − y₀)² = r²**
 
-**Beispiel:** x² + y² − 6x + 4y − 12 = 0. Quadratisch ergaenzen: (x−3)² + (y+2)² = 25. Mittelpunkt (3, −2), Radius 5.
+Bei allgemeiner Form (z. B. x² + y² − 6x + 4y − 12 = 0) per quadratischer Ergaenzung in Normalform bringen: (x−3)² + (y+2)² = 25. Mittelpunkt (3, −2), Radius 5.
+
+> **Merke:** Vorzeichen beachten! (x+2)² → Mittelpunkt x₀ = **−2**. r² = 25 → r = **5**.
 
 ---
 
 ## Polarkoordinaten
 
-Statt (x, y) beschreibst du Punkte durch (r, φ): r = Abstand vom Ursprung, φ = Winkel.
+Punkte durch Abstand r und Winkel φ: x = r × cos φ, y = r × sin φ.
 
-Umrechnung: x = r × cos φ, y = r × sin φ.
+Umrechnung: r = √(x²+y²), φ = arctan(y/x) (Quadrant beachten!).
+
+Beispiel: P(−3, 4): r = 5, φ = 180° − 53° = 127° (II. Quadrant).
 
 ---
 
@@ -2718,20 +3110,24 @@ Umrechnung: x = r × cos φ, y = r × sin φ.
 - Abstand zweier Punkte; Mittelpunkt
 - Geradengleichung aus 2 Punkten; Schnittpunkt; parallel/senkrecht
 - Kreisgleichung; Steigung in % = tan(α)×100
+- Polarkoordinaten umrechnen
 
-**Minimal-Rechenrezepte:**
-- **Abstand:** d = √((Δx)²+(Δy)²)
-- **Gerade:** m = Δy/Δx, b = y₁−m×x₁
-- **Senkrecht:** m₂ = −1/m₁
+**Typische Fallen:**
+- Steigung in %: tan(α)×100, nicht sin(α)×100
+- Kreisgleichung: Vorzeichen von x₀ und y₀ beachten
+- Senkrechte Geraden: m₁×m₂ = −1 (nicht 1)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Koordinaten**: Punkt P(x,y); Abstand = √((Δx)²+(Δy)²); Mittelpunkt = Durchschnitt
-- **Gerade**: y = mx + b; m = Steigung; Parallele: gleiche m; Senkrechte: m₁×m₂ = −1
-- **Kreis**: (x−a)² + (y−b)² = r²
-- **Polar**: x = r×cosφ, y = r×sinφ`,
+- **Koordinaten:** Abstand = √((Δx)²+(Δy)²); Mittelpunkt = Durchschnitt der Koordinaten
+- **Gerade:** y = mx + b; m = Δy/Δx; Parallele: gleiche m; Senkrechte: m₁×m₂ = −1
+- **Steigung in %:** tan(α)×100 (Tangens, NICHT Sinus!)
+- **Kreis:** (x−x₀)² + (y−y₀)² = r²; quadratische Ergaenzung bei allgemeiner Form
+- **Polar:** x = r×cosφ, y = r×sinφ; r = √(x²+y²)
+- **Klinisch:** Streudiagramme, Bland-Altman, EKG-Herzachse`,
+
       contentExtended: `## Einleitung
 
 Zwei Messpunkte auf dem Laborbefund -- wie legst du eine Gerade hindurch, um einen Zwischenwert abzuschaetzen? Das ist **lineare Interpolation**, und sie funktioniert im Koordinatensystem: Punkte werden zu Zahlenpaaren, Geraden zu Gleichungen, und der Abstand zwischen zwei Punkten folgt dem Satz des Pythagoras. Das **kartesische Koordinatensystem** ist die Grundlage fuer Kalibrierkurven, Dosis-Wirkungs-Diagramme und grafische MedAT-Aufgaben.
@@ -3073,14 +3469,14 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
       ],
       content: `## Einleitung
 
-Stell dir vor, du schiebst einen Schrank schraeg ueber den Boden -- die Kraft hat sowohl einen Betrag (wie stark) als auch eine Richtung (wohin). Das macht sie zu einem **Vektor**. Im Gegensatz dazu ist die Temperatur ein **Skalar** -- eine reine Zahl ohne Richtung. Vom Kraefteparallelogramm bis zur Abstandsberechnung im Raum: Vektoren sind ein wichtiges Werkzeug.
+Stell dir vor, du zerlegst die Muskelkraft am Kniegelenk in eine Druck- und eine Scherkomponente -- das geht nur, weil Kraft ein **Vektor** ist: Sie hat Betrag (wie stark) und Richtung (wohin). Ein Skalar dagegen ist eine reine Zahl ohne Richtung (z. B. Temperatur, Masse). Vom EKG-Herzachsenvektor bis zur Strahlentherapie-Planung: Vektoren sind in der Medizin allgegenwaertig.
 
 **In diesem Kapitel lernst du:**
-- worin sich Vektoren (Betrag + Richtung) von Skalaren (nur Zahl) unterscheiden
-- wie du den Betrag eines Vektors mit dem Satz des Pythagoras berechnest
-- was das Skalarprodukt ueber den Winkel zwischen zwei Vektoren verraet
-- was das Kreuzprodukt liefert und warum es senkrecht auf beiden Vektoren steht
-- wie die Ebenengleichung funktioniert
+- was Vektoren (Betrag + Richtung) von Skalaren unterscheidet
+- Betrag, Addition und Skalierung von Vektoren
+- Skalarprodukt: Ergebnis ist eine Zahl; Vektoren senkrecht wenn = 0
+- Kreuzprodukt: liefert einen Vektor senkrecht auf beiden Ausgangsvektoren
+- Ebenengleichung und klinische Anwendungen
 
 ---
 
@@ -3088,78 +3484,91 @@ Stell dir vor, du schiebst einen Schrank schraeg ueber den Boden -- die Kraft ha
 
 {{DIAGRAM:coordinate-system}}
 
-## Grundbegriffe
+## Grundbegriffe: Vektor vs. Skalar
 
-Ein Vektor **a** = (a₁, a₂, a₃) hat drei Komponenten.
+**Vektor a** = (a₁, a₂, a₃): hat Betrag und Richtung.
+**Betrag:** |a| = √(a₁² + a₂² + a₃²)
+**Einheitsvektor:** â = a / |a| (Laenge 1, gibt nur Richtung an)
 
-**Betrag (Laenge):** |a| = √(a₁² + a₂² + a₃²)
+**Addition:** a + b = (a₁+b₁, a₂+b₂, a₃+b₃) -- komponentenweise! Geometrisch: Parallelogrammregel.
 
-**Addition:** a + b = (a₁+b₁, a₂+b₂, a₃+b₃) -- komponentenweise!
+**Skalierung:** c × a = (c×a₁, c×a₂, c×a₃). c < 0 → Richtung kehrt sich um.
 
-**Skalierung:** c × a = (c×a₁, c×a₂, c×a₃)
+> **Merke:** Vektor A → B = b − a. Abstand = |b − a|.
 
-**Beispiel:** a = (3, −1, 2). |a| = √(9+1+4) = √14 ≈ 3,74.
-
-> **Merke:** Der Vektor von Punkt A nach Punkt B ist die Differenz: AB = b − a.
+Beispiel: a = (3, −1, 2). |a| = √(9+1+4) = √14 ≈ 3,74.
 
 ---
 
 ## Skalarprodukt
 
+Das **Skalarprodukt** beantwortet: „Wie stark zeigen zwei Vektoren in dieselbe Richtung?"
+
 **a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a|×|b|×cos θ**
 
-Das Ergebnis ist eine **Zahl** (kein Vektor!).
+Das Ergebnis ist immer eine **Zahl** (kein Vektor!).
 
-- a · b = 0 → die Vektoren sind **senkrecht** (90°)
+- a · b = 0 → **senkrecht** (θ = 90°)
 - a · b > 0 → spitzer Winkel
 - a · b < 0 → stumpfer Winkel
 
-**Winkel:** cos θ = (a·b) / (|a|×|b|)
+**Winkel berechnen:** cos θ = (a·b) / (|a|×|b|) → θ = arccos(...)
 
-> **Merke:** Skalarprodukt = Zahl. Skalarprodukt = 0 bedeutet senkrecht!
+> **Merke:** Skalarprodukt = 0 bedeutet senkrecht! Ergebnis ist eine Zahl, kein Vektor.
+
+Beispiel: a = (1,2,2), b = (2,−1,2). a·b = 2−2+4 = 4. |a| = |b| = 3. cos θ = 4/9 → θ ≈ 63,6°.
 
 ---
 
 ## Kreuzprodukt
 
-**a × b** ergibt einen **Vektor senkrecht** zu beiden. |a × b| = |a|×|b|×sin θ = Flaeche des Parallelogramms.
+Das **Kreuzprodukt** a × b ergibt einen **Vektor senkrecht** auf beiden (Rechte-Hand-Regel).
 
-Wenn a × b = Nullvektor: die Vektoren sind **parallel**.
+**|a × b| = |a|×|b|×sin θ** = Flaeche des aufgespannten Parallelogramms.
 
-Wichtig: a × b = −(b × a) -- die Reihenfolge zaehlt!
+- a × b = **Nullvektor** → Vektoren sind **parallel**
+- Antikommutativ: a × b = **−(b × a)**
+
+Beispiel: a = (1,0,0), b = (0,1,0). a × b = (0,0,1).
+
+> **Merke:** Kreuzprodukt = Vektor (senkrecht!); Skalarprodukt = Zahl. Das Kreuzprodukt misst die Flaeche, das Skalarprodukt den Winkel.
 
 ---
 
 ## Ebenengleichung
 
-Eine Ebene wird durch einen Punkt und einen **Normalenvektor** n (senkrecht zur Ebene) beschrieben:
-n₁x + n₂y + n₃z = d
+Eine Ebene: **n₁x + n₂y + n₃z = d** (n = Normalenvektor).
 
-**Abstand Punkt-Ebene:** |n₁x₀ + n₂y₀ + n₃z₀ − d| / |n|
+Abstand Punkt P von Ebene: |n·P − d| / |n|.
+
+Klinisch: MRT-Schichtebenen, Bestrahlungswinkel in der Strahlentherapie werden als Ebenengleichungen definiert.
 
 ---
 
 ## MedAT-Fokus
 
 **Typische Aufgabentypen:**
-- Betrag berechnen; Vektoren addieren/subtrahieren
-- Skalarprodukt: Winkel berechnen; Orthogonalitaet pruefen
-- Kreuzprodukt: Flaeche berechnen
+- Betrag eines Vektors berechnen
+- Skalarprodukt: Winkel und Senkrechthait pruefen
+- Kreuzprodukt: Flaecheninhalt des Parallelogramms
+- Parallel vs. senkrecht unterscheiden
 
-**Minimal-Rechenrezepte:**
-- **Betrag:** |a| = √(a₁²+a₂²+a₃²)
-- **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; senkrecht wenn = 0
-- **Winkel:** cos θ = (a·b)/(|a|×|b|)
+**Typische Fallen:**
+- Skalarprodukt gibt eine Zahl, Kreuzprodukt einen Vektor
+- a × b ≠ b × a (antikommutativ)
+- Senkrecht: Skalarprodukt = 0; parallel: Kreuzprodukt = Nullvektor
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Vektor**: Groesse mit Betrag und Richtung; |v| = √(x²+y²+z²)
-- **Addition**: komponentenweise
-- **Skalarprodukt**: a·b = Zahl; = 0 → senkrecht
-- **Kreuzprodukt**: a×b = Vektor senkrecht zu beiden; = 0 → parallel
-- **Ebene**: n₁x + n₂y + n₃z = d; Normalenvektor steht senkrecht auf der Ebene`,
+- **Vektor:** Betrag + Richtung; |v| = √(x²+y²+z²); Skalar = nur Zahl
+- **Addition:** komponentenweise; geometrisch: Parallelogrammregel
+- **Skalarprodukt:** a·b = Zahl; = 0 → senkrecht; cos θ = a·b/(|a||b|)
+- **Kreuzprodukt:** a×b = Vektor ⊥ zu beiden; |a×b| = Parallelogrammflaeche; = 0 → parallel
+- **Ebene:** n₁x + n₂y + n₃z = d; Abstand = |n·P − d| / |n|
+- **Klinisch:** EKG-Herzachse (Vektoraddition), Drehmoment M = r × F, MRT-Schichtebenen`,
+
       contentExtended: `## Einleitung
 
 Stell dir vor, du zerlegst die Muskelkraft am Kniegelenk in eine Druck- und eine Scherkomponente -- das geht nur, weil Kraft ein **Vektor** ist: Sie hat sowohl einen Betrag als auch eine Richtung. Im Gegensatz dazu ist die Temperatur ein **Skalar** -- eine reine Zahl ohne Richtung. Vom EKG-Herzachsenvektor ueber die Blutflussrichtung bis zur Kraefteparallelogramm-Regel: Vektoren sind in der Medizin allgegenwaertig. Vertiefung folgt in Kapitel 6.
@@ -3467,411 +3876,6 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
           hints: ["arctan(6/6) = arctan(1) = 45°.", "Normotyp: Herzachse zwischen 0° und +90°."],
           tags: ["ekg", "herzachse", "normotyp"],
           difficulty: 3,
-        },
-      ],
-    },
-    // === Trigonometrie ===
-    {
-      id: "ma-2-05",
-      diagram: "unit-circle",
-      title: "Trigonometrie-Grundlagen",
-      stichworte: [
-        "Sinus",
-        "Kosinus",
-        "Tangens",
-        "Einheitskreis",
-        "Bogenmaß",
-        "Gradmaß",
-        "SOH-CAH-TOA",
-        "Trigonometrischer Pythagoras",
-        "Rechtwinkliges Dreieck",
-        "Kräftezerlegung",
-        "Winkelfunktion",
-        "Umrechnung Grad Bogenmaß",
-      ],
-      content: `## Einleitung
-
-Wie hoch ist ein Baum, wenn du seinen Schatten und den Winkel der Sonne kennst? Hinter solchen Aufgaben steckt die **Trigonometrie** -- die Lehre von den Beziehungen zwischen Winkeln und Seitenlaengen in Dreiecken. Wer Sinus, Kosinus und Tangens sicher beherrscht, loest geometrische MedAT-Fragen routiniert.
-
-**In diesem Kapitel lernst du:**
-- wie Sinus, Kosinus und Tangens am rechtwinkligen Dreieck definiert sind (SOH-CAH-TOA)
-- was der Einheitskreis ist und warum sin²α + cos²α = 1 gilt
-- wie du zwischen Gradmass und Bogenmass umrechnest (360° = 2π rad)
-- welche Werte sin, cos und tan fuer die wichtigsten Winkel (0°, 30°, 45°, 60°, 90°) annehmen
-- wie du Kraefte in Komponenten zerlegst
-
----
-
-{{DIAGRAM:unit-circle}}
-
-{{DIAGRAM:coordinate-system}}
-
-## Sinus, Kosinus und Tangens
-
-Im **rechtwinkligen Dreieck** gilt (Merkhilfe SOH-CAH-TOA):
-
-- **sin α** = Gegenkathete / Hypotenuse
-- **cos α** = Ankathete / Hypotenuse
-- **tan α** = Gegenkathete / Ankathete = sin/cos
-
-Die **Hypotenuse** ist immer die laengste Seite (gegenueber dem rechten Winkel).
-
-> **Merke:** SOH-CAH-TOA: Sin = Gegen/Hyp, Cos = An/Hyp, Tan = Gegen/An.
-
----
-
-## Rechenbeispiel -- Seitenlaenge
-
-Hypotenuse 10 cm, Winkel α = 30°. Gegenkathete = 10 × sin 30° = 10 × 0,5 = **5 cm**. Ankathete = 10 × cos 30° = 10 × 0,866 = **8,66 cm**. Probe: 5² + 8,66² = 100 = 10² ✓
-
----
-
-## Einheitskreis
-
-Kreis mit Radius r = 1. Jeder Punkt P hat die Koordinaten (**cos α**, **sin α**).
-
-Daraus folgt: **sin²α + cos²α = 1** -- der trigonometrische Pythagoras, gilt fuer JEDEN Winkel.
-
-**Vorzeichen:** I. Quadrant: sin+, cos+. II: sin+, cos−. III: sin−, cos−. IV: sin−, cos+.
-
-> **Merke:** sin²α + cos²α = 1 -- diese Identitaet gilt immer!
-
----
-
-## Bogenmass vs. Gradmass
-
-360° = 2π rad. Umrechnung: Grad × π/180 = Bogenmass.
-
-| Grad | Bogenmass |
-|------|----------|
-| 0° | 0 |
-| 30° | π/6 |
-| 45° | π/4 |
-| 60° | π/3 |
-| 90° | π/2 |
-| 180° | π |
-
----
-
-## Wichtige Werte -- Merktabelle
-
-| Winkel | sin | cos | tan |
-|--------|-----|-----|-----|
-| 0° | 0 | 1 | 0 |
-| 30° | 1/2 | √3/2 | 1/√3 |
-| 45° | √2/2 | √2/2 | 1 |
-| 60° | √3/2 | 1/2 | √3 |
-| 90° | 1 | 0 | undefiniert |
-
-**Spezial-Dreiecke:** 30-60-90: Seiten 1 : √3 : 2. 45-45-90: Seiten 1 : 1 : √2.
-
-> **Merke:** Diese beiden Dreiecke liefern alle wichtigen Werte!
-
----
-
-## Kraeftezerlegung
-
-Kraft F unter Winkel α zur Bezugsrichtung:
-- Parallele Komponente: Fₕ = F × cos α
-- Senkrechte Komponente: Fₖ = F × sin α
-
-**Beispiel:** F = 200 N, α = 60°. Fₕ = 200 × cos 60° = 200 × 0,5 = **100 N**. Fₖ = 200 × sin 60° ≈ **173 N**.
-
----
-
-## MedAT-Fokus
-
-**Zentral pruefungsrelevant:**
-- sin, cos, tan am rechtwinkligen Dreieck (SOH-CAH-TOA)
-- Seitenlaengen und Winkel berechnen
-- sin²α + cos²α = 1
-- Umrechnung Grad ↔ Bogenmass
-- Werte fuer 0°, 30°, 45°, 60°, 90°
-- Kraeftezerlegung mit sin/cos
-
-**Typische Fallen:**
-- Gegen- und Ankathete verwechseln
-- tan 90° ist NICHT 1, sondern undefiniert
-- sin²α + cos²α = 1, NICHT sinα + cosα = 1
-
----
-
-## Zusammenfassung
-
-- **SOH-CAH-TOA**: sin = Gegen/Hyp, cos = An/Hyp, tan = Gegen/An
-- **Trig. Pythagoras**: sin²α + cos²α = 1
-- **Bogenmass**: 360° = 2π; Grad × π/180 = Bogenmass
-- **Spezial-Dreiecke**: 30-60-90 (1:√3:2); 45-45-90 (1:1:√2)
-- **Kraeftezerlegung**: Fₕ = F×cosα; Fₖ = F×sinα`,
-      contentExtended: `## Einleitung
-
-Wie zerlegt man eine Muskelkraft in zwei senkrechte Komponenten? Warum berechnet der Physiker das Drehmoment mit dem Sinus des Winkels? Und wie bestimmt man aus einem EKG-Vektor den Winkel der Herzachse? Hinter all diesen Fragen steckt die **Trigonometrie** — die Lehre von den Beziehungen zwischen Winkeln und Seitenlängen in Dreiecken. Wer Sinus, Kosinus und Tangens sicher beherrscht, löst Kräftezerlegungen, Vektoraufgaben und geometrische MedAT-Fragen routiniert.
-
-**In diesem Kapitel lernst du:**
-- wie Sinus, Kosinus und Tangens am rechtwinkligen Dreieck definiert sind (SOH-CAH-TOA)
-- was der Einheitskreis ist und warum sin/cos als Koordinaten auf dem Kreis dargestellt werden
-- wie du zwischen Gradmaß und Bogenmaß umrechnest (360° = 2π rad)
-- welche Werte sin, cos und tan für die wichtigsten Winkel (0°, 30°, 45°, 60°, 90°) annehmen
-- warum sin²α + cos²α = 1 gilt und wie du diesen trigonometrischen Pythagoras anwendest
-
----
-
-{{DIAGRAM:unit-circle}}
-
-{{DIAGRAM:coordinate-system}}
-
-## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
-
-**Idee:** In jedem rechtwinkligen Dreieck stehen die Seitenlängen in einem festen Verhältnis zueinander, das nur vom Winkel abhängt — nicht von der Größe des Dreiecks. Dieses Verhältnis beschreiben die drei trigonometrischen Funktionen Sinus, Kosinus und Tangens.
-
-**Verfahren — SOH-CAH-TOA (Merkhilfe):**
-
-- **S**inus = **O**pposite / **H**ypotenuse → sin α = Gegenkathete / Hypotenuse
-- **C**osinus = **A**djacent / **H**ypotenuse → cos α = Ankathete / Hypotenuse
-- **T**angens = **O**pposite / **A**djacent → tan α = Gegenkathete / Ankathete
-
-Dabei ist:
-- **Hypotenuse:** die längste Seite, gegenüber dem rechten Winkel (90°)
-- **Gegenkathete:** die Seite gegenüber dem betrachteten Winkel α
-- **Ankathete:** die Seite neben dem betrachteten Winkel α (nicht die Hypotenuse)
-
-Zusätzlich gilt: **tan α = sin α / cos α** (solange cos α ≠ 0).
-
-> **Merke:** SOH-CAH-TOA — Sinus = Gegenkathete/Hypotenuse, Cosinus = Ankathete/Hypotenuse, Tangens = Gegenkathete/Ankathete. Die Hypotenuse liegt IMMER gegenüber dem rechten Winkel und ist die längste Seite.
-
----
-
-## Rechenbeispiel 1 — Seitenlänge bestimmen
-
-**Aufgabe:** Ein rechtwinkliges Dreieck hat eine Hypotenuse von 10 cm und einen Winkel α = 30°. Berechne die Gegenkathete und die Ankathete.
-
-**Schritt 1:** Gegenkathete über Sinus: sin 30° = Gegenkathete / 10 cm.
-sin 30° = 0,5 → Gegenkathete = 10 cm × 0,5 = **5 cm**.
-
-**Schritt 2:** Ankathete über Kosinus: cos 30° = Ankathete / 10 cm.
-cos 30° = √3/2 ≈ 0,866 → Ankathete = 10 cm × 0,866 = **8,66 cm**.
-
-**Probe:** 5² + 8,66² = 25 + 75 = 100 = 10² ✓ (Satz des Pythagoras bestätigt)
-
----
-
-## Rechenbeispiel 2 — Winkelberechnung
-
-**Aufgabe:** In einem rechtwinkligen Dreieck sind Gegenkathete = 6 cm und Ankathete = 6 cm. Bestimme den Winkel α.
-
-**Lösung:** tan α = Gegenkathete / Ankathete = 6/6 = 1.
-α = arctan(1) = **45°**.
-
-**Kontrolle:** sin 45° = 6 / Hypotenuse → Hypotenuse = 6 / sin 45° = 6 / (√2/2) = 6√2 ≈ 8,49 cm.
-Probe: 6² + 6² = 72 = (6√2)² ✓
-
----
-
-## Der Einheitskreis
-
-**Idee:** Der Einheitskreis hat den Radius r = 1 und den Mittelpunkt im Koordinatenursprung. Jeder Punkt P auf dem Kreis hat die Koordinaten P = (cos α, sin α), wobei α der Winkel zur positiven x-Achse ist (gegen den Uhrzeigersinn gemessen).
-
-**Verfahren:** Zeichne den Einheitskreis (r = 1). Der Winkel α wird vom positiven x-Achsenabschnitt gegen den Uhrzeigersinn gemessen. Die x-Koordinate des Punktes auf dem Kreis ist cos α, die y-Koordinate ist sin α.
-
-Daraus folgt direkt:
-- cos α liegt immer zwischen −1 und +1
-- sin α liegt immer zwischen −1 und +1
-- Am Einheitskreis gilt: x² + y² = r² = 1 → **sin²α + cos²α = 1**
-
-**Vorzeichen in den Quadranten:**
-- I. Quadrant (0°–90°): sin > 0, cos > 0 → tan > 0
-- II. Quadrant (90°–180°): sin > 0, cos < 0 → tan < 0
-- III. Quadrant (180°–270°): sin < 0, cos < 0 → tan > 0
-- IV. Quadrant (270°–360°): sin < 0, cos > 0 → tan < 0
-
-> **Merke:** Am Einheitskreis ist die x-Koordinate = cos α und die y-Koordinate = sin α. Daraus folgt der trigonometrische Pythagoras: sin²α + cos²α = 1 — diese Identität gilt für JEDEN Winkel α.
-
----
-
-## Bogenmaß vs. Gradmaß
-
-**Idee:** Das Bogenmaß (Radiant, rad) misst Winkel über die Bogenlänge auf dem Einheitskreis. Ein voller Kreis = Umfang 2π → **360° = 2π rad**.
-
-**Umrechnungsformeln:**
-- Grad → Bogenmaß: **α(rad) = α(°) × π / 180**
-- Bogenmaß → Grad: **α(°) = α(rad) × 180 / π**
-
-**Wichtige Umrechnungen:**
-
-| Grad | Bogenmaß |
-|------|----------|
-| 0° | 0 |
-| 30° | π/6 |
-| 45° | π/4 |
-| 60° | π/3 |
-| 90° | π/2 |
-| 180° | π |
-| 270° | 3π/2 |
-| 360° | 2π |
-
-**Rechenbeispiel:** 120° in Bogenmaß: 120 × π/180 = 2π/3 rad.
-Rückrechnung: 2π/3 × 180/π = 120° ✓
-
-> **Merke:** 360° = 2π rad; 180° = π rad; 90° = π/2 rad. Umrechnung: Grad × π/180 = Bogenmaß; Bogenmaß × 180/π = Grad. In der Physik wird fast immer das Bogenmaß verwendet.
-
----
-
-## Wichtige Werte — Merktabelle
-
-Die Werte für die fünf Standard-Winkel solltest du auswendig kennen:
-
-| Winkel α | sin α | cos α | tan α |
-|----------|-------|-------|-------|
-| 0° | 0 | 1 | 0 |
-| 30° | 1/2 | √3/2 ≈ 0,866 | 1/√3 ≈ 0,577 |
-| 45° | √2/2 ≈ 0,707 | √2/2 ≈ 0,707 | 1 |
-| 60° | √3/2 ≈ 0,866 | 1/2 | √3 ≈ 1,732 |
-| 90° | 1 | 0 | nicht definiert |
-
-**Merkschema für Sinus:** Die Zähler von sin lauten: √0/2, √1/2, √2/2, √3/2, √4/2 = 0, 1/2, √2/2, √3/2, 1. Für Kosinus: dieselbe Folge rückwärts.
-
-**Rechenbeispiel:** Bestätige sin 60° = √3/2 über ein rechtwinkliges Dreieck mit 30°-60°-90°: Seitenverhältnisse 1 : √3 : 2 (kurze Kathete : lange Kathete : Hypotenuse). sin 60° = lange Kathete / Hypotenuse = √3/2 ✓
-
-> **Merke:** 30-60-90-Dreieck: Seiten im Verhältnis 1 : √3 : 2. 45-45-90-Dreieck: Seiten im Verhältnis 1 : 1 : √2. Diese beiden Spezial-Dreiecke liefern alle wichtigen Werte für sin, cos, tan.
-
----
-
-## Trigonometrischer Pythagoras und Identitäten
-
-**sin²α + cos²α = 1** — gilt für alle Winkel α.
-
-Daraus abgeleitet:
-- sin²α = 1 − cos²α
-- cos²α = 1 − sin²α
-- 1 + tan²α = 1/cos²α (durch Division mit cos²α)
-
-**Rechenbeispiel:** Gegeben: sin α = 3/5. Bestimme cos α (für α im I. Quadranten).
-cos²α = 1 − sin²α = 1 − 9/25 = 16/25 → cos α = 4/5.
-Dann: tan α = sin α / cos α = (3/5) / (4/5) = 3/4.
-
-**Probe:** sin²α + cos²α = (3/5)² + (4/5)² = 9/25 + 16/25 = 25/25 = 1 ✓. Außerdem: Gegenkathete = 3, Ankathete = 4, Hypotenuse = 5 — das klassische 3-4-5-Dreieck.
-
----
-
-## Medizinische Anwendung: Kräftezerlegung
-
-**Idee:** In der Orthopädie und Biomechanik wird eine Kraft F häufig in zwei senkrechte Komponenten zerlegt: eine Komponente entlang der Knochenachse und eine senkrecht dazu.
-
-**Verfahren:** Wenn die Kraft F unter dem Winkel α zur Bezugsrichtung wirkt:
-- Komponente parallel: F_parallel = F × cos α
-- Komponente senkrecht: F_senkrecht = F × sin α
-
-**Rechenbeispiel:** Ein Muskel übt eine Kraft von F = 500 N unter einem Winkel von α = 30° zur Knochenachse aus.
-F_parallel = 500 × cos 30° = 500 × 0,866 = **433 N** (Zugkraft entlang des Knochens)
-F_senkrecht = 500 × sin 30° = 500 × 0,5 = **250 N** (Kompressionskraft senkrecht zum Knochen)
-
-Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
-
-**Drehmoment:** M = r × F × sin θ, wobei θ der Winkel zwischen Hebelarm und Kraftvektor ist. Bei senkrechtem Angriff (θ = 90°): sin 90° = 1 → M = r × F.
-
----
-
-## MedAT-Fokus
-
-**Zentral prüfungsrelevant:**
-- Definition sin, cos, tan am rechtwinkligen Dreieck (SOH-CAH-TOA)
-- Berechnung fehlender Seiten und Winkel im rechtwinkligen Dreieck
-- Trigonometrischer Pythagoras: sin²α + cos²α = 1
-- Umrechnung Grad ↔ Bogenmaß
-- Werte für 0°, 30°, 45°, 60°, 90° (Merktabelle)
-- Kräftezerlegung mit sin/cos
-
-**Häufige Prüfungsfragen:**
-- „Berechne die Seitenlänge eines rechtwinkligen Dreiecks bei gegebenem Winkel und einer Seite."
-- „Rechne 150° in Bogenmaß um." → 150 × π/180 = 5π/6
-- „Gegeben sin α = 0,6. Bestimme cos α." → cos α = √(1 − 0,36) = 0,8
-- „Zerlege die Kraft F = 400 N unter α = 60° in Parallel- und Senkrechtkomponente."
-
-**Typische Prüfungsfallen:**
-- Gegenkathete und Ankathete verwechseln — immer vom betrachteten Winkel α ausgehen
-- Tangens bei 90° ist NICHT 1, sondern undefiniert (Division durch 0)
-- Bogenmaß und Gradmaß mischen: Taschenrechner auf richtige Einheit prüfen
-- sin²α + cos²α = 1, NICHT sin α + cos α = 1
-- Im II. Quadranten ist cos negativ: cos 120° = −cos 60° = −1/2
-
----
-
-## Zusammenfassung
-
-Trigonometrie beschreibt die Beziehung zwischen Winkeln und Seitenlängen. Am rechtwinkligen Dreieck gilt SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete. Der Einheitskreis verallgemeinert: sin²α + cos²α = 1. Gradmaß und Bogenmaß werden über 360° = 2π rad umgerechnet. Die fünf Standard-Winkel (0°, 30°, 45°, 60°, 90°) und ihre sin/cos/tan-Werte sind Pflicht. In der Medizin findet Trigonometrie Anwendung bei Kräftezerlegung, Drehmoment und Vektorzerlegung. Probe immer über den Satz des Pythagoras.`,
-      merksätze: [
-        "SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete.",
-        "Trigonometrischer Pythagoras: sin²α + cos²α = 1 — gilt für JEDEN Winkel.",
-        "360° = 2π rad; Grad → Bogenmaß: × π/180; Bogenmaß → Grad: × 180/π.",
-        "30-60-90-Dreieck: Seiten 1 : √3 : 2. 45-45-90-Dreieck: Seiten 1 : 1 : √2.",
-        "Kräftezerlegung: F_parallel = F × cos α; F_senkrecht = F × sin α.",
-      ],
-      klinischerBezug:
-        "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
-      selfTest: [
-        {
-          question:
-            "Ein rechtwinkliges Dreieck hat eine Hypotenuse von 13 cm und eine Gegenkathete von 5 cm. Wie groß ist sin α?",
-          options: ["5/12", "5/13", "12/13", "13/5", "12/5"],
-          correctIndex: 1,
-          explanation:
-            "sin α = Gegenkathete / Hypotenuse = 5/13. Die Ankathete ergibt sich aus dem Satz des Pythagoras: √(13² − 5²) = √(169 − 25) = √144 = 12 cm. Also: sin α = 5/13, cos α = 12/13, tan α = 5/12. Das 5-12-13-Dreieck ist ein pythagoreisches Tripel (5² + 12² = 25 + 144 = 169 = 13²).",
-          hints: ["sin α = Gegenkathete / Hypotenuse.", "Gegenkathete = 5 cm, Hypotenuse = 13 cm."],
-          tags: ["sinus", "rechtwinkliges-dreieck", "soh-cah-toa"],
-          difficulty: 1,
-        },
-        {
-          question: "Wie viel Bogenmaß entsprechen 150°?",
-          options: ["π/3", "2π/3", "3π/4", "5π/6", "5π/4"],
-          correctIndex: 3,
-          explanation:
-            "Umrechnung: 150° × π/180 = 150π/180 = 5π/6. Zur Kontrolle: 5π/6 × 180/π = 5 × 180/6 = 5 × 30 = 150° ✓. Merkhilfe: 150° = 180° − 30° = π − π/6 = 5π/6. Alternativ: 30° = π/6, also 150° = 5 × 30° = 5 × π/6 = 5π/6.",
-          hints: [
-            "Formel: Grad × π/180 = Bogenmaß.",
-            "150 × π / 180 vereinfachen: kürze durch 30.",
-          ],
-          tags: ["bogenmass", "gradmass", "umrechnung"],
-          difficulty: 1,
-        },
-        {
-          question: "Gegeben: sin α = 0,6 und α liegt im I. Quadranten. Wie groß ist cos α?",
-          options: ["0,4", "0,5", "0,6", "0,8", "1,0"],
-          correctIndex: 3,
-          explanation:
-            "Trigonometrischer Pythagoras: sin²α + cos²α = 1. Also cos²α = 1 − sin²α = 1 − 0,36 = 0,64. cos α = √0,64 = 0,8. (Positiv, da I. Quadrant.) Probe: 0,6² + 0,8² = 0,36 + 0,64 = 1 ✓. Das entspricht einem 3-4-5-Dreieck (sin = 3/5 = 0,6; cos = 4/5 = 0,8).",
-          hints: ["Nutze sin²α + cos²α = 1.", "cos²α = 1 − 0,6² = 1 − 0,36 = ?"],
-          tags: ["trigonometrischer-pythagoras", "sinus", "kosinus"],
-          difficulty: 2,
-        },
-        {
-          question:
-            "Eine Kraft F = 200 N wirkt unter α = 60° zur Horizontalen. Wie groß ist die horizontale Komponente F_x?",
-          options: ["100 N", "141 N", "173 N", "200 N", "50 N"],
-          correctIndex: 0,
-          explanation:
-            "Die horizontale Komponente berechnet sich als F_x = F × cos α = 200 N × cos 60° = 200 × 0,5 = 100 N. Die vertikale Komponente wäre F_y = F × sin 60° = 200 × √3/2 ≈ 173 N. Probe: √(100² + 173²) = √(10000 + 29929) = √39929 ≈ 200 N ✓. Bei 60° zur Horizontalen ist die vertikale Komponente größer als die horizontale.",
-          hints: ["Horizontale Komponente = F × cos α.", "cos 60° = 1/2 = 0,5."],
-          tags: ["kraeftezerlegung", "kosinus", "biomechanik"],
-          difficulty: 2,
-        },
-        {
-          question: "Welcher Wert von tan α ist NICHT definiert?",
-          options: [
-            "tan 0° = 0",
-            "tan 30° = 1/√3",
-            "tan 45° = 1",
-            "tan 60° = √3",
-            "tan 90° — nicht definiert",
-          ],
-          correctIndex: 4,
-          explanation:
-            "tan α = sin α / cos α. Bei α = 90° gilt cos 90° = 0, daher ist die Division durch null nicht definiert. Geometrisch: Bei 90° ist die Ankathete gleich null, und Gegenkathete/Ankathete = Gegenkathete/0 ist undefiniert. Am Einheitskreis nähert sich tan α für α → 90° dem Wert +∞ (von links). Analog ist tan 270° nicht definiert. Alle anderen Werte in den Optionen sind korrekt: tan 0° = 0/1 = 0; tan 30° = (1/2)/(√3/2) = 1/√3; tan 45° = (√2/2)/(√2/2) = 1; tan 60° = (√3/2)/(1/2) = √3.",
-          hints: [
-            "tan α = sin α / cos α — wann wird der Nenner null?",
-            "cos 90° = 0, also Division durch null.",
-          ],
-          tags: ["tangens", "definition", "einheitskreis"],
-          difficulty: 1,
         },
       ],
     },

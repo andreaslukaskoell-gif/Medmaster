@@ -876,68 +876,84 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
       ],
       content: `## Einleitung
 
-Stell dir vor, du backst einen Kuchen: Du brauchst 3 Eier und 200 g Mehl. Wenn du nur 2 Eier hast, kannst du nicht den vollen Kuchen backen — die Eier sind der begrenzende Faktor. Genau so funktioniert **Stoechiometrie** in der Chemie: Sie sagt dir, wie viel von jedem Stoff du brauchst und wie viel Produkt du bekommst.
+Auf der Intensivstation haengt ein 500-mL-Beutel mit “NaCl 0,9 %”. Wie viel Natrium bekommt der Patient pro Stunde? Um das zu beantworten, brauchst du **Stoechiometrie** -- die Kunst, mit Mol, Massen und Konzentrationen zu rechnen. Die gleichen Prinzipien erklaeren, warum der Respirationsquotient (RQ) verraet, ob ein Patient gerade Kohlenhydrate oder Fette verbrennt.
 
 **In diesem Kapitel lernst du:**
-- das Drei-Schritte-Schema: Masse → Mol → Mol → Masse
+- wie du mit dem Drei-Schritte-Schema (Masse → Mol → Mol → Masse) jede Stoechiometrie-Aufgabe loest
 - warum Koeffizienten Mol-Verhaeltnisse angeben (nicht Gramm!)
-- wie du das Mangelreagenz findest (den “begrenzenden Faktor”)
-- was die prozentuale Ausbeute ist
+- wie du das Mangelreagenz findest und die maximale Ausbeute berechnest
+- welche klinischen Berechnungen auf Stoechiometrie beruhen
 
 ---
 
-## Was ist Stoechiometrie?
-
-Stoechiometrie ist das Rechnen mit chemischen Reaktionen. Die Grundidee: Die Zahlen vor den Formeln (Koeffizienten) sagen dir, wie viele Mol von jedem Stoff reagieren.
+Die **Stoechiometrie** beschreibt quantitative Verhaeltnisse in Reaktionen. Basis ist die ausgeglichene Gleichung: Koeffizienten geben Mol-Verhaeltnisse an (NICHT Gramm!). 2 H₂ + O₂ → 2 H₂O: 2 mol H₂ reagiert mit 1 mol O₂ zu 2 mol H₂O. Massenkontrolle: 4 g + 32 g = 36 g ✓.
 
 {{DIAGRAM:periodic-table}}
 
-> **Merke:** Koeffizienten = Mol-Verhaeltnisse, NICHT Gramm-Verhaeltnisse! Die drei Grundformeln: n = m/M, m = n x M, c = n/V.
+> **Merke:** Koeffizienten = Mol-Verhaeltnisse. Grundformeln: n = m/M, m = n × M, c = n/V.
 
-**Beispiel:** 2 H₂ + O₂ → 2 H₂O bedeutet: 2 Mol Wasserstoff reagieren mit 1 Mol Sauerstoff zu 2 Mol Wasser.
+---
 
 ## Das Drei-Schritte-Schema
 
 So loest du jede Stoechiometrie-Aufgabe:
 1. **Masse zu Mol:** n = m / M (Masse durch Molmasse)
 2. **Mol umrechnen:** Mit dem Koeffizientenverhaeltnis aus der Gleichung
-3. **Mol zu Masse:** m = n x M
+3. **Mol zu Masse:** m = n × M
 
 Beispiel: Wie viel Wasser entsteht aus 4 g H₂?
 - n(H₂) = 4 g / 2 g/mol = 2 mol
 - Verhaeltnis H₂ : H₂O = 1:1 → 2 mol H₂O
-- m(H₂O) = 2 mol x 18 g/mol = 36 g
+- m(H₂O) = 2 mol × 18 g/mol = 36 g
 
 {{DIAGRAM:covalent-bond}}
 
+---
+
 ## Mangelreagenz (Limiting Reagent)
 
-Wenn du nicht genug von einem Stoff hast, begrenzt dieser die Produktmenge — genau wie die fehlenden Eier beim Kuchen.
+Das **Mangelreagenz** ist der Stoff, der zuerst aufgebraucht wird -- er begrenzt die Ausbeute. Das Ueberschussreagenz bleibt nach der Reaktion uebrig.
 
-**So findest du es:**
-1. Berechne n fuer jedes Edukt
-2. Teile durch den Koeffizienten
-3. Der kleinste Wert = Mangelreagenz
+**Systematisches Vorgehen:**
+1. Berechne n fuer jedes Edukt: n = m / M
+2. Teile durch den jeweiligen Koeffizienten
+3. Der **kleinste Quotient** = Mangelreagenz
+4. Ausbeute nur auf Basis des Mangelreagenzes berechnen
+
+**Beispiel:** N₂ + 3 H₂ → 2 NH₃ mit 2 mol N₂ und 5 mol H₂. Quotienten: N₂: 2/1 = 2; H₂: 5/3 = 1,67. H₂ ist Mangelreagenz. n(NH₃) = 5 × (2/3) = 3,33 mol.
+
+---
 
 ## Prozentuale Ausbeute
 
-In der Realitaet bekommst du nie 100 % raus (Verluste, Nebenreaktionen).
+In der Realitaet wird die theoretische Ausbeute selten erreicht (Nebenreaktionen, Verluste).
 
-**Ausbeute % = (tatsaechlich / theoretisch) x 100**
+**Ausbeute % = (tatsaechliche Ausbeute / theoretische Ausbeute) × 100**
 
-Beispiel: 50 g erwartet, 38 g bekommen → 38/50 x 100 = 76 %
+Beispiel: 50 g erwartet, 38 g bekommen → 38/50 × 100 = 76 %.
 
-> **Merke:** Die theoretische Ausbeute ist die Obergrenze. In der Praxis gibt es immer Verluste.
+> **Merke:** Die theoretische Ausbeute ist die Obergrenze. Der **Haber-Bosch-Prozess** (N₂ + 3 H₂ ⇌ 2 NH₃) erreicht nur ~15 % pro Durchlauf -- durch Rueckfuehrung der Edukte wird die Gesamtausbeute auf >90 % gesteigert.
+
+---
+
+## Stoechiometrie in der Klinik
+
+- **Infusionsloesung:** NaCl 0,9 % = 9 g NaCl pro 1 L → c = 9/58,5 = 0,154 mol/L ≈ 154 mmol/L (nahe dem Plasma-Na⁺ von ~140 mmol/L)
+- **Glucose-Oxidation:** C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O → **Respirationsquotient (RQ) = 1,0**
+- **RQ nach Naehrstoff:** Kohlenhydrate: 1,0; Fette: ~0,7; Proteine: ~0,8. RQ > 1,0 deutet auf Lipogenese hin.
+
+> **Merke:** RQ = CO₂(produziert) / O₂(verbraucht). Glucoseverbrennung: RQ = 6/6 = 1,0. Fettverbrennung: RQ ≈ 0,7.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Drei-Schritte-Schema: m → n → n → m
+- Drei-Schritte-Schema: m → n (÷M) → n (×Verhaeltnis) → m (×M)
 - Mangelreagenz = kleinster Quotient n/Koeffizient
 - Koeffizienten = Mol, nicht Gramm
-- Ausbeute % = tatsaechlich/theoretisch x 100
+- Ausbeute % = tatsaechlich/theoretisch × 100
+- RQ Glucose = 1,0; Fette ≈ 0,7
 
 **Typische Fallen:**
 - Koeffizienten mit Gramm verwechseln — haeufigster Fehler
@@ -947,11 +963,13 @@ Beispiel: 50 g erwartet, 38 g bekommen → 38/50 x 100 = 76 %
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Koeffizienten** = Mol-Verhaeltnisse (nicht Masse!)
-- **Schema**: m →(geteilt durch M)→ n →(mal Verhaeltnis)→ n →(mal M)→ m
-- **Grundformeln**: n = m/M; m = n x M; c = n/V
-- **Mangelreagenz**: berechne n/Koeffizient fuer jedes Edukt → kleinster Wert begrenzt
-- **Ausbeute %** = (tatsaechlich / theoretisch) x 100`,
+- **Stoechiometrie**: Koeffizienten = Mol-Verhaeltnisse (NICHT Masse!); Schema: m →(÷M)→ n →(×Koeff.)→ n →(×M)→ m
+- **Grundformeln**: n = m/M; m = n×M; c = n/V
+- **Gleichung ausgleichen**: Erst Metalle/Nichtmetalle, zuletzt H und O
+- **Mangelreagenz**: n/Koeffizient fuer alle Edukte → kleinster Quotient begrenzt
+- **Ausbeute %** = (tatsaechlich / theoretisch) × 100
+- **RQ**: Glucose = 1,0; Fette ≈ 0,7; RQ > 1 → Lipogenese
+- **Klinisch**: NaCl 0,9 % = 154 mmol/L; Haber-Bosch ~15 % pro Durchlauf`,
 
       contentExtended: `## Einleitung
 
@@ -1319,6 +1337,14 @@ Wird ein Gleichgewicht gestoert, verschiebt es sich so, dass die Stoerung ausgeg
 **Katalysatoren** verschieben das Gleichgewicht NICHT. Sie machen nur, dass es schneller erreicht wird.
 
 {{DIAGRAM:ph-scale}}
+
+## Blutpuffer als medizinisches Beispiel
+
+Das Kohlensaeure-Bicarbonat-Puffersystem im Blut: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
+
+Wenn ein Patient schlecht atmet und CO₂ ansteigt (Hyperkapnie), verschiebt sich das Gleichgewicht nach rechts --> mehr H⁺ --> pH faellt (respiratorische Azidose). Beatmung senkt CO₂ --> Gleichgewicht zurueck nach links --> pH steigt. Genau das ist Le Chatelier in der Intensivmedizin!
+
+---
 
 ## Haber-Bosch als Beispiel
 
@@ -1757,10 +1783,12 @@ Je kleiner E_A, desto schneller die Reaktion. Katalysatoren machen E_A kleiner.
 
 ## Exotherm vs. Endotherm im Energieprofil
 
-- **Exotherm:** Produkte liegen energetisch tiefer als Edukte (Energie wird frei, ΔH < 0)
-- **Endotherm:** Produkte liegen energetisch hoeher als Edukte (Energie wird aufgenommen, ΔH > 0)
+- **Exotherm:** Produkte liegen energetisch tiefer als Edukte (Energie wird frei, ΔH kleiner 0). Beispiel: Verbrennung, Oxidation, ATP-Hydrolyse.
+- **Endotherm:** Produkte liegen energetisch hoeher als Edukte (Energie wird aufgenommen, ΔH groesser 0). Beispiel: Photosynthese, Harnstoff-Synthese.
 
 {{DIAGRAM:covalent-bond}}
+
+**Klinische Anwendung:** Therapeutische Hypothermie nach Herzstillstand kuehlte Patienten auf 32-36 Grad -- weil RGT-Regel: niedrigere Temperatur = langsamere Gehirnstoffwechselreaktionen = weniger ischaemischer Schaden. Bei Fieber (40 Grad): ca. 30 % erhoehter Grundumsatz, deshalb Tachykardie und Tachypnoe.
 
 ---
 
@@ -2126,55 +2154,72 @@ Therapeutische Hypothermie (Kühlung auf 32–36 °C nach Herzstillstand oder be
       ],
       content: `## Einleitung
 
-Manche Reaktionen laufen nicht nur in eine Richtung — sie koennen auch rueckwaerts gehen. Wie eine Tuer, die in beide Richtungen schwingt. Irgendwann pendelt sie sich ein — das ist das **chemische Gleichgewicht**. Das **Massenwirkungsgesetz** (MWG) beschreibt mathematisch, wie viel Produkt und wie viel Edukt im Gleichgewicht vorliegen.
+Die Bindung von Sauerstoff an Haemoglobin folgt einem Gleichgewicht: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) bindet Sauerstoff, im Gewebe (niedriger pO₂) wird er abgegeben -- automatisch, gesteuert durch das **Massenwirkungsgesetz** (MWG). Das MWG beschreibt mathematisch, wie die Konzentrationen von Edukten und Produkten im Gleichgewicht zusammenhaengen. Mit dem **Reaktionsquotienten Q** kannst du vorhersagen, in welche Richtung eine Reaktion gerade laeuft.
 
 **In diesem Kapitel lernst du:**
-- was dynamisches Gleichgewicht bedeutet
-- wie du das MWG aufstellst
-- was der Reaktionsquotient Q dir verraet
-- warum grosses Kc nicht “schnelle Reaktion” bedeutet
+- was dynamisches Gleichgewicht bedeutet (und warum die Reaktion nicht “steht”)
+- wie du das MWG aufstellst und warum Feststoffe und Wasser nicht darin vorkommen
+- was der Reaktionsquotient Q aussagt und wie du mit Q vs. K die Reaktionsrichtung vorhersagst
+- warum grosses Kc nicht “schnelle Reaktion” bedeutet (Thermodynamik vs. Kinetik)
+- wie Temperatur die Gleichgewichtskonstante veraendert
 
 ---
 
 ## Das dynamische Gleichgewicht
 
-Bei vielen Reaktionen (⇌) laufen Hin- und Rueckreaktion gleichzeitig. Wenn beide gleich schnell sind, aendern sich die Konzentrationen nicht mehr — aber die Reaktion steht nicht still!
+Bei vielen Reaktionen (⇌) laufen Hin- und Rueckreaktion gleichzeitig. Wenn beide gleich schnell sind, aendern sich die Konzentrationen nicht mehr -- aber die Reaktion steht nicht still! Isotopen-Tracerexperimente zeigen, dass Molekuele staendig zwischen Edukt- und Produktzustand wechseln -- nur netto findet keine Aenderung statt.
 
-> **Merke:** Dynamisches Gleichgewicht = v_hin = v_rueck. Die Konzentrationen sind konstant, aber NICHT unbedingt gleich. Beide Reaktionen laufen weiter.
+> **Merke:** Dynamisches Gleichgewicht = v_hin = v_rueck. Konzentrationen konstant, aber NICHT gleich. Beide Reaktionen laufen weiter. Ein Katalysator beschleunigt die Einstellung, aendert aber die Lage nicht.
 
 {{DIAGRAM:enzyme-substrate}}
 
+---
+
 ## Das Massenwirkungsgesetz (MWG)
 
-Fuer aA + bB ⇌ cC + dD gilt:
+Das **Massenwirkungsgesetz** (Guldberg und Waage, 1864) formuliert die quantitative Bedingung fuer das Gleichgewicht. Fuer aA + bB ⇌ cC + dD gilt:
 
 **Kc = [C]^c · [D]^d / ([A]^a · [B]^b)**
 
 Einfach gesagt: Produkte oben, Edukte unten, Koeffizienten werden zu Hochzahlen.
 
 **Wichtige Regeln:**
-- Feststoffe und Wasser kommen NICHT ins MWG
-- Kc gross (z. B. 10⁶) → fast nur Produkte
-- Kc klein (z. B. 10⁻⁶) → fast nur Edukte
-- Kc ungefaehr 1 → Edukte und Produkte etwa gleich
+- Reine **Feststoffe und Wasser** kommen NICHT ins MWG (Aktivitaet ≈ 1)
+- Kc >> 1 (z. B. 10⁶) → fast nur Produkte
+- Kc << 1 (z. B. 10⁻⁶) → fast nur Edukte
+- Kc ≈ 1 → Edukte und Produkte etwa gleich
 
-> **Merke:** Kc sagt, WO das Gleichgewicht liegt. Das hat nichts mit der Geschwindigkeit zu tun! Grosses Kc heisst nicht schnelle Reaktion.
+**Beispiel:** Fuer Fe + 2 HCl ⇌ FeCl₂ + H₂ gilt: K = [FeCl₂]·[H₂] / ([Fe]·[HCl]²) -- der Koeffizient 2 vor HCl wird zum Exponenten.
+
+> **Merke:** Kc sagt, WO das Gleichgewicht liegt (Thermodynamik). Die Aktivierungsenergie E_A sagt, WIE SCHNELL es erreicht wird (Kinetik). Beides ist unabhaengig! Grosses Kc heisst nicht schnelle Reaktion.
+
+---
 
 ## Der Reaktionsquotient Q
 
-Q wird genau wie Kc berechnet — aber mit den aktuellen Konzentrationen (nicht den Gleichgewichtswerten).
+Q wird genau wie Kc berechnet -- aber mit den **aktuellen** Konzentrationen (nicht den Gleichgewichtswerten).
 
-- **Q < Kc:** Reaktion laeuft vorwaerts (mehr Produkte werden gebildet)
-- **Q > Kc:** Reaktion laeuft rueckwaerts (mehr Edukte entstehen)
+- **Q < Kc:** Reaktion laeuft **vorwaerts** (mehr Produkte werden gebildet)
+- **Q > Kc:** Reaktion laeuft **rueckwaerts** (mehr Edukte entstehen)
 - **Q = Kc:** Gleichgewicht erreicht!
 
+Das erklaert die Sauerstoffbindung: In der Lunge (hoher pO₂) ist Q < K → Hb bindet O₂. Im Gewebe (niedriger pO₂) ist Q > K → O₂ wird abgegeben.
+
 {{DIAGRAM:covalent-bond}}
+
+---
 
 ## Temperatur und Kc
 
 Nur die Temperatur aendert Kc selbst:
-- **Exotherm** (Waerme wird frei): Hoehere Temperatur → Kc sinkt
-- **Endotherm** (Waerme wird aufgenommen): Hoehere Temperatur → Kc steigt
+- **Exotherm** (ΔH kleiner 0): Hoehere Temperatur → Kc sinkt
+- **Endotherm** (ΔH groesser 0): Hoehere Temperatur → Kc steigt
+
+Fuer Gasreaktionen gilt Kp = Kc · (RT)^Δn (Δn = Aenderung der Gasmolzahl). Bei Δn = 0 ist Kp = Kc.
+
+Zusammenhang mit Gibbs-Energie: ΔG° = −RT · ln(K). ΔG° kleiner 0 → K groesser 1 (Produkte bevorzugt). ΔG° groesser 0 → K kleiner 1 (Edukte bevorzugt).
+
+> **Merke:** ΔG° kleiner 0 bedeutet K groesser 1 = thermodynamisch guenstig. K sagt nichts ueber die Geschwindigkeit!
 
 ---
 
@@ -2185,21 +2230,22 @@ Nur die Temperatur aendert Kc selbst:
 - Feststoffe und H₂O nicht ins MWG
 - Q < K → vorwaerts; Q > K → rueckwaerts
 - Grosses K = Produkte ueberwiegen (nicht schnelle Reaktion!)
-- Nur Temperatur aendert Kc
+- Nur Temperatur aendert Kc; Katalysator aendert K nicht
 
 **Typische Fallen:**
-- Grosses K heisst nicht schnelle Reaktion
-- Katalysator aendert K nicht
-- Q benutzt aktuelle Konzentrationen, K benutzt Gleichgewichtswerte
+- Grosses K heisst nicht schnelle Reaktion (K = Thermodynamik, v = Kinetik)
+- Katalysator verschiebt das Gleichgewicht nicht -- nur die Einstellgeschwindigkeit
+- Q benutzt aktuelle Konzentrationen, K benutzt Gleichgewichtskonzentrationen
 
 ---
 ## Zusammenfassung (ultrakompakt)
 
-- **Dynamisches Gleichgewicht**: v_hin = v_rueck; beide Reaktionen laufen weiter
-- **MWG**: Kc = [Produkte]^Koeff / [Edukte]^Koeff; Feststoffe und H₂O weglassen
-- **Kc gross**: Produkte ueberwiegen; **Kc klein**: Edukte ueberwiegen
+- **Dynamisches Gleichgewicht**: v_hin = v_rueck; Konzentrationen konstant, beide Reaktionen laufen weiter
+- **MWG**: Kc = [C]^c·[D]^d / [A]^a·[B]^b; Feststoffe und H₂O weglassen; Exponenten = Koeffizienten
+- **Kc >> 1**: Produktseite; **Kc << 1**: Eduktseite; **Kc ≈ 1**: ausgeglichen
 - **Q vs. K**: Q < K → vorwaerts; Q > K → rueckwaerts; Q = K → Gleichgewicht
-- **Temperatur**: exotherm + heisser → Kc sinkt; endotherm + heisser → Kc steigt`,
+- **Temperatur**: exotherm + heisser → Kc sinkt; endotherm + heisser → Kc steigt; Katalysator aendert K nicht
+- **Haemoglobin**: Hb + O₂ ⇌ HbO₂; pO₂ steuert Gleichgewichtslage`,
 
       contentExtended: `## Einleitung
 
@@ -2958,14 +3004,6 @@ Dein Blut hat immer einen pH von ungefaehr 7,4 — weicht er stark ab, wird es g
 - wie der Bohr-Effekt Sauerstoff im Muskel freisetzt
 
 ---
-
-## pH-Wert — kurze Wiederholung
-
-pH = −log[H₃O⁺]. Einfach gesagt: Je mehr H⁺ (Saeure), desto kleiner der pH.
-
-- pH < 7: sauer
-- pH = 7: neutral
-- pH > 7: basisch
 
 {{DIAGRAM:ph-scale}}
 

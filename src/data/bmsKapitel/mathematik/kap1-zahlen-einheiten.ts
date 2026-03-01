@@ -27,12 +27,12 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Einleitung
 
-Von der winzigen Ameise bis zur riesigen Entfernung Erde--Sonne -- ueberall begegnen dir extrem grosse und extrem kleine Zahlen. Statt 1.000.000 auszuschreiben, schreibst du einfach 10⁶. **Zehnerpotenzen** sind das Werkzeug, um mit solchen Zahlen sicher und schnell zu rechnen.
+Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) -- in der Medizin begegnen dir staendig extrem grosse und extrem kleine Zahlen. Statt 1.000.000 auszuschreiben, schreibst du einfach 10⁶. **Zehnerpotenzen** machen solche Zahlen handhabbar und ermoglichen schnelles Vergleichen von Groessenordnungen.
 
 **In diesem Kapitel lernst du:**
 - wie du grosse und kleine Zahlen als Zehnerpotenzen schreibst
-- die vier Rechenregeln fuer Zehnerpotenzen (Exponenten addieren, subtrahieren, multiplizieren, halbieren)
-- wie du Ausdruecke mit Vorfaktor und Zehnerpotenz in normalisierte Form bringst
+- die vier Rechenregeln (Exponenten addieren, subtrahieren, multiplizieren, halbieren)
+- wie du Ausdruecke mit Vorfaktor in normalisierte Form bringst
 - wie du durch Exponenten-Subtraktion schnell Verhaeltnisse abschaetzt
 - welche typischen Denkfallen bei Zehnerpotenzen lauern
 
@@ -44,36 +44,33 @@ Von der winzigen Ameise bis zur riesigen Entfernung Erde--Sonne -- ueberall bege
 
 ## Grunddefinition und positive Exponenten
 
-Eine **Zehnerpotenz** 10ⁿ bedeutet: die Zahl 10 wird **n-mal** mit sich selbst multipliziert. Die Zahl **n** heisst **Exponent** (Hochzahl).
+Eine **Zehnerpotenz** 10ⁿ bedeutet: die Zahl 10 wird **n-mal** mit sich selbst multipliziert. Der **Exponent** n gibt an, wie viele Nullen hinter der 1 stehen.
 
-| Schreibweise | Bedeutung | Dezimal |
-|--------------|------------|---------|
-| 10¹ | 10 | 10 |
-| 10² | 10 × 10 | 100 |
-| 10³ | 10 × 10 × 10 | 1.000 |
-| 10⁶ | 10 × … × 10 (6-mal) | 1.000.000 |
+| Schreibweise | Dezimal |
+|--------------|---------|
+| 10¹ | 10 |
+| 10³ | 1.000 |
+| 10⁶ | 1.000.000 |
 
-**Eselsbruecke:** Bei **positivem** Exponenten gibt **n** die Anzahl der **Nullen hinter der 1** an. Bei 10⁶ stehen sechs Nullen.
-
-> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** bestimmt die **Groessenordnung** der Zahl.
+> **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der Exponent bestimmt die **Groessenordnung**.
 
 ---
 
 ## Negative Exponenten und 10⁰
 
-Positive Exponenten beschreiben grosse Zahlen. Fuer Zahlen **kleiner als 1** brauchst du **negative Exponenten**: **10⁻ⁿ = 1 / 10ⁿ**.
+Fuer Zahlen **kleiner als 1** brauchst du **negative Exponenten**: **10⁻ⁿ = 1/10ⁿ**.
 
-| Schreibweise | Bedeutung | Dezimal |
-|--------------|------------|---------|
-| 10⁻¹ | 1/10 | 0,1 |
-| 10⁻² | 1/100 | 0,01 |
-| 10⁻³ | 1/1.000 | 0,001 |
+| Schreibweise | Dezimal |
+|--------------|---------|
+| 10⁻¹ | 0,1 |
+| 10⁻³ | 0,001 |
+| 10⁻⁶ | 0,000001 |
 
-**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) — nicht verwechseln mit −10³ (= −1.000)!
+**Wichtig:** 10⁻³ ist eine **positive** Zahl (0,001) -- nicht verwechseln mit −10³ (= −1.000)! **Sonderfall:** 10⁰ = 1.
 
-**Sonderfall:** 10⁰ = 1. Jede Zahl (ausser 0) hoch null ergibt 1.
+> **Merke:** **10⁻ⁿ = 1/10ⁿ** -- negativer Exponent = Kehrbruch, Ergebnis ist **positiv** und kleiner als 1. **10⁰ = 1**.
 
-> **Merke:** **10⁻ⁿ = 1/10ⁿ** — negativer Exponent = Kehrbruch, Ergebnis ist **positiv** und kleiner als 1. **10⁰ = 1**.
+---
 
 ## Die vier Rechenregeln
 
@@ -84,89 +81,67 @@ Positive Exponenten beschreiben grosse Zahlen. Fuer Zahlen **kleiner als 1** bra
 | **Potenzieren** | (10ᵃ)ᵇ = 10^(a×b) | (10³)² = 10⁶ |
 | **Wurzel** | √(10ⁿ) = 10^(n/2) | √(10⁶) = 10³ |
 
-> **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren.
+> **Merke:** Multiplikation → Exponenten **addieren** | Division → **subtrahieren** | Potenzieren → **multiplizieren** | Wurzel → halbieren.
 
 ---
 
 ## Rechnen mit Vorfaktor
 
-In der Praxis stehen oft Ausdruecke wie **3 × 10⁴**. Um solche Produkte zu berechnen:
+In der Praxis stehen oft Ausdruecke wie **(3 × 10⁴) × (4 × 10⁻²)**. Vorgehensweise:
 
-1. **Vorfaktoren** normal multiplizieren (z. B. 3 × 4 = 12).
-2. **Exponenten** addieren (z. B. 10⁴ × 10⁻² = 10²).
-3. **Normalisieren**, falls der Vorfaktor ≥ 10 oder < 1 ist: 12 × 10² = **1,2 × 10³**.
+1. **Vorfaktoren** multiplizieren: 3 × 4 = 12
+2. **Exponenten** addieren: 10⁴ × 10⁻² = 10²
+3. **Normalisieren**: 12 × 10² = **1,2 × 10³** (Vorfaktor zwischen 1 und 10)
 
-**Beispiel:** (3 × 10⁴) × (4 × 10⁻²) = 12 × 10² = **1,2 × 10³**.
+> **Merke:** Vorfaktoren getrennt verrechnen, Exponenten addieren, dann normalisieren.
 
-> **Merke:** Zuerst **Vorfaktoren** verrechnen, dann **Exponenten** addieren. Am Ende **normalisieren** (Vorfaktor zwischen 1 und 10).
+---
 
 ## Groessenordnungen vergleichen
 
-Ein grosser Vorteil der Zehnerpotenzen: du kannst **schnell vergleichen**, wie viel groesser A als B ist. Dafuer subtrahierst du die Exponenten.
+Ein grosser Vorteil: durch **Exponenten-Subtraktion** siehst du sofort, um welchen Faktor A groesser als B ist.
 
 - Beispiel: 10⁻³ / 10⁻⁶ = 10³ → A ist **1.000-mal** groesser als B.
+- Ein Virus (10⁻⁷ m) ist 100-mal kleiner als eine menschliche Zelle (10⁻⁵ m): Differenz der Exponenten = 2, Faktor = 10².
 
-| Objekt | Groessenordnung |
-|--------|----------------|
-| Sandkorn | 10⁻³ m (1 mm) |
-| Ameise | 10⁻² m (1 cm) |
-| Mensch | 10⁰ m (1 m) |
-| Berg | 10³ m (1 km) |
-
-> **Merke:** **Verhaeltnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. Exponentendifferenz abschaetzen — nicht lange ausrechnen!
+> **Merke:** **Verhaeltnis** = **Differenz der Exponenten** als Zehnerpotenz. Exponentendifferenz abschaetzen -- nicht lange ausrechnen!
 
 ---
 
-## Fehlerquellen
+## Typische Fehlerquellen
 
 | Fallstrick | Falsch | Richtig |
 |------------|--------|---------|
-| Negativer Exponent ≠ negative Zahl | 10⁻³ = „−1000” | 10⁻³ = 0,001 (positiv!) |
-| Addition: nicht Exponenten addieren | 3×10³ + 2×10² = 5×10⁵ | Erst angleichen: 3×10³ + 0,2×10³ = 3,2×10³ |
-| Multiplikation: Exponenten addieren! | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
+| Negativer Exponent | 10⁻³ = „−1000” | 10⁻³ = 0,001 (positiv!) |
+| Addition | 3×10³ + 2×10² = 5×10⁵ | Erst angleichen: 3,2×10³ |
+| Multiplikation | 10³ × 10⁴ = 10¹² | 10³ × 10⁴ = 10⁷ |
 
-> **Merke:** 10⁻³ ≠ −10³. Bei **Addition** zuerst auf **gleichen Exponenten** bringen. Bei **Multiplikation** Exponenten **addieren**, nicht multiplizieren.
-
----
-
-## Rechenbeispiele
-
-**Aufgabe 1:** Ein Schulbus legt 30 km zurueck. Wie viele Meter sind das in Zehnerpotenzen?
-Loesung: 30 km = 30 × 10³ m = 3 × 10⁴ m.
-
-**Aufgabe 2:** Ein Apfel wiegt 200 g = 2 × 10² g. Eine Kiste hat 50 Aepfel. Gesamtgewicht?
-Loesung: 50 × (2 × 10²) = 100 × 10² = 1 × 10⁴ g = 10 kg.
-
-**Aufgabe 3:** Ein Sandkorn misst 10⁻³ m, ein Fussballfeld 10² m. Verhaeltnis?
-Loesung: 10² / 10⁻³ = 10⁵ = 100.000-mal groesser.
-
-> **Merke:** Die Kernkompetenz bei Zehnerpotenzen ist das schnelle Abschaetzen von Verhaeltnissen durch Exponenten-Subtraktion.
+> **Merke:** 10⁻³ ≠ −10³. Bei **Addition** erst auf gleichen Exponenten bringen. Bei **Multiplikation** Exponenten **addieren**, nicht multiplizieren.
 
 ---
 
 ## MedAT-Fokus
 
 **Typische Aufgabentypen:**
-- Dezimal ↔ Zehnerpotenz umrechnen (z. B. 10⁻⁶ = ?, 0,001 = ?)
+- Dezimal ↔ Zehnerpotenz umrechnen (10⁻⁶ = ?, 0,001 = ?)
 - Rechenaufgaben: 10³ × 10⁻⁵, 10⁶ / 10², (10²)³
 - Verhaeltnis: „Wie oft groesser?” → Exponentendifferenz
 - Vorfaktor × Zehnerpotenz berechnen und normalisieren
 
 **Typische Fallen:**
-- 10⁻³ ≠ −10³ — negativer Exponent ergibt positive Zahl
-- 10ᵃ × 10ᵇ: Exponenten **addieren**, nicht multiplizieren
+- 10⁻³ ≠ −10³ (negativer Exponent = positive, kleine Zahl)
 - Bei Addition erst auf gleichen Exponenten bringen
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Zehnerpotenzen:** 10ⁿ (n positiv) = 1 mit n Nullen; 10⁻ⁿ = 1/10ⁿ; 10⁰ = 1
+- **Zehnerpotenzen:** 10ⁿ = 1 mit n Nullen; 10⁻ⁿ = 1/10ⁿ; 10⁰ = 1
 - **Multiplikation:** Exponenten addieren; **Division:** subtrahieren; **Potenzieren:** multiplizieren; **Wurzel:** halbieren
 - **Vorfaktor:** (a×10ᵐ)×(b×10ⁿ) = (a×b)×10^(m+n); danach normalisieren
 - **Verhaeltnisse:** Exponentendifferenz = Faktor
-- **Addition:** erst gleiche Exponenten, dann Vorfaktoren addieren
-- **Typische Fehler:** 10⁻³ ≠ −10³; bei Multiplikation Exponenten addieren`,
+- **Addition:** erst gleiche Exponenten herstellen, dann Vorfaktoren addieren
+- **Fehler:** 10⁻³ ≠ −10³; Multiplikation = Exponenten addieren, nicht multiplizieren`,
       contentExtended: `## Einleitung
 
 Von der winzigen Bakterie (10⁻⁶ m) bis zum Abstand Erde--Sonne (10¹¹ m) -- in der Medizin begegnest du staendig extrem grossen und extrem kleinen Zahlen. Ein Erythrozyt misst 8 Mikrometer, ein Virus gerade einmal 100 Nanometer, und die Glukose im Blut liegt bei 5 Millimol pro Liter. **Zehnerpotenzen** sind das Werkzeug, um mit diesen Groessenordnungen sicher zu rechnen -- ob bei Dosierungen, Laborwerten oder Einheitenumrechnungen.
@@ -564,13 +539,13 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
       ],
       content: `## Einleitung
 
-Ein Kilogramm Mehl, ein Millimeter auf dem Lineal, ein Kilometer Schulweg -- ueberall stecken **SI-Praefixe** wie Kilo, Milli und Mikro. Sie stehen fuer feste Zehnerpotenzen und machen extrem grosse oder kleine Zahlen handhabbar. Wer Mikro und Milli verwechselt, liegt um den Faktor 1.000 daneben!
+Ein Kilogramm Mehl, ein Millimeter auf dem Lineal, ein Kilometer Schulweg -- ueberall stecken **SI-Praefixe** wie Kilo, Milli und Mikro. Sie stehen fuer feste Zehnerpotenzen und machen extrem grosse oder kleine Zahlen handhabbar. Wer Mikro (µ, 10⁻⁶) und Milli (m, 10⁻³) verwechselt, liegt um den Faktor 1.000 daneben -- klinisch kann das gefaehrlich sein!
 
 **In diesem Kapitel lernst du:**
 - wie die SI-Praefixe in Dreierschritten aufgebaut sind (jede Stufe = Faktor 1.000)
 - welche Praefixe am haeufigsten vorkommen und welche Zehnerpotenz dahintersteckt
-- wie du zwischen Praefixen umrechnest -- mit der Regel “wer kleiner misst, zaehlt mehr”
-- wie du typische Umrechnungsaufgaben (mm in m, mg in g, km in m) sicher loest
+- wie du zwischen Praefixen umrechnest mit der Regel “wer kleiner misst, zaehlt mehr”
+- typische Fehlerquellen und wie du sie vermeidest
 
 ---
 
@@ -578,102 +553,79 @@ Ein Kilogramm Mehl, ein Millimeter auf dem Lineal, ein Kilometer Schulweg -- ueb
 
 {{DIAGRAM:percent-fractions}}
 
-## Die Systematik der SI-Praefixe
+## Die Praefix-Leiter
 
-**SI-Praefixe** sind feste Abkuerzungen fuer Zehnerpotenzen. Sie werden **vor** eine Einheit gesetzt (Meter, Gramm, Liter usw.). Die Praefixe sind in **Dreierschritten** angeordnet -- jede Stufe ist **Faktor 1.000**.
+**SI-Praefixe** sind Abkuerzungen fuer Zehnerpotenzen. Sie werden **vor** eine Basiseinheit gesetzt. Die Praefixe folgen **Dreierschritten** -- jede Stufe bedeutet Faktor **1.000 (= 10³)**.
 
-| Richtung | Praefixe | Zehnerpotenz |
-|----------|----------|--------------|
-| **Klein** | Femto (f) → Piko (p) → Nano (n) → Mikro (µ) → Milli (m) | 10⁻¹⁵ → 10⁻¹² → 10⁻⁹ → 10⁻⁶ → 10⁻³ |
-| **Basis** | (kein Praefix) | 10⁰ |
-| **Gross** | Kilo (k) → Mega (M) → Giga (G) → Tera (T) | 10³ → 10⁶ → 10⁹ → 10¹² |
+| Richtung | Praefix (Symbol) | Zehnerpotenz |
+|----------|-----------------|--------------|
+| Klein | Femto (f) → Piko (p) → Nano (n) → Mikro (µ) → Milli (m) | 10⁻¹⁵ → 10⁻¹² → 10⁻⁹ → 10⁻⁶ → 10⁻³ |
+| Basis | (kein Praefix) | 10⁰ = 1 |
+| Gross | Kilo (k) → Mega (M) → Giga (G) → Tera (T) | 10³ → 10⁶ → 10⁹ → 10¹² |
 
-> **Merke:** **Dreierschritte:** Jede Praefix-Stufe = Faktor **1.000** (10³). Klein→gross: f → p → n → µ → m → [Basis] → k → M → G → T.
+> **Merke:** Jede Praefix-Stufe = Faktor **1.000**. Klein→Gross: f → p → n → µ → m → [Basis] → k → M → G → T.
 
-## Die wichtigsten Praefixe
+---
 
-### Milli (m) -- 10⁻³
+## Die wichtigsten Praefixe im Detail
 
-**Milli** = ein **Tausendstel**. Beispiele aus dem Alltag:
-- **Millimeter (mm):** 1 mm = 0,001 m (Dicke einer Muenze)
-- **Milligramm (mg):** 1 mg = 0,001 g (Menge Salz auf einer Messerspitze)
-- **Milliliter (mL):** 1 mL = 0,001 L (ein Tropfen Wasser ist ca. 0,05 mL)
+**Milli (m) = 10⁻³** -- ein Tausendstel. Haeufigste klinische Einheiten: mg (Tablettendosen, z. B. 500 mg Paracetamol), mmol/L (Elektrolyte: Na⁺ 136--145 mmol/L), mL (Injektionsvolumina), mmHg (Blutdruck).
 
-> **Merke:** **Milli (m) = 10⁻³** = ein Tausendstel der Basiseinheit.
+**Mikro (µ) = 10⁻⁶** -- ein Millionstel. Beispiele: µg (hochpotente Medikamente wie Fentanyl 1--2 µg/kg), µm (Zelldurchmesser: Erythrozyt 6--8 µm).
 
-### Mikro (µ) -- 10⁻⁶
-
-**Mikro** = ein **Millionstel**. Beispiel: Ein Haar ist ca. 70 µm dick. 1 µm = 0,001 mm.
-
-**Wichtig:** 1 mg = 1.000 µg. Milli und Mikro nicht verwechseln -- Faktor 1.000 Unterschied!
+**Wichtig:** 1 mg = 1.000 µg. Milli und Mikro nicht verwechseln -- Faktor 1.000 Unterschied! Eine Stufe tiefer = tausendmal kleiner.
 
 > **Merke:** µ ≠ m! 1 mg = 1.000 µg. Mikro (µ) = 10⁻⁶, Milli (m) = 10⁻³.
 
-### Nano (n) -- 10⁻⁹ und kleiner
+**Nano (n) = 10⁻⁹** -- ein Milliardstel. Viren messen ca. 100 nm. Hormone im Nanomol-Bereich (z. B. Testosteron).
 
-**Nano** = ein Milliardstel. Viren messen ca. 100 nm. **Piko (p)** = 10⁻¹², **Femto (f)** = 10⁻¹⁵.
+**Piko (p) = 10⁻¹², Femto (f) = 10⁻¹⁵** -- extrem klein. Klinisch: MCV des Erythrozyten in fL (ca. 90 fL).
 
-### Kilo (k), Mega (M) und darueber
-
-- **Kilo (k) = 10³:** 1 km = 1.000 m; 1 kg = 1.000 g
-- **Mega (M) = 10⁶:** 1 Megabyte = 1.000.000 Byte
-- **Giga (G) = 10⁹; Tera (T) = 10¹²**
-
-> **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Grossbuchstabe!).
+**Grosse Praefixe:** Kilo (k) = 10³ (kg, km), Mega (M) = 10⁶ (MBq in Nuklearmedizin -- Grossbuchstabe beachten!).
 
 ---
 
 ## Umrechnung zwischen Praefixen
 
-Die wichtigste Regel: Kleinere Einheit → **groessere Zahl**; groessere Einheit → **kleinere Zahl**.
+Die goldene Regel: Kleinere Einheit → **groessere Zahl**; groessere Einheit → **kleinere Zahl**.
 
 **Schrittfolge:**
-1. Ausgangseinheit als Zehnerpotenz schreiben (z. B. 1 km = 10³ m)
-2. Zieleinheit als Zehnerpotenz schreiben (z. B. 1 m = 10⁰ m)
-3. Verhaeltnis bilden: 10³/10⁰ = 10³ → 1 km = 1.000 m
-
-**Beispiele:**
-- 2,5 kg = 2.500 g (× 1.000)
-- 500 mg = 0,5 g (÷ 1.000)
-- 3 km = 3.000 m (× 1.000)
-
-> **Merke:** **Kleinere Einheit → groessere Zahl; groessere Einheit → kleinere Zahl.** Eselsbruecke: “Wer kleiner misst, zaehlt mehr.”
-
----
-
-## Umrechnungstabelle
+1. Beide Einheiten als Zehnerpotenz schreiben (z. B. mg = 10⁻³ g, µg = 10⁻⁶ g)
+2. Verhaeltnis bilden: 10⁻³ / 10⁻⁶ = 10³ → 1 mg = 1.000 µg
+3. Richtung merken: kleinere Einheit → mehr Zaehlen
 
 | Von → Nach | Faktor | Beispiel |
 |------------|--------|----------|
-| km → m | × 1.000 | 2 km = 2.000 m |
-| m → mm | × 1.000 | 1,5 m = 1.500 mm |
-| kg → g | × 1.000 | 0,5 kg = 500 g |
 | g → mg | × 1.000 | 0,5 g = 500 mg |
 | mg → µg | × 1.000 | 0,1 mg = 100 µg |
+| µg → ng | × 1.000 | 2,5 µg = 2.500 ng |
 | L → mL | × 1.000 | 5 L = 5.000 mL |
+
+> **Merke:** “Wer kleiner misst, zaehlt mehr.” Eine Stufe nach unten = × 1.000; eine Stufe nach oben = ÷ 1.000.
 
 ---
 
 ## MedAT-Fokus
 
 **Typische Aufgabentypen:**
-- „Welcher Faktor entspricht Praefix X?” (n = 10⁻⁹, µ = 10⁻⁶, m = 10⁻³)
-- Umrechnung mg ↔ µg ↔ ng, km ↔ m ↔ mm
-- Richtung: kleinere Einheit → groessere Zahl
+- „Welcher Faktor entspricht Praefix X?” (n = 10⁻⁹, µ = 10⁻⁶, m = 10⁻³, p = 10⁻¹²)
+- Umrechnung mg ↔ µg ↔ ng; mmol/L ↔ µmol/L
+- „X mg = wie viele µg?” -- Richtung beachten
 
 **Typische Fallen:**
-- µ (Mikro, 10⁻⁶) mit m (Milli, 10⁻³) verwechseln
+- µ (Mikro, 10⁻⁶) mit m (Milli, 10⁻³) verwechseln → Faktor-1.000-Fehler
 - Umrechnungsrichtung falsch (mg → µg muss × 1.000 sein, nicht ÷)
-- M (Mega, gross) vs. m (Milli, klein) -- Gross-/Kleinschreibung beachten
+- M (Mega, Grossbuchstabe, 10⁶) ≠ m (Milli, Kleinbuchstabe, 10⁻³)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Kleine Praefixe**: m (Milli, 10⁻³), µ (Mikro, 10⁻⁶), n (Nano, 10⁻⁹), p (Piko, 10⁻¹²), f (Femto, 10⁻¹⁵)
-- **Grosse Praefixe**: k (Kilo, 10³), M (Mega, 10⁶), G (Giga, 10⁹), T (Tera, 10¹²)
-- **Umrechnung**: kleinere Einheit → groessere Zahl (“wer kleiner misst, zaehlt mehr”)
-- **Falle**: µg ≠ mg! 1 mg = 1.000 µg; eine Stufe = Faktor 1.000 (10³ pro Stufe)`,
+- **Kleine Praefixe:** f (10⁻¹⁵) → p (10⁻¹²) → n (10⁻⁹) → µ (10⁻⁶) → m (10⁻³)
+- **Grosse Praefixe:** k (10³) → M (10⁶) → G (10⁹) → T (10¹²)
+- **Umrechnung:** kleinere Einheit → groessere Zahl; “wer kleiner misst, zaehlt mehr”
+- **Dreierschritte:** jede Stufe = Faktor 1.000
+- **Kritische Falle:** µg ≠ mg! 1 mg = 1.000 µg; Dosierungsfehler koennen letal sein`,
       contentExtended: `**Verfahren — Umrechnung zwischen Präfixen (Schrittfolge):**
 1. **Ausgangs- und Zieleinheit** als Zehnerpotenz zur **gleichen** Basiseinheit schreiben (z. B. 1 mg = 10⁻³ g, 1 µg = 10⁻⁶ g).
 2. **Verhältnis bilden:** Exponent Ausgang minus Exponent Ziel → Faktor 10^(Differenz). Von mg (10⁻³) nach µg (10⁻⁶): 10⁻³/10⁻⁶ = 10³ → 1 mg = 1.000 µg.

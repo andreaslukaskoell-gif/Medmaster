@@ -95,8 +95,6 @@ Der **Pulsoximeter-Clip** nutzt dieses Prinzip: Sauerstoffreiches Blut (HbO2) un
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Zentral pruefungsrelevant:**
 - Bohr-Modell: E_n = -13,6 eV/n² fuer Wasserstoff
 - Photonenenergie: E = hf = hc/Wellenlaenge; kuerzere Wellenlaenge = mehr Energie
@@ -429,14 +427,14 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
       ],
       content: `## Einleitung
 
-Stell dir vor, du haeltst ein Blatt Papier vor eine radioaktive Quelle -- und schon ist die eine Strahlenart komplett gestoppt. Eine andere braucht eine dicke Bleiwand. Radioaktive Stoffe senden verschiedene Strahlenarten aus, die sich stark in Reichweite und Gefaehrlichkeit unterscheiden. Dieses Wissen nutzt die Medizin: In der Schilddruesentherapie zerstoert gezielte Strahlung krankes Gewebe, waehrend ein Rauchmelder zu Hause winzige Mengen eines radioaktiven Stoffes enthaelt.
+Stell dir vor, du haeltst ein Blatt Papier vor eine radioaktive Quelle -- und schon ist eine Strahlenart gestoppt. Eine andere braucht eine dicke Bleiwand. Radioaktive Stoffe senden verschiedene Strahlenarten aus. Dieses Wissen nutzt die Medizin: In der Schilddruesentherapie zerstoert gezielte Strahlung krankes Gewebe.
 
 **In diesem Kapitel lernst du:**
-- wie sich Alpha-, Beta- und Gamma-Strahlung unterscheiden und was sie jeweils stoppt
+- wie sich Alpha-, Beta- und Gamma-Strahlung unterscheiden und was sie stoppt
 - warum radioaktive Stoffe mit der Zeit schwaecker werden (Halbwertszeit)
-- wie man Strahlenaktivitaet in Becquerel und biologische Wirkung in Sievert misst
+- wie man Aktivitaet (Becquerel) und biologische Wirkung (Sievert) misst
 - welche radioaktiven Stoffe in der Medizin eingesetzt werden
-- warum Alpha-Strahlung aeusserlich harmlos, aber eingeatmet extrem gefaehrlich ist
+- warum Alpha-Strahlung aeusserlich harmlos, aber innerlich extrem gefaehrlich ist
 
 ---
 
@@ -444,54 +442,52 @@ Stell dir vor, du haeltst ein Blatt Papier vor eine radioaktive Quelle -- und sc
 
 {{DIAGRAM:radioactive-decay}}
 
-## Die drei Strahlenarten im Ueberblick
+## Die drei Strahlenarten
 
-| Strahlung | Was ist es? | Gestoppt durch | Gefaehrlichkeit |
-|-----------|-------------|----------------|-----------------|
-| Alpha | Helium-Kern (2p + 2n) | Papier, Haut | aeusserlich harmlos, innerlich sehr gefaehrlich |
-| Beta | Elektron (oder Positron) | Aluminium (mm) | mittlere Reichweite |
-| Gamma | Lichtteilchen (Photon) | Blei, Beton | durchdringt Koerper |
+| Strahlung | Was ist es? | Gestoppt durch | w_R |
+|-----------|-------------|----------------|-----|
+| Alpha | Helium-Kern (2p + 2n), Z-2, A-4 | Papier, Haut | 20 |
+| Beta-minus | Elektron, Z+1, A gleich | Aluminium | 1 |
+| Gamma | hochenerget. Photon, Z/A gleich | Blei, Beton | 1 |
 
-**Alpha-Zerfall:** Ein schwerer Kern stoesst einen Helium-Kern aus. Die Ordnungszahl sinkt um 2, die Massenzahl um 4. Beispiel: Uran-238 wird zu Thorium-234. Alpha-Teilchen fliegen nur wenige Zentimeter in Luft. Deine Haut stoppt sie. Aber eingeatmet (z. B. Radon-Gas in Kellern) richten sie in der Lunge schwere Schaeden an -- daher der hohe Wichtungsfaktor von 20.
+**Alpha:** Nur wenige cm in Luft, Haut stoppt sie. Aber **eingeatmet** (z. B. Radon) richten sie massive DNA-Schaeden an -- deshalb w_R = 20.
 
-**Beta-Zerfall:** Ein Neutron wandelt sich in ein Proton um und schickt ein Elektron weg. Ordnungszahl steigt um 1, Massenzahl bleibt gleich. Beispiel: Jod-131 (genutzt in der Schilddruesentherapie). Beta-Strahlung reicht einige Meter in Luft, ein paar Millimeter Aluminium stoppen sie.
+**Beta-minus:** Neutron → Proton + Elektron. Jod-131 (Schilddruesentherapie) ist ein Betastrahler. Millimeter Aluminium genuegen.
 
-**Gamma-Strahlung:** Hochenergetisches Licht, das nach Alpha- oder Beta-Zerfall uebrig bleibt. Aendert nichts an Ordnungs- oder Massenzahl. Durchdringt den Koerper -- nur dickes Blei oder Beton schwaecht sie deutlich ab.
+**Gamma:** Hochenergetisches Licht nach Alpha/Beta-Zerfall. Durchdringt den Koerper -- nur Blei oder Beton schwaecht ab.
 
-> **Merke:** Abschirmregel "PAB": Papier stoppt Alpha, Aluminium stoppt Beta, Blei stoppt Gamma. Alpha ist innerlich am gefaehrlichsten (Wichtungsfaktor 20).
+> **Merke:** Abschirmregel "PAB": Papier stoppt Alpha, Aluminium Beta, Blei Gamma. Alpha innerlich am gefaehrlichsten (w_R = 20).
 
 ---
 
 ## Halbwertszeit und Zerfallsgesetz
 
-Radioaktiver Zerfall ist zufaellig, aber vorhersagbar. Nach einer **Halbwertszeit** ist die Haelfte der Atome zerfallen:
+Radioaktiver Zerfall ist zufaellig, aber statistisch vorhersagbar. Nach einer **Halbwertszeit** T_halb ist die Haelfte der Atome zerfallen:
 
-> **N(t) = N_0 mal (1/2)^n** mit n = t / T_halb
+**N(t) = N_0 · (1/2)^n** mit n = t / T_halb
 
-| Halbwertszeiten | Rest |
-|-----------------|------|
-| 1 | 50 % |
-| 2 | 25 % |
-| 3 | 12,5 % |
-| 10 | ca. 0,1 % |
+Nach 10 Halbwertszeiten sind noch ~0,1 % uebrig. T_halb haengt nicht von Druck, Temperatur oder Umgebung ab.
 
-Die Halbwertszeit haengt nicht von Temperatur, Druck oder chemischer Umgebung ab -- sie ist fuer jedes Nuklid fest. Formel: **T_halb = 0,693 / Lambda** (Lambda = Zerfallskonstante).
+**T_halb = 0,693 / Lambda** (Lambda = Zerfallskonstante).
 
-> **Merke:** Nach n Halbwertszeiten: Rest = (1/2)^n. Faustregel: Nach 10 Halbwertszeiten ist praktisch nichts mehr uebrig.
+> **Merke:** Nach n Halbwertszeiten: Rest = (1/2)^n. Nach 10 HWZ praktisch nichts mehr uebrig.
 
 ---
 
 ## Aktivitaet und Dosis
 
-Die **Aktivitaet** zaehlt die Zerfaelle pro Sekunde: A = Lambda mal N, gemessen in **Becquerel** (1 Bq = 1 Zerfall/s).
+Die **Aktivitaet** zaehlt Zerfaelle pro Sekunde: A = Lambda · N, Einheit **Becquerel** (1 Bq = 1 Zerfall/s).
 
-Fuer die biologische Wirkung zaehlt nicht nur die aufgenommene Energie (Gray = J/kg), sondern auch die Strahlenart. Die **Aequivalentdosis** in **Sievert** beruecksichtigt das:
+Die biologische Wirkung haengt nicht nur von der Energie ab, sondern auch von der Strahlenart. **Aequivalentdosis in Sievert:**
 
-> **H = D mal w_R**
+**H = D · w_R** (D in Gray = J/kg)
 
-Fuer Gamma und Beta: w_R = 1, also 1 Gray = 1 Sievert. Fuer Alpha: w_R = 20, also 1 Gray = 20 Sievert!
+- Gamma/Beta: w_R = 1 → 1 Gy = 1 Sv
+- Alpha: w_R = 20 → 1 Gy = 20 Sv
 
-Die **effektive Halbwertszeit** beruecksichtigt, dass der Koerper radioaktive Stoffe auch ausscheidet: 1/T_eff = 1/T_phys + 1/T_bio. Sie ist immer kuerzer als die kuerzere der beiden Einzelwerte.
+**Effektive Halbwertszeit**: Der Koerper scheidet Radionuklide auch aus. 1/T_eff = 1/T_phys + 1/T_bio. T_eff ist immer kuerzer als die kuerzere der beiden Einzel-HWZ.
+
+> **Merke:** Gray = physikalische Dosis (J/kg). Sievert = biologisch gewichtet (Gray × w_R). Alpha: 1 Gy = 20 Sv!
 
 ---
 
@@ -504,38 +500,34 @@ Die **effektive Halbwertszeit** beruecksichtigt, dass der Koerper radioaktive St
 | F-18 | 110 min | Beta+ | PET-Scan |
 | C-14 | 5730 Jahre | Beta | Altersbestimmung |
 
-> **Merke:** Tc-99m: reiner Gammastrahler, kurze Halbwertszeit -- ideal fuer Bildgebung (niedrige Dosis, gute Erkennung). I-131: Betastrahlung zerstoert gezielt Schilddruesengewebe.
+> **Merke:** Tc-99m: Gammastrahler, kurze HWZ -- ideal fuer Bildgebung. I-131: Beta zerstoert gezielt Schilddruesengewebe.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Zentral pruefungsrelevant:**
 - Alpha: Z-2, A-4, Papier stoppt, w_R = 20
 - Beta-minus: Z+1, A gleich, Aluminium stoppt
-- Gamma: Z und A unveraendert, Blei/Beton
-- T_halb = 0,693/Lambda; N = N_0 mal (1/2)^n
-- Gray = physikalische Dosis; Sievert = biologisch gewichtet
-- Effektive HWZ immer kuerzer als die kuerzere Einzel-HWZ
+- Gamma: Z/A unveraendert, Blei/Beton
+- T_halb = 0,693/Lambda; N = N_0 · (1/2)^n
+- Gray = physikalische Dosis; Sievert = Gray · w_R
 
 **Typische Fallen:**
-- Infrarot ist NICHT ionisierend und entsteht NICHT beim Kernzerfall
-- Kernspaltung wird durch Neutronen ausgeloest (nicht durch Alpha oder Beta)
-- Massendefekt: Kernmasse ist kleiner als die Summe der Nukleonen (nicht groesser)
-- Neutronenabschirmung: Wasser oder Paraffin, NICHT Blei
+- Kernspaltung: durch Neutronen ausgeloest, nicht Alpha oder Beta
+- Massendefekt: Kernmasse kleiner als Summe der Nukleonen
+- Neutronenabschirmung: Wasser/Paraffin, NICHT Blei
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Alpha**: He-Kern, Z-2, A-4, Papier stoppt, w_R = 20, innerlich extrem gefaehrlich
-- **Beta-minus**: Elektron + Antineutrino, Z+1, A gleich, Alu stoppt, w_R = 1
-- **Beta-plus**: Positron + Neutrino, Z-1, A gleich, PET-Grundlage (2 x 511 keV)
-- **Gamma**: Photon, Z/A unveraendert, Blei/Beton, w_R = 1
-- **Zerfallsgesetz**: N = N_0 mal (1/2)^n; T_halb = 0,693/Lambda
-- **Dosis**: Gray = J/kg; Sievert = Gray mal w_R; Alpha: 1 Gy = 20 Sv
+- **Alpha**: He-Kern, Z-2, A-4, Papier stoppt, w_R = 20
+- **Beta-minus**: Elektron, Z+1, A gleich, Alu stoppt, w_R = 1
+- **Beta-plus**: Positron, Z-1, A gleich, PET (2 × 511 keV)
+- **Gamma**: Photon, Z/A gleich, Blei/Beton, w_R = 1
+- **HWZ**: N = N_0 · (1/2)^n; T_halb = 0,693/Lambda
+- **Dosis**: Gray = J/kg; Sievert = Gray · w_R
 - **Effektive HWZ**: 1/T_eff = 1/T_phys + 1/T_bio`,
       contentExtended: `## Einleitung
 
@@ -1163,14 +1155,14 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
       ],
       content: `## Einleitung
 
-Warum siehst du auf einem Roentgenbild die Knochen weiss und die Lunge fast schwarz? Knochen enthalten Calcium -- das schluckt Roentgenstrahlung viel staerker als die luftgefuellte Lunge. Roentgenstrahlung ist also extrem nuetzlich fuer die Diagnose, kann aber auch Zellen schaedigen. Deshalb ist Strahlenschutz so wichtig.
+Warum siehst du auf einem Roentgenbild die Knochen weiss und die Lunge schwarz? Knochen enthalten Calcium -- das schluckt Roentgenstrahlung staerker als die luftgefuellte Lunge. Roentgenstrahlung ist nuetzlich fuer die Diagnose, kann aber auch Zellen schaedigen. Deshalb ist Strahlenschutz wichtig.
 
 **In diesem Kapitel lernst du:**
-- wie Roentgenstrahlung in einer Roentgenroehre entsteht
-- wie ein CT-Geraet aus vielen Roentgenbildern Schnittbilder berechnet
-- warum Roentgenstrahlung beim Durchgang durch Gewebe schwaecker wird
+- wie Roentgenstrahlung in einer Roentgenroehre entsteht (Brems- und charakteristische Strahlung)
+- wie ein CT Schnittbilder berechnet (Hounsfield-Einheiten)
+- warum Roentgenstrahlung im Gewebe schwaecker wird (Photoeffekt, Compton)
 - wie Strahlung die DNA direkt und indirekt schaedigt
-- was den Unterschied zwischen Strahlenschaeden mit und ohne Schwellendosis ausmacht
+- den Unterschied zwischen stochastischen und deterministischen Strahlenschaeden
 
 ---
 
@@ -1178,108 +1170,100 @@ Warum siehst du auf einem Roentgenbild die Knochen weiss und die Lunge fast schw
 
 {{DIAGRAM:radioactive-decay}}
 
-## So entsteht Roentgenstrahlung
+## Roentgenstrahlung -- Entstehung
 
-In einer **Roentgenroehre** werden Elektronen mit hoher Spannung (30--150 kV) auf eine Metallanode (meist Wolfram) geschossen. Dabei entstehen zwei Arten von Strahlung:
+In einer **Roentgenroehre** werden Elektronen (30--150 kV) auf eine Wolfram-Anode geschossen:
 
-- **Bremsstrahlung**: Die Elektronen werden im Feld der Atome abgebremst und geben Energie als Licht (Photonen) ab. Es entsteht ein breites Spektrum -- wie weisses Licht mit vielen Farben.
-- **Charakteristische Strahlung**: Wenn ein kernnahes Elektron herausgeschlagen wird, rueckt eines von aussen nach und sendet ein Photon mit einer ganz bestimmten Energie aus -- typisch fuer das jeweilige Metall.
+- **Bremsstrahlung**: Elektronen werden im Atomfeld abgebremst → breites Spektrum (haengt von der Spannung ab)
+- **Charakteristische Strahlung**: kernnahes Elektron wird herausgeschlagen → Nachruecken von aussen → Photon mit materialspezifischer Energie (scharfe Linien)
 
-Nur etwa 1 % der Energie wird zu Roentgenstrahlung -- der Rest ist Waerme.
+Nur ~1 % der Energie wird zu Roentgenstrahlung, der Rest ist Waerme.
 
-> **Merke:** Bremsstrahlung = breites Spektrum (haengt von der Spannung ab). Charakteristische Strahlung = scharfe Linien (haengt vom Anodenmaterial ab).
+> **Merke:** Bremsstrahlung = breites Spektrum (Spannung). Charakteristische Strahlung = scharfe Linien (Anodenmaterial).
 
 ---
 
-## CT -- Computertomographie
+## CT -- Hounsfield-Einheiten
 
-Ein CT-Geraet dreht eine Roentgenroehre um den Patienten und macht Aufnahmen aus vielen Winkeln. Ein Computer errechnet daraus Schnittbilder. Jeder Bildpunkt bekommt einen Wert in **Hounsfield-Einheiten (HU)**:
+Ein CT dreht die Roentgenroehre um den Patienten und errechnet Schnittbilder. Jeder Punkt bekommt einen **Hounsfield-Wert (HU)**:
 
-| Gewebe | HU-Wert |
-|--------|---------|
+| Gewebe | HU |
+|--------|----|
 | Luft | -1000 |
 | Wasser | 0 |
 | Knochen | +200 bis +3000 |
 
-> **Merke:** HU-Skala: Wasser = 0, Luft = -1000, Knochen > +200. Ein CT-Abdomen bedeutet etwa 10 mSv Dosis -- das entspricht rund 5 Jahren natuerlicher Hintergrundstrahlung.
+> **Merke:** HU: Wasser = 0, Luft = -1000, Knochen > +200. CT Abdomen ~10 mSv ≈ 5 Jahre natuerliche Hintergrundstrahlung.
 
 ---
 
 ## Roentgenabsorption im Gewebe
 
-Roentgenstrahlung wird beim Durchgang durch Gewebe exponentiell schwaecker: **I = I_0 mal e^(-Mu mal x)**. Die **Halbwertsschichtdicke** ist die Materialdicke, die die Intensitaet halbiert: HVL = 0,693/Mu.
+Strahlung schwaecht sich exponentiell ab: **I = I_0 · e^(-mu · x)**. Drei Mechanismen:
 
-Drei Mechanismen schwaehen Roentgenstrahlung:
-- **Photoeffekt** (niedrige Energien): Photon wird komplett verschluckt -- verantwortlich fuer den Kontrast zwischen Knochen und Weichgewebe
-- **Compton-Effekt** (mittlere Energien): Photon wird abgelenkt und gibt einen Teil seiner Energie ab -- dominiert bei CT
-- **Paarbildung** (sehr hohe Energien > 1,02 MeV): nur in der Strahlentherapie relevant
+- **Photoeffekt** (niedrige Energien): Photon komplett verschluckt → Kontrast Knochen/Weichgewebe (Z-Abhaengigkeit!)
+- **Compton-Effekt** (mittlere Energien): Photon abgelenkt, Teilenergie abgegeben → dominiert bei CT
+- **Paarbildung** (> 1,02 MeV): nur in der Strahlentherapie relevant
 
-> **Merke:** Knochen (Calcium, hohe Ordnungszahl) schluckt viel mehr Roentgenstrahlung als Weichgewebe -- deshalb erscheinen Knochen hell im Roentgenbild.
+> **Merke:** Knochen (Calcium, hohe Z) absorbiert viel mehr als Weichgewebe → im Roentgenbild hell.
 
 ---
 
 ## Biologische Strahlenwirkung
 
-Strahlung schaedigt die DNA auf zwei Wegen:
-- **Direkt** (~30 %): Strahlung trifft die DNA selbst
-- **Indirekt** (~70 %): Strahlung spaltet Wasser in aggressive Teilchen (OH-Radikale), die dann die DNA angreifen
+Strahlung schaedigt DNA auf zwei Wegen:
+- **Direkt** (~30 %): Strahlung trifft die DNA direkt
+- **Indirekt** (~70 %): OH-Radikale aus Wasser greifen DNA an
 
-Der schlimmste Schaden ist der **Doppelstrangbruch** -- beide Straenge der DNA sind durchtrennt. Das ist schwer zu reparieren und kann zu Krebs fuehren.
+Schlimmster Schaden: **Doppelstrangbruch** -- schwer reparierbar, fuehrt zu Krebs.
 
-**Zwei Arten von Strahlenschaeden:**
+**Zwei Arten von Schaeden:**
 
-| Eigenschaft | Stochastisch | Deterministisch |
-|------------|-------------|-----------------|
-| Schwellendosis | Keine | Ja |
-| Beispiele | Krebs | Hautrötung, Haarausfall |
-| Was steigt mit Dosis? | Wahrscheinlichkeit | Schwere |
+| | Stochastisch | Deterministisch |
+|-|-------------|-----------------|
+| Schwellendosis | Keine | Ja (z. B. 2 Gy) |
+| Beispiel | Krebs | Hautrötung, Haarausfall |
+| Dosis steigert | Wahrscheinlichkeit | Schwere |
 
-Schnell teilende Zellen sind besonders empfindlich: Lymphozyten > Knochenmark > Darmzellen > Muskel > Nerven.
+Schnell teilende Zellen sind empfindlicher: Lymphozyten > Knochenmark > Darm > Muskel > Nerven.
 
-> **Merke:** Stochastisch = kein Schwellenwert, Krebs. Deterministisch = Schwellendosis, z. B. Hautroetung ab ca. 2 Gray. MedAT-Klassiker!
+> **Merke:** Stochastisch = kein Schwellenwert, Krebs. Deterministisch = Schwellendosis, Roetung ab ~2 Gy. MedAT-Klassiker!
 
 ---
 
 ## Strahlenschutz -- ALARA
 
-Drei Regeln schuetzen vor Strahlung:
-1. **Abstand**: Doppelter Abstand = nur noch ein Viertel der Dosis (1/r²-Gesetz)
-2. **Abschirmung**: Bleischuerze bei Roentgen
-3. **Zeit**: Kurze Exposition = weniger Dosis
+Drei Massnahmen: **Abstand** (1/r²-Gesetz), **Abschirmung** (Bleischuerze), **Zeit** (kurze Exposition).
 
-Grenzwerte: Beruflich maximal 20 mSv pro Jahr, Bevoelkerung maximal 1 mSv pro Jahr.
+Grenzwerte: Beruflich 20 mSv/Jahr, Bevoelkerung 1 mSv/Jahr.
 
-> **Merke:** ALARA = Abstand hoch, Abschirmung hoch, Zeit runter. Roentgen Thorax ~ 0,02 mSv, CT Abdomen ~ 10 mSv.
+> **Merke:** ALARA: Abstand (doppelter Abstand = 1/4 Dosis), Abschirmung, Zeit reduzieren. Roentgen Thorax ~0,02 mSv, CT Abdomen ~10 mSv.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Zentral pruefungsrelevant:**
 - Bremsstrahlung (kontinuierlich) vs. charakteristische Strahlung (Linien)
-- Knochen hell, Lunge dunkel im Roentgenbild (Photoeffekt, Z-Abhaengigkeit)
-- CT: Hounsfield-Einheiten (Wasser = 0, Luft = -1000)
-- Stochastisch (kein Schwellenwert, Krebs) vs. deterministisch (Schwellendosis, Roetung)
+- CT: HU-Skala (Wasser = 0, Luft = -1000)
+- Stochastisch (kein Schwellenwert) vs. deterministisch (Schwellendosis)
 - ALARA: Abstand, Abschirmung, Zeit
 
 **Typische Fallen:**
-- Indirekte Wirkung (OH-Radikale, 70 %) ueberwiegt die direkte Wirkung
-- Photoeffekt (Kontrast) und Compton-Effekt (CT) nicht verwechseln
+- Indirekte DNA-Schaedigung (~70 %) > direkte (~30 %)
 - Paarbildung erst ab 1,02 MeV -- in der Diagnostik irrelevant
-- Sauerstoffeffekt: Zellen mit Sauerstoff sind empfindlicher, hypoxische Tumoranteile sind resistenter
+- Photoeffekt (Kontrast bei niedrigen E) vs. Compton (CT, mittlere E)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Roentgenroehre**: Bremsstrahlung (breit) + charakteristische Strahlung (Linien); E_max = eU
-- **CT**: viele Roentgenbilder aus verschiedenen Winkeln; HU-Skala: Wasser 0, Luft -1000, Knochen >+200
-- **Schwaechung**: I = I_0 mal e^(-Mu mal x); Knochen schluckt mehr als Weichgewebe
-- **DNA-Schaeden**: indirekt (OH-Radikale, 70 %) > direkt (30 %); Doppelstrangbruch am gefaehrlichsten
-- **Stochastisch**: kein Schwellenwert, Krebs; **Deterministisch**: Schwellendosis, Roetung/ARS
-- **ALARA**: Abstand (1/r²), Abschirmung, Zeit; Beruf max. 20 mSv/a, Bevoelkerung max. 1 mSv/a`,
+- **Roentgenroehre**: Bremsstrahlung (breit, Spannung) + charakteristische Strahlung (Linien, Material)
+- **CT**: HU-Skala: Wasser 0, Luft -1000, Knochen >+200
+- **Schwaechung**: I = I_0 · e^(-mu · x); Knochen > Weichgewebe
+- **DNA**: indirekt (OH-Radikale, 70 %) > direkt (30 %); Doppelstrangbruch gefaehrlichst
+- **Stochastisch**: kein Schwellenwert; **Deterministisch**: Schwellendosis
+- **ALARA**: Abstand (1/r²), Abschirmung, Zeit; Beruf 20 mSv/a`,
       contentExtended: `## Einleitung
 
 Warum erscheinen Knochen im Röntgenbild weiß, Lunge aber fast schwarz? Calcium hat eine hohe Ordnungszahl und absorbiert Röntgenstrahlung viel stärker als luftgefülltes Lungengewebe. Aber Röntgenstrahlung kann auch Schäden verursachen: Wie unterscheidet man einen Strahlenschaden, der erst ab einer Schwellendosis auftritt, von einem Krebsrisiko, das mit jeder noch so kleinen Dosis steigt?
@@ -2047,14 +2031,14 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
       ],
       content: `## Einleitung
 
-Du weisst jetzt, wie radioaktive Strahlung entsteht und wie man Dosen misst. Aber wie schuetzt man sich davor — und wie setzt man Strahlung gezielt gegen Krebs ein?
+Radioaktive Strahlung kann lebensrettend sein -- wenn Aerzte sie gezielt gegen Tumore einsetzen -- oder lebensgefaehrlich, wenn man sich nicht schuetzt. Dieses Kapitel verbindet Strahlenschutz, Strahlentherapie und ein klinisch relevantes Alltagsproblem: Radon in oesterreichischen Wohnraeumen.
 
 **In diesem Kapitel lernst du:**
-- wie du dich mit drei einfachen Regeln vor Strahlung schuetzen kannst (ALARA)
+- das ALARA-Prinzip: Abstand, Abschirmung, Zeit
 - welche Grenzwerte in Oesterreich gelten
-- wie Aerzte Strahlung zur Krebsbehandlung nutzen
-- was bei einer Strahlenvergiftung im Koerper passiert
-- warum Radon in oesterreichischen Haeusern ein Problem sein kann
+- wie Aerzte Strahlung zur Krebsbehandlung nutzen (Tele- und Brachytherapie, Bragg-Peak)
+- was bei einer Strahlenvergiftung im Koerper passiert (ARS)
+- warum Radon ein Problem in oesterreichischen Haeusern ist
 
 ---
 
@@ -2062,117 +2046,89 @@ Du weisst jetzt, wie radioaktive Strahlung entsteht und wie man Dosen misst. Abe
 
 {{DIAGRAM:em-spectrum}}
 
-## Strahlenschutz — drei einfache Regeln
+## Strahlenschutz -- ALARA
 
-Das **ALARA-Prinzip** (As Low As Reasonably Achievable) hat drei Saeulen. Stell dir vor, du stehst neben einem Lagerfeuer:
+Das **ALARA-Prinzip** (As Low As Reasonably Achievable) hat drei Saeulen:
 
-### 1. Abstand halten
+**1. Abstand:** Doppelter Abstand = nur noch ein Viertel der Dosis (**1/r²-Gesetz**).
 
-Je weiter du vom Feuer weggehst, desto weniger Hitze spuerst du. Bei Strahlung gilt das **Abstandsquadratgesetz**: Doppelter Abstand bedeutet nur noch ein Viertel der Dosis. Dreifacher Abstand? Nur noch ein Neuntel.
+**2. Abschirmung:**
 
-> **Merke:** Abstandsquadratgesetz: Doppelter Abstand = 1/4 der Dosis. Die einfachste und wirksamste Schutzmassnahme.
+| Strahlenart | Was schuetzt? |
+|-------------|--------------|
+| Alpha | Papier, Haut |
+| Beta | Aluminium, Plexiglas |
+| Gamma | Blei, Beton |
+| Neutronen | Wasser, Paraffin (nicht Blei!) |
 
-### 2. Abschirmung — etwas dazwischenstellen
+**3. Zeit:** Weniger Expositionszeit = weniger Dosis.
 
-Verschiedene Strahlenarten brauchen unterschiedliche Schilde:
-
-| Strahlenart | Was schuetzt? | Alltags-Beispiel |
-|-------------|--------------|-----------------|
-| Alpha | Ein Blatt Papier genuegt | Wird schon von Haut gestoppt |
-| Beta | Aluminium oder Plexiglas | Laborbrille |
-| Gamma | Blei oder dicker Beton | Bleischuerze beim Roentgen |
-| Neutronen | Wasser oder Paraffin | Wassertanks (nicht Blei!) |
-
-> **Merke:** Merkhilfe PAB: Papier stoppt Alpha, Aluminium stoppt Beta, Blei stoppt Gamma. Neutronen brauchen wasserstoffreiche Materialien (Wasser, Paraffin).
-
-### 3. Zeit — schnell arbeiten
-
-Je kuerzer du der Strahlung ausgesetzt bist, desto weniger Dosis bekommst du. Dosis = Dosisleistung mal Zeit.
-
-> **Merke:** ALARA = Abstand vergroessern, Abschirmung verwenden, Zeit verkuerzen. Merkhilfe: "AAZ".
+> **Merke:** ALARA = Abstand vergroessern, Abschirmung, Zeit verkuerzen (AAZ). PAB: Papier/Alu/Blei.
 
 ---
 
 ## Grenzwerte in Oesterreich
 
-| Wer? | Maximal pro Jahr |
-|------|-----------------|
-| Aerzte/Radiologen (Kat. A) | 20 mSv |
-| Sonstiges Krankenhauspersonal (Kat. B) | 6 mSv |
-| Normalbevoelkerung | 1 mSv |
-| Schwangere (ab Meldung) | 1 mSv fuer restliche Schwangerschaft |
+| Gruppe | Max. pro Jahr |
+|--------|--------------|
+| Beruflich (Kat. A) | 20 mSv |
+| Krankenhauspersonal (Kat. B) | 6 mSv |
+| Bevoelkerung | 1 mSv |
+| Schwangere (ab Meldung) | 1 mSv (restliche Schwangerschaft) |
 
-Die natuerliche Strahlung in Oesterreich betraegt ca. 2,1 mSv pro Jahr — das ist die Hintergrundstrahlung aus Weltall, Boden und Radon.
+Natuerliche Hintergrundstrahlung in Oesterreich: ca. 2,1 mSv/Jahr. Roentgen Thorax: ~0,02 mSv. CT Abdomen: ~10 mSv.
 
-Zum Vergleich: Ein Roentgenbild der Lunge macht nur 0,02–0,1 mSv. Ein CT des Bauchs dagegen ca. 10 mSv — das entspricht etwa 5 Jahren natuerlicher Strahlung!
-
-> **Merke:** Beruflich: max. 20 mSv/Jahr. Bevoelkerung: max. 1 mSv/Jahr. Natuerliche Strahlung in Oesterreich: ca. 2,1 mSv/Jahr.
+> **Merke:** Beruf 20 mSv/a, Bevoelkerung 1 mSv/a, natuerlich ~2,1 mSv/a. CT Abdomen ≈ 5 Jahre natuerliche Strahlung.
 
 ---
 
-## Strahlentherapie — Strahlung gegen Krebs
+## Strahlentherapie
 
-Strahlung kann DNA zerstoeren. Bei Krebs nutzt man das gezielt: moeglichst viel Dosis im Tumor, moeglichst wenig im gesunden Gewebe.
+**Teletherapie** (Quelle aussen):
+- **LINAC**: Linearbeschleuniger, hochenergetische Roentgenstrahlung -- Standardverfahren
+- **Protonentherapie**: Protonen geben Energie erst am Zielort ab (**Bragg-Peak**) -- ideal neben empfindlichen Organen (Auge, Hirn, Kinder)
 
-### Teletherapie — Bestrahlung von aussen
+**Brachytherapie** (Quelle innen): Strahlenquelle direkt im/am Tumor. Dosis faellt mit 1/r² schnell ab -- gesundes Gewebe wird geschont.
 
-Die Strahlenquelle ist ausserhalb des Koerpers:
-- **Linearbeschleuniger (LINAC):** Der moderne Standard. Erzeugt hochenergetische Roentgenstrahlung.
-- **Protonentherapie:** Protonen geben ihre Energie erst am Ende ihrer Reichweite ab — das nennt man den **Bragg-Peak**. Ideal, wenn der Tumor nahe an empfindlichen Organen liegt (Auge, Gehirn, bei Kindern).
+**Nuklearmedizin:** Diagnostik = Gammastrahler (Photonen verlassen den Koerper, z. B. PET, SPECT). Therapie = Beta-/Alphastrahler (kurze Reichweite, lokale Wirkung), z. B. Radiojod bei Schilddruesenerkrankungen.
 
-### Brachytherapie — Bestrahlung von innen
-
-Die Strahlenquelle wird direkt in oder neben den Tumor gebracht. Vorteil: Sehr hohe Dosis am Tumor, aber die Dosis faellt mit dem Abstand schnell ab — das gesunde Gewebe wird geschont.
-
-> **Merke:** Teletherapie = Quelle aussen (LINAC, Protonen). Brachytherapie = Quelle im/am Tumor. Bragg-Peak: Protonen geben ihre Energie erst am Zielort ab.
+> **Merke:** Bragg-Peak: Protonen deponieren fast alle Energie am Zielort -- wenig Schaden an umliegenden Strukturen.
 
 ---
 
-## Nuklearmedizin — Diagnostik und Therapie
+## Akutes Strahlensyndrom (ARS)
 
-Fuer die Diagnostik verwendet man Gammastrahler — die Photonen verlassen den Koerper und werden von einer Kamera aufgefangen (z.B. PET, SPECT, Szintigraphie).
+Ab ~1 Gy Ganzkoeperbestrahlung werden Organe geschaedigt -- in der Reihenfolge ihrer Zellteilungsrate:
 
-Fuer die Therapie verwendet man Beta- oder Alphastrahler — die haben eine kurze Reichweite und zerstoeren das Gewebe nur lokal. Beispiel: Radiojodtherapie mit Jod-131 bei Schilddruesenerkrankungen.
+| Dosis | Betroffenes Organ | Symptome |
+|-------|-------------------|---------|
+| 1--6 Gy | Knochenmark | Weniger Blutzellen, Infektionen |
+| 6--10 Gy | Darm | Schleimhaut-Absterben, Durchfall, oft toedlich |
+| >10 Gy | ZNS/Gehirn | Hirnschwellung, Koma, immer toedlich |
 
-> **Merke:** Diagnostik = Gammastrahler (Photonen verlassen Koerper). Therapie = Beta-/Alphastrahler (kurze Reichweite, lokale Wirkung).
-
----
-
-## Akutes Strahlensyndrom
-
-Wenn der ganze Koerper auf einmal eine hohe Dosis abbekommt (ab ca. 1 Gy), werden nacheinander verschiedene Organe geschaedigt:
-
-| Stufe | Dosis | Was passiert? |
-|-------|-------|--------------|
-| Blut und Knochenmark | 1–6 Gy | Weniger Blutzellen, Infektionsgefahr |
-| Darm | 6–10 Gy | Darmschleimhaut stirbt ab, Durchfall, meist toedlich |
-| Gehirn | ueber 10 Gy | Hirnschwellung, Koma, immer toedlich |
-
-Die Reihenfolge erklaert sich einfach: Zellen, die sich schnell teilen (Blut, Darm), sind am empfindlichsten. Nervenzellen teilen sich kaum und sind daher am widerstandsfaehigsten.
-
-> **Merke:** ARS ab ca. 1 Gy: Blut (1–6 Gy) dann Darm (6–10 Gy) dann Gehirn (ueber 10 Gy). Schnell teilende Zellen sind am empfindlichsten.
+> **Merke:** ARS: Blut (1--6 Gy) → Darm (6--10 Gy) → Gehirn (>10 Gy). Schnell teilende Zellen zuerst betroffen.
 
 ---
 
 ## Radon in Oesterreich
 
-Radon ist ein radioaktives Edelgas, das aus dem Boden in Gebaeude aufsteigen kann. Du kannst es weder sehen noch riechen. In der Lunge zerfaellt es und gibt Alphastrahlung ab — das kann Lungenkrebs verursachen. Radon ist nach dem Rauchen die zweithaeufigste Ursache fuer Lungenkrebs.
+**Radon** ist ein unsichtbares, geruchloses radioaktives Edelgas, das aus dem Boden aufsteigt. In der Lunge zerfaellt es zu kurzlebigen Alpha-Strahlern -- direkte DNA-Schaeden im Lungenepithel.
 
-In Oesterreich ist die mittlere Radonkonzentration ca. 99 Bq/m3. Risikogebiete: Muehlviertel, Waldviertel, Teile der Steiermark und Salzburgs.
+Radon ist nach dem Rauchen die zweithaeufigste Ursache fuer Lungenkrebs. Mittlere Konzentration in Oesterreich: ~99 Bq/m³. Risikogebiete: Muehlviertel, Waldviertel, Steiermark.
 
-> **Merke:** Radon: unsichtbares radioaktives Gas, Alpha-Strahler, Lungenkrebs-Risiko Nr. 2 nach Rauchen. In Oesterreich ca. 99 Bq/m3.
+> **Merke:** Radon: Edelgas, Alpha-Strahler, Lungenkrebs-Risiko Nr. 2. Oesterreich ~99 Bq/m³.
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **ALARA**: Abstand (1/r2), Abschirmung (PAB), Zeit minimieren
+- **ALARA**: Abstand (1/r²), Abschirmung (PAB + Paraffin fuer Neutronen), Zeit
 - **Grenzwerte**: Beruf 20 mSv/a, Bevoelkerung 1 mSv/a, natuerlich 2,1 mSv/a
-- **Teletherapie**: LINAC, Protonentherapie (Bragg-Peak)
-- **Brachytherapie**: Quelle im/am Tumor, schneller Dosisabfall
-- **Diagnostik**: Gammastrahler (PET, SPECT). Therapie: Beta-/Alphastrahler
-- **ARS**: ab 1 Gy — Blut, dann Darm, dann Gehirn
-- **Radon**: Edelgas, Alphastrahler, Lungenkrebs, Oesterreich ca. 99 Bq/m3`,
+- **Teletherapie**: LINAC, Protonentherapie (Bragg-Peak = maximale Dosis am Zielort)
+- **Brachytherapie**: Quelle im/am Tumor, 1/r²-Abfall schont gesundes Gewebe
+- **Diagnostik**: Gammastrahler; Therapie: Beta-/Alphastrahler
+- **ARS**: Blut 1--6 Gy, Darm 6--10 Gy, ZNS >10 Gy
+- **Radon**: Alphastrahler, Lungenkrebs, ~99 Bq/m³ in Oesterreich`,
       contentExtended: `## Einleitung
 
 Bisher haben wir die physikalischen Grundlagen der Strahlung kennengelernt — Zerfallsarten, Dosimetrie und Bildgebung. Nun wenden wir dieses Wissen auf die klinische Praxis an: Wie schützen wir Patienten und Personal vor unnötiger Strahlung, und wie nutzen wir ionisierende Strahlung gezielt zur Therapie?

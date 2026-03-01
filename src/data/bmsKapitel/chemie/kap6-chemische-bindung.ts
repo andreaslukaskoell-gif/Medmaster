@@ -533,37 +533,27 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Einleitung
 
-Warum loest sich Zucker in Wasser, aber Oel nicht? Warum ist CO2 ein Gas, obwohl es schwerer ist als Wasser? Die Antwort liegt in der **kovalenten Bindung**: Atome teilen sich Elektronenpaare, statt sie komplett abzugeben. Die Form der Molekuele, die dabei entsteht, bestimmt alles -- ob ein Stoff polar oder unpolar ist, ob er sich in Wasser loest, und wie Proteine in deinem Koerper gefaltet sind.
+CO2 hat zwei polare Bindungen -- ist aber insgesamt unpolar. Wasser hat auch polare Bindungen -- und ist extrem polar. Der Unterschied liegt in der Molekuelform. Bei der **kovalenten Bindung** teilen Atome Elektronenpaare; die raeumliche Anordnung dieser Paare bestimmt Polaritaet, Loeslichkeit und biologische Funktion.
 
 **In diesem Kapitel lernst du:**
-- warum Atome Elektronen teilen statt uebertragen und was das mit Elektronegativitaet zu tun hat
-- wie du die Form eines Molekuels vorhersagen kannst (VSEPR-Modell)
-- was Hybridisierung bedeutet und warum die Peptidbindung flach ist
-- warum Doppelbindungen die freie Drehung verhindern (wichtig fuer cis/trans bei Fettsaeuren!)
+- kovalent vs. ionisch: Elektronenteilung vs. -uebertragung; Grenzwert Delta-EN 1,7
+- wie du Molekuelform mit VSEPR vorhersagst
+- was Hybridisierung (sp3/sp2/sp) bedeutet und warum die Peptidbindung flach ist
+- warum Pi-Bindungen Rotation verhindern und cis/trans-Isomerie entstehen laesst
 
 ---
 
 {{DIAGRAM:covalent-bond}}
 
-## Kovalente Bindung -- Elektronen teilen
+## Kovalente Bindung und Elektronegativitaet
 
-Bei der **Ionenbindung** gibt ein Atom Elektronen komplett ab (z. B. NaCl). Bei der **kovalenten Bindung** teilen sich zwei Atome ein oder mehrere Elektronenpaare. Das passiert vor allem zwischen Nichtmetallen (z. B. H2O, CO2, Zucker).
+Bei der **kovalenten Bindung** teilen sich zwei Atome ein oder mehrere Elektronenpaare -- im Unterschied zur Ionenbindung, wo Elektronen komplett uebertragen werden. Das passiert vor allem zwischen Nichtmetallen. Faustregel: Elektronegativitaetsdifferenz (Delta-EN) unter 1,7 = kovalent; ueber 1,7 = ionisch.
 
-**Faustregel:** Elektronegativitaetsdifferenz (Delta-EN) unter 1,7 = kovalent. Ueber 1,7 = ionisch.
+**Elektronegativitaet (EN)** misst, wie stark ein Atom die Elektronen anzieht. Fluor hat den hoechsten Wert (4,0), dann Sauerstoff (3,5), Stickstoff und Chlor (3,0). Im PSE steigt EN nach rechts oben. Wenn die EN-Differenz gross ist (O-H: 1,4), entsteht eine **polare Bindung**; bei kleiner Differenz (C-H: 0,4) ist sie fast unpolar -- deshalb sind Fette wasserabstossend.
 
-Beispiele kovalenter Verbindungen: Wasser (H2O), Kohlendioxid (CO2), Methan (CH4), Alkohol. Beispiele ionischer Verbindungen: Kochsalz (NaCl), Magnesiumoxid (MgO).
+Je mehr Elektronenpaare geteilt werden, desto kuerzer und staerker die Bindung: C-C (Einfach, 347 kJ/mol) < C=C (Doppel, 614 kJ/mol) < C dreifach C (839 kJ/mol).
 
-**Einfach-, Doppel- und Dreifachbindungen:** Je mehr Elektronenpaare geteilt werden, desto kuerzer und staerker die Bindung: C-C (Einfach, 347 kJ/mol) < C=C (Doppel, 614 kJ/mol) < C dreifach C (839 kJ/mol).
-
-> **Merke:** Kovalente Bindung = Elektronenteilung zwischen Nichtmetallen. Je mehr geteilte Elektronenpaare, desto staerker und kuerzer die Bindung. Die Elektronegativitaetsdifferenz bestimmt, ob kovalent oder ionisch.
-
----
-
-## Elektronegativitaet -- wer zieht staerker?
-
-**Elektronegativitaet (EN)** misst, wie stark ein Atom die gemeinsamen Elektronen anzieht. Fluor ist der Spitzenreiter (EN = 4,0), dann Sauerstoff (3,5), Stickstoff und Chlor (3,0). Im Periodensystem steigt die EN nach rechts oben.
-
-Wenn die EN-Differenz gross ist (z. B. O-H: 1,4), sind die Elektronen ungleich verteilt -- es entsteht eine **polare Bindung**. Wenn sie klein ist (z. B. C-H: 0,4), ist die Bindung fast unpolar. Deshalb sind Fette (viele C-H-Bindungen) wasserabstossend.
+> **Merke:** Kovalente Bindung = Elektronenteilung zwischen Nichtmetallen. Delta-EN < 1,7 = kovalent; EN-Maximum: Fluor (4,0), dann O (3,5), N/Cl (3,0).
 
 ---
 
@@ -597,15 +587,12 @@ Beispiele:
 
 ## Sigma- und Pi-Bindungen
 
-- **Sigma (Sigma-Bindung)**: Ueberlappung entlang der Bindungsachse. Jede Einfachbindung ist eine Sigma-Bindung. Freie Drehung moeglich
-- **Pi (Pi-Bindung)**: seitliche Ueberlappung, nur bei Doppel-/Dreifachbindungen. Verhindert freie Drehung!
+- **Sigma**: Ueberlappung entlang der Bindungsachse; jede Einfachbindung; freie Drehung moeglich
+- **Pi**: seitliche Ueberlappung; nur bei Doppel-/Dreifachbindungen; **verhindert freie Drehung**
 
-Das ist biologisch extrem wichtig:
-- **Fettsaeuren**: Die Doppelbindung bei Oelsaeure kann cis (Knick) oder trans (gerade) sein -- das bestimmt, ob das Fett fluessig oder fest ist
-- **Peptidbindung**: partieller Pi-Charakter -> flach -> bestimmt die Proteinform
-- **Sehen**: Licht dreht eine Doppelbindung in Retinal von cis nach trans -> Nervensignal
+Biologisch wichtig: Fettsaeuren-Doppelbindung kann cis (Knick, fluessig) oder trans (gerade, fest) sein. Peptidbindung hat partiellen Pi-Charakter -> flach -> bestimmt Proteinstruktur.
 
-> **Merke:** Einfachbindung = 1 Sigma. Doppelbindung = 1 Sigma + 1 Pi. Dreifachbindung = 1 Sigma + 2 Pi. Pi-Bindungen verhindern Rotation -- deshalb gibt es cis/trans-Isomerie nur bei Doppelbindungen.
+> **Merke:** Einfach = 1 Sigma; Doppel = 1 Sigma + 1 Pi; Dreifach = 1 Sigma + 2 Pi. Pi verhindert Rotation -> cis/trans nur bei Doppelbindungen.
 
 ---
 
@@ -622,30 +609,21 @@ Deshalb gilt: "Gleiches loest Gleiches" -- polare Stoffe loesen sich in Wasser, 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Kovalent vs. ionisch: Delta-EN < 1,7 = kovalent, > 1,7 = ionisch
-- EN im PSE: steigt nach rechts oben; F = 4,0 (Maximum)
+- Kovalent vs. ionisch: Delta-EN < 1,7 = kovalent, > 1,7 = ionisch; F = 4,0 (Maximum)
 - VSEPR: freie EP druecken Winkel zusammen; Wasser gewinkelt, CO2 linear
-- sp3 = Tetraeder, sp2 = flach/trigonal, sp = linear
-- Sigma = Einfachbindung; Pi = zusaetzlich bei Mehrfachbindung; Pi verhindert Drehung
-- Polares Molekuel nur wenn Dipole sich NICHT aufheben (H2O ja, CO2 nein)
-
-**Typische Fallen:**
-- Polare Bindungen ergeben nicht automatisch ein polares Molekuel (CO2, CCl4!)
-- Pi-Bindung verhindert Rotation -> cis/trans nur bei Doppelbindungen
-- EN-Trend: Fluor ist elektronegativer als Sauerstoff!
-- C-H ist fast unpolar -> Kohlenwasserstoffe sind wasserabstossend
+- sp3 = Tetraeder (109,5 Grad), sp2 = flach (120 Grad), sp = linear (180 Grad)
+- Pi verhindert Drehung; polare Bindungen ergeben NUR dann polares Molekuel, wenn Dipole sich nicht aufheben (H2O ja, CO2 nein!)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Kovalente Bindung**: Elektronenteilung zwischen Nichtmetallen; Delta-EN < 1,7
-- **EN**: steigt nach rechts oben im PSE; F = 4,0 (Maximum)
-- **VSEPR**: Elektronenpaare gehen auseinander; freie EP druecken Winkel zusammen
-- **Hybridisierung**: sp3 = Tetraeder (109,5 Grad), sp2 = flach (120 Grad), sp = linear (180 Grad)
-- **Sigma + Pi**: Einfachbindung = Sigma; Doppel = Sigma + Pi; Pi verhindert Drehung
-- **Molekuelpolaritaet**: polare Bindungen + asymmetrische Form = polar (H2O ja, CO2 nein)
-- **Peptidbindung**: sp2, partieller Pi-Charakter, flach -> bestimmt Proteinstruktur`,
+- **Kovalent**: Elektronenteilung; Delta-EN < 1,7; je mehr Paare, desto kuerzer/staerker
+- **EN**: F = 4,0 > O = 3,5 > N/Cl = 3,0; steigt im PSE nach rechts oben
+- **VSEPR**: freie EP druecken Winkel zusammen; CH4 = 109,5 Grad, H2O = 104,5 Grad, CO2 = 180 Grad
+- **Hybridisierung**: sp3 = Tetraeder, sp2 = flach (Peptidbindung!), sp = linear
+- **Sigma + Pi**: Einfach = Sigma; Doppel = Sigma+Pi; Pi verhindert Drehung -> cis/trans
+- **Polaritaet**: H2O polar (gewinkelt), CO2 unpolar (linear, Dipole aufgehoben)`,
       contentExtended: `## Einleitung
 
 CO2 hat zwei stark polare C=O-Bindungen -- trotzdem ist das Molekuel insgesamt unpolar. H2O hat ebenfalls polare Bindungen -- und ist extrem polar. Der Unterschied? Die **Geometrie**. Genau hier zeigt sich die Staerke der kovalenten Bindung: Atome teilen sich Elektronenpaare, und die raeumliche Anordnung dieser Paare bestimmt Gestalt, Polaritaet und Funktion des Molekuels. Von der Peptidbindung in Proteinen bis zur Doppelbindung in Fettsaeuren -- die kovalente Chemie ist das Fundament der Biochemie.

@@ -391,7 +391,7 @@ Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria bra
       diagram: "newton-forces",
       content: `## Einleitung
 
-Spring ins Schwimmbad und lass dich treiben -- du spuerst sofort, wie das Wasser dich nach oben drueckt. Das ist der **Auftrieb**. Gleichzeitig kannst du beobachten, wie Wasserlaeufer ueber die Oberflaeche laufen, als waere sie eine Haut -- das ist die **Oberflaechenspannung**. Beides spielt auch in der Lunge eine wichtige Rolle.
+Spring ins Schwimmbad und lass dich treiben -- du spuerst, wie das Wasser dich nach oben drueckt. Das ist der **Auftrieb**. Gleichzeitig laufen Wasserlaeufer ueber die Oberflaeche, als waere sie eine Haut -- das ist die **Oberflaechenspannung**. Beides spielt in der Lunge eine wichtige Rolle.
 
 **In diesem Kapitel lernst du:**
 - warum Koerper im Wasser leichter werden und was **Auftrieb** ist

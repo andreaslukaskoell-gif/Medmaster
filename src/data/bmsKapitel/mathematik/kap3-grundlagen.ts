@@ -711,13 +711,13 @@ Reduktionsfaktor r: Maenner \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
       ],
       content: `## Einleitung
 
-3 Aepfel kosten 1,50 Euro -- wie viel kosten 7 Aepfel? Der **Dreisatz** (Schlussrechnung) ist das einfachste Werkzeug fuer solche Aufgaben: In drei Schritten von einer bekannten zu einer gesuchten Groesse. Im MedAT kommt er staendig vor.
+3 Aepfel kosten 1,50 Euro -- wie viel kosten 7 Aepfel? Der **Dreisatz** ist das einfachste Werkzeug: In drei Schritten von einer bekannten zu einer gesuchten Groesse. Im MedAT kommt er staendig vor.
 
 **In diesem Kapitel lernst du:**
 - wie der direkte Dreisatz funktioniert (proportionale Groessen)
 - wie der indirekte Dreisatz funktioniert (antiproportionale Groessen)
 - wie du erkennst, ob direkt oder indirekt
-- wie der zusammengesetzte Dreisatz bei zwei Groessen funktioniert
+- wie der zusammengesetzte Dreisatz bei zwei gleichzeitigen Groessen funktioniert
 
 ---
 
@@ -727,99 +727,84 @@ Reduktionsfaktor r: Maenner \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
 
 ## Direkter Dreisatz (proportional)
 
-Zwei Groessen sind **direkt proportional**, wenn sie im selben Verhaeltnis steigen und fallen. Doppelt so viel von A ergibt doppelt so viel von B.
+Zwei Groessen sind **direkt proportional**, wenn sie im selben Verhaeltnis steigen und fallen. Doppelt so viel A ergibt doppelt so viel B.
 
-**Drei Schritte:**
-1. **Gegeben:** Bekannte Zuordnung aufschreiben (z. B. 3 Aepfel kosten 1,50 Euro)
-2. **Auf 1 zurueckfuehren:** Durch die bekannte Menge teilen (1 Apfel kostet 0,50 Euro)
-3. **Hochrechnen:** Mit der gesuchten Menge multiplizieren (7 Aepfel kosten 3,50 Euro)
-
-**Formel:** a/b = c/x \u2192 **x = b \u00d7 c / a**.
+**Schema:** Gegeben → auf 1 zurueckfuehren → hochrechnen.
 
 **Beispiel:** 4 Liter Benzin kosten 8 Euro. Wie viel kosten 10 Liter?
-- 1 L kostet 8/4 = 2 Euro. 10 L kosten 10 \u00d7 2 = **20 Euro**.
+- Schritt 1: 1 L kostet 8/4 = 2 Euro.
+- Schritt 2: 10 L kosten 10 × 2 = **20 Euro**.
 
-> **Merke:** Direkter Dreisatz: Mehr ergibt mehr. Quotient A/B = konstant. Schema: Gegeben \u2192 auf 1 \u2192 hochrechnen.
+**Formel:** x = b × c / a (aus a → b und c → x).
+
+> **Merke:** Direkter Dreisatz: Mehr A → mehr B. Quotient A/B = konstant. Schema: auf 1 → hochrechnen.
 
 ---
 
 ## Indirekter Dreisatz (antiproportional)
 
-Was, wenn mehr von A zu weniger von B fuehrt? Dann ist das **Produkt** A \u00d7 B konstant.
+Wenn mehr A zu **weniger** B fuehrt, ist das **Produkt** A × B konstant.
 
-**Erkennungsfrage:** Wenn A groesser wird, wird B **kleiner**? \u2192 Indirekter Dreisatz!
-Beispiele: Mehr Helfer \u2192 weniger Zeit. Schnelleres Tempo \u2192 kuerzere Fahrt.
+**Erkennungsfrage:** Wenn A groesser wird, wird B kleiner? → Indirekter Dreisatz!
 
-**Verfahren:**
-1. Bekannte Zuordnung: 6 Helfer brauchen 4 Stunden
-2. Gesamtarbeit: 6 \u00d7 4 = 24 Helferstunden (konstant!)
-3. Neue Groesse: 8 Helfer brauchen 24/8 = **3 Stunden**
+**Beispiel:** 6 Helfer brauchen 4 Stunden. 8 Helfer brauchen wie viele Stunden?
+- Gesamtarbeit: 6 × 4 = 24 (konstant).
+- 8 Helfer: 24/8 = **3 Stunden**.
 
-**Formel:** a \u00d7 b = c \u00d7 x \u2192 **x = a \u00d7 b / c**.
+**Formel:** x = a × b / c.
 
-> **Merke:** Indirekter Dreisatz: Mehr ergibt weniger. Produkt A \u00d7 B = konstant. Frage dich: \u201eWenn A doppelt so gross wird, wird B halb so gross?\u201c \u2192 indirekt!
+> **Merke:** Indirekter Dreisatz: Mehr A → weniger B. Produkt A × B = konstant. Frage: „Wird B kleiner, wenn A steigt?“ → indirekt!
 
 ---
 
 ## Zusammengesetzter Dreisatz
 
-Manchmal aendern sich **zwei** Groessen gleichzeitig. Dann loest du schrittweise: Erst eine Variable anpassen, dann die andere.
+Manchmal aendern sich **zwei** Groessen gleichzeitig. Dann loest du schrittweise.
 
-**Beispiel:** 5 Maler brauchen 8 Tage fuer 200 m\u00b2. Wie viele Tage brauchen 4 Maler fuer 300 m\u00b2?
+**Beispiel:** 5 Maler brauchen 8 Tage fuer 200 m². Wie viele Tage brauchen 4 Maler fuer 300 m²?
 
-Schritt 1 -- Maler anpassen (indirekt): 5 Maler = 8 Tage. 4 Maler = 8 \u00d7 5/4 = **10 Tage** (fuer 200 m\u00b2).
+- Schritt 1 (Maler anpassen, indirekt): 4 Maler = 8 × 5/4 = **10 Tage** fuer 200 m².
+- Schritt 2 (Flaeche anpassen, direkt): 300 m² = 10 × 300/200 = **15 Tage**.
 
-Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 = 10 Tage. 300 m\u00b2 = 10 \u00d7 300/200 = **15 Tage**.
-
-> **Merke:** Zusammengesetzter Dreisatz: Schrittweise loesen. Bei jedem Schritt pruefen: direkt oder indirekt?
+> **Merke:** Zusammengesetzter Dreisatz: Schrittweise loesen. Bei jedem Schritt: direkt oder indirekt pruefen.
 
 ---
 
 ## Verhaeltnisse und Kreuzprodukt
 
-**Ein Verhaeltnis a:b** beschreibt die relative Groesse zweier Werte.
+Ein Verhaeltnis a:b beschreibt relative Groessen. Das **Kreuzprodukt** hilft beim Loesen:
 
-**Kreuzprodukt:** Wenn a/b = c/d, dann a \u00d7 d = b \u00d7 c. Sehr nuetzlich zum Loesen von Verhaeltnisgleichungen.
+Wenn a/b = c/d, dann gilt a × d = b × c.
 
-**Beispiel:** x:4 = 9:12. Kreuzprodukt: 12x = 36, also x = **3**.
+**Beispiel:** x:4 = 9:12 → 12x = 36 → x = **3**.
 
-**Mischungsbeispiel:** Du mischst Saft (100 %) mit Wasser. Verhaeltnis 1:3 bedeutet: 1 Teil Saft + 3 Teile Wasser = 4 Teile gesamt. Fuer 2 Liter: 0,5 L Saft + 1,5 L Wasser.
+**Mischung:** Verhaeltnis 1:3 (Saft:Wasser) = 4 Teile gesamt. Fuer 2 Liter: 0,5 L Saft + 1,5 L Wasser.
 
-> **Merke:** Kreuzprodukt: a/b = c/d \u21d4 a\u00d7d = b\u00d7c.
+> **Merke:** Kreuzprodukt: a/b = c/d ⇔ a×d = b×c.
 
 ---
-
-## Rechenbeispiele
-
-**Beispiel 1 -- Direkter Dreisatz:** 5 kg Kartoffeln kosten 4 Euro. 12 kg kosten: 1 kg = 0,80 Euro, 12 kg = **9,60 Euro**.
-
-**Beispiel 2 -- Indirekter Dreisatz:** Ein Auto faehrt mit 80 km/h und braucht 3 Stunden. Mit 120 km/h: Strecke = 240 km (konstant). Zeit = 240/120 = **2 Stunden**.
-
-**Beispiel 3 -- Zusammengesetzt:** 6 Maschinen produzieren in 5 Stunden 900 Stueck. 4 Maschinen fuer 1200 Stueck? Schritt 1 (indirekt): 4 Maschinen = 5 \u00d7 6/4 = 7,5 h fuer 900 Stueck. Schritt 2 (direkt): 1200 Stueck = 7,5 \u00d7 1200/900 = **10 h**.
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Direkter Dreisatz erkennen und anwenden
-- Indirekter Dreisatz erkennen und anwenden
-- Zusammengesetzter Dreisatz schrittweise loesen
-- Kreuzprodukt bei Verhaeltnisgleichungen
+- Direkten und indirekten Dreisatz sicher unterscheiden
+- Zusammengesetzten Dreisatz schrittweise loesen
+- Kreuzprodukt bei Verhaeltnisgleichungen anwenden
 
 **Typische Pruefungsfallen:**
-- Direkt und indirekt verwechseln: Immer Erkennungsfrage stellen!
-- Beim indirekten Dreisatz multiplizieren statt dividieren
-- Einheiten nicht mitfuehren
-- Zusammengesetzten Dreisatz in einem Schritt loesen wollen (immer schrittweise!)
+- Direkt/indirekt verwechseln: Immer Erkennungsfrage stellen!
+- Beim indirekten Dreisatz: Produkt konstant halten, nicht Quotient
+- Zusammengesetzten Dreisatz in einem Schritt loesen wollen
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Direkter Dreisatz:** Quotient A/B = konstant; mehr A \u2192 mehr B; x = b\u00d7c/a
-- **Indirekter Dreisatz:** Produkt A\u00d7B = konstant; mehr A \u2192 weniger B; x = a\u00d7b/c
-- **Erkennungsfrage:** \u201eWird B groesser oder kleiner, wenn A steigt?\u201c
-- **Zusammengesetzt:** Schrittweise loesen, jeden Schritt auf direkt/indirekt pruefen
-- **Kreuzprodukt:** a/b = c/d \u21d4 a\u00d7d = b\u00d7c`,
+- **Direkt:** Quotient A/B = konstant; mehr A → mehr B; x = b×c/a
+- **Indirekt:** Produkt A×B = konstant; mehr A → weniger B; x = a×b/c
+- **Erkennungsfrage:** „Wird B kleiner, wenn A steigt?“ → indirekt
+- **Zusammengesetzt:** Schrittweise, je Schritt direkt/indirekt pruefen
+- **Kreuzprodukt:** a/b = c/d ⇔ a×d = b×c`,
       contentExtended: `## Einleitung
 
 \u201eEin Patient wiegt 85 kg und soll 3 mg/kg erhalten -- wie viel Milligramm brauchen wir?\u201c Solche Aufgaben gehoeren zum klinischen Alltag und zum MedAT-BMS. Der **Dreisatz** (Schlussrechnung) ist das einfachste und zuverlaessigste Werkzeug dafuer: In drei Schritten von einer bekannten zu einer gesuchten Groesse.
@@ -1067,12 +1052,13 @@ Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
       ],
       content: `## Einleitung
 
-Wie viel sind 0,5 mg in Mikrogramm? Wie rechnest du km/h in m/s um? Am MedAT musst du sicher zwischen Einheiten umrechnen koennen. Die **Kettenmethode** ist dabei dein zuverlaessigstes Werkzeug.
+Wie viel sind 0,5 mg in Mikrogramm? Wie rechnest du km/h in m/s um? Am MedAT musst du sicher zwischen Einheiten umrechnen koennen. Die **Kettenmethode** ist dein zuverlaessiges Werkzeug.
 
 **In diesem Kapitel lernst du:**
 - die wichtigsten SI-Praefixe und ihre Zehnerpotenzen (nano bis mega)
 - wie die Kettenmethode funktioniert und warum sie Fehler verhindert
-- wie du zwischen verschiedenen Einheiten sicher umrechnest
+- wie du mg, µg und ng sicher umrechnest
+- wie du Geschwindigkeiten und Flaecheneinheiten korrekt umrechnest
 
 ---
 
@@ -1082,121 +1068,79 @@ Wie viel sind 0,5 mg in Mikrogramm? Wie rechnest du km/h in m/s um? Am MedAT mus
 
 ## SI-Praefixe: Die Zehnerpotenz-Leiter
 
-Das SI-System verwendet **Praefixe**, um Vielfache und Bruchteile auszudruecken. Zwischen benachbarten Praefixen liegen immer **3 Zehnerpotenzen** (Faktor 1000).
+Das SI-System verwendet **Praefixe** fuer Vielfache und Bruchteile. Zwischen benachbarten Praefixen liegen immer **3 Zehnerpotenzen** (Faktor 1000).
 
 | Praefix | Symbol | Faktor | Beispiel |
 |---------|--------|--------|----------|
-| Mega | M | 10\u2076 | 1 MHz = 1.000.000 Hz |
-| Kilo | k | 10\u00b3 | 1 kg = 1000 g |
-| (Basis) | -- | 10\u2070 | 1 g, 1 m, 1 L |
-| Milli | m | 10\u207b\u00b3 | 1 mm = 0,001 m |
-| Mikro | \u00b5 | 10\u207b\u2076 | 1 \u00b5g = 0,000001 g |
-| Nano | n | 10\u207b\u2079 | 1 nm = 0,000000001 m |
+| Mega | M | 10⁶ | 1 MHz = 1.000.000 Hz |
+| Kilo | k | 10³ | 1 kg = 1000 g |
+| (Basis) | -- | 10⁰ | 1 g, 1 m, 1 L |
+| Milli | m | 10⁻³ | 1 mm = 0,001 m |
+| Mikro | µ | 10⁻⁶ | 1 µg = 0,000001 g |
+| Nano | n | 10⁻⁹ | 1 nm = 0,000000001 m |
 
 **Umrechnung:**
-- Von gross nach klein: **multiplizieren** (1 mg = 1000 \u00b5g).
-- Von klein nach gross: **dividieren** (500 \u00b5g = 0,5 mg).
+- Von gross nach klein: **multiplizieren** (1 mg = 1000 µg).
+- Von klein nach gross: **dividieren** (500 µg = 0,5 mg).
 
-> **Merke:** Zwischen Nachbar-Praefixen liegen immer 3 Zehnerpotenzen (Faktor 1000). 1 mg = 1000 \u00b5g = 1.000.000 ng. Von gross nach klein: multiplizieren. Von klein nach gross: dividieren.
+> **Merke:** Zwischen Nachbar-Praefixen liegen immer 3 Zehnerpotenzen (Faktor 1000). 1 mg = 1000 µg = 1.000.000 ng.
 
 ---
 
 ## Die Kettenmethode
 
-Wie rechnet man zusammengesetzte Einheiten um (z. B. km/h \u2192 m/s)? Die **Kettenmethode**: Du schreibst Umrechnungsfaktoren als Brueche und die Einheiten kuerzen sich wie Variablen.
+Bei zusammengesetzten Einheiten (z. B. km/h → m/s): Umrechnungsfaktoren als **Brueche** schreiben, ungewuenschte Einheiten kuerzen sich weg.
 
-**Verfahren:**
-1. Ausgangswert mit Einheit aufschreiben
-2. Umrechnungsfaktoren als Brueche anhaengen
-3. Ungewuenschte Einheiten kuerzen sich weg
+**Beispiel 1:** 72 km/h → ? m/s.
+72 km/h × (1000 m / 1 km) × (1 h / 3600 s) = 72.000/3600 = **20 m/s**.
 
-**Beispiel 1:** 72 km/h \u2192 ? m/s.
-72 km/h \u00d7 (1000 m / 1 km) \u00d7 (1 h / 3600 s) = 72.000/3600 = **20 m/s**.
+**Beispiel 2:** 120 mL/min → ? L/h.
+120 mL/min × (1 L / 1000 mL) × (60 min / 1 h) = 7,2 L/h.
 
-**Beispiel 2:** 500 mL/h \u2192 ? L/h.
-500 mL/h \u00d7 (1 L / 1000 mL) = **0,5 L/h**.
-
-**Beispiel 3:** 120 mL/min \u2192 ? L/h.
-120 \u00d7 60 / 1000 = **7,2 L/h**. Zwei Schritte in einer Kette.
-
-> **Merke:** Kettenmethode: Umrechnungsfaktoren als Brueche schreiben, ungewollte Einheiten kuerzen sich weg. Du siehst sofort, ob du multiplizieren oder dividieren musst.
+> **Merke:** Kettenmethode: Umrechnungsfaktoren als Brueche, Einheiten kuerzen sich weg. Du siehst sofort, ob du multiplizieren oder dividieren musst.
 
 ---
 
 ## Wichtige Umrechnungen
 
-### mg \u2194 \u00b5g \u2194 ng
+### Masse: mg ↔ µg ↔ ng
+- 1 mg = 1000 µg = 1.000.000 ng
+- 0,25 mg = **250 µg**
 
-- 1 mg = 1000 \u00b5g = 1.000.000 ng
-- 1 \u00b5g = 0,001 mg = 1000 ng
+### Geschwindigkeit
+- km/h ÷ 3,6 = m/s; m/s × 3,6 = km/h
+- 108 km/h = 108/3,6 = **30 m/s**
 
-**Beispiel:** 0,25 mg = 0,25 \u00d7 1000 = **250 \u00b5g**.
+### Flaechen und Volumen
+- 1 m² = 10.000 cm² (Faktor quadrieren!)
+- 1 m³ = 1.000.000 cm³ (Faktor hoch 3!)
 
-### Laengen und Flaechen
-
-- 1 km = 1000 m; 1 m = 100 cm = 1000 mm
-- 1 m\u00b2 = 10.000 cm\u00b2 (Achtung: Quadrat des Faktors!)
-
-**Beispiel:** 3,5 m\u00b2 = 3,5 \u00d7 10.000 = **35.000 cm\u00b2**.
-
-### Zeit
-
-- 1 h = 60 min = 3600 s
-- 1 Tag = 24 h = 1440 min
-
-**Beispiel:** 90 min = 90/60 = **1,5 h**.
-
-> **Merke:** Bei Flaecheneinheiten den Faktor quadrieren (1 m = 100 cm, aber 1 m\u00b2 = 10.000 cm\u00b2). Bei Volumen den Faktor hoch 3 nehmen.
+> **Merke:** Bei Flaecheneinheiten den Faktor quadrieren (1 m = 100 cm, aber 1 m² = 10.000 cm²).
 
 ---
-
-## Groessenordnungen abschaetzen
-
-Es hilft, typische Groessen im Kopf zu haben:
-
-| Objekt | Groessenordnung |
-|--------|-----------------|
-| Ameise | ca. 1 mm |
-| Muenze (1 Cent) | ca. 16 mm Durchmesser |
-| Mensch | ca. 1,7 m |
-| Fussballfeld | ca. 7000 m\u00b2 |
-| Geschwindigkeit Auto | ca. 50--130 km/h |
-| Lichtgeschwindigkeit | 300.000 km/s |
-
-> **Merke:** Groessenordnungen helfen beim Plausibilitaetscheck: Wenn dein Ergebnis voellig unrealistisch klingt, hast du wahrscheinlich in die falsche Richtung umgerechnet.
-
----
-
-## Rechenbeispiele
-
-**Beispiel 1 -- Praefixsprung:** 0,35 mg = ? \u00b5g. mg \u2192 \u00b5g = \u00d71000. Also 0,35 \u00d7 1000 = **350 \u00b5g**.
-
-**Beispiel 2 -- Geschwindigkeit:** 108 km/h in m/s: 108 \u00d7 1000 / 3600 = **30 m/s**. Merke: km/h \u00f7 3,6 = m/s.
-
-**Beispiel 3 -- Kette:** 2,5 L/min \u2192 mL/h. 2,5 \u00d7 1000 \u00d7 60 = **150.000 mL/h**. Oder: 2,5 L/min = 2500 mL/min \u00d7 60 = 150.000 mL/h.
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- SI-Praefixe: mg, \u00b5g, ng sicher umrechnen (Faktor 1000 je Stufe)
+- SI-Praefixe: mg, µg, ng sicher umrechnen (Faktor 1000 je Stufe)
 - Kettenmethode fuer zusammengesetzte Einheiten
 - Flaecheneinheiten: Faktor quadrieren!
 
 **Typische Pruefungsfallen:**
-- Umrechnungsrichtung verwechseln: Von mg zu \u00b5g = \u00d71000 (nicht \u00f71000!)
-- Bei zusammengesetzten Einheiten nur Zaehler oder nur Nenner umrechnen
+- Umrechnungsrichtung verwechseln: mg → µg = ×1000 (nicht ÷1000!)
 - Bei Flaechen/Volumen vergessen, den Faktor zu quadrieren/kubieren
+- km/h und m/s verwechseln: Merke km/h ÷ 3,6 = m/s
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **SI-Praefixe:** kilo (10\u00b3) \u2192 Basis \u2192 milli (10\u207b\u00b3) \u2192 mikro (10\u207b\u2076) \u2192 nano (10\u207b\u2079); Faktor 1000 je Stufe
-- **Kettenmethode:** Umrechnungsfaktoren als Brueche, Einheiten kuerzen sich
-- **mg \u2194 \u00b5g:** \u00d7 1000 (runter); \u00f7 1000 (rauf)
-- **km/h \u2192 m/s:** \u00f7 3,6; **m/s \u2192 km/h:** \u00d7 3,6
-- **Flaeche:** Faktor quadrieren (1 m\u00b2 = 10.000 cm\u00b2)
-- **Pruefungstipp:** Immer Einheiten mitfuehren -- sie sind dein Fehlerdetektor!`,
+- **SI-Praefixe:** Mega → Kilo → Basis → Milli → Mikro → Nano; je Stufe Faktor 1000
+- **Kettenmethode:** Faktoren als Brueche, Einheiten kuerzen sich weg
+- **mg ↔ µg:** ×1000 (runter); ÷1000 (rauf)
+- **km/h → m/s:** ÷3,6; **m/s → km/h:** ×3,6
+- **Flaeche:** Faktor quadrieren (1 m² = 10.000 cm²)
+- **Pruefungstipp:** Einheiten immer mitfuehren -- sie sind dein Fehlerdetektor!`,
       contentExtended: `## Einleitung
 
 Ein Laborwert von 5,5 mmol/L Glucose -- sind das viel oder wenig? In mg/dL umgerechnet (= 99 mg/dL) sieht man sofort: Normalbereich. Am MedAT-BMS musst du sicher zwischen Einheiten umrechnen koennen -- von mg in \u00b5g, von mmol/L in mg/dL, von mL/min in L/h. Die **Kettenmethode** (Dimensional Analysis) ist dabei dein zuverlaessigstes Werkzeug.

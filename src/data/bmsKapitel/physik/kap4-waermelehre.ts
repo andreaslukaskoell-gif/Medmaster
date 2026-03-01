@@ -30,14 +30,14 @@ export const physKap4: Kapitel = {
       ],
       content: `## Einleitung
 
-Stell dir vor, du kochst Wasser fuer Tee. Du merkst: Es dauert ziemlich lange, bis das Wasser heiss wird. Ein Metalltopf dagegen wird viel schneller heiss. Warum? Das liegt an der **Waermekapazitaet** -- Wasser braucht besonders viel Energie, um warm zu werden. Genau das macht Wasser so wichtig fuer deinen Koerper: Es haelt die Temperatur stabil.
+Stell dir vor, du kochst Wasser fuer Tee. Es dauert ziemlich lange, bis das Wasser heiss wird. Ein Metalltopf dagegen wird viel schneller heiss. Das liegt an der **Waermekapazitaet** -- Wasser braucht besonders viel Energie, um warm zu werden. Genau das macht Wasser so wichtig fuer deinen Koerper: Es haelt die Temperatur stabil.
 
 **In diesem Kapitel lernst du:**
 - wie du zwischen Celsius, Kelvin und Fahrenheit umrechnest
 - was Waermekapazitaet bedeutet und warum Wasser so langsam warm wird
-- warum sich Dinge beim Erwaermen ausdehnen (z. B. Bruecken im Sommer)
-- wie du Mischungstemperaturen berechnest (heisses + kaltes Wasser)
-- warum Wasser bei 4 °C am schwersten ist und Seen von oben zufrieren
+- warum sich Dinge beim Erwaermen ausdehnen (Dehnungsfugen, alpha-Koeffizient)
+- wie du Mischungstemperaturen berechnest (Energieerhaltung)
+- warum Wasser bei 4 °C am dichtesten ist und Seen von oben zufrieren
 
 ---
 
@@ -51,33 +51,28 @@ Stell dir vor, du kochst Wasser fuer Tee. Du merkst: Es dauert ziemlich lange, b
 
 **Celsius (°C):** Die Alltagsskala. 0 °C = Wasser gefriert, 100 °C = Wasser kocht.
 
-**Kelvin (K):** Die Skala der Physik. Der Nullpunkt (0 K = −273 °C) ist der kaelteste Punkt, der moeglich ist. Dort bewegen sich die Teilchen nicht mehr.
+**Kelvin (K):** Die Skala der Physik. Nullpunkt: 0 K = -273 °C (absoluter Nullpunkt, kaelteste moegliche Temperatur). Kelvin ist nie negativ.
 
 Umrechnung: **T [K] = T [°C] + 273**
 
 Koerpertemperatur: 37 °C = 310 K. Zimmertemperatur: 20 °C = 293 K.
 
-**Fahrenheit (°F):** In den USA ueblich. T [°F] = T [°C] x 1,8 + 32. Normal: 98,6 °F = 37 °C.
+**Fahrenheit (°F):** In den USA ueblich. T [°F] = T [°C] × 1,8 + 32. Normal: 98,6 °F = 37 °C.
 
-> **Merke:** Kelvin = Celsius + 273. Kelvin ist nie negativ. Fuer Temperaturdifferenzen gilt: 1 K = 1 °C.
+> **Merke:** Kelvin = Celsius + 273. Kelvin ist nie negativ. Fuer Temperaturdifferenzen: 1 K = 1 °C (gleich gross!).
 
 ---
 
 ## Thermische Ausdehnung
 
-Wenn du etwas erwaermst, bewegen sich die Teilchen schneller. Sie brauchen mehr Platz -- der Koerper dehnt sich aus. Das ist der Grund, warum Bruecken **Dehnungsfugen** haben: Im Sommer sind sie laenger als im Winter.
+Wenn du etwas erwaermst, bewegen sich die Teilchen schneller und brauchen mehr Platz -- der Koerper dehnt sich aus. Deshalb haben Bruecken **Dehnungsfugen**: Im Sommer sind sie laenger als im Winter.
 
-Die Formel fuer die Laengenaenderung:
+Formel fuer Laengenaenderung: **Delta-L = alpha · L0 · Delta-T**
+- L0 = Ausgangslaenge, Delta-T = Temperaturerhoehung, alpha = Ausdehnungskoeffizient [1/K]
 
-**DeltaL = alpha x L0 x DeltaT**
+Fuer Volumen: Die Ausdehnung ist etwa dreimal so gross (gamma = 3·alpha).
 
-- L0 = Ausgangslaenge
-- DeltaT = Temperaturerhoehung
-- alpha = Ausdehnungskoeffizient (haengt vom Material ab)
-
-Aluminium dehnt sich staerker aus als Stahl. Fuer Volumen gilt: Die Ausdehnung ist etwa dreimal so gross (gamma = 3 x alpha).
-
-**Anomalie des Wassers:** Wasser ist bei **4 °C am dichtesten** -- nicht bei 0 °C! Zwischen 0 °C und 4 °C schrumpft Wasser beim Erwaermen. Deshalb frieren Seen **von oben** zu: Das schwere 4-°C-Wasser sinkt nach unten, und die Fische ueberleben im Winter.
+**Anomalie des Wassers:** Wasser ist bei **4 °C am dichtesten** -- nicht bei 0 °C! Zwischen 0 und 4 °C schrumpft Wasser beim Erwaermen (Wasserstoffbrueckenbindungen bilden offenes Gitter unter 4 °C). Deshalb frieren Seen **von oben** zu: Das schwere 4-°C-Wasser sinkt auf den Grund, und Fische ueberleben im Winter.
 
 > **Merke:** Wasser hat bei 4 °C die groesste Dichte. Seen frieren von oben -- das schuetzt die Tiere am Grund.
 
@@ -85,46 +80,51 @@ Aluminium dehnt sich staerker aus als Stahl. Fuer Volumen gilt: Die Ausdehnung i
 
 ## Waerme und Waermekapazitaet
 
-**Waerme Q** ist Energie, die von warm nach kalt fliesst. Die Einheit ist Joule [J].
+**Waerme Q** ist Energie, die von warm nach kalt fliesst (spontaner Prozess). Einheit: Joule [J].
 
-Die **spezifische Waermekapazitaet c** sagt dir, wie viel Energie 1 kg eines Stoffes braucht, um 1 Grad waermer zu werden:
+Die **spezifische Waermekapazitaet c** sagt, wie viel Energie 1 kg eines Stoffes braucht, um 1 K waermer zu werden:
 
-**Q = m x c x DeltaT**
+**Q = m · c · Delta-T**
 
-Wasser hat c = 4180 J/(kg·K) -- das ist sehr viel. Deshalb dauert es lange, einen Topf Wasser zu erwaermen. Metalle (z. B. Eisen, c = 450) werden viel schneller heiss.
+| Stoff | c [J/(kg·K)] |
+|-------|-------------|
+| Wasser | 4180 |
+| Eis | 2090 |
+| Aluminium | 900 |
+| Eisen | 450 |
 
-**Mischungstemperatur:** Wenn du heisses und kaltes Wasser mischst, liegt die Endtemperatur dazwischen:
+Wasser hat c = 4180 J/(kg·K) -- das ist sehr viel. Deshalb puffert Wasser Temperaturveraenderungen gut (Koerper, Ozeane, Klimaregulation). Metalle werden viel schneller heiss und kuehlen auch schneller ab.
 
-**T_m = (m1 x T1 + m2 x T2) / (m1 + m2)**
+**Mischungstemperatur** (Energieerhaltung -- abgegebene Waerme = aufgenommene Waerme):
 
-Beispiel: 200 g heisses Wasser (80 °C) + 300 g kaltes Wasser (20 °C) ergibt T_m = 44 °C.
+**T_m = (m1·T1 + m2·T2) / (m1 + m2)**
 
-> **Merke:** Q = m x c x DeltaT. Wasser hat die hoechste Waermekapazitaet aller normalen Fluessigkeiten. Deshalb ist Wasser der beste Waermepuffer.
+Beispiel: 200 g (80 °C) + 300 g (20 °C) → T_m = (200·80 + 300·20) / 500 = 44 °C.
+
+> **Merke:** Q = m·c·Delta-T. Wasser hat die hoechste Waermekapazitaet -- deshalb der beste Waermepuffer. c nicht verwechseln mit Waermeleitfaehigkeit lambda (Transport, nicht Speicherung)!
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Haeufige Fragen:**
-- “37 °C in Kelvin?” -- T = 37 + 273 = 310 K
-- “500 g Wasser um 60 K erwaermen?” -- Q = 0,5 x 4180 x 60 = 125 400 J
-- “Mischtemperatur?” -- T_m = (m1 x T1 + m2 x T2) / (m1 + m2)
+- “37 °C in Kelvin?” → T = 37 + 273 = 310 K
+- “500 g Wasser um 60 K erwaermen?” → Q = 0,5 × 4180 × 60 = 125 400 J
+- “Mischtemperatur 300 g (80 °C) + 200 g (10 °C)?” → T_m = 52 °C
 
 **Typische Fallen:**
-- Temperaturdifferenzen sind in Kelvin und Celsius **gleich** (DeltaT = 10 K = 10 °C)
+- Temperaturdifferenzen in Kelvin und Celsius sind **gleich** (Delta-T = 10 K = 10 °C)
 - Dichteanomalie: Wasser ist bei **4 °C** am dichtesten (nicht bei 0 °C!)
-- c (Waermekapazitaet = Speichern) nicht verwechseln mit Waermeleitfaehigkeit (Transport)
+- c (Waermekapazitaet = Speichern) ≠ Waermeleitfaehigkeit (Transport)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Temperaturskalen**: T[K] = T[°C] + 273; T[°F] = T[°C] x 1,8 + 32
-- **Waermemenge**: Q = m x c x DeltaT; c(Wasser) = 4180 J/(kg·K)
-- **Ausdehnung**: DeltaL = alpha x L0 x DeltaT; Volumen: gamma = 3 x alpha
-- **Mischtemperatur**: T_m = (m1 x T1 + m2 x T2) / (m1 + m2)
+- **Temperaturskalen**: T[K] = T[°C] + 273; T[°F] = T[°C] × 1,8 + 32; 0 K absoluter Nullpunkt
+- **Waermemenge**: Q = m·c·Delta-T; c(Wasser) = 4180 J/(kg·K) -- hoechster Wert
+- **Ausdehnung**: Delta-L = alpha·L0·Delta-T; Volumen: gamma = 3·alpha
+- **Mischtemperatur**: T_m = (m1·T1 + m2·T2) / (m1 + m2)
 - **Dichteanomalie**: Wasser bei 4 °C am dichtesten; Seen frieren von oben`,
       contentExtended: `## Einleitung
 
@@ -1280,15 +1280,16 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `## Gase und Phasenuebergaenge — einfach erklaert
+      content: `## Einleitung
 
-Warum wird eine Luftblase beim Auftauchen groesser? Warum kocht Wasser auf dem Berg schneller? Und warum braucht man im Krankenhaus einen Autoklav? Hier lernst du die Physik dahinter — mit Alltagsbeispielen.
+Warum wird eine Luftblase beim Auftauchen groesser? Warum kocht Wasser auf dem Berg schneller? Und warum nutzt man im Krankenhaus einen Autoklav? Hinter allem steckt die Physik von Gasen und Phasenuebergaengen -- zwei Themen, die in Medizin und MedAT oft vorkommen.
 
 **In diesem Kapitel lernst du:**
-- wie Druck, Volumen und Temperatur von Gasen zusammenhaengen
-- was bei Schmelzen und Verdampfen passiert (und warum die Temperatur dabei konstant bleibt)
-- warum ein Autoklav heisser wird als ein normaler Topf
-- warum Taucher langsam auftauchen muessen
+- wie Druck, Volumen und Temperatur von Gasen zusammenhaengen (pV = nRT)
+- die drei Spezialfaelle: Boyle-Mariotte, Gay-Lussac, Charles
+- was bei Schmelzen und Verdampfen passiert (latente Waerme, Temperatur bleibt konstant)
+- warum ein Autoklav heisser wird als ein normaler Topf (Dampfdruck)
+- warum Taucher langsam auftauchen muessen (Henry-Gesetz)
 
 ---
 
@@ -1296,104 +1297,95 @@ Warum wird eine Luftblase beim Auftauchen groesser? Warum kocht Wasser auf dem B
 
 {{DIAGRAM:thermodynamics}}
 
-## Das ideale Gasgesetz — die wichtigste Formel
+## Das ideale Gasgesetz
 
-Stell dir eine Spritze mit Luft vor. Wenn du den Kolben reindrueckst (Volumen kleiner), steigt der Druck. Das beschreibt die Formel:
+Stell dir eine Spritze mit Luft vor. Wenn du den Kolben reindrueckst, steigt der Druck -- das beschreibt:
 
-**p mal V = n mal R mal T**
+**p · V = n · R · T**
 
-- p = Druck, V = Volumen, T = Temperatur (IMMER in Kelvin!)
-- n = Stoffmenge (mol), R = 8,314 J/(mol K)
+- p = Druck [Pa], V = Volumen [m³], T = Temperatur (**IMMER in Kelvin!**)
+- n = Stoffmenge [mol], R = 8,314 J/(mol·K)
 
-**Drei Spezialfaelle, die du kennen musst:**
-- **Boyle-Mariotte** (Temperatur bleibt gleich): p mal V = konstant. Halb so viel Platz = doppelter Druck.
-- **Gay-Lussac** (Druck bleibt gleich): Waermere Luft dehnt sich aus (V/T = konstant).
-- **Charles** (Volumen bleibt gleich): Waermere Luft hat mehr Druck (p/T = konstant).
+**Drei Spezialfaelle:**
+- **Boyle-Mariotte** (T = const): p · V = const. Halb so viel Platz = doppelter Druck.
+- **Gay-Lussac** (p = const): V/T = const. Waermere Luft dehnt sich aus.
+- **Charles** (V = const): p/T = const. Waermere Luft = mehr Druck.
 
-**Alltagsbeispiel:** Eine Luftblase in 10 m Tiefe steht unter doppeltem Druck (2 bar). Wenn sie aufsteigt auf 1 bar, verdoppelt sich ihr Volumen — Boyle-Mariotte!
+Beispiel: Luftblase in 10 m Tiefe (2 bar) steigt auf 1 bar → Volumen verdoppelt sich.
 
-> **Merke:** p mal V = n mal R mal T. Temperatur IMMER in Kelvin! 0 Grad C = 273 K, 27 Grad C = 300 K.
-
----
-
-## Phasenuebergaenge — Schmelzen, Verdampfen, Sublimieren
-
-Wenn Eis schmilzt, bleibt die Temperatur bei 0 Grad C, obwohl du weiter Waerme zufuehrst. Die Energie wird gebraucht, um die Bindungen zwischen den Wassermolekuelen zu loesen. Das ist **latente Waerme**.
-
-**Formel:** Q = m mal L
-
-- Schmelzwaerme von Eis: L = 334 kJ/kg
-- Verdampfungswaerme von Wasser: L = 2260 kJ/kg (fast 7x mehr!)
-
-**Alltagsbeispiel:** Deshalb kuehlt Schwitzen so effektiv — pro Gramm Schweiss werden ca. 2430 Joule Waerme abgefuehrt. Ein Liter Schweiss pro Stunde = ca. 675 Watt Kuehlleistung!
-
-**Phasendiagramm:** Ein Bild, das zeigt, bei welchem Druck und welcher Temperatur ein Stoff fest, fluessig oder gasfoermig ist. Wichtige Punkte:
-- **Tripelpunkt:** Alle drei Phasen existieren gleichzeitig (Wasser: 273,16 K)
-- **Kritischer Punkt:** Oberhalb davon gibt es keinen Unterschied mehr zwischen fluessig und gasfoermig
-
-> **Merke:** Bei Phasenuebergaengen bleibt die Temperatur konstant! Die Energie geht in die Aenderung der Bindungen, nicht in die Temperatur.
+> **Merke:** pV = nRT. Temperatur IMMER in Kelvin! 0 °C = 273 K, 27 °C = 300 K.
 
 ---
 
-## Dampfdruck und Siedepunkt — warum der Autoklav funktioniert
+## Phasenuebergaenge und latente Waerme
 
-Wasser siedet, wenn sein Dampfdruck den Aussendruck erreicht. Bei 1 bar = 100 Grad C. Aber:
+Wenn Eis schmilzt, bleibt die Temperatur bei 0 °C, obwohl du weiter Waerme zufuehrst. Die Energie wird gebraucht, um Bindungen zu loesen -- nicht um die Temperatur zu erhoehen. Das ist **latente Waerme** (Q = m · L).
 
-- **Auf dem Berg** (weniger Druck): Wasser kocht schon bei 90 Grad C — das Essen wird nicht richtig gar!
-- **Im Dampfkochtopf** (mehr Druck): Wasser kocht erst bei 120 Grad C — schnelleres Kochen!
-- **Im Autoklav** (2 bar): 121 Grad C — toetet alle Keime und Sporen ab. Fuer Prionen: 134 Grad C bei 3 bar.
+| Phasenuebergang | Temperatur | L [kJ/kg] |
+|----------------|------------|-----------|
+| Schmelzen (Eis → Wasser) | 0 °C | 334 |
+| Verdampfen (Wasser → Dampf) | 100 °C | 2260 (~7× mehr!) |
+| Verdunsten bei 37 °C | 37 °C | ~2430 |
 
-> **Merke:** Hoeherer Druck = hoeherer Siedepunkt. Autoklav nutzt das zur Sterilisation (121 Grad C bei 2 bar).
+Deshalb kuehlt **Schwitzen** so effektiv: Pro Gramm Schweiss werden ~2430 J abgefuehrt.
 
----
+**Phasendiagramm:** Zeigt, welche Phase bei welchem Druck und welcher Temperatur vorliegt.
+- **Tripelpunkt**: Alle drei Phasen koexistieren (Wasser: 273,16 K, 611 Pa)
+- **Kritischer Punkt**: fluessig und gasfoermig nicht mehr unterscheidbar
 
-## Henry-Gesetz — warum Taucher aufpassen muessen
-
-Das **Henry-Gesetz** sagt: Je hoeger der Druck, desto mehr Gas loest sich in einer Fluessigkeit.
-
-**Formel:** c = k_H mal p
-
-**Beim Tauchen:** In 30 m Tiefe herrscht 4-facher Druck. Also loest sich 4-mal so viel Stickstoff im Blut. Taucht man zu schnell auf, bildet der Stickstoff Blasen im Blut — wie beim Oeffnen einer Sprudelflasche! Das ist die **Taucherkrankheit** (Dekompressionskrankheit).
-
-**Deshalb:** Langsam auftauchen, Sicherheitsstopp einlegen.
-
-> **Merke:** Henry-Gesetz: c = k_H mal p. Mehr Druck = mehr geloestes Gas. Schnelles Auftauchen = Gasblasen im Blut = Taucherkrankheit.
+> **Merke:** Bei Phasenuebergaengen bleibt die Temperatur konstant! Energie geht in die Aenderung der Bindungen.
 
 ---
 
-## Rechenbeispiel
+## Dampfdruck und Siedepunkt
 
-**Eis schmelzen und erwaermen:**
-500 g Eis bei 0 Grad C soll zu 37 Grad C warmem Wasser werden.
-1. Schmelzen: Q1 = 0,5 kg mal 334 000 J/kg = 167 000 J
-2. Erwaermen: Q2 = 0,5 kg mal 4180 J/(kg K) mal 37 K = 77 330 J
-3. Gesamt: ca. 244 kJ
+Wasser siedet, wenn sein Dampfdruck den Aussendruck erreicht. Bei 1 bar = 100 °C. Deshalb:
 
-Ueberraschung: Das Schmelzen braucht doppelt so viel Energie wie das Erwaermen!
+- **Auf dem Berg** (0,7 bar): Wasser siedet schon bei ~90 °C -- Essen wird nicht gar.
+- **Im Autoklav** (2 bar): Siedepunkt = 121 °C -- Keime und Sporen werden abgetoetet.
+- Prionen-Deaktivierung: 134 °C bei 3 bar noetig.
+
+> **Merke:** Hoeherer Druck = hoeherer Siedepunkt. Autoklav: 121 °C / 2 bar sterilisiert Sporen.
+
+---
+
+## Henry-Gesetz -- Taucherkrankheit
+
+Das **Henry-Gesetz**: Je hoeher der Druck, desto mehr Gas loest sich in Fluessigkeit.
+
+**Formel:** c = k_H · p
+
+Beim Tauchen in 30 m Tiefe (4 bar) loest sich 4-fach mehr Stickstoff im Blut. Taucht man zu schnell auf, bilden sich Gasblasen -- die **Taucherkrankheit** (Dekompressionskrankheit): Embolien, Gelenkschmerzen, neurologische Ausfaelle.
+
+Loesung: Langsam auftauchen, Sicherheitsstopp bei 5 m, evtl. Druckkammer.
+
+> **Merke:** Henry: c = k_H · p. Schnelles Auftauchen = Gasblasen = Taucherkrankheit.
 
 ---
 
 ## MedAT-Fokus
 
 **Zentral pruefungsrelevant:**
-- Ideales Gasgesetz: pV = nRT (T in Kelvin!)
-- Boyle-Mariotte: p mal V = konstant bei gleicher Temperatur
-- Latente Waerme: Q = m mal L (Temperatur bleibt konstant beim Phasenuebergang)
-- Henry-Gesetz: c = k_H mal p (Taucherkrankheit!)
-- Autoklav: 121 Grad C / 2 bar sterilisiert Sporen
+- Ideales Gasgesetz: pV = nRT (T immer in Kelvin!)
+- Boyle-Mariotte: p · V = const (nur bei T = const)
+- Latente Waerme: Q = m · L; T aendert sich beim Phasenuebergang NICHT
+- Henry: c = k_H · p (Taucherkrankheit)
+- Autoklav: 121 °C / 2 bar
 
 **Typische Fallen:**
-- Temperatur IMMER in Kelvin! (27 Grad C = 300 K, nicht 27)
+- Temperatur IMMER in Kelvin: 27 °C = 300 K (nicht 27!)
 - Boyle-Mariotte gilt NUR bei konstanter Temperatur
-- Beim Schmelzen/Verdampfen aendert sich die Temperatur NICHT
+- Beim Schmelzen/Verdampfen aendert sich T NICHT
 
-## Zusammenfassung
+---
 
-- **Gasgesetz:** pV = nRT; Boyle (T const): pV = const; Gay-Lussac (p const): V/T = const
-- **Latente Waerme:** Q = m mal L; Schmelzen 334 kJ/kg; Verdampfen 2260 kJ/kg; Temperatur bleibt konstant
-- **Phasendiagramm:** Tripelpunkt (3 Phasen gleichzeitig); kritischer Punkt (fluessig = gasfoermig)
-- **Henry:** Mehr Druck = mehr Gas geloest; Taucherkrankheit bei schnellem Auftauchen
-- **Autoklav:** 121 Grad C bei 2 bar; Prionen: 134 Grad C bei 3 bar`,
+## Zusammenfassung (ultrakompakt)
+
+- **Gasgesetz**: pV = nRT; Boyle (T = const): pV = const; Gay-Lussac (p = const): V/T = const
+- **Latente Waerme**: Q = m · L; Schmelzen 334 kJ/kg; Verdampfen 2260 kJ/kg; T = const
+- **Phasendiagramm**: Tripelpunkt (3 Phasen); kritischer Punkt (fluessig = gasfoermig)
+- **Henry**: c = k_H · p; Taucherkrankheit bei schnellem Auftauchen
+- **Autoklav**: 121 °C / 2 bar; Prionen: 134 °C / 3 bar`,
 
       contentExtended: `## Einleitung
 

@@ -26,14 +26,13 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Einleitung
 
-Stell dir vor, du faehrst mit dem Fahrrad einen gleichmaessig ansteigenden Huegel hinauf. Pro Minute legst du immer dieselbe Hoehe zurueck -- das ist ein **linearer Zusammenhang**. Lineare Funktionen beschreiben genau solche gleichmaessigen Veraenderungen: Die Steigung sagt dir “wie viel pro Schritt”, der Achsenabschnitt gibt den Startwert an. Ob Handytarife, Temperaturumrechnungen oder Geschwindigkeit -- ueberall steckt die Formel y = mx + b.
+Stell dir vor, du faehrst mit dem Fahrrad einen gleichmaessig ansteigenden Huegel hinauf. Pro Minute legst du immer dieselbe Hoehe zurueck -- das ist ein **linearer Zusammenhang**. Lineare Funktionen beschreiben genau solche gleichmaessigen Veraenderungen: Die Steigung sagt dir "wie viel pro Schritt", der Achsenabschnitt gibt den Startwert an.
 
 **In diesem Kapitel lernst du:**
 - was Steigung und Achsenabschnitt einer Geraden bedeuten
 - wie du die Nullstelle einer linearen Funktion berechnest
 - wie du den Schnittpunkt zweier Geraden findest
 - woran du parallele und senkrechte Geraden erkennst
-- wie du eine Geradengleichung aus zwei Punkten aufstellst
 
 ---
 
@@ -57,64 +56,40 @@ Der **y-Achsenabschnitt b** ist der Wert bei x = 0, also f(0) = b. Die **Nullste
 
 Zwei Geraden sind **parallel**, wenn m₁ = m₂. Sie stehen **senkrecht**, wenn m₁ × m₂ = −1.
 
-| Eigenschaft | Formel | Bedeutung |
-|---|---|---|
-| Steigung | m = Δy/Δx | Aenderungsrate |
-| y-Achsenabschnitt | b = f(0) | Startwert |
-| Nullstelle | x₀ = −b/m | Schnittpunkt mit x-Achse |
-| Parallel | m₁ = m₂ | Geraden schneiden sich nie |
-| Senkrecht | m₁ × m₂ = −1 | 90°-Winkel |
-
 > **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Zuerst m berechnen, dann b durch Einsetzen eines Punktes.
 
 ---
 
 ## Gerade aufstellen
 
-**Aus zwei Punkten:** P₁(x₁|y₁) und P₂(x₂|y₂). Zuerst m = (y₂ − y₁)/(x₂ − x₁), dann b = y₁ − m×x₁.
+**Aus zwei Punkten:** P₁(x₁|y₁) und P₂(x₂|y₂).
+1. m = (y₂ − y₁)/(x₂ − x₁)
+2. b = y₁ − m×x₁
 
-**Aus Steigung und Punkt:** Gegeben m und P(x₀|y₀). Dann b = y₀ − m×x₀.
-
-**Steigungsdreieck:** Um m grafisch abzulesen, zeichnest du ein rechtwinkliges Dreieck unter der Geraden: m = Δy/Δx.
-
----
-
-## Besondere Geraden
-
-- **Horizontale Gerade** (m = 0, f(x) = b): z. B. konstante Temperatur
-- **Ursprungsgerade** (b = 0, f(x) = mx): direkte Proportionalitaet, z. B. Preis pro Stueck
-- **Vertikale Gerade** (x = a): keine Funktion, da einem x-Wert mehrere y-Werte zugeordnet sind
+**Aus Steigung und Punkt:** m und P(x₀|y₀) gegeben → b = y₀ − m×x₀.
 
 ---
 
 ## Schnittpunkt zweier Geraden
 
-Zwei Geraden f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich bei m₁ ≠ m₂. Du setzt sie gleich: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Dann y berechnen durch Einsetzen.
+f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich bei m₁ ≠ m₂.
 
----
-
-## Rechenbeispiele
-
-**Beispiel 1 — Handytarif:** Kosten K(x) = 0,10x + 5 (x = Minuten, K in Euro). Grundgebuehr b = 5 Euro, pro Minute 10 Cent. Bei 30 Minuten: K = 0,10 × 30 + 5 = **8 Euro**. Nullstelle: x₀ = −5/0,10 = −50 (kein sinnvoller Wert → Kosten sind immer ≥ 5).
-
-**Beispiel 2 — Senkrechte Gerade:** g₁: y = 3x − 2. Senkrechte g₂ durch P(6|1). m₂ = −1/3. b₂ = 1 − (−1/3)×6 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: 3 × (−1/3) = −1.
+Gleichsetzen: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Dann y berechnen.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Typische Aufgabentypen:**
 - Geradengleichung aus 2 Punkten aufstellen
 - Nullstelle berechnen: x₀ = −b/m
 - Schnittpunkt zweier Geraden durch Gleichsetzen
-- Steigung oder y-Achsenabschnitt aus Graph ablesen
+- Steigung aus Graph ablesen
 
 **Typische Fallen:**
 - Nullstelle linear: x₀ = **−b/m** (nicht Mitternachtsformel!)
 - Senkrechte: m₂ = **−1/m₁** (nicht −m₁)
-- Steigung: Δy/Δx — y im Zaehler, x im Nenner
+- Steigung: Δy/Δx -- y im Zaehler, x im Nenner
 
 **Minimal-Rechenrezepte:**
 - **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), dann b = y₁ − m·x₁.
@@ -413,13 +388,12 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       content: `## Einleitung
 
-Wirfst du einen Ball in die Luft, fliegt er eine Kurve -- eine **Parabel**. Quadratische Funktionen beschreiben genau solche Vorgaenge: Der Graph ist eine Parabel, und der hoechste (oder tiefste) Punkt heisst **Scheitelpunkt**. Am MedAT tauchen Parabeln als Rechenaufgaben auf (“Wie viele Nullstellen?”) und als Graphen (“Oeffnung oben oder unten?”). Der Schluessel ist die **Diskriminante** -- sie verraet dir sofort, ob und wie oft die Parabel die x-Achse schneidet.
+Wirfst du einen Ball in die Luft, fliegt er eine Kurve -- eine **Parabel**. Quadratische Funktionen beschreiben genau solche Vorgaenge: Der Graph ist eine Parabel mit einem Hoch- oder Tiefpunkt, dem **Scheitelpunkt**. Die **Diskriminante** verraet dir sofort, ob und wie oft die Parabel die x-Achse schneidet.
 
 **In diesem Kapitel lernst du:**
 - wie der Vorfaktor a die Oeffnungsrichtung und Breite bestimmt
 - wie du den Scheitelpunkt berechnest
 - was die Diskriminante ueber die Nullstellen aussagt
-- wann du die pq-Formel oder die Mitternachtsformel verwendest
 - wie der Satz von Vieta das Nullstellenraten vereinfacht
 
 ---
@@ -430,35 +404,28 @@ Wirfst du einen Ball in die Luft, fliegt er eine Kurve -- eine **Parabel**. Quad
 
 ## Allgemeine und Scheitelpunktform
 
-
 Eine quadratische Funktion hat die Form **f(x) = ax² + bx + c** mit a ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, oeffnet sie nach oben (Minimum); ist a < 0, nach unten (Maximum).
 
-Die **Scheitelpunktform** f(x) = a(x − xs)² + ys zeigt den Scheitelpunkt direkt. Die Umrechnung erfolgt ueber die Formel xs = −b/(2a).
+Die **Scheitelpunktform** f(x) = a(x − xₛ)² + yₛ zeigt den Scheitelpunkt direkt. Die Umrechnung: xₛ = −b/(2a).
 
 > **Merke:** a > 0 → Parabel oeffnet nach oben (Minimum). a < 0 → nach unten (Maximum). Grosses |a| → schmale Parabel; kleines |a| → breite Parabel.
-
-| Form | Darstellung | Vorteil |
-|---|---|---|
-| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt c direkt ablesbar |
-| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt direkt ablesbar |
-| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen direkt ablesbar |
 
 ---
 
 ## Scheitelpunkt berechnen
 
-- **xs = −b/(2a)**
-- **ys = f(xs)**
+- **xₛ = −b/(2a)**
+- **yₛ = f(xₛ)**
 
-Beispiel: f(x) = 2x² − 8x + 3. xs = −(−8)/(2×2) = 2. ys = f(2) = 8 − 16 + 3 = −5. Scheitelpunkt: S(2|−5).
+Beispiel: f(x) = 2x² − 8x + 3. xₛ = −(−8)/(2×2) = 2. yₛ = f(2) = 8 − 16 + 3 = −5. Scheitelpunkt: S(2|−5).
 
-> **Merke:** Am MedAT spart die Formel xs = −b/(2a) viel Zeit. Minus vor b nicht vergessen!
+> **Merke:** xₛ = −b/(2a) -- Minus vor b nicht vergessen!
 
 ---
 
 ## Nullstellen und Diskriminante
 
-**Mitternachtsformel**: x₁₂ = (−b ± √(b² − 4ac)) / (2a)
+**Mitternachtsformel:** x₁₂ = (−b ± √(b² − 4ac)) / (2a)
 
 Die **Diskriminante** D = b² − 4ac entscheidet:
 - D > 0: **zwei Nullstellen**
@@ -467,7 +434,7 @@ Die **Diskriminante** D = b² − 4ac entscheidet:
 
 **pq-Formel** (nur bei x² + px + q = 0): x₁₂ = −p/2 ± √((p/2)² − q)
 
-**Achtung:** Die pq-Formel gilt nur, wenn vor x² eine 1 steht. Sonst zuerst durch a teilen!
+Achtung: Die pq-Formel gilt nur wenn vor x² eine 1 steht. Sonst zuerst durch a teilen!
 
 ---
 
@@ -477,42 +444,35 @@ Bei x² + px + q = 0 gilt:
 - x₁ + x₂ = −p (Summe)
 - x₁ × x₂ = q (Produkt)
 
-> **Merke:** Vieta ist schnell bei ganzzahligen Nullstellen. Beispiel: x² − 7x + 12 = 0 → Summe 7, Produkt 12 → x₁ = 3, x₂ = 4.
+**Beispiel:** x² − 7x + 12 = 0. Summe = 7, Produkt = 12. → 3 + 4 = 7, 3 × 4 = 12 → **x₁ = 3, x₂ = 4**.
 
----
-
-## Anwendungen
-
-- **Wurfparabel:** h(t) = −½g×t² + v₀×t + h₀. Scheitelpunkt = maximale Hoehe. a < 0, also Oeffnung nach unten.
-- **Kreisflaeche:** A = πr² — quadratisch in r. Halbierst du den Radius, wird die Flaeche nur noch ein Viertel so gross.
+> **Merke:** Vieta ist schnell bei ganzzahligen Nullstellen. Zwei Zahlen finden mit gegebener Summe und Produkt.
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Ballwurf:** h(t) = −5t² + 20t + 1. Hoechster Punkt: t = −20/(2×(−5)) = **2 s**. h(2) = −20 + 40 + 1 = **21 m**.
+**Beispiel 1 -- Ballwurf:** h(t) = −5t² + 20t + 1. Hoechster Punkt: t = −20/(2×(−5)) = **2 s**. h(2) = −20 + 40 + 1 = **21 m**.
 
-**Beispiel 2 — Vieta:** x² − 11x + 28 = 0. Summe = 11, Produkt = 28. → 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**.
+**Beispiel 2 -- Vieta:** x² − 11x + 28 = 0. Summe = 11, Produkt = 28. → 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**.
 
 ---
 
 ## MedAT-Fokus
 
-**Zur gezielten Pruefungsvorbereitung:**
-
 **Typische Aufgabentypen:**
-- Scheitelpunkt: x_S = −b/(2a), y_S = f(x_S)
+- Scheitelpunkt: xₛ = −b/(2a), yₛ = f(xₛ)
 - Nullstellen mit Diskriminante D = b² − 4ac
 - Vieta bei ganzzahligen Loesungen
 - Oeffnungsrichtung aus dem Vorzeichen von a
 
 **Typische Fallen:**
 - D = b² − **4ac** (nicht 2ac)
-- Scheitel xs = **−**b/(2a) (Minus!)
+- Scheitel xₛ = **−**b/(2a) (Minus!)
 - pq-Formel nur bei normierter Form (a = 1)
 
 **Minimal-Rechenrezepte:**
-- **Scheitelpunkt:** xs = −b/(2a), dann ys = f(xs).
+- **Scheitelpunkt:** xₛ = −b/(2a), dann yₛ = f(xₛ).
 - **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a).
 - **Vieta:** Summe = −p, Produkt = q.
 
@@ -521,10 +481,9 @@ Bei x² + px + q = 0 gilt:
 ## Zusammenfassung (ultrakompakt)
 
 - **f(x) = ax² + bx + c**: a > 0 → oben offen (Min); a < 0 → unten offen (Max)
-- **Scheitelpunkt:** xs = −b/(2a), ys = f(xs)
+- **Scheitelpunkt:** xₛ = −b/(2a), yₛ = f(xₛ)
 - **Diskriminante:** D = b²−4ac; D > 0 → 2 NS; D = 0 → 1 NS; D < 0 → keine
 - **Mitternachtsformel:** x = (−b ± √D)/(2a)
-- **pq-Formel:** nur bei x² + px + q = 0
 - **Vieta:** x₁ + x₂ = −p, x₁ × x₂ = q
 - **Fehler vermeiden:** D = b²−4ac; Scheitel −b/(2a) mit Minus`,
       contentExtended: `## Einleitung

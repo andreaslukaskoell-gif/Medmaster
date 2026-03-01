@@ -28,10 +28,10 @@ export const physKapMechanik: Kapitel = {
       diagram: "coordinate-system",
       content: `## Einleitung
 
-Stell dir vor, du kaufst ein Kilogramm Aepfel -- woher weisst du, dass das ueberall gleich viel ist? Dafuer gibt es das **SI-System** (Internationales Einheitensystem). Es legt fest, wie wir Laenge, Masse, Zeit und andere Groessen einheitlich messen. Ohne dieses System waere jede Messung Chaos.
+Woher weisst du, dass ein Kilogramm Aepfel auf dem Markt in Wien dasselbe ist wie in Tokyo? Dafuer sorgt das **SI-System** (Internationales Einheitensystem). Es legt weltweit fest, wie wir Laenge, Masse, Zeit und andere Groessen messen. In der Medizin ist das lebensrelevant: Laborbefunde, Medikamentendosen und Geraeteeinstellungen muessen ueberall gleich interpretierbar sein.
 
 **In diesem Kapitel lernst du:**
-- die **sieben SI-Basisgroessen** und ihre Einheiten (Meter, Kilogramm, Sekunde ...)
+- die **sieben SI-Basisgroessen** und ihre Einheiten
 - wie sich **abgeleitete Einheiten** (Newton, Pascal, Joule, Watt) daraus ergeben
 - den Unterschied zwischen **Skalaren** (nur Betrag) und **Vektoren** (Betrag + Richtung)
 - warum **Masse** und **Gewichtskraft** nicht dasselbe sind
@@ -45,7 +45,7 @@ Stell dir vor, du kaufst ein Kilogramm Aepfel -- woher weisst du, dass das ueber
 
 ## Die sieben SI-Basisgroessen
 
-Die Physik misst alles mit **sieben Grundgroessen**. Aus ihnen leitet man alle anderen ab:
+Die Physik misst alles mit **sieben unabhaengigen Grundgroessen**. Aus ihnen leitet man alle anderen ab:
 
 | Basisgroesse | Einheit | Zeichen |
 |---|---|---|
@@ -57,94 +57,84 @@ Die Physik misst alles mit **sieben Grundgroessen**. Aus ihnen leitet man alle a
 | Stoffmenge | Mol | mol |
 | Lichtstaerke | Candela | cd |
 
-> **Merke:** Es gibt **genau 7** SI-Basisgroessen. Alle anderen Einheiten (Newton, Pascal, Joule) sind **abgeleitet**.
+> **Merke:** Genau **7** SI-Basisgroessen. Alle anderen (Newton, Pascal, Joule) sind **abgeleitet** und lassen sich als Produkt von Basiseinheiten schreiben.
 
 ---
 
 ## Abgeleitete Einheiten
 
-Aus den Basiseinheiten baust du weitere Einheiten zusammen:
+Aus den Basiseinheiten entstehen weitere Einheiten:
 
-- **Kraft:** Newton (N) = kg·m/s² -- Beispiel: Du drueckst einen Einkaufswagen an, er beschleunigt.
-- **Druck:** Pascal (Pa) = N/m² -- Beispiel: Dein Gewicht verteilt auf die Schuhsohle.
-- **Energie:** Joule (J) = N·m -- Beispiel: Du hebst einen Ball 1 m hoch.
-- **Leistung:** Watt (W) = J/s -- Beispiel: Wie schnell du Treppen steigst.
+- **Kraft:** Newton (N) = kg·m/s²
+- **Druck:** Pascal (Pa) = N/m²
+- **Energie:** Joule (J) = N·m = kg·m²/s²
+- **Leistung:** Watt (W) = J/s
 
-**Wichtig:** Joule kann man in Newtonmeter oder Kalorien umrechnen -- aber **nicht** in Watt (das ist Leistung, nicht Energie).
+Joule kann man in Newtonmeter oder Kalorien umrechnen -- aber **nicht** in Watt. Watt ist Leistung (Energie pro Zeit), Joule ist Energie.
 
-> **Merke:** N = kg·m/s². Pa = N/m². J = N·m. W = J/s. Diese Kette musst du sicher beherrschen.
+> **Merke:** N = kg·m/s². Pa = N/m². J = N·m. W = J/s.
 
 ---
 
 ## Skalare und Vektoren
 
-- **Skalar** = nur ein Zahlenwert mit Einheit, keine Richtung. Beispiele: Temperatur (20 °C), Masse (5 kg).
-- **Vektor** = Zahlenwert mit Einheit **plus Richtung**. Beispiele: Kraft (10 N nach rechts), Geschwindigkeit (30 km/h nach Norden).
+- **Skalar** = nur Zahlenwert mit Einheit, **keine Richtung**. Beispiele: Temperatur (37 °C), Masse (70 kg), Blutdruck (120 mmHg).
+- **Vektor** = Zahlenwert **plus Richtung**. Beispiele: Kraft (10 N nach oben), Blutstroemungsgeschwindigkeit.
 
-Wenn du einen Ball wirfst, ist die Wurfkraft ein Vektor (Staerke + Richtung). Die Temperatur des Balls ist ein Skalar.
+Vektoren addiert man wie Pfeile -- zwei gleich grosse, entgegengesetzte Kraefte heben sich auf (Summe = 0).
 
-> **Merke:** Skalar = nur Betrag. Vektor = Betrag + Richtung. Vektoren addiert man wie Pfeile, nicht einfach als Zahlen.
+> **Merke:** Skalar = nur Betrag (Temperatur, Druck, Masse). Vektor = Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung).
 
 ---
 
 ## Intensive und extensive Groessen
 
-- **Extensiv** = waechst mit der Menge: Zwei Flaschen Wasser haben doppelt so viel Volumen wie eine.
-- **Intensiv** = bleibt gleich: Zwei Flaschen Wasser mit je 20 °C ergeben zusammen immer noch 20 °C -- nicht 40 °C!
+- **Extensiv** = waechst mit der Menge: 2 Liter Wasser wiegen doppelt so viel wie 1 Liter.
+- **Intensiv** = unveraendert bei Mengenaenderung: 2 Behaelter Wasser mit je 20 °C haben zusammengeschuettet immer noch 20 °C.
 
-Beispiele extensiv: Masse, Volumen, Energie. Beispiele intensiv: Temperatur, Druck, Dichte.
+Extensiv: Masse, Volumen, Energie, Stoffmenge. Intensiv: Temperatur, Druck, Dichte, Konzentration.
 
-> **Merke:** Extensiv = proportional zur Menge. Intensiv = unabhaengig von der Menge. Zwei Tassen Kaffee = doppeltes Volumen, aber gleiche Temperatur.
+Klinisch: Die **Konzentration** eines Medikaments (intensiv, mg/L) bestimmt die Wirkung -- nicht die Gesamtmenge allein.
+
+> **Merke:** Extensiv ∝ Menge. Intensiv = unabhaengig von der Menge. Zwei Tassen Kaffee = doppeltes Volumen, aber gleiche Temperatur.
 
 ---
 
 ## Masse und Gewichtskraft
 
-Im Alltag sagen wir "ich wiege 70 kg". Physikalisch ist das die **Masse**. Die **Gewichtskraft** ist etwas anderes:
+Im Alltag sagen wir "ich wiege 70 kg" -- physikalisch ist das die **Masse**. Die **Gewichtskraft** ist etwas anderes:
 
-- **Masse** (kg): Wie viel Stoff in dir steckt -- ueberall gleich, ob auf der Erde oder dem Mond.
-- **Gewichtskraft** (N): Die Kraft, mit der die Erde dich anzieht: F_G = m · g (g ≈ 9,81 m/s²).
+- **Masse** (kg): Wie viel Stoff in dir steckt -- ortsunabhaengig (gleich auf Erde und Mond).
+- **Gewichtskraft** (N): F_G = m · g (g ≈ 9,81 m/s²) -- haengt vom Gravitationsfeld ab.
 
-Ein Mensch mit 70 kg Masse hat auf der Erde eine Gewichtskraft von 70 × 9,81 ≈ **687 N**. Auf dem Mond waere sie nur ca. 113 N -- die Masse bleibt aber 70 kg.
+70 kg Masse → auf Erde: F_G ≈ 687 N. Auf dem Mond (g ≈ 1,62 m/s²): nur ca. 113 N. Masse bleibt 70 kg.
 
-> **Merke:** Masse (kg) ist nicht gleich Gewichtskraft (N). F_G = m · g. Newton ist keine Basiseinheit: N = kg·m/s².
-
----
-
-## Alltagsbeispiele
-
-**Beispiel 1:** Dein Fahrrad wiegt 15 kg. Gewichtskraft: 15 × 10 = 150 N.
-
-**Beispiel 2:** Du hebst einen 5-kg-Rucksack 1 m hoch. Arbeit: W = m·g·h = 5 × 10 × 1 = 50 J.
-
-**Beispiel 3:** Du laeuft 100 Treppenstufen (30 m Hoehe, 70 kg) in 60 s. Leistung: P = m·g·h / t = 70 × 10 × 30 / 60 = 350 W.
+> **Merke:** Masse (kg) ≠ Gewichtskraft (N). F_G = m · g. Newton ist keine Basiseinheit: N = kg·m/s².
 
 ---
 
 ## MedAT-Fokus
 
-**Haeufige Fragen:**
-- "Wie viele SI-Basisgroessen gibt es?" --> 7
-- "Was ist die Einheit des Drucks?" --> Pascal (Pa = N/m²)
-- "Unterschied Skalar vs. Vektor?" --> Skalar nur Betrag, Vektor Betrag + Richtung
-- "Kann man Joule in Watt umrechnen?" --> Nein, verschiedene Groessen (Energie vs. Leistung)
+**Zentral pruefungsrelevant:**
+- 7 SI-Basisgroessen kennen (Laenge, Masse, Zeit, Strom, Temperatur, Stoffmenge, Lichtstaerke)
+- Abgeleitete Einheiten: N = kg·m/s², Pa = N/m², J = N·m, W = J/s
+- Skalar (nur Betrag) vs. Vektor (Betrag + Richtung)
+- Masse (kg) ≠ Gewichtskraft (N): F_G = m·g
 
 **Typische Fallen:**
 - Newton ist KEINE Basiseinheit (N = kg·m/s²)
-- Masse (kg) und Gewichtskraft (N) sind verschiedene Dinge
+- Joule ist NICHT in Watt umrechenbar (Energie ≠ Leistung)
 - 2 × 20 °C Wasser ergibt NICHT 40 °C (Temperatur ist intensiv)
-- Joule ist NICHT in Watt umrechenbar (W = J/s ist eine andere Groesse)
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **7 SI-Basisgroessen**: Laenge (m), Masse (kg), Zeit (s), Strom (A), Temperatur (K), Stoffmenge (mol), Lichtstaerke (cd)
+- **7 SI-Basisgroessen**: m, kg, s, A, K, mol, cd
 - **Abgeleitet**: N = kg·m/s², Pa = N/m², J = N·m, W = J/s
 - **Skalar** = nur Betrag; **Vektor** = Betrag + Richtung
-- **Extensiv** = waechst mit Menge; **intensiv** = bleibt gleich
-- **Masse** (kg) ≠ **Gewichtskraft** (N): F_G = m·g
-- **Fallen**: Joule nicht in Watt; Newton keine Basiseinheit; 2 × 20 °C ≠ 40 °C`,
+- **Extensiv** ∝ Menge; **intensiv** = mengenuabhaengig
+- **Masse** (kg) ≠ **Gewichtskraft** (N): F_G = m·g`,
       contentExtended: `## Einleitung
 
 Was hat eine Blutdruckmessung mit dem Kilogramm zu tun? Mehr als du denkst: Ohne ein einheitliches System von **Einheiten** wären Laborwerte, Medikamentendosierungen und Vitalparameter nicht vergleichbar. Das **SI (Internationales Einheitensystem)** ist diese gemeinsame Sprache -- es definiert sieben Basisgrößen und alle abgeleiteten Einheiten, die in Physik und Medizin gleichermaßen gelten.

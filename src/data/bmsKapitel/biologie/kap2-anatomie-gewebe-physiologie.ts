@@ -23,13 +23,13 @@ export const bioKapAnatomieGewebe: Kapitel = {
       ],
       content: `## Epithelgewebe -- einfach erklaert
 
-Stell dir Epithelgewebe wie die Tapete in deiner Wohnung vor: Es bedeckt alle Oberflaechen -- aussen die Haut, innen den Darm, die Blutgefaesse, die Harnblase und die Atemwege. Die Hauptaufgabe ist Schutz und Transport.
+Epithelgewebe bedeckt alle Oberflaechen deines Koerpers: aussen die Haut, innen den Darm, die Blutgefaesse, die Harnblase und die Atemwege. Es bildet Barrieren, transportiert Stoffe gezielt und bildet Druesen. Weil fast 85 % aller Krebserkrankungen aus Epithelzellen entstehen, ist dieses Gewebe auch klinisch extrem wichtig.
 
 **In diesem Kapitel lernst du:**
-- Warum alle Epithelien polar und gefaesslos sind
-- Wie Zellkontakte die Zellen zusammenhalten
-- Welches Epithel in welchem Organ sitzt
-- Wie Druesen ihre Sekrete abgeben
+- Warum alle Epithelien polar, avaskular und auf einer Basalmembran verankert sind
+- Welche vier Zellkontakte es gibt und was sie leisten
+- Welches Epithel in welchem Organ vorkommt -- die pruefungsrelevante Organzuordnung
+- Wie exokrine Druesen ihr Sekret abgeben (merokrin, apokrin, holokrin)
 
 ---
 
@@ -37,41 +37,42 @@ Stell dir Epithelgewebe wie die Tapete in deiner Wohnung vor: Es bedeckt alle Ob
 
 ## Drei Grundeigenschaften aller Epithelien
 
-Jede Epithelzelle hat eine **Oberseite** (apikal -- zur Koerperhoehle hin) und eine **Unterseite** (basolateral -- zum Bindegewebe hin). Stell dir das wie ein Spiegelei in der Pfanne vor: Oben und unten sind verschieden. Das nennt man **Polaritaet**. Dadurch koennen Stoffe gezielt in eine Richtung transportiert werden.
+Jede Epithelzelle hat eine **apikale Seite** (zur Koerperhoehle oder Oberflaeche hin) und eine **basolaterale Seite** (zur Basalmembran und zum Bindegewebe hin). Diese **Polaritaet** ist entscheidend: Transporter sind ungleichmaessig verteilt, sodass Stoffe gezielt in eine Richtung wandern. Im Duenndarm sitzt zum Beispiel der Glukose-Transporter SGLT1 nur apikal, GLUT2 nur basolateral.
 
-Alle Epithelien sitzen auf einer **Basalmembran** -- wie ein Teppich unter der Tapete. Sie verbindet das Epithel mit dem Bindegewebe darunter und besteht aus Kollagen IV und Laminin.
+Alle Epithelien sitzen auf einer **Basalmembran** aus Kollagen IV und Laminin. Sie verbindet das Epithel mit dem darunter liegenden Bindegewebe und bildet eine selektive Filterbarriere. Wichtig: Die Basalmembran ist die Grenze zwischen Epithel und Bindegewebe -- keine Blutgefaesse durchdringen sie ins Epithel.
 
-Epithelien haben **keine eigenen Blutgefaesse** (avaskular). Sie werden nur durch Naehrstoffe versorgt, die von unten durchsickern. Deshalb muessen sich Epithelzellen staendig erneuern -- im Duenndarm alle 3-5 Tage.
+Epithelien sind naemlich **avaskular**: Sie haben keine eigenen Blutgefaesse und werden durch Diffusion aus dem darunter liegenden Bindegewebe versorgt. Dadurch muessen sich Epithelzellen staendig erneuern -- im Duenndarm alle 3-5 Tage, in der Haut alle ~2 Wochen.
 
-**Vier wichtige Zellkontakte:**
-- **Tight Junctions**: Sitzen ganz oben (apikal) und dichten den Spalt zwischen den Zellen ab -- wie Silikon zwischen Fliesen. Sie trennen auch die obere von der unteren Membranhaelfte (Fence-Funktion)
-- **Desmosomen**: Halten die Zellen mechanisch zusammen, wie Nieten in einer Jeans
-- **Gap Junctions**: Kleine Kanaele, durch die Ionen direkt zwischen Nachbarzellen fliessen koennen -- wichtig im Herzmuskel, damit sich die Erregung ausbreitet
-- **Hemidesmosomen**: Verankern die Zelle an der Basalmembran
+**Die vier wichtigen Zellkontakte:**
 
-> **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
+| Kontakt | Funktion | Lage | Besonderheit |
+|---|---|---|---|
+| **Tight Junctions** | Barriere + Fence (trennt apikal/basolateral) | ganz apikal | aus Claudinen und Occludin |
+| **Desmosomen** | Mechanischer Halt | lateral | Cadherine + Intermediarfilamente |
+| **Gap Junctions** | Ionenaustausch zwischen Nachbarzellen | lateral | Connexine, wichtig im Herzmuskel |
+| **Hemidesmosomen** | Verankerung an Basalmembran | basolateral | Integrine |
+
+> **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch (Connexine). Hemidesmosomen = Basalmembran-Verankerung.
 
 ---
 
 ## Welches Epithel sitzt wo?
 
-Epithelien werden nach ihrer **Form** (flach, wuerfelfoermig, saeulenartig) und **Schichtung** (ein- oder mehrschichtig) eingeteilt:
+Epithelien werden nach **Form** (Platte/Wuerfel/Saeule) und **Schichtung** (einschichtig/mehrschichtig) eingeteilt:
 
 | Epitheltyp | Vorkommen | Funktion |
 |---|---|---|
-| Einschichtiges **Plattenepithel** | Blutgefaesse, Alveolen | Schnelle Diffusion |
+| Einschichtiges **Plattenepithel** | Blutgefaesse (Endothel), Alveolen | Schnelle Diffusion |
 | Einschichtiges **kubisches** Epithel | Schilddruese, Nierentubuli | Sekretion, Resorption |
-| Einschichtiges **Zylinderepithel** | Duenndarm (mit Mikrovilli!) | Resorption |
-| **Mehrreihiges** Flimmerepithel | Trachea, Bronchien | Schleimtransport |
+| Einschichtiges **Zylinderepithel** | Duenndarm (Mikrovilli!), Magen | Resorption, Sekretion |
+| **Mehrreihiges** Flimmerepithel | Trachea, Bronchien | Schleimtransport (mukoziliare Clearance) |
 | Mehrschichtiges **verhorntes** Plattenepithel | Haut (Epidermis) | Mechanischer Schutz |
 | Mehrschichtiges **unverhorntes** Plattenepithel | Speiseroehre, Vagina, Mund | Feuchter Schutz |
-| **Urothel** (Uebergangsepithel) | Harnblase, Harnleiter | Dehnbarkeit |
+| **Urothel** | Harnblase, Harnleiter | Dehnbarkeit (Schirmzellen) |
 
-Ein haeufiger Stolperstein: Das **mehrreihige** (pseudostratifizierte) Epithel in der Trachea **sieht** mehrschichtig aus, ist es aber nicht. Alle Zellen beruehren die Basalmembran -- die Kerne liegen nur auf verschiedenen Hoehen. Stell dir Menschen unterschiedlicher Groesse vor, die alle mit den Fuessen auf dem Boden stehen.
+**Pruefungsfalle: Pseudostratifiziert (mehrreihig) ≠ mehrschichtig.** Das Trachea-Epithel sieht mehrschichtig aus, weil die Kerne auf verschiedenen Hoehen liegen -- aber alle Zellen beruehren die Basalmembran. Das Urothel besitzt spezielle Schirmzellen: Bei voller Blase flachen sie sich ab, um die Dehnung zu ermoeglichen.
 
-Das **Urothel** in der Harnblase hat spezielle Schirmzellen. Wenn die Blase sich fuellt, flachen sie sich ab -- wie ein Regenschirm, der sich oeffnet. So kann sich die Blase dehnen, ohne zu reissen.
-
-> **Merke:** Pseudostratifiziert ≠ mehrschichtig -- alle Zellen beruehren die Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
+> **Merke:** Trachea = mehrreihiges Flimmerepithel (pseudostratifiziert). Urothel = Schirmzellen, dehnbar. Alle pseudostratifizierten Zellen beruehren die Basalmembran.
 
 ---
 
@@ -79,47 +80,38 @@ Das **Urothel** in der Harnblase hat spezielle Schirmzellen. Wenn die Blase sich
 
 ## Druesen und Sekretionsarten
 
-Viele Epithelzellen bilden **Druesen**. Es gibt zwei Grundtypen: **Exokrine Druesen** haben einen Ausfuehrungsgang (wie ein Wasserhahn), **endokrine Druesen** geben ihr Sekret direkt ins Blut ab (wie Hormone).
+**Exokrine Druesen** haben einen Ausfuehrungsgang (z.B. Schweissdruesen, Bauchspeicheldruese). **Endokrine Druesen** geben Hormone direkt ins Blut ab (z.B. Schilddruese).
 
-Bei exokrinen Druesen unterscheidet man drei Sekretionsarten:
+Bei exokrinen Druesen gibt es drei Sekretionswege:
 
 | Typ | Mechanismus | Beispiel |
 |---|---|---|
-| **Merokrin** | Zelle gibt Sekret per Exozytose ab, bleibt intakt | Schweissdruesen, Bauchspeicheldruese -- **haeufigste Form** |
-| **Apokrin** | Die Zellspitze wird abgeschnuert | Milchdruese beim Stillen |
-| **Holokrin** | Die ganze Zelle zerfaellt und wird zum Sekret | **Talgdruesen** -- die Zelle opfert sich sozusagen |
+| **Merokrin** | Sekret wird per Exozytose ausgeschuettet, Zelle bleibt intakt | Schweissdruesen, Pankreas -- **haeufigste Form** |
+| **Apokrin** | Die Zellspitze wird abgeschnuert und als Sekret abgegeben | Milchdruese (Lipide) |
+| **Holokrin** | Die ganze Zelle zerfaellt und wird selbst zum Sekret | **Talgdruesen** |
 
-Stell dir das so vor: Merokrin ist wie Seife aus einem Spender (Spender bleibt heil). Holokrin ist wie eine Badebombe -- sie loest sich komplett auf und wird selbst zum Produkt.
+**Kartagener-Syndrom** (pruefungsrelevant): Das Motorprotein **Dynein** der Zilien ist defekt. Folge: Flimmerhaerchen in den Atemwegen bewegen sich nicht mehr, Schleim staut sich, chronische Bronchitis entsteht. Bei 50 % der Betroffenen liegen alle Organe spiegelverkehrt (**Situs inversus**).
 
-**Kartagener-Syndrom:** Bei dieser Erbkrankheit funktionieren die Flimmerhaerchen (Zilien) in den Atemwegen nicht, weil das Motorprotein Dynein defekt ist. Die Folge: Der Schleim wird nicht abtransportiert, chronische Bronchitis entsteht. Bei der Haelfte der Betroffenen liegen die Organe spiegelverkehrt (Situs inversus).
-
-> **Merke:** Merokrin = Exozytose (haeufig). Apokrin = Zellspitze ab. Holokrin = ganze Zelle wird Sekret (Talgdruese). Kartagener: Dynein-Defekt, Zilien bewegen sich nicht.
+> **Merke:** Merokrin = Exozytose, Zelle bleibt heil (haeufigste). Apokrin = Spitze ab (Milchdruese). Holokrin = Zelle zerfaellt (Talgdruese). Kartagener = Dynein-Defekt.
 
 ---
 
 ## MedAT-Fokus
 
-**Haeufige Pruefungsfragen:**
-- Trachea-Epithel? Mehrreihiges Flimmerepithel
-- Harnblasen-Dehnung? Urothel mit Schirmzellen
-- Holokrine Sekretion? Talgdruesen
-- Tight Junctions? Apikale Barriere + Fence
-
-**Typische Fallen:**
-- Pseudostratifiziert ≠ mehrschichtig
-- Verhorntes (Haut) vs. unverhorntes (Speiseroehre) Plattenepithel
-- Tight Junctions (Barriere) vs. Gap Junctions (Ionenaustausch)
-- Ca. 85 % aller Karzinome entstehen aus Epithelgewebe
+**Typische Pruefungsfallen:**
+- Pseudostratifiziert ≠ mehrschichtig -- alle Zellen beruehren Basalmembran!
+- Tight Junctions (Barriere/Fence, apikal) vs. Gap Junctions (Ionenaustausch, Connexine)
+- Merokrin (haeufig, Exozytose) vs. holokrin (Talgdruese) vs. apokrin (Milchdruese, Zellspitze)
+- Kartagener-Syndrom: Dynein-Defekt, Zilien statisch → Schleimstau, Bronchitis, Situs inversus
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
-- Epithel ist polar, avaskular und sitzt auf der Basalmembran
-- Zellkontakte: Tight Junctions (Barriere), Desmosomen (Halt), Gap Junctions (Ionenaustausch), Hemidesmosomen (Verankerung)
-- Pseudostratifiziert: Sieht mehrschichtig aus, ist es aber nicht
-- Druesen: merokrin (Exozytose), apokrin (Zellspitze), holokrin (ganze Zelle)
-- Kartagener-Syndrom: Dynein-Defekt, Zilien funktionieren nicht`,
+- Epithel: polar (apikal ≠ basolateral), avaskular, auf Basalmembran (Kollagen IV + Laminin)
+- Zellkontakte: Tight Junctions (Barriere+Fence), Desmosomen (mechanisch), Gap Junctions (Ionenaustausch), Hemidesmosomen (Basalmembran)
+- Organzuordnung: Trachea = mehrreihiges Flimmerepithel; Harnblase = Urothel; Duenndarm = Zylinderepithel; Haut = verhorntes Plattenepithel; Speiseroehre = unverhorntes Plattenepithel
+- Sekretion: merokrin (haeufig), apokrin (Milchdruese), holokrin (Talgdruese)`,
       contentExtended: `## Einleitung
 
 **Worum geht es?** **Epithelgewebe** bedeckt alle inneren und äußeren Oberflächen — Haut, Darm, Gefäße, Harnblase, Atemwege. **Hauptfunktion:** Barriere und gerichteter Transport (Resorption, Sekretion). **Warum für den MedAT relevant?** Die Zuordnung "welches Epithel in welchem Organ", Zellkontakte (Tight Junctions, Gap Junctions) und Sekretionsmechanismen (merokrin, apokrin, holokrin) werden regelmäßig abgefragt. **Welche Fragen werden beantwortet?** "Welches Epithel kleidet die Trachea aus?"; "Urothel — wo?"; "Merokrin vs. apokrin vs. holokrin?"; "Tight Junctions — Funktion?"; "Pseudostratifiziert — was bedeutet das?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Epithelgewebe abgedeckt.
@@ -354,118 +346,95 @@ Sekretionsmechanismen exokriner Drüsen:
       ],
       content: `## Binde- und Stuetzgewebe -- einfach erklaert
 
-Stell dir dein Bindegewebe wie das Geruest eines Hauses vor: Es gibt Traeger (Knochen), flexible Polster (Knorpel), Seile (Sehnen) und Isolierung (Fettgewebe). Das Besondere: Hier bestimmt nicht die Zelle, sondern das Material dazwischen -- die **extrazellulaere Matrix** -- die Eigenschaften.
+Binde- und Stuetzgewebe umfasst Knochen, Knorpel, Sehnen und Fettgewebe. Das Besondere: Hier bestimmen nicht die Zellen, sondern das Material dazwischen -- die **extrazellulaere Matrix (EZM)** -- die mechanischen Eigenschaften. Kollagen, Proteoglykane und Elastin bilden dieses Geruest.
 
 **In diesem Kapitel lernst du:**
-- Was die extrazellulaere Matrix ist und woraus sie besteht
-- Die vier Kollagentypen und wo du sie findest
-- Wie Knochen staendig umgebaut wird
-- Warum Knorpel so schlecht heilt
-- Den Unterschied zwischen weissem und braunem Fett
+- Was die EZM ausmacht (Kollagen, Elastin, Proteoglykane, Fibronektin)
+- Die vier Kollagentypen I-IV und ihre Vorkommen
+- Knochenumbau durch Osteoblasten und Osteoklasten (RANKL/OPG)
+- Drei Knorpeltypen und warum Knorpel schlecht heilt
+- Weisses vs. braunes Fettgewebe (Leptin, UCP-1)
 
 ---
 
 {{DIAGRAM:stem-cells}}
 
-## Die extrazellulaere Matrix -- das Material zwischen den Zellen
+## Die extrazellulaere Matrix und Kollagen
 
-Im Bindegewebe gibt es viel mehr Zwischenmaterial als Zellen. Dieses Material heisst **extrazellulaere Matrix (EZM)** und besteht aus drei Hauptbestandteilen:
+Im Bindegewebe gibt es viel mehr Zwischenmaterial als Zellen. Die **EZM** besteht aus vier Hauptbestandteilen:
 
-- **Kollagenfasern** geben Festigkeit -- wie die Stahlseile in einer Haengebruecke
-- **Elastinfasern** sorgen fuer Elastizitaet -- wie ein Gummiband, das immer zurueckschnappt
-- **Proteoglykane** binden Wasser und polstern gegen Druck ab -- wie ein nasser Schwamm
+- **Kollagenfasern**: Geben Zugfestigkeit und Druckresistenz
+- **Elastinfasern**: Sorgen fuer Elastizitaet -- das Gewebe kehrt nach Dehnung in seine Form zurueck
+- **Proteoglykane** (z.B. Aggrecan): Negativ geladen, binden Wasser, polstern gegen Druck
+- **Glykoproteine** (Fibronektin, Laminin): Verbinden Zellen ueber Integrine mit der Matrix -- wichtig fuer Zelladhaeision und Wundheilung
 
-Die wichtigsten Zellen sind **Fibroblasten** (produzieren die Matrix), **Osteoblasten** (bauen Knochen auf), **Osteoklasten** (bauen Knochen ab) und **Chondrozyten** (Knorpelzellen).
+Die Hauptzellen sind **Fibroblasten** (EZM-Produzenten), **Chondrozyten** (Knorpel) sowie **Osteoblasten** und **Osteoklasten** (Knochen).
 
-> **Merke:** Bindegewebe = Matrix dominiert ueber Zellen. Kollagen gibt Festigkeit, Proteoglykane polstern gegen Druck.
+**Kollagen** ist das haeufigste Protein des Koerpers (~30 % des Gesamtproteins). Es bildet eine **Tripelhelix** aus drei Polypeptidketten (Sequenz: Gly-X-Y, immer Glycin an jeder dritten Stelle). Zur Herstellung braucht der Koerper **Vitamin C** -- fehlt es, wird Kollagen instabil und es entsteht **Skorbut** (Zahnfleischbluten, schlechte Wundheilung, Haematome).
 
----
-
-## Kollagen -- das haeufigste Protein deines Koerpers
-
-Kollagen macht etwa 30 % des gesamten Koerperproteins aus. Es besteht aus drei Ketten, die sich wie ein Seil umeinander winden -- die **Tripelhelix**. Fuer die Herstellung braucht dein Koerper **Vitamin C**. Ohne Vitamin C wird das Kollagen instabil, und es kommt zu **Skorbut** -- Zahnfleisch blutet, Wunden heilen schlecht.
-
-Es gibt vier wichtige Typen -- stell dir das wie verschiedene Sorten Seil vor:
-
-| Typ | Wo? | Eigenschaft |
+| Kollagentyp | Vorkommen | Eigenschaft |
 |---|---|---|
-| **I** | Knochen, Sehnen, Haut | Zugfest -- **haeufigster Typ** |
-| **II** | Knorpel (Gelenke) | Druckresistent |
-| **III** | Gefaesse, Wundheilung | Dehnbar |
-| **IV** | Basalmembran | Netzartig |
+| **I** | Knochen, Sehnen, Haut, Faserknorpel | Zugfest -- **haeufigster Typ** |
+| **II** | Hyaliner Knorpel, Gallertkern der Bandscheiben | Druckresistent |
+| **III** | Blutgefaesse, Wundheilung, fetales Gewebe | Dehnbar |
+| **IV** | **Basalmembran** | Netzartig, Filterfunktion |
 
-> **Merke:** Kollagen I = Knochen/Sehnen. II = Knorpel. III = Gefaesse. IV = Basalmembran. Vitamin C ist fuer die Herstellung unverzichtbar.
-
----
-
-## Knochen -- staendig im Umbau
-
-Knochen bestehen aus Kollagen I (gibt Flexibilitaet, 30 %) und **Hydroxyapatit** (gibt Haerte, 70 %). Stell dir das vor wie Stahlbeton: Stahl (Kollagen) plus Beton (Mineral).
-
-Dein Koerper baut jedes Jahr etwa 10 % der Knochenmasse um. Dabei arbeiten zwei Zelltypen zusammen:
-
-- **Osteoblasten** bauen Knochen auf (Eselsbruecke: OsteoBlast = Baut)
-- **Osteoklasten** bauen Knochen ab (Eselsbruecke: OsteoKlast = Klaut)
-
-Die Balance wird durch das **RANKL/OPG-System** gesteuert: RANKL aktiviert die Osteoklasten, OPG hemmt sie. **Oestrogen** foerdert OPG und schuetzt so den Knochen. Nach der Menopause sinkt das Oestrogen, RANKL ueberwiegt, und es kann zu **Osteoporose** kommen.
-
-> **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut. Oestrogen schuetzt Knochen. Osteoporose = zu viel Abbau.
+> **Merke:** Kollagen I = Knochen/Sehnen (zugfest). II = Knorpel. III = Gefaesse. IV = Basalmembran. Vitamin C-Mangel = Skorbut.
 
 ---
 
 {{DIAGRAM:animal-cell}}
 
-## Drei Knorpeltypen -- und warum Knorpel schlecht heilt
+## Knochen -- staendig im Umbau
 
-Alle Knorpeltypen haben etwas gemeinsam: Sie haben **keine Blutgefaesse** (avaskular). Naehrstoffe muessen durch das Gewebe sickern. Das bedeutet: Wenn Knorpel kaputt geht, heilt er kaum -- deshalb ist Arthrose so problematisch.
+Knochen bestehen zu 30 % aus Kollagen I (Flexibilitaet) und zu 70 % aus **Hydroxyapatit** (Haerte). Jedes Jahr werden etwa 10 % der Knochenmasse umgebaut. Daran sind drei Zelltypen beteiligt:
 
-| Knorpeltyp | Wo? | Eigenschaft |
-|---|---|---|
-| **Hyalin** | Gelenkflaechen, Trachea | Druckfest und glatt |
-| **Faser** | Bandscheiben, Menisken | Zugfest und druckfest |
-| **Elastisch** | Ohrmuschel, Kehldeckel | Biegsam |
+- **Osteoblasten** (mesenchymaler Ursprung): Bauen Knochen auf -- produzieren Kollagen I und mineralisieren. Marker: **ALP** (alkalische Phosphatase). Produzieren auch RANKL und OPG.
+- **Osteozyten**: Eingemauerter Osteoblast. Mechanorezeptor, nimmt Druck und Zug wahr.
+- **Osteoklasten** (haematopoetischer Ursprung): Bauen Knochen ab -- loesen Matrix mit HCl und Proteasen auf. Marker: **TRAP**.
 
-Stell dir hyalinen Knorpel wie eine glatte Eisflaeche vor, auf der Gelenke reibungslos gleiten. Faserknorpel ist wie ein stabiles Seil, und elastischer Knorpel wie eine biegsame Gummiplatte.
+Das **RANKL/OPG-System** steuert das Gleichgewicht: Osteoblasten senden RANKL → aktiviert Osteoklasten → Abbau. Osteoblasten senden auch OPG (faengt RANKL ab) → Abbau gebremst. **Oestrogen** foerdert OPG und schuetzt so den Knochen. Nach der Menopause sinkt Oestrogen, RANKL dominiert → **Osteoporose**.
 
-> **Merke:** Hyalin = Gelenk. Faser = Bandscheibe. Elastisch = Ohr. Alle avaskular = schlechte Heilung!
+**Drei Knorpeltypen** -- alle avaskular (keine Blutgefaesse → schlechte Heilung!):
+
+| Knorpeltyp | Hauptkollagen | Vorkommen | Eigenschaft |
+|---|---|---|---|
+| **Hyalin** | Kollagen II | Gelenkflaechen, Trachea | Glatt, druckresistent |
+| **Faserknorpel** | Kollagen I | Bandscheiben, Menisken, Symphyse | Zugfest + druckresistent |
+| **Elastisch** | Kollagen II + Elastin | Ohrmuschel, Kehldeckel | Biegsam |
+
+> **Merke:** OsteoBlast = Baut auf (ALP, mesenchymal). OsteoKlast = Baut ab (TRAP, haematopoetisch). Hyalin = Kollagen II. Faser = Kollagen I (Bandscheibe). Avaskular = schlechte Heilung.
 
 ---
 
-## Fettgewebe -- mehr als nur Energiespeicher
+## Fettgewebe
 
-Es gibt zwei Arten von Fettgewebe:
+**Weisses Fettgewebe**: Ein grosser Fetttropfen pro Zelle. Speichert Energie, polstert, produziert **Leptin** (Saettigungssignal ans Gehirn) und **Adiponektin** (verbessert Insulinsensitivitaet).
 
-**Weisses Fett** hat einen grossen Fetttropfen pro Zelle -- wie ein prall gefuellter Luftballon. Es speichert Energie und wirkt als Polster. Aber es ist auch ein Hormon-Produzent: **Leptin** meldet dem Gehirn "Ich bin satt", und **Adiponektin** macht Zellen empfindlicher fuer Insulin.
+**Braunes Fettgewebe**: Viele kleine Fetttroepfchen und sehr viele Mitochondrien. Erzeugt Waerme statt ATP durch das Protein **UCP-1** (Uncoupling Protein 1), das die Atmungskette entkoppelt. Wichtig bei Neugeborenen (koennen noch nicht zittern) und bei Kaelte.
 
-**Braunes Fett** hat viele kleine Fetttroepfchen und viele Mitochondrien (daher die braune Farbe). Es erzeugt Waerme statt ATP -- dank dem Protein **UCP-1**, das die Atmungskette "kurzschliesst". Stell dir das vor wie einen Ofen, der Fett verbrennt, um Waerme zu machen. Besonders wichtig bei Neugeborenen, die noch nicht zittern koennen.
-
-> **Merke:** Weisses Fett = Energiespeicher + Leptin. Braunes Fett = Waerme durch UCP-1.
+> **Merke:** Weisses Fett = Energiespeicher, Leptin. Braunes Fett = Waerme durch UCP-1 (entkoppelt Atmungskette).
 
 ---
 
 ## MedAT-Fokus
 
-**Haeufige Pruefungsfragen:**
-- Kollagen I = Knochen und Sehnen (zugfest)
-- Osteoklasten bauen ab (haematopoetischer Ursprung)
-- Knorpel heilt schlecht weil avaskular
-- UCP-1 entkoppelt die Atmungskette im braunen Fett
-
-**Typische Fallen:**
-- Kollagen I (Knochen) und Kollagen II (Knorpel) nicht verwechseln
-- Osteoblasten (mesenchymal, bauen auf) vs. Osteoklasten (haematopoetisch, bauen ab)
-- Weisses Fett (ein Tropfen, Leptin) vs. braunes Fett (viele Mitochondrien, UCP-1)
+**Typische Pruefungsfallen:**
+- Kollagen I (Knochen/Sehnen, zugfest) ≠ Kollagen II (Knorpel, druckresistent) -- nicht verwechseln!
+- Faserknorpel (Bandscheibe) hat Kollagen I -- obwohl es ein Knorpel ist!
+- Osteoblast (mesenchymal, aufbauend, ALP) vs. Osteoklast (haematopoetisch, abbauend, TRAP)
+- Oestrogenmangel → RANKL dominiert → Osteoporose
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
-- EZM = Kollagen + Proteoglykane + Fibronektin, dominiert ueber Zellen
-- Kollagen I (Knochen), II (Knorpel), III (Gefaesse), IV (Basalmembran)
-- Vitamin C noetig fuer Kollagensynthese, Mangel = Skorbut
-- OsteoBlast baut auf, OsteoKlast baut ab, Oestrogen schuetzt
-- Knorpel ist avaskular und heilt deshalb kaum
-- Braunes Fett erzeugt Waerme (UCP-1), weisses Fett speichert Energie (Leptin)`,
+- EZM: Kollagen (Festigkeit), Elastin (Elastizitaet), Proteoglykane (Wasser/Druck), Fibronektin (Adhaeision)
+- Kollagen: I (Knochen/Sehne), II (Knorpel), III (Gefaesse), IV (Basalmembran) -- Vitamin C noetig
+- Knochen: Osteoblast (ALP, mesenchymal, baut auf) ↔ Osteoklast (TRAP, haematopoetisch, resorbiert)
+- RANKL/OPG: Oestrogen foerdert OPG → schuetzt Knochen. Oestrogenmangel → Osteoporose
+- Knorpel: Hyalin (Kol. II, Gelenk), Faser (Kol. I, Bandscheibe), Elastisch (Ohr) -- alle avaskular
+- Fett: weiss (Leptin, Energiespeicher), braun (UCP-1, Waerme, Neugeborene)`,
       contentExtended: `## Einleitung
 
 **Worum geht es?** **Binde- und Stützgewebe** umfasst Gewebe, bei denen die **extrazelluläre Matrix (EZM)** die Eigenschaften bestimmt: Knochen, Sehnen, Knorpel, Fettgewebe. **Warum für den MedAT relevant?** Kollagentypen (I–IV), Knochenumbau (Osteoblasten/Osteoklasten, RANKL/OPG), Knorpeltypen (hyalin, Faser, elastisch) und Fettgewebe (weiß/braun, Leptin, UCP-1) werden regelmäßig geprüft; Osteoporose, Arthrose, Skorbut sind Bindegewebserkrankungen. **Welche Fragen werden beantwortet?** "Welcher Kollagentyp in der Basalmembran?"; "Osteoblast vs. Osteoklast?"; "Welche Knorpelart wo?"; "Skorbut — Ursache?"; "Braunes Fett — UCP-1?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Binde- und Stützgewebe abgedeckt.
@@ -738,99 +707,90 @@ Es gibt zwei Arten von Fettgewebe:
       ],
       content: `## Muskelgewebe -- einfach erklaert
 
-Dein Koerper hat drei Arten von Muskeln: Skelettmuskeln (die du bewusst steuerst, z. B. beim Armheben), den Herzmuskel (pumpt automatisch) und glatte Muskulatur (z. B. im Darm -- arbeitet im Hintergrund). Alle nutzen dasselbe Grundprinzip: Zwei Eiweisse, Aktin und Myosin, gleiten aneinander vorbei wie zwei ineinandergreifende Buersten.
+Dein Koerper hat drei Muskeltypen: Skelettmuskeln (bewusst gesteuert), Herzmuskel (pumpt automatisch) und glatte Muskulatur (z.B. in Darm und Gefaessen -- laeuft im Hintergrund). Alle nutzen dasselbe Grundprinzip: Die Proteine **Aktin** und **Myosin** gleiten aneinander vorbei und verkuerzen so die Zelle.
 
 **In diesem Kapitel lernst du:**
-- Die drei Muskeltypen und ihre Unterschiede
-- Wie das Sarkomer aufgebaut ist und was sich bei Kontraktion verkuerzt
-- Warum Calcium der "Startschuss" fuer die Kontraktion ist
-- Warum ATP zum Loesen gebraucht wird (und was bei Rigor mortis passiert)
+- Die drei Muskeltypen und ihre wichtigsten Unterschiede (Steuerung, Kerne, Ca2+-Schalter)
+- Wie das Sarkomer aufgebaut ist und was sich bei Kontraktion veraendert
+- Warum Calcium der "Startknopf" fuer die Kontraktion ist (Troponin/Calmodulin)
+- Wofuer ATP benoetigt wird -- und was bei Rigor mortis passiert
 
 ---
 
 {{DIAGRAM:sarkomer}}
 
-## Drei Muskeltypen im Vergleich
+## Die drei Muskeltypen im Vergleich
 
 | Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
 |---|---|---|---|
-| Steuerung | Willkuerlich | Automatisch | Automatisch |
-| Aussehen | Quergestreift | Quergestreift | Keine Streifen |
-| Kerne | Viele (am Rand) | 1-2 (zentral) | Einer (zentral) |
-| Verbindung | Nervensignal (NMJ) | Gap Junctions | Gap Junctions |
-| Dauerkrampf (Tetanus) | Moeglich | Unmoeglich | Tonisch moeglich |
+| Streifung | Quergestreift | Quergestreift | Keine Streifen |
+| Steuerung | **Willkuerlich** | Unwillkuerlich | Unwillkuerlich |
+| Kerne | Mehrere (peripher) | **1-2 (zentral)** | Einer (zentral) |
+| Kopplung | NMJ (Acetylcholin) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
+| Ca2+-Schalter | Troponin C | Troponin C | **Calmodulin -> MLCK** |
+| Tetanus moeglich? | Ja | **Nein** (lange Refraktaerzeit) | Tonisch moeglich |
+| Biomarker | CK-MM | **Troponin I/T**, CK-MB | -- |
 
-Der Herzmuskel ist besonders: Er sieht aus wie der Skelettmuskel (quergestreift), arbeitet aber automatisch. Die Zellen sind ueber **Gap Junctions** elektrisch verbunden -- wie Haueser in einer Lichterkette. Dadurch schlaegt das ganze Herz gleichzeitig. Ein Tetanus (Dauerkrampf) ist beim Herzen unmoeglich, weil es nach jedem Schlag eine lange Pause braucht (Refraktaerzeit).
+Der Herzmuskel ist besonders: Er sieht quergestreift aus (wie Skelettmuskel), ist aber einkernig und automatisch. Die Zellen sind ueber **Gap Junctions** (Connexine) in den Glanzstreifen elektrisch verbunden -- so schlaegt das gesamte Herz synchron. Ein Tetanus (Dauerkrampf) ist beim Herzen unmoeglich, weil die Refraktaerzeit sehr lang ist.
 
-> **Merke:** Herzmuskel = quergestreift + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur hat kein Troponin, sondern Calmodulin.
+Die **glatte Muskulatur** (Darm, Gefaesse, Uterus) hat keine Sarkomere und kein Troponin. Stattdessen benutzt sie **Calmodulin** als Calcium-Sensor.
+
+> **Merke:** Herzmuskel = quergestreift + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = Calmodulin statt Troponin. Troponin I/T = Herzinfarkt-Marker.
 
 ---
 
 ## Das Sarkomer -- die kleinste Einheit der Kontraktion
 
-Das Sarkomer reicht von einer Z-Scheibe zur naechsten. Stell dir das vor wie ein Ziehharmonika-Abschnitt:
+Das **Sarkomer** reicht von Z-Scheibe zu Z-Scheibe und ist die kleinste kontraktile Einheit. Es besteht aus:
 
-- **I-Bande** (hell): Nur Aktin -- wird bei Kontraktion **kuerzer**
-- **A-Bande** (dunkel): Myosin plus ueberlappende Aktinfilamente -- bleibt **immer gleich lang** (das ist die haeufigste Pruefungsfalle!)
-- **H-Zone** (Mitte): Nur Myosin -- **verschwindet** bei voller Kontraktion
+- **I-Bande** (hell): Nur Aktinfilamente -- **wird bei Kontraktion kuerzer**
+- **A-Bande** (dunkel): Myosin + ueberlappende Aktinfilamente -- **bleibt immer gleich lang** (haeufigste Pruefungsfalle!)
+- **H-Zone** (Mitte der A-Bande): Nur Myosin -- **verschwindet bei voller Kontraktion**
+- **M-Linie** (Mitte): Haelt Myosinfilamente zusammen
 
-Die Filamente gleiten aneinander vorbei wie zwei ineinandergeschobene Kaemme. Sie werden dabei nicht kuerzer -- sie ueberlappen sich nur mehr.
+Bei der Kontraktion **gleiten** die Filamente aneinander vorbei (Gleitfilamenttheorie): Die Filamente werden nicht kuerzer -- sie ueberlappen sich nur staerker.
 
-> **Merke:** Bei Kontraktion: I-Bande kuerzer, H-Zone kuerzer, A-Bande bleibt konstant! Filamente gleiten, sie schrumpfen nicht.
+> **Merke:** Kontraktion: I-Bande **kuerzer**, H-Zone **kuerzer/weg**, A-Bande **unveraendert**. Filamente gleiten -- sie schrumpfen nicht!
 
 ---
 
 {{DIAGRAM:action-potential}}
 
-## Calcium als Startschuss
+## Calcium als Startknopf -- der Kontraktionsmechanismus
 
-Im Ruhezustand blockiert **Tropomyosin** die Bindungsstellen auf Aktin -- wie ein Riegel vor einer Tuer. Wenn ein Signal kommt, passiert Folgendes:
+Im Ruhezustand blockiert **Tropomyosin** die Myosin-Bindungsstellen auf Aktin. Wenn ein Nervensignal ankommt:
 
-1. Calcium stroemt aus dem Speicher (sarkoplasmatisches Retikulum) ins Zellinnere
-2. Calcium bindet an **Troponin C** -- der Riegel wird zur Seite geschoben
-3. Myosin kann jetzt an Aktin andocken und zieht daran -- das ist der **Kraftschlag**
+1. Aktionspotenzial -> T-Tubuli -> sarkoplasmatisches Retikulum gibt **Ca2+** frei
+2. Ca2+ bindet an **Troponin C** -> Tropomyosin wird zur Seite gedreht -> Bindungsstellen frei
+3. Myosinkopf (aufgeladen mit ATP) dockt an Aktin an
+4. **Kraftschlag**: Myosinkopf klappt um (Power Stroke) -> Aktin wird Richtung M-Linie gezogen
+5. Neues **ATP** bindet -> Myosinkopf loest sich von Aktin
+6. ATP wird zu ADP + Pi gespalten -> Myosin ist wieder gespannt fuer den naechsten Zyklus
 
-Danach muss sich Myosin wieder loesen. Und genau dafuer braucht es **ATP**: ATP bindet an den Myosinkopf und loest ihn vom Aktin. Ohne ATP bleibt Myosin festgeklemmt -- das ist **Rigor mortis** (Totenstarre). Stell dir das vor wie einen Klettverschluss, den du nur mit Energie wieder oeffnen kannst.
+**Rigor mortis (Totenstarre)**: Nach dem Tod gibt es kein ATP mehr. Myosin bleibt an Aktin festgeklemmt. Erst wenn Enzyme die Proteine abbauen, loest sich die Starre wieder (nach ~48 h).
 
-Bei der **glatten Muskulatur** (z. B. Darm, Gefaesse) gibt es kein Troponin. Stattdessen bindet Calcium an **Calmodulin**, das dann die MLCK aktiviert -- ein anderer Schalter fuer dasselbe Ergebnis.
+Bei **glatter Muskulatur**: Ca2+ bindet an **Calmodulin** -> aktiviert MLCK (Myosin-Leichte-Ketten-Kinase) -> Myosin wird phosphoryliert -> Kontraktion. Kein Troponin!
 
-> **Merke:** Calcium -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. ATP loest Myosin. Kein ATP = Rigor mortis.
-
----
-
-## Kraftdosierung
-
-Dein Koerper dosiert die Muskelkraft auf zwei Wegen:
-- **Rekrutierung**: Mehr motorische Einheiten (Nervenzelle + ihre Muskelfasern) werden aktiviert
-- **Frequenz**: Schnellere Signale, sodass sich die Kontraktionen ueberlagern
-
-Feine Muskeln (Finger, Augen) haben kleine Einheiten mit wenigen Fasern -- fuer praezise Bewegungen. Grobe Muskeln (Wade) haben grosse Einheiten mit tausenden Fasern -- fuer rohe Kraft.
+> **Merke:** Ablauf: Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet -> Kraftschlag -> **ATP** loest Myosin. Kein ATP = Rigor mortis. Glatt: Ca2+ -> Calmodulin -> MLCK.
 
 ---
 
 ## MedAT-Fokus
 
-**Haeufige Pruefungsfragen:**
-- Was wird bei Kontraktion kuerzer? I-Bande und H-Zone (A-Bande bleibt!)
-- Wofuer braucht man ATP? Zum Loesen des Myosins von Aktin
-- Warum kein Tetanus am Herzen? Lange Refraktaerzeit
-- Glatte Muskulatur? Calmodulin statt Troponin
-
-**Typische Fallen:**
-- A-Bande bleibt konstant (= Myosinlaenge)
-- ATP = Loesen, nicht Kraftschlag
-- Herzmuskel ist quergestreift, aber einkernig und unwillkuerlich
-- Troponin I/T steigt 3-6 h nach Herzinfarkt im Blut an
+**Typische Pruefungsfallen:**
+- A-Bande bleibt immer gleich lang (= Myosinlaenge) -- I-Bande und H-Zone werden kuerzer
+- ATP wird zum **Loesen** des Myosins benoetigt, nicht fuer den Kraftschlag selbst
+- Herzmuskel: quergestreift wie Skelettmuskel, aber einkernig + unwillkuerlich + kein Tetanus
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
-- Drei Muskeltypen: Skelett (willkuerlich), Herz (automatisch, Gap Junctions, kein Tetanus), glatt (Calmodulin)
-- Sarkomer: I-Bande und H-Zone werden kuerzer, A-Bande bleibt gleich
-- Calcium loest die Kontraktion aus, ATP loest den Myosinkopf
-- Ohne ATP: Rigor mortis (Totenstarre)
-- Troponin I/T im Blut = Herzinfarktmarker`,
+- Drei Muskeltypen: Skelett (willkuerlich, CK-MM), Herz (Gap Junctions, kein Tetanus, Troponin I/T), glatt (Calmodulin, MLCK)
+- Sarkomer: Z-Z. I-Bande (Aktin) kuerzer, H-Zone kuerzer, A-Bande (Myosin) bleibt konstant
+- Kontraktion: Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet -> Kraftschlag -> ATP loest Myosin
+- Rigor mortis: kein ATP -> Myosin bleibt an Aktin gebunden
+- Glatt: kein Troponin, Ca2+ -> Calmodulin -> MLCK -> Kontraktion`,
       contentExtended: `## Einleitung
 
 **Worum geht es?** **Muskelgewebe** ermöglicht Kontraktion; es gibt **drei Typen**: Skelettmuskel (willkürlich), Herzmuskel (unwillkürlich, Pumpe), glatte Muskulatur (unwillkürlich). **Warum für den MedAT relevant?** Sarkomeraufbau (I-Bande, A-Bande, H-Zone), Ca2+-Schalter (Troponin/Tropomyosin), Rolle von ATP, Unterschiede der drei Typen (Herzmuskel: Gap Junctions, kein Tetanus; glatt: Calmodulin/MLCK) und Troponin als Herzinfarkt-Marker werden geprüft. **Welche Fragen werden beantwortet?** "Sarkomer -- was wird bei Kontraktion kuerzer?"; "Herzmuskel -- warum kein Tetanus?"; "ATP -- wofuer bei Kontraktion?"; "Welcher Muskeltyp hat Gap Junctions?"; "Glatte Muskulatur -- Troponin oder Calmodulin?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Muskelgewebe abgedeckt.
@@ -1086,87 +1046,100 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
       ],
       content: `## Nervengewebe -- einfach erklaert
 
-Stell dir dein Gehirn wie eine riesige Stadt vor. Die **Neuronen** sind die Strassen, auf denen Nachrichten reisen. Die **Gliazellen** sind wie Strassenarbeiter, Polizisten und Reinigungskraefte -- sie sorgen dafuer, dass alles reibungslos laeuft.
+Das Nervensystem besteht aus zwei Zelltypen: **Neuronen** (leiten elektrochemische Signale) und **Gliazellen** (stuetzen, schuetzen und versorgen die Neuronen). Neuronen koennen sich nach Geburt kaum noch teilen -- deshalb ist Nervenschaden oft irreversibel. Gliazellen dagegen koennen sich teilen und machen etwa 50 % aller Gehirnzellen aus.
 
 **In diesem Kapitel lernst du:**
-- Wie ein Neuron aufgebaut ist und warum es so aussieht
-- Was Myelin ist und warum es Signale schneller macht
-- Welche Gliazellen es gibt und was jede davon tut
-- Wo Schwann-Zellen und Oligodendrozyten arbeiten
+- Wie ein Neuron aufgebaut ist: Dendriten (Input), Soma, Axon (Output), Axonhuegel (Schwelle)
+- Was Myelin ist und warum es Signale viel schneller macht (saltatorische Leitung)
+- Schwann-Zelle (PNS) vs. Oligodendrozyt (ZNS) -- Unterschiede und klinische Relevanz
+- Welche vier Gliazelltypen es gibt und was sie tun
 
 ---
 
 {{DIAGRAM:action-potential}}
 
-## Aufbau eines Neurons -- der Baum-Vergleich
+## Aufbau eines Neurons
 
-Stell dir ein Neuron wie einen Baum vor. Die **Dendriten** sind die Aeste -- sie empfangen Nachrichten von anderen Neuronen (Input). Der **Soma** (Zellkoerper) ist der Stamm -- hier sitzt der Zellkern. Das **Axon** ist wie eine lange Wurzel, die tief in den Boden geht -- es leitet das Signal **weg vom Koerper** (Output).
+Jedes Neuron besteht aus vier Teilen:
 
-Am Axonhuegel -- das ist der Punkt, wo Stamm und Wurzel sich treffen -- wird entschieden: Ist das Signal stark genug, um weitergeleitet zu werden? Die Schwelle liegt bei ca. -55 mV. Das Axon-Ende hat kleine Knoepfchen, die Neurotransmitter enthalten. Hier wird das Signal an die naechste Zelle uebergeben.
+- **Dendriten**: Stark verzweigte Fortsaetze, die Signale von anderen Neuronen empfangen (**Input**). Enthalten synaptische Kontakte.
+- **Soma (Perikaryon)**: Zellkoerper mit Kern und Organellen. Hier findet die Proteinsynthese statt -- Axone haben keine Ribosomen!
+- **Axonhuegel**: Der Startpunkt des Axons. Hier liegen die meisten spannungsgesteuerten Na+-Kanaele. Wenn alle eingehenden Signale summiert die Schwelle von ca. **-55 mV** ueberschreiten, wird ein Aktionspotenzial ausgeloest.
+- **Axon**: Langer Fortsatz, der das Signal **weg vom Soma** zur naechsten Zelle leitet (**Output**). Am Ende: praeSynapsen mit Neurotransmitter-Vesikeln.
 
-> **Merke:** Dendriten = Input. Axon = Output. Axonhuegel = Entscheidungsstelle (Schwelle -55 mV).
+Der **axonale Transport** versorgt das Axon mit Proteinen: anterograd (vom Soma zur Endigung, Kinesin), retrograd (zurueck zum Soma, Dynein).
+
+> **Merke:** Dendriten = Input. Axonhuegel = Schwelle (-55 mV, Entscheidung). Axon = Output. Soma = Proteinsynthese (Axon kann es nicht selbst).
 
 ---
 
-## Myelin -- die Isolierung fuer schnelle Signale
+## Myelin und saltatorische Leitung
 
-Viele Axone sind in eine Fettschicht eingewickelt -- das **Myelin**. Stell dir ein schlecht isoliertes Stromkabel vor: Energie geht verloren, das Signal wird langsam. Mit Myelin ist das Kabel gut isoliert, und das Signal springt von Luecke zu Luecke. Diese Luecken heissen **Ranvier-Schnuerringe**.
+Die **Myelinscheide** ist eine mehrlagige Lipidhuelle um das Axon. Sie wirkt als elektrische Isolierung. Zwischen den Myelin-Segmenten liegen die **Ranvier-Schnuerringe** -- kurze unmyelinisierte Luecken mit hoher Na+-Kanal-Dichte.
 
-Dieses Springen nennt man **saltatorische Leitung** (von lat. saltare = springen). Ohne Myelin kriecht das Signal mit ca. 1-2 m/s dahin. Mit Myelin springt es mit bis zu 120 m/s vorwaerts -- so schnell wie ein ICE-Zug.
+Die **saltatorische Leitung** nutzt dies: Das Aktionspotenzial springt von Schnuerring zu Schnuerring (lat. saltare = springen). Das ist viel schneller als kontinuierliche Leitung:
+
+| | Myelinisiert | Unmyelinisiert |
+|---|---|---|
+| Leitungsgeschwindigkeit | 70-120 m/s | 0,5-2 m/s |
+| Energiebedarf | Gering (nur an Schnuerringen) | Hoch (ueberall) |
+
+**Wer myelinisiert?**
 
 | | **Schwann-Zelle** | **Oligodendrozyt** |
 |---|---|---|
-| Wo? | Peripheres NS (PNS) | Zentrales NS (ZNS) |
-| Wie viele Segmente? | **1** Segment pro Zelle | Bis zu **50** Segmente |
-| Heilung nach Schaden? | Gut | Schlecht |
+| Bereich | **PNS** (peripheres NS) | **ZNS** (zentrales NS) |
+| Segmente pro Zelle | **1** | Bis zu **50** |
+| Regeneration | Gut (WBanden-Degeneration) | Kaum |
 
-Bei **Multipler Sklerose** zerstoert das Immunsystem die Oligodendrozyten im ZNS. Ohne Myelin werden Signale langsamer oder brechen ab -- das erklaert die wechselnden Symptome.
+Bei **Multipler Sklerose** greift das Immunsystem Oligodendrozyten im ZNS an und zerstoert die Myelinscheiden. Signale werden langsamer oder brechen ab -- das erklaert die wechselnden, schuebweise auftretenden Symptome.
 
-> **Merke:** Schwann-Zelle = PNS, 1 Segment. Oligodendrozyt = ZNS, bis 50 Segmente. Saltatorisch = springt von Schnuerring zu Schnuerring, bis 120 m/s.
+> **Merke:** Schwann-Zelle = PNS, 1 Segment, gute Regeneration. Oligodendrozyt = ZNS, bis 50 Segmente, schlechte Regeneration. Saltatorisch: 120 m/s.
 
 ---
 
 {{DIAGRAM:synapse}}
 
-## Gliazellen -- vier Helfertypen
+## Die vier Gliazelltypen
 
-Neben Neuronen gibt es vier wichtige Gliazell-Typen. Jeder hat eine eigene Aufgabe:
+| Gliazelle | Aufgabe | Besonderheit |
+|---|---|---|
+| **Astrozyten** | Blut-Hirn-Schranke induzieren, Glutamat aufnehmen, K+-Puffer | Induzieren Tight Junctions -- bilden sie aber nicht selbst! |
+| **Oligodendrozyten** | Myelinisierung im ZNS | Bis 50 Axone pro Zelle |
+| **Mikroglia** | Immunzellen des Gehirns | Einzige aus **Mesoderm** (alle anderen: Neuroektoderm) |
+| **Ependymzellen** | Liquor-Produktion (~500 ml/Tag), auskleiden Ventrikel | Ependymom = Tumor davon |
 
-| Gliazelle | Aufgabe -- einfach erklaert |
-|---|---|
-| **Astrozyten** | Ordnen die Blut-Hirn-Schranke an, raumen Glutamat auf, puffern Kalium |
-| **Oligodendrozyten** | Myelinisieren Axone im ZNS (wie Isolierband anlegen) |
-| **Mikroglia** | Immunzellen des Gehirns -- stammen als einzige aus dem Mesoderm |
-| **Ependymzellen** | Produzieren Hirnwasser (Liquor, ca. 500 ml pro Tag) |
+**Blut-Hirn-Schranke (BHS)**: Gebildet durch Tight Junctions zwischen **Endothelzellen** der Hirnkapillaren. Astrozytenfusse umhuellen die Gefaesse und induzieren die Tight Junctions -- aber die Schranke selbst besteht aus Endothel!
 
-Wichtiger Punkt fuer die Pruefung: Astrozyten **induzieren** die Tight Junctions der Blut-Hirn-Schranke, aber sie **bilden** sie nicht selbst. Die Tight Junctions sitzen in den Endothelzellen der Blutgefaesse.
-
-> **Merke:** Mikroglia = mesodermale Immunzellen des Gehirns (einzige nicht-neuroektodermale Gliazelle). Astrozyten sagen dem Endothel, wie es die Schranke bauen soll -- sie bauen sie nicht selbst.
+> **Merke:** Mikroglia = einzige mesodermale Gliazelle (alle anderen neuroektodermal). Astrozyten induzieren BHS -- Endothel bildet sie. Ependymzellen produzieren Liquor.
 
 ---
 
 ## MedAT-Fokus
 
-**Haeufige Pruefungsfragen:**
-- Axon leitet Signal vom Koerper weg (nicht Dendriten!)
-- Schwann-Zelle: PNS, 1 Segment vs. Oligodendrozyt: ZNS, bis 50 Segmente
-- Mikroglia stammt aus dem Mesoderm
-- Astrozyten induzieren die Blut-Hirn-Schranke
+**Zentral pruefungsrelevant:**
+- Axon leitet Signal **weg vom Soma** (nicht Dendriten!)
+- Axonhuegel = Schwelle bei ca. -55 mV (hoeher Na+-Kanal-Dichte)
+- Schwann-Zelle (PNS, 1 Segment, gut regenerierbar) vs. Oligodendrozyt (ZNS, bis 50 Segmente)
+- Saltatorische Leitung: bis 120 m/s vs. kontinuierlich: 0,5-2 m/s
+- Mikroglia = einzige Gliazelle aus Mesoderm (keine Neuroektoderm-Abstammung)
+- Astrozyten induzieren BHS -- Tight Junctions in Endothelzellen!
 
 **Typische Fallen:**
-- Schwann-Zelle und Oligodendrozyt nicht verwechseln
-- Astrozyten induzieren Tight Junctions, bilden sie aber nicht selbst
-- Saltatorisch: bis 120 m/s vs. kontinuierlich: ca. 2 m/s
+- Schwann-Zelle und Oligodendrozyt verwechseln
+- Astrozyten "bilden" die BHS -- Nein! Sie induzieren sie nur; Endothel bildet sie
+- Axon hat keine Ribosomen (Proteinsynthese nur im Soma)
 
 ---
 
-## Zusammenfassung
+## Zusammenfassung (ultrakompakt)
 
-- Neuron: Dendriten (Input) → Soma → Axon (Output) → Axonhuegel (Entscheidung bei -55 mV)
-- Myelin isoliert das Axon -- Signal springt saltatorisch von Schnuerring zu Schnuerring (bis 120 m/s)
-- Schwann-Zelle = PNS (1 Segment), Oligodendrozyt = ZNS (bis 50)
-- PNS regeneriert gut, ZNS kaum (z. B. Multiple Sklerose)
-- Gliazellen: Astrozyten (BHS induzieren), Mikroglia (Immunzellen, mesoderm), Ependym (Liquor)`,
+- Neuron: Dendriten (Input) -> Soma (Proteinsynthese) -> Axonhuegel (Schwelle -55 mV) -> Axon (Output)
+- Myelinscheide: elektrische Isolation, saltatorische Leitung (Schnuerring zu Schnuerring, 70-120 m/s)
+- Schwann-Zelle (PNS, 1 Segment, gute Regeneration) vs. Oligodendrozyt (ZNS, bis 50 Segmente)
+- Multiple Sklerose: Oligodendrozyten-Angriff -> Demyelinisierung im ZNS
+- Gliazellen: Astrozyten (BHS induzieren, Glutamat-Aufnahme), Oligodendrozyten (Myelin ZNS), Mikroglia (Immunzellen, Mesoderm!), Ependymzellen (Liquor)
+- Blut-Hirn-Schranke: Tight Junctions im Endothel, induziert durch Astrozytenfuesse`,
       contentExtended: `## Nervengewebe — Neuronen, Gliazellen und Myelinisierung
 
 Das Nervensystem besteht aus zwei grundlegenden Zelltypen: **Neuronen** übertragen elektrochemische Signale; **Gliazellen** übernehmen Stütz-, Schutz- und Versorgungsfunktionen. Beide Populationen sind für die normale Nervenfunktion unentbehrlich.
@@ -1745,11 +1718,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
       ],
       content: `## Sinnesorgane -- einfach erklaert
 
-Stell dir vor, du beisst in eine Zitrone: Deine Augen sehen die gelbe Farbe, deine Nase riecht das Aroma, deine Zunge schmeckt die Saeure. All das funktioniert nach demselben Grundprinzip: **Transduktion** -- ein Reiz (Licht, Schall, Druck, Temperatur, Chemikalien) wird in ein elektrisches Signal umgewandelt, das das Gehirn verarbeiten kann.
+Alle Sinnesorgane folgen demselben Grundprinzip: **Transduktion** -- ein Reiz (Licht, Schall, Druck, Chemikalien) wird in ein elektrisches Signal umgewandelt, das das Gehirn verarbeiten kann.
 
 **In diesem Kapitel lernst du:**
 - Was Transduktion bedeutet und warum Licht im Auge zu Hyperpolarisation fuehrt (nicht Depolarisation!)
-- Wie Staebchen und Zapfen sich unterscheiden und wozu sie gut sind
+- Wie Staebchen und Zapfen sich unterscheiden
 - Wie das Ohr Schall in Nervenimpulse umwandelt (Impedanzanpassung, Tonotopie)
 - Welche Hautschichten und Rezeptortypen es gibt
 
@@ -1759,144 +1732,98 @@ Stell dir vor, du beisst in eine Zitrone: Deine Augen sehen die gelbe Farbe, dei
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-## Grundprinzip: Transduktion -- Reize als elektrische Signale
+## Grundprinzip: Transduktion
 
-Alle Sinnesorgane folgen demselben Grundprinzip: Ein Reiz wird in ein elektrisches Signal umgewandelt. Wie das passiert, unterscheidet sich je nach Sinn:
-
-1. **Photorezeptoren** (Auge): Licht schliesst Kanaele → **Hyperpolarisation** (paradox! Im Dunkeln sind die Kanaele offen und die Zelle depolarisiert)
+1. **Photorezeptoren** (Auge): Licht schliesst Kanaele → **Hyperpolarisation** (paradox! Im Dunkeln sind die Kanaele offen)
 2. **Mechanorezeptoren** (Ohr, Haut): Druck oeffnet Kanaele direkt → **Depolarisation**
 3. **Chemorezeptoren** (Nase, Zunge): Molekuele aktivieren G-Proteine → Second Messenger → Rezeptorpotential
 
-> **Merke:** Transduktion = Reiz → elektrisches Signal. Auge: Licht → Hyperpolarisation (paradox, weil Dunkelzustand = depolarisiert). Ohr und Haut: Mechanische Kraft → Kanalöffnung → Depolarisation.
+> **Merke:** Transduktion = Reiz → elektrisches Signal. Auge: Licht → Hyperpolarisation (Dunkelzustand = depolarisiert). Ohr/Haut: Druck → Depolarisation.
 
 ---
 
 ## Auge -- Staebchen, Zapfen und Fototransduktion
 
-Das Auge hat drei Schichten: die Lederhaut (Sklera) aussen, die Aderhaut (Uvea) in der Mitte, und die Netzhaut (Retina) innen. In der Retina sitzen die Fotorezeptoren.
-
-**Staebchen vs. Zapfen -- einfach erklaert:**
-
 | Merkmal | Staebchen | Zapfen |
 |---|---|---|
 | Anzahl | ca. 120 Mio. | ca. 6 Mio. |
-| Wo? | Periphere Netzhaut (NICHT in der Fovea!) | Fovea centralis (Sehgrube) |
+| Wo? | Periphere Netzhaut (NICHT Fovea!) | Fovea centralis |
 | Wozu? | Daemmerungssehen, Schwarz-Weiss | Tagessehen, Farbsehen |
 | Empfindlichkeit | 1 Photon genuegt | Viele Photonen noetig |
 
-**Wie entsteht das Signal bei Licht? -- Fototransduktion:**
+**Fototransduktion:** Im Dunkeln: Na+-Kanaele offen → Staebchen depolarisiert (-40 mV) → Glutamat wird ausgeschuettet. Bei Licht: Photon trifft Rhodopsin → Transducin → PDE → cGMP wird abgebaut → Na+-Kanaele schliessen → Hyperpolarisation (-70 mV) → weniger Glutamat.
 
-Im Dunkeln sind Na+-Kanaele offen → Staebchen depolarisiert (-40 mV) → Glutamat wird ausgeschuettet. Das klingt seltsam, ist aber so: Die Zelle ist im Dunkeln aktiv!
+**Akkommodation:**
+- **Ferne** (Ruhe): Ziliarmuskel entspannt → Zonulafasern gespannt → Linse flach
+- **Naehe** (aktiv): Ziliarmuskel zieht sich zusammen → Zonulafasern **entspannen** → Linse **woelbt sich**
+- **Nahsicht-Trias**: Akkommodation + Konvergenz + Miosis
 
-Wenn Licht kommt: Photon trifft Rhodopsin → Kaskade startet → cGMP wird abgebaut → Na+-Kanaele schliessen sich → Staebchen hyperpolarisiert (-70 mV) → weniger Glutamat. Das Gehirn interpretiert "weniger Glutamat" als "es ist hell".
-
-Merkhilfe: Licht → cGMP runter → Kanaele zu → Hyperpolarisation.
-
-**Akkommodation -- Nah- und Fernsehen:**
-- **Ferne** (Ruhe): Ziliarmuskel entspannt → Zonulafasern gespannt → Linse flach (ca. 20 dpt)
-- **Naehe** (aktiv): Ziliarmuskel **zieht sich zusammen** (Parasympathikus, M3) → Zonulafasern **entspannen** → Linse **woelbt sich** (wird dicker) → Brechkraft steigt (ca. 24 dpt)
-- **Trias bei Nahsicht**: Akkommodation + Konvergenz (Augen drehen nach innen) + Miosis (Pupille verengt sich)
-
-> **Merke:** Licht → Rhodopsin → Transducin → PDE → cGMP runter → Na+-Kanaele zu → Hyperpolarisation → weniger Glutamat. Akkommodation Nah: Ziliarmuskel zieht sich zusammen → Zonulafasern entspannen (nicht spannen!) → Linse woelbt sich.
+> **Merke:** Fototransduktion: Licht → cGMP runter → Kanaele zu → Hyperpolarisation → weniger Glutamat. Akkommodation Nah: Ziliarmuskel kontrahiert → Zonulafasern entspannen (nicht spannen!) → Linse woelbt sich.
 
 ---
 
-## Ohr — Schallübertragung und Hörphysiologie
+## Ohr -- Schallweg und Tonotopie
 
-Das Ohr loest ein physikalisches Problem: Schall (Luftschwingungen) muss in Fluessigkeitsschwingungen umgewandelt werden. Ohne das Mittelohr wuerden 99,9% der Energie verloren gehen.
+- **Aussenohr**: Ohrmuschel + Gehoergang → Trommelfell
+- **Mittelohr**: Gehoerknoechelchen (Hammer → Amboss → Steigbuegel) → **Impedanzanpassung ca. 22-fach**. Ohrtrompete → Rachen (Druckausgleich). Ovales Fenster → Innenohr.
+- **Innenohr**: **Cochlea** (Hoeren) + **Bogengaenge** (Gleichgewicht, NICHT Hoeren!)
 
-**Drei Bereiche:**
-- **Aussenohr**: Ohrmuschel und Gehoergang leiten Schall zum **Trommelfell**
-- **Mittelohr** (luftgefuellt): Drei **Gehoerknoechelchen** (Hammer → Amboss → Steigbuegel) uebertragen und verstaerken Schwingungen -- **Impedanzanpassung** ca. 22-fach. Die **Ohrtrompete** fuehrt zum Rachen (Druckausgleich). Das **Ovale Fenster** fuehrt ins Innenohr.
-- **Innenohr** (fluessigkeitsgefuellt): **Cochlea** (Hoeren) + **Bogengaenge** (Gleichgewicht -- NICHT Hoeren!)
+**Schallweg:** Trommelfell → Knoechelchen → Ovales Fenster → Wanderwelle → **Basilarmembran**: Basis (steif) = hohe Toene; Apex (weich) = tiefe Toene = **Tonotopie**. Haarzellen: Tip-Links oeffnen K+-Kanaele → K+ aus Endolymphe (+80 mV) → Depolarisation → Glutamat → Hoernerv.
 
-**Schallweg durch das Ohr:**
-1. Trommelfell schwingt → Gehoerknoechelchen leiten weiter
-2. Steigbuegel drueckt aufs Ovale Fenster → Wanderwelle in der Cochlea
-3. **Basilarmembran**: Basis (eng, steif) = hohe Toene; Apex (breit, weich) = tiefe Toene -- das ist **Tonotopie**
-4. Haarzellen-Stereozilien biegen sich → **Tip-Links** oeffnen K+-Kanaele → K+ stroemt aus der kaliumreichen Endolymphe ein (+80 mV!) → Haarzelle depolarisiert → Glutamat → Hoernerv
-
-> **Merke:** Impedanzanpassung ca. 22-fach. Tonotopie: Basis = hohe Frequenzen, Apex = tiefe Frequenzen. Haarzellen: Tip-Links oeffnen K+-Kanaele → Depolarisation. Bogengaenge sind im Innenohr, aber zustaendig fuers Gleichgewicht, nicht fuers Hoeren!
+> **Merke:** Tonotopie: Basis = hohe Frequenzen, Apex = tiefe. Haarzellen: Tip-Links → K+-Einstrom → Depolarisation. Bogengaenge = Gleichgewicht, nicht Hoeren!
 
 ---
 
-## Geruch und Geschmack -- chemische Sinne
+## Geruch und Geschmack
 
-**Geruch:** Duftstoffe binden an ca. 400 verschiedene Rezeptortypen in der Nasenschleimhaut. Das Signal laeuft ueber den N. olfactorius (I) direkt ins limbische System -- **ohne Umweg ueber den Thalamus**. Deshalb loesen Gerueche so starke Erinnerungen und Emotionen aus.
+**Geruch:** ~400 Rezeptortypen. Signal ueber N. olfactorius → limbisches System **ohne Thalamus** (deshalb starke Geruchserinnerungen).
 
-**Geschmack** -- fuenf Grundqualitaeten:
+**Geschmack** -- fuenf Qualitaeten: Suess, Umami, Bitter = **GPCR**. Sauer, Salzig = **direkt ionisch** (H+, Na+).
 
-| Qualitaet | Wie? | Wofuer? |
-|---|---|---|
-| Suess, Umami, Bitter | GPCR → Second Messenger | Energiequellen, Protein, Gifterkennung |
-| Sauer, Salzig | Direkt ionisch (H+, Na+) | Saeuredetektion, Elektrolyte |
-
-> **Merke:** Suess, Umami, Bitter = GPCR (langsamer). Sauer, Salzig = direkt ionisch (schneller). Geruch: N. olfactorius → Bulbus → limbisches System OHNE Thalamus!
+> **Merke:** Geruch: einziger Sinn ohne Thalamus-Umschaltung. Suess/Umami/Bitter = GPCR; Sauer/Salzig = ionisch.
 
 {{DIAGRAM:nervensystem-übersicht}}
 
 ---
 
-## Haut -- Schichten und Rezeptortypen
+## Haut -- Schichten und Rezeptoren
 
-Die Haut ist das groesste Sinnesorgan und hat drei Schichten:
-- **Epidermis** (oben, avaskulaer -- keine Blutgefaesse! Ernaehrung durch Diffusion)
-- **Dermis** (darunter, vaskularisiert -- hier liegen die meisten Rezeptoren)
-- **Subcutis** (zuunterst, Fettgewebe, Daemmung und Polsterung)
-
-**Fuenf Rezeptortypen -- einfach gemerkt:**
+- **Epidermis** (avaskulaer -- Ernaehrung durch Diffusion)
+- **Dermis** (vaskularisiert -- hier liegen die meisten Rezeptoren)
+- **Subcutis** (Fettgewebe, Daemmung)
 
 | Rezeptor | Wofuer? | Adaptation |
 |---|---|---|
-| **Meissner** | Beruehrung, Textur (Lesen in Blindenschrift) | Schnell (spuert Veraenderung) |
-| **Pacini** | Vibration (Werkzeug in der Hand) | Schnell |
-| **Merkel** | Dauerdruck, Konturen (Form eines Objekts) | Langsam (haelt durch) |
+| **Meissner** | Beruehrung, Textur | Schnell |
+| **Pacini** | Vibration | Schnell |
+| **Merkel** | Dauerdruck, Konturen | Langsam |
 | **Ruffini** | Dehnung, Gelenkstellung | Langsam |
-| **Freie Nervenendigungen** | Schmerz und Temperatur | -- |
+| **Freie Nervenendigungen** | Schmerz + Temperatur | -- |
 
-Eselsbruecke: **Meissner und Pacini** = schnell (phasisch). **Merkel und Ruffini** = langsam (tonisch).
+Temperaturkanaele: **TRPV1** (>43°C oder Capsaicin) und **TRPM8** (<25°C oder Menthol).
 
-Zwei wichtige Temperaturkanaele:
-- **TRPV1**: ueber 43 Grad C ODER Capsaicin (Chili) → deshalb "brennt" scharfes Essen!
-- **TRPM8**: unter ca. 25 Grad C ODER Menthol → deshalb fuehlt sich Pfefferminz kuehl an.
-
-> **Merke:** Schnell adaptierend (Meissner, Pacini): spueren Reizaenderungen. Langsam adaptierend (Merkel, Ruffini): melden Dauerzustaende. Epidermis = avaskulaer, Dermis = vaskularisiert. TRPV1 = Hitze und Chili, TRPM8 = Kaelte und Menthol.
-
----
-
-> **Merke:** Alle Sinnesorgane nutzen Transduktion: Reiz → Ionenkanaele oeffnen oder schliessen → elektrisches Signal. Auge: Licht → Hyperpolarisation. Ohr und Haut: Druck → Depolarisation. Nase und Zunge: Chemorezeptoren → G-Protein.
+> **Merke:** Schnell adaptierend: Meissner, Pacini (Reizaenderung). Langsam: Merkel, Ruffini (Dauerzustand). Epidermis = avaskulaer. TRPV1 = Hitze/Chili, TRPM8 = Kaelte/Menthol.
 
 ---
 
 ## MedAT-Fokus
 
-**Typische Pruefungsfragen:**
-- Fototransduktionskaskade: Rhodopsin → Transducin → PDE → cGMP runter → Hyperpolarisation
-- Staebchen vs. Zapfen: Lokalisation, Empfindlichkeit, Pigmente
-- Schallübertragung und Impedanzanpassung im Mittelohr
-
 **Typische Fallen:**
-- Auge: Licht fuehrt zu Hyperpolarisation (nicht Depolarisation!) -- weil Dunkelzustand = depolarisiert
-- Bogengaenge = Innenohr, aber zustaendig fuer Gleichgewicht, nicht Hoeren!
-- Gehoerknoechelchen (3 Stueck) = Mittelohr -- Hammer, Amboss, Steigbuegel
-- Ovales Fenster verbindet Mittelohr mit Innenohr (nicht Ohrtrompete!)
-- Ohrtrompete verbindet Paukenhoehle mit Rachen (Druckausgleich)
-- Akkommodation Nah: Ziliarmuskel zieht sich zusammen → Zonulafasern ENTSPANNEN → Linse woelbt sich (nicht umgekehrt!)
-- Ca. 120 Mio. Staebchen, ca. 6 Mio. Zapfen; Impedanzanpassung ca. 22-fach
-- TRPV1 ueber 43 Grad C oder Capsaicin (Chili); TRPM8 unter 25 Grad C oder Menthol
+- Auge: Licht → Hyperpolarisation (nicht Depolarisation!)
+- Akkommodation Nah: Zonulafasern ENTSPANNEN (nicht spannen!)
+- Bogengaenge = Gleichgewicht, nicht Hoeren
+- ~120 Mio. Staebchen, ~6 Mio. Zapfen; Impedanzanpassung ~22-fach
 
 ---
 
 ## Zusammenfassung (ultrakompakt)
 
-- **Transduktion**: Reiz → elektrisches Signal. Auge: Licht → Hyperpolarisation (paradox, weil Dunkelzustand = depolarisiert)
-- **Staebchen** (Daemmerung, peripher, ca. 120 Mio., Rhodopsin) vs. **Zapfen** (Tageslicht + Farbe, Fovea, ca. 6 Mio., 3 Opsine)
-- **Fototransduktion**: Licht → Rhodopsin → Transducin → PDE → cGMP runter → Na+-Kanaele zu → Hyperpolarisation → weniger Glutamat
-- **Akkommodation (Nah)**: Ziliarmuskel zieht sich zusammen → Zonulafasern entspannen → Linse woelbt sich. Trias: Akkommodation + Konvergenz + Miosis
-- **Ohr**: Schall → Trommelfell → Gehoerknoechelchen (Impedanzanpassung ca. 22-fach) → Basilarmembran-Tonotopie (Basis = hoch, Apex = niedrig) → Tip-Links → K+-Einstrom Haarzellen → Glutamat → Hoernerv
-- **Geruch**: N. olfactorius → Bulbus → limbisches System (ohne Thalamus!). Geschmack: 5 Qualitaeten (suess/umami/bitter = GPCR; sauer/salzig = ionisch)
-- **Haut**: Epidermis (avaskulaer) → Dermis (vaskularisiert) → Subcutis. Schnell: Meissner, Pacini. Langsam: Merkel, Ruffini. Schmerz/Temp: freie Nervenendigungen
-- **Klinisch**: Glaukom (Augeninnendruck steigt), Katarakt (Linsentruebung), Schalltrauma (Haarzellverlust)`,
+- **Transduktion**: Reiz → elektrisches Signal. Auge: Hyperpolarisation. Ohr/Haut: Depolarisation
+- **Staebchen** (Daemmerung, peripher, 120 Mio.) vs. **Zapfen** (Tageslicht, Fovea, 6 Mio.)
+- **Fototransduktion**: Licht → Rhodopsin → Transducin → PDE → cGMP↓ → Na+-Kanaele zu → Hyperpolarisation
+- **Ohr**: Impedanzanpassung 22-fach → Tonotopie (Basis=hoch, Apex=tief) → Tip-Links → K+-Einstrom
+- **Geruch**: ohne Thalamus! **Geschmack**: 5 Qualitaeten (GPCR vs. ionisch)
+- **Haut**: Epidermis (avaskulaer) → Dermis → Subcutis. Schnell: Meissner/Pacini. Langsam: Merkel/Ruffini`,
       contentExtended: `## Einleitung
 
 **Worum geht es?** Sinnesorgane wandeln Reize (Licht, Schall, Druck, Temperatur) in elektrische Signale um — **Transduktion**. **Warum für den MedAT relevant?** Im Auge führt mehr Licht zur **Hyperpolarisation** der Photorezeptoren; Ohr: Impedanzanpassung, Tonotopie; Haut: Rezeptortypen. **Welche Fragen werden beantwortet?** „Fototransduktion — Hyperpolarisation oder Depolarisation?"; „Akkommodation — welche Struktur?"; „Tonotopie — wo?"; „Welcher Hautrezeptor für Druck?" Mit diesem Kapitel sind alle typischen BMS-Fragen zu Sinnesorganen abgedeckt.
