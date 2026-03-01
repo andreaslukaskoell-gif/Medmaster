@@ -23,6 +23,8 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { ExamTimer } from "@/components/shared/ExamTimer";
+import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import {
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
@@ -405,6 +407,7 @@ function ZahlenfolgenQuiz({
   initialQuestionCount?: number;
 }) {
   const [mode, setMode] = useState<ZahlenfolgenMode | null>(null);
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(initialQuestionCount ?? 10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<SequenceTask[]>([]);
@@ -533,6 +536,78 @@ function ZahlenfolgenQuiz({
         </Button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
         <UebungsbeschreibungCard id="kff-zahlenfolgen" collapsible defaultCollapsed />
+
+        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Timer className="w-5 h-5" /> Prüfungsmodus
+            </CardTitle>
+            <p className="text-sm text-muted">
+              {EXAM_CONFIG.zahlenfolgen.questions} Aufgaben ·{" "}
+              {EXAM_CONFIG.zahlenfolgen.timeSeconds / 60} Minuten — wie im echten MedAT.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={async () => {
+                setExamMode("exam");
+                setTrainingLoading(true);
+                try {
+                  const domain = "kff-zahlenfolgen" as const;
+                  const rating = skillRating ?? 500;
+                  const count = EXAM_CONFIG.zahlenfolgen.questions;
+                  const tasks = await getTasksForUserWithWeakness(
+                    domain,
+                    rating,
+                    count,
+                    150,
+                    getKffFailedIdsForDomain(domain)
+                  );
+                  const raw = tasks.map((t) => taskToData<SequenceTask>(t));
+                  let valid = filterValidSequenceTasks(raw);
+                  if (valid.length < count) {
+                    const generated = generateSequenceTaskSet(count, Date.now());
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(filterValidSequenceTasks(generated), count - valid.length),
+                    ];
+                  }
+                  if (valid.length < count)
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(
+                        filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]),
+                        count - valid.length
+                      ),
+                    ];
+                  setQuestions(valid.slice(0, count));
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } catch {
+                  const generated = generateSequenceTaskSet(
+                    EXAM_CONFIG.zahlenfolgen.questions,
+                    Date.now()
+                  );
+                  const valid = filterValidSequenceTasks(generated);
+                  setQuestions(valid.slice(0, EXAM_CONFIG.zahlenfolgen.questions));
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } finally {
+                  setTrainingLoading(false);
+                }
+              }}
+              disabled={trainingLoading}
+            >
+              <Timer className="w-5 h-5 mr-2" /> Prüfungsmodus starten
+            </Button>
+          </CardContent>
+        </Card>
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -762,13 +837,23 @@ function ZahlenfolgenQuiz({
     opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? "");
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={EXAM_CONFIG.zahlenfolgen.timeSeconds} onTimeUp={handleSubmit} />
+      )}
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <span className="text-sm text-muted">
-          Frage {index + 1} von {total}
-        </span>
+        <div className="flex items-center gap-2">
+          {examMode === "exam" && (
+            <Badge variant="danger" className="text-[10px]">
+              Prüfungsmodus
+            </Badge>
+          )}
+          <span className="text-sm text-muted">
+            Frage {index + 1} von {total}
+          </span>
+        </div>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div
@@ -810,9 +895,13 @@ function ZahlenfolgenQuiz({
         </CardContent>
       </Card>
       <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode !== "exam" ? (
+          <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < safeQuestions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)}>
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
@@ -1320,6 +1409,7 @@ function ImplikationenQuiz({
   initialQuestionCount?: number;
 }) {
   const [, setMode] = useState<ImplikationenMode | null>(null);
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questionCount, setQuestionCount] = useState(initialQuestionCount ?? 10);
   const [questions, setQuestions] = useState<ImplikationTask[]>([]);
@@ -1465,6 +1555,92 @@ function ImplikationenQuiz({
           Schlussfolgerung ist korrekt?
         </p>
         <UebungsbeschreibungCard id="kff-implikationen" collapsible defaultCollapsed />
+
+        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Timer className="w-5 h-5" /> Prüfungsmodus
+            </CardTitle>
+            <p className="text-sm text-muted">
+              {EXAM_CONFIG.implikationen.questions} Aufgaben ·{" "}
+              {EXAM_CONFIG.implikationen.timeSeconds / 60} Minuten — wie im echten MedAT.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={async () => {
+                setExamMode("exam");
+                setTrainingLoading(true);
+                try {
+                  const domain = "kff-implikationen" as const;
+                  const rating = skillRating ?? 500;
+                  const count = EXAM_CONFIG.implikationen.questions;
+                  const tasks = await getTasksForUserWithWeakness(
+                    domain,
+                    rating,
+                    count,
+                    150,
+                    getKffFailedIdsForDomain(domain)
+                  );
+                  const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
+                  let valid = filterValidImplikationTasks(raw);
+                  if (valid.length < count) {
+                    const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                    const generated: ImplikationTask[] = [];
+                    for (let i = 0; i < count - valid.length; i++) {
+                      const t = generateImplicationTrainingTask(levels[i % 3]!);
+                      t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
+                      generated.push(t);
+                    }
+                    valid = [...valid, ...filterValidImplikationTasks(generated)];
+                  }
+                  if (valid.length < count) {
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(
+                        filterValidImplikationTasks([
+                          ...OFFICIAL_IMPLICATION_EXAMPLES,
+                          ...implikationenTasks,
+                        ]),
+                        count - valid.length
+                      ),
+                    ];
+                  }
+                  setQuestions(valid.slice(0, count));
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } catch {
+                  const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                  const generated: ImplikationTask[] = [];
+                  for (let i = 0; i < EXAM_CONFIG.implikationen.questions; i++) {
+                    const t = generateImplicationTrainingTask(levels[i % 3]!);
+                    t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
+                    generated.push(t);
+                  }
+                  setQuestions(
+                    filterValidImplikationTasks(generated).slice(
+                      0,
+                      EXAM_CONFIG.implikationen.questions
+                    )
+                  );
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } finally {
+                  setTrainingLoading(false);
+                }
+              }}
+              disabled={trainingLoading}
+            >
+              <Timer className="w-5 h-5 mr-2" /> Prüfungsmodus starten
+            </Button>
+          </CardContent>
+        </Card>
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -1690,13 +1866,23 @@ function ImplikationenQuiz({
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={EXAM_CONFIG.implikationen.timeSeconds} onTimeUp={handleSubmit} />
+      )}
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <span className="text-sm text-muted">
-          Frage {index + 1} von {safeQuestions.length}
-        </span>
+        <div className="flex items-center gap-2">
+          {examMode === "exam" && (
+            <Badge variant="danger" className="text-[10px]">
+              Prüfungsmodus
+            </Badge>
+          )}
+          <span className="text-sm text-muted">
+            Frage {index + 1} von {safeQuestions.length}
+          </span>
+        </div>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div
@@ -1763,9 +1949,13 @@ function ImplikationenQuiz({
         </CardContent>
       </Card>
       <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode !== "exam" ? (
+          <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < safeQuestions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)}>
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
@@ -1789,6 +1979,7 @@ type WortfluessigkeitMode = "official" | "training";
 
 function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   const [, setMode] = useState<WortfluessigkeitMode | null>(null);
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(10);
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questions, setQuestions] = useState<WordFluencyTask[]>([]);
@@ -1951,6 +2142,86 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           Wort beginnt (oder ob keine der Antworten passt)!
         </p>
         <UebungsbeschreibungCard id="kff-wortfluessigkeit" collapsible defaultCollapsed />
+
+        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Timer className="w-5 h-5" /> Prüfungsmodus
+            </CardTitle>
+            <p className="text-sm text-muted">
+              {EXAM_CONFIG.wortfluessigkeit.questions} Aufgaben ·{" "}
+              {EXAM_CONFIG.wortfluessigkeit.timeSeconds / 60} Minuten — wie im echten MedAT.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={async () => {
+                setExamMode("exam");
+                setTrainingLoading(true);
+                try {
+                  const domain = "kff-wortflüssigkeit" as const;
+                  const rating = skillRating ?? 500;
+                  const count = EXAM_CONFIG.wortfluessigkeit.questions;
+                  const tasks = await getTasksForUserWithWeakness(
+                    domain,
+                    rating,
+                    count,
+                    150,
+                    getKffFailedIdsForDomain(domain)
+                  );
+                  const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
+                  let valid = filterValidWordFluencyTasks(raw);
+                  if (valid.length < count) {
+                    const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                    const generated: WordFluencyTask[] = [];
+                    for (let i = 0; i < count - valid.length; i++) {
+                      const t = generateWordFluencyTask(levels[i % 3]!);
+                      t.id = t.id ?? `wf-exam-${Date.now()}-${i}`;
+                      generated.push(t);
+                    }
+                    valid = [...valid, ...filterValidWordFluencyTasks(generated)];
+                  }
+                  if (valid.length < count) {
+                    const pool = WF_TRAINING_POOL_1000.map((t, idx) => ({
+                      ...t,
+                      id: t.id ?? `wf-1000-${idx}`,
+                    }));
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(filterValidWordFluencyTasks(pool), count - valid.length),
+                    ];
+                  }
+                  setQuestions(valid.slice(0, count));
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } catch {
+                  const pool = WF_TRAINING_POOL_1000.map((t, idx) => ({
+                    ...t,
+                    id: t.id ?? `wf-1000-${idx}`,
+                  }));
+                  const valid = shuffleSlice(
+                    filterValidWordFluencyTasks(pool),
+                    EXAM_CONFIG.wortfluessigkeit.questions
+                  );
+                  setQuestions(valid);
+                  setMode("training");
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } finally {
+                  setTrainingLoading(false);
+                }
+              }}
+              disabled={trainingLoading}
+            >
+              <Timer className="w-5 h-5 mr-2" /> Prüfungsmodus starten
+            </Button>
+          </CardContent>
+        </Card>
 
         <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
           <CardHeader>
@@ -2171,13 +2442,26 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer
+          totalSeconds={EXAM_CONFIG.wortfluessigkeit.timeSeconds}
+          onTimeUp={handleSubmit}
+        />
+      )}
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <span className="text-sm text-muted">
-          Wort {index + 1} von {safeQuestions.length}
-        </span>
+        <div className="flex items-center gap-2">
+          {examMode === "exam" && (
+            <Badge variant="danger" className="text-[10px]">
+              Prüfungsmodus
+            </Badge>
+          )}
+          <span className="text-sm text-muted">
+            Wort {index + 1} von {safeQuestions.length}
+          </span>
+        </div>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div
@@ -2224,9 +2508,13 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
         </CardContent>
       </Card>
       <div className="flex justify-between">
-        <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode !== "exam" ? (
+          <Button variant="outline" onClick={() => setIndex((i) => i - 1)} disabled={index === 0}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < safeQuestions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)}>
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
@@ -2252,6 +2540,7 @@ const FILL_FZ = "#5eb8f0";
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [mode, setMode] = useState<"official" | "training" | null>(null);
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(10);
   const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);
   const [index, setIndex] = useState(0);
@@ -2421,6 +2710,83 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           pro Aufgabe.
         </p>
         <UebungsbeschreibungCard id="kff-figuren" collapsible defaultCollapsed />
+
+        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Timer className="w-5 h-5" /> Prüfungsmodus
+            </CardTitle>
+            <p className="text-sm text-muted">
+              {EXAM_CONFIG.figuren.questions} Aufgaben · {EXAM_CONFIG.figuren.timeSeconds / 60}{" "}
+              Minuten gesamt — wie im echten MedAT (kein Timer pro Frage).
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={async () => {
+                setExamMode("exam");
+                setTrainingLoading(true);
+                try {
+                  const domain = "kff-figuren" as const;
+                  const rating = skillRating ?? 500;
+                  const count = EXAM_CONFIG.figuren.questions;
+                  const tasks = await getTasksForUserWithWeakness(
+                    domain,
+                    rating,
+                    count,
+                    150,
+                    getKffFailedIdsForDomain(domain)
+                  );
+                  const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
+                  let valid = filterValidFigurenTasks(list);
+                  if (valid.length < count) {
+                    const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+                    const seed = Date.now();
+                    const generated: FigureAssembleTask[] = [];
+                    for (let i = 0; i < count - valid.length; i++) {
+                      const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+                      if (t) generated.push(t);
+                    }
+                    valid = [...valid, ...filterValidFigurenTasks(generated)];
+                  }
+                  if (valid.length < count)
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(
+                        filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
+                        count - valid.length
+                      ),
+                    ];
+                  setQuestions(valid.slice(0, count));
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } catch {
+                  const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+                  const seed = Date.now();
+                  const generated: FigureAssembleTask[] = [];
+                  for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {
+                    const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+                    if (t) generated.push(t);
+                  }
+                  setQuestions(
+                    filterValidFigurenTasks(generated).slice(0, EXAM_CONFIG.figuren.questions)
+                  );
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } finally {
+                  setTrainingLoading(false);
+                }
+              }}
+              disabled={trainingLoading}
+            >
+              <Timer className="w-5 h-5 mr-2" /> Prüfungsmodus starten
+            </Button>
+          </CardContent>
+        </Card>
 
         {mode === null ? (
           <div className="grid gap-4 sm:grid-cols-2">
@@ -2768,18 +3134,30 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={EXAM_CONFIG.figuren.timeSeconds} onTimeUp={handleFzSubmit} />
+      )}
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
         <div className="flex items-center gap-3">
+          {examMode === "exam" && (
+            <Badge variant="danger" className="text-[10px]">
+              Prüfungsmodus
+            </Badge>
+          )}
           <span className="text-sm text-muted">
             Aufgabe {index + 1} von {questions.length}
           </span>
-          <div className={`flex items-center gap-1 font-mono text-sm font-semibold ${timerColor}`}>
-            <Timer className="w-4 h-4" />
-            {minutes}:{seconds.toString().padStart(2, "0")}
-          </div>
+          {examMode !== "exam" && (
+            <div
+              className={`flex items-center gap-1 font-mono text-sm font-semibold ${timerColor}`}
+            >
+              <Timer className="w-4 h-4" />
+              {minutes}:{seconds.toString().padStart(2, "0")}
+            </div>
+          )}
         </div>
       </div>
 
@@ -2871,9 +3249,13 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       </div>
 
       <div className="flex justify-between">
-        <Button variant="outline" onClick={goToPrev} disabled={index === 0}>
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode !== "exam" ? (
+          <Button variant="outline" onClick={goToPrev} disabled={index === 0}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < questions.length - 1 ? (
           <Button onClick={goToNext}>
             Weiter <ArrowRight className="w-4 h-4 ml-1" />

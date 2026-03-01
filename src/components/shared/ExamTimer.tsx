@@ -1,0 +1,67 @@
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Timer } from "lucide-react";
+
+type ExamTimerProps = {
+  totalSeconds: number;
+  onTimeUp: () => void;
+  paused?: boolean;
+};
+
+export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerProps) {
+  const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
+  const onTimeUpRef = useRef(onTimeUp);
+  onTimeUpRef.current = onTimeUp;
+  const firedRef = useRef(false);
+
+  useEffect(() => {
+    if (paused || secondsLeft <= 0) return;
+    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearInterval(t);
+  }, [paused, secondsLeft]);
+
+  useEffect(() => {
+    if (secondsLeft <= 0 && !firedRef.current) {
+      firedRef.current = true;
+      onTimeUpRef.current();
+    }
+  }, [secondsLeft]);
+
+  const min = Math.floor(secondsLeft / 60);
+  const sec = secondsLeft % 60;
+  const isWarning = secondsLeft > 0 && secondsLeft <= 120;
+
+  return (
+    <div
+      className={`fixed top-4 right-4 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg border backdrop-blur-sm font-mono text-sm font-semibold transition-colors ${
+        isWarning
+          ? "bg-red-50/90 dark:bg-red-950/90 border-red-300 dark:border-red-700 text-red-700 dark:text-red-400 animate-pulse"
+          : "bg-white/80 dark:bg-gray-900/80 border-gray-200/50 dark:border-gray-700/50 text-gray-900 dark:text-gray-100"
+      }`}
+    >
+      <Timer className={`w-4 h-4 ${isWarning ? "text-red-500" : "text-muted"}`} />
+      <span>
+        {min}:{sec.toString().padStart(2, "0")}
+      </span>
+    </div>
+  );
+}
+
+/** Hook variant for components that need the remaining time value */
+export function useExamTimer(totalSeconds: number, paused = false) {
+  const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
+
+  useEffect(() => {
+    if (paused || secondsLeft <= 0) return;
+    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearInterval(t);
+  }, [paused, secondsLeft]);
+
+  const reset = useCallback(
+    (newTotal?: number) => {
+      setSecondsLeft(newTotal ?? totalSeconds);
+    },
+    [totalSeconds]
+  );
+
+  return { secondsLeft, isUp: secondsLeft <= 0, reset };
+}

@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen, Play, Send, CheckCircle2, XCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpen,
+  Play,
+  Send,
+  CheckCircle2,
+  XCircle,
+  Timer,
+} from "lucide-react";
+import { ExamTimer } from "@/components/shared/ExamTimer";
+import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -237,8 +248,10 @@ function EmotionenErkennenQuiz({
   tasks: EmotionenErkennenOffiziellTask[];
   onBack: () => void;
 }) {
-  const [phase, setPhase] = useState<"quiz" | "result">("quiz");
-  const [questions] = useState(() => shuffle(tasks).slice(0, 14));
+  const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const eeConfig = EXAM_CONFIG.emotionenErkennen;
+  const [questions] = useState(() => shuffle(tasks).slice(0, eeConfig.questions));
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<
     Record<string, Record<string, "wahrscheinlich" | "unwahrscheinlich">>
@@ -285,6 +298,50 @@ function EmotionenErkennenQuiz({
     setPhase("result");
     setIndex(0);
   };
+
+  if (phase === "setup") {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Emotionen erkennen</h1>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("exam")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <Timer className="w-5 h-5 text-primary-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">
+                {eeConfig.questions} Aufgaben · {eeConfig.timeSeconds / 60} Minuten
+              </p>
+              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+            </CardContent>
+          </Card>
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("practice")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <BookOpen className="w-5 h-5 text-green-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
+              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+            </CardContent>
+          </Card>
+        </div>
+        <Button className="w-full" size="lg" onClick={() => setPhase("quiz")}>
+          <Play className="w-4 h-4 mr-2" /> Starten
+        </Button>
+      </div>
+    );
+  }
 
   if (phase === "result") {
     let score = 0;
@@ -363,6 +420,9 @@ function EmotionenErkennenQuiz({
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={eeConfig.timeSeconds} onTimeUp={handleSubmit} />
+      )}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -371,6 +431,11 @@ function EmotionenErkennenQuiz({
           <Badge className="bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-400 w-fit">
             Emotionen erkennen
           </Badge>
+          {examMode === "exam" && (
+            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+              Prüfung
+            </Badge>
+          )}
           <span className="text-sm text-muted">
             {index + 1}/{questions.length}
           </span>
@@ -442,14 +507,18 @@ function EmotionenErkennenQuiz({
         </CardContent>
       </Card>
       <div className="flex flex-col sm:flex-row justify-between gap-2">
-        <Button
-          variant="outline"
-          onClick={() => setIndex((i) => i - 1)}
-          disabled={index === 0}
-          className="w-full sm:w-auto"
-        >
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode === "practice" ? (
+          <Button
+            variant="outline"
+            onClick={() => setIndex((i) => i - 1)}
+            disabled={index === 0}
+            className="w-full sm:w-auto"
+          >
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < questions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
@@ -480,8 +549,10 @@ function EmotionenRegulierenQuiz({
   tasks: EmotionenRegulierenTask[];
   onBack: () => void;
 }) {
-  const [phase, setPhase] = useState<"quiz" | "result">("quiz");
-  const [questions] = useState(() => shuffle(tasks).slice(0, 12));
+  const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const erConfig = EXAM_CONFIG.emotionenRegulieren;
+  const [questions] = useState(() => shuffle(tasks).slice(0, erConfig.questions));
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
@@ -490,10 +561,19 @@ function EmotionenRegulierenQuiz({
     let totalScore = 0;
     let maxScore = 0;
     questions.forEach((q) => {
-      maxScore += 3;
-      const selectedIdx = answers[q.id];
-      if (selectedIdx !== undefined) {
-        totalScore += q.strategien[selectedIdx].score;
+      if (examMode === "exam") {
+        // Exam mode: only score=3 counts as 1 point, rest = 0
+        maxScore += 1;
+        const selectedIdx = answers[q.id];
+        if (selectedIdx !== undefined && q.strategien[selectedIdx].score === 3) {
+          totalScore += 1;
+        }
+      } else {
+        maxScore += 3;
+        const selectedIdx = answers[q.id];
+        if (selectedIdx !== undefined) {
+          totalScore += q.strategien[selectedIdx].score;
+        }
       }
     });
     const pct = Math.round((totalScore / maxScore) * 100);
@@ -514,19 +594,71 @@ function EmotionenRegulierenQuiz({
         };
       }),
     });
-    addXP(Math.round(totalScore * 5));
+    addXP(examMode === "exam" ? totalScore * 15 : Math.round(totalScore * 5));
     checkStreak();
     setPhase("result");
     setIndex(0);
   };
 
+  if (phase === "setup") {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Emotionen regulieren
+        </h1>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("exam")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <Timer className="w-5 h-5 text-primary-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">
+                {erConfig.questions} Aufgaben · {erConfig.timeSeconds / 60} Minuten
+              </p>
+              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+            </CardContent>
+          </Card>
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("practice")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <BookOpen className="w-5 h-5 text-green-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
+              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+            </CardContent>
+          </Card>
+        </div>
+        <Button className="w-full" size="lg" onClick={() => setPhase("quiz")}>
+          <Play className="w-4 h-4 mr-2" /> Starten
+        </Button>
+      </div>
+    );
+  }
+
   if (phase === "result") {
     let totalScore = 0;
     let maxScore = 0;
     questions.forEach((q) => {
-      maxScore += 3;
-      const selectedIdx = answers[q.id];
-      if (selectedIdx !== undefined) totalScore += q.strategien[selectedIdx].score;
+      if (examMode === "exam") {
+        maxScore += 1;
+        const selectedIdx = answers[q.id];
+        if (selectedIdx !== undefined && q.strategien[selectedIdx].score === 3) totalScore += 1;
+      } else {
+        maxScore += 3;
+        const selectedIdx = answers[q.id];
+        if (selectedIdx !== undefined) totalScore += q.strategien[selectedIdx].score;
+      }
     });
     return (
       <div className="max-w-3xl mx-auto space-y-6">
@@ -539,7 +671,8 @@ function EmotionenRegulierenQuiz({
               {totalScore}/{maxScore}
             </div>
             <p className="text-muted mt-1">
-              {Math.round((totalScore / maxScore) * 100)}% — Prozentuale Bewertung
+              {Math.round((totalScore / maxScore) * 100)}% —{" "}
+              {examMode === "exam" ? "Alles-oder-Nichts (Prüfung)" : "Prozentuale Bewertung"}
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">
               +{Math.round(totalScore * 5)} XP
@@ -604,6 +737,9 @@ function EmotionenRegulierenQuiz({
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={erConfig.timeSeconds} onTimeUp={handleSubmit} />
+      )}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -612,6 +748,11 @@ function EmotionenRegulierenQuiz({
           <Badge className="bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 w-fit">
             Emotionen regulieren
           </Badge>
+          {examMode === "exam" && (
+            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+              Prüfung
+            </Badge>
+          )}
           <span className="text-sm text-muted">
             {index + 1}/{questions.length}
           </span>
@@ -653,14 +794,18 @@ function EmotionenRegulierenQuiz({
         </CardContent>
       </Card>
       <div className="flex flex-col sm:flex-row justify-between gap-2">
-        <Button
-          variant="outline"
-          onClick={() => setIndex((i) => i - 1)}
-          disabled={index === 0}
-          className="w-full sm:w-auto"
-        >
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode === "practice" ? (
+          <Button
+            variant="outline"
+            onClick={() => setIndex((i) => i - 1)}
+            disabled={index === 0}
+            className="w-full sm:w-auto"
+          >
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < questions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
@@ -706,8 +851,10 @@ function SozialesEntscheidenQuiz({
   tasks: SozialesEntscheidenTask[];
   onBack: () => void;
 }) {
-  const [phase, setPhase] = useState<"instructions" | "quiz" | "result">("instructions");
-  const [questions] = useState(() => shuffle(tasks).slice(0, 14));
+  const [phase, setPhase] = useState<"setup" | "instructions" | "quiz" | "result">("setup");
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const seConfig = EXAM_CONFIG.sozialesEntscheiden;
+  const [questions] = useState(() => shuffle(tasks).slice(0, seConfig.questions));
   const [index, setIndex] = useState(0);
   // rankings[taskId] = { statementIdx: rank (1-5) }
   const [rankings, setRankings] = useState<Record<string, Record<number, number>>>({});
@@ -756,6 +903,52 @@ function SozialesEntscheidenQuiz({
     setPhase("result");
     setIndex(0);
   };
+
+  if (phase === "setup") {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Soziales Entscheiden
+        </h1>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("exam")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <Timer className="w-5 h-5 text-primary-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">
+                {seConfig.questions} Aufgaben · {seConfig.timeSeconds / 60} Minuten
+              </p>
+              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+            </CardContent>
+          </Card>
+          <Card
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            onClick={() => setExamMode("practice")}
+          >
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <BookOpen className="w-5 h-5 text-green-600" />
+                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+              </div>
+              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
+              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+            </CardContent>
+          </Card>
+        </div>
+        <Button className="w-full" size="lg" onClick={() => setPhase("instructions")}>
+          <Play className="w-4 h-4 mr-2" /> Starten
+        </Button>
+      </div>
+    );
+  }
 
   // Ausfüllvorschrift (offizielle Anleitung) vor dem Quiz anzeigen
   if (phase === "instructions") {
@@ -952,6 +1145,9 @@ function SozialesEntscheidenQuiz({
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={seConfig.timeSeconds} onTimeUp={handleSubmit} />
+      )}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -960,6 +1156,11 @@ function SozialesEntscheidenQuiz({
           <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 w-fit">
             Soziales Entscheiden
           </Badge>
+          {examMode === "exam" && (
+            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+              Prüfung
+            </Badge>
+          )}
           <span className="text-sm text-muted">
             {index + 1}/{questions.length}
           </span>
@@ -1024,14 +1225,18 @@ function SozialesEntscheidenQuiz({
         </CardContent>
       </Card>
       <div className="flex flex-col sm:flex-row justify-between gap-2">
-        <Button
-          variant="outline"
-          onClick={() => setIndex((i) => i - 1)}
-          disabled={index === 0}
-          className="w-full sm:w-auto"
-        >
-          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
-        </Button>
+        {examMode === "practice" ? (
+          <Button
+            variant="outline"
+            onClick={() => setIndex((i) => i - 1)}
+            disabled={index === 0}
+            className="w-full sm:w-auto"
+          >
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
         {index < questions.length - 1 ? (
           <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
