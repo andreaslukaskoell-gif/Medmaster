@@ -26,18 +26,11 @@ export const mathKap5: Kapitel = {
       ],
       content: `## Grundform und Begriffe
 
-**Idee:** Eine lineare Funktion beschreibt einen Zusammenhang, bei dem die Änderung von y proportional zur Änderung von x ist — der Graph ist eine **Gerade**. Die Steigung m sagt „wie viel y pro x”, der Achsenabschnitt b sagt „wo die Gerade die y-Achse schneidet”. Damit lassen sich Kalibrierkurven, Dosis-Wirkungs-Beziehungen im linearen Bereich und Infusionsraten modellieren.
-
-**Verfahren:** Allgemeine Form **f(x) = mx + b**: m = Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁); b = y-Achsenabschnitt = f(0). Gerade aus zwei Punkten: zuerst m berechnen, dann b = y₁ − m·x₁. Nullstelle: f(x) = 0 ⇒ x₀ = −b/m. Senkrechte Gerade zu m₁: m₂ = −1/m₁. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.
-
-
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt, Schnittpunkt mit y-Achse) ist. Der Name “linear” leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
 
 Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
 
 > **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. “mg/L pro Stunde” oder “mmHg pro BMI-Punkt”.
-
-**Typische Prüfungsfehler:** Nullstelle mit Mitternachtsformel verwechseln (bei linear: x₀ = −b/m). Senkrechte Gerade: m₂ = −1/m₁ setzen (nicht m₂ = −m₁). Steigung: Δy/Δx — y-Differenz im Zähler, x-Differenz im Nenner (nicht vertauschen). b ist der y-Achsenabschnitt (Wert bei x = 0), nicht die Nullstelle.
 
 ## Steigung und Achsenabschnitt im Detail
 
@@ -243,19 +236,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Leitkoeffizient",
         "Wurfparabel",
       ],
-      content: `**Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
-
-**Verfahren — Schrittfolge:** (1) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (2) **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a). (3) **pq-Formel** nur bei normierter Form x²+px+q = 0: x = −p/2 ± √((p/2)²−q). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
-
-**Typische Prüfungsfehler:** pq-Formel bei ax²+bx+c anwenden ohne vorher durch a zu teilen. D = b²−**4ac** (nicht 2ac). Scheitelpunkt x_S = **−**b/(2a) (Minus nicht vergessen).
-
----
-
-## Allgemeine und Scheitelpunktform
-
-
-
-
+      content: `## Allgemeine und Scheitelpunktform
 
 Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a (führender Koeffizient vor x²) ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
 
@@ -490,19 +471,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `**Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
-
-**Verfahren — Schrittfolge:** (1) **Zerfall:** f(t) = f₀×e^(−kt). (2) **T½ aus k:** T½ = ln(2)/k. **k aus T½:** k = ln(2)/T½. (3) **Rest nach n Halbwertszeiten:** f = f₀×(½)ⁿ. (4) **Steady-State** (Sättigung): f(t) = A×(1−e^(−kt)) → Grenzwert A.
-
-**Typische Prüfungsfehler:** e-Funktion wird nie exakt 0 (nur Asymptote). T½ = ln(2)/k (nicht 1/k). Nach 3×T½ bleiben 12,5 % (½³), nicht 1/3.
-
----
-
-## Grundform und Eigenschaften
-
-
-
-
+      content: `## Grundform und Eigenschaften
 
 Die Exponentialfunktion hat die allgemeine Form **f(x) = a × bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
 
@@ -737,19 +706,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `**Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
-
-**Verfahren — Schrittfolge:** (1) **pH aus [H⁺]:** pH = −log₁₀([H⁺]). **[H⁺] aus pH:** [H⁺] = 10^(−pH). (2) **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). (3) **Dezibel** (logarithmische Lautstärkeeinheit)**:** L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10. (4) **Basiswechsel:** log_b(x) = ln(x)/ln(b).
-
-**Typische Prüfungsfehler:** ln(0) und ln(negativ) existieren nicht. log(a+b) ≠ log a + log b. pH: Vorzeichen nicht vergessen (pH = **−**log([H⁺])).
-
----
-
-## Definition und Grundbegriffe
-
-
-
-
+      content: `## Definition und Grundbegriffe
 
 Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
 

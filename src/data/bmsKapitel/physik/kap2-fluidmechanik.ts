@@ -30,14 +30,14 @@ export const physKapFluid: Kapitel = {
 
 ## Druck -- Wiederholung und Grundbegriff
 
-**Bevor wir den Druck in Fluiden betrachten,** wiederholen wir die Definition: **Druck** ist definiert als Kraft pro Flaeche:
+**Bevor wir den Druck in Fluiden betrachten,** wiederholen wir die Definition: **Druck** ist definiert als Kraft pro Fläche:
 
 **p = F / A**
 
-Die SI-Einheit ist **Pascal** (Pa = N/m2 = kg*m-1*s-2). In der Medizin wird der Blutdruck in **mmHg** (Millimeter Quecksilbersaeule) angegeben: **1 mmHg ca. 133,3 Pa**.
+Die SI-Einheit ist **Pascal** (Pa = N/m2 = kg*m-1*s-2). In der Medizin wird der Blutdruck in **mmHg** (Millimeter Quecksilbersäule) angegeben: **1 mmHg ca. 133,3 Pa**.
 
 Weitere Druckeinheiten:
-- 1 atm = 101 325 Pa = 760 mmHg (Atmosphaerendruck auf Meereshoehe)
+- 1 atm = 101 325 Pa = 760 mmHg (Atmosphärendruck auf Meereshöhe)
 - 1 bar = 100 000 Pa ca. 750 mmHg
 - 1 cmH2O ca. 98,07 Pa (Beatmungsmedizin)
 
@@ -51,50 +51,50 @@ Weitere Druckeinheiten:
 **p = rho * g * h**
 
 Dabei ist:
-- **rho** = Dichte der Fluessigkeit (in kg/m3; Wasser: rho ca. 1000 kg/m3, Blut: rho ca. 1060 kg/m3)
+- **rho** = Dichte der Flüssigkeit (in kg/m3; Wasser: rho ca. 1000 kg/m3, Blut: rho ca. 1060 kg/m3)
 - **g** = Erdbeschleunigung (ca. 9,81 m/s2)
-- **h** = Tiefe (Hoehe der Fluessigkeitssaeule in m)
+- **h** = Tiefe (Höhe der Flüssigkeitssäule in m)
 
-Der **Gesamtdruck** in einer Tiefe h betraegt: **p_gesamt = p_0 + rho*g*h**, wobei p_0 der Druck an der Oberflaeche (z. B. Atmosphaerendruck) ist.
+Der **Gesamtdruck** in einer Tiefe h beträgt: **p_gesamt = p_0 + rho*g*h**, wobei p_0 der Druck an der Oberfläche (z. B. Atmosphärendruck) ist.
 
-**Rechenbeispiel -- Schweredruck im Blutgefaess:**
-Wie gross ist der hydrostatische Druckunterschied zwischen Herz und Fuss (Hoehendifferenz h ca. 1,3 m)?
+**Rechenbeispiel -- Schweredruck im Blutgefäß:**
+Wie gross ist der hydrostatische Druckunterschied zwischen Herz und Fuss (Höhendifferenz h ca. 1,3 m)?
 Delta-p = rho_Blut * g * h = 1060 kg/m3 * 9,81 m/s2 * 1,3 m ca. **13 520 Pa ca. 101 mmHg**
 
-Das bedeutet: Im Stehen ist der Blutdruck am Fuss um ca. **100 mmHg hoeher** als auf Herzhoehe! Im Kopf (ca. 0,4 m ueber dem Herzen) ist er entsprechend ca. 30 mmHg niedriger.
+Das bedeutet: Im Stehen ist der Blutdruck am Fuss um ca. **100 mmHg höher** als auf Herzhöhe! Im Kopf (ca. 0,4 m über dem Herzen) ist er entsprechend ca. 30 mmHg niedriger.
 
-> **Merke:** p = rho*g*h -- der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersaeule nimmt der Druck um ca. 1 atm zu. Pro 1,3 m Blutsaeule (Herz -> Fuss) um ca. 100 mmHg.
+> **Merke:** p = rho*g*h -- der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersäule nimmt der Druck um ca. 1 atm zu. Pro 1,3 m Blutsäule (Herz -> Fuss) um ca. 100 mmHg.
 
 ---
 
 ## Hydrostatisches Paradoxon
 
-**Um das zu verstehen,** muss man ein Prinzip begreifen, das zunaechst ueberraschend wirkt: Der Bodendruck in einem mit Fluessigkeit gefuellten Gefaess haengt **nur** von der Fuellhoehe h und der Dichte rho ab -- **nicht von der Gefaessform** und nicht vom Gesamtvolumen.
+**Um das zu verstehen,** muss man ein Prinzip begreifen, das zunächst überraschend wirkt: Der Bodendruck in einem mit Flüssigkeit gefüllten Gefäß hängt **nur** von der Füllhöhe h und der Dichte rho ab -- **nicht von der Gefäßform** und nicht vom Gesamtvolumen.
 
-Drei verschieden geformte Gefaesse (schmal, breit, trichterfoermig), die mit derselben Fluessigkeit auf dieselbe Hoehe h gefuellt sind, haben exakt **denselben Bodendruck**: p = rho*g*h.
+Drei verschieden geformte Gefäße (schmal, breit, trichterförmig), die mit derselben Flüssigkeit auf dieselbe Höhe h gefüllt sind, haben exakt **denselben Bodendruck**: p = rho*g*h.
 
-Das erscheint paradox, weil die Gewichtskraft der Fluessigkeit in den drei Gefaessen unterschiedlich ist. Die Erklaerung: Bei schraegen oder sich verengenden Waenden uebt die Fluessigkeit Normalkraefte auf die Wand aus, die den Unterschied kompensieren.
+Das erscheint paradox, weil die Gewichtskraft der Flüssigkeit in den drei Gefäßen unterschiedlich ist. Die Erklärung: Bei schrägen oder sich verengenden Wänden übt die Flüssigkeit Normalkräfte auf die Wand aus, die den Unterschied kompensieren.
 
-> **Merke:** Hydrostatisches Paradoxon: Der Bodendruck haengt nur von rho, g und h ab -- nicht von der Gefaessform oder dem Volumen!
+> **Merke:** Hydrostatisches Paradoxon: Der Bodendruck hängt nur von rho, g und h ab -- nicht von der Gefäßform oder dem Volumen!
 
 ---
 
 ## Pascalsches Prinzip
 
 
-> Ein auf eine eingeschlossene Fluessigkeit ausguebter Druck breitet sich **gleichmaessig in alle Richtungen** aus und wirkt auf jede Flaecheneinheit der Gefaesswand gleich stark.
+> Ein auf eine eingeschlossene Flüssigkeit ausübter Druck breitet sich **gleichmäßig in alle Richtungen** aus und wirkt auf jede Flächeneinheit der Gefäßwand gleich stark.
 
 **Anwendung -- Die hydraulische Presse:**
 
-An einem Kolben mit kleiner Flaeche A1 wird die Kraft F1 aufgebracht. Da der Druck p = F/A ueberall gleich ist, gilt:
+An einem Kolben mit kleiner Fläche A1 wird die Kraft F1 aufgebracht. Da der Druck p = F/A überall gleich ist, gilt:
 
 **F1 / A1 = F2 / A2 -> F2 = F1 * (A2 / A1)**
 
-Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der grosse Kolben nur 1/10 des Weges (Energieerhaltung: W = F*s = const).
+Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der große Kolben nur 1/10 des Weges (Energieerhaltung: W = F*s = const).
 
-**Klinisch:** Das Pascalsche Prinzip erklaert, warum ein erhoehter intraabdomineller Druck (Druck im Bauchraum, z. B. bei Aszites, einer Fluessigkeitsansammlung im Bauchraum) gleichmaessig auf alle umliegenden Organe wirkt und die Zwerchfellbewegung einschraenken kann.
+**Klinisch:** Das Pascalsche Prinzip erklärt, warum ein erhöhter intraabdomineller Druck (Druck im Bauchraum, z. B. bei Aszites, einer Flüssigkeitsansammlung im Bauchraum) gleichmäßig auf alle umliegenden Organe wirkt und die Zwerchfellbewegung einschränken kann.
 
-> **Merke:** Pascalsches Prinzip: Druck in einer eingeschlossenen Fluessigkeit breitet sich allseitig gleich aus. Hydraulische Presse: Kraftverstaerkung F2 = F1 * (A2/A1), aber s2 = s1 * (A1/A2).
+> **Merke:** Pascalsches Prinzip: Druck in einer eingeschlossenen Flüssigkeit breitet sich allseitig gleich aus. Hydraulische Presse: Kraftverstärkung F2 = F1 * (A2/A1), aber s2 = s1 * (A1/A2).
 
 ---
 
@@ -102,13 +102,13 @@ Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der gro
 
 **Um den Druck zu messen,** verwendet man Manometer. In der Medizin ist das **Quecksilber-Manometer** (Sphygmomanometer, griech. Pulsmesser) nach **Riva-Rocci** historisch bedeutend:
 
-Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geraeusche** (pulssynchrone Stroemungsgeraeusche beim Ablassen des Manschettendrucks) auskultiert (abgehoert):
-- **Systolischer Wert**: erstes hoerbares Klopfen (Blut presst sich durch die Stenose, d. h. Gefaessverengung)
-- **Diastolischer Wert**: Verschwinden der Geraeusche (freier Blutfluss)
+Die Manschette wird am Oberarm auf **Herzhöhe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geräusche** (pulssynchrone Strömungsgeräusche beim Ablassen des Manschettendrucks) auskultiert (abgehört):
+- **Systolischer Wert**: erstes hörbares Klopfen (Blut presst sich durch die Stenose, d. h. Gefäßverengung)
+- **Diastolischer Wert**: Verschwinden der Geräusche (freier Blutfluss)
 
-**Warum Herzhoehe?** Liegt die Manschette 15 cm unter Herzhoehe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Bluthochdruck, Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbeduertig" ausmachen!
+**Warum Herzhöhe?** Liegt die Manschette 15 cm unter Herzhöhe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Bluthochdruck, Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbedürftig" ausmachen!
 
-> **Merke:** Blutdruckmessung immer auf Herzhoehe! Jeder Zentimeter Abweichung verfaelscht das Ergebnis um ca. 0,8 mmHg (ca. rho_Blut * g * 0,01 m / 133 Pa/mmHg).`,
+> **Merke:** Blutdruckmessung immer auf Herzhöhe! Jeder Zentimeter Abweichung verfälscht das Ergebnis um ca. 0,8 mmHg (ca. rho_Blut * g * 0,01 m / 133 Pa/mmHg).`,
 
       lernziele: [
         "Den hydrostatischen Druck mit p = ρ·g·h berechnen können",
@@ -249,15 +249,15 @@ Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria bra
 
 ## Archimedisches Prinzip
 
-**Ein in ein Fluid eingetauchter Koerper** erfaehrt eine nach oben gerichtete Kraft -- die **Auftriebskraft** F_A. Diese ist gleich der Gewichtskraft des verdraengten Fluids:
+**Ein in ein Fluid eingetauchter Körper** erfährt eine nach oben gerichtete Kraft -- die **Auftriebskraft** F_A. Diese ist gleich der Gewichtskraft des verdrängten Fluids:
 
-**F_A = rho_Fluid * g * V_verdraengt**
+**F_A = rho_Fluid * g * V_verdrängt**
 
-Dabei ist V_verdraengt das Volumen des eingetauchten Koerperteils. Die Auftriebskraft wirkt im **Schwerpunkt** des verdraengten Fluidvolumens (Druckpunkt).
+Dabei ist V_verdrängt das Volumen des eingetauchten Körperteils. Die Auftriebskraft wirkt im **Schwerpunkt** des verdrängten Fluidvolumens (Druckpunkt).
 
-**Herleitung (vereinfacht):** Der Druck an der Unterseite des Koerpers ist groesser als an der Oberseite (p = rho*g*h nimmt mit der Tiefe zu). Die resultierende Druckdifferenz ergibt eine Nettokraft nach oben -- das ist die Auftriebskraft.
+**Herleitung (vereinfacht):** Der Druck an der Unterseite des Körpers ist größer als an der Oberseite (p = rho*g*h nimmt mit der Tiefe zu). Die resultierende Druckdifferenz ergibt eine Nettokraft nach oben -- das ist die Auftriebskraft.
 
-> **Merke:** Archimedisches Prinzip: Die Auftriebskraft F_A = rho_Fluid * g * V_verdraengt entspricht der Gewichtskraft des verdraengten Fluids. Sie haengt NICHT von der Dichte des eingetauchten Koerpers ab, sondern von der Dichte des Fluids und dem verdraengten Volumen.
+> **Merke:** Archimedisches Prinzip: Die Auftriebskraft F_A = rho_Fluid * g * V_verdrängt entspricht der Gewichtskraft des verdrängten Fluids. Sie hängt NICHT von der Dichte des eingetauchten Körpers ab, sondern von der Dichte des Fluids und dem verdrängten Volumen.
 
 ---
 
@@ -266,65 +266,65 @@ Dabei ist V_verdraengt das Volumen des eingetauchten Koerperteils. Die Auftriebs
 
 | Bedingung | Verhalten | Beispiel |
 |-----------|-----------|----------|
-| rho_Koerper < rho_Fluid | **Schwimmen** (ragt teilweise heraus) | Holz auf Wasser, Eisberg |
-| rho_Koerper = rho_Fluid | **Schweben** (in jeder Tiefe stabil) | U-Boot (reguliert Ballast) |
-| rho_Koerper > rho_Fluid | **Sinken** (bis zum Boden) | Stein in Wasser |
+| rho_Körper < rho_Fluid | **Schwimmen** (ragt teilweise heraus) | Holz auf Wasser, Eisberg |
+| rho_Körper = rho_Fluid | **Schweben** (in jeder Tiefe stabil) | U-Boot (reguliert Ballast) |
+| rho_Körper > rho_Fluid | **Sinken** (bis zum Boden) | Stein in Wasser |
 
-**Warum schwimmt ein Stahlschiff?** Stahl hat rho ca. 7800 kg/m3 (viel dichter als Wasser). Aber das Schiff ist hohl -- die **mittlere Dichte** von Stahl + eingeschlossener Luft ist kleiner als rho_Wasser. Es verdraengt genug Wasser, damit F_A = F_G.
+**Warum schwimmt ein Stahlschiff?** Stahl hat rho ca. 7800 kg/m3 (viel dichter als Wasser). Aber das Schiff ist hohl -- die **mittlere Dichte** von Stahl + eingeschlossener Luft ist kleiner als rho_Wasser. Es verdrängt genug Wasser, damit F_A = F_G.
 
 **Rechenbeispiel -- Eisberg:**
 Eis hat rho_Eis ca. 917 kg/m3, Meerwasser rho_Meer ca. 1025 kg/m3.
-Anteil ueber Wasser: 1 - rho_Eis/rho_Meer = 1 - 917/1025 ca. 0,105 -> ca. **10,5 %** ragen heraus.
+Anteil über Wasser: 1 - rho_Eis/rho_Meer = 1 - 917/1025 ca. 0,105 -> ca. **10,5 %** ragen heraus.
 Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
 
-> **Merke:** Schwimmen: rho_Koerper < rho_Fluid; Schweben: rho_Koerper = rho_Fluid; Sinken: rho_Koerper > rho_Fluid. Die mittlere Dichte zaehlt -- ein hohler Stahlkoerper kann schwimmen!
+> **Merke:** Schwimmen: rho_Körper < rho_Fluid; Schweben: rho_Körper = rho_Fluid; Sinken: rho_Körper > rho_Fluid. Die mittlere Dichte zählt -- ein hohler Stahlkörper kann schwimmen!
 
 ---
 
-## Oberflaechenspannung
+## Oberflächenspannung
 
-**Um das zu verstehen,** muss man die molekularen Kraefte an der Oberflaeche einer Fluessigkeit betrachten. Molekuele im Inneren werden allseitig von Nachbarmolekuelen angezogen (Kohaesionskraefte, d. h. Anziehungskraefte zwischen gleichartigen Molekuelen, heben sich auf). An der **Oberflaeche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberflaeche verhaelt sich wie eine **gespannte elastische Haut**.
+**Um das zu verstehen,** muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
 
-Die **Oberflaechenspannung sigma** ist definiert als Kraft pro Laenge entlang einer gedachten Linie auf der Oberflaeche:
+Die **Oberflächenspannung sigma** ist definiert als Kraft pro Länge entlang einer gedachten Linie auf der Oberfläche:
 
 **sigma = F / l** (Einheit: N/m = J/m2)
 
 Typische Werte:
 - Wasser (20 Grad C): sigma ca. 0,073 N/m
 - Blutplasma: sigma ca. 0,050 N/m
-- Surfactant-Loesung: sigma ca. 0,025 N/m (stark erniedrigt!)
+- Surfactant-Lösung: sigma ca. 0,025 N/m (stark erniedrigt!)
 
-**Kapillaritaet:** In engen Roehren (Kapillaren) steigt oder sinkt die Fluessigkeit je nach dem Verhaeltnis von Adhaesions- (Fluid-Wand) zu Kohaesionskraeften (Fluid-Fluid):
-- **Adhaesion > Kohaesion** -> konkaver Meniskus (nach innen gewoelbte Fluessigkeitsoberflaeche, d. h. Randbereich hoeher) -> Fluessigkeit steigt (Wasser in Glasroehre)
-- **Kohaesion > Adhaesion** -> konvexer Meniskus (nach aussen gewoelbte Oberflaeche) -> Fluessigkeit sinkt (Quecksilber in Glasroehre)
+**Kapillarität:** In engen Röhren (Kapillaren) steigt oder sinkt die Flüssigkeit je nach dem Verhältnis von Adhäsions- (Fluid-Wand) zu Kohäsionskräften (Fluid-Fluid):
+- **Adhäsion > Kohäsion** -> konkaver Meniskus (nach innen gewölbte Flüssigkeitsoberfläche, d. h. Randbereich höher) -> Flüssigkeit steigt (Wasser in Glasröhre)
+- **Kohäsion > Adhäsion** -> konvexer Meniskus (nach außen gewölbte Oberfläche) -> Flüssigkeit sinkt (Quecksilber in Glasröhre)
 
-> **Merke:** Oberflaechenspannung sigma = F/l entsteht durch unausgeglichene Kohaesionskraefte an der Oberflaeche. Kapillaritaet: Adhaesion > Kohaesion -> Steigen; Kohaesion > Adhaesion -> Sinken.
+> **Merke:** Oberflächenspannung sigma = F/l entsteht durch unausgeglichene Kohäsionskräfte an der Oberfläche. Kapillarität: Adhäsion > Kohäsion -> Steigen; Kohäsion > Adhäsion -> Sinken.
 
 ---
 
 ## Laplace-Gesetz und Surfactant
 
 
-Fuer eine Kugelblase mit einer Wand (z. B. Alveole, Lungenblaeschen):
+Für eine Kugelblase mit einer Wand (z. B. Alveole, Lungenbläschen):
 
 **Delta-p = 2*sigma / r**
 
 Dabei ist:
-- **Delta-p** = Druckdifferenz (innen - aussen)
-- **sigma** = Oberflaechenspannung
+- **Delta-p** = Druckdifferenz (innen - außen)
+- **sigma** = Oberflächenspannung
 - **r** = Radius der Blase
 
-**Entscheidende Konsequenz:** Je **kleiner** der Radius r, desto **groesser** der Innendruck Delta-p. Kleine Alveolen haetten ohne Gegenmassnahme einen viel hoeheren Innendruck als grosse -> sie wuerden in die grossen Alveolen "hineinblasen" -> **Kollaps** der kleinen Alveolen (= **Atelektase**).
+**Entscheidende Konsequenz:** Je **kleiner** der Radius r, desto **größer** der Innendruck Delta-p. Kleine Alveolen hätten ohne Gegenmaßnahme einen viel höheren Innendruck als große -> sie würden in die großen Alveolen "hineinblasen" -> **Kollaps** der kleinen Alveolen (= **Atelektase**).
 
 **Surfactant (Surface Active Agent):**
 Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mischung aus Phospholipiden und Proteinen. Surfactant:
-- **senkt die Oberflaechenspannung** an der Luft-Wasser-Grenzflaeche der Alveolen
-- wirkt **radiusabhaengig**: In kleinen Alveolen (Surfactant-Molekuele dichter gepackt) ist sigma staerker reduziert als in grossen -> **Druckausgleich** zwischen verschieden grossen Alveolen
+- **senkt die Oberflächenspannung** an der Luft-Wasser-Grenzfläche der Alveolen
+- wirkt **radiusabhängig**: In kleinen Alveolen (Surfactant-Moleküle dichter gepackt) ist sigma stärker reduziert als in großen -> **Druckausgleich** zwischen verschieden großen Alveolen
 - verhindert **Atelektase** (Alveolarkollaps)
 
-**Klinisch -- Fruehgeborene:** Ab der ca. 24. SSW (Schwangerschaftswoche) beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Fruehgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution ueber den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure, kontinuierlicher Atemwegsuebberdruck).
+**Klinisch -- Frühgeborene:** Ab der ca. 24. SSW (Schwangerschaftswoche) beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Frühgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution über den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure, kontinuierlicher Atemwegsüberdruck).
 
-> **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben hoeheren Innendruck! Surfactant senkt sigma radiusabhaengig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Fruehgeborene: Surfactant-Mangel -> IRDS.`,
+> **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben höheren Innendruck! Surfactant senkt sigma radiusabhängig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Frühgeborene: Surfactant-Mangel -> IRDS.`,
 
       lernziele: [
         "Das Archimedische Prinzip mathematisch anwenden und Auftriebskräfte berechnen können",
@@ -465,38 +465,38 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
 
 ## Ideale Fluide und Volumenstrom
 
-**Bevor wir die Stroemungsgesetze betrachten,** definieren wir das Modell des **idealen Fluids**:
-- **inkompressibel** (Dichte rho = const; gilt gut fuer Fluessigkeiten, naeherungsweise fuer langsame Gasstroemungen)
-- **reibungsfrei** (keine innere Reibung / Viskositaet -> wird in UK 4 ergaenzt)
-- **stationaer** (Stroemungsfeld zeitlich konstant)
+**Bevor wir die Strömungsgesetze betrachten,** definieren wir das Modell des **idealen Fluids**:
+- **inkompressibel** (Dichte rho = const; gilt gut für Flüssigkeiten, näherungsweise für langsame Gasströmungen)
+- **reibungsfrei** (keine innere Reibung / Viskosität -> wird in UK 4 ergänzt)
+- **stationär** (Strömungsfeld zeitlich konstant)
 
 Der **Volumenstrom** Q gibt an, welches Fluidvolumen pro Zeiteinheit durch einen Querschnitt fliesst:
 
 **Q = V/t = A * v** (Einheit: m3/s)
 
-Dabei ist A die Querschnittsflaeche und v die mittlere Stroemungsgeschwindigkeit.
+Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
 
-> **Merke:** Volumenstrom Q = A * v (Einheit: m3/s). Fuer ein ideales Fluid: inkompressibel, reibungsfrei, stationaer.
+> **Merke:** Volumenstrom Q = A * v (Einheit: m3/s). Für ein ideales Fluid: inkompressibel, reibungsfrei, stationär.
 
 ---
 
-## Kontinuitaetsgleichung
+## Kontinuitätsgleichung
 
 
 **A1 * v1 = A2 * v2 = const**
 
-**Konsequenz:** Verengt sich ein Rohr (A2 < A1), so muss die Stroemungsgeschwindigkeit **zunehmen** (v2 > v1) -- und umgekehrt.
+**Konsequenz:** Verengt sich ein Rohr (A2 < A1), so muss die Strömungsgeschwindigkeit **zunehmen** (v2 > v1) -- und umgekehrt.
 
 **Rechenbeispiel -- Aortenstenose:**
-Die Aorta hat einen Querschnitt A1 ca. 4,5 cm2 = 4,5 x 10-4 m2 und die mittlere Blutgeschwindigkeit betraegt v1 ca. 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A2 ca. 1,5 cm2 = 1,5 x 10-4 m2.
+Die Aorta hat einen Querschnitt A1 ca. 4,5 cm2 = 4,5 x 10-4 m2 und die mittlere Blutgeschwindigkeit beträgt v1 ca. 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A2 ca. 1,5 cm2 = 1,5 x 10-4 m2.
 v2 = v1 * (A1/A2) = 0,3 * (4,5/1,5) = 0,3 * 3 = **0,9 m/s**
 
-Die Geschwindigkeit verdreifacht sich an der Stenose! Bei staerkerer Verengung kann v2 so gross werden, dass die Stroemung turbulent wird -> **Stroemungsgeraeusche** (auskultierbar).
+Die Geschwindigkeit verdreifacht sich an der Stenose! Bei stärkerer Verengung kann v2 so gross werden, dass die Strömung turbulent wird -> **Strömungsgeräusche** (auskultierbar).
 
 **Klinisch -- Gesamtquerschnitt des Kapillarbetts:**
-Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquerschnitt A ca. 4500 cm2 -> v_Kapillare = v_Aorta * (A_Aorta/A_Kapillaren) = 0,3 * (4,5/4500) = **0,0003 m/s ca. 0,3 mm/s**. Diese extrem langsame Stroemung ermoeglicht den **Stoffaustausch** in den Kapillaren!
+Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquerschnitt A ca. 4500 cm2 -> v_Kapillare = v_Aorta * (A_Aorta/A_Kapillaren) = 0,3 * (4,5/4500) = **0,0003 m/s ca. 0,3 mm/s**. Diese extrem langsame Strömung ermöglicht den **Stoffaustausch** in den Kapillaren!
 
-> **Merke:** Kontinuitaetsgleichung: A1*v1 = A2*v2. Engere Stelle -> hoehere Geschwindigkeit. Kapillarbett: riesiger Gesamtquerschnitt -> extrem langsame Stroemung -> optimaler Stoffaustausch.
+> **Merke:** Kontinuitätsgleichung: A1*v1 = A2*v2. Engere Stelle -> höhere Geschwindigkeit. Kapillarbett: riesiger Gesamtquerschnitt -> extrem langsame Strömung -> optimaler Stoffaustausch.
 
 ---
 
@@ -508,60 +508,60 @@ Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquer
 Die drei Terme:
 - **p** = statischer Druck (der "normale" Druck, den man mit einem Manometer misst)
 - **0,5*rho*v2** = dynamischer Druck (Staudruck; entsteht durch die Bewegung)
-- **rho*g*h** = hydrostatischer Druck (Schweredruck; Einfluss der Hoehe)
+- **rho*g*h** = hydrostatischer Druck (Schweredruck; Einfluss der Höhe)
 
 **Kernaussage:** Wo die Geschwindigkeit v zunimmt, sinkt der statische Druck p -- und umgekehrt!
 
-**Venturi-Effekt:** Fliesst ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuitaet) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstaeuber).
+**Venturi-Effekt:** Fliesst ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstäuber).
 
 **Rechenbeispiel -- Druckabfall an einer Stenose:**
-Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigkeit). Da v steigt, sinkt p (Bernoulli). Ergebnis: p2 ca. **97 mmHg** -- der statische Druck sinkt um ca. **3 mmHg**. Bei staerkerer Stenose (v2 = 3 m/s) waere der Druckabfall erheblich groesser.
+Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigkeit). Da v steigt, sinkt p (Bernoulli). Ergebnis: p2 ca. **97 mmHg** -- der statische Druck sinkt um ca. **3 mmHg**. Bei stärkerer Stenose (v2 = 3 m/s) wäre der Druckabfall erheblich größer.
 
-> **Merke:** Bernoulli: p + 0,5*rho*v2 + rho*g*h = const. Hoehere Geschwindigkeit -> niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck 0,5*rho*v2 beschreibt die kinetische Energie des Fluids pro Volumen.
+> **Merke:** Bernoulli: p + 0,5*rho*v2 + rho*g*h = const. Höhere Geschwindigkeit -> niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck 0,5*rho*v2 beschreibt die kinetische Energie des Fluids pro Volumen.
 
 ---
 
-## Laminare vs. turbulente Stroemung
+## Laminare vs. turbulente Strömung
 
-**Um das zu verstehen,** betrachten wir zwei grundlegend verschiedene Stroemungsformen:
+**Um das zu verstehen,** betrachten wir zwei grundlegend verschiedene Strömungsformen:
 
-**Laminare Stroemung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blaettchen); die Stroemung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
+**Laminare Strömung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blättchen); die Strömung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
 
-**Turbulente Stroemung:** Die Fluidteilchen bewegen sich chaotisch mit Wirbeln und Fluktuationen. Hoeherer Energieverlust, hoeherer Stroemungswiderstand, **auskultierbare Geraeusche** (Stroemungsgeraeusche, Stenosegeraeusche).
+**Turbulente Strömung:** Die Fluidteilchen bewegen sich chaotisch mit Wirbeln und Fluktuationen. Höherer Energieverlust, höherer Strömungswiderstand, **auskultierbare Geräusche** (Strömungsgeräusche, Stenosegeräusche).
 
-Die **Reynolds-Zahl** Re (dimensionslos) entscheidet, welche Stroemungsform vorliegt:
+Die **Reynolds-Zahl** Re (dimensionslos) entscheidet, welche Strömungsform vorliegt:
 
 **Re = (rho * v * d) / eta**
 
-Dabei ist d der Rohrdurchmesser und eta die dynamische Viskositaet.
+Dabei ist d der Rohrdurchmesser und eta die dynamische Viskosität.
 
-| Reynolds-Zahl | Stroemungsform |
+| Reynolds-Zahl | Strömungsform |
 |---------------|---------------|
 | Re < 2300 | **laminar** |
-| 2300 < Re < 4000 | Uebergangsbereich |
+| 2300 < Re < 4000 | Übergangsbereich |
 | Re > 4000 | **turbulent** |
 
-**Klinisch relevant:** Normalerweise ist die Blutstroemung in den meisten Gefaessen **laminar**. Bei Stenosen steigt v -> Re steigt -> Uebergang zu **turbulenter** Stroemung -> **Stroemungsgeraeusche** (z. B. Karotisstenose). Auch bei Anaemie (Blutarmut, niedrige Viskositaet eta) steigt Re und kann zu funktionellen Herzgeraeuchen fuehren.
+**Klinisch relevant:** Normalerweise ist die Blutströmung in den meisten Gefäßen **laminar**. Bei Stenosen steigt v -> Re steigt -> Übergang zu **turbulenter** Strömung -> **Strömungsgeräusche** (z. B. Karotisstenose). Auch bei Anämie (Blutarmut, niedrige Viskosität eta) steigt Re und kann zu funktionellen Herzgeräuchen führen.
 
-> **Merke:** Re = rho*v*d/eta. Re < 2300: laminar (geordnet, parabolisches Profil). Re > 4000: turbulent (chaotisch, Geraeusche). Stenose -> v steigt -> Re steigt -> turbulent -> auskultierbare Geraeusche.
+> **Merke:** Re = rho*v*d/eta. Re < 2300: laminar (geordnet, parabolisches Profil). Re > 4000: turbulent (chaotisch, Geräusche). Stenose -> v steigt -> Re steigt -> turbulent -> auskultierbare Geräusche.
 
 ---
 
 ## Klinische Anwendungen: Stenose und Aneurysma
 
 **Stenose (Verengung):**
-- A sinkt -> v steigt (Kontinuitaet)
+- A sinkt -> v steigt (Kontinuität)
 - p sinkt an der Engstelle (Bernoulli)
-- Re steigt -> turbulente Stroemung -> **Stenosegeraeusche**
-- Beispiel: Karotisstenose (Verengung der Halsschlagader) -> Stroemungsgeraeusch ueber der A. carotis
+- Re steigt -> turbulente Strömung -> **Stenosegeräusche**
+- Beispiel: Karotisstenose (Verengung der Halsschlagader) -> Strömungsgeräusch über der A. carotis
 
 **Aneurysma (Aussackung):**
-- A steigt -> v sinkt (Kontinuitaet)
+- A steigt -> v sinkt (Kontinuität)
 - p steigt in der Aussackung (Bernoulli)
 - Die Wandspannung sigma = p*r/(2d) steigt mit dem Radius (Laplace!)
-- **Teufelskreis**: Aussackung -> hoeherer Druck -> Wand dehnt sich weiter -> noch groessere Aussackung -> **Ruptur** (Gefaessriss)
+- **Teufelskreis**: Aussackung -> höherer Druck -> Wand dehnt sich weiter -> noch größere Aussackung -> **Ruptur** (Gefäßriss)
 
-> **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geraeusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklaerbar durch Kontinuitaet + Bernoulli.`,
+> **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geräusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklärbar durch Kontinuität + Bernoulli.`,
 
       lernziele: [
         "Die Kontinuitätsgleichung anwenden und Geschwindigkeitsänderungen bei Querschnittsänderungen berechnen können",
@@ -740,7 +740,7 @@ Die **kinematische Viskosität ν** (nü) = η/ρ (Einheit: m²/s) — tritt in 
 **Newtonsches Fluid:** Die Viskosität η ist **konstant** — unabhängig von der Scherrate dv/dy. Die Scherspannung ist linear proportional zur Scherrate. Beispiele: Wasser, Blutplasma, Kochsalzlösung, die meisten Gase.
 
 **Nicht-Newtonsches Fluid:** Die **Viskosität** hängt von der Scherrate ab. Es gibt verschiedene Typen:
-- **Scherverdünnung** (Pseudoplastizität, scheinbare Fliessfaehigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
+- **Scherverdünnung** (Pseudoplastizität, scheinbare Fliessfähigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
 - **Scherverdickung** (Dilatanz, Aufweitung unter Belastung): η steigt bei steigender Scherrate. Beispiel: Maisstärke-Wasser-Gemisch.
 - **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze). Beispiel: Zahnpasta.
 
@@ -800,7 +800,7 @@ Die Analogie zum Ohmschen Gesetz ist vollständig:
 **Reihen- und Parallelschaltung:** Bei hintereinander geschalteten Gefäßen addieren sich die Widerstände: R_gesamt = R₁ + R₂ + ... Bei parallelen Gefäßen: 1/R_gesamt = 1/R₁ + 1/R₂ + ...
 
 **Klinisch — Totaler peripherer Widerstand (TPR):**
-Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** (kleinste Arterien) bestimmt (kleine r → großes R). Vasokonstriktion (Gefaessverengung, r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (Gefaesserweiterung, r↑) senkt den TPR → Blutdruck sinkt.
+Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** (kleinste Arterien) bestimmt (kleine r → großes R). Vasokonstriktion (Gefäßverengung, r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (Gefäßerweiterung, r↑) senkt den TPR → Blutdruck sinkt.
 
 > **Merke:** Strömungswiderstand R = 8ηL/(πr⁴) — analog zum Ohmschen Gesetz: Δp = R·Q. Arteriolen bestimmen den TPR. Vasokonstriktion → R↑ → Blutdruck↑.
 
@@ -828,7 +828,7 @@ Für eine schnellere Infusion gibt es vier Stellschrauben:
 1. **Größere Kanüle** (r↑): r⁴-Effekt! Eine 14G-Kanüle (r = 0,8 mm) liefert 16× mehr Fluss als eine 20G-Kanüle (r = 0,4 mm)
 2. **Höherer Druck** (Δp↑): Infusionsbeutel höher hängen oder Druckinfusor
 3. **Kürzere Leitung** (L↓): z. B. kürzere Kanüle
-4. **Niedrigere Viskosität** (η↓): kristalloide (salzhaltige Loesungen wie NaCl) fließen schneller als kolloide Lösungen (eiweisshaltige Loesungen) oder Blutkonserven
+4. **Niedrigere Viskosität** (η↓): kristalloide (salzhaltige Lösungen wie NaCl) fließen schneller als kolloide Lösungen (eiweisshaltige Lösungen) oder Blutkonserven
 
 **Rechenbeispiel:**
 Infusion durch eine 18G-Kanüle (r = 0,6 mm = 6 × 10⁻⁴ m, L = 5 cm = 0,05 m), Δp = 10 kPa, η_NaCl ≈ 10⁻³ Pa·s:

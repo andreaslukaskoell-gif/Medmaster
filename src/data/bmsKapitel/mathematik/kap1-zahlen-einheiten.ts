@@ -27,10 +27,6 @@ export const mathKapZahlen: Kapitel = {
       ],
       content: `## Grunddefinition und positive Exponenten
 
-**Idee:** Zehnerpotenzen 10ⁿ fassen „Größenordnungen" in einer Zahl zusammen: Statt 1.000.000 zu schreiben, schreibst du 10⁶. So lassen sich sehr große und sehr kleine Werte (Labor, Dosierung, Zellgrößen) einheitlich darstellen und **mit Rechenregeln** schnell vergleichen. Der **Exponent** n sagt dir: Wie viele Nullen hinter der 1 (positiv) bzw. wie viele Dezimalstellen bis zur 1 (negativ).
-
-**Verfahren:** 10ⁿ (n positiv) = 1 mit **n Nullen** dahinter. Tabelle auswendig können: 10¹=10, 10²=100, 10³=1.000, 10⁶=1.000.000. Umrechnung Dezimal → Zehnerpotenz: Zähle die Nullen bzw. Kommastellen; das ist der Exponent. Umrechnung Zehnerpotenz → Dezimal: Schreibe 1 und setze n Nullen (positiv) oder n Nachkommastellen mit einer 1 (negativ).
-
 Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl 10 genau **n-mal** mit sich selbst multipliziert wird. Die Zahl **n** heißt **Exponent** (Hochzahl) und gibt an, wie oft die 10 als Faktor vorkommt.
 
 | Schreibweise | Bedeutung | Dezimal |
@@ -44,8 +40,6 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 **Eselsbrücke:** Bei **positivem** Exponenten gibt **n** an, wie viele **Nullen hinter der 1** stehen. Bei 10¹² stehen zwölf Nullen. Im Blut zirkulieren beim Erwachsenen ca. **5 × 10¹²** rote Blutkörperchen pro Liter — eine Zahl, die man nur mit Zehnerpotenzen handhabbar macht.
 
 > **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn") der Zahl.
-
-**Typische Prüfungsfehler:** 10⁻ⁿ mit „negativer Zahl" verwechseln (10⁻³ ist 0,001, nicht −1000). Bei Multiplikation fälschlich Exponenten multiplizieren statt addieren. Bei Addition Vorfaktoren addieren, ohne vorher auf gleichen Exponenten zu bringen. Siehe dazu ausführlich den Abschnitt „Fehlerquellen und häufige Missverständnisse" unten.
 
 ---
 
@@ -150,20 +144,7 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
 
 **Aufgabe 3 — Zellbiologie:** Ein Mitochondrium misst ca. 2 µm = 2 × 10⁻⁶ m. Ein ATP-Synthase-Komplex misst ca. 10 nm = 10⁻⁸ m. Wie viele ATP-Synthasen passen nebeneinander auf die Länge eines Mitochondriums? Verhältnis: (2 × 10⁻⁶) / (10⁻⁸) = 2 × 10² = 200.
 
-> **Merke:** Die Kernkompetenz bei Zehnerpotenzen am MedAT ist das schnelle Abschätzen von Verhältnissen durch Exponenten-Subtraktion — nicht das Ausrechnen langer Dezimalzahlen. Wer die vier Potenzgesetze beherrscht, löst jede Aufgabe in unter 30 Sekunden.
-
----
-
-## Übersichtstabelle der Potenzgesetze
-
-Zur **schnellen Wiederholung** die vier Regeln im Überblick:
-
-| Operation | Regel | Beispiel |
-|-----------|-------|----------|
-| Multiplikation | 10ᵃ × 10ᵇ = 10^(a+b) | 10³ × 10⁴ = 10⁷ |
-| Division | 10ᵃ / 10ᵇ = 10^(a−b) | 10⁶ / 10² = 10⁴ |
-| Potenzieren | (10ᵃ)ᵇ = 10^(a×b) | (10³)² = 10⁶ |
-| Wurzel | √(10ⁿ) = 10^(n/2) | √(10⁶) = 10³ |`,
+> **Merke:** Die Kernkompetenz bei Zehnerpotenzen am MedAT ist das schnelle Abschätzen von Verhältnissen durch Exponenten-Subtraktion — nicht das Ausrechnen langer Dezimalzahlen. Wer die vier Potenzgesetze beherrscht, löst jede Aufgabe in unter 30 Sekunden.`,
       lernziele: [
         "Zehnerpotenzen mit positiven und negativen Exponenten korrekt interpretieren und ineinander umrechnen.",
         "Die vier Grundrechenregeln (Multiplikation, Division, Potenzieren, Wurzeln) auf Zehnerpotenzen anwenden.",
@@ -364,15 +345,7 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
         "Präfix-Umrechnung",
         "Dosierungsfehler",
       ],
-      content: `**Verfahren — Umrechnung zwischen Präfixen (Schrittfolge):**
-1. **Ausgangs- und Zieleinheit** als Zehnerpotenz zur **gleichen** Basiseinheit schreiben (z. B. 1 mg = 10⁻³ g, 1 µg = 10⁻⁶ g).
-2. **Verhältnis bilden:** Exponent Ausgang minus Exponent Ziel → Faktor 10^(Differenz). Von mg (10⁻³) nach µg (10⁻⁶): 10⁻³/10⁻⁶ = 10³ → 1 mg = 1.000 µg.
-3. **Richtung merken:** Kleinere Einheit (z. B. µg) → **größere Zahl** (× 1.000). Größere Einheit (mg) → **kleinere Zahl** (÷ 1.000). Eselsbrücke: „Wer kleiner misst, zählt mehr.“
-
-**Typische Prüfungsfehler:** µ (Mikro, 10⁻⁶) mit m (Milli, 10⁻³) verwechseln → 1.000-facher Dosierungsfehler. Umrechnungsrichtung falsch (mg → µg muss × 1.000 sein, nicht ÷). M (Mega, 10⁶) vs. m (Milli) — Groß-/Kleinschreibung beachten. Piko = 10⁻¹², Nano = 10⁻⁹ (Reihenfolge nicht vertauschen).
-
----
-## Die Systematik der SI-Präfixe
+      content: `## Die Systematik der SI-Präfixe
 
 **Um Präfixe sicher zu nutzen,** brauchst du zuerst die **Systematik**: Welche Zeichen gibt es, und in welcher Reihenfolge? **Dafür** die Grundregel.
 
@@ -723,15 +696,7 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
         "Avogadro-Zahl",
         "Halbwertszeit",
       ],
-      content: `**Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
-
-**Verfahren — Schrittfolge:** (1) **Multiplikation/Division:** Vorfaktoren verrechnen, Exponenten addieren/subtrahieren, dann normalisieren. (2) **Addition/Subtraktion:** kleineren Exponenten an größeren angleichen (Vorfaktor anpassen), dann Vorfaktoren addieren/subtrahieren, normalisieren. (3) **Dezimal → Notation:** Komma verschieben bis 1 ≤ a < 10; Stellen zählen → Exponent (links = positiv, rechts = negativ). (4) **pH:** pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺].
-
-**Typische Prüfungsfehler:** Bei Addition Vorfaktoren addieren ohne gleichen Exponenten (3×10³ + 4×10² ≠ 7×10⁵). Bei Division Exponenten dividieren statt subtrahieren. Normalisierung vergessen (12×10⁴ → 1,2×10⁵). pH: Vorzeichen nicht vergessen (pH = −log([H⁺])).
-
----
-
-## Definition und Normalform
+      content: `## Definition und Normalform
 
 **Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
 
@@ -822,8 +787,7 @@ Falls das Ergebnis nicht normalisiert ist (Vorfaktor ≥ 10 oder < 1), muss man 
 
 ## Logarithmen und Zehnerpotenzen: der natürliche Zusammenhang
 
-
-Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
+Der dekadische Logarithmus (log₁₀) ist die Umkehrfunktion der Zehnerpotenz — log₁₀(10ⁿ) = n. Das bedeutet: log₁₀(1.000) = 3; log₁₀(0,001) = −3; log₁₀(1) = 0.
 
 **Wichtige Logarithmuswerte auswendig:**
 - log(2) ≈ 0,301

@@ -723,14 +723,9 @@ Polare oder geladene Molekuele nutzen Proteine -- weiterhin **entlang** des Grad
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanaele schnell; Carrier saettigbar.
 
-{{DIAGRAM:membrane-transport}}
-
 ---
 
 ## Osmose und Tonizitaet
-
-
-{{DIAGRAM:cell-membrane}}
 
 **Osmose:** Wasser diffundiert durch eine semipermeable Membran von der Seite mit **niedrigerer** **Osmolalitaet** zur Seite mit **hoeherer** Osmolalitaet. **Osmolalitaet** (Einheit: mosmol/kg) ist die Anzahl geloester Teilchen pro Kilogramm Wasser -- je hoeher, desto "konzentrierter". Das Wasser stroemt also dorthin, wo mehr geloeste Teilchen sind (Wasser "verduennt" die konzentrierte Seite).
 

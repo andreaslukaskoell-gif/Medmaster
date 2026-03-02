@@ -21,9 +21,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Flimmerepithel",
         "Apikale Polarität",
       ],
-      content: `{{DIAGRAM:cell-membrane}}
-
-## Grundprinzip: Eigenschaften aller Epithelien
+      content: `## Grundprinzip: Eigenschaften aller Epithelien
 
 **Um zu verstehen,** warum Epithelien so unterschiedlich aussehen können, schauen wir zuerst, was **alle** Epithelien gemeinsam haben. Alle Epithelien teilen drei Grundeigenschaften:
 
@@ -211,9 +209,7 @@ Sekretionsmechanismen exokriner Drüsen:
         "Fibroblasten",
         "Straffes Bindegewebe",
       ],
-      content: `{{DIAGRAM:stem-cells}}
-
-## Grundprinzip: Die Extrazelluläre Matrix (EZM)
+      content: `## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
 **Um zu verstehen,** warum Bindegewebe so unterschiedlich aussehen kann (Sehne vs. Knorpel vs. Knochen), schauen wir zuerst, was **alle** Bindegewebe gemeinsam haben: Viel **mehr Matrix als Zellen**. Die **EZM** (der Raum zwischen den Zellen, gefüllt mit Fasern und Proteoglykanen) besteht aus:
 
@@ -271,8 +267,6 @@ Sekretionsmechanismen exokriner Drüsen:
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
 ---
-
-{{DIAGRAM:animal-cell}}
 
 ## Knorpeltypen im Vergleich
 
@@ -649,9 +643,6 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
 
 Das Nervensystem besteht aus zwei grundlegenden Zelltypen: **Neuronen** übertragen elektrochemische Signale; **Gliazellen** übernehmen Stütz-, Schutz- und Versorgungsfunktionen. Beide Populationen sind für die normale Nervenfunktion unentbehrlich.
 
-
-{{DIAGRAM:action-potential}}
-
 ## Aufbau eines Neurons
 
 Ein Neuron gliedert sich in vier funktionelle Kompartimente:
@@ -891,8 +882,6 @@ Es gibt zwei Arten von Rezeptoren:
 
 ---
 
-{{DIAGRAM:synapse}}
-
 ## Das Aktionspotential -- wie ein Signal ueber weite Strecken laeuft
 
 Im Ruhezustand liegt die Spannung an der Nervenzelle bei etwa **-70 mV** (innen negativ). Das wird durch die Natrium-Kalium-Pumpe aufrechterhalten (3 Na+ raus, 2 K+ rein).
@@ -907,8 +896,6 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
 > **Merke:** Ruhepotential -70 mV. Schwelle -55 mV. Na+ rein = Depolarisation (+40 mV). K+ raus = Repolarisation. Alles-oder-Nichts.
 
 ---
-
-{{DIAGRAM:action-potential}}
 
 ## Reflexbogen
 
@@ -1035,8 +1022,6 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
       ],
       content: `{{DIAGRAM:sinnesorgane}}
 
-{{DIAGRAM:nervensystem-übersicht}}
-
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
 **Um die Sinnesorgane zu vergleichen,** betrachten wir zuerst das gemeinsame Prinzip: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
@@ -1118,8 +1103,6 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
 | Salzig | Na⁺ strömt durch ENaC (epithelialer Na⁺-Kanal) direkt ein | Elektrolytbedarf |
 
 > **Merke:** Süß/Umami/Bitter = GPCR-vermittelt (Second Messenger). Sauer/Salzig = direkte Ionenkanalöffnung. Geruchssinn: einziger Sinn ohne Thalamus-Umschaltung → direkt ins limbische System.
-
-{{DIAGRAM:nervensystem-übersicht}}
 
 ---
 
@@ -1298,8 +1281,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 
 > **Merke:** **Insulin vs. Glukagon:** Insulin (β-Zellen, nach Mahlzeit): GLUT4-Translokation ↑ (Muskel/Fett), Glykogensynthese ↑ (Leber), Lipolyse ↓, Proteinaufbau ↑ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Typ-1-DM: β-Zell-Zerstörung. Typ-2-DM: Insulinresistenz + relativer Mangel.
-
-{{DIAGRAM:nervensystem-übersicht}}
 
 ---
 
@@ -1743,9 +1724,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Allergie",
         "MHC",
       ],
-      content: `{{DIAGRAM:immune-response}}
-
-## Angeborene Immunität
+      content: `## Angeborene Immunität
 
 **Um das Immunsystem zu verstehen,** unterscheidet man **angeborene** (schnell, unspezifisch) und **erworbene** (spezifisch, Gedächtnis) Immunität. Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Das Komplementsystem kann über drei Wege aktiviert werden: **Klassischer Weg** (Antigen-Antikörper-Komplexe aktivieren C1q), **Lektin-Weg** (Mannose-bindendes Lektin/MBL erkennt Pathogenzucker), **Alternativer Weg** (spontane C3-Hydrolyse + Verstärkungsschleife auf Pathogenoberflächen). Alle drei Wege münden in C3-Spaltung → C3a (Anaphylatoxin) + C3b (Opsonin) → MAC-Bildung. Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
 
@@ -1757,8 +1736,6 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 
 > **Merke:** **MHC-Präsentation:** MHC I auf ALLEN Zellen zeigt CD8⁺ Viren (innen), MHC II auf APCs zeigt CD4⁺ Bakterien (außen)! (MHC I → CD8⁺ → intrazelluläre Pathogene; MHC II → CD4⁺ → extrazelluläre Pathogene)
-
-{{DIAGRAM:blutbestandteile}}
 
 ---
 
@@ -1890,9 +1867,7 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
       id: "bio-3-07",
       title: "Lymphsystem",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
-      content: `{{DIAGRAM:immune-response}}
-
-## Lymphknoten — Architektur und Immunfunktion
+      content: `## Lymphknoten — Architektur und Immunfunktion
 
 **Um das lymphatische System einzuordnen,** beginnen wir mit dem **Lymphknoten** — Filter und Ort der Immunantwort. Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
 
@@ -1920,8 +1895,6 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 > **Merke:** **Milz**: rote Pulpa (Ery-Abbau + Thrombozytenspeicher) vs. weiße Pulpa (Immunabwehr). **Splenektomie** = OPSI-Risiko → Impfung + Penicillin! **Thymus**: positive Selektion (MHC-Erkennung) + negative Selektion (Selbsttoleranz) → nur ~5 % der Thymozyten überleben.
 
 ---
-
-{{DIAGRAM:blutkreislauf}}
 
 ## Lymphgefäße und Lymphtransport im Detail
 
@@ -2067,9 +2040,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 **Atemregulation:** Zentrale Chemorezeptoren (Medulla oblongata) reagieren auf CO₂/pH → **Hauptantrieb**. Periphere Chemorezeptoren (Karotiskörper) reagieren auf O₂ (erst bei pO₂ <60 mmHg relevant). **COPD-Vorsicht**: Bei chronischer CO₂-Retention → Anpassung der CO₂-Sensitivität → O₂ wird Hauptantrieb → unkontrollierte O₂-Gabe kann Apnoe auslösen!
 
-> **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂. **Atemantrieb**: primär CO₂/pH (zentral), O₂ erst bei pO₂ <60 mmHg (peripher).
-
-{{DIAGRAM:blutkreislauf}}`,
+> **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂. **Atemantrieb**: primär CO₂/pH (zentral), O₂ erst bei pO₂ <60 mmHg (peripher).`,
       lernziele: [
         "Die Funktion von Surfactant (Typ-II-Pneumozyten, DPPC) und seine Bedeutung zur Verhinderung von Atelektase erklären.",
         "Die Mechanismen der aktiven Inspiration (Diaphragma, Mm. intercostales externi) und passiven Exspiration beschreiben.",
@@ -2229,8 +2200,6 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 - → Galle → Darm → bakteriell → **Sterkobilin** (Stuhl braun) + Urobilinogen → Urin: **Urobilin** (gelb)
 
 > **Merke:** **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (Milz, albumin-gebunden) → Leber (UGT1A1, Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). **Fett-Transport**: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!).
-
-{{DIAGRAM:cell-membrane}}
 
 ---
 
@@ -2393,9 +2362,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 **Therapieangriffspunkte:** ACE-Hemmer (Bradykinin ↑ → Husten-NW!) | AT₁-Blocker (kein Bradykinin) | Spironolacton (Aldosteron-Antagonist) | Aliskiren (Renin-Inhibitor)
 
-> **Merke:** **RAAS**: Renin (Niere, Druck ↓) → Ang. I → ACE (Lunge) → **Ang. II** → Vasokonstriktion + Aldosteron (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. **ACE-Hemmer**: Bradykinin ↑ → Husten (häufigste NW).
-
-{{DIAGRAM:blutkreislauf}}`,
+> **Merke:** **RAAS**: Renin (Niere, Druck ↓) → Ang. I → ACE (Lunge) → **Ang. II** → Vasokonstriktion + Aldosteron (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. **ACE-Hemmer**: Bradykinin ↑ → Husten (häufigste NW).`,
       lernziele: [
         "Die vier Funktionen der Niere (Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt, Blutdruckregulation, Exkretion) benennen.",
         "Die Filtrations- und Rückresorptionsvorgänge der Nephron-Abschnitte (GFR ~120 mL/min, SGLT2 im proximalen Tubulus, Gegenstromprinzip der Henle-Schleife) erklären.",
@@ -2514,9 +2481,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
         "Periost",
         "Ossifikation",
       ],
-      content: `{{DIAGRAM:sarkomer}}
-
-## Knochen — Umbau durch Osteoblasten und Osteoklasten
+      content: `## Knochen — Umbau durch Osteoblasten und Osteoklasten
 
 **Um den Bewegungsapparat einzuordnen,** beginnen wir mit **Knochenumbau** — Osteoblasten vs. Osteoklasten und RANKL/OPG. Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährlich umgebaut. Drei Zelltypen steuern diesen Prozess:
 
@@ -2559,8 +2524,6 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 > **Merke:** **Knorpel avaskulär** → schlechte Heilung. Hyalin (Gelenk, Kollagen II) vs. Faser (Bandscheibe, Kollagen I) vs. Elastisch (Ohr, Elastin). **PTH** ↑ Ca²⁺ (Osteoklasten ↑, Vitamin D ↑, Niere ↑). **Calcitonin** ↓ Ca²⁺.
 
 ---
-
-{{DIAGRAM:animal-cell}}
 
 ## Ossifikation — Knochenbildung
 
@@ -2702,9 +2665,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
         "Progesteron",
         "Befruchtung",
       ],
-      content: `{{DIAGRAM:menstrual-cycle}}
-
-## Spermatogenese und Oogenese — Gametogenese im Vergleich
+      content: `## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
 **Um die Reproduktion zu verstehen,** vergleichen wir **Spermatogenese** und **Oogenese** — beide nutzen Meiose, das Ergebnis unterscheidet sich. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 
@@ -2754,9 +2715,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
 
 > **Merke:** **Menstruationszyklus**: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → **positive Rückkopplung → LH-Peak** (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation. **hCG** (Trophoblast ab Tag 6–7): erhält Corpus luteum → Basis des Schwangerschaftstests.
 
----
-
-{{DIAGRAM:hormonsystem}}`,
+`,
       lernziele: [
         "Die Funktionen von Sertoli-Zellen (Spermatogenese-Unterstützung, Inhibin, Blut-Hoden-Schranke) und Leydig-Zellen (Testosteron unter LH) unterscheiden.",
         "Die Spermatogenese (Spermatogonien → 4 Spermien, ~74 Tage) mit Meiose I/II und Spermiogenese beschreiben.",

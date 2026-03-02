@@ -27,9 +27,9 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Die Ideale Gasgleichung
 
-Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknuepft vier makroskopische (mit bloßem Auge messbare) Zustandsgroessen:
+Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknüpft vier makroskopische (mit bloßem Auge messbare) Zustandsgrößen:
 
-- **p** = Druck [Pa = N/m2] oder [bar, atm, mmHg]: Der Druck ist die Kraft pro Flaeche, die Gasteilchen durch Kollisionen auf die Behaelterwand ausueben.
+- **p** = Druck [Pa = N/m2] oder [bar, atm, mmHg]: Der Druck ist die Kraft pro Fläche, die Gasteilchen durch Kollisionen auf die Behälterwand ausüben.
 - **V** = Volumen [m3 oder L]: Das vom Gas eingenommene Raumvolumen.
 - **n** = Stoffmenge [mol]: Gibt die Teilchenanzahl in Vielfachen der Avogadro-Zahl an (N_A = 6,022 x 10 hoch 23 pro mol).
 - **R** = universelle Gaskonstante = 8,314 J/(mol*K) = 0,08314 L*bar/(mol*K) = 0,08206 L*atm/(mol*K).
@@ -39,21 +39,21 @@ Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen de
 
 Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasgesetze:
 
-**1. Gesetz von Boyle-Mariotte (1662):** Bei konstanter Temperatur (T = const) und konstanter Stoffmenge (n = const) ist das Produkt aus Druck und Volumen konstant: **p * V = const**, also p1V1 = p2V2. Physikalisch: Halbiert man das Volumen, verdoppelt sich die Stossfrequenz der Teilchen auf die Wand -> doppelter Druck.
+**1. Gesetz von Boyle-Mariotte (1662):** Bei konstanter Temperatur (T = const) und konstanter Stoffmenge (n = const) ist das Produkt aus Druck und Volumen konstant: **p * V = const**, also p1V1 = p2V2. Physikalisch: Halbiert man das Volumen, verdoppelt sich die Stoßfrequenz der Teilchen auf die Wand -> doppelter Druck.
 
-**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V1/T1 = V2/T2. Erhoeht man T, steigt die kinetische Energie -> Teilchen stossen staerker -> Volumen waechst, damit p konstant bleibt.
+**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V1/T1 = V2/T2. Erhöht man T, steigt die kinetische Energie -> Teilchen stossen stärker -> Volumen wächst, damit p konstant bleibt.
 
 **3. Gesetz von Avogadro (1811):** Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen: **V/n = const**. Das molare Volumen V_m = V/n ist bei STP stets 22,4 L/mol.
 
 Kombiniert: p*V/(n*T) = R = const -> **pV = nRT**.
 
-**Pruefungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unveraendert**: p = nRT/V -> p' = nR*(2T)/(2V) = nRT/V = p.
+**Prüfungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unverändert**: p = nRT/V -> p' = nR*(2T)/(2V) = nRT/V = p.
 
 <!-- DIAGRAM:thermodynamics -->
 
 ## Umrechnungen und praktische Anwendung
 
-Haeufige Umformungen:
+Häufige Umformungen:
 
 - Dichte eines Gases: rho = m/V = M*p/(R*T), wobei M die molare Masse [g/mol] ist.
 - Molare Masse aus Messung: M = m*R*T/(p*V)
@@ -61,12 +61,12 @@ Haeufige Umformungen:
 
 **Standardbedingungen:**
 - STP (IUPAC seit 1982): 0 Grad C (273,15 K), 1 bar -> V_m = 22,711 L/mol (exakt)
-- Aeltere Definition: 0 Grad C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Buechern noch ueblich)
+- Ältere Definition: 0 Grad C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch ueblich)
 - SATP: 25 Grad C (298,15 K), 1 bar -> V_m = 24,790 L/mol
 
-**Druckeinheiten im Ueberblick:**
+**Druckeinheiten im Überblick:**
 - 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg (Torr)
-- Normaldruck der Atmosphaere ungefaehr 101.300 Pa ungefaehr 1 bar
+- Normaldruck der Atmosphäre ungefähr 101.300 Pa ungefähr 1 bar
 - Partialdruck: p_i = n_i*R*T/V (Anteil der Komponente i im Gemisch)
 
 <!-- DIAGRAM:temperature-scales -->
@@ -74,67 +74,67 @@ Haeufige Umformungen:
 ## Ideales vs. Reales Gas
 
 Ein **ideales Gas** basiert auf zwei Modellannahmen:
-1. Gasteilchen sind punktfoermig (kein Eigenvolumen).
+1. Gasteilchen sind punktförmig (kein Eigenvolumen).
 2. Keine intermolekularen Wechselwirkungen.
 
 **Reale Gase** weichen davon ab, besonders bei:
-- **Hohem Druck**: Eigenvolumen der Molekuele wird relevant -> Gas schwerer komprimierbar -> Kompressibilitaetsfaktor Z = pV/(nRT) > 1.
-- **Tiefer Temperatur**: Van-der-Waals-Anziehungskraefte dominieren -> Gas leichter komprimierbar -> Z < 1.
-- **Nahe dem Kondensationspunkt** (Temperatur der Verfluessigung): Phasenuebergaenge treten auf.
+- **Hohem Druck**: Eigenvolumen der Moleküle wird relevant -> Gas schwerer komprimierbar -> Kompressibilitätsfaktor Z = pV/(nRT) > 1.
+- **Tiefer Temperatur**: Van-der-Waals-Anziehungskräfte dominieren -> Gas leichter komprimierbar -> Z < 1.
+- **Nahe dem Kondensationspunkt** (Temperatur der Verflüssigung): Phasenübergänge treten auf.
 
 ## Van-der-Waals-Gleichung
 
-Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz fuer reale Gase:
+Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz für reale Gase:
 
 **(p + a*n2/V2) * (V - n*b) = n*R*T**
 
 - **a** [L2*bar/mol2]: Korrigiert den Druck -- intermolekulare Anziehung verringert den Wandstoss-Druck.
-- **b** [L/mol]: Korrigiert das Volumen -- Kovolumen (Eigenvolumen) der Molekuele.
+- **b** [L/mol]: Korrigiert das Volumen -- Kovolumen (Eigenvolumen) der Moleküle.
 
-Fuer H2O: a = 5,537, b = 0,03049. Fuer He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
+Für H2O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
 
-## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckaenderung
+## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckänderung
 
-**Aufgabe:** 3 mol O2 befinden sich in einem Behaelter bei 27 Grad C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwaermung auf 227 Grad C?
+**Aufgabe:** 3 mol O2 befinden sich in einem Behälter bei 27 Grad C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 Grad C?
 
-**Loesung Schritt 1:** V = nRT/p = 3 x 0,08314 x 300 / 1 = **74,8 L**
+**Lösung Schritt 1:** V = nRT/p = 3 x 0,08314 x 300 / 1 = **74,8 L**
 
-**Loesung Schritt 2:** Kombinierte Gasgleichung: p1V1/T1 = p2V2/T2
+**Lösung Schritt 2:** Kombinierte Gasgleichung: p1V1/T1 = p2V2/T2
 - T1 = 300 K, T2 = 500 K, p1 = 1 bar, p2 = 5 bar
 - V2 = V1 x (p1/p2) x (T2/T1) = 74,8 x (1/5) x (500/300) = 74,8 x 0,2 x 1,667 = **24,9 L**
 
-> **Merke:** Druckerhoehung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhoehung (Charles) vergroessert es. Beide Effekte muessen stets kombiniert werden. Celsius NIEMALS direkt einsetzen -- immer erst in Kelvin umrechnen!
+> **Merke:** Druckerhöhung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhöhung (Charles) vergrößert es. Beide Effekte müssen stets kombiniert werden. Celsius NIEMALS direkt einsetzen -- immer erst in Kelvin umrechnen!
 
 ## Klinische Relevanz: Beatmungsmedizin
 
-In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ungefaehr 6-8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck haengt von der Compliance (Dehnbarkeit, Volumenänderung pro Druckeinheit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch -- der gleiche Volumenhub erzeugt hoehere Druecke, was Barotrauma (druckbedingte Gewebeschaedigung) verursachen kann.
+In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ungefähr 6-8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der Compliance (Dehnbarkeit, Volumenänderung pro Druckeinheit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch -- der gleiche Volumenhub erzeugt höhere Drücke, was Barotrauma (druckbedingte Gewebeschädigung) verursachen kann.
 
 > **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck -> Barotrauma-Risiko bei ARDS.
 
-## Eigenschaften von Gasen (pruefungsrelevant)
+## Eigenschaften von Gasen (prüfungsrelevant)
 
-- Ein Gas **verteilt sich gleichmaessig** im verfuegbaren Raum (Diffusion).
-- Ein Gas **ist komprimierbar** -- Druckerhoehung verringert das Volumen (Boyle-Mariotte). **Typische Falle:** “Ein Gas kann nicht komprimiert werden” ist **falsch**.
-- Gase **lassen sich durch Abkuehlen verfluessigen** (Kondensation unterhalb der kritischen Temperatur).
-- Das **Mischen von Gasen** ist **in jedem Verhaeltnis moeglich** (ideale Gasmischung).
+- Ein Gas **verteilt sich gleichmäßig** im verfügbaren Raum (Diffusion).
+- Ein Gas **ist komprimierbar** -- Druckerhöhung verringert das Volumen (Boyle-Mariotte). **Typische Falle:** “Ein Gas kann nicht komprimiert werden” ist **falsch**.
+- Gase **lassen sich durch Abkühlen verflüssigen** (Kondensation unterhalb der kritischen Temperatur).
+- Das **Mischen von Gasen** ist **in jedem Verhältnis möglich** (ideale Gasmischung).
 
-> **Merke:** Richtig sind: (1) Gas verteilt sich gleichmaessig, (2) Gas ist komprimierbar, (3) Gase lassen sich verfluessigen, (4) Gase sind in jedem Verhaeltnis mischbar. Falsch: “Ein Gas kann nicht komprimiert werden.”
+> **Merke:** Richtig sind: (1) Gas verteilt sich gleichmäßig, (2) Gas ist komprimierbar, (3) Gase lassen sich verflüssigen, (4) Gase sind in jedem Verhältnis mischbar. Falsch: “Ein Gas kann nicht komprimiert werden.”
 
 ## Kinetische Gastheorie
 
-Die mikroskopische Erklaerung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
+Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
 - Mittlere kinetische Energie: E_kin = (3/2)*k_B*T, wobei k_B = 1,381 x 10 hoch -23 J/K.
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = Wurzel(3*R*T/M).
-- Bei 25 Grad C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefaehr 515 m/s.
-- Die **Maxwell-Boltzmann-Verteilung** (statistische Verteilungsfunktion der Teilchengeschwindigkeiten) beschreibt die Geschwindigkeitsverteilung: Die meisten Molekuele bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Molekuele ermoeglichen die Verdunstung unterhalb des Siedepunkts.
+- Bei 25 Grad C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefähr 515 m/s.
+- Die **Maxwell-Boltzmann-Verteilung** (statistische Verteilungsfunktion der Teilchengeschwindigkeiten) beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.
 
 > **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = Wurzel(3RT/M) -- M muss in kg/mol eingesetzt werden!
 
 ## Licht (elektromagnetische Welle)
 
-Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlaenge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** betraegt **c ungefaehr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heissen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlaenge**: E proportional zu 1/lambda -- je kuerzer die Wellenlaenge, desto energiereicher das Licht.
+Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heissen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kuerzer die Wellenlänge, desto energiereicher das Licht.
 
-> **Merke:** Licht = elektromagnetische Welle; c ungefaehr 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlaenge.`,
+> **Merke:** Licht = elektromagnetische Welle; c ungefähr 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
 
       lernziele: [
         "Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.",
@@ -359,7 +359,7 @@ Das Daltonsche Gesetz (John Dalton, 1801) beschreibt das Druckverhalten von Gasg
 
 p_gesamt = p1 + p2 + p3 + ... = Summe pi
 
-Dabei ist der **Partialdruck** pi derjenige Druck, den jede Gaskomponente allein ausueben wuerde, wenn sie das gesamte Volumen des Behaelters ausfuellte:
+Dabei ist der **Partialdruck** pi derjenige Druck, den jede Gaskomponente allein ausüben wuerde, wenn sie das gesamte Volumen des Behälters ausfuellte:
 
 pi = ni * R * T / V = xi * p_gesamt
 
@@ -367,26 +367,26 @@ pi = ni * R * T / V = xi * p_gesamt
 
 <!-- DIAGRAM:thermodynamics -->
 
-## Physikalische Begruendung
+## Physikalische Begründung
 
-Das Daltonsche Gesetz gilt exakt fuer ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich voellig unabhaengig von den anderen und traegt unabhaengig zum Gesamtdruck bei. Fuer reale Gase gilt es nur naeherungsweise.
+Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich voellig unabhängig von den anderen und traegt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur naeherungsweise.
 
-**Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck beruecksichtigt werden! Bei 37 Grad C (Koerpertemperatur) betraegt p(H2O) ungefaehr 6,27 kPa (47 mmHg).
+**Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 Grad C (Körpertemperatur) beträgt p(H2O) ungefähr 6,27 kPa (47 mmHg).
 
 <!-- DIAGRAM:thermodynamics -->
 
 ## Alveolarer Gasaustausch
 
-In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in den Lungenblaechen) bei 37 Grad C und 101,325 kPa (nach Wasserdampfsaettigung):
+In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in den Lungenbläschen) bei 37 Grad C und 101,325 kPa (nach Wasserdampfsättigung):
 
-- p(O2)_alveolar ungefaehr 13,3 kPa (100 mmHg)
-- p(CO2)_alveolar ungefaehr 5,3 kPa (40 mmHg)
-- p(N2) ungefaehr 76,4 kPa
-- p(H2O) = 6,27 kPa (37 Grad C, gesaettigt)
+- p(O2)_alveolar ungefähr 13,3 kPa (100 mmHg)
+- p(CO2)_alveolar ungefähr 5,3 kPa (40 mmHg)
+- p(N2) ungefähr 76,4 kPa
+- p(H2O) = 6,27 kPa (37 Grad C, gesättigt)
 
-O2-Partialdruck im venoesen Blut ungefaehr 5,3 kPa (40 mmHg) -> O2 diffundiert Alveole -> Blut (Druckgradient). CO2 im venoesen Blut ungefaehr 6,1 kPa (46 mmHg) > 5,3 kPa alveolar -> CO2 diffundiert Blut -> Alveole.
+O2-Partialdruck im venoesen Blut ungefähr 5,3 kPa (40 mmHg) -> O2 diffundiert Alveole -> Blut (Druckgradient). CO2 im venoesen Blut ungefähr 6,1 kPa (46 mmHg) > 5,3 kPa alveolar -> CO2 diffundiert Blut -> Alveole.
 
-## Berechnung mit Molenbruechen
+## Berechnung mit Molenbrüchen
 
 **Beispiel:** Gasgemisch: 2 mol N2, 1 mol O2, 0,5 mol CO2. Gesamtdruck 3 bar.
 - n_gesamt = 3,5 mol
@@ -395,42 +395,42 @@ O2-Partialdruck im venoesen Blut ungefaehr 5,3 kPa (40 mmHg) -> O2 diffundiert A
 - x(CO2) = 0,5/3,5 = 0,143 -> p(CO2) = 0,143 * 3 = 0,429 bar
 - Kontrolle: 1,714 + 0,857 + 0,429 = 3,000 bar
 
-## Henry-Gesetz und Gasloeslichkeit
+## Henry-Gesetz und Gaslöslichkeit
 
-Das Henry-Gesetz ergaenzt das Daltonsche Gesetz fuer Gasloeslichkeit in Fluessigkeiten:
+Das Henry-Gesetz ergaenzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssigkeiten:
 
 **c = kH * p**
 
-wobei kH die substanzspezifische Henry-Konstante ist. Bei erhoehtem O2-Partialdruck (Sauerstofftherapie) loest sich mehr O2 physikalisch im Plasma. Bei Kohlensaeuregetraenken wird CO2 unter Druck geloest; beim Oeffnen sinkt p -> CO2 perlt aus.
+wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdruck (Sauerstofftherapie) loest sich mehr O2 physikalisch im Plasma. Bei Kohlensäuregetränken wird CO2 unter Druck geloest; beim Oeffnen sinkt p -> CO2 perlt aus.
 
 ## Gasgemische in der Medizin
 
-- **Raumluft:** O2 21 % -> p(O2) ungefaehr 21 kPa
-- **Sauerstofftherapie:** F_IO2 (inspiratorische O2-Fraktion) = 0,4-1,0 -> deutlich erhoehte p(O2) -> mehr physikalisch geloestes O2
+- **Raumluft:** O2 21 % -> p(O2) ungefähr 21 kPa
+- **Sauerstofftherapie:** F_IO2 (inspiratorische O2-Fraktion) = 0,4-1,0 -> deutlich erhöhte p(O2) -> mehr physikalisch geloestes O2
 - **Lachgas/O2 (Entonox):** 50:50 N2O/O2 als Analgetikum
-- **Heliox (He/O2):** Bei obstruktiver Atemwegserkrankung -- He (leichter als N2) senkt den Gasstrooemungswiderstand
-- **Tauchgas:** Komprimierte Luft -> erhoehte Partialdrucke aller Gase -> N2-Narkose (Tiefenrausch) ab p(N2) > 3-4 bar
+- **Heliox (He/O2):** Bei obstruktiver Atemwegserkrankung -- He (leichter als N2) senkt den Gasströmungswiderstand
+- **Tauchgas:** Komprimierte Luft -> erhöhte Partialdrucke aller Gase -> N2-Narkose (Tiefenrausch) ab p(N2) > 3-4 bar
 
-## Rechenbeispiel: Alveolaerer O2-Partialdruck
+## Rechenbeispiel: Alveolärer O2-Partialdruck
 
-**Aufgabe:** Ein Patient atmet Raumluft (21 % O2) bei Normaldruck (101,3 kPa). Wie hoch ist der alveolaere O2-Partialdruck unter Beruecksichtigung des Wasserdampfdrucks (6,27 kPa bei 37 Grad C) und des CO2-Partialdrucks (5,3 kPa)?
+**Aufgabe:** Ein Patient atmet Raumluft (21 % O2) bei Normaldruck (101,3 kPa). Wie hoch ist der alveoläre O2-Partialdruck unter Berücksichtigung des Wasserdampfdrucks (6,27 kPa bei 37 Grad C) und des CO2-Partialdrucks (5,3 kPa)?
 
-**Loesung:** Vereinfachte Alveolargasgleichung:
+**Lösung:** Vereinfachte Alveolargasgleichung:
 - p(O2)_alv = F_IO2 * (p_atm - p_H2O) - p(CO2)/RQ
-- Mit RQ (respiratorischer Quotient) ungefaehr 0,8:
+- Mit RQ (respiratorischer Quotient) ungefähr 0,8:
 - p(O2)_alv = 0,21 * (101,3 - 6,27) - 5,3/0,8
-- p(O2)_alv = 0,21 * 95,03 - 6,625 = 19,96 - 6,63 = **13,3 kPa** (ungefaehr 100 mmHg)
+- p(O2)_alv = 0,21 * 95,03 - 6,625 = 19,96 - 6,63 = **13,3 kPa** (ungefähr 100 mmHg)
 
-> **Merke:** Die vollstaendige Alveolargasgleichung beruecksichtigt Wasserdampf UND CO2-Produktion. Der alveolaere p(O2) von 13,3 kPa ist deutlich niedriger als der inspiratorische von 21 kPa -- das wird in der MedAT-Pruefung gerne abgefragt!
+> **Merke:** Die vollständige Alveolargasgleichung berücksichtigt Wasserdampf UND CO2-Produktion. Der alveoläre p(O2) von 13,3 kPa ist deutlich niedriger als der inspiratorische von 21 kPa -- das wird in der MedAT-Prüfung gerne abgefragt!
 
-## Sauerstofftoxizitaet und Hyperoxie
+## Sauerstofftoxizität und Hyperoxie
 
-Zu hohe O2-Partialdrucke sind schaedlich! Bei F_IO2 > 0,6 ueber laengere Zeit drohen:
-- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizitaet -- Entzuendung der Alveolarepithelien, Surfactant-Schaedigung (oberflaechenaktive Substanz der Alveolen), ARDS-aehnliches Bild
-- **Paul-Bert-Effekt**: Zerebrale O2-Toxizitaet bei p(O2) > 160 kPa (Tauchen mit reinem O2 tiefer als 6 m) -- Krampfanfaelle
-- **Retinopathia praematurorum** (Netzhauterkrankung Fruehgeborener): Bei Fruehgeborenen fuehrt hoher p(O2) zu pathologischer Gefaessneubildung in der Retina (Netzhaut) -> Erblindungsgefahr
+Zu hohe O2-Partialdrucke sind schädlich! Bei F_IO2 > 0,6 über längere Zeit drohen:
+- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizität -- Entzündung der Alveolarepithelien, Surfactant-Schädigung (oberflächenaktive Substanz der Alveolen), ARDS-ähnliches Bild
+- **Paul-Bert-Effekt**: Zerebrale O2-Toxizität bei p(O2) > 160 kPa (Tauchen mit reinem O2 tiefer als 6 m) -- Krampfanfälle
+- **Retinopathia praematurorum** (Netzhauterkrankung Frühgeborener): Bei Frühgeborenen führt hoher p(O2) zu pathologischer Gefäßneubildung in der Retina (Netzhaut) -> Erblindungsgefahr
 
-> **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schaedigt Lunge, Gehirn und Retina. Zielwert: p(O2)_art = 8-13 kPa (60-100 mmHg).
+> **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schädigt Lunge, Gehirn und Retina. Zielwert: p(O2)_art = 8-13 kPa (60-100 mmHg).
 
 ## Umrechnung kPa und mmHg
 
@@ -740,13 +740,13 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
 
 **Erniedrigter DLCO** bei:
 - Lungenfibrose (narbiger Umbau des Lungengewebes; d↑ → dickere Membran)
-- Emphysem (Zerstoerung der Lungenblaechen; A↓ → zerstörte Alveolarfläche)
+- Emphysem (Zerstörung der Lungenbläschen; A↓ → zerstörte Alveolarfläche)
 - Pulmonale Hypertonie (Lungenhochdruck; Gefäßverdickung)
 - Anämie (weniger Hb zur CO-Bindung)
 
 **Erhöhter DLCO** bei:
-- Alveolaerer Haemorrhagie (Lungenblutung; Blut in Alveolen bindet CO)
-- Polyzythaemie (krankhafte Vermehrung roter Blutkoerperchen; mehr Hb)
+- Alveolärer Hämorrhagie (Lungenblutung; Blut in Alveolen bindet CO)
+- Polyzythämie (krankhafte Vermehrung roter Blutkörperchen; mehr Hb)
 - Links-Rechts-Shunt (Kurzschlussverbindung im Herzen; erhöhtes pulmonales Blutvolumen)
 
 > **Merke:** DLCO ↓ bei Fibrose (d↑) und Emphysem (A↓) — beide Erkrankungen schädigen die Diffusionsstrecke durch verschiedene Mechanismen.`,
@@ -936,7 +936,7 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
         },
       ],
     },
-    // === from kap4-aggregatzustaende ===
+    // === from kap4-aggregatzustände ===
     {
       id: "ch-4-01",
       title: "Aggregatzustände und molekulare Basis",
@@ -972,9 +972,9 @@ Es werden mehrere Kristalltypen unterschieden:
 
 Im flüssigen Zustand sind kinetische und potentielle Energie ähnlich groß. Teilchen befinden sich in unmittelbarer Nachbarschaft (**Nahordnung**, also nur lokale Struktur, statt Fernordnung), können sich aber relativ zueinander bewegen. Flüssigkeiten haben ein **definiertes Volumen**, aber **keine eigene Form** – sie nehmen die Form ihres Behälters an.
 
-Die **Oberflächenspannung** ist eine direkte Folge der intermolekularen Kohäsionskräfte (Anziehung gleichartiger Teilchen): Moleküle an der Oberfläche haben nach außen hin keine Nachbarn und erfahren eine resultierende Kraft nach innen. Wasser hat eine besonders hohe Oberflächenspannung (72 mN/m bei 20°C) aufgrund seiner Wasserstoffbrücken – dies ermöglicht den Kapillartransport (Aufstieg von Fluessigkeit in engen Roehrchen) in Pflanzen und im menschlichen Gefäßsystem.
+Die **Oberflächenspannung** ist eine direkte Folge der intermolekularen Kohäsionskräfte (Anziehung gleichartiger Teilchen): Moleküle an der Oberfläche haben nach außen hin keine Nachbarn und erfahren eine resultierende Kraft nach innen. Wasser hat eine besonders hohe Oberflächenspannung (72 mN/m bei 20°C) aufgrund seiner Wasserstoffbrücken – dies ermöglicht den Kapillartransport (Aufstieg von Flüssigkeit in engen Röhrchen) in Pflanzen und im menschlichen Gefäßsystem.
 
-Die **Viskosität** beschreibt den Fließwiderstand einer Flüssigkeit. Wasser hat bei 20°C eine dynamische Viskosität von 1,002 mPa·s, Blut etwa 3–4 mPa·s (bedingt durch Erythrozyten und Plasmaproteine). Erhöhte Blutviskosität (Polyzythaemie, Paraproteinaemie (krankhaft erhoehte Eiweiße im Blut)) erhöht den peripheren Gefäßwiderstand und belastet das Herz.
+Die **Viskosität** beschreibt den Fließwiderstand einer Flüssigkeit. Wasser hat bei 20°C eine dynamische Viskosität von 1,002 mPa·s, Blut etwa 3–4 mPa·s (bedingt durch Erythrozyten und Plasmaproteine). Erhöhte Blutviskosität (Polyzythämie, Paraproteinämie (krankhaft erhöhte Eiweiße im Blut)) erhöht den peripheren Gefäßwiderstand und belastet das Herz.
 
 ### Gasförmiger Aggregatzustand (gaseous)
 
@@ -1265,7 +1265,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       content: `## Phasenübergänge: Überblick und Nomenklatur
 
-Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieaenderung (Waermeaenderung bei konstantem Druck) verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
+Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung (Wärmeänderung bei konstantem Druck) verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 
 Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 

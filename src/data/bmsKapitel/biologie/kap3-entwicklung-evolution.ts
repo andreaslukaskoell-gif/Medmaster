@@ -41,8 +41,6 @@ Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese 
 
 ## Protobionten — Erste Zell-ähnliche Strukturen
 
-{{DIAGRAM:cell-membrane}}
-
 Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler (zugleich wasser- und fettlöslicher) Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
 
 > **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
@@ -50,8 +48,6 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
 ---
 
 ## Endosymbiontentheorie — Belege und Bedeutung
-
-{{DIAGRAM:animal-cell}}
 
 Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing (Herausschneiden von Introns aus der prä-mRNA)). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen (stammesgeschichtliche Verwandtschaftsvergleiche) zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales, einer Ordnung intrazellulärer Bakterien) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
 
@@ -214,8 +210,6 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 ---
 
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
-
-{{DIAGRAM:pedigree-analysis}}
 
 Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection, Verwandtenselektion). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
 
@@ -415,8 +409,6 @@ Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene
 
 ## Hardy-Weinberg-Gleichgewicht und Heterozygotenvorteil
 
-{{DIAGRAM:pedigree-analysis}}
-
 Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population — einen Referenzzustand ohne Evolution. Abweichungen zeigen, welche evolutionären Kräfte aktiv sind. Ein wichtiges Abweichungsbeispiel ist der Heterozygotenvorteil (Überdominanz): In Malariaregionen Afrikas sind Sichelzellanämie-Allele (HbS, verformte Erythrozyten durch mutiertes Hämoglobin) in höherer Frequenz vorhanden als durch Mutation allein zu erwarten wäre. Der Grund: Heterozygote (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt (Heterozygotenvorteil). Dies ist ein Beispiel für balancierten Polymorphismus (stabiles Nebeneinander mehrerer Allele).
 
 > **Merke:** Heterozygotenvorteil: HbA/HbS (Sichelzellträger) widerstandsfähiger gegen Malaria → HbS-Allel bleibt häufig in Malariaregionen (balancierte Selektion).
@@ -553,8 +545,6 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
         "Isolationsmechanismen",
       ],
       content: `## Reproduktive Isolation — Präzygotisch und Postzygotisch
-
-{{DIAGRAM:pedigree-analysis}}
 
 **Reproduktive Isolation** (Unfähigkeit zur Kreuzung zwischen Populationen) verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
 
@@ -751,8 +741,6 @@ Homologie und Analogie werden haeufig verwechselt. Der entscheidende Unterschied
 
 ## Molekulare Uhr -- Evolution zeitlich datieren
 
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
 Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto laenger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien koennen absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die fruehere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
@@ -911,9 +899,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
         "Hominisation",
         "Aufrechter Gang",
       ],
-      content: `{{DIAGRAM:prokaryote-vs-eukaryote}}
-
-{{DIAGRAM:dna-helix}}
+      content: `{{DIAGRAM:dna-helix}}
 
 ## Bipedie vor Gehirnvergrößerung — Eine wichtige Erkenntnis
 
@@ -924,8 +910,6 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 ---
 
 ## Homo habilis — Der erste Werkzeugmacher
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** (älteste Steinwerkzeugtradition, benannt nach der Olduvai-Schlucht) als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
 
@@ -942,8 +926,6 @@ Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvi
 ---
 
 ## Neanderthaler — Verwandte, keine Vorfahren
-
-{{DIAGRAM:nervensystem-übersicht}}
 
 Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Toll-like-Rezeptoren, Sensoren der angeborenen Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
 
@@ -1257,8 +1239,6 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin** (Protease, verdaut Zona pellucida), **Hyaluronidase** (spaltet Hyaluronsäure der Eizellhülle)). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
 
-{{DIAGRAM:cell-membrane}}
-
 3. **Fusion und Kortikalreaktion (in der Eizelle):** Sobald die Membranen von Spermium und Eizelle fusionieren, steigt in der Eizelle die Calcium-Konzentration. Das löst die **Kortikalreaktion** aus: **Kortikale Granula** (Vesikel unter der Eizellmembran) entleeren ihren Inhalt in den **perivitellinen Spalt** (Raum zwischen Eizelle und Zona pellucida). Dadurch wird die Zona pellucida chemisch verändert (**Zona-Reaktion**) und für weitere Spermien undurchdringbar — **Polyspermie-Block**. Eine Befruchtung durch mehrere Spermien (Polyspermie) würde zu Triploidie und meist zum Absterben des Embryos führen.
 
 4. **Abschluss der Meiose II:** Die Eizelle lag bis zur Befruchtung in **Metaphase II** der Meiose. Jetzt wird **Meiose II** abgeschlossen: Es entstehen die **reife Eizelle** (n) und das **zweite Polkörperchen** (n).
@@ -1478,8 +1458,6 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 
 ## Ablauf der Gastrulation
 
-{{DIAGRAM:stem-cells}}
-
 Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–21) statt. Ausgangspunkt ist die zweischichtige Keimscheibe (Epiblast + Hypoblast).
 
 **Schritte (vereinfacht):**
@@ -1513,8 +1491,6 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 ---
 
 ## Somiten — segmentierte Mesoderm-Derivate
-
-{{DIAGRAM:animal-cell}}
 
 **Somiten** sind paarige, segmentierte Abkömmlinge des Mesoderms, die beidseits des Neuralrohrs und des Notochords entstehen (3.–5. Woche, beim Menschen etwa 42–44 Paare). Jeder Somit gliedert sich in drei Bereiche:
 
@@ -1645,16 +1621,12 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
       ],
       content: `{{DIAGRAM:stem-cells}}
 
-{{DIAGRAM:nervensystem-übersicht}}
-
 ## Voraussetzung: Notochord
 
 
 ---
 
 ## Ablauf der Neurulation
-
-{{DIAGRAM:nervensystem-übersicht}}
 
 1. **Neuralplatte:** Das Ektoderm über dem Notochord verdickt sich zur **Neuralplatte** (eine bandförmige Struktur in der Mittellinie).
 
@@ -1669,8 +1641,6 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 ---
 
 ## Neuralleiste — Herkunft und Derivate
-
-{{DIAGRAM:stem-cells}}
 
 Während sich das Neuralrohr schließt, lösen sich Zellen vom Rand der Neuralplatte (dem Übergang zwischen Neuralplatte und übrigem Ektoderm) und **wandern** aus. Diese Zellen bilden die **Neuralleiste**. Sie stammen vom **Ektoderm**, nicht vom Mesoderm (typische Prüfungsfalle).
 
