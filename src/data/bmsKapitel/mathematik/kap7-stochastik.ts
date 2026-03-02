@@ -24,13 +24,7 @@ export const mathKapStochastik: Kapitel = {
       ],
       content: `## Grundbegriffe und Entscheidungsbaum
 
-
-
 Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
-
-**Idee:** Kombinatorik beantwortet „Wie viele Möglichkeiten?“ — durch systematisches Zählen ohne alles aufzulisten. Entscheidend: **Reihenfolge relevant?** (geordnet → Variation/Permutation; ungeordnet → Kombination) und **Wiederholung erlaubt?** (mit/ohne). So vermeidest du die falsche Formel.
-
-**Verfahren:** (1) Reihenfolge wichtig? Ja → Permutation (alle n) oder Variation (k aus n); Nein → Kombination. (2) Wiederholung? Ohne → Fakultäten n!/(n−k)! bzw. (n über k); mit → n^k bzw. Kombination mit Wdh. Permutation mit identischen Elementen: n!/(k₁!·k₂!·…).
 
 1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
 2. **Darf ein Objekt mehrfach vorkommen?** (mit vs. ohne Wiederholung)
@@ -43,8 +37,6 @@ Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 | Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! × (n-1)!) |
 
 > **Merke:** Die Entscheidung "geordnet oder ungeordnet" ist der wichtigste erste Schritt — sie bestimmt, ob man Permutation/Variation oder Kombination verwendet.
-
-**Typische Prüfungsfehler:** Variation mit Kombination verwechseln (z. B. „3 aus 8 auswählen“ ohne Reihenfolge → Kombination; „Vorsitz + Stellvertreter“ → Variation). Bei Permutation mit Wiederholung das Teilen durch k₁!·k₂!… vergessen. (n über k): Nenner k!·(n−k)!, nicht nur k!.
 
 ---
 
@@ -386,15 +378,7 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
         "Baumdiagramm",
         "Binomialverteilung",
       ],
-      content: `**Idee:** **Laplace** P(A) = (günstige)/(alle) bei gleichwahrscheinlichen Ergebnissen. **Komplement** P(nicht A) = 1−P(A) — bei „mindestens eines“ zuerst „keines“ berechnen. **Additionssatz** P(A∪B) = P(A)+P(B)−P(A∩B). **Unabhängig** ⇔ P(A∩B) = P(A)×P(B). **Binomial** B(n,p): P(X=k) = (n über k)×p^k×(1−p)^(n−k); μ = n×p.
-
-**Verfahren — Schrittfolge:** (1) **Laplace:** |A|/|Ω|. (2) **Komplement:** P(mind. 1) = 1−P(keiner). (3) **Additionssatz:** Schnitt P(A∩B) abziehen wenn nicht disjunkt. (4) **Unabhängig:** P(A∩B) = P(A)×P(B). (5) **Binomial:** (n über k)×p^k×(1−p)^(n−k); Erwartungswert n×p.
-
-**Typische Prüfungsfehler:** Laplace nur bei Gleichwahrscheinlichkeit. „Mindestens eines“ → 1−P(keines). Additionssatz: P(A∩B) nicht vergessen abzuziehen. Unabhängig ≠ disjunkt.
-
----
-
-## Grundbegriffe
+      content: `## Grundbegriffe
 
 
 
@@ -626,32 +610,6 @@ Standardabweichung: σ = √(4 × 0,25 × 0,75) = √0,75 ≈ **0,87**.
 
 ---
 
-## MedAT-Fokus: Wahrscheinlichkeitsrechnung
-
-**Zur gezielten Prüfungsvorbereitung:**
-
-**Häufigste Aufgabentypen:**
-- „Wie wahrscheinlich ist mindestens ein Treffer in n Versuchen?" → **Komplement: 1 − (1−p)ⁿ**
-- „Wie wahrscheinlich sind genau k Treffer in n Versuchen?" → **Binomialformel: C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ**
-- „A und B unabhängig: P(A und B)?" → **Multiplikation: P(A) × P(B)**
-- „A oder B: P(A ∪ B)?" → **Addition: P(A) + P(B) − P(A ∩ B)**
-- „Baumdiagramm: mehrstufiges Experiment" → **Pfadregeln: multiplizieren entlang, addieren zwischen Ästen**
-
-**Zentral prüfungsrelevant (auswendig):**
-- P(Ā) = 1 − P(A)
-- P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
-- Unabhängig: P(A ∩ B) = P(A) × P(B)
-- Binomial: P(X=k) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ; μ = n×p
-- Komplement bei „mindestens": 1 − P(keines) = 1 − (1−p)ⁿ
-
-**Typische Fallen:**
-- Komplement vergessen: P(mind. 1) direkt berechnen ist aufwändig → immer 1−P(keines) verwenden
-- Additionssatz: P(A∩B) nicht abziehen → Doppelzählung
-- Binomial nur bei konstanter p und unabhängigen Versuchen
-- Unabhängigkeit ≠ Disjunktheit: Disjunkte Ereignisse (A∩B=∅) sind immer abhängig (wenn P(A)>0, P(B)>0)
-
----
-
 ## Rechenbeispiele
 
 **Beispiel 1 — Autosomal-rezessiv: Carrier-Wahrscheinlichkeit bei Mukoviszidose:**
@@ -832,15 +790,7 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         "Prävalenz",
         "Positiver prädiktiver Wert",
       ],
-      content: `**Idee:** **P(A|B)** = Wahrscheinlichkeit von A unter der Bedingung B; P(A|B) = P(A∩B)/P(B). **Bayes** kehrt die Bedingung um: P(Krank|Test+) aus P(Test+|Krank), Prävalenz und Spezifität. **Totale Wahrscheinlichkeit:** P(A) = Σ P(A|Bᵢ)×P(Bᵢ). **Vierfeldertafel:** TP, TN, FP, FN → Sensitivität, Spezifität, PPV, NPV.
-
-**Verfahren — Schrittfolge:** (1) **P(A|B)** = P(A∩B)/P(B). (2) **Totale W.** P(B) = P(B|A)×P(A)+P(B|Ā)×P(Ā). (3) **Bayes** P(A|B) = P(B|A)×P(A)/P(B). (4) **Vierfeldertafel** ausfüllen; PPV = TP/(TP+FP), NPV = TN/(TN+FN).
-
-**Typische Prüfungsfehler:** P(A|B) ≠ P(B|A) verwechseln. P(B) im Nenner bei Bayes (totale Wahrscheinlichkeit). Bei niedriger Prävalenz: PPV klein trotz guter Sensitivität.
-
----
-
-## Bedingte Wahrscheinlichkeit
+      content: `## Bedingte Wahrscheinlichkeit
 
 
 
@@ -1298,15 +1248,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
         "Spezifität",
         "p-Wert",
       ],
-      content: `**Idee:** **Lagemaße:** Mittelwert x̄ = Σxᵢ/n (anfällig für Ausreißer), **Median** = mittlerer Wert sortiert (robust), **Modus** = häufigster Wert. **Streuung:** Varianz s² = Σ(xᵢ−x̄)²/(n−1), **Standardabweichung** s = √s². **Normalverteilung:** 68 % innerhalb μ±σ, 95 % innerhalb μ±2σ, 99,7 % innerhalb μ±3σ. **Sensitivität** = TP/(TP+FN), **Spezifität** = TN/(TN+FP). **p-Wert** < 0,05 → signifikant.
-
-**Verfahren — Schrittfolge:** (1) **Mittelwert** Σxᵢ/n; **Median** sortieren, mittleres Element (bzw. Mittel der zwei mittleren). (2) **Varianz** Σ(xᵢ−x̄)²/(n−1); **s** = √s². (3) **68-95-99,7:** μ±σ, μ±2σ, μ±3σ. (4) **Sens** = TP/(TP+FN); **Spez** = TN/(TN+FP); **PPV** = TP/(TP+FP).
-
-**Typische Prüfungsfehler:** Varianz Nenner n−1 (Stichprobe), nicht n. Sensitivität/Spezifität vs. PPV/NPV verwechseln (Sens/Spez = Testeigenschaft; PPV/NPV = abhängig von Prävalenz). p < 0,05 = signifikant, nicht „bewiesen“.
-
----
-
-## Lage- und Streumaße
+      content: `## Lage- und Streumaße
 
 
 
@@ -1585,27 +1527,6 @@ Schritt 3: Kontrolle — Summen.
 | Spezifität | TN/(TN+FP) | Gesunde korrekt als gesund erkannt |
 | PPV | TP/(TP+FP) | Sicherheit eines positiven Befunds |
 | NPV | TN/(TN+FN) | Sicherheit eines negativen Befunds |
-
----
-
-## MedAT-Fokus: Normalverteilung und Statistik
-
-**Zur gezielten Prüfungsvorbereitung:**
-
-**Typische Aufgabentypen im MedAT:**
-- „Wie viel Prozent der Population liegen oberhalb/unterhalb von x?" → z-Wert berechnen, 68-95-99,7-Regel
-- „Berechnen Sie den Referenzbereich" → μ ± 2σ
-- „Wie groß ist die Varianz/Standardabweichung?" → Schritt-für-Schritt ausrechnen
-- „Berechnen Sie Sensitivität/Spezifität/PPV aus einer Vierfeldertafel" → Formeln anwenden
-- „Was bedeutet p = 0,03?" → Interpretation des p-Werts
-
-**Prüfungsrelevante Zahlen zum Auswendiglernen:**
-- 68-95-99,7: μ±1σ/2σ/3σ
-- Einseitig: 16% / 2,3% / 0,15% je Seite
-- z = 1,96 → 95%-KI (beidseitig)
-- z = 1,645 → einseitige 5%-Grenze
-- SE = σ/√n → Standardfehler
-- p < 0,05 → statistisch signifikant
 
 ---
 

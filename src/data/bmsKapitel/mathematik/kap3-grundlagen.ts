@@ -26,9 +26,8 @@ export const mathKapGrundlagen: Kapitel = {
       ],
       content: `## Grundbegriffe
 
-**Idee:** Ein Bruch a/b beschreibt den Quotienten aus Zähler a und Nenner b (b \u2260 0). Jeder Bruch repräsentiert eine rationale Zahl. Zwei Brüche sind **gleichwertig**, wenn sie sich durch Erweitern oder Kürzen ineinander überführen lassen: 2/4 = 1/2.
+Ein Bruch a/b beschreibt den Quotienten aus Zähler a und Nenner b (b \u2260 0). Jeder Bruch repräsentiert eine rationale Zahl. Zwei Brüche sind **gleichwertig**, wenn sie sich durch Erweitern oder Kürzen ineinander überführen lassen: 2/4 = 1/2.
 
-**Verfahren:**
 - **Kürzen:** Zähler und Nenner durch denselben Faktor (ggT, größter gemeinsamer Teiler) dividieren. Beispiel: 12/18 \u2192 (12\u00f76)/(18\u00f76) = 2/3.
 - **Erweitern:** Zähler und Nenner mit demselben Faktor multiplizieren. Beispiel: 2/5 = 8/20 (mit 4 erweitert).
 - **Hauptnenner finden:** kgV der Nenner berechnen, dann alle Brüche auf diesen Nenner erweitern.
@@ -39,7 +38,6 @@ export const mathKapGrundlagen: Kapitel = {
 
 ## Addition und Subtraktion von Brüchen
 
-**Verfahren:**
 1. Hauptnenner (kgV der Nenner) bestimmen
 2. Jeden Bruch auf den Hauptnenner erweitern
 3. Zähler addieren/subtrahieren, Nenner beibehalten
@@ -82,9 +80,8 @@ export const mathKapGrundlagen: Kapitel = {
 
 ## Doppelbrüche vereinfachen
 
-**Idee:** Ein Doppelbruch ist ein Bruch, in dessen Zähler oder Nenner (oder beiden) wiederum ein Bruch steht. Die Strategie: Den Hauptbruchstrich identifizieren und als Division lesen.
+Ein Doppelbruch ist ein Bruch, in dessen Zähler oder Nenner (oder beiden) wiederum ein Bruch steht. Die Strategie: Den Hauptbruchstrich identifizieren und als Division lesen.
 
-**Verfahren:**
 1. Hauptbruchstrich identifizieren: (a/b) / (c/d) = oberer Bruch \u00f7 unterer Bruch
 2. Als Division schreiben und mit Kehrwert multiplizieren
 
@@ -226,9 +223,9 @@ export const mathKapGrundlagen: Kapitel = {
       ],
       content: `## Das Grundprinzip: P = G \u00d7 p/100
 
-**Idee:** Prozent bedeutet \u201evon Hundert\u201c. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts G gemeint sind. Die fundamentale Formel **P = G \u00d7 p/100** verbindet drei Größen: **P** (Prozentwert), **G** (Grundwert) und **p** (Prozentsatz).
+Prozent bedeutet \u201evon Hundert\u201c. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts G gemeint sind. Die fundamentale Formel **P = G \u00d7 p/100** verbindet drei Größen: **P** (Prozentwert), **G** (Grundwert) und **p** (Prozentsatz).
 
-**Verfahren -- drei Grundfragen aus einer Formel:**
+**Drei Grundfragen aus einer Formel:**
 
 | Gesucht | Formel | Beispiel |
 |---------|--------|----------|
@@ -260,7 +257,7 @@ Beispiel: (9 \u2212 12) / 12 \u00d7 100 = \u221225 %. Die Mortalität ist **rela
 
 ## Promille (\u2030)
 
-**Idee:** Promille (\u2030) = \u201evon Tausend\u201c. Promille verhält sich zu Prozent wie ein Zehntel: 1 \u2030 = 0,1 % = 0,001.
+Promille (\u2030) = \u201evon Tausend\u201c. Promille verhält sich zu Prozent wie ein Zehntel: 1 \u2030 = 0,1 % = 0,001.
 
 **Umrechnung:** p \u2030 = p/1000. Prozent zu Promille: \u00d7 10. Promille zu Prozent: \u00f7 10.
 
@@ -410,9 +407,8 @@ Reduktionsfaktor r: Männer \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
       ],
       content: `## Direkter Dreisatz (proportional)
 
-**Idee:** Zwei Größen sind **direkt proportional**, wenn sie im selben Verhältnis steigen und fallen. Doppelt so viel von A \u2192 doppelt so viel von B. Der **Quotient** A/B bleibt konstant.
+Zwei Größen sind **direkt proportional**, wenn sie im selben Verhältnis steigen und fallen. Doppelt so viel von A \u2192 doppelt so viel von B. Der **Quotient** A/B bleibt konstant.
 
-**Verfahren -- drei Schritte:**
 1. **Gegeben:** Bekannte Zuordnung aufschreiben (z. B. 3 Tabletten \u2259 750 mg)
 2. **Auf 1 zurückführen:** Durch die bekannte Menge teilen (1 Tablette \u2259 250 mg)
 3. **Auf die gesuchte Menge hochrechnen:** Mit der gesuchten Menge multiplizieren (5 Tabletten \u2259 1250 mg)
@@ -437,7 +433,6 @@ Reduktionsfaktor r: Männer \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
 **Erkennungsfrage:** Wenn A größer wird, wird B dann **kleiner**? \u2192 Indirekter Dreisatz!
 Typische Situationen: Mehr Helfer \u2192 weniger Zeit. Höhere Konzentration \u2192 kleineres Volumen. Schnellere Geschwindigkeit \u2192 kürzere Fahrtzeit.
 
-**Verfahren:**
 1. **Gegeben:** Bekannte Zuordnung (z. B. 6 Schwestern \u2259 4 Stunden)
 2. **Gesamtarbeit berechnen:** Produkt = 6 \u00d7 4 = 24 Schwesternstunden (konstant!)
 3. **Gesuchte Größe:** 24 / 4 Schwestern = **6 Stunden**
@@ -452,7 +447,7 @@ Typische Situationen: Mehr Helfer \u2192 weniger Zeit. Höhere Konzentration \u2
 
 ## Zusammengesetzter Dreisatz
 
-**Idee:** Manchmal ändern sich **zwei** Größen gleichzeitig. Der zusammengesetzte Dreisatz löst dies schrittweise: Erst eine Variable anpassen (direkt oder indirekt), dann die andere.
+Manchmal ändern sich **zwei** Größen gleichzeitig. Der zusammengesetzte Dreisatz löst dies schrittweise: Erst eine Variable anpassen (direkt oder indirekt), dann die andere.
 
 **Rechenbeispiel:** 5 Arbeiter brauchen 8 Tage für 200 m\u00b2. Wie viele Tage brauchen 4 Arbeiter für 300 m\u00b2?
 
@@ -599,7 +594,7 @@ Schritt 2 -- Fläche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
       ],
       content: `## SI-Präfixe: Die Zehnerpotenz-Leiter
 
-**Idee:** Das SI-System verwendet **Präfixe** (Vorsilben), um Vielfache und Bruchteile von Einheiten auszudrücken. Jeder Präfixschritt entspricht einer **Zehnerpotenz**. Von milli zu mikro sind es drei Zehnerpotenzen (Faktor 1000).
+Das SI-System verwendet **Präfixe** (Vorsilben), um Vielfache und Bruchteile von Einheiten auszudrücken. Jeder Präfixschritt entspricht einer **Zehnerpotenz**. Von milli zu mikro sind es drei Zehnerpotenzen (Faktor 1000).
 
 | Präfix | Symbol | Faktor | Beispiel |
 |---------|--------|--------|----------|
@@ -613,7 +608,6 @@ Schritt 2 -- Fläche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
 
 **Eselsbrücke für die Reihenfolge (abwärts):** **k**ein **M**ensch **m**ag **\u00b5**berhaupt **n**asse **p**ommes -- kilo, (Basis), milli, mikro, nano, piko. Zwischen benachbarten Präfixen liegen immer **3 Zehnerpotenzen** (Faktor 1000).
 
-**Verfahren -- Umrechnung zwischen Präfixen:**
 - Von einer größeren zu einer kleineren Einheit: **multiplizieren** (1 mg = 1000 \u00b5g).
 - Von einer kleineren zu einer größeren Einheit: **dividieren** (500 \u00b5g = 0,5 mg).
 - Anzahl der Dreierschritte zählen: mg \u2192 \u00b5g = 1 Schritt = \u00d710\u00b3. mg \u2192 ng = 2 Schritte = \u00d710\u2076.
@@ -624,7 +618,6 @@ Schritt 2 -- Fläche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
 
 ## Die Kettenmethode (Dimensional Analysis)
 
-**Verfahren:**
 1. Ausgangswert mit Einheit aufschreiben
 2. Umrechnungsfaktoren als Brüche anhängen, sodass sich ungewünschte Einheiten **kürzen**
 3. Multiplizieren und Einheiten überprüfen

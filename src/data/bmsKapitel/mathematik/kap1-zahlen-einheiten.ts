@@ -1648,21 +1648,15 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 
 ## Abgeleitete SI-Einheiten
 
-Kraft → **Newton (N)** = kg×m/s²; Klinisch: Gewebezug, Herzkontraktion
-Druck → Pascal (Pa) = N/m² = kg/(m×s²); Klinisch: Blutdruck, Atemwegsdruck
-Energie/Arbeit → Joule (J) = N×m = kg×m²/s²; Klinisch: Nahrungsenergie, Herzarbeit
-Leistung → Watt (W) = J/s = kg×m²/s³; Klinisch: Herzleistung, Metabolismus
-El. Ladung → Coulomb (C) = A×s; Klinisch: Defibrillationsenergie
-El. Spannung → Volt (V) = J/C; Klinisch: Membranpotenzial (−70 mV), EKG
-El. Widerstand → Ohm (Ω) = V/A; Klinisch: Körperwiderstand, Impedanz
-Frequenz → Hertz (Hz) = 1/s; Klinisch: Herzfrequenz, Ultraschall (MHz)
-Radioaktivität → Becquerel (Bq) = 1/s; Klinisch: Szintigraphie
-Strahlendosis → Gray (Gy) = J/kg; Klinisch: Strahlentherapie (60–70 Gy)
-Äquivalentdosis → Sievert (Sv) = J/kg × Wichtungsfaktor; Klinisch: Strahlenschutz
+Alle abgeleiteten Einheiten lassen sich aus den sieben Grundeinheiten zusammensetzen. Am wichtigsten für den MedAT ist die **mechanische Ableitungskette**, die von der Kraft ausgeht:
 
-Ableitungsketten:
-Newton → Joule → Watt: N (kg×m/s²) → N×m = J (kg×m²/s²) → J/s = W (kg×m²/s³)
-Newton → Pascal: N/m² = Pa (kg/(m×s²))
+Das **Newton (N)** = kg×m/s² beschreibt Kraft — etwa die Zugkraft auf Gewebe oder die Kontraktionskraft des Herzens. Dividiert man ein Newton durch eine Fläche, erhält man den **Druck in Pascal (Pa)** = N/m²: die Einheit für Blutdruck und Atemwegsdruck. Multipliziert man stattdessen eine Kraft mit einem Weg, entsteht **Energie in Joule (J)** = N×m: Nahrungsenergie und Herzarbeit werden in Joule gemessen. Teilt man Joule durch Sekunden, ergibt sich **Leistung in Watt (W)** = J/s — das Herz leistet in Ruhe etwa 1 Watt.
+
+Die **elektrischen Einheiten** bauen aufeinander auf: **Coulomb (C)** = A×s ist die Ladung (relevant bei Defibrillation), **Volt (V)** = J/C die Spannung (Membranpotenzial −70 mV, EKG-Ableitungen), und **Ohm (Ω)** = V/A der Widerstand (Körperimpedanz). Für periodische Vorgänge misst **Hertz (Hz)** = 1/s die Frequenz — Herzfrequenz in bpm, Ultraschall in MHz.
+
+In der **Strahlenmedizin** zählt **Becquerel (Bq)** = 1/s die Zerfallsereignisse pro Sekunde (Szintigraphie). Die absorbierte Strahlendosis wird in **Gray (Gy)** = J/kg gemessen (Strahlentherapie: 60–70 Gy), die biologische Wirkung auf den Menschen in **Sievert (Sv)** = J/kg × Wichtungsfaktor (Strahlenschutz).
+
+> **Merke:** Die zentrale Ableitungskette: **N** (kg×m/s²) → **Pa** = N/m² → **J** = N×m → **W** = J/s. Wer diese Kette beherrscht, kann fast jede MedAT-Physikaufgabe mit Einheiten lösen.
 
 > **Merke:** **Ableitungskette:** N = kg×m/s² → Pa = N/m² (Druck) → J = N×m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
 

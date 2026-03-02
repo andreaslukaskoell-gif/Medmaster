@@ -485,11 +485,11 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
         "(a × b) hoch n = a hoch n × b hoch n, aber (a+b) hoch n ungleich a hoch n + b hoch n!",
         "Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b; Wurzel aus (a hoch 2) = Betrag von a.",
         "log(a × b) = log a + log b; log(a/b) = log a − log b; log(a hoch n) = n × log a.",
-        "pH = − lg[H+]; pro pH-Einheit aendert sich [H+] um Faktor 10.",
+        "pH = − lg[H+]; pro pH-Einheit ändert sich [H+] um Faktor 10.",
         "Nach n Halbwertszeiten: (1/2) hoch n der Ausgangsmenge vorhanden.",
-        "Halbwertszeit T(1/2) = ln(2) / lambda ungefaehr 0,693 / lambda; lambda = Zerfallskonstante.",
+        "Halbwertszeit T(1/2) = ln(2) / lambda ungefähr 0,693 / lambda; lambda = Zerfallskonstante.",
         "Wissenschaftliche Notation: a × 10 hoch n mit 1 ≤ a kleiner 10.",
-        "ln(x) ungefaehr 2,303 × lg(x); ln(2) ungefaehr 0,693; ln(10) ungefaehr 2,303.",
+        "ln(x) ungefähr 2,303 × lg(x); ln(2) ungefähr 0,693; ln(10) ungefähr 2,303.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -586,25 +586,25 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
         "Kreuzprodukt",
         "Verdünnungsreihe",
       ],
-      content: `**Idee:** Prozentrechnung, Bruchrechnung und Dreisatz sind drei eng verwandte Werkzeuge. **Prozent** = "je Hundert" (p/100); die Grundformel P = G × p/100 beantwortet alle drei Grundfragen. **Bruchrechnung** liefert das Handwerk fuer exaktes Rechnen mit Anteilen. **Dreisatz** loest Verhaeltnisaufgaben systematisch (direkt: mehr → mehr; indirekt: mehr → weniger).
+      content: `**Idee:** Prozentrechnung, Bruchrechnung und Dreisatz sind drei eng verwandte Werkzeuge. **Prozent** = "je Hundert" (p/100); die Grundformel P = G × p/100 beantwortet alle drei Grundfragen. **Bruchrechnung** liefert das Handwerk für exaktes Rechnen mit Anteilen. **Dreisatz** löst Verhältnisaufgaben systematisch (direkt: mehr → mehr; indirekt: mehr → weniger).
 
-**Verfahren -- Schrittfolge:** (1) **Prozent:** P = G × p/100; umstellen nach G oder p. (2) **Brueche:** Addition ueber kgV; Division ueber Kehrwert. (3) **Dreisatz:** Auf 1 zurueckfuehren, dann hochrechnen. (4) **Prozentuale Aenderung:** (neu − alt)/alt × 100 %.
+**Verfahren -- Schrittfolge:** (1) **Prozent:** P = G × p/100; umstellen nach G oder p. (2) **Brüche:** Addition über kgV; Division über Kehrwert. (3) **Dreisatz:** Auf 1 zurückführen, dann hochrechnen. (4) **Prozentuale Änderung:** (neu − alt)/alt × 100 %.
 
-**Typische Pruefungsfehler:** +50 % dann −50 % ≠ Ausgangswert (verschiedene Bezugsgroessen!). Bruchdivision: Kehrwert vergessen. Dreisatz: direkt vs. indirekt verwechselt. Prozentpunkte ≠ prozentuale Aenderung.
+**Typische Prüfungsfehler:** +50 % dann −50 % ≠ Ausgangswert (verschiedene Bezugsgrößen!). Bruchdivision: Kehrwert vergessen. Dreisatz: direkt vs. indirekt verwechselt. Prozentpunkte ≠ prozentuale Änderung.
 
 ---
 
-## Prozentrechnung -- die drei Grundfragen (ausfuehrlich)
+## Prozentrechnung -- die drei Grundfragen (ausführlich)
 
-Prozent bedeutet woertlich „je Hundert": p % = p/100. Alle Prozentaufgaben lassen sich auf **eine einzige Grundformel** zurueckfuehren:
+Prozent bedeutet wörtlich „je Hundert": p % = p/100. Alle Prozentaufgaben lassen sich auf **eine einzige Grundformel** zurückführen:
 
 **P = G × p/100**
 
-wobei P = Prozentwert (der gesuchte oder gegebene Anteil), G = Grundwert (das Ganze, die Bezugsgroesse) und p = Prozentsatz (die Zahl vor dem %-Zeichen).
+wobei P = Prozentwert (der gesuchte oder gegebene Anteil), G = Grundwert (das Ganze, die Bezugsgröße) und p = Prozentsatz (die Zahl vor dem %-Zeichen).
 
 ### Frage 1 -- Prozentwert gesucht (P = ?)
 
-P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**. Medizinisches Beispiel: Ein Medikament hat eine Bioverfuegbarkeit (Anteil, der ins Blut gelangt) von 40 %. Von 500 mg oral werden also 500 × 0,40 = **200 mg** resorbiert.
+P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**. Medizinisches Beispiel: Ein Medikament hat eine Bioverfügbarkeit (Anteil, der ins Blut gelangt) von 40 %. Von 500 mg oral werden also 500 × 0,40 = **200 mg** resorbiert.
 
 ### Frage 2 -- Grundwert gesucht (G = ?)
 
@@ -614,27 +614,27 @@ G = P × 100/p. Beispiel: 36 sind 12 % von welcher Zahl? 36 × 100/12 = **300**.
 
 p = P/G × 100. Beispiel: 45 von 180 = 45/180 × 100 = **25 %**. Medizinisches Beispiel: Von 250 Proben sind 35 positiv. Positivrate: 35/250 × 100 = **14 %**.
 
-**Kopfrechenregel:** 10 % = G ÷ 10; 5 % = halbe 10 %; 1 % = G ÷ 100. Durch Kombinieren lassen sich viele Aufgaben im Kopf loesen: 15 % = 10 % + 5 %; 35 % = 3 × 10 % + 5 %.
+**Kopfrechenregel:** 10 % = G ÷ 10; 5 % = halbe 10 %; 1 % = G ÷ 100. Durch Kombinieren lassen sich viele Aufgaben im Kopf lösen: 15 % = 10 % + 5 %; 35 % = 3 × 10 % + 5 %.
 
-> **Merke:** Eine Formel, drei Fragen: P = G × p/100. Umstellen nach G: G = P × 100/p. Umstellen nach p: p = P/G × 100. Immer zuerst klaeren: Was ist der Grundwert?
+> **Merke:** Eine Formel, drei Fragen: P = G × p/100. Umstellen nach G: G = P × 100/p. Umstellen nach p: p = P/G × 100. Immer zuerst klären: Was ist der Grundwert?
 
 ---
 
-## Prozentuale Veraenderungen -- absolut vs. relativ
+## Prozentuale Veränderungen -- absolut vs. relativ
 
-Hier liegt eine der haeufigsten MedAT-Fallen. Man unterscheidet zwei Arten der Aenderung:
+Hier liegt eine der häufigsten MedAT-Fallen. Man unterscheidet zwei Arten der Änderung:
 
-**Absolute Aenderung:** Differenz der Werte in der jeweiligen Einheit. Beispiel: Blutdruck sinkt von 160 auf 120 mmHg → absolute Aenderung = −40 mmHg.
+**Absolute Änderung:** Differenz der Werte in der jeweiligen Einheit. Beispiel: Blutdruck sinkt von 160 auf 120 mmHg → absolute Änderung = −40 mmHg.
 
-**Relative Aenderung:** (Differenz / Ausgangswert) × 100 %. Beim gleichen Beispiel: (−40/160) × 100 % = −25 %.
+**Relative Änderung:** (Differenz / Ausgangswert) × 100 %. Beim gleichen Beispiel: (−40/160) × 100 % = −25 %.
 
-**Prozentpunkte vs. prozentuale Aenderung:** Wenn eine Wahlpartei von 40 % auf 30 % faellt, betraegt der Rueckgang **10 Prozentpunkte** (absolute Differenz der Prozentwerte), aber die **relative Aenderung** ist (−10/40) × 100 % = −25 %. Diese Unterscheidung wird am MedAT gezielt abgefragt.
+**Prozentpunkte vs. prozentuale Änderung:** Wenn eine Wahlpartei von 40 % auf 30 % fällt, beträgt der Rückgang **10 Prozentpunkte** (absolute Differenz der Prozentwerte), aber die **relative Änderung** ist (−10/40) × 100 % = −25 %. Diese Unterscheidung wird am MedAT gezielt abgefragt.
 
-**Die Sequenz-Falle:** +50 % gefolgt von −50 % ergibt NICHT den Ausgangswert! Beispiel: 100 → +50 % → 150 → −50 % → **75** (nicht 100!). Der Grund: Die −50 % beziehen sich auf den **neuen** Wert 150, nicht auf den urspruenglichen Wert 100.
+**Die Sequenz-Falle:** +50 % gefolgt von −50 % ergibt NICHT den Ausgangswert! Beispiel: 100 → +50 % → 150 → −50 % → **75** (nicht 100!). Der Grund: Die −50 % beziehen sich auf den **neuen** Wert 150, nicht auf den ursprünglichen Wert 100.
 
-Weiteres Beispiel: Ein Aktienkurs faellt um 20 % (von 100 auf 80). Um wieder auf 100 zu kommen, muss er um 20/80 × 100 = **25 %** steigen -- nicht um 20 %!
+Weiteres Beispiel: Ein Aktienkurs fällt um 20 % (von 100 auf 80). Um wieder auf 100 zu kommen, muss er um 20/80 × 100 = **25 %** steigen -- nicht um 20 %!
 
-> **Merke:** Sequenzielle Prozente: +50 %, dann −50 % ≠ 0 %, weil sich die Bezugsgroesse aendert! Von 40 % auf 30 % = 10 Prozentpunkte absolut, aber 25 % relative Senkung.
+> **Merke:** Sequenzielle Prozente: +50 %, dann −50 % ≠ 0 %, weil sich die Bezugsgröße ändert! Von 40 % auf 30 % = 10 Prozentpunkte absolut, aber 25 % relative Senkung.
 
 ---
 
@@ -2160,7 +2160,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
           question:
             "In einem Bland-Altman-Plot werden zwei Blutdruckmessgeräte A und B verglichen. Fünf Patienten zeigen folgende Werte (A; B): (120;122), (130;128), (140;144), (150;148), (160;162). Was ist die mittlere Differenz (Bias) A − B?",
           options: ["+2 mmHg", "−2 mmHg", "0 mmHg", "+1 mmHg", "−1 mmHg"],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Die Differenzen A − B berechnen sich: 120−122 = −2; 130−128 = +2; 140−144 = −4; 150−148 = +2; 160−162 = −2. Summe: −2 + 2 − 4 + 2 − 2 = −4. Mittlere Differenz (Bias): −4/5 = −0,8 ≈ −1 mmHg. Am nächsten ist Option E (−1 mmHg). Tatsächlich ist der Wert −0,8 — unter den gegebenen Optionen ist −1 mmHg die beste Annäherung. Ein negativer Bias bedeutet, dass Gerät A im Mittel niedrigere Werte liefert als Gerät B. Im klinischen Kontext würde man prüfen, ob dieser Bias klinisch relevant ist (bei Blutdruck: > 5 mmHg gilt als bedeutsam).",
           hints: [
@@ -2242,16 +2242,16 @@ Geometrisch: Addition nach der Parallelogrammregel oder Dreiecksregel (Pfeile an
 ## Skalarprodukt (Inneres Produkt)
 
 Das Skalarprodukt zweier Vektoren **a** und **b**:
-**a × b = a₁b₁ + a₂b₂ + a₃b₃ = |a| × |b| × cos θ**
+**a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a| × |b| × cos θ**
 
 θ = Winkel zwischen den Vektoren.
 
 **Bedeutung**:
-- Wenn **a × b = 0**: die Vektoren sind senkrecht (θ = 90°)
-- Wenn **a × b > 0**: spitzer Winkel (θ < 90°)
-- Wenn **a × b < 0**: stumpfer Winkel (θ > 90°)
+- Wenn **a · b = 0**: die Vektoren sind senkrecht (θ = 90°)
+- Wenn **a · b > 0**: spitzer Winkel (θ < 90°)
+- Wenn **a · b < 0**: stumpfer Winkel (θ > 90°)
 
-**Winkelberechnung**: cos θ = (**a** × **b**) / (|**a**| × |**b**|) → θ = arccos((**a** × **b**) / (|**a**| × |**b**|))
+**Winkelberechnung**: cos θ = (**a** · **b**) / (|**a**| × |**b**|) → θ = arccos((**a** · **b**) / (|**a**| × |**b**|))
 
 > **Merke:** Das Skalarprodukt liefert immer eine Zahl (einen Skalar), keinen Vektor. Es beantwortet die Frage: „Wie stark zeigen die Vektoren in dieselbe Richtung?"
 
