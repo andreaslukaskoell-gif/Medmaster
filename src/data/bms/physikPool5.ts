@@ -451,16 +451,6 @@ export const physikPool5: Question[] = [
     ["kinetische Energie", "Geschwindigkeit"]
   ),
   q(
-    "ph-pool-236",
-    "phys-kap4",
-    "Die spezifische Wärmekapazität c hat die Einheit:",
-    ["J", "J/K", "J/(kg·K)", "kg/K", "W/(kg·K)"],
-    2,
-    "Q = m·c·ΔT → c in J/(kg·K).",
-    "leicht",
-    ["Wärmekapazität", "Einheit"]
-  ),
-  q(
     "ph-pool-237",
     "phys-kap7",
     "Welche Aussage zu ionisierender Strahlung ist richtig?",

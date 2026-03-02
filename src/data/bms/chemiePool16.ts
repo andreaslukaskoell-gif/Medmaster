@@ -164,22 +164,6 @@ export const chemiePool16: Question[] = [
     ["Carbonyl", "Aldehyd"]
   ),
   q(
-    "ch-pool-16-013",
-    KAP[0],
-    "Die Anzahl der Protonen im Kern bestimmt:",
-    [
-      "die Neutronenzahl",
-      "die Massenzahl",
-      "die Art des Elements (Ordnungszahl)",
-      "nur die Isotopie",
-      "die Schalenanzahl",
-    ],
-    2,
-    "Ordnungszahl Z = Protonenzahl definiert das Element.",
-    "leicht",
-    ["Ordnungszahl"]
-  ),
-  q(
     "ch-pool-16-014",
     KAP[1],
     "Ein Gemisch aus Eis und flüssigem Wasser bei 0 °C und 1 bar hat:",
@@ -298,16 +282,6 @@ export const chemiePool16: Question[] = [
     "Rückreaktion: Produkte → Edukte. Im Gleichgewicht laufen Hin- und Rückreaktion mit gleicher Geschwindigkeit.",
     "mittel",
     ["Gleichgewicht", "Rückreaktion"]
-  ),
-  q(
-    "ch-pool-16-023",
-    KAP[4],
-    "Welche Oxidationszahl hat Schwefel in H₂SO₄?",
-    ["−2", "0", "+4", "+6", "+2"],
-    3,
-    "H₂SO₄: H +1, O −2. 2·1 + S + 4·(−2) = 0 → S = +6.",
-    "mittel",
-    ["Oxidationszahl", "Schwefelsäure"]
   ),
   q(
     "ch-pool-16-024",
@@ -630,22 +604,6 @@ export const chemiePool16: Question[] = [
     "Phenol: Hydroxylgruppe −OH an Benzolring (C₆H₅OH). Unterschied zu Alkanolen: OH am Aromat.",
     "mittel",
     ["Phenol", "Aromat"]
-  ),
-  q(
-    "ch-pool-16-049",
-    KAP[0],
-    "Die Hundsche Regel besagt:",
-    [
-      "dass Orbitale zuerst doppelt besetzt werden",
-      "dass Orbitale gleicher Energie zuerst einzeln mit parallelem Spin besetzt werden",
-      "dass es keine ungepaarten Elektronen gibt",
-      "dass die Schalen voll sein müssen",
-      "dass nur s-Orbitale existieren",
-    ],
-    1,
-    "Hund: Bei entarteten Orbitalen werden zuerst alle mit je einem Elektron (gleicher Spin) besetzt, dann Paarung.",
-    "mittel",
-    ["Hundsches Regel"]
   ),
   q(
     "ch-pool-16-050",

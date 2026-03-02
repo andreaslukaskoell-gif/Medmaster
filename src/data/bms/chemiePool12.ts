@@ -186,22 +186,6 @@ export const chemiePool12: Question[] = [
     ["Mol", "Stoffmenge"]
   ),
   q(
-    "ch-pool-12-014",
-    KAP[1],
-    "Resublimieren ist der Übergang:",
-    [
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "gasförmig → fest",
-      "flüssig → fest",
-    ],
-    3,
-    "Resublimieren = gasförmig → fest (z. B. Iod-Dampf zu Iod-Kristallen). Sublimieren = fest → gasförmig.",
-    "leicht",
-    ["Phasenübergang"]
-  ),
-  q(
     "ch-pool-12-015",
     KAP[2],
     "Welche Elektronegativitätsdifferenz deutet auf eine Ionenbindung hin?",
@@ -284,22 +268,6 @@ export const chemiePool12: Question[] = [
     ["Polare Bindung"]
   ),
   q(
-    "ch-pool-12-022",
-    KAP[3],
-    "Bei der Neutralisation reagieren:",
-    [
-      "Säure + Base → Salz + Wasser",
-      "Oxidationsmittel + Reduktionsmittel",
-      "zwei Alkane",
-      "Alken + Halogen",
-      "zwei Basen",
-    ],
-    0,
-    "Neutralisation: Säure + Base → Salz + Wasser (Protonenübertragung).",
-    "leicht",
-    ["Neutralisation"]
-  ),
-  q(
     "ch-pool-12-023",
     KAP[4],
     "Der pOH einer Lösung mit pH = 4 (25 °C) beträgt:",
@@ -334,22 +302,6 @@ export const chemiePool12: Question[] = [
     "Z = Anzahl der Protonen im Kern; sie definiert das Element. In neutralen Atomen auch Anzahl der Elektronen.",
     "leicht",
     ["Ordnungszahl"]
-  ),
-  q(
-    "ch-pool-12-026",
-    KAP[1],
-    "Nach Avogadro enthalten gleiche Volumina idealer Gase bei gleichem p und T:",
-    [
-      "unterschiedliche Teilchenzahlen",
-      "die gleiche Anzahl von Teilchen",
-      "nur Edelgase",
-      "keine Teilchen",
-      "nur Moleküle",
-    ],
-    1,
-    "Avogadro: Gleiche Stoffmenge n → gleiche Teilchenzahl N = n·N_A; bei gleichem p, T gleiches Volumen.",
-    "mittel",
-    ["Avogadro"]
   ),
   q(
     "ch-pool-12-027",
@@ -424,22 +376,6 @@ export const chemiePool12: Question[] = [
     "Photon = Lichtquant, Träger der elektromagnetischen Wechselwirkung, E = hν.",
     "leicht",
     ["Photon", "Licht"]
-  ),
-  q(
-    "ch-pool-12-032",
-    KAP[1],
-    "Schmelzen ist der Übergang:",
-    [
-      "flüssig → gasförmig",
-      "fest → flüssig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "flüssig → fest",
-    ],
-    1,
-    "Schmelzen = fest → flüssig. Erstarren = flüssig → fest.",
-    "leicht",
-    ["Schmelzen", "Phasenübergang"]
   ),
   q(
     "ch-pool-12-033",
@@ -558,16 +494,6 @@ export const chemiePool12: Question[] = [
     ["Gleichgewichtskonstante"]
   ),
   q(
-    "ch-pool-12-041",
-    KAP[4],
-    "Welcher Stoff ist ein Ampholyt?",
-    ["nur HCl", "nur NaOH", "HCO₃⁻ (Hydrogencarbonat)", "NaCl", "O₂"],
-    2,
-    "Ampholyt kann sowohl als Säure als auch als Base wirken. HCO₃⁻ kann H⁺ abgeben (→ CO₃²⁻) oder aufnehmen (→ H₂CO₃).",
-    "mittel",
-    ["Ampholyt", "Hydrogencarbonat"]
-  ),
-  q(
     "ch-pool-12-042",
     KAP[5],
     "Ein Ester entsteht typischerweise aus:",
@@ -666,22 +592,6 @@ export const chemiePool12: Question[] = [
     ["Periodensystem", "Sauerstoff"]
   ),
   q(
-    "ch-pool-12-050",
-    KAP[1],
-    "Verdampfen ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "gasförmig → fest",
-    ],
-    1,
-    "Verdampfen (bzw. Sieden) = flüssig → gasförmig. Kondensieren = gasförmig → flüssig.",
-    "leicht",
-    ["Verdampfen"]
-  ),
-  q(
     "ch-pool-12-051",
     KAP[2],
     "Welche Verbindung bildet Wasserstoffbrücken aus?",
@@ -690,22 +600,6 @@ export const chemiePool12: Question[] = [
     "NH₃ hat N−H-Bindungen und ein freies Elektronenpaar → Wasserstoffbrücken. CH₄, Benzol, Hexan, CO₂ nicht in gleicher Weise.",
     "mittel",
     ["Wasserstoffbrücken", "Ammoniak"]
-  ),
-  q(
-    "ch-pool-12-052",
-    KAP[3],
-    "Ein Inhibitor:",
-    [
-      "beschleunigt eine Reaktion",
-      "verlangsamt oder verhindert eine Reaktion",
-      "verschiebt das Gleichgewicht",
-      "ist ein Katalysator",
-      "ändert ΔH",
-    ],
-    1,
-    "Inhibitor hemmt eine Reaktion (z. B. Enzymhemmung). Katalysator beschleunigt.",
-    "leicht",
-    ["Inhibitor"]
   ),
   q(
     "ch-pool-12-053",
@@ -744,22 +638,6 @@ export const chemiePool12: Question[] = [
     ["Massenzahl"]
   ),
   q(
-    "ch-pool-12-056",
-    KAP[1],
-    "Welche Aussage zu idealen Gasen ist richtig?",
-    [
-      "Gasteilchen haben ein großes Eigenvolumen",
-      "Es gibt starke Anziehungskräfte zwischen den Teilchen",
-      "pV = nRT gilt in guter Näherung bei niedrigem Druck und hoher Temperatur",
-      "Reale Gase weichen nie ab",
-      "Ideale Gase sind immer flüssig",
-    ],
-    2,
-    "Ideales Gas: Modell mit keinem Eigenvolumen, keine Wechselwirkung; pV = nRT gilt bei niedrigem p und hohem T annähernd.",
-    "mittel",
-    ["ideales Gas"]
-  ),
-  q(
     "ch-pool-12-057",
     KAP[2],
     "Eine metallische Bindung entsteht durch:",
@@ -774,41 +652,5 @@ export const chemiePool12: Question[] = [
     "Metallbindung: positive Atomrümpfe in einem „See“ delokalisierter Valenzelektronen → Leitfähigkeit, Verformbarkeit.",
     "mittel",
     ["Metallbindung"]
-  ),
-  q(
-    "ch-pool-12-058",
-    KAP[3],
-    "Die Reaktionsgeschwindigkeit kann erhöht werden durch:",
-    [
-      "nur Verdünnung",
-      "Temperaturerhöhung, Katalysator, Konzentrationserhöhung",
-      "nur Druckerniedrigung",
-      "nur Abkühlung",
-      "nur Entfernen von Edukten",
-    ],
-    1,
-    "Höhere Temperatur, Katalysator und oft höhere Konzentration erhöhen die Reaktionsgeschwindigkeit.",
-    "leicht",
-    ["Reaktionsgeschwindigkeit"]
-  ),
-  q(
-    "ch-pool-12-059",
-    KAP[4],
-    "Welches Element ist ein Halogen?",
-    ["Natrium", "Calcium", "Chlor", "Stickstoff", "Kohlenstoff"],
-    2,
-    "Halogene: Gruppe 17 – F, Cl, Br, I, At. Na (1), Ca (2), N (15), C (14).",
-    "leicht",
-    ["Halogen", "Periodensystem"]
-  ),
-  q(
-    "ch-pool-12-060",
-    KAP[5],
-    "Die radikalische Substitution ist typisch für:",
-    ["Alkene", "Alkine", "Alkane", "Aromaten", "Carbonsäuren"],
-    2,
-    "Alkane reagieren mit Halogenen (z. B. Cl₂) unter UV-Licht durch radikalische Substitution (H durch Halogen ersetzt).",
-    "mittel",
-    ["radikalische Substitution", "Alkane"]
   ),
 ];

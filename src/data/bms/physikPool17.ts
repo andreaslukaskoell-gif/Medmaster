@@ -244,22 +244,6 @@ export const physikPool17: Question[] = [
     ["Wellenlänge", "Lichtfarben"]
   ),
   q(
-    "ph-pool-17-018",
-    KAP[2],
-    "Beim Schmelzen von Eis bei 0 °C:",
-    [
-      "steigt die Temperatur",
-      "bleibt die Temperatur konstant, bis alles geschmolzen ist",
-      "sinkt die Temperatur",
-      "wird keine Wärme zugeführt",
-      "entsteht Dampf",
-    ],
-    1,
-    "Phasenübergang bei konstanter Temperatur; Schmelzwärme wird zugeführt.",
-    "leicht",
-    ["Schmelzen", "Temperatur"]
-  ),
-  q(
     "ph-pool-17-019",
     KAP[3],
     "Die elektrische Ladung des Elektrons e beträgt etwa:",
@@ -692,16 +676,6 @@ export const physikPool17: Question[] = [
     "Wärmepumpe: Wärme von kalt nach warm nur mit Arbeitsaufwand.",
     "mittel",
     ["Wärmepumpe", "Arbeit"]
-  ),
-  q(
-    "ph-pool-17-054",
-    KAP[3],
-    "Die Phasenverschiebung zwischen Strom und Spannung bei einem idealen Kondensator im Wechselstromkreis beträgt:",
-    ["0°", "90° (Strom eilt Spannung voraus)", "180°", "−90°", "45°"],
-    1,
-    "Idealer Kondensator: I eilt U um 90° voraus.",
-    "mittel",
-    ["Kondensator", "Wechselstrom"]
   ),
   q(
     "ph-pool-17-055",

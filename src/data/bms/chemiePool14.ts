@@ -74,22 +74,6 @@ export const chemiePool14: Question[] = [
     ["Ionenkristall", "NaCl"]
   ),
   q(
-    "ch-pool-14-004",
-    KAP[3],
-    "Ein Oxidationsmittel:",
-    [
-      "gibt Elektronen ab",
-      "nimmt Elektronen auf",
-      "gibt Protonen ab",
-      "nimmt Protonen auf",
-      "ändert die Temperatur",
-    ],
-    1,
-    "Oxidationsmittel nimmt Elektronen auf (wird reduziert). Reduktionsmittel gibt Elektronen ab (wird oxidiert).",
-    "mittel",
-    ["Oxidationsmittel", "Redox"]
-  ),
-  q(
     "ch-pool-14-005",
     KAP[4],
     "Eine Lösung mit [OH⁻] = 10⁻³ mol/L hat bei 25 °C den pH:",
@@ -276,16 +260,6 @@ export const chemiePool14: Question[] = [
     ["Periode", "Schale"]
   ),
   q(
-    "ch-pool-14-020",
-    KAP[1],
-    "Die Einheit der Stoffmenge ist:",
-    ["Gramm", "Mol", "Liter", "Pascal", "Kelvin"],
-    1,
-    "Stoffmenge n hat die SI-Einheit Mol (mol).",
-    "leicht",
-    ["Stoffmenge", "Mol"]
-  ),
-  q(
     "ch-pool-14-021",
     KAP[2],
     "Welche Aussage zur Hydratation von Ionen trifft zu?",
@@ -452,22 +426,6 @@ export const chemiePool14: Question[] = [
     ["Hybridisierung", "sp3"]
   ),
   q(
-    "ch-pool-14-034",
-    KAP[3],
-    "Bei einer Redoxreaktion:",
-    [
-      "werden nur Protonen übertragen",
-      "ändert sich die Oxidationszahl mindestens eines Elements",
-      "bleiben alle Oxidationszahlen konstant",
-      "entsteht immer Wasser",
-      "reagieren nur Metalle",
-    ],
-    1,
-    "Redox: Elektronenübertragung; mindestens ein Element wird oxidiert (Oxidationszahl steigt) und eines reduziert (sinkt).",
-    "mittel",
-    ["Redox", "Oxidationszahl"]
-  ),
-  q(
     "ch-pool-14-035",
     KAP[4],
     "Salzsäure (HCl) in Wasser liegt vor allem vor als:",
@@ -486,16 +444,6 @@ export const chemiePool14: Question[] = [
     "Ether: R−O−R'. Zwei Kohlenstoffatome sind über ein Sauerstoffatom verbunden.",
     "mittel",
     ["Ether", "funktionelle Gruppe"]
-  ),
-  q(
-    "ch-pool-14-037",
-    KAP[0],
-    "Welches Element hat die höchste Elektronegativität?",
-    ["Kohlenstoff", "Stickstoff", "Sauerstoff", "Fluor", "Chlor"],
-    3,
-    "Fluor hat die höchste Elektronegativität (EN ≈ 4,0 nach Pauling).",
-    "leicht",
-    ["Elektronegativität", "Fluor"]
   ),
   q(
     "ch-pool-14-038",

@@ -72,22 +72,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ["Enthalpie", "endotherm", "exotherm"]
   ),
   q(
-    "ch-off-004",
-    "chem-kap3",
-    "Die Bindung zwischen welchen der genannten Elementkombinationen ist die polarste?",
-    [
-      "Phosphor/Sauerstoff",
-      "Lithium/Wasserstoff",
-      "Kohlenstoff/Chlor",
-      "Chlor/Calcium",
-      "Wasserstoff/Kohlenstoff",
-    ],
-    1,
-    "Die Polarität steigt mit der Elektronegativitätsdifferenz. Li−H hat eine große EN-Differenz (Li ≈1, H ≈2,2); unter den Optionen ist Li/H eine der polarsten.",
-    "mittel",
-    ["Polare Bindung", "Elektronegativität"]
-  ),
-  q(
     "ch-off-005",
     "chem-kap4",
     "Welche der Aussagen über Oxidation ist richtig?",
@@ -114,22 +98,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ["Oxidationszahl", "Oxalat"]
   ),
   q(
-    "ch-off-007",
-    "chem-kap4",
-    "Durch welche der genannten Maßnahmen lässt sich die Lage des chemischen Gleichgewichts NICHT beeinflussen?",
-    [
-      "Erhöhung der Temperatur",
-      "Einsatz eines Katalysators",
-      "Zufuhr von Edukten",
-      "Entfernung von Produkten",
-      "Verminderung von Druck",
-    ],
-    1,
-    "Ein Katalysator beschleunigt Hin- und Rückreaktion gleichermaßen und ändert die Gleichgewichtslage nicht. Temperatur, Konzentration und Druck können das Gleichgewicht verschieben (Le Chatelier).",
-    "mittel",
-    ["Gleichgewicht", "Katalysator"]
-  ),
-  q(
     "ch-off-008",
     "chem-kap5",
     "Welche der angeführten Säuren ist ein wichtiges Vitamin?",
@@ -138,22 +106,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     "Ascorbinsäure = Vitamin C. Die anderen sind keine Vitamine (Milchsäure Stoffwechsel, Salicylsäure Schmerzmittel, Zitronensäure Organisch, Stearinsäure Fettsäure).",
     "leicht",
     ["Vitamine", "Ascorbinsäure", "Vitamin C"]
-  ),
-  q(
-    "ch-off-009",
-    "chem-kap2",
-    "Der Übergang zwischen zwei Aggregatzuständen heißt:",
-    [
-      "von fest nach flüssig: Sublimieren",
-      "von flüssig nach fest: Erstarren",
-      "von fest nach gasförmig: Verdampfen",
-      "von gasförmig nach fest: Kondensieren",
-      "von gasförmig nach flüssig: Sublimieren",
-    ],
-    1,
-    "Flüssig → fest = Erstarren (bzw. Gefrieren). Fest → flüssig = Schmelzen. Fest → gasförmig = Sublimieren. Gasförmig → flüssig = Kondensieren.",
-    "leicht",
-    ["Aggregatzustände", "Phasenübergang"]
   ),
   q(
     "ch-off-010",
@@ -172,22 +124,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ["Atombau", "Masse"]
   ),
   q(
-    "ch-off-011",
-    "chem-kap6",
-    "Wie ist ein sekundäres C-Atom definiert?",
-    [
-      "Es trägt 2 NH₂-Gruppen.",
-      "Es befindet sich an Position 2 in einer Kohlenstoffkette.",
-      "Es reagiert nach einer Kinetik 2. Ordnung.",
-      "Es trägt 2 OH-Gruppen.",
-      "Es hat 2 weitere C-Atome gebunden.",
-    ],
-    4,
-    "Sekundär = an genau zwei weitere Kohlenstoffatome gebunden. Primär = 1 C-Nachbar, tertiär = 3 C-Nachbarn.",
-    "mittel",
-    ["sekundäres C-Atom", "Organische Chemie"]
-  ),
-  q(
     "ch-off-012",
     "chem-kap5",
     "Unten ist eine Liste von vier Gasen angegeben. Zwei davon ergeben in Wasser gelöst Säuren. Welche sind das? 1. NH₃  2. HCl  3. SO₂  4. CH₄",
@@ -202,26 +138,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     "HCl ergibt Salzsäure, SO₂ ergibt schweflige Säure (H₂SO₃). NH₃ ist eine Base, CH₄ reagiert in Wasser nicht sauer.",
     "mittel",
     ["Säuren", "Gase", "Anorganik"]
-  ),
-  q(
-    "ch-off-013",
-    "chem-kap5",
-    "Welche Konzentration an Hydroniumionen enthält eine Lösung mit einem pH-Wert von 3?",
-    ["0,003 mol/L", "10³ mol/L", "10⁻³ g/L", "10³ g/L", "10⁻³ mol/L"],
-    4,
-    "pH = −log₁₀[H₃O⁺] ⇒ [H₃O⁺] = 10⁻ᵖᴴ = 10⁻³ mol/L. Einheit: Stoffmengenkonzentration mol/L.",
-    "leicht",
-    ["pH", "Hydroniumionen"]
-  ),
-  q(
-    "ch-off-014",
-    "chem-kap3",
-    "Welche der folgenden Verbindungen ist kovalent aufgebaut?",
-    ["NaCl", "CuCl₂", "AlCl₃", "H₂O₂", "Fe₂O₃"],
-    3,
-    "H₂O₂ (Wasserstoffperoxid) ist eine molekulare, kovalente Verbindung. NaCl, CuCl₂, AlCl₃, Fe₂O₃ sind ionische Verbindungen (Metall + Nichtmetall).",
-    "mittel",
-    ["kovalente Bindung", "Ionenbindung"]
   ),
   q(
     "ch-off-015",
@@ -248,16 +164,6 @@ export const chemiePoolOffiziellStyle: Question[] = [
     "Magnesium (Mg) steht in der 3. Periode. 2. Periode: Li, Be, B, C, N, O, F, Ne.",
     "leicht",
     ["Periodensystem", "Periode"]
-  ),
-  q(
-    "ch-off-017",
-    "chem-kap5",
-    "Welche der genannten Säuren trägt am meisten zum Auftreten von saurem Regen bei?",
-    ["HCl", "H₂S", "HClO₄", "HNO₃", "H₃PO₄"],
-    3,
-    "Saurer Regen entsteht vor allem durch Stickoxide (HNO₃) und Schwefeloxide (H₂SO₄). HNO₃ aus Verbrennung/Verkehr ist ein Hauptbeiträger.",
-    "mittel",
-    ["saurer Regen", "Stickoxide"]
   ),
   q(
     "ch-off-018",

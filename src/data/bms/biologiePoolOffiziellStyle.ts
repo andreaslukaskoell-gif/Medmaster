@@ -285,22 +285,6 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Chromosomen", "FALSCH"]
   ),
   q(
-    "bio-off-022",
-    "bio-kap2",
-    "Welche der folgenden Aussagen zur Embryonalentwicklung ist NICHT zutreffend?",
-    [
-      "Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten Amnionhöhle.",
-      "Aus Ektoderm, Mesoderm und Entoderm entwickeln sich alle Organe des Embryos.",
-      "Am Ende der 8. Entwicklungswoche sind Finger und Zehen des Embryos ausgebildet.",
-      "In der 4.–8. Woche ist der Embryo gegenüber schädigenden Faktoren besonders anfällig.",
-      "Das Herz des Embryos beginnt am Ende der 8. Entwicklungswoche zu schlagen.",
-    ],
-    4,
-    "Das Herz beginnt bereits in der 3.–4. Woche zu schlagen, nicht erst am Ende der 8. Woche (E falsch).",
-    "mittel",
-    ["Embryonalentwicklung", "FALSCH"]
-  ),
-  q(
     "bio-off-023",
     "bio-kap2",
     "Welche der folgenden Aussagen zur Atmung ist FALSCH?",

@@ -30,16 +30,6 @@ function q(
 
 export const biologiePool13: Question[] = [
   q(
-    "bio-pool-13-001",
-    "bio-kap1",
-    "Welche Basenpaarung kommt in der DNA vor?",
-    ["A-U und G-C", "A-T und G-C", "A-G und T-C", "nur A-T", "nur G-C"],
-    1,
-    "In der DNA: Adenin mit Thymin (A-T), Guanin mit Cytosin (G-C). In der RNA: A-U statt A-T.",
-    "leicht",
-    ["DNA", "Genetik"]
-  ),
-  q(
     "bio-pool-13-002",
     "bio-kap2",
     "Welcher Knochen ist der längste des menschlichen Körpers?",
@@ -96,32 +86,6 @@ export const biologiePool13: Question[] = [
     "Zellatmung: organische Stoffe werden oxidiert, dabei wird ATP gebildet (Glykolyse, Citratzyklus, Atmungskette).",
     "leicht",
     ["Stoffwechsel", "Zellatmung"]
-  ),
-  q(
-    "bio-pool-13-006",
-    "bio-kap2",
-    "Wo wird das antidiuretische Hormon (ADH) gebildet?",
-    [
-      "Nebenniere",
-      "Hypophysenvorderlappen",
-      "Hypothalamus (in Nervenzellen)",
-      "Niere",
-      "Schilddrüse",
-    ],
-    2,
-    "ADH (Vasopressin) wird im Hypothalamus gebildet und im Hypophysenhinterlappen gespeichert; es fördert die Wasserresorption in der Niere.",
-    "mittel",
-    ["Hormone", "ADH"]
-  ),
-  q(
-    "bio-pool-13-007",
-    "bio-kap4",
-    "Wie viele Tochterzellen entstehen bei der Meiose aus einer Ausgangszelle?",
-    ["1", "2", "4", "8", "46"],
-    2,
-    "Meiose: 1 diploide Zelle → 4 haploide Tochterzellen (Gameten).",
-    "leicht",
-    ["Meiose", "Genetik"]
   ),
   q(
     "bio-pool-13-008",
@@ -490,22 +454,6 @@ export const biologiePool13: Question[] = [
     "Herbivoren (Pflanzenfresser) ernähren sich von Pflanzen. Prädatoren = Räuber.",
     "leicht",
     ["Ökologie", "Nahrungskette"]
-  ),
-  q(
-    "bio-pool-13-034",
-    "bio-kap1",
-    "Welche Aussage über die Zellmembran trifft NICHT zu?",
-    [
-      "Sie besteht aus einer Lipiddoppelschicht",
-      "Sie enthält Proteine",
-      "Sie ist semipermeabel",
-      "Sie umgibt nur den Zellkern",
-      "Sie kann Rezeptoren tragen",
-    ],
-    3,
-    "Die Zellmembran umgibt die gesamte Zelle, nicht nur den Zellkern (D falsch).",
-    "leicht",
-    ["Zellmembran", "FALSCH"]
   ),
   q(
     "bio-pool-13-035",

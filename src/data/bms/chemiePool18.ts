@@ -436,22 +436,6 @@ export const chemiePool18: Question[] = [
     ["Mischungsenthalpie", "ideales Gas"]
   ),
   q(
-    "ch-pool-18-033",
-    KAP[2],
-    "Welche Aussage zu Ionenradien trifft zu?",
-    [
-      "Kationen sind größer als das zugehörige Atom",
-      "Anionen sind größer als das zugehörige Atom",
-      "Na⁺ und Na haben den gleichen Radius",
-      "Cl⁻ ist kleiner als Cl",
-      "Ionenradien sind immer kleiner als Atomradien",
-    ],
-    1,
-    "Anionen haben mehr Elektronen bei gleicher Kernladung → größerer Radius. Kationen kleiner als Atom.",
-    "mittel",
-    ["Ionenradius"]
-  ),
-  q(
     "ch-pool-18-034",
     KAP[3],
     "Die Gleichgewichtslage K wird durch Temperaturänderung:",
@@ -718,16 +702,6 @@ export const chemiePool18: Question[] = [
     "10 Elektronen = Neon (Z=10), Edelgas.",
     "mittel",
     ["Neon", "Elektronenkonfiguration"]
-  ),
-  q(
-    "ch-pool-18-056",
-    KAP[1],
-    "Die ideale Gasgleichung lautet:",
-    ["p = ρ g h", "pV = nRT", "E = m c²", "F = m a", "v = λ f"],
-    1,
-    "pV = nRT (allgemeine Gasgleichung). R = Gaskonstante.",
-    "leicht",
-    ["ideales Gas", "Gasgleichung"]
   ),
   q(
     "ch-pool-18-057",

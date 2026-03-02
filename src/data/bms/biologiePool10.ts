@@ -122,16 +122,6 @@ export const biologiePool10: Question[] = [
     ["Herz", "Anatomie"]
   ),
   q(
-    "bio-pool-10-009",
-    "bio-kap3",
-    "Aus welchem Keimblatt entwickelt sich das Nervensystem?",
-    ["Entoderm", "Mesoderm", "Ektoderm", "Aus allen drei", "Aus dem Dotter"],
-    2,
-    "Ektoderm → u. a. Epidermis, Nervensystem. Mesoderm → Muskeln, Skelett, Kreislauf. Entoderm → Darmschleimhaut, Leber, Pankreas.",
-    "mittel",
-    ["Embryologie", "Keimblätter"]
-  ),
-  q(
     "bio-pool-10-010",
     "bio-kap4",
     "Ein Erbgang, bei dem heterozygote Merkmalsträger phänotypisch zwischen den homozygoten Formen liegen, heißt:",
@@ -182,22 +172,6 @@ export const biologiePool10: Question[] = [
     "Die ökologische Amplitude ist der Toleranzbereich einer Art gegenüber einem Umweltfaktor (z. B. Temperatur, pH).",
     "mittel",
     ["Ökologie"]
-  ),
-  q(
-    "bio-pool-10-014",
-    "bio-kap2",
-    "Welcher Muskeltyp ist willkürlich steuerbar?",
-    [
-      "Glatte Muskulatur",
-      "Herzmuskulatur",
-      "Skelettmuskulatur",
-      "Alle genannten",
-      "Keiner der genannten",
-    ],
-    2,
-    "Nur die Skelettmuskulatur ist willkürlich (somatomotorisch) steuerbar. Glatte und Herzmuskulatur werden vegetativ gesteuert.",
-    "leicht",
-    ["Muskulatur"]
   ),
   q(
     "bio-pool-10-015",
@@ -632,22 +606,6 @@ export const biologiePool10: Question[] = [
     "Der Pylorus (Magenpförtner) grenzt an das Duodenum. Fundus und Korpus sind Magenabschnitte; Cardia am Mageneingang.",
     "mittel",
     ["Verdauung", "Magen"]
-  ),
-  q(
-    "bio-pool-10-047",
-    "bio-kap4",
-    "Was ist ein Allel?",
-    [
-      "Ein Chromosom",
-      "Eine Variante eines Gens an einem bestimmten Genort",
-      "Eine gesamte DNA-Sequenz",
-      "Ein Protein",
-      "Eine RNA-Art",
-    ],
-    1,
-    "Ein Allel ist eine von mehreren möglichen Varianten eines Gens (z. B. Allel für braune oder blaue Augen). Homologe Chromosomen tragen je ein Allel pro Genort.",
-    "leicht",
-    ["Genetik", "Allel"]
   ),
   q(
     "bio-pool-10-048",

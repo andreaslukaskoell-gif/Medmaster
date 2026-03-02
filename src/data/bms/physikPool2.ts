@@ -511,16 +511,6 @@ export const physikPool2: Question[] = [
     ["freier Fall", "Kinematik"]
   ),
   q(
-    "ph-pool-092",
-    "phys-kap4",
-    "Die Verdampfungsenthalpie von Wasser bei 100 °C beträgt etwa:",
-    ["2,26·10⁶ J/kg", "334 J/kg", "4184 J/kg", "100 J/kg", "2,26 J/kg"],
-    0,
-    "Verdampfungswärme Wasser ca. 2257 kJ/kg ≈ 2,26·10⁶ J/kg. Schmelzwärme Eis ca. 334 kJ/kg.",
-    "mittel",
-    ["Verdampfung", "Enthalpie"]
-  ),
-  q(
     "ph-pool-093",
     "phys-kap5",
     "In einem geschlossenen Stromkreis mit einer Spannungsquelle und einem Widerstand:",

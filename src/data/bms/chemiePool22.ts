@@ -244,38 +244,6 @@ export const chemiePool22: Question[] = [
     ["Siedepunkt"]
   ),
   q(
-    "ch-pool-22-021",
-    KAP[2],
-    "Welche Aussage zu Ionen ist richtig?",
-    [
-      "Ionen sind immer neutral",
-      "Kationen sind positiv geladen",
-      "Anionen haben mehr Protonen als Elektronen",
-      "Ionen haben keine Ladung",
-      "Alle Ionen sind einwertig",
-    ],
-    1,
-    "Kation = positives Ion (Elektronenmangel). Anion = negatives Ion (Elektronenüberschuss).",
-    "leicht",
-    ["Ion"]
-  ),
-  q(
-    "ch-pool-22-022",
-    KAP[3],
-    "Ein Katalysator wird bei der Reaktion:",
-    [
-      "verbraucht",
-      "nicht verbraucht (steht am Ende wieder zur Verfügung)",
-      "oxidiert",
-      "reduziert",
-      "zersetzt",
-    ],
-    1,
-    "Katalysator beschleunigt die Reaktion, wird aber nicht verbraucht.",
-    "leicht",
-    ["Katalysator"]
-  ),
-  q(
     "ch-pool-22-023",
     KAP[4],
     "Welche Säure ist in Cola enthalten?",
@@ -378,22 +346,6 @@ export const chemiePool22: Question[] = [
     ["Kohlenstoff", "Isotop"]
   ),
   q(
-    "ch-pool-22-032",
-    KAP[1],
-    "Erstarren ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → fest",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "gasförmig → fest",
-    ],
-    1,
-    "Erstarren (Gefrieren) = flüssig → fest. Schmelzen = fest → flüssig.",
-    "leicht",
-    ["Erstarren"]
-  ),
-  q(
     "ch-pool-22-033",
     KAP[2],
     "Welche Verbindung hat die höchste Schmelztemperatur (typischerweise)?",
@@ -402,16 +354,6 @@ export const chemiePool22: Question[] = [
     "Metalle haben oft sehr hohe Schmelzpunkte (Eisen ca. 1538 °C). NaCl ca. 801 °C.",
     "mittel",
     ["Schmelzpunkt"]
-  ),
-  q(
-    "ch-pool-22-034",
-    KAP[3],
-    "Die Gleichgewichtskonstante K wird durch einen Katalysator:",
-    ["erhöht", "erniedrigt", "nicht geändert", "verdoppelt", "auf null gesetzt"],
-    2,
-    "Katalysator ändert weder K noch die Gleichgewichtslage.",
-    "mittel",
-    ["Gleichgewichtskonstante"]
   ),
   q(
     "ch-pool-22-035",
@@ -432,16 +374,6 @@ export const chemiePool22: Question[] = [
     "Ether: C−O−C (Sauerstoff zwischen zwei Kohlenstoffatomen).",
     "leicht",
     ["Ether"]
-  ),
-  q(
-    "ch-pool-22-037",
-    KAP[0],
-    "Welche Gruppe des PSE enthält die Alkalimetalle?",
-    ["2", "1", "17", "18", "16"],
-    1,
-    "Alkalimetalle: Gruppe 1 (Li, Na, K, Rb, Cs, Fr).",
-    "leicht",
-    ["Alkalimetalle"]
   ),
   q(
     "ch-pool-22-038",
@@ -474,22 +406,6 @@ export const chemiePool22: Question[] = [
     "London-Kräfte = schwache van-der-Waals-Wechselwirkungen zwischen temporären Dipolen.",
     "mittel",
     ["London-Kräfte", "van-der-Waals"]
-  ),
-  q(
-    "ch-pool-22-040",
-    KAP[3],
-    "Eine Eliminierung ist eine Reaktion, bei der:",
-    [
-      "zwei Moleküle sich verbinden",
-      "aus einem Molekül kleinere Moleküle entstehen (z. B. Abspaltung)",
-      "Protonen übertragen werden",
-      "Elektronen übertragen werden",
-      "nur umgelagert wird",
-    ],
-    1,
-    "Eliminierung: Abspaltung (z. B. HX aus Halogenalkan → Alken).",
-    "mittel",
-    ["Eliminierung"]
   ),
   q(
     "ch-pool-22-041",
@@ -600,16 +516,6 @@ export const chemiePool22: Question[] = [
     "Chiral = nicht mit dem Spiegelbild deckungsgleich; Enantiomere (z. B. L- und D-Aminosäuren).",
     "schwer",
     ["chiral", "Enantiomere"]
-  ),
-  q(
-    "ch-pool-22-049",
-    KAP[0],
-    "Die Anzahl der Valenzelektronen von Stickstoff (N) beträgt:",
-    ["3", "5", "7", "8", "2"],
-    1,
-    "Stickstoff (Gruppe 15) hat 5 Valenzelektronen (Außenelektronen).",
-    "leicht",
-    ["Valenzelektronen", "Stickstoff"]
   ),
   q(
     "ch-pool-22-050",

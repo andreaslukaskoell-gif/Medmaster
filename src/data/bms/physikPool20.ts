@@ -84,22 +84,6 @@ export const physikPool20: Question[] = [
     ["Widerstand", "spezifischer Widerstand"]
   ),
   q(
-    "ph-pool-20-005",
-    KAP[4],
-    "Die Einheit Becquerel (Bq) gibt an:",
-    [
-      "Energiedosis",
-      "Aktivität (Zerfälle pro Sekunde)",
-      "Äquivalentdosis",
-      "Halbwertszeit",
-      "Reichweite",
-    ],
-    1,
-    "1 Bq = 1 Zerfall/s.",
-    "leicht",
-    ["Becquerel", "Aktivität"]
-  ),
-  q(
     "ph-pool-20-006",
     KAP[0],
     "Die Geschwindigkeit v nach der Zeit t bei gleichmäßig beschleunigter Bewegung mit Anfangsgeschwindigkeit v₀ ist:",
@@ -172,16 +156,6 @@ export const physikPool20: Question[] = [
     "T_½: Anzahl der Kerne auf die Hälfte gesunken.",
     "leicht",
     ["Halbwertszeit", "Definition"]
-  ),
-  q(
-    "ph-pool-20-011",
-    KAP[0],
-    "Der Impuls p eines Körpers der Masse m und Geschwindigkeit v ist:",
-    ["p = m/v", "p = m·v", "p = m·a", "p = F·t", "p = E/v"],
-    1,
-    "p = m·v.",
-    "leicht",
-    ["Impuls", "Definition"]
   ),
   q(
     "ph-pool-20-012",
@@ -326,16 +300,6 @@ export const physikPool20: Question[] = [
     "Isochor: V = const; p/T = const → Erwärmung erhöht p und T.",
     "mittel",
     ["isochor", "Erwärmung"]
-  ),
-  q(
-    "ph-pool-20-024",
-    KAP[3],
-    "Die magnetische Flussdichte B wird in … gemessen.",
-    ["Weber", "Tesla", "Henry", "Farad", "Coulomb"],
-    1,
-    "B in Tesla (T).",
-    "leicht",
-    ["Tesla", "Magnetfeld"]
   ),
   q(
     "ph-pool-20-025",
@@ -502,16 +466,6 @@ export const physikPool20: Question[] = [
     "Konstruktiv: Gangunterschied = k·λ (k = 0, ±1, ±2, …).",
     "mittel",
     ["Interferenz", "konstruktiv"]
-  ),
-  q(
-    "ph-pool-20-038",
-    KAP[2],
-    "Die spezifische Wärmekapazität von Wasser ist etwa:",
-    ["0,5 kJ/(kg·K)", "4,2 kJ/(kg·K)", "1 kJ/(kg·K)", "10 kJ/(kg·K)", "0,1 kJ/(kg·K)"],
-    1,
-    "c_Wasser ≈ 4,19 kJ/(kg·K).",
-    "leicht",
-    ["spezifische Wärmekapazität", "Wasser"]
   ),
   q(
     "ph-pool-20-039",
@@ -800,15 +754,5 @@ export const physikPool20: Question[] = [
     "Generator: Induktion durch Bewegung (Dynamo).",
     "leicht",
     ["Generator", "Induktion"]
-  ),
-  q(
-    "ph-pool-20-060",
-    KAP[4],
-    "Die Zerfallskonstante λ hat die Einheit:",
-    ["s", "1/s", "Bq", "J", "kg"],
-    1,
-    "λ in 1/s; A = λ·N mit A in Bq.",
-    "leicht",
-    ["Zerfallskonstante", "Einheit"]
   ),
 ];

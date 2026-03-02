@@ -33,32 +33,6 @@ function q(
 export const biologiePool7: Question[] = [
   // —— Kap1: Kennzeichen des Lebens, Homöostase, Viren, Emergenz ——
   q(
-    "bio-pool-7-001",
-    "bio-kap1",
-    "Welches der folgenden Merkmale ist KEIN Kennzeichen des Lebens?",
-    ["Stoffwechsel", "Kristallisation", "Reizbarkeit", "Fortpflanzung", "Homöostase"],
-    1,
-    "Kristallisation ist ein physikalisch-chemischer Prozess (z. B. Salzkristalle); die sieben Kennzeichen sind StReForWaEvoBeHo + Homöostase.",
-    "leicht",
-    ["Kennzeichen des Lebens", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-002",
-    "bio-kap1",
-    "Warum wirken Antibiotika nicht gegen Viren?",
-    [
-      "Viren haben eine zu dicke Zellwand.",
-      "Viren haben keinen eigenständigen Stoffwechsel und keine bakteriellen Zielstrukturen.",
-      "Viren sind zu groß für Antibiotika.",
-      "Antibiotika zerstören nur DNA, Viren haben nur RNA.",
-      "Viren leben nur außerhalb von Zellen.",
-    ],
-    1,
-    "Viren haben keine Zellwand, keine Ribosomen und keinen eigenen Stoffwechsel; Antibiotika zielen auf bakterielle Strukturen.",
-    "mittel",
-    ["Viren", "Antibiotika", "Kap1"]
-  ),
-  q(
     "bio-pool-7-003",
     "bio-kap1",
     "Was kennzeichnet negative Rückkopplung?",
@@ -149,22 +123,6 @@ export const biologiePool7: Question[] = [
     ["ATP", "Stoffwechsel", "Kap1"]
   ),
   q(
-    "bio-pool-7-009",
-    "bio-kap1",
-    STEM_FALSCH,
-    [
-      "Viren können sich nur in Wirtszellen vermehren.",
-      "Viren besitzen keinen eigenständigen Stoffwechsel.",
-      "Viren haben eine Zellmembran und Ribosomen.",
-      "Viren zeigen Evolution (z. B. Antigendrift).",
-      "Antibiotika wirken nicht gegen Viren.",
-    ],
-    2,
-    "Viren haben weder Zellmembran noch Ribosomen; sie sind obligat intrazelluläre Parasiten.",
-    "leicht",
-    ["Viren", "Kap1"]
-  ),
-  q(
     "bio-pool-7-010",
     "bio-kap1",
     "Die sieben Kennzeichen des Lebens (StReForWaEvoBeHo) umfassen unter anderem …",
@@ -181,22 +139,6 @@ export const biologiePool7: Question[] = [
     ["Kennzeichen des Lebens", "Kap1"]
   ),
   // —— Kap2: Epithelien, Zellkontakte, Sekretion ——
-  q(
-    "bio-pool-7-011",
-    "bio-kap2",
-    "Welches Epithel kleidet die Trachea (Luftröhre) aus?",
-    [
-      "Urothel",
-      "Einschichtiges Plattenepithel",
-      "Mehrreihiges Flimmerepithel",
-      "Verhorntes Plattenepithel",
-      "Einschichtiges kubisches Epithel",
-    ],
-    2,
-    "Die Trachea ist von mehrreihigem (pseudostratifiziertem) Flimmerepithel mit Kinozilien ausgekleidet (mukoziliäre Clearance).",
-    "leicht",
-    ["Epithel", "Trachea", "Kap2"]
-  ),
   q(
     "bio-pool-7-012",
     "bio-kap2",
@@ -254,22 +196,6 @@ export const biologiePool7: Question[] = [
     "Gap Junctions (Connexine) ermöglichen direkten Ionenaustausch; so breitet sich die Erregung im Herzen koordiniert aus.",
     "mittel",
     ["Zellkontakte", "Herz", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-016",
-    "bio-kap2",
-    "Welches Epithel ermöglicht die Dehnung der Harnblase?",
-    [
-      "Flimmerepithel",
-      "Verhorntes Plattenepithel",
-      "Urothel (Übergangsepithel) mit Schirmzellen",
-      "Einschichtiges Plattenepithel",
-      "Einschichtiges Zylinderepithel",
-    ],
-    2,
-    "Urothel (Übergangsepithel) mit Schirmzellen und Uroplakin-Membranen kann sich bei Füllung stark dehnen.",
-    "leicht",
-    ["Epithel", "Harnblase", "Kap2"]
   ),
   q(
     "bio-pool-7-017",
@@ -368,22 +294,6 @@ export const biologiePool7: Question[] = [
     ["Zellkontakte", "Kap2"]
   ),
   q(
-    "bio-pool-7-023",
-    "bio-kap2",
-    STEM_FALSCH,
-    [
-      "Die Trachea ist von Flimmerepithel ausgekleidet.",
-      "Urothel kleidet die Harnblase aus.",
-      "Die Epidermis ist verhorntes Plattenepithel.",
-      "Die Trachea ist von Urothel ausgekleidet.",
-      "Talgdrüsen sezernieren holokrin.",
-    ],
-    3,
-    "Die Trachea hat Flimmerepithel; Urothel kleidet Harnblase und Ureter aus (D falsch).",
-    "leicht",
-    ["Epithel", "Kap2"]
-  ),
-  q(
     "bio-pool-7-024",
     "bio-kap2",
     "Becherzellen im Darmepithel sezernieren …",
@@ -411,16 +321,6 @@ export const biologiePool7: Question[] = [
   ),
   // —— Kap4: Genetik (DNA, Gen, Chromosom, Meiose) ——
   q(
-    "bio-pool-7-026",
-    "bio-kap4",
-    "Welche Basenpaarung kommt in der DNA vor?",
-    ["A–G", "A–T", "G–T", "C–U", "A–U"],
-    1,
-    "In der DNA paaren sich A mit T (2 H-Brücken) und G mit C (3 H-Brücken). A–U und C–U sind typisch für RNA.",
-    "leicht",
-    ["DNA", "Basenpaarung", "Kap4"]
-  ),
-  q(
     "bio-pool-7-027",
     "bio-kap4",
     "Was ist ein Allel?",
@@ -435,22 +335,6 @@ export const biologiePool7: Question[] = [
     "Allel = eine von mehreren Varianten eines Gens am gleichen Locus. Ein diploider Organismus trägt zwei Allele pro Gen.",
     "leicht",
     ["Genetik", "Allel", "Kap4"]
-  ),
-  q(
-    "bio-pool-7-028",
-    "bio-kap4",
-    "Was sind homologe Chromosomen?",
-    [
-      "Zwei identische Kopien eines Chromosoms nach der Replikation.",
-      "Ein Paar aus mütterlichem und väterlichem Chromosom mit gleichen Genorten (Loci), oft verschiedene Allele.",
-      "Die Chromosomen in den Mitochondrien.",
-      "Chromosomen ohne Zentromer.",
-      "Nur die Geschlechtschromosomen.",
-    ],
-    1,
-    "Homologe Chromosomen: je eines von Mutter und Vater, gleiche Gene an gleichen Loci, aber oft unterschiedliche Allele. Nicht identisch!",
-    "mittel",
-    ["Chromosomen", "Genetik", "Kap4"]
   ),
   q(
     "bio-pool-7-029",
@@ -511,32 +395,6 @@ export const biologiePool7: Question[] = [
     ["Gen", "DNA", "Kap4"]
   ),
   q(
-    "bio-pool-7-033",
-    "bio-kap4",
-    STEM_FALSCH,
-    [
-      "In der DNA paart A mit T und G mit C.",
-      "Ein Allel ist eine Variante eines Gens.",
-      "Schwesterchromatiden sind identische Kopien nach der Replikation.",
-      "Homologe Chromosomen sind immer genetisch identisch.",
-      "Die Meiose produziert haploide Keimzellen.",
-    ],
-    3,
-    "Homologe Chromosomen tragen gleiche Genorte, aber oft verschiedene Allele (mütterlich/väterlich) – nicht identisch.",
-    "mittel",
-    ["Genetik", "Kap4"]
-  ),
-  q(
-    "bio-pool-7-034",
-    "bio-kap4",
-    "Wie viele Chromosomen hat eine menschliche Körperzelle (diploid)?",
-    ["23", "46", "69", "92", "22"],
-    1,
-    "Der Mensch hat 46 Chromosomen (23 Paare) in diploiden Körperzellen; Keimzellen sind haploid mit 23.",
-    "leicht",
-    ["Chromosomen", "Kap4"]
-  ),
-  q(
     "bio-pool-7-035",
     "bio-kap3",
     "Wo findet die Befruchtung der Eizelle beim Menschen typischerweise statt?",
@@ -545,16 +403,6 @@ export const biologiePool7: Question[] = [
     "Die Befruchtung erfolgt im Eileiter (Tuba uterina); die Einnistung dann in der Gebärmutter.",
     "leicht",
     ["Befruchtung", "Reproduktion", "Kap3"]
-  ),
-  q(
-    "bio-pool-7-036",
-    "bio-kap3",
-    "Welches Hormon löst den Eisprung aus?",
-    ["Östrogen", "Progesteron", "LH (luteinisierendes Hormon)", "FSH", "Prolactin"],
-    2,
-    "Der LH-Peak löst den Eisprung aus; FSH stimuliert vor allem die Follikelreifung.",
-    "mittel",
-    ["Hormone", "Zyklus", "Kap3"]
   ),
   q(
     "bio-pool-7-037",
@@ -583,16 +431,6 @@ export const biologiePool7: Question[] = [
     ["Mitochondrien", "ATP", "Kap1"]
   ),
   q(
-    "bio-pool-7-039",
-    "bio-kap2",
-    "Welche Sekretionsform beschreibt die Abgabe von Sekret unter Mitnahme von Zellplasma?",
-    ["Merokrin", "Apokrin", "Holokrin", "Endokrin", "Parakrin"],
-    1,
-    "Apokrin: Zellspitze wird abgeschnürt (z. B. Milchfettkügelchen). Merokrin = Exozytose; Holokrin = ganze Zelle = Sekret.",
-    "schwer",
-    ["Sekretion", "Kap2"]
-  ),
-  q(
     "bio-pool-7-040",
     "bio-kap4",
     "Bei einem heterozygoten Träger (Aa) und homozygot rezessivem Partner (aa): Wie groß ist die Wahrscheinlichkeit für ein homozygotes rezessives Kind (aa)?",
@@ -601,54 +439,6 @@ export const biologiePool7: Question[] = [
     "Aa × aa → je 50 % Aa und aa. Ein homozygotes rezessives Kind hat 50 % Wahrscheinlichkeit.",
     "mittel",
     ["Vererbung", "Kap4"]
-  ),
-  q(
-    "bio-pool-7-041",
-    "bio-kap5",
-    "Was beschreibt die Biozönose?",
-    [
-      "Den unbelebten Lebensraum",
-      "Die Lebensgemeinschaft aller Arten in einem Gebiet",
-      "Nur die Pflanzen",
-      "Die abiotischen Faktoren",
-      "Ein einzelnes Individuum",
-    ],
-    1,
-    "Biozönose = Lebensgemeinschaft aller Organismen; Biotop = unbelebter Lebensraum; Ökosystem = Biotop + Biozönose.",
-    "leicht",
-    ["Ökologie", "Biozönose", "Kap5"]
-  ),
-  q(
-    "bio-pool-7-042",
-    "bio-kap5",
-    "Was kennzeichnet eine Population?",
-    [
-      "Alle Arten in einem Gebiet",
-      "Individuen einer Art in einem räumlich abgrenzbaren Gebiet",
-      "Nur die Pflanzen",
-      "Der unbelebte Lebensraum",
-      "Die Wechselbeziehungen zwischen Ökosystemen",
-    ],
-    1,
-    "Population = Individuen derselben Art in einem räumlich abgrenzbaren Gebiet.",
-    "leicht",
-    ["Ökologie", "Population", "Kap5"]
-  ),
-  q(
-    "bio-pool-7-043",
-    "bio-kap1",
-    "Wo findet die Translation (Proteinbiosynthese) statt?",
-    [
-      "Im Zellkern",
-      "An den Ribosomen (Zytosol bzw. raues ER)",
-      "In den Mitochondrien",
-      "Im Golgi-Apparat",
-      "In den Lysosomen",
-    ],
-    1,
-    "Die Translation (mRNA → Protein) erfolgt an den Ribosomen, frei im Zytosol oder gebunden am rauen ER.",
-    "mittel",
-    ["Proteinbiosynthese", "Ribosomen", "Kap1"]
   ),
   q(
     "bio-pool-7-044",
@@ -721,15 +511,5 @@ export const biologiePool7: Question[] = [
     "Viren haben keinen eigenständigen Stoffwechsel (keine Ribosomen, keine ATP-Synthese); sie sind auf die Wirtszelle angewiesen.",
     "mittel",
     ["Viren", "Kennzeichen des Lebens", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-050",
-    "bio-kap2",
-    "Welche Zellen bauen Knochengewebe ab?",
-    ["Osteoblasten", "Osteozyten", "Osteoklasten", "Chondrozyten", "Fibroblasten"],
-    2,
-    "Osteoklasten bauen Knochen ab (Resorption); Osteoblasten bauen ihn auf.",
-    "leicht",
-    ["Knochen", "Gewebe", "Kap2"]
   ),
 ];

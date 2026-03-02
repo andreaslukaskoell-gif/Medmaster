@@ -82,22 +82,6 @@ export const biologiePool14: Question[] = [
     ["Immunologie", "zelluläre Abwehr"]
   ),
   q(
-    "bio-pool-14-005",
-    "bio-kap1",
-    "Welche Aussage über die Zellteilung trifft zu?",
-    [
-      "Bei der Mitose entstehen vier Zellen",
-      "Die Mitose erhält die Chromosomenzahl pro Zelle",
-      "Crossing-over ist typisch für die Mitose",
-      "Die Meiose dient dem Wachstum",
-      "Bei der Mitose wird die Chromosomenzahl halbiert",
-    ],
-    1,
-    "Mitose: 1 → 2 Zellen mit gleicher Chromosomenzahl. Meiose: 1 → 4 haploide Zellen.",
-    "leicht",
-    ["Mitose", "Zellteilung"]
-  ),
-  q(
     "bio-pool-14-006",
     "bio-kap2",
     "Welches Hormon wird in der Schilddrüse gebildet?",
@@ -124,22 +108,6 @@ export const biologiePool14: Question[] = [
     ["Genetik", "Replikation"]
   ),
   q(
-    "bio-pool-14-008",
-    "bio-kap3",
-    "Was ist die Morula?",
-    [
-      "Die Eizelle",
-      "Ein frühes Entwicklungsstadium: kugeliger Zellhaufen nach mehreren Teilungen",
-      "Die Blastozyste",
-      "Die Gastrula",
-      "Die Plazenta",
-    ],
-    1,
-    "Die Morula ist ein kugeliger Zellhaufen (ca. 16–32 Zellen) vor der Blastozystenbildung.",
-    "mittel",
-    ["Embryologie", "Morula"]
-  ),
-  q(
     "bio-pool-14-009",
     "bio-kap2",
     "Welche Aussage über die Speicheldrüsen trifft NICHT zu?",
@@ -154,22 +122,6 @@ export const biologiePool14: Question[] = [
     "Pepsin wird im Magen gebildet, nicht in den Speicheldrüsen (C falsch). Speichel enthält u. a. Amylase.",
     "leicht",
     ["Verdauung", "FALSCH"]
-  ),
-  q(
-    "bio-pool-14-010",
-    "bio-kap5",
-    "Was ist ein Biotop?",
-    [
-      "Die Lebensgemeinschaft aller Arten",
-      "Der unbelebte Lebensraum (Boden, Wasser, Klima)",
-      "Eine Art",
-      "Eine Nahrungskette",
-      "Ein Individuum",
-    ],
-    1,
-    "Biotop = unbelebter Lebensraum. Biozönose = Lebensgemeinschaft der Organismen.",
-    "leicht",
-    ["Ökologie", "Biotop"]
   ),
   q(
     "bio-pool-14-011",
@@ -282,22 +234,6 @@ export const biologiePool14: Question[] = [
     ["Embryologie", "Implantation"]
   ),
   q(
-    "bio-pool-14-019",
-    "bio-kap5",
-    "Was ist ein Ökosystem?",
-    [
-      "Nur die unbelebte Umwelt",
-      "Nur die Lebensgemeinschaft",
-      "Funktionale Einheit aus Biotop und Biozönose",
-      "Eine einzelne Art",
-      "Eine Nahrungskette",
-    ],
-    2,
-    "Ökosystem = Biotop (abiotisch) + Biozönose (biotisch) in Wechselwirkung.",
-    "leicht",
-    ["Ökologie", "Ökosystem"]
-  ),
-  q(
     "bio-pool-14-020",
     "bio-kap2",
     "Welche Vene führt Blut aus dem Kopf zum Herzen?",
@@ -306,22 +242,6 @@ export const biologiePool14: Question[] = [
     "Die obere Hohlvene sammelt Blut aus Kopf, Hals, Armen und oberem Rumpf und mündet in den rechten Vorhof.",
     "leicht",
     ["Kreislauf", "Blutgefäße"]
-  ),
-  q(
-    "bio-pool-14-021",
-    "bio-kap1",
-    "Welche Aussage über die Zellmembran trifft zu?",
-    [
-      "Sie ist für alle Moleküle frei durchlässig",
-      "Sie ist semipermeabel (wählend durchlässig)",
-      "Sie besteht nur aus Kohlenhydraten",
-      "Sie hat keine Rezeptoren",
-      "Sie umgibt nur den Zellkern",
-    ],
-    1,
-    "Die Zellmembran ist semipermeabel: Manche Stoffe passieren, andere nicht (Lipiddoppelschicht, Kanäle, Transporter).",
-    "leicht",
-    ["Zellmembran", "Zelle"]
   ),
   q(
     "bio-pool-14-022",
@@ -350,22 +270,6 @@ export const biologiePool14: Question[] = [
     ["Verdauung", "Dünndarm"]
   ),
   q(
-    "bio-pool-14-024",
-    "bio-kap5",
-    "Welche Aussage zu Antigenen trifft zu?",
-    [
-      "Antigene werden nur von T-Zellen gebildet",
-      "Antigene können eine spezifische Immunantwort auslösen",
-      "Antigene sind immer körpereigen",
-      "Es gibt keine Kreuzreaktionen",
-      "Antigene sind immer Proteine",
-    ],
-    1,
-    "Antigene sind Strukturen (oft auf Pathogenen), die vom Immunsystem erkannt werden und eine spezifische Antwort auslösen.",
-    "leicht",
-    ["Immunologie", "Antigen"]
-  ),
-  q(
     "bio-pool-14-025",
     "bio-kap1",
     "Wo wird bei der Zellatmung der meiste ATP gebildet?",
@@ -392,22 +296,6 @@ export const biologiePool14: Question[] = [
     ["Hormone", "Calcium"]
   ),
   q(
-    "bio-pool-14-027",
-    "bio-kap4",
-    "Was ist ein Gen?",
-    [
-      "Ein Chromosom",
-      "Ein DNA-Abschnitt mit Information für ein Merkmal oder Genprodukt",
-      "Ein Protein",
-      "Eine RNA-Art",
-      "Ein Organell",
-    ],
-    1,
-    "Ein Gen ist ein Abschnitt der DNA, der für ein Merkmal oder ein Genprodukt (z. B. Protein) codiert.",
-    "leicht",
-    ["Genetik", "Gen"]
-  ),
-  q(
     "bio-pool-14-028",
     "bio-kap3",
     "Aus welchem Keimblatt entsteht das Skelett?",
@@ -416,22 +304,6 @@ export const biologiePool14: Question[] = [
     "Mesoderm → Skelett, Muskulatur, Bindegewebe, Kreislauf, Urogenitalsystem.",
     "leicht",
     ["Embryologie", "Keimblätter"]
-  ),
-  q(
-    "bio-pool-14-029",
-    "bio-kap5",
-    "Was sind Gedächtniszellen?",
-    [
-      "Erythrozyten",
-      "Lymphozyten, die bei erneutem Antigenkontakt schneller reagieren",
-      "Thrombozyten",
-      "Mastzellen",
-      "Granulozyten",
-    ],
-    1,
-    "B- und T-Gedächtniszellen entstehen nach Antigenkontakt und ermöglichen eine schnellere Immunantwort bei erneutem Kontakt.",
-    "mittel",
-    ["Immunologie", "Gedächtniszellen"]
   ),
   q(
     "bio-pool-14-030",
@@ -460,48 +332,6 @@ export const biologiePool14: Question[] = [
     ["ZNS", "Hypothalamus"]
   ),
   q(
-    "bio-pool-14-032",
-    "bio-kap4",
-    "Was ist ein Phänotyp?",
-    [
-      "Die genetische Ausstattung",
-      "Die sichtbare bzw. messbare Ausprägung eines Merkmals",
-      "Ein Chromosom",
-      "Ein Allel",
-      "Die Summe aller Gene",
-    ],
-    1,
-    "Phänotyp = beobachtbare Merkmale. Genotyp = genetische Information (Allele).",
-    "leicht",
-    ["Genetik", "Phänotyp"]
-  ),
-  q(
-    "bio-pool-14-033",
-    "bio-kap5",
-    "Was ist eine Nahrungskette?",
-    [
-      "Die Gesamtheit aller Arten",
-      "Lineare Abfolge: wer frisst wen (Energie- und Stofffluss)",
-      "Ein Biotop",
-      "Eine Population",
-      "Ein einzelnes Individuum",
-    ],
-    1,
-    "Nahrungskette = lineare Abfolge von Produzent → Konsument(en) → Destent.",
-    "leicht",
-    ["Ökologie", "Nahrungskette"]
-  ),
-  q(
-    "bio-pool-14-034",
-    "bio-kap1",
-    "Welches Vitamin ist für die Blutgerinnung wichtig?",
-    ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K", "Vitamin B1"],
-    3,
-    "Vitamin K ist Kofaktor für die Synthese von Gerinnungsfaktoren in der Leber.",
-    "mittel",
-    ["Vitamine", "Blut"]
-  ),
-  q(
     "bio-pool-14-035",
     "bio-kap2",
     "Welche Aussage über die Milz trifft zu?",
@@ -526,22 +356,6 @@ export const biologiePool14: Question[] = [
     "In der Telophase bilden sich neue Kerne; bei der Cytokinese teilt sich das Zytoplasma (Zellmembran).",
     "leicht",
     ["Mitose", "Zellteilung"]
-  ),
-  q(
-    "bio-pool-14-037",
-    "bio-kap3",
-    "Was ist die Amnionhöhle?",
-    [
-      "Die Gebärmutterhöhle",
-      "Der mit Fruchtwasser gefüllte Raum um den Embryo",
-      "Die Plazenta",
-      "Die Eileiterhöhle",
-      "Die Chorionhöhle",
-    ],
-    1,
-    "Die Amnionhöhle wird vom Amnion umschlossen und enthält das Fruchtwasser.",
-    "mittel",
-    ["Embryologie", "Amnion"]
   ),
   q(
     "bio-pool-14-038",
@@ -590,16 +404,6 @@ export const biologiePool14: Question[] = [
     ["Genetik", "Replikation"]
   ),
   q(
-    "bio-pool-14-042",
-    "bio-kap5",
-    "Was sind Destenten?",
-    ["Produzenten", "Konsumenten", "Zersetzer (Pilze, Bakterien)", "Räuber", "Pflanzenfresser"],
-    2,
-    "Destenten bauen tote organische Substanz ab und setzen Nährstoffe frei.",
-    "leicht",
-    ["Ökologie", "Destenten"]
-  ),
-  q(
     "bio-pool-14-043",
     "bio-kap1",
     "Welche Aussage über Enzyme trifft NICHT zu?",
@@ -616,32 +420,6 @@ export const biologiePool14: Question[] = [
     ["Enzyme", "FALSCH"]
   ),
   q(
-    "bio-pool-14-044",
-    "bio-kap2",
-    "Welcher Knochen gehört zum Oberschenkel?",
-    ["Tibia", "Fibula", "Femur", "Humerus", "Radius"],
-    2,
-    "Der Femur ist der Oberschenkelknochen. Tibia und Fibula sind Unterschenkelknochen.",
-    "leicht",
-    ["Skelett", "Anatomie"]
-  ),
-  q(
-    "bio-pool-14-045",
-    "bio-kap4",
-    "Was ist ein Genotyp?",
-    [
-      "Die sichtbare Ausprägung",
-      "Die genetische Ausstattung (Allele)",
-      "Ein Chromosom",
-      "Eine Umwelteigenschaft",
-      "Ein Protein",
-    ],
-    1,
-    "Genotyp = genetische Information (Allele). Phänotyp = beobachtbare Ausprägung.",
-    "leicht",
-    ["Genetik", "Genotyp"]
-  ),
-  q(
     "bio-pool-14-046",
     "bio-kap3",
     "Wann beginnt das Herz des Embryos zu schlagen?",
@@ -656,38 +434,6 @@ export const biologiePool14: Question[] = [
     "Das Herz beginnt in der 3.–4. Entwicklungswoche zu schlagen.",
     "mittel",
     ["Embryologie", "Herz"]
-  ),
-  q(
-    "bio-pool-14-047",
-    "bio-kap5",
-    "Was ist ein Habitat?",
-    [
-      "Die ökologische Nische",
-      "Der konkrete Lebensort einer Art",
-      "Eine Nahrungskette",
-      "Die Biozönose",
-      "Ein Biotop",
-    ],
-    1,
-    "Habitat = konkreter Lebensraum. Nische = funktionale Rolle und Anforderungen der Art.",
-    "mittel",
-    ["Ökologie", "Habitat"]
-  ),
-  q(
-    "bio-pool-14-048",
-    "bio-kap1",
-    "Wo findet die oxidative Phosphorylierung statt?",
-    [
-      "Im Zytosol",
-      "An der inneren Mitochondrienmembran",
-      "Im Zellkern",
-      "Am Golgi-Apparat",
-      "Im Lysosom",
-    ],
-    1,
-    "Die Atmungskette (oxidative Phosphorylierung) sitzt an der inneren Mitochondrienmembran.",
-    "mittel",
-    ["Stoffwechsel", "Atmungskette"]
   ),
   q(
     "bio-pool-14-049",
@@ -716,22 +462,6 @@ export const biologiePool14: Question[] = [
     ["Genetik", "Mutation"]
   ),
   q(
-    "bio-pool-14-051",
-    "bio-kap5",
-    "Was ist die Biozönose?",
-    [
-      "Der unbelebte Lebensraum",
-      "Die Lebensgemeinschaft aller Arten in einem Gebiet",
-      "Eine einzelne Art",
-      "Ein Individuum",
-      "Eine Nahrungskette",
-    ],
-    1,
-    "Biozönose = Lebensgemeinschaft (Pflanzen, Tiere, Pilze, Mikroorganismen). Biotop = unbelebter Lebensraum.",
-    "leicht",
-    ["Ökologie", "Biozönose"]
-  ),
-  q(
     "bio-pool-14-052",
     "bio-kap1",
     "Welches Organell enthält Verdauungsenzyme?",
@@ -758,54 +488,6 @@ export const biologiePool14: Question[] = [
     ["Kreislauf", "Aorta"]
   ),
   q(
-    "bio-pool-14-054",
-    "bio-kap4",
-    "Was ist die Transkription?",
-    [
-      "Übersetzung von mRNA in Protein",
-      "Kopieren der DNA in RNA",
-      "Replikation",
-      "Spleißen",
-      "Mutation",
-    ],
-    1,
-    "Transkription = Synthese von RNA an der DNA (DNA → RNA).",
-    "leicht",
-    ["Genetik", "Transkription"]
-  ),
-  q(
-    "bio-pool-14-055",
-    "bio-kap3",
-    "Was ist die Plazenta?",
-    [
-      "Die Eizelle",
-      "Das Organ zum Stoffaustausch zwischen Mutter und Fetus",
-      "Die Fruchtblase",
-      "Die Nabelschnur",
-      "Der Gelbkörper",
-    ],
-    1,
-    "Die Plazenta ermöglicht Stoffaustausch, Hormonproduktion und schützt den Fetus.",
-    "leicht",
-    ["Embryologie", "Plazenta"]
-  ),
-  q(
-    "bio-pool-14-056",
-    "bio-kap5",
-    "Welche Zellen gehören zur unspezifischen Abwehr?",
-    [
-      "B-Lymphozyten",
-      "T-Lymphozyten",
-      "Neutrophile Granulozyten und Makrophagen",
-      "Plasmazellen",
-      "Gedächtniszellen",
-    ],
-    2,
-    "Neutrophile, Makrophagen, NK-Zellen gehören zur unspezifischen Abwehr. B/T-Zellen zur spezifischen.",
-    "leicht",
-    ["Immunologie", "Abwehr"]
-  ),
-  q(
     "bio-pool-14-057",
     "bio-kap1",
     "Was ist das Endprodukt der Glykolyse (pro Glukose)?",
@@ -824,22 +506,6 @@ export const biologiePool14: Question[] = [
     "Renin wird in den Nieren (juxtaglomeruläre Zellen) gebildet und ist Teil des RAAS (Blutdruckregulation).",
     "mittel",
     ["Hormone", "Niere"]
-  ),
-  q(
-    "bio-pool-14-059",
-    "bio-kap4",
-    "Was bedeutet „homozygot“?",
-    [
-      "Zwei verschiedene Allele",
-      "Zwei gleiche Allele an einem Genort",
-      "Haploid",
-      "Ein Allel",
-      "Rezessiv",
-    ],
-    1,
-    "Homozygot = gleiche Allele (AA oder aa). Heterozygot = verschiedene Allele (Aa).",
-    "leicht",
-    ["Genetik", "Vererbung"]
   ),
   q(
     "bio-pool-14-060",

@@ -234,16 +234,6 @@ export const physikPool15: Question[] = [
     ["Haftreibung", "Reibung"]
   ),
   q(
-    "ph-pool-15-017",
-    KAP[1],
-    "Die Lichtgeschwindigkeit im Vakuum c beträgt etwa:",
-    ["3·10⁶ m/s", "3·10⁸ m/s", "3·10¹⁰ m/s", "340 m/s", "1500 m/s"],
-    1,
-    "c ≈ 2,998·10⁸ m/s ≈ 3·10⁸ m/s.",
-    "leicht",
-    ["Lichtgeschwindigkeit", "Vakuum"]
-  ),
-  q(
     "ph-pool-15-018",
     KAP[2],
     "Ein Kühlschrank gibt Wärme ab:",
@@ -284,16 +274,6 @@ export const physikPool15: Question[] = [
     "Photon (Gamma): Ruhemasse null, bewegt sich mit c.",
     "mittel",
     ["Photon", "Gamma"]
-  ),
-  q(
-    "ph-pool-15-021",
-    KAP[0],
-    "Die Fallbeschleunigung g auf der Erdoberfläche beträgt etwa:",
-    ["1 m/s²", "5 m/s²", "9,81 m/s²", "20 m/s²", "100 m/s²"],
-    2,
-    "g ≈ 9,81 m/s² (ortsabhängig).",
-    "leicht",
-    ["Fallbeschleunigung", "g"]
   ),
   q(
     "ph-pool-15-022",
@@ -724,22 +704,6 @@ export const physikPool15: Question[] = [
     "E ∝ A² (bei harmonischer Schwingung).",
     "mittel",
     ["Schwingungsenergie", "Amplitude"]
-  ),
-  q(
-    "ph-pool-15-053",
-    KAP[2],
-    "Die Verdampfungsenthalpie ist:",
-    [
-      "die Temperatur beim Sieden",
-      "die pro Mol (oder Masse) benötigte Wärme beim Verdampfen bei konstantem Druck",
-      "die spezifische Wärmekapazität",
-      "die Schmelzenthalpie",
-      "null",
-    ],
-    1,
-    "Verdampfungsenthalpie: Q pro Mol/Masse für flüssig → gasförmig.",
-    "mittel",
-    ["Verdampfungsenthalpie", "Phasenübergang"]
   ),
   q(
     "ph-pool-15-054",

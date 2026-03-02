@@ -30,22 +30,6 @@ function q(
 
 export const biologiePool15: Question[] = [
   q(
-    "bio-pool-15-001",
-    "bio-kap1",
-    "Welche Aussage über die Zellmembran trifft zu?",
-    [
-      "Sie ist undurchlässig",
-      "Sie besteht aus Lipiddoppelschicht und Proteinen",
-      "Sie enthält nur DNA",
-      "Sie umgibt nur den Kern",
-      "Sie hat keine Rezeptoren",
-    ],
-    1,
-    "Das Flüssig-Mosaik-Modell: Lipiddoppelschicht mit eingelagerten Proteinen und Kohlenhydraten.",
-    "leicht",
-    ["Zellmembran", "Zelle"]
-  ),
-  q(
     "bio-pool-15-002",
     "bio-kap2",
     "Welcher Teil des Gehirns koordiniert Bewegungen und Gleichgewicht?",
@@ -82,22 +66,6 @@ export const biologiePool15: Question[] = [
     ["Immunologie", "Antikörper"]
   ),
   q(
-    "bio-pool-15-005",
-    "bio-kap1",
-    "Wo findet die Translation statt?",
-    [
-      "Zellkern",
-      "Ribosomen im Zytosol und am rauen ER",
-      "Lysosom",
-      "Golgi-Apparat",
-      "Mitochondrium nur",
-    ],
-    1,
-    "Translation (Proteinbiosynthese) erfolgt an Ribosomen im Zytosol bzw. am rauen ER.",
-    "leicht",
-    ["Genexpression", "Translation"]
-  ),
-  q(
     "bio-pool-15-006",
     "bio-kap2",
     "Welches Hormon senkt den Blutzucker?",
@@ -106,42 +74,6 @@ export const biologiePool15: Question[] = [
     "Insulin (Beta-Zellen der Bauchspeicheldrüse) senkt den Blutzucker; Glukagon erhöht ihn.",
     "leicht",
     ["Hormone", "Blutzucker"]
-  ),
-  q(
-    "bio-pool-15-007",
-    "bio-kap4",
-    "Welche Basen kommen in der RNA vor?",
-    ["A, T, G, C", "A, U, G, C", "nur A und T", "nur G und C", "A, T, U, C"],
-    1,
-    "RNA: Adenin, Uracil, Guanin, Cytosin (A, U, G, C). DNA: Thymin statt Uracil.",
-    "leicht",
-    ["RNA", "Genetik"]
-  ),
-  q(
-    "bio-pool-15-008",
-    "bio-kap3",
-    "Aus welchem Keimblatt entsteht die Epidermis?",
-    ["Mesoderm", "Entoderm", "Ektoderm", "Trophoblast", "Aus allen drei"],
-    2,
-    "Ektoderm → Epidermis, Hautanhangsgebilde, Nervensystem. Mesoderm → Muskulatur. Entoderm → Darm.",
-    "leicht",
-    ["Embryologie", "Keimblätter"]
-  ),
-  q(
-    "bio-pool-15-009",
-    "bio-kap2",
-    "Welche Aussage über die Leber trifft NICHT zu?",
-    [
-      "Die Leber produziert Galle",
-      "Die Leber speichert Glykogen",
-      "Die Leber produziert Insulin",
-      "Die Leber entgiftet",
-      "Die Leber bildet Gerinnungsfaktoren",
-    ],
-    2,
-    "Insulin wird in der Bauchspeicheldrüse gebildet, nicht in der Leber (C falsch).",
-    "mittel",
-    ["Leber", "FALSCH"]
   ),
   q(
     "bio-pool-15-010",
@@ -180,54 +112,6 @@ export const biologiePool15: Question[] = [
     ["Verdauung", "Dünndarm"]
   ),
   q(
-    "bio-pool-15-013",
-    "bio-kap4",
-    "Was ist ein Codon?",
-    [
-      "Drei Basen der DNA",
-      "Drei Basen der mRNA, die eine Aminosäure codieren",
-      "Ein Gen",
-      "Ein Ribosom",
-      "Eine tRNA",
-    ],
-    1,
-    "Ein Codon = drei Nukleotide in der mRNA; es codiert für eine Aminosäure oder Stopp.",
-    "leicht",
-    ["Genetik", "Translation"]
-  ),
-  q(
-    "bio-pool-15-014",
-    "bio-kap5",
-    "Was versteht man unter „Biotop“?",
-    [
-      "Die Lebensgemeinschaft",
-      "Der unbelebte Lebensraum",
-      "Eine Art",
-      "Eine Nahrungskette",
-      "Ein Individuum",
-    ],
-    1,
-    "Biotop = unbelebter Lebensraum (Boden, Wasser, Klima). Biozönose = Lebensgemeinschaft.",
-    "leicht",
-    ["Ökologie", "Biotop"]
-  ),
-  q(
-    "bio-pool-15-015",
-    "bio-kap1",
-    "Welche Aussage über Mitochondrien trifft zu?",
-    [
-      "Sie haben keine DNA",
-      "Sie sind der Hauptort der aeroben ATP-Produktion",
-      "Sie kommen nur in Pflanzen vor",
-      "Sie haben nur eine Membran",
-      "Sie synthetisieren nur DNA",
-    ],
-    1,
-    "Mitochondrien haben Doppelmembran, eigene DNA und sind Ort der oxidativen Phosphorylierung.",
-    "leicht",
-    ["Zelle", "Mitochondrien"]
-  ),
-  q(
     "bio-pool-15-016",
     "bio-kap2",
     "Wo wird Testosteron beim Mann gebildet?",
@@ -238,64 +122,6 @@ export const biologiePool15: Question[] = [
     ["Hormone", "Reproduktion"]
   ),
   q(
-    "bio-pool-15-017",
-    "bio-kap4",
-    "Was ist die Mitose?",
-    [
-      "Bildung von Keimzellen",
-      "Teilung von Körperzellen mit Erhalt des Chromosomensatzes",
-      "Nur eine Phase",
-      "Reduktion auf haploid",
-      "Nur in Keimzellen",
-    ],
-    1,
-    "Mitose: 1 Zelle → 2 genetisch gleiche Tochterzellen mit gleichem Chromosomensatz.",
-    "leicht",
-    ["Mitose", "Zellteilung"]
-  ),
-  q(
-    "bio-pool-15-018",
-    "bio-kap3",
-    "Was ist die Blastozyste?",
-    [
-      "Die Eizelle",
-      "Frühes Stadium mit innerer Zellmasse und Trophoblast",
-      "Die Plazenta",
-      "Die Gastrula",
-      "Die Nabelschnur",
-    ],
-    1,
-    "Blastozyste = Hohlkugel mit innerer Zellmasse (→ Embryo) und Trophoblast (→ Plazentaanteil).",
-    "mittel",
-    ["Embryologie", "Blastozyste"]
-  ),
-  q(
-    "bio-pool-15-019",
-    "bio-kap5",
-    "Was ist eine Nahrungskette?",
-    [
-      "Alle Arten",
-      "Lineare Abfolge: wer frisst wen",
-      "Ein Biotop",
-      "Eine Population",
-      "Ein Ökosystem",
-    ],
-    1,
-    "Nahrungskette = Produzent → Konsument(en) → Destent (Energie- und Stofffluss).",
-    "leicht",
-    ["Ökologie", "Nahrungskette"]
-  ),
-  q(
-    "bio-pool-15-020",
-    "bio-kap2",
-    "Die Aorta entspringt aus:",
-    ["rechter Kammer", "linker Kammer", "rechtem Vorhof", "linkem Vorhof", "Lungenarterie"],
-    1,
-    "Die Aorta (Körperschlagader) entspringt der linken Kammer und versorgt den Körper mit sauerstoffreichem Blut.",
-    "leicht",
-    ["Kreislauf", "Herz"]
-  ),
-  q(
     "bio-pool-15-021",
     "bio-kap1",
     "Welches Vitamin wird in der Haut unter UV-Licht gebildet?",
@@ -304,22 +130,6 @@ export const biologiePool15: Question[] = [
     "Vitamin D wird in der Haut durch UV-B-Strahlung gebildet (aus 7-Dehydrocholesterol).",
     "leicht",
     ["Vitamine", "Haut"]
-  ),
-  q(
-    "bio-pool-15-022",
-    "bio-kap4",
-    "Was ist ein Phänotyp?",
-    [
-      "Die genetische Ausstattung",
-      "Die sichtbare bzw. messbare Ausprägung",
-      "Ein Chromosom",
-      "Ein Allel",
-      "Die Summe aller Gene",
-    ],
-    1,
-    "Phänotyp = beobachtbare Merkmale. Genotyp = genetische Information.",
-    "leicht",
-    ["Genetik", "Phänotyp"]
   ),
   q(
     "bio-pool-15-023",
@@ -348,42 +158,6 @@ export const biologiePool15: Question[] = [
     ["Immunologie", "T-Zellen"]
   ),
   q(
-    "bio-pool-15-025",
-    "bio-kap1",
-    "Wo findet die Transkription statt?",
-    ["Zytosol", "Zellkern", "Mitochondrium nur", "Golgi-Apparat", "Zellmembran"],
-    1,
-    "Transkription (DNA → RNA) erfolgt im Zellkern. Translation im Zytosol.",
-    "leicht",
-    ["Genexpression", "Transkription"]
-  ),
-  q(
-    "bio-pool-15-026",
-    "bio-kap2",
-    "Welches Hormon stimuliert die Schilddrüse?",
-    ["T3", "T4", "TSH", "Calcitonin", "Parathormon"],
-    2,
-    "TSH (Thyreoidea-stimulierendes Hormon) aus der Hypophyse stimuliert die Schilddrüse.",
-    "leicht",
-    ["Hormone", "Schilddrüse"]
-  ),
-  q(
-    "bio-pool-15-027",
-    "bio-kap4",
-    "Was ist die Meiose?",
-    [
-      "Teilung nur in Körperzellen",
-      "Reduktionsteilung zur Bildung von Keimzellen",
-      "Gleich wie Mitose",
-      "Nur eine Teilung",
-      "Ohne Crossing-over",
-    ],
-    1,
-    "Meiose: zwei Teilungen, Reduktion von 2n auf n, Bildung von Gameten. Crossing-over in Prophase I.",
-    "leicht",
-    ["Meiose", "Genetik"]
-  ),
-  q(
     "bio-pool-15-028",
     "bio-kap3",
     "Wann ist die Organogenese weitgehend abgeschlossen?",
@@ -392,38 +166,6 @@ export const biologiePool15: Question[] = [
     "Nach der 8. Woche sind die Organanlagen angelegt; ab dann spricht man vom Fetus.",
     "mittel",
     ["Embryologie", "Organogenese"]
-  ),
-  q(
-    "bio-pool-15-029",
-    "bio-kap5",
-    "Was sind Gedächtniszellen?",
-    [
-      "Erythrozyten",
-      "Lymphozyten für schnellere Reaktion bei erneutem Antigenkontakt",
-      "Thrombozyten",
-      "Mastzellen",
-      "Granulozyten",
-    ],
-    1,
-    "B- und T-Gedächtniszellen ermöglichen bei erneutem Kontakt eine schnellere Immunantwort.",
-    "mittel",
-    ["Immunologie", "Gedächtniszellen"]
-  ),
-  q(
-    "bio-pool-15-030",
-    "bio-kap1",
-    "Welche Aussage über die Glykolyse trifft zu?",
-    [
-      "Sie findet nur in Mitochondrien statt",
-      "Sie liefert netto 2 ATP pro Glukose",
-      "Sie produziert FADH2",
-      "Sie benötigt Sauerstoff",
-      "Sie baut Fettsäuren ab",
-    ],
-    1,
-    "Glykolyse: Glukose → 2 Pyruvat, netto 2 ATP, 2 NADH; im Zytosol, ohne O2.",
-    "mittel",
-    ["Stoffwechsel", "Glykolyse"]
   ),
   q(
     "bio-pool-15-031",
@@ -436,64 +178,6 @@ export const biologiePool15: Question[] = [
     ["Kreislauf", "Blutgefäße"]
   ),
   q(
-    "bio-pool-15-032",
-    "bio-kap4",
-    "Was bedeutet „heterozygot“?",
-    [
-      "Zwei gleiche Allele",
-      "Zwei verschiedene Allele an einem Genort",
-      "Haploid",
-      "Keine Allele",
-      "Rezessiv",
-    ],
-    1,
-    "Heterozygot = zwei verschiedene Allele (z. B. Aa). Homozygot = gleiche Allele (AA oder aa).",
-    "leicht",
-    ["Genetik", "Vererbung"]
-  ),
-  q(
-    "bio-pool-15-033",
-    "bio-kap5",
-    "Was ist ein Habitat?",
-    [
-      "Die ökologische Nische",
-      "Der konkrete Lebensort einer Art",
-      "Eine Nahrungskette",
-      "Die Biozönose",
-      "Ein Biotop",
-    ],
-    1,
-    "Habitat = konkreter Lebensraum. Nische = funktionale Rolle der Art.",
-    "mittel",
-    ["Ökologie", "Habitat"]
-  ),
-  q(
-    "bio-pool-15-034",
-    "bio-kap1",
-    "Welches Organell verpackt Proteine für den Export?",
-    ["Ribosom", "Lysosom", "Golgi-Apparat", "Peroxisom", "Zellkern"],
-    2,
-    "Der Golgi-Apparat modifiziert und verpackt Proteine für Sekretion oder Lysosomen.",
-    "leicht",
-    ["Zelle", "Golgi"]
-  ),
-  q(
-    "bio-pool-15-035",
-    "bio-kap2",
-    "Welche Aussage über die Niere trifft NICHT zu?",
-    [
-      "Die Niere filtert das Blut",
-      "Die Niere produziert EPO",
-      "Die Niere produziert Renin",
-      "Die Niere produziert Gallensäuren",
-      "Die Niere bildet Harn",
-    ],
-    3,
-    "Gallensäuren werden in der Leber gebildet, nicht in der Niere (D falsch).",
-    "mittel",
-    ["Niere", "FALSCH"]
-  ),
-  q(
     "bio-pool-15-036",
     "bio-kap4",
     "In welcher Phase der Mitose kondensieren die Chromosomen?",
@@ -504,42 +188,6 @@ export const biologiePool15: Question[] = [
     ["Mitose", "Zellzyklus"]
   ),
   q(
-    "bio-pool-15-037",
-    "bio-kap3",
-    "Aus welchem Keimblatt entsteht die Muskulatur?",
-    ["Ektoderm", "Entoderm", "Mesoderm", "Trophoblast", "Amnion"],
-    2,
-    "Mesoderm → Skelettmuskulatur, Herzmuskel, glatte Muskulatur.",
-    "leicht",
-    ["Embryologie", "Keimblätter"]
-  ),
-  q(
-    "bio-pool-15-038",
-    "bio-kap5",
-    "Was ist die Biozönose?",
-    [
-      "Der unbelebte Lebensraum",
-      "Die Lebensgemeinschaft aller Arten in einem Gebiet",
-      "Eine Art",
-      "Eine Nahrungskette",
-      "Ein Individuum",
-    ],
-    1,
-    "Biozönose = Lebensgemeinschaft. Biotop = unbelebter Lebensraum.",
-    "leicht",
-    ["Ökologie", "Biozönose"]
-  ),
-  q(
-    "bio-pool-15-039",
-    "bio-kap1",
-    "Welches Organell enthält Verdauungsenzyme?",
-    ["Ribosom", "Mitochondrium", "Lysosom", "Zellkern", "Golgi-Apparat"],
-    2,
-    "Lysosomen enthalten hydrolytische Enzyme und bauen Makromoleküle ab.",
-    "leicht",
-    ["Zelle", "Lysosomen"]
-  ),
-  q(
     "bio-pool-15-040",
     "bio-kap2",
     "Wo wird Aldosteron gebildet?",
@@ -548,32 +196,6 @@ export const biologiePool15: Question[] = [
     "Aldosteron (Mineralokortikoid) wird in der Nebennierenrinde gebildet (Natrium-Kalium-Haushalt, Blutdruck).",
     "mittel",
     ["Hormone", "Nebenniere"]
-  ),
-  q(
-    "bio-pool-15-041",
-    "bio-kap4",
-    "Was ist ein Allel?",
-    [
-      "Ein Chromosom",
-      "Eine Variante eines Gens an einem Genort",
-      "Ein Genom",
-      "Eine Mutation",
-      "Ein Phänotyp",
-    ],
-    1,
-    "Allele sind verschiedene Ausprägungen eines Gens (z. B. A und a).",
-    "leicht",
-    ["Genetik", "Allel"]
-  ),
-  q(
-    "bio-pool-15-042",
-    "bio-kap5",
-    "Was sind Destenten?",
-    ["Produzenten", "Konsumenten", "Zersetzer", "Räuber", "Pflanzenfresser"],
-    2,
-    "Destenten (Pilze, Bakterien) bauen tote organische Substanz ab.",
-    "leicht",
-    ["Ökologie", "Destenten"]
   ),
   q(
     "bio-pool-15-043",
@@ -592,74 +214,6 @@ export const biologiePool15: Question[] = [
     ["Zelle", "ER"]
   ),
   q(
-    "bio-pool-15-044",
-    "bio-kap2",
-    "Welcher Knochen gehört zum Unterarm?",
-    ["Humerus", "Femur", "Radius", "Tibia", "Fibula"],
-    2,
-    "Radius und Ulna sind die Unterarmknochen. Humerus = Oberarm.",
-    "leicht",
-    ["Skelett", "Anatomie"]
-  ),
-  q(
-    "bio-pool-15-045",
-    "bio-kap4",
-    "Was ist die Translation?",
-    [
-      "Kopieren der DNA",
-      "Übersetzung von mRNA in Protein an Ribosomen",
-      "Replikation",
-      "Spleißen",
-      "Transkription",
-    ],
-    1,
-    "Translation = Übersetzung der mRNA in eine Aminosäuresequenz (Protein) an den Ribosomen.",
-    "leicht",
-    ["Genetik", "Translation"]
-  ),
-  q(
-    "bio-pool-15-046",
-    "bio-kap3",
-    "Was ist die Nabelschnur?",
-    [
-      "Teil der Plazenta",
-      "Verbindung zwischen Fetus und Plazenta mit Blutgefäßen",
-      "Die Fruchtblase",
-      "Der Dottersack",
-      "Die Amnionhöhle",
-    ],
-    1,
-    "Die Nabelschnur enthält Nabelvene und Nabelarterien und verbindet Fetus und Plazenta.",
-    "leicht",
-    ["Embryologie", "Nabelschnur"]
-  ),
-  q(
-    "bio-pool-15-047",
-    "bio-kap5",
-    "Was sind natürliche Killerzellen?",
-    [
-      "B-Lymphozyten",
-      "T-Lymphozyten",
-      "Lymphozyten der unspezifischen Abwehr, die infizierte Zellen abtöten können",
-      "Erythrozyten",
-      "Thrombozyten",
-    ],
-    2,
-    "NK-Zellen gehören zur angeborenen Abwehr und können virusinfizierte oder entartete Zellen abtöten.",
-    "mittel",
-    ["Immunologie", "NK-Zellen"]
-  ),
-  q(
-    "bio-pool-15-048",
-    "bio-kap1",
-    "Wo findet die oxidative Phosphorylierung statt?",
-    ["Zytosol", "Innere Mitochondrienmembran", "Zellkern", "Golgi-Apparat", "Lysosom"],
-    1,
-    "Die Atmungskette (oxidative Phosphorylierung) sitzt an der inneren Mitochondrienmembran.",
-    "mittel",
-    ["Stoffwechsel", "Atmungskette"]
-  ),
-  q(
     "bio-pool-15-049",
     "bio-kap2",
     "Welches Hormon erhöht den Blutzucker?",
@@ -668,22 +222,6 @@ export const biologiePool15: Question[] = [
     "Glukagon (Alpha-Zellen der Bauchspeicheldrüse) erhöht den Blutzucker (Glykogenabbau, Gluconeogenese).",
     "leicht",
     ["Hormone", "Blutzucker"]
-  ),
-  q(
-    "bio-pool-15-050",
-    "bio-kap4",
-    "Was ist eine Mutation?",
-    [
-      "Bewusste Änderung",
-      "Dauerhafte Änderung der DNA-Sequenz",
-      "Nur Phänotyp-Änderung",
-      "Immer Rückmutation",
-      "Nur Insertion",
-    ],
-    1,
-    "Mutation = dauerhafte Änderung im Erbgut (DNA).",
-    "leicht",
-    ["Genetik", "Mutation"]
   ),
   q(
     "bio-pool-15-051",
@@ -702,52 +240,6 @@ export const biologiePool15: Question[] = [
     ["Ökologie", "Konsument"]
   ),
   q(
-    "bio-pool-15-052",
-    "bio-kap1",
-    "Was ist das Endprodukt der Glykolyse (pro Glukose)?",
-    ["Ein Pyruvat", "Zwei Pyruvatmoleküle", "Laktat", "Ethanol", "CO₂"],
-    1,
-    "Aus einem Glukosemolekül entstehen bei der Glykolyse zwei Pyruvatmoleküle.",
-    "mittel",
-    ["Stoffwechsel", "Glykolyse"]
-  ),
-  q(
-    "bio-pool-15-053",
-    "bio-kap2",
-    "Welches Organ produziert Pepsin?",
-    ["Dünndarm", "Bauchspeicheldrüse", "Magen", "Leber", "Speicheldrüse"],
-    2,
-    "Pepsin wird als Pepsinogen im Magen gebildet und spaltet Proteine.",
-    "leicht",
-    ["Verdauung", "Magen"]
-  ),
-  q(
-    "bio-pool-15-054",
-    "bio-kap4",
-    "Was ist die Replikation?",
-    ["Transkription", "Verdopplung der DNA", "Translation", "Spleißen", "Mutation"],
-    1,
-    "Replikation = Verdopplung der DNA in der S-Phase vor der Zellteilung.",
-    "leicht",
-    ["Genetik", "Replikation"]
-  ),
-  q(
-    "bio-pool-15-055",
-    "bio-kap3",
-    "Was ist die Plazenta?",
-    [
-      "Die Eizelle",
-      "Organ zum Stoffaustausch zwischen Mutter und Fetus",
-      "Die Fruchtblase",
-      "Die Nabelschnur",
-      "Der Gelbkörper",
-    ],
-    1,
-    "Die Plazenta ermöglicht Stoffaustausch, Hormonproduktion und schützt den Fetus.",
-    "leicht",
-    ["Embryologie", "Plazenta"]
-  ),
-  q(
     "bio-pool-15-056",
     "bio-kap5",
     "Was ist die ökologische Nische?",
@@ -764,16 +256,6 @@ export const biologiePool15: Question[] = [
     ["Ökologie", "Nische"]
   ),
   q(
-    "bio-pool-15-057",
-    "bio-kap1",
-    "Welches Organell baut Wasserstoffperoxid ab?",
-    ["Lysosom", "Ribosom", "Peroxisom", "Mitochondrium", "Golgi-Apparat"],
-    2,
-    "Peroxisomen enthalten Katalase und bauen H₂O₂ zu Wasser und Sauerstoff ab.",
-    "mittel",
-    ["Zelle", "Peroxisomen"]
-  ),
-  q(
     "bio-pool-15-058",
     "bio-kap2",
     "Wo münden die Ureteren ein?",
@@ -788,37 +270,5 @@ export const biologiePool15: Question[] = [
     "Die Harnleiter (Ureteren) münden in die Harnblase. Die Harnröhre führt von der Blase nach außen.",
     "leicht",
     ["Niere", "Anatomie"]
-  ),
-  q(
-    "bio-pool-15-059",
-    "bio-kap4",
-    "Was ist ein Genotyp?",
-    [
-      "Die sichtbare Ausprägung",
-      "Die genetische Ausstattung (Allele)",
-      "Ein Chromosom",
-      "Eine Umwelteigenschaft",
-      "Ein Protein",
-    ],
-    1,
-    "Genotyp = genetische Information (Allele). Phänotyp = beobachtbare Ausprägung.",
-    "leicht",
-    ["Genetik", "Genotyp"]
-  ),
-  q(
-    "bio-pool-15-060",
-    "bio-kap5",
-    "Was ist Symbiose (im engeren Sinn)?",
-    [
-      "Nur Räuber-Beute",
-      "Wechselbeziehung zum gegenseitigen Vorteil",
-      "Nur Parasitismus",
-      "Nur Konkurrenz",
-      "Nur Kommensalismus",
-    ],
-    1,
-    "Symbiose = wechselseitiger Nutzen (z. B. Mykorrhiza, Flechten).",
-    "mittel",
-    ["Ökologie", "Symbiose"]
   ),
 ];

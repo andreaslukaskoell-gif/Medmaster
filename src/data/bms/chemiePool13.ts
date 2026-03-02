@@ -258,16 +258,6 @@ export const chemiePool13: Question[] = [
     ["Elektronen", "Fluor"]
   ),
   q(
-    "ch-pool-13-020",
-    KAP[1],
-    "Die Einheit des Drucks im SI-System ist:",
-    ["Liter", "Bar", "Pascal", "Atmosphäre", "Kelvin"],
-    2,
-    "SI-Einheit des Drucks: Pascal (Pa). 1 bar = 10⁵ Pa. Atmosphäre ist eine ältere Einheit.",
-    "leicht",
-    ["Druck", "SI-Einheiten"]
-  ),
-  q(
     "ch-pool-13-021",
     KAP[2],
     "Welche Aussage zu Lewis-Formeln trifft zu?",
@@ -282,22 +272,6 @@ export const chemiePool13: Question[] = [
     "Lewis-Formeln zeigen Valenzelektronen (Außenelektronen) und Bindungen (Elektronenpaare) zwischen Atomen.",
     "mittel",
     ["Lewis-Formel", "Valenzelektronen"]
-  ),
-  q(
-    "ch-pool-13-022",
-    KAP[3],
-    "Die Gleichgewichtskonstante K einer Reaktion:",
-    [
-      "wird durch Katalysator vergrößert",
-      "ist bei gegebener Temperatur konstant",
-      "hängt vom Druck ab",
-      "ist immer 1",
-      "ändert sich mit der Konzentration",
-    ],
-    1,
-    "K ist eine temperaturabhängige Konstante; bei fester Temperatur unabhängig von Druck, Katalysator oder Konzentration.",
-    "mittel",
-    ["Gleichgewichtskonstante"]
   ),
   q(
     "ch-pool-13-023",
@@ -382,16 +356,6 @@ export const chemiePool13: Question[] = [
     ["Oxidationszahl", "Sauerstoff"]
   ),
   q(
-    "ch-pool-13-030",
-    KAP[5],
-    "Ein Keton hat die funktionelle Gruppe:",
-    ["−COOH", "−OH", "−CHO", "−CO− (Carbonyl in der Kette)", "−NH₂"],
-    3,
-    "Keton: Carbonylgruppe C=O in der Kohlenstoffkette (nicht am Ende wie beim Aldehyd).",
-    "mittel",
-    ["Keton", "Carbonyl"]
-  ),
-  q(
     "ch-pool-13-031",
     KAP[0],
     "Das Symbol ³⁵Cl bezeichnet:",
@@ -406,22 +370,6 @@ export const chemiePool13: Question[] = [
     "Links oben: Massenzahl A = 35. Chlor hat Z = 17; das Isotop hat 35 − 17 = 18 Neutronen.",
     "leicht",
     ["Isotop", "Chlor"]
-  ),
-  q(
-    "ch-pool-13-032",
-    KAP[1],
-    "Erstarren ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → fest",
-      "gasförmig → flüssig",
-      "gasförmig → fest",
-      "flüssig → gasförmig",
-    ],
-    1,
-    "Erstarren (Erstarrung) = flüssig → fest. Schmelzen = fest → flüssig.",
-    "leicht",
-    ["Erstarren", "Phasenübergang"]
   ),
   q(
     "ch-pool-13-033",
@@ -644,22 +592,6 @@ export const chemiePool13: Question[] = [
     "Sieden: Dampfdruck der Flüssigkeit = Außendruck. Dann bilden sich Dampfblasen im Inneren.",
     "mittel",
     ["Siedepunkt", "Dampfdruck"]
-  ),
-  q(
-    "ch-pool-13-051",
-    KAP[2],
-    "Welche Aussage zu NaCl in Wasser trifft zu?",
-    [
-      "Es bleibt ungelöst",
-      "Es dissoziiert zu Na⁺ und Cl⁻",
-      "Es bildet Moleküle",
-      "Es reagiert zu NaOH und HCl",
-      "Es erhöht den pH stark",
-    ],
-    1,
-    "NaCl ist ein Salz; in Wasser dissoziiert es vollständig in Na⁺ und Cl⁻ (elektrolytische Dissoziation).",
-    "leicht",
-    ["Dissoziation", "NaCl"]
   ),
   q(
     "ch-pool-13-052",

@@ -88,16 +88,6 @@ export const chemiePool19: Question[] = [
     ["pH", "pOH"]
   ),
   q(
-    "ch-pool-19-006",
-    KAP[5],
-    "Welche Verbindung ist ein Alkan?",
-    ["Ethen", "Ethin", "Methan", "Benzol", "Ethanol"],
-    2,
-    "Methan CH₄ ist das einfachste Alkan (CₙH₂ₙ₊₂). Ethen/Alkin/Benzol/Ethanol nicht.",
-    "leicht",
-    ["Alkane", "Methan"]
-  ),
-  q(
     "ch-pool-19-007",
     KAP[0],
     "Die magnetische Quantenzahl m_l beschreibt:",

@@ -182,22 +182,6 @@ export const biologiePool11: Question[] = [
     ["Immunologie"]
   ),
   q(
-    "bio-pool-11-012",
-    "bio-kap1",
-    "Wo findet die oxidative Phosphorylierung statt?",
-    [
-      "Im Zytosol",
-      "In der Mitochondrienmatrix",
-      "An der inneren Mitochondrienmembran",
-      "Im Zellkern",
-      "Am Golgi-Apparat",
-    ],
-    2,
-    "Die Atmungskette (oxidative Phosphorylierung) sitzt an der inneren Mitochondrienmembran. Citratzyklus in der Matrix.",
-    "mittel",
-    ["Zelle", "Stoffwechsel"]
-  ),
-  q(
     "bio-pool-11-013",
     "bio-kap2",
     "Welcher Teil des Auges regelt den Lichteinfall (Pupillenweite)?",
@@ -206,16 +190,6 @@ export const biologiePool11: Question[] = [
     "Die Iris enthält glatte Muskulatur und regelt die Pupillenweite (Lichteinfall). Die Linse ist für die Akkommodation zuständig.",
     "leicht",
     ["Auge", "Sinnesorgane"]
-  ),
-  q(
-    "bio-pool-11-014",
-    "bio-kap4",
-    "Wie viele Chromosomen hat eine menschliche Körperzelle (diploid)?",
-    ["23", "46", "92", "22", "44"],
-    1,
-    "Körperzellen sind diploid: 46 Chromosomen (23 Paare). Keimzellen sind haploid: 23 Chromosomen.",
-    "leicht",
-    ["Genetik", "Chromosomen"]
   ),
   q(
     "bio-pool-11-015",
@@ -834,21 +808,5 @@ export const biologiePool11: Question[] = [
     "Die Bauchspeicheldrüse ist exokrin (Verdauungsenzyme in den Pankreassaft) und endokrin (Langerhans-Inseln: Insulin, Glukagon).",
     "leicht",
     ["Verdauung", "Bauchspeicheldrüse"]
-  ),
-  q(
-    "bio-pool-11-060",
-    "bio-kap5",
-    "Was ist ein Ökosystem?",
-    [
-      "Nur die unbelebte Umwelt",
-      "Nur die Lebensgemeinschaft",
-      "Die funktionale Einheit aus Biotop und Biozönose",
-      "Eine einzelne Art",
-      "Eine Nahrungskette",
-    ],
-    2,
-    "Ein Ökosystem umfasst den Biotop (abiotische Faktoren) und die Biozönose (Lebewesen) in Wechselwirkung.",
-    "leicht",
-    ["Ökologie", "Ökosystem"]
   ),
 ];

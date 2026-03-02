@@ -68,22 +68,6 @@ export const chemiePool21: Question[] = [
     ["kovalente Bindung", "HCl"]
   ),
   q(
-    "ch-pool-21-004",
-    KAP[3],
-    "Bei einer Säure-Base-Reaktion nach Brønsted:",
-    [
-      "werden Elektronen übertragen",
-      "werden Protonen (H⁺) übertragen",
-      "entstehen nur Oxide",
-      "wird kein Wasser gebildet",
-      "reagieren nur Metalle",
-    ],
-    1,
-    "Brønsted: Säure = Protonendonator, Base = Protonenakzeptor. Protonenübertragung.",
-    "leicht",
-    ["Brønsted", "Säure-Base"]
-  ),
-  q(
     "ch-pool-21-005",
     KAP[4],
     "Der pH-Wert einer Lösung mit [H₃O⁺] = 10⁻³ mol/L beträgt:",
@@ -216,22 +200,6 @@ export const chemiePool21: Question[] = [
     "Na₂O: Natriumoxid, Ionenverbindung aus Na⁺ und O²⁻. CO₂, I₂ molekular; SiO₂, Diamant kovalent.",
     "mittel",
     ["Ionenverbindung", "Na2O"]
-  ),
-  q(
-    "ch-pool-21-016",
-    KAP[3],
-    "Die Reaktionsenthalpie ΔH einer Reaktion:",
-    [
-      "bestimmt die Reaktionsgeschwindigkeit",
-      "gibt die bei konstantem Druck umgesetzte Wärme an",
-      "ist immer null",
-      "bestimmt nur die Aktivierungsenergie",
-      "hängt nur vom Katalysator ab",
-    ],
-    1,
-    "Bei konstantem Druck: ΔH = Q_p (Reaktionswärme). Unabhängig von Geschwindigkeit und Katalysator.",
-    "mittel",
-    ["Reaktionsenthalpie"]
   ),
   q(
     "ch-pool-21-017",
@@ -568,22 +536,6 @@ export const chemiePool21: Question[] = [
     ["Löslichkeit"]
   ),
   q(
-    "ch-pool-21-045",
-    KAP[2],
-    "Welche Aussage zu Wasserstoffbrücken trifft zu?",
-    [
-      "Sie sind kovalente Bindungen zwischen Molekülen",
-      "Sie sind zwischenmolekulare Kräfte (H an O/N/F gebunden)",
-      "Sie sind stärker als C−C-Bindungen",
-      "Sie treten nur in Ionen auf",
-      "Sie wirken nur in Alkanen",
-    ],
-    1,
-    "Wasserstoffbrücken: zwischenmolekulare Wechselwirkung, H an elektronegativem Atom (O, N, F), mit anderem O/N/F.",
-    "mittel",
-    ["Wasserstoffbrücken"]
-  ),
-  q(
     "ch-pool-21-046",
     KAP[3],
     "Die Reaktionsgeschwindigkeit steigt typischerweise mit der Temperatur, weil:",
@@ -726,26 +678,6 @@ export const chemiePool21: Question[] = [
     "CaO: Calciumoxid, Ionenverbindung aus Ca²⁺ und O²⁻.",
     "leicht",
     ["Calciumoxid", "Ionenbindung"]
-  ),
-  q(
-    "ch-pool-21-058",
-    KAP[3],
-    "Die Reaktionswärme bei konstantem Druck entspricht:",
-    ["ΔU", "ΔH", "nur ΔS", "der Aktivierungsenergie", "der Geschwindigkeitskonstante"],
-    1,
-    "Bei konstantem Druck: Q_p = ΔH (Reaktionsenthalpie).",
-    "mittel",
-    ["Reaktionsenthalpie"]
-  ),
-  q(
-    "ch-pool-21-059",
-    KAP[4],
-    "Welches Element ist ein Halogen?",
-    ["Sauerstoff", "Stickstoff", "Brom", "Schwefel", "Kohlenstoff"],
-    2,
-    "Halogene: F, Cl, Br, I, At (Gruppe 17). Brom = Br.",
-    "leicht",
-    ["Halogen", "Brom"]
   ),
   q(
     "ch-pool-21-060",

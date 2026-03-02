@@ -111,22 +111,6 @@ export const physikPool3: Question[] = [
     ["Plattenkondensator", "Feldstärke"]
   ),
   q(
-    "ph-pool-108",
-    "phys-kap1",
-    "Die Dichte ρ ist definiert als:",
-    [
-      "Masse · Volumen",
-      "Masse / Volumen",
-      "Volumen / Masse",
-      "Masse + Volumen",
-      "Gewichtskraft / Volumen",
-    ],
-    1,
-    "ρ = m/V, Einheit kg/m³. Intensiv (unabhängig von der Menge).",
-    "leicht",
-    ["Dichte", "Masse", "Volumen"]
-  ),
-  q(
     "ph-pool-109",
     "phys-kap3",
     "Bei Totalreflexion:",

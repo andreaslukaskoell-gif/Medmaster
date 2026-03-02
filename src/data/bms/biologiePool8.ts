@@ -32,22 +32,6 @@ function q(
 
 export const biologiePool8: Question[] = [
   q(
-    "bio-pool-8-001",
-    "bio-kap2",
-    "Welches Gewebe kleidet die Harnblase aus?",
-    [
-      "Flimmerepithel",
-      "Urothel (Übergangsepithel)",
-      "Epidermis",
-      "Einschichtiges Plattenepithel",
-      "Mehrreihiges Epithel",
-    ],
-    1,
-    "Die Harnblase ist von Urothel mit Schirmzellen ausgekleidet; es kann sich beim Füllen stark dehnen.",
-    "leicht",
-    ["Epithel", "Harnblase", "Kap2"]
-  ),
-  q(
     "bio-pool-8-002",
     "bio-kap2",
     "Welche Zellkontakte ermöglichen Ionenfluss zwischen Herzmuskelzellen?",
@@ -56,16 +40,6 @@ export const biologiePool8: Question[] = [
     "Gap Junctions (Connexine) ermöglichen direkten Ionenaustausch; die Erregung breitet sich so koordiniert im Herzen aus.",
     "mittel",
     ["Zellkontakte", "Herz", "Kap2"]
-  ),
-  q(
-    "bio-pool-8-003",
-    "bio-kap4",
-    "Bei Aa × Aa (einfacher dominant-rezessiver Erbgang): Wie viele der Nachkommen sind phänotypisch dominant?",
-    ["0 %", "25 %", "50 %", "75 %", "100 %"],
-    3,
-    "Genotypen: 1 AA, 2 Aa, 1 aa → 75 % phänotypisch dominant (AA und Aa).",
-    "mittel",
-    ["Vererbung", "Kap4"]
   ),
   q(
     "bio-pool-8-004",
@@ -304,22 +278,6 @@ export const biologiePool8: Question[] = [
     "Abiotisch = unbelebt (Licht, Temperatur, pH, Wasser). Biotisch = belebt (Konkurrenz, Räuber-Beute).",
     "leicht",
     ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-8-020",
-    "bio-kap2",
-    STEM_FALSCH,
-    [
-      "Epithelien sind avaskulär.",
-      "Epithelien sitzen auf einer Basalmembran.",
-      "Epithelien haben eigene Blutgefäße in der Mitte der Schicht.",
-      "Tight Junctions liegen apikal.",
-      "Urothel kleidet die Harnblase aus.",
-    ],
-    2,
-    "Epithelien sind avaskulär – sie haben keine eigenen Blutgefäße; die Versorgung erfolgt durch Diffusion aus dem Bindegewebe (C falsch).",
-    "mittel",
-    ["Epithel", "Kap2"]
   ),
   q(
     "bio-pool-8-021",

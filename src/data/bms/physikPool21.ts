@@ -232,26 +232,6 @@ export const physikPool21: Question[] = [
     ["Reflexion", "Optik"]
   ),
   q(
-    "ph-pool-21-018",
-    KAP[2],
-    "Die Enthalpie H ist definiert als:",
-    ["H = U − p·V", "H = U + p·V", "H = Q − W", "H = S·T", "H = n·R·T"],
-    1,
-    "H = U + p·V.",
-    "mittel",
-    ["Enthalpie", "Definition"]
-  ),
-  q(
-    "ph-pool-21-019",
-    KAP[3],
-    "Die Kapazität C eines Kondensators hat die Einheit:",
-    ["Ohm", "Farad", "Henry", "Tesla", "Weber"],
-    1,
-    "C in Farad (F).",
-    "leicht",
-    ["Kapazität", "Farad"]
-  ),
-  q(
     "ph-pool-21-020",
     KAP[4],
     "Die Strahlung von Polonium-210 ist vor allem:",
@@ -330,16 +310,6 @@ export const physikPool21: Question[] = [
     "Beugung ist typisch für Wellen; Licht zeigt Wellen- und Teilcheneigenschaften.",
     "mittel",
     ["Beugung", "Licht"]
-  ),
-  q(
-    "ph-pool-21-028",
-    KAP[2],
-    "Die Verdampfungswärme von Wasser bei 100 °C beträgt etwa:",
-    ["334 kJ/kg", "2257 kJ/kg", "4,2 kJ/(kg·K)", "0", "100 kJ/kg"],
-    1,
-    "Verdampfungswärme Wasser ca. 2257 kJ/kg.",
-    "mittel",
-    ["Verdampfungswärme", "Wasser"]
   ),
   q(
     "ph-pool-21-029",
@@ -456,16 +426,6 @@ export const physikPool21: Question[] = [
     ["Kohärenz", "Interferenz"]
   ),
   q(
-    "ph-pool-21-038",
-    KAP[2],
-    "Die Wärmekapazität C eines Körpers (Q = C·ΔT) hat die Einheit:",
-    ["J·K", "J/K", "K/J", "J", "W/s"],
-    1,
-    "C = Q/ΔT → [C] = J/K.",
-    "leicht",
-    ["Wärmekapazität", "Einheit"]
-  ),
-  q(
     "ph-pool-21-039",
     KAP[3],
     "Die elektrische Arbeit W bei Spannung U und Stromstärke I über die Zeit t ist:",
@@ -492,36 +452,6 @@ export const physikPool21: Question[] = [
     ["Beta-Plus", "Ordnungszahl"]
   ),
   q(
-    "ph-pool-21-041",
-    KAP[0],
-    "Die kinetische Energie E_kin eines Körpers der Masse m und Geschwindigkeit v ist:",
-    ["E_kin = m·v", "E_kin = ½·m·v²", "E_kin = m·v²", "E_kin = m·g·h", "E_kin = F·s"],
-    1,
-    "E_kin = ½·m·v².",
-    "leicht",
-    ["kinetische Energie", "Formel"]
-  ),
-  q(
-    "ph-pool-21-042",
-    KAP[1],
-    "Die Schallintensität I und der Schalldruck p sind bei ebener Welle verknüpft durch:",
-    ["I ∝ p", "I ∝ p²", "I ∝ 1/p", "I = p", "I unabhängig von p"],
-    1,
-    "I ∝ p².",
-    "mittel",
-    ["Schall", "Intensität"]
-  ),
-  q(
-    "ph-pool-21-043",
-    KAP[2],
-    "Die spezifische Wärmekapazität c hat die Einheit:",
-    ["J", "J/(kg·K)", "J/K", "kg/J", "W"],
-    1,
-    "c in J/(kg·K).",
-    "leicht",
-    ["spezifische Wärmekapazität", "Einheit"]
-  ),
-  q(
     "ph-pool-21-044",
     KAP[3],
     "Die Stromstärke I ist definiert als:",
@@ -536,16 +466,6 @@ export const physikPool21: Question[] = [
     "I = Q/t = dQ/dt.",
     "leicht",
     ["Stromstärke", "Definition"]
-  ),
-  q(
-    "ph-pool-21-045",
-    KAP[4],
-    "Die Halbwertszeit T_½ und die Zerfallskonstante λ sind verknüpft durch:",
-    ["T_½ = λ", "T_½ = ln(2)/λ", "T_½ = λ/2", "T_½ = 2λ", "T_½ = 1/λ"],
-    1,
-    "T_½ = ln(2)/λ ≈ 0,693/λ.",
-    "mittel",
-    ["Halbwertszeit", "Zerfallskonstante"]
   ),
   q(
     "ph-pool-21-046",
@@ -566,26 +486,6 @@ export const physikPool21: Question[] = [
     "Totalreflexion: gesamtes Licht reflektiert.",
     "leicht",
     ["Totalreflexion", "Optik"]
-  ),
-  q(
-    "ph-pool-21-048",
-    KAP[2],
-    "Die Entropie S eines Systems nimmt bei irreversiblen Prozessen in einem abgeschlossenen System:",
-    ["ab", "zu", "bleibt konstant", "wird null", "ist nicht definiert"],
-    1,
-    "2. Hauptsatz: ΔS ≥ 0 bei irreversiblen Prozessen.",
-    "mittel",
-    ["Entropie", "2. Hauptsatz"]
-  ),
-  q(
-    "ph-pool-21-049",
-    KAP[3],
-    "Die elektrische Feldstärke E hat die Einheit:",
-    ["Coulomb", "Volt pro Meter (V/m)", "Newton", "Tesla", "Ampere"],
-    1,
-    "E = F/q → [E] = N/C = V/m.",
-    "leicht",
-    ["Feldstärke", "Einheit"]
   ),
   q(
     "ph-pool-21-050",
@@ -670,16 +570,6 @@ export const physikPool21: Question[] = [
     ["Newton", "Einheit"]
   ),
   q(
-    "ph-pool-21-057",
-    KAP[1],
-    "Die Lichtgeschwindigkeit im Vakuum c beträgt etwa:",
-    ["3·10⁵ m/s", "3·10⁸ m/s", "3·10¹⁰ m/s", "340 m/s", "1500 m/s"],
-    1,
-    "c ≈ 3·10⁸ m/s.",
-    "leicht",
-    ["Lichtgeschwindigkeit", "c"]
-  ),
-  q(
     "ph-pool-21-058",
     KAP[2],
     "Die Wärme Q bei Temperaturänderung ΔT (ohne Phasenübergang) für eine Masse m und spezifische Wärmekapazität c ist:",
@@ -704,21 +594,5 @@ export const physikPool21: Question[] = [
     "U₂/U₁ = N₂/N₁ = 1/2 → Heruntertransformieren.",
     "mittel",
     ["Transformator", "Spannung"]
-  ),
-  q(
-    "ph-pool-21-060",
-    KAP[4],
-    "Die Einheit Gray (Gy) gibt an:",
-    [
-      "Aktivität",
-      "Äquivalentdosis",
-      "Energiedosis (absorbierte Energie pro Masse)",
-      "Halbwertszeit",
-      "Reichweite",
-    ],
-    2,
-    "1 Gy = 1 J/kg (Energiedosis).",
-    "leicht",
-    ["Gray", "Energiedosis"]
   ),
 ];

@@ -308,22 +308,6 @@ export const physikPool13: Question[] = [
     ["Beschleunigung", "Bewegung"]
   ),
   q(
-    "ph-pool-13-022",
-    KAP[1],
-    "Die Intensität einer ebenen Welle ist proportional zu:",
-    [
-      "der Frequenz",
-      "dem Quadrat der Amplitude",
-      "der Wellenlänge",
-      "der Ausbreitungsgeschwindigkeit",
-      "1/f",
-    ],
-    1,
-    "Intensität I ∝ A² (Energie pro Zeit und Fläche).",
-    "mittel",
-    ["Intensität", "Amplitude"]
-  ),
-  q(
     "ph-pool-13-023",
     KAP[2],
     "Adiabatisch bedeutet:",
@@ -404,22 +388,6 @@ export const physikPool13: Question[] = [
     ["Dispersion", "Optik"]
   ),
   q(
-    "ph-pool-13-028",
-    KAP[2],
-    "Der Dampfdruck einer Flüssigkeit:",
-    [
-      "ist unabhängig von der Temperatur",
-      "steigt mit der Temperatur",
-      "ist immer gleich dem Umgebungsdruck",
-      "ist nur bei Siedetemperatur definiert",
-      "sinkt mit der Temperatur",
-    ],
-    1,
-    "Dampfdruck nimmt mit steigender Temperatur zu (Clausius-Clapeyron).",
-    "mittel",
-    ["Dampfdruck", "Phasenübergang"]
-  ),
-  q(
     "ph-pool-13-029",
     KAP[3],
     "Die magnetische Flussdichte B wird in … gemessen.",
@@ -488,16 +456,6 @@ export const physikPool13: Question[] = [
     ["ideales Gas", "Modell"]
   ),
   q(
-    "ph-pool-13-034",
-    KAP[3],
-    "Die elektrische Feldstärke E hat die Einheit:",
-    ["Coulomb", "Volt pro Meter (V/m)", "Newton", "Tesla", "Ampere"],
-    1,
-    "E = F/q → [E] = N/C = V/m.",
-    "leicht",
-    ["Feldstärke", "E-Lehre"]
-  ),
-  q(
     "ph-pool-13-035",
     KAP[4],
     "Ein Geiger-Müller-Zählrohr dient zum Nachweis von:",
@@ -564,22 +522,6 @@ export const physikPool13: Question[] = [
     "Spannung = Potentialdifferenz → Voltmeter parallel zur Messstrecke.",
     "leicht",
     ["Voltmeter", "Spannungsmessung"]
-  ),
-  q(
-    "ph-pool-13-040",
-    KAP[4],
-    "Die charakteristische Röntgenstrahlung entsteht durch:",
-    [
-      "Kernzerfall",
-      "Übergänge von Elektronen in inneren Schalen (z. B. K-Schale)",
-      "nur Bremsstrahlung",
-      "Fusion",
-      "Compton-Streuung",
-    ],
-    1,
-    "Charakteristische Röntgenstrahlung: Elektronenübergänge in inneren Schalen (Kα, Kβ etc.).",
-    "mittel",
-    ["Röntgen", "charakteristische Strahlung"]
   ),
   q(
     "ph-pool-13-041",

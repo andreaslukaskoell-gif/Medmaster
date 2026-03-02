@@ -98,16 +98,6 @@ export const chemiePool15: Question[] = [
     ["Alkane", "Pentan"]
   ),
   q(
-    "ch-pool-15-007",
-    KAP[0],
-    "Die Elektronenkonfiguration von Neon (Z=10) ist:",
-    ["1s² 2s² 2p⁴", "1s² 2s² 2p⁶", "1s² 2s² 2p⁵", "1s² 2s² 2p⁷", "1s² 2s⁶"],
-    1,
-    "Neon: 10 Elektronen → 1s² 2s² 2p⁶ (Edelgaskonfiguration).",
-    "mittel",
-    ["Elektronenkonfiguration", "Neon"]
-  ),
-  q(
     "ch-pool-15-008",
     KAP[1],
     "Der Dampfdruck einer Flüssigkeit:",
@@ -228,16 +218,6 @@ export const chemiePool15: Question[] = [
     ["Katalysator", "heterogen"]
   ),
   q(
-    "ch-pool-15-017",
-    KAP[4],
-    "Welche Säure ist eine starke Säure in wässriger Lösung?",
-    ["Essigsäure", "Ameisensäure", "Salzsäure (HCl)", "Kohlensäure", "Phosphorsäure (1. Stufe)"],
-    2,
-    "HCl ist eine starke Säure; in Wasser praktisch vollständig zu H₃O⁺ und Cl⁻ dissoziiert.",
-    "leicht",
-    ["starke Säure", "HCl"]
-  ),
-  q(
     "ch-pool-15-018",
     KAP[5],
     "Die Silbernitrat-Probe zum Nachweis von Chlorid ergibt:",
@@ -262,16 +242,6 @@ export const chemiePool15: Question[] = [
     "n=2: 1 s-Orbital + 3 p-Orbitale = 4 Orbitale. Insgesamt 8 Elektronen (2n²).",
     "mittel",
     ["Orbital", "Schale"]
-  ),
-  q(
-    "ch-pool-15-020",
-    KAP[1],
-    "Die Dichte von Eis ist im Vergleich zu flüssigem Wasser:",
-    ["gleich", "größer", "kleiner", "immer 1 g/cm³", "unbestimmt"],
-    2,
-    "Dichteanomalie des Wassers: Eis hat geringere Dichte als flüssiges Wasser (Wasser dehnt sich beim Gefrieren aus).",
-    "leicht",
-    ["Dichte", "Eis"]
   ),
   q(
     "ch-pool-15-021",
@@ -308,16 +278,6 @@ export const chemiePool15: Question[] = [
     "[OH⁻] = K_W / [H₃O⁺] = 10⁻¹⁴ / 10⁻¹² = 10⁻² → pOH = 2.",
     "mittel",
     ["pOH", "Autoprotolyse"]
-  ),
-  q(
-    "ch-pool-15-024",
-    KAP[5],
-    "Welche Verbindung ist ein Aromat?",
-    ["Cyclohexan", "Cyclohexen", "Benzol", "Hexan", "Pentan"],
-    2,
-    "Benzol (C₆H₆) hat ein konjugiertes π-System mit 6 π-Elektronen (Hückel) → aromatisch.",
-    "leicht",
-    ["Aromat", "Benzol"]
   ),
   q(
     "ch-pool-15-025",
@@ -432,22 +392,6 @@ export const chemiePool15: Question[] = [
     "NH₃: N hat ein freies Elektronenpaar + 3 Bindungen → trigonal pyramidal (Abknickung vom Tetraeder).",
     "mittel",
     ["Ammoniak", "Geometrie"]
-  ),
-  q(
-    "ch-pool-15-034",
-    KAP[3],
-    "Ein Inhibitor:",
-    [
-      "beschleunigt die Reaktion",
-      "verlangsamt oder verhindert die Reaktion",
-      "verschiebt das Gleichgewicht",
-      "ist ein Katalysator",
-      "ändert ΔH",
-    ],
-    1,
-    "Inhibitor hemmt die Reaktion (z. B. kompetitive Enzymhemmung).",
-    "leicht",
-    ["Inhibitor"]
   ),
   q(
     "ch-pool-15-035",

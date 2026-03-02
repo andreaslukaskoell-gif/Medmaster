@@ -30,108 +30,105 @@ function q(
 
 const CHAPTERS = ["mathe-kap1", "mathe-kap2", "mathe-kap5"] as const;
 
-const TEMPLATES: Array<{
-  text: string;
-  options: [string, string, string, string, string];
-  correctIndex: 0 | 1 | 2 | 3 | 4;
-  explanation: string;
-  diff: "leicht" | "mittel" | "schwer";
-  tags: string[];
-}> = [
-  {
-    text: "10⁵ / 10² = ?",
-    options: ["10³", "10⁷", "10¹⁰", "10⁵/²", "10²"],
-    correctIndex: 0,
-    explanation: "Division: Exponenten subtrahieren. 5−2 = 3.",
-    diff: "leicht",
-    tags: ["Zehnerpotenzen"],
-  },
-  {
-    text: "Nullstelle von f(x) = 4x − 12?",
-    options: ["x = 3", "x = −3", "x = 12", "x = 4", "x = 0"],
-    correctIndex: 0,
-    explanation: "4x−12 = 0 ⇒ x = 3.",
-    diff: "leicht",
-    tags: ["lineare Funktion"],
-  },
-  {
-    text: "Kreisumfang bei r = 7?",
-    options: ["7π", "14π", "49π", "14", "2π"],
-    correctIndex: 1,
-    explanation: "U = 2πr = 14π.",
-    diff: "leicht",
-    tags: ["Kreis"],
-  },
-  {
-    text: "log₁₀(10) = ?",
-    options: ["0", "1", "10", "2", "−1"],
-    correctIndex: 1,
-    explanation: "10¹ = 10, also log₁₀(10) = 1.",
-    diff: "leicht",
-    tags: ["Logarithmus"],
-  },
-  {
-    text: "Satz des Pythagoras: a² + b² = ?",
-    options: ["(a+b)²", "c²", "2ab", "c", "a·b"],
-    correctIndex: 1,
-    explanation: "Im rechtwinkligen Dreieck: a²+b² = c².",
-    diff: "leicht",
-    tags: ["Pythagoras"],
-  },
-  {
-    text: "2,5 · 10³ in Dezimal?",
-    options: ["2500", "250", "0,0025", "25", "25000"],
-    correctIndex: 0,
-    explanation: "2,5·10³ = 2500.",
-    diff: "leicht",
-    tags: ["Zehnerpotenzen"],
-  },
-  {
-    text: "Gerade y = −x + 4: y-Achsenabschnitt?",
-    options: ["−1", "4", "0", "−4", "1"],
-    correctIndex: 1,
-    explanation: "y-Achsenabschnitt = f(0) = 4.",
-    diff: "leicht",
-    tags: ["lineare Funktion"],
-  },
-  {
-    text: "Rechteck 6×9: Fläche?",
-    options: ["15", "30", "54", "54π", "18"],
-    correctIndex: 2,
-    explanation: "A = 6·9 = 54.",
-    diff: "leicht",
-    tags: ["Rechteck"],
-  },
-  {
-    text: "Milli (m) = ?",
-    options: ["10⁻²", "10⁻³", "10⁻⁶", "10³", "10⁻⁹"],
-    correctIndex: 1,
-    explanation: "Milli = 10⁻³.",
-    diff: "leicht",
-    tags: ["SI-Präfixe"],
-  },
-  {
-    text: "x² = 25 ⇒ x = ?",
-    options: ["5", "5 oder −5", "25", "−5", "0"],
-    correctIndex: 1,
-    explanation: "x² = 25 ⇒ x = ±5.",
-    diff: "leicht",
-    tags: ["Quadratische Gleichung"],
-  },
+export const mathematikPool2: Question[] = [
+  q(
+    "ma-pool-101",
+    CHAPTERS[101 % 3],
+    "10⁵ / 10² = ?",
+    ["10³", "10⁷", "10¹⁰", "10⁵/²", "10²"],
+    0,
+    "Division: Exponenten subtrahieren. 5−2 = 3.",
+    "leicht",
+    ["Zehnerpotenzen"]
+  ),
+  q(
+    "ma-pool-102",
+    CHAPTERS[102 % 3],
+    "Nullstelle von f(x) = 4x − 12?",
+    ["x = 3", "x = −3", "x = 12", "x = 4", "x = 0"],
+    0,
+    "4x−12 = 0 ⇒ x = 3.",
+    "leicht",
+    ["lineare Funktion"]
+  ),
+  q(
+    "ma-pool-103",
+    CHAPTERS[103 % 3],
+    "Kreisumfang bei r = 7?",
+    ["7π", "14π", "49π", "14", "2π"],
+    1,
+    "U = 2πr = 14π.",
+    "leicht",
+    ["Kreis"]
+  ),
+  q(
+    "ma-pool-104",
+    CHAPTERS[104 % 3],
+    "log₁₀(10) = ?",
+    ["0", "1", "10", "2", "−1"],
+    1,
+    "10¹ = 10, also log₁₀(10) = 1.",
+    "leicht",
+    ["Logarithmus"]
+  ),
+  q(
+    "ma-pool-105",
+    CHAPTERS[105 % 3],
+    "Satz des Pythagoras: a² + b² = ?",
+    ["(a+b)²", "c²", "2ab", "c", "a·b"],
+    1,
+    "Im rechtwinkligen Dreieck: a²+b² = c².",
+    "leicht",
+    ["Pythagoras"]
+  ),
+  q(
+    "ma-pool-106",
+    CHAPTERS[106 % 3],
+    "2,5 · 10³ in Dezimal?",
+    ["2500", "250", "0,0025", "25", "25000"],
+    0,
+    "2,5·10³ = 2500.",
+    "leicht",
+    ["Zehnerpotenzen"]
+  ),
+  q(
+    "ma-pool-107",
+    CHAPTERS[107 % 3],
+    "Gerade y = −x + 4: y-Achsenabschnitt?",
+    ["−1", "4", "0", "−4", "1"],
+    1,
+    "y-Achsenabschnitt = f(0) = 4.",
+    "leicht",
+    ["lineare Funktion"]
+  ),
+  q(
+    "ma-pool-108",
+    CHAPTERS[108 % 3],
+    "Rechteck 6×9: Fläche?",
+    ["15", "30", "54", "54π", "18"],
+    2,
+    "A = 6·9 = 54.",
+    "leicht",
+    ["Rechteck"]
+  ),
+  q(
+    "ma-pool-109",
+    CHAPTERS[109 % 3],
+    "Milli (m) = ?",
+    ["10⁻²", "10⁻³", "10⁻⁶", "10³", "10⁻⁹"],
+    1,
+    "Milli = 10⁻³.",
+    "leicht",
+    ["SI-Präfixe"]
+  ),
+  q(
+    "ma-pool-110",
+    CHAPTERS[110 % 3],
+    "x² = 25 ⇒ x = ?",
+    ["5", "5 oder −5", "25", "−5", "0"],
+    1,
+    "x² = 25 ⇒ x = ±5.",
+    "leicht",
+    ["Quadratische Gleichung"]
+  ),
 ];
-
-export const mathematikPool2: Question[] = Array.from({ length: 100 }, (_, i) => {
-  const n = 101 + i;
-  const ch = CHAPTERS[n % 3];
-  const t = TEMPLATES[i % TEMPLATES.length];
-  return q(
-    `ma-pool-${String(n).padStart(3, "0")}`,
-    ch,
-    t.text,
-    t.options,
-    t.correctIndex,
-    t.explanation,
-    t.diff,
-    t.tags
-  );
-});

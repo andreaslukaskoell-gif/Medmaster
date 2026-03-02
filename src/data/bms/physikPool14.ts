@@ -208,22 +208,6 @@ export const physikPool14: Question[] = [
     ["Leistung", "Stromstärke"]
   ),
   q(
-    "ph-pool-14-015",
-    KAP[4],
-    "Die Ordnungszahl Z im Periodensystem gibt an:",
-    [
-      "die Massenzahl",
-      "die Neutronenzahl",
-      "die Protonenzahl (Kernladungszahl)",
-      "die Nukleonenzahl",
-      "die Elektronenzahl nur bei Atomen",
-    ],
-    2,
-    "Ordnungszahl Z = Anzahl der Protonen im Kern.",
-    "leicht",
-    ["Ordnungszahl", "Periodensystem"]
-  ),
-  q(
     "ph-pool-14-016",
     KAP[0],
     "Der Schwerpunkt eines Körpers ist:",
@@ -532,22 +516,6 @@ export const physikPool14: Question[] = [
     ["Alpha-Zerfall", "Zerfallsenergie"]
   ),
   q(
-    "ph-pool-14-036",
-    KAP[0],
-    "Die Dichte ρ ist definiert als:",
-    [
-      "Masse mal Volumen",
-      "Masse durch Volumen",
-      "Volumen durch Masse",
-      "Gewicht durch Volumen",
-      "Kraft durch Fläche",
-    ],
-    1,
-    "ρ = m/V (Einheit kg/m³).",
-    "leicht",
-    ["Dichte", "SI"]
-  ),
-  q(
     "ph-pool-14-037",
     KAP[1],
     "Der Grenzwinkel der Totalreflexion hängt ab von:",
@@ -698,16 +666,6 @@ export const physikPool14: Question[] = [
     "Konkavlinse = Zerstreuungslinse (nach innen gewölbt); f < 0.",
     "mittel",
     ["Konkavlinse", "Zerstreuung"]
-  ),
-  q(
-    "ph-pool-14-048",
-    KAP[2],
-    "Die spezifische Wärmekapazität von Wasser ist etwa:",
-    ["0,5 kJ/(kg·K)", "4,2 kJ/(kg·K)", "1 kJ/(kg·K)", "10 kJ/(kg·K)", "0,1 kJ/(kg·K)"],
-    1,
-    "c_Wasser ≈ 4,19 kJ/(kg·K).",
-    "leicht",
-    ["spezifische Wärmekapazität", "Wasser"]
   ),
   q(
     "ph-pool-14-049",

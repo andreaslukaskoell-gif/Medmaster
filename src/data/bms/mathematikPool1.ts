@@ -750,22 +750,6 @@ export const mathematikPool1: Question[] = [
     ["Cosinus", "Trigonometrie"]
   ),
   q(
-    "ma-pool-068",
-    "mathe-kap5",
-    "Die quadratische Gleichung x² − 5x + 6 = 0 hat die Lösungen:",
-    [
-      "x = 2 und x = 3",
-      "x = −2 und x = −3",
-      "x = 1 und x = 6",
-      "x = 0 und x = 5",
-      "keine reelle Lösung",
-    ],
-    0,
-    "x²−5x+6 = (x−2)(x−3) = 0 ⇒ x = 2 oder x = 3.",
-    "leicht",
-    ["quadratische Gleichung", "Faktorisierung"]
-  ),
-  q(
     "ma-pool-069",
     "mathe-kap1",
     "Teragramm (Tg) in kg: 1 Tg =",

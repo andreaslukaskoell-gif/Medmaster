@@ -62,22 +62,6 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["Wärmeausdehnung", "Wärmelehre"]
   ),
   q(
-    "ph-off-003",
-    "phys-kap5",
-    "Möchte man eine Sammellinse als Lupe verwenden, um ein vergrößertes Bild zu erzeugen, muss sich der Gegenstand wo befinden?",
-    [
-      "Außerhalb der einfachen Brennweite",
-      "Mit einer Sammellinse lässt sich keine Lupe realisieren",
-      "Außerhalb der doppelten Brennweite",
-      "In der Hauptebene",
-      "Innerhalb der einfachen Brennweite",
-    ],
-    4,
-    "Als Lupe: Gegenstand innerhalb der einfachen Brennweite (g < f). Dann entsteht ein virtuelles, aufrechtes, vergrößertes Bild.",
-    "mittel",
-    ["Optik", "Lupe", "Sammellinse"]
-  ),
-  q(
     "ph-off-004",
     "phys-kap5",
     "Die Auffächerung (Dispersion) von weißem Licht beim Regenbogen entsteht durch:",
@@ -92,48 +76,6 @@ export const physikPoolOffiziellStyle: Question[] = [
     "Dispersion: Brechungsindex n hängt von der Wellenlänge ab (n(Blau) > n(Rot)) → unterschiedliche Brechungswinkel → Spektralfarben.",
     "mittel",
     ["Dispersion", "Regenbogen", "Optik"]
-  ),
-  q(
-    "ph-off-005",
-    "phys-kap1",
-    "Was versteht man in der Physik unter „abgeleitete Größen“?",
-    [
-      "Physikalische Größen, die nicht messbar sind.",
-      "Physikalische Größen, die aus Differentialquotienten entstanden sind.",
-      "Keine Aussage ist richtig.",
-      "Veraltete physikalische Begriffe.",
-      "Physikalische Größen, die keine SI-Einheiten besitzen.",
-    ],
-    2,
-    "Abgeleitete Größen sind aus Basisgrößen (z. B. Länge, Masse, Zeit) abgeleitet (z. B. Geschwindigkeit, Kraft). Die genannten Aussagen treffen die Definition nicht korrekt.",
-    "schwer",
-    ["abgeleitete Größen", "SI"]
-  ),
-  q(
-    "ph-off-006",
-    "phys-kap1",
-    "Ein Arbeiter hebt einen Sack Zement um 1,3 Meter in die Höhe und hält ihn dann für 5 Minuten in gleicher Position. Wann wird mechanische Arbeit geleistet?",
-    [
-      "Nur beim Heben des Sackes, umso schneller umso mehr.",
-      "Beim Heben und Halten des Sackes.",
-      "Nur beim Halten des Sackes, umso länger umso mehr.",
-      "Nur beim Halten des Sackes, unabhängig von der Dauer des Haltens.",
-      "Nur beim Heben des Sackes, unabhängig von der Dauer des Hebens.",
-    ],
-    4,
-    "Arbeit W = F · s (Weg in Kraftrichtung). Beim Heben: Weg ≠ 0. Beim Halten: Weg = 0 → keine Arbeit. Die Dauer des Hebens ändert W nicht.",
-    "mittel",
-    ["Arbeit", "Mechanik"]
-  ),
-  q(
-    "ph-off-007",
-    "phys-kap1",
-    "Die Kraft wird in der Physik in folgenden Einheiten angegeben:",
-    ["m/s²", "Ampere", "Nm", "kg·m/s²", "Coulomb"],
-    3,
-    "Kraft F: [F] = kg·m/s² = Newton (N). Nm = Joule (Arbeit). Ampere = Stromstärke, Coulomb = Ladung.",
-    "leicht",
-    ["Kraft", "SI-Einheiten"]
   ),
   q(
     "ph-off-008",
@@ -180,22 +122,6 @@ export const physikPoolOffiziellStyle: Question[] = [
     "J = N·m (Arbeit); 1 eV ≈ 1,6·10⁻¹⁹ J; 1 cal ≈ 4,18 J. Watt (W) ist Leistung, keine Energie – man rechnet Joule nicht „in Watt“ um.",
     "mittel",
     ["Einheiten", "Joule", "Energie"]
-  ),
-  q(
-    "ph-off-012",
-    "phys-kap7",
-    "Was ist der Massendefekt?",
-    [
-      "Die Masse des Atoms ist wegen der Elektronen etwas größer als die Summe der Massen der Nukleonen.",
-      "Er ist die Massenzunahme der Atome bei relativ hohen Geschwindigkeiten.",
-      "Er ist der Massenunterschied zwischen Protonen und Elektronen.",
-      "Die Masse des Atomkerns ist etwas geringer als die Summe der Massen der in ihm enthaltenen Nukleonen.",
-      "Protonen und Neutronen haben nicht die ganz gleiche Masse.",
-    ],
-    3,
-    "Massendefekt = (Summe Ruhemassen der Nukleonen) − (Kernmasse). Die „fehlende“ Masse entspricht der Bindungsenergie (E = Δm·c²).",
-    "mittel",
-    ["Massendefekt", "Kernphysik"]
   ),
   q(
     "ph-off-013",

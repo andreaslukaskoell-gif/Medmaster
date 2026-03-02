@@ -232,22 +232,6 @@ export const physikPool18: Question[] = [
     ["Linsengleichung", "Optik"]
   ),
   q(
-    "ph-pool-18-018",
-    KAP[2],
-    "Bei isobarer Erwärmung eines idealen Gases:",
-    [
-      "bleibt das Volumen konstant",
-      "nehmen Volumen und Temperatur zu (V/T = const)",
-      "bleibt die Temperatur konstant",
-      "wird keine Wärme zugeführt",
-      "nimmt der Druck ab",
-    ],
-    1,
-    "Isobar: p = const; V/T = const (Gay-Lussac).",
-    "mittel",
-    ["isobar", "Erwärmung"]
-  ),
-  q(
     "ph-pool-18-019",
     KAP[3],
     "Die Kapazität C eines Kondensators mit Plattenfläche A und Abstand d (Vakuum) ist proportional zu:",
@@ -402,42 +386,6 @@ export const physikPool18: Question[] = [
     ["Kraft", "Beschleunigung"]
   ),
   q(
-    "ph-pool-18-032",
-    KAP[1],
-    "Die Lichtgeschwindigkeit im Vakuum c beträgt etwa:",
-    ["3·10⁵ m/s", "3·10⁸ m/s", "3·10¹⁰ m/s", "340 m/s", "1500 m/s"],
-    1,
-    "c ≈ 3·10⁸ m/s.",
-    "leicht",
-    ["Lichtgeschwindigkeit", "c"]
-  ),
-  q(
-    "ph-pool-18-033",
-    KAP[2],
-    "Der Wirkungsgrad η einer Wärmekraftmaschine ist definiert als:",
-    [
-      "zugeführte Wärme / abgegebene Arbeit",
-      "abgegebene Nutzarbeit / zugeführte Wärme",
-      "abgegebene Wärme / zugeführte Wärme",
-      "immer 1",
-      "T_kalt/T_heiss",
-    ],
-    1,
-    "η = W_nutz/Q_zu < 1 (2. Hauptsatz).",
-    "mittel",
-    ["Wirkungsgrad", "Wärmekraftmaschine"]
-  ),
-  q(
-    "ph-pool-18-034",
-    KAP[3],
-    "Die magnetische Flussdichte B hat die Einheit:",
-    ["Weber", "Tesla", "Henry", "Farad", "Ohm"],
-    1,
-    "B in Tesla (T).",
-    "leicht",
-    ["Tesla", "Magnetfeld"]
-  ),
-  q(
     "ph-pool-18-035",
     KAP[4],
     "Beim Beta-Minus-Zerfall eines Kerns:",
@@ -546,16 +494,6 @@ export const physikPool18: Question[] = [
     "Grundschwingung: λ/2 = L → f = c/(2L).",
     "mittel",
     ["Saite", "Grundschwingung"]
-  ),
-  q(
-    "ph-pool-18-043",
-    KAP[2],
-    "Die spezifische Wärmekapazität c hat die Einheit:",
-    ["J", "J/(kg·K)", "J/K", "kg/J", "W"],
-    1,
-    "c in J/(kg·K).",
-    "leicht",
-    ["spezifische Wärmekapazität", "Einheit"]
   ),
   q(
     "ph-pool-18-044",

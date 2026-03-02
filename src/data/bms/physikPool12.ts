@@ -120,22 +120,6 @@ export const physikPool12: Question[] = [
     ["Wellenlänge", "c = λf"]
   ),
   q(
-    "ph-pool-12-008",
-    KAP[2],
-    "Wärme fließt spontan immer:",
-    [
-      "von kalt nach warm",
-      "von warm nach kalt",
-      "nur in Festkörpern",
-      "nur in Flüssigkeiten",
-      "gar nicht",
-    ],
-    1,
-    "Zweiter Hauptsatz: Wärme fließt von höherer zu niedrigerer Temperatur.",
-    "leicht",
-    ["Wärme", "Temperatur"]
-  ),
-  q(
     "ph-pool-12-009",
     KAP[3],
     "Ohmsches Gesetz lautet:",
@@ -188,16 +172,6 @@ export const physikPool12: Question[] = [
     ["longitudinal", "Welle"]
   ),
   q(
-    "ph-pool-12-013",
-    KAP[2],
-    "Der absolute Nullpunkt der Temperatur liegt bei:",
-    ["0 °C", "−273,15 °C", "273,15 K", "0 K", "B und D sind richtig"],
-    4,
-    "Absoluter Nullpunkt: 0 K = −273,15 °C. Keine tiefere Temperatur möglich.",
-    "leicht",
-    ["absoluter Nullpunkt", "Kelvin"]
-  ),
-  q(
     "ph-pool-12-014",
     KAP[3],
     "Die elektrische Spannung U hat die Einheit:",
@@ -224,16 +198,6 @@ export const physikPool12: Question[] = [
     ["Gamma-Strahlung", "Kernphysik"]
   ),
   q(
-    "ph-pool-12-016",
-    KAP[0],
-    "Die kinetische Energie eines Körpers der Masse m und Geschwindigkeit v ist:",
-    ["E = m · v", "E = ½ m · v²", "E = m · v²", "E = m · g · h", "E = F · s"],
-    1,
-    "E_kin = ½ m v². E_pot = m g h (potenzielle Energie).",
-    "leicht",
-    ["kinetische Energie", "Mechanik"]
-  ),
-  q(
     "ph-pool-12-017",
     KAP[1],
     "Reflexion bedeutet:",
@@ -248,22 +212,6 @@ export const physikPool12: Question[] = [
     "Reflexion: Einfallswinkel = Reflexionswinkel (z. B. Spiegel).",
     "leicht",
     ["Reflexion", "Optik"]
-  ),
-  q(
-    "ph-pool-12-018",
-    KAP[2],
-    "Die spezifische Wärmekapazität c gibt an:",
-    [
-      "wie viel Wärme ein Körper enthält",
-      "Wärmeenergie pro Masse und Temperaturdifferenz (z. B. J/(kg·K))",
-      "die maximale Temperatur",
-      "die Wärmeleitfähigkeit",
-      "nur für Gase",
-    ],
-    1,
-    "Q = m · c · ΔT; c = spezifische Wärmekapazität in J/(kg·K).",
-    "mittel",
-    ["spezifische Wärmekapazität", "Wärmelehre"]
   ),
   q(
     "ph-pool-12-019",
@@ -412,22 +360,6 @@ export const physikPool12: Question[] = [
     "Wärmeleitung in Festkörpern: Übertragung durch Gitterschwingungen (Phononen) bzw. freie Elektronen in Metallen.",
     "mittel",
     ["Wärmeleitung", "Festkörper"]
-  ),
-  q(
-    "ph-pool-12-029",
-    KAP[3],
-    "Ein Kondensator speichert:",
-    [
-      "nur Strom",
-      "elektrische Ladung bzw. Energie im elektrischen Feld",
-      "nur Spannung",
-      "nur Widerstand",
-      "Wärme",
-    ],
-    1,
-    "Kondensator: speichert Ladung Q = C·U; Energie E = ½·C·U².",
-    "mittel",
-    ["Kondensator", "E-Lehre"]
   ),
   q(
     "ph-pool-12-030",
@@ -658,22 +590,6 @@ export const physikPool12: Question[] = [
     ["Transformator", "Induktion", "E-Lehre"]
   ),
   q(
-    "ph-pool-12-045",
-    KAP[4],
-    "Compton-Effekt zeigt:",
-    [
-      "nur Wellennatur des Lichts",
-      "Photonen können mit Elektronen elastisch stoßen (Wellenlängenänderung)",
-      "nur Teilchennatur der Elektronen",
-      "dass Licht keine Energie hat",
-      "nur bei sichtbarem Licht",
-    ],
-    1,
-    "Compton-Streuung: Photon stößt mit Elektron; Wellenlänge des Photons ändert sich → Teilchencharakter des Photons.",
-    "schwer",
-    ["Compton-Effekt", "Photonen", "Atomphysik"]
-  ),
-  q(
     "ph-pool-12-046",
     KAP[0],
     "Die Beschleunigung a hat die Einheit:",
@@ -682,22 +598,6 @@ export const physikPool12: Question[] = [
     "Beschleunigung a = Δv/Δt; [a] = m/s².",
     "leicht",
     ["Beschleunigung", "SI"]
-  ),
-  q(
-    "ph-pool-12-047",
-    KAP[1],
-    "Resonanz tritt auf, wenn:",
-    [
-      "die Frequenz der Anregung der Eigenfrequenz des Systems entspricht",
-      "immer bei Wellen",
-      "nur in Schwingkreisen",
-      "die Amplitude null ist",
-      "keine Dämpfung vorliegt",
-    ],
-    0,
-    "Resonanz: maximale Schwingungsamplitude, wenn Erregerfrequenz ≈ Eigenfrequenz des Systems.",
-    "mittel",
-    ["Resonanz", "Schwingung"]
   ),
   q(
     "ph-pool-12-048",
@@ -790,16 +690,6 @@ export const physikPool12: Question[] = [
     ["Entropie", "Thermodynamik"]
   ),
   q(
-    "ph-pool-12-054",
-    KAP[3],
-    "Die Induktivität L einer Spule hat die Einheit:",
-    ["Farad", "Ohm", "Henry (H)", "Tesla", "Weber"],
-    2,
-    "Induktivität L in Henry (H). U = L · dI/dt (Selbstinduktion).",
-    "mittel",
-    ["Induktivität", "Henry", "Spule"]
-  ),
-  q(
     "ph-pool-12-055",
     KAP[4],
     "Die Kernladungszahl Z eines Atoms gibt an:",
@@ -872,21 +762,5 @@ export const physikPool12: Question[] = [
     "Elektromagnet: Spule mit Strom erzeugt Magnetfeld; Eisenkern verstärkt es.",
     "leicht",
     ["Elektromagnet", "Magnetfeld", "E-Lehre"]
-  ),
-  q(
-    "ph-pool-12-060",
-    KAP[4],
-    "Die Massenzahl A eines Kerns ist:",
-    [
-      "nur die Protonenzahl",
-      "Protonenzahl + Neutronenzahl (Nukleonenzahl)",
-      "die Ordnungszahl",
-      "die Elektronenzahl",
-      "immer 12",
-    ],
-    1,
-    "Massenzahl A = Z + N (Protonen + Neutronen). Nuklid: ᴬ_Z X.",
-    "leicht",
-    ["Massenzahl", "Kernphysik"]
   ),
 ];

@@ -62,22 +62,6 @@ export const chemiePool17: Question[] = [
     ["Schmelzpunkt", "Vergleich"]
   ),
   q(
-    "ch-pool-17-004",
-    KAP[3],
-    "Ein Oxidationsmittel:",
-    [
-      "wird oxidiert",
-      "wird reduziert",
-      "bleibt unverändert",
-      "wird neutralisiert",
-      "wird zersetzt",
-    ],
-    1,
-    "Oxidationsmittel nimmt Elektronen auf und wird dabei reduziert.",
-    "mittel",
-    ["Oxidationsmittel", "Redox"]
-  ),
-  q(
     "ch-pool-17-005",
     KAP[4],
     "Was ist der pH-Wert einer Lösung mit [H₃O⁺] = 10⁻⁵ mol/L?",
@@ -228,16 +212,6 @@ export const chemiePool17: Question[] = [
     ["Le Chatelier", "endotherm"]
   ),
   q(
-    "ch-pool-17-017",
-    KAP[4],
-    "Welche Säure ist eine schwache Säure?",
-    ["HCl", "HBr", "Flusssäure (HF)", "HNO₃", "HClO₄"],
-    2,
-    "HF ist eine schwache Säure (nur teilweise dissoziiert). HCl, HBr, HNO₃, HClO₄ sind starke Säuren.",
-    "mittel",
-    ["schwache Säure", "HF"]
-  ),
-  q(
     "ch-pool-17-018",
     KAP[5],
     "Welche Verbindung ergibt mit Kaliumpermanganat (alkalisch) einen Nachweis für Doppelbindung?",
@@ -266,38 +240,6 @@ export const chemiePool17: Question[] = [
     "NaCl und viele Salze lösen sich mit steigender Temperatur besser (positive Lösungsenthalpie).",
     "leicht",
     ["Löslichkeit", "NaCl"]
-  ),
-  q(
-    "ch-pool-17-021",
-    KAP[2],
-    "Welche Aussage zu Wasserstoffbrücken trifft zu?",
-    [
-      "Sie sind kovalente Bindungen",
-      "Sie sind zwischenmolekulare Kräfte",
-      "Sie kommen nur in Ionen vor",
-      "Sie sind stärker als C−C-Bindungen",
-      "Sie treten nur zwischen C und H auf",
-    ],
-    1,
-    "Wasserstoffbrücken sind zwischenmolekulare Kräfte (nicht kovalent gebunden), typisch für O−H···O, N−H···N.",
-    "mittel",
-    ["Wasserstoffbrücken"]
-  ),
-  q(
-    "ch-pool-17-022",
-    KAP[3],
-    "Die Stöchiometrie einer Reaktion beschreibt:",
-    [
-      "die Reaktionsgeschwindigkeit",
-      "die molaren Verhältnisse der Edukte und Produkte",
-      "nur die Aktivierungsenergie",
-      "nur die Gleichgewichtslage",
-      "nur die Katalyse",
-    ],
-    1,
-    "Stöchiometrie: quantitative Beziehung zwischen den Stoffmengen (Koeffizienten in der Reaktionsgleichung).",
-    "leicht",
-    ["Stöchiometrie"]
   ),
   q(
     "ch-pool-17-023",
@@ -452,16 +394,6 @@ export const chemiePool17: Question[] = [
     "HCO₃⁻ + H⁺ → H₂CO₃ (Base); HCO₃⁻ → CO₃²⁻ + H⁺ (Säure). Ampholyt.",
     "mittel",
     ["Hydrogencarbonat", "Ampholyt"]
-  ),
-  q(
-    "ch-pool-17-036",
-    KAP[5],
-    "Welche Verbindung ist ein Ether?",
-    ["CH₃OH", "CH₃CH₂OCH₂CH₃", "CH₃COOH", "CH₃CHO", "CH₃NH₂"],
-    1,
-    "CH₃CH₂−O−CH₂CH₃ = Diethylether. Zwei Alkylreste an Sauerstoff.",
-    "mittel",
-    ["Ether"]
   ),
   q(
     "ch-pool-17-037",

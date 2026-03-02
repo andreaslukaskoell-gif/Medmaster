@@ -108,16 +108,6 @@ export const biologiePool12: Question[] = [
     ["Stoffwechsel", "Glykolyse"]
   ),
   q(
-    "bio-pool-12-007",
-    "bio-kap2",
-    "Wo wird das Hormon Cortisol gebildet?",
-    ["Nebennierenmark", "Nebennierenrinde", "Hypophyse", "Schilddrüse", "Bauchspeicheldrüse"],
-    1,
-    "Cortisol (Glukokortikoid) wird in der Zona fasciculata der Nebennierenrinde gebildet.",
-    "leicht",
-    ["Hormone", "Nebenniere"]
-  ),
-  q(
     "bio-pool-12-008",
     "bio-kap4",
     "Was ist ein Intron?",
@@ -242,16 +232,6 @@ export const biologiePool12: Question[] = [
     ["Ökologie", "Biotop"]
   ),
   q(
-    "bio-pool-12-018",
-    "bio-kap2",
-    "Welche Struktur verbindet die beiden Großhirnhemisphären?",
-    ["Pons", "Corpus callosum", "Thalamus", "Kleinhirn", "Medulla oblongata"],
-    1,
-    "Der Balken (Corpus callosum) verbindet linke und rechte Großhirnhemisphäre und ermöglicht Informationsaustausch.",
-    "leicht",
-    ["ZNS", "Gehirn"]
-  ),
-  q(
     "bio-pool-12-019",
     "bio-kap4",
     "Was ist eine Punktmutation?",
@@ -266,32 +246,6 @@ export const biologiePool12: Question[] = [
     "Bei einer Punktmutation wird eine Base durch eine andere ersetzt (z. B. Substitution).",
     "leicht",
     ["Genetik", "Mutation"]
-  ),
-  q(
-    "bio-pool-12-020",
-    "bio-kap2",
-    "In welchem Abschnitt des Dickdarms wird vor allem Wasser resorbiert?",
-    ["Colon ascendens bis Colon descendens", "Zökum", "Rektum", "Appendix", "Colon sigmoideum nur"],
-    0,
-    "Im Colon (aufsteigend, quer, absteigend) wird Wasser und Elektrolyte resorbiert; der Stuhl wird eingedickt.",
-    "mittel",
-    ["Verdauung", "Dickdarm"]
-  ),
-  q(
-    "bio-pool-12-021",
-    "bio-kap1",
-    "Welche Aussage über Ribosomen trifft zu?",
-    [
-      "Sie kommen nur im Zellkern vor",
-      "Sie bestehen nur aus Protein",
-      "Sie sind aus rRNA und Proteinen aufgebaut",
-      "Sie synthetisieren DNA",
-      "Sie kommen nur in Mitochondrien vor",
-    ],
-    2,
-    "Ribosomen bestehen aus rRNA und Proteinen und katalysieren die Proteinbiosynthese.",
-    "leicht",
-    ["Zelle", "Ribosomen"]
   ),
   q(
     "bio-pool-12-022",
@@ -334,22 +288,6 @@ export const biologiePool12: Question[] = [
     "In der S-Phase (Synthesephase) des Zellzyklus wird die DNA verdoppelt.",
     "leicht",
     ["Zellzyklus", "DNA-Replikation"]
-  ),
-  q(
-    "bio-pool-12-025",
-    "bio-kap3",
-    "Was ist die Blastozyste?",
-    [
-      "Ein frühes Entwicklungsstadium mit innerer Zellmasse und Trophoblast",
-      "Die Eizelle vor der Befruchtung",
-      "Die Plazenta",
-      "Der Embryo in der 8. Woche",
-      "Die Fruchtblase",
-    ],
-    0,
-    "Die Blastozyste hat eine innere Zellmasse (→ Embryo) und den Trophoblasten (→ Plazentaanteil).",
-    "mittel",
-    ["Embryologie", "Blastozyste"]
   ),
   q(
     "bio-pool-12-026",
@@ -510,22 +448,6 @@ export const biologiePool12: Question[] = [
     "Aktive Impfung: Antigen wird verabreicht → Körper bildet Antikörper und Gedächtniszellen.",
     "mittel",
     ["Immunologie", "Impfung"]
-  ),
-  q(
-    "bio-pool-12-039",
-    "bio-kap4",
-    "Was ist ein Allel?",
-    [
-      "Ein Chromosom",
-      "Eine Variante eines Gens an einem bestimmten Genort",
-      "Ein Genom",
-      "Eine Mutation",
-      "Ein Phänotyp",
-    ],
-    1,
-    "Allele sind verschiedene Ausprägungen eines Gens (z. B. A und a bei Blütenfarbe).",
-    "leicht",
-    ["Genetik", "Allel"]
   ),
   q(
     "bio-pool-12-040",
@@ -698,22 +620,6 @@ export const biologiePool12: Question[] = [
     "Produzenten (v. a. Pflanzen, Algen) betreiben Fotosynthese und bauen Biomasse aus CO2 und Licht auf.",
     "leicht",
     ["Ökologie", "Produzent"]
-  ),
-  q(
-    "bio-pool-12-053",
-    "bio-kap4",
-    "Was passiert beim Crossing-over?",
-    [
-      "Nur Mitose",
-      "Austausch von Chromosomenabschnitten zwischen homologen Chromosomen in der Meiose",
-      "Verdoppelung der DNA",
-      "Trennung der Schwesterchromatiden",
-      "Bildung der Kernmembran",
-    ],
-    1,
-    "Beim Crossing-over in der Prophase I der Meiose werden Abschnitte zwischen homologen Chromosomen ausgetauscht.",
-    "mittel",
-    ["Meiose", "Crossing-over"]
   ),
   q(
     "bio-pool-12-054",

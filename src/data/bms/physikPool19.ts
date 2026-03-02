@@ -356,16 +356,6 @@ export const physikPool19: Question[] = [
     ["Knoten", "stehende Welle"]
   ),
   q(
-    "ph-pool-19-028",
-    KAP[2],
-    "Die Wärmekapazität C eines Körpers (Q = C·ΔT) hat die Einheit:",
-    ["J·K", "J/K", "K/J", "J", "W"],
-    1,
-    "C = Q/ΔT → [C] = J/K.",
-    "leicht",
-    ["Wärmekapazität", "Einheit"]
-  ),
-  q(
     "ph-pool-19-029",
     KAP[3],
     "Ein Voltmeter hat idealerweise:",
@@ -500,16 +490,6 @@ export const physikPool19: Question[] = [
     "R ≈ 8,314 J/(mol·K).",
     "leicht",
     ["Gaskonstante", "R"]
-  ),
-  q(
-    "ph-pool-19-039",
-    KAP[3],
-    "Die elektrische Leistung P bei Spannung U und Stromstärke I ist:",
-    ["P = U/I", "P = U·I", "P = I/U", "P = U + I", "P = U²·I"],
-    1,
-    "P = U·I.",
-    "leicht",
-    ["Leistung", "Strom"]
   ),
   q(
     "ph-pool-19-040",
@@ -744,22 +724,6 @@ export const physikPool19: Question[] = [
     "f = 1/T.",
     "leicht",
     ["Frequenz", "Periodendauer"]
-  ),
-  q(
-    "ph-pool-19-058",
-    KAP[2],
-    "Bei isothermer Kompression eines idealen Gases:",
-    [
-      "bleibt die Temperatur konstant, der Druck steigt",
-      "steigt die Temperatur",
-      "sinkt der Druck",
-      "wird keine Arbeit verrichtet",
-      "bleibt das Volumen konstant",
-    ],
-    0,
-    "Isotherm: T = const; Kompression → V kleiner → p größer (p·V = const).",
-    "mittel",
-    ["isotherm", "Kompression"]
   ),
   q(
     "ph-pool-19-059",

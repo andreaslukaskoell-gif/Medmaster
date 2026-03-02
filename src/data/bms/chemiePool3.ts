@@ -433,22 +433,6 @@ export const chemiePool3: Question[] = [
     ["Ionenbindung", "Metall", "Nichtmetall"]
   ),
   q(
-    "ch-pool-133",
-    "chem-kap6",
-    "Welche Reaktion ist typisch für Alkane?",
-    [
-      "Addition von Brom",
-      "radikalische Substitution mit Chlor",
-      "Reaktion mit NaOH",
-      "Addition von Wasser",
-      "Bildung von Estern",
-    ],
-    1,
-    "Alkane: radikalische Substitution, z. B. CH₄ + Cl₂ → CH₃Cl + HCl (unter UV). Alkene: Addition von Brom.",
-    "mittel",
-    ["Alkane", "radikalische Substitution"]
-  ),
-  q(
     "ch-pool-134",
     "chem-kap1",
     "Die Anzahl der Schalen (Hauptenergieniveaus) bei Chlor (Z=17) beträgt:",

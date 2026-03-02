@@ -32,16 +32,6 @@ const KAP = ["chem-kap1", "chem-kap2", "chem-kap3", "chem-kap4", "chem-kap5", "c
 
 export const chemiePool20: Question[] = [
   q(
-    "ch-pool-20-001",
-    KAP[0],
-    "Welches Teilchen hat keine elektrische Ladung?",
-    ["Proton", "Elektron", "Neutron", "Kation", "Anion"],
-    2,
-    "Neutron: elektrisch neutral. Proton positiv, Elektron negativ.",
-    "leicht",
-    ["Neutron"]
-  ),
-  q(
     "ch-pool-20-002",
     KAP[1],
     "Die Stoffmenge n ist proportional zu:",
@@ -122,16 +112,6 @@ export const chemiePool20: Question[] = [
     "H = U + pV (Enthalpie = innere Energie + Druck·Volumen). Bei konstantem p: ΔH = Q_p.",
     "mittel",
     ["Enthalpie"]
-  ),
-  q(
-    "ch-pool-20-009",
-    KAP[2],
-    "Welche Bindung ist in einem N₂-Molekül vorhanden?",
-    ["Einfachbindung", "Doppelbindung", "Dreifachbindung", "Ionenbindung", "Metallbindung"],
-    2,
-    "Stickstoff: N≡N (Dreifachbindung), sehr stabil.",
-    "leicht",
-    ["Stickstoff", "Dreifachbindung"]
   ),
   q(
     "ch-pool-20-010",
@@ -654,22 +634,6 @@ export const chemiePool20: Question[] = [
     ["Ionisierungsenergie"]
   ),
   q(
-    "ch-pool-20-050",
-    KAP[1],
-    "Die kritische Temperatur ist die Temperatur, oberhalb der:",
-    [
-      "eine Flüssigkeit nicht mehr existiert (bei beliebigem Druck)",
-      "ein Gas nicht mehr verflüssigt werden kann",
-      "kein Stoff existiert",
-      "immer 0 °C ist",
-      "der Druck null ist",
-    ],
-    1,
-    "Oberhalb der kritischen Temperatur gibt es keine flüssige Phase mehr; das Fluid ist überkritisch.",
-    "mittel",
-    ["kritische Temperatur"]
-  ),
-  q(
     "ch-pool-20-051",
     KAP[2],
     "Welche Bindung ist in einem LiF-Kristall vorhanden?",
@@ -766,16 +730,6 @@ export const chemiePool20: Question[] = [
     "Massenwirkungsgesetz: Bei Gleichgewicht ist [C]^c[D]^d/([A]^a[B]^b) = K (konstant bei fester T).",
     "mittel",
     ["Massenwirkungsgesetz"]
-  ),
-  q(
-    "ch-pool-20-059",
-    KAP[4],
-    "Welches Element ist ein Edelgas?",
-    ["Chlor", "Stickstoff", "Argon", "Sauerstoff", "Kohlenstoff"],
-    2,
-    "Edelgase: He, Ne, Ar, Kr, Xe, Rn (Gruppe 18).",
-    "leicht",
-    ["Edelgas", "Argon"]
   ),
   q(
     "ch-pool-20-060",

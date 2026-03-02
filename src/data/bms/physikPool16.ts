@@ -108,16 +108,6 @@ export const physikPool16: Question[] = [
     ["Dezibel", "Schallpegel"]
   ),
   q(
-    "ph-pool-16-008",
-    KAP[2],
-    "Die Enthalpie H ist definiert als:",
-    ["H = U", "H = U + p·V", "H = Q − W", "H = S·T", "H = n·R·T"],
-    1,
-    "Enthalpie H = U + p·V (Zustandsgröße).",
-    "mittel",
-    ["Enthalpie", "Thermodynamik"]
-  ),
-  q(
     "ph-pool-16-009",
     KAP[3],
     "Die elektrische Feldstärke E im radialsymmetrischen Feld einer Punktladung Q ist proportional zu:",

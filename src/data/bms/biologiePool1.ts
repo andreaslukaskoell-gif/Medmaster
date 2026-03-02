@@ -416,42 +416,6 @@ export const biologiePool1: Question[] = [
     ["bohr-effekt", "hämoglobin", "blut"]
   ),
   q(
-    "bio-pool-030",
-    "bio-kap2",
-    "Wie viele reife Spermien entstehen aus einem Spermatogonium über Meiose I und II?",
-    ["Eine", "Zwei", "Vier", "Acht", "Sechzehn"],
-    2,
-    "Spermatogonium → Meiose I → 2 sekundäre Spermatozyten → Meiose II → 4 Spermatiden → 4 reife Spermien. Bei der Oogenese entsteht 1 Eizelle + 3 Polkörperchen.",
-    "leicht",
-    ["spermatogenese", "meiose", "gameten"]
-  ),
-  q(
-    "bio-pool-031",
-    "bio-kap3",
-    "In welcher Phase der Meiose arretiert die menschliche Oozyte bis zur Ovulation?",
-    ["Metaphase II", "Anaphase I", "Prophase I", "Telophase II", "Sie arretiert nicht"],
-    2,
-    "Die primäre Oozyte arretiert in Prophase I (bis Pubertät/Ovulation). Nach Meiose I arretiert die sekundäre Oozyte in Metaphase II bis zur Befruchtung.",
-    "mittel",
-    ["oogenese", "arrest", "meiose"]
-  ),
-  q(
-    "bio-pool-032",
-    "bio-kap3",
-    "Wo findet die Befruchtung beim Menschen normalerweise statt?",
-    [
-      "Im Uterus",
-      "Im Infundibulum des Eileiters",
-      "In der Ampulle des Eileiters",
-      "Im Isthmus des Eileiters",
-      "In der Vagina",
-    ],
-    2,
-    "Die Befruchtung erfolgt in der Ampulle des Eileiters (Tuba uterina), dem weitesten Abschnitt. Eizelle und Spermien treffen dort aufeinander.",
-    "leicht",
-    ["befruchtung", "ampulle", "eileiter"]
-  ),
-  q(
     "bio-pool-033",
     "bio-kap3",
     "Welche Reaktion der Eizelle verhindert die Polyspermie?",
@@ -478,38 +442,6 @@ export const biologiePool1: Question[] = [
     ["zygote", "befruchtung", "syngamie"]
   ),
   q(
-    "bio-pool-035",
-    "bio-kap4",
-    "Was ist der Unterschied zwischen einem Gen und einem Allel?",
-    [
-      "Ein Gen ist ein Chromosom, ein Allel ist ein Gen.",
-      "Ein Gen ist ein DNA-Abschnitt für ein Merkmal; ein Allel ist eine Variante dieses Gens (z. B. A oder a).",
-      "Gen und Allel sind dasselbe.",
-      "Ein Allel ist immer dominant, ein Gen rezessiv.",
-      "Gene liegen auf der RNA, Allele auf der DNA.",
-    ],
-    1,
-    "Gen = DNA-Abschnitt an einem Locus, der für ein Merkmal codiert. Allel = eine konkrete Variante (z. B. A oder a). Ein diploider Organismus hat pro Gen zwei Allele.",
-    "leicht",
-    ["gen", "allel", "genetik"]
-  ),
-  q(
-    "bio-pool-036",
-    "bio-kap4",
-    "Was sind homologe Chromosomen?",
-    [
-      "Zwei identische Kopien eines Chromosoms nach der Replikation.",
-      "Ein Paar Chromosomen mit gleichen Genorten (Loci), eines von der Mutter, eines vom Vater; sie tragen oft unterschiedliche Allele.",
-      "Die Geschlechtschromosomen X und Y.",
-      "Chromosomen ohne Gene.",
-      "Nur die Autosomen.",
-    ],
-    1,
-    "Homologe Chromosomen = ein Paar (mütterlich/väterlich) mit gleichen Loci, aber oft verschiedenen Allelen. Identisch sind die Schwesterchromatiden nach Replikation.",
-    "leicht",
-    ["homologe chromosomen", "meiose", "chromosom"]
-  ),
-  q(
     "bio-pool-037",
     "bio-kap4",
     "Wo liegt die Erbinformation bei Eukaryoten hauptsächlich?",
@@ -524,22 +456,6 @@ export const biologiePool1: Question[] = [
     "Die Erbinformation liegt in der DNA im Zellkern, an Histonen verpackt und als Chromosomen organisiert. Mitochondrien haben eigene DNA (mtDNA), aber der Großteil ist im Zellkern.",
     "leicht",
     ["dna", "zellkern", "chromosom"]
-  ),
-  q(
-    "bio-pool-038",
-    "bio-kap5",
-    "Was ist der Unterschied zwischen Biotop und Biozönose?",
-    [
-      "Biotop = alle Lebewesen, Biozönose = unbelebte Umwelt",
-      "Biotop = unbelebter Lebensraum (Boden, Wasser, Klima); Biozönose = Lebensgemeinschaft aller Arten in einem Gebiet",
-      "Biotop und Biozönose sind dasselbe",
-      "Biotop = eine Art, Biozönose = viele Arten",
-      "Biotop = Ökosystem, Biozönose = Population",
-    ],
-    1,
-    "Biotop = unbelebter Lebensraum (Boden, Wasser, Licht, Klima). Biozönose = Lebensgemeinschaft aller Lebewesen (alle Arten). Ökosystem = Biotop + Biozönose.",
-    "leicht",
-    ["biotop", "biozönose", "ökosystem"]
   ),
   q(
     "bio-pool-039",
@@ -643,30 +559,6 @@ export const biologiePool1: Question[] = [
         ["hämatokrit", "blut", "erythrozyt"],
       ],
       [
-        "bio-kap2",
-        "Wo findet die Spermatogenese beim Menschen statt?",
-        ["Nebenhoden", "Tubuli seminiferi des Hodens", "Prostata", "Samenleiter", "Ovar"],
-        1,
-        "Die Spermatogenese läuft in den Tubuli seminiferi (Samenkanälchen) des Hodens ab, kontinuierlich ab Pubertät.",
-        "leicht",
-        ["spermatogenese", "hoden", "tubuli"],
-      ],
-      [
-        "bio-kap3",
-        "Wann wird die Meiose II der Oozyte abgeschlossen?",
-        [
-          "Bei der Ovulation",
-          "Pränatal",
-          "Bei der Befruchtung (Fusion mit dem Spermium)",
-          "Nach der Einnistung",
-          "In der Menopause",
-        ],
-        2,
-        "Die sekundäre Oozyte verbleibt in Metaphase II bis zur Befruchtung; erst dann wird Meiose II abgeschlossen (reife Eizelle + 2. Polkörperchen).",
-        "mittel",
-        ["oogenese", "meiose ii", "befruchtung"],
-      ],
-      [
         "bio-kap3",
         "Was ist die Kapazitation?",
         [
@@ -680,15 +572,6 @@ export const biologiePool1: Question[] = [
         "Kapazitation (~7 h im weiblichen Genitaltrakt) macht das Spermium befähigt zur Akrosomreaktion und Befruchtung.",
         "mittel",
         ["kapazitation", "spermium", "befruchtung"],
-      ],
-      [
-        "bio-kap4",
-        "Was verbindet die beiden Schwesterchromatiden eines Chromosoms?",
-        ["Telomer", "Zentromer", "p-Arm", "q-Arm", "Histon"],
-        1,
-        "Das Zentromer verbindet die beiden Schwesterchromatiden und ist Ansatzpunkt für die Spindelfasern (Kinetochor).",
-        "leicht",
-        ["chromosom", "zentromer", "schwesterchromatiden"],
       ],
       [
         "bio-kap4",
@@ -817,32 +700,4 @@ export const biologiePool1: Question[] = [
       [...tags]
     )
   ),
-  // 61–100: 40 weitere Pool-Fragen (Kapitelstoff)
-  ...Array.from({ length: 40 }, (_, i) => {
-    const n = 61 + i;
-    const chapters: ("bio-kap1" | "bio-kap2" | "bio-kap3" | "bio-kap4" | "bio-kap5")[] = [
-      "bio-kap1",
-      "bio-kap2",
-      "bio-kap3",
-      "bio-kap4",
-      "bio-kap5",
-    ];
-    const ch = chapters[n % 5];
-    return q(
-      `bio-pool-${String(n).padStart(3, "0")}`,
-      ch,
-      `Biologie Pool-Frage ${n}: Welche Aussage ist zutreffend?`,
-      [
-        "Aussage A (richtig)",
-        "Aussage B (falsch)",
-        "Aussage C (falsch)",
-        "Aussage D (falsch)",
-        "Aussage E (falsch)",
-      ],
-      0,
-      `Richtige Antwort: A. Frage basiert auf Kapitel ${ch}.`,
-      i % 3 === 0 ? "schwer" : i % 3 === 1 ? "mittel" : "leicht",
-      ["pool", ch]
-    );
-  }),
 ];

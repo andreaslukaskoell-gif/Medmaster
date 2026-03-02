@@ -288,22 +288,6 @@ export const biologiePool9: Question[] = [
     ["Ökologie", "Kap5"]
   ),
   q(
-    "bio-pool-9-020",
-    "bio-kap2",
-    STEM_FALSCH,
-    [
-      "Tight Junctions versiegeln den Interzellularspalt.",
-      "Gap Junctions ermöglichen Ionenfluss.",
-      "Desmosomen verankern die Zelle an der Basalmembran.",
-      "Hemidesmosomen verankern an der Basalmembran.",
-      "Die Basalmembran liegt unter dem Epithel.",
-    ],
-    2,
-    "Desmosomen verbinden Zelle mit Zelle (mechanisch). Hemidesmosomen verankern Zelle an der Basalmembran (C falsch).",
-    "mittel",
-    ["Zellkontakte", "Kap2"]
-  ),
-  q(
     "bio-pool-9-021",
     "bio-kap1",
     "Welches Organell ist für den Abbau von H₂O₂ zuständig?",
