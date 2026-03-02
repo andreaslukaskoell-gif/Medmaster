@@ -21,19 +21,13 @@ import { mathematikPool15 } from "./mathematikPool15";
 import { mathematikPoolOffiziellStyle } from "./mathematikPoolOffiziellStyle";
 import { mathematikWasIstFalsch } from "./mathematikWasIstFalsch";
 
-const PLACEHOLDER_STEM = "Welche der folgenden Aussagen zur Mathematik trifft zu?";
-
-function isPlaceholder(q: Question): boolean {
-  return q.text.trim() === PLACEHOLDER_STEM;
-}
-
 export const mathematikPoolQuestions: Question[] = [
   ...mathematikPool1,
   ...mathematikPool2,
   ...mathematikPool3,
   ...mathematikPool4,
   ...mathematikPool5,
-  ...mathematikPool6.filter((q) => !isPlaceholder(q)),
+  ...mathematikPool6,
   ...mathematikPool7,
   ...mathematikPool8,
   ...mathematikPool9,
