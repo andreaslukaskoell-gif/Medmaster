@@ -2121,9 +2121,9 @@ const VALID_MODES: SyllogismMode[] = [
     name: "Barbara",
   },
   {
-    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
-    conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
     name: "Celarent",
   },
   {
@@ -2133,21 +2133,21 @@ const VALID_MODES: SyllogismMode[] = [
     name: "Darii",
   },
   {
-    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
     name: "Ferio",
   },
   {
-    p1: (_s, m, p) => `Kein ${p.s} ist ein ${m.s}`,
+    p1: (_s, m, p) => `Alle ${p.p} sind keine ${m.p}`,
     p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
-    conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
     name: "Cesare",
   },
   {
     p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`,
-    p2: (s, m) => `Kein ${s.s} ist ein ${m.s}`,
-    conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`,
+    p2: (s, m) => `Alle ${s.p} sind keine ${m.p}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
     name: "Camestres",
   },
   {
@@ -2168,11 +2168,11 @@ function generateWrongConclusions(s: Begriff, p: Begriff, correctConclusion: str
   const allPossible = [
     `Alle ${s.p} sind ${p.p}`,
     `Einige ${s.p} sind ${p.p}`,
-    `Kein ${s.s} ist ein ${p.s}`,
+    `Alle ${s.p} sind keine ${p.p}`,
     `Einige ${s.p} sind keine ${p.p}`,
     `Alle ${p.p} sind ${s.p}`,
     `Einige ${p.p} sind ${s.p}`,
-    `Kein ${p.s} ist ein ${s.s}`,
+    `Alle ${p.p} sind keine ${s.p}`,
     `Einige ${p.p} sind keine ${s.p}`,
   ];
   return shuffle(allPossible.filter((c) => c !== correctConclusion));
@@ -2432,9 +2432,9 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     name: "Barbara",
   },
   {
-    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
-    conclusion: (s, _m, p) => `Kein ${s.s} ist ein ${p.s}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
     name: "Celarent",
   },
   {
@@ -2444,7 +2444,7 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     name: "Darii",
   },
   {
-    p1: (_s, m, p) => `Kein ${m.s} ist ein ${p.s}`,
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
     name: "Ferio",
@@ -2473,11 +2473,11 @@ function trainingWrongOptions(s: TrainingBegriff, p: TrainingBegriff, correct: s
   const candidates = [
     `Alle ${s.p} sind ${p.p}`,
     `Einige ${s.p} sind ${p.p}`,
-    `Kein ${s.s} ist ein ${p.s}`,
+    `Alle ${s.p} sind keine ${p.p}`,
     `Einige ${s.p} sind keine ${p.p}`,
     `Alle ${p.p} sind ${s.p}`,
     `Einige ${p.p} sind ${s.p}`,
-    `Kein ${p.s} ist ein ${s.s}`,
+    `Alle ${p.p} sind keine ${s.p}`,
     `Einige ${p.p} sind keine ${s.p}`,
   ];
   return shuffle(candidates.filter((c) => c !== correct));
