@@ -1885,9 +1885,6 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       content: `## Voraussetzungen: Trophoblast und Eihüllen
 
-
-{{DIAGRAM:menstrual-cycle}}
-
 ---
 
 ## Aufbau der Plazenta

@@ -26,9 +26,6 @@ export const bioKapGenetik: Kapitel = {
 
 ## Gen: funktionelle Einheit auf der DNA
 
-
-{{DIAGRAM:transcription-translation}}
-
 Ein **Gen** ist ein **Abschnitt der DNA**, der die Information für ein bestimmtes Merkmal oder ein Produkt (z. B. ein Protein oder eine RNA) trägt. Gene liegen an festen Orten auf den Chromosomen; dieser Ort heißt **Locus** (Plural: Loci). Beim Menschen gibt es etwa 20.000–25.000 protein codierende Gene, verteilt auf 46 Chromosomen. Ein Gen kann in verschiedenen **Varianten** vorkommen — diese Varianten nennt man **Allele**. Beispiel: Das Gen für die Blütenfarbe bei Erbsen hat ein Allel für „rot” und ein Allel für „weiß”. Ein diploider Organismus trägt pro Gen zwei Allele (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
 
 > **Merke:** Gen = DNA-Abschnitt für ein Merkmal/Produkt. Locus = Ort des Gens auf dem Chromosom. Allel = eine von mehreren Varianten eines Gens.
@@ -712,9 +709,6 @@ Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)
 
 ## Autosomal-dominant
 
-
-{{DIAGRAM:dna-helix}}
-
 **Ein** krankes Allel genügt für die Erkrankung (Aa oder AA krank). Typisches Stammbaum-Muster: **In jeder Generation** Betroffene (vertikale Weitergabe); Männer und Frauen gleich häufig; ein betroffenes Elternteil gibt mit 50 % Wahrscheinlichkeit das kranke Allel weiter. Beispiele: Chorea Huntington (neurodegenerative Bewegungsstörung), Marfan-Syndrom (Bindegewebserkrankung), Achondroplasie (häufigste Form des Kleinwuchses).
 
 > **Merke:** Autosomal-dominant: jede Generation kann betroffen sein; 50 % Risiko für Kinder eines betroffenen Elternteils (wenn dieser heterozygot Aa ist).
@@ -731,9 +725,6 @@ Die Erkrankung tritt nur auf, wenn **beide** Allele krank sind (**aa**). Heteroz
 ---
 
 ## X-chromosomal rezessiv
-
-
-{{DIAGRAM:blood-groups}}
 
 Das kranke Allel liegt auf dem **X-Chromosom** und ist **rezessiv**. **Männer** sind häufiger betroffen (hemizygot: ein X^a reicht). **Frauen** können Konduktorinnen sein (X^A X^a, phänotypisch meist gesund). **Keine Vater-Sohn-Übertragung** (Vater gibt X nur an Töchter, Y an Söhne). Typisches Muster: Betroffene Männer; Töchter betroffener Väter sind obligate Konduktorinnen; Diagonal-Muster (Großvater → Enkel über Konduktorin). Beispiele: Hämophilie A (Bluterkrankheit, Faktor-VIII-Mangel), Duchenne-Muskeldystrophie (fortschreitender Muskelschwund), Rot-Grün-Blindheit.
 
@@ -950,9 +941,6 @@ Da jeder Mensch diploid ist, traegt er genau **zwei** dieser drei Allele. Daraus
 
 ## Kreuzungsaufgaben -- systematische Loesung
 
-
-{{DIAGRAM:immune-response}}
-
 **Kreuzung 1: Vater I^A i (Blutgruppe A) x Mutter I^B i (Blutgruppe B)**
 
 |  | I^B | i |
@@ -982,9 +970,6 @@ Kinder: I^A I^A (A, 25 %), I^A i (A, 50 %), i i (0, 25 %) → 75 % Blutgruppe A,
 ---
 
 ## Rhesus-System
-
-
-{{DIAGRAM:pedigree-analysis}}
 
 Das Rhesus-System wird durch das **RHD-Gen** auf Chromosom 1 bestimmt. Das zentrale Antigen ist das **D-Antigen** (Rh-Faktor). Der Erbgang folgt einem **einfachen dominant-rezessiven Muster**:
 
@@ -1111,9 +1096,6 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phaenotyp** (h/h) koennen das
 
 ## Chromosomenmutation
 
-
-{{DIAGRAM:cell-cycle}}
-
 **Chromosomenmutationen** sind **strukturelle** Veränderungen von Chromosomenabschnitten (nicht der Gesamtzahl). **Deletion:** Verlust eines Stücks (z. B. Cri-du-chat: 5p-Deletion). **Duplikation:** Verdopplung eines Abschnitts. **Translokation:** Verlagerung eines Stücks auf ein anderes Chromosom (z. B. Robertsonsche Translokation (Fusion zweier akrozentrischer Chromosomen) bei Trisomie 21). **Inversion:** Drehung eines Abschnitts um 180°. **Balancierte** Translokation/Inversion: Kein Verlust von Material → Träger oft phänotypisch unauffällig, aber erhöhtes Risiko für unbalancierte Keimzellen (Nachkommen mit Über- oder Unterdosierung).
 
 > **Merke:** Chromosomenmutation = strukturell (Deletion, Duplikation, Translokation, Inversion). Cri-du-chat = 5p-Deletion.
@@ -1121,9 +1103,6 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phaenotyp** (h/h) koennen das
 ---
 
 ## Genommutation
-
-
-{{DIAGRAM:transcription-translation}}
 
 **Genommutationen** betreffen die **Anzahl** der Chromosomen. **Aneuploidie:** Abweichung um einzelne Chromosomen — **Trisomie** (3 Kopien, z. B. Trisomie 21) oder **Monosomie** (1 Kopie, z. B. 45,X = Turner). Ursache meist **Nicht-Disjunktion** in der Meiose (Chromosomen trennen sich nicht). **Polyploidie:** Vervielfachung des gesamten Chromosomensatzes (3n, 4n); beim Menschen in der Regel letal. Trisomie 21 (Down-Syndrom) ist die häufigste lebensfähige Autosom-Trisomie; das Risiko steigt mit dem mütterlichen Alter.
 
@@ -1440,9 +1419,6 @@ In der **Populationsgenetik** betrachtet man nicht einzelne Familien, sondern ga
 
 ## Die Hardy-Weinberg-Gleichung
 
-
-{{DIAGRAM:dna-helix}}
-
 Wenn bestimmte Voraussetzungen erfüllt sind (siehe unten), lassen sich die **Genotypfrequenzen** direkt aus den Allelfrequenzen berechnen:
 
 **p² + 2pq + q² = 1**
@@ -1665,9 +1641,6 @@ Die DNA ist um **Histonproteine** gewickelt (Nukleosomen (DNA-Histon-Verpackungs
 
 ## Genomisches Imprinting (Prader-Willi vs. Angelman)
 
-
-{{DIAGRAM:meiosis}}
-
 Beim **genomischen Imprinting** (dt. genomische Prägung) wird eines der beiden **elterlichen Allele** durch epigenetische Markierung **stillgelegt** — und zwar abhängig davon, ob es vom **Vater** oder von der **Mutter** stammt. Das Kind exprimiert also nur **ein** Allel (monoallelische Expression), obwohl es zwei hat.
 
 **Beispiel: Chromosom 15q11-13:**
@@ -1687,9 +1660,6 @@ Beim **genomischen Imprinting** (dt. genomische Prägung) wird eines der beiden 
 ---
 
 ## X-Inaktivierung (Barr-Körperchen und Schildpattkatze)
-
-
-{{DIAGRAM:cell-cycle}}
 
 Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht **doppelt so viel** X-chromosomale Genprodukte haben wie Männer, wird in jeder weiblichen Zelle eines der beiden X-Chromosomen **inaktiviert** — es wird zu einem dichten, methylierten **Barr-Körperchen** (fakultatives Heterochromatin), das im Zellkern als dunkler Punkt sichtbar ist.
 

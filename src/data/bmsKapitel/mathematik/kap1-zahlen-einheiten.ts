@@ -45,7 +45,6 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 ## Negative Exponenten und der Sonderfall 10⁰
 
-
 **Negative Exponenten** beschreiben Brüche, also Zahlen **kleiner als 1**. Es gilt: **10⁻ⁿ = 1 / 10ⁿ**. Der Exponent gibt an, um wie viele Stellen die 1 **nach rechts** verschoben wird (wie viele Nullen **nach dem Komma vor** der 1 stehen).
 
 | Schreibweise | Bedeutung | Dezimal |
@@ -77,12 +76,9 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 > **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
 
-
-
 ---
 
 ## Multiplikation von Zahlen in Zehnerpotenzen-Form
-
 
 Wenn Ausdrücke der Form **(a × 10ᵐ) × (b × 10ⁿ)** multipliziert werden:
 
@@ -96,7 +92,6 @@ Ergebnis: **(a × b) × 10^(m+n)**. Wenn der neue Vorfaktor (a×b) **≥ 10** od
 > **Merke:** Zuerst **Vorfaktoren** verrechnen, dann **Exponenten** addieren. Am Ende **normalisieren**, wenn der Vorfaktor nicht zwischen 1 und 10 liegt.
 
 ## Größenordnungen vergleichen und abschätzen
-
 
 - Konzentration A: 10⁻³ mol/L, B: 10⁻⁶ mol/L → Verhältnis A/B = 10⁻³ / 10⁻⁶ = 10³ → A ist **1.000-mal** konzentrierter als B.
 - **Exponenten-Subtraktion** ersetzt komplizierte Divisionen und ist in Pharmakologie, Toxikologie und Labor alltäglich.
@@ -113,8 +108,6 @@ Ergebnis: **(a × b) × 10^(m+n)**. Wenn der neue Vorfaktor (a×b) **≥ 10** od
 Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10⁻⁶ m), **100-mal** kleiner als eine menschliche Zelle (10⁻⁵ m) und **10 Millionen Mal** kleiner als ein Mensch (10⁰ m). Solche Verhältnisse siehst du sofort durch Exponenten-Subtraktion.
 
 > **Merke:** **Verhältnis** zweier Zehnerpotenzen = **Differenz der Exponenten** als neue Zehnerpotenz. 10⁻³ / 10⁻⁶ = 10³ = Faktor 1.000. Exponentendifferenz abschätzen — nicht lange ausrechnen!
-
-
 
 ---
 
@@ -363,7 +356,6 @@ Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²
 
 ## Medizinisch relevante Präfixe im Detail
 
-
 ### Milli (m) — 10⁻³
 
 **Präfixe prüfungssicher (Auszug):** **pico (p)** = **10⁻¹²**; **nano (n)** = **10⁻⁹**; **mikro (µ)** = **10⁻⁶**; **milli (m)** = **10⁻³**. Reihenfolge: … → n → µ → m → Basis. **Typische Falle:** µ (Mikro) = 10⁻⁶, **nicht** 10⁻³ (10⁻³ = Milli).
@@ -421,12 +413,9 @@ Wichtig: 1 µg = 10⁻⁶ g = 0,001 mg. Eine Verwechslung von mg und µg entspri
 
 > **Merke:** **Kilo (k) = 10³**, **Mega (M) = 10⁶** (Großbuchstabe!). Blutdruck in kPa; Radioaktivität in MBq; Körpergewicht in kg.
 
-
-
 ---
 
 ## Umrechnung zwischen Präfixen
-
 
 Die Umrechnung erfolgt durch Multiplikation oder Division mit der entsprechenden Zehnerpotenz (jede Stufe = Faktor 1.000).
 
@@ -438,8 +427,6 @@ Die Umrechnung erfolgt durch Multiplikation oder Division mit der entsprechenden
 Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenpräparate sind in µg beschriftet: 0,025 mg × 1.000 µg/mg = 25 µg. Das entspricht einer Tablette "Euthyrox 25 µg".
 
 > **Merke:** **Kleinere Einheit → größere Zahl; größere Einheit → kleinere Zahl.** Eselsbrücke: "Wer kleiner misst, zählt mehr." Systematisch: Ausgangs- und Zieleinheit als Zehnerpotenz schreiben, Verhältnis bilden.
-
-
 
 ---
 
@@ -717,7 +704,6 @@ In der **normalisierten Form** (eindeutige Standarddarstellung) gilt zusätzlich
 
 ## Umrechnung: Dezimalzahl → Wissenschaftliche Notation
 
-
 **Schritt-für-Schritt-Verfahren:**
 1. Komma so verschieben, dass die Zahl zwischen 1 und 10 liegt (das wird der Vorfaktor a).
 2. Den Exponenten n bestimmen: Wie viele Stellen wurde das Komma verschoben?
@@ -746,7 +732,6 @@ Komma 5 Stellen nach rechts: 7,2 × 10⁻⁵
 
 ## Addieren und Subtrahieren in wissenschaftlicher Notation
 
-
 Für Addition und Subtraktion:
 1. Den kleineren Exponenten auf den größeren angleichen (Vorfaktor entsprechend anpassen).
 2. Vorfaktoren addieren oder subtrahieren.
@@ -762,7 +747,6 @@ Für Addition und Subtraktion:
 ---
 
 ## Multiplizieren und Dividieren in wissenschaftlicher Notation
-
 
 **Multiplikation:**
 (a × 10ᵐ) × (b × 10ⁿ) = (a × b) × 10^(m+n)
@@ -1058,15 +1042,7 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         "Alveolenfläche",
         "Deziliter",
       ],
-      content: `**Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
-
-**Verfahren — Schrittfolge:** (1) **Dimension klären:** Länge → Faktor k¹; Fläche → k²; Volumen → k³. (2) **Längenfaktor** zwischen Einheiten (z. B. 1 m = 100 cm). (3) **Potenz anwenden:** 1 m² = (100)² cm² = 10.000 cm²; 1 L = 1 dm³ = 10³ cm³ = 1.000 mL. (4) **BSA Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3.600).
-
-**Typische Prüfungsfehler:** 1 m² = 100 cm² (falsch — muss 10.000 sein). 1 m³ = 10³ cm³ (falsch — 10⁶). 1 mL ≠ 1 cm³ (falsch — gleich!). g/dL → g/L: × 10 (1 L = 10 dL).
-
----
-
-## Längeneinheiten — Die vollständige Hierarchie
+      content: `## Längeneinheiten — Die vollständige Hierarchie
 
 **Um Längen sicher umzurechnen,** brauchst du die **metrische Hierarchie**. **Dafür** die Grundregel: Jede **Längeneinheit** unterscheidet sich von der nächsten um den **Faktor 10**.
 
@@ -1096,7 +1072,6 @@ Das Lichtmikroskop löst bis ~200 nm auf: Bakterien (~1 μm) sichtbar, Viren (~1
 
 ## Flächeneinheiten — Der häufigste Irrtum am MedAT
 
-
 ACHTUNG: Bei **Flächeneinheiten** wird der Faktor **QUADRIERT**!
 
 **1 m² = 10.000 cm² = 10⁴ cm²** (NICHT 100 cm²!)
@@ -1120,12 +1095,9 @@ Klinisch relevante Flächen:
 - Dünndarmoberfläche (mit Zotten und Mikrovilli): ~250–400 m²
 - Handflächenfläche: ~0,8 % KOF (Neuner-Regel in der Verbrennungsmedizin)
 
-
-
 ---
 
 ## Volumeneinheiten — Der Faktor wird kubisch
-
 
 Bei Volumen wird der Faktor **KUBIERT**:
 
@@ -1148,8 +1120,6 @@ Klinisch relevante Volumina:
 - Tagesharnmenge: ~1.500 mL; Perspiratio insensibilis: ~700 mL/Tag
 
 > **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor **kubieren**!
-
-
 
 ---
 
@@ -1360,15 +1330,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         "Sexagesimalsystem",
         "Traumamechanismus",
       ],
-      content: `**Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
-
-**Verfahren — Schrittfolge:** (1) **km/h → m/s:** ÷ 3,6; **m/s → km/h:** × 3,6 (Merkhilfe: 36 km/h = 10 m/s). (2) **Zeit:** 1 h = 3.600 s, 1 min = 60 s; Herzfrequenz in Hz = HF/min ÷ 60. (3) **Gleichmäßig beschleunigt:** v = v₀+at; s = v₀t+½at²; v² = v₀²+2as. (4) **Freier Fall (v₀=0):** v = g×t; s = ½×g×t²; Aufprall aus Höhe h: v = √(2gh).
-
-**Typische Prüfungsfehler:** km/h in m/s: fälschlich × 3,6 statt ÷ 3,6. s (Weg) und v (Geschwindigkeit) verwechseln (s = ½gt² vs. v = gt). Herzfrequenz in Hz: ÷ 60 nicht vergessen.
-
----
-
-## Zeiteinheiten — Das nicht-dezimale System
+      content: `## Zeiteinheiten — Das nicht-dezimale System
 
 **Um Zeitintervalle sicher umzurechnen,** brauchst du das **60er-System**. **Anders** als Länge oder Masse folgen Zeiteinheiten keinem Dezimalsystem. **Dafür** die festen Umrechnungen.
 
@@ -1399,7 +1361,6 @@ Frequenz und Periode: f = 1/T und T = 1/f
 
 ## Geschwindigkeit und ihre Umrechnung
 
-
 Umrechnung km/h ↔ m/s:
 v [m/s] = v [km/h] / 3,6
 v [km/h] = v [m/s] × 3,6
@@ -1426,15 +1387,9 @@ Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s)
 
 > **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** × **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
 
-
-
-
-
-
 ---
 
 ## Gleichförmige Bewegung
-
 
 Bei konstanter Geschwindigkeit (a = 0):
 s = v × t (Weg = Geschwindigkeit × Zeit)
@@ -1449,7 +1404,6 @@ Die Kreislaufzeit beträgt beim Gesunden ~1 Minute.
 ---
 
 ## Gleichmäßig beschleunigte Bewegung
-
 
 Die drei kinematischen Grundformeln:
 1. v(t) = v₀ + a × t (Geschwindigkeit nach Zeit t)
@@ -1664,15 +1618,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "Dimensionsanalyse",
         "abgeleitete Einheiten",
       ],
-      content: `**Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
-
-**Verfahren — Schrittfolge:** (1) **Kraft:** F = m×a → [N] = kg×m/s². (2) **Druck:** p = F/A → [Pa] = N/m². (3) **Energie:** W = F×s → [J] = N×m. (4) **Leistung:** P = W/t → [W] = J/s. (5) **Umrechnungen:** 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; T[K] = T[°C]+273.
-
-**Typische Prüfungsfehler:** SI-Grundeinheit Masse = kg (nicht g). J (Energie) vs. W (Leistung = Energie/Zeit) verwechseln. 1 mmHg ≈ 133 Pa (nicht 100 Pa).
-
----
-
-## Die sieben SI-Grundeinheiten
+      content: `## Die sieben SI-Grundeinheiten
 
 **Um das SI-System zu nutzen,** starten wir mit den **sieben Grundeinheiten**. **Sie sind so gewählt,** dass sich alle anderen physikalischen Einheiten daraus ableiten lassen.
 
@@ -1698,15 +1644,9 @@ Temperatur: Grundeinheit **Kelvin (K)**, KEIN Grad-Symbol! Umrechnung: T [K] = T
 
 **Mol:** 1 mol = N_A = 6,022 × 10²³ Teilchen (**Avogadro-Zahl**). **Molare Masse** M in g/mol. Glukose C₆H₁₂O₆: M = 180 g/mol. NaCl: M = 58,5 g/mol.
 
-
-
-
-
-
 ---
 
 ## Abgeleitete SI-Einheiten
-
 
 Kraft → **Newton (N)** = kg×m/s²; Klinisch: Gewebezug, Herzkontraktion
 Druck → Pascal (Pa) = N/m² = kg/(m×s²); Klinisch: Blutdruck, Atemwegsdruck
@@ -1729,7 +1669,6 @@ Newton → Pascal: N/m² = Pa (kg/(m×s²))
 ---
 
 ## Klinisch relevante Nicht-SI-Einheiten
-
 
 Druck:
 - mmHg: Blutdruck, Liquordruck, Augeninnendruck; 1 mmHg = 133,322 Pa

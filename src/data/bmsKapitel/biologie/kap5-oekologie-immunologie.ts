@@ -23,8 +23,6 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `## Oekologie: Definition und Ebenen
 
-{{DIAGRAM:plant-vs-animal-cell}}
-
 **Um die Oekologie einzufuehren,** beginnen wir mit der Definition und den Ebenen. **Oekologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie haengen Arten und Lebensraeume zusammen?
 
 Die Oekologie arbeitet auf mehreren **Ebenen**:
@@ -38,9 +36,6 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 ---
 
 ## Biotop und Biozoeonose
-
-{{DIAGRAM:animal-cell}}
-
 
 **Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Naehrstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
 
@@ -102,8 +97,6 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
       ],
       content: `## Abiotische und biotische Faktoren
 
-{{DIAGRAM:plant-vs-animal-cell}}
-
 **Um zu verstehen,** warum Arten nur in bestimmten Lebensraeumen vorkommen, betrachtet man die **Umweltfaktoren** -- unterteilt in abiotisch und biotisch.
 
 **Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensitaet, Wellenlaenge), Wasser (Verfuegbarkeit, Salzgehalt, pH), Boden (Textur, pH, Naehrstoffe), Wind, Stroemung. Sie wirken direkt auf Ueberleben, Wachstum und Reproduktion.
@@ -135,8 +128,6 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 ---
 
 ## Euryoek und stenoek -- Generalisten und Spezialisten
-
-{{DIAGRAM:cell-membrane}}
 
 - **Euryoek** (griech. eurys = breit): breite oekologische Amplitude = **Generalist** -- toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Kraehe, Ratte).
 - **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen praezise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven (Eintagsfliegenlarven) = sauberes Wasser).
