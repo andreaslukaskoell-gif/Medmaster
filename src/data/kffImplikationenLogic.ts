@@ -137,6 +137,11 @@ export function isRelationModelConsistent(model: ImplicationRelationModel): bool
 
 function parsePremiseToSetRels(p: string): SetRel[] | null {
   const s = p.trim().replace(/\.$/, "");
+  // WICHTIG: "keine"-Varianten ZUERST prüfen, da die allgemeineren Regexe sonst "keine X" als Mengennamen matchen
+  const allNone = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
+  if (allNone) {
+    return [{ type: "NONE", a: allNone[1]!.trim(), b: allNone[2]!.trim() }];
+  }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
     const a = allIn[1]!.trim();
@@ -144,23 +149,13 @@ function parsePremiseToSetRels(p: string): SetRel[] | null {
     if (a.toLowerCase() === "keine") return null;
     return [{ type: "ALL", a, b }];
   }
-  const allNone = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
-  if (allNone) {
-    const a = allNone[1]!.trim();
-    const b = allNone[2]!.trim();
-    return [{ type: "NONE", a, b }];
+  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
+  if (someNot) {
+    return [{ type: "NOT_ALL", a: someNot[1]!.trim(), b: someNot[2]!.trim() }];
   }
   const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
   if (someIn) {
-    const a = someIn[1]!.trim();
-    const b = someIn[2]!.trim();
-    return [{ type: "SOME", a, b }];
-  }
-  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
-  if (someNot) {
-    const a = someNot[1]!.trim();
-    const b = someNot[2]!.trim();
-    return [{ type: "NOT_ALL", a, b }]; // nicht alle A in B — einige A sind ausserhalb B
+    return [{ type: "SOME", a: someIn[1]!.trim(), b: someIn[2]!.trim() }];
   }
   return null;
 }
