@@ -25,11 +25,7 @@ export const mathKapZahlen: Kapitel = {
         "medizinische Größenordnungen",
         "pH-Wert Exponenten",
       ],
-      content: `<!-- DIAGRAM:exponential-function -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-## Grunddefinition und positive Exponenten
+      content: `## Grunddefinition und positive Exponenten
 
 **Idee:** Zehnerpotenzen 10ⁿ fassen „Größenordnungen" in einer Zahl zusammen: Statt 1.000.000 zu schreiben, schreibst du 10⁶. So lassen sich sehr große und sehr kleine Werte (Labor, Dosierung, Zellgrößen) einheitlich darstellen und **mit Rechenregeln** schnell vergleichen. Der **Exponent** n sagt dir: Wie viele Nullen hinter der 1 (positiv) bzw. wie viele Dezimalstellen bis zur 1 (negativ).
 
@@ -727,11 +723,7 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
         "Avogadro-Zahl",
         "Halbwertszeit",
       ],
-      content: `<!-- DIAGRAM:exponential-function -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
+      content: `**Idee:** Wissenschaftliche Notation = Zahl als **a × 10ⁿ** mit **1 ≤ a < 10** — eindeutig und größenordnungsfreundlich. Rechnen: **Vorfaktoren** und **Exponenten** getrennt behandeln; bei Addition/Subtraktion zuerst **gleichen Exponenten** herstellen.
 
 **Verfahren — Schrittfolge:** (1) **Multiplikation/Division:** Vorfaktoren verrechnen, Exponenten addieren/subtrahieren, dann normalisieren. (2) **Addition/Subtraktion:** kleineren Exponenten an größeren angleichen (Vorfaktor anpassen), dann Vorfaktoren addieren/subtrahieren, normalisieren. (3) **Dezimal → Notation:** Komma verschieben bis 1 ≤ a < 10; Stellen zählen → Exponent (links = positiv, rechts = negativ). (4) **pH:** pH = −log₁₀([H⁺]); 1 pH-Einheit = Faktor 10 in [H⁺].
 
@@ -1102,11 +1094,7 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         "Alveolenfläche",
         "Deziliter",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:geometric-shapes -->
-
-**Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
+      content: `**Idee:** Länge, Fläche, Volumen bauen auf dem **gleichen** Längenfaktor k auf — aber bei **Fläche** wird k **quadriert** (k²), bei **Volumen** **kubiert** (k³). 1 m = 100 cm ⇒ 1 m² = 10.000 cm² (nicht 100!), 1 m³ = 10⁶ cm³. **1 L = 1 dm³ = 1.000 cm³**, **1 mL = 1 cm³**.
 
 **Verfahren — Schrittfolge:** (1) **Dimension klären:** Länge → Faktor k¹; Fläche → k²; Volumen → k³. (2) **Längenfaktor** zwischen Einheiten (z. B. 1 m = 100 cm). (3) **Potenz anwenden:** 1 m² = (100)² cm² = 10.000 cm²; 1 L = 1 dm³ = 10³ cm³ = 1.000 mL. (4) **BSA Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3.600).
 
@@ -1408,11 +1396,7 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         "Sexagesimalsystem",
         "Traumamechanismus",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:geometric-shapes -->
-
-**Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
+      content: `**Idee:** Geschwindigkeit v = Weg/Zeit (v = s/t); Beschleunigung a = Δv/Δt. **km/h ↔ m/s:** Faktor 3,6 (1 km/h = 1/3,6 m/s). **Freier Fall:** v = g×t, s = ½×g×t², **Aufprall v = √(2gh)**; g ≈ 10 m/s².
 
 **Verfahren — Schrittfolge:** (1) **km/h → m/s:** ÷ 3,6; **m/s → km/h:** × 3,6 (Merkhilfe: 36 km/h = 10 m/s). (2) **Zeit:** 1 h = 3.600 s, 1 min = 60 s; Herzfrequenz in Hz = HF/min ÷ 60. (3) **Gleichmäßig beschleunigt:** v = v₀+at; s = v₀t+½at²; v² = v₀²+2as. (4) **Freier Fall (v₀=0):** v = g×t; s = ½×g×t²; Aufprall aus Höhe h: v = √(2gh).
 
@@ -1716,11 +1700,7 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "Dimensionsanalyse",
         "abgeleitete Einheiten",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:geometric-shapes -->
-
-**Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
+      content: `**Idee:** Alle physikalischen Einheiten leiten sich aus **7 SI-Grundeinheiten** (m, kg, s, A, K, mol, cd) ab. **kg** ist die einzige Grundeinheit mit Vorsilbe. **Ableitungskette:** N = kg×m/s² → Pa = N/m² → J = N×m → W = J/s. **Dimensionsanalyse:** Einheiten beider Seiten müssen übereinstimmen.
 
 **Verfahren — Schrittfolge:** (1) **Kraft:** F = m×a → [N] = kg×m/s². (2) **Druck:** p = F/A → [Pa] = N/m². (3) **Energie:** W = F×s → [J] = N×m. (4) **Leistung:** P = W/t → [W] = J/s. (5) **Umrechnungen:** 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; T[K] = T[°C]+273.
 

@@ -8,7 +8,7 @@
 import { alleKapitel } from "../src/data/bmsKapitel/index.ts";
 import type { Kapitel, Unterkapitel } from "../src/data/bmsKapitel/types.ts";
 
-const TARGET_SUBJECTS = ["biologie", "chemie", "physik", "mathematik"] as const;
+const TARGET_SUBJECTS = ["biologie", "chemie", "physik"] as const;
 
 function countImages(uk: Unterkapitel): { markdown: number; diagram: number; imageUrl: number; total: number } {
   const content = uk.content || "";

@@ -24,18 +24,11 @@ export const mathKap5: Kapitel = {
         "Infusionsrate",
         "Kalibrierkurve",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:logarithm-function -->
-
-## Grundform und Begriffe
+      content: `## Grundform und Begriffe
 
 **Idee:** Eine lineare Funktion beschreibt einen Zusammenhang, bei dem die Änderung von y proportional zur Änderung von x ist — der Graph ist eine **Gerade**. Die Steigung m sagt „wie viel y pro x”, der Achsenabschnitt b sagt „wo die Gerade die y-Achse schneidet”. Damit lassen sich Kalibrierkurven, Dosis-Wirkungs-Beziehungen im linearen Bereich und Infusionsraten modellieren.
 
 **Verfahren:** Allgemeine Form **f(x) = mx + b**: m = Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁); b = y-Achsenabschnitt = f(0). Gerade aus zwei Punkten: zuerst m berechnen, dann b = y₁ − m·x₁. Nullstelle: f(x) = 0 ⇒ x₀ = −b/m. Senkrechte Gerade zu m₁: m₂ = −1/m₁. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.
-
-
-
 
 
 Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt, Schnittpunkt mit y-Achse) ist. Der Name “linear” leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
@@ -139,8 +132,6 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
             "Lambert-Beer: A = ε×c×d ist linear in c. Kalibriergeraden ermöglichen Konzentrationsbestimmung aus Absorption.",
         },
       ],
-      diagram: "coordinate-system",
-
       merksätze: [
         "f(x) = mx + b: m = Steigung, b = y-Achsenabschnitt.",
         "Steigung m = Δy/Δx = (y₂−y₁)/(x₂−x₁).",
@@ -252,11 +243,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Leitkoeffizient",
         "Wurfparabel",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:quadratic-function -->
-
-**Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
+      content: `**Idee:** Parabel f(x) = ax²+bx+c: **a** bestimmt Öffnung (a>0: nach oben, a<0: nach unten) und Breite. **Scheitelpunkt** = Hoch- oder Tiefpunkt; **Diskriminante D** = b²−4ac entscheidet über Anzahl der Nullstellen (D>0: 2, D=0: 1, D<0: keine).
 
 **Verfahren — Schrittfolge:** (1) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (2) **Nullstellen:** D = b²−4ac; x = (−b±√D)/(2a). (3) **pq-Formel** nur bei normierter Form x²+px+q = 0: x = −p/2 ± √((p/2)²−q). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
 
@@ -387,7 +374,6 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
             "E_kin = ½mv²: quadratisch in v. A = πr²: quadratisch in r. Kleine Änderungen im Radius bewirken große Flächenänderungen.",
         },
       ],
-      diagram: "coordinate-system",
       merksätze: [
         "f(x) = ax² + bx + c: a ≠ 0, Graph ist Parabel.",
         "a > 0: Öffnung nach oben (Minimum); a < 0: Öffnung nach unten (Maximum).",
@@ -504,11 +490,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:exponential-function -->
-
-**Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
+      content: `**Idee:** **Exponentialfunktion** f(t) = f₀×e^(±kt): **Zerfall** (k>0, Minus im Exponenten) → Konzentration/ Menge nimmt ab; **Wachstum** (k>0, Plus) → nimmt zu. **Halbwertszeit** T½ = ln(2)/k ≈ 0,693/k — Zeit, bis die Hälfte übrig ist. Nach 5×T½ < 3,2 % Rest.
 
 **Verfahren — Schrittfolge:** (1) **Zerfall:** f(t) = f₀×e^(−kt). (2) **T½ aus k:** T½ = ln(2)/k. **k aus T½:** k = ln(2)/T½. (3) **Rest nach n Halbwertszeiten:** f = f₀×(½)ⁿ. (4) **Steady-State** (Sättigung): f(t) = A×(1−e^(−kt)) → Grenzwert A.
 
@@ -651,7 +633,6 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
             "Kinetik 1. Ordnung: C(t) = C₀×e^(−kt). Nach 5×T½ ≈ 97 % eliminiert → klinisch vollständig weg.",
         },
       ],
-      diagram: "coordinate-system",
       merksätze: [
         "f(x) = a × bˣ: b > 1 Wachstum; 0 < b < 1 Zerfall.",
         "Natürliche Basis: e ≈ 2,718; (eˣ)' = eˣ.",
@@ -756,11 +737,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:logarithm-function -->
-
-**Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
+      content: `**Idee:** **Logarithmus** = Umkehr der Exponentialfunktion: log_b(x) = y ⇔ b^y = x. **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺]. **log(ab) = log a + log b**; **log(a/b) = log a − log b**; **log(aⁿ) = n×log a**. ln nur für x > 0 definiert.
 
 **Verfahren — Schrittfolge:** (1) **pH aus [H⁺]:** pH = −log₁₀([H⁺]). **[H⁺] aus pH:** [H⁺] = 10^(−pH). (2) **Henderson-Hasselbalch:** pH = pKₐ + log([A⁻]/[HA]). (3) **Dezibel** (logarithmische Lautstärkeeinheit)**:** L = 10×log(I/I₀); +3 dB = Faktor 2, +10 dB = Faktor 10. (4) **Basiswechsel:** log_b(x) = ln(x)/ln(b).
 
@@ -917,7 +894,6 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
             "ln C vs. t linear → Kinetik 1. Ordnung. Steigung = −k, Achsenabschnitt = ln C₀. T½ = 0,693/k.",
         },
       ],
-      diagram: "coordinate-system",
       merksätze: [
         "log_b(x) = y ⟺ bʸ = x. Logarithmus ist Umkehrfunktion der Potenz.",
         "Produktregel: ln(a×b) = ln(a) + ln(b).",
@@ -1038,11 +1014,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
         "Rationale Funktion",
         "Kaplan-Meier-Kurve",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:exponential-function -->
-
-## Graphen und ihre Eigenschaften ablesen
+      content: `## Graphen und ihre Eigenschaften ablesen
 
 Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
 
@@ -1186,7 +1158,6 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
             "Michaelis-Menten: v = v_max/2 bei [S] = Km. Hyperbel mit Asymptote v_max. Linearisierung: Lineweaver-Burk-Plot.",
         },
       ],
-      diagram: "coordinate-system",
       merksätze: [
         "Asymptote: Gerade, an die sich Graph annähert, ohne sie zu erreichen.",
         "Horizontale Asymptote: y = lim(x→±∞) f(x).",
@@ -1319,11 +1290,7 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
         "Geometrische Reihe",
         "Summenformel",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-## Arithmetische Folgen — gleicher Abstand
+      content: `## Arithmetische Folgen — gleicher Abstand
 
 Eine Folge (a_n) heißt **arithmetisch**, wenn die Differenz d = a_{n+1} − a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist. Man sagt auch: Die Folge wächst (oder fällt) linear.
 
@@ -1469,7 +1436,6 @@ Für |q| ≥ 1 divergiert die Reihe (die Partialsummen (Summen der ersten n Glie
             "Geometrische Reihe: S = a₁/(1−q) für |q| < 1. Divergenz für |q| ≥ 1. Kumulation = geometrische Reihe.",
         },
       ],
-      diagram: "coordinate-system",
       merksätze: [
         "Arithmetische Folge: a_n = a₁ + (n−1)·d. Konstante Differenz, lineares Wachstum.",
         "Gauss-Summe: S_n = n/2 × (a₁ + a_n). Spezialfall: 1+2+...+n = n(n+1)/2 = 5050 für n=100.",

@@ -10,7 +10,6 @@ export const mathKapAlgebra: Kapitel = {
     // === from kap2-algebra ===
     {
       id: "ma-2-01",
-      diagram: "coordinate-system",
       title: "Gleichungen und Ungleichungen",
       stichworte: [
         "Lineare Gleichung",
@@ -26,11 +25,7 @@ export const mathKapAlgebra: Kapitel = {
         "Dosierungsberechnung",
         "Verdünnungsformel",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:vector-addition -->
-
-## Grundprinzip der Gleichungsumformung
+      content: `## Grundprinzip der Gleichungsumformung
 
 **Idee:** Eine Gleichung A = B bleibt „wahr“, wenn auf **beiden Seiten** dieselbe Operation ausgeführt wird. So kannst du schrittweise die gesuchte Variable isolieren (allein auf einer Seite), ohne die Lösungsmenge zu ändern. Ziel ist immer: x = … (bzw. die gesuchte Größe).
 
@@ -281,7 +276,6 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
     },
     {
       id: "ma-2-04",
-      diagram: "coordinate-system",
       title: "Potenz- und Wurzelgesetze",
       stichworte: [
         "Potenzgesetz",
@@ -295,11 +289,7 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
         "Logarithmus",
         "Wurzelziehen",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:percent-fractions -->
-
-**Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
+      content: `**Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
 
 **Verfahren — Schrittfolge:** (1) **Potenz:** aⁿ×aᵐ = a^(n+m); aⁿ/aᵐ = a^(n−m); (aⁿ)ᵐ = a^(n×m); a⁰ = 1; a⁻ⁿ = 1/aⁿ. (2) **Wurzel:** ⁿ√a = a^(1/n); √(a×b) = √a×√b (nicht √(a+b) = √a+√b!). (3) **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. (4) **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
 
@@ -596,11 +586,7 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
         "Kreuzprodukt",
         "Verdünnungsreihe",
       ],
-      content: `<!-- DIAGRAM:percent-fractions -->
-
-<!-- DIAGRAM:percent-fractions -->
-
-**Idee:** Prozentrechnung, Bruchrechnung und Dreisatz sind drei eng verwandte Werkzeuge. **Prozent** = "je Hundert" (p/100); die Grundformel P = G × p/100 beantwortet alle drei Grundfragen. **Bruchrechnung** liefert das Handwerk fuer exaktes Rechnen mit Anteilen. **Dreisatz** loest Verhaeltnisaufgaben systematisch (direkt: mehr → mehr; indirekt: mehr → weniger).
+      content: `**Idee:** Prozentrechnung, Bruchrechnung und Dreisatz sind drei eng verwandte Werkzeuge. **Prozent** = "je Hundert" (p/100); die Grundformel P = G × p/100 beantwortet alle drei Grundfragen. **Bruchrechnung** liefert das Handwerk fuer exaktes Rechnen mit Anteilen. **Dreisatz** loest Verhaeltnisaufgaben systematisch (direkt: mehr → mehr; indirekt: mehr → weniger).
 
 **Verfahren -- Schrittfolge:** (1) **Prozent:** P = G × p/100; umstellen nach G oder p. (2) **Brueche:** Addition ueber kgV; Division ueber Kehrwert. (3) **Dreisatz:** Auf 1 zurueckfuehren, dann hochrechnen. (4) **Prozentuale Aenderung:** (neu − alt)/alt × 100 %.
 
@@ -864,7 +850,6 @@ Beispiel: 50 ml einer 10 %-Loesung sollen auf 2 % verduennt werden. V2 = (c1 × 
     },
     {
       id: "ma-2-03",
-      diagram: "coordinate-system",
       title: "Quadratische Gleichungen und binomische Formeln",
       stichworte: [
         "Binomische Formeln",
@@ -878,11 +863,7 @@ Beispiel: 50 ml einer 10 %-Loesung sollen auf 2 % verduennt werden. V2 = (c1 × 
         "Vieta-Satz",
         "Diskriminante",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:percent-fractions -->
-
-**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+      content: `**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
 
 **Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
 
@@ -1066,7 +1047,6 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
     // === Trigonometrie ===
     {
       id: "ma-2-05",
-      diagram: "unit-circle",
       title: "Trigonometrie-Grundlagen",
       stichworte: [
         "Sinus",
@@ -1082,11 +1062,7 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
         "Winkelfunktion",
         "Umrechnung Grad Bogenmaß",
       ],
-      content: `<!-- DIAGRAM:unit-circle -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
+      content: `## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
 
 **Idee:** In jedem rechtwinkligen Dreieck stehen die Seitenlängen in einem festen Verhältnis zueinander, das nur vom Winkel abhängt — nicht von der Größe des Dreiecks. Dieses Verhältnis beschreiben die drei trigonometrischen Funktionen Sinus, Kosinus und Tangens.
 
@@ -1317,7 +1293,6 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
     // ──────────────────────────────────────────────────────────────
     {
       id: "ma-3-01",
-      diagram: "coordinate-system",
       title: "Ebene Figuren — Flächen und Umfang",
       stichworte: [
         "Rechteck",
@@ -1337,11 +1312,7 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
         "Körperoberfläche",
         "DuBois-Formel",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:geometric-shapes -->
-
-**Idee:** Flächen und Umfänge ebener Figuren folgen festen Formeln; **Heron** erlaubt Dreiecksfläche aus drei Seiten ohne Höhe. **Trigonometrie:** sin/cos/tan im rechtwinkligen Dreieck = Verhältnis zweier Seiten. **KOF** für Dosierung (Mosteller: √(G×Gew/3600)).
+      content: `**Idee:** Flächen und Umfänge ebener Figuren folgen festen Formeln; **Heron** erlaubt Dreiecksfläche aus drei Seiten ohne Höhe. **Trigonometrie:** sin/cos/tan im rechtwinkligen Dreieck = Verhältnis zweier Seiten. **KOF** für Dosierung (Mosteller: √(G×Gew/3600)).
 
 **Verfahren — Schrittfolge:** (1) **Rechteck:** A = l×b, U = 2(l+b). **Dreieck:** A = ½×g×h; **Heron:** s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)). (2) **Kreis:** A = πr², U = 2πr; **Kreisring:** A = π(R²−r²). (3) **sin/cos/tan:** Gegenkathete/Hypotenuse, Ankathete/Hypotenuse, Gegenkathete/Ankathete. (4) **KOF Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3600).
 
@@ -1662,11 +1633,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
         "Tumorvolummetrie",
         "Oberfläche-Volumen-Verhältnis",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:geometric-shapes -->
-
-**Idee:** Volumen V = „Rauminhalt“, Oberfläche O = „Hüllfläche“. **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
+      content: `**Idee:** Volumen V = „Rauminhalt”, Oberfläche O = „Hüllfläche“. **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
 
 **Verfahren — Schrittfolge:** (1) **Quader/Würfel:** V = a×b×c, O = 2(ab+ac+bc); Würfel V = a³, O = 6a². (2) **Zylinder:** V = πr²h, O = 2πr²+2πrh. (3) **Kugel:** V = (4/3)πr³, O = 4πr². (4) **Kegel:** V = (1/3)πr²h. (5) **Ellipsoid:** V ≈ (4/3)πabc (Herz).
 
@@ -1942,11 +1909,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
         "Vierfelder-Tafel",
         "EKG-Herzachse",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
-
-<!-- DIAGRAM:vector-addition -->
-
-**Idee:** Punkte durch (x,y) beschrieben; **Abstand** = Pythagoras: d = √((x₂−x₁)²+(y₂−y₁)²). **Gerade** y = mx+b: m = Steigung, b = y-Achsenabschnitt; aus zwei Punkten: m = (y₂−y₁)/(x₂−x₁), dann b = y₁−m×x₁.
+      content: `**Idee:** Punkte durch (x,y) beschrieben; **Abstand** = Pythagoras: d = √((x₂−x₁)²+(y₂−y₁)²). **Gerade** y = mx+b: m = Steigung, b = y-Achsenabschnitt; aus zwei Punkten: m = (y₂−y₁)/(x₂−x₁), dann b = y₁−m×x₁.
 
 **Verfahren — Schrittfolge:** (1) **Abstand:** d = √((Δx)²+(Δy)²). **Mittelpunkt:** M = ((x₁+x₂)/2, (y₁+y₂)/2). (2) **Gerade aus 2 Punkten:** m = (y₂−y₁)/(x₂−x₁), b = y₁−m×x₁. (3) **Schnittpunkt:** Gleichsetzen, nach x auflösen. (4) **Polarkoordinaten:** x = r×cos φ, y = r×sin φ.
 
@@ -2126,7 +2089,6 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
             "Bland-Altman: Differenz gegen Mittelwert — zeigt systematische Messfehler (Bias) und zufällige Streuung (Präzision) zwischen zwei Messmethoden.",
         },
       ],
-      diagram: "coordinate-system",
 
       merksätze: [
         "Abstand zweier Punkte: d = √((Δx)² + (Δy)²).",
@@ -2227,7 +2189,6 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
     // ──────────────────────────────────────────────────────────────
     {
       id: "ma-3-04",
-      diagram: "vector-addition",
       title: "Vektoren und räumliche Geometrie",
       stichworte: [
         "Vektor",
@@ -2243,11 +2204,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
         "Strahlentherapie",
         "Biomechanik",
       ],
-      content: `<!-- DIAGRAM:vector-addition -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** **Vektor** = Betrag + Richtung (Pfeil); **Skalar** = nur Zahl. **Betrag** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt** a·b = |a||b|cos θ → Winkel und Orthogonalität (a·b = 0). **Kreuzprodukt** a×b = Vektor ⊥ zu beiden, |a×b| = |a||b|sin θ.
+      content: `**Idee:** **Vektor** = Betrag + Richtung (Pfeil); **Skalar** = nur Zahl. **Betrag** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt** a·b = |a||b|cos θ → Winkel und Orthogonalität (a·b = 0). **Kreuzprodukt** a×b = Vektor ⊥ zu beiden, |a×b| = |a||b|sin θ.
 
 **Verfahren — Schrittfolge:** (1) **Betrag:** |a| = √(a₁²+a₂²+a₃²). (2) **Addition/Subtraktion:** komponentenweise. (3) **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; cos θ = a·b/(|a||b|); orthogonal ⇔ a·b = 0. (4) **Kreuzprodukt:** a×b steht senkrecht auf a und b; Recht-Hand-Regel.
 

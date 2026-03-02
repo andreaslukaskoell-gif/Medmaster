@@ -27,11 +27,7 @@ export const mathKap6: Kapitel = {
         "Skalare Multiplikation",
         "Kraftzerlegung",
       ],
-      content: `<!-- DIAGRAM:vector-addition -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** Ein **Vektor** beschreibt eine gerichtete Größe (Kraft, Geschwindigkeit, Verschiebung) — also Betrag **und** Richtung. Ein **Skalar** ist nur eine Zahl (Temperatur, Masse). Rechnen mit Vektoren: komponentenweise (Addition, Skalarmultiplikation), Betrag mit Pythagoras, Einheitsvektor = Richtung mit Betrag 1. So lassen sich Kräfte zerlegen, Abstände und Verbindungsvektoren berechnen.
+      content: `**Idee:** Ein **Vektor** beschreibt eine gerichtete Größe (Kraft, Geschwindigkeit, Verschiebung) — also Betrag **und** Richtung. Ein **Skalar** ist nur eine Zahl (Temperatur, Masse). Rechnen mit Vektoren: komponentenweise (Addition, Skalarmultiplikation), Betrag mit Pythagoras, Einheitsvektor = Richtung mit Betrag 1. So lassen sich Kräfte zerlegen, Abstände und Verbindungsvektoren berechnen.
 
 **Verfahren:** Betrag |v| = √(v₁² + v₂² + v₃²). Addition: komponentenweise; Subtraktion: a − b = a + (−b). Verbindungsvektor AB = Ortsvektor(B) − Ortsvektor(A). Einheitsvektor ê = v/|v| (nur wenn v ≠ 0). Linearkombination: λ₁v₁ + λ₂v₂; linear unabhängig ⇔ keiner ist Vielfaches der anderen (2D) bzw. nicht koplanar (3D).
 
@@ -50,9 +46,6 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 > **Merke:** Vektoren beschreiben gerichtete Größen (Kraft, Geschwindigkeit, Verschiebung). Skalare beschreiben ungerichtete Größen (Temperatur, Masse, Energie). Diese Unterscheidung ist in der Physik und Medizin fundamental.
 
 ## Vektoroperationen
-
-
-
 
 
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
@@ -159,8 +152,6 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
             "Klinisch: Gelenkkraft = Vektorsumme aller Muskelkräfte. EKG-Herzachse = elektrischer Summenvektor der Erregung.",
         },
       ],
-      diagram: "vector-addition",
-
       merksätze: [
         "Ein Vektor besitzt Betrag UND Richtung — ein Skalar nur einen Zahlenwert.",
         "Betrag im Raum: |v| = √(v₁² + v₂² + v₃²) — verallgemeinerter Pythagoras.",
@@ -307,11 +298,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Lorentz-Kraft",
         "Parallelogrammfläche",
       ],
-      content: `<!-- DIAGRAM:vector-addition -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** **Skalarprodukt** a·b = Zahl (Projektion, Winkel); **orthogonal** ⇔ a·b = 0. **Kreuzprodukt** a×b = Vektor ⊥ zu beiden; **Betrag** = Fläche Parallelogramm; **Rechte-Hand-Regel**; a×b = −(b×a). **Projektion** von a auf b: (a·b/|b|²)×b.
+      content: `**Idee:** **Skalarprodukt** a·b = Zahl (Projektion, Winkel); **orthogonal** ⇔ a·b = 0. **Kreuzprodukt** a×b = Vektor ⊥ zu beiden; **Betrag** = Fläche Parallelogramm; **Rechte-Hand-Regel**; a×b = −(b×a). **Projektion** von a auf b: (a·b/|b|²)×b.
 
 **Verfahren — Schrittfolge:** (1) **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; cos θ = (a·b)/(|a||b|); orthogonal ⇔ a·b = 0. (2) **Kreuzprodukt:** Komponentenform oder Sarrus; |a×b| = |a||b|sin θ. (3) **Projektion:** proj_b(a) = (a·b/|b|²)×b; skalare Komponente = (a·b)/|b|.
 
@@ -320,9 +307,6 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
 ---
 
 ## Skalarprodukt
-
-
-
 
 
 Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
@@ -470,8 +454,6 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
             "Projektion von a auf b: proj = (a×b/|b|²)×b. Spatprodukt = |a×(b×c)| = Volumen des Spats. Spatprodukt = 0 → koplanar.",
         },
       ],
-      diagram: "vector-addition",
-
       merksätze: [
         "Skalarprodukt: a×b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
         "a×b = |a|×|b|×cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
@@ -627,11 +609,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
         "Eigenvektor",
         "CT-Bildrekonstruktion",
       ],
-      content: `<!-- DIAGRAM:vector-addition -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** **Gerade** r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor). **Ebene** n·(r−r₀) = 0 (Normalenform) oder r = r₀ + s·d₁ + t·d₂ (Parameterform). **Determinante** det(A) = ad−bc (2×2); det = 0 ⇒ singulär (keine eindeutige Lösung). **Inverse** 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.
+      content: `**Idee:** **Gerade** r = r₀ + t·d (Stützvektor + Parameter × Richtungsvektor). **Ebene** n·(r−r₀) = 0 (Normalenform) oder r = r₀ + s·d₁ + t·d₂ (Parameterform). **Determinante** det(A) = ad−bc (2×2); det = 0 ⇒ singulär (keine eindeutige Lösung). **Inverse** 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.
 
 **Verfahren — Schrittfolge:** (1) **Gerade durch A, B:** r₀ = A, d = B−A. (2) **Ebene:** Normalenvektor n = d₁×d₂; Koordinatenform ax+by+cz = d mit d = n·r₀. (3) **det(2×2):** ad−bc. **A⁻¹:** (d −b; −c a)/det. (4) **LGS:** x = A⁻¹·b falls det ≠ 0.
 
@@ -640,9 +618,6 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
 ---
 
 ## Geradengleichung im Raum
-
-
-
 
 
 Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
@@ -798,7 +773,6 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
             "Inverse: A⁻¹ = (1/det)×adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A×v = λ×v — Richtung bleibt, nur Betrag ändert sich.",
         },
       ],
-      diagram: "vector-addition",
       merksätze: [
         "Geradengleichung Raum: r = r₀ + t×d (Stützvektor + Parameter × Richtungsvektor).",
         "Ebene Normalenform: n×(r − r₀) = 0, wobei n ⊥ Ebene.",
@@ -961,11 +935,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         "Ganganalyse",
         "Stereotaxie",
       ],
-      content: `<!-- DIAGRAM:vector-addition -->
-
-<!-- DIAGRAM:coordinate-system -->
-
-**Idee:** **Abstand Punkt–Punkt** = |AB| = |B−A|. **Punkt–Gerade:** d = |r₀P×d|/|d| (Kreuzprodukt) oder Lotfußpunkt t_F = (r₀P·d)/|d|². **Punkt–Ebene:** Hessesche Normalform d = |n·r_P−d|/|n| (n normiert) bzw. |ax+by+cz−d|/√(a²+b²+c²). **Schnittwinkel** Gerade–Gerade: cos α = |d₁·d₂|/(|d₁||d₂|); Gerade–Ebene: sin α = |d·n|/(|d||n|).
+      content: `**Idee:** **Abstand Punkt–Punkt** = |AB| = |B−A|. **Punkt–Gerade:** d = |r₀P×d|/|d| (Kreuzprodukt) oder Lotfußpunkt t_F = (r₀P·d)/|d|². **Punkt–Ebene:** Hessesche Normalform d = |n·r_P−d|/|n| (n normiert) bzw. |ax+by+cz−d|/√(a²+b²+c²). **Schnittwinkel** Gerade–Gerade: cos α = |d₁·d₂|/(|d₁||d₂|); Gerade–Ebene: sin α = |d·n|/(|d||n|).
 
 **Verfahren — Schrittfolge:** (1) **Punkt–Punkt:** d = |B−A|. (2) **Punkt–Gerade:** d(P,g) = |r₀P×d|/|d|. (3) **Punkt–Ebene:** Ebenengleichung in Koordinatenform; d = |ap₁+bp₂+cp₃−d|/√(a²+b²+c²). (4) **Schnittwinkel:** Gerade–Gerade: cos; Gerade–Ebene: sin mit n.
 
@@ -974,9 +944,6 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
 ---
 
 ## Abstand Punkt–Punkt
-
-
-
 
 
 Der Abstand zweier Punkte $A$ und $B$ im dreidimensionalen Raum ist der Betrag des Verbindungsvektors:
@@ -1121,7 +1088,6 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
             "Strahlentherapie: Sicherheitsabstand = Punkt-Ebene-Distanz. Ganganalyse: Kniewinkel = Schnittwinkel von Oberschenkel- und Unterschenkelvektor.",
         },
       ],
-      diagram: "vector-addition",
       merksätze: [
         "Punkt–Punkt: d(A,B) = |AB| = √((b₁−a₁)² + (b₂−a₂)² + (b₃−a₃)²).",
         "Punkt–Gerade: d = |r₀P × d| / |d| — Kreuzprodukt-Formel (Flache ÷ Grundseite = Hohe).",
