@@ -584,7 +584,7 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
             "Wenn [S] ≫ Kₘ: Was passiert im Nenner (Kₘ + [S])?",
             "Sättigung bedeutet: Alle aktiven Zentren sind belegt.",
           ],
-          tags: ["michaelis-menten", "enzymkinetik", "saettigung"],
+          tags: ["michaelis-menten", "enzymkinetik", "sättigung"],
           difficulty: 2,
         },
         {
@@ -795,7 +795,7 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
             "Stöchiometrische Koeffizienten = Mol-Verhältnisse, nicht Gramm.",
             "Lies die Koeffizienten 1, 3, 2 direkt aus der Gleichung ab.",
           ],
-          tags: ["stoechiometrie", "mol-verhaeltnisse", "reaktionsgleichung"],
+          tags: ["stoechiometrie", "mol-verhältnisse", "reaktionsgleichung"],
           difficulty: 1,
         },
         {
@@ -1693,7 +1693,7 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
 
       selfTest: [
         {
-          question: "Was bedeutet ΔG < 0 fuer eine chemische Reaktion?",
+          question: "Was bedeutet ΔG < 0 für eine chemische Reaktion?",
           options: [
             "Die Reaktion ist exotherm.",
             "Die Reaktion laeuft spontan ab (exergon).",
@@ -1703,7 +1703,7 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
           ],
           correctIndex: 1,
           explanation:
-            "ΔG < 0 bedeutet, dass die Reaktion thermodynamisch spontan (exergon) ist. Das heisst nicht, dass sie schnell ablaeuft — das haengt von der Aktivierungsenergie ab (Kinetik). Exotherm (ΔH < 0) ist nicht dasselbe wie exergon (ΔG < 0), weil die Entropie mitentscheidet.",
+            "ΔG < 0 bedeutet, dass die Reaktion thermodynamisch spontan (exergon) ist. Das heißt nicht, dass sie schnell ablaeuft — das hängt von der Aktivierungsenergie ab (Kinetik). Exotherm (ΔH < 0) ist nicht dasselbe wie exergon (ΔG < 0), weil die Entropie mitentscheidet.",
           hints: [
             "Spontan = thermodynamisch beguenstigt, nicht Geschwindigkeit",
             "ΔG kombiniert ΔH UND ΔS",
@@ -1732,7 +1732,7 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
         },
         {
           question:
-            "Berechne ΔH fuer die Reaktion C(s) + O₂(g) → CO₂(g), wenn ΔHf°(CO₂) = −393,5 kJ/mol.",
+            "Berechne ΔH für die Reaktion C(s) + O₂(g) → CO₂(g), wenn ΔHf°(CO₂) = −393,5 kJ/mol.",
           options: [
             "+393,5 kJ/mol",
             "−393,5 kJ/mol",
@@ -1757,22 +1757,22 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
             "Weil die Aktivierungsenergie niedrig ist.",
             "Weil ein Katalysator die Reaktion beschleunigt.",
             "Weil die Entropiezunahme (ΔS > 0) gross genug ist, sodass T·ΔS > ΔH und ΔG < 0.",
-            "Weil die Loesung Waerme abgibt.",
+            "Weil die Lösung Wärme abgibt.",
             "Weil ΔG bei endothermen Reaktionen immer negativ ist.",
           ],
           correctIndex: 2,
           explanation:
-            "Das ist ein klassischer Fall 4: ΔH > 0, ΔS > 0. Die Ionen verteilen sich in Loesung → stark erhoehte Unordnung (ΔS >> 0). Bei Raumtemperatur ist T·ΔS > ΔH, also ΔG = ΔH − T·ΔS < 0. Die Reaktion ist spontan, OBWOHL sie endotherm ist.",
+            "Das ist ein klassischer Fall 4: ΔH > 0, ΔS > 0. Die Ionen verteilen sich in Lösung → stark erhöhte Unordnung (ΔS >> 0). Bei Raumtemperatur ist T·ΔS > ΔH, also ΔG = ΔH − T·ΔS < 0. Die Reaktion ist spontan, OBWOHL sie endotherm ist.",
           hints: [
-            "Was treibt die Reaktion an, wenn es nicht die Waerme ist?",
-            "Ionen in Loesung = viel mehr Unordnung als im Kristallgitter",
+            "Was treibt die Reaktion an, wenn es nicht die Wärme ist?",
+            "Ionen in Lösung = viel mehr Unordnung als im Kristallgitter",
           ],
           difficulty: 2,
           tags: ["entropie", "endotherm-spontan", "ammoniumnitrat"],
         },
         {
           question:
-            "Fuer eine Reaktion gilt: ΔH = −100 kJ/mol, ΔS = −200 J/(mol·K). Ab welcher Temperatur ist die Reaktion NICHT mehr spontan?",
+            "Für eine Reaktion gilt: ΔH = −100 kJ/mol, ΔS = −200 J/(mol·K). Ab welcher Temperatur ist die Reaktion NICHT mehr spontan?",
           options: [
             "Ab 200 K",
             "Ab 500 K",

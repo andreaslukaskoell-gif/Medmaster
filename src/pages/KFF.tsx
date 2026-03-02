@@ -1332,16 +1332,6 @@ function ImplikationenQuiz({
   const currentQ = safeQuestions[index];
   const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
 
-  const startOfficial = () => {
-    const valid = filterValidImplikationTasks([...OFFICIAL_IMPLICATION_EXAMPLES]);
-    setQuestions(valid);
-    logPoolWarning("implikationen", valid.length, "offiziell");
-    setMode("official");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
-  };
-
   const startTraining = async () => {
     setTrainingError(null);
     setTrainingLoading(true);
@@ -1545,30 +1535,11 @@ function ImplikationenQuiz({
           </CardContent>
         </Card>
 
-        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              🏛️ Offizielle Beispiele
-            </CardTitle>
-            <p className="text-sm text-muted">
-              Fixe Beispielaufgaben – unverändert, in fester Reihenfolge, niemals vom Generator
-              verwendet.
-            </p>
-          </CardHeader>
-          <CardContent>
-            <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
-              <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_IMPLICATION_EXAMPLES.length}{" "}
-              offizielle Beispielaufgaben starten
-            </Button>
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
             <p className="text-sm text-muted">
-              Aufgaben aus der Datenbank – gleiche Logik-Typen, andere Inhalte. Keine Überlappung
-              mit den offiziellen Beispielen.
+              Aufgaben aus der Datenbank – verschiedene Logik-Typen und Inhalte.
             </p>
             <p className="mt-1">
               <TaskDbCountHint domain="kff-implikationen" />
@@ -1719,23 +1690,9 @@ function ImplikationenQuiz({
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button variant="outline" onClick={() => setPhase("setup")}>
-                  Zurück zum Setup
-                </Button>
-                <Button
-                  variant="secondary"
-                  onClick={() => {
-                    const valid = filterValidImplikationTasks([...OFFICIAL_IMPLICATION_EXAMPLES]);
-                    setQuestions(valid);
-                    setIndex(0);
-                    setAnswers({});
-                    setPhase("quiz");
-                  }}
-                >
-                  <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
-                </Button>
-              </div>
+              <Button variant="outline" onClick={() => setPhase("setup")}>
+                Zurück zum Setup
+              </Button>
             </CardContent>
           </Card>
         ) : (
@@ -1910,20 +1867,6 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     const id = qu.id ?? "";
     return answers[id] !== undefined;
   });
-
-  const startOfficial = () => {
-    const withIds = OFFICIAL_WF_EXAMPLES.map((t, i) => ({
-      ...t,
-      id: t.id ?? `wf-off-${i}`,
-    }));
-    const valid = filterValidWordFluencyTasks(withIds);
-    setQuestions(valid);
-    logPoolWarning("wortflüssigkeit", valid.length, "offiziell");
-    setMode("official");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
-  };
 
   const startTraining = async () => {
     setTrainingError(null);
@@ -2132,37 +2075,11 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
 
-        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              🏛️ Offizielle Beispiele
-            </CardTitle>
-            <p className="text-sm text-muted">
-              Fixe Beispielaufgaben aus dem MedAT-Material – 1:1, unverändert, nicht generiert.
-            </p>
-          </CardHeader>
-          <CardContent>
-            {OFFICIAL_WF_EXAMPLES.length > 0 ? (
-              <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
-                <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_WF_EXAMPLES.length} offizielle
-                Beispielaufgaben starten
-              </Button>
-            ) : (
-              <p className="text-sm text-amber-700 dark:text-amber-400">
-                Noch keine offiziellen Beispiele eingetragen. Bitte MedAT-Material öffnen und
-                Beispiele in <code className="text-xs">OFFICIAL_WF_EXAMPLES</code> in{" "}
-                <code className="text-xs">src/data/kffWortfluessigkeitMedAT.ts</code> 1:1 eintragen.
-              </p>
-            )}
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
             <p className="text-sm text-muted">
-              Aufgaben aus der Datenbank – andere Wörter, gleiche Regel. Keine Überlappung mit
-              offiziellen Beispielen.
+              Aufgaben aus der Datenbank – verschiedene Wörter, gleiche Regel.
             </p>
             <p className="mt-1">
               <TaskDbCountHint domain="kff-wortflüssigkeit" />
@@ -2310,29 +2227,9 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button variant="outline" onClick={() => setPhase("setup")}>
-                  Zurück zum Setup
-                </Button>
-                {OFFICIAL_WF_EXAMPLES.length > 0 && (
-                  <Button
-                    variant="secondary"
-                    onClick={() => {
-                      const withIds = OFFICIAL_WF_EXAMPLES.map((t, i) => ({
-                        ...t,
-                        id: t.id ?? `wf-off-${i}`,
-                      }));
-                      const valid = filterValidWordFluencyTasks(withIds);
-                      setQuestions(valid);
-                      setIndex(0);
-                      setAnswers({});
-                      setPhase("quiz");
-                    }}
-                  >
-                    <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
-                  </Button>
-                )}
-              </div>
+              <Button variant="outline" onClick={() => setPhase("setup")}>
+                Zurück zum Setup
+              </Button>
             </CardContent>
           </Card>
         ) : (
@@ -2478,17 +2375,6 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     getKffFailedIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
-
-  const startOfficial = () => {
-    const list = [...OFFICIAL_FZ_EXAMPLES];
-    const valid = filterValidFigurenTasks(list);
-    setQuestions(valid);
-    logPoolWarning("figuren", valid.length, "offiziell");
-    setIndex(0);
-    setAnswers({});
-    setTimeLeft(90);
-    setPhase("quiz");
-  };
 
   const startTraining = async () => {
     setTrainingError(null);
@@ -2724,106 +2610,50 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
 
-        {mode === null ? (
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card
-              className="cursor-pointer border-2 border-transparent hover:border-rose-500 dark:hover:border-rose-500"
-              onClick={() => setMode("official")}
-            >
-              <CardContent className="p-6">
-                <span className="text-2xl" aria-hidden>
-                  🏛️
-                </span>
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">
-                  Offizielle MedAT-Beispiele
-                </h2>
-                <p className="text-sm text-muted mt-1">
-                  Aufgaben 1:1 aus dem PDF (IB_FZ_26). Exakt wie in der Prüfung.
-                </p>
-              </CardContent>
-            </Card>
-            <Card
-              className="cursor-pointer border-2 border-transparent hover:border-rose-500 dark:hover:border-rose-500"
-              onClick={() => setMode("training")}
-            >
-              <CardContent className="p-6">
-                <span className="text-2xl" aria-hidden>
-                  🧠
-                </span>
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100 mt-2">Training</h2>
-                <p className="text-sm text-muted mt-1">
-                  Aufgaben aus der Datenbank – Schwierigkeit passt sich deinem Level an.
-                </p>
-                <p className="mt-1">
-                  <TaskDbCountHint domain="kff-figuren" />
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        ) : mode === "official" ? (
-          <Card>
-            <CardContent className="p-6 space-y-4">
-              <Badge variant="info">Offizielle Beispiele</Badge>
-              <p className="text-sm text-muted">
-                {OFFICIAL_FZ_EXAMPLES.length} Aufgabe{OFFICIAL_FZ_EXAMPLES.length !== 1 ? "n" : ""}{" "}
-                aus dem MedAT-PDF.
-              </p>
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={() => setMode(null)}>
-                  Zurück
-                </Button>
-                <Button size="lg" onClick={startOfficial}>
-                  <Puzzle className="w-5 h-5 mr-2" /> Starten
-                </Button>
+        <Card>
+          <CardContent className="p-6 space-y-6">
+            <div>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
+                Anzahl Aufgaben
+              </label>
+              <div className="flex gap-2">
+                {[10, 25, 50, 75, 100, 150].map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setQuestionCount(c)}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                      questionCount === c
+                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
+                        : "border-border dark:border-gray-700"
+                    }`}
+                  >
+                    {c}
+                  </button>
+                ))}
               </div>
-            </CardContent>
-          </Card>
-        ) : (
-          <Card>
-            <CardContent className="p-6 space-y-6">
-              <div>
-                <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
-                  Anzahl Aufgaben
-                </label>
-                <div className="flex gap-2">
-                  {[10, 25, 50, 75, 100, 150].map((c) => (
-                    <button
-                      key={c}
-                      onClick={() => setQuestionCount(c)}
-                      className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                        questionCount === c
-                          ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
-                          : "border-border dark:border-gray-700"
-                      }`}
-                    >
-                      {c}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={() => setMode(null)} disabled={trainingLoading}>
-                  Zurück
-                </Button>
-                <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
-                  {trainingLoading ? (
-                    <>
-                      <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-rose-500 border-t-transparent rounded-full" />
-                      Wird geladen…
-                    </>
-                  ) : (
-                    <>
-                      <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben laden
-                    </>
-                  )}
-                </Button>
-              </div>
-              {trainingError && (
-                <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
-              )}
-            </CardContent>
-          </Card>
-        )}
+            </div>
+            <div className="flex gap-3">
+              <Button variant="outline" onClick={() => setMode(null)} disabled={trainingLoading}>
+                Zurück
+              </Button>
+              <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
+                {trainingLoading ? (
+                  <>
+                    <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-rose-500 border-t-transparent rounded-full" />
+                    Wird geladen…
+                  </>
+                ) : (
+                  <>
+                    <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben laden
+                  </>
+                )}
+              </Button>
+            </div>
+            {trainingError && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+            )}
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -3023,31 +2853,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setPhase("setup");
-                    setMode(null);
-                  }}
-                >
-                  Zurück zum Setup
-                </Button>
-                {OFFICIAL_FZ_EXAMPLES.length > 0 && (
-                  <Button
-                    variant="secondary"
-                    onClick={() => {
-                      const valid = filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]);
-                      setQuestions(valid);
-                      setIndex(0);
-                      setAnswers({});
-                      setPhase("quiz");
-                    }}
-                  >
-                    <Puzzle className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
-                  </Button>
-                )}
-              </div>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setPhase("setup");
+                }}
+              >
+                Zurück zum Setup
+              </Button>
             </CardContent>
           </Card>
         ) : (

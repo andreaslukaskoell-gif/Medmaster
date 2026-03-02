@@ -31,29 +31,29 @@ export const physKap3: Kapitel = {
 
 
 
-Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Koerpers um eine Gleichgewichtslage. Die Rueckstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = -k*x** (Hookesches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
+Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschreibt die zeitliche Auslenkung eines Körpers um eine Gleichgewichtslage. Die Rückstellkraft ist dabei stets proportional zur Auslenkung und dieser entgegengerichtet: **F = -k*x** (Hookesches Gesetz). Das mathematische Modell ist eine Sinus- oder Kosinusfunktion:
 
 **x(t) = A * cos(omega*t + phi_0)**
 
 - **A** (Amplitude) -- maximale Auslenkung aus der Ruhelage [m]
 - **omega** (Kreisfrequenz) -- omega = 2*Pi*f = 2*Pi/T [rad/s]
-- **T** (Periodendauer) -- Zeit fuer eine vollstaendige Schwingung [s]
+- **T** (Periodendauer) -- Zeit für eine vollständige Schwingung [s]
 - **f** (Frequenz) -- Anzahl der Schwingungen pro Sekunde [Hz = 1/s]
 - **phi_0** (Anfangsphase) -- bestimmt den Zustand zur Zeit t = 0
 
-**Formelklartext:** x(t) = A*cos(omega*t+phi_0) beschreibt, *wo* sich der Koerper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und -A; omega*t ist der Phasenwinkel (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = -k*x** bedeutet: Die Rueckstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (groesseres k), desto groesser die Kraft bei gleicher Auslenkung.
+**Formelklartext:** x(t) = A*cos(omega*t+phi_0) beschreibt, *wo* sich der Körper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und -A; omega*t ist der Phasenwinkel (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = -k*x** bedeutet: Die Rückstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (größeres k), desto größer die Kraft bei gleicher Auslenkung.
 
-> **Merke:** Die Kreisfrequenz omega = 2*Pi*f = 2*Pi/T ist die zentrale Verknuepfungsgroesse zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchlaeuft.
+> **Merke:** Die Kreisfrequenz omega = 2*Pi*f = 2*Pi/T ist die zentrale Verknüpfungsgröße zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
 
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
 - v(t) = -A*omega*sin(omega*t + phi_0)  -->  v_max = A*omega (bei Durchgang durch Ruhelage)
 - a(t) = -A*omega^2*cos(omega*t + phi_0) = -omega^2*x(t)  -->  a_max = A*omega^2 (bei maximaler Auslenkung)
 
-Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rueckstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators (Schwingkoerpers) ist. Dieses Merkmal a = -omega^2*x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsaechlich harmonisch schwingt.
+Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rückstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators (Schwingkörpers) ist. Dieses Merkmal a = -omega^2*x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsächlich harmonisch schwingt.
 
-## Schwingungsgroessen-Tabelle
+## Schwingungsgrößen-Tabelle
 
-| Groesse | Symbol | Einheit | Zusammenhang |
+| Größe | Symbol | Einheit | Zusammenhang |
 |--------|--------|---------|--------------|
 | Amplitude | A | m | Maximale Auslenkung |
 | Periodendauer | T | s | T = 1/f = 2*Pi/omega |
@@ -63,19 +63,19 @@ Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rueckstellkraft),
 
 ## Fadenpendel
 
-Fuer kleine Winkel (< 5 Grad, Kleinwinkelnaeherung sin theta ungefaehr theta) verhaelt sich ein Pendel der Laenge l harmonisch:
+Für kleine Winkel (< 5 Grad, Kleinwinkelnäherung sin theta ungefähr theta) verhält sich ein Pendel der Länge l harmonisch:
 
 **T = 2*Pi * Wurzel(l/g)**
 
-Die Periodendauer ist **unabhaengig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhaengig von der Amplitude, solange die Auslenkung klein bleibt; gilt fuer Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Laenge, steigt T um den Faktor Wurzel(2) ungefaehr 1,41. Auf dem Mond (g ungefaehr 1,62 m/s^2) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
+Die Periodendauer ist **unabhängig** von Masse und Amplitude (**Isochronie** = die Schwingungsdauer T ist unabhängig von der Amplitude, solange die Auslenkung klein bleibt; gilt für Faden- und Federpendel im Kleinwinkelbereich). Praktische Konsequenz: Verdoppelt man die Länge, steigt T um den Faktor Wurzel(2) ungefähr 1,41. Auf dem Mond (g ungefähr 1,62 m/s^2) schwingt dasselbe Pendel etwa 2,45-mal langsamer.
 
-**Formelklartext:** T = 2*Pi*Wurzel(l/g) heisst: Die Schwingungsdauer wird nur von der **Fadenlaenge** l und der **Fallbeschleunigung** g bestimmt. Laengeres Pendel --> laengere T; groesseres g (z. B. auf der Erde vs. Mond) --> kuerzere T. Masse und Amplitude (bei kleinen Winkeln) spielen keine Rolle -- das ist die Isochronie.
+**Formelklartext:** T = 2*Pi*Wurzel(l/g) heißt: Die Schwingungsdauer wird nur von der **Fadenlänge** l und der **Fallbeschleunigung** g bestimmt. Längeres Pendel --> längere T; größeres g (z. B. auf der Erde vs. Mond) --> kürzere T. Masse und Amplitude (bei kleinen Winkeln) spielen keine Rolle -- das ist die Isochronie.
 
-**Groessenordnung:** Pendel l = 1 m auf der Erde --> T ungefaehr 2,0 s (Sekundenpendel). l = 25 cm --> T ungefaehr 1 s.
+**Größenordnung:** Pendel l = 1 m auf der Erde --> T ungefähr 2,0 s (Sekundenpendel). l = 25 cm --> T ungefähr 1 s.
 
-> **Merke:** Beim Fadenpendel bestimmen nur Fadenlaenge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
+> **Merke:** Beim Fadenpendel bestimmen nur Fadenlänge l und Erdbeschleunigung g die Periodendauer. Masse und Amplitude spielen keine Rolle (solange die Winkel klein bleiben).
 
-**Gueltigkeitsgrenze:** Bei Auslenkungen > 15 Grad weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Fuer theta_max = 30 Grad betraegt der Fehler bereits ~2 %.
+**Gültigkeitsgrenze:** Bei Auslenkungen > 15 Grad weicht die wahre Periodendauer messbar vom idealisierten Wert ab. Für theta_max = 30 Grad beträgt der Fehler bereits ~2 %.
 
 ## Federpendel (harmonischer Oszillator)
 
@@ -83,102 +83,102 @@ Eine Masse m an einer Feder mit Federkonstante k schwingt mit:
 
 **T = 2*Pi * Wurzel(m/k)**
 
-Hier ist T unabhaengig von der Amplitude (gleiche Isochronie), aber abhaengig von der Masse. Groessere Masse --> laengere Periodendauer; steifere Feder (groesseres k) --> kuerzere Periodendauer.
+Hier ist T unabhängig von der Amplitude (gleiche Isochronie), aber abhängig von der Masse. Größere Masse --> längere Periodendauer; steifere Feder (größeres k) --> kürzere Periodendauer.
 
 **Formelklartext:** T = 2*Pi*Wurzel(m/k) bedeutet: Schwerere Masse (m steigt) schwingt langsamer (T steigt); steifere Feder (k steigt) schwingt schneller (T sinkt). Die Amplitude beeinflusst T nicht (Isochronie). Einheitlich: [m] = kg, [k] = N/m --> Wurzel(kg/(N/m)) = Wurzel(kg*m/N) = Wurzel(s^2) = s.
 
-Die **Federkonstante k** (auch Federhaerte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie laesst sich experimentell bestimmen: Haengt man eine Masse m an die Feder und misst die statische Dehnung Delta-x, gilt k = mg/Delta-x.
+Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Haengt man eine Masse m an die Feder und misst die statische Dehnung Delta-x, gilt k = mg/Delta-x.
 
 ## Energie im harmonischen Oszillator
 
-Die Gesamtmechanik-Energie bleibt konstant (ungedaempfter Fall) und pendelt zwischen kinetischer und potentieller Energie:
+Die Gesamtmechanik-Energie bleibt konstant (ungedämpfter Fall) und pendelt zwischen kinetischer und potentieller Energie:
 
 - E_kin = 1/2 * m * v^2 = 1/2 * m * omega^2 * A^2 * sin^2(omega*t)
 - E_pot = 1/2 * k * x^2 = 1/2 * k * A^2 * cos^2(omega*t)
 - E_ges = 1/2 * k * A^2 = const.
 
-**Formelklartext:** E_ges = 1/2*k*A^2 heisst: Die **Gesamtenergie** des ungedaempften Oszillators ist konstant und wird allein durch **Federkonstante k** und **Amplitude A** bestimmt. Verdoppelte Amplitude --> **viermal** mehr Energie (E proportional A^2). In der Ruhelage (x = 0) ist die gesamte Energie kinetisch (v maximal); in den Umkehrpunkten (x = +/-A) ist sie vollstaendig potentiell.
+**Formelklartext:** E_ges = 1/2*k*A^2 heißt: Die **Gesamtenergie** des ungedämpften Oszillators ist konstant und wird allein durch **Federkonstante k** und **Amplitude A** bestimmt. Verdoppelte Amplitude --> **viermal** mehr Energie (E proportional A^2). In der Ruhelage (x = 0) ist die gesamte Energie kinetisch (v maximal); in den Umkehrpunkten (x = +/-A) ist sie vollständig potentiell.
 
 **Einheiten:** E_kin, E_pot, E_ges in **Joule [J]**; k in **N/m**, A in **m** --> 1/2*k*A^2 hat Einheit (N/m)*m^2 = N*m = J.
 
-**Gleichstand** (E_kin = E_pot) herrscht bei x = +/-A/Wurzel(2) ungefaehr +/-0,707*A.
+**Gleichstand** (E_kin = E_pot) herrscht bei x = +/-A/Wurzel(2) ungefähr +/-0,707*A.
 
 > **Merke:** E_ges proportional A^2 -- verdoppelt man die Amplitude, vervierfacht sich die Gesamtenergie des Oszillators. In der Ruhelage (x = 0) ist alle Energie kinetisch; bei maximaler Auslenkung (x = +/-A) ist alle Energie potentiell.
 
-Die Schwingungsenergie geht waehrend jeder Viertelperiode vollstaendig von einer Form in die andere ueber. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin^2 und cos^2 schwingen.
+Die Schwingungsenergie geht während jeder Viertelperiode vollständig von einer Form in die andere über. Dieser periodische Energietausch wiederholt sich mit der **doppelten Frequenz** der Schwingung (2f), weil E_kin und E_pot als sin^2 und cos^2 schwingen.
 
 
 
-## Resonanz und Daempfung
+## Resonanz und Dämpfung
 
-**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f_0 durch eine externe periodische Kraft angeregt wird -- die Amplitude waechst dann stark an. Beispiele: MRT-Geraet (Kernspinresonanz), Tacoma-Narrows-Bruecke (Windanregung), Mikrowelle (dielektrische Erwaermung von Wasser bei 2,45 GHz).
+**Resonanz** tritt auf, wenn ein System mit seiner Eigenfrequenz f_0 durch eine externe periodische Kraft angeregt wird -- die Amplitude wächst dann stark an. Beispiele: MRT-Gerät (Kernspinresonanz), Tacoma-Narrows-Brücke (Windanregung), Mikrowelle (dielektrische Erwärmung von Wasser bei 2,45 GHz).
 
-Bei schwacher Daempfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfrequenz) ein scharfes Maximum bei f_0. Die **Guete Q** des Oszillators beschreibt, wie scharf die Resonanzkurve ist: hohe Guete --> scharfe Resonanz, niedrige Guete --> breite Resonanz. Q = f_0/Delta-f, wobei Delta-f die Halbwertsbreite ist.
+Bei schwacher Dämpfung zeigt die **Resonanzkurve** (Amplitude vs. Anregungsfrequenz) ein scharfes Maximum bei f_0. Die **Güte Q** des Oszillators beschreibt, wie scharf die Resonanzkurve ist: hohe Güte --> scharfe Resonanz, niedrige Güte --> breite Resonanz. Q = f_0/Delta-f, wobei Delta-f die Halbwertsbreite ist.
 
-**Daempfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A_0 * e^(-delta*t). Man unterscheidet:
-- **Schwache Daempfung** (delta < omega_0): Abklingende Schwingung, Amplitude nimmt langsam ab
-- **Aperiodischer Grenzfall** (delta = omega_0): Schnellstmoegliche Rueckkehr ohne Ueberschwinger
-- **Kriechfall** (delta > omega_0): Langsame Rueckkehr ohne Schwingung
+**Dämpfung** beschreibt den Energieverlust durch Reibung. Die Amplitude nimmt exponentiell ab: A(t) = A_0 * e^(-delta*t). Man unterscheidet:
+- **Schwache Dämpfung** (delta < omega_0): Abklingende Schwingung, Amplitude nimmt langsam ab
+- **Aperiodischer Grenzfall** (delta = omega_0): Schnellstmögliche Rückkehr ohne Überschwinger
+- **Kriechfall** (delta > omega_0): Langsame Rückkehr ohne Schwingung
 
-In biologischen Systemen sorgt Daempfung fuer Stabilitaet (z. B. Gelenkknorpel als Stossdaempfer, Trommelfell-Daempfung verhindert Nachschwingen).
+In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel als Stossdämpfer, Trommelfell-Dämpfung verhindert Nachschwingen).
 
-## Gedaempfte Schwingung -- Vertiefung
+## Gedämpfte Schwingung -- Vertiefung
 
-Bisher haben wir die idealisierte, ungedaempfte Schwingung betrachtet. In der Realitaet verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedaempfte Schwingung** beschreibt diesen Energieverlust mathematisch:
+Bisher haben wir die idealisierte, ungedämpfte Schwingung betrachtet. In der Realität verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedämpfte Schwingung** beschreibt diesen Energieverlust mathematisch:
 
 **x(t) = A_0 * e^(-delta*t) * cos(omega_d * t + phi_0)**
 
 - **delta** (Abklingkoeffizient) -- gibt an, wie schnell die Amplitude abnimmt [1/s]
-- **A_0 * e^(-delta*t)** -- die **Einhuellende**: die Amplitude nimmt exponentiell ab
-- **omega_d** (gedaempfte Kreisfrequenz) -- omega_d = Wurzel(omega_0^2 - delta^2), immer kleiner als omega_0
+- **A_0 * e^(-delta*t)** -- die **Einhüllende**: die Amplitude nimmt exponentiell ab
+- **omega_d** (gedämpfte Kreisfrequenz) -- omega_d = Wurzel(omega_0^2 - delta^2), immer kleiner als omega_0
 
-Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Haelfte absinkt) betraegt: t_halb = ln(2)/delta ungefaehr 0,693/delta.
+Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Hälfte absinkt) beträgt: t_halb = ln(2)/delta ungefähr 0,693/delta.
 
-**Drei Daempfungsfaelle im Vergleich:**
+**Drei Dämpfungsfaelle im Vergleich:**
 
 | Fall | Bedingung | Verhalten | Beispiel |
 |------|-----------|-----------|----------|
 | **Schwingfall** | delta < omega_0 | Oszillation mit abnehmender Amplitude | Stimmgabel in Luft |
-| **Aperiodischer Grenzfall** | delta = omega_0 | Schnellste Rueckkehr ohne Ueberschwingen | Autofederung, Tuerschliesser |
-| **Kriechfall** | delta > omega_0 | Sehr langsame Rueckkehr, kein Schwingen | Ueberdaempftes Galvanometer |
+| **Aperiodischer Grenzfall** | delta = omega_0 | Schnellste Rückkehr ohne Überschwingen | Autofederung, Türschließer |
+| **Kriechfall** | delta > omega_0 | Sehr langsame Rückkehr, kein Schwingen | Überdämpftes Galvanometer |
 
-> **Merke:** Der **aperiodische Grenzfall** (delta = omega_0) ist technisch besonders wichtig: Er beschreibt die schnellste Rueckkehr zur Ruhelage ohne Ueberschwingen. Krankenwagen-Federung ist darauf abgestimmt, um den Patienten nicht durch Nachschwingen zu belasten.
+> **Merke:** Der **aperiodische Grenzfall** (delta = omega_0) ist technisch besonders wichtig: Er beschreibt die schnellste Rückkehr zur Ruhelage ohne Überschwingen. Krankenwagen-Federung ist darauf abgestimmt, um den Patienten nicht durch Nachschwingen zu belasten.
 
-**Guetefaktor Q:** Q = omega_0/(2*delta) gibt an, wie viele Schwingungen ein System ausfuehrt, bevor die Amplitude auf e^(-Pi) ungefaehr 4,3 % abfaellt. Hohe Guete (Q > 100): Stimmgabel, Quarzoszillator. Niedrige Guete (Q < 1): Krankenwagen-Stossdaempfer.
+**Gütefaktor Q:** Q = omega_0/(2*delta) gibt an, wie viele Schwingungen ein System ausführt, bevor die Amplitude auf e^(-Pi) ungefähr 4,3 % abfällt. Hohe Güte (Q > 100): Stimmgabel, Quarzoszillator. Niedrige Güte (Q < 1): Krankenwagen-Stossdämpfer.
 
 ---
 
 ## Erzwungene Schwingung und Resonanzkatastrophe
 
-Wird einem gedaempften Oszillator durch eine **periodische aeussere Kraft** F(t) = F_0*cos(Omega*t) Energie zugefuehrt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Omega** (nicht mit seiner Eigenfrequenz omega_0).
+Wird einem gedämpften Oszillator durch eine **periodische äußere Kraft** F(t) = F_0*cos(Omega*t) Energie zugeführt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Omega** (nicht mit seiner Eigenfrequenz omega_0).
 
-Die Amplitude der stationaeren erzwungenen Schwingung haengt vom Frequenzverhaeltnis Omega/omega_0 ab:
+Die Amplitude der stationären erzwungenen Schwingung hängt vom Frequenzverhältnis Omega/omega_0 ab:
 
 **A(Omega) = F_0 / Wurzel((omega_0^2 - Omega^2)^2 + (2*delta*Omega)^2)**
 
 Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
-- **Omega_res = Wurzel(omega_0^2 - 2*delta^2)** ungefaehr omega_0 fuer schwache Daempfung
-- Bei schwacher Daempfung: A_max ungefaehr F_0/(2*delta*omega_0) -- die Amplitude wird sehr gross
+- **Omega_res = Wurzel(omega_0^2 - 2*delta^2)** ungefähr omega_0 für schwache Dämpfung
+- Bei schwacher Dämpfung: A_max ungefähr F_0/(2*delta*omega_0) -- die Amplitude wird sehr gross
 
-**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Daempfung strebt die Amplitude bei Omega = omega_0 theoretisch gegen unendlich. In der Praxis fuehrt dies zu Strukturversagen:
-- **Tacoma-Narrows-Bruecke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Bruecke an --> Resonanzkatastrophe --> Einsturz
-- **Millennium Bridge London (2000):** Fussgaenger synchronisierten ihren Gang mit der Brueckenfrequenz --> seitliches Schwanken
-- **Marschieren auf Bruecken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
+**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Dämpfung strebt die Amplitude bei Omega = omega_0 theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
+- **Tacoma-Narrows-Brücke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Brücke an --> Resonanzkatastrophe --> Einsturz
+- **Millennium Bridge London (2000):** Fußgänger synchronisierten ihren Gang mit der Brückenfrequenz --> seitliches Schwanken
+- **Marschieren auf Brücken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
 
-> **Merke:** **Resonanz** = Anregungsfrequenz ungefaehr Eigenfrequenz --> maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Daempfung --> Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz, Resonanzfrequenz der Atomkerne im Magnetfeld); in der Technik muss sie kontrolliert oder vermieden werden.
+> **Merke:** **Resonanz** = Anregungsfrequenz ungefähr Eigenfrequenz --> maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Dämpfung --> Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz, Resonanzfrequenz der Atomkerne im Magnetfeld); in der Technik muss sie kontrolliert oder vermieden werden.
 
 **Resonanz in der Medizin und Biologie:**
-- **MRT:** Kernspinresonanz -- Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T mal Feldstaerke)
-- **Mikrowelle:** Wassermolekuele absorbieren bei ~2,45 GHz durch dielektrische Erwaermung (Dipolrotation im Wechselfeld, keine Resonanz im engeren Sinn)
-- **Trommelfell:** Die Eigenresonanz bei ~3 kHz erklaert die maximale Hoerempfindlichkeit in diesem Bereich
-- **Cochleaerer Verstaerker:** Aeussere Haarzellen nutzen aktive Resonanzverstaerkung (Prestin-Protein)
+- **MRT:** Kernspinresonanz -- Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T mal Feldstärke)
+- **Mikrowelle:** Wassermoleküle absorbieren bei ~2,45 GHz durch dielektrische Erwärmung (Dipolrotation im Wechselfeld, keine Resonanz im engeren Sinn)
+- **Trommelfell:** Die Eigenresonanz bei ~3 kHz erklärt die maximale Hörempfindlichkeit in diesem Bereich
+- **Cochleärer Verstärker:** Äußere Haarzellen nutzen aktive Resonanzverstärkung (Prestin-Protein)
 
 ---
 
 ## Rechenbeispiele
 
 **Beispiel 1 -- Fadenpendel auf Erde und Mond:**
-Pendellaenge l = 1 m. Auf der Erde (g = 9,81 m/s^2): T = 2*Pi*Wurzel(1/9,81) = 2*Pi * 0,319 = 2,01 s.
+Pendellänge l = 1 m. Auf der Erde (g = 9,81 m/s^2): T = 2*Pi*Wurzel(1/9,81) = 2*Pi * 0,319 = 2,01 s.
 Auf dem Mond (g = 1,62 m/s^2): T = 2*Pi*Wurzel(1/1,62) = 2*Pi * 0,786 = 4,94 s -- fast 2,5-mal langsamer.
 
 **Beispiel 2 -- Federpendel mit bekannter Masse:**
@@ -191,21 +191,21 @@ Federpendel mit k = 100 N/m, A = 0,2 m. E_ges = 1/2 * 100 * 0,04 = 2 J. Gleichst
 Die Larmorfrequenz eines Wasserstoffkerns im MRT berechnet sich als f = gamma * B_0. Mit gamma = 42,58 MHz/T und B_0 = 1,5 T: f = 42,58 * 1,5 = 63,87 MHz. Bei 3 T: f = 127,74 MHz. Die Anregung mit genau dieser Frequenz versetzt die Protonen in Resonanz -- sie absorbieren die RF-Energie maximal.
 
 **Beispiel 5 -- Federkonstante bestimmen:**
-An einer vertikalen Feder haengt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Delta-x = 0,3 * 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer betraegt dann T = 2*Pi*Wurzel(0,3/49,1) = 0,491 s.
+An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k = mg/Delta-x = 0,3 * 9,81 / 0,06 = 49,1 N/m. Die Schwingungsdauer beträgt dann T = 2*Pi*Wurzel(0,3/49,1) = 0,491 s.
 
-**Beispiel 6 -- Gedaempfte Schwingung:**
-Ein Federpendel hat omega_0 = 10 rad/s und delta = 0,5 s^(-1). Die gedaempfte Frequenz: omega_d = Wurzel(100 - 0,25) = Wurzel(99,75) ungefaehr 9,99 rad/s (kaum veraendert bei schwacher Daempfung). Die Halbwertszeit der Amplitude: t_halb = ln(2)/0,5 = 1,39 s. Der Guetefaktor: Q = 10/(2*0,5) = 10 --> das System fuehrt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
+**Beispiel 6 -- Gedämpfte Schwingung:**
+Ein Federpendel hat omega_0 = 10 rad/s und delta = 0,5 s^(-1). Die gedämpfte Frequenz: omega_d = Wurzel(100 - 0,25) = Wurzel(99,75) ungefähr 9,99 rad/s (kaum verändert bei schwacher Dämpfung). Die Halbwertszeit der Amplitude: t_halb = ln(2)/0,5 = 1,39 s. Der Gütefaktor: Q = 10/(2*0,5) = 10 --> das System führt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
 
 **Beispiel 7 -- Resonanzfrequenz einer erzwungenen Schwingung:**
-Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz: Omega_res = Wurzel(400 - 8) = Wurzel(392) ungefaehr 19,8 rad/s. Bei schwacher Daempfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
+Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz: Omega_res = Wurzel(400 - 8) = Wurzel(392) ungefähr 19,8 rad/s. Bei schwacher Dämpfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
 
 ## Klinische Vertiefung
 
-**Herzfrequenzvariabilitaet (HRV):** Der Herzrhythmus ist annaehernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor fuer kardiovaskulaere Ereignisse.
+**Herzfrequenzvariabilität (HRV):** Der Herzrhythmus ist annähernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor für kardiovaskulaere Ereignisse.
 
-**Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1-20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Aufloesung des Ultraschalls.
+**Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1-20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Auflösung des Ultraschalls.
 
-**Gelenkknorpel als Daempfer:** Bei jedem Schritt wirken Stoesse auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stoesse (Daempfung) und verhindert so Resonanzschaeden am Knochen. Bei Arthrose ist diese Daempfungsfunktion eingeschraenkt.
+**Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stöße auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stöße (Dämpfung) und verhindert so Resonanzschaeden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschraenkt.
 
 **Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt -- der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusaetzlich zu belasten.`,
 
@@ -455,74 +455,74 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
 
 
 
-Eine Welle ist die raeumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums fuehren nur lokale Schwingungen aus, waehrend die Stoerung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
+Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Stoerung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 
 
-## Grundgroessen der Welle
+## Grundgrößen der Welle
 
 **c = f * Lambda** -- die fundamentale Wellengleichung (bzw. **c = Lambda * f**)
 
 - **c** (Wellengeschwindigkeit) [m/s] -- wird durch das Medium bestimmt, nicht durch die Quelle
-- **f** (Frequenz) [Hz] -- wird von der Quelle festgelegt und aendert sich beim Medienwechsel nicht
-- **Lambda** (Wellenlaenge) [m] -- Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
+- **f** (Frequenz) [Hz] -- wird von der Quelle festgelegt und ändert sich beim Medienwechsel nicht
+- **Lambda** (Wellenlänge) [m] -- Abstand zweier benachbarter gleichphasiger Punkte (z. B. Wellenberg zu Wellenberg)
 
-**Formelklartext:** c = f*Lambda bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** x **Wellenlaenge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt Lambda = c/f -- die Wellenlaenge **passt sich** an. Beim Uebergang in ein schnelleres Medium (z. B. Schall: Luft --> Wasser) wird Lambda **groesser**; in ein langsameres Medium wird Lambda **kleiner**. Die Frequenz bleibt dabei immer gleich (Quelle schwingt weiter mit derselben Rate).
+**Formelklartext:** c = f*Lambda bedeutet: **Ausbreitungsgeschwindigkeit** = **Frequenz** x **Wellenlänge**. Das Medium legt c fest; die Quelle legt f fest. Daraus folgt Lambda = c/f -- die Wellenlänge **passt sich** an. Beim Übergang in ein schnelleres Medium (z. B. Schall: Luft --> Wasser) wird Lambda **größer**; in ein langsameres Medium wird Lambda **kleiner**. Die Frequenz bleibt dabei immer gleich (Quelle schwingt weiter mit derselben Rate).
 
-> **Merke:** c gehoert zum Medium, f gehoert zur Quelle, Lambda = c/f passt sich an. Beim Medienwechsel aendert sich die Wellenlaenge, nicht die Frequenz!
+> **Merke:** c gehört zum Medium, f gehört zur Quelle, Lambda = c/f passt sich an. Beim Medienwechsel ändert sich die Wellenlänge, nicht die Frequenz!
 
-Da c medium-spezifisch und f quellenspezifisch ist, aendert sich beim Medienwechsel die Wellenlaenge Lambda = c/f. In einem schnelleren Medium wird Lambda groesser, in einem langsameren kleiner -- bei identischer Frequenz. Dieses Prinzip erklaert sowohl Brechung als auch die unterschiedlichen Wellenlaengen von Ultraschall in verschiedenen Geweben.
+Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge Lambda = c/f. In einem schnelleren Medium wird Lambda größer, in einem langsameren kleiner -- bei identischer Frequenz. Dieses Prinzip erklärt sowohl Brechung als auch die unterschiedlichen Wellenlängen von Ultraschall in verschiedenen Geweben.
 
 ## Transversal- vs. Longitudinalwellen
 
 | Eigenschaft | Transversalwelle | Longitudinalwelle |
 |-------------|-----------------|-------------------|
 | Schwingungsrichtung | senkrecht zur Ausbreitung | parallel zur Ausbreitung |
-| Polarisation | moeglich | nicht moeglich |
-| Medium | Festkoerper + EM-Feld | Gase, Fluessigkeiten, Festkoerper |
+| Polarisation | möglich | nicht möglich |
+| Medium | Festkörper + EM-Feld | Gase, Flüssigkeiten, Festkörper |
 | Beispiele | Licht, Seilwellen | Schall, Druckwellen |
 
 **Transversalwellen**: Schwingungsrichtung **senkrecht** zur Ausbreitungsrichtung.
 Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflaechen­wellen, seismische S-Wellen.
-Transversalwellen koennen **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phaenomen.
+Transversalwellen können **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phänomen.
 
 **Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verduennungen im Medium.
-Beispiele: Schallwellen, Druckwellen in Gasen und Fluessigkeiten, seismische P-Wellen.
-In Gasen und Fluessigkeiten koennen nur Longitudinalwellen existieren (keine Scherkraefte --> keine Transversalwellen). In Festkoerpern existieren beide Typen.
+Beispiele: Schallwellen, Druckwellen in Gasen und Flüssigkeiten, seismische P-Wellen.
+In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Scherkräfte --> keine Transversalwellen). In Festkörpern existieren beide Typen.
 
 ## Schallwellen
 
-Schall ist eine **mechanische Laengswelle** -- sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
+Schall ist eine **mechanische Längswelle** -- sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
 
 Schallgeschwindigkeiten:
-- Luft (20 Grad C): **c ungefaehr 340 m/s** (temperaturabhaengig: c ungefaehr 331 + 0,6*T [Grad C] m/s)
-- Wasser: c ungefaehr 1480 m/s
-- Weichgewebe: c ungefaehr 1540 m/s
-- Knochen: c ungefaehr 3000-4000 m/s
-- Stahl: c ungefaehr 5900 m/s
+- Luft (20 Grad C): **c ungefähr 340 m/s** (temperaturabhängig: c ungefähr 331 + 0,6*T [Grad C] m/s)
+- Wasser: c ungefähr 1480 m/s
+- Weichgewebe: c ungefähr 1540 m/s
+- Knochen: c ungefähr 3000-4000 m/s
+- Stahl: c ungefähr 5900 m/s
 
-> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro Grad C Temperaturerhoehung.
+> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro Grad C Temperaturerhöhung.
 
-Der Hoerbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermaeusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hoergrenze ab (Presbyakusis, altersbedingter Hörverlust): 60-Jaehrige hoeren typischerweise nur noch bis ~12 kHz.
+Der Hörbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermäusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hörgrenze ab (Presbyakusis, altersbedingter Hörverlust): 60-Jährige hören typischerweise nur noch bis ~12 kHz.
 
 ## Elektromagnetische Wellen
 
-Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benoetigen **kein Medium** und breiten sich im Vakuum mit **c = 3 x 10^8 m/s** aus. Die Frequenz bestimmt die Energie eines Photons: **E = h*f** (Plancksche Beziehung, h = 6,626 x 10^(-34) J*s).
+Elektromagnetische (EM) Wellen sind Transversalwellen aus sich gegenseitig erzeugenden elektrischen und magnetischen Feldern. Sie benötigen **kein Medium** und breiten sich im Vakuum mit **c = 3 x 10^8 m/s** aus. Die Frequenz bestimmt die Energie eines Photons: **E = h*f** (Plancksche Beziehung, h = 6,626 x 10^(-34) J*s).
 
 Das EM-Spektrum umfasst (von niedrig nach hoch Frequenz):
 - **Radiowellen** (< 300 MHz): MRT-Anregung, Radio
 - **Mikrowellen** (300 MHz - 300 GHz): Mikrowellenherd, WLAN
-- **Infrarot** (300 GHz - 400 THz): Waermestrahlung, Thermographie
-- **Sichtbares Licht** (**380-780 nm**): Augendiagnostik, Endoskopie; Wellenlaenge in **Nanometern** (nm), nicht mm, cm oder m
+- **Infrarot** (300 GHz - 400 THz): Wärmestrahlung, Thermographie
+- **Sichtbares Licht** (**380-780 nm**): Augendiagnostik, Endoskopie; Wellenlänge in **Nanometern** (nm), nicht mm, cm oder m
 - **UV** (10-400 nm): Desinfektion, Vitamin-D-Synthese
-- **Roentgenstrahlung** (0,01-10 nm): Roentgendiagnostik, CT
+- **Röntgenstrahlung** (0,01-10 nm): Röntgendiagnostik, CT
 - **Gammastrahlung** (< 0,01 nm): Nuklearmedizin, PET
 
 ## Medizinischer Ultraschall
 
-Diagnostischer Ultraschall nutzt Frequenzen von **2-20 MHz** (weit ueber menschliches Hoeren hinaus). Hochfrequenter Ultraschall hat kurze Wellenlaenge --> bessere Ortsaufloesung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ungefaehr 1540 m/s aus.
+Diagnostischer Ultraschall nutzt Frequenzen von **2-20 MHz** (weit über menschliches Hören hinaus). Hochfrequenter Ultraschall hat kurze Wellenlänge --> bessere Ortsauflösung, aber geringere Gewebeeindringtiefe. Ultraschall breitet sich in Geweben mit c ungefähr 1540 m/s aus.
 
-Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstaerke haengt vom Impedanzunterschied der Gewebe ab. Je groesser der Impedanzunterschied an einer Grenzflaeche, desto staerker das Echo.
+Das **Impuls-Echo-Verfahren** (A-Mode, B-Mode) sendet kurze Ultraschallpulse und misst die Laufzeit des reflektierten Echos. Die Reflexionsstärke hängt vom Impedanzunterschied der Gewebe ab. Je größer der Impedanzunterschied an einer Grenzfläche, desto stärker das Echo.
 
 ## Akustische Impedanz -- Widerstand gegen Schallausbreitung
 
@@ -530,31 +530,31 @@ Die **akustische Impedanz** Z beschreibt, wie leicht sich Schall in einem Medium
 
 **Z = Dichte * c** (mit Dichte = Dichte des Mediums in kg/m^3, c = Schallgeschwindigkeit in m/s, Einheit: Pa*s/m = Rayl)
 
-**Formelklartext:** Z = Dichte*c ist der Widerstand des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit --> hohe Impedanz. An Grenzflaechen mit **grossem Z-Unterschied** (z. B. Luft-Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [Dichte]*[c] = (kg/m^3)*(m/s) = kg/(m^2*s) = Pa*s/m (Rayl).
+**Formelklartext:** Z = Dichte*c ist der Widerstand des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit --> hohe Impedanz. An Grenzflächen mit **grossem Z-Unterschied** (z. B. Luft-Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [Dichte]*[c] = (kg/m^3)*(m/s) = kg/(m^2*s) = Pa*s/m (Rayl).
 
-Trifft eine Schallwelle auf eine Grenzflaeche zwischen zwei Medien mit unterschiedlicher Impedanz (Z_1 ungleich Z_2), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
+Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschiedlicher Impedanz (Z_1 ungleich Z_2), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
 
 **Reflexionskoeffizient:** R = [(Z_2 - Z_1)/(Z_2 + Z_1)]^2
 
-- Luft/Gewebe-Grenzflaeche: R ungefaehr 0,998 --> fast vollstaendige Reflexion --> deshalb Ultraschall-Gel noetig
-- Weichteil/Knochen-Grenzflaeche: R ungefaehr 0,4 --> starke Reflexion
+- Luft/Gewebe-Grenzfläche: R ungefähr 0,998 --> fast vollständige Reflexion --> deshalb Ultraschall-Gel nötig
+- Weichteil/Knochen-Grenzfläche: R ungefähr 0,4 --> starke Reflexion
 
-> **Merke:** Grosse Impedanzdifferenz --> starke Reflexion --> schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzflaeche und ermoeglicht optimale Schallkopplung.
+> **Merke:** Grosse Impedanzdifferenz --> starke Reflexion --> schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzfläche und ermöglicht optimale Schallkopplung.
 
 ## Rechenbeispiele
 
-**Beispiel 1 -- Wellenlaenge berechnen:**
+**Beispiel 1 -- Wellenlänge berechnen:**
 Ultraschall mit f = 5 MHz in Gewebe (c = 1540 m/s):
 Lambda = c/f = 1540 / (5 x 10^6) = 3,08 x 10^(-4) m = 0,308 mm.
-Die Aufloesung liegt groessenordnungsmaessig bei Lambda, also ca. 0,3 mm -- ausreichend fuer die meisten diagnostischen Zwecke.
+Die Auflösung liegt größenordnungsmaessig bei Lambda, also ca. 0,3 mm -- ausreichend für die meisten diagnostischen Zwecke.
 
 **Beispiel 2 -- Schallgeschwindigkeit und Eindringtiefe:**
 Ultraschallpuls in Gewebe, Echo nach t = 0,13 ms empfangen. Reflexionsort:
-d = c * t / 2 = 1540 * 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rueckweg --> durch 2).
+d = c * t / 2 = 1540 * 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rückweg --> durch 2).
 
 **Beispiel 3 -- EM-Spektrum:**
 Sichtbares Licht (Lambda = 550 nm, gruen): f = c/Lambda = (3 x 10^8)/(550 x 10^(-9)) = 5,45 x 10^14 Hz.
-Roentgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --> 10.000x hoehere Frequenz und Energie als Licht.
+Röntgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --> 10.000x höhere Frequenz und Energie als Licht.
 
 **Beispiel 4 -- Schallgeschwindigkeiten vergleichen:**
 
@@ -565,18 +565,18 @@ Roentgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --
 | Weichgewebe | 1540 | 1,63 x 10^6 |
 | Knochen | 3500 | 6,3 x 10^6 |
 
-Die akustische Impedanz Z = Dichte * c bestimmt die Reflexion an Grenzflaechen. Je groesser der Impedanzunterschied, desto staerker die Reflexion (z. B. Gewebe-Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z_2 - Z_1)/(Z_2 + Z_1))^2.
+Die akustische Impedanz Z = Dichte * c bestimmt die Reflexion an Grenzflächen. Je größer der Impedanzunterschied, desto stärker die Reflexion (z. B. Gewebe-Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z_2 - Z_1)/(Z_2 + Z_1))^2.
 
 **Beispiel 5 -- Reflexionskoeffizient Gewebe-Knochen:**
-R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefaehr 0,347 --> 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe-Luft waere R ungefaehr 99,9 % -- deshalb ist Ultraschallgel essenziell.
+R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,347 --> 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe-Luft waere R ungefähr 99,9 % -- deshalb ist Ultraschallgel essenziell.
 
 ## Klinische Vertiefung
 
-**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzflaeche (Impedanzunterschied Luft-Haut waere riesig --> fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
+**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzfläche (Impedanzunterschied Luft-Haut waere riesig --> fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
 
-**Roentgen- vs. Ultraschall-Wellenlaenge:** Roentgenstrahlen (Lambda ~ 0,01-10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (Lambda ~ 0,1-1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
+**Röntgen- vs. Ultraschall-Wellenlänge:** Röntgenstrahlen (Lambda ~ 0,01-10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (Lambda ~ 0,1-1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
 
-**Temperaturabhaengigkeit im Alltag:** In einem Konzertsaal erwaermt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden muessen.`,
+**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden muessen.`,
 
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
@@ -1078,54 +1078,54 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 <!-- DIAGRAM:doppler-effect -->
 
-## Dezibel: Lautstaerke messen
+## Dezibel: Lautstärke messen
 
-Unser Ohr kann unglaublich leise und extrem laute Geraeusche hoeren. Um diesen riesigen Bereich handlich zu machen, benutzt man die **Dezibel-Skala** (dB). Sie ist **logarithmisch** -- das heisst, gleiche dB-Schritte bedeuten immer eine Vervielfachung der Schallenergie.
+Unser Ohr kann unglaublich leise und extrem laute Geräusche hören. Um diesen riesigen Bereich handlich zu machen, benutzt man die **Dezibel-Skala** (dB). Sie ist **logarithmisch** -- das heißt, gleiche dB-Schritte bedeuten immer eine Vervielfachung der Schallenergie.
 
 Die wichtigsten Werte:
-- 0 dB: Hoerschwelle (gerade noch hoerbar)
+- 0 dB: Hörschwelle (gerade noch hörbar)
 - 60 dB: normales Gespraech
-- 85 dB: ab hier drohen Gehoerschaeden bei Dauerbelastung
+- 85 dB: ab hier drohen Gehörschaeden bei Dauerbelastung
 - 120 dB: Schmerzgrenze
 
 **Die drei goldenen Regeln:**
-- **+3 dB** = doppelte Schallenergie (kaum hoerbar)
+- **+3 dB** = doppelte Schallenergie (kaum hörbar)
 - **+10 dB** = 10-fache Schallenergie (klingt doppelt so laut)
 - **+20 dB** = 100-fache Schallenergie
 
-> **Merke:** +3 dB = doppelte Energie. +10 dB = 10-fache Energie und klingt doppelt so laut. Ab 85 dB wird es bei Dauerbelastung gefaehrlich.
+> **Merke:** +3 dB = doppelte Energie. +10 dB = 10-fache Energie und klingt doppelt so laut. Ab 85 dB wird es bei Dauerbelastung gefährlich.
 
 ---
 
 ## Wie dein Ohr funktioniert
 
-Schall trifft auf dein Trommelfell und wird ueber drei winzige Knoechelchen (Hammer, Amboss, Steigbuegel) ins Innenohr weitergeleitet. Die Knoechelchen verstaerken den Druck dabei um das 22-Fache -- das ist noetig, weil im Innenohr Fluessigkeit statt Luft ist.
+Schall trifft auf dein Trommelfell und wird über drei winzige Knöchelchen (Hammer, Amboss, Steigbuegel) ins Innenohr weitergeleitet. Die Knöchelchen verstärken den Druck dabei um das 22-Fache -- das ist nötig, weil im Innenohr Flüssigkeit statt Luft ist.
 
-Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Floetenroehre. An verschiedenen Stellen reagiert sie auf verschiedene Toene:
+Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flötenröhre. An verschiedenen Stellen reagiert sie auf verschiedene Toene:
 - **Am Eingang** (Basis): hohe Toene (z. B. Pfeiftoene)
 - **Am Ende** (Spitze/Apex): tiefe Toene (z. B. Brummen)
 
-Das nennt man **Tonotopie** -- jede Tonhoehe hat ihren eigenen Platz in der Schnecke.
+Das nennt man **Tonotopie** -- jede Tonhöhe hat ihren eigenen Platz in der Schnecke.
 
-Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Laerm kann sie unwiderruflich zerstoeren!
+Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie unwiderruflich zerstoeren!
 
 > **Merke:** Hohe Toene am Eingang der Schnecke, tiefe Toene am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
 
 ---
 
-## Zwei Arten von Schwerhoerigkeit
+## Zwei Arten von Schwerhörigkeit
 
-**Schallleitungs-Schwerhoerigkeit:** Das Problem sitzt im Mittelohr (z. B. verstopfter Gehoergang, defektes Trommelfell). Der Schall kommt nicht richtig zum Innenohr durch. Aber wenn du eine Stimmgabel auf den Kopf setzt, hoerst du den Ton trotzdem -- weil der Schall ueber den Knochen direkt zum Innenohr kommt.
+**Schallleitungs-Schwerhörigkeit:** Das Problem sitzt im Mittelohr (z. B. verstopfter Gehörgang, defektes Trommelfell). Der Schall kommt nicht richtig zum Innenohr durch. Aber wenn du eine Stimmgabel auf den Kopf setzt, hörst du den Ton trotzdem -- weil der Schall über den Knochen direkt zum Innenohr kommt.
 
-**Schallempfindungs-Schwerhoerigkeit:** Das Problem sitzt im Innenohr -- die Haarzellen sind beschaedigt (z. B. durch Laerm oder Alter). Hier hilft auch die Knochenleitung nicht, weil das Innenohr selbst betroffen ist. Typisch: Ein Hoerverlust speziell bei 4000 Hz (sogenannte C5-Senke), verursacht durch zu laute Musik oder Maschinenlaerm.
+**Schallempfindungs-Schwerhörigkeit:** Das Problem sitzt im Innenohr -- die Haarzellen sind beschädigt (z. B. durch Lärm oder Alter). Hier hilft auch die Knochenleitung nicht, weil das Innenohr selbst betroffen ist. Typisch: Ein Hörverlust speziell bei 4000 Hz (sogenannte C5-Senke), verursacht durch zu laute Musik oder Maschinenlärm.
 
-> **Merke:** Mittelohr-Problem = Schallleitungs-Schwerhoerigkeit (Knochenleitung funktioniert noch). Innenohr-Problem = Schallempfindungs-Schwerhoerigkeit (beides gestoert).
+> **Merke:** Mittelohr-Problem = Schallleitungs-Schwerhörigkeit (Knochenleitung funktioniert noch). Innenohr-Problem = Schallempfindungs-Schwerhörigkeit (beides gestoert).
 
 ---
 
-## Wann wird Laerm gefaehrlich?
+## Wann wird Lärm gefährlich?
 
-Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schaedigen -- und zwar fuer immer.
+Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schädigen -- und zwar für immer.
 
 > **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschaeden sind nicht heilbar!`,
 
@@ -1324,7 +1324,7 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehoerschaden. Pro +3 d
 
 ## Dezibel-Rechnung — Vertiefung
 
-Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen fuer Berechnungen:
+Die Dezibel-Skala ist **logarithmisch** — das hat praktische Konsequenzen für Berechnungen:
 
 ### Addition mehrerer Schallquellen
 
@@ -1349,7 +1349,7 @@ Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 2
 
 ### Wichtige Dezibel-Merkregeln (Zusammenfassung)
 
-| Aenderung | Schalldruck | Intensitaet | Wahrnehmung |
+| Änderung | Schalldruck | Intensitaet | Wahrnehmung |
 |----------|-------------|------------|-------------|
 | +3 dB | x 1,41 | x 2 | Kaum merkbar |
 | +6 dB | x 2 | x 4 | Leicht lauter |
@@ -1361,7 +1361,7 @@ Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 2
 
 ## Schallimpedanz — Vertiefung
 
-Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche reflektiert wird:
+Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird:
 
 **Z = rho mal c** [kg/(m^2 s) = Rayl]
 
@@ -1379,10 +1379,10 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche re
 
 **R = [(Z2 - Z1)/(Z2 + Z1)]^2**
 
-- **Luft zu Weichgewebe:** R ungefaehr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
-- **Weichgewebe zu Knochen:** R ungefaehr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
-- **Leber zu Blut:** R ungefaehr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
-- **Gel zu Haut:** R ungefaehr 0: nahezu vollstaendige Transmission: deshalb Ultraschallgel essenziell
+- **Luft zu Weichgewebe:** R ungefähr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
+- **Weichgewebe zu Knochen:** R ungefähr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
+- **Leber zu Blut:** R ungefähr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
+- **Gel zu Haut:** R ungefähr 0: nahezu vollständige Transmission: deshalb Ultraschallgel essenziell
 
 > **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
 
@@ -1403,18 +1403,18 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzflaeche re
 - Zaehler: + wenn Empfaenger sich **zur** Quelle bewegt, - wenn **weg**
 - Nenner: - wenn Quelle sich **zum** Empfaenger bewegt, + wenn **weg**
 
-> **Merke:** Annaeherung: f' > f0 (hoeherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt fuer **alle** Wellen: Schall, Licht, Ultraschall.
+> **Merke:** Annäherung: f' > f0 (höherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt für **alle** Wellen: Schall, Licht, Ultraschall.
 
 ### Doppler-Sonographie — quantitativ
 
-In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zuruecklegt (hin und zurueck), ist der Doppler-Shift:
+In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
 
 **Delta_f = 2 mal f0 mal v mal cos(theta) / c**
 
 - **v** = Blutflussgeschwindigkeit [m/s]
 - **theta** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
-- **c** = Schallgeschwindigkeit in Gewebe (ungefaehr 1540 m/s)
-- **Faktor 2**: weil der Schall zweimal den Weg durchlaeuft (Hin- und Rueckweg)
+- **c** = Schallgeschwindigkeit in Gewebe (ungefähr 1540 m/s)
+- **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
 
 **Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefaess gehalten werden (optimal: theta = 30-60 Grad).
 
@@ -1424,9 +1424,9 @@ In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfae
 
 ### Rechenbeispiel — Doppler-Sonographie:
 f0 = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), theta = 45 Grad:
-Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefaehr 1379 Hz
+Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefähr 1379 Hz
 
-Die Frequenzverschiebung von ~1,4 kHz liegt im **hoerbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
+Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
 
 ### Farbdoppler-Kodierung:
 - **Rot:** Blut fliesst auf den Schallkopf zu (Delta_f > 0)
@@ -1441,22 +1441,22 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 
 | Bereich | Frequenz | Medizinische Relevanz |
 |---------|----------|----------------------|
-| **Infraschall** | < 20 Hz | Nicht hoerbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
-| **Hoerschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
+| **Infraschall** | < 20 Hz | Nicht hörbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
+| **Hörschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
 | **Ultraschall** | > 20 kHz | Sonographie (2-20 MHz), Doppler (2-10 MHz), Lithotripsie |
 
 ### Ultraschall-Frequenzwahl in der Diagnostik:
 
-| Frequenz | Eindringtiefe | Aufloesung | Anwendung |
+| Frequenz | Eindringtiefe | Auflösung | Anwendung |
 |----------|---------------|-----------|-----------|
 | 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
 | 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefaesse |
 | 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
 | 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
 
-**Zusammenhang:** Hoehere Frequenz: kuerzere Wellenlaenge (lambda = c/f): bessere Aufloesung, aber staerkere Daempfung im Gewebe (Daempfung proportional f^2): geringere Eindringtiefe.
+**Zusammenhang:** Hoehere Frequenz: kürzere Wellenlänge (lambda = c/f): bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2): geringere Eindringtiefe.
 
-> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Aufloesung, geringe Tiefe. Niedrige Frequenz = schlechte Aufloesung, grosse Tiefe. Kompromiss je nach Fragestellung.
+> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, grosse Tiefe. Kompromiss je nach Fragestellung.
 
 ---
 
@@ -1472,24 +1472,24 @@ Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB: L = 100 - 20 = 80 dB.
 **Beispiel 3 — Reflexionskoeffizient berechnen:**
 Gewebe (Z1 = 1,63x10^6) zu Knochen (Z2 = 6,30x10^6):
 R = [(6,30 - 1,63)/(6,30 + 1,63)]^2 = [4,67/7,93]^2 = [0,589]^2 = 0,347: 34,7 % werden reflektiert.
-Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum moeglich (akustischer Schatten).
+Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum möglich (akustischer Schatten).
 
 **Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
 Delta_f = 2000 Hz, f0 = 4 MHz, theta = 60 Grad, c = 1540 m/s:
 v = Delta_f mal c / (2 mal f0 mal cos theta) = 2000 x 1540 / (2 x 4x10^6 x 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
 Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
 
-**Beispiel 5 — Ultraschall-Wellenlaenge und Aufloesung:**
+**Beispiel 5 — Ultraschall-Wellenlänge und Auflösung:**
 f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
-Axiale Aufloesung ungefaehr lambda/2 ungefaehr 0,1 mm. Ausreichend fuer Schilddruesenknoten (typisch 5-30 mm).
+Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddruesenknoten (typisch 5-30 mm).
 
 ## Klinische Vertiefung
 
-**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhoehter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
 
-**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe fuer den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft ueber die plazentare Durchblutung und damit die fetale Versorgung.
+**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
 
-**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwaermung auf > 60 Grad C: Koagulationsnekrose.
+**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwärmung auf > 60 Grad C: Koagulationsnekrose.
 
 **Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.`,
 

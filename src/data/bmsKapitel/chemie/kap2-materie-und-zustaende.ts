@@ -41,7 +41,7 @@ Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasg
 
 **1. Gesetz von Boyle-Mariotte (1662):** Bei konstanter Temperatur (T = const) und konstanter Stoffmenge (n = const) ist das Produkt aus Druck und Volumen konstant: **p * V = const**, also p1V1 = p2V2. Physikalisch: Halbiert man das Volumen, verdoppelt sich die Stoßfrequenz der Teilchen auf die Wand -> doppelter Druck.
 
-**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V1/T1 = V2/T2. Erhöht man T, steigt die kinetische Energie -> Teilchen stossen stärker -> Volumen wächst, damit p konstant bleibt.
+**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V1/T1 = V2/T2. Erhöht man T, steigt die kinetische Energie -> Teilchen stoßen stärker -> Volumen wächst, damit p konstant bleibt.
 
 **3. Gesetz von Avogadro (1811):** Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen: **V/n = const**. Das molare Volumen V_m = V/n ist bei STP stets 22,4 L/mol.
 
@@ -61,7 +61,7 @@ Häufige Umformungen:
 
 **Standardbedingungen:**
 - STP (IUPAC seit 1982): 0 Grad C (273,15 K), 1 bar -> V_m = 22,711 L/mol (exakt)
-- Ältere Definition: 0 Grad C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch ueblich)
+- Ältere Definition: 0 Grad C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch üblich)
 - SATP: 25 Grad C (298,15 K), 1 bar -> V_m = 24,790 L/mol
 
 **Druckeinheiten im Überblick:**
@@ -88,7 +88,7 @@ Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz für reale Ga
 
 **(p + a*n2/V2) * (V - n*b) = n*R*T**
 
-- **a** [L2*bar/mol2]: Korrigiert den Druck -- intermolekulare Anziehung verringert den Wandstoss-Druck.
+- **a** [L2*bar/mol2]: Korrigiert den Druck -- intermolekulare Anziehung verringert den Wandstoß-Druck.
 - **b** [L/mol]: Korrigiert das Volumen -- Kovolumen (Eigenvolumen) der Moleküle.
 
 Für H2O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
@@ -132,7 +132,7 @@ Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Bo
 
 ## Licht (elektromagnetische Welle)
 
-Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heissen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kuerzer die Wellenlänge, desto energiereicher das Licht.
+Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heissen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kürzer die Wellenlänge, desto energiereicher das Licht.
 
 > **Merke:** Licht = elektromagnetische Welle; c ungefähr 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
 
@@ -359,7 +359,7 @@ Das Daltonsche Gesetz (John Dalton, 1801) beschreibt das Druckverhalten von Gasg
 
 p_gesamt = p1 + p2 + p3 + ... = Summe pi
 
-Dabei ist der **Partialdruck** pi derjenige Druck, den jede Gaskomponente allein ausüben wuerde, wenn sie das gesamte Volumen des Behälters ausfuellte:
+Dabei ist der **Partialdruck** pi derjenige Druck, den jede Gaskomponente allein ausüben würde, wenn sie das gesamte Volumen des Behälters ausfüllte:
 
 pi = ni * R * T / V = xi * p_gesamt
 
@@ -369,7 +369,7 @@ pi = ni * R * T / V = xi * p_gesamt
 
 ## Physikalische Begründung
 
-Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich voellig unabhängig von den anderen und traegt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur naeherungsweise.
+Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
 
 **Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 Grad C (Körpertemperatur) beträgt p(H2O) ungefähr 6,27 kPa (47 mmHg).
 
@@ -401,12 +401,12 @@ Das Henry-Gesetz ergaenzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssig
 
 **c = kH * p**
 
-wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdruck (Sauerstofftherapie) loest sich mehr O2 physikalisch im Plasma. Bei Kohlensäuregetränken wird CO2 unter Druck geloest; beim Oeffnen sinkt p -> CO2 perlt aus.
+wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdruck (Sauerstofftherapie) loest sich mehr O2 physikalisch im Plasma. Bei Kohlensäuregetränken wird CO2 unter Druck gelöst; beim Oeffnen sinkt p -> CO2 perlt aus.
 
 ## Gasgemische in der Medizin
 
 - **Raumluft:** O2 21 % -> p(O2) ungefähr 21 kPa
-- **Sauerstofftherapie:** F_IO2 (inspiratorische O2-Fraktion) = 0,4-1,0 -> deutlich erhöhte p(O2) -> mehr physikalisch geloestes O2
+- **Sauerstofftherapie:** F_IO2 (inspiratorische O2-Fraktion) = 0,4-1,0 -> deutlich erhöhte p(O2) -> mehr physikalisch gelöstes O2
 - **Lachgas/O2 (Entonox):** 50:50 N2O/O2 als Analgetikum
 - **Heliox (He/O2):** Bei obstruktiver Atemwegserkrankung -- He (leichter als N2) senkt den Gasströmungswiderstand
 - **Tauchgas:** Komprimierte Luft -> erhöhte Partialdrucke aller Gase -> N2-Narkose (Tiefenrausch) ab p(N2) > 3-4 bar
@@ -434,7 +434,7 @@ Zu hohe O2-Partialdrucke sind schädlich! Bei F_IO2 > 0,6 über längere Zeit dr
 
 ## Umrechnung kPa und mmHg
 
-In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie haeufig in kPa:
+In der Klinik werden Blutgaswerte oft in mmHg angegeben, in der Physiologie häufig in kPa:
 - **1 kPa = 7,5 mmHg** (Faktor 7,5)
 - **1 mmHg = 0,1333 kPa** (Faktor 0,133)
 - Schnelle Umrechnung: kPa * 7,5 = mmHg; mmHg / 7,5 = kPa

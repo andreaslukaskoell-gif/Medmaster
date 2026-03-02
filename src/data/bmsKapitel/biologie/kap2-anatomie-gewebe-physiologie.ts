@@ -461,7 +461,7 @@ Sekretionsmechanismen exokriner Drüsen:
 - **Z-Scheiben** rücken zusammen -> Sarkomer wird kürzer
 
 **Strukturproteine:**
-- **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) -> Ruhespannung + Schutz vor Ueberdehnung
+- **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) -> Ruhespannung + Schutz vor Überdehnung
 - **Nebulin**: Parallel zu Aktin, legt Filamentlänge fest
 
 > **Merke:** Bei Kontraktion: **I-Bande kürzer, H-Zone kürzer, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!

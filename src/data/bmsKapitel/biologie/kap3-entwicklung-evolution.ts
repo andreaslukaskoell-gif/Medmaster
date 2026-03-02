@@ -717,21 +717,21 @@ Polyploidie ist in der Humanmedizin teratogen (fruchtschädigend): Triploide (3n
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Stammbaeume, Homologie und Analogie
+      content: `## Stammbäume, Homologie und Analogie
 
-Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus — und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend aehnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbaeume richtig zu lesen.
+Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus — und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
 
 
 ## Homologie vs. Analogie — Ein kritischer Unterschied
 
-Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft aehnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell aehnlich (durch konvergente Evolution auf dasselbe Problem gestossen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, aehnlicher Bau; Analogie → unabhängige Entstehung, aehnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
+Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft ähnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell ähnlich (durch konvergente Evolution auf dasselbe Problem gestoßen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, ähnlicher Bau; Analogie → unabhängige Entstehung, ähnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
 
 > **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
 
 | Merkmal | Homologie | Analogie |
 | --- | --- | --- |
 | Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
-| Bauplan | Aehnlich (Grundstruktur) | Verschieden |
+| Bauplan | Ähnlich (Grundstruktur) | Verschieden |
 | Funktion | Oft verschieden | Gleich |
 | Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
 | Nachweis | Embryologie, Anatomie | Funktionsanalyse |
@@ -741,18 +741,18 @@ Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied
 
 ## Molekulare Uhr — Evolution zeitlich datieren
 
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
+Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
 
 ---
 
-## Kladistik und Stammbaeume lesen
+## Kladistik und Stammbäume lesen
 
 {{DIAGRAM:dna-helix}}
 
 Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
-- **Aeste** = Evolutionslinien der abstammenden Taxa (systematische Einheiten wie Art, Gattung, Familie)
+- **Äste** = Evolutionslinien der abstammenden Taxa (systematische Einheiten wie Art, Gattung, Familie)
 - **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
 - **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
 - **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen

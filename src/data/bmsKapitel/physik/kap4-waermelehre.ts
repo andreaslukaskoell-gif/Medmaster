@@ -892,7 +892,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 ## Ideales Gasgesetz
 
-Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlaessigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase naeherungsweise ideal.
+Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen und das Eigenvolumen der Teilchen vernachlässigt werden. Bei niedrigem Druck und hoher Temperatur verhalten sich viele reale Gase näherungsweise ideal.
 
 **Allgemeine Zustandsgleichung des idealen Gases:**
 
@@ -904,7 +904,7 @@ Das ideale Gas ist ein Modell, bei dem Wechselwirkungen zwischen den Teilchen un
 - R: universelle Gaskonstante = 8,314 J/(mol K)
 - T: Temperatur [K] (unbedingt in Kelvin!)
 
-Aus dieser Gleichung lassen sich alle Spezialfaelle ableiten:
+Aus dieser Gleichung lassen sich alle Spezialfälle ableiten:
 - **Boyle-Mariotte** (T = const): p mal V = const (isotherm)
 - **Gay-Lussac** (p = const): V/T = const (isobar)
 - **Charles** (V = const): p/T = const (isochor)
@@ -914,43 +914,43 @@ Molvolumen bei Normzustand: V_m = RT0/p0 = 22,4 L/mol.
 
 ## Phasendiagramm
 
-Ein Phasendiagramm stellt die Gleichgewichtszustaende eines Stoffes als Funktion von Druck und Temperatur dar. Die drei Hauptphasen — **fest, fluessig, gasfoermig** — sind durch Phasengrenzkurven getrennt:
+Ein Phasendiagramm stellt die Gleichgewichtszustände eines Stoffes als Funktion von Druck und Temperatur dar. Die drei Hauptphasen — **fest, flüssig, gasförmig** — sind durch Phasengrenzkurven getrennt:
 
-- **Schmelzkurve**: Fest-Fluessig-Grenze (fast senkrecht, da Schmelzpunkt wenig druckabhaengig)
-- **Dampfdruckkurve**: Fluessig-Gasfoermig-Grenze (endet am kritischen Punkt)
-- **Sublimationskurve**: Fest-Gasfoermig-Grenze
+- **Schmelzkurve**: Fest-Flüssig-Grenze (fast senkrecht, da Schmelzpunkt wenig druckabhängig)
+- **Dampfdruckkurve**: Flüssig-Gasförmig-Grenze (endet am kritischen Punkt)
+- **Sublimationskurve**: Fest-Gasförmig-Grenze
 
-**Tripelpunkt**: Alle drei Phasen koexistieren. Fuer Wasser: T_triple = 273,16 K, p_triple = 611,7 Pa.
+**Tripelpunkt**: Alle drei Phasen koexistieren. Für Wasser: T_triple = 273,16 K, p_triple = 611,7 Pa.
 
-**Kritischer Punkt**: Oberhalb von T_krit und p_krit gibt es keine Unterscheidung mehr zwischen fluessig und gasfoermig (ueberkritisches Fluid). Fuer Wasser: T_krit = 647 K, p_krit = 221 bar.
+**Kritischer Punkt**: Oberhalb von T_krit und p_krit gibt es keine Unterscheidung mehr zwischen flüssig und gasförmig (überkritisches Fluid). Für Wasser: T_krit = 647 K, p_krit = 221 bar.
 
-Wasser: Die Schmelzkurve hat eine negative Steigung (einzigartig) — Erhoehung des Drucks senkt den Schmelzpunkt (ermoeglicht z. B. Schlittschuhlaufen, Gletscherbewegung).
+Wasser: Die Schmelzkurve hat eine negative Steigung (einzigartig) — Erhöhung des Drucks senkt den Schmelzpunkt (ermöglicht z. B. Schlittschuhlaufen, Gletscherbewegung).
 
-## Latenwaermen (Phasenuebergangwaerme)
+## Latenwärmen (Phasenübergangwärme)
 
-Bei Phasenuebergaengen aendert sich die Temperatur nicht, obwohl Waerme zu- oder abgefuehrt wird. Die Energie geht in die Aenderung der potentiellen Energie (Bindungen zwischen Teilchen).
+Bei Phasenuebergaengen ändert sich die Temperatur nicht, obwohl Wärme zu- oder abgeführt wird. Die Energie geht in die Änderung der potentiellen Energie (Bindungen zwischen Teilchen).
 
-**Schmelzwaerme (Enthalpie der Fusion):** Q = m mal L_f
-**Verdampfungswaerme (Enthalpie der Vaporisation):** Q = m mal L_v
+**Schmelzwärme (Enthalpie der Fusion):** Q = m mal L_f
+**Verdampfungswärme (Enthalpie der Vaporisation):** Q = m mal L_v
 
-Die Verdampfungswaerme ist etwa 7-mal groesser als die Schmelzwaerme!
+Die Verdampfungswärme ist etwa 7-mal größer als die Schmelzwärme!
 
 ## Dampfdruck und Siedepunkt
 
-Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes ueber einer Fluessigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt Dampfdruck-Temperatur-Beziehung). **Sieden** tritt auf, wenn p_D = p_Aussen.
+Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes über einer Flüssigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt Dampfdruck-Temperatur-Beziehung). **Sieden** tritt auf, wenn p_D = p_Aussen.
 
 Konsequenzen:
-- Im Hochgebirge ist p_Aussen kleiner: Wasser siedet unter 100 Grad C (z. B. auf 3000 m Hoehe bei ungefaehr 90 Grad C).
-- Im Dampfkochtopf wird der Druck erhoeht: Siedepunkt steigt: Lebensmittel garen bei hoeherer Temperatur.
-- **Autoklav**: Sterilisation bei 121 Grad C / 2 bar: alle Keime (inkl. Sporen) werden abgetoetet.
+- Im Hochgebirge ist p_Aussen kleiner: Wasser siedet unter 100 Grad C (z. B. auf 3000 m Hoehe bei ungefähr 90 Grad C).
+- Im Dampfkochtopf wird der Druck erhöht: Siedepunkt steigt: Lebensmittel garen bei höherer Temperatur.
+- **Autoklav**: Sterilisation bei 121 Grad C / 2 bar: alle Keime (inkl. Sporen) werden abgetötet.
 
 ## Klinisch wichtige Gesetze
 
-**Henry-Gesetz**: Die im Blut geloeste Gasmenge ist proportional zum Partialdruck des Gases ueber der Fluessigkeit: c = k_H mal p. Klinische Relevanz:
+**Henry-Gesetz**: Die im Blut gelöste Gasmenge ist proportional zum Partialdruck des Gases über der Flüssigkeit: c = k_H mal p. Klinische Relevanz:
 - Taucherkrankheit (Dekompressionskrankheit): Bei schnellem Auftauchen faellt der Stickstoffpartialdruck rasch: N2 bildet Gasblasen im Gewebe/Blut: Embolien, Schmerzen.
-- Hyperbare Sauerstofftherapie: 100 % O2 bei erhoehtem Druck: mehr O2 im Blutplasma geloest.
+- Hyperbare Sauerstofftherapie: 100 % O2 bei erhöhtem Druck: mehr O2 im Blutplasma gelöst.
 
-**Verdunstungskuehlung (Schwitzen)**: Pro Gramm Schweiss werden bei 37 Grad C ungefaehr 2430 J abgefuehrt. Bei 1 L/h Schweissproduktion: Kuehlleistung ungefaehr 675 W. Essentiell fuer Thermoregulation bei Sport.
+**Verdunstungskühlung (Schwitzen)**: Pro Gramm Schweiß werden bei 37 Grad C ungefähr 2430 J abgeführt. Bei 1 L/h Schweißproduktion: Kühlleistung ungefähr 675 W. Essentiell für Thermoregulation bei Sport.
 
 ## Rechenbeispiele
 
@@ -958,29 +958,29 @@ Konsequenzen:
 Spritze mit V1 = 50 mL Luft bei p1 = 1 bar. Der Kolben wird auf V2 = 10 mL komprimiert (T = const):
 p2 = p1 mal V1/V2 = 1 x 50/10 = 5 bar. Anwendung: Druckinfusor in der Notfallmedizin.
 
-**Beispiel 2 — Eis schmelzen und dann erwaermen (Kombinationsaufgabe):**
-500 g Eis bei 0 Grad C zu fluessigem Wasser bei 37 Grad C. Schritt 1: Schmelzen: Q1 = 0,5 x 334 000 = 167 000 J.
-Schritt 2: Erwaermen: Q2 = 0,5 x 4180 x 37 = 77 330 J.
-Gesamt: Q = Q1 + Q2 = 244 330 J ungefaehr 244 kJ. Der Schmelzvorgang braucht mehr als doppelt so viel Energie wie das anschliessende Erwaermen um 37 K!
+**Beispiel 2 — Eis schmelzen und dann erwärmen (Kombinationsaufgabe):**
+500 g Eis bei 0 Grad C zu flüssigem Wasser bei 37 Grad C. Schritt 1: Schmelzen: Q1 = 0,5 x 334 000 = 167 000 J.
+Schritt 2: Erwärmen: Q2 = 0,5 x 4180 x 37 = 77 330 J.
+Gesamt: Q = Q1 + Q2 = 244 330 J ungefähr 244 kJ. Der Schmelzvorgang braucht mehr als doppelt so viel Energie wie das anschließende Erwärmen um 37 K!
 
 **Beispiel 3 — Henry-Gesetz und Tauchen:**
-An der Oberflaeche (1 bar): c(N2) = k_H x 0,79 bar (N2-Anteil der Luft). In 30 m Tiefe (4 bar): c(N2) = k_H x 0,79 x 4 = 4-fache N2-Konzentration im Blut. Dekompression noetig: Aufstiegsgeschwindigkeit kleiner-gleich 9 m/min mit Sicherheitsstopp auf 5 m fuer 3 Minuten (Standardtauchtabelle).
+An der Oberfläche (1 bar): c(N2) = k_H x 0,79 bar (N2-Anteil der Luft). In 30 m Tiefe (4 bar): c(N2) = k_H x 0,79 x 4 = 4-fache N2-Konzentration im Blut. Dekompression nötig: Aufstiegsgeschwindigkeit kleiner-gleich 9 m/min mit Sicherheitsstopp auf 5 m für 3 Minuten (Standardtauchtabelle).
 
 **Beispiel 4 — Gay-Lussac (isobare Expansion einer Lunge):**
-Einatmungsvolumen V1 = 500 mL bei T1 = 20 Grad C = 293 K (kalte Aussenluft). In der Lunge auf T2 = 37 Grad C = 310 K erwaermt (p = const):
-V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ungefaehr 6 % beim Erwaermen in der Lunge.
+Einatmungsvolumen V1 = 500 mL bei T1 = 20 Grad C = 293 K (kalte Aussenluft). In der Lunge auf T2 = 37 Grad C = 310 K erwärmt (p = const):
+V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ungefähr 6 % beim Erwärmen in der Lunge.
 
 ## Klinische Vertiefung
 
-**Dampfsterilisation (Autoklav):** Standard-Sterilisationszyklus: 121 Grad C / 2 bar / 15 min fuer chirurgische Instrumente. Fuer Prionen-kontaminiertes Material (Creutzfeldt-Jakob): 134 Grad C / 3 bar / 18 min. Das Prinzip: Erhoehter Dampfdruck verschiebt den Siedepunkt nach oben: feuchte Hitze denaturiert Proteine und DNA effizienter als trockene Hitze (trockene Sterilisation: 180 Grad C / 30 min noetig).
+**Dampfsterilisation (Autoklav):** Standard-Sterilisationszyklus: 121 Grad C / 2 bar / 15 min für chirurgische Instrumente. Für Prionen-kontaminiertes Material (Creutzfeldt-Jakob): 134 Grad C / 3 bar / 18 min. Das Prinzip: Erhöhter Dampfdruck verschiebt den Siedepunkt nach oben: feuchte Hitze denaturiert Proteine und DNA effizienter als trockene Hitze (trockene Sterilisation: 180 Grad C / 30 min nötig).
 
-**Pulsoxymetrie und Gaspartialdruecke:** Die O2-Saettigung des Haemoglobins haengt vom pO2 ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO2 auch die physikalisch geloeste O2-Menge im Plasma (ungefaehr 0,3 mL O2 pro 100 mL Blut bei pO2 = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O2) steigt der physikalisch geloeste Anteil auf ungefaehr 6 mL/100 mL — genug, um Gewebe auch ohne Haemoglobin zu versorgen.
+**Pulsoxymetrie und Gaspartialdrücke:** Die O2-Sättigung des Hämoglobins hängt vom pO2 ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO2 auch die physikalisch gelöste O2-Menge im Plasma (ungefähr 0,3 mL O2 pro 100 mL Blut bei pO2 = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O2) steigt der physikalisch gelöste Anteil auf ungefähr 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
 
-**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation (Gefriertrocknung) haltbar gemacht: Einfrieren: Druck senken unter den Tripelpunkt: Eis sublimiert direkt zu Dampf. Das Produkt behaelt seine Struktur (Proteine bleiben funktionsfaehig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefuegt — die urspruengliche Loesung entsteht wieder.
+**Sublimation in der Medizin (Gefriertrocknung):** Impfstoffe und Blutplasma werden durch Lyophilisation (Gefriertrocknung) haltbar gemacht: Einfrieren: Druck senken unter den Tripelpunkt: Eis sublimiert direkt zu Dampf. Das Produkt behält seine Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird Wasser zugefuegt — die ursprüngliche Lösung entsteht wieder.
 
-> **Merke:** Phasenuebergaenge (Schmelzen, Verdampfen, Sublimieren) benoetigen Energie (latente Waerme), ohne dass sich die Temperatur aendert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
+> **Merke:** Phasenuebergaenge (Schmelzen, Verdampfen, Sublimieren) benötigen Energie (latente Wärme), ohne dass sich die Temperatur ändert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
 
-> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Fluessigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg frueher (niedrigerer Luftdruck).`,
+> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Flüssigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg früher (niedrigerer Luftdruck).`,
 
       lernziele: [
         "Die allgemeine Zustandsgleichung des idealen Gases pV = nRT anwenden und Sonderfälle ableiten",

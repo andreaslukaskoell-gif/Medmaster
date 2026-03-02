@@ -878,7 +878,7 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
         },
       ],
     },
-    // === from kap10-saeure-base ===
+    // === from kap10-säure-base ===
     {
       id: "ch-10-01",
       title: "Säure-Base-Definitionen und pH-Wert",
@@ -909,7 +909,7 @@ Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzepti
 
 Diese Definition gilt auch für nicht-wässrige Lösungen und erklärt Protonenübertragungsreaktionen umfassend. Jede Säure-Base-Reaktion ist nach Brønsted eine **Protonenübertragung** zwischen einem Donor und einem Akzeptor.
 
-Beispiel: CH3COOH + H2O <=> CH3COO- + H3O+ (Saeure1 + Base2 <=> Base1 + Saeure2)
+Beispiel: CH3COOH + H2O <=> CH3COO- + H3O+ (Säure1 + Base2 <=> Base1 + Säure2)
 
 Aus jeder Säure entsteht nach Protonenabgabe die **korrespondierende (konjugierte) Base** – und umgekehrt. Säure und ihre korrespondierende Base unterscheiden sich immer genau um ein H⁺.
 
@@ -2467,7 +2467,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
 
 <!-- DIAGRAM:ionic-bond -->
 
-Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbruecke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall loest sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
+Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall loest sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
 
 **Aufbau eines Daniell-Elements (Zn/Cu-Zelle):**
 - Anode (negativ): Zn -> Zn2+ + 2e- (Oxidation)
@@ -2475,15 +2475,15 @@ Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie 
 - Gesamt: Zn + Cu2+ -> Zn2+ + Cu
 - Zellspannung: E-Zelle = E-Kathode - E-Anode = +0,34 V - (-0,76 V) = **+1,10 V**
 
-Die **Salzbruecke** (z. B. mit gesaettigter KCl-Loesung) sorgt fuer Ladungsausgleich zwischen den Halbzellen, ohne die Elektroden-Loesungen zu vermischen. Ohne Salzbruecke wuerde schnell eine Ladungstrennung entstehen, die den Elektronenfluss stoppt.
+Die **Salzbrücke** (z. B. mit gesättigter KCl-Lösung) sorgt für Ladungsausgleich zwischen den Halbzellen, ohne die Elektroden-Lösungen zu vermischen. Ohne Salzbrücke würde schnell eine Ladungstrennung entstehen, die den Elektronenfluss stoppt.
 
 ## Standardelektrodenpotenziale (Standardreduktionspotenziale)
 
 Das Standardelektrodenpotenzial E beschreibt die Tendenz eines Redox-Paares, Elektronen aufzunehmen (Reduktion), gemessen gegen die Standard-Wasserstoff-Elektrode (SHE, E = 0,00 V per Definition) bei 25 Grad C, 1 atm, allen Ionen in 1 mol/L Konzentration.
 
 **Regeln zur Verwendung:**
-- Hoeheres E = staerkeres Oxidationsmittel (nimmt lieber Elektronen auf)
-- Niedrigeres E = staerkeres Reduktionsmittel (gibt lieber Elektronen ab)
+- Höheres E = stärkeres Oxidationsmittel (nimmt lieber Elektronen auf)
+- Niedrigeres E = stärkeres Reduktionsmittel (gibt lieber Elektronen ab)
 - Eine spontane Redox-Reaktion laeuft ab, wenn E-Zelle = E-Kathode - E-Anode > 0
 - DeltaG = -n*F*E-Zelle (Faraday-Gleichung, n = Elektronenanzahl, F = 96485 C/mol)
 
@@ -2491,48 +2491,48 @@ Das Standardelektrodenpotenzial E beschreibt die Tendenz eines Redox-Paares, Ele
 
 ## Elektrolyse (erzwungene Redox-Reaktionen)
 
-Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektrische Energie erzwungen. Die Polaritaet wird umgekehrt: Anode ist jetzt positiv (angeschlossen an den Plus-Pol), Kathode ist negativ.
+Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektrische Energie erzwungen. Die Polarität wird umgekehrt: Anode ist jetzt positiv (angeschlossen an den Plus-Pol), Kathode ist negativ.
 
 **Faradaysche Gesetze:**
 1. Die abgeschiedene Stoffmenge ist proportional zur geflossenen Ladungsmenge (Q = I * t)
-2. Fuer gleiche Ladung werden aequivalente Stoffmengen verschiedener Elemente abgeschieden
+2. Für gleiche Ladung werden aequivalente Stoffmengen verschiedener Elemente abgeschieden
 
 **m = (M * I * t) / (n * F)**
 - m = abgeschiedene Masse (g)
 - M = Molmasse (g/mol)
-- I = Stromstaerke (A)
+- I = Stromstärke (A)
 - t = Zeit (s)
-- n = Anzahl uebertragener Elektronen
+- n = Anzahl übertragener Elektronen
 - F = Faraday-Konstante = 96485 C/mol
 
-**Beispiel: Elektrolyse von CuSO4-Loesung**
+**Beispiel: Elektrolyse von CuSO4-Lösung**
 - Kathode: Cu2+ + 2e- -> Cu (Kupfer scheidet sich ab)
 - Anode: 2H2O -> O2 + 4H+ + 4e- (Wasser wird oxidiert, wenn Elektrode inert)
 - Anwendung: Galvanik, Kupferraffination, Chlor-Alkali-Elektrolyse
 
 ## Batterien und Akkumulatoren
 
-**Primaerzellen** (nicht wiederaufladbar): Leclanche-Element (Zinkkohlenstoff), Alkaline-Batterie (Zn/MnO2), Lithium-Primaerzellen. Die chemischen Reaktionen sind irreversibel.
+**Primärzellen** (nicht wiederaufladbar): Leclanche-Element (Zinkkohlenstoff), Alkaline-Batterie (Zn/MnO2), Lithium-Primärzellen. Die chemischen Reaktionen sind irreversibel.
 
-**Sekundaerzellen/Akkumulatoren** (wiederaufladbar): Blei-Akkumulator, Lithium-Ionen-Akku, Nickel-Metallhydrid (NiMH). Beim Laden werden die Redox-Reaktionen durch externe Energie umgekehrt.
+**Sekundärzellen/Akkumulatoren** (wiederaufladbar): Blei-Akkumulator, Lithium-Ionen-Akku, Nickel-Metallhydrid (NiMH). Beim Laden werden die Redox-Reaktionen durch externe Energie umgekehrt.
 
 **Blei-Akkumulator (Kfz-Batterie):**
 - Entladen (Anode): Pb -> Pb2+ + 2e- (Pb wird zu PbSO4)
 - Entladen (Kathode): PbO2 + 4H+ + SO4(2-) + 2e- -> PbSO4 + 2H2O
 - Laden: Reaktionen umgekehrt, PbSO4 -> Pb und PbO2
 
-**Brennstoffzellen:** H2 + 1/2 O2 -> H2O mit direkter elektrischer Energiegewinnung (Wirkungsgrad bis 60%), ideal fuer CO2-freie Energieerzeugung.
+**Brennstoffzellen:** H2 + 1/2 O2 -> H2O mit direkter elektrischer Energiegewinnung (Wirkungsgrad bis 60%), ideal für CO2-freie Energieerzeugung.
 
-> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion -- gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse positiv (umgekehrte Polaritaet).
+> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion -- gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse positiv (umgekehrte Polarität).
 
-## Korrosion -- elektrochemische Zerstoerung
+## Korrosion -- elektrochemische Zerstörung
 
-Korrosion ist eine unerwuenschte galvanische Reaktion: Ein Metall (z. B. Eisen) wird in Gegenwart von Wasser und O2 oxidiert: Fe -> Fe2+ + 2e- (Anode); O2 + 2H2O + 4e- -> 4OH- (Kathode). Fe2+ und OH- bilden Fe(OH)2, das zu Fe2O3*xH2O (Rost) weiteroxidiert.
+Korrosion ist eine unerwünschte galvanische Reaktion: Ein Metall (z. B. Eisen) wird in Gegenwart von Wasser und O2 oxidiert: Fe -> Fe2+ + 2e- (Anode); O2 + 2H2O + 4e- -> 4OH- (Kathode). Fe2+ und OH- bilden Fe(OH)2, das zu Fe2O3*xH2O (Rost) weiteroxidiert.
 
 **Korrosionsschutz:**
 - **Kathodischer Schutz:** Opferanode aus unedlerem Metall (Zn an Stahlschiffen, Mg an Pipelines) -- das unedlere Metall wird bevorzugt oxidiert
-- **Verzinkung:** Zn-Ueberzug schuetzt selbst bei Beschaedigung (Zn als Opferanode)
-- **Passivierung:** Aluminium bildet eine dichte Al2O3-Schicht (selbstschuetzend)
+- **Verzinkung:** Zn-Überzug schützt selbst bei Beschädigung (Zn als Opferanode)
+- **Passivierung:** Aluminium bildet eine dichte Al2O3-Schicht (selbstschützend)
 - **Lacke und Beschichtungen:** Verhindern Kontakt mit Elektrolyt
 
 ## Rechenbeispiel: DeltaG aus Zellspannung
@@ -2541,16 +2541,16 @@ Daniell-Element (Zn/Cu): E-Zelle = +1,10 V, n = 2 Elektronen.
 
 DeltaG = -n * F * E-Zelle = -2 x 96485 C/mol x 1,10 V = -212267 J/mol = **-212 kJ/mol**
 
-Negativer DeltaG-Wert bestaetigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist spontan und exergon. Verknuepfung mit Gleichgewichtskonstante: ln(K) = nFE/(RT) -> K = e^(2 x 96485 x 1,10 / (8,314 x 298)) = ca. 10^37 (praktisch vollstaendig).
+Negativer DeltaG-Wert bestätigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist spontan und exergon. Verknüpfung mit Gleichgewichtskonstante: ln(K) = nFE/(RT) -> K = e^(2 x 96485 x 1,10 / (8,314 x 298)) = ca. 10^37 (praktisch vollständig).
 
 ## Medizinische Anwendungen der Elektrochemie
 
-- **Herzschrittmacher:** Lithium-Iodid-Primaerbatterien (5-10 Jahre Lebensdauer) oder Li-Ionen-Akkus
+- **Herzschrittmacher:** Lithium-Iodid-Primärbatterien (5-10 Jahre Lebensdauer) oder Li-Ionen-Akkus
 - **Blutgasanalyse:** Potentiometrische pH- und pO2-Elektroden basieren auf Standardelektrodenpotenzial-Prinzipien
 - **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
-- **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) koennen galvanische Elemente bilden -> Galvanischer Geschmack
+- **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden -> Galvanischer Geschmack
 
-> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je groesser E-Zelle, desto mehr nutzbare elektrische Energie.`,
+> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -2770,17 +2770,17 @@ Negativer DeltaG-Wert bestaetigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
 
 ## Warum reicht E allein nicht aus?
 
-Im letzten Unterkapitel hast du das **Standardpotenzial E** kennengelernt -- die Spannung unter idealen Laborbedingungen (25 Grad C, alle Konzentrationen exakt 1 mol/L). In der Realitaet sind diese Bedingungen aber fast nie erfuellt: Im Blut liegt die K+-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Also brauchen wir eine Formel, die das beruecksichtigt.
+Im letzten Unterkapitel hast du das **Standardpotenzial E** kennengelernt -- die Spannung unter idealen Laborbedingungen (25 Grad C, alle Konzentrationen exakt 1 mol/L). In der Realität sind diese Bedingungen aber fast nie erfüllt: Im Blut liegt die K+-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Also brauchen wir eine Formel, die das berücksichtigt.
 
-**Die Grundidee in einem Satz:** Je mehr vom Oxidationsmittel vorhanden ist, desto staerker "will" die Reaktion ablaufen -> die Spannung steigt. Je mehr vom Reduktionsmittel da ist, desto schwaecher wird der Antrieb -> die Spannung sinkt.
+**Die Grundidee in einem Satz:** Je mehr vom Oxidationsmittel vorhanden ist, desto stärker "will" die Reaktion ablaufen -> die Spannung steigt. Je mehr vom Reduktionsmittel da ist, desto schwächer wird der Antrieb -> die Spannung sinkt.
 
-Das ist wie ein Wasserfall: Je groesser der Hoehenunterschied (= Konzentrationsunterschied), desto mehr Kraft hat das Wasser (= Spannung).
+Das ist wie ein Wasserfall: Je größer der Hoehenunterschied (= Konzentrationsunterschied), desto mehr Kraft hat das Wasser (= Spannung).
 
 ---
 
-## Die Nernst-Gleichung -- Schritt fuer Schritt
+## Die Nernst-Gleichung -- Schritt für Schritt
 
-Die Formel sieht auf den ersten Blick kompliziert aus, aber sie hat nur **eine zentrale Aussage**: *Das reale Potenzial E weicht vom Standardpotenzial E ab, und zwar abhaengig vom Konzentrationsverhaeltnis Q.*
+Die Formel sieht auf den ersten Blick kompliziert aus, aber sie hat nur **eine zentrale Aussage**: *Das reale Potenzial E weicht vom Standardpotenzial E ab, und zwar abhängig vom Konzentrationsverhältnis Q.*
 
 **E = E_Standard - (0,05916 V)/n * log(Q)**   *(bei 25 Grad C)*
 
@@ -2788,28 +2788,28 @@ Was bedeuten die einzelnen Teile?
 
 | Symbol | Bedeutung | Woher kommt es? |
 |--------|-----------|-----------------|
-| **E** | Das tatsaechliche Potenzial -- was du messen wuerdest | Das ist gesucht |
+| **E** | Das tatsächliche Potenzial -- was du messen würdest | Das ist gesucht |
 | **E_Standard** | Das Standardpotenzial (aus der Tabelle) | Bekannt aus dem letzten UK |
 | **0,05916 V** | Der "Nernst-Faktor" -- eine Naturkonstante bei 25 Grad C | Kommt aus R*T/F * ln(10) |
-| **n** | Anzahl uebertragener Elektronen | Aus der Reaktionsgleichung |
+| **n** | Anzahl übertragener Elektronen | Aus der Reaktionsgleichung |
 | **Q** | Reaktionsquotient: [Produkte] / [Edukte] | Aus den aktuellen Konzentrationen |
 
-**Das Minuszeichen** ist der Schluessel: Wenn Q gross wird (viel Produkt, wenig Edukt -> Batterie fast leer), wird E kleiner. Wenn Q klein ist (viel Edukt -> Batterie frisch), bleibt E nahe an E_Standard oder wird sogar groesser.
+**Das Minuszeichen** ist der Schlüssel: Wenn Q gross wird (viel Produkt, wenig Edukt -> Batterie fast leer), wird E kleiner. Wenn Q klein ist (viel Edukt -> Batterie frisch), bleibt E nahe an E_Standard oder wird sogar größer.
 
-> **Merke:** Mehr Oxidationsmittel (Edukt) = staerkerer Antrieb = hoeheres E. Mehr Reduktionsmittel (Produkt) = schwaecherer Antrieb = niedrigeres E. Der Nernst-Faktor betraegt **59,16 mV pro Zehnerpotenz** im Konzentrationsverhaeltnis (bei 25 Grad C).
+> **Merke:** Mehr Oxidationsmittel (Edukt) = stärkerer Antrieb = hoeheres E. Mehr Reduktionsmittel (Produkt) = schwächerer Antrieb = niedrigeres E. Der Nernst-Faktor beträgt **59,16 mV pro Zehnerpotenz** im Konzentrationsverhältnis (bei 25 Grad C).
 
 ---
 
-## Wie misst das pH-Geraet im Krankenhaus?
+## Wie misst das pH-Gerät im Krankenhaus?
 
-Die wichtigste Anwendung der Nernst-Gleichung in der Klinik ist die **pH-Messung** mit einer Glaselektrode. Das Prinzip ist elegant: Eine spezielle Glasmembran laesst nur H+-Ionen durch. Je nachdem wie viele H+-Ionen in der Loesung sind (= der pH-Wert), baut sich eine messbare Spannung auf.
+Die wichtigste Anwendung der Nernst-Gleichung in der Klinik ist die **pH-Messung** mit einer Glaselektrode. Das Prinzip ist elegant: Eine spezielle Glasmembran lässt nur H+-Ionen durch. Je nachdem wie viele H+-Ionen in der Lösung sind (= der pH-Wert), baut sich eine messbare Spannung auf.
 
-Pro **pH-Einheit** aendert sich die Spannung um genau **59,16 mV** (bei 25 Grad C).
+Pro **pH-Einheit** ändert sich die Spannung um genau **59,16 mV** (bei 25 Grad C).
 
 - pH sinkt um 1 (z. B. von 7 auf 6 = 10-fach mehr H+) -> Spannung steigt um ca. 59 mV
 - pH steigt um 1 (z. B. von 7 auf 8 = 10-fach weniger H+) -> Spannung sinkt um ca. 59 mV
 
-Bei **Koerpertemperatur (37 Grad C)** betraegt der Nernst-Faktor ca. **61,5 mV** pro pH-Einheit.
+Bei **Körpertemperatur (37 Grad C)** beträgt der Nernst-Faktor ca. **61,5 mV** pro pH-Einheit.
 
 > **Merke:** Glaselektrode: **-59 mV pro pH-Einheit** (25 Grad C). Klinisch: Blutgasanalysator misst Blut-pH (Norm: 7,35-7,45) genau mit diesem Prinzip.
 
@@ -2820,9 +2820,9 @@ Bei **Koerpertemperatur (37 Grad C)** betraegt der Nernst-Faktor ca. **61,5 mV**
 Stell dir eine Nervenzelle vor:
 
 - **Innerhalb** der Zelle: viel K+ (ca. 140 mmol/L), wenig Na+ (ca. 15 mmol/L)
-- **Ausserhalb** der Zelle: wenig K+ (ca. 4 mmol/L), viel Na+ (ca. 145 mmol/L)
+- **Außerhalb** der Zelle: wenig K+ (ca. 4 mmol/L), viel Na+ (ca. 145 mmol/L)
 
-Dieser Konzentrationsunterschied erzeugt -- genau wie bei einer Batterie -- eine elektrische Spannung. Die Nernst-Gleichung berechnet, welche Spannung sich fuer **ein einzelnes Ion** ergibt:
+Dieser Konzentrationsunterschied erzeugt -- genau wie bei einer Batterie -- eine elektrische Spannung. Die Nernst-Gleichung berechnet, welche Spannung sich für **ein einzelnes Ion** ergibt:
 
 **E_Ion = (RT/zF) * ln([aussen] / [innen])**
 
@@ -2833,7 +2833,7 @@ In der Praxis merkt man sich die Ergebnisse:
 | **K+** | 140 mmol/L | 4 mmol/L | **ca. -90 mV** |
 | **Na+** | 15 mmol/L | 145 mmol/L | **ca. +62 mV** |
 
-Waere die Membran *nur* fuer K+ durchlaessig, laege das Potenzial bei -90 mV. Waere sie *nur* fuer Na+ durchlaessig, bei +62 mV. In der Realitaet ist sie vor allem fuer K+ durchlaessig -- daher liegt das **Ruhemembranpotenzial bei ca. -70 mV** (naeher am K+-Wert).
+Waere die Membran *nur* für K+ durchlässig, laege das Potenzial bei -90 mV. Waere sie *nur* für Na+ durchlässig, bei +62 mV. In der Realität ist sie vor allem für K+ durchlässig -- daher liegt das **Ruhemembranpotenzial bei ca. -70 mV** (näher am K+-Wert).
 
 > **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial (ca. -70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.`,
       lernziele: [
@@ -3041,63 +3041,63 @@ Waere die Membran *nur* fuer K+ durchlaessig, laege das Potenzial bei -90 mV. Wa
 
 ## Reaktive Sauerstoffspezies (ROS)
 
-Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Molekuele, die in der Lage sind, zellulaere Biomolekuele zu oxidieren und zu schaedigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
+Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochreaktive, sauerstoffhaltige Moleküle, die in der Lage sind, zelluläre Biomoleküle zu oxidieren und zu schädigen. Sie entstehen als unvermeidliche Nebenprodukte des aeroben Stoffwechsels, aber auch gezielt durch Immunzellen zur Pathogenabwehr.
 
 **Wichtige ROS und ihre Bildung:**
-- **Superoxid-Radikalanion (O2*-):** Entsteht durch unvollstaendige Reduktion von O2 (1-Elektronen-Uebertragung), besonders an Komplex I und III der Atmungskette. O2 + e- -> O2*-
-- **Wasserstoffperoxid (H2O2):** Entsteht aus O2*- durch Superoxiddismutase (SOD): 2O2*- + 2H+ -> H2O2 + O2. Weniger reaktiv als O2*-, aber membrangaengig.
+- **Superoxid-Radikalanion (O2*-):** Entsteht durch unvollständige Reduktion von O2 (1-Elektronen-Übertragung), besonders an Komplex I und III der Atmungskette. O2 + e- -> O2*-
+- **Wasserstoffperoxid (H2O2):** Entsteht aus O2*- durch Superoxiddismutase (SOD): 2O2*- + 2H+ -> H2O2 + O2. Weniger reaktiv als O2*-, aber membrangängig.
 - **Hydroxyl-Radikal (*OH):** Das reaktivste ROS. Entsteht aus H2O2 durch die **Fenton-Reaktion**: H2O2 + Fe2+ -> *OH + OH- + Fe3+. Auch durch Haber-Weiss-Reaktion: O2*- + H2O2 -> *OH + OH- + O2.
 - **Singlett-Sauerstoff (1O2):** Angeregter, besonders reaktiver Zustand des O2, entsteht bei Photooxidation.
 - **Peroxynitrit (ONOO-):** Reaktion von O2*- mit NO: O2*- + NO* -> ONOO- (sehr reaktiv, nitrosiert Proteine).
 
 ## Oxidativer Stress
 
-**Oxidativer Stress** entsteht, wenn die Produktion von ROS die antioxidative Kapazitaet der Zelle uebersteigt. Dies fuehrt zu:
-- **Lipidperoxidation:** ROS attackieren mehrfach ungesaettigte Fettsaeuren in Membranen -> Kettenreaktion -> Membranschaedigung
-- **Protein-Oxidation:** Oxidation von Cystein-SH-Gruppen zu Disulfiden (-S-S-), Sulfensaeuren (-SOH), oder Sulfonyl-Gruppen; Carbonylierung; Fragmentierung
-- **DNA-Oxidation:** *OH greift Basen und Desoxyribose an -> 8-Oxo-Guanin (haeufigste oxidative DNA-Laesion) -> Mutationen, Strangbrueche
+**Oxidativer Stress** entsteht, wenn die Produktion von ROS die antioxidative Kapazität der Zelle übersteigt. Dies führt zu:
+- **Lipidperoxidation:** ROS attackieren mehrfach ungesättigte Fettsäuren in Membranen -> Kettenreaktion -> Membranschädigung
+- **Protein-Oxidation:** Oxidation von Cystein-SH-Gruppen zu Disulfiden (-S-S-), Sulfensäuren (-SOH), oder Sulfonyl-Gruppen; Carbonylierung; Fragmentierung
+- **DNA-Oxidation:** *OH greift Basen und Desoxyribose an -> 8-Oxo-Guanin (häufigste oxidative DNA-Läsion) -> Mutationen, Strangbrueche
 - **Enzyme-Inaktivierung:** Oxidation aktiver Zentren (Fe-S-Cluster, Haem-Gruppen)
 
-**Krankheiten bei chronischem oxidativem Stress:** Arteriosklerose (LDL-Oxidation), Krebs, Morbus Alzheimer, Parkinson, Diabetes mellitus Typ 2, rheumatoide Arthritis, chronisch-entzuendliche Darmerkrankungen.
+**Krankheiten bei chronischem oxidativem Stress:** Arteriosklerose (LDL-Oxidation), Krebs, Morbus Alzheimer, Parkinson, Diabetes mellitus Typ 2, rheumatoide Arthritis, chronisch-entzündliche Darmerkrankungen.
 
 ## Antioxidatives Schutzsystem
 
-Die Zelle verfuegt ueber enzymatische und nicht-enzymatische Antioxidantien:
+Die Zelle verfügt über enzymatische und nicht-enzymatische Antioxidantien:
 
 **Enzymatische Antioxidantien:**
-- **Superoxiddismutase (SOD):** Disproportioniert O2*- -> H2O2 + O2. Drei Isoformen: SOD1 (Cu/Zn, zytoplasmatisch), SOD2 (Mn, mitochondrial), SOD3 (Cu/Zn, extrazellulaer)
+- **Superoxiddismutase (SOD):** Disproportioniert O2*- -> H2O2 + O2. Drei Isoformen: SOD1 (Cu/Zn, zytoplasmatisch), SOD2 (Mn, mitochondrial), SOD3 (Cu/Zn, extrazellulär)
 - **Katalase:** H2O2 -> H2O + 1/2 O2. Peroxisomales Enzym. Hoechste Umsatzzahl aller bekannten Enzyme (ca. 10^7 /s)
 - **Glutathion-Peroxidase (GPx):** H2O2 + 2GSH -> 2H2O + GSSG. Verwendet reduziertes Glutathion (GSH) als Reduktionsmittel. Selenocystein im aktiven Zentrum.
 - **Glutathion-Reduktase (GR):** GSSG + NADPH -> 2GSH. Regeneriert GSH auf Kosten von NADPH (aus Pentosephosphatweg).
 - **Thioredoxin-System:** Thioredoxin (Trx) + Thioredoxin-Reduktase (TrxR) + NADPH: reduziert oxidierte Proteine
 
 **Nicht-enzymatische Antioxidantien:**
-- **Glutathion (GSH):** Tripeptid (gamma-Glu-Cys-Gly), zentrales intrazellulaeres Antioxidans. Konzentration 1-10 mmol/L intrazellulaer.
-- **Vitamin C (Ascorbinsaeure):** Wasserloeslich, direkte Radikalfaenger-Funktion, regeneriert Vitamin E
-- **Vitamin E (alpha-Tocopherol):** Fettloeslich, schuetzt Membranen vor Lipidperoxidation durch Abfangen von Peroxy-Radikalen (LOO*)
+- **Glutathion (GSH):** Tripeptid (gamma-Glu-Cys-Gly), zentrales intrazelluläres Antioxidans. Konzentration 1-10 mmol/L intrazellulär.
+- **Vitamin C (Ascorbinsäure):** Wasserlöslich, direkte Radikalfänger-Funktion, regeneriert Vitamin E
+- **Vitamin E (alpha-Tocopherol):** Fettlöslich, schützt Membranen vor Lipidperoxidation durch Abfangen von Peroxy-Radikalen (LOO*)
 - **beta-Carotin und andere Carotinoide:** Quencher von Singlett-Sauerstoff
-- **Harnsaeure:** Wichtiges Antioxidans im Plasma
-- **Coenzym Q10 (Ubichinol):** Membrangebundener Elektronentraeger, auch antioxidativ
+- **Harnsäure:** Wichtiges Antioxidans im Plasma
+- **Coenzym Q10 (Ubichinol):** Membrangebundener Elektronenträger, auch antioxidativ
 
 ## NADPH und der Pentosephosphatweg
 
-NADPH (Nicotinamid-Adenin-Dinukleotid-Phosphat, reduziert) ist das zentrale Reduktionsmittel fuer die Regeneration des Antioxidans-Systems. Der **Pentosephosphatweg (PPW)** ist die Hauptquelle fuer NADPH in der Zelle:
+NADPH (Nicotinamid-Adenin-Dinukleotid-Phosphat, reduziert) ist das zentrale Reduktionsmittel für die Regeneration des Antioxidans-Systems. Der **Pentosephosphatweg (PPW)** ist die Hauptquelle für NADPH in der Zelle:
 - G6PD (Glucose-6-Phosphat-Dehydrogenase) ist der erste, geschwindigkeitsbestimmende Schritt
-- G6PD-Mangel (haeufigste Enzymopathie weltweit, X-chromosomal) -> reduzierter NADPH-Spiegel -> Erythrozyten anfaellig fuer oxidativen Stress -> haemolytische Anaemie bei Exposition zu Oxidantien (Primaquin, Favabohnen, Infektionen)
+- G6PD-Mangel (häufigste Enzymopathie weltweit, X-chromosomal) -> reduzierter NADPH-Spiegel -> Erythrozyten anfällig für oxidativen Stress -> hämolytische Anämie bei Exposition zu Oxidantien (Primaquin, Favabohnen, Infektionen)
 
-## ROS als Signalmolekuele
+## ROS als Signalmoleküle
 
-ROS haben nicht ausschliesslich schaedliche Funktionen. In physiologischen Konzentrationen wirken sie als **Redox-Signalmolekuele** (Konzept des Eustress vs. Distress):
-- H2O2 oxidiert Cystein-SH-Gruppen von Signalproteinen -> Konformationsaenderung -> Signaluebertragung
+ROS haben nicht ausschließlich schaedliche Funktionen. In physiologischen Konzentrationen wirken sie als **Redox-Signalmoleküle** (Konzept des Eustress vs. Distress):
+- H2O2 oxidiert Cystein-SH-Gruppen von Signalproteinen -> Konformationsänderung -> Signalübertragung
 - Aktivierung von NF-kappaB, HIF-1alpha, Nrf2 (antioxidativer Transkriptionsfaktor)
 - NADPH-Oxidase (NOX) in Phagozyten produziert O2*- gezielt zur Pathogenabwehr (oxidativer Burst)
 - Mitochondriale ROS regulieren Apoptose und Autophagie
 
 ---
 
-> **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel -- ihre Reaktivitaet nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
+> **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel -- ihre Reaktivität nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
 
-> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid haertet Zahnschmelz, Chlorid ist das wichtigste extrazellulaere Anion, Iodid ist essenziell fuer die Schilddruesenhormonsynthese (T3, T4).`,
+> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid härtet Zahnschmelz, Chlorid ist das wichtigste extrazelluläre Anion, Iodid ist essenziell für die Schilddrüsenhormonsynthese (T3, T4).`,
       lernziele: [
         "Die wichtigsten reaktiven Sauerstoffspezies (ROS), ihre Bildungsmechanismen und Reaktivität benennen",
         "Oxidativen Stress definieren und seine Folgen auf Lipide, Proteine und DNA beschreiben",
