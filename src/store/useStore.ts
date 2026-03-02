@@ -197,6 +197,8 @@ export interface QuizResult {
   total: number;
   date: string;
   timestamp?: string;
+  /** Tatsächliche Dauer der Session in Minuten (gerundet). */
+  durationMinutes?: number;
   answers: { questionId: string; selectedAnswer: string; correct: boolean }[];
 }
 
@@ -332,7 +334,7 @@ interface AppState {
   toggleBookmarkChapter: (id: string) => void;
   toggleBookmarkQuestion: (id: string) => void;
   addRecentActivity: (item: RecentItem) => void;
-  logActivity: (questions: number) => void;
+  logActivity: (questions: number, minutes?: number) => void;
   toggleFlagQuestion: (id: string) => void;
   setGoalAchievedToday: (date: string, achieved: boolean) => void;
   /** Smart Adjust für 7 Tage ausblenden; optional hoursPerWeek reduzieren */
@@ -810,10 +812,11 @@ export const useStore = create<AppState>()(
           ),
         })),
 
-      logActivity: (questions) => {
+      logActivity: (questions, minutes) => {
         get().recordFirstActivityOfDay();
         const now = new Date();
         const today = now.toISOString().split("T")[0];
+        const actualMinutes = minutes ?? 5;
         set((s) => {
           const existing = s.activityLog[today] || { minutes: 0, questions: 0 };
           return {
@@ -822,7 +825,7 @@ export const useStore = create<AppState>()(
             activityLog: {
               ...s.activityLog,
               [today]: {
-                minutes: existing.minutes + 5,
+                minutes: existing.minutes + actualMinutes,
                 questions: existing.questions + questions,
               },
             },

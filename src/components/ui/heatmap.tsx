@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
-import { buildUnifiedActivityMap } from "@/lib/heatmapActivity";
+import { buildUnifiedActivityMap, buildMinutesActivityMap } from "@/lib/heatmapActivity";
 
 const MEDAT_DATE = new Date(2026, 6, 3); // 3.7.26
 const HEATMAP_START_DATE = new Date(2026, 1, 26); // 26.02.26 – erster Tag
@@ -11,7 +11,15 @@ interface HeatmapProps {
   className?: string;
 }
 
-/** Farbstufen: 0 = Grau, 1–10 = Hellblau, 11–25 = Mittelblau, 26+ = Dunkelblau (alle Bereiche: BMS, KFF, TV, SEK, Stichworte). */
+/** Minuten-Stufen: 0 = Grau, 1–15 = Hell, 16–45 = Mittel, 46+ = Dunkel. */
+function levelFromMinutes(mins: number): 0 | 1 | 2 | 3 {
+  if (mins <= 0) return 0;
+  if (mins <= 15) return 1;
+  if (mins <= 45) return 2;
+  return 3;
+}
+
+/** Fragen-Stufen (Fallback): 0 = Grau, 1–10 = Hell, 11–25 = Mittel, 26+ = Dunkel. */
 function levelFromCount(count: number): 0 | 1 | 2 | 3 {
   if (count <= 0) return 0;
   if (count <= 10) return 1;
@@ -39,6 +47,10 @@ export function Heatmap({ className }: HeatmapProps) {
   const quizResults = useStore((s) => s.quizResults ?? []);
   const activityLog = useStore((s) => s.activityLog ?? {});
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
+  const minutesMap = useMemo(
+    () => buildMinutesActivityMap({ quizResults, activityLog }),
+    [quizResults, activityLog]
+  );
   const activityMap = useMemo(
     () =>
       buildUnifiedActivityMap({
@@ -48,6 +60,8 @@ export function Heatmap({ className }: HeatmapProps) {
       }),
     [quizResults, activityLog, stichwortStats]
   );
+  // Minuten bevorzugen; Fragen als Fallback für Tage ohne Minuten-Tracking
+  const hasMinutes = useMemo(() => Object.keys(minutesMap).length > 0, [minutesMap]);
 
   const [tooltip, setTooltip] = useState<{
     x: number;
@@ -83,8 +97,10 @@ export function Heatmap({ className }: HeatmapProps) {
     while (d <= medat) {
       const key = toDateKey(d);
       const isMedAT = key === MEDAT_KEY;
-      const count = d <= today ? (activityMap[key] ?? 0) : 0;
-      const level = levelFromCount(count);
+      const mins = d <= today ? (minutesMap[key] ?? 0) : 0;
+      const fallbackCount = d <= today ? (activityMap[key] ?? 0) : 0;
+      const count = hasMinutes ? mins : fallbackCount;
+      const level = hasMinutes ? levelFromMinutes(mins) : levelFromCount(fallbackCount);
       currentWeek.push({
         date: d.toLocaleDateString("de-AT", { day: "2-digit", month: "2-digit", year: "numeric" }),
         count,
@@ -100,7 +116,7 @@ export function Heatmap({ className }: HeatmapProps) {
     }
     if (currentWeek.length > 0) result.push(currentWeek);
     return result;
-  }, [activityMap]);
+  }, [activityMap, minutesMap, hasMinutes]);
 
   return (
     <div className={cn("relative", className)}>
@@ -144,6 +160,10 @@ export function Heatmap({ className }: HeatmapProps) {
         >
           {tooltip.isMedAT ? (
             <>MedAT — {tooltip.date}</>
+          ) : hasMinutes ? (
+            <>
+              {tooltip.date}: {tooltip.count} Min.
+            </>
           ) : (
             <>
               {tooltip.date}: {tooltip.count} Aktivität{tooltip.count !== 1 ? "en" : ""}

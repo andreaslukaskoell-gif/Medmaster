@@ -48,6 +48,7 @@ import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
@@ -744,6 +745,7 @@ export default function Simulation() {
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
   const { recordAnswer: recordAdaptive } = useAdaptiveStore();
 
   // Track which TV text content to show
@@ -915,6 +917,7 @@ export default function Simulation() {
       total: totalQuestions,
       date: new Date().toLocaleDateString("de-AT"),
       timestamp: new Date().toISOString(),
+      durationMinutes: getMinutes(),
       answers: allAnswerEntries,
     });
 
@@ -927,7 +930,7 @@ export default function Simulation() {
 
     addXP(totalScore * 15);
     checkStreak();
-    logActivity(totalQuestions);
+    logActivity(totalQuestions, getMinutes());
     setMode("result");
     setIndex(0);
   }, [
@@ -942,6 +945,7 @@ export default function Simulation() {
     addXP,
     checkStreak,
     logActivity,
+    getMinutes,
     recordAdaptive,
   ]);
 

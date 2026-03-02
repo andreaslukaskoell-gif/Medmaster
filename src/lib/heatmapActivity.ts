@@ -23,8 +23,8 @@ function activityFromQuizResults(quizResults: QuizResult[]): Record<string, numb
   return byDay;
 }
 
-/** Aktivität pro Tag aus activityLog (Fragen, falls kein QuizResult für den Tag). */
-function activityFromActivityLog(
+/** Fragen pro Tag aus activityLog (Fallback, falls kein QuizResult für den Tag). */
+function questionsFromActivityLog(
   activityLog: Record<string, { minutes: number; questions: number }>
 ): Record<string, number> {
   const byDay: Record<string, number> = {};
@@ -32,6 +32,31 @@ function activityFromActivityLog(
     if (/^\d{4}-\d{2}-\d{2}$/.test(key) && val?.questions != null) {
       byDay[key] = val.questions;
     }
+  }
+  return byDay;
+}
+
+/** Minuten pro Tag aus activityLog (Legacy-Fallback). */
+function minutesFromActivityLog(
+  activityLog: Record<string, { minutes: number; questions: number }>
+): Record<string, number> {
+  const byDay: Record<string, number> = {};
+  for (const [key, val] of Object.entries(activityLog)) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(key) && val?.minutes != null && val.minutes > 0) {
+      byDay[key] = val.minutes;
+    }
+  }
+  return byDay;
+}
+
+/** Tatsächliche Lernminuten pro Tag aus QuizResult.durationMinutes. */
+function minutesFromQuizResults(quizResults: QuizResult[]): Record<string, number> {
+  const byDay: Record<string, number> = {};
+  for (const r of quizResults) {
+    if (!r.durationMinutes || r.durationMinutes <= 0) continue;
+    const key = toDateKey(r.date) ?? toDateKey(r.timestamp);
+    if (!key) continue;
+    byDay[key] = (byDay[key] ?? 0) + r.durationMinutes;
   }
   return byDay;
 }
@@ -58,14 +83,14 @@ export type HeatmapActivitySources = {
 };
 
 /**
- * Einheitliche Aktivitäts-Map pro Tag (YYYY-MM-DD).
+ * Einheitliche Aktivitäts-Map pro Tag (YYYY-MM-DD) — Fragen-basiert.
  * - Quiz (BMS, KFF, TV, SEK, Simulation): Summe der beantworteten Fragen pro Tag.
  * - activityLog: wird nur genutzt, wenn für den Tag kein QuizResult existiert (kein Doppelzählen).
  * - Stichworte: Anzahl der an dem Tag geübten Stichworte addiert.
  */
 export function buildUnifiedActivityMap(sources: HeatmapActivitySources): Record<string, number> {
   const fromQuiz = activityFromQuizResults(sources.quizResults);
-  const fromLog = activityFromActivityLog(sources.activityLog);
+  const fromLog = questionsFromActivityLog(sources.activityLog);
   const fromStichwort = activityFromStichwortStats(sources.stichwortStats);
 
   const allDays = new Set([
@@ -80,6 +105,25 @@ export function buildUnifiedActivityMap(sources: HeatmapActivitySources): Record
     const log = fromLog[day] ?? 0;
     const stichwort = fromStichwort[day] ?? 0;
     result[day] = quiz + (quiz === 0 ? log : 0) + stichwort;
+  }
+  return result;
+}
+
+/** Minuten-Map pro Tag (YYYY-MM-DD) für die Heatmap.
+ * Primär aus QuizResult.durationMinutes, Fallback auf activityLog.minutes. */
+export function buildMinutesActivityMap(sources: {
+  quizResults: QuizResult[];
+  activityLog: Record<string, { minutes: number; questions: number }>;
+}): Record<string, number> {
+  const fromQuiz = minutesFromQuizResults(sources.quizResults);
+  const fromLog = minutesFromActivityLog(sources.activityLog);
+  const allDays = new Set([...Object.keys(fromQuiz), ...Object.keys(fromLog)]);
+  const result: Record<string, number> = {};
+  for (const day of allDays) {
+    const quiz = fromQuiz[day] ?? 0;
+    const log = fromLog[day] ?? 0;
+    // QuizResult-Minuten bevorzugen; activityLog nur als Fallback
+    result[day] = quiz > 0 ? quiz : log;
   }
   return result;
 }

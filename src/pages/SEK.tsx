@@ -37,6 +37,7 @@ import {
 } from "@/data/emotionenRegulierenOffiziell";
 import type { SozialesEntscheidenTask } from "@/data/sekDataNew";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 
 type SekView =
   | "overview"
@@ -276,7 +277,8 @@ function EmotionenErkennenQuiz({
   const [answers, setAnswers] = useState<
     Record<string, Record<string, "wahrscheinlich" | "unwahrscheinlich">>
   >({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
 
   const _toggleEmotion = (taskId: string, optionId: string) => {
     setAnswers((prev) => {
@@ -307,12 +309,14 @@ function EmotionenErkennenQuiz({
       score,
       total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => {
         const a = answers[q.id] || {};
         const allCorrect = q.emotionen.every((e) => a[e.id] === e.correct);
         return { questionId: q.id, selectedAnswer: JSON.stringify(a), correct: allCorrect };
       }),
     });
+    logActivity(questions.length, getMinutes());
     addXP(score * 15);
     checkStreak();
     setPhase("result");
@@ -575,7 +579,8 @@ function EmotionenRegulierenQuiz({
   const [questions] = useState(() => shuffle(tasks).slice(0, erConfig.questions));
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, OptionId>>({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
 
   const handleSubmit = () => {
     let totalScore = 0;
@@ -590,6 +595,7 @@ function EmotionenRegulierenQuiz({
       score: totalScore,
       total: maxScore,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => {
         const sel = answers[q.id];
         const selText = sel ? (q.options.find((o) => o.id === sel)?.text ?? "") : "";
@@ -600,6 +606,7 @@ function EmotionenRegulierenQuiz({
         };
       }),
     });
+    logActivity(questions.length, getMinutes());
     addXP(totalScore * 15);
     checkStreak();
     setPhase("result");
@@ -858,7 +865,8 @@ function SozialesEntscheidenQuiz({
   const [index, setIndex] = useState(0);
   // rankings[taskId] = { statementIdx: rank (1-5) }
   const [rankings, setRankings] = useState<Record<string, Record<number, number>>>({});
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
 
   const setRank = (taskId: string, stmtIdx: number, rank: number) => {
     setRankings((prev) => {
@@ -892,12 +900,14 @@ function SozialesEntscheidenQuiz({
       score: totalScore,
       total: maxScore,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => ({
         questionId: q.id,
         selectedAnswer: JSON.stringify(rankings[q.id] || {}),
         correct: calculateScore(q) >= 16,
       })),
     });
+    logActivity(questions.length, getMinutes());
     addXP(Math.round((totalScore / maxScore) * 100));
     checkStreak();
     setPhase("result");

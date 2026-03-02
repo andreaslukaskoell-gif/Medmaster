@@ -34,6 +34,7 @@ import {
 } from "@/data/tvOffiziell";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import type { TVTextSet } from "@/data/tvTextsExpanded";
 
 const allTextSets: TVTextSet[] = [...tvTextSets, ...tvTextSets2];
@@ -68,7 +69,8 @@ export default function TV() {
   const [aussagenAnswers, setAussagenAnswers] = useState<Record<string, TVAussagenOptionId>>({});
   // Mobile
   const [showAllLegacy, setShowAllLegacy] = useState(false);
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
 
   const tvText = tvTexts[selectedTextIndex];
   const currentSet = allTextSets[selectedSetIndex];
@@ -125,12 +127,14 @@ export default function TV() {
       score,
       total: statements.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: statements.map((s) => ({
         questionId: s.id,
         selectedAnswer: String(legacyAnswers[s.id]),
         correct: legacyAnswers[s.id] === s.isDerivable,
       })),
     });
+    logActivity(statements.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setView("legacy-results");
@@ -153,12 +157,14 @@ export default function TV() {
       score,
       total: allSetQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: allSetQuestions.map((q) => ({
         questionId: q.id,
         selectedAnswer: mcAnswers[q.id] !== undefined ? LABELS[mcAnswers[q.id]] : "",
         correct: mcAnswers[q.id] === q.correctOption,
       })),
     });
+    logActivity(allSetQuestions.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setView("set-results");
@@ -185,12 +191,14 @@ export default function TV() {
       score,
       total: allAussagenFragen.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: allAussagenFragen.map((q) => ({
         questionId: q.id,
         selectedAnswer: aussagenAnswers[q.id] ?? "",
         correct: aussagenAnswers[q.id] === q.correctOptionId,
       })),
     });
+    logActivity(allAussagenFragen.length, getMinutes());
     addXP(score * 15);
     checkStreak();
     setView("aussagen-results");

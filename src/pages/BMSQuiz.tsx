@@ -18,6 +18,7 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
 import { getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
@@ -59,6 +60,7 @@ interface Props {
 }
 
 export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
+  const getMinutes = useSessionTimer();
   const { recordAnswer, getAdaptiveQuestions } = useAdaptiveStore();
 
   const questions = useMemo(() => {
@@ -157,6 +159,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
       total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
       timestamp: new Date().toISOString(),
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
@@ -175,7 +178,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
     addXP(score * 10);
     checkStreak();
-    logActivity(questions.length);
+    logActivity(questions.length, getMinutes());
     setSubmitted(true);
     setCurrentIndex(0);
     if (pct >= 90) setShowConfetti(true);

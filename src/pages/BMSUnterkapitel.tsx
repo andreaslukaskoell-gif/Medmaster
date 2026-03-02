@@ -18,6 +18,7 @@ import { QuickEdit } from "../components/QuickEdit";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import { useStore } from "../store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { SelbstTest } from "../components/chapter/SelbstTest";
 import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
 import { ContentVisualizer } from "../components/chapter/ContentVisualizer";
@@ -97,6 +98,7 @@ export default function BMSUnterkapitel({
   const toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
   const saveQuizResult = store.saveQuizResult ?? (() => {});
   const logActivity = store.logActivity ?? (() => {});
+  const getMinutes = useSessionTimer();
 
   // Derive safe values that don't depend on uk being valid yet
   const unterkapitel =
@@ -307,9 +309,10 @@ export default function BMSUnterkapitel({
           total: totalArg,
           date: new Date().toLocaleDateString("de-AT"),
           timestamp: new Date().toISOString(),
+          durationMinutes: getMinutes(),
           answers,
         });
-        logActivity(totalArg);
+        logActivity(totalArg, getMinutes());
       }
       kontrollResultsRef.current = [];
     }

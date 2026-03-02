@@ -15,6 +15,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getRecoverySession } from "@/lib/smartRecovery";
 import { playCorrectAnswerSound } from "@/lib/sounds";
@@ -52,6 +53,7 @@ type Step = "reentry" | "question" | "feedback" | "result";
 
 export default function SmartRecoveryPage() {
   const navigate = useNavigate();
+  const getMinutes = useSessionTimer();
   const quizResults = useStore((s) => s.quizResults);
   const {
     saveQuizResult,
@@ -137,6 +139,7 @@ export default function SmartRecoveryPage() {
       score,
       total,
       date: new Date().toISOString().split("T")[0],
+      durationMinutes: getMinutes(),
       answers: questions
         .map((q) =>
           q
@@ -151,7 +154,7 @@ export default function SmartRecoveryPage() {
     });
     addXP(score * 10);
     checkStreak();
-    logActivity(total);
+    logActivity(total, getMinutes());
     setStep("result");
   }
 

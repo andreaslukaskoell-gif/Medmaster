@@ -25,6 +25,7 @@ import { getSequenceQuestionsBySubject } from "@/data/wissencheckSequences";
 import { LogicBuilder } from "@/components/wissencheck/LogicBuilder";
 import { playCorrectAnswerSound } from "@/lib/sounds";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 
@@ -144,6 +145,7 @@ export default function WissenCheck() {
   const { fach } = useParams<{ fach: string }>();
   const navigate = useNavigate();
   const { saveQuizResult, logActivity, addXP, checkStreak } = useStore();
+  const getMinutes = useSessionTimer();
 
   const config = fach ? subjectConfig[fach] : undefined;
   const SubjectIcon = config?.icon ?? Dna;
@@ -190,17 +192,18 @@ export default function WissenCheck() {
       score,
       total: questions.length,
       date: new Date().toISOString().split("T")[0],
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
         correct: answers[q.id] === q.correctOptionId,
       })),
     });
-    logActivity(questions.length);
+    logActivity(questions.length, getMinutes());
     addXP(score * 5);
     checkStreak();
     setPhase("result");
-  }, [questions, answers, fach, saveQuizResult, logActivity, addXP, checkStreak]);
+  }, [questions, answers, fach, saveQuizResult, logActivity, addXP, checkStreak, getMinutes]);
 
   const selectAnswer = (optionId: string) => {
     if (answers[questions[current].id]) return; // already answered

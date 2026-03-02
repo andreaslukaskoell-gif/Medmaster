@@ -78,6 +78,7 @@ import {
 } from "@/lib/taskDb";
 import type { TaskDomain } from "@/lib/taskDb/types";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
@@ -455,12 +456,14 @@ function ZahlenfolgenQuiz({
     addXP,
     checkStreak,
     saveQuizResult,
+    logActivity,
     skillRating,
     setSkillRating,
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
   } = useStore();
+  const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -533,12 +536,14 @@ function ZahlenfolgenQuiz({
       score,
       total: list.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: list.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] ?? "",
         correct: answers[q.id] === q.correctOptionId,
       })),
     });
+    logActivity(list.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setPhase("result");
@@ -1234,7 +1239,8 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const getMinutes = useSessionTimer();
   const isOfficial = _currentGmIsOfficial;
 
   const q = questions[index];
@@ -1249,12 +1255,14 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
       score,
       total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: questions.map((qu) => ({
         questionId: qu.id,
         selectedAnswer: qu.options[answers[qu.id] ?? -1] ?? "",
         correct: answers[qu.id] === qu.correctIndex,
       })),
     });
+    logActivity(questions.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setSubmitted(true);
@@ -1459,12 +1467,14 @@ function ImplikationenQuiz({
     addXP,
     checkStreak,
     saveQuizResult,
+    logActivity,
     skillRating,
     setSkillRating,
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
   } = useStore();
+  const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -1548,12 +1558,14 @@ function ImplikationenQuiz({
       score,
       total: safeQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: safeQuestions.map((qu) => ({
         questionId: qu.id,
         selectedAnswer: qu.options?.[answers[qu.id]] || "",
         correct: answers[qu.id] === qu.correctAnswer,
       })),
     });
+    logActivity(safeQuestions.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setPhase("result");
@@ -2031,12 +2043,14 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
     addXP,
     checkStreak,
     saveQuizResult,
+    logActivity,
     skillRating,
     setSkillRating,
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
   } = useStore();
+  const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
@@ -2137,12 +2151,14 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       score,
       total: safeQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: safeQuestions.map((qu) => ({
         questionId: qu.id ?? "",
         selectedAnswer: answers[qu.id ?? ""] || "",
         correct: answers[qu.id ?? ""] === qu.options[qu.correctIndex],
       })),
     });
+    logActivity(safeQuestions.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setPhase("result");
@@ -2602,12 +2618,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     addXP,
     checkStreak,
     saveQuizResult,
+    logActivity,
     skillRating,
     setSkillRating,
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
   } = useStore();
+  const getMinutes = useSessionTimer();
 
   const startOfficial = () => {
     const list = [...OFFICIAL_FZ_EXAMPLES];
@@ -2715,12 +2733,14 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       score,
       total: questions.length,
       date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
       answers: questions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
         correct: answers[q.id] === FZ_OPTION_LABELS[q.correctIndex],
       })),
     });
+    logActivity(questions.length, getMinutes());
     addXP(score * 10);
     checkStreak();
     setPhase("result");
@@ -2729,6 +2749,8 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
     questions,
     answers,
     saveQuizResult,
+    logActivity,
+    getMinutes,
     addXP,
     checkStreak,
     setSkillRating,

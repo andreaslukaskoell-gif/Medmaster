@@ -25,6 +25,7 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { allBmsQuestions } from "@/data/bms/index";
 import { alleStichworteListe } from "@/data/stichwortliste";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
@@ -107,6 +108,7 @@ export default function SchwachstellenTrainer() {
   const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
   const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition } = useStore();
+  const getMinutes = useSessionTimer();
 
   const readiness = adaptive.getMedATReadiness();
   const weakTopics = adaptive.getWeakestTopics(10);
@@ -202,6 +204,7 @@ export default function SchwachstellenTrainer() {
       total: quizQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
       timestamp: new Date().toISOString(),
+      durationMinutes: getMinutes(),
       answers: quizQuestions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
@@ -210,7 +213,7 @@ export default function SchwachstellenTrainer() {
     });
     addXP(score * 15); // Bonus XP for targeted practice
     checkStreak();
-    logActivity(quizQuestions.length);
+    logActivity(quizQuestions.length, getMinutes());
     if (mode === "daily") adaptive.completeDailyChallenge();
     setMode("overview");
   }
