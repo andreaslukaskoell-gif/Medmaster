@@ -916,30 +916,30 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `## Multiple Allelie und das AB0-System
 
-Im Gegensatz zu einfachen Erbgaengen mit nur zwei Allelen besitzt das AB0-System **drei Allele** an einem einzigen Genort auf Chromosom 9: **I^A**, **I^B** und **i**. Das Gen codiert fuer eine Glycosyltransferase (Enzym, das Zucker überträgt), die Zuckerreste an ein Vorlaeuferantigen (H-Antigen) auf der Erythrozytenoberflaeche (Oberfläche der roten Blutkörperchen) anhaengt:
+Im Gegensatz zu einfachen Erbgängen mit nur zwei Allelen besitzt das AB0-System **drei Allele** an einem einzigen Genort auf Chromosom 9: **I^A**, **I^B** und **i**. Das Gen codiert für eine Glycosyltransferase (Enzym, das Zucker überträgt), die Zuckerreste an ein Vorläuferantigen (H-Antigen) auf der Erythrozytenoberfläche (Oberfläche der roten Blutkörperchen) anhängt:
 
-- **I^A**: haengt N-Acetylgalactosamin an → **Antigen A**
-- **I^B**: haengt Galactose an → **Antigen B**
-- **i**: codiert fuer ein nicht-funktionales Enzym → **kein Antigen** (nur H-Antigen bleibt)
+- **I^A**: hängt N-Acetylgalactosamin an → **Antigen A**
+- **I^B**: hängt Galactose an → **Antigen B**
+- **i**: codiert für ein nicht-funktionales Enzym → **kein Antigen** (nur H-Antigen bleibt)
 
-Da jeder Mensch diploid ist, traegt er genau **zwei** dieser drei Allele. Daraus ergeben sich **sechs moegliche Genotypen**, die aber nur **vier Phaenotypen** (Blutgruppen) erzeugen:
+Da jeder Mensch diploid ist, trägt er genau **zwei** dieser drei Allele. Daraus ergeben sich **sechs mögliche Genotypen**, die aber nur **vier Phänotypen** (Blutgruppen) erzeugen:
 
-| Genotyp | Blutgruppe | Antigene auf Erythrozyten | Antikoerper im Serum |
+| Genotyp | Blutgruppe | Antigene auf Erythrozyten | Antikörper im Serum |
 |---------|-----------|---------------------------|---------------------|
 | I^A I^A, I^A i | A | A | Anti-B |
 | I^B I^B, I^B i | B | B | Anti-A |
-| I^A I^B | AB | A und B | keine (Universalempfaenger) |
+| I^A I^B | AB | A und B | keine (Universalempfänger) |
 | i i | 0 | keines (nur H) | Anti-A und Anti-B (Universalspender) |
 
-**Dominanzverhaeltnisse:** I^A und I^B sind beide **dominant** ueber i (das rezessive Allel). Untereinander sind I^A und I^B **kodominant** -- bei Genotyp I^A I^B werden **beide** Antigene gleichzeitig und vollstaendig auf der Erythrozytenoberflaeche exprimiert. Das ist der entscheidende Unterschied zur **intermediaeren Vererbung**, bei der ein Mischphaenotyp entsteht (z. B. rosa Blueten bei Wunderblume).
+**Dominanzverhältnisse:** I^A und I^B sind beide **dominant** über i (das rezessive Allel). Untereinander sind I^A und I^B **kodominant** — bei Genotyp I^A I^B werden **beide** Antigene gleichzeitig und vollständig auf der Erythrozytenoberfläche exprimiert. Das ist der entscheidende Unterschied zur **intermediären Vererbung**, bei der ein Mischphänotyp entsteht (z. B. rosa Blüten bei Wunderblume).
 
-> **Merke:** Kodominanz (AB0): Beide Allele werden vollstaendig exprimiert (A UND B sichtbar). Intermediaer: Mischphaenotyp. I^A und I^B dominant ueber i. Sechs Genotypen → vier Phaenotypen.
+> **Merke:** Kodominanz (AB0): Beide Allele werden vollständig exprimiert (A UND B sichtbar). Intermediär: Mischphänotyp. I^A und I^B dominant über i. Sechs Genotypen → vier Phänotypen.
 
-**Isoagglutinine (natuerliche Antikoerper):** Im Serum befinden sich Antikoerper gegen die Antigene, die man selbst NICHT hat. Blutgruppe A hat Anti-B; Blutgruppe B hat Anti-A; Blutgruppe 0 hat Anti-A und Anti-B; Blutgruppe AB hat keine Antikoerper. Diese Regel ist die Grundlage fuer die Transfusionsmedizin.
+**Isoagglutinine (natürliche Antikörper):** Im Serum befinden sich Antikörper gegen die Antigene, die man selbst NICHT hat. Blutgruppe A hat Anti-B; Blutgruppe B hat Anti-A; Blutgruppe 0 hat Anti-A und Anti-B; Blutgruppe AB hat keine Antikörper. Diese Regel ist die Grundlage für die Transfusionsmedizin.
 
 ---
 
-## Kreuzungsaufgaben -- systematische Loesung
+## Kreuzungsaufgaben — systematische Lösung
 
 **Kreuzung 1: Vater I^A i (Blutgruppe A) x Mutter I^B i (Blutgruppe B)**
 
@@ -948,7 +948,7 @@ Da jeder Mensch diploid ist, traegt er genau **zwei** dieser drei Allele. Daraus
 | **I^A** | I^A I^B (AB) | I^A i (A) |
 | **i** | I^B i (B) | i i (0) |
 
-Ergebnis: Alle vier Blutgruppen sind moeglich, jeweils mit **25 % Wahrscheinlichkeit**. Das ist die einzige Elternkombination, bei der alle vier Blutgruppen auftreten koennen!
+Ergebnis: Alle vier Blutgruppen sind möglich, jeweils mit **25 % Wahrscheinlichkeit**. Das ist die einzige Elternkombination, bei der alle vier Blutgruppen auftreten können!
 
 **Kreuzung 2: Vater i i (Blutgruppe 0) x Mutter I^A I^B (Blutgruppe AB)**
 
@@ -957,7 +957,7 @@ Ergebnis: Alle vier Blutgruppen sind moeglich, jeweils mit **25 % Wahrscheinlich
 | **i** | I^A i (A) | I^B i (B) |
 | **i** | I^A i (A) | I^B i (B) |
 
-Ergebnis: Kinder koennen nur Blutgruppe **A** (50 %) oder **B** (50 %) haben. Blutgruppe **0** und **AB** sind **ausgeschlossen** -- der 0-Elternteil kann nur i weitergeben, der AB-Elternteil nur I^A oder I^B.
+Ergebnis: Kinder können nur Blutgruppe **A** (50 %) oder **B** (50 %) haben. Blutgruppe **0** und **AB** sind **ausgeschlossen** — der 0-Elternteil kann nur i weitergeben, der AB-Elternteil nur I^A oder I^B.
 
 **Kreuzung 3: Vater I^A I^A (Blutgruppe A) x Mutter I^B I^B (Blutgruppe B)**
 Alle Kinder: I^A I^B → Blutgruppe **AB** (100 %). Kein Kind kann A, B oder 0 sein.
@@ -973,22 +973,22 @@ Kinder: I^A I^A (A, 25 %), I^A i (A, 50 %), i i (0, 25 %) → 75 % Blutgruppe A,
 
 Das Rhesus-System wird durch das **RHD-Gen** auf Chromosom 1 bestimmt. Das zentrale Antigen ist das **D-Antigen** (Rh-Faktor). Der Erbgang folgt einem **einfachen dominant-rezessiven Muster**:
 
-- **D** (Rh-positiv) ist **dominant** ueber **d** (Rh-negativ)
-- **DD** und **Dd** = Rh-positiv (ca. 85 % der europaeischen Bevoelkerung)
+- **D** (Rh-positiv) ist **dominant** über **d** (Rh-negativ)
+- **DD** und **Dd** = Rh-positiv (ca. 85 % der europäischen Bevölkerung)
 - **dd** = Rh-negativ (ca. 15 %)
 
-**Rhesus-Inkompatibilitaet und Morbus haemolyticus neonatorum:**
-Wenn eine **Rh-negative Mutter (dd)** ein **Rh-positives Kind (Dd)** ausraegt, koennen fetale Erythrozyten mit D-Antigen in den muetterlichen Kreislauf gelangen (v. a. bei der Geburt). Die Mutter bildet daraufhin **Anti-D-Antikoerper** (IgG-Klasse). Bei einer **zweiten Schwangerschaft** mit einem Rh-positiven Kind koennen diese IgG-Antikoerper die Plazenta passieren, die fetalen Erythrozyten angreifen und einen **Morbus haemolyticus neonatorum** (Blutzerfall beim Neugeborenen) ausloesen (Haemolyse, Anaemie, Ikterus (Gelbsucht), im Extremfall Hydrops fetalis (generalisierte Flüssigkeitseinlagerung)).
+**Rhesus-Inkompatibilität und Morbus haemolyticus neonatorum:**
+Wenn eine **Rh-negative Mutter (dd)** ein **Rh-positives Kind (Dd)** austrägt, können fetale Erythrozyten mit D-Antigen in den mütterlichen Kreislauf gelangen (v. a. bei der Geburt). Die Mutter bildet daraufhin **Anti-D-Antikörper** (IgG-Klasse). Bei einer **zweiten Schwangerschaft** mit einem Rh-positiven Kind können diese IgG-Antikörper die Plazenta passieren, die fetalen Erythrozyten angreifen und einen **Morbus haemolyticus neonatorum** (Blutzerfall beim Neugeborenen) auslösen (Hämolyse, Anämie, Ikterus (Gelbsucht), im Extremfall Hydrops fetalis (generalisierte Flüssigkeitseinlagerung)).
 
-**Praevention:** Die **Anti-D-Prophylaxe** (Gabe von Anti-D-Immunglobulin an die Rh-negative Mutter waehrend der Schwangerschaft und nach der Geburt) verhindert die Sensibilisierung, indem sie fetale D-positive Erythrozyten neutralisiert, bevor das muetterliche Immunsystem reagiert.
+**Prävention:** Die **Anti-D-Prophylaxe** (Gabe von Anti-D-Immunglobulin an die Rh-negative Mutter während der Schwangerschaft und nach der Geburt) verhindert die Sensibilisierung, indem sie fetale D-positive Erythrozyten neutralisiert, bevor das mütterliche Immunsystem reagiert.
 
-> **Merke:** Rhesus: D dominant, dd = Rh-negativ (~15 %). Sensibilisierung bei Rh-neg. Mutter + Rh-pos. Kind → Anti-D-Antikoerper (IgG) → Morbus haemolyticus neonatorum bei Folgeschwangerschaft. Anti-D-Prophylaxe verhindert Sensibilisierung.
+> **Merke:** Rhesus: D dominant, dd = Rh-negativ (~15 %). Sensibilisierung bei Rh-neg. Mutter + Rh-pos. Kind → Anti-D-Antikörper (IgG) → Morbus haemolyticus neonatorum bei Folgeschwangerschaft. Anti-D-Prophylaxe verhindert Sensibilisierung.
 
 ---
 
-## Bombay-Phaenotyp (Sonderfall)
+## Bombay-Phänotyp (Sonderfall)
 
-Ein seltener Sonderfall: Menschen mit dem **Bombay-Phaenotyp** (h/h) koennen das **H-Antigen** nicht bilden, das als Vorlaeufer fuer A- und B-Antigene dient. Selbst wenn sie I^A oder I^B tragen, erscheinen **keine** Antigene auf der Erythrozytenoberflaeche → sie testen als **Blutgruppe 0**, sind es genetisch aber nicht. Haeufigkeit: ca. 1:10.000 (in Indien haeufiger). MedAT-Relevanz: gelegentlich als Vertiefungsfrage.`,
+Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das **H-Antigen** nicht bilden, das als Vorläufer für A- und B-Antigene dient. Selbst wenn sie I^A oder I^B tragen, erscheinen **keine** Antigene auf der Erythrozytenoberfläche → sie testen als **Blutgruppe 0**, sind es genetisch aber nicht. Häufigkeit: ca. 1:10.000 (in Indien häufiger). MedAT-Relevanz: gelegentlich als Vertiefungsfrage.`,
       lernziele: [
         "AB0-System: Allele, Phänotypen und Kodominanz erklären.",
         "Kreuzungsaufgaben zu Blutgruppen lösen (z. B. welche Blutgruppen können Kinder haben?).",
@@ -1220,9 +1220,9 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phaenotyp** (h/h) koennen das
       ],
       content: `## Das Zentraldogma der Molekularbiologie
 
-Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Systemen: **DNA → RNA → Protein**. Die DNA ist der permanente **Informationsspeicher** im Zellkern. Die **mRNA** (messenger RNA, Boten-RNA) ist eine temporaere **Arbeitskopie** eines bestimmten Gens, die aus dem Zellkern ins Zytoplasma transportiert wird. Das **Protein** ist das funktionelle **Endprodukt**, das Enzyme, Strukturproteine, Transportmolekuele, Rezeptoren oder Signalmolekuele bildet.
+Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Systemen: **DNA → RNA → Protein**. Die DNA ist der permanente **Informationsspeicher** im Zellkern. Die **mRNA** (messenger RNA, Boten-RNA) ist eine temporäre **Arbeitskopie** eines bestimmten Gens, die aus dem Zellkern ins Zytoplasma transportiert wird. Das **Protein** ist das funktionelle **Endprodukt**, das Enzyme, Strukturproteine, Transportmoleküle, Rezeptoren oder Signalmoleküle bildet.
 
-**Warum diese Richtung?** Die DNA bleibt geschuetzt im Zellkern; nur Kopien (mRNA) gelangen ins Zytoplasma. Diese Kopien werden nach Gebrauch abgebaut (Halbwertszeit wenige Minuten bis Stunden). So kann die Zelle die Genexpression **regulieren**: Gene koennen nach Bedarf ein- und ausgeschaltet werden, ohne die DNA selbst zu veraendern.
+**Warum diese Richtung?** Die DNA bleibt geschützt im Zellkern; nur Kopien (mRNA) gelangen ins Zytoplasma. Diese Kopien werden nach Gebrauch abgebaut (Halbwertszeit wenige Minuten bis Stunden). So kann die Zelle die Genexpression **regulieren**: Gene können nach Bedarf ein- und ausgeschaltet werden, ohne die DNA selbst zu verändern.
 
 **Genexpression** = die Gesamtheit aller Schritte, durch die die Information eines Gens in ein funktionelles Produkt (meist ein Protein) umgesetzt wird. Ein Gen, das gerade abgelesen wird, ist "exprimiert"; ein stillgelegtes Gen ist "reprimiert".
 
@@ -1230,12 +1230,12 @@ Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Sy
 
 ---
 
-## Transkription -- von der DNA zur mRNA
+## Transkription — von der DNA zur mRNA
 
 
 {{DIAGRAM:dna-helix}}
 
-Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase** (bei Eukaryoten: RNA-Polymerase II fuer mRNA) katalysiert.
+Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase** (bei Eukaryoten: RNA-Polymerase II für mRNA) katalysiert.
 
 **Ablauf in drei Phasen:**
 
@@ -1243,54 +1243,54 @@ Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase
 
 2. **Elongation:** Die RNA-Polymerase liest den **Matrizenstrang** (Vorlagenstrang, 3' → 5') und synthetisiert die mRNA in **5' → 3'-Richtung**. Basenpaarungsregeln: A-U, T-A, G-C, C-G. In der RNA ersetzt **Uracil (U)** das Thymin (T) der DNA. Die mRNA-Sequenz entspricht dem **codogenen Strang** (Sinnstrang) (Nicht-Matrizenstrang), nur mit U statt T.
 
-3. **Termination:** Die RNA-Polymerase erreicht ein **Terminationssignal** und loest sich von der DNA. Die fertige **Praematur-mRNA** (pre-mRNA) wird prozessiert.
+3. **Termination:** Die RNA-Polymerase erreicht ein **Terminationssignal** und löst sich von der DNA. Die fertige **Prä-mRNA** (pre-mRNA) wird prozessiert.
 
 **mRNA-Prozessierung (bei Eukaryoten):**
-- **5'-Capping:** Methylguanosin-Kappe schuetzt vor Abbau und unterstuetzt die Ribosomenbindung
+- **5'-Capping:** Methylguanosin-Kappe schützt vor Abbau und unterstützt die Ribosomenbindung
 - **3'-Polyadenylierung:** Poly-A-Schwanz (~200 Adenine) stabilisiert die mRNA
-- **Spleissen (Splicing):** **Introns** (nicht-codierende Abschnitte) werden entfernt; **Exons** (codierende Abschnitte) werden zusammengesetzt. Alternatives Spleissen ermoeglicht, dass ein Gen mehrere verschiedene Proteine codieren kann.
+- **Spleißen (Splicing):** **Introns** (nicht-codierende Abschnitte) werden entfernt; **Exons** (codierende Abschnitte) werden zusammengesetzt. Alternatives Spleißen ermöglicht, dass ein Gen mehrere verschiedene Proteine codieren kann.
 
 Die reife mRNA wird dann durch die **Kernporen** ins Zytoplasma exportiert.
 
-> **Merke:** Transkription = DNA → mRNA im Zellkern (RNA-Polymerase). Basen: A, U, G, C (U statt T). Eukaryoten: Capping, Polyadenylierung, Spleissen. Matrizenstrang 3'→5', mRNA waechst 5'→3'.
+> **Merke:** Transkription = DNA → mRNA im Zellkern (RNA-Polymerase). Basen: A, U, G, C (U statt T). Eukaryoten: Capping, Polyadenylierung, Spleißen. Matrizenstrang 3'→5', mRNA wächst 5'→3'.
 
 ---
 
 ## Der genetische Code
 
 
-Der genetische Code ist die **Uebersetzungsregel** von Nucleotidsequenz in Aminosaeure-Sequenz:
+Der genetische Code ist die **Übersetzungsregel** von Nucleotidsequenz in Aminosäure-Sequenz:
 
-- **Codon:** 3 aufeinanderfolgende Basen der mRNA codieren fuer eine Aminosaeure (oder ein Stoppsignal)
-- **64 Codons** insgesamt (4^3 = 64) fuer nur **20 Aminosaeuren** → der Code ist **degeneriert** (redundant): mehrere Codons koennen dieselbe Aminosaeure codieren (z. B. GCU, GCC, GCA, GCG → alle Alanin)
+- **Codon:** 3 aufeinanderfolgende Basen der mRNA codieren für eine Aminosäure (oder ein Stoppsignal)
+- **64 Codons** insgesamt (4^3 = 64) für nur **20 Aminosäuren** → der Code ist **degeneriert** (redundant): mehrere Codons können dieselbe Aminosäure codieren (z. B. GCU, GCC, GCA, GCG → alle Alanin)
 - **Startcodon:** AUG (codiert Methionin) — markiert den Beginn der Translation
-- **Stoppcodons:** UAA, UAG, UGA — signalisieren das Ende der Translation (keine Aminosaeure)
-- Der Code ist **universell** (fast alle Organismen verwenden denselben Code) und wird **ohne Ueberlappung** und **ohne Luecken** gelesen (Leseraster)
+- **Stoppcodons:** UAA, UAG, UGA — signalisieren das Ende der Translation (keine Aminosäure)
+- Der Code ist **universell** (fast alle Organismen verwenden denselben Code) und wird **ohne Überlappung** und **ohne Lücken** gelesen (Leseraster)
 
-**Leserasterverschiebung (Frameshift):** Wenn durch Insertion oder Deletion die Dreiergruppierung verschoben wird, aendern sich alle nachfolgenden Codons → meist nicht-funktionales Protein. Das erklaert, warum Frameshift-Mutationen besonders schaedlich sind.
+**Leserasterverschiebung (Frameshift):** Wenn durch Insertion oder Deletion die Dreiergruppierung verschoben wird, ändern sich alle nachfolgenden Codons → meist nicht-funktionales Protein. Das erklärt, warum Frameshift-Mutationen besonders schädlich sind.
 
-> **Merke:** 3 Basen = 1 Codon = 1 Aminosaeure. 64 Codons, 20 Aminosaeuren → degenerierter Code. AUG = Start (Met), UAA/UAG/UGA = Stopp. Leseraster entscheidend!
+> **Merke:** 3 Basen = 1 Codon = 1 Aminosäure. 64 Codons, 20 Aminosäuren → degenerierter Code. AUG = Start (Met), UAA/UAG/UGA = Stopp. Leseraster entscheidend!
 
 ---
 
-## Translation -- von der mRNA zum Protein
+## Translation — von der mRNA zum Protein
 
 
-Die Translation benoetigt: **mRNA** (Vorlage), **Ribosomen** (Uebersetzungsmaschine, bestehend aus rRNA und Proteinen), **tRNA** (Transfer-RNA, bringt die passende Aminosaeure) und **Aminosaeuren** als Bausteine.
+Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmaschine, bestehend aus rRNA und Proteinen), **tRNA** (Transfer-RNA, bringt die passende Aminosäure) und **Aminosäuren** als Bausteine.
 
 **Ablauf in drei Phasen:**
 
-1. **Initiation:** Die kleine ribosomale Untereinheit bindet an die mRNA und findet das **Startcodon AUG**. Die Initiator-tRNA (mit Methionin beladen) bindet. Die grosse Untereinheit lagert sich an → funktionsfaehiges Ribosom mit drei Bindungsstellen (A-, P-, E-Stelle).
+1. **Initiation:** Die kleine ribosomale Untereinheit bindet an die mRNA und findet das **Startcodon AUG**. Die Initiator-tRNA (mit Methionin beladen) bindet. Die große Untereinheit lagert sich an → funktionsfähiges Ribosom mit drei Bindungsstellen (A-, P-, E-Stelle).
 
-2. **Elongation:** Jedes Codon der mRNA wird abgelesen. Die passende **tRNA** mit dem komplementaeren **Anticodon** bindet an der **A-Stelle**. Durch **Peptidbindung** wird die Aminosaeure an die wachsende Polypeptidkette angefuegt (katalysiert durch die rRNA = Ribozym (katalytisch aktive RNA)). Das Ribosom rueckt um ein Codon weiter (Translokation). Dieser Zyklus wiederholt sich fuer jedes Codon.
+2. **Elongation:** Jedes Codon der mRNA wird abgelesen. Die passende **tRNA** mit dem komplementären **Anticodon** bindet an der **A-Stelle**. Durch **Peptidbindung** wird die Aminosäure an die wachsende Polypeptidkette angefügt (katalysiert durch die rRNA = Ribozym (katalytisch aktive RNA)). Das Ribosom rückt um ein Codon weiter (Translokation). Dieser Zyklus wiederholt sich für jedes Codon.
 
-3. **Termination:** Wenn ein **Stoppcodon** (UAA, UAG, UGA) erreicht wird, bindet ein **Release-Faktor** (kein tRNA). Die Polypeptidkette wird freigesetzt, das Ribosom zerfaellt in seine Untereinheiten.
+3. **Termination:** Wenn ein **Stoppcodon** (UAA, UAG, UGA) erreicht wird, bindet ein **Release-Faktor** (kein tRNA). Die Polypeptidkette wird freigesetzt, das Ribosom zerfällt in seine Untereinheiten.
 
-**Nach der Translation:** Das Polypeptid faltet sich in seine dreidimensionale **Tertiaestruktur** (mithilfe von Chaperonen (Faltungshelfern)). Ggf. posttranslationale Modifikationen (Glykosylierung, Phosphorylierung) im ER und Golgi-Apparat. Erst das korrekt gefaltete Protein ist funktionsfaehig.
+**Nach der Translation:** Das Polypeptid faltet sich in seine dreidimensionale **Tertiärstruktur** (mithilfe von Chaperonen (Faltungshelfern)). Ggf. posttranslationale Modifikationen (Glykosylierung, Phosphorylierung) im ER und Golgi-Apparat. Erst das korrekt gefaltete Protein ist funktionsfähig.
 
-**Polyribosomen (Polysomen):** Mehrere Ribosomen koennen gleichzeitig dieselbe mRNA ablesen → effiziente Proteinproduktion.
+**Polyribosomen (Polysomen):** Mehrere Ribosomen können gleichzeitig dieselbe mRNA ablesen → effiziente Proteinproduktion.
 
-> **Merke:** Translation = mRNA → Protein an Ribosomen im Zytoplasma. tRNA bringt Aminosaeuren (Anticodon erkennt Codon). Initiation (AUG) → Elongation (Peptidbindung) → Termination (Stoppcodon). Polypeptid faltet sich zum funktionellen Protein.
+> **Merke:** Translation = mRNA → Protein an Ribosomen im Zytoplasma. tRNA bringt Aminosäuren (Anticodon erkennt Codon). Initiation (AUG) → Elongation (Peptidbindung) → Termination (Stoppcodon). Polypeptid faltet sich zum funktionellen Protein.
 
 ---
 
@@ -1299,24 +1299,24 @@ Die Translation benoetigt: **mRNA** (Vorlage), **Ribosomen** (Uebersetzungsmasch
 
 {{DIAGRAM:endomembrane-system}}
 
-Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (z. B. Punktmutation). Unterschiedliche DNA-Sequenz → unterschiedliche mRNA → unterschiedliches Protein (veraenderte Aminosaeure-Sequenz, veraenderte Faltung/Funktion) → unterschiedlicher **Phaenotyp**.
+Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (z. B. Punktmutation). Unterschiedliche DNA-Sequenz → unterschiedliche mRNA → unterschiedliches Protein (veränderte Aminosäure-Sequenz, veränderte Faltung/Funktion) → unterschiedlicher **Phänotyp**.
 
-**Molekulare Erklaerung von Dominanz und Rezessivitaet:**
-- **Dominantes Allel:** Das Protein ist funktionsfaehig; bereits eine Kopie reicht fuer den normalen Phaenotyp (= Haploinsuffizienz ist nicht vorhanden).
-- **Rezessives Allel:** Das Protein ist nicht-funktional oder fehlt; bei Heterozygoten kompensiert das dominante Allel. Nur bei **Homozygotie** (aa) fehlt die Funktion → rezessiver Phaenotyp.
+**Molekulare Erklärung von Dominanz und Rezessivität:**
+- **Dominantes Allel:** Das Protein ist funktionsfähig; bereits eine Kopie reicht für den normalen Phänotyp (= Haploinsuffizienz ist nicht vorhanden).
+- **Rezessives Allel:** Das Protein ist nicht-funktional oder fehlt; bei Heterozygoten kompensiert das dominante Allel. Nur bei **Homozygotie** (aa) fehlt die Funktion → rezessiver Phänotyp.
 - **Kodominanz:** Beide Allele produzieren unterschiedliche, aber funktionelle Proteine → beide Merkmale sichtbar (z. B. AB0-Blutgruppen).
 
-Vererbung bedeutet: Die DNA (Allele) wird ueber Keimzellen (Meiose) von Generation zu Generation weitergegeben. In jeder neuen Zelle wird sie erneut exprimiert (DNA → RNA → Protein) und praegt den Phaenotyp.
+Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generation zu Generation weitergegeben. In jeder neuen Zelle wird sie erneut exprimiert (DNA → RNA → Protein) und prägt den Phänotyp.
 
 ---
 
 ## Ausnahmen vom Zentraldogma
 
-- **Reverse Transkriptase:** Bei **Retroviren** (z. B. HIV) wird RNA in DNA umgeschrieben (RNA → DNA). Diese DNA wird ins Wirtsgenom integriert (Provirus). Auch **Telomerase** nutzt eine Reverse-Transkriptase-Aktivitaet.
+- **Reverse Transkriptase:** Bei **Retroviren** (z. B. HIV) wird RNA in DNA umgeschrieben (RNA → DNA). Diese DNA wird ins Wirtsgenom integriert (Provirus). Auch **Telomerase** nutzt eine Reverse-Transkriptase-Aktivität.
 - **RNA-Replikation:** Einige RNA-Viren replizieren RNA direkt (RNA → RNA).
-- **Nicht-codierende RNA:** Nicht alle Gene codieren fuer Proteine. rRNA, tRNA, miRNA, siRNA, lncRNA haben direkte Funktionen als RNA-Molekuele.
+- **Nicht-codierende RNA:** Nicht alle Gene codieren für Proteine. rRNA, tRNA, miRNA, siRNA, lncRNA haben direkte Funktionen als RNA-Moleküle.
 
-> **Merke:** Reverse Transkriptase (Retroviren, Telomerase): RNA → DNA. Nicht alle Gene codieren Proteine -- viele RNA-Typen haben eigene Funktionen.`,
+> **Merke:** Reverse Transkriptase (Retroviren, Telomerase): RNA → DNA. Nicht alle Gene codieren Proteine — viele RNA-Typen haben eigene Funktionen.`,
       lernziele: [
         "Zentraldogma (DNA → RNA → Protein) und Genexpression als Konzept beschreiben.",
         "Transkription und Translation begrifflich unterscheiden.",

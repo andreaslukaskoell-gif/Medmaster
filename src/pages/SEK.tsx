@@ -69,7 +69,7 @@ export default function SEK() {
 
   const hasTasks =
     emotionenErkennenOffiziellAlle.length > 0 ||
-    emotionenRegulierenTasks.length > 0 ||
+    emotionenRegulierenOffiziellTasks.length > 0 ||
     sozialesEntscheidenTasks.length > 0;
   if (!hasTasks) {
     return (
@@ -213,16 +213,16 @@ export default function SEK() {
               Beste Bewältigungsstrategie wählen (4 Optionen)
             </p>
             <p className="text-xs text-muted mb-3">
-              {emotionenRegulierenTasks.length} Szenarien | Prozentual
+              {emotionenRegulierenOffiziellTasks.length} Szenarien | Prozentual
             </p>
             <Button
               size="sm"
               className="w-full"
               onClick={() => setView("regulieren-quiz")}
-              disabled={emotionenRegulierenTasks.length === 0}
+              disabled={emotionenRegulierenOffiziellTasks.length === 0}
             >
               <Play className="w-4 h-4 mr-1" /> Üben (
-              {emotionenRegulierenTasks.length > 0 ? "12 Aufgaben" : "Daten fehlen"})
+              {emotionenRegulierenOffiziellTasks.length > 0 ? "12 Aufgaben" : "Daten fehlen"})
             </Button>
           </CardContent>
         </Card>

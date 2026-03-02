@@ -584,7 +584,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
         'Phosphatidylserin-Flip-Flop bei Apoptose = "Eat me"-Signal für Makrophagen → phagozytäre Clearance.',
       ],
       klinischerBezug:
-        "Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Die ABO-Blutgruppenantigene sind Glykokalix-Strukturen (Kapitel Blut/Immunologie). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl--Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.",
+        "Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Die ABO-Blutgruppenantigene sind Glykokalix-Strukturen (Kapitel Blut/Immunologie). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl⁻-Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.",
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question: "Warum können Ionen wie Na+ und K+ die Lipiddoppelschicht nicht frei passieren?",
@@ -706,62 +706,62 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
         "SGLT",
         "Herzglykoside",
       ],
-      content: `## Passiver Transport -- entlang des Gradienten, ohne ATP
+      content: `## Passiver Transport — entlang des Gradienten, ohne ATP
 
 
 **1. Einfache Diffusion (ohne Protein)**
-Kleine, unpolare (lipophile, fettlösliche) Molekuele loesen sich in der Lipiddoppelschicht und diffundieren entlang des Konzentrationsgradienten. Beispiele: O2, CO2, Ethanol, Steroide, fettloesliche Vitamine (A, D, E, K).
+Kleine, unpolare (lipophile, fettlösliche) Moleküle lösen sich in der Lipiddoppelschicht und diffundieren entlang des Konzentrationsgradienten. Beispiele: O2, CO2, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
 
 **2. Erleichterte Diffusion (mit Membranprotein)**
-Polare oder geladene Molekuele nutzen Proteine -- weiterhin **entlang** des Gradienten, ohne ATP:
+Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gradienten, ohne ATP:
 
 | Typ | Eigenschaft | Beispiele |
 |-----|-------------|-----------|
-| **Ionenkanaele** | Sehr schnell, selektiv, schaltbar (spannungs- oder ligandengesteuert) | Na+-, K+-, Ca2+-, Cl--Kanaele |
-| **Carrier/Transporter** | Langsamer, saettigbar (Kapazitaetsgrenze) | GLUT1--4 (Glucose) |
-| **Aquaporine (AQP)** | Nur Wasser | AQP2 in Niere (ADH-reguliert → Wasserrueckresorption) |
+| **Ionenkanäle** | Sehr schnell, selektiv, schaltbar (spannungs- oder ligandengesteuert) | Na+-, K+-, Ca2+-, Cl⁻-Kanäle |
+| **Carrier/Transporter** | Langsamer, sättigbar (Kapazitätsgrenze) | GLUT1–4 (Glucose) |
+| **Aquaporine (AQP)** | Nur Wasser | AQP2 in Niere (ADH-reguliert → Wasserrückresorption) |
 
-> **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanaele schnell; Carrier saettigbar.
+> **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
 
 ---
 
-## Osmose und Tonizitaet
+## Osmose und Tonizität
 
-**Osmose:** Wasser diffundiert durch eine semipermeable Membran von der Seite mit **niedrigerer** **Osmolalitaet** zur Seite mit **hoeherer** Osmolalitaet. **Osmolalitaet** (Einheit: mosmol/kg) ist die Anzahl geloester Teilchen pro Kilogramm Wasser -- je hoeher, desto "konzentrierter". Das Wasser stroemt also dorthin, wo mehr geloeste Teilchen sind (Wasser "verduennt" die konzentrierte Seite).
+**Osmose:** Wasser diffundiert durch eine semipermeable Membran von der Seite mit **niedrigerer** **Osmolalität** zur Seite mit **höherer** Osmolalität. **Osmolalität** (Einheit: mosmol/kg) ist die Anzahl gelöster Teilchen pro Kilogramm Wasser — je höher, desto "konzentrierter". Das Wasser strömt also dorthin, wo mehr gelöste Teilchen sind (Wasser "verdünnt" die konzentrierte Seite).
 
-**Tonizitaet** beschreibt, wie eine Loesung **ausserhalb** der Zelle im Vergleich zum Zellinnern das Zellvolumen beeinflusst:
+**Tonizität** beschreibt, wie eine Lösung **außerhalb** der Zelle im Vergleich zum Zellinnern das Zellvolumen beeinflusst:
 
-| Tonizitaet | Osmolalitaet aussen | Wasserbewegung | Folge (z. B. Erythrozyt) |
+| Tonizität | Osmolalität aussen | Wasserbewegung | Folge (z. B. Erythrozyt) |
 |-----------|-------------------|----------------|--------------------------|
 | **Isoton** (~290 mosmol/kg) | = Zytoplasma | keine Nettobewegung | Volumen konstant |
-| **Hypoton** | < Zytoplasma | in die Zelle | Zelle schwillt → **Haemolyse** (Zerplatzung der Zelle) |
+| **Hypoton** | < Zytoplasma | in die Zelle | Zelle schwillt → **Hämolyse** (Zerplatzung der Zelle) |
 | **Hyperton** | > Zytoplasma | aus der Zelle | Zelle schrumpft → **Krenation** (Eindellung, Schrumpfung) |
 
-**Haemolyse** = Zerfall der Zellmembran (z. B. Erythrozyt platzt); **Krenation** = Schrumpfung der Zelle durch Wasseraustritt. Isotone NaCl-Loesung: **0,9 %** (~290 mosmol/kg) = physiologische Kochsalzloesung (Infusion).
+**Hämolyse** = Zerfall der Zellmembran (z. B. Erythrozyt platzt); **Krenation** = Schrumpfung der Zelle durch Wasseraustritt. Isotone NaCl-Lösung: **0,9 %** (~290 mosmol/kg) = physiologische Kochsalzlösung (Infusion).
 
-> **Merke:** Osmose = Wassertransport zur hoeheren Osmolalitaet. Hypoton → Haemolyse; hyperton → Krenation.
+> **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
 
 ---
 
-## Aktiver Transport -- gegen den Gradienten
+## Aktiver Transport — gegen den Gradienten
 
 
-**Primaer aktiver Transport (direkt ATP)**
+**Primär aktiver Transport (direkt ATP)**
 Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **Na+/K+-ATPase**.
 
-- Pro Zyklus: **1 ATP** → **3 Na+ nach aussen**, **2 K+ nach innen**
-- Folgen: Aufbau des **Ruhemembranpotenzials** (~-70 mV) -- das ist die elektrische Spannung an der Membran einer ruhenden Zelle (innen negativ gegenueber aussen); ferner niedrige intrazellulaere Na+-Konzentration (Grundlage fuer sekundaeren aktiven Transport und Aktionspotential) und hohe intrazellulaere K+-Konzentration
+- Pro Zyklus: **1 ATP** → **3 Na+ nach außen**, **2 K+ nach innen**
+- Folgen: Aufbau des **Ruhemembranpotenzials** (~-70 mV) — das ist die elektrische Spannung an der Membran einer ruhenden Zelle (innen negativ gegenüber außen); ferner niedrige intrazelluläre Na+-Konzentration (Grundlage für sekundären aktiven Transport und Aktionspotential) und hohe intrazelluläre K+-Konzentration
 
-**Klinisch -- Herzglykoside (vertiefend):** Digitalis, Ouabain hemmen die Na+/K+-ATPase → intrazellulaeres Na+ erhoeht → Na+/Ca2+-Austauscher (NCX) arbeitet weniger → Ca2+ akkumuliert → staerkere Herzkontraktion (**positiv inotrop**, d.h. die Kontraktionskraft steigernd). Einsatz bei Herzinsuffizienz (Herzschwäche), Vorhofflimmern.
+**Klinisch — Herzglykoside (vertiefend):** Digitalis, Ouabain hemmen die Na+/K+-ATPase → intrazelluläres Na+ erhöht → Na+/Ca2+-Austauscher (NCX) arbeitet weniger → Ca2+ akkumuliert → stärkere Herzkontraktion (**positiv inotrop**, d.h. die Kontraktionskraft steigernd). Einsatz bei Herzinsuffizienz (Herzschwäche), Vorhofflimmern.
 
-**Sekundaer aktiver Transport (ohne direktes ATP)**
+**Sekundär aktiver Transport (ohne direktes ATP)**
 
 | Typ | Richtung | Beispiel | Klinik |
 |-----|----------|----------|--------|
-| **Symport** | Na+ und Substrat in **dieselbe** Richtung | SGLT1/2: Na+-Glucose-Kotransport (Duenndarm, proximaler Tubulus) | SGLT2-Hemmer (Empagliflozin, Dapagliflozin) → Glucosurie (Zuckerausscheidung im Urin) → Blutzuckersenkung bei Typ-2-Diabetes |
+| **Symport** | Na+ und Substrat in **dieselbe** Richtung | SGLT1/2: Na+-Glucose-Kotransport (Dünndarm, proximaler Tubulus) | SGLT2-Hemmer (Empagliflozin, Dapagliflozin) → Glucosurie (Zuckerausscheidung im Urin) → Blutzuckersenkung bei Typ-2-Diabetes |
 | **Antiport** | Na+ ein, Substrat **heraus** | Na+/Ca2+-Austauscher (NCX) im Herzmuskel | Siehe Herzglykoside |
 
-> **Merke:** Na+/K+-ATPase: 3 Na+ raus, 2 K+ rein (1 ATP). Sekundaer aktiv = Na+-Gradient treibt Substrat (Symport/Antiport).`,
+> **Merke:** Na+/K+-ATPase: 3 Na+ raus, 2 K+ rein (1 ATP). Sekundär aktiv = Na+-Gradient treibt Substrat (Symport/Antiport).`,
       lernziele: [
         "Passiven und aktiven Transport unterscheiden und je ein Beispiel nennen",
         "Osmose und Tonizität erklären sowie die Folgen hypotoner/hypertoner Lösungen (Hämolyse, Krenation)",
@@ -879,7 +879,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
         "Proteasomen",
         "Ubiquitin",
         "Kinozilien",
-        "Geisseln",
+        "Geißeln",
         "Flagellen",
         "9+2-Anordnung",
         "Dynein",
@@ -889,59 +889,59 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       content: `## Der sekretorische Weg: rER → Golgi → Ziel
 
 
-Proteine, die fuer Membranen, Lysosomen oder die Sekretion (Hormone, Antikoerper) bestimmt sind, durchlaufen den **sekretorischen Weg** in drei Stationen:
+Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper) bestimmt sind, durchlaufen den **sekretorischen Weg** in drei Stationen:
 
-**1. Raues ER (rER) -- Proteinfabrik:**
+**1. Raues ER (rER) — Proteinfabrik:**
 - Mit Ribosomen besetzt → Co-translationale Proteinsynthese
-- **N-Glykosylierung**: Zuckerketten werden an Asparagin-Reste angehaengt (Qualitaetsmerkmal)
-- **Qualitaetskontrolle**: Chaperone (Faltungshelfer-Proteine; Calnexin, Calreticulin) ueberpruefen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
-- **ER-Stress**: Bei Ueberflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR, Stressantwort auf fehlgefaltete Proteine) → bei Ueberlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in Beta-Zellen)
+- **N-Glykosylierung**: Zuckerketten werden an Asparagin-Reste angehängt (Qualitätsmerkmal)
+- **Qualitätskontrolle**: Chaperone (Faltungshelfer-Proteine; Calnexin, Calreticulin) überprüfen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
+- **ER-Stress**: Bei Überflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR, Stressantwort auf fehlgefaltete Proteine) → bei Überlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in Beta-Zellen)
 
-**2. Glattes ER (gER) -- Lipidsynthese und Entgiftung:**
+**2. Glattes ER (gER) — Lipidsynthese und Entgiftung:**
 - Ohne Ribosomen
 - **Lipidsynthese**: Phospholipide, Steroide, Cholesterin
 - **Detoxifikation**: CYP450-Enzyme in Leberzellen oxidieren Pharmaka, Toxine, Steroide
-- **Ca2+-Speicher**: IP3 → Ca2+-Freisetzung → intrazellulaere Signalkaskade (Muskelkontraktion, Sekretion)
+- **Ca2+-Speicher**: IP3 → Ca2+-Freisetzung → intrazelluläre Signalkaskade (Muskelkontraktion, Sekretion)
 - Sarkoplasmatisches Retikulum in Muskelzellen = spezialisiertes gER
 
-**3. Golgi-Apparat -- Sortierung und Modifikation:**
-- Gestapelte Membransaecke: Cis-Seite (ER-nah) → medial → Trans-Seite (Membran-nah)
+**3. Golgi-Apparat — Sortierung und Modifikation:**
+- Gestapelte Membransäcke: Cis-Seite (ER-nah) → medial → Trans-Seite (Membran-nah)
 - **Proteinmodifikation**: O-Glykosylierung (an Serin/Threonin), weitere Zuckermodifikationen
-- **Schluessel fuer Lysosomales Targeting**: Mannose-6-Phosphat (M6P) wird angehaengt → M6P-Rezeptor → Transport zu Lysosomen
+- **Schlüssel für Lysosomales Targeting**: Mannose-6-Phosphat (M6P) wird angehängt → M6P-Rezeptor → Transport zu Lysosomen
 - **Sekretion**: reguliert (auf Signal, z.B. Insulin aus Granula) vs. konstitutiv (immer)
 
-**Klinisch -- I-Zell-Krankheit (Mukolipidose II):** Defektes M6P-Tagging → lysosomale Enzyme landen im Blut statt im Lysosom → Substratakkumulation in Zellen.
+**Klinisch — I-Zell-Krankheit (Mukolipidose II):** Defektes M6P-Tagging → lysosomale Enzyme landen im Blut statt im Lysosom → Substratakkumulation in Zellen.
 
-> **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse fuer Lysosomen. M6P fehlt → I-Zell-Krankheit.
+> **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
 {{DIAGRAM:endomembrane-system}}
 
 ---
 
-## Mitochondrien -- Kraftwerk und Endosymbiont
+## Mitochondrien — Kraftwerk und Endosymbiont
 
 
 {{DIAGRAM:double-membrane-organelles}}
 
 **Struktur:**
-- **Aeussere Membran**: glatt, permeabel fuer kleine Molekuele (Porin-Kanaele)
-- **Innere Membran**: tief gefaltet zu **Cristae** (Einstuelpungen der inneren Membran) → enorme Oberflaechenvergroesserung fuer die Atmungskette
+- **Äußere Membran**: glatt, permeabel für kleine Moleküle (Porin-Kanäle)
+- **Innere Membran**: tief gefaltet zu **Cristae** (Einstülpungen der inneren Membran) → enorme Oberflächenvergrößerung für die Atmungskette
 - **Intermembranraum**: zwischen beiden Membranen (H+ werden hierhin gepumpt)
-- **Matrix**: innerster Bereich -- hier laeuft der Citratzyklus
+- **Matrix**: innerster Bereich — hier läuft der Citratzyklus
 
 **Funktion (ATP-Synthese):**
-Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (Matrix) → NADH/FADH2 → Atmungskette (innere Membran) → Protonengradient → ATP-Synthase → **~30--32 ATP pro Glucose** (aerob, vs. 2 ATP anaerob)
+Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (Matrix) → NADH/FADH2 → Atmungskette (innere Membran) → Protonengradient → ATP-Synthase → **~30–32 ATP pro Glucose** (aerob, vs. 2 ATP anaerob)
 
 **Apoptose:** Bei Zellstress → Cytochrom c wird aus Mitochondrien ins Zytoplasma freigesetzt → Apoptosom → Caspase-9/3-Aktivierung → kontrollierter Zelltod
 
-**Endosymbiontentheorie -- 5 Belege** (ausfuehrlich: UK "Prokaryoten vs. Eukaryoten"):
-1. Eigene **zirkulaere mtDNA** (~16.500 bp, kodiert 13 Proteine)
+**Endosymbiontentheorie — 5 Belege** (ausführlich: UK "Prokaryoten vs. Eukaryoten"):
+1. Eigene **zirkuläre mtDNA** (~16.500 bp, kodiert 13 Proteine)
 2. **70S-Ribosomen** (bakteriell, nicht 80S)
 3. **Doppelmembran** (innere = ehemalige Bakterienmembran)
-4. **Binaere Fission** (nicht Mitose)
-5. **Antibiotika-Empfindlichkeit** (Chloramphenicol → aplastische Anaemie bei hoher Dosis)
+4. **Binäre Fission** (nicht Mitose)
+5. **Antibiotika-Empfindlichkeit** (Chloramphenicol → aplastische Anämie bei hoher Dosis)
 
-**Maternale Vererbung:** mtDNA kommt ausschliesslich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
+**Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
 
 > **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
 
@@ -950,13 +950,13 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 ## Lysosomen, Peroxisomen und Proteasomen: Abbau und Recycling
 
 
-**Lysosomen -- zellulaerer Recyclinghof:**
-- Entstehen aus dem Trans-Golgi-Netzwerk; pH 4,5--5 durch H+-ATPase in der Membran
-- Enthalten >50 **saure Hydrolasen** (Proteasen, Lipasen, Glykosidasen -- alle optimiert fuer pH ~5)
+**Lysosomen — zellulärer Recyclinghof:**
+- Entstehen aus dem Trans-Golgi-Netzwerk; pH 4,5–5 durch H+-ATPase in der Membran
+- Enthalten >50 **saure Hydrolasen** (Proteasen, Lipasen, Glykosidasen — alle optimiert für pH ~5)
 - **Autophagie**: eigene defekte Organellen werden in Autophagosomen verpackt → Fusion mit Lysosom → Abbau
 - **Heterophagie**: aufgenommene Bakterien/Partikel (Phagolysosom), Rezeptor-Recycling
 
-**Lysosomale Speicherkrankheiten** entstehen, wenn **ein lysosomales Enzym fehlt** → das zugehoerige Substrat kann nicht abgebaut werden und **akkumuliert** in der Zelle (Speicherung), mit oft schweren Organ- und Nervenschaeden:
+**Lysosomale Speicherkrankheiten** entstehen, wenn **ein lysosomales Enzym fehlt** → das zugehörige Substrat kann nicht abgebaut werden und **akkumuliert** in der Zelle (Speicherung), mit oft schweren Organ- und Nervenschäden:
 
 | Krankheit | Defektes Enzym | Substrat | Symptome |
 |---|---|---|---|
@@ -967,46 +967,46 @@ Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (
 
 **Peroxisomen:**
 - Einmembranorganellen; entstehen durch Teilung oder de-novo aus ER
-- Funktion: **Beta-Oxidation sehr langkettiger Fettsaeuren (VLCFA >C22)**, H2O2-Abbau durch **Katalase** (2H2O2 → 2H2O + O2), Plasmalogen-Synthese (Myelinisierung)
-- Klinisch: **Zellweger-Syndrom** (Peroxisom-Biogenese-Defekt) → VLCFA erhoeht → schwere Neurodegeneration; **Adrenoleukodystrophie (ALD)** (X-chromosomal, ABCD1-Defekt) → VLCFA im ZNS
+- Funktion: **Beta-Oxidation sehr langkettiger Fettsäuren (VLCFA >C22)**, H2O2-Abbau durch **Katalase** (2H2O2 → 2H2O + O2), Plasmalogen-Synthese (Myelinisierung)
+- Klinisch: **Zellweger-Syndrom** (Peroxisom-Biogenese-Defekt) → VLCFA erhöht → schwere Neurodegeneration; **Adrenoleukodystrophie (ALD)** (X-chromosomal, ABCD1-Defekt) → VLCFA im ZNS
 
-**Proteasomen -- molekulaere Schredder:**
+**Proteasomen — molekuläre Schredder:**
 - Keine Membranorganellen; zytosolische Proteinkomplexe (26S = 20S-Kern + 2x19S-Kappen)
-- Abbau von: fehlgefalteten Proteinen, regulatorischen Proteinen (Cycline!), Entzuendungsmediatoren
-- **Ubiquitin-System**: **Ubiquitin** ist ein kleines Protein, das als "Abbau-Markierung" an andere Proteine angehaengt wird. Fehlgefaltete oder nicht mehr benoetigte Proteine werden durch **Polyubiquitin-Ketten** (Lys48-Verknuepfung) markiert → das 26S-Proteasom erkennt Ubiquitin → entfaltet und zerlegt das Protein in kurze Peptide (~8 Aminosaeuren)
+- Abbau von: fehlgefalteten Proteinen, regulatorischen Proteinen (Cycline!), Entzündungsmediatoren
+- **Ubiquitin-System**: **Ubiquitin** ist ein kleines Protein, das als "Abbau-Markierung" an andere Proteine angehängt wird. Fehlgefaltete oder nicht mehr benötigte Proteine werden durch **Polyubiquitin-Ketten** (Lys48-Verknüpfung) markiert → das 26S-Proteasom erkennt Ubiquitin → entfaltet und zerlegt das Protein in kurze Peptide (~8 Aminosäuren)
 - Klinisch:
-  - **MHC-I-Antigenpraesentation**: Peptide aus dem Proteasom werden auf MHC-I geladen → Erkennung durch CD8+-T-Zellen
+  - **MHC-I-Antigenpräsentation**: Peptide aus dem Proteasom werden auf MHC-I geladen → Erkennung durch CD8+-T-Zellen
   - **Bortezomib** (Proteasom-Inhibitor) beim multiplen Myelom → fehlgefaltete Myelomproteine akkumulieren → Apoptose
-  - **CFTR-DeltaF508** bei Mukoviszidose: fehlgefaltetes CFTR wird durch ERAD + Proteasom abgebaut → kein Cl--Kanal in der Membran
+  - **CFTR-DeltaF508** bei Mukoviszidose: fehlgefaltetes CFTR wird durch ERAD + Proteasom abgebaut → kein Cl⁻-Kanal in der Membran
 
-> **Merke:** Lysosom = saures Milieu pH 4,5, saure Hydrolasen. Fehlendes Lysosom-Enzym → Speicherkrankheit. Proteasom + Ubiquitin = Zellmuellentsorgung; Bortezomib blockiert das beim Myelom.
+> **Merke:** Lysosom = saures Milieu pH 4,5, saure Hydrolasen. Fehlendes Lysosom-Enzym → Speicherkrankheit. Proteasom + Ubiquitin = Zellmüllentsorgung; Bortezomib blockiert das beim Myelom.
 
 ---
 
-## Kinozilien und Geisseln (Flagellen)
+## Kinozilien und Geißeln (Flagellen)
 
 
-**Aufbau:** Kinozilien und Geisseln haben den gleichen Grundbauplan: **9+2-Anordnung** aus Mikrotubuli -- 9 Aussendoubletten bilden einen Ring, in der Mitte liegen 2 zentrale Einzeltubuli. Die gesamte Struktur heisst **Axonem** und ist von der Zellmembran umhuellt. Am Uebergang zur Zelle sitzt das **Basalkoerperchen** (9x3-Tripletts, wie ein Zentriol).
+**Aufbau:** Kinozilien und Geißeln haben den gleichen Grundbauplan: **9+2-Anordnung** aus Mikrotubuli — 9 Außendoubletten bilden einen Ring, in der Mitte liegen 2 zentrale Einzeltubuli. Die gesamte Struktur heißt **Axonem** und ist von der Zellmembran umhüllt. Am Übergang zur Zelle sitzt das **Basalkörperchen** (9x3-Tripletts, wie ein Zentriol).
 
-**Bewegungsmechanismus:** **Dynein-Motorproteine** (aeussere und innere Dyneinarme) sitzen an den Aussendoubletten und gleiten unter **ATP-Verbrauch** an benachbarten Doubletten entlang. Durch die Verankerung im Axonem wird das Gleiten in eine **Biegebewegung** umgewandelt.
+**Bewegungsmechanismus:** **Dynein-Motorproteine** (äußere und innere Dyneinarme) sitzen an den Außendoubletten und gleiten unter **ATP-Verbrauch** an benachbarten Doubletten entlang. Durch die Verankerung im Axonem wird das Gleiten in eine **Biegebewegung** umgewandelt.
 
-**Kinozilien vs. Geisseln:**
-- **Kinozilien**: kurz (~5--10 Mikrometer), **zahlreich** pro Zelle (hunderte), koordinierter Schlag in einer Richtung. Beispiel: **Flimmerepithel der Atemwege** → Schleimtransport (mukoziliaere Clearance); **Eileiter** → Eitransport
-- **Geisseln (Flagellen)**: lang (~50--70 Mikrometer), meist **1--2 pro Zelle**, wellenfoermige Bewegung. Beispiel: **Spermien** → Fortbewegung
+**Kinozilien vs. Geißeln:**
+- **Kinozilien**: kurz (~5–10 Mikrometer), **zahlreich** pro Zelle (hunderte), koordinierter Schlag in einer Richtung. Beispiel: **Flimmerepithel der Atemwege** → Schleimtransport (mukoziliäre Clearance); **Eileiter** → Eitransport
+- **Geißeln (Flagellen)**: lang (~50–70 Mikrometer), meist **1–2 pro Zelle**, wellenförmige Bewegung. Beispiel: **Spermien** → Fortbewegung
 
-**Achtung -- Stereozilien:** **Stereozilien** sind KEINE echten Zilien! Sie bestehen aus **Aktin-Filamenten** (nicht Mikrotubuli), sind **unbeweglich** und haben **keine 9+2-Struktur**. Vorkommen: **Innenohr** (Haarzellen → mechanische Reizaufnahme) und **Nebenhoden** (Resorption). Der Name ist irrefuehrend -- sie sind eigentlich lange Mikrovilli.
+**Achtung — Stereozilien:** **Stereozilien** sind KEINE echten Zilien! Sie bestehen aus **Aktin-Filamenten** (nicht Mikrotubuli), sind **unbeweglich** und haben **keine 9+2-Struktur**. Vorkommen: **Innenohr** (Haarzellen → mechanische Reizaufnahme) und **Nebenhoden** (Resorption). Der Name ist irreführend — sie sind eigentlich lange Mikrovilli.
 
-**Klinisch -- Primaere Ziliendyskinesie (PCD / Kartagener-Syndrom):**
+**Klinisch — Primäre Ziliendyskinesie (PCD / Kartagener-Syndrom):**
 Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder dyskinetisch. Konsequenzen:
-- **Chronische Bronchitis/Sinusitis**: fehlende mukoziliaere Clearance
-- **Situs inversus** (~50 % der Faelle): Embryonale Nodal-Zilien steuern die Links-Rechts-Achse; bei Defekt → zufaellige Anordnung
-- **Maennliche Infertilitaet**: Spermiengeisseln funktionslos
+- **Chronische Bronchitis/Sinusitis**: fehlende mukoziliäre Clearance
+- **Situs inversus** (~50 % der Fälle): Embryonale Nodal-Zilien steuern die Links-Rechts-Achse; bei Defekt → zufällige Anordnung
+- **Männliche Infertilität**: Spermiengeißeln funktionslos
 
-> **Merke:** Kinozilien + Geisseln = 9+2-Mikrotubuli + Dynein. Stereozilien = Aktin (keine echten Zilien!).
+> **Merke:** Kinozilien + Geißeln = 9+2-Mikrotubuli + Dynein. Stereozilien = Aktin (keine echten Zilien!).
 
 ---
 
-## Uebersicht: Organellen auf einen Blick
+## Übersicht: Organellen auf einen Blick
 
 **Organellen mit zwei (Doppel-)Membranen:** **Mitochondrien**, **Zellkern**. Peroxisom, Lysosom, ER, Golgi haben eine einfache Membran. **Peroxisom:** von eigener Membran umgeben, **Wasserstoffperoxid-Stoffwechsel** (Katalase). **Nukleosom** (Histon-DNA-Komplex) und **Ribosom** (Protein-rRNA-Komplex) haben **keine** eigene Membran.
 
@@ -2034,7 +2034,7 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
           options: [
             "Im Stroma des Chloroplasten",
             "In der Thylakoidmembran des Chloroplasten",
-            "In der aeusseren Chloroplastenmembran",
+            "In der äußeren Chloroplastenmembran",
             "Im Zytoplasma der Pflanzenzelle",
             "In der Mitochondrien-Matrix",
           ],
@@ -2059,7 +2059,7 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
           ],
           correctIndex: 1,
           explanation:
-            "Der freigesetzte O₂ stammt aus der Photolyse des Wassers im PS II: 2 H₂O → O₂ + 4 H⁺ + 4 e⁻. Dies wurde durch Isotopenexperimente mit ¹⁸O-markiertem Wasser bewiesen. Das CO₂ liefert den Kohlenstoff fuer die Glucose, nicht den Sauerstoff. Haeufiger Irrtum: O₂ komme aus CO₂.",
+            "Der freigesetzte O₂ stammt aus der Photolyse des Wassers im PS II: 2 H₂O → O₂ + 4 H⁺ + 4 e⁻. Dies wurde durch Isotopenexperimente mit ¹⁸O-markiertem Wasser bewiesen. Das CO₂ liefert den Kohlenstoff für die Glucose, nicht den Sauerstoff. Häufiger Irrtum: O₂ komme aus CO₂.",
           hints: [
             "Isotopen-Markierung: ¹⁸O im Wasser → ¹⁸O₂",
             "PS II spaltet Wasser — was entsteht?",
@@ -2069,7 +2069,7 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
         },
         {
           question:
-            "Welches Enzym fixiert CO₂ im Calvin-Zyklus und gilt als das haeufigste Protein der Erde?",
+            "Welches Enzym fixiert CO₂ im Calvin-Zyklus und gilt als das häufigste Protein der Erde?",
           options: [
             "PEP-Carboxylase",
             "ATP-Synthase",
@@ -2079,10 +2079,10 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
           ],
           correctIndex: 2,
           explanation:
-            "RuBisCO katalysiert die CO₂-Fixierung im Calvin-Zyklus: CO₂ + Ribulose-1,5-bisphosphat (C5) → 2 × 3-Phosphoglycerat (C3). Es macht ca. 50 % des Blattproteins aus und ist das haeufigste Protein der Erde. PEP-Carboxylase fixiert CO₂ bei C4-Pflanzen (nicht im Calvin-Zyklus direkt). RuBisCO kann auch O₂ fixieren → Photorespiration (unerwuenscht).",
+            "RuBisCO katalysiert die CO₂-Fixierung im Calvin-Zyklus: CO₂ + Ribulose-1,5-bisphosphat (C5) → 2 × 3-Phosphoglycerat (C3). Es macht ca. 50 % des Blattproteins aus und ist das häufigste Protein der Erde. PEP-Carboxylase fixiert CO₂ bei C4-Pflanzen (nicht im Calvin-Zyklus direkt). RuBisCO kann auch O₂ fixieren → Photorespiration (unerwünscht).",
           hints: [
-            "Das Enzym heisst auch 'Carboxylase' — was sagt das ueber seine Funktion?",
-            "Calvin-Zyklus: CO₂ wird an ein C5-Molekuel fixiert",
+            "Das Enzym heißt auch 'Carboxylase' — was sagt das über seine Funktion?",
+            "Calvin-Zyklus: CO₂ wird an ein C5-Molekül fixiert",
           ],
           difficulty: 2,
           tags: ["rubisco", "calvin-zyklus", "co2-fixierung", "enzym"],
@@ -2091,17 +2091,17 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
           question: "Welche Aussage zu C4-Pflanzen ist korrekt?",
           options: [
             "C4-Pflanzen nutzen keinen Calvin-Zyklus",
-            "C4-Pflanzen fixieren CO₂ zunaechst in Mesophyllzellen durch PEP-Carboxylase, dann laeuft der Calvin-Zyklus in Buendelscheidenzellen",
-            "C4-Pflanzen oeffnen ihre Stomata nur nachts",
-            "C4-Pflanzen sind typisch fuer kalte Klimazonen",
+            "C4-Pflanzen fixieren CO₂ zunächst in Mesophyllzellen durch PEP-Carboxylase, dann läuft der Calvin-Zyklus in Bündelscheidenzellen",
+            "C4-Pflanzen öffnen ihre Stomata nur nachts",
+            "C4-Pflanzen sind typisch für kalte Klimazonen",
             "C4-Pflanzen haben keine Photorespiration, weil sie kein RuBisCO besitzen",
           ],
           correctIndex: 1,
           explanation:
-            "C4-Pflanzen (Mais, Zuckerrohr, Hirse) nutzen eine raeumliche Trennung: PEP-Carboxylase fixiert CO₂ in Mesophyllzellen als Oxalacetat (C4). Dieses wird als Malat in Buendelscheidenzellen transportiert, dort wird CO₂ freigesetzt → Calvin-Zyklus mit hoher CO₂-Konzentration → kaum Photorespiration. C4-Pflanzen besitzen sehr wohl RuBisCO (in den Buendelscheidenzellen). Nachts-Oeffnung der Stomata = CAM, nicht C4.",
+            "C4-Pflanzen (Mais, Zuckerrohr, Hirse) nutzen eine räumliche Trennung: PEP-Carboxylase fixiert CO₂ in Mesophyllzellen als Oxalacetat (C4). Dieses wird als Malat in Bündelscheidenzellen transportiert, dort wird CO₂ freigesetzt → Calvin-Zyklus mit hoher CO₂-Konzentration → kaum Photorespiration. C4-Pflanzen besitzen sehr wohl RuBisCO (in den Bündelscheidenzellen). Nachts-Öffnung der Stomata = CAM, nicht C4.",
           hints: [
-            "C4 = raeumliche Trennung zwischen zwei Zelltypen",
-            "PEP-Carboxylase fixiert CO₂ → C4-Saeure → Transport → Calvin-Zyklus",
+            "C4 = räumliche Trennung zwischen zwei Zelltypen",
+            "PEP-Carboxylase fixiert CO₂ → C4-Säure → Transport → Calvin-Zyklus",
           ],
           difficulty: 2,
           tags: ["c4-pflanze", "pep-carboxylase", "photorespiration", "mais"],
@@ -2117,27 +2117,27 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
           ],
           correctIndex: 2,
           explanation:
-            "Die Bruttogleichung lautet: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. Option A ist die Zellatmung (Umkehrung!). Option B ist zwar korrekt balanciert (die 'ausfuehrliche' Gleichung), aber die vereinfachte Bruttogleichung (Option C) ist Standard. Option D ist die vereinfachte Formel fuer 1 CO₂ (nicht falsch, aber nicht die Standardform). Option E hat O₂ auf der falschen Seite.",
+            "Die Bruttogleichung lautet: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. Option A ist die Zellatmung (Umkehrung!). Option B ist zwar korrekt balanciert (die 'ausführliche' Gleichung), aber die vereinfachte Bruttogleichung (Option C) ist Standard. Option D ist die vereinfachte Formel für 1 CO₂ (nicht falsch, aber nicht die Standardform). Option E hat O₂ auf der falschen Seite.",
           hints: [
             "Photosynthese verbraucht CO₂ und H₂O, produziert Glucose und O₂",
-            "6 Kohlenstoff fuer 1 Glucose (C₆H₁₂O₆)",
+            "6 Kohlenstoff für 1 Glucose (C₆H₁₂O₆)",
           ],
           difficulty: 1,
           tags: ["bruttogleichung", "photosynthese", "glucose", "sauerstoff"],
         },
         {
           question:
-            "Welche Gemeinsamkeit haben Chloroplasten und Mitochondrien, die die Endosymbiontentheorie stuetzt?",
+            "Welche Gemeinsamkeit haben Chloroplasten und Mitochondrien, die die Endosymbiontentheorie stützt?",
           options: [
             "Beide besitzen eine einfache Membran",
-            "Beide haben eigene ringfoermige DNA und 70S-Ribosomen",
+            "Beide haben eigene ringförmige DNA und 70S-Ribosomen",
             "Beide kommen nur in Pflanzenzellen vor",
-            "Beide nutzen FADH₂ als primaeren Elektronendonor",
+            "Beide nutzen FADH₂ als primären Elektronendonor",
             "Beide haben Thylakoide",
           ],
           correctIndex: 1,
           explanation:
-            "Sowohl Chloroplasten als auch Mitochondrien besitzen eigene ringfoermige DNA (wie Bakterien), 70S-Ribosomen (bakterientypisch, nicht 80S wie eukaryotische Ribosomen) und eine Doppelmembran. Dies stuetzt die Endosymbiontentheorie: Beide waren urspruenglich freie Prokaryoten (Cyanobakterium bzw. aerobes Bakterium), die von einer Wirtszelle aufgenommen wurden. Mitochondrien kommen in fast allen Eukaryoten vor (nicht nur Pflanzen). Thylakoide haben nur Chloroplasten.",
+            "Sowohl Chloroplasten als auch Mitochondrien besitzen eigene ringförmige DNA (wie Bakterien), 70S-Ribosomen (bakterientypisch, nicht 80S wie eukaryotische Ribosomen) und eine Doppelmembran. Dies stützt die Endosymbiontentheorie: Beide waren ursprünglich freie Prokaryoten (Cyanobakterium bzw. aerobes Bakterium), die von einer Wirtszelle aufgenommen wurden. Mitochondrien kommen in fast allen Eukaryoten vor (nicht nur Pflanzen). Thylakoide haben nur Chloroplasten.",
           hints: [
             "Beide Organellen haben Merkmale von Bakterien — welche?",
             "70S-Ribosomen sind bakterientypisch, 80S sind eukaryotisch",

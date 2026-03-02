@@ -89,80 +89,8 @@ Bei einigen Aufgaben kann es vorkommen, dass sich aus den Aussagen keine Schluss
 // =============================================================================
 // OFFIZIELLE BEISPIELAUFGABEN – exakt aus MedAT 2026 PDF, niemals vom Generator verwendet
 // =============================================================================
-export const OFFICIAL_IMPLICATION_EXAMPLES: readonly ImplikationTask[] = [
-  {
-    id: "imp-off-1",
-    premise1: "Alle Stofftiere sind Spielsachen.",
-    premise2: "Einige Stofftiere sind Wertanlagen.",
-    options: [
-      "Alle Wertanlagen sind Spielsachen.",
-      "Alle Wertanlagen sind keine Spielsachen.",
-      "Einige Wertanlagen sind Spielsachen.",
-      "Einige Wertanlagen sind keine Spielsachen.",
-      "Keine der Schlussfolgerungen ist zwingend",
-    ],
-    correctAnswer: 2,
-    explanation:
-      "Alle Stofftiere sind Spielsachen; ein Teil der Stofftiere sind Wertanlagen. Diese Wertanlagen-Stofftiere sind also Spielsachen. Daher folgt zwingend: Einige Wertanlagen sind Spielsachen (C).",
-    difficulty: 1,
-    rulesApplied: [3, 5],
-    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 1",
-  },
-  {
-    id: "imp-off-2",
-    premise1: "Alle Menschen sind Säugetiere.",
-    premise2: "Alle Säugetiere sind Lebewesen.",
-    options: [
-      "Alle Menschen sind Lebewesen.",
-      "Alle Menschen sind keine Lebewesen.",
-      "Einige Menschen sind Lebewesen.",
-      "Einige Menschen sind keine Lebewesen.",
-      "Keine der Schlussfolgerungen ist zwingend",
-    ],
-    correctAnswer: 0,
-    explanation:
-      "Klassischer Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Alle Menschen sind zwingend Lebewesen (A).",
-    difficulty: 1,
-    rulesApplied: [3],
-    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 2",
-  },
-  {
-    id: "imp-off-3",
-    premise1: "Einige Nüsse sind Gewürze.",
-    premise2: "Alle Nüsse sind keine Pflanzen.",
-    options: [
-      "Alle Gewürze sind Pflanzen.",
-      "Alle Gewürze sind keine Pflanzen.",
-      "Einige Gewürze sind Pflanzen.",
-      "Einige Gewürze sind keine Pflanzen.",
-      "Keine der Schlussfolgerungen ist zwingend",
-    ],
-    correctAnswer: 3,
-    explanation:
-      "Die Nüsse, die Gewürze sind, sind keine Pflanzen (weil alle Nüsse keine Pflanzen sind). Also sind einige Gewürze (nämlich diese Nüsse) keine Pflanzen. Antwort D ist zwingend.",
-    difficulty: 2,
-    rulesApplied: [4, 5],
-    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 3",
-  },
-  {
-    id: "imp-off-4",
-    premise1: "Alle Kinder sind Lebewesen.",
-    premise2: "Alle Erwachsenen sind keine Kinder.",
-    options: [
-      "Alle Lebewesen sind Erwachsene.",
-      "Alle Lebewesen sind keine Erwachsenen.",
-      "Einige Lebewesen sind Erwachsene.",
-      "Einige Lebewesen sind keine Erwachsenen.",
-      "Keine der Schlussfolgerungen ist zwingend",
-    ],
-    correctAnswer: 3,
-    explanation:
-      "Kinder sind Lebewesen; Erwachsene sind keine Kinder. Daraus folgt nicht, dass alle Lebewesen Erwachsene sind (A falsch), aber es folgt zwingend: Einige Lebewesen (nämlich die Kinder) sind keine Erwachsenen (D).",
-    difficulty: 2,
-    rulesApplied: [4],
-    source: "MedAT 2026 – Implikationen erkennen – Beispielaufgabe 4",
-  },
-];
+/** @deprecated Official examples removed (copyright). Use training tasks only. */
+export const OFFICIAL_IMPLICATION_EXAMPLES: readonly ImplikationTask[] = [];
 
 // ============================================================
 // Zusätzliche Übungsaufgaben (für ImplikationenUeben, Simulation)

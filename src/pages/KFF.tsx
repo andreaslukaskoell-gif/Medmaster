@@ -32,28 +32,14 @@ import {
   generateImplicationTrainingTask,
   generateWordFluencyTask,
 } from "@/data/kffGenerators";
-import {
-  OFFICIAL_GM_EXAMPLES,
-  validateOfficialGedaechtnisExamples,
-  type AllergyPass,
-  type GedaechtnisQuestion,
-} from "@/data/kffGedaechtnisMedAT";
-import {
-  OFFICIAL_IMPLICATION_EXAMPLES,
-  implikationenTasks,
-  type ImplikationTask,
-} from "@/data/kffImplikationen";
+import { type AllergyPass, type GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
+import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
 import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
-import { OFFICIAL_WF_EXAMPLES, type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
+import { type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { WF_TRAINING_POOL_1000 } from "@/data/kffWortfluessigkeit1000";
-import {
-  OFFICIAL_ZF_EXAMPLES,
-  generateSequenceTaskSet,
-  type SequenceTask,
-} from "@/data/kffZahlenfolgenMedAT";
+import { generateSequenceTaskSet, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
 import { difficultyLabel } from "@/data/figurenGenerator";
 import {
-  OFFICIAL_FZ_EXAMPLES,
   generateFigurenTrainingSet,
   polygonToPath,
   polygonToPathScaledToViewBox,
@@ -83,9 +69,12 @@ import { useAuth } from "@/hooks/useAuth";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_ZF_INSTRUCTION } from "@/data/kffZahlenfolgenMedAT";
-import { OFFICIAL_WF_INSTRUCTION } from "@/data/kffWortfluessigkeitMedAT";
-import { OFFICIAL_IMP_INSTRUCTION } from "@/data/kffImplikationen";
-import { OFFICIAL_FZ_INSTRUCTION } from "@/data/kffFigurenZusammensetzenMedAT";
+import { OFFICIAL_WF_INSTRUCTION, OFFICIAL_WF_EXAMPLES } from "@/data/kffWortfluessigkeitMedAT";
+import { OFFICIAL_IMP_INSTRUCTION, OFFICIAL_IMPLICATION_EXAMPLES } from "@/data/kffImplikationen";
+import {
+  OFFICIAL_FZ_INSTRUCTION,
+  OFFICIAL_FZ_EXAMPLES,
+} from "@/data/kffFigurenZusammensetzenMedAT";
 import { OFFICIAL_GM_INSTRUCTION } from "@/data/kffGedaechtnisMedAT";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 
@@ -434,7 +423,7 @@ export default function KFF() {
 // ZAHLENFOLGEN
 // ==========================================
 
-type ZahlenfolgenMode = "official" | "training";
+type ZahlenfolgenMode = "training";
 
 function ZahlenfolgenQuiz({
   onBack,
@@ -468,18 +457,6 @@ function ZahlenfolgenQuiz({
   const safeQuestions = questions || [];
   const currentQ = safeQuestions[index];
   const allAnswered = safeQuestions.every((qu) => answers[qu.id] !== undefined);
-  void (mode === "official");
-
-  const startOfficial = () => {
-    const valid = filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]);
-    setQuestions(valid);
-    logPoolWarning("zahlenfolgen", valid.length, "offiziell");
-    setMode("official");
-    setIndex(0);
-    setAnswers({});
-    setPhase("quiz");
-  };
-
   const startTraining = async () => {
     setTrainingError(null);
     setTrainingLoading(true);
@@ -498,8 +475,6 @@ function ZahlenfolgenQuiz({
       if (valid.length === 0) {
         const generated = generateSequenceTaskSet(questionCount, Date.now());
         valid = shuffleSlice(filterValidSequenceTasks(generated), questionCount);
-        if (valid.length === 0)
-          valid = shuffleSlice(filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]), questionCount);
         if (import.meta.env?.DEV)
           logPoolWarning("zahlenfolgen", valid.length, "Fallback (generiert)");
       }
@@ -616,14 +591,6 @@ function ZahlenfolgenQuiz({
                       ...shuffleSlice(filterValidSequenceTasks(generated), count - valid.length),
                     ];
                   }
-                  if (valid.length < count)
-                    valid = [
-                      ...valid,
-                      ...shuffleSlice(
-                        filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]),
-                        count - valid.length
-                      ),
-                    ];
                   setQuestions(valid.slice(0, count));
                   setMode("training");
                   setIndex(0);
@@ -651,38 +618,12 @@ function ZahlenfolgenQuiz({
           </CardContent>
         </Card>
 
-        <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              🏛️ Offizielle Beispiele
-            </CardTitle>
-            <p className="text-sm text-muted">
-              Original MedAT-Beispielaufgaben aus der Informationsbroschüre (IB_ZF_26.pdf) – 1:1
-              übernommen, in derselben Reihenfolge wie im PDF.
-            </p>
-          </CardHeader>
-          <CardContent>
-            {OFFICIAL_ZF_EXAMPLES.length > 0 ? (
-              <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
-                <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_ZF_EXAMPLES.length} offizielle
-                Beispielaufgaben starten
-              </Button>
-            ) : (
-              <p className="text-sm text-amber-700 dark:text-amber-400">
-                Noch keine offiziellen Beispiele eingetragen. Bitte IB_ZF_26.pdf öffnen und
-                Beispielaufgaben in <code className="text-xs">OFFICIAL_ZF_EXAMPLES</code> in{" "}
-                <code className="text-xs">src/data/kffZahlenfolgenMedAT.ts</code> 1:1 übernehmen.
-              </p>
-            )}
-          </CardContent>
-        </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Training</CardTitle>
             <p className="text-sm text-muted">
-              Aufgaben aus der Datenbank – Schwierigkeit wird automatisch gemischt (leicht, mittel,
-              schwer). Offizielle Beispiele bleiben unverändert in der DB.
+              Aufgaben aus der Datenbank -- Schwierigkeit wird automatisch gemischt (leicht, mittel,
+              schwer).
             </p>
             <p className="mt-1">
               <TaskDbCountHint domain="kff-zahlenfolgen" />
@@ -772,18 +713,10 @@ function ZahlenfolgenQuiz({
                   <span className="font-medium">
                     {i + 1}. {formatZahlenfolgeDisplay(q.sequence)}
                   </span>
-                  {q.source && (
-                    <Badge variant="default" className="text-[10px]">
-                      🏛️ Offizielles MedAT-Beispiel
-                    </Badge>
-                  )}
-                  {!q.source && (
-                    <Badge variant="info" className="text-[10px]">
-                      {difficultyLabel(q.difficulty)}
-                    </Badge>
-                  )}
+                  <Badge variant="info" className="text-[10px]">
+                    {difficultyLabel(q.difficulty)}
+                  </Badge>
                 </div>
-                {q.source && <p className="text-xs text-muted mb-2 ml-7">Quelle: {q.source}</p>}
                 {!correct && answers[q.id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
                     Deine Antwort: {selectedLabel(q, answers[q.id])}
@@ -832,26 +765,9 @@ function ZahlenfolgenQuiz({
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button variant="outline" onClick={onBack}>
-                  Zurück zum Setup
-                </Button>
-                <Button
-                  variant="secondary"
-                  onClick={() => {
-                    const valid = filterValidSequenceTasks([...OFFICIAL_ZF_EXAMPLES]);
-                    if (valid.length > 0) {
-                      setQuestions(valid);
-                      setMode("official");
-                      setIndex(0);
-                      setAnswers({});
-                      setPhase("quiz");
-                    }
-                  }}
-                >
-                  <BookOpen className="w-4 h-4 mr-1" /> Offizielle Beispiele starten
-                </Button>
-              </div>
+              <Button variant="outline" onClick={onBack}>
+                Zurück zum Setup
+              </Button>
             </CardContent>
           </Card>
         ) : (
@@ -965,7 +881,6 @@ function ZahlenfolgenQuiz({
 
 let _currentGmPasses: AllergyPass[] = [];
 let _currentGmQuestions: GedaechtnisQuestion[] = [];
-let _currentGmIsOfficial = false;
 
 function AllergyPassCard({ pass }: { pass: AllergyPass }) {
   return (
@@ -1012,18 +927,6 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
   const [passCount, setPassCount] = useState(8);
   const [dbLoading, setDbLoading] = useState(false);
   const [dbError, setDbError] = useState<string | null>(null);
-  const officialValid = useMemo(() => validateOfficialGedaechtnisExamples(), []);
-  const hasOfficial =
-    OFFICIAL_GM_EXAMPLES.passes.length > 0 && OFFICIAL_GM_EXAMPLES.questions.length > 0;
-
-  const startOfficial = () => {
-    _currentGmPasses = [...OFFICIAL_GM_EXAMPLES.passes];
-    _currentGmQuestions = filterValidGedaechtnisQuestions([...OFFICIAL_GM_EXAMPLES.questions]);
-    logPoolWarning("gedaechtnis", _currentGmQuestions.length, "offiziell");
-    _currentGmIsOfficial = true;
-    onLearn();
-  };
-
   const startFromDb = async () => {
     setDbError(null);
     setDbLoading(true);
@@ -1032,7 +935,6 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
       if (set && set.passes.length > 0 && set.questions.length > 0) {
         _currentGmPasses = set.passes;
         _currentGmQuestions = set.questions;
-        _currentGmIsOfficial = false;
         onLearn();
       } else {
         const passes = generateAllergyPasses(8);
@@ -1041,7 +943,6 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
         if (questions.length > 0) {
           _currentGmPasses = passes;
           _currentGmQuestions = questions;
-          _currentGmIsOfficial = false;
           onLearn();
         } else {
           setDbError("Keine gültigen Fragen generiert. Bitte später erneut versuchen.");
@@ -1061,7 +962,6 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
     if (_currentGmQuestions.length < raw.length && import.meta.env?.DEV) {
       logPoolWarning("gedaechtnis", _currentGmQuestions.length, "Training");
     }
-    _currentGmIsOfficial = false;
     onLearn();
   };
 
@@ -1079,35 +979,6 @@ function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onBack: ()
       </p>
       <UebungsbeschreibungCard id="kff-merkfaehigkeit" collapsible defaultCollapsed />
       <OfficialInstructionCard instruction={OFFICIAL_GM_INSTRUCTION} />
-
-      <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/20">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">🏛️ Offizielle Beispiele</CardTitle>
-          <p className="text-sm text-muted">
-            Fixe Beispiele aus dem MedAT-PDF (IB_GM_26 o. ä.) – 1:1 übernommen, Reihenfolge wie im
-            PDF.
-          </p>
-        </CardHeader>
-        <CardContent>
-          {hasOfficial ? (
-            <Button className="w-full" size="lg" variant="outline" onClick={startOfficial}>
-              <BookOpen className="w-5 h-5 mr-2" /> {OFFICIAL_GM_EXAMPLES.passes.length} Pässe,{" "}
-              {OFFICIAL_GM_EXAMPLES.questions.length} Fragen – Lernphase starten
-            </Button>
-          ) : (
-            <p className="text-sm text-amber-700 dark:text-amber-400">
-              Noch keine offiziellen Beispiele. PDF in OFFICIAL_GM_EXAMPLES in
-              src/data/kffGedaechtnisMedAT.ts eintragen.
-            </p>
-          )}
-          {import.meta.env?.DEV && !officialValid && hasOfficial && (
-            <p className="text-xs text-red-600 dark:text-red-400 mt-2">
-              Dev-Check: Validierung fehlgeschlagen (z. B. nicht genau 5 Optionen oder correctIndex
-              nicht 0–4).
-            </p>
-          )}
-        </CardContent>
-      </Card>
 
       <Card>
         <CardHeader>
@@ -1161,8 +1032,6 @@ function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onBack: ()
   const [secondsLeft, setSecondsLeft] = useState(learnMinutes * 60);
   const [started, setStarted] = useState(false);
   const passes = useMemo(() => _currentGmPasses, []);
-  const isOfficial = _currentGmIsOfficial;
-
   useEffect(() => {
     if (!started || secondsLeft <= 0) return;
     const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
@@ -1180,11 +1049,6 @@ function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onBack: ()
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <div className="flex items-center gap-2">
-          {isOfficial && (
-            <Badge variant="default" className="text-[10px]">
-              🏛️ Offizielles MedAT-Beispiel
-            </Badge>
-          )}
           <Badge variant="warning">Lernphase – präge dir alles ein!</Badge>
           {!started ? (
             <div className="flex items-center gap-2">
@@ -1241,8 +1105,6 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const [submitted, setSubmitted] = useState(false);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
   const getMinutes = useSessionTimer();
-  const isOfficial = _currentGmIsOfficial;
-
   const q = questions[index];
   const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);
 
@@ -1334,11 +1196,6 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
                   <span className="font-medium text-sm">
                     {i + 1}. {qu.question}
                   </span>
-                  {isOfficial && qu.source && (
-                    <Badge variant="default" className="text-[10px]">
-                      🏛️ {qu.source}
-                    </Badge>
-                  )}
                 </div>
                 {!correct && selectedOpt !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
@@ -1376,11 +1233,6 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        {isOfficial && (
-          <Badge variant="default" className="text-[10px]">
-            🏛️ Offizielles MedAT-Beispiel
-          </Badge>
-        )}
         <Badge variant="danger">Prüfphase</Badge>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
@@ -1506,7 +1358,7 @@ function ImplikationenQuiz({
       const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
       let valid = filterValidImplikationTasks(raw);
       if (valid.length === 0) {
-        const levels: (1 | 2 | 3)[] = [1, 2, 3];
+        const levels: [1, 2, 3] = [1, 2, 3];
         const generated: ImplikationTask[] = [];
         for (let i = 0; i < questionCount; i++) {
           const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
@@ -1638,7 +1490,7 @@ function ImplikationenQuiz({
                   const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
                   let valid = filterValidImplikationTasks(raw);
                   if (valid.length < count) {
-                    const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                    const levels: [1, 2, 3] = [1, 2, 3];
                     const generated: ImplikationTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
                       const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
@@ -1665,7 +1517,7 @@ function ImplikationenQuiz({
                   setAnswers({});
                   setPhase("quiz");
                 } catch {
-                  const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                  const levels: [1, 2, 3] = [1, 2, 3];
                   const generated: ImplikationTask[] = [];
                   for (let i = 0; i < EXAM_CONFIG.implikationen.questions; i++) {
                     const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
@@ -2089,7 +1941,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
       const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
       let valid = filterValidWordFluencyTasks(raw);
       if (valid.length === 0) {
-        const levels: (1 | 2 | 3)[] = [1, 2, 3];
+        const levels: [1, 2, 3] = [1, 2, 3];
         const generated: WordFluencyTask[] = [];
         for (let i = 0; i < questionCount; i++) {
           const t = generateWordFluencyTask(difficultyForIndex(i, levels));
@@ -2231,7 +2083,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                   const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
                   let valid = filterValidWordFluencyTasks(raw);
                   if (valid.length < count) {
-                    const levels: (1 | 2 | 3)[] = [1, 2, 3];
+                    const levels: [1, 2, 3] = [1, 2, 3];
                     const generated: WordFluencyTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
                       const t = generateWordFluencyTask(difficultyForIndex(i, levels));
@@ -2654,7 +2506,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
       const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
       let valid = filterValidFigurenTasks(list);
       if (valid.length === 0) {
-        const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+        const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
         const seed = Date.now();
         const generated: FigureAssembleTask[] = [];
         for (let i = 0; i < Math.min(questionCount, 150); i++) {
@@ -2818,7 +2670,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
                   let valid = filterValidFigurenTasks(list);
                   if (valid.length < count) {
-                    const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+                    const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
                     const seed = Date.now();
                     const generated: FigureAssembleTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
@@ -2844,7 +2696,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   setAnswers({});
                   setPhase("quiz");
                 } catch {
-                  const levels: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+                  const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
                   const seed = Date.now();
                   const generated: FigureAssembleTask[] = [];
                   for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {

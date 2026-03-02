@@ -21,39 +21,39 @@ export const bioKapOekologie: Kapitel = {
         "Organismus",
         "Lebensgemeinschaft",
       ],
-      content: `## Oekologie: Definition und Ebenen
+      content: `## Ökologie: Definition und Ebenen
 
-**Um die Oekologie einzufuehren,** beginnen wir mit der Definition und den Ebenen. **Oekologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie haengen Arten und Lebensraeume zusammen?
+**Ökologie** (griech. oikos = Haus, logos = Lehre) ist die Wissenschaft von den **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer **unbelebten** (abiotisch) und **belebten** (biotisch) Umwelt. Sie fragt: Wo lebt welche Art, warum dort, und wie hängen Arten und Lebensräume zusammen?
 
-Die Oekologie arbeitet auf mehreren **Ebenen**:
+Die Ökologie arbeitet auf mehreren **Ebenen**:
 - **Organismus:** Einzelnes Individuum; Anpassung an Umweltfaktoren (Toleranz, Verhalten).
-- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen koennen.
-- **Biozoeonose** (Lebensgemeinschaft): Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) in einem Gebiet und ihre Wechselwirkungen.
-- **Oekosystem:** **Biozoeonose** + **Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energiefluessen.
+- **Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen können.
+- **Biozönose** (Lebensgemeinschaft): Alle **Arten** (Pflanzen, Tiere, Pilze, Mikroorganismen) in einem Gebiet und ihre Wechselwirkungen.
+- **Ökosystem:** **Biozönose** + **Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energieflüssen.
 
-> **Merke:** Organismus → Population (eine Art) → Biozoeonose (alle Arten) → Oekosystem (Biozoeonose + Biotop).
+> **Merke:** Organismus → Population (eine Art) → Biozönose (alle Arten) → Ökosystem (Biozönose + Biotop).
 
 ---
 
-## Biotop und Biozoeonose
+## Biotop und Biozönose
 
-**Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Naehrstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
+**Biotop** (griech. bios = Leben, topos = Ort) ist der **unbelebte Lebensraum**: das physikalisch-chemische Milieu (Boden, Wasser, Klima, Licht, Nährstoffe). Ein Biotop ist z. B. ein Teich, eine Wiese, ein Felsblock.
 
-**Biozoeonose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Praedation (Raeuber-Beute-Beziehung), Symbiose (dauerhaftes Zusammenleben von Arten)).
+**Biozönose** ist die **Lebensgemeinschaft**: die Gesamtheit aller **Lebewesen** (alle Arten) in diesem Biotop und ihre Wechselwirkungen untereinander (Konkurrenz, Prädation (Räuber-Beute-Beziehung), Symbiose (dauerhaftes Zusammenleben von Arten)).
 
-**Oekosystem** = **Biotop + Biozoeonose** in Wechselwirkung. Im Oekosystem fliessen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreislaeufe).
+**Ökosystem** = **Biotop + Biozönose** in Wechselwirkung. Im Ökosystem fließen Energie und Stoffe zwischen belebter und unbelebter Komponente (Nahrungsketten, Stoffkreisläufe).
 
 | Begriff | Bedeutung |
 |--------|-----------|
 | **Biotop** | Unbelebter Lebensraum (Boden, Wasser, Klima, Licht) |
-| **Biozoeonose** | Lebensgemeinschaft aller Arten in einem Gebiet |
-| **Oekosystem** | Biotop + Biozoeonose; funktionelle Einheit mit Stoff- und Energiefluessen |
+| **Biozönose** | Lebensgemeinschaft aller Arten in einem Gebiet |
+| **Ökosystem** | Biotop + Biozönose; funktionelle Einheit mit Stoff- und Energieflüssen |
 
-> **Merke:** Biotop = unbelebt (Ort). Biozoeonose = belebt (alle Arten). Oekosystem = beides zusammen.
+> **Merke:** Biotop = unbelebt (Ort). Biozönose = belebt (alle Arten). Ökosystem = beides zusammen.
 
 ---
 
-## Zusammenhang fuer die Pruefung`,
+## Zusammenhang für die Prüfung`,
       lernziele: [
         "Ökologie definieren und die Ebenen Organismus, Population, Biozönose, Ökosystem beschreiben.",
         "Biotop und Biozönose unterscheiden und dem Ökosystem zuordnen.",
@@ -97,16 +97,16 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
       ],
       content: `## Abiotische und biotische Faktoren
 
-**Um zu verstehen,** warum Arten nur in bestimmten Lebensraeumen vorkommen, betrachtet man die **Umweltfaktoren** -- unterteilt in abiotisch und biotisch.
+Warum kommen bestimmte Arten nur in bestimmten Lebensräumen vor? Die Antwort liegt in den **Umweltfaktoren** — unterteilt in abiotisch und biotisch.
 
-**Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensitaet, Wellenlaenge), Wasser (Verfuegbarkeit, Salzgehalt, pH), Boden (Textur, pH, Naehrstoffe), Wind, Stroemung. Sie wirken direkt auf Ueberleben, Wachstum und Reproduktion.
+**Abiotische Faktoren** sind die nicht-lebenden Komponenten der Umwelt: Temperatur, Licht (Intensität, Wellenlänge), Wasser (Verfügbarkeit, Salzgehalt, pH), Boden (Textur, pH, Nährstoffe), Wind, Strömung. Sie wirken direkt auf Überleben, Wachstum und Reproduktion.
 
-**Biotische Faktoren** sind alle Einfluesse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Praedation (Raeuber-Beute), Symbiose (Mutualismus (wechselseitiger Nutzen), Parasitismus (ein Partner schaedigt den anderen), Kommensalismus (ein Partner profitiert, der andere unbeeinflusst)). Sie strukturieren Lebensgemeinschaften (Biozoeonosen) und begrenzen Verbreitung und Dichte von Arten.
+**Biotische Faktoren** sind alle Einflüsse durch **andere Lebewesen**: Konkurrenz um Ressourcen, Prädation (Räuber-Beute), Symbiose (Mutualismus (wechselseitiger Nutzen), Parasitismus (ein Partner schädigt den anderen), Kommensalismus (ein Partner profitiert, der andere unbeeinflusst)). Sie strukturieren Lebensgemeinschaften (Biozönosen) und begrenzen Verbreitung und Dichte von Arten.
 
 | Typ | Beispiele |
 |-----|-----------|
-| **Abiotisch** | Temperatur, Licht, Wasser, pH, Naehrstoffe, Salzgehalt |
-| **Biotisch** | Konkurrenz, Praedation, Symbiose, Parasitismus |
+| **Abiotisch** | Temperatur, Licht, Wasser, pH, Nährstoffe, Salzgehalt |
+| **Biotisch** | Konkurrenz, Prädation, Symbiose, Parasitismus |
 
 > **Merke:** Abiotisch = unbelebt. Biotisch = Einfluss durch andere Lebewesen.
 
@@ -114,33 +114,33 @@ Die Oekologie arbeitet auf mehreren **Ebenen**:
 
 ## Toleranzkurve: Optimum, Pessimum, Todespunkt
 
-Die **Toleranzkurve** zeigt die Leistungsfaehigkeit (Wachstum, Reproduktion, Aktivitaet) eines Organismus in Abhaengigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve:
+Die **Toleranzkurve** zeigt die Leistungsfähigkeit (Wachstum, Reproduktion, Aktivität) eines Organismus in Abhängigkeit von **einem** abiotischen Faktor. Sie hat die Form einer Glockenkurve:
 
 - **Optimum:** Bereich maximaler Leistung und Fitness (mittlere Faktorstufe).
-- **Pessimum:** Randbereiche mit stark verminderter, aber noch moeglicher Leistung (Stress).
+- **Pessimum:** Randbereiche mit stark verminderter, aber noch möglicher Leistung (Stress).
 - **Todespunkte (letale Grenzen):** Werte jenseits derer der Organismus stirbt.
-- **Oekologische Amplitude:** Gesamtbereich zwischen beiden Todespunkten -- die **Toleranzbreite** fuer diesen Faktor.
+- **Ökologische Amplitude:** Gesamtbereich zwischen beiden Todespunkten — die **Toleranzbreite** für diesen Faktor.
 
-Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
+Je breiter die ökologische Amplitude, desto anpassungsfähiger die Art.
 
-> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, Ueberleben) → Todespunkt. Oekologische Amplitude = Breite des Toleranzbereichs.
+> **Merke:** Toleranzkurve: Optimum (max. Fitness) → Pessimum (Stress, Überleben) → Todespunkt. Ökologische Amplitude = Breite des Toleranzbereichs.
 
 ---
 
-## Euryoek und stenoek -- Generalisten und Spezialisten
+## Euryök und stenök — Generalisten und Spezialisten
 
-- **Euryoek** (griech. eurys = breit): breite oekologische Amplitude = **Generalist** -- toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Kraehe, Ratte).
-- **Stenoek** (griech. stenos = eng): enge Amplitude = **Spezialist** -- nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen praezise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven (Eintagsfliegenlarven) = sauberes Wasser).
+- **Euryök** (griech. eurys = breit): breite ökologische Amplitude = **Generalist** — toleriert starke Schwankungen eines Faktors (z. B. Fuchs, Krähe, Ratte).
+- **Stenök** (griech. stenos = eng): enge Amplitude = **Spezialist** — nur unter spezifischen Bedingungen; oft **Bioindikator** (Zeigerorganismus), weil das Vorkommen präzise auf Umweltbedingungen hinweist (z. B. Flechten = saubere Luft, Ephemeroptera-Larven (Eintagsfliegenlarven) = sauberes Wasser).
 
-> **Merke:** Euryoek = Generalist, breite Toleranz. Stenoek = Spezialist, enge Toleranz, guter Bioindikator.
+> **Merke:** Euryök = Generalist, breite Toleranz. Stenök = Spezialist, enge Toleranz, guter Bioindikator.
 
 ---
 
 ## Liebigs Minimumgesetz und Shelfords Toleranzgesetz
 
-**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt -- nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffduenger steigert den Ertrag. In Suesswasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung (Naehrstoffueberversorgung eines Gewaessers) bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
+**Liebigs Minimumgesetz (1840):** Das Wachstum wird durch den **knappsten** (limitierenden) essenziellen Faktor begrenzt — nicht durch die reichlich vorhandenen. Beispiel: Bei ausreichend Licht und Wasser limitiert Stickstoffmangel den Pflanzenertrag; erst Stickstoffdünger steigert den Ertrag. In Süßwasserseen ist oft **Phosphor** der limitierende Faktor (Eutrophierung (Nährstoffüberversorgung eines Gewässers) bei P-Eintrag). In der Landwirtschaft oft **Stickstoff**.
 
-**Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Ueberschuss** eines Faktors kann limitierend wirken (Toxizitaet). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
+**Shelfords Toleranzgesetz (1913):** Nicht nur **Mangel**, auch **Überschuss** eines Faktors kann limitierend wirken (Toxizität). Zu viel Kupfer, Zink oder Licht schadet; die Toleranzkurve hat also eine obere und untere Grenze. Shelford erweitert Liebig um das Maximum.
 
 > **Merke:** Liebig: Minimum limitiert. Shelford: Minimum und Maximum limitieren (gesamte Toleranzkurve).
 
@@ -148,7 +148,7 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 ## Bioindikatoren
 
-**Bioindikatoren** (Zeigerorganismen) sind stenoeke Arten, deren Vorkommen oder Fehlen Rueckschluesse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Boeden (Ellenberg N8-N9); Flechten = Luftqualitaet; Ephemeroptera-Larven = sauberes Wasser; Tubificiden (Schlammroehrenwuermer) = stark verschmutztes Wasser (Saprobiensystem (Bewertungssystem der Gewaesserguete)).`,
+**Bioindikatoren** (Zeigerorganismen) sind stenöke Arten, deren Vorkommen oder Fehlen Rückschlüsse auf Umweltbedingungen erlaubt. Beispiele: Brennnessel = stickstoffreiche Böden (Ellenberg N8-N9); Flechten = Luftqualität; Ephemeroptera-Larven = sauberes Wasser; Tubificiden (Schlammröhrenwürmer) = stark verschmutztes Wasser (Saprobiensystem (Bewertungssystem der Gewässergüte)).`,
       lernziele: [
         "Abiotische und biotische Faktoren unterscheiden und Beispiele nennen.",
         "Toleranzkurve (Optimum, Pessimum, Todespunkt, ökologische Amplitude) beschreiben und euryök vs. stenök erklären.",
@@ -259,26 +259,26 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 **Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt “wo” die Art lebt.
 
-**Oekologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die fuer das Ueberleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Raeuber, Parasiten, Brutplaetze usw. Beschreibt “wie” die Art lebt und welche Rolle sie im Oekosystem hat -- also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
+**Ökologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die für das Überleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Räuber, Parasiten, Brutplätze usw. Beschreibt “wie” die Art lebt und welche Rolle sie im Ökosystem hat — also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
 
 | Begriff | Bedeutung |
 |--------|-----------|
 | **Lebensraum (Habitat)** | Physischer Ort (“Adresse”) |
-| **Oekologische Nische** | Alle Umweltansprueche und die Rolle der Art (“Beruf”) |
+| **Ökologische Nische** | Alle Umweltansprüche und die Rolle der Art (“Beruf”) |
 
-> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Oekosystem.
+> **Merke:** Nische ≠ Lebensraum. Lebensraum = wo. Nische = alle Umweltfaktoren + Rolle im Ökosystem.
 
 ---
 
 ## Fundamentale und realisierte Nische
 
-**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen koennte, wenn keine Konkurrenten oder Feinde da waeren -- begrenzt nur durch ihre physiologischen Toleranzen.
+**Fundamentale Nische:** Der Bereich aller Umweltbedingungen, den eine Art **theoretisch** besetzen könnte, wenn keine Konkurrenten oder Feinde da wären — begrenzt nur durch ihre physiologischen Toleranzen.
 
-**Realisierte Nische:** Der **tatsaechlich** von der Art genutzte Bereich. Er ist durch Konkurrenz, Praedation und andere biotische Faktoren **eingeschraenkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen Nische.
+**Realisierte Nische:** Der **tatsächlich** von der Art genutzte Bereich. Er ist durch Konkurrenz, Prädation und andere biotische Faktoren **eingeschränkt**. Die realisierte Nische ist daher **immer kleiner oder gleich** der fundamentalen Nische.
 
-**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: Chthamalus in der oberen, Balanus in der unteren Gezeitenzone. Wird Balanus entfernt, besiedelt Chthamalus auch die untere Zone. Folgerung: Die **fundamentale** Nische von Chthamalus umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit Balanus auf die obere Zone beschraenkt.
+**Connell-Seepocken-Experiment (1961):** An schottischen Felsen leben zwei Seepockenarten: Chthamalus in der oberen, Balanus in der unteren Gezeitenzone. Wird Balanus entfernt, besiedelt Chthamalus auch die untere Zone. Folgerung: Die **fundamentale** Nische von Chthamalus umfasst auch die untere Zone; die **realisierte** Nische wird durch Konkurrenz mit Balanus auf die obere Zone beschränkt.
 
-> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz (und andere biotische Faktoren) schraenken die realisierte Nische ein.
+> **Merke:** Fundamentale Nische ≥ realisierte Nische. Konkurrenz (und andere biotische Faktoren) schränken die realisierte Nische ein.
 
 ---
 
@@ -286,13 +286,13 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
-Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist moeglich durch **Nischendifferenzierung** -- die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
+Zwei Arten mit **identischer** Nische können nicht dauerhaft koexistieren (Konkurrenzausschlussprinzip). **Koexistenz** ist möglich durch **Nischendifferenzierung** — die Arten nutzen die Ressourcen in mindestens einer Dimension unterschiedlich:
 
 - **Zeitlich:** Tag- vs. nachtaktiv (z. B. Falke vs. Eule)
-- **Raeumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhoehen)
-- **Trophisch (ernaehrungsbezogen):** Verschiedene Beutegroessen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
+- **Räumlich:** Verschiedene Zonen im gleichen Habitat (z. B. verschiedene Baumhöhen)
+- **Trophisch (ernährungsbezogen):** Verschiedene Beutegrößen oder -typen (z. B. unterschiedliche Schnabelformen bei Darwinfinken)
 
-> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, raeumlich oder trophisch) → ermoeglicht Koexistenz.`,
+> **Merke:** Nischendifferenzierung = Aufteilung der Ressourcen (zeitlich, räumlich oder trophisch) → ermöglicht Koexistenz.`,
       lernziele: [
         "Ökologische Nische und Lebensraum (Habitat) unterscheiden.",
         "Fundamentale und realisierte Nische erklären und das Connell-Experiment zuordnen.",
@@ -538,7 +538,7 @@ Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eine
 
 ## Primärproduktion
 
-**Brutto-Primärproduktion (GPP, Gross Primary Production):** Gesamte Energie, die Produzenten durch Photosynthese pro Zeit und Fläche binden. Messbar als Gesamt-CO₂-Aufnahme.
+**Brutto-Primärproduktion (GPP, Groß Primary Production):** Gesamte Energie, die Produzenten durch Photosynthese pro Zeit und Fläche binden. Messbar als Gesamt-CO₂-Aufnahme.
 
 **Netto-Primärproduktion (NPP, Net Primary Production):** NPP = GPP − Autotrophe Respiration (R_A). Die Energie, die nach Abzug des eigenen Stoffwechsels der Produzenten verbleibt und für Konsumenten verfügbar ist.
 
@@ -592,7 +592,7 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 
 **Kreislauf:** Gestein → Verwitterung → Phosphat im Boden → Pflanzenaufnahme → organisches P in Biomasse → Mineralisation durch Destruenten → Phosphat → Auswaschung ins Gewässer → Sedimentation im Meeresboden.
 
-**Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie (Sauerstoffmangel)/Anoxie (voelliger Sauerstoffentzug) → Fischsterben.
+**Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie (Sauerstoffmangel)/Anoxie (völliger Sauerstoffentzug) → Fischsterben.
 
 ### Wasserkreislauf
 
@@ -618,7 +618,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
         "Die Stoffkreisläufe (Kohlenstoff, Stickstoff, Phosphor) beschreiben und deren Störungen durch menschliche Aktivitäten benennen",
         "NPP und GPP definieren und die Bedeutung von Destruenten für den Stoffkreislauf erläutern",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Warum nimmt die verfügbare Energie von Trophieebene zu Trophieebene ab?",
         answer:
@@ -653,9 +653,9 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
           ],
           correctIndex: 1,
           explanation:
-            "GPP (Gross Primary Production) = Gesamte durch Photosynthese pro Zeit und Fläche gebundene Energie. NPP (Net Primary Production) = GPP − Autotrophe Respiration (R_A). Da Pflanzen selbst Energie durch Zellatmung verbrauchen (für Wachstum, Transport, Reproduktion), ist NPP die Energie, die nach Abzug des eigenen Pflanzenstoffwechsels übrigbleibt — also die Energie, die tatsächlich für Konsumenten und Destruenten verfügbar ist. In tropischen Regenwäldern kann R_A 50–70% des GPP ausmachen. NPP ist der ökologisch relevantere Parameter.",
+            "GPP (Groß Primary Production) = Gesamte durch Photosynthese pro Zeit und Fläche gebundene Energie. NPP (Net Primary Production) = GPP − Autotrophe Respiration (R_A). Da Pflanzen selbst Energie durch Zellatmung verbrauchen (für Wachstum, Transport, Reproduktion), ist NPP die Energie, die nach Abzug des eigenen Pflanzenstoffwechsels übrigbleibt — also die Energie, die tatsächlich für Konsumenten und Destruenten verfügbar ist. In tropischen Regenwäldern kann R_A 50–70% des GPP ausmachen. NPP ist der ökologisch relevantere Parameter.",
           difficulty: 2,
-          tags: ["GPP", "NPP", "primaerproduktion", "autotrophe-respiration"],
+          tags: ["GPP", "NPP", "primärproduktion", "autotrophe-respiration"],
         },
         {
           question:
@@ -708,7 +708,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
           explanation:
             "Die 10%-Regel macht den Unterschied deutlich: Vegetarier (Pflanze → Mensch): 1 trophischer Schritt, ca. 10% Energieübertragung. Fleischesser (Pflanze → Tier → Mensch): 2 trophische Schritte, ca. 1% der Pflanzenenergie erreicht den Menschen. Für dieselbe Menge an Energie benötigt ein Fleischesser ca. 10× mehr Anbaufläche (und Wasser, Dünger) als ein Vegetarier. Auf globaler Ebene: ca. 80% der landwirtschaftlichen Fläche wird für Tierhaltung genutzt, produziert aber nur ca. 20% der menschlichen Kalorien.",
           difficulty: 1,
-          tags: ["10-prozent-regel", "vegetarisch", "fleisch", "trophieebene", "oekologie"],
+          tags: ["10-prozent-regel", "vegetarisch", "fleisch", "trophieebene", "ökologie"],
         },
       ],
     },
@@ -864,7 +864,7 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein (Protei
 
 **Fc-Fragment (Fragment crystallizable):**
 - Der „Stamm" des Y — enthält konstante Regionen der schweren Ketten
-- Vermittelt **Effektorfunktionen**: Fc-Rezeptoren auf Makrophagen (Fresszellen) (Opsonisierung (Markierung fuer Phagozytose)), C1q-Bindung (Komplementaktivierung), FcRn (Plazentatransfer bei IgG)
+- Vermittelt **Effektorfunktionen**: Fc-Rezeptoren auf Makrophagen (Fresszellen) (Opsonisierung (Markierung für Phagozytose)), C1q-Bindung (Komplementaktivierung), FcRn (Plazentatransfer bei IgG)
 - Isotyp-spezifisch — bestimmt die Ig-Klasse (IgG, IgA, IgM, IgE, IgD)
 
 **Effektorfunktionen im Überblick:**
@@ -889,7 +889,7 @@ Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sic
 | IgG | Serum (75%), plazentagängig | Häufigster Antikörper, Sekundärantwort, überwindet Plazenta (maternaler Schutz) |
 | IgA | Sekrete (Speichel, Muttermilch, Tränen), Serum | Schützt Schleimhäute, dimerisch in Sekreten |
 | IgM | Serum | Pentamer (10 Bindestellen), erste Reaktion (Primärantwort), starker Komplementaktivator |
-| IgE | Sehr wenig im Serum | Bindet Mastzellen (Gewebezellen mit Histamingranula) und Basophile (granulaere Leukozyten) → Allergie (Typ I), Parasitenabwehr |
+| IgE | Sehr wenig im Serum | Bindet Mastzellen (Gewebezellen mit Histamingranula) und Basophile (granuläre Leukozyten) → Allergie (Typ I), Parasitenabwehr |
 | IgD | B-Zell-Oberfläche | B-Zell-Aktivierung (Signalübertragung), selten im Serum |
 
 
@@ -967,7 +967,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
             "IgM = erstes; IgG = später und dauerhaft. Akut → welches?",
           ],
           difficulty: 2,
-          tags: ["igm", "akute-infektion", "primaerantwort", "serologie"],
+          tags: ["igm", "akute-infektion", "primärantwort", "serologie"],
         },
         {
           question: "Was ist Opsonisierung und welches Immunglobulin ist dabei am wichtigsten?",
@@ -1122,12 +1122,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
             "Affinitätsreifung in Keimzentren — welche Zellen haben das bereits durchlaufen?",
           ],
           difficulty: 2,
-          tags: [
-            "sekundaere-immunantwort",
-            "gedaechtnis-b-zellen",
-            "affinitaetsreifung",
-            "impfung",
-          ],
+          tags: ["sekundäre-immunantwort", "gedächtnis-b-zellen", "affinitätsreifung", "impfung"],
         },
         {
           question:
@@ -1147,7 +1142,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
             "N-Nukleotide = Nukleotide ohne Matrizenkopierung (Non-template). Was bewirken zufällige Insertionen?",
           ],
           difficulty: 3,
-          tags: ["tdt", "n-nukleotide", "junctionale-diversitaet", "vdj"],
+          tags: ["tdt", "n-nukleotide", "junctionale-diversität", "vdj"],
         },
         {
           question: "Was beschreibt die klonale Selektionstheorie (Burnet)?",
@@ -1185,7 +1180,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
             "AID = Activation-Induced Cytidine Deaminase. Was macht dieses Enzym?",
           ],
           difficulty: 2,
-          tags: ["somatische-hypermutation", "aid", "keimzentrum", "affinitaetsreifung"],
+          tags: ["somatische-hypermutation", "aid", "keimzentrum", "affinitätsreifung"],
         },
       ],
     },
@@ -1342,7 +1337,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
             "Der Empfänger greift Spendererythrozyten an — wenn die keine Antigene haben, gibt es keinen Angriff.",
           ],
           difficulty: 2,
-          tags: ["transfusion", "universeller-spender", "haemolyse", "ab0-kompatibilitaet"],
+          tags: ["transfusion", "universeller-spender", "hämolyse", "ab0-kompatibilität"],
         },
         {
           question:
@@ -1453,7 +1448,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "28. SSW (präpartal) und <72h postpartal. Beide Zeitpunkte sind wichtig.",
           ],
           difficulty: 1,
-          tags: ["anti-d-prophylaxe", "rhesus-inkompatibilitaet", "sensibilisierung", "ssw"],
+          tags: ["anti-d-prophylaxe", "rhesus-inkompatibilität", "sensibilisierung", "ssw"],
         },
         {
           question:
@@ -1473,7 +1468,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "IgM als Pentamer — ist das groß oder klein? Kann ein so großes Molekül die Plazenta passieren?",
           ],
           difficulty: 2,
-          tags: ["igg-plazentatransport", "fcrn", "igm-pentamer", "fetale-haemolyse"],
+          tags: ["igg-plazentatransport", "fcrn", "igm-pentamer", "fetale-hämolyse"],
         },
         {
           question: "Wie wird der Rhesusfaktor D vererbt?",
@@ -1515,7 +1510,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "anti-d-wirkmechanismus",
             "passive-immunisierung",
             "phagozytose",
-            "sensibilisierungspraevention",
+            "sensibilisierungsprävention",
           ],
         },
         {

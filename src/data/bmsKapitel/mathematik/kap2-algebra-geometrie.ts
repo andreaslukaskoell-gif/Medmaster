@@ -289,63 +289,45 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
         "Logarithmus",
         "Wurzelziehen",
       ],
-      content: `**Idee:** Potenzen: gleiche Basis → Exponenten **addieren** (Multiplikation) bzw. **subtrahieren** (Division); **Potenz einer Potenz** → Exponenten **multiplizieren**. Wurzel = Potenz mit Bruchexponent (a^(1/n)). **Logarithmus** = Umkehrung der Potenz; **pH = −log₁₀([H⁺])** — 1 pH-Einheit = Faktor 10 in [H⁺].
+      content: `## Definition und Grundbegriffe
 
-**Verfahren — Schrittfolge:** (1) **Potenz:** aⁿ×aᵐ = a^(n+m); aⁿ/aᵐ = a^(n−m); (aⁿ)ᵐ = a^(n×m); a⁰ = 1; a⁻ⁿ = 1/aⁿ. (2) **Wurzel:** ⁿ√a = a^(1/n); √(a×b) = √a×√b (nicht √(a+b) = √a+√b!). (3) **log:** log(a×b) = log a+log b; log(a/b) = log a−log b; log(aⁿ) = n×log a. (4) **pH:** pH = −log₁₀([H⁺]); [H⁺] = 10^(−pH).
-
-**Typische Prüfungsfehler:** (aⁿ)ᵐ = a^(n×m) (nicht n+m). a⁻ⁿ = 1/aⁿ (nicht −aⁿ). √(a+b) ≠ √a+√b.
+Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst: a hoch n = a × a × a ... × a (n Faktoren). Dabei heißt a die **Basis** und n der **Exponent**. Diese Definition gilt zunächst für positive ganzzahlige Exponenten und wird anschließend auf null, negative und gebrochene Exponenten erweitert.
 
 ---
 
-## Definition und Grundbegriffe
+## Multiplikation und Division gleicher Basis
 
+Werden zwei Potenzen mit **derselben Basis** multipliziert oder dividiert, verrechnet man nur die Exponenten. Der Grund: Multiplikation bedeutet, die Faktoren aneinanderzureihen, Division kürzt gemeinsame Faktoren heraus.
 
+**Multiplikation:** a hoch n × a hoch m = a hoch (n+m). Die Faktoren "a × a × ... (n-mal)" und "a × a × ... (m-mal)" ergeben zusammen (n+m) Faktoren a. Beispiel: 2 hoch 4 × 2 hoch 3 = 2 hoch 7 = 128.
 
+**Division:** a hoch n / a hoch m = a hoch (n − m). Von den n Faktoren im Zähler werden m durch den Nenner gekürzt. Beispiel: 5 hoch 6 / 5 hoch 2 = 5 hoch 4 = 625.
 
+Diese beiden Regeln bilden das Fundament: Aus ihnen leiten sich alle weiteren Gesetze ab.
 
-Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst:
-a hoch n = a × a × a ... × a (n Faktoren).
+---
 
-Dabei ist a die Basis und n der Exponent. Diese Definition gilt zunächst für positive ganzzahlige Exponenten und wird dann auf null, negative und gebrochene Exponenten erweitert.
+## Potenz einer Potenz und Potenzen von Produkten
 
-## Die acht Potenzgesetze — vollständige Übersicht
+Wird eine Potenz erneut potenziert, **multipliziert** man die Exponenten — nicht addieren! Der Grund: (a hoch n) hoch m bedeutet, den Ausdruck "a hoch n" insgesamt m-mal mit sich selbst zu multiplizieren, was n × m Faktoren a ergibt.
 
-Für beliebige reelle Basen a und b (mit a, b > 0 bei gebrochenen Exponenten) und beliebige reelle Exponenten m und n:
+**(a hoch n) hoch m = a hoch (n × m).** Beispiel: (3 hoch 2) hoch 4 = 3 hoch 8 = 6561.
 
-1. Multiplikation gleicher Basis — Exponenten addieren:
-a hoch n × a hoch m = a hoch (n+m).
-Beispiel: 2 hoch 4 × 2 hoch 3 = 2 hoch 7 = 128.
+Wird ein **Produkt** potenziert, darf der Exponent auf beide Faktoren verteilt werden: **(a × b) hoch n = a hoch n × b hoch n.** Beispiel: (2 × 5) hoch 3 = 2 hoch 3 × 5 hoch 3 = 8 × 125 = 1000 = 10 hoch 3. Aber Vorsicht: Für **Summen** gilt das nicht — (a+b) hoch n ist nicht gleich a hoch n + b hoch n!
 
-2. Division gleicher Basis — Exponenten subtrahieren:
-a hoch n / a hoch m = a hoch (n − m).
-Beispiel: 5 hoch 6 / 5 hoch 2 = 5 hoch 4 = 625.
+Analog für **Quotienten:** (a/b) hoch n = a hoch n / b hoch n. Beispiel: (2/3) hoch 4 = 16/81.
 
-3. Potenz einer Potenz — Exponenten multiplizieren:
-(a hoch n) hoch m = a hoch (n × m).
-Beispiel: (3 hoch 2) hoch 4 = 3 hoch 8 = 6561.
-ACHTUNG: (a hoch n) hoch m ist nicht gleich a hoch (n+m)! Es ist Multiplikation, nicht Addition der Exponenten.
+---
 
-4. Potenz eines Produkts:
-(a × b) hoch n = a hoch n × b hoch n.
-Beispiel: (2 × 5) hoch 3 = 2 hoch 3 × 5 hoch 3 = 8 × 125 = 1000 = 10 hoch 3.
-Aber: (a+b) hoch n ist nicht gleich a hoch n + b hoch n!
+## Spezialfälle: Nullter, negativer und gebrochener Exponent
 
-5. Potenz eines Quotienten:
-(a/b) hoch n = a hoch n / b hoch n.
-Beispiel: (2/3) hoch 4 = 16/81.
+Diese drei Erweiterungen ergeben sich zwingend, wenn die Grundregeln widerspruchsfrei gelten sollen.
 
-6. Nullter Exponent:
-a hoch 0 = 1 (für alle a ungleich 0).
-Herleitung: a hoch n / a hoch n = a hoch (n − n) = a hoch 0, aber auch a hoch n / a hoch n = 1.
+**Nullter Exponent:** a hoch 0 = 1 (für alle a ungleich 0). Herleitung: a hoch n / a hoch n = a hoch (n − n) = a hoch 0, aber zugleich ist a hoch n / a hoch n = 1.
 
-7. Negativer Exponent:
-a hoch (−n) = 1 / a hoch n.
-Beispiel: 2 hoch (−3) = 1/8 = 0,125.
+**Negativer Exponent:** a hoch (−n) = 1 / a hoch n. Der negative Exponent erzeugt den Kehrwert. Beispiel: 2 hoch (−3) = 1/8 = 0,125. Achtung: a hoch (−n) bedeutet nicht "minus a hoch n"!
 
-8. Gebrochener Exponent:
-a hoch (1/n) = n-te Wurzel aus a.
-a hoch (m/n) = n-te Wurzel aus (a hoch m) = (n-te Wurzel aus a) hoch m.
-Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2 hoch 2 = 4.
+**Gebrochener Exponent:** a hoch (1/n) = n-te Wurzel aus a. Allgemein: a hoch (m/n) = (n-te Wurzel aus a) hoch m. Der Nenner des Exponenten gibt den Wurzelindex an, der Zähler den Exponenten danach. Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2 hoch 2 = 4.
 
 > **Merke:** Drei häufige Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — das Potenzgesetz gilt NUR für Produkte, nicht für Summen!
 
@@ -1370,18 +1352,11 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
         "Körperoberfläche",
         "DuBois-Formel",
       ],
-      content: `**Idee:** Flächen und Umfänge ebener Figuren folgen festen Formeln; **Heron** erlaubt Dreiecksfläche aus drei Seiten ohne Höhe. **Trigonometrie:** sin/cos/tan im rechtwinkligen Dreieck = Verhältnis zweier Seiten. **KOF** für Dosierung (Mosteller: √(G×Gew/3600)).
-
-**Verfahren — Schrittfolge:** (1) **Rechteck:** A = l×b, U = 2(l+b). **Dreieck:** A = ½×g×h; **Heron:** s = (a+b+c)/2, A = √(s(s−a)(s−b)(s−c)). (2) **Kreis:** A = πr², U = 2πr; **Kreisring:** A = π(R²−r²). (3) **sin/cos/tan:** Gegenkathete/Hypotenuse, Ankathete/Hypotenuse, Gegenkathete/Ankathete. (4) **KOF Mosteller:** BSA = √(Größe[cm]×Gewicht[kg]/3600).
-
-**Typische Prüfungsfehler:** Parallelogramm: Fläche = Grundseite×**Höhe** (nicht Schrägseite). Fläche skaliert mit k² (nicht k). Heron: s = halber Umfang, dann Wurzel aus s(s−a)(s−b)(s−c).
+      content: `Von der CT-Bildgebung bis zur Berechnung verbrannter Hautflächen: Flächenformeln sind im klinischen Alltag so präsent wie Vitalzeichen. Die Aortenklappenöffnungsfläche entscheidet über eine OP-Indikation, die Körperoberfläche bestimmt die Zytostatika-Dosis, und die Neuner-Regel bei Verbrennungen basiert auf geometrischen Anteilen.
 
 ---
 
-## Rechteck und Quadrat
-
-
-
+## Dreiecke — die Grundform
 
 
 Beim Rechteck mit Länge l und Breite b gilt:

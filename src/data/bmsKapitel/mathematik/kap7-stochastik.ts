@@ -197,7 +197,6 @@ C(5,3) = 10 direkt aus Zeile 5 abgelesen — kein Rechnen nötig!
 
 ---
 
-
 ## Übersichtstabelle: Alle vier Formeltypen
 
 | | **Ohne Wiederholung** | **Mit Wiederholung** |
@@ -379,7 +378,6 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
         "Binomialverteilung",
       ],
       content: `## Grundbegriffe
-
 
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
@@ -788,7 +786,6 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         "Positiver prädiktiver Wert",
       ],
       content: `## Bedingte Wahrscheinlichkeit
-
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
@@ -1243,7 +1240,6 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
         "p-Wert",
       ],
       content: `## Lage- und Streumaße
-
 
 ### Lagemaße (Maße der zentralen Tendenz)
 

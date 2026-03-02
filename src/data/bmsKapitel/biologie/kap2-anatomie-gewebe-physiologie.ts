@@ -434,17 +434,17 @@ Sekretionsmechanismen exokriner Drüsen:
 
 ## Grundprinzip: Die drei Muskeltypen
 
-**Um die folgenden Abschnitte einzuordnen:** Zuerst der Ueberblick -- welche Muskeltypen gibt es und wie unterscheiden sie sich?
+**Um die folgenden Abschnitte einzuordnen:** Zuerst der Überblick — welche Muskeltypen gibt es und wie unterscheiden sie sich?
 
 | Merkmal | Skelettmuskel | Herzmuskel | Glatte Muskulatur |
 |---|---|---|---|
 | Streifung | Quergestreift | Quergestreift | Keine Sarkomere |
-| Steuerung | **Willkuerlich** | Unwillkuerlich | Unwillkuerlich |
+| Steuerung | **Willkürlich** | Unwillkürlich | Unwillkürlich |
 | Kerne | Mehrkernig (peripher) | **1-2 (zentral)** | Einkernig (zentral) |
 | Kopplung | NMJ (neuromuskuläre Junktion, ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
 | Ca2+-Schalter | **Troponin C** | **Troponin C** | **Calmodulin -> MLCK** |
-| Tetanus (Dauerkontraktion) | Moeglich | **Unmoeglich** (lange Refraktaerzeit (Unerregbarkeitsphase)) | Tonisch moeglich |
-| Biomarker | CK-MM | **Troponin I/T**, CK-MB | -- |
+| Tetanus (Dauerkontraktion) | Möglich | **Unmöglich** (lange Refraktärzeit (Unerregbarkeitsphase)) | Tonisch möglich |
+| Biomarker | CK-MM | **Troponin I/T**, CK-MB | — |
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
 
@@ -454,43 +454,43 @@ Sekretionsmechanismen exokriner Drüsen:
 
 
 **Aufbau (von Z zu Z):**
-- **I-Bande** (hell): Nur Aktin-Duennfilamente -> **wird bei Kontraktion kuerzer**
-- **A-Bande** (dunkel): Myosin-Dickfilamente + ueberlappende Aktinfilamente -> **bleibt konstant** (Myosinlaenge aendert sich nicht!)
+- **I-Bande** (hell): Nur Aktin-Dünnfilamente -> **wird bei Kontraktion kürzer**
+- **A-Bande** (dunkel): Myosin-Dickfilamente + überlappende Aktinfilamente -> **bleibt konstant** (Myosinlänge ändert sich nicht!)
 - **H-Zone** (in der Mitte der A-Bande): Nur Myosin, kein Aktin -> **verschwindet bei maximaler Kontraktion**
 - **M-Linie**: Verankert Myosinfilamente in der Mitte
-- **Z-Scheiben** ruecken zusammen -> Sarkomer wird kuerzer
+- **Z-Scheiben** rücken zusammen -> Sarkomer wird kürzer
 
 **Strukturproteine:**
 - **Titin**: "Molekulare Feder" von Z-Scheibe zu M-Linie (via Myosin) -> Ruhespannung + Schutz vor Ueberdehnung
-- **Nebulin**: Parallel zu Aktin, legt Filamentlaenge fest
+- **Nebulin**: Parallel zu Aktin, legt Filamentlänge fest
 
-> **Merke:** Bei Kontraktion: **I-Bande kuerzer, H-Zone kuerzer, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
+> **Merke:** Bei Kontraktion: **I-Bande kürzer, H-Zone kürzer, A-Bande = konstant**. Filamente gleiten, nicht schrumpfen!
 
 ---
 
 {{DIAGRAM:action-potential}}
 
-## Troponin-Tropomyosin-Schalter: Wie Ca2+ Kontraktion ausloest
+## Troponin-Tropomyosin-Schalter: Wie Ca2+ Kontraktion auslöst
 
 
 **Ruhezustand:** Tropomyosin liegt in der Furche des Aktinstrangs und **blockiert** die Myosin-Bindungsstellen.
 
-**Aktivierung -- Schritt fuer Schritt:**
+**Aktivierung — Schritt für Schritt:**
 1. Aktionspotential erreicht das T-Tubulus-System
 2. Spannungsgesteuerte Rezeptoren (DHPR (Dihydropyridin-Rezeptor)) aktivieren **Ryanodin-Rezeptoren (RyR1)** (Ca²⁺-Freisetzungskanäle) im sarkoplasmatischen Retikulum (SR (intrazellulärer Ca²⁺-Speicher))
-3. **Ca2+ stroemt aus SR** ins Zytosol (0,1 uM -> ~10 uM)
-4. Ca2+ bindet **Troponin C** -> Konformationsaenderung des Troponin-Komplexes
+3. **Ca2+ strömt aus SR** ins Zytosol (0,1 uM -> ~10 uM)
+4. Ca2+ bindet **Troponin C** -> Konformationsänderung des Troponin-Komplexes
 5. **Tropomyosin verschiebt sich** -> Myosin-Bindungsstellen auf Aktin freigegeben
-6. **Kreuzbrueckenbildung**: Myosinkopf bindet Aktin -> Kraftschlag (Power Stroke)
+6. **Kreuzbrückenbildung**: Myosinkopf bindet Aktin -> Kraftschlag (Power Stroke)
 
-**Kreuzbrueckenzyklus -- ATP-Rolle:**
+**Kreuzbrückenzyklus — ATP-Rolle:**
 - Kraftschlag: ADP + Pi werden freigesetzt (gespeicherte Energie -> mechanische Arbeit)
-- **ATP bindet Myosinkopf -> Loesen von Aktin** (Rigor mortis: kein ATP -> Myosin bleibt haften!)
+- **ATP bindet Myosinkopf -> Lösen von Aktin** (Rigor mortis: kein ATP -> Myosin bleibt haften!)
 - ATP-Hydrolyse -> Myosinkopf wiederaufgespannt -> neuer Zyklus
 
-**Entspannung:** SERCA (SR-Ca2+-ATPase) pumpt Ca2+ zurueck ins SR -> Troponin/Tropomyosin blockiert wieder.
+**Entspannung:** SERCA (SR-Ca2+-ATPase) pumpt Ca2+ zurück ins SR -> Troponin/Tropomyosin blockiert wieder.
 
-> **Merke:** Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. **ATP loest Myosin** (nicht fuer den Kraftschlag selbst!). Kein ATP = Rigor mortis.
+> **Merke:** Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. **ATP löst Myosin** (nicht für den Kraftschlag selbst!). Kein ATP = Rigor mortis.
 
 ---
 
@@ -499,14 +499,14 @@ Sekretionsmechanismen exokriner Drüsen:
 
 **Kraftregulation durch zwei Mechanismen:**
 1. **Rekrutierung** (Spatial Summation): Mehr motorische Einheiten aktivieren -> mehr Kraft
-2. **Frequenzerhoehung** (Temporal Summation): Schnellere AP-Folge -> Summation -> Tetanus
+2. **Frequenzerhöhung** (Temporal Summation): Schnellere AP-Folge -> Summation -> Tetanus
 
-**Einheitsgroesse und Funktion:**
+**Einheitsgröße und Funktion:**
 - Klein (M. interossei, Augenmuskel: ~10 Fasern) -> feine Kraftdosierung (Schreiben, Blickbewegungen)
-- Gross (M. gastrocnemius: bis 2000 Fasern) -> grobe Kraft
+- Groß (M. gastrocnemius: bis 2000 Fasern) -> grobe Kraft
 
-**Glatte Muskulatur -- anderer Ca2+-Schalter:**
-Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtketten-Kinase) -> phosphoryliert Myosin -> Kontraktion. Gesteuert durch ANS, Hormone, Dehnung. Glatte Muskulatur ist spezialisiert auf **langsame, ausdauernde Kontraktionen** (Dauertonus): Sie ist **ermuedungsresistent** und haelt Spannung ueber Stunden (z.B. Gefaesstonus, Sphinkteren, Darmmotilitaet) -- moeglich durch den sog. **Latch-Zustand** (dephosphoryliertes Myosin bleibt bei niedrigem ATP-Verbrauch an Aktin gebunden).`,
+**Glatte Muskulatur — anderer Ca2+-Schalter:**
+Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtketten-Kinase) -> phosphoryliert Myosin -> Kontraktion. Gesteuert durch ANS, Hormone, Dehnung. Glatte Muskulatur ist spezialisiert auf **langsame, ausdauernde Kontraktionen** (Dauertonus): Sie ist **ermüdungsresistent** und hält Spannung über Stunden (z.B. Gefäßtonus, Sphinkteren, Darmmotilität) — möglich durch den sog. **Latch-Zustand** (dephosphoryliertes Myosin bleibt bei niedrigem ATP-Verbrauch an Aktin gebunden).`,
       lernziele: [
         "Sarkomerstruktur (Z-Scheibe, A-Bande, I-Bande, H-Zone) und Veränderungen bei Kontraktion beschreiben",
         "Gleitfilamenttheorie mit Rolle von Ca²⁺, Troponin und Tropomyosin erklären",
@@ -833,65 +833,65 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
         "Neurotransmitter",
         "Reflexbogen",
       ],
-      content: `## Nervensystem -- einfach erklaert
+      content: `## Nervensystem — einfach erklärt
 
-Dein Nervensystem ist wie das Kommunikationsnetz deines Koerpers. Es hat zwei grosse Teile: Das **ZNS** (Gehirn + Rueckenmark) ist die Zentrale, das **PNS** sind die Leitungen zu den Organen. Innerhalb des PNS gibt es das **vegetative Nervensystem**, das automatisch arbeitet -- mit zwei Gegenspielern: **Sympathikus** (Stressmodus) und **Parasympathikus** (Ruhemodus).
+Dein Nervensystem ist wie das Kommunikationsnetz deines Körpers. Es hat zwei große Teile: Das **ZNS** (Gehirn + Rückenmark) ist die Zentrale, das **PNS** sind die Leitungen zu den Organen. Innerhalb des PNS gibt es das **vegetative Nervensystem**, das automatisch arbeitet — mit zwei Gegenspielern: **Sympathikus** (Stressmodus) und **Parasympathikus** (Ruhemodus).
 
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-## Sympathikus und Parasympathikus -- zwei Gegenspieler
+## Sympathikus und Parasympathikus — zwei Gegenspieler
 
-Stell dir zwei Fernbedienungen vor: Eine fuer Vollgas (**Sympathikus** -- fight or flight), eine fuer Entspannung (**Parasympathikus** -- rest and digest). Beide steuern dieselben Organe, aber in gegensaetzliche Richtungen.
+Stell dir zwei Fernbedienungen vor: Eine für Vollgas (**Sympathikus** — fight or flight), eine für Entspannung (**Parasympathikus** — rest and digest). Beide steuern dieselben Organe, aber in gegensätzliche Richtungen.
 
 Der **Sympathikus** kommt aus dem Brustmark (T1-L2) und nutzt **Noradrenalin** als Botenstoff. Der **Parasympathikus** kommt aus Hirnnerven und Kreuzmark (S2-S4) und nutzt **Acetylcholin**.
 
 | Organ | Sympathikus (Stress) | Parasympathikus (Ruhe) |
 | --- | --- | --- |
-| Herz | Schneller und kraeftiger (beta-1) | Langsamer (M2, Vagus) |
+| Herz | Schneller und kräftiger (beta-1) | Langsamer (M2, Vagus) |
 | Bronchien | Weiter (beta-2) | Enger (M3) |
 | Pupille | Weit (Mydriasis, alpha-1) | Eng (Miosis, M3) |
 | Darm | Peristaltik langsamer | Peristaltik schneller |
 | Blase | Schliesst den Schliessmuskel | Entleert (Detrusor kontrahiert) |
 
-Stell dir vor, du wirst von einem Hund gejagt (Sympathikus an): Dein Herz rast, die Bronchien weiten sich fuer mehr Luft, die Pupillen werden gross, die Verdauung wird heruntergefahren. Wenn du dann sicher auf dem Sofa sitzt (Parasympathikus an): Herz beruhigt sich, Verdauung laeuft, Pupillen verengen sich.
+Stell dir vor, du wirst von einem Hund gejagt (Sympathikus an): Dein Herz rast, die Bronchien weiten sich für mehr Luft, die Pupillen werden gross, die Verdauung wird heruntergefahren. Wenn du dann sicher auf dem Sofa sitzt (Parasympathikus an): Herz beruhigt sich, Verdauung läuft, Pupillen verengen sich.
 
 > **Merke:** Sympathikus = Stress, Noradrenalin. Parasympathikus = Ruhe, Acetylcholin. Herz: Sympathikus beschleunigt (beta-1), Parasympathikus bremst (M2, Vagus).
 
 ---
 
-## Die Synapse -- Signaluebergabe zwischen Neuronen
+## Die Synapse — Signalübergabe zwischen Neuronen
 
-An der **Synapse** wird das elektrische Signal in ein chemisches umgewandelt und wieder zurueck. Stell dir das wie einen Staffellauf vor: Der Laeufer (elektrisches Signal) gibt den Stab (Neurotransmitter) weiter, und der naechste Laeufer rennt los.
+An der **Synapse** wird das elektrische Signal in ein chemisches umgewandelt und wieder zurück. Stell dir das wie einen Staffellauf vor: Der Läufer (elektrisches Signal) gibt den Stab (Neurotransmitter) weiter, und der nächste Läufer rennt los.
 
-**So laeuft es ab:**
-1. Das Signal kommt am Axon-Ende an, **Calcium-Kanaele** oeffnen sich
-2. Calcium stroemt ein und loest die Verschmelzung von Neurotransmitter-Blaeschen mit der Membran aus (ueber den **SNARE-Komplex**)
+**So läuft es ab:**
+1. Das Signal kommt am Axon-Ende an, **Calcium-Kanäle** öffnen sich
+2. Calcium strömt ein und löst die Verschmelzung von Neurotransmitter-Bläschen mit der Membran aus (über den **SNARE-Komplex**)
 3. Neurotransmitter werden in den Spalt freigesetzt
-4. Sie binden an Rezeptoren auf der naechsten Zelle
+4. Sie binden an Rezeptoren auf der nächsten Zelle
 
-Das Ergebnis ist entweder erregend (**EPSP** -- Glutamat macht die naechste Zelle aktiver) oder hemmend (**IPSP** -- GABA beruhigt die naechste Zelle).
+Das Ergebnis ist entweder erregend (**EPSP** — Glutamat macht die nächste Zelle aktiver) oder hemmend (**IPSP** — GABA beruhigt die nächste Zelle).
 
 Es gibt zwei Arten von Rezeptoren:
-- **Ionotrope** Rezeptoren oeffnen direkt einen Kanal (schnell, Millisekunden)
-- **Metabotrope** Rezeptoren loesen eine Signalkette aus (langsam, Sekunden)
+- **Ionotrope** Rezeptoren öffnen direkt einen Kanal (schnell, Millisekunden)
+- **Metabotrope** Rezeptoren lösen eine Signalkette aus (langsam, Sekunden)
 
-**Botulinumtoxin** zerstoert den SNARE-Komplex -- keine Neurotransmitter-Freisetzung mehr, die Muskeln erschlaffen. **Tetanustoxin** blockiert die hemmenden Botenstoffe (GABA) -- die Muskeln verkrampfen.
+**Botulinumtoxin** zerstört den SNARE-Komplex — keine Neurotransmitter-Freisetzung mehr, die Muskeln erschlaffen. **Tetanustoxin** blockiert die hemmenden Botenstoffe (GABA) — die Muskeln verkrampfen.
 
-> **Merke:** Signal kommt an, Calcium oeffnet die Blaeschen (SNARE), Neurotransmitter uebergibt die Botschaft. EPSP = erregend (Glutamat), IPSP = hemmend (GABA).
+> **Merke:** Signal kommt an, Calcium öffnet die Bläschen (SNARE), Neurotransmitter übergibt die Botschaft. EPSP = erregend (Glutamat), IPSP = hemmend (GABA).
 
 ---
 
-## Das Aktionspotential -- wie ein Signal ueber weite Strecken laeuft
+## Das Aktionspotential — wie ein Signal über weite Strecken läuft
 
 Im Ruhezustand liegt die Spannung an der Nervenzelle bei etwa **-70 mV** (innen negativ). Das wird durch die Natrium-Kalium-Pumpe aufrechterhalten (3 Na+ raus, 2 K+ rein).
 
-Wenn ein ausreichend starker Reiz kommt (Schwelle ca. -55 mV), passiert alles auf einmal -- wie ein Dominoeffekt:
-1. **Natrium-Kanaele oeffnen sich** -- Na+ stroemt rein, die Spannung steigt auf +40 mV
-2. Na+-Kanaele schliessen sich, **Kalium-Kanaele oeffnen sich** -- K+ stroemt raus, Spannung faellt zurueck
-3. Kurzzeitig faellt die Spannung sogar unter -70 mV (**Hyperpolarisation**)
+Wenn ein ausreichend starker Reiz kommt (Schwelle ca. -55 mV), passiert alles auf einmal — wie ein Dominoeffekt:
+1. **Natrium-Kanäle öffnen sich** — Na+ strömt rein, die Spannung steigt auf +40 mV
+2. Na+-Kanäle schließen sich, **Kalium-Kanäle öffnen sich** — K+ strömt raus, Spannung fällt zurück
+3. Kurzzeitig fällt die Spannung sogar unter -70 mV (**Hyperpolarisation**)
 
-Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip**: Entweder es feuert ganz oder gar nicht. Waehrend der **absoluten Refraktaerzeit** (Na+-Kanaele inaktiviert) kann kein zweites Signal kommen. Das verhindert, dass das Signal rueckwaerts laeuft.
+Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip**: Entweder es feuert ganz oder gar nicht. Während der **absoluten Refraktärzeit** (Na+-Kanäle inaktiviert) kann kein zweites Signal kommen. Das verhindert, dass das Signal rückwärts läuft.
 
 > **Merke:** Ruhepotential -70 mV. Schwelle -55 mV. Na+ rein = Depolarisation (+40 mV). K+ raus = Repolarisation. Alles-oder-Nichts.
 
@@ -920,7 +920,7 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         "**Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → **Na⁺-Kanäle öffnen** (Depolarisation +40 mV) → Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (Repolarisation) → Hyperpolarisation. **Refraktärzeit:** Absolut (Na⁺-Kanäle inaktiviert, KEIN AP) + relativ (Na⁺-Kanäle erholen, K⁺-Kanäle offen, überschwellig). **Alles-oder-Nichts-Prinzip** (Schwelle überschritten → volles AP).",
         "**Saltatorische Erregungsleitung** (myelinisierte Axone): **Ranvier-Schnürringe** (unmyelinisiert, ~1 μm, Na⁺-Kanäle ↑↑↑ [Nav1.6]) → Aktionspotential regeneriert. **Internodien** (~1 mm, Myelin [80% Lipide], Isolation) → Depolarisation breitet sich passiv aus (elektrotonisch, kein Ionenverlust). Aktionspotential **springt** von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Was versteht man unter dem Ruhepotenzial einer Nervenzelle?",
         answer:
@@ -1147,7 +1147,7 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         "**Akkommodation** (Naheinstellung): **Ziliarmuskel kontrahiert** (Parasympathikus, M3, N. oculomotorius [III]) → Ziliarmuskel-Ring verkleinert → **Zonulafasern entspannen** → Linse **wölbt sich** (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt maximal). **Nahakkommodationstrias:** Akkommodation + Konvergenz (M. rectus medialis) + **Miosis** (M. sphincter pupillae, M3, Tiefenschärfe ↑).",
         "**Corti-Organ** (Hören): Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Perilymphe → **Basilarmembran** (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → **Haarzellen** (Stereozilien biegen, **Tip-Links** spannen) → **K⁺-Kanäle öffnen** (Endolymphe K⁺-reich, +80 mV) → Depolarisation → **Glutamat** → N. cochlearis.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Was ist der Unterschied zwischen Stäbchen und Zapfen in der Netzhaut?",
         answer:
@@ -1296,7 +1296,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Den Insulin-Sekretionsmechanismus (GLUT2, ATP-K⁺-Kanal, Ca²⁺, Exozytose) und die antagonistischen Wirkungen von Insulin (GLUT4, Glykogensynthese ↑) und Glukagon (Glykogenolyse ↑, Glukoneogenese ↑) auf den Blutzucker erklären.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Welche Hormone produziert die Schilddrüse und was bewirken sie?",
         answer:
@@ -1452,7 +1452,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Die kurzfristige Blutdruckregulation (Barorezeptor-Reflex) und die langfristige Regulation (RAAS: Renin → Angiotensin II → Aldosteron) erklären und die Formel Blutdruck = HZV × TPR anwenden.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question:
           "Beschreiben Sie den Ablauf der Erregungsleitung am Herzen vom Sinusknoten bis zur Kammerkontraktion.",
@@ -1611,7 +1611,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Den Erythrozyten-Abbauweg (Hämoglobin → Bilirubin → Leber → Galle) beschreiben und die häufigsten Anämieformen (Eisenmangel, B12/Folsäure, hämolytisch) nach Laborbefund unterscheiden.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Aus welchen Bestandteilen setzt sich Blut zusammen?",
         answer:
@@ -1762,7 +1762,7 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
         "Aktive vs. passive Immunisierung sowie den IgE-vermittelten Allergietyp-I-Mechanismus (Sensibilisierung → Re-Exposition → Histaminfreisetzung → Anaphylaxie, Therapie: Adrenalin) erklären.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question:
           "Was ist der Unterschied zwischen zytotoxischen T-Zellen (CD8⁺) und T-Helferzellen (CD4⁺)?",
@@ -1910,7 +1910,7 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
         "Das Konzept der zentralen Toleranz und deren Bedeutung für die Autoimmunprävention darlegen.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Welche Aufgaben hat der Thymus bei der T-Zell-Reifung?",
         answer:
@@ -2049,7 +2049,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
         "Die wichtigsten Atemantriebe (zentraler CO₂/pH-Sensor, peripherer O₂-Sensor) und ihre klinische Relevanz bei COPD darstellen.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Was beschreibt der Bohr-Effekt und welche klinische Bedeutung hat er?",
         answer:
@@ -2212,7 +2212,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
         "Die Hauptfunktionen der Leber (Entgiftung, Harnstoffzyklus, Gerinnungsfaktor-Synthese, Galleproduktion, Bilirubin-Konjugation) beschreiben.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Welches Enzym spaltet Stärke und wo beginnt die Kohlenhydratverdauung?",
         answer:
@@ -2371,7 +2371,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
         "Die RAAS-Kaskade (Renin → Angiotensin II → Aldosteron/ADH) und die Angriffspunkte von ACE-Hemmern, AT₁-Blockern und Aldosteron-Antagonisten erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Wie funktioniert das Gegenstromprinzip in der Henle-Schleife?",
         answer:
@@ -2550,7 +2550,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
         "Die Pathophysiologie der Osteoporose (Östrogenmangel, Knochenumbau) und die wichtigsten Therapieoptionen (Bisphosphonate, Denosumab) erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question:
           "Erklären Sie das Knochen-Remodeling und die Regulation durch Parathormon und Calcitonin.",
@@ -2724,7 +2724,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
         "Die Rolle von hCG bei der Schwangerschaftserhaltung (Corpus luteum → Progesteron) und die Funktion der Plazenta erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Uebungsformat
+      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
         question: "Beschreiben Sie den Menstruationszyklus und seinen Auslöser für die Ovulation.",
         answer:

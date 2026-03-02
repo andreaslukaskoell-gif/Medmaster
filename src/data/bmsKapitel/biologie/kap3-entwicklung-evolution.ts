@@ -96,7 +96,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
             "Aminosäuren aus anorganischen Ausgangsstoffen — das war der Kern des Experiments.",
           ],
           difficulty: 1,
-          tags: ["miller-urey", "aminosaeuren", "abiotisch", "chemische-evolution"],
+          tags: ["miller-urey", "aminosäuren", "abiotisch", "chemische-evolution"],
         },
         {
           question:
@@ -176,7 +176,7 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
             "Das Experiment widerlegte nicht die Urzeugung, sondern zeigte, wie organische Moleküle abiotisch entstehen können.",
           ],
           difficulty: 1,
-          tags: ["miller-urey", "experiment", "organische-molekuele", "chemische-evolution"],
+          tags: ["miller-urey", "experiment", "organische-moleküle", "chemische-evolution"],
         },
       ],
     },
@@ -450,7 +450,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
             "Gendrift = genetischer Drift = zufällige Veränderungen durch Stichprobenfehler in kleinen Populationen.",
           ],
           difficulty: 1,
-          tags: ["gendrift", "kleine-population", "zufaellig", "evolutionsfaktoren"],
+          tags: ["gendrift", "kleine-population", "zufällig", "evolutionsfaktoren"],
         },
         {
           question:
@@ -470,7 +470,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
             "Flaschenhals = eine bestehende große Population wird 'durch einen engen Hals gezwungen' (nur wenige überleben).",
           ],
           difficulty: 2,
-          tags: ["flaschenhals", "gendrift", "genetische-diversitaet", "populationsreduktion"],
+          tags: ["flaschenhals", "gendrift", "genetische-diversität", "populationsreduktion"],
         },
         {
           question:
@@ -510,7 +510,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
             "Gründereffekt: zufällige Allele der Gründer werden überrepräsentiert.",
           ],
           difficulty: 2,
-          tags: ["gruendereffekt", "isolierte-gemeinschaft", "gendrift", "erberkrankung"],
+          tags: ["gründereffekt", "isolierte-gemeinschaft", "gendrift", "erberkrankung"],
         },
         {
           question: "Welche Aussage über Genfluss als Evolutionsfaktor ist korrekt?",
@@ -701,7 +701,7 @@ Polyploidie ist in der Humanmedizin teratogen (fruchtschädigend): Triploide (3n
             "Welchen Vorteil hat es, eine Hybridisierung vor der Befruchtung zu verhindern?",
           ],
           difficulty: 2,
-          tags: ["praezygotisch", "isolation", "vor-befruchtung", "artbildung"],
+          tags: ["präzygotisch", "isolation", "vor-befruchtung", "artbildung"],
         },
       ],
     },
@@ -719,29 +719,29 @@ Polyploidie ist in der Humanmedizin teratogen (fruchtschädigend): Triploide (3n
       ],
       content: `## Stammbaeume, Homologie und Analogie
 
-Der Arm eines Menschen, die Flosse eines Wals und der Fluegel einer Fledermaus sehen voellig unterschiedlich aus -- und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelfluegel und Insektenfluegel verblüffend aehnlich aus, obwohl sie unabhaengig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schluessel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbaeume richtig zu lesen.
+Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus — und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend aehnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbaeume richtig zu lesen.
 
 
-## Homologie vs. Analogie -- Ein kritischer Unterschied
+## Homologie vs. Analogie — Ein kritischer Unterschied
 
-Homologie und Analogie werden haeufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionaeren Ursprung (common ancestry) -- sie sind strukturell oft aehnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionaere Urspruenge -- sie sind funktionell aehnlich (durch konvergente Evolution auf dasselbe Problem gestossen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, aehnlicher Bau; Analogie → unabhaengige Entstehung, aehnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhaengig ein optisches System mit Linse, Retina und Iris entwickelt -- aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
+Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft aehnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell aehnlich (durch konvergente Evolution auf dasselbe Problem gestossen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, aehnlicher Bau; Analogie → unabhängige Entstehung, aehnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
 
-> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelfluegel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelfluegel und Insektenfluegel).
+> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
 
 | Merkmal | Homologie | Analogie |
 | --- | --- | --- |
-| Ursprung | Gemeinsamer Vorfahre | Unabhaengig (konvergent) |
+| Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
 | Bauplan | Aehnlich (Grundstruktur) | Verschieden |
 | Funktion | Oft verschieden | Gleich |
-| Beispiel | Arm / Flosse / Fluegel (Wirbeltiere) | Vogelfluegel / Insektenfluegel |
+| Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
 | Nachweis | Embryologie, Anatomie | Funktionsanalyse |
 | Fachbegriff | Divergente Evolution | Konvergente Evolution |
 
 ---
 
-## Molekulare Uhr -- Evolution zeitlich datieren
+## Molekulare Uhr — Evolution zeitlich datieren
 
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto laenger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien koennen absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die fruehere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
+Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdruecke).
 
 > **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
 
@@ -751,13 +751,13 @@ Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutation
 
 {{DIAGRAM:dna-helix}}
 
-Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschliesslich nach **Synapomorphien** -- gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
+Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
 - **Aeste** = Evolutionslinien der abstammenden Taxa (systematische Einheiten wie Art, Gattung, Familie)
 - **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
 - **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
 - **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
 
-Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schliessen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein -- sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: "Reptilien" ohne Voegel ist eine **paraphyletische** Gruppe, weil Voegel evolutionaere Nachkommen der Dinosaurier sind und daher zum selben Clade gehoeren. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen -- sie entstanden durch Analogie (konvergente Evolution).
+Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: "Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
 
 > **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
 
@@ -805,7 +805,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
             "Homolog = gleicher Ursprung; analog = gleiche Funktion, unterschiedlicher Ursprung.",
           ],
           difficulty: 1,
-          tags: ["homologie", "gemeinsamer-ursprung", "wirbeltiere", "vorderextremitaet"],
+          tags: ["homologie", "gemeinsamer-ursprung", "wirbeltiere", "vorderextremität"],
         },
         {
           question:
@@ -825,7 +825,7 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
             "Was ist der strukturelle Aufbau eines Vogelflügels? Und was der eines Insektenflügels?",
           ],
           difficulty: 2,
-          tags: ["analogie", "konvergente-evolution", "fluegel", "verschiedener-ursprung"],
+          tags: ["analogie", "konvergente-evolution", "flügel", "verschiedener-ursprung"],
         },
         {
           question: "Was ist ein 'Clade' in der Cladistik?",
@@ -1032,7 +1032,7 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik (Erbgutanalys
             "Mehr genetische Diversität = ältere Population (mehr Zeit für Mutationsakkumulation).",
           ],
           difficulty: 2,
-          tags: ["out-of-africa", "genetische-diversitaet", "homo-sapiens", "belege"],
+          tags: ["out-of-africa", "genetische-diversität", "homo-sapiens", "belege"],
         },
         {
           question:

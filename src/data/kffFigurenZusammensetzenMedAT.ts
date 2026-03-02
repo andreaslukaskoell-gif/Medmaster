@@ -797,6 +797,148 @@ function cutLShape4Simple(): CutResult {
   };
 }
 
+/** Quadrat: 5 Teile (Zentrum + 4 Kantenmitten → 4 Dreiecke + 1 Raute). */
+function cutSquare5Hard(): CutResult {
+  const [p0, p1, p2, p3] = SQUARE.points;
+  const m01 = mid(p0, p1);
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  const m30 = mid(p3, p0);
+  return {
+    target: SQUARE,
+    pieces: [
+      { points: [p0, m01, m30] },
+      { points: [m01, p1, m12] },
+      { points: [m12, p2, m23] },
+      { points: [m23, p3, m30] },
+      { points: [m01, m12, m23, m30] },
+    ],
+  };
+}
+
+/** Dreieck: 4 Teile (Kantenmitten bilden inneres Dreieck + 3 äußere). */
+function cutTriangle4Hard(): CutResult {
+  const [p0, p1, p2] = TRIANGLE.points;
+  const m01 = mid(p0, p1);
+  const m12 = mid(p1, p2);
+  const m20 = mid(p2, p0);
+  return {
+    target: TRIANGLE,
+    pieces: [
+      { points: [p0, m01, m20] },
+      { points: [m01, p1, m12] },
+      { points: [m20, m12, p2] },
+      { points: [m01, m12, m20] },
+    ],
+  };
+}
+
+/** Parallelogramm: 4 Teile (zwei Diagonalschnitte durch Zentrum). */
+function cutParallelogram4Hard(): CutResult {
+  const [p0, p1, p2, p3] = PARALLELOGRAM.points;
+  const c = centroid(PARALLELOGRAM);
+  return {
+    target: PARALLELOGRAM,
+    pieces: [
+      { points: [p0, p1, c] },
+      { points: [p1, p2, c] },
+      { points: [p2, p3, c] },
+      { points: [p3, p0, c] },
+    ],
+  };
+}
+
+/** Raute: 4 Teile (vom Zentrum zu jeder Ecke). */
+function cutRhombus4Hard(): CutResult {
+  const [p0, p1, p2, p3] = RHOMBUS.points;
+  const c = centroid(RHOMBUS);
+  return {
+    target: RHOMBUS,
+    pieces: [
+      { points: [c, p0, p1] },
+      { points: [c, p1, p2] },
+      { points: [c, p2, p3] },
+      { points: [c, p3, p0] },
+    ],
+  };
+}
+
+/** Trapez: 4 Teile (zwei Diagonalen). */
+function cutTrapez4Hard(): CutResult {
+  const [p0, p1, p2, p3] = TRAPEZ.points;
+  const c = centroid(TRAPEZ);
+  return {
+    target: TRAPEZ,
+    pieces: [
+      { points: [p0, p1, c] },
+      { points: [p1, p2, c] },
+      { points: [p2, p3, c] },
+      { points: [p3, p0, c] },
+    ],
+  };
+}
+
+/** Achteck: 8 Teile (Zentrum zu jeder Ecke) – sehr schwer. */
+function cutOctagon8Hard(): CutResult {
+  const v = OCTAGON.points;
+  const c = centroid(OCTAGON);
+  return {
+    target: OCTAGON,
+    pieces: Array.from({ length: 8 }, (_, i) => ({
+      points: [c, v[i], v[(i + 1) % 8]],
+    })),
+  };
+}
+
+/** L-Form: 5 Teile (Quadrate und Dreiecke). */
+function cutLShape5Hard(): CutResult {
+  return {
+    target: L_SHAPE,
+    pieces: [
+      {
+        points: [
+          { x: 40, y: 50 },
+          { x: 70, y: 50 },
+          { x: 70, y: 75 },
+          { x: 40, y: 75 },
+        ],
+      },
+      {
+        points: [
+          { x: 70, y: 50 },
+          { x: 100, y: 50 },
+          { x: 100, y: 75 },
+          { x: 70, y: 75 },
+        ],
+      },
+      {
+        points: [
+          { x: 100, y: 50 },
+          { x: 160, y: 50 },
+          { x: 160, y: 100 },
+          { x: 100, y: 100 },
+        ],
+      },
+      {
+        points: [
+          { x: 40, y: 75 },
+          { x: 100, y: 75 },
+          { x: 100, y: 100 },
+          { x: 40, y: 100 },
+        ],
+      },
+      {
+        points: [
+          { x: 40, y: 100 },
+          { x: 100, y: 100 },
+          { x: 100, y: 150 },
+          { x: 40, y: 150 },
+        ],
+      },
+    ],
+  };
+}
+
 export type FZDifficulty = "easy" | "medium" | "hard";
 
 /** Pro Schema: Schwierigkeit, Zielform (für gleiche Häufigkeit aller 14 Formen), Schnitt. */
@@ -835,6 +977,13 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "hard", shapeId: "full-circle", cut: cutFullCircle4 },
   { diff: "hard", shapeId: "full-circle", cut: cutFullCircle5 },
   { diff: "hard", shapeId: "full-circle", cut: cutFullCircle6 },
+  { diff: "hard", shapeId: "square", cut: cutSquare5Hard },
+  { diff: "hard", shapeId: "triangle", cut: cutTriangle4Hard },
+  { diff: "hard", shapeId: "parallelogram", cut: cutParallelogram4Hard },
+  { diff: "hard", shapeId: "rhombus", cut: cutRhombus4Hard },
+  { diff: "hard", shapeId: "trapezoid", cut: cutTrapez4Hard },
+  { diff: "hard", shapeId: "octagon", cut: cutOctagon8Hard },
+  { diff: "hard", shapeId: "L-shape", cut: cutLShape5Hard },
 ];
 
 // =============================================================================
@@ -1363,7 +1512,7 @@ function applyAsymmetricCuts(
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
   if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
   if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
-  return 3 + Math.floor(rng() * 3); // 3-5 cuts → 4-6 pieces
+  return 4 + Math.floor(rng() * 3); // 4-6 cuts → 5-7 pieces
 }
 
 /**
@@ -1559,94 +1708,10 @@ const TRIANGLE_PIECES_3: Polygon[] = (() => {
   ];
 })();
 
-export const OFFICIAL_FZ_EXAMPLES: readonly FigureAssembleTask[] = [
-  // Beispiel (S.2): 2 Teile → Fünfeck (A). Distraktoren: Sechseck, Quadrat, Achteck.
-  {
-    id: "fz-off-intro",
-    pieces: PENTAGON_PIECES_2,
-    target: PENTAGON,
-    options: [PENTAGON, HEXAGON, SQUARE, OCTAGON, OPTION_E],
-    correctIndex: 0,
-    difficulty: "easy",
-    explanation: "Die zwei Teile (Dreieck + Trapez) ergeben zusammen ein regelmäßiges Fünfeck.",
-    source: "IB_FZ_26.pdf – Einführungsbeispiel",
-  },
-  // Beispielaufgabe 1 (S.2): Teile → Sechseck (C). Distraktoren: ähnliche Vielecke.
-  {
-    id: "fz-off-1",
-    pieces: HEXAGON_PIECES_3,
-    target: HEXAGON,
-    options: [PENTAGON, HEPTAGON, HEXAGON, OCTAGON, OPTION_E],
-    correctIndex: 2,
-    difficulty: "easy",
-    explanation:
-      "Die drei Teile ergeben ein regelmäßiges Sechseck. Die Distraktoren sind andere Vielecke mit ähnlicher Form.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 1 (Antwort C)",
-  },
-  // Beispielaufgabe 3 (S.3): 4–5 Teile → Rechteck/Quadrat (D). Distraktoren: Fünfeck, Fünfeck, Trapez.
-  {
-    id: "fz-off-3",
-    pieces: SQUARE_PIECES_DIAGONAL,
-    target: SQUARE,
-    options: [PENTAGON, HEXAGON, TRAPEZ, SQUARE, OPTION_E],
-    correctIndex: 3,
-    difficulty: "medium",
-    explanation: "Die Teile ergeben ein Quadrat (D). Fünfeck, Sechseck und Trapez passen nicht.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 3 (Antwort D)",
-  },
-  // Beispielaufgabe 4 (S.4): Viele Teile → Quadrat (B). Distraktoren: Parallelogramm, Fünfeck, Raute.
-  {
-    id: "fz-off-4",
-    pieces: SQUARE_PIECES_4,
-    target: SQUARE,
-    options: [PARALLELOGRAM, SQUARE, PENTAGON, RHOMBUS, OPTION_E],
-    correctIndex: 1,
-    difficulty: "medium",
-    explanation:
-      "Die vier Dreiecke setzen sich zu einem Quadrat (B) zusammen. Die Distraktoren sind ähnliche Vierecke und ein Fünfeck.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 4 (Antwort B)",
-  },
-  // Beispielaufgabe 5 (S.4): Teile → Dreieck = E (keine der Optionen A–D).
-  {
-    id: "fz-off-5",
-    pieces: TRIANGLE_PIECES_3,
-    target: TRIANGLE,
-    options: [SQUARE, PENTAGON, TRAPEZ, HEXAGON, OPTION_E],
-    correctIndex: 4,
-    difficulty: "medium",
-    explanation:
-      "Die Teile ergeben ein Dreieck, das in keiner der Optionen A–D vorkommt. Daher ist E richtig.",
-    source: "IB_FZ_26.pdf – Beispielaufgabe 5 (Antwort E = Dreieck)",
-  },
-];
+/** @deprecated Official examples removed (copyright). Use generator-based training only. */
+export const OFFICIAL_FZ_EXAMPLES: readonly FigureAssembleTask[] = [];
 
+/** @deprecated No longer needed since official examples were removed. */
 export function validateOfficialFZExamples(): string[] {
-  const errors: string[] = [];
-  if (OFFICIAL_FZ_EXAMPLES.length === 0) {
-    errors.push("OFFICIAL_FZ_EXAMPLES fehlen – PDF-Beispiele nicht übernommen.");
-  }
-  OFFICIAL_FZ_EXAMPLES.forEach((task, i) => {
-    if (task.pieces.length < 2) {
-      errors.push(`Aufgabe ${i + 1} (${task.id}): pieces.length >= 2 erforderlich.`);
-    }
-    if (task.options.length !== 5) {
-      errors.push(`Aufgabe ${i + 1} (${task.id}): options.length === 5 erforderlich.`);
-    }
-    if (task.correctIndex < 0 || task.correctIndex > 4) {
-      errors.push(`Aufgabe ${i + 1} (${task.id}): correctIndex muss 0–4 sein.`);
-    }
-    const targetArea = polygonArea(task.target);
-    const piecesArea = task.pieces.reduce((s, p) => s + polygonArea(p), 0);
-    const tol = 1e-4;
-    if (Math.abs(piecesArea - targetArea) > tol) {
-      errors.push(
-        `Aufgabe ${i + 1} (${task.id}): Fläche Teile (${piecesArea.toFixed(4)}) ≠ Ziel (${targetArea.toFixed(4)}).`
-      );
-    }
-  });
-  return errors;
-}
-
-if (typeof window !== "undefined" && import.meta.env?.DEV) {
-  validateOfficialFZExamples().forEach((e) => console.warn("Figuren FZ:", e));
+  return [];
 }

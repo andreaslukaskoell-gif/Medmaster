@@ -49,94 +49,12 @@ Bei einigen Aufgaben kann es auch vorkommen, dass keine der Antwortmöglichkeite
 // Diese Liste ist FIX – niemals vom Generator verändern oder erweitern.
 // Training ausschließlich über generateSequenceTask/generateSequenceTaskSet (unten).
 
-export const OFFICIAL_ZF_EXAMPLES: SequenceTask[] = [
-  {
-    id: "official-zf-1",
-    sequence: [11, 15, 30, 26, 30, 60, 56, "?", "?"],
-    correctNext: [60, 120],
-    options: [
-      { key: "A", value: [112, 116] },
-      { key: "B", value: [60, 120] },
-      { key: "C", value: [52, 104] },
-      { key: "D", value: [112, 108] },
-      { key: "E", text: "Keine der Antwortmöglichkeiten ist richtig" },
-    ],
-    correctOptionId: "B",
-    rule: "+4, ×2, −4 (wiederholend)",
-    explanation:
-      "Zur ersten Zahl der Zahlenfolge wird 4 addiert, die resultierende Zahl wird mit 2 multipliziert, anschließend wird von der nächsten resultierenden Zahl wieder 4 subtrahiert, dieser Rechenvorgang wiederholt sich (+4; ×2; −4; +4; ×2; −4; +4; ×2). Das Ergebnis lautet daher folgerichtig B.",
-    difficulty: "medium",
-    source: "IB_ZF_26.pdf – Beispielaufgabe 1",
-  },
-  {
-    id: "official-zf-2",
-    sequence: [2, 4, 7, 5, 10, 13, 11, "?", "?"],
-    correctNext: [22, 25],
-    options: [
-      { key: "A", value: [14, 12] },
-      { key: "B", value: [9, 18] },
-      { key: "C", value: [22, 20] },
-      { key: "D", value: [22, 25] },
-      { key: "E", text: "Keine der Antwortmöglichkeiten ist richtig" },
-    ],
-    correctOptionId: "D",
-    rule: "×2, +3, −2 (wiederholend)",
-    explanation:
-      "Die erste Zahl der Zahlenfolge wird mit 2 multipliziert, zur resultierenden Zahl wird 3 addiert und von der nächsten resultierenden Zahl wieder 2 subtrahiert, dieser Rechenvorgang wiederholt sich (×2; +3; −2; ×2; +3; −2; ×2; +3). Das Ergebnis lautet daher folgerichtig D.",
-    difficulty: "medium",
-    source: "IB_ZF_26.pdf – Beispielaufgabe 2",
-  },
-];
+/** @deprecated Official examples removed (copyright). Use generator-based training only. */
+export const OFFICIAL_ZF_EXAMPLES: SequenceTask[] = [];
 
-/**
- * Dev-Check: Prüft, dass OFFICIAL_ZF_EXAMPLES vollständig und konsistent sind.
- * Aufruf beim Modul-Load (nur in Development). Bei Fehlern: Console Error.
- */
+/** @deprecated No longer needed since official examples were removed. */
 export function validateOfficialZahlenfolgenExamples(): boolean {
-  const list = OFFICIAL_ZF_EXAMPLES;
-  if (list.length === 0) {
-    if (import.meta.env?.DEV) {
-      console.error(
-        "OFFICIAL_ZF_EXAMPLES fehlen oder sind unvollständig – PDF nicht korrekt übernommen. Bitte IB_ZF_26.pdf öffnen und Beispielaufgaben 1:1 eintragen."
-      );
-    }
-    return false;
-  }
-  for (let i = 0; i < list.length; i++) {
-    const task = list[i];
-    const numbers = task.sequence.filter((x): x is number => x !== "?");
-    const gaps = task.sequence.filter((x) => x === "?");
-    if (numbers.length < 6 || gaps.length !== 2) {
-      if (import.meta.env?.DEV) {
-        console.error(
-          `OFFICIAL_ZF_EXAMPLES fehlen oder sind unvollständig – PDF nicht korrekt übernommen. Aufgabe ${i + 1}: mindestens 6 Zahlen und genau 2 "?" erforderlich.`
-        );
-      }
-      return false;
-    }
-    if (!task.options || task.options.length !== 5) {
-      if (import.meta.env?.DEV) {
-        console.error(
-          `OFFICIAL_ZF_EXAMPLES fehlen oder sind unvollständig – PDF nicht korrekt übernommen. Aufgabe ${i + 1}: genau 5 Optionen (A–E) erforderlich.`
-        );
-      }
-      return false;
-    }
-    const correctKeys = task.options.filter((o) => o.key === task.correctOptionId);
-    if (correctKeys.length !== 1) {
-      if (import.meta.env?.DEV) {
-        console.error(
-          `OFFICIAL_ZF_EXAMPLES fehlen oder sind unvollständig – PDF nicht korrekt übernommen. Aufgabe ${i + 1}: genau 1 korrekte Lösung (correctOptionId) erforderlich.`
-        );
-      }
-      return false;
-    }
-  }
   return true;
-}
-
-if (typeof import.meta !== "undefined" && import.meta.env?.DEV) {
-  validateOfficialZahlenfolgenExamples();
 }
 
 const OP_LABELS: Record<OpType, string> = { "+": "+", "−": "−", "×": "×", "÷": "÷" };
@@ -230,37 +148,49 @@ function ensureInteger(n: number): number {
 
 // ─── Schwierigkeitsabhängige Operatoren-Pools ───
 
-/** Leicht: 1–2 Operatoren, kleine Zahlen (z. B. +k oder +a, ×b abwechselnd). */
+/** Leicht: 1–2 Operatoren, kleine Zahlen, single operation or simple alternating (+/−). */
 function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
   const choices: { type: OpType; value: number }[][] = [
-    [{ type: "+", value: 3 }],
-    [{ type: "+", value: 5 }],
-    [{ type: "+", value: 2 }],
-    [{ type: "−", value: 2 }],
+    // Single operations — recognizable pattern
+    [{ type: "+", value: 4 }],
+    [{ type: "+", value: 6 }],
+    [{ type: "+", value: 7 }],
     [{ type: "×", value: 2 }],
-    [
-      { type: "+", value: 4 },
-      { type: "×", value: 2 },
-    ],
-    [
-      { type: "×", value: 2 },
-      { type: "−", value: 1 },
-    ],
+    [{ type: "×", value: 3 }],
+    [{ type: "−", value: 3 }],
+    // Two alternating operations — still straightforward
     [
       { type: "+", value: 3 },
-      { type: "−", value: 1 },
+      { type: "+", value: 5 },
+    ],
+    [
+      { type: "+", value: 4 },
+      { type: "−", value: 2 },
     ],
     [
       { type: "×", value: 2 },
       { type: "+", value: 1 },
     ],
+    [
+      { type: "+", value: 5 },
+      { type: "−", value: 1 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "−", value: 1 },
+    ],
+    [
+      { type: "+", value: 2 },
+      { type: "×", value: 2 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
 
-/** Mittel: 3-Operator-Zyklen (z. B. +4, ×2, −4). */
+/** Mittel: 2–3 Operatoren mit ×/÷ combined, requires recognizing the cycle. */
 function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
   const choices: { type: OpType; value: number }[][] = [
+    // 3-op cycles with multiply — classic MedAT pattern
     [
       { type: "+", value: 4 },
       { type: "×", value: 2 },
@@ -281,40 +211,83 @@ function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
       { type: "×", value: 3 },
       { type: "+", value: 1 },
     ],
+    // 2-op cycles with larger values or division
     [
-      { type: "+", value: 2 },
       { type: "×", value: 3 },
       { type: "−", value: 4 },
     ],
     [
+      { type: "+", value: 7 },
+      { type: "÷", value: 2 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "−", value: 5 },
+    ],
+    // 3-op cycles with division
+    [
       { type: "×", value: 2 },
       { type: "−", value: 3 },
       { type: "+", value: 2 },
+    ],
+    [
+      { type: "+", value: 6 },
+      { type: "÷", value: 2 },
+      { type: "+", value: 3 },
     ],
     [
       { type: "−", value: 1 },
       { type: "×", value: 2 },
       { type: "+", value: 5 },
     ],
+    // Alternating operations: +a, ×b, +a, ×b, ...
+    [
+      { type: "+", value: 3 },
+      { type: "×", value: 2 },
+    ],
+    [
+      { type: "+", value: 5 },
+      { type: "×", value: 3 },
+    ],
+    // Fibonacci-like with offset: approximated as +prev_diff, +constant
+    [
+      { type: "+", value: 3 },
+      { type: "+", value: 4 },
+      { type: "+", value: 7 },
+    ],
+    [
+      { type: "+", value: 2 },
+      { type: "+", value: 5 },
+      { type: "+", value: 7 },
+    ],
+    // Two interleaved sequences (odd/even positions follow different rules)
+    [
+      { type: "+", value: 10 },
+      { type: "−", value: 3 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 8 },
+    ],
+    // Larger step values
+    [
+      { type: "+", value: 9 },
+      { type: "÷", value: 3 },
+      { type: "+", value: 4 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "−", value: 7 },
+      { type: "+", value: 4 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
 
-/** Schwer: längere Zyklen oder größere Werte. */
+/** Schwer: 4–5 Operatoren, ÷ häufig, größere Werte, nested multiply+divide. */
 function pickOpsHard(rand: () => number): { type: OpType; value: number }[] {
   const choices: { type: OpType; value: number }[][] = [
-    [
-      { type: "+", value: 4 },
-      { type: "×", value: 2 },
-      { type: "−", value: 4 },
-      { type: "+", value: 2 },
-    ],
-    [
-      { type: "×", value: 2 },
-      { type: "+", value: 5 },
-      { type: "−", value: 3 },
-      { type: "×", value: 2 },
-    ],
+    // 4-op cycles with mixed operations
     [
       { type: "+", value: 6 },
       { type: "×", value: 2 },
@@ -328,16 +301,123 @@ function pickOpsHard(rand: () => number): { type: OpType; value: number }[] {
       { type: "÷", value: 2 },
     ],
     [
+      { type: "×", value: 3 },
+      { type: "−", value: 5 },
+      { type: "+", value: 2 },
+      { type: "÷", value: 2 },
+    ],
+    [
+      { type: "+", value: 8 },
+      { type: "÷", value: 2 },
+      { type: "×", value: 3 },
+      { type: "−", value: 7 },
+    ],
+    // 5-op cycles — very challenging
+    [
+      { type: "+", value: 3 },
+      { type: "×", value: 2 },
+      { type: "−", value: 4 },
+      { type: "+", value: 5 },
+      { type: "÷", value: 2 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 6 },
+      { type: "÷", value: 2 },
+      { type: "−", value: 3 },
+      { type: "+", value: 7 },
+    ],
+    [
+      { type: "+", value: 4 },
+      { type: "×", value: 3 },
+      { type: "−", value: 6 },
+      { type: "÷", value: 3 },
+      { type: "+", value: 2 },
+    ],
+    // 4-op cycles with larger values
+    [
+      { type: "−", value: 3 },
+      { type: "×", value: 3 },
+      { type: "+", value: 4 },
+      { type: "−", value: 2 },
+    ],
+    [
       { type: "+", value: 5 },
       { type: "×", value: 2 },
       { type: "−", value: 6 },
       { type: "+", value: 3 },
     ],
     [
+      { type: "×", value: 2 },
+      { type: "+", value: 5 },
       { type: "−", value: 3 },
+      { type: "×", value: 2 },
+    ],
+    // Three-step cycles: ×2, +5, −3 repeating
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 5 },
+      { type: "−", value: 3 },
+    ],
+    [
       { type: "×", value: 3 },
+      { type: "−", value: 7 },
       { type: "+", value: 4 },
-      { type: "−", value: 2 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 11 },
+      { type: "−", value: 5 },
+    ],
+    // Prime-difference inspired: differences are 2, 3, 5, 7, 11
+    [
+      { type: "+", value: 2 },
+      { type: "+", value: 3 },
+      { type: "+", value: 5 },
+      { type: "+", value: 7 },
+      { type: "+", value: 11 },
+    ],
+    [
+      { type: "+", value: 3 },
+      { type: "+", value: 5 },
+      { type: "+", value: 7 },
+      { type: "+", value: 11 },
+      { type: "+", value: 13 },
+    ],
+    // Nested: outer rule (×) + inner modifier (+/−)
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 3 },
+      { type: "×", value: 2 },
+      { type: "−", value: 5 },
+    ],
+    [
+      { type: "×", value: 3 },
+      { type: "−", value: 4 },
+      { type: "×", value: 2 },
+      { type: "+", value: 7 },
+    ],
+    // 5-op with ÷ and larger intermediate values
+    [
+      { type: "+", value: 7 },
+      { type: "×", value: 3 },
+      { type: "−", value: 8 },
+      { type: "÷", value: 2 },
+      { type: "+", value: 5 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 9 },
+      { type: "÷", value: 3 },
+      { type: "+", value: 4 },
+      { type: "×", value: 2 },
+    ],
+    // 4-op with division and multiplication interleaved
+    [
+      { type: "×", value: 4 },
+      { type: "÷", value: 2 },
+      { type: "+", value: 6 },
+      { type: "−", value: 3 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
@@ -356,17 +436,26 @@ function pickOps(
 function pickStart(
   ops: { type: OpType; value: number }[],
   length: number,
-  rand: () => number
+  rand: () => number,
+  difficulty?: DifficultyLevel
 ): number {
   let start: number;
   if (ops.some((o) => o.type === "÷")) {
-    start = [2, 3, 4, 5, 6, 8, 10, 12][Math.floor(rand() * 8)];
+    // For hard: larger divisible starting values (50-500 range)
+    const divPool =
+      difficulty === "hard"
+        ? [12, 18, 24, 30, 36, 48, 60, 72, 90, 120]
+        : [2, 3, 4, 5, 6, 8, 10, 12];
+    start = divPool[Math.floor(rand() * divPool.length)]!;
+  } else if (difficulty === "hard") {
+    // Hard: larger numbers (50-500 range)
+    start = Math.floor(rand() * 150) + 50;
   } else {
     start = Math.floor(rand() * 20) + 5;
   }
   const seq = buildSequence(start, ops, length);
   const allInt = seq.every((n) => Number.isInteger(n));
-  return allInt ? start : pickStart(ops, length, rand);
+  return allInt ? start : pickStart(ops, length, rand, difficulty);
 }
 
 /** Distraktor: erste Zahl richtig, zweite falsch (z. B. anderer Operator). */
@@ -430,8 +519,12 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
   const rand = seedRng(seed);
   const ops = pickOps(difficulty, rand);
   const lengthVisible =
-    difficulty === "easy" ? 6 + Math.floor(rand() * 2) : 7 + Math.floor(rand() * 2);
-  const start = pickStart(ops, lengthVisible + 2, rand);
+    difficulty === "easy"
+      ? 6 + Math.floor(rand() * 2)
+      : difficulty === "medium"
+        ? 7 + Math.floor(rand() * 2)
+        : 8 + Math.floor(rand() * 2);
+  const start = pickStart(ops, lengthVisible + 2, rand, difficulty);
   const fullSeq = buildSequence(start, ops, lengthVisible + 2);
   const visible = fullSeq.slice(0, lengthVisible);
   const correctNext: [number, number] = [fullSeq[lengthVisible], fullSeq[lengthVisible + 1]];
