@@ -25,6 +25,14 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
+import {
+  tvOffiziellTexte,
+  OFFICIAL_TV_INSTRUCTION,
+  type TVOffiziellText,
+  type TVAussagenFrage,
+  type TVAussagenOptionId,
+} from "@/data/tvOffiziell";
+import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { useStore } from "@/store/useStore";
 import type { TVTextSet } from "@/data/tvTextsExpanded";
 
@@ -36,7 +44,9 @@ type TvView =
   | "legacy-quiz"
   | "legacy-results"
   | "set-quiz"
-  | "set-results";
+  | "set-results"
+  | "aussagen-quiz"
+  | "aussagen-results";
 
 const LABELS = ["A", "B", "C", "D", "E"];
 
@@ -53,6 +63,9 @@ export default function TV() {
   const [selectedSetIndex, setSelectedSetIndex] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [mcAnswers, setMcAnswers] = useState<Record<string, number>>({});
+  // Aussagen mode
+  const [selectedAussagenIndex, setSelectedAussagenIndex] = useState(0);
+  const [aussagenAnswers, setAussagenAnswers] = useState<Record<string, TVAussagenOptionId>>({});
   // Mobile
   const [showAllLegacy, setShowAllLegacy] = useState(false);
   const { addXP, checkStreak, saveQuizResult } = useStore();
@@ -149,6 +162,38 @@ export default function TV() {
     addXP(score * 10);
     checkStreak();
     setView("set-results");
+  };
+
+  // --- Aussagen mode handlers ---
+  const currentAussagenText = tvOffiziellTexte[selectedAussagenIndex];
+  const allAussagenFragen = tvOffiziellTexte[selectedAussagenIndex]?.fragen ?? [];
+
+  const handleStartAussagen = (idx: number) => {
+    setSelectedAussagenIndex(idx);
+    setAussagenAnswers({});
+    setView("aussagen-quiz");
+  };
+
+  const handleSubmitAussagen = () => {
+    const score = allAussagenFragen.filter(
+      (q) => aussagenAnswers[q.id] === q.correctOptionId
+    ).length;
+    saveQuizResult({
+      id: `tv-aussagen-${Date.now()}`,
+      type: "tv",
+      subject: `TV Aussagen: ${currentAussagenText?.title ?? ""}`,
+      score,
+      total: allAussagenFragen.length,
+      date: new Date().toLocaleDateString("de-AT"),
+      answers: allAussagenFragen.map((q) => ({
+        questionId: q.id,
+        selectedAnswer: aussagenAnswers[q.id] ?? "",
+        correct: aussagenAnswers[q.id] === q.correctOptionId,
+      })),
+    });
+    addXP(score * 15);
+    checkStreak();
+    setView("aussagen-results");
   };
 
   // ===== STRATEGY =====
@@ -495,6 +540,155 @@ export default function TV() {
     );
   }
 
+  // ===== AUSSAGEN RESULTS =====
+  if (view === "aussagen-results" && currentAussagenText) {
+    const score = allAussagenFragen.filter(
+      (q) => aussagenAnswers[q.id] === q.correctOptionId
+    ).length;
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+              {score}/{allAussagenFragen.length}
+            </div>
+            <p className="text-muted mt-1">
+              {Math.round((score / allAussagenFragen.length) * 100)}% richtig
+            </p>
+          </CardContent>
+        </Card>
+        {allAussagenFragen.map((q, qi) => {
+          const sel = aussagenAnswers[q.id];
+          const isCorrect = sel === q.correctOptionId;
+          return (
+            <Card
+              key={q.id}
+              className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}
+            >
+              <CardContent className="p-5">
+                <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                  Frage {qi + 1}: {q.frageText}
+                </p>
+                <div className="space-y-1 mb-3">
+                  {q.aussagen.map((a) => (
+                    <p key={a.nr} className="text-xs text-gray-700 dark:text-gray-300 ml-2">
+                      {a.nr}. {a.text}
+                    </p>
+                  ))}
+                </div>
+                <div className="space-y-1">
+                  {q.kombinationen.map((k) => (
+                    <div
+                      key={k.key}
+                      className={`text-xs px-2 py-1.5 rounded flex items-center gap-2 ${
+                        k.key === q.correctOptionId
+                          ? "bg-green-50 dark:bg-green-900/10 font-medium"
+                          : sel === k.key
+                            ? "bg-red-50 dark:bg-red-900/10"
+                            : ""
+                      }`}
+                    >
+                      {k.key === q.correctOptionId ? (
+                        <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
+                      ) : sel === k.key ? (
+                        <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                      ) : (
+                        <span className="w-3.5 shrink-0" />
+                      )}
+                      <span>
+                        {k.key}. {k.beschreibung}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg mt-3">
+                  <p className="text-xs text-blue-700 dark:text-blue-300">{q.explanation}</p>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+        <div className="flex justify-center">
+          <Button onClick={() => setView("overview")}>Zurück</Button>
+        </div>
+      </div>
+    );
+  }
+
+  // ===== AUSSAGEN QUIZ =====
+  if (view === "aussagen-quiz" && currentAussagenText) {
+    const allAussagenAnswered = allAussagenFragen.every((q) => aussagenAnswers[q.id] !== undefined);
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
+        </Button>
+        <Badge variant="info" className="w-fit">
+          Offizielles Aussagen-Format
+        </Badge>
+        {/* Text */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-gray-900 dark:text-gray-100">
+              {currentAussagenText.title}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+              {currentAussagenText.text}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Questions */}
+        {allAussagenFragen.map((q, qi) => (
+          <Card key={q.id}>
+            <CardContent className="p-5">
+              <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                Frage {qi + 1}: {q.frageText}
+              </p>
+              {/* Numbered statements */}
+              <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-4 space-y-2">
+                {q.aussagen.map((a) => (
+                  <p key={a.nr} className="text-sm text-gray-800 dark:text-gray-200">
+                    <span className="font-medium mr-1">{a.nr}.</span> {a.text}
+                  </p>
+                ))}
+              </div>
+              {/* Combination options A-E */}
+              <div className="space-y-2">
+                {q.kombinationen.map((k) => {
+                  const isSelected = aussagenAnswers[q.id] === k.key;
+                  return (
+                    <button
+                      key={k.key}
+                      onClick={() => setAussagenAnswers((p) => ({ ...p, [q.id]: k.key }))}
+                      className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
+                        isSelected
+                          ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                          : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                      }`}
+                    >
+                      <span className="font-semibold mr-1.5">{k.key}.</span>
+                      {k.beschreibung}
+                    </button>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+
+        <Button onClick={handleSubmitAussagen} disabled={!allAussagenAnswered} className="w-full">
+          <Send className="w-4 h-4 mr-1" /> Auswertung
+        </Button>
+      </div>
+    );
+  }
+
   // ===== OVERVIEW =====
   const difficultyColors: Record<string, string> = {
     leicht: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
@@ -586,6 +780,51 @@ export default function TV() {
           </div>
         </>
       )}
+
+      {/* Separator */}
+      <div className="border-t border-border my-6"></div>
+
+      {/* Offizielles Aussagen-Format */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
+          Offizielles Format{" "}
+          <Badge className="ml-2 bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-400">
+            MedAT
+          </Badge>
+        </h2>
+        <p className="text-sm text-muted mb-3">
+          Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A–E)
+          wählen
+        </p>
+        <OfficialInstructionCard
+          title="Offizielle Instruktion: Textverständnis"
+          instruction={OFFICIAL_TV_INSTRUCTION}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {tvOffiziellTexte.map((t, i) => (
+          <Card key={t.id} className="hover:shadow-md transition-shadow">
+            <CardContent className="p-4">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm flex-1">
+                  {t.title}
+                </h3>
+                {i < 2 && (
+                  <Badge className="text-[10px] shrink-0 bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400">
+                    Offiziell
+                  </Badge>
+                )}
+              </div>
+              <p className="text-xs text-muted mb-3">
+                {t.fragen.length} Frage{t.fragen.length > 1 ? "n" : ""} · Aussagen-Format
+              </p>
+              <Button size="sm" className="w-full" onClick={() => handleStartAussagen(i)}>
+                <Play className="w-4 h-4 mr-1" /> Starten
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
       {/* Separator */}
       <div className="border-t border-border my-6"></div>

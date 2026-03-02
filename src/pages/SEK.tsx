@@ -25,12 +25,17 @@ import { UebungsbeschreibungCard } from "@/components/shared/Uebungsbeschreibung
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_EE_INSTRUCTION } from "@/data/emotionenErkennenOffiziell";
 import { OFFICIAL_ER_INSTRUCTION, OFFICIAL_SE_INSTRUCTION } from "@/data/sekDataNew";
-import { emotionenRegulierenTasks, sozialesEntscheidenTasks } from "@/data/sekDataNew";
+import { sozialesEntscheidenTasks } from "@/data/sekDataNew";
 import {
   emotionenErkennenOffiziellAlle,
   type EmotionenErkennenOffiziellTask,
 } from "@/data/emotionenErkennenOffiziell";
-import type { EmotionenRegulierenTask, SozialesEntscheidenTask } from "@/data/sekDataNew";
+import {
+  emotionenRegulierenOffiziellTasks,
+  type EmotionenRegulierenOffiziellTask,
+  type OptionId,
+} from "@/data/emotionenRegulierenOffiziell";
+import type { SozialesEntscheidenTask } from "@/data/sekDataNew";
 import { useStore } from "@/store/useStore";
 
 type SekView =
@@ -98,7 +103,7 @@ export default function SEK() {
   if (view === "regulieren-quiz" || view === "regulieren-result")
     return (
       <EmotionenRegulierenQuiz
-        tasks={emotionenRegulierenTasks}
+        tasks={emotionenRegulierenOffiziellTasks}
         onBack={() => setView("overview")}
       />
     );
@@ -554,14 +559,14 @@ function EmotionenErkennenQuiz({
 }
 
 // ==========================================
-// EMOTIONEN REGULIEREN — Choose best strategy
+// EMOTIONEN REGULIEREN — Offizielles Format (A-D, eine richtige Antwort)
 // ==========================================
 
 function EmotionenRegulierenQuiz({
   tasks,
   onBack,
 }: {
-  tasks: EmotionenRegulierenTask[];
+  tasks: EmotionenRegulierenOffiziellTask[];
   onBack: () => void;
 }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
@@ -569,30 +574,15 @@ function EmotionenRegulierenQuiz({
   const erConfig = EXAM_CONFIG.emotionenRegulieren;
   const [questions] = useState(() => shuffle(tasks).slice(0, erConfig.questions));
   const [index, setIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [answers, setAnswers] = useState<Record<string, OptionId>>({});
   const { addXP, checkStreak, saveQuizResult } = useStore();
 
   const handleSubmit = () => {
     let totalScore = 0;
-    let maxScore = 0;
+    const maxScore = questions.length;
     questions.forEach((q) => {
-      if (examMode === "exam") {
-        // Exam mode: only score=3 counts as 1 point, rest = 0
-        maxScore += 1;
-        const selectedIdx = answers[q.id];
-        if (selectedIdx !== undefined && q.strategien[selectedIdx].score === 3) {
-          totalScore += 1;
-        }
-      } else {
-        maxScore += 3;
-        const selectedIdx = answers[q.id];
-        if (selectedIdx !== undefined) {
-          totalScore += q.strategien[selectedIdx].score;
-        }
-      }
+      if (answers[q.id] === q.correctOptionId) totalScore += 1;
     });
-    const pct = Math.round((totalScore / maxScore) * 100);
-    void pct;
     saveQuizResult({
       id: `sek-er-${Date.now()}`,
       type: "sek",
@@ -602,14 +592,15 @@ function EmotionenRegulierenQuiz({
       date: new Date().toLocaleDateString("de-AT"),
       answers: questions.map((q) => {
         const sel = answers[q.id];
+        const selText = sel ? (q.options.find((o) => o.id === sel)?.text ?? "") : "";
         return {
           questionId: q.id,
-          selectedAnswer: sel !== undefined ? q.strategien[sel].text : "",
-          correct: sel !== undefined && q.strategien[sel].score === 3,
+          selectedAnswer: selText,
+          correct: sel === q.correctOptionId,
         };
       }),
     });
-    addXP(examMode === "exam" ? totalScore * 15 : Math.round(totalScore * 5));
+    addXP(totalScore * 15);
     checkStreak();
     setPhase("result");
     setIndex(0);
@@ -663,17 +654,9 @@ function EmotionenRegulierenQuiz({
 
   if (phase === "result") {
     let totalScore = 0;
-    let maxScore = 0;
+    const maxScore = questions.length;
     questions.forEach((q) => {
-      if (examMode === "exam") {
-        maxScore += 1;
-        const selectedIdx = answers[q.id];
-        if (selectedIdx !== undefined && q.strategien[selectedIdx].score === 3) totalScore += 1;
-      } else {
-        maxScore += 3;
-        const selectedIdx = answers[q.id];
-        if (selectedIdx !== undefined) totalScore += q.strategien[selectedIdx].score;
-      }
+      if (answers[q.id] === q.correctOptionId) totalScore += 1;
     });
     return (
       <div className="max-w-3xl mx-auto space-y-6">
@@ -686,55 +669,49 @@ function EmotionenRegulierenQuiz({
               {totalScore}/{maxScore}
             </div>
             <p className="text-muted mt-1">
-              {Math.round((totalScore / maxScore) * 100)}% —{" "}
-              {examMode === "exam" ? "Alles-oder-Nichts (Prüfung)" : "Prozentuale Bewertung"}
+              {Math.round((totalScore / maxScore) * 100)}% — Richtig/Falsch
             </p>
-            <p className="text-sm text-green-600 dark:text-green-400 mt-1">
-              +{Math.round(totalScore * 5)} XP
-            </p>
+            <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{totalScore * 15} XP</p>
           </CardContent>
         </Card>
         {questions.map((q, qi) => {
           const sel = answers[q.id];
-          const bestIdx = q.strategien.findIndex((s) => s.score === 3);
+          const isCorrect = sel === q.correctOptionId;
           return (
             <Card
               key={q.id}
-              className={`border-l-4 ${sel !== undefined && q.strategien[sel].score === 3 ? "border-l-green-500" : "border-l-orange-500"}`}
+              className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
                 <p className="text-sm font-medium mb-2">
-                  {qi + 1}. {q.situation.slice(0, 80)}...
+                  {qi + 1}. {q.situation.slice(0, 100)}...
                 </p>
                 <div className="ml-2 space-y-1">
-                  {q.strategien.map((s, si) => (
+                  {q.options.map((opt) => (
                     <div
-                      key={si}
-                      className={`text-xs px-2 py-1.5 rounded flex justify-between items-center ${
-                        si === bestIdx
+                      key={opt.id}
+                      className={`text-xs px-2 py-1.5 rounded flex items-center gap-2 ${
+                        opt.id === q.correctOptionId
                           ? "bg-green-50 dark:bg-green-900/10 font-medium"
-                          : sel === si
-                            ? "bg-orange-50 dark:bg-orange-900/10"
+                          : sel === opt.id
+                            ? "bg-red-50 dark:bg-red-900/10"
                             : ""
                       }`}
                     >
-                      <span className="flex-1">{s.text.slice(0, 60)}...</span>
-                      <Badge
-                        className={`ml-2 text-[10px] ${
-                          s.score === 3
-                            ? "bg-green-100 text-green-700"
-                            : s.score === 2
-                              ? "bg-blue-100 text-blue-700"
-                              : s.score === 1
-                                ? "bg-orange-100 text-orange-700"
-                                : "bg-red-100 text-red-700"
-                        }`}
-                      >
-                        {s.score}/3
-                      </Badge>
+                      {opt.id === q.correctOptionId ? (
+                        <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
+                      ) : sel === opt.id ? (
+                        <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                      ) : (
+                        <span className="w-3.5 shrink-0" />
+                      )}
+                      <span>
+                        ({opt.id}) {opt.text}
+                      </span>
                     </div>
                   ))}
                 </div>
+                {q.explanation && <p className="text-xs text-muted mt-2 ml-2">{q.explanation}</p>}
               </CardContent>
             </Card>
           );
@@ -784,64 +761,35 @@ function EmotionenRegulierenQuiz({
           <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-4">
             <p className="text-sm text-gray-800 dark:text-gray-200">{q.situation}</p>
           </div>
-          <div className="flex gap-2 mb-4 flex-wrap">
-            <Badge variant="danger">{q.emotion}</Badge>
-            <Badge variant="info">Ziel: {q.ziel}</Badge>
-          </div>
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
-            Welche Strategie ist am besten geeignet?
+            Wie gehen Sie in dieser Situation idealerweise vor?
           </p>
-          <div className="overflow-x-auto">
-            <table className="w-full border border-border dark:border-gray-600 text-sm">
-              <thead>
-                <tr className="bg-muted/50">
-                  <th className="border-b border-r border-border dark:border-gray-600 p-2 w-16 text-left">
-                    Nr.
-                  </th>
-                  <th className="border-b border-r border-border dark:border-gray-600 p-2 text-left">
-                    Strategie
-                  </th>
-                  <th className="border-b border-border dark:border-gray-600 p-2 w-16 text-center">
-                    Wahl
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {q.strategien.map((s, si) => {
-                  const label = `${index + 1}${String.fromCharCode(65 + si)}`;
-                  const isSelected = answers[q.id] === si;
-                  return (
-                    <tr
-                      key={si}
-                      onClick={() => setAnswers((p) => ({ ...p, [q.id]: si }))}
-                      className={`cursor-pointer transition-colors ${
-                        isSelected
-                          ? "bg-amber-50 dark:bg-amber-900/20"
-                          : "hover:bg-gray-50 dark:hover:bg-gray-800"
-                      }`}
-                    >
-                      <td className="border-r border-b border-border dark:border-gray-600 p-2 font-medium text-gray-600 dark:text-gray-400">
-                        {label}
-                      </td>
-                      <td className="border-r border-b border-border dark:border-gray-600 p-2 text-gray-800 dark:text-gray-200">
-                        {s.text}
-                      </td>
-                      <td className="border-b border-border dark:border-gray-600 p-2 text-center">
-                        <div
-                          className={`w-6 h-6 mx-auto rounded border-2 flex items-center justify-center transition-colors ${
-                            isSelected
-                              ? "border-amber-500 bg-amber-500 text-white"
-                              : "border-gray-300 dark:border-gray-600"
-                          }`}
-                        >
-                          {isSelected && <span className="text-xs font-bold">✕</span>}
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+          <div className="space-y-2">
+            {q.options.map((opt) => {
+              const isSelected = answers[q.id] === opt.id;
+              return (
+                <div
+                  key={opt.id}
+                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
+                  className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
+                    isSelected
+                      ? "border-amber-500 bg-amber-50 dark:bg-amber-900/20"
+                      : "border-border dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  <div
+                    className={`w-7 h-7 shrink-0 rounded-full border-2 flex items-center justify-center text-sm font-medium transition-colors ${
+                      isSelected
+                        ? "border-amber-500 bg-amber-500 text-white"
+                        : "border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400"
+                    }`}
+                  >
+                    {opt.id}
+                  </div>
+                  <p className="text-sm text-gray-800 dark:text-gray-200 pt-0.5">{opt.text}</p>
+                </div>
+              );
+            })}
           </div>
         </CardContent>
       </Card>
