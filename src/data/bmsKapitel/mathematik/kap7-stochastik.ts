@@ -381,9 +381,6 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
       content: `## Grundbegriffe
 
 
-
-
-
 Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
 
 - **Ergebnisraum Ω** (Omega): Menge aller möglichen Ergebnisse
@@ -793,9 +790,6 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
       content: `## Bedingte Wahrscheinlichkeit
 
 
-
-
-
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
 **Definition:**
@@ -1098,7 +1092,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
       sections: [
         {
           heading: "Vierfeldertafel als Universalwerkzeug",
-          text: "Die Vierfeldertafel macht Bayes-Aufgaben rechnerisch einfach und fehlerarm. Strategie: (1) Gesamtstichprobe n wählen (z.B. 10.000), (2) Erkrankte und Gesunde berechnen (n×Prävalenz), (3) TP, FN, TN, FP mit Sensitivität/Spezifität befüllen, (4) PPV = TP/(TP+FP), NPV = TN/(TN+FN). Diese Methode ist äquivalent zur Bayes-Formel, aber anschaulicher und fehleranfälliger — im MedAT immer bevorzugen.",
+          text: "Die Vierfeldertafel macht Bayes-Aufgaben rechnerisch einfach und fehlerarm. Strategie: (1) Gesamtstichprobe n wählen (z.B. 10.000), (2) Erkrankte und Gesunde berechnen (n×Prävalenz), (3) TP, FN, TN, FP mit Sensitivität/Spezifität befüllen, (4) PPV = TP/(TP+FP), NPV = TN/(TN+FN). Diese Methode ist äquivalent zur Bayes-Formel, aber anschaulicher und weniger fehleranfällig — im MedAT immer bevorzugen.",
           merksatz:
             "Vierfeldertafel: TP = krank UND positiv, FP = gesund ABER positiv, FN = krank ABER negativ, TN = gesund UND negativ. PPV = TP/(TP+FP).",
         },
@@ -1251,8 +1245,6 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
       content: `## Lage- und Streumaße
 
 
-
-
 ### Lagemaße (Maße der zentralen Tendenz)
 
 **Arithmetischer Mittelwert (x̄):**
@@ -1276,7 +1268,7 @@ Der am häufigsten vorkommende Wert. Beispiel: {3, 5, 7, 7, 8} → Modus = 7 (ko
 
 Bei bimodalen Verteilungen gibt es zwei Modi (z.B. zwei Altersgruppen mit erhöhter Krankheitshäufigkeit).
 
-> **Merke:** Bei symmetrischer Verteilung: Mittelwert = Median = Modus. Bei rechtsschiever Verteilung gilt: Modus < Median < Mittelwert. Ausreißer nach rechts ziehen den Mittelwert stärker als den Median.
+> **Merke:** Bei symmetrischer Verteilung: Mittelwert = Median = Modus. Bei rechtsschiefer Verteilung gilt: Modus < Median < Mittelwert. Ausreißer nach rechts ziehen den Mittelwert stärker als den Median.
 
 ### Streumaße
 

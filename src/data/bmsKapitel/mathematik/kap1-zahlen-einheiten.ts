@@ -947,13 +947,7 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         },
         {
           question: "Addiere: 6,5 × 10⁴ + 8,0 × 10³ = ?",
-          options: [
-            "14,5 × 10⁷",
-            "14,5 × 10⁴",
-            "7,3 × 10⁴",
-            "6,58 × 10⁴",
-            "7,3 × 10⁴ (identisch mit C)",
-          ],
+          options: ["14,5 × 10⁷", "14,5 × 10⁴", "7,3 × 10⁴", "6,58 × 10⁴", "73 × 10³"],
           correctIndex: 2,
           explanation:
             "Für Addition angleichen: 8,0 × 10³ = 0,80 × 10⁴. Dann: 6,5 × 10⁴ + 0,80 × 10⁴ = 7,3 × 10⁴. Probe: 65.000 + 8.000 = 73.000 = 7,3 × 10⁴. Option A ist falsch (Exponenten wurden addiert statt die Vorfaktoren). Option B hat den richtigen Exponenten, aber falschen Vorfaktor (14,5 würde entstehen, wenn beide Zahlen denselben Exponenten 10⁴ hätten, was sie nicht tun). Option D (6,58 × 10⁴) ist falsch: 6,5 + 0,08 ≠ 6,58; 8 × 10³ = 0,8 × 10⁴, nicht 0,08 × 10⁴.",
@@ -1657,8 +1651,6 @@ Die **elektrischen Einheiten** bauen aufeinander auf: **Coulomb (C)** = A×s ist
 In der **Strahlenmedizin** zählt **Becquerel (Bq)** = 1/s die Zerfallsereignisse pro Sekunde (Szintigraphie). Die absorbierte Strahlendosis wird in **Gray (Gy)** = J/kg gemessen (Strahlentherapie: 60–70 Gy), die biologische Wirkung auf den Menschen in **Sievert (Sv)** = J/kg × Wichtungsfaktor (Strahlenschutz).
 
 > **Merke:** Die zentrale Ableitungskette: **N** (kg×m/s²) → **Pa** = N/m² → **J** = N×m → **W** = J/s. Wer diese Kette beherrscht, kann fast jede MedAT-Physikaufgabe mit Einheiten lösen.
-
-> **Merke:** **Ableitungskette:** N = kg×m/s² → Pa = N/m² (Druck) → J = N×m (Energie) → W = J/s (Leistung). Diese Kette genügt für fast alle MedAT-Physikaufgaben!
 
 ---
 

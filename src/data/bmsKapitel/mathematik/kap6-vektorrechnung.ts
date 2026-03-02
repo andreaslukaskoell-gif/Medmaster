@@ -743,7 +743,7 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
         },
         {
           heading: "Inverse Matrix, LGS und Eigenwerte",
-          text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Fur 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel löst ein LGS uber Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Losungsvektor ersetzt. Eigenwerte $\\lambda$ erfüllen $\\det(A-\\lambda E)=0$; der zugehorige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral fur PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
+          text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Für 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel löst ein LGS über Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Lösungsvektor ersetzt. Eigenwerte $\\lambda$ erfüllen $\\det(A-\\lambda E)=0$; der zugehörige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral für PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
           merksatz:
             "Inverse: A⁻¹ = (1/det)×adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A×v = λ×v — Richtung bleibt, nur Betrag ändert sich.",
         },
@@ -1022,41 +1022,41 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
 
 **Bildgebung:** Abstände in CT/MRT-Schichtbildern werden über die euklidische Distanz berechnet, wobei die Schichtdicke als dritte Koordinate eingeht (anisotrope Voxel). Volumenmessungen nutzen die Abstandsformeln zur Bestimmung von Organgrößen, und der Punkt-Ebene-Abstand hilft bei der Beurteilung von Raumforderungen relativ zu anatomischen Leitstrukturen.`,
       lernziele: [
-        "Den Abstand zwischen zwei Punkten im 2D- und 3D-Raum berechnen konnen.",
-        "Den Abstand eines Punktes von einer Geraden uber das Kreuzprodukt bestimmen konnen.",
-        "Den Abstand eines Punktes von einer Ebene mit der Hessesche Normalform berechnen konnen.",
-        "Schnittwinkel zwischen Geraden, Ebenen und Gerade-Ebene-Kombinationen berechnen konnen.",
-        "Lagebeziehungen (parallel, schneidend, windschief) erkennen und den Abstand windschiefer Geraden berechnen konnen.",
+        "Den Abstand zwischen zwei Punkten im 2D- und 3D-Raum berechnen können.",
+        "Den Abstand eines Punktes von einer Geraden über das Kreuzprodukt bestimmen können.",
+        "Den Abstand eines Punktes von einer Ebene mit der Hesseschen Normalform berechnen können.",
+        "Schnittwinkel zwischen Geraden, Ebenen und Gerade-Ebene-Kombinationen berechnen können.",
+        "Lagebeziehungen (parallel, schneidend, windschief) erkennen und den Abstand windschiefer Geraden berechnen können.",
       ],
       sections: [
         {
           heading: "Punkt-Punkt- und Punkt-Gerade-Abstand",
-          text: "Der Abstand zweier Punkte ist der Betrag des Verbindungsvektors (euklidische Distanz). Der Punkt-Gerade-Abstand wird uber das Kreuzprodukt berechnet: $d = |\\vec{r_0P} \\times \\vec{d}| / |\\vec{d}|$. Der Zahler entspricht der Flache des aufgespannten Parallelogramms, geteilt durch die Grundseite ergibt die Hohe. In der Neurochirurgie ist die Punkt-Gerade-Distanz der Abstand der Nadelspitze vom geplanten Zugangsweg.",
+          text: "Der Abstand zweier Punkte ist der Betrag des Verbindungsvektors (euklidische Distanz). Der Punkt-Gerade-Abstand wird über das Kreuzprodukt berechnet: $d = |\\vec{r_0P} \\times \\vec{d}| / |\\vec{d}|$. Der Zähler entspricht der Fläche des aufgespannten Parallelogramms, geteilt durch die Grundseite ergibt die Höhe. In der Neurochirurgie ist die Punkt-Gerade-Distanz der Abstand der Nadelspitze vom geplanten Zugangsweg.",
           merksatz:
             "Punkt–Punkt: d = |AB| = Betrag des Verbindungsvektors. Punkt–Gerade: d = |r₀P × d| / |d| (Kreuzprodukt-Formel).",
         },
         {
           heading: "Punkt-Ebene-Abstand und Hessessche Normalform",
-          text: "Der Abstand eines Punktes P von der Ebene ax+by+cz=d betragt $d = |ap_1+bp_2+cp_3-d|/\\sqrt{a^2+b^2+c^2}$. Man setzt die Koordinaten in die Ebenengleichung ein und normiert durch den Betrag des Normalenvektors. Die Hessesche Normalform ($\\vec{n_0} \\cdot \\vec{r} = d_0$ mit $|\\vec{n_0}|=1$) vereinfacht dies: Abstand = Einsetzen des Punktes, Betrag nehmen.",
+          text: "Der Abstand eines Punktes P von der Ebene ax+by+cz=d beträgt $d = |ap_1+bp_2+cp_3-d|/\\sqrt{a^2+b^2+c^2}$. Man setzt die Koordinaten in die Ebenengleichung ein und normiert durch den Betrag des Normalenvektors. Die Hessesche Normalform ($\\vec{n_0} \\cdot \\vec{r} = d_0$ mit $|\\vec{n_0}|=1$) vereinfacht dies: Abstand = Einsetzen des Punktes, Betrag nehmen.",
           merksatz:
             "Punkt–Ebene: d = |a×p₁+b×p₂+c×p₃−d| / √(a²+b²+c²). Hessesche NF: Normalenvektor normieren, dann einfach einsetzen.",
         },
         {
           heading: "Lagebeziehungen und Schnittwinkel",
-          text: "Zwei Geraden im Raum konnen parallel, identisch, schneidend oder windschief sein. Windschiefe Geraden haben keinen Schnittpunkt und sind nicht parallel — ihr Abstand wird uber das Spatprodukt berechnet. Schnittwinkel zwischen Geraden nutzen den Kosinus des Skalarprodukts der Richtungsvektoren. Zwischen Gerade und Ebene wird der Sinus (Winkel zum Normalenvektor) verwendet. Der Diederwinkel zweier Ebenen ist der Winkel zwischen ihren Normalenvektoren.",
+          text: "Zwei Geraden im Raum können parallel, identisch, schneidend oder windschief sein. Windschiefe Geraden haben keinen Schnittpunkt und sind nicht parallel — ihr Abstand wird über das Spatprodukt berechnet. Schnittwinkel zwischen Geraden nutzen den Kosinus des Skalarprodukts der Richtungsvektoren. Zwischen Gerade und Ebene wird der Sinus (Winkel zum Normalenvektor) verwendet. Der Diederwinkel zweier Ebenen ist der Winkel zwischen ihren Normalenvektoren.",
           merksatz:
             "Windschief = nicht parallel + kein Schnittpunkt (nur im 3D). Schnittwinkel: Geraden → cos, Gerade/Ebene → sin, Ebenen → cos (mit Normalenvektoren).",
         },
         {
           heading: "Klinische Anwendungen: Strahlentherapie und Ganganalyse",
-          text: "Strahlentherapie: Sicherheitsabstand Tumor–Risikorgan als Punkt-Ebene-Distanz. Ganganalyse: Gelenkwinkel (Kniebeugung) als Schnittwinkel der Oberschenkel- und Unterschenkelvektoren. Stereotaktische Chirurgie: Nadelzugang als Gerade im Raum, Zielgenauigkeit als Punkt-Gerade-Abstand. CT/MRT: Euklidische Distanzen fur Volumetrie unter Berucksichtigung der Schichtdicke.",
+          text: "Strahlentherapie: Sicherheitsabstand Tumor–Risikorgan als Punkt-Ebene-Distanz. Ganganalyse: Gelenkwinkel (Kniebeugung) als Schnittwinkel der Oberschenkel- und Unterschenkelvektoren. Stereotaktische Chirurgie: Nadelzugang als Gerade im Raum, Zielgenauigkeit als Punkt-Gerade-Abstand. CT/MRT: Euklidische Distanzen für Volumetrie unter Berücksichtigung der Schichtdicke.",
           merksatz:
             "Strahlentherapie: Sicherheitsabstand = Punkt-Ebene-Distanz. Ganganalyse: Kniewinkel = Schnittwinkel von Oberschenkel- und Unterschenkelvektor.",
         },
       ],
       merksätze: [
         "Punkt–Punkt: d(A,B) = |AB| = √((b₁−a₁)² + (b₂−a₂)² + (b₃−a₃)²).",
-        "Punkt–Gerade: d = |r₀P × d| / |d| — Kreuzprodukt-Formel (Flache ÷ Grundseite = Hohe).",
+        "Punkt–Gerade: d = |r₀P × d| / |d| — Kreuzprodukt-Formel (Fläche ÷ Grundseite = Höhe).",
         "Punkt–Ebene: d = |a×p₁+b×p₂+c×p₃−d| / √(a²+b²+c²) — Hessessche Normalform.",
         "Windschief: Geraden im 3D ohne Schnittpunkt und nicht parallel.",
         "Abstand windschiefer Geraden: d = |(r₂−r₁)×(d₁×d₂)| / |d₁×d₂| (Spatprodukt).",
@@ -1068,9 +1068,9 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
       ],
       altfrage: {
         question:
-          "Beschreiben Sie die Berechnung des Abstands eines Punktes von einer Ebene und erklaren Sie eine klinische Anwendung dieser Formel.",
+          "Beschreiben Sie die Berechnung des Abstands eines Punktes von einer Ebene und erklären Sie eine klinische Anwendung dieser Formel.",
         answer:
-          "Der Abstand eines Punktes $P(p_1, p_2, p_3)$ von einer Ebene $E: ax+by+cz=d$ wird mit der Formel $d(P,E) = \\frac{|a \\cdot p_1 + b \\cdot p_2 + c \\cdot p_3 - d|}{\\sqrt{a^2+b^2+c^2}}$ berechnet. Man setzt die Koordinaten des Punktes in die linke Seite der Ebenengleichung ein und dividiert den Betrag des Ergebnisses durch die Lange des Normalenvektors $(a,b,c)$. Bei der **Hesseschen Normalform** ist der Normalenvektor bereits auf Lange 1 normiert, sodass der Abstand direkt durch Einsetzen und Betragsbildung gewonnen wird. Klinisch wird diese Formel in der **Strahlentherapie** eingesetzt: Die Feldgrenzen des Bestrahlungsfelds werden als Ebenen im 3D-Raum modelliert. Der Abstand eines Risikoorgans (z. B. Ruckenmark, dargestellt als Punkt oder Punktwolke) von der Feldgrenze bestimmt die **Sicherheitsmarge**. Ein Mindestabstand von typisch 5–10 mm muss eingehalten werden, um Strahlenschaden am gesunden Gewebe zu vermeiden. Auch in der **stereotaktischen Neurochirurgie** wird der Abstand eines Zielpunkts (z. B. Tumor im Gehirn) von umliegenden kritischen Strukturen (Gefasse, Hirnstamm) uber Abstandsformeln berechnet, um den sichersten Zugangsweg zu planen. Die Genauigkeit der Abstandsberechnung liegt im Submillimeterbereich und ist entscheidend fur den Therapieerfolg.",
+          "Der Abstand eines Punktes $P(p_1, p_2, p_3)$ von einer Ebene $E: ax+by+cz=d$ wird mit der Formel $d(P,E) = \\frac{|a \\cdot p_1 + b \\cdot p_2 + c \\cdot p_3 - d|}{\\sqrt{a^2+b^2+c^2}}$ berechnet. Man setzt die Koordinaten des Punktes in die linke Seite der Ebenengleichung ein und dividiert den Betrag des Ergebnisses durch die Länge des Normalenvektors $(a,b,c)$. Bei der **Hesseschen Normalform** ist der Normalenvektor bereits auf Länge 1 normiert, sodass der Abstand direkt durch Einsetzen und Betragsbildung gewonnen wird. Klinisch wird diese Formel in der **Strahlentherapie** eingesetzt: Die Feldgrenzen des Bestrahlungsfelds werden als Ebenen im 3D-Raum modelliert. Der Abstand eines Risikoorgans (z. B. Rückenmark, dargestellt als Punkt oder Punktwolke) von der Feldgrenze bestimmt die **Sicherheitsmarge**. Ein Mindestabstand von typisch 5–10 mm muss eingehalten werden, um Strahlenschaden am gesunden Gewebe zu vermeiden. Auch in der **stereotaktischen Neurochirurgie** wird der Abstand eines Zielpunkts (z. B. Tumor im Gehirn) von umliegenden kritischen Strukturen (Gefäße, Hirnstamm) uber Abstandsformeln berechnet, um den sichersten Zugangsweg zu planen. Die Genauigkeit der Abstandsberechnung liegt im Submillimeterbereich und ist entscheidend für den Therapieerfolg.",
       },
       klinischerBezug:
         "Strahlentherapie: Sicherheitsabstand Tumor–Risikorgan; Ganganalyse: Gelenkwinkel als Schnittwinkel; Stereotaxie: Punkt-Gerade-Abstand der Nadel zum Zielpunkt; CT-Volumetrie: euklidische Distanzen.",
@@ -1080,7 +1080,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           options: ["5", "√29", "7", "√26", "3"],
           correctIndex: 0,
           explanation:
-            "$d = \\sqrt{(4-1)^2+(6-2)^2+(3-3)^2} = \\sqrt{9+16+0} = \\sqrt{25} = 5$. Da die z-Koordinaten gleich sind, reduziert sich das Problem auf den 2D-Fall mit dem pythagoraischen Tripel 3-4-5.",
+            "$d = \\sqrt{(4-1)^2+(6-2)^2+(3-3)^2} = \\sqrt{9+16+0} = \\sqrt{25} = 5$. Da die z-Koordinaten gleich sind, reduziert sich das Problem auf den 2D-Fall mit dem pythagoreischen Tripel 3-4-5.",
           hints: [
             "Verwenden Sie die Abstandsformel: d = √((b₁−a₁)² + (b₂−a₂)² + (b₃−a₃)²).",
             "Die dritte Komponente ist gleich (3−3=0), es bleibt ein 2D-Problem.",
@@ -1094,22 +1094,22 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           options: [
             "d = |r₀P × d| / |d| (Kreuzprodukt-Formel)",
             "d = |r₀P × d| / |d| (Skalarprodukt-Formel)",
-            "d = |r₀P| − |d| (Differenz der Betrage)",
+            "d = |r₀P| − |d| (Differenz der Beträge)",
             "d = |r₀P + d| (Summe)",
-            "d = |r₀P| × |d| (Produkt der Betrage)",
+            "d = |r₀P| × |d| (Produkt der Beträge)",
           ],
           correctIndex: 0,
           explanation:
-            "Der Punkt-Gerade-Abstand wird uber das Kreuzprodukt berechnet: $d = \\frac{|\\vec{r_0P} \\times \\vec{d}|}{|\\vec{d}|}$. Der Zahler $|\\vec{r_0P} \\times \\vec{d}|$ ist die Flache des von $\\vec{r_0P}$ und $\\vec{d}$ aufgespannten Parallelogramms. Dividiert man durch die Grundseite $|\\vec{d}|$, erhalt man die Hohe — also den gesuchten Abstand.",
+            "Der Punkt-Gerade-Abstand wird über das Kreuzprodukt berechnet: $d = \\frac{|\\vec{r_0P} \\times \\vec{d}|}{|\\vec{d}|}$. Der Zähler $|\\vec{r_0P} \\times \\vec{d}|$ ist die Fläche des von $\\vec{r_0P}$ und $\\vec{d}$ aufgespannten Parallelogramms. Dividiert man durch die Grundseite $|\\vec{d}|$, erhält man die Höhe — also den gesuchten Abstand.",
           hints: [
-            "Der Abstand ist die 'Hohe' des Parallelogramms: Flache / Grundseite.",
-            "Flache = |r₀P × d| (Kreuzprodukt). Grundseite = |d| (Richtungsvektor).",
+            "Der Abstand ist die 'Höhe' des Parallelogramms: Fläche / Grundseite.",
+            "Fläche = |r₀P × d| (Kreuzprodukt). Grundseite = |d| (Richtungsvektor).",
           ],
           tags: ["punkt-gerade-abstand", "kreuzprodukt", "analytische-geometrie"],
           difficulty: 2,
         },
         {
-          question: "Punkt $P(1, 1, 1)$, Ebene $E: x + 2y + 2z = 10$. Wie gross ist der Abstand?",
+          question: "Punkt $P(1, 1, 1)$, Ebene $E: x + 2y + 2z = 10$. Wie groß ist der Abstand?",
           options: ["5/3", "2", "3", "1", "7/3"],
           correctIndex: 0,
           explanation:
@@ -1127,9 +1127,9 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           options: ["Windschief", "Orthogonal", "Kollinear", "Koplanar", "Identisch"],
           correctIndex: 0,
           explanation:
-            "Im dreidimensionalen Raum konnen zwei Geraden **windschief** sein: Sie haben keinen Schnittpunkt und sind nicht parallel. Dies ist nur im 3D moglich — in der Ebene (2D) schneiden sich nicht-parallele Geraden immer. Der Abstand windschiefer Geraden wird uber das Spatprodukt berechnet: $d = |(\\vec{r_2}-\\vec{r_1}) \\cdot (\\vec{d_1} \\times \\vec{d_2})| / |\\vec{d_1} \\times \\vec{d_2}|$.",
+            "Im dreidimensionalen Raum können zwei Geraden **windschief** sein: Sie haben keinen Schnittpunkt und sind nicht parallel. Dies ist nur im 3D möglich — in der Ebene (2D) schneiden sich nicht-parallele Geraden immer. Der Abstand windschiefer Geraden wird über das Spatprodukt berechnet: $d = |(\\vec{r_2}-\\vec{r_1}) \\cdot (\\vec{d_1} \\times \\vec{d_2})| / |\\vec{d_1} \\times \\vec{d_2}|$.",
           hints: [
-            "In 2D gibt es nur parallel oder schneidend. Was ist im 3D zusatzlich moglich?",
+            "In 2D gibt es nur parallel oder schneidend. Was ist im 3D zusätzlich möglich?",
             "Wenn Geraden sich nicht schneiden und nicht parallel sind, heißt das...",
           ],
           tags: ["lagebeziehung", "windschief", "analytische-geometrie"],
@@ -1137,7 +1137,7 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
         },
         {
           question:
-            "In der Strahlentherapie wird der Sicherheitsabstand eines Risikoorgans zur Feldgrenze als welche geometrische Grosse berechnet?",
+            "In der Strahlentherapie wird der Sicherheitsabstand eines Risikoorgans zur Feldgrenze als welche geometrische Größe berechnet?",
           options: [
             "Punkt-Ebene-Abstand (Organ = Punkt, Feldgrenze = Ebene)",
             "Punkt-Punkt-Abstand zwischen Tumor und Organ",
@@ -1147,9 +1147,9 @@ $g_1$: $(1,0,0) + t(1,1,0)$, $g_2$: $(0,1,0) + s(2,2,0)$.
           ],
           correctIndex: 0,
           explanation:
-            "In der Strahlentherapie wird das Risikorgan vereinfacht als Punkt (oder Punktwolke) und die Feldgrenze als Ebene im 3D-Raum modelliert. Der Sicherheitsabstand wird daher als **Punkt-Ebene-Abstand** berechnet. Ein typischer Mindestabstand zum Ruckenmark betragt 5–10 mm. Die Abstandsformel $d = |\\vec{n} \\cdot \\vec{r}_P - d_0|$ (bei normiertem Normalenvektor) liefert diesen Wert direkt aus den 3D-Koordinaten des CT-Datensatzes.",
+            "In der Strahlentherapie wird das Risikorgan vereinfacht als Punkt (oder Punktwolke) und die Feldgrenze als Ebene im 3D-Raum modelliert. Der Sicherheitsabstand wird daher als **Punkt-Ebene-Abstand** berechnet. Ein typischer Mindestabstand zum Rückenmark beträgt 5–10 mm. Die Abstandsformel $d = |\\vec{n} \\cdot \\vec{r}_P - d_0|$ (bei normiertem Normalenvektor) liefert diesen Wert direkt aus den 3D-Koordinaten des CT-Datensatzes.",
           hints: [
-            "Die Feldgrenze ist eine Flache im Raum — mathematisch eine Ebene.",
+            "Die Feldgrenze ist eine Fläche im Raum — mathematisch eine Ebene.",
             "Das Risikorgan wird als Punkt im 3D-Raum modelliert. Welche Distanzformel passt?",
           ],
           tags: ["strahlentherapie", "punkt-ebene-abstand", "klinische-anwendung"],

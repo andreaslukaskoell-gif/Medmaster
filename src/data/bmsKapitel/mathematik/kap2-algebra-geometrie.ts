@@ -638,15 +638,15 @@ Weiteres Beispiel: Ein Aktienkurs fällt um 20 % (von 100 auf 80). Um wieder auf
 
 ---
 
-## Bruchrechnung -- ausfuehrlich mit Beispielen
+## Bruchrechnung -- ausführlich mit Beispielen
 
-### Kuerzen und Erweitern
+### Kürzen und Erweitern
 
-Ein Bruch aendert seinen Wert nicht, wenn Zaehler und Nenner mit derselben Zahl multipliziert (erweitern) oder durch dieselbe Zahl dividiert (kuerzen) werden: 15/25 = 3/5 (beide durch 5 gekuerzt).
+Ein Bruch ändert seinen Wert nicht, wenn Zähler und Nenner mit derselben Zahl multipliziert (erweitern) oder durch dieselbe Zahl dividiert (kürzen) werden: 15/25 = 3/5 (beide durch 5 gekürzt).
 
 ### Addition und Subtraktion
 
-Brueche koennen nur addiert werden, wenn sie **denselben Nenner** haben (gleichnamig). Strategie: Das **kgV** (kleinste gemeinsame Vielfache) der Nenner als gemeinsamen Nenner waehlen.
+Brüche können nur addiert werden, wenn sie **denselben Nenner** haben (gleichnamig). Strategie: Das **kgV** (kleinste gemeinsame Vielfache) der Nenner als gemeinsamen Nenner wählen.
 
 Beispiel: 1/6 + 1/4. kgV(6,4) = 12. Erweitern: 2/12 + 3/12 = **5/12**.
 
@@ -654,9 +654,9 @@ Weiteres Beispiel: 5/8 − 1/3. kgV(8,3) = 24. Erweitern: 15/24 − 8/24 = **7/2
 
 ### Multiplikation
 
-Zaehler mal Zaehler, Nenner mal Nenner: (a/b) × (c/d) = (a×c) / (b×d). Tipp: Vor dem Multiplizieren kreuzweise kuerzen!
+Zähler mal Zähler, Nenner mal Nenner: (a/b) × (c/d) = (a×c) / (b×d). Tipp: Vor dem Multiplizieren kreuzweise kürzen!
 
-Beispiel: 3/8 × 4/9. Kreuzweise kuerzen: 3 und 9 (÷3), 4 und 8 (÷4) → 1/2 × 1/3 = **1/6**.
+Beispiel: 3/8 × 4/9. Kreuzweise kürzen: 3 und 9 (÷3), 4 und 8 (÷4) → 1/2 × 1/3 = **1/6**.
 
 ### Division -- der Kehrwert-Trick
 
@@ -664,15 +664,15 @@ Division durch einen Bruch = Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (
 
 Beispiel: (3/4) ÷ (9/16) = 3/4 × 16/9 = 48/36 = **4/3**.
 
-Medizinisches Beispiel: Eine Infusion laeuft mit 3/4 Liter pro Stunde. Wie lange dauert es fuer 9/16 Liter? Zeit = Volumen / Rate = (9/16) ÷ (3/4) = 9/16 × 4/3 = 36/48 = **3/4 Stunde = 45 Minuten**.
+Medizinisches Beispiel: Eine Infusion läuft mit 3/4 Liter pro Stunde. Wie lange dauert es für 9/16 Liter? Zeit = Volumen / Rate = (9/16) ÷ (3/4) = 9/16 × 4/3 = 36/48 = **3/4 Stunde = 45 Minuten**.
 
-> **Merke:** Bruchdivision: IMMER mit dem Kehrwert multiplizieren! (a/b) ÷ (c/d) = (a×d) / (b×c). Vor der Multiplikation kreuzweise kuerzen spart Arbeit.
+> **Merke:** Bruchdivision: IMMER mit dem Kehrwert multiplizieren! (a/b) ÷ (c/d) = (a×d) / (b×c). Vor der Multiplikation kreuzweise kürzen spart Arbeit.
 
 ### Textaufgabe (Typ M)
 
 „Von einer Strecke sind 2/5 asphaltiert und 1/3 geschottert. Der Rest (4 km) ist ein Feldweg. Wie lang ist die Gesamtstrecke?"
 
-Loesung: Asphalt + Schotter = 2/5 + 1/3 = 6/15 + 5/15 = 11/15. Rest = 1 − 11/15 = 4/15. Also 4/15 × x = 4 km → x = 4 × 15/4 = **15 km**.
+Lösung: Asphalt + Schotter = 2/5 + 1/3 = 6/15 + 5/15 = 11/15. Rest = 1 − 11/15 = 4/15. Also 4/15 × x = 4 km → x = 4 × 15/4 = **15 km**.
 
 Probe: 2/5 × 15 = 6 km (Asphalt); 1/3 × 15 = 5 km (Schotter); Rest = 15 − 6 − 5 = 4 km (Feldweg). Stimmt!
 
@@ -682,11 +682,11 @@ Probe: 2/5 × 15 = 6 km (Asphalt); 1/3 × 15 = 5 km (Schotter); Rest = 15 − 6 
 
 ## Dreisatz -- direkt und indirekt
 
-Der Dreisatz loest Verhaeltnisaufgaben in drei Schritten: (1) Gegebenes Paar notieren, (2) auf 1 Einheit zurueckrechnen, (3) auf die gesuchte Menge hochrechnen.
+Der Dreisatz löst Verhältnisaufgaben in drei Schritten: (1) Gegebenes Paar notieren, (2) auf 1 Einheit zurückrechnen, (3) auf die gesuchte Menge hochrechnen.
 
 ### Direkter Dreisatz (proportional)
 
-Mehr von A → mehr von B. Die Groessen aendern sich in **dieselbe Richtung**.
+Mehr von A → mehr von B. Die Größen ändern sich in **dieselbe Richtung**.
 
 Beispiel: 3 Hefte kosten 7,50 €. Was kosten 5 Hefte?
 - 3 Hefte → 7,50 €
@@ -706,23 +706,23 @@ Beispiel: 6 Arbeiter brauchen 4 Stunden. Wie lange brauchen 4 Arbeiter?
 - 1 Arbeiter → 24 Stunden
 - 4 Arbeiter → 24/4 = **6 Stunden**
 
-Medizinisches Beispiel: Eine Loesung mit Konzentration 5 % braucht 200 ml. Welches Volumen braucht man bei 8 %?
-- 5 × 200 = 1000 (Wirkstoffmenge in willkuerlichen Einheiten, konstant)
+Medizinisches Beispiel: Eine Lösung mit Konzentration 5 % braucht 200 ml. Welches Volumen braucht man bei 8 %?
+- 5 × 200 = 1000 (Wirkstoffmenge in willkürlichen Einheiten, konstant)
 - 8 % → 1000/8 = **125 ml**
 
-> **Merke:** Erkennungsfrage: „Wird B groesser oder kleiner, wenn A groesser wird?" Groesser = direkter Dreisatz (proportional). Kleiner = indirekter Dreisatz (antiproportional, Produkt konstant).
+> **Merke:** Erkennungsfrage: „Wird B größer oder kleiner, wenn A größer wird?" Größer = direkter Dreisatz (proportional). Kleiner = indirekter Dreisatz (antiproportional, Produkt konstant).
 
 ---
 
-## Verduennungsreihen und Mischungsrechnung
+## Verdünnungsreihen und Mischungsrechnung
 
-**Verduennungsreihe:** Ausgangskonzentration × Ausgangsvolumen = Endkonzentration × Endvolumen (c1 × V1 = c2 × V2). Dies ist ein indirekter Dreisatz -- mehr Volumen bedeutet weniger Konzentration.
+**Verdünnungsreihe:** Ausgangskonzentration × Ausgangsvolumen = Endkonzentration × Endvolumen (c1 × V1 = c2 × V2). Dies ist ein indirekter Dreisatz -- mehr Volumen bedeutet weniger Konzentration.
 
-Beispiel: 50 ml einer 10 %-Loesung sollen auf 2 % verduennt werden. V2 = (c1 × V1)/c2 = (10 × 50)/2 = **250 ml** (also 200 ml Loesungsmittel zugeben).
+Beispiel: 50 ml einer 10 %-Lösung sollen auf 2 % verdünnt werden. V2 = (c1 × V1)/c2 = (10 × 50)/2 = **250 ml** (also 200 ml Lösungsmittel zugeben).
 
-**Mischungskreuz:** Zwei Loesungen (c1, c2) werden gemischt zu einer Zielkonzentration cZ. Die Mengenverhaeltnisse berechnen sich als: m1/m2 = |c2 − cZ| / |c1 − cZ|.
+**Mischungskreuz:** Zwei Lösungen (c1, c2) werden gemischt zu einer Zielkonzentration cZ. Die Mengenverhältnisse berechnen sich als: m1/m2 = |c2 − cZ| / |c1 − cZ|.
 
-> **Merke:** Verduennungsformel c1 × V1 = c2 × V2 ist ein indirekter Dreisatz. Mischungskreuz: Differenzen zur Zielkonzentration bilden das Mengenverhaeltnis.`,
+> **Merke:** Verdünnungsformel c1 × V1 = c2 × V2 ist ein indirekter Dreisatz. Mischungskreuz: Differenzen zur Zielkonzentration bilden das Mengenverhältnis.`,
       lernziele: [
         "Prozentrechnung sicher anwenden (Grundwert, Prozentwert, Prozentsatz) und typische Fallen vermeiden",
         "Brüche addieren, subtrahieren, multiplizieren und dividieren (kgV-Nenner, Kehrwert-Trick)",
@@ -748,103 +748,83 @@ Beispiel: 50 ml einer 10 %-Loesung sollen auf 2 % verduennt werden. V2 = (c1 × 
         },
       ],
       merksätze: [
-        "(a+b)² = a² + 2ab + b² — nie vergessen: der mittlere Term 2ab!",
-        "(a − b)² = a² − 2ab + b² — mittlerer Term negativ.",
-        "(a+b)(a − b) = a² − b² — Differenz der Quadrate.",
-        "Scheitelpunkt: d = − b/(2a); e = f(d) = c − b² / (4a).",
-        "Vieta: x1+x2 = − b/a; x1 × x2 = c/a für ax² + bx + c = 0.",
-        "Quadratisches Ergänzen: x² + bx = (x + b/2)² − (b/2)².",
-        "Rationalisierung: Nenner mit konjugiertem Ausdruck erweitern und dritte binomische Formel anwenden.",
-        "Faktorisieren: erst a² +/- 2ab + b² oder a² − b² prüfen, dann Vieta, zuletzt Lösungsformel.",
-        "Mentale Arithmetik: 97 × 103 = (100 − 3)(100 + 3) = 10000 − 9 = 9991.",
-        "Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.",
+        "Prozentwert W = G × p/100; Prozentsatz p = W/G × 100; Grundwert G = W/(p/100).",
+        "+50 % dann −50 % ≠ 0 %! Sequenzielle Prozente: Bezugsgröße ändert sich!",
+        "Prozentpunkte = absolute Differenz der Prozentwerte; prozentuale Änderung = relativ zum Ausgangswert.",
+        "Bruchdivision: mit dem Kehrwert multiplizieren! (a/b) ÷ (c/d) = (a×d) / (b×c).",
+        "Bruchaddition: erst gleichnamig machen (kgV der Nenner), dann Zähler addieren.",
+        "Direkter Dreisatz: doppelte Menge → doppelter Preis (proportional).",
+        "Indirekter Dreisatz: doppelt so viele Arbeiter → halbe Zeit (Produkt konstant).",
+        "Verdünnungsformel: c₁ × V₁ = c₂ × V₂ — ein indirekter Dreisatz.",
+        "Mischungskreuz: m₁/m₂ = |c₂ − cZ| / |c₁ − cZ|.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?",
+          "Ein Medikament wird als 5 %-ige Lösung geliefert. Für eine Infusion werden 250 ml einer 2 %-igen Lösung benötigt. Wie viel ml der Stammlösung und wie viel ml Lösungsmittel werden gebraucht?",
         answer:
-          "Kreisfläche A = pi × r². Morgens: A1 = pi × (x+3)². Abends: A2 = pi × (x+7)². Bedingung: A2 = 4 × A1. Einsetzen: pi × (x+7)² = 4 × pi × (x+3)². Kürze pi: (x+7)² = 4 × (x+3)². Wurzel ziehen: x+7 = 2(x+3) oder x+7 = − 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = − 2x − 6, also 3x = − 13, x = − 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi × 16, A2 = pi × 64 = 4 × pi × 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.",
+          "Verdünnungsformel: c₁ × V₁ = c₂ × V₂. Einsetzen: 5 % × V₁ = 2 % × 250 ml. V₁ = (2 × 250) / 5 = 100 ml Stammlösung. Lösungsmittel: 250 − 100 = 150 ml. Probe: 100 ml × 5 % = 500 Einheiten Wirkstoff; 500 / 250 ml = 2 %. Korrekt. Dies ist ein typischer indirekter Dreisatz: mehr Volumen → geringere Konzentration.",
       },
       klinischerBezug:
-        "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
+        "Prozentrechnung und Dreisatz sind im medizinischen Alltag allgegenwärtig: Medikamentendosierungen (mg/kg), Infusionsraten (ml/h), Verdünnungsreihen im Labor (Serumverdünnungen für Antikörpertiter), Mischungsrechnungen in der Apotheke und Konzentrationsumrechnungen (g/l ↔ %). Die Verdünnungsformel c₁V₁ = c₂V₂ wird täglich in Klinik und Labor angewendet.",
       selfTest: [
         {
-          question: "Was ergibt (3x − 4)²?",
-          options: [
-            "9x² − 24x + 16",
-            "9x² + 16",
-            "6x² − 24x + 16",
-            "9x² − 12x + 16",
-            "9x² − 24x − 16",
-          ],
+          question:
+            "Ein Laborwert steigt von 80 mg/dl auf 100 mg/dl. Um wie viel Prozent ist er gestiegen?",
+          options: ["25 %", "20 %", "20 Prozentpunkte", "80 %", "125 %"],
           correctIndex: 0,
           explanation:
-            "(3x − 4)² = (3x)² − 2 × (3x) × 4 + 4² = 9x² − 24x + 16. Zweite binomische Formel mit a = 3x und b = 4. Mittlerer Term: − 2 × (3x) × 4 = − 24x. Äußere Quadrate: (3x)² = 9x² und 4² = 16. Der häufige Fehler wäre das Vergessen des mittleren Terms oder ein falsches Vorzeichen.",
+            "Prozentuale Änderung = (Neuwert − Altwert) / Altwert × 100 % = (100 − 80) / 80 × 100 % = 20/80 × 100 % = 25 %. Häufiger Fehler: 20 % (absolut 20 Einheiten, aber die Bezugsgröße ist 80, nicht 100).",
           hints: [
-            "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
-            "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
+            "Prozentuale Änderung = Differenz / Ausgangswert × 100 %.",
+            "Ausgangswert ist 80, nicht 100!",
           ],
-          difficulty: 2,
-          tags: ["binomische-formel", "quadrat", "algebra"],
+          difficulty: 1,
+          tags: ["prozentrechnung", "relative-änderung"],
         },
         {
-          question: "Welche Faktorisierung gilt für 4x² − 49?",
-          options: [
-            "(2x+7)(2x − 7)",
-            "(4x+7)(x − 7)",
-            "(2x − 7)²",
-            "(4x − 7)(x+7)",
-            "(2x+49)(2x − 1)",
-          ],
+          question: "Was ergibt 5/8 − 1/3?",
+          options: ["7/24", "4/5", "1/6", "15/24 − 8/24", "2/5"],
           correctIndex: 0,
           explanation:
-            "4x² − 49 = (2x)² − 7². Dritte binomische Formel: (2x+7)(2x − 7). Erkenne das Muster: Differenz zweier Quadrate a² − b² mit a = 2x und b = 7. Probe: (2x+7)(2x − 7) = 4x² − 14x + 14x − 49 = 4x² − 49. Korrekt.",
-          hints: ["Erkenne a² − b² mit 4x² = (2x)² und 49 = 7².", "(a+b)(a − b) = a² − b²."],
-          difficulty: 2,
-          tags: ["binomische-formel", "faktorisierung", "differenz-der-quadrate"],
+            "kgV(8, 3) = 24. Erweitern: 5/8 = 15/24; 1/3 = 8/24. Differenz: 15/24 − 8/24 = 7/24. Option D zeigt zwar den Zwischenschritt, ist aber nicht vereinfacht und daher nicht die korrekte Antwort.",
+          hints: ["Gemeinsamer Nenner: kgV(8, 3) = 24.", "5/8 = 15/24 und 1/3 = 8/24."],
+          difficulty: 1,
+          tags: ["bruchrechnung", "subtraktion", "kgV"],
         },
         {
-          question: "Was ist der Scheitelpunkt von f(x) = 2x² − 8x + 10?",
-          options: ["(2, 2)", "(−2, 2)", "(4, 10)", "(2, 10)", "(−4, 2)"],
+          question: "3 Tabletten enthalten 750 mg Wirkstoff. Wie viel mg enthalten 7 Tabletten?",
+          options: ["1750 mg", "2100 mg", "1500 mg", "250 mg", "2250 mg"],
           correctIndex: 0,
           explanation:
-            "Scheitelpunkt-x: d = − b / (2a) = − (−8) / (2 × 2) = 8/4 = 2. Scheitelpunkt-y: e = f(2) = 2 × 4 − 8 × 2 + 10 = 8 − 16 + 10 = 2. Scheitelpunkt: (2, 2). Da a = 2 > 0 ist das ein Minimum. Quadratisches Ergänzen bestätigt: 2(x² − 4x + 5) = 2((x − 2)² + 1) = 2(x − 2)² + 2.",
-          hints: ["d = − b/(2a) = 8/4 = 2.", "e = f(2) = 2 × 4 − 8 × 2 + 10 = ?"],
-          difficulty: 2,
-          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
+            "Direkter Dreisatz: 3 Tabletten → 750 mg. 1 Tablette → 750/3 = 250 mg. 7 Tabletten → 250 × 7 = 1750 mg. Proportional: mehr Tabletten → mehr Wirkstoff.",
+          hints: ["Erst auf 1 Einheit zurückrechnen: 750/3 = ?", "Dann hochrechnen: 250 × 7 = ?"],
+          difficulty: 1,
+          tags: ["dreisatz", "direkt", "proportional"],
         },
         {
-          question: "Mit Vieta: Welche Gleichung hat die Lösungen x1 = − 2 und x2 = 5?",
-          options: [
-            "x² − 3x − 10 = 0",
-            "x² + 3x − 10 = 0",
-            "x² − 3x + 10 = 0",
-            "x² + 7x − 10 = 0",
-            "x² − 7x + 10 = 0",
-          ],
+          question:
+            "50 ml einer 10 %-Lösung sollen auf 2 % verdünnt werden. Welches Gesamtvolumen wird benötigt?",
+          options: ["250 ml", "200 ml", "100 ml", "500 ml", "125 ml"],
           correctIndex: 0,
           explanation:
-            "Summe: x1 + x2 = − 2 + 5 = 3 = − p, also p = − 3. Produkt: x1 × x2 = − 2 × 5 = − 10 = q. Gleichung: x² − 3x − 10 = 0. Probe: (x + 2)(x − 5) = x² − 5x + 2x − 10 = x² − 3x − 10. Korrekt. Die Vieta-Methode liefert direkt die Gleichungskoeffizienten aus Summe und Produkt der Lösungen.",
+            "Verdünnungsformel: c₁ × V₁ = c₂ × V₂. 10 × 50 = 2 × V₂. V₂ = 500/2 = 250 ml. Man muss also 200 ml Lösungsmittel zu den 50 ml Stammlösung geben. Gefragt war das Gesamtvolumen: 250 ml.",
+          hints: ["c₁ × V₁ = c₂ × V₂ → V₂ = (c₁ × V₁) / c₂.", "V₂ = (10 × 50) / 2 = ?"],
+          difficulty: 2,
+          tags: ["verdünnung", "dreisatz", "indirekt"],
+        },
+        {
+          question:
+            "Ein Aktienkurs fällt um 20 %. Um wie viel Prozent muss er steigen, um den Ausgangswert zu erreichen?",
+          options: ["25 %", "20 %", "22 %", "80 %", "120 %"],
+          correctIndex: 0,
+          explanation:
+            "Ausgangswert 100. Nach −20 %: 80. Benötigter Anstieg: 20/80 × 100 % = 25 %. Typische Falle: Man denkt, 20 % Rückgang erfordert 20 % Anstieg — falsch, weil sich die Bezugsgröße geändert hat (jetzt 80 statt 100).",
           hints: [
-            "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
-            "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
+            "Neuer Wert nach Rückgang: 100 × 0,8 = 80.",
+            "Steigerung von 80 auf 100: Differenz/neuer Ausgangswert = 20/80 = ?",
           ],
           difficulty: 2,
-          tags: ["vieta", "quadratische-gleichung", "algebra"],
-        },
-        {
-          question: "Was ergibt (Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2)?",
-          options: ["4", "Wurzel aus 8", "8", "Wurzel aus 4", "2 Wurzel aus 3"],
-          correctIndex: 0,
-          explanation:
-            "(Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2) = (Wurzel aus 6)² − (Wurzel aus 2)² = 6 − 2 = 4. Dritte binomische Formel mit a = Wurzel aus 6 und b = Wurzel aus 2. Diese Technik der Rationalisierung ist nützlich, um Nenner von Wurzelausdrücken zu bereinigen und exakte Ergebnisse zu erhalten.",
-          hints: [
-            "(a+b)(a − b) = a² − b² mit a = Wurzel aus 6 und b = Wurzel aus 2.",
-            "(Wurzel aus 6)² = 6; (Wurzel aus 2)² = 2.",
-          ],
-          difficulty: 2,
-          tags: ["binomische-formel", "rationalisierung", "wurzel"],
+          tags: ["prozentrechnung", "sequenzielle-prozente", "falle"],
         },
       ],
     },
@@ -1041,7 +1021,85 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
       },
       klinischerBezug:
         "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
-      selfTest: [],
+      selfTest: [
+        {
+          question: "Was ergibt (3x − 4)²?",
+          options: [
+            "9x² − 24x + 16",
+            "9x² + 16",
+            "6x² − 24x + 16",
+            "9x² − 12x + 16",
+            "9x² − 24x − 16",
+          ],
+          correctIndex: 0,
+          explanation:
+            "(3x − 4)² = (3x)² − 2 × (3x) × 4 + 4² = 9x² − 24x + 16. Zweite binomische Formel mit a = 3x und b = 4. Mittlerer Term: − 2 × (3x) × 4 = − 24x. Der häufige Fehler wäre das Vergessen des mittleren Terms.",
+          hints: [
+            "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
+            "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "quadrat", "algebra"],
+        },
+        {
+          question: "Welche Faktorisierung gilt für 4x² − 49?",
+          options: [
+            "(2x+7)(2x − 7)",
+            "(4x+7)(x − 7)",
+            "(2x − 7)²",
+            "(4x − 7)(x+7)",
+            "(2x+49)(2x − 1)",
+          ],
+          correctIndex: 0,
+          explanation:
+            "4x² − 49 = (2x)² − 7². Dritte binomische Formel: (2x+7)(2x − 7). Probe: (2x+7)(2x − 7) = 4x² − 14x + 14x − 49 = 4x² − 49. Korrekt.",
+          hints: ["Erkenne a² − b² mit 4x² = (2x)² und 49 = 7².", "(a+b)(a − b) = a² − b²."],
+          difficulty: 2,
+          tags: ["binomische-formel", "faktorisierung", "differenz-der-quadrate"],
+        },
+        {
+          question: "Was ist der Scheitelpunkt von f(x) = 2x² − 8x + 10?",
+          options: ["(2, 2)", "(−2, 2)", "(4, 10)", "(2, 10)", "(−4, 2)"],
+          correctIndex: 0,
+          explanation:
+            "Scheitelpunkt-x: d = − b / (2a) = − (−8) / (2 × 2) = 8/4 = 2. Scheitelpunkt-y: e = f(2) = 2 × 4 − 8 × 2 + 10 = 8 − 16 + 10 = 2. Scheitelpunkt: (2, 2). Da a = 2 > 0 ist das ein Minimum.",
+          hints: ["d = − b/(2a) = 8/4 = 2.", "e = f(2) = 2 × 4 − 8 × 2 + 10 = ?"],
+          difficulty: 2,
+          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
+        },
+        {
+          question: "Mit Vieta: Welche Gleichung hat die Lösungen x1 = − 2 und x2 = 5?",
+          options: [
+            "x² − 3x − 10 = 0",
+            "x² + 3x − 10 = 0",
+            "x² − 3x + 10 = 0",
+            "x² + 7x − 10 = 0",
+            "x² − 7x + 10 = 0",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Summe: x1 + x2 = − 2 + 5 = 3 = − p, also p = − 3. Produkt: x1 × x2 = − 2 × 5 = − 10 = q. Gleichung: x² − 3x − 10 = 0. Probe: (x + 2)(x − 5) = x² − 3x − 10. Korrekt.",
+          hints: [
+            "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
+            "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
+          ],
+          difficulty: 2,
+          tags: ["vieta", "quadratische-gleichung", "algebra"],
+        },
+        {
+          question: "Was ergibt (Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2)?",
+          options: ["4", "Wurzel aus 8", "8", "Wurzel aus 4", "2 Wurzel aus 3"],
+          correctIndex: 0,
+          explanation:
+            "(Wurzel aus 6 + Wurzel aus 2)(Wurzel aus 6 − Wurzel aus 2) = (Wurzel aus 6)² − (Wurzel aus 2)² = 6 − 2 = 4. Dritte binomische Formel mit a = Wurzel aus 6 und b = Wurzel aus 2.",
+          hints: [
+            "(a+b)(a − b) = a² − b² mit a = Wurzel aus 6 und b = Wurzel aus 2.",
+            "(Wurzel aus 6)² = 6; (Wurzel aus 2)² = 2.",
+          ],
+          difficulty: 2,
+          tags: ["binomische-formel", "rationalisierung", "wurzel"],
+        },
+      ],
     },
 
     // === Trigonometrie ===
