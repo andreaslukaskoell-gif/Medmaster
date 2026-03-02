@@ -257,8 +257,6 @@ Je breiter die oekologische Amplitude, desto anpassungsfaehiger die Art.
       ],
       content: `## Nische vs. Lebensraum (Habitat)
 
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
 **Lebensraum (Habitat)** = der **physische Ort**, an dem eine Art vorkommt (z. B. Teichufer, Wald, Felszone). Beschreibt “wo” die Art lebt.
 
 **Oekologische Nische** = die **Gesamtheit aller abiotischen und biotischen Umweltfaktoren**, die fuer das Ueberleben und die Fortpflanzung einer Art bedeutsam sind: Temperatur, Feuchtigkeit, Nahrung, Konkurrenten, Raeuber, Parasiten, Brutplaetze usw. Beschreibt “wie” die Art lebt und welche Rolle sie im Oekosystem hat -- also nicht nur der Ort, sondern alle Bedingungen und Wechselwirkungen.
@@ -358,8 +356,6 @@ Zwei Arten mit **identischer** Nische koennen nicht dauerhaft koexistieren (Konk
       ],
       content: `## Konkurrenz: intraspezifisch und interspezifisch
 
-{{DIAGRAM:prokaryote-vs-eukaryote}}
-
 **Konkurrenz** entsteht, wenn Individuen dieselbe begrenzte Ressource benötigen.
 
 - **Intraspezifische Konkurrenz:** innerhalb **einer Art**. Besonders intensiv, weil die Nischenüberlappung vollständig ist; führt zu dichteabhängiger Regulation und logistischem Wachstum (Annäherung an K).
@@ -380,8 +376,6 @@ Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im s
 ---
 
 ## Symbioseformen: Wer profitiert, wer verliert?
-
-{{DIAGRAM:immune-response}}
 
 Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifiziert (Vorzeichen: + Nutzen, − Schaden, 0 unbeeinflusst):
 
@@ -506,8 +500,6 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
       ],
       content: `## Ökosystem-Ebenen und Trophiestruktur
 
-{{DIAGRAM:plant-vs-animal-cell}}
-
 Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eines Gebiets und ihre Wechselwirkungen mit der abiotischen Umwelt (Biotop). Ökosysteme sind offen für Energie- und Materieflüsse.
 
 **Trophieebenen (Ernährungsebenen):**
@@ -555,8 +547,6 @@ NPP variiert stark zwischen Ökosystemen: Tropische Regenwälder und Ästuarien 
 ---
 
 ## Biogeochemische Kreisläufe
-
-{{DIAGRAM:double-membrane-organelles}}
 
 Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und abiotischen Komponenten.
 
@@ -741,8 +731,6 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
       ],
       content: `## Sukzession: Primär und Sekundär
 
-{{DIAGRAM:cell-cycle}}
-
 **Sukzession** = die gerichtete, vorhersagbare Abfolge von Biozönosen (Lebensgemeinschaften) auf einer Fläche über die Zeit.
 
 **Primäre Sukzession:** Beginnt auf **völlig unbelebtem Substrat** ohne Boden und ohne Samenbänke — z. B. nach Gletscherrückzug, Vulkanausbruch (Lava), neuer Sandstrand. **Pionierorganismen** (Flechten, Moose, Cyanobakterien) besiedeln zuerst, verwittern Gestein und bilden Humus; danach folgen Gräser, Kräuter, Sträucher, Bäume. Langsam (Jahrzehnte bis Jahrhunderte).
@@ -775,8 +763,6 @@ Eine **Population** ist die Gesamtheit aller Individuen **einer Art** in einem d
 ---
 
 ## r-Strategen und K-Strategen
-
-{{DIAGRAM:pedigree-analysis}}
 
 Zwei grundlegende Lebensstrategien:
 
@@ -1049,8 +1035,6 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `## Antikörperdiversität — Das Grundproblem
 
-{{DIAGRAM:immune-response}}
-
 Das menschliche Immunsystem kann Antikörper gegen praktisch jede Substanz bilden — eine unvorstellbare Vielfalt von mehr als 10¹⁰ verschiedenen Antikörperspezifitäten. Das Genom enthält jedoch nur ~20.000 Gene. Wie wird diese Diversität generiert?
 
 ---
@@ -1258,8 +1242,6 @@ Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollstän
 ---
 
 ## Universeller Spender und Empfänger
-
-{{DIAGRAM:immune-response}}
 
 In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als universeller Spender (keine A-, B- oder D-Antigene auf Erythrozyten → kein Angriff durch Empfänger-Antikörper). Blutgruppe AB Rh-positiv (AB+) als universeller Empfänger (keine Anti-A oder Anti-B im Serum → kein Angriff auf Spendererythrozyten). In der modernen Transfusionsmedizin wird diese Vereinfachung vermieden — durch weitere Blutgruppensysteme (Kell, Duffy, Kidd, Lewis etc.) sind auch 0- und AB+-Blut inkompatibel möglich. Dennoch werden 0-Präparate in Notfallsituationen ohne Kreuzprobe eingesetzt. Pro Jahr werden Millionen von Transfusionen durchgeführt — AB0-Fehler durch Verwechslung sind eine vermeidbare Hauptursache schwerer Transfusionszwischenfälle.
 
