@@ -102,7 +102,7 @@ Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der gro
 
 **Um den Druck zu messen,** verwendet man Manometer. In der Medizin ist das **Quecksilber-Manometer** (Sphygmomanometer, griech. Pulsmesser) nach **Riva-Rocci** historisch bedeutend:
 
-Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geraeusche** (pulssynchrone Stroemungsgeraeusche) auskultiert (abgehoert):
+Die Manschette wird am Oberarm auf **Herzhoehe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geraeusche** (pulssynchrone Stroemungsgeraeusche beim Ablassen des Manschettendrucks) auskultiert (abgehoert):
 - **Systolischer Wert**: erstes hoerbares Klopfen (Blut presst sich durch die Stenose, d. h. Gefaessverengung)
 - **Diastolischer Wert**: Verschwinden der Geraeusche (freier Blutfluss)
 
@@ -295,8 +295,8 @@ Typische Werte:
 - Surfactant-Loesung: sigma ca. 0,025 N/m (stark erniedrigt!)
 
 **Kapillaritaet:** In engen Roehren (Kapillaren) steigt oder sinkt die Fluessigkeit je nach dem Verhaeltnis von Adhaesions- (Fluid-Wand) zu Kohaesionskraeften (Fluid-Fluid):
-- **Adhaesion > Kohaesion** -> konkaver Meniskus (nach innen gewoelbte Fluessigkeitsoberflaeche) -> Fluessigkeit steigt (Wasser in Glasroehre)
-- **Kohaesion > Adhaesion** -> konvexer Meniskus -> Fluessigkeit sinkt (Quecksilber in Glasroehre)
+- **Adhaesion > Kohaesion** -> konkaver Meniskus (nach innen gewoelbte Fluessigkeitsoberflaeche, d. h. Randbereich hoeher) -> Fluessigkeit steigt (Wasser in Glasroehre)
+- **Kohaesion > Adhaesion** -> konvexer Meniskus (nach aussen gewoelbte Oberflaeche) -> Fluessigkeit sinkt (Quecksilber in Glasroehre)
 
 > **Merke:** Oberflaechenspannung sigma = F/l entsteht durch unausgeglichene Kohaesionskraefte an der Oberflaeche. Kapillaritaet: Adhaesion > Kohaesion -> Steigen; Kohaesion > Adhaesion -> Sinken.
 
@@ -515,11 +515,7 @@ Die drei Terme:
 **Venturi-Effekt:** Fliesst ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuitaet) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstaeuber).
 
 **Rechenbeispiel -- Druckabfall an einer Stenose:**
-Ausgangszustand in der Aorta: v1 = 0,3 m/s, p1 = 100 mmHg ca. 13 330 Pa. An der Stenose: v2 = 0,9 m/s (aus dem Kontinuitaetsbeispiel). Gleiche Hoehe (h1 = h2):
-
-p2 = p1 + 0,5*rho*(v1-2 - v2-2) = 13 330 + 0,5 * 1060 * (0,09 - 0,81) = 13 330 + 530 * (-0,72) = 13 330 - 382 ca. **12 948 Pa ca. 97 mmHg**
-
-Der statische Druck sinkt um ca. **3 mmHg** an der Stenose. Bei staerkerer Stenose (z. B. v2 = 3 m/s) waere der Druckabfall erheblich groesser.
+Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigkeit). Da v steigt, sinkt p (Bernoulli). Ergebnis: p2 ca. **97 mmHg** -- der statische Druck sinkt um ca. **3 mmHg**. Bei staerkerer Stenose (v2 = 3 m/s) waere der Druckabfall erheblich groesser.
 
 > **Merke:** Bernoulli: p + 0,5*rho*v2 + rho*g*h = const. Hoehere Geschwindigkeit -> niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck 0,5*rho*v2 beschreibt die kinetische Energie des Fluids pro Volumen.
 
@@ -749,7 +745,7 @@ Die **kinematische Viskosität ν** (nü) = η/ρ (Einheit: m²/s) — tritt in 
 - **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze). Beispiel: Zahnpasta.
 
 **Blut als nicht-Newtonsches Fluid:**
-Vollblut ist **scherverdünnend**: Bei niedriger Scherrate (langsame Strömung) bilden die Erythrozyten sogenannte **Geldrollenaggregate** (Rouleaux) → hohe Viskosität. Bei hoher Scherrate (schnelle Strömung) richten sich die Erythrozyten aus und deformieren sich → niedrigere Viskosität.
+Vollblut ist **scherverdünnend**: Bei niedriger Scherrate (langsame Strömung) bilden die Erythrozyten sogenannte **Geldrollenaggregate** (Rouleaux, münzenförmige Stapel von Erythrozyten) → hohe Viskosität. Bei hoher Scherrate (schnelle Strömung) richten sich die Erythrozyten aus und deformieren sich → niedrigere Viskosität.
 
 > **Merke:** Newtonsche Fluide: η = const (Wasser, Plasma). Nicht-Newtonsche: η hängt von der Scherrate ab. Blut ist scherverdünnend: schnelle Strömung → niedrigere Viskosität (Erythrozyten richten sich aus).
 
@@ -804,7 +800,7 @@ Die Analogie zum Ohmschen Gesetz ist vollständig:
 **Reihen- und Parallelschaltung:** Bei hintereinander geschalteten Gefäßen addieren sich die Widerstände: R_gesamt = R₁ + R₂ + ... Bei parallelen Gefäßen: 1/R_gesamt = 1/R₁ + 1/R₂ + ...
 
 **Klinisch — Totaler peripherer Widerstand (TPR):**
-Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** (kleinste Arterien) bestimmt (kleine r → großes R). Vasokonstriktion (Gefaessverengung, r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (r↑) senkt den TPR → Blutdruck sinkt.
+Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächlich durch die **Arteriolen** (kleinste Arterien) bestimmt (kleine r → großes R). Vasokonstriktion (Gefaessverengung, r↓) erhöht den TPR → Blutdruck steigt. Vasodilatation (Gefaesserweiterung, r↑) senkt den TPR → Blutdruck sinkt.
 
 > **Merke:** Strömungswiderstand R = 8ηL/(πr⁴) — analog zum Ohmschen Gesetz: Δp = R·Q. Arteriolen bestimmen den TPR. Vasokonstriktion → R↑ → Blutdruck↑.
 
@@ -832,7 +828,7 @@ Für eine schnellere Infusion gibt es vier Stellschrauben:
 1. **Größere Kanüle** (r↑): r⁴-Effekt! Eine 14G-Kanüle (r = 0,8 mm) liefert 16× mehr Fluss als eine 20G-Kanüle (r = 0,4 mm)
 2. **Höherer Druck** (Δp↑): Infusionsbeutel höher hängen oder Druckinfusor
 3. **Kürzere Leitung** (L↓): z. B. kürzere Kanüle
-4. **Niedrigere Viskosität** (η↓): kristalloide (NaCl) fließen schneller als kolloide Lösungen oder Blutkonserven
+4. **Niedrigere Viskosität** (η↓): kristalloide (salzhaltige Loesungen wie NaCl) fließen schneller als kolloide Lösungen (eiweisshaltige Loesungen) oder Blutkonserven
 
 **Rechenbeispiel:**
 Infusion durch eine 18G-Kanüle (r = 0,6 mm = 6 × 10⁻⁴ m, L = 5 cm = 0,05 m), Δp = 10 kPa, η_NaCl ≈ 10⁻³ Pa·s:

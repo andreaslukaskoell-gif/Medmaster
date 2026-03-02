@@ -1307,7 +1307,7 @@ Die Translation benoetigt: **mRNA** (Vorlage), **Ribosomen** (Uebersetzungsmasch
 
 3. **Termination:** Wenn ein **Stoppcodon** (UAA, UAG, UGA) erreicht wird, bindet ein **Release-Faktor** (kein tRNA). Die Polypeptidkette wird freigesetzt, das Ribosom zerfaellt in seine Untereinheiten.
 
-**Nach der Translation:** Das Polypeptid faltet sich in seine dreidimensionale **Tertiaestruktur** (mithilfe von Chaperonen). Ggf. posttranslationale Modifikationen (Glykosylierung, Phosphorylierung) im ER und Golgi-Apparat. Erst das korrekt gefaltete Protein ist funktionsfaehig.
+**Nach der Translation:** Das Polypeptid faltet sich in seine dreidimensionale **Tertiaestruktur** (mithilfe von Chaperonen (Faltungshelfern)). Ggf. posttranslationale Modifikationen (Glykosylierung, Phosphorylierung) im ER und Golgi-Apparat. Erst das korrekt gefaltete Protein ist funktionsfaehig.
 
 **Polyribosomen (Polysomen):** Mehrere Ribosomen koennen gleichzeitig dieselbe mRNA ablesen → effiziente Proteinproduktion.
 
@@ -1649,7 +1649,7 @@ Bei der **DNA-Methylierung** wird eine **Methylgruppe (-CH₃)** an die Base **C
 ## Histonmodifikation
 
 
-Die DNA ist um **Histonproteine** gewickelt (Nukleosomen). Histone haben „Schwänze" (N-terminale Enden), die aus dem Nukleosom herausragen. An diesen Schwänzen können verschiedene **chemische Gruppen** angehängt werden:
+Die DNA ist um **Histonproteine** gewickelt (Nukleosomen (DNA-Histon-Verpackungseinheiten)). Histone haben „Schwänze" (N-terminale Enden), die aus dem Nukleosom herausragen. An diesen Schwänzen können verschiedene **chemische Gruppen** angehängt werden:
 
 | Modifikation | Effekt | Enzym |
 |-------------|--------|-------|

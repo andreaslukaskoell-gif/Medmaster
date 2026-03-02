@@ -80,9 +80,9 @@ Sekretionsmechanismen exokriner Drüsen:
 | **Apokrin** | Abschnürung des apikalen Zellpols | Laktierende Brustdrüse, apokriner Schweiß (Axilla) |
 | **Holokrin** | Gesamte Zelle zerfällt und wird zum Sekret | **Talgdrüsen** (Glandulae sebaceae) |
 
-**Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (schleimbildendes Glykoprotein) (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
+**Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (Schleimprotein) (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
 
-**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schlimtransport → chronische Bronchitis, Bronchiektasen (dauerhafte Erweiterung der Bronchien), Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
+**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schleimtransport → chronische Bronchitis, Bronchiektasen (dauerhafte Erweiterung der Bronchien), Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
 
 > **Merke:** Merokrin = Exozytose (häufig); apokrin = Zellspitze abgeschnürt; holokrin = ganze Zelle = Sekret (Talgdrüse). Kartagener: Dynein-Defekt → Zilien bewegungslos.`,
       lernziele: [
@@ -219,8 +219,8 @@ Sekretionsmechanismen exokriner Drüsen:
 
 1. **Kollagenfasern** (strukturelle Festigkeit — Zugfestigkeit und Druckresistenz)
 2. **Elastinfasern** (Elastizität, Rückkehr in Ausgangsform)
-3. **Proteoglykane** (Hyaluronsäure, Chondroitinsulfat, Heparansulfat): negativ geladen → binden Wasser → verleihen Druckresistenz. Beispiel: Aggrecan (Hauptproteoglykan des Knorpels) im Knorpel.
-4. **Glykoproteine** (Fibronektin, Laminin): verknüpfen Zellen über **Integrine** (Adhäsionsrezeptoren) mit der Matrix → Zelladhäsion, Wundheilung, Migration
+3. **Proteoglykane** (Hyaluronsäure, Chondroitinsulfat (Zuckerprotein-Verbindungen), Heparansulfat): negativ geladen → binden Wasser → verleihen Druckresistenz. Beispiel: Aggrecan (Hauptproteoglykan des Knorpels) im Knorpel.
+4. **Glykoproteine** (Fibronektin (Haftprotein der Matrix), Laminin): verknüpfen Zellen über **Integrine** (Adhäsionsrezeptoren) mit der Matrix → Zelladhäsion, Wundheilung, Migration
 
 **Zellen des Bindegewebes:**
 - **Fibroblasten**: Hauptproduzenten der EZM in lockerem/straffem Bindegewebe
@@ -259,7 +259,7 @@ Sekretionsmechanismen exokriner Drüsen:
 |---|---|---|---|
 | **Osteoblast** | Mesenchym (Stroma) | Baut Osteoid (unmineralisierte Knochengrundsubstanz) auf, mineralisiert | ALP (alkalische Phosphatase) ↑, Osteocalcin |
 | **Osteozyten** | Eingemauerter Osteoblast | Mechanorezeption, Signalgebung über Canaliculi | — |
-| **Osteoklasten** | Hämatopoetisch (Monozyten/Makrophagen) | Resorbiert Knochen über HCl (pH ~4,5) + Kathepsin K (kollagenabbauendes Enzym) an Ruffled Border (Faltensaum) | TRAP (tartratresistente saure Phosphatase) ↑ |
+| **Osteoklasten** | Hämatopoetisch (Monozyten/Makrophagen) | Resorbiert Knochen über HCl (pH ~4,5) + Kathepsin K (kollagenabbauendes Enzym) an Ruffled Border (spezialisierter Faltensaum) | TRAP (tartratresistente saure Phosphatase) ↑ |
 
 **Regulation — RANKL/OPG-System:**
 - Osteoblasten sezernieren **RANKL** → bindet an RANK auf Osteoklasten → aktiviert Resorption
@@ -283,7 +283,7 @@ Sekretionsmechanismen exokriner Drüsen:
 | **Faser** | Kollagen I dominiert | Zugfest UND druckresistent | Bandscheiben (Anulus fibrosus), Menisci (Gelenkzwischenscheiben), Symphysis pubica (Schambeinfuge) |
 | **Elastisch** | Kollagen II + **Elastinfasern** | Biegsam, kehrt zurück | Ohrmuschel, Epiglottis, Auricula |
 
-**Klinisch:** Arthrose (Gelenkverschleiß) = Degeneration des Hyalinknorpels der Gelenke → da avaskulär, kaum Selbstheilung → Gelenkersatz. Bandscheibenvorfall = Prolaps des Nucleus pulposus (gallertartiger Kern aus Proteoglykanen) durch den Faserknorpel-Anulus.
+**Klinisch:** Arthrose (Gelenkverschleiß) = Degeneration des Hyalinknorpels der Gelenke → da avaskulär, kaum Selbstheilung → Gelenkersatz. Bandscheibenvorfall = Prolaps (Austritt) des Nucleus pulposus (gallertartiger Kern aus Proteoglykanen) durch den Faserknorpel-Anulus.
 
 > **Merke:** Hyalin = Gelenk (Kollagen II). Faser = Bandscheibe/Meniskus (Kollagen I). Elastisch = Ohr/Epiglottis. Alle avaskulär = schlechte Heilung!
 
@@ -297,12 +297,12 @@ Sekretionsmechanismen exokriner Drüsen:
 - Energiespeicher (~80 % des Körperfetts), Schutzpolster (perirenal, retroorbital), Isolation
 - **Endokrines Organ**: sezerniert Adipokine (Fettgewebshormone):
   - **Leptin** → Sättigungssignal an Hypothalamus (Hunger hemmen)
-  - **Adiponektin** (Schutzhormon des Fettgewebes) → insulinsensibilisierend, antiinflammatorisch (↓ bei Adipositas!)
+  - **Adiponektin** (schützendes Fettzellhormon) → insulinsensibilisierend, antiinflammatorisch (↓ bei Adipositas!)
   - **TNF-α** → proinflammatorisch (↑ bei Adipositas → chronische Inflammation → Insulinresistenz)
 
 **Braunes Fettgewebe** (multivakuolär):
 - Viele kleine Lipidtropfen + viele Mitochondrien (daher braun)
-- **UCP-1 (Thermogenin)**: Entkoppelt oxidative Phosphorylierung → Protonen fließen zurück ohne ATP zu machen → Energie als **Wärme** (Thermogenese)
+- **UCP-1 (Thermogenin, Entkopplungsprotein)**: Entkoppelt oxidative Phosphorylierung → Protonen fließen zurück ohne ATP zu machen → Energie als **Wärme** (Thermogenese)
 - Wichtig bei Neugeborenen (interscapulär (zwischen den Schulterblättern)) → nimmt mit Alter ab
 
 > **Merke:** Weißes Fett = Energiespeicher + Leptin (endokrin). Braunes Fett = Thermogenese via UCP-1 (entkoppelt Atmungskette).`,
@@ -449,7 +449,7 @@ Sekretionsmechanismen exokriner Drüsen:
 | Kerne | Mehrkernig (peripher) | **1-2 (zentral)** | Einkernig (zentral) |
 | Kopplung | NMJ (neuromuskuläre Junktion, ACh, Nikotin-R.) | **Gap Junctions** (Glanzstreifen) | Gap Junctions |
 | Ca2+-Schalter | **Troponin C** | **Troponin C** | **Calmodulin -> MLCK** |
-| Tetanus | Moeglich | **Unmoeglich** (lange Refraktaerzeit) | Tonisch moeglich |
+| Tetanus (Dauerkontraktion) | Moeglich | **Unmoeglich** (lange Refraktaerzeit (Unerregbarkeitsphase)) | Tonisch moeglich |
 | Biomarker | CK-MM | **Troponin I/T**, CK-MB | -- |
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
@@ -483,7 +483,7 @@ Sekretionsmechanismen exokriner Drüsen:
 
 **Aktivierung -- Schritt fuer Schritt:**
 1. Aktionspotential erreicht das T-Tubulus-System
-2. Spannungsgesteuerte Rezeptoren (DHPR) aktivieren **Ryanodin-Rezeptoren (RyR1)** im sarkoplasmatischen Retikulum (SR)
+2. Spannungsgesteuerte Rezeptoren (DHPR (Dihydropyridin-Rezeptor)) aktivieren **Ryanodin-Rezeptoren (RyR1)** (Ca²⁺-Freisetzungskanäle) im sarkoplasmatischen Retikulum (SR (intrazellulärer Ca²⁺-Speicher))
 3. **Ca2+ stroemt aus SR** ins Zytosol (0,1 uM -> ~10 uM)
 4. Ca2+ bindet **Troponin C** -> Konformationsaenderung des Troponin-Komplexes
 5. **Tropomyosin verschiebt sich** -> Myosin-Bindungsstellen auf Aktin freigegeben

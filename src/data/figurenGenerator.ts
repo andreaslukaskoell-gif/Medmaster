@@ -560,7 +560,150 @@ function quantizedAngleForLevel(level: FZDifficultyLevel, rand: () => number): n
   return Math.floor(rand() * 24) * (PI / 12);
 }
 
-/** Split polygon from centroid → vertices into numPieces sectors */
+// ─── Asymmetric Cut System (Pt-Tupel) ────────────────────────────────
+// Authentisch aussehende Schnitte: beliebige gerade Linie durch Polygon.
+
+/** Schnittpunkt Kante (p1→p2) mit Linie (lA→lB). Gibt t ∈ [0,1] oder null. */
+function lineSegIntersectPt(p1: Pt, p2: Pt, lA: Pt, lB: Pt): { point: Pt; t: number } | null {
+  const dx = p2[0] - p1[0],
+    dy = p2[1] - p1[1];
+  const lx = lB[0] - lA[0],
+    ly = lB[1] - lA[1];
+  const denom = dx * ly - dy * lx;
+  if (Math.abs(denom) < 1e-10) return null;
+  const t = ((lA[0] - p1[0]) * ly - (lA[1] - p1[1]) * lx) / denom;
+  if (t < -1e-8 || t > 1 + 1e-8) return null;
+  const tc = Math.max(0, Math.min(1, t));
+  return { point: [rd(p1[0] + tc * dx), rd(p1[1] + tc * dy)], t: tc };
+}
+
+/** Teilt Pt[]-Polygon entlang Linie in zwei Hälften. */
+function splitPolyByLine(pts: Pt[], lA: Pt, lB: Pt): [Pt[], Pt[]] | null {
+  const n = pts.length;
+  const hits: { edgeIdx: number; point: Pt; t: number }[] = [];
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    const hit = lineSegIntersectPt(pts[i], pts[j], lA, lB);
+    if (hit) {
+      if (hits.length > 0) {
+        const last = hits[hits.length - 1]!;
+        if (Math.hypot(hit.point[0] - last.point[0], hit.point[1] - last.point[1]) < 0.5) continue;
+      }
+      hits.push({ edgeIdx: i, point: hit.point, t: hit.t });
+    }
+  }
+  if (hits.length !== 2) return null;
+  const [h0, h1] = [hits[0]!, hits[1]!];
+  const sideA: Pt[] = [h0.point];
+  const sideB: Pt[] = [h1.point];
+  let i = (h0.edgeIdx + 1) % n;
+  const endA = (h1.edgeIdx + 1) % n;
+  while (i !== endA) {
+    sideA.push([...pts[i]]);
+    i = (i + 1) % n;
+  }
+  sideA.push(h1.point);
+  i = (h1.edgeIdx + 1) % n;
+  const endB = (h0.edgeIdx + 1) % n;
+  while (i !== endB) {
+    sideB.push([...pts[i]]);
+    i = (i + 1) % n;
+  }
+  sideB.push(h0.point);
+  if (sideA.length < 3 || sideB.length < 3) return null;
+  return [sideA, sideB];
+}
+
+/** BBox of Pt[] polygon. */
+function ptsBBox(pts: Pt[]): { w: number; h: number; diag: number } {
+  let x0 = Infinity,
+    x1 = -Infinity,
+    y0 = Infinity,
+    y1 = -Infinity;
+  for (const [x, y] of pts) {
+    x0 = Math.min(x0, x);
+    x1 = Math.max(x1, x);
+    y0 = Math.min(y0, y);
+    y1 = Math.max(y1, y);
+  }
+  return { w: x1 - x0, h: y1 - y0, diag: Math.hypot(x1 - x0, y1 - y0) };
+}
+
+/** Asymmetrischer Schnitt durch Pt[]-Polygon. */
+function genAsymCutPt(pts: Pt[], rng: () => number): [Pt, Pt] | null {
+  const n = pts.length;
+  if (n < 3) return null;
+  for (let att = 0; att < 15; att++) {
+    const e1 = Math.floor(rng() * n);
+    const minGap = Math.max(2, Math.floor(n / 3));
+    const e2 = (e1 + minGap + Math.floor(rng() * Math.max(1, n - 2 * minGap))) % n;
+    if (e2 === e1 || e2 === (e1 + 1) % n || e1 === (e2 + 1) % n) continue;
+    const tRanges: [number, number][] = [
+      [0.2, 0.45],
+      [0.55, 0.8],
+    ];
+    const pickT = () => {
+      const r = tRanges[Math.floor(rng() * tRanges.length)]!;
+      return r[0] + rng() * (r[1] - r[0]);
+    };
+    const t1 = pickT(),
+      t2 = pickT();
+    const p1: Pt = [
+      rd(pts[e1][0] + t1 * (pts[(e1 + 1) % n][0] - pts[e1][0])),
+      rd(pts[e1][1] + t1 * (pts[(e1 + 1) % n][1] - pts[e1][1])),
+    ];
+    const p2: Pt = [
+      rd(pts[e2][0] + t2 * (pts[(e2 + 1) % n][0] - pts[e2][0])),
+      rd(pts[e2][1] + t2 * (pts[(e2 + 1) % n][1] - pts[e2][1])),
+    ];
+    const c = centroid(pts);
+    const lineLen = Math.hypot(p2[0] - p1[0], p2[1] - p1[1]);
+    if (lineLen < 1) continue;
+    const dist =
+      Math.abs((p2[0] - p1[0]) * (p1[1] - c[1]) - (p1[0] - c[0]) * (p2[1] - p1[1])) / lineLen;
+    if (dist < ptsBBox(pts).diag * 0.15) continue;
+    return [p1, p2];
+  }
+  return null;
+}
+
+/** Mehrere asymmetrische Schnitte auf Pt[][]. */
+function applyAsymCutsPt(targetPts: Pt[], numCuts: number, rng: () => number): Pt[][] | null {
+  let pieces: Pt[][] = [targetPts.map((p) => [...p] as Pt)];
+  const totalArea = polygonArea(targetPts);
+  const minArea = totalArea * 0.05;
+  for (let c = 0; c < numCuts; c++) {
+    let maxIdx = 0,
+      maxA = 0;
+    for (let i = 0; i < pieces.length; i++) {
+      const a = polygonArea(pieces[i]);
+      if (a > maxA) {
+        maxA = a;
+        maxIdx = i;
+      }
+    }
+    const cut = genAsymCutPt(pieces[maxIdx], rng);
+    if (!cut) return null;
+    const res = splitPolyByLine(pieces[maxIdx], cut[0], cut[1]);
+    if (!res) continue;
+    if (polygonArea(res[0]) < minArea || polygonArea(res[1]) < minArea) continue;
+    pieces.splice(maxIdx, 1, res[0], res[1]);
+  }
+  if (pieces.length < 2) return null;
+  if (pieces.length === 2) {
+    const r =
+      Math.min(polygonArea(pieces[0]), polygonArea(pieces[1])) /
+      Math.max(polygonArea(pieces[0]), polygonArea(pieces[1]));
+    if (r > 0.85) return null;
+  }
+  if (pieces.length >= 3) {
+    const areas = pieces.map((p) => polygonArea(p));
+    if (Math.min(...areas) > 0 && Math.max(...areas) / Math.min(...areas) < 1.5) return null;
+  }
+  return pieces;
+}
+
+/** Split polygon from centroid → vertices into numPieces sectors (legacy fallback) */
 function splitPoly(verts: Pt[], numPieces: number, rand: () => number): Pt[][] {
   const sides = verts.length;
   const c = centroid(verts);
@@ -674,8 +817,15 @@ function makePieces(
 ): { display: string[]; assembly: string[] } {
   const rand = createRng(seed);
 
+  // Try asymmetric cuts first (authentic look), fall back to legacy splits
   let rawPieces: Pt[][];
-  if (POLY_SIDES[fig]) {
+  const targetVerts = getTargetVerts(fig);
+  const numCuts = Math.max(1, numPieces - 1);
+  const asymResult = !isCircleFig(fig) ? applyAsymCutsPt(targetVerts, numCuts, rand) : null;
+
+  if (asymResult && asymResult.length >= numPieces) {
+    rawPieces = asymResult.slice(0, numPieces);
+  } else if (POLY_SIDES[fig]) {
     rawPieces = splitPoly(polygonPts(CX, CY, R, POLY_SIDES[fig]!), numPieces, rand);
   } else if (fig === "raute" || fig === "parallelogramm" || fig === "trapez") {
     rawPieces = splitPoly(quadVerts(fig), numPieces, rand);

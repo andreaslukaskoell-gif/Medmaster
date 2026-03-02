@@ -308,7 +308,7 @@ Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von B
 ## Ribosomen 70S vs. 80S: Grundlage der Antibiotikatherapie
 
 
-Prokaryotische Ribosomen haben den **Sedimentationskoeffizienten 70S** (30S + 50S), eukaryotische **80S** (40S + 60S) — die Zahl beschreibt, wie schnell die Partikel in der Ultrazentrifuge sedimentieren. Wegen dieser **strukturellen Unterschiede** binden bestimmte Antibiotika nur an 70S-Ribosomen und hemmen so gezielt die bakterielle Proteinbiosynthese:
+Prokaryotische Ribosomen haben den **Sedimentationskoeffizienten** (Maß der Sinkgeschwindigkeit) **70S** (30S + 50S), eukaryotische **80S** (40S + 60S) — die Zahl beschreibt, wie schnell die Partikel in der **Ultrazentrifuge** (Hochgeschwindigkeitszentrifuge zur Trennung) sedimentieren. Wegen dieser **strukturellen Unterschiede** binden bestimmte Antibiotika nur an 70S-Ribosomen und hemmen so gezielt die bakterielle Proteinbiosynthese:
 
 | Antibiotikum | Zielstruktur | Wirkung |
 |---|---|---|
@@ -352,8 +352,8 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
 
 **Archäen sind Prokaryoten** (kein membranumschlossener Kern), aber biochemisch eigenständig:
 - **Keine Peptidoglykan-Zellwand** → **Penicillin-resistent** (wichtig!)
-- **Ether-Lipide** statt Ester-Lipide in Zellmembran (stabiler in Extrembedingungen)
-- Genexpressionsapparat ähnelt Eukaryoten (TATA-Box, Transkriptionsfaktoren)
+- **Ether-Lipide** (Lipide mit Etherbindung statt Esterbindung) statt Ester-Lipide in Zellmembran (stabiler in Extrembedingungen)
+- Genexpressionsapparat ähnelt Eukaryoten (**TATA-Box** (Promotorsequenz für Transkriptionsstart), Transkriptionsfaktoren)
 
 **Extremophile** (Organismen in Extremlebensräumen)**:** Thermophile (hitzeliebend, bis 121°C), Halophile (salzliebend, gesättigte Salzlösungen), Methanogene (methanbildend, produzieren CH₄ im Darm und Sumpf)
 
@@ -899,8 +899,8 @@ Proteine, die fuer Membranen, Lysosomen oder die Sekretion (Hormone, Antikoerper
 **1. Raues ER (rER) -- Proteinfabrik:**
 - Mit Ribosomen besetzt → Co-translationale Proteinsynthese
 - **N-Glykosylierung**: Zuckerketten werden an Asparagin-Reste angehaengt (Qualitaetsmerkmal)
-- **Qualitaetskontrolle**: Chaperone (Calnexin, Calreticulin) ueberpruefen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
-- **ER-Stress**: Bei Ueberflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR) → bei Ueberlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in Beta-Zellen)
+- **Qualitaetskontrolle**: Chaperone (Faltungshelfer-Proteine; Calnexin, Calreticulin) ueberpruefen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
+- **ER-Stress**: Bei Ueberflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR, Stressantwort auf fehlgefaltete Proteine) → bei Ueberlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in Beta-Zellen)
 
 **2. Glattes ER (gER) -- Lipidsynthese und Entgiftung:**
 - Ohne Ribosomen

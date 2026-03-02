@@ -1129,12 +1129,13 @@ function buildDistractors(
   shuffleArray(sameFamily, rng);
 
   // 2. Formen aus benachbarter Familie (quads↔polygons, circles↔lshape)
+  // Rund bleibt bei rund, eckig bei eckig — kein Mischen.
   const neighborMap: Record<string, string[]> = {
-    circles: ["lshape", "quads"],
-    quads: ["polygons", "triangle"],
-    polygons: ["quads", "triangle"],
-    triangle: ["quads", "polygons"],
-    lshape: ["quads", "circles"],
+    circles: [],
+    quads: ["polygons", "triangle", "lshape"],
+    polygons: ["quads", "triangle", "lshape"],
+    triangle: ["quads", "polygons", "lshape"],
+    lshape: ["quads", "polygons", "triangle"],
   };
   const neighborFamilies = neighborMap[family] ?? [];
   const neighbors: Polygon[] = [];
@@ -1175,28 +1176,233 @@ function createRng(seed: number): () => number {
   };
 }
 
+// =============================================================================
+// ASYMMETRIC CUT SYSTEM – authentisch aussehende Schnitte (wie IB_FZ_26.pdf)
+// =============================================================================
+
+type Pt2 = { x: number; y: number };
+
+/** Schnittpunkt einer Kante (p1→p2) mit einer unendlichen Linie (lA→lB). Gibt t ∈ [0,1] zurück oder null. */
+function lineSegmentIntersection(
+  p1: Pt2,
+  p2: Pt2,
+  lA: Pt2,
+  lB: Pt2
+): { point: Pt2; t: number } | null {
+  const dx = p2.x - p1.x,
+    dy = p2.y - p1.y;
+  const lx = lB.x - lA.x,
+    ly = lB.y - lA.y;
+  const denom = dx * ly - dy * lx;
+  if (Math.abs(denom) < 1e-10) return null; // parallel
+  const t = ((lA.x - p1.x) * ly - (lA.y - p1.y) * lx) / denom;
+  if (t < -1e-8 || t > 1 + 1e-8) return null; // outside segment
+  const tClamped = Math.max(0, Math.min(1, t));
+  return {
+    point: { x: rd(p1.x + tClamped * dx), y: rd(p1.y + tClamped * dy) },
+    t: tClamped,
+  };
+}
+
+/** Teilt ein Polygon entlang einer Linie (lA→lB) in zwei Hälften. Gibt null zurück bei ungültiger Geometrie. */
+function splitPolygonByLine(poly: Polygon, lA: Pt2, lB: Pt2): [Polygon, Polygon] | null {
+  const pts = poly.points;
+  const n = pts.length;
+  // Find exactly 2 intersection points with polygon edges
+  const hits: { edgeIdx: number; point: Pt2; t: number }[] = [];
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    const hit = lineSegmentIntersection(pts[i], pts[j], lA, lB);
+    if (hit) {
+      // Avoid duplicate hits at shared vertices (t≈0 means start of next edge)
+      if (hits.length > 0) {
+        const last = hits[hits.length - 1]!;
+        const dx = hit.point.x - last.point.x;
+        const dy = hit.point.y - last.point.y;
+        if (Math.hypot(dx, dy) < 0.5) continue;
+      }
+      hits.push({ edgeIdx: i, point: hit.point, t: hit.t });
+    }
+  }
+  if (hits.length !== 2) return null; // concave or tangent → reject
+
+  const [h0, h1] = [hits[0]!, hits[1]!];
+  // Build two sub-polygons by walking the edges
+  const sideA: Pt2[] = [h0.point];
+  const sideB: Pt2[] = [h1.point];
+
+  // Walk from h0 to h1 (forward)
+  let i = (h0.edgeIdx + 1) % n;
+  const endA = (h1.edgeIdx + 1) % n;
+  while (i !== endA) {
+    sideA.push({ ...pts[i] });
+    i = (i + 1) % n;
+  }
+  sideA.push(h1.point);
+
+  // Walk from h1 to h0 (forward)
+  i = (h1.edgeIdx + 1) % n;
+  const endB = (h0.edgeIdx + 1) % n;
+  while (i !== endB) {
+    sideB.push({ ...pts[i] });
+    i = (i + 1) % n;
+  }
+  sideB.push(h0.point);
+
+  if (sideA.length < 3 || sideB.length < 3) return null;
+  return [{ points: sideA }, { points: sideB }];
+}
+
+/** Erzeugt eine asymmetrische Schnittlinie durch das Polygon: 2 nicht-benachbarte Kanten, off-center t-Werte. */
+function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | null {
+  const n = poly.points.length;
+  if (n < 3) return null;
+
+  for (let attempt = 0; attempt < 15; attempt++) {
+    // Pick first edge
+    const e1 = Math.floor(rng() * n);
+    // Pick second edge: must not be adjacent
+    const minGap = Math.max(2, Math.floor(n / 3));
+    const e2raw = e1 + minGap + Math.floor(rng() * Math.max(1, n - 2 * minGap));
+    const e2 = e2raw % n;
+    if (e2 === e1 || e2 === (e1 + 1) % n || e1 === (e2 + 1) % n) continue;
+
+    // t-values: avoid 0, 0.5, 1 (corners & midpoints look computer-generated)
+    const tRanges: [number, number][] = [
+      [0.2, 0.45],
+      [0.55, 0.8],
+    ];
+    const pickT = () => {
+      const range = tRanges[Math.floor(rng() * tRanges.length)]!;
+      return range[0] + rng() * (range[1] - range[0]);
+    };
+    const t1 = pickT();
+    const t2 = pickT();
+
+    const pts = poly.points;
+    const p1: Pt2 = {
+      x: rd(pts[e1].x + t1 * (pts[(e1 + 1) % n].x - pts[e1].x)),
+      y: rd(pts[e1].y + t1 * (pts[(e1 + 1) % n].y - pts[e1].y)),
+    };
+    const p2: Pt2 = {
+      x: rd(pts[e2].x + t2 * (pts[(e2 + 1) % n].x - pts[e2].x)),
+      y: rd(pts[e2].y + t2 * (pts[(e2 + 1) % n].y - pts[e2].y)),
+    };
+
+    // Reject if line passes through centroid (>15% distance from center)
+    const c = centroid(poly);
+    const lineLen = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+    if (lineLen < 1) continue;
+    const dist = Math.abs((p2.x - p1.x) * (p1.y - c.y) - (p1.x - c.x) * (p2.y - p1.y)) / lineLen;
+    const bbox = polygonBBox(poly);
+    const diagLen = Math.hypot(bbox.width, bbox.height);
+    if (dist < diagLen * 0.15) continue; // too centered
+
+    return [p1, p2];
+  }
+  return null;
+}
+
+/** Mehrere asymmetrische Schnitte nacheinander: Immer das größte Stück schneiden. */
+function applyAsymmetricCuts(
+  target: Polygon,
+  numCuts: number,
+  rng: () => number
+): Polygon[] | null {
+  let pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
+  const targetArea = polygonArea(target);
+  const minPieceArea = targetArea * 0.05; // min 5% per piece
+
+  for (let cut = 0; cut < numCuts; cut++) {
+    // Find largest piece
+    let maxIdx = 0,
+      maxArea = 0;
+    for (let i = 0; i < pieces.length; i++) {
+      const a = polygonArea(pieces[i]);
+      if (a > maxArea) {
+        maxArea = a;
+        maxIdx = i;
+      }
+    }
+    const largest = pieces[maxIdx];
+    const cutLine = generateAsymmetricCut(largest, rng);
+    if (!cutLine) return null;
+
+    const result = splitPolygonByLine(largest, cutLine[0], cutLine[1]);
+    if (!result) continue; // skip this cut, try next
+
+    const [a, b] = result;
+    if (polygonArea(a) < minPieceArea || polygonArea(b) < minPieceArea) continue;
+
+    pieces.splice(maxIdx, 1, a, b);
+  }
+
+  // Validate: we need at least the expected number of pieces
+  if (pieces.length < 2) return null;
+
+  // Authenticity check: reject if pieces are too equally sized (45-55% split for 2 pieces)
+  if (pieces.length === 2) {
+    const a1 = polygonArea(pieces[0]);
+    const a2 = polygonArea(pieces[1]);
+    const ratio = Math.min(a1, a2) / Math.max(a1, a2);
+    if (ratio > 0.85) return null; // too symmetric
+  }
+
+  // For medium/hard: largest piece should be >= 1.5× smallest
+  if (pieces.length >= 3) {
+    const areas = pieces.map((p) => polygonArea(p));
+    const maxA = Math.max(...areas);
+    const minA = Math.min(...areas);
+    if (minA > 0 && maxA / minA < 1.5) return null; // too uniform
+  }
+
+  return pieces;
+}
+
+/** Anzahl Schnitte pro Schwierigkeitsstufe. */
+function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
+  if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
+  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
+  return 3 + Math.floor(rng() * 3); // 3-5 cuts → 4-6 pieces
+}
+
 /**
  * Schneidet die Zielform strategisch (vom Ziel aus).
- * Alle 14 Formen gleich oft: Zuerst Form-Index (seed % 14), dann Schnitt für diese Form wählen.
+ * Primär: asymmetrische Schnitte (authentisch). Fallback: alte CUT_SCHEMES.
  */
 export function cutPolygonStrategically(
   difficulty: FZDifficulty,
   seed: number
 ): { target: Polygon; pieces: Polygon[] } {
+  const rng = createRng(seed);
   const shapeIndex = Math.floor(Math.abs(seed) % SOLUTION_SHAPES.length);
+  const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
+
+  // Try asymmetric cuts first (authentic look)
+  const nCuts = numCutsForDifficulty(difficulty, rng);
+  const asymPieces = applyAsymmetricCuts(target, nCuts, rng);
+  if (asymPieces && asymPieces.length >= 2) {
+    const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
+    const targetArea = polygonArea(target);
+    if (Math.abs(totalArea - targetArea) < 1e-4) {
+      return { target, pieces: asymPieces };
+    }
+  }
+
+  // Fallback: old symmetric CUT_SCHEMES
   const shapeId = SOLUTION_SHAPES[shapeIndex]!;
   const schemes = CUT_SCHEMES.filter((s) => s.diff === difficulty && s.shapeId === shapeId);
-  const fallback = CUT_SCHEMES.filter((s) => s.diff === difficulty);
-  const list = schemes.length > 0 ? schemes : fallback;
+  const fallbackSchemes = CUT_SCHEMES.filter((s) => s.diff === difficulty);
+  const list = schemes.length > 0 ? schemes : fallbackSchemes;
   if (list.length === 0) return cutSquareDiagonal();
   const rawIdx = Math.floor((Math.abs(seed) >> 4) % list.length);
   const idx = Math.min(list.length - 1, Math.max(0, rawIdx));
   const entry = list[idx];
   if (!entry?.cut) return cutSquareDiagonal();
-  const { target, pieces } = entry.cut();
+  const { target: t, pieces: p } = entry.cut();
   return {
-    target: { points: [...target.points] },
-    pieces: pieces.map((p) => ({ points: [...p.points] })),
+    target: { points: [...t.points] },
+    pieces: p.map((pp) => ({ points: [...pp.points] })),
   };
 }
 

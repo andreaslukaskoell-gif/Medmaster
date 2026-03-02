@@ -386,7 +386,7 @@ Medikament mit k = 0,0693 h⁻¹. t₁/₂ = 0,693 / 0,0693 = 10 h. Nach 10 h: 5
 
 **Rechenbeispiel — RGT:** v₂₀°C = 2 mmol/s, Q₁₀ = 2,5. Bei 40 °C (+20 °C): v = 2 × 2,5² = 12,5 mmol/s — über 6× schneller.
 
-**3. Aktivierungsenergie E_A (Arrhenius-Gleichung):**
+**3. Aktivierungsenergie E_A (Arrhenius-Gleichung, beschreibt Temperaturabhängigkeit von k):**
 k = A · e^(−E_A / RT)
 - A = Frequenzfaktor (Stoßfrequenz × Geometriefaktor)
 - R = 8,314 J·mol⁻¹·K⁻¹; T in Kelvin
@@ -723,7 +723,7 @@ Beispiel NaCl 0,9 %: 9 g NaCl pro 1 L → c = 9 / 58,5 = 0,154 mol/L ≈ 154 mmo
 | Proteine | ~0,8 | 4,1 kcal/g |
 | Ethanol | 0,67 | 7,1 kcal/g |
 
-Klinisch: RQ > 1,0 deutet auf Lipogenese hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS.`,
+Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Umwandlung von Kohlenhydraten in Fett, vermehrte CO₂-Produktion). Bei Beatmungspatienten kann dies die CO₂-Elimination erschweren — relevant für die Ernährungstherapie bei ARDS (akutes Lungenversagen).`,
 
       lernziele: [
         "Reaktionsgleichungen korrekt ausgleichen und stöchiometrische Koeffizienten als Mol-Verhältnisse interpretieren.",

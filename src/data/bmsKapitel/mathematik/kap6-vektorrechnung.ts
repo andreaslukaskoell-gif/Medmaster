@@ -59,7 +59,7 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 **Subtraktion** $\\vec{a} - \\vec{b}$ ist äquivalent zur Addition von $\\vec{a}$ und $(-\\vec{b})$. Geometrisch ist $\\vec{a} - \\vec{b}$ die zweite Diagonale des Parallelogramms.
 
-**Skalare Multiplikation** $\\lambda \\cdot \\vec{v}$ streckt oder staucht den Vektor: Für $|\\lambda| > 1$ wird der Vektor verlängert, für $0 < |\\lambda| < 1$ verkürzt; für $\\lambda < 0$ kehrt sich zusätzlich die Richtung um. Der Betrag skaliert linear: $|\\lambda \\vec{v}| = |\\lambda| \\cdot |\\vec{v}|$. Zwei Vektoren sind **parallel** (kollinear), wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$ für ein $k \\neq 0$.
+**Skalare Multiplikation** $\\lambda \\cdot \\vec{v}$ streckt oder staucht den Vektor: Für $|\\lambda| > 1$ wird der Vektor verlängert, für $0 < |\\lambda| < 1$ verkürzt; für $\\lambda < 0$ kehrt sich zusätzlich die Richtung um. Der Betrag skaliert linear: $|\\lambda \\vec{v}| = |\\lambda| \\cdot |\\vec{v}|$. Zwei Vektoren sind **parallel** (kollinear (auf einer Geraden liegend)), wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$ für ein $k \\neq 0$.
 
 **Rechengesetze der Vektoraddition:**
 - Kommutativgesetz: $\\vec{a} + \\vec{b} = \\vec{b} + \\vec{a}$
@@ -72,7 +72,7 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 Eine **Linearkombination** mehrerer Vektoren ist eine Summe der Form $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} + \\ldots$ mit skalaren Koeffizienten $\\lambda_i$. Vektoren heißen **linear unabhängig**, wenn keiner von ihnen als Linearkombination der anderen darstellbar ist, d. h. $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} = \\vec{0}$ nur für $\\lambda_1 = \\lambda_2 = 0$ gilt.
 
-> **Merke:** Zwei Vektoren sind genau dann linear abhängig, wenn sie parallel (kollinear) sind. Drei Vektoren im ℝ³ sind linear abhängig, wenn sie in einer Ebene liegen (koplanar).
+> **Merke:** Zwei Vektoren sind genau dann linear abhängig, wenn sie parallel (kollinear) sind. Drei Vektoren im ℝ³ sind linear abhängig, wenn sie in einer Ebene liegen (koplanar (in einer Ebene liegend)).
 
 **Basisvektoren** spannen den gesamten Raum auf. Im $\\mathbb{R}^3$ bilden $\\vec{e_1}=(1,0,0)^\\top$, $\\vec{e_2}=(0,1,0)^\\top$, $\\vec{e_3}=(0,0,1)^\\top$ die Standardbasis (auch: kanonische Basis). Jeder Vektor lässt sich eindeutig als Linearkombination dieser Basisvektoren schreiben: $\\vec{v} = v_1 \\vec{e_1} + v_2 \\vec{e_2} + v_3 \\vec{e_3}$. Im $\\mathbb{R}^n$ benötigt man genau $n$ linear unabhängige Vektoren als Basis — diese Zahl heißt **Dimension** des Raumes.
 
@@ -82,7 +82,7 @@ Der **Einheitsvektor** $\\hat{e}$ zeigt in dieselbe Richtung wie $\\vec{v}$, hat
 
 $$\\hat{e} = \\frac{\\vec{v}}{|\\vec{v}|}$$
 
-Die Berechnung des Einheitsvektors wird auch **Normierung** genannt. Voraussetzung: $\\vec{v} \\neq \\vec{0}$, da durch den Betrag dividiert wird. Einheitsvektoren geben reine Richtungsinformationen wieder und sind essentiell bei der Zerlegung von Kräften in Komponenten.
+Die Berechnung des Einheitsvektors wird auch **Normierung** (Skalieren auf Betrag 1) genannt. Voraussetzung: $\\vec{v} \\neq \\vec{0}$, da durch den Betrag dividiert wird. Einheitsvektoren geben reine Richtungsinformationen wieder und sind essentiell bei der Zerlegung von Kräften in Komponenten.
 
 **MedAT-typische Aufgabe:** Gegeben $\\vec{v} = (3, 4)$. Berechne den Einheitsvektor.
 - Betrag: $|\\vec{v}| = \\sqrt{9 + 16} = 5$

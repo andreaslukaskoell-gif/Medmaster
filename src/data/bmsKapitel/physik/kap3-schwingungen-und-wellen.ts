@@ -49,7 +49,7 @@ Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch
 - v(t) = -A*omega*sin(omega*t + phi_0)  -->  v_max = A*omega (bei Durchgang durch Ruhelage)
 - a(t) = -A*omega^2*cos(omega*t + phi_0) = -omega^2*x(t)  -->  a_max = A*omega^2 (bei maximaler Auslenkung)
 
-Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rueckstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators ist. Dieses Merkmal a = -omega^2*x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsaechlich harmonisch schwingt.
+Die Beschleunigung ist stets der Auslenkung entgegengerichtet (Rueckstellkraft), was die charakteristische Eigenschaft des harmonischen Oszillators (Schwingkoerpers) ist. Dieses Merkmal a = -omega^2*x ist die **Differentialgleichung der harmonischen Schwingung** und definiert, ob ein System tatsaechlich harmonisch schwingt.
 
 ## Schwingungsgroessen-Tabelle
 
@@ -165,7 +165,7 @@ Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
 - **Millennium Bridge London (2000):** Fussgaenger synchronisierten ihren Gang mit der Brueckenfrequenz --> seitliches Schwanken
 - **Marschieren auf Bruecken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
 
-> **Merke:** **Resonanz** = Anregungsfrequenz ungefaehr Eigenfrequenz --> maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Daempfung --> Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz); in der Technik muss sie kontrolliert oder vermieden werden.
+> **Merke:** **Resonanz** = Anregungsfrequenz ungefaehr Eigenfrequenz --> maximale Amplitudenzunahme. **Resonanzkatastrophe** = Resonanz ohne ausreichende Daempfung --> Strukturversagen. In der Medizin: MRT nutzt Resonanz gezielt (Larmorfrequenz, Resonanzfrequenz der Atomkerne im Magnetfeld); in der Technik muss sie kontrolliert oder vermieden werden.
 
 **Resonanz in der Medizin und Biologie:**
 - **MRT:** Kernspinresonanz -- Protonen werden mit der Larmorfrequenz angeregt (42,58 MHz/T mal Feldstaerke)
@@ -503,7 +503,7 @@ Schallgeschwindigkeiten:
 
 > **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro Grad C Temperaturerhoehung.
 
-Der Hoerbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermaeusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hoergrenze ab (Presbyakusis): 60-Jaehrige hoeren typischerweise nur noch bis ~12 kHz.
+Der Hoerbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermaeusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hoergrenze ab (Presbyakusis, altersbedingter Hörverlust): 60-Jaehrige hoeren typischerweise nur noch bis ~12 kHz.
 
 ## Elektromagnetische Wellen
 

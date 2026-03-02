@@ -34,7 +34,7 @@ export const mathKapGrundlagen: Kapitel = {
 **Idee:** Ein Bruch a/b beschreibt den Quotienten aus Zaehler a und Nenner b (b \u2260 0). Jeder Bruch repraesentiert eine rationale Zahl. Zwei Brueche sind **gleichwertig**, wenn sie sich durch Erweitern oder Kuerzen ineinander ueberfuehren lassen: 2/4 = 1/2.
 
 **Verfahren:**
-- **Kuerzen:** Zaehler und Nenner durch denselben Faktor (ggT) dividieren. Beispiel: 12/18 \u2192 (12\u00f76)/(18\u00f76) = 2/3.
+- **Kuerzen:** Zaehler und Nenner durch denselben Faktor (ggT, größter gemeinsamer Teiler) dividieren. Beispiel: 12/18 \u2192 (12\u00f76)/(18\u00f76) = 2/3.
 - **Erweitern:** Zaehler und Nenner mit demselben Faktor multiplizieren. Beispiel: 2/5 = 8/20 (mit 4 erweitert).
 - **Hauptnenner finden:** kgV der Nenner berechnen, dann alle Brueche auf diesen Nenner erweitern.
 
@@ -572,17 +572,14 @@ Schritt 2 -- Flaeche anpassen (direkt): 200 m\u00b2 \u2259 10 Tage. 300 m\u00b2 
         },
         {
           question:
-            "Noradrenalin 0,1 \u00b5g/kg/min, Patient 80 kg, Spritze 4 mg/40 mL. Wie hoch ist die Rate in mL/h?",
-          options: ["4,8 mL/h", "8 mL/h", "0,8 mL/h", "48 mL/h", "0,08 mL/h"],
+            "Heparin-Infusion: 25.000 IE in 250 mL NaCl (= 100 IE/mL). Verordnet: 800 IE/h. Rate in mL/h?",
+          options: ["8 mL/h", "80 mL/h", "0,8 mL/h", "12 mL/h", "4 mL/h"],
           correctIndex: 0,
           explanation:
-            "Schritt 1: Dosis/min = 0,1 \u00b5g/kg/min \u00d7 80 kg = 8 \u00b5g/min. Schritt 2: Konzentration = 4000 \u00b5g / 40 mL = 100 \u00b5g/mL. Schritt 3: Rate = 8 \u00b5g/min / 100 \u00b5g/mL = 0,08 mL/min. Schritt 4: 0,08 \u00d7 60 = 4,8 mL/h. Zusammengesetzter Dreisatz mit drei Groessen.",
-          hints: [
-            "Erst Dosis/min berechnen (direkt), dann durch Konzentration teilen (indirekt).",
-            "8 \u00b5g/min \u00f7 100 \u00b5g/mL = 0,08 mL/min. Mal 60 = ? mL/h.",
-          ],
-          difficulty: 3,
-          tags: ["dreisatz", "zusammengesetzt", "infusionsrate"],
+            "Konzentration = 100 IE/mL (gegeben). Rate = 800 IE/h \u00f7 100 IE/mL = 8 mL/h. Einfacher Dreisatz: verordnete Dosis durch Konzentration.",
+          hints: ["Verordnete Dosis pro Stunde durch Konzentration teilen.", "800 \u00f7 100 = ?"],
+          difficulty: 2,
+          tags: ["dreisatz", "infusionsrate"],
         },
         {
           question:
@@ -801,17 +798,14 @@ GFR und Clearance-Werte werden oft in mL/min angegeben, Infusionsraten in mL/h o
         },
         {
           question:
-            "Dopamin 5 \u00b5g/kg/min, Patient 60 kg, Loesung 200 mg in 50 mL. Wie hoch ist die Infusionsrate?",
-          options: ["4,5 mL/h", "0,075 mL/min", "9 mL/h", "0,3 mL/h", "45 mL/h"],
+            "Antibiotikum-Infusion: 500 mg in 100 mL, zu verabreichen ueber 2 Stunden. Rate in mL/h?",
+          options: ["50 mL/h", "100 mL/h", "25 mL/h", "200 mL/h", "250 mL/h"],
           correctIndex: 0,
           explanation:
-            "Schritt 1: Dosis/min = 5 \u00b5g/kg/min \u00d7 60 kg = 300 \u00b5g/min. Schritt 2: Konz. = 200 mg/50 mL = 4 mg/mL = 4000 \u00b5g/mL. Schritt 3: Rate = 300/4000 = 0,075 mL/min. Schritt 4: 0,075 \u00d7 60 = 4,5 mL/h. Option B (0,075 mL/min) ist zahlenmaeig auch korrekt, aber die klinisch uebliche Einheit ist mL/h.",
-          hints: [
-            "Erst Gesamtdosis/min berechnen, dann durch Konzentration teilen.",
-            "300 \u00b5g/min \u00f7 4000 \u00b5g/mL = 0,075 mL/min. Mal 60 = ? mL/h.",
-          ],
-          difficulty: 3,
-          tags: ["einheiten", "kettenmethode", "dosierung", "infusion"],
+            "100 mL ueber 2 h = 100 \u00f7 2 = 50 mL/h. Einfache Division von Gesamtvolumen durch Infusionsdauer.",
+          hints: ["Gesamtvolumen durch Infusionsdauer teilen.", "100 mL \u00f7 2 h = ?"],
+          difficulty: 1,
+          tags: ["einheiten", "infusion", "division"],
         },
       ],
     },

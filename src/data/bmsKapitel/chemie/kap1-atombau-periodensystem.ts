@@ -366,7 +366,7 @@ Bestimmt die Unterschale (Subschale) und die Form des Orbitals:
 Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0, +1 → drei p-Orbitale (pₓ, p_y, p_z). Anzahl der Orbitale pro Unterschale: 2l + 1.
 
 **4. Spinquantenzahl mₛ** (mₛ = +½ oder −½):
-Beschreibt den Eigendrehimpuls (Spin) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922, Ablenkung eines Silberatomstrahls im Magnetfeld) wies den Elektronenspin experimentell nach.
+Beschreibt den Eigendrehimpuls (Spin, Eigendrehung des Elektrons) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922, Ablenkung eines Silberatomstrahls im Magnetfeld) wies den Elektronenspin experimentell nach.
 
 > **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig: n = Schale, l = Form, mₗ = Richtung, mₛ = Spin. Kein Quantenzahlen-Quartett darf doppelt vorkommen (Pauli).
 
@@ -1529,7 +1529,7 @@ Für 5 % Glukose: 50 g/L ÷ 180 g/mol = 0,278 mol/L × 1 = 278 mOsmol/L (≈ iso
 
 Eigenschaften, die nur von der **Teilchenzahl**, nicht von der Art des Gelösten abhängen:
 1. **Siedepunktserhöhung:** ΔTb = Kb · m · i (Kb für Wasser = 0,512 K·kg/mol)
-2. **Gefrierpunktserniedrigung:** ΔTf = Kf · m · i (Kf für Wasser = 1,853 K·kg/mol; Grundlage für Osmolalitätsmessung)
+2. **Gefrierpunktserniedrigung:** ΔTf = Kf · m · i (Kf für Wasser = 1,853 K·kg/mol; Grundlage für Osmolalitätsmessung (Osmolarität bezogen auf Lösungsmittelmasse))
 3. **Dampfdruckerniedrigung** (Raoult)
 4. **Osmose**
 
@@ -1794,7 +1794,7 @@ Die Phasenübergänge und ihre thermodynamischen Vorzeichen:
 
 ## Dampfdruck und Siedepunkt
 
-Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im Gleichgewicht bei gegebener Temperatur. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung).
+Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im Gleichgewicht bei gegebener Temperatur. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt den Zusammenhang zwischen Dampfdruck und Temperatur).
 
 **Siedepunkt:** Temperatur, bei der der Dampfdruck dem **äußeren Druck** entspricht.
 - Normalsiedepunkt: Dampfdruck = 1 atm (101,325 kPa)

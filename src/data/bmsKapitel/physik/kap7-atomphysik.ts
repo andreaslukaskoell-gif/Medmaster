@@ -112,7 +112,7 @@ mit A = Extinktion (dimensionslos), ε = molarer Extinktionskoeffizient [L·mol�
 
 **Formelklartext:** A = ε·c·d heißt: **Extinktion** („optische Dichte”) ist proportional zur **Konzentration** c und zur **Schichtdicke** d. Doppelte Konzentration oder doppelte Weglänge → **doppelte** Extinktion. **A = log₁₀(I₀/I)** — nicht „Absorption in %”: Bei A = 1 ist T = I/I₀ = 10 %; bei A = 2 ist T = 1 %. **Einheiten:** [ε] = L/(mol·cm), [c] = mol/L, [d] = cm → A dimensionslos. Gilt nur bei **verdünnten** Lösungen und **monochromatischem** Licht.
 
-Je mehr chromophore Moleküle in der Lösung und je länger der optische Weg, desto mehr Licht wird absorbiert. Die Transmission T = I/I₀ und Extinktion A = −log T = log(I₀/I) sind verknüpft. Bei A = 1 beträgt T = 10 %, bei A = 2 nur noch T = 1 %. Das Gesetz gilt nur bei monochromatischem Licht, verdünnten Lösungen und Abwesenheit von Streuung oder Fluoreszenz.
+Je mehr chromophore (lichtabsorbierende) Moleküle in der Lösung und je länger der optische Weg, desto mehr Licht wird absorbiert. Die Transmission T = I/I₀ und Extinktion A = −log T = log(I₀/I) sind verknüpft. Bei A = 1 beträgt T = 10 %, bei A = 2 nur noch T = 1 %. Das Gesetz gilt nur bei monochromatischem Licht, verdünnten Lösungen und Abwesenheit von Streuung oder Fluoreszenz.
 
 > **Merke:** Lambert-Beer gilt linear nur bei verdünnten Lösungen (c < 0,01 mol/L) und monochromatischem Licht. Bei hohen Konzentrationen treten Abweichungen auf.
 

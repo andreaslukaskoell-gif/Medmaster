@@ -108,7 +108,7 @@ Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkei
 
 ## Klinischer Bezug
 
-Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) oder elektronische Sensoren (Infrarot-Ohrthermometer, NTC-Widerstände). Hypothermie (<35 °C) und Hyperthermie (>40 °C) sind lebensbedrohlich — bereits 2 °C Abweichung vom Normwert (37 °C) beeinträchtigen die Enzymaktivität signifikant.
+Fiebermessung nutzt die Temperaturausdehnung (Quecksilber/Alkohol-Thermometer) oder elektronische Sensoren (Infrarot-Ohrthermometer, NTC-Widerstände/Heißleiter). Hypothermie (<35 °C) und Hyperthermie (>40 °C) sind lebensbedrohlich — bereits 2 °C Abweichung vom Normwert (37 °C) beeinträchtigen die Enzymaktivität signifikant.
 
 **Therapeutische Anwendungen:**
 - Wärmetherapie (Wärmekissen, Infrarotlicht) fördert Durchblutung und Schmerzlinderung
@@ -163,7 +163,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
           heading: "Wärmekapazität und Energiebilanz",
           text: "Q = m · c · ΔT ist die zentrale Formel der Kalorimetrie. Je größer c, desto mehr Energie muss zugeführt werden, um die gleiche Temperaturänderung zu erzielen. Wasser (c = 4180 J/(kg·K)) speichert etwa neunmal mehr Energie pro Kilogramm als Eisen (c ≈ 450 J/(kg·K)). Bei Mischkalorimetrie gilt: abgegebene Wärme = aufgenommene Wärme (Energieerhaltung, Wärmeverluste vernachlässigt). Die Mischungstemperatur liegt immer zwischen den Ausgangstemperaturen.",
           merksatz:
-            "Wasser ist der beste Wärmespeicher unter den Alltagsstoffen — biologisch essenziell für Homöothermie.",
+            "Wasser ist der beste Wärmespeicher unter den Alltagsstoffen — biologisch essenziell für Homöothermie (gleichbleibende Körpertemperatur).",
         },
         {
           heading: "Thermische Ausdehnung und Anomalie des Wassers",
@@ -937,7 +937,7 @@ Die Verdampfungswaerme ist etwa 7-mal groesser als die Schmelzwaerme!
 
 ## Dampfdruck und Siedepunkt
 
-Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes ueber einer Fluessigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung). **Sieden** tritt auf, wenn p_D = p_Aussen.
+Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes ueber einer Fluessigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt Dampfdruck-Temperatur-Beziehung). **Sieden** tritt auf, wenn p_D = p_Aussen.
 
 Konsequenzen:
 - Im Hochgebirge ist p_Aussen kleiner: Wasser siedet unter 100 Grad C (z. B. auf 3000 m Hoehe bei ungefaehr 90 Grad C).

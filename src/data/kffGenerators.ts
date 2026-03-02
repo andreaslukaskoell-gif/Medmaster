@@ -783,7 +783,7 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
       allergies: allergien,
       passportNumber,
       country: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
-      photo: "", // Platzhalter – UI zeigt Silhouette
+      photo: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(name)}&backgroundColor=b6e3f4,c0aede,d1d4f9`,
     });
   }
 

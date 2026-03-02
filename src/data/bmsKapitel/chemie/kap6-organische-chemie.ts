@@ -18,7 +18,7 @@ export const chemKapOrganisch: Kapitel = {
 
 **Allgemeine Formel:** CₙH₂ₙ₊₂
 
-Alkane besitzen ausschließlich C-C-Einfachbindungen (σ-Bindungen). Sie sind gesättigt, das heißt, sie können keine weiteren Atome aufnehmen. Alle Kohlenstoffatome sind sp³-hybridisiert und bilden eine tetraederförmige Anordnung mit einem Bindungswinkel von 109,5°.
+Alkane besitzen ausschließlich C-C-Einfachbindungen (σ-Bindungen, Einfachbindungen durch Orbitalüberlappung). Sie sind gesättigt, das heißt, sie können keine weiteren Atome aufnehmen. Alle Kohlenstoffatome sind sp³-hybridisiert (Mischung von s- und p-Orbitalen) und bilden eine tetraederförmige Anordnung mit einem Bindungswinkel von 109,5°.
 
 **Eigenschaften:**
 Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen sind schwache van-der-Waals-Kräfte (London-Dispersionskräfte). Mit steigender Molekülgröße wächst die Kontaktfläche und damit die Stärke dieser Kräfte — der Siedepunkt steigt. Methan ist bei Raumtemperatur gasförmig, Pentan ist flüssig, Heptan und größere Alkane sind ölige Flüssigkeiten.
@@ -31,7 +31,7 @@ Alkane sind unpolare Moleküle. Die einzigen intermolekularen Wechselwirkungen s
 
 **Cycloalkane**: Ringförmige Alkane (CₙH₂ₙ, gleiche Formel wie Alkene!). Cyclohexan (Sesselkonformation) ist spannungsfrei. Cyclopropan hat hohe Ringspannung (Bindungswinkel 60° statt 109,5°) → reaktiver. **cis/trans-Isomerie** bei disubstituierten Cycloalkanen: cis = Substituenten auf gleicher Seite, trans = gegenüberliegend.
 
-**Typische Reaktion:** Radikalische Substitution (SR)
+**Typische Reaktion:** Radikalische Substitution (SR, Substitution durch Radikale)
 Alkane reagieren unter UV-Licht oder hohen Temperaturen mit Halogenen. Dabei wird ein H-Atom durch ein Halogenatom ersetzt:
 CH₄ + Cl₂ → CH₃Cl + HCl
 Die Reaktion läuft über drei Phasen: **Kettenstart** (Cl₂ →[hν] 2 Cl• , homolytische Spaltung), **Kettenfortpflanzung** (Cl• + CH₄ → CH₃• + HCl; CH₃• + Cl₂ → CH₃Cl + Cl•), **Kettenabbruch** (Radikalkombination: 2 Cl• → Cl₂ oder CH₃• + Cl• → CH₃Cl). Die Reaktivität tertiärer C-H > sekundärer > primärer (Stabilität der Radikale durch Hyperkonjugation/Stabilisierung durch benachbarte C-H-Bindungen).
@@ -50,7 +50,7 @@ C₂H₄ + Br₂ → C₂H₄Br₂ (1,2-Dibromethan)
 
 <!-- DIAGRAM:covalent-bond -->
 
-**Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation (positiv geladenes C-Atom) wird als Intermediat bevorzugt.
+**Markovnikov-Regel:** Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit mehr H-Atomen (das H-ärmere C erhält X). Grund: Das stabilere (höher substituierte) Carbokation (positiv geladenes C-Atom als kurzlebige Zwischenstufe) wird als Intermediat (kurzlebige Zwischenverbindung) bevorzugt.
 
 **cis/trans-Isomerie bei Alkenen**: Die C=C-Doppelbindung ist nicht frei drehbar → wenn beide C-Atome jeweils zwei verschiedene Substituenten tragen, existieren cis- und trans-Isomere. cis-But-2-en: beide Methylgruppen auf gleicher Seite; trans-But-2-en: gegenüberliegende Seite. Bei komplexeren Fällen: E/Z-Nomenklatur (nach CIP-Prioritätsregeln/Cahn-Ingold-Prelog: hoehere Ordnungszahl = hoehere Prioritaet).
 
@@ -402,7 +402,7 @@ Ein Kohlenstoffatom ist chiral (stereogenes Zentrum), wenn es vier verschiedene 
 
 ## Diastereomere
 
-Stereoisomere, die keine Spiegelbilder voneinander sind. Bei n Chiralitätszentren: bis zu 2ⁿ Stereoisomere (Ausnahme: meso-Verbindungen). Diastereomere unterscheiden sich — im Gegensatz zu Enantiomeren — in physikalischen Eigenschaften (Schmelzpunkt, Löslichkeit, Rf-Wert) und können daher durch konventionelle Methoden (Chromatographie, Kristallisation) getrennt werden.
+Stereoisomere, die keine Spiegelbilder voneinander sind. Bei n Chiralitätszentren: bis zu 2ⁿ Stereoisomere (Ausnahme: meso-Verbindungen). Diastereomere unterscheiden sich — im Gegensatz zu Enantiomeren — in physikalischen Eigenschaften (Schmelzpunkt, Löslichkeit, Rf-Wert/Retentionsfaktor in der Chromatographie) und können daher durch konventionelle Methoden (Chromatographie, Kristallisation) getrennt werden.
 
 **Spezialfälle der Diastereomerie:**
 - **Epimere**: Diastereomere, die sich an genau einem Chiralitätszentrum unterscheiden (z.B. D-Glucose vs. D-Galactose = C4-Epimere; D-Glucose vs. D-Mannose = C2-Epimere)
@@ -413,7 +413,7 @@ Stereoisomere, die keine Spiegelbilder voneinander sind. Bei n Chiralitätszentr
 
 Die biologische Bedeutung der Isomerie ist enorm: Enzyme, Rezeptoren und Transportproteine sind chiral und erkennen Enantiomere unterschiedlich.
 
-**Thalidomid (Contergan):** R-Enantiomer wirkt als Sedativum; S-Enantiomer ist teratogen (verursacht Missbildungen). Tragisch: Im Körper interkonvertieren beide Formen!
+**Thalidomid (Contergan):** R-Enantiomer wirkt als Sedativum; S-Enantiomer ist teratogen (fruchtschaedigend, verursacht Missbildungen). Tragisch: Im Körper interkonvertieren beide Formen!
 **Ibuprofen:** S(+)-Ibuprofen ist der aktive Wirkstoff; R(-)-Ibuprofen ist deutlich schwächer wirksam (wird aber in vivo teilweise in S-Form umgewandelt).
 **L-Dopa vs. D-Dopa:** Bei Parkinson wird nur L-Dopa therapeutisch eingesetzt; D-Dopa hat keine Wirkung, da die DOPA-Decarboxylase stereoselektiv ist.
 
@@ -647,7 +647,7 @@ Biologisches Beispiel: Ethanol →[ADH] Acetaldehyd →[ALDH] Essigsäure → Ac
 
 ## Ether (R−O−R')
 
-Ether enthalten ein O-Atom zwischen zwei organischen Resten. Sie sind relativ unreaktiv (keine H-Brücken-Donor-Funktion) und haben niedrigere Siedepunkte als vergleichbare Alkohole. **Diethylether** (C₂H₅-O-C₂H₅): Historisches Narkosemittel (1846, erste Äthernarkose), heute Lösungsmittel. **Cyclische Ether**: Tetrahydrofuran (THF), Epoxide (reaktiv, weil Ring gespannt → nucleophile Ringöffnung). Biologisch wichtig: Epoxid-Intermediate bei Aromatenstoffwechsel (Benzo[a]pyren → Epoxid → DNA-Addukte → Krebs).
+Ether enthalten ein O-Atom zwischen zwei organischen Resten. Sie sind relativ unreaktiv (keine H-Brücken-Donor-Funktion) und haben niedrigere Siedepunkte als vergleichbare Alkohole. **Diethylether** (C₂H₅-O-C₂H₅): Historisches Narkosemittel (1846, erste Äthernarkose), heute Lösungsmittel. **Cyclische Ether**: Tetrahydrofuran (THF), Epoxide (dreigliedrige Ringether, reaktiv, weil Ring gespannt → nucleophile Ringöffnung). Biologisch wichtig: Epoxid-Intermediate bei Aromatenstoffwechsel (Benzo[a]pyren → Epoxid → DNA-Addukte → Krebs).
 
 ## Aldehyde (−CHO, Aldehydgruppe)
 
@@ -656,7 +656,7 @@ Aldehyde enthalten die Carbonylgruppe (C=O) am Kettenende, gebunden an mindesten
 **Wichtige Aldehyde:**
 - Formaldehyd (HCHO, Methanal): Konservierungsmittel, toxisch (Quervernetzung von Proteinen), Formalin (37% wässrige Lösung). Karzinogen bei chronischer Inhalation
 - Acetaldehyd (CH₃CHO, Ethanal): Zwischenprodukt beim Ethanolabbau; verantwortlich für Kater-Symptome und Flush-Syndrom (ALDH2-Polymorphismus bei ~30% der Ostasiaten)
-- Glucose (offenkettig): Aldehydgruppe am C1 → reduzierende Eigenschaft (Fehling-Probe positiv)
+- Glucose (offenkettig): Aldehydgruppe am C1 → reduzierende Eigenschaft (Fehling-Probe, Kupfernachweis für Aldehyde, positiv)
 - Retinal (Vitamin-A-Aldehyd): Sehpigment in der Retina, cis-trans-Isomerisierung bei Lichteinfall
 
 **Reaktionen:** Oxidation zu Carbonsäure (Tollens-Probe: Ag⁺ → Ag-Spiegel; Fehling-Probe: Cu²⁺ → Cu₂O-Niederschlag — beide spezifisch für Aldehyde, nicht Ketone!); nucleophile Addition (Bildung von Halbacetalen mit Alkoholen, z.B. Ringschluss der Glucose); Reduktion zu primärem Alkohol (NaBH₄).

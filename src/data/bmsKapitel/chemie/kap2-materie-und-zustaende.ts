@@ -1034,7 +1034,7 @@ Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgend
 
 ## Amorphe Feststoffe vs. Kristalline Feststoffe
 
-Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g, Temperatur des Erweichens), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit.
+Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunststoffe, Schokolade) besitzen keine Fernordnung im atomaren Aufbau. Sie haben keinen scharfen Schmelzpunkt, sondern einen **Glasübergangsbereich** (T_g, Temperatur des Erweichens), in dem sie graduell erweichen. Technisch und pharmazeutisch relevant: Viele Arzneistoffe können in amorpher Form vorliegen, die eine höhere Löslichkeitsrate aufweist als die kristalline Form – wichtig für die Bioverfügbarkeit (Anteil des Wirkstoffs, der den Kreislauf erreicht).
 
 > **Merke:** Amorph = keine Fernordnung, kein scharfer Schmelzpunkt, höhere Löslichkeit → pharmazeutisch bedeutsam für Bioverfügbarkeit von Arzneistoffen.`,
 
@@ -1265,7 +1265,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       content: `## Phasenübergänge: Überblick und Nomenklatur
 
-Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
+Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieaenderung (Waermeaenderung bei konstantem Druck) verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 
 Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 
@@ -1315,7 +1315,7 @@ Gelöste Stoffe verändern Siedepunkt und Gefrierpunkt des Lösungsmittels. Dies
 ### Gefrierpunktserniedrigung
 ΔT_f = K_f × b × i
 
-- K_f (kryoskopische Konstante für Wasser) = **1,86 K·kg/mol**
+- K_f (kryoskopische Konstante, stoffspezifische Gefrierkonstante, für Wasser) = **1,86 K·kg/mol**
 - b = Molalität (mol gelöster Stoff pro kg Lösungsmittel)
 - i = Van't-Hoff-Faktor (Teilchenanzahl pro Formeleinheit bei Dissoziation)
 
@@ -1335,7 +1335,7 @@ Die Blutosmolalität (normal: 280–300 mosmol/kg) kann durch Kryoskopie (Messun
 
 ## Verdunstung vs. Sieden
 
-**Sieden** tritt auf, wenn der Sättigungsdampfdruck der Flüssigkeit den Umgebungsdruck erreicht (Blasenbildung im Volumen).
+**Sieden** tritt auf, wenn der Sättigungsdampfdruck (maximaler Dampfdruck über Flüssigkeit) der Flüssigkeit den Umgebungsdruck erreicht (Blasenbildung im Volumen).
 
 **Verdunstung** findet bei jeder Temperatur unterhalb des Siedepunkts an der **Oberfläche** statt. Gemäß der Maxwell-Boltzmann-Verteilung haben immer einige Oberflächenmoleküle genug kinetische Energie, um die intermolekularen Bindungen zu überwinden und zu entweichen. Verdunstung kühlt die Oberfläche (Abtransport energiereicher Moleküle) – dies ist der physikalische Grund für das Kältegefühl nach dem Schwimmen oder beim Auftragen von Desinfektionsmittel (Ethanol verdunstet schnell).
 
@@ -1351,7 +1351,7 @@ Das **Phasendiagramm** zeigt die Stabilitätsbereiche der Aggregatzustände als 
 
 ## Dampfdruck und Clausius-Clapeyron-Gleichung
 
-Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron):
+Der Sättigungsdampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron-Gleichung: Mathematisches Modell für Dampfdruckabhängigkeit):
 
 **ln(p₂/p₁) = (ΔH_v/R) × (1/T₁ − 1/T₂)**
 

@@ -38,7 +38,7 @@ export const mathKapAlgebra: Kapitel = {
 
 
 
-Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematische Ausdrücke sind. **Äquivalenzumformung** bedeutet: Die Gleichung bleibt gültig, wenn du auf **beiden Seiten** dieselbe Operation durchführst. Erlaubte Operationen sind:
+Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematische Ausdrücke sind. **Äquivalenzumformung** (gültigkeitserhaltende Umformung) bedeutet: Die Gleichung bleibt gültig, wenn du auf **beiden Seiten** dieselbe Operation durchführst. Erlaubte Operationen sind:
 
 - Addition oder Subtraktion derselben Zahl auf beiden Seiten
 - Multiplikation oder Division beider Seiten mit derselben Zahl (niemals durch null)
@@ -372,7 +372,7 @@ Beispiel: Wurzel aus (9/16) = 3/4.
 Potenz und Wurzel: (Wurzel aus a) hoch 2 = a und Wurzel aus (a hoch 2) = Betrag von a.
 Wichtig: Wurzel aus (a hoch 2) = Betrag von a, denn Wurzel aus 9 = 3 = Betrag von 3 = Betrag von (−3). Die Quadratwurzel ist immer nicht-negativ.
 
-**Rationalisierung** (Wurzeln aus dem Nenner entfernen): Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
+**Rationalisierung** (Wurzelfreiheit im Nenner herstellen): Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
 
 > **Merke:** Produktregel erlaubt: √(a×b) = √a×√b. VERBOTEN: √(a+b) ≠ √a+√b und √(a²) = |a| (nicht ±a — Wurzel ist immer nicht-negativ!).
 
@@ -383,8 +383,8 @@ Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Die Frage, die d
 Definition: log_a(x) = y genau dann, wenn a hoch y = x (für a > 0, a ungleich 1, x > 0).
 
 Wichtige Spezialfälle:
-- log Basis 10 von x = dekadischer Logarithmus (Zehnerlogarithmus) lg(x)
-- log Basis e von x = natürlicher Logarithmus ln(x) mit e ungefähr gleich 2,71828
+- log Basis 10 von x = dekadischer Logarithmus (Logarithmus zur Basis 10) lg(x)
+- log Basis e von x = natürlicher Logarithmus (Logarithmus zur Basis e) ln(x) mit e ungefähr gleich 2,71828
 - ln(e) = 1; ln(1) = 0; ln(e hoch x) = x; e hoch (ln x) = x
 
 Die drei Logarithmenregeln:
@@ -405,7 +405,7 @@ Wichtigste Anwendung: ln(x) = lg(x) / lg(e) ungefähr gleich lg(x) / 0,4343 unge
 
 ## Der natürliche Logarithmus und die Euler'sche Zahl
 
-Die **Euler'sche Zahl** e ungefähr gleich 2,71828 (benannt nach Leonhard Euler) ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
+Die **Euler'sche Zahl** e ≈ 2,71828 (irrationale mathematische Konstante, Basis des natürlichen Logarithmus) ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
 
 In der Biologie und Medizin folgen das Wachstum von Bakterienkulturen, die Abnahme von Medikamenten im Blut und der radioaktive Zerfall dem Gesetz N(t) = N0 × e hoch (k × t), wobei k > 0 für Wachstum und k < 0 für Zerfall steht.
 
@@ -417,7 +417,7 @@ Die Halbwertszeit T(1/2) ist die Zeit, nach der eine Größe auf die Hälfte ihr
 
 N(t) = N0 × (1/2) hoch (t / T(1/2)) = N0 × 2 hoch (−t / T(1/2)) = N0 × e hoch (−lambda × t),
 
-wobei lambda = ln(2) / T(1/2) ungefähr gleich 0,693 / T(1/2) die **Zerfallskonstante** (Geschwindigkeit des Abbaus) ist.
+wobei lambda = ln(2) / T(1/2) ungefähr gleich 0,693 / T(1/2) die **Zerfallskonstante** (Geschwindigkeit des radioaktiven Abbaus) ist.
 
 Beispiele:
 - Nach 1 Halbwertszeit: 50%
@@ -618,7 +618,7 @@ wobei P = Prozentwert (der gesuchte oder gegebene Anteil), G = Grundwert (das Ga
 
 ### Frage 1 -- Prozentwert gesucht (P = ?)
 
-P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**. Medizinisches Beispiel: Ein Medikament hat eine Bioverfuegbarkeit von 40 %. Von 500 mg oral werden also 500 × 0,40 = **200 mg** resorbiert.
+P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**. Medizinisches Beispiel: Ein Medikament hat eine Bioverfuegbarkeit (Anteil, der ins Blut gelangt) von 40 %. Von 500 mg oral werden also 500 × 0,40 = **200 mg** resorbiert.
 
 ### Frage 2 -- Grundwert gesucht (G = ?)
 
@@ -1311,7 +1311,7 @@ F_senkrecht = 500 × sin 30° = 500 × 0,5 = **250 N** (Kompressionskraft senkre
 
 Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
 
-**Drehmoment:** M = r × F × sin θ, wobei θ der Winkel zwischen Hebelarm und Kraftvektor ist. Bei senkrechtem Angriff (θ = 90°): sin 90° = 1 → M = r × F.`,
+**Drehmoment** (Kraft mal Hebelarm)**:** M = r × F × sin θ, wobei θ der Winkel zwischen Hebelarm und Kraftvektor ist. Bei senkrechtem Angriff (θ = 90°): sin 90° = 1 → M = r × F.`,
       merksätze: [
         "SOH-CAH-TOA: sin = Gegenkathete/Hypotenuse, cos = Ankathete/Hypotenuse, tan = Gegenkathete/Ankathete.",
         "Trigonometrischer Pythagoras: sin²α + cos²α = 1 — gilt für JEDEN Winkel.",
@@ -1472,7 +1472,7 @@ Für einen Kreis mit Radius r:
 - Umfang (Kreislinie): **U = 2 × π × r**
 - Durchmesser: d = 2r, also A = π × d²/4
 
-Ein **Kreissektor** mit Mittelpunktswinkel α (in Radiant):
+Ein **Kreissektor** (Kreisausschnitt, „Tortenstück") mit Mittelpunktswinkel α (in Radiant):
 - Sektorfläche: **A = r² × α / 2**
 - Bogenlänge: **b = r × α**
 

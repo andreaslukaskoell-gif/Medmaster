@@ -1939,14 +1939,14 @@ function ImplikationenQuiz({
               {currentQ.source ? `Quelle: ${currentQ.source}` : "Offizielle Beispielaufgabe"}
             </p>
           )}
-          <p className="text-sm text-muted mb-2">Prämisse 1:</p>
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-4 border-l-4 border-purple-400 pl-3">
-            {currentQ.premise1 ?? "Fehler beim Laden"}
-          </p>
-          <p className="text-sm text-muted mb-2">Prämisse 2:</p>
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6 border-l-4 border-purple-400 pl-3">
-            {currentQ.premise2 ?? "Fehler beim Laden"}
-          </p>
+          <div className="bg-gray-50 dark:bg-gray-800 border-l-4 border-primary-400 p-4 rounded-r-lg mb-6 space-y-2">
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 italic">
+              &bdquo;{currentQ.premise1 ?? "Fehler beim Laden"}&ldquo;
+            </p>
+            <p className="text-base font-medium text-gray-900 dark:text-gray-100 italic">
+              &bdquo;{currentQ.premise2 ?? "Fehler beim Laden"}&ldquo;
+            </p>
+          </div>
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
             Welche Schlussfolgerung ist korrekt?
           </p>
@@ -1962,8 +1962,9 @@ function ImplikationenQuiz({
                       : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
                   }`}
                 >
-                  <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
+                  <span className="font-semibold mr-2">({String.fromCharCode(65 + oi)})</span>
                   {opt}
+                  {!opt.endsWith(".") && !opt.endsWith("?") ? "." : ""}
                   <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
                     {oi + 1}
                   </kbd>
@@ -2514,24 +2515,32 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
           <p className="text-sm text-muted mb-4">
             Mit welchem Buchstaben beginnt dieses Wort? (oder: Keine passt)
           </p>
-          <p className="text-3xl font-mono font-bold tracking-[0.3em] text-gray-900 dark:text-gray-100 mb-8">
-            {lettersStr}
-          </p>
-          <div className="flex justify-center gap-3 flex-wrap">
+          <div className="flex flex-wrap gap-1.5 justify-center my-2 mb-8">
+            {currentQ.letters.map((letter, i) => (
+              <div
+                key={i}
+                className="min-w-[2.5rem] px-2 py-2 border rounded-md text-center font-mono text-lg font-bold border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              >
+                {letter}
+              </div>
+            ))}
+          </div>
+          <div className="space-y-2">
             {(currentQ.options ?? []).map((opt, li) => (
               <button
                 key={`${opt}-${li}`}
                 onClick={() => setAnswers((p) => ({ ...p, [taskId]: opt }))}
-                className={`w-14 h-14 rounded-xl border-2 text-xl font-bold transition-all cursor-pointer ${
+                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[taskId] === opt
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300 scale-110"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:scale-105"
+                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
                 }`}
               >
-                {opt === "-" ? "–" : opt}
-                <span className="block text-[9px] text-muted font-mono">
-                  {String.fromCharCode(65 + li)}
-                </span>
+                <span className="font-semibold mr-2">({String.fromCharCode(65 + li)})</span>
+                {opt === "-" ? "Keine der Antworten ist richtig" : `Anfangsbuchstabe: ${opt}`}
+                <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                  {li + 1}
+                </kbd>
               </button>
             ))}
           </div>

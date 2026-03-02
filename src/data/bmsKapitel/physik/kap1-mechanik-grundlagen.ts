@@ -1032,7 +1032,8 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
             "actio = reactio: Gleich groß, entgegengesetzt, aber auf verschiedene Körper wirkend — daher heben sie sich NICHT auf!",
         },
         {
-          heading: "Klinische Anwendung: Dezelerationstrauma",
+          heading:
+            "Klinische Anwendung: Dezelerationstrauma (Verletzung durch plötzliches Abbremsen)",
           text: "Bei plötzlichem Abbremsen (Autounfall, Sturz) wirkt die Trägheit: Organe setzen ihre Bewegung fort, während das Skelett aufgehalten wird. Besonders gefährdet sind: (1) Aorta descendens bei Aortenbogenverankerung, (2) Leber- und Milzstiele, (3) Gehirn (Contrecoup-Verletzung). Das zweite Newtonsche Gesetz erklärt, warum Körperschutz (Airbag, Helm) die Bremsstrecke verlängert und damit die Kraft F = m·a reduziert.",
           merksatz:
             "Airbag-Prinzip: Längere Bremsstrecke → geringere Verzögerung a → geringere Kraft F = m·a auf den Körper.",
@@ -1206,7 +1207,7 @@ In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Fede
 
 ## Drehimpuls und Rotationsenergie
 
-Drehimpuls L = I · ω, wobei I das Trägheitsmoment (kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.
+Drehimpuls L = I · ω, wobei I das Trägheitsmoment (Widerstand gegen Drehbeschleunigung, kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.
 
 
 
@@ -1608,7 +1609,7 @@ Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische 
 
 Die Belastung des menschlichen Körpers durch Beschleunigung wird häufig in Vielfachen der Erdbeschleunigung g angegeben. Im Alltag erfahren wir 1 g. In einer Achterbahn wirken kurzzeitig 3–5 g. Piloten von Kampfjets erleben bis zu 9 g — dabei wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling (Blutversacken in den Beinen).
 
-In der Notfallmedizin sind g-Kräfte bei Dezelerationstraumen zentral: Ein Frontalaufprall bei 50 km/h mit Bremsstrecke 50 cm erzeugt ca. 20 g. Die dabei auf innere Organe wirkenden Kräfte (F = m·a = m·20g) können Gefäßabrisse (Aortentranssektion), Leberrupturen und diffuse axonale Hirnverletzungen verursachen. Sicherheitsgurte und Airbags verlängern die Bremsstrecke und reduzieren damit die maximale g-Belastung — ein direktes Resultat von F = m·a.
+In der Notfallmedizin sind g-Kräfte bei Dezelerationstraumen zentral: Ein Frontalaufprall bei 50 km/h mit Bremsstrecke 50 cm erzeugt ca. 20 g. Die dabei auf innere Organe wirkenden Kräfte (F = m·a = m·20g) können Gefäßabrisse (Aortentranssektion), Leberrupturen und diffuse axonale Hirnverletzungen (Zerreißung von Nervenfasern durch Scherkräfte) verursachen. Sicherheitsgurte und Airbags verlängern die Bremsstrecke und reduzieren damit die maximale g-Belastung — ein direktes Resultat von F = m·a.
 
 ## Rechenbeispiele
 

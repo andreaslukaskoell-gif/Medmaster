@@ -33,7 +33,8 @@ export type ImplicationTaskCanonical = {
 export type SetRel =
   | { type: "ALL"; a: string; b: string } // A ⊆ B (A vollständig in B)
   | { type: "SOME"; a: string; b: string } // A ∩ B ≠ ∅ (echte Überschneidung)
-  | { type: "NONE"; a: string; b: string }; // A ∩ B = ∅ (disjunkt)
+  | { type: "NONE"; a: string; b: string } // A ∩ B = ∅ (disjunkt)
+  | { type: "NOT_ALL"; a: string; b: string }; // ¬(A ⊆ B) — einige A sind keine B
 
 export type ImplicationRelationModel = {
   sets: string[];
@@ -45,6 +46,7 @@ export type ImplicationConstraints = {
   subset: [string, string][]; // ALL
   disjoint: [string, string][]; // NONE
   overlap: [string, string][]; // SOME
+  notSubset: [string, string][]; // NOT_ALL (a is NOT subset of b — directed!)
 };
 
 // Legacy-Aliase für bestehende Aufrufer (SetRelationType / Objektform mit a, b)
@@ -73,6 +75,7 @@ function pairKey(a: string, b: string): string {
 function setRelToRelationType(r: SetRel): SetRelationType {
   if (r.type === "ALL") return "subset";
   if (r.type === "NONE") return "disjoint";
+  if (r.type === "NOT_ALL") return "overlap"; // best approximation for layout
   return "overlap";
 }
 
@@ -81,13 +84,16 @@ export function modelToConstraints(model: ImplicationRelationModel): Implication
   const subset: [string, string][] = [];
   const disjoint: [string, string][] = [];
   const overlap: [string, string][] = [];
+  const notSubset: [string, string][] = [];
   for (const r of model.relations) {
     const p = normPair(r.a, r.b);
     if (r.type === "ALL") subset.push(p);
     else if (r.type === "NONE") disjoint.push(p);
+    else if (r.type === "NOT_ALL")
+      notSubset.push([r.a, r.b]); // directed! a ⊄ b
     else overlap.push(p);
   }
-  return { subset, disjoint, overlap };
+  return { subset, disjoint, overlap, notSubset };
 }
 
 /** Konsistenz-Checker: Kein Paar darf gleichzeitig NONE und (ALL oder SOME) sein. */
@@ -103,6 +109,12 @@ export function constraintsConsistent(c: ImplicationConstraints): boolean {
 }
 
 function relationConflict(r1: SetRel, r2: SetRel): boolean {
+  if (r1.type === "NOT_ALL" || r2.type === "NOT_ALL") {
+    // NOT_ALL(a,b) conflicts with ALL(a,b) if same direction
+    if (r1.type === "NOT_ALL" && r2.type === "ALL" && r1.a === r2.a && r1.b === r2.b) return true;
+    if (r2.type === "NOT_ALL" && r1.type === "ALL" && r2.a === r1.a && r2.b === r1.b) return true;
+    return false;
+  }
   const p1 = pairKey(r1.a, r1.b);
   const p2 = pairKey(r2.a, r2.b);
   if (p1 !== p2) return false;
@@ -148,7 +160,7 @@ function parsePremiseToSetRels(p: string): SetRel[] | null {
   if (someNot) {
     const a = someNot[1]!.trim();
     const b = someNot[2]!.trim();
-    return [{ type: "SOME", a, b }]; // A∩B kann nicht leer sein (einige A sind außerhalb B)
+    return [{ type: "NOT_ALL", a, b }]; // nicht alle A in B — einige A sind ausserhalb B
   }
   return null;
 }
@@ -415,6 +427,37 @@ export function layoutSatisfiesConstraints(
     const key = pairKey(a, b);
     const impl = impliedMap.get(key);
     if (impl !== "overlap" && impl !== "subset") return false;
+  }
+  // NOT_ALL: layout must NOT have a as subset of b (directed check)
+  for (const [a, b] of constraints.notSubset) {
+    // Find which index a and b map to in labels
+    const ia = labels.indexOf(a);
+    const ib = labels.indexOf(b);
+    if (ia < 0 || ib < 0) continue;
+    // Check if layout implies subset from ia to ib
+    for (const rel of implied) {
+      if (rel.i === ia && rel.j === ib && rel.type === "subset") return false;
+      if (rel.j === ia && rel.i === ib && rel.type === "subset") {
+        // subset is directed: i subset of j. Check if a maps to i position
+        // In our layout, subset means circle[i] inside circle[j]
+        // We need a(=ia) NOT inside b(=ib)
+      }
+    }
+    // More precise: check if implied says labels[ia] is subset of labels[ib]
+    const key = pairKey(a, b);
+    const impl = impliedMap.get(key);
+    if (impl === "subset") {
+      // Need to check direction — subset in our layout means circle[smaller_idx] inside circle[larger_idx]
+      // But our implied relations use index pairs, and subset means i inside j
+      // Since normPair sorts, we need to verify direction
+      for (const rel of implied) {
+        if (rel.type === "subset") {
+          const relA = labels[rel.i]!;
+          const relB = labels[rel.j]!;
+          if (relA === a && relB === b) return false; // a inside b — violates NOT_ALL
+        }
+      }
+    }
   }
   return true;
 }

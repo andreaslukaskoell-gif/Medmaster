@@ -33,7 +33,7 @@ Dieser Befund stützt die Hypothese der **Ursuppe** (engl. *primordial soup*; Op
 
 ## RNA-Welt — Das Henne-Ei-Problem lösen
 
-Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese von DNA und RNA, aber DNA und RNA sind nötig für die Proteinherstellung. Was kam zuerst? Die RNA-Welt-Hypothese löst dies: RNA-Moleküle können als Ribozyme enzymatische Aktivität entfalten (z. B. das Ribosom ist im Kern ein Ribozym — rRNA katalysiert die Peptidylübertragung). RNA kann sich selbst replizieren, mutieren und durch natürliche Selektion weiterentwickeln. Aktuelle Forschung zeigt, dass RNA unter präbiotischen Bedingungen spontan gebildet werden kann und dass primitive RNA-Enzyme (Ribozyme) einfache Reaktionen katalysieren. Mit der Zeit entwickelten sich DNA (thermodynamisch stabiler) als dauerhafteres Speichermedium und Proteine als effektivere Katalysatoren.
+Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese von DNA und RNA, aber DNA und RNA sind nötig für die Proteinherstellung. Was kam zuerst? Die RNA-Welt-Hypothese löst dies: RNA-Moleküle können als **Ribozyme** (RNA-Moleküle mit Enzymfunktion) enzymatische Aktivität entfalten (z. B. das Ribosom ist im Kern ein Ribozym — rRNA katalysiert die Peptidylübertragung). RNA kann sich selbst replizieren, mutieren und durch natürliche Selektion weiterentwickeln. Aktuelle Forschung zeigt, dass RNA unter präbiotischen Bedingungen spontan gebildet werden kann und dass primitive RNA-Enzyme (Ribozyme) einfache Reaktionen katalysieren. Mit der Zeit entwickelten sich DNA (thermodynamisch stabiler) als dauerhafteres Speichermedium und Proteine als effektivere Katalysatoren.
 
 > **Merke:** RNA-Welt: RNA war erstes Informations- UND Katalysemolekül (Ribozyme). Löst das Henne-Ei-Problem zwischen DNA/Protein.
 
@@ -391,13 +391,13 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
 
 {{DIAGRAM:dna-helix}}
 
-Evolution bedeutet Veränderung der Allelfrequenzen in einer Population. Vier Kräfte können diese Veränderung antreiben:
+Evolution bedeutet Veränderung der **Allelfrequenzen** (Häufigkeit von Genvarianten) in einer Population. Vier Kräfte können diese Veränderung antreiben:
 
 **1. Mutation** (Rohstoff der Evolution): Mutationen schaffen neue Allele durch Änderungen der DNA-Sequenz. Ohne Mutation gäbe es keine Variation und damit keine Evolution — Mutation ist die ultimative Quelle aller genetischen Vielfalt. Einzelne Mutationen sind zufällig und meist neutral oder schädlich; in seltenen Fällen vorteilhaft. Mutation allein verändert Allelfrequenzen sehr langsam (Mutationsrate ca. 10⁻⁵ bis 10⁻⁹ pro Gen und Generation).
 
 **2. Selektion** (gerichtet, fitnessbezogen): Selektion bevorzugt Allele, die mit höherer reproduktiver Fitness assoziiert sind. Sie ist die einzige **gerichtete** Kraft: Allelfrequenzveränderungen gehen systematisch in Richtung höherer Fitness. In großen Populationen dominiert Selektion über Gendrift.
 
-**3. Gendrift** (zufällig, stärker in kleinen Populationen): In endlichen Populationen gibt es zufällige Schwankungen der Allelfrequenzen von Generation zu Generation — durch die Stichprobennatur der Reproduktion. In **kleinen Populationen** sind diese Schwankungen stark und können zur zufälligen **Fixierung** (Allel bei 100 %) oder **Elimination** (Allel bei 0 %) eines Allels führen, unabhängig von der Fitness. Zwei Sonderfälle: Flaschenhals-Effekt und Gründereffekt (→ nächster Abschnitt).
+**3. Gendrift** (zufällig, stärker in kleinen Populationen): In endlichen Populationen gibt es zufällige Schwankungen der Allelfrequenzen von Generation zu Generation — durch die Stichprobennatur der Reproduktion. In **kleinen Populationen** sind diese Schwankungen stark und können zur zufälligen **Fixierung** (Allel bei 100 %) oder **Elimination** (Allel bei 0 %) eines Allels führen, unabhängig von der Fitness. Zwei Sonderfälle: **Flaschenhals-Effekt** (drastische Populationsreduktion) und **Gründereffekt** (neue Population aus wenigen Individuen) (→ nächster Abschnitt).
 
 **4. Genfluss** (homogenisierend): Genfluss bezeichnet den Transfer von Allelen durch Migration von Individuen zwischen Populationen. Er gleicht Allelfrequenzunterschiede zwischen Populationen aus (**Homogenisierung**) und wirkt damit der Divergenz und Artbildung entgegen. Geografische Isolation unterbricht den Genfluss — das ist der erste Schritt allopatrischer Artbildung.
 
@@ -556,7 +556,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
 
 {{DIAGRAM:pedigree-analysis}}
 
-**Reproduktive Isolation** verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
+**Reproduktive Isolation** (Unfähigkeit zur Kreuzung zwischen Populationen) verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
 
 **Präzygotische Isolation** (vor Bildung der Zygote) — verhindert die Befruchtung selbst:
 - **Geografische Isolation**: physische Barrieren (Gebirge, Ozean, Fluss) verhindern Kontakt
@@ -1255,7 +1255,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 1. **Ankunft des Spermiums:** Das kapazitierte Spermium bindet an die **Zona pellucida** (eine glycoproteinreiche Hülle um die Eizelle). Das Protein **ZP3** auf der Zona löst die Akrosomreaktion aus.
 
-2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin**, **Hyaluronidase**). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
+2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin** (Protease, verdaut Zona pellucida), **Hyaluronidase** (spaltet Hyaluronsäure der Eizellhülle)). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
 
 {{DIAGRAM:cell-membrane}}
 
@@ -1484,7 +1484,7 @@ Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–
 
 **Schritte (vereinfacht):**
 1. Am **kaudalen** (schwanzwärtigen) Ende der Keimscheibe bildet sich der **Primitivstreifen** — eine Verdickung von Epiblastzellen in der Mittellinie. Er legt die **Körperachsen** fest (kranial-kaudal, dorsal-ventral, links-rechts). Kranial (kopfwärts) davon liegt der **Primitivknoten** (Hensen-Knoten).
-2. **Epiblastzellen** wandern zum Primitivstreifen, dringen durch die **Primitivrinne** ein (**Invagination**) und wandern zwischen Epiblast und Hypoblast. Diese Zellen bilden das **Mesoderm** (mittleres Keimblatt).
+2. **Epiblastzellen** wandern zum Primitivstreifen, dringen durch die **Primitivrinne** ein (**Invagination**, Einstülpung nach innen) und wandern zwischen Epiblast und Hypoblast. Diese Zellen bilden das **Mesoderm** (mittleres Keimblatt).
 3. Ein Teil der eingewanderten Zellen **verdrängt den Hypoblast** und bildet das **definitive Endoderm** (inneres Keimblatt). Der ursprüngliche Hypoblast wird ersetzt.
 4. Die **auf der Oberfläche verbleibenden** Epiblastzellen werden zum **Ektoderm** (äußeres Keimblatt).
 

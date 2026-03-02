@@ -912,7 +912,7 @@ Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sic
 | IgG | Serum (75%), plazentagängig | Häufigster Antikörper, Sekundärantwort, überwindet Plazenta (maternaler Schutz) |
 | IgA | Sekrete (Speichel, Muttermilch, Tränen), Serum | Schützt Schleimhäute, dimerisch in Sekreten |
 | IgM | Serum | Pentamer (10 Bindestellen), erste Reaktion (Primärantwort), starker Komplementaktivator |
-| IgE | Sehr wenig im Serum | Bindet Mastzellen und Basophile → Allergie (Typ I), Parasitenabwehr |
+| IgE | Sehr wenig im Serum | Bindet Mastzellen (Gewebezellen mit Histamingranula) und Basophile (granulaere Leukozyten) → Allergie (Typ I), Parasitenabwehr |
 | IgD | B-Zell-Oberfläche | B-Zell-Aktivierung (Signalübertragung), selten im Serum |
 
 
@@ -920,7 +920,7 @@ Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sic
 
 ## IgM — Der erste Responder
 
-IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Primärantwort) und ein wichtiger diagnostischer Marker für akute Infektionen. IgM ist ein Pentamer aus fünf Ig-Monomeren, verbunden durch eine J-Kette — es hat daher 10 Antigenbindestellen (decavalent). Dies kompensiert die etwas geringere Affinität jeder einzelnen Bindestelle durch Avidität (Gesamtbindungsstärke durch viele schwache Bindungen). IgM ist ein besonders starker Komplementaktivator, da pro Antikörper zwei benachbarte Fc-Stücke nötig sind, um C1q zu binden — und IgM bietet viele Fc-Stücke in räumlicher Nähe. IgM kann die Plazenta nicht überwinden (zu groß). Im Serum: IgM-Nachweis → akute Infektion; IgG-Nachweis → durchgemachte Infektion oder Impfung.
+IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Primärantwort) und ein wichtiger diagnostischer Marker für akute Infektionen. IgM ist ein Pentamer (Fünferstruktur) aus fünf Ig-Monomeren, verbunden durch eine J-Kette — es hat daher 10 Antigenbindestellen (decavalent, zehn Bindungsstellen). Dies kompensiert die etwas geringere Affinität jeder einzelnen Bindestelle durch Avidität (Gesamtbindungsstärke durch viele schwache Bindungen). IgM ist ein besonders starker Komplementaktivator, da pro Antikörper zwei benachbarte Fc-Stücke nötig sind, um C1q zu binden — und IgM bietet viele Fc-Stücke in räumlicher Nähe. IgM kann die Plazenta nicht überwinden (zu groß). Im Serum: IgM-Nachweis → akute Infektion; IgG-Nachweis → durchgemachte Infektion oder Impfung.
 
 > **Merke:** IgM: Pentamer, 10 Bindestellen, erster Responder (Primärantwort), starker Komplementaktivator, kann Plazenta nicht passieren.
 
@@ -932,7 +932,7 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
-> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine.`,
+> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine (entzündungsfördernde Spaltprodukte).`,
       lernziele: [
         "Den Aufbau eines IgG-Antikörpers (schwere/leichte Ketten, Fab/Fc, Disulfidbrücken) beschreiben",
         "Die fünf Immunglobulin-Klassen und ihre jeweiligen Hauptfunktionen nennen",

@@ -791,20 +791,57 @@ function EmotionenRegulierenQuiz({
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
             Welche Strategie ist am besten geeignet?
           </p>
-          <div className="space-y-2">
-            {q.strategien.map((s, si) => (
-              <button
-                key={si}
-                onClick={() => setAnswers((p) => ({ ...p, [q.id]: si }))}
-                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                  answers[q.id] === si
-                    ? "border-amber-500 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
-              >
-                {s.text}
-              </button>
-            ))}
+          <div className="overflow-x-auto">
+            <table className="w-full border border-border dark:border-gray-600 text-sm">
+              <thead>
+                <tr className="bg-muted/50">
+                  <th className="border-b border-r border-border dark:border-gray-600 p-2 w-16 text-left">
+                    Nr.
+                  </th>
+                  <th className="border-b border-r border-border dark:border-gray-600 p-2 text-left">
+                    Strategie
+                  </th>
+                  <th className="border-b border-border dark:border-gray-600 p-2 w-16 text-center">
+                    Wahl
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {q.strategien.map((s, si) => {
+                  const label = `${index + 1}${String.fromCharCode(65 + si)}`;
+                  const isSelected = answers[q.id] === si;
+                  return (
+                    <tr
+                      key={si}
+                      onClick={() => setAnswers((p) => ({ ...p, [q.id]: si }))}
+                      className={`cursor-pointer transition-colors ${
+                        isSelected
+                          ? "bg-amber-50 dark:bg-amber-900/20"
+                          : "hover:bg-gray-50 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      <td className="border-r border-b border-border dark:border-gray-600 p-2 font-medium text-gray-600 dark:text-gray-400">
+                        {label}
+                      </td>
+                      <td className="border-r border-b border-border dark:border-gray-600 p-2 text-gray-800 dark:text-gray-200">
+                        {s.text}
+                      </td>
+                      <td className="border-b border-border dark:border-gray-600 p-2 text-center">
+                        <div
+                          className={`w-6 h-6 mx-auto rounded border-2 flex items-center justify-center transition-colors ${
+                            isSelected
+                              ? "border-amber-500 bg-amber-500 text-white"
+                              : "border-gray-300 dark:border-gray-600"
+                          }`}
+                        >
+                          {isSelected && <span className="text-xs font-bold">✕</span>}
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </CardContent>
       </Card>
@@ -1196,46 +1233,70 @@ function SozialesEntscheidenQuiz({
             Wie wichtig sind Ihrer Meinung nach die folgenden Überlegungen für diese
             Entscheidungssituation? Ordnen Sie die Überlegungen A) bis E) der Wichtigkeit nach,
             wobei <strong>1</strong> die (relativ) wichtigste und <strong>5</strong> die am
-            wenigsten wichtige Überlegung ist. Entscheiden Sie sich für eine eindeutige Ordnung –
-            Sie können nicht zwei Überlegungen auf die gleiche Wichtigkeitsstufe stellen.
+            wenigsten wichtige Überlegung ist.
           </p>
-          <div className="space-y-3">
+          <div className="space-y-3 mb-4">
             {q.aussagen.map((a, ai) => {
               const label = String.fromCharCode(65 + ai);
               return (
-                <div
-                  key={ai}
-                  className="flex flex-col sm:flex-row sm:items-center gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
-                >
-                  <div className="flex gap-1 flex-wrap">
-                    {[1, 2, 3, 4, 5].map((rank) => {
-                      const isSelected = currentRanking[ai] === rank;
-                      const isUsed = Object.values(currentRanking).includes(rank) && !isSelected;
-                      return (
-                        <button
-                          key={rank}
-                          onClick={() => setRank(q.id, ai, rank)}
-                          disabled={isUsed}
-                          className={`w-8 h-8 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
-                            isSelected
-                              ? "bg-blue-500 text-white"
-                              : isUsed
-                                ? "bg-gray-100 dark:bg-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed"
-                                : "bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/20"
-                          }`}
-                        >
-                          {rank}
-                        </button>
-                      );
-                    })}
-                  </div>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">
-                    <span className="font-semibold text-gray-900 dark:text-gray-100">{label})</span>{" "}
-                    {a.text}
-                  </p>
-                </div>
+                <p key={ai} className="text-sm text-gray-700 dark:text-gray-300">
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">{label})</span>{" "}
+                  &bdquo;{a.text}&ldquo;
+                </p>
               );
             })}
+          </div>
+          <div className="overflow-x-auto">
+            <table className="border border-border dark:border-gray-600 text-sm mx-auto">
+              <thead>
+                <tr className="bg-muted/50">
+                  <th className="border-b border-r border-border dark:border-gray-600 p-2 w-12"></th>
+                  {[1, 2, 3, 4, 5].map((rank) => (
+                    <th
+                      key={rank}
+                      className="border-b border-border dark:border-gray-600 p-2 w-12 text-center font-semibold"
+                    >
+                      {rank}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {q.aussagen.map((_, ai) => {
+                  const label = String.fromCharCode(65 + ai);
+                  return (
+                    <tr key={ai}>
+                      <td className="border-r border-b border-border dark:border-gray-600 p-2 font-semibold text-center">
+                        {label}
+                      </td>
+                      {[1, 2, 3, 4, 5].map((rank) => {
+                        const isSelected = currentRanking[ai] === rank;
+                        const isUsedByOther =
+                          !isSelected &&
+                          Object.entries(currentRanking).some(
+                            ([k, v]) => Number(k) !== ai && v === rank
+                          );
+                        return (
+                          <td
+                            key={rank}
+                            onClick={() => !isUsedByOther && setRank(q.id, ai, rank)}
+                            className={`border border-border dark:border-gray-600 p-2 text-center cursor-pointer transition-colors ${
+                              isSelected
+                                ? "bg-blue-500 text-white"
+                                : isUsedByOther
+                                  ? "bg-gray-100 dark:bg-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed"
+                                  : "hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                            }`}
+                          >
+                            {isSelected && <span className="font-bold">✕</span>}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </CardContent>
       </Card>

@@ -108,7 +108,7 @@ Der **Ionenradius** ist ein zentraler Parameter fuer Gitterenergie, Koordination
 
 ## Struktur des Ionenkristalls
 
-Ionenverbindungen bilden **Ionengitter** mit regelmaessiger, periodischer Anordnung. Im **NaCl-Gitter** (kubisch-flaechenzentriert) ist jedes Na+ von 6 Cl- umgeben und umgekehrt -- Koordinationszahl 6. Im CsCl-Gitter (kubisch-raumzentriert) betraegt die Koordinationszahl 8 (groessere Ionen passen besser).
+Ionenverbindungen bilden **Ionengitter** mit regelmaessiger, periodischer Anordnung. Im **NaCl-Gitter** (kubisch-flaechenzentriert) ist jedes Na+ von 6 Cl- umgeben und umgekehrt -- Koordinationszahl (Zahl nächster Nachbaratome) 6. Im CsCl-Gitter (kubisch-raumzentriert) betraegt die Koordinationszahl 8 (groessere Ionen passen besser).
 
 Die Packungsgeometrie haengt vom **Radienverhältnis** r+/r- ab:
 - r+/r- < 0,41 -> tetraedrische Koordination (Zinkblende-Typ, KZ = 4)
