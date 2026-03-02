@@ -484,13 +484,28 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
   };
 }
 
-/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit). */
+/** MedAT difficulty distribution: 40% leicht, 40% mittel, 20% schwer. */
+function zfDifficultyForIndex(i: number): DifficultyLevel {
+  const pattern: DifficultyLevel[] = [
+    "easy",
+    "easy",
+    "medium",
+    "medium",
+    "easy",
+    "medium",
+    "easy",
+    "hard",
+    "medium",
+    "hard",
+  ];
+  return pattern[i % 10]!;
+}
+
+/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 40/40/20). */
 export function generateSequenceTaskSet(count: number, baseSeed: number): SequenceTask[] {
   const out: SequenceTask[] = [];
-  const levels: DifficultyLevel[] = ["easy", "medium", "hard"];
   for (let i = 0; i < count; i++) {
-    const diff = levels[i % 3];
-    out.push(generateSequenceTask(diff, baseSeed + i * 7919));
+    out.push(generateSequenceTask(zfDifficultyForIndex(i), baseSeed + i * 7919));
   }
   return out;
 }

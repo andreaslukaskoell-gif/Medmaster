@@ -100,6 +100,16 @@ type KffView =
   | "figuren-quiz";
 type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüssigkeit" | "figuren";
 
+/**
+ * MedAT difficulty distribution: 40% leicht, 40% mittel, 20% schwer.
+ * Returns the difficulty for task index i in a deterministic repeating pattern.
+ */
+function difficultyForIndex<T>(i: number, levels: [T, T, T]): T {
+  // Pattern of 10: 4× easy, 4× medium, 2× hard → 40/40/20
+  const pattern = [0, 0, 1, 1, 0, 1, 0, 2, 1, 2] as const;
+  return levels[pattern[i % 10]!]!;
+}
+
 const QUICK_START_VIEWS: Record<string, KffView> = {
   zahlenfolgen: "zahlenfolgen",
   implikationen: "implikationen",
@@ -1489,7 +1499,7 @@ function ImplikationenQuiz({
         const levels: (1 | 2 | 3)[] = [1, 2, 3];
         const generated: ImplikationTask[] = [];
         for (let i = 0; i < questionCount; i++) {
-          const t = generateImplicationTrainingTask(levels[i % 3]!);
+          const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
           t.id = t.id ?? `imp-client-${Date.now()}-${i}`;
           generated.push(t);
         }
@@ -1619,7 +1629,7 @@ function ImplikationenQuiz({
                     const levels: (1 | 2 | 3)[] = [1, 2, 3];
                     const generated: ImplikationTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
-                      const t = generateImplicationTrainingTask(levels[i % 3]!);
+                      const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
                       t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
                       generated.push(t);
                     }
@@ -1646,7 +1656,7 @@ function ImplikationenQuiz({
                   const levels: (1 | 2 | 3)[] = [1, 2, 3];
                   const generated: ImplikationTask[] = [];
                   for (let i = 0; i < EXAM_CONFIG.implikationen.questions; i++) {
-                    const t = generateImplicationTrainingTask(levels[i % 3]!);
+                    const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
                     t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
                     generated.push(t);
                   }
@@ -2068,7 +2078,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
         const levels: (1 | 2 | 3)[] = [1, 2, 3];
         const generated: WordFluencyTask[] = [];
         for (let i = 0; i < questionCount; i++) {
-          const t = generateWordFluencyTask(levels[i % 3]!);
+          const t = generateWordFluencyTask(difficultyForIndex(i, levels));
           t.id = t.id ?? `wf-client-${Date.now()}-${i}`;
           generated.push(t);
         }
@@ -2208,7 +2218,7 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
                     const levels: (1 | 2 | 3)[] = [1, 2, 3];
                     const generated: WordFluencyTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
-                      const t = generateWordFluencyTask(levels[i % 3]!);
+                      const t = generateWordFluencyTask(difficultyForIndex(i, levels));
                       t.id = t.id ?? `wf-exam-${Date.now()}-${i}`;
                       generated.push(t);
                     }
@@ -2630,7 +2640,11 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
         const seed = Date.now();
         const generated: FigureAssembleTask[] = [];
         for (let i = 0; i < Math.min(questionCount, 150); i++) {
-          const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+          const t = generateFigurenTrainingSet(
+            1,
+            difficultyForIndex(i, levels),
+            seed + i * 7919
+          )[0];
           if (t) generated.push(t);
         }
         valid = shuffleSlice(filterValidFigurenTasks(generated), Math.min(questionCount, 150));
@@ -2786,7 +2800,11 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     const seed = Date.now();
                     const generated: FigureAssembleTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
-                      const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+                      const t = generateFigurenTrainingSet(
+                        1,
+                        difficultyForIndex(i, levels),
+                        seed + i * 7919
+                      )[0];
                       if (t) generated.push(t);
                     }
                     valid = [...valid, ...filterValidFigurenTasks(generated)];
@@ -2808,7 +2826,11 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                   const seed = Date.now();
                   const generated: FigureAssembleTask[] = [];
                   for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {
-                    const t = generateFigurenTrainingSet(1, levels[i % 3]!, seed + i * 7919)[0];
+                    const t = generateFigurenTrainingSet(
+                      1,
+                      difficultyForIndex(i, levels),
+                      seed + i * 7919
+                    )[0];
                     if (t) generated.push(t);
                   }
                   setQuestions(

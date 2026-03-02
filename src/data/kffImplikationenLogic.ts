@@ -9,7 +9,12 @@
 // ─── Kanonisches Datenmodell (A) – erzwingt exakte Mengenbeziehungen ──────────
 
 /** Exakte formale Mengenbeziehung zwischen zwei Mengen (für Prämissen). */
-export type SetRelationName = "A_in_B" | "B_in_A" | "A_overlap_B" | "A_disjoint_B";
+export type SetRelationName =
+  | "A_in_B"
+  | "B_in_A"
+  | "A_overlap_B"
+  | "A_disjoint_B"
+  | "A_notSubset_B";
 
 export type Premise = { left: string; right: string; relation: SetRelationName };
 
@@ -157,6 +162,11 @@ function parsePremiseToSetRels(p: string): SetRel[] | null {
   if (someIn) {
     return [{ type: "SOME", a: someIn[1]!.trim(), b: someIn[2]!.trim() }];
   }
+  // "Keine X sind Y" → NONE(X,Y)
+  const noneAre = /^Keine (.+?) sind (.+?)$/i.exec(s);
+  if (noneAre) {
+    return [{ type: "NONE", a: noneAre[1]!.trim(), b: noneAre[2]!.trim() }];
+  }
   return null;
 }
 
@@ -187,6 +197,7 @@ export function buildRelationModelFromPremises(
 function setRelToPremise(r: SetRel): Premise {
   if (r.type === "ALL") return { left: r.a, right: r.b, relation: "A_in_B" };
   if (r.type === "NONE") return { left: r.a, right: r.b, relation: "A_disjoint_B" };
+  if (r.type === "NOT_ALL") return { left: r.a, right: r.b, relation: "A_notSubset_B" };
   return { left: r.a, right: r.b, relation: "A_overlap_B" };
 }
 
@@ -255,6 +266,10 @@ export function buildConcreteModel(
         break;
       case "A_overlap_B":
         atLeastOneNonEmpty.push(regionsInBoth(li, ri));
+        break;
+      case "A_notSubset_B":
+        // NOT_ALL: at least one element in left but NOT in right
+        atLeastOneNonEmpty.push(regionsInLeftNotRight(li, ri));
         break;
     }
   }
@@ -335,11 +350,22 @@ function getRelation(
   a: string,
   b: string
 ): SetRelationType | null {
-  const key = pairKey(a, b);
   for (const r of model.relations) {
-    if (pairKey(r.a, r.b) === key) return setRelToRelationType(r);
+    if (r.type === "NOT_ALL") continue;
+    if (r.type === "ALL") {
+      // ALL is directional: r.a ⊆ r.b — only match if query direction matches
+      if (r.a === a && r.b === b) return "subset";
+      continue;
+    }
+    // SOME and NONE are symmetric
+    if (pairKey(r.a, r.b) === pairKey(a, b)) return setRelToRelationType(r);
   }
   return null;
+}
+
+/** Check if model has a NOT_ALL(a,b) premise (directional: a ⊄ b). */
+function hasNotAll(model: ImplicationRelationModel, a: string, b: string): boolean {
+  return model.relations.some((r) => r.type === "NOT_ALL" && r.a === a && r.b === b);
 }
 
 // ─── Layout-Topologie: welche Relation pro Layout zwischen Indizes gilt ───────
@@ -423,35 +449,10 @@ export function layoutSatisfiesConstraints(
     const impl = impliedMap.get(key);
     if (impl !== "overlap" && impl !== "subset") return false;
   }
-  // NOT_ALL: layout must NOT have a as subset of b (directed check)
+  // NOT_ALL(a,b): layout must NOT have a ⊆ b (directed check)
   for (const [a, b] of constraints.notSubset) {
-    // Find which index a and b map to in labels
-    const ia = labels.indexOf(a);
-    const ib = labels.indexOf(b);
-    if (ia < 0 || ib < 0) continue;
-    // Check if layout implies subset from ia to ib
     for (const rel of implied) {
-      if (rel.i === ia && rel.j === ib && rel.type === "subset") return false;
-      if (rel.j === ia && rel.i === ib && rel.type === "subset") {
-        // subset is directed: i subset of j. Check if a maps to i position
-        // In our layout, subset means circle[i] inside circle[j]
-        // We need a(=ia) NOT inside b(=ib)
-      }
-    }
-    // More precise: check if implied says labels[ia] is subset of labels[ib]
-    const key = pairKey(a, b);
-    const impl = impliedMap.get(key);
-    if (impl === "subset") {
-      // Need to check direction — subset in our layout means circle[smaller_idx] inside circle[larger_idx]
-      // But our implied relations use index pairs, and subset means i inside j
-      // Since normPair sorts, we need to verify direction
-      for (const rel of implied) {
-        if (rel.type === "subset") {
-          const relA = labels[rel.i]!;
-          const relB = labels[rel.j]!;
-          if (relA === a && relB === b) return false; // a inside b — violates NOT_ALL
-        }
-      }
+      if (rel.type === "subset" && labels[rel.i] === a && labels[rel.j] === b) return false;
     }
   }
   return true;
@@ -538,11 +539,14 @@ export function isConclusionEntailed(
   const sub = subject.trim();
   const obj = object.trim();
   const rel = (a: string, b: string) => getRelation(model, a, b);
-  const subset = (a: string, b: string) => rel(a, b) === "subset";
+  const subset = (a: string, b: string) => rel(a, b) === "subset"; // a ⊆ b (directional)
   const disjoint = (a: string, b: string) => rel(a, b) === "disjoint";
   const overlap = (a: string, b: string) => {
     const r = rel(a, b);
-    return r === "overlap" || r === "subset";
+    if (r === "overlap" || r === "subset") return true;
+    // Reverse: if b ⊆ a, then a∩b = b ≠ ∅ (overlap)
+    if (rel(b, a) === "subset") return true;
+    return false;
   };
 
   if (conclusionType === "none") return false;
@@ -557,15 +561,29 @@ export function isConclusionEntailed(
   }
 
   if (conclusionType === "some") {
-    if (overlap(sub, obj)) return true;
-    for (const set of model.sets) {
-      if (overlap(sub, set) && subset(set, obj)) return true;
-      if (subset(sub, set) && overlap(set, obj)) return true;
+    let entailed = false;
+    if (overlap(sub, obj)) entailed = true;
+    if (!entailed) {
+      for (const set of model.sets) {
+        if (overlap(sub, set) && subset(set, obj)) {
+          entailed = true;
+          break;
+        }
+        if (subset(sub, set) && overlap(set, obj)) {
+          entailed = true;
+          break;
+        }
+      }
     }
-    return false;
+    if (!entailed) return false;
+    // MedAT: "Einige" is dominated by "Alle" for same pair — don't count as uniquely entailed
+    if (isConclusionEntailed(model, "all", sub, obj)) return false;
+    return true;
   }
 
   if (conclusionType === "some-not") {
+    // Direct: NOT_ALL(sub, obj) as premise entails "Einige sub sind keine obj"
+    if (hasNotAll(model, sub, obj)) return true;
     if (disjoint(sub, obj)) return true;
     if (subset(sub, obj)) return false;
     if (overlap(sub, obj)) return true;
@@ -586,6 +604,15 @@ export function parseConclusion(
   if (/^Keine der Schlussfolgerungen/i.test(s)) {
     return { type: "none", subject: "", object: "" };
   }
+  // WICHTIG: "keine"-Varianten ZUERST prüfen (sonst matcht "sind" vor "sind keine")
+  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
+  if (someNot) {
+    return {
+      type: "some-not",
+      subject: someNot[1]!.trim(),
+      object: someNot[2]!.trim(),
+    };
+  }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
     return {
@@ -600,14 +627,6 @@ export function parseConclusion(
       type: "some",
       subject: someIn[1]!.trim(),
       object: someIn[2]!.trim(),
-    };
-  }
-  const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
-  if (someNot) {
-    return {
-      type: "some-not",
-      subject: someNot[1]!.trim(),
-      object: someNot[2]!.trim(),
     };
   }
   return null;
