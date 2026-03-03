@@ -10,7 +10,7 @@ export type AllergyPass = {
   name: string;
   birthdate: string; // z.B. "17.12.2003"
   bloodGroup: BloodGroup;
-  medications: string[];
+  medications: boolean;
   allergies: string[];
   passportNumber: string;
   country: string;

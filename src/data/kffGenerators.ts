@@ -784,15 +784,12 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
     const numAllergies = randInt(1, 3);
     const allergien = shuffle([...ALLERGIES]).slice(0, numAllergies);
 
-    const numMeds = randInt(0, 2);
-    const medications = numMeds === 0 ? [] : shuffle([...MEDICATIONS]).slice(0, numMeds);
-
     passes.push({
       id: `gm-pass-${i + 1}-${Date.now()}`,
       name,
       birthdate: generateDate(),
       bloodGroup: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
-      medications,
+      medications: Math.random() > 0.5,
       allergies: allergien,
       passportNumber,
       country: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
@@ -810,9 +807,6 @@ export function generateGedaechtnisQuestionsFromPasses(
 ): GedaechtnisQuestion[] {
   const questions: GedaechtnisQuestion[] = [];
   const usedCombos = new Set<string>();
-  const allMeds = new Set(passes.flatMap((x) => x.medications));
-  const medsNotUsed = MEDICATIONS.filter((m) => !allMeds.has(m));
-
   const builders: Array<
     (p: AllergyPass) => { question: string; correct: string; pool: string[]; allowE?: boolean }
   > = [
@@ -832,10 +826,9 @@ export function generateGedaechtnisQuestionsFromPasses(
       pool: [...new Set(passes.flatMap((x) => x.allergies))],
     }),
     (p) => ({
-      question: `Welche Person nimmt das Medikament ${p.medications[0] ?? "Unbekannt"}?`,
-      correct: p.medications.length > 0 ? p.name : "",
-      pool: passes.map((x) => x.name),
-      allowE: true,
+      question: `Nimmt ${p.name} regelmäßig Medikamente ein?`,
+      correct: p.medications ? "Ja" : "Nein",
+      pool: ["Ja", "Nein"],
     }),
     (p) => ({
       question: `Welche Ausweisnummer gehört zu ${p.name}?`,
@@ -857,12 +850,6 @@ export function generateGedaechtnisQuestionsFromPasses(
       correct: p.name,
       pool: passes.map((x) => x.name),
     }),
-    (p) => ({
-      question: `Welche Medikamente nimmt ${p.name}?`,
-      correct: p.medications.length > 0 ? p.medications.join(", ") : "Keine",
-      pool: ["Keine", ...passes.flatMap((x) => x.medications).filter((m) => m)].filter(Boolean),
-      allowE: true,
-    }),
   ];
 
   let attempts = 0;
@@ -878,23 +865,14 @@ export function generateGedaechtnisQuestionsFromPasses(
 
     const b = builders[builderIdx](p);
     const wrongPool = b.pool.filter((x) => x !== b.correct);
-    const useE =
-      b.allowE &&
-      Math.random() < 0.15 &&
-      (builderIdx === 3 ? medsNotUsed.length > 0 : wrongPool.length >= 4);
+    const useE = b.allowE && Math.random() < 0.15 && wrongPool.length >= 4;
 
     let questionText = b.question;
     const correctVal = b.correct;
     let options: string[];
     let correctIndex: number;
 
-    if (useE && builderIdx === 3 && medsNotUsed.length > 0) {
-      const fakeMed = medsNotUsed[randInt(0, medsNotUsed.length - 1)];
-      questionText = `Welche Person nimmt das Medikament ${fakeMed}?`;
-      const fourNames = shuffle(passes.map((x) => x.name)).slice(0, 4);
-      options = shuffle([...fourNames, OPTION_E_LABEL]);
-      correctIndex = 4;
-    } else if (useE && wrongPool.length >= 4) {
+    if (useE && wrongPool.length >= 4) {
       const wrong = shuffle(wrongPool).slice(0, 4);
       options = shuffle([...wrong, OPTION_E_LABEL]);
       correctIndex = 4;

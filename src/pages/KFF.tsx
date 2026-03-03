@@ -932,7 +932,7 @@ function AllergyPassCard({ pass }: { pass: AllergyPass }) {
               Medikamenteneinnahme:
             </span>{" "}
             <span className="text-gray-800 dark:text-gray-200">
-              {pass.medications.length ? pass.medications.join(", ") : "nein"}
+              {pass.medications ? "Ja" : "Nein"}
             </span>
           </div>
           <div>
