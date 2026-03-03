@@ -187,7 +187,8 @@ interface SidebarProps {
 }
 
 export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
-  const { user, signOut } = useAuth();
+  const { user, signOut, deleteAccount } = useAuth();
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -653,14 +654,49 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
       {/* Footer */}
       <div className="px-4 py-3 border-t border-[var(--border)]">
         {user && (
-          <button
-            type="button"
-            onClick={signOut}
-            className="flex items-center gap-2.5 w-full px-3 py-2 rounded-lg text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
-          >
-            <LogOut className="w-3.5 h-3.5 shrink-0" />
-            Abmelden
-          </button>
+          <div className="space-y-1">
+            <button
+              type="button"
+              onClick={signOut}
+              className="flex items-center gap-2.5 w-full px-3 py-2 rounded-lg text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+            >
+              <LogOut className="w-3.5 h-3.5 shrink-0" />
+              Abmelden
+            </button>
+            {!showDeleteConfirm ? (
+              <button
+                type="button"
+                onClick={() => setShowDeleteConfirm(true)}
+                className="flex items-center gap-2.5 w-full px-3 py-1.5 rounded-lg text-[10px] font-medium text-red-400 hover:text-red-500 hover:bg-red-500/5 transition-colors cursor-pointer"
+              >
+                Konto löschen
+              </button>
+            ) : (
+              <div className="px-3 py-2 rounded-lg bg-red-500/10 border border-red-500/20 space-y-2">
+                <p className="text-[10px] text-red-400">
+                  Alle Daten werden unwiderruflich gelöscht. Bist du sicher?
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      await deleteAccount();
+                    }}
+                    className="text-[10px] font-medium text-red-500 hover:text-red-600 cursor-pointer"
+                  >
+                    Ja, löschen
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowDeleteConfirm(false)}
+                    className="text-[10px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] cursor-pointer"
+                  >
+                    Abbrechen
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         )}
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 pt-2 text-[10px] text-[var(--muted)] opacity-70">
           <RouterLink to="/impressum" onClick={onClose} className="hover:underline">

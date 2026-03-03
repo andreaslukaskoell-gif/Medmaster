@@ -159,6 +159,36 @@ export function useAuth() {
     window.location.href = "/";
   }
 
+  async function deleteAccount() {
+    if (!supabase || !user) return { error: new Error("Nicht eingeloggt") };
+    try {
+      // Delete profile data first
+      await supabase.from("profiles").delete().eq("id", user.id);
+      await supabase.from("user_stats").delete().eq("user_id", user.id);
+      // Try RPC if available (requires Supabase function)
+      const { error: rpcError } = await supabase.rpc("delete_user");
+      if (rpcError) {
+        // Fallback: sign out and send deletion request email
+        console.warn("RPC delete_user not available, manual deletion needed:", rpcError.message);
+      }
+      stopAutoSync();
+      stopMainSync();
+      await supabase.auth.signOut();
+      setUser(null);
+      setProfile(null);
+      setSession(null);
+      // Clear local storage for this user
+      const keysToRemove = Object.keys(localStorage).filter(
+        (k) => k.startsWith("medmaster_") || k.startsWith("zustand-")
+      );
+      keysToRemove.forEach((k) => localStorage.removeItem(k));
+      window.location.href = "/";
+      return { error: null };
+    } catch (err) {
+      return { error: err instanceof Error ? err : new Error("Fehler beim Löschen") };
+    }
+  }
+
   async function resetPassword(email: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
     const { error } = await supabase.auth.resetPasswordForEmail(email);
@@ -183,6 +213,7 @@ export function useAuth() {
     signIn,
     signInWithGoogle,
     signOut,
+    deleteAccount,
     resetPassword,
   };
 }

@@ -328,50 +328,78 @@ function AGB() {
         oder einzuschränken, soweit die Hauptleistung nicht entfällt.
       </p>
 
-      <h2>3. Registrierung und Konto</h2>
+      <h2>3. Zustandekommen des Vertrags</h2>
+      <p>
+        Der Vertrag kommt durch Abschluss des Registrierungsprozesses auf medmaster.at zustande. Mit
+        Klick auf „Konto erstellen" geben Sie ein verbindliches Angebot ab. Die automatisch
+        generierte Bestätigungs-E-Mail stellt die Annahme dar und begründet den Vertrag. Die AGB
+        sowie Ihre Bestelldaten werden Ihnen per E-Mail zugesandt.
+      </p>
+
+      <h2>4. Registrierung und Konto</h2>
       <p>
         Zur Nutzung bestimmter Funktionen ist eine Registrierung erforderlich. Sie verpflichten
         sich, wahrheitsgemäße Angaben zu machen und Ihr Passwort geheim zu halten. Das Konto ist
-        persönlich und nicht übertragbar. Der Betreiber ist berechtigt, Konten bei Verstößen gegen
-        diese AGB oder bei Missbrauch zu sperren oder zu löschen.
+        persönlich und nicht übertragbar. Eine Weitergabe der Zugangsdaten an Dritte ist untersagt
+        und führt zur sofortigen Sperrung des Kontos. Sie dürfen Ihr Konto auf mehreren eigenen
+        Geräten (PC, Smartphone, Tablet) nutzen. Der Betreiber ist berechtigt, Konten bei Verstößen
+        gegen diese AGB oder bei Missbrauch zu sperren oder zu löschen.
       </p>
 
-      <h2>4. Kostenlose und kostenpflichtige Nutzung</h2>
+      <h2>5. Preise und Zahlung</h2>
       <p>
         Ein Teil des Dienstes kann kostenlos genutzt werden. Für erweiterte Funktionen (z.B.
         Standard- oder Pro-Tarif) gelten die zum Zeitpunkt des Abschlusses auf der Website
-        angegebenen Preise und Laufzeiten. Die Bezahlung erfolgt über Stripe; es gelten die
-        Zahlungsbedingungen des jeweiligen Tarifs (monatlich/jährlich, automatische Verlängerung
-        sofern nicht gekündigt).
+        angegebenen Preise inkl. gesetzlicher Umsatzsteuer. Die Bezahlung erfolgt über Stripe; es
+        gelten die Zahlungsbedingungen des jeweiligen Tarifs (monatlich/jährlich, automatische
+        Verlängerung sofern nicht gekündigt). Pro Buchung kann nur ein Gutschein eingelöst werden.
       </p>
 
-      <h2>5. Widerruf und Kündigung</h2>
+      <h2>6. Nutzungsbedingungen</h2>
       <p>
-        <strong>Verbraucher:</strong> Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen
-        vom Vertrag zurückzutreten (Widerrufsrecht). Die Frist beginnt mit dem Vertragsschluss. Zur
-        Wahrung der Frist genügt die rechtzeitige Absendung der Mitteilung (z.B. per E-Mail an
-        support@medmaster.at). Bei vor Vertragsende in Anspruch genommenen Leistungen kann ein
-        Wertersatz geschuldet sein.
+        Alle bereitgestellten Inhalte (Fragen, Texte, Grafiken, Übungen) sind ausschließlich über
+        den erworbenen Zugang nutzbar. Das Herunterladen, Reproduzieren, Weitergeben oder sonstige
+        Verwertung der Inhalte außerhalb der Plattform ist untersagt und kann rechtliche
+        Konsequenzen nach sich ziehen.
+      </p>
+
+      <h2>7. Widerruf und Kündigung</h2>
+      <p>
+        <strong>Widerrufsrecht (Verbraucher gem. FAGG):</strong> Sie haben das Recht, binnen 14
+        Tagen ohne Angabe von Gründen vom Vertrag zurückzutreten. Die Frist beginnt mit dem
+        Vertragsschluss. Zur Wahrung der Frist genügt die rechtzeitige Absendung der Mitteilung
+        (z.B. per E-Mail an support@medmaster.at). Haben Sie vor Ablauf der Widerrufsfrist mit der
+        Nutzung des Dienstes begonnen, kann ein angemessener Wertersatz für die bereits erbrachte
+        Leistung geschuldet sein.
       </p>
       <p>
         <strong>Kündigung:</strong> Abonnements können jederzeit zum Ende der laufenden
-        Abrechnungsperiode gekündigt werden (z.B. in den Kontoeinstellungen oder per E-Mail). Nach
-        Ablauf bleibt der Zugang bis zum Ende der bereits bezahlten Zeit bestehen; eine Verlängerung
+        Abrechnungsperiode gekündigt werden (in den Kontoeinstellungen oder per E-Mail). Nach Ablauf
+        bleibt der Zugang bis zum Ende der bereits bezahlten Zeit bestehen; eine Verlängerung
         erfolgt nicht.
       </p>
 
-      <h2>6. Haftung</h2>
+      <h2>8. Kontolöschung</h2>
       <p>
-        Der Betreiber haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit sowie für Schäden aus
-        der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei leichter Fahrlässigkeit
-        haftet er nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) und nur in
-        Höhe des vorhersehbaren, typischerweise eintretenden Schadens. Die Haftung für entgangenen
-        Gewinn und mittelbare Schäden ist ausgeschlossen, soweit nicht zwingend gehaftet wird. Die
-        Lerninhalte dienen der Vorbereitung; der Betreiber übernimmt keine Gewähr für den Erfolg bei
-        der Prüfung.
+        Sie können Ihr Konto jederzeit in den Kontoeinstellungen oder per E-Mail an
+        support@medmaster.at löschen lassen. Bei Löschung werden alle personenbezogenen Daten
+        (Profil, Lernfortschritt, Quiz-Ergebnisse) innerhalb von 30 Tagen unwiderruflich entfernt
+        (Art. 17 DSGVO). Ein aktives Abonnement wird zum Ende der bezahlten Laufzeit beendet.
       </p>
 
-      <h2>7. Urheberrecht und Nutzungsrechte</h2>
+      <h2>9. Haftung</h2>
+      <p>
+        Die Lerninhalte werden sorgfältig erstellt und aktuell gehalten. Der Betreiber übernimmt
+        jedoch keine Gewähr für Vollständigkeit und Richtigkeit. Insbesondere wird kein bestimmter
+        Lern- oder Prüfungserfolg garantiert. Bei technischen Störungen (die aufgrund der Natur des
+        Internets auftreten können) bemüht sich der Betreiber um schnellstmögliche
+        Wiederherstellung. Der Betreiber haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit
+        sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei
+        leichter Fahrlässigkeit haftet er nur bei Verletzung wesentlicher Vertragspflichten und nur
+        in Höhe des vorhersehbaren, typischerweise eintretenden Schadens.
+      </p>
+
+      <h2>10. Urheberrecht</h2>
       <p>
         Alle Inhalte der Plattform (Texte, Grafiken, Aufgaben, Strukturen) sind urheberrechtlich
         geschützt. Sie erhalten ein nicht ausschließliches, nicht übertragbares Recht zur Nutzung im
@@ -379,11 +407,13 @@ function AGB() {
         gewerbliche Nutzung außerhalb der Plattform ist nicht gestattet.
       </p>
 
-      <h2>8. Schlussbestimmungen</h2>
+      <h2>11. Schlussbestimmungen</h2>
       <p>
-        Es gilt das Recht der Republik Österreich unter Ausschluss des UN-Kaufrechts. Gerichtsstand
-        für Streitigkeiten ist, soweit gesetzlich zulässig, der Sitz des Betreibers. Sollte eine
-        Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
+        Es gilt das Recht der Republik Österreich unter Ausschluss des UN-Kaufrechts. Günstigere
+        zwingende Verbraucherschutzbestimmungen des Wohnsitzstaates des Nutzers bleiben unberührt
+        (Rom-I-VO 593/2008/EG). Gerichtsstand für Streitigkeiten ist, soweit gesetzlich zulässig,
+        Wien. Sollte eine Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen
+        unberührt; die unwirksame Bestimmung wird durch eine wirtschaftlich gleichwertige ersetzt.
         Änderungen dieser AGB werden auf dieser Seite veröffentlicht; bei wesentlichen Änderungen
         werden registrierte Nutzer per E-Mail informiert.
       </p>

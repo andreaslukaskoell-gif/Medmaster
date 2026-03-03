@@ -116,33 +116,88 @@ export default function SEK() {
       />
     );
 
+  const subtests = [
+    {
+      id: "erkennen" as const,
+      abbr: "EE",
+      title: "Emotionen erkennen",
+      desc: "Lies eine Situation und entscheide: Ist jede der 5 Emotionen wahrscheinlich oder unwahrscheinlich?",
+      meta: `${emotionenErkennenOffiziellAlle.length} Situationen | Alles-oder-Nichts-Wertung`,
+      taskCount: emotionenErkennenOffiziellAlle.length,
+      buttonLabel: "14 Aufgaben",
+      onStart: () => setView("erkennen-quiz"),
+      uebungId: "sek-emotionen-erkennen" as const,
+      instruction: OFFICIAL_EE_INSTRUCTION,
+      instructionTitle: "Offizielle Instruktion: Emotionen erkennen",
+    },
+    {
+      id: "regulieren" as const,
+      abbr: "ER",
+      title: "Emotionen regulieren",
+      desc: "Wähle die beste Bewältigungsstrategie aus 4 Optionen für die beschriebene Situation.",
+      meta: `${emotionenRegulierenOffiziellTasks.length} Szenarien | Prozentuale Wertung`,
+      taskCount: emotionenRegulierenOffiziellTasks.length,
+      buttonLabel: "12 Aufgaben",
+      onStart: () => setView("regulieren-quiz"),
+      uebungId: "sek-emotionen-regulieren" as const,
+      instruction: OFFICIAL_ER_INSTRUCTION,
+      instructionTitle: "Offizielle Instruktion: Emotionen regulieren",
+    },
+    {
+      id: "entscheiden" as const,
+      abbr: "SE",
+      title: "Soziales Entscheiden",
+      desc: "Ordne 5 Handlungsoptionen (A-E) nach ihrer Wichtigkeit in einer sozialen Situation.",
+      meta: `${sozialesEntscheidenTasks.length} Situationen | 14 Aufgaben, 21 Min`,
+      taskCount: sozialesEntscheidenTasks.length,
+      buttonLabel: "14 Aufgaben",
+      onStart: () => setView("entscheiden-quiz"),
+      uebungId: "sek-soziales-entscheiden" as const,
+      instruction: OFFICIAL_SE_INSTRUCTION,
+      instructionTitle: "Offizielle Instruktion: Soziales Entscheiden",
+    },
+  ];
+
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
+
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+        <h1 className="text-2xl font-bold" style={{ color: "var(--foreground)" }}>
           SEK — Sozial-emotionale Kompetenzen
         </h1>
-        <p className="text-muted mt-1">
-          Trainiere Emotionserkennung, Emotionsregulation und soziales Entscheiden.
+        <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
+          Trainiere die drei SEK-Untertests: Emotionen erkennen, regulieren und soziales
+          Entscheiden.
         </p>
         {dailyPlanSek != null && dailyPlanSek.length > 0 && (
-          <p className="text-sm text-primary-600 dark:text-primary-400 mt-2 font-medium">
+          <Badge variant="info" className="mt-2 text-xs font-normal">
             Lernplan heute:{" "}
             {dailyPlanSek
               .map((t) => `${t.label}: ${t.count} ${t.count === 1 ? "Beispiel" : "Beispiele"}`)
               .join(", ")}
-          </p>
+          </Badge>
         )}
       </div>
 
+      {/* Strategy Guide */}
       <Card>
         <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Strategie-Guide</h3>
-            <p className="text-sm text-muted">
-              Lerne die 7 Basisemotionen und Strategien für alle 3 SEK-Untertests
-            </p>
+          <div className="flex items-center gap-3">
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+              style={{ backgroundColor: "color-mix(in srgb, var(--accent) 15%, transparent)" }}
+            >
+              <BookOpen className="w-5 h-5" style={{ color: "var(--accent)" }} />
+            </div>
+            <div>
+              <h3 className="font-semibold" style={{ color: "var(--foreground)" }}>
+                Strategie-Guide
+              </h3>
+              <p className="text-sm" style={{ color: "var(--muted)" }}>
+                Die 7 Basisemotionen und Strategien für alle 3 Untertests
+              </p>
+            </div>
           </div>
           <Button
             variant="outline"
@@ -154,105 +209,51 @@ export default function SEK() {
         </CardContent>
       </Card>
 
-      <UebungsbeschreibungCard id="sek-emotionen-erkennen" collapsible defaultCollapsed />
-      <OfficialInstructionCard
-        title="Offizielle Instruktion: Emotionen erkennen"
-        instruction={OFFICIAL_EE_INSTRUCTION}
-      />
-      <UebungsbeschreibungCard id="sek-emotionen-regulieren" collapsible defaultCollapsed />
-      <OfficialInstructionCard
-        title="Offizielle Instruktion: Emotionen regulieren"
-        instruction={OFFICIAL_ER_INSTRUCTION}
-      />
-      <UebungsbeschreibungCard id="sek-soziales-entscheiden" collapsible defaultCollapsed />
-      <OfficialInstructionCard
-        title="Offizielle Instruktion: Soziales Entscheiden"
-        instruction={OFFICIAL_SE_INSTRUCTION}
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-pink-600 dark:text-pink-400 text-sm font-bold">EE</span>
-              </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                Emotionen erkennen
-              </h3>
+      {/* Subtest Cards */}
+      <div className="space-y-6">
+        {subtests.map((s) => (
+          <div key={s.id} className="space-y-2">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{
+                      backgroundColor: "color-mix(in srgb, var(--accent) 15%, transparent)",
+                    }}
+                  >
+                    <span className="text-sm font-bold" style={{ color: "var(--accent)" }}>
+                      {s.abbr}
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>
+                      {s.title}
+                    </h3>
+                    <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
+                      {s.desc}
+                    </p>
+                    <p className="text-xs mt-2 opacity-70" style={{ color: "var(--muted)" }}>
+                      {s.meta}
+                    </p>
+                  </div>
+                  <Button
+                    className="w-full sm:w-auto shrink-0"
+                    onClick={s.onStart}
+                    disabled={s.taskCount === 0}
+                  >
+                    <Play className="w-4 h-4 mr-1.5" />
+                    {s.taskCount > 0 ? s.buttonLabel : "Daten fehlen"}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
+              <UebungsbeschreibungCard id={s.uebungId} collapsible defaultCollapsed />
+              <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
             </div>
-            <p className="text-sm text-muted mb-1">
-              5 Emotionen pro Situation: wahrscheinlich oder unwahrscheinlich?
-            </p>
-            <p className="text-xs text-muted mb-3">
-              {emotionenErkennenOffiziellAlle.length} Situationen | Alles-oder-Nichts
-            </p>
-            <Button
-              size="sm"
-              className="w-full"
-              onClick={() => setView("erkennen-quiz")}
-              disabled={emotionenErkennenOffiziellAlle.length === 0}
-            >
-              <Play className="w-4 h-4 mr-1" /> Üben (
-              {emotionenErkennenOffiziellAlle.length > 0 ? "14 Aufgaben" : "Daten fehlen"})
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-amber-600 dark:text-amber-400 text-sm font-bold">ER</span>
-              </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                Emotionen regulieren
-              </h3>
-            </div>
-            <p className="text-sm text-muted mb-1">
-              Beste Bewältigungsstrategie wählen (4 Optionen)
-            </p>
-            <p className="text-xs text-muted mb-3">
-              {emotionenRegulierenOffiziellTasks.length} Szenarien | Prozentual
-            </p>
-            <Button
-              size="sm"
-              className="w-full"
-              onClick={() => setView("regulieren-quiz")}
-              disabled={emotionenRegulierenOffiziellTasks.length === 0}
-            >
-              <Play className="w-4 h-4 mr-1" /> Üben (
-              {emotionenRegulierenOffiziellTasks.length > 0 ? "12 Aufgaben" : "Daten fehlen"})
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-5">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-blue-600 dark:text-blue-400 text-sm font-bold">SE</span>
-              </div>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                Soziales Entscheiden
-              </h3>
-            </div>
-            <p className="text-sm text-muted mb-1">5 Überlegungen (A–E) nach Wichtigkeit ordnen</p>
-            <p className="text-xs text-muted mb-3">
-              {sozialesEntscheidenTasks.length} Situationen | 14 Aufgaben, 21 Min (offizielles
-              Format)
-            </p>
-            <Button
-              size="sm"
-              className="w-full"
-              onClick={() => setView("entscheiden-quiz")}
-              disabled={sozialesEntscheidenTasks.length === 0}
-            >
-              <Play className="w-4 h-4 mr-1" /> Üben (
-              {sozialesEntscheidenTasks.length > 0 ? "14 Aufgaben" : "Daten fehlen"})
-            </Button>
-          </CardContent>
-        </Card>
+          </div>
+        ))}
       </div>
     </div>
   );
