@@ -58,6 +58,7 @@ const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
 const TodayPage = lazy(() => import("@/pages/TodayPage"));
 const Legal = lazy(() => import("@/pages/Legal"));
 const Einstellungen = lazy(() => import("@/pages/Einstellungen"));
+const BMSDemo = lazy(() => import("@/pages/BMSDemo"));
 
 function LoadingSpinner() {
   return (
@@ -159,6 +160,7 @@ export default function App() {
           <Route path="/impressum" element={<Legal />} />
           <Route path="/datenschutz" element={<Legal />} />
           <Route path="/agb" element={<Legal />} />
+          <Route path="/medat-uebungsfragen" element={<BMSDemo />} />
 
           {/* Protected routes */}
           <Route
