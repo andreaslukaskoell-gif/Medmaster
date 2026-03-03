@@ -85,11 +85,7 @@ function OnboardingGuard() {
 function MedATGuard({ children }: { children: ReactNode }) {
   const { hasCompletedMedATOnboarding } = useStore();
   const location = useLocation();
-  if (
-    !hasCompletedMedATOnboarding &&
-    location.pathname !== "/onboarding/medat" &&
-    location.pathname !== "/placement-test"
-  ) {
+  if (!hasCompletedMedATOnboarding && location.pathname !== "/onboarding/medat") {
     return <Navigate to="/onboarding/medat" replace />;
   }
   return <>{children}</>;
