@@ -2,7 +2,7 @@ import type { RefObject } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sun, Moon, Search, Menu, ClipboardList, LayoutDashboard } from "lucide-react";
+import { Sun, Moon, Search, Menu, LayoutDashboard } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
@@ -32,9 +32,6 @@ export function TopBar({
   const lastActiveDate = store?.lastActiveDate ?? "";
   const darkMode = store?.darkMode ?? false;
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
-  const onboardingCompleted = store?.onboardingCompleted ?? false;
-  const hasCompletedMedATOnboarding = store?.hasCompletedMedATOnboarding ?? false;
-  const showEinstufungstest = !onboardingCompleted && hasCompletedMedATOnboarding;
   const showStoreValues = mounted;
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
@@ -100,18 +97,6 @@ export function TopBar({
         >
           <LayoutDashboard className="w-5 h-5" />
         </Link>
-
-        {showEinstufungstest && (
-          <Link to="/placement-test" className="shrink-0">
-            <Button
-              size="sm"
-              className="gap-1.5 bg-[var(--color-primary-500)] hover:bg-[var(--color-primary-600)] text-white border-0"
-            >
-              <ClipboardList className="w-4 h-4" />
-              Einstufungstest
-            </Button>
-          </Link>
-        )}
       </div>
 
       {/* Right: stats + controls */}

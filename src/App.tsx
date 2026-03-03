@@ -19,7 +19,6 @@ import { useStore } from "@/store/useStore";
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const MedATOnboarding = lazy(() => import("@/pages/MedATOnboarding"));
-const PlacementTest = lazy(() => import("@/pages/PlacementTest"));
 const LernplanChoice = lazy(() => import("@/pages/LernplanChoice"));
 const Onboarding = lazy(() => import("@/pages/Onboarding"));
 const BMS = lazy(() => import("@/pages/BMS"));
@@ -169,7 +168,6 @@ export default function App() {
             }
           >
             <Route path="/onboarding/medat" element={<MedATOnboarding />} />
-            <Route path="/placement-test" element={<PlacementTest />} />
             <Route path="/onboarding/lernplan-choice" element={<LernplanChoice />} />
             <Route
               element={

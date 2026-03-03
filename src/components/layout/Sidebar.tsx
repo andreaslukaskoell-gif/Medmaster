@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState, useMemo } from "react";
-import type { ReactNode } from "react";
 import { NavLink, useLocation, Link as RouterLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -12,18 +11,15 @@ import {
   BarChart3,
   GraduationCap,
   CalendarDays,
-  Layers,
   ListChecks,
   Menu,
   LogOut,
-  Award,
   ChevronDown,
   ChevronRight,
   Microscope,
   FlaskConical,
   Zap,
   Calculator,
-  Settings,
   Dumbbell,
   BookMarked,
   Lock,
@@ -81,6 +77,12 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
       { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-pink-500 dark:text-pink-400" },
       { to: "/tv", icon: FileText, label: "TV", iconColor: "text-amber-600 dark:text-amber-400" },
       { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-500 dark:text-rose-400" },
+      {
+        to: "/lernplan",
+        icon: CalendarDays,
+        label: "Lernplan",
+        iconColor: "text-lime-600 dark:text-lime-400",
+      },
     ],
   },
   {
@@ -92,12 +94,6 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
         icon: Dumbbell,
         label: "Fragen-Trainer",
         iconColor: "text-violet-500 dark:text-violet-400",
-      },
-      {
-        to: "/karteikarten",
-        icon: Layers,
-        label: "Karteikarten",
-        iconColor: "text-sky-500 dark:text-sky-400",
       },
       {
         to: "/simulation",
@@ -125,35 +121,11 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
         emphasized: true,
         iconColor: "text-indigo-500 dark:text-indigo-400",
       },
-    ],
-  },
-  {
-    id: "mehr",
-    title: "MEHR",
-    items: [
-      {
-        to: "/lernplan",
-        icon: CalendarDays,
-        label: "Lernplan",
-        iconColor: "text-lime-600 dark:text-lime-400",
-      },
       {
         to: "/stichwortliste",
         icon: ListChecks,
         label: "Stichwortliste",
         iconColor: "text-cyan-500 dark:text-cyan-400",
-      },
-      {
-        to: "/performance",
-        icon: Award,
-        label: "Erfolge",
-        iconColor: "text-yellow-500 dark:text-yellow-400",
-      },
-      {
-        to: "/preise",
-        icon: Settings,
-        label: "Konto & Preise",
-        iconColor: "text-slate-500 dark:text-slate-400",
       },
     ],
   },
@@ -161,44 +133,12 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
 
 /* ── CollapsibleSection ─────────────────────────────────────────────── */
 
-function CollapsibleSection({
-  title,
-  open,
-  onToggle,
-  children,
-}: {
-  title: string;
-  open: boolean;
-  onToggle: () => void;
-  children: ReactNode;
-}) {
+function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-2 mt-3 first:mt-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        className="sidebar-nav-item flex items-center gap-1.5 w-full py-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)] hover:text-[var(--foreground)] cursor-pointer rounded-md hover:bg-[var(--foreground)]/5"
-      >
-        {open ? (
-          <ChevronDown className="w-3 h-3 shrink-0" />
-        ) : (
-          <ChevronRight className="w-3 h-3 shrink-0" />
-        )}
+      <div className="flex items-center gap-1.5 w-full py-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)]">
         {title}
-      </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="overflow-hidden"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 }
@@ -255,12 +195,11 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const pathname = location.pathname;
   const search = location.search;
 
-  const [openSections, setOpenSections] = useState<Record<string, boolean>>(() => ({
+  const openSections: Record<string, boolean> = {
     lernen: true,
     training: true,
     fortschritt: true,
-    mehr: false,
-  }));
+  };
   const [openBmsSubject, setOpenBmsSubject] = useState<string | null>(null);
   const [bmsExpanded, setBmsExpanded] = useState(false);
 
@@ -365,9 +304,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const chaptersBySubject = (subject: "biologie" | "chemie" | "physik" | "mathematik"): Kapitel[] =>
     bmsModule?.getKapitelBySubject(subject) ?? [];
 
-  const toggleSection = (id: string) => {
-    setOpenSections((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
+  // Sections are always open — no toggle needed
 
   const isActive = (to: string) => {
     if (to === "/") return pathname === "/";
@@ -482,12 +419,8 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
         {/* Sections */}
         {NAV_SECTIONS.map((section) => (
-          <CollapsibleSection
-            key={section.id}
-            title={section.title}
-            open={openSections[section.id] ?? true}
-            onToggle={() => toggleSection(section.id)}
-          >
+          <div key={section.id}>
+            <SectionHeader title={section.title} />
             <div className="space-y-0.5 pb-1">
               {section.items.map((item) => {
                 const to = item.to as string;
@@ -713,7 +646,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 );
               })}
             </div>
-          </CollapsibleSection>
+          </div>
         ))}
       </nav>
 

@@ -35,26 +35,29 @@ export default function Legal() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[var(--background)]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
-          <Link to="/dashboard" className="text-gray-500 hover:text-gray-800 transition-colors">
+          <Link
+            to="/dashboard"
+            className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+          >
             <ArrowLeft className="w-5 h-5" />
           </Link>
-          <span className="text-lg font-bold text-gray-900">MedMaster</span>
+          <span className="text-lg font-bold text-[var(--foreground)]">MedMaster</span>
         </div>
       </header>
 
       {/* Tab bar */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-3xl mx-auto px-4 flex gap-1 flex-wrap">
           <button
             onClick={() => handleTab("impressum")}
             className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
               tab === "impressum"
-                ? "border-indigo-600 text-indigo-600"
-                : "border-transparent text-gray-500 hover:text-gray-700"
+                ? "border-[var(--accent)] text-[var(--accent)]"
+                : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"
             }`}
           >
             <Scale className="w-4 h-4" /> Impressum
@@ -63,8 +66,8 @@ export default function Legal() {
             onClick={() => handleTab("datenschutz")}
             className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
               tab === "datenschutz"
-                ? "border-indigo-600 text-indigo-600"
-                : "border-transparent text-gray-500 hover:text-gray-700"
+                ? "border-[var(--accent)] text-[var(--accent)]"
+                : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"
             }`}
           >
             <Shield className="w-4 h-4" /> Datenschutz
@@ -73,8 +76,8 @@ export default function Legal() {
             onClick={() => handleTab("agb")}
             className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
               tab === "agb"
-                ? "border-indigo-600 text-indigo-600"
-                : "border-transparent text-gray-500 hover:text-gray-700"
+                ? "border-[var(--accent)] text-[var(--accent)]"
+                : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"
             }`}
           >
             <FileText className="w-4 h-4" /> AGB
@@ -90,8 +93,8 @@ export default function Legal() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-6 text-center text-xs text-gray-400">
+      <footer className="border-t border-[var(--border)] bg-[var(--card)]">
+        <div className="max-w-3xl mx-auto px-4 py-6 text-center text-xs text-[var(--muted)]">
           &copy; {new Date().getFullYear()} MedMaster &mdash; Alle Rechte vorbehalten.
         </div>
       </footer>
@@ -103,30 +106,30 @@ export default function Legal() {
 
 function Impressum() {
   return (
-    <article className="prose prose-gray prose-sm max-w-none">
+    <article className="prose prose-sm dark:prose-invert max-w-none">
       <h1>Impressum</h1>
-      <p className="text-xs text-gray-400 uppercase tracking-wide">
+      <p className="text-xs text-[var(--muted)] uppercase tracking-wide">
         Angaben gemäß § 25 MedienG und § 5 ECG
       </p>
 
       <h2>Medieninhaber und Herausgeber</h2>
       <table className="not-prose text-sm w-full">
         <tbody>
-          <tr className="border-b border-gray-100">
-            <td className="py-2 pr-4 font-medium text-gray-600 w-40">Name</td>
-            <td className="py-2 text-gray-900">MedMaster</td>
+          <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)] w-40">Name</td>
+            <td className="py-2 text-[var(--foreground)]">MedMaster</td>
           </tr>
-          <tr className="border-b border-gray-100">
-            <td className="py-2 pr-4 font-medium text-gray-600">Adresse</td>
-            <td className="py-2 text-gray-900">1010 Wien, Österreich</td>
+          <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)]">Adresse</td>
+            <td className="py-2 text-[var(--foreground)]">1010 Wien, Österreich</td>
           </tr>
-          <tr className="border-b border-gray-100">
-            <td className="py-2 pr-4 font-medium text-gray-600">E-Mail</td>
-            <td className="py-2 text-gray-900">support@medmaster.at</td>
+          <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)]">E-Mail</td>
+            <td className="py-2 text-[var(--foreground)]">support@medmaster.at</td>
           </tr>
-          <tr className="border-b border-gray-100">
-            <td className="py-2 pr-4 font-medium text-gray-600">UID-Nr.</td>
-            <td className="py-2 text-gray-900">
+          <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)]">UID-Nr.</td>
+            <td className="py-2 text-[var(--foreground)]">
               Nicht UID-pflichtig (Kleinunternehmer gem. § 6 Abs. 1 Z 27 UStG 1994)
             </td>
           </tr>
@@ -165,9 +168,9 @@ function Impressum() {
 
 function Datenschutz() {
   return (
-    <article className="prose prose-gray prose-sm max-w-none">
+    <article className="prose prose-sm dark:prose-invert max-w-none">
       <h1>Datenschutzerklärung</h1>
-      <p className="text-xs text-gray-400 uppercase tracking-wide">
+      <p className="text-xs text-[var(--muted)] uppercase tracking-wide">
         Stand: {new Date().toLocaleDateString("de-AT", { month: "long", year: "numeric" })}
       </p>
 
@@ -301,9 +304,9 @@ function Datenschutz() {
 
 function AGB() {
   return (
-    <article className="prose prose-gray prose-sm max-w-none">
+    <article className="prose prose-sm dark:prose-invert max-w-none">
       <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
-      <p className="text-xs text-gray-400 uppercase tracking-wide">
+      <p className="text-xs text-[var(--muted)] uppercase tracking-wide">
         Stand: {new Date().toLocaleDateString("de-AT", { month: "long", year: "numeric" })}
       </p>
 
