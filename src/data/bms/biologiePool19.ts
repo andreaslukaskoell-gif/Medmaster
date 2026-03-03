@@ -33,7 +33,13 @@ export const biologiePool19: Question[] = [
     "bio-pool-19-012",
     "bio-kap2",
     "Welcher Teil des Auges bricht das Licht?",
-    ["Netzhaut", "Iris", "Linse", "Hornhaut nur", "Glaskörper"],
+    [
+      "Netzhaut",
+      "Iris",
+      "Linse",
+      "Hornhaut nur",
+      "Glaskörper (Corpus vitreum) als gelartiges Stützmedium des Augapfels",
+    ],
     2,
     "Die Linse bricht das Licht und ermöglicht Akkommodation.",
     "leicht",
@@ -43,22 +49,28 @@ export const biologiePool19: Question[] = [
     "bio-pool-19-016",
     "bio-kap2",
     "Wo wird Östrogen gebildet?",
-    ["Hypophyse", "Nebenniere", "Eierstock", "Plazenta nur", "Schilddrüse"],
+    [
+      "Hypophyse (Hirnanhangsdrüse) als Master-Drüse des endokrinen Systems",
+      "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin",
+      "Eierstock",
+      "Plazenta nur",
+      "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion",
+    ],
     2,
     "Östrogen wird vor allem in den Eierstöcken gebildet.",
     "leicht",
-    ["Hormone", "Reproduktion"]
+    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
   ),
   q(
     "bio-pool-19-017",
     "bio-kap4",
     "Was ist eine Insertion?",
     [
-      "Verlust von DNA",
+      "Verlust von DNA-Abschnitten (Deletion von Basen oder Chromosomensegmenten)",
       "Einbau zusätzlicher Basen",
-      "Nur Punktmutation",
+      "Nur Punktmutation (Austausch einer einzelnen Base im DNA-Strang)",
       "Umlagerung",
-      "Reparatur",
+      "Reparatur (enzymatische Korrektur von DNA-Schäden durch Reparatursysteme)",
     ],
     1,
     "Bei einer Insertion werden Basen eingefügt.",
@@ -69,10 +81,16 @@ export const biologiePool19: Question[] = [
     "bio-pool-19-031",
     "bio-kap2",
     "Welcher Gehirnbereich regelt Hunger und Durst?",
-    ["Kleinhirn", "Hypothalamus", "Großhirnrinde", "Thalamus", "Pons"],
+    [
+      "Kleinhirn (Cerebellum) als Koordinationszentrum für Motorik und Gleichgewicht",
+      "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
+      "Großhirnrinde (Cortex cerebri) als Sitz höherer kognitiver Funktionen",
+      "Thalamus (Tor zum Bewusstsein) als Umschaltstation sensorischer Bahnen",
+      "Pons (Brücke) als Teil des Hirnstamms mit Regulationszentren",
+    ],
     1,
     "Der Hypothalamus regelt Hunger, Durst, Temperatur.",
     "leicht",
-    ["ZNS", "Hypothalamus"]
+    ["ZNS", "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems"]
   ),
 ];

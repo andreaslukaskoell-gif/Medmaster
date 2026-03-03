@@ -883,40 +883,78 @@ let _currentGmPasses: AllergyPass[] = [];
 let _currentGmQuestions: GedaechtnisQuestion[] = [];
 
 function AllergyPassCard({ pass }: { pass: AllergyPass }) {
+  const initials = pass.name
+    .split(/\s+/)
+    .map((p) => p[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
   return (
-    <div className="flex rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 shadow-md overflow-hidden min-h-[200px]">
-      <div className="w-28 shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700 border-r border-gray-300 dark:border-gray-600">
-        {pass.photo ? (
-          <img src={pass.photo} alt="" className="w-full h-full object-cover" />
-        ) : (
-          <div className="w-20 h-24 rounded bg-gray-300 dark:bg-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400">
-            <svg className="w-12 h-14" viewBox="0 0 24 28" fill="currentColor" aria-hidden>
-              <path d="M12 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0 10c3.3 0 6 2.7 6 6v6H6v-6c0-3.3 2.7-6 6-6z" />
-            </svg>
-          </div>
-        )}
+    <div className="rounded-2xl border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
+      {/* Header — MedAT-Stil */}
+      <div className="flex items-center justify-between px-4 py-2 border-b-2 border-red-500 bg-white dark:bg-gray-900">
+        <span className="text-base font-bold tracking-wide text-gray-700 dark:text-gray-200">
+          ALLERGIEAUSWEIS
+        </span>
+        <span className="text-red-500 text-xl font-bold">+</span>
       </div>
-      <div className="flex-1 p-3 grid grid-cols-1 gap-1 text-sm">
-        <div className="font-semibold text-base text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-600 pb-1">
-          {pass.name}
+      {/* Body */}
+      <div className="flex p-3 gap-3 bg-white dark:bg-gray-900">
+        {/* Photo */}
+        <div className="w-24 h-28 shrink-0 rounded border border-gray-300 dark:border-gray-600 overflow-hidden bg-gray-200 dark:bg-gray-700">
+          {pass.photo ? (
+            <img
+              src={pass.photo}
+              alt=""
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-xl font-bold">
+              {initials}
+            </div>
+          )}
         </div>
-        <div className="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5">
-          <span className="text-muted shrink-0">Geburtsdatum:</span>
-          <span className="text-gray-800 dark:text-gray-200">{pass.birthdate}</span>
-          <span className="text-muted shrink-0">Blutgruppe:</span>
-          <span className="font-semibold text-primary-700 dark:text-primary-400">
-            {pass.bloodGroup}
-          </span>
-          <span className="text-muted shrink-0">Medikamente:</span>
-          <span className="text-gray-800 dark:text-gray-200">
-            {pass.medications.length ? pass.medications.join(", ") : "Keine"}
-          </span>
-          <span className="text-muted shrink-0">Allergien:</span>
-          <span className="text-gray-800 dark:text-gray-200">{pass.allergies.join(", ")}</span>
-          <span className="text-muted shrink-0">Ausweisnr.:</span>
-          <span className="font-mono text-gray-800 dark:text-gray-200">{pass.passportNumber}</span>
-          <span className="text-muted shrink-0">Land:</span>
-          <span className="text-gray-800 dark:text-gray-200">{pass.country}</span>
+        {/* Data */}
+        <div className="flex-1 text-sm space-y-0.5">
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">Name:</span>{" "}
+            <span className="text-gray-900 dark:text-gray-100">{pass.name.toUpperCase()}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">Geburtstag:</span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">{pass.birthdate}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">
+              Medikamenteneinnahme:
+            </span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">
+              {pass.medications.length ? pass.medications.join(", ") : "nein"}
+            </span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">Blutgruppe:</span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">{pass.bloodGroup}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">
+              Bekannte Allergien:
+            </span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">{pass.allergies.join(", ")}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">Ausweisnummer:</span>{" "}
+            <span className="font-mono text-gray-800 dark:text-gray-200">
+              {pass.passportNumber}
+            </span>
+          </div>
+          <div>
+            <span className="font-semibold text-red-600 dark:text-red-400">Ausstellungsland:</span>{" "}
+            <span className="text-gray-800 dark:text-gray-200">{pass.country}</span>
+          </div>
         </div>
       </div>
     </div>

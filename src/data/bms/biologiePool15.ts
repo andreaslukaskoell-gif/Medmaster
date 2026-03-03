@@ -33,7 +33,13 @@ export const biologiePool15: Question[] = [
     "bio-pool-15-002",
     "bio-kap2",
     "Welcher Teil des Gehirns koordiniert Bewegungen und Gleichgewicht?",
-    ["Großhirn", "Kleinhirn", "Thalamus", "Hypothalamus", "Medulla oblongata"],
+    [
+      "Großhirn (Cerebrum) als Sitz von Bewusstsein und höheren Funktionen",
+      "Kleinhirn (Cerebellum) als Koordinationszentrum für Motorik und Gleichgewicht",
+      "Thalamus (Tor zum Bewusstsein) als Umschaltstation sensorischer Bahnen",
+      "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
+      "Medulla oblongata",
+    ],
     1,
     "Das Kleinhirn (Zerebellum) koordiniert Motorik, Gleichgewicht und Haltung.",
     "leicht",
@@ -54,16 +60,16 @@ export const biologiePool15: Question[] = [
     "bio-kap5",
     "Was sind Antikörper?",
     [
-      "Nukleinsäuren",
+      "Nukleinsäuren (DNA/RNA als Träger der genetischen Information)",
       "Proteine (Immunglobuline), die von Plasmazellen gebildet werden",
-      "Zellen",
-      "Hormone",
-      "Enzyme",
+      "Zellen (zelluläre Grundeinheiten mit eigenständigem Stoffwechsel)",
+      "Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)",
+      "Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)",
     ],
     1,
     "Antikörper (Immunglobuline) sind Proteine der humoralen Abwehr, gebildet von Plasmazellen.",
     "leicht",
-    ["Immunologie", "Antikörper"]
+    ["Immunologie", "Antikörper (Immunglobuline zur spezifischen Antigenerkennung und -bindung)"]
   ),
   q(
     "bio-pool-15-006",
@@ -73,39 +79,51 @@ export const biologiePool15: Question[] = [
     1,
     "Insulin (Beta-Zellen der Bauchspeicheldrüse) senkt den Blutzucker; Glukagon erhöht ihn.",
     "leicht",
-    ["Hormone", "Blutzucker"]
+    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
   ),
   q(
     "bio-pool-15-010",
     "bio-kap5",
     "Was ist ein Produzent?",
     [
-      "Ein Tier",
+      "Ein Tier (heterotropher Konsument auf höherer trophischer Stufe)",
       "Organismus, der aus anorganischen Stoffen organische Substanz aufbaut (z. B. Pflanzen)",
-      "Ein Pilz",
-      "Ein Zersetzer",
-      "Ein Räuber",
+      "Ein Pilz (heterotropher Organismus mit chitinhaltiger Zellwand)",
+      "Ein Zersetzer (Destruent, z. B. Pilze und Bakterien) für die Mineralisierung",
+      "Ein Räuber (Prädator, der Beute aktiv erjagt und konsumiert)",
     ],
     1,
     "Produzenten (Pflanzen, Algen) betreiben Fotosynthese und bauen Biomasse auf.",
     "leicht",
-    ["Ökologie", "Produzent"]
+    ["Ökologie", "Produzent (autotropher Organismus an der Basis der Nahrungskette)"]
   ),
   q(
     "bio-pool-15-011",
     "bio-kap1",
     "Welches Organell enthält die Erbinformation?",
-    ["Ribosom", "Zellkern", "Mitochondrium nur", "Lysosom", "Golgi-Apparat"],
+    [
+      "Ribosom (rRNA-Protein-Komplex im Zytoplasma oder am rER)",
+      "Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)",
+      "Mitochondrium nur",
+      "Lysosom (Verdauungsorganell mit sauren Hydrolasen im Zytoplasma)",
+      "Golgi-Apparat (Zisternenstapel für posttranslationale Modifikation)",
+    ],
     1,
     "Der Zellkern enthält die Hauptmenge der DNA (Erbinformation). Mitochondrien haben eigene kleine DNA.",
     "leicht",
-    ["Zelle", "Zellkern"]
+    ["Zelle", "Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)"]
   ),
   q(
     "bio-pool-15-012",
     "bio-kap2",
     "Welcher Darmabschnitt hat Zotten und Krypten für die Resorption?",
-    ["Colon", "Duodenum und Jejunum", "Magen", "Rektum", "Ösophagus"],
+    [
+      "Colon (Dickdarm) mit Wasserresorption",
+      "Duodenum und Jejunum",
+      "Magen (Gaster) mit Salzsäure- und Pepsinsekretion",
+      "Rektum (Mastdarm) als terminaler Darmabschnitt",
+      "Ösophagus (Speiseröhre) mit Peristaltik",
+    ],
     1,
     "Dünndarm (Duodenum, Jejunum, Ileum) hat Zotten und Krypten für die Nährstoffresorption.",
     "leicht",
@@ -115,17 +133,29 @@ export const biologiePool15: Question[] = [
     "bio-pool-15-016",
     "bio-kap2",
     "Wo wird Testosteron beim Mann gebildet?",
-    ["Nebenniere", "Hypophyse", "Hoden", "Prostata", "Nebenhoden"],
+    [
+      "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin",
+      "Hypophyse (Hirnanhangsdrüse) als Master-Drüse des endokrinen Systems",
+      "Hoden",
+      "Prostata",
+      "Nebenhoden",
+    ],
     2,
     "Testosteron wird in den Leydig-Zellen der Hoden gebildet.",
     "leicht",
-    ["Hormone", "Reproduktion"]
+    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
   ),
   q(
     "bio-pool-15-021",
     "bio-kap1",
     "Welches Vitamin wird in der Haut unter UV-Licht gebildet?",
-    ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D", "Vitamin K"],
+    [
+      "Vitamin A (Retinol) für Sehfunktion und Zelldifferenzierung",
+      "Vitamin B12 (Cobalamin) für die Erythropoese und Nervenfunktion",
+      "Vitamin C",
+      "Vitamin D (Calciferol) für den Calcium- und Phosphatstoffwechsel",
+      "Vitamin K",
+    ],
     3,
     "Vitamin D wird in der Haut durch UV-B-Strahlung gebildet (aus 7-Dehydrocholesterol).",
     "leicht",
@@ -135,7 +165,13 @@ export const biologiePool15: Question[] = [
     "bio-pool-15-023",
     "bio-kap2",
     "Welches Epithel kleidet die Luftröhre aus?",
-    ["Urothel", "Flimmerepithel", "Plattenepithel", "Verhornendes Epithel", "Übergangsepithel"],
+    [
+      "Urothel (dehnbares Übergangsepithel der ableitenden Harnwege und Blase)",
+      "Flimmerepithel (respiratorisches Epithel mit motilen Kinozilien)",
+      "Plattenepithel (flache, schuppenartige Epithelzellen, z. B. in Alveolen)",
+      "Verhornendes Epithel",
+      "Übergangsepithel",
+    ],
     1,
     "Die Trachea ist von Flimmerepithel (Zilien) ausgekleidet; Schleim transportiert Partikel ab.",
     "mittel",
@@ -146,16 +182,16 @@ export const biologiePool15: Question[] = [
     "bio-kap5",
     "Was sind T-Killerzellen?",
     [
-      "B-Lymphozyten",
+      "B-Lymphozyten (knochenmarksgereift, Antikörperproduktion)",
       "Zytotoxische T-Zellen, die virusinfizierte Zellen abtöten können",
-      "Plasmazellen",
-      "Makrophagen",
+      "Plasmazellen (ausdifferenzierte B-Zellen für Antikörpersekretion)",
+      "Makrophagen (phagozytierende Antigenpräsentierende Zellen des Immunsystems)",
       "NK-Zellen nur",
     ],
     1,
     "T-Killerzellen (zytotoxische T-Zellen) erkennen infizierte Zellen über MHC-I und töten sie ab.",
     "mittel",
-    ["Immunologie", "T-Zellen"]
+    ["Immunologie", "T-Zellen (thymusgereifte Lymphozyten der zellulären Immunabwehr)"]
   ),
   q(
     "bio-pool-15-028",
@@ -165,7 +201,7 @@ export const biologiePool15: Question[] = [
     2,
     "Nach der 8. Woche sind die Organanlagen angelegt; ab dann spricht man vom Fetus.",
     "mittel",
-    ["Embryologie", "Organogenese"]
+    ["Embryologie", "Organogenese (Differenzierung und Anlage der embryonalen Organsysteme)"]
   ),
   q(
     "bio-pool-15-031",
@@ -191,22 +227,31 @@ export const biologiePool15: Question[] = [
     "bio-pool-15-040",
     "bio-kap2",
     "Wo wird Aldosteron gebildet?",
-    ["Nebennierenmark", "Nebennierenrinde", "Niere", "Hypophyse", "Schilddrüse"],
+    [
+      "Nebennierenmark",
+      "Nebennierenrinde",
+      "Niere",
+      "Hypophyse (Hirnanhangsdrüse) als Master-Drüse des endokrinen Systems",
+      "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion",
+    ],
     1,
     "Aldosteron (Mineralokortikoid) wird in der Nebennierenrinde gebildet (Natrium-Kalium-Haushalt, Blutdruck).",
     "mittel",
-    ["Hormone", "Nebenniere"]
+    [
+      "Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)",
+      "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin",
+    ]
   ),
   q(
     "bio-pool-15-043",
     "bio-kap1",
     "Welche Aussage über das raue ER trifft zu?",
     [
-      "Es hat keine Ribosomen",
+      "Es hat keine membrangebundenen Ribosomen auf seiner Oberfläche",
       "Es ist an der Synthese von Membran- und Sekretproteinen beteiligt",
-      "Es kommt nur in Pflanzen vor",
-      "Es enthält die DNA",
-      "Es baut Proteine ab",
+      "Es kommt ausschließlich in pflanzlichen Zellen mit Chloroplasten vor",
+      "Es enthält die gesamte zelluläre DNA als Erbinformationsträger",
+      "Es baut fehlgefaltete und markierte Proteine proteolytisch ab",
     ],
     1,
     "Das raue ER ist mit Ribosomen besetzt und synthetisiert Proteine für Export und Membranen.",
@@ -221,34 +266,34 @@ export const biologiePool15: Question[] = [
     1,
     "Glukagon (Alpha-Zellen der Bauchspeicheldrüse) erhöht den Blutzucker (Glykogenabbau, Gluconeogenese).",
     "leicht",
-    ["Hormone", "Blutzucker"]
+    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
   ),
   q(
     "bio-pool-15-051",
     "bio-kap5",
     "Was ist ein Konsument?",
     [
-      "Produzent",
+      "Produzent (autotropher Organismus an der Basis der Nahrungskette)",
       "Organismus, der organische Substanz von anderen aufnimmt",
-      "Zersetzer nur",
-      "Pilz nur",
-      "Pflanze",
+      "Zersetzer (Destruent), der nur abgestorbenes organisches Material mineralisiert",
+      "Pilz (Eukaryot mit chitinhaltiger Zellwand) als heterotropher Organismus",
+      "Pflanze (autotropher Organismus mit Photosynthese und Cellulosezellwand)",
     ],
     1,
     "Konsumenten ernähren sich von anderen Organismen (Herbivoren, Karnivoren, Omnivoren).",
     "leicht",
-    ["Ökologie", "Konsument"]
+    ["Ökologie", "Konsument (heterotropher Organismus auf höherer trophischer Ebene)"]
   ),
   q(
     "bio-pool-15-056",
     "bio-kap5",
     "Was ist die ökologische Nische?",
     [
-      "Der konkrete Lebensort",
+      "Der konkrete Lebensort (Habitat) als geografischer Standort einer Art",
       "Die Gesamtheit der abiotischen und biotischen Faktoren, die eine Art nutzt bzw. erfordert",
-      "Eine Nahrungskette",
-      "Ein Biotop",
-      "Eine Population",
+      "Eine Nahrungskette (lineare Abfolge trophischer Beziehungen)",
+      "Ein Biotop (unbelebter Lebensraum mit seinen physikalischen Faktoren)",
+      "Eine Population (alle Individuen einer Art in einem bestimmten Gebiet)",
     ],
     1,
     "Die Nische beschreibt die „Rolle“ einer Art (Ressourcen, Lebensweise). Habitat = konkreter Ort.",

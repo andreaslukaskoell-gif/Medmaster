@@ -753,11 +753,24 @@ function generatePassportNumber(): string {
   return randInt(10000, 99999).toString();
 }
 
+/**
+ * Pool von Passfotos (AI-generiert, copyright-frei).
+ * Dateien liegen unter /public/avatars/face-01.jpg bis face-20.jpg.
+ * Fallback: leerer String → UI zeigt Initialen-Avatar.
+ */
+const AVATAR_COUNT = 20;
+function getAvatarPool(count: number): string[] {
+  const indices = Array.from({ length: AVATAR_COUNT }, (_, i) => i + 1);
+  const shuffled = shuffle(indices);
+  return shuffled.slice(0, count).map((n) => `/avatars/face-${String(n).padStart(2, "0")}.jpg`);
+}
+
 /** Generiert 6–10 realistische Allergiepässe für Training (niemals für offizielle Beispiele). */
 export function generateAllergyPasses(count: number): AllergyPass[] {
   const usedNames = new Set<string>();
   const usedPassportNumbers = new Set<string>();
   const passes: AllergyPass[] = [];
+  const avatars = getAvatarPool(count);
 
   for (let i = 0; i < count; i++) {
     let name = generateName();
@@ -783,7 +796,7 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
       allergies: allergien,
       passportNumber,
       country: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
-      photo: `https://api.dicebear.com/9.x/avataaars/svg?seed=${encodeURIComponent(name)}&mouth=default,smile,serious,twinkle&clothing=shirtCrewNeck&clothesColor=262e33&backgroundColor=ffffff`,
+      photo: avatars[i] ?? "",
     });
   }
 
