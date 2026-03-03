@@ -1649,7 +1649,6 @@ function ImplikationenQuiz({
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
                   Richtig: {qu.options?.[qu.correctAnswer]}
                 </p>
-                <ImplikationSolutionDiagram task={qu} className="ml-7 mb-3" />
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
                   <p className="text-xs text-blue-700 dark:text-blue-400">
                     {stripMarkdownAsterisks(qu.explanation)}

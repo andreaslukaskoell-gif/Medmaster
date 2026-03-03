@@ -352,10 +352,8 @@ export default function ImplikationenUeben() {
                 Lösungsweg (formale Mengenlogik)
               </h4>
               <p className="text-xs text-muted">
-                Das Euler-Diagramm ist ausschließlich aus den Prämissen abgeleitet; der markierte
-                Bereich entspricht der zwingenden Schlussfolgerung.
+                Die Lösung ergibt sich aus der formalen Mengenlogik der Prämissen.
               </p>
-              <ImplikationSolutionDiagram task={currentTask} className="mb-3" />
               <div className="space-y-2">
                 <div>
                   <p className="text-xs text-muted mb-1">Angewandte Regeln:</p>

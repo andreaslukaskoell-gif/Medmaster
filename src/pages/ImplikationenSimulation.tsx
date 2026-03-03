@@ -348,7 +348,7 @@ export default function ImplikationenSimulation() {
                         <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
                           Lösungsweg:
                         </p>
-                        <ImplikationSolutionDiagram task={result.task} className="mb-3" />
+
                         <p className="text-sm text-gray-700 dark:text-gray-300">
                           {result.task.explanation}
                         </p>
