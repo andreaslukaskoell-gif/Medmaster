@@ -1005,6 +1005,26 @@ export default function FragenTrainer() {
             } catch {
               // Einige Pool-Fragen haben ggf. keine Stichwort-Zuordnung
             }
+            // Persist results for Prognose, Schwachstellentrainer, MRS
+            const score = r.filter((a) => a.correct).length;
+            const subjectLabel =
+              BMS_SUBJECTS.find((s) => s.id === subjectId)?.label ?? subjectId ?? "";
+            useStore.getState().saveQuizResult({
+              id: `fragentrainer-${Date.now()}`,
+              type: "bms",
+              subject: subjectLabel,
+              score,
+              total: r.length,
+              date: new Date().toLocaleDateString("de-AT"),
+              timestamp: new Date().toISOString(),
+              answers: r.map((a) => ({
+                questionId: a.frage.id,
+                selectedAnswer: a.selectedKey ?? "",
+                correct: a.correct,
+              })),
+            });
+            useStore.getState().checkStreak();
+            useStore.getState().logActivity(r.length, 0);
             setResults(r);
             setScreen("results");
           }}

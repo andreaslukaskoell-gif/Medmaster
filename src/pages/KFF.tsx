@@ -307,7 +307,7 @@ export default function KFF() {
       startView: "zahlenfolgen" as KffView,
       color: "bg-blue-100 dark:bg-blue-900/30",
       textColor: "text-blue-600 dark:text-blue-400",
-      badge: "Geprüft",
+      badge: "Unbegrenzt",
     },
     {
       id: "gedaechtnis" as const,
@@ -317,13 +317,13 @@ export default function KFF() {
       startView: "gedaechtnis-setup" as KffView,
       color: "bg-green-100 dark:bg-green-900/30",
       textColor: "text-green-600 dark:text-green-400",
-      badge: "MedAT 1:1",
+      badge: "MedAT-Format",
     },
     {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
       desc: "Kategorische Syllogismen: Alle/Einige/Kein — finde die korrekte Schlussfolgerung (A-E).",
-      badge: "Geprüft",
+      badge: "Unbegrenzt",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
       color: "bg-purple-100 dark:bg-purple-900/30",
@@ -337,7 +337,7 @@ export default function KFF() {
       startView: "wortflüssigkeit" as KffView,
       color: "bg-orange-100 dark:bg-orange-900/30",
       textColor: "text-orange-600 dark:text-orange-400",
-      badge: "Geprüft",
+      badge: "930+ Aufgaben",
     },
     {
       id: "figuren" as const,
@@ -348,7 +348,7 @@ export default function KFF() {
       color: "bg-rose-100 dark:bg-rose-900/30",
       textColor: "text-rose-600 dark:text-rose-400",
       icon: "puzzle",
-      badge: "Geprüft",
+      badge: "Unbegrenzt",
     },
   ];
 
@@ -1284,6 +1284,15 @@ function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
           <p className="text-sm text-muted mb-1">
             Frage {index + 1} von {questions.length}
           </p>
+          {q.photoUrl && (
+            <div className="flex justify-center mb-4">
+              <img
+                src={q.photoUrl}
+                alt=""
+                className="w-20 h-24 rounded-lg object-cover border border-gray-200 dark:border-gray-700"
+              />
+            </div>
+          )}
           <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
             {q.question}
           </p>

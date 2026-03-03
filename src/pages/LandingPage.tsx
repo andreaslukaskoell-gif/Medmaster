@@ -91,7 +91,7 @@ export default function LandingPage() {
     ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
     { emoji: "⭐", text: "Alle 4 MedAT-Bereiche: BMS, KFF, TV, SEK" },
     { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
-    { emoji: "🆓", text: "Kostenlos starten — kein Abo nötig" },
+    { emoji: "🆓", text: "2 Wochen komplett gratis — dann ab €9,90/Monat" },
     { emoji: "📚", text: "4.300+ Übungsfragen mit Erklärungen" },
   ];
 
@@ -129,7 +129,7 @@ export default function LandingPage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-2xl shadow-sm transition-colors"
                 style={{ backgroundColor: NAVY }}
               >
-                Kostenlos starten
+                Gratis testen
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -187,7 +187,7 @@ export default function LandingPage() {
                 className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
                 style={{ backgroundColor: NAVY }}
               >
-                Kostenlos registrieren
+                14 Tage gratis testen
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
@@ -405,15 +405,19 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-100 dark:border-gray-800/50 text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
-              Launch-Aktion
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">
+              Nur noch bis{" "}
+              {new Date(Date.now() + 14 * 86400000).toLocaleDateString("de-AT", {
+                day: "numeric",
+                month: "long",
+              })}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Komplett kostenlos zum Start
+              2 Wochen komplett gratis testen
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8">
-              Alle 4.300+ Fragen, alle Features, kein Abo. Registriere dich jetzt und nutze
-              MedMaster in den ersten Wochen komplett gratis.
+              Alle 4.300+ Fragen, alle Features, voller Zugang. Registriere dich jetzt und teste
+              MedMaster 14 Tage lang kostenlos — danach ab €9,90/Monat.
             </p>
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
@@ -421,7 +425,7 @@ export default function LandingPage() {
                 className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
                 style={{ backgroundColor: NAVY }}
               >
-                Jetzt gratis registrieren
+                14 Tage gratis starten
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
@@ -439,13 +443,15 @@ export default function LandingPage() {
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
-          <p className="text-primary-100 mb-8">Starte heute. Kostenlos und unverbindlich.</p>
+          <p className="text-primary-100 mb-8">
+            14 Tage gratis testen. Kein Risiko, jederzeit kündbar.
+          </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/register"
               className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-2xl text-lg shadow-sm hover:bg-primary-50 transition-colors"
             >
-              Jetzt kostenlos registrieren
+              Jetzt 14 Tage gratis testen
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

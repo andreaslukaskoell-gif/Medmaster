@@ -23,6 +23,8 @@ export type GedaechtnisQuestion = {
   options: string[]; // A–E, genau 5
   correctIndex: number; // 0–4 (A=0 … E=4)
   source?: string; // z.B. "IB_GM_26.pdf – Beispielaufgabe X"
+  /** Optional photo URL for image-based questions (e.g. "Welche Blutgruppe hat diese Person?") */
+  photoUrl?: string;
 };
 
 export type OfficialGedaechtnisSet = {

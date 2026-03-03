@@ -474,8 +474,11 @@ export default function BMS() {
         currentChapterIndex={currentChapterIndex >= 0 ? currentChapterIndex : 0}
         onGoToChapter={
           selectedSubject
-            ? (chapterId, ukIndex) =>
-                navigate(pathForChapter(selectedSubject, chapterId) + "?uk=" + ukIndex)
+            ? (chapterId, ukIndex) => {
+                navigate(pathForChapter(selectedSubject, chapterId) + "?uk=" + ukIndex);
+                window.scrollTo(0, 0);
+                setTimeout(() => window.scrollTo(0, 0), 50);
+              }
             : undefined
         }
       />

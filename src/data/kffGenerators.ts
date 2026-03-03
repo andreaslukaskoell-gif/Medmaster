@@ -808,7 +808,13 @@ export function generateGedaechtnisQuestionsFromPasses(
   const questions: GedaechtnisQuestion[] = [];
   const usedCombos = new Set<string>();
   const builders: Array<
-    (p: AllergyPass) => { question: string; correct: string; pool: string[]; allowE?: boolean }
+    (p: AllergyPass) => {
+      question: string;
+      correct: string;
+      pool: string[];
+      allowE?: boolean;
+      photoUrl?: string;
+    }
   > = [
     (p) => ({
       question: `Wann hat ${p.name} Geburtstag?`,
@@ -850,6 +856,37 @@ export function generateGedaechtnisQuestionsFromPasses(
       correct: p.name,
       pool: passes.map((x) => x.name),
     }),
+    // Photo-based questions — show the person's photo, ask about their data
+    (p) => ({
+      question: `Wie heißt diese Person?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+      photoUrl: p.photo,
+    }),
+    (p) => ({
+      question: `Welche Blutgruppe hat diese Person?`,
+      correct: p.bloodGroup,
+      pool: BLOOD_GROUPS_GM as unknown as string[],
+      photoUrl: p.photo,
+    }),
+    (p) => ({
+      question: `Wann hat diese Person Geburtstag?`,
+      correct: p.birthdate,
+      pool: passes.map((x) => x.birthdate),
+      photoUrl: p.photo,
+    }),
+    (p) => ({
+      question: `Welche Allergie hat diese Person?`,
+      correct: p.allergies[0] ?? "",
+      pool: [...new Set(passes.flatMap((x) => x.allergies))],
+      photoUrl: p.photo,
+    }),
+    (p) => ({
+      question: `Aus welchem Land stammt diese Person?`,
+      correct: p.country,
+      pool: [...COUNTRIES],
+      photoUrl: p.photo,
+    }),
   ];
 
   let attempts = 0;
@@ -890,6 +927,7 @@ export function generateGedaechtnisQuestionsFromPasses(
       question: questionText,
       options,
       correctIndex,
+      ...(b.photoUrl ? { photoUrl: b.photoUrl } : {}),
     });
   }
 

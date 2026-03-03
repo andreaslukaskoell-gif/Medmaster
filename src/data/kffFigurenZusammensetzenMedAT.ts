@@ -51,6 +51,44 @@ function rd(n: number): number {
   return Math.round(n * 100) / 100;
 }
 
+/** Rotate a polygon around its centroid by `angle` radians. */
+function rotatePiece(poly: Polygon, angle: number): Polygon {
+  if (Math.abs(angle) < 0.001) return poly;
+  const cx = poly.points.reduce((s, p) => s + p.x, 0) / poly.points.length;
+  const cy = poly.points.reduce((s, p) => s + p.y, 0) / poly.points.length;
+  const cos = Math.cos(angle);
+  const sin = Math.sin(angle);
+  return {
+    points: poly.points.map((p) => ({
+      x: rd(cx + (p.x - cx) * cos - (p.y - cy) * sin),
+      y: rd(cy + (p.x - cx) * sin + (p.y - cy) * cos),
+    })),
+  };
+}
+
+/** Pick a quantized rotation angle based on difficulty. */
+function quantizedAngle(difficulty: FZDifficulty, rng: () => number): number {
+  const steps =
+    difficulty === "easy"
+      ? [0, 90, 180, 270]
+      : difficulty === "medium"
+        ? [0, 45, 90, 135, 180, 225, 270, 315]
+        : [
+            0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270,
+            285, 300, 315, 330, 345,
+          ];
+  return (steps[Math.floor(rng() * steps.length)] ?? 0) * (Math.PI / 180);
+}
+
+/** Rotate each piece by a random quantized angle for display (harder to visually match). */
+function rotatePiecesForDisplay(
+  pieces: Polygon[],
+  difficulty: FZDifficulty,
+  rng: () => number
+): Polygon[] {
+  return pieces.map((p) => rotatePiece(p, quantizedAngle(difficulty, rng)));
+}
+
 export function regularPolygonPoints(
   cx: number,
   cy: number,
@@ -1571,6 +1609,9 @@ export function generateFigurenTrainingTask(
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
 
+    // Rotate pieces for display so users can't just visually match silhouettes
+    const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+
     const distractors = buildDistractors(target, 3, rng, fp);
     const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
     const order = [0, 1, 2, 3];
@@ -1590,7 +1631,7 @@ export function generateFigurenTrainingTask(
 
     const task: FigureAssembleTask = {
       id: `fz-train-${difficulty}-${seed}-${attempt}`,
-      pieces,
+      pieces: displayPieces,
       target,
       options,
       correctIndex,

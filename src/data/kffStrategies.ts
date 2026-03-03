@@ -40,7 +40,7 @@ export const KFF_STRATEGIES: Record<KFFStrategyTestType, KFFStrategyContent> = {
       "Schließe unmögliche Optionen aus, bevor du zusammensetzt",
     ],
     pitfalls: [
-      "Teile dürfen gedreht und gespiegelt werden",
+      "Teile dürfen nur gedreht und verschoben, aber NICHT gespiegelt werden",
       "Fläche kann stimmen, Kontur aber nicht",
       "Nicht nach 'Gefühl' gehen – Geometrie prüfen",
     ],
