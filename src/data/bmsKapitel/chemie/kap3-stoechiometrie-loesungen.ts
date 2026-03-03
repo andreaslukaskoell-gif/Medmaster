@@ -27,64 +27,70 @@ export const chemKapStoech: Kapitel = {
 
 ## Das Mol — die SI-Einheit der Stoffmenge
 
-Die **Stoffmenge n** (Einheit: Mol) gibt an, wie viele Teilchen (Atome, Moleküle, Ionen, Elektronen) in einer Probe enthalten sind. Die Definition seit 2019 (SI-Reform):
+Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe? Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
 
-**1 Mol = exakt 6,022 140 76 × 10²³ Teilchen** (Avogadro-Zahl N_A).
-
-Das Mol ist eine Zähleinheit — ähnlich wie „ein Dutzend = 12 Stück", nur astronomisch größer. Die Avogadro-Zahl wurde so gewählt, dass 1 Mol Kohlenstoff-12-Atome exakt 12 g wiegt.
+Man kann sich das Mol als gigantische Zähleinheit vorstellen — ähnlich wie ein Dutzend 12 Stück bedeutet, nur dass die Avogadro-Zahl unfassbar viel größer ist. Historisch wurde N_A so gewählt, dass 1 Mol Kohlenstoff-12-Atome exakt 12 g wiegt. Damit ergibt sich ein eleganter Zusammenhang: Die Zahlenwerte der atomaren Massen im Periodensystem entsprechen direkt den Massen in Gramm pro Mol.
 
 > **Merke:** 1 Mol = 6,022 × 10²³ Teilchen. Die Avogadro-Zahl N_A verbindet die makroskopische Welt (Gramm) mit der atomaren Welt (Teilchen).
+
+> 💡 **Prüfungstipp:** Der MedAT fragt häufig nach der exakten Definition des Mols. Merke dir: Seit 2019 ist N_A eine **festgelegte Zahl** (nicht mehr über ¹²C definiert, sondern umgekehrt). Die Antwort „6,022 × 10²³" muss sitzen — sie kommt in fast jeder Stöchiometrie-Aufgabe vor.
 
 ---
 
 ## Molare Masse M
 
-Die **molare Masse M** gibt die Masse von 1 Mol eines Stoffes in g/mol an. Sie entspricht numerisch der relativen Atommasse (aus dem PSE, Periodensystem der Elemente) bzw. der Summenformel-Masse bei Molekülen:
+Die **molare Masse M** gibt an, wie viel Gramm ein Mol eines bestimmten Stoffes wiegt. Sie wird in g/mol angegeben und lässt sich direkt aus dem Periodensystem ablesen: Für Elemente entspricht M numerisch der relativen Atommasse A_r, für Moleküle addiert man die Atommassen aller Atome der Summenformel.
 
-- **Elemente:** M(C) = 12,01 g/mol, M(O) = 16,00 g/mol, M(H) = 1,008 g/mol, M(Na) = 22,99 g/mol
-- **Moleküle:** M(H₂O) = 2 × 1,008 + 16,00 = **18,02 g/mol**; M(C₆H₁₂O₆, Glucose) = 6 × 12,01 + 12 × 1,008 + 6 × 16,00 = **180,16 g/mol**; M(NaCl) = 22,99 + 35,45 = **58,44 g/mol**
+Einige Beispiele für Elemente: M(C) = 12,01 g/mol, M(O) = 16,00 g/mol, M(H) = 1,008 g/mol und M(Na) = 22,99 g/mol. Für Moleküle wird die Rechnung etwas aufwendiger, folgt aber immer demselben Prinzip. Wasser beispielsweise besteht aus zwei Wasserstoff- und einem Sauerstoffatom: M(H₂O) = 2 × 1,008 + 16,00 = **18,02 g/mol**. Glucose (C₆H₁₂O₆) bringt es auf M = 6 × 12,01 + 12 × 1,008 + 6 × 16,00 = **180,16 g/mol**, und Kochsalz hat M(NaCl) = 22,99 + 35,45 = **58,44 g/mol**.
 
-In der Biochemie wird statt g/mol oft **Dalton (Da)** oder **kDa** verwendet: 1 Da = 1 g/mol. Hämoglobin hat z. B. eine Molmasse von ca. 64.500 Da = 64,5 kDa.
+In der Biochemie und Molekularbiologie begegnet man anstelle von g/mol häufig der Einheit **Dalton (Da)** oder **Kilodalton (kDa)**: 1 Da = 1 g/mol. So hat Hämoglobin eine Molmasse von rund 64.500 Da = 64,5 kDa — eine Angabe, die bei Proteinen und Nukleinsäuren wesentlich handlicher ist als g/mol.
 
 > **Merke:** M(Stoff) = Summe aller Atommassen aus dem PSE. 1 Da = 1 g/mol. Glucose: 180 g/mol, NaCl: 58,4 g/mol, H₂O: 18 g/mol — diese Werte auswendig kennen!
+
+> 💡 **Prüfungstipp:** Bei MedAT-Rechenaufgaben wird die molare Masse oft in der Angabe mitgeliefert. Trotzdem solltest du M(H₂O) = 18, M(Glucose) = 180 und M(NaCl) = 58,4 auswendig parat haben — das spart wertvolle Sekunden. Rechne die Summenformel-Masse immer systematisch: erst alle C-Atome, dann H, dann O, dann den Rest.
 
 ---
 
 ## Die drei Grundformeln: n, m, N
 
-Das Dreieck der Umrechnungen:
+Das gesamte stöchiometrische Rechnen basiert auf drei Formeln, die sich wie ein Dreieck gegenseitig verbinden. Wer diese drei Beziehungen beherrscht, kann jede Mol-Aufgabe lösen:
 
-- **n = m / M** (Stoffmenge = Masse / Molare Masse)
-- **m = n × M** (Masse = Stoffmenge × Molare Masse)
-- **N = n × N_A** (Teilchenanzahl = Stoffmenge × Avogadro-Zahl)
+Die zentrale Formel lautet **n = m / M** — die Stoffmenge ergibt sich aus der Masse geteilt durch die molare Masse. Umgestellt liefert sie **m = n × M**, also die Masse aus Stoffmenge und molarer Masse. Die dritte Beziehung verbindet die Stoffmenge mit der Teilchenanzahl: **N = n × N_A**. Daraus folgen auch **n = N / N_A** und **m = N × M / N_A** als abgeleitete Formen.
 
-Daraus auch: **n = N / N_A** und **m = N × M / N_A**
+In der Praxis begegnet einem dieser Dreisatz ständig. Wenn ein Arzt wissen will, wie viele Moleküle in einer Infusion stecken, rechnet er zuerst die Masse in Mol um und multipliziert dann mit der Avogadro-Zahl. Wenn ein Apotheker aus einer Stoffmenge die einzuwiegende Masse bestimmen will, nutzt er m = n × M. Diese Kette — Gramm zu Mol zu Teilchen — ist das Rückgrat der quantitativen Chemie.
 
+---
 
 ## Rechenbeispiel 1: Glucose-Infusion
 
-**Aufgabe:** 500 mL einer 5%-Glucose-Lösung (ρ ≈ 1 g/mL). Wie viel Mol Glucose enthält sie? Wie viele Moleküle?
+**Aufgabe:** Eine Klinik verabreicht 500 mL einer 5 %-Glucose-Lösung (ρ ≈ 1 g/mL). Wie viel Mol Glucose enthält die Infusion, und wie vielen Molekülen entspricht das?
 
 **Lösung:**
-1. Masse Glucose: 5 % von 500 g = **25 g**
-2. Stoffmenge: n = m/M = 25 g / 180,16 g/mol = **0,139 mol**
-3. Teilchenanzahl: N = n × N_A = 0,139 × 6,022 × 10²³ = **8,37 × 10²² Moleküle**
+1. Die Masse der Lösung beträgt bei ρ ≈ 1 g/mL rund 500 g. Davon sind 5 % Glucose: m = 0,05 × 500 g = **25 g**.
+2. Die Stoffmenge folgt aus n = m/M = 25 g / 180,16 g/mol = **0,139 mol**.
+3. Die Teilchenanzahl ist N = n × N_A = 0,139 × 6,022 × 10²³ = **8,37 × 10²² Moleküle**.
+
+Diese Glucose-Infusion ist ein Standardpräparat auf jeder Station: Sie liefert Energie (ca. 100 kcal pro 500 mL) und ist mit rund 278 mmol/L osmotisch wirksamen Teilchen annähernd **isoton** zum Blutplasma.
+
+---
 
 ## Rechenbeispiel 2: Medikamentendosis
 
 **Aufgabe:** Ein Patient erhält 500 mg Paracetamol (M = 151,16 g/mol). Wie viele Mol sind das?
 
-**Lösung:** n = m/M = 0,500 g / 151,16 g/mol = **3,31 × 10⁻³ mol = 3,31 mmol**
+**Lösung:** Zunächst die Einheit umrechnen: 500 mg = 0,500 g. Dann n = m/M = 0,500 g / 151,16 g/mol = **3,31 × 10⁻³ mol = 3,31 mmol**. In der Pharmakologie ist die millimolare Angabe oft praktikabler als die molare, da Medikamentendosen typischerweise im Milligramm- bis Gramm-Bereich liegen.
 
 > **Merke:** Rechenweg immer: Masse (g) → Stoffmenge (mol) über n = m/M → Teilchenanzahl (N) über N = n × N_A. Einheiten konsequent umrechnen (mg → g)!
+
+> 💡 **Prüfungstipp:** Der häufigste Fehler bei Mol-Aufgaben im MedAT: Die Masse wird in **mg** angegeben, aber nicht in **g** umgerechnet, bevor man n = m/M anwendet. Ergebnis: Faktor 1000 daneben. Schreibe als ersten Schritt immer „mg → g" hin!
 
 ---
 
 ## Atomare Masseneinheit und relative Atommasse
 
-Die **atomare Masseneinheit u** (unified atomic mass unit) ist definiert als 1/12 der Masse eines ¹²C-Atoms: 1 u = 1,6605 × 10⁻²⁴ g. Die **relative Atommasse A_r** (dimensionslos) gibt an, wie schwer ein Atom im Vergleich zu 1/12 ¹²C ist. Numerisch: A_r(C) = 12,01 → M(C) = 12,01 g/mol.
+Auf atomarer Ebene sind Massen winzig klein. Um mit handlichen Zahlen arbeiten zu können, hat man die **atomare Masseneinheit u** (unified atomic mass unit) eingeführt: 1 u ist definiert als genau 1/12 der Masse eines ¹²C-Atoms und beträgt 1,6605 × 10⁻²⁴ g. Die **relative Atommasse A_r** ist eine dimensionslose Verhältniszahl, die angibt, wie schwer ein Atom im Vergleich zu 1/12 eines ¹²C-Atoms ist. So hat Kohlenstoff A_r = 12,01 (der Dezimalanteil stammt von den natürlichen Isotopen ¹³C und ¹⁴C). Der entscheidende Zusammenhang: A_r(C) = 12,01 bedeutet M(C) = 12,01 g/mol — die Zahlenwerte von relativer Atommasse und molarer Masse sind identisch, nur die Einheit unterscheidet sich.
 
-Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Wie man mit Mol-Angaben chemische Reaktionen quantitativ berechnet, schauen wir uns im nächsten Kapitel die Stöchiometrie an.`,
+Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchiometrische Berechnungen: Jede Zahl unter dem Elementsymbol ist gleichzeitig die relative Atommasse in u und die molare Masse in g/mol.`,
       merksätze: [
         "1 Mol = 6,022 × 10²³ Teilchen (Avogadro-Zahl N_A) — die Brücke zwischen Gramm und Atomen.",
         "Molare Masse M [g/mol] = Summe aller Atommassen aus dem PSE; 1 Dalton = 1 g/mol.",
@@ -204,39 +210,29 @@ Bisher haben wir die Grundlagen des Mol-Konzepts kennengelernt. Wie man mit Mol-
 
 ## Chemische Reaktionsgleichungen
 
-Eine chemische Reaktionsgleichung beschreibt den Umbau von Edukten (Ausgangsstoffen) zu Produkten. Sie muss **ausgeglichen** sein — das Gesetz der Massenerhaltung (Lavoisier) verlangt:
+Antoine Lavoisier formulierte 1789 ein Prinzip, das die gesamte quantitative Chemie trägt: **Bei einer chemischen Reaktion geht kein Atom verloren und keines kommt hinzu.** Dieses Gesetz der Massenerhaltung hat eine unmittelbare Konsequenz für chemische Gleichungen — auf beiden Seiten des Reaktionspfeils muss exakt die gleiche Anzahl jeder Atomsorte stehen. Eine Gleichung, die diese Bedingung erfüllt, heißt **ausgeglichen**.
 
-**Auf beiden Seiten des Reaktionspfeils muss die gleiche Anzahl jeder Atomsorte stehen.**
+Betrachten wir die Verbrennung von Methan als Beispiel. Die unausgeglichene Gleichung CH₄ + O₂ → CO₂ + H₂O zeigt zwar die richtigen Edukte und Produkte, verletzt aber die Atombilanz: Links stehen 4 Wasserstoffatome, rechts nur 2. Erst mit den richtigen Koeffizienten wird die Gleichung korrekt: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. Die Prüfung bestätigt: links C:1, H:4, O:4 — rechts C:1, H:4, O:4.
 
-Beispiel — Verbrennung von Methan:
-- Unausgeglichen: CH₄ + O₂ → CO₂ + H₂O
-- Ausgeglichen: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**
-- Prüfung: links C:1, H:4, O:4 — rechts C:1, H:4, O:4 ✓
-
-Die Koeffizienten (1, 2, 1, 2) geben die **Stoffmengenverhältnisse** an: 1 mol CH₄ reagiert mit 2 mol O₂ zu 1 mol CO₂ und 2 mol H₂O.
+Ein entscheidender Punkt wird dabei oft übersehen: Die Koeffizienten 1, 2, 1, 2 geben **Stoffmengenverhältnisse** an, keine Massenverhältnisse. Das heißt: 1 mol CH₄ (16 g) reagiert mit 2 mol O₂ (64 g) zu 1 mol CO₂ (44 g) und 2 mol H₂O (36 g). Die Massenerhaltung bestätigt sich: 16 + 64 = 80 g links, 44 + 36 = 80 g rechts.
 
 > **Merke:** Stöchiometrische Koeffizienten geben Molverhältnisse an, nicht Massenverhältnisse! 1 mol CH₄ (16 g) + 2 mol O₂ (64 g) → 1 mol CO₂ (44 g) + 2 mol H₂O (36 g). Massenerhaltung: 80 g = 80 g ✓
+
+> 💡 **Prüfungstipp:** Im MedAT wird häufig gefragt, ob eine Gleichung korrekt ausgeglichen ist. Prüfe **jedes Element einzeln** — ein einziges nicht-stimmendes Element macht die ganze Gleichung falsch. Beginne immer mit dem komplexesten Molekül.
 
 ---
 
 ## Systematisches Ausgleichen
 
-**Schrittweise Methode:**
-1. Summenformel aller Edukte und Produkte aufschreiben
-2. Element mit den meisten Bindungspartnern zuerst ausgleichen (oft Metalle oder C)
-3. Dann H, zuletzt O
-4. Gegebenenfalls alle Koeffizienten mit kleinstem Faktor multiplizieren, um ganze Zahlen zu erhalten
-5. **Kontrolle:** Atomanzahl links = rechts für JEDES Element
+Das Ausgleichen einer Reaktionsgleichung folgt einer bewährten schrittweisen Methode. Zuerst schreibt man die Summenformeln aller Edukte und Produkte auf. Dann beginnt man mit dem Element, das die meisten Bindungspartner hat — häufig Metalle oder Kohlenstoff. Danach gleicht man Wasserstoff aus und zuletzt Sauerstoff, da dieser oft in mehreren Verbindungen vorkommt und sich beim Ändern anderer Koeffizienten mitverändert. Falls dabei gebrochene Koeffizienten entstehen, multipliziert man alle Koeffizienten mit dem kleinsten gemeinsamen Faktor, um ganzzahlige Werte zu erhalten. Die abschließende Kontrolle ist unverzichtbar: Für jedes einzelne Element muss die Atomanzahl links und rechts übereinstimmen.
 
-Beispiel — Neutralisation: **Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O**
-- Mg: 1 = 1 ✓, O: 2 = 2 ✓, H: 2+2 = 4 = 4 ✓, Cl: 2 = 2 ✓
+Ein klinisch relevantes Beispiel ist die Neutralisation von Magnesiumhydroxid mit Salzsäure: **Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O**. Die Kontrolle ergibt: Mg: 1 = 1, O: 2 = 2, H: 2 + 2 = 4 = 4, Cl: 2 = 2 — alles stimmt. Diese Reaktion beschreibt, was geschieht, wenn ein Patient ein Antacidum (Mittel gegen Magensäure) auf Magnesiumbasis einnimmt.
 
+---
 
 ## Stöchiometrisches Rechnen
 
-Der Rechenweg folgt immer dem gleichen Schema:
-
-**Masse Edukt → Mol Edukt → (Koeffizientenverhältnis) → Mol Produkt → Masse Produkt**
+Das stöchiometrische Rechnen ist die Königsdisziplin der quantitativen Chemie und folgt immer demselben vierstufigen Schema: **Masse Edukt → Mol Edukt → (Koeffizientenverhältnis) → Mol Produkt → Masse Produkt**. Der entscheidende Schritt in der Mitte — die Umrechnung über das Koeffizientenverhältnis — unterscheidet die Stöchiometrie von einer einfachen Mol-Aufgabe. Ohne ausgeglichene Gleichung ist dieser Schritt unmöglich, weshalb das korrekte Ausgleichen die Voraussetzung für jede stöchiometrische Berechnung darstellt.
 
 ### Rechenbeispiel: CO₂ aus Glucose-Verbrennung
 
@@ -245,43 +241,47 @@ Der Rechenweg folgt immer dem gleichen Schema:
 **Gleichung:** C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O
 
 **Lösung:**
-1. n(Glucose) = m/M = 90 / 180 = **0,5 mol**
-2. Koeffizientenverhältnis: 1 mol Glucose → 6 mol CO₂
-3. n(CO₂) = 6 × 0,5 = **3 mol**
-4. m(CO₂) = n × M = 3 × 44 = **132 g**
+1. **Masse → Mol:** n(Glucose) = m/M = 90 g / 180 g/mol = **0,5 mol**
+2. **Koeffizientenverhältnis:** Laut Gleichung ergibt 1 mol Glucose genau 6 mol CO₂
+3. **Mol Produkt:** n(CO₂) = 6 × 0,5 = **3 mol**
+4. **Mol → Masse:** m(CO₂) = n × M = 3 mol × 44 g/mol = **132 g**
+
+Dieses Beispiel ist zugleich biologisch bedeutsam: Die Gleichung beschreibt die Zellatmung — den Prozess, mit dem jede Körperzelle Glucose zu CO₂ und Wasser abbaut und dabei Energie gewinnt.
 
 > **Merke:** Stöchiometrisches Rechnen: g → mol (÷M) → Koeffizientenverhältnis → mol → g (×M). Die Koeffizienten sind das Herzstück!
+
+> 💡 **Prüfungstipp:** Bei MedAT-Stöchiometrie-Aufgaben schreibe dir den Vierschritt als Gerüst auf: m → n → Verhältnis → n → m. Viele Prüflinge vergessen den mittleren Schritt (Koeffizientenverhältnis) und rechnen direkt von Edukt-Mol auf Produkt-Masse. Das geht nur dann, wenn das Verhältnis 1:1 beträgt!
 
 ---
 
 ## Limitierendes Reagenz und Ausbeute
 
-Wenn Edukte nicht im exakten stöchiometrischen Verhältnis vorliegen, bestimmt das **limitierende Reagenz** (Mangelreagenz) die maximale Produktmenge. Das andere Reagenz ist im **Überschuss**.
+In der Praxis liegen Edukte selten im perfekten stöchiometrischen Verhältnis vor. Wenn ein Reagenz aufgebraucht ist, stoppt die Reaktion — unabhängig davon, wie viel vom anderen Reagenz noch übrig ist. Das zuerst verbrauchte Edukt heißt **limitierendes Reagenz** (Mangelreagenz), das verbleibende befindet sich im **Überschuss**.
 
 ### Rechenbeispiel: Limitierendes Reagenz
 
-**Aufgabe:** 10 g H₂ reagieren mit 80 g O₂. Wie viel Wasser entsteht? (2 H₂ + O₂ → 2 H₂O)
+**Aufgabe:** 10 g H₂ reagieren mit 80 g O₂ zu Wasser. Wie viel Wasser entsteht? (2 H₂ + O₂ → 2 H₂O)
 
 **Lösung:**
-1. n(H₂) = 10/2 = 5 mol; n(O₂) = 80/32 = 2,5 mol
-2. Bedarf laut Gleichung: 5 mol H₂ brauchen 5/2 = 2,5 mol O₂ → exakt passend!
-3. n(H₂O) = 5 mol → m(H₂O) = 5 × 18 = **90 g**
+1. **Stoffmengen berechnen:** n(H₂) = 10 g / 2 g/mol = 5 mol; n(O₂) = 80 g / 32 g/mol = 2,5 mol
+2. **Bedarf prüfen:** Laut Gleichung benötigen 5 mol H₂ genau 5/2 = 2,5 mol O₂ → exakt passend!
+3. **Produkt berechnen:** n(H₂O) = 5 mol → m(H₂O) = 5 × 18 = **90 g**
 
-Wäre nur 1,5 mol O₂ vorhanden: Nur 3 mol H₂ können reagieren → O₂ ist limitierend → n(H₂O) = 3 mol = 54 g; 2 mol H₂ (4 g) bleiben im Überschuss.
+Was wäre anders, wenn nur 1,5 mol O₂ vorhanden wären? Dann könnten nur 3 mol H₂ reagieren (weil 2 H₂ pro 1 O₂ benötigt werden). Sauerstoff wäre das limitierende Reagenz, es entstünden nur n(H₂O) = 3 mol = 54 g, und 2 mol H₂ (4 g) blieben unreagiert im Überschuss.
 
-**Theoretische Ausbeute** = maximal mögliche Produktmenge (aus stöchiometrischer Berechnung). **Tatsächliche Ausbeute** ist in der Praxis oft geringer (Nebenreaktionen, unvollständige Reaktion). **Prozentuale Ausbeute** = (tatsächlich / theoretisch) × 100 %.
+In der pharmazeutischen Industrie spielt die Ausbeute eine zentrale Rolle. Die **theoretische Ausbeute** ist die maximal mögliche Produktmenge laut stöchiometrischer Berechnung. Die **tatsächliche Ausbeute** fällt durch Nebenreaktionen, unvollständige Umsetzung oder Verluste bei der Aufarbeitung stets geringer aus. Die **prozentuale Ausbeute** = (tatsächlich / theoretisch) × 100 % ist ein Maß für die Effizienz einer Synthese — bei der Arzneimittelherstellung sind Werte über 90 % das Ziel.
 
 > **Merke:** Das limitierende Reagenz bestimmt die maximale Produktmenge. Identifizierung: Für jedes Edukt berechnen, wie viel Produkt es maximal liefern kann — das Edukt mit dem geringsten Produktertrag ist limitierend.
 
 ---
 
-## Klinische Anwendungen
+## Klinische Anwendungen der Stöchiometrie
 
-**Neutralisation von Magensäure:** Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Eine Antacidum-Tablette (Mittel gegen Magensäure) mit 300 mg Mg(OH)₂ neutralisiert: n = 0,300/58,3 = 5,15 mmol → neutralisiert 10,3 mmol HCl.
+Die Stöchiometrie ist alles andere als abstrakte Theorie — sie begegnet Ärztinnen und Ärzten täglich. Ein anschauliches Beispiel ist die **Neutralisation von Magensäure** durch Antacida: Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Eine Antacidum-Tablette mit 300 mg Mg(OH)₂ enthält n = 0,300 g / 58,3 g/mol = 5,15 mmol Magnesiumhydroxid. Da das Molverhältnis 1:2 beträgt, neutralisiert sie 2 × 5,15 = 10,3 mmol HCl — eine beachtliche Menge, wenn man bedenkt, dass der Magen täglich etwa 50–100 mmol HCl produziert.
 
-**CO₂-Produktion im Stoffwechsel:** Bei vollständiger Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g). Der **respiratorische Quotient** RQ = CO₂ produziert / O₂ verbraucht = 6/6 = 1,0 für Kohlenhydrate.
+Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwechsel**. Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g) und 6 mol H₂O. Das Verhältnis von produziertem CO₂ zu verbrauchtem O₂ heißt **respiratorischer Quotient (RQ)**: Für Kohlenhydrate beträgt RQ = 6/6 = 1,0, für Fette sinkt er auf etwa 0,7 (Fettsäuren benötigen mehr O₂ pro erzeugtem CO₂). Klinisch wird der RQ über indirekte Kalorimetrie bestimmt und gibt Aufschluss über den aktuellen Substratmix der Energiegewinnung eines Patienten.
 
-Bisher haben wir gelernt, wie Mengenbeziehungen in Reaktionen funktionieren. Wie man diese Stoffe in Lösungen quantifiziert, brauchen wir Konzentrationsangaben — das Thema des nächsten Unterkapitels.`,
+> 💡 **Prüfungstipp:** Der RQ wird im MedAT gerne als Verknüpfung zwischen Stöchiometrie und Physiologie gefragt. Merke: RQ = 1,0 (Kohlenhydrate), RQ ≈ 0,7 (Fette), RQ ≈ 0,8 (Proteine). Ein gemischter RQ von 0,85 entspricht einer normalen Mischkost.`,
       merksätze: [
         "Stöchiometrische Koeffizienten sind Molverhältnisse, nicht Massenverhältnisse!",
         "Rechenweg: g → mol (÷M) → Koeffizientenverhältnis → mol → g (×M).",

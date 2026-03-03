@@ -23,43 +23,37 @@ export const physKapFluid: Kapitel = {
         "Herzhöhe",
         "hydraulische Presse",
       ],
-      content: `
+      content: `## Druck — der zentrale Begriff der Fluidmechanik
 
-
-## Druck -- Wiederholung und Grundbegriff
+Jeder, der schon einmal tief getaucht ist, kennt das Druckgefühl auf den Ohren. Dieses alltägliche Phänomen führt direkt zum physikalischen Kernbegriff der Hydrostatik: dem **Druck**. Physikalisch ist Druck definiert als Kraft pro Fläche:
 
 **p = F / A**
 
-Die SI-Einheit ist **Pascal** (Pa = N/m2 = kg*m-1*s-2). In der Medizin wird der Blutdruck in **mmHg** (Millimeter Quecksilbersäule) angegeben: **1 mmHg ca. 133,3 Pa**.
+Die SI-Einheit ist das **Pascal** (1 Pa = 1 N/m² = 1 kg·m⁻¹·s⁻²). Ein Pascal ist ein überraschend kleiner Druck — der atmosphärische Luftdruck beträgt bereits rund 101 325 Pa. In der Medizin hat sich deshalb eine andere Einheit durchgesetzt: **Millimeter Quecksilbersäule** (mmHg). Die Umrechnung lautet **1 mmHg ≈ 133,3 Pa**, und der Normaldruck auf Meereshöhe entspricht **1 atm = 760 mmHg**. In der Beatmungsmedizin begegnet man zudem der Einheit cmH₂O (1 cmH₂O ≈ 98 Pa), die bei der Einstellung von PEEP-Werten (positiver endexspiratorischer Druck) am Beatmungsgerät eine Rolle spielt.
 
-Weitere Druckeinheiten:
-- 1 atm = 101 325 Pa = 760 mmHg (Atmosphärendruck auf Meereshöhe)
-- 1 bar = 100 000 Pa ca. 750 mmHg
-- 1 cmH2O ca. 98,07 Pa (Beatmungsmedizin)
-
-> **Merke:** Druck p = F/A hat die Einheit Pascal (Pa). In der Klinik: 1 mmHg ca. 133 Pa, 1 atm = 760 mmHg = 101 325 Pa.
+> **Merke:** Druck p = F/A hat die Einheit Pascal (Pa). In der Klinik: 1 mmHg ≈ 133 Pa, 1 atm = 760 mmHg = 101 325 Pa.
 
 ---
 
 ## Hydrostatischer Druck (Schweredruck)
 
+Stellt man sich eine ruhende Flüssigkeitssäule vor, so lastet auf jeder Schicht das Gewicht aller darüber liegenden Schichten. Daraus folgt die fundamentale Beziehung der Hydrostatik:
 
-**p = rho * g * h**
+**p = ρ · g · h**
 
-Dabei ist:
-- **rho** = Dichte der Flüssigkeit (in kg/m3; Wasser: rho ca. 1000 kg/m3, Blut: rho ca. 1060 kg/m3)
-- **g** = Erdbeschleunigung (ca. 9,81 m/s2)
-- **h** = Tiefe (Höhe der Flüssigkeitssäule in m)
+Hier steht **ρ** für die Dichte der Flüssigkeit (Wasser: ≈ 1000 kg/m³, Blut: ≈ 1060 kg/m³), **g** für die Erdbeschleunigung (9,81 m/s²) und **h** für die Höhe der Flüssigkeitssäule. Der **Gesamtdruck** in einer bestimmten Tiefe ergibt sich als Summe aus dem Oberflächendruck und dem Schweredruck: **p_gesamt = p₀ + ρ·g·h**.
 
-Der **Gesamtdruck** in einer Tiefe h beträgt: **p_gesamt = p_0 + rho*g*h**, wobei p_0 der Druck an der Oberfläche (z. B. Atmosphärendruck) ist.
+Diese Gleichung hat weitreichende Konsequenzen. Pro 10 m Wassersäule nimmt der Druck um etwa 1 atm zu — ein Taucher in 30 m Tiefe steht also unter rund 4 atm Gesamtdruck (1 atm Luft + 3 atm Wasser). Für die Tauchmedizin bedeutet das: Stickstoff löst sich unter Druck vermehrt im Blut und kann beim zu schnellen Auftauchen als Gasblasen ausfallen — die gefürchtete **Dekompressionskrankheit** (Caisson-Krankheit).
 
-**Rechenbeispiel -- Schweredruck im Blutgefäß:**
-Wie groß ist der hydrostatische Druckunterschied zwischen Herz und Fuß (Höhendifferenz h ca. 1,3 m)?
-Delta-p = rho_Blut * g * h = 1060 kg/m3 * 9,81 m/s2 * 1,3 m ca. **13 520 Pa ca. 101 mmHg**
+**Rechenbeispiel — Blutdruckunterschied Herz–Fuß:**
 
-Das bedeutet: Im Stehen ist der Blutdruck am Fuß um ca. **100 mmHg höher** als auf Herzhöhe! Im Kopf (ca. 0,4 m über dem Herzen) ist er entsprechend ca. 30 mmHg niedriger.
+Wie groß ist der hydrostatische Druckunterschied zwischen Herzhöhe und den Füßen bei einer stehenden Person (Höhendifferenz h ≈ 1,3 m)?
 
-> **Merke:** p = rho*g*h -- der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersäule nimmt der Druck um ca. 1 atm zu. Pro 1,3 m Blutsäule (Herz -> Fuß) um ca. 100 mmHg.
+Δp = ρ_Blut · g · h = 1060 kg/m³ · 9,81 m/s² · 1,3 m ≈ **13 520 Pa ≈ 101 mmHg**
+
+Das ist ein gewaltiger Betrag: Im Stehen herrscht am Fuß ein um rund **100 mmHg höherer** Blutdruck als auf Herzhöhe. Umgekehrt ist der Druck im Kopf (ca. 0,4 m über dem Herzen) um etwa 30 mmHg niedriger. Dieser Gradient erklärt, warum langes Stehen zu Beinödemen führt und warum ein plötzlicher Lagewechsel (Aufstehen) Schwindel auslösen kann — die orthostatische Dysregulation.
+
+> **Merke:** p = ρ·g·h — der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersäule ca. 1 atm, pro 1,3 m Blutsäule ca. 100 mmHg.
 
 > 💡 **Prüfungstipp:** Klassische MedAT-Rechnung: „Druckunterschied Herz–Fuß?" → Δp = ρ·g·h = 1060 · 9,81 · 1,3 ≈ 13 500 Pa ≈ 101 mmHg. Merke die Faustformel: **~100 mmHg pro 1,3 m Blutsäule**.
 
@@ -67,46 +61,54 @@ Das bedeutet: Im Stehen ist der Blutdruck am Fuß um ca. **100 mmHg höher** als
 
 ## Hydrostatisches Paradoxon
 
-muss man ein Prinzip begreifen, das zunächst überraschend wirkt: Der Bodendruck in einem mit Flüssigkeit gefüllten Gefäß hängt **nur** von der Füllhöhe h und der Dichte rho ab -- **nicht von der Gefäßform** und nicht vom Gesamtvolumen.
+Ein auf den ersten Blick verblüffendes Ergebnis: Der Bodendruck in einem mit Flüssigkeit gefüllten Gefäß hängt **ausschließlich** von der Füllhöhe h und der Dichte ρ ab — **nicht von der Gefäßform** und nicht vom Gesamtvolumen. Drei unterschiedlich geformte Gefäße (schmal-zylindrisch, bauchig, trichterförmig), die mit derselben Flüssigkeit auf dieselbe Höhe h gefüllt sind, zeigen exakt **denselben Bodendruck**: p = ρ·g·h.
 
-Drei verschieden geformte Gefäße (schmal, breit, trichterförmig), die mit derselben Flüssigkeit auf dieselbe Höhe h gefüllt sind, haben exakt **denselben Bodendruck**: p = rho*g*h.
+Das erscheint paradox, weil die Gewichtskraft der Flüssigkeit in den drei Gefäßen unterschiedlich groß ist. Die physikalische Erklärung liegt in den Normalkräften auf die Gefäßwände: Bei schrägen oder sich verengenden Wänden übt die Flüssigkeit Druckkräfte senkrecht auf die Wand aus, die eine vertikale Komponente besitzen. Diese vertikalen Wandkräfte kompensieren exakt den Gewichtsunterschied. Das Paradoxon hat klinische Relevanz: Auch in Blutgefäßen mit unregelmäßiger Geometrie — etwa bei Aneurysmen — bestimmt die Flüssigkeitssäule über dem betrachteten Punkt den hydrostatischen Druck, nicht die lokale Gefäßform.
 
-Das erscheint paradox, weil die Gewichtskraft der Flüssigkeit in den drei Gefäßen unterschiedlich ist. Die Erklärung: Bei schrägen oder sich verengenden Wänden übt die Flüssigkeit Normalkräfte auf die Wand aus, die den Unterschied kompensieren.
+> **Merke:** Hydrostatisches Paradoxon: Der Bodendruck hängt nur von ρ, g und h ab — nicht von der Gefäßform oder dem Volumen!
 
-> **Merke:** Hydrostatisches Paradoxon: Der Bodendruck hängt nur von rho, g und h ab -- nicht von der Gefäßform oder dem Volumen!
+> 💡 **Prüfungstipp:** Im MedAT taucht das Paradoxon gern als Verständnisfrage auf: „In welchem Gefäß ist der Bodendruck am größten?" — Die Antwort ist immer: **In allen gleich**, sofern Dichte und Füllhöhe identisch sind.
 
 ---
 
 ## Pascalsches Prinzip
 
+Blaise Pascal formulierte 1653 ein Grundgesetz, das die gesamte Hydraulik begründet: Ein auf eine **eingeschlossene, inkompressible Flüssigkeit** ausgeübter Druck pflanzt sich **gleichmäßig in alle Richtungen** fort und wirkt auf jede Flächeneinheit der Gefäßwand mit gleicher Stärke.
 
-> Ein auf eine eingeschlossene Flüssigkeit ausübter Druck breitet sich **gleichmäßig in alle Richtungen** aus und wirkt auf jede Flächeneinheit der Gefäßwand gleich stark.
+Die technisch wichtigste Anwendung ist die **hydraulische Presse**. An einem Kolben mit kleiner Fläche A₁ wird die Kraft F₁ aufgebracht. Da der Druck p = F/A in der gesamten Flüssigkeit gleich ist, gilt am großen Kolben mit Fläche A₂:
 
-**Anwendung -- Die hydraulische Presse:**
+**F₂ = F₁ · (A₂ / A₁)**
 
-An einem Kolben mit kleiner Fläche A1 wird die Kraft F1 aufgebracht. Da der Druck p = F/A überall gleich ist, gilt:
+Bei einem Flächenverhältnis A₂/A₁ = 10 wird die Kraft verzehnfacht. Der Energieerhaltungssatz bleibt dabei gewahrt: Der große Kolben bewegt sich nur ein Zehntel des Weges, denn die Arbeit W = F·s muss auf beiden Seiten gleich sein.
 
-**F1 / A1 = F2 / A2 -> F2 = F1 * (A2 / A1)**
+**Rechenbeispiel — Hydraulische Presse:**
+Ein Automechaniker drückt mit F₁ = 200 N auf einen Kolben mit A₁ = 5 cm². Der Hebekolben hat A₂ = 500 cm².
+F₂ = 200 N · (500/5) = **20 000 N = 20 kN** — genug, um ein Fahrzeug anzuheben.
+Der kleine Kolben muss dafür aber 100-mal weiter gedrückt werden als sich der Hebekolben bewegt.
 
-Bei A2 = 10*A1 wird die Kraft **verzehnfacht** -- allerdings bewegt sich der große Kolben nur 1/10 des Weges (Energieerhaltung: W = F*s = const).
+In der Medizin erklärt das Pascalsche Prinzip die Druckverteilung in flüssigkeitsgefüllten Körperhöhlen. Ein erhöhter **intraabdomineller Druck** (z. B. bei Aszites oder abdominellem Kompartmentsyndrom) wirkt gleichmäßig auf alle umliegenden Organe: Leber, Nieren und Darm werden komprimiert, das Zwerchfell wird nach kranial (kopfwärts) gedrängt, und die Lungenentfaltung wird eingeschränkt.
 
-**Klinisch:** Das Pascalsche Prinzip erklärt, warum ein erhöhter intraabdomineller Druck (Druck im Bauchraum, z. B. bei Aszites, einer Flüssigkeitsansammlung im Bauchraum) gleichmäßig auf alle umliegenden Organe wirkt und die Zwerchfellbewegung einschränken kann.
-
-> **Merke:** Pascalsches Prinzip: Druck in einer eingeschlossenen Flüssigkeit breitet sich allseitig gleich aus. Hydraulische Presse: Kraftverstärkung F2 = F1 * (A2/A1), aber s2 = s1 * (A1/A2).
+> **Merke:** Pascalsches Prinzip: Druck in einer eingeschlossenen Flüssigkeit breitet sich allseitig gleich aus. Hydraulische Presse: F₂ = F₁·(A₂/A₁), aber s₂ = s₁·(A₁/A₂).
 
 ---
 
 ## Manometer und Blutdruckmessung nach Riva-Rocci
 
-**Um den Druck zu messen,** verwendet man Manometer. In der Medizin ist das **Quecksilber-Manometer** (Sphygmomanometer, griech. Pulsmesser) nach **Riva-Rocci** historisch bedeutend:
+Die praktische Messung von Drücken erfolgt mit **Manometern**. In der Medizin hat das **Quecksilber-Sphygmomanometer** (griech. sphygmós = Puls) nach Scipione **Riva-Rocci** (1896) historische Bedeutung und definiert bis heute die Einheit mmHg.
 
-Die Manschette wird am Oberarm auf **Herzhöhe** aufgepumpt, bis die Arteria brachialis (Oberarmarterie) komprimiert ist. Beim langsamen Ablassen des Drucks werden mit dem Stethoskop die **Korotkow-Geräusche** (pulssynchrone Strömungsgeräusche beim Ablassen des Manschettendrucks) auskultiert (abgehört):
-- **Systolischer Wert**: erstes hörbares Klopfen (Blut presst sich durch die Stenose, d. h. Gefäßverengung)
-- **Diastolischer Wert**: Verschwinden der Geräusche (freier Blutfluss)
+Das Messprinzip ist elegant: Eine aufblasbare Manschette wird am Oberarm — zwingend auf **Herzhöhe** — so weit aufgepumpt, dass die **Arteria brachialis** (Oberarmarterie) vollständig komprimiert wird und kein Blut mehr fließt. Beim langsamen Ablassen des Manschettendrucks öffnet sich das Gefäß schrittweise, und mit einem Stethoskop über der Ellenbeuge werden die **Korotkow-Geräusche** auskultiert (abgehört). Diese pulssynchronen Strömungsgeräusche entstehen durch turbulente Strömung im teilweise komprimierten Gefäß:
 
-**Warum Herzhöhe?** Liegt die Manschette 15 cm unter Herzhöhe, ist der gemessene Druck um Delta-p = rho*g*h = 1060 * 9,81 * 0,15 ca. 1561 Pa ca. **12 mmHg zu hoch**. Bei der Diagnose einer Hypertonie (Bluthochdruck, Grenzwert 140/90 mmHg) kann das den Unterschied zwischen "normal" und "behandlungsbedürftig" ausmachen!
+Der **systolische Wert** (oberer Wert) entspricht dem Manschettendruck, bei dem das erste Klopfgeräusch hörbar wird — das Blut presst sich gerade durch die Stenose. Der **diastolische Wert** (unterer Wert) wird beim Verschwinden der Geräusche abgelesen, wenn das Gefäß wieder frei durchströmt wird und die Strömung laminar ist.
 
-> **Merke:** Blutdruckmessung immer auf Herzhöhe! Jeder Zentimeter Abweichung verfälscht das Ergebnis um ca. 0,8 mmHg (ca. rho_Blut * g * 0,01 m / 133 Pa/mmHg).`,
+**Warum muss auf Herzhöhe gemessen werden?** Der hydrostatische Druck der Blutsäule verfälscht jede Messung, die nicht auf Herzhöhe stattfindet. Liegt die Manschette nur 15 cm unter Herzhöhe, ergibt sich ein Messfehler von:
+
+Δp = ρ·g·h = 1060 · 9,81 · 0,15 ≈ 1561 Pa ≈ **12 mmHg zu hoch**
+
+Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — und fälschlich eine behandlungsbedürftige **Hypertonie** (Grenzwert 140/90 mmHg) diagnostizieren. Als Faustformel gilt: Jeder Zentimeter Höhenabweichung verfälscht das Ergebnis um rund 0,8 mmHg.
+
+> **Merke:** Blutdruckmessung immer auf Herzhöhe! Jeder Zentimeter Abweichung verfälscht das Ergebnis um ca. 0,8 mmHg (≈ ρ_Blut · g · 0,01 m / 133 Pa/mmHg).
+
+> 💡 **Prüfungstipp:** „Manschette 20 cm zu tief — wie groß ist der Fehler?" → Δp = 1060 · 9,81 · 0,20 ≈ 2080 Pa ÷ 133 ≈ **15,6 mmHg zu hoch**. Immer ρ_Blut ≈ 1060 kg/m³ verwenden, nicht ρ_Wasser!`,
 
       lernziele: [
         "Den hydrostatischen Druck mit p = ρ·g·h berechnen können",

@@ -27,112 +27,87 @@ export const chemKapMaterie: Kapitel = {
       ],
       content: `## Die Ideale Gasgleichung
 
-Die ideale Gasgleichung **pV = nRT** ist eine der fundamentalsten Gleichungen der physikalischen Chemie. Sie beschreibt das Verhalten eines hypothetischen idealen Gases und verknüpft vier makroskopische (mit bloßem Auge messbare) Zustandsgrößen:
+Kaum eine Gleichung begegnet angehenden Medizinerinnen und Medizinern so häufig wie **pV = nRT**. Sie verknüpft vier messbare Zustandsgrößen eines Gases in einer einzigen, eleganten Beziehung und bildet damit das Fundament der physikalischen Chemie der Gase. Ob Beatmungsmedizin, Blutgasanalyse oder Tauchphysiologie – wer diese Gleichung sicher beherrscht, versteht die physikalischen Grundlagen zahlreicher klinischer Situationen.
 
-- **p** = Druck [Pa = N/m2] oder [bar, atm, mmHg]: Der Druck ist die Kraft pro Fläche, die Gasteilchen durch Kollisionen auf die Behälterwand ausüben.
-- **V** = Volumen [m3 oder L]: Das vom Gas eingenommene Raumvolumen.
-- **n** = Stoffmenge [mol]: Gibt die Teilchenanzahl in Vielfachen der Avogadro-Zahl an (N_A = 6,022 x 10 hoch 23 pro mol).
-- **R** = universelle Gaskonstante = 8,314 J/(mol*K) = 0,08314 L*bar/(mol*K) = 0,08206 L*atm/(mol*K).
-- **T** = absolute Temperatur [K]: Kelvin = Celsius + 273,15. Niemals Celsius direkt einsetzen!
+Die vier Zustandsgrößen im Detail: Der **Druck p** (gemessen in Pascal, bar oder mmHg) beschreibt die Kraft pro Fläche, die Gasteilchen durch ihre Wandstöße erzeugen. Das **Volumen V** (in Litern oder Kubikmetern) gibt den Raum an, den das Gas einnimmt. Die **Stoffmenge n** (in Mol) zählt die Teilchen in Vielfachen der Avogadro-Zahl (N_A = 6,022 × 10²³ mol⁻¹). Die **absolute Temperatur T** muss stets in Kelvin angegeben werden: K = °C + 273,15. Die **universelle Gaskonstante R** = 8,314 J/(mol·K) verbindet alle Größen miteinander. In der Einheit L·bar/(mol·K) beträgt sie 0,08314 – dieser Wert ist für Aufgaben mit Druck in bar und Volumen in Litern besonders praktisch.
 
-## Herleitung aus den Einzelgesetzen
+> 💡 **Prüfungstipp:** Die häufigste Fehlerquelle bei Gasrechnungen ist das Vergessen der Kelvin-Umrechnung. Celsius-Werte **niemals** direkt in pV = nRT einsetzen! 27 °C = 300 K, 0 °C = 273 K – diese Werte kommen in fast jeder MedAT-Aufgabe vor.
 
-Die ideale Gasgleichung ergibt sich aus der Kombination dreier historischer Gasgesetze:
+## Herleitung aus den historischen Einzelgesetzen
 
-**1. Gesetz von Boyle-Mariotte (1662):** Bei konstanter Temperatur (T = const) und konstanter Stoffmenge (n = const) ist das Produkt aus Druck und Volumen konstant: **p * V = const**, also p1V1 = p2V2. Physikalisch: Halbiert man das Volumen, verdoppelt sich die Stoßfrequenz der Teilchen auf die Wand -> doppelter Druck.
+Die ideale Gasgleichung ist kein willkürlich aufgestelltes Gesetz, sondern ergibt sich zwingend aus der Kombination dreier experimentell entdeckter Zusammenhänge.
 
-**2. Gesetz von Charles/Gay-Lussac (1787/1802):** Bei konstantem Druck (p = const) ist das Volumen proportional zur absoluten Temperatur: **V/T = const**, also V1/T1 = V2/T2. Erhöht man T, steigt die kinetische Energie -> Teilchen stoßen stärker -> Volumen wächst, damit p konstant bleibt.
+Das **Gesetz von Boyle-Mariotte** (1662) beschreibt das Verhalten bei konstanter Temperatur: Komprimiert man ein Gas auf das halbe Volumen, verdoppelt sich der Druck, denn die Teilchen treffen auf die Wand in doppelter Frequenz. Mathematisch ausgedrückt: **p · V = const** bei konstantem T und n, also p₁V₁ = p₂V₂. Im p-V-Diagramm zeichnen sich die Isothermen als Hyperbeln ab. Praktisch begegnet uns dieses Gesetz beim Tauchen: In 10 m Tiefe herrscht bereits der doppelte Atmosphärendruck, und eine Luftblase hat nur noch das halbe Volumen.
 
-**3. Gesetz von Avogadro (1811):** Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen: **V/n = const**. Das molare Volumen V_m = V/n ist bei STP stets 22,4 L/mol.
+Das **Gesetz von Charles und Gay-Lussac** (1787/1802) betrifft die Temperaturabhängigkeit: Bei konstantem Druck ist das Volumen direkt proportional zur absoluten Temperatur, **V/T = const**. Erhöht man die Temperatur, steigt die kinetische Energie der Teilchen, sie stoßen härter gegen die Wände, und das Gas expandiert, bis der Druck wieder ausgeglichen ist. Der verwandte Fall bei konstantem Volumen (Gay-Lussac im engeren Sinn) lautet **p/T = const** – hier steigt der Druck mit der Temperatur, was man im Alltag am Autoreifendruck im Sommer beobachtet.
 
-Kombiniert: p*V/(n*T) = R = const -> **pV = nRT**.
+Das **Gesetz von Avogadro** (1811) fügt die Stoffmenge hinzu: Bei gleichem Druck und gleicher Temperatur enthalten gleiche Volumina **aller** idealen Gase dieselbe Teilchenzahl. Das molare Volumen V_m beträgt bei Standardbedingungen (STP: 0 °C, 1 bar) rund 22,4 L/mol – ob Helium, Sauerstoff oder Kohlendioxid.
 
-**Prüfungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unverändert**: p = nRT/V -> p' = nR*(2T)/(2V) = nRT/V = p.
+Kombiniert man alle drei Gesetze, erhält man: p·V/(n·T) = R = const, also **pV = nRT**.
 
+> 💡 **Prüfungstipp:** Ein beliebter MedAT-Sonderfall: Werden bei konstanter Stoffmenge sowohl V als auch T (in Kelvin) verdoppelt, bleibt der Druck **unverändert**, denn p = nR·(2T)/(2V) = nRT/V. Solche „Kompensationsfragen” tauchen regelmäßig auf.
 
-## Umrechnungen und praktische Anwendung
+## Umrechnungen und Standardbedingungen
 
-Häufige Umformungen:
+Die ideale Gasgleichung lässt sich zu zahlreichen nützlichen Ausdrücken umformen. Die **Gasdichte** ergibt sich als ρ = M·p/(R·T), wobei M die molare Masse ist – schwere Gase sind bei gleichen Bedingungen dichter. Die **Konzentration** eines Gases beträgt c = n/V = p/(R·T), und die **molare Masse** lässt sich experimentell aus m, p, V und T bestimmen: M = m·R·T/(p·V).
 
-- Dichte eines Gases: rho = m/V = M*p/(R*T), wobei M die molare Masse [g/mol] ist.
-- Molare Masse aus Messung: M = m*R*T/(p*V)
-- Konzentration: c = n/V = p/(R*T)
+Bei den **Standardbedingungen** herrscht gelegentlich Verwirrung. Die aktuelle IUPAC-Definition (STP) legt 0 °C und 1 bar fest, woraus V_m = 22,711 L/mol folgt. Viele ältere Lehrbücher verwenden 0 °C und 1 atm (= 101.325 Pa), was V_m = 22,414 L/mol ergibt. Bei SATP (25 °C, 1 bar) beträgt V_m = 24,790 L/mol. Für die Praxis genügt es, mit 22,4 L/mol bei STP zu rechnen.
 
-**Standardbedingungen:**
-- STP (IUPAC seit 1982): 0 °C (273,15 K), 1 bar -> V_m = 22,711 L/mol (exakt)
-- Ältere Definition: 0 °C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch üblich)
-- SATP: 25 °C (298,15 K), 1 bar -> V_m = 24,790 L/mol
+Die wichtigsten **Druckumrechnungen**: 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg. In der Klinik werden Blutgaswerte häufig in mmHg angegeben, während die Physik Pascal oder bar bevorzugt.
 
-**Druckeinheiten im Überblick:**
-- 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg (Torr)
-- Normaldruck der Atmosphäre ungefähr 101.300 Pa ungefähr 1 bar
-- Partialdruck: p_i = n_i*R*T/V (Anteil der Komponente i im Gemisch)
+## Ideales versus reales Gas
 
+Das Modell des idealen Gases beruht auf zwei vereinfachenden Annahmen: Die Gasteilchen sind punktförmig (kein Eigenvolumen), und zwischen ihnen wirken keine Anziehungs- oder Abstoßungskräfte. Unter Normalbedingungen – also bei moderatem Druck und nicht zu tiefer Temperatur – beschreibt dieses Modell die Wirklichkeit erstaunlich gut.
 
-## Ideales vs. Reales Gas
+Reale Gase weichen jedoch spürbar ab, wenn der Druck hoch oder die Temperatur niedrig ist. Bei **hohem Druck** wird das Eigenvolumen der Moleküle im Verhältnis zum Gesamtvolumen nicht mehr vernachlässigbar – das Gas lässt sich schwerer komprimieren als vorhergesagt, und der Kompressibilitätsfaktor Z = pV/(nRT) steigt über 1. Bei **tiefer Temperatur** dominieren die intermolekularen Anziehungskräfte (Van-der-Waals-Kräfte), die den effektiven Wandstoßdruck verringern – Z sinkt unter 1. In der Nähe des **Kondensationspunkts** versagt das ideale Modell vollständig.
 
-Ein **ideales Gas** basiert auf zwei Modellannahmen:
-1. Gasteilchen sind punktförmig (kein Eigenvolumen).
-2. Keine intermolekularen Wechselwirkungen.
+## Die Van-der-Waals-Gleichung
 
-**Reale Gase** weichen davon ab, besonders bei:
-- **Hohem Druck**: Eigenvolumen der Moleküle wird relevant -> Gas schwerer komprimierbar -> Kompressibilitätsfaktor Z = pV/(nRT) > 1.
-- **Tiefer Temperatur**: Van-der-Waals-Anziehungskräfte dominieren -> Gas leichter komprimierbar -> Z < 1.
-- **Nahe dem Kondensationspunkt** (Temperatur der Verflüssigung): Phasenübergänge treten auf.
+Johannes Diderik van der Waals stellte 1873 eine korrigierte Zustandsgleichung auf, die beide Abweichungen berücksichtigt:
 
-## Van-der-Waals-Gleichung
+**(p + a·n²/V²) · (V − n·b) = n·R·T**
 
-Die van-der-Waals-Gleichung (1873) korrigiert das ideale Gasgesetz für reale Gase:
+Der Parameter **a** (in L²·bar/mol²) korrigiert den Druck nach oben: Die intermolekularen Anziehungskräfte verringern die Wucht der Wandstöße, sodass der gemessene Druck niedriger ist als der „ideale” Druck. Der Parameter **b** (in L/mol) korrigiert das Volumen nach unten: Das tatsächlich für die Gasbewegung verfügbare Volumen ist kleiner als V, da die Moleküle selbst Raum beanspruchen (Kovolumen). Wasser zeigt mit a = 5,537 und b = 0,03049 eine starke Abweichung vom Idealverhalten (starke Dipol-Dipol-Kräfte und Wasserstoffbrücken), während Helium mit a = 0,0346 und b = 0,0238 nahezu ideal bleibt.
 
-**(p + a*n2/V2) * (V - n*b) = n*R*T**
-
-- **a** [L2*bar/mol2]: Korrigiert den Druck -- intermolekulare Anziehung verringert den Wandstoß-Druck.
-- **b** [L/mol]: Korrigiert das Volumen -- Kovolumen (Eigenvolumen) der Moleküle.
-
-Für H2O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales Verhalten).
+> 💡 **Prüfungstipp:** Merkhilfe für die Van-der-Waals-Parameter: **a = Anziehung** (korrigiert Druck), **b = Braucht Platz** (korrigiert Volumen). In MedAT-Fragen wird oft gefragt, welcher Parameter was korrigiert.
 
 ## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckänderung
 
-**Aufgabe:** 3 mol O2 befinden sich in einem Behälter bei 27 °C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 °C?
+**Aufgabe:** 3 mol O₂ befinden sich in einem Behälter bei 27 °C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 °C?
 
-**Lösung Schritt 1:** V = nRT/p = 3 x 0,08314 x 300 / 1 = **74,8 L**
+**Schritt 1 – Ausgangsvolumen:** Zunächst die Temperatur in Kelvin umrechnen: T₁ = 27 + 273 = 300 K. Dann einsetzen: V = nRT/p = 3 × 0,08314 × 300 / 1 = **74,8 L**.
 
-**Lösung Schritt 2:** Kombinierte Gasgleichung: p1V1/T1 = p2V2/T2
-- T1 = 300 K, T2 = 500 K, p1 = 1 bar, p2 = 5 bar
-- V2 = V1 x (p1/p2) x (T2/T1) = 74,8 x (1/5) x (500/300) = 74,8 x 0,2 x 1,667 = **24,9 L**
+**Schritt 2 – Neues Volumen:** Die kombinierte Gasgleichung p₁V₁/T₁ = p₂V₂/T₂ verknüpft Ausgangs- und Endzustand direkt. Mit T₂ = 227 + 273 = 500 K ergibt sich: V₂ = V₁ × (p₁/p₂) × (T₂/T₁) = 74,8 × (1/5) × (500/300) = 74,8 × 0,2 × 1,667 = **24,9 L**. Die Druckerhöhung auf das Fünffache verkleinert das Volumen (Boyle-Mariotte), die Temperaturerhöhung um den Faktor 5/3 vergrößert es (Charles) – beide Effekte wirken gleichzeitig.
 
-> **Merke:** Druckerhöhung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhöhung (Charles) vergrößert es. Beide Effekte müssen stets kombiniert werden. Celsius NIEMALS direkt einsetzen -- immer erst in Kelvin umrechnen!
+> **Merke:** Druckerhöhung (Boyle-Mariotte) verkleinert das Volumen, Temperaturerhöhung (Charles) vergrößert es. Beide Effekte müssen stets kombiniert werden. Celsius NIEMALS direkt einsetzen – immer erst in Kelvin umrechnen!
 
 ## Klinische Relevanz: Beatmungsmedizin
 
-In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung direkt relevant. Bei der **Volumen-kontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ungefähr 6-8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der Compliance (Dehnbarkeit, Volumenänderung pro Druckeinheit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome) sinkt die Compliance drastisch -- der gleiche Volumenhub erzeugt höhere Drücke, was Barotrauma (druckbedingte Gewebeschädigung) verursachen kann.
+In der Intensivmedizin begegnet die ideale Gasgleichung bei jeder maschinellen Beatmung. Bei der **volumenkontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ≈ 6–8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der **Compliance** (Dehnbarkeit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome, akutes Lungenversagen) sinkt die Compliance drastisch – der gleiche Volumenhub erzeugt wesentlich höhere Drücke, was zu einem Barotrauma (druckbedingte Gewebeschädigung) führen kann. Die lungenprotektive Beatmung mit niedrigem Tidalvolumen und begrenztem Spitzendruck ist die logische Konsequenz aus dieser physikalischen Beziehung.
 
-> **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck -> Barotrauma-Risiko bei ARDS.
+Auch die Anästhesie nutzt Gasgesetze täglich: Volatile Anästhetika wie Sevofluran und Desfluran werden als Gase in definierten Partialdrücken verabreicht. Ihre Verteilung zwischen Alveolarluft und Blut folgt dem Henry-Gesetz – der Blut-Gas-Verteilungskoeffizient bestimmt, wie schnell die Narkose ein- und abflutet.
 
-## Eigenschaften von Gasen (prüfungsrelevant)
+> **Merke:** In der Beatmungsmedizin gilt: gleiches Tidalvolumen bei sinkender Compliance = steigender Atemwegsdruck → Barotrauma-Risiko bei ARDS.
 
-- Ein Gas **verteilt sich gleichmäßig** im verfügbaren Raum (Diffusion).
-- Ein Gas **ist komprimierbar** -- Druckerhöhung verringert das Volumen (Boyle-Mariotte). **Typische Falle:** “Ein Gas kann nicht komprimiert werden” ist **falsch**.
-- Gase **lassen sich durch Abkühlen verflüssigen** (Kondensation unterhalb der kritischen Temperatur).
-- Das **Mischen von Gasen** ist **in jedem Verhältnis möglich** (ideale Gasmischung).
+## Eigenschaften von Gasen
 
-> **Merke:** Richtig sind: (1) Gas verteilt sich gleichmäßig, (2) Gas ist komprimierbar, (3) Gase lassen sich verflüssigen, (4) Gase sind in jedem Verhältnis mischbar. Falsch: “Ein Gas kann nicht komprimiert werden.”
+Vier Grundeigenschaften von Gasen sind prüfungsrelevant und werden häufig als Richtig-Falsch-Aussagen abgefragt: Erstens verteilt sich ein Gas durch Diffusion **gleichmäßig** im gesamten verfügbaren Raum. Zweitens ist ein Gas **komprimierbar** – eine Druckerhöhung verringert das Volumen gemäß Boyle-Mariotte. Drittens lassen sich Gase durch **Abkühlung verflüssigen** (Kondensation), sofern die Temperatur unter die kritische Temperatur sinkt. Viertens ist das **Mischen von Gasen in jedem Verhältnis** möglich.
+
+> **Merke:** Richtig sind: (1) Gas verteilt sich gleichmäßig, (2) Gas ist komprimierbar, (3) Gase lassen sich verflüssigen, (4) Gase sind in jedem Verhältnis mischbar. Die Falschaussage „Ein Gas kann nicht komprimiert werden” ist eine beliebte Prüfungsfalle.
 
 ## Kinetische Gastheorie
 
-Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
-- Mittlere kinetische Energie: E_kin = (3/2)*k_B*T, wobei k_B = 1,381 x 10 hoch -23 J/K.
-- Quadratischer Mittelwert der Geschwindigkeit: v_rms = Wurzel(3*R*T/M).
-- Bei 25 °C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefähr 515 m/s.
-- Die **Maxwell-Boltzmann-Verteilung** (statistische Verteilungsfunktion der Teilchengeschwindigkeiten) beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.
+Die mikroskopische Begründung für die makroskopischen Gasgesetze liefert die **kinetische Gastheorie** von Maxwell und Boltzmann. Ihr zentrales Ergebnis: Die mittlere kinetische Energie eines Gasteilchens hängt ausschließlich von der Temperatur ab – E_kin = (3/2)·k_B·T, wobei k_B = 1,381 × 10⁻²³ J/K die Boltzmann-Konstante ist. Daraus folgt unmittelbar der **quadratische Mittelwert der Geschwindigkeit**: v_rms = √(3·R·T/M). Bei 25 °C rasen Stickstoffmoleküle (M = 0,028 kg/mol) mit v_rms ≈ 515 m/s durch den Raum – schneller als der Schall!
 
-> **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = Wurzel(3RT/M) -- M muss in kg/mol eingesetzt werden!
+Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der einzelnen Moleküle um diesen Mittelwert verteilt sind. Die meisten bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, aber ein kleiner Bruchteil ist deutlich schneller. Genau diese energiereichen Ausreißer ermöglichen die Verdunstung unterhalb des Siedepunkts: Oberflächenmoleküle mit überdurchschnittlicher Energie überwinden die intermolekularen Anziehungskräfte und treten in die Gasphase über.
 
-## Licht (elektromagnetische Welle)
+> **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = √(3RT/M) – M muss in kg/mol eingesetzt werden!
 
-Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heißen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kürzer die Wellenlänge, desto energiereicher das Licht.
+## Licht als elektromagnetische Welle
 
-> **Merke:** Licht = elektromagnetische Welle; c ungefähr 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
+Licht lässt sich als **elektromagnetische Welle** beschreiben, charakterisiert durch Wellenlänge λ, Frequenz ν und die fundamentale Beziehung c = λ·ν. Die **Lichtgeschwindigkeit im Vakuum** beträgt c ≈ 3 × 10⁸ m/s (300.000 km/s). Gleichzeitig zeigt Licht Teilchencharakter: Die Lichtquanten heißen **Photonen** – nicht zu verwechseln mit Protonen! Die Energie eines Photons ist umgekehrt proportional zur Wellenlänge: E = h·ν = h·c/λ. Je kürzer die Wellenlänge, desto energiereicher das Licht – UV-Strahlung ist energiereicher als sichtbares Licht, und Röntgenstrahlung energiereicher als UV.
+
+> **Merke:** Licht = elektromagnetische Welle; c ≈ 300.000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
 
       lernziele: [
         "Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.",
