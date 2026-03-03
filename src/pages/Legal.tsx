@@ -117,21 +117,17 @@ function Impressum() {
         <tbody>
           <tr className="border-b border-[var(--border)]">
             <td className="py-2 pr-4 font-medium text-[var(--muted)] w-40">Name</td>
-            <td className="py-2 text-[var(--foreground)]">MedMaster</td>
+            <td className="py-2 text-[var(--foreground)]">Dr. Andreas Lukas Köll</td>
           </tr>
           <tr className="border-b border-[var(--border)]">
             <td className="py-2 pr-4 font-medium text-[var(--muted)]">Adresse</td>
-            <td className="py-2 text-[var(--foreground)]">1010 Wien, Österreich</td>
+            <td className="py-2 text-[var(--foreground)]">
+              Laudongasse 22/4, 1080 Wien, Österreich
+            </td>
           </tr>
           <tr className="border-b border-[var(--border)]">
             <td className="py-2 pr-4 font-medium text-[var(--muted)]">E-Mail</td>
             <td className="py-2 text-[var(--foreground)]">support@medmaster.at</td>
-          </tr>
-          <tr className="border-b border-[var(--border)]">
-            <td className="py-2 pr-4 font-medium text-[var(--muted)]">UID-Nr.</td>
-            <td className="py-2 text-[var(--foreground)]">
-              Nicht UID-pflichtig (Kleinunternehmer gem. § 6 Abs. 1 Z 27 UStG 1994)
-            </td>
           </tr>
         </tbody>
       </table>
@@ -176,9 +172,9 @@ function Datenschutz() {
 
       <h2>1. Verantwortlicher</h2>
       <p>
-        MedMaster
+        Dr. Andreas Lukas Köll
         <br />
-        1010 Wien, Österreich
+        Laudongasse 22/4, 1080 Wien, Österreich
         <br />
         E-Mail: <a href="mailto:support@medmaster.at">support@medmaster.at</a>
       </p>

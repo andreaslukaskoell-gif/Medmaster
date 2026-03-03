@@ -57,6 +57,7 @@ const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
 const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
 const TodayPage = lazy(() => import("@/pages/TodayPage"));
 const Legal = lazy(() => import("@/pages/Legal"));
+const Einstellungen = lazy(() => import("@/pages/Einstellungen"));
 
 function LoadingSpinner() {
   return (
@@ -249,6 +250,7 @@ export default function App() {
               <Route path="/wrapped" element={<BMSWrapped />} />
               <Route path="/formelsammlung" element={<Formelsammlung />} />
               <Route path="/today" element={<TodayPage />} />
+              <Route path="/einstellungen" element={<Einstellungen />} />
 
               {/* 404 Catch-all for protected routes */}
               <Route path="*" element={<NotFound404 />} />
