@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   emotionenErkennenOffiziellAlle,
   EMOTIONEN_ERKENNEN_INSTRUKTION,
@@ -219,6 +221,11 @@ export default function EmotionenErkennenSimulation() {
                   style={{ width: `${percent}%` }}
                 />
               </div>
+            </div>
+            <div className="mt-4">
+              <ShareResultButton
+                text={getSimulationShareText("Emotionen Erkennen", score, total)}
+              />
             </div>
           </CardContent>
         </Card>

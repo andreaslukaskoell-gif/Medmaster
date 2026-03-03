@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   emotionenRegulierenOffiziellTasks,
   EMOTIONEN_REGULIEREN_AUSFUELLHILFE,
@@ -265,6 +267,11 @@ export default function EmotionenRegulierenSimulation() {
                   style={{ width: `${scorePercent}%` }}
                 />
               </div>
+            </div>
+            <div className="mt-4">
+              <ShareResultButton
+                text={getSimulationShareText("Emotionen Regulieren", correctCount, TASK_COUNT)}
+              />
             </div>
           </CardContent>
         </Card>

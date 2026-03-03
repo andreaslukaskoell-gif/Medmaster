@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   zahlenfolgenTasks,
   type ZahlenfolgenTask,
@@ -271,6 +273,11 @@ export default function ZahlenfolgenSimulation() {
                     style={{ width: `${scorePercent}%` }}
                   />
                 </div>
+              </div>
+              <div className="mt-4">
+                <ShareResultButton
+                  text={getSimulationShareText("Zahlenfolgen", correctCount, TASK_COUNT)}
+                />
               </div>
             </div>
           </CardContent>

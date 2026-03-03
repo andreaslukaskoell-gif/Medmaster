@@ -12,6 +12,8 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getSimulationShareText } from "@/lib/shareUtils";
 import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWortfluessigkeit";
 
 const TASK_COUNT = 15;
@@ -295,6 +297,11 @@ export default function WortfluessigkeitSimulation() {
                     style={{ width: `${scorePercent}%` }}
                   />
                 </div>
+              </div>
+              <div className="mt-4">
+                <ShareResultButton
+                  text={getSimulationShareText("Wortflüssigkeit", correctCount, TASK_COUNT)}
+                />
               </div>
             </div>
           </CardContent>

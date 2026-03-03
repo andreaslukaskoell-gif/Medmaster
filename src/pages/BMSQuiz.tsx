@@ -22,6 +22,8 @@ import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getQuizShareText } from "@/lib/shareUtils";
 
 // Use new expanded questions if available, fall back to legacy
 function getQuestionsBySubject(subject: string) {
@@ -206,6 +208,15 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
               +{score * 10} XP erhalten
             </p>
             {pct >= 90 && <p className="text-sm text-yellow-600 font-bold mt-1">Hervorragend!</p>}
+            <div className="mt-4">
+              <ShareResultButton
+                text={getQuizShareText(
+                  subjectColors[subject]?.label || subject,
+                  score,
+                  questions.length
+                )}
+              />
+            </div>
           </CardContent>
         </Card>
 

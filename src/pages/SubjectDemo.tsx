@@ -332,8 +332,16 @@ function LeadCapture({ subject }: { subject: string }) {
 }
 
 // ── FAQ Schema (JSON-LD) — static data only, no user input ───
-function FAQSchema({ faqs }: { faqs: { q: string; a: string }[] }) {
-  const schema = {
+function FAQSchema({
+  faqs,
+  subjectLabel,
+  subjectKey,
+}: {
+  faqs: { q: string; a: string }[];
+  subjectLabel: string;
+  subjectKey: string;
+}) {
+  const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: faqs.map((f) => ({
@@ -343,15 +351,47 @@ function FAQSchema({ faqs }: { faqs: { q: string; a: string }[] }) {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://medmaster.at",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "\u00dcbungsfragen",
+        item: "https://medmaster.at/medat-uebungsfragen",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: subjectLabel,
+        item: `https://medmaster.at/medat-${subjectKey}-fragen`,
+      },
+    ],
+  };
+
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(faqScript);
+
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
+
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(faqScript);
+      document.head.removeChild(breadcrumbScript);
     };
-  }, [schema]);
+  }, [faqSchema, breadcrumbSchema]);
 
   return null;
 }
@@ -412,7 +452,7 @@ export default function SubjectDemo() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      <FAQSchema faqs={meta.faq} />
+      <FAQSchema faqs={meta.faq} subjectLabel={meta.label} subjectKey={subjectKey} />
 
       <nav className="sticky top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">

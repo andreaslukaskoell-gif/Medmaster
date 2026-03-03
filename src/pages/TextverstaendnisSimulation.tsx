@@ -12,6 +12,8 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getSimulationShareText } from "@/lib/shareUtils";
 import { useTvTexte } from "@/hooks/useTvTexte";
 import type { TVText, TVQuestion } from "@/data/kffTextverstaendnis";
 
@@ -284,6 +286,11 @@ export default function TextverstaendnisSimulation() {
                     <p className="text-xs text-muted">Bewertungsmethode</p>
                   </div>
                 )}
+              </div>
+              <div className="mt-4">
+                <ShareResultButton
+                  text={getSimulationShareText("Textverständnis", correctCount, totalQuestions)}
+                />
               </div>
             </div>
           </CardContent>

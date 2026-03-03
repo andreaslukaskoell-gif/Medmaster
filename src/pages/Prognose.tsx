@@ -5,6 +5,8 @@ import { useStore, type QuizResult } from "@/store/useStore";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { getPrognoseShareText } from "@/lib/shareUtils";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import {
   TrendingUp,
@@ -355,6 +357,11 @@ export default function Prognose() {
     sek: "Emotionen erkennen lässt sich gut trainieren. Übe mit den SEK-Aufgaben und achte auf Mikroexpressionen.",
   };
 
+  const bestUniName = useMemo(() => {
+    const green = sortedUnis.find((u) => totalPct - u.cutoff > 5);
+    return green?.name ?? null;
+  }, [sortedUnis, totalPct]);
+
   if (totalAnswered < 20) return <EmptyState />;
 
   return (
@@ -382,6 +389,9 @@ export default function Prognose() {
           </p>
         </CardContent>
       </Card>
+
+      {/* Share */}
+      <ShareResultButton text={getPrognoseShareText(totalPct, bestUniName)} />
 
       {/* Uni Chances */}
       <div>
