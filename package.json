@@ -19,6 +19,10 @@
     "seed-zahlenfolgen-1000": "npx tsx src/scripts/seedTaskDb.ts --generate kff-zahlenfolgen 1000",
     "generate-zahlenfolgen-pool": "npx tsx scripts/generate-zahlenfolgen-pool.mts --count 1000",
     "export-offizielle-angaben": "npx tsx scripts/export-offizielle-angaben.mts",
+    "marketing": "npx tsx scripts/marketing-daily.mjs",
+    "marketing:cards": "npx tsx scripts/generate-social-cards.mjs --all",
+    "marketing:discord": "npx tsx scripts/post-discord-webhook.mjs",
+    "marketing:discord-answer": "npx tsx scripts/post-discord-webhook.mjs --answer",
     "check": "npm run typecheck && npm run audit-bms",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
