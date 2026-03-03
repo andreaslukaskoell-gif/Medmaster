@@ -1,8 +1,30 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { computeXP } from "@/lib/xp";
-import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import type { ErrorEvent } from "@/lib/learning/types";
+
+// Lazy-load adaptiveLearning to avoid pulling all BMS data into initial bundle
+let _adaptiveStoreModule: typeof import("@/store/adaptiveLearning") | null = null;
+
+function getAdaptiveStoreSync() {
+  return _adaptiveStoreModule?.useAdaptiveStore?.getState() ?? null;
+}
+
+async function getAdaptiveStoreAsync() {
+  if (!_adaptiveStoreModule) {
+    _adaptiveStoreModule = await import("@/store/adaptiveLearning");
+  }
+  return _adaptiveStoreModule.useAdaptiveStore.getState();
+}
+
+// Preload after initial render so it's ready when needed
+if (typeof window !== "undefined") {
+  requestIdleCallback?.(() => {
+    import("@/store/adaptiveLearning").then((m) => {
+      _adaptiveStoreModule = m;
+    });
+  });
+}
 
 const STORAGE_KEY = "medmaster-storage";
 
@@ -546,7 +568,7 @@ export const useStore = create<AppState>()(
         );
         let dailyChallengeStreak = 0;
         try {
-          const ad = useAdaptiveStore.getState();
+          const ad = await getAdaptiveStoreAsync();
           dailyChallengeStreak = ad?.profile?.dailyChallengeStreak ?? 0;
         } catch {
           // ignore
@@ -586,8 +608,8 @@ export const useStore = create<AppState>()(
 
       addXPFromActivity: (params) => {
         try {
-          const ad = useAdaptiveStore.getState();
-          const difficulty = params.difficultyMultiplier ?? ad.getDifficultyMultiplier?.() ?? 1;
+          const ad = getAdaptiveStoreSync();
+          const difficulty = params.difficultyMultiplier ?? ad?.getDifficultyMultiplier?.() ?? 1;
           const xp = computeXP({
             baseXP: params.baseXP ?? 10,
             difficultyMultiplier: difficulty,

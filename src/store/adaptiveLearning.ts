@@ -1,8 +1,33 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { alleStichworteListe } from "@/data/stichwortliste";
-import { allBmsQuestions, type Question } from "@/data/bms";
+import type { Question } from "@/data/bms";
 import { getDirectStichwortId } from "@/data/questions/index";
+
+// Lazy-load BMS questions to keep them out of the initial bundle
+let _allBmsQuestions: Question[] | null = null;
+let questionStichwortMap: Map<string, string> | null = null;
+
+async function loadBmsQuestions(): Promise<Question[]> {
+  if (!_allBmsQuestions) {
+    const { allBmsQuestions } = await import("@/data/bms");
+    _allBmsQuestions = allBmsQuestions;
+    // Invalidate cache so it rebuilds with actual questions
+    questionStichwortMap = null;
+  }
+  return _allBmsQuestions;
+}
+
+function getBmsQuestionsSync(): Question[] {
+  return _allBmsQuestions ?? [];
+}
+
+// Preload on idle so questions are ready when needed
+if (typeof window !== "undefined") {
+  requestIdleCallback?.(() => {
+    loadBmsQuestions();
+  });
+}
 
 // ============================================================
 // Types
@@ -111,12 +136,11 @@ function questionToStichwortId(q: Question): string | null {
 }
 
 // Lazy-built cache to avoid running heavy loop at module load (breaks circular deps)
-let questionStichwortMap: Map<string, string> | null = null;
 
 function getQuestionStichwortMap(): Map<string, string> {
   if (questionStichwortMap === null) {
     questionStichwortMap = new Map<string, string>();
-    for (const q of allBmsQuestions) {
+    for (const q of getBmsQuestionsSync()) {
       const swId = questionToStichwortId(q);
       if (swId) questionStichwortMap.set(q.id, swId);
     }
@@ -319,9 +343,8 @@ export const useAdaptiveStore = create<AdaptiveState>()(
 
       getAdaptiveQuestions: (count, fach, options?: { progressive?: boolean }) => {
         const { profile } = get();
-        const pool = fach
-          ? allBmsQuestions.filter((q) => q.subject === fach)
-          : [...allBmsQuestions];
+        const questions = getBmsQuestionsSync();
+        const pool = fach ? questions.filter((q) => q.subject === fach) : [...questions];
 
         // Categorize questions
         const weak: Question[] = [];
