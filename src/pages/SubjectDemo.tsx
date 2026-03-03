@@ -30,6 +30,7 @@ const SUBJECT_META: Record<
     desc: string;
     metaTitle: string;
     metaDesc: string;
+    ogImage: string;
     topics: string[];
     faq: { q: string; a: string }[];
   }
@@ -45,6 +46,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Biologie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.100+ MedAT Biologie Fragen: Zellbiologie, Genetik, Humanbiologie, Evolution. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung \u00fcben.",
+    ogImage: "/og-biologie.svg",
     topics: [
       "Zellbiologie",
       "Genetik",
@@ -79,6 +81,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Chemie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.400+ MedAT Chemie Fragen: Allgemeine Chemie, Organische Chemie, Biochemie. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
+    ogImage: "/og-chemie.svg",
     topics: [
       "Allgemeine Chemie",
       "Organische Chemie",
@@ -113,6 +116,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Physik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.300+ MedAT Physik Fragen: Mechanik, Thermodynamik, Elektrizit\u00e4t, Optik, Akustik. T\u00e4glich neue Aufgaben \u2014 kostenlos \u00fcben.",
+    ogImage: "/og-physik.svg",
     topics: ["Mechanik", "Thermodynamik", "Elektrizit\u00e4t", "Optik", "Akustik", "Atomphysik"],
     faq: [
       {
@@ -140,6 +144,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Mathematik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "490+ MedAT Mathematik Fragen: Algebra, Stochastik, Gleichungen, Einheiten. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
+    ogImage: "/og-mathematik.svg",
     topics: [
       "Algebra",
       "Stochastik",
@@ -428,6 +433,7 @@ export default function SubjectDemo() {
       "og:description": meta.metaDesc,
       "og:type": "website",
       "og:url": `https://medmaster.at/medat-${subjectKey}-fragen`,
+      "og:image": `https://medmaster.at${meta.ogImage}`,
     };
     for (const [prop, content] of Object.entries(ogTags)) {
       let tag = document.querySelector(`meta[property="${prop}"]`);

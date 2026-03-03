@@ -1,0 +1,35 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-phys" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0369a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-phys)"/>
+
+  <!-- Decorative element: Physics waves -->
+  <path d="M 900 100 Q 920 80 940 100 T 980 100" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 900 150 Q 920 130 940 150 T 980 150" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M 900 200 Q 920 180 940 200 T 980 200" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/>
+
+  <!-- Subject emoji -->
+  <text x="1000" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="120" opacity="0.15">⚛️</text>
+
+  <!-- MedMaster branding -->
+  <text x="100" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="60" font-weight="bold" fill="white">MedMaster</text>
+
+  <!-- Subject name -->
+  <text x="100" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#38bdf8">Physik</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="36" fill="#cffafe">Kostenlose MedAT-Übungsfragen</text>
+
+  <!-- Question count -->
+  <text x="100" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#a5f3fc">1.300+ Fragen • Mit Erklärungen</text>
+
+  <!-- Secondary branding -->
+  <text x="100" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#cffafe">Vorbereitung für die österreichische Aufnahmeprüfung</text>
+
+  <!-- Accent bar in navy -->
+  <rect x="100" y="520" width="120" height="6" rx="3" fill="#1b3ea7"/>
+</svg>
