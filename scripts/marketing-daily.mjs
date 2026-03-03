@@ -18,6 +18,9 @@
  *
  * Env vars:
  *   DISCORD_WEBHOOK_URL  - Discord webhook URL (optional, skips Discord if absent)
+ *   IG_ACCESS_TOKEN      - Instagram long-lived token (optional, skips IG if absent)
+ *   IG_USER_ID           - Instagram Business Account ID
+ *   IMGBB_API_KEY        - For image hosting (free: api.imgbb.com)
  */
 
 import { execFileSync } from "node:child_process";
@@ -37,6 +40,8 @@ const revealNow = args.includes("--reveal-now");
 const allSubjects = args.includes("--all-subjects");
 
 const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+const IG_TOKEN = process.env.IG_ACCESS_TOKEN;
+const IG_USER = process.env.IG_USER_ID;
 
 // ── Logging ───────────────────────────────────────────────────
 function loadLog() {
@@ -78,7 +83,7 @@ async function main() {
   console.log(`\n🚀 MedMaster Marketing Pipeline — ${date}`);
   console.log("=".repeat(50));
 
-  const logEntry = { date, cards: false, discord: false, answer: false };
+  const logEntry = { date, cards: false, discord: false, answer: false, instagram: false };
 
   // Check if already ran today
   const log = loadLog();
@@ -127,6 +132,28 @@ async function main() {
     console.log("   Set the env var to enable Discord posting.");
   }
 
+  // Step 4: Post to Instagram
+  if (!cardsOnly && !discordOnly && IG_TOKEN && IG_USER) {
+    const todayIG = log.find((e) => e.date === date && e.instagram);
+    if (!todayIG) {
+      console.log("\n📸 Step 4: Post carousel to Instagram");
+      const result = run(
+        ["scripts/post-instagram.mjs"],
+        {
+          IG_ACCESS_TOKEN: IG_TOKEN,
+          IG_USER_ID: IG_USER,
+          IMGBB_API_KEY: process.env.IMGBB_API_KEY || "",
+        }
+      );
+      logEntry.instagram = result.ok;
+    } else {
+      console.log("\n⏭️  Step 4: Instagram already posted today");
+    }
+  } else if (!cardsOnly && !discordOnly && !IG_TOKEN) {
+    console.log("\n⚠️  No IG_ACCESS_TOKEN set — skipping Instagram.");
+    console.log("   Setup: node scripts/refresh-ig-token.mjs");
+  }
+
   appendLog(logEntry);
 
   console.log("\n" + "=".repeat(50));
@@ -134,6 +161,7 @@ async function main() {
   console.log(`   Cards: ${logEntry.cards ? "✅" : "⏭️"}`);
   console.log(`   Discord Question: ${logEntry.discord ? "✅" : todayEntry ? "⏭️ (already posted)" : "⏭️"}`);
   console.log(`   Discord Answer: ${logEntry.answer ? "✅" : "⏰ (scheduled)"}`);
+  console.log(`   Instagram: ${logEntry.instagram ? "✅" : "⏭️"}`);
 }
 
 main().catch((err) => {

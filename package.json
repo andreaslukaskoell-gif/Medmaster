@@ -23,6 +23,9 @@
     "marketing:cards": "npx tsx scripts/generate-social-cards.mjs --all",
     "marketing:discord": "npx tsx scripts/post-discord-webhook.mjs",
     "marketing:discord-answer": "npx tsx scripts/post-discord-webhook.mjs --answer",
+    "marketing:instagram": "npx tsx scripts/post-instagram.mjs",
+    "marketing:instagram-dry": "npx tsx scripts/post-instagram.mjs --dry-run",
+    "marketing:ig-token-check": "npx tsx scripts/refresh-ig-token.mjs --check",
     "check": "npm run typecheck && npm run audit-bms",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
