@@ -725,7 +725,7 @@ export const physikPool11: Question[] = [
     "ph-pool-11-061",
     "phys-kap5",
     "Ein EEG-Elektrode hat Übergangswiderstand R = 5 kΩ. Ein 50-Hz-Störsignal wird durch einen RC-Tiefpass (C = 0,1 μF) gefiltert. Welche Dämpfung (in dB) erfährt das 50-Hz-Signal?",
-    ["−3 dB (Grenzfrequenz)", "−6 dB", "−10 dB", "−20 dB", "−40 dB"],
+    ["−3 dB", "−6 dB", "−10 dB", "−20 dB", "−40 dB"],
     0,
     "f_G = 1/(2πRC) = 1/(2π·5000·10⁻⁷) = 1/(2π·5×10⁻⁴) = 1/(3,14×10⁻³) ≈ 318 Hz. Bei f = 50 Hz < f_G liegt man im Durchlassbereich (unter −3 dB Grenzfrequenz); tatsächlich wird das Signal kaum gedämpft, aber die Grenzfrequenz liegt bei 318 Hz. Bei f = 50 Hz: |H| = 1/√(1+(f/f_G)²) = 1/√(1+(50/318)²) ≈ 1/√1,025 ≈ 0,988 → Dämpfung ≈ −0,1 dB. Bei f = f_G = 318 Hz: −3 dB.",
     "schwer",
