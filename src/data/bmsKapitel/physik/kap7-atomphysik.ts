@@ -12,7 +12,6 @@ export const physKap7: Kapitel = {
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-7-01",
-      diagram: "em-spectrum",
       title: "Atommodelle und Spektroskopie",
       stichworte: [
         "Atommodelle",
@@ -28,9 +27,8 @@ export const physKap7: Kapitel = {
         "Absorptionsspektrum",
         "Plancksches Wirkungsquantum",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:radioactive-decay -->
 
 ## Entwicklung der Atommodelle
 
@@ -273,7 +271,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-7-02",
-      diagram: "em-spectrum",
       title: "Radioaktivität – Strahlenarten und Zerfallsgesetze",
       stichworte: [
         "Alpha-Strahlung",
@@ -289,9 +286,8 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:radioactive-decay -->
 
 ## Alpha-Strahlung (α)
 
@@ -328,7 +324,6 @@ Ordnungszahl sinkt um 2 (zwei Positionen nach links im PSE), Massenzahl sinkt um
 
 ## Beta-minus-Strahlung (β⁻)
 
-Bisher haben wir gesehen, wie schwere Kerne durch α-Zerfall Stabilität erreichen. Leichtere instabile Kerne mit **Neutronenüberschuss** nutzen einen anderen Weg: den β⁻-Zerfall.
 
 Ein Neutron im Kern wandelt sich um (vermittelt durch die **schwache Wechselwirkung**):
 > n → p + e⁻ + ν̄ₑ (Antineutrino)
@@ -390,7 +385,6 @@ Diese Annihilationsstrahlung ist die Grundlage der **PET-Diagnostik** (Positrone
 
 ## Gamma-Strahlung (γ)
 
-Bisher haben wir gesehen, wie sich Kerne durch Teilchenemission (α, β) umwandeln. Gamma-Strahlung ergänzt dieses Bild: Sie ändert die Kernzusammensetzung nicht, sondern entlädt nur überschüssige Energie.
 
 Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen, E > 100 keV, typisch 100 keV – 10 MeV). Sie entsteht, wenn ein nach einem α- oder β-Zerfall im angeregten Zustand verbleibender Tochterkern in den Grundzustand übergeht (**isomerer Übergang**). Keine Änderung von Z oder A.
 
@@ -461,7 +455,6 @@ Die **Bindungsenergie pro Nukleon** erreicht ein Maximum bei ⁵⁶Fe (8,79 MeV/
 
 ## Exponentieller Zerfall und Halbwertszeit
 
-Bisher haben wir die verschiedenen Zerfallsarten kennengelernt. Nun betrachten wir die **Kinetik** des radioaktiven Zerfalls — wie schnell ein Nuklid zerfällt.
 
 Radioaktiver Zerfall ist ein **statistischer Prozess**. Jeder einzelne Kern hat in jedem Zeitintervall die gleiche Zerfallswahrscheinlichkeit, unabhängig von seinem Alter, seiner Umgebung (Temperatur, Druck, chemische Bindung) und der Anwesenheit anderer Kerne. Die Anzahl N(t) noch nicht zerfallener Kerne nimmt exponentiell ab:
 
@@ -494,6 +487,8 @@ Nach n Halbwertszeiten gilt die praktische Formel: **N(t) = N₀ · (1/2)ⁿ** m
 Die **mittlere Lebensdauer** τ = 1/λ = T½/ln 2 ≈ 1,443 · T½ ist die durchschnittliche Zeit, die ein Kern bis zu seinem Zerfall existiert. Sie ist etwas länger als T½, da einige Kerne sehr spät zerfallen.
 
 > **Merke:** T½ = 0,693/λ. Nach n Halbwertszeiten: N = N₀·(½)ⁿ. Faustregel: Nach 10 HWZ sind < 0,1 % übrig. Nach 7 HWZ ≈ 1 %. Radioaktiver Zerfall ist unabhängig von Temperatur, Druck und chemischer Umgebung!
+
+> 💡 **Prüfungstipp:** Klassische MedAT-Aufgabe: „Nach 3 HWZ?" → (½)³ = 1/8 = 12,5 % übrig. Nach 4 HWZ → 6,25 %. Die Rechnung (½)ⁿ muss sitzen!
 
 **Wichtige Halbwertszeiten für MedAT:**
 
@@ -530,7 +525,7 @@ Da N(t) = N₀ · e^(−λt), gilt auch **A(t) = A₀ · e^(−λt)** — die Ak
 
 ## Dosimetrie – Gray, Sievert und Strahlungsmessung
 
-Um das zu verstehen, warum verschiedene Strahlungsarten unterschiedlich gefährlich sind, müssen wir das **Dosissystem** der Strahlenschutzphysik kennen. Es unterscheidet drei hierarchische Dosisgrößen:
+Warum verschiedene Strahlungsarten unterschiedlich gefährlich sind, müssen wir das **Dosissystem** der Strahlenschutzphysik kennen. Es unterscheidet drei hierarchische Dosisgrößen:
 
 ### 1. Energiedosis D [Gray, Gy]
 
@@ -836,7 +831,6 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-7-03",
-      diagram: "em-spectrum",
       title: "Röntgenstrahlung und Strahlenwirkung",
       stichworte: [
         "Röntgenröhre",
@@ -856,9 +850,8 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         "Hounsfield-Einheiten",
         "Sauerstoffeffekt OER",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:radioactive-decay -->
 
 ## Entstehung von Röntgenstrahlung
 
@@ -1165,7 +1158,6 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-7-04",
-      diagram: "em-spectrum",
       title: "Nuklearmedizin und Quantenphänomene",
       stichworte: [
         "PET-Scan",
@@ -1181,9 +1173,8 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Welle-Teilchen-Dualismus",
         "Warburg-Effekt",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:radioactive-decay -->
 
 ## PET – Positronen-Emissions-Tomographie
 
@@ -1409,7 +1400,6 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-7-05",
-      diagram: "radioactive-decay",
       title: "Strahlenschutz und klinische Strahlenanwendungen",
       stichworte: [
         "ALARA-Prinzip",
@@ -1426,9 +1416,8 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Akutes Strahlensyndrom",
         "Radon Österreich",
       ],
-      content: `<!-- DIAGRAM:radioactive-decay -->
+      content: `
 
-<!-- DIAGRAM:em-spectrum -->
 
 ## Strahlenschutz — die drei Grundprinzipien
 

@@ -64,7 +64,6 @@ Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mi
 
 > **Merke:** Rutherford: Meiste Teilchen durch → leerer Raum. Wenige stark abgelenkt → winziger, positiver, massereicher **Kern**. Vergleich: Kern = Murmel (1 cm), Atom = Fußballstadion (~100 m).
 
-<!-- DIAGRAM:atomic-orbitals -->
 
 **Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
@@ -136,7 +135,6 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 
 > **Merke:** **Z** = Protonenzahl = Element. **A** = Z + N = Massenzahl. **Isotope**: gleiche Z, verschiedene N → gleiche Chemie, verschiedene Masse/Stabilität. Notation ᴬ_Z X.
 
-<!-- DIAGRAM:periodic-table -->
 
 **Stabile vs. instabile Kerne:** Stabile Isotope haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schweren überwiegen Neutronen). Instabile Nuklide sind **radioaktiv**. Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv.`,
 
@@ -341,7 +339,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Elektronenkonfiguration",
         "Übergangsmetalle",
       ],
-      content: `<!-- DIAGRAM:atomic-orbitals -->
+      content: `
 
 ## Die vier Quantenzahlen
 
@@ -385,7 +383,6 @@ Bei gleichem n + l wird das kleinere n zuerst besetzt. Achtung: 4s liegt energet
 
 ## Elektronenkonfigurationen schreiben
 
-<!-- DIAGRAM:periodic-table -->
 
 **Schreibweise:** [Edelgas-Rumpf] + Valenzelektronen. Edelgase bilden eine besonders stabile, vollständig gefüllte Konfiguration.
 
@@ -614,7 +611,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         "Nuklearmedizin",
         "Radon",
       ],
-      content: `<!-- DIAGRAM:atomic-orbitals -->
+      content: `
 
 ## Arten der Strahlung
 
@@ -690,7 +687,6 @@ Internationale Einheiten:
 
 Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische Strahlung, Nahrung). Ein Thorax-Röntgen: ca. 0,02 mSv; CT-Abdomen: ca. 10 mSv.
 
-<!-- DIAGRAM:periodic-table -->
 
 ## Klinische Anwendungen und Gefahren
 
@@ -905,7 +901,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         "Infusionslösung",
         "Laborwerte",
       ],
-      content: `<!-- DIAGRAM:periodic-table -->
+      content: `
 
 ## Atomare Masseneinheit u
 
@@ -989,7 +985,6 @@ Beispiel: 50 mL einer 2 mol/L HCl-Lösung sollen auf 0,1 mol/L verdünnt werden.
 
 > **Merke:** Die Verdünnungsformel c₁V₁ = c₂V₂ gilt für alle Konzentrationsberechnungen bei Verdünnung – klinisch wichtig bei Medikamentenherstellung und Infusionsansatz.
 
-<!-- DIAGRAM:atomic-orbitals -->
 
 ## Stöchiometrie (mengenmäßige Berechnung chemischer Reaktionen) – Mol-Verhältnisse in Reaktionsgleichungen
 
@@ -1191,7 +1186,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         "Denaturierung",
         "Polarisierbarkeit",
       ],
-      content: `<!-- DIAGRAM:covalent-bond -->
+      content: `
 
 ## Van-der-Waals-Kräfte
 
@@ -1218,7 +1213,6 @@ Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer 
 | Dipol–Dipol (Keesom) | 3–10 | HCl···HCl |
 | London-Dispersion | 0,05–40 | CH₄···CH₄ (~1) |
 
-<!-- DIAGRAM:ionic-bond -->
 
 ## Wasserstoffbrückenbindungen
 
@@ -1475,7 +1469,7 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
         "Hämolyse",
         "Infusion",
       ],
-      content: `<!-- DIAGRAM:ionic-bond -->
+      content: `
 
 ## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
@@ -1499,7 +1493,6 @@ Wenn das Ionenprodukt Q > Ksp → Ausfällung (Kristallisation). Wenn Q < Ksp �
 **Umrechnung Molarität ↔ g/L:** c [mol/L] × M [g/mol] = β [g/L]
 Beispiel: 0,9 % NaCl (m/v) = 9 g NaCl / L; M(NaCl) = 58,44 g/mol → c = 9/58,44 ≈ 0,154 mol/L
 
-<!-- DIAGRAM:covalent-bond -->
 
 ## Osmose und osmotischer Druck
 
@@ -1767,7 +1760,7 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
         "Emulsion",
         "HAES",
       ],
-      content: `<!-- DIAGRAM:covalent-bond -->
+      content: `
 
 ## Die drei Aggregatzustände
 
@@ -1807,7 +1800,6 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - m = Molalität [mol/kg]
 - i = van't-Hoff-Faktor
 
-<!-- DIAGRAM:ionic-bond -->
 
 ## Kolloidchemie
 
@@ -2082,7 +2074,7 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
         "Metallcharakter",
         "Valenzelektron",
       ],
-      content: `<!-- DIAGRAM:periodic-table -->
+      content: `
 
 ## Geschichte und Entwicklung des Periodensystems
 
@@ -2120,7 +2112,6 @@ Das PSE hat **18 Gruppen** (IUPAC-Nummerierung 1-18). Elemente derselben Gruppe 
 
 Im p-Block gilt: Gruppenummer = 10 + Anzahl der Valenzelektronen.
 
-<!-- DIAGRAM:atomic-orbitals -->
 
 ## Bloecke: Orbital-Besetzung und Position
 
@@ -2372,9 +2363,8 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "Pairing Penalty",
         "Fluorierte Arzneistoffe",
       ],
-      content: `<!-- DIAGRAM:periodic-table -->
+      content: `
 
-<!-- DIAGRAM:atomic-orbitals -->
 
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
@@ -2469,9 +2459,6 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
           merksatz: "Großer IE-Sprung nach n Ionisierungen → n Valenzelektronen → Gruppe n im PSE",
         },
       ],
-
-      diagram: "periodic-table",
-
       merksätze: [
         "Atomradius: in Periode↓; in Gruppe↑ — Ursache: Z_eff und Schalenabstand",
         "IE und EN: in Periode↑; in Gruppe↓ — gleiche Ursache: Z_eff",
@@ -2669,9 +2656,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Hämoglobin",
         "Schilddrüse",
       ],
-      content: `<!-- DIAGRAM:periodic-table -->
+      content: `
 
-<!-- DIAGRAM:ionic-bond -->
 
 
 ## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
@@ -2776,9 +2762,6 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Na⁺/K⁺-ATPase: 3Na⁺ raus, 2K⁺ rein, 1 ATP → RMP −70 mV; Digoxin hemmt diese Pumpe → positiv inotrop",
         },
       ],
-
-      diagram: "periodic-table",
-
       merksätze: [
         "Alkalimetalle (Gr.1): ns¹, +1-Ion — Na⁺ extrazellulär (~140 mmol/L), K⁺ intrazellulär (~150 mmol/L)",
         "Erdalkalimetalle (Gr.2): ns², +2-Ion — Ca²⁺ Knochen/Signaling, Mg²⁺ Enzymkofaktor",

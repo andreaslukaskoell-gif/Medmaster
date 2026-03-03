@@ -10,7 +10,6 @@ export const physKap3: Kapitel = {
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
-      diagram: "wave-types",
       stichworte: [
         "Harmonische Schwingung",
         "Amplitude",
@@ -25,9 +24,8 @@ export const physKap3: Kapitel = {
         "Energieerhaltung",
         "Schwingungsenergie",
       ],
-      content: `<!-- DIAGRAM:wave-types -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 
 
@@ -44,6 +42,8 @@ Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschrei
 **Formelklartext:** x(t) = A*cos(omega*t+phi_0) beschreibt, *wo* sich der Körper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und -A; omega*t ist der Phasenwinkel (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = -k*x** bedeutet: Die Rückstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (größeres k), desto größer die Kraft bei gleicher Auslenkung.
 
 > **Merke:** Die Kreisfrequenz omega = 2*Pi*f = 2*Pi/T ist die zentrale Verknüpfungsgröße zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
+
+> 💡 **Prüfungstipp:** T und f sind Kehrwerte: f = 1/T, T = 1/f. Häufige Falle: ω mit f verwechseln! ω = 2πf hat die Einheit rad/s, f hat die Einheit Hz = 1/s.
 
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
 - v(t) = -A*omega*sin(omega*t + phi_0)  -->  v_max = A*omega (bei Durchgang durch Ruhelage)
@@ -124,15 +124,6 @@ In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel a
 
 ## Gedämpfte Schwingung -- Vertiefung
 
-Bisher haben wir die idealisierte, ungedämpfte Schwingung betrachtet. In der Realität verliert jedes schwingende System durch Reibung, Luftwiderstand oder innere Materialverformung Energie. Die **gedämpfte Schwingung** beschreibt diesen Energieverlust mathematisch:
-
-**x(t) = A_0 * e^(-delta*t) * cos(omega_d * t + phi_0)**
-
-- **delta** (Abklingkoeffizient) -- gibt an, wie schnell die Amplitude abnimmt [1/s]
-- **A_0 * e^(-delta*t)** -- die **Einhüllende**: die Amplitude nimmt exponentiell ab
-- **omega_d** (gedämpfte Kreisfrequenz) -- omega_d = Wurzel(omega_0^2 - delta^2), immer kleiner als omega_0
-
-Die **Halbwertszeit** der Amplitude (Zeitspanne, in der A auf die Hälfte absinkt) beträgt: t_halb = ln(2)/delta ungefähr 0,693/delta.
 
 **Drei Dämpfungsfaelle im Vergleich:**
 
@@ -158,7 +149,7 @@ Die Amplitude der stationären erzwungenen Schwingung hängt vom Frequenzverhäl
 
 Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
 - **Omega_res = Wurzel(omega_0^2 - 2*delta^2)** ungefähr omega_0 für schwache Dämpfung
-- Bei schwacher Dämpfung: A_max ungefähr F_0/(2*delta*omega_0) -- die Amplitude wird sehr gross
+- Bei schwacher Dämpfung: A_max ungefähr F_0/(2*delta*omega_0) -- die Amplitude wird sehr groß
 
 **Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Dämpfung strebt die Amplitude bei Omega = omega_0 theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
 - **Tacoma-Narrows-Brücke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Brücke an --> Resonanzkatastrophe --> Einsturz
@@ -286,7 +277,7 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
             "Sie verdoppelt sich.",
             "Sie vervierfacht sich.",
             "Sie halbiert sich.",
-            "Sie wird achtmal so gross.",
+            "Sie wird achtmal so groß.",
           ],
           correctIndex: 1,
           explanation:
@@ -311,7 +302,7 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
         },
         {
           question:
-            "Bei welcher Auslenkung eines Federpendels (Amplitude A = 10 cm) sind kinetische und potentielle Energie gleich gross?",
+            "Bei welcher Auslenkung eines Federpendels (Amplitude A = 10 cm) sind kinetische und potentielle Energie gleich groß?",
           options: [
             "x = 0 cm (Ruhelage)",
             "x = ±7,07 cm",
@@ -402,7 +393,7 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
           ],
           correctIndex: 2,
           explanation:
-            "Bei Ω = ω₀ tritt Resonanz auf: Die Energieübertragung von der äusseren Kraft auf das System ist maximal, die Amplitude erreicht ihren Höchstwert. Bei schwacher Dämpfung kann die Amplitude extrem gross werden (Resonanzkatastrophe). Beispiel: Tacoma-Narrows-Brücke (1940) – Wind regte die Eigenfrequenz der Brücke an → Einsturz. In der Medizin wird Resonanz gezielt genutzt: MRT regt Protonen mit der Larmorfrequenz an.",
+            "Bei Ω = ω₀ tritt Resonanz auf: Die Energieübertragung von der äusseren Kraft auf das System ist maximal, die Amplitude erreicht ihren Höchstwert. Bei schwacher Dämpfung kann die Amplitude extrem groß werden (Resonanzkatastrophe). Beispiel: Tacoma-Narrows-Brücke (1940) – Wind regte die Eigenfrequenz der Brücke an → Einsturz. In der Medizin wird Resonanz gezielt genutzt: MRT regt Protonen mit der Larmorfrequenz an.",
           hints: [
             "Resonanz = Anregungsfrequenz trifft Eigenfrequenz → was passiert mit der Amplitude?",
             "Denke an das MRT: Protonen absorbieren Energie maximal bei der Larmorfrequenz.",
@@ -435,7 +426,6 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
-      diagram: "wave-types",
       stichworte: [
         "Wellengleichung",
         "Wellenlänge",
@@ -449,9 +439,8 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
         "Akustische Impedanz",
         "Medienwechsel",
       ],
-      content: `<!-- DIAGRAM:wave-types -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 
 
@@ -495,13 +484,13 @@ In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Sch
 Schall ist eine **mechanische Längswelle** -- sie braucht ein Medium zur Ausbreitung (im Vakuum kein Schall!).
 
 Schallgeschwindigkeiten:
-- Luft (20 Grad C): **c ungefähr 340 m/s** (temperaturabhängig: c ungefähr 331 + 0,6*T [Grad C] m/s)
+- Luft (20 °C): **c ungefähr 340 m/s** (temperaturabhängig: c ungefähr 331 + 0,6*T [°C] m/s)
 - Wasser: c ungefähr 1480 m/s
 - Weichgewebe: c ungefähr 1540 m/s
 - Knochen: c ungefähr 3000-4000 m/s
 - Stahl: c ungefähr 5900 m/s
 
-> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro Grad C Temperaturerhöhung.
+> **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro °C Temperaturerhöhung.
 
 Der Hörbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermäusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hörgrenze ab (Presbyakusis, altersbedingter Hörverlust): 60-Jährige hören typischerweise nur noch bis ~12 kHz.
 
@@ -766,10 +755,8 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
         "Kohärenz",
         "Doppler-Sonographie",
       ],
-      diagram: "wave-types",
-      content: `<!-- DIAGRAM:wave-types -->
+      content: `
 
-<!-- DIAGRAM:doppler-effect -->
 
 
 
@@ -1073,10 +1060,8 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
         "Audiometrie",
         "Lärmschwerhörigkeit",
       ],
-      diagram: "doppler-effect",
-      content: `<!-- DIAGRAM:wave-types -->
+      content: `
 
-<!-- DIAGRAM:doppler-effect -->
 
 ## Dezibel: Lautstärke messen
 
@@ -1183,11 +1168,11 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 d
       selfTest: [
         {
           question:
-            "Ein Schalldruckpegel von 60 dB entspricht einem Gespräch. Wie gross ist das Verhältnis p/p₀ des Schalldrucks zur Hörschwelle?",
+            "Ein Schalldruckpegel von 60 dB entspricht einem Gespräch. Wie groß ist das Verhältnis p/p₀ des Schalldrucks zur Hörschwelle?",
           options: ["6", "60", "600", "1000", "1 000 000"],
           correctIndex: 3,
           explanation:
-            "L = 20·log(p/p₀) → 60 = 20·log(p/p₀) → log(p/p₀) = 3 → p/p₀ = 10³ = 1000. Bei 60 dB ist der Schalldruck also 1000-mal so gross wie die Hörschwelle p₀. Häufiger Fehler: L = 60 mit p/p₀ = 60 gleichzusetzen (lineares statt logarithmisches Denken). Pro 20 dB steigt p/p₀ um Faktor 10: 0 dB → 1, 20 dB → 10, 40 dB → 100, 60 dB → 1000.",
+            "L = 20·log(p/p₀) → 60 = 20·log(p/p₀) → log(p/p₀) = 3 → p/p₀ = 10³ = 1000. Bei 60 dB ist der Schalldruck also 1000-mal so groß wie die Hörschwelle p₀. Häufiger Fehler: L = 60 mit p/p₀ = 60 gleichzusetzen (lineares statt logarithmisches Denken). Pro 20 dB steigt p/p₀ um Faktor 10: 0 dB → 1, 20 dB → 10, 40 dB → 100, 60 dB → 1000.",
           hints: ["60 = 20·log(p/p₀) → log(p/p₀) = 3.", "10³ = ?"],
           difficulty: 2,
           tags: ["schalldruckpegel", "dezibel", "logarithmus"],
@@ -1237,7 +1222,7 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 d
           ],
           correctIndex: 1,
           explanation:
-            "Schallleitungsschwerhörigkeit entsteht durch Störungen im Aussenohr oder Mittelohr (Cerumen, Trommelfellriss, Otosklerose): Der Schall gelangt nicht normal zum Innenohr. Die Knochenleitung (Schall direkt über Knochen zum Innenohr) ist ungestört → Weberscher Versuch: Lateralisation zur betroffenen Seite. Schallempfindungsschwerhörigkeit (SNHL) betrifft Haarzellen oder Hörnerv: Knochen- und Luftleitung sind gleichermassen reduziert. SNHL ist meist irreversibel (Haarzellen regenerieren nicht). Lärmschwerhörigkeit ist eine SNHL.",
+            "Schallleitungsschwerhörigkeit entsteht durch Störungen im Außenohr oder Mittelohr (Cerumen, Trommelfellriss, Otosklerose): Der Schall gelangt nicht normal zum Innenohr. Die Knochenleitung (Schall direkt über Knochen zum Innenohr) ist ungestört → Weberscher Versuch: Lateralisation zur betroffenen Seite. Schallempfindungsschwerhörigkeit (SNHL) betrifft Haarzellen oder Hörnerv: Knochen- und Luftleitung sind gleichermassen reduziert. SNHL ist meist irreversibel (Haarzellen regenerieren nicht). Lärmschwerhörigkeit ist eine SNHL.",
           hints: [
             "Schallleitungs- = Mittelohrproblem; Schallempfindungs- = Innenohrproblem.",
             "Knochenleitung umgeht das Mittelohr – welcher Typ ist gestört, wenn Knochen intakt?",
@@ -1317,10 +1302,8 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 d
         "Ultraschall",
         "Blutflussmessung",
       ],
-      diagram: "doppler-effect",
-      content: `<!-- DIAGRAM:doppler-effect -->
+      content: `
 
-<!-- DIAGRAM:wave-types -->
 
 ## Dezibel-Rechnung — Vertiefung
 
@@ -1333,13 +1316,13 @@ Zwei gleich laute Quellen (jeweils L dB) ergeben **nicht** 2L dB, sondern L + 3 
 - 10 Quellen a 60 dB: 70 dB (10 log10(10) = +10 dB)
 - 100 Quellen a 60 dB: 80 dB
 
-**Formelklartext:** Intensitaeten addieren sich linear (I_ges = I1 + I2 + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensitaet: +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensitaet: +10 dB.
+**Formelklartext:** Intensitäten addieren sich linear (I_ges = I1 + I2 + ...), aber Dezibel addieren sich **nicht** linear. Zwei gleich laute Quellen verdoppeln die Intensität: +3 dB. Zehn gleich laute Quellen verzehnfachen die Intensität: +10 dB.
 
 > **Merke:** Zwei gleich laute Quellen: +3 dB, nicht doppelte dB! Zehn gleich laute Quellen: +10 dB. Dezibel addieren sich logarithmisch, nicht linear.
 
 ### Abstandsgesetz (Freifeld)
 
-Im freien Schallfeld (keine Reflexionen) nimmt die Intensitaet mit dem Quadrat der Entfernung ab:
+Im freien Schallfeld (keine Reflexionen) nimmt die Intensität mit dem Quadrat der Entfernung ab:
 
 **I proportional 1/r^2** also **Delta_L = -20 log10(r2/r1) dB**
 
@@ -1349,7 +1332,7 @@ Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 2
 
 ### Wichtige Dezibel-Merkregeln (Zusammenfassung)
 
-| Änderung | Schalldruck | Intensitaet | Wahrnehmung |
+| Änderung | Schalldruck | Intensität | Wahrnehmung |
 |----------|-------------|------------|-------------|
 | +3 dB | x 1,41 | x 2 | Kaum merkbar |
 | +6 dB | x 2 | x 4 | Leicht lauter |
@@ -1416,7 +1399,7 @@ In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfae
 - **c** = Schallgeschwindigkeit in Gewebe (ungefähr 1540 m/s)
 - **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
 
-**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefaess gehalten werden (optimal: theta = 30-60 Grad).
+**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefäß gehalten werden (optimal: theta = 30-60 Grad).
 
 ### Umstellung nach v (Blutflussgeschwindigkeit):
 
@@ -1429,8 +1412,8 @@ Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 15
 Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
 
 ### Farbdoppler-Kodierung:
-- **Rot:** Blut fliesst auf den Schallkopf zu (Delta_f > 0)
-- **Blau:** Blut fliesst vom Schallkopf weg (Delta_f < 0)
+- **Rot:** Blut fließt auf den Schallkopf zu (Delta_f > 0)
+- **Blau:** Blut fließt vom Schallkopf weg (Delta_f < 0)
 - **Mosaik/Turbulenz:** Ungeordnete Stroemung (z. B. an Stenosen, Klappeninsuffizienzen)
 
 Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
@@ -1450,7 +1433,7 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 | Frequenz | Eindringtiefe | Auflösung | Anwendung |
 |----------|---------------|-----------|-----------|
 | 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
-| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefaesse |
+| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefäße |
 | 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
 | 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
 
@@ -1485,11 +1468,11 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
 
 ## Klinische Vertiefung
 
-**Doppler bei Gefaessstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+**Doppler bei Gefäßstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
 
 **Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
 
-**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensitaet zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwärmung auf > 60 Grad C: Koagulationsnekrose.
+**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensität zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwärmung auf > 60 °C: Koagulationsnekrose.
 
 **Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.`,
 
@@ -1537,7 +1520,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
         question:
           "Erläutern Sie das physikalische Prinzip der Doppler-Sonographie zur Blutflussmessung. Gehen Sie auf die Rolle des Winkels θ, die Farbkodierung und typische klinische Anwendungen ein.",
         answer:
-          "Die Doppler-Sonographie nutzt den Doppler-Effekt: Ein Ultraschallkopf sendet Schallwellen einer definierten Frequenz f₀ (typisch 2–10 MHz) in Richtung eines Blutgefässes. Bewegte Erythrozyten reflektieren den Schall mit veränderter Frequenz. Der Frequenzunterschied (Doppler-Shift) beträgt Δf = 2f₀v·cos θ/c, wobei v die Blutflussgeschwindigkeit, θ der Winkel zwischen Schallstrahl und Gefäss und c die Schallgeschwindigkeit im Gewebe (~1540 m/s) ist. Der Faktor 2 entsteht, weil der Schall den Weg zweimal durchläuft (zum Erythrozyten und zurück). Entscheidend: Bei θ = 90° ist cos 90° = 0 → kein Signal → der Schallkopf muss schräg zum Gefäss stehen (optimal 30–60°). In der Farbdoppler-Darstellung wird Blut, das auf den Schallkopf zufliesst, rot kodiert (positives Δf), Blut, das sich entfernt, blau (negatives Δf). Turbulente Strömung (z. B. an Stenosen) erscheint als Farbmosaik. Klinisch: Diagnose von Karotisstenosen (erhöhte v), Venenthrombosen (fehlendes Signal), Herzklappenfehler (Regurgitation), fetale Durchblutung (Nabelschnur-Doppler).",
+          "Die Doppler-Sonographie nutzt den Doppler-Effekt: Ein Ultraschallkopf sendet Schallwellen einer definierten Frequenz f₀ (typisch 2–10 MHz) in Richtung eines Blutgefässes. Bewegte Erythrozyten reflektieren den Schall mit veränderter Frequenz. Der Frequenzunterschied (Doppler-Shift) beträgt Δf = 2f₀v·cos θ/c, wobei v die Blutflussgeschwindigkeit, θ der Winkel zwischen Schallstrahl und Gefäss und c die Schallgeschwindigkeit im Gewebe (~1540 m/s) ist. Der Faktor 2 entsteht, weil der Schall den Weg zweimal durchläuft (zum Erythrozyten und zurück). Entscheidend: Bei θ = 90° ist cos 90° = 0 → kein Signal → der Schallkopf muss schräg zum Gefäss stehen (optimal 30–60°). In der Farbdoppler-Darstellung wird Blut, das auf den Schallkopf zufließt, rot kodiert (positives Δf), Blut, das sich entfernt, blau (negatives Δf). Turbulente Strömung (z. B. an Stenosen) erscheint als Farbmosaik. Klinisch: Diagnose von Karotisstenosen (erhöhte v), Venenthrombosen (fehlendes Signal), Herzklappenfehler (Regurgitation), fetale Durchblutung (Nabelschnur-Doppler).",
       },
 
       klinischerBezug:
@@ -1600,7 +1583,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
           ],
           correctIndex: 2,
           explanation:
-            "Δf = 2f₀v·cos(θ)/c. Bei θ = 90° ist cos(90°) = 0 → Δf = 0 → kein Doppler-Signal, obwohl Blut fliesst. Der Schallkopf muss schräg zum Gefäss gehalten werden (optimal 30–60°), damit cos(θ) > 0 und ein messbares Signal entsteht. Dies ist ein klassischer MedAT-Prüfungspunkt.",
+            "Δf = 2f₀v·cos(θ)/c. Bei θ = 90° ist cos(90°) = 0 → Δf = 0 → kein Doppler-Signal, obwohl Blut fließt. Der Schallkopf muss schräg zum Gefäss gehalten werden (optimal 30–60°), damit cos(θ) > 0 und ein messbares Signal entsteht. Dies ist ein klassischer MedAT-Prüfungspunkt.",
           hints: [
             "cos(90°) = 0 — was passiert mit der Formel Δf = 2f₀v·cos(θ)/c?",
             "Kein Doppler-Signal ≠ kein Blutfluss! Es bedeutet nur: falscher Winkel.",
@@ -1615,7 +1598,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
             "15 MHz ist zu teuer für den klinischen Einsatz.",
             "Die Leber liegt tief im Abdomen; 15 MHz wird zu stark gedämpft und dringt nicht tief genug ein.",
             "15 MHz erzeugt Artefakte an der Leberoberfläche.",
-            "Die Wellenlänge bei 15 MHz ist zu gross für die Leber.",
+            "Die Wellenlänge bei 15 MHz ist zu groß für die Leber.",
             "15 MHz ist Infraschall und wird nicht reflektiert.",
           ],
           correctIndex: 1,
@@ -1630,7 +1613,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
         },
         {
           question:
-            "Bei einer Doppler-Untersuchung der A. carotis beträgt die Frequenzverschiebung 3000 Hz (f₀ = 5 MHz, θ = 60°, c = 1540 m/s). Wie gross ist die Blutflussgeschwindigkeit?",
+            "Bei einer Doppler-Untersuchung der A. carotis beträgt die Frequenzverschiebung 3000 Hz (f₀ = 5 MHz, θ = 60°, c = 1540 m/s). Wie groß ist die Blutflussgeschwindigkeit?",
           options: ["0,23 m/s", "0,46 m/s", "0,92 m/s", "1,54 m/s", "0,06 m/s"],
           correctIndex: 2,
           explanation:

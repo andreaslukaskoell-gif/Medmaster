@@ -13,7 +13,6 @@ export const physKap4: Kapitel = {
     {
       id: "ph-4-01",
       title: "Temperatur und Wärme",
-      diagram: "temperature-scales",
       stichworte: [
         "Temperatur",
         "Wärme",
@@ -28,9 +27,8 @@ export const physKap4: Kapitel = {
         "Ausdehnungskoeffizient",
         "Absoluter Nullpunkt",
       ],
-      content: `<!-- DIAGRAM:thermodynamics -->
+      content: `
 
-<!-- DIAGRAM:temperature-scales -->
 
 ## Temperaturskalen
 
@@ -43,6 +41,8 @@ Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines 
 **Kelvin (K)**: Die SI-Einheit der Thermodynamik. Der Nullpunkt (0 K = −273,15 °C) ist der absolute Nullpunkt – die Temperatur, bei der die thermische Bewegung der Teilchen aufhört. Negative Kelvin-Temperaturen existieren im klassischen Sinn nicht.
 
 Umrechnungsformel: **T [K] = T [°C] + 273,15**
+
+> 💡 **Prüfungstipp:** Bei Temperaturdifferenzen (ΔT) sind °C und K austauschbar: ΔT = 10 °C = 10 K. Aber bei absoluten Temperaturen nicht verwechseln: 20 °C ≠ 20 K!
 
 Umgekehrt: T [°C] = T [K] − 273,15
 
@@ -94,6 +94,8 @@ Q_abgegeben = Q_aufgenommen → m₁ · c · (T₁ − T_m) = m₂ · c · (T_m 
 **Formelklartext:** T_m ist der **massengewichtete Mittelwert** der Ausgangstemperaturen. Gleiche Stoffe → c kürzt sich heraus; T_m liegt immer **zwischen** T₁ und T₂. Mehr Masse der kälteren Flüssigkeit → T_m näher an T₂. **Einheiten:** Alle T in °C oder K (einheitlich); [T_m] = K bzw. °C.
 
 > **Merke:** Bei der Mischkalorimetrie kürzt sich c heraus, wenn beide Flüssigkeiten denselben Stoff darstellen. Die Mischtemperatur liegt stets zwischen den beiden Ausgangstemperaturen, gewichtet nach den Massen.
+
+> 💡 **Prüfungstipp:** Mischungstemperatur-Aufgaben: T_m = (m₁·T₁ + m₂·T₂)/(m₁ + m₂). Die Mischtemperatur liegt IMMER zwischen T₁ und T₂ — nie darüber oder darunter!
 
 Wasser hat die höchste spezifische Wärmekapazität aller gängigen Flüssigkeiten – ein biologisch zentraler Fakt. Der menschliche Körper (≈ 60 % Wasser) kann große Wärmemengen aufnehmen/abgeben ohne starke Temperaturschwankungen.
 
@@ -311,7 +313,6 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
     {
       id: "ph-4-02",
       title: "Wärmeübertragung",
-      diagram: "thermodynamics",
       stichworte: [
         "Wärmeleitung",
         "Konvektion",
@@ -326,9 +327,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Wiensches Verschiebungsgesetz",
         "Gegenstrom-Wärmeaustausch",
       ],
-      content: `<!-- DIAGRAM:temperature-scales -->
+      content: `
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Wärmeleitung (Konduktion)
 
@@ -598,7 +598,6 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
     {
       id: "ph-4-03",
       title: "Thermodynamische Hauptsätze",
-      diagram: "thermodynamics",
       stichworte: [
         "Erster Hauptsatz",
         "Zweiter Hauptsatz",
@@ -613,9 +612,8 @@ Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmev
         "ATP-Synthese",
         "Perpetuum mobile",
       ],
-      content: `<!-- DIAGRAM:thermodynamics -->
+      content: `
 
-<!-- DIAGRAM:temperature-scales -->
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
@@ -871,7 +869,6 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
     {
       id: "ph-4-04",
       title: "Phasenübergänge und Ideales Gas",
-      diagram: "temperature-scales",
       stichworte: [
         "Ideales Gasgesetz",
         "Phasendiagramm",
@@ -886,9 +883,8 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `<!-- DIAGRAM:temperature-scales -->
+      content: `
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Ideales Gasgesetz
 
@@ -909,7 +905,7 @@ Aus dieser Gleichung lassen sich alle Spezialfälle ableiten:
 - **Gay-Lussac** (p = const): V/T = const (isobar)
 - **Charles** (V = const): p/T = const (isochor)
 
-Normzustand: p0 = 101 325 Pa = 1 atm = 1,01325 bar; T0 = 273,15 K (0 Grad C).
+Normzustand: p0 = 101 325 Pa = 1 atm = 1,01325 bar; T0 = 273,15 K (0 °C).
 Molvolumen bei Normzustand: V_m = RT0/p0 = 22,4 L/mol.
 
 ## Phasendiagramm
@@ -937,12 +933,12 @@ Die Verdampfungswärme ist etwa 7-mal größer als die Schmelzwärme!
 
 ## Dampfdruck und Siedepunkt
 
-Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes über einer Flüssigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt Dampfdruck-Temperatur-Beziehung). **Sieden** tritt auf, wenn p_D = p_Aussen.
+Der **Dampfdruck** p_D(T) ist der Gleichgewichtsdruck des Dampfes über einer Flüssigkeit. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt Dampfdruck-Temperatur-Beziehung). **Sieden** tritt auf, wenn p_D = p_außen.
 
 Konsequenzen:
-- Im Hochgebirge ist p_Aussen kleiner: Wasser siedet unter 100 Grad C (z. B. auf 3000 m Hoehe bei ungefähr 90 Grad C).
+- Im Hochgebirge ist p_außen kleiner: Wasser siedet unter 100 °C (z. B. auf 3000 m Höhe bei ungefähr 90 °C).
 - Im Dampfkochtopf wird der Druck erhöht: Siedepunkt steigt: Lebensmittel garen bei höherer Temperatur.
-- **Autoklav**: Sterilisation bei 121 Grad C / 2 bar: alle Keime (inkl. Sporen) werden abgetötet.
+- **Autoklav**: Sterilisation bei 121 °C / 2 bar: alle Keime (inkl. Sporen) werden abgetötet.
 
 ## Klinisch wichtige Gesetze
 
@@ -950,7 +946,7 @@ Konsequenzen:
 - Taucherkrankheit (Dekompressionskrankheit): Bei schnellem Auftauchen faellt der Stickstoffpartialdruck rasch: N2 bildet Gasblasen im Gewebe/Blut: Embolien, Schmerzen.
 - Hyperbare Sauerstofftherapie: 100 % O2 bei erhöhtem Druck: mehr O2 im Blutplasma gelöst.
 
-**Verdunstungskühlung (Schwitzen)**: Pro Gramm Schweiß werden bei 37 Grad C ungefähr 2430 J abgeführt. Bei 1 L/h Schweißproduktion: Kühlleistung ungefähr 675 W. Essentiell für Thermoregulation bei Sport.
+**Verdunstungskühlung (Schwitzen)**: Pro Gramm Schweiß werden bei 37 °C ungefähr 2430 J abgeführt. Bei 1 L/h Schweißproduktion: Kühlleistung ungefähr 675 W. Essentiell für Thermoregulation bei Sport.
 
 ## Rechenbeispiele
 
@@ -959,7 +955,7 @@ Spritze mit V1 = 50 mL Luft bei p1 = 1 bar. Der Kolben wird auf V2 = 10 mL kompr
 p2 = p1 mal V1/V2 = 1 x 50/10 = 5 bar. Anwendung: Druckinfusor in der Notfallmedizin.
 
 **Beispiel 2 — Eis schmelzen und dann erwärmen (Kombinationsaufgabe):**
-500 g Eis bei 0 Grad C zu flüssigem Wasser bei 37 Grad C. Schritt 1: Schmelzen: Q1 = 0,5 x 334 000 = 167 000 J.
+500 g Eis bei 0 °C zu flüssigem Wasser bei 37 °C. Schritt 1: Schmelzen: Q1 = 0,5 x 334 000 = 167 000 J.
 Schritt 2: Erwärmen: Q2 = 0,5 x 4180 x 37 = 77 330 J.
 Gesamt: Q = Q1 + Q2 = 244 330 J ungefähr 244 kJ. Der Schmelzvorgang braucht mehr als doppelt so viel Energie wie das anschließende Erwärmen um 37 K!
 
@@ -967,12 +963,12 @@ Gesamt: Q = Q1 + Q2 = 244 330 J ungefähr 244 kJ. Der Schmelzvorgang braucht meh
 An der Oberfläche (1 bar): c(N2) = k_H x 0,79 bar (N2-Anteil der Luft). In 30 m Tiefe (4 bar): c(N2) = k_H x 0,79 x 4 = 4-fache N2-Konzentration im Blut. Dekompression nötig: Aufstiegsgeschwindigkeit kleiner-gleich 9 m/min mit Sicherheitsstopp auf 5 m für 3 Minuten (Standardtauchtabelle).
 
 **Beispiel 4 — Gay-Lussac (isobare Expansion einer Lunge):**
-Einatmungsvolumen V1 = 500 mL bei T1 = 20 Grad C = 293 K (kalte Aussenluft). In der Lunge auf T2 = 37 Grad C = 310 K erwärmt (p = const):
+Einatmungsvolumen V1 = 500 mL bei T1 = 20 °C = 293 K (kalte Außenluft). In der Lunge auf T2 = 37 °C = 310 K erwärmt (p = const):
 V2 = V1 x T2/T1 = 500 x 310/293 = 529 mL. Die eingeatmete Luft expandiert um ungefähr 6 % beim Erwärmen in der Lunge.
 
 ## Klinische Vertiefung
 
-**Dampfsterilisation (Autoklav):** Standard-Sterilisationszyklus: 121 Grad C / 2 bar / 15 min für chirurgische Instrumente. Für Prionen-kontaminiertes Material (Creutzfeldt-Jakob): 134 Grad C / 3 bar / 18 min. Das Prinzip: Erhöhter Dampfdruck verschiebt den Siedepunkt nach oben: feuchte Hitze denaturiert Proteine und DNA effizienter als trockene Hitze (trockene Sterilisation: 180 Grad C / 30 min nötig).
+**Dampfsterilisation (Autoklav):** Standard-Sterilisationszyklus: 121 °C / 2 bar / 15 min für chirurgische Instrumente. Für Prionen-kontaminiertes Material (Creutzfeldt-Jakob): 134 °C / 3 bar / 18 min. Das Prinzip: Erhöhter Dampfdruck verschiebt den Siedepunkt nach oben: feuchte Hitze denaturiert Proteine und DNA effizienter als trockene Hitze (trockene Sterilisation: 180 °C / 30 min nötig).
 
 **Pulsoxymetrie und Gaspartialdrücke:** Die O2-Sättigung des Hämoglobins hängt vom pO2 ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO2 auch die physikalisch gelöste O2-Menge im Plasma (ungefähr 0,3 mL O2 pro 100 mL Blut bei pO2 = 100 mmHg). Bei hyperbarer Therapie (3 bar reiner O2) steigt der physikalisch gelöste Anteil auf ungefähr 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
 

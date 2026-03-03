@@ -34,7 +34,6 @@ Entfernt man aus einem Alkan zwei benachbarte Wasserstoffatome, entsteht zwische
 
 Das elektronenreiche π-System macht Alkene zum idealen Angriffsziel für elektronenarme Teilchen (Elektrophile). Die **typische Reaktion** ist daher die elektrophile Addition: Brom addiert sich an die Doppelbindung (C₂H₄ + Br₂ → C₂H₄Br₂), und darauf beruht der klassische **Bromwasser-Nachweis** — orangefarbenes Bromwasser entfärbt sich bei Anwesenheit einer C=C- oder C≡C-Bindung.
 
-<!-- DIAGRAM:covalent-bond -->
 
 Bei der Addition von Halogenwasserstoffen an asymmetrische Alkene bestimmt die **Markovnikov-Regel** die Regioselektivität: Das Proton addiert an das C-Atom mit den meisten Wasserstoffatomen, das Halogenid an das höher substituierte C. Grund ist die Stabilität des intermediären Carbokations — ein sekundäres oder tertiäres Carbokation wird bevorzugt gebildet.
 
@@ -56,7 +55,6 @@ Das wichtigste Alkin ist Ethin (Acetylen, C₂H₂), das mit reinem Sauerstoff T
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
-<!-- DIAGRAM:functional-groups -->
 
 ## Polymerisation
 
@@ -310,7 +308,6 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
       title: "Isomerie und Stereochemie",
       content: `## Konstitutionsisomere (Strukturisomere)
 
-<!-- DIAGRAM:functional-groups -->
 
 Der Begriff Isomerie beschreibt das Phänomen, dass zwei oder mehr Verbindungen die gleiche Summenformel besitzen, sich aber in ihrem Aufbau unterscheiden. Die grundlegendste Form ist die **Konstitutionsisomerie**: Die Atome sind zwar in gleicher Anzahl vorhanden, aber auf verschiedene Weise miteinander verknüpft. So haben n-Butan und Isobutan (2-Methylpropan) beide die Formel C₄H₁₀, unterscheiden sich jedoch in der Verzweigung des Kohlenstoffgerüsts — und damit in ihren physikalischen Eigenschaften (Sdp. −1 °C vs. −12 °C). Man unterteilt Konstitutionsisomere in **Skelettisomere** (verschiedene Kohlenstoffgerüste wie n-Butan vs. Isobutan), **Stellungsisomere** (gleiche funktionelle Gruppe an verschiedener Position, etwa 1-Propanol vs. 2-Propanol) und **Funktionsisomere** (verschiedene funktionelle Gruppen bei gleicher Summenformel, z. B. Ethanol CH₃CH₂OH vs. Dimethylether CH₃OCH₃ — beide C₂H₆O). Die Zahl der möglichen Konstitutionsisomere steigt mit der Molekülgröße dramatisch: C₄H₁₀ hat 2, C₅H₁₂ hat 3, C₆H₁₄ hat 5 und C₁₀H₂₂ bereits 75 Isomere.
 
@@ -330,7 +327,6 @@ An C=C-Doppelbindungen und in Ringen kann die freie Drehbarkeit nicht stattfinde
 
 Ein Kohlenstoffatom, das vier verschiedene Substituenten trägt, wird als **chirales Zentrum** (Stereozentrum) bezeichnet. Ein solches Molekül lässt sich nicht mit seinem Spiegelbild zur Deckung bringen — genauso wie die rechte Hand nicht deckungsgleich auf die linke gelegt werden kann. Die beiden nicht-superponierbaren Spiegelbildformen heißen **Enantiomere**.
 
-<!-- DIAGRAM:covalent-bond -->
 
 Enantiomere sind in vielerlei Hinsicht identisch: Sie haben gleiche Siedepunkte, Schmelzpunkte, Löslichkeiten und identische chemische Reaktivität in achiraler Umgebung. Doch in zwei entscheidenden Punkten unterscheiden sie sich. Erstens drehen sie die Schwingungsebene von linear polarisiertem Licht um den gleichen Betrag, aber in entgegengesetzte Richtungen — das (+)-Enantiomer nach rechts (dextrogyr), das (−)-Enantiomer nach links (lävogyr). Gemessen wird dies mit dem **Polarimeter** über die spezifische Drehung [α] = α / (c · l). Zweitens — und das ist für die Medizin entscheidend — zeigen sie **verschiedene biologische Wirkung**, weil Enzyme, Rezeptoren und Transportproteine selbst chiral sind und ihre Substrate stereoselektiv erkennen.
 
@@ -554,7 +550,6 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
       title: "Funktionelle Gruppen der Organik",
       content: `## Alkohole (−OH, Hydroxylgruppe)
 
-<!-- DIAGRAM:functional-groups -->
 
 Sobald man in einem Kohlenwasserstoff ein Wasserstoffatom durch eine Hydroxylgruppe (−OH) ersetzt, entsteht ein Alkohol — und die Eigenschaften des Moleküls ändern sich grundlegend. Die polare OH-Gruppe ermöglicht Wasserstoffbrückenbindungen, erhöht die Löslichkeit in Wasser und steigert den Siedepunkt im Vergleich zum entsprechenden Alkan beträchtlich.
 
@@ -586,7 +581,6 @@ Liegt die Carbonylgruppe dagegen innerhalb der Kohlenstoffkette, gebunden an zwe
 
 Die Carboxylgruppe (−COOH) vereinigt Carbonyl- und Hydroxylgruppe in einer einzigen funktionellen Einheit und verleiht Carbonsäuren ihre Säureeigenschaft: Sie geben ein Proton ab (R-COOH ⇌ R-COO⁻ + H⁺) und sind damit Brønsted-Säuren, wenn auch mit typischen pKₐ-Werten von 4–5 deutlich schwächer als etwa Salzsäure.
 
-<!-- DIAGRAM:ph-scale -->
 
 In der Medizin und Biochemie begegnet man Carbonsäuren auf Schritt und Tritt: **Ameisensäure** (HCOOH, Methansäure) findet sich im Gift von Ameisen und Brennnesseln. **Essigsäure** (CH₃COOH, Ethansäure) ist nicht nur der Hauptbestandteil von Essig, sondern auch das Endprodukt des Ethanolabbaus. **Milchsäure** (Lactat) entsteht als Glykolyse-Endprodukt bei Sauerstoffmangel und ist für den Muskelschmerz nach intensiver Belastung mitverantwortlich. **Zitronensäure** (C₆H₈O₇) ist eine Tricarbonsäure mit drei COOH-Gruppen und das namensgebende Molekül des Citratzyklus. **Fettsäuren** schließlich sind langkettige Carbonsäuren (C16–C18), deren Sättigungsgrad die Eigenschaften von Fetten und Ölen bestimmt.
 
@@ -595,7 +589,6 @@ In der Medizin und Biochemie begegnet man Carbonsäuren auf Schritt und Tritt: *
 Wenn eine Carbonsäure mit einem Alkohol reagiert, entsteht unter Wasserabspaltung ein **Ester** — eine Kondensationsreaktion, die als Fischer-Veresterung bekannt ist und durch Säure katalysiert wird:
 R-COOH + R'-OH ⇌ R-COO-R' + H₂O
 
-<!-- DIAGRAM:covalent-bond -->
 
 Diese Gleichgewichtsreaktion lässt sich nach dem Prinzip von Le Chatelier zur Produktseite verschieben, indem man eine Komponente im Überschuss einsetzt oder das entstehende Wasser entfernt. Die biologisch wichtigsten Ester sind **Triglyceride** — Glycerin verestert mit drei Fettsäuren —, die als Neutralfette den Hauptenergiespeicher des Körpers bilden. In der Pharmazie ist **Aspirin** (Acetylsalicylsäure) ein prominentes Beispiel: Es ist ein Ester aus Salicylsäure und Essigsäure und hemmt irreversibel die Cyclooxygenase. Auch **Ethylacetat** (CH₃COO-C₂H₅), ein fruchtartig riechendes Lösungsmittel, gehört zu den Estern.
 
@@ -813,7 +806,6 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Benzol und Aromatizität
 
-<!-- DIAGRAM:covalent-bond -->
 
 Nach den gesättigten und ungesättigten Kohlenwasserstoffen bilden die Aromaten eine dritte, ganz eigene Substanzklasse. Ihr Prototyp ist **Benzol** (C₆H₆), eine ringförmige, vollständig planare Verbindung, in der sechs π-Elektronen über den gesamten Ring delokalisiert sind. Diese Delokalisierung verleiht Benzol eine außergewöhnliche thermodynamische Stabilität — die sogenannte Mesomerie- oder Resonanzenergie beträgt etwa 150 kJ/mol.
 
@@ -827,7 +819,6 @@ Im Mechanismus der elektrophilen aromatischen Substitution (EAS) greift zunächs
 
 ## Heteroaromaten — Stickstoffhaltige Ringsysteme
 
-<!-- DIAGRAM:functional-groups -->
 
 Enthält der aromatische Ring neben Kohlenstoff auch Heteroatome wie Stickstoff, Sauerstoff oder Schwefel, spricht man von **Heteroaromaten**. Sie sind in der Biochemie allgegenwärtig. **Pyridin** (6-Ring mit einem N) ist das Stickstoff-Analogon des Benzols und findet sich als Grundgerüst in NAD⁺/NADH und Vitamin B₃ (Niacin). Das freie Elektronenpaar des Pyridin-Stickstoffs steht senkrecht zum π-System und verleiht dem Molekül basische Eigenschaften. Im Gegensatz dazu ist **Pyrrol** (5-Ring mit einem N) nicht basisch, weil sein Stickstoff-Elektronenpaar in das π-System einbezogen ist und so die für Aromatizität nötigen 6 π-Elektronen vervollständigt. Vier Pyrrolringe bilden das Grundgerüst des **Porphyrins**, das als Häm in Hämoglobin und als Chlorophyll in Pflanzen zentrale biologische Funktionen erfüllt.
 
@@ -1067,7 +1058,6 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
       title: "Aminosäuren und Proteine",
       content: `## Grundstruktur der Aminosäuren
 
-<!-- DIAGRAM:functional-groups -->
 
 Aminosäuren sind die molekularen Bausteine, aus denen der Körper sämtliche Proteine zusammensetzt — von Enzymen über Antikörper bis hin zu Strukturproteinen wie Kollagen. Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**, die jeder Aminosäure ihre individuellen Eigenschaften verleiht. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen 19 liegen im menschlichen Körper ausschließlich als L-Enantiomere vor.
 
@@ -1299,9 +1289,8 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
     {
       id: "ch-13-02",
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
-      content: `<!-- DIAGRAM:functional-groups -->
+      content: `
 
-<!-- DIAGRAM:cell-membrane -->
 
 ## Monosaccharide — die einfachsten Zucker
 
@@ -1565,9 +1554,8 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         "Essentielle Fettsäuren",
         "Trans-Fettsäuren",
       ],
-      content: `<!-- DIAGRAM:functional-groups -->
+      content: `
 
-<!-- DIAGRAM:cell-membrane -->
 
 ## Fettsäuren
 
@@ -1838,9 +1826,8 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
         "DNA-Reparatur",
         "Phosphodiesterbindung",
       ],
-      content: `<!-- DIAGRAM:dna-helix -->
+      content: `
 
-<!-- DIAGRAM:dna-helix -->
 
 ## Nukleotid-Aufbau
 

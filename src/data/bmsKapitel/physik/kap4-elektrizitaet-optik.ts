@@ -10,7 +10,6 @@ export const physKapElektrizitaet: Kapitel = {
     // === from kap5-elektrizitaetslehre ===
     {
       id: "ph-5-01",
-      diagram: "circuit",
       title: "Elektrische Ladung, Feld und Coulomb-Gesetz",
       stichworte: [
         "Elementarladung",
@@ -26,9 +25,8 @@ export const physKapElektrizitaet: Kapitel = {
         "Membranpotential",
         "Gelelektrophorese",
       ],
-      content: `<!-- DIAGRAM:circuit -->
+      content: `
 
-<!-- DIAGRAM:em-spectrum -->
 
 ## Elektrische Ladung
 
@@ -262,7 +260,6 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
     {
       id: "ph-5-02",
       title: "Strom, Widerstand und Ohmsches Gesetz",
-      diagram: "circuit",
       stichworte: [
         "Stromstärke",
         "Ohmsches Gesetz",
@@ -277,9 +274,8 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
         "Ionenkanal",
         "Leitwert",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:circuit -->
 
 ## Elektrischer Strom
 
@@ -526,7 +522,6 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
     {
       id: "ph-5-03",
       title: "Kirchhoffsche Gesetze und Schaltkreise",
-      diagram: "circuit",
       stichworte: [
         "Reihenschaltung",
         "Parallelschaltung",
@@ -541,9 +536,8 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         "Wheatstone-Brücke",
         "Spannungsteiler",
       ],
-      content: `<!-- DIAGRAM:circuit -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Grundlegende Schaltungstypen
 
@@ -763,7 +757,6 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
     },
     {
       id: "ph-5-04",
-      diagram: "em-spectrum",
       title: "Magnetismus und elektromagnetische Induktion",
       stichworte: [
         "Magnetfeld",
@@ -779,9 +772,8 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         "TMS",
         "Selbstinduktion",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:circuit -->
 
 ## Grundlagen des Magnetismus
 
@@ -1012,7 +1004,6 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
     {
       id: "ph-6-01",
       title: "Geometrische Optik",
-      diagram: "lens-imaging",
       stichworte: [
         "Reflexionsgesetz",
         "Brechungsgesetz",
@@ -1027,9 +1018,8 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
         "Brechkraft",
         "Dioptrie",
       ],
-      content: `<!-- DIAGRAM:lens-imaging -->
+      content: `
 
-<!-- DIAGRAM:em-spectrum -->
 
 ## Reflexionsgesetz
 
@@ -1277,7 +1267,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
     {
       id: "ph-6-02",
       title: "Wellenoptik",
-      diagram: "em-spectrum",
       stichworte: [
         "Interferenz",
         "Beugung",
@@ -1292,9 +1281,8 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Superposition",
         "Ölimmersion",
       ],
-      content: `<!-- DIAGRAM:lens-imaging -->
+      content: `
 
-<!-- DIAGRAM:wave-types -->
 
 ## Licht als elektromagnetische Welle
 
@@ -1521,7 +1509,6 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-6-03",
-      diagram: "lens-imaging",
       title: "Optische Instrumente",
       stichworte: [
         "Lupe",
@@ -1537,9 +1524,8 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
         "CCD-Sensor",
         "Glasfaser",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:lens-imaging -->
 
 ## Lupe
 
@@ -1770,7 +1756,6 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
     // ─────────────────────────────────────────────────────────────────────────
     {
       id: "ph-6-04",
-      diagram: "lens-imaging",
       title: "Optik des Auges und Sehfehler",
       stichworte: [
         "Akkommodation",
@@ -1786,9 +1771,8 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         "Brillenrezept",
         "Dioptrie",
       ],
-      content: `<!-- DIAGRAM:em-spectrum -->
+      content: `
 
-<!-- DIAGRAM:wave-types -->
 
 ## Anatomie und Optik des normalen Auges
 

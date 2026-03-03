@@ -49,7 +49,6 @@ Kombiniert: p*V/(n*T) = R = const -> **pV = nRT**.
 
 **Prüfungsrelevanter Sonderfall:** Wenn bei konstanter Stoffmenge n **sowohl das Volumen V als auch die Temperatur T (in Kelvin) verdoppelt** werden, bleibt der **Druck p unverändert**: p = nRT/V -> p' = nR*(2T)/(2V) = nRT/V = p.
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Umrechnungen und praktische Anwendung
 
@@ -60,16 +59,15 @@ Häufige Umformungen:
 - Konzentration: c = n/V = p/(R*T)
 
 **Standardbedingungen:**
-- STP (IUPAC seit 1982): 0 Grad C (273,15 K), 1 bar -> V_m = 22,711 L/mol (exakt)
-- Ältere Definition: 0 Grad C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch üblich)
-- SATP: 25 Grad C (298,15 K), 1 bar -> V_m = 24,790 L/mol
+- STP (IUPAC seit 1982): 0 °C (273,15 K), 1 bar -> V_m = 22,711 L/mol (exakt)
+- Ältere Definition: 0 °C, 1 atm (101.325 Pa) -> V_m = 22,414 L/mol (in vielen Büchern noch üblich)
+- SATP: 25 °C (298,15 K), 1 bar -> V_m = 24,790 L/mol
 
 **Druckeinheiten im Überblick:**
 - 1 atm = 101.325 Pa = 1,01325 bar = 760 mmHg (Torr)
 - Normaldruck der Atmosphäre ungefähr 101.300 Pa ungefähr 1 bar
 - Partialdruck: p_i = n_i*R*T/V (Anteil der Komponente i im Gemisch)
 
-<!-- DIAGRAM:temperature-scales -->
 
 ## Ideales vs. Reales Gas
 
@@ -95,7 +93,7 @@ Für H2O: a = 5,537, b = 0,03049. Für He: a = 0,0346, b = 0,0238 (fast ideales 
 
 ## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckänderung
 
-**Aufgabe:** 3 mol O2 befinden sich in einem Behälter bei 27 Grad C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 Grad C?
+**Aufgabe:** 3 mol O2 befinden sich in einem Behälter bei 27 °C und 1 bar. Welches Volumen nehmen sie ein? Was passiert bei Kompression auf 5 bar bei gleichzeitiger Erwärmung auf 227 °C?
 
 **Lösung Schritt 1:** V = nRT/p = 3 x 0,08314 x 300 / 1 = **74,8 L**
 
@@ -125,14 +123,14 @@ In der Intensivmedizin ist die ideale Gasgleichung bei der maschinellen Beatmung
 Die mikroskopische Erklärung liefert die **kinetische Gastheorie** (Maxwell, Boltzmann):
 - Mittlere kinetische Energie: E_kin = (3/2)*k_B*T, wobei k_B = 1,381 x 10 hoch -23 J/K.
 - Quadratischer Mittelwert der Geschwindigkeit: v_rms = Wurzel(3*R*T/M).
-- Bei 25 Grad C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefähr 515 m/s.
+- Bei 25 °C hat N2 (M = 0,028 kg/mol): v_rms = Wurzel(3 x 8,314 x 298 / 0,028) ungefähr 515 m/s.
 - Die **Maxwell-Boltzmann-Verteilung** (statistische Verteilungsfunktion der Teilchengeschwindigkeiten) beschreibt die Geschwindigkeitsverteilung: Die meisten Moleküle bewegen sich nahe der wahrscheinlichsten Geschwindigkeit, einige wenige sind deutlich schneller. Diese schnellen Moleküle ermöglichen die Verdunstung unterhalb des Siedepunkts.
 
 > **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = Wurzel(3RT/M) -- M muss in kg/mol eingesetzt werden!
 
 ## Licht (elektromagnetische Welle)
 
-Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heissen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kürzer die Wellenlänge, desto energiereicher das Licht.
+Licht kann als **elektromagnetische Welle** beschrieben werden (Wellenlänge lambda, Frequenz nu, c = lambda*nu). Die **Lichtgeschwindigkeit im Vakuum** beträgt **c ungefähr 300 000 km/s = 3*10 hoch 8 m/s**. Licht zeigt sowohl Wellen- als auch Teilchencharakter: Die Lichtteilchen heißen **Photonen** (nicht Protonen!). Die Energie eines Photons ist **umgekehrt proportional zur Wellenlänge**: E proportional zu 1/lambda -- je kürzer die Wellenlänge, desto energiereicher das Licht.
 
 > **Merke:** Licht = elektromagnetische Welle; c ungefähr 300 000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
 
@@ -365,24 +363,22 @@ pi = ni * R * T / V = xi * p_gesamt
 
 **xi = Molenbruch** der Komponente i: xi = ni / n_gesamt (dimensionslos, zwischen 0 und 1, Summe = 1).
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Physikalische Begründung
 
 Das Daltonsche Gesetz gilt exakt für ideale Gase, da ideale Gasteilchen keine Wechselwirkungen haben. Jede Gassorte bewegt sich völlig unabhängig von den anderen und trägt unabhängig zum Gesamtdruck bei. Für reale Gase gilt es nur näherungsweise.
 
-**Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 Grad C (Körpertemperatur) beträgt p(H2O) ungefähr 6,27 kPa (47 mmHg).
+**Wichtig:** Bei feuchter Luft muss der Wasserdampfdruck berücksichtigt werden! Bei 37 °C (Körpertemperatur) beträgt p(H2O) ungefähr 6,27 kPa (47 mmHg).
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Alveolarer Gasaustausch
 
-In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in den Lungenbläschen) bei 37 Grad C und 101,325 kPa (nach Wasserdampfsättigung):
+In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in den Lungenbläschen) bei 37 °C und 101,325 kPa (nach Wasserdampfsättigung):
 
 - p(O2)_alveolar ungefähr 13,3 kPa (100 mmHg)
 - p(CO2)_alveolar ungefähr 5,3 kPa (40 mmHg)
 - p(N2) ungefähr 76,4 kPa
-- p(H2O) = 6,27 kPa (37 Grad C, gesättigt)
+- p(H2O) = 6,27 kPa (37 °C, gesättigt)
 
 O2-Partialdruck im venoesen Blut ungefähr 5,3 kPa (40 mmHg) -> O2 diffundiert Alveole -> Blut (Druckgradient). CO2 im venoesen Blut ungefähr 6,1 kPa (46 mmHg) > 5,3 kPa alveolar -> CO2 diffundiert Blut -> Alveole.
 
@@ -401,7 +397,7 @@ Das Henry-Gesetz ergaenzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssig
 
 **c = kH * p**
 
-wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdruck (Sauerstofftherapie) loest sich mehr O2 physikalisch im Plasma. Bei Kohlensäuregetränken wird CO2 unter Druck gelöst; beim Oeffnen sinkt p -> CO2 perlt aus.
+wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdruck (Sauerstofftherapie) löst sich mehr O2 physikalisch im Plasma. Bei Kohlensäuregetränken wird CO2 unter Druck gelöst; beim Öffnen sinkt p -> CO2 perlt aus.
 
 ## Gasgemische in der Medizin
 
@@ -413,7 +409,7 @@ wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdr
 
 ## Rechenbeispiel: Alveolärer O2-Partialdruck
 
-**Aufgabe:** Ein Patient atmet Raumluft (21 % O2) bei Normaldruck (101,3 kPa). Wie hoch ist der alveoläre O2-Partialdruck unter Berücksichtigung des Wasserdampfdrucks (6,27 kPa bei 37 Grad C) und des CO2-Partialdrucks (5,3 kPa)?
+**Aufgabe:** Ein Patient atmet Raumluft (21 % O2) bei Normaldruck (101,3 kPa). Wie hoch ist der alveoläre O2-Partialdruck unter Berücksichtigung des Wasserdampfdrucks (6,27 kPa bei 37 °C) und des CO2-Partialdrucks (5,3 kPa)?
 
 **Lösung:** Vereinfachte Alveolargasgleichung:
 - p(O2)_alv = F_IO2 * (p_atm - p_H2O) - p(CO2)/RQ
@@ -661,11 +657,9 @@ Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt p
 
 **r₁/r₂ = √(M₂/M₁)**
 
-<!-- DIAGRAM:thermodynamics -->
 
 Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
 
-<!-- DIAGRAM:periodic-table -->
 
 **Beispiele:**
 - H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
@@ -986,7 +980,6 @@ Das **ideale Gasgesetz** (pV = nRT) gilt für verdünnte Gase gut: p = Druck (Pa
 
 Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es ist der bei weitem häufigste Zustand sichtbarer Materie im Universum (Sterne, Blitze, Fluoreszenzlampen). Im medizinischen Sprachgebrauch bezeichnet "Blutplasma" den flüssigen Bestandteil des Blutes nach Entfernung der Zellen – ein biologischer Begriff ohne Bezug zum physikalischen Plasma.
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
 
@@ -994,7 +987,6 @@ Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim A
 
 **Ursache**: Wassermoleküle sind gewinkelt (Bindungswinkel 104,5°) und stark polar (Dipolmoment 1,85 D). Im flüssigen Wasser bestehen dynamische Wasserstoffbrückennetzwerke – jedes Molekül bildet im Mittel 3,4 Wasserstoffbrücken. Im Eiskristall (hexagonale Struktur) sind es genau 4 Wasserstoffbrücken pro Molekül, die ein offenes, weiträumiges hexagonales Gitter bilden. Diese Gitterstruktur ist weniger dicht gepackt als die Flüssigkeit.
 
-<!-- DIAGRAM:temperature-scales -->
 
 **Biologische Bedeutung**: Diese Anomalie ist entscheidend für das Leben in gemäßigten Klimazonen:
 1. Im Winter sinkt das dichtere 4°C-Wasser auf den Grund von Gewässern (Dichteausgleich)
@@ -1287,14 +1279,12 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
-<!-- DIAGRAM:thermodynamics -->
 
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
 
 **Schmelzenthalpie**: ΔH_s(H₂O) = **6,01 kJ/mol = 333 J/g** (bei 0°C, 1 bar)
 Zum Schmelzen von 1 g Eis bei 0°C werden 333 J benötigt – deutlich mehr als zum Erwärmen von 1 g flüssigem Wasser um 1°C (4,18 J). Ein Gramm schmelzendes Eis bei 0°C entnimmt der Umgebung dieselbe Wärmemenge wie die Abkühlung von 80 g Wasser um 1°C – deshalb kühlt Eis im Getränk so effizient.
 
-<!-- DIAGRAM:temperature-scales -->
 
 **Verdampfungsenthalpie**: ΔH_v(H₂O) = **40,7 kJ/mol = 2257 J/g** (bei 100°C, 1 bar)
 Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasserstoffbrücken, die beim Verdampfen vollständig gebrochen werden müssen. Verglichen mit: Methanol: 1104 J/g; Benzol: 393 J/g; Diethylether: 358 J/g.

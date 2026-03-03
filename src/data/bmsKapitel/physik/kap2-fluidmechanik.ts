@@ -23,14 +23,10 @@ export const physKapFluid: Kapitel = {
         "Herzhöhe",
         "hydraulische Presse",
       ],
-      diagram: "coordinate-system",
-      content: `<!-- DIAGRAM:coordinate-system -->
+      content: `
 
-<!-- DIAGRAM:geometric-shapes -->
 
 ## Druck -- Wiederholung und Grundbegriff
-
-**Bevor wir den Druck in Fluiden betrachten,** wiederholen wir die Definition: **Druck** ist definiert als Kraft pro Fläche:
 
 **p = F / A**
 
@@ -58,18 +54,20 @@ Dabei ist:
 Der **Gesamtdruck** in einer Tiefe h beträgt: **p_gesamt = p_0 + rho*g*h**, wobei p_0 der Druck an der Oberfläche (z. B. Atmosphärendruck) ist.
 
 **Rechenbeispiel -- Schweredruck im Blutgefäß:**
-Wie gross ist der hydrostatische Druckunterschied zwischen Herz und Fuss (Höhendifferenz h ca. 1,3 m)?
+Wie groß ist der hydrostatische Druckunterschied zwischen Herz und Fuß (Höhendifferenz h ca. 1,3 m)?
 Delta-p = rho_Blut * g * h = 1060 kg/m3 * 9,81 m/s2 * 1,3 m ca. **13 520 Pa ca. 101 mmHg**
 
-Das bedeutet: Im Stehen ist der Blutdruck am Fuss um ca. **100 mmHg höher** als auf Herzhöhe! Im Kopf (ca. 0,4 m über dem Herzen) ist er entsprechend ca. 30 mmHg niedriger.
+Das bedeutet: Im Stehen ist der Blutdruck am Fuß um ca. **100 mmHg höher** als auf Herzhöhe! Im Kopf (ca. 0,4 m über dem Herzen) ist er entsprechend ca. 30 mmHg niedriger.
 
-> **Merke:** p = rho*g*h -- der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersäule nimmt der Druck um ca. 1 atm zu. Pro 1,3 m Blutsäule (Herz -> Fuss) um ca. 100 mmHg.
+> **Merke:** p = rho*g*h -- der hydrostatische Druck steigt linear mit der Tiefe. Pro 10 m Wassersäule nimmt der Druck um ca. 1 atm zu. Pro 1,3 m Blutsäule (Herz -> Fuß) um ca. 100 mmHg.
+
+> 💡 **Prüfungstipp:** Klassische MedAT-Rechnung: „Druckunterschied Herz–Fuß?" → Δp = ρ·g·h = 1060 · 9,81 · 1,3 ≈ 13 500 Pa ≈ 101 mmHg. Merke die Faustformel: **~100 mmHg pro 1,3 m Blutsäule**.
 
 ---
 
 ## Hydrostatisches Paradoxon
 
-**Um das zu verstehen,** muss man ein Prinzip begreifen, das zunächst überraschend wirkt: Der Bodendruck in einem mit Flüssigkeit gefüllten Gefäß hängt **nur** von der Füllhöhe h und der Dichte rho ab -- **nicht von der Gefäßform** und nicht vom Gesamtvolumen.
+muss man ein Prinzip begreifen, das zunächst überraschend wirkt: Der Bodendruck in einem mit Flüssigkeit gefüllten Gefäß hängt **nur** von der Füllhöhe h und der Dichte rho ab -- **nicht von der Gefäßform** und nicht vom Gesamtvolumen.
 
 Drei verschieden geformte Gefäße (schmal, breit, trichterförmig), die mit derselben Flüssigkeit auf dieselbe Höhe h gefüllt sind, haben exakt **denselben Bodendruck**: p = rho*g*h.
 
@@ -242,10 +240,8 @@ Die Manschette wird am Oberarm auf **Herzhöhe** aufgepumpt, bis die Arteria bra
         "Laplace-Gesetz",
         "Atelektase",
       ],
-      diagram: "newton-forces",
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:geometric-shapes -->
 
 ## Archimedisches Prinzip
 
@@ -283,14 +279,14 @@ Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
 
 ## Oberflächenspannung
 
-**Um das zu verstehen,** muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
+muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
 
 Die **Oberflächenspannung sigma** ist definiert als Kraft pro Länge entlang einer gedachten Linie auf der Oberfläche:
 
 **sigma = F / l** (Einheit: N/m = J/m2)
 
 Typische Werte:
-- Wasser (20 Grad C): sigma ca. 0,073 N/m
+- Wasser (20 °C): sigma ca. 0,073 N/m
 - Blutplasma: sigma ca. 0,050 N/m
 - Surfactant-Lösung: sigma ca. 0,025 N/m (stark erniedrigt!)
 
@@ -324,7 +320,9 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
 
 **Klinisch -- Frühgeborene:** Ab der ca. 24. SSW (Schwangerschaftswoche) beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Frühgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution über den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure, kontinuierlicher Atemwegsüberdruck).
 
-> **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben höheren Innendruck! Surfactant senkt sigma radiusabhängig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Frühgeborene: Surfactant-Mangel -> IRDS.`,
+> **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben höheren Innendruck! Surfactant senkt sigma radiusabhängig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Frühgeborene: Surfactant-Mangel -> IRDS.
+
+> 💡 **Prüfungstipp:** „Warum kollabieren kleine Alveolen ohne Surfactant?" — Laplace: Δp = 2σ/r. Kleiner r → höherer Druck → Luft strömt in große Alveolen → Atelektase. Surfactant senkt σ radiusabhängig.`,
 
       lernziele: [
         "Das Archimedische Prinzip mathematisch anwenden und Auftriebskräfte berechnen können",
@@ -458,21 +456,12 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
         "Strömungsgeräusche",
         "Volumenstrom",
       ],
-      diagram: "newton-forces",
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Ideale Fluide und Volumenstrom
 
-**Bevor wir die Strömungsgesetze betrachten,** definieren wir das Modell des **idealen Fluids**:
-- **inkompressibel** (Dichte rho = const; gilt gut für Flüssigkeiten, näherungsweise für langsame Gasströmungen)
-- **reibungsfrei** (keine innere Reibung / Viskosität -> wird in UK 4 ergänzt)
-- **stationär** (Strömungsfeld zeitlich konstant)
-
-Der **Volumenstrom** Q gibt an, welches Fluidvolumen pro Zeiteinheit durch einen Querschnitt fliesst:
-
-**Q = V/t = A * v** (Einheit: m3/s)
+m3/s)
 
 Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
 
@@ -491,7 +480,7 @@ Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit
 Die Aorta hat einen Querschnitt A1 ca. 4,5 cm2 = 4,5 x 10-4 m2 und die mittlere Blutgeschwindigkeit beträgt v1 ca. 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A2 ca. 1,5 cm2 = 1,5 x 10-4 m2.
 v2 = v1 * (A1/A2) = 0,3 * (4,5/1,5) = 0,3 * 3 = **0,9 m/s**
 
-Die Geschwindigkeit verdreifacht sich an der Stenose! Bei stärkerer Verengung kann v2 so gross werden, dass die Strömung turbulent wird -> **Strömungsgeräusche** (auskultierbar).
+Die Geschwindigkeit verdreifacht sich an der Stenose! Bei stärkerer Verengung kann v2 so groß werden, dass die Strömung turbulent wird -> **Strömungsgeräusche** (auskultierbar).
 
 **Klinisch -- Gesamtquerschnitt des Kapillarbetts:**
 Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquerschnitt A ca. 4500 cm2 -> v_Kapillare = v_Aorta * (A_Aorta/A_Kapillaren) = 0,3 * (4,5/4500) = **0,0003 m/s ca. 0,3 mm/s**. Diese extrem langsame Strömung ermöglicht den **Stoffaustausch** in den Kapillaren!
@@ -512,7 +501,7 @@ Die drei Terme:
 
 **Kernaussage:** Wo die Geschwindigkeit v zunimmt, sinkt der statische Druck p -- und umgekehrt!
 
-**Venturi-Effekt:** Fliesst ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstäuber).
+**Venturi-Effekt:** Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstäuber).
 
 **Rechenbeispiel -- Druckabfall an einer Stenose:**
 Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigkeit). Da v steigt, sinkt p (Bernoulli). Ergebnis: p2 ca. **97 mmHg** -- der statische Druck sinkt um ca. **3 mmHg**. Bei stärkerer Stenose (v2 = 3 m/s) wäre der Druckabfall erheblich größer.
@@ -523,7 +512,7 @@ Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigke
 
 ## Laminare vs. turbulente Strömung
 
-**Um das zu verstehen,** betrachten wir zwei grundlegend verschiedene Strömungsformen:
+betrachten wir zwei grundlegend verschiedene Strömungsformen:
 
 **Laminare Strömung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blättchen); die Strömung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
 
@@ -701,10 +690,8 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskosität.
         "Blut als Fluid",
         "Scherverdünnung",
       ],
-      diagram: "circuit",
-      content: `<!-- DIAGRAM:circuit -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Viskosität — innere Reibung von Fluiden
 
@@ -740,7 +727,7 @@ Die **kinematische Viskosität ν** (nü) = η/ρ (Einheit: m²/s) — tritt in 
 **Newtonsches Fluid:** Die Viskosität η ist **konstant** — unabhängig von der Scherrate dv/dy. Die Scherspannung ist linear proportional zur Scherrate. Beispiele: Wasser, Blutplasma, Kochsalzlösung, die meisten Gase.
 
 **Nicht-Newtonsches Fluid:** Die **Viskosität** hängt von der Scherrate ab. Es gibt verschiedene Typen:
-- **Scherverdünnung** (Pseudoplastizität, scheinbare Fliessfähigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
+- **Scherverdünnung** (Pseudoplastizität, scheinbare Fließfähigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
 - **Scherverdickung** (Dilatanz, Aufweitung unter Belastung): η steigt bei steigender Scherrate. Beispiel: Maisstärke-Wasser-Gemisch.
 - **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze). Beispiel: Zahnpasta.
 
@@ -782,6 +769,8 @@ Der Blutfluss sinkt auf nur noch **31,6 %** — bei nur 25 % Radiusreduktion! Da
 
 > **Merke:** Hagen-Poiseuille: Q = π·r⁴·Δp/(8·η·L). Der Volumenstrom hängt von r⁴ ab! Halbierung des Radius → Q sinkt auf 1/16. Das ist DAS zentrale klinische Gesetz der Hämodynamik.
 
+> 💡 **Prüfungstipp:** Die **r⁴-Abhängigkeit** ist DER Schlüssel: „Radius halbiert → Fluss auf 1/16." Diese Rechnung kommt in fast jeder MedAT-Physikprüfung vor. Merke: (½)⁴ = 1/16.
+
 ---
 
 ## Strömungswiderstand
@@ -808,7 +797,7 @@ Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächli
 
 ## Fåhræus-Lindqvist-Effekt
 
-**Um das zu verstehen,** muss man beachten, dass Blut kein Newtonsches Fluid ist. In **engen Gefäßen** (d < 300 µm) tritt ein besonderer Effekt auf: Die **scheinbare Viskosität** des Blutes **sinkt** mit abnehmendem Gefäßdurchmesser.
+muss man beachten, dass Blut kein Newtonsches Fluid ist. In **engen Gefäßen** (d < 300 µm) tritt ein besonderer Effekt auf: Die **scheinbare Viskosität** des Blutes **sinkt** mit abnehmendem Gefäßdurchmesser.
 
 **Erklärung:** In engen Gefäßen wandern die Erythrozyten zur Gefäßmitte (axiale Migration) — es entsteht eine zellfreie Randschicht (Plasmaschicht) mit niedriger Viskosität. Da die Wandreibung hauptsächlich von der Randschicht bestimmt wird, sinkt der effektive Strömungswiderstand.
 

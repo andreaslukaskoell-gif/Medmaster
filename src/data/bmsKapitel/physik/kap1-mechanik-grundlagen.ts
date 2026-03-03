@@ -25,16 +25,14 @@ export const physKapMechanik: Kapitel = {
         "intensive und extensive Größen",
         "Gewichtskraft",
       ],
-      diagram: "coordinate-system",
-      content: `<!-- DIAGRAM:coordinate-system -->
+      content: `
 
-<!-- DIAGRAM:newton-forces -->
 
 ## Das Internationale Einheitensystem (SI)
 
-**Um Messungen weltweit vergleichbar zu machen,** braucht man ein einheitliches System. **Dafür** dient das SI.
+Jeder Laborwert, jede Medikamentendosis und jedes EKG beruht auf exakten Messungen — und Messungen sind nur dann vergleichbar, wenn alle dieselben Einheiten verwenden. Genau dafür gibt es das **Internationale Einheitensystem** (SI, Système International d'unités).
 
-Die Physik beschreibt die Natur mit **Größen** — das sind messbare Eigenschaften wie Länge, Masse oder Zeit; jede Größe hat einen Zahlenwert und eine Einheit. Um weltweit vergleichbare Messungen zu ermöglichen, haben sich Wissenschaftler auf ein einheitliches System geeinigt: das **Internationale Einheitensystem** (SI, Système International d'unités). Es bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin.
+Die Physik beschreibt die Natur mit **Größen** — messbaren Eigenschaften wie Länge, Masse oder Zeit. Jede Größe hat einen Zahlenwert und eine Einheit. Das SI bildet das Fundament jeder exakten Naturwissenschaft und damit auch der Medizin: Ohne einheitliche Einheiten wäre eine Blutdruckangabe von „120/80" bedeutungslos.
 
 Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größen, aus denen sich alle anderen physikalischen Größen durch Multiplikation und Division ableiten lassen. Sie sind so gewählt, dass keine aus den anderen herleitbar ist.
 
@@ -78,6 +76,8 @@ Das SI definiert **sieben Basisgrößen** — das sind die fundamentalen Größe
 
 > **Merke:** **Newton ist keine Basiseinheit:** N = kg·m·s⁻². Pascal = N/m², Joule = N·m, Watt = J/s. Diese Kette solltest du sicher auf- und abgeleitet können.
 
+> 💡 **Prüfungstipp:** Die MedAT-Frage „In welcher Einheit wird Kraft angegeben?" hat als Falle m/s² (das ist Beschleunigung!) und Nm (das ist Arbeit). Richtig: **N = kg·m/s²**.
+
 ---
 
 ## Physikalische Größen als Produkt: Zahlenwert × Einheit
@@ -106,6 +106,8 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 
 > **Merke:** **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung). Vektoren addiert man nicht einfach arithmetisch, sondern wie Pfeile (komponentenweise oder geometrisch).
 
+> 💡 **Prüfungstipp:** Häufige Falle: „Ist Druck ein Vektor?" — Nein! Druck ist ein Skalar, obwohl er eine Richtung zu haben scheint. Er wirkt in alle Richtungen gleich (Pascalsches Prinzip).
+
 
 
 ---
@@ -118,6 +120,8 @@ Physikalische Größen lassen sich in **skalare** und **vektorielle** Größen u
 - **Intensive Größen** sind **unabhängig von der Systemgröße**: Sie bleiben gleich, wenn man gleiche Systeme vereinigt. Beispiele: Temperatur, Druck, Dichte, Konzentration. Zwei Behälter Wasser bei 20 °C ergeben zusammengeschüttet **weiterhin 20 °C** — nicht 40 °C!
 
 > **Merke:** **Extensiv** = proportional zur Menge (Masse, Volumen). **Intensiv** = unabhängig von der Menge (Temperatur, Konzentration). Zwei Tassen Kaffee → doppeltes Volumen, aber dieselbe Temperatur.
+
+> 💡 **Prüfungstipp:** Eselsbrücke: Intensive Größen bleiben beim Mischen **i**ntakt. Extensiv = „**ex**tra bei mehr Stoff".
 
 **Klinisch:** Die **Konzentration** eines Medikaments (intensiv, z. B. mg/L) ist für die Wirkung entscheidend, nicht die absolute Dosis allein. Die **Dosis** (extensiv, in mg) wird so gewählt, dass die gewünschte Plasmakonzentration erreicht wird — unter Berücksichtigung von Verteilungsvolumen und Nierenclearance (Fähigkeit der Niere, einen Stoff aus dem Blut zu entfernen).
 
@@ -322,7 +326,6 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
     {
       id: "ph-1-02",
       title: "Präfixe und wissenschaftliche Notation",
-      diagram: "coordinate-system",
       stichworte: [
         "SI-Präfixe",
         "Zehnerpotenz",
@@ -337,9 +340,8 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
         "Größenordnungen",
         "Dosierungsfehler",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
+      content: `
 
-<!-- DIAGRAM:newton-forces -->
 
 ## Warum brauchen wir Präfixe?
 
@@ -620,7 +622,6 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
-      diagram: "coordinate-system",
       stichworte: [
         "Dimensionsanalyse",
         "dimensionale Homogenität",
@@ -634,9 +635,8 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
         "Temperaturumrechnung",
         "dimensionslose Größen",
       ],
-      content: `<!-- DIAGRAM:coordinate-system -->
+      content: `
 
-<!-- DIAGRAM:newton-forces -->
 
 ## Was ist Dimensionsanalyse?
 
@@ -922,7 +922,6 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
     {
       id: "ph-2-01",
       title: "Newtonsche Gesetze und Kinematik",
-      diagram: "newton-forces",
       stichworte: [
         "Trägheitsgesetz",
         "F=ma",
@@ -936,9 +935,8 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
         "gleichförmige Bewegung",
         "Vektoren",
       ],
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Newtonsche Gesetze und Kinematik
 
@@ -1158,10 +1156,8 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
         "Kraftstoß",
         "Herzarbeit",
       ],
-      diagram: "coordinate-system",
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Erhaltungssätze — Energie, Impuls, Drehimpuls
 
@@ -1371,10 +1367,8 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
         "Viskosität",
         "laminare Strömung",
       ],
-      diagram: "newton-forces",
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Statik, Druck und Hydrodynamik
 
@@ -1560,10 +1554,8 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
         "Winkelgeschwindigkeit",
         "Schwerpunkt",
       ],
-      diagram: "coordinate-system",
-      content: `<!-- DIAGRAM:newton-forces -->
+      content: `
 
-<!-- DIAGRAM:coordinate-system -->
 
 ## Gravitation und Rotation
 

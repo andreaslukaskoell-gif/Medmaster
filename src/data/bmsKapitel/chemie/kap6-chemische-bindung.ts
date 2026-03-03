@@ -36,14 +36,12 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
-<!-- DIAGRAM:periodic-table -->
 
 **Weitere Beispiele:**
 - **MgCl2:** Mg gibt 2 Elektronen ab -> Mg2+ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf -> 2 Cl- (Ar-Konfiguration)
 - **CaO:** Ca gibt 2 Elektronen ab -> Ca2+; O nimmt 2 Elektronen auf -> O2- -- beide erreichen die Ar- bzw. Ne-Konfiguration
-- **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 Grad C
+- **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 °C
 
-<!-- DIAGRAM:atomic-orbitals -->
 
 ## Born-Haber-Kreisprozess und Gitterenergie
 
@@ -67,9 +65,8 @@ wobei k die Coulomb-Konstante (8,99 * 10 hoch 9 N*m2/C2), q1 und q2 die Ladungen
 - **Halbierung des Ionenabstands** -> Gitterenergie **2x größer**
 - **MgO vs. NaCl:** Mg2+*O2- = 4 Ladungseinheiten2 vs. Na+*Cl- = 1 -> allein durch Ladung 4x stärker; zusätzlich kleinere Radien -> Faktor ~5 insgesamt
 
-<!-- DIAGRAM:ionic-bond -->
 
-| Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (Grad C) | Begründung |
+| Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
 | NaCl | -786 | 801 | Einfach geladen, mittlere Radien |
 | MgO | -3795 | 2852 | Doppelt geladen, kleine Radien |
@@ -128,11 +125,11 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 
 ## Eigenschaften ionischer Verbindungen
 
-**Hohe Schmelz- und Siedepunkte:** Die Gitterenergie muss vollständig überwunden werden. NaCl schmilzt bei 801 Grad C, MgO erst bei 2852 Grad C (höhere Gitterenergie). Zum Vergleich: Molekulare Verbindungen wie Wasser (0/100 Grad C) oder Ethanol (-114/78 Grad C) haben wesentlich niedrigere Werte, da dort nur schwache intermolekulare Kräfte überwunden werden müssen.
+**Hohe Schmelz- und Siedepunkte:** Die Gitterenergie muss vollständig überwunden werden. NaCl schmilzt bei 801 °C, MgO erst bei 2852 °C (höhere Gitterenergie). Zum Vergleich: Molekulare Verbindungen wie Wasser (0/100 °C) oder Ethanol (-114/78 °C) haben wesentlich niedrigere Werte, da dort nur schwache intermolekulare Kräfte überwunden werden müssen.
 
 **Sprödigkeit:** Werden die Ionen durch mechanische Einwirkung verschoben, kommen gleichnamig geladene Ionen nebeneinander zu liegen -> elektrostatische Abstossung -> Bruch. Ionenkristalle lassen sich nicht plastisch verformen (im Gegensatz zu Metallen, wo das Elektronengas ein Gleiten der Schichten erlaubt).
 
-**Löslichkeit in Wasser:** Polare Wassermoleküle umhüllen die Ionen (Hydratation/Solvatation). Die **Hydratationsenthalpie** muss die Gitterenergie überwiegen, damit sich die Verbindung loest. NaCl: Gitterenergie 786 kJ/mol, Hydratationsenthalpie 783 kJ/mol -> löslich (leicht endotherm, wird durch Entropiegewinn der frei werdenden Ionen kompensiert). MgO: kaum löslich (sehr hohe Gitterenergie übersteigt Hydratationsenthalpie bei Weitem).
+**Löslichkeit in Wasser:** Polare Wassermoleküle umhüllen die Ionen (Hydratation/Solvatation). Die **Hydratationsenthalpie** muss die Gitterenergie überwiegen, damit sich die Verbindung löst. NaCl: Gitterenergie 786 kJ/mol, Hydratationsenthalpie 783 kJ/mol -> löslich (leicht endotherm, wird durch Entropiegewinn der frei werdenden Ionen kompensiert). MgO: kaum löslich (sehr hohe Gitterenergie übersteigt Hydratationsenthalpie bei Weitem).
 
 **Elektrische Leitfähigkeit:** Ionenkristalle leiten im Festzustand **nicht** (Ionen fixiert). Im geschmolzenen Zustand oder in wässriger Lösung bewegen sich Ionen frei -> Elektrolyte leiten Strom. Man unterscheidet starke Elektrolyte (vollständige Dissoziation/Zerfall in Ionen, z. B. NaCl, HCl) und schwache Elektrolyte (teilweise Dissoziation, z. B. CH3COOH). Wichtig für Biologie: Körperflüssigkeiten sind Elektrolytlösungen.
 
@@ -405,7 +402,6 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
       ],
       content: `## Grundprinzip der kovalenten Bindung
 
-<!-- DIAGRAM:covalent-bond -->
 
 Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -563,9 +559,7 @@ Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindend
 
 ## Hybridisierung
 
-<!-- DIAGRAM:atomic-orbitals -->
 
-Bisher haben wir mit dem VSEPR-Modell die Molekülgeometrie aus der Elektronenpaar-Abstoßung abgeleitet. Um zu verstehen, **warum** Kohlenstoff vier gleichwertige Bindungen bilden kann (obwohl er nur 2 ungepaarte Elektronen im Grundzustand hat), brauchen wir das Konzept der **Hybridisierung**.
 
 Hybridisierung erklärt die Geometrie von Kohlenstoff- (und anderen) Verbindungen durch Mischung von Atomorbitalen zu energieäquivalenten **Hybridorbitalen**. Die Zahl der Hybridorbitale entspricht der Zahl der gemischten Atomorbitale. Der Energieaufwand für die Promotion (Anhebung eines Elektrons aus dem s- in ein p-Orbital) wird durch die Bildung stärkerer Bindungen mehr als kompensiert.
 
@@ -632,7 +626,6 @@ Bindungsstärken: C–C (347 kJ/mol, 154 pm) < C=C (614 kJ/mol, 134 pm) < C≡C 
 
 ## Resonanz und mesomere Grenzstrukturen
 
-Bisher haben wir gesehen, dass σ-Bindungen die freie Rotation erlauben und π-Bindungen sie verhindern. Doch manche Moleküle lassen sich nicht durch eine einzige Lewis-Struktur beschreiben — die π-Elektronen sind über mehrere Atome **delokalisiert**. Der tatsächliche Zustand ist ein **Resonanzhybrid** (Mittelzustand aller Grenzstrukturen). Die Grenzstrukturen sind nur Hilfskonstruktionen — das reale Molekül hat Eigenschaften, die zwischen allen Grenzstrukturen liegen.
 
 **Regeln für Resonanzstrukturen:**
 1. Nur π-Elektronen und freie Elektronenpaare werden verschoben — σ-Gerüst bleibt unverändert
@@ -968,7 +961,6 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       ],
       content: `## Überblick: Zwischenmolekulare Kräfte
 
-<!-- DIAGRAM:covalent-bond -->
 
 Neben den intramolekularen Bindungen (Ionen-, kovalente, Metallbindung) bestimmen **intermolekulare Wechselwirkungen** (van-der-Waals-Kräfte, Wasserstoffbrücken, Dipol-Dipol) die physikalischen Eigenschaften von Stoffen: Aggregatszustand, Siedepunkt, Löslichkeit, Viskosität. In der Biologie sind sie ebenso fundamental — sie bestimmen Proteinstruktur, DNA-Doppelhelix und Enzym-Substrat-Wechselwirkungen.
 
@@ -1036,7 +1028,6 @@ Einflussfaktoren:
 
 ## Dipol-Dipol-Wechselwirkungen
 
-Bisher haben wir gesehen, dass London-Kräfte zwischen allen Molekülen wirken — auch unpolaren. **Dipol-Dipol-Wechselwirkungen** kommen als zusätzliche Kraft hinzu, wenn Moleküle ein **permanentes Dipolmoment** besitzen (also polare Moleküle mit asymmetrischer Ladungsverteilung).
 
 **Mechanismus:** Die partiell positive Seite (δ+) eines polaren Moleküls orientiert sich bevorzugt zur partiell negativen Seite (δ−) des Nachbarmoleküls. Diese elektrostatische Anziehung ist stärker als reine London-Kräfte, aber schwächer als Wasserstoffbrücken.
 
@@ -1224,11 +1215,9 @@ Die Integrität der Lipiddoppelschicht hängt nicht nur vom hydrophoben Effekt a
 | Trans-ungesättigt (z. B. Elaidinsäure) | Nahezu gerade | Stark (wie gesättigt) | Niedrig (pathologisch) |
 | + Cholesterol | Lücken gefüllt | Reguliert | Optimal bei 37 °C |
 
-<!-- DIAGRAM:ionic-bond -->
 
 ## Metallbindung
 
-Bisher haben wir Ionenbindung (Elektronenübertragung) und kovalente Bindung (Elektronenteilung) besprochen. Die dritte Hauptbindungsart — die **Metallbindung** — unterscheidet sich fundamental von beiden: Hier werden Valenzelektronen nicht zwischen Atomen geteilt oder übertragen, sondern **kollektiv von allen Atomen im Gitter geteilt**.
 
 ### Elektronengasmodell (Drude-Modell)
 
@@ -1665,7 +1654,6 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
       ],
       content: `## Bindungstypen in Biomolekülen
 
-<!-- DIAGRAM:functional-groups -->
 
 Lebende Systeme sind chemische Systeme, die auf einer fein abgestimmten Hierarchie von Bindungen basieren. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
 
@@ -1705,7 +1693,6 @@ Konsequenzen:
 - Einfach ungesättigt (Ölsäure, 18:1 cis-Δ9): Knick durch cis-Doppelbindung → lockere Packung, schwächere London-Kräfte → niedrigerer Schmelzpunkt, flüssig bei RT (Olivenöl)
 - Trans-Fettsäuren (Elaidinsäure): kein Knick → ähnliche Packung wie gesättigt → erhöhtes kardiovaskuläres Risiko
 
-<!-- DIAGRAM:covalent-bond -->
 
 ## Aminosäuren, Peptide und Proteinstruktur
 
@@ -1744,7 +1731,6 @@ Klinisch: Autoklav-Sterilisation (121 °C, 15 min) denaturiert alle mikrobiellen
 
 **RNA-Struktur:** RNA ist einsträngig, kann aber intramolekular H-Brücken bilden → Sekundärstrukturen (Haarnadelschleifen, Stamm-Schleifen) → tRNA, rRNA, Ribozyme, microRNA.
 
-<!-- DIAGRAM:enzyme-substrate -->
 
 ## Enzyme: Bindung und Katalyse
 
