@@ -14,6 +14,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { useAuth } from "@/hooks/useAuth";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const NAVY = "#1b3ea7"; /* Signature Navy (--accent) */
@@ -64,45 +65,6 @@ const features = [
   },
 ];
 
-const pricingPlans = [
-  {
-    name: "Starter",
-    price: "Gratis",
-    period: "",
-    features: ["50 BMS-Fragen", "1 Simulationstest", "Grundstatistiken"],
-    cta: "Kostenlos starten",
-    highlight: false,
-  },
-  {
-    name: "Standard",
-    price: "€12.90",
-    period: "/Monat",
-    features: [
-      "Alle 1.060+ BMS-Fragen",
-      "Adaptives Lernsystem",
-      "Unbegrenzte Simulationen",
-      "Stichwortlisten-Tracking",
-      "Schwachstellen-Trainer",
-    ],
-    cta: "Jetzt starten",
-    highlight: true,
-  },
-  {
-    name: "Pro",
-    price: "€19.90",
-    period: "/Monat",
-    features: [
-      "Alles aus Standard",
-      "KFF & TV Vollzugang",
-      "Prüfungstag-Prognose",
-      "Prioritärer Support",
-      "Lernplan-Generator",
-    ],
-    cta: "Pro wählen",
-    highlight: false,
-  },
-];
-
 const container = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.06 } },
@@ -111,6 +73,8 @@ const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
 export default function LandingPage() {
   usePageTitle();
+  const { signInWithGoogle } = useAuth();
+  const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
 
   useEffect(() => {
@@ -125,9 +89,10 @@ export default function LandingPage() {
 
   const socialProofItems = [
     ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
-    { emoji: "⭐", text: "Alle 4 MedAT-Bereiche abgedeckt" },
+    { emoji: "⭐", text: "Alle 4 MedAT-Bereiche: BMS, KFF, TV, SEK" },
     { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
     { emoji: "🆓", text: "Kostenlos starten — kein Abo nötig" },
+    { emoji: "📚", text: "4.300+ Übungsfragen mit Erklärungen" },
   ];
 
   return (
@@ -184,7 +149,7 @@ export default function LandingPage() {
             style={{ color: NAVY }}
           >
             <Sparkles className="w-4 h-4" />
-            MedAT 2026 — Jetzt früh starten
+            Neu: 4.300+ Fragen — MedAT 2026
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -192,13 +157,13 @@ export default function LandingPage() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight mb-6 tracking-tight"
           >
-            MedAT 2026 bestehen —
+            Dein Medizinstudium
             <br />
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: `linear-gradient(135deg, ${NAVY}, ${NAVY_LIGHT})` }}
             >
-              der smarteste Weg dorthin
+              beginnt hier.
             </span>
           </motion.h1>
           <motion.p
@@ -207,8 +172,8 @@ export default function LandingPage() {
             transition={{ delay: 0.35 }}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Österreichs erste MedAT-Plattform mit adaptivem KI-Lernsystem. BMS, KFF, TV und SEK —
-            alles in einer App. Kostenlos starten.
+            4.300+ Übungsfragen, alle 4 MedAT-Bereiche, KI-adaptives Lernsystem und realistische
+            Prüfungssimulationen. In 30 Sekunden starten.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -226,15 +191,38 @@ export default function LandingPage() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
-            <motion.a
-              href="#preise"
+            <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={async () => {
+                setGoogleError("");
+                const { error } = await signInWithGoogle();
+                if (error) setGoogleError(error.message);
+              }}
               className="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold px-8 py-4 rounded-2xl text-base border border-gray-200 dark:border-gray-700 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
-              Preise ansehen
-            </motion.a>
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path
+                  fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
+              </svg>
+              Mit Google starten
+            </motion.button>
           </motion.div>
+          {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
 
           <motion.div
             variants={container}
@@ -243,8 +231,8 @@ export default function LandingPage() {
             className="grid grid-cols-3 gap-6 sm:gap-8 max-w-lg mx-auto mt-16 sm:mt-20"
           >
             {[
-              { value: "1.060+", label: "Übungsfragen" },
-              { value: "106", label: "Stichworte" },
+              { value: "4.300+", label: "Übungsfragen" },
+              { value: "174", label: "Lerneinheiten" },
               { value: "4", label: "MedAT-Bereiche" },
             ].map((stat, i) => (
               <motion.div
@@ -408,96 +396,35 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Launch Banner — alles gratis */}
       <section id="preise" className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-100 dark:border-gray-800/50 text-center"
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
+              Launch-Aktion
+            </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Beste MedAT-Vorbereitung zum fairsten Preis
+              Komplett kostenlos zum Start
             </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              Starte gratis und upgrade, wenn du bereit bist.
+            <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8">
+              Alle 4.300+ Fragen, alle Features, kein Abo. Registriere dich jetzt und nutze
+              MedMaster in den ersten Wochen komplett gratis.
             </p>
-          </motion.div>
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto"
-          >
-            {pricingPlans.map((plan) => (
-              <motion.div
-                key={plan.name}
-                variants={item}
-                whileHover={{ y: -4 }}
-                className={`relative rounded-2xl p-8 shadow-sm ${
-                  plan.highlight
-                    ? "bg-[#1b3ea7] text-white shadow-lg shadow-primary-500/20 scale-[1.02]"
-                    : "bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800"
-                }`}
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                to="/register"
+                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
+                style={{ backgroundColor: NAVY }}
               >
-                {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                    Beliebteste Wahl
-                  </div>
-                )}
-                <h3
-                  className={`text-lg font-semibold mb-2 ${plan.highlight ? "text-white" : "text-gray-900 dark:text-gray-100"}`}
-                >
-                  {plan.name}
-                </h3>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span
-                    className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-gray-900 dark:text-gray-100"}`}
-                  >
-                    {plan.price}
-                  </span>
-                  {plan.period && (
-                    <span
-                      className={
-                        plan.highlight ? "text-primary-200" : "text-gray-500 dark:text-gray-400"
-                      }
-                    >
-                      {plan.period}
-                    </span>
-                  )}
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm">
-                      <span className={plan.highlight ? "text-primary-200" : "text-[#1b3ea7]"}>
-                        &#10003;
-                      </span>
-                      <span
-                        className={
-                          plan.highlight ? "text-primary-100" : "text-gray-600 dark:text-gray-400"
-                        }
-                      >
-                        {f}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Link
-                    to="/register"
-                    className={`block w-full text-center font-semibold py-3.5 rounded-2xl transition-colors shadow-sm ${
-                      plan.highlight
-                        ? "bg-white text-[#1b3ea7] hover:bg-primary-50"
-                        : "bg-[#1b3ea7] text-white hover:opacity-90"
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
-                </motion.div>
-              </motion.div>
-            ))}
+                Jetzt gratis registrieren
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
