@@ -1646,6 +1646,8 @@ Ohne CA würde der CO₂-Transport im Blut und die pH-Regulierung zusammenbreche
 
 > **Merke:** Henderson-Hasselbalch: pH = pKa + log([A-]/[HA]). Bei [A-] = [HA] ist pH = pKa (maximale Pufferkapazität). Effektiver Pufferbereich: pKa +/- 1.
 
+> 💡 **Prüfungstipp:** Henderson-Hasselbalch auswendig können! Wenn [A⁻] = [HA] → log(1) = 0 → pH = pKa. Das ist der Punkt maximaler Pufferkapazität.
+
 > **Merke:** Blut-pH 7,4 entsteht durch [HCO3-]/[CO2] ~ 20:1 bei pKa(eff.) = 6,1. Lunge reguliert pCO2 schnell (Minuten), Niere reguliert HCO3- langsam (Stunden bis Tage). Versagt die Kompensation, drohen Azidose (pH < 7,35) oder Alkalose (pH > 7,45).
 
 > **Merke:** Bohr-Effekt: pH ↓ / pCO₂ ↑ → Hb-O₂-Affinität ↓ → mehr O₂-Abgabe ans Gewebe. Le Chatelier auf molekularer Ebene.`,
