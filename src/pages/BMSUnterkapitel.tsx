@@ -64,8 +64,6 @@ const subjectTextColors: Record<string, string> = {
   mathematik: "text-violet-700 dark:text-violet-400",
 };
 
-const SCROLL_STORAGE_KEY = "medmaster-scroll";
-
 export default function BMSUnterkapitel({
   kapitel,
   unterkapitelIndex,
@@ -153,26 +151,10 @@ export default function BMSUnterkapitel({
     ]);
   }, [kapitel, ukFromIndex?.title, setBreadcrumbs]);
 
+  // Scroll to top whenever the UK changes (navigation between Unterkapitel)
   useEffect(() => {
-    if (!ukId || typeof window === "undefined") return;
-    const key = `${SCROLL_STORAGE_KEY}:${location.pathname}:${ukId}`;
-    const raw = sessionStorage.getItem(key);
-    if (raw === null) return;
-    const y = parseInt(raw, 10);
-    if (!Number.isFinite(y) || y <= 0) return;
-    const id = requestAnimationFrame(() => {
-      window.scrollTo(0, y);
-    });
-    return () => cancelAnimationFrame(id);
-  }, [location.pathname, ukId]);
-
-  useEffect(() => {
-    if (!ukId) return;
-    const key = `${SCROLL_STORAGE_KEY}:${location.pathname}:${ukId}`;
-    return () => {
-      sessionStorage.setItem(key, String(window.scrollY));
-    };
-  }, [location.pathname, ukId]);
+    window.scrollTo(0, 0);
+  }, [ukId]);
 
   // Reading progress bar tracking
   useEffect(() => {

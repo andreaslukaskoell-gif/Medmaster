@@ -30,9 +30,11 @@ export const chemKapAtom: Kapitel = {
       ],
       content: `## Demokrit und Dalton — die Anfänge
 
-**Um zu verstehen,** wie wir zum heutigen Bild vom Atom kamen, lohnt ein kurzer Blick auf die Anfänge: Ohne die Idee des „unteilbaren Teilchens” gäbe es keine Atommodelle.
+Die Vorstellung vom „unteilbaren Teilchen” reicht über 2000 Jahre zurück — und jedes Atommodell, das folgte, kam der Wahrheit ein Stück näher.
 
 Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen (griech. *átomos* = unteilbar). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808) begründet: Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen sind Umlagerungen von Atomen — keine Erzeugung oder Vernichtung.
+
+> **Prüfungstipp:** Die historische Reihenfolge der Atommodelle (Dalton → Thomson → Rutherford → Bohr → Quantenmechanik) wird im MedAT regelmäßig abgefragt. Merke dir für jedes Modell das Schlüsselexperiment und die zentrale Aussage.
 
 > **Merke:** Dalton: Atome sind die kleinsten Bausteine der Elemente; gleiches Element = gleiche Atome; Reaktionen = Umlagerung.
 
@@ -136,7 +138,9 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 > **Merke:** **Z** = Protonenzahl = Element. **A** = Z + N = Massenzahl. **Isotope**: gleiche Z, verschiedene N → gleiche Chemie, verschiedene Masse/Stabilität. Notation ᴬ_Z X.
 
 
-**Stabile vs. instabile Kerne:** Stabile Isotope haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schweren überwiegen Neutronen). Instabile Nuklide sind **radioaktiv**. Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv.`,
+**Stabile vs. instabile Kerne:** Stabile Isotope haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schweren überwiegen Neutronen). Instabile Nuklide sind **radioaktiv**. Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv.
+
+> **Prüfungstipp:** In Rechenaufgaben zu Isotopen wird oft nach N = A − Z gefragt. Lies die Nuklid-Schreibweise ᴬ_Z X immer sorgfältig: A oben links, Z unten links. Häufiger Fehler: A und Z verwechseln.`,
 
       lernziele: [
         "Die historische Entwicklung der Atommodelle (Thomson → Rutherford → Bohr → Quantenmechanik) erklären und die entscheidenden Experimente benennen.",
@@ -339,7 +343,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Elektronenkonfiguration",
         "Übergangsmetalle",
       ],
-      content: `
+      content: `Vier Zahlen genügen, um jedes Elektron im Atom eindeutig zu beschreiben — die Quantenzahlen bilden das Koordinatensystem der Atomhülle.
 
 ## Die vier Quantenzahlen
 
@@ -416,14 +420,16 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 - **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Ceruloplasmin (Kupfer-Transportprotein im Blut), Superoxid-Dismutase
 - **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme (Carboanhydrase, Alkohol-Dehydrogenase), Zinkfinger-Proteine (Transkriptionsfaktoren)
 - **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin), essenziell für Methylierungsreaktionen
-- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)`,
+- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)
+
+> **Prüfungstipp:** Die Ausnahmen Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) werden fast jedes Jahr im MedAT abgefragt. Merke: halb- und vollgefüllte d-Schalen sind besonders stabil. Bei Ionen werden immer zuerst die 4s-Elektronen entfernt, nicht die 3d-Elektronen.`,
 
       lernziele: [
         "Die vier Quantenzahlen (n, l, mₗ, mₛ) und ihre möglichen Werte nennen und die damit beschriebene Eigenschaft des Elektrons erklären.",
         "Das Pauliprinzip, das Aufbauprinzip und die Hundsche Regel korrekt anwenden, um Elektronenkonfigurationen zu schreiben.",
         "Die Energiereihenfolge der Orbitale (Madelung-Regel) kennen und für die Konfiguration von Haupt- und Nebengruppenelementen nutzen.",
         "Valenz- und Rumpfelektronen identifizieren und ihre Bedeutung für chemische Reaktivität erläutern.",
-        "Biologically important Übergangsmetalle (Fe, Cu, Zn, Co, Mn) und ihre Funktionen als Spurenelemente kennen.",
+        "Biologisch wichtige Übergangsmetalle (Fe, Cu, Zn, Co, Mn) und ihre Funktionen als Spurenelemente kennen.",
       ],
 
       sections: [
@@ -611,7 +617,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         "Nuklearmedizin",
         "Radon",
       ],
-      content: `
+      content: `Radioaktive Kerne zerfallen spontan und setzen dabei Energie frei — als Teilchenstrahlung oder elektromagnetische Wellen. Diese Strahlung ist sowohl Diagnosewerkzeug als auch Krebsrisiko.
 
 ## Arten der Strahlung
 
@@ -667,6 +673,8 @@ Medizinisch relevante Halbwertszeiten:
 | U-238 | 4,5 mal 10 hoch 9 a | Geologische Datierung |
 
 **Beispielrechnung:** Ein Patient erhält Tc-99m (T-halb = 6 h). Wie viel Aktivität verbleibt nach 24 h? n = 24/6 = 4 Halbwertszeiten. Restaktivität = 1/2 hoch 4 = 1/16 = 6,25 % der Ausgangsdosis.
+
+> **Prüfungstipp:** Halbwertszeit-Aufgaben sind MedAT-Klassiker. Strategie: t durch T-halb teilen = Anzahl n der Halbwertszeiten. Dann Restmenge = (1/2)^n. Merke die Reihe: 50 % → 25 % → 12,5 % → 6,25 % → 3,125 %.
 
 ## Kernspaltung und Kernfusion
 
@@ -901,7 +909,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         "Infusionslösung",
         "Laborwerte",
       ],
-      content: `
+      content: `Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
 
 ## Atomare Masseneinheit u
 
@@ -1001,7 +1009,9 @@ Beispiel in der Medizin:
 C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Glukose, ΔG ≈ −2870 kJ/mol)
 1 mol Glukose (180 g) reagiert mit 6 mol O₂ (192 g) und liefert 6 mol CO₂ + 6 mol H₂O.
 
-**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.`,
+**Limitierender Reaktand:** Liegt ein Edukt im Unterschuss vor, bestimmt es die maximale Produktmenge. Die übrigen Edukte verbleiben als Überschuss.
+
+> **Prüfungstipp:** Bei Mol-Rechenaufgaben immer das Schema einhalten: (1) Masse → mol mit n = m/M, (2) Mol-Verhältnis aus Koeffizienten, (3) mol → Masse mit m = n × M. Einheiten konsequent mitführen — das verhindert Fehler bei mmol/µmol-Umrechnungen.`,
 
       lernziele: [
         "Die atomare Masseneinheit u definieren und die Massen von Proton, Neutron und Elektron in u angeben.",
@@ -1186,7 +1196,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         "Denaturierung",
         "Polarisierbarkeit",
       ],
-      content: `
+      content: `Warum siedet Wasser erst bei 100 °C, obwohl es nur 18 g/mol wiegt? Die Antwort liegt in den zwischenmolekularen Kräften — sie entscheiden über Siedepunkte, Löslichkeiten und die gesamte Biochemie.
 
 ## Van-der-Waals-Kräfte
 
@@ -1238,7 +1248,9 @@ Unpolare Moleküle in Wasser erzwingen eine geordnete Wasserstruktur um sich her
 
 Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five, Faustregel für orale Arzneistoff-Aufnahme): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP (Maß für Lipophilie) ≤5.
 
-Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.`,
+Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.
+
+> **Prüfungstipp:** Beim MedAT wird oft nach dem Stärkeranking gefragt: Ionenbindung > kovalent > H-Brücken > Dipol-Dipol > London. Merke auch: H-Brücken brauchen N, O oder F als Partner — Schwefel (S-H) reicht nicht aus, deshalb siedet H₂S bei −60 °C statt bei +100 °C.`,
 
       lernziele: [
         "Die drei Klassen der van-der-Waals-Kräfte (London, Keesom, Debye) und ihre Entstehungsmechanismen erklären können.",
@@ -1469,7 +1481,7 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
         "Hämolyse",
         "Infusion",
       ],
-      content: `
+      content: `Ob ein Wirkstoff resorbiert wird, hängt davon ab, ob er sich im Wasser oder in Fett löst — und ob die Osmolarität einer Infusion stimmt, entscheidet über Hämolyse oder Heilung.
 
 ## Löslichkeit und das Prinzip "Similia similibus solvuntur"
 
@@ -1526,7 +1538,9 @@ Eigenschaften, die nur von der **Teilchenzahl**, nicht von der Art des Gelösten
 3. **Dampfdruckerniedrigung** (Raoult)
 4. **Osmose**
 
-Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).`,
+Klinisch wird die **Serum-Osmolalität** aus dem Gefrierpunkt gemessen; berechnete Osmolalität: 2×[Na⁺] + [Glukose]/18 + [Harnstoff]/6 (Einheiten in mg/dL) bzw. vereinfacht 2×[Na] + [Glukose] + [Harnstoff] (Einheiten in mmol/L).
+
+> **Prüfungstipp:** Osmolaritätsaufgaben erfordern immer die Dissoziation zu berücksichtigen: NaCl → 2 Teilchen (i=2), CaCl₂ → 3 Teilchen (i=3), Glukose → 1 Teilchen (i=1). Vergiss nicht: Osmolarität = c × i × 1000. Hypotone Lösung → Hämolyse (Zellen platzen), hypertone → Crenation (Zellen schrumpfen).`,
 
       lernziele: [
         'Das Löslichkeitsprinzip "Similia similibus solvuntur" auf polare, unpolare und amphiphile Substanzen anwenden können.',
@@ -1760,7 +1774,7 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
         "Emulsion",
         "HAES",
       ],
-      content: `
+      content: `Fest, flüssig, gasförmig — die drei Zustände der Materie bestimmen, wie Stoffe sich verhalten, von der Gefriertrocknung von Impfstoffen bis zum Surfactant in den Lungen eines Neugeborenen.
 
 ## Die drei Aggregatzustände
 
@@ -1825,7 +1839,9 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 **Emulsionen in der Medizin:**
 - **Parenterale Ernährung:** Fettemulsionen (Sojaöl/Wasser mit Phospholipid-Emulgator) liefern Energie ohne enterale Resorption
 - **Lungenembolie durch Fettembolie:** Fetttröpfchen aus Knochenmarkschädigung (Fraktur) bilden Emulsion im Blut und können Lungenarterien verlegen
-- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**`,
+- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**
+
+> **Prüfungstipp:** Endotherm vs. exotherm ist ein Klassiker: Alles, was „lockerer" macht (Schmelzen, Verdampfen, Sublimation) ist endotherm. Alles, was „fester" macht (Erstarren, Kondensieren, Resublimation) ist exotherm. Die Verdampfungswärme von Wasser (2257 J/g) kommt oft als Zahlenangabe in Aufgaben vor.`,
 
       lernziele: [
         "Die drei Aggregatzustände und ihre Eigenschaften kennen sowie alle Phasenübergänge mit Wärmetönung (endo-/exotherm) benennen können.",
@@ -2074,11 +2090,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
         "Metallcharakter",
         "Valenzelektron",
       ],
-      content: `
+      content: `Das Periodensystem ordnet alle bekannten Elemente nach einem einzigen Prinzip — der Protonenzahl — und macht chemische Eigenschaften vorhersagbar.
 
 ## Geschichte und Entwicklung des Periodensystems
 
-Das Periodensystem der Elemente (PSE) ist eines der fundamentalsten Ordnungssysteme der Naturwissenschaften. Im Jahr 1869 veröffentlichten **Dmitri Iwanowitsch Mendelejew** (Russland) und **Lothar Meyer** (Deutschland) unabhängig Tabellen, die Elemente nach Atommasse anordneten und Periodizitäten der Eigenschaften zeigten. Mendelejews geniale Leistung lag darin, Lücken für noch unentdeckte Elemente vorherzusagen: Eka-Aluminium (Gallium, 1875), Eka-Bor (Scandium, 1879), Eka-Silicium (Germanium, 1886) stimmten fast exakt mit seinen Vorhersagen überein.
+Im Jahr 1869 veröffentlichten **Dmitri Iwanowitsch Mendelejew** (Russland) und **Lothar Meyer** (Deutschland) unabhängig Tabellen, die Elemente nach Atommasse anordneten und Periodizitäten der Eigenschaften zeigten. Mendelejews geniale Leistung lag darin, Lücken für noch unentdeckte Elemente vorherzusagen: Eka-Aluminium (Gallium, 1875), Eka-Bor (Scandium, 1879), Eka-Silicium (Germanium, 1886) stimmten fast exakt mit seinen Vorhersagen überein.
 
 Das moderne PSE basiert auf der **Kernladungszahl (Ordnungszahl Z)**, also der Protonenzahl. Henry Moseley klärte dies 1913 durch Röntgenspektroskopie: Charakteristische Röntgenfrequenzen hängen von Z ab, nicht von der Atommasse. Seither werden Elemente von Wasserstoff (Z=1) bis Oganesson (Z=118) geordnet. Die Umstellung löste alle scheinbaren Anomalien: Ar (Atommasse 39,9, Z=18) steht korrekt vor K (39,1, Z=19).
 
@@ -2094,7 +2110,7 @@ Das PSE besitzt **7 Perioden** (horizontale Zeilen). Die Periodennummer entspric
 - **Periode 6** (n=6): Cs bis Rn - 6s, 4f, 5d und 6p-Orbitale, 32 Elemente (Lanthanoide)
 - **Periode 7** (n=7): Fr bis Og - 7s, 5f, 6d und 7p-Orbitale, 32 Elemente (Actinoide)
 
-Merkreihe Periodenlangen: 2 - 8 - 8 - 18 - 18 - 32 - 32 (aus Kapazitat der Unterschalen: s=2, p=6, d=10, f=14).
+Merkreihe Periodenlängen: 2 - 8 - 8 - 18 - 18 - 32 - 32 (aus Kapazität der Unterschalen: s=2, p=6, d=10, f=14).
 
 ## Gruppen: Vertikale Spalten
 
@@ -2113,7 +2129,7 @@ Das PSE hat **18 Gruppen** (IUPAC-Nummerierung 1-18). Elemente derselben Gruppe 
 Im p-Block gilt: Gruppenummer = 10 + Anzahl der Valenzelektronen.
 
 
-## Bloecke: Orbital-Besetzung und Position
+## Blöcke: Orbital-Besetzung und Position
 
 Die PSE-Position spiegelt direkt wider, welches Orbital zuletzt besetzt wird (Aufbauprinzip):
 
@@ -2137,10 +2153,12 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 > **Merke:** Die Ordnungszahl (Protonenzahl) bestimmt die Stellung im PSE und damit die chemischen Eigenschaften eines Elements. Elemente derselben Gruppe haben gleich viele Valenzelektronen und verhalten sich chemisch ähnlich.
 
-> **Merke:** s-Block (Gruppen 1–2): 1–2 Valenzelektronen, starke Reduktionsmittel. p-Block (Gruppen 13–18): vielfältige Chemie. d-Block (Gruppen 3–12): Übergangsmetalle mit variablen Oxidationsstufen.`,
+> **Merke:** s-Block (Gruppen 1–2): 1–2 Valenzelektronen, starke Reduktionsmittel. p-Block (Gruppen 13–18): vielfältige Chemie. d-Block (Gruppen 3–12): Übergangsmetalle mit variablen Oxidationsstufen.
+
+> **Prüfungstipp:** Im MedAT wird oft gefragt, welchem Block ein Element angehört. Faustregel: Block = Orbital, in das das letzte Elektron eingebaut wird. Gruppe 1–2 = s-Block, Gruppe 13–18 = p-Block, Gruppe 3–12 = d-Block. Periodennummer = höchste Hauptquantenzahl n.`,
 
       lernziele: [
-        "Den Aufbau des PSE mit Perioden, Gruppen und Bloecken erklären und den Zusammenhang zur Quantenzahlsystematik herstellen",
+        "Den Aufbau des PSE mit Perioden, Gruppen und Blöcken erklären und den Zusammenhang zur Quantenzahlsystematik herstellen",
         "Die Entwicklung des PSE von Mendelejew (Atommasse) zum modernen System nach Kernladungszahl historisch einordnen",
         "Den Zusammenhang zwischen PSE-Position und Elektronenkonfiguration für Haupt- und Nebengruppenelemente ableiten",
         "Den Trend des Metallcharakters und die Lage der Halbmetalle (Metalloide) im PSE beschreiben",
@@ -2152,17 +2170,17 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           heading: "Perioden: Schalenzahl und Elementanzahl",
           text: "Die Länge jeder Periode richtet sich nach der Kapazität der besetzten Unterschalen. Periode 1: nur 1s, max. 2e- => 2 Elemente (H, He). Perioden 2 und 3: s und p-Unterschalen, max. 8e- => je 8 Elemente. Perioden 4 und 5: s, d und p, max. 18e- => je 18 Elemente. Perioden 6 und 7: s, f, d und p, max. 32e- => je 32 Elemente (f-Block = Lanthanoide/Actinoide). Lanthanoide (Ce-Lu) und Actinoide (Th-Lr) werden aus Platzgründen unten ausgelagert, gehören aber formal zu Perioden 6 und 7. Alle Actinoide ab Uran (Z=92) sind radioaktiv. Merkregel: 2 - 8 - 8 - 18 - 18 - 32 - 32.",
           merksatz:
-            "Periodenlangen: 2 - 8 - 8 - 18 - 18 - 32 - 32 (entspricht Kapazität der Unterschalen)",
+            "Periodenlängen: 2 - 8 - 8 - 18 - 18 - 32 - 32 (entspricht Kapazität der Unterschalen)",
         },
         {
           heading: "Gruppen: gleiche Valenzelektronen = gleiche Chemie",
-          text: "Elemente der gleichen Gruppe haben gleich viele Valenzelektronen und nahezu identische chemische Eigenschaften. Beispiel Gruppe 1: Li, Na, K, Rb, Cs bilden alle +1-Ionen, reagieren mit Wasser zu Lauge + H2, bilden weisse, gut lösliche Salze. Im p-Block: Gruppenummer = 10 + Valenzelektronen (Gr.13 = 3 VE; Gr.17 = 7 VE). Im s-Block: Gruppenummer = Valenzelektronen (Gr.1 = 1 VE; Gr.2 = 2 VE). Die IUPAC-Nummerierung 1-18 ist international verbindlich; aeltere Systeme (IA-VIIIA) finden sich noch in vielen Pruefungsunterlagen.",
+          text: "Elemente der gleichen Gruppe haben gleich viele Valenzelektronen und nahezu identische chemische Eigenschaften. Beispiel Gruppe 1: Li, Na, K, Rb, Cs bilden alle +1-Ionen, reagieren mit Wasser zu Lauge + H₂, bilden weiße, gut lösliche Salze. Im p-Block: Gruppennummer = 10 + Valenzelektronen (Gr.13 = 3 VE; Gr.17 = 7 VE). Im s-Block: Gruppennummer = Valenzelektronen (Gr.1 = 1 VE; Gr.2 = 2 VE). Die IUPAC-Nummerierung 1-18 ist international verbindlich; ältere Systeme (IA-VIIIA) finden sich noch in vielen Prüfungsunterlagen.",
           merksatz:
             "p-Block Gruppenummer = 10 + Valenzelektronen (Gr.13: 3 VE = Al, B; Gr.17: 7 VE = Halogene)",
         },
         {
           heading: "Halbmetalle: Grenzelemente mit Halbleitereigenschaften",
-          text: "Halbmetalle (Metalloide: B, Si, Ge, As, Sb, Te, At) liegen entlang der Treppenlinie. Ihre elektrische Leitfähigkeit liegt zwischen Metallen und Nichtmetallen und steigt mit Temperatur (Halbleiterverhalten). Silicium (Si) ist Basis der Mikroelektronik: Dotierung mit Gruppe-13-Atomen (p-Typ, z.B. Bor: erzeugt Loechriger) oder Gruppe-15-Atomen (n-Typ, z.B. Phosphor: erzeugt überschuessige Elektronen) erzeugt pn-Übergaenge für Transistoren. Germanium (Ge): erstes Halbleitermaterial (Bell Labs 1947). As2O3 (Trisenox): Therapeutikum bei akuter Promyelozyten-Leukämie (APL) - induziert Differenzierung und Apoptose von Leukämiezellen.",
+          text: "Halbmetalle (Metalloide: B, Si, Ge, As, Sb, Te, At) liegen entlang der Treppenlinie. Ihre elektrische Leitfähigkeit liegt zwischen Metallen und Nichtmetallen und steigt mit Temperatur (Halbleiterverhalten). Silicium (Si) ist Basis der Mikroelektronik: Dotierung mit Gruppe-13-Atomen (p-Typ, z. B. Bor: erzeugt Löcher) oder Gruppe-15-Atomen (n-Typ, z. B. Phosphor: erzeugt überschüssige Elektronen) erzeugt pn-Übergänge für Transistoren. Germanium (Ge): erstes Halbleitermaterial (Bell Labs 1947). As₂O₃ (Trisenox): Therapeutikum bei akuter Promyelozyten-Leukämie (APL) — induziert Differenzierung und Apoptose von Leukämiezellen.",
           merksatz:
             "Halbmetalle: B, Si, Ge, As, Sb, Te, At - Halbleiter entlang der Treppenlinie; Si = Grundlage der Mikroelektronik",
         },
@@ -2180,7 +2198,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "s-Block: Gr.1-2; p-Block: Gr.13-18; d-Block: Gr.3-12; f-Block: Lanthanoide/Actinoide",
         "Metallcharakter: in Periode von links nach rechts ab; in Gruppe von oben nach unten zu",
         "Halbmetalle (Metalloide): B, Si, Ge, As, Sb, Te, At - Halbleiter entlang der Treppenlinie",
-        "Periodenlangen: 2 - 8 - 8 - 18 - 18 - 32 - 32",
+        "Periodenlängen: 2 - 8 - 8 - 18 - 18 - 32 - 32",
         "Cr: [Ar] 3d5 4s1 und Cu: [Ar] 3d10 4s1 - Ausnahmen vom Aufbauprinzip",
         "p-Block Gruppenummer = 10 + Valenzelektronen (Gr.15 = N, P = 5 VE)",
         "Lanthanoide: f-Block, Periode 6, Ce-Lu; Actinoide: Periode 7, Th-Lr (alle radioaktiv ab U)",
@@ -2194,7 +2212,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         question:
           "Erklären Sie, warum Mendelejews Periodensystem trotz Orientierung an der Atommasse so erfolgreich war, und wo es Schwächen zeigte. Welches moderne Prinzip löste das Problem?",
         answer:
-          "Mendelejews Erfolg beruhte auf der empirischen Beobachtung, dass chemische Eigenschaften sich periodisch mit steigender Atommasse wiederholen. Da Atommasse und Kernladungszahl für die meisten Elemente in derselben Reihenfolge wachsen, funktionierte sein System für den Grossteil des PSE korrekt. Schwächen zeigten sich bei Elementpaaren, bei denen die Reihenfolge nach Atommasse der Reihenfolge nach Eigenschaften widersprach: Argon (Atommasse 39,9) muesste nach Atommasse nach Kalium (39,1) stehen - nach Eigenschaften gehört Ar aber zu den Edelgasen (Gruppe 18) und K zu den Alkalimetallen (Gruppe 1). Ebenso problematisch: Tellur/Jod und Cobalt/Nickel. Mendelejew vermutete Messfehler. Henry Moseley klärte 1913 durch Röntgenspektroskopie, dass die charakteristischen Röntgenfrequenzen der Elemente von der Protonenzahl Z (Kernladungszahl) abhängen. Z ist das korrekte Ordnungsprinzip: Ar hat Z=18, K hat Z=19 - die richtige Reihenfolge, ohne Anomalie. Das moderne PSE nach Kernladungszahl ist quantenmechanisch begruendet: Z bestimmt die Elektronenkonfiguration (Aufbauprinzip), diese bestimmt die chemischen Eigenschaften. Damit wurden alle scheinbaren Anomalien aufgelöst, und Mendelejews Lücken erwiesen sich als korrekte Vorhersagen unentdeckter Elemente (Gallium, Scandium, Germanium).",
+          "Mendelejews Erfolg beruhte auf der empirischen Beobachtung, dass chemische Eigenschaften sich periodisch mit steigender Atommasse wiederholen. Da Atommasse und Kernladungszahl für die meisten Elemente in derselben Reihenfolge wachsen, funktionierte sein System für den Großteil des PSE korrekt. Schwächen zeigten sich bei Elementpaaren, bei denen die Reihenfolge nach Atommasse der Reihenfolge nach Eigenschaften widersprach: Argon (Atommasse 39,9) müsste nach Atommasse nach Kalium (39,1) stehen - nach Eigenschaften gehört Ar aber zu den Edelgasen (Gruppe 18) und K zu den Alkalimetallen (Gruppe 1). Ebenso problematisch: Tellur/Jod und Cobalt/Nickel. Mendelejew vermutete Messfehler. Henry Moseley klärte 1913 durch Röntgenspektroskopie, dass die charakteristischen Röntgenfrequenzen der Elemente von der Protonenzahl Z (Kernladungszahl) abhängen. Z ist das korrekte Ordnungsprinzip: Ar hat Z=18, K hat Z=19 - die richtige Reihenfolge, ohne Anomalie. Das moderne PSE nach Kernladungszahl ist quantenmechanisch begründet: Z bestimmt die Elektronenkonfiguration (Aufbauprinzip), diese bestimmt die chemischen Eigenschaften. Damit wurden alle scheinbaren Anomalien aufgelöst, und Mendelejews Lücken erwiesen sich als korrekte Vorhersagen unentdeckter Elemente (Gallium, Scandium, Germanium).",
       },
 
       selfTest: [
@@ -2241,7 +2259,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           ],
           correctIndex: 2,
           explanation:
-            "Halbmetalle (B, Si, Ge, As, Sb, Te, At) haben eine elektrische Leitfähigkeit zwischen Metallen und Nichtmetallen. Charakteristisch ist die Temperaturabhängigkeit: Bei steigender Temperatur nimmt die Leitfähigkeit zu (Halbleiterverhalten, umgekehrt zu Metallen). Silicium ist Basis der Mikroelektronik - Dotierung mit Gruppe-13-Atomen (p-Typ) oder Gruppe-15-Atomen (n-Typ) erzeugt pn-Übergaenge für Transistoren. Halbmetalle erstrecken sich von Periode 2 (Bor) bis Periode 6 (Astat).",
+            "Halbmetalle (B, Si, Ge, As, Sb, Te, At) haben eine elektrische Leitfähigkeit zwischen Metallen und Nichtmetallen. Charakteristisch ist die Temperaturabhängigkeit: Bei steigender Temperatur nimmt die Leitfähigkeit zu (Halbleiterverhalten, umgekehrt zu Metallen). Silicium ist Basis der Mikroelektronik - Dotierung mit Gruppe-13-Atomen (p-Typ) oder Gruppe-15-Atomen (n-Typ) erzeugt pn-Übergänge für Transistoren. Halbmetalle erstrecken sich von Periode 2 (Bor) bis Periode 6 (Astat).",
           hints: [
             "Halbmetalle liegen entlang der Treppenlinie zwischen Metallen und Nichtmetallen",
             "Der wichtigste Halbleiter in der Elektronik (Chips) ist ein Halbmetall der 3. Periode",
@@ -2281,7 +2299,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           ],
           correctIndex: 2,
           explanation:
-            "Chrom (Cr, Z=24) weicht vom Aufbauprinzip ab. Die erwartete Konfiguration waere [Ar] 3d4 4s2, die tatsächliche ist [Ar] 3d5 4s1, weil die halbgefüllte d5-Konfiguration (alle 5 d-Orbitale einfach besetzt, paralleler Spin) durch maximale Austauschenergie nach Hund besonders stabil ist. Analoges Beispiel: Cu (Z=29) => [Ar] 3d10 4s1 statt [Ar] 3d9 4s2. Chrom(III) ist essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI) ist stark karzinogen (oxidiert DNA-Basen => Mutationen, Lungenkrebs).",
+            "Chrom (Cr, Z=24) weicht vom Aufbauprinzip ab. Die erwartete Konfiguration wäre [Ar] 3d4 4s2, die tatsächliche ist [Ar] 3d5 4s1, weil die halbgefüllte d5-Konfiguration (alle 5 d-Orbitale einfach besetzt, paralleler Spin) durch maximale Austauschenergie nach Hund besonders stabil ist. Analoges Beispiel: Cu (Z=29) => [Ar] 3d10 4s1 statt [Ar] 3d9 4s2. Chrom(III) ist essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI) ist stark karzinogen (oxidiert DNA-Basen => Mutationen, Lungenkrebs).",
           hints: [
             "Zwei Übergangsmetalle weichen vom Aufbauprinzip ab: Z=24 (Cr) und Z=29 (Cu)",
             "Halbgefüllte (d5) und vollgefüllte (d10) d-Unterschalen sind energetisch besonders stabil",
@@ -2294,15 +2312,15 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           options: [
             "Weil er die Elemente alphabetisch ordnete und bestimmte Buchstaben fehlten",
             "Weil Elemente mit unbekannter Atommasse nicht eingeordnet werden konnten",
-            "Weil er erkannte, dass bei strenger Periodizität noch unentdeckte Elemente existieren muessen, und er deren Eigenschaften voraussagte",
+            "Weil er erkannte, dass bei strenger Periodizität noch unentdeckte Elemente existieren müssen, und er deren Eigenschaften voraussagte",
             "Weil radioaktive Elemente damals noch nicht bekannt waren",
-            "Weil die Lücken die Lanthanoide und Actinoide repraesentieren",
+            "Weil die Lücken die Lanthanoide und Actinoide repräsentieren",
           ],
           correctIndex: 2,
           explanation:
-            "Mendelejews brillante Leistung war die Erkenntnis, dass die Periodizität wichtiger ist als eine lückenlose Reihenfolge. Wenn ein Element nicht an die Stelle passte, die seine Eigenschaften erforderten, liess er eine Lücke und sagte Eigenschaften des fehlenden Elements vorher: Eka-Aluminium (=> Gallium, 1875), Eka-Bor (=> Scandium, 1879), Eka-Silicium (=> Germanium, 1886). Alle drei stimmten fast exakt mit seinen Vorhersagen überein (Schmelzpunkt, Dichte, Valenz, Oxide) - der entscheidende Beweis für die Gültigkeit seines Systems.",
+            "Mendelejews brillante Leistung war die Erkenntnis, dass die Periodizität wichtiger ist als eine lückenlose Reihenfolge. Wenn ein Element nicht an die Stelle passte, die seine Eigenschaften erforderten, ließ er eine Lücke und sagte Eigenschaften des fehlenden Elements vorher: Eka-Aluminium (=> Gallium, 1875), Eka-Bor (=> Scandium, 1879), Eka-Silicium (=> Germanium, 1886). Alle drei stimmten fast exakt mit seinen Vorhersagen überein (Schmelzpunkt, Dichte, Valenz, Oxide) - der entscheidende Beweis für die Gültigkeit seines Systems.",
           hints: [
-            "Mendelejew nutzte Lücken als Vorhersage-Werkzeug, nicht als Eingestaendnis von Unwissen",
+            "Mendelejew nutzte Lücken als Vorhersage-Werkzeug, nicht als Eingeständnis von Unwissen",
             "Eka-Aluminium und Eka-Silicium wurden als Gallium und Germanium entdeckt",
           ],
           difficulty: 2,
@@ -2319,7 +2337,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           ],
           correctIndex: 1,
           explanation:
-            "Calcium (Z=20) hat die Elektronenkonfiguration [Ar] 4s2. Die beiden Valenzelektronen befinden sich im 4s-Orbital => s-Block, Gruppe 2 (Erdalkalimetalle), Periode 4. Calcium ist das häufigste Metall im menschlichen Körper (~1 kg, 99% als Hydroxyapatit Ca10(PO4)6(OH)2 in Knochen und Zaehnen). Als Ca2+-Ion (Plasma: 2,2-2,6 mmol/L) ist es unverzichtbar für Muskelkontraktion (Troponin-C), Blutgerinnung (Faktor IV), Neurotransmitterfreisetzung und als Second Messenger (Ca2+-Calmodulin-System).",
+            "Calcium (Z=20) hat die Elektronenkonfiguration [Ar] 4s2. Die beiden Valenzelektronen befinden sich im 4s-Orbital => s-Block, Gruppe 2 (Erdalkalimetalle), Periode 4. Calcium ist das häufigste Metall im menschlichen Körper (~1 kg, 99% als Hydroxyapatit Ca10(PO4)6(OH)2 in Knochen und Zähnen). Als Ca2+-Ion (Plasma: 2,2-2,6 mmol/L) ist es unverzichtbar für Muskelkontraktion (Troponin-C), Blutgerinnung (Faktor IV), Neurotransmitterfreisetzung und als Second Messenger (Ca2+-Calmodulin-System).",
           hints: [
             "Der Block ergibt sich aus dem Orbital, in das das letzte Elektron aufgenommen wird",
             "Gruppe 2 = Erdalkalimetalle = s-Block (Konfiguration ns2)",
@@ -2338,7 +2356,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           ],
           correctIndex: 3,
           explanation:
-            "Germanium (Ge, Z=32) ist ein klassisches Halbmetall. Es steht in Periode 4, Gruppe 14, an der Grenzlinie zwischen Metallen und Nichtmetallen. Ge war das erste kommerzielle Halbleitermaterial (Transistor, Bell Labs 1947) und wird heute in Glasfasern und Infrarot-Optik eingesetzt. Phosphor und Schwefel sind Nichtmetalle; Aluminium ist ein typisches Metall; Calcium ist ein Erdalkalimetall (s-Block, Gruppe 2). Die klassischen Halbmetalle: B, Si, Ge, As, Sb, Te (manchmal At hinzugezaehlt).",
+            "Germanium (Ge, Z=32) ist ein klassisches Halbmetall. Es steht in Periode 4, Gruppe 14, an der Grenzlinie zwischen Metallen und Nichtmetallen. Ge war das erste kommerzielle Halbleitermaterial (Transistor, Bell Labs 1947) und wird heute in Glasfasern und Infrarot-Optik eingesetzt. Phosphor und Schwefel sind Nichtmetalle; Aluminium ist ein typisches Metall; Calcium ist ein Erdalkalimetall (s-Block, Gruppe 2). Die klassischen Halbmetalle: B, Si, Ge, As, Sb, Te (manchmal At hinzugezählt).",
           hints: [
             "Die Halbmetalle liegen entlang der Treppenlinie: B, Si, Ge, As, Sb, Te, At",
             "Halbmetalle sind Halbleiter mit temperaturabhängiger Leitfähigkeit",
@@ -2363,9 +2381,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "Pairing Penalty",
         "Fluorierte Arzneistoffe",
       ],
-      content: `
-
-
+      content: `Atomradius, Ionisierungsenergie, Elektronegativität — alle periodischen Trends haben eine gemeinsame Ursache: die effektive Kernladung.
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
@@ -2424,7 +2440,9 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 
 > **Merke:** Innerhalb einer Periode nimmt der Atomradius von links nach rechts ab (steigende Kernladung zieht Elektronen stärker an). Innerhalb einer Gruppe nimmt er von oben nach unten zu (neue Schalen).
 
-> **Merke:** Die Elektronegativität steigt im PSE nach rechts oben (Fluor = höchster Wert 4,0). Sie bestimmt die Polarität von Bindungen und damit Löslichkeit, Reaktivität und biologische Wechselwirkungen.`,
+> **Merke:** Die Elektronegativität steigt im PSE nach rechts oben (Fluor = höchster Wert 4,0). Sie bestimmt die Polarität von Bindungen und damit Löslichkeit, Reaktivität und biologische Wechselwirkungen.
+
+> **Prüfungstipp:** Die IE-Ausnahmen B/Be und O/N sind Dauerbrenner im MedAT. Merke: Volle Unterschale (Be: 2s²) und halbvolle Unterschale (N: 2p³) sind besonders stabil. Für ΔEN-Aufgaben: < 0,4 unpolar, 0,4–1,7 polar kovalent, > 1,7 ionisch — diese Grenzen auswendig lernen.`,
 
       lernziele: [
         "Das Konzept der effektiven Kernladung (Z_eff) als gemeinsame Ursache aller periodischen Trends erklären",
@@ -2656,9 +2674,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Hämoglobin",
         "Schilddrüse",
       ],
-      content: `
-
-
+      content: `Von Natrium im Blutplasma über Calcium in den Knochen bis Eisen im Hämoglobin — die Elementgruppen des PSE spiegeln sich direkt in der Physiologie des menschlichen Körpers wider.
 
 ## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 
@@ -2726,7 +2742,9 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
 
 > **Merke:** Hauptgruppenelemente erreichen die Edelgaskonfiguration durch Aufnahme oder Abgabe von Elektronen (Oktettregel). Übergangsmetalle können variable Oxidationsstufen annehmen, da d-Orbitale energetisch nah beieinander liegen.
 
-> **Merke:** Die Ionisierungsenergie steigt im PSE nach rechts oben (kleiner Radius, hohe Kernladung). Elemente mit niedriger Ionisierungsenergie (Alkalimetalle) sind starke Reduktionsmittel.`,
+> **Merke:** Die Ionisierungsenergie steigt im PSE nach rechts oben (kleiner Radius, hohe Kernladung). Elemente mit niedriger Ionisierungsenergie (Alkalimetalle) sind starke Reduktionsmittel.
+
+> **Prüfungstipp:** Klinische Elektrolyt-Normalwerte sind MedAT-relevant: Na⁺ 135–145 mmol/L (extrazellulär), K⁺ 3,5–5,0 mmol/L (extrazellulär), Ca²⁺ 2,2–2,6 mmol/L. Merke auch: Na⁺/K⁺-ATPase pumpt 3 Na⁺ raus und 2 K⁺ rein — diese Zahlen kommen in Aufgaben vor.`,
 
       lernziele: [
         "Die wichtigen Elementgruppen (Alkalimetalle, Erdalkalimetalle, Halogene, Edelgase, Übergangsmetalle) mit charakteristischen Eigenschaften beschreiben",

@@ -142,7 +142,7 @@ Ein Mensch mit **Masse** 70 kg hat auf der Erde eine **Gewichtskraft** F_G = 70 
 
 ## Rechenbeispiele
 
-**Um das Gelernte anzuwenden,** folgen drei typische MedAT-relevante Rechnungen: Infusionsrate, Blutdruck-Umrechnung und Grundumsatz in Watt.
+Drei typische MedAT-relevante Rechnungen zeigen Einheitenumrechnung in der klinischen Praxis:
 
 **Beispiel 1 — Infusionsrate berechnen (Dopamin):**
 Verordnung: 5 µg/kg/min Dopamin, Patient 80 kg. Lösung: 200 mg in 250 mL NaCl.
@@ -163,7 +163,7 @@ Umrechnung: 1800 kcal × 4184 J/kcal = 7 531 200 J/Tag.
 Ein Tag = 86 400 s.
 Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne! Bei körperlicher Aktivität steigt der Energieumsatz auf 300–500 W.
 
-Mit diesen drei Beispielen hast du **Einheitenumrechnung**, **Dimensionsanalyse** und **klinische Anwendung** verknüpft — genau das, was im MedAT abgefragt werden kann.`,
+> **Prüfungstipp:** Bei Rechenaufgaben im MedAT immer zuerst alle Einheiten in SI umrechnen, dann rechnen, dann das Ergebnis in die gefragte Einheit zurückwandeln. Häufige Falle: mL/min statt mL/h oder mmHg statt Pa.`,
 
       lernziele: [
         "Die sieben SI-Basisgrößen mit ihren Einheiten und Formelzeichen nennen und erklären können",
@@ -343,7 +343,7 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
       content: `
 
 
-## Warum brauchen wir Präfixe?
+## Von Nanometern bis Lichtjahren: SI-Präfixe
 
 Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffatom hat einen Durchmesser von etwa 0,000 000 000 106 m, während der Abstand von der Erde zur Sonne ca. 150 000 000 000 m beträgt. Das Herz schlägt in einer Frequenz von ca. 1,2 Hz, Röntgenstrahlung schwingt bei 10¹⁸ Hz, und radioaktive Isotope haben Halbwertszeiten von Millisekunden bis zu Milliarden Jahren. Um diese enormen Spannen handhabbar zu machen, gibt es zwei komplementäre Werkzeuge: **SI-Präfixe** und **wissenschaftliche Notation**.
 
@@ -356,7 +356,7 @@ Die Natur operiert auf extrem unterschiedlichen Größenskalen. Ein Wasserstoffa
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
 
-**Um das Rechnen mit sehr großen und sehr kleinen Zahlen zu vereinheitlichen,** verwendet man die **wissenschaftliche Notation**. Jede Zahl lässt sich darin schreiben als **a × 10ⁿ**, wobei die **Mantisse** a zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** n eine ganze Zahl ist. Die **Mantisse** (a) ist die „Ziffernfolge vor der Zehnerpotenz", der **Exponent** (n) gibt an, „wie oft 10 mit sich selbst multipliziert wird" (bzw. bei negativem n: dividiert wird).
+Die **wissenschaftliche Notation** löst genau dieses Problem. Jede Zahl lässt sich darin schreiben als **a × 10ⁿ**, wobei die **Mantisse** a zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** n eine ganze Zahl ist. Die **Mantisse** (a) ist die „Ziffernfolge vor der Zehnerpotenz", der **Exponent** (n) gibt an, „wie oft 10 mit sich selbst multipliziert wird" (bzw. bei negativem n: dividiert wird).
 
 **Beispiele:**
 - 0,000 053 m = 5,3 × 10⁻⁵ m = 53 µm (Durchmesser einer menschlichen Eizelle)
@@ -424,9 +424,11 @@ Klinisch wichtig:
 - Halbwertszeit von ¹³¹I (Schilddrüsentherapie): ~8 Tage = ~6,9 × 10⁵ s
 - Aktionspotentialdauer (elektrischer Nerven-/Muskelimpuls): ~1–5 ms = 10⁻³ s
 
-Das Beherrschen dieser Größenordnungen ermöglicht eine schnelle Plausibilitätsprüfung im klinischen Alltag: Wenn ein Laborwert "außerhalb des Rahmens" erscheint, könnte ein Einheitenfehler vorliegen.
+Diese Größenordnungen ermöglichen eine schnelle Plausibilitätsprüfung: Wenn ein Laborwert "außerhalb des Rahmens" erscheint, könnte ein Einheitenfehler vorliegen.
 
 > **Merke:** Die korrekte Zuordnung von Präfixen und Zehnerpotenzen ist eine der häufigsten Fehlerquellen bei Dosierungsberechnungen. Ein Sprung von Milli (10⁻³) zu Mikro (10⁻⁶) bedeutet Faktor 1000 — bei Medikamenten wie Fentanyl, Digoxin oder Adrenalin kann diese Verwechslung tödlich sein.
+
+> **Prüfungstipp:** MedAT-Fallen bei Volumenumrechnungen: 1 cm³ = 10⁻⁶ m³ (nicht 10⁻² m³!). Immer den Exponenten mit der Potenz der Einheit multiplizieren: cm² → (10⁻²)² = 10⁻⁴, cm³ → (10⁻²)³ = 10⁻⁶.
 
 ## Signifikante Stellen und Rundung
 
@@ -638,9 +640,7 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
       content: `
 
 
-## Was ist Dimensionsanalyse?
-
-
+## Dimensionsanalyse: Formeln prüfen, Fehler finden
 
 Die **Dimensionsanalyse** (Methode, Gleichungen anhand ihrer Einheiten auf Konsistenz zu prüfen) beruht auf einer einfachen Regel: **Jede korrekte physikalische Gleichung muss auf beiden Seiten dieselbe Dimension haben.** Wenn die Einheiten nicht übereinstimmen, ist die Formel falsch — oder es liegt ein Umrechnungsfehler vor. Diese Methode dient gleichzeitig als Werkzeug zur Einheitenumrechnung und als Überprüfungsinstrument für Formeln.
 
@@ -657,7 +657,7 @@ Wichtig: **Dimensionslose Größen** (Zahlen ohne Einheit, z. B. Wirkungsgrad, B
 
 ## Dimensionsanalyse als Formelprüfung
 
-**Darauf aufbauend** können wir die Dimensionsanalyse nutzen, um Formeln zu prüfen — ohne die Formel lösen zu müssen.
+Die Dimensionsanalyse eignet sich hervorragend als Formelprüfung — ohne die Formel lösen zu müssen.
 
 Angenommen, jemand behauptet, die kinetische Energie sei E_kin = m·v (statt E_kin = ½·m·v²). Die Dimensionsanalyse entlarvt den Fehler:
 
@@ -670,7 +670,7 @@ Ebenso: Wenn eine Herleitung zum Ergebnis "Meter plus Sekunden" führt, ist gara
 
 ## Einheitenumrechnung mit dem Kettenmultiplikationsverfahren
 
-**Um das Gelernte praktisch zu nutzen:** Mit der Dimensionsanalyse prüfen wir Formeln — zum **Umrechnen** von Einheiten brauchen wir ein klares Rechenverfahren. Das sicherste ist die **Kettenmultiplikation** („Multiplikation mit 1" in Form von Umrechnungsfaktoren). Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
+Neben der Formelprüfung braucht man zum **Umrechnen** von Einheiten ein klares Rechenverfahren. Das sicherste ist die **Kettenmultiplikation** („Multiplikation mit 1" in Form von Umrechnungsfaktoren). Da 1 km = 1000 m gilt, ist der Faktor (1000 m / 1 km) = 1. Man multipliziert mit so vielen dieser "Einser" wie nötig, bis die gewünschte Einheit erscheint.
 
 **Beispiel: 72 km/h in m/s:**
 72 km/h × (1000 m / 1 km) × (1 h / 3600 s) = 72 × 1000/3600 m/s = 20 m/s
@@ -711,7 +711,7 @@ Grundumsatz: ~1700–2000 kcal/d = ~7000–8400 kJ/d
 
 ## Reynolds-Zahl: Dimensionsloser Quotient in der Hämodynamik
 
-**Nicht jede wichtige Größe hat eine Einheit.** In der Physik und in der Medizin spielen **dimensionslose Kennzahlen** eine wichtige Rolle — sie sind reine Zahlen und bleiben unabhängig vom Einheitensystem. Die **Reynolds-Zahl** (Re) ist eine solche Kennzahl; sie beschreibt, ob eine Flüssigkeitsströmung **laminar** (geordnet, schichtweise) oder **turbulent** (wirbelnd, chaotisch) ist:
+**Dimensionslose Kennzahlen** sind reine Zahlen ohne Einheit, die unabhängig vom Einheitensystem bleiben. Die **Reynolds-Zahl** (Re) ist die klinisch wichtigste solche Kennzahl; sie beschreibt, ob eine Flüssigkeitsströmung **laminar** (geordnet, schichtweise) oder **turbulent** (wirbelnd, chaotisch) ist:
 
 Re = (ρ · v · d) / η
 
@@ -730,9 +730,11 @@ Re > 4000: turbulente Strömung (chaotisch — bei Herzfehlern, Aneurysmen als G
 
 Klinische Anwendung: Bei Anämie sinkt die Blutviskosität η, Re steigt, Turbulenz entsteht — erklärt Strömungsgeräusche bei Anämie. Bei Stenosen steigt v lokal stark an, Re erhöht sich, Turbulenzen entstehen — hörbar als Herzgeräusch (Systolikum).
 
+> **Prüfungstipp:** Dimensionsanalyse ist der schnellste Weg, falsche Antwortoptionen auszuschließen. Prüfe bei jeder Formel-Frage: Stimmen die Einheiten links und rechts überein? Wenn nicht, ist die Option sofort falsch — auch ohne zu rechnen.
+
 ## Wirkungsgrad: Ein weiterer dimensionsloser Quotient
 
-**Ein weiteres Beispiel** für eine dimensionslose Größe ist der **Wirkungsgrad** (η, gesprochen „Eta"): das Verhältnis von nutzbar abgegebener zu zugeführter Energie. Er ist dimensionslos (Energie/Energie = 1) und wird oft in Prozent angegeben. Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
+Auch der **Wirkungsgrad** (η, gesprochen „Eta"): das Verhältnis von nutzbar abgegebener zu zugeführter Energie. Er ist dimensionslos (Energie/Energie = 1) und wird oft in Prozent angegeben. Der Wirkungsgrad des menschlichen Herzens beträgt ca. 20–25 % — d.h. von der chemischen Energie des ATP werden nur 20–25 % in hydraulische Herzarbeit umgewandelt, der Rest wird als Wärme abgegeben. Das erklärt, warum körperliche Arbeit wärmt.
 
 ## Rechenbeispiele
 
@@ -946,7 +948,7 @@ Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich K�
 
 ## Kinematik: Bewegung ohne Kräfte
 
-**Um Bewegung mathematisch zu fassen,** betrachtet man zuerst nur den Ablauf — **ohne** nach der Ursache zu fragen. Das ist die **Kinematik** (Bewegungslehre). Grundgrößen sind **Ort** (s), **Zeit** (t), **Geschwindigkeit** (v = Weg pro Zeit) und **Beschleunigung** (a = Änderung der Geschwindigkeit pro Zeit).
+Die **Kinematik** (Bewegungslehre) beschreibt Bewegungen rein mathematisch — **ohne** nach der Ursache zu fragen. Grundgrößen sind **Ort** (s), **Zeit** (t), **Geschwindigkeit** (v = Weg pro Zeit) und **Beschleunigung** (a = Änderung der Geschwindigkeit pro Zeit).
 
 **Gleichförmige Bewegung:** Bei konstanter Geschwindigkeit gilt s = v · t. Der Weg ist proportional zur Zeit. Im v-t-Diagramm ist das eine Horizontale; die Fläche unter der Kurve ergibt den zurückgelegten Weg.
 
@@ -1008,7 +1010,9 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 
 > **Merke:** Newtons Gesetze: (1) Trägheit — ohne Kraft keine Beschleunigung; (2) F = m · a — Kraft ist Masse mal Beschleunigung; (3) Actio = Reactio — Kräfte treten immer paarweise auf.
 
-> **Merke:** Die Gewichtskraft F_G = m · g (g ≈ 9,81 m/s²) ist die Gravitationskraft an der Erdoberfläche. Masse (kg) ist ortsunabhängig, Gewichtskraft (N) hängt vom Gravitationsfeld ab.`,
+> **Merke:** Die Gewichtskraft F_G = m · g (g ≈ 9,81 m/s²) ist die Gravitationskraft an der Erdoberfläche. Masse (kg) ist ortsunabhängig, Gewichtskraft (N) hängt vom Gravitationsfeld ab.
+
+> **Prüfungstipp:** MedAT fragt gern nach v²=v₀²+2as (ohne Zeit) und v=v₀+at (ohne Weg). Merke dir beide kinematischen Formeln — je nachdem, welche Größe fehlt, wählst du die passende. Häufige Falle: km/h nicht in m/s umgerechnet!`,
       lernziele: [
         "Die drei Newtonschen Gesetze korrekt formulieren und auf biologische Beispiele anwenden",
         "Gleichförmige und gleichmäßig beschleunigte Bewegungen mathematisch beschreiben (v(t), s(t))",
@@ -1167,7 +1171,7 @@ Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, da
 
 ## Impuls und Impulserhaltung
 
-**Um Stöße und Kollisionen zu verstehen,** starten wir mit dem **Impuls**. Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge" beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
+Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge" beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
 
 Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
 
@@ -1196,6 +1200,8 @@ Leistung P = W/t = F·v (Einheit: Watt, W = J/s). Leistung ist Arbeit pro Zeit. 
 Wirkungsgrad η = P_nutz / P_ges · 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben.
 
 > **Merke:** Die Energieerhaltung ist das universellste Prinzip der Physik — Energie kann weder erzeugt noch zerstört, sondern nur umgewandelt werden. In biologischen Systemen: chemische Energie (ATP) → mechanische Arbeit (Muskelkontraktion) + Wärme. Der Erste Hauptsatz der Thermodynamik ist nichts anderes als die Energieerhaltung, angewandt auf Wärmeprozesse.
+
+> **Prüfungstipp:** Klassische MedAT-Falle: „Beim Halten eines Gewichts wird mechanische Arbeit verrichtet" — falsch! W = F·s, und bei s = 0 ist W = 0. Auch wichtig: E_kin ~ v² bedeutet, dass doppelte Geschwindigkeit **vierfachen** Bremsweg ergibt, nicht doppelten.
 
 ## Federkraft und elastische Energie
 
@@ -1398,6 +1404,8 @@ Die Kernformeln der Strömungslehre — Kontinuitätsgleichung (Massenerhaltung:
 
 > **Merke:** Poiseuille: Q ~ r⁴. Radius halbiert → Fluss auf 1/16. → Details siehe Fluidmechanik-Kapitel.
 
+> **Prüfungstipp:** Das Hebelgesetz (F₁·d₁ = F₂·d₂) wird im MedAT häufig am Beispiel Bizeps/Unterarm geprüft. Typische Falle: Vergessen, dass der Muskelhebelarm viel kürzer ist als der Lasthebelarm — die Muskelkraft ist daher immer ein Vielfaches der Last.
+
 ## Rechenbeispiele
 
 **Beispiel 1 — Bizepskraft beim Tragen (Hebelgesetz):**
@@ -1596,6 +1604,8 @@ Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische 
 **Stabilität und Gleichgewicht:** Ein Körper ist im stabilen Gleichgewicht, wenn sein Schwerpunkt möglichst tief liegt und die Standfläche groß ist. Das Gleichgewichtskriterium: Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen. Ältere Menschen mit hohem Schwerpunkt und schmaler Standfläche sind sturzgefährdeter.
 
 > **Merke:** Die drei Gleichgewichtsarten: **Stabiles Gleichgewicht** — bei kleiner Auslenkung kehrt der Körper zurück (Schwerpunkt steigt bei Auslenkung, z. B. Kugel in Mulde). **Labiles Gleichgewicht** — bei kleiner Auslenkung kippt der Körper (Schwerpunkt sinkt, z. B. Stift auf Spitze). **Indifferentes Gleichgewicht** — der Schwerpunkt bleibt auf gleicher Höhe (z. B. Kugel auf Ebene).
+
+> **Prüfungstipp:** Zentripetalkraft vs. Zentrifugalkraft: Im MedAT wird oft gefragt, welche Kraft einen Satelliten auf der Bahn hält — die Antwort ist immer die **Gravitationskraft** (als Zentripetalkraft). Die Zentrifugalkraft ist eine Scheinkraft und existiert nur im rotierenden Bezugssystem.
 
 ## g-Kräfte in der Medizin
 

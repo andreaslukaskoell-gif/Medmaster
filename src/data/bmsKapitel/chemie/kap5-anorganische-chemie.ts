@@ -100,7 +100,9 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
 - Proteinfaltung: hydrophobe Aminosäuren im Inneren, hydrophile außen
 - Mizellbildung (kugelförmige Lipidaggregate) von Gallensalzen und Detergenzien
 
-> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.`,
+> **Merke:** Hydrophober Effekt = entropischer Antrieb — apolare Gruppen aggregieren, um geordnete Wasserkäfige zu minimieren. Treibkraft für Membranbildung und Proteinfaltung.
+
+> **Prüfungstipp:** Wasser-Anomalien sind ein MedAT-Klassiker. Merke die Zahlenwerte: Bindungswinkel 104,5°, Dichtemaximum bei 4 °C, Siedepunkt 100 °C trotz MW 18, spez. Wärmekapazität 4182 J/(kg·K). Bei Vergleichsfragen H₂O vs. H₂S immer auf H-Brücken verweisen.`,
       sections: [
         {
           heading: "Dipolcharakter und H-Brücken",
@@ -399,7 +401,9 @@ Metabolisch zentrale Kohlenstoffverbindungen:
 - **Citrat:** Erster Metabolit im Zitratzyklus; allosterischer Inhibitor der PFK-1 (Phosphofructokinase-1, Schlüsselenzym der Glykolyse)
 - **Malonyl-CoA:** Substrat der Fettsäuresynthese; inhibiert CPT-1 (Carnitin-Palmitoyltransferase 1, blockiert Fettsäure-Import ins Mitochondrium)
 
-> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.`,
+> **Merke:** Acetyl-CoA = Drehkreuz des Energiestoffwechsels — Glykolyse, β-Oxidation und Aminosäureabbau münden hier ein.
+
+> **Prüfungstipp:** CO₂-Hybridisierung (sp, linear, apolar) und CO-Toxizität (250× Affinität zu Hb) sind häufige MedAT-Fragen. Henderson-Hasselbalch mit den Blut-Normalwerten (pH 7,4 = 6,1 + log(24/1,2)) muss sicher sitzen.`,
       sections: [
         {
           heading: "Allotrope des Kohlenstoffs",
@@ -657,7 +661,9 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 **Iod (I):** Sublimiert bei Raumtemperatur zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika** (Schilddrüsenhemmer)**:** Methimazol und PTU (Propylthiouracil) hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I.
 
-> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.`,
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.
+
+> **Prüfungstipp:** Iod-Schilddrüse (T₃ = 3 Iod, T₄ = 4 Iod), Fluorapatit-Karieschutz und die Haber-Bosch-Bedingungen (400-500 °C, 150-300 bar, Fe-Katalysator) sind wiederkehrende MedAT-Themen. Bei H₂S: Geruchslähmung ab ~100 ppm als Fangfrage beachten.`,
       sections: [
         {
           heading: "Stickstoff: Haber-Bosch und NO-Signaling",
@@ -888,9 +894,9 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
         "pH + pOH = 14",
         "Blut-pH 7,35-7,45",
       ],
-      content: `## Historische Entwicklung der Säure-Base-Theorie
+      content: `## Drei Definitionen -- von eng bis allgemein
 
-Die Säure-Base-Chemie hat im Laufe der Wissenschaftsgeschichte mehrere konzeptionelle Erweiterungen erfahren. Die älteste und engste Definition stammt von **Arrhenius** (1884): Säuren sind Substanzen, die in wässriger Lösung H⁺-Ionen (Protonen) freisetzen, Basen sind Substanzen, die OH⁻-Ionen freisetzen. Diese Definition ist nur auf wässrige Lösungen anwendbar und erklärt beispielsweise nicht, warum Ammoniak (NH₃) basisch reagiert, obwohl es keine OH⁻-Gruppe enthält.
+Drei Säure-Base-Definitionen bauen aufeinander auf, jede allgemeiner als die vorige. Die engste stammt von **Arrhenius** (1884): Säuren setzen in wässriger Lösung H⁺-Ionen frei, Basen OH⁻-Ionen. Diese Definition ist auf wässrige Systeme beschränkt und kann nicht erklären, warum Ammoniak (NH₃) basisch reagiert, obwohl es keine OH⁻-Gruppe enthält.
 
 ## Die Brønsted-Lowry-Definition
 
@@ -965,7 +971,9 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
 
 > **Merke:** Brønsted-Säure = Protonendonor (gibt H⁺ ab), Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf). Lewis erweitert: Säure = Elektronenpaarakzeptor, Base = Elektronenpaardonor — keine H⁺-Übertragung nötig.
 
-> **Merke:** pH = −log[H₃O⁺]; eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration. Bei 37 °C (Körpertemperatur) liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.`,
+> **Merke:** pH = −log[H₃O⁺]; eine Änderung um 1 pH-Einheit bedeutet eine 10-fache Änderung der H₃O⁺-Konzentration. Bei 37 °C (Körpertemperatur) liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.
+
+> **Prüfungstipp:** Drei Definitionen auseinanderhalten: Arrhenius (nur wässrig), Brønsted (Protonenübertragung), Lewis (Elektronenpaar). Typische Falle: BF₃ ist nach Lewis eine Säure, aber NICHT nach Brønsted (kein H⁺). Blut-pH-Normalbereich 7,35-7,45 auswendig wissen.`,
       lernziele: [
         "Die Säure-Base-Definitionen nach Arrhenius, Brønsted-Lowry und Lewis erklären und vergleichen können",
         "Korrespondierende Säure-Base-Paare identifizieren und den Begriff Ampholyt erklären",
@@ -1293,7 +1301,9 @@ Im Blut agieren viele biologisch wichtige Moleküle als schwache Säuren oder Ba
 
 Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und wird von Belegzellen durch aktiven H+/K+-ATPase-Transport sezerniert. Protonenpumpeninhibitoren (PPI wie Omeprazol) hemmen dieses Enzym und erhöhen den Magen-pH -- Standardtherapie bei Refluxerkrankung und Magenulzera.
 
-> **Merke:** pKa + pKb = 14 (bei 25 °C) für jedes korrespondierende Säure-Base-Paar. Starke Säure -> schwache korrespondierende Base. Schwache Säure -> starke korrespondierende Base.`,
+> **Merke:** pKa + pKb = 14 (bei 25 °C) für jedes korrespondierende Säure-Base-Paar. Starke Säure -> schwache korrespondierende Base. Schwache Säure -> starke korrespondierende Base.
+
+> **Prüfungstipp:** pH-Berechnung starke vs. schwache Säure nicht verwechseln! Starke Säure: pH = -log c₀ (direkt). Schwache Säure: pH = ½(pKa - log c₀). Merke die starken Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Stufe), HClO₄.`,
       lernziele: [
         "Den Unterschied zwischen starken und schwachen Säuren anhand der Dissoziation und Ka/pKa erklären",
         "Den pH starker Säuren und Basen direkt berechnen",
@@ -1972,7 +1982,9 @@ Der normale Blut-pH liegt bei **7,35-7,45**. Vier primäre Störungen sind zu un
 
 > **Merke:** Am Halbäquivalenzpunkt einer Titration (Volumen = 1/2 des Äquivalenzvolumens) gilt pH = pKa -- dort liegt die maximale Pufferkapazität. Der Äquivalenzpunkt liegt bei pH = 7 nur für starke Säure + starke Base; bei schwacher Säure + starker Base liegt er im Basischen.
 
-> **Merke:** BGA-Diagnostik: pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Primär pCO2 verändert = respiratorisch; primär HCO3- verändert = metabolisch. Kompensation erfolgt jeweils durch das andere Organ (Lunge <-> Niere).`,
+> **Merke:** BGA-Diagnostik: pH < 7,35 = Azidose, pH > 7,45 = Alkalose. Primär pCO2 verändert = respiratorisch; primär HCO3- verändert = metabolisch. Kompensation erfolgt jeweils durch das andere Organ (Lunge <-> Niere).
+
+> **Prüfungstipp:** BGA-Interpretation in 3 Schritten: (1) pH prüfen: Azidose oder Alkalose? (2) pCO₂ oder HCO₃⁻ als Ursache identifizieren. (3) Kompensation vorhanden? Äquivalenzpunkt-pH merken: stark+stark = 7, schwach+stark = basisch, stark+schwach = sauer.`,
       lernziele: [
         "Titrationskurven für starke und schwache Säure/Base-Kombinationen beschreiben und den Äquivalenzpunkt lokalisieren",
         "Den pH am Äquivalenzpunkt vorhersagen (neutral, sauer oder basisch) und begründen",
@@ -2241,7 +2253,9 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
 
 ---
 
-> **Merke:** OIL RIG: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt). Reduktionsmittel wird selbst oxidiert; Oxidationsmittel wird selbst reduziert.`,
+> **Merke:** OIL RIG: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt). Reduktionsmittel wird selbst oxidiert; Oxidationsmittel wird selbst reduziert.
+
+> **Prüfungstipp:** OZ-Bestimmung ist eine häufige Rechenaufgabe im MedAT. Priorität merken: F immer -1, O fast immer -2 (Peroxide: -1), H meist +1 (Hydride: -1). Summenregel anwenden: alle OZ × Atomanzahl = Gesamtladung.`,
       lernziele: [
         "Oxidation und Reduktion mithilfe des Elektronen-Konzepts (OIL RIG) definieren und anwenden",
         "Oxidationszahlen für beliebige Verbindungen nach den Prioritätsregeln systematisch bestimmen",
@@ -2468,7 +2482,7 @@ Das Standardelektrodenpotenzial E beschreibt die Tendenz eines Redox-Paares, Ele
 **Regeln zur Verwendung:**
 - Höheres E = stärkeres Oxidationsmittel (nimmt lieber Elektronen auf)
 - Niedrigeres E = stärkeres Reduktionsmittel (gibt lieber Elektronen ab)
-- Eine spontane Redox-Reaktion laeuft ab, wenn E-Zelle = E-Kathode - E-Anode > 0
+- Eine spontane Redox-Reaktion läuft ab, wenn E-Zelle = E-Kathode - E-Anode > 0
 - DeltaG = -n*F*E-Zelle (Faraday-Gleichung, n = Elektronenanzahl, F = 96485 C/mol)
 
 
@@ -2478,7 +2492,7 @@ Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektr
 
 **Faradaysche Gesetze:**
 1. Die abgeschiedene Stoffmenge ist proportional zur geflossenen Ladungsmenge (Q = I * t)
-2. Für gleiche Ladung werden aequivalente Stoffmengen verschiedener Elemente abgeschieden
+2. Für gleiche Ladung werden äquivalente Stoffmengen verschiedener Elemente abgeschieden
 
 **m = (M * I * t) / (n * F)**
 - m = abgeschiedene Masse (g)
@@ -2533,7 +2547,9 @@ Negativer DeltaG-Wert bestätigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
 - **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
 - **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden -> Galvanischer Geschmack
 
-> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.`,
+> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.
+
+> **Prüfungstipp:** AnOx RedKat (Anode = Oxidation, Kathode = Reduktion) gilt IMMER -- sowohl in galvanischen Zellen als auch bei der Elektrolyse. Die Formel E = E(Kathode) - E(Anode) > 0 für spontane Reaktionen muss sitzen.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -2750,13 +2766,13 @@ Negativer DeltaG-Wert bestätigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
       content: `
 
 
-## Warum reicht E allein nicht aus?
+## Warum reicht E° allein nicht aus?
 
-Im letzten Unterkapitel hast du das **Standardpotenzial E** kennengelernt -- die Spannung unter idealen Laborbedingungen (25 °C, alle Konzentrationen exakt 1 mol/L). In der Realität sind diese Bedingungen aber fast nie erfüllt: Im Blut liegt die K+-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Also brauchen wir eine Formel, die das berücksichtigt.
+Das **Standardpotenzial E°** beschreibt die Spannung unter idealen Laborbedingungen (25 °C, alle Konzentrationen exakt 1 mol/L). In der Realität sind diese Bedingungen fast nie erfüllt: Im Blut liegt die K+-Konzentration bei 4 mmol/L, nicht bei 1 mol/L. Die **Nernst-Gleichung** korrigiert E° für reale Konzentrationen.
 
 **Die Grundidee in einem Satz:** Je mehr vom Oxidationsmittel vorhanden ist, desto stärker "will" die Reaktion ablaufen -> die Spannung steigt. Je mehr vom Reduktionsmittel da ist, desto schwächer wird der Antrieb -> die Spannung sinkt.
 
-Das ist wie ein Wasserfall: Je größer der Hoehenunterschied (= Konzentrationsunterschied), desto mehr Kraft hat das Wasser (= Spannung).
+Das ist wie ein Wasserfall: Je größer der Höhenunterschied (= Konzentrationsunterschied), desto mehr Kraft hat das Wasser (= Spannung).
 
 ---
 
@@ -2797,12 +2813,12 @@ Bei **Körpertemperatur (37 °C)** beträgt der Nernst-Faktor ca. **61,5 mV** pr
 
 ---
 
-## Warum haben Nervenzellen eine Spannung? -- Biologische Membranpotenziale
+## Biologische Membranpotenziale -- Nernst in der Zelle
 
-Stell dir eine Nervenzelle vor:
+Nervenzellen besitzen einen charakteristischen Ionengradienten:
 
-- **Innerhalb** der Zelle: viel K+ (ca. 140 mmol/L), wenig Na+ (ca. 15 mmol/L)
-- **Außerhalb** der Zelle: wenig K+ (ca. 4 mmol/L), viel Na+ (ca. 145 mmol/L)
+- **Intrazellulär:** viel K+ (ca. 140 mmol/L), wenig Na+ (ca. 15 mmol/L)
+- **Extrazellulär:** wenig K+ (ca. 4 mmol/L), viel Na+ (ca. 145 mmol/L)
 
 Dieser Konzentrationsunterschied erzeugt -- genau wie bei einer Batterie -- eine elektrische Spannung. Die Nernst-Gleichung berechnet, welche Spannung sich für **ein einzelnes Ion** ergibt:
 
@@ -2815,9 +2831,11 @@ In der Praxis merkt man sich die Ergebnisse:
 | **K+** | 140 mmol/L | 4 mmol/L | **ca. -90 mV** |
 | **Na+** | 15 mmol/L | 145 mmol/L | **ca. +62 mV** |
 
-Waere die Membran *nur* für K+ durchlässig, laege das Potenzial bei -90 mV. Waere sie *nur* für Na+ durchlässig, bei +62 mV. In der Realität ist sie vor allem für K+ durchlässig -- daher liegt das **Ruhemembranpotenzial bei ca. -70 mV** (näher am K+-Wert).
+Wäre die Membran *nur* für K+ durchlässig, läge das Potenzial bei -90 mV. Wäre sie *nur* für Na+ durchlässig, bei +62 mV. In der Realität ist sie vor allem für K+ durchlässig -- daher liegt das **Ruhemembranpotenzial bei ca. -70 mV** (näher am K+-Wert).
 
-> **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial (ca. -70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.`,
+> **Merke:** K+-Nernst ca. -90 mV, Na+-Nernst ca. +62 mV. Ruhemembranpotenzial (ca. -70 mV) liegt dazwischen. Diesen Zusammenhang beschreibt die **Goldman-Gleichung**.
+
+> **Prüfungstipp:** Der Nernst-Faktor 59,16 mV (bei 25 °C) taucht in Rechenfragen auf: Pro Zehnerpotenz Konzentrationsänderung verschiebt sich E um 59,16/n mV. Membranpotenzialwerte merken: K+ = -90 mV, Na+ = +62 mV, Ruhepotenzial = -70 mV.`,
       lernziele: [
         "Die Nernst-Gleichung formulieren und auf konkrete Elektroden- und Zellpotenziale anwenden",
         "Den Einfluss von Konzentration und Temperatur auf Elektrodenpotenziale berechnen und interpretieren",
@@ -3036,7 +3054,7 @@ Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochrea
 **Oxidativer Stress** entsteht, wenn die Produktion von ROS die antioxidative Kapazität der Zelle übersteigt. Dies führt zu:
 - **Lipidperoxidation:** ROS attackieren mehrfach ungesättigte Fettsäuren in Membranen -> Kettenreaktion -> Membranschädigung
 - **Protein-Oxidation:** Oxidation von Cystein-SH-Gruppen zu Disulfiden (-S-S-), Sulfensäuren (-SOH), oder Sulfonyl-Gruppen; Carbonylierung; Fragmentierung
-- **DNA-Oxidation:** *OH greift Basen und Desoxyribose an -> 8-Oxo-Guanin (häufigste oxidative DNA-Läsion) -> Mutationen, Strangbrueche
+- **DNA-Oxidation:** *OH greift Basen und Desoxyribose an -> 8-Oxo-Guanin (häufigste oxidative DNA-Läsion) -> Mutationen, Strangbrüche
 - **Enzyme-Inaktivierung:** Oxidation aktiver Zentren (Fe-S-Cluster, Haem-Gruppen)
 
 **Krankheiten bei chronischem oxidativem Stress:** Arteriosklerose (LDL-Oxidation), Krebs, Morbus Alzheimer, Parkinson, Diabetes mellitus Typ 2, rheumatoide Arthritis, chronisch-entzündliche Darmerkrankungen.
@@ -3047,7 +3065,7 @@ Die Zelle verfügt über enzymatische und nicht-enzymatische Antioxidantien:
 
 **Enzymatische Antioxidantien:**
 - **Superoxiddismutase (SOD):** Disproportioniert O2*- -> H2O2 + O2. Drei Isoformen: SOD1 (Cu/Zn, zytoplasmatisch), SOD2 (Mn, mitochondrial), SOD3 (Cu/Zn, extrazellulär)
-- **Katalase:** H2O2 -> H2O + 1/2 O2. Peroxisomales Enzym. Hoechste Umsatzzahl aller bekannten Enzyme (ca. 10^7 /s)
+- **Katalase:** H2O2 -> H2O + 1/2 O2. Peroxisomales Enzym. Höchste Umsatzzahl aller bekannten Enzyme (ca. 10^7 /s)
 - **Glutathion-Peroxidase (GPx):** H2O2 + 2GSH -> 2H2O + GSSG. Verwendet reduziertes Glutathion (GSH) als Reduktionsmittel. Selenocystein im aktiven Zentrum.
 - **Glutathion-Reduktase (GR):** GSSG + NADPH -> 2GSH. Regeneriert GSH auf Kosten von NADPH (aus Pentosephosphatweg).
 - **Thioredoxin-System:** Thioredoxin (Trx) + Thioredoxin-Reduktase (TrxR) + NADPH: reduziert oxidierte Proteine
@@ -3068,7 +3086,7 @@ NADPH (Nicotinamid-Adenin-Dinukleotid-Phosphat, reduziert) ist das zentrale Redu
 
 ## ROS als Signalmoleküle
 
-ROS haben nicht ausschließlich schaedliche Funktionen. In physiologischen Konzentrationen wirken sie als **Redox-Signalmoleküle** (Konzept des Eustress vs. Distress):
+ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konzentrationen wirken sie als **Redox-Signalmoleküle** (Konzept des Eustress vs. Distress):
 - H2O2 oxidiert Cystein-SH-Gruppen von Signalproteinen -> Konformationsänderung -> Signalübertragung
 - Aktivierung von NF-kappaB, HIF-1alpha, Nrf2 (antioxidativer Transkriptionsfaktor)
 - NADPH-Oxidase (NOX) in Phagozyten produziert O2*- gezielt zur Pathogenabwehr (oxidativer Burst)
@@ -3078,7 +3096,9 @@ ROS haben nicht ausschließlich schaedliche Funktionen. In physiologischen Konze
 
 > **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel -- ihre Reaktivität nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
 
-> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid härtet Zahnschmelz, Chlorid ist das wichtigste extrazelluläre Anion, Iodid ist essenziell für die Schilddrüsenhormonsynthese (T3, T4).`,
+> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid härtet Zahnschmelz, Chlorid ist das wichtigste extrazelluläre Anion, Iodid ist essenziell für die Schilddrüsenhormonsynthese (T3, T4).
+
+> **Prüfungstipp:** ROS-Schutzkaskade merken: SOD (O₂·⁻ -> H₂O₂) -> Katalase/GPx (H₂O₂ -> H₂O). G6PD-Mangel = häufigste Enzymopathie weltweit = hämolytische Anämie bei Oxidantien. Fenton-Reaktion (Fe²⁺ + H₂O₂ -> ·OH) ist die gefährlichste ROS-Quelle.`,
       lernziele: [
         "Die wichtigsten reaktiven Sauerstoffspezies (ROS), ihre Bildungsmechanismen und Reaktivität benennen",
         "Oxidativen Stress definieren und seine Folgen auf Lipide, Proteine und DNA beschreiben",

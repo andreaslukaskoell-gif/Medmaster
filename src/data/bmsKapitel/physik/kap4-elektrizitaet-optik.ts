@@ -25,14 +25,9 @@ export const physKapElektrizitaet: Kapitel = {
         "Membranpotential",
         "Gelelektrophorese",
       ],
-      content: `
+      content: `## Elektrische Ladung
 
-
-## Elektrische Ladung
-
-
-
-Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
+Jede Wechselwirkung in Chemie und Biologie geht letztlich auf elektrische Ladungen zurück. Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
 
 Die kleinste frei vorkommende Ladung ist die **Elementarladung** e = 1,602 × 10⁻¹⁹ C. Alle beobachtbaren Ladungen sind ganzzahlige Vielfache davon — dieses Prinzip nennt man **Ladungsquantisierung**. Die SI-Einheit der Ladung ist das **Coulomb (C)**; 1 C entspricht der Ladung von ca. 6,24 × 10¹⁸ Elektronen. Das **Ladungserhaltungsgesetz** besagt: In einem abgeschlossenen System bleibt die Gesamtladung konstant. Ladung kann weder erzeugt noch vernichtet, sondern nur getrennt oder übertragen werden.
 
@@ -89,6 +84,8 @@ Ein **Kondensator** speichert Ladung auf zwei Platten und Energie im elektrische
 **Formelklartext:** **C = Q/U** — die **Kapazität** gibt an, wie viel Ladung pro Volt Spannung gespeichert wird; [C] = F = C/V. **W = ½·C·U²** — die gespeicherte **Energie** wächst mit dem Quadrat der Spannung; doppelte Spannung → **vierfache** Energie. **E = U/d** im Plattenkondensator: gleiche U, kleinerer Abstand d → stärkeres Feld E. **Einheiten:** W in J, C in F, U in V → ½·F·V² = J ✓.
 
 In der Medizin ist der Defibrillator ein Kondensator-Entlader: C ≈ 200 µF, geladen auf ~1500 V, liefert W ≈ 225 J in Millisekunden.
+
+> **Prüfungstipp:** Beim Coulomb-Gesetz prüft der MedAT gerne die Auswirkung von Abstandsänderungen (r → 2r: Kraft auf ¼) und den Einfluss des Mediums (εᵣ von Wasser ≈ 80). Merke dir: doppelter Abstand = Viertel der Kraft; Wasser schwächt die Kraft 80-fach.
 
 ## Rechenbeispiele
 
@@ -274,14 +271,9 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
         "Ionenkanal",
         "Leitwert",
       ],
-      content: `
+      content: `## Elektrischer Strom
 
-
-## Elektrischer Strom
-
-
-
-**Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
+Ohne Stromfluss keine Nervenleitung, kein EKG, keine Defibrillation. **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
 
 **I = ΔQ / Δt** [A = C/s]
 
@@ -343,6 +335,8 @@ Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²
 | 50–100 mA | Atemmuskel-Verkrampfung, Erstickungsgefahr |
 | >100 mA | Kammerflimmern (ohne Defibrillation letal) |
 | >1 A | Direkte Herzschädigung, Verbrennungen |
+
+> **Prüfungstipp:** R = ρ·L/A ist eine MedAT-Klassikerfrage. Achte besonders auf die Querschnittsfläche: Doppelter Durchmesser bedeutet vierfachen Querschnitt (A = π·(d/2)²), also R auf ein Viertel. Verwechsle nicht Durchmesser mit Radius!
 
 ## Elektrochemische Spannungsquellen und Nernst-Potential
 
@@ -536,14 +530,9 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         "Wheatstone-Brücke",
         "Spannungsteiler",
       ],
-      content: `
+      content: `## Grundlegende Schaltungstypen
 
-
-## Grundlegende Schaltungstypen
-
-
-
-In der Elektrotechnik und Biophysik werden Widerstände und andere Bauelemente in **Reihenschaltung** (Serie) oder **Parallelschaltung** kombiniert. Das Verständnis dieser Schaltungen ist die Basis für die Analyse elektrischer Systeme — von einfachen Schaltkreisen bis zu komplexen neuronalen Netzwerken.
+Vom Defibrillator bis zur Zellmembran: Jedes elektrische System lässt sich als Kombination von Reihen- und Parallelschaltungen analysieren.
 
 **Reihenschaltung von Widerständen:**
 - Gesamtwiderstand: **R_ges = R₁ + R₂ + ... + Rₙ** (immer größer als jeder Einzelwiderstand)
@@ -606,6 +595,8 @@ Im menschlichen Körper ist die **Bioimpedanz** (Z_body) frequenzabhängig: Bei 
 ## Spannungsteiler und Messbrücken
 
 Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständen auf: U₂ = U₀ · R₂/(R₁ + R₂). Die **Wheatstone-Brücke** detektiert minimale Widerstandsänderungen durch Vergleich zweier Spannungsteiler — genutzt in Dehnungsmessstreifen, Drucksensoren und Biosensoren (z. B. Glukosemessgeräte, Pulsoxymetrie-Schaltkreise).
+
+> **Prüfungstipp:** Merke dir die Eselsbrücke: Bei Reihenschaltung addieren sich R-Werte direkt, bei Parallelschaltung die Kehrwerte. Für Kondensatoren gilt es genau umgekehrt! Die Wheatstone-Gleichgewichtsbedingung R₁·R₄ = R₂·R₃ (Kreuzprodukt) wird gerne abgefragt.
 
 ## Rechenbeispiele
 
@@ -772,14 +763,9 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         "TMS",
         "Selbstinduktion",
       ],
-      content: `
+      content: `## Grundlagen des Magnetismus
 
-
-## Grundlagen des Magnetismus
-
-
-
-Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
+Die MRT-Bildgebung, das stärkste diagnostische Werkzeug der modernen Medizin, basiert vollständig auf Magnetismus und elektromagnetischer Induktion. Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
 
 **Magnetische Materialien:**
 - **Diamagnetisch** (μᵣ < 1): schwach abstoßend (Wasser, organisches Gewebe) — Grund, warum Körper vom MRT-Feld kaum beeinflusst wird
@@ -814,6 +800,8 @@ Das negative Vorzeichen folgt aus der **Lenzschen Regel**: Die induzierte Spannu
 
 Eine Spule mit Induktivität **L** [Henry, H] widersteht Stromänderungen durch Selbstinduktion: ε = −L · dI/dt. Gespeicherte Energie: **W = ½·L·I²**. MRT-Gradientenspulen erzeugen ortsabhängige Felder durch schnell schaltende Ströme — die dabei induzierten Wirbelströme begrenzen die Schaltgeschwindigkeit und erzeugen das charakteristische Klopfen des MRT.
 
+> **Prüfungstipp:** Die Larmor-Frequenz f_L = (γ/2π)·B₀ mit γ/2π = 42,58 MHz/T für Protonen ist eine beliebte MedAT-Rechenaufgabe. Bei 1,5 T ergibt sich 64 MHz, bei 3 T ca. 128 MHz. Merke: Verdopplung des Feldes = Verdopplung der Frequenz (linearer Zusammenhang).
+
 ## Elektromagnetische Wellen und das EM-Spektrum
 
 Sich zeitlich ändernde elektrische Felder erzeugen Magnetfelder (Maxwell-Gleichungen) und umgekehrt. Elektromagnetische Wellen breiten sich im Vakuum mit Lichtgeschwindigkeit c = 3 × 10⁸ m/s aus: **c = λ · f** und **c = 1/√(ε₀·μ₀)**.
@@ -829,8 +817,6 @@ Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowell
 | UV | 10–380 nm | Desinfektion, Phototherapie, LASIK (193 nm) |
 | Röntgen | 0,01–10 nm | Röntgen, CT |
 | Gamma | <0,01 nm | PET, Szintigraphie, Strahlentherapie |
-
-
 
 **MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession (Kreiselbewegung der Spins um B₀) induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort. T₁- und T₂-Relaxationszeiten sind gewebespezifisch und erzeugen den Bildkontrast.
 
@@ -1018,14 +1004,9 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
         "Brechkraft",
         "Dioptrie",
       ],
-      content: `
+      content: `## Reflexionsgesetz
 
-
-## Reflexionsgesetz
-
-
-
-Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
+Endoskopie, Brillen, Laserchirurgie — die gesamte medizinische Optik baut auf zwei Grundgesetzen auf: Reflexion und Brechung. Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
 
 > **Einfallswinkel α₁ = Ausfallswinkel α₂**
 
@@ -1068,8 +1049,7 @@ Beispiel Glas (n=1,5) → Luft (n=1): sin α_grenz = 1/1,5 = 0,667 → α_grenz 
 
 **Klinische Anwendung – Endoskopie:** Glasfasern nutzen Totalreflexion, um Licht über weite Strecken und um Kurven zu leiten. Millionen dünner Glasfasern bilden flexible Lichtleiter für Endoskope (Gastroskop, Koloskop, Bronchoskop). Die Fasern müssen von einem Mantel mit kleinerem n umgeben sein, damit Totalreflexion an der Kern-Mantel-Grenze gewährleistet ist.
 
-
-
+> **Prüfungstipp:** Beim Snellius-Gesetz wird gerne nach der Brechungsrichtung gefragt: Übergang in dichteres Medium (n₂ > n₁) = Brechung zum Lot; in dünneres Medium = vom Lot weg. Totalreflexion geht nur vom dichteren ins dünnere Medium — nie umgekehrt!
 
 
 ## Linsen und Brechkraft
@@ -1281,14 +1261,9 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Superposition",
         "Ölimmersion",
       ],
-      content: `
+      content: `## Licht als elektromagnetische Welle
 
-
-## Licht als elektromagnetische Welle
-
-
-
-Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
+Warum kann ein Lichtmikroskop keine Viren abbilden? Die Antwort liegt in der Wellennatur des Lichts. Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
 - **Wellenlänge λ**: räumlicher Abstand zwischen zwei Wellenbergen
 - **Frequenz f**: zeitliche Schwingungsfrequenz
 - **Zusammenhang**: c = λ·f (c = Lichtgeschwindigkeit im Vakuum ≈ 3·10⁸ m/s)
@@ -1297,13 +1272,9 @@ Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 78
 
 > **Merke:** c = λ·f = 3×10⁸ m/s im Vakuum. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_medium = λ₀/n), die Frequenz bleibt gleich.
 
-**Dispersion:** **Dispersion** ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
-
-
+**Dispersion:** Dispersion ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
 
 **Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
-
-
 
 ## Interferenz
 
@@ -1350,6 +1321,8 @@ wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Bre
 - Kleineres λ → bessere Auflösung (Elektronenmikroskop, Röntgen)
 - Größere NA → bessere Auflösung (Ölimmersion: n_Öl ≈ 1,52 statt n_Luft = 1)
 - Mit Licht (λ_min ≈ 400 nm) und maximaler NA ≈ 1,4 ergibt sich d_min ≈ 140 nm
+
+> **Prüfungstipp:** Das Abbe-Kriterium d_min = λ/(2·NA) ist eine Standardfrage. Merke: Kürzere Wellenlänge ODER höhere NA verbessern die Auflösung. Ölimmersion erhöht NA von ~0,95 auf ~1,4 — das allein verbessert die Auflösung um fast 50 %.
 
 ## Kohärente Optik und klinische Anwendungen
 
@@ -1524,12 +1497,7 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
         "CCD-Sensor",
         "Glasfaser",
       ],
-      content: `
-
-
-## Lupe
-
-
+      content: `## Lupe
 
 Die Lupe ist die einfachste Sehhilfe – eine einzelne **Sammellinse**. **Um eine Sammellinse als Lupe zu verwenden** (vergrößertes, aufrechtes virtuelles Bild), muss sich der **Gegenstand innerhalb der einfachen Brennweite** befinden (g < f). Außerhalb der Brennweite entstünde ein reelles (umgekehrtes) Bild; als Lupe nutzt man bewusst g < f. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt **innerhalb der Brennweite** (nahe am Brennpunkt), entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
 
@@ -1572,9 +1540,6 @@ Teleskope (Fernrohre) sind für ferne Objekte konzipiert. Im einfachsten Fall (K
 Beispiel: f_ob = 1000 mm, f_ok = 25 mm → M = 40x. Das erzeugte Bild ist umgekehrt; für aufrechte Bilder (terrestrisches Fernrohr) wird ein Umkehrsystem eingebaut.
 
 
-
-
-
 ## Endoskop
 
 Das Endoskop ist das wichtigste minimal-invasive optische Instrument in der Medizin. Es kombiniert:
@@ -1602,6 +1567,8 @@ Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Si
 Das **Transmissions-Elektronenmikroskop (TEM)** nutzt Elektronen statt Licht. De-Broglie-Wellenlänge der Elektronen (bei 100 kV: λ ≈ 0,004 nm) ist ~100.000× kleiner als Licht → Auflösung bis ~0,1 nm (Atomniveau). Das **Raster-Elektronenmikroskop (REM/SEM)** rastert die Oberfläche ab und liefert dreidimensionale Bilder mit großer Tiefenschärfe. Medizinisch: Virusdiagnostik (Negativkontrastierung), Gewebeultrastruktur, Biomaterialforschung.
 
 > **Merke:** Elektronenmikroskopie überwindet die Abbe-Grenze durch extrem kurze De-Broglie-Wellenlänge der Elektronen.
+
+> **Prüfungstipp:** Verwechsle nicht die Vergrößerungsformeln: Lupe M = S/f (S = 25 cm), Mikroskop M = M_ob × M_ok (Multiplikation!), Teleskop M = f_ob/f_ok. Die Auflösung eines Mikroskops hängt NICHT von der Vergrößerung ab, sondern vom Abbe-Limit.
 
 ## Rechenbeispiele
 
@@ -1771,22 +1738,15 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         "Brillenrezept",
         "Dioptrie",
       ],
-      content: `
+      content: `## Anatomie und Optik des normalen Auges
 
-
-## Anatomie und Optik des normalen Auges
-
-
-
-Das Auge besteht optisch aus mehreren brechenden Flächen:
+Das menschliche Auge ist ein optisches Hochleistungssystem mit ~60 Dioptrien Brechkraft — und ein MedAT-Dauerbrenner. Es besteht optisch aus mehreren brechenden Flächen:
 - **Hornhaut (Kornea)**: liefert etwa 2/3 der gesamten Brechkraft (~43 dpt). Ihre stark gewölbte Vorderfläche ist der Hauptbrechungsort.
 - **Kammerwasser**: füllt die Vorderkammer
 - **Linse**: liefert das verbleibende 1/3 (~20 dpt in Ruhe) und ist die einzige veränderliche Brechkraft.
 - **Glaskörper**: füllt den Hauptraum des Augapfels
 
 Die **Gesamtbrechkraft** des entspannten Auges beträgt ca. **60 Dioptrien**, bei maximaler Akkommodation ca. 70 dpt.
-
-
 
 Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt beim Erwachsenen ca. 24 mm.
 
@@ -1804,8 +1764,6 @@ Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt be
 
 - **Fernpunkt**: die weiteste Entfernung, auf die das Auge bei entspanntem Ziliarmuskel scharf sehen kann. Normal: im Unendlichen.
 - **Nahpunkt**: die nächste Entfernung, auf die das Auge bei maximaler Akkommodation scharf sehen kann. Normal: ~10 cm bei 20-jährigen, ~25 cm bei 40-jährigen, ~100+ cm im Alter.
-
-
 
 ## Myopie (Kurzsichtigkeit)
 
@@ -1849,6 +1807,8 @@ Ein Brillenrezept enthält für jedes Auge:
 - **Prisma**: für Schielkorrekturen
 
 Beispiel: RE: sph –2,50 cyl –0,75 Achse 180°; LE: sph –3,00 cyl –0,50 Achse 10°.
+
+> **Prüfungstipp:** Die Zuordnung Fehlsichtigkeit → Korrekturlinse ist ein MedAT-Klassiker: Myopie = Zerstreuungslinse (minus-Dioptrien), Hyperopie = Sammellinse (plus-Dioptrien). Merke: „Kurzsichtig = kurzer Fokus = zu stark brechend = Minus-Linse zum Abschwächen."
 
 ## LASIK und refraktive Chirurgie
 
