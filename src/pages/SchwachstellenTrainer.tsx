@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import {
   Target,
   Flame,
@@ -13,6 +13,8 @@ import {
   Trophy,
   RotateCcw,
   Play,
+  BookOpen,
+  RefreshCw,
 } from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
 import { Button } from "@/components/ui/button";
@@ -32,6 +34,8 @@ import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { playCorrectAnswerSound } from "@/lib/sounds";
 import { SchwachstellenAnalyse } from "@/components/schwachstellen/SchwachstellenAnalyse";
+import { hasCriticalErrorPattern } from "@/lib/smartRecovery";
+import { pathForChapter } from "@/lib/bmsRoutes";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 // ============================================================
@@ -105,9 +109,11 @@ export default function SchwachstellenTrainer() {
     userAnswer: string;
   } | null>(null);
 
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
-  const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition } = useStore();
+  const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition, quizResults } =
+    useStore();
   const getMinutes = useSessionTimer();
 
   const readiness = adaptive.getMedATReadiness();
@@ -455,24 +461,50 @@ export default function SchwachstellenTrainer() {
         </Card>
       </div>
 
-      {/* Daily Challenge */}
-      <Card className="border-2 border-orange-200 dark:border-orange-800">
-        <CardHeader className="pb-3">
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <Zap className="w-5 h-5 text-orange-500" />
-            Tägliche Challenge
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pb-5">
-          <p className="text-sm text-muted mb-4">
-            15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!
-          </p>
-          <Button onClick={startDailyChallenge} className="gap-2">
-            <Play className="w-4 h-4" />
-            Challenge starten
-          </Button>
-        </CardContent>
-      </Card>
+      {/* Daily Challenge + Smart Recovery */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Card className="border-2 border-orange-200 dark:border-orange-800">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Zap className="w-5 h-5 text-orange-500" />
+              Tägliche Challenge
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pb-5">
+            <p className="text-sm text-muted mb-4">
+              15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!
+            </p>
+            <Button onClick={startDailyChallenge} className="gap-2">
+              <Play className="w-4 h-4" />
+              Challenge starten
+            </Button>
+          </CardContent>
+        </Card>
+
+        {hasCriticalErrorPattern(quizResults ?? []) && (
+          <Card className="border-2 border-purple-200 dark:border-purple-800">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <RefreshCw className="w-5 h-5 text-purple-500" />
+                Smart Recovery
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pb-5">
+              <p className="text-sm text-muted mb-4">
+                Falsch beantwortete Fragen nochmal durchgehen — mit Erklärung vor jeder Frage.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => navigate("/schwachstellen/recovery")}
+                className="gap-2"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Recovery starten
+              </Button>
+            </CardContent>
+          </Card>
+        )}
+      </div>
 
       {/* Weak Topics */}
       <Card>
@@ -494,9 +526,12 @@ export default function SchwachstellenTrainer() {
             </p>
           ) : (
             weakTopics.map((topic) => {
-              const _sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
-              void _sw;
+              const sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
               const fc = fachColors[topic.fach];
+              const chapterLink =
+                sw?.linkedChapterId && sw?.fach
+                  ? pathForChapter(sw.fach, sw.linkedChapterId)
+                  : null;
               const questionsAvailable = allBmsQuestions.filter((q) => {
                 const d = getDirectStichwortId(q.id);
                 if (d === topic.stichwortId) return true;
@@ -521,16 +556,28 @@ export default function SchwachstellenTrainer() {
                       <span className="text-[10px] text-muted">{questionsAvailable} Fragen</span>
                     </div>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => startFocusedQuiz(topic.stichwortId)}
-                    disabled={questionsAvailable === 0}
-                    className="ml-3 shrink-0"
-                  >
-                    <RotateCcw className="w-3 h-3 mr-1" />
-                    Üben
-                  </Button>
+                  <div className="flex gap-2 ml-3 shrink-0">
+                    {chapterLink && (
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        onClick={() => navigate(chapterLink)}
+                        className="text-xs"
+                      >
+                        <BookOpen className="w-3 h-3 mr-1" />
+                        Lernen
+                      </Button>
+                    )}
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => startFocusedQuiz(topic.stichwortId)}
+                      disabled={questionsAvailable === 0}
+                    >
+                      <RotateCcw className="w-3 h-3 mr-1" />
+                      Üben
+                    </Button>
+                  </div>
                 </div>
               );
             })

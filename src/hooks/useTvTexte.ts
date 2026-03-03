@@ -4,11 +4,11 @@
  */
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
-import { tvTexte } from "@/data/kffTextverstaendnis";
+import { tvTexteAlle } from "@/data/kffTextverstaendnis";
 import { tvUebungstexte } from "@/data/tvUebungstexte";
 import type { TVText } from "@/data/kffTextverstaendnis";
 
-const fallbackTexte: TVText[] = [...tvTexte, ...tvUebungstexte];
+const fallbackTexte: TVText[] = [...tvTexteAlle, ...tvUebungstexte];
 
 function parseRow(row: { data_json: unknown }): TVText | null {
   const d = row.data_json as Record<string, unknown>;

@@ -431,7 +431,7 @@ export const useAdaptiveStore = create<AdaptiveState>()(
               attempts: stat?.totalAttempts ?? 0,
             };
           })
-          .filter((x) => x.attempts >= 1)
+          .filter((x) => x.attempts >= 3)
           .sort((a, b) => a.rate - b.rate)
           .slice(0, limit);
       },
