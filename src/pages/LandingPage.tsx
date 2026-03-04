@@ -101,7 +101,7 @@ export default function LandingPage() {
     ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
     { emoji: "⭐", text: "Alle 4 MedAT-Bereiche: BMS, KFF, TV, SEK" },
     { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
-    { emoji: "🆓", text: "2 Wochen komplett gratis — dann ab €9,90/Monat" },
+    { emoji: "🆓", text: "Komplett gratis nutzbar — kein Abo nötig" },
     { emoji: "📚", text: "4.300+ Übungsfragen mit Erklärungen" },
   ];
 
@@ -423,11 +423,11 @@ export default function LandingPage() {
               })}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              2 Wochen komplett gratis testen
+              Jetzt kostenlos starten
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8">
-              Alle 4.300+ Fragen, alle Features, voller Zugang. Registriere dich jetzt und teste
-              MedMaster 14 Tage lang kostenlos — danach ab €9,90/Monat.
+              Alle 4.300+ Fragen, alle Features, voller Zugang. Registriere dich jetzt und starte
+              sofort mit deiner MedAT-Vorbereitung.
             </p>
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
@@ -435,7 +435,7 @@ export default function LandingPage() {
                 className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
                 style={{ backgroundColor: NAVY }}
               >
-                14 Tage gratis starten
+                Kostenlos starten
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
