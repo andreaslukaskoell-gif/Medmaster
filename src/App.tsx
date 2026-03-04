@@ -63,6 +63,8 @@ const SubjectDemo = lazy(() => import("@/pages/SubjectDemo"));
 const QuizChallenge = lazy(() => import("@/pages/QuizChallenge"));
 const FAQPage = lazy(() => import("@/pages/FAQPage"));
 const MedATGuide = lazy(() => import("@/pages/MedATGuide"));
+const MedATPunkterechner = lazy(() => import("@/pages/MedATPunkterechner"));
+const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
 
 function LoadingSpinner() {
   return (
@@ -163,6 +165,8 @@ export default function App() {
           <Route path="/challenge" element={<QuizChallenge />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/medat-guide" element={<MedATGuide />} />
+          <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
+          <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />
 
           {/* Protected routes */}
           <Route
