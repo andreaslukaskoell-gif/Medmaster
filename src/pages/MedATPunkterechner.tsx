@@ -9,11 +9,11 @@ type SubjectKey = "bio" | "chemie" | "physik" | "mathe";
 
 type BMSScores = Record<SubjectKey, number>;
 
-const BMS_SUBJECTS: { key: SubjectKey; label: string }[] = [
-  { key: "bio", label: "Biologie" },
-  { key: "chemie", label: "Chemie" },
-  { key: "physik", label: "Physik" },
-  { key: "mathe", label: "Mathematik" },
+const BMS_SUBJECTS: { key: SubjectKey; label: string; max: number }[] = [
+  { key: "bio", label: "Biologie", max: 40 },
+  { key: "chemie", label: "Chemie", max: 24 },
+  { key: "physik", label: "Physik", max: 18 },
+  { key: "mathe", label: "Mathematik", max: 12 },
 ];
 
 function getResultInfo(pct: number): { label: string; color: string; bg: string; border: string } {
@@ -124,25 +124,25 @@ export default function MedATPunkterechner() {
   usePageMeta({
     title: "MedAT Punkterechner 2026",
     description:
-      "Berechne deinen MedAT-Score online: BMS, KFF, TV und SEK eingeben und sofort deinen gewichteten Gesamtprozentsatz sehen. Kostenloser MedAT Punkterechner 2026.",
+      "Berechne deinen MedAT-Score online: BMS (40%), KFF (40%), TV (10%) und SEK (10%) eingeben und sofort deinen gewichteten Gesamtprozentsatz sehen. Kostenloser MedAT Punkterechner 2026.",
     canonical: "https://medmaster.at/medat-punkte-rechner",
     ogImage: "https://medmaster.at/og-image.svg",
     ogType: "website",
   });
 
-  const [bms, setBms] = useState<BMSScores>({ bio: 5, chemie: 5, physik: 5, mathe: 5 });
-  const [kff, setKff] = useState(15);
+  const [bms, setBms] = useState<BMSScores>({ bio: 20, chemie: 12, physik: 9, mathe: 6 });
+  const [kff, setKff] = useState(38);
   const [tv, setTv] = useState(6);
-  const [sek, setSek] = useState(20);
+  const [sek, setSek] = useState(15);
   const [copied, setCopied] = useState(false);
 
   const bmsTotal = bms.bio + bms.chemie + bms.physik + bms.mathe;
-  const bmsPct = (bmsTotal / 40) * 100;
-  const kffPct = (kff / 30) * 100;
+  const bmsPct = (bmsTotal / 94) * 100;
+  const kffPct = (kff / 75) * 100;
   const tvPct = (tv / 12) * 100;
-  const sekPct = (sek / 40) * 100;
+  const sekPct = (sek / 30) * 100;
 
-  const gesamtPct = bmsPct * 0.4 + kffPct * 0.2 + tvPct * 0.1 + sekPct * 0.3;
+  const gesamtPct = bmsPct * 0.4 + kffPct * 0.4 + tvPct * 0.1 + sekPct * 0.1;
   const result = getResultInfo(gesamtPct);
 
   const shareText = `Mein MedAT-Ergebnis: ${gesamtPct.toFixed(1)}% — Teste dich selbst: medmaster.at/medat-punkte-rechner`;
@@ -162,7 +162,7 @@ export default function MedATPunkterechner() {
       "@type": "WebApplication",
       name: "MedAT Punkterechner 2026",
       description:
-        "Berechne deinen MedAT-Score: BMS (40%), KFF (20%), TV (10%) und SEK (30%) gewichtet.",
+        "Berechne deinen MedAT-Score: BMS (40%), KFF (40%), TV (10%) und SEK (10%) gewichtet.",
       url: "https://medmaster.at/medat-punkte-rechner",
       applicationCategory: "EducationalApplication",
       operatingSystem: "Web",
@@ -229,21 +229,21 @@ export default function MedATPunkterechner() {
             </span>
           </div>
           <div className="space-y-6">
-            {BMS_SUBJECTS.map(({ key, label }) => (
+            {BMS_SUBJECTS.map(({ key, label, max }) => (
               <SliderRow
                 key={key}
                 label={label}
                 value={bms[key]}
                 min={0}
-                max={10}
-                unit="von 10 richtig"
+                max={max}
+                unit={`von ${max} richtig`}
                 onChange={(v) => setBms((prev) => ({ ...prev, [key]: v }))}
               />
             ))}
             <div className="pt-2 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-sm">
               <span className="text-gray-500 dark:text-gray-400">Gesamt BMS</span>
               <span className="font-bold text-gray-900 dark:text-gray-100 tabular-nums">
-                {bmsTotal} / 40 ({bmsPct.toFixed(1)}%)
+                {bmsTotal} / 94 ({bmsPct.toFixed(1)}%)
               </span>
             </div>
           </div>
@@ -256,15 +256,15 @@ export default function MedATPunkterechner() {
               KFF — Kognitive Fähigkeiten
             </h2>
             <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400">
-              Gewichtung: 20%
+              Gewichtung: 40%
             </span>
           </div>
           <SliderRow
             label="KFF-Punkte"
             value={kff}
             min={0}
-            max={30}
-            unit="Punkte"
+            max={75}
+            unit="von 75 Punkte"
             onChange={setKff}
           />
         </section>
@@ -289,15 +289,15 @@ export default function MedATPunkterechner() {
               SEK — Sozial-emotionale Kompetenzen
             </h2>
             <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400">
-              Gewichtung: 30%
+              Gewichtung: 10%
             </span>
           </div>
           <SliderRow
             label="SEK-Punkte"
             value={sek}
             min={0}
-            max={40}
-            unit="Punkte"
+            max={30}
+            unit="von 30 Punkte"
             onChange={setSek}
           />
         </section>
@@ -383,10 +383,10 @@ export default function MedATPunkterechner() {
               der vier Testteile:
             </p>
             <ul className="space-y-1.5 pl-4">
-              <li>BMS: (richtige Antworten / 40) × 100 × 40%</li>
-              <li>KFF: (Punkte / 30) × 100 × 20%</li>
+              <li>BMS: (richtige Antworten / 94) × 100 × 40%</li>
+              <li>KFF: (Punkte / 75) × 100 × 40%</li>
               <li>TV: (Punkte / 12) × 100 × 10%</li>
-              <li>SEK: (Punkte / 40) × 100 × 30%</li>
+              <li>SEK: (Punkte / 30) × 100 × 10%</li>
             </ul>
             <p className="pt-1">
               Die Bewertung basiert auf einem Richtwert — die tatsächliche Aufnahmegrenze variiert

@@ -23,19 +23,19 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
       "Der MedAT dauert einen ganzen Tag und besteht aus 4 Testteilen mit unterschiedlicher Gewichtung:",
       {
         bold: "BMS — Basiskenntnistest für Medizinische Studien (40%):",
-        rest: " 40 Multiple-Choice-Fragen aus Biologie, Chemie, Physik und Mathematik. Jede Frage hat 5 Antwortmöglichkeiten (A–E), genau eine ist richtig. Bearbeitungszeit: 70 Minuten. Die Themen basieren auf der offiziellen Stichwortliste.",
+        rest: " 94 Multiple-Choice-Fragen aus Biologie (40), Chemie (24), Physik (18) und Mathematik (12). Jede Frage hat 5 Antwortmöglichkeiten (A–E), genau eine ist richtig. Bearbeitungszeit: 75 Minuten. Die Themen basieren auf der offiziellen Stichwortliste.",
       },
       {
-        bold: "KFF — Kognitive Fähigkeiten und Fertigkeiten (20%):",
-        rest: " 5 Untertests: Zahlenfolgen (Muster erkennen und ergänzen), Wortflüssigkeit (aus Buchstaben Wörter bilden), Implikationen erkennen (logische Schlussfolgerungen), Figuren zusammensetzen (räumliches Denken) und Gedächtnis & Merkfähigkeit (Allergieausweise merken und wiedererkennen).",
+        bold: "KFF — Kognitive Fähigkeiten und Fertigkeiten (40%):",
+        rest: " 5 Untertests: Figuren zusammensetzen (15 Aufgaben, 20 Min.), Zahlenfolgen (10 Aufgaben, 15 Min.), Wortflüssigkeit (15 Aufgaben, 20 Min.), Implikationen erkennen (10 Aufgaben, 10 Min.) und Gedächtnis & Merkfähigkeit (8 Allergieausweise merken, 25 Fragen beantworten).",
       },
       {
         bold: "TV — Textverständnis (10%):",
-        rest: " Wissenschaftliche Texte lesen und Verständnisfragen beantworten. Texte stammen aus Naturwissenschaft und Medizin.",
+        rest: " 12 Aufgaben in 35 Minuten. Wissenschaftliche Texte lesen und Verständnisfragen beantworten. Texte stammen aus Naturwissenschaft und Medizin.",
       },
       {
-        bold: "SEK — Sozial-emotionale Kompetenzen (30%):",
-        rest: " Seit 2024 mit erhöhter Gewichtung. 3 Untertests: Emotionen erkennen (Gesichtsausdrücke zuordnen), Emotionen regulieren (Bewältigungsstrategien bewerten) und Soziales Entscheiden (ethische Handlungsoptionen ranken).",
+        bold: "SEK — Sozial-emotionale Kompetenzen (10%):",
+        rest: " 3 Untertests: Emotionen erkennen (Gesichtsausdrücke zuordnen), Emotionen regulieren (Bewältigungsstrategien bewerten) und Soziales Entscheiden (ethische Handlungsoptionen ranken).",
       },
     ],
   },
@@ -43,50 +43,50 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
     id: "bms",
     title: "BMS — Der Wissensteil",
     content: [
-      "Der BMS ist der umfangreichste Teil des MedAT und macht 40% der Gesamtwertung aus. Die 40 Fragen verteilen sich gleichmäßig auf 4 Fächer:",
+      "Der BMS ist der umfangreichste Teil des MedAT und macht 40% der Gesamtwertung aus. 94 Fragen verteilen sich auf 4 Fächer:",
       {
-        bold: "Biologie (~10 Fragen):",
+        bold: "Biologie (40 Fragen):",
         rest: " Zellbiologie (Organellen, Membrantransport, Zellteilung), Genetik (Mendelsche Regeln, Molekulargenetik, Mutationen), Humanbiologie (Organsysteme, Blut, Immunsystem, Nervensystem) und Evolution (Selektion, Artbildung, Stammesgeschichte).",
       },
       {
-        bold: "Chemie (~10 Fragen):",
+        bold: "Chemie (24 Fragen):",
         rest: " Allgemeine Chemie (Atombau, PSE, Bindungen, Stöchiometrie), Organische Chemie (funktionelle Gruppen, Reaktionstypen, Isomerie) und Biochemie (Aminosäuren, Enzyme, Stoffwechsel, DNA/RNA).",
       },
       {
-        bold: "Physik (~10 Fragen):",
+        bold: "Physik (18 Fragen):",
         rest: " Mechanik (Kräfte, Energie, Impuls), Thermodynamik (Wärme, Aggregatzustände), Elektrizität (Strom, Spannung, Widerstand), Optik (Brechung, Linsen, Spiegel) und Akustik (Schallwellen, Dezibel).",
       },
       {
-        bold: "Mathematik (~10 Fragen):",
+        bold: "Mathematik (12 Fragen):",
         rest: " Algebra (Gleichungen, Ungleichungen), Bruchrechnung, Prozentrechnung, Einheiten und SI-System, Stochastik (Wahrscheinlichkeit, Kombinatorik) und Grundlagen der Trigonometrie.",
       },
-      "MedMaster bietet über 4.300 BMS-Fragen mit ausführlichen Erklärungen und deckt alle 106 Stichworte der offiziellen Liste ab.",
+      "MedMaster bietet über 4.300 BMS-Fragen mit ausführlichen Erklärungen und deckt alle offiziellen Stichworte der BMS-Stichwortliste ab.",
     ],
   },
   {
     id: "kff",
     title: "KFF — Kognitive Fähigkeiten",
     content: [
-      "Die KFF-Untertests messen kognitive Fähigkeiten, die für das Medizinstudium relevant sind. Gute Nachricht: Alle 5 Untertests sind trainierbar!",
+      "KFF macht mit 40% gleich viel wie BMS und ist damit ein entscheidender Testteil. Gute Nachricht: Alle 5 Untertests sind trainierbar!",
       {
-        bold: "Zahlenfolgen:",
-        rest: " Eine Folge von Zahlen mit 1–2 fehlenden Werten. Du musst das Muster erkennen (z.B. +3, ×2, Fibonacci-ähnlich) und die fehlenden Zahlen ergänzen. Typisch: 6–8 Aufgaben in 25 Minuten.",
+        bold: "Zahlenfolgen (10 Aufgaben, 15 Min.):",
+        rest: " Eine Folge von 7 Zahlen — du ergänzt die 8. und 9. Zahl. Du musst das Muster erkennen (z.B. +3, ×2, Fibonacci-ähnlich).",
       },
       {
-        bold: "Wortflüssigkeit:",
+        bold: "Wortflüssigkeit (15 Aufgaben, 20 Min.):",
         rest: " Dir werden zufällige Buchstaben gezeigt. Du musst möglichst schnell ein sinnvolles deutsches Wort daraus bilden und den Anfangsbuchstaben angeben. 5 Antwortoptionen.",
       },
       {
-        bold: "Implikationen erkennen:",
-        rest: " Zwei Prämissen (z.B. \u201EAlle Ärzte sind Akademiker\u201C und \u201EEinige Akademiker sind Sportler\u201C) \u2014 welche Schlussfolgerung ist logisch zwingend? Erfordert formales logisches Denken.",
+        bold: "Implikationen erkennen (10 Aufgaben, 10 Min.):",
+        rest: " Zwei Prämissen (z.B. \u201EAlle Ärzte sind Akademiker\u201C und \u201EEinige Akademiker sind Sportler\u201C) \u2014 welche Schlussfolgerung ist logisch zwingend? Nur im MedAT-H.",
       },
       {
-        bold: "Figuren zusammensetzen:",
+        bold: "Figuren zusammensetzen (15 Aufgaben, 20 Min.):",
         rest: " Ein Polygon wird in Teile zerschnitten. Welche der 5 Optionen zeigt die korrekt zusammengesetzten Teile? Trainiert räumliches Vorstellungsvermögen.",
       },
       {
-        bold: "Gedächtnis & Merkfähigkeit:",
-        rest: " Allergieausweise mit Name, Geburtsdatum, Blutgruppe, Allergien und Medikamenten merken. Nach einer Pause werden Detailfragen gestellt.",
+        bold: "Gedächtnis & Merkfähigkeit (8 Ausweise, 25 Fragen):",
+        rest: " 8 Allergieausweise mit je 8 Fakten (Name, Geburtsdatum, Blutgruppe, Allergien, Medikamente) in 8 Minuten merken. Nach einer Ablenkphase werden 25 Detailfragen in 15 Minuten gestellt.",
       },
     ],
   },
@@ -102,7 +102,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
     id: "sek",
     title: "SEK — Sozial-emotionale Kompetenzen",
     content: [
-      "Der SEK-Teil hat seit 2024 eine erhöhte Gewichtung von 30% und ist damit der zweitwichtigste Testteil nach dem BMS.",
+      "Der SEK-Teil macht 10% der Gesamtwertung aus und prüft sozial-emotionale Kompetenzen in 3 Untertests.",
       {
         bold: "Emotionen erkennen:",
         rest: " Fotos von Gesichtsausdrücken werden gezeigt. Du ordnest die dargestellte Emotion zu (Freude, Trauer, Angst, Wut, Ekel, Überraschung, Verachtung).",
@@ -150,7 +150,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
       },
       {
         bold: "2. Stichwortliste abarbeiten:",
-        rest: " Jedes der 106 offiziellen Stichworte muss sitzen. MedMaster zeigt den Fortschritt pro Stichwort.",
+        rest: " Jedes offizielle Stichwort der BMS-Liste muss sitzen. MedMaster zeigt den Fortschritt pro Stichwort.",
       },
       {
         bold: "3. KFF täglich trainieren:",
@@ -169,8 +169,8 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
         rest: " Wiederhole Themen nach wissenschaftlich optimierten Intervallen. MedMaster macht das automatisch.",
       },
       {
-        bold: "7. SEK nicht unterschätzen:",
-        rest: " Mit 30% Gewichtung ist SEK der zweitwichtigste Teil. Emotionen erkennen lässt sich trainieren!",
+        bold: "7. KFF nicht unterschätzen:",
+        rest: " Mit 40% Gewichtung ist KFF gleichauf mit BMS der wichtigste Teil. Alle 5 Untertests sind trainierbar!",
       },
       {
         bold: "8. Formeln aktiv üben:",

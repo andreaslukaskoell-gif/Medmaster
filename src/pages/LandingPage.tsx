@@ -32,8 +32,7 @@ const features = [
   {
     icon: ListChecks,
     title: "Offizielle Stichwortliste",
-    description:
-      "Alle 106 offiziellen BMS-Stichworte 2025/2026. Fortschritt pro Stichwort in Echtzeit.",
+    description: "Alle offiziellen BMS-Stichworte 2026. Fortschritt pro Stichwort in Echtzeit.",
     color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {

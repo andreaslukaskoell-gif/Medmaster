@@ -344,7 +344,7 @@ export default function StichwortlistePublic() {
   usePageMeta({
     title: "BMS Stichwortliste 2026 — Offizielle MedAT Themen",
     description:
-      "Alle 106 offiziellen BMS-Stichworte für den MedAT 2026. Biologie, Chemie, Physik, Mathematik — mit Lernfortschritt und Übungsfragen.",
+      "Alle offiziellen BMS-Stichworte für den MedAT 2026. Biologie, Chemie, Physik, Mathematik — mit Lernfortschritt und Übungsfragen.",
     canonical: "https://medmaster.at/bms-stichwortliste-2026",
   });
 
@@ -421,9 +421,8 @@ export default function StichwortlistePublic() {
             BMS Stichwortliste 2026
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2026. Alle 106
-            Stichworte aus Biologie, Chemie, Physik und Mathematik — mit über 4.300 Übungsfragen auf
-            MedMaster.
+            Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2026. Alle Stichworte
+            aus Biologie, Chemie, Physik und Mathematik — mit über 4.300 Übungsfragen auf MedMaster.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             {SUBJECTS.map((s) => (
@@ -512,8 +511,8 @@ export default function StichwortlistePublic() {
             Alle Stichworte mit 4.300+ Fragen üben
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            MedMaster deckt alle 106 offiziellen BMS-Stichworte ab. KI-adaptives Lernen, Fortschritt
-            pro Stichwort und realistische Prüfungssimulationen — komplett kostenlos.
+            MedMaster deckt alle offiziellen BMS-Stichworte ab. KI-adaptives Lernen, Fortschritt pro
+            Stichwort und realistische Prüfungssimulationen — komplett kostenlos.
           </p>
           <Link
             to="/register"

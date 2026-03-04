@@ -20,7 +20,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "Allgemein",
     q: "Wie ist der MedAT aufgebaut?",
-    a: "Der MedAT besteht aus 4 Teilen: BMS (Basiskenntnistest, 40% Gewichtung) mit 40 MC-Fragen aus Biologie, Chemie, Physik und Mathematik; KFF (Kognitive Fähigkeiten, 20%) mit Zahlenfolgen, Wortflüssigkeit, Implikationen, Figuren und Merkfähigkeit; TV (Textverständnis, 10%); und SEK (Sozial-emotionale Kompetenzen, 30%).",
+    a: "Der MedAT besteht aus 4 Teilen: BMS (Basiskenntnistest, 40% Gewichtung) mit 94 MC-Fragen aus Biologie (40), Chemie (24), Physik (18) und Mathematik (12); KFF (Kognitive Fähigkeiten, 40%) mit Figuren zusammensetzen, Zahlenfolgen, Wortflüssigkeit, Implikationen und Merkfähigkeit; TV (Textverständnis, 10%); und SEK (Sozial-emotionale Kompetenzen, 10%).",
   },
   {
     category: "Allgemein",
@@ -36,12 +36,12 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "BMS",
     q: "Was kommt im BMS-Teil des MedAT?",
-    a: "Der BMS umfasst 40 Multiple-Choice-Fragen mit je 5 Antwortmöglichkeiten (A–E) aus Biologie, Chemie, Physik und Mathematik. Pro Frage ist genau eine Antwort richtig. Die Themen basieren auf der offiziellen Stichwortliste.",
+    a: "Der BMS umfasst 94 Multiple-Choice-Fragen mit je 5 Antwortmöglichkeiten (A–E): Biologie (40), Chemie (24), Physik (18) und Mathematik (12). Pro Frage ist genau eine Antwort richtig. Bearbeitungszeit: 75 Minuten. Die Themen basieren auf der offiziellen Stichwortliste.",
   },
   {
     category: "BMS",
     q: "Was steht auf der offiziellen Stichwortliste?",
-    a: "Die offizielle Stichwortliste umfasst 106 Themen aus Biologie (Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie), Chemie (Allgemeine Chemie, Organische Chemie, Biochemie), Physik (Mechanik, Thermodynamik, Elektrizität, Optik) und Mathematik (Algebra, Stochastik, Einheiten). MedMaster deckt alle 106 Stichworte ab.",
+    a: "Die offizielle Stichwortliste umfasst über 230 Themen aus Biologie (Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie), Chemie (Allgemeine Chemie, Organische Chemie, Biochemie), Physik (Mechanik, Thermodynamik, Elektrizität, Optik) und Mathematik (Algebra, Stochastik, Einheiten). MedMaster deckt alle offiziellen Stichworte ab.",
   },
   {
     category: "BMS",
