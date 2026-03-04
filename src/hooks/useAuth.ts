@@ -148,32 +148,13 @@ export function useAuth() {
     return { error };
   }
 
-  function signInWithGoogle(): Promise<{ error: Error | null }> {
-    if (!supabase) return Promise.resolve({ error: new Error("Supabase nicht konfiguriert") });
-
-    const google = (window as any).google;
-    if (!google?.accounts?.id) {
-      // GIS not loaded — fall back to OAuth redirect as last resort
-      return supabase.auth.signInWithOAuth({ provider: "google" }).then(({ error }) => ({
-        error: error ? new Error(error.message) : null,
-      }));
-    }
-
-    return new Promise((resolve) => {
-      google.accounts.id.initialize({
-        client_id: "828915094138-g93th1a4o8nh4ci4nmnhr4o8p3rkv8oq.apps.googleusercontent.com",
-        callback: async (response: any) => {
-          const { error } = await supabase!.auth.signInWithIdToken({
-            provider: "google",
-            token: response.credential,
-          });
-          resolve({ error: error ? new Error(error.message) : null });
-        },
-      });
-
-      // Show Google One Tap popup
-      google.accounts.id.prompt();
+  async function signInWithGoogle(): Promise<{ error: Error | null }> {
+    if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: window.location.origin + "/dashboard" },
     });
+    return { error: error ? new Error(error.message) : null };
   }
 
   async function signOut() {
