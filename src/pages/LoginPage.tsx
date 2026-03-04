@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,14 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function LoginPage() {
   usePageTitle("Anmelden");
+  useEffect(() => {
+    ["static-landing", "static-register", "static-login"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "none";
+    });
+    const root = document.getElementById("root");
+    if (root) root.style.display = "";
+  }, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);

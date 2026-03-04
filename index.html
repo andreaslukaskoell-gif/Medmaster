@@ -126,6 +126,30 @@
       .sl-feat-icon{width:40px;height:40px;border-radius:10px;background:#e8ecf7;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
       .sl-feat h3{font-size:0.95rem;font-weight:700;margin-bottom:2px}
       .sl-feat p{font-size:0.82rem;color:#64748b;line-height:1.4;margin:0}
+      /* Static auth forms */
+      .sl-auth{min-height:100vh;display:none;flex-direction:column;background:#f8fafc;color:#1e293b}
+      .sl-auth-card{max-width:420px;width:100%;margin:40px auto;padding:32px;background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+      .sl-auth-card h2{font-size:1.5rem;font-weight:700;margin-bottom:6px}
+      .sl-auth-card .desc{font-size:0.9rem;color:#64748b;margin-bottom:24px}
+      .sl-auth-card label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:6px;color:#374151}
+      .sl-auth-card input{width:100%;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:0.95rem;margin-bottom:16px;outline:none;transition:border-color 0.15s}
+      .sl-auth-card input:focus{border-color:#1b3ea7}
+      .sl-auth-card .btn{width:100%;padding:12px;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity 0.15s}
+      .sl-auth-card .btn-primary{background:#1b3ea7;color:#fff}
+      .sl-auth-card .btn-primary:hover{opacity:0.9}
+      .sl-auth-card .btn-google{background:#fff;color:#333;border:1.5px solid #e2e8f0;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px}
+      .sl-auth-card .divider{text-align:center;color:#94a3b8;font-size:0.8rem;margin:16px 0;position:relative}
+      .sl-auth-card .divider::before,.sl-auth-card .divider::after{content:'';position:absolute;top:50%;width:40%;height:1px;background:#e2e8f0}
+      .sl-auth-card .divider::before{left:0}
+      .sl-auth-card .divider::after{right:0}
+      .sl-auth-card .link{text-align:center;font-size:0.85rem;color:#64748b;margin-top:20px}
+      .sl-auth-card .link a{color:#1b3ea7;text-decoration:none;font-weight:600}
+      .sl-auth-card .agb{display:flex;align-items:flex-start;gap:8px;margin-bottom:16px;font-size:0.8rem;color:#64748b}
+      .sl-auth-card .agb input{width:auto;margin:3px 0 0 0}
+      .sl-auth-card .agb a{color:#1b3ea7;text-decoration:none}
+      .sl-loading{display:none;align-items:center;justify-content:center;margin:8px 0;font-size:0.85rem;color:#64748b;gap:8px}
+      .sl-loading .spinner{width:16px;height:16px;border:2px solid #e2e8f0;border-top-color:#1b3ea7;border-radius:50%;animation:spin 0.6s linear infinite}
+      .sl-error{display:none;background:#fef2f2;color:#dc2626;padding:10px 14px;border-radius:10px;font-size:0.85rem;margin-bottom:16px}
       @media(prefers-color-scheme:dark){
         #static-landing{background:#0f172a;color:#e2e8f0}
         .sl-nav{background:rgba(15,23,42,0.92);border-color:#1e293b}
@@ -134,6 +158,12 @@
         .sl-feat{border-color:#1e293b}
         .sl-feat p{color:#94a3b8}
         .sl-feat-icon{background:#1e293b}
+        .sl-auth{background:#0f172a;color:#e2e8f0}
+        .sl-auth-card{background:#1e293b;box-shadow:none}
+        .sl-auth-card label{color:#e2e8f0}
+        .sl-auth-card input{background:#0f172a;border-color:#334155;color:#e2e8f0}
+        .sl-auth-card .btn-google{background:#0f172a;border-color:#334155;color:#e2e8f0}
+        .sl-auth-card .desc,.sl-auth-card .link{color:#94a3b8}
       }
     </style>
     <!-- Google Identity Services (popup login, no redirect to supabase URL) -->
@@ -172,6 +202,60 @@
         <div class="sl-feat"><div class="sl-feat-icon">📈</div><div><h3>Fortschritt & Prognose</h3><p>Live-Tracking pro Fach. KI-gestützte Prüfungstag-Prognose.</p></div></div>
       </div>
     </div>
+    <!-- Static Register Page -->
+    <div id="static-register" class="sl-auth">
+      <nav class="sl-nav">
+        <a href="/" class="sl-logo" style="text-decoration:none;color:inherit">
+          <div class="sl-logo-icon">M</div>MedMaster
+        </a>
+        <div class="sl-nav-links"><a href="/login">Anmelden</a></div>
+      </nav>
+      <div class="sl-auth-card">
+        <h2>Konto erstellen</h2>
+        <p class="desc">Starte jetzt mit 2 Wochen gratis Zugang.</p>
+        <div id="reg-error" class="sl-error"></div>
+        <form id="reg-form" autocomplete="on">
+          <label for="reg-user">Username</label>
+          <input id="reg-user" name="username" type="text" placeholder="Dein Username" required minlength="3" autocomplete="username">
+          <label for="reg-email">E-Mail</label>
+          <input id="reg-email" name="email" type="email" placeholder="deine@email.at" required autocomplete="email">
+          <label for="reg-pass">Passwort</label>
+          <input id="reg-pass" name="password" type="password" placeholder="Mind. 6 Zeichen" required minlength="6" autocomplete="new-password">
+          <div class="agb">
+            <input type="checkbox" id="reg-agb" required>
+            <label for="reg-agb" style="margin:0;font-weight:400">Ich akzeptiere die <a href="/legal">AGB</a> und <a href="/legal">Datenschutzerklärung</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrieren</button>
+        </form>
+        <div id="reg-loading" class="sl-loading"><div class="spinner"></div>Konto wird erstellt...</div>
+        <div class="link">Bereits registriert? <a href="/login">Anmelden</a></div>
+      </div>
+    </div>
+
+    <!-- Static Login Page -->
+    <div id="static-login" class="sl-auth">
+      <nav class="sl-nav">
+        <a href="/" class="sl-logo" style="text-decoration:none;color:inherit">
+          <div class="sl-logo-icon">M</div>MedMaster
+        </a>
+        <div class="sl-nav-links"><a href="/register" class="primary">Registrieren</a></div>
+      </nav>
+      <div class="sl-auth-card">
+        <h2>Anmelden</h2>
+        <p class="desc">Willkommen zurück!</p>
+        <div id="login-error" class="sl-error"></div>
+        <form id="login-form" autocomplete="on">
+          <label for="login-email">E-Mail</label>
+          <input id="login-email" name="email" type="email" placeholder="deine@email.at" required autocomplete="email">
+          <label for="login-pass">Passwort</label>
+          <input id="login-pass" name="password" type="password" placeholder="Passwort" required autocomplete="current-password">
+          <button type="submit" class="btn btn-primary">Anmelden</button>
+        </form>
+        <div id="login-loading" class="sl-loading"><div class="spinner"></div>Wird angemeldet...</div>
+        <div class="link">Noch kein Konto? <a href="/register">Kostenlos registrieren</a></div>
+      </div>
+    </div>
+
     <div id="root" style="display:none">
       <div id="root-loader">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -182,24 +266,43 @@
     </div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
-      // When React mounts, hide static landing and show React root
+      // Show correct static page based on URL
+      (function() {
+        var path = location.pathname;
+        if (path === '/register') {
+          document.getElementById('static-landing').style.display = 'none';
+          document.getElementById('static-register').style.display = 'flex';
+        } else if (path === '/login') {
+          document.getElementById('static-landing').style.display = 'none';
+          document.getElementById('static-login').style.display = 'flex';
+        }
+        // For all other routes, hide static pages immediately and show React loader
+        if (path !== '/' && path !== '/register' && path !== '/login') {
+          document.getElementById('static-landing').style.display = 'none';
+          document.getElementById('root').style.display = '';
+        }
+      })();
+
+      // When React mounts a real component, swap to React
       var observer = new MutationObserver(function() {
         var root = document.getElementById('root');
         if (root && root.children.length > 0 && !root.querySelector('#root-loader')) {
           document.getElementById('static-landing').style.display = 'none';
+          document.getElementById('static-register').style.display = 'none';
+          document.getElementById('static-login').style.display = 'none';
           root.style.display = '';
           observer.disconnect();
         }
       });
       observer.observe(document.getElementById('root'), { childList: true, subtree: true });
-      // Fallback: after 8s, show React root regardless
+      // Fallback: after 10s, show React root regardless
       setTimeout(function() {
-        var sl = document.getElementById('static-landing');
-        var root = document.getElementById('root');
-        if (sl) sl.style.display = 'none';
-        if (root) root.style.display = '';
+        document.getElementById('static-landing').style.display = 'none';
+        document.getElementById('static-register').style.display = 'none';
+        document.getElementById('static-login').style.display = 'none';
+        document.getElementById('root').style.display = '';
         observer.disconnect();
-      }, 8000);
+      }, 10000);
     </script>
   </body>
 </html>
