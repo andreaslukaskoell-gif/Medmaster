@@ -60,6 +60,7 @@ const Legal = lazy(() => import("@/pages/Legal"));
 const Einstellungen = lazy(() => import("@/pages/Einstellungen"));
 const BMSDemo = lazy(() => import("@/pages/BMSDemo"));
 const SubjectDemo = lazy(() => import("@/pages/SubjectDemo"));
+const QuizChallenge = lazy(() => import("@/pages/QuizChallenge"));
 
 function LoadingSpinner() {
   return (
@@ -163,6 +164,7 @@ export default function App() {
           <Route path="/agb" element={<Legal />} />
           <Route path="/medat-uebungsfragen" element={<BMSDemo />} />
           <Route path="/medat-:subject-fragen" element={<SubjectDemo />} />
+          <Route path="/challenge" element={<QuizChallenge />} />
 
           {/* Protected routes */}
           <Route
