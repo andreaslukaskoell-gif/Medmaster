@@ -283,26 +283,14 @@
         }
       })();
 
-      // When React mounts a real component, swap to React
-      var observer = new MutationObserver(function() {
-        var root = document.getElementById('root');
-        if (root && root.children.length > 0 && !root.querySelector('#root-loader')) {
-          document.getElementById('static-landing').style.display = 'none';
-          document.getElementById('static-register').style.display = 'none';
-          document.getElementById('static-login').style.display = 'none';
-          root.style.display = '';
-          observer.disconnect();
-        }
-      });
-      observer.observe(document.getElementById('root'), { childList: true, subtree: true });
-      // Fallback: after 10s, show React root regardless
+      // No MutationObserver — React pages hide static HTML themselves via useEffect.
+      // Fallback: after 15s if React never loads, show root anyway
       setTimeout(function() {
         document.getElementById('static-landing').style.display = 'none';
         document.getElementById('static-register').style.display = 'none';
         document.getElementById('static-login').style.display = 'none';
         document.getElementById('root').style.display = '';
-        observer.disconnect();
-      }, 10000);
+      }, 15000);
     </script>
   </body>
 </html>
