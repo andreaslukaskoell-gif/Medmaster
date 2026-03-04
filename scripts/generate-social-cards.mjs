@@ -57,14 +57,19 @@ function seededShuffle(arr, seed) {
 
 // ── Load questions ────────────────────────────────────────────
 async function loadQuestions() {
-  try {
-    const mod = await import("tsx/esm/api");
-    const bms = await mod.tsImport("../src/data/bms/index.ts", import.meta.url);
-    return bms.allBmsQuestions;
-  } catch {
-    const bms = await import("../src/data/bms/index.ts");
-    return bms.allBmsQuestions;
-  }
+  const mod = await import("tsx/esm/api");
+  const pools = await Promise.all([
+    mod.tsImport("../src/data/bms/biologiePool.ts", import.meta.url),
+    mod.tsImport("../src/data/bms/chemiePool.ts", import.meta.url),
+    mod.tsImport("../src/data/bms/physikPool.ts", import.meta.url),
+    mod.tsImport("../src/data/bms/mathematikPool.ts", import.meta.url),
+  ]);
+  return [
+    ...pools[0].biologiePoolQuestions,
+    ...pools[1].chemiePoolQuestions,
+    ...pools[2].physikPoolQuestions,
+    ...pools[3].mathematikPoolQuestions,
+  ];
 }
 
 // ── HTML template for question card ───────────────────────────
@@ -74,9 +79,9 @@ function questionCardHTML(q, index, total) {
   const options = q.options
     .map(
       (opt, i) => `
-    <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:#f8fafc;border-radius:16px;border:2px solid #e2e8f0;">
-      <div style="min-width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:${c.bg};background:${c.light};">${OPTION_LABELS[i]}</div>
-      <div style="font-size:20px;color:#334155;line-height:1.4;">${opt.text}</div>
+    <div style="display:flex;align-items:center;gap:20px;padding:20px 24px;background:#f8fafc;border-radius:20px;border:2px solid #e2e8f0;">
+      <div style="min-width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;color:${c.bg};background:${c.light};">${OPTION_LABELS[i]}</div>
+      <div style="font-size:28px;color:#334155;line-height:1.35;">${opt.text}</div>
     </div>`
     )
     .join("\n");
@@ -90,23 +95,23 @@ function questionCardHTML(q, index, total) {
   <!-- Header -->
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;">
     <div style="display:flex;align-items:center;gap:12px;">
-      <div style="font-size:28px;font-weight:800;color:white;opacity:0.95;">MedMaster</div>
-      <div style="padding:6px 16px;border-radius:20px;background:${c.bg};color:white;font-size:16px;font-weight:700;">${label}</div>
+      <div style="font-size:36px;font-weight:800;color:white;opacity:0.95;">MedMaster</div>
+      <div style="padding:8px 20px;border-radius:20px;background:${c.bg};color:white;font-size:20px;font-weight:700;">${label}</div>
     </div>
-    <div style="font-size:18px;color:rgba(255,255,255,0.5);font-weight:600;">Frage ${index}/${total}</div>
+    <div style="font-size:22px;color:rgba(255,255,255,0.5);font-weight:600;">Frage ${index}/${total}</div>
   </div>
 
   <!-- Card -->
-  <div style="flex:1;background:white;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:20px;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
-    <div style="font-size:26px;font-weight:700;color:#1e293b;line-height:1.4;margin-bottom:8px;">${q.text}</div>
-    <div style="display:flex;flex-direction:column;gap:12px;">
+  <div style="flex:1;background:white;border-radius:24px;padding:44px;display:flex;flex-direction:column;gap:20px;box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+    <div style="font-size:32px;font-weight:700;color:#1e293b;line-height:1.35;margin-bottom:8px;">${q.text}</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
       ${options}
     </div>
   </div>
 
   <!-- Footer -->
   <div style="text-align:center;margin-top:24px;">
-    <div style="font-size:20px;color:rgba(255,255,255,0.7);font-weight:600;">medmaster.at — Kostenlos üben</div>
+    <div style="font-size:26px;color:rgba(255,255,255,0.7);font-weight:600;">medmaster.at — Kostenlos üben</div>
   </div>
 </div>
 </body></html>`;
@@ -130,16 +135,17 @@ function answerCardHTML(q) {
       const check = isCorrect ? '<div style="margin-left:auto;font-size:24px;color:#22c55e;">✓</div>' : "";
 
       return `
-    <div style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:${bg};border-radius:16px;border:${borderW}px solid ${border};">
-      <div style="min-width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:${labelColor};background:${labelBg};">${OPTION_LABELS[i]}</div>
-      <div style="font-size:20px;color:${textColor};line-height:1.4;">${opt.text}</div>
+    <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;background:${bg};border-radius:20px;border:${borderW}px solid ${border};">
+      <div style="min-width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:${labelColor};background:${labelBg};">${OPTION_LABELS[i]}</div>
+      <div style="font-size:26px;color:${textColor};line-height:1.35;">${opt.text}</div>
       ${check}
     </div>`;
     })
     .join("\n");
 
-  // Truncate explanation to fit
-  const expl = q.explanation.length > 200 ? q.explanation.slice(0, 197) + "..." : q.explanation;
+  // Strip markdown bold markers and truncate explanation to fit
+  const rawExpl = q.explanation.replace(/\*\*(.*?)\*\*/g, "$1");
+  const expl = rawExpl.length > 200 ? rawExpl.slice(0, 197) + "..." : rawExpl;
 
   return `<!DOCTYPE html><html><head><meta charset="utf-8">
 <style>
@@ -170,7 +176,7 @@ function answerCardHTML(q) {
 
   <!-- Footer -->
   <div style="text-align:center;margin-top:24px;">
-    <div style="font-size:20px;color:rgba(255,255,255,0.7);font-weight:600;">medmaster.at — Kostenlos üben</div>
+    <div style="font-size:26px;color:rgba(255,255,255,0.7);font-weight:600;">medmaster.at — Kostenlos üben</div>
   </div>
 </div>
 </body></html>`;
