@@ -397,6 +397,97 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* SEO Internal Links */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 text-center mb-8">
+            MedAT 2026 Vorbereitung
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <Link
+              to="/medat-uebungsfragen"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">✏️</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                MedAT Übungsfragen
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">BMS + KFF kostenlos</span>
+            </Link>
+            <Link
+              to="/medat-guide"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">📖</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                MedAT 2026 Guide
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">Alles zum Test</span>
+            </Link>
+            <Link
+              to="/faq"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">❓</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Häufige Fragen
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">FAQ zum MedAT</span>
+            </Link>
+            <Link
+              to="/medat-biologie-fragen"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">🧬</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                BMS Biologie
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">1.100+ Fragen</span>
+            </Link>
+            <Link
+              to="/medat-chemie-fragen"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">⚗️</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                BMS Chemie
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">1.400+ Fragen</span>
+            </Link>
+            <Link
+              to="/medat-physik-fragen"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">⚡</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                BMS Physik
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">1.300+ Fragen</span>
+            </Link>
+            <Link
+              to="/medat-mathematik-fragen"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">📊</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                BMS Mathematik
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">490+ Fragen</span>
+            </Link>
+            <Link
+              to="/challenge"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+            >
+              <span className="text-2xl">🏆</span>
+              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                Quiz Challenge
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">Teile dein Ergebnis</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Launch Banner — alles gratis */}
       <section id="preise" className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -467,6 +558,15 @@ export default function LandingPage() {
             <span className="text-sm font-semibold text-gray-300">MedMaster</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
+            <Link to="/medat-guide" className="hover:text-gray-300 transition-colors">
+              MedAT Guide
+            </Link>
+            <Link to="/faq" className="hover:text-gray-300 transition-colors">
+              FAQ
+            </Link>
+            <Link to="/medat-uebungsfragen" className="hover:text-gray-300 transition-colors">
+              Übungsfragen
+            </Link>
             <Link to="/impressum" className="hover:text-gray-300 transition-colors">
               Impressum
             </Link>

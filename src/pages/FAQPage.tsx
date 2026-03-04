@@ -1,0 +1,262 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { GraduationCap, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+
+const NAVY = "#1b3ea7";
+
+const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
+  // Allgemein
+  {
+    category: "Allgemein",
+    q: "Was ist der MedAT?",
+    a: "Der MedAT (Medizinischer Aufnahmetest) ist der Aufnahmetest für das Medizinstudium an allen öffentlichen Medizin-Universitäten in Österreich: Wien, Graz, Innsbruck und Linz. Er findet jährlich im Juli statt und besteht aus 4 Testteilen: BMS, KFF, TV und SEK.",
+  },
+  {
+    category: "Allgemein",
+    q: "Wann findet der MedAT 2026 statt?",
+    a: "Der MedAT 2026 findet voraussichtlich Anfang Juli 2026 statt. Die Anmeldung öffnet typischerweise im März. Genaue Termine werden von den Medizin-Universitäten auf medizinstudieren.at veröffentlicht.",
+  },
+  {
+    category: "Allgemein",
+    q: "Wie ist der MedAT aufgebaut?",
+    a: "Der MedAT besteht aus 4 Teilen: BMS (Basiskenntnistest, 40% Gewichtung) mit 40 MC-Fragen aus Biologie, Chemie, Physik und Mathematik; KFF (Kognitive Fähigkeiten, 20%) mit Zahlenfolgen, Wortflüssigkeit, Implikationen, Figuren und Merkfähigkeit; TV (Textverständnis, 10%); und SEK (Sozial-emotionale Kompetenzen, 30%).",
+  },
+  {
+    category: "Allgemein",
+    q: "Wie viele Plätze gibt es im Medizinstudium in Österreich?",
+    a: "In Österreich stehen jährlich rund 1.850 Studienplätze für Humanmedizin zur Verfügung (Wien ~740, Graz ~360, Innsbruck ~400, Linz ~310). Dem stehen typischerweise 12.000–16.000 Bewerber/innen gegenüber.",
+  },
+  {
+    category: "Allgemein",
+    q: "Wer kann am MedAT teilnehmen?",
+    a: "Alle Personen mit Hochschulreife (Matura, Abitur oder Äquivalent) können am MedAT teilnehmen. Es gibt keine Altersbeschränkung. Eine Anmeldung ist über medizinstudieren.at erforderlich.",
+  },
+  // BMS
+  {
+    category: "BMS",
+    q: "Was kommt im BMS-Teil des MedAT?",
+    a: "Der BMS umfasst 40 Multiple-Choice-Fragen mit je 5 Antwortmöglichkeiten (A–E) aus Biologie, Chemie, Physik und Mathematik. Pro Frage ist genau eine Antwort richtig. Die Themen basieren auf der offiziellen Stichwortliste.",
+  },
+  {
+    category: "BMS",
+    q: "Was steht auf der offiziellen Stichwortliste?",
+    a: "Die offizielle Stichwortliste umfasst 106 Themen aus Biologie (Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie), Chemie (Allgemeine Chemie, Organische Chemie, Biochemie), Physik (Mechanik, Thermodynamik, Elektrizität, Optik) und Mathematik (Algebra, Stochastik, Einheiten). MedMaster deckt alle 106 Stichworte ab.",
+  },
+  {
+    category: "BMS",
+    q: "Wie viele Fragen hat MedMaster für den BMS-Teil?",
+    a: "MedMaster bietet über 4.300 BMS-Fragen: 1.113 Biologie, 1.426 Chemie, 1.316 Physik und 494 Mathematik. Jede Frage hat 5 Antwortoptionen, eine ausführliche Erklärung und einen Schwierigkeitsgrad (leicht/mittel/schwer).",
+  },
+  // KFF
+  {
+    category: "KFF",
+    q: "Was sind die KFF-Untertests?",
+    a: "KFF steht für Kognitive Fähigkeiten und Fertigkeiten. Die 5 Untertests sind: Zahlenfolgen (Muster erkennen), Wortflüssigkeit (Buchstaben zu Wörtern), Implikationen erkennen (logisches Schließen), Figuren zusammensetzen (räumliches Denken) und Gedächtnis & Merkfähigkeit (Allergieausweise merken).",
+  },
+  {
+    category: "KFF",
+    q: "Kann man KFF trainieren?",
+    a: "Ja! KFF-Aufgaben sind trainierbar. MedMaster generiert algorithmisch unbegrenzt viele Übungsaufgaben für Zahlenfolgen, Wortflüssigkeit und Implikationen. Für Figuren und Merkfähigkeit gibt es ebenfalls umfangreiche Übungsmöglichkeiten.",
+  },
+  // Vorbereitung
+  {
+    category: "Vorbereitung",
+    q: "Wie lange sollte man sich auf den MedAT vorbereiten?",
+    a: "Die meisten erfolgreichen Kandidat/innen bereiten sich 3–6 Monate intensiv vor. Empfohlen: BMS-Theorie ab 6 Monaten vorher, KFF-Training ab 3 Monaten, Simulationen ab 1 Monat vor dem Test. MedMaster bietet alle Tools dafür.",
+  },
+  {
+    category: "Vorbereitung",
+    q: "Welche Bücher brauche ich neben MedMaster?",
+    a: "MedMaster deckt den gesamten BMS-Stoff mit 174 Lerneinheiten ab. Ergänzend empfehlen viele ein Biologie-Lehrbuch (z.B. Campbell) und die offizielle Stichwortliste. Für KFF und SEK reicht MedMaster als alleiniges Tool.",
+  },
+  {
+    category: "Vorbereitung",
+    q: "Kann ich mich nur mit MedMaster auf den MedAT vorbereiten?",
+    a: "MedMaster bietet eine umfassende Vorbereitung: 4.300+ BMS-Fragen, KFF-Training, Textverständnis, SEK-Übungen und Prüfungssimulationen. Viele Nutzer ergänzen mit einem Lehrbuch für die Theorie, aber die Übungskomponente ist vollständig abgedeckt.",
+  },
+  // MedMaster
+  {
+    category: "MedMaster",
+    q: "Ist MedMaster wirklich kostenlos?",
+    a: "Ja. Alle 4.300+ Fragen, alle 4 Testbereiche, das KI-Lernsystem und alle Features sind komplett kostenlos. Es gibt kein Abo, keine versteckten Kosten und keine Premium-Version.",
+  },
+  {
+    category: "MedMaster",
+    q: "Was ist das KI-adaptive Lernsystem?",
+    a: "Das KI-System analysiert deine Antworten in Echtzeit, erkennt Wissenslücken und passt die Frageauswahl automatisch an. Schwache Themen werden häufiger wiederholt (Spaced Repetition), starke Themen seltener. So lernst du effizienter.",
+  },
+  {
+    category: "MedMaster",
+    q: "Gibt es eine MedMaster-App?",
+    a: "MedMaster ist eine Web-App, die auf allen Geräten im Browser funktioniert (Desktop, Tablet, Smartphone). Du kannst sie als Progressive Web App (PWA) auf deinem Homescreen installieren — ohne App Store.",
+  },
+  {
+    category: "MedMaster",
+    q: "Wie realistisch sind die Prüfungssimulationen?",
+    a: "Die MedMaster-Simulationen bilden den echten MedAT ab: 40 BMS-Fragen unter Zeitdruck, zufällige Fragenauswahl aus dem gesamten Pool, detaillierte Auswertung nach Fach und Schwierigkeitsgrad. Ideal für die letzten Wochen vor dem Test.",
+  },
+  {
+    category: "MedMaster",
+    q: "Wie unterscheidet sich MedMaster von anderen MedAT-Kursen?",
+    a: "MedMaster ist komplett kostenlos und bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Zusätzlich: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben, Prüfungstag-Prognose und alle 4 Testbereiche in einer App.",
+  },
+];
+
+const CATEGORIES = [...new Set(FAQ_ITEMS.map((f) => f.category))];
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-gray-100 dark:border-gray-800 last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-start justify-between gap-4 py-5 text-left"
+      >
+        <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 leading-relaxed">
+          {q}
+        </h3>
+        {open ? (
+          <ChevronUp className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+        ) : (
+          <ChevronDown className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+        )}
+      </button>
+      {open && (
+        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed pb-5 -mt-1">{a}</p>
+      )}
+    </div>
+  );
+}
+
+export default function FAQPage() {
+  usePageMeta({
+    title: "FAQ — Häufige Fragen zum MedAT 2026",
+    description:
+      "Antworten auf die häufigsten Fragen zum MedAT 2026: Testaufbau, BMS, KFF, Vorbereitung, Anmeldung und MedMaster. Alles was du wissen musst.",
+    canonical: "https://medmaster.at/faq",
+    ogImage: "https://medmaster.at/og-image.svg",
+  });
+
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQ_ITEMS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <nav className="sticky top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <div
+              className="w-8 h-8 rounded-xl flex items-center justify-center text-white"
+              style={{ backgroundColor: NAVY }}
+            >
+              <GraduationCap className="w-4 h-4" />
+            </div>
+            <span className="text-lg font-bold text-gray-900 dark:text-gray-100">MedMaster</span>
+          </Link>
+          <Link
+            to="/register"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-white px-4 py-2 rounded-xl"
+            style={{ backgroundColor: NAVY }}
+          >
+            Gratis testen <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </nav>
+
+      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
+            Häufige Fragen zum MedAT 2026
+          </h1>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Alles was du über den MedAT, die Vorbereitung und MedMaster wissen musst.
+          </p>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+        {CATEGORIES.map((cat) => (
+          <section key={cat}>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">{cat}</h2>
+            <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 px-6">
+              {FAQ_ITEMS.filter((f) => f.category === cat).map((f) => (
+                <FAQItem key={f.q} q={f.q} a={f.a} />
+              ))}
+            </div>
+          </section>
+        ))}
+
+        {/* Internal links */}
+        <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Link
+            to="/medat-guide"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+          >
+            <span className="text-2xl">📖</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              MedAT 2026 Guide
+            </span>
+            <span className="text-xs text-gray-500">Kompletter Überblick</span>
+          </Link>
+          <Link
+            to="/medat-uebungsfragen"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+          >
+            <span className="text-2xl">✏️</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              Übungsfragen testen
+            </span>
+            <span className="text-xs text-gray-500">BMS + KFF kostenlos</span>
+          </Link>
+          <Link
+            to="/register"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+          >
+            <span className="text-2xl">🚀</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              Kostenlos starten
+            </span>
+            <span className="text-xs text-gray-500">4.300+ Fragen</span>
+          </Link>
+        </section>
+      </main>
+
+      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <GraduationCap className="w-4 h-4 text-gray-400" />
+            <span className="text-sm font-semibold text-gray-500">MedMaster</span>
+          </div>
+          <div className="flex gap-4 text-xs text-gray-400">
+            <Link to="/impressum" className="hover:text-gray-600 transition-colors">
+              Impressum
+            </Link>
+            <Link to="/datenschutz" className="hover:text-gray-600 transition-colors">
+              Datenschutz
+            </Link>
+            <Link to="/agb" className="hover:text-gray-600 transition-colors">
+              AGB
+            </Link>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

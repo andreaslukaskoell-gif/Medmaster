@@ -1,0 +1,40 @@
+# MedMaster — Kostenlose MedAT 2026 Vorbereitung
+
+> MedMaster ist eine kostenlose Lernplattform für den MedAT (Medizinischer Aufnahmetest) in Österreich. Die App bietet über 4.300 Übungsfragen, KI-adaptives Lernen und realistische Prüfungssimulationen.
+
+## Was ist MedMaster?
+
+MedMaster ist die umfangreichste kostenlose MedAT-Vorbereitungsplattform im deutschsprachigen Raum. Entwickelt von MedAT-Absolventen, deckt sie alle 4 Testbereiche ab:
+
+- **BMS (Basiskenntnistest für Medizinische Studien):** 4.300+ Fragen in Biologie (1.113), Chemie (1.426), Physik (1.316), Mathematik (494)
+- **KFF (Kognitive Fähigkeiten und Fertigkeiten):** Zahlenfolgen, Wortflüssigkeit, Implikationen erkennen, Figuren zusammensetzen, Gedächtnis & Merkfähigkeit
+- **TV (Textverständnis):** 10 Textsets mit 120 MC-Fragen
+- **SEK (Sozial-emotionale Kompetenzen):** Emotionen erkennen, Emotionen regulieren, Soziales Entscheiden — 100 Aufgaben
+
+## Features
+
+- KI-adaptives Lernsystem (erkennt Schwächen automatisch)
+- Spaced Repetition System
+- Realistische Prüfungssimulation unter Zeitdruck
+- Offizielle Stichwortliste 2025/2026
+- 174 Lerneinheiten mit Erklärungen und Diagrammen
+- Fortschritts-Tracking und Prüfungstag-Prognose
+- Komplett kostenlos — kein Abo nötig
+
+## Öffentliche Seiten
+
+- https://medmaster.at — Startseite
+- https://medmaster.at/medat-uebungsfragen — Kostenlose Übungsfragen (BMS + KFF)
+- https://medmaster.at/medat-biologie-fragen — Biologie Übungsfragen
+- https://medmaster.at/medat-chemie-fragen — Chemie Übungsfragen
+- https://medmaster.at/medat-physik-fragen — Physik Übungsfragen
+- https://medmaster.at/medat-mathematik-fragen — Mathematik Übungsfragen
+- https://medmaster.at/faq — Häufige Fragen zum MedAT
+- https://medmaster.at/medat-guide — MedAT 2026: Alles was du wissen musst
+- https://medmaster.at/register — Kostenlos registrieren
+- https://medmaster.at/login — Anmelden
+
+## Kontakt
+
+- Website: https://medmaster.at
+- E-Mail: kontakt@medmaster.at

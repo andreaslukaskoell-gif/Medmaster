@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 Disallow: /app/
+Disallow: /dashboard
+Disallow: /onboarding
+Disallow: /admin/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
 Sitemap: https://medmaster.at/sitemap.xml

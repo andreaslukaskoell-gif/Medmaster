@@ -1,0 +1,122 @@
+# MedMaster — Vollständige Plattformbeschreibung
+
+> MedMaster (https://medmaster.at) ist eine kostenlose, KI-gestützte Lernplattform für den MedAT 2026 — den Medizinischen Aufnahmetest für das Medizinstudium in Österreich.
+
+## Über den MedAT
+
+Der MedAT (Medizinischer Aufnahmetest) ist der Aufnahmetest für das Medizinstudium an allen öffentlichen Medizin-Universitäten in Österreich (Wien, Graz, Innsbruck, Linz). Er besteht aus 4 Testteilen:
+
+1. **BMS (Basiskenntnistest für Medizinische Studien)** — 40% der Gesamtwertung
+   - Biologie, Chemie, Physik, Mathematik
+   - 40 MC-Fragen mit je 5 Antwortmöglichkeiten (A–E)
+   - Nur eine Antwort ist richtig
+
+2. **KFF (Kognitive Fähigkeiten und Fertigkeiten)** — 20% der Gesamtwertung
+   - Zahlenfolgen, Wortflüssigkeit, Implikationen erkennen
+   - Figuren zusammensetzen, Gedächtnis & Merkfähigkeit
+
+3. **TV (Textverständnis)** — 10% der Gesamtwertung
+   - Wissenschaftliche Texte lesen und Fragen beantworten
+
+4. **SEK (Sozial-emotionale Kompetenzen)** — 30% der Gesamtwertung (ab 2026)
+   - Emotionen erkennen, Emotionen regulieren, Soziales Entscheiden
+
+## MedMaster Inhalte im Detail
+
+### BMS-Fragenpool: 4.300+ Fragen
+
+| Fach | Fragen | Kapitel | Themen |
+|------|--------|---------|--------|
+| Biologie | 1.113 | 58 UKs | Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie, Mikrobiologie |
+| Chemie | 1.426 | 50 UKs | Allgemeine Chemie, Organische Chemie, Biochemie, Stöchiometrie, Elektrochemie |
+| Physik | 1.316 | 34 UKs | Mechanik, Thermodynamik, Elektrizität, Optik, Akustik, Atomphysik |
+| Mathematik | 494 | 32 UKs | Algebra, Stochastik, Gleichungen, Einheiten, Bruchrechnung, Trigonometrie |
+
+Alle Fragen haben:
+- 5 Antwortoptionen (A–E) im MedAT-Format
+- Genau eine richtige Antwort
+- Ausführliche Erklärung
+- Schwierigkeitsgrad 1–3 (leicht/mittel/schwer)
+- Fragetypen: Einzelauswahl (Typ A), Kombinationsaufgaben (Typ K), Rechenaufgaben (Typ M)
+
+### KFF-Module
+
+- **Zahlenfolgen:** Algorithmisch generierte Aufgaben mit steigender Schwierigkeit, validierte Eindeutigkeit
+- **Wortflüssigkeit:** Buchstabenkombinationen — finde das Wort (nur A–Z, keine Umlaute)
+- **Implikationen erkennen:** Formale Logik mit Euler-Diagrammen, automatisch validiert
+- **Figuren zusammensetzen:** Polygone strategisch zerschnitten, nur 1 Option passt
+- **Gedächtnis & Merkfähigkeit:** Profilkarten mit DiceBear-Avataren
+
+### TV-Module
+- 10 Textsets mit je 12 MC-Fragen
+- Wissenschaftliche und medizinische Texte
+
+### SEK-Module
+- Emotionen erkennen: Gesichtsausdrücke interpretieren
+- Emotionen regulieren: Strategien bewerten (Tabellenformat)
+- Soziales Entscheiden: Handlungsoptionen ranken (5×5 Grid)
+
+## Lernfeatures
+
+- **KI-adaptives Lernen:** Erkennt automatisch Wissenslücken und passt Frageauswahl an
+- **Spaced Repetition:** Wissenschaftlich optimierte Wiederholung
+- **Prüfungssimulation:** Realistische MedAT-Bedingungen mit Timer
+- **Schwachstellen-Trainer:** Gezielt schwache Themen üben
+- **Formelsammlung:** Alle prüfungsrelevanten Formeln
+- **Fortschritts-Tracking:** Live-Statistiken pro Fach und Kapitel
+- **Prüfungstag-Prognose:** KI-gestützte Einschätzung des Prüfungsergebnisses
+
+## Technische Details
+
+- Web-App (React + TypeScript)
+- Responsive: Desktop, Tablet, Mobil
+- Progressive Web App (installierbar)
+- Keine App-Store-Installation nötig
+- Kostenlos nutzbar — kein Abo, keine versteckten Kosten
+
+## Zielgruppe
+
+- MedAT-Bewerber/innen in Österreich
+- Medizinstudium-Interessierte
+- Oberstufen-Schüler/innen mit Medizin-Berufswunsch
+- Personen, die den MedAT wiederholen
+
+## Häufig gestellte Fragen
+
+### Was ist der MedAT?
+Der MedAT ist der Medizinische Aufnahmetest für das Medizinstudium in Österreich. Er wird jährlich im Juli an den Medizin-Universitäten Wien, Graz, Innsbruck und Linz durchgeführt.
+
+### Ist MedMaster wirklich kostenlos?
+Ja. Alle 4.300+ Fragen, alle Features und voller Zugang sind kostenlos. Es gibt kein kostenpflichtiges Abo.
+
+### Wie viele Fragen hat MedMaster?
+Über 4.300 BMS-Fragen (Biologie, Chemie, Physik, Mathematik), plus KFF-Aufgaben (Zahlenfolgen, Wortflüssigkeit, Implikationen, Figuren, Merkfähigkeit), 120 TV-Fragen und 100 SEK-Aufgaben.
+
+### Deckt MedMaster alle MedAT-Bereiche ab?
+Ja — BMS, KFF, TV und SEK sind vollständig abgedeckt. Jeder Bereich hat eigene Übungsmodi und Erklärungen.
+
+### Basiert MedMaster auf der offiziellen Stichwortliste?
+Ja. Alle 106 offiziellen BMS-Stichworte der Stichwortliste 2025/2026 sind abgedeckt.
+
+### Kann ich eine Prüfungssimulation machen?
+Ja. MedMaster bietet realistische MedAT-Simulationen mit Zeitdruck, zufälligen Fragen und detaillierter Auswertung.
+
+### Wie unterscheidet sich MedMaster von kostenpflichtigen Anbietern?
+MedMaster bietet vergleichbaren Umfang (4.300+ Fragen, 4 Testbereiche, KI-Lernsystem) — komplett kostenlos. Kein Abo, keine versteckten Kosten.
+
+### Welche Geräte werden unterstützt?
+MedMaster funktioniert auf allen Geräten mit modernem Browser: Desktop, Laptop, Tablet und Smartphone. Als PWA auch offline installierbar.
+
+### Wie aktuell sind die Fragen?
+Die Fragen werden laufend aktualisiert und orientieren sich an der offiziellen Stichwortliste 2025/2026 sowie an aktuellen MedAT-Formaten.
+
+### Wer steckt hinter MedMaster?
+MedMaster wurde von MedAT-Absolventen entwickelt und nutzt KI-Technologie für adaptives Lernen.
+
+## Links
+
+- Website: https://medmaster.at
+- Übungsfragen: https://medmaster.at/medat-uebungsfragen
+- FAQ: https://medmaster.at/faq
+- MedAT-Guide: https://medmaster.at/medat-guide
+- Registrierung: https://medmaster.at/register
