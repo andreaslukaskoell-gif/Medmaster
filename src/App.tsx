@@ -109,19 +109,13 @@ function BMSQuizWrapper() {
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
 }
 
-/** `/` — LandingPage für Gäste, Redirect für eingeloggte User. */
+/** `/` — LandingPage sofort zeigen, Redirect nur wenn definitiv eingeloggt. */
 function RootRoute() {
   const { isAuthenticated, loading } = useAuth();
 
-  // DEV: immer LandingPage zeigen (DEV_USER faked Auth)
-  if (import.meta.env.DEV) {
-    return <LandingPage />;
-  }
-
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-  if (isAuthenticated) {
+  // Show LandingPage immediately — never block on auth loading.
+  // Only redirect to dashboard if we're sure user is authenticated.
+  if (!loading && isAuthenticated) {
     return <Navigate to="/dashboard" replace />;
   }
   return <LandingPage />;

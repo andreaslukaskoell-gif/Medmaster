@@ -102,16 +102,39 @@
       #root-loader svg{animation:spin 1s linear infinite}
       @keyframes spin{to{transform:rotate(360deg)}}
       /* Static landing — visible instantly, hidden when React mounts */
-      #static-landing{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;background:linear-gradient(135deg,#1b3ea7 0%,#0f2a80 100%);color:#fff}
-      #static-landing h1{font-size:clamp(2rem,6vw,3.5rem);font-weight:800;margin-bottom:12px;letter-spacing:-0.02em}
-      #static-landing p{font-size:clamp(1rem,3vw,1.25rem);opacity:0.85;max-width:520px;line-height:1.5;margin-bottom:32px}
-      #static-landing .stats{display:flex;gap:24px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
-      #static-landing .stat{background:rgba(255,255,255,0.12);border-radius:12px;padding:12px 20px}
-      #static-landing .stat b{display:block;font-size:1.5rem}
-      #static-landing .stat span{font-size:0.8rem;opacity:0.7}
-      #static-landing .cta{display:inline-block;background:#fff;color:#1b3ea7;font-weight:700;font-size:1.1rem;padding:14px 36px;border-radius:12px;text-decoration:none;transition:transform 0.15s}
-      #static-landing .cta:hover{transform:scale(1.03)}
-      #static-landing .sub{margin-top:16px;font-size:0.85rem;opacity:0.6}
+      #static-landing{min-height:100vh;display:flex;flex-direction:column;background:#fff;color:#1e293b}
+      .sl-nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #f1f5f9;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+      .sl-logo{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:800}
+      .sl-logo-icon{width:32px;height:32px;background:#1b3ea7;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
+      .sl-nav-links a{font-size:0.85rem;color:#64748b;text-decoration:none;padding:6px 14px;border-radius:10px}
+      .sl-nav-links a.primary{background:#1b3ea7;color:#fff;font-weight:600}
+      .sl-hero{text-align:center;padding:48px 24px 40px;background:linear-gradient(135deg,#1b3ea7 0%,#0f2a80 100%);color:#fff}
+      .sl-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:6px 16px;font-size:0.8rem;font-weight:600;margin-bottom:20px}
+      .sl-hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:12px;letter-spacing:-0.02em;line-height:1.15}
+      .sl-hero p{font-size:clamp(0.95rem,2.5vw,1.15rem);opacity:0.85;max-width:480px;margin:0 auto 28px;line-height:1.5}
+      .sl-stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+      .sl-stat{background:rgba(255,255,255,0.12);border-radius:12px;padding:10px 18px;text-align:center}
+      .sl-stat b{display:block;font-size:1.4rem;font-weight:800}
+      .sl-stat span{font-size:0.75rem;opacity:0.7}
+      .sl-cta{display:inline-block;background:#fff;color:#1b3ea7;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:12px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.15)}
+      .sl-sub{margin-top:14px;font-size:0.82rem;opacity:0.6}
+      .sl-sub a{color:#fff;text-decoration:underline}
+      .sl-features{padding:40px 24px;max-width:640px;margin:0 auto}
+      .sl-features h2{font-size:1.3rem;font-weight:700;text-align:center;margin-bottom:24px;color:#1e293b}
+      .sl-feat{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #f1f5f9}
+      .sl-feat:last-child{border-bottom:none}
+      .sl-feat-icon{width:40px;height:40px;border-radius:10px;background:#e8ecf7;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+      .sl-feat h3{font-size:0.95rem;font-weight:700;margin-bottom:2px}
+      .sl-feat p{font-size:0.82rem;color:#64748b;line-height:1.4;margin:0}
+      @media(prefers-color-scheme:dark){
+        #static-landing{background:#0f172a;color:#e2e8f0}
+        .sl-nav{background:rgba(15,23,42,0.92);border-color:#1e293b}
+        .sl-nav-links a{color:#94a3b8}
+        .sl-features h2{color:#e2e8f0}
+        .sl-feat{border-color:#1e293b}
+        .sl-feat p{color:#94a3b8}
+        .sl-feat-icon{background:#1e293b}
+      }
     </style>
     <!-- Google Identity Services (popup login, no redirect to supabase URL) -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
@@ -119,15 +142,35 @@
   <body>
     <!-- Static landing page: renders instantly without JS, replaced by React -->
     <div id="static-landing">
-      <h1>MedMaster</h1>
-      <p>MedAT 2026 Vorbereitung — 4.300+ Fragen, alle 4 Testbereiche, KI-adaptives Lernen.</p>
-      <div class="stats">
-        <div class="stat"><b>4.300+</b><span>Übungsfragen</span></div>
-        <div class="stat"><b>4</b><span>Testbereiche</span></div>
-        <div class="stat"><b>174</b><span>Lernkapitel</span></div>
+      <nav class="sl-nav">
+        <div class="sl-logo">
+          <div class="sl-logo-icon">M</div>
+          MedMaster
+        </div>
+        <div class="sl-nav-links">
+          <a href="/login">Anmelden</a>
+          <a href="/register" class="primary">Registrieren</a>
+        </div>
+      </nav>
+      <div class="sl-hero">
+        <div class="sl-badge">2 Wochen komplett gratis</div>
+        <h1>Deine MedAT 2026 Vorbereitung</h1>
+        <p>4.300+ Übungsfragen, alle 4 Testbereiche, KI-adaptives Lernsystem. Von MedAT-Absolventen entwickelt.</p>
+        <div class="sl-stats">
+          <div class="sl-stat"><b>4.300+</b><span>Fragen</span></div>
+          <div class="sl-stat"><b>4</b><span>Testbereiche</span></div>
+          <div class="sl-stat"><b>174</b><span>Kapitel</span></div>
+        </div>
+        <a class="sl-cta" href="/register">Kostenlos starten →</a>
+        <div class="sl-sub">Bereits registriert? <a href="/login">Anmelden</a></div>
       </div>
-      <a class="cta" href="/register">Kostenlos starten</a>
-      <div class="sub">Bereits registriert? <a href="/login" style="color:#fff;text-decoration:underline">Anmelden</a></div>
+      <div class="sl-features">
+        <h2>Warum MedMaster?</h2>
+        <div class="sl-feat"><div class="sl-feat-icon">🧠</div><div><h3>KI-Adaptives Lernen</h3><p>Erkennt deine Schwächen und passt Fragen automatisch an.</p></div></div>
+        <div class="sl-feat"><div class="sl-feat-icon">📋</div><div><h3>Offizielle Stichwortliste</h3><p>Alle 106 BMS-Stichworte 2025/2026 mit Fortschritt.</p></div></div>
+        <div class="sl-feat"><div class="sl-feat-icon">⚡</div><div><h3>Prüfungs-Simulation</h3><p>Realistische MedAT-Simulationen mit Timer und Auswertung.</p></div></div>
+        <div class="sl-feat"><div class="sl-feat-icon">📈</div><div><h3>Fortschritt & Prognose</h3><p>Live-Tracking pro Fach. KI-gestützte Prüfungstag-Prognose.</p></div></div>
+      </div>
     </div>
     <div id="root" style="display:none">
       <div id="root-loader">

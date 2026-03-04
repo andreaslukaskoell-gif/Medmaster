@@ -74,6 +74,14 @@ const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 export default function LandingPage() {
   usePageTitle();
   const { signInWithGoogle } = useAuth();
+
+  // Hide static HTML landing page when React version mounts
+  useEffect(() => {
+    const el = document.getElementById("static-landing");
+    if (el) el.style.display = "none";
+    const root = document.getElementById("root");
+    if (root) root.style.display = "";
+  }, []);
   const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
 
