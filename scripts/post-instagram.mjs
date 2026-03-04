@@ -1,378 +1,186 @@
 #!/usr/bin/env node
+
 /**
- * MedMaster Instagram Auto-Poster
+ * Instagram Single-Image Poster via Graph API
  *
- * Posts daily quiz cards to Instagram via the official Graph API.
- * Uploads the card PNG to a public URL first, then publishes.
- *
- * Setup (einmalig):
- *   1. Instagram-Account auf Business/Creator umstellen
- *   2. Facebook Page erstellen + mit IG verknüpfen
- *   3. Meta Developer App: https://developers.facebook.com/apps/
- *   4. Permissions: instagram_basic, instagram_content_publish, pages_show_list
- *   5. App Review einreichen
- *   6. Access Token generieren (Graph API Explorer oder Script)
- *
- * Env vars:
- *   IG_ACCESS_TOKEN   - Long-lived Instagram access token (60 Tage gültig)
- *   IG_USER_ID        - Instagram Business Account ID
- *   IMGBB_API_KEY     - (optional) imgBB API key für Bild-Upload
+ * Posts question images to @medmaster_medat.
+ * Format: Single image, A–D Umfrage, E in Kommentare.
  *
  * Usage:
- *   node scripts/post-instagram.mjs                       # Post today's card
- *   node scripts/post-instagram.mjs --dry-run             # Preview without posting
- *   node scripts/post-instagram.mjs --subject biologie    # Force subject
- *   node scripts/post-instagram.mjs --image-url URL       # Use custom image URL
+ *   node scripts/post-instagram.mjs --day 1              # Post day 1
+ *   node scripts/post-instagram.mjs --day 1 --dry        # Dry run
+ *   node scripts/post-instagram.mjs --day 1,2,3          # Post multiple
  *
- * Token holen (Graph API Explorer):
- *   1. https://developers.facebook.com/tools/explorer/
- *   2. App auswählen → Permissions: instagram_basic, instagram_content_publish
- *   3. "Generate Access Token" → Short-lived token kopieren
- *   4. Zu Long-lived tauschen:
- *      node scripts/refresh-ig-token.mjs --exchange SHORT_TOKEN
+ * Env:
+ *   IG_PAGE_TOKEN  - Page Access Token (from Graph API: page ID 990798194122764)
+ *
+ * Images must be deployed at medmaster.at/marketing/ first.
  */
 
-import { readFileSync, existsSync } from "node:fs";
-import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+const PAGE_TOKEN = process.env.IG_PAGE_TOKEN;
+const IG_USER_ID = "17841446757059213";
+const BASE_URL = "https://medmaster.at/marketing";
+const API = "https://graph.facebook.com/v21.0";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, "..");
+const POSTS = [
+  {
+    day: 1,
+    subject: "Biologie",
+    image: "day-01-bio-question.png",
+    question: "Welche Aussage über die Zellmembran trifft NICHT zu?",
+  },
+  {
+    day: 2,
+    subject: "Chemie",
+    image: "day-02-chem-question.png",
+    question: "Welche Bindung ist in Diamant vorherrschend?",
+  },
+  {
+    day: 3,
+    subject: "Physik",
+    image: "day-03-phys-question.png",
+    question: "Transformator: Verhältnis U₁/U₂ und N₁/N₂?",
+  },
+  {
+    day: 4,
+    subject: "Mathematik",
+    image: "day-04-mathe-question.png",
+    question: "200 Patienten, 80 Diabetes, 60 Hypertonie, 20 beide — wie viele mindestens eine?",
+  },
+  {
+    day: 5,
+    subject: "Biologie",
+    image: "day-05-bio-question.png",
+    question: "Welche Aussage zum Larynx (Kehlkopf) trifft NICHT zu?",
+  },
+  {
+    day: 6,
+    subject: "Chemie",
+    image: "day-06-chem-question.png",
+    question: "Welche Verbindung ist ein polares Molekül?",
+  },
+  {
+    day: 7,
+    subject: "Physik",
+    image: "day-07-phys-question.png",
+    question: "Welche Aussage zu ionisierender Strahlung ist richtig?",
+  },
+];
 
-const args = process.argv.slice(2);
-const isDryRun = args.includes("--dry-run");
-const subjectIdx = args.indexOf("--subject");
-const forceSubject = subjectIdx !== -1 ? args[subjectIdx + 1] : null;
-const imageUrlIdx = args.indexOf("--image-url");
-const customImageUrl = imageUrlIdx !== -1 ? args[imageUrlIdx + 1] : null;
-
-const IG_ACCESS_TOKEN = process.env.IG_ACCESS_TOKEN;
-const IG_USER_ID = process.env.IG_USER_ID;
-const IMGBB_API_KEY = process.env.IMGBB_API_KEY;
-const GRAPH_API_VERSION = "v21.0";
-const GRAPH_API_BASE = `https://graph.facebook.com/${GRAPH_API_VERSION}`;
-
-// ── Subject config ────────────────────────────────────────────
-const SUBJECT_EMOJIS = {
-  biologie: "🧬",
-  chemie: "⚗️",
-  physik: "⚡",
-  mathematik: "📊",
+const SUBJECT_EMOJI = {
+  Biologie: "🧬",
+  Chemie: "⚗️",
+  Physik: "⚡",
+  Mathematik: "📐",
 };
 
-const SUBJECT_TAGS = {
-  biologie: "#biologie #zellbiologie #genetik #humanbiologie",
-  chemie: "#chemie #organischechemie #anorganischechemie #biochemie",
-  physik: "#physik #mechanik #thermodynamik #optik",
-  mathematik: "#mathematik #algebra #stochastik #analysis",
-};
-
-const SUBJECTS = ["biologie", "chemie", "physik", "mathematik"];
-const OPTION_LABELS = ["A", "B", "C", "D", "E"];
-
-// ── Seeded random (same as other scripts) ─────────────────────
-function dailySeed() {
-  const d = new Date();
-  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
-}
-
-function seededPick(arr, seed) {
-  let s = seed;
-  s = (s * 1664525 + 1013904223) & 0x7fffffff;
-  return arr[s % arr.length];
-}
-
-// ── Load questions ────────────────────────────────────────────
-async function loadQuestions() {
-  try {
-    const mod = await import("tsx/esm/api");
-    const bms = await mod.tsImport("../src/data/bms/index.ts", import.meta.url);
-    return bms.allBmsQuestions;
-  } catch {
-    const bms = await import("../src/data/bms/index.ts");
-    return bms.allBmsQuestions;
-  }
-}
-
-// ── Pick today's question ─────────────────────────────────────
-function pickDailyQuestion(questions, forceSubj) {
-  const seed = dailySeed();
-  const subject = forceSubj || SUBJECTS[seed % 4];
-  const pool = questions.filter((q) => q.subject === subject);
-  return seededPick(pool, seed);
-}
-
-// ── Generate caption ──────────────────────────────────────────
-function generateCaption(q) {
-  const emoji = SUBJECT_EMOJIS[q.subject];
-  const label = q.subject.charAt(0).toUpperCase() + q.subject.slice(1);
-  const tags = SUBJECT_TAGS[q.subject];
-  const correctIdx = q.options.findIndex((o) => o.id === q.correctOptionId);
-  const correctLabel = OPTION_LABELS[correctIdx];
-
+function buildCaption(post) {
+  const emoji = SUBJECT_EMOJI[post.subject];
   return [
-    `${emoji} MedAT Tagesfrage — ${label}`,
+    `${emoji} MedAT-Frage: ${post.question}`,
     "",
-    q.text,
+    "Stimm ab: A–D in der Umfrage!",
+    "Deine Antwort ist E? → Schreib\u2019s in die Kommentare! 💬",
     "",
-    ...q.options.map((opt, i) => `${OPTION_LABELS[i]}) ${opt.text}`),
-    "",
-    "💡 Antwort: Wische zum nächsten Bild →",
-    `(Oder schau in die Kommentare: ${correctLabel})`,
-    "",
-    "🎓 4.300+ Übungsfragen kostenlos auf medmaster.at",
-    "Link in Bio!",
-    "",
-    "#medat #medizinstudium #aufnahmetest #medatübungsfragen",
-    `#medatvorbereitung #medmaster ${tags}`,
-    "#studieren #österreich #wien #graz #innsbruck #linz",
+    "🔗 Kostenlos üben: medmaster.at",
+    `#MedAT #MedAT2026 #${post.subject} #Medizinstudium #BMS`,
   ].join("\n");
 }
 
-// ── Upload image to public URL ────────────────────────────────
-async function uploadToImgBB(imagePath) {
-  if (!IMGBB_API_KEY) {
-    throw new Error(
-      "IMGBB_API_KEY not set. Get a free key at https://api.imgbb.com/ " +
-      "or provide --image-url with a public URL."
-    );
-  }
-
-  const imageData = readFileSync(imagePath);
-  const base64 = imageData.toString("base64");
-
-  const formData = new URLSearchParams();
-  formData.append("key", IMGBB_API_KEY);
-  formData.append("image", base64);
-  formData.append("expiration", "86400"); // 24h (we only need it for the API call)
-
-  const res = await fetch("https://api.imgbb.com/1/upload", {
-    method: "POST",
-    body: formData,
+async function apiCall(url, params = {}) {
+  const searchParams = new URLSearchParams({
+    access_token: PAGE_TOKEN,
+    ...params,
   });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`imgBB upload failed (${res.status}): ${text}`);
-  }
-
-  const data = await res.json();
-  return data.data.url;
+  const res = await fetch(`${url}?${searchParams}`, { method: "POST" });
+  const json = await res.json();
+  if (json.error) throw new Error(`API Error: ${json.error.message}`);
+  return json;
 }
 
-// ── Find today's card PNG ─────────────────────────────────────
-function findTodaysCard(subject) {
-  const date = new Date().toISOString().slice(0, 10);
-  const cardsDir = resolve(ROOT, "marketing", "cards", date);
-
-  // Find the question card for this subject
-  const patterns = [
-    resolve(cardsDir, `${subject}-01-question.png`),
-    resolve(cardsDir, `${subject}-question.png`),
-  ];
-
-  for (const p of patterns) {
-    if (existsSync(p)) return p;
-  }
-
-  return null;
-}
-
-// ── Instagram Graph API ───────────────────────────────────────
-async function createMediaContainer(imageUrl, caption) {
-  const params = new URLSearchParams({
-    image_url: imageUrl,
-    caption: caption,
-    access_token: IG_ACCESS_TOKEN,
-  });
-
-  const res = await fetch(`${GRAPH_API_BASE}/${IG_USER_ID}/media`, {
-    method: "POST",
-    body: params,
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Create container failed (${res.status}): ${text}`);
-  }
-
-  const data = await res.json();
-  return data.id; // container/creation ID
-}
-
-async function publishMedia(containerId) {
-  const params = new URLSearchParams({
-    creation_id: containerId,
-    access_token: IG_ACCESS_TOKEN,
-  });
-
-  const res = await fetch(`${GRAPH_API_BASE}/${IG_USER_ID}/media_publish`, {
-    method: "POST",
-    body: params,
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Publish failed (${res.status}): ${text}`);
-  }
-
-  const data = await res.json();
-  return data.id; // media ID
-}
-
-// Wait for container to be ready (can take a few seconds)
-async function waitForContainer(containerId, maxWait = 30000) {
-  const start = Date.now();
-  while (Date.now() - start < maxWait) {
+async function waitForMedia(containerId) {
+  for (let i = 0; i < 30; i++) {
     const res = await fetch(
-      `${GRAPH_API_BASE}/${containerId}?fields=status_code&access_token=${IG_ACCESS_TOKEN}`
+      `${API}/${containerId}?fields=status_code&access_token=${PAGE_TOKEN}`,
     );
-    const data = await res.json();
-
-    if (data.status_code === "FINISHED") return true;
-    if (data.status_code === "ERROR") {
-      throw new Error(`Container error: ${JSON.stringify(data)}`);
-    }
-
-    // Wait 2s before checking again
+    const json = await res.json();
+    if (json.status_code === "FINISHED") return;
+    if (json.status_code === "ERROR")
+      throw new Error(`Media processing failed for ${containerId}`);
     await new Promise((r) => setTimeout(r, 2000));
   }
-  throw new Error("Container processing timed out");
+  throw new Error(`Timeout waiting for media ${containerId}`);
 }
 
-// ── Carousel (question + answer) ──────────────────────────────
-async function createCarousel(questionUrl, answerUrl, caption) {
-  // Step 1: Create child containers (no caption on children)
-  const children = [];
-  for (const url of [questionUrl, answerUrl]) {
-    const params = new URLSearchParams({
-      image_url: url,
-      is_carousel_item: "true",
-      access_token: IG_ACCESS_TOKEN,
-    });
+async function postImage(post, dry = false) {
+  const caption = buildCaption(post);
+  const imageUrl = `${BASE_URL}/${post.image}`;
 
-    const res = await fetch(`${GRAPH_API_BASE}/${IG_USER_ID}/media`, {
-      method: "POST",
-      body: params,
-    });
+  console.log(`\n📸 Day ${post.day} (${post.subject}): ${post.question}`);
 
-    if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`Carousel child failed (${res.status}): ${text}`);
-    }
-
-    const data = await res.json();
-    children.push(data.id);
+  if (dry) {
+    console.log("  [DRY RUN]");
+    console.log(`  Image: ${imageUrl}`);
+    console.log(`  Caption:\n${caption}\n`);
+    return { id: "dry-run" };
   }
 
-  // Step 2: Create carousel container
-  const params = new URLSearchParams({
-    media_type: "CAROUSEL",
-    caption: caption,
-    access_token: IG_ACCESS_TOKEN,
-  });
-  // children must be comma-separated
-  params.append("children", children.join(","));
-
-  const res = await fetch(`${GRAPH_API_BASE}/${IG_USER_ID}/media`, {
-    method: "POST",
-    body: params,
+  console.log("  Creating media container...");
+  const container = await apiCall(`${API}/${IG_USER_ID}/media`, {
+    image_url: imageUrl,
+    caption,
   });
 
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Carousel container failed (${res.status}): ${text}`);
-  }
+  console.log("  Waiting for processing...");
+  await waitForMedia(container.id);
 
-  const data = await res.json();
-  return data.id;
+  console.log("  Publishing...");
+  const result = await apiCall(`${API}/${IG_USER_ID}/media_publish`, {
+    creation_id: container.id,
+  });
+
+  console.log(`  ✅ Published! Post ID: ${result.id}`);
+  return result;
 }
 
-// ── Main ──────────────────────────────────────────────────────
 async function main() {
-  const questions = await loadQuestions();
-  const q = pickDailyQuestion(questions, forceSubject);
-  const caption = generateCaption(q);
+  const args = process.argv.slice(2);
+  const dry = args.includes("--dry");
+  const dayIdx = args.indexOf("--day");
+  const dayArg = dayIdx >= 0 ? args[dayIdx + 1] : null;
 
-  console.log(`📸 Instagram Post: ${q.id} (${q.subject})`);
-  console.log(`   "${q.text.slice(0, 70)}..."`);
-
-  if (isDryRun) {
-    console.log("\n--- DRY RUN ---");
-    console.log("\nCaption:");
-    console.log(caption);
-    console.log("\nTo actually post, set these env vars:");
-    console.log("  IG_ACCESS_TOKEN  - from Graph API Explorer");
-    console.log("  IG_USER_ID       - your Instagram Business Account ID");
-    console.log("  IMGBB_API_KEY    - free key from api.imgbb.com");
-    return;
+  if (!PAGE_TOKEN) {
+    console.error("❌ Set IG_PAGE_TOKEN environment variable first!");
+    console.error('   export IG_PAGE_TOKEN="EAAU..."');
+    process.exit(1);
   }
 
-  if (!IG_ACCESS_TOKEN || !IG_USER_ID) {
-    console.log("\n⚠️  Missing env vars. Showing preview:\n");
-    console.log("Caption:");
-    console.log(caption);
-    console.log("\nRequired env vars:");
-    console.log("  IG_ACCESS_TOKEN  - Long-lived token (60 Tage)");
-    console.log("  IG_USER_ID       - Instagram Business Account ID");
-    console.log("  IMGBB_API_KEY    - Für Bild-Upload (gratis: api.imgbb.com)");
-    console.log("\nSetup-Anleitung: siehe Script-Header oder README");
-    return;
+  if (!dayArg) {
+    console.error("Usage: node scripts/post-instagram.mjs --day <1-7> [--dry]");
+    console.error("       node scripts/post-instagram.mjs --day 1,2,3 [--dry]");
+    process.exit(1);
   }
 
-  // Find or use image URL
-  let questionUrl = customImageUrl;
-  let answerUrl = null;
+  const days = dayArg.split(",").map(Number);
 
-  if (!questionUrl) {
-    // Find today's generated cards
-    const date = new Date().toISOString().slice(0, 10);
-    const cardsDir = resolve(ROOT, "marketing", "cards", date);
-    const subjectNum = SUBJECTS.indexOf(q.subject) + 1;
-
-    const qCard = resolve(cardsDir, `${q.subject}-${String(subjectNum).padStart(2, "0")}-question.png`);
-    const aCard = resolve(cardsDir, `${q.subject}-${String(subjectNum).padStart(2, "0")}-answer.png`);
-
-    if (!existsSync(qCard)) {
-      console.error(`❌ Card not found: ${qCard}`);
-      console.error("   Run first: npx tsx scripts/generate-social-cards.mjs --all");
+  for (let i = 0; i < days.length; i++) {
+    const post = POSTS.find((p) => p.day === days[i]);
+    if (!post) {
+      console.error(`Day ${days[i]} not found (valid: 1-7)`);
       process.exit(1);
     }
+    await postImage(post, dry);
 
-    console.log("📤 Uploading question card to imgBB...");
-    questionUrl = await uploadToImgBB(qCard);
-    console.log(`   → ${questionUrl}`);
-
-    if (existsSync(aCard)) {
-      console.log("📤 Uploading answer card to imgBB...");
-      answerUrl = await uploadToImgBB(aCard);
-      console.log(`   → ${answerUrl}`);
+    if (!dry && i < days.length - 1) {
+      console.log("  ⏳ Waiting 60s before next post...");
+      await new Promise((r) => setTimeout(r, 60000));
     }
   }
 
-  // Post as carousel (question + answer) or single image
-  let containerId;
-  if (answerUrl) {
-    console.log("📱 Creating carousel (Frage + Auflösung)...");
-    containerId = await createCarousel(questionUrl, answerUrl, caption);
-  } else {
-    console.log("📱 Creating media container...");
-    containerId = await createMediaContainer(questionUrl, caption);
-  }
-
-  console.log(`   Container ID: ${containerId}`);
-  console.log("⏳ Waiting for processing...");
-  await waitForContainer(containerId);
-
-  console.log("🚀 Publishing...");
-  const mediaId = await publishMedia(containerId);
-  console.log(`✅ Published! Media ID: ${mediaId}`);
-  console.log(`   https://www.instagram.com/p/${mediaId}/`);
-
-  return { mediaId, questionId: q.id };
+  console.log("\n🎉 Done!");
 }
 
-main().catch((err) => {
-  console.error("❌ Error:", err.message);
+main().catch((e) => {
+  console.error("❌", e.message);
   process.exit(1);
 });
