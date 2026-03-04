@@ -29,6 +29,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // BMS question pools — heavy data, lazy-load only
+          if (id.includes("src/data/bms/")) {
+            if (id.includes("biologie")) return "bms-questions-bio";
+            if (id.includes("chemie")) return "bms-questions-chem";
+            if (id.includes("physik")) return "bms-questions-phys";
+            if (id.includes("mathematik")) return "bms-questions-math";
+            return "bms-questions";
+          }
           // BMS chapter data — split by subject for better caching
           if (id.includes("src/data/bmsKapitel")) {
             if (id.includes("/biologie/")) return "bms-biologie";
@@ -47,6 +55,8 @@ export default defineConfig({
             if (id.includes("recharts")) return "vendor-recharts";
             if (id.includes("react-markdown") || id.includes("remark-gfm"))
               return "vendor-markdown";
+            if (id.includes("@sentry")) return "vendor-sentry";
+            if (id.includes("lucide-react")) return "vendor-icons";
           }
         },
       },
