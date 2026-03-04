@@ -150,11 +150,18 @@ export function useAuth() {
 
   async function signInWithGoogle(): Promise<{ error: Error | null }> {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: window.location.origin + "/dashboard" },
-    });
-    return { error: error ? new Error(error.message) : null };
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: window.location.origin + "/dashboard" },
+      });
+      if (error) return { error: new Error(error.message) };
+      // signInWithOAuth returns a URL — if no redirect happened, open it manually
+      if (data?.url) window.location.href = data.url;
+      return { error: null };
+    } catch (e: any) {
+      return { error: new Error(e?.message || "Google Login fehlgeschlagen") };
+    }
   }
 
   async function signOut() {
