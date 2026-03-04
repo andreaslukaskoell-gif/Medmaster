@@ -264,6 +264,21 @@
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Temporary: visible error overlay for mobile debugging -->
+    <script>
+      window.onerror = function(msg, src, line, col, err) {
+        var d = document.createElement('div');
+        d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:#fff;padding:16px;font:13px/1.4 monospace;max-height:50vh;overflow:auto';
+        d.textContent = 'ERROR: ' + msg + '\n' + (src||'') + ':' + line + ':' + col + '\n' + (err&&err.stack||'');
+        document.body.appendChild(d);
+      };
+      window.addEventListener('unhandledrejection', function(e) {
+        var d = document.createElement('div');
+        d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:#fff;padding:16px;font:13px/1.4 monospace;max-height:50vh;overflow:auto';
+        d.textContent = 'UNHANDLED PROMISE: ' + (e.reason&&e.reason.stack||e.reason||'unknown');
+        document.body.appendChild(d);
+      });
+    </script>
     <script>
       // Only show static pages in in-app browsers (Instagram, Facebook, etc.)
       // Normal browsers get React immediately — no flash of static content.
