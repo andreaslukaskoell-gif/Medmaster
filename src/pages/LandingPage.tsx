@@ -75,15 +75,6 @@ export default function LandingPage() {
   usePageTitle();
   const { signInWithGoogle } = useAuth();
 
-  // Hide all static HTML pages when React version mounts
-  useEffect(() => {
-    ["static-landing", "static-register", "static-login"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = "none";
-    });
-    const root = document.getElementById("root");
-    if (root) root.style.display = "";
-  }, []);
   const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
 

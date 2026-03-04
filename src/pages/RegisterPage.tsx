@@ -8,14 +8,6 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function RegisterPage() {
   usePageTitle("Registrieren");
-  useEffect(() => {
-    ["static-landing", "static-register", "static-login"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = "none";
-    });
-    const root = document.getElementById("root");
-    if (root) root.style.display = "";
-  }, []);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
