@@ -19,7 +19,7 @@ export default defineConfig({
     include: ["react", "react-dom"],
   },
   esbuild: {
-    drop: ["console", "debugger"],
+    drop: ["debugger"],
   },
   build: {
     outDir: "dist",
