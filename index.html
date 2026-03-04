@@ -101,8 +101,8 @@
       #root-loader{display:flex;align-items:center;justify-content:center;min-height:100vh}
       #root-loader svg{animation:spin 1s linear infinite}
       @keyframes spin{to{transform:rotate(360deg)}}
-      /* Static landing — visible instantly, hidden when React mounts */
-      #static-landing{min-height:100vh;display:flex;flex-direction:column;background:#fff;color:#1e293b}
+      /* Static landing — hidden by default, shown only for in-app browsers */
+      #static-landing{min-height:100vh;display:none;flex-direction:column;background:#fff;color:#1e293b}
       .sl-nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #f1f5f9;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
       .sl-logo{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:800}
       .sl-logo-icon{width:32px;height:32px;background:#1b3ea7;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
@@ -264,47 +264,28 @@
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Temporary: visible error overlay for mobile debugging -->
     <script>
-      window.onerror = function(msg, src, line, col, err) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:#fff;padding:16px;font:13px/1.4 monospace;max-height:50vh;overflow:auto';
-        d.textContent = 'ERROR: ' + msg + '\n' + (src||'') + ':' + line + ':' + col + '\n' + (err&&err.stack||'');
-        document.body.appendChild(d);
-      };
-      window.addEventListener('unhandledrejection', function(e) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:#fff;padding:16px;font:13px/1.4 monospace;max-height:50vh;overflow:auto';
-        d.textContent = 'UNHANDLED PROMISE: ' + (e.reason&&e.reason.stack||e.reason||'unknown');
-        document.body.appendChild(d);
-      });
-    </script>
-    <script>
-      // Only show static pages in in-app browsers (Instagram, Facebook, etc.)
-      // Normal browsers get React immediately — no flash of static content.
+      // Static pages hidden by default (CSS display:none).
+      // In-app browsers (Instagram, FB) get static pages; normal browsers get React.
       (function() {
         var ua = navigator.userAgent || '';
         var isInAppBrowser = /Instagram|FBAN|FBAV|Line|Twitter|Snapchat/i.test(ua);
         var path = location.pathname;
 
         if (!isInAppBrowser) {
-          // Normal browser: hide all static, show React loader
-          document.getElementById('static-landing').style.display = 'none';
+          // Normal browser: show React loader immediately
           document.getElementById('root').style.display = '';
           return;
         }
 
         // In-app browser: show static page based on URL
         if (path === '/register') {
-          document.getElementById('static-landing').style.display = 'none';
           document.getElementById('static-register').style.display = 'flex';
         } else if (path === '/login') {
-          document.getElementById('static-landing').style.display = 'none';
           document.getElementById('static-login').style.display = 'flex';
-        }
-        // Other routes in in-app: show React loader
-        if (path !== '/' && path !== '/register' && path !== '/login') {
-          document.getElementById('static-landing').style.display = 'none';
+        } else if (path === '/') {
+          document.getElementById('static-landing').style.display = 'flex';
+        } else {
           document.getElementById('root').style.display = '';
         }
 
