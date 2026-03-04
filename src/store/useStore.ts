@@ -19,7 +19,11 @@ async function getAdaptiveStoreAsync() {
 
 // Preload after initial render so it's ready when needed
 if (typeof window !== "undefined") {
-  requestIdleCallback?.(() => {
+  const idle =
+    typeof requestIdleCallback === "function"
+      ? requestIdleCallback
+      : (cb: () => void) => setTimeout(cb, 200);
+  idle(() => {
     import("@/store/adaptiveLearning").then((m) => {
       _adaptiveStoreModule = m;
     });

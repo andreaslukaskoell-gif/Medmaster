@@ -24,7 +24,11 @@ function getBmsQuestionsSync(): Question[] {
 
 // Preload on idle so questions are ready when needed
 if (typeof window !== "undefined") {
-  requestIdleCallback?.(() => {
+  const idle =
+    typeof requestIdleCallback === "function"
+      ? requestIdleCallback
+      : (cb: () => void) => setTimeout(cb, 200);
+  idle(() => {
     loadBmsQuestions();
   });
 }
