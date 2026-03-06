@@ -1950,22 +1950,27 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
     const word = allowed[randInt(0, allowed.length - 1)].toUpperCase();
     const letters = word.split("");
     const lettersInWord = [...new Set(letters)];
-    if (lettersInWord.length < 5) continue; // mind. 5 verschiedene Buchstaben: 1 korrekt + 4 Optionen (oder 4 Falsche + "-")
+    if (lettersInWord.length < 5) continue; // mind. 5 verschiedene: 4 falsche für E-Fall + korrekt
     const shuffled = shuffle([...letters]);
     const correctFirst = word[0];
     const useNone = Math.random() < 0.15;
 
-    // Nur Buchstaben, die im Wort vorkommen, als Antwortoptionen – sonst macht die Aufgabe keinen Sinn
+    // Nur Buchstaben, die im Wort vorkommen, als Antwortoptionen
     const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-    const wrongLetters = shuffle(wrongPool).slice(0, 4);
 
     let options: string[];
     let correctIndex: number;
     if (useNone) {
-      options = [...wrongLetters, "-"];
+      // E korrekt: 4 falsche Buchstaben + "-"
+      const wrong4 = shuffle(wrongPool).slice(0, 4);
+      if (wrong4.length < 4) continue;
+      options = [...wrong4, "-"];
       correctIndex = 4;
     } else {
-      const mixed = shuffle([correctFirst, ...wrongLetters]);
+      // Normal: 3 falsche + 1 korrekt + "-"
+      const wrong3 = shuffle(wrongPool).slice(0, 3);
+      if (wrong3.length < 3) continue;
+      const mixed = shuffle([correctFirst, ...wrong3]);
       options = [...mixed, "-"];
       correctIndex = mixed.indexOf(correctFirst);
     }
@@ -2003,7 +2008,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
     const correctFirst = word[0];
     const lettersInWord = [...new Set(word.split(""))];
     const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-    const wrong = shuffle(wrongPool).slice(0, 4);
+    const wrong = shuffle(wrongPool).slice(0, 3);
     const options = [...shuffle([correctFirst, ...wrong]), "-"];
     const task: WordFluencyTask = {
       id: `wf-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
@@ -2021,7 +2026,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
   const correctFirst = word[0];
   const lettersInWord = [...new Set(word.split(""))];
   const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-  const wrong = shuffle(wrongPool).slice(0, 4);
+  const wrong = shuffle(wrongPool).slice(0, 3);
   const options = [...shuffle([correctFirst, ...wrong]), "-"];
   return {
     id: `wf-train-fb-last-${Date.now()}`,
