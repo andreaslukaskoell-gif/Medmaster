@@ -471,8 +471,10 @@ function pickStart(
   ops: { type: OpType; value: number }[],
   length: number,
   rand: () => number,
-  difficulty?: DifficultyLevel
+  difficulty?: DifficultyLevel,
+  _retries = 0
 ): number {
+  const MAX_RETRIES = 50;
   let start: number;
   if (ops.some((o) => o.type === "÷")) {
     // For hard: larger divisible starting values (50-500 range)
@@ -489,7 +491,9 @@ function pickStart(
   }
   const seq = buildSequence(start, ops, length);
   const allInt = seq.every((n) => Number.isInteger(n));
-  return allInt ? start : pickStart(ops, length, rand, difficulty);
+  if (allInt) return start;
+  if (_retries >= MAX_RETRIES) return start; // Fallback: avoid stack overflow
+  return pickStart(ops, length, rand, difficulty, _retries + 1);
 }
 
 /** Distraktor: erste Zahl richtig, zweite falsch (z. B. anderer Operator). */
