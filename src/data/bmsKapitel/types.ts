@@ -67,6 +67,8 @@ export interface Unterkapitel {
   selfTest: SelfTestQuestion[];
   /** Optional image URL for this subchapter; render only if present. */
   imageUrl?: string;
+  /** Caption for the image, e.g. "Abb. 1: Aufbau einer tierischen Zelle (OpenStax CC BY 4.0)" */
+  imageCaption?: string;
   /** Optional quiz; render only if present and non-empty. */
   quiz?: QuizItem[];
   /** Optional additional notes block; render only if present. */

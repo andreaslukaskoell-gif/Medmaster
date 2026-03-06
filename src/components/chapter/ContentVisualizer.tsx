@@ -43,14 +43,21 @@ export function ContentVisualizer({
 
   return (
     <div className={`space-y-6 ${contentClassName}`}>
-      {/* Image – fallback on error, progressive blur, lightbox on click */}
+      {/* Image — after intro, constrained size, with caption */}
       {uk?.imageUrl && (
-        <ImageWithFallback
-          src={uk.imageUrl}
-          alt=""
-          containerClassName="rounded-xl overflow-hidden shadow-sm border border-[var(--border)]"
-          lightbox
-        />
+        <figure className="my-4 mx-auto max-w-md">
+          <ImageWithFallback
+            src={uk.imageUrl}
+            alt={uk.imageCaption || uk.title}
+            containerClassName="rounded-lg overflow-hidden shadow-sm border border-[var(--border)]"
+            lightbox
+          />
+          {uk.imageCaption && (
+            <figcaption className="mt-2 text-center text-xs text-[var(--text-muted)] italic">
+              {uk.imageCaption}
+            </figcaption>
+          )}
+        </figure>
       )}
 
       {/* Text content */}
