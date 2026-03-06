@@ -399,6 +399,7 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
     {
       id: "ch-3s-03",
       title: "Lösungen, Konzentration & Löslichkeit",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
       stichworte: [
         "Molarität",
         "Massenanteil",

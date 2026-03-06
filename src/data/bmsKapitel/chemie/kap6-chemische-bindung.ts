@@ -11,6 +11,7 @@ export const chemKap6: Kapitel = {
     {
       id: "ch-6-01",
       title: "Ionenbindung — Entstehung und Eigenschaften",
+      imageUrl: "/images/bms/ch-ionenbindung.jpg",
       stichworte: [
         "Ionenbindung",
         "Elektronenübertragung",
@@ -390,6 +391,7 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
     {
       id: "ch-6-02",
       title: "Kovalente Bindung — Polarität und Hybridisierung",
+      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
       stichworte: [
         "Kovalente Bindung",
         "Elektronegativität",
@@ -943,6 +945,7 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
     {
       id: "ch-6-03",
       title: "Van-der-Waals, Wasserstoffbrücken und Metallbindung",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersionskräfte",
@@ -1649,6 +1652,7 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
     {
       id: "ch-6-04",
       title: "Chemische Bindungen in biologischen Molekülen",
+      imageUrl: "/images/bms/ch-peptidbindung.jpg",
       stichworte: [
         "Glycosidische Bindung",
         "Peptidbindung",

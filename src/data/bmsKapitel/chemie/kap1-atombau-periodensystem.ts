@@ -15,6 +15,7 @@ export const chemKapAtom: Kapitel = {
     {
       id: "ch-1-01",
       title: "Atommodelle und Atomaufbau",
+      imageUrl: "/images/bms/ch-atommodell.jpg",
       stichworte: [
         "Atommodell",
         "Thomson",
@@ -331,6 +332,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
     {
       id: "ch-1-02",
       title: "Elektronenkonfiguration und Quantenzahlen",
+      imageUrl: "/images/bms/ch-elektronenschalen.jpg",
       stichworte: [
         "Quantenzahlen",
         "Hauptquantenzahl",
@@ -897,6 +899,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
       stichworte: [
         "Atommasse",
         "Mol",
@@ -1184,6 +1187,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
     {
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersion",
@@ -1468,6 +1472,7 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
     {
       id: "ch-2-02",
       title: "Löslichkeit, Konzentration und Osmose",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
       stichworte: [
         "Löslichkeit",
         "Osmose",
@@ -2077,6 +2082,7 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
     {
       id: "ch-5-01",
       title: "Aufbau und Ordnungsprinzip des PSE",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
       stichworte: [
         "Periodensystem",
         "Mendelejew",
@@ -2369,6 +2375,7 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
     {
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
       stichworte: [
         "Effektive Kernladung",
         "Atomradius",

@@ -11,6 +11,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
     {
       id: "bio-2-01",
       title: "Epithelgewebe — Formen, Schichtungen und Funktionen",
+      imageUrl: "/images/bms/bio-epidermis-schichten.jpg",
       stichworte: [
         "Plattenepithel",
         "Zylinderepithel",
@@ -420,6 +421,7 @@ Sekretionsmechanismen exokriner Drüsen:
     {
       id: "bio-2-03",
       title: "Muskelgewebe — Vom Sarkomer zur Kontraktion",
+      imageUrl: "/images/bms/bio-muskelfaser.jpg",
       stichworte: [
         "Glatte Muskulatur",
         "Skelettmuskulatur",
@@ -629,6 +631,7 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
     {
       id: "bio-2-04",
       title: "Nervengewebe — Neuronen, Gliazellen und Myelinisierung",
+      imageUrl: "/images/bms/bio-neuron.jpg",
       stichworte: [
         "Neuronen",
         "Gliazellen",
@@ -823,6 +826,7 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
     {
       id: "bio-3-01",
       title: "Nervensystem",
+      imageUrl: "/images/bms/bio-rueckenmark.jpg",
       stichworte: [
         "ZNS",
         "PNS",
@@ -1010,6 +1014,7 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
     {
       id: "bio-3-02",
       title: "Sinnesorgane",
+      imageUrl: "/images/bms/bio-auge.jpg",
       stichworte: [
         "Auge",
         "Ohr",
@@ -1240,6 +1245,7 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
     {
       id: "bio-3-03",
       title: "Hormonsystem",
+      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
       stichworte: [
         "Hypothalamus-Hypophyse",
         "Schilddrüse",
@@ -1402,6 +1408,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
     {
       id: "bio-3-04",
       title: "Herz Kreislauf",
+      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
       stichworte: [
         "Herzaufbau",
         "Erregungsleitung",
@@ -1555,6 +1562,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
     {
       id: "bio-3-05",
       title: "Blut",
+      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
       stichworte: [
         "Erythrozyten",
         "Leukozyten",
@@ -1714,6 +1722,7 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
     {
       id: "bio-3-06",
       title: "Immunsystem",
+      imageUrl: "/images/bms/bio-immunantwort.jpg",
       stichworte: [
         "Angeborene Immunität",
         "Erworbene Immunität",
@@ -1866,6 +1875,7 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
     {
       id: "bio-3-07",
       title: "Lymphsystem",
+      imageUrl: "/images/bms/bio-lymphsystem.jpg",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
       content: `## Lymphknoten — Architektur und Immunfunktion
 
@@ -1999,6 +2009,7 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
     {
       id: "bio-3-08",
       title: "Atmungssystem",
+      imageUrl: "/images/bms/bio-atemwege.jpg",
       stichworte: [
         "Gasaustausch",
         "Alveolen",
@@ -2151,6 +2162,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
     {
       id: "bio-3-09",
       title: "Verdauungssystem",
+      imageUrl: "/images/bms/bio-verdauungssystem.jpg",
       stichworte: [
         "Magen",
         "Dünndarm",
@@ -2314,6 +2326,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
     {
       id: "bio-3-10",
       title: "Harnsystem",
+      imageUrl: "/images/bms/bio-niere.jpg",
       stichworte: [
         "Niere",
         "Nephron",
