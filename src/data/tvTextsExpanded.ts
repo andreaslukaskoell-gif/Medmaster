@@ -1539,7 +1539,7 @@ const set4: TVTextSet = {
             "Nur radioaktive Strahlung und chemische Mutagene",
             "Ausschließlich Viren und Bakterien",
             "Ernährung, Stress, Schadstoffbelastung und soziale Erfahrungen",
-            "Nur physische Traumen wie Knochenbürche",
+            "Nur physische Traumen wie Knochenbrüche",
             "Epigenetische Veränderungen entstehen ausschließlich zufällig",
           ],
           correctOption: 2,
@@ -1725,7 +1725,7 @@ const set4: TVTextSet = {
         {
           id: "tv4-t3-q4",
           question:
-            "Welche alternative Theorie zu Déjà-vus wird im Text neben dem GedächtnisFehler-Modell vorgestellt?",
+            "Welche alternative Theorie zu Déjà-vus wird im Text neben dem Gedächtnisfehler-Modell vorgestellt?",
           options: [
             "Déjà-vus entstehen durch kurze Bewusstseinspausen während des Schlafs",
             "Déjà-vus sind Erinnerungen an vergangene Leben",

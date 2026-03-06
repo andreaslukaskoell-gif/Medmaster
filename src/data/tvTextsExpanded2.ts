@@ -46,13 +46,13 @@ const set6: TVTextSet = {
           id: "tv6-1-q1",
           question: "Welche Aussage über Makrophagen lässt sich dem Text entnehmen?",
           options: [
-            "Sie gehören zum erworbenen Immunsystem und reagieren spezifisch auf Antigene.",
-            "Sie produzieren Antikörper, die Erreger für die Zerstörung markieren.",
             "Sie nehmen Erreger auf, verdauen sie und setzen Signalstoffe frei, die weitere Immunzellen anlocken.",
+            "Sie produzieren Antikörper, die Erreger für die Zerstörung markieren.",
+            "Sie gehören zum erworbenen Immunsystem und reagieren spezifisch auf Antigene.",
             "Sie bilden zusammen mit den B-Lymphozyten das immunologische Gedächtnis.",
             "Sie sind ausschließlich in der Haut und den Schleimhäuten lokalisiert.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Im Text heißt es, dass Makrophagen Fresszellen sind, die Erreger aufnehmen und verdauen können, wobei sie gleichzeitig Signalstoffe freisetzen, die weitere Immunzellen zum Infektionsort locken.",
         },
@@ -61,12 +61,12 @@ const set6: TVTextSet = {
           question: "Auf welchem Prinzip beruht laut dem Text die Schutzwirkung von Impfungen?",
           options: [
             "Auf der dauerhaften Aktivierung von Makrophagen und natürlichen Killerzellen.",
-            "Auf der Hemmung der Entzündungsreaktion durch gezielte Medikamentengabe.",
             "Auf dem Trainieren des Immunsystems durch abgeschwächte oder inaktivierte Erreger, sodass Gedächtniszellen gebildet werden.",
+            "Auf der Hemmung der Entzündungsreaktion durch gezielte Medikamentengabe.",
             "Auf der Stärkung der physikalischen Barrieren wie Haut und Schleimhäute.",
             "Auf der Unterdrückung der T-Helferzellen, um eine Überreaktion zu verhindern.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass Impfungen das Immunsystem durch abgeschwächte oder inaktivierte Erreger trainieren, wobei Gedächtniszellen entstehen, die bei erneutem Kontakt schneller reagieren.",
         },
@@ -75,12 +75,12 @@ const set6: TVTextSet = {
           question: "Was versteht man laut dem Text unter Autoimmunerkrankungen?",
           options: [
             "Erkrankungen, bei denen das Immunsystem durch äußere Faktoren vollständig zerstört wird.",
-            "Erkrankungen, bei denen sich die Immunabwehr irrtümlich gegen körpereigene Strukturen richtet.",
             "Erkrankungen, die ausschließlich durch Viren verursacht werden und das Immunsystem schwächen.",
+            "Erkrankungen, bei denen sich die Immunabwehr irrtümlich gegen körpereigene Strukturen richtet.",
             "Erkrankungen, bei denen Gedächtniszellen keine Antikörper mehr produzieren können.",
             "Erkrankungen, bei denen das angeborene Immunsystem das erworbene unterdrückt.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Im Text steht, dass Autoimmunerkrankungen Störungen sind, bei denen sich die Abwehr irrtümlich gegen körpereigene Strukturen richtet.",
         },
@@ -89,12 +89,12 @@ const set6: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über das Immunsystem?",
           options: [
             "Nur Antikörper und Killerzellen.",
-            "Zweistufiges Netzwerk aus angeborenem und erworbenem System; Gedächtnis bildet Impfgrundlage.",
-            "Kann durch Impfungen ersetzt werden.",
             "Angeborenes System ist überlegen.",
+            "Kann durch Impfungen ersetzt werden.",
+            "Zweistufiges Netzwerk aus angeborenem und erworbenem System; Gedächtnis bildet Impfgrundlage.",
             "Autoimmunerkrankungen häufigste Folge.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text beschreibt das Immunsystem als zweigeteiltes System und zeigt, wie das immunologische Gedächtnis die Grundlage von Impfungen bildet.",
         },
@@ -105,11 +105,11 @@ const set6: TVTextSet = {
           options: [
             "Beide gehören zum angeborenen System.",
             "Beide sind redundant.",
-            "Ergänzen sich: B-Lymphozyten markieren, T-Zellen töten infizierte Zellen.",
-            "T-Zellen von B-Zellen produziert.",
             "B-Zellen nur beim Erstkontakt aktiv.",
+            "T-Zellen von B-Zellen produziert.",
+            "Ergänzen sich: B-Lymphozyten markieren, T-Zellen töten infizierte Zellen.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "B-Lymphozyten markieren Erreger mit Antikörpern; zytotoxische T-Zellen töten infizierte Körperzellen. Beide gehören zum erworbenen Immunsystem.",
         },
@@ -153,13 +153,13 @@ const set6: TVTextSet = {
           question:
             "Was unterscheidet laut dem Text embryonale Stammzellen von adulten Stammzellen?",
           options: [
-            "Embryonale Stammzellen können sich nicht selbst erneuern, adulte Stammzellen hingegen schon.",
             "Embryonale Stammzellen sind pluripotent und können sich in nahezu jeden Zelltyp differenzieren, während adulte Stammzellen in der Regel multipotent sind.",
+            "Embryonale Stammzellen können sich nicht selbst erneuern, adulte Stammzellen hingegen schon.",
             "Adulte Stammzellen stammen aus der Blastozyste, embryonale Stammzellen aus dem Knochenmark.",
             "Embryonale Stammzellen kommen ausschließlich im Blut vor, adulte Stammzellen in allen Geweben.",
             "Adulte Stammzellen können sich in mehr Zelltypen differenzieren als embryonale Stammzellen.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt embryonale Stammzellen als pluripotent, da sie sich in nahezu jeden Zelltyp differenzieren können, und adulte Stammzellen als in der Regel multipotent, also auf eine begrenzte Anzahl von Zelltypen beschränkt.",
         },
@@ -169,12 +169,12 @@ const set6: TVTextSet = {
             "Welchen Vorteil von iPS-Zellen nennt der Text gegenüber embryonalen Stammzellen?",
           options: [
             "iPS-Zellen können sich schneller teilen als embryonale Stammzellen.",
-            "iPS-Zellen sind totipotent und damit leistungsfähiger als embryonale Stammzellen.",
             "iPS-Zellen umgehen die ethischen Bedenken, die mit der Verwendung embryonaler Stammzellen verbunden sind.",
+            "iPS-Zellen sind totipotent und damit leistungsfähiger als embryonale Stammzellen.",
             "iPS-Zellen können ohne Zellteilung direkt in spezialisierte Zellen umgewandelt werden.",
             "iPS-Zellen sind seit den 1980er-Jahren klinisch erprobt und damit sicherer.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Im Text wird erläutert, dass iPS-Zellen ethische Bedenken umgehen, die mit der Verwendung embryonaler Stammzellen verbunden sind.",
         },
@@ -183,12 +183,12 @@ const set6: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über Stammzellen?",
           options: [
             "Nur für Knochenmark.",
-            "Einzigartige Fähigkeiten, großes Potenzial, viele Therapien noch in Erforschung.",
             "iPS-Zellen haben embryonale verdrängt.",
+            "Einzigartige Fähigkeiten, großes Potenzial, viele Therapien noch in Erforschung.",
             "Hauptrisiko Abstoßungsreaktion.",
             "Adulte Stammzellen wichtiger.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text stellt verschiedene Stammzelltypen vor und weist auf Risiken sowie den frühen Stand vieler Therapien hin.",
         },
@@ -198,11 +198,11 @@ const set6: TVTextSet = {
           options: [
             "Vollständig sicher.",
             "Einziges Risiko ist Ethik.",
-            "Trotz Tierversuchen Risiko unkontrollierter Zellteilung; weitere Forschung nötig.",
             "iPS risikofrei.",
+            "Trotz Tierversuchen Risiko unkontrollierter Zellteilung; weitere Forschung nötig.",
             "Tumor nur bei adulten Stammzellen.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Der Text warnt, dass das Risiko unkontrollierter Zellteilung sorgfältig erforscht werden muss.",
         },
@@ -244,12 +244,12 @@ const set6: TVTextSet = {
             "Was macht Prionen laut dem Text im Vergleich zu anderen Krankheitserregern einzigartig?",
           options: [
             "Sie enthalten sowohl DNA als auch RNA in besonders stabiler Form.",
-            "Sie bestehen ausschließlich aus fehlgefalteten Proteinen und enthalten kein genetisches Material.",
+            "Sie vermehren sich durch klassische Zellteilung wie Bakterien.",
             "Sie können nur Tiere, aber nicht den Menschen infizieren.",
             "Sie werden ausschließlich durch direkten Blutkontakt übertragen.",
-            "Sie vermehren sich durch klassische Zellteilung wie Bakterien.",
+            "Sie bestehen ausschließlich aus fehlgefalteten Proteinen und enthalten kein genetisches Material.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Der Text stellt fest, dass Prionen sich von allen anderen bekannten Erregern unterscheiden, weil sie ausschließlich aus fehlgefalteten Proteinen bestehen und kein genetisches Material enthalten.",
         },
@@ -258,13 +258,13 @@ const set6: TVTextSet = {
           question:
             "Warum wird die pathologische Form PrPSc im Text als besonders widerstandsfähig beschrieben?",
           options: [
-            "Weil sie von einer Lipidmembran umhüllt ist, die chemische Einwirkungen abwehrt.",
             "Weil sie über einen erhöhten Anteil an Beta-Faltblatt-Strukturen verfügt, die sie gegen Hitze, UV-Strahlung, Desinfektionsmittel und Proteasen resistent machen.",
+            "Weil sie von einer Lipidmembran umhüllt ist, die chemische Einwirkungen abwehrt.",
             "Weil sie sich in das Innere von Nervenzellen zurückzieht und dort vor Angriffen geschützt ist.",
             "Weil sie durch ständige Mutation ihre Struktur verändert und so Abwehrmechanismen umgeht.",
             "Weil sie nur bei sehr niedrigen Temperaturen aktiv wird und bei Wärme inaktiv bleibt.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Laut dem Text zeichnet sich PrPSc durch einen erhöhten Anteil an Beta-Faltblatt-Strukturen aus, was es extrem widerstandsfähig gegen Hitze, UV-Strahlung, chemische Desinfektionsmittel und sogar Proteasen macht.",
         },
@@ -288,12 +288,12 @@ const set6: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über die Ausbreitung von PrPSc im Gehirn ziehen?",
           options: [
             "Über Blutgefäße in alle Organe.",
-            "PrPSc faltet gesunde Prion-Proteine um, selbstverstärkende Kettenreaktion.",
             "Immunsystem kann PrPSc eliminieren.",
+            "PrPSc faltet gesunde Prion-Proteine um, selbstverstärkende Kettenreaktion.",
             "Durch Nervenzellen aktiv transportiert.",
             "Ausbreitung verlangsamt sich ab kritischer Menge.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "PrPSc faltet benachbarte normale Prion-Proteine um und löst eine selbstverstärkende Kettenreaktion aus.",
         },
@@ -337,12 +337,12 @@ const set6: TVTextSet = {
           question: "Welche Ursachen für Antibiotikaresistenz werden im Text genannt?",
           options: [
             "Ausschließlich die spontane Mutation von Bakterien in der natürlichen Umwelt.",
-            "Der prophylaktische Einsatz in der Tiermast, die Verschreibung bei viralen Infektionen und das vorzeitige Absetzen der Therapie.",
-            "Die mangelnde Hygiene in Krankenhäusern als einziger Faktor.",
             "Die Verwendung von Antibiotika in der Lebensmittelkonservierung.",
+            "Die mangelnde Hygiene in Krankenhäusern als einziger Faktor.",
+            "Der prophylaktische Einsatz in der Tiermast, die Verschreibung bei viralen Infektionen und das vorzeitige Absetzen der Therapie.",
             "Die natürliche Anpassung von Viren an Antibiotika durch Mutation.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text nennt mehrere Ursachen: die Verschreibung bei viralen Infektionen, das vorzeitige Absetzen der Therapie und den prophylaktischen Einsatz in der Tiermast.",
         },
@@ -352,12 +352,12 @@ const set6: TVTextSet = {
             "Was versteht man laut dem Text unter horizontalem Gentransfer im Kontext der Antibiotikaresistenz?",
           options: [
             "Die Weitergabe von Resistenzgenen von Elternzellen an Tochterzellen bei der Zellteilung.",
-            "Die Übertragung von Resistenzgenen zwischen verschiedenen Bakterienarten.",
+            "Die Mutation von Resistenzgenen durch UV-Strahlung.",
             "Die gentechnische Veränderung von Bakterien im Labor.",
             "Die Aufnahme von Antibiotika-Rückständen aus dem Trinkwasser durch Bakterien.",
-            "Die Mutation von Resistenzgenen durch UV-Strahlung.",
+            "Die Übertragung von Resistenzgenen zwischen verschiedenen Bakterienarten.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Im Text wird beschrieben, dass Resistenzgene durch horizontalen Gentransfer zwischen verschiedenen Bakterienarten ausgetauscht werden können.",
         },
@@ -365,13 +365,13 @@ const set6: TVTextSet = {
           id: "tv6-4-q3",
           question: "Was ist die Hauptaussage des Textes zur Antibiotikaresistenz?",
           options: [
-            "Gelöstes Problem.",
             "Globale Bedrohung durch unsachgemäßen Einsatz; ohne Gegenmaßnahmen drastisch zunehmend.",
+            "Gelöstes Problem.",
             "Nur MRSA gefährlich.",
             "Antibiotika nicht mehr einsetzen.",
             "Nur Landwirtschaft Verursacher.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation: "Der Text nennt Antibiotikaresistenz als globale Bedrohung.",
         },
         {
@@ -430,12 +430,12 @@ const set6: TVTextSet = {
             "Warum war die erste erfolgreiche Nierentransplantation 1954 laut dem Text komplikationsarm?",
           options: [
             "Weil der Empfänger zuvor mit Ciclosporin behandelt worden war.",
-            "Weil die Niere zwischen eineiigen Zwillingen übertragen wurde, die genetisch identisch waren, sodass keine Abstoßungsreaktion auftrat.",
             "Weil es sich um eine künstliche Niere handelte, die keine Immunantwort auslöste.",
+            "Weil die Niere zwischen eineiigen Zwillingen übertragen wurde, die genetisch identisch waren, sodass keine Abstoßungsreaktion auftrat.",
             "Weil der Empfänger ein geschwächtes Immunsystem hatte und daher nicht abstoßen konnte.",
             "Weil die Niere zuvor durch Bestrahlung sterilisiert und damit immunologisch neutral gemacht worden war.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text erklärt, dass die erste erfolgreiche Nierentransplantation zwischen eineiigen Zwillingen stattfand, die genetisch identisch waren, weshalb keine Abstoßungsreaktion auftrat.",
         },
@@ -445,11 +445,11 @@ const set6: TVTextSet = {
           options: [
             "Jeder Bürger muss sich aktiv als Organspender registrieren, um nach dem Tod Organe spenden zu können.",
             "Nur Verwandte des Verstorbenen dürfen über eine Organspende entscheiden.",
-            "Jeder Bürger gilt automatisch als Organspender, sofern er zu Lebzeiten nicht aktiv widersprochen hat.",
             "Ärzte entscheiden allein über die Organentnahme, ohne die Wünsche des Verstorbenen zu berücksichtigen.",
+            "Jeder Bürger gilt automatisch als Organspender, sofern er zu Lebzeiten nicht aktiv widersprochen hat.",
             "Die Organspende ist gesetzlich verboten, kann aber durch schriftlichen Widerspruch ermöglicht werden.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Im Text wird erklärt, dass bei der Widerspruchslösung jeder Bürger automatisch als Organspender gilt, sofern er zu Lebzeiten nicht aktiv widersprochen hat.",
         },
@@ -458,12 +458,12 @@ const set6: TVTextSet = {
           question: "Was versteht man laut dem Text unter Xenotransplantation?",
           options: [
             "Die Transplantation von Organen zwischen genetisch identischen Zwillingen.",
-            "Die Übertragung tierischer Organe auf den Menschen.",
+            "Die Verwendung mechanischer Ersatzorgane anstelle biologischer Transplantate.",
             "Die Züchtung von Organen aus körpereigenen Zellen im Labor.",
             "Die Transplantation von Organen zwischen Menschen verschiedener Blutgruppen.",
-            "Die Verwendung mechanischer Ersatzorgane anstelle biologischer Transplantate.",
+            "Die Übertragung tierischer Organe auf den Menschen.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Der Text definiert Xenotransplantation als die Übertragung tierischer Organe auf den Menschen.",
         },
@@ -471,13 +471,13 @@ const set6: TVTextSet = {
           id: "tv6-5-q4",
           question: "Welche Schlussfolgerung lässt sich über den Einsatz von Ciclosporin ziehen?",
           options: [
-            "Ciclosporin löst Abstoßung vollständig ohne Nebenwirkungen.",
             "Ciclosporin ermöglicht Transplantationen durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme mit erhöhtem Infektions- und Krebsrisiko.",
+            "Ciclosporin löst Abstoßung vollständig ohne Nebenwirkungen.",
             "Ciclosporin nur kurzfristig.",
             "Unterdrückt gesamtes Immunsystem.",
             "Bereits 1954 eingesetzt.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Ciclosporin unterdrückt die Abstoßung durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme.",
         },
@@ -556,11 +556,11 @@ const set7: TVTextSet = {
           options: [
             "Es spaltet Wasser in Sauerstoff und Wasserstoff.",
             "Es absorbiert Lichtenergie und überträgt sie auf die Elektronentransportkette.",
-            "Es katalysiert die Bindung von CO2 an Ribulose-1,5-bisphosphat.",
             "Es wandelt Glucose in Stärke um und speichert sie in den Chloroplasten.",
+            "Es katalysiert die Bindung von CO2 an Ribulose-1,5-bisphosphat.",
             "Es transportiert NADPH vom Stroma in die Thylakoide.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Der Text erklärt, dass RuBisCO den Vorgang katalysiert, bei dem CO2 an Ribulose-1,5-bisphosphat gebunden wird.",
         },
@@ -569,12 +569,12 @@ const set7: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über die Photosynthese?",
           options: [
             "Nur Sauerstoffproduktion.",
-            "Zweiphasiger Prozess; Faktoren wie Temperatur und CO2 beeinflussen Effizienz.",
+            "Chlorophyll a und b austauschbar.",
             "RuBisCO wichtigstes Pigment.",
             "Nur C4 bei Hitze möglich.",
-            "Chlorophyll a und b austauschbar.",
+            "Zweiphasiger Prozess; Faktoren wie Temperatur und CO2 beeinflussen Effizienz.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation: "Der Text beschreibt die Photosynthese als zweiphasigen Prozess.",
         },
         {
@@ -582,13 +582,13 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über den Vorteil der C4-Photosynthese ziehen?",
           options: [
-            "C4 ohne Spaltöffnungen.",
-            "C4 verzichtet auf Calvin-Zyklus.",
             "C4-Photosynthese ermöglicht effizientere CO2-Fixierung bei Hitze und umgeht Photosyntheserückgang durch Spaltöffnungsschluss.",
+            "C4 verzichtet auf Calvin-Zyklus.",
+            "C4 ohne Spaltöffnungen.",
             "C4 mehr Sauerstoff ohne RuBisCO.",
             "C4 am effizientesten in gemäßigten Zonen.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation: "C4-Pflanzen ermöglichen effizientere CO2-Fixierung bei Hitze.",
         },
       ],
@@ -633,12 +633,12 @@ const set7: TVTextSet = {
             "Warum entspricht laut dem Text eine Absenkung des pH-Werts von 8,2 auf 8,1 einer Zunahme der Wasserstoff-Ionen-Konzentration um etwa 26 Prozent?",
           options: [
             "Weil die Wassertemperatur den pH-Wert exponentiell beeinflusst.",
-            "Weil Kohlensäure sich bei niedrigem pH vollständig in Ionen auflöst.",
             "Weil die pH-Skala logarithmisch ist.",
+            "Weil Kohlensäure sich bei niedrigem pH vollständig in Ionen auflöst.",
             "Weil Carbonat-Ionen die Wasserstoff-Ionen zusätzlich verstärken.",
             "Weil die CO2-Konzentration linear mit dem pH-Wert korreliert.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass die pH-Skala logarithmisch ist, weshalb eine Senkung um 0,1 Einheiten einer deutlich höheren prozentualen Zunahme der Wasserstoff-Ionen-Konzentration entspricht.",
         },
@@ -661,12 +661,12 @@ const set7: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes zur Ozeanversäuerung?",
           options: [
             "Nur Korallenriffe betroffen.",
-            "CO2-Aufnahme führt zur Versäuerung, bedroht marine Ökosysteme und menschliche Lebensgrundlage.",
-            "Ozeane nehmen unbegrenzt CO2 auf.",
             "Kalkschalenbildner nicht gefährdet.",
+            "Ozeane nehmen unbegrenzt CO2 auf.",
+            "CO2-Aufnahme führt zur Versauerung, bedroht marine Ökosysteme und menschliche Lebensgrundlage.",
             "Natürlicher Vorgang.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text erklärt, wie CO2-Emissionen zur Versauerung führen, und betont die Bedrohung für marine Ökosysteme.",
         },
@@ -675,15 +675,15 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die doppelte Bedrohung von Korallenriffen ziehen?",
           options: [
-            "Entweder Versäuerung oder Erwärmung, nie beide.",
+            "Entweder Versauerung oder Erwärmung, nie beide.",
             "Korallenbleiche weniger gefährlich.",
-            "Korallenriffe durch Versäuerung und Meereswärmung gleichzeitig bedroht; gefährdet Lebensraum für ein Viertel mariner Arten.",
-            "Nur tropisch oder polar betroffen.",
             "Korallen passen sich rasch an.",
+            "Nur tropisch oder polar betroffen.",
+            "Korallenriffe durch Versauerung und Meereswärmung gleichzeitig bedroht; gefährdet Lebensraum für ein Viertel mariner Arten.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
-            "Korallenriffe sind durch Versäuerung und Meereswärmung gleichzeitig bedroht.",
+            "Korallenriffe sind durch Versauerung und Meereswärmung gleichzeitig bedroht.",
         },
       ],
     },
@@ -723,13 +723,13 @@ const set7: TVTextSet = {
           question:
             "Wie kommt es laut dem Text nach starken Vulkanausbrüchen zu einem globalen Kühlungseffekt?",
           options: [
-            "Vulkanische Asche bedeckt die Erdoberfläche und reflektiert Sonnenstrahlung.",
             "Schwefeldioxid bildet in der Stratosphäre Sulfataerosole, die Sonnenstrahlung ins Weltall zurückreflektieren.",
+            "Vulkanische Asche bedeckt die Erdoberfläche und reflektiert Sonnenstrahlung.",
             "Vulkanisches CO2 absorbiert Wärme in der Atmosphäre und strahlt sie in den Weltraum ab.",
             "Die freigesetzten Wasserdampfmengen bilden dichte Wolkendecken, die die Erde dauerhaft beschatten.",
             "Die Lava kühlt große Meeresflächen ab und senkt so die globale Temperatur.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Der Text erklärt, dass Schwefeldioxid in der Stratosphäre mit Wasser zu Sulfataerosolen reagiert, die Sonnenstrahlung zurück in den Weltraum reflektieren und so die Erdoberfläche kühlen.",
         },
@@ -738,12 +738,12 @@ const set7: TVTextSet = {
           question: "Welche Aussage zu vulkanischen CO2-Emissionen lässt sich dem Text entnehmen?",
           options: [
             "Vulkanische CO2-Emissionen übersteigen die vom Menschen verursachten Emissionen deutlich.",
-            "Vulkanisches CO2 hat keinen Einfluss auf den Treibhauseffekt.",
             "Vulkanische CO2-Emissionen machen weniger als ein Prozent der menschengemachten CO2-Emissionen aus.",
+            "Vulkanisches CO2 hat keinen Einfluss auf den Treibhauseffekt.",
             "Vulkanisches CO2 wird vollständig von den Ozeanen absorbiert.",
             "Vulkanische CO2-Emissionen waren vor der Industrialisierung die Hauptursache des Treibhauseffekts.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Im Text heißt es, dass die jährlichen vulkanischen CO2-Emissionen weniger als ein Prozent der menschengemachten CO2-Emissionen ausmachen.",
         },
@@ -752,12 +752,12 @@ const set7: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über Vulkanismus und Klima?",
           options: [
             "Hauptursache aktuellen Klimawandels.",
-            "Kühlend durch Sulfataerosole kurzfristig, erwärmend durch CO2 langfristig, negativ auf Ozonschicht.",
             "CO2 wichtiger als Sulfataerosole.",
+            "Kühlend durch Sulfataerosole kurzfristig, erwärmend durch CO2 langfristig, negativ auf Ozonschicht.",
             "Tambora ohne Auswirkung.",
             "Sulfataerosole wirken jahrzehntelang.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text beschreibt den kühlenden Sulfataerosol-Effekt und den negativen Einfluss auf die Ozonschicht.",
         },
@@ -766,13 +766,13 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Vergleich von Tambora und Pinatubo ziehen?",
           options: [
-            "Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
+            "Tambora keine Hungersnot.",
             "Pinatubo stärker als Tambora.",
             "Beide ohne messbaren Einfluss.",
-            "Tambora keine Hungersnot.",
+            "Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
             "Inselvulkane generell stärker.",
           ],
-          correctOption: 0,
+          correctOption: 3,
           explanation:
             "Tambora setzte 60 Mio. Tonnen SO2 frei; Pinatubo 20 Mio. Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
         },
@@ -819,11 +819,11 @@ const set7: TVTextSet = {
           options: [
             "Weil kleine Populationen häufiger von natürlicher Selektion betroffen sind.",
             "Weil in kleinen Populationen mehr Mutationen auftreten als in großen.",
-            "Weil zufällige Schwankungen in kleinen Populationen einen größeren relativen Effekt auf die Allelfrequenzen haben.",
-            "Weil kleine Populationen einen höheren Genfluss mit benachbarten Populationen aufweisen.",
             "Weil in kleinen Populationen die Fortpflanzungsrate generell höher ist.",
+            "Weil kleine Populationen einen höheren Genfluss mit benachbarten Populationen aufweisen.",
+            "Weil zufällige Schwankungen in kleinen Populationen einen größeren relativen Effekt auf die Allelfrequenzen haben.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text erklärt, dass die Auswirkungen genetischer Drift in kleinen Populationen besonders ausgeprägt sind, weil zufällige Schwankungen dort einen größeren relativen Effekt auf die Allelfrequenzen haben.",
         },
@@ -831,13 +831,13 @@ const set7: TVTextSet = {
           id: "tv7-4-q2",
           question: "Welches Beispiel nennt der Text für den Flaschenhalseffekt?",
           options: [
-            "Die Amish-Gemeinschaft in Nordamerika mit einer hohen Rate an Erbkrankheiten.",
-            "Die Besiedlung einer Insel durch eine kleine Gruppe von Vögeln.",
             "Die Geparden, deren geringe genetische Variabilität auf eine drastische Reduktion der Populationsgröße zurückgeführt wird.",
+            "Die Besiedlung einer Insel durch eine kleine Gruppe von Vögeln.",
+            "Die Amish-Gemeinschaft in Nordamerika mit einer hohen Rate an Erbkrankheiten.",
             "Die Entstehung neuer Bakterienstämme durch Antibiotikaresistenz.",
             "Die Anpassung tropischer Pflanzen an veränderte Klimabedingungen.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text nennt die Geparden als klassisches Beispiel für den Flaschenhalseffekt, da ihre extrem geringe genetische Variabilität auf einen Flaschenhals in der Vergangenheit zurückgeführt wird.",
         },
@@ -861,12 +861,12 @@ const set7: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über die Krankheitsanfälligkeit der Geparden ziehen?",
           options: [
             "Körpergröße als Ursache.",
-            "Geringe genetische Diversität durch Flaschenhals macht Geparden anfälliger und weniger anpassungsfähig.",
             "Bejagung veränderte Gene.",
+            "Geringe genetische Diversität durch Flaschenhals macht Geparden anfälliger und weniger anpassungsfähig.",
             "Natürliche Selektion als Ursache.",
             "Nur anfällig für Viren.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Die geringe genetische Diversität der Geparden geht auf einen Flaschenhals zurück.",
         },
@@ -910,12 +910,12 @@ const set7: TVTextSet = {
           question: "Was beschreibt der Text als Mykorrhiza?",
           options: [
             "Eine parasitäre Beziehung zwischen Pilzen und Insekten.",
-            "Die Symbiose zwischen Pilzen und Pflanzenwurzeln, bei der der Pilz die Nährstoffaufnahme verbessert und im Gegenzug Zucker erhält.",
-            "Die Beziehung zwischen Epiphyten und Bäumen in tropischen Wäldern.",
             "Eine Form des Kommensalismus zwischen Algen und Korallen.",
+            "Die Beziehung zwischen Epiphyten und Bäumen in tropischen Wäldern.",
+            "Die Symbiose zwischen Pilzen und Pflanzenwurzeln, bei der der Pilz die Nährstoffaufnahme verbessert und im Gegenzug Zucker erhält.",
             "Den Prozess, bei dem Bakterien in eukaryotische Zellen aufgenommen werden.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text beschreibt Mykorrhiza als die Symbiose zwischen Pilzen und Pflanzenwurzeln, bei der der Pilz die Absorptionsfläche vergrößert und die Nährstoffaufnahme verbessert, während er im Gegenzug Zucker erhält.",
         },
@@ -925,11 +925,11 @@ const set7: TVTextSet = {
           options: [
             "Die Fähigkeit von Mitochondrien, sich unabhängig vom Zellzyklus zu teilen.",
             "Die Tatsache, dass Chloroplasten Photosynthese betreiben können.",
-            "Die eigene DNA der Organellen und ihre doppelte Membranstruktur.",
-            "Die chemische Ähnlichkeit zwischen Mitochondrien und modernen Parasiten.",
             "Die Beobachtung, dass Bakterien häufig in Pflanzenzellen eindringen.",
+            "Die chemische Ähnlichkeit zwischen Mitochondrien und modernen Parasiten.",
+            "Die eigene DNA der Organellen und ihre doppelte Membranstruktur.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text nennt als Belege für die Endosymbiontentheorie die eigene DNA von Mitochondrien und Chloroplasten sowie ihre doppelte Membranstruktur.",
         },
@@ -937,13 +937,13 @@ const set7: TVTextSet = {
           id: "tv7-5-q3",
           question: "Wie unterscheidet der Text Kommensalismus von Parasitismus?",
           options: [
-            "Beim Kommensalismus leben beide Organismen getrennt, beim Parasitismus zusammen.",
             "Beim Kommensalismus profitiert ein Partner, ohne dem anderen zu schaden, beim Parasitismus profitiert ein Partner auf Kosten des anderen.",
+            "Beim Kommensalismus leben beide Organismen getrennt, beim Parasitismus zusammen.",
             "Kommensalismus kommt nur bei Pflanzen vor, Parasitismus nur bei Tieren.",
             "Kommensalismus ist eine kurzfristige Beziehung, Parasitismus dauert lebenslang.",
             "Beim Kommensalismus werden Nährstoffe geteilt, beim Parasitismus werden Gene ausgetauscht.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Der Text erklärt, dass beim Kommensalismus ein Partner profitiert, während der andere weder Vor- noch Nachteile erfährt, und beim Parasitismus ein Partner auf Kosten des anderen profitiert.",
         },
@@ -953,12 +953,12 @@ const set7: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über die ökologische Rolle von Parasiten ziehen?",
           options: [
             "Parasiten nur schädlich.",
-            "Kein Einfluss auf Populationsdynamik.",
             "Trotz Schädigung des Wirts wichtig für Ökosysteme; regulieren Populationen und fördern Biodiversität.",
+            "Kein Einfluss auf Populationsdynamik.",
             "Parasitismus Übergangsform zwischen Kommensalismus und Mutualismus.",
             "Parasiten profitieren langfristig nicht.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Parasiten schaden dem Wirt, sind aber wichtige Bestandteile von Ökosystemen.",
         },
@@ -1025,11 +1025,11 @@ const set8: TVTextSet = {
           options: [
             "Sie steigern die Dopaminproduktion in der Substantia nigra.",
             "Sie blockieren die Glutamat-Rezeptoren und verhindern so epileptische Anfälle.",
-            "Sie verlangsamen den Abbau von Serotonin im synaptischen Spalt und erhöhen dessen Konzentration.",
             "Sie fördern die Freisetzung von GABA aus den synaptischen Vesikeln.",
+            "Sie verlangsamen den Abbau von Serotonin im synaptischen Spalt und erhöhen dessen Konzentration.",
             "Sie beschleunigen den enzymatischen Abbau überschüssiger Neurotransmitter.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Im Text wird erläutert, dass SSRI wirken, indem sie den Abbau von Serotonin im synaptischen Spalt verlangsamen und so dessen Konzentration erhöhen.",
         },
@@ -1040,11 +1040,11 @@ const set8: TVTextSet = {
           options: [
             "Glutamat und GABA im Gleichgewicht.",
             "Alle Neurotransmitter werden nach Signal abgebaut.",
-            "Neurotransmitter werden durch enzymatischen Abbau, Wiederaufnahme oder Diffusion entfernt.",
-            "Serotonin reguliert die Wiederaufnahme aller Neurotransmitter.",
             "Aktionspotenzial wird in Vesikel gespeichert.",
+            "Serotonin reguliert die Wiederaufnahme aller Neurotransmitter.",
+            "Neurotransmitter werden durch enzymatischen Abbau, Wiederaufnahme oder Diffusion entfernt.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Drei Mechanismen: enzymatischer Abbau, Wiederaufnahme durch Transporterproteine und Diffusion.",
         },
@@ -1052,13 +1052,13 @@ const set8: TVTextSet = {
           id: "tv8-1-q4",
           question: "Was ist die Hauptaussage des Textes über Neurotransmitter?",
           options: [
-            "Einziges Problem ist GABA-Mangel.",
-            "Neurotransmitter-Ungleichgewichte sind selten und klinisch irrelevant.",
             "Chemische Botenstoffe übertragen Signale an Synapsen; Ungleichgewichte führen zu neuropsychiatrischen Erkrankungen.",
+            "Neurotransmitter-Ungleichgewichte sind selten und klinisch irrelevant.",
+            "Einziges Problem ist GABA-Mangel.",
             "Glutamat ist der einzige Neurotransmitter im Gehirn.",
             "Dopamin hat keine Auswirkungen auf Bewegung.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Neurotransmitter als chemische Botenstoffe an Synapsen; Ungleichgewichte führen zu Erkrankungen.",
         },
@@ -1102,12 +1102,12 @@ const set8: TVTextSet = {
           question: "Wie nutzen Krebszellen laut dem Text die Immuncheckpoints aus?",
           options: [
             "Sie zerstören die T-Zellen direkt durch die Freisetzung toxischer Substanzen.",
-            "Sie mutieren ihre DNA so schnell, dass das Immunsystem sie nicht mehr erkennen kann.",
             "Sie exprimieren Checkpoint-Proteine auf ihrer Oberfläche und entgehen so der Immunüberwachung.",
+            "Sie mutieren ihre DNA so schnell, dass das Immunsystem sie nicht mehr erkennen kann.",
             "Sie blockieren die Produktion von Antikörpern durch B-Lymphozyten.",
             "Sie wandern in Gewebe ein, die vom Immunsystem nicht überwacht werden.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass Krebszellen Checkpoint-Proteine auf ihrer Oberfläche exprimieren und so der Immunüberwachung entgehen.",
         },
@@ -1131,11 +1131,11 @@ const set8: TVTextSet = {
           options: [
             "Die dauerhafte Unterdrückung des Immunsystems durch die modifizierten Zellen.",
             "Die Entstehung neuer Mutationen in den gentechnisch veränderten T-Zellen.",
-            "Der sogenannte Zytokinsturm, eine potenziell lebensbedrohliche überschießende Immunreaktion.",
             "Die Abstoßung der modifizierten Zellen durch das körpereigene Immunsystem.",
+            "Der sogenannte Zytokinsturm, eine potenziell lebensbedrohliche überschießende Immunreaktion.",
             "Die Unfähigkeit der CAR-T-Zellen, zwischen Krebszellen und gesunden Zellen zu unterscheiden.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Der Text nennt den Zytokinsturm als eine potenziell lebensbedrohliche überschießende Immunreaktion und Herausforderung der CAR-T-Zelltherapie.",
         },
@@ -1146,11 +1146,11 @@ const set8: TVTextSet = {
           options: [
             "CAR-T-Zellen sind vollkommen risikofrei.",
             "CAR-T-Therapie hat keine Nebenwirkungen.",
-            "Die hohen Kosten und der Zytokinsturm sind zentrale Herausforderungen, die den breiten Einsatz begrenzen.",
-            "CAR-T-Therapie wirkt nur bei festen Tumoren.",
             "CAR-T-Zellen werden nach der Therapie vom Körper abgebaut.",
+            "CAR-T-Therapie wirkt nur bei festen Tumoren.",
+            "Die hohen Kosten und der Zytokinsturm sind zentrale Herausforderungen, die den breiten Einsatz begrenzen.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text nennt Zytokinsturm und hohe Kosten als zentrale Herausforderungen.",
         },
@@ -1194,13 +1194,13 @@ const set8: TVTextSet = {
           question:
             "Welche natürliche Funktion hat das CRISPR-Cas9-System laut dem Text in Bakterien?",
           options: [
-            "Es reguliert die Zellteilung und verhindert unkontrolliertes Wachstum.",
             "Es dient als Immunsystem gegen Viren, indem es deren DNA gezielt zerschneidet.",
+            "Es reguliert die Zellteilung und verhindert unkontrolliertes Wachstum.",
             "Es repariert Mutationen in der bakteriellen DNA nach Strahlenschäden.",
             "Es steuert den horizontalen Gentransfer zwischen verschiedenen Bakterienarten.",
             "Es produziert Antibiotika, die konkurrierende Mikroorganismen abtöten.",
           ],
-          correctOption: 1,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt das CRISPR-Cas9-System als natürliches Immunsystem der Bakterien gegen Viren (Bakteriophagen), das deren DNA gezielt durchschneidet.",
         },
@@ -1239,12 +1239,12 @@ const set8: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über die Flexibilität von CRISPR-Cas9 ziehen?",
           options: [
             "Die Guide-RNA kann beliebige Zielsequenzen erkennen, weil Cas9 ohne sie nicht funktioniert.",
-            "Da Cas9 die DNA an der Zielsequenz schneidet und zelleigene Reparaturmechanismen die Bearbeitung ermöglichen, lässt sich jedes Gen gezielt verändern.",
-            "CRISPR funktioniert nur in Bakterienzellen.",
             "Die Guide-RNA ist immer identisch, unabhängig von der Zielsequenz.",
+            "CRISPR funktioniert nur in Bakterienzellen.",
+            "Da Cas9 die DNA an der Zielsequenz schneidet und zelleigene Reparaturmechanismen die Bearbeitung ermöglichen, lässt sich jedes Gen gezielt verändern.",
             "Cas9 kann nur DNA schneiden, nicht reparieren.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Guide-RNA synthetisch für jede Zielsequenz entwerfbar → universell einsetzbares Werkzeug.",
         },
@@ -1289,12 +1289,12 @@ const set8: TVTextSet = {
             "Welche vier Grundprinzipien der biomedizinischen Ethik werden im Text genannt?",
           options: [
             "Wahrheit, Freiheit, Gleichheit und Solidarität.",
-            "Autonomie, Wohltätigkeit, Nichtschaden und Gerechtigkeit.",
+            "Selbstbestimmung, Schadensbegrenzung, Gewinnmaximierung und Forschungsfreiheit.",
             "Transparenz, Effizienz, Nachhaltigkeit und Verantwortung.",
             "Fürsorge, Treue, Ehrlichkeit und Respekt.",
-            "Selbstbestimmung, Schadensbegrenzung, Gewinnmaximierung und Forschungsfreiheit.",
+            "Autonomie, Wohltätigkeit, Nichtschaden und Gerechtigkeit.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Der Text nennt Autonomie, Wohltätigkeit, Nichtschaden und Gerechtigkeit als die vier grundlegenden Prinzipien nach Beauchamp und Childress.",
         },
@@ -1302,13 +1302,13 @@ const set8: TVTextSet = {
           id: "tv8-4-q2",
           question: "Welches ethische Dilemma beschreibt der Text als klassisches Beispiel?",
           options: [
-            "Die Frage, ob genetisch veränderte Lebensmittel zugelassen werden sollten.",
-            "Die Entscheidung, welcher Patient bei Organknappheit ein Spenderorgan erhält.",
             "Der Konflikt zwischen Patientenautonomie und ärztlicher Wohltätigkeit, wenn ein Patient eine notwendige Behandlung ablehnt.",
+            "Die Entscheidung, welcher Patient bei Organknappheit ein Spenderorgan erhält.",
+            "Die Frage, ob genetisch veränderte Lebensmittel zugelassen werden sollten.",
             "Die Frage, ob medizinische Forschung an Tieren ethisch vertretbar ist.",
             "Der Widerspruch zwischen Datenschutz und dem Nutzen genetischer Datenbanken.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt als klassisches Dilemma die Situation, in der ein Patient eine medizinisch notwendige Behandlung ablehnt und so Autonomie und Wohltätigkeit in Konflikt geraten.",
         },
@@ -1382,11 +1382,11 @@ const set8: TVTextSet = {
           options: [
             "Sie beginnt sofort nach dem Tod und löst sich nach sechs Stunden wieder.",
             "Sie beginnt nach 24 Stunden und bleibt dauerhaft bestehen.",
-            "Sie beginnt zwei bis vier Stunden nach dem Tod, erreicht nach sechs bis zwölf Stunden ihr Maximum und löst sich nach 24 bis 48 Stunden.",
             "Sie beginnt gleichzeitig mit den Totenflecken und löst sich nach 12 Stunden.",
+            "Sie beginnt zwei bis vier Stunden nach dem Tod, erreicht nach sechs bis zwölf Stunden ihr Maximum und löst sich nach 24 bis 48 Stunden.",
             "Sie setzt erst nach dem vollständigen Abkühlen des Körpers ein.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Der Text beschreibt, dass die Totenstarre zwei bis vier Stunden nach dem Tod beginnt, nach sechs bis zwölf Stunden ihr Maximum erreicht und sich nach 24 bis 48 Stunden wieder löst.",
         },
@@ -1396,11 +1396,11 @@ const set8: TVTextSet = {
           options: [
             "Auf der Analyse der gesamten Genomsequenz eines Individuums.",
             "Auf der Untersuchung von Chromosomenaberrationen in weißen Blutkörperchen.",
-            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individuen variieren.",
-            "Auf der Bestimmung der Blutgruppe und des Rhesusfaktors.",
             "Auf dem Vergleich mitochondrialer DNA-Sequenzen verschiedener Personen.",
+            "Auf der Bestimmung der Blutgruppe und des Rhesusfaktors.",
+            "Auf der Analyse von Short Tandem Repeats, kurzen sich wiederholenden DNA-Sequenzen, die zwischen Individuen variieren.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text erklärt, dass der genetische Fingerabdruck auf der Analyse sogenannter Short Tandem Repeats beruht, kurze sich wiederholende DNA-Sequenzen, die zwischen Individuen variieren.",
         },
@@ -1408,13 +1408,13 @@ const set8: TVTextSet = {
           id: "tv8-5-q3",
           question: "Was ist die Hauptaussage des Textes über die forensische Medizin?",
           options: [
-            "Forensische Medizin ist ausschließlich für Mordermittlungen zuständig.",
-            "Genetischer Fingerabdruck ist seit 1970 in Verwendung.",
             "Forensische Medizin wendet medizinisches Wissen auf rechtliche Fragen an; DNA-Analyse ermöglicht eindeutige Identifikation, wirft aber Datenschutzfragen auf.",
+            "Genetischer Fingerabdruck ist seit 1970 in Verwendung.",
+            "Forensische Medizin ist ausschließlich für Mordermittlungen zuständig.",
             "Totenflecke entstehen durch chemische Reaktionen, nicht durch Blutabsinken.",
             "Die Obduktion ist in Österreich verboten.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Forensische Medizin verbindet medizinisches Wissen mit rechtlichen Aufgaben.",
         },
@@ -1460,7 +1460,7 @@ const set9: TVTextSet = {
         "Feuchtkugeltemperatur über 35 Grad Celsius liegt, versagt diese Thermoregulation, und " +
         "es droht ein tödlicher Hitzschlag. Indirekt beeinflusst der Klimawandel die Gesundheit " +
         "über die Veränderung von Ökosystemen. Die Ausbreitung von Krankheitsüberträgern wie " +
-        "der Tigermücke Ädes albopictus in bisher gemäßigte Breiten erhöht das Risiko für " +
+        "der Tigermücke Aedes albopictus in bisher gemäßigte Breiten erhöht das Risiko für " +
         "Tropenkrankheiten wie Dengue-Fieber und Chikungunya in Regionen, die bislang davon " +
         "verschont waren. In Europa wurden bereits autochthone, also lokal übertragene Fälle " +
         "von Dengue-Fieber dokumentiert. Die Landwirtschaft leidet unter häufigeren Dürren " +
@@ -1481,12 +1481,12 @@ const set9: TVTextSet = {
             "Ab welchem Schwellenwert versagt laut dem Text die menschliche Thermoregulation?",
           options: [
             "Ab einer Außentemperatur von 40 Grad Celsius bei niedriger Luftfeuchtigkeit.",
-            "Ab einer Feuchtkugeltemperatur von über 35 Grad Celsius.",
             "Ab einer Kernkörpertemperatur von 38 Grad Celsius.",
+            "Ab einer Feuchtkugeltemperatur von über 35 Grad Celsius.",
             "Ab einer Luftfeuchtigkeit von über 90 Prozent unabhängig von der Temperatur.",
             "Ab einer Aufenthaltsdauer von mehr als vier Stunden bei Temperaturen über 30 Grad Celsius.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text beschreibt, dass ab einer Feuchtkugeltemperatur über 35 Grad Celsius die Thermoregulation des Körpers versagt und ein tödlicher Hitzschlag droht.",
         },
@@ -1496,11 +1496,11 @@ const set9: TVTextSet = {
           options: [
             "Eine Allergie gegen Sonnenstrahlung, die durch den Klimawandel zunimmt.",
             "Eine chronische Erschöpfung durch anhaltende Hitzebelastung.",
-            "Der emotionale Stress, der durch die wahrgenommene Zerstörung der vertrauten Umwelt entsteht.",
             "Die Angst vor zukünftigen Naturkatastrophen und ihren gesundheitlichen Folgen.",
+            "Der emotionale Stress, der durch die wahrgenommene Zerstörung der vertrauten Umwelt entsteht.",
             "Ein medizinischer Fachbegriff für klimabedingte Atemwegserkrankungen.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Im Text wird Solastalgie als der emotionale Stress definiert, der durch die wahrgenommene Zerstörung der vertrauten Umwelt entsteht.",
         },
@@ -1511,11 +1511,11 @@ const set9: TVTextSet = {
           options: [
             "Klimawandel betrifft nur tropische Regionen.",
             "Nur Hitzewellen sind relevant.",
-            "Der Klimawandel gefährdet die Gesundheit direkt durch Hitzestress und indirekt durch Ausbreitung von Krankheiten, Luftqualitätsverschlechterung und psychische Folgen.",
-            "Klimawandel hat keine Auswirkungen auf Infektionskrankheiten.",
             "Nur ältere Menschen sind durch Klimawandel gefährdet.",
+            "Klimawandel hat keine Auswirkungen auf Infektionskrankheiten.",
+            "Der Klimawandel gefährdet die Gesundheit direkt durch Hitzestress und indirekt durch Ausbreitung von Krankheiten, Luftqualitätsverschlechterung und psychische Folgen.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text beschreibt direkte Auswirkungen wie Hitzestress und indirekte wie Ausbreitung von Vektoren.",
         },
@@ -1524,13 +1524,13 @@ const set9: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Ausbreitung von Tropenkrankheiten durch den Klimawandel ziehen?",
           options: [
-            "Dengue-Fieber ist in Europa endemisch.",
-            "Die Tigermücke überträgt nur Malaria.",
             "Weil erwärmte Regionen für Wärme-liebende Vektoren wie die Tigermücke geeignet werden, breiten sich Tropenkrankheiten in neue Gebiete aus.",
+            "Die Tigermücke überträgt nur Malaria.",
+            "Dengue-Fieber ist in Europa endemisch.",
             "Dengue-Fieber wird nur durch direkte Berührung übertragen.",
             "Nur Malaria wird durch Klimawandel beeinflusst.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation: "Erwärmung macht neue Gebiete für die Tigermücke geeignet.",
         },
       ],
@@ -1573,12 +1573,12 @@ const set9: TVTextSet = {
             "Warum lag die höchste Sterblichkeit bei der Spanischen Grippe laut dem Text bei jungen Erwachsenen?",
           options: [
             "Weil junge Erwachsene aufgrund von Mangelernährung ein geschwächtes Immunsystem hatten.",
-            "Weil das H1N1-Virus eine besondere Vorliebe für junge Zellen zeigte.",
             "Weil eine überschießende Immunantwort, ein Zytokinsturm, das eigene Lungengewebe schwer schädigte.",
+            "Weil das H1N1-Virus eine besondere Vorliebe für junge Zellen zeigte.",
             "Weil junge Erwachsene am häufigsten in überfüllten Kasernen lebten und dort infiziert wurden.",
             "Weil ältere Menschen durch frühere Grippewellen bereits immun waren.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass die hohe Sterblichkeit bei jungen Erwachsenen auf eine überschießende Immunantwort (Zytokinsturm) zurückgeführt wird, bei der das Immunsystem das eigene Lungengewebe schwer schädigte.",
         },
@@ -1587,12 +1587,12 @@ const set9: TVTextSet = {
           question: "Wie funktionieren mRNA-Impfstoffe laut dem Text?",
           options: [
             "Sie enthalten abgeschwächte lebende Viren, die eine milde Infektion auslösen.",
-            "Sie nutzen synthetische Boten-RNA, die die Zellen anleitet, ein virales Protein zu produzieren, gegen das eine Immunantwort aufgebaut wird.",
             "Sie bestehen aus gereinigten viralen Antikörpern, die direkt in den Blutkreislauf injiziert werden.",
+            "Sie nutzen synthetische Boten-RNA, die die Zellen anleitet, ein virales Protein zu produzieren, gegen das eine Immunantwort aufgebaut wird.",
             "Sie enthalten DNA-Fragmente des Virus, die dauerhaft in das menschliche Genom eingebaut werden.",
             "Sie blockieren die Rezeptoren, an die das Virus andockt, und verhindern so eine Infektion.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text beschreibt, dass mRNA-Impfstoffe synthetisch hergestellte Boten-RNA nutzen, die die Zellen des Geimpften anleitet, ein virales Protein zu produzieren, gegen das dann eine Immunantwort aufgebaut wird.",
         },
@@ -1602,11 +1602,11 @@ const set9: TVTextSet = {
           options: [
             "Weil Antibiotika zunehmend unwirksam werden und neue Bakterien entstehen.",
             "Weil die Weltbevölkerung schrumpft und die Herdenimmunität abnimmt.",
-            "Weil der zunehmende Kontakt zwischen Menschen und Wildtieren durch Lebensraumzerstörung das Zoonose-Risiko erhöht.",
             "Weil Impfstoffe immer langsamer entwickelt werden und nicht mehr wirksam sind.",
+            "Weil der zunehmende Kontakt zwischen Menschen und Wildtieren durch Lebensraumzerstörung das Zoonose-Risiko erhöht.",
             "Weil der internationale Flugverkehr vollständig dereguliert wurde.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Der Text nennt den zunehmenden Kontakt zwischen Menschen und Wildtieren durch Abholzung und Lebensraumzerstörung als Faktor, der das Risiko von Zoonosen erhöht.",
         },
@@ -1616,11 +1616,11 @@ const set9: TVTextSet = {
           options: [
             "Die Spanische Grippe betraf nur ältere Menschen.",
             "Pandemien sind durch moderne Medizin vollständig vermeidbar.",
-            "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung und Fehlinformationen erschwerten die COVID-19-Bekämpfung.",
-            "mRNA-Impfstoffe sind die einzige wirksame Schutzmaßnahme.",
             "Der Schwarze Tod hatte keine sozialen Folgen.",
+            "mRNA-Impfstoffe sind die einzige wirksame Schutzmaßnahme.",
+            "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung und Fehlinformationen erschwerten die COVID-19-Bekämpfung.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung sind zentrale Hindernisse.",
         },
@@ -1663,13 +1663,13 @@ const set9: TVTextSet = {
           id: "tv9-3-q1",
           question: "Was bewies das Experiment von Ader und Cohen laut dem Text?",
           options: [
-            "Dass Stress die Produktion von Cortisol hemmt und das Immunsystem stärkt.",
-            "Dass Ratten gegen Saccharin eine allergische Reaktion entwickeln können.",
             "Dass das Immunsystem durch klassische Konditionierung beeinflusst werden kann und nicht autonom arbeitet.",
+            "Dass Ratten gegen Saccharin eine allergische Reaktion entwickeln können.",
+            "Dass Stress die Produktion von Cortisol hemmt und das Immunsystem stärkt.",
             "Dass Immunsuppressiva bei langfristiger Einnahme ihre Wirkung verlieren.",
             "Dass das Nervensystem keine direkte Verbindung zu den lymphatischen Organen hat.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt, dass das Experiment bewies, dass das Immunsystem durch klassische Konditionierung beeinflusst werden kann und nicht autonom arbeitet, sondern vom Nervensystem moduliert wird.",
         },
@@ -1678,12 +1678,12 @@ const set9: TVTextSet = {
           question: "Wie wirkt sich chronischer Stress laut dem Text auf das Immunsystem aus?",
           options: [
             "Er führt zu einer dauerhaften Steigerung der Immunfunktion durch erhöhte Adrenalinproduktion.",
-            "Er hat keinen messbaren Einfluss auf das Immunsystem, sondern nur auf die Psyche.",
             "Er führt zu dauerhaft erhöhten Cortisolspiegeln, die die Aktivität von Killerzellen und T-Lymphozyten unterdrücken.",
+            "Er hat keinen messbaren Einfluss auf das Immunsystem, sondern nur auf die Psyche.",
             "Er aktiviert das autonome Nervensystem, das kompensatorisch mehr Antikörper produzieren lässt.",
             "Er reduziert die Cortisolproduktion und führt zu einer Überreaktion des Immunsystems.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass chronischer Stress zu dauerhaft erhöhten Cortisolspiegeln führt, die die Aktivität von natürlichen Killerzellen und T-Lymphozyten unterdrücken.",
         },
@@ -1708,11 +1708,11 @@ const set9: TVTextSet = {
           options: [
             "Nur Cortisol vermittelt Stress-Immunverbindung.",
             "Chronischer Stress hat keinen Einfluss auf Impfansprechen.",
-            "Da chronischer Stress über HPA-Achse und autonomes Nervensystem das Immunsystem schwächt, ist ein ganzheitlicher Behandlungsansatz sinnvoll.",
             "Achtsamkeit hat keinen Einfluss auf das Immunsystem.",
+            "Da chronischer Stress über HPA-Achse und autonomes Nervensystem das Immunsystem schwächt, ist ein ganzheitlicher Behandlungsansatz sinnvoll.",
             "Das autonome Nervensystem ist nicht mit lymphatischen Organen verbunden.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Da Stress das Immunsystem schwächt, sprechen PNI-Erkenntnisse für ganzheitliche Behandlungsansätze.",
         },
@@ -1758,12 +1758,12 @@ const set9: TVTextSet = {
           question: "Was beschreibt der Text als EPR-Effekt?",
           options: [
             "Die Fähigkeit von Nanopartikeln, magnetische Resonanzsignale zu verstärken.",
-            "Die erhöhte Durchlässigkeit undichter Blutgefäße in Tumoren, die es Nanopartikeln ermöglicht, sich dort anzureichern.",
+            "Den enzymatischen Abbau von Nanopartikeln in der Leber.",
             "Die elektrostatische Abstoßung zwischen Nanopartikeln und gesunden Zellen.",
             "Die Eigenschaft von Quantenpunkten, bei verschiedenen Größen unterschiedlich zu fluoreszieren.",
-            "Den enzymatischen Abbau von Nanopartikeln in der Leber.",
+            "Die erhöhte Durchlässigkeit undichter Blutgefäße in Tumoren, die es Nanopartikeln ermöglicht, sich dort anzureichern.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Der Text beschreibt den EPR-Effekt als das Phänomen undichter Blutgefäße in Tumoren, durch die Nanopartikel einer bestimmten Größe eindringen und sich im Tumorgewebe anreichern können.",
         },
@@ -1771,13 +1771,13 @@ const set9: TVTextSet = {
           id: "tv9-4-q2",
           question: "Welche Bedenken bezüglich Nanopartikeln werden im Text geäußert?",
           options: [
-            "Dass Nanopartikel allergische Reaktionen auslösen, die bei jedem Patienten auftreten.",
-            "Dass Nanopartikel die Blut-Hirn-Schranke überwinden und Hirnschäden verursachen.",
             "Dass die langfristige Toxizität noch nicht vollständig verstanden ist und eine Anreicherung in Organen wie Leber und Milz möglich ist.",
+            "Dass Nanopartikel die Blut-Hirn-Schranke überwinden und Hirnschäden verursachen.",
+            "Dass Nanopartikel allergische Reaktionen auslösen, die bei jedem Patienten auftreten.",
             "Dass Nanopartikel die Wirksamkeit konventioneller Medikamente aufheben.",
             "Dass Nanopartikel zu schnell abgebaut werden und daher nicht wirken.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text nennt Bedenken hinsichtlich der langfristigen Toxizität, da das Verhalten im Körper noch nicht vollständig verstanden ist und eine Anreicherung in Organen wie Leber und Milz möglich ist.",
         },
@@ -1816,11 +1816,11 @@ const set9: TVTextSet = {
           options: [
             "Ligandfunktionalisierung ist bei Nanopartikeln unwirksam.",
             "Nanopartikel können nicht in Tumorgewebe eindringen.",
-            "Da Nanopartikel durch den EPR-Effekt in Tumorgewebe angereichert werden und mit Liganden funktionalisiert werden können, ergibt sich eine zweistufige Zielgerichtetheit.",
             "EPR-Effekt betrifft alle Gewebe gleich.",
+            "Da Nanopartikel durch den EPR-Effekt in Tumorgewebe angereichert werden und mit Liganden funktionalisiert werden können, ergibt sich eine zweistufige Zielgerichtetheit.",
             "Liganden erhöhen die Toxizität der Nanopartikel.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "EPR-Effekt (passiv) + Ligand-Funktionalisierung (aktiv) = zweistufige Zielgerichtetheit.",
         },
@@ -1864,11 +1864,11 @@ const set9: TVTextSet = {
           options: [
             "Es steigert die Freisetzung von Dopamin aus den synaptischen Vesikeln.",
             "Es unterdrückt hemmende Interneuronen im ventralen Tegmentum.",
-            "Es blockiert die Wiederaufnahme von Dopamin in die präsynaptische Zelle.",
-            "Es erhöht die Anzahl der Dopaminrezeptoren im Nucleus accumbens.",
             "Es aktiviert den präfrontalen Kortex und verstärkt die Impulskontrolle.",
+            "Es erhöht die Anzahl der Dopaminrezeptoren im Nucleus accumbens.",
+            "Es blockiert die Wiederaufnahme von Dopamin in die präsynaptische Zelle.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text erklärt, dass Kokain die Wiederaufnahme von Dopamin in die präsynaptische Zelle blockiert.",
         },
@@ -1876,13 +1876,13 @@ const set9: TVTextSet = {
           id: "tv9-5-q2",
           question: "Was versteht der Text unter neuroadaptiver Toleranz?",
           options: [
-            "Die Fähigkeit des Gehirns, nach einer Suchterkrankung vollständig zu regenerieren.",
-            "Die zunehmende Empfindlichkeit des Nervensystems gegenüber Suchtmitteln.",
             "Die Anpassung des Gehirns an übermäßige Stimulation, bei der unter anderem die Dopaminrezeptoren herunterreguliert werden.",
+            "Die zunehmende Empfindlichkeit des Nervensystems gegenüber Suchtmitteln.",
+            "Die Fähigkeit des Gehirns, nach einer Suchterkrankung vollständig zu regenerieren.",
             "Die Resistenz des präfrontalen Kortex gegen die Wirkung von Suchtmitteln.",
             "Die genetisch bedingte Unempfindlichkeit bestimmter Personen gegenüber Abhängigkeit.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt neuroadaptive Toleranz als die Anpassung des Gehirns an übermäßige Stimulation, wobei die Dopaminrezeptoren im Nucleus accumbens herunterreguliert werden.",
         },
@@ -1891,12 +1891,12 @@ const set9: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über die Neurobiologie der Abhängigkeit?",
           options: [
             "Sucht ist eine Frage mangelnder Willenskraft.",
-            "Sucht betrifft nur das Dopaminsystem.",
             "Sucht ist eine chronische Hirnerkrankung; neuroadaptive Veränderungen in Belohnungssystem und präfrontalem Kortex erklären den Kontrollverlust.",
+            "Sucht betrifft nur das Dopaminsystem.",
             "Sucht kann allein durch Medikamente geheilt werden.",
             "Das mesolimbische System ist nicht an Sucht beteiligt.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Sucht ist eine chronische Hirnerkrankung; neuroadaptive Veränderungen erklären Kontrollverlust.",
         },
@@ -1964,12 +1964,12 @@ const set10: TVTextSet = {
           question: "Was besagt die Mismatch-Hypothese laut dem Text?",
           options: [
             "Dass genetische Mutationen sich in modernen Gesellschaften schneller ausbreiten als in der Vergangenheit.",
-            "Dass moderne Zivilisationskrankheiten aus einer Diskrepanz zwischen unserer genetischen Ausstattung und unserer heutigen Lebensweise resultieren.",
-            "Dass das Immunsystem moderner Menschen weniger leistungsfähig ist als das unserer Vorfahren.",
             "Dass Infektionskrankheiten durch den Kontakt mit neuen Erregern entstehen, an die der Körper nicht angepasst ist.",
+            "Dass das Immunsystem moderner Menschen weniger leistungsfähig ist als das unserer Vorfahren.",
+            "Dass moderne Zivilisationskrankheiten aus einer Diskrepanz zwischen unserer genetischen Ausstattung und unserer heutigen Lebensweise resultieren.",
             "Dass die medizinische Behandlung von Symptomen die natürliche Evolution des Menschen behindert.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text erklärt, dass die Mismatch-Hypothese besagt, dass viele moderne Zivilisationskrankheiten aus einer Diskrepanz zwischen unserer genetischen Ausstattung und unserer heutigen Lebensweise resultieren.",
         },
@@ -1979,12 +1979,12 @@ const set10: TVTextSet = {
             "Warum wurde das Sichelzellgen laut dem Text trotz seiner negativen Auswirkungen nicht eliminiert?",
           options: [
             "Weil die Mutation erst kürzlich entstanden ist und die Selektion noch nicht genug Zeit hatte.",
-            "Weil in heterozygoter Form ein Schutz gegen Malaria besteht, da sich der Erreger in verformten Blutkörperchen schlechter vermehrt.",
+            "Weil die Mutation gleichzeitig eine erhöhte Resistenz gegen bakterielle Infektionen verleiht.",
             "Weil medizinische Behandlungsmöglichkeiten die negativen Folgen aufheben.",
             "Weil die Sichelzellanämie in homozygoter Form das Immunsystem stärkt.",
-            "Weil die Mutation gleichzeitig eine erhöhte Resistenz gegen bakterielle Infektionen verleiht.",
+            "Weil in heterozygoter Form ein Schutz gegen Malaria besteht, da sich der Erreger in verformten Blutkörperchen schlechter vermehrt.",
           ],
-          correctOption: 1,
+          correctOption: 4,
           explanation:
             "Der Text erklärt, dass das Sichelzellgen in heterozygoter Form einen Schutz gegen Malaria bietet und daher in Malariagebieten nicht durch Selektion eliminiert wurde.",
         },
@@ -1992,13 +1992,13 @@ const set10: TVTextSet = {
           id: "tv10-1-q3",
           question: "Was ist die Hauptaussage des Textes über die evolutionäre Medizin?",
           options: [
-            "Evolutionäre Medizin sieht Krankheiten als unvermeidlich.",
+            "Evolutionäre Medizin erklärt Krankheiten als evolutionsgeprägtes Phänomen; Symptome wie Fieber können adaptiv sein und das heterozygote Sichelzellgen bietet Malariaschutz.",
             "Evolutionäre Medizin lehnt jede Behandlung ab.",
-            "Evolutionäre Medizin erklärt Krankheiten als evolutionsgepraegtes Phänomen; Symptome wie Fieber können adaptiv sein und das heterozygote Sichelzellgen bietet Malariaschutz.",
+            "Evolutionäre Medizin sieht Krankheiten als unvermeidlich.",
             "Fieber sollte immer unterdrückt werden.",
             "Das Sichelzellgen ist global gleichmäßig verbreitet.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Mismatch-Hypothese, adaptive Funktion von Fieber und Malariaschutz des Sichelzellgens.",
         },
@@ -2008,12 +2008,12 @@ const set10: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über die Behandlung von Fieber aus dem Text ziehen?",
           options: [
             "Fieber ist grundsätzlich gefährlich und sollte immer behandelt werden.",
-            "Unterdrückung von Fieber reduziert Sterblichkeit bei Infektionen.",
             "Da Fieber bei bestimmten Infektionen die Sterblichkeit bei Unterdrückung erhöhen kann, spricht der Text für eine differenzierte statt automatische Fieberbehandlung.",
+            "Unterdrückung von Fieber reduziert Sterblichkeit bei Infektionen.",
             "Fieber hat keine messbaren Vorteile.",
             "Fieber ist ausschließlich ein Nebenprodukt der Infektion.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Fieberunterdrückung kann Sterblichkeit erhöhen → differenzierte Behandlung sinnvoll.",
         },
@@ -2073,12 +2073,12 @@ const set10: TVTextSet = {
           question: "Welche Besonderheit moderner VADs wird im Text beschrieben?",
           options: [
             "Sie erzeugen einen künstlichen Herzschlag, der vom natürlichen nicht unterscheidbar ist.",
-            "Sie arbeiten mit einer kontinuierlichen Strömung, sodass Patienten keinen tastbaren Puls mehr haben.",
-            "Sie ersetzen das Herz vollständig und machen eine Transplantation überflüssig.",
             "Sie werden durch die Körperwärme des Patienten mit Energie versorgt.",
+            "Sie ersetzen das Herz vollständig und machen eine Transplantation überflüssig.",
+            "Sie arbeiten mit einer kontinuierlichen Strömung, sodass Patienten keinen tastbaren Puls mehr haben.",
             "Sie können sich an die körperliche Belastung des Patienten automatisch anpassen.",
           ],
-          correctOption: 1,
+          correctOption: 3,
           explanation:
             "Der Text erklärt, dass moderne VADs mit einer kontinuierlichen Strömung statt einem pulsierenden Mechanismus arbeiten, weshalb Patienten keinen tastbaren Puls mehr haben.",
         },
@@ -2088,11 +2088,11 @@ const set10: TVTextSet = {
           options: [
             "Bioprinting kann bereits komplexe Organe vollständig ersetzen.",
             "Dialyse ist keine Form des künstlichen Organersatzes.",
-            "Mechanische Systeme wie Dialyse und VADs existieren bereits; Bioprinting bietet Zukunftspotenzial, scheitert aber noch an der Vaskularisierung.",
-            "VADs erzeugen einen normalen Herzrhythmus.",
             "Künstliche Organe sind günstiger als Transplantate.",
+            "VADs erzeugen einen normalen Herzrhythmus.",
+            "Mechanische Systeme wie Dialyse und VADs existieren bereits; Bioprinting bietet Zukunftspotenzial, scheitert aber noch an der Vaskularisierung.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Mechanische Ersatzsysteme existieren; Bioprinting scheitert noch an der Vaskularisierung.",
         },
@@ -2101,13 +2101,13 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Bedeutung der Vaskularisierung für das Bioprinting ziehen?",
           options: [
-            "Zellen können unbegrenzt weit von Blutgefäßen entfernt überleben.",
-            "Wachstumsfaktoren sind für Bioprinting irrelevant.",
             "Da Zellen mehr als 200 Mikrometer von Blutgefäßen absterben, ist die Lösung des Vaskularisierungsproblems entscheidend für das Bioprinting komplexer Organe.",
+            "Wachstumsfaktoren sind für Bioprinting irrelevant.",
+            "Zellen können unbegrenzt weit von Blutgefäßen entfernt überleben.",
             "Hydrogel ersetzt die Funktion von Blutgefäßen.",
             "Bioprinting-Organe benötigen keine Vaskularisierung.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Vaskularisierung ist die entscheidende Hürde für das Bioprinting funktionaler komplexer Organe.",
         },
@@ -2182,11 +2182,11 @@ const set10: TVTextSet = {
           options: [
             "Gentherapie ist bereits vollständig sicher und breit verfügbar.",
             "Gentherapie behandelt nur Bluterkrankungen.",
-            "Gentherapie korrigiert genetische Defekte mithilfe viraler Vektoren; zugelassene Therapien zeigen beeindruckende Ergebnisse, sind aber oft extrem teuer.",
             "Gentherapie ersetzt alle anderen Behandlungsformen.",
+            "Gentherapie korrigiert genetische Defekte mithilfe viraler Vektoren; zugelassene Therapien zeigen beeindruckende Ergebnisse, sind aber oft extrem teuer.",
             "AAV-Vektoren integrieren sich ins menschliche Genom.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation:
             "Gentherapie korrigiert Defekte durch virale Vektoren; beeindruckende Ergebnisse, aber hohe Kosten.",
         },
@@ -2195,13 +2195,13 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Beispiel Zolgensma über Gentherapie ziehen?",
           options: [
-            "Da Zolgensma über 2 Mio. USD kostet, können nicht alle Patienten auf lebensrettende Gentherapien zugreifen, was die Frage der Verteilungsgerechtigkeit aufwirft.",
+            "Alle Gentherapien sind gleich teuer.",
             "Zolgensma ist weltweit kostenlos verfügbar.",
             "Nur reiche Länder entwickeln Gentherapien.",
             "Die hohen Kosten sind durch die Wirksamkeit gerechtfertigt und kein Problem.",
-            "Alle Gentherapien sind gleich teuer.",
+            "Da Zolgensma über 2 Mio. USD kostet, können nicht alle Patienten auf lebensrettende Gentherapien zugreifen, was die Frage der Verteilungsgerechtigkeit aufwirft.",
           ],
-          correctOption: 0,
+          correctOption: 4,
           explanation: "Zolgensma kostet über 2 Mio. USD → Fragen der Zugangsgerechtigkeit.",
         },
       ],
@@ -2243,13 +2243,13 @@ const set10: TVTextSet = {
           id: "tv10-4-q1",
           question: "Was wird bei einer Polysomnographie laut dem Text gemessen?",
           options: [
-            "Ausschließlich die Hirnströme und die Augenbewegungen während des Schlafs.",
-            "Die Blutdruckwerte, der Blutzuckerspiegel und die Körpertemperatur im Schlaf.",
             "Hirnströme, Augenbewegungen, Muskelspannung, Herzfrequenz, Atmung und Blutsauerstoff.",
+            "Die Blutdruckwerte, der Blutzuckerspiegel und die Körpertemperatur im Schlaf.",
+            "Ausschließlich die Hirnströme und die Augenbewegungen während des Schlafs.",
             "Die Menge des ausgeschütteten Melatonins und anderer Schlafhormone.",
             "Die subjektive Schlafqualität anhand von Fragebögen am nächsten Morgen.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text beschreibt die Polysomnographie als ein Verfahren, bei dem Hirnströme, Augenbewegungen, Muskelspannung, Herzfrequenz, Atmung und Blutsauerstoff gleichzeitig aufgezeichnet werden.",
         },
@@ -2259,12 +2259,12 @@ const set10: TVTextSet = {
             "Warum ist die langfristige Akzeptanz der CPAP-Therapie laut dem Text begrenzt?",
           options: [
             "Weil die Therapie nur bei leichter Schlafapnoe wirksam ist.",
-            "Weil die Geräte sehr teuer sind und nicht von Krankenkassen übernommen werden.",
             "Weil viele Patienten die Maske als unangenehm empfinden.",
+            "Weil die Geräte sehr teuer sind und nicht von Krankenkassen übernommen werden.",
             "Weil die CPAP-Therapie erhebliche Nebenwirkungen wie Mundtrockenheit und Ohrenschmerzen verursacht.",
             "Weil die Therapie nur stationär im Krankenhaus durchgeführt werden kann.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text erklärt, dass die langfristige Akzeptanz bei nur 50 bis 70 Prozent liegt, da viele Patienten die Maske als unangenehm empfinden.",
         },
@@ -2274,12 +2274,12 @@ const set10: TVTextSet = {
             "Welche langfristigen Gesundheitsrisiken einer unbehandelten Schlafapnoe nennt der Text?",
           options: [
             "Nierenversagen, Lebererkrankungen und chronische Schmerzen.",
-            "Bluthochdruck, Herzinfarkt, Schlaganfall und Typ-2-Diabetes.",
             "Demenz, Parkinson und Multiple Sklerose.",
+            "Bluthochdruck, Herzinfarkt, Schlaganfall und Typ-2-Diabetes.",
             "Sehstörungen, Hörverlust und Gleichgewichtsprobleme.",
             "Depressionen, Angststörungen und bipolare Störung.",
           ],
-          correctOption: 1,
+          correctOption: 2,
           explanation:
             "Der Text nennt Bluthochdruck, Herzinfarkt, Schlaganfall und Typ-2-Diabetes als langfristige Risiken einer unbehandelten Schlafapnoe.",
         },
@@ -2290,11 +2290,11 @@ const set10: TVTextSet = {
           options: [
             "CPAP ist nur für leichte Schlafapnoe geeignet.",
             "Schlafapnoe hat keine langfristigen Herzfolgen.",
-            "Da CPAP bei 50-70% der Patienten akzeptiert wird, sind alternative Therapien wie Schienen oder Operationen wichtig, um alle Patienten zu erreichen.",
             "Schienen ersetzen CPAP vollständig.",
+            "Da CPAP bei 50-70% der Patienten akzeptiert wird, sind alternative Therapien wie Schienen oder Operationen wichtig, um alle Patienten zu erreichen.",
             "Schlafapnoe kann nur operativ behandelt werden.",
           ],
-          correctOption: 2,
+          correctOption: 3,
           explanation: "Da nur 50-70% CPAP akzeptieren, sind alternative Therapien wichtig.",
         },
       ],
@@ -2340,11 +2340,11 @@ const set10: TVTextSet = {
           options: [
             "Dass kognitive Enhancer bei Gesunden besser wirken als bei Kranken.",
             "Dass Neuroenhancement zu einer Sucht führen kann, die schwerer zu behandeln ist als andere Abhängigkeiten.",
-            "Dass ein Fairness-Problem entsteht, weil Druck auf andere ausgeübt wird, ebenfalls zu solchen Mitteln zu greifen.",
-            "Dass die Herstellung dieser Substanzen umweltschädlich ist.",
             "Dass Neuroenhancement die Kreativität der Anwender dauerhaft verringert.",
+            "Dass die Herstellung dieser Substanzen umweltschädlich ist.",
+            "Dass ein Fairness-Problem entsteht, weil Druck auf andere ausgeübt wird, ebenfalls zu solchen Mitteln zu greifen.",
           ],
-          correctOption: 2,
+          correctOption: 4,
           explanation:
             "Der Text beschreibt, dass Neuroenhancement Fragen der Fairness aufwirft, da ein Druck entsteht, ebenfalls zu kognitiven Enhancern zu greifen, um wettbewerbsfähig zu bleiben.",
         },
@@ -2352,13 +2352,13 @@ const set10: TVTextSet = {
           id: "tv10-5-q2",
           question: "Was versteht man laut dem Text unter Neuro-Reduktionismus?",
           options: [
-            "Die Reduktion der Gehirngröße durch chronischen Stress und mangelnden Schlaf.",
-            "Die Verringerung von Neurotransmittern im synaptischen Spalt durch Medikamente.",
             "Die Tendenz, komplexes menschliches Verhalten ausschließlich auf Hirnprozesse zu reduzieren.",
+            "Die Verringerung von Neurotransmittern im synaptischen Spalt durch Medikamente.",
+            "Die Reduktion der Gehirngröße durch chronischen Stress und mangelnden Schlaf.",
             "Die Vereinfachung neurowissenschaftlicher Methoden für den klinischen Alltag.",
             "Die schrittweise Abschaltung einzelner Hirnareale bei der Tiefen Hirnstimulation.",
           ],
-          correctOption: 2,
+          correctOption: 0,
           explanation:
             "Der Text definiert Neuro-Reduktionismus als die Tendenz, komplexes menschliches Verhalten ausschließlich auf Hirnprozesse zu reduzieren.",
         },
@@ -2368,12 +2368,12 @@ const set10: TVTextSet = {
             "Welche philosophische Frage wirft die Tiefe Hirnstimulation laut dem Text auf?",
           options: [
             "Ob Maschinen ein Bewusstsein entwickeln können, wenn sie mit dem Gehirn verbunden werden.",
-            "Ob die Behandlung neurologischer Erkrankungen grundsätzlich ethisch vertretbar ist.",
             "Ob ein Mensch nach einer technologischen Intervention, die seine Persönlichkeit verändert, noch dieselbe Person ist.",
+            "Ob die Behandlung neurologischer Erkrankungen grundsätzlich ethisch vertretbar ist.",
             "Ob das Gehirn nach dem Entfernen der Elektroden seine ursprüngliche Funktion wiedererlangt.",
             "Ob die Kosten der Behandlung den gesellschaftlichen Nutzen rechtfertigen.",
           ],
-          correctOption: 2,
+          correctOption: 1,
           explanation:
             "Der Text stellt die philosophische Frage, ob ein Mensch nach einer technologischen Intervention, die seine Persönlichkeit verändert, noch dieselbe Person bleibt.",
         },
