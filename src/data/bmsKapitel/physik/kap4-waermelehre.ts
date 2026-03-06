@@ -328,103 +328,173 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Gegenstrom-Wärmeaustausch",
       ],
       content: `
+Wärme kann auf drei physikalisch grundverschiedene Arten transportiert werden: durch **Wärmeleitung** (Konduktion), **Konvektion** und **Wärmestrahlung**. Im menschlichen Körper wirken alle drei Mechanismen gleichzeitig — ihr Zusammenspiel bestimmt, ob wir frieren, schwitzen oder eine stabile Kerntemperatur halten. Die Physik dahinter ist direkt prüfungsrelevant, weil sie Thermoregulation, Fieber, Hypothermie und viele klinische Verfahren erklärt.
 
+---
 
 ## Wärmeleitung (Konduktion)
 
+Bei der Wärmeleitung wird thermische Energie durch direkte Wechselwirkung benachbarter Teilchen weitergegeben — Molekül stößt Molekül an, ohne dass Materie insgesamt transportiert wird. Deshalb funktioniert Wärmeleitung auch in Festkörpern, wo die Teilchen ortsfest schwingen.
 
-
-Bei der Wärmeleitung wird Energie durch direkte Wechselwirkung benachbarter Teilchen übertragen, ohne dass Materie transportiert wird. Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom:
+Das **Fouriersche Gesetz** beschreibt den stationären Wärmestrom durch eine ebene Schicht:
 
 **Q̇ = λ · A · ΔT / d**
 
-- Q̇: Wärmestrom [W]
-- λ: Wärmeleitfähigkeit [W/(m·K)] — materialspezifisch
-- A: Querschnittsfläche [m²]
-- ΔT: Temperaturdifferenz [K]
-- d: Schichtdicke [m]
+| Größe | Bedeutung | Einheit |
+|-------|-----------|---------|
+| Q̇ | Wärmestrom (Leistung) | W |
+| λ | Wärmeleitfähigkeit (materialspezifisch) | W/(m·K) |
+| A | Querschnittsfläche | m² |
+| ΔT | Temperaturdifferenz | K |
+| d | Schichtdicke | m |
 
-**Formelklartext:** Q̇ = λ·A·ΔT/d heißt: Der **Wärmestrom** (Leistung in Watt) durch eine Schicht ist proportional zur **Fläche** A und zur **Temperaturdifferenz** ΔT, und **umgekehrt proportional** zur **Dicke** d. Hohes λ (Metalle) → viel Wärme pro Zeit; niedriges λ (Luft, Fett) → gute Isolierung. **Einheiten:** [λ]·[A]·[ΔT]/[d] = (W/(m·K))·m²·K/m = W ✓. **Nicht verwechseln:** λ = Wärmeleitfähigkeit (Transport); c = spezifische Wärmekapazität (Speichern).
+Die Formel sagt: Je größer die Fläche und die Temperaturdifferenz, desto mehr Wärme fließt pro Sekunde. Je dicker die Schicht, desto weniger. Der entscheidende Materialparameter ist die **Wärmeleitfähigkeit λ** — sie unterscheidet gute Leiter von Isolatoren um mehrere Größenordnungen:
 
-Metalle leiten Wärme gut (hohe λ), Gase und Isolatoren schlecht. Körperfett wirkt als Wärmeisolator (niedrige λ). Verbände aus Wolle oder Schaumstoff halten Körperwärme, weil eingeschlossene Luft (λ ≈ 0,026) schlecht leitet.
+| Material | λ [W/(m·K)] | Bedeutung |
+|----------|-------------|-----------|
+| Kupfer | 380 | Exzellenter Wärmeleiter (frei bewegliche Elektronen) |
+| Stahl | 50 | Guter Leiter |
+| Knochen (kompakt) | 0,4–0,6 | Moderater Leiter |
+| Wasser | 0,6 | Leitet besser als Gewebe, schlechter als Metalle |
+| Muskelgewebe | 0,5 | Ähnlich wie Wasser (hoher Wassergehalt) |
+| Körperfett | 0,2 | Biologischer Isolator |
+| Luft (ruhend) | 0,026 | Hervorragender Isolator |
 
-Der **Widerstand** R_th = d/(λ·A) ist das thermische Analogon zum elektrischen Widerstand; Schichten können wie Widerstände in Reihe addiert werden (Bauphysik, Kleidung).
+Warum tragen wir im Winter dicke Jacken? Nicht wegen des Stoffes selbst — sondern wegen der **eingeschlossenen Luft**. Luft hat mit λ ≈ 0,026 W/(m·K) eine extrem niedrige Wärmeleitfähigkeit. Daunen, Wolle und Schaumstoff funktionieren als Isolatoren, weil sie Luftpolster einschließen und Konvektion unterdrücken.
 
+Analog dazu wirkt **subkutanes Fettgewebe** (λ ≈ 0,2) als körpereigene Wärmeisolation — ein Grund, warum schlankere Menschen schneller frieren. Der **thermische Widerstand** R_th = d/(λ·A) ist das Analogon zum elektrischen Widerstand; mehrere Schichten (Fett → Kleidung → Luftgrenzschicht) addieren sich wie Widerstände in Reihe.
 
+> **Merke:** Q̇ = λ · A · ΔT / d — hohe Wärmeleitfähigkeit λ (Metalle) bedeutet schnellen Wärmetransport; niedrige λ (Luft, Fett) bedeutet gute Isolation. Nicht verwechseln: λ beschreibt *Transport*, die spezifische Wärmekapazität c beschreibt *Speicherung* von Wärme.
+
+---
 
 ## Konvektion
 
-Konvektion überträgt Wärme durch Materialtransport (Strömung) in Flüssigkeiten und Gasen.
+Bei der Konvektion wird Wärme durch **strömende Materie** transportiert — das Medium selbst bewegt sich und nimmt seine thermische Energie mit. Konvektion tritt nur in Fluiden (Flüssigkeiten und Gasen) auf, nie in Festkörpern.
 
-**Natürliche Konvektion**: Erwärmte Flüssigkeit/Gas dehnt sich aus, wird leichter, steigt auf; kühlere, dichtere Flüssigkeit sinkt nach unten. Ergebnis: Konvektionswalze (z. B. Heizung, Meeresströmungen, Mantelkonvektion).
+### Natürliche Konvektion
 
-**Erzwungene Konvektion**: Externes Gebläse oder Pumpe beschleunigt den Transport (z. B. Luftkühlung von Fieber durch Ventilator, Blutkreislauf als Wärmetransportsystem).
+Erwärmtes Fluid dehnt sich aus, wird weniger dicht und steigt auf; kühleres, dichteres Fluid sinkt ab. So entsteht eine zirkuläre Strömung — die **Konvektionswalze**. Beispiele: warme Luft über einer Heizung, Meeresströmungen, die Mantelkonvektion im Erdinneren. Die treibende Kraft ist der temperaturbedingte Dichteunterschied im Schwerefeld.
 
-Im menschlichen Körper transportiert das Blut Wärme aus dem Körperkern zur Peripherie (Haut). Bei Kälte wird die Hautdurchblutung durch Vasokonstriktion (Engstellung der Blutgefäße) reduziert, um Wärmeverlust zu minimieren.
+### Erzwungene Konvektion
+
+Eine externe Pumpe oder ein Gebläse beschleunigt den Wärmetransport weit über die natürliche Konvektion hinaus. Der klinisch wichtigste Fall: Der **Blutkreislauf** ist ein hocheffizientes System erzwungener Konvektion. Das Herz pumpt pro Minute etwa 5 Liter Blut, das im Körperkern (Leber, aktive Muskulatur) Wärme aufnimmt und zur Hautoberfläche transportiert, wo die Wärme an die Umgebung abgegeben wird.
+
+Warum ist das relevant? Weil der Körper die **Durchblutung der Haut** als Stellschraube nutzt: Bei Hitze weiten sich die Hautgefäße (**Vasodilatation**), mehr warmes Blut gelangt an die Oberfläche, die Wärmeabgabe steigt. Bei Kälte verengen sich die Gefäße (**Vasokonstriktion**), weniger Blut erreicht die Peripherie, der Wärmeverlust sinkt. Dieser Mechanismus erklärt, warum kalte Finger blass werden und warme Wangen rot.
+
+> **Merke:** Natürliche Konvektion beruht auf Dichteunterschieden durch Temperaturgradienten; erzwungene Konvektion braucht eine Pumpe. Der Blutkreislauf ist das wichtigste erzwungene Konvektionssystem des Körpers — er verbindet Wärmeproduktion im Kern mit Wärmeabgabe an der Haut.
+
+---
 
 ## Wärmestrahlung
 
-Jeder Körper emittiert elektromagnetische Strahlung (Infrarotstrahlung) in Abhängigkeit von seiner Temperatur. Das **Stefan-Boltzmann-Gesetz** für ideale Schwarzkörper:
+Jeder Körper mit einer Temperatur über dem absoluten Nullpunkt emittiert **elektromagnetische Strahlung** (Infrarotstrahlung). Im Gegensatz zu Leitung und Konvektion braucht Strahlung **kein Medium** — sie funktioniert auch im Vakuum (so erreicht uns die Sonnenwärme).
+
+### Stefan-Boltzmann-Gesetz
+
+Die gesamte abgestrahlte Leistung eines Körpers folgt dem **Stefan-Boltzmann-Gesetz**:
 
 **P = σ · ε · A · T⁴**
 
-- P: abgestrahlte Leistung [W]
-- σ: Stefan-Boltzmann-Konstante = 5,67 × 10⁻⁸ W/(m²·K⁴)
-- ε: Emissionsgrad (dimensionslos; Schwarzkörper: ε = 1; menschliche Haut: ε ≈ 0,97)
-- A: Oberfläche [m²]
-- T: Temperatur in Kelvin [K]
+| Größe | Bedeutung | Wert/Einheit |
+|-------|-----------|--------------|
+| P | Abgestrahlte Leistung | W |
+| σ | Stefan-Boltzmann-Konstante | 5,67 × 10⁻⁸ W/(m²·K⁴) |
+| ε | Emissionsgrad (0–1) | Haut: ≈ 0,97; Schwarzkörper: 1 |
+| A | Körperoberfläche | m² |
+| T | Absolute Temperatur | K |
 
-Wichtige Eigenschaften:
-- Die Strahlung ist proportional zu **T⁴** — kleine Temperaturänderungen haben große Auswirkungen auf die abgestrahlte Leistung.
-- Wärmestrahlung braucht kein Medium (funktioniert im Vakuum).
-- Dunkle/matte Körper strahlen mehr ab und absorbieren mehr (ε → 1); helle/glänzende Körper weniger (ε → 0).
-- Der Mensch verliert im Ruhezustand ≈ 50 % der Körperwärme durch Strahlung.
+Die **T⁴-Abhängigkeit** ist entscheidend: Schon eine kleine Temperaturerhöhung bewirkt eine überproportionale Zunahme der Strahlungsleistung. Steigt die Körpertemperatur von 37 °C (310 K) auf 42 °C (315 K) — also nur um 1,6 % in Kelvin —, nimmt die Strahlungsleistung um ca. 6,6 % zu, weil (315/310)⁴ ≈ 1,066.
 
-**Wiens Verschiebungsgesetz**: λ_max = b/T (b = 2,898 × 10⁻³ m·K). Bei 37 °C (310 K) emittiert der Mensch bei λ_max ≈ 9,4 μm — mittleres Infrarot. Grundlage der Thermokamera-Medizin.
+Menschliche Haut hat einen Emissionsgrad von ε ≈ 0,97 — sie ist im Infraroten nahezu ein idealer Schwarzkörper. Im Ruhezustand verliert der Mensch etwa **50 % seiner Körperwärme** durch Strahlung. Dunkle, matte Oberflächen strahlen mehr ab und absorbieren mehr (ε → 1); helle, reflektierende Oberflächen weniger (ε → 0) — deshalb reflektieren Rettungsdecken Infrarotstrahlung und reduzieren den Wärmeverlust.
 
-## Thermoregulation im Überblick
+### Wien'sches Verschiebungsgesetz
 
-Der Mensch ist ein Homöotherm (Gleichwarmer); die Körperkerntemperatur wird auf ≈ 37 °C gehalten.
+Das Wien'sche Verschiebungsgesetz (Verschiebungsgesetz) gibt an, bei welcher Wellenlänge ein Körper am stärksten strahlt:
 
-Mechanismen:
-1. **Wärmeerzeugung**: ATP-Hydrolyse, Muskelzittern, braunes Fettgewebe (Säuglinge)
-2. **Wärmeabgabe**: Strahlung (≈50 %), Konvektion/Konduktion (≈25 %), Verdunstung/Schwitzen (≈25 %)
-3. **Regulation**: Hypothalamus als Thermostat, Vasomotorik, Schweißproduktion
+**λ_max = b / T** (b = 2,898 × 10⁻³ m·K)
 
-Bei Fieber wird der Hypothalamus-Sollwert durch Pyrogene (z. B. IL-1, Prostaglandin E₂) nach oben verstellt. Antipyretika (fiebersenkende Mittel, z. B. Paracetamol, ASS) hemmen die Prostaglandin-Synthese (COX-Hemmung, Cyclooxygenase-Blockade) und senken den Sollwert wieder.
+Für den menschlichen Körper bei 37 °C (310 K): λ_max = 2,898 × 10⁻³ / 310 ≈ **9,3 μm** — mittleres Infrarot. Genau in diesem Bereich (8–14 μm) arbeiten **Infrarot-Fieberthermometer** und **Thermografiekameras**. Sie messen die von der Haut emittierte IR-Strahlung und rechnen über Stefan-Boltzmann auf die Oberflächentemperatur zurück. Die Methode ist kontaktlos, schnell und hygienisch — deshalb wurde sie in der COVID-19-Pandemie massenhaft an Flughäfen eingesetzt.
+
+Zum Vergleich: Die Sonnenoberfläche (T ≈ 5778 K) strahlt bei λ_max ≈ 500 nm — das ist sichtbares Licht im gelb-grünen Bereich.
+
+> **Merke:** Stefan-Boltzmann: P = σ · ε · A · T⁴ — die vierte Potenz macht kleine Temperaturänderungen wirksam. Wien: λ_max = b/T — der Mensch strahlt bei ~9 μm (Infrarot), die Sonne bei ~500 nm (sichtbar). Strahlung braucht kein Medium und macht ~50 % des Ruhewärmeverlusts aus.
+
+---
+
+## Thermoregulation
+
+Der Mensch ist ein **Homöotherm** (Gleichwarmer): Die Körperkerntemperatur wird auf etwa 37 °C ± 0,5 °C gehalten — unabhängig davon, ob draußen −20 °C oder +40 °C herrschen. Diese Präzision erfordert ein ausgeklügeltes Regelsystem.
+
+### Kern- und Schalentemperatur
+
+Der Körper lässt sich in zwei thermische Zonen unterteilen: Den **Kern** (Gehirn, Rumpforgane, tiefe Muskulatur) mit konstant ~37 °C und die **Schale** (Haut, Extremitäten), deren Temperatur stark variiert — von ~33 °C bei angenehmer Raumtemperatur bis hinunter zu 28 °C in den Fingerspitzen bei Kälte. Je kälter die Umgebung, desto dicker wird die Schale, weil der Körper die Durchblutung der Peripherie drosselt.
+
+### Mechanismen der Wärmeabgabe
+
+Im Ruhezustand verteilt sich die Wärmeabgabe ungefähr so:
+- **Strahlung:** ~50 % (Stefan-Boltzmann, abhängig von Hauttemperatur und Umgebung)
+- **Konvektion und Konduktion:** ~25 % (Luftbewegung an der Haut, Kontakt mit Oberflächen)
+- **Verdunstung (Evaporation):** ~25 % (Schweiß, Atemluft)
+
+### Schwitzen — Verdunstungskühlung
+
+Schweiß ist das wirksamste Kühlmittel des Körpers. Die Verdunstung von 1 Liter Schweiß entzieht dem Körper etwa **2400 kJ** (Verdampfungswärme von Wasser). Bei maximaler Schweißproduktion (~1–2 L/h bei trainierten Sportlern) kann der Körper theoretisch 600–1200 W Wärmeleistung abführen — weit mehr als die metabolische Wärmeproduktion bei schwerer Arbeit (~500 W). Allerdings funktioniert Verdunstung nur, wenn die Umgebungsluft trocken genug ist. Bei hoher Luftfeuchtigkeit (z. B. Tropen, Sauna) verdunstet der Schweiß kaum — er tropft ab, ohne zu kühlen. Deshalb ist **schwüle Hitze** gefährlicher als trockene.
+
+### Kältezittern (Shivering)
+
+Sinkt die Kerntemperatur, aktiviert der Hypothalamus unwillkürliche, rhythmische Muskelkontraktionen — **Kältezittern**. Da Muskeln bei Kontraktion nur ~25 % der Energie als mechanische Arbeit nutzen und ~75 % als Wärme freisetzen, kann Zittern die Wärmeproduktion auf das 4- bis 5-Fache des Ruheumsatzes steigern. Bei Säuglingen, die noch nicht zittern können, übernimmt das **braune Fettgewebe** (brown adipose tissue, BAT) diese Funktion: Es enthält viele Mitochondrien mit dem Entkopplungsprotein Thermogenin (UCP1), das die oxidative Phosphorylierung von der ATP-Synthese abkoppelt und die Energie direkt als Wärme freisetzt.
+
+### Regulation durch den Hypothalamus
+
+Der **Hypothalamus** fungiert als Thermostat. Er empfängt Temperaturinformationen von peripheren Thermorezeptoren (Haut) und zentralen Sensoren (Bluttemperatur) und steuert die Effektoren:
+- **Wärmeabwehr** (Kerntemperatur zu hoch): Vasodilatation → mehr Blut an die Haut, Schweißproduktion ↑, Verhaltensanpassung (Schatten suchen)
+- **Kälteabwehr** (Kerntemperatur zu niedrig): Vasokonstriktion → weniger Blut an die Peripherie, Kältezittern, Piloerektion (Gänsehaut, beim Menschen rudimentär), Hormonelle Thermogenese (Thyroxin, Katecholamine)
+
+Bei **Fieber** wird der hypothalamische Sollwert durch Pyrogene (z. B. Interleukin-1, Prostaglandin E₂) nach oben verstellt — der Körper „denkt", die aktuelle Temperatur sei zu niedrig, und aktiviert Wärmebildungsmechanismen (Schüttelfrost). Antipyretika (Paracetamol, ASS) hemmen die Cyclooxygenase (COX) und senken die Prostaglandin-Synthese, wodurch der Sollwert zurückfällt.
+
+> **Merke:** Vasodilatation bei Hitze → mehr Blut an der Haut → mehr Wärmeabgabe. Vasokonstriktion bei Kälte → weniger peripheres Blut → Wärmeerhalt. Schwitzen entzieht ~2400 kJ/L durch Verdunstung. Kältezittern steigert die Wärmeproduktion auf das 4–5-Fache.
+
+---
+
+## Klinische Bezüge
+
+### Therapeutische Hypothermie
+
+Nach einem **Herzstillstand** mit erfolgreicher Reanimation wird die Körperkerntemperatur gezielt auf 32–36 °C gesenkt (Targeted Temperature Management, TTM). Methoden: gekühlte Infusionslösungen (erzwungene Konvektion), externe Kühlpads (Konduktion), endovaskuläre Katheter. Warum hilft Kühlung? Der zerebrale Metabolismus sinkt um etwa **6 % pro °C** Temperaturabsenkung. Weniger Stoffwechsel bedeutet weniger Sauerstoffbedarf und weniger Bildung toxischer Radikale — das schützt Neurone vor **Reperfusionsschäden** (Zellschäden, die paradoxerweise bei Wiederdurchblutung nach Ischämie auftreten).
+
+### Hyperthermie und Hitzschlag
+
+Wenn die Wärmeabgabe versagt (z. B. bei Dehydratation, hoher Luftfeuchtigkeit oder intensiver körperlicher Belastung in der Hitze), kann die Kerntemperatur auf über 40 °C steigen. Ab ~41,5 °C beginnt die **Proteindenaturierung** — Enzyme verlieren ihre Funktion, Zellmembranen werden instabil, das ZNS versagt (Bewusstseinstrübung, Krampfanfälle). Ein **Hitzschlag** (Kerntemperatur > 40 °C + ZNS-Symptome) ist ein lebensbedrohlicher Notfall, der sofortige Kühlung erfordert: Eisbeutel an Leisten und Achseln (große Gefäße nahe der Oberfläche → maximale konvektive Kühlung), kalte Infusionen, verdunstende Tücher.
+
+### Wärmetherapie
+
+**Wärmflaschen** übertragen Wärme durch Konduktion (direkter Kontakt, λ_Wasser = 0,6 W/(m·K)) und interne Konvektion. **Rotlichtlampen** nutzen Infrarotstrahlung (λ = 780–1400 nm), die berührungslos Wärme direkt im Gewebe deponiert — mit tieferer Gewebepenetration und geringerem Verbrennungsrisiko an der Hautoberfläche. **Ultraschall-Diathermie** erzeugt Wärme durch Absorption hochfrequenter Schallwellen im Gewebe und erreicht tiefere Schichten als Infrarot. Alle drei Verfahren nutzen unterschiedliche physikalische Übertragungswege für das gleiche Ziel: lokale Durchblutungssteigerung und Schmerzlinderung.
+
+### Gegenstrom-Wärmeaustausch
+
+In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt auf dem Weg zur Peripherie Wärme an das kühle, rückströmende venöse Blut ab. Dadurch kommt in den Fingerspitzen bereits vorgekühltes Blut an — der Wärmeverlust über die Akren wird drastisch reduziert. Dieses **Gegenstromprinzip** findet sich auch beim Rete mirabile (Wundernetz) mancher Tiere (z. B. in den Flossen von Walen und Delfinen) und wird technisch in der **Dialyse** (Bluterwärmung) sowie bei **Herz-Lungen-Maschinen** eingesetzt. Der Wirkungsgrad des Wärmeaustauschs steigt, weil über die gesamte Strecke ein Temperaturgradient aufrechterhalten wird — im Unterschied zum Gleichstrom, bei dem sich die Temperaturen schnell angleichen.
+
+> **Merke:** Therapeutische Hypothermie senkt den Hirnmetabolismus um ~6 %/°C und schützt vor Reperfusionsschäden. Hitzschlag (> 40 °C + ZNS-Symptome) erfordert sofortige Kühlung. Gegenstrom-Wärmeaustausch in den Extremitäten minimiert peripheren Wärmeverlust — gleiches Prinzip in Dialyse und Herz-Lungen-Maschine.
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Wärmestrom durch Fensterglas:**
-Einfachverglasung: d = 4 mm = 0,004 m, A = 1,5 m², λ_Glas = 1,0 W/(m·K), ΔT = 20 K (innen 22 °C, außen 2 °C):
-Q̇ = λ · A · ΔT / d = 1,0 × 1,5 × 20 / 0,004 = 7500 W = 7,5 kW. Enorm! Doppelverglasung mit Luftspalt (λ_Luft = 0,026, d = 12 mm) reduziert den Wärmestrom: Q̇ = 0,026 × 1,5 × 20 / 0,012 = 65 W — Reduktion um Faktor 115.
+**Beispiel 1 — Wärmestrom durch Fettschicht (Fourier):**
+Subkutanes Fett: d = 2 cm = 0,02 m, λ = 0,2 W/(m·K), A = 0,5 m², ΔT = 4 K (Kern 37 °C, Hautoberfläche 33 °C):
+Q̇ = 0,2 × 0,5 × 4 / 0,02 = **20 W**. Das ist die Leistung einer schwachen Glühbirne — eine realistische Abschätzung des konduktiven Wärmeverlusts über den Rumpf.
 
-**Beispiel 2 — Strahlungsverlust des Menschen (Stefan-Boltzmann):**
-Körperoberfläche A = 1,8 m², T_Haut = 33 °C = 306 K, T_Raum = 20 °C = 293 K, ε = 0,97:
-P_ab = σ · ε · A · T_Haut⁴ = 5,67 × 10⁻⁸ × 0,97 × 1,8 × 306⁴ = 5,67 × 10⁻⁸ × 0,97 × 1,8 × 8,76 × 10⁹ ≈ 868 W.
-P_auf = σ · ε · A · T_Raum⁴ = 5,67 × 10⁻⁸ × 0,97 × 1,8 × 293⁴ ≈ 726 W.
-Netto-Strahlungsverlust: ΔP = 868 − 726 ≈ 142 W. Bei einem Ruhemetabolismus von ~80 W macht Strahlung also den Hauptanteil der Wärmeabgabe aus.
+**Beispiel 2 — Netto-Strahlungsverlust (Stefan-Boltzmann):**
+A = 1,8 m², T_Haut = 33 °C = 306 K, T_Raum = 20 °C = 293 K, ε = 0,97:
+P_ab = 5,67 × 10⁻⁸ × 0,97 × 1,8 × 306⁴ ≈ 868 W; P_auf = 5,67 × 10⁻⁸ × 0,97 × 1,8 × 293⁴ ≈ 726 W.
+Netto: **ΔP ≈ 142 W** — der größte Einzelbeitrag zur Wärmeabgabe in Ruhe.
 
-**Beispiel 3 — Wien: Emissionsmaximum bei Körpertemperatur:**
-λ_max = b / T = 2,898 × 10⁻³ m·K / 310 K = 9,35 × 10⁻⁶ m = 9,35 μm (mittleres Infrarot). Thermokameras müssen in diesem Wellenlängenbereich empfindlich sein (typisch 8–14 μm). Zum Vergleich: Sonnenoberfläche (T ≈ 5778 K) → λ_max ≈ 500 nm (sichtbares Licht, gelb-grün).
+**Beispiel 3 — Wien: Emissionsmaximum:**
+λ_max = 2,898 × 10⁻³ / 310 = **9,35 μm** (mittleres Infrarot). Fieberthermometer arbeiten deshalb im Bereich 8–14 μm.
 
-**Beispiel 4 — Wärmeverlust durch Kleidung:**
-T-Shirt-Stoff: d = 1 mm, λ ≈ 0,04 W/(m·K), A = 1,2 m² (Rumpf), ΔT = 10 K:
-Q̇ = 0,04 × 1,2 × 10 / 0,001 = 480 W.
-Winterjacke: d = 5 cm, λ ≈ 0,04:
-Q̇ = 0,04 × 1,2 × 10 / 0,05 = 9,6 W. Die 50-fache Dicke reduziert den Wärmeverlust 50-fach — linearer Zusammenhang bestätigt das Fouriersche Gesetz.
-
-## Klinische Vertiefung
-
-**Therapeutische Hypothermie:** Nach Herzstillstand wird die Körperkerntemperatur auf 32–34 °C gesenkt (konvektive Kühlung durch gekühlte Infusionslösung + externe Kühlpads). Dies senkt den Hirnmetabolismus um ~6 % pro °C und schützt Neurone vor Reperfusionsschäden (Zellschäden durch Wiederdurchblutung).
-
-**Wärmflasche vs. Rotlichtlampe:** Wärmflasche überträgt Wärme durch Konduktion (direkter Kontakt, λ_Wasser = 0,6 W/(m·K)) und Konvektion (Wasserströmung im Inneren). Rotlichtlampe überträgt durch Infrarotstrahlung (berührungslos, tiefere Gewebepenetration bei λ = 780–1400 nm). Die Infrarotlampe hat den Vorteil, dass sie Wärme direkt im Gewebe deponiert, ohne die Hautoberfläche zuerst maximal zu erwärmen — geringeres Verbrennungsrisiko.
-
-**Gegenstrom-Wärmeaustausch:** In den Extremitäten verlaufen Arterien und Venen eng beieinander. Das warme arterielle Blut gibt Wärme an das kühle venöse Blut ab, bevor es die Peripherie erreicht. Dies minimiert den Wärmeverlust über die Akren bei Kälte und ist ein wichtiger Überlebensmechanismus. Das gleiche Prinzip wird in der Dialyse (Bluterwärmung) und bei Herz-Lungen-Maschinen eingesetzt.
-
-> **Merke:** Der erste Hauptsatz der Thermodynamik (Energieerhaltung): ΔU = Q + W. Die innere Energie eines Systems ändert sich durch Wärmezufuhr (Q) und/oder verrichtete Arbeit (W).
-
-> **Merke:** Wärmekapazität c gibt an, wie viel Energie nötig ist, um 1 kg eines Stoffes um 1 K zu erwärmen: Q = m · c · ΔT. Wasser hat mit c = 4,18 kJ/(kg·K) eine besonders hohe Wärmekapazität — deshalb stabilisiert es das Körperklima.`,
+**Beispiel 4 — Verdunstungskühlung beim Sport:**
+Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = **1000 W** Kühlleistung. Bei einer metabolischen Wärmeproduktion von ~800 W beim Laufen reicht das aus — solange der Schweiß tatsächlich verdunstet.`,
 
       lernziele: [
         "Das Fouriersche Gesetz der Wärmeleitung anwenden und die Bedeutung der Wärmeleitfähigkeit λ erklären",
@@ -641,7 +711,7 @@ Spezielle Zustandsänderungen:
 - **Isochor** (V = const): W = 0 → ΔU = Q (gesamte Wärme erhöht innere Energie)
 - **Isobar** (p = const): W = −p·ΔV → ΔU = Q − p·ΔV
 
-Bei **isobaren Prozessen** (p = const) leistet das System Volumenarbeit gegen den konstanten Außendruck. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontration).
+Bei **isobaren Prozessen** (p = const) leistet das System Volumenarbeit gegen den konstanten Außendruck. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontraktion).
 
 - **Isotherm** (T = const): ΔU = 0 → Q = −W (beim idealen Gas)
 - **Adiabatisch** (Q = 0): ΔU = W (alle Arbeit geht in innere Energie, Temperatur ändert sich)
@@ -731,7 +801,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
       sections: [
         {
           heading: "Erster Hauptsatz: Energieerhaltung in der Thermodynamik",
-          text: "ΔU = Q + W besagt, dass die innere Energie eines Systems nur durch Wärme (Q) und Arbeit (W) geändert werden kann. Energia wird nicht erzeugt oder vernichtet. Bei isochorer Änderung (V = const) ist W = 0, sodass ΔU = Q. Bei isothermer Änderung eines idealen Gases ist ΔU = 0 (T = const → U = const), also Q = −W. Bei adiabatischer Kompression (Q = 0) steigt die Temperatur, weil ΔU = W > 0. Diese Fälle sind MedAT-relevant: Kenntnis der Vorzeichen und Bedingungen wird geprüft.",
+          text: "ΔU = Q + W besagt, dass die innere Energie eines Systems nur durch Wärme (Q) und Arbeit (W) geändert werden kann. Energie wird nicht erzeugt oder vernichtet. Bei isochorer Änderung (V = const) ist W = 0, sodass ΔU = Q. Bei isothermer Änderung eines idealen Gases ist ΔU = 0 (T = const → U = const), also Q = −W. Bei adiabatischer Kompression (Q = 0) steigt die Temperatur, weil ΔU = W > 0. Diese Fälle sind MedAT-relevant: Kenntnis der Vorzeichen und Bedingungen wird geprüft.",
           merksatz:
             "ΔU = Q + W — Energieerhaltung gilt immer; Energie kann nur umgewandelt, nie erzeugt oder vernichtet werden.",
         },

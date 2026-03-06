@@ -1673,114 +1673,199 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
         "Salzbrücke",
         "Trans-Fettsäuren",
       ],
-      content: `## Bindungstypen in Biomolekülen
+      content: `## Bindungstypen in Biomolekülen — Überblick
 
-Jede Zelle ist ein chemisches Meisterwerk: DNA, Proteine, Lipide und Kohlenhydrate funktionieren nur, weil kovalente und nichtkovalente Bindungen präzise zusammenwirken. **Kovalente Bindungen** (stark, gerichtet, 150–1000 kJ/mol) bauen die Primärstruktur der Makromoleküle auf — sie werden bei der Biosynthese enzymatisch geknüpft und bleiben unter physiologischen Bedingungen stabil. **Nichtkovalente Wechselwirkungen** (schwächer, 0,1–40 kJ/mol, reversibel) bestimmen die dreidimensionale Struktur und Funktion. Das Zusammenspiel beider Klassen ermöglicht die molekulare Dynamik, die Leben ausmacht: Proteine falten sich, DNA wird repliziert, Enzyme katalysieren Reaktionen.
+Proteine, Kohlenhydrate, Lipide und Nukleinsäuren bestehen aus denselben Atomsorten (C, H, O, N, S, P), unterscheiden sich aber grundlegend in ihren **Bindungsmustern**. Sechs kovalente Bindungstypen dominieren die Biochemie: Peptidbindung (Proteine), glykosidische Bindung (Kohlenhydrate), Esterbindung (Fette, DNA/RNA), Disulfidbrücke (Proteine), Phosphodiesterbindung (Nukleinsäuren) und Amidbindung (verschiedene Biomoleküle). Jede dieser Bindungen entsteht durch eine **Kondensationsreaktion** (Abspaltung von H₂O) und wird durch **Hydrolyse** (Anlagerung von H₂O) wieder gespalten — ein universelles Prinzip der Biochemie.
 
-> **Merke:** Kovalente Bindungen = Gerüst (stabil); nichtkovalente Wechselwirkungen = Feineinstellung (flexibel, reversibel). Beide zusammen ergeben die biologische Funktion.
+Parallel dazu formen **nichtkovalente Wechselwirkungen** (H-Brücken, hydrophober Effekt, van-der-Waals-Kräfte, ionische Wechselwirkungen) die dreidimensionale Gestalt und damit die Funktion jedes Biomoleküls. Das Zusammenspiel beider Klassen — kovalentes Gerüst plus nichtkovalente Feinstruktur — ist der Schlüssel zum Verständnis biologischer Moleküle.
 
-## Kohlenhydrate (Zucker und Polysaccharide)
+> **Merke:** Alle biopolymeren Bindungen (Peptid-, Glykosid-, Ester-, Phosphodiester-) entstehen durch Kondensation (−H₂O) und werden durch Hydrolyse (+H₂O) gespalten. Kovalente Bindungen = Gerüst; nichtkovalente Wechselwirkungen = Feineinstellung.
 
-Monosaccharide (Glucose, Fructose, Ribose) sind durch sp³-hybridisierte C-Atome aufgebaut. Die **Ringform** (Pyranosen, Furanosen) entsteht durch intramolekulare Halbacetalbildung. Das **anomere Kohlenstoffatom** (C1) kann α- oder β-Konfiguration einnehmen — entscheidend für biologische Funktion:
+---
 
-- **α-glycosidische Bindung** (Stärke, Glykogen): leicht spaltbar durch Amylase → Energielieferant
-- **β-glycosidische Bindung** (Cellulose): Menschen und die meisten Tiere besitzen keine Cellulase → unverdaulich → Ballaststoff
+## 1. Peptidbindung — das Rückgrat der Proteine
 
-Polysaccharide werden durch **glycosidische Bindungen** (kovalent, zwischen Hydroxyl-Gruppen) verknüpft. Diese Bindungen entstehen unter Wasserabspaltung (Kondensation) und werden durch Hydrolyse wieder gespalten. Verzweigungen (Glykogen: alle 8–12 Glu-Einheiten, α-1,6) erhöhen Löslichkeit und Zugänglichkeit für Enzyme — daher kann Glykogen schneller mobilisiert werden als unverzweigte Amylose.
+### Entstehung durch Kondensation
 
-| Polysaccharid | Bindung | Verzweigung | Funktion | Enzym zur Spaltung |
+Die Peptidbindung (–CO–NH–) verknüpft die α-Carboxylgruppe (–COOH) einer Aminosäure mit der α-Aminogruppe (–NH₂) der nächsten Aminosäure. Dabei wird ein Molekül Wasser abgespalten (Kondensationsreaktion). In der Zelle katalysieren **Ribosomen** diese Reaktion unter Energieverbrauch (GTP-Hydrolyse), wobei die Aminosäuren als Aminoacyl-tRNAs aktiviert angeliefert werden. Die Umkehrreaktion — die hydrolytische Spaltung der Peptidbindung — wird durch **Proteasen** (proteolytische Enzyme) katalysiert. Trypsin etwa spaltet spezifisch nach basischen Aminosäuren (Lysin, Arginin), Pepsin nach hydrophoben Resten — diese Spezifität beruht auf der Komplementarität des aktiven Zentrums zur jeweiligen Seitenkette.
+
+### Partielle Doppelbindung und Resonanz
+
+Die Peptidbindung ist keine gewöhnliche Einfachbindung. Das freie Elektronenpaar des Stickstoffs delokalisiert in das π-System der benachbarten Carbonylgruppe (C=O). Es entstehen zwei Resonanzstrukturen:
+
+- **Struktur 1:** C=O und C–N (Einfachbindung am Stickstoff)
+- **Struktur 2:** C–O⁻ und C=N⁺ (Doppelbindung am Stickstoff)
+
+Die reale Bindung liegt als Hybrid zwischen beiden Grenzstrukturen: Die C–N-Bindung hat eine **Bindungsordnung von etwa 1,4** (kürzer als eine reine Einfachbindung mit 147 pm, länger als eine Doppelbindung mit 127 pm — gemessen: 133 pm). Gleichzeitig verlängert sich die C=O-Bindung leicht. Diese Resonanz hat dramatische Konsequenzen für die Proteinstruktur.
+
+### Planarität und eingeschränkte Rotation
+
+Weil die C–N-Bindung partiellen Doppelbindungscharakter besitzt, ist die Rotation um diese Bindung **stark eingeschränkt** (Rotationsbarriere ca. 80 kJ/mol). Alle sechs Atome der Peptideinheit (Cα₁, C, O, N, H, Cα₂) liegen in einer **Ebene** — man spricht von der Peptidebene. Die Peptidbindung liegt dabei fast ausschließlich in der **trans-Konfiguration** vor (>99,5 % aller Peptidbindungen): Die beiden Cα-Atome stehen auf gegenüberliegenden Seiten der C–N-Bindung. Die cis-Konfiguration ist energetisch ungünstiger wegen sterischer Abstoßung der Seitenketten — Ausnahme: Bindungen vor **Prolin**, wo der Energieunterschied zwischen cis und trans geringer ist (ca. 10 % cis).
+
+### φ/ψ-Winkel und Ramachandran-Diagramm
+
+Die Rotationsfreiheit im Proteinrückgrat beschränkt sich auf zwei Winkel um jedes Cα-Atom:
+
+- **φ (Phi):** Drehung um die N–Cα-Bindung
+- **ψ (Psi):** Drehung um die Cα–C-Bindung
+
+Das **Ramachandran-Diagramm** (nach G. N. Ramachandran, 1963) trägt φ gegen ψ auf und zeigt, welche Winkelkombinationen sterisch erlaubt sind. Nur etwa **30 %** der theoretisch möglichen φ/ψ-Kombinationen sind tatsächlich zugänglich — der Rest ist durch sterische Kollisionen der Atome im Rückgrat und der Seitenketten verboten. Die erlaubten Bereiche entsprechen genau den beobachteten Sekundärstrukturen:
+
+- **α-Helix:** φ ≈ −57°, ψ ≈ −47° (großer, zusammenhängender erlaubter Bereich)
+- **β-Faltblatt:** φ ≈ −120°, ψ ≈ +120° (zweiter großer erlaubter Bereich)
+- **Glycin** hat keine Seitenkette (R = H) und zeigt daher einen deutlich größeren erlaubten Bereich — es ist konformationell flexibler als alle anderen Aminosäuren.
+
+> **Merke:** Die Peptidbindung ist planar (partieller Doppelbindungscharakter durch Resonanz), fast immer trans-konfiguriert, und die Proteinrückgrat-Konformation wird allein durch die φ/ψ-Winkel bestimmt. Das Ramachandran-Diagramm zeigt die erlaubten Bereiche — sie entsprechen α-Helix und β-Faltblatt.
+
+---
+
+## 2. Sekundärstruktur — α-Helix und β-Faltblatt
+
+### α-Helix
+
+Die α-Helix ist die häufigste helikale Sekundärstruktur in Proteinen. Ihre Stabilisierung beruht auf einem regelmäßigen Muster intramolekularer **Wasserstoffbrücken**: Die Carbonylgruppe (C=O) der Aminosäure an Position **i** bildet eine H-Brücke mit der Aminogruppe (N–H) der Aminosäure an Position **i+4**. Pro Windung der Helix umfasst die Struktur **3,6 Aminosäuren**, die Ganghöhe (Steigung pro Windung) beträgt **5,4 Å** (0,54 nm). Die Seitenketten ragen nach außen, das Rückgrat bildet den inneren Kern der Helix.
+
+Typische α-Helix-Brecher:
+- **Prolin:** Sein Pyrrolidinring fixiert den φ-Winkel bei ca. −60° und eliminiert das N–H (kein H-Brücken-Donor) — Prolin unterbricht die Helix oder erzeugt einen Knick.
+- **Glycin:** Zu flexibel (kein sterischer Anspruch), destabilisiert die rigide Helixgeometrie.
+- **Geladene Cluster:** Mehrere gleichnamig geladene Aminosäuren hintereinander (z. B. Glu-Glu-Glu) stoßen sich ab und destabilisieren die Helix.
+
+Klinisch sind α-Helices allgegenwärtig: Die sieben Transmembranhelices von **G-Protein-gekoppelten Rezeptoren** (GPCRs) durchspannen die Lipidmembran; **Keratin** (Haare, Nägel) besteht aus einer Coiled-Coil-Struktur zweier umeinander gewundener α-Helices.
+
+### β-Faltblatt
+
+Im β-Faltblatt liegen die Polypeptidketten in gestreckter Konformation nahezu nebeneinander. H-Brücken bilden sich hier **zwischen benachbarten Strängen** (nicht innerhalb eines Strangs wie bei der Helix):
+
+- **Antiparalleles β-Faltblatt:** Benachbarte Stränge laufen in entgegengesetzter Richtung (N→C neben C→N). Die H-Brücken stehen senkrecht zu den Strängen — optimal linear, daher besonders stabil.
+- **Paralleles β-Faltblatt:** Benachbarte Stränge laufen in gleicher Richtung. Die H-Brücken stehen leicht schräg — etwas schwächer als im antiparallelen Fall.
+
+β-Faltblätter sind typisch für **Seidenfibroin** (Spinnenseide: antiparallel, hohe Zugfestigkeit) und **Immunglobuline** (Antikörper: Immunglobulin-Faltung mit antiparallelen β-Faltblättern).
+
+> **Merke:** α-Helix: H-Brücken i→i+4 (innerhalb eines Strangs), 3,6 AS/Windung, Prolin als Helixbrecher. β-Faltblatt: H-Brücken zwischen benachbarten Strängen, antiparallel stabiler als parallel.
+
+---
+
+## 3. Disulfidbindung — kovalente Quervernetzung
+
+### Entstehung durch Oxidation
+
+Die Disulfidbindung (Disulfidbrücke, –S–S–) entsteht durch **oxidative Verknüpfung** zweier Cystein-Seitenketten. Jedes Cystein trägt eine Thiolgruppe (Sulfhydrylgruppe, –SH). Wenn zwei Thiolgruppen oxidiert werden, verbinden sie sich unter Abgabe von zwei Wasserstoffatomen (bzw. zwei Elektronen + zwei Protonen) zu einer kovalenten S–S-Bindung:
+
+**R–SH + HS–R' → R–S–S–R' + 2 [H]**
+
+Das Produkt — zwei über eine Disulfidbrücke verknüpfte Cysteine — heißt **Cystin**. Die Rückreaktion (Reduktion, Spaltung der S–S-Bindung) erfolgt durch Reduktionsmittel wie **Glutathion** (GSH), **Thioredoxin**, oder im Labor durch **β-Mercaptoethanol** und **DTT** (Dithiothreitol).
+
+### Biologische Bedeutung
+
+Disulfidbrücken stabilisieren vor allem **extrazelluläre Proteine** und Proteine im **endoplasmatischen Retikulum** (ER), wo ein oxidatives Milieu herrscht. Im reduzierenden Zytoplasma (hohe Glutathion-Konzentration) bleiben Cysteine dagegen überwiegend in der reduzierten –SH-Form.
+
+Wichtige Beispiele:
+- **Insulin:** Zwei Polypeptidketten (A-Kette: 21 AS, B-Kette: 30 AS) werden durch **zwei Interchain-Disulfidbrücken** (A7–B7, A20–B19) zusammengehalten; eine dritte Disulfidbrücke liegt **intramolekular** innerhalb der A-Kette (A6–A11). Ohne diese Brücken zerfällt das aktive Hormon.
+- **Antikörper (Immunglobuline):** Schwere und leichte Ketten werden durch Disulfidbrücken verbunden; die Scharnierregion (Hinge Region) enthält zusätzliche S–S-Brücken, die für die Flexibilität des Y-förmigen Moleküls sorgen.
+- **Keratin:** α-helikale Polypeptide werden durch zahlreiche Disulfidbrücken quervernetzt — je mehr S–S-Brücken, desto härter das Keratin (Fingernägel > Haare > Haut). Dauerwellen funktionieren durch Reduktion der S–S-Brücken (Thiol-Lösung), mechanische Umformung und anschließende Reoxidation (Fixierlösung mit H₂O₂).
+
+### Klinischer Bezug: N-Acetylcystein (NAC)
+
+**N-Acetylcystein** (ACC, Fluimucil) wird als Mukolytikum (schleimlösendes Mittel) eingesetzt. Es wirkt, indem seine freie Thiolgruppe (–SH) die **Disulfidbrücken im Mucin** (Glykoprotein des Bronchialschleims) reduktiv spaltet. Dadurch werden die hochmolekularen Mucin-Polymere in kleinere Fragmente zerlegt — der Schleim wird dünnflüssiger und kann leichter abgehustet werden. Zusätzlich dient NAC als Vorläufer von Glutathion und wird bei Paracetamol-Vergiftung als Antidot eingesetzt.
+
+> **Merke:** Disulfidbrücken (Cys–S–S–Cys) sind die einzigen kovalenten Quervernetzungen in der Proteinstruktur (neben der Rückgrat-Peptidbindung). Sie stabilisieren extrazelluläre Proteine (Insulin, Antikörper, Keratin) und werden durch Reduktionsmittel gespalten (NAC, DTT, β-Mercaptoethanol).
+
+---
+
+## 4. Glykosidische Bindung — Verknüpfung von Zuckern
+
+### α- und β-Anomere
+
+Monosaccharide wie Glucose liegen in wässriger Lösung überwiegend in **Ringform** vor (Pyranoseform für 6-Ring, Furanoseform für 5-Ring). Bei der Ringbildung entsteht am **anomeren Kohlenstoff** (C1 bei Aldosen, C2 bei Ketosen) ein neues Stereozentrum mit zwei möglichen Konfigurationen:
+
+- **α-Anomer:** Die OH-Gruppe am anomeren C steht **axial** (in der Haworth-Projektion: nach unten, auf der gleichen Seite wie der Ringschluss-Sauerstoff bei D-Zuckern)
+- **β-Anomer:** Die OH-Gruppe am anomeren C steht **äquatorial** (in der Haworth-Projektion: nach oben)
+
+In Lösung stellt sich ein **Gleichgewicht** zwischen α- und β-Form ein (Mutarotation): Bei Glucose ca. 36 % α und 64 % β (die äquatoriale β-Form ist thermodynamisch stabiler). Entscheidend: Beim Knüpfen einer glykosidischen Bindung wird die Konfiguration am anomeren C **fixiert** — es entsteht entweder eine α- oder β-glykosidische Bindung, und die biologischen Konsequenzen sind dramatisch unterschiedlich.
+
+### α-glykosidische Bindungen: Stärke und Glykogen
+
+Die **α-1,4-glykosidische Bindung** verknüpft das C1 des einen Glucosemoleküls (in α-Konfiguration) mit dem C4 des nächsten unter Wasserabspaltung. Durch den α-Bindungswinkel entsteht eine **gewundene, helikale Struktur**, die gut wasserlöslich und für Enzyme leicht zugänglich ist.
+
+- **Amylose** (unverzweigt, α-1,4): spiralförmige Helix, bildet mit Iod den charakteristischen blauen Iod-Stärke-Komplex
+- **Amylopektin** (verzweigt, α-1,4 + α-1,6 alle 24–30 Einheiten): Pflanzlicher Energiespeicher
+- **Glykogen** (stark verzweigt, α-1,4 + α-1,6 alle 8–12 Einheiten): Tierischer Energiespeicher in Leber und Muskel. Die starke Verzweigung erhöht die Zahl der nicht-reduzierenden Enden und ermöglicht **schnelle Mobilisierung** durch gleichzeitigen Angriff vieler Glykogen-Phosphorylase-Moleküle.
+
+### β-glykosidische Bindungen: Cellulose und Lactose
+
+Die **β-1,4-glykosidische Bindung** erzeugt eine **gestreckte, lineare Kettenstruktur**. Benachbarte Glucoseeinheiten sind um 180° gegeneinander gedreht. Zwischen den Ketten bilden sich starke **inter- und intramolekulare H-Brücken** → Mikrofibrillen → hohe mechanische Festigkeit.
+
+**Cellulose** (β-1,4-verknüpfte Glucose) ist das häufigste organische Molekül der Erde. Menschen können Cellulose **nicht** verdauen, weil unsere Verdauungsenzyme (α-Amylase, Maltase) spezifisch für α-glykosidische Bindungen sind — wir besitzen keine **Cellulase** (β-Glucosidase). Wiederkäuer umgehen dieses Problem durch symbiotische Mikroorganismen im Pansen, die Cellulasen produzieren.
+
+**Lactose** (Milchzucker) ist ein Disaccharid aus **β-1,4-verknüpfter Galactose und Glucose**. Die Spaltung erfolgt durch das Enzym **β-Galactosidase** (Lactase) im Bürstensaum des Dünndarms.
+
+**Saccharose** (Haushaltszucker) besteht aus Glucose (α-1) und Fructose (β-2) — hier sind beide anomeren C-Atome an der Bindung beteiligt (α-1,β-2-glykosidisch), weshalb Saccharose kein reduzierender Zucker ist (kein freies anomeres C für die Fehling-Reaktion).
+
+| Disaccharid | Bausteine | Bindung | Enzym | Reduzierend? |
 |---|---|---|---|---|
-| Amylose | α-1,4 | Keine | Pflanzlicher Speicher | α-Amylase |
-| Amylopektin | α-1,4 + α-1,6 | Alle 24–30 Einheiten | Pflanzlicher Speicher | α-Amylase + Debranching |
-| Glykogen | α-1,4 + α-1,6 | Alle 8–12 Einheiten | Tierischer Speicher | Glykogenphosphorylase |
-| Cellulose | β-1,4 | Keine | Strukturpolysaccharid | Cellulase (nicht beim Menschen) |
+| Maltose | 2× Glucose | α-1,4 | Maltase | Ja |
+| Lactose | Galactose + Glucose | β-1,4 | β-Galactosidase (Lactase) | Ja |
+| Saccharose | Glucose + Fructose | α-1,β-2 | Saccharase (Invertase) | Nein |
+| Cellobiose | 2× Glucose | β-1,4 | Cellulase | Ja |
 
-Wasserstoffbrücken zwischen OH-Gruppen benachbarter Celluloseketten → Mikrofibrillen → hohe Reißfestigkeit. Stärke: lose Knäuel durch α-Bindungswinkel, leichter für Enzyme zugänglich.
+### Klinischer Bezug: Laktoseintoleranz
 
-## Lipide und hydrophober Effekt
+Bei **Laktoseintoleranz** ist die Expression der β-Galactosidase (Lactase) im Erwachsenenalter vermindert oder fehlt (primärer Lactasemangel, betrifft ca. 75 % der Weltbevölkerung — in Mitteleuropa ca. 15–20 %). Unverdaute Lactose gelangt in den Dickdarm, wo Darmbakterien sie fermentieren: es entstehen kurzkettige Fettsäuren, CO₂ und H₂ → Blähungen, Bauchkrämpfe, osmotische Diarrhoe. Der **H₂-Atemtest** nutzt das bakteriell produzierte H₂ zur Diagnostik.
 
-Fettsäuren bestehen aus einer langen **Kohlenwasserstoffkette** (unpolar, nur London-Kräfte) und einer **Carboxylgruppe** (polar, ionisierbar). In wässriger Lösung verhalten sich Fettsäuren **amphiphil**: Der polare Kopf ist hydrophil (wechselwirkt mit Wasser), der unpolare Schwanz ist hydrophob.
+> **Merke:** α-glykosidische Bindung → gewundene Struktur → verdaulich (Stärke, Glykogen, Maltose). β-glykosidische Bindung → gestreckte Struktur → unverdaulich für den Menschen (Cellulose) oder nur mit spezifischem Enzym spaltbar (Lactose → Lactase). Die Stereochemie am anomeren C1 entscheidet über Verdaulichkeit!
 
-**Hydrophober Effekt:** Unpolare Moleküle aggregieren in Wasser nicht wegen gegenseitiger Anziehung, sondern weil ihre Anwesenheit das Wassernetzwerk stört (Entropieverlust durch geordnetes Wasser um unpolare Gruppen → Hydratationsschale). Aggregation minimiert die Oberfläche → maximiert Entropie des Wassers → thermodynamisch begünstigt.
+---
 
-Konsequenzen:
-- **Membranen:** Phospholipid-Doppelschicht (Lipid-Bilayer) → Barriere für polare Moleküle; Proteine, Ionen, ATP können nicht frei durch
-- **Micellen:** Amphiphile in kugelförmiger Anordnung (Detergenzien, Gallensäuren zur Fettemulsifikation)
-- **Proteinfalten:** Hydrophobe Aminosäuren im Proteininneren vergraben → treibende Kraft der Proteinfaltung
+## 5. Esterbindung — Fette, Phospholipide und Nukleinsäuren
 
-**Gesättigte vs. ungesättigte Fettsäuren:**
-- Gesättigt (Palmitinsäure, 16:0): gerade Kette → dichte Packung, starke London-Kräfte → hoher Schmelzpunkt, fest bei RT (tierische Fette)
-- Einfach ungesättigt (Ölsäure, 18:1 cis-Δ9): Knick durch cis-Doppelbindung → lockere Packung, schwächere London-Kräfte → niedrigerer Schmelzpunkt, flüssig bei RT (Olivenöl)
-- Trans-Fettsäuren (Elaidinsäure): kein Knick → ähnliche Packung wie gesättigt → erhöhtes kardiovaskuläres Risiko
+### Triglyceride (Fette und Öle)
 
+Triglyceride entstehen durch **Veresterung** von **Glycerin** (ein dreiwertiger Alkohol mit drei OH-Gruppen) mit **drei Fettsäuren** (langkettige Carbonsäuren). Jede der drei Hydroxylgruppen des Glycerins reagiert mit der Carboxylgruppe einer Fettsäure unter Abspaltung von H₂O — es bilden sich drei **Esterbindungen** (–COO–):
 
-## Aminosäuren, Peptide und Proteinstruktur
+**Glycerin + 3 Fettsäuren → Triglycerid + 3 H₂O**
 
-Aminosäuren haben eine **Aminogruppe** (–NH₂, Donor für H-Brücken) und eine **Carboxylgruppe** (–COOH, Akzeptor) sowie eine variable **Seitenkette** (R-Gruppe, bestimmt Eigenschaften).
+Die hydrolytische Spaltung erfolgt durch **Lipasen**: Pankreaslipase spaltet Triglyceride im Dünndarm an den Positionen sn-1 und sn-3 zu 2-Monoacylglycerol und zwei freien Fettsäuren. Die Fettsäuren werden dann über Gallensalz-Micellen zur Darmwand transportiert und resorbiert. Lipoproteinlipase (LPL) an der Kapillarwand spaltet Triglyceride aus Lipoproteinen (VLDL, Chylomikronen) für die Aufnahme in Gewebe.
 
-**Peptidbindung** (–CO–NH–): kovalente Bindung zwischen Carboxyl des einen und Amino des nächsten AAs, unter Abspaltung von H₂O (Kondensation). Die Peptidbindung ist sp²-hybridisiert mit partiellem Doppelbindungscharakter (Resonanz des N-Elektronenpaars ins C=O-π-System → Bindungsordnung ~1,4). Daher ist sie planar und kann nicht frei rotieren — die Rotationsfreiheit beschränkt sich auf die φ- und ψ-Winkel um die Cα-Atome (Ramachandran-Diagramm).
+**Verseifung** ist die alkalische Hydrolyse von Estern: Triglycerid + 3 NaOH → Glycerin + 3 Natriumsalze der Fettsäuren (= Seifen). Die Fettsäureanionen sind amphiphil (polarer Kopf, unpolarer Schwanz) und wirken als Tenside — sie emulgieren Fette in Wasser.
 
-> **Merke:** Die Peptidbindung ist die wichtigste kovalente Bindung in Proteinen. Ihre Planarität durch sp²-Hybridisierung bestimmt die möglichen Sekundärstrukturen (α-Helix, β-Faltblatt).
+### Phosphodiesterbindung — das Rückgrat der DNA und RNA
 
-**Hierarchie der Proteinstruktur:**
-- **Primär:** Aminosäuresequenz (kovalente Peptidbindungen)
-- **Sekundär:** lokale Faltung (α-Helix, β-Faltblatt) durch H-Brücken der Peptidbindungen
-- **Tertiär:** Gesamtfaltung (H-Brücken, hydrophober Effekt, van-der-Waals, Disulfidbrücken, Salzbrücken)
-- **Quartär:** Assoziation mehrerer Ketten (Hämoglobin: 4 Untereinheiten) durch nichtkovalente Wechselwirkungen
+Die **Phosphodiesterbindung** ist ein spezieller Typ der Esterbindung: Eine Phosphatgruppe bildet zwei Esterbindungen — eine zum 3'-OH des einen Zuckers (Desoxyribose in DNA, Ribose in RNA) und eine zum 5'-OH des nächsten Zuckers. Das Rückgrat der Nukleinsäuren ist somit eine alternierende Kette aus Zucker-Phosphat-Zucker-Phosphat, wobei jede Phosphatgruppe bei physiologischem pH negativ geladen ist (pKₐ ~1).
 
-**Disulfidbrücken (–S–S–):** Kovalente Bindung zwischen zwei Cystein-Seitenketten → stabilisiert extrazelluläre Proteine (Antikörper, Insulin) gegen Denaturierung.
+Diese negative Ladung hat wichtige Konsequenzen:
+- DNA ist ein **Polyanion** → wandert im elektrischen Feld zur Anode (Grundlage der Gelelektrophorese)
+- DNA bindet **Histone** (basische Proteine, reich an Lysin und Arginin) durch elektrostatische Wechselwirkungen
+- **Nukleasen** (DNasen, RNasen) spalten Phosphodiesterbindungen hydrolytisch — Endonukleasen schneiden innerhalb des Strangs, Exonukleasen bauen vom Ende her ab
+- **Restriktionsenzyme** sind bakterielle Endonukleasen, die spezifische Sequenzen erkennen und spalten — Grundlage der Gentechnik
 
-**Salzbrücken:** Ionische Wechselwirkung zwischen gegengleich geladenen Seitenketten (Lys⁺/Arg⁺ mit Asp⁻/Glu⁻) → stabilisieren Tertiärstruktur.
+### Klinischer Bezug: Lipase und Orlistat
 
-**Denaturierung:** Störung der nichtkovalenten Wechselwirkungen (Hitze, pH-Änderung, Detergenzien) → Entfaltung → Funktionsverlust. Die Primärstruktur (kovalente Peptidbindungen) bleibt intakt. Denaturierungsmittel und ihre Wirkmechanismen:
-- **Hitze (>60 °C):** Erhöhte kinetische Energie überwindet H-Brücken und hydrophobe Wechselwirkungen
-- **Harnstoff (6–8 M):** Unterbricht H-Brücken, konkurriert mit intramolekularen H-Brücken
-- **SDS (Natriumdodecylsulfat):** Detergenz, stört hydrophoben Effekt und entfaltet das Protein
-- **Extreme pH-Werte:** Protonierung/Deprotonierung von Seitenketten → Salzbrücken und H-Brücken gestört
-- **β-Mercaptoethanol/DTT:** Reduziert Disulfidbrücken (kovalent!) → zusätzliche Destabilisierung
+Das Medikament **Orlistat** (Xenical) hemmt die Pankreaslipase irreversibel durch kovalente Bindung an den Serin-Rest im aktiven Zentrum. Dadurch werden ca. 30 % der Nahrungsfette nicht gespalten und unverdaut ausgeschieden — ein Wirkprinzip zur Gewichtsreduktion bei Adipositas.
 
-Klinisch: Autoklav-Sterilisation (121 °C, 15 min) denaturiert alle mikrobiellen Proteine irreversibel. Prionen (fehlgefaltete Proteine) sind jedoch extrem hitzeresistent.
+> **Merke:** Esterbindungen verknüpfen Glycerin mit Fettsäuren (Triglyceride) und Zucker mit Phosphat (Phosphodiesterbindung im DNA/RNA-Rückgrat). Lipasen spalten Ester in Fetten, Nukleasen spalten Phosphodiester in Nukleinsäuren. Verseifung = alkalische Esterhydrolyse → Seifen.
 
-## Nukleinsäuren (DNA und RNA)
+---
 
-**Kovalentes Rückgrat:** Phosphodiesterbindungen verbinden Zucker (Desoxyribose in DNA, Ribose in RNA) über Phosphatgruppen (negativ geladen) → hydrophiles, negativ geladenes Rückgrat.
+## 6. Klinische Bezüge und Prüfungsrelevantes
 
-**Basenstapelung (π-Stacking):** London-Dispersionskräfte zwischen den aromatischen Basenringen in der Helix-Innenseite stabilisieren die DNA zusätzlich zu H-Brücken. Energiebeitrag ~10–40 kJ/mol pro Basenpaar.
+### Proteasen und Peptidbindungsspaltung
 
-**Topologie:** DNA existiert in zellulär superspiralisierter Form (Supercoiling) — Topoisomerasen regulieren die Topologie. Wichtige Angriffspunkte für Antibiotika (Gyraseinhibitoren: Fluorchinolone) und Krebstherapeutika (Topoisomerase-II-Inhibitoren: Doxorubicin).
+Proteasen spalten Peptidbindungen hydrolytisch und spielen zentrale Rollen in Verdauung, Blutgerinnung und Apoptose (programmierter Zelltod). **Trypsin** (Pankreas) spaltet nach Lysin und Arginin, **Chymotrypsin** nach aromatischen Aminosäuren (Phe, Trp, Tyr), **Pepsin** (Magen, pH-Optimum 1,5–2,5) nach hydrophoben Resten. Alle drei sind **Endopeptidasen** — sie schneiden innerhalb der Polypeptidkette, nicht vom Ende her. Klinisch relevant: **ACE-Hemmer** (Captopril, Enalapril) blockieren das Angiotensin-Converting-Enzyme, eine Protease, die Angiotensin I in das vasokonstriktorische Angiotensin II spaltet — Standardtherapie bei Hypertonie.
 
-**RNA-Struktur:** RNA ist einsträngig, kann aber intramolekular H-Brücken bilden → Sekundärstrukturen (Haarnadelschleifen, Stamm-Schleifen) → tRNA, rRNA, Ribozyme, microRNA.
+### Zusammenfassung: Bindungstypen im Vergleich
 
+| Bindungstyp | Vorkommen | Entstehung | Spaltung | Klinisches Beispiel |
+|---|---|---|---|---|
+| Peptidbindung | Proteine | Kondensation (Ribosom) | Proteasen (Trypsin, Pepsin) | ACE-Hemmer |
+| Disulfidbrücke | Extrazelluläre Proteine | Oxidation (–SH + HS–) | Reduktion (NAC, DTT) | NAC als Mukolytikum |
+| α-Glykosidisch | Stärke, Glykogen, Maltose | Kondensation | α-Amylase, Maltase | Acarbose hemmt α-Glucosidase (Diabetes) |
+| β-Glykosidisch | Cellulose, Lactose | Kondensation | Cellulase, Lactase | Laktoseintoleranz |
+| Esterbindung | Triglyceride | Veresterung | Lipasen | Orlistat hemmt Pankreaslipase |
+| Phosphodiester | DNA/RNA-Rückgrat | Kondensation (Polymerase) | Nukleasen | Restriktionsenzyme (Gentechnik) |
 
-## Enzyme: Bindung und Katalyse
+> **Merke:** Jeder Bindungstyp hat sein spezifisches Spaltenzym — Proteasen für Peptidbindungen, Lipasen für Esterbindungen, Amylasen/Glucosidasen für glykosidische Bindungen, Nukleasen für Phosphodiester. Die Enzymspezifität beruht auf der komplementären Geometrie des aktiven Zentrums zur jeweiligen Bindung.
 
-Enzyme sind Proteine (Ausnahme: Ribozyme = RNA) mit einem **aktiven Zentrum**, das durch nichtkovalente Wechselwirkungen das Substrat spezifisch bindet:
-- H-Brücken: orientieren das Substrat
-- Hydrophober Effekt: hydrophobe Substratteile im hydrophoben Pocket
-- van-der-Waals: optimale Raumfüllung (induced fit)
-- Ionische Wechselwirkungen: Ladungskomplementarität
-
-**Induced Fit:** Das Enzym verändert seine Konformation beim Substratbinden — optimale Bindung erst nach Konformationsänderung. Die Komplementarität zwischen Enzym und Substrat wird nicht durch eine einzelne starke Bindung erreicht, sondern durch die Summe vieler schwacher nichtkovalenter Wechselwirkungen (typisch: 10–20 H-Brücken, zahlreiche van-der-Waals-Kontakte, 1–3 Salzbrücken, hydrophobe Taschen).
-
-**Inhibitionstypen und ihre Bindungsmechanismen:**
-- **Kompetitiv:** Inhibitor bindet im aktiven Zentrum (gleiche Stelle wie Substrat); durch Substratüberschuss verdrängbar; Km erhöht, Vmax unverändert. Beispiel: Methotrexat hemmt Dihydrofolatreduktase (kompetitiv zu Folat → Krebstherapie).
-- **Nicht-kompetitiv:** Inhibitor bindet an anderer Stelle (allosterisch); nicht durch Substratüberschuss verdrängbar; Km unverändert, Vmax erniedrigt. Beispiel: Schwermetalle (Pb²⁺, Hg²⁺) binden an Cysteine und verändern Enzymkonformation.
-- **Irreversibel:** Kovalente Bindung an das Enzym; dauerhaft inaktiviert. Beispiel: Aspirin (Acetylierung von COX-Ser530), Organophosphate (Sarin → irreversible Acetylcholinesterase-Hemmung → Nervengift).
-
-> **Merke:** Enzymhemmung nutzt die gleichen Bindungsprinzipien: Kompetitive Inhibitoren ahmen das Substrat nach (ähnliche H-Brücken, van-der-Waals); irreversible Inhibitoren bilden kovalente Bindungen (z. B. Aspirin acetyliert Serin). Die Art der Bindung bestimmt die Dauer der Wirkung.
-
-> **Prüfungstipp:** Bei Enzymkinetik-Fragen auf Km und Vmax achten: Kompetitiv → Km erhöht, Vmax gleich (Substratüberschuss verdrängt Inhibitor). Nicht-kompetitiv → Km gleich, Vmax erniedrigt (Inhibitor wirkt unabhängig vom Substrat). Irreversibel → Enzym dauerhaft inaktiv.
-
-## Pharmakologische Bindungen
-
-Arzneimittel wirken über **molekulare Erkennung** an Rezeptoren, Enzymen oder Nukleinsäuren. Bindungsarten:
-
-- **Reversible Bindung** (meist nichtkovalent: H-Brücken, ionisch, van-der-Waals): reversible Hemmstoffe, günstig für steuerbare Pharmakotherapie
-- **Irreversible Bindung** (kovalent): z. B. Aspirin (kovalente Acetylierung der COX), Penicillin (kovalente Acylierung der Transpeptidase), Protonenpumpenhemmer (Omeprazol, kovalente Bindung an H⁺/K⁺-ATPase)
-
-Lipinski's Rule of Five für orale Bioverfügbarkeit: MW ≤ 500, logP ≤ 5, H-Brücken-Donoren ≤ 5, H-Brücken-Akzeptoren ≤ 10. Pharmaka müssen ausreichend polar für Löslichkeit und Transport, aber nicht zu polar, um Membranen zu durchqueren.
-
-> **Merke:** Reversible Pharmaka: nichtkovalent → steuerbar (Dosierung möglich). Irreversible Pharmaka: kovalent → wirken bis zur Neusynthese des Targets (z. B. Aspirin hemmt Thrombozytenfunktion für ~10 Tage, bis neue Thrombozyten gebildet werden).`,
+> **Prüfungstipp:** Bei MedAT-Fragen zu biologischen Bindungen drei Dinge systematisch durchgehen: (1) Welche Monomere werden verknüpft? (2) Welcher Reaktionstyp (Kondensation/Oxidation)? (3) Welches Enzym spaltet die Bindung? Damit lassen sich praktisch alle Fragen zu diesem Thema beantworten.`,
 
       lernziele: [
         "Die Rolle kovalenter und nichtkovalenter Bindungen in biologischen Makromolekülen (Proteine, Nukleinsäuren, Lipide, Kohlenhydrate) erklären.",

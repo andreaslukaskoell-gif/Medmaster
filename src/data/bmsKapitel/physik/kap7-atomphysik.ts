@@ -27,12 +27,7 @@ export const physKap7: Kapitel = {
         "Absorptionsspektrum",
         "Plancksches Wirkungsquantum",
       ],
-      content: `
-
-
-## Entwicklung der Atommodelle
-
-
+      content: `## Entwicklung der Atommodelle
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind (“Plum-Pudding-Modell”). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
@@ -286,12 +281,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `
-
-
-## Alpha-Strahlung (α)
-
-
+      content: `## Alpha-Strahlung (α)
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV. Der α-Zerfall tritt bevorzugt bei schweren Kernen (Z > 82) auf, da diese durch Ausstoßen eines α-Teilchens ihre Bindungsenergie pro Nukleon erhöhen und somit stabiler werden.
 
@@ -850,12 +840,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         "Hounsfield-Einheiten",
         "Sauerstoffeffekt OER",
       ],
-      content: `
-
-
-## Entstehung von Röntgenstrahlung
-
-
+      content: `## Entstehung von Röntgenstrahlung
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
@@ -1173,10 +1158,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Welle-Teilchen-Dualismus",
         "Warburg-Effekt",
       ],
-      content: `
-
-
-## PET – Positronen-Emissions-Tomographie
+      content: `## PET – Positronen-Emissions-Tomographie
 
 
 
@@ -1416,10 +1398,7 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Akutes Strahlensyndrom",
         "Radon Österreich",
       ],
-      content: `
-
-
-## Strahlenschutz — die drei Grundprinzipien
+      content: `## Strahlenschutz — die drei Grundprinzipien
 
 Der Strahlenschutz folgt international dem **ALARA-Prinzip** (As Low As Reasonably Achievable) und beruht auf drei Säulen:
 

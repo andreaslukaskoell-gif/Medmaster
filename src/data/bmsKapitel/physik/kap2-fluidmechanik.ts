@@ -281,7 +281,7 @@ Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
 
 ## Oberflächenspannung
 
-muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
+Um Oberflächenspannung zu verstehen, muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
 
 Die **Oberflächenspannung sigma** ist definiert als Kraft pro Länge entlang einer gedachten Linie auf der Oberfläche:
 
@@ -458,14 +458,9 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
         "Strömungsgeräusche",
         "Volumenstrom",
       ],
-      content: `
+      content: `## Ideale Fluide und Volumenstrom
 
-
-## Ideale Fluide und Volumenstrom
-
-m3/s)
-
-Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
+Der **Volumenstrom** Q = A · v beschreibt das Fluidvolumen, das pro Zeiteinheit durch einen Querschnitt fließt (Einheit: m³/s). Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
 
 > **Merke:** Volumenstrom Q = A * v (Einheit: m3/s). Für ein ideales Fluid: inkompressibel, reibungsfrei, stationär.
 
@@ -514,7 +509,7 @@ Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigke
 
 ## Laminare vs. turbulente Strömung
 
-betrachten wir zwei grundlegend verschiedene Strömungsformen:
+Bei realen Strömungen betrachten wir zwei grundlegend verschiedene Strömungsformen:
 
 **Laminare Strömung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blättchen); die Strömung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
 

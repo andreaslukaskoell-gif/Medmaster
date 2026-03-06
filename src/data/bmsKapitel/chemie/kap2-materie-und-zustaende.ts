@@ -355,7 +355,7 @@ In der Atemphysiologie sind Partialdrucke zentral. Die **Alveolarluft** (Luft in
 - p(N2) ungefähr 76,4 kPa
 - p(H2O) = 6,27 kPa (37 °C, gesättigt)
 
-O2-Partialdruck im venoesen Blut ungefähr 5,3 kPa (40 mmHg) -> O2 diffundiert Alveole -> Blut (Druckgradient). CO2 im venoesen Blut ungefähr 6,1 kPa (46 mmHg) > 5,3 kPa alveolar -> CO2 diffundiert Blut -> Alveole.
+O2-Partialdruck im venösen Blut ungefähr 5,3 kPa (40 mmHg) -> O2 diffundiert Alveole -> Blut (Druckgradient). CO2 im venösen Blut ungefähr 6,1 kPa (46 mmHg) > 5,3 kPa alveolar -> CO2 diffundiert Blut -> Alveole.
 
 ## Berechnung mit Molenbrüchen
 
@@ -368,7 +368,7 @@ O2-Partialdruck im venoesen Blut ungefähr 5,3 kPa (40 mmHg) -> O2 diffundiert A
 
 ## Henry-Gesetz und Gaslöslichkeit
 
-Das Henry-Gesetz ergaenzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssigkeiten:
+Das Henry-Gesetz ergänzt das Daltonsche Gesetz für Gaslöslichkeit in Flüssigkeiten:
 
 **c = kH * p**
 

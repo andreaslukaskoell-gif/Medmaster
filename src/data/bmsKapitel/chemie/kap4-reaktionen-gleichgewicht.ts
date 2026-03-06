@@ -1524,15 +1524,17 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
       ],
       content: `## Enthalpie (ΔH) — Wärme bei konstantem Druck
 
-Warum löst sich ein Kältepack auf und kühlt dabei, obwohl kein Strom fließt? Warum kann die Zelle thermodynamisch „unmögliche" Biosynthesen durchführen? Die Antworten liefern drei Größen: Enthalpie, Entropie und Gibbs-Energie. Die **Enthalpie** H ist eine thermodynamische Zustandsgröße. Die Enthalpieänderung ΔH einer Reaktion beschreibt die Wärmemenge, die bei konstantem Druck ausgetauscht wird.
+Warum kühlt ein Kältepack, obwohl kein Strom fließt? Warum kann dein Körper aus einfachen Aminosäuren riesige Proteine aufbauen, obwohl das thermodynamisch „bergauf" geht? Drei Größen liefern die Antwort: Enthalpie, Entropie und Gibbs-Energie. Wer sie versteht, versteht die Triebkraft hinter jeder Reaktion — von der Verbrennung im Bunsenbrenner bis zur ATP-Synthese in der Mitochondrienmembran.
 
-**Exotherme Reaktionen (ΔH < 0):** Das System gibt Wärme an die Umgebung ab. Die Produkte haben weniger Enthalpie als die Edukte. Beispiele: Verbrennung von Methan (ΔH = −890 kJ/mol), Neutralisation starker Säuren/Basen (ΔH ≈ −57 kJ/mol), Kristallisation.
+Die **Enthalpie** H ist eine thermodynamische Zustandsgröße (Zustandsgröße bedeutet: ihr Wert hängt nur vom aktuellen Zustand ab, nicht davon, wie das System dorthin gelangt ist). Die Enthalpieänderung ΔH beschreibt die Wärmemenge, die bei konstantem Druck zwischen System und Umgebung ausgetauscht wird.
 
-**Endotherme Reaktionen (ΔH > 0):** Das System nimmt Wärme aus der Umgebung auf. Die Produkte haben mehr Enthalpie als die Edukte. Beispiele: Auflösung von NH₄NO₃ in Wasser (Kältepack, ΔH = +25,7 kJ/mol), thermische Zersetzung von CaCO₃ (ΔH = +178 kJ/mol), Photosynthese.
+**Exotherme Reaktionen (ΔH < 0):** Das System gibt Wärme an die Umgebung ab — die Produkte sind energieärmer als die Edukte. Du spürst das als Erwärmung. Beispiele: Verbrennung von Methan (ΔH = −890 kJ/mol), Neutralisation starker Säuren und Basen (ΔH ≈ −57 kJ/mol), Kristallisation aus einer übersättigten Lösung.
+
+**Endotherme Reaktionen (ΔH > 0):** Das System nimmt Wärme aus der Umgebung auf — die Produkte sind energiereicher als die Edukte. Du spürst das als Abkühlung. Beispiele: Auflösung von NH₄NO₃ in Wasser (Kältepack, ΔH = +25,7 kJ/mol), thermische Zersetzung von CaCO₃ zu CaO + CO₂ (ΔH = +178 kJ/mol), Photosynthese.
 
 ### Bildungsenthalpie (ΔH_f°)
 
-Die **Standard-Bildungsenthalpie** ΔH_f° ist die Enthalpieänderung bei der Bildung von 1 mol einer Verbindung aus den Elementen in ihrem Standardzustand (25°C, 1 bar). Per Definition gilt: ΔH_f° = 0 für Elemente in ihrem stabilsten Zustand (z. B. O₂(g), C(Graphit), Fe(s)).
+Die **Standard-Bildungsenthalpie** ΔH_f° gibt die Enthalpieänderung an, wenn 1 mol einer Verbindung aus ihren Elementen im Standardzustand (25 °C, 1 bar) gebildet wird. Per Definition gilt: ΔH_f° = 0 für jedes Element in seinem stabilsten Zustand (z. B. O₂(g), C(Graphit), Fe(s), N₂(g)). Das ist der Referenzpunkt — wie die Nullmarke auf einem Thermometer.
 
 Wichtige Bildungsenthalpien:
 | Verbindung | ΔH_f° (kJ/mol) |
@@ -1541,12 +1543,11 @@ Wichtige Bildungsenthalpien:
 | CO₂(g) | −393,5 |
 | NH₃(g) | −46,1 |
 | CH₄(g) | −74,8 |
-| C₆H₁₂O₆(s) | −1274 |
-
+| C₆H₁₂O₆(s) (Glucose) | −1274 |
 
 ### Hess'scher Satz (Satz der konstanten Wärmesumme)
 
-**Formulierung:** Die Enthalpieänderung einer Reaktion hängt nur vom Anfangs- und Endzustand ab, nicht vom Reaktionsweg. Das bedeutet: Man kann ΔH über beliebige Zwischenstufen berechnen.
+**Formulierung:** Die Enthalpieänderung einer Reaktion hängt nur vom Anfangs- und Endzustand ab, nicht vom Reaktionsweg. Man kann ΔH also über beliebige Zwischenstufen berechnen — ob die Reaktion in einem Schritt oder in zehn Teilschritten abläuft, das Gesamt-ΔH ist identisch.
 
 **Berechnung über Bildungsenthalpien:**
 ΔH°(Reaktion) = Σ ΔH_f°(Produkte) − Σ ΔH_f°(Edukte)
@@ -1558,43 +1559,65 @@ CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)
 ΔH° = [−393,5 + 2·(−285,8)] − [−74,8 + 0]
 ΔH° = −965,1 − (−74,8) = **−890,3 kJ/mol**
 
-Der Hess'sche Satz ist besonders nützlich, wenn ΔH einer Reaktion nicht direkt messbar ist (z. B. Bildung von Benzol aus Kohlenstoff und Wasserstoff).
+Der Hess'sche Satz ist besonders nützlich, wenn ΔH einer Reaktion nicht direkt messbar ist — etwa bei der Bildung von Benzol aus Kohlenstoff und Wasserstoff, die im Labor nie sauber in einem Schritt abläuft.
 
-> **Merke:** ΔH < 0 = exotherm (System gibt Wärme ab); ΔH > 0 = endotherm (System nimmt Wärme auf). Die Bildungsenthalpie von Elementen im Standardzustand ist per Definition 0. Der Hess'sche Satz erlaubt die Berechnung von ΔH über Umwege.
+### Kalorische Verwertung von Nährstoffen
+
+Im Körper werden Nährstoffe oxidiert. Der physiologische Brennwert (kalorische Verwertung) gibt an, wie viel Energie pro Gramm freigesetzt wird:
+
+| Nährstoff | Brennwert | Warum? |
+|---|---|---|
+| Fett | **9 kcal/g** (37,7 kJ/g) | Hoher H-Anteil, stark reduziert → viel Oxidationsenergie |
+| Kohlenhydrate | **4 kcal/g** (16,7 kJ/g) | Teilweise bereits oxidiert (C-OH-Gruppen) |
+| Protein | **4 kcal/g** (16,7 kJ/g) | Ähnlich wie KH; N wird als Harnstoff ausgeschieden (nicht vollständig oxidiert) |
+| Ethanol | **7 kcal/g** (29,3 kJ/g) | Zwischen Fett und KH; klinisch relevant bei Alkoholikern |
+
+Fett liefert also pro Gramm mehr als doppelt so viel Energie wie Kohlenhydrate oder Protein. Der Grund: Fettsäuren sind stark reduziert (viele C-H-Bindungen), sodass bei der Oxidation besonders viel Energie frei wird.
+
+> **Merke:** ΔH < 0 = exotherm (Wärme frei), ΔH > 0 = endotherm (Wärme aufgenommen). Bildungsenthalpie von Elementen im Standardzustand ist per Definition 0. Der Hess'sche Satz erlaubt die Berechnung von ΔH über Umwege. Fett liefert 9 kcal/g — mehr als doppelt so viel wie KH oder Protein (je 4 kcal/g).
 
 ---
 
 ## Entropie (ΔS) — Maß für Unordnung
 
-Die **Entropie** S ist ein Maß für die Anzahl der möglichen Mikrozustände eines Systems (Boltzmann: S = k_B · ln W). Vereinfacht: Entropie misst die „Unordnung" oder „Verteilung von Energie und Materie".
+Die **Entropie** S quantifiziert die Anzahl der möglichen Mikrozustände (Anordnungen auf molekularer Ebene) eines Systems. Boltzmann fasste das in einer berühmten Gleichung zusammen: **S = k_B · ln W** (k_B = Boltzmann-Konstante, W = Anzahl der Mikrozustände). Vereinfacht: Entropie misst, wie viele verschiedene Wege es gibt, die Energie und Materie im System zu verteilen — je mehr Möglichkeiten, desto größer S.
 
 **Entropie steigt (ΔS > 0) bei:**
-- Auflösung eines Feststoffs → Ionen verteilen sich in Lösung (geordnetes Gitter → ungeordnet)
-- Gasentwicklung → enorm viel mehr Mikrozustände (Volumenvergrößerung)
-- Temperaturerhöhung → Teilchen bewegen sich schneller, mehr Energiezustände
-- Vergrößerung der Teilchenzahl → z. B. 2 NH₃ → N₂ + 3 H₂ (2 Mol → 4 Mol Gas)
+- **Auflösung eines Feststoffs** → Ionen verlassen das geordnete Kristallgitter und verteilen sich in Lösung
+- **Gasentwicklung** → enorm viel mehr Mikrozustände durch Volumenvergrößerung
+- **Temperaturerhöhung** → Teilchen bewegen sich schneller, besetzen mehr Energieniveaus
+- **Vergrößerung der Teilchenzahl** → z. B. 2 NH₃ → N₂ + 3 H₂ (2 Mol → 4 Mol Gas)
 
 **Entropie sinkt (ΔS < 0) bei:**
-- Kristallisation (flüssig → fest)
-- Polymerisation (viele Monomere → ein Polymer)
-- Assoziation (2 Teilchen → 1 Komplex)
+- Kristallisation (flüssig → fest → weniger Bewegungsfreiheit)
+- Polymerisation (viele kleine Monomere → ein großes Polymer)
+- Assoziation (zwei getrennte Teilchen → ein Komplex)
 
-**Dritter Hauptsatz der Thermodynamik:** Bei T = 0 K (absolutem Nullpunkt) ist die Entropie eines perfekten Kristalls S = 0. Dies ermöglicht die Berechnung absoluter Entropien.
+**Warum löst sich Zucker in Wasser?** Obwohl keine Ladungen entstehen, ist ΔS_Mischung > 0: Die Saccharose-Moleküle verteilen sich zwischen den Wassermolekülen, und die Gesamtzahl der möglichen Anordnungen steigt drastisch. Diese Mischungsentropie ist die treibende Kraft hinter vielen Lösevorgängen.
+
+### Zweiter Hauptsatz der Thermodynamik
+
+Die Gesamtentropie des Universums (System + Umgebung) nimmt bei jedem spontanen Vorgang zu: **ΔS_Universum = ΔS_System + ΔS_Umgebung > 0**. Ein lokaler Entropierückgang (z. B. Bildung eines geordneten Kristalls) ist nur möglich, wenn die Umgebung gleichzeitig mehr Entropie gewinnt — etwa durch die freigesetzte Kristallisationswärme.
+
+**Dritter Hauptsatz:** Bei T = 0 K (absolutem Nullpunkt) ist die Entropie eines perfekten Kristalls S = 0. Das ist der absolute Referenzpunkt, von dem aus man absolute Entropiewerte berechnen kann.
+
+> **Merke:** ΔS > 0 = mehr Unordnung → begünstigt Spontaneität. ΔS < 0 = mehr Ordnung → hemmt Spontaneität. Die Gesamtentropie des Universums kann nie abnehmen (2. Hauptsatz). Mischungsentropie erklärt, warum sich Stoffe auch ohne Energiegewinn vermischen.
 
 ---
 
 ## Gibbs-Energie (ΔG) — das Entscheidungskriterium
 
-Die **Gibbs-Energie** (auch: freie Enthalpie) kombiniert beide Triebkräfte in einer einzigen Größe:
+Enthalpie und Entropie sind zwei konkurrierende Triebkräfte. Die **Gibbs-Energie** (auch: freie Enthalpie, benannt nach Josiah Willard Gibbs) fasst beide in einer einzigen Gleichung zusammen, die direkt sagt, ob eine Reaktion spontan abläuft:
 
 **ΔG = ΔH − T · ΔS**
 
 | ΔG | Bedeutung |
 |---|---|
-| < 0 | Reaktion ist spontan (exergon) |
-| > 0 | Reaktion ist nicht spontan (endergon) |
-| = 0 | System im Gleichgewicht |
+| < 0 | Reaktion läuft spontan ab (**exergon**) |
+| > 0 | Reaktion läuft nicht spontan ab (**endergon**) |
+| = 0 | System befindet sich im **Gleichgewicht** |
 
+Wichtig: „Spontan" heißt thermodynamisch begünstigt — es sagt nichts über die Geschwindigkeit aus. Diamant → Graphit ist spontan (ΔG < 0), dauert aber Millionen Jahre ohne Katalysator. Die Geschwindigkeit bestimmt die Kinetik (Aktivierungsenergie Ea), nicht die Thermodynamik.
 
 ### Die vier Fälle der Spontaneität
 
@@ -1605,20 +1628,20 @@ Die **Gibbs-Energie** (auch: freie Enthalpie) kombiniert beide Triebkräfte in e
 | 3 | < 0 (exotherm) | < 0 (mehr Ordnung) | T-abhängig | Spontan bei **tiefen T** (|ΔH| > T·|ΔS|) |
 | 4 | > 0 (endotherm) | > 0 (mehr Unordnung) | T-abhängig | Spontan bei **hohen T** (T·ΔS > ΔH) |
 
-**Fall 1 — Beispiel:** Verbrennung (exotherm + Gasentwicklung → mehr Unordnung)
-**Fall 2 — Beispiel:** Photosynthese (endotherm + Ordnung steigt → braucht Lichtenergie)
-**Fall 3 — Beispiel:** Gefrieren von Wasser (exotherm, aber weniger Unordnung → nur unter 0°C spontan)
-**Fall 4 — Beispiel:** Auflösung von NH₄NO₃ (endotherm, aber mehr Unordnung → spontan bei Raumtemperatur)
-
-> **Prüfungstipp:** Die vier Fälle der Spontaneität sind MedAT-Dauerbrenner. Merke dir: Fall 1 (exo + ΔS>0) = IMMER spontan, Fall 2 (endo + ΔS<0) = NIE spontan. Fälle 3 und 4 sind temperaturabhängig — hier die Umkehrtemperatur T* = ΔH/ΔS berechnen können! Einheiten-Falle: ΔH in kJ, ΔS in J → erst umrechnen.
+**Fall 1 — Verbrennung:** exotherm + Gasentwicklung → bei jeder Temperatur spontan.
+**Fall 2 — Photosynthese:** endotherm + höhere Ordnung (CO₂ + H₂O → Glucose) → braucht ständig Lichtenergie.
+**Fall 3 — Gefrieren von Wasser:** exotherm (Kristallisationswärme frei), aber ΔS < 0 (flüssig → fest) → nur unter 0 °C spontan.
+**Fall 4 — Auflösung von NH₄NO₃:** endotherm (Kältepack!), aber ΔS stark positiv → bei Raumtemperatur spontan, weil T·ΔS > ΔH.
 
 ### Umkehrtemperatur
 
-Bei den temperaturabhängigen Fällen 3 und 4 gibt es eine **Umkehrtemperatur** T*, bei der ΔG = 0:
+Bei den temperaturabhängigen Fällen 3 und 4 gibt es eine **Umkehrtemperatur** T*, bei der ΔG exakt 0 wird:
 
-T* = ΔH / ΔS
+**T* = ΔH / ΔS**
 
-Oberhalb (Fall 4) bzw. unterhalb (Fall 3) dieser Temperatur wechselt die Spontaneität.
+Oberhalb von T* (Fall 4) bzw. unterhalb von T* (Fall 3) wechselt die Spontaneität. Für Wasser: T* = ΔH_Schmelz / ΔS_Schmelz = 6,01 kJ / 0,022 kJ/K = 273 K = 0 °C — genau der Schmelzpunkt!
+
+> **Merke:** ΔG = ΔH − T·ΔS entscheidet allein über Spontaneität. Fall 1 (exo + ΔS > 0) = immer spontan. Fall 2 (endo + ΔS < 0) = nie spontan. Fälle 3 und 4 sind temperaturabhängig → Umkehrtemperatur T* = ΔH/ΔS. Einheiten-Falle: ΔH oft in kJ, ΔS in J → vor Einsetzen ΔS durch 1000 teilen!
 
 ---
 
@@ -1631,23 +1654,113 @@ Gegeben: ΔH° = −890 kJ/mol; ΔS° = −242 J/(mol·K) = −0,242 kJ/(mol·K)
 Bei T = 298 K:
 ΔG° = ΔH° − T · ΔS° = −890 − 298 · (−0,242) = −890 + 72,1 = **−817,9 kJ/mol**
 
-**Interpretation:** ΔG° ist stark negativ → die Verbrennung ist bei Raumtemperatur thermodynamisch sehr günstig. Obwohl ΔS negativ ist (weniger Gasmoleküle: 3 → 3, aber H₂O wird flüssig → weniger Unordnung), dominiert der große exotherme ΔH-Term. Die Reaktion braucht aber eine Aktivierungsenergie (Zündung) — Thermodynamik sagt nur, OB eine Reaktion ablaufen kann, nicht WIE SCHNELL (das ist Kinetik).
-
-**Achtung Einheiten:** ΔH wird oft in kJ/mol angegeben, ΔS in J/(mol·K). Vor dem Einsetzen in ΔG = ΔH − T·ΔS muss ΔS in kJ/(mol·K) umgerechnet werden (÷ 1000).
+ΔG° ist stark negativ → die Verbrennung ist thermodynamisch sehr günstig. Obwohl ΔS negativ ist (H₂O wird flüssig → weniger Unordnung), dominiert der große exotherme ΔH-Term bei weitem. Trotzdem braucht die Reaktion eine Zündung (Aktivierungsenergie) — Thermodynamik sagt, OB eine Reaktion ablaufen kann, Kinetik sagt, WIE SCHNELL.
 
 ---
 
-## Klinische Anwendung: ATP und gekoppelte Reaktionen
+## ΔG°' — biochemische Standardbedingungen
 
-Die Hydrolyse von ATP zu ADP + Pᵢ hat ΔG° = −30,5 kJ/mol (exergon). Im Körper werden endergone Reaktionen (z. B. Muskelkontraktion, aktiver Transport, Biosynthesen) an ATP-Hydrolyse **gekoppelt**, sodass die Gesamtreaktion exergon wird:
+In der Chemie gelten als Standardbedingungen: 25 °C, 1 bar, alle Stoffe in 1 mol/L Konzentration, pH nicht festgelegt. Aber im Körper herrscht immer pH 7 — und das macht einen gewaltigen Unterschied, weil H⁺-Ionen an vielen biochemischen Reaktionen beteiligt sind.
 
-Gesamtes ΔG = ΔG(endergone Reaktion) + ΔG(ATP-Hydrolyse)
+Deshalb hat die Biochemie eigene Standardbedingungen definiert, gekennzeichnet durch den Strich ('):
 
-Solange |ΔG(ATP)| > |ΔG(endergon)|, ist ΔG_gesamt < 0 → die gekoppelte Reaktion läuft spontan ab. Das ist das thermodynamische Prinzip der Bioenergetik.
+| Parameter | ΔG° (chemisch) | ΔG°' (biochemisch) |
+|---|---|---|
+| Temperatur | 25 °C (298 K) | 25 °C (298 K) |
+| Druck | 1 bar | 1 bar |
+| Konzentration | alle 1 mol/L | alle 1 mol/L |
+| **pH** | **nicht festgelegt** | **pH 7** (c(H⁺) = 10⁻⁷ mol/L) |
+| **Wasser** | Aktivität = 1 | **55,5 mol/L** (reines Wasser als Lösungsmittel) |
 
-> **Merke:** ΔG = ΔH − T·ΔS. Nur ΔG < 0 heißt spontan. Exotherm allein reicht nicht — die Entropie zählt mit! Die vier Fälle auswendig lernen: exotherm+ΔS>0 → immer; endotherm+ΔS<0 → nie; Rest → temperaturabhängig.
+Warum ist das wichtig? Bei pH 0 wäre c(H⁺) = 1 mol/L — das ist 10⁷-mal mehr als bei pH 7. Für Reaktionen, an denen H⁺ beteiligt ist (und das sind fast alle biochemischen Reaktionen), verschiebt sich ΔG dadurch um **−39,9 kJ/mol pro H⁺**. ATP-Hydrolyse hat z. B. unter chemischen Standardbedingungen ΔG° = −35,7 kJ/mol, unter biochemischen ΔG°' = −30,5 kJ/mol.
 
-> **Merke:** Einheiten-Falle: ΔH in kJ, ΔS in J → vor Rechnung ΔS durch 1000 teilen. ATP-Kopplung: endergone + exergone Reaktion → ΔG_gesamt < 0 wenn |ΔG_ATP| > |ΔG_endergon|.`,
+In der MedAT-Vorbereitung und in Biochemie-Lehrbüchern wird fast immer ΔG°' verwendet. Wenn einfach „ΔG°" steht, ist im biochemischen Kontext meist ΔG°' gemeint.
+
+> **Merke:** ΔG°' = biochemische Standardbedingungen (pH 7, 25 °C, 1 mol/L, Wasser als Lösungsmittel). Der Strich (') zeigt an: pH ist auf 7 fixiert. In der Biochemie ist ΔG°' der Standardwert — nicht ΔG°.
+
+---
+
+## ATP als Energiewährung der Zelle
+
+Adenosintriphosphat (ATP) ist das zentrale Molekül der biologischen Energieübertragung. Seine Hydrolyse (Spaltung durch Wasser) setzt unter biochemischen Standardbedingungen erhebliche Energie frei:
+
+**ATP + H₂O → ADP + Pᵢ (anorganisches Phosphat)**
+**ΔG°' = −30,5 kJ/mol**
+
+Warum ist dieser Wert so stark negativ? Drei Gründe:
+1. **Ladungsabstoßung:** Die drei eng benachbarten negativen Phosphatgruppen stoßen sich ab. Nach der Spaltung sinkt die elektrostatische Abstoßung.
+2. **Resonanzstabilisierung:** Die Produkte ADP und Pᵢ haben mehr Resonanzstrukturen als ATP — sie sind stabiler.
+3. **Hydratation:** ADP und Pᵢ werden besser hydratisiert (von Wassermolekülen umgeben) als ATP.
+
+### Energetische Kopplung
+
+Im Körper laufen viele Reaktionen ab, die thermodynamisch „bergauf" gehen (ΔG > 0). Sie können nur stattfinden, wenn sie an eine exergone Reaktion gekoppelt werden — meist die ATP-Hydrolyse:
+
+**Beispiel — Phosphorylierung von Glucose** (erster Schritt der Glykolyse):
+- Glucose + Pᵢ → Glucose-6-phosphat: ΔG°' = **+13,8 kJ/mol** (endergon, allein nicht spontan)
+- ATP → ADP + Pᵢ: ΔG°' = **−30,5 kJ/mol** (exergon)
+- **Gekoppelt:** Glucose + ATP → Glucose-6-phosphat + ADP: ΔG°' = +13,8 + (−30,5) = **−16,7 kJ/mol** (exergon!)
+
+Die Zelle überträgt dabei die Phosphatgruppe direkt vom ATP auf die Glucose — das Enzym Hexokinase katalysiert diese Phosphorylierung. Die Gesamtreaktion ist exergon, weil |ΔG°'_ATP| > |ΔG°'_endergon|.
+
+Weitere Beispiele für ATP-getriebene Prozesse: Muskelkontraktion (Myosin-ATPase), aktiver Ionentransport (Na⁺/K⁺-ATPase verbraucht ~25 % des Ruhe-ATPs), Proteinbiosynthese (4 ATP-Äquivalente pro Peptidbindung), DNA-Replikation.
+
+> **Merke:** ATP-Hydrolyse liefert ΔG°' = −30,5 kJ/mol. Endergone Reaktionen werden durch Kopplung an ATP-Hydrolyse ermöglicht: ΔG_gesamt = ΔG_endergon + ΔG_ATP < 0. Die Phosphatgruppe wird dabei oft direkt übertragen (Phosphorylierung).
+
+---
+
+## Thermodynamische Kopplung im Stoffwechsel
+
+Die ATP-Kopplung ist kein Einzelfall, sondern ein durchgängiges Prinzip des Stoffwechsels. Ganze Stoffwechselwege funktionieren nur, weil einzelne endergone Schritte durch stark exergone Schritte thermodynamisch „mitgezogen" werden.
+
+### Glykolyse — Gesamtbilanz
+
+Die Glykolyse (Abbau von Glucose zu 2 Pyruvat) hat 10 Einzelschritte. Manche davon sind endergon (z. B. Schritt 4: Aldolase, ΔG°' = +23,8 kJ/mol), aber die Gesamtbilanz ist exergon:
+
+**Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 Pyruvat + 2 NADH + 2 ATP + 2 H₂O**
+**ΔG°' = −74,0 kJ/mol**
+
+Die drei irreversiblen (stark exergonen) Schritte — Hexokinase (−16,7), Phosphofructokinase (−14,2) und Pyruvatkinase (−31,4 kJ/mol) — treiben den gesamten Weg voran.
+
+### Citratzyklus
+
+Ähnlich im Citratzyklus: Die Gesamtbilanz ist exergon (ΔG°' ≈ −40 kJ/mol pro Acetyl-CoA), obwohl einzelne Schritte endergon sind. Die Citrat-Synthase (ΔG°' = −31,4 kJ/mol) ist der erste und stärkste Zugmotor.
+
+### Enzyme ändern ΔG nicht — nur Ea
+
+Ein häufiges Missverständnis: Enzyme machen Reaktionen nicht thermodynamisch günstiger. Sie senken nur die **Aktivierungsenergie** (Ea) — den Energieberg, den die Reaktanten überwinden müssen, um zu Produkten zu werden. ΔG bleibt identisch, ob mit oder ohne Enzym.
+
+Analogie: Ein Tunnel durch einen Berg ändert nicht den Höhenunterschied zwischen den zwei Seiten (ΔG), aber er senkt die Höhe, die du überwinden musst (Ea). Die Reaktion läuft mit Enzym schneller ab, aber die Gleichgewichtslage verschiebt sich nicht.
+
+Das bedeutet auch: Ein Enzym kann eine thermodynamisch unmögliche Reaktion (ΔG > 0) nicht möglich machen — dafür braucht es Kopplung an eine exergone Reaktion (z. B. ATP-Hydrolyse).
+
+> **Merke:** Stoffwechselwege funktionieren durch Kopplung: Stark exergone Schritte treiben endergone Schritte an. Enzyme senken nur Ea, nicht ΔG — sie beschleunigen, verschieben aber nicht das Gleichgewicht. Eine thermodynamisch unmögliche Reaktion braucht Energiekopplung, kein besseres Enzym.
+
+---
+
+## Klinische Bezüge
+
+### Grundumsatz und Harris-Benedict-Gleichung
+
+Der **Grundumsatz** (Basal Metabolic Rate, BMR) ist der Energieverbrauch des Körpers in völliger Ruhe — die Energie, die für Atmung, Herzschlag, Ionenpumpen, Körpertemperatur und Zellerhalt benötigt wird. Er wird durch indirekte Kalorimetrie (Messung des O₂-Verbrauchs und der CO₂-Produktion) bestimmt.
+
+Die **Harris-Benedict-Gleichung** schätzt den Grundumsatz:
+- Männer: BMR = 66,5 + 13,75 · Gewicht(kg) + 5,003 · Größe(cm) − 6,755 · Alter(J)
+- Frauen: BMR = 655,1 + 9,563 · Gewicht(kg) + 1,850 · Größe(cm) − 4,676 · Alter(J)
+
+Typische Werte: ~1500–1800 kcal/Tag (Männer), ~1200–1500 kcal/Tag (Frauen). Muskulöse Personen haben höheren Grundumsatz, weil Muskelgewebe metabolisch aktiver ist als Fettgewebe.
+
+### Kalorimetrie
+
+Die **direkte Kalorimetrie** misst die Wärmeabgabe eines Organismus in einer isolierten Kammer. Die **indirekte Kalorimetrie** ist klinisch gebräuchlicher: Aus dem O₂-Verbrauch und der CO₂-Produktion wird über den respiratorischen Quotienten (RQ = CO₂/O₂) berechnet, welcher Nährstoff gerade verbrannt wird (RQ Fett ≈ 0,7; KH ≈ 1,0; Protein ≈ 0,8).
+
+### Fieber und Stoffwechsel
+
+Pro Grad Celsius Temperaturerhöhung steigt der Stoffwechsel um ca. **13 %** (van-'t-Hoff-Regel, auch RGT-Regel für biologische Systeme). Bei 40 °C Fieber (3 °C über normal) ist der Grundumsatz also ca. 40 % erhöht. Deshalb verlieren Fieberpatienten rasch Gewicht und brauchen mehr Flüssigkeit und Kalorien.
+
+Thermodynamisch erklärt: Bei höherem T steigt T·ΔS → ΔG wird für exergone Reaktionen noch negativer, und die Reaktionsgeschwindigkeit steigt exponentiell (Arrhenius-Gleichung: k = A · e^(−Ea/RT)). Allerdings droht ab ~42 °C Enzymdenaturierung — die Proteine verlieren ihre Tertiärstruktur und damit ihre katalytische Funktion.
+
+> **Merke:** Grundumsatz ≈ 1500 kcal/Tag (geschlechtsabhängig), geschätzt mit Harris-Benedict. Indirekte Kalorimetrie misst O₂-Verbrauch/CO₂-Produktion. Fieber steigert den Stoffwechsel um ~13 %/°C — bei 40 °C ist der Grundumsatz ca. 40 % erhöht. Ab 42 °C droht Enzymdenaturierung.`,
 
       lernziele: [
         "Die Begriffe Enthalpie, Entropie und Gibbs-Energie definieren und voneinander abgrenzen.",

@@ -23,9 +23,7 @@ export const chemKapStoech: Kapitel = {
         "Dalton",
         "Atommasse",
       ],
-      content: `
-
-## Das Mol — die SI-Einheit der Stoffmenge
+      content: `## Das Mol — die SI-Einheit der Stoffmenge
 
 Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe? Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
 
@@ -206,9 +204,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         "Neutralisation",
         "Verbrennungsreaktion",
       ],
-      content: `
-
-## Chemische Reaktionsgleichungen
+      content: `## Chemische Reaktionsgleichungen
 
 Antoine Lavoisier formulierte 1789 ein Prinzip, das die gesamte quantitative Chemie trägt: **Bei einer chemischen Reaktion geht kein Atom verloren und keines kommt hinzu.** Dieses Gesetz der Massenerhaltung hat eine unmittelbare Konsequenz für chemische Gleichungen — auf beiden Seiten des Reaktionspfeils muss exakt die gleiche Anzahl jeder Atomsorte stehen. Eine Gleichung, die diese Bedingung erfüllt, heißt **ausgeglichen**.
 
@@ -414,9 +410,7 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
         "NaCl 0,9%",
         "Blutglucose",
       ],
-      content: `
-
-## Konzentrationsangaben im Überblick
+      content: `## Konzentrationsangaben im Überblick
 
 Es gibt verschiedene Arten, die Konzentration eines gelösten Stoffes anzugeben:
 
@@ -629,9 +623,7 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
         "Hämolyse",
         "Dialyse",
       ],
-      content: `
-
-## Kolligative Eigenschaften — Überblick
+      content: `## Kolligative Eigenschaften — Überblick
 
 **Kolligative Eigenschaften** (lat. colligare = zusammenfassen) hängen nur von der **Anzahl gelöster Teilchen** ab, nicht von deren Art. Sie betreffen das Lösungsmittel:
 

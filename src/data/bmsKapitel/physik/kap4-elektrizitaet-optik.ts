@@ -70,8 +70,6 @@ Das **elektrische Potential φ** an einem Punkt gibt die potentielle Energie pro
 
 **Formelklartext:** U = φ₂ − φ₁ bedeutet: **Spannung** ist die **Differenz** der Potentiale („Potentialgefälle”). Sie treibt den Ladungsfluss an: positive Ladungen fließen von **hohem** zu **niedrigem** Potential. **Vorzeichen:** Voltmeter-Plus an die Klemme mit **höherem** Potential → Anzeige positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an 2, Minus an 1 → U = (+7) − (−3) = **+10 V**. **Einheiten:** [U] = V = J/C.
 
-**Vorzeichen:** Wird der Plus-Eingang des Voltmeters an die Klemme mit höherem Potential angeschlossen, zeigt die Spannung positiv. Beispiel: Klemme 1 hat −3 V, Klemme 2 hat +7 V; Pluspol an Klemme 2, Minus an Klemme 1 → U = φ₂ − φ₁ = (+7) − (−3) = **+10 V** (bzw. +10 J/C). Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential (in Richtung des Feldes); negative Ladungen entgegen der Feldrichtung.
-
 **Äquipotentialflächen** (Flächen gleichen Potentials) stehen immer senkrecht auf den Feldlinien. Entlang einer Äquipotentialfläche ist keine Arbeit zu verrichten. Biologische Zellmembranen sind Regionen mit steilem Potentialgradienten: das Ruhemembranpotential beträgt ca. −70 mV (innen negativ). Über eine Membrandicke von ~7 nm ergibt das ein elektrisches Feld von ~10⁷ V/m — vergleichbar mit dem Durchschlagsfeld von Luft.
 
 > **Merke:** Die Spannung U = φ_A − φ_B treibt Ladungsfluss an. Positive Ladungen bewegen sich spontan von hohem zu niedrigem Potential.
