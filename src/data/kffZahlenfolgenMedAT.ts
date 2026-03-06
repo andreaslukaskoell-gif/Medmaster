@@ -67,7 +67,7 @@ function seedRng(seed: number): () => number {
   };
 }
 
-/** Einzelne Operation (nur ganze Zahlen). */
+/** Einzelne Operation (nur ganze Zahlen). Gibt NaN zurück wenn Division nicht aufgeht. */
 function applyOp(n: number, op: { type: OpType; value: number }): number {
   switch (op.type) {
     case "+":
@@ -77,7 +77,7 @@ function applyOp(n: number, op: { type: OpType; value: number }): number {
     case "×":
       return n * op.value;
     case "÷":
-      if (op.value === 0 || n % op.value !== 0) return Math.round(n / op.value);
+      if (op.value === 0 || n % op.value !== 0) return NaN;
       return n / op.value;
     default:
       return n;
@@ -183,6 +183,16 @@ function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
       { type: "+", value: 2 },
       { type: "×", value: 2 },
     ],
+    // Alternating +a, +b (velumed-Stil)
+    [
+      { type: "+", value: 8 },
+      { type: "+", value: 4 },
+    ],
+    // Oscillating: +2, −2 repeating
+    [
+      { type: "+", value: 2 },
+      { type: "−", value: 2 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
@@ -279,6 +289,30 @@ function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
       { type: "×", value: 2 },
       { type: "−", value: 7 },
       { type: "+", value: 4 },
+    ],
+    // Oscillating: +2, −2, −2, +2 (velumed-Stil)
+    [
+      { type: "+", value: 2 },
+      { type: "−", value: 2 },
+      { type: "−", value: 2 },
+      { type: "+", value: 2 },
+    ],
+    // ×a, ÷a alternating (common MedAT: ×2 ÷2 cycle with offset)
+    [
+      { type: "×", value: 2 },
+      { type: "÷", value: 2 },
+    ],
+    // ×(-1) style: multiply, subtract, add cycle (velumed)
+    [
+      { type: "×", value: 6 },
+      { type: "−", value: 6 },
+      { type: "+", value: 6 },
+    ],
+    // −5, ×5, +6 cycle (velumed)
+    [
+      { type: "−", value: 5 },
+      { type: "×", value: 5 },
+      { type: "+", value: 6 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
@@ -504,8 +538,385 @@ function distinctPairs(correct: [number, number], pairs: [number, number][]): [n
   return result;
 }
 
+// ─── Neue Pattern-Typen (zusätzlich zu periodischen Operatoren) ───
+
+type PatternType = "periodic" | "interleaved" | "growing-diff" | "fibonacci";
+
+/**
+ * Verschachtelte Folge: Positionen 1,3,5,… folgen Regel A; Positionen 2,4,6,… folgen Regel B.
+ * Beispiel: 2, 10, 4, 20, 8, 40 → ungerade ×2, gerade ×2 (zwei Teilfolgen)
+ */
+function buildInterleaved(
+  startA: number,
+  startB: number,
+  opA: { type: OpType; value: number },
+  opB: { type: OpType; value: number },
+  length: number
+): number[] | null {
+  const out: number[] = [];
+  let a = startA;
+  let b = startB;
+  for (let i = 0; i < length; i++) {
+    if (i % 2 === 0) {
+      out.push(a);
+      if (i + 2 < length) {
+        const next = applyOp(a, opA);
+        if (!Number.isInteger(next) || isNaN(next)) return null;
+        a = next;
+      }
+    } else {
+      out.push(b);
+      if (i + 2 < length) {
+        const next = applyOp(b, opB);
+        if (!Number.isInteger(next) || isNaN(next)) return null;
+        b = next;
+      }
+    }
+  }
+  // Generate two more
+  const lastEvenIdx = out.length % 2 === 0 ? out.length : out.length - 1;
+  const lastOddIdx = out.length % 2 === 1 ? out.length : out.length - 1;
+  // Determine next two values
+  const extra: number[] = [];
+  for (let i = 0; i < 2; i++) {
+    const pos = out.length + i;
+    if (pos % 2 === 0) {
+      const next = applyOp(a, opA);
+      if (!Number.isInteger(next) || isNaN(next)) return null;
+      extra.push(a);
+      a = next;
+    } else {
+      const next = applyOp(b, opB);
+      if (!Number.isInteger(next) || isNaN(next)) return null;
+      extra.push(b);
+      b = next;
+    }
+  }
+  return [...out, ...extra];
+}
+
+/** Wachsende Differenzen: Differenz steigt um einen festen Wert.
+ * z.B. +2, +4, +6, +8,… oder +1, +3, +5, +7,… (Differenz steigt um 2)
+ * oder ×1, ×2, ×3, ×4,… (Multiplikator steigt um 1)
+ */
+function buildGrowingDiff(
+  start: number,
+  baseOp: OpType,
+  initialValue: number,
+  step: number,
+  length: number
+): number[] | null {
+  const out: number[] = [start];
+  let cur = start;
+  let val = initialValue;
+  for (let i = 1; i < length; i++) {
+    const next = applyOp(cur, { type: baseOp, value: val });
+    if (!Number.isInteger(next) || isNaN(next)) return null;
+    out.push(next);
+    cur = next;
+    val += step;
+  }
+  return out;
+}
+
+/** Fibonacci-ähnlich: Nächste Zahl = f(vorletzte, letzte).
+ * Standard: a_n = a_{n-1} + a_{n-2}
+ * Variante: a_n = a_{n-1} + a_{n-2} + offset
+ */
+function buildFibonacci(
+  a: number,
+  b: number,
+  length: number,
+  offset = 0,
+  multiplier = 1
+): number[] | null {
+  const out: number[] = [a, b];
+  for (let i = 2; i < length; i++) {
+    const next = out[i - 1] * multiplier + out[i - 2] + offset;
+    if (!Number.isInteger(next) || isNaN(next)) return null;
+    if (Math.abs(next) > 100000) return null;
+    out.push(next);
+  }
+  return out;
+}
+
+// ─── Interleaved Operator-Pools ───
+
+function pickInterleavedOps(
+  difficulty: DifficultyLevel,
+  rand: () => number
+): {
+  startA: number;
+  startB: number;
+  opA: { type: OpType; value: number };
+  opB: { type: OpType; value: number };
+  ruleLabel: string;
+} {
+  const configs =
+    difficulty === "easy"
+      ? [
+          {
+            sA: 1,
+            sB: 2,
+            oA: { type: "+" as OpType, value: 2 },
+            oB: { type: "+" as OpType, value: 3 },
+          },
+          {
+            sA: 3,
+            sB: 5,
+            oA: { type: "+" as OpType, value: 3 },
+            oB: { type: "+" as OpType, value: 5 },
+          },
+          {
+            sA: 2,
+            sB: 10,
+            oA: { type: "×" as OpType, value: 2 },
+            oB: { type: "+" as OpType, value: 10 },
+          },
+          {
+            sA: 1,
+            sB: 100,
+            oA: { type: "+" as OpType, value: 1 },
+            oB: { type: "−" as OpType, value: 10 },
+          },
+        ]
+      : difficulty === "medium"
+        ? [
+            {
+              sA: 2,
+              sB: 3,
+              oA: { type: "×" as OpType, value: 2 },
+              oB: { type: "×" as OpType, value: 3 },
+            },
+            {
+              sA: 1,
+              sB: 100,
+              oA: { type: "×" as OpType, value: 3 },
+              oB: { type: "−" as OpType, value: 15 },
+            },
+            {
+              sA: 5,
+              sB: 2,
+              oA: { type: "+" as OpType, value: 5 },
+              oB: { type: "×" as OpType, value: 2 },
+            },
+            {
+              sA: 100,
+              sB: 1,
+              oA: { type: "÷" as OpType, value: 2 },
+              oB: { type: "×" as OpType, value: 2 },
+            },
+            {
+              sA: 3,
+              sB: 7,
+              oA: { type: "×" as OpType, value: 2 },
+              oB: { type: "+" as OpType, value: 7 },
+            },
+            {
+              sA: 10,
+              sB: 5,
+              oA: { type: "+" as OpType, value: 10 },
+              oB: { type: "×" as OpType, value: 3 },
+            },
+          ]
+        : [
+            {
+              sA: 2,
+              sB: 1000,
+              oA: { type: "×" as OpType, value: 3 },
+              oB: { type: "÷" as OpType, value: 2 },
+            },
+            {
+              sA: 1,
+              sB: 2,
+              oA: { type: "×" as OpType, value: 2 },
+              oB: { type: "×" as OpType, value: 3 },
+            },
+            {
+              sA: 100,
+              sB: 3,
+              oA: { type: "−" as OpType, value: 7 },
+              oB: { type: "×" as OpType, value: 2 },
+            },
+            {
+              sA: 5,
+              sB: 500,
+              oA: { type: "×" as OpType, value: 3 },
+              oB: { type: "÷" as OpType, value: 5 },
+            },
+            {
+              sA: 4,
+              sB: 7,
+              oA: { type: "×" as OpType, value: 2 },
+              oB: { type: "+" as OpType, value: 11 },
+            },
+          ];
+
+  const c = configs[Math.floor(rand() * configs.length)];
+  const opALabel = `${OP_LABELS[c.oA.type]}${c.oA.value}`;
+  const opBLabel = `${OP_LABELS[c.oB.type]}${c.oB.value}`;
+  return {
+    startA: c.sA,
+    startB: c.sB,
+    opA: c.oA,
+    opB: c.oB,
+    ruleLabel: `Verschachtelt: Pos 1,3,5,… ${opALabel}; Pos 2,4,6,… ${opBLabel}`,
+  };
+}
+
+// ─── Growing-diff Operator-Pools ───
+
+function pickGrowingDiff(
+  difficulty: DifficultyLevel,
+  rand: () => number
+): { start: number; baseOp: OpType; initial: number; step: number; ruleLabel: string } {
+  const configs =
+    difficulty === "easy"
+      ? [
+          { start: 1, baseOp: "+" as OpType, initial: 1, step: 1 }, // +1,+2,+3,+4
+          { start: 2, baseOp: "+" as OpType, initial: 2, step: 2 }, // +2,+4,+6,+8
+          { start: 100, baseOp: "−" as OpType, initial: 1, step: 1 }, // -1,-2,-3,-4
+        ]
+      : difficulty === "medium"
+        ? [
+            { start: 1, baseOp: "+" as OpType, initial: 3, step: 2 }, // +3,+5,+7,+9
+            { start: 2, baseOp: "×" as OpType, initial: 1, step: 1 }, // ×1,×2,×3,×4
+            { start: 1, baseOp: "+" as OpType, initial: 1, step: 2 }, // +1,+3,+5,+7
+            { start: 5, baseOp: "+" as OpType, initial: 2, step: 3 }, // +2,+5,+8,+11
+            { start: 3, baseOp: "+" as OpType, initial: 4, step: 4 }, // +4,+8,+12,+16
+          ]
+        : [
+            { start: 1, baseOp: "×" as OpType, initial: 2, step: 1 }, // ×2,×3,×4,×5
+            { start: 2, baseOp: "+" as OpType, initial: 1, step: 3 }, // +1,+4,+7,+10
+            { start: 1000, baseOp: "−" as OpType, initial: 10, step: 10 }, // -10,-20,-30
+            { start: 3, baseOp: "+" as OpType, initial: 5, step: 5 }, // +5,+10,+15,+20
+            // Schrumpfende Differenzen (velumed-Stil: -72,-66,-60,-54)
+            { start: 500, baseOp: "−" as OpType, initial: 72, step: -6 }, // -72,-66,-60,-54
+            { start: 400, baseOp: "−" as OpType, initial: 50, step: -5 }, // -50,-45,-40,-35
+          ];
+
+  const c = configs[Math.floor(rand() * configs.length)];
+  const opLabel = OP_LABELS[c.baseOp];
+  return {
+    ...c,
+    ruleLabel: `Wachsende Differenz: ${opLabel}${c.initial}, ${opLabel}${c.initial + c.step}, ${opLabel}${c.initial + 2 * c.step}, …`,
+  };
+}
+
+// ─── Fibonacci Pools ───
+
+function pickFibonacci(
+  difficulty: DifficultyLevel,
+  rand: () => number
+): { a: number; b: number; offset: number; multiplier: number; ruleLabel: string } {
+  const configs =
+    difficulty === "easy"
+      ? [
+          {
+            a: 1,
+            b: 1,
+            offset: 0,
+            multiplier: 1,
+            ruleLabel: "Fibonacci: nächste = vorherige + vorvorherige",
+          },
+          {
+            a: 2,
+            b: 2,
+            offset: 0,
+            multiplier: 1,
+            ruleLabel: "Fibonacci: nächste = vorherige + vorvorherige",
+          },
+          {
+            a: 1,
+            b: 3,
+            offset: 0,
+            multiplier: 1,
+            ruleLabel: "Fibonacci: nächste = vorherige + vorvorherige",
+          },
+        ]
+      : difficulty === "medium"
+        ? [
+            {
+              a: 1,
+              b: 1,
+              offset: 1,
+              multiplier: 1,
+              ruleLabel: "Fibonacci + 1: nächste = vorherige + vorvorherige + 1",
+            },
+            {
+              a: 2,
+              b: 3,
+              offset: 0,
+              multiplier: 1,
+              ruleLabel: "Fibonacci: nächste = vorherige + vorvorherige",
+            },
+            {
+              a: 1,
+              b: 2,
+              offset: 0,
+              multiplier: 2,
+              ruleLabel: "Fibonacci ×2: nächste = 2 × vorherige + vorvorherige",
+            },
+          ]
+        : [
+            {
+              a: 1,
+              b: 1,
+              offset: 0,
+              multiplier: 2,
+              ruleLabel: "Fibonacci ×2: nächste = 2 × vorherige + vorvorherige",
+            },
+            {
+              a: 2,
+              b: 3,
+              offset: 2,
+              multiplier: 1,
+              ruleLabel: "Fibonacci + 2: nächste = vorherige + vorvorherige + 2",
+            },
+            {
+              a: 1,
+              b: 2,
+              offset: -1,
+              multiplier: 2,
+              ruleLabel: "nächste = 2 × vorherige + vorvorherige − 1",
+            },
+          ];
+
+  return configs[Math.floor(rand() * configs.length)];
+}
+
+// ─── Welchen Pattern-Typ wählen? ───
+
+function pickPatternType(difficulty: DifficultyLevel, rand: () => number): PatternType {
+  const r = rand();
+  if (difficulty === "easy") {
+    // 60% periodic, 20% growing-diff, 10% interleaved, 10% fibonacci
+    if (r < 0.6) return "periodic";
+    if (r < 0.8) return "growing-diff";
+    if (r < 0.9) return "interleaved";
+    return "fibonacci";
+  }
+  if (difficulty === "medium") {
+    // 40% periodic, 20% interleaved, 20% growing-diff, 20% fibonacci
+    if (r < 0.4) return "periodic";
+    if (r < 0.6) return "interleaved";
+    if (r < 0.8) return "growing-diff";
+    return "fibonacci";
+  }
+  // hard: 30% periodic, 25% interleaved, 25% growing-diff, 20% fibonacci
+  if (r < 0.3) return "periodic";
+  if (r < 0.55) return "interleaved";
+  if (r < 0.8) return "growing-diff";
+  return "fibonacci";
+}
+
+/** Prüft ob eine Folge sinnvolle Werte hat (keine zu großen Zahlen, alle ganzzahlig). */
+function isReasonableSequence(seq: number[]): boolean {
+  return seq.every((n) => Number.isInteger(n) && !isNaN(n) && Math.abs(n) <= 100000);
+}
+
 /** Generiert eine MedAT-Zahlenfolgen-Aufgabe. Validiert vor Return; bei Fehlschlag Retry mit anderem Seed. */
-const MAX_SEQUENCE_VALIDATE_RETRIES = 5;
+const MAX_SEQUENCE_VALIDATE_RETRIES = 10;
 
 export function generateSequenceTask(difficulty: DifficultyLevel, seed: number): SequenceTask {
   for (let retry = 0; retry < MAX_SEQUENCE_VALIDATE_RETRIES; retry++) {
@@ -517,6 +928,152 @@ export function generateSequenceTask(difficulty: DifficultyLevel, seed: number):
 
 function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): SequenceTask {
   const rand = seedRng(seed);
+  const patternType = pickPatternType(difficulty, rand);
+
+  if (patternType === "interleaved") {
+    return generateInterleavedTask(difficulty, rand);
+  }
+  if (patternType === "growing-diff") {
+    return generateGrowingDiffTask(difficulty, rand);
+  }
+  if (patternType === "fibonacci") {
+    return generateFibonacciTask(difficulty, rand);
+  }
+  return generatePeriodicTask(difficulty, rand);
+}
+
+/** Generiert Distraktoren und baut SequenceTask aus visible + correctNext. */
+function buildTaskFromSequence(
+  visible: number[],
+  correctNext: [number, number],
+  ruleLabel: string,
+  difficulty: DifficultyLevel,
+  rand: () => number,
+  explanation: string
+): SequenceTask {
+  // Generate 3 unique distractors
+  const distractors: [number, number][] = [];
+  const offsets = [1, -1, 2, -2, 3, -3, 4, -4, 5, -5];
+  for (const off of offsets) {
+    distractors.push([correctNext[0] + off, correctNext[1]]);
+    distractors.push([correctNext[0], correctNext[1] + off]);
+    distractors.push([correctNext[0] + off, correctNext[1] - off]);
+    if (distractors.length >= 12) break;
+  }
+  const unique = distinctPairs(correctNext, distractors).slice(0, 3);
+  // Pad if needed
+  while (unique.length < 3) {
+    const off = Math.floor(rand() * 10) + 1;
+    unique.push([correctNext[0] + off, correctNext[1] - off]);
+  }
+
+  const optionKeys: ("A" | "B" | "C" | "D")[] = ["A", "B", "C", "D"];
+  const correctPos = Math.floor(rand() * 4);
+  const correctKey = optionKeys[correctPos];
+  const optionsArr: { key: "A" | "B" | "C" | "D"; value: [number, number] }[] = [];
+  let idx = 0;
+  for (let i = 0; i < 4; i++) {
+    if (i === correctPos) {
+      optionsArr.push({ key: optionKeys[i], value: correctNext });
+    } else {
+      optionsArr.push({ key: optionKeys[i], value: unique[idx++] ?? correctNext });
+    }
+  }
+  const options: SequenceTask["options"] = [
+    ...optionsArr.map((o) => ({ key: o.key, value: o.value })),
+    { key: "E", text: "Keine der Antwortmöglichkeiten ist richtig" },
+  ];
+
+  return {
+    id: `zf-medat-${Math.floor(rand() * 1e9)}-${Date.now()}`,
+    sequence: [...visible, "?", "?"],
+    correctNext,
+    options,
+    correctOptionId: correctKey,
+    rule: ruleLabel,
+    explanation,
+    difficulty,
+  };
+}
+
+function generateInterleavedTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
+  const cfg = pickInterleavedOps(difficulty, rand);
+  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  const fullSeq = buildInterleaved(cfg.startA, cfg.startB, cfg.opA, cfg.opB, totalLen);
+  if (!fullSeq || !isReasonableSequence(fullSeq)) {
+    // Fallback to periodic
+    return generatePeriodicTask(difficulty, rand);
+  }
+  const visLen = totalLen - 2;
+  const visible = fullSeq.slice(0, visLen);
+  const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
+
+  return buildTaskFromSequence(
+    visible,
+    correctNext,
+    cfg.ruleLabel,
+    difficulty,
+    rand,
+    `Verschachtelte Folge: Ungerade Positionen (${visible.filter((_, i) => i % 2 === 0).join(", ")}) folgen der Regel ${OP_LABELS[cfg.opA.type]}${cfg.opA.value}. ` +
+      `Gerade Positionen (${visible.filter((_, i) => i % 2 === 1).join(", ")}) folgen der Regel ${OP_LABELS[cfg.opB.type]}${cfg.opB.value}.\n` +
+      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+  );
+}
+
+function generateGrowingDiffTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
+  const cfg = pickGrowingDiff(difficulty, rand);
+  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  const fullSeq = buildGrowingDiff(cfg.start, cfg.baseOp, cfg.initial, cfg.step, totalLen);
+  if (!fullSeq || !isReasonableSequence(fullSeq)) {
+    return generatePeriodicTask(difficulty, rand);
+  }
+  const visLen = totalLen - 2;
+  const visible = fullSeq.slice(0, visLen);
+  const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
+
+  const diffs: string[] = [];
+  for (let i = 0; i < Math.min(4, visLen - 1); i++) {
+    const val = cfg.initial + i * cfg.step;
+    diffs.push(`${OP_LABELS[cfg.baseOp]}${val}`);
+  }
+
+  return buildTaskFromSequence(
+    visible,
+    correctNext,
+    cfg.ruleLabel,
+    difficulty,
+    rand,
+    `Differenzen wachsen: ${diffs.join(", ")}, …\n` +
+      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+  );
+}
+
+function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
+  const cfg = pickFibonacci(difficulty, rand);
+  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  const fullSeq = buildFibonacci(cfg.a, cfg.b, totalLen, cfg.offset, cfg.multiplier);
+  if (!fullSeq || !isReasonableSequence(fullSeq)) {
+    return generatePeriodicTask(difficulty, rand);
+  }
+  const visLen = totalLen - 2;
+  const visible = fullSeq.slice(0, visLen);
+  const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
+
+  return buildTaskFromSequence(
+    visible,
+    correctNext,
+    cfg.ruleLabel,
+    difficulty,
+    rand,
+    `${cfg.ruleLabel}.\n` +
+      `Beispiel: ${visible[visible.length - 2]} und ${visible[visible.length - 1]} → ` +
+      `${cfg.multiplier !== 1 ? `${cfg.multiplier} × ${visible[visible.length - 1]} + ` : `${visible[visible.length - 1]} + `}` +
+      `${visible[visible.length - 2]}${cfg.offset !== 0 ? ` ${cfg.offset > 0 ? "+" : ""}${cfg.offset}` : ""} = ${correctNext[0]}.\n` +
+      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+  );
+}
+
+function generatePeriodicTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
   const ops = pickOps(difficulty, rand);
   const lengthVisible =
     difficulty === "easy"
@@ -526,9 +1083,35 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
         : 8 + Math.floor(rand() * 2);
   const start = pickStart(ops, lengthVisible + 2, rand, difficulty);
   const fullSeq = buildSequence(start, ops, lengthVisible + 2);
+
+  // Validate all values are integers (NaN from division = invalid)
+  if (!isReasonableSequence(fullSeq)) {
+    // Retry with different ops
+    const fallbackOps = [{ type: "+" as OpType, value: Math.floor(rand() * 10) + 2 }];
+    const fallbackStart = Math.floor(rand() * 20) + 3;
+    const fallbackSeq = buildSequence(fallbackStart, fallbackOps, lengthVisible + 2);
+    const vis = fallbackSeq.slice(0, lengthVisible);
+    const cn: [number, number] = [fallbackSeq[lengthVisible], fallbackSeq[lengthVisible + 1]];
+    const ruleLabel = `${formatOps(fallbackOps)} (durchgehend)`;
+    const task = buildTaskFromSequence(
+      vis,
+      cn,
+      ruleLabel,
+      difficulty,
+      rand,
+      buildExplanation(vis, fallbackOps, cn)
+    );
+    task.ops = fallbackOps;
+    return task;
+  }
+
   const visible = fullSeq.slice(0, lengthVisible);
   const correctNext: [number, number] = [fullSeq[lengthVisible], fullSeq[lengthVisible + 1]];
+  const ruleLabel =
+    ops.length === 1 ? `${formatOps(ops)} (durchgehend)` : `${formatOps(ops)} (wiederholend)`;
+  const explanation = buildExplanation(visible, ops, correctNext);
 
+  // Use specialized distractors for periodic tasks
   const distractors: [number, number][] = [];
   distractors.push(distractorFirstRight(correctNext, ops, rand));
   distractors.push(distractorWrongOp(correctNext, rand));
@@ -544,29 +1127,23 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
   const optionKeys: ("A" | "B" | "C" | "D")[] = ["A", "B", "C", "D"];
   const correctPos = Math.floor(rand() * 4);
   const correctKey = optionKeys[correctPos];
-  const optionsWithCorrect: { key: "A" | "B" | "C" | "D"; value: [number, number] }[] = [];
+  const optionsArr: { key: "A" | "B" | "C" | "D"; value: [number, number] }[] = [];
   let idx = 0;
   for (let i = 0; i < 4; i++) {
     if (i === correctPos) {
-      optionsWithCorrect.push({ key: optionKeys[i], value: correctNext });
+      optionsArr.push({ key: optionKeys[i], value: correctNext });
     } else {
-      optionsWithCorrect.push({ key: optionKeys[i], value: three[idx++] ?? correctNext });
+      optionsArr.push({ key: optionKeys[i], value: three[idx++] ?? correctNext });
     }
   }
   const options: SequenceTask["options"] = [
-    ...optionsWithCorrect.map((o) => ({ key: o.key, value: o.value })),
+    ...optionsArr.map((o) => ({ key: o.key, value: o.value })),
     { key: "E", text: "Keine der Antwortmöglichkeiten ist richtig" },
   ];
 
-  const ruleLabel =
-    ops.length === 1 ? `${formatOps(ops)} (durchgehend)` : `${formatOps(ops)} (wiederholend)`;
-
-  const sequenceDisplay: (number | "?")[] = [...visible, "?", "?"];
-  const explanation = buildExplanation(visible, ops, correctNext);
-
   return {
-    id: `zf-medat-${seed}-${Date.now()}`,
-    sequence: sequenceDisplay,
+    id: `zf-medat-${Math.floor(rand() * 1e9)}-${Date.now()}`,
+    sequence: [...visible, "?", "?"],
     correctNext,
     options,
     correctOptionId: correctKey,

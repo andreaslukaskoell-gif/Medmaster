@@ -36,6 +36,9 @@ dist-ssr
 .claude/package.json
 .claude/settings.json
 
+# Remotion temp data
+video/.data/
+
 # Planning artifacts
 .planning/
 
