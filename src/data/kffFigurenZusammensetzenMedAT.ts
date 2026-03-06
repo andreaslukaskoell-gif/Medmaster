@@ -1490,11 +1490,217 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
   return null;
 }
 
+// =============================================================================
+// COMPLEX CUT SYSTEM – Zickzack, Stufen, Kerben (wie im echten MedAT IB FZ 26)
+// =============================================================================
+// Im offiziellen IB sind Schnitte oft NICHT gerade: Zickzack, Treppenformen,
+// Einbuchtungen/Kerben erzeugen konkave Stücke – ein Kernaspekt der Schwierigkeit.
+
+type CutStyle = "straight" | "zigzag" | "step" | "notch";
+
+/** Erzeugt Zwischenpunkte entlang einer geraden Schnittlinie als Zickzack. */
+function zigzagPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  const len = Math.hypot(dx, dy);
+  if (len < 10) return [p1, p2];
+
+  // Normal vector (perpendicular to cut direction)
+  const nx = -dy / len;
+  const ny = dx / len;
+
+  const numZigs = 2 + Math.floor(rng() * 2); // 2-3 zigzags
+  const amplitude = len * (0.06 + rng() * 0.08); // 6-14% of cut length
+  const points: Pt2[] = [p1];
+
+  for (let i = 1; i <= numZigs * 2; i++) {
+    const t = i / (numZigs * 2 + 1);
+    const side = i % 2 === 1 ? 1 : -1;
+    points.push({
+      x: rd(p1.x + t * dx + side * amplitude * nx),
+      y: rd(p1.y + t * dy + side * amplitude * ny),
+    });
+  }
+  points.push(p2);
+  return points;
+}
+
+/** Erzeugt Zwischenpunkte als Treppenform (rechtwinklige Stufen). */
+function stepPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  const len = Math.hypot(dx, dy);
+  if (len < 10) return [p1, p2];
+
+  const nx = -dy / len;
+  const ny = dx / len;
+
+  const numSteps = 1 + Math.floor(rng() * 2); // 1-2 steps
+  const stepDepth = len * (0.08 + rng() * 0.1); // 8-18% of cut length
+  const points: Pt2[] = [p1];
+
+  for (let i = 0; i < numSteps; i++) {
+    const t1 = (i + 0.3 + rng() * 0.15) / (numSteps + 1);
+    const t2 = (i + 0.55 + rng() * 0.15) / (numSteps + 1);
+    const side = i % 2 === 0 ? 1 : -1;
+    // Step out perpendicular
+    points.push({
+      x: rd(p1.x + t1 * dx),
+      y: rd(p1.y + t1 * dy),
+    });
+    points.push({
+      x: rd(p1.x + t1 * dx + side * stepDepth * nx),
+      y: rd(p1.y + t1 * dy + side * stepDepth * ny),
+    });
+    points.push({
+      x: rd(p1.x + t2 * dx + side * stepDepth * nx),
+      y: rd(p1.y + t2 * dy + side * stepDepth * ny),
+    });
+    points.push({
+      x: rd(p1.x + t2 * dx),
+      y: rd(p1.y + t2 * dy),
+    });
+  }
+  points.push(p2);
+  return points;
+}
+
+/** Erzeugt eine Kerbe (Notch) – eine einzelne Einbuchtung in der Schnittlinie. */
+function notchPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  const len = Math.hypot(dx, dy);
+  if (len < 10) return [p1, p2];
+
+  const nx = -dy / len;
+  const ny = dx / len;
+
+  const notchPos = 0.3 + rng() * 0.4; // 30-70% along the cut
+  const notchWidth = 0.08 + rng() * 0.06; // 8-14% of cut length (as fraction)
+  const notchDepth = len * (0.1 + rng() * 0.1); // 10-20% of cut length
+  const side = rng() > 0.5 ? 1 : -1;
+
+  const t1 = notchPos - notchWidth;
+  const t2 = notchPos + notchWidth;
+
+  return [
+    p1,
+    { x: rd(p1.x + t1 * dx), y: rd(p1.y + t1 * dy) },
+    {
+      x: rd(p1.x + t1 * dx + side * notchDepth * nx),
+      y: rd(p1.y + t1 * dy + side * notchDepth * ny),
+    },
+    {
+      x: rd(p1.x + t2 * dx + side * notchDepth * nx),
+      y: rd(p1.y + t2 * dy + side * notchDepth * ny),
+    },
+    { x: rd(p1.x + t2 * dx), y: rd(p1.y + t2 * dy) },
+    p2,
+  ];
+}
+
+/** Wählt einen Schnittstil basierend auf Schwierigkeit. Easy = gerade, Medium/Hard = komplex. */
+function pickCutStyle(difficulty: FZDifficulty, rng: () => number): CutStyle {
+  if (difficulty === "easy") return "straight";
+  const r = rng();
+  if (difficulty === "medium") {
+    // 40% straight, 25% zigzag, 20% step, 15% notch
+    if (r < 0.4) return "straight";
+    if (r < 0.65) return "zigzag";
+    if (r < 0.85) return "step";
+    return "notch";
+  }
+  // hard: 15% straight, 30% zigzag, 30% step, 25% notch
+  if (r < 0.15) return "straight";
+  if (r < 0.45) return "zigzag";
+  if (r < 0.75) return "step";
+  return "notch";
+}
+
+/** Erzeugt eine Polyline zwischen zwei Punkten basierend auf dem Schnittstil. */
+function complexCutPath(p1: Pt2, p2: Pt2, style: CutStyle, rng: () => number): Pt2[] {
+  switch (style) {
+    case "zigzag":
+      return zigzagPath(p1, p2, rng);
+    case "step":
+      return stepPath(p1, p2, rng);
+    case "notch":
+      return notchPath(p1, p2, rng);
+    default:
+      return [p1, p2];
+  }
+}
+
+/**
+ * Teilt ein Polygon entlang einer Polyline (mehrere Punkte).
+ * Die Polyline muss von einer Kante zu einer anderen gehen (Start/Ende auf Kanten).
+ * Erzeugt zwei Sub-Polygone, eines auf jeder Seite.
+ */
+function splitPolygonByPolyline(poly: Polygon, cutPoints: Pt2[]): [Polygon, Polygon] | null {
+  if (cutPoints.length < 2) return null;
+  // For just 2 points, use the existing straight-line splitter
+  if (cutPoints.length === 2) {
+    return splitPolygonByLine(poly, cutPoints[0], cutPoints[1]);
+  }
+
+  const pts = poly.points;
+  const n = pts.length;
+  const startPt = cutPoints[0];
+  const endPt = cutPoints[cutPoints.length - 1];
+
+  // Find which edges the start and end points lie on
+  let startEdge = -1;
+  let endEdge = -1;
+  const tolerance = 1.0;
+
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    if (pointOnSegment(startPt, pts[i], pts[j], tolerance) && startEdge < 0) startEdge = i;
+    if (pointOnSegment(endPt, pts[i], pts[j], tolerance) && endEdge < 0) endEdge = i;
+  }
+
+  if (startEdge < 0 || endEdge < 0 || startEdge === endEdge) return null;
+
+  // Build side A: walk from startPt along polygon edges to endPt, then back via cut polyline (reversed)
+  const sideA: Pt2[] = [startPt];
+  let i = (startEdge + 1) % n;
+  const endNext = (endEdge + 1) % n;
+  let safety = 0;
+  while (i !== endNext && safety++ < n + 2) {
+    sideA.push({ ...pts[i] });
+    i = (i + 1) % n;
+  }
+  sideA.push(endPt);
+  // Add reversed cut polyline (without first and last which are already added)
+  for (let k = cutPoints.length - 2; k >= 1; k--) {
+    sideA.push(cutPoints[k]);
+  }
+
+  // Build side B: walk from endPt along polygon edges to startPt, then forward via cut polyline
+  const sideB: Pt2[] = [endPt];
+  i = (endEdge + 1) % n;
+  const startNext = (startEdge + 1) % n;
+  safety = 0;
+  while (i !== startNext && safety++ < n + 2) {
+    sideB.push({ ...pts[i] });
+    i = (i + 1) % n;
+  }
+  sideB.push(startPt);
+  // Add forward cut polyline (without first and last)
+  for (let k = 1; k < cutPoints.length - 1; k++) {
+    sideB.push(cutPoints[k]);
+  }
+
+  if (sideA.length < 3 || sideB.length < 3) return null;
+  return [{ points: sideA }, { points: sideB }];
+}
+
 /** Mehrere asymmetrische Schnitte nacheinander: Immer das größte Stück schneiden. */
 function applyAsymmetricCuts(
   target: Polygon,
   numCuts: number,
-  rng: () => number
+  rng: () => number,
+  difficulty: FZDifficulty = "easy"
 ): Polygon[] | null {
   const pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
   const targetArea = polygonArea(target);
@@ -1515,7 +1721,18 @@ function applyAsymmetricCuts(
     const cutLine = generateAsymmetricCut(largest, rng);
     if (!cutLine) return null;
 
-    const result = splitPolygonByLine(largest, cutLine[0], cutLine[1]);
+    // Choose cut style based on difficulty (medium/hard → zigzag/step/notch cuts)
+    const style = pickCutStyle(difficulty, rng);
+    const cutPath = complexCutPath(cutLine[0], cutLine[1], style, rng);
+
+    // Try complex polyline split first, fallback to straight line
+    let result: [Polygon, Polygon] | null = null;
+    if (cutPath.length > 2) {
+      result = splitPolygonByPolyline(largest, cutPath);
+    }
+    if (!result) {
+      result = splitPolygonByLine(largest, cutLine[0], cutLine[1]);
+    }
     if (!result) continue; // skip this cut, try next
 
     const [a, b] = result;
@@ -1565,9 +1782,9 @@ export function cutPolygonStrategically(
   const shapeIndex = Math.floor(Math.abs(seed) % SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
-  // Try asymmetric cuts first (authentic look)
+  // Try asymmetric cuts first (authentic look, with complex cuts for medium/hard)
   const nCuts = numCutsForDifficulty(difficulty, rng);
-  const asymPieces = applyAsymmetricCuts(target, nCuts, rng);
+  const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
   if (asymPieces && asymPieces.length >= 2) {
     const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
     const targetArea = polygonArea(target);
@@ -1678,7 +1895,8 @@ function generateFigurenTrainingTaskFallback(
     solutionOverlay: computeSolutionOverlay(target, pieces),
   };
   if (validateFigurenTask(task)) return task;
-  if (OFFICIAL_FZ_EXAMPLES.length > 0) {
+  // OFFICIAL_FZ_EXAMPLES is empty (copyright removed), so no fallback here
+  if (false && OFFICIAL_FZ_EXAMPLES.length > 0) {
     const first = OFFICIAL_FZ_EXAMPLES[0];
     if (first && validateFigurenTask(first))
       return { ...first, id: `fz-train-fb-official-${seed}` };

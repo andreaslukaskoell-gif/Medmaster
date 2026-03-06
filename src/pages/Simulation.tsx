@@ -1961,7 +1961,7 @@ export default function Simulation() {
                 className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
               >
                 <svg viewBox="0 0 200 200" {...FIGURE_SVG_ASPECT_PROPS} className="w-full h-full">
-                  <path d={piece.path} fill={piece.fill} stroke="#374151" strokeWidth="1.2" />
+                  <path d={piece.path} fill={piece.fill} stroke="none" />
                 </svg>
               </div>
             ))}
@@ -1994,7 +1994,7 @@ export default function Simulation() {
                       className="w-full max-w-[72px] max-h-[72px] flex-1"
                     >
                       {opt.paths.map((p, pi) => (
-                        <path key={pi} d={p} fill={opt.fill} stroke="#374151" strokeWidth="1.2" />
+                        <path key={pi} d={p} fill={opt.fill} stroke="none" />
                       ))}
                     </svg>
                   )}

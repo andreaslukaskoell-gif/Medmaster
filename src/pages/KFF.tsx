@@ -2393,7 +2393,8 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
 // ==========================================
 
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
-const FILL_FZ = "#5eb8f0";
+/** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
+const FILL_FZ = "#7EC8E3";
 
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
@@ -2768,8 +2769,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                               key={pi}
                               d={p.d}
                               fill={FILL_FZ}
-                              stroke="#374151"
-                              strokeWidth="1.2"
+                              stroke="none"
                               transform={p.transform}
                             />
                           ))}
@@ -2980,14 +2980,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                     className="w-full max-w-md h-24 sm:h-28 mx-auto"
                   >
                     {paths.map((p, pi) => (
-                      <path
-                        key={pi}
-                        d={p.d}
-                        fill={FILL_FZ}
-                        stroke="#0e7490"
-                        strokeWidth="1.2"
-                        transform={p.transform}
-                      />
+                      <path key={pi} d={p.d} fill={FILL_FZ} stroke="none" transform={p.transform} />
                     ))}
                   </svg>
                 );
@@ -3026,12 +3019,7 @@ function FigurenQuiz({ onBack }: { onBack: () => void }) {
                       {...FIGURE_SVG_ASPECT_PROPS}
                       className="w-full max-w-[64px] max-h-[64px] flex-1"
                     >
-                      <path
-                        d={polygonToPathScaledToViewBox(opt)}
-                        fill={FILL_FZ}
-                        stroke="#0e7490"
-                        strokeWidth="1.2"
-                      />
+                      <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} stroke="none" />
                     </svg>
                   )}
                 </button>

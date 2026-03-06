@@ -58,8 +58,8 @@ export interface FZAufgabe {
 
 const PI = Math.PI;
 const TAU = 2 * PI;
-/** Einheitliche Figurenfarbe (hellblau, MedAT-ähnlich). Export für UI. */
-export const FILL = "#5eb8f0";
+/** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
+export const FILL = "#7EC8E3";
 function rd(n: number): number {
   return Math.round(n * 100) / 100;
 }
