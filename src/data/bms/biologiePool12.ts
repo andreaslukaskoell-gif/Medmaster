@@ -425,7 +425,7 @@ export const biologiePool12: Question[] = [
   q(
     "bio-pool-12-033",
     "bio-kap5",
-    "Was sind Destenten?",
+    "Was sind Destruenten?",
     [
       "Produzenten (autotrophe Organismen wie Pflanzen)",
       "Konsumenten (heterotrophe Organismen in der Nahrungskette)",
@@ -434,9 +434,9 @@ export const biologiePool12: Question[] = [
       "Pflanzenfresser (Herbivoren als Primärkonsumenten)",
     ],
     2,
-    "Destenten (Zersetzer) bauen tote organische Substanz ab und setzen Nährstoffe frei.",
+    "Destruenten (Zersetzer) bauen tote organische Substanz ab und setzen Nährstoffe frei.",
     "leicht",
-    ["Ökologie", "Destenten"]
+    ["Ökologie", "Destruenten"]
   ),
   q(
     "bio-pool-12-034",

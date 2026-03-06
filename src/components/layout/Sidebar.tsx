@@ -196,11 +196,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   const pathname = location.pathname;
   const search = location.search;
 
-  const openSections: Record<string, boolean> = {
-    lernen: true,
-    training: true,
-    fortschritt: true,
-  };
   const [openBmsSubject, setOpenBmsSubject] = useState<string | null>(null);
   const [bmsExpanded, setBmsExpanded] = useState(false);
 

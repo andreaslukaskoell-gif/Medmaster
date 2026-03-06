@@ -81,6 +81,10 @@ export function getSimulationShareText(section: string, score: number, total: nu
   return `📊 MedAT ${section}: ${score}/${total} (${pct}%)\nIch übe auf MedMaster — gratis MedAT-Vorbereitung!\n👉 ${SITE_URL}`;
 }
 
+export function getReferralShareText(): string {
+  return `Hey! Ich lerne für den MedAT mit MedMaster — komplett gratis bis Ende März. 4.300+ Fragen, alle 4 Bereiche. Probier's aus:\n👉 ${SITE_URL}`;
+}
+
 export function getPrognoseShareText(scorePct: number, bestUni: string | null): string {
   const rounded = Math.round(scorePct);
   const uni = bestUni ? `\n🎯 ${bestUni}: Gute Chancen!` : "";

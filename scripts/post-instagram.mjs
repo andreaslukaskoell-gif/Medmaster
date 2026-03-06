@@ -17,10 +17,24 @@
  * Images must be deployed at medmaster.at/marketing/ first.
  */
 
-const PAGE_TOKEN = process.env.IG_PAGE_TOKEN;
 const IG_USER_ID = "17841446757059213";
+const FB_PAGE_ID = "990798194122764";
 const BASE_URL = "https://medmaster.at/marketing";
 const API = "https://graph.facebook.com/v21.0";
+
+// Auto-refresh: use user token to get fresh page token each time
+async function getPageToken() {
+  const userToken = process.env.IG_PAGE_TOKEN;
+  if (!userToken) return null;
+  try {
+    const res = await fetch(`${API}/${FB_PAGE_ID}?fields=access_token&access_token=${userToken}`);
+    const json = await res.json();
+    if (json.access_token) return json.access_token;
+  } catch {}
+  return userToken; // fallback to original token
+}
+
+let PAGE_TOKEN;
 
 const POSTS = [
   {
@@ -74,16 +88,38 @@ const SUBJECT_EMOJI = {
   Mathematik: "📐",
 };
 
+const HOOKS = [
+  "Diese Frage kommt JEDES JAHR beim MedAT 👇",
+  "80% beantworten diese Frage falsch 👇",
+  "Kannst du diese MedAT-Frage in 30 Sek lösen? 👇",
+  "MedAT-Falle: Die meisten tippen falsch 👇",
+  "Schaffst du diese BMS-Frage ohne nachzudenken? 👇",
+  "Wenn du das weißt, bist du bereit für den MedAT 👇",
+  "Die Antwort überrascht die meisten 👇",
+];
+
+const HASHTAG_SETS = [
+  "#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien",
+  "#MedAT #Aufnahmeprüfung #Medizin #MedAT2026 #Lerntipps",
+  "#MedAT2026 #StudierenInÖsterreich #BMS #Medizinstudium #MedUniGraz",
+  "#MedAT #Prüfungsvorbereitung #Medizin #BMS #MedUniInnsbruck",
+];
+
 function buildCaption(post) {
   const emoji = SUBJECT_EMOJI[post.subject];
+  const hook = HOOKS[post.day % HOOKS.length];
+  const hashtags = HASHTAG_SETS[post.day % HASHTAG_SETS.length];
   return [
-    `${emoji} MedAT-Frage: ${post.question}`,
+    hook,
     "",
-    "Stimm ab: A–D in der Umfrage!",
-    "Deine Antwort ist E? → Schreib\u2019s in die Kommentare! 💬",
+    `${emoji} ${post.question}`,
     "",
-    "🔗 Kostenlos üben: medmaster.at",
-    `#MedAT #MedAT2026 #${post.subject} #Medizinstudium #BMS`,
+    "Kommentiere deinen Buchstaben! 💬",
+    "Auflösung morgen in der Story 🔓",
+    "",
+    "📱 Bis Ende März komplett gratis → medmaster.at",
+    "",
+    hashtags,
   ].join("\n");
 }
 
@@ -149,6 +185,7 @@ async function main() {
   const dayIdx = args.indexOf("--day");
   const dayArg = dayIdx >= 0 ? args[dayIdx + 1] : null;
 
+  PAGE_TOKEN = await getPageToken();
   if (!PAGE_TOKEN) {
     console.error("❌ Set IG_PAGE_TOKEN environment variable first!");
     console.error('   export IG_PAGE_TOKEN="EAAU..."');

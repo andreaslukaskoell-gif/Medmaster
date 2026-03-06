@@ -113,8 +113,6 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
     setRevealed(true);
   };
 
-  const sequenceDisplay = task.sequence.map((v) => (v === "?" ? "?" : String(v))).join("  ");
-
   return (
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
       <div className="p-5 sm:p-6">

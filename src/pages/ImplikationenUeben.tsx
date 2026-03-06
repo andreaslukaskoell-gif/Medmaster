@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
 import { filterValidImplikationTasks } from "@/data/kffValidation";
-import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
   1: {

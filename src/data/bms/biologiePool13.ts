@@ -334,7 +334,7 @@ export const biologiePool13: Question[] = [
       "Nährstoffe werden recycelt",
       "Produzenten stehen am Anfang",
       "Energie wird vollständig recycelt",
-      "Destenten bauen ab",
+      "Destruenten bauen ab",
     ],
     3,
     "Energie wird nicht recycelt; sie fließt ein und geht als Wärme verloren (D falsch).",

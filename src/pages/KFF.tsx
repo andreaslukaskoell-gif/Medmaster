@@ -28,13 +28,12 @@ import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import {
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
-  generateAllWordFluencyTasksFromLexicon,
   generateImplicationTrainingTask,
   generateWordFluencyTask,
 } from "@/data/kffGenerators";
 import { type AllergyPass, type GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
-import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
+
 import { type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { WF_TRAINING_POOL_1000 } from "@/data/kffWortfluessigkeit1000";
 import { generateSequenceTaskSet, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
@@ -2289,7 +2288,6 @@ function WortflüssigkeitQuiz({ onBack }: { onBack: () => void }) {
   }
 
   const taskId = currentQ.id ?? "";
-  const lettersStr = currentQ.letters.join(" ");
   const isOfficial = !!currentQ.source || (currentQ.id?.startsWith("wf-off-") ?? false);
 
   return (
@@ -2399,7 +2397,7 @@ const FILL_FZ = "#5eb8f0";
 
 function FigurenQuiz({ onBack }: { onBack: () => void }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [mode, setMode] = useState<"official" | "training" | null>(null);
+  const [, setMode] = useState<"official" | "training" | null>(null);
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(10);
   const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);

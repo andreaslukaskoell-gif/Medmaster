@@ -526,7 +526,7 @@ export const fragenPart7 = [
     erklärung:
       "Homologe Organe haben einen gemeinsamen evolutionären Ursprung (z.B. Vordergliedmaßen von Säugetieren: Arm, Flügel, Flosse – unterschiedliche Funktion, gleicher Grundbauplan). Analoge Organe haben ähnliche Funktionen durch konvergente Evolution entwickelt, aber verschiedenen Ursprung (z.B. Vogelflügel und Insektenflügel).",
     strategieTipp:
-      "Homolog = gleicher Ursprung (Divergenz). Analog = gleiche Funktion, verschiedener Ursprung (Konvergenz). Beispiel: Fledermaus- und Vogelflügel = homolog zu anderen Säuger-/Vogel-Gliedmaßen, aber analog züinander in der Flugfunktion.",
+      "Homolog = gleicher Ursprung (Divergenz). Analog = gleiche Funktion, verschiedener Ursprung (Konvergenz). Beispiel: Fledermaus- und Vogelflügel = homolog zu anderen Säuger-/Vogel-Gliedmaßen, aber analog zueinander in der Flugfunktion.",
   },
   {
     id: "bio-q-330",
@@ -657,7 +657,7 @@ export const fragenPart7 = [
     ],
     korrekteAntwort: 1,
     erklärung:
-      '"Fittest" bedeutet nicht "der Stärkste" oder "Fitteste" im sportlichen Sinn, sondern "der am besten Angepasste" (engl. fit = passend). Es überleben und vermehren sich diejenigen Individün am erfolgreichsten, deren Merkmale am besten zu den aktüllen Umweltbedingungen passen. "Fitness" in der Evolutionsbiologie bedeutet Fortpflanzungserfolg.',
+      '"Fittest" bedeutet nicht "der Stärkste" oder "Fitteste" im sportlichen Sinn, sondern "der am besten Angepasste" (engl. fit = passend). Es überleben und vermehren sich diejenigen Individuen am erfolgreichsten, deren Merkmale am besten zu den aktuellen Umweltbedingungen passen. "Fitness" in der Evolutionsbiologie bedeutet Fortpflanzungserfolg.',
     strategieTipp:
       "Fittest = am besten angepasst, nicht am stärksten. Evolutionäre Fitness = Reproduktionserfolg (Anzahl überlebender Nachkommen).",
   },

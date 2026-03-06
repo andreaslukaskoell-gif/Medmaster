@@ -282,7 +282,7 @@ export const genetikChapter: Chapter = {
       content:
         "Das Blutgruppensystem ist ein klassisches Beispiel für Kodominanz und hat große klinische Bedeutung bei Bluttransfusionen und in der Schwangerschaftsmedizin.\n\n" +
         "**ABO-System (Karl Landsteiner, 1901):**\n" +
-        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant züinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
+        "Das ABO-System wird durch ein Gen auf Chromosom 9 bestimmt, das drei Allele besitzt: Iᴬ, Iᴮ und i. Iᴬ und Iᴮ sind kodominant zueinander (beide werden im heterozygoten Zustand exprimiert → Blutgruppe AB). Das Allel i ist rezessiv gegenüber Iᴬ und Iᴮ.\n\n" +
         "Die Allele codieren für Enzyme (Glykosyltransferasen), die bestimmte Zuckerreste an eine Grundstruktur (H-Antigen) auf der Oberfläche der Erythrozyten anfügen:\n" +
         "• Iᴬ → N-Acetylgalactosamin wird angehängt → Antigen A\n" +
         "• Iᴮ → Galactose wird angehängt → Antigen B\n" +

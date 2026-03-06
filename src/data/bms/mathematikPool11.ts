@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Mathematik BMS Pool 11 — 60 Fragen im MedAT-Stil (Typ A).
  * Stoff: mathe-kap1, mathe-kap2, mathe-kap5, mathe-kap6, mathe-kap7.

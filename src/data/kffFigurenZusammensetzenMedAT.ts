@@ -1496,7 +1496,7 @@ function applyAsymmetricCuts(
   numCuts: number,
   rng: () => number
 ): Polygon[] | null {
-  let pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
+  const pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
   const targetArea = polygonArea(target);
   const minPieceArea = targetArea * 0.05; // min 5% per piece
 
@@ -1705,6 +1705,7 @@ export function generateFigurenTrainingSet(
 // Offizielle Beispiele – Strukturen nach IB_FZ_26.pdf
 // Geometrie approximiert, Distraktoren nach offiziellem Muster (ähnliche Formen).
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const PENTAGON_PIECES_2: Polygon[] = (() => {
   const pts = PENTAGON.points;
   // Diagonale von Ecke 0 zu Ecke 2

@@ -32,7 +32,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
-import { shareText, getStreakShareText } from "@/lib/shareUtils";
+import { shareText, getStreakShareText, getReferralShareText } from "@/lib/shareUtils";
 import {
   getLevelFromXP,
   getLevelProgressPercent,
@@ -77,19 +77,12 @@ export default function Dashboard() {
   } = useStore();
   const activityLog = useStore((s) => s.activityLog);
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
-  const lastPath = useAdaptiveStore((s) => s.lastPath);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
   const dailyResult = useMemo(() => getTodaysResult(), []);
   // todayStr omitted: getTodaysResult uses current date internally
-  const {
-    dueCount: todayDueCount,
-    weaknessCount: todayWeaknessCount,
-    newCount: todayNewCount,
-    tasks: todayTasks,
-  } = useTodayEngine();
-  const hasTodayTasks = todayTasks.length > 0;
+  useTodayEngine();
   const hasActivityToday = lastActiveDate === todayStr;
   const [searchParams] = useSearchParams();
   const streakPreview = searchParams.get("streakPreview");
@@ -563,6 +556,11 @@ export default function Dashboard() {
               <Heatmap />
             </div>
           </motion.section>
+
+          {/* Freunde einladen */}
+          <motion.section variants={tileMotion} aria-label="Freunde einladen">
+            <ReferralCard />
+          </motion.section>
         </motion.div>
 
         {showSmartAdjust && (
@@ -600,6 +598,46 @@ export default function Dashboard() {
             </div>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+function ReferralCard() {
+  const [shared, setShared] = useState(false);
+  return (
+    <div className="rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[#e8ecf7] to-white dark:from-primary-950/30 dark:to-[var(--card)] p-5 shadow-sm">
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex-1">
+          <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
+            Teile MedMaster mit deinen Freunden — gemeinsam lernt es sich besser!
+          </p>
+        </div>
+        <div className="flex gap-2 shrink-0">
+          <button
+            type="button"
+            onClick={async () => {
+              await shareText(getReferralShareText(), "MedMaster empfehlen");
+              setShared(true);
+              setTimeout(() => setShared(false), 3000);
+            }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors"
+            style={{ backgroundColor: shared ? "#16a34a" : "#1b3ea7" }}
+          >
+            {shared ? (
+              <>
+                <CheckCircle2 className="w-4 h-4" />
+                Geteilt!
+              </>
+            ) : (
+              <>
+                <Share2 className="w-4 h-4" />
+                Teilen
+              </>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

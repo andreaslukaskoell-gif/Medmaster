@@ -421,7 +421,7 @@ export const biologiePool10: Question[] = [
   q(
     "bio-pool-10-029",
     "bio-kap5",
-    "Was beschreibt die „Karryotype“?",
+    "Was beschreibt die den „Karyotyp”?",
     [
       "Die Gesamtheit aller Gene einer Zelle (das Genom in Form von DNA)",
       "Die geordnete Darstellung der Chromosomen einer Zelle (Anzahl und Morphologie)",
@@ -503,16 +503,16 @@ export const biologiePool10: Question[] = [
     "bio-kap5",
     "Welche Aussage zum Ökosystem Wald trifft zu?",
     [
-      "Im Wald gibt es keine Destenten",
-      "Pilze können als Destenten wirken",
+      "Im Wald gibt es keine Destruenten",
+      "Pilze können als Destruenten wirken",
       "Alle Tiere sind Produzenten",
       "Es gibt keine Nahrungsketten",
       "Bakterien spielen keine Rolle beim Abbau",
     ],
     1,
-    "Destenten (Zersetzer) bauen totes organisches Material ab; dazu zählen Pilze, Bakterien und viele wirbellose Tiere.",
+    "Destruenten (Zersetzer) bauen totes organisches Material ab; dazu zählen Pilze, Bakterien und viele wirbellose Tiere.",
     "leicht",
-    ["Ökologie", "Destenten"]
+    ["Ökologie", "Destruenten"]
   ),
   q(
     "bio-pool-10-035",

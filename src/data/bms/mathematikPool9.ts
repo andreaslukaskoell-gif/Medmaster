@@ -556,7 +556,7 @@ export const mathematikPool9: Question[] = [
     "mathe-kap7",
     "Bei einem diagnostischen Test beträgt die Sensitivität 90 % und die Spezifität 80 %. Die Prävalenz der Erkrankung beträgt 10 %. Wie hoch ist der positive prädiktive Wert (PPV)?",
     ["31,0 %", "33,3 %", "38,1 %", "45,0 %", "50,0 %"],
-    2,
+    1,
     "PPV = (Sens·Prev) / (Sens·Prev + (1−Spez)·(1−Prev)) = (0,9·0,1)/(0,9·0,1 + 0,2·0,9) = 0,09/(0,09+0,18) = 0,09/0,27 ≈ 33,3 %.",
     "schwer",
     ["PPV", "Bayesscher Satz", "Diagnostik", "bedingte Wahrscheinlichkeit"]
@@ -710,7 +710,7 @@ export const mathematikPool9: Question[] = [
     "mathe-kap7",
     "Die Standardabweichung einer Binomialverteilung B(n,p) mit n=100 und p=0,25 beträgt:",
     ["2,5", "3,0", "4,33", "5,0", "6,25"],
-    3,
+    2,
     "σ = √(n·p·(1−p)) = √(100·0,25·0,75) = √18,75 ≈ 4,33.",
     "mittel",
     ["Standardabweichung", "Binomialverteilung", "Stochastik"]

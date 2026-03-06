@@ -14,7 +14,6 @@ import { allBmsQuestions } from "@/data/bms/index";
 import type { Question } from "@/data/bms/index";
 
 const NAVY = "#1b3ea7";
-const OPTION_LABELS = ["A", "B", "C", "D", "E"];
 
 type SubjectKey = "biologie" | "chemie" | "physik" | "mathematik";
 
@@ -346,42 +345,42 @@ function FAQSchema({
   subjectLabel: string;
   subjectKey: string;
 }) {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://medmaster.at",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "\u00dcbungsfragen",
-        item: "https://medmaster.at/medat-uebungsfragen",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: subjectLabel,
-        item: `https://medmaster.at/medat-${subjectKey}-fragen`,
-      },
-    ],
-  };
-
   useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://medmaster.at",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "\u00dcbungsfragen",
+          item: "https://medmaster.at/medat-uebungsfragen",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: subjectLabel,
+          item: `https://medmaster.at/medat-${subjectKey}-fragen`,
+        },
+      ],
+    };
+
     const faqScript = document.createElement("script");
     faqScript.type = "application/ld+json";
     faqScript.textContent = JSON.stringify(faqSchema);
@@ -396,7 +395,7 @@ function FAQSchema({
       document.head.removeChild(faqScript);
       document.head.removeChild(breadcrumbScript);
     };
-  }, [faqSchema, breadcrumbSchema]);
+  }, [faqs, subjectLabel, subjectKey]);
 
   return null;
 }
@@ -407,19 +406,10 @@ export default function SubjectDemo() {
   const subjectKey = (subject || "biologie") as SubjectKey;
   const meta = SUBJECT_META[subjectKey];
 
-  if (!meta) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Link to="/medat-uebungsfragen" className="text-blue-600 underline">
-          Zur{"\u00fc"}ck zu allen {"\u00dc"}bungsfragen
-        </Link>
-      </div>
-    );
-  }
-
-  usePageTitle(meta.metaTitle);
+  usePageTitle(meta?.metaTitle ?? "MedAT Übungsfragen");
 
   useEffect(() => {
+    if (!meta) return;
     let descTag = document.querySelector('meta[name="description"]');
     if (!descTag) {
       descTag = document.createElement("meta");
@@ -453,6 +443,16 @@ export default function SubjectDemo() {
 
   const pool = useMemo(() => allBmsQuestions.filter((q) => q.subject === subjectKey), [subjectKey]);
   const questions = useMemo(() => seededPick(pool, 10, dailySeed), [pool, dailySeed]);
+
+  if (!meta) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Link to="/medat-uebungsfragen" className="text-blue-600 underline">
+          Zur{"\u00fc"}ck zu allen {"\u00dc"}bungsfragen
+        </Link>
+      </div>
+    );
+  }
 
   const totalCount = pool.length.toLocaleString("de-AT");
 

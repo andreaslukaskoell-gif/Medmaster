@@ -51,9 +51,30 @@ const HASHTAG_SETS = [
   "#MedAT2026 #BMS #Medizinstudium #Aufnahmeprüfung #Wissenstest",
 ];
 
-// Caption builder: question text in caption, A–D Umfrage, E in Kommentare
+// Caption builder: hook → question → CTA → urgency → hashtags
 function buildCaption(subj, questionText, hashtags) {
-  return `${SUBJECT_COLORS[subj].emoji} MedAT-Frage: ${questionText}\n\nStimm ab: A–D in der Umfrage!\nDeine Antwort ist E? → Schreib\u2019s in die Kommentare! 💬\n\n🔗 Kostenlos üben: medmaster.at\n${hashtags}`;
+  const hooks = [
+    "Diese Frage kommt JEDES JAHR beim MedAT 👇",
+    "80% beantworten diese Frage falsch 👇",
+    "Kannst du diese MedAT-Frage in 30 Sek lösen? 👇",
+    "MedAT-Falle: Die meisten tippen auf C 👇",
+    "Schaffst du diese BMS-Frage ohne nachzudenken? 👇",
+    "Wenn du das weißt, bist du bereit für den MedAT 👇",
+    "Die Antwort überrascht die meisten 👇",
+  ];
+  const hook = hooks[Math.floor(Math.random() * hooks.length)];
+  return [
+    hook,
+    "",
+    `${SUBJECT_COLORS[subj].emoji} ${questionText}`,
+    "",
+    "Kommentiere deinen Buchstaben! 💬",
+    "Auflösung morgen in der Story 🔓",
+    "",
+    "📱 Bis Ende März komplett gratis → medmaster.at",
+    "",
+    hashtags,
+  ].join("\n");
 }
 
 // ── Seeded random ─────────────────────────────────────────────
@@ -180,7 +201,7 @@ function answerCardHTML(q) {
   </div>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding:0 8px;">
     <div style="font-size:28px;color:rgba(255,255,255,0.7);font-weight:600;">medmaster.at</div>
-    <div style="font-size:22px;color:rgba(255,255,255,0.5);">4.300+ Fragen kostenlos</div>
+    <div style="font-size:22px;color:rgba(255,255,255,0.5);">Gratis testen bis Ende März</div>
   </div>
 </div></body></html>`;
 }

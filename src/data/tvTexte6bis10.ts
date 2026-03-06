@@ -58,9 +58,9 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
         ],
         correctAnswer: 2,
         explanation:
-          "Der Text stellt klar fest, dass Arten heute hundert- bis tausendfach schneller aussterben als die natürliche Hintergrundrate. Die aktülle Rate übertrifft die natürliche also erheblich und betrifft verschiedene Ökosysteme, nicht nur Regenwälder.",
+          "Der Text stellt klar fest, dass Arten heute hundert- bis tausendfach schneller aussterben als die natürliche Hintergrundrate. Die aktuelle Rate übertrifft die natürliche also erheblich und betrifft verschiedene Ökosysteme, nicht nur Regenwälder.",
         relevantPassage:
-          "Schätzungen zufolge sterben Arten heute hundert- bis tausendfald schneller aus als die natürliche Hintergrundrate es erwarten ließe.",
+          "Schätzungen zufolge sterben Arten heute hundert- bis tausendfach schneller aus als die natürliche Hintergrundrate es erwarten ließe.",
       },
       {
         question: "Welche Folge der Lebensraumfragmentierung wird im Text NICHT erwähnt?",
@@ -82,7 +82,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
         options: ["420 ppm", "280 ppm", "0,1 ppm", "3 Millionen ppm"],
         correctAnswer: 1,
         explanation:
-          "Der Text gibt an, dass die CO₂-Konzentration seit Beginn der Industrialisierung von etwa 280 ppm auf über 420 ppm gestiegen ist. 280 ppm ist also der Wert vor der Industrialisierung, 420 ppm der aktülle Wert. Die 3 Millionen beziehen sich auf Jahre, nicht auf ppm.",
+          "Der Text gibt an, dass die CO₂-Konzentration seit Beginn der Industrialisierung von etwa 280 ppm auf über 420 ppm gestiegen ist. 280 ppm ist also der Wert vor der Industrialisierung, 420 ppm der aktuelle Wert. Die 3 Millionen beziehen sich auf Jahre, nicht auf ppm.",
         relevantPassage:
           "Seit Beginn der Industrialisierung hat die Verbrennung fossiler Brennstoffe die atmosphärische CO₂-Konzentration von etwa 280 ppm auf über 420 ppm erhöht",
       },
@@ -196,7 +196,7 @@ Ohne äußeres Magnetfeld sind diese magnetischen Momente der Protonen zufällig
 
 Die ausgerichteten Kernspins präzedieren – ähnlich einem kreiselnden Spielzeugkreisel – um die Richtung des äußeren Magnetfelds. Die Präzessionsfrequenz, auch Larmorfrequenz genannt, ist direkt proportional zur Stärke des Magnetfelds und wird durch die gyromagnetische Konstante bestimmt. Für Protonen bei 1,5 Tesla beträgt diese Frequenz etwa 64 Megahertz, also im Radiowellenbereich.
 
-Zur Signalerzeugung wird ein Hochfrequenzpuls exakt bei der Larmorfrequenz eingestrahlt. Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds – typischerweise um neunzig oder hundertachtzig Grad. Zweitens bringt er die individüllen Kernspins in Phase, sodass sie synchron präzedieren. Diese kohärente Präzession erzeugt ein messbares hochfrequentes Signal in einer Empfangsspule.
+Zur Signalerzeugung wird ein Hochfrequenzpuls exakt bei der Larmorfrequenz eingestrahlt. Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds – typischerweise um neunzig oder hundertachtzig Grad. Zweitens bringt er die individuellen Kernspins in Phase, sodass sie synchron präzedieren. Diese kohärente Präzession erzeugt ein messbares hochfrequentes Signal in einer Empfangsspule.
 
 Nach Abschalten des Hochfrequenzpulses kehrt das System durch zwei unabhängige Prozesse in seinen Gleichgewichtszustand zurück. Die Längsrelaxation (T1-Relaxation) beschreibt die Wiederherstellung der Magnetisierung in Feldrichtung durch Energieabgabe an die Umgebung. Die Querrelaxation (T2-Relaxation) beschreibt den Verlust der Phasenkohärenz durch Wechselwirkungen zwischen benachbarten Kernen. Beide Prozesse folgen exponentiellen Zeitverläufen mit gewebespezifischen Zeitkonstanten.
 
@@ -229,7 +229,7 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
         explanation:
           "Der Text beschreibt explizit zwei Effekte des Hochfrequenzpulses: Erstens kippt er die Nettomagnetisierung aus der Feldrichtung, zweitens bringt er die Kernspins in Phase. Die anderen Optionen vermischen verschiedene, unabhängige Konzepte der MRT.",
         relevantPassage:
-          "Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds [...]. Zweitens bringt er die individüllen Kernspins in Phase",
+          "Dieser Radiofrequenzpuls bewirkt zwei Effekte: Erstens kippt er die Nettomagnetisierung aus der Richtung des statischen Felds [...]. Zweitens bringt er die individuellen Kernspins in Phase",
       },
       {
         question: "Was kann aus dem Text über T1- und T2-Relaxation geschlossen werden?",

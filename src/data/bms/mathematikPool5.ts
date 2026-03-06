@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Mathematik-Pool Teil 5 — Fragen 401–500 (MedAT-Style, Single Choice).
  */

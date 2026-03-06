@@ -254,7 +254,7 @@ export const fragenPart3 = [
     ],
     korrekteAntwort: 1,
     erklärung:
-      "Elektromagnetische Wellen bestehen aus gekoppelten elektrischen und magnetischen Feldern, die senkrecht züinander und zur Ausbreitungsrichtung schwingen.",
+      "Elektromagnetische Wellen bestehen aus gekoppelten elektrischen und magnetischen Feldern, die senkrecht zueinander und zur Ausbreitungsrichtung schwingen.",
     strategieTipp:
       "EM-Wellen benötigen kein Medium und breiten sich im Vakuum mit Lichtgeschwindigkeit aus.",
   },

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Biologie BMS Pool — echte Fragen aus Kap1–Kap5 (weiterer Batch).
  * Ersetzt Platzhalter durch inhaltliche Fragen aus bmsKapitel/biologie.
@@ -190,7 +191,7 @@ export const biologiePool9: Question[] = [
     [
       "Produzenten",
       "Primärkonsumenten",
-      "Destenten",
+      "Destruenten",
       "abiotischen Faktoren",
       "mineralischen Nährstoffen",
     ],
@@ -562,7 +563,7 @@ export const biologiePool9: Question[] = [
   q(
     "bio-pool-9-038",
     "bio-kap5",
-    "Destenten (Zersetzer) setzen totes organisches Material um in …",
+    "Destruenten (Zersetzer) setzen totes organisches Material um in …",
     [
       "nur CO₂ (Kohlenstoffdioxid als gasförmiges Endprodukt der Zellatmung)",
       "wieder verfügbare Nährstoffe (Mineralisierung)",
@@ -571,7 +572,7 @@ export const biologiePool9: Question[] = [
       "nur Stickstoffgas (N₂, das durch Denitrifikation freigesetzt wird)",
     ],
     1,
-    "Destenten (Pilze, Bakterien) mineralisieren totes Material und führen Nährstoffe dem Ökosystem wieder zu.",
+    "Destruenten (Pilze, Bakterien) mineralisieren totes Material und führen Nährstoffe dem Ökosystem wieder zu.",
     "mittel",
     ["Ökologie", "Kap5"]
   ),
@@ -669,7 +670,7 @@ export const biologiePool9: Question[] = [
     "bio-pool-9-045",
     "bio-kap5",
     "Primärkonsumenten in einem Ökosystem sind …",
-    ["Produzenten", "Pflanzenfresser", "Fleischfresser", "Destenten", "nur Bakterien"],
+    ["Produzenten", "Pflanzenfresser", "Fleischfresser", "Destruenten", "nur Bakterien"],
     1,
     "Primärkonsumenten = Pflanzenfresser (ernähren sich von Produzenten). Sekundärkonsumenten = Fleischfresser.",
     "leicht",

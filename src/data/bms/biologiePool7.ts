@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Biologie BMS Pool — echte Fragen aus Kap1 (Zelle) und Kap2 (Gewebe).
  * Ersetzt Platzhalter durch inhaltliche Fragen aus bmsKapitel/biologie.

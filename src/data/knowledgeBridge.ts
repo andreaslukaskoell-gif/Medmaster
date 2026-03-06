@@ -189,8 +189,8 @@ export function findKeywordsInText(text: string): string[] {
 }
 
 /**
- * Gibt verwandte Themen zurück, die über Schlagworte im aktüllen Kapitel verknüpft sind.
- * Filtert das aktülle Kapitel heraus und dedupliziert nach chapterId.
+ * Gibt verwandte Themen zurück, die über Schlagworte im aktuellen Kapitel verknüpft sind.
+ * Filtert das aktuelle Kapitel heraus und dedupliziert nach chapterId.
  */
 export function getRelatedTopics(
   content: string,

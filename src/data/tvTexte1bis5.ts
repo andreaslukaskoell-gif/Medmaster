@@ -16,7 +16,7 @@ Die Kommunikation zwischen Darmbakterien und Immunsystem erfolgt über verschied
 
 Auch die Produktion von Antikörpern wird durch die Darmmikrobiota beeinflusst. Insbesondere Immunglobulin A (IgA), das in großen Mengen im Darm vorkommt, wird durch bakterielle Signale reguliert. IgA bindet an potenziell schädliche Mikroorganismen und neutralisiert sie, ohne eine Entzündungsreaktion auszulösen.
 
-Die Zusammensetzung der Darmmikrobiota ist individüll verschieden und wird durch zahlreiche Faktoren beeinflusst: Ernährung, Medikamente (insbesondere Antibiotika), Stress und Umweltfaktoren spielen eine Rolle. Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd. Monotone Ernährung oder häufige Antibiotika-Einnahmen können die Diversität verringern und das Immunsystem schwächen.
+Die Zusammensetzung der Darmmikrobiota ist individuell verschieden und wird durch zahlreiche Faktoren beeinflusst: Ernährung, Medikamente (insbesondere Antibiotika), Stress und Umweltfaktoren spielen eine Rolle. Eine vielfältige Darmflora mit vielen verschiedenen Bakterienarten gilt als besonders gesundheitsfördernd. Monotone Ernährung oder häufige Antibiotika-Einnahmen können die Diversität verringern und das Immunsystem schwächen.
 
 Besonders eindrucksvoll zeigt sich die Bedeutung der Darmmikrobiota in Tierversuchen mit keimfreien Mäusen, die ohne jegliche Bakterien aufwachsen. Diese Tiere haben ein unterentwickeltes Immunsystem und sind anfälliger für Infektionen und Entzündungen. Führt man ihnen gezielt bestimmte Bakterienstämme zu, normalisiert sich die Immunfunktion teilweise wieder.
 
@@ -302,9 +302,9 @@ Die verheerendste Pandemie der Geschichte war vermutlich der "Schwarze Tod" im 1
 
 Im 16. Jahrhundert erlebten die indigenen Völker Amerikas eine demografische Katastrophe. Europäische Eroberer brachten Krankheiten wie Pocken, Masern und Typhus mit, gegen die die einheimische Bevölkerung keine Immunität besaß. Schätzungen zufolge starben bis zu 90 Prozent der indigenen Bevölkerung – ein Genozid durch Mikroorganismen, der die koloniale Eroberung erleichterte.
 
-Die Spanische Grippe von 1918/19 war die tödlichste Pandemie der Neuzeit. Der H1N1-Inflünzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer – mehr als der Erste Weltkrieg. Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion. Die Pandemie traf auf eine kriegsgeschwächte Welt mit schlechter Ernährung und überfüllten Verhältnissen, was ihre Ausbreitung begünstigte.
+Die Spanische Grippe von 1918/19 war die tödlichste Pandemie der Neuzeit. Der H1N1-Influenzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer – mehr als der Erste Weltkrieg. Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion. Die Pandemie traf auf eine kriegsgeschwächte Welt mit schlechter Ernährung und überfüllten Verhältnissen, was ihre Ausbreitung begünstigte.
 
-Im 20. Jahrhundert veränderte die HIV/AIDS-Pandemie die Welt auf andere Weise. Seit ihrer Identifizierung in den 1980er Jahren hat HIV etwa 40 Millionen Menschen getötet. Anders als akute Infektionen wie Inflünza entwickelt sich HIV zu einer chronischen Krankheit. Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung. Heute ermöglichen antiretrovirale Therapien ein nahezu normales Leben mit HIV.
+Im 20. Jahrhundert veränderte die HIV/AIDS-Pandemie die Welt auf andere Weise. Seit ihrer Identifizierung in den 1980er Jahren hat HIV etwa 40 Millionen Menschen getötet. Anders als akute Infektionen wie Influenza entwickelt sich HIV zu einer chronischen Krankheit. Die Pandemie führte zu massiver sozialer Stigmatisierung, mobilisierte aber auch Patientenaktivismus und revolutionierte die Arzneimittelentwicklung. Heute ermöglichen antiretrovirale Therapien ein nahezu normales Leben mit HIV.
 
 Die SARS-Epidemie 2003 und die H1N1-Pandemie 2009 waren moderne Warnsignale. SARS wurde durch rigorose Eindämmungsmaßnahmen gestoppt, bevor es sich global ausbreitete. Die H1N1-Pandemie verlief glimpflicher als befürchtet, offenbarte aber Schwächen in der globalen Pandemievorsorge. Beide Ausbrüche zeigten die Bedeutung schneller Reaktionen und internationaler Koordination.
 
@@ -329,7 +329,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
         explanation:
           "Der Text nennt 50-100 Millionen Todesopfer durch die Spanische Grippe. Ein Drittel der europäischen Bevölkerung bezieht sich auf die Pest, 40 Millionen auf HIV/AIDS, und 90% der Bevölkerung auf indigene Völker Amerikas.",
         relevantPassage:
-          "Der H1N1-Inflünzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer",
+          "Der H1N1-Influenzavirus infizierte etwa ein Drittel der Weltbevölkerung und forderte zwischen 50 und 100 Millionen Todesopfer",
       },
       {
         question: "Was war laut dem Text bemerkenswert an der Spanischen Grippe?",
@@ -341,7 +341,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
         ],
         correctAnswer: 2,
         explanation:
-          "Der Text hebt die hohe Sterblichkeit bei jungen, gesunden Erwachsenen hervor, vermutlich durch Zytokinsturm. Rattenflöhe übertrugen die Pest, nicht Inflünza. Ältere waren nicht primär betroffen, und Impfungen gab es damals nicht.",
+          "Der Text hebt die hohe Sterblichkeit bei jungen, gesunden Erwachsenen hervor, vermutlich durch Zytokinsturm. Rattenflöhe übertrugen die Pest, nicht Influenza. Ältere waren nicht primär betroffen, und Impfungen gab es damals nicht.",
         relevantPassage:
           'Bemerkenswert war die hohe Sterblichkeit bei jungen, gesunden Erwachsenen, vermutlich aufgrund eines "Zytokinsturms", einer überschießenden Immunreaktion.',
       },

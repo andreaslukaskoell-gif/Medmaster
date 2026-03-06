@@ -8,7 +8,7 @@ import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { SyncStatus } from "./SyncStatus";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
-import { Button } from "@/components/ui/button";
+
 import { cn } from "@/lib/utils";
 
 interface TopBarProps {

@@ -6,7 +6,7 @@ export const fragenPart6 = [
     schwierigkeit: "mittel" as const,
     fragetext: "Welche Aussage zur DNA-Doppelhelix-Struktur nach Watson und Crick ist korrekt?",
     optionen: [
-      "Die beiden Stränge verlaufen parallel züinander",
+      "Die beiden Stränge verlaufen parallel zueinander",
       "Adenin paart sich über drei Wasserstoffbrücken mit Thymin",
       "Die antiparallelen Stränge sind über Wasserstoffbrücken zwischen komplementären Basen verbunden",
       "Die Phosphatgruppen befinden sich im Inneren der Helix",
@@ -646,7 +646,7 @@ export const fragenPart6 = [
     erklärung:
       "DNA-Sequenzierung wird eingesetzt für: genetische Diagnostik (Erbkrankheiten, Mutationen), Krebsgenomik (somatische Mutationen), Infektionsdiagnostik (Erregeridentifikation), Pharmakogenetik (Medikamentenverträglichkeit), evolutionäre Studien, Forensik und pränatale Diagnostik.",
     strategieTipp:
-      "Sequenzierung ist Grundlage der Präzisionsmedizin. Ermöglicht individülle Diagnose und Therapie basierend auf genetischem Profil.",
+      "Sequenzierung ist Grundlage der Präzisionsmedizin. Ermöglicht individuelle Diagnose und Therapie basierend auf genetischem Profil.",
   },
   {
     id: "bio-q-286",
@@ -743,7 +743,7 @@ export const fragenPart6 = [
     erklärung:
       "Der genetische Fingerabdruck nutzt hochvariable DNA-Regionen (STRs, VNTRs) zur eindeutigen Identifikation von Personen. Anwendungen: Forensik (Täteridentifikation, Opferidentifikation), Vaterschaftstests, Identifikation von Katastrophenopfern, Verwandtschaftsanalysen. Jeder Mensch (außer eineiigen Zwillingen) hat ein einzigartiges Muster.",
     strategieTipp:
-      "Genetischer Fingerabdruck = DNA-Profil, so individüll wie echter Fingerabdruck. Basiert auf variablen Regionen, nicht auf codierenden Genen.",
+      "Genetischer Fingerabdruck = DNA-Profil, so individuell wie echter Fingerabdruck. Basiert auf variablen Regionen, nicht auf codierenden Genen.",
   },
   {
     id: "bio-q-291",
@@ -781,7 +781,7 @@ export const fragenPart6 = [
     ],
     korrekteAntwort: 1,
     erklärung:
-      "RFLP-Analyse nutzte variable Restriktionsschnittstellen und VNTRs (Variable Number Tandem Repeats). Nach Restriktionsverdau und Gelelektrophorese entstanden individülle Bandenmuster (Southern Blot). Nachteil: benötigt große DNA-Mengen, zeitaufwendig. STR-Analyse (PCR-basiert) ist schneller und sensitiver.",
+      "RFLP-Analyse nutzte variable Restriktionsschnittstellen und VNTRs (Variable Number Tandem Repeats). Nach Restriktionsverdau und Gelelektrophorese entstanden individuelle Bandenmuster (Southern Blot). Nachteil: benötigt große DNA-Mengen, zeitaufwendig. STR-Analyse (PCR-basiert) ist schneller und sensitiver.",
     strategieTipp:
       "RFLP = alte Methode, historisch wichtig (erster DNA-Fingerabdruck 1984, Alec Jeffreys). STR = moderne Standard-Methode (PCR-basiert, schneller, weniger DNA nötig).",
   },

@@ -60,7 +60,7 @@ export const chemiePool1: Question[] = [
     "Welche der folgenden Verbindungen ist kovalent aufgebaut?",
     ["AlCl₃", "H₂O₂ durch Kombination zweier Hydroxylradikale", "CuCl₂", "Fe₂O₃", "NaCl"],
     1,
-    "H₂O₂ (Wasserstoffperoxid) ist eine molekulare, kovalente Verbindung (O−O-Bindung, O−H-Bindungen). AlCl₃, CuCl₂, Fe₂O₃ und NaCl sind ionisch (Metall + Nichtmetall, große EN-Differenz).",
+    "H₂O₂ (Wasserstoffperoxid) ist eine molekulare, kovalente Verbindung (O−O-Bindung, O−H-Bindungen). AlCl₃ hat zwar signifikanten kovalenten Charakter (bildet Al₂Cl₆-Dimere), gilt aber im MedAT-Kontext als Metall-Nichtmetall-Verbindung. CuCl₂, Fe₂O₃ und NaCl sind ionisch.",
     "mittel",
     ["kovalente Bindung", "Ionenbindung"]
   ),

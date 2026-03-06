@@ -510,7 +510,7 @@ export const fragenPart8 = [
     ],
     korrekteAntwort: 1,
     erklärung:
-      "Der aktülle Klimawandel wird zu über 95% durch menschliche Aktivitäten verursacht: Verbrennung fossiler Brennstoffe (CO₂), Landwirtschaft (Methan), Entwaldung (reduzierte CO₂-Bindung). Der atmosphärische CO₂-Gehalt ist seit der Industrialisierung um über 40% gestiegen.",
+      "Der aktuelle Klimawandel wird zu über 95% durch menschliche Aktivitäten verursacht: Verbrennung fossiler Brennstoffe (CO₂), Landwirtschaft (Methan), Entwaldung (reduzierte CO₂-Bindung). Der atmosphärische CO₂-Gehalt ist seit der Industrialisierung um über 40% gestiegen.",
     strategieTipp:
       "Haupttreibhausgase: CO₂ (Verbrennung), CH₄ (Methan aus Landwirtschaft), N₂O (Lachgas). CO₂ ist mengenmäßig am wichtigsten.",
   },

@@ -15,7 +15,6 @@ import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
 import { filterValidImplikationTasks } from "@/data/kffValidation";
-import { ImplikationSolutionDiagram } from "@/components/diagrams/kff/EulerDiagrams";
 
 const TASK_COUNT = 10;
 const TIME_LIMIT = 600; // 10 minutes in seconds

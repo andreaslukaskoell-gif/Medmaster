@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Biologie BMS Pool — echte Fragen aus Kap2–Kap5 (Gewebe, Entwicklung, Genetik, Ökologie).
  * Ersetzt Platzhalter durch inhaltliche Fragen aus bmsKapitel/biologie.
@@ -173,9 +174,9 @@ export const biologiePool8: Question[] = [
     "bio-pool-8-012",
     "bio-kap5",
     "Produzenten in einem Ökosystem sind typischerweise …",
-    ["heterotroph", "autotroph", "Destenten", "Konsumenten", "Saprobionten"],
+    ["heterotroph", "autotroph", "Destruenten", "Konsumenten", "Saprobionten"],
     1,
-    "Produzenten (z. B. Pflanzen) sind autotroph; Konsumenten sind heterotroph; Destenten zersetzen totes Material.",
+    "Produzenten (z. B. Pflanzen) sind autotroph; Konsumenten sind heterotroph; Destruenten zersetzen totes Material.",
     "leicht",
     ["Ökologie", "Kap5"]
   ),
@@ -353,7 +354,7 @@ export const biologiePool8: Question[] = [
     "bio-pool-8-025",
     "bio-kap5",
     "In einer Nahrungskette: Primärkonsumenten ernähren sich von …",
-    ["Produzenten", "Sekundärkonsumenten", "Destenten", "abiotischen Faktoren", "Saprobionten"],
+    ["Produzenten", "Sekundärkonsumenten", "Destruenten", "abiotischen Faktoren", "Saprobionten"],
     0,
     "Primärkonsumenten = Pflanzenfresser (ernähren sich von Produzenten); Sekundärkonsumenten fressen Primärkonsumenten.",
     "leicht",
@@ -461,7 +462,7 @@ export const biologiePool8: Question[] = [
   q(
     "bio-pool-8-033",
     "bio-kap5",
-    "Destenten (Zersetzer) bauen ab …",
+    "Destruenten (Zersetzer) bauen ab …",
     [
       "nur lebende Beute",
       "totes organisches Material",
@@ -470,7 +471,7 @@ export const biologiePool8: Question[] = [
       "nur Licht",
     ],
     1,
-    "Destenten (Pilze, Bakterien) zersetzen totes organisches Material und führen Nährstoffe dem Kreislauf wieder zu.",
+    "Destruenten (Pilze, Bakterien) zersetzen totes organisches Material und führen Nährstoffe dem Kreislauf wieder zu.",
     "leicht",
     ["Ökologie", "Kap5"]
   ),
@@ -495,8 +496,8 @@ export const biologiePool8: Question[] = [
     "bio-kap4",
     "Bei einem dihybriden Erbgang AaBb × AaBb: Wie viele der 16 Nachkommen sind reinerbig (homozygot) für beide Merkmale?",
     ["0", "1", "2", "4", "8"],
-    1,
-    "Nur 1 von 16 ist AABB (reinerbig für beide). Die anderen Kombinationen sind heterozygot für mindestens ein Merkmal.",
+    3,
+    "Reinerbig für beide Merkmale bedeutet homozygot an beiden Loci: AABB, AAbb, aaBB, aabb = 4 von 16 Nachkommen. Jeweils 1/4 × 1/4 = 1/16, also 4 × 1/16 = 4/16.",
     "schwer",
     ["Vererbung", "Kap4"]
   ),
@@ -552,7 +553,7 @@ export const biologiePool8: Question[] = [
     "bio-pool-8-039",
     "bio-kap5",
     "Trophische Ebene 1 in einem Ökosystem sind in der Regel …",
-    ["Konsumenten", "Produzenten", "Destenten", "Sekundärkonsumenten", "Tertiärkonsumenten"],
+    ["Konsumenten", "Produzenten", "Destruenten", "Sekundärkonsumenten", "Tertiärkonsumenten"],
     1,
     "Produzenten (z. B. Pflanzen) bilden die erste trophische Ebene; dann Primär-, Sekundär-, Tertiärkonsumenten.",
     "leicht",

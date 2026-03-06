@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Timer } from "lucide-react";
 
 type ExamTimerProps = {
@@ -10,8 +10,11 @@ type ExamTimerProps = {
 export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerProps) {
   const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
   const onTimeUpRef = useRef(onTimeUp);
-  onTimeUpRef.current = onTimeUp;
   const firedRef = useRef(false);
+
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  }, [onTimeUp]);
 
   useEffect(() => {
     if (paused || secondsLeft <= 0) return;
@@ -44,24 +47,4 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
       </span>
     </div>
   );
-}
-
-/** Hook variant for components that need the remaining time value */
-export function useExamTimer(totalSeconds: number, paused = false) {
-  const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
-
-  useEffect(() => {
-    if (paused || secondsLeft <= 0) return;
-    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
-    return () => clearInterval(t);
-  }, [paused, secondsLeft]);
-
-  const reset = useCallback(
-    (newTotal?: number) => {
-      setSecondsLeft(newTotal ?? totalSeconds);
-    },
-    [totalSeconds]
-  );
-
-  return { secondsLeft, isUp: secondsLeft <= 0, reset };
 }

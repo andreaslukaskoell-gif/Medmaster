@@ -858,9 +858,9 @@ export const fragenPart5 = [
     ],
     korrekteAntwort: 3,
     erklärung:
-      "Enzymaktivität wird beeinflusst durch: Temperatur (Optimum, dann Denaturierung), pH-Wert (Optimum, protonierung), Substrat- und Enzymkonzentration, Cofaktoren, Inhibitoren und Produktkonzentration (Produkthemmung). Vergangene Produktkonzentrationen haben keinen direkten Einfluss auf die aktülle Reaktion.",
+      "Enzymaktivität wird beeinflusst durch: Temperatur (Optimum, dann Denaturierung), pH-Wert (Optimum, protonierung), Substrat- und Enzymkonzentration, Cofaktoren, Inhibitoren und Produktkonzentration (Produkthemmung). Vergangene Produktkonzentrationen haben keinen direkten Einfluss auf die aktuelle Reaktion.",
     strategieTipp:
-      "Enzymaktivität: T, pH, [S], [E], Cofaktoren, Inhibitoren, aktülle [P]. Jedes Enzym hat T- und pH-Optimum.",
+      "Enzymaktivität: T, pH, [S], [E], Cofaktoren, Inhibitoren, aktuelle [P]. Jedes Enzym hat T- und pH-Optimum.",
   },
   {
     id: "ch-q-250",

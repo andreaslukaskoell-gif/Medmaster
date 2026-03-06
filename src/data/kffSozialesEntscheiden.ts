@@ -241,7 +241,7 @@ export const sozialesEntscheidenScenarios: SozialesEntscheidenScenario[] = [
           "Eine strikte Ablehnung ignoriert die Dringlichkeit und die fortgeschrittene Reife des Jugendlichen.",
       },
       {
-        text: "Du führst ein ausführliches Beratungsgespräch und beurteilst seine Einwilligungsfähigkeit individüll.",
+        text: "Du führst ein ausführliches Beratungsgespräch und beurteilst seine Einwilligungsfähigkeit individuell.",
         idealRating: 6,
         explanation:
           "Individülle Beurteilung der Einwilligungsfähigkeit ist bei mündigen Minderjährigen der fachlich korrekte Weg.",

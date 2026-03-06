@@ -262,7 +262,7 @@ export const emotionQuestions: EmotionQuestion[] = [
       },
       {
         id: "b",
-        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktüllen Stand für Sie prüfen.'",
+        text: "Ruhig sagen: 'Ich verstehe Ihre Sorge um Ihr Kind. Lassen Sie mich kurz den aktuellen Stand für Sie prüfen.'",
       },
       {
         id: "c",

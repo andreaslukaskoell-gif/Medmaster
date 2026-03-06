@@ -56,7 +56,7 @@ export const mathematikPool8: Question[] = [
     "Ein Medikament wird in einer Dosis von 250 Mikrogramm (µg) verabreicht. Wie viel Gramm entspricht diese Menge?",
     ["0,025 g", "0,0025 g", "2,5 × 10⁻⁴ g", "2,5 × 10⁻³ g", "25 × 10⁻⁴ g"],
     2,
-    "1 µg = 10⁻⁶ g. Daher: 250 µg = 250 × 10⁻⁶ g = 2,5 × 10⁻⁴ g. Optionen A und B sind zu groß, D ist 10-fach zu groß, E ist gleichwertig zu C aber unvorteilhaft notiert.",
+    "1 µg = 10⁻⁶ g. Daher: 250 µg = 250 × 10⁻⁶ g = 2,5 × 10⁻⁴ g. Optionen A und B sind zu groß, D ist 10-fach zu groß, E = 25 × 10⁻⁴ = 2,5 × 10⁻³ g ist gleichwertig zu D.",
     "leicht",
     ["SI-Präfixe", "Mikro", "Umrechnung"]
   ),

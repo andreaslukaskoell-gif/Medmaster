@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   XCircle,
   ArrowRight,
-  Clock,
   FileText,
   ChevronDown,
 } from "lucide-react";
@@ -28,8 +27,6 @@ import { tvTextSets2 } from "@/data/tvTextsExpanded2";
 import {
   tvOffiziellTexte,
   OFFICIAL_TV_INSTRUCTION,
-  type TVOffiziellText,
-  type TVAussagenFrage,
   type TVAussagenOptionId,
 } from "@/data/tvOffiziell";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
@@ -185,7 +182,7 @@ export default function TV() {
       (q) => aussagenAnswers[q.id] === q.correctOptionId
     ).length;
     saveQuizResult({
-      id: `tv-aussagen-${Date.now()}`,
+      id: `tv-aussagen-${crypto.randomUUID()}`,
       type: "tv",
       subject: `TV Aussagen: ${currentAussagenText?.title ?? ""}`,
       score,

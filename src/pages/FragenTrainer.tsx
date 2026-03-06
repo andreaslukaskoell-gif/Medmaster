@@ -1019,7 +1019,7 @@ export default function FragenTrainer() {
               timestamp: new Date().toISOString(),
               answers: r.map((a) => ({
                 questionId: a.frage.id,
-                selectedAnswer: a.selectedKey ?? "",
+                selectedAnswer: a.chosenOption ?? a.typKChosenOption ?? "",
                 correct: a.correct,
               })),
             });

@@ -159,8 +159,9 @@ export function useAuth() {
       // signInWithOAuth returns a URL — if no redirect happened, open it manually
       if (data?.url) window.location.href = data.url;
       return { error: null };
-    } catch (e: any) {
-      return { error: new Error(e?.message || "Google Login fehlgeschlagen") };
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : "Google Login fehlgeschlagen";
+      return { error: new Error(msg) };
     }
   }
 

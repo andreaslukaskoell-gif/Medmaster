@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Brain,
   ListChecks,
-  Sparkles,
   ArrowRight,
   GraduationCap,
   Shield,
@@ -12,6 +11,7 @@ import {
   LayoutGrid,
   RefreshCw,
   TrendingUp,
+  Clock,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
@@ -70,12 +70,29 @@ const container = {
 };
 const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
+function useCountdown(targetDate: Date) {
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const diff = Math.max(0, targetDate.getTime() - now.getTime());
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+  return { days, hours, minutes, seconds, expired: diff === 0 };
+}
+
 export default function LandingPage() {
   usePageTitle();
   const { signInWithGoogle } = useAuth();
 
   const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
+
+  const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
+  const countdown = useCountdown(deadline);
 
   useEffect(() => {
     if (!supabase) return;
@@ -91,7 +108,7 @@ export default function LandingPage() {
     ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
     { emoji: "⭐", text: "Alle 4 MedAT-Bereiche: BMS, KFF, TV, SEK" },
     { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
-    { emoji: "🆓", text: "Komplett gratis nutzbar — kein Abo nötig" },
+    { emoji: "🆓", text: "Gratis testen bis Ende März — danach einmalig €29,90" },
     { emoji: "📚", text: "4.300+ Übungsfragen mit Erklärungen" },
   ];
 
@@ -148,8 +165,8 @@ export default function LandingPage() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-white/80 dark:bg-gray-900/80"
             style={{ color: NAVY }}
           >
-            <Sparkles className="w-4 h-4" />
-            Neu: 4.300+ Fragen — MedAT 2026
+            <Clock className="w-4 h-4" />
+            Gratis bis 31. März — danach einmalig €29,90
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -173,7 +190,7 @@ export default function LandingPage() {
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             4.300+ Übungsfragen, alle 4 MedAT-Bereiche, KI-adaptives Lernsystem und realistische
-            Prüfungssimulationen. In 30 Sekunden starten.
+            Prüfungssimulationen. Komplett gratis bis 31. März.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -181,16 +198,6 @@ export default function LandingPage() {
             transition={{ delay: 0.45 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/register"
-                className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
-                style={{ backgroundColor: NAVY }}
-              >
-                14 Tage gratis testen
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -199,28 +206,38 @@ export default function LandingPage() {
                 const { error } = await signInWithGoogle();
                 if (error) setGoogleError(error.message);
               }}
-              className="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold px-8 py-4 rounded-2xl text-base border border-gray-200 dark:border-gray-700 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm transition-colors"
+              style={{ backgroundColor: NAVY }}
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
-                  fill="#4285F4"
+                  fill="currentColor"
                   d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
                 />
                 <path
-                  fill="#34A853"
+                  fill="currentColor"
                   d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
                 />
                 <path
-                  fill="#FBBC05"
+                  fill="currentColor"
                   d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
                 />
                 <path
-                  fill="#EA4335"
+                  fill="currentColor"
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                 />
               </svg>
-              Mit Google starten
+              In 10 Sekunden starten
             </motion.button>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                to="/register"
+                className="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold px-8 py-4 rounded-2xl text-base border border-gray-200 dark:border-gray-700 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                Mit E-Mail registrieren
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
           </motion.div>
           {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
 
@@ -252,6 +269,46 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Countdown Timer */}
+          {!countdown.expired && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="mt-12 sm:mt-16"
+            >
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
+                Gratis-Zugang endet in:
+              </p>
+              <div className="flex justify-center gap-3 sm:gap-4">
+                {[
+                  { value: countdown.days, label: "Tage" },
+                  { value: countdown.hours, label: "Std" },
+                  { value: countdown.minutes, label: "Min" },
+                  { value: countdown.seconds, label: "Sek" },
+                ].map((unit) => (
+                  <div
+                    key={unit.label}
+                    className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-gray-100 dark:border-gray-800/50 min-w-[4rem] sm:min-w-[5rem]"
+                  >
+                    <span
+                      className="text-2xl sm:text-3xl font-bold tabular-nums"
+                      style={{ color: NAVY }}
+                    >
+                      {String(unit.value).padStart(2, "0")}
+                    </span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {unit.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
+                Ab 1. April: einmalig €29,90
+              </p>
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -324,7 +381,7 @@ export default function LandingPage() {
               {
                 step: "1",
                 title: "Registrieren",
-                desc: "Konto in unter 30 Sekunden. Kein Abo nötig für den Start.",
+                desc: "Google Login in 10 Sekunden. Gratis bis 31. März.",
                 icon: Shield,
               },
               {
@@ -487,39 +544,89 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Launch Banner — alles gratis */}
+      {/* Pricing */}
       <section id="preise" className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-100 dark:border-gray-800/50 text-center"
+            className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-12 shadow-sm border-2 border-[#1b3ea7]/20 dark:border-primary-800/50 text-center relative overflow-hidden"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">
-              Nur noch bis{" "}
-              {new Date(Date.now() + 14 * 86400000).toLocaleDateString("de-AT", {
-                day: "numeric",
-                month: "long",
-              })}
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{ background: `linear-gradient(90deg, ${NAVY}, ${NAVY_LIGHT})` }}
+            />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
+              Launch-Angebot — nur bis 31. März
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Jetzt kostenlos starten
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              Jetzt komplett gratis
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8">
-              Alle 4.300+ Fragen, alle Features, voller Zugang. Registriere dich jetzt und starte
-              sofort mit deiner MedAT-Vorbereitung.
+            <div className="flex items-baseline justify-center gap-2 mb-2">
+              <span className="text-5xl font-extrabold" style={{ color: NAVY }}>
+                €0
+              </span>
+              <span className="text-gray-400 line-through text-lg">€29,90</span>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+              Ab 1. April: einmalig €29,90 — kein Abo, keine versteckten Kosten
             </p>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/register"
-                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
-                style={{ backgroundColor: NAVY }}
-              >
-                Kostenlos starten
-                <ArrowRight className="w-5 h-5" />
+            <ul className="text-left max-w-sm mx-auto mb-8 space-y-3">
+              {[
+                "4.300+ Übungsfragen mit Erklärungen",
+                "Alle 4 MedAT-Bereiche (BMS, KFF, TV, SEK)",
+                "KI-adaptives Lernsystem",
+                "Realistische Prüfungssimulationen",
+                "Fortschritt & Prüfungstag-Prognose",
+              ].map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300"
+                >
+                  <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={async () => {
+                setGoogleError("");
+                const { error } = await signInWithGoogle();
+                if (error) setGoogleError(error.message);
+              }}
+              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm w-full sm:w-auto transition-colors"
+              style={{ backgroundColor: NAVY }}
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="currentColor"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
+              </svg>
+              Gratis starten mit Google
+            </motion.button>
+            {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
+            <p className="text-xs text-gray-400 mt-3">
+              Oder{" "}
+              <Link to="/register" className="underline hover:text-gray-600">
+                mit E-Mail registrieren
               </Link>
-            </motion.div>
+            </p>
           </motion.div>
         </div>
       </section>
@@ -535,14 +642,14 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
           <p className="text-primary-100 mb-8">
-            14 Tage gratis testen. Kein Risiko, jederzeit kündbar.
+            Komplett gratis bis 31. März. Kein Risiko, kein Abo.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/register"
               className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-2xl text-lg shadow-sm hover:bg-primary-50 transition-colors"
             >
-              Jetzt 14 Tage gratis testen
+              Gratis starten
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>

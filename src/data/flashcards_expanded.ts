@@ -856,7 +856,7 @@ export const bioMikrobiologie: Flashcard[] = [
   {
     id: "fc-bio-mi8",
     front: "Viren: Aufbau und Klassifikation?",
-    back: "Obligat intrazelluläre Parasiten (kein eigener Stoffwechsel!)\nAufbau: Nukleinsäure (DNA ODER RNA) + Kapsid (Proteinhülle) ± Lipidmembran (Envelope)\nKlassifikation nach Baltimore:\n• dsDNA (Herpes, Adeno) • ssDNA (Parvo)\n• dsRNA (Rota) • (+)ssRNA (Corona, HIV) • (−)ssRNA (Inflünza, Ebola)\n• Retroviren: RNA → DNA (Reverse Transkriptase)",
+    back: "Obligat intrazelluläre Parasiten (kein eigener Stoffwechsel!)\nAufbau: Nukleinsäure (DNA ODER RNA) + Kapsid (Proteinhülle) ± Lipidmembran (Envelope)\nKlassifikation nach Baltimore:\n• dsDNA (Herpes, Adeno) • ssDNA (Parvo)\n• dsRNA (Rota) • (+)ssRNA (Corona, HIV) • (−)ssRNA (Influenza, Ebola)\n• Retroviren: RNA → DNA (Reverse Transkriptase)",
     category: "bio",
     topic: "Mikrobiologie",
     difficulty: "mittel",

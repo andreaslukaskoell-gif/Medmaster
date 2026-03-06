@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Biologie BMS Pool 20 — 60 Fragen im offiziellen MedAT-Stil (Typ A + FALSCH).
  * Stoff: Kap1–Kap5.

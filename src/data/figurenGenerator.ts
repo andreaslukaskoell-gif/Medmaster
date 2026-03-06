@@ -669,7 +669,7 @@ function genAsymCutPt(pts: Pt[], rng: () => number): [Pt, Pt] | null {
 
 /** Mehrere asymmetrische Schnitte auf Pt[][]. */
 function applyAsymCutsPt(targetPts: Pt[], numCuts: number, rng: () => number): Pt[][] | null {
-  let pieces: Pt[][] = [targetPts.map((p) => [...p] as Pt)];
+  const pieces: Pt[][] = [targetPts.map((p) => [...p] as Pt)];
   const totalArea = polygonArea(targetPts);
   const minArea = totalArea * 0.05;
   for (let c = 0; c < numCuts; c++) {

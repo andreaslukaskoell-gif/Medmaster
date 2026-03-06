@@ -94,7 +94,7 @@ export default function PlacementTest() {
     let cancelled = false;
     async function load() {
       // 1. Try Supabase task DB (skip if no connection)
-      let dbTasks: Task[] = [];
+      const dbTasks: Task[] = [];
       if (supabase)
         try {
           const zf = await getTasksForUserOrFill("kff-zahlenfolgen", INITIAL_RATING, 5, 200);

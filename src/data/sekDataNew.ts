@@ -297,7 +297,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
     id: "ee-2-05",
     difficulty: 1,
     situation:
-      "Ein Medizinstudent im Praktischen Jahr wird von einer erfahrenen Oberärztin vor dem gesamten OP-Team gelobt: 'So eine saubere Naht habe ich von einem PJler noch nie gesehen.'",
+      "Ein Medizinstudent im KPJ wird von einer erfahrenen Oberärztin vor dem gesamten OP-Team gelobt: 'So eine saubere Naht habe ich von einem KPJ-Studenten noch nie gesehen.'",
     emotionen: [
       { name: "Stolz", correct: "wahrscheinlich" },
       { name: "Freude", correct: "wahrscheinlich" },
@@ -388,7 +388,7 @@ const emotionenErkennenSet2: EmotionenErkennenTask[] = [
     id: "ee-2-12",
     difficulty: 1,
     situation:
-      "Eine Medizinstudentin, die ihr Famulatur in einer Palliativstation absolviert, begleitet zum ersten Mal einen Patienten in seinen letzten Stunden. Die Familie des Patienten bittet sie, zu bleiben.",
+      "Eine Medizinstudentin, die ihre Famulatur in einer Palliativstation absolviert, begleitet zum ersten Mal einen Patienten in seinen letzten Stunden. Die Familie des Patienten bittet sie, zu bleiben.",
     emotionen: [
       { name: "Trauer", correct: "wahrscheinlich" },
       { name: "Mitgefühl", correct: "wahrscheinlich" },
@@ -460,7 +460,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
     id: "er-1-02",
     difficulty: 1,
     situation:
-      "Du arbeitest als Krankenpflegerin und ein Patient hat dich söben grundlos angeschrien und beleidigt. Deine Kolleginnen haben alles mitbekommen.",
+      "Du arbeitest als Krankenpflegerin und ein Patient hat dich soeben grundlos angeschrien und beleidigt. Deine Kolleginnen haben alles mitbekommen.",
     emotion: "Ärger und Scham",
     ziel: "Du möchtest professionell bleiben und die Situation nicht eskalieren lassen.",
     strategien: [
@@ -555,7 +555,7 @@ const emotionenRegulierenSet1: EmotionenRegulierenTask[] = [
         score: 3,
       },
       {
-        text: "Ich würde das Kind ablenken, indem ich ihm ein Spiel anbiete, und das Thema nach Hause nicht mehr ansprechen.",
+        text: "Ich würde das Kind ablenken, indem ich ihm ein Spiel anbiete, ohne das Thema Heimgehen noch einmal anzusprechen.",
         score: 2,
       },
     ],
@@ -758,7 +758,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
     ziel: "Du möchtest die Situation deeskalieren und gleichzeitig deine eigene emotionale Belastung verarbeiten.",
     strategien: [
       {
-        text: "Ich würde den Angehörigen verteidigen und ihm detailliert erklären, warum ich keine Schuld trage.",
+        text: "Ich würde mich gegenüber dem Angehörigen verteidigen und ihm detailliert erklären, warum ich keine Schuld trage.",
         score: 1,
       },
       {
@@ -785,7 +785,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
     strategien: [
       {
         text: "Ich würde durchlernen, Tag und Nacht, um möglichst viel Stoff noch zu wiederholen.",
-        score: 0,
+        score: 1,
       },
       {
         text: "Ich würde aufhören zu lernen, weil es ohnehin keinen Sinn mehr hat.",
@@ -797,7 +797,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
       },
       {
         text: "Ich würde versuchen, mich abzulenken und nicht mehr an die Prüfung zu denken.",
-        score: 1,
+        score: 2,
       },
     ],
   },
@@ -837,7 +837,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
     strategien: [
       {
         text: "Ich würde einfach aufstehen und gehen, ohne jemandem Bescheid zu sagen.",
-        score: 1,
+        score: 0,
       },
       {
         text: "Ich würde versuchen, die Prüfung zu Ende zu schreiben und danach ins Krankenhaus fahren.",
@@ -893,7 +893,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
       },
       {
         text: "Ich würde akzeptieren, dass es ihre Entscheidung ist, und sie ohne weiteren Kommentar gehen lassen.",
-        score: 1,
+        score: 2,
       },
       {
         text: "Ich würde ihre Entscheidung respektieren, aber in einem ruhigen Gespräch sachlich die medizinischen Fakten darlegen, ihr anbieten, jederzeit wiederzukommen, und dies dokumentieren.",
@@ -901,7 +901,7 @@ const emotionenRegulierenSet2: EmotionenRegulierenTask[] = [
       },
       {
         text: "Ich würde versuchen, ihr Angst zu machen, indem ich die schlimmstmöglichen Konsequenzen betone.",
-        score: 0,
+        score: 1,
       },
     ],
   },
@@ -1205,7 +1205,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Das Prinzip 'Wer zürst kommt, mahlt zürst' sollte gelten.",
+        text: "Das Prinzip 'Wer zuerst kommt, mahlt zuerst' sollte gelten.",
         idealRank: 5,
       },
     ],
@@ -1221,7 +1221,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 1,
       },
       {
-        text: "Man sollte den Kollegen zürst vertraulich ansprechen und ihm Hilfe anbieten.",
+        text: "Man sollte den Kollegen zuerst vertraulich ansprechen und ihm Hilfe anbieten.",
         idealRank: 2,
       },
       {
@@ -1273,7 +1273,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
       "Eine Ärztin erfährt bei einem Routinecheck, dass eine Patientin, die als Busfahrerin arbeitet, an unkontrollierten epileptischen Anfällen leidet. Die Patientin weigert sich, ihren Arbeitgeber zu informieren, aus Angst, ihren Job zu verlieren.",
     aussagen: [
       {
-        text: "Die Sicherheit der Öffentlichkeit (Fahrgäste und andere Verkehrsteilnehmer) hat Vorrang vor der individüllen Schweigepflicht.",
+        text: "Die Sicherheit der Öffentlichkeit (Fahrgäste und andere Verkehrsteilnehmer) hat Vorrang vor der individuellen Schweigepflicht.",
         idealRank: 1,
       },
       {
@@ -1313,7 +1313,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Als Student sollte man den Vorfall zürst mit einer Vertrauensperson besprechen, bevor man handelt.",
+        text: "Als Student sollte man den Vorfall zuerst mit einer Vertrauensperson besprechen, bevor man handelt.",
         idealRank: 4,
       },
       {
@@ -1505,7 +1505,7 @@ const sozialesEntscheidenSet1: SozialesEntscheidenTask[] = [
         idealRank: 2,
       },
       {
-        text: "Die Ärztin sollte der Patientin die Risiken einer unnötigen Antibiotikäinnahme erklären.",
+        text: "Die Ärztin sollte der Patientin die Risiken einer unnötigen Antibiotikaeinnahme erklären.",
         idealRank: 3,
       },
       {
@@ -1768,7 +1768,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 3,
       },
       {
-        text: "Die Pflegedienstleitung sollte zürst intern Lösungen suchen, bevor sie an die Öffentlichkeit geht.",
+        text: "Die Pflegedienstleitung sollte zuerst intern Lösungen suchen, bevor sie an die Öffentlichkeit geht.",
         idealRank: 4,
       },
       {
@@ -1809,7 +1809,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
     id: "se-2-11",
     difficulty: 3,
     dilemma:
-      "Während einer klinischen Studie stellt ein Forscher fest, dass das Medikament in der Kontrollgruppe (Placebo) weniger wirksam ist als erwartet, was bedeutet, dass einige Patienten in der Placebo-Gruppe eine weniger wirksame Behandlung erhalten. Die Studie ist aber noch nicht abgeschlossen.",
+      "Während einer klinischen Studie stellt ein Forscher fest, dass das experimentelle Medikament deutlich wirksamer ist als das Placebo, was bedeutet, dass Patienten in der Placebo-Gruppe eine deutlich weniger wirksame Behandlung erhalten. Die Studie ist aber noch nicht abgeschlossen.",
     aussagen: [
       {
         text: "Das Wohl der einzelnen Studienteilnehmer darf nie dem wissenschaftlichen Erkenntnisgewinn geopfert werden.",
@@ -1844,7 +1844,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 1,
       },
       {
-        text: "Jedes Menschenleben hat den gleichen Wert — wer am dringendsten Hilfe braucht, sollte sie zürst bekommen.",
+        text: "Jedes Menschenleben hat den gleichen Wert — wer am dringendsten Hilfe braucht, sollte sie zuerst bekommen.",
         idealRank: 2,
       },
       {
@@ -1904,7 +1904,7 @@ const sozialesEntscheidenSet2: SozialesEntscheidenTask[] = [
         idealRank: 2,
       },
       {
-        text: "Medizinische Entscheidungen müssen individüll und auf Basis des Gesundheitszustands getroffen werden, nicht nach starren Altersgrenzen.",
+        text: "Medizinische Entscheidungen müssen individuell und auf Basis des Gesundheitszustands getroffen werden, nicht nach starren Altersgrenzen.",
         idealRank: 3,
       },
       {

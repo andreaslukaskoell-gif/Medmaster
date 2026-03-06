@@ -581,29 +581,6 @@ const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
 /** Für Gedächtnis Allergiepässe: MedAT-Stil A | B | AB | 0 (ohne Rhesus in Typ) */
 const BLOOD_GROUPS_GM: AllergyPass["bloodGroup"][] = ["A", "B", "AB", "0"];
 
-const MEDICATIONS = [
-  "Metformin",
-  "Levothyroxin",
-  "Amlodipin",
-  "Omeprazol",
-  "Simvastatin",
-  "Ibuprofen",
-  "Pantoprazol",
-  "Metoprolol",
-  "Losartan",
-  "Gabapentin",
-  "Sertralin",
-  "Montelukast",
-  "Prednisolon",
-  "Insulin",
-  "ASS 100",
-  "Bisoprolol",
-  "Ramipril",
-  "Allopurinol",
-  "Diazepam",
-  "L-Thyroxin",
-];
-
 function generateName(): string {
   const s1 = FIRST_SYLLABLES[randInt(0, FIRST_SYLLABLES.length - 1)];
   const s2 = SECOND_SYLLABLES[randInt(0, SECOND_SYLLABLES.length - 1)];
@@ -904,7 +881,7 @@ export function generateGedaechtnisQuestionsFromPasses(
     const wrongPool = b.pool.filter((x) => x !== b.correct);
     const useE = b.allowE && Math.random() < 0.15 && wrongPool.length >= 4;
 
-    let questionText = b.question;
+    const questionText = b.question;
     const correctVal = b.correct;
     let options: string[];
     let correctIndex: number;
@@ -1117,7 +1094,6 @@ const WORD_POOL_LEICHT = [
   "WURST",
   "SPECK",
   "TINTE",
-  "DRAHT",
 ];
 
 const WORD_POOL_MITTEL = [
@@ -1179,7 +1155,6 @@ const WORD_POOL_MITTEL = [
   "MEISTERWERK",
   "BLICKFANG",
   "STERNWARTE",
-  "FLUSSTIER",
   "BERGWERK",
   "SCHEINWERFER",
   "KUNSTWERK",
@@ -1313,8 +1288,6 @@ const WORD_POOL_MITTEL = [
   "STEINWAND",
   "DORFSCHULE",
   "DACHSTUHL",
-  "FISCHGRUND",
-  "WALDSTEIN",
 ];
 
 const WORD_POOL_SCHWER = [
@@ -1349,7 +1322,7 @@ const WORD_POOL_SCHWER = [
   "ZUSAMMENFASSUNG",
   "WETTBEWERB",
   "WELTMEISTERSCHAFT",
-  "PFLICHTBEWUSST",
+  "PFLICHTBEWUSSTSEIN",
   "DURCHSCHNITT",
   "SCHUTZIMPFUNG",
   "NACHBARSCHAFT",
@@ -1361,7 +1334,7 @@ const WORD_POOL_SCHWER = [
   "GESUNDHEITSWESEN",
   "AUFGABENSTELLUNG",
   "FRIEDENSVERTRAG",
-  "REGENWALDFLASCHE",
+  "REGENWALDGEBIET",
   "WINTERSONNENWENDE",
   "BERUFSERFAHRUNG",
   "SCHWIERIGKEITSGRAD",
@@ -1490,39 +1463,17 @@ const WORD_POOL_SCHWER = [
   "KUNDENZUFRIEDENHEIT",
   "MARKTFORSCHUNG",
   "WERBUNGSKOSTEN",
-  "KARDIOLOGIE",
-  "NEUROLOGIE",
-  "DERMATOLOGIE",
-  "PNEUMOLOGIE",
-  "RHEUMATOLOGIE",
-  "ENDOKRINOLOGIE",
-  "PATHOLOGIE",
-  "ONKOLOGIE",
-  "RADIOLOGIE",
-  "NEPHROLOGIE",
-  "IMMUNOLOGIE",
-  "PHARMAKOLOGIE",
-  "EPIDEMIOLOGIE",
-  "MIKROBIOLOGIE",
-  "HISTOLOGIE",
-  "BLITZABLEITER",
-  "KRANKENSCHWESTER",
   "VERSICHERUNGSBERICHT",
-  "HANDELSPARTNER",
-  "SCHNEELANDSCHAFT",
-  "VERKEHRSMINISTER",
   "DAMPFMASCHINE",
   "WERKSTATTLEITER",
   "FEUERWEHRWAGEN",
   "KIRCHTURMSPITZE",
   "FORSCHUNGSLABOR",
   "SPRECHSTUNDENHILFE",
-  "NATURWISSENSCHAFT",
   "LANDWIRTSCHAFTSBETRIEB",
   "SPORTVERANSTALTUNG",
   "STEINBRUCHARBEITER",
   "HANDWERKSBETRIEB",
-  "VOLKSHOCHSCHULE",
   "BERGLANDSCHAFT",
   "HAFENARBEITER",
   "FORSTWIRTSCHAFT",
@@ -1533,13 +1484,9 @@ const WORD_POOL_SCHWER = [
   "SPRACHVERARBEITUNG",
   "BILDVERARBEITUNG",
   "NACHRICHTENDIENST",
-  "FESTPLATTENGEHALT",
-  "DATENVERARBEITUNG",
   "SCHREINERMEISTERBETRIEB",
   "SCHRIFTSTELLERVERBAND",
-  "WERKZEUGKASTEN",
   "STEINMETZBETRIEB",
-  "DAMPFSCHIFFLINIE",
 ];
 
 function scrambleWord(word: string): string {
