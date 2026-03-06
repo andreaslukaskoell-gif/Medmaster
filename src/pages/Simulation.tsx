@@ -396,12 +396,18 @@ function generateTvQuestions(section: SimSection): UnifiedQuestion[] {
   return questions.slice(0, section.questionCount);
 }
 
+/** MedAT difficulty distribution: 40% leicht, 40% mittel, 20% schwer. */
 function mixDifficulties<T>(
   gen: (n: number, d: "leicht" | "mittel" | "schwer") => T[],
   count: number
 ): T[] {
-  const p = Math.ceil(count / 3);
-  const all = [...gen(p, "leicht"), ...gen(p, "mittel"), ...gen(p, "schwer")].slice(0, count);
+  const nEasy = Math.round(count * 0.4);
+  const nMedium = Math.round(count * 0.4);
+  const nHard = Math.max(1, count - nEasy - nMedium);
+  const all = [...gen(nEasy, "leicht"), ...gen(nMedium, "mittel"), ...gen(nHard, "schwer")].slice(
+    0,
+    count
+  );
   for (let i = all.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [all[i], all[j]] = [all[j], all[i]];
