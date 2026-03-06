@@ -1154,24 +1154,24 @@ function generatePeriodicTask(difficulty: DifficultyLevel, rand: () => number): 
   };
 }
 
-/** MedAT difficulty distribution: 40% leicht, 40% mittel, 20% schwer. */
+/** Difficulty distribution: 20% leicht, 40% mittel, 40% schwer. */
 function zfDifficultyForIndex(i: number): DifficultyLevel {
   const pattern: DifficultyLevel[] = [
     "easy",
-    "easy",
     "medium",
     "medium",
-    "easy",
-    "medium",
-    "easy",
     "hard",
     "medium",
+    "hard",
+    "hard",
+    "medium",
+    "easy",
     "hard",
   ];
   return pattern[i % 10]!;
 }
 
-/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 40/40/20). */
+/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 20/40/40). */
 export function generateSequenceTaskSet(count: number, baseSeed: number): SequenceTask[] {
   const out: SequenceTask[] = [];
   for (let i = 0; i < count; i++) {

@@ -90,12 +90,12 @@ type KffView =
 type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüssigkeit" | "figuren";
 
 /**
- * MedAT difficulty distribution: 40% leicht, 40% mittel, 20% schwer.
+ * Difficulty distribution: 20% leicht, 40% mittel, 40% schwer.
  * Returns the difficulty for task index i in a deterministic repeating pattern.
  */
 function difficultyForIndex<T>(i: number, levels: [T, T, T]): T {
-  // Pattern of 10: 4× easy, 4× medium, 2× hard → 40/40/20
-  const pattern = [0, 0, 1, 1, 0, 1, 0, 2, 1, 2] as const;
+  // Pattern of 10: 2× easy, 4× medium, 4× hard → 20/40/40
+  const pattern = [0, 1, 1, 2, 1, 2, 2, 1, 0, 2] as const;
   return levels[pattern[i % 10]!]!;
 }
 
