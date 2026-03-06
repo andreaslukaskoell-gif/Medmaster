@@ -16,6 +16,7 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const [acceptedAgb, setAcceptedAgb] = useState(false);
   const { signUp, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
@@ -51,9 +52,27 @@ export default function RegisterPage() {
 
   const handleGoogle = async () => {
     setError("");
+    setGoogleLoading(true);
     const { error } = await signInWithGoogle();
-    if (error) setError(translateAuthError(error.message));
+    if (error) {
+      setGoogleLoading(false);
+      setError(translateAuthError(error.message));
+    }
   };
+
+  if (googleLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-600 mx-auto" />
+          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Weiterleitung zu Google...
+          </p>
+          <p className="text-xs text-muted">Du wirst sicher über Google angemeldet</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
