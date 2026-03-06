@@ -88,11 +88,11 @@ const set6: TVTextSet = {
           id: "tv6-1-q4",
           question: "Was ist die Hauptaussage des Textes über das Immunsystem?",
           options: [
-            "Nur Antikörper und Killerzellen.",
-            "Angeborenes System ist überlegen.",
-            "Kann durch Impfungen ersetzt werden.",
+            "Das Immunsystem besteht laut dem Text ausschließlich aus Antikörpern und natürlichen Killerzellen, die gemeinsam alle Erreger bekämpfen.",
+            "Das angeborene Immunsystem ist dem erworbenen in jeder Hinsicht überlegen und macht Impfungen überflüssig.",
+            "Impfungen ersetzen laut dem Text das gesamte Immunsystem und machen eine natürliche Immunantwort unnötig.",
             "Zweistufiges Netzwerk aus angeborenem und erworbenem System; Gedächtnis bildet Impfgrundlage.",
-            "Autoimmunerkrankungen häufigste Folge.",
+            "Die häufigste Folge eines funktionierenden Immunsystems sind laut dem Text Autoimmunerkrankungen, die bei den meisten Menschen auftreten.",
           ],
           correctOption: 3,
           explanation:
@@ -103,10 +103,10 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über B-Lymphozyten und zytotoxische T-Zellen ziehen?",
           options: [
-            "Beide gehören zum angeborenen System.",
-            "Beide sind redundant.",
-            "B-Zellen nur beim Erstkontakt aktiv.",
-            "T-Zellen von B-Zellen produziert.",
+            "Sowohl B-Lymphozyten als auch zytotoxische T-Zellen gehören laut dem Text zum angeborenen Immunsystem und reagieren unspezifisch.",
+            "B-Lymphozyten und zytotoxische T-Zellen erfüllen laut dem Text identische Funktionen und sind daher austauschbar.",
+            "B-Lymphozyten sind laut dem Text nur beim Erstkontakt mit einem Erreger aktiv und spielen danach keine Rolle mehr.",
+            "Zytotoxische T-Zellen werden laut dem Text von B-Lymphozyten produziert und sind deren direkte Abkömmlinge.",
             "Ergänzen sich: B-Lymphozyten markieren, T-Zellen töten infizierte Zellen.",
           ],
           correctOption: 4,
@@ -182,11 +182,11 @@ const set6: TVTextSet = {
           id: "tv6-2-q3",
           question: "Was ist die Hauptaussage des Textes über Stammzellen?",
           options: [
-            "Nur für Knochenmark.",
-            "iPS-Zellen haben embryonale verdrängt.",
+            "Stammzellen werden laut dem Text ausschließlich für Knochenmarktransplantationen eingesetzt und haben keine weiteren Anwendungsbereiche.",
+            "Die Entdeckung der iPS-Zellen hat laut dem Text embryonale Stammzellen vollständig aus der Forschung verdrängt.",
             "Einzigartige Fähigkeiten, großes Potenzial, viele Therapien noch in Erforschung.",
-            "Hauptrisiko Abstoßungsreaktion.",
-            "Adulte Stammzellen wichtiger.",
+            "Das Hauptrisiko der Stammzelltherapie besteht laut dem Text in einer Abstoßungsreaktion des Empfängerorganismus.",
+            "Adulte Stammzellen sind laut dem Text für die Medizin wichtiger als embryonale, da sie ein breiteres Differenzierungspotenzial besitzen.",
           ],
           correctOption: 2,
           explanation:
@@ -196,11 +196,11 @@ const set6: TVTextSet = {
           id: "tv6-2-q4",
           question: "Welche Schlussfolgerung lässt der Text zum Risiko der Stammzelltherapie zu?",
           options: [
-            "Vollständig sicher.",
-            "Einziges Risiko ist Ethik.",
-            "iPS risikofrei.",
+            "Stammzelltherapien sind laut dem Text vollständig sicher und können ohne Risiken am Menschen eingesetzt werden.",
+            "Das einzige vom Text genannte Risiko der Stammzellforschung betrifft ethische Bedenken, nicht medizinische Komplikationen.",
+            "Induzierte pluripotente Stammzellen sind laut dem Text im Gegensatz zu embryonalen Stammzellen völlig risikofrei einsetzbar.",
             "Trotz Tierversuchen Risiko unkontrollierter Zellteilung; weitere Forschung nötig.",
-            "Tumor nur bei adulten Stammzellen.",
+            "Das Risiko einer unkontrollierten Zellteilung und Tumorbildung besteht laut dem Text nur bei adulten Stammzellen, nicht bei embryonalen.",
           ],
           correctOption: 3,
           explanation:
@@ -272,11 +272,11 @@ const set6: TVTextSet = {
           id: "tv6-3-q3",
           question: "Was ist laut dem Text die Hauptaussage über Prionenerkrankungen?",
           options: [
-            "Selten und nur bei Rindern.",
+            "Prionenerkrankungen treten laut dem Text selten auf und betreffen ausschließlich Rinder, nicht den Menschen.",
             "Neuartiger Mechanismus, stets tödlich, lange Inkubationszeit erschwert Diagnose.",
-            "Mit Antibiotika behandelbar.",
-            "Hauptübertragbarkeit Tier zu Mensch.",
-            "Prusiner sofort akzeptiert.",
+            "Prionenerkrankungen sind laut dem Text mit Antibiotika behandelbar, sofern sie frühzeitig diagnostiziert werden.",
+            "Der Text beschreibt die Übertragung vom Tier auf den Menschen als den hauptsächlichen Verbreitungsweg aller Prionenerkrankungen.",
+            "Stanley Prusiners Theorie wurde laut dem Text sofort von der wissenschaftlichen Gemeinschaft akzeptiert und anerkannt.",
           ],
           correctOption: 1,
           explanation:
@@ -287,11 +287,11 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Ausbreitung von PrPSc im Gehirn ziehen?",
           options: [
-            "Über Blutgefäße in alle Organe.",
-            "Immunsystem kann PrPSc eliminieren.",
+            "PrPSc breitet sich laut dem Text über die Blutgefäße in sämtliche Organe des Körpers aus und schädigt nicht nur das Gehirn.",
+            "Das Immunsystem ist laut dem Text in der Lage, PrPSc zu erkennen und zu eliminieren, bevor größere Schäden entstehen.",
             "PrPSc faltet gesunde Prion-Proteine um, selbstverstärkende Kettenreaktion.",
-            "Durch Nervenzellen aktiv transportiert.",
-            "Ausbreitung verlangsamt sich ab kritischer Menge.",
+            "PrPSc wird laut dem Text aktiv von Nervenzellen transportiert und gezielt in benachbarte Hirnregionen weitergeleitet.",
+            "Die Ausbreitung von PrPSc im Gehirn verlangsamt sich laut dem Text ab einer kritischen Menge fehlgefalteter Proteine.",
           ],
           correctOption: 2,
           explanation:
@@ -366,10 +366,10 @@ const set6: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes zur Antibiotikaresistenz?",
           options: [
             "Globale Bedrohung durch unsachgemäßen Einsatz; ohne Gegenmaßnahmen drastisch zunehmend.",
-            "Gelöstes Problem.",
-            "Nur MRSA gefährlich.",
-            "Antibiotika nicht mehr einsetzen.",
-            "Nur Landwirtschaft Verursacher.",
+            "Das Problem der Antibiotikaresistenz ist laut dem Text durch die Entwicklung neuer Medikamente bereits vollständig gelöst worden.",
+            "Der Text beschreibt ausschließlich MRSA als gefährlichen resistenten Erreger, während andere Resistenzen klinisch unbedeutend seien.",
+            "Der Text empfiehlt, Antibiotika grundsätzlich nicht mehr einzusetzen, da sie mehr Schaden als Nutzen verursachen.",
+            "Der prophylaktische Einsatz in der Landwirtschaft ist laut dem Text die einzige Ursache für die Entstehung von Antibiotikaresistenzen.",
           ],
           correctOption: 0,
           explanation: "Der Text nennt Antibiotikaresistenz als globale Bedrohung.",
@@ -379,11 +379,11 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt der Text zum Selektionsdruck durch Antibiotika zu?",
           options: [
-            "Antibiotika töten alle Bakterien.",
+            "Antibiotika töten laut dem Text ausnahmslos alle Bakterien ab, unabhängig davon, ob diese resistent sind oder nicht.",
             "Selektionsdruck begünstigt resistente Stämme, da empfindliche absterben und resistente sich vermehren.",
-            "Resistente werden langfristig empfindlich.",
-            "Nur in Landwirtschaft wirksam.",
-            "Nur durch horizontalen Gentransfer.",
+            "Resistente Bakterien werden laut dem Text langfristig wieder empfindlich gegenüber Antibiotika, wenn der Selektionsdruck nachlässt.",
+            "Der Selektionsdruck durch Antibiotika ist laut dem Text nur in der Landwirtschaft wirksam, nicht in der Humanmedizin.",
+            "Die Resistenzentwicklung erfolgt laut dem Text ausschließlich durch horizontalen Gentransfer und niemals durch Mutation.",
           ],
           correctOption: 1,
           explanation:
@@ -472,10 +472,10 @@ const set6: TVTextSet = {
           question: "Welche Schlussfolgerung lässt sich über den Einsatz von Ciclosporin ziehen?",
           options: [
             "Ciclosporin ermöglicht Transplantationen durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme mit erhöhtem Infektions- und Krebsrisiko.",
-            "Ciclosporin löst Abstoßung vollständig ohne Nebenwirkungen.",
-            "Ciclosporin nur kurzfristig.",
-            "Unterdrückt gesamtes Immunsystem.",
-            "Bereits 1954 eingesetzt.",
+            "Ciclosporin löst laut dem Text das Abstoßungsproblem vollständig und verursacht dabei keinerlei Nebenwirkungen.",
+            "Ciclosporin muss laut dem Text nur kurzfristig nach der Transplantation eingenommen werden und kann danach abgesetzt werden.",
+            "Ciclosporin unterdrückt laut dem Text das gesamte Immunsystem vollständig, weshalb es nur als letzte Option eingesetzt wird.",
+            "Ciclosporin wurde laut dem Text bereits bei der ersten Nierentransplantation im Jahr 1954 erfolgreich eingesetzt.",
           ],
           correctOption: 0,
           explanation:
@@ -568,10 +568,10 @@ const set7: TVTextSet = {
           id: "tv7-1-q4",
           question: "Was ist die Hauptaussage des Textes über die Photosynthese?",
           options: [
-            "Nur Sauerstoffproduktion.",
-            "Chlorophyll a und b austauschbar.",
-            "RuBisCO wichtigstes Pigment.",
-            "Nur C4 bei Hitze möglich.",
+            "Die Photosynthese dient laut dem Text ausschließlich der Sauerstoffproduktion und spielt keine Rolle bei der Bildung organischer Verbindungen.",
+            "Chlorophyll a und Chlorophyll b sind laut dem Text funktionell austauschbar und absorbieren dieselben Wellenlängen des Lichts.",
+            "RuBisCO wird im Text als das wichtigste Pigment der Lichtreaktion beschrieben, das Lichtenergie direkt absorbiert.",
+            "Photosynthese ist laut dem Text bei hohen Temperaturen nur über den C4-Weg möglich, da der Calvin-Zyklus dann vollständig ausfällt.",
             "Zweiphasiger Prozess; Faktoren wie Temperatur und CO2 beeinflussen Effizienz.",
           ],
           correctOption: 4,
@@ -583,10 +583,10 @@ const set7: TVTextSet = {
             "Welche Schlussfolgerung lässt sich über den Vorteil der C4-Photosynthese ziehen?",
           options: [
             "C4-Photosynthese ermöglicht effizientere CO2-Fixierung bei Hitze und umgeht Photosyntheserückgang durch Spaltöffnungsschluss.",
-            "C4 verzichtet auf Calvin-Zyklus.",
-            "C4 ohne Spaltöffnungen.",
-            "C4 mehr Sauerstoff ohne RuBisCO.",
-            "C4 am effizientesten in gemäßigten Zonen.",
+            "C4-Pflanzen verzichten laut dem Text vollständig auf den Calvin-Zyklus und nutzen einen alternativen Stoffwechselweg zur Glucosebildung.",
+            "C4-Pflanzen besitzen laut dem Text keine Spaltöffnungen und nehmen CO2 stattdessen direkt über die Blattoberfläche auf.",
+            "C4-Pflanzen produzieren laut dem Text mehr Sauerstoff als andere Pflanzen, da sie das Enzym RuBisCO nicht benötigen.",
+            "Die C4-Photosynthese ist laut dem Text am effizientesten in gemäßigten Klimazonen und bietet in den Tropen keinen Vorteil.",
           ],
           correctOption: 0,
           explanation: "C4-Pflanzen ermöglichen effizientere CO2-Fixierung bei Hitze.",
@@ -660,11 +660,11 @@ const set7: TVTextSet = {
           id: "tv7-2-q3",
           question: "Was ist die Hauptaussage des Textes zur Ozeanversäuerung?",
           options: [
-            "Nur Korallenriffe betroffen.",
-            "Kalkschalenbildner nicht gefährdet.",
-            "Ozeane nehmen unbegrenzt CO2 auf.",
+            "Die Ozeanversauerung betrifft laut dem Text ausschließlich Korallenriffe und hat keine Auswirkungen auf andere marine Organismen.",
+            "Organismen mit Kalkschalen oder Kalkskeletten sind laut dem Text durch die Ozeanversauerung nicht gefährdet, da sie sich anpassen können.",
+            "Die Ozeane können laut dem Text unbegrenzt CO2 aufnehmen, ohne dass negative Folgen für marine Ökosysteme entstehen.",
             "CO2-Aufnahme führt zur Versauerung, bedroht marine Ökosysteme und menschliche Lebensgrundlage.",
-            "Natürlicher Vorgang.",
+            "Die Ozeanversauerung ist laut dem Text ein natürlicher Vorgang, der ohne menschlichen Einfluss in gleicher Geschwindigkeit ablaufen würde.",
           ],
           correctOption: 3,
           explanation:
@@ -675,10 +675,10 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die doppelte Bedrohung von Korallenriffen ziehen?",
           options: [
-            "Entweder Versauerung oder Erwärmung, nie beide.",
-            "Korallenbleiche weniger gefährlich.",
-            "Korallen passen sich rasch an.",
-            "Nur tropisch oder polar betroffen.",
+            "Korallenriffe sind laut dem Text entweder von Versauerung oder von Erwärmung betroffen, wobei beide Faktoren nie gleichzeitig auftreten.",
+            "Die Korallenbleiche durch steigende Wassertemperaturen ist laut dem Text weniger gefährlich als die Versauerung und daher vernachlässigbar.",
+            "Korallen passen sich laut dem Text rasch an veränderte Umweltbedingungen an und sind daher langfristig nicht bedroht.",
+            "Die doppelte Bedrohung betrifft laut dem Text nur Korallenriffe in tropischen oder polaren Gebieten, nicht in gemäßigten Zonen.",
             "Korallenriffe durch Versauerung und Meereswärmung gleichzeitig bedroht; gefährdet Lebensraum für ein Viertel mariner Arten.",
           ],
           correctOption: 4,
@@ -751,11 +751,11 @@ const set7: TVTextSet = {
           id: "tv7-3-q3",
           question: "Was ist die Hauptaussage des Textes über Vulkanismus und Klima?",
           options: [
-            "Hauptursache aktuellen Klimawandels.",
-            "CO2 wichtiger als Sulfataerosole.",
+            "Vulkanausbrüche sind laut dem Text die Hauptursache des aktuellen Klimawandels und übertreffen die menschengemachten Emissionen deutlich.",
+            "Das von Vulkanen freigesetzte CO2 hat laut dem Text einen größeren klimatischen Einfluss als die Sulfataerosole.",
             "Kühlend durch Sulfataerosole kurzfristig, erwärmend durch CO2 langfristig, negativ auf Ozonschicht.",
-            "Tambora ohne Auswirkung.",
-            "Sulfataerosole wirken jahrzehntelang.",
+            "Der Ausbruch des Tambora im Jahr 1815 hatte laut dem Text keine messbaren Auswirkungen auf das globale Klima.",
+            "Sulfataerosole verbleiben laut dem Text jahrzehntelang in der Stratosphäre und wirken über längere Zeiträume kühlend.",
           ],
           correctOption: 2,
           explanation:
@@ -766,11 +766,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Vergleich von Tambora und Pinatubo ziehen?",
           options: [
-            "Tambora keine Hungersnot.",
-            "Pinatubo stärker als Tambora.",
-            "Beide ohne messbaren Einfluss.",
+            "Der Ausbruch des Tambora führte laut dem Text trotz des Temperaturrückgangs nicht zu Hungersnöten in Europa.",
+            "Der Ausbruch des Pinatubo hatte laut dem Text einen stärkeren Kühlungseffekt als der Tambora-Ausbruch von 1815.",
+            "Beide Vulkanausbrüche hatten laut dem Text keinen messbaren Einfluss auf die globale Durchschnittstemperatur.",
             "Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
-            "Inselvulkane generell stärker.",
+            "Vulkane auf Inseln erzeugen laut dem Text generell stärkere Eruptionen als Vulkane auf Kontinenten.",
           ],
           correctOption: 3,
           explanation:
@@ -845,11 +845,11 @@ const set7: TVTextSet = {
           id: "tv7-4-q3",
           question: "Was ist die Hauptaussage des Textes über genetische Drift?",
           options: [
-            "Drift ist dasselbe wie natürliche Selektion.",
+            "Genetische Drift beschreibt laut dem Text denselben Mechanismus wie natürliche Selektion und bevorzugt vorteilhafte Allele.",
             "Zufälliger Evolutionsmechanismus in kleinen Populationen; Gründer- und Flaschenhalseffekt führen zu Genverarmung.",
-            "Nur in Inselpopulationen relevant.",
-            "Begünstigt angepasste Allele.",
-            "Flaschenhalseffekt einziger Mechanismus.",
+            "Genetische Drift ist laut dem Text nur in Inselpopulationen relevant und spielt auf Kontinenten keine Rolle.",
+            "Genetische Drift begünstigt laut dem Text gezielt diejenigen Allele, die am besten an die Umwelt angepasst sind.",
+            "Der Flaschenhalseffekt ist laut dem Text der einzige Mechanismus, durch den genetische Drift wirksam werden kann.",
           ],
           correctOption: 1,
           explanation:
@@ -860,11 +860,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Krankheitsanfälligkeit der Geparden ziehen?",
           options: [
-            "Körpergröße als Ursache.",
-            "Bejagung veränderte Gene.",
+            "Die Krankheitsanfälligkeit der Geparden ist laut dem Text auf ihre große Körpergröße zurückzuführen, die das Immunsystem belastet.",
+            "Durch die Bejagung wurden laut dem Text gezielt Gene aus der Gepardenpopulation entfernt, die für Krankheitsresistenz zuständig waren.",
             "Geringe genetische Diversität durch Flaschenhals macht Geparden anfälliger und weniger anpassungsfähig.",
-            "Natürliche Selektion als Ursache.",
-            "Nur anfällig für Viren.",
+            "Die natürliche Selektion hat laut dem Text diejenigen Geparden bevorzugt, die anfälliger für Krankheiten sind.",
+            "Geparden sind laut dem Text aufgrund ihres Flaschenhalses ausschließlich für Virusinfektionen anfällig, nicht für bakterielle Erreger.",
           ],
           correctOption: 2,
           explanation:
@@ -952,11 +952,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die ökologische Rolle von Parasiten ziehen?",
           options: [
-            "Parasiten nur schädlich.",
+            "Parasiten sind laut dem Text ausschließlich schädlich für Ökosysteme und haben keinerlei positive Funktion in der Natur.",
             "Trotz Schädigung des Wirts wichtig für Ökosysteme; regulieren Populationen und fördern Biodiversität.",
-            "Kein Einfluss auf Populationsdynamik.",
-            "Parasitismus Übergangsform zwischen Kommensalismus und Mutualismus.",
-            "Parasiten profitieren langfristig nicht.",
+            "Parasiten haben laut dem Text keinen Einfluss auf die Populationsdynamik ihrer Wirtsarten und spielen ökologisch keine Rolle.",
+            "Parasitismus ist laut dem Text eine Übergangsform, die sich im Laufe der Evolution stets zu Kommensalismus oder Mutualismus entwickelt.",
+            "Parasiten profitieren laut dem Text langfristig nicht von ihren Wirten, da sie diese unweigerlich abtöten.",
           ],
           correctOption: 1,
           explanation:
@@ -1038,10 +1038,10 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Entfernung von Neurotransmittern ziehen?",
           options: [
-            "Glutamat und GABA im Gleichgewicht.",
-            "Alle Neurotransmitter werden nach Signal abgebaut.",
-            "Aktionspotenzial wird in Vesikel gespeichert.",
-            "Serotonin reguliert die Wiederaufnahme aller Neurotransmitter.",
+            "Die Entfernung von Neurotransmittern aus dem synaptischen Spalt dient laut dem Text primär dazu, das Gleichgewicht zwischen Glutamat und GABA aufrechtzuerhalten.",
+            "Alle Neurotransmitter werden laut dem Text nach jeder Signalübertragung vollständig enzymatisch abgebaut und müssen neu synthetisiert werden.",
+            "Das Aktionspotenzial wird laut dem Text nach der Signalübertragung in den synaptischen Vesikeln gespeichert und bei Bedarf erneut freigesetzt.",
+            "Serotonin reguliert laut dem Text als übergeordneter Botenstoff die Wiederaufnahme aller anderen Neurotransmitter in die Zelle.",
             "Neurotransmitter werden durch enzymatischen Abbau, Wiederaufnahme oder Diffusion entfernt.",
           ],
           correctOption: 4,
@@ -1053,10 +1053,10 @@ const set8: TVTextSet = {
           question: "Was ist die Hauptaussage des Textes über Neurotransmitter?",
           options: [
             "Chemische Botenstoffe übertragen Signale an Synapsen; Ungleichgewichte führen zu neuropsychiatrischen Erkrankungen.",
-            "Neurotransmitter-Ungleichgewichte sind selten und klinisch irrelevant.",
-            "Einziges Problem ist GABA-Mangel.",
-            "Glutamat ist der einzige Neurotransmitter im Gehirn.",
-            "Dopamin hat keine Auswirkungen auf Bewegung.",
+            "Ungleichgewichte in der Konzentration von Neurotransmittern treten laut dem Text äußerst selten auf und haben keine klinische Bedeutung.",
+            "Das einzige im Text beschriebene Problem ist ein Mangel an GABA, der zu sämtlichen neuropsychiatrischen Erkrankungen führt.",
+            "Glutamat ist laut dem Text der einzige im Gehirn vorkommende Neurotransmitter und übernimmt sowohl erregende als auch hemmende Funktionen.",
+            "Dopamin hat laut dem Text keine Auswirkungen auf motorische Funktionen und spielt ausschließlich bei der Stimmungsregulation eine Rolle.",
           ],
           correctOption: 0,
           explanation:
@@ -1509,10 +1509,10 @@ const set9: TVTextSet = {
           question:
             "Was ist die Hauptaussage des Textes über Klimawandel und menschliche Gesundheit?",
           options: [
-            "Klimawandel betrifft nur tropische Regionen.",
-            "Nur Hitzewellen sind relevant.",
-            "Nur ältere Menschen sind durch Klimawandel gefährdet.",
-            "Klimawandel hat keine Auswirkungen auf Infektionskrankheiten.",
+            "Die gesundheitlichen Folgen des Klimawandels betreffen laut dem Text ausschließlich tropische Regionen und sind für gemäßigte Breiten irrelevant.",
+            "Der Text beschreibt Hitzewellen als einzige gesundheitliche Folge des Klimawandels, während andere Auswirkungen nicht thematisiert werden.",
+            "Die gesundheitlichen Risiken des Klimawandels betreffen laut dem Text nur ältere Menschen, während Kinder und Erwachsene nicht gefährdet sind.",
+            "Der Klimawandel hat laut dem Text keine Auswirkungen auf die Verbreitung von Infektionskrankheiten oder deren Überträger.",
             "Der Klimawandel gefährdet die Gesundheit direkt durch Hitzestress und indirekt durch Ausbreitung von Krankheiten, Luftqualitätsverschlechterung und psychische Folgen.",
           ],
           correctOption: 4,
@@ -1706,11 +1706,11 @@ const set9: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Behandlung stressbedingter Immunschwäche ziehen?",
           options: [
-            "Nur Cortisol vermittelt Stress-Immunverbindung.",
-            "Chronischer Stress hat keinen Einfluss auf Impfansprechen.",
-            "Achtsamkeit hat keinen Einfluss auf das Immunsystem.",
+            "Die Verbindung zwischen Stress und Immunsystem wird laut dem Text ausschließlich über Cortisol vermittelt, ohne Beteiligung des autonomen Nervensystems.",
+            "Chronischer psychischer Stress hat laut dem Text keinen messbaren Einfluss auf das Ansprechen auf Impfungen.",
+            "Achtsamkeitsmeditation und ähnliche Interventionen haben laut dem Text keinen nachweisbaren Einfluss auf die Immunfunktion.",
             "Da chronischer Stress über HPA-Achse und autonomes Nervensystem das Immunsystem schwächt, ist ein ganzheitlicher Behandlungsansatz sinnvoll.",
-            "Das autonome Nervensystem ist nicht mit lymphatischen Organen verbunden.",
+            "Das autonome Nervensystem ist laut dem Text nicht direkt mit lymphatischen Organen wie Milz und Lymphknoten verbunden.",
           ],
           correctOption: 3,
           explanation:
