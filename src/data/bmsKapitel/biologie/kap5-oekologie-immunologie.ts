@@ -487,8 +487,6 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
     {
       id: "bio-10-05",
       title: "Ökosysteme — Nahrungsketten, Stoffkreisläufe & Energiefluss",
-      imageUrl: "/images/bms/bio-lymphsystem.jpg",
-      imageCaption: "Abb.: Stoffkreisläufe in Ökosystemen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Nahrungskette",
         "Nahrungsnetz",

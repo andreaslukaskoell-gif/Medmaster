@@ -1059,8 +1059,6 @@ Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik (Erbgutanalys
     {
       id: "bio-4-00",
       title: "Gametogenese — Spermatogenese und Oogenese",
-      imageUrl: "/images/bms/bio-mitose-phasen.jpg",
-      imageCaption: "Abb.: Zellteilung bei der Gametogenese (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gametogenese",
         "Spermatogenese",
@@ -1443,9 +1441,6 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
     {
       id: "bio-4-02",
       title: "Gastrulation und die drei Keimblätter",
-      imageUrl: "/images/bms/bio-haematopoese.jpg",
-      imageCaption:
-        "Abb.: Differenzierung von Zellen während der Embryonalentwicklung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gastrulation",
         "Ektoderm",
@@ -1879,8 +1874,6 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
     {
       id: "bio-4-04",
       title: "Embryonalhüllen und Plazenta",
-      imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
-      imageCaption: "Abb.: Chromosomenpaare bei der embryonalen Zellteilung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Plazenta",
         "Amnion",

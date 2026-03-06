@@ -1410,9 +1410,6 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
     {
       id: "bio-4-10",
       title: "Hardy-Weinberg-Gleichgewicht",
-      imageUrl: "/images/bms/bio-haematopoese.jpg",
-      imageCaption:
-        "Abb.: Hämatopoese als Beispiel für Genexpression in Populationen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Hardy-Weinberg",
         "Allelfrequenz",
