@@ -40,10 +40,16 @@ import {
 } from "@/data/kffGenerators";
 import type { AllergyCard } from "@/data/kffGenerators";
 import { OFFICIAL_ZF_EXAMPLES, generateSequenceTaskSet } from "@/data/kffZahlenfolgenMedAT";
-import { figurenAufgaben } from "@/data/figurenGenerator";
-import type { FZAufgabe } from "@/data/figurenGenerator";
 import { OFFICIAL_IMPLICATION_EXAMPLES, implikationenTasks } from "@/data/kffImplikationen";
-import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
+import {
+  generateFigurenTrainingSet,
+  polygonToPath,
+  polygonToPathScaledToViewBox,
+  layoutPiecesCompact,
+  isOptionE,
+  FIGURE_SVG_ASPECT_PROPS,
+  type FigureAssembleTask,
+} from "@/data/kffFigurenZusammensetzenMedAT";
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
@@ -173,7 +179,7 @@ interface UnifiedQuestion {
   correctLetter?: string;
   correctWord?: string;
   // KFF Figuren
-  figurenAufgabe?: FZAufgabe;
+  figurenAufgabe?: FigureAssembleTask;
 }
 
 // Time tracking per section
@@ -492,7 +498,25 @@ function generateWortflüssigkeitQuestions(section: SimSection): UnifiedQuestion
 }
 
 function generateFigurenQuestions(section: SimSection): UnifiedQuestion[] {
-  const pool = shuffle([...figurenAufgaben]).slice(0, section.questionCount);
+  const diffPattern: ("easy" | "medium" | "hard")[] = [
+    "easy",
+    "medium",
+    "medium",
+    "hard",
+    "medium",
+    "hard",
+    "hard",
+    "medium",
+    "easy",
+    "hard",
+  ];
+  const seed = Date.now();
+  const pool: FigureAssembleTask[] = [];
+  for (let i = 0; i < section.questionCount; i++) {
+    const diff = diffPattern[i % 10];
+    const t = generateFigurenTrainingSet(1, diff, seed + i * 7919);
+    if (t.length > 0) pool.push(t[0]);
+  }
   return pool.map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -622,8 +646,10 @@ function isQuestionCorrect(q: UnifiedQuestion, answer: string): boolean {
       return answer === String(q.sylCorrectOption);
     case "kff-wortfluessigkeit":
       return answer === q.correctLetter;
-    case "kff-figuren":
-      return answer === q.figurenAufgabe?.correctOptionId;
+    case "kff-figuren": {
+      const FZ_LABELS = ["A", "B", "C", "D", "E"];
+      return answer === FZ_LABELS[q.figurenAufgabe?.correctIndex ?? -1];
+    }
     default:
       return false;
   }
@@ -648,8 +674,10 @@ function getCorrectAnswerDisplay(q: UnifiedQuestion): string {
       return q.correctLetter === "-"
         ? `E – Keine der Antworten (${q.correctWord})`
         : `${q.correctLetter} (${q.correctWord})`;
-    case "kff-figuren":
-      return `Option ${q.figurenAufgabe?.correctOptionId?.toUpperCase()}`;
+    case "kff-figuren": {
+      const FZ_LABELS2 = ["A", "B", "C", "D", "E"];
+      return `Option ${FZ_LABELS2[q.figurenAufgabe?.correctIndex ?? 0]}`;
+    }
     default:
       return "";
   }
@@ -1954,34 +1982,38 @@ export default function Simulation() {
   const renderFiguren = () => {
     const aufgabe = q.figurenAufgabe;
     if (!aufgabe) return null;
+    const FZ_FILL = "#7EC8E3";
+    const FZ_OPT_LABELS = ["A", "B", "C", "D", "E"];
+    const { viewBox: piecesVB, paths: piecePaths } = layoutPiecesCompact(aufgabe.pieces);
     return (
       <Card className="border-gray-200 dark:border-gray-700">
         <CardContent className="p-6">
           <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
             Puzzleteile
           </p>
-          <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg mb-6">
-            {aufgabe.pieces.map((piece, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 shrink-0"
-              >
-                <svg viewBox="0 0 200 200" {...FIGURE_SVG_ASPECT_PROPS} className="w-full h-full">
-                  <path d={piece.path} fill={piece.fill} stroke="none" />
-                </svg>
-              </div>
-            ))}
+          <div className="flex justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg mb-6">
+            <svg
+              viewBox={piecesVB}
+              {...FIGURE_SVG_ASPECT_PROPS}
+              className="w-full max-w-md h-24 sm:h-28"
+            >
+              {piecePaths.map((p, i) => (
+                <path key={i} d={p.d} fill={FZ_FILL} stroke="none" transform={p.transform} />
+              ))}
+            </svg>
           </div>
           <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
             Welche Figur entsteht aus den Teilen?
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-            {aufgabe.options.map((opt) => {
-              const selected = answers[q.id] === opt.id;
+            {aufgabe.options.map((opt, oi) => {
+              const label = FZ_OPT_LABELS[oi];
+              const selected = answers[q.id] === label;
+              const optE = isOptionE(opt);
               return (
                 <button
-                  key={opt.id}
-                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
+                  key={oi}
+                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: label }))}
                   className={`flex flex-col items-center justify-center min-h-[100px] p-4 rounded-lg border-2 transition-colors cursor-pointer ${
                     selected
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20"
@@ -1989,19 +2021,25 @@ export default function Simulation() {
                   }`}
                 >
                   <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">
-                    {opt.id.toUpperCase()}
+                    {label}
                   </span>
-                  {opt.text ? (
-                    <span className="text-xs text-center text-muted leading-tight">{opt.text}</span>
+                  {optE ? (
+                    <span className="text-xs text-center text-muted leading-tight">
+                      Keine der Figuren ist richtig
+                    </span>
                   ) : (
                     <svg
                       viewBox="0 0 200 200"
                       {...FIGURE_SVG_ASPECT_PROPS}
                       className="w-full max-w-[72px] max-h-[72px] flex-1"
                     >
-                      {opt.paths.map((p, pi) => (
-                        <path key={pi} d={p} fill={opt.fill} stroke="none" />
-                      ))}
+                      <path
+                        d={polygonToPathScaledToViewBox(
+                          opt as { points: { x: number; y: number }[] }
+                        )}
+                        fill={FZ_FILL}
+                        stroke="none"
+                      />
                     </svg>
                   )}
                 </button>
