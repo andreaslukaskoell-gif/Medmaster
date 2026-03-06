@@ -12,6 +12,7 @@ export const chemKapAnorganisch: Kapitel = {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
       imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageCaption: "Abb.: Wasserstoffbrücken und Eigenschaften des Wassers (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dipolmoment",
         "Wasserstoffbrücken",
@@ -884,6 +885,7 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
       id: "ch-10-01",
       title: "Säure-Base-Definitionen und pH-Wert",
       imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption: "Abb.: pH-Skala von sauer bis basisch (OpenStax, CC BY 4.0)",
       stichworte: [
         "Arrhenius-Definition",
         "Brønsted-Lowry Protonendonor",
@@ -1185,6 +1187,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
       id: "ch-10-02",
       title: "Starke und schwache Säuren/Basen – Ka, Kb, pKa",
       imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption: "Abb.: Stärke von Säuren und Basen im Vergleich (OpenStax, CC BY 4.0)",
       stichworte: [
         "Starke Säure vollständige Dissoziation",
         "Schwache Säure Gleichgewicht",
@@ -1526,6 +1529,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
       id: "ch-10-03",
       title: "Puffersysteme und Henderson-Hasselbalch",
       imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption: "Abb.: Pufferwirkung im biologischen pH-Bereich (OpenStax, CC BY 4.0)",
       stichworte: [
         "Henderson-Hasselbalch-Gleichung",
         "Pufferbereich pKa ± 1",
@@ -2197,6 +2201,7 @@ Der normale Blut-pH liegt bei **7,35-7,45**. Vier primäre Störungen sind zu un
       id: "ch-11-01",
       title: "Oxidation und Reduktion — Grundlagen",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Elektronenübertragung bei Redoxreaktionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "OIL RIG Elektronentransfer",
         "Oxidationszahlen",

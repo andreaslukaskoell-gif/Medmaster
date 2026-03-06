@@ -12,6 +12,8 @@ export const bioKapGenetik: Kapitel = {
       id: "bio-4-01",
       title: "DNA, Gene und Chromosomen",
       imageUrl: "/images/bms/bio-dna-makrostruktur.jpg",
+      imageCaption:
+        "Abb.: DNA-Doppelhelix mit Basenpaaren und Zucker-Phosphat-Rückgrat (OpenStax, CC BY 4.0)",
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
       content: `## DNA: Träger der Erbinformation
 
@@ -148,6 +150,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
       id: "bio-4-02",
       title: "Chromosomen: Aufbau und Karyotyp",
       imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
+      imageCaption: "Abb.: Homologe Chromosomenpaare im Karyogramm (OpenStax, CC BY 4.0)",
       stichworte: [
         "Zentromer",
         "Telomere",
@@ -279,6 +282,7 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
       id: "bio-4-03",
       title: "Zellzyklus, Mitose und Meiose",
       imageUrl: "/images/bms/bio-zellzyklus.jpg",
+      imageCaption: "Abb.: Phasen des Zellzyklus mit Interphase und M-Phase (OpenStax, CC BY 4.0)",
       stichworte: [
         "Mitose",
         "Meiose",
@@ -450,6 +454,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
       id: "bio-4-04",
       title: "Mendelsche Regeln",
       imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
+      imageCaption: "Abb.: Vererbung homologer Chromosomen nach Mendel (OpenStax, CC BY 4.0)",
       stichworte: [
         "Uniformitätsregel",
         "Spaltungsregel",
@@ -918,6 +923,8 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
       imageUrl: "/images/bms/bio-blutgruppen.jpg",
+      imageCaption:
+        "Abb.: AB0-Blutgruppensystem mit Antigenen und Antikörpern (OpenStax, CC BY 4.0)",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `## Multiple Allelie und das AB0-System
 
@@ -1083,6 +1090,7 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
       id: "bio-4-08",
       title: "Mutationen",
       imageUrl: "/images/bms/bio-dna-replikation.jpg",
+      imageCaption: "Abb.: DNA-Replikation mit Leit- und Folgestrang (OpenStax, CC BY 4.0)",
       stichworte: [
         "Genmutation",
         "Chromosomenmutation",
@@ -1216,6 +1224,8 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
       id: "bio-4-09",
       title: "Von der DNA zum Merkmal: Genexpression",
       imageUrl: "/images/bms/bio-transkription-translation.jpg",
+      imageCaption:
+        "Abb.: Vom Gen zum Protein — Transkription und Translation (OpenStax, CC BY 4.0)",
       stichworte: [
         "Genexpression",
         "Transkription",
@@ -1401,6 +1411,8 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
       id: "bio-4-10",
       title: "Hardy-Weinberg-Gleichgewicht",
       imageUrl: "/images/bms/bio-haematopoese.jpg",
+      imageCaption:
+        "Abb.: Hämatopoese als Beispiel für Genexpression in Populationen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Hardy-Weinberg",
         "Allelfrequenz",

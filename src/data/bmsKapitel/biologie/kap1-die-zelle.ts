@@ -14,6 +14,7 @@ export const bioKap1: Kapitel = {
       id: "bio-1-01",
       title: "Kennzeichen des Lebens und Systembiologie",
       imageUrl: "/images/bms/bio-tierzelle.jpg",
+      imageCaption: "Abb.: Aufbau einer tierischen Zelle mit Organellen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kennzeichen des Lebens",
         "Stoffwechsel",
@@ -248,6 +249,8 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       id: "bio-1-02",
       title: "Prokaryoten vs. Eukaryoten",
       imageUrl: "/images/bms/bio-tierzelle.jpg",
+      imageCaption:
+        "Abb.: Vergleich prokaryotischer und eukaryotischer Zellen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Prokaryoten",
         "Eukaryoten",
@@ -484,6 +487,7 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
       id: "bio-1-03",
       title: "Zellmembran — Aufbau, Barriere und Identität",
       imageUrl: "/images/bms/bio-zellmembran-bilayer.jpg",
+      imageCaption: "Abb.: Phospholipid-Doppelschicht der Zellmembran (OpenStax, CC BY 4.0)",
       stichworte: [
         "Flüssig-Mosaik-Modell",
         "Phospholipid-Doppelschicht",
@@ -698,6 +702,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
       id: "bio-1-04",
       title: "Membrantransport — passiv und aktiv",
       imageUrl: "/images/bms/bio-diffusion.jpg",
+      imageCaption: "Abb.: Diffusion durch eine semipermeable Membran (OpenStax, CC BY 4.0)",
       stichworte: [
         "Passiver Transport",
         "Einfache Diffusion",
@@ -871,6 +876,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       id: "bio-1-05",
       title: "Zellorganellen — Funktion und medizinische Relevanz",
       imageUrl: "/images/bms/bio-mitochondrium.jpg",
+      imageCaption: "Abb.: Aufbau eines Mitochondriums mit Doppelmembran (OpenStax, CC BY 4.0)",
       stichworte: [
         "Sekretorischer Weg",
         "rER",
@@ -1130,6 +1136,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
       id: "bio-1-06",
       title: "Der Zellkern — Steuerzentrale der Zelle",
       imageUrl: "/images/bms/bio-zellkern.jpg",
+      imageCaption: "Abb.: Zellkern mit Kernhülle, Poren und Nukleolus (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kernporen",
         "Chromatin",
@@ -1363,6 +1370,7 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
       id: "bio-1-07",
       title: "Zellteilung — Mitose und Meiose",
       imageUrl: "/images/bms/bio-mitose-phasen.jpg",
+      imageCaption: "Abb.: Phasen der Mitose von Prophase bis Telophase (OpenStax, CC BY 4.0)",
       stichworte: [
         "Mitose",
         "Meiose",
@@ -1616,6 +1624,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
       id: "bio-1-08",
       title: "Energiestoffwechsel — Glykolyse, Citratzyklus & Atmungskette",
       imageUrl: "/images/bms/bio-mitochondrium.jpg",
+      imageCaption: "Abb.: Mitochondrium als Ort der Zellatmung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Glykolyse",
         "Citratzyklus",

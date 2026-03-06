@@ -488,6 +488,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
       id: "bio-10-05",
       title: "Ökosysteme — Nahrungsketten, Stoffkreisläufe & Energiefluss",
       imageUrl: "/images/bms/bio-lymphsystem.jpg",
+      imageCaption: "Abb.: Stoffkreisläufe in Ökosystemen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Nahrungskette",
         "Nahrungsnetz",
@@ -839,6 +840,8 @@ Zwei grundlegende Lebensstrategien:
       id: "bio-11-01",
       title: "Antikörper — Aufbau, Klassen und Effektorfunktionen",
       imageUrl: "/images/bms/bio-immunantwort.jpg",
+      imageCaption:
+        "Abb.: Antikörperstruktur mit schweren und leichten Ketten (OpenStax, CC BY 4.0)",
       stichworte: [
         "IgG",
         "IgA",
@@ -1030,6 +1033,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       id: "bio-11-02",
       title: "Antikörper-Gene — V(D)J-Rekombination und Diversität",
       imageUrl: "/images/bms/bio-antigene.jpg",
+      imageCaption: "Abb.: Antigenpräsentation und Antikörpervielfalt (OpenStax, CC BY 4.0)",
       stichworte: [
         "Somatische Rekombination",
         "V(D)J-Rekombination",
@@ -1191,6 +1195,8 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
       imageUrl: "/images/bms/bio-antigene.jpg",
+      imageCaption:
+        "Abb.: Blutgruppenantigene auf der Erythrozytenoberfläche (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## AB0-Blutgruppensystem — Genetische Grundlagen
 
@@ -1369,6 +1375,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       id: "bio-11-04",
       title: "Rhesusfaktor — Vererbung, Inkompatibilität und Anti-D",
       imageUrl: "/images/bms/bio-blutgruppen.jpg",
+      imageCaption: "Abb.: Rhesusfaktor und Blutgruppenvererbung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Rh-positiv",
         "Rh-negativ",

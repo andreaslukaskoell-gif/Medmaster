@@ -910,6 +910,7 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
       id: "ch-4-01",
       title: "Aggregatzustände und molekulare Basis",
       imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageCaption: "Abb.: Die drei Aggregatzustände auf molekularer Ebene (OpenStax, CC BY 4.0)",
       stichworte: [
         "Aggregatzustände",
         "Kristalltypen",
@@ -1218,6 +1219,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
       imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageCaption: "Abb.: Phasenübergänge und ihre Energetik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Phasenübergänge",
         "Schmelzenthalpie",

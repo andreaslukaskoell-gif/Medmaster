@@ -16,6 +16,8 @@ export const chemKapAtom: Kapitel = {
       id: "ch-1-01",
       title: "Atommodelle und Atomaufbau",
       imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageCaption:
+        "Abb.: Historische Atommodelle von Dalton bis zum Orbitalmodell (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommodell",
         "Thomson",
@@ -333,6 +335,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
       id: "ch-1-02",
       title: "Elektronenkonfiguration und Quantenzahlen",
       imageUrl: "/images/bms/ch-elektronenschalen.jpg",
+      imageCaption:
+        "Abb.: Elektronenkonfiguration und Schalen im Bohr-Modell (OpenStax, CC BY 4.0)",
       stichworte: [
         "Quantenzahlen",
         "Hauptquantenzahl",
@@ -900,6 +904,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
       imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption: "Abb.: Periodensystem der Elemente mit Ordnungszahlen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommasse",
         "Mol",
@@ -1188,6 +1193,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
       imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageCaption: "Abb.: Wasserstoffbrücken zwischen Wassermolekülen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersion",
@@ -1473,6 +1479,7 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
       id: "ch-2-02",
       title: "Löslichkeit, Konzentration und Osmose",
       imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption: "Abb.: Lösungsvorgang und Hydratation von Ionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Löslichkeit",
         "Osmose",
@@ -2083,6 +2090,7 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
       id: "ch-5-01",
       title: "Aufbau und Ordnungsprinzip des PSE",
       imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption: "Abb.: Aufbau und Ordnungsprinzip des Periodensystems (OpenStax, CC BY 4.0)",
       stichworte: [
         "Periodensystem",
         "Mendelejew",
@@ -2376,6 +2384,8 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
       imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption:
+        "Abb.: Periodische Trends — Elektronegativität und Atomradius (OpenStax, CC BY 4.0)",
       stichworte: [
         "Effektive Kernladung",
         "Atomradius",

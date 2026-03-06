@@ -16,6 +16,7 @@ export const chemKapReaktionen: Kapitel = {
       id: "ch-7-01",
       title: "Reaktionstypen und Grundprinzipien",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Grundlegende Reaktionstypen in der Chemie (OpenStax, CC BY 4.0)",
       stichworte: [
         "Synthesereaktion",
         "Zersetzungsreaktion",
@@ -333,6 +334,7 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
       id: "ch-7-02",
       title: "Reaktionskinetik — Geschwindigkeit und Faktoren",
       imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
+      imageCaption: "Abb.: Enzym-Substrat-Komplex und katalysierte Reaktion (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reaktionsgeschwindigkeit",
         "Geschwindigkeitsgesetz",
@@ -623,6 +625,8 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
       id: "ch-7-03",
       title: "Stöchiometrie und Ausbeute",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Stöchiometrische Berechnung einer chemischen Reaktion (OpenStax, CC BY 4.0)",
       stichworte: [
         "Stöchiometrie",
         "Mol-Verhältnis",
@@ -1504,6 +1508,7 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
       id: "ch-7-05",
       title: "Thermodynamik — Enthalpie, Entropie, Gibbs-Energie",
       imageUrl: "/images/bms/ch-atp.jpg",
+      imageCaption: "Abb.: ATP-Struktur und Energieübertragung in der Zelle (OpenStax, CC BY 4.0)",
       stichworte: [
         "Enthalpie",
         "Entropie",

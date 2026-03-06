@@ -400,6 +400,8 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
       id: "ch-3s-03",
       title: "Lösungen, Konzentration & Löslichkeit",
       imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption:
+        "Abb.: Konzentration und Löslichkeit von Salzen in Wasser (OpenStax, CC BY 4.0)",
       stichworte: [
         "Molarität",
         "Massenanteil",

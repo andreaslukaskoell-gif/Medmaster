@@ -553,6 +553,7 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
       id: "ch-12-03",
       title: "Funktionelle Gruppen der Organik",
       imageUrl: "/images/bms/ch-dehydratation-hydrolyse.jpg",
+      imageCaption: "Abb.: Dehydratation und Hydrolyse organischer Moleküle (OpenStax, CC BY 4.0)",
       content: `## Alkohole (−OH, Hydroxylgruppe)
 
 Sobald man in einem Kohlenwasserstoff ein Wasserstoffatom durch eine Hydroxylgruppe (−OH) ersetzt, entsteht ein Alkohol — und die Eigenschaften des Moleküls ändern sich grundlegend. Die polare OH-Gruppe ermöglicht Wasserstoffbrückenbindungen, erhöht die Löslichkeit in Wasser und steigert den Siedepunkt im Vergleich zum entsprechenden Alkan beträchtlich.
@@ -1061,6 +1062,8 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
       id: "ch-13-01",
       title: "Aminosäuren und Proteine",
       imageUrl: "/images/bms/ch-aminosaeure.jpg",
+      imageCaption:
+        "Abb.: Grundstruktur einer Aminosäure mit funktionellen Gruppen (OpenStax, CC BY 4.0)",
       content: `## Grundstruktur der Aminosäuren
 
 Aminosäuren sind die molekularen Bausteine, aus denen der Körper sämtliche Proteine zusammensetzt — von Enzymen über Antikörper bis hin zu Strukturproteinen wie Kollagen. Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**, die jeder Aminosäure ihre individuellen Eigenschaften verleiht. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen 19 liegen im menschlichen Körper ausschließlich als L-Enantiomere vor.
@@ -1296,6 +1299,7 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
       id: "ch-13-02",
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       imageUrl: "/images/bms/ch-kohlenhydrate.jpg",
+      imageCaption: "Abb.: Mono-, Di- und Polysaccharide im Vergleich (OpenStax, CC BY 4.0)",
       content: `## Monosaccharide — die einfachsten Zucker
 
 Kohlenhydrate gehören neben Lipiden und Proteinen zu den drei Hauptgruppen der Biomoleküle. Ihre allgemeine Summenformel Cₙ(H₂O)ₙ erklärt den historischen Namen „Kohlen-Hydrate", obwohl es sich chemisch nicht um Hydrate des Kohlenstoffs handelt. Die einfachsten Vertreter sind die **Monosaccharide** — Polyhydroxyaldehyde (Aldosen) oder Polyhydroxyketone (Ketosen), die sich nicht weiter hydrolysieren lassen.
@@ -1547,6 +1551,7 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
       id: "ch-13-03",
       title: "Lipide — Fette, Phospholipide und Steroide",
       imageUrl: "/images/bms/ch-triglycerid.jpg",
+      imageCaption: "Abb.: Aufbau eines Triglycerid-Moleküls (OpenStax, CC BY 4.0)",
       stichworte: [
         "Fettsäuren",
         "Triglyceride",
@@ -1819,6 +1824,8 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
       id: "ch-13-04",
       title: "Nukleinsäuren — DNA und RNA",
       imageUrl: "/images/bms/ch-nukleotid.jpg",
+      imageCaption:
+        "Abb.: Aufbau eines Nukleotids mit Base, Zucker und Phosphat (OpenStax, CC BY 4.0)",
       stichworte: [
         "Nukleotide",
         "DNA-Doppelhelix",
