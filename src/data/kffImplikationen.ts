@@ -480,7 +480,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   {
     id: "imp-23",
     premise1: "Alle Laptops sind Computer.",
-    premise2: "Einige Laptops sind keine tragbaren Geräte.",
+    premise2: "Einige Laptops sind keine tragbare Geräte.",
     options: [
       "Alle Computer sind tragbare Geräte.",
       "Alle Computer sind keine tragbare Geräte.",
@@ -514,7 +514,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   {
     id: "imp-25",
     premise1: "Alle Kirschen sind Früchte.",
-    premise2: "Einige Kirschen sind keine roten Dinge.",
+    premise2: "Einige Kirschen sind keine rote Dinge.",
     options: [
       "Alle Früchte sind rote Dinge.",
       "Alle Früchte sind keine rote Dinge.",
@@ -604,8 +604,8 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-30",
-    premise1: "Einige Katzen sind wild.",
-    premise2: "Einige wilde Tiere sind gefährlich.",
+    premise1: "Einige Katzen sind Wildtiere.",
+    premise2: "Einige Wildtiere sind gefährlich.",
     options: [
       "Alle Katzen sind gefährlich.",
       "Alle Katzen sind keine gefährlich.",
@@ -774,8 +774,8 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-40",
-    premise1: "Einige Bücher sind alt.",
-    premise2: "Einige alte Dinge sind wertvoll.",
+    premise1: "Einige Bücher sind Antiquitäten.",
+    premise2: "Einige Antiquitäten sind wertvoll.",
     options: [
       "Alle Bücher sind wertvoll.",
       "Alle Bücher sind keine wertvoll.",

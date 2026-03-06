@@ -575,11 +575,14 @@ export function isConclusionEntailed(
     if (overlap(sub, obj)) entailed = true;
     if (!entailed) {
       for (const set of model.sets) {
+        if (set === sub || set === obj) continue;
+        // Z ∩ sub ≠ ∅ and Z ⊆ obj → sub ∩ obj ≠ ∅
         if (overlap(sub, set) && subset(set, obj)) {
           entailed = true;
           break;
         }
-        if (subset(sub, set) && overlap(set, obj)) {
+        // Z ⊆ sub and Z ∩ obj ≠ ∅ → sub ∩ obj ≠ ∅ (elements in Z∩obj are also in sub)
+        if (subset(set, sub) && overlap(set, obj)) {
           entailed = true;
           break;
         }
@@ -594,18 +597,34 @@ export function isConclusionEntailed(
   if (conclusionType === "some-not") {
     // Direct: NOT_ALL(sub, obj) as premise entails "Einige sub sind keine obj"
     if (hasNotAll(model, sub, obj)) return true;
-    if (disjoint(sub, obj)) {
-      // Dominated by "all-not" if all-not is also entailed
-      if (isConclusionEntailed(model, "all-not", sub, obj)) return false;
-      return true;
-    }
     if (subset(sub, obj)) return false;
-    if (overlap(sub, obj)) return true;
-    for (const set of model.sets) {
-      if (set === sub || set === obj) continue;
-      if (overlap(sub, set) && disjoint(set, obj)) return true;
+    let someNotEntailed = false;
+    if (disjoint(sub, obj)) someNotEntailed = true;
+    if (!someNotEntailed && overlap(sub, obj)) someNotEntailed = true;
+    if (!someNotEntailed) {
+      for (const set of model.sets) {
+        if (set === sub || set === obj) continue;
+        // Z ∩ sub ≠ ∅ and Z disjoint obj → some sub not in obj
+        if (overlap(sub, set) && disjoint(set, obj)) {
+          someNotEntailed = true;
+          break;
+        }
+        // Z ⊆ sub and Z disjoint obj → some sub not in obj
+        if (subset(set, sub) && disjoint(set, obj)) {
+          someNotEntailed = true;
+          break;
+        }
+        // Z ⊆ sub and NOT_ALL(Z, obj) → some sub not in obj
+        if (subset(set, sub) && hasNotAll(model, set, obj)) {
+          someNotEntailed = true;
+          break;
+        }
+      }
     }
-    return false;
+    if (!someNotEntailed) return false;
+    // Dominated by "all-not": if "Alle sub sind keine obj" is also entailed, some-not is weaker
+    if (isConclusionEntailed(model, "all-not", sub, obj)) return false;
+    return true;
   }
 
   return false;
