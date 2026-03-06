@@ -1,0 +1,57 @@
+name: Post Instagram Reels
+
+on:
+  schedule:
+    # 3x daily — CET (UTC+1) / CEST (UTC+2)
+    # Slot 1: 09:00 CET = 08:00 UTC
+    - cron: "0 8 * * *"
+    # Slot 2: 14:00 CET = 13:00 UTC
+    - cron: "0 13 * * *"
+    # Slot 3: 18:00 CET = 17:00 UTC
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot to post (1, 2, or 3)"
+        required: true
+        default: "1"
+
+jobs:
+  post-reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+      IG_PAGE_TOKEN: ${{ secrets.IG_PAGE_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Determine slot and composition
+        id: plan
+        run: node scripts/ci-reel-plan.mjs
+        env:
+          INPUT_SLOT: ${{ github.event.inputs.slot }}
+          EVENT_NAME: ${{ github.event_name }}
+
+      - name: Extract BMS data
+        run: npx tsx --tsconfig tsconfig.app.json video/extract-data.mts
+
+      - name: Render reel
+        run: node video/render.mjs --comp "$COMP"
+        env:
+          COMP: ${{ steps.plan.outputs.comp }}
+
+      - name: Upload and post to Instagram
+        run: node scripts/ci-post-reel.mjs
+        env:
+          COMP: ${{ steps.plan.outputs.comp }}
