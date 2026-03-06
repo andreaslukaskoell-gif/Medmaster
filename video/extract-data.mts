@@ -50,4 +50,19 @@ const data = {
 
 writeFileSync(resolve(OUT, "bms.json"), JSON.stringify(data, null, 2));
 console.log(`Extracted ${data.questions.length} questions from ${allBmsQuestions.length} total`);
-console.log(`Output: ${resolve(OUT, "bms.json")}`);
+
+// Extract Implikationen
+const { implikationenTasks } = await import("@/data/kffImplikationen.js");
+const impData = (implikationenTasks as any[]).map((t: any) => ({
+  id: t.id,
+  premise1: t.premise1,
+  premise2: t.premise2,
+  options: t.options,
+  correctAnswer: t.correctAnswer,
+  explanation: t.explanation,
+  difficulty: t.difficulty,
+}));
+writeFileSync(resolve(OUT, "implikationen.json"), JSON.stringify(impData, null, 2));
+console.log(`Extracted ${impData.length} Implikationen tasks`);
+
+console.log(`Output: ${OUT}`);

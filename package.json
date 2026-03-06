@@ -34,6 +34,8 @@
     "reels:render:wort": "node video/render.mjs --comp WortRaetsel",
     "reels:render:stats": "node video/render.mjs --comp StatsUrgency",
     "reels:render:rof": "node video/render.mjs --comp RichtigOderFalsch",
+    "reels:render:imp": "node video/render.mjs --comp ImplikationenChallenge",
+    "reels:render:fig": "node video/render.mjs --comp FigurenChallenge",
     "check": "npm run typecheck && npm run audit-bms",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"

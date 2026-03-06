@@ -5,6 +5,8 @@ import { ZahlenfolgeChallenge } from "./compositions/ZahlenfolgeChallenge";
 import { WortRaetsel } from "./compositions/WortRaetsel";
 import { StatsUrgency } from "./compositions/StatsUrgency";
 import { RichtigOderFalsch } from "./compositions/RichtigOderFalsch";
+import { ImplikationenChallenge } from "./compositions/ImplikationenChallenge";
+import { FigurenChallenge } from "./compositions/FigurenChallenge";
 import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 
 export const RemotionRoot: React.FC = () => {
@@ -108,6 +110,45 @@ export const RemotionRoot: React.FC = () => {
             { text: "Mitochondrien haben keine eigene DNA", correct: false },
             { text: "Enzyme werden bei Reaktionen verbraucht", correct: false },
           ],
+        }}
+      />
+      {/* 22s — KFF Implikationen with premises + options */}
+      <Composition
+        id="ImplikationenChallenge"
+        component={ImplikationenChallenge}
+        durationInFrames={660}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          premise1: "Alle Hunde sind Säugetiere.",
+          premise2: "Alle Säugetiere sind Wirbeltiere.",
+          options: [
+            "Alle Hunde sind Wirbeltiere.",
+            "Alle Hunde sind keine Wirbeltiere.",
+            "Einige Hunde sind Wirbeltiere.",
+            "Einige Hunde sind keine Wirbeltiere.",
+            "Keine der Schlussfolgerungen ist richtig.",
+          ],
+          correctAnswer: 0,
+          explanation: "Klassischer Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C.",
+        }}
+      />
+
+      {/* 17s — KFF Figuren zusammensetzen */}
+      <Composition
+        id="FigurenChallenge"
+        component={FigurenChallenge}
+        durationInFrames={510}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          targetShape: "hexagon",
+          pieces: ["triangle", "triangle", "diamond"],
+          correctOption: "hexagon",
+          options: ["circle", "hexagon", "square", "pentagon", "diamond"],
+          correctIndex: 1,
         }}
       />
     </>

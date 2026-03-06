@@ -3,13 +3,13 @@
 import { appendFileSync } from "node:fs";
 
 const SCHEDULE = [
-  ["QuizChallenge", "TippDesTages", "StatsUrgency"],
+  ["QuizChallenge", "ImplikationenChallenge", "StatsUrgency"],
   ["ZahlenfolgeChallenge", "QuizChallenge", "RichtigOderFalsch"],
-  ["WortRaetsel", "TippDesTages", "QuizChallenge"],
-  ["RichtigOderFalsch", "ZahlenfolgeChallenge", "StatsUrgency"],
+  ["WortRaetsel", "FigurenChallenge", "QuizChallenge"],
+  ["ImplikationenChallenge", "ZahlenfolgeChallenge", "StatsUrgency"],
   ["QuizChallenge", "WortRaetsel", "TippDesTages"],
-  ["StatsUrgency", "QuizChallenge", "ZahlenfolgeChallenge"],
-  ["TippDesTages", "RichtigOderFalsch", "WortRaetsel"],
+  ["FigurenChallenge", "QuizChallenge", "ZahlenfolgeChallenge"],
+  ["TippDesTages", "RichtigOderFalsch", "ImplikationenChallenge"],
 ];
 
 let slot;

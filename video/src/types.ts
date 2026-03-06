@@ -33,3 +33,19 @@ export type StatsUrgencyProps = {
 export type RichtigOderFalschProps = {
   statements: { text: string; correct: boolean }[];
 };
+
+export type ImplikationenProps = {
+  premise1: string;
+  premise2: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+};
+
+export type FigurenProps = {
+  targetShape: string;
+  pieces: string[];
+  correctOption: string;
+  options: string[];
+  correctIndex: number;
+};

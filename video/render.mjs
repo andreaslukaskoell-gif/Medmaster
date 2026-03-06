@@ -35,9 +35,21 @@ if (!existsSync(dataFile)) {
 
 const data = JSON.parse(readFileSync(dataFile, "utf-8"));
 
+// Load Implikationen data
+const impFile = resolve(__dirname, ".data", "implikationen.json");
+const impData = existsSync(impFile) ? JSON.parse(readFileSync(impFile, "utf-8")) : [];
+
 function pick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+// Simple shapes for Figuren reel
+const SHAPE_PUZZLES = [
+  { targetShape: "hexagon", pieces: ["triangle", "triangle", "diamond"], correctOption: "hexagon", options: ["circle", "hexagon", "square", "pentagon", "diamond"], correctIndex: 1 },
+  { targetShape: "square", pieces: ["triangle", "triangle"], correctOption: "square", options: ["circle", "square", "hexagon", "diamond", "pentagon"], correctIndex: 1 },
+  { targetShape: "circle", pieces: ["circle", "circle"], correctOption: "circle", options: ["square", "diamond", "circle", "hexagon", "triangle"], correctIndex: 2 },
+  { targetShape: "pentagon", pieces: ["triangle", "triangle", "triangle"], correctOption: "pentagon", options: ["hexagon", "diamond", "square", "pentagon", "circle"], correctIndex: 3 },
+];
 
 // ── Build input props for each composition ──────────────────
 function getProps(compId) {
@@ -86,6 +98,24 @@ function getProps(compId) {
           { text: "Enzyme werden bei Reaktionen verbraucht", correct: false },
         ],
       };
+    case "ImplikationenChallenge": {
+      const t = impData.length > 0 ? pick(impData) : {
+        premise1: "Alle Hunde sind Säugetiere.",
+        premise2: "Alle Säugetiere sind Wirbeltiere.",
+        options: ["Alle Hunde sind Wirbeltiere.", "Alle Hunde sind keine Wirbeltiere.", "Einige Hunde sind Wirbeltiere.", "Einige Hunde sind keine Wirbeltiere.", "Keine der Schlussfolgerungen ist richtig."],
+        correctAnswer: 0,
+        explanation: "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C.",
+      };
+      return {
+        premise1: t.premise1,
+        premise2: t.premise2,
+        options: t.options,
+        correctAnswer: t.correctAnswer,
+        explanation: t.explanation,
+      };
+    }
+    case "FigurenChallenge":
+      return pick(SHAPE_PUZZLES);
     default:
       return {};
   }
@@ -98,6 +128,8 @@ const ALL_COMPS = [
   "WortRaetsel",
   "StatsUrgency",
   "RichtigOderFalsch",
+  "ImplikationenChallenge",
+  "FigurenChallenge",
 ];
 
 const COMP_TO_FILE = {
@@ -107,6 +139,8 @@ const COMP_TO_FILE = {
   WortRaetsel: "wort-raetsel",
   StatsUrgency: "stats-urgency",
   RichtigOderFalsch: "richtig-oder-falsch",
+  ImplikationenChallenge: "implikationen-challenge",
+  FigurenChallenge: "figuren-challenge",
 };
 
 // ── Parse CLI args ──────────────────────────────────────────

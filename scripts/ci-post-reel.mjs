@@ -11,6 +11,7 @@ const FILE_MAP = {
   QuizChallenge: "quiz-challenge", TippDesTages: "tipp-des-tages",
   ZahlenfolgeChallenge: "zahlenfolge-challenge", WortRaetsel: "wort-raetsel",
   StatsUrgency: "stats-urgency", RichtigOderFalsch: "richtig-oder-falsch",
+  ImplikationenChallenge: "implikationen-challenge", FigurenChallenge: "figuren-challenge",
 };
 const CAPTIONS = {
   QuizChallenge: "Schaffst du diese MedAT-Frage? 🧠\n\n98% antworten FALSCH — Kommentiere deinen Buchstaben!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für die Vorbereitung!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien",
@@ -19,6 +20,8 @@ const CAPTIONS = {
   WortRaetsel: "Welches Wort ergibt sich? 🔤\n\nKommentiere deine Lösung!\n\n📩 Wer aus deinen Freunden findet es?\n🔖 Speichern zum Üben!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Wortflüssigkeit #BMS",
   StatsUrgency: "87% fallen beim MedAT durch. Gehörst du zu den 13%? 📊\n\nWer ÜBEN kann, gewinnt.\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern als Reminder!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #Aufnahmeprüfung #Medizin #Lerntipps",
   RichtigOderFalsch: "Richtig oder Falsch? 3 MedAT-Aussagen 🧠\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3! 💬\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für mehr Fragen!\n\n📱 Gratis testen → medmaster.at\n\n#MedAT #MedAT2026 #BMS #Prüfungsvorbereitung #MedUniInnsbruck",
+  ImplikationenChallenge: "Welcher Schluss ist zwingend? 🧠\n\nKommentiere A–E!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern zum Üben!\n\n📱 KFF-Training gratis → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Implikationen #Logik",
+  FigurenChallenge: "Welche Figur passt? 🧩\n\nKommentiere A–E!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern zum Üben!\n\n📱 KFF-Training gratis → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Figuren #Aufnahmeprüfung",
 };
 
 const IG_USER_ID = "17841446757059213";
