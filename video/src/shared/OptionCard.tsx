@@ -64,8 +64,8 @@ export const OptionCard: React.FC<Props> = ({
       style={{
         display: "flex",
         alignItems: "center",
-        gap: 24,
-        padding: "24px 32px",
+        gap: 20,
+        padding: "20px 28px",
         background: styles.bg,
         borderRadius: 20,
         border: `2px solid ${styles.border}`,
@@ -83,10 +83,7 @@ export const OptionCard: React.FC<Props> = ({
           fontWeight: 800,
           fontSize: 34,
           color: styles.letterColor,
-          background:
-            state === "correct"
-              ? "rgba(34,197,94,0.15)"
-              : `${styles.letterColor}22`,
+          background: state === "correct" ? "rgba(34,197,94,0.15)" : `${styles.letterColor}22`,
         }}
       >
         {letter}
@@ -101,9 +98,7 @@ export const OptionCard: React.FC<Props> = ({
       >
         {text}
       </div>
-      {state === "correct" && (
-        <div style={{ fontSize: 44, marginLeft: "auto" }}>✅</div>
-      )}
+      {state === "correct" && <div style={{ fontSize: 44, marginLeft: "auto" }}>✅</div>}
     </div>
   );
 };

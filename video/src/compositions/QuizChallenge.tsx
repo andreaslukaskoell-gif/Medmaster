@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AbsoluteFill,
-  Sequence,
-  interpolate,
-  useCurrentFrame,
-} from "remotion";
+import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
 import { BrandedBackground } from "../shared/BrandedBackground";
 import { SafeArea } from "../shared/SafeArea";
 import { HookText } from "../shared/HookText";
@@ -24,7 +19,14 @@ const HookScene: React.FC = () => {
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
         <HookText text="Schaffst du diese MedAT-Frage?" fontSize={68} />
-        <div style={{ fontSize: 40, color: BRAND.accent, fontWeight: 700, textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+        <div
+          style={{
+            fontSize: 40,
+            color: BRAND.accent,
+            fontWeight: 700,
+            textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+          }}
+        >
           98% antworten FALSCH
         </div>
       </SafeArea>
@@ -38,17 +40,38 @@ const QuestionScene: React.FC<QuizChallengeProps> = ({ question, subject, option
     <BrandedBackground>
       <SafeArea>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 30 }}>
-          <div style={{ fontSize: 32, fontWeight: 800, color: "white", textShadow: "0 2px 6px rgba(0,0,0,0.4)" }}>MedMaster</div>
+          <div
+            style={{
+              fontSize: 32,
+              fontWeight: 800,
+              color: "white",
+              textShadow: "0 2px 6px rgba(0,0,0,0.4)",
+            }}
+          >
+            MedMaster
+          </div>
           <SubjectBadge subject={subject} />
         </div>
-        <AnimatedText text={question} fontSize={44} fontWeight={700} textAlign="left" delay={3} style={{ marginBottom: 40, textShadow: "0 2px 8px rgba(0,0,0,0.3)" }} />
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, flex: 1, justifyContent: "center" }}>
+        <AnimatedText
+          text={question}
+          fontSize={48}
+          fontWeight={700}
+          textAlign="left"
+          delay={3}
+          style={{ marginBottom: 30, textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
+        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 12,
+            flex: 1,
+            justifyContent: "center",
+          }}
+        >
           {options.map((o, i) => (
             <OptionCard key={o.id} letter={LETTERS[i]} text={o.text} index={i} delay={12} />
           ))}
-        </div>
-        <div style={{ textAlign: "center", paddingTop: 20 }}>
-          <div style={{ fontSize: 34, fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>Kommentiere deinen Buchstaben!</div>
         </div>
       </SafeArea>
     </BrandedBackground>
@@ -60,35 +83,89 @@ const CountdownScene: React.FC = () => {
   return (
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
-        <div style={{ fontSize: 36, color: "rgba(255,255,255,0.5)", fontWeight: 600 }}>Auflösung in...</div>
+        <div style={{ fontSize: 36, color: "rgba(255,255,255,0.5)", fontWeight: 600 }}>
+          Auflösung in...
+        </div>
         <CountdownRing durationFrames={150} size={240} />
-        <div style={{ fontSize: 32, color: BRAND.accent, fontWeight: 600 }}>Hast du es gewusst?</div>
+        <div style={{ fontSize: 32, color: BRAND.accent, fontWeight: 600 }}>
+          Hast du es gewusst?
+        </div>
       </SafeArea>
     </BrandedBackground>
   );
 };
 
 // Scene 4: Reveal with explanation (12–17s = 360–510f)
-const RevealScene: React.FC<QuizChallengeProps> = ({ question, options, correctOptionId, explanation }) => {
+const RevealScene: React.FC<QuizChallengeProps> = ({
+  question,
+  options,
+  correctOptionId,
+  explanation,
+}) => {
   const frame = useCurrentFrame();
   return (
     <BrandedBackground>
       <SafeArea>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
           <div style={{ fontSize: 32, fontWeight: 800, color: "white" }}>MedMaster</div>
-          <div style={{ padding: "8px 20px", borderRadius: 16, background: BRAND.success, color: "white", fontSize: 20, fontWeight: 700 }}>✅ Auflösung</div>
+          <div
+            style={{
+              padding: "8px 20px",
+              borderRadius: 16,
+              background: BRAND.success,
+              color: "white",
+              fontSize: 20,
+              fontWeight: 700,
+            }}
+          >
+            ✅ Auflösung
+          </div>
         </div>
-        <div style={{ fontSize: 36, fontWeight: 700, color: "white", lineHeight: 1.3, marginBottom: 24, textShadow: "0 2px 6px rgba(0,0,0,0.3)" }}>{question}</div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12, flex: 1, justifyContent: "center" }}>
+        <div
+          style={{
+            fontSize: 36,
+            fontWeight: 700,
+            color: "white",
+            lineHeight: 1.3,
+            marginBottom: 24,
+            textShadow: "0 2px 6px rgba(0,0,0,0.3)",
+          }}
+        >
+          {question}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 12,
+            flex: 1,
+            justifyContent: "center",
+          }}
+        >
           {options.map((o, i) => (
-            <OptionCard key={o.id} letter={LETTERS[i]} text={o.text} index={i} delay={3} state={o.id === correctOptionId ? "correct" : "wrong"} />
+            <OptionCard
+              key={o.id}
+              letter={LETTERS[i]}
+              text={o.text}
+              index={i}
+              delay={3}
+              state={o.id === correctOptionId ? "correct" : "wrong"}
+            />
           ))}
         </div>
-        <div style={{
-          padding: "20px 28px", background: "rgba(34,197,94,0.1)", borderRadius: 16,
-          border: "1px solid rgba(34,197,94,0.3)", marginTop: 16,
-          opacity: interpolate(frame, [30, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
-        }}>
+        <div
+          style={{
+            padding: "20px 28px",
+            background: "rgba(34,197,94,0.1)",
+            borderRadius: 16,
+            border: "1px solid rgba(34,197,94,0.3)",
+            marginTop: 16,
+            opacity: interpolate(frame, [30, 45], [0, 1], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            }),
+          }}
+        >
           <div style={{ fontSize: 26, color: "#86efac", lineHeight: 1.4 }}>{explanation}</div>
         </div>
       </SafeArea>
@@ -101,7 +178,16 @@ const CTAScene: React.FC = () => {
   return (
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
-        <div style={{ fontSize: 48, fontWeight: 800, color: "white", textAlign: "center", textShadow: "0 2px 8px rgba(0,0,0,0.4)", marginBottom: 20 }}>
+        <div
+          style={{
+            fontSize: 48,
+            fontWeight: 800,
+            color: "white",
+            textAlign: "center",
+            textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+            marginBottom: 20,
+          }}
+        >
           Tausende MedAT-Fragen
         </div>
         <div style={{ fontSize: 36, color: BRAND.accent, fontWeight: 700, marginBottom: 30 }}>

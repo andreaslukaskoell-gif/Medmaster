@@ -2,8 +2,9 @@ import React from "react";
 
 /**
  * Instagram-safe content area.
- * Top: 108px (username bar), Bottom: 320px (caption/buttons),
- * Left: 60px, Right: 120px (like/share buttons).
+ * For You Page shows 4:5 crop (1080×1350) centered in 1080×1920.
+ * Hidden: top ~285px, bottom ~285px. Plus caption/buttons overlap.
+ * Safe: top 320px, bottom 380px, left 60px, right 120px.
  */
 export const SafeArea: React.FC<{
   children: React.ReactNode;
@@ -13,10 +14,10 @@ export const SafeArea: React.FC<{
     <div
       style={{
         position: "absolute",
-        top: 108,
-        bottom: 320,
+        top: 320,
+        bottom: 380,
         left: 60,
-        right: 120,
+        right: 60,
         display: "flex",
         flexDirection: "column",
         ...style,
