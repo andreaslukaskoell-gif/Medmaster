@@ -35,9 +35,15 @@ if (!existsSync(dataFile)) {
 
 const data = JSON.parse(readFileSync(dataFile, "utf-8"));
 
-// Load Implikationen data
-const impFile = resolve(__dirname, ".data", "implikationen.json");
-const impData = existsSync(impFile) ? JSON.parse(readFileSync(impFile, "utf-8")) : [];
+// Load all extracted data pools
+function loadPool(name) {
+  const f = resolve(__dirname, ".data", name);
+  return existsSync(f) ? JSON.parse(readFileSync(f, "utf-8")) : [];
+}
+const impData = loadPool("implikationen.json");
+const zfData = loadPool("zahlenfolgen.json");
+const wfData = loadPool("wortfluessigkeit.json");
+const rofData = loadPool("rof.json");
 
 function pick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -72,32 +78,30 @@ function getProps(compId) {
         source: `MedMaster BMS ${q.subject}`,
       };
     }
-    case "ZahlenfolgeChallenge":
-      return {
-        sequence: [2, 5, 11, 23, 47],
-        answer: 47,
-        rule: "×2 + 1",
-      };
-    case "WortRaetsel":
-      return {
-        letters: ["P", "L", "A", "S", "M", "A"],
-        word: "PLASMA",
-        hint: "Anfangsbuchstabe: P",
-      };
+    case "ZahlenfolgeChallenge": {
+      const zf = zfData.length > 0 ? pick(zfData) : { sequence: [2, 5, 11, 23, 47], answer: 47, rule: "×2 + 1" };
+      return { sequence: zf.sequence, answer: zf.answer, rule: zf.rule };
+    }
+    case "WortRaetsel": {
+      const wf = wfData.length > 0 ? pick(wfData) : { letters: ["P", "L", "A", "S", "M", "A"], word: "PLASMA", hint: "Anfangsbuchstabe: P" };
+      return { letters: wf.letters, word: wf.word, hint: wf.hint };
+    }
     case "StatsUrgency":
       return {
         applicants: 16000,
         spots: 1850,
         questions: data.stats.total,
       };
-    case "RichtigOderFalsch":
-      return {
+    case "RichtigOderFalsch": {
+      const rof = rofData.length > 0 ? pick(rofData) : {
         statements: [
           { text: "DNA-Replikation verläuft semikonservativ", correct: true },
           { text: "Mitochondrien haben keine eigene DNA", correct: false },
           { text: "Enzyme werden bei Reaktionen verbraucht", correct: false },
         ],
       };
+      return rof;
+    }
     case "ImplikationenChallenge": {
       const t = impData.length > 0 ? pick(impData) : {
         premise1: "Alle Hunde sind Säugetiere.",
