@@ -754,6 +754,36 @@ Mitochondrien arbeiten nicht wie Wärmekraftmaschinen, sondern nutzen elektroche
 
 Formell: Verbrennungsenergie von Glucose (ΔG = −2870 kJ/mol) → ≈ 30 mol ATP (≈ 30 × 30,5 kJ = 915 kJ) → η ≈ 32 %.
 
+## Körpertemperaturregulation — Thermodynamik am lebenden Organismus
+
+Der Mensch ist **homoiotherm** (gleichwarm): Die Kerntemperatur wird bei ~37 °C gehalten, unabhängig von der Umgebungstemperatur. Thermodynamisch betrachtet ist der Körper ein offenes System, das ständig Wärme produziert und abgibt. Die Wärmebilanz lautet:
+
+**Q_Produktion = Q_Strahlung + Q_Konvektion + Q_Leitung + Q_Verdunstung**
+
+- **Strahlung (Infrarot)**: ~40 % der Wärmeabgabe in Ruhe. Jeder Körper mit T > 0 K strahlt elektromagnetische Energie ab (Stefan-Boltzmann: P = ε·σ·A·T⁴). Bei 37 °C und 1,8 m² Körperoberfläche: P ≈ 80 W.
+- **Konvektion**: ~30 %. Warme Luft steigt von der Haut auf und wird durch kühlere ersetzt. Wind verstärkt den Effekt (Windchill).
+- **Verdunstung**: ~25 %. Pro Gramm Schweiß werden 2430 J abgeführt (bei 37 °C). Maximal ~1 L/h Schweiß → bis 675 W Kühlleistung.
+- **Leitung (Konduktion)**: ~5 %. Direkte Wärmeübertragung bei Kontakt mit kälteren Oberflächen.
+
+> **Merke:** Fieber erhöht den Sollwert des hypothalamischen Thermoregulationszentrums. Pro 1 °C Temperaturanstieg steigt der Grundumsatz um ~13 % (van-'t-Hoff-Regel: Verdopplung der Reaktionsgeschwindigkeit pro 10 °C, Q₁₀ ≈ 2–3).
+
+**Hypothermie in der Chirurgie:** Bei Herzoperationen wird die Körpertemperatur kontrolliert auf 28–32 °C gesenkt. Der Sauerstoffverbrauch sinkt um ~50 %, was das Gehirn bei Kreislaufstillstand schützt. Thermodynamisch: niedrigeres T → langsamere Enzymkinetik → geringerer O₂-Bedarf.
+
+## Kalorimetrie: Brennwerte messen
+
+Die **Kalorimetrie** misst die bei chemischen Reaktionen freigesetzte Wärme. Zwei Methoden sind zentral:
+
+| Methode | Prinzip | Anwendung |
+|---|---|---|
+| **Bombenkalorimeter** | Probe verbrennt vollständig bei V = const in reinem O₂; Q = ΔU (isochor) | Physikalischer Brennwert von Nahrungsmitteln |
+| **Indirekte Kalorimetrie** | O₂-Verbrauch und CO₂-Produktion messen → Energieumsatz über respiratorischen Quotienten (RQ) berechnen | Grundumsatz (BMR) in der Ernährungsmedizin |
+
+- **Physikalischer Brennwert** (Bombenkalorimeter): Kohlenhydrate ~17 kJ/g, Fette ~39 kJ/g, Proteine ~23 kJ/g
+- **Physiologischer Brennwert** (im Körper): Proteine nur ~17 kJ/g, weil Stickstoff als Harnstoff ausgeschieden wird (nicht vollständig oxidiert)
+- **RQ** = V(CO₂)/V(O₂): Kohlenhydrate RQ = 1,0; Fette RQ ≈ 0,7; Proteine RQ ≈ 0,8
+
+> **Merke:** Der physiologische Brennwert von Proteinen ist geringer als der physikalische, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff (energiereich) ausscheidet.
+
 ## Dritter Hauptsatz (ergänzend)
 
 Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: S(T→0) = 0. Der absolute Nullpunkt ist nicht erreichbar (Nernst).
@@ -1007,6 +1037,12 @@ Bei einem Taucher in 30 m Tiefe herrscht ein Umgebungsdruck von etwa 4 bar. Der 
 Bei der **hyperbaren Sauerstofftherapie** wird das Henry-Gesetz therapeutisch genutzt: 100 % O₂ bei erhöhtem Druck löst deutlich mehr Sauerstoff physikalisch im Blutplasma, was bei chronischen Wunden, Kohlenmonoxidvergiftung und Gasgangrän lebensrettend sein kann.
 
 **Verdunstungskühlung** ist der effektivste Kühlmechanismus des menschlichen Körpers. Pro Gramm Schweiß, der bei 37 °C verdunstet, werden etwa 2430 J an Wärmeenergie abgeführt. Bei einer Schweißproduktion von 1 L/h entspricht das einer Kühlleistung von rund 675 W — mehr als das Zehnfache des Ruhemetabolismus.
+
+**Warum ist Verdunstung so effektiv?** Der Phasenübergang flüssig → gasförmig erfordert die gesamte Verdampfungswärme (L_v = 2430 kJ/kg bei 37 °C). Diese Energie wird der Hautoberfläche entzogen, ohne dass Temperaturarbeit geleistet wird — der Körper kühlt ab, während der Schweiß verdampft. Bei hoher Luftfeuchtigkeit (>80 %) ist die Verdunstung behindert: die Luft ist bereits wasserdampfgesättigt → Hitzestau-Gefahr.
+
+> **Merke:** Schwitzen kühlt durch den Phasenübergang flüssig → gasförmig. Pro Liter verdunstetem Schweiß werden ~2430 kJ abgeführt. Hohe Luftfeuchtigkeit blockiert die Verdunstung und kann zum Hitzschlag führen.
+
+**Infusionswärmung:** Kalte Infusionslösungen (Raumtemperatur 20 °C) senken die Körpertemperatur. Pro Liter Infusionslösung (spezifische Wärmekapazität ≈ 4,0 kJ/(kg·K), ΔT = 17 K): Q = 1 · 4000 · 17 = 68 kJ Wärmeverlust. Bei massiver Transfusion (>10 L) kann dies zur gefährlichen Hypothermie führen → Bluterwärmer auf 37 °C vorgeschrieben.
 
 > 💡 **Prüfungstipp:** Das Henry-Gesetz (c = k_H · p) wird im MedAT gerne im Kontext Tauchen oder Blutgasanalyse gefragt. Merke den linearen Zusammenhang: doppelter Druck = doppelte Löslichkeit. Bei Rechenaufgaben den N₂-Anteil der Luft (79 %) nicht vergessen!
 

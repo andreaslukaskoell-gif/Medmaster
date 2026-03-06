@@ -1200,6 +1200,40 @@ Die Anomalie ist bei H₂O am größten (4 H-Brücken pro Molekül), bei HF eben
 
 **Enzymkatalyse:** Aktives Zentrum: H-Brücken orientieren Substrat, stabilisieren Übergangszustände und ermöglichen stereoselektive Katalyse. Im aktiven Zentrum der Serinproteasen bildet das katalytische Triad (Ser-His-Asp) ein H-Brücken-Netzwerk.
 
+### Denaturierung — wenn H-Brücken brechen
+
+**Denaturierung** ist der Verlust der dreidimensionalen Struktur eines Proteins (oder einer Nukleinsäure) unter Erhalt der Primärstruktur (Peptidbindungen bleiben intakt). Der Vorgang zerstört Sekundär-, Tertiär- und Quartärstruktur — also genau jene Ebenen, die maßgeblich durch H-Brücken, hydrophobe Wechselwirkungen und Salzbrücken stabilisiert werden.
+
+**Auslöser der Denaturierung:**
+
+| Faktor | Mechanismus | Beispiel |
+|---|---|---|
+| **Hitze (>42 °C)** | Thermische Energie übersteigt H-Brücken-Energie → Bindungen brechen statistisch | Kochen eines Eis: Albumin denaturiert irreversibel (trüb, fest) |
+| **Extremer pH** | H⁺/OH⁻ protonieren/deprotonieren Seitenketten → Salzbrücken + H-Brücken gestört | Magensäure (pH 1–2) denaturiert Nahrungsproteine → Pepsin spaltet |
+| **Harnstoff (6–8 M)** | Konkurriert mit intramolekularen H-Brücken des Proteins → Entfaltung | Laborstandard: Harnstoff-PAGE, Protein-Aufreinigung |
+| **Detergenzien (SDS)** | Amphiphile Moleküle zerstören hydrophobe Kerne + H-Brücken-Netzwerk | SDS-PAGE: linearisiert Proteine für Gelelektrophorese |
+| **Schwermetalle** | Pb²⁺, Hg²⁺, Ag⁺ binden an −SH-Gruppen → Disulfidbrücken + Konformation gestört | Quecksilbervergiftung: Enzyminaktivierung |
+| **Organische Lösungsmittel** | Ethanol, Aceton verdrängen Wasser → hydrophobe Wechselwirkungen gestört | Ethanol 70 %: Desinfektion durch Proteindenaturierung |
+
+**Fieber — kontrollierte Denaturierung als Abwehrmechanismus:**
+Fieber (Körpertemperatur >38,0 °C) wird durch **Pyrogene** ausgelöst: exogene (Lipopolysaccharide/LPS von Bakterien) oder endogene (IL-1, IL-6, TNF-α, PGE₂). PGE₂ (Prostaglandin E₂) erhöht den Sollwert im Hypothalamus (thermoregulatorisches Zentrum). Antipyretika (Paracetamol, Ibuprofen, ASS) hemmen **Cyclooxygenase (COX)** → weniger PGE₂ → Fiebersenkung.
+
+Warum ist Fieber nützlich? Bei 39–40 °C:
+- **Bakterielle Enzyme** verlieren Aktivität (ihre H-Brücken-Netzwerke sind auf ~37 °C optimiert)
+- **Immunzellen** arbeiten schneller (höhere Enzymaktivität, schnellere Phagozytose)
+- **Eisen-Sequestrierung** nimmt zu → weniger verfügbares Fe für Bakterienwachstum
+
+Ab **42 °C** werden auch humane Proteine zunehmend denaturiert → Hitzschlag: Organversagen durch massive Proteindenaturierung (Leber, Niere, Gehirn).
+
+> **Merke:** Denaturierung = Strukturverlust durch Brechen nichtkovalenter Bindungen (H-Brücken, hydrophobe WW, Salzbrücken), NICHT der Peptidbindungen. Fieber nutzt die Temperaturabhängigkeit von H-Brücken gezielt gegen Pathogene. Ab 42 °C werden eigene Proteine geschädigt.
+
+**Renaturierung vs. irreversible Denaturierung:**
+- **Reversibel:** Kleine Proteine (<100 AS) können sich nach Entfernen des Denaturierungsmittels spontan zurückfalten (Anfinsen-Experiment: Ribonuklease A). Die Aminosäuresequenz enthält alle Informationen für die korrekte Faltung.
+- **Irreversibel:** Große Proteine, aggregierte Proteine (gekochtes Ei), Prionen. Chaperone (Hsp70, Hsp90, GroEL/GroES) assistieren in der Zelle bei der korrekten Faltung und verhindern Aggregation.
+- **Fehlfaltung:** Prionen (PrPˢᶜ) induzieren Umfaltung von PrPᶜ (α-Helix → β-Faltblatt) → unlösliche Amyloid-Aggregate → Creutzfeldt-Jakob-Krankheit, BSE. Auch bei Alzheimer (Aβ-Aggregate) und Parkinson (α-Synuclein) spielen H-Brücken-vermittelte β-Faltblatt-Fehlfaltungen eine zentrale Rolle.
+
+---
+
 **Weitere biologische Beispiele für H-Brücken:**
 - **Cellulose-Mikrofibrillen:** Hunderte paralleler β-1,4-Glucanketten, verknüpft durch O–H···O-Brücken → enorme Zugfestigkeit (stärker als Stahl bezogen auf die Dichte). Baumwolle, Holz, Papier — alles H-Brücken-basiert.
 - **Kohlenhydrat-Erkennung:** Lektine (Zucker-bindende Proteine) erkennen spezifische Kohlenhydrate an Zelloberflächen über H-Brücken → Immunabwehr, Blutgruppenbestimmung (Anti-A/B-Antikörper), Infektionsprozesse (Bakterien-Lektine binden an Darm-Glykoproteine).
@@ -1650,6 +1684,45 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
           ],
           difficulty: 2,
           tags: ["dipol-dipol", "temperatur", "polare-moleküle"],
+        },
+        {
+          question:
+            "Bei welcher Temperatur beginnt beim Menschen die irreversible Proteindenaturierung mit Organversagen?",
+          options: [
+            "Ab 37 °C — jede Temperaturerhöhung ist schädlich",
+            "Ab 38 °C — daher ist jedes Fieber gefährlich",
+            "Ab 40 °C — alle Proteine denaturieren sofort",
+            "Ab ca. 42 °C — Hitzschlag mit massiver Proteindenaturierung in Leber, Niere und Gehirn",
+            "Erst ab 50 °C — der Körper toleriert problemlos bis 49 °C",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Humane Proteine sind auf 37 °C optimiert und tolerieren moderate Fieberschübe (38–41 °C) — Fieber ist sogar ein Abwehrmechanismus, da bakterielle Enzyme bei diesen Temperaturen bereits Aktivität verlieren. Ab ca. 42 °C beginnt jedoch massive Denaturierung auch menschlicher Proteine: H-Brücken und hydrophobe Wechselwirkungen brechen vermehrt → Enzyme verlieren Funktion → Organversagen (Hitzschlag). Die Grenze ist nicht scharf, aber klinisch gilt: Kerntemperatur >42 °C = lebensbedrohlich.",
+          hints: [
+            "Fieber bis 41 °C kann der Körper kompensieren — ab wann wird es kritisch?",
+            "Denaturierung betrifft H-Brücken und hydrophobe WW, nicht Peptidbindungen.",
+          ],
+          difficulty: 2,
+          tags: ["denaturierung", "fieber", "hitzschlag"],
+        },
+        {
+          question: "Was passiert bei der Denaturierung eines Proteins auf molekularer Ebene?",
+          options: [
+            "Peptidbindungen werden hydrolytisch gespalten → einzelne Aminosäuren entstehen",
+            "Nichtkovalente Bindungen (H-Brücken, hydrophobe WW, Salzbrücken) brechen → Sekundär-/Tertiärstruktur geht verloren, Primärstruktur bleibt erhalten",
+            "Disulfidbrücken und Peptidbindungen werden gleichzeitig gespalten",
+            "Die Aminosäuresequenz wird verändert → neue Primärstruktur entsteht",
+            "Kovalente C–C-Bindungen im Proteinrückgrat brechen → Fragmente entstehen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Denaturierung zerstört die dreidimensionale Konformation (Sekundär-, Tertiär-, Quartärstruktur), indem nichtkovalente Wechselwirkungen (H-Brücken, hydrophobe Effekte, Salzbrücken, van-der-Waals-Kräfte) gebrochen werden. Die kovalenten Peptidbindungen der Primärstruktur bleiben intakt — das ist der entscheidende Unterschied zur Proteolyse (enzymatische Spaltung). Denaturierte Proteine verlieren ihre biologische Funktion, können aber unter günstigen Bedingungen renaturieren (Anfinsen-Experiment: Ribonuklease A).",
+          hints: [
+            "Welche Bindungen bestimmen die 3D-Struktur? Sind es kovalente oder nichtkovalente?",
+            "Primärstruktur = Aminosäuresequenz. Bleibt sie bei Denaturierung erhalten?",
+          ],
+          difficulty: 1,
+          tags: ["denaturierung", "proteinstruktur", "nichtkovalent"],
         },
       ],
     },

@@ -42,10 +42,18 @@ export type ImplikationenProps = {
   explanation: string;
 };
 
+export type FigurenPoint = { x: number; y: number };
+export type FigurenPolygon = { points: FigurenPoint[] };
+
 export type FigurenProps = {
-  targetShape: string;
-  pieces: string[];
-  correctOption: string;
-  options: string[];
+  /** SVG path strings for each puzzle piece, pre-scaled to 200x200 viewBox */
+  piecePaths: string[];
+  /** Compact layout for pieces: viewBox + path data with transforms */
+  piecesLayout: { viewBox: string; paths: { d: string; transform: string }[] };
+  /** SVG path strings for options A-D, pre-scaled to 200x200 viewBox */
+  optionPaths: (string | null)[]; // null = Option E (keine)
+  /** Index of correct option (0-4) */
   correctIndex: number;
+  /** Explanation text */
+  explanation: string;
 };

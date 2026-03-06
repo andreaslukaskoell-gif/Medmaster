@@ -268,6 +268,10 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
         "Nernst-Gleichung",
         "Ionenkanal",
         "Leitwert",
+        "Impedanz",
+        "Bioimpedanz",
+        "BIA",
+        "Wechselstromwiderstand",
       ],
       content: `## Elektrischer Strom
 
@@ -341,6 +345,39 @@ Die im Widerstand dissipierte Wärmeenergie (Joulesche Wärme) pro Zeit: P = I²
 **EMK (elektromotorische Kraft)**: Die Spannung, die eine Energiequelle (Batterie, Zelle) im Leerlauf — also ohne Stromfluss — an ihren Klemmen bereitstellt. Sie ist die treibende “Kraft” (eigentlich Energie pro Ladung) im Stromkreis.
 
 Eine **Spannungsquelle** (Batterie, Akkumulator) erzeugt durch chemische Reaktionen eine EMK **ε** [V]. Reale Quellen haben einen **Innenwiderstand r**: U_klemme = ε − I·r. Bei hoher Stromentnahme sinkt die Klemmenspannung. Das **Nernst-Potential** für einzelne Ionenarten ist die Gleichgewichtsspannung über einer semipermeablen Membran (z. B. E_K⁺ ≈ −90 mV, E_Na⁺ ≈ +60 mV) — berechnet mit der Nernst-Gleichung: E = (RT/zF) · ln([Ion]_außen / [Ion]_innen).
+
+## Impedanz und Bioimpedanz
+
+Bei **Wechselstrom** (AC) reicht der reine Ohmsche Widerstand R nicht aus, um das Verhalten eines Stromkreises zu beschreiben. Kondensatoren und Spulen verursachen frequenzabhängige Widerstände. Der **Gesamtwechselstromwiderstand** heißt **Impedanz Z**:
+
+**Z = √(R² + (X_L − X_C)²)** [Ω]
+
+- **R**: Ohmscher Widerstand (frequenzunabhängig, Energieumwandlung in Wärme)
+- **X_L = ω·L = 2π·f·L**: induktiver Blindwiderstand (Spule, steigt mit f)
+- **X_C = 1/(ω·C) = 1/(2π·f·C)**: kapazitiver Blindwiderstand (Kondensator, sinkt mit f)
+
+> **Merke:** Impedanz Z ist der Wechselstromwiderstand. Bei reinem DC (f = 0) gilt X_C → ∞ (Kondensator sperrt) und X_L = 0 (Spule leitet). Bei hohem f ist es umgekehrt.
+
+**Biologisches Gewebe als Impedanz-Netzwerk:**
+Zellmembranen verhalten sich wie winzige Kondensatoren (C ≈ 1 µF/cm²): Lipid-Doppelschicht als Dielektrikum, leitfähiges Zytoplasma und Extrazellulärflüssigkeit als Platten. Je nach Frequenz fließt Strom unterschiedlich:
+
+| Frequenz | Strompfad | Grund |
+|---|---|---|
+| Niedrig (<5 kHz) | Nur extrazellulär | Membrankapazität sperrt (X_C hoch) |
+| Mittel (5–100 kHz) | Extra- und intrazellulär | X_C sinkt, Strom durchdringt Membran |
+| Hoch (>100 kHz) | Gleichmäßig durch beide Kompartimente | X_C ≈ 0 |
+
+**Bioimpedanzanalyse (BIA):**
+Ein schwacher Wechselstrom (50 kHz, 800 µA) wird über Hautelektroden angelegt. Aus der gemessenen Impedanz Z lässt sich die Körperzusammensetzung bestimmen:
+- **Fettgewebe**: hoher Widerstand (wenig Wasser, schlechter Leiter)
+- **Muskelmasse**: niedriger Widerstand (viel Wasser + Elektrolyte)
+- **Gesamtkörperwasser (TBW)**: korreliert invers mit Z
+
+Klinische Anwendung: Ernährungsstatus bei Intensivpatienten, Dialyse-Monitoring (Überwässerung erkennen), Sportmedizin (Körperfettanteil).
+
+**EKG und Thoraximpedanz:** Die R-Zacke im EKG hat eine Amplitude von ~1 mV, gemessen über Hautelektroden. Die Thoraximpedanz (40–100 Ω) beeinflusst die Defibrillations-Effektivität: adipöse Patienten haben höhere Impedanz → mehr Energie nötig. Moderne Defibrillatoren messen vor dem Schock die Impedanz und passen die Energieabgabe automatisch an (impedanzkompensierte Defibrillation).
+
+> **Merke:** Bioimpedanzanalyse nutzt die frequenzabhängige Leitfähigkeit von Gewebe: Niedrige Frequenz → nur Extrazellulärraum; hohe Frequenz → auch Intrazellulärraum. Fett hat hohe, Muskel niedrige Impedanz.
 
 ## Rechenbeispiele
 
@@ -508,6 +545,26 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
           ],
           difficulty: 2,
           tags: ["ablation", "joulesche-wärme", "elektrochirurgie"],
+        },
+        {
+          question:
+            "Bei einer Bioimpedanzanalyse (BIA) wird ein Wechselstrom von 50 kHz durch den Körper geleitet. Was ist der Hauptgrund für die Verwendung dieser Frequenz statt Gleichstrom?",
+          options: [
+            "Gleichstrom würde den Körper verbrennen",
+            "Bei 50 kHz durchdringt der Strom Zellmembranen (kapazitiver Widerstand sinkt) und erfasst extra- und intrazelluläres Wasser",
+            "Nur bei 50 kHz ist der Ohmsche Widerstand des Körpers messbar",
+            "Gleichstrom kann nicht durch Hautelektroden fließen",
+            "Bei 50 kHz entsteht kein Magnetfeld, das den Patienten gefährden könnte",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Zellmembranen verhalten sich wie Kondensatoren (Lipiddoppelschicht als Dielektrikum). Bei Gleichstrom (f = 0) ist der kapazitive Blindwiderstand X_C = 1/(2π·f·C) unendlich groß — der Strom fließt nur extrazellulär. Bei 50 kHz sinkt X_C so weit, dass der Strom auch durch die Zellen fließt und somit das Gesamtkörperwasser (intra- + extrazellulär) erfasst wird. Multi-Frequenz-BIA nutzt verschiedene Frequenzen, um Intra- und Extrazellulärwasser getrennt zu bestimmen.",
+          hints: [
+            "Zellmembranen = biologische Kondensatoren. X_C = 1/(2π·f·C) — was passiert bei steigender Frequenz?",
+            "Niedrige Frequenz → Strom nur außen um die Zellen; hohe Frequenz → Strom durch die Zellen.",
+          ],
+          difficulty: 2,
+          tags: ["bioimpedanz", "bia", "wechselstromwiderstand"],
         },
       ],
     },
@@ -1547,12 +1604,18 @@ Das Endoskop ist das wichtigste minimal-invasive optische Instrument in der Medi
 3. **Arbeitskanal**: Für Biopsiezangen, Polypektomieschlingen, Laser.
 4. **Spülung und Absaugung**: Für klares Sichtfeld.
 
+**Physik der Glasfaser-Lichtleitung:** Jede Glasfaser besteht aus einem Kern (n_Kern ≈ 1,62) und einem Mantel (n_Mantel ≈ 1,52). Da n_Kern > n_Mantel, tritt an der Kern-Mantel-Grenzfläche **Totalreflexion** auf — Licht, das unter einem Winkel steiler als der Grenzwinkel α_grenz = arcsin(n_Mantel/n_Kern) einfällt, bleibt im Kern gefangen. So wird Licht über Meter um enge Kurven geleitet, ohne merkliche Verluste. Die **numerische Apertur** der Faser bestimmt den maximalen Einkoppelwinkel: NA = √(n_Kern² − n_Mantel²).
+
+> **Merke:** Endoskop-Glasfasern funktionieren durch Totalreflexion: Kern (hohes n) leitet Licht, Mantel (niedriges n) hält es gefangen. Kein Licht geht verloren, kein Wärme-Transport ins Gewebe.
+
 Das distale Ende ist biegbar (Steuerdraht-Mechanismus), sodass Windungen im Gastrointestinaltrakt oder Bronchialbaum navigiert werden können. Wichtige klinische Einsatzgebiete:
 - **Gastroskopie**: Speiseröhre, Magen, Duodenum
 - **Koloskopie**: Dickdarm (Polyp-Screening)
 - **Bronchoskopie**: Bronchien (Biopsie, Lavage)
 - **Laparoskopie** (Bauchspiegelung): Bauchhöhle (minimalinvasive Chirurgie)
 - **Zystoskopie**: Blase
+
+**Laparoskopie — optische Besonderheiten:** Das starre Laparoskop enthält Stablinsen (Hopkins-Optik), die im Vergleich zu Glasfasern ein deutlich helleres und schärferes Bild liefern. Die Bauchhöhle wird mit CO₂ insuffliert (Pneumoperitoneum), um ein Arbeitsfeld zu schaffen. Trokar-Zugänge (5–12 mm) erlauben das Einführen von Kamera und Instrumenten. Die Linsengleichung bestimmt den Arbeitsabstand: Bei f = 10 mm Objektivbrennweite und g = 50 mm Gewebsabstand liegt das reelle Bild bei b = 1/(1/10 − 1/50) = 12,5 mm — auf dem CCD-Chip.
 
 ## Ophthalmoskop und Spaltlampe
 
@@ -1786,6 +1849,22 @@ Beispiel: Fernpunkt bei 50 cm → benötigte Korrektur: D = –1/f; das virtuell
 Mit zunehmendem Alter verliert die Augenlinse durch Verhärtung (Sklerose) ihre Elastizität. Der Ziliarmuskel kann die Linse nicht mehr ausreichend wölben. Der Nahpunkt rückt in die Ferne (>30 cm ab ~45 Jahren). Fernsicht bleibt unverändert, Nahsicht (Lesen) wird schwierig.
 
 **Korrektur**: Lesebrille (Sammellinse für Nahbereich) oder Gleitsichtbrille (kontinuierlicher Übergang Fern-/Nahbrille).
+
+## Brechung im Auge — Linsengleichung angewandt
+
+Die Abbildung auf der Netzhaut folgt der **Linsengleichung** 1/f = 1/g + 1/b, wobei das Auge als Gesamtsystem mit Brennweite f_Auge ≈ 17 mm (bei 60 dpt Brechkraft) modelliert wird und die Bildweite b = 24 mm (Augapfellänge) fest ist.
+
+**Emmetropes Auge (normalsichtig):** Gegenstand im Unendlichen (g = ∞) → 1/f = 0 + 1/b → f = b = 17 mm → Bild auf der Netzhaut ✓
+
+**Myopes Auge (zu lang, b = 26 mm):** Gleiche Brechkraft → 1/17 = 1/g + 1/26 → Fernpunkt bei g ≈ 49 cm. Alles jenseits davon ist unscharf. Korrekturlinse: D = 1/(−0,49) ≈ **−2,0 dpt**.
+
+**Hyperopes Auge (zu kurz, b = 22 mm):** 1/f_benötigt = 1/∞ + 1/22 → f = 22 mm → D = 1/0,022 ≈ 45,5 dpt. Das Auge hat nur 43 dpt Hornhautbrechkraft → es fehlen ~2,5 dpt → Korrektur mit **+2,5 dpt** Sammellinse.
+
+> **Merke:** Pro Millimeter Abweichung der Augapfellänge vom Normwert (24 mm) ändert sich die Refraktion um ca. **3 Dioptrien**. 1 mm zu lang ≈ −3 dpt (Myopie), 1 mm zu kurz ≈ +3 dpt (Hyperopie).
+
+**Brechung an der Hornhaut (Snellius):** Der größte Brechkraftsprung findet an der Hornhaut-Vorderfläche statt: Luft (n = 1,0) → Hornhaut (n = 1,376). Dieser Übergang liefert ~43 dpt — zwei Drittel der Gesamtbrechkraft. Die übrigen Grenzflächen (Hornhaut → Kammerwasser → Linse → Glaskörper) tragen weit weniger bei, weil die Brechungsindizes ähnlich sind (n ≈ 1,33–1,42).
+
+**Warum verschwimmt das Bild unter Wasser?** Wasser (n = 1,33) statt Luft (n = 1,0) vor der Hornhaut — der Brechungsindex-Sprung wird minimal → die Hornhaut verliert fast ihre gesamte Brechkraft → starke Hyperopie. Eine Taucherbrille stellt die Luft-Hornhaut-Grenzfläche wieder her.
 
 ## Astigmatismus (Stabsichtigkeit)
 

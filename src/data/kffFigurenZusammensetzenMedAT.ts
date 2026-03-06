@@ -1975,3 +1975,41 @@ export const OFFICIAL_FZ_EXAMPLES: readonly FigureAssembleTask[] = [];
 export function validateOfficialFZExamples(): string[] {
   return [];
 }
+
+// ─── Compat exports (migrated from figurenGenerator.ts) ──────────────
+
+/** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
+export const FILL = "#7EC8E3";
+
+/** Deutsche Schwierigkeitsbezeichnung. Akzeptiert auch englische Level-Werte. */
+export function difficultyLabel(
+  level: FZDifficulty | "leicht" | "mittel" | "schwer"
+): "leicht" | "mittel" | "schwer" {
+  if (level === "leicht" || level === "mittel" || level === "schwer") return level;
+  return level === "easy" ? "leicht" : level === "medium" ? "mittel" : "schwer";
+}
+
+/** Für Strategie-View: alle 14 Lösungsfiguren mit SVG-Pfad und deutschem Anzeigename. */
+export const FIGURE_STRATEGY_GALLERY: { key: string; path: string; name: string }[] = (() => {
+  const names: Record<string, string> = {
+    triangle: "ein gleichseitiges Dreieck",
+    square: "ein Quadrat",
+    rhombus: "eine Raute",
+    parallelogram: "ein Parallelogramm",
+    trapezoid: "ein Trapez",
+    pentagon: "ein regelmäßiges Fünfeck",
+    hexagon: "ein regelmäßiges Sechseck",
+    heptagon: "ein regelmäßiges Siebeneck",
+    octagon: "ein regelmäßiges Achteck",
+    "quarter-circle": "einen Viertelkreis",
+    "half-circle": "einen Halbkreis",
+    "three-quarter-circle": "einen Dreiviertelkreis",
+    "full-circle": "einen Vollkreis",
+    "L-shape": "eine L-Form",
+  };
+  return SOLUTION_SHAPES.map((key, i) => ({
+    key,
+    path: polygonToPath(OFFICIAL_TARGET_POLYGONS[i]),
+    name: names[key] ?? key,
+  }));
+})();

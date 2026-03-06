@@ -1680,28 +1680,72 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 
 ## Citratzyklus (Krebszyklus) — Vollständige Oxidation
 
+Der Citratzyklus findet in der **Mitochondrienmatrix** statt und oxidiert Acetyl-CoA (C₂) schrittweise zu 2 CO₂, wobei die Energie in Reduktionsäquivalenten (NADH, FADH₂) und einem GTP gespeichert wird. Oxalacetat wird dabei regeneriert — daher ein **Zyklus**.
 
-**Die 8 Schritte (vereinfacht):**
-1. Acetyl-CoA (C2) + Oxalacetat (C4) → **Citrat** (C6) [Citrat-Synthase]
-2. Citrat → Isocitrat (Umstrukturierung)
-3. Isocitrat → α-Ketoglutarat + CO₂ + **NADH** [Isocitrat-Dehydrogenase, reguliert!]
-4. α-Ketoglutarat → Succinyl-CoA + CO₂ + **NADH** [α-Ketoglutarat-DH, Thiamin-abhängig!]
-5. Succinyl-CoA → Succinat + **GTP** [Succinyl-CoA-Synthetase — Substratkettenphosphorylierung]
-6. Succinat → Fumarat + **FADH₂** [Succinat-Dehydrogenase — einziges Membranenzym, Komplex II!]
-7. Fumarat → Malat (Hydratisierung)
-8. Malat → Oxalacetat + **NADH** [Malat-Dehydrogenase → Oxalacetat regeneriert]
+**Die 8 Schritte im Detail:**
 
-**Bilanz pro Acetyl-CoA (1 Durchgang):**
-3 NADH + 1 FADH₂ + 1 GTP + 2 CO₂
+| Nr. | Substrat → Produkt | Enzym | C-Atome | Energieprodukt | Besonderheit |
+|-----|---|---|---|---|---|
+| 1 | Acetyl-CoA (C₂) + Oxalacetat (C₄) → **Citrat** (C₆) | **Citrat-Synthase** | 4→6 | — | Kondensation; irreversibel; reguliert! |
+| 2 | Citrat → **Isocitrat** | Aconitase | 6→6 | — | Isomerisierung über cis-Aconitat (Zwischenprodukt) |
+| 3 | Isocitrat → **α-Ketoglutarat** + CO₂ | **Isocitrat-DH** | 6→5 | **1 NADH** | Oxidative Decarboxylierung; Schrittmacher! |
+| 4 | α-Ketoglutarat → **Succinyl-CoA** + CO₂ | **α-Ketoglutarat-DH** | 5→4 | **1 NADH** | Thiamin (B₁)-abhängig; mechanistisch analog zu PDH |
+| 5 | Succinyl-CoA → **Succinat** | Succinyl-CoA-Synthetase | 4→4 | **1 GTP** | Substratkettenphosphorylierung (GTP ≈ ATP) |
+| 6 | Succinat → **Fumarat** | **Succinat-DH (Komplex II)** | 4→4 | **1 FADH₂** | Einziges Membranenzym des Zyklus; direkt in innerer Mitochondrienmembran verankert |
+| 7 | Fumarat → **L-Malat** | Fumarase | 4→4 | — | Hydratisierung (H₂O-Addition) |
+| 8 | L-Malat → **Oxalacetat** | Malat-DH | 4→4 | **1 NADH** | Gleichgewicht liegt auf Seite von Malat; wird durch raschen Oxalacetat-Verbrauch (Schritt 1) vorangetrieben |
 
-**Bilanz pro Glucose (2 Durchgänge):**
-6 NADH + 2 FADH₂ + 2 GTP + 4 CO₂
+> **Merke:** Merkhilfe für die Reihenfolge: **C**itrat — **I**socitrat — **A**lpha-Ketoglutarat — **S**uccinyl-CoA — **S**uccinat — **F**umarat — **M**alat — **O**xalacetat → Eselsbrücke: "**C**itrus **I**st **A**uch **S**auer, **S**o **F**risst **M**an **O**rangen"
 
-**Regulationsenzyme:** Citrat-Synthase (gehemmt durch NADH, Succinyl-CoA, ATP; aktiviert durch AMP), Isocitrat-DH (gehemmt durch NADH, ATP; aktiviert durch ADP, Ca²⁺), α-Ketoglutarat-DH (gehemmt durch NADH, Succinyl-CoA).
+---
 
-**Amphibolismus:** Der Citratzyklus liefert auch Vorläufer für Biosynthesen: α-Ketoglutarat → Glutamat (Aminosäure), Oxalacetat → Aspartat, Succinyl-CoA → Häm-Synthese, Citrat (im Zytoplasma) → Fettsäure-Synthese.
+### Energiebilanz des Citratzyklus
 
-> **Merke:** Pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP. Citrat-Synthase + Isocitrat-DH = Hauptregulationspunkte. Succinat-DH = Komplex II der Atmungskette.
+**Pro Acetyl-CoA (1 Durchgang):**
+
+| Produkt | Anzahl | ATP-Äquivalent (via Atmungskette) |
+|---|---|---|
+| NADH | 3 | 3 × 2,5 = **7,5 ATP** |
+| FADH₂ | 1 | 1 × 1,5 = **1,5 ATP** |
+| GTP | 1 | **1 ATP** (direkt) |
+| **Summe** | | **10 ATP-Äquivalente** |
+
+**Pro Glucose (2 Acetyl-CoA → 2 Durchgänge):** 6 NADH + 2 FADH₂ + 2 GTP = **20 ATP-Äquivalente**
+
+Die NADH- und FADH₂-Moleküle sind noch keine ATP — sie speichern Elektronen, die erst in der Atmungskette auf O₂ übertragen werden. **Ohne funktionsfähige Atmungskette** (z. B. bei Hypoxie oder Cyanidvergiftung) können NAD⁺ und FAD nicht regeneriert werden → Citratzyklus stoppt.
+
+---
+
+### Regulation des Citratzyklus
+
+Drei Enzyme regulieren den Durchsatz — alle werden durch den **Energiestatus** der Zelle gesteuert:
+
+| Enzym | Gehemmt durch | Aktiviert durch |
+|---|---|---|
+| **Citrat-Synthase** (Schritt 1) | NADH, Succinyl-CoA, ATP, Citrat | AMP, Oxalacetat (Substrat) |
+| **Isocitrat-DH** (Schritt 3) | NADH, ATP | ADP, Ca²⁺ |
+| **α-Ketoglutarat-DH** (Schritt 4) | NADH, Succinyl-CoA, ATP | Ca²⁺ |
+
+**Logik der Regulation:** Hohe NADH/ATP-Spiegel signalisieren "genug Energie" → Zyklus bremst. Niedriges Energieniveau (hohes ADP/AMP) und Ca²⁺ (Muskelkontraktion!) → Zyklus beschleunigt. Calcium ist besonders im Muskel wichtig: Bei Kontraktion steigt Ca²⁺ → Citratzyklus und ATP-Produktion werden hochgefahren, genau wenn der Muskel Energie braucht.
+
+> **Merke:** Drei Schrittmacher: Citrat-Synthase (1), Isocitrat-DH (3), α-Ketoglutarat-DH (4). Alle gehemmt durch NADH/ATP (Energie da → bremsen). Isocitrat-DH und α-Ketoglutarat-DH werden durch Ca²⁺ aktiviert (Muskelarbeit → mehr ATP nötig).
+
+---
+
+### Amphibolismus — Citratzyklus als Stoffwechselkreuzung
+
+Der Citratzyklus ist nicht nur katabol (abbauend), sondern auch **anabol** (aufbauend) — daher **amphibol** (beides). Intermediärmetabolite werden für Biosynthesen abgezweigt:
+
+- **α-Ketoglutarat** → Transaminierung → **Glutamat** (Aminosäure, Neurotransmitter-Vorstufe)
+- **Oxalacetat** → Transaminierung → **Aspartat** (Aminosäure, Harnstoffzyklus-Vorstufe)
+- **Oxalacetat** → Phosphoenolpyruvat-Carboxykinase (PEPCK) → **Gluconeogenese** (Glucose-Neusynthese in der Leber)
+- **Succinyl-CoA** → **Häm-Synthese** (Porphyrin-Ring für Hämoglobin, Cytochrome)
+- **Citrat** → Export ins Zytoplasma → ATP-Citrat-Lyase → **Acetyl-CoA** → **Fettsäure-Synthese**
+
+**Anaplerotische Reaktionen** (auffüllend): Wenn Zwischenprodukte abgezweigt werden, muss Oxalacetat nachgeliefert werden, sonst stoppt der Zyklus. Die wichtigste anaplerotische Reaktion:
+- **Pyruvat + CO₂ → Oxalacetat** [Pyruvat-Carboxylase, Biotin (Vitamin B₇)-abhängig, aktiviert durch Acetyl-CoA]
+
+> **Merke:** Citratzyklus = Drehscheibe des Stoffwechsels. α-KG → Glutamat, OAA → Aspartat/Gluconeogenese, Succinyl-CoA → Häm, Citrat → Fettsäuren. Anaplerose (Auffüllung): Pyruvat-Carboxylase liefert Oxalacetat nach (Biotin-abhängig).
 
 ---
 
@@ -1807,6 +1851,38 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           ],
           difficulty: 2,
           tags: ["cyanid", "komplex-iv", "atmungskette", "vergiftung"],
+        },
+        {
+          question:
+            "Im Citratzyklus werden pro Acetyl-CoA drei NADH, ein FADH₂ und ein GTP gebildet. An welchen Schritten entstehen die drei NADH?",
+          options: [
+            "Citrat-Synthase, Aconitase, Fumarase",
+            "Isocitrat-DH, α-Ketoglutarat-DH, Malat-DH",
+            "Succinyl-CoA-Synthetase, Succinat-DH, Malat-DH",
+            "Pyruvat-DH, Isocitrat-DH, Succinat-DH",
+            "Citrat-Synthase, Isocitrat-DH, Succinat-DH",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die drei NADH entstehen bei: (1) Isocitrat → α-Ketoglutarat (Isocitrat-DH, Schritt 3), (2) α-Ketoglutarat → Succinyl-CoA (α-Ketoglutarat-DH, Schritt 4), (3) Malat → Oxalacetat (Malat-DH, Schritt 8). FADH₂ entsteht nur bei Succinat → Fumarat (Succinat-DH, Schritt 6). GTP bei Succinyl-CoA → Succinat (Schritt 5). Pyruvat-DH gehört nicht zum Citratzyklus, sondern ist der Brückenschritt davor.",
+          difficulty: 2,
+          tags: ["citratzyklus", "nadh", "isocitrat-dh", "ketoglutarat-dh", "malat-dh"],
+        },
+        {
+          question:
+            "Succinyl-CoA aus dem Citratzyklus ist Ausgangsstoff für welche medizinisch wichtige Biosynthese?",
+          options: [
+            "Fettsäure-Synthese",
+            "Gluconeogenese",
+            "Häm-Synthese (Porphyrin-Ring für Hämoglobin und Cytochrome)",
+            "Cholesterin-Synthese",
+            "Harnstoff-Synthese",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Succinyl-CoA + Glycin → δ-Aminolävulinsäure (erster Schritt der Häm-Synthese). Häm ist essentiell für Hämoglobin (O₂-Transport), Myoglobin (O₂-Speicher im Muskel) und Cytochrome (Atmungskette). Fettsäure-Synthese nutzt Citrat (nicht Succinyl-CoA). Gluconeogenese nutzt Oxalacetat. Cholesterin-Synthese startet mit Acetyl-CoA. Dies illustriert den amphibolen Charakter des Citratzyklus als Stoffwechselkreuzung.",
+          difficulty: 2,
+          tags: ["citratzyklus", "succinyl-coa", "häm-synthese", "amphibolismus"],
         },
         {
           question: "Welches Enzym ist das wichtigste Regulationsenzym der Glykolyse?",

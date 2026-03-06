@@ -502,18 +502,66 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
 
 - **Intraspezifische Konkurrenz:** innerhalb **einer Art**. Besonders intensiv, weil die Nischenüberlappung vollständig ist; führt zu dichteabhängiger Regulation und logistischem Wachstum (Annäherung an K).
 - **Interspezifische Konkurrenz:** **zwischen Arten**. Treibt Nischendifferenzierung und Evolution an.
+- **Interferenzkonkurrenz:** direkte Auseinandersetzung (Kampf, Territorialverhalten, chemische Hemmung — z. B. Allelopathie bei Pflanzen).
+- **Ausbeutungskonkurrenz (Exploitationskonkurrenz):** indirekte Konkurrenz durch Ressourcenverbrauch — wer schneller frisst, gewinnt, ohne direkten Kontakt.
 
-> **Merke:** Intraspezifisch = innerhalb einer Art. Interspezifisch = zwischen Arten.
+> **Merke:** Intraspezifisch = innerhalb einer Art (stärkste Konkurrenz wegen identischer Nische). Interspezifisch = zwischen Arten. Interferenz = direkt, Ausbeutung = indirekt.
 
 ---
 
-## Konkurrenzausschlussprinzip (Gauß, 1934)
+## Ökologische Nische — Fundamentalnische vs. Realnische
+
+Die **ökologische Nische** ist kein Ort, sondern die Gesamtheit aller Umweltbedingungen und Ressourcen, die eine Art zum Überleben braucht (Hutchinson, 1957). Man unterscheidet:
+
+- **Fundamentalnische:** Der theoretisch nutzbare Bereich ohne Konkurrenz — definiert durch physiologische Toleranzen (Temperatur, pH, Feuchtigkeit, Nahrung).
+- **Realnische:** Der tatsächlich genutzte Bereich **unter Konkurrenzdruck** — stets kleiner als die Fundamentalnische, weil andere Arten einen Teil der Ressourcen beanspruchen.
+
+**Beispiel — Seepocken (Connell, 1961):** *Chthamalus* lebt in der oberen Gezeitenzone, *Balanus* in der unteren. Entfernt man *Balanus*, breitet sich *Chthamalus* nach unten aus → die Fundamentalnische von *Chthamalus* ist größer als die Realnische. *Balanus* verdrängt *Chthamalus* durch Konkurrenz aus der unteren Zone.
+
+> **Merke:** Fundamentalnische = theoretisch möglich (ohne Konkurrenz). Realnische = tatsächlich besetzt (mit Konkurrenz). Realnische ⊂ Fundamentalnische.
+
+---
+
+## Konkurrenzausschlussprinzip (Gause, 1934)
 
 Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im selben Habitat koexistieren — eine Art verdrängt die andere. **Koexistenz** ist nur möglich durch **Nischendifferenzierung** (zeitlich, räumlich oder trophisch).
 
-**Klassischer Beleg — Paramecium-Experiment (Gauß 1934):** *Paramecium aurelia* und *P. caudatum* in Mischkultur bei gleicher Nahrung → *P. aurelia* verdrängt *P. caudatum* vollständig. Identische Nische → Konkurrenzausschluss.
+**Klassischer Beleg — Paramecium-Experiment (Gause 1934):** *Paramecium aurelia* und *P. caudatum* in Mischkultur bei gleicher Nahrung → *P. aurelia* verdrängt *P. caudatum* vollständig. Identische Nische → Konkurrenzausschluss.
 
-> **Merke:** Gauß: Identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung.
+**Mechanismen der Koexistenz (Nischendifferenzierung):**
+
+| Mechanismus | Beispiel |
+|---|---|
+| **Räumliche Trennung** | Darwinfinken: verschiedene Schnabelformen → verschiedene Samengrößen → verschiedene Nahrungsnischen |
+| **Zeitliche Trennung** | Tag- vs. nachtaktive Raubvögel (Habicht vs. Uhu) |
+| **Trophische Trennung** | Korallenriff-Fische: gleicher Lebensraum, aber verschiedene Beuteorganismen |
+| **Character Displacement** | Schnabelgröße zweier Finkenarten weicht stärker voneinander ab, wo sie sympatrisch (im selben Gebiet) vorkommen, als wo sie allopatrisch (getrennt) leben |
+
+**Competitive Release (Konkurrenzbefeiung):** Verschwindet ein Konkurrent, dehnt die verbleibende Art ihre Realnische zur Fundamentalnische aus. Beispiel: Auf Inseln ohne Konkurrenten besetzen Eidechsenarten breitere Habitate und Nahrungsnischen als auf dem Festland.
+
+> **Merke:** Gause: Identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung (räumlich, zeitlich, trophisch). Character Displacement = Unterschiede verstärken sich bei Sympatrie.
+
+---
+
+## r- und K-Strategen — Zwei Überlebensstrategien
+
+Arten unterscheiden sich fundamental in ihrer Fortpflanzungsstrategie, je nachdem ob sie unter dichteunabhängigen (instabile Umwelt) oder dichteabhängigen (stabile, gesättigte Umwelt) Selektionsdrücken leben:
+
+| Merkmal | **r-Strategen** | **K-Strategen** |
+|---|---|---|
+| Nachkommen | Viele, kleine Nachkommen | Wenige, große Nachkommen |
+| Elterliche Fürsorge | Gering bis keine | Intensiv |
+| Generationszeit | Kurz | Lang |
+| Sterblichkeit | Hoch (Typ-III-Überlebenskurve) | Niedrig (Typ-I-Überlebenskurve) |
+| Populationsgröße | Weit unter K, stark schwankend | Nahe K, relativ stabil |
+| Umwelt | Instabil, unvorhersagbar | Stabil, vorhersagbar |
+| Beispiele | Bakterien, Insekten, Mäuse, Löwenzahn | Elefanten, Wale, Menschen, Eichen |
+
+**Typ-I-Überlebenskurve** (K-Strategen): Geringe Sterblichkeit in der Jugend, hohe im Alter (Mensch, Elefant).
+**Typ-II-Überlebenskurve:** Konstante Sterblichkeit über alle Altersklassen (manche Vögel, Reptilien).
+**Typ-III-Überlebenskurve** (r-Strategen): Extrem hohe Jugendsterblichkeit, wenige Überlebende werden alt (Fische, Insekten, Austern — produzieren Millionen Eier).
+
+> **Merke:** r-Strategen: viele Nachkommen, kurze Generationszeit, instabile Umwelt (Bakterien, Insekten). K-Strategen: wenige Nachkommen, lange Generationszeit, stabile Umwelt (Elefanten, Menschen). r = rapid, K = Kapazitätsgrenze.
 
 ---
 
@@ -528,10 +576,15 @@ Biotische Wechselwirkungen werden nach der Wirkung auf jeden Partner klassifizie
 | **Parasitismus** | + | − | Plasmodium (Malaria-Erreger), Bandwurm, Zecke |
 | **Prädation** | + | − | Fuchs frisst Hase, Adler frisst Maus |
 | **Konkurrenz** | − | − | Zwei Arten um dieselbe Ressource |
+| **Amensalismus** | 0 | − | Walnussbaum scheidet Juglon aus → hemmt Nachbarpflanzen, ohne selbst betroffen zu sein |
 
 **Parasitismus vs. Prädation (beide +/−):** Der **Parasit** lebt auf oder im Wirt und schädigt ihn, tötet ihn aber **normalerweise nicht sofort** — ein toter Wirt wäre für den Parasiten nachteilig. Der **Räuber** tötet die Beute direkt und frisst sie. Parasiten sind meist kleiner als der Wirt, Räuber oft gleich groß oder größer.
 
-> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort — Räuber tötet Beute sofort.
+- **Ektoparasiten:** auf dem Wirt (Zecke, Laus, Floh)
+- **Endoparasiten:** im Wirt (Plasmodium in Erythrozyten, Bandwurm im Darm)
+- **Parasitoide:** legen Eier in/auf den Wirt → Larve frisst Wirt von innen auf → tötet ihn (z. B. Schlupfwespen) — Zwischenform Parasit/Räuber
+
+> **Merke:** Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−), Amensalismus (0/−). Parasit tötet Wirt nicht sofort — Räuber tötet Beute sofort.
 
 ---
 
@@ -544,19 +597,28 @@ Räuber- und Beutepopulationen beeinflussen sich wechselseitig und können **zyk
 3. Wenig Beute → Räuber verhungern → Räuberpopulation sinkt.
 4. Wenige Räuber → Beutepopulation erholt sich → Zyklus wiederholt sich.
 
-Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt der Räuber folgt auf den Höhepunkt der Beute). Klassisches Beispiel: Luchs und Schneehase (ca. 10-Jahres-Zyklus).
+Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt der Räuber folgt auf den Höhepunkt der Beute). Klassisches Beispiel: Luchs und Schneehase (ca. 10-Jahres-Zyklus, Hudson-Bay-Daten).
 
-> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen schwingen; Räuber-Zyklus hinkt Beute-Zyklus nach.`,
+**Lotka-Volterra-Regeln (idealisiert):**
+1. Die Populationsgrößen schwingen periodisch — die Räuberpopulation folgt der Beutepopulation mit zeitlicher Verzögerung.
+2. Die **mittleren** Populationsgrößen beider Arten bleiben über lange Zeiträume konstant (bei konstanten Rahmenbedingungen).
+3. Wird die Beutepopulation künstlich dezimiert (z. B. durch Insektizide), erholt sie sich schneller als die Räuberpopulation → Beutepopulation kann sogar vorübergehend stärker anwachsen als vorher (Paradoxon der biologischen Schädlingsbekämpfung).
+
+> **Merke:** Lotka-Volterra: Räuber- und Beute-Populationen schwingen periodisch; Räuber-Zyklus hinkt Beute-Zyklus nach. Mittlere Populationsgrößen langfristig konstant.`,
       lernziele: [
-        "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Konkurrenzausschlussprinzip (Gauß) erklären.",
+        "Intraspezifische und interspezifische Konkurrenz unterscheiden und das Konkurrenzausschlussprinzip (Gause) erklären.",
+        "Fundamentalnische und Realnische definieren und an Beispielen erläutern.",
+        "r- und K-Strategen vergleichen und mit Überlebenskurven verknüpfen.",
         "Symbioseformen (Mutualismus, Kommensalismus, Parasitismus, Prädation) mit Vorzeichen und Beispielen zuordnen.",
-        "Parasitismus von Prädation unterscheiden und die Räuber-Beute-Dynamik (Räuber hinkt nach) beschreiben.",
+        "Parasitismus von Prädation unterscheiden und die Räuber-Beute-Dynamik (Lotka-Volterra) beschreiben.",
       ],
       sections: [],
       merksätze: [
-        "Gauß: Identische Nische → eine Art verdrängt die andere. Koexistenz durch Nischendifferenzierung.",
-        "Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−). Parasit tötet Wirt nicht sofort.",
-        "Räuber-Beute: Räuberpopulation hinkt Beutepopulation zeitlich nach.",
+        "Gause: Identische Nische → eine Art verdrängt die andere. Koexistenz durch Nischendifferenzierung (räumlich, zeitlich, trophisch).",
+        "Fundamentalnische = ohne Konkurrenz; Realnische = unter Konkurrenzdruck (stets kleiner).",
+        "r-Strategen: viele Nachkommen, kurze Generationszeit, Typ-III-Kurve. K-Strategen: wenige Nachkommen, Typ-I-Kurve.",
+        "Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort.",
+        "Lotka-Volterra: Räuberpopulation hinkt Beutepopulation zeitlich nach; mittlere Populationsgrößen langfristig konstant.",
       ],
       selfTest: [
         {
@@ -622,6 +684,38 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
             "Räuberpopulation hinkt der Beutepopulation zeitlich nach: Viel Beute → Räuber profitieren → Räuberpopulation steigt und erreicht ihren Höhepunkt später als die Beute.",
           difficulty: 2,
           tags: ["lotka-volterra", "räuber-beute"],
+        },
+        {
+          question:
+            "Eine Eidechsenart besiedelt auf dem Festland nur Felshabitate. Auf einer Insel ohne Konkurrenten breitet sie sich auch in Waldhabitate aus. Welches Konzept erklärt das?",
+          options: [
+            "Konkurrenzausschlussprinzip — die Art verdrängt sich selbst",
+            "Competitive Release — ohne Konkurrenten dehnt die Art ihre Realnische zur Fundamentalnische aus",
+            "Character Displacement — die Morphologie verändert sich",
+            "Allopatrische Artbildung — es entsteht eine neue Art",
+            "K-Strategie — die Art hat weniger Nachkommen auf der Insel",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Competitive Release (Konkurrenzbefeiung): Ohne Konkurrenten nutzt die Art den vollen Bereich ihrer Fundamentalnische (Fels + Wald), der auf dem Festland durch Konkurrenz auf die Realnische (nur Fels) eingeschränkt war.",
+          difficulty: 2,
+          tags: ["competitive-release", "fundamentalnische", "realnische"],
+        },
+        {
+          question:
+            "Welche der folgenden Kombinationen beschreibt einen typischen r-Strategen korrekt?",
+          options: [
+            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege, Typ-I-Überlebenskurve",
+            "Viele Nachkommen, kurze Generationszeit, geringe Brutpflege, Typ-III-Überlebenskurve",
+            "Wenige Nachkommen, kurze Generationszeit, intensive Brutpflege, Typ-II-Überlebenskurve",
+            "Viele Nachkommen, lange Generationszeit, keine Brutpflege, Typ-I-Überlebenskurve",
+            "Mittlere Nachkommenzahl, mittlere Generationszeit, Typ-II-Überlebenskurve",
+          ],
+          correctIndex: 1,
+          explanation:
+            "r-Strategen: viele kleine Nachkommen, kurze Generationszeit, geringe/keine Brutpflege, hohe Jugendsterblichkeit (Typ-III-Kurve). Beispiele: Bakterien, Insekten, viele Fische. K-Strategen (Option A) zeigen das Gegenteil: wenige Nachkommen, Typ-I-Kurve (Mensch, Elefant).",
+          difficulty: 1,
+          tags: ["r-strategen", "k-strategen", "überlebenskurve"],
         },
       ],
     },
@@ -744,7 +838,27 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 - **Versickerung und Grundwasserneubildung**
 - **Oberflächenabfluss:** Flüsse, Bäche → Meere
 
-Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration (Verdunstung von Boden und Pflanzen)).`,
+Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration (Verdunstung von Boden und Pflanzen)).
+
+---
+
+## Bioakkumulation und Biomagnifikation — medizinischer Bezug
+
+Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Nahrungskette dramatisch an:
+
+- **Bioakkumulation:** Aufnahme und Anreicherung eines Schadstoffs in einem **einzelnen Organismus** über die Zeit (Konzentration im Gewebe > Konzentration in der Umwelt). Lipophile (fettlösliche) Substanzen lagern sich im Fettgewebe ein und werden kaum ausgeschieden.
+- **Biomagnifikation:** Zunahme der Schadstoffkonzentration **von Trophieebene zu Trophieebene**. Ein Raubfisch (Trophieebene 3–4) hat eine millionenfach höhere Schadstoffkonzentration als das umgebende Wasser.
+
+| Schadstoff | Anreicherungsfaktor | Medizinische Folge |
+|---|---|---|
+| **Methylquecksilber (MeHg)** | 10⁶–10⁷ (Wasser → Raubfisch) | Minamata-Krankheit: Ataxie (Koordinationsstörung), Parästhesien (Missempfindungen), Sehstörungen; teratogen (fruchtschädigend) — Schwangere: Thunfisch-Konsum limitieren |
+| **DDT** (Dichlordiphenyltrichlorethan) | 10⁵–10⁶ | Östrogenartige Wirkung, Eischalenverdünnung bei Greifvögeln (Rachel Carson, *Silent Spring*), beim Menschen: möglicher Endokriner Disruptor |
+| **PCB** (polychlorierte Biphenyle) | 10⁴–10⁵ | Chlorakne (schwere Hauterkrankung), Leberschäden, neurotoxisch; seit 2001 verboten (Stockholm-Konvention) |
+| **Blei (Pb)** | Knochen als Langzeitspeicher | Enzephalopathie bei Kindern, Nierenschäden, Anämie (hemmt Häm-Synthese) |
+
+**Warum lipophile Substanzen besonders betroffen:** Fettlösliche Stoffe passieren Biomembranen leicht (passive Diffusion durch die Lipiddoppelschicht), lagern sich im Fettgewebe ein und werden renal (über die Nieren) kaum ausgeschieden (keine Filtration an der glomerulären Basalmembran bei Proteinbindung). Hydrophile (wasserlösliche) Substanzen werden dagegen effizient renal eliminiert.
+
+> **Merke:** Bioakkumulation = Anreicherung im Einzelorganismus. Biomagnifikation = Anreicherung entlang der Nahrungskette (jede Trophieebene höher). Lipophile Schadstoffe (Quecksilber, DDT, PCB) sind besonders betroffen. Medizinisch: Minamata (Hg), Bleivergiftung bei Kindern, Nitrat → Methämoglobin bei Säuglingen.`,
       merksätze: [
         "Trophieebenen: Produzenten → Konsumenten I, II, III → Destruenten. Destruenten schließen den Kreislauf durch Detritus-Abbau.",
         "10%-Regel (Lindeman 1942): ~10% der Energie gelangt von einer Trophieebene zur nächsten. 90% Verlust durch Atmung, Wärme, Unverdauliches.",
@@ -752,6 +866,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
         "Stickstoffkreislauf: N₂-Fixierung (Rhizobien) → Ammonifikation → Nitrifikation (NH₄⁺→NO₃⁻) → Assimilation → Denitrifikation (→N₂).",
         "Phosphorkreislauf: kein gasförmiges Reservoir! Limitierend in Süßwasser. Phosphatüberschuss → Eutrophierung → Algenwachstum → O₂-Zehrung → Fischsterben.",
         "Ozeane puffern ca. 30% anthropogener CO₂ → Ozeanversauerung (pH sinkt, Probleme für Kalkbilder).",
+        "Bioakkumulation = Anreicherung im Organismus; Biomagnifikation = Anreicherung entlang der Nahrungskette (Trophieebene für Trophieebene). Lipophile Stoffe besonders betroffen.",
       ],
       klinischerBezug:
         "Bioakkumulation von Schwermetallen (Quecksilber, Blei) und persistenten organischen Schadstoffen (DDT, PCB) entlang der Nahrungskette betrifft direkt die Medizin: Methylquecksilber-Vergiftung (Minamata-Krankheit), Bleivergiftung bei Kindern (kognitive Entwicklungsstörung). Der Stickstoffkreislauf ist medizinisch relevant: Nitrat im Trinkwasser → Nitrit → Methämoglobin (Blausucht bei Säuglingen).",
@@ -759,6 +874,7 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
         "Nahrungsketten und Nahrungsnetze unterscheiden und die 10%-Regel der Energieübertragung erklären",
         "Die Stoffkreisläufe (Kohlenstoff, Stickstoff, Phosphor) beschreiben und deren Störungen durch menschliche Aktivitäten benennen",
         "NPP und GPP definieren und die Bedeutung von Destruenten für den Stoffkreislauf erläutern",
+        "Bioakkumulation und Biomagnifikation definieren, medizinisch relevante Beispiele (Methylquecksilber, DDT, Blei) benennen",
       ],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
@@ -851,6 +967,22 @@ Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster 
             "Die 10%-Regel macht den Unterschied deutlich: Vegetarier (Pflanze → Mensch): 1 trophischer Schritt, ca. 10% Energieübertragung. Fleischesser (Pflanze → Tier → Mensch): 2 trophische Schritte, ca. 1% der Pflanzenenergie erreicht den Menschen. Für dieselbe Menge an Energie benötigt ein Fleischesser ca. 10× mehr Anbaufläche (und Wasser, Dünger) als ein Vegetarier. Auf globaler Ebene: ca. 80% der landwirtschaftlichen Fläche wird für Tierhaltung genutzt, produziert aber nur ca. 20% der menschlichen Kalorien.",
           difficulty: 1,
           tags: ["10-prozent-regel", "vegetarisch", "fleisch", "trophieebene", "ökologie"],
+        },
+        {
+          question:
+            "Methylquecksilber (MeHg) wird in Gewässern gemessen: im Wasser 0,001 µg/L, im Raubfisch 1.000 µg/kg. Welches Phänomen erklärt den Konzentrationsanstieg um den Faktor 10⁶?",
+          options: [
+            "Eutrophierung — Nährstoffüberschuss konzentriert Quecksilber",
+            "Bioakkumulation im Einzelorganismus, aber keine Anreicherung zwischen Trophieebenen",
+            "Biomagnifikation — lipophiles MeHg reichert sich von Trophieebene zu Trophieebene an, weil es im Fettgewebe gespeichert und kaum ausgeschieden wird",
+            "Denitrifikation — Stickstoffbakterien konzentrieren Quecksilber",
+            "Ozeanversauerung — niedrigerer pH löst mehr Quecksilber aus Sediment",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Biomagnifikation: Lipophiles (fettlösliches) Methylquecksilber passiert Biomembranen leicht, lagert sich im Fettgewebe ein und wird renal kaum ausgeschieden. Bei jeder Trophieebene steigt die Konzentration: Wasser → Phytoplankton → Zooplankton → kleine Fische → Raubfische. Der Anreicherungsfaktor kann 10⁶–10⁷ erreichen. Medizinisch: Minamata-Krankheit (Ataxie, Parästhesien, Sehstörungen), teratogen → Schwangere sollten Raubfisch-Konsum limitieren.",
+          difficulty: 2,
+          tags: ["biomagnifikation", "methylquecksilber", "minamata", "lipophil"],
         },
       ],
     },

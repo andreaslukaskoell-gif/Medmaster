@@ -625,6 +625,26 @@ Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Ga
 
 **Salpetersäure (HNO₃):** Starke Säure (pKa ≈ −1,4) + starkes Oxidationsmittel (N in OZ +5). Konz. HNO₃ + Metall → NO₂ (braunes Gas, N: +4); verd. HNO₃ + Metall → NO (farbloses Gas, N: +2). **Königswasser:** 3 HCl + 1 HNO₃ → löst Au und Pt durch Bildung von [AuCl₄]⁻- und [PtCl₆]²⁻-Komplexen. Fe und Al werden durch konz. HNO₃ **passiviert** (schützende Oxidschicht).
 
+**Stickstoffoxide — Übersicht:**
+
+| Formel | Name | OZ von N | Eigenschaft | Medizinische Relevanz |
+|---|---|---|---|---|
+| N₂O | Distickstoffmonoxid (Lachgas) | +1 | Farbloses, süßlich riechendes Gas | Inhalationsanästhetikum (Analgesie, Sedierung) |
+| NO | Stickstoffmonoxid | +2 | Farbloses Gas, radikal | Endogener Vasodilatator (cGMP-Signalweg) |
+| NO₂ | Stickstoffdioxid | +4 | Braunes, giftiges Gas | Luftschadstoff, Reizgas → Lungenödem |
+| N₂O₅ | Distickstoffpentoxid | +5 | Weißer Feststoff | Anhydrid der Salpetersäure |
+
+**Stickstoff-Kreislauf — biologisch und klinisch:**
+- **Fixierung:** N₂ → NH₃ (Nitrogenase oder Haber-Bosch)
+- **Nitrifikation:** NH₃ → NO₂⁻ → NO₃⁻ (Nitrosomonas, Nitrobacter)
+- **Assimilation:** NO₃⁻ → Aminosäuren → Proteine (Pflanzen, über Nahrungskette → Mensch)
+- **Denitrifikation:** NO₃⁻ → N₂ (anaerobe Bakterien) — schließt den Kreislauf
+- **Klinisch:** Nitrat im Trinkwasser → Nitrit (Bakterien im Darm) → Methämoglobin (Fe³⁺ statt Fe²⁺ im Hämoglobin) → keine O₂-Bindung → **Methämoglobinämie** (Blausucht, besonders gefährlich bei Säuglingen: „Blue-Baby-Syndrom")
+
+> **Merke:** Stickstoff ist zentral für Aminosäuren, Nukleotide, Harnstoff, Kreatinin und NO-Signaling. N₂ ist extrem inert (N≡N, 945 kJ/mol) — biologische Fixierung durch Nitrogenase ist energetisch aufwendig (16 ATP).
+
+---
+
 ## Schwefel (S) — das Bio-Element
 
 Schwefel (Atomnr. 16, Gruppe 16) ist ein essenzielles Bioelement. Es kommt in zwei der 20 proteinogenen Aminosäuren vor:
@@ -645,6 +665,25 @@ Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen 
 
 pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygroskopisch** und **dehydratisierend** (karbonisiert Zucker zu schwarzem Kohlenstoff, verursacht schwere Verätzungen).
 
+**Schwefel in der Medizin — klinische Bezüge:**
+- **Glutathion (GSH):** Tripeptid (γ-Glu-Cys-Gly) mit freier −SH-Gruppe → wichtigstes intrazelluläres Antioxidans; GSH-Peroxidase reduziert H₂O₂ und Lipidperoxide; Paracetamol-Überdosis → GSH-Depletion → Lebernekrose (Antidot: N-Acetylcystein liefert Cystein für GSH-Resynthese)
+- **Sulfonamide:** Strukturanaloga der p-Aminobenzoesäure (PABA) → hemmen Folsäuresynthese in Bakterien → Antibiotika (historisch erste Antibiotika vor Penicillin)
+- **Thiopental:** Schwefelanaloges Barbiturat → ultrakurz wirksames Narkotikum (Einleitung der Allgemeinanästhesie)
+- **α-Liponsäure:** Enthält Dithiolan-Ring (zyklisches Disulfid) → Cofaktor der Pyruvat-Dehydrogenase und α-Ketoglutarat-Dehydrogenase
+
+| Schwefelverbindung | Biologische Rolle | Klinische Relevanz |
+|---|---|---|
+| Cystein (−SH) | Disulfidbrücken, Redox-Puffer | Antioxidans (NAC als Mukolytikum/Antidot) |
+| Methionin (−S−) | SAM → Methylierung (DNA, Proteine) | Homocystein-Akkumulation → Atherosklerose |
+| Coenzym A (−SH) | Acetyl-CoA, Fettsäuresynthese | Pantothenat (B₅)-Mangel → CoA ↓ |
+| Glutathion (GSH) | Entgiftung, Redox-Puffer | Paracetamol-Vergiftung → GSH-Depletion |
+| Biotin (S-haltig) | Carboxylasen (Fettsäure-, Gluconeogenese) | Biotinidase-Mangel → Neugeborenenscreening |
+| Thiamin (B₁, Thiazol) | Pyruvat-Dehydrogenase, Transketolase | Wernicke-Enzephalopathie bei B₁-Mangel |
+
+> **Merke:** Schwefel ist essenziell für Redox-Biochemie (Disulfidbrücken, Glutathion, CoA) und Methylierung (SAM). Klinisch relevant: NAC bei Paracetamol-Vergiftung liefert Cystein für GSH-Resynthese.
+
+---
+
 ## Halogene — Gruppe 17
 
 
@@ -657,15 +696,19 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 | Br₂ | +1,07 | Flüssigkeit (braun) | Bromide als Sedativa (historisch) |
 | I₂ | +0,54 | Feststoff (sublimiert violett) | Schilddrüsenhormone T₃/T₄ |
 
-**Fluor (F):** Elektronegativstes Element aller (EN = 3,98 nach Pauling). F⁻ ersetzt OH⁻ in Hydroxylapatit → **Fluorapatit** (Ca₁₀(PO₄)₆F₂) — säurefester als Hydroxylapatit (pH < 4,5 statt < 5,5 für Demineralisierung) → **Kariesprophylaxe**. Fluorose (weiße Flecken bis Braunverfärbung) bei chronischer Überversorgung.
+**Fluor (F):** Elektronegativstes Element aller (EN = 3,98 nach Pauling). F₂ ist so reaktiv, dass es fast alle Elemente direkt angreift — sogar Edelgase (XeF₂, XeF₄). F⁻ ersetzt OH⁻ in Hydroxylapatit → **Fluorapatit** (Ca₁₀(PO₄)₆F₂) — säurefester als Hydroxylapatit (pH < 4,5 statt < 5,5 für Demineralisierung) → **Kariesprophylaxe**. Fluorose (weiße Flecken bis Braunverfärbung) bei chronischer Überversorgung (>2 mg/Tag über Jahre). Fluorid in der Medizin: **Natriumfluorid (NaF)** in Zahnpasta (1000–1500 ppm F⁻), fluoridiertes Trinkwasser (0,7–1,2 mg/L), Fluoridlack beim Zahnarzt. **PET-Diagnostik:** ¹⁸F-Fluordesoxyglucose (¹⁸F-FDG) als Radiotracer — Tumorzellen mit hoher Glykolyserate reichern ¹⁸F-FDG an.
 
-**Chlor (Cl):** Cl₂ + H₂O → HCl + HClO (Hypochlorige Säure) → starkes Oxidationsmittel → **Desinfektion** (Trinkwasser, Schwimmbäder, Wundreinigung). NaOCl = Bleichmittel (Eau de Javel). Cl⁻ ist das wichtigste extrazelluläre Anion (~105 mmol/L) und essenziell für die HCl-Produktion in Belegzellen des Magens (pH ≈ 1–2).
+**Chlor (Cl):** Cl₂ + H₂O → HCl + HClO (Hypochlorige Säure) → starkes Oxidationsmittel → **Desinfektion** (Trinkwasser, Schwimmbäder, Wundreinigung). NaOCl = Bleichmittel (Eau de Javel). Cl⁻ ist das wichtigste extrazelluläre Anion (~105 mmol/L) und essenziell für die HCl-Produktion in Belegzellen des Magens (pH ≈ 1–2). Weitere Cl-Verbindungen: **PVC** (Polyvinylchlorid) — medizinische Schläuche, Blutbeutel. **Chloramin-T** — Desinfektionsmittel in der Endodontie. Cl⁻-Kanäle: **CFTR** (Cystic Fibrosis Transmembrane Conductance Regulator) — Defekt → Mukoviszidose (zähflüssiger Schleim in Lunge und Pankreas; häufigste autosomal-rezessive Erbkrankheit bei Kaukasiern, ~1:2500).
 
-**Iod (I):** Sublimiert bei Raumtemperatur zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika** (Schilddrüsenhemmer)**:** Methimazol und PTU (Propylthiouracil) hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I.
+**Brom (Br):** Einziges flüssiges Nichtmetall bei Raumtemperatur (neben Hg als flüssigem Metall). Br₂ ist stark ätzend und erzeugt braune Dämpfe. Historisch: **Kaliumbromid (KBr)** als Sedativum und Antikonvulsivum (19. Jahrhundert). Heute: **Ethidiumbromid** — interkalierender DNA-Farbstoff in der Gelelektrophorese (fluoresziert unter UV → DNA-Banden sichtbar). **Bromhaltige Arzneistoffe:** Ipratropiumbromid (Anticholinergikum bei COPD/Asthma), Pancuroniumbromid (Muskelrelaxans in der Anästhesie).
 
-> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne, I⁻ für Schilddrüse, Cl⁻ für Magensäure.
+**Iod (I):** Sublimiert bei Erhitzung zu violettem Dampf. I₂ + Stärke → blauviolette Färbung (**Iod-Stärke-Nachweis** — Nachweisreaktion). **Schilddrüsenhormonsynthese:** I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv aufgenommen → **Thyreoperoxidase (TPO)** oxidiert I⁻ zu I₂ (mit H₂O₂) → Iodierung von Thyreoglobulin-Tyrosinen → MIT (1 I), DIT (2 I) → Kopplung: MIT + DIT → **T₃** (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → **T₄** (Thyroxin, 4 I, Prohormon). Iodmangel → Struma (Kropf), bei fetalem Mangel → Kretinismus. **Thyreostatika** (Schilddrüsenhemmer)**:** Methimazol und PTU (Propylthiouracil) hemmen TPO. Hochdosiertes Kaliumiodid bei Nuklearunfällen blockiert die Aufnahme von radioaktivem ¹³¹I. **Iodhaltige Kontrastmittel:** Röntgen-/CT-Kontrastmittel (Iopamidol, Iohexol) — iodierte Benzolringe absorbieren Röntgenstrahlen → Gefäße und Organe sichtbar. Cave: Iod-Allergie (eigentlich Reaktion auf Trägermolekül), Kontrastmittel-induzierte Nephropathie, thyreotoxische Krise bei latenter Hyperthyreose.
 
-> **Prüfungstipp:** Iod-Schilddrüse (T₃ = 3 Iod, T₄ = 4 Iod), Fluorapatit-Karieschutz und die Haber-Bosch-Bedingungen (400-500 °C, 150-300 bar, Fe-Katalysator) sind wiederkehrende MedAT-Themen. Bei H₂S: Geruchslähmung ab ~100 ppm als Fangfrage beachten.`,
+**Interhalogenverbindungen und Polyhalogenide:** Halogene können untereinander reagieren: ClF₃ (stärkstes Fluorierungsmittel), BrCl, ICl (Iodmonochlorid — braune Flüssigkeit, Desinfektionsmittel). I₃⁻ (Triiodid-Ion) entsteht durch I₂ + I⁻ → I₃⁻ — stabiler als I₂ in wässriger Lösung, Basis der Lugol-Lösung (KI + I₂) für Schilddrüsenblockade und Wunddesinfektion.
+
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne (Fluorapatit) und PET (¹⁸F-FDG), Cl⁻ für Magensäure und CFTR, Br⁻ historisch Sedativum, I⁻ für Schilddrüse (T₃/T₄) und CT-Kontrastmittel.
+
+> **Prüfungstipp:** Iod-Schilddrüse (T₃ = 3 Iod, T₄ = 4 Iod), Fluorapatit-Karieschutz und die Haber-Bosch-Bedingungen (400-500 °C, 150-300 bar, Fe-Katalysator) sind wiederkehrende MedAT-Themen. Bei H₂S: Geruchslähmung ab ~100 ppm als Fangfrage beachten. Neue Fangfrage: „Welches Halogen ist bei RT flüssig?" → Brom (Br₂).`,
       sections: [
         {
           heading: "Stickstoff: Haber-Bosch und NO-Signaling",
@@ -877,6 +920,44 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
           ],
           difficulty: 2,
           tags: ["tsh", "schilddrüsenhormone", "negative-rückkopplung"],
+        },
+        {
+          question: "Welche Aussage über die Halogene ist korrekt?",
+          options: [
+            "Iod ist bei Raumtemperatur ein Gas und sublimiert erst bei 200 °C",
+            "Fluor hat die niedrigste Elektronegativität aller Halogene",
+            "Brom ist das einzige Nichtmetall, das bei Raumtemperatur flüssig ist",
+            "Chlor hat ein höheres Standardpotenzial als Fluor",
+            "Alle Halogene sind bei Raumtemperatur Feststoffe",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Brom (Br₂) ist bei Raumtemperatur eine braune, stark ätzende Flüssigkeit (Sdp. 59 °C) — das einzige flüssige Nichtmetall (Hg ist das einzige flüssige Metall). Fluor hat die HÖCHSTE Elektronegativität (3,98). Iod ist bei RT ein Feststoff (sublimiert bei Erhitzung). Die Oxidationskraft nimmt von F₂ (E° = +2,87 V) nach I₂ (E° = +0,54 V) ab.",
+          hints: [
+            "Welches Halogen hat den Siedepunkt knapp über Raumtemperatur?",
+            "Aggregatzustände der Halogene bei RT: F₂ und Cl₂ sind Gase, I₂ ist ein Feststoff — was ist Br₂?",
+          ],
+          difficulty: 1,
+          tags: ["halogene", "aggregatzustand", "brom"],
+        },
+        {
+          question: "Warum ist Methämoglobinämie durch Nitrit besonders gefährlich für Säuglinge?",
+          options: [
+            "Säuglinge haben einen höheren Nitrit-Spiegel im Blut als Erwachsene",
+            "Säuglinge haben weniger Methämoglobin-Reduktase und einen höheren pH im Magen, der Nitratreduktion durch Bakterien begünstigt",
+            "Säuglinge haben mehr Hämoglobin F, das resistent gegen Nitrit ist",
+            "Nitrit wird bei Säuglingen über die Niere nicht ausgeschieden",
+            "Säuglinge haben eine höhere Fluoridkonzentration im Blut, die Nitrit aktiviert",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Säuglinge sind besonders anfällig für Nitrit-induzierte Methämoglobinämie (Blue-Baby-Syndrom) aus zwei Gründen: (1) Ihr Magen-pH ist höher als bei Erwachsenen → Bakterien können Nitrat aus Trinkwasser/Nahrung leichter zu Nitrit reduzieren. (2) Fetales Hämoglobin (HbF) wird leichter zu Methämoglobin oxidiert, und Säuglinge haben weniger Methämoglobin-Reduktase (NADH-Cytochrom-b5-Reduktase) → eingeschränkte Rückreduktion von Fe³⁺ zu Fe²⁺. Methämoglobin (Fe³⁺) bindet kein O₂ → Zyanose, Hypoxie.",
+          hints: [
+            "Fetal Hämoglobin (HbF) ist empfindlicher gegenüber Oxidation als adultes HbA.",
+            "Welches Enzym reduziert Methämoglobin zurück — und haben Säuglinge genug davon?",
+          ],
+          difficulty: 3,
+          tags: ["methämoglobinämie", "nitrit", "säuglinge"],
         },
       ],
     },

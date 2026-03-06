@@ -68,6 +68,12 @@ Lineare Zusammenhänge begegnen uns in der Medizin bei der **Kalibrierung von Me
 
 **Lineare Pharmakokinetik (Kinetik nullter Ordnung):** Ethanol wird in der Leber mit konstanter Rate abgebaut (ca. 0,1–0,15 ‰/h), weil die Alkoholdehydrogenase gesättigt ist. Die Blutalkoholkonzentration sinkt also linear: C(t) = C₀ − k₀×t. Hier ist die Steigung m = −k₀ die **Eliminationsrate** (konstant, unabhängig von der Konzentration).
 
+**Dosisberechnung nach Körpergewicht:** Viele Medikamente werden in mg/kg dosiert. Für Ibuprofen (10 mg/kg) ist die Dosis D(m) = 10×m eine Ursprungsgerade: Patient mit 70 kg → D = 10 × 70 = **700 mg**; Kind mit 25 kg → D = 10 × 25 = **250 mg**.
+
+**Infusionsrate berechnen:** Ein Perfusor enthält Noradrenalin 5 mg in 50 mL (Konzentration: 0,1 mg/mL). Verordnung: 0,15 µg/kg/min für 80 kg. Gesamtdosis = 0,15 × 80 = 12 µg/min = 0,012 mg/min. Rate = 0,012 / 0,1 = 0,12 mL/min = **7,2 mL/h**. Zusammenhang: R(m) = (Dosis_spez × m) / Konz — linear im Körpergewicht.
+
+**Lineares Wachstum (Größe bei Kindern):** Zwischen 2 und 10 Jahren wachsen Kinder annähernd linear ca. 6 cm/Jahr. Ein Kind ist mit 2 Jahren 87 cm groß: L(t) = 6t + 75 (t in Jahren ab Geburt, vereinfacht). Mit 8 Jahren: L(8) = 6 × 8 + 75 = **123 cm**. Die Steigung 6 cm/Jahr ist die Wachstumsgeschwindigkeit.
+
 > **Merke:** Im **linearen Messbereich** des Lambert-Beer-Gesetzes (A = ε×c×d) ist die Absorption A direkt proportional zur Konzentration c. Außerhalb dieses Bereichs weicht die Kalibrierkurve von der Linearität ab — ein häufiger MedAT-Aufgabentyp.
 
 ## Besondere Geraden
@@ -96,7 +102,13 @@ y = 1,8x + 85 (x = BMI, y = RR_sys in mmHg). Patient BMI = 30: RR = 1,8 × 30 + 
 **Beispiel 3 — Infusionsrate und Gleichgewichtskonzentration:**
 Elimination: C(t) = C₀ − k₀ × t (Kinetik nullter Ordnung). k₀ = 10 mg/h. Dauertropfrate R = 10 mg/h → Gleichgewicht: Zufuhr = Abbau. Bei R = 15 mg/h: Akkumulation mit 5 mg/h. Bei R = 8 mg/h: C sinkt um 2 mg/h. Steady-State nur bei **R = k₀ = 10 mg/h**.
 
-**Beispiel 4 — Senkrechte Geraden bestimmen:**
+**Beispiel 4 — Alkoholabbau (Kinetik nullter Ordnung):**
+Patient hat nach einer Feier C₀ = 1,2 ‰. Abbaurate: k₀ = 0,15 ‰/h. C(t) = 1,2 − 0,15t. Wann ist C = 0? → 0 = 1,2 − 0,15t → t = 1,2/0,15 = **8 Stunden**. Nach 4 h: C(4) = 1,2 − 0,6 = **0,6 ‰** (noch fahruntüchtig, Grenze: 0,5 ‰).
+
+**Beispiel 5 — Gewichtsabhängige Dosierung:**
+Paracetamol: 15 mg/kg, max. 1000 mg. D(m) = 15m. Kind 20 kg: D = 15 × 20 = **300 mg**. Erwachsener 80 kg: D = 15 × 80 = 1200 mg → gedeckelt bei **1000 mg**. Ab welchem Gewicht greift die Deckelung? 1000 = 15m → m = 66,7 kg.
+
+**Beispiel 6 — Senkrechte Geraden bestimmen:**
 Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂×x₀ = 1 − (−1/3)×6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁×m₂ = 3×(−1/3) = −1.`,
       lernziele: [
         "Die Geradengleichung f(x) = mx + b aufstellen, wenn zwei Punkte oder Steigung und ein Punkt gegeben sind.",
@@ -221,7 +233,7 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
     },
     {
       id: "ma-5-02",
-      title: "Quadratische Funktionen",
+      title: "Quadratische & Exponentialfunktionen",
       stichworte: [
         "Quadratische Funktion",
         "Parabel",
@@ -232,9 +244,11 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Quadratische Ergänzung",
         "Satz von Vieta",
         "Nullstellen",
-        "Symmetrieachse",
-        "Leitkoeffizient",
-        "Wurfparabel",
+        "Exponentialfunktion",
+        "Halbwertszeit",
+        "Bakterienwachstum",
+        "Pharmakokinetik",
+        "Radioaktiver Zerfall",
       ],
       content: `## Allgemeine und Scheitelpunktform
 
@@ -299,11 +313,23 @@ Dies ermöglicht oft eine schnelle Bestimmung der Nullstellen ohne Rechnung. **M
 
 ## Anwendungen in Physik und Medizin
 
-Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in komplexeren Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit (resorbierter Wirkstoffanteil) bei bestimmten Freisetzungskinetiken.
+Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit (resorbierter Wirkstoffanteil).
 
-**Hagen-Poiseuille-Gesetz** (Strömungsgesetz für Röhren)**:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴ (Radius hoch 4). Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose (Gefäßverkalkung).
+**Hagen-Poiseuille-Gesetz:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴. Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose (Gefäßverkalkung).
 
 **Wurfparabel:** Die Höhe h eines geworfenen Körpers folgt h(t) = −½g×t² + v₀×t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt des Erreichens an. Diese Parabel ist ein Standardbeispiel für a < 0 (Öffnung nach unten).
+
+## Exponentialfunktionen in der Medizin
+
+Neben quadratischen Funktionen sind **Exponentialfunktionen** f(x) = a × bˣ (oder f(t) = a × e^(kt)) in der Medizin allgegenwärtig. Der entscheidende Unterschied: Bei quadratischen Funktionen wächst f(x) proportional zu x², bei Exponentialfunktionen wächst f(x) proportional zu sich selbst — das Wachstum ist umso schneller, je größer der aktuelle Wert.
+
+**Bakterienwachstum (exponentielle Vermehrung):** In der logarithmischen Wachstumsphase verdoppelt sich die Bakterienzahl in regelmäßigen Abständen. Mit der Generationszeit g (Verdopplungszeit) gilt: N(t) = N₀ × 2^(t/g). E. coli hat g ≈ 20 min. Aus 1000 Bakterien werden nach 2 h (= 6 Generationen): N = 1000 × 2⁶ = **64.000 Bakterien**.
+
+**Radioaktiver Zerfall / Halbwertszeit:** Radiopharmaka zerfallen exponentiell: A(t) = A₀ × (1/2)^(t/t₁/₂). Technetium-99m (t₁/₂ = 6 h) hat nach 18 h: A = A₀ × (1/2)³ = A₀/8. Von 800 MBq bleiben **100 MBq** — nach 3 Halbwertszeiten nur noch 1/8 der Ausgangsdosis.
+
+**Pharmakokinetik (Kinetik erster Ordnung):** Die meisten Medikamente werden nach Kinetik erster Ordnung eliminiert: C(t) = C₀ × e^(−k×t). Die Halbwertszeit berechnet sich als t₁/₂ = ln(2)/k ≈ 0,693/k. Diazepam (t₁/₂ ≈ 40 h, k ≈ 0,017/h): Nach 80 h sind noch C₀ × (1/2)² = **25 %** der Plasmakonzentration vorhanden.
+
+> **Merke:** Halbwertszeit = ln(2)/k ≈ 0,693/k. Nach n Halbwertszeiten verbleiben (1/2)ⁿ der Ausgangsaktivität. Faustregel: Nach 5 Halbwertszeiten sind < 5 % übrig — klinisch "eliminiert".
 
 **MedAT-typisch — Herzfrequenz als Parabel in t:** Ist **f(t) = f_Ruhe − a·t + b·t²** (Herzfrequenz: zuerst Verlangsamung −a·t, dann quadratische Beschleunigung +b·t²), so liegt das **Minimum** der Herzfrequenz dort, wo die Ableitung nach t null ist: −a + 2b·t = 0 ⇒ **t = a/(2b)**. Merke: Vor x² steht hier +b (Koeffizient von t²), also Scheitel bei **t = a/(2b)** Minuten (nicht a/b, nicht 2a/b, nicht a²/b).
 
@@ -320,7 +346,13 @@ Näherung p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −20
 **Beispiel 3 — Herzminutenvolumen und Gefäßwiderstand:**
 HMV = RR / TPR. Wenn RR = −0,4×HMV² + 14×HMV (nicht-lineare Beziehung). Nullstellen: HMV×(−0,4×HMV + 14) = 0 → HMV = 0 oder **35 L/min** (physiologisches Limit bei Leistungssportlern). Maximum: HMV = −14/(2×(−0,4)) = **17,5 L/min** mit RR_max = −0,4×306,25 + 14×17,5 = **122,5 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 60 mmHg (Ruhewert auf der Kurve).
 
-**Beispiel 4 — Vieta-Schnellmethode:**
+**Beispiel 4 — Halbwertszeit Tc-99m (Szintigraphie):**
+Technetium-99m: t₁/₂ = 6 h. Injizierte Aktivität A₀ = 740 MBq. A(t) = 740 × (1/2)^(t/6). Nach 12 h: A = 740 × (1/2)² = 740/4 = **185 MBq**. Nach 24 h: A = 740 × (1/2)⁴ = 740/16 = **46,25 MBq**.
+
+**Beispiel 5 — Bakterienwachstum:**
+E. coli: Generationszeit g = 20 min. Startkultur N₀ = 500. Nach 2 h (= 120 min = 6 Generationen): N = 500 × 2⁶ = 500 × 64 = **32.000**. Wie lange bis 1 Million? 10⁶ = 500 × 2^(t/20) → 2^(t/20) = 2000 → t/20 = log₂(2000) ≈ 11 → t ≈ **220 min ≈ 3,7 h**.
+
+**Beispiel 6 — Vieta-Schnellmethode:**
 x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",

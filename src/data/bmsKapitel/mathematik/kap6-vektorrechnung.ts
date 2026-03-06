@@ -286,8 +286,6 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Antikommutativität",
         "Drehmoment",
         "Orthogonalprojektion",
-        "Spatprodukt",
-        "Sarrus-Regel",
         "Lorentz-Kraft",
         "Parallelogrammfläche",
       ],
@@ -341,35 +339,11 @@ Geometrisch entspricht dies dem **Flächeninhalt des Parallelogramms**, das von 
 | Geometrische Bedeutung | Projektion, Winkel | Fläche, Normalenvektor |
 | Null bei | Orthogonalität | Parallelität |
 
-## Sarrus-Regel
-
-Zur praktischen Berechnung des Kreuzprodukts wird die **Sarrus-Regel** (Determinantenentwicklung) verwendet. Man schreibt die Basisvektoren und die Komponenten in eine 3x3-Anordnung:
-
-$$\\vec{a} \\times \\vec{b} = \\det\\begin{pmatrix} \\vec{e_1} & \\vec{e_2} & \\vec{e_3} \\\\ a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\end{pmatrix}$$
-
-Die Entwicklung nach der ersten Zeile liefert: $\\vec{e_1}(a_2b_3-a_3b_2) - \\vec{e_2}(a_1b_3-a_3b_1) + \\vec{e_3}(a_1b_2-a_2b_1)$. Achtung auf das **Minuszeichen** vor $\\vec{e_2}$!
-
 ## Orthogonalprojektion
 
-Die **Projektion** eines Vektors $\\vec{a}$ auf einen Vektor $\\vec{b}$ zerlegt $\\vec{a}$ in eine Komponente parallel zu $\\vec{b}$ und eine senkrecht dazu:
+Die **Projektion** eines Vektors $\\vec{a}$ auf $\\vec{b}$: $\\text{proj}_{\\vec{b}} \\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\cdot \\vec{b}$. Die senkrechte Komponente: $\\vec{a}_{\\perp} = \\vec{a} - \\text{proj}_{\\vec{b}} \\vec{a}$. In der Biomechanik wird damit die **Kompressionskraft** (parallel zur Gelenkachse) von der **Scherkraft** (senkrecht) getrennt.
 
-$$\\text{proj}_{\\vec{b}} \\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\cdot \\vec{b}$$
-
-Der **skalare Projektionswert** (Komponente von $\\vec{a}$ in Richtung $\\vec{b}$) ist:
-
-$$\\text{comp}_{\\vec{b}} \\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|} = |\\vec{a}| \\cos \\theta$$
-
-Die **senkrechte Komponente** ergibt sich als Differenz: $\\vec{a}_{\\perp} = \\vec{a} - \\text{proj}_{\\vec{b}} \\vec{a}$.
-
-> **Merke:** Positive Projektion = spitzer Winkel; negative Projektion = stumpfer Winkel; Projektion = 0 bedeutet Orthogonalität. In der Biomechanik: Projektion auf Gelenkachse = Kompressionskraft, senkrechte Komponente = Scherkraft.
-
-## Spatprodukt (Volumenberechnung)
-
-Das **Spatprodukt** dreier Vektoren $\\vec{a}$, $\\vec{b}$, $\\vec{c}$ berechnet das Volumen des aufgespannten Spats (Parallelepiped):
-
-$$V = |\\vec{a} \\cdot (\\vec{b} \\times \\vec{c})|$$
-
-Ist das Spatprodukt null, liegen alle drei Vektoren in einer Ebene (**koplanar**). Das Spatprodukt ist zyklisch invariant: $\\vec{a} \\cdot (\\vec{b} \\times \\vec{c}) = \\vec{b} \\cdot (\\vec{c} \\times \\vec{a}) = \\vec{c} \\cdot (\\vec{a} \\times \\vec{b})$.
+> **Merke:** Projektion auf Gelenkachse = Kompressionskraft, senkrechte Komponente = Scherkraft. Projektion = 0 bedeutet Orthogonalität.
 
 ## Rechenbeispiele
 
@@ -390,21 +364,11 @@ Der Bizeps übt eine Kraft $\\vec{F} = (0, 120, 0)$ N am Unterarm aus. Der Hebel
 - $\\vec{M} = \\vec{r} \\times \\vec{F} = (0, 0, 0{,}05 \\cdot 120) = (0, 0, 6)$ Nm
 - Das Drehmoment von 6 Nm wirkt als Flexionsmoment und reicht aus, um einen Gegenstand von ca. 2 kg auf Unterarmlänge zu halten.
 
-**Beispiel 4 — Orthogonalprojektion:**
-Muskelkraft $\\vec{F} = (50, 80)$ N, Gelenkachse $\\vec{a} = (1, 0)$.
-- Kompressionskraft (parallel): $\\text{proj}_{\\vec{a}} \\vec{F} = \\frac{50 \\cdot 1 + 80 \\cdot 0}{1} \\cdot (1,0) = (50, 0)$ N
-- Scherkraft (senkrecht): $\\vec{F}_{\\perp} = (50,80) - (50,0) = (0, 80)$ N, also 80 N
-- Das Verhältnis Scher-/Kompressionskraft (80/50 = 1,6) zeigt eine hohe Bänderbelastung an.
-
 ## Klinische Bedeutung
 
-Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm und Kraft und ist zentral für die Biomechanik von Gelenken. Je länger der Hebelarm und je senkrechter die Kraft, desto größer das Drehmoment ($|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta$). Bei $\\theta = 90°$ ist das Drehmoment maximal — dies erklärt, warum der Bizeps am effizientesten bei 90° Ellbogenbeugung arbeitet.
+Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist zentral für die Biomechanik: Je länger der Hebelarm und je senkrechter die Kraft, desto größer das Drehmoment. Bei $\\theta = 90°$ ist es maximal — der Bizeps arbeitet am effizientesten bei 90° Ellbogenbeugung.
 
-In der **MRT-Sicherheit** ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ relevant: Metallische Implantate mit bewegten Ladungsträgern erfahren im starken Magnetfeld eine Kraft, die mit dem Kreuzprodukt berechnet wird. Die resultierende Kraft steht senkrecht auf Bewegungsrichtung und Magnetfeld.
-
-Die **Orthogonalprojektion** findet klinische Anwendung bei der Zerlegung von Muskelkräften: Die Projektion einer Muskelkraft auf die Gelenkachse ergibt die Kompressionskraft, die senkrechte Komponente die Scherkraft. In der **Strahlentherapie** wird die Dosisverteilung als Projektion des Strahlenvektors auf die Gewebefläche berechnet.
-
-Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen eines Organsegments (z. B. Leberlappen in der CT) kann über drei Kantenvektoren des Segments approximiert werden. Ist das Spatprodukt null, liegen die Vektoren in einer Ebene — das Volumen ist dann null.`,
+Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ ist für die MRT-Sicherheit relevant: Metallische Implantate erfahren im Magnetfeld eine Kraft senkrecht zu Bewegungsrichtung und Feld. Die **Orthogonalprojektion** zerlegt Muskelkräfte in Kompressions- (parallel zur Gelenkachse) und Scherkraft (senkrecht).`,
       lernziele: [
         "Das Skalarprodukt komponentenweise und über den Winkel berechnen und interpretieren können.",
         "Orthogonalität zweier Vektoren anhand des Skalarprodukts erkennen und beweisen können.",
@@ -432,10 +396,10 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
             "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F × s (Skalarprodukt). MRT: Lorentz-Kraft F = q×(v×B).",
         },
         {
-          heading: "Orthogonalprojektion und Spatprodukt",
-          text: "Die Projektion $\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\cdot\\vec{b}$ zerlegt einen Vektor in parallele und senkrechte Komponenten. In der Biomechanik wird damit die Kompressionskraft (entlang der Gelenkachse) von der Scherkraft (senkrecht dazu) getrennt. Das Spatprodukt $V = |\\vec{a}\\cdot(\\vec{b}\\times\\vec{c})|$ berechnet das Volumen eines Parallelepipeds. Drei koplanare Vektoren haben Spatprodukt null. In der CT-Volumetrie dient es zur Berechnung von Organsegment-Volumina.",
+          heading: "Orthogonalprojektion",
+          text: "Die Projektion $\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\cdot\\vec{b}$ zerlegt einen Vektor in parallele und senkrechte Komponenten. In der Biomechanik wird damit die Kompressionskraft (entlang der Gelenkachse) von der Scherkraft (senkrecht dazu) getrennt.",
           merksatz:
-            "Projektion von a auf b: proj = (a×b/|b|²)×b. Spatprodukt = |a×(b×c)| = Volumen des Spats. Spatprodukt = 0 → koplanar.",
+            "Projektion von a auf b: proj = (a·b/|b|²)·b. Senkrechte Komponente = a − proj.",
         },
       ],
       merksätze: [
@@ -449,8 +413,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
         "Parallele Vektoren: Kreuzprodukt = Nullvektor (sin 0° = 0).",
         "Drehmoment M = r×F — Kreuzprodukt aus Hebelarm und Kraft in der Biomechanik.",
         "Mechanische Arbeit W = F×s — Skalarprodukt aus Kraft und Weg.",
-        "Projektion von a auf b: proj = (a×b/|b|²)×b — zerlegt Kraft in Kompressions- und Scherkomponente.",
-        "Spatprodukt: V = |a×(b×c)| — Volumen des aufgespannten Parallelepipeds.",
+        "Projektion von a auf b: proj = (a·b/|b|²)·b — zerlegt Kraft in Kompressions- und Scherkomponente.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -460,7 +423,7 @@ Das **Spatprodukt** wird in der medizinischen Volumetrie verwendet: Das Volumen 
           "Das **Skalarprodukt** $\\vec{a}\\cdot\\vec{b} = a_1b_1+a_2b_2+a_3b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen **Skalar** ohne Richtung. Es misst die Übereinstimmung der Richtungen zweier Vektoren. Ist das Skalarprodukt null, stehen die Vektoren senkrecht (orthogonal) aufeinander. Bei positivem Wert schließen sie einen spitzen Winkel ein, bei negativem einen stumpfen. Klinisch wird das Skalarprodukt für die mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$ verwendet: Nur die Kraftkomponente in Bewegungsrichtung leistet Arbeit. Das **Kreuzprodukt** $\\vec{a}\\times\\vec{b}$ ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**, der senkrecht auf beiden Ausgangsvektoren steht. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht dem Flächeninhalt des von beiden Vektoren aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Im Gegensatz zum Skalarprodukt ist das Kreuzprodukt **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Klinisch ist das Drehmoment $\\vec{M} = \\vec{r}\\times\\vec{F}$ die wichtigste Anwendung: Es beschreibt die Dreheigenschaft einer Kraft um einen Gelenkpunkt und ist zentral für das Verständnis von Hebelkräften in der Biomechanik.",
       },
       klinischerBezug:
-        "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q×(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F×s (Skalarprodukt).",
+        "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q×(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt); Projektion zerlegt Muskelkräfte in Kompressions- und Scherkraft.",
       selfTest: [
         {
           question:

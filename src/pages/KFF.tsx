@@ -37,8 +37,8 @@ import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikatione
 import { type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { WF_TRAINING_POOL_1000 } from "@/data/kffWortfluessigkeit1000";
 import { generateSequenceTaskSet, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
-import { difficultyLabel } from "@/data/figurenGenerator";
 import {
+  difficultyLabel,
   generateFigurenTrainingSet,
   polygonToPath,
   polygonToPathScaledToViewBox,

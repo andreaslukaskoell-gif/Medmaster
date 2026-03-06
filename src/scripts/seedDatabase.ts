@@ -2,7 +2,7 @@
  * Seed-Daten nach Supabase (einmalig ausführen)
  *
  * Liest BMS-Kapitel aus den TS-Daten (bmsKapitel) und KFF-Aufgaben aus
- * kffWortfluessigkeit, kffZahlenfolgen, kffImplikationen, figurenGenerator,
+ * kffWortfluessigkeit, kffZahlenfolgen, kffImplikationen, kffFigurenZusammensetzenMedAT,
  * emotionenErkennen, emotionenRegulieren, sozialesEntscheiden, textverstaendnis
  * und schreibt sie in die Tabellen bms_chapters, bms_subchapters und kff_tasks.
  *
@@ -21,7 +21,7 @@ import type { Kapitel } from "../data/bmsKapitel/types";
 import { wortfluessigkeitWords } from "../data/kffWortfluessigkeit";
 import { zahlenfolgenTasks } from "../data/kffZahlenfolgen";
 import { implikationenTasks } from "../data/kffImplikationen";
-import { figurenAufgaben } from "../data/figurenGenerator";
+import { generateFigurenTrainingSet, difficultyLabel } from "../data/kffFigurenZusammensetzenMedAT";
 import { emotionenErkennenScenarios } from "../data/kffEmotionenErkennen";
 import { emotionenRegulierenScenarios } from "../data/kffEmotionenRegulieren";
 import { sozialesEntscheidenScenarios } from "../data/kffSozialesEntscheiden";
@@ -134,13 +134,16 @@ async function seedKFFTasks(): Promise<number> {
     });
   }
 
-  // Figuren (FZAufgabe hat schon difficulty: leicht|mittel|schwer)
-  for (const a of figurenAufgaben) {
-    rows.push({
-      category: "figuren",
-      difficulty: a.difficulty,
-      data_json: a,
-    });
+  // Figuren (generiert aus kffFigurenZusammensetzenMedAT, je 5 pro Schwierigkeit)
+  for (const diff of ["easy", "medium", "hard"] as const) {
+    const figurenTasks = generateFigurenTrainingSet(5, diff);
+    for (const a of figurenTasks) {
+      rows.push({
+        category: "figuren",
+        difficulty: difficultyLabel(a.difficulty),
+        data_json: a,
+      });
+    }
   }
 
   // Emotionen Erkennen (Szenarien mit Fragen)

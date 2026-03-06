@@ -121,4 +121,36 @@ for (let i = 0; i + 2 < shuffled.length && rofPool.length < 30; i += 3) {
 writeFileSync(resolve(OUT, "rof.json"), JSON.stringify(rofPool, null, 2));
 console.log(`Generated ${rofPool.length} RichtigOderFalsch sets`);
 
+// Extract Figuren zusammensetzen (generate a pool of 30 pre-rendered tasks)
+const {
+  generateFigurenTrainingTask,
+  polygonToPathScaledToViewBox,
+  layoutPiecesCompact,
+  isOptionE,
+} = await import("@/data/kffFigurenZusammensetzenMedAT.js");
+
+const fzPool: any[] = [];
+const difficulties = ["easy", "medium", "hard"] as const;
+for (let i = 0; i < 30; i++) {
+  try {
+    const diff = difficulties[i % 3]!;
+    const task = (generateFigurenTrainingTask as any)(diff, Date.now() + i * 7919);
+    // Pre-render all SVG paths so the Remotion component doesn't need the generator
+    const piecesLayout = (layoutPiecesCompact as any)(task.pieces);
+    const optionPaths = task.options.map((opt: any) => {
+      if ((isOptionE as any)(opt)) return null;
+      return (polygonToPathScaledToViewBox as any)(opt, 200);
+    });
+    fzPool.push({
+      piecePaths: task.pieces.map((p: any) => (polygonToPathScaledToViewBox as any)(p, 200)),
+      piecesLayout,
+      optionPaths,
+      correctIndex: task.correctIndex,
+      explanation: task.explanation,
+    });
+  } catch {}
+}
+writeFileSync(resolve(OUT, "figuren.json"), JSON.stringify(fzPool, null, 2));
+console.log(`Generated ${fzPool.length} Figuren tasks`);
+
 console.log(`Output: ${OUT}`);

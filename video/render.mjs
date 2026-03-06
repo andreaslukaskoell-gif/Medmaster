@@ -44,18 +44,28 @@ const impData = loadPool("implikationen.json");
 const zfData = loadPool("zahlenfolgen.json");
 const wfData = loadPool("wortfluessigkeit.json");
 const rofData = loadPool("rof.json");
+const fzData = loadPool("figuren.json");
 
 function pick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// Simple shapes for Figuren reel
-const SHAPE_PUZZLES = [
-  { targetShape: "hexagon", pieces: ["triangle", "triangle", "diamond"], correctOption: "hexagon", options: ["circle", "hexagon", "square", "pentagon", "diamond"], correctIndex: 1 },
-  { targetShape: "square", pieces: ["triangle", "triangle"], correctOption: "square", options: ["circle", "square", "hexagon", "diamond", "pentagon"], correctIndex: 1 },
-  { targetShape: "circle", pieces: ["circle", "circle"], correctOption: "circle", options: ["square", "diamond", "circle", "hexagon", "triangle"], correctIndex: 2 },
-  { targetShape: "pentagon", pieces: ["triangle", "triangle", "triangle"], correctOption: "pentagon", options: ["hexagon", "diamond", "square", "pentagon", "circle"], correctIndex: 3 },
-];
+// Fallback figuren data (pre-rendered SVG paths) in case extraction didn't run
+const FIGUREN_FALLBACK = {
+  piecePaths: [
+    "M 30 100 L 100 30 L 170 100 Z",
+    "M 30 100 L 170 100 L 100 170 Z",
+  ],
+  piecesLayout: { viewBox: "0 0 148 148", paths: [{ d: "M 0 70 L 70 0 L 140 70 Z", transform: "translate(4,4)" }, { d: "M 0 0 L 140 0 L 70 70 Z", transform: "translate(4,78)" }] },
+  optionPaths: [
+    "M 100 14 L 186 64 L 186 136 L 100 186 L 14 136 L 14 64 Z",
+    "M 100 19 L 181 100 L 100 181 L 19 100 Z",
+    "M 100 17 L 178 56 L 178 144 L 100 183 L 22 144 L 22 56 Z",
+    "M 100 35 L 165 100 L 100 165 L 35 100 Z",
+  ],
+  correctIndex: 1,
+  explanation: "Die 2 Teile setzen sich exakt zur gewählten Figur zusammen.",
+};
 
 // ── Build input props for each composition ──────────────────
 function getProps(compId) {
@@ -119,7 +129,7 @@ function getProps(compId) {
       };
     }
     case "FigurenChallenge":
-      return pick(SHAPE_PUZZLES);
+      return fzData.length > 0 ? pick(fzData) : FIGUREN_FALLBACK;
     default:
       return {};
   }

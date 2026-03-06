@@ -144,11 +144,22 @@ export const RemotionRoot: React.FC = () => {
         width={WIDTH}
         height={HEIGHT}
         defaultProps={{
-          targetShape: "hexagon",
-          pieces: ["triangle", "triangle", "diamond"],
-          correctOption: "hexagon",
-          options: ["circle", "hexagon", "square", "pentagon", "diamond"],
+          piecePaths: ["M 30 100 L 100 30 L 170 100 Z", "M 30 100 L 170 100 L 100 170 Z"],
+          piecesLayout: {
+            viewBox: "0 0 148 148",
+            paths: [
+              { d: "M 0 70 L 70 0 L 140 70 Z", transform: "translate(4,4)" },
+              { d: "M 0 0 L 140 0 L 70 70 Z", transform: "translate(4,78)" },
+            ],
+          },
+          optionPaths: [
+            "M 100 14 L 186 64 L 186 136 L 100 186 L 14 136 L 14 64 Z",
+            "M 100 19 L 181 100 L 100 181 L 19 100 Z",
+            "M 100 17 L 178 56 L 178 144 L 100 183 L 22 144 L 22 56 Z",
+            "M 100 35 L 165 100 L 100 165 L 35 100 Z",
+          ],
           correctIndex: 1,
+          explanation: "Die 2 Teile setzen sich exakt zur gewählten Figur zusammen.",
         }}
       />
     </>

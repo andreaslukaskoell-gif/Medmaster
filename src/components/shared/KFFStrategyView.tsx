@@ -1,8 +1,11 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FIGURE_STRATEGY_GALLERY, FILL } from "@/data/figurenGenerator";
-import { FIGURE_SVG_ASPECT_PROPS } from "@/data/kffFigurenZusammensetzenMedAT";
+import {
+  FIGURE_STRATEGY_GALLERY,
+  FILL,
+  FIGURE_SVG_ASPECT_PROPS,
+} from "@/data/kffFigurenZusammensetzenMedAT";
 import { KFF_STRATEGIES, type KFFStrategyTestType } from "@/data/kffStrategies";
 
 type StrategyKey = "zahlenfolgen" | "gedaechtnis" | "implikationen" | "wortflüssigkeit" | "figuren";
