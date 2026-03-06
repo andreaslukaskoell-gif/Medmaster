@@ -110,13 +110,40 @@ export function useAuth() {
       }
 
       if (data) {
-        setProfile(data as Profile);
+        // Google-Login: display_name aus user_metadata übernehmen falls leer
+        const p = data as Profile;
+        if (!p.display_name?.trim() && supabase) {
+          const {
+            data: { user: currentUser },
+          } = await supabase.auth.getUser();
+          const meta = currentUser?.user_metadata as
+            | { full_name?: string; name?: string }
+            | undefined;
+          const googleName = meta?.full_name?.trim() || meta?.name?.trim();
+          if (googleName) {
+            p.display_name = googleName;
+            if (!p.username?.trim()) p.username = googleName;
+            supabase
+              .from("profiles")
+              .update({ display_name: googleName, username: p.username })
+              .eq("id", userId)
+              .then(() => {});
+          }
+        }
+        setProfile(p);
       } else {
         // Neuer User: kein Profil in DB → Standard-Profil für Welcome-State
+        const {
+          data: { user: currentUser },
+        } = await supabase.auth.getUser();
+        const meta = currentUser?.user_metadata as
+          | { full_name?: string; name?: string }
+          | undefined;
+        const googleName = meta?.full_name?.trim() || meta?.name?.trim() || "";
         setProfile({
           id: userId,
-          username: "",
-          display_name: null,
+          username: googleName,
+          display_name: googleName || null,
           avatar_url: null,
           medat_type: "medat",
           test_date: null,
