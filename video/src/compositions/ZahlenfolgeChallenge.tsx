@@ -13,6 +13,7 @@ import { HookText } from "../shared/HookText";
 import { CountdownRing } from "../shared/CountdownRing";
 import { AnimatedText } from "../shared/AnimatedText";
 import { TripleCTA } from "../shared/TripleCTA";
+import { PollBar } from "../shared/PollBar";
 import { BRAND } from "../shared/brand";
 import type { ZahlenfolgeProps } from "../types";
 
@@ -24,18 +25,27 @@ const NumberBox: React.FC<{
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const drop = spring({ frame: frame - index * 5, fps, config: { damping: 10, stiffness: 180 } });
-  const pulse = isQuestion ? interpolate(Math.sin((frame * Math.PI) / 30), [-1, 1], [0.95, 1.05]) : 1;
+  const pulse = isQuestion
+    ? interpolate(Math.sin((frame * Math.PI) / 30), [-1, 1], [0.95, 1.05])
+    : 1;
 
   return (
-    <div style={{
-      width: 120, height: 120, borderRadius: 22,
-      background: isQuestion ? `${BRAND.accent}33` : "rgba(255,255,255,0.08)",
-      border: `3px solid ${isQuestion ? BRAND.accent : "rgba(255,255,255,0.2)"}`,
-      display: "flex", alignItems: "center", justifyContent: "center",
-      fontSize: isQuestion ? 52 : 44, fontWeight: 800,
-      color: isQuestion ? BRAND.accent : "white",
-      transform: `scale(${drop * pulse})`,
-    }}>
+    <div
+      style={{
+        width: 120,
+        height: 120,
+        borderRadius: 22,
+        background: isQuestion ? `${BRAND.accent}33` : "rgba(255,255,255,0.08)",
+        border: `3px solid ${isQuestion ? BRAND.accent : "rgba(255,255,255,0.2)"}`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: isQuestion ? 52 : 44,
+        fontWeight: 800,
+        color: isQuestion ? BRAND.accent : "white",
+        transform: `scale(${drop * pulse})`,
+      }}
+    >
       {value}
     </div>
   );
@@ -47,7 +57,7 @@ const HookScene: React.FC = () => (
     <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
       <div style={{ fontSize: 80 }}>🔢</div>
       <HookText text="Findest du das Muster?" fontSize={60} />
-      <div style={{ fontSize: 34, color: BRAND.accent, fontWeight: 600 }}>Kommentiere deine Lösung!</div>
+      <PollBar letters={["💬"]} prompt="Kommentiere deine Lösung!" />
     </SafeArea>
   </BrandedBackground>
 );
@@ -58,13 +68,23 @@ const PuzzleScene: React.FC<ZahlenfolgeProps> = ({ sequence }) => {
   return (
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 40 }}>
-        <div style={{ fontSize: 38, color: "rgba(255,255,255,0.5)", fontWeight: 600 }}>Welche Zahl fehlt?</div>
+        <div style={{ fontSize: 38, color: "rgba(255,255,255,0.5)", fontWeight: 600 }}>
+          Welche Zahl fehlt?
+        </div>
         <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
           {display.map((v, i) => (
             <NumberBox key={i} value={v} index={i} isQuestion={i === display.length - 1} />
           ))}
         </div>
-        <div style={{ padding: "10px 24px", borderRadius: 16, background: "rgba(255,255,255,0.06)", fontSize: 22, color: BRAND.textMuted }}>
+        <div
+          style={{
+            padding: "10px 24px",
+            borderRadius: 16,
+            background: "rgba(255,255,255,0.06)",
+            fontSize: 22,
+            color: BRAND.textMuted,
+          }}
+        >
           KFF Zahlenfolgen
         </div>
       </SafeArea>
@@ -92,10 +112,35 @@ const RevealScene: React.FC<ZahlenfolgeProps> = ({ sequence, answer, rule }) => 
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
         <div style={{ fontSize: 36, color: BRAND.success, fontWeight: 700 }}>✅ Lösung</div>
-        <div style={{ fontSize: 110, fontWeight: 900, color: BRAND.success, transform: `scale(${pop})` }}>{answer}</div>
-        <AnimatedText text={rule} fontSize={34} color="rgba(255,255,255,0.7)" fontWeight={500} delay={8} />
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", marginTop: 20 }}>
-          {sequence.map((v, i) => <NumberBox key={i} value={v} index={0} />)}
+        <div
+          style={{
+            fontSize: 110,
+            fontWeight: 900,
+            color: BRAND.success,
+            transform: `scale(${pop})`,
+          }}
+        >
+          {answer}
+        </div>
+        <AnimatedText
+          text={rule}
+          fontSize={34}
+          color="rgba(255,255,255,0.7)"
+          fontWeight={500}
+          delay={8}
+        />
+        <div
+          style={{
+            display: "flex",
+            gap: 10,
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginTop: 20,
+          }}
+        >
+          {sequence.map((v, i) => (
+            <NumberBox key={i} value={v} index={0} />
+          ))}
         </div>
       </SafeArea>
     </BrandedBackground>
@@ -106,7 +151,15 @@ const RevealScene: React.FC<ZahlenfolgeProps> = ({ sequence, answer, rule }) => 
 const CTAScene: React.FC = () => (
   <BrandedBackground>
     <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
-      <div style={{ fontSize: 44, fontWeight: 800, color: "white", textAlign: "center", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+      <div
+        style={{
+          fontSize: 44,
+          fontWeight: 800,
+          color: "white",
+          textAlign: "center",
+          textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+        }}
+      >
         KFF-Training mit Generator
       </div>
       <TripleCTA
@@ -121,10 +174,20 @@ const CTAScene: React.FC = () => (
 // 15s = 450 frames
 export const ZahlenfolgeChallenge: React.FC<ZahlenfolgeProps> = (props) => (
   <AbsoluteFill>
-    <Sequence from={0} durationInFrames={45}><HookScene /></Sequence>
-    <Sequence from={45} durationInFrames={165}><PuzzleScene {...props} /></Sequence>
-    <Sequence from={210} durationInFrames={90}><CountdownScene /></Sequence>
-    <Sequence from={300} durationInFrames={60}><RevealScene {...props} /></Sequence>
-    <Sequence from={360} durationInFrames={90}><CTAScene /></Sequence>
+    <Sequence from={0} durationInFrames={45}>
+      <HookScene />
+    </Sequence>
+    <Sequence from={45} durationInFrames={165}>
+      <PuzzleScene {...props} />
+    </Sequence>
+    <Sequence from={210} durationInFrames={90}>
+      <CountdownScene />
+    </Sequence>
+    <Sequence from={300} durationInFrames={60}>
+      <RevealScene {...props} />
+    </Sequence>
+    <Sequence from={360} durationInFrames={90}>
+      <CTAScene />
+    </Sequence>
   </AbsoluteFill>
 );

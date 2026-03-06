@@ -8,6 +8,7 @@ import { OptionCard } from "../shared/OptionCard";
 import { SubjectBadge } from "../shared/SubjectBadge";
 import { TripleCTA } from "../shared/TripleCTA";
 import { AnimatedText } from "../shared/AnimatedText";
+import { PollBar } from "../shared/PollBar";
 import { BRAND } from "../shared/brand";
 import type { QuizChallengeProps } from "../types";
 
@@ -77,6 +78,15 @@ const QuestionScene: React.FC<QuizChallengeProps> = ({ question, subject, option
     </BrandedBackground>
   );
 };
+
+// Scene 2b: Poll prompt — animated A–E buttons (5.5–7s = 165–210f)
+const PollScene: React.FC = () => (
+  <BrandedBackground>
+    <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
+      <PollBar />
+    </SafeArea>
+  </BrandedBackground>
+);
 
 // Scene 3: Countdown ring (7–12s = 210–360f)
 const CountdownScene: React.FC = () => {
@@ -199,23 +209,26 @@ const CTAScene: React.FC = () => {
   );
 };
 
-// 20s = 600 frames @ 30fps
+// 22s = 660 frames @ 30fps
 export const QuizChallenge: React.FC<QuizChallengeProps> = (props) => {
   return (
     <AbsoluteFill>
       <Sequence from={0} durationInFrames={45}>
         <HookScene />
       </Sequence>
-      <Sequence from={45} durationInFrames={165}>
+      <Sequence from={45} durationInFrames={150}>
         <QuestionScene {...props} />
       </Sequence>
-      <Sequence from={210} durationInFrames={150}>
+      <Sequence from={195} durationInFrames={60}>
+        <PollScene />
+      </Sequence>
+      <Sequence from={255} durationInFrames={120}>
         <CountdownScene />
       </Sequence>
-      <Sequence from={360} durationInFrames={150}>
+      <Sequence from={375} durationInFrames={150}>
         <RevealScene {...props} />
       </Sequence>
-      <Sequence from={510} durationInFrames={90}>
+      <Sequence from={525} durationInFrames={135}>
         <CTAScene />
       </Sequence>
     </AbsoluteFill>

@@ -10,11 +10,11 @@ import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* 20s — BMS quiz with countdown + reveal + triple CTA */}
+      {/* 22s — BMS quiz with poll + countdown + reveal + triple CTA */}
       <Composition
         id="QuizChallenge"
         component={QuizChallenge}
-        durationInFrames={600}
+        durationInFrames={660}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}

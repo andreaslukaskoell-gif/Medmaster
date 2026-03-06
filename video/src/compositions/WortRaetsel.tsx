@@ -13,6 +13,7 @@ import { HookText } from "../shared/HookText";
 import { CountdownRing } from "../shared/CountdownRing";
 import { AnimatedText } from "../shared/AnimatedText";
 import { TripleCTA } from "../shared/TripleCTA";
+import { PollBar } from "../shared/PollBar";
 import { BRAND } from "../shared/brand";
 import type { WortRaetselProps } from "../types";
 
@@ -21,17 +22,28 @@ const LetterTile: React.FC<{ letter: string; index: number }> = ({ letter, index
   const { fps } = useVideoConfig();
   const rotateX = interpolate(
     spring({ frame: frame - index * 5, fps, config: { damping: 10, stiffness: 150 } }),
-    [0, 1], [90, 0]
+    [0, 1],
+    [90, 0]
   );
 
   return (
-    <div style={{
-      width: 100, height: 120, borderRadius: 18,
-      background: "rgba(255,255,255,0.1)", border: "3px solid rgba(255,255,255,0.25)",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      fontSize: 58, fontWeight: 800, color: "white", fontFamily: "monospace",
-      transform: `perspective(400px) rotateX(${rotateX}deg)`,
-    }}>
+    <div
+      style={{
+        width: 100,
+        height: 120,
+        borderRadius: 18,
+        background: "rgba(255,255,255,0.1)",
+        border: "3px solid rgba(255,255,255,0.25)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: 58,
+        fontWeight: 800,
+        color: "white",
+        fontFamily: "monospace",
+        transform: `perspective(400px) rotateX(${rotateX}deg)`,
+      }}
+    >
       {letter}
     </div>
   );
@@ -43,7 +55,7 @@ const HookScene: React.FC = () => (
     <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
       <div style={{ fontSize: 80 }}>🔤</div>
       <HookText text="Welches Wort ergibt sich?" fontSize={56} />
-      <div style={{ fontSize: 34, color: BRAND.accent, fontWeight: 600 }}>Kommentiere deine Lösung!</div>
+      <PollBar letters={["💬"]} prompt="Kommentiere deine Lösung!" />
     </SafeArea>
   </BrandedBackground>
 );
@@ -54,9 +66,19 @@ const LetterScene: React.FC<WortRaetselProps> = ({ letters, hint }) => (
     <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
       <div style={{ fontSize: 30, color: BRAND.textMuted, fontWeight: 500 }}>{hint}</div>
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-        {letters.map((l, i) => <LetterTile key={i} letter={l} index={i} />)}
+        {letters.map((l, i) => (
+          <LetterTile key={i} letter={l} index={i} />
+        ))}
       </div>
-      <div style={{ padding: "10px 24px", borderRadius: 16, background: "rgba(255,255,255,0.06)", fontSize: 22, color: BRAND.textMuted }}>
+      <div
+        style={{
+          padding: "10px 24px",
+          borderRadius: 16,
+          background: "rgba(255,255,255,0.06)",
+          fontSize: 22,
+          color: BRAND.textMuted,
+        }}
+      >
         KFF Wortflüssigkeit
       </div>
     </SafeArea>
@@ -83,11 +105,17 @@ const RevealScene: React.FC<WortRaetselProps> = ({ word }) => {
     <BrandedBackground>
       <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
         <div style={{ fontSize: 36, color: BRAND.success, fontWeight: 700 }}>✅ Lösung</div>
-        <div style={{
-          fontSize: 88, fontWeight: 900, color: "white", fontFamily: "monospace",
-          transform: `scale(${pop})`, letterSpacing: 8,
-          textShadow: "0 4px 12px rgba(0,0,0,0.4)",
-        }}>
+        <div
+          style={{
+            fontSize: 88,
+            fontWeight: 900,
+            color: "white",
+            fontFamily: "monospace",
+            transform: `scale(${pop})`,
+            letterSpacing: 8,
+            textShadow: "0 4px 12px rgba(0,0,0,0.4)",
+          }}
+        >
           {word}
         </div>
       </SafeArea>
@@ -99,7 +127,15 @@ const RevealScene: React.FC<WortRaetselProps> = ({ word }) => {
 const CTAScene: React.FC = () => (
   <BrandedBackground>
     <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 20 }}>
-      <div style={{ fontSize: 44, fontWeight: 800, color: "white", textAlign: "center", textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+      <div
+        style={{
+          fontSize: 44,
+          fontWeight: 800,
+          color: "white",
+          textAlign: "center",
+          textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+        }}
+      >
         Wortflüssigkeit trainieren
       </div>
       <TripleCTA
@@ -114,10 +150,20 @@ const CTAScene: React.FC = () => (
 // 15s = 450 frames
 export const WortRaetsel: React.FC<WortRaetselProps> = (props) => (
   <AbsoluteFill>
-    <Sequence from={0} durationInFrames={45}><HookScene /></Sequence>
-    <Sequence from={45} durationInFrames={165}><LetterScene {...props} /></Sequence>
-    <Sequence from={210} durationInFrames={90}><CountdownScene /></Sequence>
-    <Sequence from={300} durationInFrames={60}><RevealScene {...props} /></Sequence>
-    <Sequence from={360} durationInFrames={90}><CTAScene /></Sequence>
+    <Sequence from={0} durationInFrames={45}>
+      <HookScene />
+    </Sequence>
+    <Sequence from={45} durationInFrames={165}>
+      <LetterScene {...props} />
+    </Sequence>
+    <Sequence from={210} durationInFrames={90}>
+      <CountdownScene />
+    </Sequence>
+    <Sequence from={300} durationInFrames={60}>
+      <RevealScene {...props} />
+    </Sequence>
+    <Sequence from={360} durationInFrames={90}>
+      <CTAScene />
+    </Sequence>
   </AbsoluteFill>
 );
