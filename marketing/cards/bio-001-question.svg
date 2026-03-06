@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3ea7"/>
+      <stop offset="100%" stop-color="#0f2a80"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="60" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">MedMaster</text>
+  <rect x="60" y="90" width="120" height="36" rx="18" fill="#059669"/>
+  <text x="120" y="114" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Biologie</text>
+
+  <!-- Frage # -->
+  <text x="1020" y="70" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="white" opacity="0.6" text-anchor="end">Frage 1</text>
+
+  <!-- Card -->
+  <rect x="40" y="160" width="1000" height="820" rx="24" fill="url(#card)" filter="drop-shadow(0 4px 24px rgba(0,0,0,0.15))"/>
+
+  <!-- Question text -->
+  <text x="80" y="240" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#1e293b">Welche Funktion haben Tight Junctions?</text>
+
+  <!-- Options -->
+  
+  <rect x="70" y="266" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="280" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="305" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">A</text>
+  <text x="138" y="305" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Ionenaustausch zwischen Zellen</text>
+  <rect x="70" y="342" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="356" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="381" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">B</text>
+  <text x="138" y="381" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Verschluss des Interzellularspalts</text>
+  <rect x="70" y="418" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="432" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="457" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">C</text>
+  <text x="138" y="457" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Verankerung von Zellen an der Basalmembran</text>
+  <rect x="70" y="494" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="508" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="533" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">D</text>
+  <text x="138" y="533" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Zell-Zell-Kommunikation über Kanäle</text>
+  <rect x="70" y="570" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="584" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="609" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">E</text>
+  <text x="138" y="609" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Transport von Vesikeln</text>
+
+  <!-- Footer -->
+  <text x="540" y="1040" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="white" opacity="0.8" text-anchor="middle">medmaster.at — Kostenlos üben</text>
+</svg>

@@ -1,0 +1,118 @@
+{
+  "title": "SEK-Vergleich: MedMaster vs. Konkurrenz",
+  "date": "2026-03-06",
+  "type": "carousel",
+  "comparison": {
+    "MedMaster": {
+      "sek_total": 381,
+      "ee": 122,
+      "er": 124,
+      "se": 135,
+      "format": "Web-App (interaktiv)",
+      "schwierigkeitsstufen": 3,
+      "offizielle_instruktionen": true,
+      "pruefungssimulation_timer": true,
+      "interaktives_ui": "SE: 5x5 Grid, ER: Tabelle, EE: Toggle",
+      "preis": "Gratis bis Ende Maerz, dann 29,90 einmalig",
+      "alle_medat_teile": true
+    },
+    "MedBreaker": {
+      "sek_total": 480,
+      "ee": 168,
+      "er": 144,
+      "se": 168,
+      "format": "Buch + App",
+      "schwierigkeitsstufen": 0,
+      "offizielle_instruktionen": true,
+      "pruefungssimulation_timer": false,
+      "interaktives_ui": "statisch",
+      "preis": "89,90 (Buch)",
+      "alle_medat_teile": false
+    },
+    "Studymed": {
+      "sek_total": "k.A.",
+      "format": "Web + App",
+      "schwierigkeitsstufen": 0,
+      "offizielle_instruktionen": "teilweise",
+      "pruefungssimulation_timer": true,
+      "interaktives_ui": "einfach",
+      "preis": "69-169 (Abo)",
+      "alle_medat_teile": true
+    },
+    "MedGurus": {
+      "sek_total": "k.A.",
+      "format": "Buch",
+      "schwierigkeitsstufen": 0,
+      "offizielle_instruktionen": true,
+      "pruefungssimulation_timer": false,
+      "interaktives_ui": "statisch",
+      "preis": "~40 (Buch)",
+      "alle_medat_teile": false
+    },
+    "Get-to-med": {
+      "sek_total": "wenige",
+      "format": "Buch + PDF",
+      "schwierigkeitsstufen": 0,
+      "offizielle_instruktionen": false,
+      "pruefungssimulation_timer": false,
+      "interaktives_ui": "statisch",
+      "preis": "19,99/Monat",
+      "alle_medat_teile": false
+    }
+  },
+  "carousel_slides": [
+    {
+      "slide": 1,
+      "title": "SEK-Vorbereitung: Wer hat die Nase vorn?",
+      "subtitle": "Wir haben die 4 groessten MedAT-Anbieter verglichen."
+    },
+    {
+      "slide": 2,
+      "title": "381 interaktive SEK-Aufgaben",
+      "bullets": [
+        "122x Emotionen Erkennen",
+        "124x Emotionen Regulieren",
+        "135x Soziales Entscheiden"
+      ],
+      "subtitle": "Alle 3 Untertests abgedeckt — mit 3 Schwierigkeitsstufen."
+    },
+    {
+      "slide": 3,
+      "title": "Interaktiv statt Papier",
+      "bullets": [
+        "Echtes 5x5-Ranking-Grid (SE)",
+        "Strategie-Tabelle mit Scoring (ER)",
+        "Wahrscheinlich/Unwahrscheinlich-Toggle (EE)",
+        "Pruefungstimer fuer realistische Simulation"
+      ],
+      "subtitle": "Die meisten Anbieter setzen auf Buecher oder PDFs. MedMaster ist komplett digital und interaktiv."
+    },
+    {
+      "slide": 4,
+      "title": "Preis-Check",
+      "prices": {
+        "MedBreaker (Buch)": "89,90",
+        "Studymed (Abo)": "69-169",
+        "Get-to-med (Abo)": "19,99/Monat",
+        "MedMaster": "Gratis bis Ende Maerz, dann 29,90 einmalig"
+      },
+      "subtitle": "Kein Abo. Kein Kleingedrucktes. Einmal zahlen, alles nutzen."
+    },
+    {
+      "slide": 5,
+      "title": "Bereit fuer den MedAT?",
+      "cta": "Teste alle 381 SEK-Aufgaben jetzt gratis auf medmaster.at",
+      "subtitle": "Link in Bio"
+    }
+  ],
+  "caption": "SEK-Vorbereitung 2026: Wir haben verglichen.\n\n381 interaktive Aufgaben. Alle 3 Untertests. 3 Schwierigkeitsstufen. Pruefungssimulation mit Timer.\n\nUnd das Beste: Gratis testen bis Ende Maerz.\n\nDie meisten Anbieter verkaufen dir ein Buch fuer 90 Euro. Wir geben dir eine interaktive Web-App — fuer 29,90 einmalig.\n\nLink in Bio\n\n#MedAT #MedAT2026 #SEK #Medizinstudium #Aufnahmetest",
+  "reel_idea": {
+    "duration_sec": 15,
+    "scenes": [
+      { "time": "0-3s", "text": "SEK-Vorbereitung: Buch vs. App" },
+      { "time": "3-7s", "text": "Split-Screen: Buch-Seite (statisch) vs. MedMaster Screenshot (interaktiv)" },
+      { "time": "7-11s", "text": "381 Aufgaben. 3 Schwierigkeiten. Pruefungstimer." },
+      { "time": "11-15s", "text": "Gratis testen: medmaster.at + Logo" }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3ea7"/>
+      <stop offset="100%" stop-color="#0f2a80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="60" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="white" opacity="0.9">MedMaster</text>
+  <rect x="60" y="90" width="120" height="36" rx="18" fill="#059669"/>
+  <text x="120" y="114" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Biologie</text>
+  <text x="1020" y="70" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#22c55e" text-anchor="end">Auflösung</text>
+
+  <!-- Card -->
+  <rect x="40" y="160" width="1000" height="820" rx="24" fill="white" filter="drop-shadow(0 4px 24px rgba(0,0,0,0.15))"/>
+
+  <!-- Question -->
+  <text x="80" y="240" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#1e293b">Zwei Paramecium-Arten werden in Mischkultur</text>
+  <text x="80" y="276" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#1e293b">gehalten und nutzen dieselbe Nahrung. Nach</text>
+  <text x="80" y="312" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#1e293b">einigen Wochen überlebt nur noch eine Art.</text>
+  <text x="80" y="348" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#1e293b">Welches Prinzip erklärt das?</text>
+
+  <!-- Options with answer highlighted -->
+  
+  <rect x="70" y="374" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="388" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="413" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">A</text>
+  <text x="138" y="413" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Prädation — eine Art frisst die andere</text>
+  <rect x="70" y="450" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="464" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="489" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">B</text>
+  <text x="138" y="489" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Mutualismus — eine Art verdrängt die andere...</text>
+  <rect x="70" y="526" width="940" height="64" rx="16" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <rect x="86" y="540" width="36" height="36" rx="10" fill="#22c55e" opacity="0.2"/>
+  <text x="104" y="565" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#166534" text-anchor="middle">C</text>
+  <text x="138" y="565" font-family="system-ui, sans-serif" font-size="20" fill="#166534">Konkurrenzausschlussprinzip (Gauß) — zwei...</text>
+  <text x="980" y="566" font-family="system-ui, sans-serif" font-size="22" fill="#22c55e">&#x2713;</text>
+  <rect x="70" y="602" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="616" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="641" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">D</text>
+  <text x="138" y="641" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Allopatrische Artbildung</text>
+  <rect x="70" y="678" width="940" height="64" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="86" y="692" width="36" height="36" rx="10" fill="#059669" opacity="0.15"/>
+  <text x="104" y="717" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">E</text>
+  <text x="138" y="717" font-family="system-ui, sans-serif" font-size="20" fill="#334155">Dichteabhängige Regulation</text>
+
+  <!-- Explanation -->
+  <rect x="70" y="774" width="940" height="170" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="90" y="804" font-family="system-ui, sans-serif" font-size="18" fill="#166534">Gauß-Experiment (1934): Zwei Arten mit identischer</text>
+  <text x="90" y="832" font-family="system-ui, sans-serif" font-size="18" fill="#166534">Nische (gleiche Nahrung, gleiches Habitat) können</text>
+  <text x="90" y="860" font-family="system-ui, sans-serif" font-size="18" fill="#166534">nicht koexistieren; die konkurrenzstärkere Art</text>
+  <text x="90" y="888" font-family="system-ui, sans-serif" font-size="18" fill="#166534">verdrängt die andere. Koexistenz wäre nur durch</text>
+  <text x="90" y="916" font-family="system-ui, sans-serif" font-size="18" fill="#166534">Nischendifferenzierung möglich.</text>
+
+  <!-- Footer -->
+  <text x="540" y="1040" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="white" opacity="0.8" text-anchor="middle">medmaster.at — Kostenlos üben</text>
+</svg>
