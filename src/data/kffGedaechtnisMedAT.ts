@@ -8,7 +8,7 @@ export type BloodGroup = "A" | "B" | "AB" | "0";
 export type AllergyPass = {
   id: string;
   name: string;
-  birthdate: string; // z.B. "17.12.2003"
+  birthdate: string; // z.B. "17. Dezember"
   bloodGroup: BloodGroup;
   medications: boolean;
   allergies: string[];

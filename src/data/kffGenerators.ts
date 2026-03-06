@@ -369,155 +369,48 @@ export interface MemoryQuestion {
   questionType: string;
 }
 
-const FIRST_SYLLABLES = [
-  "Ba",
-  "Be",
-  "Bi",
-  "Bo",
-  "Bu",
-  "Da",
-  "De",
-  "Di",
-  "Do",
-  "Du",
-  "Fa",
-  "Fe",
-  "Fi",
-  "Fo",
-  "Fu",
-  "Ga",
-  "Ge",
-  "Gi",
-  "Go",
-  "Gu",
-  "Ha",
-  "He",
-  "Hi",
-  "Ho",
-  "Hu",
-  "Ka",
-  "Ke",
-  "Ki",
-  "Ko",
-  "Ku",
-  "La",
-  "Le",
-  "Li",
-  "Lo",
-  "Lu",
-  "Ma",
-  "Me",
-  "Mi",
-  "Mo",
-  "Mu",
-  "Na",
-  "Ne",
-  "Ni",
-  "No",
-  "Nu",
-  "Pa",
-  "Pe",
-  "Pi",
-  "Po",
-  "Pu",
-  "Ra",
-  "Re",
-  "Ri",
-  "Ro",
-  "Ru",
-  "Sa",
-  "Se",
-  "Si",
-  "So",
-  "Su",
-  "Ta",
-  "Te",
-  "Ti",
-  "To",
-  "Tu",
-  "Va",
-  "Ve",
-  "Vi",
-  "Vo",
-  "Vu",
-  "Za",
-  "Ze",
-  "Zi",
-  "Zo",
-  "Zu",
-];
-
-const SECOND_SYLLABLES = [
-  "ban",
-  "ben",
-  "bin",
-  "bon",
-  "bun",
-  "dan",
-  "den",
-  "din",
-  "don",
-  "dun",
-  "fan",
-  "fen",
-  "fin",
-  "fon",
-  "fun",
-  "gan",
-  "gen",
-  "gin",
-  "gon",
-  "gun",
-  "kan",
-  "ken",
-  "kin",
-  "kon",
-  "kun",
-  "lan",
-  "len",
-  "lin",
-  "lon",
-  "lun",
-  "man",
-  "men",
-  "min",
-  "mon",
-  "mun",
-  "nan",
-  "nen",
-  "nin",
-  "non",
-  "nun",
-  "pan",
-  "pen",
-  "pin",
-  "pon",
-  "pun",
-  "ran",
-  "ren",
-  "rin",
-  "ron",
-  "run",
-  "san",
-  "sen",
-  "sin",
-  "son",
-  "sun",
-  "tan",
-  "ten",
-  "tin",
-  "ton",
-  "tun",
-  "van",
-  "ven",
-  "vin",
-  "von",
-  "vun",
-  "zan",
-  "zen",
-  "zin",
-  "zon",
-  "zun",
+/** MedAT-style fictional names (ALL CAPS, pronounceable, not real names). */
+const FICTIONAL_NAMES = [
+  "FULZAT",
+  "SAMLIR",
+  "TOBEHN",
+  "KREVUN",
+  "DASPEL",
+  "MIRKAN",
+  "BOLZEN",
+  "HARFIN",
+  "GULTEK",
+  "PLIVON",
+  "ZEKRAM",
+  "NILWAS",
+  "FORBIT",
+  "WANDEK",
+  "LUSPAR",
+  "HELFIN",
+  "TREBAS",
+  "KOMVIL",
+  "GASNUR",
+  "BELKOT",
+  "RASTIN",
+  "FELMOK",
+  "DUNVAR",
+  "SIPKAL",
+  "TAVREN",
+  "MORKUL",
+  "ZELPAN",
+  "BIGRAT",
+  "WONFET",
+  "LARKIM",
+  "VOSTEG",
+  "NEBHUR",
+  "PILZAM",
+  "KERDON",
+  "GUWALT",
+  "DEMPAR",
+  "SULBEK",
+  "HINGOR",
+  "FAKTEL",
+  "RIVSON",
 ];
 
 const ALLERGIES = [
@@ -581,22 +474,40 @@ const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
 /** Für Gedächtnis Allergiepässe: MedAT-Stil A | B | AB | 0 (ohne Rhesus in Typ) */
 const BLOOD_GROUPS_GM: AllergyPass["bloodGroup"][] = ["A", "B", "AB", "0"];
 
+/** Pick a random fictional name from the pool (MedAT-style ALL CAPS). */
 function generateName(): string {
-  const s1 = FIRST_SYLLABLES[randInt(0, FIRST_SYLLABLES.length - 1)];
-  const s2 = SECOND_SYLLABLES[randInt(0, SECOND_SYLLABLES.length - 1)];
-  return s1 + s2;
+  return FICTIONAL_NAMES[randInt(0, FICTIONAL_NAMES.length - 1)];
 }
 
+/** Austrian month names (Jänner, not Januar). */
+const MONTH_NAMES = [
+  "Jänner",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember",
+];
+
+/** MedAT-Stil: "17. Dezember" (Tag + Monatsname, KEIN Jahr). */
 function generateDate(): string {
-  const day = randInt(1, 28).toString().padStart(2, "0");
-  const month = randInt(1, 12).toString().padStart(2, "0");
-  const year = randInt(1960, 2005);
-  return `${day}.${month}.${year}`;
+  const day = randInt(1, 28);
+  const month = MONTH_NAMES[randInt(0, 11)];
+  return `${day}. ${month}`;
 }
 
+/** MedAT-Stil: 5 Ziffern mit Leerzeichen ("5 6 9 5 1"). */
 function generateAusweisnummer(): string {
-  return randInt(10000, 99999).toString();
+  return randInt(10000, 99999).toString().split("").join(" ");
 }
+
+const OPTION_E_LABEL = "Keine der Antwortmöglichkeiten ist richtig.";
 
 export function generateAllergyCards(count: number = 8): AllergyCard[] {
   const usedNames = new Set<string>();
@@ -615,7 +526,7 @@ export function generateAllergyCards(count: number = 8): AllergyCard[] {
       id: `card-${i + 1}`,
       name,
       geburtsdatum: generateDate(),
-      blutgruppe: BLOOD_GROUPS[randInt(0, BLOOD_GROUPS.length - 1)],
+      blutgruppe: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
       allergien,
       ausweisnummer: generateAusweisnummer(),
       land: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
@@ -631,89 +542,117 @@ export function generateMemoryQuestions(
   count: number = 25
 ): MemoryQuestion[] {
   const questions: MemoryQuestion[] = [];
-  const questionGenerators = [
+
+  // Pre-compute allergy combo strings
+  const allergyByCard = new Map(cards.map((c) => [c.id, c.allergien.join(", ")]));
+  const allAllergyOptions = [...new Set(cards.map((c) => c.allergien.join(", ")))];
+
+  const questionGenerators: Array<
+    (card: AllergyCard) => { text: string; correct: string; pool: string[]; type: string } | null
+  > = [
     // Name → Blutgruppe
-    (card: AllergyCard) => ({
+    (card) => ({
       text: `Welche Blutgruppe hat ${card.name}?`,
       correct: card.blutgruppe,
-      pool: BLOOD_GROUPS,
+      pool: [...BLOOD_GROUPS_GM] as string[],
       type: "name-blutgruppe",
     }),
-    // Name → Allergie
-    (card: AllergyCard) => ({
-      text: `Gegen was ist ${card.name} allergisch?`,
-      correct: card.allergien[0],
-      pool: ALLERGIES,
+    // Name → Allergie/n (combo)
+    (card) => ({
+      text: `Welche Allergie/n hat ${card.name}?`,
+      correct: allergyByCard.get(card.id) ?? "",
+      pool: allAllergyOptions,
       type: "name-allergie",
     }),
     // Name → Land
-    (card: AllergyCard) => ({
+    (card) => ({
       text: `Aus welchem Land kommt ${card.name}?`,
       correct: card.land,
-      pool: COUNTRIES,
+      pool: [...COUNTRIES],
       type: "name-land",
     }),
     // Name → Geburtsdatum
-    (card: AllergyCard) => ({
-      text: `Wann wurde ${card.name} geboren?`,
+    (card) => ({
+      text: `Wann hat ${card.name} Geburtstag?`,
       correct: card.geburtsdatum,
       pool: cards.map((c) => c.geburtsdatum),
       type: "name-geburtsdatum",
     }),
     // Name → Ausweisnummer
-    (card: AllergyCard) => ({
+    (card) => ({
       text: `Wie lautet die Ausweisnummer von ${card.name}?`,
       correct: card.ausweisnummer,
       pool: cards.map((c) => c.ausweisnummer),
       type: "name-ausweisnummer",
     }),
     // Name → Medikamente
-    (card: AllergyCard) => ({
+    (card) => ({
       text: `Nimmt ${card.name} regelmäßig Medikamente ein?`,
-      correct: card.medikamente ? "Ja" : "Nein",
-      pool: ["Ja", "Nein"],
+      correct: card.medikamente ? "ja" : "nein",
+      pool: ["ja", "nein"],
       type: "name-medikamente",
     }),
     // Ausweisnummer → Name
-    (card: AllergyCard) => ({
+    (card) => ({
       text: `Wem gehört die Ausweisnummer ${card.ausweisnummer}?`,
       correct: card.name,
       pool: cards.map((c) => c.name),
       type: "ausweisnummer-name",
     }),
-    // Blutgruppe → Name (who has this blood type)
-    (card: AllergyCard) => ({
-      text: `Wer hat die Blutgruppe ${card.blutgruppe}?`,
-      correct: card.name,
-      pool: cards.map((c) => c.name),
-      type: "blutgruppe-name",
-    }),
+    // Blutgruppe → Name (only if unique)
+    (card) => {
+      if (cards.filter((c) => c.blutgruppe === card.blutgruppe).length !== 1) return null;
+      return {
+        text: `Wer hat die Blutgruppe ${card.blutgruppe}?`,
+        correct: card.name,
+        pool: cards.map((c) => c.name),
+        type: "blutgruppe-name",
+      };
+    },
   ];
 
-  const usedCombinations = new Set<string>();
+  // ~15% of questions should have E as correct
+  const eCount = Math.max(1, Math.round(count * 0.15));
+  const eIndices = new Set<number>();
+  while (eIndices.size < eCount) eIndices.add(randInt(0, count - 1));
 
-  while (questions.length < count) {
+  const usedCombinations = new Set<string>();
+  let attempts = 0;
+
+  while (questions.length < count && attempts < count * 6) {
+    attempts++;
     const card = cards[randInt(0, cards.length - 1)];
     const genIdx = randInt(0, questionGenerators.length - 1);
     const combo = `${card.id}-${genIdx}`;
-
     if (usedCombinations.has(combo)) continue;
     usedCombinations.add(combo);
 
     const gen = questionGenerators[genIdx](card);
-    const wrongOptions = shuffle(gen.pool.filter((o) => o !== gen.correct)).slice(0, 4);
-    const options = shuffle([gen.correct, ...wrongOptions]).slice(0, 5);
+    if (!gen || !gen.correct) continue;
 
-    // Ensure correct answer is in options
-    if (!options.includes(gen.correct)) {
-      options[options.length - 1] = gen.correct;
+    const qIdx = questions.length;
+    const makeECorrect = eIndices.has(qIdx);
+    const wrongPool = gen.pool.filter((o) => o !== gen.correct);
+
+    let options: string[];
+    let correctAnswer: string;
+
+    if (makeECorrect && wrongPool.length >= 4) {
+      const wrong4 = shuffle(wrongPool).slice(0, 4);
+      options = [...wrong4, OPTION_E_LABEL];
+      correctAnswer = OPTION_E_LABEL;
+    } else {
+      const wrong3 = shuffle(wrongPool).slice(0, 3);
+      const abcd = shuffle([gen.correct, ...wrong3]);
+      options = [...abcd, OPTION_E_LABEL];
+      correctAnswer = gen.correct;
     }
 
     questions.push({
-      id: `mem-gen-${questions.length + 1}`,
+      id: `mem-gen-${qIdx + 1}`,
       text: gen.text,
-      options: shuffle(options),
-      correctAnswer: gen.correct,
+      options,
+      correctAnswer,
       questionType: gen.type,
     });
   }
@@ -723,11 +662,9 @@ export function generateMemoryQuestions(
 
 // --- GEDAECHTNIS ALLERGIEPAESSE (MedAT-Stil) ---
 
-const OPTION_E_LABEL = "Keine der Antwortmöglichkeiten ist richtig.";
-
-/** Ausweisnummer: immer genau 5 Ziffern (MedAT-Stil). */
+/** Ausweisnummer: 5 Ziffern mit Leerzeichen (MedAT-Stil: "5 6 9 5 1"). */
 function generatePassportNumber(): string {
-  return randInt(10000, 99999).toString();
+  return randInt(10000, 99999).toString().split("").join(" ");
 }
 
 /**
@@ -742,10 +679,13 @@ function getAvatarPool(count: number): string[] {
   return shuffled.slice(0, count).map((n) => `/avatars/face-${String(n).padStart(2, "0")}.jpg`);
 }
 
-/** Generiert 6–10 realistische Allergiepässe für Training (niemals für offizielle Beispiele). */
+/** Generiert 6–10 realistische Allergiepässe für Training (niemals für offizielle Beispiele).
+ * Garantiert: eindeutige Namen, Geburtstage, Ausweisnummern, Länder pro Set. */
 export function generateAllergyPasses(count: number): AllergyPass[] {
   const usedNames = new Set<string>();
   const usedPassportNumbers = new Set<string>();
+  const usedBirthdates = new Set<string>();
+  const usedCountries = new Set<string>();
   const passes: AllergyPass[] = [];
   const avatars = getAvatarPool(count);
 
@@ -758,18 +698,27 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
     while (usedPassportNumbers.has(passportNumber)) passportNumber = generatePassportNumber();
     usedPassportNumbers.add(passportNumber);
 
+    let birthdate = generateDate();
+    while (usedBirthdates.has(birthdate)) birthdate = generateDate();
+    usedBirthdates.add(birthdate);
+
+    // Eindeutiges Land pro Pass (20 Länder für max 10 Pässe reicht)
+    let country = COUNTRIES[randInt(0, COUNTRIES.length - 1)];
+    while (usedCountries.has(country)) country = COUNTRIES[randInt(0, COUNTRIES.length - 1)];
+    usedCountries.add(country);
+
     const numAllergies = randInt(1, 3);
     const allergien = shuffle([...ALLERGIES]).slice(0, numAllergies);
 
     passes.push({
       id: `gm-pass-${i + 1}-${Date.now()}`,
       name,
-      birthdate: generateDate(),
+      birthdate,
       bloodGroup: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
       medications: Math.random() > 0.5,
       allergies: allergien,
       passportNumber,
-      country: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
+      country,
       photo: avatars[i] ?? "",
     });
   }
@@ -777,87 +726,120 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
   return passes;
 }
 
-/** Erzeugt 25 Fragen zu den gegebenen Pässen; A–E, E manchmal korrekt. */
+/** Helper: for cross-reference questions, check if attribute is unique among passes. */
+function isUniqueAmongPasses<T>(
+  passes: AllergyPass[],
+  target: AllergyPass,
+  getter: (p: AllergyPass) => T
+): boolean {
+  return passes.filter((p) => getter(p) === getter(target)).length === 1;
+}
+
+/** Build allergy combo string like "Tomaten, Hunde" for options (MedAT-Stil). */
+function allergyComboString(allergies: string[]): string {
+  return allergies.join(", ");
+}
+
+/** Erzeugt 25 Fragen zu den gegebenen Pässen; A–D + E (MedAT-Stil). */
 export function generateGedaechtnisQuestionsFromPasses(
   passes: AllergyPass[],
   count: number = 25
 ): GedaechtnisQuestion[] {
   const questions: GedaechtnisQuestion[] = [];
   const usedCombos = new Set<string>();
-  const builders: Array<
-    (p: AllergyPass) => {
-      question: string;
-      correct: string;
-      pool: string[];
-      allowE?: boolean;
-      photoUrl?: string;
-    }
-  > = [
+
+  // Pre-compute allergy combo strings per pass
+  const allergyByPass = new Map(passes.map((p) => [p.id, allergyComboString(p.allergies)]));
+  const allAllergyOptions = [...new Set(passes.map((p) => allergyComboString(p.allergies)))];
+
+  type BuilderResult = {
+    question: string;
+    correct: string;
+    pool: string[];
+    photoUrl?: string;
+  };
+
+  const builders: Array<(p: AllergyPass) => BuilderResult | null> = [
+    // Name → Geburtstag
     (p) => ({
       question: `Wann hat ${p.name} Geburtstag?`,
       correct: p.birthdate,
       pool: passes.map((x) => x.birthdate),
     }),
+    // Name → Blutgruppe
     (p) => ({
       question: `Welche Blutgruppe hat ${p.name}?`,
       correct: p.bloodGroup,
-      pool: BLOOD_GROUPS_GM as unknown as string[],
+      pool: [...BLOOD_GROUPS_GM] as string[],
     }),
-    (p) => ({
-      question: `Welche Allergie hat die Person mit Blutgruppe ${p.bloodGroup}?`,
-      correct: p.allergies[0] ?? "",
-      pool: [...new Set(passes.flatMap((x) => x.allergies))],
-    }),
-    (p) => ({
-      question: `Nimmt ${p.name} regelmäßig Medikamente ein?`,
-      correct: p.medications ? "Ja" : "Nein",
-      pool: ["Ja", "Nein"],
-    }),
+    // Blutgruppe → Allergie (only if blood group is unique!)
+    (p) => {
+      if (!isUniqueAmongPasses(passes, p, (x) => x.bloodGroup)) return null;
+      return {
+        question: `Welche Allergie/n hat die Person mit der Blutgruppe ${p.bloodGroup}?`,
+        correct: allergyByPass.get(p.id) ?? "",
+        pool: allAllergyOptions,
+      };
+    },
+    // Name → Ausweisnummer
     (p) => ({
       question: `Welche Ausweisnummer gehört zu ${p.name}?`,
       correct: p.passportNumber,
       pool: passes.map((x) => x.passportNumber),
     }),
+    // Name → Land
     (p) => ({
       question: `Aus welchem Land stammt ${p.name}?`,
       correct: p.country,
       pool: [...COUNTRIES],
     }),
+    // Ausweisnummer → Name
     (p) => ({
       question: `Wem gehört die Ausweisnummer ${p.passportNumber}?`,
       correct: p.name,
       pool: passes.map((x) => x.name),
     }),
-    (p) => ({
-      question: `Wer ist allergisch gegen ${p.allergies[0]}?`,
-      correct: p.name,
-      pool: passes.map((x) => x.name),
-    }),
-    // Photo-based questions — show the person's photo, ask about their data
+    // Allergie → Name (only if allergy is unique to one person!)
+    (p) => {
+      const allergy = p.allergies[0];
+      if (!allergy) return null;
+      const personsWithAllergy = passes.filter((x) => x.allergies.includes(allergy));
+      if (personsWithAllergy.length !== 1) return null;
+      return {
+        question: `Wer ist allergisch gegen ${allergy}?`,
+        correct: p.name,
+        pool: passes.map((x) => x.name),
+      };
+    },
+    // Photo → Name
     (p) => ({
       question: `Wie heißt diese Person?`,
       correct: p.name,
       pool: passes.map((x) => x.name),
       photoUrl: p.photo,
     }),
+    // Photo → Blutgruppe
     (p) => ({
       question: `Welche Blutgruppe hat diese Person?`,
       correct: p.bloodGroup,
-      pool: BLOOD_GROUPS_GM as unknown as string[],
+      pool: [...BLOOD_GROUPS_GM] as string[],
       photoUrl: p.photo,
     }),
+    // Photo → Geburtstag
     (p) => ({
       question: `Wann hat diese Person Geburtstag?`,
       correct: p.birthdate,
       pool: passes.map((x) => x.birthdate),
       photoUrl: p.photo,
     }),
+    // Photo → Allergien (combo)
     (p) => ({
-      question: `Welche Allergie hat diese Person?`,
-      correct: p.allergies[0] ?? "",
-      pool: [...new Set(passes.flatMap((x) => x.allergies))],
+      question: `Welche Allergie/n hat diese Person?`,
+      correct: allergyByPass.get(p.id) ?? "",
+      pool: allAllergyOptions,
       photoUrl: p.photo,
     }),
+    // Photo → Land
     (p) => ({
       question: `Aus welchem Land stammt diese Person?`,
       correct: p.country,
@@ -866,42 +848,49 @@ export function generateGedaechtnisQuestionsFromPasses(
     }),
   ];
 
+  // Decide which questions get E as correct (~15% of count)
+  const eCount = Math.max(1, Math.round(count * 0.15));
+  const eIndices = new Set<number>();
+  while (eIndices.size < eCount) eIndices.add(randInt(0, count - 1));
+
   let attempts = 0;
-  const maxAttempts = count * 4;
+  const maxAttempts = count * 6;
 
   while (questions.length < count && attempts < maxAttempts) {
     attempts++;
     const p = passes[randInt(0, passes.length - 1)];
     const builderIdx = randInt(0, builders.length - 1);
-    const key = `${p.id}-${builderIdx}-${questions.length}`;
+    const key = `${p.id}-${builderIdx}`;
     if (usedCombos.has(key)) continue;
     usedCombos.add(key);
 
     const b = builders[builderIdx](p);
-    const wrongPool = b.pool.filter((x) => x !== b.correct);
-    const useE = b.allowE && Math.random() < 0.15 && wrongPool.length >= 4;
+    if (!b || !b.correct) continue;
 
-    const questionText = b.question;
-    const correctVal = b.correct;
+    const qIdx = questions.length;
+    const makeECorrect = eIndices.has(qIdx);
+    // Deduplizierter Wrong-Pool (keine Duplikate in Optionen)
+    const wrongPool = [...new Set(b.pool.filter((x) => x !== b.correct))];
+    if (wrongPool.length < 3) continue; // Nicht genug Distraktoren
+
     let options: string[];
     let correctIndex: number;
 
-    if (useE && wrongPool.length >= 4) {
-      const wrong = shuffle(wrongPool).slice(0, 4);
-      options = shuffle([...wrong, OPTION_E_LABEL]);
+    if (makeECorrect && wrongPool.length >= 4) {
+      const wrong4 = shuffle(wrongPool).slice(0, 4);
+      options = [...wrong4, OPTION_E_LABEL];
       correctIndex = 4;
     } else {
-      if (!correctVal && correctVal !== "Keine") continue;
-      const wrong = shuffle(wrongPool).slice(0, 4);
-      options = shuffle([b.correct, ...wrong].slice(0, 5));
-      if (!options.includes(b.correct)) options[4] = b.correct;
+      const wrong3 = shuffle(wrongPool).slice(0, 3);
+      const abcd = shuffle([b.correct, ...wrong3]);
+      options = [...abcd, OPTION_E_LABEL];
       correctIndex = options.indexOf(b.correct);
-      if (correctIndex < 0) continue;
+      if (correctIndex < 0 || correctIndex > 3) continue;
     }
 
     questions.push({
-      id: `gm-q-${questions.length + 1}-${Date.now()}`,
-      question: questionText,
+      id: `gm-q-${qIdx + 1}-${Date.now()}`,
+      question: b.question,
       options,
       correctIndex,
       ...(b.photoUrl ? { photoUrl: b.photoUrl } : {}),
@@ -1542,30 +1531,49 @@ export function generateWortflüssigkeit(
         ? WORD_POOL_MITTEL
         : WORD_POOL_SCHWER;
 
-  const word = pool[randInt(0, pool.length - 1)];
-  const scrambled = scrambleWord(word);
-  const correctFirst = word[0];
+  // MedAT-Stil: Optionen A–D sind Buchstaben aus dem Wort, E = "-" (Keine der Antworten ist richtig)
+  for (let attempt = 0; attempt < 50; attempt++) {
+    const word = pool[randInt(0, pool.length - 1)];
+    const correctFirst = word[0];
+    const lettersInWord = [...new Set(word.split(""))];
 
-  // Generate 4 wrong first letters — prefer confusing/similar-looking letters for harder difficulty
-  let wrongLetters: string[];
-  if (difficulty === "schwer" || difficulty === "mittel") {
-    const confusing = (CONFUSING_LETTERS[correctFirst] ?? []).filter((l) => l !== correctFirst);
-    const remaining = shuffle(
-      ALL_LETTERS.filter((l) => l !== correctFirst && !confusing.includes(l))
-    );
-    // Use up to 3 confusing letters + fill rest from random
-    const picked = [...confusing.slice(0, 3), ...remaining];
-    wrongLetters = picked.slice(0, 4);
-  } else {
-    wrongLetters = shuffle(ALL_LETTERS.filter((l) => l !== correctFirst)).slice(0, 4);
+    // Need at least 5 distinct letters (1 correct + 4 wrong from word)
+    if (lettersInWord.length < 5) continue;
+
+    const scrambled = scrambleWord(word);
+    const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
+    const wrongLetters = shuffle(wrongPool).slice(0, 4);
+
+    // ~15% chance Option E is correct (correct letter not among A–D)
+    const useNone = Math.random() < 0.15;
+
+    let options: string[];
+    if (useNone) {
+      options = [...shuffle(wrongLetters), "-"];
+    } else {
+      options = [...shuffle([correctFirst, ...wrongLetters.slice(0, 3)]), "-"];
+    }
+
+    return {
+      id: `wf-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      scrambled,
+      correctWord: word,
+      options,
+      difficulty,
+    };
   }
-  const options = shuffle([correctFirst, ...wrongLetters]);
 
+  // Fallback: pick any word, no E
+  const word = pool[0];
+  const scrambled = scrambleWord(word);
+  const lettersInWord = [...new Set(word.split(""))];
+  const correctFirst = word[0];
+  const wrong = shuffle(lettersInWord.filter((l) => l !== correctFirst)).slice(0, 3);
   return {
-    id: `wf-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    id: `wf-gen-fb-${Date.now()}`,
     scrambled,
     correctWord: word,
-    options,
+    options: [...shuffle([correctFirst, ...wrong]), "-"],
     difficulty,
   };
 }
@@ -1945,7 +1953,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
     if (lettersInWord.length < 5) continue; // mind. 5 verschiedene Buchstaben: 1 korrekt + 4 Optionen (oder 4 Falsche + "-")
     const shuffled = shuffle([...letters]);
     const correctFirst = word[0];
-    const useNone = difficulty === 3 && Math.random() < 0.25;
+    const useNone = Math.random() < 0.15;
 
     // Nur Buchstaben, die im Wort vorkommen, als Antwortoptionen – sonst macht die Aufgabe keinen Sinn
     const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
@@ -2367,7 +2375,7 @@ function getPremiseType(s: string): ImplicationPattern["premise1Type"] | null {
 }
 
 function getConclusionType(s: string): ImplicationPattern["conclusionType"] | null {
-  if (/^Keine der Schlussfolgerungen ist zwingend/.test(s.trim())) return "E_keine_zwingend";
+  if (/^Keine der Schlussfolgerungen ist richtig./.test(s.trim())) return "E_keine_zwingend";
   if (/^Alle\s+.+\s+sind\s+.+\.?$/.test(s.trim()) && !s.includes("keine")) return "Alle_X_sind_Y";
   if (/^Kein\s+.+\s+ist\s+ein\s+.+\.?$/.test(s.trim())) return "Kein_X_ist_Y";
   if (/^Einige\s+.+\s+sind\s+keine\s+.+\.?$/.test(s.trim())) return "Einige_X_sind_keine_Y";
@@ -2552,18 +2560,21 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
   },
 ];
 
-function trainingWrongOptions(s: TrainingBegriff, p: TrainingBegriff, correct: string): string[] {
-  const candidates = [
-    `Alle ${s.p} sind ${p.p}`,
-    `Einige ${s.p} sind ${p.p}`,
-    `Alle ${s.p} sind keine ${p.p}`,
-    `Einige ${s.p} sind keine ${p.p}`,
-    `Alle ${p.p} sind ${s.p}`,
-    `Einige ${p.p} sind ${s.p}`,
-    `Alle ${p.p} sind keine ${s.p}`,
-    `Einige ${p.p} sind keine ${s.p}`,
+/** MedAT-Stil: Optionen A–D bilden IMMER das systematische 4er-Gitter mit gleichem Subjekt+Prädikat. */
+function buildOptionGrid(subj: string, pred: string): [string, string, string, string] {
+  return [
+    `Alle ${subj} sind ${pred}.`,
+    `Alle ${subj} sind keine ${pred}.`,
+    `Einige ${subj} sind ${pred}.`,
+    `Einige ${subj} sind keine ${pred}.`,
   ];
-  return shuffle(candidates.filter((c) => c !== correct));
+}
+
+/** Extrahiert Subjekt und Prädikat aus einer Schlussfolgerung wie "Alle X sind (keine) Y". */
+function extractSubjPred(conclusion: string): { subj: string; pred: string } | null {
+  const m = conclusion.match(/^(?:Alle|Einige)\s+(.+?)\s+sind\s+(?:keine\s+)?(.+?)\.?$/);
+  if (!m) return null;
+  return { subj: m[1], pred: m[2] };
 }
 
 /**
@@ -2583,32 +2594,27 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     const premise1 = mode.p1(s, m, p);
     const premise2 = mode.p2(s, m, p);
     const correctConclusion = mode.conclusion(s, m, p);
-    const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
+
+    // MedAT-Stil: A–D = systematisches 4er-Gitter (Alle/Einige × sind/sind keine) mit gleichem Subjekt+Prädikat
+    const parsed = extractSubjPred(correctConclusion);
+    if (!parsed) continue;
+    const grid = buildOptionGrid(parsed.subj, parsed.pred);
+
+    // Find which grid position matches the correct conclusion
+    const correctIdx = grid.findIndex(
+      (g) => g.replace(/\.$/, "") === correctConclusion.replace(/\.$/, "")
+    );
 
     let options: [string, string, string, string, string];
     let correctAnswer: number;
 
-    if (useENone) {
-      options = [
-        wrongOptions[0] ?? correctConclusion,
-        wrongOptions[1] ?? correctConclusion,
-        wrongOptions[2] ?? correctConclusion,
-        wrongOptions[3] ?? correctConclusion,
-        "Keine der Schlussfolgerungen ist zwingend",
-      ];
+    if (useENone || correctIdx < 0) {
+      // E is correct: grid options are all "wrong" (none is entailed)
+      options = [...grid, "Keine der Schlussfolgerungen ist richtig."];
       correctAnswer = 4;
     } else {
-      const insertIdx = randInt(0, 3);
-      const four: string[] = [...wrongOptions];
-      four[insertIdx] = correctConclusion;
-      options = [
-        four[0] ?? "",
-        four[1] ?? "",
-        four[2] ?? "",
-        four[3] ?? "",
-        "Keine der Schlussfolgerungen ist zwingend",
-      ];
-      correctAnswer = insertIdx;
+      options = [...grid, "Keine der Schlussfolgerungen ist richtig."];
+      correctAnswer = correctIdx;
     }
 
     const task: ImplikationTask = {
@@ -2617,11 +2623,12 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
       premise2,
       options,
       correctAnswer,
-      explanation: useENone
-        ? "Aus den gegebenen Prämissen lässt sich keine der angegebenen Schlussfolgerungen zwingend ableiten."
-        : `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
+      explanation:
+        correctAnswer === 4
+          ? "Aus den gegebenen Prämissen lässt sich keine der angegebenen Schlussfolgerungen zwingend ableiten."
+          : `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
       difficulty,
-      rulesApplied: useENone ? [1] : [3],
+      rulesApplied: correctAnswer === 4 ? [1] : [3],
     };
 
     if (!validateImplikationTask(task)) continue;
@@ -2643,22 +2650,19 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
     const premise1 = mode.p1(s, m, p);
     const premise2 = mode.p2(s, m, p);
     const correctConclusion = mode.conclusion(s, m, p);
-    const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
-    const insertIdx = randInt(0, 3);
-    const four: string[] = [...wrongOptions];
-    four[insertIdx] = correctConclusion;
+    const parsed = extractSubjPred(correctConclusion);
+    if (!parsed) continue;
+    const grid = buildOptionGrid(parsed.subj, parsed.pred);
+    const correctIdx = grid.findIndex(
+      (g) => g.replace(/\.$/, "") === correctConclusion.replace(/\.$/, "")
+    );
+    if (correctIdx < 0) continue;
     const task: ImplikationTask = {
       id: `imp-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
       premise1,
       premise2,
-      options: [
-        four[0] ?? "",
-        four[1] ?? "",
-        four[2] ?? "",
-        four[3] ?? "",
-        "Keine der Schlussfolgerungen ist zwingend",
-      ],
-      correctAnswer: insertIdx,
+      options: [...grid, "Keine der Schlussfolgerungen ist richtig."],
+      correctAnswer: correctIdx,
       explanation: `Aus den Prämissen folgt: „${correctConclusion}".`,
       difficulty,
       rulesApplied: [3],
@@ -2671,21 +2675,17 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
   const premise1 = mode.p1(s, m, p);
   const premise2 = mode.p2(s, m, p);
   const correctConclusion = mode.conclusion(s, m, p);
-  const wrongOptions = trainingWrongOptions(s, p, correctConclusion).slice(0, 4);
-  const four: string[] = [...wrongOptions];
-  four[0] = correctConclusion;
+  const parsed = extractSubjPred(correctConclusion);
+  const grid = parsed ? buildOptionGrid(parsed.subj, parsed.pred) : buildOptionGrid(s.p, p.p);
+  const correctIdx = grid.findIndex(
+    (g) => g.replace(/\.$/, "") === correctConclusion.replace(/\.$/, "")
+  );
   return {
     id: `imp-train-fb-last-${Date.now()}`,
     premise1,
     premise2,
-    options: [
-      four[0] ?? "",
-      four[1] ?? "",
-      four[2] ?? "",
-      four[3] ?? "",
-      "Keine der Schlussfolgerungen ist zwingend",
-    ],
-    correctAnswer: 0,
+    options: [...grid, "Keine der Schlussfolgerungen ist richtig."],
+    correctAnswer: correctIdx >= 0 ? correctIdx : 0,
     explanation: `Aus den Prämissen folgt: „${correctConclusion}".`,
     difficulty,
     rulesApplied: [3],

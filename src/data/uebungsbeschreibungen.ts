@@ -52,7 +52,7 @@ export const uebungsbeschreibungen: Record<UebungsbeschreibungId, Uebungsbeschre
     id: "kff-implikationen",
     title: "Implikationen erkennen: So funktioniert die Übung",
     ablauf:
-      "Du erhältst Prämissen (z. B. „Alle A sind B“, „Einige B sind C“) und mehrere Schlussfolgerungen. Deine Aufgabe ist, diejenige Schlussfolgerung zu wählen, die aus den Prämissen zwingend folgt. Bei einigen Aufgaben ist „Keine der Schlussfolgerungen ist zwingend“ (Option E) richtig. Du arbeitest ohne Zeitdruck im Übungsmodus oder unter Zeitvorgabe in der Simulation.",
+      "Du erhältst Prämissen (z. B. „Alle A sind B“, „Einige B sind C“) und mehrere Schlussfolgerungen. Deine Aufgabe ist, diejenige Schlussfolgerung zu wählen, die aus den Prämissen zwingend folgt. Bei einigen Aufgaben ist „Keine der Schlussfolgerungen ist richtig.” (Option E) die korrekte Antwort. Du arbeitest ohne Zeitdruck im Übungsmodus oder unter Zeitvorgabe in der Simulation.",
     aufbauStruktur:
       "Jede Aufgabe hat einen einheitlichen Aufbau: Prämissenblock, dann fünf Optionen (A–E). Die Optionen sind vorgegebene Schlussfolgerungen. Es ist immer genau eine Antwort richtig. Die Formulierungen folgen dem offiziellen MedAT-Format (Alle/Einige/Keine).",
     bewertung:

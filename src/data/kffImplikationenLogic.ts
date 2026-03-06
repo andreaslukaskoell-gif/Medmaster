@@ -523,7 +523,7 @@ export function deriveEulerLayoutFromModel(model: ImplicationRelationModel): {
 
 // ─── Wahrheits-Checker für Antwortoptionen (zwingend = in allen zulässigen Modellen wahr) ───
 
-export type ConclusionType = "all" | "some" | "some-not" | "none";
+export type ConclusionType = "all" | "all-not" | "some" | "some-not" | "none";
 
 /**
  * Prüft, ob die Schlussfolgerung aus den Constraints zwingend folgt.
@@ -560,6 +560,16 @@ export function isConclusionEntailed(
     return false;
   }
 
+  // "Alle X sind keine Y" = X und Y sind disjunkt (X ∩ Y = ∅)
+  if (conclusionType === "all-not") {
+    if (disjoint(sub, obj)) return true;
+    // Transitive: sub ⊆ Z und Z disjunkt mit obj → sub disjunkt mit obj
+    for (const set of model.sets) {
+      if (subset(sub, set) && disjoint(set, obj)) return true;
+    }
+    return false;
+  }
+
   if (conclusionType === "some") {
     let entailed = false;
     if (overlap(sub, obj)) entailed = true;
@@ -584,7 +594,11 @@ export function isConclusionEntailed(
   if (conclusionType === "some-not") {
     // Direct: NOT_ALL(sub, obj) as premise entails "Einige sub sind keine obj"
     if (hasNotAll(model, sub, obj)) return true;
-    if (disjoint(sub, obj)) return true;
+    if (disjoint(sub, obj)) {
+      // Dominated by "all-not" if all-not is also entailed
+      if (isConclusionEntailed(model, "all-not", sub, obj)) return false;
+      return true;
+    }
     if (subset(sub, obj)) return false;
     if (overlap(sub, obj)) return true;
     for (const set of model.sets) {
@@ -605,29 +619,21 @@ export function parseConclusion(
     return { type: "none", subject: "", object: "" };
   }
   // WICHTIG: "keine"-Varianten ZUERST prüfen (sonst matcht "sind" vor "sind keine")
+  const allNot = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
+  if (allNot) {
+    return { type: "all-not", subject: allNot[1]!.trim(), object: allNot[2]!.trim() };
+  }
   const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
   if (someNot) {
-    return {
-      type: "some-not",
-      subject: someNot[1]!.trim(),
-      object: someNot[2]!.trim(),
-    };
+    return { type: "some-not", subject: someNot[1]!.trim(), object: someNot[2]!.trim() };
   }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
-    return {
-      type: "all",
-      subject: allIn[1]!.trim(),
-      object: allIn[2]!.trim(),
-    };
+    return { type: "all", subject: allIn[1]!.trim(), object: allIn[2]!.trim() };
   }
   const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
   if (someIn) {
-    return {
-      type: "some",
-      subject: someIn[1]!.trim(),
-      object: someIn[2]!.trim(),
-    };
+    return { type: "some", subject: someIn[1]!.trim(), object: someIn[2]!.trim() };
   }
   return null;
 }

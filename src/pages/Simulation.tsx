@@ -480,7 +480,7 @@ function generateWortflüssigkeitQuestions(section: SimSection): UnifiedQuestion
     sectionType: "kff-wortfluessigkeit",
     scrambled: q.scrambled,
     letterOptions: q.options,
-    correctLetter: q.correctWord[0],
+    correctLetter: q.options.includes(q.correctWord[0]) ? q.correctWord[0] : "-",
     correctWord: q.correctWord,
   }));
 }
@@ -639,7 +639,9 @@ function getCorrectAnswerDisplay(q: UnifiedQuestion): string {
     case "kff-implikationen":
       return q.sylOptions?.[q.sylCorrectOption ?? 0] || "";
     case "kff-wortfluessigkeit":
-      return `${q.correctLetter} (${q.correctWord})`;
+      return q.correctLetter === "-"
+        ? `E – Keine der Antworten (${q.correctWord})`
+        : `${q.correctLetter} (${q.correctWord})`;
     case "kff-figuren":
       return `Option ${q.figurenAufgabe?.correctOptionId?.toUpperCase()}`;
     default:
@@ -1921,18 +1923,21 @@ export default function Simulation() {
             {q.scrambled}
           </span>
         </div>
-        <div className="grid grid-cols-5 gap-3">
-          {q.letterOptions?.map((letter) => (
+        <div className="space-y-2">
+          {q.letterOptions?.map((letter, li) => (
             <button
-              key={letter}
+              key={`${letter}-${li}`}
               onClick={() => setAnswers((p) => ({ ...p, [q.id]: letter }))}
-              className={`px-4 py-3 rounded-lg border text-lg font-bold transition-colors cursor-pointer text-center ${
+              className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-semibold transition-colors cursor-pointer ${
                 answers[q.id] === letter
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
                   : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
               }`}
             >
-              {letter}
+              ({String.fromCharCode(65 + li)}){" "}
+              {letter === "-"
+                ? "Keine der Antwortmöglichkeiten ist richtig"
+                : `Anfangsbuchstabe: ${letter}`}
             </button>
           ))}
         </div>

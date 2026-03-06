@@ -16,7 +16,7 @@
 //
 // - Prämissen: In Anführungszeichen, mit Punkt am Ende (z. B. "Alle X sind Y.")
 // - Optionen A–D: Vollständige Sätze mit Punkt am Ende (z. B. "Einige X sind Y.")
-// - Option E: exakt "Keine der Schlussfolgerungen ist zwingend" (ohne Punkt)
+// - Option E: exakt "Keine der Schlussfolgerungen ist richtig." (mit Punkt)
 // - Genau 5 Optionen, correctAnswer 0–4, explanation sachlich, rulesApplied [1–5]
 // - Grammatik: Durchgehend "Alle / Einige / Kein"; keine Mehrdeutigkeit (kein "könnte", "manchmal", "eventuell").
 // - Logik: Genau 1 zwingend richtige Antwort; alle anderen formal widerlegbar; Euler-Diagramm aus Relationsmodell.
@@ -104,10 +104,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Säugetiere sind Wirbeltiere.",
     options: [
       "Alle Hunde sind Wirbeltiere.",
-      "Alle Wirbeltiere sind Hunde.",
-      "Einige Wirbeltiere sind keine Hunde.",
-      "Alle Säugetiere sind Hunde.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Hunde sind keine Wirbeltiere.",
+      "Einige Hunde sind Wirbeltiere.",
+      "Einige Hunde sind keine Wirbeltiere.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 0,
     explanation:
@@ -120,13 +120,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Rosen sind Blumen.",
     premise2: "Alle Blumen sind Pflanzen.",
     options: [
-      "Alle Pflanzen sind Rosen.",
       "Alle Rosen sind Pflanzen.",
-      "Einige Pflanzen sind keine Blumen.",
-      "Alle Blumen sind Rosen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Rosen sind keine Pflanzen.",
+      "Einige Rosen sind Pflanzen.",
+      "Einige Rosen sind keine Pflanzen.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation:
       "Klassischer Kettenschluss mit zwei absoluten Prämissen: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3 greift: Ohne 'keine' in den Prämissen darf der Schluss kein 'keine' enthalten. Im Euler-Diagramm liegt die Menge der Rosen vollständig innerhalb der Blumen, die vollständig innerhalb der Pflanzen liegen. Daher sind alle Rosen zwingend Pflanzen. A ist falsch, weil nicht alle Pflanzen Rosen sein müssen.",
     difficulty: 1,
@@ -137,13 +137,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Ärzte sind Akademiker.",
     premise2: "Alle Akademiker sind Absolventen.",
     options: [
-      "Einige Ärzte sind keine Absolventen.",
-      "Alle Absolventen sind Ärzte.",
       "Alle Ärzte sind Absolventen.",
-      "Einige Akademiker sind keine Ärzte.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Ärzte sind keine Absolventen.",
+      "Einige Ärzte sind Absolventen.",
+      "Einige Ärzte sind keine Absolventen.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation:
       "Zwei absolute Prämissen mit Mittelterm 'Akademiker'. Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen, also kein 'keine' im Schluss erlaubt. Im Euler-Diagramm: Ärzte ⊆ Akademiker ⊆ Absolventen. Alle Ärzte sind somit zwingend Absolventen. A widerspricht dem direkten Schluss, B kehrt die Richtung unzulässig um.",
     difficulty: 1,
@@ -155,12 +155,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Vögel sind keine Säugetiere.",
     options: [
       "Alle Adler sind Säugetiere.",
-      "Einige Adler sind Säugetiere.",
       "Alle Adler sind keine Säugetiere.",
-      "Einige Säugetiere sind Adler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Adler sind Säugetiere.",
+      "Einige Adler sind keine Säugetiere.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation:
       "Erste Prämisse: Alle A sind B. Zweite Prämisse: Alle B sind keine C. Regel 4: Ein 'keine' in einer Prämisse → Schluss muss 'keine' enthalten. Im Euler-Diagramm: Adler liegen vollständig in Vögel, und Vögel und Säugetiere sind disjunkt (keine Überschneidung). Daher: Alle Adler sind keine Säugetiere. A und B widersprechen der zweiten Prämisse, D ebenso.",
     difficulty: 1,
@@ -172,12 +172,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Blumen sind keine Steine.",
     options: [
       "Alle Tulpen sind Steine.",
-      "Einige Tulpen sind Steine.",
       "Alle Tulpen sind keine Steine.",
-      "Einige Steine sind Tulpen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Tulpen sind Steine.",
+      "Einige Tulpen sind keine Steine.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation:
       "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in einer Prämisse erfordert 'keine' im Schluss. Im Euler-Diagramm sind Tulpen eine Teilmenge von Blumen, und Blumen und Steine sind disjunkt. Daher sind alle Tulpen zwingend keine Steine (C). A und B widersprechen der zweiten Prämisse, D ist nicht ableitbar.",
     difficulty: 1,
@@ -188,13 +188,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Violinen sind Musikinstrumente.",
     premise2: "Alle Musikinstrumente sind Gegenstände.",
     options: [
-      "Einige Gegenstände sind keine Violinen.",
-      "Alle Gegenstände sind Violinen.",
       "Alle Violinen sind Gegenstände.",
-      "Alle Gegenstände sind Musikinstrumente.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Violinen sind keine Gegenstände.",
+      "Einige Violinen sind Gegenstände.",
+      "Einige Violinen sind keine Gegenstände.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation:
       "Kettenschluss mit zwei absoluten Prämissen: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Ohne 'keine' in den Prämissen kein 'keine' im Schluss. Im Euler-Diagramm: Violinen ⊆ Musikinstrumente ⊆ Gegenstände. Daher sind alle Violinen zwingend Gegenstände. B ist falsch, weil nicht alle Gegenstände Violinen sein müssen. D ist falsch, weil nicht alle Gegenstände Musikinstrumente sind.",
     difficulty: 1,
@@ -205,11 +205,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Lastwagen sind Fahrzeuge.",
     premise2: "Alle Fahrzeuge sind keine Lebewesen.",
     options: [
-      "Einige Lastwagen sind Lebewesen.",
+      "Alle Lastwagen sind Lebewesen.",
       "Alle Lastwagen sind keine Lebewesen.",
-      "Alle Lebewesen sind Fahrzeuge.",
-      "Einige Lebewesen sind keine Fahrzeuge.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Lastwagen sind Lebewesen.",
+      "Einige Lastwagen sind keine Lebewesen.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 1,
     explanation:
@@ -222,13 +222,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Diamanten sind Edelsteine.",
     premise2: "Alle Edelsteine sind Mineralien.",
     options: [
-      "Alle Mineralien sind Diamanten.",
-      "Einige Mineralien sind keine Edelsteine.",
       "Alle Diamanten sind Mineralien.",
-      "Alle Edelsteine sind Diamanten.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Diamanten sind keine Mineralien.",
+      "Einige Diamanten sind Mineralien.",
+      "Einige Diamanten sind keine Mineralien.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation:
       "Zwei absolute Prämissen mit Mittelterm 'Edelsteine': Alle A sind B, Alle B sind C → Alle A sind C. Regel 3 ist erfüllt: Kein 'keine' in Prämissen, also kein 'keine' im Schluss. Im Euler-Diagramm: Diamanten ⊆ Edelsteine ⊆ Mineralien. Daher gilt: Alle Diamanten sind Mineralien. A ist falsch (Umkehrschluss), D ist falsch (nicht alle Edelsteine müssen Diamanten sein).",
     difficulty: 1,
@@ -240,12 +240,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Busse sind Autos.",
     options: [
       "Alle Busse sind Flugzeuge.",
-      "Einige Busse sind Flugzeuge.",
-      "Alle Flugzeuge sind keine Busse.",
       "Alle Busse sind keine Flugzeuge.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Busse sind Flugzeuge.",
+      "Einige Busse sind keine Flugzeuge.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 3,
+    correctAnswer: 1,
     explanation:
       "Umgestellte Reihenfolge: Alle A sind keine B, Alle C sind A. Daraus folgt: Alle C sind keine B. Regel 4: 'keine' in einer Prämisse verlangt 'keine' im Schluss. Im Euler-Diagramm: Busse ⊆ Autos, und Autos ∩ Flugzeuge = ∅. Somit: Busse ∩ Flugzeuge = ∅, also alle Busse sind keine Flugzeuge. A und B widersprechen diesem Ergebnis direkt.",
     difficulty: 1,
@@ -256,13 +256,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Bananen sind Früchte.",
     premise2: "Alle Früchte sind Lebensmittel.",
     options: [
-      "Alle Lebensmittel sind Bananen.",
-      "Alle Lebensmittel sind Früchte.",
-      "Einige Lebensmittel sind keine Bananen.",
       "Alle Bananen sind Lebensmittel.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Bananen sind keine Lebensmittel.",
+      "Einige Bananen sind Lebensmittel.",
+      "Einige Bananen sind keine Lebensmittel.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation:
       "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Ohne 'keine' kein 'keine' im Schluss. Im Euler-Diagramm: Bananen ⊆ Früchte ⊆ Lebensmittel. Alle Bananen sind somit zwingend Lebensmittel. A ist falsch (Umkehrschluss), B ist falsch (nicht alle Lebensmittel sind Früchte), C enthält unzulässig 'keine'.",
     difficulty: 1,
@@ -273,13 +273,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Pinguine sind Vögel.",
     premise2: "Alle Vögel sind Tiere.",
     options: [
-      "Alle Tiere sind Pinguine.",
       "Alle Pinguine sind Tiere.",
-      "Einige Tiere sind keine Vögel.",
-      "Alle Vögel sind Pinguine.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Pinguine sind keine Tiere.",
+      "Einige Pinguine sind Tiere.",
+      "Einige Pinguine sind keine Tiere.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation:
       "Standardmäßiger Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in Prämissen, also keines im Schluss. Im Euler-Diagramm: Pinguine ⊆ Vögel ⊆ Tiere. Alle Pinguine sind Tiere ist zwingend. A wäre ein unzulässiger Umkehrschluss, D ebenso. C enthält 'keine', was Regel 3 verletzt.",
     difficulty: 1,
@@ -290,13 +290,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Smartphones sind Elektronikgeräte.",
     premise2: "Alle Elektronikgeräte sind keine Naturprodukte.",
     options: [
+      "Alle Smartphones sind Naturprodukte.",
       "Alle Smartphones sind keine Naturprodukte.",
       "Einige Smartphones sind Naturprodukte.",
-      "Alle Naturprodukte sind Smartphones.",
-      "Einige Naturprodukte sind Elektronikgeräte.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Smartphones sind keine Naturprodukte.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
       "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: Ein 'keine' in einer Prämisse erfordert 'keine' im Schluss. Im Euler-Diagramm: Smartphones ⊆ Elektronikgeräte, und Elektronikgeräte ∩ Naturprodukte = ∅. Daher: Smartphones ∩ Naturprodukte = ∅. B und D widersprechen diesem Ergebnis. C ist ein unzulässiger Schluss.",
     difficulty: 1,
@@ -307,13 +307,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Tischler sind Handwerker.",
     premise2: "Alle Handwerker sind Berufstätige.",
     options: [
-      "Alle Berufstätige sind Tischler.",
-      "Einige Berufstätige sind keine Handwerker.",
       "Alle Tischler sind Berufstätige.",
-      "Alle Handwerker sind Tischler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Tischler sind keine Berufstätige.",
+      "Einige Tischler sind Berufstätige.",
+      "Einige Tischler sind keine Berufstätige.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation:
       "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen, also kein 'keine' im Schluss. Im Euler-Diagramm: Tischler ⊆ Handwerker ⊆ Berufstätige. Alle Tischler sind daher zwingend Berufstätige. A und D sind unzulässige Umkehrschlüsse, B enthält 'keine', was gegen Regel 3 verstößt.",
     difficulty: 1,
@@ -324,13 +324,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Haie sind Fische.",
     premise2: "Alle Fische sind keine Insekten.",
     options: [
-      "Einige Haie sind Insekten.",
-      "Alle Insekten sind Fische.",
-      "Einige Insekten sind Haie.",
+      "Alle Haie sind Insekten.",
       "Alle Haie sind keine Insekten.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Haie sind Insekten.",
+      "Einige Haie sind keine Insekten.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 3,
+    correctAnswer: 1,
     explanation:
       "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in einer Prämisse verlangt 'keine' im Schluss. Im Euler-Diagramm: Haie ⊆ Fische, und Fische ∩ Insekten = ∅. Daher: Haie ∩ Insekten = ∅, also alle Haie sind keine Insekten. A und C widersprechen diesem Ergebnis, B ist logisch nicht ableitbar.",
     difficulty: 1,
@@ -347,10 +347,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Haustiere sind schwarz.",
     options: [
       "Alle Katzen sind schwarz.",
+      "Alle Katzen sind keine schwarz.",
       "Einige Katzen sind schwarz.",
-      "Einige schwarze Dinge sind Katzen.",
-      "Alle schwarzen Dinge sind Katzen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Katzen sind keine schwarz.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -364,12 +364,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Eichen sind alt.",
     options: [
       "Alle Bäume sind alt.",
+      "Alle Bäume sind keine alt.",
       "Einige Bäume sind alt.",
-      "Alle alten Dinge sind Bäume.",
-      "Einige Eichen sind keine Bäume.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Bäume sind keine alt.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
       "Alle A sind B, Einige A sind C. Da einige Eichen alt sind und alle Eichen Bäume sind, sind diese alten Eichen automatisch auch Bäume. Regel 5: 'einige' in einer Prämisse → 'einige' im Schluss. Regel 3: Kein 'keine' in Prämissen, also keines im Schluss. Im Euler-Diagramm: Die Teilmenge der alten Eichen liegt innerhalb der Eichen, die wiederum in den Bäumen liegen. Somit sind einige Bäume zwingend alt. A ist zu stark (nicht alle Bäume müssen alt sein).",
     difficulty: 2,
@@ -380,13 +380,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Chirurgen sind Ärzte.",
     premise2: "Einige Chirurgen sind keine Sportler.",
     options: [
+      "Alle Ärzte sind Sportler.",
       "Alle Ärzte sind keine Sportler.",
+      "Einige Ärzte sind Sportler.",
       "Einige Ärzte sind keine Sportler.",
-      "Einige Sportler sind keine Ärzte.",
-      "Alle Chirurgen sind Sportler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
       "Alle A sind B, Einige A sind keine C. Die einigen Chirurgen, die keine Sportler sind, sind zugleich Ärzte (da alle Chirurgen Ärzte sind). Regel 4: 'keine' in einer Prämisse → 'keine' im Schluss. Regel 5: 'einige' in einer Prämisse → 'einige' im Schluss. Im Euler-Diagramm: Chirurgen ⊆ Ärzte, und ein Teil der Chirurgen liegt außerhalb der Sportler. Dieser Teil liegt auch in den Ärzten. Daher: Einige Ärzte sind keine Sportler.",
     difficulty: 2,
@@ -398,12 +398,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Lehrer sind Angestellte.",
     options: [
       "Alle Musiker sind Angestellte.",
+      "Alle Musiker sind keine Angestellte.",
       "Einige Musiker sind Angestellte.",
-      "Alle Angestellte sind Musiker.",
-      "Einige Angestellte sind keine Musiker.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Musiker sind keine Angestellte.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
       "Einige A sind B, Alle B sind C. Die einigen Musiker, die Lehrer sind, sind zugleich Angestellte (da alle Lehrer Angestellte sind). Regel 5: 'einige' in einer Prämisse → 'einige' im Schluss. Regel 3: Kein 'keine' in den Prämissen, also keines im Schluss. Im Euler-Diagramm: Ein Teil der Musiker liegt in der Lehrer-Menge, und Lehrer ⊆ Angestellte. Daher sind einige Musiker zwingend Angestellte.",
     difficulty: 2,
@@ -414,11 +414,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Tennisspieler sind Sportler.",
     premise2: "Einige Sportler sind keine Vegetarier.",
     options: [
-      "Einige Tennisspieler sind keine Vegetarier.",
+      "Alle Tennisspieler sind Vegetarier.",
       "Alle Tennisspieler sind keine Vegetarier.",
-      "Einige Vegetarier sind Tennisspieler.",
-      "Alle Sportler sind Tennisspieler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Tennisspieler sind Vegetarier.",
+      "Einige Tennisspieler sind keine Vegetarier.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -432,12 +432,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Forellen sind wild.",
     options: [
       "Alle Fische sind wild.",
+      "Alle Fische sind keine wild.",
       "Einige Fische sind wild.",
-      "Alle wilden Tiere sind Fische.",
-      "Einige Fische sind keine Forellen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Fische sind keine wild.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
       "Alle A sind B, Einige A sind C. Die einigen Forellen, die wild sind, sind zugleich Fische (da alle Forellen Fische sind). Regel 5: 'einige' in Prämisse → 'einige' im Schluss. Regel 3: Kein 'keine' in Prämissen. Im Euler-Diagramm: Forellen ⊆ Fische, und ein Teil der Forellen ist wild. Dieser Teil gehört auch zu den Fischen. Einige Fische sind also zwingend wild. A ist zu stark, C ist unzulässig.",
     difficulty: 2,
@@ -449,10 +449,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Sportler sind fit.",
     options: [
       "Alle Studenten sind fit.",
-      "Alle fitten Personen sind Studenten.",
+      "Alle Studenten sind keine fit.",
       "Einige Studenten sind fit.",
-      "Einige Sportler sind keine Studenten.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Studenten sind keine fit.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 2,
     explanation:
@@ -465,11 +465,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Gitarren sind Saiteninstrumente.",
     premise2: "Alle Saiteninstrumente sind keine Blasinstrumente.",
     options: [
-      "Einige Gitarren sind Blasinstrumente.",
+      "Alle Gitarren sind Blasinstrumente.",
       "Alle Gitarren sind keine Blasinstrumente.",
-      "Einige Blasinstrumente sind Saiteninstrumente.",
-      "Alle Blasinstrumente sind Gitarren.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Gitarren sind Blasinstrumente.",
+      "Einige Gitarren sind keine Blasinstrumente.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 1,
     explanation:
@@ -482,13 +482,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Laptops sind Computer.",
     premise2: "Einige Laptops sind keine tragbaren Geräte.",
     options: [
-      "Alle Computer sind keine tragbaren Geräte.",
-      "Einige Computer sind keine tragbaren Geräte.",
-      "Einige tragbare Geräte sind Computer.",
-      "Alle Laptops sind tragbare Geräte.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Computer sind tragbare Geräte.",
+      "Alle Computer sind keine tragbare Geräte.",
+      "Einige Computer sind tragbare Geräte.",
+      "Einige Computer sind keine tragbare Geräte.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
       "Alle A sind B, Einige A sind keine C. Die einigen Laptops, die keine tragbaren Geräte sind, sind zugleich Computer (da alle Laptops Computer sind). Regel 4: 'keine' → 'keine' im Schluss. Regel 5: 'einige' → 'einige' im Schluss. Im Euler-Diagramm: Laptops ⊆ Computer, ein Teil der Laptops liegt außerhalb der tragbaren Geräte, und dieser Teil liegt in den Computern. Einige Computer sind also keine tragbaren Geräte.",
     difficulty: 2,
@@ -500,12 +500,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Fußballfans sind Sportbegeisterte.",
     options: [
       "Alle Wiener sind Sportbegeisterte.",
+      "Alle Wiener sind keine Sportbegeisterte.",
       "Einige Wiener sind Sportbegeisterte.",
-      "Alle Sportbegeisterten sind Wiener.",
-      "Einige Sportbegeisterte sind keine Wiener.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Wiener sind keine Sportbegeisterte.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
       "Einige A sind B, Alle B sind C. Die einigen Wiener, die Fußballfans sind, sind zugleich Sportbegeisterte (da alle Fußballfans sportbegeistert sind). Regel 5: 'einige' → 'einige' im Schluss. Regel 3: Kein 'keine', also keines im Schluss. Im Euler-Diagramm: Ein Teil der Wiener liegt in den Fußballfans, und Fußballfans ⊆ Sportbegeisterte. Einige Wiener sind daher zwingend Sportbegeisterte.",
     difficulty: 2,
@@ -516,13 +516,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Kirschen sind Früchte.",
     premise2: "Einige Kirschen sind keine roten Dinge.",
     options: [
-      "Alle Früchte sind keine roten Dinge.",
-      "Einige Früchte sind keine roten Dinge.",
-      "Einige rote Dinge sind keine Kirschen.",
-      "Alle Kirschen sind rote Dinge.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Früchte sind rote Dinge.",
+      "Alle Früchte sind keine rote Dinge.",
+      "Einige Früchte sind rote Dinge.",
+      "Einige Früchte sind keine rote Dinge.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
       "Alle A sind B, Einige A sind keine C. Die einigen Kirschen, die nicht rot sind, sind zugleich Früchte. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Im Euler-Diagramm: Kirschen ⊆ Früchte, und ein Teil der Kirschen liegt außerhalb der roten Dinge. Dieser Teil ist auch in Früchte. Daher: Einige Früchte sind keine roten Dinge. A ist zu stark, D widerspricht Prämisse 2.",
     difficulty: 2,
@@ -534,10 +534,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Sportgeräte sind teuer.",
     options: [
       "Alle Fußbälle sind teuer.",
+      "Alle Fußbälle sind keine teuer.",
       "Einige Fußbälle sind teuer.",
-      "Einige teure Dinge sind Fußbälle.",
-      "Alle Sportgeräte sind Fußbälle.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Fußbälle sind keine teuer.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -551,12 +551,12 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Grazer sind Bergsteiger.",
     options: [
       "Alle Steirer sind Bergsteiger.",
+      "Alle Steirer sind keine Bergsteiger.",
       "Einige Steirer sind Bergsteiger.",
-      "Alle Bergsteiger sind Steirer.",
-      "Einige Bergsteiger sind keine Grazer.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Steirer sind keine Bergsteiger.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
       "Alle A sind B, Einige A sind C. Die einigen Grazer, die Bergsteiger sind, sind auch Steirer (da alle Grazer Steirer sind). Regel 5: 'einige' → 'einige' im Schluss. Regel 3: Kein 'keine' → kein 'keine' im Schluss. Im Euler-Diagramm: Grazer ⊆ Steirer, und ein Teil der Grazer ist auch Bergsteiger. Dieser Teil liegt innerhalb der Steirer. Einige Steirer sind zwingend Bergsteiger. A ist zu stark, C unzulässig.",
     difficulty: 2,
@@ -568,10 +568,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Künstler sind kreativ.",
     options: [
       "Alle Maler sind kreativ.",
-      "Einige kreative Personen sind keine Maler.",
+      "Alle Maler sind keine kreativ.",
       "Einige Maler sind kreativ.",
-      "Alle kreativen Personen sind Maler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Maler sind keine kreativ.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 2,
     explanation:
@@ -590,11 +590,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Ärzte sind Sportler.",
     premise2: "Einige Sportler sind Vegetarier.",
     options: [
-      "Einige Ärzte sind Vegetarier.",
-      "Alle Sportler sind Ärzte.",
-      "Einige Vegetarier sind Ärzte.",
       "Alle Ärzte sind Vegetarier.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Ärzte sind keine Vegetarier.",
+      "Einige Ärzte sind Vegetarier.",
+      "Einige Ärzte sind keine Vegetarier.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -607,11 +607,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Katzen sind wild.",
     premise2: "Einige wilde Tiere sind gefährlich.",
     options: [
-      "Einige Katzen sind gefährlich.",
-      "Alle wilden Tiere sind Katzen.",
-      "Einige gefährliche Tiere sind Katzen.",
       "Alle Katzen sind gefährlich.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Katzen sind keine gefährlich.",
+      "Einige Katzen sind gefährlich.",
+      "Einige Katzen sind keine gefährlich.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -625,10 +625,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Karotten sind keine Gemüse.",
     options: [
       "Alle Äpfel sind Karotten.",
+      "Alle Äpfel sind keine Karotten.",
+      "Einige Äpfel sind Karotten.",
       "Einige Äpfel sind keine Karotten.",
-      "Alle Karotten sind Äpfel.",
-      "Einige Karotten sind Äpfel.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -642,10 +642,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Perser sind keine Katzen.",
     options: [
       "Alle Hunde sind Perser.",
+      "Alle Hunde sind keine Perser.",
       "Einige Hunde sind Perser.",
-      "Alle Perser sind keine Hunde.",
-      "Einige Perser sind keine Hunde.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Hunde sind keine Perser.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -658,11 +658,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Wiener sind Studenten.",
     premise2: "Einige Studenten sind Sportler.",
     options: [
-      "Einige Wiener sind Sportler.",
-      "Alle Studenten sind Wiener.",
-      "Einige Sportler sind Wiener.",
       "Alle Wiener sind Sportler.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Wiener sind keine Sportler.",
+      "Einige Wiener sind Sportler.",
+      "Einige Wiener sind keine Sportler.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -676,10 +676,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Sänger sind keine Tänzer.",
     options: [
       "Alle Pianisten sind Sänger.",
-      "Einige Sänger sind Pianisten.",
-      "Alle Sänger sind keine Pianisten.",
+      "Alle Pianisten sind keine Sänger.",
+      "Einige Pianisten sind Sänger.",
       "Einige Pianisten sind keine Sänger.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -692,11 +692,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Lehrer sind keine Eltern.",
     premise2: "Einige Eltern sind keine Berufstätige.",
     options: [
-      "Einige Lehrer sind keine Berufstätige.",
-      "Einige Berufstätige sind keine Lehrer.",
       "Alle Lehrer sind Berufstätige.",
+      "Alle Lehrer sind keine Berufstätige.",
       "Einige Lehrer sind Berufstätige.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Lehrer sind keine Berufstätige.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -710,10 +710,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Ingenieure sind Angestellte.",
     options: [
       "Alle Piloten sind Ingenieure.",
+      "Alle Piloten sind keine Ingenieure.",
       "Einige Piloten sind Ingenieure.",
-      "Einige Ingenieure sind Piloten.",
-      "Alle Ingenieure sind Piloten.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Piloten sind keine Ingenieure.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -727,10 +727,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Tulpen sind Blumen.",
     options: [
       "Alle Rosen sind Tulpen.",
+      "Alle Rosen sind keine Tulpen.",
       "Einige Rosen sind Tulpen.",
-      "Alle Tulpen sind Rosen.",
-      "Einige Blumen sind Rosen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Rosen sind keine Tulpen.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -743,11 +743,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Schüler sind keine Sportler.",
     premise2: "Einige Sportler sind keine Musiker.",
     options: [
-      "Einige Schüler sind keine Musiker.",
-      "Einige Musiker sind keine Schüler.",
       "Alle Schüler sind Musiker.",
+      "Alle Schüler sind keine Musiker.",
       "Einige Schüler sind Musiker.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Schüler sind keine Musiker.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -761,10 +761,10 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Giraffen sind keine Pflanzenfresser.",
     options: [
       "Alle Löwen sind Giraffen.",
+      "Alle Löwen sind keine Giraffen.",
       "Einige Löwen sind Giraffen.",
-      "Alle Giraffen sind keine Löwen.",
-      "Einige Giraffen sind keine Löwen.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Einige Löwen sind keine Giraffen.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -777,11 +777,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Einige Bücher sind alt.",
     premise2: "Einige alte Dinge sind wertvoll.",
     options: [
-      "Einige Bücher sind wertvoll.",
-      "Alle alten Bücher sind wertvoll.",
-      "Einige wertvolle Dinge sind Bücher.",
       "Alle Bücher sind wertvoll.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Alle Bücher sind keine wertvoll.",
+      "Einige Bücher sind wertvoll.",
+      "Einige Bücher sind keine wertvoll.",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
@@ -794,13 +794,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Autos sind keine Fahrräder.",
     premise2: "Einige Fahrzeuge sind Autos.",
     options: [
+      "Alle Fahrzeuge sind Fahrräder.",
       "Alle Fahrzeuge sind keine Fahrräder.",
+      "Einige Fahrzeuge sind Fahrräder.",
       "Einige Fahrzeuge sind keine Fahrräder.",
-      "Alle Fahrräder sind keine Fahrzeuge.",
-      "Einige Autos sind Fahrräder.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
       "Alle A sind keine B, Einige C sind A. Die einigen Fahrzeuge, die Autos sind, sind keine Fahrräder (da alle Autos keine Fahrräder sind). Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Im Euler-Diagramm: Autos ∩ Fahrräder = ∅, und ein Teil der Fahrzeuge ist in der Auto-Menge. Dieser Teil kann nicht in der Fahrrad-Menge liegen. Daher: Einige Fahrzeuge sind keine Fahrräder. A ist zu stark, C unzulässig.",
     difficulty: 3,
@@ -811,13 +811,13 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise1: "Alle Diamanten sind keine Metalle.",
     premise2: "Einige Edelsteine sind Diamanten.",
     options: [
+      "Alle Edelsteine sind Metalle.",
       "Alle Edelsteine sind keine Metalle.",
+      "Einige Edelsteine sind Metalle.",
       "Einige Edelsteine sind keine Metalle.",
-      "Alle Metalle sind keine Edelsteine.",
-      "Einige Diamanten sind Metalle.",
-      "Keine der Schlussfolgerungen ist zwingend",
+      "Keine der Schlussfolgerungen ist richtig.",
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
       "Alle A sind keine B, Einige C sind A. Die einigen Edelsteine, die Diamanten sind, können keine Metalle sein (da alle Diamanten keine Metalle sind). Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Im Euler-Diagramm: Diamanten ∩ Metalle = ∅, und ein Teil der Edelsteine liegt in den Diamanten. Dieser Teil liegt somit nicht in den Metallen. Einige Edelsteine sind keine Metalle. A ist zu stark, C nicht zwingend, D widerspricht Prämisse 1.",
     difficulty: 3,
@@ -834,7 +834,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
 export function validateImplikationTask(task: ImplikationTask): boolean {
   if (!task.options || task.options.length !== 5) return false;
   if (task.correctAnswer < 0 || task.correctAnswer > 4) return false;
-  if (task.correctAnswer === 4 && task.options[4] !== "Keine der Schlussfolgerungen ist zwingend")
+  if (task.correctAnswer === 4 && task.options[4] !== "Keine der Schlussfolgerungen ist richtig.")
     return false;
 
   const forbidden = /\b(könnte|manchmal|eventuell|vielleicht)\b/i;

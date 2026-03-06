@@ -144,7 +144,7 @@ export function ImplikationSolutionDiagram({
             : useDefaultVisual
               ? "Kein konsistentes Relationsmodell – Diagramm nur aus Logik darstellbar."
               : isNone
-                ? "Keine der Schlussfolgerungen ist zwingend — kein Bereich hervorgehoben."
+                ? "Keine der Schlussfolgerungen ist richtig — kein Bereich hervorgehoben."
                 : "✓ Markierter Bereich = zwingend gültige Schlussfolgerung (nur wenn logisch garantiert)."}
         </p>
         {!useDefaultVisual && (
