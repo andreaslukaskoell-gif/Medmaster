@@ -1914,7 +1914,7 @@ const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
     "GLEIS",
     "TRAKT",
     "SPORE",
-    "KUMPF",
+    "KNOPF",
     "ZUNGE",
     // --- expanded pool v2 (6-letter) ---
     "SIGNAL",
@@ -2046,7 +2046,7 @@ const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
     "SCHMELZE",
     "STEINMETZ",
     "LICHTBILD",
-    "SCHILDKROT",
+    "SCHILDKROETE",
     "BERGWERK",
     "ROHRPOST",
     "HOLZWERK",

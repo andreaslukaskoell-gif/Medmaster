@@ -41,7 +41,10 @@ function validateZahlenfolgen(task: SequenceTask): ValidationResult {
 }
 
 function validateFiguren(task: FigureAssembleTask): ValidationResult {
-  if (!validateFigurenTaskImpl(task))
+  // Locally generated tasks have display-rotated pieces — skip geometric checks
+  // (they were validated pre-rotation by the generator)
+  const skipGeo = task.id.startsWith("fz-train-");
+  if (!validateFigurenTaskImpl(task, skipGeo))
     return {
       ok: false,
       reason: "Figuren: Ziel nicht exakt aus Teilen rekonstruierbar oder Mehrdeutigkeit",

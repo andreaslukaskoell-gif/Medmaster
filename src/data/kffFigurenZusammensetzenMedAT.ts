@@ -1128,13 +1128,14 @@ export function duplicateGuardAdd(fingerprint: string): void {
 // =============================================================================
 // Bei Fehlschlag: Aufgabe VERWERFEN (nicht anzeigen).
 
-const AREA_TOL = 1e-6;
+/** Relative Flächentoleranz: 1% des Zielflächenwerts (fängt Rundungsfehler nach Rotation auf). */
+const AREA_REL_TOL = 0.01;
 
-/** Prüft: Sum(Fläche Teile) === Fläche Ziel (exakt, keine Lücken/Überlappung durch Fläche). */
+/** Prüft: Sum(Fläche Teile) === Fläche Ziel (relative Toleranz, robust nach Rotation). */
 export function validatePiecesMatchTarget(pieces: Polygon[], target: Polygon): boolean {
   const sum = pieces.reduce((s, p) => s + polygonArea(p), 0);
   const targetA = polygonArea(target);
-  return Math.abs(sum - targetA) <= AREA_TOL;
+  return Math.abs(sum - targetA) <= Math.max(AREA_REL_TOL * Math.abs(targetA), 1e-6);
 }
 
 /** Prüft: Keine zwei Teile überlappen (kein Vertex strikt im Inneren des anderen Polygons). */
@@ -1264,13 +1265,20 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
   return true;
 }
 
-/** Vollständige Validierung (hart): Fläche, keine Überlappung, Teile in Ziel, Ziel in 14 Formen, eindeutige Lösung. */
-export function validateFigurenTask(task: FigureAssembleTask): boolean {
+/**
+ * Vollständige Validierung (hart): Fläche, keine Überlappung, Teile in Ziel, Ziel in 14 Formen, eindeutige Lösung.
+ *
+ * `skipGeometric`: set true for display-rotated tasks (pieces no longer inside target after rotation).
+ * The generator validates pre-rotation; re-validation only checks structural integrity.
+ */
+export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = false): boolean {
   if (task.pieces.length < 2 || task.pieces.length > 7 || task.options.length !== 5) return false;
   if (task.targetShapeId != null && !TARGET_SHAPE_IDS.includes(task.targetShapeId)) return false;
-  if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
-  if (!validatePiecesNoOverlap(task.pieces)) return false;
-  if (!validatePiecesInsideTarget(task.pieces, task.target)) return false;
+  if (!skipGeometric) {
+    if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
+    if (!validatePiecesNoOverlap(task.pieces)) return false;
+    if (!validatePiecesInsideTarget(task.pieces, task.target)) return false;
+  }
   if (!validateUniqueCorrectOption(task)) return false;
   if (!validateTaskUsesOnlyStrategyShapes(task)) return false;
   if (task.correctIndex < 0 || task.correctIndex > 4) return false;

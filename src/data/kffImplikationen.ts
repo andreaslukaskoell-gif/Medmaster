@@ -932,18 +932,18 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-49",
-    premise1: "Kein Asteroid ist ein Planet.",
+    premise1: "Alle Asteroiden sind keine Planeten.",
     premise2: "Alle Planeten sind Himmelskörper.",
     options: [
       "Alle Asteroiden sind Himmelskörper.",
-      "Kein Asteroid ist ein Himmelskörper.",
+      "Alle Asteroiden sind keine Himmelskörper.",
       "Einige Asteroiden sind Himmelskörper.",
       "Einige Asteroiden sind keine Himmelskörper.",
       "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
     explanation:
-      "Kein A ist ein B, Alle B sind C. Asteroiden und Planeten sind disjunkt, aber Asteroiden könnten trotzdem Himmelskörper sein (oder auch nicht) — die Prämissen geben darüber keine zwingende Auskunft. Im Euler-Diagramm: A ∩ B = ∅ und B ⊆ C, aber A kann innerhalb oder außerhalb von C liegen. Kein zwingender Schluss. E ist korrekt.",
+      "Alle A sind keine B, Alle B sind C. Asteroiden und Planeten sind disjunkt, aber Asteroiden könnten trotzdem Himmelskörper sein (oder auch nicht) — die Prämissen geben darüber keine zwingende Auskunft. Im Euler-Diagramm: A ∩ B = ∅ und B ⊆ C, aber A kann innerhalb oder außerhalb von C liegen. Kein zwingender Schluss. E ist korrekt.",
     difficulty: 1,
     rulesApplied: [4],
   },
@@ -1333,11 +1333,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-72",
-    premise1: "Kein Pilz ist ein Tier.",
-    premise2: "Kein Tier ist eine Pflanze.",
+    premise1: "Alle Pilze sind keine Tiere.",
+    premise2: "Alle Tiere sind keine Pflanzen.",
     options: [
       "Alle Pilze sind Pflanzen.",
-      "Kein Pilz ist eine Pflanze.",
+      "Alle Pilze sind keine Pflanzen.",
       "Einige Pilze sind Pflanzen.",
       "Einige Pilze sind keine Pflanzen.",
       "Keine der Schlussfolgerungen ist richtig.",
@@ -1367,11 +1367,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-74",
-    premise1: "Kein Kontinent ist eine Insel.",
-    premise2: "Kein Kontinent ist ein Ozean.",
+    premise1: "Alle Kontinente sind keine Inseln.",
+    premise2: "Alle Kontinente sind keine Ozeane.",
     options: [
       "Alle Inseln sind Ozeane.",
-      "Keine Insel ist ein Ozean.",
+      "Alle Inseln sind keine Ozeane.",
       "Einige Inseln sind Ozeane.",
       "Einige Inseln sind keine Ozeane.",
       "Keine der Schlussfolgerungen ist richtig.",
@@ -1418,11 +1418,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-77",
-    premise1: "Kein Fossil ist ein lebendes Wesen.",
-    premise2: "Kein lebendes Wesen ist ein Gestein.",
+    premise1: "Alle Fossilien sind keine lebenden Wesen.",
+    premise2: "Alle lebenden Wesen sind keine Gesteine.",
     options: [
       "Alle Fossilien sind Gesteine.",
-      "Kein Fossil ist ein Gestein.",
+      "Alle Fossilien sind keine Gesteine.",
       "Einige Fossilien sind Gesteine.",
       "Einige Fossilien sind keine Gesteine.",
       "Keine der Schlussfolgerungen ist richtig.",
@@ -1469,11 +1469,11 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
   },
   {
     id: "imp-80",
-    premise1: "Kein Vulkan ist ein Gewässer.",
-    premise2: "Kein Gewässer ist eine Wüste.",
+    premise1: "Alle Vulkane sind keine Gewässer.",
+    premise2: "Alle Gewässer sind keine Wüsten.",
     options: [
       "Alle Vulkane sind Wüsten.",
-      "Kein Vulkan ist eine Wüste.",
+      "Alle Vulkane sind keine Wüsten.",
       "Einige Vulkane sind Wüsten.",
       "Einige Vulkane sind keine Wüsten.",
       "Keine der Schlussfolgerungen ist richtig.",
