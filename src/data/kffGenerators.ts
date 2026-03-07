@@ -3089,6 +3089,64 @@ type TrainingSyllogismMode = {
   name: string;
 };
 
+/** Ungültige Syllogismus-Modi: Prämissenkombinationen, aus denen KEIN zwingender Schluss folgt → E ist korrekt. */
+type TrainingInvalidMode = {
+  p1: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  p2: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  gridSubj: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  gridPred: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+  name: string;
+  rulesApplied: number[];
+  explanation: (s: TrainingBegriff, m: TrainingBegriff, p: TrainingBegriff) => string;
+};
+
+const TRAINING_INVALID_MODES: TrainingInvalidMode[] = [
+  {
+    // Rule 1: Einige + Einige → kein zwingender Schluss
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Einige-Einige",
+    rulesApplied: [1],
+    explanation: (s, m, p) =>
+      `Zwei "einige"-Prämissen (Regel 1): Die Schnittmengen (${s.p} ∩ ${m.p}) und (${m.p} ∩ ${p.p}) können verschieden sein. Kein zwingender Schluss.`,
+  },
+  {
+    // Rule 1: Einige + Einige-keine → kein zwingender Schluss
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Einige ${s.p} sind keine ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Einige-EinigeKeine",
+    rulesApplied: [1],
+    explanation: (s, m, p) =>
+      `Zwei "einige"-Prämissen (Regel 1): Einige ${s.p} sind keine ${m.p} und Einige ${m.p} sind ${p.p} — über ${s.p} und ${p.p} lässt sich nichts ableiten.`,
+  },
+  {
+    // Rule 2: Keine + Keine (gleicher Mittelbegriff) → kein zwingender Schluss
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
+    p2: (s, m) => `Alle ${s.p} sind keine ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Keine-Keine",
+    rulesApplied: [2],
+    explanation: (s, m, p) =>
+      `Zwei "keine"-Prämissen (Regel 2): ${s.p} ∩ ${m.p} = ∅ und ${m.p} ∩ ${p.p} = ∅, aber über ${s.p} und ${p.p} wird nichts ausgesagt.`,
+  },
+  {
+    // Rule 2: Keine + Keine (andere Anordnung) → kein zwingender Schluss
+    p1: (s, m) => `Alle ${s.p} sind keine ${m.p}`,
+    p2: (_s, m, p) => `Alle ${p.p} sind keine ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Keine-Keine-2",
+    rulesApplied: [2],
+    explanation: (s, m, p) =>
+      `Zwei "keine"-Prämissen (Regel 2): ${s.p} und ${m.p} sind disjunkt, ${p.p} und ${m.p} auch — über ${s.p} und ${p.p} ist nichts zwingend.`,
+  },
+];
+
 const TRAINING_MODES: TrainingSyllogismMode[] = [
   {
     p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
@@ -3160,6 +3218,38 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     const tripel = TRAINING_TERM_TRIPELS[randInt(0, TRAINING_TERM_TRIPELS.length - 1)];
     const [s, m, p] = shuffle([...tripel]);
     const useENone = difficulty >= 2 && Math.random() < (difficulty === 3 ? 0.45 : 0.25);
+
+    if (useENone) {
+      // Pick an invalid syllogism mode (no valid conclusion → E is correct)
+      const invMode = TRAINING_INVALID_MODES[randInt(0, TRAINING_INVALID_MODES.length - 1)];
+      const premise1 = invMode.p1(s, m, p);
+      const premise2 = invMode.p2(s, m, p);
+      const gridSubj = invMode.gridSubj(s, m, p);
+      const gridPred = invMode.gridPred(s, m, p);
+      const grid = buildOptionGrid(gridSubj, gridPred);
+      const options: [string, string, string, string, string] = [
+        ...grid,
+        "Keine der Schlussfolgerungen ist richtig.",
+      ];
+
+      const task: ImplikationTask = {
+        id: `imp-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        premise1,
+        premise2,
+        options,
+        correctAnswer: 4,
+        explanation: invMode.explanation(s, m, p),
+        difficulty,
+        rulesApplied: invMode.rulesApplied,
+      };
+
+      if (!validateImplikationTask(task)) continue;
+      if (!hasVisualSolutionForImplikationTask(task)) continue;
+      if (assertNotOfficialLike(task)) return task;
+      continue;
+    }
+
+    // Valid syllogism mode (one of A–D is correct)
     const mode =
       difficulty === 1
         ? TRAINING_MODES[randInt(0, 2)]
@@ -3178,31 +3268,22 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     const correctIdx = grid.findIndex(
       (g) => g.replace(/\.$/, "") === correctConclusion.replace(/\.$/, "")
     );
+    if (correctIdx < 0) continue;
 
-    let options: [string, string, string, string, string];
-    let correctAnswer: number;
-
-    if (useENone || correctIdx < 0) {
-      // E is correct: grid options are all "wrong" (none is entailed)
-      options = [...grid, "Keine der Schlussfolgerungen ist richtig."];
-      correctAnswer = 4;
-    } else {
-      options = [...grid, "Keine der Schlussfolgerungen ist richtig."];
-      correctAnswer = correctIdx;
-    }
+    const options: [string, string, string, string, string] = [
+      ...grid,
+      "Keine der Schlussfolgerungen ist richtig.",
+    ];
 
     const task: ImplikationTask = {
       id: `imp-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       premise1,
       premise2,
       options,
-      correctAnswer,
-      explanation:
-        correctAnswer === 4
-          ? "Aus den gegebenen Prämissen lässt sich keine der angegebenen Schlussfolgerungen zwingend ableiten."
-          : `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
+      correctAnswer: correctIdx,
+      explanation: `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
       difficulty,
-      rulesApplied: correctAnswer === 4 ? [1] : [3],
+      rulesApplied: [3],
     };
 
     if (!validateImplikationTask(task)) continue;

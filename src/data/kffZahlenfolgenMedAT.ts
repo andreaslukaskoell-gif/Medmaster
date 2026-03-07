@@ -314,6 +314,30 @@ function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
       { type: "×", value: 5 },
       { type: "+", value: 6 },
     ],
+    // Reverse-operation: do then undo (+a, ×b, ÷b, −a palindrome)
+    [
+      { type: "+", value: 4 },
+      { type: "×", value: 3 },
+      { type: "÷", value: 3 },
+      { type: "−", value: 4 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 6 },
+      { type: "−", value: 6 },
+      { type: "÷", value: 2 },
+    ],
+    // Near-inverse: operations almost cancel but not quite
+    [
+      { type: "+", value: 5 },
+      { type: "×", value: 2 },
+      { type: "−", value: 3 },
+    ],
+    [
+      { type: "×", value: 3 },
+      { type: "−", value: 2 },
+      { type: "÷", value: 3 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
@@ -453,6 +477,33 @@ function pickOpsHard(rand: () => number): { type: OpType; value: number }[] {
       { type: "+", value: 6 },
       { type: "−", value: 3 },
     ],
+    // Reverse-operation palindromes (hard to spot)
+    [
+      { type: "+", value: 3 },
+      { type: "×", value: 2 },
+      { type: "−", value: 5 },
+      { type: "÷", value: 2 },
+      { type: "−", value: 3 },
+    ],
+    [
+      { type: "×", value: 3 },
+      { type: "+", value: 7 },
+      { type: "÷", value: 3 },
+      { type: "−", value: 7 },
+    ],
+    // Near-cancelling cycles that drift slowly
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 3 },
+      { type: "÷", value: 2 },
+      { type: "−", value: 1 },
+    ],
+    [
+      { type: "+", value: 8 },
+      { type: "×", value: 2 },
+      { type: "−", value: 10 },
+      { type: "÷", value: 2 },
+    ],
   ];
   return choices[Math.floor(rand() * choices.length)];
 }
@@ -542,9 +593,254 @@ function distinctPairs(correct: [number, number], pairs: [number, number][]): [n
   return result;
 }
 
+// ─── Smart Distractor Generators (pattern-aware) ───
+
+/** Mistake: assume the last first-difference continues unchanged. */
+function distractorLastDiff(
+  visible: number[],
+  correctNext: [number, number]
+): [number, number] | null {
+  const n = visible.length;
+  if (n < 2) return null;
+  const d = visible[n - 1] - visible[n - 2];
+  const r: [number, number] = [visible[n - 1] + d, visible[n - 1] + 2 * d];
+  if (r[0] === correctNext[0] && r[1] === correctNext[1]) return null;
+  return r;
+}
+
+/** Mistake: assume second-order differences are constant (when they're not). */
+function distractorSecondDiff(
+  visible: number[],
+  correctNext: [number, number]
+): [number, number] | null {
+  const n = visible.length;
+  if (n < 3) return null;
+  const d1 = visible[n - 1] - visible[n - 2];
+  const d0 = visible[n - 2] - visible[n - 3];
+  const dd = d1 - d0;
+  const nextD = d1 + dd;
+  const v1 = visible[n - 1] + nextD;
+  const v2 = v1 + nextD + dd;
+  const r: [number, number] = [v1, v2];
+  if (r[0] === correctNext[0] && r[1] === correctNext[1]) return null;
+  if (!Number.isInteger(v1) || !Number.isInteger(v2)) return null;
+  return r;
+}
+
+/** Mistake: assume the last ratio continues unchanged. */
+function distractorLastRatio(
+  visible: number[],
+  correctNext: [number, number]
+): [number, number] | null {
+  const n = visible.length;
+  if (n < 2 || visible[n - 2] === 0) return null;
+  const ratio = visible[n - 1] / visible[n - 2];
+  if (!Number.isInteger(ratio) || ratio === 0) return null;
+  const v1 = visible[n - 1] * ratio;
+  const v2 = v1 * ratio;
+  if (!Number.isInteger(v1) || !Number.isInteger(v2) || Math.abs(v2) > 100000) return null;
+  const r: [number, number] = [v1, v2];
+  if (r[0] === correctNext[0] && r[1] === correctNext[1]) return null;
+  return r;
+}
+
+/** Mistake: correct first value, wrong second using a previous step's difference. */
+function distractorFirstRightSmart(
+  visible: number[],
+  correctNext: [number, number],
+  rand: () => number
+): [number, number] | null {
+  const n = visible.length;
+  if (n < 3) return null;
+  const prevDiffs: number[] = [];
+  for (let i = 1; i < Math.min(n, 6); i++) {
+    prevDiffs.push(visible[i] - visible[i - 1]);
+  }
+  const wrongDiff = prevDiffs[Math.floor(rand() * prevDiffs.length)];
+  const v2 = correctNext[0] + wrongDiff;
+  if (v2 === correctNext[1]) return null;
+  return [correctNext[0], v2];
+}
+
+/** Periodic: apply ops starting from wrong position in cycle. */
+function distractorWrongPhase(
+  visible: number[],
+  ops: { type: OpType; value: number }[],
+  correctNext: [number, number]
+): [number, number][] {
+  const results: [number, number][] = [];
+  const last = visible[visible.length - 1];
+  const correctPhase = (visible.length - 1) % ops.length;
+
+  for (let phase = 0; phase < ops.length; phase++) {
+    if (phase === correctPhase) continue;
+    const op1 = ops[phase];
+    const v1 = applyOp(last, op1);
+    const op2 = ops[(phase + 1) % ops.length];
+    const v2 = applyOp(v1, op2);
+    if (Number.isInteger(v1) && Number.isInteger(v2) && !isNaN(v1) && !isNaN(v2)) {
+      if (v1 !== correctNext[0] || v2 !== correctNext[1]) {
+        results.push([v1, v2]);
+      }
+    }
+  }
+  return results;
+}
+
+/** Periodic: swap one operation with its inverse (+↔−, ×↔÷). */
+function distractorInverseOp(
+  visible: number[],
+  ops: { type: OpType; value: number }[],
+  correctNext: [number, number],
+  rand: () => number
+): [number, number] | null {
+  const inverseMap: Record<OpType, OpType> = { "+": "−", "−": "+", "×": "÷", "÷": "×" };
+  const modOps = ops.map((o) => ({ ...o }));
+  const swapIdx = Math.floor(rand() * modOps.length);
+  modOps[swapIdx] = { type: inverseMap[modOps[swapIdx].type], value: modOps[swapIdx].value };
+
+  const last = visible[visible.length - 1];
+  const phase = (visible.length - 1) % modOps.length;
+  const v1 = applyOp(last, modOps[phase]);
+  const v2 = applyOp(v1, modOps[(phase + 1) % modOps.length]);
+  if (!Number.isInteger(v1) || !Number.isInteger(v2) || isNaN(v1) || isNaN(v2)) return null;
+  if (Math.abs(v1) > 100000 || Math.abs(v2) > 100000) return null;
+  if (v1 === correctNext[0] && v2 === correctNext[1]) return null;
+  return [v1, v2];
+}
+
+/** Periodic: apply same operation twice instead of cycling to next. */
+function distractorRepeatedOp(
+  visible: number[],
+  ops: { type: OpType; value: number }[],
+  correctNext: [number, number]
+): [number, number] | null {
+  if (ops.length < 2) return null;
+  const last = visible[visible.length - 1];
+  const phase = (visible.length - 1) % ops.length;
+  const op = ops[phase];
+  const v1 = applyOp(last, op);
+  const v2 = applyOp(v1, op); // same op again
+  if (!Number.isInteger(v1) || !Number.isInteger(v2) || isNaN(v1) || isNaN(v2)) return null;
+  if (Math.abs(v2) > 100000) return null;
+  if (v1 === correctNext[0] && v2 === correctNext[1]) return null;
+  return [v1, v2];
+}
+
+// ─── Quadratic Pattern (second-order constant differences) ───
+
+function buildQuadratic(
+  start: number,
+  firstDiff: number,
+  secondDiff: number,
+  length: number
+): number[] {
+  const out: number[] = [start];
+  let diff = firstDiff;
+  let cur = start;
+  for (let i = 1; i < length; i++) {
+    cur += diff;
+    out.push(cur);
+    diff += secondDiff;
+  }
+  return out;
+}
+
+function pickQuadratic(
+  difficulty: DifficultyLevel,
+  rand: () => number
+): { start: number; firstDiff: number; secondDiff: number; ruleLabel: string } {
+  const configs =
+    difficulty === "easy"
+      ? [
+          { start: 1, firstDiff: 3, secondDiff: 2 },
+          { start: 2, firstDiff: 1, secondDiff: 1 },
+          { start: 0, firstDiff: 1, secondDiff: 2 },
+          { start: 10, firstDiff: 1, secondDiff: 1 },
+          { start: 5, firstDiff: 2, secondDiff: 2 },
+        ]
+      : difficulty === "medium"
+        ? [
+            { start: 1, firstDiff: 5, secondDiff: 2 },
+            { start: 3, firstDiff: 2, secondDiff: 3 },
+            { start: 100, firstDiff: -5, secondDiff: -2 },
+            { start: 2, firstDiff: 3, secondDiff: 4 },
+            { start: 50, firstDiff: -3, secondDiff: -1 },
+            { start: 7, firstDiff: 4, secondDiff: 3 },
+          ]
+        : [
+            { start: 1, firstDiff: 7, secondDiff: 3 },
+            { start: 5, firstDiff: 4, secondDiff: 5 },
+            { start: 200, firstDiff: -10, secondDiff: -3 },
+            { start: 3, firstDiff: 1, secondDiff: 6 },
+            { start: 500, firstDiff: -20, secondDiff: 2 },
+            { start: 8, firstDiff: 6, secondDiff: 4 },
+          ];
+  const c = configs[Math.floor(rand() * configs.length)];
+  return {
+    ...c,
+    ruleLabel: `Zweite Differenz konstant: ${c.secondDiff > 0 ? "+" : ""}${c.secondDiff}`,
+  };
+}
+
+function generateQuadraticTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
+  const cfg = pickQuadratic(difficulty, rand);
+  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  const fullSeq = buildQuadratic(cfg.start, cfg.firstDiff, cfg.secondDiff, totalLen);
+  if (!isReasonableSequence(fullSeq)) {
+    return generatePeriodicTask(difficulty, rand);
+  }
+  const visLen = totalLen - 2;
+  const visible = fullSeq.slice(0, visLen);
+  const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
+
+  // Smart distractors for quadratic
+  const custom: [number, number][] = [];
+  const lastD = visible[visLen - 1] - visible[visLen - 2];
+  // Wrong: constant first-difference (ignore acceleration)
+  custom.push([visible[visLen - 1] + lastD, visible[visLen - 1] + 2 * lastD]);
+  // Wrong: second-difference off by ±1
+  for (const ddOff of [1, -1]) {
+    const wrongDD = cfg.secondDiff + ddOff;
+    const wrongD = lastD + wrongDD;
+    const w1 = visible[visLen - 1] + wrongD;
+    const w2 = w1 + wrongD + wrongDD;
+    if (w1 !== correctNext[0] || w2 !== correctNext[1]) {
+      custom.push([w1, w2]);
+    }
+  }
+  // Wrong: confuse with ratio pattern
+  if (visible[visLen - 2] !== 0) {
+    const fakeRatio = Math.round(visible[visLen - 1] / visible[visLen - 2]);
+    if (fakeRatio !== 0 && fakeRatio !== 1) {
+      const r1 = visible[visLen - 1] * fakeRatio;
+      const r2 = r1 * fakeRatio;
+      if (Math.abs(r2) <= 100000 && (r1 !== correctNext[0] || r2 !== correctNext[1])) {
+        custom.push([r1, r2]);
+      }
+    }
+  }
+
+  const diffs: number[] = [];
+  for (let i = 1; i < Math.min(5, visLen); i++) {
+    diffs.push(visible[i] - visible[i - 1]);
+  }
+
+  return buildTaskFromSequence(
+    visible,
+    correctNext,
+    cfg.ruleLabel,
+    difficulty,
+    rand,
+    `Differenzen: ${diffs.join(", ")}, \u2026 (jeweils ${cfg.secondDiff > 0 ? "+" : ""}${cfg.secondDiff} mehr)\n` +
+      `N\u00e4chste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`,
+    custom
+  );
+}
+
 // ─── Neue Pattern-Typen (zusätzlich zu periodischen Operatoren) ───
 
-type PatternType = "periodic" | "interleaved" | "growing-diff" | "fibonacci";
+type PatternType = "periodic" | "interleaved" | "growing-diff" | "fibonacci" | "quadratic";
 
 /**
  * Verschachtelte Folge: Positionen 1,3,5,… folgen Regel A; Positionen 2,4,6,… folgen Regel B.
@@ -894,24 +1190,27 @@ function pickFibonacci(
 function pickPatternType(difficulty: DifficultyLevel, rand: () => number): PatternType {
   const r = rand();
   if (difficulty === "easy") {
-    // 60% periodic, 20% growing-diff, 10% interleaved, 10% fibonacci
-    if (r < 0.6) return "periodic";
-    if (r < 0.8) return "growing-diff";
-    if (r < 0.9) return "interleaved";
-    return "fibonacci";
+    // 50% periodic, 15% growing-diff, 10% interleaved, 10% fibonacci, 15% quadratic
+    if (r < 0.5) return "periodic";
+    if (r < 0.65) return "growing-diff";
+    if (r < 0.75) return "interleaved";
+    if (r < 0.85) return "fibonacci";
+    return "quadratic";
   }
   if (difficulty === "medium") {
-    // 40% periodic, 20% interleaved, 20% growing-diff, 20% fibonacci
-    if (r < 0.4) return "periodic";
-    if (r < 0.6) return "interleaved";
-    if (r < 0.8) return "growing-diff";
-    return "fibonacci";
+    // 30% periodic, 20% interleaved, 15% growing-diff, 15% fibonacci, 20% quadratic
+    if (r < 0.3) return "periodic";
+    if (r < 0.5) return "interleaved";
+    if (r < 0.65) return "growing-diff";
+    if (r < 0.8) return "fibonacci";
+    return "quadratic";
   }
-  // hard: 30% periodic, 25% interleaved, 25% growing-diff, 20% fibonacci
-  if (r < 0.3) return "periodic";
-  if (r < 0.55) return "interleaved";
-  if (r < 0.8) return "growing-diff";
-  return "fibonacci";
+  // hard: 25% periodic, 20% interleaved, 20% growing-diff, 15% fibonacci, 20% quadratic
+  if (r < 0.25) return "periodic";
+  if (r < 0.45) return "interleaved";
+  if (r < 0.65) return "growing-diff";
+  if (r < 0.8) return "fibonacci";
+  return "quadratic";
 }
 
 /** Prüft ob eine Folge sinnvolle Werte hat (keine zu großen Zahlen, alle ganzzahlig). */
@@ -919,13 +1218,62 @@ function isReasonableSequence(seq: number[]): boolean {
   return seq.every((n) => Number.isInteger(n) && !isNaN(n) && Math.abs(n) <= 100000);
 }
 
+/** Convert a valid task to have E as the correct answer by replacing the correct option with a distractor. */
+function makeTaskECorrect(task: SequenceTask, rand: () => number): SequenceTask | null {
+  if (task.correctOptionId === "E") return task;
+
+  const correctOpt = task.options.find((o) => o.key === task.correctOptionId);
+  if (!correctOpt || !correctOpt.value) return null;
+  const correctVal = correctOpt.value;
+
+  const existingValues = task.options
+    .filter((o): o is typeof o & { value: [number, number] } => !!o.value)
+    .map((o) => o.value);
+
+  for (let i = 0; i < 20; i++) {
+    const offset1 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
+    const offset2 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
+    const replacement: [number, number] = [correctVal[0] + offset1, correctVal[1] + offset2];
+
+    const isDuplicate = existingValues.some(
+      (v) => v[0] === replacement[0] && v[1] === replacement[1]
+    );
+    const isCorrect = replacement[0] === correctVal[0] && replacement[1] === correctVal[1];
+    if (!isDuplicate && !isCorrect) {
+      const newOptions = task.options.map((o) => {
+        if (o.key === task.correctOptionId && o.value) {
+          return { ...o, value: replacement as [number, number] };
+        }
+        return o;
+      });
+
+      return {
+        ...task,
+        options: newOptions as SequenceTask["options"],
+        correctOptionId: "E",
+      };
+    }
+  }
+  return null;
+}
+
 /** Generiert eine MedAT-Zahlenfolgen-Aufgabe. Validiert vor Return; bei Fehlschlag Retry mit anderem Seed. */
 const MAX_SEQUENCE_VALIDATE_RETRIES = 10;
 
 export function generateSequenceTask(difficulty: DifficultyLevel, seed: number): SequenceTask {
+  // ~8% chance of E being correct (medium/hard only)
+  const eRand = seedRng(seed * 31 + 7);
+  const shouldMakeE = difficulty !== "easy" && eRand() < 0.08;
+
   for (let retry = 0; retry < MAX_SEQUENCE_VALIDATE_RETRIES; retry++) {
     const result = generateSequenceTaskInner(difficulty, seed + retry);
-    if (validateSequenceTask(result)) return result;
+    if (!validateSequenceTask(result)) continue;
+
+    if (shouldMakeE) {
+      const eTask = makeTaskECorrect(result, seedRng(seed * 53 + retry));
+      if (eTask && validateSequenceTask(eTask)) return eTask;
+    }
+    return result;
   }
   return generateSequenceTaskInner(difficulty, seed + MAX_SEQUENCE_VALIDATE_RETRIES);
 }
@@ -943,6 +1291,9 @@ function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): S
   if (patternType === "fibonacci") {
     return generateFibonacciTask(difficulty, rand);
   }
+  if (patternType === "quadratic") {
+    return generateQuadraticTask(difficulty, rand);
+  }
   return generatePeriodicTask(difficulty, rand);
 }
 
@@ -953,22 +1304,63 @@ function buildTaskFromSequence(
   ruleLabel: string,
   difficulty: DifficultyLevel,
   rand: () => number,
-  explanation: string
+  explanation: string,
+  customDistractors?: [number, number][]
 ): SequenceTask {
-  // Generate 3 unique distractors
-  const distractors: [number, number][] = [];
-  const offsets = [1, -1, 2, -2, 3, -3, 4, -4, 5, -5];
-  for (const off of offsets) {
-    distractors.push([correctNext[0] + off, correctNext[1]]);
-    distractors.push([correctNext[0], correctNext[1] + off]);
-    distractors.push([correctNext[0] + off, correctNext[1] - off]);
-    if (distractors.length >= 12) break;
+  // Collect smart distractors: pattern-specific first, then generic reasoning mistakes
+  const candidates: [number, number][] = [];
+  if (customDistractors) {
+    candidates.push(...customDistractors);
   }
-  const unique = distinctPairs(correctNext, distractors).slice(0, 3);
-  // Pad if needed
-  while (unique.length < 3) {
-    const off = Math.floor(rand() * 10) + 1;
-    unique.push([correctNext[0] + off, correctNext[1] - off]);
+  // Generic reasoning mistakes
+  const ld = distractorLastDiff(visible, correctNext);
+  if (ld) candidates.push(ld);
+  const sd = distractorSecondDiff(visible, correctNext);
+  if (sd) candidates.push(sd);
+  const lr = distractorLastRatio(visible, correctNext);
+  if (lr) candidates.push(lr);
+  const frs = distractorFirstRightSmart(visible, correctNext, rand);
+  if (frs) candidates.push(frs);
+
+  // Filter valid candidates
+  const valid = candidates.filter(
+    (p) =>
+      Number.isInteger(p[0]) &&
+      Number.isInteger(p[1]) &&
+      !isNaN(p[0]) &&
+      !isNaN(p[1]) &&
+      Math.abs(p[0]) <= 100000 &&
+      Math.abs(p[1]) <= 100000
+  );
+
+  let unique = distinctPairs(correctNext, valid);
+
+  // Shuffle smart distractors for variety
+  for (let i = unique.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [unique[i], unique[j]] = [unique[j], unique[i]];
+  }
+
+  // Fallback: proportional offsets (not simple ±1) if not enough smart distractors
+  if (unique.length < 3) {
+    const mag = Math.max(
+      1,
+      Math.floor(Math.abs(correctNext[0] - visible[visible.length - 1]) * 0.3)
+    );
+    const fallbacks: [number, number][] = [
+      [correctNext[0] + mag, correctNext[1] - mag],
+      [correctNext[0] - mag, correctNext[1] + mag],
+      [correctNext[0] + mag * 2, correctNext[1]],
+      [correctNext[0], correctNext[1] - mag * 2],
+    ];
+    unique = distinctPairs(correctNext, [...unique, ...fallbacks]);
+  }
+
+  const three = unique.slice(0, 3);
+  // Pad if still needed
+  while (three.length < 3) {
+    const off = Math.floor(rand() * 8) + 2;
+    three.push([correctNext[0] + off, correctNext[1] - off]);
   }
 
   const optionKeys: ("A" | "B" | "C" | "D")[] = ["A", "B", "C", "D"];
@@ -980,7 +1372,7 @@ function buildTaskFromSequence(
     if (i === correctPos) {
       optionsArr.push({ key: optionKeys[i], value: correctNext });
     } else {
-      optionsArr.push({ key: optionKeys[i], value: unique[idx++] ?? correctNext });
+      optionsArr.push({ key: optionKeys[i], value: three[idx++] ?? correctNext });
     }
   }
   const options: SequenceTask["options"] = [
@@ -1005,12 +1397,32 @@ function generateInterleavedTask(difficulty: DifficultyLevel, rand: () => number
   const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
   const fullSeq = buildInterleaved(cfg.startA, cfg.startB, cfg.opA, cfg.opB, totalLen);
   if (!fullSeq || !isReasonableSequence(fullSeq)) {
-    // Fallback to periodic
     return generatePeriodicTask(difficulty, rand);
   }
   const visLen = totalLen - 2;
   const visible = fullSeq.slice(0, visLen);
   const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
+
+  // Smart distractors: swap which sub-rule applies, treat as single sequence
+  const custom: [number, number][] = [];
+  // Swap sub-rules: apply opB where opA should go and vice versa
+  const lastEven = visible.filter((_, i) => i % 2 === 0).pop()!;
+  const lastOdd = visible.filter((_, i) => i % 2 === 1).pop()!;
+  const swapV1 = visLen % 2 === 0 ? applyOp(lastEven, cfg.opB) : applyOp(lastOdd, cfg.opA);
+  const swapV2 = visLen % 2 === 0 ? applyOp(lastOdd, cfg.opA) : applyOp(lastEven, cfg.opB);
+  if (Number.isInteger(swapV1) && Number.isInteger(swapV2) && !isNaN(swapV1) && !isNaN(swapV2)) {
+    if (swapV1 !== correctNext[0] || swapV2 !== correctNext[1]) {
+      custom.push([swapV1, swapV2]);
+    }
+  }
+  // Apply same sub-rule to both positions
+  const sameA1 = visLen % 2 === 0 ? applyOp(lastEven, cfg.opA) : applyOp(lastOdd, cfg.opA);
+  const sameA2 = visLen % 2 === 0 ? applyOp(lastOdd, cfg.opA) : applyOp(sameA1, cfg.opA);
+  if (Number.isInteger(sameA1) && Number.isInteger(sameA2) && !isNaN(sameA1) && !isNaN(sameA2)) {
+    if (sameA1 !== correctNext[0] || sameA2 !== correctNext[1]) {
+      custom.push([sameA1, sameA2]);
+    }
+  }
 
   return buildTaskFromSequence(
     visible,
@@ -1020,7 +1432,8 @@ function generateInterleavedTask(difficulty: DifficultyLevel, rand: () => number
     rand,
     `Verschachtelte Folge: Ungerade Positionen (${visible.filter((_, i) => i % 2 === 0).join(", ")}) folgen der Regel ${OP_LABELS[cfg.opA.type]}${cfg.opA.value}. ` +
       `Gerade Positionen (${visible.filter((_, i) => i % 2 === 1).join(", ")}) folgen der Regel ${OP_LABELS[cfg.opB.type]}${cfg.opB.value}.\n` +
-      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+      `N\u00e4chste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`,
+    custom
   );
 }
 
@@ -1035,6 +1448,35 @@ function generateGrowingDiffTask(difficulty: DifficultyLevel, rand: () => number
   const visible = fullSeq.slice(0, visLen);
   const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
 
+  // Smart distractors for growing-diff
+  const custom: [number, number][] = [];
+  const last = visible[visLen - 1];
+  // Wrong step: step ± 1 or step ± 2
+  for (const stepOff of [1, -1, 2]) {
+    const wrongStep = cfg.step + stepOff;
+    const val1 = cfg.initial + (visLen - 1) * wrongStep;
+    const w1 = applyOp(last, { type: cfg.baseOp, value: val1 });
+    const val2 = cfg.initial + visLen * wrongStep;
+    const w2 = applyOp(w1, { type: cfg.baseOp, value: val2 });
+    if (Number.isInteger(w1) && Number.isInteger(w2) && !isNaN(w1) && !isNaN(w2)) {
+      if (w1 !== correctNext[0] || w2 !== correctNext[1]) {
+        custom.push([w1, w2]);
+      }
+    }
+  }
+  // Swapped operation (+ ↔ −)
+  const inverseOp: OpType =
+    cfg.baseOp === "+" ? "\u2212" : cfg.baseOp === "\u2212" ? "+" : cfg.baseOp;
+  if (inverseOp !== cfg.baseOp) {
+    const val1 = cfg.initial + (visLen - 1) * cfg.step;
+    const w1 = applyOp(last, { type: inverseOp, value: val1 });
+    const val2 = cfg.initial + visLen * cfg.step;
+    const w2 = applyOp(w1, { type: inverseOp, value: val2 });
+    if (Number.isInteger(w1) && Number.isInteger(w2) && !isNaN(w1) && !isNaN(w2)) {
+      custom.push([w1, w2]);
+    }
+  }
+
   const diffs: string[] = [];
   for (let i = 0; i < Math.min(4, visLen - 1); i++) {
     const val = cfg.initial + i * cfg.step;
@@ -1047,8 +1489,9 @@ function generateGrowingDiffTask(difficulty: DifficultyLevel, rand: () => number
     cfg.ruleLabel,
     difficulty,
     rand,
-    `Differenzen wachsen: ${diffs.join(", ")}, …\n` +
-      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+    `Differenzen wachsen: ${diffs.join(", ")}, \u2026\n` +
+      `N\u00e4chste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`,
+    custom
   );
 }
 
@@ -1063,6 +1506,43 @@ function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number):
   const visible = fullSeq.slice(0, visLen);
   const correctNext: [number, number] = [fullSeq[visLen], fullSeq[visLen + 1]];
 
+  // Smart distractors for fibonacci
+  const custom: [number, number][] = [];
+  const a = visible[visLen - 2],
+    b = visible[visLen - 1];
+  // Wrong: subtract instead of add
+  const sub1 = cfg.multiplier * b - a + cfg.offset;
+  const sub2 = cfg.multiplier * sub1 - b + cfg.offset;
+  if (
+    Number.isInteger(sub1) &&
+    Number.isInteger(sub2) &&
+    (sub1 !== correctNext[0] || sub2 !== correctNext[1])
+  ) {
+    custom.push([sub1, sub2]);
+  }
+  // Wrong: forget offset
+  if (cfg.offset !== 0) {
+    const no1 = cfg.multiplier * b + a;
+    const no2 = cfg.multiplier * no1 + b;
+    if (no1 !== correctNext[0] || no2 !== correctNext[1]) {
+      custom.push([no1, no2]);
+    }
+  }
+  // Wrong: forget multiplier
+  if (cfg.multiplier !== 1) {
+    const nm1 = b + a + cfg.offset;
+    const nm2 = nm1 + b + cfg.offset;
+    if (nm1 !== correctNext[0] || nm2 !== correctNext[1]) {
+      custom.push([nm1, nm2]);
+    }
+  }
+  // Wrong: swap a_{n-1} and a_{n-2} in formula
+  const sw1 = cfg.multiplier * a + b + cfg.offset;
+  const sw2 = cfg.multiplier * b + sw1 + cfg.offset;
+  if ((sw1 !== correctNext[0] || sw2 !== correctNext[1]) && Math.abs(sw2) <= 100000) {
+    custom.push([sw1, sw2]);
+  }
+
   return buildTaskFromSequence(
     visible,
     correctNext,
@@ -1070,10 +1550,11 @@ function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number):
     difficulty,
     rand,
     `${cfg.ruleLabel}.\n` +
-      `Beispiel: ${visible[visible.length - 2]} und ${visible[visible.length - 1]} → ` +
-      `${cfg.multiplier !== 1 ? `${cfg.multiplier} × ${visible[visible.length - 1]} + ` : `${visible[visible.length - 1]} + `}` +
+      `Beispiel: ${visible[visible.length - 2]} und ${visible[visible.length - 1]} \u2192 ` +
+      `${cfg.multiplier !== 1 ? `${cfg.multiplier} \u00d7 ${visible[visible.length - 1]} + ` : `${visible[visible.length - 1]} + `}` +
       `${visible[visible.length - 2]}${cfg.offset !== 0 ? ` ${cfg.offset > 0 ? "+" : ""}${cfg.offset}` : ""} = ${correctNext[0]}.\n` +
-      `Nächste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`
+      `N\u00e4chste Zahlen: ${correctNext[0]} und ${correctNext[1]}.`,
+    custom
   );
 }
 
@@ -1115,18 +1596,37 @@ function generatePeriodicTask(difficulty: DifficultyLevel, rand: () => number): 
     ops.length === 1 ? `${formatOps(ops)} (durchgehend)` : `${formatOps(ops)} (wiederholend)`;
   const explanation = buildExplanation(visible, ops, correctNext);
 
-  // Use specialized distractors for periodic tasks
+  // Smart distractors for periodic tasks
   const distractors: [number, number][] = [];
+  // Wrong phase in cycle (most realistic mistake)
+  distractors.push(...distractorWrongPhase(visible, ops, correctNext));
+  // Swapped operation (+↔−, ×↔÷)
+  const inv = distractorInverseOp(visible, ops, correctNext, rand);
+  if (inv) distractors.push(inv);
+  // Repeated same operation instead of cycling
+  const rep = distractorRepeatedOp(visible, ops, correctNext);
+  if (rep) distractors.push(rep);
+  // Assume constant last-difference
+  const cld = distractorLastDiff(visible, correctNext);
+  if (cld) distractors.push(cld);
+  // Correct first, wrong second using previous diff
+  const frs = distractorFirstRightSmart(visible, correctNext, rand);
+  if (frs) distractors.push(frs);
+  // Legacy fallbacks
   distractors.push(distractorFirstRight(correctNext, ops, rand));
-  distractors.push(distractorWrongOp(correctNext, rand));
   distractors.push(distractorOffset(visible, ops, rand));
-  let unique = distinctPairs(correctNext, distractors);
-  while (unique.length < 3) {
-    distractors.push(distractorFirstRight(correctNext, ops, rand));
-    distractors.push(distractorWrongOp(correctNext, rand));
-    unique = distinctPairs(correctNext, distractors);
+
+  // Shuffle for variety, then pick 3
+  for (let i = distractors.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [distractors[i], distractors[j]] = [distractors[j], distractors[i]];
   }
+  let unique = distinctPairs(correctNext, distractors);
   const three = unique.slice(0, 3);
+  while (three.length < 3) {
+    const off = Math.floor(rand() * 8) + 2;
+    three.push([correctNext[0] + off, correctNext[1] - off]);
+  }
 
   const optionKeys: ("A" | "B" | "C" | "D")[] = ["A", "B", "C", "D"];
   const correctPos = Math.floor(rand() * 4);
