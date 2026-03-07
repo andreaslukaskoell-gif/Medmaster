@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
+import { BottomTabBar } from "./BottomTabBar";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
@@ -34,6 +35,7 @@ import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
+import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie). */
 function isChapterFocusRoute(pathname: string): boolean {
@@ -231,14 +233,14 @@ export function AppShell() {
         <div
           className={cn(
             "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
-            "bg-[var(--background)]"
+            "bg-[var(--background)]",
+            SIDEBAR_MAIN_ML
           )}
         >
           <TopBar
             menuButtonRef={menuButtonRef}
             onMenuToggle={() => setMobileOpen(!mobileOpen)}
             sidebarOpen={mobileOpen}
-            showHamburgerAlways={true}
           />
           <main
             id="main-content"
@@ -265,6 +267,7 @@ export function AppShell() {
               </AnimatePresence>
             </ErrorBoundary>
           </main>
+          <BottomTabBar />
         </div>
       </div>
     </BreadcrumbProvider>

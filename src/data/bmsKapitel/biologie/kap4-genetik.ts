@@ -459,8 +459,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
-      imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
-      imageCaption: "Abb.: Vererbung homologer Chromosomen nach Mendel (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-dna-nukleotide.jpg",
+      imageCaption: "Abb.: DNA-Nukleotide — Bausteine der Erbinformation (OpenStax, CC BY 4.0)",
       stichworte: [
         "Uniformitätsregel",
         "Spaltungsregel",

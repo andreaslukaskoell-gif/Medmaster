@@ -693,14 +693,27 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-100"
+            className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-100"
             onClick={onClose}
             aria-hidden
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar panel */}
+      {/* Desktop: persistent sidebar (no animation) */}
+      <aside
+        className={cn(
+          "hidden lg:flex fixed left-0 top-0 h-screen flex-col",
+          "w-[180px]",
+          "bg-[var(--sidebar-bg)]",
+          "border-r border-[var(--border)]",
+          "z-40"
+        )}
+      >
+        {sidebarContent}
+      </aside>
+
+      {/* Mobile: animated drawer */}
       <motion.aside
         initial={false}
         animate={{
@@ -708,8 +721,8 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
         }}
         transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         className={cn(
-          "fixed left-0 top-0 h-screen flex flex-col",
-          SIDEBAR_PANEL_WIDTH,
+          "lg:hidden fixed left-0 top-0 h-screen flex flex-col",
+          "w-72 max-w-[85vw]",
           "bg-[var(--sidebar-bg)] backdrop-blur-sm",
           "border-r border-[var(--border)]",
           "z-101"

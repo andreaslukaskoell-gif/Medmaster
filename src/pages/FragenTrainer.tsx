@@ -17,6 +17,10 @@ import {
   ChevronRight,
   Dumbbell,
   Clock,
+  Microscope,
+  FlaskConical,
+  Zap,
+  Calculator,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -49,14 +53,53 @@ import { useLocation, useNavigate } from "react-router-dom";
 const BMS_SUBJECTS: {
   id: BMSSubjectId;
   label: string;
-  emoji: string;
+  icon: typeof Microscope;
+  accentClass: string;
+  bgClass: string;
+  borderClass: string;
   officialCount: number;
   officialMinutes: number;
 }[] = [
-  { id: "biologie", label: "Biologie", emoji: "🧬", officialCount: 40, officialMinutes: 30 },
-  { id: "chemie", label: "Chemie", emoji: "⚗️", officialCount: 24, officialMinutes: 18 },
-  { id: "physik", label: "Physik", emoji: "⚡", officialCount: 18, officialMinutes: 16 },
-  { id: "mathematik", label: "Mathematik", emoji: "📐", officialCount: 12, officialMinutes: 11 },
+  {
+    id: "biologie",
+    label: "Biologie",
+    icon: Microscope,
+    accentClass: "text-[var(--accent-bio)]",
+    bgClass: "bg-[var(--accent-bio)]/10",
+    borderClass: "border-[var(--accent-bio)]",
+    officialCount: 40,
+    officialMinutes: 30,
+  },
+  {
+    id: "chemie",
+    label: "Chemie",
+    icon: FlaskConical,
+    accentClass: "text-[var(--accent-chem)]",
+    bgClass: "bg-[var(--accent-chem)]/10",
+    borderClass: "border-[var(--accent-chem)]",
+    officialCount: 24,
+    officialMinutes: 18,
+  },
+  {
+    id: "physik",
+    label: "Physik",
+    icon: Zap,
+    accentClass: "text-[var(--accent-phys)]",
+    bgClass: "bg-[var(--accent-phys)]/10",
+    borderClass: "border-[var(--accent-phys)]",
+    officialCount: 18,
+    officialMinutes: 16,
+  },
+  {
+    id: "mathematik",
+    label: "Mathematik",
+    icon: Calculator,
+    accentClass: "text-[var(--accent-math)]",
+    bgClass: "bg-[var(--accent-math)]/10",
+    borderClass: "border-[var(--accent-math)]",
+    officialCount: 12,
+    officialMinutes: 11,
+  },
 ];
 
 const EINFACH_COUNTS = [10, 20, 30, 50];
@@ -164,21 +207,32 @@ function SelectionScreen({
         <CardContent className="p-4 space-y-3">
           <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">1. Fach wählen</p>
           <div className="grid grid-cols-2 gap-2">
-            {BMS_SUBJECTS.map((s) => (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => setSubjectId(s.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
-                  subjectId === s.id
-                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                    : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
-              >
-                <span className="text-lg">{s.emoji}</span>
-                <span>{s.label}</span>
-              </button>
-            ))}
+            {BMS_SUBJECTS.map((s) => {
+              const Icon = s.icon;
+              const selected = subjectId === s.id;
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() => setSubjectId(s.id)}
+                  className={`flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
+                    selected
+                      ? `${s.borderClass} ${s.bgClass} font-semibold`
+                      : "border-border text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
+                  }`}
+                >
+                  <div
+                    className={`w-9 h-9 rounded-lg ${s.bgClass} flex items-center justify-center shrink-0`}
+                  >
+                    <Icon className={`w-5 h-5 ${s.accentClass}`} />
+                  </div>
+                  <div>
+                    <div className={selected ? "text-[var(--foreground)]" : ""}>{s.label}</div>
+                    <div className="text-[10px] opacity-60">{s.officialCount} Fragen</div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </CardContent>
       </Card>

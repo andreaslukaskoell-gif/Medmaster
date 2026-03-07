@@ -10,6 +10,7 @@
  *   Direkt: 5 Aussagen sichtbar + Kombinationsoptionen A-E auswählen
  */
 import { Check, X, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
@@ -180,7 +181,7 @@ export function TypKQuestion({
           <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
             Welche Kombination ist richtig?
           </p>
-          {kombinationen.map((k) => {
+          {kombinationen.map((k, i) => {
             let cls =
               "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
 
@@ -198,11 +199,21 @@ export function TypKQuestion({
 
             const label = formatTypKOptionLabel(k, aussagen.length);
             return (
-              <button
+              <motion.button
                 key={k.key}
                 onClick={() => !revealed && onChooseCombination(k.key)}
                 disabled={revealed}
-                className={`w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-all
+                layout
+                animate={
+                  revealed
+                    ? k.key === korrekt
+                      ? { scale: [1, 1.03, 1], transition: { duration: 0.35, delay: i * 0.04 } }
+                      : k.key === typKCombChosen
+                        ? { x: [0, -6, 6, -3, 0], transition: { duration: 0.4 } }
+                        : { opacity: 0.4, transition: { duration: 0.3, delay: 0.15 } }
+                    : {}
+                }
+                className={`w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-colors
                   ${cls} ${!revealed ? "cursor-pointer active:scale-[0.98]" : "cursor-default"}
                 `}
               >
@@ -214,38 +225,47 @@ export function TypKQuestion({
                 {revealed && k.key === typKCombChosen && k.key !== korrekt && (
                   <XCircle className="w-4 h-4 inline ml-2 text-red-500" />
                 )}
-              </button>
+              </motion.button>
             );
           })}
         </div>
       )}
 
       {/* ── Gesamterklärung after reveal ─────────────────── */}
-      {revealed && frage.erklaerung && (
-        <Card className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
-          <CardContent className="p-4">
-            <div className="flex items-center gap-2 mb-2">
-              {isCorrect ? (
-                <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
-              ) : (
-                <XCircle className="w-4 h-4 text-red-500   shrink-0" />
-              )}
-              <span
-                className={`text-sm font-semibold ${
-                  isCorrect
-                    ? "text-green-700 dark:text-green-400"
-                    : "text-red-700 dark:text-red-400"
-                }`}
-              >
-                {isCorrect ? "Richtig!" : `Falsch — Richtig wäre: ${korrekt}`}
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              {stripMarkdownAsterisks(frage.erklaerung)}
-            </p>
-          </CardContent>
-        </Card>
-      )}
+      <AnimatePresence>
+        {revealed && frage.erklaerung && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.2 }}
+          >
+            <Card className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
+              <CardContent className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  {isCorrect ? (
+                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                  ) : (
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0" />
+                  )}
+                  <span
+                    className={`text-sm font-semibold ${
+                      isCorrect
+                        ? "text-green-700 dark:text-green-400"
+                        : "text-red-700 dark:text-red-400"
+                    }`}
+                  >
+                    {isCorrect ? "Richtig!" : `Falsch — Richtig wäre: ${korrekt}`}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {stripMarkdownAsterisks(frage.erklaerung)}
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

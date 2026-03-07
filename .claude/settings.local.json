@@ -373,7 +373,8 @@
       "Bash(/opt/homebrew/bin/gh auth:*)",
       "Bash(/opt/homebrew/bin/gh workflow:*)",
       "Bash(/tmp/check_diagrams.sh:*)",
-      "Bash(pbcopy:*)"
+      "Bash(pbcopy:*)",
+      "Bash(ls:*)"
     ]
   }
 }

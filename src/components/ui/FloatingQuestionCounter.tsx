@@ -9,7 +9,7 @@ export function FloatingQuestionCounter({ current, total, label = "Frage" }: Pro
   const pct = total > 0 ? Math.round((current / total) * 100) : 0;
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+    <div className="fixed bottom-20 lg:bottom-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 px-4 py-2 rounded-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-700/50">
       <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
         {label} {current} von {total}
       </span>

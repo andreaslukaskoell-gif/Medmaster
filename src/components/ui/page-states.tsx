@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { AlertCircle, RefreshCw, Inbox } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
 type PageLoadingProps = {
@@ -27,28 +28,17 @@ export function PageLoading({ message = "Laden...", className }: PageLoadingProp
 /** Skeleton placeholder for page loading (cards + lines). Use instead of spinner for BMS/KFF overview. */
 export function PageLoadingSkeleton({ className }: { className?: string }) {
   return (
-    <div
-      className={cn("animate-pulse space-y-4 py-6 px-4", className)}
-      role="status"
-      aria-label="Laden"
-    >
-      <div className="h-8 w-48 rounded-lg bg-gray-200 dark:bg-gray-700" />
+    <div className={cn("space-y-4 py-6 px-4", className)} role="status" aria-label="Laden">
+      <Skeleton className="h-8 w-48 rounded-lg" />
       <div className="grid gap-3 sm:grid-cols-2">
         {[1, 2, 3, 4].map((i) => (
-          <div
-            key={i}
-            className="h-24 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800"
-          />
+          <Skeleton key={i} className="h-24 rounded-xl" />
         ))}
       </div>
-      <div className="h-6 w-32 rounded bg-gray-200 dark:bg-gray-700" />
+      <Skeleton className="h-6 w-32 rounded" />
       <div className="space-y-2">
         {[1, 2, 3].map((i) => (
-          <div
-            key={i}
-            className="h-4 rounded bg-gray-200 dark:bg-gray-700"
-            style={{ width: `${60 + i * 10}%` }}
-          />
+          <Skeleton key={i} className="h-4 rounded" style={{ width: `${60 + i * 10}%` }} />
         ))}
       </div>
     </div>

@@ -439,7 +439,7 @@ export default function TV() {
     const allAnswered = allSetQuestions.every((q) => mcAnswers[q.id] !== undefined);
 
     return (
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="max-w-3xl lg:max-w-6xl mx-auto space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
             <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -478,47 +478,52 @@ export default function TV() {
           ))}
         </div>
 
-        {/* Text content */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-gray-900 dark:text-gray-100 text-base">
-              {currentText.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-              {currentText.content}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Questions for current text */}
-        <div className="space-y-3">
-          {currentText.questions.map((q) => (
-            <Card key={q.id}>
-              <CardContent className="p-4">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
-                  {q.question}
-                </p>
-                <div className="space-y-2">
-                  {q.options.map((opt, oi) => (
-                    <button
-                      key={oi}
-                      onClick={() => setMcAnswers((p) => ({ ...p, [q.id]: oi }))}
-                      className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
-                        mcAnswers[q.id] === oi
-                          ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                          : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-                      }`}
-                    >
-                      <span className="font-semibold mr-1.5">{LABELS[oi]})</span>
-                      {opt}
-                    </button>
-                  ))}
+        {/* Split-pane: text (sticky on desktop) + questions side by side */}
+        <div className="lg:grid lg:grid-cols-2 lg:gap-6 space-y-4 lg:space-y-0">
+          {/* Text content — sticky on desktop */}
+          <div className="lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-gray-900 dark:text-gray-100 text-base">
+                  {currentText.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                  {currentText.content}
                 </div>
               </CardContent>
             </Card>
-          ))}
+          </div>
+
+          {/* Questions for current text */}
+          <div className="space-y-3">
+            {currentText.questions.map((q) => (
+              <Card key={q.id}>
+                <CardContent className="p-4">
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                    {q.question}
+                  </p>
+                  <div className="space-y-2">
+                    {q.options.map((opt, oi) => (
+                      <button
+                        key={oi}
+                        onClick={() => setMcAnswers((p) => ({ ...p, [q.id]: oi }))}
+                        className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
+                          mcAnswers[q.id] === oi
+                            ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                            : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                        }`}
+                      >
+                        <span className="font-semibold mr-1.5">{LABELS[oi]})</span>
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between gap-2">

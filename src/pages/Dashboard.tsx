@@ -14,6 +14,9 @@ import {
   Heart,
   ListChecks,
   RefreshCw,
+  Timer,
+  Dumbbell,
+  BarChart3,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -182,7 +185,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-page-bg">
-      <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:py-8 pb-28 lg:pb-12">
         <SyncIndicator />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
@@ -191,15 +194,27 @@ export default function Dashboard() {
             <div
               className={cn(
                 cardClass,
-                "p-8 sm:p-10 border-l-4 border-l-[var(--accent-phys)] bg-[var(--card)] shadow-md",
+                "p-5 sm:p-8 border-l-4 border-l-[var(--accent-phys)] bg-[var(--card)] shadow-md",
                 "bg-linear-to-br from-[var(--card)] via-[var(--card)] to-blue-50/50 dark:to-blue-950/20"
               )}
             >
               <div className="flex flex-col gap-5">
                 <div>
-                  <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
-                    {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
-                  </h1>
+                  <div className="flex items-start justify-between gap-3">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
+                      {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
+                    </h1>
+                    {days > 0 && (
+                      <div className="shrink-0 flex flex-col items-center px-3 py-1.5 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
+                        <span className="text-lg font-bold text-[var(--accent)] leading-tight">
+                          {days}
+                        </span>
+                        <span className="text-[10px] text-[var(--muted)] leading-tight">
+                          Tage bis MedAT
+                        </span>
+                      </div>
+                    )}
+                  </div>
                   <Link
                     to="/lernplan"
                     className="mt-2 inline-flex items-center gap-1.5 text-base font-semibold text-[var(--accent)] hover:underline"
@@ -211,47 +226,65 @@ export default function Dashboard() {
                 {concretePlan && (
                   <div className="flex flex-wrap gap-2 text-sm">
                     {concretePlan.bmsRead.length > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                      <Link
+                        to="/bms"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors"
+                      >
                         <BookOpen className="w-3.5 h-3.5" />
                         {concretePlan.bmsRead.length} Kapitel lernen
-                      </span>
+                      </Link>
                     )}
                     {concretePlan.bmsReview.length > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                      <Link
+                        to="/bms"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                      >
                         <RefreshCw className="w-3.5 h-3.5" />
                         {concretePlan.bmsReview.length} wiederholen
-                      </span>
+                      </Link>
                     )}
                     {concretePlan.bmsQuestions.length > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200">
+                      <Link
+                        to="/fragen-trainer"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors"
+                      >
                         <ListChecks className="w-3.5 h-3.5" />
                         BMS-Fragen
-                      </span>
+                      </Link>
                     )}
                     {concretePlan.kffTasks.length > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                      <Link
+                        to="/kff"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 hover:bg-pink-200 dark:hover:bg-pink-900/50 transition-colors"
+                      >
                         <Brain className="w-3.5 h-3.5" />
                         KFF
-                      </span>
+                      </Link>
                     )}
                     {concretePlan.tvTexts > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200">
+                      <Link
+                        to="/tv"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                      >
                         <FileText className="w-3.5 h-3.5" />
                         TV
-                      </span>
+                      </Link>
                     )}
                     {concretePlan.sekTasks.length > 0 && (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200">
+                      <Link
+                        to="/sek"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200 hover:bg-rose-200 dark:hover:bg-rose-900/50 transition-colors"
+                      >
                         <Heart className="w-3.5 h-3.5" />
                         SEK
-                      </span>
+                      </Link>
                     )}
                   </div>
                 )}
               </div>
               <div className="mt-4 pt-4 border-t border-[var(--border)]">
                 <div className="flex items-center justify-between text-sm mb-1">
-                  <span className="text-[var(--text-secondary)]">Du bist bei</span>
+                  <span className="text-[var(--text-secondary)]">BMS-Fortschritt</span>
                   <span className="font-semibold text-[var(--text-primary)]">
                     {bmsProgressPct} %
                   </span>
@@ -349,20 +382,52 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
+          {/* Schnellzugriff */}
+          <motion.section
+            variants={tileMotion}
+            aria-label="Schnellzugriff"
+            className="grid grid-cols-3 gap-3"
+          >
+            <Link
+              to="/simulation"
+              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+            >
+              <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                <Timer className="w-5 h-5 text-orange-500" />
+              </div>
+              <span className="text-xs font-medium text-[var(--text-primary)]">Simulation</span>
+            </Link>
+            <Link
+              to="/fragen-trainer"
+              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+            >
+              <div className="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                <Dumbbell className="w-5 h-5 text-violet-500" />
+              </div>
+              <span className="text-xs font-medium text-[var(--text-primary)]">Fragen</span>
+            </Link>
+            <Link
+              to="/fortschritt"
+              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+            >
+              <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center">
+                <BarChart3 className="w-5 h-5 text-indigo-500" />
+              </div>
+              <span className="text-xs font-medium text-[var(--text-primary)]">Fortschritt</span>
+            </Link>
+          </motion.section>
+
           {/* Prognose-Karte */}
           <motion.section
             variants={tileMotion}
             aria-label="Prognose"
             className="grid grid-cols-1 gap-4"
           >
-            <Link
-              to="/fortschritt"
-              className="opacity-90 hover:opacity-100 transition-opacity max-w-md"
-            >
+            <Link to="/fortschritt" className="max-w-md">
               <div
                 className={cn(
                   cardClass,
-                  "h-full p-4 flex items-center gap-3 min-h-[100px]",
+                  "h-full p-4 flex items-center gap-3",
                   "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
                 )}
               >
@@ -374,7 +439,7 @@ export default function Dashboard() {
                   <p className="text-xs text-[var(--muted)]">
                     {prognoseSummary.hasEnoughData
                       ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
-                      : "Ab 20 Fragen"}
+                      : "Ab 20 Fragen verfügbar"}
                   </p>
                 </div>
                 {prognoseSummary.hasEnoughData && (

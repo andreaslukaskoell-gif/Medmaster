@@ -8,6 +8,7 @@
  *   4. FSRS rating buttons appear
  */
 import { CheckCircle2, XCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
@@ -37,7 +38,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
 
       {/* Options */}
       <div className="space-y-2">
-        {optionen.map((opt) => {
+        {optionen.map((opt, i) => {
           let cls =
             "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
 
@@ -54,11 +55,21 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
           }
 
           return (
-            <button
+            <motion.button
               key={opt.key}
               onClick={() => !locked && onChoose(opt.key)}
               disabled={locked}
-              className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all
+              layout
+              animate={
+                revealed
+                  ? opt.key === correct
+                    ? { scale: [1, 1.03, 1], transition: { duration: 0.35, delay: i * 0.04 } }
+                    : opt.key === chosenOption
+                      ? { x: [0, -6, 6, -3, 0], transition: { duration: 0.4 } }
+                      : { opacity: 0.4, transition: { duration: 0.3, delay: 0.15 } }
+                  : {}
+              }
+              className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-colors
                 ${cls}
                 ${!locked ? "cursor-pointer active:scale-[0.98]" : "cursor-default"}
               `}
@@ -71,39 +82,48 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
               {revealed && opt.key === chosenOption && opt.key !== correct && (
                 <XCircle className="w-4 h-4 inline ml-2 text-red-500" />
               )}
-            </button>
+            </motion.button>
           );
         })}
       </div>
 
       {/* Explanation */}
-      {revealed && (
-        <Card className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
-          <CardContent className="p-4">
-            <div className="flex items-center gap-2 mb-2">
-              {isCorrect ? (
-                <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
-              ) : (
-                <XCircle className="w-4 h-4 text-red-500   shrink-0" />
-              )}
-              <span
-                className={`text-sm font-semibold ${
-                  isCorrect
-                    ? "text-green-700 dark:text-green-400"
-                    : "text-red-700 dark:text-red-400"
-                }`}
-              >
-                {isCorrect ? "Richtig!" : `Falsch — Richtig wäre: ${correct}`}
-              </span>
-            </div>
-            {frage.erklaerung && (
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                {stripMarkdownAsterisks(frage.erklaerung)}
-              </p>
-            )}
-          </CardContent>
-        </Card>
-      )}
+      <AnimatePresence>
+        {revealed && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.2 }}
+          >
+            <Card className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}>
+              <CardContent className="p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  {isCorrect ? (
+                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                  ) : (
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0" />
+                  )}
+                  <span
+                    className={`text-sm font-semibold ${
+                      isCorrect
+                        ? "text-green-700 dark:text-green-400"
+                        : "text-red-700 dark:text-red-400"
+                    }`}
+                  >
+                    {isCorrect ? "Richtig!" : `Falsch — Richtig wäre: ${correct}`}
+                  </span>
+                </div>
+                {frage.erklaerung && (
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {stripMarkdownAsterisks(frage.erklaerung)}
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

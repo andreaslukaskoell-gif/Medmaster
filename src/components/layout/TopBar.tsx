@@ -2,12 +2,13 @@ import type { RefObject } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sun, Moon, Search, Menu, LayoutDashboard } from "lucide-react";
+import { Sun, Moon, Search, Menu, Award } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { SyncStatus } from "./SyncStatus";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
+import { getLevelFromXP } from "@/lib/progression";
 
 import { cn } from "@/lib/utils";
 
@@ -16,19 +17,14 @@ interface TopBarProps {
   onMenuToggle: () => void;
   /** Sidebar/Drawer offen (z. B. mobile) → Burger-Icon dreht sich 90°. */
   sidebarOpen?: boolean;
-  /** When true (e.g. chapter view), show hamburger on all screen sizes. */
-  showHamburgerAlways?: boolean;
 }
 
-export function TopBar({
-  menuButtonRef,
-  onMenuToggle,
-  sidebarOpen = false,
-  showHamburgerAlways = false,
-}: TopBarProps) {
+export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: TopBarProps) {
   const mounted = useIsMounted();
   const store = useStore();
   const streak = store?.streak ?? 0;
+  const xp = store?.xp ?? 0;
+  const level = getLevelFromXP(xp);
   const lastActiveDate = store?.lastActiveDate ?? "";
   const darkMode = store?.darkMode ?? false;
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
@@ -66,10 +62,7 @@ export function TopBar({
         <button
           ref={menuButtonRef}
           type="button"
-          className={cn(
-            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0",
-            !showHamburgerAlways && "lg:hidden"
-          )}
+          className="p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0 lg:hidden"
           onClick={onMenuToggle}
           aria-label={sidebarOpen ? "Menü schließen" : "Menü öffnen"}
         >
@@ -87,16 +80,7 @@ export function TopBar({
           </motion.span>
         </button>
 
-        <Link
-          to="/dashboard"
-          className={cn(
-            "p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors shrink-0"
-          )}
-          aria-label="Dashboard"
-          title="Dashboard"
-        >
-          <LayoutDashboard className="w-5 h-5" />
-        </Link>
+        {/* Dashboard link hidden — sidebar has it on lg+, BottomTabBar on mobile */}
       </div>
 
       {/* Right: stats + controls */}
@@ -121,6 +105,15 @@ export function TopBar({
             </kbd>
           </button>
 
+          {/* Level */}
+          <Link
+            to="/fortschritt"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--color-primary-500)]/50 transition-colors"
+          >
+            <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
+            <span className="min-w-3 text-center">{showStoreValues ? level : "–"}</span>
+          </Link>
+
           {/* Streak */}
           <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
             <StreakFlameIcon
@@ -129,7 +122,7 @@ export function TopBar({
               size="inherit"
               className="w-3.5 h-3.5 shrink-0"
             />
-            <span className="min-w-5 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
+            <span className="min-w-3 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
           </div>
 
           <SyncStatus />

@@ -1215,9 +1215,8 @@ Die **Chemotherapie senkt effektiv K** (reduziert Tumormasse), aber Resistenzen 
     {
       id: "bio-11-01",
       title: "Antikörper — Aufbau, Klassen und Effektorfunktionen",
-      imageUrl: "/images/bms/bio-immunantwort.jpg",
-      imageCaption:
-        "Abb.: Antikörperstruktur mit schweren und leichten Ketten (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-antigen-praesentation.jpg",
+      imageCaption: "Abb.: Antigenpräsentation durch MHC-Moleküle (OpenStax, CC BY 4.0)",
       stichworte: [
         "IgG",
         "IgA",
@@ -1574,9 +1573,8 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
     {
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
-      imageUrl: "/images/bms/bio-antigene.jpg",
-      imageCaption:
-        "Abb.: Blutgruppenantigene auf der Erythrozytenoberfläche (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-blutgerinnung.jpg",
+      imageCaption: "Abb.: Blutgerinnung und Plättchenaggregation (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## AB0-Blutgruppensystem — Genetische Grundlagen
 

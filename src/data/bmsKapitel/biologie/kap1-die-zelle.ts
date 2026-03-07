@@ -250,9 +250,9 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
     {
       id: "bio-1-02",
       title: "Prokaryoten vs. Eukaryoten",
-      imageUrl: "/images/bms/bio-tierzelle.jpg",
+      imageUrl: "/images/bms/bio-zellmembran-phospholipid.jpg",
       imageCaption:
-        "Abb.: Vergleich prokaryotischer und eukaryotischer Zellen (OpenStax, CC BY 4.0)",
+        "Abb.: Phospholipid-Doppelschicht — Grundbaustein aller Zellmembranen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Prokaryoten",
         "Eukaryoten",
@@ -883,8 +883,9 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
     {
       id: "bio-1-05",
       title: "Zellorganellen — Funktion und medizinische Relevanz",
-      imageUrl: "/images/bms/bio-mitochondrium.jpg",
-      imageCaption: "Abb.: Aufbau eines Mitochondriums mit Doppelmembran (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-golgi.jpg",
+      imageCaption:
+        "Abb.: Golgi-Apparat — Sortier- und Versandzentrale der Zelle (OpenStax, CC BY 4.0)",
       stichworte: [
         "Sekretorischer Weg",
         "rER",
