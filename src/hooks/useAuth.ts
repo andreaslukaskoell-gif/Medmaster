@@ -159,12 +159,12 @@ export function useAuth() {
     }
   }
 
-  async function signUp(email: string, password: string, username: string) {
+  async function signUp(email: string, password: string, username: string, birthDate?: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { username, display_name: username } },
+      options: { data: { username, display_name: username, birth_date: birthDate || null } },
     });
     return { error };
   }
