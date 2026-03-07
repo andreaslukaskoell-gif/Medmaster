@@ -1519,7 +1519,7 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
 // Im offiziellen IB sind Schnitte oft NICHT gerade: Zickzack, Treppenformen,
 // Einbuchtungen/Kerben erzeugen konkave Stücke – ein Kernaspekt der Schwierigkeit.
 
-type CutStyle = "straight" | "zigzag" | "step" | "notch";
+type CutStyle = "straight" | "zigzag" | "step" | "notch" | "lshaped" | "curved";
 
 /** Erzeugt Zwischenpunkte entlang einer geraden Schnittlinie als Zickzack. */
 function zigzagPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
@@ -1622,22 +1622,110 @@ function notchPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
   ];
 }
 
+/** Erzeugt einen L-förmigen / gestuften Schnitt: Statt einer geraden Linie geht der Schnitt
+ *  erst senkrecht zur Hauptrichtung, dann parallel, dann zurück – wie eine Treppenstufe.
+ *  Unterscheidet sich von stepPath dadurch, dass der gesamte Pfad eine L-Form bildet,
+ *  statt Bumps auf einer geraden Linie zu setzen. */
+function lshapedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  const len = Math.hypot(dx, dy);
+  if (len < 10) return [p1, p2];
+
+  // Unit direction and normal vectors
+  const ux = dx / len;
+  const uy = dy / len;
+  const nx = -uy;
+  const ny = ux;
+
+  const numSteps = 1 + Math.floor(rng() * 3); // 1-3 L-shaped steps
+  const points: Pt2[] = [p1];
+
+  // Divide the path into numSteps+1 segments and insert L-shaped detours
+  for (let s = 0; s < numSteps; s++) {
+    // Position along the main line where the step occurs
+    const tStart = (s + 0.25 + rng() * 0.2) / (numSteps + 1);
+    const tEnd = (s + 0.55 + rng() * 0.2) / (numSteps + 1);
+    // Perpendicular offset (alternating sides, 8-16% of cut length)
+    const offset = len * (0.08 + rng() * 0.08) * (s % 2 === 0 ? 1 : -1);
+
+    // Point on the main line at tStart
+    const ax = p1.x + tStart * dx;
+    const ay = p1.y + tStart * dy;
+    // Step perpendicular
+    const bx = ax + offset * nx;
+    const by = ay + offset * ny;
+    // Move along direction while staying offset
+    const cx = p1.x + tEnd * dx + offset * nx;
+    const cy = p1.y + tEnd * dy + offset * ny;
+    // Step back to main line
+    const ex = p1.x + tEnd * dx;
+    const ey = p1.y + tEnd * dy;
+
+    points.push({ x: rd(ax), y: rd(ay) });
+    points.push({ x: rd(bx), y: rd(by) });
+    points.push({ x: rd(cx), y: rd(cy) });
+    points.push({ x: rd(ex), y: rd(ey) });
+  }
+  points.push(p2);
+  return points;
+}
+
+/** Erzeugt eine sanft geschwungene Schnittlinie (quadratische Bézier-Approximation).
+ *  Sampelt 5-7 Punkte entlang der Kurve für eine glatte Polyline. */
+function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  const len = Math.hypot(dx, dy);
+  if (len < 10) return [p1, p2];
+
+  // Normal vector
+  const nx = -dy / len;
+  const ny = dx / len;
+
+  // Control point: midpoint offset perpendicular by 10-25% of cut length
+  const midX = (p1.x + p2.x) / 2;
+  const midY = (p1.y + p2.y) / 2;
+  const curveOffset = len * (0.1 + rng() * 0.15) * (rng() > 0.5 ? 1 : -1);
+  const ctrlX = midX + curveOffset * nx;
+  const ctrlY = midY + curveOffset * ny;
+
+  // Sample quadratic Bezier: B(t) = (1-t)²·P1 + 2(1-t)t·Ctrl + t²·P2
+  const numSamples = 5 + Math.floor(rng() * 3); // 5-7 interior points
+  const points: Pt2[] = [p1];
+
+  for (let i = 1; i <= numSamples; i++) {
+    const t = i / (numSamples + 1);
+    const mt = 1 - t;
+    points.push({
+      x: rd(mt * mt * p1.x + 2 * mt * t * ctrlX + t * t * p2.x),
+      y: rd(mt * mt * p1.y + 2 * mt * t * ctrlY + t * t * p2.y),
+    });
+  }
+  points.push(p2);
+  return points;
+}
+
 /** Wählt einen Schnittstil basierend auf Schwierigkeit. Easy = gerade, Medium/Hard = komplex. */
 function pickCutStyle(difficulty: FZDifficulty, rng: () => number): CutStyle {
   if (difficulty === "easy") return "straight";
   const r = rng();
   if (difficulty === "medium") {
-    // 40% straight, 25% zigzag, 20% step, 15% notch
-    if (r < 0.4) return "straight";
-    if (r < 0.65) return "zigzag";
-    if (r < 0.85) return "step";
-    return "notch";
+    // 30% straight, 15% zigzag, 15% step, 10% notch, 15% lshaped, 15% curved
+    if (r < 0.3) return "straight";
+    if (r < 0.45) return "zigzag";
+    if (r < 0.6) return "step";
+    if (r < 0.7) return "notch";
+    if (r < 0.85) return "lshaped";
+    return "curved";
   }
-  // hard: 15% straight, 30% zigzag, 30% step, 25% notch
-  if (r < 0.15) return "straight";
-  if (r < 0.45) return "zigzag";
-  if (r < 0.75) return "step";
-  return "notch";
+  // hard: 10% straight, 20% zigzag, 20% step, 15% notch, 20% lshaped, 15% curved
+  if (r < 0.1) return "straight";
+  if (r < 0.3) return "zigzag";
+  if (r < 0.5) return "step";
+  if (r < 0.65) return "notch";
+  if (r < 0.85) return "lshaped";
+  return "curved";
 }
 
 /** Erzeugt eine Polyline zwischen zwei Punkten basierend auf dem Schnittstil. */
@@ -1649,6 +1737,10 @@ function complexCutPath(p1: Pt2, p2: Pt2, style: CutStyle, rng: () => number): P
       return stepPath(p1, p2, rng);
     case "notch":
       return notchPath(p1, p2, rng);
+    case "lshaped":
+      return lshapedPath(p1, p2, rng);
+    case "curved":
+      return curvedPath(p1, p2, rng);
     default:
       return [p1, p2];
   }

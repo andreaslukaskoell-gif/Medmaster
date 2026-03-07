@@ -1,5 +1,5 @@
 // Implikationen erkennen – MedAT-H KFF Subtest
-// 42 Übungsaufgaben (IMPLIKATION_PRACTICE_TASKS) + 4 offizielle Beispiele (OFFICIAL_IMPLICATION_EXAMPLES)
+// 80 Übungsaufgaben (IMPLIKATION_PRACTICE_TASKS) + 4 offizielle Beispiele (OFFICIAL_IMPLICATION_EXAMPLES)
 //
 // Goldene Regeln:
 // 1. Zwei "einige"-Prämissen → KEIN gültiger Schluss (Antwort E)
@@ -822,6 +822,667 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
       "Alle A sind keine B, Einige C sind A. Die einigen Edelsteine, die Diamanten sind, können keine Metalle sein (da alle Diamanten keine Metalle sind). Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Im Euler-Diagramm: Diamanten ∩ Metalle = ∅, und ein Teil der Edelsteine liegt in den Diamanten. Dieser Teil liegt somit nicht in den Metallen. Einige Edelsteine sind keine Metalle. A ist zu stark, C nicht zwingend, D widerspricht Prämisse 1.",
     difficulty: 3,
     rulesApplied: [4, 5],
+  },
+
+  // ============================================================
+  // DIFFICULTY 1 (imp-43 bis imp-54): Einfache Kettenschlüsse, klare Kein-Muster
+  // ============================================================
+
+  {
+    id: "imp-43",
+    premise1: "Alle Enzyme sind Proteine.",
+    premise2: "Alle Proteine sind Moleküle.",
+    options: [
+      "Alle Enzyme sind Moleküle.",
+      "Alle Enzyme sind keine Moleküle.",
+      "Einige Enzyme sind Moleküle.",
+      "Einige Enzyme sind keine Moleküle.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen, also keines im Schluss. Im Euler-Diagramm: Enzyme ⊆ Proteine ⊆ Moleküle. Alle Enzyme sind daher zwingend Moleküle.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    id: "imp-44",
+    premise1: "Alle Tulpen sind Blumen.",
+    premise2: "Alle Blumen sind Pflanzen.",
+    options: [
+      "Alle Tulpen sind Pflanzen.",
+      "Alle Tulpen sind keine Pflanzen.",
+      "Einige Tulpen sind Pflanzen.",
+      "Einige Tulpen sind keine Pflanzen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in Prämissen. Im Euler-Diagramm: Tulpen ⊆ Blumen ⊆ Pflanzen. Alle Tulpen sind zwingend Pflanzen.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    id: "imp-45",
+    premise1: "Alle Primzahlen sind natürliche Zahlen.",
+    premise2: "Alle natürliche Zahlen sind keine negativen Zahlen.",
+    options: [
+      "Alle Primzahlen sind negative Zahlen.",
+      "Alle Primzahlen sind keine negativen Zahlen.",
+      "Einige Primzahlen sind negative Zahlen.",
+      "Einige Primzahlen sind keine negativen Zahlen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in einer Prämisse verlangt 'keine' im Schluss. Im Euler-Diagramm: Primzahlen ⊆ natürliche Zahlen, natürliche Zahlen ∩ negative Zahlen = ∅. Daher: Primzahlen ∩ negative Zahlen = ∅.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-46",
+    premise1: "Alle Sterne sind Himmelskörper.",
+    premise2: "Alle Himmelskörper sind keine Lebewesen.",
+    options: [
+      "Alle Sterne sind Lebewesen.",
+      "Alle Sterne sind keine Lebewesen.",
+      "Einige Sterne sind Lebewesen.",
+      "Einige Sterne sind keine Lebewesen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Im Euler-Diagramm: Sterne ⊆ Himmelskörper, und Himmelskörper ∩ Lebewesen = ∅. Alle Sterne sind keine Lebewesen.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-47",
+    premise1: "Alle Sonette sind Gedichte.",
+    premise2: "Alle Gedichte sind Texte.",
+    options: [
+      "Alle Sonette sind Texte.",
+      "Alle Sonette sind keine Texte.",
+      "Einige Sonette sind Texte.",
+      "Einige Sonette sind keine Texte.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen. Im Euler-Diagramm: Sonette ⊆ Gedichte ⊆ Texte.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    id: "imp-48",
+    premise1: "Alle Granate sind Edelsteine.",
+    premise2: "Alle Edelsteine sind Minerale.",
+    options: [
+      "Alle Granate sind Minerale.",
+      "Alle Granate sind keine Minerale.",
+      "Einige Granate sind Minerale.",
+      "Einige Granate sind keine Minerale.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in Prämissen. Im Euler-Diagramm: Granate ⊆ Edelsteine ⊆ Minerale.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    id: "imp-49",
+    premise1: "Kein Asteroid ist ein Planet.",
+    premise2: "Alle Planeten sind Himmelskörper.",
+    options: [
+      "Alle Asteroiden sind Himmelskörper.",
+      "Kein Asteroid ist ein Himmelskörper.",
+      "Einige Asteroiden sind Himmelskörper.",
+      "Einige Asteroiden sind keine Himmelskörper.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Kein A ist ein B, Alle B sind C. Asteroiden und Planeten sind disjunkt, aber Asteroiden könnten trotzdem Himmelskörper sein (oder auch nicht) — die Prämissen geben darüber keine zwingende Auskunft. Im Euler-Diagramm: A ∩ B = ∅ und B ⊆ C, aber A kann innerhalb oder außerhalb von C liegen. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-50",
+    premise1: "Alle Violinen sind Streichinstrumente.",
+    premise2: "Alle Streichinstrumente sind keine Schlaginstrumente.",
+    options: [
+      "Alle Violinen sind Schlaginstrumente.",
+      "Alle Violinen sind keine Schlaginstrumente.",
+      "Einige Violinen sind Schlaginstrumente.",
+      "Einige Violinen sind keine Schlaginstrumente.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Im Euler-Diagramm: Violinen ⊆ Streichinstrumente, Streichinstrumente ∩ Schlaginstrumente = ∅. Alle Violinen sind keine Schlaginstrumente.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-51",
+    premise1: "Alle Adler sind Raubvögel.",
+    premise2: "Alle Raubvögel sind Vögel.",
+    options: [
+      "Alle Adler sind Vögel.",
+      "Alle Adler sind keine Vögel.",
+      "Einige Adler sind Vögel.",
+      "Einige Adler sind keine Vögel.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen. Adler ⊆ Raubvögel ⊆ Vögel.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    id: "imp-52",
+    premise1: "Alle Algorithmen sind Verfahren.",
+    premise2: "Alle Verfahren sind keine Zufallsereignisse.",
+    options: [
+      "Alle Algorithmen sind Zufallsereignisse.",
+      "Alle Algorithmen sind keine Zufallsereignisse.",
+      "Einige Algorithmen sind Zufallsereignisse.",
+      "Einige Algorithmen sind keine Zufallsereignisse.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Im Euler-Diagramm: Algorithmen ⊆ Verfahren, Verfahren ∩ Zufallsereignisse = ∅.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-53",
+    premise1: "Alle Gletscher sind Eismassen.",
+    premise2: "Alle Eismassen sind keine Flüssigkeiten.",
+    options: [
+      "Alle Gletscher sind Flüssigkeiten.",
+      "Alle Gletscher sind keine Flüssigkeiten.",
+      "Einige Gletscher sind Flüssigkeiten.",
+      "Einige Gletscher sind keine Flüssigkeiten.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse verlangt 'keine' im Schluss. Gletscher ⊆ Eismassen, Eismassen ∩ Flüssigkeiten = ∅.",
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-54",
+    premise1: "Alle Orchideen sind Blütenpflanzen.",
+    premise2: "Alle Blütenpflanzen sind Organismen.",
+    options: [
+      "Alle Orchideen sind Organismen.",
+      "Alle Orchideen sind keine Organismen.",
+      "Einige Orchideen sind Organismen.",
+      "Einige Orchideen sind keine Organismen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 0,
+    explanation:
+      "Kettenschluss: Alle A sind B, Alle B sind C → Alle A sind C. Regel 3: Kein 'keine' in den Prämissen. Orchideen ⊆ Blütenpflanzen ⊆ Organismen.",
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+
+  // ============================================================
+  // DIFFICULTY 2 (imp-55 bis imp-70): Einige+Alle, Kein+Einige, kniffligere Mittelterme
+  // ============================================================
+
+  {
+    id: "imp-55",
+    premise1: "Einige Planeten sind Gasriesen.",
+    premise2: "Alle Gasriesen sind massereich.",
+    options: [
+      "Alle Planeten sind massereich.",
+      "Alle Planeten sind keine massereich.",
+      "Einige Planeten sind massereich.",
+      "Einige Planeten sind keine massereich.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Einige A sind B, Alle B sind C. Die einigen Planeten, die Gasriesen sind, sind auch massereich (da alle Gasriesen massereich sind). Regel 5: 'einige' → 'einige' im Schluss. Regel 3: Kein 'keine' in Prämissen. Im Euler-Diagramm: Ein Teil der Planeten liegt in Gasriesen ⊆ massereich. Einige Planeten sind zwingend massereich. A ist zu stark.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-56",
+    premise1: "Alle Bakterien sind Mikroorganismen.",
+    premise2: "Einige Mikroorganismen sind pathogen.",
+    options: [
+      "Alle Bakterien sind pathogen.",
+      "Alle Bakterien sind keine pathogen.",
+      "Einige Bakterien sind pathogen.",
+      "Einige Bakterien sind keine pathogen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Alle A sind B, Einige B sind C. Der Mittelterm 'Mikroorganismen' ist in der zweiten Prämisse nicht verteilt. Die pathogenen Mikroorganismen könnten ausschließlich Nicht-Bakterien sein. Im Euler-Diagramm: Bakterien ⊆ Mikroorganismen, aber der pathogene Teil der Mikroorganismen kann außerhalb der Bakterien liegen. Kein zwingender Schluss über Bakterien möglich. E ist korrekt.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-57",
+    premise1: "Einige Flüsse sind Grenzflüsse.",
+    premise2: "Alle Grenzflüsse sind Gewässer.",
+    options: [
+      "Alle Flüsse sind Gewässer.",
+      "Alle Flüsse sind keine Gewässer.",
+      "Einige Flüsse sind Gewässer.",
+      "Einige Flüsse sind keine Gewässer.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Einige A sind B, Alle B sind C. Die einigen Flüsse, die Grenzflüsse sind, sind auch Gewässer (da alle Grenzflüsse Gewässer sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Flüsse sind zwingend Gewässer.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-58",
+    premise1: "Alle Vulkane sind Berge.",
+    premise2: "Einige Berge sind keine bewohnten Gebiete.",
+    options: [
+      "Alle Vulkane sind bewohnte Gebiete.",
+      "Alle Vulkane sind keine bewohnten Gebiete.",
+      "Einige Vulkane sind bewohnte Gebiete.",
+      "Einige Vulkane sind keine bewohnten Gebiete.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Alle A sind B, Einige B sind keine C. Die einigen Berge, die keine bewohnten Gebiete sind, könnten komplett außerhalb der Vulkane liegen. Vulkane ⊆ Berge, aber die nicht bewohnten Berge müssen keine Vulkane sein. Kein zwingender Schluss über Vulkane möglich. E ist korrekt.",
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-59",
+    premise1: "Alle Fossilien sind Überreste.",
+    premise2: "Alle Überreste sind keine lebenden Organismen.",
+    options: [
+      "Alle Fossilien sind lebende Organismen.",
+      "Alle Fossilien sind keine lebenden Organismen.",
+      "Einige Fossilien sind lebende Organismen.",
+      "Einige Fossilien sind keine lebenden Organismen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Im Euler-Diagramm: Fossilien ⊆ Überreste, Überreste ∩ lebende Organismen = ∅. Alle Fossilien sind keine lebenden Organismen.",
+    difficulty: 2,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-60",
+    premise1: "Einige Gemälde sind Porträts.",
+    premise2: "Alle Porträts sind Kunstwerke.",
+    options: [
+      "Alle Gemälde sind Kunstwerke.",
+      "Alle Gemälde sind keine Kunstwerke.",
+      "Einige Gemälde sind Kunstwerke.",
+      "Einige Gemälde sind keine Kunstwerke.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Einige A sind B, Alle B sind C. Die einigen Gemälde, die Porträts sind, sind auch Kunstwerke (da alle Porträts Kunstwerke sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Gemälde sind zwingend Kunstwerke.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-61",
+    premise1: "Alle Verträge sind Dokumente.",
+    premise2: "Einige Verträge sind keine gültige Vereinbarungen.",
+    options: [
+      "Alle Dokumente sind gültige Vereinbarungen.",
+      "Alle Dokumente sind keine gültige Vereinbarungen.",
+      "Einige Dokumente sind gültige Vereinbarungen.",
+      "Einige Dokumente sind keine gültige Vereinbarungen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Alle A sind B, Einige A sind keine C. Die einigen Verträge, die keine gültigen Vereinbarungen sind, sind zugleich Dokumente (da alle Verträge Dokumente sind). Regel 4: 'keine' → 'keine'. Regel 5: 'einige' → 'einige'. Einige Dokumente sind keine gültigen Vereinbarungen.",
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-62",
+    premise1: "Alle Kometen sind Himmelskörper.",
+    premise2: "Einige Kometen sind sichtbar.",
+    options: [
+      "Alle Himmelskörper sind sichtbar.",
+      "Alle Himmelskörper sind keine sichtbar.",
+      "Einige Himmelskörper sind sichtbar.",
+      "Einige Himmelskörper sind keine sichtbar.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Alle A sind B, Einige A sind C. Die einigen Kometen, die sichtbar sind, sind zugleich Himmelskörper (da alle Kometen Himmelskörper sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Himmelskörper sind zwingend sichtbar. A ist zu stark.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-63",
+    premise1: "Alle Antibiotika sind Medikamente.",
+    premise2: "Alle Medikamente sind keine Nahrungsmittel.",
+    options: [
+      "Alle Antibiotika sind Nahrungsmittel.",
+      "Alle Antibiotika sind keine Nahrungsmittel.",
+      "Einige Antibiotika sind Nahrungsmittel.",
+      "Einige Antibiotika sind keine Nahrungsmittel.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Antibiotika ⊆ Medikamente, Medikamente ∩ Nahrungsmittel = ∅. Alle Antibiotika sind keine Nahrungsmittel.",
+    difficulty: 2,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-64",
+    premise1: "Einige Theorien sind Hypothesen.",
+    premise2: "Alle Hypothesen sind überprüfbar.",
+    options: [
+      "Alle Theorien sind überprüfbar.",
+      "Alle Theorien sind keine überprüfbar.",
+      "Einige Theorien sind überprüfbar.",
+      "Einige Theorien sind keine überprüfbar.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Einige A sind B, Alle B sind C. Die einigen Theorien, die Hypothesen sind, sind auch überprüfbar (da alle Hypothesen überprüfbar sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Theorien sind zwingend überprüfbar.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-65",
+    premise1: "Alle Skulpturen sind Kunstwerke.",
+    premise2: "Einige Kunstwerke sind keine Originale.",
+    options: [
+      "Alle Skulpturen sind Originale.",
+      "Alle Skulpturen sind keine Originale.",
+      "Einige Skulpturen sind Originale.",
+      "Einige Skulpturen sind keine Originale.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Alle A sind B, Einige B sind keine C. Die einigen Kunstwerke, die keine Originale sind, könnten komplett außerhalb der Skulpturen liegen. Skulpturen ⊆ Kunstwerke, aber die nicht-originalen Kunstwerke müssen keine Skulpturen sein. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-66",
+    premise1: "Alle Republiken sind Staaten.",
+    premise2: "Einige Republiken sind Demokratien.",
+    options: [
+      "Alle Staaten sind Demokratien.",
+      "Alle Staaten sind keine Demokratien.",
+      "Einige Staaten sind Demokratien.",
+      "Einige Staaten sind keine Demokratien.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Alle A sind B, Einige A sind C. Die einigen Republiken, die Demokratien sind, sind zugleich Staaten (da alle Republiken Staaten sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Staaten sind zwingend Demokratien.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-67",
+    premise1: "Alle Brücken sind Bauwerke.",
+    premise2: "Alle Bauwerke sind keine Naturphänomene.",
+    options: [
+      "Alle Brücken sind Naturphänomene.",
+      "Alle Brücken sind keine Naturphänomene.",
+      "Einige Brücken sind Naturphänomene.",
+      "Einige Brücken sind keine Naturphänomene.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 1,
+    explanation:
+      "Alle A sind B, Alle B sind keine C → Alle A sind keine C. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Brücken ⊆ Bauwerke, Bauwerke ∩ Naturphänomene = ∅. Alle Brücken sind keine Naturphänomene.",
+    difficulty: 2,
+    rulesApplied: [4],
+  },
+  {
+    id: "imp-68",
+    premise1: "Einige Melodien sind Ohrwürmer.",
+    premise2: "Alle Ohrwürmer sind einprägsam.",
+    options: [
+      "Alle Melodien sind einprägsam.",
+      "Alle Melodien sind keine einprägsam.",
+      "Einige Melodien sind einprägsam.",
+      "Einige Melodien sind keine einprägsam.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Einige A sind B, Alle B sind C. Die einigen Melodien, die Ohrwürmer sind, sind auch einprägsam (da alle Ohrwürmer einprägsam sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Melodien sind zwingend einprägsam.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+  {
+    id: "imp-69",
+    premise1: "Alle Prozessoren sind Chips.",
+    premise2: "Einige Prozessoren sind keine energieeffizient.",
+    options: [
+      "Alle Chips sind energieeffizient.",
+      "Alle Chips sind keine energieeffizient.",
+      "Einige Chips sind energieeffizient.",
+      "Einige Chips sind keine energieeffizient.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Alle A sind B, Einige A sind keine C. Die einigen Prozessoren, die nicht energieeffizient sind, sind zugleich Chips (da alle Prozessoren Chips sind). Regel 4: 'keine' → 'keine'. Regel 5: 'einige' → 'einige'. Einige Chips sind keine energieeffizient.",
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-70",
+    premise1: "Alle Impfstoffe sind Präparate.",
+    premise2: "Einige Impfstoffe sind Lebendimpfstoffe.",
+    options: [
+      "Alle Präparate sind Lebendimpfstoffe.",
+      "Alle Präparate sind keine Lebendimpfstoffe.",
+      "Einige Präparate sind Lebendimpfstoffe.",
+      "Einige Präparate sind keine Lebendimpfstoffe.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 2,
+    explanation:
+      "Alle A sind B, Einige A sind C. Die einigen Impfstoffe, die Lebendimpfstoffe sind, sind zugleich Präparate (da alle Impfstoffe Präparate sind). Regel 5: 'einige' → 'einige'. Regel 3: Kein 'keine' in Prämissen. Einige Präparate sind zwingend Lebendimpfstoffe.",
+    difficulty: 2,
+    rulesApplied: [3, 5],
+  },
+
+  // ============================================================
+  // DIFFICULTY 3 (imp-71 bis imp-80): Einige+Einige → E, Keine+Keine → E, tricky
+  // ============================================================
+
+  {
+    id: "imp-71",
+    premise1: "Einige Säugetiere sind Fleischfresser.",
+    premise2: "Einige Fleischfresser sind nachtaktiv.",
+    options: [
+      "Alle Säugetiere sind nachtaktiv.",
+      "Alle Säugetiere sind keine nachtaktiv.",
+      "Einige Säugetiere sind nachtaktiv.",
+      "Einige Säugetiere sind keine nachtaktiv.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'einige'-Prämissen: Regel 1 greift. Die einigen Säugetiere unter den Fleischfressern und die einigen nachtaktiven Fleischfresser können verschiedene Teilmengen sein. Im Euler-Diagramm: Säugetiere ∩ Fleischfresser ≠ ∅ und Fleischfresser ∩ nachtaktiv ≠ ∅, aber Säugetiere ∩ nachtaktiv kann leer sein. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    id: "imp-72",
+    premise1: "Kein Pilz ist ein Tier.",
+    premise2: "Kein Tier ist eine Pflanze.",
+    options: [
+      "Alle Pilze sind Pflanzen.",
+      "Kein Pilz ist eine Pflanze.",
+      "Einige Pilze sind Pflanzen.",
+      "Einige Pilze sind keine Pflanzen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'keine'-Prämissen: Regel 2 greift. Pilze ∩ Tiere = ∅ und Tiere ∩ Pflanzen = ∅, aber über die Beziehung zwischen Pilzen und Pflanzen lässt sich nichts ableiten. Im Euler-Diagramm können Pilze und Pflanzen überlappen oder disjunkt sein. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [2],
+  },
+  {
+    id: "imp-73",
+    premise1: "Einige Wirkstoffe sind Hormone.",
+    premise2: "Einige Hormone sind synthetisch.",
+    options: [
+      "Alle Wirkstoffe sind synthetisch.",
+      "Alle Wirkstoffe sind keine synthetisch.",
+      "Einige Wirkstoffe sind synthetisch.",
+      "Einige Wirkstoffe sind keine synthetisch.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Schnittmengen (Wirkstoffe ∩ Hormone) und (Hormone ∩ synthetisch) können verschiedene Teilmengen von Hormone sein. Im Euler-Diagramm ist Wirkstoffe ∩ synthetisch möglicherweise leer. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    id: "imp-74",
+    premise1: "Kein Kontinent ist eine Insel.",
+    premise2: "Kein Kontinent ist ein Ozean.",
+    options: [
+      "Alle Inseln sind Ozeane.",
+      "Keine Insel ist ein Ozean.",
+      "Einige Inseln sind Ozeane.",
+      "Einige Inseln sind keine Ozeane.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'keine'-Prämissen: Regel 2 greift. Kontinent ∩ Insel = ∅ und Kontinent ∩ Ozean = ∅, aber über Inseln und Ozeane wird nichts ausgesagt. Im Euler-Diagramm können Inseln und Ozeane beliebig zueinander stehen. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [2],
+  },
+  {
+    id: "imp-75",
+    premise1: "Alle Atome sind keine Moleküle.",
+    premise2: "Einige Teilchen sind Atome.",
+    options: [
+      "Alle Teilchen sind Moleküle.",
+      "Alle Teilchen sind keine Moleküle.",
+      "Einige Teilchen sind Moleküle.",
+      "Einige Teilchen sind keine Moleküle.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Alle A sind keine B, Einige C sind A. Die einigen Teilchen, die Atome sind, können keine Moleküle sein (da alle Atome keine Moleküle sind). Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Einige Teilchen sind keine Moleküle. B ist zu stark, A widerspricht der Disjunktheit.",
+    difficulty: 3,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-76",
+    premise1: "Einige Piloten sind Ingenieure.",
+    premise2: "Einige Ingenieure sind Erfinder.",
+    options: [
+      "Alle Piloten sind Erfinder.",
+      "Alle Piloten sind keine Erfinder.",
+      "Einige Piloten sind Erfinder.",
+      "Einige Piloten sind keine Erfinder.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Piloten unter den Ingenieuren und die Erfinder unter den Ingenieuren können verschiedene Teilmengen sein. Im Euler-Diagramm: Piloten ∩ Ingenieure ≠ ∅ und Ingenieure ∩ Erfinder ≠ ∅, aber Piloten ∩ Erfinder kann leer sein. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    id: "imp-77",
+    premise1: "Kein Fossil ist ein lebendes Wesen.",
+    premise2: "Kein lebendes Wesen ist ein Gestein.",
+    options: [
+      "Alle Fossilien sind Gesteine.",
+      "Kein Fossil ist ein Gestein.",
+      "Einige Fossilien sind Gesteine.",
+      "Einige Fossilien sind keine Gesteine.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'keine'-Prämissen: Regel 2 greift. Fossil ∩ lebendes Wesen = ∅ und lebendes Wesen ∩ Gestein = ∅, aber über die Beziehung zwischen Fossilien und Gesteinen lässt sich nichts zwingend ableiten. Fossilien könnten in Gesteinen eingebettet sein oder nicht. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [2],
+  },
+  {
+    id: "imp-78",
+    premise1: "Einige Rezeptoren sind Proteine.",
+    premise2: "Einige Proteine sind Enzyme.",
+    options: [
+      "Alle Rezeptoren sind Enzyme.",
+      "Alle Rezeptoren sind keine Enzyme.",
+      "Einige Rezeptoren sind Enzyme.",
+      "Einige Rezeptoren sind keine Enzyme.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'einige'-Prämissen: Regel 1 greift. Rezeptoren ∩ Proteine ≠ ∅ und Proteine ∩ Enzyme ≠ ∅, aber Rezeptoren ∩ Enzyme kann leer sein. Die beiden Schnittmengen können verschiedene Teilmengen der Proteine sein. Kein zwingender Schluss. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    id: "imp-79",
+    premise1: "Alle Glühbirnen sind keine Energiequellen.",
+    premise2: "Einige Leuchtmittel sind Glühbirnen.",
+    options: [
+      "Alle Leuchtmittel sind Energiequellen.",
+      "Alle Leuchtmittel sind keine Energiequellen.",
+      "Einige Leuchtmittel sind Energiequellen.",
+      "Einige Leuchtmittel sind keine Energiequellen.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 3,
+    explanation:
+      "Alle A sind keine B, Einige C sind A. Die einigen Leuchtmittel, die Glühbirnen sind, können keine Energiequellen sein (da alle Glühbirnen keine Energiequellen sind). Regel 4: 'keine' → 'keine'. Regel 5: 'einige' → 'einige'. Einige Leuchtmittel sind keine Energiequellen. B ist zu stark.",
+    difficulty: 3,
+    rulesApplied: [4, 5],
+  },
+  {
+    id: "imp-80",
+    premise1: "Kein Vulkan ist ein Gewässer.",
+    premise2: "Kein Gewässer ist eine Wüste.",
+    options: [
+      "Alle Vulkane sind Wüsten.",
+      "Kein Vulkan ist eine Wüste.",
+      "Einige Vulkane sind Wüsten.",
+      "Einige Vulkane sind keine Wüsten.",
+      "Keine der Schlussfolgerungen ist richtig.",
+    ],
+    correctAnswer: 4,
+    explanation:
+      "Zwei 'keine'-Prämissen: Regel 2 greift. Vulkan ∩ Gewässer = ∅ und Gewässer ∩ Wüste = ∅, aber über Vulkane und Wüsten wird nichts zwingend ausgesagt. Im Euler-Diagramm können Vulkane und Wüsten überlappen oder disjunkt sein. E ist korrekt.",
+    difficulty: 3,
+    rulesApplied: [2],
   },
 ];
 

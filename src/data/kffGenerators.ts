@@ -369,8 +369,9 @@ export interface MemoryQuestion {
   questionType: string;
 }
 
-/** MedAT-style fictional names (ALL CAPS, pronounceable, not real names). */
+/** MedAT-style fictional names (ALL CAPS, pronounceable, not real names). 80 names for session variety. */
 const FICTIONAL_NAMES = [
+  // Original 40
   "FULZAT",
   "SAMLIR",
   "TOBEHN",
@@ -411,9 +412,51 @@ const FICTIONAL_NAMES = [
   "HINGOR",
   "FAKTEL",
   "RIVSON",
+  // 40 new names for repetition resistance
+  "BURTOK",
+  "HAMSEL",
+  "DOLVEK",
+  "PANKIR",
+  "ZELMON",
+  "GORVAT",
+  "WIKLAM",
+  "SARBET",
+  "JENPUR",
+  "FLOKEN",
+  "TULVEG",
+  "MAKDOR",
+  "PINWEL",
+  "BRELAK",
+  "KUNFAR",
+  "ROTGEM",
+  "VASHEL",
+  "DELWON",
+  "KIRPAS",
+  "ZOMLET",
+  "HUGRIN",
+  "FELBAR",
+  "TANWOK",
+  "LISMER",
+  "ORDVEK",
+  "PULTAM",
+  "GENVIR",
+  "SULKAF",
+  "BERDON",
+  "WALTIM",
+  "NORPEK",
+  "HALVIR",
+  "TIKWOM",
+  "BASREL",
+  "DOMFAR",
+  "PELGON",
+  "ZIRWAK",
+  "MOLKEN",
+  "FARSIT",
+  "GELVON",
 ];
 
 const ALLERGIES = [
+  // Original 30
   "Penicillin",
   "Amoxicillin",
   "Aspirin",
@@ -444,6 +487,27 @@ const ALLERGIES = [
   "Tetracyclin",
   "Morphin",
   "Novocain",
+  // 20 new for session variety
+  "Paracetamol",
+  "Diclofenac",
+  "Metformin",
+  "Lidocain",
+  "Chlorhexidin",
+  "Kiwi",
+  "Mango",
+  "Muscheln",
+  "Lupinen",
+  "Tomaten",
+  "Birke",
+  "Gräser",
+  "Insektenstiche",
+  "Pflaster",
+  "Wolle",
+  "Formaldehyd",
+  "Kobalt",
+  "Chrom",
+  "Propolis",
+  "Kamille",
 ];
 
 const COUNTRIES = [
@@ -740,7 +804,8 @@ function allergyComboString(allergies: string[]): string {
   return allergies.join(", ");
 }
 
-/** Erzeugt 25 Fragen zu den gegebenen Pässen; A–D + E (MedAT-Stil). */
+/** Erzeugt 25 Fragen zu den gegebenen Pässen; A–D + E (MedAT-Stil).
+ * 20 Builder-Typen (vs. 12 vorher) für maximale Session-Varianz. */
 export function generateGedaechtnisQuestionsFromPasses(
   passes: AllergyPass[],
   count: number = 25
@@ -760,19 +825,82 @@ export function generateGedaechtnisQuestionsFromPasses(
   };
 
   const builders: Array<(p: AllergyPass) => BuilderResult | null> = [
-    // Name → Geburtstag
+    // ── Direct lookups (Name → Attribut) ──
+    // 0: Name → Geburtstag
     (p) => ({
       question: `Wann hat ${p.name} Geburtstag?`,
       correct: p.birthdate,
       pool: passes.map((x) => x.birthdate),
     }),
-    // Name → Blutgruppe
+    // 1: Name → Blutgruppe
     (p) => ({
       question: `Welche Blutgruppe hat ${p.name}?`,
       correct: p.bloodGroup,
       pool: [...BLOOD_GROUPS_GM] as string[],
     }),
-    // Blutgruppe → Allergie (only if blood group is unique!)
+    // 2: Name → Ausweisnummer
+    (p) => ({
+      question: `Welche Ausweisnummer gehört zu ${p.name}?`,
+      correct: p.passportNumber,
+      pool: passes.map((x) => x.passportNumber),
+    }),
+    // 3: Name → Land
+    (p) => ({
+      question: `Aus welchem Land stammt ${p.name}?`,
+      correct: p.country,
+      pool: passes.map((x) => x.country),
+    }),
+    // 4: Name → Allergien
+    (p) => ({
+      question: `Welche Allergie/n hat ${p.name}?`,
+      correct: allergyByPass.get(p.id) ?? "",
+      pool: allAllergyOptions,
+    }),
+    // 5: Name → Medikamente (was missing!)
+    (p) => ({
+      question: `Nimmt ${p.name} regelmäßig Medikamente ein?`,
+      correct: p.medications ? "Ja" : "Nein",
+      pool: [
+        "Ja",
+        "Nein",
+        ...passes
+          .filter((x) => x.id !== p.id)
+          .slice(0, 2)
+          .map((x) => `${x.name}: ${x.medications ? "Ja" : "Nein"}`),
+      ],
+    }),
+
+    // ── Reverse lookups (Attribut → Name) ──
+    // 6: Ausweisnummer → Name
+    (p) => ({
+      question: `Wem gehört die Ausweisnummer ${p.passportNumber}?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+    }),
+    // 7: Allergie → Name (only if unique)
+    (p) => {
+      const allergy = p.allergies[0];
+      if (!allergy) return null;
+      if (passes.filter((x) => x.allergies.includes(allergy)).length !== 1) return null;
+      return {
+        question: `Wer ist allergisch gegen ${allergy}?`,
+        correct: p.name,
+        pool: passes.map((x) => x.name),
+      };
+    },
+    // 8: Country → Name (only if unique — guaranteed by generator)
+    (p) => ({
+      question: `Wer kommt aus ${p.country}?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+    }),
+    // 9: Geburtstag → Name
+    (p) => ({
+      question: `Wer hat am ${p.birthdate} Geburtstag?`,
+      correct: p.name,
+      pool: passes.map((x) => x.name),
+    }),
+    // 10: Blutgruppe → Allergie (only if blood group is unique)
     (p) => {
       if (!isUniqueAmongPasses(passes, p, (x) => x.bloodGroup)) return null;
       return {
@@ -781,69 +909,70 @@ export function generateGedaechtnisQuestionsFromPasses(
         pool: allAllergyOptions,
       };
     },
-    // Name → Ausweisnummer
-    (p) => ({
-      question: `Welche Ausweisnummer gehört zu ${p.name}?`,
-      correct: p.passportNumber,
-      pool: passes.map((x) => x.passportNumber),
-    }),
-    // Name → Land
-    (p) => ({
-      question: `Aus welchem Land stammt ${p.name}?`,
-      correct: p.country,
-      pool: [...COUNTRIES],
-    }),
-    // Ausweisnummer → Name
-    (p) => ({
-      question: `Wem gehört die Ausweisnummer ${p.passportNumber}?`,
-      correct: p.name,
-      pool: passes.map((x) => x.name),
-    }),
-    // Allergie → Name (only if allergy is unique to one person!)
+    // 11: Blutgruppe → Name (only if unique)
     (p) => {
-      const allergy = p.allergies[0];
-      if (!allergy) return null;
-      const personsWithAllergy = passes.filter((x) => x.allergies.includes(allergy));
-      if (personsWithAllergy.length !== 1) return null;
+      if (!isUniqueAmongPasses(passes, p, (x) => x.bloodGroup)) return null;
       return {
-        question: `Wer ist allergisch gegen ${allergy}?`,
+        question: `Wer hat die Blutgruppe ${p.bloodGroup}?`,
         correct: p.name,
         pool: passes.map((x) => x.name),
       };
     },
-    // Photo → Name
+
+    // ── Cross-reference questions ──
+    // 12: Land → Blutgruppe
+    (p) => ({
+      question: `Welche Blutgruppe hat die Person aus ${p.country}?`,
+      correct: p.bloodGroup,
+      pool: [...BLOOD_GROUPS_GM] as string[],
+    }),
+    // 13: Land → Medikamente
+    (p) => ({
+      question: `Nimmt die Person aus ${p.country} Medikamente ein?`,
+      correct: p.medications ? "Ja" : "Nein",
+      pool: ["Ja", "Nein"],
+    }),
+    // 14: Land → Allergien
+    (p) => ({
+      question: `Welche Allergie/n hat die Person aus ${p.country}?`,
+      correct: allergyByPass.get(p.id) ?? "",
+      pool: allAllergyOptions,
+    }),
+
+    // ── Photo-based questions ──
+    // 15: Photo → Name
     (p) => ({
       question: `Wie heißt diese Person?`,
       correct: p.name,
       pool: passes.map((x) => x.name),
       photoUrl: p.photo,
     }),
-    // Photo → Blutgruppe
+    // 16: Photo → Blutgruppe
     (p) => ({
       question: `Welche Blutgruppe hat diese Person?`,
       correct: p.bloodGroup,
       pool: [...BLOOD_GROUPS_GM] as string[],
       photoUrl: p.photo,
     }),
-    // Photo → Geburtstag
+    // 17: Photo → Geburtstag
     (p) => ({
       question: `Wann hat diese Person Geburtstag?`,
       correct: p.birthdate,
       pool: passes.map((x) => x.birthdate),
       photoUrl: p.photo,
     }),
-    // Photo → Allergien (combo)
+    // 18: Photo → Allergien
     (p) => ({
       question: `Welche Allergie/n hat diese Person?`,
       correct: allergyByPass.get(p.id) ?? "",
       pool: allAllergyOptions,
       photoUrl: p.photo,
     }),
-    // Photo → Land
+    // 19: Photo → Land
     (p) => ({
       question: `Aus welchem Land stammt diese Person?`,
       correct: p.country,
-      pool: [...COUNTRIES],
+      pool: passes.map((x) => x.country),
       photoUrl: p.photo,
     }),
   ];
@@ -853,13 +982,20 @@ export function generateGedaechtnisQuestionsFromPasses(
   const eIndices = new Set<number>();
   while (eIndices.size < eCount) eIndices.add(randInt(0, count - 1));
 
+  // Track builder type usage to ensure variety across question types
+  const builderUsage = new Map<number, number>();
+
   let attempts = 0;
-  const maxAttempts = count * 6;
+  const maxAttempts = count * 10; // More attempts for 20 builders
 
   while (questions.length < count && attempts < maxAttempts) {
     attempts++;
     const p = passes[randInt(0, passes.length - 1)];
     const builderIdx = randInt(0, builders.length - 1);
+
+    // Soft cap: avoid overusing any single builder type (max 3 per type)
+    if ((builderUsage.get(builderIdx) ?? 0) >= 3 && attempts < maxAttempts - count) continue;
+
     const key = `${p.id}-${builderIdx}`;
     if (usedCombos.has(key)) continue;
     usedCombos.add(key);
@@ -895,6 +1031,7 @@ export function generateGedaechtnisQuestionsFromPasses(
       correctIndex,
       ...(b.photoUrl ? { photoUrl: b.photoUrl } : {}),
     });
+    builderUsage.set(builderIdx, (builderUsage.get(builderIdx) ?? 0) + 1);
   }
 
   return questions;
@@ -1064,7 +1201,6 @@ const WORD_POOL_LEICHT = [
   "KORN",
   "WEIZEN",
   "ROGGEN",
-  "HAFER",
   "GERSTE",
   "MALZ",
   "HONIG",
@@ -1074,7 +1210,6 @@ const WORD_POOL_LEICHT = [
   "ESSIG",
   "SAHNE",
   "BUTTER",
-  "MEHL",
   "TEIG",
   "SUPPE",
   "BRATEN",
@@ -1521,6 +1656,43 @@ const CONFUSING_LETTERS: Record<string, string[]> = {
   Z: ["S", "C", "X", "T"],
 };
 
+/**
+ * Selects distractor letters for WF options using a priority system:
+ * 1. Letters visually/phonetically similar to correct but NOT in the word (hardest — forces full reconstruction)
+ * 2. Letters similar to correct that ARE in the word (medium)
+ * 3. Other word letters not similar to correct (easier, but still plausible)
+ * 4. Random external letters (filler)
+ * Mixing internal and external letters prevents the trivial elimination-by-membership strategy.
+ */
+function pickSmartDistractors(
+  correctFirst: string,
+  wordLetterSet: Set<string>,
+  count: number
+): string[] {
+  const confusing = CONFUSING_LETTERS[correctFirst] ?? [];
+  const externalConfusing = shuffle(confusing.filter((l) => !wordLetterSet.has(l)));
+  const internalConfusing = shuffle(
+    confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst)
+  );
+  const otherWordLetters = shuffle(
+    [...wordLetterSet].filter((l) => l !== correctFirst && !confusing.includes(l))
+  );
+  const otherExternal = shuffle(
+    ALL_LETTERS.filter((l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l))
+  );
+
+  const pool = [...externalConfusing, ...internalConfusing, ...otherWordLetters, ...otherExternal];
+  const result: string[] = [];
+  const used = new Set<string>([correctFirst]);
+  for (const l of pool) {
+    if (result.length >= count) break;
+    if (used.has(l)) continue;
+    used.add(l);
+    result.push(l);
+  }
+  return result;
+}
+
 export function generateWortflüssigkeit(
   difficulty: "leicht" | "mittel" | "schwer"
 ): WortflüssigkeitQuestion {
@@ -1685,6 +1857,96 @@ const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
     "BECHER",
     "RAHMEN",
     "AMPERE",
+    // --- expanded pool v2 (5-letter) ---
+    "AORTA",
+    "DOSIS",
+    "HEBEL",
+    "ACHSE",
+    "KRONE",
+    "FADEN",
+    "MULDE",
+    "GRUBE",
+    "FLECK",
+    "PHASE",
+    "WELLE",
+    "ROLLE",
+    "LEHRE",
+    "KURVE",
+    "FIGUR",
+    "MEILE",
+    "KREUZ",
+    "LAUGE",
+    "FASER",
+    "PRISE",
+    "QUARZ",
+    "RAMPE",
+    "STUFE",
+    "SONDE",
+    "PROBE",
+    "PASTE",
+    "SENKE",
+    "LATTE",
+    "BORKE",
+    "SPULE",
+    "HARKE",
+    "FELGE",
+    "KNAUF",
+    "DUNST",
+    "MOLCH",
+    "SPATZ",
+    "BRISE",
+    "KLOTZ",
+    "PFAND",
+    "KREBS",
+    "VIRUS",
+    "KANAL",
+    "SPORT",
+    "DAMPF",
+    "DOLCH",
+    "SCHAR",
+    "SPIND",
+    "HALDE",
+    "WERFT",
+    "FALTE",
+    "DIELE",
+    "NABEL",
+    "KLEID",
+    "GLEIS",
+    "TRAKT",
+    "SPORE",
+    "KUMPF",
+    "ZUNGE",
+    // --- expanded pool v2 (6-letter) ---
+    "SIGNAL",
+    "PLASMA",
+    "KLINGE",
+    "SCHALE",
+    "SPALTE",
+    "FACKEL",
+    "PINSEL",
+    "SCHLAG",
+    "GERUCH",
+    "GEHALT",
+    "REFLEX",
+    "FRACHT",
+    "LEISTE",
+    "FLIESE",
+    "SCHILD",
+    "MORGEN",
+    "ABWEHR",
+    "MUSKEL",
+    "GELENK",
+    "KAPSEL",
+    "GEWEBE",
+    "GITTER",
+    "KOLBEN",
+    "VENTIL",
+    "PENDEL",
+    "WIRBEL",
+    "SIEGEL",
+    "ORDNER",
+    "SPANGE",
+    "BINDER",
   ],
   2: [
     // 7-letter words — requires more letter tracking
@@ -1736,6 +1998,65 @@ const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
     "SPIELFELD",
     "BACKBLECH",
     "TURNHALLE",
+    // --- expanded pool v2 (7-letter) ---
+    "MINERAL",
+    "SCHRIFT",
+    "TECHNIK",
+    "ELEMENT",
+    "CHIRURG",
+    "IMPFUNG",
+    "GEDICHT",
+    "KLOSTER",
+    "BESTECK",
+    "PFLAUME",
+    "VERSUCH",
+    "PROZESS",
+    "TREIBER",
+    "SCHADEN",
+    "ANGRIFF",
+    "DRUCKER",
+    "SCHICHT",
+    "ENTWURF",
+    "AUFWAND",
+    "LEHRAMT",
+    "PROBLEM",
+    "BEDACHT",
+    "EINBAND",
+    "VORWAND",
+    "VORTEIL",
+    "ERDBEBEN",
+    // --- expanded pool v2 (8-letter) ---
+    "KRISTALL",
+    "WERKZEUG",
+    "SIEDLUNG",
+    "BLUTBILD",
+    "ZELLWAND",
+    "HALBMOND",
+    "LEITBILD",
+    "GRUNDTON",
+    "RECHNUNG",
+    "HANDLUNG",
+    "STIFTUNG",
+    "BINDUNG",
+    "DICHTUNG",
+    "LEISTUNG",
+    "SENDUNG",
+    "RICHTUNG",
+    "WINDPARK",
+    "SCHMELZE",
+    "STEINMETZ",
+    "LICHTBILD",
+    "SCHILDKROT",
+    "BERGWERK",
+    "ROHRPOST",
+    "HOLZWERK",
+    "NACHRICHT",
+    "FAHRSTUHL",
+    "ROHSTOFF",
+    "LAUFWERK",
+    "FLUGBLATT",
+    "BURGFRIED",
+    "GRUNDRISS",
   ],
   3: [
     // 9+ letter words — long, complex, trickier letter sets
@@ -1787,17 +2108,77 @@ const TRAINING_WF_WORDS: Record<1 | 2 | 3, string[]> = {
     "PHILOSOPHIE",
     "NERVENSYSTEM",
     "GLEICHGEWICHT",
+    // --- expanded pool v2 (9-letter) ---
+    "GRUNDSTEIN",
+    "VERSORGUNG",
+    "BESTRAHLUNG",
+    "BLUTKREISLAUF",
+    "STOFFWECHSEL",
+    "WACHSTUMSPHASE",
+    "FORTSCHRITT",
+    "WIDERSTAND",
+    "BAUANLEITUNG",
+    "SCHMELZPUNKT",
+    "SIEDEPUNKT",
+    "LICHTQUELLE",
+    "GRUNDGESETZ",
+    "WOHNGEBIET",
+    "HAUPTFIGUR",
+    "BRENNSTOFF",
+    "WERKSTOFF",
+    "KUNSTSTOFF",
+    "SPIELRAUM",
+    "BLICKFELD",
+    "ERDGESCHOSS",
+    "FLUGVERKEHR",
+    "WINDSCHUTZ",
+    "FUNDAMENT",
+    "GRUNDLAGE",
+    "ZIELGRUPPE",
+    "LANDSCHAFT",
+    "SCHRIFTBILD",
+    "PROGNOSEN",
+    "TRANSPORT",
+    "SICHERHEIT",
+    "BRUCHSTELLE",
+    "LICHTSTRAHL",
+    "DRUCKSACHE",
+    "VERFAHREN",
+    "SPRECHSTUNDE",
+    "FRUCHTBARKEIT",
+    "GESICHTSPUNKT",
+    "STANDPUNKT",
+    "HEILPRAKTIKER",
+    "SCHLAGWORT",
+    "ERDKRUSTE",
+    "SPRACHKURS",
+    "HANDARBEIT",
+    "BLICKWINKEL",
+    "SCHALTKREIS",
+    "DREHPUNKT",
+    "ROHRZUCKER",
+    "BRENNWERT",
+    "KERNSPALTUNG",
+    "ERDMAGNETFELD",
+    "DAMPFDRUCK",
+    "WACHSTUMSKRAFT",
+    "SCHICHTARBEIT",
+    "PFLICHTGEFUEHL",
   ],
 };
 
-const WF_MAX_RETRIES = 5;
+const WF_MAX_RETRIES = 20;
 
-/** Alle Wörter, die als Lösung in Frage kommen (Lexikon für Solver/Validator). */
+/** Alle Wörter, die als Lösung in Frage kommen (Lexikon für Solver/Validator).
+ * Includes TRAINING_WF_WORDS, WORD_POOL_*, kffWortfluessigkeit lexicon, and official examples. */
 function getWFLexicon(): string[] {
   const set = new Set<string>();
   for (const d of [1, 2, 3] as const) {
     for (const w of TRAINING_WF_WORDS[d]) set.add(w.toUpperCase());
   }
+  for (const w of WORD_POOL_LEICHT) set.add(w.toUpperCase());
+  for (const w of WORD_POOL_MITTEL) set.add(w.toUpperCase());
+  for (const w of WORD_POOL_SCHWER) set.add(w.toUpperCase());
   for (const w of wortfluessigkeitWords) set.add(w.solution.toUpperCase());
   for (const o of OFFICIAL_WF_EXAMPLES) set.add(o.solutionWord.toUpperCase());
   return [...set];
@@ -1826,9 +2207,10 @@ function findAllWordsFromLetters(letters: string[], lexicon: string[]): string[]
 }
 
 /**
- * Validator Wortflüssigkeit: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt, Optionen nur Buchstaben aus dem Wort.
- * Qualitäts-Gate: keine Mehrdeutigkeit, keine falsche Lösung.
- * @param lexiconOverride Wenn gesetzt (z. B. [solutionWord] bei Lexikon-Aufgaben), wird nur dieses Lexikon verwendet – erlaubt alle Lexikon-Wörter auch bei Anagrammen im Gesamtlexikon.
+ * Validator Wortflüssigkeit v2: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt.
+ * Options can now include letters NOT in the word (realistic MedAT distractors).
+ * Qualitäts-Gate: keine Mehrdeutigkeit, keine falsche Lösung, keine Duplikat-Optionen.
+ * @param lexiconOverride Wenn gesetzt (z. B. [solutionWord] bei Lexikon-Aufgaben), wird nur dieses Lexikon verwendet.
  */
 export function validateWordFluencyTask(
   task: WordFluencyTask,
@@ -1846,13 +2228,15 @@ export function validateWordFluencyTask(
   } else if (task.options[task.correctIndex] !== correctLetter) {
     return false;
   }
-  const letterSet = new Set(task.letters.map((c) => c.toUpperCase()));
-  for (let i = 0; i < 5; i++) {
-    const opt = task.options[i];
-    if (opt === "-") continue;
-    if (!letterSet.has(opt.toUpperCase())) return false;
-  }
+  // Structural checks: 5 options, last is "-", A–D are single unique uppercase letters
   if (task.options.length !== 5) return false;
+  if (task.options[4] !== "-") return false;
+  for (let i = 0; i < 4; i++) {
+    const opt = task.options[i];
+    if (!opt || opt.length !== 1 || !/[A-Z]/.test(opt)) return false;
+  }
+  const optSet = new Set(task.options.slice(0, 4));
+  if (optSet.size !== 4) return false;
   return true;
 }
 
@@ -1875,8 +2259,8 @@ export function assertNotOfficialLikeWordFluency(task: WordFluencyTask): boolean
 }
 
 /**
- * Erzeugt genau eine WordFluencyTask aus einem Lexikon-Wort (deterministisch).
- * Liefert null, wenn das Wort zu wenige verschiedene Buchstaben hat (< 2) oder offiziell ist.
+ * Erzeugt genau eine WordFluencyTask aus einem Lexikon-Wort (deterministisch, v2).
+ * Uses smart distractors mixing word-internal and word-external letters.
  */
 export function generateWordFluencyTaskFromWord(
   word: WortfluessigkeitWord
@@ -1885,24 +2269,43 @@ export function generateWordFluencyTaskFromWord(
   const officialWords = new Set(OFFICIAL_WF_EXAMPLES.map((o) => o.solutionWord.toUpperCase()));
   if (officialWords.has(solution)) return null;
 
-  const lettersInWord = [...new Set(solution.split(""))];
-  if (lettersInWord.length < 2) return null; // mind. 2: 1 korrekt + 1 falsch (+ "-" und ggf. Wiederholungen für 5 Optionen)
+  const wordLetterSet = new Set(solution.split(""));
+  if (wordLetterSet.size < 2) return null;
 
   const letters = shuffleWithSeed(solution.split(""), word.id);
   const correctFirst = solution[0]!;
-  const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-  const wrongLetters = shuffleWithSeed(wrongPool, word.id + "-wrong").slice(0, 3);
-  // Immer 5 Optionen: 4 Buchstaben (1 korrekt + 3 falsch, ggf. wiederholt) + "-" am Ende. correctIndex nur 0–3.
-  const optionBase =
-    wrongLetters.length >= 3
-      ? [correctFirst, ...wrongLetters]
-      : wrongLetters.length === 2
-        ? [correctFirst, ...wrongLetters, wrongLetters[0]!]
-        : [correctFirst, ...wrongLetters, wrongLetters[0]!, wrongLetters[0]!];
-  const options = [...shuffleWithSeed(optionBase, word.id + "-opt"), "-"];
+
+  // Use seeded shuffle for determinism, but with smart distractor pool
+  const confusing = CONFUSING_LETTERS[correctFirst] ?? [];
+  const externalConfusing = confusing.filter((l) => !wordLetterSet.has(l));
+  const internalConfusing = confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst);
+  const otherWordLetters = [...wordLetterSet].filter(
+    (l) => l !== correctFirst && !confusing.includes(l)
+  );
+  const otherExternal = ALL_LETTERS.filter(
+    (l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l)
+  );
+  const distractorPool = [
+    ...shuffleWithSeed(externalConfusing, word.id + "-ec"),
+    ...shuffleWithSeed(internalConfusing, word.id + "-ic"),
+    ...shuffleWithSeed(otherWordLetters, word.id + "-ow"),
+    ...shuffleWithSeed(otherExternal, word.id + "-oe"),
+  ];
+  const distractors: string[] = [];
+  const used = new Set<string>([correctFirst]);
+  for (const l of distractorPool) {
+    if (distractors.length >= 3) break;
+    if (used.has(l)) continue;
+    used.add(l);
+    distractors.push(l);
+  }
+  if (distractors.length < 3) return null;
+
+  const optionBase = shuffleWithSeed([correctFirst, ...distractors], word.id + "-opt");
+  const options = [...optionBase, "-"];
   if (options.length !== 5) return null;
   const correctIndex = options.indexOf(correctFirst);
-  if (correctIndex === 4) return null; // Korrekter Buchstabe darf nicht auf "-"-Position (E) landen
+  if (correctIndex === 4) return null;
 
   const task: WordFluencyTask = {
     id: word.id,
@@ -1932,45 +2335,37 @@ export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
 }
 
 /**
- * Generiert eine Wortflüssigkeit-Trainingsaufgabe.
- * Nutzt nur TRAINING_WF_WORDS; kein Wort aus OFFICIAL_WF_EXAMPLES.
+ * Generiert eine Wortflüssigkeit-Trainingsaufgabe (v2).
+ * Distractors now use pickSmartDistractors: mix of confusing external letters + word letters.
+ * Min distinct letters lowered from 5→3 (external distractors fill the gap).
  */
 export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
   const pool = TRAINING_WF_WORDS[difficulty];
   const officialWords = new Set(OFFICIAL_WF_EXAMPLES.map((o) => o.solutionWord.toUpperCase()));
   const allowed = pool.filter((w) => !officialWords.has(w.toUpperCase()));
   if (allowed.length === 0) {
-    if (import.meta.env?.DEV) {
-      console.warn("WF-Generator: Keine Wörter mehr verfügbar – Wortliste prüfen");
-    }
     return generateWordFluencyTaskFallback(difficulty);
   }
 
   for (let attempt = 0; attempt < WF_MAX_RETRIES; attempt++) {
     const word = allowed[randInt(0, allowed.length - 1)].toUpperCase();
-    const letters = word.split("");
-    const lettersInWord = [...new Set(letters)];
-    if (lettersInWord.length < 5) continue; // mind. 5 verschiedene: 4 falsche für E-Fall + korrekt
-    const shuffled = shuffle([...letters]);
+    const wordLetterSet = new Set(word.split(""));
+    if (wordLetterSet.size < 3) continue;
+    const shuffled = shuffle(word.split(""));
     const correctFirst = word[0];
     const useNone = Math.random() < 0.15;
-
-    // Nur Buchstaben, die im Wort vorkommen, als Antwortoptionen
-    const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
 
     let options: string[];
     let correctIndex: number;
     if (useNone) {
-      // E korrekt: 4 falsche Buchstaben + "-"
-      const wrong4 = shuffle(wrongPool).slice(0, 4);
-      if (wrong4.length < 4) continue;
-      options = [...wrong4, "-"];
+      const distractors = pickSmartDistractors(correctFirst, wordLetterSet, 4);
+      if (distractors.length < 4) continue;
+      options = [...distractors, "-"];
       correctIndex = 4;
     } else {
-      // Normal: 3 falsche + 1 korrekt + "-"
-      const wrong3 = shuffle(wrongPool).slice(0, 3);
-      if (wrong3.length < 3) continue;
-      const mixed = shuffle([correctFirst, ...wrong3]);
+      const distractors = pickSmartDistractors(correctFirst, wordLetterSet, 3);
+      if (distractors.length < 3) continue;
+      const mixed = shuffle([correctFirst, ...distractors]);
       options = [...mixed, "-"];
       correctIndex = mixed.indexOf(correctFirst);
     }
@@ -1982,7 +2377,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
       correctIndex,
       solutionWord: word,
       explanation: useNone
-        ? "Keines der angegebenen Buchstaben ist der korrekte Anfangsbuchstabe des Lösungswortes."
+        ? `Das Lösungswort lautet „${word}" (Anfangsbuchstabe „${correctFirst}"), der nicht unter A–D angeboten wird.`
         : `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
       difficulty,
     };
@@ -1992,29 +2387,26 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
     return task;
   }
 
-  if (import.meta.env?.DEV) {
-    console.warn("WF-Generator erzeugt zu ähnliche Aufgaben – Wortliste/Logik prüfen");
-  }
   return generateWordFluencyTaskFallback(difficulty);
 }
 
 function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
   const pool = TRAINING_WF_WORDS[difficulty];
-  const withEnoughLetters = pool.filter((w) => new Set(w.toUpperCase().split("")).size >= 4);
+  const withEnoughLetters = pool.filter((w) => new Set(w.toUpperCase().split("")).size >= 3);
   const usePool = withEnoughLetters.length > 0 ? withEnoughLetters : pool;
   for (let tryCount = 0; tryCount < 10; tryCount++) {
     const word = usePool[randInt(0, usePool.length - 1)].toUpperCase();
     const letters = shuffle(word.split(""));
     const correctFirst = word[0];
-    const lettersInWord = [...new Set(word.split(""))];
-    const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-    const wrong = shuffle(wrongPool).slice(0, 3);
-    const options = [...shuffle([correctFirst, ...wrong]), "-"];
+    const wordLetterSet = new Set(word.split(""));
+    const distractors = pickSmartDistractors(correctFirst, wordLetterSet, 3);
+    const mixed = shuffle([correctFirst, ...distractors.slice(0, 3)]);
+    const options = [...mixed, "-"];
     const task: WordFluencyTask = {
       id: `wf-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
       letters,
       options,
-      correctIndex: options.indexOf(correctFirst),
+      correctIndex: mixed.indexOf(correctFirst),
       solutionWord: word,
       explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
       difficulty,
@@ -2024,15 +2416,15 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
   const word = usePool[0].toUpperCase();
   const letters = shuffle(word.split(""));
   const correctFirst = word[0];
-  const lettersInWord = [...new Set(word.split(""))];
-  const wrongPool = lettersInWord.filter((l) => l !== correctFirst);
-  const wrong = shuffle(wrongPool).slice(0, 3);
-  const options = [...shuffle([correctFirst, ...wrong]), "-"];
+  const wordLetterSet = new Set(word.split(""));
+  const distractors = pickSmartDistractors(correctFirst, wordLetterSet, 3);
+  const mixed = shuffle([correctFirst, ...distractors.slice(0, 3)]);
+  const options = [...mixed, "-"];
   return {
     id: `wf-train-fb-last-${Date.now()}`,
     letters,
     options,
-    correctIndex: options.indexOf(correctFirst),
+    correctIndex: mixed.indexOf(correctFirst),
     solutionWord: word,
     explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
     difficulty,
@@ -2469,9 +2861,186 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Ausführung", p: "Ausführungen" },
     { s: "Version", p: "Versionen" },
   ],
+  // 15 new triplets for session variety
+  [
+    { s: "Fahrzeug", p: "Fahrzeuge" },
+    { s: "Transportmittel", p: "Transportmittel" },
+    { s: "Maschine", p: "Maschinen" },
+  ],
+  [
+    { s: "Pflanze", p: "Pflanzen" },
+    { s: "Organismus", p: "Organismen" },
+    { s: "Lebewesen", p: "Lebewesen" },
+  ],
+  [
+    { s: "Gebäude", p: "Gebäude" },
+    { s: "Bauwerk", p: "Bauwerke" },
+    { s: "Konstruktion", p: "Konstruktionen" },
+  ],
+  [
+    { s: "Dokument", p: "Dokumente" },
+    { s: "Schriftstück", p: "Schriftstücke" },
+    { s: "Unterlage", p: "Unterlagen" },
+  ],
+  [
+    { s: "Mineral", p: "Minerale" },
+    { s: "Gestein", p: "Gesteine" },
+    { s: "Kristall", p: "Kristalle" },
+  ],
+  [
+    { s: "Frequenz", p: "Frequenzen" },
+    { s: "Schwingung", p: "Schwingungen" },
+    { s: "Welle", p: "Wellen" },
+  ],
+  [
+    { s: "Prozess", p: "Prozesse" },
+    { s: "Vorgang", p: "Vorgänge" },
+    { s: "Ablauf", p: "Abläufe" },
+  ],
+  [
+    { s: "Eigenschaft", p: "Eigenschaften" },
+    { s: "Merkmal", p: "Merkmale" },
+    { s: "Attribut", p: "Attribute" },
+  ],
+  [
+    { s: "Lösung", p: "Lösungen" },
+    { s: "Ergebnis", p: "Ergebnisse" },
+    { s: "Resultat", p: "Resultate" },
+  ],
+  [
+    { s: "Instrument", p: "Instrumente" },
+    { s: "Apparat", p: "Apparate" },
+    { s: "Vorrichtung", p: "Vorrichtungen" },
+  ],
+  [
+    { s: "Abschnitt", p: "Abschnitte" },
+    { s: "Segment", p: "Segmente" },
+    { s: "Teilstück", p: "Teilstücke" },
+  ],
+  [
+    { s: "Prinzip", p: "Prinzipien" },
+    { s: "Grundsatz", p: "Grundsätze" },
+    { s: "Regel", p: "Regeln" },
+  ],
+  [
+    { s: "Substanz", p: "Substanzen" },
+    { s: "Material", p: "Materialien" },
+    { s: "Werkstoff", p: "Werkstoffe" },
+  ],
+  [
+    { s: "Faktor", p: "Faktoren" },
+    { s: "Einfluss", p: "Einflüsse" },
+    { s: "Bedingung", p: "Bedingungen" },
+  ],
+  [
+    { s: "Quelle", p: "Quellen" },
+    { s: "Ursprung", p: "Ursprünge" },
+    { s: "Herkunft", p: "Herkünfte" },
+  ],
+  // 20 new triplets for broader domain coverage
+  [
+    { s: "Reptil", p: "Reptilien" },
+    { s: "Eidechse", p: "Eidechsen" },
+    { s: "Schlange", p: "Schlangen" },
+  ],
+  [
+    { s: "Raubvogel", p: "Raubvögel" },
+    { s: "Adler", p: "Adler" },
+    { s: "Falke", p: "Falken" },
+  ],
+  [
+    { s: "Zelle", p: "Zellen" },
+    { s: "Gewebe", p: "Gewebe" },
+    { s: "Organ", p: "Organe" },
+  ],
+  [
+    { s: "Virus", p: "Viren" },
+    { s: "Bakterium", p: "Bakterien" },
+    { s: "Erreger", p: "Erreger" },
+  ],
+  [
+    { s: "Theorie", p: "Theorien" },
+    { s: "Hypothese", p: "Hypothesen" },
+    { s: "Annahme", p: "Annahmen" },
+  ],
+  [
+    { s: "Student", p: "Studenten" },
+    { s: "Absolvent", p: "Absolventen" },
+    { s: "Dozent", p: "Dozenten" },
+  ],
+  [
+    { s: "Fluss", p: "Flüsse" },
+    { s: "Gewässer", p: "Gewässer" },
+    { s: "See", p: "Seen" },
+  ],
+  [
+    { s: "Berg", p: "Berge" },
+    { s: "Gipfel", p: "Gipfel" },
+    { s: "Hügel", p: "Hügel" },
+  ],
+  [
+    { s: "Programm", p: "Programme" },
+    { s: "Software", p: "Software" },
+    { s: "Anwendung", p: "Anwendungen" },
+  ],
+  [
+    { s: "Prozessor", p: "Prozessoren" },
+    { s: "Chip", p: "Chips" },
+    { s: "Schaltkreis", p: "Schaltkreise" },
+  ],
+  [
+    { s: "Obst", p: "Obstsorten" },
+    { s: "Frucht", p: "Früchte" },
+    { s: "Beere", p: "Beeren" },
+  ],
+  [
+    { s: "Getreide", p: "Getreidesorten" },
+    { s: "Korn", p: "Körner" },
+    { s: "Weizen", p: "Weizensorten" },
+  ],
+  [
+    { s: "Staat", p: "Staaten" },
+    { s: "Nation", p: "Nationen" },
+    { s: "Republik", p: "Republiken" },
+  ],
+  [
+    { s: "Kontinent", p: "Kontinente" },
+    { s: "Region", p: "Regionen" },
+    { s: "Gebiet", p: "Gebiete" },
+  ],
+  [
+    { s: "Melodie", p: "Melodien" },
+    { s: "Lied", p: "Lieder" },
+    { s: "Klang", p: "Klänge" },
+  ],
+  [
+    { s: "Enzym", p: "Enzyme" },
+    { s: "Protein", p: "Proteine" },
+    { s: "Antikörper", p: "Antikörper" },
+  ],
+  [
+    { s: "Brücke", p: "Brücken" },
+    { s: "Tunnel", p: "Tunnel" },
+    { s: "Passage", p: "Passagen" },
+  ],
+  [
+    { s: "Gemälde", p: "Gemälde" },
+    { s: "Skulptur", p: "Skulpturen" },
+    { s: "Kunstwerk", p: "Kunstwerke" },
+  ],
+  [
+    { s: "Vertrag", p: "Verträge" },
+    { s: "Abkommen", p: "Abkommen" },
+    { s: "Vereinbarung", p: "Vereinbarungen" },
+  ],
+  [
+    { s: "Stern", p: "Sterne" },
+    { s: "Planet", p: "Planeten" },
+    { s: "Himmelskörper", p: "Himmelskörper" },
+  ],
 ];
 
-const MAX_ASSERT_RETRIES = 5;
+const MAX_ASSERT_RETRIES = 15;
 
 /**
  * Prüft, ob eine Aufgabe zu ähnlich zu einer offiziellen ist.
