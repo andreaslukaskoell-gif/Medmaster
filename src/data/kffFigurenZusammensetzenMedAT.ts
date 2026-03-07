@@ -68,15 +68,16 @@ function rotatePiece(poly: Polygon, angle: number): Polygon {
 
 /** Pick a quantized rotation angle based on difficulty. */
 function quantizedAngle(difficulty: FZDifficulty, rng: () => number): number {
+  // Official examples show pieces rotated at various angles even in simple tasks
   const steps =
     difficulty === "easy"
-      ? [0, 90, 180, 270]
+      ? [0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330]
       : difficulty === "medium"
-        ? [0, 45, 90, 135, 180, 225, 270, 315]
-        : [
+        ? [
             0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270,
             285, 300, 315, 330, 345,
-          ];
+          ]
+        : Array.from({ length: 72 }, (_, i) => i * 5); // every 5 degrees
   return (steps[Math.floor(rng() * steps.length)] ?? 0) * (Math.PI / 180);
 }
 
@@ -1445,23 +1446,24 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
   const n = poly.points.length;
   if (n < 3) return null;
 
-  for (let attempt = 0; attempt < 15; attempt++) {
-    // Pick first edge
+  for (let attempt = 0; attempt < 30; attempt++) {
+    // Pick two different, non-adjacent edges
     const e1 = Math.floor(rng() * n);
-    // Pick second edge: must not be adjacent
-    const minGap = Math.max(2, Math.floor(n / 3));
-    const e2raw = e1 + minGap + Math.floor(rng() * Math.max(1, n - 2 * minGap));
-    const e2 = e2raw % n;
-    if (e2 === e1 || e2 === (e1 + 1) % n || e1 === (e2 + 1) % n) continue;
+    let e2: number;
+    if (n <= 4) {
+      // For triangles/quads: just pick any other non-adjacent edge
+      e2 = (e1 + 2) % n;
+      if (n === 3) e2 = (e1 + 1 + Math.floor(rng() * 2)) % n; // any other edge for triangle
+    } else {
+      const minGap = 2;
+      e2 = (e1 + minGap + Math.floor(rng() * (n - 2 * minGap + 1))) % n;
+    }
+    if (e2 === e1 || e2 === (e1 + 1) % n || (n > 3 && e1 === (e2 + 1) % n)) continue;
 
-    // t-values: avoid 0, 0.5, 1 (corners & midpoints look computer-generated)
-    const tRanges: [number, number][] = [
-      [0.2, 0.45],
-      [0.55, 0.8],
-    ];
+    // t-values: wide range [0.1, 0.9], only avoid exact midpoint 0.5
     const pickT = () => {
-      const range = tRanges[Math.floor(rng() * tRanges.length)]!;
-      return range[0] + rng() * (range[1] - range[0]);
+      const t = 0.1 + rng() * 0.8;
+      return Math.abs(t - 0.5) < 0.04 ? t + 0.06 : t;
     };
     const t1 = pickT();
     const t2 = pickT();
@@ -1483,7 +1485,7 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
     const dist = Math.abs((p2.x - p1.x) * (p1.y - c.y) - (p1.x - c.x) * (p2.y - p1.y)) / lineLen;
     const bbox = polygonBBox(poly);
     const diagLen = Math.hypot(bbox.width, bbox.height);
-    if (dist < diagLen * 0.15) continue; // too centered
+    if (dist < diagLen * 0.06) continue; // only reject if cutting right through center
 
     return [p1, p2];
   }
@@ -1706,7 +1708,12 @@ function applyAsymmetricCuts(
   const targetArea = polygonArea(target);
   const minPieceArea = targetArea * 0.05; // min 5% per piece
 
-  for (let cut = 0; cut < numCuts; cut++) {
+  let successfulCuts = 0;
+  for (
+    let totalAttempts = 0;
+    totalAttempts < numCuts * 4 && successfulCuts < numCuts;
+    totalAttempts++
+  ) {
     // Find largest piece
     let maxIdx = 0,
       maxArea = 0;
@@ -1719,7 +1726,7 @@ function applyAsymmetricCuts(
     }
     const largest = pieces[maxIdx];
     const cutLine = generateAsymmetricCut(largest, rng);
-    if (!cutLine) return null;
+    if (!cutLine) continue;
 
     // Choose cut style based on difficulty (medium/hard → zigzag/step/notch cuts)
     const style = pickCutStyle(difficulty, rng);
@@ -1733,12 +1740,13 @@ function applyAsymmetricCuts(
     if (!result) {
       result = splitPolygonByLine(largest, cutLine[0], cutLine[1]);
     }
-    if (!result) continue; // skip this cut, try next
+    if (!result) continue;
 
     const [a, b] = result;
     if (polygonArea(a) < minPieceArea || polygonArea(b) < minPieceArea) continue;
 
     pieces.splice(maxIdx, 1, a, b);
+    successfulCuts++;
   }
 
   // Validate: we need at least the expected number of pieces
@@ -1749,7 +1757,7 @@ function applyAsymmetricCuts(
     const a1 = polygonArea(pieces[0]);
     const a2 = polygonArea(pieces[1]);
     const ratio = Math.min(a1, a2) / Math.max(a1, a2);
-    if (ratio > 0.85) return null; // too symmetric
+    if (ratio > 0.95) return null; // only reject near-identical halves
   }
 
   // For medium/hard: largest piece should be >= 1.5× smallest
@@ -1779,7 +1787,8 @@ export function cutPolygonStrategically(
   seed: number
 ): { target: Polygon; pieces: Polygon[] } {
   const rng = createRng(seed);
-  const shapeIndex = Math.floor(Math.abs(seed) % SOLUTION_SHAPES.length);
+  // Use RNG (not raw seed modulo) so consecutive seeds don't cycle through shapes predictably
+  const shapeIndex = Math.floor(rng() * SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
   // Try asymmetric cuts first (authentic look, with complex cuts for medium/hard)
@@ -1826,9 +1835,6 @@ export function generateFigurenTrainingTask(
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
 
-    // Rotate pieces for display so users can't just visually match silhouettes
-    const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
-
     const distractors = buildDistractors(target, 3, rng, fp);
     const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
     const order = [0, 1, 2, 3];
@@ -1846,22 +1852,32 @@ export function generateFigurenTrainingTask(
       OPTION_E,
     ];
 
-    const task: FigureAssembleTask = {
+    // Validate with ORIGINAL (unrotated) pieces — rotation changes coordinates
+    const validationTask: FigureAssembleTask = {
       id: `fz-train-${difficulty}-${seed}-${attempt}`,
-      pieces: displayPieces,
+      pieces,
       target,
       options,
       correctIndex,
       difficulty,
-      explanation:
-        correctIndex === 4
-          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben eine andere Form.`
-          : `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
+      explanation: "",
       targetShapeId: getTargetShapeIdForPolygon(target),
       solutionOverlay: computeSolutionOverlay(target, pieces),
     };
 
-    if (!validateFigurenTask(task)) continue;
+    if (!validateFigurenTask(validationTask)) continue;
+
+    // Rotate pieces AFTER validation for display
+    const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+
+    const task: FigureAssembleTask = {
+      ...validationTask,
+      pieces: displayPieces,
+      explanation:
+        correctIndex === 4
+          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben eine andere Form.`
+          : `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
+    };
     duplicateGuardAdd(fp);
     return task;
   }
