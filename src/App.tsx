@@ -29,12 +29,6 @@ const Simulation = lazy(() => import("@/pages/Simulation"));
 const Statistics = lazy(() => import("@/pages/Statistics"));
 const Pricing = lazy(() => import("@/pages/Pricing"));
 const Lernplan = lazy(() => import("@/pages/Lernplan"));
-const AITutor = lazy(() => import("@/pages/AITutor"));
-const Analysis = lazy(() => import("@/pages/Analysis"));
-const Community = lazy(() => import("@/pages/Community"));
-const Notes = lazy(() => import("@/pages/Notes"));
-const Flashcards = lazy(() => import("@/pages/Flashcards"));
-const Duel = lazy(() => import("@/pages/Duel"));
 const StichwortlistePage = lazy(() => import("@/pages/StichwortlistePage"));
 const SchwachstellenTrainer = lazy(() => import("@/pages/SchwachstellenTrainer"));
 const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
@@ -45,14 +39,12 @@ const AdminTasksPage = lazy(() => import("@/pages/AdminTasksPage"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
-const WissenCheck = lazy(() => import("@/pages/WissenCheck"));
 const Prognose = lazy(() => import("@/pages/Prognose"));
 const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
 const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
 const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
 const FragenTrainer = lazy(() => import("@/pages/FragenTrainer"));
 const DailyChallenge = lazy(() => import("@/pages/DailyChallenge"));
-const BMSWrapped = lazy(() => import("@/pages/BMSWrapped"));
 const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
 const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
 const TodayPage = lazy(() => import("@/pages/TodayPage"));
@@ -196,14 +188,8 @@ export default function App() {
               <Route path="/tv" element={<TV />} />
               <Route path="/sek" element={<SEK />} />
               <Route path="/simulation" element={<Simulation />} />
-              <Route path="/ai-tutor" element={<AITutor />} />
               <Route path="/lernplan" element={<Lernplan />} />
-              <Route path="/analyse" element={<Analysis />} />
-              <Route path="/community" element={<Community />} />
               <Route path="/statistik" element={<Statistics />} />
-              <Route path="/notizen" element={<Notes />} />
-              <Route path="/karteikarten" element={<Flashcards />} />
-              <Route path="/duell" element={<Duel />} />
               <Route path="/stichwortliste" element={<StichwortlistePage />} />
               <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
               <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
@@ -248,16 +234,12 @@ export default function App() {
                   </AdminGuard>
                 }
               />
-              <Route path="/wissencheck" element={<WissenCheck />} />
-              <Route path="/wissencheck/:fach" element={<WissenCheck />} />
               <Route path="/prognose" element={<Prognose />} />
               <Route path="/performance" element={<PerformanceOverview />} />
               <Route path="/fortschritt" element={<FortschrittPage />} />
               <Route path="/fragen-trainer" element={<FragenTrainer />} />
               <Route path="/daily" element={<DailyChallenge />} />
-              <Route path="/wrapped" element={<BMSWrapped />} />
               <Route path="/formelsammlung" element={<Formelsammlung />} />
-              <Route path="/today" element={<TodayPage />} />
               <Route path="/einstellungen" element={<Einstellungen />} />
 
               {/* 404 Catch-all for protected routes */}

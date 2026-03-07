@@ -3,22 +3,13 @@
  * Nur Bereiche mit "intensivem" Lernen zählen für den 45-Min-Timer.
  */
 
-export type LearningArea =
-  | "bms"
-  | "kff"
-  | "tv"
-  | "sek"
-  | "simulation"
-  | "wissencheck"
-  | "fortschritt"
-  | "other";
+export type LearningArea = "bms" | "kff" | "tv" | "sek" | "simulation" | "fortschritt" | "other";
 
 const BMS_PREFIX = "/bms";
 const KFF_PREFIX = "/kff";
 const TV_PREFIX = "/tv";
 const SEK_PREFIX = "/sek";
 const SIMULATION_PREFIX = "/simulation";
-const WISSENCHECK_PREFIX = "/wissencheck";
 const FORTSCHRITT_PREFIX = "/fortschritt";
 const SCHWACHSTELLEN_PREFIX = "/schwachstellen";
 const STATISTIK_PREFIX = "/statistik";
@@ -31,7 +22,6 @@ export function pathnameToLearningArea(pathname: string): LearningArea {
   if (p.startsWith(TV_PREFIX)) return "tv";
   if (p.startsWith(SEK_PREFIX)) return "sek";
   if (p.startsWith(SIMULATION_PREFIX)) return "simulation";
-  if (p.startsWith(WISSENCHECK_PREFIX)) return "wissencheck";
   if (
     p.startsWith(FORTSCHRITT_PREFIX) ||
     p.startsWith(SCHWACHSTELLEN_PREFIX) ||
@@ -49,7 +39,6 @@ export const TRACKED_AREAS: LearningArea[] = [
   "tv",
   "sek",
   "simulation",
-  "wissencheck",
   "fortschritt",
 ];
 
@@ -64,7 +53,6 @@ export function areaLabel(area: LearningArea): string {
     tv: "TV",
     sek: "SEK",
     simulation: "Simulation",
-    wissencheck: "Wissen-Check",
     fortschritt: "Fortschritt",
     other: "Sonstiges",
   };
@@ -79,7 +67,6 @@ export function suggestedAlternateArea(
   if (current === "kff") return { area: "bms", path: "/bms", label: "BMS-Kapitel" };
   if (current === "tv" || current === "sek" || current === "simulation")
     return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
-  if (current === "wissencheck") return { area: "kff", path: "/kff", label: "5 KFF-Aufgaben" };
   if (current === "fortschritt") return { area: "bms", path: "/bms", label: "BMS-Kapitel" };
   return null;
 }

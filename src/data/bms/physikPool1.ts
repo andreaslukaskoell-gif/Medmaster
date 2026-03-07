@@ -294,14 +294,14 @@ export const physikPool1: Question[] = [
     "phys-kap1",
     "Ein PKW wird mit konstanter Geschwindigkeit auf ebener Straße bewegt. Wird dabei mechanische Arbeit verrichtet?",
     [
-      "Ja, solange er sich bewegt.",
+      "Ja, der Motor verrichtet Arbeit gegen Reibung und Luftwiderstand.",
       "Nein, weil die Geschwindigkeit konstant ist.",
       "Ja, umso mehr, je schneller er fährt.",
       "Nur beim Anfahren, nicht bei konstanter Fahrt.",
-      "Nur von der Reibungskraft.",
+      "Nur von der Schwerkraft.",
     ],
-    3,
-    "Bei konstanter Geschwindigkeit auf ebener Straße ist die Gesamtkraft (Antrieb minus Reibung) null; die Nettoarbeit über eine Strecke ist null. Beim Anfahren wird Arbeit verrichtet (Beschleunigung).",
+    0,
+    "Bei konstanter Geschwindigkeit ist die Nettokraft null (Newton I), aber der Motor verrichtet kontinuierlich Arbeit gegen Reibung und Luftwiderstand. Diese Energie wird in Wärme umgewandelt.",
     "mittel",
     ["Arbeit", "Bewegung", "Kraft"]
   ),
@@ -572,10 +572,10 @@ export const physikPool1: Question[] = [
   q(
     "ph-pool-040",
     "phys-kap1",
-    "Ein Körper wird auf einer reibungsfreien Ebene mit konstanter Geschwindigkeit gezogen. Die Zugkraft F und der Weg s sind gegeben. Die verrichtete Arbeit W ist:",
+    "Ein Körper wird auf einer rauen Ebene mit konstanter Geschwindigkeit gezogen. Die Zugkraft F und der Weg s sind gegeben. Die verrichtete Arbeit W ist:",
     ["W = 0", "W = F · s", "W = F / s", "W = F + s", "W = F − s"],
     1,
-    "Arbeit W = F · s (bei Kraft in Wegrichtung). Auch bei konstanter Geschwindigkeit wird Arbeit verrichtet, um die Reibung (oder hier: um den Körper in Bewegung zu halten, falls keine Reibung, dann F=0 und W=0 — bei reibungsfrei und konstanter Geschwindigkeit ist F=0, also W=0). Genauer: Wenn F die einzige Kraft in Wegrichtung ist und v konstant, dann F=0 und W=0. Wenn F eine äußere Zugkraft ist und v konstant (Kräftegleichgewicht), dann leistet F die Arbeit W = F·s gegen die Reibung. Formel W = F·s bleibt korrekt.",
+    "Bei konstanter Geschwindigkeit auf rauer Ebene hält die Zugkraft F der Reibungskraft das Gleichgewicht. Die von F verrichtete Arbeit ist W = F · s (Kraft mal Weg in Kraftrichtung).",
     "mittel",
     ["Arbeit", "Kraft", "Weg"]
   ),

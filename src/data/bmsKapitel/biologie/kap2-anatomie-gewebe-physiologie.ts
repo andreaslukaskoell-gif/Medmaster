@@ -939,11 +939,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         {
           question: "Was sind die Hauptunterschiede zwischen Sympathikus und Parasympathikus?",
           options: [
-            "Beide sind identisch",
-            "Sympathikus (fight-or-flight): Thorakolumbal (T1-L2), Noradrenalin (postganglionär), α/β-Rezeptoren, Herz ↑ (β1), Bronchodilatation (β2), Mydriasis (α1), Peristaltik ↓ (α2). Parasympathikus (rest-and-digest): Kraniosakral (Hirnnerven III/VII/IX/X, S2-S4), Acetylcholin (prä+postganglionär), M2/M3-Rezeptoren, Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3)",
-            "Nur Sympathikus existiert",
-            "Parasympathikus nutzt Noradrenalin",
-            "Beide steigern Herzfrequenz",
+            "Beide Systeme sind funktionell identisch und nutzen denselben Neurotransmitter.",
+            "Sympathikus (Noradrenalin, T1-L2) steigert Herz/Bronchien, Parasympathikus (Acetylcholin, kraniosakral) bremst Herz und fördert Verdauung.",
+            "Nur der Sympathikus existiert als Teil des vegetativen Nervensystems.",
+            "Der Parasympathikus nutzt Noradrenalin als postganglionären Transmitter.",
+            "Beide Systeme steigern die Herzfrequenz über β1-Rezeptoren.",
           ],
           correctIndex: 1,
           explanation:
@@ -954,11 +954,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         {
           question: "Wie funktioniert die synaptische Transmission an einer chemischen Synapse?",
           options: [
-            "Synapse funktioniert ohne Neurotransmitter",
-            "Aktionspotential → Axonterminale → Ca²⁺-Kanäle öffnen (P/Q-Typ, N-Typ) → Ca²⁺ rein → Synaptotagmin (Ca²⁺-Sensor) bindet Ca²⁺ → SNARE-Komplex (Synaptobrevin + Syntaxin + SNAP-25) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Exozytose, Quantal Release) → Rezeptoren (ionotrop [AMPA, NMDA, GABA_A, nikotinisch] oder metabotrop [D1/D2, 5-HT, α/β, M1-M5]) → EPSP (Depolarisation) oder IPSP (Hyperpolarisation)",
-            "Synapse ist nur in Bakterien",
-            "Synapse benötigt kein Ca²⁺",
-            "Synapse ist elektrisch",
+            "Die Synapse funktioniert rein elektrisch ohne Neurotransmitter.",
+            "Ca\u00B2\u207A strömt ein, der SNARE-Komplex vermittelt die Vesikelfusion, Neurotransmitter binden postsynaptisch an ionotrope oder metabotrope Rezeptoren und erzeugen EPSP oder IPSP.",
+            "Synapsen kommen nur bei Bakterien vor.",
+            "Die synaptische Transmission ist Ca\u00B2\u207A-unabhängig.",
+            "Alle Synapsen im Körper sind elektrische Synapsen (Gap Junctions).",
           ],
           correctIndex: 1,
           explanation:
@@ -969,11 +969,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         {
           question: "Welche Neurotransmitter sind exzitatorisch und welche inhibitorisch im ZNS?",
           options: [
-            "Alle Neurotransmitter sind exzitatorisch",
-            "Exzitatorisch: Glutamat (AMPA [Na⁺], NMDA [Ca²⁺/Na⁺, Mg²⁺-Block], Kainate, ~90% exzitatorische Synapsen, Lernen/LTP). Inhibitorisch: GABA (GABA_A [Cl⁻], GABA_B [K⁺ ↑], ~20% inhibitorische Synapsen, Benzodiazepine verstärken), Glycin (Glycin-Rezeptor [Cl⁻], Rückenmark/Hirnstamm, Strychnin blockiert)",
-            "Nur Glutamat existiert",
-            "GABA ist exzitatorisch",
-            "Glycin ist nur in Bakterien",
+            "Alle Neurotransmitter im ZNS wirken exzitatorisch.",
+            "Glutamat ist der wichtigste exzitatorische Transmitter (AMPA, NMDA); GABA (GABA_A: Cl\u207B) und Glycin sind inhibitorisch.",
+            "Glutamat ist der einzige Neurotransmitter im ZNS.",
+            "GABA wirkt exzitatorisch und öffnet Na\u207A-Kanäle.",
+            "Glycin kommt nur bei Bakterien vor, nicht im menschlichen Nervensystem.",
           ],
           correctIndex: 1,
           explanation:
@@ -984,11 +984,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
         {
           question: "Was passiert während eines Aktionspotentials auf molekularer Ebene?",
           options: [
-            "Aktionspotential ist nur in Gliazellen",
-            "Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → spannungsgesteuerte Na⁺-Kanäle öffnen (Nav1.x) → Na⁺ rein → Depolarisation (+40 mV, Overshoot) → Na⁺-Kanäle inaktivieren (Inaktivierungstor) + K⁺-Kanäle öffnen (Kv1.x, verzögert) → K⁺ raus → Repolarisation (-70 mV) → Hyperpolarisation (~-80 mV, K⁺-Kanäle offen) → Ruhepotential. Refraktärzeit (absolut [Na⁺ inaktiviert], relativ [Na⁺ erholen, K⁺ offen]). Alles-oder-Nichts-Prinzip",
-            "Aktionspotential benötigt kein Na⁺",
-            "Aktionspotential ist nur in Pflanzen",
-            "Aktionspotential ist graduiert",
+            "Aktionspotentiale treten nur in Gliazellen auf.",
+            "Ab der Schwelle (-55 mV) öffnen Na\u207A-Kanäle (Depolarisation auf +40 mV), dann inaktivieren sie; K\u207A-Kanäle repolarisieren die Membran. Es gilt das Alles-oder-Nichts-Prinzip.",
+            "Das Aktionspotential ist Na\u207A-unabhängig und wird nur durch Cl\u207B vermittelt.",
+            "Aktionspotentiale kommen nur bei Pflanzen vor.",
+            "Das Aktionspotential ist ein graduiertes Signal, dessen Amplitude vom Reiz abhängt.",
           ],
           correctIndex: 1,
           explanation:
@@ -1000,11 +1000,11 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
           question:
             "Was ist ein monosynaptischer Reflex und wie unterscheidet er sich von einem polysynaptischen Reflex?",
           options: [
-            "Beide sind identisch",
-            "Monosynaptischer Reflex (Eigenreflex, z.B. Patellarsehnenreflex): Rezeptor (Muskelspindel) → Ia-Faser → DIREKT α-Motoneuron (EINE Synapse) → Effektor (Quadriceps kontrahiert), reziproke Hemmung (Interneuron → Antagonist gehemmt). Polysynaptischer Reflex (Fremdreflex, z.B. Fluchtreflex): Rezeptor (Nozizeptor) → MEHRERE Synapsen (Interneurone [exzitatorisch + inhibitorisch]) → α-Motoneuron → Effektor (Beuger kontrahiert, Strecker gehemmt, gekreuzte Streckreaktion)",
-            "Nur monosynaptische Reflexe existieren",
-            "Polysynaptische Reflexe haben keine Interneurone",
-            "Beide benötigen Bewusstsein",
+            "Mono- und polysynaptische Reflexe sind funktionell identisch.",
+            "Monosynaptisch (z. B. Patellarsehnenreflex): eine Synapse, Muskelspindel direkt auf \u03B1-Motoneuron. Polysynaptisch (z. B. Fluchtreflex): mehrere Interneurone, komplexe motorische Antwort.",
+            "Im menschlichen Körper existieren nur monosynaptische Reflexe.",
+            "Polysynaptische Reflexe enthalten keine Interneurone.",
+            "Beide Reflextypen erfordern bewusste Steuerung durch das Großhirn.",
           ],
           correctIndex: 1,
           explanation:
@@ -2414,7 +2414,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
             "Die GFR beträgt ~12 mL/min und produziert ~18 L Primärharn pro Tag.",
             "Die GFR beträgt ~120 mL/min und produziert ~180 L Primärharn pro Tag. Die Filtrationsbarriere besteht aus fenestriertem Endothel, glomerulärer Basalmembran und Podozyten.",
             "Proteine mit Molekulargewicht >69 kDa passieren die Filtrationsbarriere problemlos.",
-            "Kreatinin wird filtriert und vollständig rückresorbiort.",
+            "Kreatinin wird filtriert und vollständig rückresorbiert.",
             "Bei Glomerulonephritis ist die Filtrationsbarriere intakt.",
           ],
           correctIndex: 1,

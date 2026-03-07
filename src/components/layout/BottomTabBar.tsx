@@ -1,14 +1,14 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { LayoutDashboard, BookOpen, Timer, BarChart3, ListChecks } from "lucide-react";
+import { LayoutDashboard, BookOpen, Brain, FileText, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
   { to: "/", label: "Home", icon: LayoutDashboard, end: true },
-  { to: "/today", label: "Heute", icon: ListChecks, end: false },
-  { to: "/bms", label: "Lernen", icon: BookOpen, end: false },
-  { to: "/simulation", label: "Test", icon: Timer, end: false },
-  { to: "/performance", label: "Stats", icon: BarChart3, end: false },
+  { to: "/bms", label: "BMS", icon: BookOpen, end: false },
+  { to: "/kff", label: "KFF", icon: Brain, end: false },
+  { to: "/tv", label: "TV", icon: FileText, end: false },
+  { to: "/sek", label: "SEK", icon: Heart, end: false },
 ] as const;
 
 export function BottomTabBar() {
@@ -21,7 +21,9 @@ export function BottomTabBar() {
       <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200/80 dark:border-slate-700/50 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.2)] pb-[env(safe-area-inset-bottom)]">
         <div className="grid grid-cols-5 h-14 max-w-lg mx-auto">
           {tabs.map(({ to, label, icon: Icon, end }) => {
-            const isActive = end ? location.pathname === "/" : location.pathname.startsWith(to);
+            const isActive = end
+              ? location.pathname === "/" || location.pathname === "/dashboard"
+              : location.pathname.startsWith(to);
             return (
               <NavLink
                 key={to}

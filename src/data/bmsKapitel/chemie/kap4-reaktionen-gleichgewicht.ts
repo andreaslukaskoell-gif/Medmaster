@@ -282,7 +282,7 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
             "Denke an ΔG = ΔH − T·ΔS: Welche zwei Größen bestimmen Spontaneität?",
             "Exotherm bedeutet Wärmefreisetzung, nicht automatisch Spontaneität.",
           ],
-          tags: ["thermodynamik", "enthalpie", "spontaneitaet"],
+          tags: ["thermodynamik", "enthalpie", "spontaneität"],
           difficulty: 2,
         },
         {
@@ -953,8 +953,8 @@ gilt die Gleichgewichtskonstante K_c (konzentrationsbasiert):
 
 Die eckigen Klammern bezeichnen Gleichgewichtskonzentrationen in mol/L, die Hochzahlen sind die stöchiometrischen Koeffizienten. Wichtig: Reine Feststoffe und flüssiges Wasser (bei wässrigen Reaktionen) tauchen nicht im MWG auf, da ihre Aktivität (näherungsweise) 1 ist.
 
-**Beispiel (MedAT-relevant):** Für **Fe + 2 HCl ⇌ FeCl₂ + H₂** lautet das Massenwirkungsgesetz:
-**K = [FeCl₂]·[H₂] / ([Fe]·[HCl]²)** — der Koeffizient 2 vor HCl wird zum Exponenten bei [HCl].
+**Beispiel (MedAT-relevant):** Für **N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g)** lautet das Massenwirkungsgesetz:
+**K = [NH₃]² / ([N₂]·[H₂]³)** — die stöchiometrischen Koeffizienten werden zu Exponenten.
 
 **Reaktionsquotient Q:** Zu einem beliebigen Zeitpunkt berechnet man Q mit denselben Formeln. Vergleich von Q mit K_c:
 - Q < K_c: Reaktion läuft in Richtung Produkte (Hinreaktion überwiegt)
@@ -1517,7 +1517,7 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
         "endotherm",
         "Hess'scher Satz",
         "Bildungsenthalpie",
-        "Spontaneitaet",
+        "Spontaneität",
         "Delta-G",
         "Delta-H",
         "Delta-S",
@@ -1828,20 +1828,20 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
           question: "Was bedeutet ΔG < 0 für eine chemische Reaktion?",
           options: [
             "Die Reaktion ist exotherm.",
-            "Die Reaktion laeuft spontan ab (exergon).",
-            "Die Reaktion laeuft sehr schnell ab.",
+            "Die Reaktion läuft spontan ab (exergon).",
+            "Die Reaktion läuft sehr schnell ab.",
             "Die Entropie nimmt ab.",
             "Die Reaktion befindet sich im Gleichgewicht.",
           ],
           correctIndex: 1,
           explanation:
-            "ΔG < 0 bedeutet, dass die Reaktion thermodynamisch spontan (exergon) ist. Das heißt nicht, dass sie schnell ablaeuft — das hängt von der Aktivierungsenergie ab (Kinetik). Exotherm (ΔH < 0) ist nicht dasselbe wie exergon (ΔG < 0), weil die Entropie mitentscheidet.",
+            "ΔG < 0 bedeutet, dass die Reaktion thermodynamisch spontan (exergon) ist. Das heißt nicht, dass sie schnell abläuft — das hängt von der Aktivierungsenergie ab (Kinetik). Exotherm (ΔH < 0) ist nicht dasselbe wie exergon (ΔG < 0), weil die Entropie mitentscheidet.",
           hints: [
-            "Spontan = thermodynamisch beguenstigt, nicht Geschwindigkeit",
+            "Spontan = thermodynamisch begünstigt, nicht Geschwindigkeit",
             "ΔG kombiniert ΔH UND ΔS",
           ],
           difficulty: 1,
-          tags: ["gibbs-energie", "spontaneitaet", "exergon"],
+          tags: ["gibbs-energie", "spontaneität", "exergon"],
         },
         {
           question: "Welche Reaktion ist bei JEDER Temperatur spontan?",
@@ -1860,7 +1860,7 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
             "Negativ minus positiv = immer negativ",
           ],
           difficulty: 2,
-          tags: ["vier-faelle", "spontaneitaet", "temperatur"],
+          tags: ["vier-faelle", "spontaneität", "temperatur"],
         },
         {
           question:

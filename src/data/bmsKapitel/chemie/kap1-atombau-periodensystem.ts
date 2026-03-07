@@ -202,13 +202,13 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         {
           question: "Welchen entscheidenden Schluss zog Rutherford aus seinem Streuversuch?",
           options: [
-            "Elektronen sind auf festen Kreisbahnen um den Kern angeordnet.",
-            "Die positive Ladung ist gleichmäßig über das gesamte Atom verteilt.",
             "Die positive Ladung und fast die gesamte Masse sind in einem winzigen Atomkern konzentriert.",
+            "Die positive Ladung ist gleichmäßig über das gesamte Atom verteilt.",
+            "Elektronen sind auf festen Kreisbahnen um den Kern angeordnet.",
             "Atome lassen sich durch Alphabestrahlung in Isotope aufteilen.",
             "Elektronen kreisen ohne Energieabgabe auf stabilen Bahnen.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Das Ergebnis des Streuversuchs – die meisten Alphateilchen passierten die Folie ungehindert, wenige wurden stark abgelenkt oder zurückgeworfen – war nur erklärbar, wenn die positive Ladung und die Masse in einem extrem kleinen, dichten Kern konzentriert sind. Das widerlegte Thomsons Rosinenmodell, bei dem Ablenkungen viel geringer ausgefallen wären. Elektronen auf Kreisbahnen (Antwort A) ist Bohrs spätere Ergänzung. Gleichmäßige Ladungsverteilung (B) ist das Thomson-Modell, das Rutherfords Versuch gerade widerlegte.",
           hints: [
@@ -223,12 +223,12 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "Welches Ion ist korrekt beschrieben: ²³Na⁺ hat 11 Protonen, 12 Neutronen und 10 Elektronen.",
           options: [
             "Falsch – Na⁺ hat 11 Elektronen, da die Ladung durch Protonen entsteht.",
-            "Falsch – die Massenzahl 23 bedeutet 23 Neutronen.",
-            "Falsch – Natrium hat die Ordnungszahl 12.",
             "Richtig – Z = 11, N = 23 − 11 = 12, Ladung +1 bedeutet 1 Elektron weniger: 10.",
+            "Falsch – Natrium hat die Ordnungszahl 12.",
+            "Falsch – die Massenzahl 23 bedeutet 23 Neutronen.",
             "Falsch – Na⁺ hat 12 Protonen und 11 Neutronen.",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Natrium hat die Ordnungszahl Z = 11, also stets 11 Protonen. Die Massenzahl A = 23 ergibt N = A − Z = 23 − 11 = 12 Neutronen. Das einwertig positive Ion (Na⁺) entsteht durch Verlust eines Elektrons: 11 − 1 = 10 Elektronen. Diese Aufgabe prüft, ob man Z, A, N und Ionenladung korrekt zuordnen kann. Wichtig: Die Ionenladung verändert nur die Elektronenzahl, niemals die Protonenzahl.",
           hints: [
@@ -1668,7 +1668,7 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
           ],
           correctIndex: 2,
           explanation:
-            "Reines Wasser hat eine Osmolarität von 0 mOsmol/L — extrem hypototonisch gegenüber dem Zellinneren (Erythrozyt: ~300 mOsmol/L). Wasser strömt per Osmose durch die semipermeable Erythrozytenmembran in die Zelle, bis der osmotische Druck ausgeglichen ist oder die Membran reißt. Die Folge ist Hämolyse (Platzen der Erythrozyten) mit Freisetzung von Hämoglobin — klinisch: Hämoglobinurie, Nierenversagen möglich. Deswegen müssen alle i.v.-Lösungen isotonisch formuliert sein.",
+            "Reines Wasser hat eine Osmolarität von 0 mOsmol/L — extrem hypotonisch gegenüber dem Zellinneren (Erythrozyt: ~300 mOsmol/L). Wasser strömt per Osmose durch die semipermeable Erythrozytenmembran in die Zelle, bis der osmotische Druck ausgeglichen ist oder die Membran reißt. Die Folge ist Hämolyse (Platzen der Erythrozyten) mit Freisetzung von Hämoglobin — klinisch: Hämoglobinurie, Nierenversagen möglich. Deswegen müssen alle i.v.-Lösungen isotonisch formuliert sein.",
           hints: [
             "Wohin wandert Wasser bei der Osmose — zur höheren oder niedrigeren Konzentration?",
             "Der Erythrozyt hat eine höhere Innenkonzentration als das Außenmedium.",

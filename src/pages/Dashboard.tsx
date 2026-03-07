@@ -2,7 +2,6 @@ import { useMemo, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Award,
   BookOpen,
   ArrowRight,
   Target,
@@ -22,7 +21,6 @@ import { Progress } from "@/components/ui/progress";
 import { Heatmap } from "@/components/ui/heatmap";
 import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
-import { BadgeIcon } from "@/components/badges/BadgeIcon";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -33,18 +31,11 @@ import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
 import { shareText, getStreakShareText, getReferralShareText } from "@/lib/shareUtils";
-import {
-  getLevelFromXP,
-  getLevelProgressPercent,
-  getXPToNextLevel,
-  XP_PER_LEVEL,
-} from "@/lib/progression";
+import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { getPrognoseSummary } from "@/lib/prognoseScore";
-import { BADGE_DEFINITIONS } from "@/data/badges";
-import { getBadgeProgress } from "@/data/badges";
 import { alleKapitel } from "@/data/bmsKapitel";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 
@@ -66,8 +57,6 @@ export default function Dashboard() {
     unlockedFachMilestones,
     unlockFachMilestone,
     firstActivityTimeByDay,
-    maxConsecutiveCorrectEver,
-    smartRecoveryCount,
     lernplanConfig,
     setGoalAchievedToday,
     goalAchievedByDate,
@@ -158,7 +147,6 @@ export default function Dashboard() {
 
   const xp = profile.hasData ? profile.xp : Number.isFinite(storeXp) ? storeXp : 0;
   const level = getLevelFromXP(xp);
-  const levelProgress = getLevelProgressPercent(xp);
   useLevelUpSound(xp);
 
   const faecherIds = useMemo(() => ["biologie", "chemie", "physik", "mathematik"], []);
@@ -169,60 +157,6 @@ export default function Dashboard() {
       }
     });
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
-
-  const badgeState = useMemo(() => {
-    const totalQuestions = (quizResults ?? []).reduce((s, r) => s + r.total, 0);
-    const goalAchievedCount = Object.values(goalAchievedByDate ?? {}).filter(Boolean).length;
-    const quizResultsByType = (quizResults ?? []).reduce(
-      (acc, r) => {
-        if (r.type === "bms" || r.type === "simulation") acc.bms += 1;
-        else if (r.type === "kff") acc.kff += 1;
-        else if (r.type === "tv") acc.tv += 1;
-        else if (r.type === "sek") acc.sek += 1;
-        return acc;
-      },
-      { bms: 0, kff: 0, tv: 0, sek: 0 }
-    );
-    let dailyChallengeStreak = 0;
-    try {
-      dailyChallengeStreak = useAdaptiveStore.getState()?.profile?.dailyChallengeStreak ?? 0;
-    } catch {
-      // ignore
-    }
-    return {
-      completedChapters,
-      maxConsecutiveCorrectEver,
-      smartRecoveryCount,
-      firstActivityTimeByDay,
-      streak: streak ?? 0,
-      totalQuestions,
-      goalAchievedCount,
-      dailyChallengeStreak,
-      quizResultsByType,
-    };
-  }, [
-    completedChapters,
-    maxConsecutiveCorrectEver,
-    smartRecoveryCount,
-    firstActivityTimeByDay,
-    quizResults,
-    streak,
-    goalAchievedByDate,
-  ]);
-  const earnedBadgeIds = useStore((s) => s.earnedBadges ?? []);
-  const earnedBadges = useMemo(() => {
-    return BADGE_DEFINITIONS.filter(
-      (b) => getBadgeProgress(b.id, badgeState, alleKapitel).earned
-    ).slice(-3);
-  }, [badgeState]);
-  const newestFourBadges = useMemo(() => {
-    const ids = earnedBadgeIds.slice(-4);
-    const fromStore = ids
-      .map((id) => BADGE_DEFINITIONS.find((b) => b.id === id))
-      .filter((b): b is NonNullable<typeof b> => b != null);
-    if (fromStore.length > 0) return fromStore;
-    return earnedBadges.slice(-4);
-  }, [earnedBadgeIds, earnedBadges]);
 
   const cardClass =
     "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200";
@@ -245,8 +179,6 @@ export default function Dashboard() {
     startOfWeek.setHours(0, 0, 0, 0);
     return keys.filter((d) => d >= startOfWeek.toISOString().split("T")[0]).length;
   }, [firstActivityTimeByDay]);
-
-  const xpToNextLevel = getXPToNextLevel(xp);
 
   return (
     <div className="dashboard-page-bg">
@@ -424,7 +356,7 @@ export default function Dashboard() {
             className="grid grid-cols-1 gap-4"
           >
             <Link
-              to="/prognose"
+              to="/fortschritt"
               className="opacity-90 hover:opacity-100 transition-opacity max-w-md"
             >
               <div
@@ -452,90 +384,6 @@ export default function Dashboard() {
                 )}
               </div>
             </Link>
-          </motion.section>
-
-          {/* Motivationsleiste: Level links, Badges rechts daneben (eigene Zeile), dann Progress/Streak/Link */}
-          <motion.section variants={tileMotion} aria-label="Fortschritt">
-            <div
-              className={cn(
-                "rounded-xl border border-[var(--border)] p-5 shadow-sm",
-                "bg-linear-to-r from-emerald-50/60 via-[var(--card)] to-teal-50/40 dark:from-emerald-950/25 dark:via-[var(--card)] dark:to-teal-950/20"
-              )}
-            >
-              {/* Zeile 1: Level links, Badges rechts daneben (grid: Level | Badges) */}
-              <div className="grid grid-cols-[auto_1fr] items-center gap-4 mb-4">
-                <div className="flex items-center gap-3 shrink-0 min-w-0">
-                  <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                    <Award className="w-5 h-5 text-[var(--accent)]" />
-                  </div>
-                  <div className="shrink-0">
-                    <p className="text-lg font-bold text-[var(--text-primary)]">Level {level}</p>
-                    <p className="text-xs text-[var(--muted)]">{xp.toLocaleString()} XP</p>
-                  </div>
-                </div>
-                {newestFourBadges.length > 0 && (
-                  <div
-                    className="flex items-center justify-end gap-1.5 flex-nowrap min-w-0"
-                    aria-label="Neueste Badges"
-                  >
-                    {newestFourBadges.map((badge) => (
-                      <Link
-                        key={badge.id}
-                        to="/performance"
-                        className="focus:outline-none focus:ring-2 focus:ring-[var(--accent)] rounded-lg shrink-0"
-                        title={`${badge.name} – ${badge.description}`}
-                      >
-                        <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="sm" />
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              {/* Zeile 2: Progress, Streak, Link */}
-              <div className="flex flex-wrap items-center gap-6">
-                <div className="flex-1 min-w-[180px] max-w-xs">
-                  <Progress value={levelProgress} className="h-2 rounded-full" />
-                  <p className="text-xs text-[var(--text-secondary)] mt-1">
-                    Noch {xpToNextLevel} XP bis Level {level + 1}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 shrink-0">
-                  <StreakFlameIcon
-                    streak={flameStreak}
-                    hasActivityToday={flameHasActivity}
-                    size="sm"
-                    className="w-5 h-5 text-[var(--accent)]"
-                  />
-                  <span className="font-semibold text-[var(--text-primary)]">
-                    {flameStreak} Tage
-                  </span>
-                </div>
-                <Link
-                  to="/performance"
-                  className="text-sm font-medium text-[var(--accent)] hover:underline inline-flex items-center gap-1 shrink-0"
-                  title={
-                    earnedBadges.length > 0
-                      ? `${earnedBadges[earnedBadges.length - 1].name} – ${earnedBadges[earnedBadges.length - 1].description}`
-                      : "Badges anzeigen"
-                  }
-                >
-                  {earnedBadges.length > 0 ? (
-                    <>
-                      <BadgeIcon
-                        badgeId={earnedBadges[earnedBadges.length - 1].id}
-                        icon={earnedBadges[earnedBadges.length - 1].icon}
-                        earned
-                        size="sm"
-                      />
-                      Badges
-                    </>
-                  ) : (
-                    "Badges anzeigen"
-                  )}
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
           </motion.section>
 
           {/* Wochen-Aktivität + Legende */}

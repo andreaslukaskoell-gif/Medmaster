@@ -993,7 +993,7 @@ Drei Säure-Base-Definitionen bauen aufeinander auf, jede allgemeiner als die vo
 
 Diese Definition gilt auch für nicht-wässrige Lösungen und erklärt Protonenübertragungsreaktionen umfassend. Jede Säure-Base-Reaktion ist nach Brønsted eine **Protonenübertragung** zwischen einem Donor und einem Akzeptor.
 
-Beispiel: CH3COOH + H2O <=> CH3COO- + H3O+ (Säure1 + Base2 <=> Base1 + Säure2)
+Beispiel: CH3COOH + H2O ⇌CH3COO- + H3O+ (Säure1 + Base2 ⇌Base1 + Säure2)
 
 Aus jeder Säure entsteht nach Protonenabgabe die **korrespondierende (konjugierte) Base** – und umgekehrt. Säure und ihre korrespondierende Base unterscheiden sich immer genau um ein H⁺.
 
@@ -1017,7 +1017,7 @@ Wichtige Lewis-Säure-Base-Reaktion: BF3 + :NH3 --> F3B<-NH3 (Addukt; Lewis-S. +
 
 Wasser ist ein Amphoproton – es kann selbst mit sich selbst reagieren:
 
-H2O + H2O <=> H3O+ + OH-
+H2O + H2O ⇌H3O+ + OH-
 
 Diese Reaktion heißt **Autoprotolyse** des Wassers. Das Gleichgewicht liegt weit auf der linken Seite (Wasser ionisiert kaum). Das **Ionenprodukt des Wassers** ist:
 
@@ -1295,7 +1295,7 @@ Beispiel: 0,01 mol/L HCl -> [H3O+] = 0,01 = 10^-2 mol/L -> **pH = 2**
 
 **Schwache Säuren** dissoziieren nur teilweise. Es stellt sich ein Gleichgewicht ein:
 
-HA  +  H2O  <=>  H3O+  +  A-
+HA  +  H2O  ⇌ H3O+  +  A-
 
 Die **Säurekonstante Ka** (auch Ks) beschreibt dieses Gleichgewicht:
 
@@ -1329,13 +1329,13 @@ Beispiel: 0,1 mol/L Essigsäure (pKa = 4,75):
 Säuren können mehrere Protonen stufenweise abgeben. Jede Stufe hat eine eigene Säurekonstante, die bei jeder folgenden Stufe kleiner wird:
 
 **Phosphorsäure H3PO4:**
-- pKa1 ~ 2,15 (H3PO4 <=> H+ + H2PO4-)
-- pKa2 ~ 7,20 (H2PO4- <=> H+ + HPO4 2-) <- wichtig für Phosphatpuffer
-- pKa3 ~ 12,35 (HPO4 2- <=> H+ + PO4 3-)
+- pKa1 ~ 2,15 (H3PO4 ⇌H+ + H2PO4-)
+- pKa2 ~ 7,20 (H2PO4- ⇌H+ + HPO4 2-) <- wichtig für Phosphatpuffer
+- pKa3 ~ 12,35 (HPO4 2- ⇌H+ + PO4 3-)
 
 **Kohlensäure H2CO3:**
-- pKa1 ~ 6,35 (H2CO3 <=> H+ + HCO3-) <- wichtig für Blutpuffer
-- pKa2 ~ 10,33 (HCO3- <=> H+ + CO3 2-)
+- pKa1 ~ 6,35 (H2CO3 ⇌H+ + HCO3-) <- wichtig für Blutpuffer
+- pKa2 ~ 10,33 (HCO3- ⇌H+ + CO3 2-)
 
 ## Starke Basen: NaOH, KOH
 
@@ -1349,7 +1349,7 @@ Beispiel: 0,001 mol/L NaOH -> [OH-] = 10^-3 mol/L -> pOH = 3 -> pH = 11
 
 Schwache Basen (z. B. NH3, Amine) reagieren teilweise mit Wasser:
 
-B  +  H2O  <=>  BH+  +  OH-
+B  +  H2O  ⇌ BH+  +  OH-
 
 **Basenkonstante:** Kb = [BH+][OH-] / [B]
 
@@ -1380,7 +1380,7 @@ Die Lösung eines Salzes kann sauer, basisch oder neutral reagieren, abhängig d
 | Starke Säure + schwache Base | Sauer (pH < 7) | NH4Cl |
 | Schwache Säure + schwache Base | Abhängig von pKa/pKb | CH3COONH4 |
 
-Natriumacetat (CH3COONa) reagiert basisch, weil Acetat als konjugierte Base der schwachen Essigsäure Protonen aus dem Wasser aufnimmt: CH3COO- + H2O <=> CH3COOH + OH-.
+Natriumacetat (CH3COONa) reagiert basisch, weil Acetat als konjugierte Base der schwachen Essigsäure Protonen aus dem Wasser aufnimmt: CH3COO- + H2O ⇌CH3COOH + OH-.
 
 ## Klinische Relevanz
 
@@ -1674,7 +1674,7 @@ Die **Pufferkapazität** gibt an, wie viel Säure oder Base ein Puffer aufnehmen
 
 Das wichtigste Puffersystem im Blut ist das **Kohlensäure-Bicarbonat-System**:
 
-CO2(g)  <=>  CO2(aq)  +  H2O  <=>  H2CO3  <=>  H+  +  HCO3-
+CO2(g)  ⇌ CO2(aq)  +  H2O  ⇌ H2CO3  ⇌ H+  +  HCO3-
 
 Der effektive pKa im physiologischen Kontext (berücksichtigt CO2-Hydratation) beträgt **~ 6,1**.
 
@@ -1695,7 +1695,7 @@ Normalwerte im arteriellen Blut:
 
 Das Phosphat-Puffersystem (H2PO4-/HPO4 2-, pKa ~ 7,2) ist im Blutplasma weniger wichtig, aber entscheidend im **Urin** und **intrazellulär**:
 
-H2PO4-  <=>  H+  +  HPO4 2-     pKa ~ 7,2
+H2PO4-  ⇌ H+  +  HPO4 2-     pKa ~ 7,2
 
 Bei pH 7,4 überwiegt HPO4 2- (~80 %) über H2PO4- (~20 %).
 
@@ -2005,7 +2005,7 @@ Zeigen **mehrere Äquivalenzpunkte** (einen pro Protonierungsstufe). Bei H3PO4 g
 
 Indikatoren (HIn) sind selbst schwache Säuren, deren Protonierungs- und Deprotonierungsform unterschiedliche Farben haben:
 
-HIn  <=>  H+  +  In-
+HIn  ⇌ H+  +  In-
 (Farbe 1)      (Farbe 2)
 
 Der Farbumschlag erfolgt beim **pKa(HIn)**. Im Bereich **pKa +/- 1** sieht man eine Mischfarbe.
@@ -3184,10 +3184,6 @@ ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konze
 - Mitochondriale ROS regulieren Apoptose und Autophagie
 
 ---
-
-> **Merke:** Halogene (Gruppe 17) sind starke Oxidationsmittel -- ihre Reaktivität nimmt von Fluor nach Iod ab. Fluor ist das elektronegativste Element und reagiert mit fast allen Stoffen.
-
-> **Merke:** Halogenide sind klinisch bedeutsam: Fluorid härtet Zahnschmelz, Chlorid ist das wichtigste extrazelluläre Anion, Iodid ist essenziell für die Schilddrüsenhormonsynthese (T3, T4).
 
 > **Prüfungstipp:** ROS-Schutzkaskade merken: SOD (O₂·⁻ -> H₂O₂) -> Katalase/GPx (H₂O₂ -> H₂O). G6PD-Mangel = häufigste Enzymopathie weltweit = hämolytische Anämie bei Oxidantien. Fenton-Reaktion (Fe²⁺ + H₂O₂ -> ·OH) ist die gefährlichste ROS-Quelle.`,
       lernziele: [

@@ -311,7 +311,8 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
         pathname === "/schwachstellen" ||
         pathname.startsWith("/schwachstellen") ||
         pathname === "/statistik" ||
-        pathname === "/prognose"
+        pathname === "/prognose" ||
+        pathname === "/performance"
       );
     return pathname === to || (to !== "/" && pathname.startsWith(to + "/"));
   };

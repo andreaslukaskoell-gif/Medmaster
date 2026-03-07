@@ -444,7 +444,7 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
 
 
 
-Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Stoerung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
+Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
 
 
@@ -472,10 +472,10 @@ Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwech
 | Beispiele | Licht, Seilwellen | Schall, Druckwellen |
 
 **Transversalwellen**: Schwingungsrichtung **senkrecht** zur Ausbreitungsrichtung.
-Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflaechen­wellen, seismische S-Wellen.
+Beispiele: Licht (elektromagnetisch), Seilwellen, Wasseroberflächenwellen, seismische S-Wellen.
 Transversalwellen können **polarisiert** werden (nur eine Schwingungsebene). Polarisationsfilter (z. B. Sonnenbrillen) nutzen dieses Phänomen.
 
-**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verduennungen im Medium.
+**Longitudinalwellen**: Schwingungsrichtung **parallel** zur Ausbreitungsrichtung. Es entstehen abwechselnd Verdichtungen und Verdünnungen im Medium.
 Beispiele: Schallwellen, Druckwellen in Gasen und Flüssigkeiten, seismische P-Wellen.
 In Gasen und Flüssigkeiten können nur Longitudinalwellen existieren (keine Scherkräfte --> keine Transversalwellen). In Festkörpern existieren beide Typen.
 
@@ -519,7 +519,7 @@ Die **akustische Impedanz** Z beschreibt, wie leicht sich Schall in einem Medium
 
 **Z = Dichte * c** (mit Dichte = Dichte des Mediums in kg/m^3, c = Schallgeschwindigkeit in m/s, Einheit: Pa*s/m = Rayl)
 
-**Formelklartext:** Z = Dichte*c ist der Widerstand des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit --> hohe Impedanz. An Grenzflächen mit **grossem Z-Unterschied** (z. B. Luft-Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [Dichte]*[c] = (kg/m^3)*(m/s) = kg/(m^2*s) = Pa*s/m (Rayl).
+**Formelklartext:** Z = Dichte*c ist der Widerstand des Mediums gegen Schallausbreitung. Hohe Dichte oder hohe Schallgeschwindigkeit --> hohe Impedanz. An Grenzflächen mit **großem Z-Unterschied** (z. B. Luft-Gewebe) wird fast alles reflektiert; bei angeglichener Impedanz (Ultraschall-Gel) dringt der Schall ein. Einheit: [Dichte]*[c] = (kg/m^3)*(m/s) = kg/(m^2*s) = Pa*s/m (Rayl).
 
 Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschiedlicher Impedanz (Z_1 ungleich Z_2), wird ein Teil reflektiert (Echographie nutzt dies) und ein Teil transmittiert.
 
@@ -535,14 +535,14 @@ Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschi
 **Beispiel 1 -- Wellenlänge berechnen:**
 Ultraschall mit f = 5 MHz in Gewebe (c = 1540 m/s):
 Lambda = c/f = 1540 / (5 x 10^6) = 3,08 x 10^(-4) m = 0,308 mm.
-Die Auflösung liegt größenordnungsmaessig bei Lambda, also ca. 0,3 mm -- ausreichend für die meisten diagnostischen Zwecke.
+Die Auflösung liegt größenordnungsmäßig bei Lambda, also ca. 0,3 mm -- ausreichend für die meisten diagnostischen Zwecke.
 
 **Beispiel 2 -- Schallgeschwindigkeit und Eindringtiefe:**
 Ultraschallpuls in Gewebe, Echo nach t = 0,13 ms empfangen. Reflexionsort:
 d = c * t / 2 = 1540 * 0,00013 / 2 = 0,10 m = 10 cm (Hin- und Rückweg --> durch 2).
 
 **Beispiel 3 -- EM-Spektrum:**
-Sichtbares Licht (Lambda = 550 nm, gruen): f = c/Lambda = (3 x 10^8)/(550 x 10^(-9)) = 5,45 x 10^14 Hz.
+Sichtbares Licht (Lambda = 550 nm, grün): f = c/Lambda = (3 x 10^8)/(550 x 10^(-9)) = 5,45 x 10^14 Hz.
 Röntgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --> 10.000x höhere Frequenz und Energie als Licht.
 
 **Beispiel 4 -- Schallgeschwindigkeiten vergleichen:**
@@ -557,15 +557,15 @@ Röntgenstrahlung (Lambda = 0,1 nm): f = (3 x 10^8)/(10^(-10)) = 3 x 10^18 Hz --
 Die akustische Impedanz Z = Dichte * c bestimmt die Reflexion an Grenzflächen. Je größer der Impedanzunterschied, desto stärker die Reflexion (z. B. Gewebe-Knochen-Grenze: starkes Echo im Ultraschall). Der Reflexionskoeffizient berechnet sich als R = ((Z_2 - Z_1)/(Z_2 + Z_1))^2.
 
 **Beispiel 5 -- Reflexionskoeffizient Gewebe-Knochen:**
-R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,347 --> 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe-Luft waere R ungefähr 99,9 % -- deshalb ist Ultraschallgel essenziell.
+R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,347 --> 34,7 % des Ultraschalls werden reflektiert. An der Grenze Gewebe-Luft wäre R ungefähr 99,9 % -- deshalb ist Ultraschallgel essenziell.
 
 ## Klinische Vertiefung
 
-**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzfläche (Impedanzunterschied Luft-Haut waere riesig --> fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
+**Impedanzanpassung im Ultraschall:** Das Ultraschallgel zwischen Schallkopf und Haut eliminiert die Luft-Haut-Grenzfläche (Impedanzunterschied Luft-Haut wäre riesig --> fast 100% Reflexion). Mit Gel wird die akustische Impedanz angeglichen und der Ultraschall kann ins Gewebe eindringen.
 
 **Röntgen- vs. Ultraschall-Wellenlänge:** Röntgenstrahlen (Lambda ~ 0,01-10 nm) durchdringen Gewebe und werden je nach Dichte unterschiedlich absorbiert. Ultraschall (Lambda ~ 0,1-1 mm) wird an Impedanzgrenzen reflektiert. Beide Methoden nutzen Wellenphysik, aber fundamental unterschiedliche Mechanismen.
 
-**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden muessen.`,
+**Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.`,
 
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
@@ -999,7 +999,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
           ],
           correctIndex: 1,
           explanation:
-            "Beugung (Diffraktion) ist ein universelles Wellenphänomen – es tritt bei Schall, Licht und allen anderen Wellen auf. Der Effekt ist am ausgeprägtesten, wenn die Grösse des Hindernisses oder der Öffnung vergleichbar mit der Wellenlänge ist. Licht (λ ≈ 500 nm) beugt an Mikrostrukturen deutlich; Schall (λ ≈ 34 cm bei 1000 Hz) beugt um grosse Hindernisse wie Häuserecken. Die Frequenz bleibt bei Beugung unverändert.",
+            "Beugung (Diffraktion) ist ein universelles Wellenphänomen – es tritt bei Schall, Licht und allen anderen Wellen auf. Der Effekt ist am ausgeprägtesten, wenn die Größe des Hindernisses oder der Öffnung vergleichbar mit der Wellenlänge ist. Licht (λ ≈ 500 nm) beugt an Mikrostrukturen deutlich; Schall (λ ≈ 34 cm bei 1000 Hz) beugt um grosse Hindernisse wie Häuserecken. Die Frequenz bleibt bei Beugung unverändert.",
           hints: [
             "Beugung erlaubt Wellen, in Schattenbereiche vorzudringen – welche Bedingung gilt?",
             "Vergleich: Schall biegt um Häuserecken – Licht nicht (weil λ viel kleiner ist).",
@@ -1023,7 +1023,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
         },
         {
           question:
-            "Welche physikalische Grösse misst die Doppler-Sonographie beim Blutfluss direkt?",
+            "Welche physikalische Größe misst die Doppler-Sonographie beim Blutfluss direkt?",
           options: [
             "Die Dichte des Blutes",
             "Die Frequenzverschiebung der reflektierten Ultraschallwellen",
@@ -1092,7 +1092,7 @@ Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flöt
 
 Das nennt man **Tonotopie** -- jede Tonhöhe hat ihren eigenen Platz in der Schnecke.
 
-Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie unwiderruflich zerstoeren!
+Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie unwiderruflich zerstören!
 
 > **Merke:** Hohe Toene am Eingang der Schnecke, tiefe Toene am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
 
@@ -1433,11 +1433,11 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 | Frequenz | Eindringtiefe | Auflösung | Anwendung |
 |----------|---------------|-----------|-----------|
 | 2-3,5 MHz | 15-20 cm | ~1 mm | Abdomen, Herz (tief) |
-| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddruese, Gefäße |
-| 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflaechliche Strukturen |
+| 5-7,5 MHz | 5-10 cm | ~0,5 mm | Schilddrüse, Gefäße |
+| 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflächliche Strukturen |
 | 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
 
-**Zusammenhang:** Hoehere Frequenz: kürzere Wellenlänge (lambda = c/f): bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2): geringere Eindringtiefe.
+**Zusammenhang:** Höhere Frequenz: kürzere Wellenlänge (lambda = c/f): bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2): geringere Eindringtiefe.
 
 > **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, grosse Tiefe. Kompromiss je nach Fragestellung.
 
@@ -1464,7 +1464,7 @@ Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
 
 **Beispiel 5 — Ultraschall-Wellenlänge und Auflösung:**
 f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
-Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddruesenknoten (typisch 5-30 mm).
+Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddrüsenknoten (typisch 5-30 mm).
 
 ## Klinische Vertiefung
 

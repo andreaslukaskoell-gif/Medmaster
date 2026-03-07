@@ -476,7 +476,7 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
             "Drei Domänen des Lebens: Bacteria, Archaea, Eukarya.",
           ],
           difficulty: 2,
-          tags: ["archäen", "drei-domänen-modell", "carl wöse"],
+          tags: ["archäen", "drei-domänen-modell", "carl woese"],
         },
       ],
     },
@@ -1152,7 +1152,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
       ],
       content: `## Kernhülle und Kernporen: die selektive Schleuse
 
-**Um zu verstehen,** wie der Kern mit dem Zytoplasma kommuniziert, schauen wir uns zuerst die Hülle und die „Schleusen” an. Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
+Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen wäre keine Genregulation möglich. Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
 - **Äußere Kernmembran**: direkt verbunden mit dem rauen ER (trägt ebenfalls Ribosomen)
 - **Innere Kernmembran**: innen ausgekleidet durch die **Kernlamina** (Netz aus Lamin-Intermediärfilamenten → mechanische Stütze + Heterochromatin-Verankerung)
 - **Perinukleärer Spalt**: Raum zwischen beiden Membranen (kontinuierlich mit ER-Lumen)

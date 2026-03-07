@@ -200,8 +200,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
       selfTest: [
         {
           question: "Welcher Temperatur in °C entspricht 310 K?",
-          options: ["27 °C", "37 °C", "47 °C", "310 °C", "0 °C"],
-          correctIndex: 1,
+          options: ["37 °C", "27 °C", "47 °C", "310 °C", "0 °C"],
+          correctIndex: 0,
           explanation:
             "Die Umrechnung lautet T[°C] = T[K] − 273,15. Einsetzen: 310 K − 273,15 = 36,85 °C ≈ 37 °C. Dies entspricht der normalen menschlichen Körperkerntemperatur. Merkhilfe: Kelvin ist immer ca. 273 größer als der entsprechende Celsius-Wert.",
           hints: [
@@ -228,8 +228,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         {
           question:
             "Ein Stahlstab (α = 12 × 10⁻⁶ /K) hat bei 20 °C eine Länge von 2 m. Um wie viel verlängert er sich bei 120 °C?",
-          options: ["0,12 mm", "2,4 mm", "0,24 mm", "12 mm", "1,2 mm"],
-          correctIndex: 1,
+          options: ["0,12 mm", "0,24 mm", "2,4 mm", "12 mm", "1,2 mm"],
+          correctIndex: 2,
           explanation:
             "ΔL = α · L₀ · ΔT = 12 × 10⁻⁶ /K × 2 m × (120 − 20) K = 12 × 10⁻⁶ × 2 × 100 m = 2400 × 10⁻⁶ m = 2,4 × 10⁻³ m = 2,4 mm. Dieser scheinbar kleine Wert ist technisch relevant: Brücken und Schienen müssen Dehnungsfugen aufweisen, um Spannungen zu vermeiden.",
           hints: [
@@ -242,8 +242,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         {
           question:
             "300 g Wasser bei 80 °C werden mit 200 g Wasser bei 10 °C gemischt. Welche Mischtemperatur entsteht? (Wärmeverluste vernachlässigt)",
-          options: ["45 °C", "52 °C", "60 °C", "40 °C", "35 °C"],
-          correctIndex: 1,
+          options: ["45 °C", "40 °C", "60 °C", "52 °C", "35 °C"],
+          correctIndex: 3,
           explanation:
             "Energieerhaltung: m₁(T₁ − T_m) = m₂(T_m − T₂). Umstellen: T_m = (m₁T₁ + m₂T₂)/(m₁ + m₂) = (300 × 80 + 200 × 10)/(300 + 200) = (24000 + 2000)/500 = 26000/500 = 52 °C. Die Mischtemperatur liegt stets zwischen den Ausgangswerten, gewichtet nach den Massen.",
           hints: [
@@ -257,12 +257,12 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
           question: "Warum hat Wasser sein Dichtemaximum bei 4 °C und nicht bei 0 °C?",
           options: [
             "Weil Wasser bei 4 °C siedet.",
-            "Wegen der Wasserstoffbrückenbindungen, die beim Abkühlen unter 4 °C ein offenes Gitterwerk bilden und das Wasser ausdehnen.",
+            "Wegen der kovalenten Bindungen im Wassermolekül.",
             "Weil der osmotische Druck bei 4 °C maximal ist.",
             "Weil Wasser bei 0 °C gasförmig vorliegt.",
-            "Wegen der kovalenten Bindungen im Wassermolekül.",
+            "Wegen der Wasserstoffbrückenbindungen, die beim Abkühlen unter 4 °C ein offenes Gitterwerk bilden und das Wasser ausdehnen.",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Zwischen 0 und 4 °C bilden sich zunehmend geordnete Wasserstoffbrückennetzwerke im Wasser, die das Volumen vergrößern (weniger dichte Packung). Bei 4 °C ist der Kompromiss zwischen thermischer Bewegung und Netzwerkbildung optimal — maximale Dichte. Unter 4 °C dominiert die Gitterstruktur (wie im Eis), das Volumen nimmt zu, die Dichte sinkt. Diese Anomalie ist biologisch fundamental: Seen frieren von oben, Grundwasser bleibt bei 4 °C und schützt aquatische Organismen.",
           hints: [
@@ -274,8 +274,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         },
         {
           question: "Ein Patient hat 39,5 °C Fieber. Wie viel Grad Fahrenheit entspricht das?",
-          options: ["98,6 °F", "103,1 °F", "100,0 °F", "107,1 °F", "39,5 °F"],
-          correctIndex: 1,
+          options: ["103,1 °F", "98,6 °F", "100,0 °F", "107,1 °F", "39,5 °F"],
+          correctIndex: 0,
           explanation:
             "Umrechnung: T[°F] = T[°C] × 1,8 + 32 = 39,5 × 1,8 + 32 = 71,1 + 32 = 103,1 °F. Zum Vergleich: Normaltemperatur 37 °C = 98,6 °F. Werte über 103 °F gelten in US-amerikanischer Klinik als hohes Fieber und erfordern in der Regel antifebrile Behandlung.",
           hints: [
@@ -569,8 +569,8 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
         {
           question:
             "Eine Fettschicht von 2 cm Dicke (λ = 0,2 W/(m·K)) bedeckt eine Fläche von 0,5 m². Die Körperkerntemperatur beträgt 37 °C, die Hautoberfläche 33 °C. Welcher Wärmestrom fließt durch die Fettschicht?",
-          options: ["2 W", "20 W", "200 W", "0,2 W", "10 W"],
-          correctIndex: 1,
+          options: ["20 W", "2 W", "200 W", "0,2 W", "10 W"],
+          correctIndex: 0,
           explanation:
             "Fouriersches Gesetz: Q̇ = λ · A · ΔT / d = 0,2 W/(m·K) × 0,5 m² × (37 − 33) K / 0,02 m = 0,2 × 0,5 × 4 / 0,02 = 0,4 / 0,02 = 20 W. Dies entspricht etwa der Leistung einer schwachen Glühbirne und ist eine realistische Abschätzung des Wärmeverlusts des ruhenden Menschen durch Konduktion.",
           hints: [
@@ -585,12 +585,12 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "Welche der folgenden Materialien eignet sich am besten als Wärmeisolation bei Wundverbänden?",
           options: [
             "Kupferdraht (λ = 380 W/(m·K))",
-            "Schaumstoffverband (λ ≈ 0,04 W/(m·K), enthält viel Luft)",
             "Aluminiumfolie (λ = 200 W/(m·K))",
+            "Schaumstoffverband (λ ≈ 0,04 W/(m·K), enthält viel Luft)",
             "Feuchte Gaze (λ = 0,6 W/(m·K))",
             "Stahlgitter (λ = 50 W/(m·K))",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Isolierende Materialien haben eine niedrige Wärmeleitfähigkeit λ. Schaumstoffverbände enthalten viel eingeschlossene Luft (λ_Luft ≈ 0,026 W/(m·K)), was die effektive λ des Verbands auf ≈ 0,04 W/(m·K) senkt. Kupfer und Aluminium (hohe λ) würden Wärme rasch ableiten und die Wundheilung beeinträchtigen. Feuchte Gaze leitet besser als trockener Schaumstoff, da Wasser λ = 0,6 W/(m·K) hat.",
           hints: [
@@ -605,12 +605,12 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "Ein Körper strahlt bei 37 °C (310 K) eine bestimmte Leistung P₁ ab. Bei 42 °C (315 K) beträgt die abgestrahlte Leistung P₂. Wie ändert sich die Strahlungsleistung näherungsweise? (Stefan-Boltzmann-Gesetz)",
           options: [
             "Sie steigt um etwa 1,6 %",
-            "Sie steigt um etwa 6,6 %",
-            "Sie steigt um etwa 13,2 %",
             "Sie verdoppelt sich",
+            "Sie steigt um etwa 13,2 %",
+            "Sie steigt um etwa 6,6 %",
             "Sie sinkt um 1,6 %",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "P ∝ T⁴. Verhältnis: P₂/P₁ = (T₂/T₁)⁴ = (315/310)⁴ = (1,01613)⁴ ≈ 1,066 → Zunahme um ≈ 6,6 %. Obwohl die Temperaturdifferenz nur 5 K beträgt (≈ 1,6 % mehr in Kelvin), steigt die Strahlungsleistung wegen der vierten Potenz um 6,6 %. Bei Fieber erhöht sich die Wärmeabgabe durch Strahlung merklich.",
           hints: [
@@ -624,12 +624,12 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
           question: "Warum frieren Frühgeborene schneller als reife Neugeborene?",
           options: [
             "Weil ihr Blutvolumen größer ist",
-            "Wegen des ungünstigen Verhältnisses von Körperoberfläche zu Körpervolumen und geringer Fettschicht",
+            "Weil ihre Lungenkapazität kleiner ist",
             "Weil sie mehr Schweißdrüsen haben",
             "Weil ihr Herzschlag langsamer ist",
-            "Weil ihre Lungenkapazität kleiner ist",
+            "Wegen des ungünstigen Verhältnisses von Körperoberfläche zu Körpervolumen und geringer Fettschicht",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Frühgeborene haben aufgrund ihrer geringen Größe ein ungünstiges Verhältnis von Oberfläche (A) zu Volumen (V): A/V ∝ 1/r. Je kleiner der Körper, desto größer ist die relative Oberfläche. Da Wärmeverlust durch Strahlung (∝ A) und Konduktion (∝ A) proportional zur Oberfläche ist, verlieren kleine Körper relativ mehr Wärme. Zusätzlich fehlt Frühgeborenen die isolierende Unterhautfettschicht (wenig subkutanes Fettgewebe), was λ_gesamt erhöht. Auch braunes Fettgewebe ist weniger entwickelt, sodass sie weniger thermogenetisch reagieren können.",
           hints: [
@@ -877,13 +877,13 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
           question:
             "Ein ideales Gas wird isochor von 20 °C auf 80 °C erhitzt. Welche Aussage ist korrekt?",
           options: [
-            "Das Gas verrichtet Arbeit an der Umgebung.",
             "Die gesamte zugeführte Wärme geht in die Erhöhung der inneren Energie.",
+            "Das Gas verrichtet Arbeit an der Umgebung.",
             "Die innere Energie bleibt konstant.",
             "Das Gas kühlt sich ab.",
             "Es findet kein Wärmeaustausch statt.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Bei isochorer Zustandsänderung gilt V = const, daher ist die Volumenarbeit W = −p·ΔV = 0. Nach dem ersten Hauptsatz folgt: ΔU = Q + 0 = Q. Die gesamte zugeführte Wärme erhöht die innere Energie des Gases, was sich als Temperaturanstieg manifestiert. Bei konstantem Volumen findet also kein Energieaustausch durch mechanische Arbeit statt.",
           hints: [
@@ -896,8 +896,8 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         {
           question:
             "Eine Wärmekraftmaschine arbeitet zwischen T_warm = 500 K und T_kalt = 250 K. Welchen maximalen Wirkungsgrad kann sie theoretisch erreichen?",
-          options: ["25 %", "50 %", "75 %", "100 %", "38 %"],
-          correctIndex: 1,
+          options: ["25 %", "75 %", "50 %", "100 %", "38 %"],
+          correctIndex: 2,
           explanation:
             "Der Carnot-Wirkungsgrad gibt die theoretische Obergrenze an: η = 1 − T_kalt/T_warm = 1 − 250/500 = 1 − 0,5 = 0,5 = 50 %. Reale Maschinen erreichen diesen Wert nie, da Reibung, Wärmeleitung und andere Irreversibilitäten auftreten. Ein Wirkungsgrad von 100 % würde den zweiten Hauptsatz verletzen.",
           hints: [
@@ -911,12 +911,12 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
           question: "Ein Gas wird adiabatisch komprimiert. Was passiert mit der Temperatur?",
           options: [
             "Die Temperatur bleibt konstant.",
-            "Die Temperatur steigt.",
-            "Die Temperatur sinkt.",
             "Die Temperatur hängt nur vom Volumen ab.",
+            "Die Temperatur sinkt.",
+            "Die Temperatur steigt.",
             "Keine Temperaturänderung, da Q = 0.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Adiabatisch bedeutet Q = 0 (kein Wärmeaustausch). Bei Kompression wird Arbeit am System verrichtet: W > 0. Aus dem ersten Hauptsatz folgt: ΔU = Q + W = 0 + W = W > 0. Steigende innere Energie bedeutet steigende Temperatur (da U ∝ T für ideale Gase). Praktisches Beispiel: Dieselmotor — Luft wird adiabatisch so stark komprimiert, dass die Temperatur über den Zündpunkt des Kraftstoffs steigt.",
           hints: [
@@ -931,12 +931,12 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
             "Die ATP-Synthese in den Mitochondrien hat einen Wirkungsgrad von ca. 38 %. Was geschieht mit den restlichen 62 % der Energie der Nahrung?",
           options: [
             "Sie werden in ADP gespeichert.",
-            "Sie werden als Wärme an den Körper und die Umgebung abgegeben.",
+            "Sie werden direkt als mechanische Arbeit genutzt.",
             "Sie verlassen den Körper als Licht.",
             "Sie werden in Fett umgewandelt.",
-            "Sie werden direkt als mechanische Arbeit genutzt.",
+            "Sie werden als Wärme an den Körper und die Umgebung abgegeben.",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Gemäß dem zweiten Hauptsatz kann kein Prozess 100 % der Energie in eine andere Form umwandeln. Bei der oxidativen Phosphorylierung werden ≈ 38 % der freien Enthalpie der Glucose (ΔG° = −2870 kJ/mol) in ATP-Bindungsenergie überführt. Die verbleibenden ≈ 62 % werden als Wärme freigesetzt und halten die Körpertemperatur bei 37 °C aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zum Energieumsatz — daher erhöht sich die Körpertemperatur bei Sport leicht.",
           hints: [

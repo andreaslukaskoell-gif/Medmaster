@@ -1205,7 +1205,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
     },
     {
-      id: "bio-4-01",
+      id: "bio-4-01e",
       title: "Befruchtung",
       stichworte: [
         "Befruchtung",
@@ -1219,7 +1219,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Ort und zeitliche Einordnung
 
-**Um die Befruchtung einzuordnen,** betrachten wir zuerst **Ort** und **Zeitpunkt**. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
+Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort dieses Treffens ist genau festgelegt. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
 
 ---
 
