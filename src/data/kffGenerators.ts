@@ -576,6 +576,13 @@ const OPTION_E_LABEL = "Keine der Antwortmöglichkeiten ist richtig.";
 export function generateAllergyCards(count: number = 8): AllergyCard[] {
   const usedNames = new Set<string>();
   const cards: AllergyCard[] = [];
+  // Balanced blood group + medication distribution
+  const bgCycle = shuffle([...BLOOD_GROUPS_GM, ...BLOOD_GROUPS_GM, ...BLOOD_GROUPS_GM]).slice(
+    0,
+    count
+  );
+  const medHalf = Math.ceil(count / 2);
+  const medCycle = shuffle([...Array(medHalf).fill(true), ...Array(count - medHalf).fill(false)]);
 
   for (let i = 0; i < count; i++) {
     let name = generateName();
@@ -590,11 +597,11 @@ export function generateAllergyCards(count: number = 8): AllergyCard[] {
       id: `card-${i + 1}`,
       name,
       geburtsdatum: generateDate(),
-      blutgruppe: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
+      blutgruppe: bgCycle[i],
       allergien,
       ausweisnummer: generateAusweisnummer(),
       land: COUNTRIES[randInt(0, COUNTRIES.length - 1)],
-      medikamente: Math.random() > 0.5,
+      medikamente: medCycle[i],
     });
   }
 
@@ -649,13 +656,8 @@ export function generateMemoryQuestions(
       pool: cards.map((c) => c.ausweisnummer),
       type: "name-ausweisnummer",
     }),
-    // Name → Medikamente
-    (card) => ({
-      text: `Nimmt ${card.name} regelmäßig Medikamente ein?`,
-      correct: card.medikamente ? "ja" : "nein",
-      pool: ["ja", "nein"],
-      type: "name-medikamente",
-    }),
+    // Name → Medikamente — skipped (binary ja/nein doesn't fit 5-option A–E format)
+    () => null,
     // Ausweisnummer → Name
     (card) => ({
       text: `Wem gehört die Ausweisnummer ${card.ausweisnummer}?`,
@@ -756,6 +758,16 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
   const passes: AllergyPass[] = [];
   const avatars = getAvatarPool(count);
 
+  // Pre-shuffle blood groups for balanced distribution (cycle through all 4)
+  const bloodGroupCycle = shuffle([
+    ...BLOOD_GROUPS_GM,
+    ...BLOOD_GROUPS_GM,
+    ...BLOOD_GROUPS_GM,
+  ]).slice(0, count);
+  // Pre-shuffle medications for ~50/50 balance (not pure random)
+  const medHalf = Math.ceil(count / 2);
+  const medCycle = shuffle([...Array(medHalf).fill(true), ...Array(count - medHalf).fill(false)]);
+
   for (let i = 0; i < count; i++) {
     let name = generateName();
     while (usedNames.has(name)) name = generateName();
@@ -781,8 +793,8 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
       id: `gm-pass-${i + 1}-${Date.now()}`,
       name,
       birthdate,
-      bloodGroup: BLOOD_GROUPS_GM[randInt(0, BLOOD_GROUPS_GM.length - 1)],
-      medications: Math.random() > 0.5,
+      bloodGroup: bloodGroupCycle[i],
+      medications: medCycle[i],
       allergies: allergien,
       passportNumber,
       country,
@@ -859,19 +871,8 @@ export function generateGedaechtnisQuestionsFromPasses(
       correct: allergyByPass.get(p.id) ?? "",
       pool: allAllergyOptions,
     }),
-    // 5: Name → Medikamente (was missing!)
-    (p) => ({
-      question: `Nimmt ${p.name} regelmäßig Medikamente ein?`,
-      correct: p.medications ? "Ja" : "Nein",
-      pool: [
-        "Ja",
-        "Nein",
-        ...passes
-          .filter((x) => x.id !== p.id)
-          .slice(0, 2)
-          .map((x) => `${x.name}: ${x.medications ? "Ja" : "Nein"}`),
-      ],
-    }),
+    // 5: Name → Medikamente — skipped at runtime (wrongPool < 3 for binary Ja/Nein)
+    () => null,
 
     // ── Reverse lookups (Attribut → Name) ──
     // 6: Ausweisnummer → Name
@@ -929,12 +930,8 @@ export function generateGedaechtnisQuestionsFromPasses(
       correct: p.bloodGroup,
       pool: [...BLOOD_GROUPS_GM] as string[],
     }),
-    // 13: Land → Medikamente
-    (p) => ({
-      question: `Nimmt die Person aus ${p.country} Medikamente ein?`,
-      correct: p.medications ? "Ja" : "Nein",
-      pool: ["Ja", "Nein"],
-    }),
+    // 13: Land → Medikamente — skipped (binary Ja/Nein doesn't fit 5-option A–E format)
+    () => null,
     // 14: Land → Allergien
     (p) => ({
       question: `Welche Allergie/n hat die Person aus ${p.country}?`,
@@ -1660,12 +1657,9 @@ const CONFUSING_LETTERS: Record<string, string[]> = {
 };
 
 /**
- * Selects distractor letters for WF options using a priority system:
- * 1. Letters visually/phonetically similar to correct but NOT in the word (hardest — forces full reconstruction)
- * 2. Letters similar to correct that ARE in the word (medium)
- * 3. Other word letters not similar to correct (easier, but still plausible)
- * 4. Random external letters (filler)
- * Mixing internal and external letters prevents the trivial elimination-by-membership strategy.
+ * Selects distractor letters for WF options.
+ * Official IB WF 26: ALL option letters (A-D) must come from the given letter set.
+ * Priority: 1. confusing word letters, 2. other word letters, 3. external fallback (only if word has <5 unique letters).
  */
 function pickSmartDistractors(
   correctFirst: string,
@@ -1673,38 +1667,18 @@ function pickSmartDistractors(
   count: number
 ): string[] {
   const confusing = CONFUSING_LETTERS[correctFirst] ?? [];
-  const externalConfusing = shuffle(confusing.filter((l) => !wordLetterSet.has(l)));
+  // Priority 1: letters in the word that are visually/phonetically confusing with the correct answer
   const internalConfusing = shuffle(
     confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst)
   );
+  // Priority 2: other letters in the word
   const otherWordLetters = shuffle(
     [...wordLetterSet].filter((l) => l !== correctFirst && !confusing.includes(l))
   );
-  const otherExternal = shuffle(
-    ALL_LETTERS.filter((l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l))
-  );
+  // Priority 3: external fallback only if word has fewer unique letters than needed
+  const externalFallback = shuffle(confusing.filter((l) => !wordLetterSet.has(l)));
 
-  // Build priority pool but inject 1 random external letter at position 1-2
-  // to break the per-letter distractor fingerprint (prevents "N,M,K = always H" pattern)
-  const priorityPool = [
-    ...externalConfusing,
-    ...internalConfusing,
-    ...otherWordLetters,
-    ...otherExternal,
-  ];
-  const pool: string[] = [];
-  const injected = otherExternal.length > 0 ? otherExternal[0]! : null;
-  let injectedAt = false;
-  for (const l of priorityPool) {
-    // After 1 confusing letter, inject a random non-confusing external letter ~50% of the time
-    if (!injectedAt && pool.length === 1 && injected && Math.random() < 0.5) {
-      pool.push(injected);
-      injectedAt = true;
-    }
-    if (l !== injected || !injectedAt) {
-      pool.push(l);
-    }
-  }
+  const pool = [...internalConfusing, ...otherWordLetters, ...externalFallback];
 
   const result: string[] = [];
   const used = new Set<string>([correctFirst]);
@@ -2364,9 +2338,13 @@ export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
  * Min distinct letters lowered from 5→3 (external distractors fill the gap).
  */
 export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
-  const pool = TRAINING_WF_WORDS[difficulty];
+  // Official IB WF 26: words are 7-10 letters — borrow from diff 2 if diff 1 has none
+  const allPools = [
+    ...TRAINING_WF_WORDS[difficulty],
+    ...(difficulty === 1 ? TRAINING_WF_WORDS[2] : []),
+  ];
   const officialWords = new Set(OFFICIAL_WF_EXAMPLES.map((o) => o.solutionWord.toUpperCase()));
-  const allowed = pool.filter((w) => !officialWords.has(w.toUpperCase()));
+  const allowed = allPools.filter((w) => !officialWords.has(w.toUpperCase()) && w.length >= 7);
   if (allowed.length === 0) {
     return generateWordFluencyTaskFallback(difficulty);
   }
@@ -2416,7 +2394,10 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
 
 function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
   const pool = TRAINING_WF_WORDS[difficulty];
-  const withEnoughLetters = pool.filter((w) => new Set(w.toUpperCase().split("")).size >= 3);
+  // Official IB WF 26: minimum 7 letters + at least 3 distinct
+  const withEnoughLetters = pool.filter(
+    (w) => w.length >= 7 && new Set(w.toUpperCase().split("")).size >= 3
+  );
   const usePool = withEnoughLetters.length > 0 ? withEnoughLetters : pool;
   for (let tryCount = 0; tryCount < 10; tryCount++) {
     const word = usePool[randInt(0, usePool.length - 1)].toUpperCase();
@@ -3216,14 +3197,20 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
   },
 ];
 
-/** MedAT-Stil: Optionen A–D bilden IMMER das systematische 4er-Gitter mit gleichem Subjekt+Prädikat. */
+/** MedAT-Stil: Optionen A–D bilden das systematische 4er-Gitter mit gleichem Subjekt+Prädikat, Position zufällig. */
 function buildOptionGrid(subj: string, pred: string): [string, string, string, string] {
-  return [
+  const base: [string, string, string, string] = [
     `Alle ${subj} sind ${pred}.`,
     `Alle ${subj} sind keine ${pred}.`,
     `Einige ${subj} sind ${pred}.`,
     `Einige ${subj} sind keine ${pred}.`,
   ];
+  // Shuffle A–D positions to eliminate answer-position bias (Fisher-Yates)
+  for (let i = 3; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [base[i], base[j]] = [base[j], base[i]];
+  }
+  return base;
 }
 
 /** Extrahiert Subjekt und Prädikat aus einer Schlussfolgerung wie "Alle X sind (keine) Y". */

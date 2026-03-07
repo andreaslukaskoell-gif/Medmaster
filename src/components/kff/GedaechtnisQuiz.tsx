@@ -219,7 +219,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
 }
 
 export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onBack: () => void }) {
-  const [learnMinutes, setLearnMinutes] = useState(5);
+  const [learnMinutes, setLearnMinutes] = useState(8);
   const [secondsLeft, setSecondsLeft] = useState(learnMinutes * 60);
   const [started, setStarted] = useState(false);
   const passes = useMemo(() => _currentGmPasses, []);

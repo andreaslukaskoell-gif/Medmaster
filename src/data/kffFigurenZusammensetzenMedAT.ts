@@ -1274,7 +1274,7 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
  * The generator validates pre-rotation; re-validation only checks structural integrity.
  */
 export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = false): boolean {
-  if (task.pieces.length < 2 || task.pieces.length > 7 || task.options.length !== 5) return false;
+  if (task.pieces.length < 2 || task.pieces.length > 8 || task.options.length !== 5) return false;
   if (task.targetShapeId != null && !TARGET_SHAPE_IDS.includes(task.targetShapeId)) return false;
   if (!skipGeometric) {
     if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
@@ -1820,6 +1820,114 @@ function splitPolygonByPolyline(poly: Polygon, cutPoints: Pt2[]): [Polygon, Poly
   return [{ points: sideA }, { points: sideB }];
 }
 
+/**
+ * Grid-based cutting: overlay randomized grid lines across the polygon.
+ * Reliably produces 6-8 pieces for hard tasks (IB FZ 26 examples 3-4).
+ * Lines span the full bounding box so they always intersect the polygon.
+ */
+function applyGridCuts(
+  target: Polygon,
+  targetPieceCount: number,
+  rng: () => number,
+  difficulty: FZDifficulty
+): Polygon[] | null {
+  const bbox = polygonBBox(target);
+  const targetArea = polygonArea(target);
+  const minPieceArea = targetArea * 0.015; // allow small fragments like official examples
+
+  // Rotate the grid slightly for visual variety (±15°)
+  const gridAngle = (rng() * 30 - 15) * (Math.PI / 180);
+
+  // Generate grid lines: we need ~sqrt(targetPieceCount) lines in each direction
+  // For 6-8 pieces: 2-3 horizontal + 2-3 vertical lines
+  const margin = Math.max(bbox.width, bbox.height) * 0.6; // extend lines beyond bbox
+  const cx = bbox.minX + bbox.width / 2;
+  const cy = bbox.minY + bbox.height / 2;
+
+  // Grid line counts: (hCount+1)*(vCount+1) grid cells, polygon clips to ~60-75% → 6-8 pieces
+  const hCount = 1 + Math.floor(rng() * 2); // 1-2 horizontal-ish lines
+  const vCount = 2 + Math.floor(rng() * 2); // 2-3 vertical-ish lines
+
+  const cutLines: [Pt2, Pt2][] = [];
+
+  const cos = Math.cos(gridAngle);
+  const sin = Math.sin(gridAngle);
+
+  // Helper: rotate point (px, py) around (cx, cy) by gridAngle
+  const rotPt = (px: number, py: number): Pt2 => ({
+    x: rd(cx + (px - cx) * cos - (py - cy) * sin),
+    y: rd(cy + (px - cx) * sin + (py - cy) * cos),
+  });
+
+  // Horizontal-ish lines
+  for (let i = 0; i < hCount; i++) {
+    const frac = (i + 0.5) / hCount;
+    const jitter = rng() * 0.3 - 0.15;
+    const t = Math.max(0.15, Math.min(0.85, frac + jitter));
+    const ly = bbox.minY + t * bbox.height;
+    cutLines.push([rotPt(cx - margin, ly), rotPt(cx + margin, ly)]);
+  }
+
+  // Vertical-ish lines
+  for (let i = 0; i < vCount; i++) {
+    const frac = (i + 0.5) / vCount;
+    const jitter = rng() * 0.3 - 0.15;
+    const t = Math.max(0.15, Math.min(0.85, frac + jitter));
+    const lx = bbox.minX + t * bbox.width;
+    cutLines.push([rotPt(lx, cy - margin), rotPt(lx, cy + margin)]);
+  }
+
+  // Optional diagonal line (50% chance) — adds asymmetry, helps triangles
+  if (rng() < 0.5) {
+    const dt = 0.2 + rng() * 0.6; // offset from corner
+    cutLines.push([
+      rotPt(bbox.minX + dt * bbox.width, bbox.minY - margin * 0.3),
+      rotPt(bbox.minX + (1 - dt) * bbox.width, bbox.minY + bbox.height + margin * 0.3),
+    ]);
+  }
+
+  // Shuffle cut order for variety
+  for (let i = cutLines.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [cutLines[i], cutLines[j]] = [cutLines[j], cutLines[i]];
+  }
+
+  // Apply cuts sequentially — each line splits every existing piece it intersects
+  let pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
+
+  for (const [lA, lB] of cutLines) {
+    // Stop if we already have enough pieces
+    if (pieces.length >= 8) break;
+
+    const nextPieces: Polygon[] = [];
+    for (const piece of pieces) {
+      // Grid cuts use straight lines — the grid intersection pattern provides complexity
+      const result = splitPolygonByLine(piece, lA, lB);
+
+      if (result) {
+        const [a, b] = result;
+        // Keep both halves if they have sufficient area
+        if (polygonArea(a) >= minPieceArea && polygonArea(b) >= minPieceArea) {
+          nextPieces.push(a, b);
+        } else {
+          nextPieces.push(piece); // line barely clips — keep original
+        }
+      } else {
+        nextPieces.push(piece); // line doesn't intersect this piece
+      }
+    }
+    pieces = nextPieces;
+  }
+
+  // Validate piece count and area conservation
+  if (pieces.length < 4) return null; // grid approach should produce at least 4
+
+  const totalArea = pieces.reduce((s, p) => s + polygonArea(p), 0);
+  if (Math.abs(totalArea - targetArea) / targetArea > 0.02) return null; // >2% area loss
+
+  return pieces;
+}
+
 /** Mehrere asymmetrische Schnitte nacheinander: Immer das größte Stück schneiden. */
 function applyAsymmetricCuts(
   target: Polygon,
@@ -1829,12 +1937,13 @@ function applyAsymmetricCuts(
 ): Polygon[] | null {
   const pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
   const targetArea = polygonArea(target);
-  const minPieceArea = targetArea * 0.05; // min 5% per piece
+  // Allow smaller pieces for higher cut counts (official examples have tiny fragments)
+  const minPieceArea = targetArea * (numCuts >= 5 ? 0.02 : 0.05);
 
   let successfulCuts = 0;
   for (
     let totalAttempts = 0;
-    totalAttempts < numCuts * 4 && successfulCuts < numCuts;
+    totalAttempts < numCuts * 6 && successfulCuts < numCuts;
     totalAttempts++
   ) {
     // Find largest piece
@@ -1883,22 +1992,24 @@ function applyAsymmetricCuts(
     if (ratio > 0.95) return null; // only reject near-identical halves
   }
 
-  // For medium/hard: largest piece should be >= 1.5× smallest
-  if (pieces.length >= 3) {
+  // For 3-4 pieces: largest should be >= 1.5× smallest (avoid boring equal splits)
+  // For 5+ pieces: relax — official examples have varied fragment sizes
+  if (pieces.length >= 3 && pieces.length <= 4) {
     const areas = pieces.map((p) => polygonArea(p));
     const maxA = Math.max(...areas);
     const minA = Math.min(...areas);
-    if (minA > 0 && maxA / minA < 1.5) return null; // too uniform
+    if (minA > 0 && maxA / minA < 1.5) return null;
   }
 
   return pieces;
 }
 
-/** Anzahl Schnitte pro Schwierigkeitsstufe. */
+/** Anzahl Schnitte pro Schwierigkeitsstufe (IB FZ 26: easy=2pc, medium=3-5pc, hard=5-8pc).
+ *  Requests more cuts than minimum needed — the cut system produces as many as it can. */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
   if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
-  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
-  return 4 + Math.floor(rng() * 3); // 4-6 cuts → 5-7 pieces
+  if (diff === "medium") return 3 + Math.floor(rng() * 3); // 3-5 cuts → 4-6 pieces
+  return 7 + Math.floor(rng() * 4); // 7-10 cuts → target 6-8 pieces (system manages ~5-8)
 }
 
 /**
@@ -1917,7 +2028,19 @@ export function cutPolygonStrategically(
       : Math.floor(rng() * SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
-  // Try asymmetric cuts first (authentic look, with complex cuts for medium/hard)
+  // Hard difficulty: try grid-based cuts first for reliable 6-8 pieces (IB FZ 26 examples 3-4)
+  if (difficulty === "hard") {
+    const gridPieces = applyGridCuts(target, 7, rng, difficulty);
+    if (gridPieces && gridPieces.length >= 6) {
+      const totalArea = gridPieces.reduce((s, p) => s + polygonArea(p), 0);
+      const tgtArea = polygonArea(target);
+      if (Math.abs(totalArea - tgtArea) / tgtArea < 0.02) {
+        return { target, pieces: gridPieces };
+      }
+    }
+  }
+
+  // Try asymmetric cuts (authentic look, with complex cuts for medium/hard)
   const nCuts = numCutsForDifficulty(difficulty, rng);
   const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
   if (asymPieces && asymPieces.length >= 2) {
@@ -1973,7 +2096,7 @@ export function generateFigurenTrainingTask(
 ): FigureAssembleTask {
   const rng = createRng(seed);
   // ~15% of tasks have E as correct answer (target not among A-D)
-  const makeECorrect = rng() < 0.15;
+  const makeECorrect = rng() < 0.08;
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
@@ -2030,13 +2153,14 @@ export function generateFigurenTrainingTask(
     // Rotate pieces AFTER validation for display
     const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
 
+    const shapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
     const task: FigureAssembleTask = {
       ...validationTask,
       pieces: displayPieces,
       explanation:
         correctIndex === 4
-          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben eine andere Form.`
-          : `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
+          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName} — diese Form ist aber nicht unter den Optionen A–D.`
+          : `Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
     };
     duplicateGuardAdd(fp);
     return task;
@@ -2049,14 +2173,74 @@ function generateFigurenTrainingTaskFallback(
   difficulty: FZDifficulty,
   seed: number
 ): FigureAssembleTask {
-  const rng = createRng(seed);
+  const maxFallbackAttempts = 10;
+  for (let fa = 0; fa < maxFallbackAttempts; fa++) {
+    const rng = createRng(seed + fa * 31337);
 
-  // Pick a RANDOM CUT_SCHEME — prefer same difficulty, fall back to any
-  const sameDiff = CUT_SCHEMES.filter((s) => s.diff === difficulty);
-  const pool = sameDiff.length > 0 ? sameDiff : CUT_SCHEMES;
-  const scheme = pool[Math.floor(rng() * pool.length)]!;
-  const { target, pieces } = scheme.cut();
+    // Pick a RANDOM CUT_SCHEME — prefer same difficulty, fall back to any
+    const sameDiff = CUT_SCHEMES.filter((s) => s.diff === difficulty);
+    const pool = sameDiff.length > 0 ? sameDiff : CUT_SCHEMES;
+    const scheme = pool[Math.floor(rng() * pool.length)]!;
+    const { target, pieces } = scheme.cut();
 
+    // ~15% of fallback tasks also use E as correct answer
+    const makeECorrect = rng() < 0.08;
+
+    let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
+    let correctIndex: number;
+
+    if (makeECorrect) {
+      const distractors = buildDistractors(target, 4, rng, "");
+      const four: Polygon[] = [distractors[0]!, distractors[1]!, distractors[2]!, distractors[3]!];
+      const order = [0, 1, 2, 3];
+      for (let i = 3; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      options = [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E];
+      correctIndex = 4;
+    } else {
+      const distractors = buildDistractors(target, 3, rng, "");
+      const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
+      const order = [0, 1, 2, 3];
+      for (let i = 3; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      correctIndex = order.indexOf(0);
+      options = [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E];
+    }
+
+    // Validate BEFORE rotation (same pattern as main generator)
+    const validationTask: FigureAssembleTask = {
+      id: `fz-train-fb-${difficulty}-${seed}-${fa}`,
+      pieces,
+      target,
+      options,
+      correctIndex,
+      difficulty,
+      explanation: "",
+      targetShapeId: getTargetShapeIdForPolygon(target),
+      solutionOverlay: computeSolutionOverlay(target, pieces),
+    };
+
+    if (!validateFigurenTask(validationTask)) continue;
+
+    const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+    const fbShapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
+    return {
+      ...validationTask,
+      pieces: displayPieces,
+      explanation:
+        correctIndex === 4
+          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${fbShapeName} — diese Form ist aber nicht unter den Optionen A–D.`
+          : `Die ${pieces.length} Teile ergeben zusammengesetzt ${fbShapeName}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
+    };
+  }
+
+  // Ultimate fallback: simple diagonal-cut square (always valid)
+  const { target, pieces } = cutSquareDiagonal();
+  const rng = createRng(seed + 999);
   const distractors = buildDistractors(target, 3, rng, "");
   const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
   const order = [0, 1, 2, 3];
@@ -2065,19 +2249,24 @@ function generateFigurenTrainingTaskFallback(
     [order[i], order[j]] = [order[j], order[i]];
   }
   const correctIndex = order.indexOf(0);
-  const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
-  const task: FigureAssembleTask = {
-    id: `fz-train-fb-${difficulty}-${seed}`,
-    pieces: displayPieces,
+  const options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption] = [
+    four[order[0]!]!,
+    four[order[1]!]!,
+    four[order[2]!]!,
+    four[order[3]!]!,
+    OPTION_E,
+  ];
+  return {
+    id: `fz-train-fb-${difficulty}-${seed}-safe`,
+    pieces: rotatePiecesForDisplay(pieces, difficulty, rng),
     target,
-    options: [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E],
+    options,
     correctIndex,
     difficulty,
-    explanation: `Die ${pieces.length} Teile setzen sich exakt zur gewählten Figur zusammen.`,
-    targetShapeId: getTargetShapeIdForPolygon(target),
+    explanation: `Die ${pieces.length} Teile ergeben zusammengesetzt ein Quadrat. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
+    targetShapeId: "square",
     solutionOverlay: computeSolutionOverlay(target, pieces),
   };
-  return task;
 }
 
 export function generateFigurenTrainingSet(
@@ -2173,27 +2362,57 @@ export function difficultyLabel(
   return level === "easy" ? "leicht" : level === "medium" ? "mittel" : "schwer";
 }
 
+/** Akkusativ-Formen der 14 Zielformen (für „ergeben ein Quadrat"). */
+const SHAPE_NAMES_AKK: Record<string, string> = {
+  triangle: "ein gleichseitiges Dreieck",
+  square: "ein Quadrat",
+  rhombus: "eine Raute",
+  parallelogram: "ein Parallelogramm",
+  trapezoid: "ein Trapez",
+  pentagon: "ein regelmäßiges Fünfeck",
+  hexagon: "ein regelmäßiges Sechseck",
+  heptagon: "ein regelmäßiges Siebeneck",
+  octagon: "ein regelmäßiges Achteck",
+  "quarter-circle": "einen Viertelkreis",
+  "half-circle": "einen Halbkreis",
+  "three-quarter-circle": "einen Dreiviertelkreis",
+  "full-circle": "einen Vollkreis",
+  "L-shape": "eine L-Form",
+};
+
+/** Nominativ-Formen der 14 Zielformen (für „Die richtige Antwort ist ein Quadrat"). */
+const SHAPE_NAMES_NOM: Record<string, string> = {
+  triangle: "Dreieck",
+  square: "Quadrat",
+  rhombus: "Raute",
+  parallelogram: "Parallelogramm",
+  trapezoid: "Trapez",
+  pentagon: "Fünfeck",
+  hexagon: "Sechseck",
+  heptagon: "Siebeneck",
+  octagon: "Achteck",
+  "quarter-circle": "Viertelkreis",
+  "half-circle": "Halbkreis",
+  "three-quarter-circle": "Dreiviertelkreis",
+  "full-circle": "Vollkreis",
+  "L-shape": "L-Form",
+};
+
+/** Gibt den deutschen Anzeigenamen einer Zielform zurück (Nominativ). */
+export function getShapeDisplayName(shapeId: string | undefined): string {
+  return shapeId ? (SHAPE_NAMES_NOM[shapeId] ?? shapeId) : "Figur";
+}
+
+/** Akkusativ-Form für Erklärungstexte („ergeben einen Vollkreis"). */
+export function getShapeDisplayNameAkk(shapeId: string | undefined): string {
+  return shapeId ? (SHAPE_NAMES_AKK[shapeId] ?? shapeId) : "eine Figur";
+}
+
 /** Für Strategie-View: alle 14 Lösungsfiguren mit SVG-Pfad und deutschem Anzeigename. */
 export const FIGURE_STRATEGY_GALLERY: { key: string; path: string; name: string }[] = (() => {
-  const names: Record<string, string> = {
-    triangle: "ein gleichseitiges Dreieck",
-    square: "ein Quadrat",
-    rhombus: "eine Raute",
-    parallelogram: "ein Parallelogramm",
-    trapezoid: "ein Trapez",
-    pentagon: "ein regelmäßiges Fünfeck",
-    hexagon: "ein regelmäßiges Sechseck",
-    heptagon: "ein regelmäßiges Siebeneck",
-    octagon: "ein regelmäßiges Achteck",
-    "quarter-circle": "einen Viertelkreis",
-    "half-circle": "einen Halbkreis",
-    "three-quarter-circle": "einen Dreiviertelkreis",
-    "full-circle": "einen Vollkreis",
-    "L-shape": "eine L-Form",
-  };
   return SOLUTION_SHAPES.map((key, i) => ({
     key,
     path: polygonToPath(OFFICIAL_TARGET_POLYGONS[i]),
-    name: names[key] ?? key,
+    name: SHAPE_NAMES_AKK[key] ?? key,
   }));
 })();
