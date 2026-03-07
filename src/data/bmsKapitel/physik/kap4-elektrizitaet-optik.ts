@@ -589,6 +589,8 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
 
 Vom Defibrillator bis zur Zellmembran: Jedes elektrische System lässt sich als Kombination von Reihen- und Parallelschaltungen analysieren.
 
+{{DIAGRAM:circuit-diagram}}
+
 **Reihenschaltung von Widerständen:**
 - Gesamtwiderstand: **R_ges = R₁ + R₂ + ... + Rₙ** (immer größer als jeder Einzelwiderstand)
 - Strom durch alle Widerstände gleich: I₁ = I₂ = ... = I
@@ -671,6 +673,7 @@ Typisches Neuron: R_m = 10 kΩ·cm², C_m = 1 µF/cm².
 τ_m = R_m · C_m = 10.000 Ω·cm² × 10⁻⁶ F/cm² = **10 ms**.
 Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~10 ms 63 % der Endspannung. Dünnere Axone (höheres R_m) haben längere τ → langsamere Antwort.`,
 
+      diagram: "circuit-diagram",
       lernziele: [
         "Reihen- und Parallelschaltungen von Widerständen und Kondensatoren berechnen",
         "Die Kirchhoffschen Gesetze (Knoten- und Maschenregel) anwenden und ihre physikalischen Grundlagen nennen",
@@ -1107,6 +1110,8 @@ Beispiel Glas (n=1,5) → Luft (n=1): sin α_grenz = 1/1,5 = 0,667 → α_grenz 
 > **Prüfungstipp:** Beim Snellius-Gesetz wird gerne nach der Brechungsrichtung gefragt: Übergang in dichteres Medium (n₂ > n₁) = Brechung zum Lot; in dünneres Medium = vom Lot weg. Totalreflexion geht nur vom dichteren ins dünnere Medium — nie umgekehrt!
 
 
+{{DIAGRAM:lens-imaging}}
+
 ## Linsen und Brechkraft
 
 Linsen sind optische Elemente, die Lichtstrahlen durch Brechung an zwei Flächen ablenken.
@@ -1151,6 +1156,7 @@ Maximaler Einkoppelwinkel (Akzeptanzwinkel): θ_max = arcsin(NA) = arcsin(0,56) 
 f = 20 cm, Gegenstand bei g = 30 cm. 1/b = 1/f − 1/g = 1/20 − 1/30 = 3/60 − 2/60 = 1/60.
 b = **60 cm** (reelles Bild). Maßstab: m = b/g = 60/30 = **2** → Bild ist 2× so groß, umgekehrt.
 Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
+      diagram: "lens-imaging",
       lernziele: [
         "Das Reflexionsgesetz anwenden und Einfallswinkel gleich Ausfallswinkel erklären.",
         "Das Snellsche Brechungsgesetz formulieren und Brechungsindizes für Luft, Wasser und Glas kennen.",
@@ -1325,6 +1331,8 @@ Warum kann ein Lichtmikroskop keine Viren abbilden? Die Antwort liegt in der Wel
 
 Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 780 nm (rot). Unterhalb liegt UV-Strahlung (100–380 nm), oberhalb Infrarotstrahlung (780 nm–1 mm).
 
+{{DIAGRAM:em-spectrum}}
+
 > **Merke:** c = λ·f = 3×10⁸ m/s im Vakuum. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_medium = λ₀/n), die Frequenz bleibt gleich.
 
 **Dispersion:** Dispersion ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
@@ -1399,6 +1407,7 @@ Trockenobjektiv (NA = 0,95), grün (λ = 520 nm): d_min = 520/(2·0,95) = **274 
 Spaltbreite b = 10 µm = 10⁻⁵ m, λ = 500 nm.
 sin α = λ/b = 500×10⁻⁹ / 10⁻⁵ = 0,05 → α ≈ **2,87°**.
 Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0,05 = **100 mm** (10 cm).`,
+      diagram: "em-spectrum",
       lernziele: [
         "Das sichtbare Spektrum mit Wellenlängenbereich (380–780 nm) benennen.",
         "Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erläutern.",

@@ -1220,8 +1220,6 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
     {
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
-      imageCaption: "Abb.: Phasenübergänge und ihre Energetik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Phasenübergänge",
         "Schmelzenthalpie",

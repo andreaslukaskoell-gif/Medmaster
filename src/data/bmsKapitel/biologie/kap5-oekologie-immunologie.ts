@@ -1754,8 +1754,8 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
     {
       id: "bio-11-04",
       title: "Rhesusfaktor — Vererbung, Inkompatibilität und Anti-D",
-      imageUrl: "/images/bms/bio-blutgruppen.jpg",
-      imageCaption: "Abb.: Rhesusfaktor und Blutgruppenvererbung (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-erythrozyten.jpg",
+      imageCaption: "Abb.: Erythrozyten mit Oberflächenantigenen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Rh-positiv",
         "Rh-negativ",

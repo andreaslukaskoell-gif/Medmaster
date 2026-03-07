@@ -39,6 +39,8 @@ Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{
 
 > **Merke:** Vektoren beschreiben gerichtete Größen (Kraft, Geschwindigkeit, Verschiebung). Skalare beschreiben ungerichtete Größen (Temperatur, Masse, Energie). Diese Unterscheidung ist in der Physik und Medizin fundamental.
 
+{{DIAGRAM:vector-addition}}
+
 ## Vektoroperationen
 
 **Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
@@ -269,6 +271,7 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
           difficulty: 3,
         },
       ],
+      diagram: "vector-addition",
     },
 
     // ─────────────────────────────────────────────────────────────────

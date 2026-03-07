@@ -36,6 +36,8 @@ export const physKap4: Kapitel = {
 
 Temperatur ist ein Maß für die mittlere kinetische Energie der Teilchen eines Stoffes. Drei Skalen sind praxisrelevant:
 
+{{DIAGRAM:temperature-scales}}
+
 **Celsius (°C)**: Die historische Alltagsskala. Der Nullpunkt liegt beim Gefrierpunkt des Wassers (bei 1 atm), 100 °C beim Siedepunkt. Negative Werte sind möglich.
 
 **Kelvin (K)**: Die SI-Einheit der Thermodynamik. Der Nullpunkt (0 K = −273,15 °C) ist der absolute Nullpunkt – die Temperatur, bei der die thermische Bewegung der Teilchen aufhört. Negative Kelvin-Temperaturen existieren im klassischen Sinn nicht.
@@ -129,6 +131,7 @@ Körpertemperatur 37,0 °C: In Kelvin: T = 37,0 + 273,15 = 310,15 K. In Fahrenhe
 Patient (70 kg, c ≈ 3500 J/(kg·K)) von 34 °C auf 37 °C erwärmen (Hypothermie-Behandlung):
 Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss der Körper durch Metabolismus, Wärmedecken oder Infusionserwärmer aufbringen.`,
 
+      diagram: "temperature-scales",
       lernziele: [
         "Die drei Temperaturskalen (Celsius, Kelvin, Fahrenheit) ineinanderumrechnen können",
         "Die Formel der linearen Wärmedehnung ΔL = α·L₀·ΔT anwenden und interpretieren",
@@ -687,7 +690,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
 
 ## Nullter Hauptsatz: Thermisches Gleichgewicht
 
-
+{{DIAGRAM:thermodynamics}}
 
 "Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
 
@@ -820,6 +823,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 > **Merke:** Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der maximal mögliche Wirkungsgrad einer Wärmekraftmaschine. Kein realer Prozess kann diesen Wert übertreffen.`,
 
+      diagram: "thermodynamics",
       lernziele: [
         "Die vier thermodynamischen Hauptsätze mit Formeln und Formulierungen wiedergeben",
         "ΔU = Q + W auf konkrete Zustandsänderungen (isochor, isobar, isotherm, adiabatisch) anwenden",

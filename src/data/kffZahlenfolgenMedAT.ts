@@ -188,10 +188,10 @@ function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
       { type: "+", value: 8 },
       { type: "+", value: 4 },
     ],
-    // Oscillating: +2, −2 repeating
+    // Alternating: +3, +1 (net progression)
     [
-      { type: "+", value: 2 },
-      { type: "−", value: 2 },
+      { type: "+", value: 3 },
+      { type: "+", value: 1 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
@@ -290,17 +290,10 @@ function pickOpsMedium(rand: () => number): { type: OpType; value: number }[] {
       { type: "−", value: 7 },
       { type: "+", value: 4 },
     ],
-    // Oscillating: +2, −2, −2, +2 (velumed-Stil)
-    [
-      { type: "+", value: 2 },
-      { type: "−", value: 2 },
-      { type: "−", value: 2 },
-      { type: "+", value: 2 },
-    ],
-    // ×a, ÷a alternating (common MedAT: ×2 ÷2 cycle with offset)
+    // ×2, +3 alternating (net progression)
     [
       { type: "×", value: 2 },
-      { type: "÷", value: 2 },
+      { type: "+", value: 3 },
     ],
     // ×(-1) style: multiply, subtract, add cycle (velumed)
     [

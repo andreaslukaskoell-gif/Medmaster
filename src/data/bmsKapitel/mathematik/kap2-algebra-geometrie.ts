@@ -1075,6 +1075,8 @@ Zusätzlich gilt: **tan α = sin α / cos α** (solange cos α ≠ 0).
 
 ---
 
+{{DIAGRAM:unit-circle}}
+
 ## Rechenbeispiel 1 — Seitenlänge bestimmen
 
 **Aufgabe:** Ein rechtwinkliges Dreieck hat eine Hypotenuse von 10 cm und einen Winkel α = 30°. Berechne die Gegenkathete und die Ankathete.
@@ -1277,6 +1279,7 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
           difficulty: 1,
         },
       ],
+      diagram: "unit-circle",
     },
 
     // === from kap3-geometrie ===
@@ -1307,6 +1310,8 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
       content: `Von der CT-Bildgebung bis zur Berechnung verbrannter Hautflächen: Flächenformeln sind im klinischen Alltag so präsent wie Vitalzeichen. Die Aortenklappenöffnungsfläche entscheidet über eine OP-Indikation, die Körperoberfläche bestimmt die Zytostatika-Dosis, und die Neuner-Regel bei Verbrennungen basiert auf geometrischen Anteilen.
 
 ---
+
+{{DIAGRAM:geometric-shapes}}
 
 ## Dreiecke — die Grundform
 
@@ -1596,6 +1601,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
           difficulty: 1,
         },
       ],
+      diagram: "geometric-shapes",
     },
 
     // ──────────────────────────────────────────────────────────────
@@ -1902,6 +1908,8 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
 
 ---
 
+{{DIAGRAM:coordinate-system}}
+
 ## Kartesisches Koordinatensystem
 
 
@@ -2167,6 +2175,7 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
           difficulty: 1,
         },
       ],
+      diagram: "coordinate-system",
     },
 
     // ──────────────────────────────────────────────────────────────

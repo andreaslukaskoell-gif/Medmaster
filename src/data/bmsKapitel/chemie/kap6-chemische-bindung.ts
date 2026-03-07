@@ -47,6 +47,8 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 
 {{IMAGE}}
 
+{{DIAGRAM:ionic-bond}}
+
 ## Born-Haber-Kreisprozess und Gitterenergie
 
 Die **Gitterenergie** U ist die Energie, die freigesetzt wird, wenn gasförmige Ionen zu einem Ionenkristall zusammentreten. Sie ist der entscheidende Energiebeitrag bei der Ionenbindung und kann experimentell nicht direkt gemessen werden. Im Born-Haber-Kreisprozess wird die Bildungsenthalpie einer Ionenverbindung schrittweise aus messbaren Teilenthalpien berechnet:
@@ -389,6 +391,7 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
           tags: ["sprödigkeit", "ionenkristall", "scherkraft"],
         },
       ],
+      diagram: "ionic-bond",
     },
 
     {
@@ -417,6 +420,8 @@ Zwei Wasserstoffatome teilen sich ein Elektronenpaar — und bilden damit die ei
 Lewis-Schreibweise (Darstellung der Valenzelektronen als Punkte/Striche): Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
 
 {{IMAGE}}
+
+{{DIAGRAM:covalent-bond}}
 
 **Ausnahmen von der Oktettregel:**
 - **H, He:** Duett-Regel (nur 2 Elektronen nötig, 1s-Orbital)
@@ -946,6 +951,7 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
           tags: ["polarität", "elektronegativität", "delta-en"],
         },
       ],
+      diagram: "covalent-bond",
     },
 
     {

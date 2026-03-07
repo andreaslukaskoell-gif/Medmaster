@@ -556,6 +556,8 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
       imageCaption: "Abb.: Dehydratation und Hydrolyse organischer Moleküle (OpenStax, CC BY 4.0)",
       content: `## Alkohole (−OH, Hydroxylgruppe)
 
+{{DIAGRAM:functional-groups}}
+
 Sobald man in einem Kohlenwasserstoff ein Wasserstoffatom durch eine Hydroxylgruppe (−OH) ersetzt, entsteht ein Alkohol — und die Eigenschaften des Moleküls ändern sich grundlegend. Die polare OH-Gruppe ermöglicht Wasserstoffbrückenbindungen, erhöht die Löslichkeit in Wasser und steigert den Siedepunkt im Vergleich zum entsprechenden Alkan beträchtlich.
 
 Alkohole werden nach der Anzahl der am Hydroxyl-C gebundenen weiteren Kohlenstoffatome eingeteilt: **Primäre Alkohole** (−CH₂−OH, ein C-Nachbar), **sekundäre Alkohole** (−CH(OH)−, zwei C-Nachbarn) und **tertiäre Alkohole** (−C(OH)<, drei C-Nachbarn). Diese Klassifikation ist für die Reaktivität entscheidend, denn sie bestimmt die **Oxidationsreihe** — eines der zentralsten Konzepte für den MedAT. Ein primärer Alkohol lässt sich zunächst zum **Aldehyd** (−CHO) und dann weiter zur **Carbonsäure** (−COOH) oxidieren. Ein sekundärer Alkohol wird dagegen zum **Keton** (C=O) oxidiert, das ohne Spaltung einer C-C-Bindung nicht weiter oxidiert werden kann. Tertiäre Alkohole sind unter Standardbedingungen gar nicht oxidierbar.
@@ -803,6 +805,7 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
           tags: ["aspirin", "ester", "cox-hemmung"],
         },
       ],
+      diagram: "functional-groups",
     },
 
     // ─────────────────────────────────────────────────────────────────

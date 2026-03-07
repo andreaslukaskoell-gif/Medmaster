@@ -412,6 +412,7 @@ k = A · e^(−E_A / RT)
 
 ## Michaelis-Menten-Kinetik
 
+{{DIAGRAM:enzyme-substrate}}
 
 Für Enzymreaktionen gilt eine spezielle Kinetik:
 
@@ -620,6 +621,7 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
           difficulty: 2,
         },
       ],
+      diagram: "enzyme-substrate",
     },
 
     // ─────────────────────────────────────────────
@@ -628,9 +630,8 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
     {
       id: "ch-7-03",
       title: "Stöchiometrie und Ausbeute",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
-      imageCaption:
-        "Abb.: Stöchiometrische Berechnung einer chemischen Reaktion (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/ch-enzyme.jpg",
+      imageCaption: "Abb.: Enzymatische Reaktion — Substrat-Enzym-Komplex (OpenStax, CC BY 4.0)",
       stichworte: [
         "Stöchiometrie",
         "Mol-Verhältnis",

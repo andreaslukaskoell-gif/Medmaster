@@ -40,6 +40,8 @@ Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
 
 ---
 
+{{DIAGRAM:combinatorics-tree}}
+
 ## Die Fakultät — Grundbaustein aller Formeln
 
 Die **Fakultät** n! (sprich: "n Fakultät") ist das Produkt aller natürlichen Zahlen von 1 bis n:
@@ -362,6 +364,7 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
       },
       klinischerBezug:
         "Die Kombinatorik ist die Grundlage für die Berechnung von Wahrscheinlichkeiten in klinischen Studien. Die Anzahl möglicher Genotypen in der Genetik (Kombinationen von Allelen), die Bewertung von Testergebnissen (Sensitivität/Spezifität basiert auf Vierfeldertafeln) und die Randomisierung in klinischen Studien nutzen kombinatorische Prinzipien. Im österreichischen MedAT erscheinen Kombinatorikaufgaben regelmäßig im BMS-Mathematik-Teil.",
+      diagram: "combinatorics-tree",
     },
 
     {
@@ -1266,6 +1269,8 @@ Bei bimodalen Verteilungen gibt es zwei Modi (z.B. zwei Altersgruppen mit erhöh
 
 > **Merke:** Bei symmetrischer Verteilung: Mittelwert = Median = Modus. Bei rechtsschiefer Verteilung gilt: Modus < Median < Mittelwert. Ausreißer nach rechts ziehen den Mittelwert stärker als den Median.
 
+{{DIAGRAM:probability-distribution}}
+
 ### Streumaße
 
 **Varianz (s²):**
@@ -1757,6 +1762,7 @@ Wert 1,1 mg/dL: z = (1,1 − 0,9)/0,15 = 0,2/0,15 = **1,33** → innerhalb μ+2�
         answer:
           "Teil (a): TP=176, FN=24, FP=30, TN=270. Sensitivität = 176/(176+24) = 176/200 = 88%. Spezifität = 270/(270+30) = 270/300 = 90%. Teil (b): PPV = 176/(176+30) = 176/206 ≈ 85,4%. NPV = 270/(270+24) = 270/294 ≈ 91,8%. Diese PPV/NPV-Werte gelten für die Stichprobenprävalenz (200/500 = 40%). Teil (c): In der Notaufnahme mit Prävalenz 15% (niedrigere Vortestwahrscheinlichkeit): PPV sinkt. Mit Vierfeldertafel für n=1000: Krank=150, TP=132, FN=18. Gesund=850, FP=85, TN=765. PPV = 132/(132+85) = 132/217 ≈ 60,8%. Klinisch: 6 von 10 positiv Getesteten in der Notaufnahme haben tatsächlich einen Herzinfarkt — solide, aber Bestätigungsdiagnostik (EKG, Troponin) ist essenziell. NPV = 765/(765+18) = 765/783 ≈ 97,7% — ein negatives Ergebnis schließt Herzinfarkt mit hoher Sicherheit aus.",
       },
+      diagram: "probability-distribution",
       klinischerBezug:
         "Normalverteilung, Referenzbereiche und Testergebnisse sind das tägliche Handwerkszeug in der klinischen Medizin. Laborwerte sind oft normalverteilt — Referenzbereiche werden als μ±2σ definiert, sodass 5% gesunder Personen außerhalb liegen (falsch 'pathologisch'). Sensitivität und Spezifität entscheiden über den klinischen Einsatz eines Tests: HIV-Screening (hohe Sensitivität) vs. Bestätigungstest (hohe Spezifität). Der p-Wert aus klinischen Studien bestimmt die Zulassung von Medikamenten — aber klinische Bedeutsamkeit (Number Needed to Treat, NNT) ist die relevantere Maßzahl für den Arzt am Krankenbett.",
     },

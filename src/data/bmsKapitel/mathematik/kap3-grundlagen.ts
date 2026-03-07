@@ -239,6 +239,8 @@ Prozent bedeutet \u201evon Hundert\u201c. Der Prozentsatz p gibt an, wie viele T
 
 ---
 
+{{DIAGRAM:percent-fractions}}
+
 ## Prozentuale Änderung vs. Prozentpunkte
 
 **Absolute Änderung (Prozentpunkte):** Die schlichte Differenz zweier Prozentwerte.
@@ -387,6 +389,7 @@ Reduktionsfaktor r: Männer \u2248 0,7; Frauen \u2248 0,6. Abbaurate \u2248 0,15
           tags: ["promille", "einheiten", "bak"],
         },
       ],
+      diagram: "percent-fractions",
     },
     {
       id: "ma-grund-03",

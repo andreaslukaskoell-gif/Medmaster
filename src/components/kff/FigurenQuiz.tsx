@@ -1,0 +1,704 @@
+import { useState, useEffect, useCallback, useRef } from "react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Send,
+  CheckCircle2,
+  XCircle,
+  Shuffle,
+  Timer,
+  Puzzle,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { ExamTimer } from "@/components/shared/ExamTimer";
+import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
+import {
+  difficultyLabel,
+  generateFigurenTrainingSet,
+  polygonToPath,
+  polygonToPathScaledToViewBox,
+  layoutPiecesCompact,
+  FIGURE_SVG_ASPECT_PROPS,
+  isOptionE,
+  type FigureAssembleTask,
+  OFFICIAL_FZ_INSTRUCTION,
+  OFFICIAL_FZ_EXAMPLES,
+} from "@/data/kffFigurenZusammensetzenMedAT";
+import { filterValidFigurenTasks, logPoolWarning } from "@/data/kffValidation";
+import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
+import { useStore } from "@/store/useStore";
+import { useSessionTimer } from "@/hooks/useSessionTimer";
+import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
+import { difficultyForIndex, getLastCount, saveLastCount, shuffleSlice } from "./kffHelpers";
+
+const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
+/** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
+const FILL_FZ = "#7EC8E3";
+
+export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoStart?: boolean }) {
+  const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
+  const [, setMode] = useState<"official" | "training" | null>(null);
+  const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const [questionCount, setQuestionCount] = useState(getLastCount("figuren"));
+  const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);
+  const [index, setIndex] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [timeLeft, setTimeLeft] = useState(90);
+  const [trainingLoading, setTrainingLoading] = useState(false);
+  const [trainingError, setTrainingError] = useState<string | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const {
+    addXP,
+    checkStreak,
+    saveQuizResult,
+    logActivity,
+    skillRating,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+    getKffFailedIdsForDomain,
+  } = useStore();
+  const getMinutes = useSessionTimer();
+
+  const startTraining = async () => {
+    saveLastCount("figuren", questionCount);
+    setTrainingError(null);
+    setTrainingLoading(true);
+    try {
+      const domain = "kff-figuren" as const;
+      const rating = skillRating ?? 500;
+      const tasks = await getTasksForUserWithWeakness(
+        domain,
+        rating,
+        Math.min(questionCount, 150),
+        150,
+        getKffFailedIdsForDomain(domain)
+      );
+      const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
+      let valid = filterValidFigurenTasks(list);
+      if (valid.length === 0) {
+        const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
+        const seed = Date.now();
+        const generated: FigureAssembleTask[] = [];
+        for (let i = 0; i < Math.min(questionCount, 150); i++) {
+          const t = generateFigurenTrainingSet(
+            1,
+            difficultyForIndex(i, levels),
+            seed + i * 7919
+          )[0];
+          if (t) generated.push(t);
+        }
+        valid = shuffleSlice(filterValidFigurenTasks(generated), Math.min(questionCount, 150));
+        if (valid.length === 0)
+          valid = shuffleSlice(
+            filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
+            Math.min(questionCount, 150)
+          );
+        if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Fallback (generiert)");
+      }
+      setQuestions(valid);
+      if (valid.length < list.length && import.meta.env?.DEV) {
+        logPoolWarning("figuren", valid.length, "Training");
+      }
+      setIndex(0);
+      setAnswers({});
+      setTimeLeft(90);
+      setPhase("quiz");
+    } catch (e) {
+      setTrainingError(e instanceof Error ? e.message : "Aufgaben konnten nicht geladen werden.");
+    } finally {
+      setTrainingLoading(false);
+    }
+  };
+
+  // Timer logic - reset on each question change
+  useEffect(() => {
+    if (phase !== "quiz") {
+      if (timerRef.current) clearInterval(timerRef.current);
+      return;
+    }
+    const t = setTimeout(() => {
+      setTimeLeft(90);
+      if (timerRef.current) clearInterval(timerRef.current);
+      timerRef.current = setInterval(() => {
+        setTimeLeft((prev) => {
+          if (prev <= 1) return 0;
+          return prev - 1;
+        });
+      }, 1000);
+    }, 0);
+    return () => {
+      clearTimeout(t);
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [phase, index]);
+
+  const correctAnswerLabel = (q: FigureAssembleTask) => FZ_OPTION_LABELS[q.correctIndex];
+  const isCorrect = (q: FigureAssembleTask) => answers[q.id] === correctAnswerLabel(q);
+
+  const handleFzSubmit = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    const domain = "kff-figuren" as const;
+    const score = questions.filter(
+      (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
+    ).length;
+    questions.forEach((q) => {
+      if (answers[q.id] !== FZ_OPTION_LABELS[q.correctIndex]) addKffTaskFailed(domain, q.id);
+      else markKffTaskCorrect(domain, q.id);
+    });
+    const correct = score;
+    const wrong = questions.length - correct;
+    setSkillRating((prev) => Math.max(0, Math.min(1000, prev + correct * 15 - wrong * 20)));
+    saveQuizResult({
+      id: `kff-fz-${Date.now()}`,
+      type: "kff",
+      subject: "Figuren zusammensetzen",
+      score,
+      total: questions.length,
+      date: new Date().toLocaleDateString("de-AT"),
+      durationMinutes: getMinutes(),
+      answers: questions.map((q) => ({
+        questionId: q.id,
+        selectedAnswer: answers[q.id] || "",
+        correct: answers[q.id] === FZ_OPTION_LABELS[q.correctIndex],
+      })),
+    });
+    logActivity(questions.length, getMinutes());
+    addXP(score * 10);
+    checkStreak();
+    setPhase("result");
+    setIndex(0);
+  }, [
+    questions,
+    answers,
+    saveQuizResult,
+    logActivity,
+    getMinutes,
+    addXP,
+    checkStreak,
+    setSkillRating,
+    addKffTaskFailed,
+    markKffTaskCorrect,
+  ]);
+
+  const goToNext = () => {
+    if (index < questions.length - 1) {
+      setIndex((i) => i + 1);
+    }
+  };
+
+  const goToPrev = () => {
+    if (index > 0) {
+      setIndex((i) => i - 1);
+    }
+  };
+
+  useEffect(() => {
+    if (autoStart && phase === "setup") {
+      startTraining();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // --- SETUP ---
+  if (phase === "setup") {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Figuren zusammensetzen
+        </h1>
+        <p className="text-sm text-muted">
+          Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.) 1:30 min
+          pro Aufgabe.
+        </p>
+        <UebungsbeschreibungCard id="kff-figuren" collapsible defaultCollapsed />
+        <OfficialInstructionCard instruction={OFFICIAL_FZ_INSTRUCTION} />
+
+        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Timer className="w-5 h-5" /> Prüfungsmodus
+            </CardTitle>
+            <p className="text-sm text-muted">
+              {EXAM_CONFIG.figuren.questions} Aufgaben · {EXAM_CONFIG.figuren.timeSeconds / 60}{" "}
+              Minuten gesamt — wie im echten MedAT (kein Timer pro Frage).
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={async () => {
+                setExamMode("exam");
+                setTrainingLoading(true);
+                try {
+                  const domain = "kff-figuren" as const;
+                  const rating = skillRating ?? 500;
+                  const count = EXAM_CONFIG.figuren.questions;
+                  const tasks = await getTasksForUserWithWeakness(
+                    domain,
+                    rating,
+                    count,
+                    150,
+                    getKffFailedIdsForDomain(domain)
+                  );
+                  const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
+                  let valid = filterValidFigurenTasks(list);
+                  if (valid.length < count) {
+                    const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
+                    const seed = Date.now();
+                    const generated: FigureAssembleTask[] = [];
+                    for (let i = 0; i < count - valid.length; i++) {
+                      const t = generateFigurenTrainingSet(
+                        1,
+                        difficultyForIndex(i, levels),
+                        seed + i * 7919
+                      )[0];
+                      if (t) generated.push(t);
+                    }
+                    valid = [...valid, ...filterValidFigurenTasks(generated)];
+                  }
+                  if (valid.length < count)
+                    valid = [
+                      ...valid,
+                      ...shuffleSlice(
+                        filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
+                        count - valid.length
+                      ),
+                    ];
+                  setQuestions(valid.slice(0, count));
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } catch {
+                  const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
+                  const seed = Date.now();
+                  const generated: FigureAssembleTask[] = [];
+                  for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {
+                    const t = generateFigurenTrainingSet(
+                      1,
+                      difficultyForIndex(i, levels),
+                      seed + i * 7919
+                    )[0];
+                    if (t) generated.push(t);
+                  }
+                  setQuestions(
+                    filterValidFigurenTasks(generated).slice(0, EXAM_CONFIG.figuren.questions)
+                  );
+                  setIndex(0);
+                  setAnswers({});
+                  setPhase("quiz");
+                } finally {
+                  setTrainingLoading(false);
+                }
+              }}
+              disabled={trainingLoading}
+            >
+              <Timer className="w-5 h-5 mr-2" /> Prüfungsmodus starten
+            </Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-6 space-y-6">
+            <div>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
+                Anzahl Aufgaben
+              </label>
+              <div className="flex gap-2">
+                {[10, 25, 50, 75, 100, 150].map((c) => (
+                  <button
+                    key={c}
+                    onClick={() => setQuestionCount(c)}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                      questionCount === c
+                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
+                        : "border-border dark:border-gray-700"
+                    }`}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Button variant="outline" onClick={() => setMode(null)} disabled={trainingLoading}>
+                Zurück
+              </Button>
+              <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
+                {trainingLoading ? (
+                  <>
+                    <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-rose-500 border-t-transparent rounded-full" />
+                    Wird geladen…
+                  </>
+                ) : (
+                  <>
+                    <Puzzle className="w-5 h-5 mr-2" /> {questionCount} Aufgaben laden
+                  </>
+                )}
+              </Button>
+            </div>
+            {trainingError && (
+              <p className="text-sm text-red-600 dark:text-red-400 mt-2">{trainingError}</p>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // --- RESULT ---
+  if (phase === "result") {
+    const score = questions.filter(
+      (q) => answers[q.id] === FZ_OPTION_LABELS[q.correctIndex]
+    ).length;
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+        </Button>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <div className="text-4xl font-bold text-rose-700 dark:text-rose-400">
+              {score}/{questions.length}
+            </div>
+            <p className="text-muted mt-1">
+              {Math.round((score / questions.length) * 100)}% richtig
+            </p>
+            <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
+          </CardContent>
+        </Card>
+        {questions.map((q, i) => {
+          const correct = isCorrect(q);
+          const selectedLabel = answers[q.id] || "";
+          const correctLabel = correctAnswerLabel(q);
+          return (
+            <Card
+              key={q.id}
+              className={`border-l-4 ${correct ? "border-l-green-500" : "border-l-red-500"}`}
+            >
+              <CardContent className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  {correct ? (
+                    <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-red-500" />
+                  )}
+                  <span className="font-medium text-sm">Aufgabe {i + 1}</span>
+                  <Badge variant="info" className="text-[10px]">
+                    {difficultyLabel(q.difficulty)}
+                  </Badge>
+                  {q.source && (
+                    <span
+                      className="text-[10px] text-muted truncate max-w-[180px]"
+                      title={q.source}
+                    >
+                      {q.source}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-4 ml-7 mb-2 flex-wrap">
+                  <div>
+                    <p className="text-xs text-muted mb-1">Puzzleteile:</p>
+                    {(() => {
+                      const { viewBox, paths } = layoutPiecesCompact(q.pieces);
+                      return (
+                        <svg
+                          viewBox={viewBox}
+                          {...FIGURE_SVG_ASPECT_PROPS}
+                          className="w-32 h-12 sm:w-40 sm:h-14 bg-white dark:bg-gray-900 rounded"
+                        >
+                          {paths.map((p, pi) => (
+                            <path
+                              key={pi}
+                              d={p.d}
+                              fill={FILL_FZ}
+                              stroke="none"
+                              transform={p.transform}
+                            />
+                          ))}
+                        </svg>
+                      );
+                    })()}
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      {...FIGURE_SVG_ASPECT_PROPS}
+                      className="w-24 h-24 sm:w-28 sm:h-28 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                    >
+                      {/* Zielform gefüllt */}
+                      <path d={polygonToPath(q.target)} fill={FILL_FZ} stroke="none" />
+                      {/* Trennlinien zwischen den Teilsteinen */}
+                      {q.pieces.map((piece, pi) => (
+                        <path
+                          key={pi}
+                          d={polygonToPath(piece)}
+                          fill="none"
+                          stroke="#0e7490"
+                          strokeWidth="1.5"
+                        />
+                      ))}
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-green-600 dark:text-green-400 mb-1">
+                      Richtig ({correctLabel}):
+                    </p>
+                    {q.correctIndex === 4 ? (
+                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
+                        E – Keine der Figuren ist richtig
+                      </span>
+                    ) : (
+                      <svg
+                        viewBox="0 0 200 200"
+                        {...FIGURE_SVG_ASPECT_PROPS}
+                        className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
+                      >
+                        <path
+                          d={polygonToPathScaledToViewBox(
+                            q.options[q.correctIndex] as { points: { x: number; y: number }[] }
+                          )}
+                          fill="#22c55e"
+                          stroke="#15803d"
+                          strokeWidth="1.2"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                  {!correct && selectedLabel && (
+                    <div>
+                      <p className="text-xs text-red-600 dark:text-red-400 mb-1">
+                        Deine Antwort ({selectedLabel}):
+                      </p>
+                      {selectedLabel === "E" ? (
+                        <span className="text-xs text-red-600 dark:text-red-400 font-medium">
+                          E – Keine der Figuren ist richtig
+                        </span>
+                      ) : (
+                        <svg
+                          viewBox="0 0 200 200"
+                          {...FIGURE_SVG_ASPECT_PROPS}
+                          className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
+                        >
+                          <path
+                            d={polygonToPathScaledToViewBox(
+                              q.options[
+                                FZ_OPTION_LABELS.indexOf(
+                                  selectedLabel as "A" | "B" | "C" | "D" | "E"
+                                )
+                              ] as { points: { x: number; y: number }[] }
+                            )}
+                            fill="#ef4444"
+                            stroke="#b91c1c"
+                            strokeWidth="1.2"
+                          />
+                        </svg>
+                      )}
+                    </div>
+                  )}
+                </div>
+                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                    {stripMarkdownAsterisks(q.explanation)}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+        <div className="flex justify-center gap-3">
+          <Button variant="outline" onClick={onBack}>
+            Zurück
+          </Button>
+          <Button
+            onClick={() => {
+              setPhase("setup");
+              setMode(null);
+            }}
+          >
+            <Shuffle className="w-4 h-4 mr-1" /> Neue Aufgaben
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+  // --- QUIZ ---
+  const fzQ = questions[index];
+  if (!fzQ) {
+    const isTrainingEmpty = phase === "quiz" && questions.length === 0;
+    return (
+      <div className="max-w-2xl mx-auto p-6 space-y-4">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          Zurück
+        </Button>
+        {isTrainingEmpty ? (
+          <Card>
+            <CardContent className="p-6 text-center space-y-4">
+              <p className="text-muted">
+                Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
+                möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setPhase("setup");
+                }}
+              >
+                Zurück zum Setup
+              </Button>
+            </CardContent>
+          </Card>
+        ) : (
+          <p className="text-muted">Keine Aufgabe geladen.</p>
+        )}
+      </div>
+    );
+  }
+  const fzAllAnswered = questions.every(
+    (qu) => answers[qu.id] !== undefined && answers[qu.id] !== ""
+  );
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  const timerColor =
+    timeLeft <= 15
+      ? "text-red-500"
+      : timeLeft <= 30
+        ? "text-orange-500"
+        : "text-gray-600 dark:text-gray-400";
+
+  return (
+    <div className="max-w-4xl mx-auto space-y-6">
+      {examMode === "exam" && (
+        <ExamTimer totalSeconds={EXAM_CONFIG.figuren.timeSeconds} onTimeUp={handleFzSubmit} />
+      )}
+      <div className="flex items-center justify-between">
+        <Button variant="ghost" size="sm" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
+        </Button>
+        <div className="flex items-center gap-3">
+          {examMode === "exam" && (
+            <Badge variant="danger" className="text-[10px]">
+              Prüfungsmodus
+            </Badge>
+          )}
+          <span className="text-sm text-muted">
+            Aufgabe {index + 1} von {questions.length}
+          </span>
+          {examMode !== "exam" && (
+            <div
+              className={`flex items-center gap-1 font-mono text-sm font-semibold ${timerColor}`}
+            >
+              <Timer className="w-4 h-4" />
+              {minutes}:{seconds.toString().padStart(2, "0")}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+        <div
+          className="bg-rose-500 h-2 rounded-full transition-all"
+          style={{ width: `${((index + 1) / questions.length) * 100}%` }}
+        />
+      </div>
+
+      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+        Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.)
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card className="border-gray-200 dark:border-gray-700">
+          <CardContent className="p-6">
+            <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+              Puzzleteile
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg">
+              {(() => {
+                const { viewBox, paths } = layoutPiecesCompact(fzQ.pieces);
+                return (
+                  <svg
+                    viewBox={viewBox}
+                    {...FIGURE_SVG_ASPECT_PROPS}
+                    className="w-full max-w-md h-24 sm:h-28 mx-auto"
+                  >
+                    {paths.map((p, pi) => (
+                      <path key={pi} d={p.d} fill={FILL_FZ} stroke="none" transform={p.transform} />
+                    ))}
+                  </svg>
+                );
+              })()}
+            </div>
+          </CardContent>
+        </Card>
+        <div>
+          <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+            Antwortoptionen
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-2 gap-3">
+            {fzQ.options.map((opt, optIdx) => {
+              const label = FZ_OPTION_LABELS[optIdx];
+              const selected = answers[fzQ.id] === label;
+              return (
+                <button
+                  key={optIdx}
+                  onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
+                  className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
+                    selected
+                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600"
+                  }`}
+                >
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">
+                    {label}
+                  </span>
+                  {isOptionE(opt) ? (
+                    <span className="text-xs text-center text-muted leading-tight">
+                      Keine der Figuren ist richtig
+                    </span>
+                  ) : (
+                    <svg
+                      viewBox="0 0 200 200"
+                      {...FIGURE_SVG_ASPECT_PROPS}
+                      className="w-full max-w-[64px] max-h-[64px] flex-1"
+                    >
+                      <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} stroke="none" />
+                    </svg>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between">
+        {examMode !== "exam" ? (
+          <Button variant="outline" onClick={goToPrev} disabled={index === 0}>
+            <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
+          </Button>
+        ) : (
+          <div />
+        )}
+        {index < questions.length - 1 ? (
+          <Button onClick={goToNext}>
+            Weiter <ArrowRight className="w-4 h-4 ml-1" />
+          </Button>
+        ) : (
+          <Button onClick={handleFzSubmit} disabled={!fzAllAnswered}>
+            <Send className="w-4 h-4 mr-1" /> Auswertung
+          </Button>
+        )}
+      </div>
+      <FloatingQuestionCounter current={index + 1} total={questions.length} label="Aufgabe" />
+    </div>
+  );
+}

@@ -258,6 +258,8 @@ Die **Scheitelpunktform** f(x) = a(x − xs)² + ys ist besonders anschaulich: D
 
 > **Merke:** Der Leitkoeffizient a bestimmt **zwei** Eigenschaften gleichzeitig: das Vorzeichen entscheidet über die Öffnungsrichtung (a > 0: oben, a < 0: unten), der Betrag |a| über die Breite (|a| > 1: schmaler als Normalparabel (Parabel mit a = 1), |a| < 1: breiter).
 
+{{DIAGRAM:quadratic-function}}
+
 | Form | Darstellung | Vorteil |
 |---|---|---|
 | Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt direkt ablesbar (c) |
@@ -485,6 +487,7 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
           tags: ["scheitelpunktform", "parabel", "algebra"],
         },
       ],
+      diagram: "quadratic-function",
     },
     {
       id: "ma-5-03",
@@ -516,6 +519,8 @@ Eigenschaften der Exponentialfunktion:
 - **Keine Nullstellen**: Da f(x) = a × bˣ > 0 für alle x gilt
 
 > **Merke:** Die Exponentialfunktion ist **immer positiv** — sie kann niemals den Wert 0 oder negative Werte annehmen. Das ist eine häufige MedAT-Falle: "Die Konzentration eines Medikaments erreicht nach unendlich langer Zeit den Wert 0" ist mathematisch falsch (sie nähert sich nur asymptotisch an).
+
+{{DIAGRAM:exponential-function}}
 
 ## Wachstum und Zerfall
 
@@ -720,6 +725,7 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
           tags: ["steady-state", "pharmakokinetik", "halbwertszeit"],
         },
       ],
+      diagram: "exponential-function",
     },
     {
       id: "ma-5-04",
@@ -752,6 +758,8 @@ Wichtige Spezialfälle:
 - **log₂(x)** bzw. **ld(x)** (Logarithmus dualis, Binärlogarithmus): Basis 2 — **ld = log₂**. Es gilt **ld(2ⁿ) = n**, z. B. **ld(16) = 4** (weil 2⁴ = 16). Verwendet bei Halbwertszeiten, Informatik.
 
 > **Merke:** Logarithmus beantwortet die Frage: "Wie oft muss ich die Basis mit sich selbst multiplizieren, um x zu erreichen?" **ld(16) = 4**, weil 2⁴ = 16. **log(a·b) = log a + log b** gilt nur bei **gleicher Basis**; **ld(a+b) ≠ ld a + ld b** (typische Falle!).
+
+{{DIAGRAM:logarithm-function}}
 
 ## Rechenregeln
 
@@ -985,6 +993,7 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
           tags: ["logarithmus", "quotientenregel", "halbwertszeit"],
         },
       ],
+      diagram: "logarithm-function",
     },
     {
       id: "ma-5-05",

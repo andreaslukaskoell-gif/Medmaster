@@ -946,6 +946,8 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
 
 Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich Körper unter dem Einfluss von Kräften bewegen. Isaac Newton formulierte im 17. Jahrhundert drei Grundgesetze, die für Geschwindigkeiten weit unterhalb der Lichtgeschwindigkeit bis heute uneingeschränkt gültig sind. Diese Gesetze sind keine abstrakten Theorien — sie erklären, warum Knochen brechen, wie das Herz Blut pumpt und weshalb Venenpunktionen eine bestimmte Kraft erfordern.
 
+{{DIAGRAM:newton-forces}}
+
 ## Kinematik: Bewegung ohne Kräfte
 
 Die **Kinematik** (Bewegungslehre) beschreibt Bewegungen rein mathematisch — **ohne** nach der Ursache zu fragen. Grundgrößen sind **Ort** (s), **Zeit** (t), **Geschwindigkeit** (v = Weg pro Zeit) und **Beschleunigung** (a = Änderung der Geschwindigkeit pro Zeit).
@@ -1013,6 +1015,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
 > **Merke:** Die Gewichtskraft F_G = m · g (g ≈ 9,81 m/s²) ist die Gravitationskraft an der Erdoberfläche. Masse (kg) ist ortsunabhängig, Gewichtskraft (N) hängt vom Gravitationsfeld ab.
 
 > **Prüfungstipp:** MedAT fragt gern nach v²=v₀²+2as (ohne Zeit) und v=v₀+at (ohne Weg). Merke dir beide kinematischen Formeln — je nachdem, welche Größe fehlt, wählst du die passende. Häufige Falle: km/h nicht in m/s umgerechnet!`,
+      diagram: "newton-forces",
       lernziele: [
         "Die drei Newtonschen Gesetze korrekt formulieren und auf biologische Beispiele anwenden",
         "Gleichförmige und gleichmäßig beschleunigte Bewegungen mathematisch beschreiben (v(t), s(t))",

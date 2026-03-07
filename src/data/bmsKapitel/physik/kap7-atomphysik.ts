@@ -281,7 +281,9 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `## Alpha-Strahlung (α)
+      content: `{{DIAGRAM:radioactive-decay}}
+
+## Alpha-Strahlung (α)
 
 Alpha-Teilchen sind identisch mit einem **Helium-4-Kern**: 2 Protonen + 2 Neutronen, Masse ≈ 4 u, Ladung +2e. Typische kinetische Energien: 4–8 MeV. Der α-Zerfall tritt bevorzugt bei schweren Kernen (Z > 82) auf, da diese durch Ausstoßen eines α-Teilchens ihre Bindungsenergie pro Nukleon erhöhen und somit stabiler werden.
 
@@ -619,6 +621,7 @@ N = m/M × N_A = (10⁻⁶ g / 131 g/mol) × 6,022 × 10²³ = 4,597 × 10¹⁵ 
 λ = ln2/T½ = 0,693/692 928 s = 1,0 × 10⁻⁶ s⁻¹.
 A = λ × N = 1,0 × 10⁻⁶ × 4,597 × 10¹⁵ = 4,6 × 10⁹ Bq = **4,6 GBq ≈ 124 mCi**.
 Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivität!`,
+      diagram: "radioactive-decay",
       lernziele: [
         "Die vier Strahlungsarten (α, β⁻, β⁺, γ) hinsichtlich Teilchenart, Ladung, Reichweite, LET und Abschirmung beschreiben.",
         "Das Zerfallsgesetz N(t) = N₀·e^(−λt) und die Halbwertszeit T½ = ln2/λ herleiten und anwenden.",

@@ -462,6 +462,8 @@ Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen
 
 Da c medium-spezifisch und f quellenspezifisch ist, ändert sich beim Medienwechsel die Wellenlänge Lambda = c/f. In einem schnelleren Medium wird Lambda größer, in einem langsameren kleiner -- bei identischer Frequenz. Dieses Prinzip erklärt sowohl Brechung als auch die unterschiedlichen Wellenlängen von Ultraschall in verschiedenen Geweben.
 
+{{DIAGRAM:wave-types}}
+
 ## Transversal- vs. Longitudinalwellen
 
 | Eigenschaft | Transversalwelle | Longitudinalwelle |
@@ -567,6 +569,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
 
 **Temperaturabhängigkeit im Alltag:** In einem Konzertsaal erwärmt das Publikum die Luft. Die Schallgeschwindigkeit steigt dadurch leicht an -- ein Grund, warum Instrumente vor und nach dem Konzert nachgestimmt werden müssen.`,
 
+      diagram: "wave-types",
       lernziele: [
         "Die Wellengleichung c = f·λ anwenden und die Rolle von Medium und Quelle erklären.",
         "Transversal- und Longitudinalwellen anhand der Schwingungsrichtung unterscheiden und Beispiele nennen.",
@@ -802,6 +805,8 @@ Die n-te Harmonische hat (n−1) Knoten innerhalb der Saite.
 
 ## Doppler-Effekt
 
+{{DIAGRAM:doppler-effect}}
+
 Der Doppler-Effekt beschreibt die scheinbare Frequenzverschiebung, wenn sich Quelle und/oder Beobachter relativ zueinander bewegen:
 
 **f_obs = f_Quelle · (c ± v_Beob) / (c ∓ v_Quelle)**
@@ -874,6 +879,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
 
 **Farbdoppler-Sonographie:** In der klinischen Praxis wird der Doppler-Effekt farbkodiert dargestellt: Rot = Fluss auf den Schallkopf zu, Blau = Fluss vom Schallkopf weg. Turbulenzen (z. B. an Stenosen) erscheinen als Farbmosaik. Diese Methode ist essenziell in der Kardiologie und Gefässchirurgie.`,
 
+      diagram: "doppler-effect",
       lernziele: [
         "Konstruktive und destruktive Interferenz anhand des Gangunterschieds erklären und berechnen.",
         "Stehende Wellen beschreiben und Knotenanzahl sowie Wellenlänge der n-ten Harmonischen bestimmen.",
