@@ -382,6 +382,8 @@ Beschreibt den Eigendrehimpuls (Spin, Eigendrehung des Elektrons) des Elektrons.
 
 {{IMAGE}}
 
+{{DIAGRAM:atomic-orbitals}}
+
 ## Fundamentale Prinzipien der Elektronenkonfiguration
 
 **Pauliprinzip (Ausschlussprinzip, 1925):** Kein Atom kann zwei Elektronen mit identischen vier Quantenzahlen besitzen. Folge: Jedes Orbital kann maximal 2 Elektronen aufnehmen, und diese müssen entgegengesetzte Spins haben (↑↓).
@@ -606,6 +608,7 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
           difficulty: 2,
         },
       ],
+      diagram: "atomic-orbitals",
     },
 
     // ─────────────────────────────────────────────────────────────────
@@ -630,6 +633,8 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
       content: `Radioaktive Kerne zerfallen spontan und setzen dabei Energie frei — als Teilchenstrahlung oder elektromagnetische Wellen. Diese Strahlung ist sowohl Diagnosewerkzeug als auch Krebsrisiko.
 
 ## Arten der Strahlung
+
+{{DIAGRAM:radiation-penetration}}
 
 ### Alpha-Strahlung
 - Emission eines **Alphateilchens** (He-4-Kern: 2 Protonen + 2 Neutronen)
@@ -755,6 +760,7 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         "Radon-222: α-Strahler, natürlich in Böden, zweitgrößte Ursache von Lungenkrebs in Europa.",
       ],
 
+      diagram: "radiation-penetration",
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
@@ -907,8 +913,6 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
-      imageCaption: "Abb.: Periodensystem der Elemente mit Ordnungszahlen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommasse",
         "Mol",
@@ -1198,8 +1202,6 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
     {
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
-      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
-      imageCaption: "Abb.: Wasserstoffbrücken zwischen Wassermolekülen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersion",
@@ -1486,8 +1488,6 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
     {
       id: "ch-2-02",
       title: "Löslichkeit, Konzentration und Osmose",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
-      imageCaption: "Abb.: Lösungsvorgang und Hydratation von Ionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Löslichkeit",
         "Osmose",
@@ -2118,6 +2118,8 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
 
 {{IMAGE}}
 
+{{DIAGRAM:periodic-table}}
+
 ## Geschichte und Entwicklung des Periodensystems
 
 Im Jahr 1869 veröffentlichten **Dmitri Iwanowitsch Mendelejew** (Russland) und **Lothar Meyer** (Deutschland) unabhängig Tabellen, die Elemente nach Atommasse anordneten und Periodizitäten der Eigenschaften zeigten. Mendelejews geniale Leistung lag darin, Lücken für noch unentdeckte Elemente vorherzusagen: Eka-Aluminium (Gallium, 1875), Eka-Bor (Scandium, 1879), Eka-Silicium (Germanium, 1886) stimmten fast exakt mit seinen Vorhersagen überein.
@@ -2391,13 +2393,14 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           tags: ["halbmetalle", "germanium", "treppenlinie"],
         },
       ],
+      diagram: "periodic-table",
     },
     {
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/ch-proteinstruktur.jpg",
       imageCaption:
-        "Abb.: Periodische Trends — Elektronegativität und Atomradius (OpenStax, CC BY 4.0)",
+        "Abb.: Chemische Strukturen — von Atomen zu komplexen Molekülen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Effektive Kernladung",
         "Atomradius",

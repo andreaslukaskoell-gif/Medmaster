@@ -1458,6 +1458,8 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 
 ## Ablauf der Gastrulation
 
+{{DIAGRAM:gastrulation}}
+
 Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–21) statt. Ausgangspunkt ist die zweischichtige Keimscheibe (Epiblast + Hypoblast).
 
 **Schritte (vereinfacht):**
@@ -1508,6 +1510,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
         "Gastrulation (Woche 3): Alle drei Keimblätter entstehen aus dem Epiblast via Primitivstreifen.",
         "Ektoderm = Haut + Nervensystem; Mesoderm = Muskel + Knochen + Herz + Niere; Endoderm = Darm + Lunge + Drüsen.",
       ],
+      diagram: "gastrulation",
       altfrage: {
         question: "Aus welchem Keimblatt entstehen Skelett, Muskulatur, Herz und Nieren?",
         answer:
@@ -1619,7 +1622,7 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
         "Anenzephalie",
         "Folsäure",
       ],
-      content: `{{DIAGRAM:stem-cells}}
+      content: `{{DIAGRAM:neurulation}}
 
 ## Voraussetzung: Notochord
 
@@ -1670,6 +1673,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
         "Neuralleiste = Ektoderm-Derivat: Melanozyten, Ganglien, Schwann-Zellen, Nebennierenmark.",
         "Folsäure 0,4 mg/Tag präkonzeptionell senkt Neuralrohrdefekt-Risiko um ~70 %.",
       ],
+      diagram: "neurulation",
       klinischerBezug:
         "Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen bei offenem Neuroporus. Folsäure 0,4 mg/Tag präkonzeptionell und in der Frühschwangerschaft reduziert das Risiko um ca. 70 %.",
       altfrage: {

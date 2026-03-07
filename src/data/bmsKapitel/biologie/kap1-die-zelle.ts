@@ -2006,6 +2006,8 @@ Ohne Photosynthese gäbe es keinen freien Sauerstoff auf der Erde — und der Or
 ## Lichtreaktion — Energie aus Sonnenlicht
 
 
+{{DIAGRAM:photosynthesis-z-scheme}}
+
 Die Lichtreaktion findet in der **Thylakoidmembran** statt und läuft in vier Schritten ab:
 
 **Schritt 1 — Photosystem II (PS II, P680):**
@@ -2130,7 +2132,7 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
             "C3: RuBisCO direkt → Photorespiration. C4: PEP-Carboxylase + räumliche Trennung. CAM: zeitliche Trennung (nachts CO₂, tags Calvin).",
         },
       ],
-      diagram: "plant-vs-animal-cell",
+      diagram: "photosynthesis-z-scheme",
       altfrage: {
         question: "Woher stammt der bei der Photosynthese freigesetzte Sauerstoff (O₂)?",
         answer:
