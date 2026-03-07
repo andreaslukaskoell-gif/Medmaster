@@ -1551,4 +1551,22 @@ function getValidImplikationenTasks(): ImplikationTask[] {
   return valid;
 }
 
-export const implikationenTasks: ImplikationTask[] = getValidImplikationenTasks();
+/**
+ * Rebalances a task list so that E-correct tasks (correctAnswer === 4) make up
+ * at most `maxERate` of the total. Excess E tasks are removed, preserving order.
+ * MedAT target: ~20% E-correct (2 out of 10).
+ */
+export function rebalanceEAnswerRate(tasks: ImplikationTask[], maxERate = 0.22): ImplikationTask[] {
+  const eTasks = tasks.filter((t) => t.correctAnswer === 4);
+  const nonETasks = tasks.filter((t) => t.correctAnswer !== 4);
+  const maxE = Math.max(1, Math.round(tasks.length * maxERate));
+  if (eTasks.length <= maxE) return tasks;
+  // Keep only maxE of the E-tasks (shuffle to avoid always dropping the same ones)
+  const shuffledE = [...eTasks].sort(() => Math.random() - 0.5).slice(0, maxE);
+  const keepIds = new Set(shuffledE.map((t) => t.id));
+  return tasks.filter((t) => t.correctAnswer !== 4 || keepIds.has(t.id));
+}
+
+export const implikationenTasks: ImplikationTask[] = rebalanceEAnswerRate(
+  getValidImplikationenTasks()
+);

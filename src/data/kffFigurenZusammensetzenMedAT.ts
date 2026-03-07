@@ -1248,9 +1248,11 @@ export function validateUniqueCorrectOption(task: FigureAssembleTask): boolean {
     if (isOptionE(opt)) continue;
     if (polygonFingerprint(opt) === targetFp) matchCount++;
   }
-  if (matchCount !== 1) return false;
   const correctOpt = task.options[task.correctIndex];
-  if (task.correctIndex === 4) return isOptionE(correctOpt);
+  // E-correct: no A-D option matches the target
+  if (task.correctIndex === 4) return matchCount === 0 && isOptionE(correctOpt);
+  // Normal: exactly one A-D option matches and it's the correct one
+  if (matchCount !== 1) return false;
   return !isOptionE(correctOpt) && polygonFingerprint(correctOpt) === targetFp;
 }
 
@@ -1970,6 +1972,8 @@ export function generateFigurenTrainingTask(
   forcedShapeIdx?: number
 ): FigureAssembleTask {
   const rng = createRng(seed);
+  // ~15% of tasks have E as correct answer (target not among A-D)
+  const makeECorrect = rng() < 0.15;
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
@@ -1981,22 +1985,32 @@ export function generateFigurenTrainingTask(
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
 
-    const distractors = buildDistractors(target, 3, rng, fp);
-    const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
-    const order = [0, 1, 2, 3];
-    for (let i = 3; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      [order[i], order[j]] = [order[j], order[i]];
-    }
-    const correctIndex = order.indexOf(0);
+    let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
+    let correctIndex: number;
 
-    const options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption] = [
-      four[order[0]!]!,
-      four[order[1]!]!,
-      four[order[2]!]!,
-      four[order[3]!]!,
-      OPTION_E,
-    ];
+    if (makeECorrect) {
+      // E-correct: fill A-D with 4 distractors (none is the target)
+      const distractors = buildDistractors(target, 4, rng, fp);
+      const four: Polygon[] = [distractors[0]!, distractors[1]!, distractors[2]!, distractors[3]!];
+      const order = [0, 1, 2, 3];
+      for (let i = 3; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      options = [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E];
+      correctIndex = 4;
+    } else {
+      // Normal: target + 3 distractors in A-D
+      const distractors = buildDistractors(target, 3, rng, fp);
+      const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
+      const order = [0, 1, 2, 3];
+      for (let i = 3; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      correctIndex = order.indexOf(0);
+      options = [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E];
+    }
 
     // Validate with ORIGINAL (unrotated) pieces — rotation changes coordinates
     const validationTask: FigureAssembleTask = {

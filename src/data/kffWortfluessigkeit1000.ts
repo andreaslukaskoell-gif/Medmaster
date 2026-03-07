@@ -1119,15 +1119,6 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     difficulty: 1,
   },
   {
-    id: "wf-0123",
-    letters: ["H", "B", "A", "E", "L"],
-    options: ["N", "K", "M", "H", "-"],
-    correctIndex: 3,
-    solutionWord: "HALBE",
-    explanation: "Das Wort lautet „HALBE“ und beginnt mit „H“.",
-    difficulty: 1,
-  },
-  {
     id: "wf-0124",
     letters: ["A", "L", "D", "H", "E"],
     options: ["K", "M", "A", "N", "-"],
@@ -1144,15 +1135,6 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 1,
     solutionWord: "HALM",
     explanation: "Das Wort lautet „HALM“ und beginnt mit „H“.",
-    difficulty: 1,
-  },
-  {
-    id: "wf-0126",
-    letters: ["E", "L", "A", "H", "T"],
-    options: ["N", "H", "K", "M", "-"],
-    correctIndex: 1,
-    solutionWord: "HALTE",
-    explanation: "Das Wort lautet „HALTE“ und beginnt mit „H“.",
     difficulty: 1,
   },
   {
@@ -4898,15 +4880,6 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 2,
     solutionWord: "INHABER",
     explanation: "Das Wort lautet „INHABER“ und beginnt mit „I“.",
-    difficulty: 2,
-  },
-  {
-    id: "wf-0538",
-    letters: ["H", "C", "L", "N", "H", "T", "A", "I", "I", "L"],
-    options: ["L", "J", "E", "I", "-"],
-    correctIndex: 3,
-    solutionWord: "INHALTLICH",
-    explanation: "Das Wort lautet „INHALTLICH“ und beginnt mit „I“.",
     difficulty: 2,
   },
   {

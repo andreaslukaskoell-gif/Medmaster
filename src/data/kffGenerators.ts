@@ -732,15 +732,18 @@ function generatePassportNumber(): string {
 }
 
 /**
- * Pool von Passfotos (AI-generiert, copyright-frei).
- * Dateien liegen unter /public/avatars/face-01.jpg bis face-20.jpg.
+ * Pool von Passfotos (AI-generiert / DiceBear, copyright-frei).
+ * face-01..20: JPG (original), face-21..80: SVG (DiceBear avataaars).
  * Fallback: leerer String → UI zeigt Initialen-Avatar.
  */
-const AVATAR_COUNT = 20;
+const AVATAR_COUNT = 80;
 function getAvatarPool(count: number): string[] {
   const indices = Array.from({ length: AVATAR_COUNT }, (_, i) => i + 1);
   const shuffled = shuffle(indices);
-  return shuffled.slice(0, count).map((n) => `/avatars/face-${String(n).padStart(2, "0")}.jpg`);
+  return shuffled.slice(0, count).map((n) => {
+    const num = String(n).padStart(2, "0");
+    return n <= 20 ? `/avatars/face-${num}.jpg` : `/avatars/face-${num}.svg`;
+  });
 }
 
 /** Generiert 6–10 realistische Allergiepässe für Training (niemals für offizielle Beispiele).
@@ -1681,7 +1684,28 @@ function pickSmartDistractors(
     ALL_LETTERS.filter((l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l))
   );
 
-  const pool = [...externalConfusing, ...internalConfusing, ...otherWordLetters, ...otherExternal];
+  // Build priority pool but inject 1 random external letter at position 1-2
+  // to break the per-letter distractor fingerprint (prevents "N,M,K = always H" pattern)
+  const priorityPool = [
+    ...externalConfusing,
+    ...internalConfusing,
+    ...otherWordLetters,
+    ...otherExternal,
+  ];
+  const pool: string[] = [];
+  const injected = otherExternal.length > 0 ? otherExternal[0]! : null;
+  let injectedAt = false;
+  for (const l of priorityPool) {
+    // After 1 confusing letter, inject a random non-confusing external letter ~50% of the time
+    if (!injectedAt && pool.length === 1 && injected && Math.random() < 0.5) {
+      pool.push(injected);
+      injectedAt = true;
+    }
+    if (l !== injected || !injectedAt) {
+      pool.push(l);
+    }
+  }
+
   const result: string[] = [];
   const used = new Set<string>([correctFirst]);
   for (const l of pool) {

@@ -299,7 +299,27 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const q = questions[index];
   const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);
 
+  // MedAT-conform: 15 minutes for the question phase
+  const QUIZ_PHASE_SECONDS = 15 * 60;
+  const [quizSecondsLeft, setQuizSecondsLeft] = useState(QUIZ_PHASE_SECONDS);
+  const quizTimerExpired = quizSecondsLeft <= 0;
+
+  useEffect(() => {
+    if (submitted || questions.length === 0) return;
+    const interval = setInterval(() => {
+      setQuizSecondsLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [submitted, questions.length]);
+
   const handleSubmit = () => {
+    if (submitted) return;
     const score = questions.filter((qu) => answers[qu.id] === qu.correctIndex).length;
     saveQuizResult({
       id: `kff-ged-${Date.now()}`,
@@ -321,6 +341,13 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
     setSubmitted(true);
     setIndex(0);
   };
+
+  // Auto-submit when timer expires
+  useEffect(() => {
+    if (quizTimerExpired && !submitted && questions.length > 0) {
+      handleSubmit();
+    }
+  }, [quizTimerExpired]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useKeyboardShortcuts({
     disabled: submitted,
@@ -424,7 +451,15 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <Badge variant="danger">Prüfphase</Badge>
+        <div className="flex items-center gap-3">
+          <span
+            className={`font-mono text-sm font-bold tabular-nums ${quizSecondsLeft <= 60 ? "text-red-600 dark:text-red-400 animate-pulse" : "text-gray-600 dark:text-gray-400"}`}
+          >
+            {String(Math.floor(quizSecondsLeft / 60)).padStart(2, "0")}:
+            {String(quizSecondsLeft % 60).padStart(2, "0")}
+          </span>
+          <Badge variant="danger">Prüfphase</Badge>
+        </div>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div
