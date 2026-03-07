@@ -108,8 +108,8 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
       selfTest: [
         {
           question: "Wie viel Mol Glucose (M = 180 g/mol) sind in 36 g Glucose enthalten?",
-          options: ["A) 0,1 mol", "B) 0,2 mol", "C) 0,5 mol", "D) 1,0 mol", "E) 5,0 mol"],
-          correctIndex: 1,
+          options: ["A) 0,1 mol", "D) 1,0 mol", "C) 0,5 mol", "B) 0,2 mol", "E) 5,0 mol"],
+          correctIndex: 3,
           explanation:
             "n = m/M = 36 g / 180 g/mol = 0,2 mol. Die molare Masse von Glucose beträgt 180 g/mol (6×12 + 12×1 + 6×16). 36 g sind genau ein Fünftel von 180 g, also 0,2 mol.",
           hints: [
@@ -122,13 +122,13 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question: "Wie viele Wassermoleküle (M = 18 g/mol) sind in 9 g Wasser enthalten?",
           options: [
-            "A) 3,01 × 10²³",
+            "E) 3,01 × 10²²",
             "B) 6,02 × 10²³",
             "C) 1,20 × 10²⁴",
             "D) 9,03 × 10²³",
-            "E) 3,01 × 10²²",
+            "A) 3,01 × 10²³",
           ],
-          correctIndex: 0,
+          correctIndex: 4,
           explanation:
             "n = m/M = 9/18 = 0,5 mol. N = n × N_A = 0,5 × 6,022 × 10²³ = 3,01 × 10²³ Moleküle. 9 g Wasser sind ein halbes Mol, also die Hälfte der Avogadro-Zahl.",
           hints: [
@@ -141,8 +141,8 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question:
             "Welche molare Masse hat Calciumcarbonat CaCO₃ (Ca = 40, C = 12, O = 16 g/mol)?",
-          options: ["A) 68 g/mol", "B) 84 g/mol", "C) 100 g/mol", "D) 116 g/mol", "E) 44 g/mol"],
-          correctIndex: 2,
+          options: ["C) 100 g/mol", "B) 84 g/mol", "A) 68 g/mol", "D) 116 g/mol", "E) 44 g/mol"],
+          correctIndex: 0,
           explanation:
             "M(CaCO₃) = 40 + 12 + 3 × 16 = 40 + 12 + 48 = 100 g/mol. Option E (44 g/mol) ist die Molmasse von CO₂. Häufiger Fehler: Nur CO₃ berechnen (12 + 48 = 60) und Ca vergessen.",
           hints: [
@@ -155,8 +155,8 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question:
             "Ein Patient erhält 500 mg Paracetamol (M = 151 g/mol). Welche Stoffmenge entspricht das?",
-          options: ["A) 0,33 mol", "B) 3,31 mol", "C) 3,31 mmol", "D) 33,1 mmol", "E) 0,033 mmol"],
-          correctIndex: 2,
+          options: ["A) 0,33 mol", "C) 3,31 mmol", "B) 3,31 mol", "D) 33,1 mmol", "E) 0,033 mmol"],
+          correctIndex: 1,
           explanation:
             "Erst mg in g umrechnen: 500 mg = 0,500 g. Dann n = m/M = 0,500/151 = 0,00331 mol = 3,31 mmol. Typische Falle: mg nicht in g umgerechnet → Faktor 1000 daneben.",
           hints: [
@@ -299,13 +299,13 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
           question:
             "Wie lautet die korrekt ausgeglichene Gleichung für die Verbrennung von Ethanol C₂H₅OH?",
           options: [
-            "A) C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
+            "D) 2 C₂H₅OH + 5 O₂ → 4 CO₂ + 6 H₂O",
             "B) C₂H₅OH + 2 O₂ → 2 CO₂ + 2 H₂O",
             "C) C₂H₅OH + O₂ → CO₂ + H₂O",
-            "D) 2 C₂H₅OH + 5 O₂ → 4 CO₂ + 6 H₂O",
+            "A) C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
             "E) C₂H₅OH + 3 O₂ → 2 CO₂ + 2 H₂O",
           ],
-          correctIndex: 0,
+          correctIndex: 3,
           explanation:
             "C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O. Prüfung: C: 2=2 ✓, H: 6=6 ✓, O: 1+6=7 und 4+3=7 ✓. Option D ist zwar auch korrekt ausgeglichen, aber nicht die kürzeste Form (alle Koeffizienten halbierbar zu Option A).",
           hints: [
@@ -318,8 +318,8 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
         {
           question:
             "Bei der Reaktion 2 Al + 3 Cl₂ → 2 AlCl₃: Wie viel Gramm AlCl₃ (M = 133,5 g/mol) entstehen aus 5,4 g Aluminium (M = 27 g/mol)?",
-          options: ["A) 13,35 g", "B) 26,7 g", "C) 40,05 g", "D) 53,4 g", "E) 66,75 g"],
-          correctIndex: 1,
+          options: ["A) 13,35 g", "E) 66,75 g", "C) 40,05 g", "D) 53,4 g", "B) 26,7 g"],
+          correctIndex: 4,
           explanation:
             "n(Al) = 5,4/27 = 0,2 mol. Verhältnis: 2 mol Al → 2 mol AlCl₃ (1:1). n(AlCl₃) = 0,2 mol. m(AlCl₃) = 0,2 × 133,5 = 26,7 g. Das Koeffizientenverhältnis Al:AlCl₃ = 2:2 = 1:1 vereinfacht die Rechnung.",
           hints: [
@@ -333,13 +333,13 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
           question:
             "4 g H₂ (M = 2) und 32 g O₂ (M = 32) reagieren: 2 H₂ + O₂ → 2 H₂O. Welche Aussage ist korrekt?",
           options: [
-            "A) O₂ ist limitierend; es entstehen 18 g H₂O.",
-            "B) H₂ ist limitierend; es entstehen 36 g H₂O.",
             "C) Beide Reagenzien sind exakt im stöchiometrischen Verhältnis; es entstehen 36 g H₂O.",
+            "B) H₂ ist limitierend; es entstehen 36 g H₂O.",
+            "A) O₂ ist limitierend; es entstehen 18 g H₂O.",
             "D) O₂ ist limitierend; es entstehen 36 g H₂O.",
             "E) H₂ ist limitierend; es entstehen 18 g H₂O.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "n(H₂) = 4/2 = 2 mol, n(O₂) = 32/32 = 1 mol. Verhältnis laut Gleichung: 2 H₂ : 1 O₂. Tatsächliches Verhältnis: 2:1 — exakt passend! n(H₂O) = 2 mol → m = 2 × 18 = 36 g. Massenerhaltung: 4 + 32 = 36 ✓.",
           hints: [
@@ -353,13 +353,13 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
           question:
             "Was versteht man unter dem respiratorischen Quotienten (RQ) und welchen Wert hat er für reine Kohlenhydratverbrennung?",
           options: [
-            "A) RQ = CO₂ produziert / O₂ verbraucht; RQ = 1,0",
             "B) RQ = O₂ verbraucht / CO₂ produziert; RQ = 1,0",
+            "A) RQ = CO₂ produziert / O₂ verbraucht; RQ = 1,0",
             "C) RQ = CO₂ produziert / O₂ verbraucht; RQ = 0,7",
             "D) RQ = CO₂ / N₂; RQ = 0,8",
             "E) RQ = O₂ / CO₂; RQ = 0,7",
           ],
-          correctIndex: 0,
+          correctIndex: 1,
           explanation:
             "RQ = V(CO₂ produziert) / V(O₂ verbraucht). Für Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O → RQ = 6/6 = 1,0. Für Fette ist RQ ≈ 0,7 (mehr O₂ nötig pro CO₂). Für Proteine RQ ≈ 0,8. Ein gemischter RQ von 0,85 ist typisch für Normalkost.",
           hints: [
@@ -374,11 +374,11 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
           options: [
             "A) 2 H₂ + O₂ → 2 H₂O",
             "B) N₂ + 3 H₂ → 2 NH₃",
-            "C) CaCO₃ → CaO + CO₂",
             "D) Fe + O₂ → Fe₂O₃",
+            "C) CaCO₃ → CaO + CO₂",
             "E) CH₄ + 2 O₂ → CO₂ + 2 H₂O",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
             "D ist NICHT korrekt ausgeglichen: Links 1 Fe + 2 O, rechts 2 Fe + 3 O. Korrekt: 4 Fe + 3 O₂ → 2 Fe₂O₃. Alle anderen Gleichungen sind korrekt ausgeglichen: A: H 4=4, O 2=2 ✓; B: N 2=2, H 6=6 ✓; C: Ca 1=1, C 1=1, O 3=3 ✓; E: C 1=1, H 4=4, O 4=4 ✓.",
           hints: [
@@ -413,6 +413,8 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
       content: `## Konzentrationsangaben im Überblick
 
 Es gibt verschiedene Arten, die Konzentration eines gelösten Stoffes anzugeben:
+
+{{IMAGE}}
 
 ### Molarität c (Stoffmengenkonzentration)
 
@@ -517,8 +519,8 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
         {
           question:
             "Wie viel Gramm NaCl (M = 58,44 g/mol) sind in 500 mL einer 0,9 %igen NaCl-Lösung (ρ ≈ 1 g/mL) enthalten?",
-          options: ["A) 0,9 g", "B) 4,5 g", "C) 9,0 g", "D) 45 g", "E) 0,45 g"],
-          correctIndex: 1,
+          options: ["A) 0,9 g", "D) 45 g", "C) 9,0 g", "B) 4,5 g", "E) 0,45 g"],
+          correctIndex: 3,
           explanation:
             "0,9 % bedeutet: 0,9 g NaCl pro 100 g Lösung. Bei 500 mL (≈ 500 g bei ρ ≈ 1): m = 0,9 × 500/100 = 4,5 g NaCl. Häufiger Fehler: 0,9 % von 500 mL nicht korrekt berechnen.",
           hints: [
@@ -533,12 +535,12 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
             "Welche Molarität hat eine Lösung, in der 4 g NaOH (M = 40 g/mol) in 500 mL Wasser gelöst sind?",
           options: [
             "A) 0,1 mol/L",
-            "B) 0,2 mol/L",
+            "E) 2,0 mol/L",
             "C) 0,4 mol/L",
             "D) 0,05 mol/L",
-            "E) 2,0 mol/L",
+            "B) 0,2 mol/L",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "n(NaOH) = m/M = 4/40 = 0,1 mol. V = 500 mL = 0,5 L. c = n/V = 0,1/0,5 = 0,2 mol/L. Häufiger Fehler: Volumen nicht in Liter umrechnen (→ Faktor 1000 daneben).",
           hints: [
@@ -551,8 +553,8 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
         {
           question:
             "Aus 200 mL einer 5 mol/L HCl-Lösung soll eine 0,5 mol/L Lösung hergestellt werden. Welches Endvolumen ist nötig?",
-          options: ["A) 500 mL", "B) 1000 mL", "C) 2000 mL", "D) 250 mL", "E) 100 mL"],
-          correctIndex: 2,
+          options: ["C) 2000 mL", "B) 1000 mL", "A) 500 mL", "D) 250 mL", "E) 100 mL"],
+          correctIndex: 0,
           explanation:
             "c₁V₁ = c₂V₂ → V₂ = c₁V₁/c₂ = 5 × 200 / 0,5 = 2000 mL = 2 L. Die Lösung muss 10-fach verdünnt werden (5/0,5 = 10), also von 200 mL auf 2000 mL auffüllen.",
           hints: [
@@ -566,13 +568,13 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
           question:
             "Für das schwer lösliche Salz AgCl (K_sp = 1,8 × 10⁻¹⁰) gilt AgCl ⇌ Ag⁺ + Cl⁻. Welche Sättigungskonzentration hat Ag⁺?",
           options: [
-            "A) 1,34 × 10⁻⁵ mol/L",
             "B) 1,8 × 10⁻¹⁰ mol/L",
+            "A) 1,34 × 10⁻⁵ mol/L",
             "C) 9,0 × 10⁻⁶ mol/L",
             "D) 1,8 × 10⁻⁵ mol/L",
             "E) 4,24 × 10⁻³ mol/L",
           ],
-          correctIndex: 0,
+          correctIndex: 1,
           explanation:
             "AgCl ⇌ Ag⁺ + Cl⁻. Sei s = [Ag⁺] = [Cl⁻]. K_sp = s × s = s². s = √(K_sp) = √(1,8 × 10⁻¹⁰) = 1,34 × 10⁻⁵ mol/L. Häufiger Fehler: K_sp nicht als Quadratwurzel aufzulösen.",
           hints: [
@@ -587,12 +589,12 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
             "Ein Blutglucosewert wird mit 126 mg/dL gemessen. Wie viel ist das in mmol/L? (M_Glucose = 180 g/mol)",
           options: [
             "A) 5,0 mmol/L",
-            "B) 7,0 mmol/L",
             "C) 12,6 mmol/L",
+            "B) 7,0 mmol/L",
             "D) 2,27 mmol/L",
             "E) 22,7 mmol/L",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "126 mg/dL = 1260 mg/L = 1,26 g/L. n = m/M = 1,26/180 = 0,007 mol/L = 7,0 mmol/L. Schnellformel: mmol/L = mg/dL ÷ 18 = 126/18 = 7,0 mmol/L. Wert > 7,0 nüchtern = Diabetes-Diagnose!",
           hints: [
@@ -766,12 +768,12 @@ Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat
             "Was passiert mit Erythrozyten, wenn sie in destilliertes Wasser gegeben werden?",
           options: [
             "A) Sie schrumpfen (Krenation)",
-            "B) Sie platzen (Hämolyse)",
-            "C) Sie bleiben unverändert",
             "D) Sie aggregieren zu Rouleaux",
+            "C) Sie bleiben unverändert",
+            "B) Sie platzen (Hämolyse)",
             "E) Sie werden steifer, aber behalten ihre Form",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Destilliertes Wasser ist stark hypoton (0 mosmol/L vs. ≈ 290 mosmol/L im Erythrozyten). Wasser strömt osmotisch IN die Zelle → Schwellung → Hämolyse (Platzen). Krenation (Schrumpfung) tritt nur in hypertonen Lösungen auf.",
           hints: [
@@ -784,8 +786,8 @@ Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat
         {
           question:
             "Welchen van't Hoff-Faktor i hat CaCl₂ in wässriger Lösung (vollständige Dissoziation)?",
-          options: ["A) i = 1", "B) i = 2", "C) i = 3", "D) i = 4", "E) i = 0,5"],
-          correctIndex: 2,
+          options: ["A) i = 1", "B) i = 2", "E) i = 0,5", "D) i = 4", "C) i = 3"],
+          correctIndex: 4,
           explanation:
             "CaCl₂ → Ca²⁺ + 2 Cl⁻: 1 Formeleinheit zerfällt in 3 Teilchen → i = 3. NaCl: i = 2 (Na⁺ + Cl⁻). Glucose: i = 1 (kein Zerfall). Der van't Hoff-Faktor i multipliziert den kolligativen Effekt.",
           hints: [
@@ -798,8 +800,8 @@ Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat
         {
           question:
             "Berechne die Gefrierpunktserniedrigung von 0,5 mol NaCl in 1 kg Wasser (K_f = 1,86 °C·kg/mol, i = 2).",
-          options: ["A) 0,93 °C", "B) 1,86 °C", "C) 3,72 °C", "D) 0,512 °C", "E) 5,58 °C"],
-          correctIndex: 1,
+          options: ["B) 1,86 °C", "A) 0,93 °C", "C) 3,72 °C", "D) 0,512 °C", "E) 5,58 °C"],
+          correctIndex: 0,
           explanation:
             "ΔT_f = K_f × b × i = 1,86 × 0,5 × 2 = 1,86 °C. Der Gefrierpunkt sinkt auf −1,86 °C. Ohne i (Glucose, i=1): ΔT_f wäre nur 0,93 °C — NaCl hat den doppelten Effekt wegen Dissoziation.",
           hints: [
@@ -812,8 +814,8 @@ Bei der **Hämodialyse** wird Blut über eine semipermeable Membran mit Dialysat
         {
           question:
             "Wie hoch ist der osmotische Druck einer 0,1 mol/L Glucose-Lösung bei 37 °C (310 K)? (R = 0,08314 L·bar/(mol·K))",
-          options: ["A) 2,58 bar", "B) 5,15 bar", "C) 1,29 bar", "D) 0,258 bar", "E) 25,8 bar"],
-          correctIndex: 0,
+          options: ["B) 5,15 bar", "A) 2,58 bar", "C) 1,29 bar", "D) 0,258 bar", "E) 25,8 bar"],
+          correctIndex: 1,
           explanation:
             "π = i·c·R·T = 1 × 0,1 × 0,08314 × 310 = 2,577 ≈ 2,58 bar. Glucose ist ein Nichtelektrolyt (i = 1). Wäre es NaCl (i = 2), wäre π doppelt so groß (5,15 bar).",
           hints: [

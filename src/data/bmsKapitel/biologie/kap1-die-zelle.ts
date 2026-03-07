@@ -50,6 +50,8 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 
 {{DIAGRAM:animal-cell}}
 
+{{IMAGE}}
+
 ---
 
 ## Homöostase und Rückkopplung
@@ -282,6 +284,8 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen (Herausschneiden nicht-codierender Abschnitte), 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
 {{DIAGRAM:prokaryote-vs-eukaryote}}
+
+{{IMAGE}}
 
 > **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
@@ -518,6 +522,8 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 {{DIAGRAM:membrane-transport}}
 
+{{IMAGE}}
+
 **Steroide** (z. B. Cortisol, Vitamin D) sind fettähnliche Moleküle und können die Lipidschicht daher gut durchqueren. Ionen dagegen sind geladen und von einer Wasserschicht umhüllt — der Eintritt in die fettige Membran wäre energetisch sehr ungünstig; dafür braucht die Zelle spezielle **Proteine** (Funktionsmoleküle aus Aminosäuren; Kanäle, Transporter), die im nächsten Abschnitt vorkommen.
 
 > **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Kleine unpolare Moleküle frei; Ionen und große polare Moleküle brauchen Proteine.
@@ -732,6 +738,8 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
 
+{{IMAGE}}
+
 ---
 
 ## Osmose und Tonizität
@@ -926,6 +934,8 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 > **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
 
 {{DIAGRAM:endomembrane-system}}
+
+{{IMAGE}}
 
 ---
 
@@ -1172,6 +1182,8 @@ Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
+{{IMAGE}}
+
 ---
 
 ## Chromatin: 2 Meter DNA in 6 µm verpackt
@@ -1401,6 +1413,8 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 > **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
 
 {{DIAGRAM:cell-cycle}}
+
+{{IMAGE}}
 
 ---
 
@@ -1639,7 +1653,7 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
       ],
       content: `## Glykolyse — Der erste Schritt
 
-**Um zu verstehen,** woher die Zelle ihr ATP bekommt, starten wir mit dem ersten Schritt: der **Glykolyse**. Sie ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl aerob als auch anaerob möglich und liefert sofort verfügbares ATP.
+Jede Zelle braucht ATP — und der erste Schritt zur Energiegewinnung ist die **Glykolyse**. Sie ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl aerob als auch anaerob möglich und liefert sofort verfügbares ATP.
 
 **Die 10 Schritte in drei Phasen:**
 
@@ -1660,6 +1674,8 @@ Aus 2 G3P entstehen 2 Pyruvat. Pro Triose: 2 ATP + 1 NADH. Für beide Triosen: 4
 - **Pyruvat-Kinase** (Schritt 10): Phosphoenolpyruvat → Pyruvat + ATP. Gehemmt durch ATP und Alanin (Glukoneogenese-Signal).
 
 > **Merke:** PFK-1 = das wichtigste Regulationsenzym der Glykolyse. ATP hemmt, AMP aktiviert. Insulin aktiviert über Fructose-2,6-bisphosphat. Merke: “ATP bremst, wenn Energie da ist.”
+
+{{IMAGE}}
 
 ---
 
@@ -1973,7 +1989,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
       ],
       content: `## Chloroplasten — Aufbau und Endosymbiontentheorie
 
-**Um zu verstehen,** wo die Photosynthese abläuft, schauen wir uns zuerst die Chloroplasten an. Chloroplasten sind linsenförmige Organellen mit einer **Doppelmembran** — ein starkes Indiz für die **Endosymbiontentheorie** (Lynn Margulis, 1967): Chloroplasten waren ursprünglich freie **Cyanobakterien**, die von einer eukaryotischen Zelle aufgenommen (Endozytose) und als Symbionten beibehalten wurden. Beweise: eigene ringförmige DNA (wie Bakterien), 70S-Ribosomen (bakterientypisch), Doppelmembran (äußere = Phagosomenmembran, innere = ursprüngliche Bakterienmembran).
+Ohne Photosynthese gäbe es keinen freien Sauerstoff auf der Erde — und der Ort dieses Prozesses ist der Chloroplast. Chloroplasten sind linsenförmige Organellen mit einer **Doppelmembran** — ein starkes Indiz für die **Endosymbiontentheorie** (Lynn Margulis, 1967): Chloroplasten waren ursprünglich freie **Cyanobakterien**, die von einer eukaryotischen Zelle aufgenommen (Endozytose) und als Symbionten beibehalten wurden. Beweise: eigene ringförmige DNA (wie Bakterien), 70S-Ribosomen (bakterientypisch), Doppelmembran (äußere = Phagosomenmembran, innere = ursprüngliche Bakterienmembran).
 
 **Innerer Aufbau:**
 - **Äußere Membran**: durchlässig für kleine Moleküle (Porine)

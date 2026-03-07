@@ -43,6 +43,8 @@ Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** untei
 
 ---
 
+{{IMAGE}}
+
 ## Thomson-Modell (Rosinenmodell, 1904)
 
 
@@ -260,8 +262,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         {
           question:
             "Chlor besteht natürlicherweise aus ³⁵Cl (75 %) und ³⁷Cl (25 %). Welche relative Atommasse hat Chlor?",
-          options: ["35,0 u", "36,0 u", "35,5 u", "36,5 u", "37,0 u"],
-          correctIndex: 2,
+          options: ["35,0 u", "36,0 u", "36,5 u", "35,5 u", "37,0 u"],
+          correctIndex: 3,
           explanation:
             "Die relative Atommasse ist das gewichtete Mittel der vorkommenden Isotope: (0,75 × 35) + (0,25 × 37) = 26,25 + 9,25 = 35,5 u. Deshalb findet man im Periodensystem für Chlor den Wert 35,5 und keine ganze Zahl. Das Konzept ist medizinisch relevant, da Molmassen für Dosisberechnungen verwendet werden. Viele Elemente zeigen keine ganzzahligen Molmassen, weil sie natürliche Isotopengemische sind.",
           hints: [
@@ -274,8 +276,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         {
           question:
             "Welches Orbital hat die Form einer Hantel (Dumbbell) mit zwei Keulen entlang einer Achse?",
-          options: ["s-Orbital", "p-Orbital", "d-Orbital", "f-Orbital", "sp-Hybridorbital"],
-          correctIndex: 1,
+          options: ["s-Orbital", "sp-Hybridorbital", "d-Orbital", "f-Orbital", "p-Orbital"],
+          correctIndex: 4,
           explanation:
             "Das p-Orbital hat eine charakteristische Hantelform mit zwei Keulen (Lobes), die entlang einer der drei Raumachsen (x, y oder z) orientiert sind. Es gibt drei entartete (gleichwertige) p-Orbitale pro Schale: pₓ, p_y, p_z. Sie existieren ab der zweiten Schale (n = 2). Das s-Orbital ist kugelsymmetrisch. d-Orbitale haben klee- oder ringförmige Gestalt, f-Orbitale sind noch komplexer. Die hantelartige p-Form ist für die gerichteten kovalenten Bindungen (z. B. in Wasser, Ammoniak) grundlegend wichtig.",
           hints: [
@@ -289,13 +291,13 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
           question:
             "Welches Nuklid wird in der Positronen-Emissions-Tomographie (PET) als Tracer verwendet und warum?",
           options: [
-            "¹³¹I – weil es gamma-Strahlung aussendet und den Schilddrüsenstoffwechsel markiert.",
-            "⁹⁹ᵐTc – weil es eine sehr lange Halbwertszeit hat und damit stabil im Körper bleibt.",
             "¹⁸F (als FDG) – weil es bei β⁺-Zerfall Positronen emittiert, die mit Elektronen zu zwei Gammaquanten annihilieren.",
+            "⁹⁹ᵐTc – weil es eine sehr lange Halbwertszeit hat und damit stabil im Körper bleibt.",
+            "¹³¹I – weil es gamma-Strahlung aussendet und den Schilddrüsenstoffwechsel markiert.",
             "²³⁸U – weil es als schweres Element besonders gut detektierbar ist.",
             "¹⁴C – weil es als Kohlenstoff-Isotop in alle organischen Moleküle eingebaut werden kann.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "¹⁸F-FDG (Fluordesoxyglukose) ist der am häufigsten verwendete PET-Tracer. ¹⁸F ist ein Positronenstrahler (β⁺-Zerfall): p → n + e⁺ + νₑ. Das emittierte Positron trifft sofort auf ein Elektron → Annihilation → zwei Gammaquanten mit je 511 keV, die in genau entgegengesetzte Richtungen (180°) abgestrahlt werden. PET-Scanner registrieren beide Quanten zeitgleich und berechnen so den genauen Entstehungsort. FDG wird wie Glukose in Zellen aufgenommen, aber nicht weiter metabolisiert → Anreicherung in metabolisch aktiven Regionen (Tumor, Hirn). ¹⁸F hat T½ = 110 min, was für Diagnostik geeignet und die Strahlenexposition begrenzt hält.",
           hints: [
@@ -310,12 +312,12 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "Ein Atom besitzt 17 Protonen und die Massenzahl 35. Als welches Element und Ion wurde es beschrieben, wenn es 18 Elektronen hat?",
           options: [
             "Schwefel-Anion S²⁻",
-            "Argon-Atom Ar",
             "Chlorid-Ion Cl⁻",
+            "Argon-Atom Ar",
             "Chlor-Kation Cl⁺",
             "Brom-Anion Br⁻",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Z = 17 identifiziert das Element eindeutig als Chlor (Cl). Die Massenzahl A = 35 ergibt N = 35 − 17 = 18 Neutronen → es handelt sich um das Isotop ³⁵Cl. Das Atom hat 18 Elektronen, also 1 mehr als Protonen: Ladung = 17 − 18 = −1. Das ergibt das Chlorid-Ion Cl⁻. Chlorid ist im Körper ein zentrales Anion (Blutplasma, Magenbildung von HCl), und das Gleichgewicht Cl⁻ / Na⁺ ist für die Osmolarität und Nervenfunktion entscheidend. Argon (Z = 18) wäre ein neutrales Edelgasatom, kein Ion.",
           hints: [
@@ -377,6 +379,8 @@ Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0
 Beschreibt den Eigendrehimpuls (Spin, Eigendrehung des Elektrons) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922, Ablenkung eines Silberatomstrahls im Magnetfeld) wies den Elektronenspin experimentell nach.
 
 > **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig: n = Schale, l = Form, mₗ = Richtung, mₛ = Spin. Kein Quantenzahlen-Quartett darf doppelt vorkommen (Pauli).
+
+{{IMAGE}}
 
 ## Fundamentale Prinzipien der Elektronenkonfiguration
 
@@ -487,8 +491,8 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         {
           question:
             "Welche maximale Anzahl von Elektronen kann die dritte Hauptschale (n = 3) aufnehmen?",
-          options: ["6", "8", "10", "18", "32"],
-          correctIndex: 3,
+          options: ["6", "8", "18", "10", "32"],
+          correctIndex: 2,
           explanation:
             "Die maximale Elektronenzahl pro Schale berechnet sich mit 2n². Für n = 3: 2 × 3² = 2 × 9 = 18. Die dritte Schale enthält die Unterschalen 3s (1 Orbital, max. 2e⁻), 3p (3 Orbitale, max. 6e⁻) und 3d (5 Orbitale, max. 10e⁻), zusammen 9 Orbitale × 2 = 18 Elektronen. Zum Vergleich: n=1→2, n=2→8, n=3→18, n=4→32. Die vollständige M-Schale spielt z. B. bei Chlor (Z=17: [Ne]3s²3p⁵) eine zentrale Rolle.",
           hints: [
@@ -519,8 +523,8 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         },
         {
           question: "Welche Elektronenkonfiguration ist für das Eisen-Ion Fe³⁺ korrekt?",
-          options: ["[Ar]3d⁶4s²", "[Ar]3d⁵4s²", "[Ar]3d⁵", "[Ar]3d⁶4s¹", "[Ar]3d⁴4s¹"],
-          correctIndex: 2,
+          options: ["[Ar]3d⁶4s²", "[Ar]3d⁵4s²", "[Ar]3d⁴4s¹", "[Ar]3d⁶4s¹", "[Ar]3d⁵"],
+          correctIndex: 4,
           explanation:
             "Neutrales Eisen Fe (Z = 26) hat die Konfiguration [Ar]3d⁶4s². Bei der Ionenbildung werden zuerst die 4s-Elektronen entfernt (obwohl 4s vor 3d aufgebaut wird, werden bei der Ionisierung 4s-Elektronen energetisch leichter abgegeben). Fe³⁺ hat 3 Elektronen weniger: Zuerst beide 4s-Elektronen (→ Fe²⁺: [Ar]3d⁶), dann ein 3d-Elektron (→ Fe³⁺: [Ar]3d⁵). Die Konfiguration 3d⁵ ist besonders stabil (halbgefüllte Schale, alle Spins parallel nach Hund), was die Stabilität von Fe³⁺ erklärt.",
           hints: [
@@ -533,13 +537,13 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
         {
           question: "Die Hundsche Regel besagt:",
           options: [
-            "Elektronen mit gleichem Spin können dasselbe Orbital belegen.",
-            "Orbitale werden in absteigender Energiereihenfolge aufgefüllt.",
             "Entartete Orbitale werden zuerst einfach mit parallelem Spin besetzt, bevor Paare gebildet werden.",
+            "Orbitale werden in absteigender Energiereihenfolge aufgefüllt.",
+            "Elektronen mit gleichem Spin können dasselbe Orbital belegen.",
             "Kein Elektron kann dieselben vier Quantenzahlen wie ein anderes besitzen.",
             "Die Spinquantenzahl kann nur die Werte +1 und −1 annehmen.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Die Hundsche Regel (Friedrich Hund, 1925) gilt für energiegleiche (entartete) Orbitale derselben Unterschale. Sie werden zunächst mit je einem Elektron (paralleler Spin ↑) besetzt, bevor ein zweites Elektron mit antiparallelem Spin (↓) hinzukommt. Dies minimiert die elektrostatische Abstoßung zwischen Elektronen. Beispiel: Im Kohlenstoff-Atom (1s²2s²2p²) besetzen die zwei 2p-Elektronen zwei verschiedene p-Orbitale mit parallelem Spin. Antwort A ist falsch (widerspricht Pauli), B beschreibt das Aufbauprinzip, D ist das Pauliprinzip, E ist falsch (mₛ = ±½).",
           hints: [
@@ -567,12 +571,12 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
             "Warum hat Kupfer (Cu, Z = 29) die Konfiguration [Ar]3d¹⁰4s¹ und nicht die erwartete [Ar]3d⁹4s²?",
           options: [
             "Weil das Aufbauprinzip für Übergangsmetalle nicht gilt.",
-            "Weil eine vollständig gefüllte 3d¹⁰-Schale besonders stabil ist und die Energie gegenüber 3d⁹4s² absenkt.",
             "Weil 4s-Orbitale immer nach 3d aufgebaut werden.",
+            "Weil eine vollständig gefüllte 3d¹⁰-Schale besonders stabil ist und die Energie gegenüber 3d⁹4s² absenkt.",
             "Weil Kupfer zu den Edelmetallen gehört und andere Regeln gelten.",
             "Weil es für Kupfer keine d-Elektronen gibt.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Nach dem normalen Aufbauprinzip würde man für Cu (Z=29) die Konfiguration [Ar]3d⁹4s² erwarten. Tatsächlich ist aber [Ar]3d¹⁰4s¹ die reale Konfiguration. Der Grund: Eine vollständig gefüllte 3d-Schale (3d¹⁰) besitzt eine besondere Symmetrie und Stabilität, die die Gesamtenergie des Atoms senkt. Dieser Energiegewinn überwiegt den Verlust, ein 4s-Elektron weniger zu haben. Analoges gilt für Chrom: [Ar]3d⁵4s¹ statt 3d⁴4s², da eine halbgefüllte 3d⁵-Schale (alle Spins parallel) ebenfalls besonders stabil ist. Diese Ausnahmen sind prüfungsrelevant.",
           hints: [
@@ -587,11 +591,11 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
           options: [
             "Elektronen in entarteten Orbitalen bevorzugen parallelen Spin.",
             "Jedes Orbital kann maximal 3 Elektronen aufnehmen.",
-            "Zwei Elektronen im selben Orbital müssen entgegengesetzte Spins besitzen.",
             "Die Hauptquantenzahl darf für zwei Elektronen nicht gleich sein.",
+            "Zwei Elektronen im selben Orbital müssen entgegengesetzte Spins besitzen.",
             "Elektronen füllen Orbitale in Reihenfolge aufsteigender Energie.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Das Paulische Ausschlussprinzip besagt: Kein Atom kann zwei Elektronen mit identischen Werten aller vier Quantenzahlen (n, l, mₗ, mₛ) haben. Befinden sich zwei Elektronen im selben Orbital, stimmen n, l und mₗ überein – also muss mₛ verschieden sein: eines hat +½, das andere −½. Max. 2 Elektronen pro Orbital, entgegengesetzte Spins (↑↓). Antwort A beschreibt die Hundsche Regel; Antwort B ist falsch (max. 2, nicht 3); Antwort D ist zu restriktiv (gleiche Hauptquantenzahl ist erlaubt, solange andere QZ verschieden); Antwort E ist das Aufbauprinzip.",
           hints: [
@@ -768,11 +772,11 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
           options: [
             "Z sinkt um 1, A bleibt gleich.",
             "Z bleibt gleich, A sinkt um 4.",
-            "Z sinkt um 2, A sinkt um 4.",
-            "Z steigt um 2, A steigt um 4.",
             "Z bleibt gleich, A steigt um 2.",
+            "Z steigt um 2, A steigt um 4.",
+            "Z sinkt um 2, A sinkt um 4.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Beim Alpha-Zerfall wird ein Alphateilchen (⁴₂He) emittiert, das aus 2 Protonen und 2 Neutronen besteht. Daher sinkt Z um 2 und A um 4. Beispiel: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He. Das Alphateilchen ist identisch mit einem Helium-4-Kern. Die Gleichung muss bezüglich Z (Ladungserhaltung) und A (Massenerhaltung) auf beiden Seiten ausgeglichen sein.",
           hints: [
@@ -785,8 +789,8 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         {
           question:
             "Nach 3 Halbwertszeiten ist noch welcher Bruchteil der ursprünglichen Aktivität vorhanden?",
-          options: ["1/3", "1/4", "1/6", "1/8", "1/9"],
-          correctIndex: 3,
+          options: ["1/8", "1/4", "1/6", "1/3", "1/9"],
+          correctIndex: 0,
           explanation:
             "Nach jeder Halbwertszeit halbiert sich die Restmenge: N(t) = N₀ × (½)ⁿ, wobei n = Anzahl der Halbwertszeiten. Nach 1 HWZ: ½; nach 2 HWZ: ¼; nach 3 HWZ: ⅛ = 12,5 %. Allgemein: nach n HWZ bleibt 1/2ⁿ übrig. Dies ist wichtig für die Abschätzung der Strahlenbelastung in der Nuklearmedizin. Nach 10 HWZ verbleiben nur noch ca. 0,1 % der ursprünglichen Aktivität.",
           hints: [
@@ -800,12 +804,12 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
           question: "Welche Aussage zur Annihilation bei der PET ist korrekt?",
           options: [
             "Ein Positron und ein Neutron bilden zwei Alphastrahlen.",
-            "Zwei Elektronen vernichten sich gegenseitig und bilden ein Gammaquant.",
             "Ein Positron und ein Elektron annihilieren und erzeugen zwei 511-keV-Gammaquanten im 180°-Winkel.",
+            "Zwei Elektronen vernichten sich gegenseitig und bilden ein Gammaquant.",
             "Das Positron wird direkt vom PET-Scanner detektiert.",
             "Annihilation erzeugt ein einzelnes hochenergetisches Betaquant.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Bei der Positronen-Elektron-Annihilation treffen ein Positron (e⁺) und ein Elektron (e⁻) aufeinander. Ihre Gesamtmasse (2 × 0,511 MeV/c²) wird vollständig in elektromagnetische Energie umgewandelt: 2 Gammaquanten mit je 511 keV. Aufgrund der Impulserhaltung fliegen die Photonen exakt in entgegengesetzter Richtung (180°) auseinander. PET-Scanner nutzen Koinzidenzdetektion: Beide Quanten werden zeitgleich von gegenüberliegenden Detektoren registriert → exakte Lokalisierung des Annihilationsereignisses im 3D-Raum. Ohne die 180°-Koinzidenz wäre keine präzise Bildgebung möglich.",
           hints: [
@@ -820,11 +824,11 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
           options: [
             "Ein Blatt Papier",
             "Eine Aluminiumfolie (wenige mm)",
-            "Kleidung aus Baumwolle",
             "Dickes Blei oder Betonwände",
+            "Kleidung aus Baumwolle",
             "Wasser in Glasflaschen",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
             "Gammastrahlung ist hochenergetische elektromagnetische Strahlung mit sehr hoher Durchdringungskraft. Zur effektiven Abschirmung werden dichte, schwere Materialien benötigt, vor allem Blei (Pb, hohe Ordnungszahl → viele Elektronen für Photoeffekt/Comptonstreuung) oder dicke Betonwände. Papier stoppt nur α-Strahlung. Aluminium (mm-Bereich) stoppt β-Strahlung. Kleidung bietet keinen Schutz gegen γ. Wasser kann in großen Mengen Gammastrahlung abschwächen (Schwimmbecken in Kernkraftwerken), aber Glasflaschen sind ungeeignet.",
           hints: [
@@ -839,12 +843,12 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
             "¹³¹I wird zur Therapie von Schilddrüsenerkrankungen eingesetzt. Welche Eigenschaft macht es dafür geeignet?",
           options: [
             "Es ist ein Alphastrahler mit langer Halbwertszeit und hoher Reichweite.",
-            "Es hat eine Halbwertszeit von 8 Tagen, ist ein β⁻-Strahler und wird von der Schilddrüse spezifisch aufgenommen.",
-            "Es ist ein γ-Strahler, der von außen durch die Haut wirkt.",
             "Es hat eine Halbwertszeit von 6 Stunden und ist damit ideal für Therapie.",
+            "Es ist ein γ-Strahler, der von außen durch die Haut wirkt.",
+            "Es hat eine Halbwertszeit von 8 Tagen, ist ein β⁻-Strahler und wird von der Schilddrüse spezifisch aufgenommen.",
             "Es ist chemisch inert und wird gleichmäßig im ganzen Körper verteilt.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "¹³¹I vereint mehrere ideale Eigenschaften für die Radiojodtherapie: (1) Organspezifische Aufnahme: Die Schilddrüse ist das einzige Organ, das Iod aktiv aufnimmt (für die Schilddrüsenhormonsynthese T₃/T₄). ¹³¹I wird wie normales Iod aufgenommen → gezielter Transport zum Zielgewebe. (2) β⁻-Strahlung: Die emittierten Elektronen haben eine sehr kurze Reichweite (mm) im Gewebe → lokale Strahlenwirkung nur in der Schilddrüse, wenig systemische Belastung. (3) T½ = 8 Tage: Genug für therapeutische Wirkung, danach rasche Elimination. Anwendung: M. Basedow, Schilddrüsenkarzinom-Ablation nach Thyreoidektomie.",
           hints: [
@@ -859,12 +863,12 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
             "Welche Maßnahme schützt die Schilddrüse nach einem Kernkraftwerksunfall am wirksamsten vor radioaktivem Iod?",
           options: [
             "Evakuierung allein reicht aus; Jodpillen sind unwirksam.",
-            "Gabe von Kaliumiodid (KI), um die Schilddrüse mit stabilem Iod zu sättigen.",
+            "Trinken von großen Mengen Wasser zur Verdünnung.",
             "Einnahme von Natriumchlorid in großen Mengen.",
             "Externe Abschirmung mit Bleiwesten.",
-            "Trinken von großen Mengen Wasser zur Verdünnung.",
+            "Gabe von Kaliumiodid (KI), um die Schilddrüse mit stabilem Iod zu sättigen.",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Nach einem Kernkraftwerksunfall (z. B. Tschernobyl 1986, Fukushima 2011) kann radioaktives ¹³¹I freigesetzt werden. Die Schilddrüse nimmt es genauso auf wie stabiles Iod. Präventionsmaßnahme: Einnahme von Kaliumiodid (KI) in ausreichender Dosierung sättigt die Schilddrüse mit stabilem (nicht-radioaktivem) ¹²⁷I → kein Platz mehr für ¹³¹I-Aufnahme → drastische Reduktion der Schilddrüsenstrahlenbelastung. Diese Maßnahme muss zeitnah (vor oder kurz nach Exposition) erfolgen. Sie schützt nur die Schilddrüse, nicht den restlichen Körper. Besonders wichtig für Kinder (höhere Jodumsatz-Rate und längere Restlebenserwartung = höheres Krebsrisiko).",
           hints: [
@@ -878,13 +882,13 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
           question:
             "Welcher Strahlungstyp hat das höchste biologische Schädigungspotenzial pro absorbierter Energiedosis (Gray)?",
           options: [
-            "Gammastrahlung (γ)",
+            "Alphastrahlung (α)",
             "Betastrahlung (β)",
             "Röntgenstrahlung",
-            "Alphastrahlung (α)",
+            "Gammastrahlung (γ)",
             "Alle Strahlungstypen haben dasselbe biologische Schädigungspotenzial.",
           ],
-          correctIndex: 3,
+          correctIndex: 0,
           explanation:
             "Die biologische Wirksamkeit einer Strahlung wird durch den Strahlungs-Wichtungsfaktor (früher: relative biologische Wirksamkeit, RBW) beschrieben. Für α-Strahlung beträgt er 20, für β- und γ-Strahlung jeweils 1. Das bedeutet: 1 Gray α-Strahlung entspricht 20 Sievert biologischer Dosis – 20-fach höhere Schädigung als dieselbe Energiemenge als γ-Strahlung. Der Grund: Alphateilchen sind schwer und langsam → hohe lineare Energieübertragung (LET) → dichte Ionisierung entlang kurzer Bahnen → schwer zu reparierende DNA-Doppelstrangbrüche. Obwohl Alpha-Strahlung von außen harmlos ist (stoppt an der Haut), ist sie intern (Inhalation, Ingestion) besonders gefährlich.",
           hints: [
@@ -918,6 +922,8 @@ Natürliche Strahlenbelastung in Österreich: ca. 2,5 mSv/Jahr (Radon, kosmische
         "Laborwerte",
       ],
       content: `Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
+
+{{IMAGE}}
 
 ## Atomare Masseneinheit u
 
@@ -1077,8 +1083,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
       selfTest: [
         {
           question: "Wie viel Mol sind in 90 g Wasser (M(H₂O) = 18 g/mol)?",
-          options: ["0,2 mol", "1 mol", "5 mol", "18 mol", "90 mol"],
-          correctIndex: 2,
+          options: ["0,2 mol", "5 mol", "1 mol", "18 mol", "90 mol"],
+          correctIndex: 1,
           explanation:
             "Formel: n = m / M. Einsetzen: n = 90 g ÷ 18 g/mol = 5 mol. Das entspricht 5 × 6,022 × 10²³ = 3,011 × 10²⁴ Wassermolekülen. Zur Kontrolle: 1 mol Wasser = 18 g, also 90 g = 5 mol. Diese einfache Umrechnung ist die Basis aller stöchiometrischen Berechnungen. Klinisch wichtig: Infusionslösungen werden in mol oder mmol pro Liter angegeben, und die Berechnung erfolgt nach derselben Formel.",
           hints: [
@@ -1107,11 +1113,11 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
           options: [
             "Die Anzahl der Elektronen in einem Mol Elektronen.",
             "Die Masse von einem Mol einer beliebigen Substanz in Gramm.",
-            "Die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol einer Substanz.",
             "Den Druck eines idealen Gases bei Standardbedingungen.",
+            "Die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol einer Substanz.",
             "Die Energie, die bei der Verbrennung eines Mols Wasserstoff freigesetzt wird.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             'Die Avogadro-Konstante Nₐ gibt die Anzahl der Teilchen (Atome, Moleküle, Ionen, Elektronen – je nach Substanz) in genau einem Mol an. Sie verbindet die atomare Welt (Masse in u) mit der makroskopischen Welt (Masse in g): 1 Mol ¹²C (12 u pro Atom) hat genau 12 g Masse. Der numerische Wert Nₐ ≈ 6,022 × 10²³ wurde so definiert. Beispiel: 1 mol NaCl enthält Nₐ Na⁺-Ionen und Nₐ Cl⁻-Ionen, insgesamt 2Nₐ Ionen. Die Einheit mol⁻¹ bedeutet "pro Mol".',
           hints: [
@@ -1124,8 +1130,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         {
           question:
             "Die molare Masse von Aspirin (Acetylsalicylsäure, C₉H₈O₄) beträgt ca. 180 g/mol. Wie viele Millimol enthält eine Tablette mit 500 mg Aspirin?",
-          options: ["0,278 mmol", "2,78 mmol", "27,8 mmol", "278 mmol", "0,0278 mmol"],
-          correctIndex: 1,
+          options: ["0,278 mmol", "0,0278 mmol", "27,8 mmol", "278 mmol", "2,78 mmol"],
+          correctIndex: 4,
           explanation:
             "n = m / M = 0,500 g ÷ 180 g/mol = 0,00278 mol = 2,78 mmol. Zur Überprüfung: 1 mol Aspirin = 180 g; 0,5 g ist 0,5/180 des molaren Gewichts = 0,00278 mol = 2,78 mmol. Solche Berechnungen sind in der klinischen Pharmakologie notwendig: z. B. für Interaktionsberechnungen, Vergleich von Wirkstoffen verschiedener Molmassen oder die Berechnung von Infusionskonzentrationen. 2,78 mmol Aspirin in 500 mL Lösung ergäben eine Konzentration von 5,56 µmol/mL.",
           hints: [
@@ -1137,8 +1143,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         },
         {
           question: "Eine Lösung enthält 1 mol/L NaCl. Was ist die Osmolarität dieser Lösung?",
-          options: ["0,5 mosmol/L", "1 mosmol/L", "2 mosmol/L", "58,5 mosmol/L", "1000 mosmol/L"],
-          correctIndex: 2,
+          options: ["2 mosmol/L", "1 mosmol/L", "0,5 mosmol/L", "58,5 mosmol/L", "1000 mosmol/L"],
+          correctIndex: 0,
           explanation:
             "NaCl ist ein starkes Elektrolyt und dissoziiert in wässriger Lösung vollständig: NaCl → Na⁺ + Cl⁻. Aus 1 mol/L NaCl entstehen 1 mol/L Na⁺ und 1 mol/L Cl⁻ = 2 mol/L osmotisch aktive Teilchen = 2 osmol/L = 2000 mosmol/L. Klinisch relevant: Physiologische Kochsalzlösung (0,9 % NaCl) enthält ca. 0,154 mol/L NaCl → 0,308 osmol/L ≈ 308 mosmol/L. Das Blutplasma hat eine Osmolarität von etwa 290 mosmol/L. Für Osmolaritätsberechnungen gilt: vollständige Dissoziation annehmen, jedes Ion einzeln zählen.",
           hints: [
@@ -1151,8 +1157,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         {
           question:
             "Bei der vollständigen Verbrennung von Glukose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O. Wie viel Gramm O₂ (M = 32 g/mol) werden für 18 g Glukose (M = 180 g/mol) benötigt?",
-          options: ["3,2 g", "6,4 g", "19,2 g", "32,0 g", "192 g"],
-          correctIndex: 2,
+          options: ["3,2 g", "19,2 g", "6,4 g", "32,0 g", "192 g"],
+          correctIndex: 1,
           explanation:
             "Zunächst n(Glukose) = 18 g ÷ 180 g/mol = 0,1 mol. Laut Reaktionsgleichung reagieren 1 mol Glukose mit 6 mol O₂ (stöchiometrisches Verhältnis 1:6). Für 0,1 mol Glukose: n(O₂) = 0,1 × 6 = 0,6 mol. m(O₂) = 0,6 mol × 32 g/mol = 19,2 g. Stöchiometrische Berechnungen folgen immer dem Schema: (1) mol des Ausgangsstoffs berechnen, (2) Koeffizientenverhältnis anwenden, (3) mol des Zielprodukts in Gramm umrechnen. Diese Oxidation liefert 0,1 × 2870 = 287 kJ Energie.",
           hints: [
@@ -1166,12 +1172,12 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
           question: "Welche Aussage zur relativen Atommasse von Chlor (ca. 35,5 u) ist korrekt?",
           options: [
             "Chlor hat nur ein Isotop, nämlich ³⁵Cl.",
-            "Die Atommasse 35,5 u entsteht durch den Durchschnitt aus ³⁵Cl und ³⁷Cl, gewichtet nach ihrer natürlichen Häufigkeit.",
             "Alle Chloratome haben genau 35,5 Neutronen.",
+            "Die Atommasse 35,5 u entsteht durch den Durchschnitt aus ³⁵Cl und ³⁷Cl, gewichtet nach ihrer natürlichen Häufigkeit.",
             "Die Atommasse 35,5 bedeutet, dass jedes Chloratom 35,5 Protonen hat.",
             "Chlor hat keine stabilen Isotope.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Chlor kommt in der Natur als Gemisch aus zwei stabilen Isotopen vor: ³⁵Cl (ca. 75,77 %, 17 Protonen + 18 Neutronen) und ³⁷Cl (ca. 24,23 %, 17 Protonen + 20 Neutronen). Die relative Atommasse ist das gewichtete Mittel: (0,7577 × 35) + (0,2423 × 37) = 26,52 + 8,97 = 35,49 ≈ 35,5 u. Deshalb findet man im Periodensystem keine ganze Zahl für Chlor. Einzelne Chloratome haben stets ganzzahlige Neutronenzahlen (18 oder 20); 35,5 ist nur ein statistischer Mittelwert des natürlichen Isotopengemisches.",
           hints: [
@@ -1233,6 +1239,8 @@ Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer 
 | Dipol–Dipol (Keesom) | 3–10 | HCl···HCl |
 | London-Dispersion | 0,05–40 | CH₄···CH₄ (~1) |
 
+
+{{IMAGE}}
 
 ## Wasserstoffbrückenbindungen
 
@@ -1341,11 +1349,11 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
           options: [
             "Sie existieren nur in unpolaren Molekülen.",
             "Sie beruhen auf permanenten Dipolen.",
-            "Sie entstehen durch spontane Elektronenfluktuationen und nehmen mit der Molmasse zu.",
             "Sie sind stärker als Wasserstoffbrücken.",
+            "Sie entstehen durch spontane Elektronenfluktuationen und nehmen mit der Molmasse zu.",
             "Sie sind unabhängig von der Molekülgröße.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "London-Dispersionskräfte entstehen durch kurzfristige Unsymmetrien in der Elektronenverteilung (spontane Dipole), die in Nachbarmolekülen induzierte Dipole erzeugen. Sie existieren in *allen* Molekülen (polar und unpolar). Mit steigender Molmasse (mehr Elektronen, größere Polarisierbarkeit) nehmen sie zu. Sie sind deutlich schwächer als Wasserstoffbrücken, nicht stärker. Die Aussage, sie seien nur in unpolaren Molekülen vorhanden, ist falsch: Auch polare Moleküle haben zusätzlich London-Kräfte.",
           hints: [
@@ -1358,8 +1366,8 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
         {
           question:
             "In der DNA-Doppelhelix bildet das Basenpaar Guanin–Cytosin (G–C) wie viele Wasserstoffbrücken?",
-          options: ["1", "2", "3", "4", "5"],
-          correctIndex: 2,
+          options: ["1", "2", "5", "4", "3"],
+          correctIndex: 4,
           explanation:
             "Guanin–Cytosin bildet 3 Wasserstoffbrücken, Adenin–Thymin dagegen nur 2. Dies hat direkte Konsequenzen: GC-reiche DNA-Abschnitte weisen eine höhere Schmelztemperatur auf, weil mehr H-Brücken pro Basenpaar aufgebrochen werden müssen. Bei der PCR beeinflusst der GC-Gehalt die erforderliche Denaturierungstemperatur und -dauer. G-C-Paare sind um 50 % stärker verknüpft als A-T-Paare.",
           hints: [
@@ -1373,13 +1381,13 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
           question:
             "Welche strukturellen Voraussetzungen muss ein Molekül erfüllen, um als Wasserstoffbrücken-Donor zu wirken?",
           options: [
-            "Es muss ein freies Elektronenpaar besitzen.",
             "Es muss ein H-Atom tragen, das an N, O oder F gebunden ist.",
+            "Es muss ein freies Elektronenpaar besitzen.",
             "Es muss unpolar sein.",
             "Es muss ein positiv geladenes Ion sein.",
             "Es muss ein aromatisches System besitzen.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Ein Wasserstoffbrücken-Donor benötigt ein H-Atom, das kovalent an ein stark elektronegatives Atom (N, O oder F) gebunden ist. Durch die hohe Elektronegativität wird das H-Atom δ+ polarisiert und kann elektrostatisch mit einem freien Elektronenpaar des Akzeptors (ebenfalls N, O oder F) wechselwirken. Ein freies Elektronenpaar allein macht ein Molekül zum Akzeptor, nicht zum Donor. Unpolarität, Ladung und Aromatizität sind keine Voraussetzungen.",
           hints: [
@@ -1394,12 +1402,12 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
             "Warum siedet Wasser (H₂O, M = 18 g/mol) bei 100 °C, Schwefelwasserstoff (H₂S, M = 34 g/mol) aber nur bei −60 °C?",
           options: [
             "H₂O hat eine höhere Molmasse als H₂S.",
-            "H₂S ist giftiger als H₂O.",
             "H₂O bildet ein ausgedehntes Wasserstoffbrücken-Netzwerk; H₂S nicht, weil S zu wenig elektronegativ ist.",
+            "H₂S ist giftiger als H₂O.",
             "H₂S hat stärkere London-Kräfte als H₂O.",
             "H₂O hat einen größeren Dipolmoment-Unterschied durch London-Dispersion.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Wasser bildet pro Molekül bis zu 4 Wasserstoffbrücken (2 Donor-OH, 2 Akzeptor-Elektronenpaare am O), da Sauerstoff hochelektronegativ ist (χ = 3,44). Für eine H-Brücke ist X = N, O oder F erforderlich. Schwefel (χ = 2,58) ist zu wenig elektronegativ und zu groß, um nennenswerte H-Brücken auszubilden. H₂S wird daher nur durch van-der-Waals-Kräfte zusammengehalten, die aufgrund der niedrigen Molmasse schwach sind — daher der viel niedrigere Siedepunkt trotz höherer Molmasse.",
           hints: [
@@ -1414,12 +1422,12 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
             "Ein Anästhetikum ist ein sehr unpolares Molekül ohne H-Brücken-fähige Gruppen. Welche Aussage über seine intermolekularen Wechselwirkungen und Löslichkeit ist korrekt?",
           options: [
             "Es ist gut wasserlöslich aufgrund starker Keesom-Wechselwirkungen.",
-            "Es weist nur London-Dispersionskräfte auf und ist gut lipidlöslich.",
             "Es bildet H-Brücken mit Wassermolekülen und ist daher renal eliminierbar.",
+            "Es weist nur London-Dispersionskräfte auf und ist gut lipidlöslich.",
             "Es hat keine intermolekularen Wechselwirkungen und ist ein ideales Gas.",
             "Es ist ionisch und daher gut in Körperflüssigkeiten verteilt.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             'Ein unpolares Molekül ohne H-Brücken-fähige Gruppen (keine N–H, O–H oder F–H-Bindungen und keine permanenten Dipole) besitzt ausschließlich London-Dispersionskräfte. Diese begünstigen die Löslichkeit in unpolaren Phasen (Lipide, Membranen) gemäß dem Prinzip "Gleiches löst sich in Gleichem". Lipidlösliche Anästhetika (z. B. Halothan) penetrieren leicht Lipiddoppelschichten und wirken direkt auf Membranproteine. Sie sind schlecht wasserlöslich und werden hauptsächlich hepatisch metabolisiert, nicht renal unverändert ausgeschieden.',
           hints: [
@@ -1454,12 +1462,12 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
             "Denaturierung von Proteinen durch Erhitzen zerstört primär welche Art von Bindungen/Wechselwirkungen?",
           options: [
             "Primär kovalente Peptidbindungen in der Primärstruktur.",
-            "Primär nicht-kovalente Wechselwirkungen wie H-Brücken, hydrophobe Kontakte und ionische Wechselwirkungen der Sekundär- und Tertiärstruktur.",
+            "Ausschließlich elektrostatische Wechselwirkungen zwischen geladenen Aminosäuren.",
             "Primär kovalente Disulfidbrücken in der Tertiärstruktur.",
             "Nur Van-der-Waals-Kräfte, nicht aber Wasserstoffbrücken.",
-            "Ausschließlich elektrostatische Wechselwirkungen zwischen geladenen Aminosäuren.",
+            "Primär nicht-kovalente Wechselwirkungen wie H-Brücken, hydrophobe Kontakte und ionische Wechselwirkungen der Sekundär- und Tertiärstruktur.",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Proteindenaturierung durch Hitze (oder Harnstoff, pH-Extrema) zerstört die nicht-kovalenten Wechselwirkungen, die Sekundär-, Tertiär- und Quartärstruktur stabilisieren: Wasserstoffbrücken (α-Helix, β-Faltblatt), hydrophobe Wechselwirkungen (London-Kräfte im unpolaren Proteinkern) sowie ionische Wechselwirkungen zwischen geladenen Seitenketten. Die kovalenten Peptidbindungen der Primärstruktur bleiben beim Erhitzen intakt (dazu bräuchte man Säure-/Base-Hydrolyse). Kovalente Disulfidbrücken werden durch Hitze allein nicht gespalten — dafür braucht man Reduktionsmittel.",
           hints: [
@@ -1500,6 +1508,8 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
 **Polare Lösungsmittel** (z. B. Wasser, ε = 80 (Dielektrizitätskonstante, Maß für elektrische Abschirmfähigkeit)) lösen **polare und ionische** Substanzen: Wasser hydratisiert Ionen durch Ausbildung von Hydrathüllen (Ion-Dipol-Wechselwirkung) und bildet H-Brücken mit polaren Molekülen (OH, NH, C=O). Die Hydratationsenthalpie kompensiert die Gitterenergie.
 
 > **Merke:** Ein Salz löst sich in Wasser, wenn die Hydratationsenthalpie (Energie beim Umhüllen der Ionen mit Wasser) die Gitterenergie (Energie zum Aufbrechen des Ionengitters) übersteigt oder annähernd erreicht.
+
+{{IMAGE}}
 
 **Unpolare Lösungsmittel** (Hexan, Dichlormethan) lösen **unpolare** Substanzen (Lipide, Steroide, Wachse) über London-Wechselwirkungen. Die Dielektrizitätskonstante ε ist niedrig (Hexan: ε = 1,9), was die Abschwächung von Coulomb-Kräften zwischen Ionen verhindert — ionische Verbindungen bleiben unlöslich.
 
@@ -1640,13 +1650,13 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
           question:
             "Wie groß ist die Osmolarität einer 0,5 mol/L CaCl₂-Lösung? (CaCl₂ → Ca²⁺ + 2 Cl⁻)",
           options: [
-            "500 mOsmol/L",
+            "1500 mOsmol/L",
             "750 mOsmol/L",
             "1000 mOsmol/L",
-            "1500 mOsmol/L",
+            "500 mOsmol/L",
             "250 mOsmol/L",
           ],
-          correctIndex: 3,
+          correctIndex: 0,
           explanation:
             "CaCl₂ dissoziiert vollständig in 1 Ca²⁺ und 2 Cl⁻, also 3 Teilchen pro Formeleinheit → van't-Hoff-Faktor i = 3. Osmolarität = c × i × 1000 = 0,5 mol/L × 3 × 1000 = 1500 mOsmol/L. Diese Lösung ist stark hypertonisch (Blut: ~290 mOsmol/L). Starke Hypertonizität würde Erythrozyten schrumpfen lassen (Crenation) und darf nicht als Infusion gegeben werden.",
           hints: [
@@ -1661,12 +1671,12 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
             "Ein Patient erhält versehentlich reines Wasser (destilliert) als intravenöse Infusion. Was passiert mit seinen Erythrozyten?",
           options: [
             "Sie schrumpfen (Crenation), weil Wasser hypotonisch ist.",
-            "Nichts, weil Erythrozyten keine semipermeable Membran haben.",
             "Sie schwellen an und platzen (Hämolyse), weil Wasser ins Zellinnere strömt.",
+            "Nichts, weil Erythrozyten keine semipermeable Membran haben.",
             "Sie werden agglutiniert durch den osmotischen Druck.",
             "Ihre Hämoglobinkonzentration steigt durch Wasserentzug.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Reines Wasser hat eine Osmolarität von 0 mOsmol/L — extrem hypotonisch gegenüber dem Zellinneren (Erythrozyt: ~300 mOsmol/L). Wasser strömt per Osmose durch die semipermeable Erythrozytenmembran in die Zelle, bis der osmotische Druck ausgeglichen ist oder die Membran reißt. Die Folge ist Hämolyse (Platzen der Erythrozyten) mit Freisetzung von Hämoglobin — klinisch: Hämoglobinurie, Nierenversagen möglich. Deswegen müssen alle i.v.-Lösungen isotonisch formuliert sein.",
           hints: [
@@ -1679,8 +1689,8 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
         {
           question:
             "Welche Konzentration hat eine 5 % (m/v) Glukoselösung in mol/L? (M Glukose = 180 g/mol)",
-          options: ["0,028 mol/L", "0,278 mol/L", "0,500 mol/L", "2,78 mol/L", "5,00 mol/L"],
-          correctIndex: 1,
+          options: ["0,028 mol/L", "0,500 mol/L", "0,278 mol/L", "2,78 mol/L", "5,00 mol/L"],
+          correctIndex: 2,
           explanation:
             "5 % (m/v) bedeutet 5 g Glukose pro 100 mL = 50 g/L. Mit der Molmasse M = 180 g/mol gilt: c = 50 g/L ÷ 180 g/mol ≈ 0,278 mol/L. Die Osmolarität beträgt 0,278 mol/L × 1 (Glukose dissoziiert nicht, i = 1) × 1000 ≈ 278 mOsmol/L — damit ist die Lösung annähernd isotonisch mit Blutplasma (285–295 mOsmol/L).",
           hints: [
@@ -1695,12 +1705,12 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
             "Warum entwickelt ein Patient mit schwerer Hypoalbuminämie (Albumin 15 g/L statt 40 g/L) periphere Ödeme?",
           options: [
             "Weil Albumin Wasser aktiv in die Zellen pumpt.",
-            "Weil der onkotische Druck im Plasma sinkt und Wasser aus den Kapillaren ins Interstitium austritt.",
-            "Weil Albumin die Nierenfunktion hemmt und Wasser retiniert wird.",
             "Weil fehlende Albumine die Blut-Hirn-Schranke destabilisieren.",
+            "Weil Albumin die Nierenfunktion hemmt und Wasser retiniert wird.",
+            "Weil der onkotische Druck im Plasma sinkt und Wasser aus den Kapillaren ins Interstitium austritt.",
             "Weil Albumin normalerweise Wasser aus dem Darm resorbiert.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Albumin ist zu groß, um die Kapillarmembran normal zu passieren, und erzeugt dadurch den onkotischen (kolloidosmotischen) Druck von ~25 mmHg, der Wasser im Gefäßlumen hält. Bei Hypoalbuminämie (z. B. nephrotisches Syndrom, Leberzirrhose, Malnutrition) sinkt dieser Gegendruck. Der hydrostatische Druck der Kapillaren überwiegt nun an beiden Seiten, Wasser filtiert verstärkt ins Interstitium: Ödeme entstehen. Dies ist reines Osmose-Prinzip: Wasser folgt dem osmotischen Gradienten — von höherer zu niedrigerer Albuminkonzentration (Gefäß → Interstitium).",
           hints: [
@@ -1716,11 +1726,11 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
           options: [
             "Jod bildet H-Brücken mit CCl₄.",
             "CCl₄ ist polar und bildet Dipol-Dipol-Wechselwirkungen mit I₂.",
-            '"Similia similibus solvuntur" — beide sind unpolarer Natur und wechselwirken über London-Kräfte.',
-            "Jod ist ionisch und CCl₄ ist ein starkes Ionensolvatans.",
             "CCl₄ hat eine höhere Dielektrizitätskonstante als Wasser.",
+            "Jod ist ionisch und CCl₄ ist ein starkes Ionensolvatans.",
+            '"Similia similibus solvuntur" — beide sind unpolarer Natur und wechselwirken über London-Kräfte.',
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             'Jod (I₂) ist ein unpolares, symmetrisches Molekül ohne permanentes Dipolmoment. CCl₄ ist ebenfalls unpolar (symmetrisches Tetraeder, Dipolmomente heben sich auf). Beide wechselwirken über London-Dispersionskräfte, die für unpolare Moleküle die einzigen intermolekularen Kräfte sind. Da "Gleiches sich in Gleichem löst", ist I₂ gut in CCl₄ löslich. In Wasser (hochpolar, H-Brücken-Netzwerk) ist I₂ dagegen nahezu unlöslich, weil I₂ dieses Netzwerk nicht aufrechterhalten kann. CCl₄ hat eine niedrigere Dielektrizitätskonstante als Wasser, kein Dipolmoment und keine H-Brücken.',
           hints: [
@@ -1734,13 +1744,13 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
           question:
             "Welche Lösung ist die richtige intravenöse Flüssigkeit für einen Patienten mit Hypovolämie (Blutdruckabfall durch Volumenmangel) ohne bekannte Elektrolytstörungen?",
           options: [
-            "Destilliertes Wasser, weil es keine zusätzlichen Elektrolyte enthält.",
-            "10 % NaCl-Lösung, um den Blutdruck schnell zu erhöhen.",
             "Isotonische 0,9 % NaCl-Lösung (154 mmol/L, ~308 mOsmol/L).",
+            "10 % NaCl-Lösung, um den Blutdruck schnell zu erhöhen.",
+            "Destilliertes Wasser, weil es keine zusätzlichen Elektrolyte enthält.",
             "Hypotone 0,45 % NaCl-Lösung, um mehr Volumen in die Zellen zu bringen.",
             "70 % Ethanol, weil Alkohol gefäßerweiternd wirkt.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Bei Hypovolämie muss das intravasale Volumen aufgefüllt werden ohne Hämolyse oder Crenation zu riskieren. Die isotonische 0,9 % NaCl-Lösung (154 mmol/L NaCl, Osmolarität ~308 mOsmol/L) entspricht annähernd dem osmotischen Druck des Blutplasmas (285–295 mOsmol/L) und verursacht keine Volumenverschiebungen über Erythrozytenmembranen. Destilliertes Wasser (0 mOsmol/L) würde akute Hämolyse verursachen. 10 % NaCl ist stark hypertonisch und würde Zellen schrumpfen lassen sowie hypernatriämische Schäden verursachen. Hypotone Lösungen würden Zellen aufschwellen lassen.",
           hints: [
@@ -1753,8 +1763,8 @@ Das osmotische Grundprinzip lautet: Wasser folgt stets dem osmotischen Gefälle 
         {
           question:
             "Was ist der Van't-Hoff-Faktor (i) für Calciumchlorid CaCl₂, das vollständig dissoziiert?",
-          options: ["1", "2", "3", "4", "6"],
-          correctIndex: 2,
+          options: ["1", "3", "2", "4", "6"],
+          correctIndex: 1,
           explanation:
             "CaCl₂ dissoziiert in wässriger Lösung vollständig: CaCl₂ → Ca²⁺ + 2 Cl⁻. Pro Formeleinheit entstehen 3 Ionen. Der van't-Hoff-Faktor i gibt die Anzahl der Partikel an, in die eine Formeleinheit dissoziiert. Für CaCl₂ gilt daher i = 3. Dies ist wichtig für die Berechnung der Osmolarität (= c × i × 1000) und kolligativer Eigenschaften. Vergleich: NaCl: i = 2 (Na⁺ + Cl⁻); Glukose: i = 1 (kein Zerfall); MgCl₂: i = 3; AlCl₃: i = 4.",
           hints: [
@@ -1949,11 +1959,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           options: [
             "Schmelzen (fest → flüssig)",
             "Verdampfen (flüssig → gasförmig)",
-            "Sublimation (fest → gasförmig)",
             "Kondensation (gasförmig → flüssig)",
+            "Sublimation (fest → gasförmig)",
             "Endotherm sind alle Phasenübergänge.",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
             "Kondensation (gasförmig → flüssig) ist exotherm: Beim Übergang in den geordneteren, dichteren Zustand wird die beim Verdampfen aufgenommene Wärme (Verdampfungswärme) wieder freigesetzt. Dieses Prinzip erklärt, warum Dampfverbrennungen schlimmer sind als Wasserverbrennungen gleicher Temperatur — Dampf gibt beim Kondensieren auf der Haut zusätzlich Verdampfungswärme (2257 J/g) ab. Alle Übergänge zu weniger geordneten Phasen (Schmelzen, Verdampfen, Sublimation) sind endotherm.",
           hints: [
@@ -1969,11 +1979,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           options: [
             "Weil Wasser in großer Höhe eine niedrigere Molmasse hat.",
             "Weil der Dampfdruck mit steigender Höhe zunimmt.",
-            "Weil der Siedepunkt dort liegt, wo Dampfdruck = äußerer Luftdruck; niedrigerer Luftdruck → niedrigerer Siedepunkt.",
             "Weil die Schwerkraft den Siedepunkt beeinflusst.",
+            "Weil der Siedepunkt dort liegt, wo Dampfdruck = äußerer Luftdruck; niedrigerer Luftdruck → niedrigerer Siedepunkt.",
             "Weil Wasser in der Höhe stärker ionisiert ist.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Der Siedepunkt einer Flüssigkeit ist definiert als die Temperatur, bei der ihr Dampfdruck dem äußeren Druck entspricht. In großer Höhe ist der Luftdruck niedriger (3000 m: ~70 kPa statt 101,3 kPa). Wasser muss daher auf eine geringere Temperatur erhitzt werden, damit sein Dampfdruck den verminderten Luftdruck erreicht. Bei 70 kPa beträgt der Siedepunkt ca. 90 °C. Folge: Lebensmittel müssen länger gekocht werden, weil die Kochtemperatur niedriger ist. Im Druckkochtopf (>1 atm) steigt der Siedepunkt entsprechend an, was die Garzeit verkürzt.",
           hints: [
@@ -1988,11 +1998,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           options: [
             "Das Kolloid ist immer trüb und sedimentiert.",
             "Echte Lösungen zeigen den Tyndall-Effekt, Kolloide nicht.",
-            "Kolloide zeigen den Tyndall-Effekt; echte Lösungen nicht.",
-            "Kolloide bestehen nur aus anorganischen Substanzen.",
             "Echte Lösungen haben größere Partikel als Kolloide.",
+            "Kolloide bestehen nur aus anorganischen Substanzen.",
+            "Kolloide zeigen den Tyndall-Effekt; echte Lösungen nicht.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Der Tyndall-Effekt — die seitliche Sichtbarkeit eines Lichtstrahls durch Lichtstreuung an Partikeln — ist das klassische Unterscheidungsmerkmal. Kolloidale Partikel (1 nm–1 μm) haben die richtige Größe, um Licht effizient zu streuen. Partikel echter Lösungen (<1 nm) sind viel kleiner als die Lichtwellenlänge und streuen kaum. Kolloide sedimentieren aufgrund der Brownschen Bewegung nicht spontan (im Gegensatz zu Suspensionen mit >1 μm-Partikeln). Kolloide können sowohl organische als auch anorganische Substanzen sein.",
           hints: [
@@ -2006,13 +2016,13 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           question:
             "Bei einem Frühgeborenen der 28. Schwangerschaftswoche wird ein Atemnotsyndrom (RDS) diagnostiziert. Welcher physikalisch-chemische Mechanismus liegt diesem Syndrom zugrunde?",
           options: [
-            "Fehlendes Hämoglobin führt zu unzureichender O₂-Bindung.",
             "Fehlender Surfactant erhöht die Oberflächenspannung der Alveolen → Kollaps beim Ausatmen.",
+            "Fehlendes Hämoglobin führt zu unzureichender O₂-Bindung.",
             "Zu niedrige Temperatur in den Lungen verhindert Gaseintausch.",
             "Fehlende Osmolarität der Lungenflüssigkeit verursacht Ödem.",
             "Überschuss an Surfactant lässt die Alveolen überdehnen.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Surfactant (surface-active agent) ist ein Phospholipid-Protein-Gemisch, das von Typ-II-Pneumozyten produziert wird und ab ca. 34.–36. SSW in ausreichender Menge vorhanden ist. Sein Hauptbestandteil DPPC (Dipalmitoylphosphatidylcholin) lagert sich als monomolekularer Film an die Alveolen-Luft-Grenzfläche. Er senkt die Oberflächenspannung des Wasserfilms von ~70 mN/m auf < 5 mN/m bei kleinen Alveolen. Ohne Surfactant würde die Laplace-Druckformel (ΔP = 2γ/r) bewirken, dass kleine Alveolen bei niedrigem Radius hohen Innendruck haben und beim Ausatmen kollabieren. RDS-Therapie: exogene Surfactant-Instillation (Beractant, Poractant alfa) und CPAP-Beatmung.",
           hints: [
@@ -2026,12 +2036,12 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           question: "Was unterscheidet eine Emulsion von einem Sol?",
           options: [
             "Eine Emulsion hat Partikel kleiner als 1 nm.",
-            "In einem Sol ist die disperse Phase flüssig; in einer Emulsion ist sie fest.",
             "In einer Emulsion ist die disperse Phase flüssig (Flüssig-in-Flüssig); in einem Sol ist sie fest (Fest-in-Flüssig).",
+            "In einem Sol ist die disperse Phase flüssig; in einer Emulsion ist sie fest.",
             "Eine Emulsion sedimentiert, ein Sol nicht.",
             "Emulsionen existieren nur in biologischen Systemen.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Der Unterschied liegt in der Aggregatzustand der dispersen Phase: Ein Sol (Lyosol) ist ein Kolloid mit fester disperser Phase in flüssigem Dispersionsmedium (z. B. Goldkolloid, Stärkelösung). Eine Emulsion ist ein Kolloid mit flüssiger disperser Phase in flüssigem Dispersionsmedium (Flüssig-in-Flüssig, z. B. Milch = Fett in Wasser, Mayonnaise). Emulsionen werden durch Emulgatoren (amphiphile Moleküle wie Lecithin, Gallensäuren) stabilisiert, die sich an der Phasengrenze anlagern. Parenterale Fettemulsionen für die künstliche Ernährung sind medizinisch relevante Beispiele.",
           hints: [
@@ -2047,11 +2057,11 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
           options: [
             "Glukose (i = 1)",
             "NaCl (i = 2)",
-            "CaCl₂ (i = 3)",
             "AlCl₃ (i = 4)",
+            "CaCl₂ (i = 3)",
             "Alle gleich, weil gleiche Molalität.",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
             "Die Siedepunktserhöhung ΔTb = Kb × m × i ist eine kolligative Eigenschaft, die von der Gesamtzahl der gelösten Teilchen (nicht ihrer Art) abhängt. Bei gleicher Molalität m = 0,1 mol/kg gilt: Glukose (i = 1): ΔTb = 0,512 × 0,1 × 1 = 0,0512 K; NaCl (i = 2): 0,1024 K; CaCl₂ (i = 3): 0,1536 K; AlCl₃ (i = 4: Al³⁺ + 3 Cl⁻ = 4 Teilchen): 0,2048 K. AlCl₃ erzeugt die meisten Teilchen und hat damit die größte Siedepunktserhöhung.",
           hints: [
@@ -2066,12 +2076,12 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
             "Brownsche Bewegung schützt kolloidale Partikel vor Sedimentation. Was ist die physikalische Grundlage dieser Bewegung?",
           options: [
             "Elektrostatische Abstoßung zwischen gleichnamig geladenen Kolloidpartikeln.",
-            "Thermische Energie der Lösungsmittelmoleküle, die Kolloidpartikel durch zufällige Stöße ständig in Bewegung halten.",
-            "Magnetische Wechselwirkungen zwischen Kolloidpartikeln und dem Lösungsmittel.",
             "Gravitation, die auf Kolloidpartikel gleichmäßig wirkt.",
+            "Magnetische Wechselwirkungen zwischen Kolloidpartikeln und dem Lösungsmittel.",
+            "Thermische Energie der Lösungsmittelmoleküle, die Kolloidpartikel durch zufällige Stöße ständig in Bewegung halten.",
             "Chemische Reaktionen an der Kolloidpartikeloberfläche.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Brownsche Bewegung (entdeckt von Robert Brown, 1827; erklärt von Einstein, 1905) basiert auf den thermischen Stößen der Lösungsmittelmoleküle gegen die kolloidalen Partikel. Die mittlere thermische Energie jedes Freiheitsgrades beträgt kBT/2 (kB = Boltzmann-Konstante, T = Temperatur). Kolloidale Partikel (1–1000 nm) sind zwar größer als Atome, aber klein genug, dass die summierte Stoßkraft aus ungleichmäßigen Richtungen eine zufällige, unkontrollierte Bewegung erzeugt. Diese überlagert die langsame Sedimentation durch Gravitation. Suspensionen (>1 μm) haben zu viel Masse — Gravitation dominiert, sie sedimentieren.",
           hints: [
@@ -2105,6 +2115,8 @@ Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Part
         "Valenzelektron",
       ],
       content: `Das Periodensystem ordnet alle bekannten Elemente nach einem einzigen Prinzip — der Protonenzahl — und macht chemische Eigenschaften vorhersagbar.
+
+{{IMAGE}}
 
 ## Geschichte und Entwicklung des Periodensystems
 
@@ -2235,11 +2247,11 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           options: [
             "Z = 14 (Silicium)",
             "Z = 15 (Phosphor)",
-            "Z = 16 (Schwefel)",
-            "Z = 17 (Chlor)",
             "Z = 18 (Argon)",
+            "Z = 17 (Chlor)",
+            "Z = 16 (Schwefel)",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Periode 3 bedeutet äußerste Schale n=3. Gruppe 16 entspricht 6 Valenzelektronen (s2p4). Die Konfiguration ist [Ne] 3s2 3p4 => 10 (Ne) + 2 (3s) + 4 (3p) = Z=16 = Schwefel (S). In Periode 3 gilt: Z = 10 + Gruppenummer für Gruppen 13-18 (z.B. Gruppe 16: Z = 10 + 6 = 16). Schwefel ist ein Mengenelement im menschlichen Körper - Bestandteil der Aminosäure Cystein und Methionin, Disulfidbindungen in Proteinen (Keratin, Insulin), Coenzym A, Glutathion (wichtigstes zellulares Antioxidans).",
           hints: [
@@ -2251,8 +2263,8 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         },
         {
           question: "Wie viele Perioden hat das Periodensystem?",
-          options: ["4", "6", "7", "8", "18"],
-          correctIndex: 2,
+          options: ["7", "6", "4", "8", "18"],
+          correctIndex: 0,
           explanation:
             "Das PSE hat 7 Perioden (horizontale Zeilen), entsprechend den Hauptquantenzahlen n=1 bis n=7. Die 7. Periode ist vollständig (bis Oganesson, Z=118, alle Elemente darin sind radioaktiv). Es gibt 18 Gruppen (vertikale Spalten). Häufige Verwechslung: 18 sind die Gruppen, 7 die Perioden. Die Periodennummer entspricht der Hauptquantenzahl der Valenzelektronen (Periode 4 => K: 4s1, n=4).",
           hints: [
@@ -2266,12 +2278,12 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           question: "Welche Aussage über Halbmetalle (Metalloide) ist korrekt?",
           options: [
             "Halbmetalle leiten elektrischen Strom ebenso gut wie Kupfer oder Aluminium",
-            "Halbmetalle befinden sich ausschließlich in der 4. Periode des PSE",
             "Halbmetalle wie Silicium haben temperaturabhängige Leitfähigkeit und werden als Halbleiter eingesetzt",
+            "Halbmetalle befinden sich ausschließlich in der 4. Periode des PSE",
             "Halbmetalle bilden ausschließlich negative Ionen wie Nichtmetalle",
             "Halbmetalle sind alle radioaktiv und kommen in der Natur nicht vor",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Halbmetalle (B, Si, Ge, As, Sb, Te, At) haben eine elektrische Leitfähigkeit zwischen Metallen und Nichtmetallen. Charakteristisch ist die Temperaturabhängigkeit: Bei steigender Temperatur nimmt die Leitfähigkeit zu (Halbleiterverhalten, umgekehrt zu Metallen). Silicium ist Basis der Mikroelektronik - Dotierung mit Gruppe-13-Atomen (p-Typ) oder Gruppe-15-Atomen (n-Typ) erzeugt pn-Übergänge für Transistoren. Halbmetalle erstrecken sich von Periode 2 (Bor) bis Periode 6 (Astat).",
           hints: [
@@ -2286,12 +2298,12 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
             "Ein Element hat die Elektronenkonfiguration [Ne] 3s2 3p1. In welcher Gruppe und Periode steht es?",
           options: [
             "Gruppe 2, Periode 3",
-            "Gruppe 13, Periode 3",
             "Gruppe 1, Periode 2",
+            "Gruppe 13, Periode 3",
             "Gruppe 3, Periode 3",
             "Gruppe 13, Periode 2",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "[Ne] entspricht Z=10. Dann 3s2 3p1 = 3 weitere Elektronen => Z=13 = Aluminium. Äußerste Schale n=3 => Periode 3. Valenzelektronen: 3s2 3p1 = 3 VE => Gruppe 13 (p-Block: Gruppenummer = 10 + 3 VE). Aluminium ist das häufigste Metall in der Erdkruste. Al-Salze werden als Antazida (Al(OH)3: puffert Magensäure) und Antiperspirantien eingesetzt; bei Niereninsuffizienz kann Al akkumulieren und zur Aluminiumenzephalopathie führen.",
           hints: [
@@ -2307,11 +2319,11 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           options: [
             "Eisen (Fe, Z=26)",
             "Mangan (Mn, Z=25)",
-            "Chrom (Cr, Z=24)",
             "Vanadium (V, Z=23)",
+            "Chrom (Cr, Z=24)",
             "Nickel (Ni, Z=28)",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Chrom (Cr, Z=24) weicht vom Aufbauprinzip ab. Die erwartete Konfiguration wäre [Ar] 3d4 4s2, die tatsächliche ist [Ar] 3d5 4s1, weil die halbgefüllte d5-Konfiguration (alle 5 d-Orbitale einfach besetzt, paralleler Spin) durch maximale Austauschenergie nach Hund besonders stabil ist. Analoges Beispiel: Cu (Z=29) => [Ar] 3d10 4s1 statt [Ar] 3d9 4s2. Chrom(III) ist essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI) ist stark karzinogen (oxidiert DNA-Basen => Mutationen, Lungenkrebs).",
           hints: [
@@ -2326,11 +2338,11 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           options: [
             "Weil er die Elemente alphabetisch ordnete und bestimmte Buchstaben fehlten",
             "Weil Elemente mit unbekannter Atommasse nicht eingeordnet werden konnten",
-            "Weil er erkannte, dass bei strenger Periodizität noch unentdeckte Elemente existieren müssen, und er deren Eigenschaften voraussagte",
-            "Weil radioaktive Elemente damals noch nicht bekannt waren",
             "Weil die Lücken die Lanthanoide und Actinoide repräsentieren",
+            "Weil radioaktive Elemente damals noch nicht bekannt waren",
+            "Weil er erkannte, dass bei strenger Periodizität noch unentdeckte Elemente existieren müssen, und er deren Eigenschaften voraussagte",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Mendelejews brillante Leistung war die Erkenntnis, dass die Periodizität wichtiger ist als eine lückenlose Reihenfolge. Wenn ein Element nicht an die Stelle passte, die seine Eigenschaften erforderten, ließ er eine Lücke und sagte Eigenschaften des fehlenden Elements vorher: Eka-Aluminium (=> Gallium, 1875), Eka-Bor (=> Scandium, 1879), Eka-Silicium (=> Germanium, 1886). Alle drei stimmten fast exakt mit seinen Vorhersagen überein (Schmelzpunkt, Dichte, Valenz, Oxide) - der entscheidende Beweis für die Gültigkeit seines Systems.",
           hints: [
@@ -2343,13 +2355,13 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         {
           question: "In welchem Block des PSE steht Calcium (Z=20)?",
           options: [
-            "p-Block, weil es in Periode 4 steht",
             "s-Block, Gruppe 2, weil seine Valenzelektronen im 4s-Orbital sitzen",
+            "p-Block, weil es in Periode 4 steht",
             "d-Block, weil es ein Metall ist",
             "f-Block, weil es zur 4. Periode gehört",
             "s-Block, Gruppe 1, weil Calcium ein reaktives Metall ist",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Calcium (Z=20) hat die Elektronenkonfiguration [Ar] 4s2. Die beiden Valenzelektronen befinden sich im 4s-Orbital => s-Block, Gruppe 2 (Erdalkalimetalle), Periode 4. Calcium ist das häufigste Metall im menschlichen Körper (~1 kg, 99% als Hydroxyapatit Ca10(PO4)6(OH)2 in Knochen und Zähnen). Als Ca2+-Ion (Plasma: 2,2-2,6 mmol/L) ist es unverzichtbar für Muskelkontraktion (Troponin-C), Blutgerinnung (Faktor IV), Neurotransmitterfreisetzung und als Second Messenger (Ca2+-Calmodulin-System).",
           hints: [
@@ -2363,12 +2375,12 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
           question: "Welches der folgenden Elemente ist ein Halbmetall (Metalloid)?",
           options: [
             "Phosphor (P)",
-            "Aluminium (Al)",
-            "Schwefel (S)",
             "Germanium (Ge)",
+            "Schwefel (S)",
+            "Aluminium (Al)",
             "Calcium (Ca)",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Germanium (Ge, Z=32) ist ein klassisches Halbmetall. Es steht in Periode 4, Gruppe 14, an der Grenzlinie zwischen Metallen und Nichtmetallen. Ge war das erste kommerzielle Halbleitermaterial (Transistor, Bell Labs 1947) und wird heute in Glasfasern und Infrarot-Optik eingesetzt. Phosphor und Schwefel sind Nichtmetalle; Aluminium ist ein typisches Metall; Calcium ist ein Erdalkalimetall (s-Block, Gruppe 2). Die klassischen Halbmetalle: B, Si, Ge, As, Sb, Te (manchmal At hinzugezählt).",
           hints: [
@@ -2399,6 +2411,8 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
         "Fluorierte Arzneistoffe",
       ],
       content: `Atomradius, Ionisierungsenergie, Elektronegativität — alle periodischen Trends haben eine gemeinsame Ursache: die effektive Kernladung.
+
+{{IMAGE}}
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
@@ -2562,12 +2576,12 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "Welche der folgenden Reihen zeigt Elemente mit korrekt abnehmender Ionisierungsenergie?",
           options: [
             "Na < Mg < Al (Periode 3, von links nach rechts: zunehmend)",
-            "F > Cl > Br > I (Halogene, Gruppe 17, von oben nach unten: abnehmend)",
+            "Ne > F > O (Edelgas höchste IE einer Periode — stimmt, aber keine Gruppe)",
             "Li < Na < K (Alkalimetalle, Gruppe 1, von oben nach unten: zunehmend)",
             "He > H (nur 2 Elemente)",
-            "Ne > F > O (Edelgas höchste IE einer Periode — stimmt, aber keine Gruppe)",
+            "F > Cl > Br > I (Halogene, Gruppe 17, von oben nach unten: abnehmend)",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "In einer Gruppe nimmt die IE von oben nach unten ab. F, Cl, Br, I sind Halogene (Gruppe 17) → IE nimmt korrekt ab: F (1681 kJ/mol) > Cl (1251) > Br (1140) > I (1008 kJ/mol). Option A ist falsch wegen IE-Ausnahme: IE(Al)<IE(Mg). Option C zeigt eine zunehmende Reihe (Radien, nicht IE). Die IE in der Gruppe ist: Li (520) > Na (496) > K (419) kJ/mol — abnehmend in der Gruppe.",
           hints: [
@@ -2580,13 +2594,13 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         {
           question: "Welche Bindung bildet sich zwischen Na (EN=0,93) und Cl (EN=3,16)?",
           options: [
-            "Unpolare kovalente Bindung (ΔEN < 0,4)",
-            "Polare kovalente Bindung (ΔEN 0,4–1,7)",
             "Ionenbindung (ΔEN > 1,7)",
+            "Polare kovalente Bindung (ΔEN 0,4–1,7)",
+            "Unpolare kovalente Bindung (ΔEN < 0,4)",
             "Metallbindung",
             "Wasserstoffbrückenbindung",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "ΔEN = 3,16 − 0,93 = 2,23 > 1,7 → Ionenbindung. Natrium gibt Valenzelektron vollständig ab: Na→Na⁺+e⁻ (IE₁=496 kJ/mol) und Cl+e⁻→Cl⁻ (EA=349 kJ/mol). Im Kristallgitter von NaCl sind Na⁺ und Cl⁻ durch elektrostatische Coulomb-Kräfte in kubisch-flächenzentriertem Ionengitter gebunden (Gitterenergie=787 kJ/mol). NaCl ist das wichtigste Elektrolyt im extrazellulären Raum: Plasma ~140 mmol/L Na⁺ und ~100 mmol/L Cl⁻ → osmotischer Druck, Blutvolumen, Membranpotenzial.",
           hints: ["Berechne ΔEN = EN(Cl) − EN(Na)", "Grenzwert für Ionenbindung: ΔEN > 1,7"],
@@ -2618,12 +2632,12 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "Ein Element hat IE₁=590, IE₂=1145, IE₃=4912, IE₄=6474 kJ/mol. Welcher Hauptgruppe gehört es an?",
           options: [
             "Gruppe 1 (1 Valenzelektron)",
-            "Gruppe 2 (2 Valenzelektronen)",
             "Gruppe 13 (3 Valenzelektronen)",
+            "Gruppe 2 (2 Valenzelektronen)",
             "Gruppe 14 (4 Valenzelektronen)",
             "Gruppe 3 (Nebengruppe)",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Der große Sprung liegt zwischen IE₂ (1145 kJ/mol) und IE₃ (4912 kJ/mol) — Faktor ~4,3. Die ersten zwei Elektronen sind Valenzelektronen, das dritte ist ein Rumpfelektron → 2 Valenzelektronen → Gruppe 2 (Erdalkalimetalle). Mit IE₁≈590 kJ/mol: Calcium (Z=20, Gruppe 2, Periode 4). Mg hätte IE₁=738 kJ/mol. Prinzip allgemein: Sprung nach n Ionisierungen → n Valenzelektronen → Gruppe n.",
           hints: [
@@ -2639,11 +2653,11 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
           options: [
             "Ionisch, weil Sauerstoff viel elektronegativer ist als Wasserstoff",
             "Unpolar kovalent, weil beide Elemente Nichtmetalle sind",
-            "Polar kovalent, weil ΔEN=1,24 im Bereich 0,4–1,7 liegt",
             "Metallisch, weil Wasser elektrisch leitet",
+            "Polar kovalent, weil ΔEN=1,24 im Bereich 0,4–1,7 liegt",
             "Koordinativ, weil Sauerstoff freie Elektronenpaare besitzt",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "ΔEN = 3,44 − 2,20 = 1,24. Im Bereich 0,4 ≤ ΔEN < 1,7 → polare kovalente Bindung. O zieht Bindungselektronen zu sich → O erhält δ−, H erhält δ+. Diese Polarität ermöglicht Wasserstoffbrücken zwischen Wassermolekülen (~20 kJ/mol). Folgen: hoher Siedepunkt (100°C statt −80°C), hohe Wärmekapazität. H-Brücken sind auch Grundlage der DNA-Basenpaarung (A-T: 2, G-C: 3) und Proteinsekundärstruktur (α-Helix, β-Faltblatt).",
           hints: [
@@ -2658,12 +2672,12 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "Warum hat Chlor eine höhere Elektronenaffinität als Fluor, obwohl Fluor elektronegativer ist?",
           options: [
             "Weil Chlor in der 3. Periode steht und mehr Elektronen aufnehmen kann",
-            "Weil Fluors 2p-Orbitale sehr kompakt sind, sodass ein zusätzliches Elektron starke Abstoßung erfährt, während Chlors 3p-Orbitale räumlich ausgedehnter sind",
+            "Weil Fluor eine zu hohe IE hat, die die Elektronenaufnahme verhindert",
             "Weil Chlor eine geringere Kernladung hat und das Elektron weniger abgestoßen wird",
             "Weil EA und EN völlig unabhängige Eigenschaften ohne Zusammenhang sind",
-            "Weil Fluor eine zu hohe IE hat, die die Elektronenaufnahme verhindert",
+            "Weil Fluors 2p-Orbitale sehr kompakt sind, sodass ein zusätzliches Elektron starke Abstoßung erfährt, während Chlors 3p-Orbitale räumlich ausgedehnter sind",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Obwohl Fluor EN=4,0 hat, ist EA(F)=328 kJ/mol < EA(Cl)=349 kJ/mol. Ursache: Fluors 2p-Orbitale sind sehr kompakt — ein zusätzliches Elektron im kleinen 2p-Orbital erfährt starke Coulomb-Abstoßung durch die schon vorhandenen 2p-Elektronen (F hat 7 → wird 8 im F⁻). Chlors 3p-Orbitale sind räumlich ausgedehnter → bessere Aufnahme → höhere EA. Muster: EA(O)<EA(S), EA(N)<EA(P) — Elemente der 2. Periode haben oft niedrigere EA als schwerere Homologe.",
           hints: [
@@ -2825,13 +2839,13 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
         {
           question: "Welche Ionenladung bilden Erdalkalimetalle typischerweise und warum?",
           options: [
-            "+1, weil sie ein Valenzelektron im s-Orbital haben",
             "+2, weil sie zwei Valenzelektronen (ns²) abgeben und dabei die stabile Edelgaskonfiguration erreichen",
+            "+1, weil sie ein Valenzelektron im s-Orbital haben",
             "+3, weil sie drei Elektronen in s- und p-Orbitalen tragen",
             "−2, weil sie zwei Elektronen aufnehmen, um das Oktett zu vervollständigen",
             "+2 oder +3, variabel wie Übergangsmetalle",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Erdalkalimetalle (Gruppe 2) haben 2 Valenzelektronen in der ns²-Konfiguration. Durch Abgabe beider Elektronen erreichen sie die stabile Edelgaskonfiguration. Mg→Mg²⁺+2e⁻: [Ne]-Konfiguration; Ca→Ca²⁺+2e⁻: [Ar]-Konfiguration. Die dritte Ionisierungsenergie (erstes Rumpfelektron) ist enorm hoch (Mg: IE₃>4000 kJ/mol) → +3-Ionen bilden Erdalkalimetalle nicht. Wichtige +2-Ionen: Ca²⁺ (Knochen, Second Messenger), Mg²⁺ (>300 Enzymreaktionen, ATP-Kofaktor), Ba²⁺ (als unlösliches BaSO₄: Röntgenkontrastmittel).",
           hints: [
@@ -2845,12 +2859,12 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
           question: "Welches Halogen ist für die Schilddrüsenhormone T3 und T4 essentiell?",
           options: [
             "Fluor (F) — wegen seiner hohen Reaktivität und Oxidationskraft",
-            "Chlor (Cl) — weil es das häufigste Halogen im menschlichen Körper ist",
-            "Brom (Br) — als Bestandteil bromierter Tyrosinderivate",
             "Jod (I) — als Baustein von Thyroxin (T4) und Triiodthyronin (T3)",
+            "Brom (Br) — als Bestandteil bromierter Tyrosinderivate",
+            "Chlor (Cl) — weil es das häufigste Halogen im menschlichen Körper ist",
             "Astat (At) — als schwerstes natürliches Halogen",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Jod (I, Z=53) ist das einzige biologisch essentielle Halogen für die Schilddrüsenfunktion. T4 (Thyroxin) enthält 4 Jodatome, T3 (Triiodthyronin) 3 Jodatome — beide an Tyrosinreste des Thyreoglobulins gebunden durch Thyreoperoxidase (TPO). Jodaufnahme: aktiv durch Natrium-Jodid-Symporter (NIS). Täglicher Jodbedarf: 150 µg (Erwachsene), 200 µg (Schwangerschaft). Jodmangel → Hypothyreose, Struma, Kretinismus. ¹³¹Jod (Beta-Emitter): Therapie von Schilddrüsenkarzinomen und Hyperthyreose. Chlor (Cl⁻) ist häufigstes Halogenanion im Körper, hat aber keine Funktion in der Hormonsynthese.",
           hints: [
@@ -2865,12 +2879,12 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Warum sind Edelgase chemisch inert, und welches Edelgas ist in der modernen Anästhesiologie als Narkosemittel zugelassen?",
           options: [
             "Edelgase sind inert, weil sie radioaktiv sind; Helium wird als Narkosemittel verwendet",
-            "Edelgase sind inert, weil ihre Valenzschale vollständig besetzt ist (Oktett); Xenon ist als Narkosemittel zugelassen",
             "Edelgase sind inert, weil sie zu schwer für chemische Reaktionen sind; Argon wird als Narkosemittel verwendet",
+            "Edelgase sind inert, weil ihre Valenzschale vollständig besetzt ist (Oktett); Xenon ist als Narkosemittel zugelassen",
             "Edelgase sind inert wegen ihrer hohen EN; Krypton ist als Narkosemittel zugelassen",
             "Edelgase sind inert, weil sie keine Elektronen besitzen; Radon wird therapeutisch verwendet",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Edelgase (Gruppe 18) haben vollständig besetzte Valenzschalen: He: 1s² (Dublett), alle anderen: ns²np⁶ (Oktett). Diese Konfiguration ist energetisch maximal stabil — kein Trieb zur Elektronenabgabe, -aufnahme oder -teilung → chemisch inert. Xenon (Xe, Z=54, Periode 5) ist als Vollnarkotikum zugelassen (Europa). Wirkmechanismus: NMDA-Rezeptor-Antagonismus (wie Ketamin). Vorteile: kein Metabolismus (vollständig abgeatmet), exzellente kardiovaskuläre Stabilität, schnelle An- und Abflutung, analgetische Wirkung. Nachteil: hoher Preis, Closed-Circuit-System zur Rückgewinnung erforderlich.",
           hints: [
@@ -2886,11 +2900,11 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
           options: [
             "Kupfer (Cu²⁺) — wegen der Fähigkeit zur Komplexbildung",
             "Zink (Zn²⁺) — weil Zink das häufigste Übergangsmetall im Körper ist",
-            "Eisen (Fe²⁺) — in der Häm-Gruppe bindet Fe²⁺ reversibel O₂",
             "Mangan (Mn²⁺) — als Zentralatom der mitochondrialen SOD",
+            "Eisen (Fe²⁺) — in der Häm-Gruppe bindet Fe²⁺ reversibel O₂",
             "Cobalt (Co³⁺) — als Zentralatom in Vitamin B12",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Eisen (Fe²⁺) ist das Zentralatom der Häm-Gruppe in Hämoglobin (Hb). Jedes Hb-Tetramer (2α+2β) enthält 4 Häm-Gruppen, jede mit Fe²⁺ im Zentrum des Protoporphyrin-IX-Rings. Fe²⁺ bindet reversibel O₂ in der Lunge (hoher pO₂, Oxy-Hb: hellrot) und gibt es im Gewebe ab (niedriger pO₂, Desoxy-Hb: dunkelrot). Fe³⁺ (Methämoglobin) bindet kein O₂. Eisenmangelanämie: mikrozytär (MCV↓), hypochrom (MCH↓), Ferritin↓ — häufigste Mangelkrankheit weltweit. Hämochromatose (HFE-Mutation): Fe-Überladung → Leber, Herz, Pankreas, Gonaden.",
           hints: [
@@ -2906,10 +2920,10 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Li > Na > K > Rb > Cs (reaktivstes ist Lithium)",
             "Cs < Rb < K < Na < Li (Caesium am wenigsten reaktiv)",
             "Na > K > Li > Rb > Cs (Natrium am reaktivsten)",
-            "Li < Na < K < Rb < Cs (Reaktivität steigt von Li nach Cs)",
             "Alle Alkalimetalle sind gleichmäßig reaktiv",
+            "Li < Na < K < Rb < Cs (Reaktivität steigt von Li nach Cs)",
           ],
-          correctIndex: 3,
+          correctIndex: 4,
           explanation:
             "Reaktivität der Alkalimetalle steigt von Li nach Cs (Li < Na < K < Rb < Cs), weil das Valenzelektron mit zunehmender Schalenzahl leichter abgegeben wird. IE₁-Werte: Li=520, Na=496, K=419, Rb=403, Cs=376 kJ/mol. Reaktion mit Wasser: Li zischt ruhig (rote Flamme); Na gleitet und brennt (gelbe Flamme); K entzündet H₂ sofort (violette Flamme); Rb und Cs explodieren. Caesium ist das reaktivste der stabilen Alkalimetalle. Francium (Fr) ist radioaktiv und existiert nur in Spuren.",
           hints: [
@@ -2923,13 +2937,13 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
           question:
             "Welches klinische Syndrom entsteht bei schwerem Jodmangel während der Embryonalentwicklung?",
           options: [
-            "Rachitis (Vitamin-D-Mangel mit Knochendeformitäten)",
-            "Perniziöse Anämie (Vitamin-B12-Mangel mit megaloblastärer Anämie)",
             "Kretinismus (schwere geistige Behinderung, Kleinwuchs, Taubstummheit durch kongenitale Hypothyreose)",
+            "Perniziöse Anämie (Vitamin-B12-Mangel mit megaloblastärer Anämie)",
+            "Rachitis (Vitamin-D-Mangel mit Knochendeformitäten)",
             "Hämochromatose (Eisenüberladung mit Organschäden)",
             "Wilson-Krankheit (Kupferspeichererkrankung mit Leber- und Hirnschäden)",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Schwerer Jodmangel während der Embryonalentwicklung und frühen Kindheit führt zum Kretinismus: schwere irreversible geistige Behinderung (IQ-Verlust 10–15 Punkte im Durchschnitt bei moderatem Jodmangel), Kleinwuchs, Taubstummheit, spastische Diplegie, myxödematöse Hypothyreose mit Struma. Ursache: Schilddrüsenhormone T3/T4 sind essentiell für Gehirnentwicklung (Myelinisierung, Synapsenbildung, Neuroproliferation) in der frühen Kindheit und pränatal. Jodmangel ist die häufigste vermeidbare Ursache geistiger Behinderung weltweit. Prävention: Jodierung von Speisesalz (20–40 µg/g), Jodsubstitution in Schwangerschaft (200 µg/Tag). Neugeborenen-TSH-Screening ermöglicht frühzeitige Therapie.",
           hints: [
@@ -2964,12 +2978,12 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Barium (Ba, Gruppe 2) wird als Kontrastmittel eingesetzt, obwohl lösliche Ba-Salze giftig sind. Warum ist BaSO₄ sicher?",
           options: [
             "Weil BaSO₄ im Magen zu ungiftigem Ba(OH)₂ umgewandelt wird",
-            "Weil BaSO₄ nahezu unlöslich ist (Ksp ≈ 10⁻¹⁰) und nicht resorbiert wird, sondern den GI-Trakt unverdaut passiert",
             "Weil Ba in Gruppe 2 steht und alle Erdalkalimetalle biologisch harmlos sind",
+            "Weil BaSO₄ nahezu unlöslich ist (Ksp ≈ 10⁻¹⁰) und nicht resorbiert wird, sondern den GI-Trakt unverdaut passiert",
             "Weil BaSO₄ im Körper durch Leberenzyme entgiftet wird",
             "Weil BaSO₄ die Röntgenstrahlen reflektiert statt absorbiert",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "BaSO₄ (Bariumsulfat) hat Ksp ≈ 1,1×10⁻¹⁰ mol²/L² → praktisch unlöslich in Wasser und Körperflüssigkeiten. Da unlöslich, werden keine Ba²⁺-Ionen ins Blut aufgenommen → kein Toxizitätspotenzial. BaSO₄ passiert den GI-Trakt als inertes Pulver (weiße Suspension) und wird im Stuhl ausgeschieden. Röntgenkontrastwirkung: Ba hat hohe Ordnungszahl (Z=56) → starke Röntgenstrahlungsabsorption → hoher Kontrast. Lösliche Ba-Salze (BaCl₂) blockieren K⁺-Kanäle → Hypokaliämie-ähnliches Bild, Herzarrhythmie, Atemlähmung. Antidot: Na₂SO₄ → fällt Ba²⁺ als unlösliches BaSO₄ aus.",
           hints: [

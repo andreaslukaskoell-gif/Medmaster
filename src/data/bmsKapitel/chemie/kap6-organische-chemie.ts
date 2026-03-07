@@ -185,8 +185,8 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
       selfTest: [
         {
           question: "Was ist die allgemeine Summenformel der Alkane?",
-          options: ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁", "CₙHₙ"],
-          correctIndex: 0,
+          options: ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₁", "CₙHₙ"],
+          correctIndex: 1,
           explanation:
             "Alkane sind gesättigte Kohlenwasserstoffe mit ausschließlich C-C-Einfachbindungen. Jedes C-Atom bildet vier Bindungen. An einem endständigen C sitzen 3 H-Atome, an einem Mittel-C je 2 H-Atome. Die Ableitung: CₙH₂ₙ₊₂. Prüfung: Methan CH₄ (n=1: 2·1+2=4 ✓), Ethan C₂H₆ (n=2: 2·2+2=6 ✓), Propan C₃H₈ (n=3: 2·3+2=8 ✓).",
           hints: [
@@ -214,12 +214,12 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Wie wird der Nachweis einer C=C-Doppelbindung mit Bromwasser durchgeführt, und was ist das Ergebnis?",
           options: [
             "Bromwasser wird zugegeben; bei Doppelbindung entsteht ein weißer Niederschlag",
-            "Bromwasser wird zugegeben; bei Doppelbindung entfärbt sich die orange Lösung",
-            "Bromwasser wird zugegeben; bei Doppelbindung färbt sich die Lösung blau",
             "Bromwasser wird zugegeben; bei Doppelbindung steigt die Temperatur messbar an",
+            "Bromwasser wird zugegeben; bei Doppelbindung färbt sich die Lösung blau",
+            "Bromwasser wird zugegeben; bei Doppelbindung entfärbt sich die orange Lösung",
             "Bromwasser wird zugegeben; bei Doppelbindung entsteht ein Gas",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Der Bromwassertest ist der klassische Nachweis für ungesättigte Verbindungen (Alkene, Alkine). Bromwasser ist eine orange-braune Lösung von Br₂ in Wasser. Bei Kontakt mit einem Alken addiert Br₂ an die C=C-Doppelbindung (elektrophile Addition): R-CH=CH-R + Br₂ → R-CHBr-CHBr-R. Da das Br₂ verbraucht wird, verschwindet die orange Farbe (Entfärbung). Gesättigte Verbindungen (Alkane) reagieren unter diesen Bedingungen nicht mit Bromwasser — keine Entfärbung.",
           hints: [
@@ -235,10 +235,10 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Elektrophile Addition",
             "Nucleophile Substitution",
             "Eliminierung",
-            "Radikalische Substitution",
             "Elektrophile aromatische Substitution",
+            "Radikalische Substitution",
           ],
-          correctIndex: 3,
+          correctIndex: 4,
           explanation:
             "Alkane haben keine reaktiven Funktionalitäten (keine π-Elektronen, keine freien Elektronenpaare). Sie reagieren daher kaum. Die wichtigste Reaktion ist die radikalische Halogenierung unter UV-Licht oder hohen Temperaturen, bei der ein H-Atom durch ein Halogenatom ersetzt wird. Die Reaktion läuft über Radikale (homolytische Bindungsspaltung) in drei Phasen: Start, Fortpflanzung, Abbruch. Elektrophile Addition ist typisch für Alkene (π-Elektronen), nicht für Alkane.",
           hints: [
@@ -250,8 +250,8 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
         },
         {
           question: "Welche Hybridisierung haben die C-Atome in Ethen (C₂H₄)?",
-          options: ["sp³", "sp²", "sp", "sp³d", "d²sp³"],
-          correctIndex: 1,
+          options: ["sp²", "sp³", "sp", "sp³d", "d²sp³"],
+          correctIndex: 0,
           explanation:
             "In Ethen (H₂C=CH₂) sind die C-Atome sp²-hybridisiert. Drei sp²-Hybridorbitale bilden die σ-Gerüstbindungen (120° Winkel, trigonal-planar). Das verbleibende unhybridisierte p-Orbital steht senkrecht zur Molekülebene und bildet mit dem benachbarten p-Orbital die π-Bindung. Zum Vergleich: sp³ (Alkan, Tetraeder, 109,5°), sp (Alkin, linear, 180°). Die sp²-Hybridisierung erklärt die planare Struktur der Doppelbindung und die cis/trans-Isomerie.",
           hints: [
@@ -266,12 +266,12 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Das Alkan Butan (C₄H₁₀) hat zwei Konstitutionsisomere. Welches hat den niedrigeren Siedepunkt?",
           options: [
             "n-Butan (unverzweigt), weil es größere Oberfläche hat",
-            "2-Methylpropan (Isobutan), weil es größere Oberfläche hat",
             "2-Methylpropan (Isobutan), weil es kugelförmiger und die Oberfläche kleiner ist",
+            "2-Methylpropan (Isobutan), weil es größere Oberfläche hat",
             "Beide haben den gleichen Siedepunkt, da gleiche Summenformel",
             "n-Butan, weil es leichter ist",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Beide Isomere (n-Butan und 2-Methylpropan/Isobutan) haben C₄H₁₀ und das gleiche Molekulargewicht. Der Siedepunkt wird durch die Stärke der van-der-Waals-Kräfte bestimmt, die von der Moleküloberfläche abhängt. n-Butan ist gestreckt (größere Oberfläche, Sdp. -1°C), 2-Methylpropan ist kompakter/kugelförmiger (kleinere Oberfläche, Sdp. -12°C). Mehr Verzweigung → kleinere Oberfläche → schwächere van-der-Waals-Kräfte → niedrigerer Siedepunkt. Dieser Effekt ist prüfungsrelevant!",
           hints: [
@@ -286,12 +286,12 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Was ist das Hauptprodukt bei der Addition von HBr an Propen (CH₃-CH=CH₂) nach der Markovnikov-Regel?",
           options: [
             "1-Brompropan (Br an C1)",
-            "2-Brompropan (Br an C2)",
             "1,2-Dibrompropan",
+            "2-Brompropan (Br an C2)",
             "Propan",
             "Propin",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die Markovnikov-Regel besagt: Bei der Addition von HX an ein asymmetrisches Alken addiert das H an das C-Atom mit den meisten H-Atomen (das elektronenreichere C), das X an das C-Atom mit weniger H-Atomen. Bei Propen (CH₃-CH=CH₂): C1 der Doppelbindung hat 2 H (=CH₂), C2 hat 1 H (-CH=). Nach Markovnikov: H an C1, Br an C2 → 2-Brompropan (CH₃-CHBr-CH₃). Mechanistisch entsteht das stabilere Carbokation (sekundär > primär) als Zwischenstufe.",
           hints: [
@@ -424,11 +424,11 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
           options: [
             "Das C-Atom trägt mindestens eine OH-Gruppe",
             "Das C-Atom ist sp²-hybridisiert",
-            "Das C-Atom trägt vier verschiedene Substituenten",
             "Das C-Atom ist Teil eines Rings",
+            "Das C-Atom trägt vier verschiedene Substituenten",
             "Das C-Atom trägt mindestens zwei gleiche Substituenten",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Ein Kohlenstoffatom ist chiral (stereogen), wenn es vier verschiedene Substituenten trägt — das können Atome oder Atomgruppen sein. Dann gibt es zwei Möglichkeiten, diese vier Substituenten räumlich anzuordnen: die zwei Anordnungen sind Spiegelbilder voneinander und nicht superponierbar (Enantiomere). Wenn zwei oder mehr Substituenten gleich sind, gibt es nur eine Anordnung (kein chirales Zentrum). Ein sp²-hybridisiertes C (z.B. in einer Doppelbindung) kann kein Chiralitätszentrum sein, da es nur drei Bindungspartner hat.",
           hints: [
@@ -444,11 +444,11 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
           options: [
             "Enantiomere",
             "Diastereomere",
-            "Konstitutionsisomere",
-            "cis/trans-Isomere",
             "Meso-Verbindungen",
+            "cis/trans-Isomere",
+            "Konstitutionsisomere",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "But-1-en und Cyclobutan haben beide die Summenformel C₄H₈, aber eine völlig unterschiedliche Konnektivität der Atome: But-1-en ist eine offenkettige Verbindung mit einer Doppelbindung, Cyclobutan ist ein gesättigter Ring. Verschiedene Konnektivität = Konstitutionsisomere (Strukturisomere). Enantiomere und Diastereomere sind Stereoisomere (gleiche Konnektivität, verschiedene Raumanordnung). cis/trans-Isomerie ist ein Spezialfall von Diastereomerie bei Doppelbindungen oder Ringen.",
           hints: [
@@ -461,13 +461,13 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
         {
           question: "Welches Stereoisomerieverhältnis besteht zwischen L-Alanin und D-Alanin?",
           options: [
-            "Konstitutionsisomere",
-            "Diastereomere",
             "Enantiomere",
+            "Diastereomere",
+            "Konstitutionsisomere",
             "cis/trans-Isomere",
             "Mesomere",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "L-Alanin und D-Alanin sind Enantiomere: Sie haben identische Summenformel (C₃H₇NO₂) und gleiche Konnektivität (je -NH₂, -COOH, -CH₃ und -H am α-C), unterscheiden sich aber in der räumlichen Anordnung (das α-C-Atom ist chiral). Sie verhalten sich wie Bild und Spiegelbild, sind nicht superponierbar. L-Alanin dreht polarisiertes Licht anders als D-Alanin. Im menschlichen Körper kommen ausschließlich L-Aminosäuren in Proteinen vor; D-Aminosäuren treten in Bakterienzellwänden auf.",
           hints: [
@@ -481,12 +481,12 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
           question: "Welche der folgenden Aussagen über ein racemisches Gemisch ist korrekt?",
           options: [
             "Ein Racemat besteht aus einem Konstitutionsisomeren-Gemisch",
-            "Ein Racemat dreht polarisiertes Licht stark nach rechts",
             "Ein Racemat ist ein 1:1-Gemisch aus R- und S-Enantiomeren und ist optisch inaktiv",
+            "Ein Racemat dreht polarisiertes Licht stark nach rechts",
             "Ein Racemat hat immer andere physikalische Eigenschaften als die reinen Enantiomere",
             "Ein Racemat enthält nur meso-Verbindungen",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Ein racemisches Gemisch (Racemat) enthält gleiche Mengen (1:1) des R- und S-Enantiomers einer chiralen Verbindung. Da beide Enantiomere polarisiertes Licht in entgegengesetzte Richtungen und im gleichen Ausmaß drehen, heben sich die Drehungen gegenseitig auf — das Racemat ist optisch inaktiv (Drehwert = 0). Das erklärt, warum chemisch synthetisierte chirale Verbindungen oft als Racemate anfallen (keine bevorzugte Reaktionsrichtung), während biologische Systeme stereoselektiv nur ein Enantiomer produzieren.",
           hints: [
@@ -501,12 +501,12 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
             "Warum können cis- und trans-2-Buten nicht ineinander umgewandelt werden, ohne Bindungen zu brechen?",
           options: [
             "Weil ihre Molekulargewichte unterschiedlich sind",
-            "Weil die C=C-Doppelbindung eine π-Bindung enthält, die freie Rotation verhindert",
             "Weil cis-Isomere grundsätzlich stabiler als trans-Isomere sind",
+            "Weil die C=C-Doppelbindung eine π-Bindung enthält, die freie Rotation verhindert",
             "Weil die σ-Bindung in der Doppelbindung zu stark ist",
             "Weil beide Moleküle verschiedene Summenformeln haben",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die C=C-Doppelbindung besteht aus einer σ-Bindung (Rotationsachse) und einer π-Bindung (seitliche Überlappung der p-Orbitale). Die π-Bindung kann nur bestehen, wenn die beiden p-Orbitale parallel ausgerichtet sind — eine freie Rotation um die C-C-Achse würde die p-Orbital-Überlappung und damit die π-Bindung zerstören. Das bedeutet: cis- und trans-Isomere sind durch eine Rotationsbarriere getrennt (Bindungsbruch nötig). Bei Einfachbindungen (σ) ist freie Rotation möglich → keine cis/trans-Isomerie.",
           hints: [
@@ -518,8 +518,8 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
         },
         {
           question: "Ein Molekül mit zwei Chiralitätszentren hat wie viele maximale Stereoisomere?",
-          options: ["2", "4", "6", "8", "1"],
-          correctIndex: 1,
+          options: ["2", "8", "6", "4", "1"],
+          correctIndex: 3,
           explanation:
             "Die 2ⁿ-Regel gilt für die maximale Anzahl von Stereoisomeren, wobei n die Anzahl der Chiralitätszentren ist. Bei n=2: 2² = 4 maximale Stereoisomere. Bei zwei Chiralitätszentren gibt es die Konfigurationen (R,R), (S,S), (R,S) und (S,R). (R,R) und (S,S) sind Enantiomere; (R,S) und (S,R) sind Enantiomere; aber (R,R) und (R,S) sind Diastereomere. Sonderfall: Wenn die Verbindung eine innere Spiegelebene hat, ist (R,S) = (S,R) (meso-Form) → dann nur 3 Stereoisomere statt 4.",
           hints: [
@@ -532,8 +532,8 @@ Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibupro
         {
           question:
             "Welches Arzneimittel wurde als Racemat vermarktet, wobei ein Enantiomer sedierend und das andere teratogen wirkt?",
-          options: ["Ibuprofen", "Aspirin", "Thalidomid", "L-Dopa", "Penicillin"],
-          correctIndex: 2,
+          options: ["Ibuprofen", "Aspirin", "Penicillin", "L-Dopa", "Thalidomid"],
+          correctIndex: 4,
           explanation:
             "Thalidomid (Handelsname Contergan) wurde in den 1950er/60er Jahren als Racemat gegen Schlaflosigkeit und Schwangerschaftserbrechen eingesetzt. Das R-Enantiomer besitzt sedierende/hypnotische Wirkung. Das S-Enantiomer ist stark teratogen und verursacht bei der Embryonalentwicklung schwere Fehlbildungen der Gliedmaßen (Phokomelie). Das Desaster führte zu über 10.000 geschädigten Kindern und revolutionierte die Arzneimittelzulassung. Wichtig: Racemisierung im Körper macht selbst das 'sichere' R-Enantiomer allein nicht verwendbar.",
           hints: [
@@ -565,6 +565,8 @@ Dieses Prinzip findet sich unmittelbar in der Biochemie wieder: In der Leber wir
 Unter den medizinisch relevanten Alkoholen verdient **Methanol** (CH₃OH) besondere Aufmerksamkeit: Es wird ebenfalls durch ADH und ALDH metabolisiert, aber die entstehenden Produkte — Formaldehyd und Ameisensäure — sind hochgiftig und können zur Erblindung (Retinaschädigung) und zum Tod führen. **Glycerin** (Propan-1,2,3-triol) ist ein dreiwertiger Alkohol und Rückgrat der Triglyceride.
 
 Neben der Oxidation zeigen Alkohole weitere wichtige Reaktionen: Unter Einwirkung von konzentrierter Schwefelsäure und Wärme kommt es zur **Dehydratisierung** — entweder intramolekular zum Alken (Eliminierung) oder intermolekular zum Ether (Kondensation). Die **Veresterung** mit Carbonsäuren und die **nucleophile Substitution** zum Alkylhalogenid erweitern das Reaktionsspektrum.
+
+{{IMAGE}}
 
 ## Ether (R−O−R')
 
@@ -679,13 +681,13 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
         {
           question: "Welche funktionelle Gruppe ist charakteristisch für Alkohole?",
           options: [
-            "Carbonylgruppe (C=O) am Kettenende",
-            "Carboxylgruppe (-COOH)",
             "Hydroxylgruppe (-OH) am C-Atom",
+            "Carboxylgruppe (-COOH)",
+            "Carbonylgruppe (C=O) am Kettenende",
             "Aminogruppe (-NH₂)",
             "Estergruppe (-COO-)",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Alkohole sind definiert durch die Hydroxylgruppe (-OH), die an ein Kohlenstoffatom gebunden ist. Die -OH-Gruppe ist polar und ermöglicht Wasserstoffbrückenbindungen, was die Siedepunkte von Alkoholen im Vergleich zu entsprechenden Alkanen deutlich erhöht und die Wasserlöslichkeit kleiner Alkohole erklärt. Wichtig: Nicht alle -OH-Gruppen machen eine Verbindung zum Alkohol — in Carbonsäuren ist die -OH-Gruppe Teil der -COOH-Gruppe.",
           hints: [
@@ -698,8 +700,8 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
         {
           question:
             "Welches Zwischenprodukt entsteht beim Abbau von Ethanol zu Essigsäure (Acetat) im menschlichen Körper?",
-          options: ["Propanol", "Aceton", "Acetaldehyd (Ethanal)", "Formaldehyd", "Milchsäure"],
-          correctIndex: 2,
+          options: ["Propanol", "Acetaldehyd (Ethanal)", "Aceton", "Formaldehyd", "Milchsäure"],
+          correctIndex: 1,
           explanation:
             "Der hepatische Ethanolabbau verläuft zweistufig: (1) Ethanol → Acetaldehyd (Ethanal): katalysiert durch Alkohol-Dehydrogenase (ADH), NAD⁺ → NADH. (2) Acetaldehyd → Acetat (Essigsäure): katalysiert durch Aldehyd-Dehydrogenase (ALDH2), NAD⁺ → NADH. Acetaldehyd ist das toxische Zwischenprodukt, das für Flush-Reaktion, Kater-Symptome (Kopfschmerz, Übelkeit) und langfristige Leberschäden verantwortlich ist. Menschen mit ALDH2*2-Mutation bauen Acetaldehyd langsamer ab → stärkere Reaktionen.",
           hints: [
@@ -733,12 +735,12 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
           question: "Warum sind Amine basisch?",
           options: [
             "Weil sie ein H⁺ abgeben können",
-            "Weil der Stickstoff ein freies Elektronenpaar hat, das Protonen aufnehmen kann",
-            "Weil sie eine -OH-Gruppe enthalten",
             "Weil sie in Wasser dissoziieren wie starke Basen",
+            "Weil sie eine -OH-Gruppe enthalten",
+            "Weil der Stickstoff ein freies Elektronenpaar hat, das Protonen aufnehmen kann",
             "Weil ihre Kohlenstoffkette unpolar ist",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Amine sind organische Derivate des Ammoniaks (NH₃). Der Stickstoff in Aminen besitzt ein freies (nicht-bindendes) Elektronenpaar. Dieses Elektronenpaar kann ein Proton (H⁺) aufnehmen, was das Amin zur Base macht: R-NH₂ + H₂O ⇌ R-NH₃⁺ + OH⁻. Die Basenstärke von Aminen hängt von der Elektronendichte am N ab (aliphatische Amine sind basischer als aromatische Amine). Aminosäuren sind amphoter: die -NH₂-Gruppe ist basisch, die -COOH-Gruppe ist sauer.",
           hints: [
@@ -750,8 +752,8 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
         },
         {
           question: "Welche Verbindungsklasse enthält die Carboxylgruppe (-COOH)?",
-          options: ["Ester", "Amine", "Ketone", "Carbonsäuren", "Aldehyde"],
-          correctIndex: 3,
+          options: ["Ester", "Amine", "Ketone", "Aldehyde", "Carbonsäuren"],
+          correctIndex: 4,
           explanation:
             "Carbonsäuren sind charakterisiert durch die Carboxylgruppe -COOH, die eine Kombination aus Carbonylgruppe (C=O) und Hydroxylgruppe (-OH) darstellt. Sie sind Brønsted-Säuren und können ein Proton abgeben: R-COOH ⇌ R-COO⁻ + H⁺. Typische pKₐ-Werte: 4-5 (schwache Säuren). Wichtige Vertreter: Ameisensäure (pKₐ 3,75), Essigsäure (pKₐ 4,75), Milchsäure (pKₐ 3,86), Zitronensäure (pKₐ1 3,13). Carbonsäuren bilden Ester durch Reaktion mit Alkoholen.",
           hints: [
@@ -765,13 +767,13 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
           question:
             "Was sind Ketonkörper, und bei welcher Stoffwechsellage entstehen sie vermehrt?",
           options: [
-            "Aminosäuren; entstehen bei hohem Proteinkonsum",
-            "Glucose-Abkömmlinge; entstehen nach Mahlzeiten",
             "Acetoacetat, β-Hydroxybutyrat und Aceton; entstehen bei Glucose-Mangel (Fasten, Diabetes)",
+            "Glucose-Abkömmlinge; entstehen nach Mahlzeiten",
+            "Aminosäuren; entstehen bei hohem Proteinkonsum",
             "Fettsäuren; entstehen bei Fettreicher Ernährung",
             "Triglyceride; entstehen bei hohem Insulinspiegel",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Ketonkörper (Acetoacetat, β-Hydroxybutyrat und Aceton) werden in der Leber aus Acetyl-CoA gebildet, wenn die β-Oxidation die Kapazität des Citratzyklus übersteigt — d.h. bei Glucose-Mangel (Fasten, Hunger) oder wenn Glucose nicht genutzt werden kann (Diabetes mellitus Typ 1, Insulinmangel). Ketonkörper dienen als alternativer Energieträger für Gehirn und Muskel. Bei exzessiver Produktion sinkt der Blut-pH (Ketoazidose, pH < 7,35). Aceton (flüchtig) verleiht dem Atem einen charakteristischen süßlich-fruchtigen Geruch.",
           hints: [
@@ -785,12 +787,12 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
           question: "Welches der folgenden Medikamente ist chemisch gesehen ein Ester?",
           options: [
             "Ibuprofen (Carbonsäure)",
-            "Paracetamol (Amid)",
             "Aspirin (Acetylsalicylsäure)",
+            "Paracetamol (Amid)",
             "Penicillin (β-Lactam)",
             "Metformin (Guanidin-Derivat)",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Aspirin (Acetylsalicylsäure) ist ein Ester: Es entsteht durch Reaktion der Hydroxylgruppe der Salicylsäure mit Essigsäureanhydrid (Veresterung). Die Estergruppe (-COO-) verbindet den Benzolring der Salicylsäure mit der Acetylgruppe. Im Körper wird Aspirin hydrolysiert (gespalten) zu Salicylsäure und Acetat. Aspirin hemmt irreversibel die Cyclooxygenase (COX-1 und COX-2) durch Acetylierung → Hemmung der Prostaglandinsynthese → analgetisch, antipyretisch, antiinflammatorisch, thrombozytenaggregationshemmend.",
           hints: [
@@ -947,12 +949,12 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           question: "Was unterscheidet Purinbasen von Pyrimidinbasen?",
           options: [
             "Purine haben eine OH-Gruppe, Pyrimidine nicht",
-            "Purine sind zweiringaromatische Basen, Pyrimidine sind einringaromatisch",
-            "Purine kommen nur in RNA vor, Pyrimidine nur in DNA",
             "Purine sind positiv geladen, Pyrimidine negativ",
+            "Purine kommen nur in RNA vor, Pyrimidine nur in DNA",
+            "Purine sind zweiringaromatische Basen, Pyrimidine sind einringaromatisch",
             "Purine haben 4n+2 π-Elektronen, Pyrimidine nicht",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Stickstoffbasen der Nukleinsäuren werden nach ihrer Ringstruktur unterschieden: Purine bestehen aus einem Pyrimidin-Ring und einem Imidazol-Ring (Doppelring = Bicyclus, 9 Atome). Purine: Adenin (A) und Guanin (G) — kommen in DNA und RNA vor. Pyrimidine haben nur einen Sechsring (6 Atome, Monocyclus). Pyrimidine: Cytosin (C, in DNA und RNA), Thymin (T, nur DNA), Uracil (U, nur RNA). Eselsbrücke: 'CUT the Pyrimidine' (Cytosin, Uracil, Thymin sind Pyrimidine).",
           hints: [
@@ -966,12 +968,12 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           question: "Welche Aussage zur Chargaff-Regel ist korrekt?",
           options: [
             "In der DNA ist A = G und C = T (gleiche Mengen gleicher Ringtypen)",
-            "In der DNA ist A = T und G = C (komplementäre Basenpaarung)",
+            "Chargaff-Regel gilt nur für RNA, nicht für DNA",
             "In der RNA ist A = T, weil RNA einzelsträngig ist",
             "Purine und Pyrimidine kommen in der DNA im Verhältnis 2:1 vor",
-            "Chargaff-Regel gilt nur für RNA, nicht für DNA",
+            "In der DNA ist A = T und G = C (komplementäre Basenpaarung)",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Chargaff stellte fest, dass in doppelsträngiger DNA die Menge von Adenin immer gleich der Menge von Thymin ist (A = T), und die Menge von Guanin gleich der von Cytosin (G = C). Dies ergibt sich aus der Watson-Crick-Basenpaarung: A-T-Paar (2 Wasserstoffbrücken), G-C-Paar (3 Wasserstoffbrücken). Folgerung: Purine (A+G) = Pyrimidine (C+T). Diese Regel gilt für doppelsträngige DNA; für einzelsträngige RNA oder Einzelstrang-DNA nicht.",
           hints: [
@@ -985,13 +987,13 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           question:
             "Welche Erkrankung entsteht durch Ablagerung von Natriumurat-Kristallen in Gelenken?",
           options: [
-            "Diabetes mellitus",
-            "Phenylketonurie",
             "Gicht (Arthritis urica)",
+            "Phenylketonurie",
+            "Diabetes mellitus",
             "Alkaptonurie",
             "Homocystinurie",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Gicht (Arthritis urica, Hyperurikämie) ist eine Stoffwechselerkrankung des Purinstoffwechsels. Purine werden im Menschen zu Harnsäure abgebaut (letzter Schritt: Xanthinoxidase). Bei Überproduktion oder verminderter renaler Ausscheidung akkumuliert Harnsäure im Blut. Ab einer Konzentration von ca. 6,8 mg/dl ist die Löslichkeitsgrenze überschritten, Natriumurat kristallisiert aus und lagert sich in Gelenken (bevorzugt Großzehengrundgelenk = Podagra, aber auch Finger, Knie) und in der Niere (Nierensteine) ab. Die Kristalle lösen eine Entzündungsreaktion aus (akuter Gichtanfall mit starken Schmerzen). Therapie: Allopurinol (Xanthinoxidase-Hemmer).",
           hints: [
@@ -1004,8 +1006,8 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
         {
           question:
             "Welche Aminosäure dient als Vorläufer für Dopamin, Adrenalin und Noradrenalin (Catecholamine)?",
-          options: ["Tryptophan", "Histidin", "Tyrosin", "Glycin", "Phenylalanin (direkt)"],
-          correctIndex: 2,
+          options: ["Tryptophan", "Tyrosin", "Histidin", "Glycin", "Phenylalanin (direkt)"],
+          correctIndex: 1,
           explanation:
             "Die Catecholaminbiosynthese beginnt mit Tyrosin (einer aromatischen Aminosäure). Der Weg: Tyrosin → L-DOPA (durch Tyrosinhydroxylase, dem geschwindigkeitsbestimmenden Schritt) → Dopamin (durch DOPA-Decarboxylase) → Noradrenalin (durch Dopamin-β-Hydroxylase) → Adrenalin (durch PNMT). Phenylalanin ist der Vorläufer von Tyrosin (Phenylalanin-Hydroxylase); bei Phenylketonurie (PKU) ist diese Hydroxylase defekt. Tryptophan ist Vorläufer von Serotonin und Melatonin. Histidin ist Vorläufer von Histamin.",
           hints: [
@@ -1020,12 +1022,12 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
             "Ein Patient hat erhöhte Harnsäurewerte (Hyperurikämie). Welcher Mechanismus liegt bei der Therapie mit Allopurinol zugrunde?",
           options: [
             "Allopurinol erhöht die renale Ausscheidung von Harnsäure",
-            "Allopurinol hemmt die Xanthinoxidase und reduziert so die Harnsäureproduktion",
             "Allopurinol löst Urat-Kristalle in den Gelenken auf",
+            "Allopurinol hemmt die Xanthinoxidase und reduziert so die Harnsäureproduktion",
             "Allopurinol blockiert die Purinaufnahme im Darm",
             "Allopurinol aktiviert die Uricase, die Harnsäure abbaut",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Allopurinol ist ein Strukturanalog des Hypoxanthins. Es hemmt kompetitiv die Xanthinoxidase, das Enzym, das Hypoxanthin → Xanthin → Harnsäure katalysiert. Durch Hemmung der Xanthinoxidase wird weniger Harnsäure gebildet; stattdessen akkumulieren Hypoxanthin und Xanthin (die löslicher als Harnsäure sind und leichter renal ausgeschieden werden). Die Harnsäurekonzentration im Blut sinkt. Allopurinol selbst wird durch die Xanthinoxidase zu Oxipurinol metabolisiert, das ebenfalls ein wirksamer Xanthinoxidase-Inhibitor ist. Menschen haben keine Uricase (anders als die meisten anderen Säugetiere), daher ist Harnsäure unser Endprodukt.",
           hints: [
@@ -1040,12 +1042,12 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
             "Welche Verbindung ist nach der Hückel-Regel (4n+2 π-Elektronen) NICHT aromatisch?",
           options: [
             "Benzol (C₆H₆, 6 π-Elektronen)",
-            "Cyclooctatetraen (C₈H₈, 8 π-Elektronen)",
-            "Naphthalin (C₁₀H₈, 10 π-Elektronen)",
             "Pyrrol (C₄H₄NH, 6 π-Elektronen)",
+            "Naphthalin (C₁₀H₈, 10 π-Elektronen)",
+            "Cyclooctatetraen (C₈H₈, 8 π-Elektronen)",
             "Pyridin (C₅H₅N, 6 π-Elektronen)",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Cyclooctatetraen (COT, C₈H₈) hat 8 π-Elektronen. Nach der Hückel-Regel sind 4n+2 π-Elektronen für Aromatizität nötig. Prüfung: 4n+2 = 8 → 4n = 6 → n = 1,5 (kein ganzzahliges n!). Daher ist COT NICHT aromatisch — es ist antiaromatisch (4n π-Elektronen wären sogar destabilisierend). COT ist tatsächlich nicht planar, sondern wannenförmig, um die Antiaromatizität zu vermeiden. Im Gegensatz: Benzol (6, n=1 ✓), Naphthalin (10, n=2 ✓), Pyrrol und Pyridin (beide 6, n=1 ✓).",
           hints: [
@@ -1067,6 +1069,8 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
       content: `## Grundstruktur der Aminosäuren
 
 Aminosäuren sind die molekularen Bausteine, aus denen der Körper sämtliche Proteine zusammensetzt — von Enzymen über Antikörper bis hin zu Strukturproteinen wie Kollagen. Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**, die jeder Aminosäure ihre individuellen Eigenschaften verleiht. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen 19 liegen im menschlichen Körper ausschließlich als L-Enantiomere vor.
+
+{{IMAGE}}
 
 ## Klassifikation der Aminosäuren
 
@@ -1163,8 +1167,8 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
         {
           question:
             "Welche der folgenden Aminosäuren ist die einzige achirale proteinogene Aminosäure?",
-          options: ["Alanin", "Glycin", "Cystein", "Serin", "Valin"],
-          correctIndex: 1,
+          options: ["Alanin", "Valin", "Cystein", "Serin", "Glycin"],
+          correctIndex: 4,
           explanation:
             "Glycin (H₂N–CH₂–COOH) ist die einzige proteinogene Aminosäure ohne Stereozentrum, da das α-Kohlenstoffatom zwei identische Wasserstoffatome trägt (R = H). Damit fehlt die Voraussetzung für Chiralität (vier verschiedene Substituenten am sp³-C). Alle anderen 19 proteinogenen Aminosäuren tragen vier unterschiedliche Gruppen am α-C und liegen ausschließlich in der L-Konfiguration vor. Alanin (R = –CH₃), Cystein (R = –CH₂–SH), Serin (R = –CH₂–OH) und Valin (R = –CH(CH₃)₂) sind alle chiral.",
           hints: [
@@ -1178,13 +1182,13 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
           question:
             "Welche strukturelle Besonderheit der Peptidbindung verhindert die freie Rotation um die C–N-Achse?",
           options: [
-            "Die Peptidbindung ist eine Einfachbindung mit großem Raumanspruch",
             "Die Peptidbindung hat partiellen Doppelbindungscharakter durch Mesomerie",
+            "Die Peptidbindung ist eine Einfachbindung mit großem Raumanspruch",
             "Die Peptidbindung ist eine Disulfidbrücke zwischen Cysteinen",
             "Die Peptidbindung enthält ein Metallatom als Rotationshemmung",
             "Die freie Rotation wird ausschließlich durch sterische Hinderung der R-Gruppen verhindert",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Die Peptidbindung (–CO–NH–) besitzt partiellen Doppelbindungscharakter aufgrund von Mesomerie: Das freie Elektronenpaar des Stickstoffs ist in das π-System der benachbarten Carbonylgruppe delokalisiert. Dadurch liegt die C–N-Bindung energetisch zwischen Einfach- und Doppelbindung (Bindungslänge ~1,32 Å, kürzer als typische C–N-Einfachbindung mit ~1,47 Å). Diese Elektronendelokalisierung macht die Bindung planar und starr — alle vier Atome (Cα, C=O, N, H sowie der folgende Cα) liegen in einer Ebene. Dies schränkt die möglichen Konformationen eines Polypeptids erheblich ein und ist Grundlage für definierte Sekundärstrukturen.",
           hints: [
@@ -1198,12 +1202,12 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
           question: "Welche Wechselwirkungen stabilisieren die α-Helix als Sekundärstruktur?",
           options: [
             "Kovalente Disulfidbrücken zwischen Cysteinen im gleichen Strang",
-            "Ionische Wechselwirkungen zwischen geladenen Seitenketten",
             "Intramolekulare Wasserstoffbrücken zwischen C=O(n) und N–H(n+4) im Peptidrückgrat",
+            "Ionische Wechselwirkungen zwischen geladenen Seitenketten",
             "Hydrophobe Wechselwirkungen zwischen unpolaren Seitenketten",
             "Phosphodiesterbindungen zwischen den Aminosäureresten",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Die α-Helix wird durch intramolekulare Wasserstoffbrücken zwischen der Carbonylgruppe (C=O) der Aminosäure an Position n und der Amidgruppe (N–H) der Aminosäure an Position n+4 im selben Strang stabilisiert. Diese H-Brücken verlaufen parallel zur Helixachse. Eine vollständige Windung umfasst 3,6 Aminosäurereste. Disulfidbrücken und ionische Wechselwirkungen stabilisieren die Tertiärstruktur, hydrophobe Effekte tragen ebenfalls zur Tertiärstruktur bei. Phosphodiesterbindungen gehören zur DNA/RNA, nicht zu Proteinen.",
           hints: [
@@ -1218,12 +1222,12 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
             "Bei der Sichelzellanämie liegt die Ursache in welcher Strukturebene des Hämoglobins?",
           options: [
             "Tertiärstruktur: Fehlfaltung der β-Globinkette durch Disulfidbrückenbruch",
-            "Primärstruktur: Glu→Val-Austausch an Position 6 der β-Globinkette",
             "Sekundärstruktur: Zerstörung der α-Helix-Segmente",
+            "Primärstruktur: Glu→Val-Austausch an Position 6 der β-Globinkette",
             "Quartärstruktur: α- und β-Ketten können sich nicht zusammenlagern",
             "Kovalente Modifikation der Häm-Gruppe durch Oxidation",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die Sichelzellanämie wird durch eine Punktmutation im β-Globin-Gen verursacht, die zu einem Aminosäureaustausch in der Primärstruktur führt: Glutaminsäure (hydrophil, negativ geladen) an Position 6 wird durch Valin (hydrophob, ungeladen) ersetzt. Die veränderte Primärstruktur (HbS statt HbA) führt dazu, dass desoxygenierte HbS-Moleküle polymerisieren, weil die hydrophobe Val6-Seitenkette in eine komplementäre hydrophobe Tasche des Nachbarmoleküls passt. Dieses Beispiel illustriert, wie die Primärstruktur alle übergeordneten Strukturen und die Funktion eines Proteins determiniert.",
           hints: [
@@ -1238,12 +1242,12 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
             "Welche der folgenden Bindungstypen trägt zur Stabilisierung der Tertiärstruktur bei, NICHT aber zur Sekundärstruktur?",
           options: [
             "Wasserstoffbrücken zwischen Peptidrückgrat-Gruppen",
-            "Disulfidbrücken zwischen Cysteinen",
-            "Peptidbindungen zwischen Aminosäureresten",
             "Die planare Struktur der Peptidbindung",
+            "Peptidbindungen zwischen Aminosäureresten",
+            "Disulfidbrücken zwischen Cysteinen",
             "Van-der-Waals-Kräfte im Rückgrat",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Disulfidbrücken (–S–S–) entstehen durch oxidative Kupplung zweier Cystein-Thiolgruppen (–SH) und sind kovalente Bindungen zwischen Seitenketten — ein charakteristisches Merkmal der Tertiär- (und Quartär-)struktur. Sekundärstrukturen (α-Helix, β-Faltblatt) werden hingegen durch nicht-kovalente Wasserstoffbrücken im Peptidrückgrat stabilisiert. Peptidbindungen definieren die Primärstruktur. Die Planarität der Peptidbindung begrenzt Konformationen, ist aber kein Stabilisierungsmechanismus für eine bestimmte Strukturebene.",
           hints: [
@@ -1258,11 +1262,11 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
           options: [
             "Denaturierung spaltet alle Peptidbindungen und setzt Aminosäuren frei",
             "Denaturierung zerstört die Primärstruktur, lässt aber höhere Strukturen intakt",
-            "Denaturierung hebt Sekundär- bis Quartärstruktur auf, die Primärstruktur bleibt erhalten",
-            "Denaturierung ist immer reversibel durch Wiederherstellung physiologischer Bedingungen",
             "Denaturierung betrifft nur die Quartärstruktur, nicht die Sekundärstruktur",
+            "Denaturierung ist immer reversibel durch Wiederherstellung physiologischer Bedingungen",
+            "Denaturierung hebt Sekundär- bis Quartärstruktur auf, die Primärstruktur bleibt erhalten",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Denaturierung bezeichnet den Verlust der nativen räumlichen Struktur (Sekundär-, Tertiär- und Quartärstruktur), wobei die kovalenten Peptidbindungen (Primärstruktur) erhalten bleiben. Auslöser sind Hitze (> Optimum → Zerstörung von H-Brücken und hydrophoben WW), extremer pH (Veränderung ionischer WW), organische Lösungsmittel (Störung des hydrophoben Effekts) und Reduktionsmittel (β-Mercaptoethanol → Spaltung von Disulfidbrücken). Denaturierung kann reversibel sein (manche Enzyme renaturieren bei Normalbedingungen, Chaperone helfen), ist aber häufig irreversibel (gekochtes Eiweiß, Prionen).",
           hints: [
@@ -1276,13 +1280,13 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
           question:
             "Ein 45-jähriger Patient kommt mit typischen Brustschmerzen in die Notaufnahme. Welcher der folgenden Labormarker ist am spezifischsten für einen akuten Myokardinfarkt und steigt frühzeitig an?",
           options: [
-            "LDH (Laktatdehydrogenase)",
+            "Troponin T oder Troponin I",
             "GPT/ALT (Alaninaminotransferase)",
             "Amylase",
-            "Troponin T oder Troponin I",
+            "LDH (Laktatdehydrogenase)",
             "Gesamtprotein im Serum",
           ],
-          correctIndex: 3,
+          correctIndex: 0,
           explanation:
             "Troponin T und Troponin I sind kardiale Proteine des kontraktilen Apparats der Herzmuskelzellen und sind bei gesunden Personen im Blut kaum nachweisbar. Bei Myokardnekrose werden sie frühzeitig (3–6 h nach Ereignis) freigesetzt und sind für mehrere Tage erhöht. Sie gelten heute als Goldstandard für die Infarktdiagnostik (hohe Sensitivität und Spezifität). LDH ist wenig spezifisch (kommt in vielen Geweben vor). GPT/ALT ist ein Leberwert (hepatozellulärer Schaden). Amylase weist auf Pankreatitis hin.",
           hints: [
@@ -1305,6 +1309,8 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
 Kohlenhydrate gehören neben Lipiden und Proteinen zu den drei Hauptgruppen der Biomoleküle. Ihre allgemeine Summenformel Cₙ(H₂O)ₙ erklärt den historischen Namen „Kohlen-Hydrate", obwohl es sich chemisch nicht um Hydrate des Kohlenstoffs handelt. Die einfachsten Vertreter sind die **Monosaccharide** — Polyhydroxyaldehyde (Aldosen) oder Polyhydroxyketone (Ketosen), die sich nicht weiter hydrolysieren lassen.
 
 Die wichtigste Aldohexose ist **Glucose** (Traubenzucker, Dextrose), die mit einem Blutspiegel von 70–100 mg/dl der zentrale Energieträger des menschlichen Stoffwechsels ist. Jede Körperzelle kann Glucose über die Glykolyse verwerten, und das Gehirn ist im Normalzustand fast ausschließlich auf Glucose als Brennstoff angewiesen. Als Ketohexose spielt **Fructose** (Fruchtzucker) eine Rolle, die vor allem in Obst und Honig vorkommt und in der Leber metabolisiert wird. **Galactose** schließlich ist das C4-Epimer der Glucose und Bestandteil der Lactose (Milchzucker).
+
+{{IMAGE}}
 
 ## Ringformen und Mutarotation
 
@@ -1419,12 +1425,12 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
           question: "Welche Aussage zur Saccharose ist korrekt?",
           options: [
             "Saccharose besteht aus zwei α-D-Glucosemolekülen",
-            "Saccharose ist ein reduzierendes Disaccharid",
             "Saccharose wird durch eine α-1→β-2-glykosidische Bindung zwischen Glucose und Fructose gebildet",
+            "Saccharose ist ein reduzierendes Disaccharid",
             "Saccharose kann durch die Fehling-Probe nachgewiesen werden",
             "Saccharose enthält eine freie Halbacetalgruppe am anomeren Kohlenstoff",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Saccharose (Haushaltszucker) besteht aus α-D-Glucose und β-D-Fructose, die durch eine α-1→β-2-glykosidische Bindung verknüpft sind. Diese Bindung involviert beide anomeren Kohlenstoffatome (C1 der Glucose und C2 der Fructose), sodass keine freie Halbacetalgruppe mehr vorliegt. Deshalb ist Saccharose das einzige unter den häufigen Disacchariden, das nicht reduzierend ist und die Fehling-Probe negativ reagiert. Maltose (α-1,4, Glc+Glc) und Laktose (β-1,4, Gal+Glc) sind reduzierend.",
           hints: [
@@ -1457,12 +1463,12 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
           question: "D-Galactose ist das C4-Epimer von D-Glucose. Was bedeutet 'Epimer'?",
           options: [
             "Zwei Verbindungen mit gleicher Summenformel aber unterschiedlicher Funktionsgruppe",
-            "Zwei Stereoisomere, die sich an genau einem Chiralitätszentrum unterscheiden",
-            "Zwei Enantiomere, die Spiegelbilder voneinander sind",
             "Zwei Verbindungen, die ineinander umgewandelt werden können ohne Bindungsbruch",
+            "Zwei Enantiomere, die Spiegelbilder voneinander sind",
+            "Zwei Stereoisomere, die sich an genau einem Chiralitätszentrum unterscheiden",
             "Zwei Anomere mit unterschiedlicher Konfiguration am anomeren Kohlenstoff",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Epimere sind Diastereomere, die sich nur in der Konfiguration an einem einzigen Chiralitätszentrum unterscheiden. D-Galactose ist das C4-Epimer von D-Glucose: Beide sind Aldohexosen (C₆H₁₂O₆), unterscheiden sich aber ausschließlich in der Konfiguration der OH-Gruppe am C4-Atom (in Haworth: OH nach unten bei Glucose, nach oben bei Galactose). Enantiomere sind vollständige Spiegelbilder (alle Chiralitätszentren invertiert, z.B. D- und L-Glucose). Anomere sind spezielle Epimere am anomeren C (C1 bei Aldosen). Konformere entstehen durch Rotation ohne Bindungsbruch.",
           hints: [
@@ -1476,12 +1482,12 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
           question: "Ein Patient hat HbA1c = 9,5% (80 mmol/mol). Was gibt dieser Wert an?",
           options: [
             "Die aktuelle Blutglukosekonzentration zum Zeitpunkt der Messung",
-            "Die durchschnittliche Blutglukosekonzentration der letzten 8–12 Wochen",
+            "Den Anteil des Hämoglobins, der durch Oxidation denaturiert ist",
             "Den prozentualen Anteil des Hämoglobins, der durch enzymatische Reaktionen verändert wurde",
             "Die Konzentration von freier Glucose im Blutplasma",
-            "Den Anteil des Hämoglobins, der durch Oxidation denaturiert ist",
+            "Die durchschnittliche Blutglukosekonzentration der letzten 8–12 Wochen",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "HbA1c (Hämoglobin A1c) entsteht durch nicht-enzymatische Glykierung: Glucose reagiert spontan mit der freien α-Aminogruppe des N-terminalen Valins der β-Globinkette. Da Erythrozyten (kernlos, keine Proteinsynthese) ihre Proteine nicht erneuern, akkumuliert HbA1c proportional zur durchschnittlichen Blutglukose über die gesamte Lebensspanne des Erythrozyten (~120 Tage, relevanter Zeitraum 8–12 Wochen). Ein HbA1c von 9,5% entspricht einer durchschnittlichen Glukose von ~12–13 mmol/L und zeigt eine deutlich unzureichende Diabeteskontrolle an. Ein Zielwert < 7% (53 mmol/mol) wird oft angestrebt.",
           hints: [
@@ -1494,13 +1500,13 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         {
           question: "Warum kann der Mensch Cellulose nicht als Energiequelle nutzen?",
           options: [
-            "Cellulose ist aus L-Glucose aufgebaut, die im Stoffwechsel nicht verwertbar ist",
-            "Cellulose besitzt keine glykosidischen Bindungen und kann daher nicht hydrolysiert werden",
             "Der Mensch besitzt keine Enzyme zur Hydrolyse der β-1,4-glykosidischen Bindungen",
+            "Cellulose besitzt keine glykosidischen Bindungen und kann daher nicht hydrolysiert werden",
+            "Cellulose ist aus L-Glucose aufgebaut, die im Stoffwechsel nicht verwertbar ist",
             "Cellulose enthält kovalent gebundene Phosphatgruppen, die ihre Verdauung verhindern",
             "Cellulose ist zu wasserunlöslich, um überhaupt mit Enzymen in Kontakt zu kommen",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Cellulose besteht aus β-1,4-glykosidisch verknüpfter D-Glucose. Der Mensch (und die meisten Säugetiere) besitzen keine β-1,4-Glucosidase (Cellulase), die diese spezifische Bindung hydrolysieren kann. Menschliche Amylasen (Speichel und Pankreas) können nur α-1,4-glykosidische Bindungen spalten (Stärke, Glykogen). Wiederkäuer haben im Pansen Bakterien, die Cellulasen produzieren. Cellulose wird deshalb als unverdaulicher Ballaststoff klassifiziert, obwohl sie aus demselben Monomer (Glucose) wie Stärke besteht. Die Ursache liegt also ausschließlich in der Anomerie (β statt α) der glykosidischen Bindung.",
           hints: [
@@ -1513,8 +1519,8 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         {
           question:
             "Welches Monosaccharid ist der exklusive Energielieferant des Gehirns unter Normalbedingungen?",
-          options: ["Fructose", "Galactose", "Glucose", "Ribose", "Mannose"],
-          correctIndex: 2,
+          options: ["Fructose", "Glucose", "Galactose", "Ribose", "Mannose"],
+          correctIndex: 1,
           explanation:
             "Das Gehirn ist auf eine kontinuierliche Zufuhr von D-Glucose angewiesen, da es keine nennenswerten eigenen Glykogenspeicher hat und unter Normalbedingungen keine freien Fettsäuren oxidieren kann (Blut-Hirn-Schranke limitiert den Transport langkettiger Fettsäuren). Sinkt der Blutglukosespiegel unter ~3 mmol/L (Hypoglykämie), kommt es zu Bewusstseinsstörungen bis zum Koma. Ausnahme: Bei längerem Fasten oder diabetischer Ketoazidose kann das Gehirn schrittweise auf Ketonkörper (Acetoacetat, β-Hydroxybutyrat) umstellen, die aus der hepatischen Fettsäureoxidation entstehen.",
           hints: [
@@ -1529,12 +1535,12 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
             "Bei Laktoseintoleranz liegt ein Mangel an welchem Enzym vor, und welche biochemische Konsequenz hat dies direkt?",
           options: [
             "Amylase-Mangel → Stärke wird nicht verdaut → Hyperglykämie",
-            "Laktase-Mangel → Laktose wird nicht in Galactose und Glucose gespalten → osmotische Diarrhö",
             "Saccharase-Mangel → Saccharose akkumuliert → Laktoseintoleranz",
+            "Laktase-Mangel → Laktose wird nicht in Galactose und Glucose gespalten → osmotische Diarrhö",
             "Galactosidase-Mangel → Galactosämie mit Laktose im Blut",
             "Glucosidasemangel → Glykogenose Typ II (Pompe) mit Laktoseintoleranz",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Laktase (Laktase-Phlorizin-Hydrolase) ist eine Disaccharidase im Bürstensaum des Dünndarmepithels, die Laktose (β-1,4-Gal-Glc) in D-Galactose und D-Glucose spaltet. Bei Laktasemangel (primär genetisch, mit zunehmendem Alter bei vielen Ethnien normal) gelangt unverdaute Laktose in den Dickdarm. Dort fermentieren Darmbakterien die Laktose zu kurzkettigen Fettsäuren, CO₂ und H₂ → Blähungen, Schmerzen. Außerdem wirkt unverdaute Laktose osmotisch → osmotische Diarrhö. Amylasemangel betrifft Stärke, Saccharasemangel betrifft Saccharose, Pompe betrifft Glykogen.",
           hints: [
@@ -1577,6 +1583,8 @@ Die **ω-Nomenklatur** zählt die Position der ersten Doppelbindung vom Methylen
 Natürlich vorkommende ungesättigte Fettsäuren liegen fast ausschließlich in **cis-Konfiguration** vor. **Trans-Fettsäuren** entstehen durch industrielle Fetthärtung (partielle Hydrierung) und haben gestreckte Ketten ähnlich wie gesättigte Fettsäuren — sie erhöhen das LDL-Cholesterin, senken das HDL und wirken **atherogen**. Die EU begrenzt den Trans-Fettsäure-Gehalt in Lebensmitteln auf maximal 2 %.
 
 Der Grund für die hohe **Energiedichte** der Lipide (38 kJ/g bzw. 9 kcal/g gegenüber 17 kJ/g bzw. 4 kcal/g bei Kohlenhydraten und Proteinen) liegt in ihrem stark reduzierten Zustand: Fettsäuren enthalten sehr viel Wasserstoff und wenig Sauerstoff, während Kohlenhydrate formal CH₂O-Einheiten darstellen und somit bereits „partiell oxidiert" sind. Zudem bindet Fettgewebe kaum Wasser, wohingegen Glykogen etwa 2 g Wasser pro Gramm speichert.
+
+{{IMAGE}}
 
 ## Triglyceride (Triacylglycerine)
 
@@ -1690,11 +1698,11 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
           options: [
             "Lipide und Kohlenhydrate haben die gleiche Energiedichte von ca. 17 kJ/g",
             "Kohlenhydrate liefern mit 38 kJ/g mehr Energie als Lipide mit 17 kJ/g",
-            "Lipide liefern mit ca. 38 kJ/g mehr als doppelt so viel Energie wie Kohlenhydrate (ca. 17 kJ/g)",
             "Proteine liefern mehr Energie als Lipide",
+            "Lipide liefern mit ca. 38 kJ/g mehr als doppelt so viel Energie wie Kohlenhydrate (ca. 17 kJ/g)",
             "Lipide liefern nur 4 kcal/g, Kohlenhydrate dagegen 9 kcal/g",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Lipide (Fette) liefern ca. 38 kJ/g (≈ 9 kcal/g), während Kohlenhydrate und Proteine je ca. 17 kJ/g (≈ 4 kcal/g) liefern. Die höhere Energiedichte der Lipide erklärt sich durch den stärker reduzierten (höherer Wasserstoffgehalt, weniger Sauerstoff) Zustand der Fettsäuren im Vergleich zu Kohlenhydraten (die formal CH₂O-Einheiten enthalten und somit 'schon partiell oxidiert' sind). Deshalb sind Triglyceride als Energiespeicher effizienter als Glykogen (zudem nimmt Glykogen gebundenes Wasser mit → effektive Energiedichte von Glykogen noch geringer).",
           hints: [
@@ -1709,11 +1717,11 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
           options: [
             "Sie sind vollständig hydrophob und bilden dadurch wasserundurchlässige Schichten",
             "Sie sind vollständig hydrophil und können sich frei in wässriger Lösung lösen",
-            "Sie sind amphipathisch (polarer Kopf + apolare Schwänze) und bilden spontan Bilayer in Wasser",
-            "Sie tragen drei Fettsäureketten wie Triglyceride und sind deshalb besonders stabil",
             "Sie können kovalente Bindungen mit Membranproteinen eingehen und die Membran fixieren",
+            "Sie tragen drei Fettsäureketten wie Triglyceride und sind deshalb besonders stabil",
+            "Sie sind amphipathisch (polarer Kopf + apolare Schwänze) und bilden spontan Bilayer in Wasser",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Phospholipide sind amphipathische Moleküle: Der hydrophile polare Kopf (Phosphat + Cholin oder anderer polarer Rest) ist wasserfreundlich, die zwei hydrophoben Fettsäureschwänze sind wasserfeindlich. In wässrigem Milieu ordnen sie sich durch den hydrophoben Effekt spontan zu einer Doppelschicht (Bilayer) an: Köpfe nach außen zur wässrigen Phase, Schwänze nach innen. Diese Selbstorganisation liefert die Grundstruktur aller biologischen Membranen. Triglyceride (drei Fettsäuren, kein polarer Kopf) sind vollständig hydrophob und bilden keine Membranen, sondern Fetttröpfchen.",
           hints: [
@@ -1727,13 +1735,13 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
           question:
             "Welcher der folgenden Faktoren erklärt den niedrigeren Schmelzpunkt von Olivenöl im Vergleich zu Palmfett?",
           options: [
-            "Olivenöl enthält Phospholipide, Palmfett dagegen nicht",
-            "Palmfett hat eine kürzere Kohlenstoffkette als Olivenöl",
             "Olivenöl enthält vorwiegend einfach ungesättigte (cis) Fettsäuren mit Knick in der Kette",
+            "Palmfett hat eine kürzere Kohlenstoffkette als Olivenöl",
+            "Olivenöl enthält Phospholipide, Palmfett dagegen nicht",
             "Olivenöl hat einen höheren Anteil an trans-Fettsäuren",
             "Palmfett enthält Steroide, die den Schmelzpunkt erhöhen",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Olivenöl enthält hauptsächlich Ölsäure (C18:1Δ9, cis-Konfiguration, einfach ungesättigt). Die cis-Doppelbindung erzeugt einen Knick von ca. 30° in der Fettsäurekette. Dieser Knick verhindert die enge parallele Packung der Fettsäuremoleküle und reduziert die Van-der-Waals-Wechselwirkungen → niedriger Schmelzpunkt → bei Raumtemperatur flüssig. Palmfett enthält hauptsächlich Palmitinsäure (C16:0, gesättigt, gestreckte Kette) → dichte Packung → stärkere Van-der-Waals-Kräfte → höherer Schmelzpunkt → fest bei Raumtemperatur. Trans-Fettsäuren verhalten sich ähnlich wie gesättigte (gerade Kette) und wären ebenfalls fest.",
           hints: [
@@ -1748,12 +1756,12 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
             "Welches Enzym wird durch Statine gehemmt und welche Konsequenz hat dies für den Cholesterinstoffwechsel?",
           options: [
             "Cholesterin-Oxidase → Cholesterin wird direkt abgebaut → LDL sinkt",
-            "LDL-Rezeptor → weniger LDL-Aufnahme in Hepatozyten → LDL-Anstieg im Blut",
             "HMG-CoA-Reduktase → weniger Cholesterinsynthese → Hochregulation der LDL-Rezeptoren → LDL-Senkung",
+            "LDL-Rezeptor → weniger LDL-Aufnahme in Hepatozyten → LDL-Anstieg im Blut",
             "Lipoprotein-Lipase → weniger VLDL-Abbau → Triglyceridanstieg",
             "Phospholipase A₂ → Membranabbau in Hepatozyten → diffuse Lipidstörung",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Statine (z.B. Atorvastatin, Simvastatin, Rosuvastatin) hemmen kompetitiv die HMG-CoA-Reduktase, das Schlüsselenzym der Cholesterinbiosynthese im Mevalonat-Weg. Durch weniger endogene Cholesterinsynthese in der Leber sinkt der intrahepatische Cholesteringehalt. Als Reaktion darauf reguliert die Leberzelle die LDL-Rezeptoren auf ihrer Oberfläche hoch (mehr SREBP-2-Aktivierung). Diese erhöhte LDL-Rezeptor-Dichte führt zu verstärkter Aufnahme von LDL-Cholesterin aus dem Blut → LDL-Senkung um 30–50%. HDL-Cholesterin steigt leicht an. Statine sind die wirksamsten Medikamente zur LDL-Senkung und zur Reduktion kardiovaskulärer Ereignisse.",
           hints: [
@@ -1766,8 +1774,8 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
         {
           question:
             "Welches Steroid dient als gemeinsamer Ausgangsstoff für Cortisol, Testosteron und Vitamin D₃?",
-          options: ["Östradiol", "Cholesterin", "Aldosteron", "Cortisol", "Progesteron"],
-          correctIndex: 1,
+          options: ["Östradiol", "Aldosteron", "Cholesterin", "Cortisol", "Progesteron"],
+          correctIndex: 2,
           explanation:
             "Cholesterin ist der universelle Vorläufer aller Steroide im menschlichen Körper. Es besitzt das Sterangerüst (vier kondensierte Ringe: drei Sechsringe + ein Fünfring) und eine –OH-Gruppe an C3 sowie eine aliphatische Seitenkette. Aus Cholesterin werden in den Nebennieren Glucocorticoide (Cortisol) und Mineralocorticoide (Aldosteron) synthetisiert, in den Gonaden Androgene (Testosteron) und Östrogene (Östradiol), in der Leber Gallensäuren, und in Haut/Leber/Niere Vitamin D₃ (Cholecalciferol → Calcidiol → Calcitriol). Progesteron ist selbst ein Steroid-Intermediat, kein Ausgangsstoff für alle genannten.",
           hints: [
@@ -1782,12 +1790,12 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
             "Ketonkörper entstehen bei längerem Fasten oder unkontrolliertem Typ-1-Diabetes. Welche Metabolite sind das und in welchem Organ werden sie hauptsächlich gebildet?",
           options: [
             "Glucose und Fructose; gebildet in der Niere durch Gluconeogenese",
-            "Acetoacetat, β-Hydroxybutyrat und Aceton; gebildet in der Leber aus überschüssigem Acetyl-CoA",
-            "Pyruvat und Lactat; gebildet in der Muskulatur bei anaerober Glykolyse",
             "Cholesterin und Gallensäuren; gebildet in der Leber bei erhöhtem Fettkonsum",
+            "Pyruvat und Lactat; gebildet in der Muskulatur bei anaerober Glykolyse",
+            "Acetoacetat, β-Hydroxybutyrat und Aceton; gebildet in der Leber aus überschüssigem Acetyl-CoA",
             "Harnsäure und Ammoniak; gebildet in der Leber beim Proteinabbau",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Ketonkörper sind Acetoacetat, β-Hydroxybutyrat und Aceton. Sie entstehen in der Leber (Mitochondrien) aus überschüssigem Acetyl-CoA, das bei gesteigerter Fettsäureoxidation (β-Oxidation) anfällt, wenn der Oxalacetat-Pool für den Citratzyklus nicht ausreicht (z.B. bei Glukosemangel). In der Ketogenese kondensieren zwei Acetyl-CoA-Moleküle zu Acetoacetyl-CoA, das zu Acetoacetat umgewandelt wird; durch Reduktion entsteht β-Hydroxybutyrat, durch spontane Decarboxylierung flüchtiges Aceton. Bei unkontrolliertem Typ-1-Diabetes führt absoluter Insulinmangel zu unkontrollierter Lipolyse und Ketogenese → Ketoazidose (Blut-pH fällt, Acetongeruch der Atemluft).",
           hints: [
@@ -1802,12 +1810,12 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
             "Welche Funktion haben Gallensäuren und von welchem Molekül werden sie synthetisiert?",
           options: [
             "Gallensäuren sind Verdauungsenzyme für Fette; sie werden aus Aminosäuren gebildet",
-            "Gallensäuren sind Emulgatoren für Fette im Darm; sie werden aus Cholesterin gebildet",
+            "Gallensäuren sind Cofaktoren der Lipasen und werden aus Fettsäuren gebildet",
             "Gallensäuren sind Hormone mit Steroidstruktur; sie werden in der Bauchspeicheldrüse gebildet",
             "Gallensäuren sind Transportproteine für Lipide im Blut; sie werden aus Triglyceriden gebildet",
-            "Gallensäuren sind Cofaktoren der Lipasen und werden aus Fettsäuren gebildet",
+            "Gallensäuren sind Emulgatoren für Fette im Darm; sie werden aus Cholesterin gebildet",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Gallensäuren (z.B. Cholsäure, Chenodesoxycholsäure) werden in der Leber aus Cholesterin synthetisiert und als Gallensalze (konjugiert mit Glycin oder Taurin) in der Gallenblase gespeichert. Im Dünndarm wirken sie als biologische Detergenzien (Emulgatoren): Durch ihren amphipathischen Charakter (Sterangerüst + polare OH-Gruppen) emulgieren sie Nahrungsfette in kleine Mizellen → vergrößerte Angriffsfläche für pankre­atische Lipasen. Gallensäuren werden im terminalen Ileum resorbiert und zur Leber zurücktransportiert (enterohepatischer Kreislauf). Sie sind keine Enzyme selbst, sondern ermöglichen die effiziente enzymatische Fettspaltung.",
           hints: [
@@ -1843,6 +1851,8 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
       content: `## Nukleotid-Aufbau
 
 Die Erbinformation jedes Lebewesens ist in Nukleinsäuren gespeichert — langen Kettenmolekülen, deren Grundbausteine die **Nukleotide** sind. Jedes Nukleotid besteht aus drei Komponenten: einer **Stickstoffbase** (Purin oder Pyrimidin), einem **Pentosezucker** (Ribose bei RNA, 2'-Desoxyribose bei DNA — letzterer fehlt die OH-Gruppe an C2') und einer oder mehreren **Phosphatgruppen**. Ohne Phosphat spricht man von einem **Nukleosid** (Base + Zucker), mit Phosphat von einem **Nukleotid**. **ATP** (Adenosin-Triphosphat), das universelle Energietransportmolekül der Zelle, ist nichts anderes als ein Nukleotid mit drei Phosphatresten — die Hydrolyse der β-γ-Phosphorsäureanhydridbindung setzt ΔG°' ≈ −30,5 kJ/mol frei.
+
+{{IMAGE}}
 
 ## Stickstoffbasen
 
@@ -1970,8 +1980,8 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
       selfTest: [
         {
           question: "Welche der folgenden Basen kommt ausschließlich in RNA vor?",
-          options: ["Adenin", "Guanin", "Cytosin", "Thymin", "Uracil"],
-          correctIndex: 4,
+          options: ["Uracil", "Guanin", "Cytosin", "Thymin", "Adenin"],
+          correctIndex: 0,
           explanation:
             "Uracil ist eine Pyrimidinbase, die ausschließlich in RNA vorkommt. Sie entspricht funktionell dem Thymin der DNA (paart mit Adenin), besitzt aber keine Methylgruppe am C5. Thymin kommt ausschließlich in DNA vor. Adenin, Guanin und Cytosin kommen in beiden Nukleinsäuren (DNA und RNA) vor. Die Pentose unterscheidet ebenfalls: RNA enthält Ribose (OH an C2'), DNA enthält Desoxyribose (H an C2').",
           hints: [
@@ -1986,12 +1996,12 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
             "Ein DNA-Doppelstrang hat einen GC-Gehalt von 60%. Wie viele Wasserstoffbrücken gibt es pro 100 Basenpaare?",
           options: [
             "200 Wasserstoffbrücken",
-            "220 Wasserstoffbrücken",
-            "240 Wasserstoffbrücken",
             "260 Wasserstoffbrücken",
+            "240 Wasserstoffbrücken",
+            "220 Wasserstoffbrücken",
             "300 Wasserstoffbrücken",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Bei 100 Basenpaaren und 60 % GC-Gehalt: 60 G≡C-Paare × 3 H-Brücken = 180, plus 40 A=T-Paare × 2 H-Brücken = 80. Gesamt: 180 + 80 = 260 Wasserstoffbrücken.",
           hints: [
@@ -2026,11 +2036,11 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
           options: [
             "mRNA (messenger RNA)",
             "rRNA (ribosomale RNA)",
-            "tRNA (transfer RNA)",
             "miRNA (micro RNA)",
+            "tRNA (transfer RNA)",
             "siRNA (small interfering RNA)",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Die tRNA (Transfer-RNA) ist das Adaptormolekül zwischen der Nukleinsäure-Welt (mRNA-Codon) und der Protein-Welt (Aminosäure). Sie hat eine charakteristische Kleeblattstruktur (sekundär) bzw. L-förmige 3D-Struktur. Am 3'-Ende (CCA-Trinukleotid) ist die spezifische Aminosäure kovalent gebunden (durch Aminoacyl-tRNA-Synthetasen, 'Aktivierung'). Das Anticodon-Loop enthält ein Trinukleotid (Anticodon), das komplementär und antiparallel zum spezifischen mRNA-Codon ist. mRNA enthält die Codons, rRNA ist Ribosombestandteil, miRNA/siRNA regulieren die Genexpression posttranskriptionell.",
           hints: [
@@ -2045,12 +2055,12 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
             "Warum ist Aciclovir selektiv für virusinfizierte Zellen und kaum toxisch für gesunde Wirtszellen?",
           options: [
             "Aciclovir kann die Plasmamembran gesunder Zellen nicht passieren",
-            "Die erste Phosphorylierung wird fast ausschließlich durch die viruseigene Thymidinkinase durchgeführt, die eine viel höhere Affinität für Aciclovir hat als die zelluläre Kinase",
+            "Die zelluläre DNA-Polymerase erkennt Aciclovir nicht als Substrat, die virale DNA-Polymerase hat eine absolut niedrigere Genauigkeit",
             "Gesunde Zellen können Aciclovir enzymatisch abbauen, infizierte Zellen nicht",
             "Aciclovir wird nur von Viruspartikeln, nicht von Zellen aufgenommen",
-            "Die zelluläre DNA-Polymerase erkennt Aciclovir nicht als Substrat, die virale DNA-Polymerase hat eine absolut niedrigere Genauigkeit",
+            "Die erste Phosphorylierung wird fast ausschließlich durch die viruseigene Thymidinkinase durchgeführt, die eine viel höhere Affinität für Aciclovir hat als die zelluläre Kinase",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Die Selektivität von Aciclovir beruht auf einem zweistufigen Mechanismus: Erstens wird Aciclovir hauptsächlich durch die viruseigene Thymidinkinase (TK) zu Aciclovir-Monophosphat phosphoryliert. Die HSV-TK hat eine deutlich höhere Affinität (niedrigerer Km) für Aciclovir als die zelluläre Thymidinkinase. In nicht-infizierten Zellen findet diese erste Aktivierung kaum statt. Zweitens: Aciclovir-Triphosphat hemmt präferentiell die virale DNA-Polymerase (Ki viral ≪ Ki zellulär). Dieser zweifache Selektivitätsmechanismus erklärt die geringe Toxizität von Aciclovir für den Wirt bei gleichzeitig effektiver antiviraler Wirkung.",
           hints: [
@@ -2063,8 +2073,8 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
         {
           question:
             "Ein dsDNA-Abschnitt hat auf einem Strang die Sequenz 5'-ATGCGT-3'. Wie lautet der komplementäre Gegenstrang?",
-          options: ["5'-ATGCGT-3'", "5'-TACGCA-3'", "3'-ATGCGT-5'", "5'-ACGCAT-3'", "3'-UACGCA-5'"],
-          correctIndex: 3,
+          options: ["5'-ACGCAT-3'", "5'-TACGCA-3'", "3'-ATGCGT-5'", "5'-ATGCGT-3'", "3'-UACGCA-5'"],
+          correctIndex: 0,
           explanation:
             "Der komplementäre Strang folgt den Chargaff-Regeln (A paart mit T, G paart mit C) und verläuft antiparallel. Ausgangs-Strang: 5'-A-T-G-C-G-T-3'. Komplementär und antiparallel: 3'-T-A-C-G-C-A-5' = 5'-A-C-G-C-A-T-3'. Schritt für Schritt: A→T, T→A, G→C, C→G, G→C, T→A ergibt den Komplementärstrang (3'→5'): TACGCA. Umgekehrt in 5'→3'-Richtung: ACGCAT. Antwort D ist korrekt. RNA würde Uracil statt Thymin enthalten (Antwort E), ist hier aber nicht gemeint (es handelt sich um dsDNA).",
           hints: [
@@ -2079,12 +2089,12 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
             "Was ist der Unterschied zwischen DNA-Methylierung als epigenetischer Modifikation und einer Punktmutation?",
           options: [
             "Beide verändern die Basensequenz der DNA dauerhaft",
-            "DNA-Methylierung verändert die Basensequenz, Punktmutationen nicht",
             "DNA-Methylierung verändert die Genexpression ohne Änderung der Basensequenz; Punktmutationen verändern die Basensequenz selbst",
+            "DNA-Methylierung verändert die Basensequenz, Punktmutationen nicht",
             "Punktmutationen sind vererbbar, DNA-Methylierung nicht",
             "DNA-Methylierung betrifft nur Adenin; Punktmutationen betreffen Cytosin",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "DNA-Methylierung ist eine epigenetische Modifikation: Eine Methylgruppe (–CH₃) wird durch DNA-Methyltransferasen kovalent an das C5-Atom von Cytosin in CpG-Dinukleotiden angehängt. Die Basensequenz (A, T, G, C) bleibt dabei identisch — nur die chemische Modifikation am Cytosin ändert sich. Dennoch kann Promotor-Methylierung die Transkription eines Gens stillegen (Silencing). Bei Punktmutationen wird hingegen eine Base durch eine andere ausgetauscht, deletiert oder insertiert — die Sequenz selbst ändert sich. Epigenetische Markierungen (Methylierungen, Histonmodifikationen) können vererbt werden (transgenerationelle Epigenetik), sind aber prinzipiell reversibel.",
           hints: [

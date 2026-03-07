@@ -87,7 +87,7 @@ Hier ist T unabhängig von der Amplitude (gleiche Isochronie), aber abhängig vo
 
 **Formelklartext:** T = 2*Pi*Wurzel(m/k) bedeutet: Schwerere Masse (m steigt) schwingt langsamer (T steigt); steifere Feder (k steigt) schwingt schneller (T sinkt). Die Amplitude beeinflusst T nicht (Isochronie). Einheitlich: [m] = kg, [k] = N/m --> Wurzel(kg/(N/m)) = Wurzel(kg*m/N) = Wurzel(s^2) = s.
 
-Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Haengt man eine Masse m an die Feder und misst die statische Dehnung Delta-x, gilt k = mg/Delta-x.
+Die **Federkonstante k** (auch Federhärte, Einheit N/m) beschreibt den Widerstand der Feder gegen Dehnung. Sie lässt sich experimentell bestimmen: Hängt man eine Masse m an die Feder und misst die statische Dehnung Delta-x, gilt k = mg/Delta-x.
 
 ## Energie im harmonischen Oszillator
 
@@ -125,7 +125,7 @@ In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel a
 ## Gedämpfte Schwingung -- Vertiefung
 
 
-**Drei Dämpfungsfaelle im Vergleich:**
+**Drei Dämpfungsfälle im Vergleich:**
 
 | Fall | Bedingung | Verhalten | Beispiel |
 |------|-----------|-----------|----------|
@@ -192,13 +192,13 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
 
 ## Klinische Vertiefung
 
-**Herzfrequenzvariabilität (HRV):** Der Herzrhythmus ist annähernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor für kardiovaskulaere Ereignisse.
+**Herzfrequenzvariabilität (HRV):** Der Herzrhythmus ist annähernd periodisch. Die Analyse der Frequenzkomponenten (Fourier-Analyse) liefert diagnostische Informationen: hohe HRV (viele Frequenzanteile) zeigt gesundes autonomes Nervensystem, niedrige HRV ist ein Risikofaktor für kardiovaskuläre Ereignisse.
 
 **Ultraschall-Schallkopf:** Der piezoelektrische Kristall im Schallkopf schwingt mit Frequenzen von 1-20 MHz. Die Resonanzfrequenz des Kristalls bestimmt die Sendefrequenz und damit die Eindringtiefe und Auflösung des Ultraschalls.
 
-**Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stöße auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stöße (Dämpfung) und verhindert so Resonanzschaeden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschraenkt.
+**Gelenkknorpel als Dämpfer:** Bei jedem Schritt wirken Stöße auf die Gelenke. Der viskoelastische Knorpel absorbiert diese Stöße (Dämpfung) und verhindert so Resonanzschäden am Knochen. Bei Arthrose ist diese Dämpfungsfunktion eingeschränkt.
 
-**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt -- der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusaetzlich zu belasten.`,
+**Aperiodischer Grenzfall in der Medizin:** Die Federung eines Krankenwagens ist so abgestimmt, dass sie im aperiodischen Grenzfall schwingt -- der schnellste Ausgleich ohne Nachschwingen, um den Patienten nicht zusätzlich zu belasten.`,
 
       lernziele: [
         "Die Schwingungsgleichung x(t) = A·cos(ωt+φ) aufschreiben und Amplitude, Kreisfrequenz und Phase benennen.",
@@ -528,7 +528,7 @@ Trifft eine Schallwelle auf eine Grenzfläche zwischen zwei Medien mit unterschi
 - Luft/Gewebe-Grenzfläche: R ungefähr 0,998 --> fast vollständige Reflexion --> deshalb Ultraschall-Gel nötig
 - Weichteil/Knochen-Grenzfläche: R ungefähr 0,4 --> starke Reflexion
 
-> **Merke:** Grosse Impedanzdifferenz --> starke Reflexion --> schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzfläche und ermöglicht optimale Schallkopplung.
+> **Merke:** GroßeImpedanzdifferenz --> starke Reflexion --> schlechte Bildgebung. Gel beseitigt die Luft-Gewebe-Grenzfläche und ermöglicht optimale Schallkopplung.
 
 ## Rechenbeispiele
 
@@ -999,7 +999,7 @@ Die Brechkraft des Auges (~60 Dioptrien) entsteht hauptsächlich an der Hornhaut
           ],
           correctIndex: 1,
           explanation:
-            "Beugung (Diffraktion) ist ein universelles Wellenphänomen – es tritt bei Schall, Licht und allen anderen Wellen auf. Der Effekt ist am ausgeprägtesten, wenn die Größe des Hindernisses oder der Öffnung vergleichbar mit der Wellenlänge ist. Licht (λ ≈ 500 nm) beugt an Mikrostrukturen deutlich; Schall (λ ≈ 34 cm bei 1000 Hz) beugt um grosse Hindernisse wie Häuserecken. Die Frequenz bleibt bei Beugung unverändert.",
+            "Beugung (Diffraktion) ist ein universelles Wellenphänomen – es tritt bei Schall, Licht und allen anderen Wellen auf. Der Effekt ist am ausgeprägtesten, wenn die Größe des Hindernisses oder der Öffnung vergleichbar mit der Wellenlänge ist. Licht (λ ≈ 500 nm) beugt an Mikrostrukturen deutlich; Schall (λ ≈ 34 cm bei 1000 Hz) beugt um großeHindernisse wie Häuserecken. Die Frequenz bleibt bei Beugung unverändert.",
           hints: [
             "Beugung erlaubt Wellen, in Schattenbereiche vorzudringen – welche Bedingung gilt?",
             "Vergleich: Schall biegt um Häuserecken – Licht nicht (weil λ viel kleiner ist).",
@@ -1069,8 +1069,8 @@ Unser Ohr kann unglaublich leise und extrem laute Geräusche hören. Um diesen r
 
 Die wichtigsten Werte:
 - 0 dB: Hörschwelle (gerade noch hörbar)
-- 60 dB: normales Gespraech
-- 85 dB: ab hier drohen Gehörschaeden bei Dauerbelastung
+- 60 dB: normales Gespräch
+- 85 dB: ab hier drohen Gehörschäden bei Dauerbelastung
 - 120 dB: Schmerzgrenze
 
 **Die drei goldenen Regeln:**
@@ -1086,15 +1086,15 @@ Die wichtigsten Werte:
 
 Schall trifft auf dein Trommelfell und wird über drei winzige Knöchelchen (Hammer, Amboss, Steigbuegel) ins Innenohr weitergeleitet. Die Knöchelchen verstärken den Druck dabei um das 22-Fache -- das ist nötig, weil im Innenohr Flüssigkeit statt Luft ist.
 
-Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flötenröhre. An verschiedenen Stellen reagiert sie auf verschiedene Toene:
-- **Am Eingang** (Basis): hohe Toene (z. B. Pfeiftoene)
-- **Am Ende** (Spitze/Apex): tiefe Toene (z. B. Brummen)
+Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flötenröhre. An verschiedenen Stellen reagiert sie auf verschiedene Töne:
+- **Am Eingang** (Basis): hohe Töne (z. B. Pfeiftöne)
+- **Am Ende** (Spitze/Apex): tiefe Töne (z. B. Brummen)
 
 Das nennt man **Tonotopie** -- jede Tonhöhe hat ihren eigenen Platz in der Schnecke.
 
 Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie unwiderruflich zerstören!
 
-> **Merke:** Hohe Toene am Eingang der Schnecke, tiefe Toene am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
+> **Merke:** Hohe Töne am Eingang der Schnecke, tiefe Töne am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
 
 ---
 
@@ -1104,7 +1104,7 @@ Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die z
 
 **Schallempfindungs-Schwerhörigkeit:** Das Problem sitzt im Innenohr -- die Haarzellen sind beschädigt (z. B. durch Lärm oder Alter). Hier hilft auch die Knochenleitung nicht, weil das Innenohr selbst betroffen ist. Typisch: Ein Hörverlust speziell bei 4000 Hz (sogenannte C5-Senke), verursacht durch zu laute Musik oder Maschinenlärm.
 
-> **Merke:** Mittelohr-Problem = Schallleitungs-Schwerhörigkeit (Knochenleitung funktioniert noch). Innenohr-Problem = Schallempfindungs-Schwerhörigkeit (beides gestoert).
+> **Merke:** Mittelohr-Problem = Schallleitungs-Schwerhörigkeit (Knochenleitung funktioniert noch). Innenohr-Problem = Schallempfindungs-Schwerhörigkeit (beides gestört).
 
 ---
 
@@ -1112,7 +1112,7 @@ Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die z
 
 Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schädigen -- und zwar für immer.
 
-> **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschaeden sind nicht heilbar!`,
+> **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschäden sind nicht heilbar!`,
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",
@@ -1367,7 +1367,7 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche re
 - **Leber zu Blut:** R ungefähr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
 - **Gel zu Haut:** R ungefähr 0: nahezu vollständige Transmission: deshalb Ultraschallgel essenziell
 
-> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). Grosse Impedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
+> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). GroßeImpedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
 
 ---
 
@@ -1379,18 +1379,18 @@ Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche re
 
 - f0 = Sendefrequenz der Quelle
 - c = Schallgeschwindigkeit im Medium
-- v_E = Geschwindigkeit des Empfaengers
+- v_E = Geschwindigkeit des Empfängers
 - v_S = Geschwindigkeit der Quelle/Senders
 
 **Vorzeichenkonvention:**
-- Zaehler: + wenn Empfaenger sich **zur** Quelle bewegt, - wenn **weg**
-- Nenner: - wenn Quelle sich **zum** Empfaenger bewegt, + wenn **weg**
+- Zähler: + wenn Empfänger sich **zur** Quelle bewegt, - wenn **weg**
+- Nenner: - wenn Quelle sich **zum** Empfänger bewegt, + wenn **weg**
 
 > **Merke:** Annäherung: f' > f0 (höherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt für **alle** Wellen: Schall, Licht, Ultraschall.
 
 ### Doppler-Sonographie — quantitativ
 
-In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfaenger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
+In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfänger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
 
 **Delta_f = 2 mal f0 mal v mal cos(theta) / c**
 
@@ -1399,7 +1399,7 @@ In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfae
 - **c** = Schallgeschwindigkeit in Gewebe (ungefähr 1540 m/s)
 - **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
 
-**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schraeg zum Gefäß gehalten werden (optimal: theta = 30-60 Grad).
+**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schräg zum Gefäß gehalten werden (optimal: theta = 30-60 Grad).
 
 ### Umstellung nach v (Blutflussgeschwindigkeit):
 
@@ -1414,7 +1414,7 @@ Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher k
 ### Farbdoppler-Kodierung:
 - **Rot:** Blut fließt auf den Schallkopf zu (Delta_f > 0)
 - **Blau:** Blut fließt vom Schallkopf weg (Delta_f < 0)
-- **Mosaik/Turbulenz:** Ungeordnete Stroemung (z. B. an Stenosen, Klappeninsuffizienzen)
+- **Mosaik/Turbulenz:** Ungeordnete Strömung (z. B. an Stenosen, Klappeninsuffizienzen)
 
 Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
 
@@ -1439,7 +1439,7 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 
 **Zusammenhang:** Höhere Frequenz: kürzere Wellenlänge (lambda = c/f): bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2): geringere Eindringtiefe.
 
-> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, grosse Tiefe. Kompromiss je nach Fragestellung.
+> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, großeTiefe. Kompromiss je nach Fragestellung.
 
 ---
 
@@ -1468,7 +1468,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
 
 ## Klinische Vertiefung
 
-**Doppler bei Gefäßstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitaetsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+**Doppler bei Gefäßstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitätsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
 
 **Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
 
@@ -1492,9 +1492,8 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
         },
         {
           heading: "Schallimpedanz und Ultraschall-Bildgebung",
-          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Grosser Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
-          merksatz:
-            "Z = ρ·c; grosser Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
+          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Großer Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
+          merksatz: "Z = ρ·c; großer Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
         },
         {
           heading: "Doppler-Sonographie: Blutfluss messen",
@@ -1507,7 +1506,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
         "L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 20 µPa, I₀ = 10⁻¹² W/m².",
         "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB (logarithmische Addition).",
         "Abstandsgesetz: Verdopplung des Abstands → −6 dB (I ∝ 1/r²).",
-        "Z = ρ·c [Rayl]; grosser Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
+        "Z = ρ·c [Rayl]; großer Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
         "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — Reflexionskoeffizient an Grenzflächen.",
         "Doppler allgemein: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → f↑, Entfernung → f↓.",
         "Doppler-Sonographie: Δf = 2f₀v·cosθ/c; Faktor 2 wegen Hin- und Rückweg.",
@@ -1634,7 +1633,7 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
             "R = [(Z₂−Z₁)/(Z₂+Z₁)]² = [(6,30−1,63)/(6,30+1,63)]² = [4,67/7,93]² = [0,589]² ≈ 0,347. Etwa 35 % des Ultraschalls werden an der Gewebe-Knochen-Grenze reflektiert — deshalb erzeugt Knochen ein starkes Echo und dahinterliegende Strukturen sind schwer darstellbar (akustischer Schatten). Zum Vergleich: an der Luft-Gewebe-Grenze ist R ≈ 0,999.",
           hints: [
             "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — erst die Differenz, dann den Quotienten, dann quadrieren.",
-            "Grosser Z-Unterschied → grosses R.",
+            "Großer Z-Unterschied → großes R.",
           ],
           difficulty: 3,
           tags: ["reflexionskoeffizient", "impedanz", "knochen"],

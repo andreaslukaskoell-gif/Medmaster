@@ -25,7 +25,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
       ],
       content: `## Grundprinzip: Eigenschaften aller Epithelien
 
-**Um zu verstehen,** warum Epithelien so unterschiedlich aussehen können, schauen wir zuerst, was **alle** Epithelien gemeinsam haben. Alle Epithelien teilen drei Grundeigenschaften:
+Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihrer Vielfalt teilen **alle** Epithelien drei Grundeigenschaften:
 
 1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium (Zwischengewebe)). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
 
@@ -40,6 +40,8 @@ export const bioKapAnatomieGewebe: Kapitel = {
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
+
+{{IMAGE}}
 
 ---
 
@@ -213,7 +215,7 @@ Sekretionsmechanismen exokriner Drüsen:
       ],
       content: `## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
-**Um zu verstehen,** warum Bindegewebe so unterschiedlich aussehen kann (Sehne vs. Knorpel vs. Knochen), schauen wir zuerst, was **alle** Bindegewebe gemeinsam haben: Viel **mehr Matrix als Zellen**. Die **EZM** (der Raum zwischen den Zellen, gefüllt mit Fasern und Proteoglykanen) besteht aus:
+Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus demselben Prinzip: Viel **mehr Matrix als Zellen**. Die **EZM** (der Raum zwischen den Zellen, gefüllt mit Fasern und Proteoglykanen) besteht aus:
 
 1. **Kollagenfasern** (strukturelle Festigkeit — Zugfestigkeit und Druckresistenz)
 2. **Elastinfasern** (Elastizität, Rückkehr in Ausgangsform)
@@ -452,6 +454,8 @@ Sekretionsmechanismen exokriner Drüsen:
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
 
+{{IMAGE}}
+
 ---
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
@@ -662,6 +666,8 @@ Am präsynaptischen Endknöpfchen werden Neurotransmitter (z. B. Glutamat, GABA,
 
 > **Merke:** Dendriten = Input. Axon = Output. Axonhügel = Entscheidungsstelle (Schwelle ≈ −55 mV). Soma = Proteinsynthese.
 
+{{IMAGE}}
+
 ---
 
 ## Myelinisierung und saltatorische Erregungsleitung
@@ -867,6 +873,8 @@ Stell dir vor, du wirst von einem Hund gejagt (Sympathikus an): Dein Herz rast, 
 
 > **Merke:** Sympathikus = Stress, Noradrenalin. Parasympathikus = Ruhe, Acetylcholin. Herz: Sympathikus beschleunigt (beta-1), Parasympathikus bremst (M2, Vagus).
 
+{{IMAGE}}
+
 ---
 
 ## Die Synapse — Signalübergabe zwischen Neuronen
@@ -1035,13 +1043,15 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
 
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
-**Um die Sinnesorgane zu vergleichen,** betrachten wir zuerst das gemeinsame Prinzip: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
+Ob Licht, Schall oder Geruch — jeder Reiz muss in ein elektrisches Signal übersetzt werden: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
 
 1. **Photorezeptoren** (Auge): Lichtquanten → Rhodopsin-Aktivierung → G-Protein-Kaskade → cGMP ↓ → Ionenkanäle schließen → **Hyperpolarisation** (atypisch — weil Photorezeptoren im Dunkeln depolarisiert sind!)
 2. **Mechanorezeptoren** (Ohr, Haut): Mechanische Verformung → Mechanosensitive Ionenkanäle öffnen direkt → **Depolarisation**
 3. **Chemorezeptoren** (Nase, Zunge): Moleküle binden G-Protein-gekoppelte Rezeptoren → Second Messenger → Rezeptorpotential
 
 > **Merke:** Transduktion = Reiz → elektrisches Signal. Auge: Licht → Hyperpolarisation (paradox — weil Photorezeptoren im Dunkeln depolarisiert sind, cGMP-Kanäle offen). Ohr/Haut: Mechanische Kraft → Kanalöffnung → Depolarisation.
+
+{{IMAGE}}
 
 ---
 
@@ -1274,6 +1284,8 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
 
 > **Merke:** **Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).
 
+{{IMAGE}}
+
 ---
 
 ## Schilddrüse und Nebenniere
@@ -1437,6 +1449,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
 
+{{IMAGE}}
+
 ---
 
 ## Erregungsleitung
@@ -1592,6 +1606,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 **Um die Bestandteile des Blutes einzuordnen,** beginnen wir mit den **Erythrozyten** — sie transportieren O₂. Erythrozyten sind bikonkave Scheiben **ohne Zellkern** (reife menschliche Erythrozyten haben keinen Zellkern!) mit Hämoglobin (Tetramer 2α2β, Fe²⁺). **Mittlerer Durchmesser ~7,5 µm** (= 7,5×10⁻⁶ m; nicht 7,5 nm, nicht 7,5 mm). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).
 
 > **Merke:** **Hämatokrit:** Männer ~45%, Frauen ~42% – Erythrozyten-Volumen im Blut (Anämie ↓, Polyglobulie ↑). (Hämatokrit = Volumenanteil Erythrozyten, Männer höher wegen Testosteron)
+
+{{IMAGE}}
 
 ---
 
@@ -1752,6 +1768,8 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
 
 > **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
 
+{{IMAGE}}
+
 ---
 
 ## Erworbene Immunität und T-Zellen
@@ -1903,6 +1921,8 @@ Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf 
 
 > **Merke:** Lymphknoten-Architektur: **Cortex** = B-Zellen (Follikel, Antikörper), **Paracortex** = T-Zellen + dendritische Zellen (zelluläre Immunität), **Mark** = Plasmazellen (Sekretion). Afferenz: mehrere Gefäße. Efferenz: ein Gefäß.
 
+{{IMAGE}}
+
 ---
 
 ## Milz und Thymus — Funktion und klinische Bedeutung
@@ -2050,6 +2070,8 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 > **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
 
+{{IMAGE}}
+
 ---
 
 ## Atemmechanik, Gasaustausch und Atemregulation
@@ -2193,7 +2215,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 ## Magen — Sekretion und Regulation
 
-**Um die Verdauung einzuordnen,** beginnen wir mit dem **Magen** — HCl, Pepsinogen und Regulation sind prüfungsrelevant. Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierten Aufgaben:
+Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 — stark genug, um Bakterien abzutöten und Proteine zu denaturieren. Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierten Aufgaben:
 
 | Zelltyp | Sekret | Stimulus |
 |---|---|---|
@@ -2208,6 +2230,8 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 **Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
 
 > **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
+
+{{IMAGE}}
 
 ---
 
@@ -2358,7 +2382,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 
 ## Nephron-Segmente und Rückresorption
 
-**Um die Niere zu verstehen,** betrachten wir das **Nephron** — Filtration und segmentale Rückresorption. Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % werden rückresorbiert — nur ~1–2 L Endurin. Jedes Segment hat spezifische Transporter:
+180 Liter Blutplasma filtert die Niere pro Tag — und gewinnt über 99 % davon zurück. Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % werden rückresorbiert — nur ~1–2 L Endurin. Jedes Segment hat spezifische Transporter:
 
 | Segment | Resorption | Wichtige Transporter |
 |---|---|---|
@@ -2376,6 +2400,8 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
 **Ableitende Harnwege:** Der fertige Urin verlässt die Niere über das **Nierenbecken (Pelvis renalis) → Harnleiter (Ureter) → Harnblase (Vesica urinaria) → Harnröhre (Urethra)**. Der Ureter besitzt drei physiologische Engstellen (häufigste Stellen für Harnleitersteine). Die Harnblase ist mit **Urothel** (Übergangsepithel, Schirmzellen) ausgekleidet und fasst ~300–500 mL. Die Miktion wird durch den M. detrusor vesicae (glatte Muskulatur, Parasympathikus) gesteuert.
 
 > **Merke:** Nephron-Resorption: proximal **65 %** (alles, SGLT2), Henle **20 %** (NaCl), distal **10 %** (Aldosteron-ENaC), Sammelrohr **4 %** (ADH-AQP2). Gesamt: **99 %** zurück → ~1–2 L Urin. **Ableitende Harnwege:** Nierenbecken → Ureter → Harnblase → Urethra.
+
+{{IMAGE}}
 
 ---
 
@@ -2513,7 +2539,7 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
       ],
       content: `## Knochen — Umbau durch Osteoblasten und Osteoklasten
 
-**Um den Bewegungsapparat einzuordnen,** beginnen wir mit **Knochenumbau** — Osteoblasten vs. Osteoklasten und RANKL/OPG. Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährlich umgebaut. Drei Zelltypen steuern diesen Prozess:
+Knochen leben: Jedes Jahr werden rund 10 % der gesamten Knochenmasse abgebaut und neu aufgebaut. Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährlich umgebaut. Drei Zelltypen steuern diesen Prozess:
 
 | Zelltyp | Herkunft | Funktion | Marker |
 |---|---|---|---|
@@ -2697,7 +2723,7 @@ Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betri
       ],
       content: `## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
-**Um die Reproduktion zu verstehen,** vergleichen wir **Spermatogenese** und **Oogenese** — beide nutzen Meiose, das Ergebnis unterscheidet sich. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
+Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zyklus nur eine einzige Eizelle — dieser Kontrast prägt die gesamte Fortpflanzungsbiologie. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 
 | Merkmal | Spermatogenese | Oogenese |
 |---|---|---|

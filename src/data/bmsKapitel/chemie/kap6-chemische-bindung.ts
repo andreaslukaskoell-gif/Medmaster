@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { Kapitel } from "../types";
 
 export const chemKap6: Kapitel = {
@@ -45,6 +44,8 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 - **CaO:** Ca gibt 2 Elektronen ab -> Ca2+; O nimmt 2 Elektronen auf -> O2- -- beide erreichen die Ar- bzw. Ne-Konfiguration
 - **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 °C
 
+
+{{IMAGE}}
 
 ## Born-Haber-Kreisprozess und Gitterenergie
 
@@ -248,12 +249,12 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
             "Welche Energiegröße ist der entscheidende Antrieb für die Bildung von Ionenkristallen?",
           options: [
             "Ionisierungsenergie",
-            "Elektronenaffinität",
             "Gitterenergie",
+            "Elektronenaffinität",
             "Sublimationsenergie",
             "Bindungsenergie",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Die Gitterenergie ist die bei der Bildung des Ionenkristalls aus gasförmigen Ionen freigesetzte Energie und stellt den größten exothermen Beitrag im Born-Haber-Kreisprozess dar. Obwohl Ionisierungsenergie und Sublimation endotherm sind, überwiegt die stark exotherme Gitterenergie, sodass die Gesamtreaktion exotherm verläuft. Für NaCl beträgt sie −786 kJ/mol, für MgO sogar −3795 kJ/mol.",
           hints: [
@@ -267,12 +268,12 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
           question: "Warum hat MgO einen deutlich höheren Schmelzpunkt als NaCl?",
           options: [
             "MgO hat eine größere Molmasse als NaCl.",
-            "Mg²⁺ und O²⁻ sind höher geladen und haben kleinere Ionenradien als Na⁺ und Cl⁻.",
             "MgO bildet ein anderes Kristallsystem als NaCl.",
+            "Mg²⁺ und O²⁻ sind höher geladen und haben kleinere Ionenradien als Na⁺ und Cl⁻.",
             "MgO enthält kovalente Bindungsanteile, die NaCl fehlen.",
             "Sauerstoff hat eine höhere Elektronegativität als Chlor.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Nach dem Coulombschen Gesetz ist die Gitterenergie proportional zu q₁·q₂/r. Mg²⁺ und O²⁻ tragen die doppelte Ladung verglichen mit Na⁺ und Cl⁻ (Faktor 4 im Zähler) und haben zudem kleinere Ionenradien (kleineres r). Beides zusammen führt zu einer rund fünffach höheren Gitterenergie von MgO (~3795 kJ/mol vs. ~786 kJ/mol für NaCl) und damit zu einem Schmelzpunkt von 2852 °C statt 801 °C.",
           hints: [
@@ -287,11 +288,11 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
           options: [
             "Weil sie keine geladenen Teilchen besitzen.",
             "Weil die Elektronen im Gitter delokalisiert sind.",
-            "Weil die Ionen im Gitter fixiert sind und sich nicht frei bewegen können.",
             "Weil Ionenkristalle keine metallischen Bindungen aufweisen.",
+            "Weil die Ionen im Gitter fixiert sind und sich nicht frei bewegen können.",
             "Weil der Schmelzpunkt zu hoch für Ionenmobilität ist.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Elektrischer Strom erfordert bewegliche Ladungsträger. Im festen Ionenkristall sind die Ionen in festen Gitterpositionen gebunden und können sich nicht frei bewegen. Erst beim Schmelzen oder Lösen in Wasser werden die Ionen frei beweglich und können als Ladungsträger fungieren. Dann leiten Ionenverbindungen Strom — man nennt sie dann Elektrolyte. Im festen Zustand sind sie dagegen Nichtleiter.",
           hints: [
@@ -304,8 +305,8 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
         {
           question:
             "Welches Salz ist aufgrund seiner sehr hohen Gitterenergie praktisch wasserunlöslich?",
-          options: ["NaCl", "KCl", "NaF", "MgO", "CaCl₂"],
-          correctIndex: 3,
+          options: ["NaCl", "KCl", "NaF", "CaCl₂", "MgO"],
+          correctIndex: 4,
           explanation:
             "MgO hat eine Gitterenergie von etwa −3795 kJ/mol, da Mg²⁺ und O²⁻ doppelt geladen und verhältnismäßig klein sind. Die Hydratationsenthalpie der Ionen reicht nicht aus, diese enorme Gitterenergie zu überwinden, weshalb MgO in Wasser kaum löslich ist. NaCl, KCl und CaCl₂ dagegen haben deutlich niedrigere Gitterenergien, die von den Hydratationsenthalpien kompensiert werden — sie sind gut wasserlöslich.",
           hints: [
@@ -317,8 +318,8 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
         },
         {
           question: "Im NaCl-Kristallgitter ist jedes Na⁺-Ion von wie vielen Cl⁻-Ionen umgeben?",
-          options: ["4", "6", "8", "12", "2"],
-          correctIndex: 1,
+          options: ["6", "4", "8", "12", "2"],
+          correctIndex: 0,
           explanation:
             "Im NaCl-Gitter (kubisch-flächenzentriert) beträgt die Koordinationszahl 6: Jedes Na⁺-Ion ist von 6 Cl⁻-Ionen oktaedrisch umgeben und umgekehrt. Dies ergibt sich aus dem Radienverhältnis r⁺/r⁻ = 102/181 ≈ 0,56, das im Bereich 0,41–0,73 liegt (oktaedrische Koordination). Im CsCl-Gitter hingegen beträgt die Koordinationszahl 8, da das Radienverhältnis über 0,73 liegt.",
           hints: [
@@ -333,12 +334,12 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
             "Welcher Schritt im Born-Haber-Kreisprozess für NaCl ist stark exotherm und macht die Gesamtreaktion günstig?",
           options: [
             "Sublimation von Natrium",
-            "Ionisierung von Natrium",
-            "Spaltung von Cl₂",
             "Gitterenergieterm",
+            "Spaltung von Cl₂",
+            "Ionisierung von Natrium",
             "Elektronenaffinität von Chlor",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Im Born-Haber-Kreisprozess sind Sublimation, Ionisierung und Bindungsspaltung endotherm, während die Elektronenaffinität von Chlor moderat exotherm ist. Der mit Abstand größte exotherme Beitrag kommt von der Gitterenergie (−786 kJ/mol für NaCl), die beim Zusammenfügen der gasförmigen Ionen zum Kristallgitter freigesetzt wird. Ohne diesen Beitrag wäre die Bildung von NaCl aus den Elementen thermodynamisch ungünstig.",
           hints: [
@@ -353,12 +354,12 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
             "Welche klinische Bedeutung hat die Ionenbindung von Calciumfluorid (CaF₂) für den Zahnschmelz?",
           options: [
             "CaF₂ erhöht die Löslichkeit des Zahnschmelzes in Säure.",
-            "Fluorid-Ionen ersetzen Hydroxyl-Gruppen im Hydroxylapatit und bilden stabileres Fluorapatit.",
             "CaF₂ katalysiert die Remineralisation durch Enzyme.",
+            "Fluorid-Ionen ersetzen Hydroxyl-Gruppen im Hydroxylapatit und bilden stabileres Fluorapatit.",
             "Fluorid blockiert Calciumkanäle in Schmelzoberflächen.",
             "CaF₂ neutralisiert Säure im Mundraum direkt.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Zahnschmelz besteht hauptsächlich aus Hydroxylapatit [Ca₁₀(PO₄)₆(OH)₂]. Fluorid-Ionen (aus CaF₂ oder Natriumfluorid) können Hydroxyl-Gruppen (OH⁻) im Kristallgitter ersetzen und bilden Fluorapatit [Ca₁₀(PO₄)₆F₂]. Fluorapatit hat eine höhere Gitterenergie als Hydroxylapatit und ist deutlich säurestabiler (geringere Löslichkeit in schwachen Säuren). Deshalb schützt Fluorid den Zahnschmelz vor Karies — ein direkter Nutzen ionischer Bindungsprinzipien in der Zahnmedizin.",
           hints: [
@@ -373,11 +374,11 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
           options: [
             "Ionenkristalle sind plastisch verformbar, da Ionen gleiten können.",
             "Sprödigkeit entsteht, weil Elektronen im Gitter delokalisiert sind.",
-            "Bei Krafteinwirkung kommen gleichnamig geladene Ionen nebeneinander zu liegen, was zur Abstoßung und zum Bruch führt.",
             "Ionenkristalle sind weich, weil die Coulombkräfte schwach sind.",
+            "Bei Krafteinwirkung kommen gleichnamig geladene Ionen nebeneinander zu liegen, was zur Abstoßung und zum Bruch führt.",
             "Sprödigkeit ist eine Folge der niedrigen Gitterenergie.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Wenn auf einen Ionenkristall eine Scherkraft wirkt, werden Ionenschichten gegeneinander verschoben. Dabei kommen plötzlich Ionen gleicher Ladung nebeneinander zu liegen. Die elektrostatische Abstoßung zwischen gleichnamig geladenen Ionen überwiegt die Anziehung, und der Kristall bricht entlang der Gleitebene. Dieses Verhalten steht im Gegensatz zu Metallen, wo delokalisierte Elektronen das Gleiten von Schichten erlauben, ohne Abstoßung zu erzeugen (Duktilität).",
           hints: [
@@ -414,6 +415,8 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
 Zwei Wasserstoffatome teilen sich ein Elektronenpaar — und bilden damit die einfachste kovalente Bindung überhaupt. Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
 Lewis-Schreibweise (Darstellung der Valenzelektronen als Punkte/Striche): Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
+
+{{IMAGE}}
 
 **Ausnahmen von der Oktettregel:**
 - **H, He:** Duett-Regel (nur 2 Elektronen nötig, 1s-Orbital)
@@ -761,8 +764,8 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
       selfTest: [
         {
           question: "Welche Geometrie nimmt das Ammoniak-Molekül (NH₃) gemäß VSEPR an?",
-          options: ["Linear", "Trigonal planar", "Tetraedrisch", "Trigonal pyramidal", "Gewinkelt"],
-          correctIndex: 3,
+          options: ["Linear", "Trigonal planar", "Tetraedrisch", "Gewinkelt", "Trigonal pyramidal"],
+          correctIndex: 4,
           explanation:
             "Stickstoff in NH₃ hat 4 Elektronenpaare in der Valenzschale: 3 bindende (N–H) und 1 freies Elektronenpaar. Gemäß VSEPR nehmen 4 Elektronenpaare tetraedrische Anordnung ein (ideal 109,5°). Da ein Paar frei ist, ist die resultierende Molekülgeometrie (Atomanordnung) trigonal pyramidal. Das freie Elektronenpaar drückt die drei bindenden Paare etwas zusammen → Winkel 107° statt 109,5°. Ammoniak ist deshalb polar (μ = 1,47 D).",
           hints: [
@@ -775,13 +778,13 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         {
           question: "Warum ist CO₂ trotz polarer C=O-Bindungen ein unpolares Molekül?",
           options: [
-            "Weil C und O ähnliche Elektronegativitäten haben.",
-            "Weil CO₂ keine freien Elektronenpaare besitzt.",
             "Weil die lineare Geometrie bewirkt, dass sich die beiden Dipole aufheben.",
+            "Weil CO₂ keine freien Elektronenpaare besitzt.",
+            "Weil C und O ähnliche Elektronegativitäten haben.",
             "Weil CO₂ sp²-hybridisiert ist und eine ebene Struktur hat.",
             "Weil CO₂ kein permanentes Dipolmoment aufbauen kann, da es ein Gas ist.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "CO₂ ist linear (Kohlenstoff sp-hybridisiert, 180°). Die beiden C=O-Bindungen sind zwar polar (ΔEN ≈ 1,0), aber die Dipolvektoren zeigen in genau entgegengesetzte Richtungen und heben sich vollständig auf — das Gesamtdipolmoment ist null. CO₂ ist daher unpolar, obwohl es polare Bindungen enthält. Dieses Beispiel verdeutlicht, dass Molekülpolarität von der Geometrie abhängt, nicht nur von der Bindungspolarität.",
           hints: [
@@ -825,8 +828,8 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         },
         {
           question: "Welche Molekülgeometrie hat Methan (CH₄)?",
-          options: ["Trigonal planar", "Linear", "Tetraedrisch", "Oktaedrisch", "Gewinkelt"],
-          correctIndex: 2,
+          options: ["Trigonal planar", "Linear", "Oktaedrisch", "Tetraedrisch", "Gewinkelt"],
+          correctIndex: 3,
           explanation:
             "Kohlenstoff in CH₄ ist sp³-hybridisiert: ein 2s-Orbital und drei 2p-Orbitale mischen zu vier gleichwertigen sp³-Hybridorbitalen. Diese stoßen sich gegenseitig ab und nehmen die tetraedrische Anordnung mit Bindungswinkeln von 109,5° ein. Da kein freies Elektronenpaar vorhanden ist, entspricht die Molekülgeometrie der Elektronenanordnung: perfekter Tetraeder. Die sp³-Hybridisierung findet sich in allen Alkanen und bei Stickstoff in Aminen, Sauerstoff in Ethern usw.",
           hints: [
@@ -839,8 +842,8 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         {
           question:
             "Ein Lösungsmittel löst Fette gut, aber keine Salze. Welche Eigenschaft beschreibt dieses Lösungsmittel am besten?",
-          options: ["Polar, protisch", "Polar, aprotisch", "Unpolar", "Amphiphil", "Ionisch"],
-          correctIndex: 2,
+          options: ["Polar, protisch", "Polar, aprotisch", "Ionisch", "Amphiphil", "Unpolar"],
+          correctIndex: 4,
           explanation:
             'Das Prinzip "Gleiches löst Gleiches" (similia similibus solvuntur) besagt, dass polare Substanzen in polaren Lösungsmitteln und unpolare Substanzen in unpolaren Lösungsmitteln löslich sind. Fette (Triglyceride) sind unpolar, weil die langen Kohlenwasserstoffketten keine permanenten Dipole haben. Salze dagegen sind ionisch und lösen sich nur in polaren Lösungsmitteln (Wasser) durch Hydratation. Ein Lösungsmittel, das Fette löst, aber keine Salze, muss unpolar sein (z. B. Hexan, Dichlormethan).',
           hints: [
@@ -854,13 +857,13 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
           question:
             "Die Peptidbindung (–CO–NH–) kann nicht frei rotieren und ist planar. Was ist die chemische Ursache?",
           options: [
-            "Die Peptidbindung ist eine Ionenbindung zwischen C und N.",
             "Das freie Elektronenpaar des Stickstoffs ist in ein delokalisiertes π-System mit der Carbonylgruppe einbezogen, was partiellen Doppelbindungscharakter und Planarität erzeugt.",
+            "Die Peptidbindung ist eine Ionenbindung zwischen C und N.",
             "Die sp³-Hybridisierung von C und N verhindert Rotation.",
             "Wasserstoffbrücken zwischen CO und NH fixieren die Bindung.",
             "Die hohe Bindungsenergie der C–N-Einfachbindung macht Rotation unmöglich.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Das freie Elektronenpaar am Stickstoff der Amidgruppe kann mit dem π-System der benachbarten Carbonylgruppe konjugieren (mesomere Grenzstruktur: C=N⁺ und C–O⁻). Dadurch erhält die C–N-Bindung partiellen Doppelbindungscharakter (Bindungsordnung ~1,4), was die Rotation stark einschränkt. Alle vier Atome der Peptidbindung (C, O, N, H) liegen in einer Ebene (sp²-Hybridisierung aller Beteiligten). Diese Planarität ist die strukturelle Grundlage für die regulären Sekundärstrukturen α-Helix und β-Faltblatt in Proteinen.",
           hints: [
@@ -872,8 +875,8 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         },
         {
           question: "Welches Molekül hat eine lineare Geometrie aufgrund von sp-Hybridisierung?",
-          options: ["H₂O", "NH₃", "CH₄", "C₂H₂ (Ethin)", "SO₂"],
-          correctIndex: 3,
+          options: ["H₂O", "C₂H₂ (Ethin)", "CH₄", "NH₃", "SO₂"],
+          correctIndex: 1,
           explanation:
             "In Ethin (C₂H₂, Acetylen) ist jeder Kohlenstoff sp-hybridisiert: ein s- und ein p-Orbital mischen zu zwei sp-Hybridorbitalen (linear, 180°). Die beiden übrigen p-Orbitale an jedem C bilden je eine π-Bindung, sodass die C≡C-Dreifachbindung aus 1 σ + 2 π besteht. Das Molekül ist vollständig linear. Acetylen ist ein wichtiges Beispiel für sp-Hybridisierung; weitere sind HCN (Blausäure) und CO₂ (bei Kohlenstoff).",
           hints: [
@@ -888,12 +891,12 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
             "Wie viele σ-Bindungen und wie viele π-Bindungen enthält das Ethen-Molekül (C₂H₄)?",
           options: [
             "4 σ-Bindungen und 2 π-Bindungen",
-            "5 σ-Bindungen und 1 π-Bindung",
             "6 σ-Bindungen und 0 π-Bindungen",
+            "5 σ-Bindungen und 1 π-Bindung",
             "3 σ-Bindungen und 2 π-Bindungen",
             "4 σ-Bindungen und 1 π-Bindung",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Ethen (C₂H₄) enthält eine C=C-Doppelbindung und vier C–H-Einfachbindungen. Die Doppelbindung besteht aus 1 σ + 1 π. Jede der vier C–H-Bindungen ist eine σ-Bindung. Insgesamt: 5 σ-Bindungen (1 C–C(σ) + 4 C–H) und 1 π-Bindung. Die π-Bindung entsteht durch laterale Überlappung der unhybridisierten p-Orbitale senkrecht zur sp²-Ebene und verhindert die freie Rotation um die C=C-Achse → Grundlage der Cis-Trans-Isomerie.",
           hints: [
@@ -929,10 +932,10 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
             "C–H (ΔEN ≈ 0,4)",
             "C–N (ΔEN ≈ 0,5)",
             "C–O (ΔEN ≈ 1,0)",
-            "C–F (ΔEN ≈ 1,5)",
             "C–C (ΔEN = 0,0)",
+            "C–F (ΔEN ≈ 1,5)",
           ],
-          correctIndex: 3,
+          correctIndex: 4,
           explanation:
             "Die Polarität einer kovalenten Bindung wird durch die Elektronegativitätsdifferenz (ΔEN) bestimmt. Je größer ΔEN, desto polarer die Bindung und desto stärker die Partialladungen (δ+ und δ−). C–F hat die größte ΔEN (4,0 − 2,5 = 1,5) und ist daher die polarste der aufgelisteten Bindungen. C–C ist komplett unpolar (ΔEN = 0), C–H fast unpolar (0,4). Beachte: Ab ΔEN > 1,7 spricht man von ionischer Bindung (z. B. Na–Cl: 2,1).",
           hints: [
@@ -991,6 +994,8 @@ Warum siedet Wasser erst bei 100 °C, obwohl es leichter ist als H₂S (Sdp. −
 Entscheidend: Beim **Verdampfen** von Wasser werden nur die intermolekularen H-Brücken gebrochen (40,7 kJ/mol pro Mol), **nicht** die kovalenten O–H-Bindungen (463 kJ/mol pro Bindung). Beim Schmelzen von NaCl wird die ionische Bindung (Gitterenergie) überwunden. Beim Denaturieren von Proteinen werden intermolekulare Kräfte (H-Brücken, hydrophober Effekt) gestört, die kovalenten Peptidbindungen bleiben intakt.
 
 > **Merke:** Intermolekulare Kräfte sind 10–100-fach schwächer als kovalente Bindungen, bestimmen aber Aggregatszustand, Siedepunkt und biologische Erkennung. Verdampfen = Brechen intermolekularer Kräfte (NICHT kovalenter Bindungen!).
+
+{{IMAGE}}
 
 ## Van-der-Waals-Kräfte (London-Dispersionskräfte)
 
@@ -1471,13 +1476,13 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
         {
           question: "Welche intermolekulare Kraft wirkt zwischen Edelgasatomen (z. B. Helium, He)?",
           options: [
-            "Dipol-Dipol-Wechselwirkung",
+            "London-Dispersionskraft",
             "Wasserstoffbrückenbindung",
             "Ionische Wechselwirkung",
-            "London-Dispersionskraft",
+            "Dipol-Dipol-Wechselwirkung",
             "Kovalente Bindung",
           ],
-          correctIndex: 3,
+          correctIndex: 0,
           explanation:
             "Edelgasatome sind unpolar, besitzen keine permanenten Dipole und bilden keine Wasserstoffbrücken. Die einzige intermolekulare Kraft zwischen ihnen sind London-Dispersionskräfte (van-der-Waals), die durch instantane Elektronenfluktuation entstehen. Obwohl diese Kräfte sehr schwach sind (He siedet bei −269 °C, nahe 0 K), sind sie die Ursache dafür, dass Edelgase überhaupt verflüssigt werden können. Mit größerer Elektronenzahl (Kr, Xe) werden London-Kräfte stärker und die Siedepunkte steigen.",
           hints: [
@@ -1492,12 +1497,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Warum hat n-Pentan (unverzweigt) einen höheren Siedepunkt als Neopentan (stark verzweigt), obwohl beide die Summenformel C₅H₁₂ haben?",
           options: [
             "n-Pentan ist polarer als Neopentan.",
-            "n-Pentan hat mehr Wasserstoffbrücken.",
             "n-Pentan hat eine größere Kontaktfläche → stärkere London-Kräfte.",
+            "n-Pentan hat mehr Wasserstoffbrücken.",
             "Neopentan hat eine höhere Molmasse.",
             "n-Pentan bildet Dipol-Dipol-Wechselwirkungen, Neopentan nicht.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "n-Pentan und Neopentan (2,2-Dimethylpropan) haben identische Summenformel C₅H₁₂, also gleiche Elektronenzahl und Polarisierbarkeit. Der Unterschied liegt in der Gestalt: n-Pentan ist kettenartig gestreckt und bietet eine große Kontaktfläche für London-Kräfte. Neopentan ist kugelförmig kompakt (niedrige Kontaktfläche). Stärkere London-Kräfte bei n-Pentan → höherer Siedepunkt (36 °C vs. 9,5 °C für Neopentan). Dieses Prinzip erklärt auch, warum unverzweigte Fettsäuren höhere Schmelzpunkte haben.",
           hints: [
@@ -1512,12 +1517,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Welche Bedingungen muss ein Atom erfüllen, um als Wasserstoffbrücken-Donor zu fungieren?",
           options: [
             "Es muss ein freies Elektronenpaar besitzen.",
-            "Es muss ein Wasserstoffatom kovalent an N, O oder F gebunden haben.",
             "Es muss ein Metall sein.",
+            "Es muss ein Wasserstoffatom kovalent an N, O oder F gebunden haben.",
             "Es muss negativ geladen sein.",
             "Es muss eine sp³-Hybridisierung aufweisen.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Ein Wasserstoffbrücken-Donor ist ein Atom, das ein Wasserstoffatom kovalent an ein hochelektronegatives Atom (N, O oder F) gebunden trägt. Das H-Atom ist durch die starke Elektronegativität des gebundenen Atoms stark positiv polarisiert (δ+) und kann dann elektrostatisch mit einem freien Elektronenpaar eines Akzeptors (ebenfalls N, O oder F) wechselwirken. Ohne die kovalente D–H-Bindung (D = N, O, F) wäre H nicht ausreichend polarisiert und könnte keine echte H-Brücke bilden.",
           hints: [
@@ -1532,12 +1537,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Warum bildet Guanin-Cytosin (G-C) ein stabileres Basenpaar als Adenin-Thymin (A-T) in der DNA?",
           options: [
             "G-C-Basenpaare sind kovalent verknüpft, A-T-Paare nicht.",
-            "G-C-Paare haben 3 Wasserstoffbrücken, A-T-Paare nur 2.",
-            "G und C sind größere Moleküle mit stärkeren London-Kräften.",
             "G-C-Paare liegen tiefer in der Helix vergraben.",
+            "G und C sind größere Moleküle mit stärkeren London-Kräften.",
+            "G-C-Paare haben 3 Wasserstoffbrücken, A-T-Paare nur 2.",
             "A-T-Paare stoßen sich elektrostatisch ab.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "In der Watson-Crick-Basenpaarung bildet Guanin mit Cytosin 3 Wasserstoffbrücken, während Adenin mit Thymin nur 2 H-Brücken ausbildet. Da jede Wasserstoffbrücke etwa 10–20 kJ/mol Energie liefert, ist das G-C-Paar stabiler. DNA-Segmente mit hohem GC-Gehalt haben daher eine höhere Schmelztemperatur (Tm). Dies ist relevant für das Primerdesign in der PCR: GC-reiche Primer benötigen höhere Anlagerungstemperaturen.",
           hints: [
@@ -1553,11 +1558,11 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
           options: [
             "Metalle enthalten frei bewegliche Ionen.",
             "Die Gitterenergie ist hoch genug für Ionenmobilität.",
-            "Delokalisierte Valenzelektronen (Elektronengas) können sich frei durch das Gitter bewegen.",
-            "Metalle haben kovalente Bindungen, die Elektronen transportieren.",
             "Metallkationen wandern unter Spannung wie in Elektrolytlösungen.",
+            "Metalle haben kovalente Bindungen, die Elektronen transportieren.",
+            "Delokalisierte Valenzelektronen (Elektronengas) können sich frei durch das Gitter bewegen.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Das Elektronengas-Modell der Metallbindung postuliert, dass Valenzelektronen von keinem einzelnen Atom festgehalten werden, sondern über das gesamte Metallgitter delokalisiert sind. Unter einer angelegten elektrischen Spannung fließen diese freien Elektronen gerichtet durch das Gitter — das ist elektrischer Strom. Im Gegensatz zu Elektrolytlösungen (Ionenstrom) oder Halbleitern (aktivierter Elektronenfluss) brauchen Metalle keine Aktivierungsenergie für die Leitfähigkeit, weshalb sie bei Raumtemperatur exzellente Leiter sind.",
           hints: [
@@ -1570,13 +1575,13 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
         {
           question: "Warum ist Eis (H₂O, fest) weniger dicht als flüssiges Wasser bei 4 °C?",
           options: [
-            "Eis hat eine höhere Molmasse als flüssiges Wasser.",
             "Im Eis bilden die H-Brücken ein hexagonales Gitter mit größerem Abstand zwischen den Molekülen als im flüssigen Wasser.",
+            "Eis hat eine höhere Molmasse als flüssiges Wasser.",
             "Flüssiges Wasser enthält mehr gelöste Gase, die Dichte erhöhen.",
             "Eis ist amorph und hat daher weniger Ordnung als flüssiges Wasser.",
             "Die kovalenten O–H-Bindungen sind im Eis länger als im flüssigen Zustand.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Im flüssigen Wasser sind H-Brücken ständig in Bewegung und Moleküle können dichter gepackt werden. Im Eis (Hexagonaleis) bilden die Wassermoleküle ein regelmäßiges hexagonales H-Brückengitter, in dem jedes Molekül genau 4 H-Brücken zu seinen Nachbarn unterhält. Diese Gitterstruktur hat große, offene Kanäle → niedrigere Dichte als flüssiges Wasser. Bei 4 °C hat flüssiges Wasser die höchste Dichte (1,000 g/mL). Diese Dichte-Anomalie ist biologisch überlebenswichtig: Eis schwimmt auf Wasser, Gewässer frieren von oben zu, das Wasser darunter bleibt flüssig.",
           hints: [
@@ -1591,12 +1596,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Welche Eigenschaft unterscheidet Metalle grundsätzlich von Ionenkristallen in Bezug auf mechanische Verformbarkeit?",
           options: [
             "Metalle sind spröde, Ionenkristalle sind duktil.",
-            "Ionenkristalle haben niedrigere Schmelzpunkte als Metalle.",
             "Metalle sind duktil, weil das Elektronengas Ionenschichten zusammenhält auch nach dem Gleiten; Ionenkristalle brechen, weil Verschiebung gleichnamige Ionen nebeneinander bringt.",
+            "Ionenkristalle haben niedrigere Schmelzpunkte als Metalle.",
             "Ionenkristalle haben stärkere Bindungen als Metalle.",
             "Metalle haben kovalente Bindungen, die plastische Verformung erlauben.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Wenn Metallschichten gegeneinander gleiten, bleibt das Elektronengas ständig zwischen den Metallkationen und hält sie zusammen — es gibt keine ungünstige elektrostatische Situation. Das Metall kann sich plastisch verformen (duktil/formbar) ohne zu brechen. In Ionenkristallen dagegen führt eine Verschiebung der Schichten dazu, dass gleichnamig geladene Ionen nebeneinander zu liegen kommen → elektrostatische Abstoßung → Bruch (spröde). Metalle können gewalzt, gezogen und gebogen werden, Salzkristalle brechen.",
           hints: [
@@ -1610,13 +1615,13 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
           question:
             "Ordnen Sie folgende Wechselwirkungen nach aufsteigender Stärke (schwächste zuerst): Ionenbindung, London-Kräfte, Wasserstoffbrücke, kovalente Bindung.",
           options: [
-            "London < Wasserstoffbrücke < Ionenbindung < kovalent",
-            "Wasserstoffbrücke < London < Ionenbindung < kovalent",
             "London < Ionenbindung < Wasserstoffbrücke < kovalent",
+            "Wasserstoffbrücke < London < Ionenbindung < kovalent",
+            "London < Wasserstoffbrücke < Ionenbindung < kovalent",
             "London < Wasserstoffbrücke < kovalent < Ionenbindung",
             "London = Wasserstoffbrücke < Ionenbindung < kovalent",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
             "Die korrekte Reihenfolge nach aufsteigender Stärke ist: London-Dispersionskräfte (0,1–10 kJ/mol) < Wasserstoffbrücken (10–40 kJ/mol) < Ionenbindung (200–1000 kJ/mol) < kovalente Bindung (150–1000 kJ/mol, je nach Bindung). Hinweis: Ionenbindung und kovalente Bindung überlappen sich im Bereich, aber starke kovalente Mehrfachbindungen können Ionenbindungen übertreffen. Wasserstoffbrücken sind trotz ihrer geringen Einzelstärke kollektiv in biologischen Makromolekülen dominierend.",
           hints: [
@@ -1631,12 +1636,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Warum leiten Halbleiter (z. B. Silizium) bei höherer Temperatur besser als bei niedriger — im Gegensatz zu Metallen?",
           options: [
             "Halbleiter haben mehr Valenzelektronen als Metalle.",
-            "Bei Halbleitern müssen Elektronen die Bandlücke überwinden, was bei höherer Temperatur leichter wird; bei Metallen gibt es keine Bandlücke, aber mehr Gitterschwingungen streuen die Elektronen.",
-            "Halbleiter werden bei hoher Temperatur zu Metallen.",
             "Die Ionenbeweglichkeit in Halbleitern steigt mit der Temperatur.",
+            "Halbleiter werden bei hoher Temperatur zu Metallen.",
+            "Bei Halbleitern müssen Elektronen die Bandlücke überwinden, was bei höherer Temperatur leichter wird; bei Metallen gibt es keine Bandlücke, aber mehr Gitterschwingungen streuen die Elektronen.",
             "Halbleiter haben bei niedrigen Temperaturen zu viele freie Elektronen, die sich gegenseitig stören.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Im Bändermodell haben Halbleiter eine kleine Bandlücke (z. B. Si: 1,1 eV) zwischen Valenz- und Leitungsband. Bei niedrigen Temperaturen befinden sich fast alle Elektronen im Valenzband und können keinen Strom leiten. Bei steigender Temperatur erhalten Elektronen genügend thermische Energie, um die Bandlücke zu überspringen und ins Leitungsband zu gelangen → Leitfähigkeit steigt. Bei Metallen überlappen die Bänder bereits (keine Lücke), aber steigende Temperatur erhöht die Gitterschwingungen (Phononen), die die freien Elektronen streuen → Widerstand steigt, Leitfähigkeit sinkt.",
           hints: [
@@ -1652,11 +1657,11 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
           options: [
             "Wasserstoffbrücken zwischen den Kohlenwasserstoffketten",
             "Kovalente Bindungen zwischen den Lipidmolekülen",
-            "London-Dispersionskräfte zwischen den parallel angeordneten Kohlenwasserstoffketten",
-            "Ionische Wechselwirkungen zwischen den Fettsäureköpfen",
             "Dipol-Dipol-Kräfte zwischen den gesättigten Ketten",
+            "Ionische Wechselwirkungen zwischen den Fettsäureköpfen",
+            "London-Dispersionskräfte zwischen den parallel angeordneten Kohlenwasserstoffketten",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Die Kohlenwasserstoffketten der Phospholipide sind unpolar — sie besitzen keine permanenten Dipole und können keine H-Brücken bilden. Die einzige intermolekulare Kraft zwischen ihnen sind London-Dispersionskräfte. Da die Ketten parallel angeordnet sind und große Kontaktflächen bieten, sind diese London-Kräfte in Summe beträchtlich. Gesättigte Ketten packen dichter → stärkere London-Kräfte → rigidere Membran. Cis-ungesättigte Ketten haben Knicke → lockere Packung → schwächere London-Kräfte → fluidere Membran.",
           hints: [
@@ -1669,13 +1674,13 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
         {
           question: "Welche Aussage über Dipol-Dipol-Wechselwirkungen ist korrekt?",
           options: [
-            "Dipol-Dipol-Kräfte wirken zwischen allen Molekülen, auch unpolaren.",
-            "Dipol-Dipol-Kräfte werden bei steigender Temperatur stärker, weil sich die Moleküle schneller bewegen.",
             "Dipol-Dipol-Wechselwirkungen wirken nur zwischen Molekülen mit permanentem Dipolmoment und werden bei höherer Temperatur schwächer.",
+            "Dipol-Dipol-Kräfte werden bei steigender Temperatur stärker, weil sich die Moleküle schneller bewegen.",
+            "Dipol-Dipol-Kräfte wirken zwischen allen Molekülen, auch unpolaren.",
             "Dipol-Dipol-Kräfte sind stärker als Wasserstoffbrücken.",
             "Dipol-Dipol-Kräfte erfordern das Vorhandensein von Ionen.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Dipol-Dipol-Wechselwirkungen erfordern permanente Dipolmomente — sie wirken nur zwischen polaren Molekülen (z. B. HCl, Aceton, CHCl₃). Bei steigender Temperatur wird die thermische Bewegung stärker als die bevorzugte antiparallele Orientierung der Dipole → die Dipol-Dipol-Kräfte werden effektiv schwächer. Dies unterscheidet sie von London-Kräften, die temperaturunabhängig sind. Dipol-Dipol-Kräfte (1–5 kJ/mol) sind schwächer als Wasserstoffbrücken (10–40 kJ/mol), aber stärker als reine London-Kräfte bei Molekülen gleicher Größe.",
           hints: [
@@ -1690,12 +1695,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
             "Bei welcher Temperatur beginnt beim Menschen die irreversible Proteindenaturierung mit Organversagen?",
           options: [
             "Ab 37 °C — jede Temperaturerhöhung ist schädlich",
-            "Ab 38 °C — daher ist jedes Fieber gefährlich",
-            "Ab 40 °C — alle Proteine denaturieren sofort",
             "Ab ca. 42 °C — Hitzschlag mit massiver Proteindenaturierung in Leber, Niere und Gehirn",
+            "Ab 40 °C — alle Proteine denaturieren sofort",
+            "Ab 38 °C — daher ist jedes Fieber gefährlich",
             "Erst ab 50 °C — der Körper toleriert problemlos bis 49 °C",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
             "Humane Proteine sind auf 37 °C optimiert und tolerieren moderate Fieberschübe (38–41 °C) — Fieber ist sogar ein Abwehrmechanismus, da bakterielle Enzyme bei diesen Temperaturen bereits Aktivität verlieren. Ab ca. 42 °C beginnt jedoch massive Denaturierung auch menschlicher Proteine: H-Brücken und hydrophobe Wechselwirkungen brechen vermehrt → Enzyme verlieren Funktion → Organversagen (Hitzschlag). Die Grenze ist nicht scharf, aber klinisch gilt: Kerntemperatur >42 °C = lebensbedrohlich.",
           hints: [
@@ -1709,12 +1714,12 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
           question: "Was passiert bei der Denaturierung eines Proteins auf molekularer Ebene?",
           options: [
             "Peptidbindungen werden hydrolytisch gespalten → einzelne Aminosäuren entstehen",
-            "Nichtkovalente Bindungen (H-Brücken, hydrophobe WW, Salzbrücken) brechen → Sekundär-/Tertiärstruktur geht verloren, Primärstruktur bleibt erhalten",
             "Disulfidbrücken und Peptidbindungen werden gleichzeitig gespalten",
+            "Nichtkovalente Bindungen (H-Brücken, hydrophobe WW, Salzbrücken) brechen → Sekundär-/Tertiärstruktur geht verloren, Primärstruktur bleibt erhalten",
             "Die Aminosäuresequenz wird verändert → neue Primärstruktur entsteht",
             "Kovalente C–C-Bindungen im Proteinrückgrat brechen → Fragmente entstehen",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Denaturierung zerstört die dreidimensionale Konformation (Sekundär-, Tertiär-, Quartärstruktur), indem nichtkovalente Wechselwirkungen (H-Brücken, hydrophobe Effekte, Salzbrücken, van-der-Waals-Kräfte) gebrochen werden. Die kovalenten Peptidbindungen der Primärstruktur bleiben intakt — das ist der entscheidende Unterschied zur Proteolyse (enzymatische Spaltung). Denaturierte Proteine verlieren ihre biologische Funktion, können aber unter günstigen Bedingungen renaturieren (Anfinsen-Experiment: Ribonuklease A).",
           hints: [
@@ -1755,6 +1760,8 @@ Parallel dazu formen **nichtkovalente Wechselwirkungen** (H-Brücken, hydrophobe
 > **Merke:** Alle biopolymeren Bindungen (Peptid-, Glykosid-, Ester-, Phosphodiester-) entstehen durch Kondensation (−H₂O) und werden durch Hydrolyse (+H₂O) gespalten. Kovalente Bindungen = Gerüst; nichtkovalente Wechselwirkungen = Feineinstellung.
 
 ---
+
+{{IMAGE}}
 
 ## 1. Peptidbindung — das Rückgrat der Proteine
 
@@ -2014,12 +2021,12 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
             "Warum können Menschen Cellulose nicht verdauen, obwohl Stärke und Cellulose beide aus Glucose aufgebaut sind?",
           options: [
             "Cellulose hat eine viel höhere Molmasse als Stärke.",
-            "Cellulose enthält β-1,4-glycosidische Bindungen, für die menschliche Verdauungsenzyme (Amylasen) keine Spezifität besitzen.",
-            "Cellulose ist in Wasser unlöslich und kann daher nicht aufgenommen werden.",
             "Stärke enthält mehr Glucose-Einheiten pro Kette.",
+            "Cellulose ist in Wasser unlöslich und kann daher nicht aufgenommen werden.",
+            "Cellulose enthält β-1,4-glycosidische Bindungen, für die menschliche Verdauungsenzyme (Amylasen) keine Spezifität besitzen.",
             "Cellulose wird durch den Magen denaturiert und ist daher unverdaulich.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Stärke (Amylose und Amylopektin) enthält α-1,4-glycosidische Bindungen, die durch menschliche α-Amylase gespalten werden können. Cellulose enthält β-1,4-glycosidische Bindungen. Durch den Unterschied in der Stereochemie am anomeren C1 (α vs. β) unterscheidet sich die räumliche Anordnung der Glucoseketten grundlegend. Menschliche Verdauungsenzyme haben keine Komplementarität für β-1,4-Bindungen (keine Cellulase) → Cellulose ist unverdaulich → wirkt als Ballaststoff. Wiederkäuer können Cellulose durch Mikroorganismen im Pansen abbauen.",
           hints: [
@@ -2034,11 +2041,11 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
           options: [
             "Direkte Anziehungskräfte zwischen unpolaren Molekülen.",
             "Enthalpiegewinn durch van-der-Waals-Wechselwirkungen zwischen Kohlenwasserstoffketten.",
-            "Entropiegewinn des Wassers, wenn geordnete Hydratationsschalen um unpolare Moleküle aufgelöst werden.",
-            "Elektrostatische Abstoßung polarer Wassermoleküle von unpolaren Gruppen.",
             "Minimierung der freien Energie durch Ausbildung kovalenter Bindungen.",
+            "Elektrostatische Abstoßung polarer Wassermoleküle von unpolaren Gruppen.",
+            "Entropiegewinn des Wassers, wenn geordnete Hydratationsschalen um unpolare Moleküle aufgelöst werden.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Der hydrophobe Effekt ist primär entropisch getrieben, nicht enthalpisch. Wenn unpolare Moleküle in Wasser gelöst sind, ordnen sich die umgebenden Wassermoleküle in hochgeordneten Hydratationsschalen (Käfigstrukturen) um sie herum — das kostet Entropie (ΔS < 0). Wenn unpolare Moleküle aggregieren, werden diese geordneten Wasserschalen aufgelöst und die Wassermoleküle gewinnen Freiheitsgrade (ΔS > 0). Dieser Entropiegewinn des Wassers ist die treibende Kraft, die Lipide zur Aggregation in Membranen und hydrophobe Aminosäuren ins Proteininnere treibt.",
           hints: [
@@ -2051,13 +2058,13 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
         {
           question: "Welcher Bindungstyp stabilisiert die α-Helix-Sekundärstruktur in Proteinen?",
           options: [
-            "Disulfidbrücken zwischen Cystein-Seitenketten.",
-            "Kovalente Bindungen im Peptidrückgrat.",
             "Wasserstoffbrücken zwischen der C=O-Gruppe der Aminosäure i und der N–H-Gruppe der Aminosäure i+4.",
+            "Kovalente Bindungen im Peptidrückgrat.",
+            "Disulfidbrücken zwischen Cystein-Seitenketten.",
             "Ionische Wechselwirkungen zwischen Seitenketten.",
             "Van-der-Waals-Kräfte zwischen hydrophoben Seitenketten.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Die α-Helix wird durch intramolekulare Wasserstoffbrücken stabilisiert: Die Carbonylgruppe (C=O) der Peptidbindung der Aminosäure i bildet eine H-Brücke mit der N–H-Gruppe der Peptidbindung der Aminosäure i+4 (d. h. 4 Aminosäuren weiter in der Sequenz). Pro Windung der Helix (~3,6 Aminosäuren) entstehen regelmäßig H-Brücken, die die Helixachse stabilisieren. Alle Carbonyl-Gruppen zeigen in eine Richtung, alle NH-Gruppen in die andere → polares Helixmoment. α-Helices sind häufig in Transmembranproteinen (z. B. 7 Transmembranhelices bei GPCR).",
           hints: [
@@ -2072,12 +2079,12 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
             "Aspirin hemmt Cyclooxygenase (COX) irreversibel. Was ist die chemische Grundlage dieser Irreversibilität?",
           options: [
             "Aspirin bildet ionische Bindungen mit dem aktiven Zentrum.",
-            "Aspirin verdrängt das Substrat kompetitiv ohne Ablösung.",
             "Aspirin überträgt kovalent eine Acetylgruppe auf Serin-530 der COX (Acetylierung), was nicht mehr rückgängig gemacht werden kann.",
+            "Aspirin verdrängt das Substrat kompetitiv ohne Ablösung.",
             "Aspirin denaturiert die COX durch hydrophoben Effekt.",
             "Aspirin bildet Disulfidbrücken mit Cystein-Resten in der COX.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Aspirin (Acetylsalicylsäure) überträgt seine Acetylgruppe auf den Hydroxyl-Sauerstoff von Serin-530 im Kanal der Cyclooxygenase (Acetylierung, nukleophile Acylsubstitution). Die resultierende kovalente O-Acetyl-Serinmodifikation blockiert dauerhaft den Zugang des Arachidonsäure-Substrats zum katalytischen Zentrum. Da die kovalente Bindung unter physiologischen Bedingungen nicht hydrolysiert wird, bleibt das Enzym dauerhaft inaktiv. In kernlosen Thrombozyten wird kein neues COX-1 synthetisiert — der Effekt hält für die gesamte Thrombozytenliebensdauer (ca. 10 Tage) an.",
           hints: [
@@ -2092,12 +2099,12 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
             "Warum haben cis-ungesättigte Fettsäuren (z. B. Ölsäure) niedrigere Schmelzpunkte als gesättigte Fettsäuren gleicher Kettenlänge?",
           options: [
             "Ungesättigte Fettsäuren haben weniger C-Atome.",
-            "Die cis-Doppelbindung erzeugt einen Knick in der Kette → lockere Packung → schwächere London-Kräfte → niedrigerer Schmelzpunkt.",
             "Cis-Fettsäuren bilden mehr Wasserstoffbrücken.",
+            "Die cis-Doppelbindung erzeugt einen Knick in der Kette → lockere Packung → schwächere London-Kräfte → niedrigerer Schmelzpunkt.",
             "Ungesättigte Fettsäuren sind polarer als gesättigte.",
             "Die höhere Molmasse gesättigter Fettsäuren erhöht deren Schmelzpunkt.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die cis-Konfiguration einer Doppelbindung erzeugt einen starren Knick (~30°) in der Fettsäurekette, weil die π-Bindung freie Rotation verhindert und beide Wasserstoffatome auf derselben Seite liegen. Dieser Knick verhindert die dichte parallele Packung der Kohlenwasserstoffketten. Schwächere intermolekulare London-Kräfte → geringere Energie zum Schmelzen nötig → niedrigerer Schmelzpunkt. Ölsäure (18:1 cis-Δ9) schmilzt bei 13 °C, Stearinsäure (18:0) bei 70 °C. Trans-Fettsäuren haben keinen Knick und verhalten sich ähnlich wie gesättigte.",
           hints: [
@@ -2111,12 +2118,12 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
           question: "Was beschreibt Lipinski's Rule of Five (Ro5) für Arzneimittel?",
           options: [
             "Pharmaka müssen genau 5 Aminosäuren als Bindemotive haben.",
-            "Pharmaka mit MW ≤ 500 Da, logP ≤ 5, ≤ 5 H-Brücken-Donoren und ≤ 10 H-Brücken-Akzeptoren haben wahrscheinlich gute orale Bioverfügbarkeit.",
-            "Pharmaka müssen mindestens 5 aromatische Ringe aufweisen.",
             "Pharmaka dürfen maximal 5 Chiralitätszentren besitzen.",
+            "Pharmaka müssen mindestens 5 aromatische Ringe aufweisen.",
+            "Pharmaka mit MW ≤ 500 Da, logP ≤ 5, ≤ 5 H-Brücken-Donoren und ≤ 10 H-Brücken-Akzeptoren haben wahrscheinlich gute orale Bioverfügbarkeit.",
             "Pharmaka müssen mit mindestens 5 verschiedenen Bindungstypen an ihren Rezeptor binden.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Lipinski's Rule of Five (1997) ist eine Faustregel für die orale Bioverfügbarkeit von Arzneimitteln. Ein Pharmakon mit MW > 500 Da, logP > 5 (zu lipophil), > 5 H-Brücken-Donoren (NH, OH) oder > 10 H-Brücken-Akzeptoren (N, O) wird wahrscheinlich schlecht resorbiert. Zu polare Moleküle (viele HBD/HBA) können Zellmembranen nicht passieren; zu unpolare (hoher logP) lösen sich nicht ausreichend in wässriger Körperflüssigkeit. Ausnahmen: Substrate für Transporter (Antibiotika, Vitamine). Biologika (Antikörper) fallen nicht unter die Ro5.",
           hints: [
@@ -2132,10 +2139,10 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
             "Wasserstoffbrücken",
             "Ionische Bindungen über Mg²⁺",
             "Van-der-Waals-Kräfte",
-            "Phosphodiesterbindungen (kovalent)",
             "Disulfidbrücken",
+            "Phosphodiesterbindungen (kovalent)",
           ],
-          correctIndex: 3,
+          correctIndex: 4,
           explanation:
             "Das Rückgrat eines DNA-Stranges wird durch Phosphodiesterbindungen gebildet: Eine Phosphatgruppe ist kovalent über eine Esterbindung (3'- und 5'-Position) mit je zwei Desoxyribose-Zuckermolekülen verbunden. Diese kovalenten Bindungen verleihen dem Strang seine mechanische Stabilität. Die Wasserstoffbrücken zwischen komplementären Basen halten hingegen die zwei antiparallelen Stränge der Doppelhelix zusammen — sie können durch Helikasen enzymatisch oder durch Hitze aufgetrennt werden, ohne die Primärstruktur der Einzelstränge zu zerstören.",
           hints: [
@@ -2149,13 +2156,13 @@ Denaturierung: Wird ein Protein erhitzt, mit Säure/Base, Harnstoff oder Deterge
           question:
             "Welche Aminosäure-Seitenkette ist in der Lage, kovalente Disulfidbrücken zu bilden, die die Tertiärstruktur von Proteinen stabilisieren?",
           options: [
-            "Serin (Ser)",
-            "Threonin (Thr)",
             "Cystein (Cys)",
+            "Threonin (Thr)",
+            "Serin (Ser)",
             "Methionin (Met)",
             "Histidin (His)",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Cystein (Cys) besitzt eine Thiolgruppe (–SH) in seiner Seitenkette. Zwei Cysteine können unter oxidativen Bedingungen durch Oxidation ihrer Thiolgruppen eine kovalente Disulfidbrücke (–S–S–) bilden: 2 R–SH → R–S–S–R + 2H⁺ + 2e⁻. Disulfidbrücken sind die einzigen kovalenten (nicht-Peptidrückgrat) Querverbindungen in Proteinen und sind besonders häufig in sekretierten und extrazellulären Proteinen (Antikörper, Insulin, RNase A), da das extrazelluläre Milieu oxidativer ist als das Zytoplasma. Sie verleihen dem Protein erhöhte thermische und chemische Stabilität.",
           hints: [

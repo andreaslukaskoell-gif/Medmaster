@@ -348,61 +348,17 @@ Wichtig: Wurzel aus (a hoch 2) = Betrag von a, denn Wurzel aus 9 = 3 = Betrag vo
 
 > **Merke:** Produktregel erlaubt: √(a×b) = √a×√b. VERBOTEN: √(a+b) ≠ √a+√b und √(a²) = |a| (nicht ±a — Wurzel ist immer nicht-negativ!).
 
-## Logarithmengesetze
+## Logarithmen, Halbwertszeit und pH-Rechnung
 
-Der Logarithmus ist die Umkehrfunktion der Exponentialfunktion. Die Frage, die der Logarithmus beantwortet: Auf welchen Exponenten muss ich die Basis a heben, um x zu erhalten?
+> **Vertiefung:** Ausführliche Behandlung von Logarithmengesetzen, Henderson-Hasselbalch-Gleichung, Semilog-Plots und Basiswechsel findest du im UK **Logarithmusfunktionen** (ma-5-04).
 
-Definition: log_a(x) = y genau dann, wenn a hoch y = x (für a > 0, a ungleich 1, x > 0).
+Der Logarithmus ist die Umkehrfunktion der Potenz: log_a(x) = y genau dann, wenn a hoch y = x. Drei Rechenregeln: log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n × log a. Basiswechsel: log_a(x) = ln(x) / ln(a).
 
-Wichtige Spezialfälle:
-- log Basis 10 von x = dekadischer Logarithmus (Logarithmus zur Basis 10) lg(x)
-- log Basis e von x = natürlicher Logarithmus (Logarithmus zur Basis e) ln(x) mit e ungefähr gleich 2,71828
-- ln(e) = 1; ln(1) = 0; ln(e hoch x) = x; e hoch (ln x) = x
+**Halbwertszeit:** N(t) = N0 × (1/2) hoch (t / T(1/2)). Zerfallskonstante λ = ln(2)/T½ ≈ 0,693/T½. Faustregel: Nach 5 HWZ ≈ 3 % → Medikament ausgewaschen.
 
-Die drei Logarithmenregeln:
+**pH = − lg[H⁺]:** Pro pH-Einheit ändert sich [H⁺] um Faktor 10. Normal arteriell: pH 7,35–7,45.
 
-Produktregel: log_a(x × y) = log_a(x) + log_a(y).
-Beispiel: lg(200) = lg(2 × 100) = lg(2) + lg(100) = 0,301 + 2 = 2,301.
-
-Quotientenregel: log_a(x / y) = log_a(x) − log_a(y).
-Beispiel: lg(0,01) = lg(1/100) = lg(1) − lg(100) = 0 − 2 = − 2.
-
-Potenzregel: log_a(x hoch n) = n × log_a(x).
-Beispiel: lg(1000) = lg(10 hoch 3) = 3 × lg(10) = 3.
-
-Basiswechselformel: log_a(x) = log_b(x) / log_b(a).
-Wichtigste Anwendung: ln(x) = lg(x) / lg(e) ungefähr gleich lg(x) / 0,4343 ungefähr gleich 2,303 × lg(x).
-
-> **Merke:** Drei Logarithmenregeln: log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n×log a. Logarithmus verwandelt Multiplikation in Addition — deshalb so nützlich für Exponentialwachstum und pH-Rechnung.
-
-## Der natürliche Logarithmus und die Euler'sche Zahl
-
-Die **Euler'sche Zahl** e ≈ 2,71828 (irrationale mathematische Konstante, Basis des natürlichen Logarithmus) ist eine fundamentale mathematische Konstante. Sie ist die natürliche Basis des Wachstums, weil die Ableitung von e hoch x gleich e hoch x ist — die Funktion wächst proportional zu ihrem eigenen Wert.
-
-In der Biologie und Medizin folgen das Wachstum von Bakterienkulturen, die Abnahme von Medikamenten im Blut und der radioaktive Zerfall dem Gesetz N(t) = N0 × e hoch (k × t), wobei k > 0 für Wachstum und k < 0 für Zerfall steht.
-
-Wichtige Werte: e hoch 0 = 1; e hoch 1 ungefähr 2,718; e hoch (−1) ungefähr 0,368. ln(1) = 0; ln(e) = 1; ln(2) ungefähr 0,693; ln(10) ungefähr 2,303.
-
-## Halbwertszeit und Exponentialfunktion
-
-Die Halbwertszeit T(1/2) ist die Zeit, nach der eine Größe auf die Hälfte ihres Ausgangswerts abgesunken ist.
-
-N(t) = N0 × (1/2) hoch (t / T(1/2)) = N0 × 2 hoch (−t / T(1/2)) = N0 × e hoch (−lambda × t),
-
-wobei lambda = ln(2) / T(1/2) ungefähr gleich 0,693 / T(1/2) die **Zerfallskonstante** (Geschwindigkeit des radioaktiven Abbaus) ist.
-
-Beispiele:
-- Nach 1 Halbwertszeit: 50%
-- Nach 2 Halbwertszeiten: 25%
-- Nach 3 Halbwertszeiten: 12,5%
-- Nach 5 Halbwertszeiten: 3,125% (klinisch: Medikament gilt als ausgewaschen)
-- Nach 10 Halbwertszeiten: unter 0,1%
-
-> **Merke:** Nach n Halbwertszeiten: Restmenge = (½)ⁿ der Ausgangsmenge. Nach 5 HWZ ≈ 3% → ausgewaschen. Zerfallskonstante λ = ln(2)/T½ ≈ 0,693/T½.
-
-pH-Rechnung: pH = − log Basis 10 von [H+].
-Für pH 7,4: [H+] = 10 hoch (−7,4) ungefähr 4 × 10 hoch (−8) mol/L.
-Die logarithmische pH-Skala bedeutet: Ein Unterschied von 1 pH-Einheit entspricht einer 10-fachen Änderung der H+-Konzentration. Deshalb sind kleine pH-Änderungen im Blut (Normalbereich: 7,35 bis 7,45) klinisch bedeutsam.
+> **Merke:** Logarithmus, pH und Halbwertszeit sind eng mit Potenzgesetzen verknüpft. Für vollständige Herleitung, Henderson-Hasselbalch und Semilog-Plots → UK Logarithmusfunktionen (ma-5-04).
 
 ## Zehnerpotenzen und wissenschaftliche Notation
 
@@ -431,8 +387,7 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
       lernziele: [
         "Alle acht Potenzgesetze sicher anwenden, insbesondere negative und gebrochene Exponenten korrekt handhaben",
         "Wurzeln vereinfachen durch Erkennen quadratischer Teiler und Anwendung der Produktregel",
-        "Die drei Logarithmenregeln (Produkt, Quotient, Potenz) anwenden und pH-Berechnungen durchführen",
-        "Halbwertszeit-Berechnungen mit der Exponentialfunktion für Pharmakokinetik und Radioaktivität durchführen",
+        "Halbwertszeit-Berechnungen mit Potenzen durchführen (Pharmakokinetik, Radioaktivität)",
         "Zahlen in wissenschaftlicher Notation schreiben und mit Zehnerpotenzen rechnen",
       ],
       sections: [
@@ -443,22 +398,16 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
             "a hoch n × a hoch m = a hoch (n+m); (a hoch n) hoch m = a hoch (n × m) — addieren vs. multiplizieren der Exponenten nicht verwechseln!",
         },
         {
-          heading: "Logarithmen — das Werkzeug für Exponenten und pH",
-          text: "log_a(x) = y bedeutet: Auf welchen Exponenten muss ich a heben, um x zu erhalten? Merksatz: Logarithmus ist der Exponent. Die drei Rechenregeln: Produkt ergibt Summe der Logs; Quotient ergibt Differenz der Logs; Potenz ergibt Faktor vor dem Log. pH = − lg[H+]: Bei pH 7 gilt [H+] = 10 hoch (−7) mol/L. Pro pH-Einheit Unterschied ändert sich [H+] um den Faktor 10. Henderson-Hasselbalch: pH = pKa + lg([A⁻]/[HA]) — verwendet die Quotientenregel direkt.",
-          merksatz:
-            "log(a × b) = log a + log b; log(a/b) = log a − log b; log(a hoch n) = n × log a. Logarithmus verwandelt Multiplikation in Addition.",
-        },
-        {
-          heading: "Halbwertszeit — Pharmakokinetik und Radioaktivität",
-          text: "N(t) = N0 × (1/2) hoch (t / T(1/2)) beschreibt radioaktiven Zerfall und Medikamentenabbau 1. Ordnung. Nach n Halbwertszeiten sind noch (1/2) hoch n der Ausgangsmenge vorhanden. Nach 5 T(1/2): noch ungefähr 3%; nach 10 T(1/2): unter 0,1%. Klinische Faustregel: Ein Medikament gilt nach 5 Halbwertszeiten als ausgewaschen. Digoxin (T(1/2) ungefähr 36 h) braucht 7,5 Tage zur Elimination; Amiodaron (T(1/2) ungefähr 40 Tage) sogar Monate. Diese Unterschiede erklären Dosierungsintervalle und Absetzzeiträume.",
-          merksatz:
-            "Nach n Halbwertszeiten: (1/2) hoch n der Ausgangsmenge. Nach 5 T(1/2): ungefähr 3%. Lambda = ln(2) / T(1/2) ungefähr 0,693 / T(1/2).",
-        },
-        {
           heading: "Gebrochene Exponenten und Wurzeln vereinfachen",
           text: "a hoch (m/n) = (n-te Wurzel aus a) hoch m — der Nenner des Exponenten ist der Wurzelindex, der Zähler ist der Exponent. Beispiel: 27 hoch (2/3) = (Kubikwurzel aus 27) hoch 2 = 3 hoch 2 = 9. Wurzeln vereinfachen: Größten quadratischen Teiler ausklammern. Wurzel aus 200 = Wurzel aus (100 × 2) = 10 × Wurzel aus 2. Wichtige Verbote: Die Wurzel einer Summe darf nicht aufgeteilt werden. Wurzel aus (a+b) ist ungleich Wurzel aus a + Wurzel aus b!",
           merksatz:
             "a hoch (m/n) = (n-te Wurzel aus a) hoch m. Wurzelregel: Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b erlaubt. Wurzel aus (a+b) ungleich Wurzel aus a + Wurzel aus b verboten!",
+        },
+        {
+          heading: "Halbwertszeit — Potenzen in der Pharmakokinetik",
+          text: "N(t) = N0 × (1/2) hoch (t / T(1/2)) beschreibt radioaktiven Zerfall und Medikamentenabbau 1. Ordnung. Nach n Halbwertszeiten sind noch (1/2) hoch n der Ausgangsmenge vorhanden. Nach 5 T(1/2): noch ungefähr 3%; nach 10 T(1/2): unter 0,1%. Klinische Faustregel: Ein Medikament gilt nach 5 Halbwertszeiten als ausgewaschen. Logarithmengesetze, pH und Henderson-Hasselbalch → siehe UK Logarithmusfunktionen (ma-5-04).",
+          merksatz:
+            "Nach n Halbwertszeiten: (1/2) hoch n der Ausgangsmenge. Nach 5 T(1/2): ungefähr 3%. Lambda = ln(2) / T(1/2) ungefähr 0,693 / T(1/2).",
         },
       ],
       merksätze: [
@@ -553,260 +502,263 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
     },
     {
       id: "ma-2-02",
-      title: "Prozent-, Bruch- und Schlussrechnung",
+      title: "Terme, Rechengesetze und Betragsgleichungen",
       stichworte: [
-        "Prozentrechnung",
-        "Grundwert",
-        "Prozentwert",
-        "Prozentsatz",
-        "Bruchrechnung",
-        "Kehrwert",
-        "Dreisatz",
-        "Direkter Dreisatz",
-        "Indirekter Dreisatz",
-        "Verhältnis",
-        "Kreuzprodukt",
-        "Verdünnungsreihe",
+        "Termumformung",
+        "Distributivgesetz",
+        "Kommutativgesetz",
+        "Assoziativgesetz",
+        "Ausklammern",
+        "Betrag",
+        "Betragsgleichung",
+        "Betragsungleichung",
+        "Faktorisierung",
+        "Vorzeichenregeln",
+        "Klammernregeln",
+        "Summenzeichen",
       ],
-      content: `**Idee:** Prozentrechnung, Bruchrechnung und Dreisatz sind drei eng verwandte Werkzeuge. **Prozent** = "je Hundert" (p/100); die Grundformel P = G × p/100 beantwortet alle drei Grundfragen. **Bruchrechnung** liefert das Handwerk für exaktes Rechnen mit Anteilen. **Dreisatz** löst Verhältnisaufgaben systematisch (direkt: mehr → mehr; indirekt: mehr → weniger).
-
-**Verfahren -- Schrittfolge:** (1) **Prozent:** P = G × p/100; umstellen nach G oder p. (2) **Brüche:** Addition über kgV; Division über Kehrwert. (3) **Dreisatz:** Auf 1 zurückführen, dann hochrechnen. (4) **Prozentuale Änderung:** (neu − alt)/alt × 100 %.
-
-**Typische Prüfungsfehler:** +50 % dann −50 % ≠ Ausgangswert (verschiedene Bezugsgrößen!). Bruchdivision: Kehrwert vergessen. Dreisatz: direkt vs. indirekt verwechselt. Prozentpunkte ≠ prozentuale Änderung.
+      content: `**Hinweis:** Grundlagen zu Bruchrechnung, Prozentrechnung und Dreisatz findest du in den entsprechenden Grundlagen-Kapiteln (ma-grund-01, ma-grund-02, ma-grund-03).
 
 ---
 
-## Prozentrechnung -- die drei Grundfragen (ausführlich)
+## Rechengesetze — Kommutativ, Assoziativ, Distributiv
 
-Prozent bedeutet wörtlich „je Hundert": p % = p/100. Alle Prozentaufgaben lassen sich auf **eine einzige Grundformel** zurückführen:
+Drei Gesetze bilden das Fundament jeder Termumformung. Wer sie verinnerlicht hat, vermeidet systematische Rechenfehler am MedAT.
 
-**P = G × p/100**
+**Kommutativgesetz (Vertauschungsgesetz):**
+- Addition: a + b = b + a
+- Multiplikation: a × b = b × a
+- Gilt **nicht** für Subtraktion und Division! 5 − 3 ≠ 3 − 5; 6/2 ≠ 2/6.
 
-wobei P = Prozentwert (der gesuchte oder gegebene Anteil), G = Grundwert (das Ganze, die Bezugsgröße) und p = Prozentsatz (die Zahl vor dem %-Zeichen).
+**Assoziativgesetz (Verknüpfungsgesetz):**
+- Addition: (a + b) + c = a + (b + c)
+- Multiplikation: (a × b) × c = a × (b × c)
+- Ermöglicht das Umklammern, um günstige Rechenreihenfolgen zu wählen.
 
-### Frage 1 -- Prozentwert gesucht (P = ?)
+**Distributivgesetz (Verteilungsgesetz):**
+- a × (b + c) = a × b + a × c (Ausmultiplizieren)
+- a × b + a × c = a × (b + c) (Ausklammern — die Umkehrung)
 
-P = G × p/100. Beispiel: 15 % von 320 = 320 × 0,15 = **48**. Medizinisches Beispiel: Ein Medikament hat eine Bioverfügbarkeit (Anteil, der ins Blut gelangt) von 40 %. Von 500 mg oral werden also 500 × 0,40 = **200 mg** resorbiert.
+Das Distributivgesetz ist das wichtigste Gesetz für Termumformungen: Es verbindet Multiplikation mit Addition und ist die Grundlage für Ausmultiplizieren, Ausklammern und Faktorisieren.
 
-### Frage 2 -- Grundwert gesucht (G = ?)
-
-G = P × 100/p. Beispiel: 36 sind 12 % von welcher Zahl? 36 × 100/12 = **300**. Medizinisches Beispiel: 60 Patienten entsprechen 15 % der Studiengruppe. Gesamtgruppe: 60 × 100/15 = **400 Patienten**.
-
-### Frage 3 -- Prozentsatz gesucht (p = ?)
-
-p = P/G × 100. Beispiel: 45 von 180 = 45/180 × 100 = **25 %**. Medizinisches Beispiel: Von 250 Proben sind 35 positiv. Positivrate: 35/250 × 100 = **14 %**.
-
-**Kopfrechenregel:** 10 % = G ÷ 10; 5 % = halbe 10 %; 1 % = G ÷ 100. Durch Kombinieren lassen sich viele Aufgaben im Kopf lösen: 15 % = 10 % + 5 %; 35 % = 3 × 10 % + 5 %.
-
-> **Merke:** Eine Formel, drei Fragen: P = G × p/100. Umstellen nach G: G = P × 100/p. Umstellen nach p: p = P/G × 100. Immer zuerst klären: Was ist der Grundwert?
+> **Merke:** Distributivgesetz vorwärts = Ausmultiplizieren: a(b+c) = ab + ac. Rückwärts = Ausklammern: ab + ac = a(b+c). Kommutativ- und Assoziativgesetz gelten NUR für Addition und Multiplikation, NICHT für Subtraktion und Division!
 
 ---
 
-## Prozentuale Veränderungen -- absolut vs. relativ
+## Vorzeichenregeln und Klammern
 
-Hier liegt eine der häufigsten MedAT-Fallen. Man unterscheidet zwei Arten der Änderung:
+**Vorzeichenregeln bei Multiplikation/Division:**
+- (+) × (+) = (+); (−) × (−) = (+)
+- (+) × (−) = (−); (−) × (+) = (−)
+- Merkhilfe: Gleiche Vorzeichen → positiv; verschiedene Vorzeichen → negativ.
 
-**Absolute Änderung:** Differenz der Werte in der jeweiligen Einheit. Beispiel: Blutdruck sinkt von 160 auf 120 mmHg → absolute Änderung = −40 mmHg.
+**Minusklammer auflösen:**
+- −(a + b − c) = −a − b + c (jedes Vorzeichen in der Klammer dreht sich um)
+- Typischer MedAT-Fehler: −(3x − 5) = −3x − 5 statt korrekt −3x + 5!
 
-**Relative Änderung:** (Differenz / Ausgangswert) × 100 %. Beim gleichen Beispiel: (−40/160) × 100 % = −25 %.
+**Klammer mal Klammer:**
+(a + b)(c + d) = ac + ad + bc + bd (jeder Term der ersten Klammer wird mit jedem der zweiten multipliziert).
+Sonderfall: (a + b)² = a² + 2ab + b² (→ binomische Formeln, siehe ma-2-03).
 
-**Prozentpunkte vs. prozentuale Änderung:** Wenn eine Wahlpartei von 40 % auf 30 % fällt, beträgt der Rückgang **10 Prozentpunkte** (absolute Differenz der Prozentwerte), aber die **relative Änderung** ist (−10/40) × 100 % = −25 %. Diese Unterscheidung wird am MedAT gezielt abgefragt.
-
-**Die Sequenz-Falle:** +50 % gefolgt von −50 % ergibt NICHT den Ausgangswert! Beispiel: 100 → +50 % → 150 → −50 % → **75** (nicht 100!). Der Grund: Die −50 % beziehen sich auf den **neuen** Wert 150, nicht auf den ursprünglichen Wert 100.
-
-Weiteres Beispiel: Ein Aktienkurs fällt um 20 % (von 100 auf 80). Um wieder auf 100 zu kommen, muss er um 20/80 × 100 = **25 %** steigen -- nicht um 20 %!
-
-> **Merke:** Sequenzielle Prozente: +50 %, dann −50 % ≠ 0 %, weil sich die Bezugsgröße ändert! Von 40 % auf 30 % = 10 Prozentpunkte absolut, aber 25 % relative Senkung.
-
----
-
-## Bruchrechnung -- ausführlich mit Beispielen
-
-### Kürzen und Erweitern
-
-Ein Bruch ändert seinen Wert nicht, wenn Zähler und Nenner mit derselben Zahl multipliziert (erweitern) oder durch dieselbe Zahl dividiert (kürzen) werden: 15/25 = 3/5 (beide durch 5 gekürzt).
-
-### Addition und Subtraktion
-
-Brüche können nur addiert werden, wenn sie **denselben Nenner** haben (gleichnamig). Strategie: Das **kgV** (kleinste gemeinsame Vielfache) der Nenner als gemeinsamen Nenner wählen.
-
-Beispiel: 1/6 + 1/4. kgV(6,4) = 12. Erweitern: 2/12 + 3/12 = **5/12**.
-
-Weiteres Beispiel: 5/8 − 1/3. kgV(8,3) = 24. Erweitern: 15/24 − 8/24 = **7/24**.
-
-### Multiplikation
-
-Zähler mal Zähler, Nenner mal Nenner: (a/b) × (c/d) = (a×c) / (b×d). Tipp: Vor dem Multiplizieren kreuzweise kürzen!
-
-Beispiel: 3/8 × 4/9. Kreuzweise kürzen: 3 und 9 (÷3), 4 und 8 (÷4) → 1/2 × 1/3 = **1/6**.
-
-### Division -- der Kehrwert-Trick
-
-Division durch einen Bruch = Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (a/b) × (d/c) = (a×d) / (b×c).
-
-Beispiel: (3/4) ÷ (9/16) = 3/4 × 16/9 = 48/36 = **4/3**.
-
-Medizinisches Beispiel: Eine Infusion läuft mit 3/4 Liter pro Stunde. Wie lange dauert es für 9/16 Liter? Zeit = Volumen / Rate = (9/16) ÷ (3/4) = 9/16 × 4/3 = 36/48 = **3/4 Stunde = 45 Minuten**.
-
-> **Merke:** Bruchdivision: IMMER mit dem Kehrwert multiplizieren! (a/b) ÷ (c/d) = (a×d) / (b×c). Vor der Multiplikation kreuzweise kürzen spart Arbeit.
-
-### Textaufgabe (Typ M)
-
-„Von einer Strecke sind 2/5 asphaltiert und 1/3 geschottert. Der Rest (4 km) ist ein Feldweg. Wie lang ist die Gesamtstrecke?"
-
-Lösung: Asphalt + Schotter = 2/5 + 1/3 = 6/15 + 5/15 = 11/15. Rest = 1 − 11/15 = 4/15. Also 4/15 × x = 4 km → x = 4 × 15/4 = **15 km**.
-
-Probe: 2/5 × 15 = 6 km (Asphalt); 1/3 × 15 = 5 km (Schotter); Rest = 15 − 6 − 5 = 4 km (Feldweg). Stimmt!
-
-> **Merke:** Mehrstufige Bruch-Textaufgaben: Erst alle bekannten Anteile addieren (gemeinsamer Nenner!), Rest bestimmen (1 − Summe), dann Gleichung aufstellen. Immer Probe machen!
+> **Merke:** Minus vor Klammer dreht ALLE Vorzeichen um: −(a − b) = −a + b. Häufigster Fehler: Das zweite Vorzeichen nicht umdrehen!
 
 ---
 
-## Dreisatz -- direkt und indirekt
+## Ausklammern und Faktorisieren
 
-Der Dreisatz löst Verhältnisaufgaben in drei Schritten: (1) Gegebenes Paar notieren, (2) auf 1 Einheit zurückrechnen, (3) auf die gesuchte Menge hochrechnen.
+Ausklammern ist die Umkehroperation des Ausmultiplizierens und eine der wichtigsten Vereinfachungstechniken.
 
-### Direkter Dreisatz (proportional)
+**Schritt 1:** Gemeinsamen Faktor aller Summanden identifizieren.
+**Schritt 2:** Faktor vor die Klammer schreiben, Rest in die Klammer.
+**Schritt 3:** Probe durch Ausmultiplizieren.
 
-Mehr von A → mehr von B. Die Größen ändern sich in **dieselbe Richtung**.
+Beispiele:
+- 6x + 15 = 3(2x + 5) — gemeinsamer Faktor 3
+- 4x² − 8x = 4x(x − 2) — gemeinsamer Faktor 4x
+- 12ab + 18a²b − 6ab² = 6ab(2 + 3a − b) — gemeinsamer Faktor 6ab
 
-Beispiel: 3 Hefte kosten 7,50 €. Was kosten 5 Hefte?
-- 3 Hefte → 7,50 €
-- 1 Heft → 7,50/3 = 2,50 €
-- 5 Hefte → 2,50 × 5 = **12,50 €**
+**Medizinisches Beispiel:** Gesamtkosten K = n × p + n × v (n Packungen, p Produktpreis, v Versandkosten je Packung). Ausklammern: K = n(p + v). So sieht man sofort: Die Kosten pro Packung betragen (p + v).
 
-Medizinisches Beispiel: 2 Tabletten enthalten 500 mg Wirkstoff. Wie viel enthalten 7 Tabletten?
-- 1 Tablette → 250 mg
-- 7 Tabletten → 250 × 7 = **1750 mg**
-
-### Indirekter Dreisatz (antiproportional)
-
-Mehr von A → weniger von B. Das **Produkt** A × B bleibt konstant.
-
-Beispiel: 6 Arbeiter brauchen 4 Stunden. Wie lange brauchen 4 Arbeiter?
-- 6 × 4 = 24 (Arbeitsstunden gesamt, konstant)
-- 1 Arbeiter → 24 Stunden
-- 4 Arbeiter → 24/4 = **6 Stunden**
-
-Medizinisches Beispiel: Eine Lösung mit Konzentration 5 % braucht 200 ml. Welches Volumen braucht man bei 8 %?
-- 5 × 200 = 1000 (Wirkstoffmenge in willkürlichen Einheiten, konstant)
-- 8 % → 1000/8 = **125 ml**
-
-> **Merke:** Erkennungsfrage: „Wird B größer oder kleiner, wenn A größer wird?" Größer = direkter Dreisatz (proportional). Kleiner = indirekter Dreisatz (antiproportional, Produkt konstant).
+> **Merke:** Ausklammern-Checkliste: (1) ggT der Koeffizienten bestimmen, (2) kleinste Potenz jeder gemeinsamen Variable, (3) Probe durch Rückmultiplikation. Ausklammern vereinfacht Terme und macht Zusammenhänge sichtbar.
 
 ---
 
-## Verdünnungsreihen und Mischungsrechnung
+## Betrag — Abstand auf der Zahlengeraden
 
-**Verdünnungsreihe:** Ausgangskonzentration × Ausgangsvolumen = Endkonzentration × Endvolumen (c1 × V1 = c2 × V2). Dies ist ein indirekter Dreisatz -- mehr Volumen bedeutet weniger Konzentration.
+Der **Betrag** |a| gibt den Abstand der Zahl a von Null auf der Zahlengeraden an. Er ist immer ≥ 0.
 
-Beispiel: 50 ml einer 10 %-Lösung sollen auf 2 % verdünnt werden. V2 = (c1 × V1)/c2 = (10 × 50)/2 = **250 ml** (also 200 ml Lösungsmittel zugeben).
+**Definition:**
+- |a| = a, falls a ≥ 0
+- |a| = −a, falls a < 0
 
-**Mischungskreuz:** Zwei Lösungen (c1, c2) werden gemischt zu einer Zielkonzentration cZ. Die Mengenverhältnisse berechnen sich als: m1/m2 = |c2 − cZ| / |c1 − cZ|.
+Beispiele: |5| = 5; |−3| = 3; |0| = 0.
 
-> **Merke:** Verdünnungsformel c1 × V1 = c2 × V2 ist ein indirekter Dreisatz. Mischungskreuz: Differenzen zur Zielkonzentration bilden das Mengenverhältnis.`,
+**Rechenregeln:**
+- |a × b| = |a| × |b| (Betrag des Produkts = Produkt der Beträge)
+- |a/b| = |a| / |b| (für b ≠ 0)
+- |a + b| ≤ |a| + |b| (**Dreiecksungleichung** — fundamentale Abschätzung)
+- |a − b| = Abstand zwischen a und b auf der Zahlengeraden
+
+> **Merke:** |x − a| = d bedeutet: x hat den Abstand d von a. Das ist die geometrische Interpretation des Betrags und der Schlüssel zu Betragsgleichungen.
+
+---
+
+## Betragsgleichungen und -ungleichungen
+
+**Betragsgleichung |x − a| = d** hat zwei Lösungen: x = a + d und x = a − d (sofern d ≥ 0; für d < 0 keine Lösung).
+
+Beispiel: |x − 3| = 5. Lösung: x = 3 + 5 = 8 oder x = 3 − 5 = −2.
+
+**Allgemeines Lösungsverfahren für |f(x)| = c (c ≥ 0):**
+1. Fall 1: f(x) = c → lösen
+2. Fall 2: f(x) = −c → lösen
+3. Beide Lösungsmengen vereinigen
+
+**Betragsungleichung |x − a| < d** (d > 0): a − d < x < a + d (offenes Intervall um a).
+
+**Betragsungleichung |x − a| > d** (d > 0): x < a − d oder x > a + d (Komplement).
+
+**Medizinisches Beispiel:** Ein Laborwert soll höchstens 10 % vom Sollwert S abweichen: |Messwert − S| ≤ 0,1 × S. Das ergibt: 0,9 S ≤ Messwert ≤ 1,1 S — der klinische Toleranzbereich.
+
+Klinisch: Der pH-Wert darf höchstens 0,05 vom Normalwert 7,40 abweichen → |pH − 7,40| ≤ 0,05 → 7,35 ≤ pH ≤ 7,45.
+
+> **Merke:** |f(x)| = c lösen: Zwei Fälle aufstellen (f(x) = c und f(x) = −c). |x−a| < d → Intervall (a−d, a+d). |x−a| > d → Komplement.
+
+---
+
+## Summen- und Produktzeichen
+
+Das **Summenzeichen Σ** (griech. Sigma) ist eine Kurzschreibweise für Summen:
+
+Σ(i=1 bis n) aᵢ = a₁ + a₂ + ... + aₙ
+
+Beispiel: Σ(i=1 bis 4) i² = 1 + 4 + 9 + 16 = 30.
+
+**Wichtige Summenformeln:**
+- Σ(i=1 bis n) i = n(n+1)/2 (Gaußsche Summenformel, Formel für die Summe der ersten n natürlichen Zahlen)
+- Σ(i=1 bis n) i² = n(n+1)(2n+1)/6
+
+**Mittelwert:** x̄ = (1/n) × Σ(i=1 bis n) xᵢ — der arithmetische Mittelwert als Summe geteilt durch Anzahl.
+
+In der Medizin: Mittlerer Blutdruck, mittlere Herzfrequenz, Durchschnittswerte in Studien — alles über Σ definiert.
+
+## Rechenbeispiele
+
+**Beispiel 1 — Ausklammern in der Dosierung:**
+Gesamtwirkstoff bei n Dosen à d mg mit r % Resorption: W = n × d × r/100. Für 3 Dosen à 250 mg bei 80 % Resorption: W = 3 × 250 × 0,8 = **600 mg**.
+
+**Beispiel 2 — Betragsgleichung:**
+|2x + 1| = 7. Fall 1: 2x + 1 = 7 → x = 3. Fall 2: 2x + 1 = −7 → x = −4. Probe: |2(3)+1| = |7| = 7 ✓; |2(−4)+1| = |−7| = 7 ✓. Lösungsmenge: {−4, 3}.
+
+**Beispiel 3 — Gaußsche Summenformel:**
+Wie viele Injektionen gibt ein Arzt in einer Impfkampagne, wenn er am 1. Tag 1, am 2. Tag 2, ..., am 20. Tag 20 Impfungen verabreicht? Σ(i=1 bis 20) i = 20 × 21/2 = **210** Impfungen.`,
       lernziele: [
-        "Prozentrechnung sicher anwenden (Grundwert, Prozentwert, Prozentsatz) und typische Fallen vermeiden",
-        "Brüche addieren, subtrahieren, multiplizieren und dividieren (kgV-Nenner, Kehrwert-Trick)",
-        "Dreisatz direkt (proportional) und indirekt (umgekehrt proportional) aufstellen und lösen",
-        "Verdünnungsformel c₁V₁ = c₂V₂ als indirekten Dreisatz anwenden",
+        "Die drei Rechengesetze (kommutativ, assoziativ, distributiv) sicher anwenden und typische Fehlschlüsse vermeiden",
+        "Terme durch Ausklammern und Faktorisieren vereinfachen",
+        "Betragsgleichungen und -ungleichungen durch Fallunterscheidung lösen",
+        "Das Summenzeichen Σ lesen und einfache Summenformeln anwenden",
       ],
       sections: [
         {
-          heading: "Prozentrechnung — Grundwert, Prozentwert, Prozentsatz",
-          text: "Prozent (%) bedeutet 'von Hundert': p% = p/100. Drei Grundaufgaben: Prozentwert W = G × p/100, Prozentsatz p = W/G × 100, Grundwert G = W/(p/100). Häufigster Fehler: +50% dann −50% ergibt NICHT 0%, sondern −25% (verschiedene Bezugsgrößen!). Relative Änderung immer auf den Ausgangswert beziehen.",
+          heading: "Rechengesetze — Kommutativ, Assoziativ, Distributiv",
+          text: "Kommutativ- und Assoziativgesetz gelten für Addition und Multiplikation, NICHT für Subtraktion und Division. Das Distributivgesetz a(b+c) = ab+ac ist die Grundlage für Ausmultiplizieren (vorwärts) und Ausklammern (rückwärts). Typische MedAT-Falle: Minusklammer nicht korrekt auflösen — −(a−b) = −a+b (nicht −a−b).",
           merksatz:
-            "+50% dann −50% ≠ 0%! Prozentuale Änderungen immer auf den AUSGANGSWERT beziehen.",
+            "Distributivgesetz: a(b+c) = ab + ac. Minusklammer: −(a−b) = −a+b. Kommutativgesetz gilt NICHT für Subtraktion!",
         },
         {
-          heading: "Bruchrechnung — kgV-Nenner und Kehrwert-Trick",
-          text: "Addition/Subtraktion: gleichen Nenner herstellen (kgV), Zähler addieren/subtrahieren. Multiplikation: Zähler×Zähler / Nenner×Nenner. Division: mit dem Kehrwert multiplizieren. Kürzen vor dem Multiplizieren spart Rechenaufwand.",
-          merksatz: "Division durch einen Bruch = Multiplikation mit dem Kehrwert.",
+          heading: "Betrag und Betragsgleichungen",
+          text: "|a| = Abstand von a zu Null. Betragsgleichung |f(x)| = c: Zwei Fälle aufstellen (f(x) = c und f(x) = −c), Lösungsmengen vereinigen. Betragsungleichung |x−a| < d ergibt Intervall (a−d, a+d). Klinisch: Toleranzbereich eines Laborwerts = Betragsungleichung.",
+          merksatz:
+            "|f(x)| = c → zwei Fälle: f(x) = c oder f(x) = −c. |x−a| < d → Intervall (a−d, a+d).",
         },
         {
-          heading: "Dreisatz und Verdünnung",
-          text: "Direkter Dreisatz: doppelte Menge → doppelter Preis (proportional). Indirekter Dreisatz: doppelt so viele Arbeiter → halbe Zeit (Produkt konstant). Verdünnungsformel: c₁×V₁ = c₂×V₂ ist ein indirekter Dreisatz für Konzentrationen. Wichtig in der Medizin: Infusionsraten, Medikamentenverdünnung.",
-          merksatz: "c₁V₁ = c₂V₂ — Verdünnungsformel als indirekter Dreisatz.",
+          heading: "Ausklammern und Faktorisieren",
+          text: "Ausklammern = Distributivgesetz rückwärts. Gemeinsamen Faktor aller Summanden identifizieren (ggT der Koeffizienten und kleinste Potenz gemeinsamer Variablen), vor die Klammer schreiben, Rest in die Klammer. Probe durch Rückmultiplizieren. Faktorisieren erleichtert das Kürzen von Brüchen und das Erkennen von Nullstellen.",
+          merksatz:
+            "Ausklammern: ggT aller Koeffizienten finden, kleinste Variable-Potenz nehmen, Probe durch Rückmultiplizieren.",
         },
       ],
       merksätze: [
-        "Prozentwert W = G × p/100; Prozentsatz p = W/G × 100; Grundwert G = W/(p/100).",
-        "+50 % dann −50 % ≠ 0 %! Sequenzielle Prozente: Bezugsgröße ändert sich!",
-        "Prozentpunkte = absolute Differenz der Prozentwerte; prozentuale Änderung = relativ zum Ausgangswert.",
-        "Bruchdivision: mit dem Kehrwert multiplizieren! (a/b) ÷ (c/d) = (a×d) / (b×c).",
-        "Bruchaddition: erst gleichnamig machen (kgV der Nenner), dann Zähler addieren.",
-        "Direkter Dreisatz: doppelte Menge → doppelter Preis (proportional).",
-        "Indirekter Dreisatz: doppelt so viele Arbeiter → halbe Zeit (Produkt konstant).",
-        "Verdünnungsformel: c₁ × V₁ = c₂ × V₂ — ein indirekter Dreisatz.",
-        "Mischungskreuz: m₁/m₂ = |c₂ − cZ| / |c₁ − cZ|.",
+        "Distributivgesetz: a(b+c) = ab + ac — vorwärts ausmultiplizieren, rückwärts ausklammern.",
+        "Minus vor Klammer dreht ALLE Vorzeichen: −(a − b + c) = −a + b − c.",
+        "Gleiche Vorzeichen → positiv; verschiedene Vorzeichen → negativ.",
+        "Betrag |a| = Abstand von Null. Immer ≥ 0. |a×b| = |a|×|b|.",
+        "Dreiecksungleichung: |a + b| ≤ |a| + |b|.",
+        "Betragsgleichung: |f(x)| = c → zwei Fälle (f(x) = c und f(x) = −c).",
+        "|x − a| < d → offenes Intervall (a−d, a+d).",
+        "Gaußsche Summenformel: 1 + 2 + ... + n = n(n+1)/2.",
+        "Ausklammern: ggT der Koeffizienten × kleinste gemeinsame Variablenpotenz.",
       ],
       altfrage: {
         question:
-          "Ein Medikament wird als 5 %-ige Lösung geliefert. Für eine Infusion werden 250 ml einer 2 %-igen Lösung benötigt. Wie viel ml der Stammlösung und wie viel ml Lösungsmittel werden gebraucht?",
+          "Ein Laborwert soll maximal 5 Einheiten vom Sollwert 120 mg/dL abweichen. Formulieren Sie dies als Betragsungleichung und geben Sie den Toleranzbereich an. Wie viele ganzzahlige Werte liegen im Toleranzbereich?",
         answer:
-          "Verdünnungsformel: c₁ × V₁ = c₂ × V₂. Einsetzen: 5 % × V₁ = 2 % × 250 ml. V₁ = (2 × 250) / 5 = 100 ml Stammlösung. Lösungsmittel: 250 − 100 = 150 ml. Probe: 100 ml × 5 % = 500 Einheiten Wirkstoff; 500 / 250 ml = 2 %. Korrekt. Dies ist ein typischer indirekter Dreisatz: mehr Volumen → geringere Konzentration.",
+          "Betragsungleichung: |x − 120| ≤ 5. Auflösen: −5 ≤ x − 120 ≤ 5. Addition von 120: 115 ≤ x ≤ 125. Toleranzbereich: [115, 125]. Ganzzahlige Werte: 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125 = 11 Werte. Allgemein: |x − a| ≤ d hat (2d + 1) ganzzahlige Lösungen (bei ganzzahligem a und d). In der klinischen Labormedizin werden Referenzbereiche häufig als Toleranzintervalle um einen Mittelwert angegeben.",
       },
       klinischerBezug:
-        "Prozentrechnung und Dreisatz sind im medizinischen Alltag allgegenwärtig: Medikamentendosierungen (mg/kg), Infusionsraten (ml/h), Verdünnungsreihen im Labor (Serumverdünnungen für Antikörpertiter), Mischungsrechnungen in der Apotheke und Konzentrationsumrechnungen (g/l ↔ %). Die Verdünnungsformel c₁V₁ = c₂V₂ wird täglich in Klinik und Labor angewendet.",
+        "Rechengesetze und Termumformungen sind in der Medizin allgegenwärtig: Pharmakokinetische Formeln umstellen (Clearance = Dosis/AUC), Laborwert-Toleranzbereiche als Betragsungleichungen (z.B. |pH − 7,40| ≤ 0,05 → pH 7,35–7,45), Dosisberechnungen ausklammern (Gesamtdosis = n × Einzeldosis × Bioverfügbarkeit). Die Gaußsche Summenformel erscheint bei kumulativen Dosierungsschemata.",
       selfTest: [
         {
-          question:
-            "Ein Laborwert steigt von 80 mg/dl auf 100 mg/dl. Um wie viel Prozent ist er gestiegen?",
-          options: ["25 %", "20 %", "20 Prozentpunkte", "80 %", "125 %"],
+          question: "Was ergibt −(3x − 5) + 2(x + 1)?",
+          options: ["−x + 7", "−x + 3", "−5x + 7", "x + 7", "−x − 3"],
           correctIndex: 0,
           explanation:
-            "Prozentuale Änderung = (Neuwert − Altwert) / Altwert × 100 % = (100 − 80) / 80 × 100 % = 20/80 × 100 % = 25 %. Häufiger Fehler: 20 % (absolut 20 Einheiten, aber die Bezugsgröße ist 80, nicht 100).",
+            "Schritt 1: −(3x − 5) = −3x + 5 (Minusklammer: BEIDE Vorzeichen drehen). Schritt 2: 2(x + 1) = 2x + 2 (Distributivgesetz). Schritt 3: −3x + 5 + 2x + 2 = −x + 7. Häufiger Fehler: −(3x − 5) = −3x − 5 (Vorzeichen von −5 nicht umgedreht).",
           hints: [
-            "Prozentuale Änderung = Differenz / Ausgangswert × 100 %.",
-            "Ausgangswert ist 80, nicht 100!",
+            "Minusklammer auflösen: −(3x − 5) = −3x + ?",
+            "Dann zusammenfassen: (−3x + 2x) + (5 + 2) = ?",
           ],
           difficulty: 1,
-          tags: ["prozentrechnung", "relative-änderung"],
+          tags: ["termumformung", "klammern", "vorzeichen"],
         },
         {
-          question: "Was ergibt 5/8 − 1/3?",
-          options: ["7/24", "4/5", "1/6", "15/24 − 8/24", "2/5"],
+          question: "Lösen Sie: |2x − 6| = 10. Welche Lösungsmenge ergibt sich?",
+          options: ["{−2, 8}", "{8}", "{−2}", "{−8, 2}", "Keine Lösung"],
           correctIndex: 0,
           explanation:
-            "kgV(8, 3) = 24. Erweitern: 5/8 = 15/24; 1/3 = 8/24. Differenz: 15/24 − 8/24 = 7/24. Option D zeigt zwar den Zwischenschritt, ist aber nicht vereinfacht und daher nicht die korrekte Antwort.",
-          hints: ["Gemeinsamer Nenner: kgV(8, 3) = 24.", "5/8 = 15/24 und 1/3 = 8/24."],
-          difficulty: 1,
-          tags: ["bruchrechnung", "subtraktion", "kgV"],
-        },
-        {
-          question: "3 Tabletten enthalten 750 mg Wirkstoff. Wie viel mg enthalten 7 Tabletten?",
-          options: ["1750 mg", "2100 mg", "1500 mg", "250 mg", "2250 mg"],
-          correctIndex: 0,
-          explanation:
-            "Direkter Dreisatz: 3 Tabletten → 750 mg. 1 Tablette → 750/3 = 250 mg. 7 Tabletten → 250 × 7 = 1750 mg. Proportional: mehr Tabletten → mehr Wirkstoff.",
-          hints: ["Erst auf 1 Einheit zurückrechnen: 750/3 = ?", "Dann hochrechnen: 250 × 7 = ?"],
-          difficulty: 1,
-          tags: ["dreisatz", "direkt", "proportional"],
-        },
-        {
-          question:
-            "50 ml einer 10 %-Lösung sollen auf 2 % verdünnt werden. Welches Gesamtvolumen wird benötigt?",
-          options: ["250 ml", "200 ml", "100 ml", "500 ml", "125 ml"],
-          correctIndex: 0,
-          explanation:
-            "Verdünnungsformel: c₁ × V₁ = c₂ × V₂. 10 × 50 = 2 × V₂. V₂ = 500/2 = 250 ml. Man muss also 200 ml Lösungsmittel zu den 50 ml Stammlösung geben. Gefragt war das Gesamtvolumen: 250 ml.",
-          hints: ["c₁ × V₁ = c₂ × V₂ → V₂ = (c₁ × V₁) / c₂.", "V₂ = (10 × 50) / 2 = ?"],
-          difficulty: 2,
-          tags: ["verdünnung", "dreisatz", "indirekt"],
-        },
-        {
-          question:
-            "Ein Aktienkurs fällt um 20 %. Um wie viel Prozent muss er steigen, um den Ausgangswert zu erreichen?",
-          options: ["25 %", "20 %", "22 %", "80 %", "120 %"],
-          correctIndex: 0,
-          explanation:
-            "Ausgangswert 100. Nach −20 %: 80. Benötigter Anstieg: 20/80 × 100 % = 25 %. Typische Falle: Man denkt, 20 % Rückgang erfordert 20 % Anstieg — falsch, weil sich die Bezugsgröße geändert hat (jetzt 80 statt 100).",
+            "Zwei Fälle: Fall 1: 2x − 6 = 10 → 2x = 16 → x = 8. Fall 2: 2x − 6 = −10 → 2x = −4 → x = −2. Probe: |2(8) − 6| = |10| = 10 ✓; |2(−2) − 6| = |−10| = 10 ✓. Lösungsmenge: {−2, 8}.",
           hints: [
-            "Neuer Wert nach Rückgang: 100 × 0,8 = 80.",
-            "Steigerung von 80 auf 100: Differenz/neuer Ausgangswert = 20/80 = ?",
+            "Betragsgleichung → zwei Fälle: 2x − 6 = 10 und 2x − 6 = −10.",
+            "Jeden Fall separat nach x lösen.",
           ],
           difficulty: 2,
-          tags: ["prozentrechnung", "sequenzielle-prozente", "falle"],
+          tags: ["betragsgleichung", "fallunterscheidung", "algebra"],
+        },
+        {
+          question: "Klammern Sie aus: 12x³ − 8x² + 4x. Was ist der gemeinsame Faktor?",
+          options: ["4x", "4x²", "2x", "4", "x"],
+          correctIndex: 0,
+          explanation:
+            "ggT der Koeffizienten: ggT(12, 8, 4) = 4. Kleinste x-Potenz: x¹. Gemeinsamer Faktor: 4x. Ergebnis: 4x(3x² − 2x + 1). Probe: 4x × 3x² = 12x³; 4x × (−2x) = −8x²; 4x × 1 = 4x ✓.",
+          hints: [
+            "ggT der Koeffizienten 12, 8, 4 bestimmen.",
+            "Kleinste Potenz von x in allen Termen finden.",
+          ],
+          difficulty: 1,
+          tags: ["ausklammern", "faktorisierung", "terme"],
+        },
+        {
+          question: "Welche Werte erfüllen |x − 5| < 3?",
+          options: ["2 < x < 8", "x < 2 oder x > 8", "−3 < x < 3", "x = 2 oder x = 8", "5 < x < 8"],
+          correctIndex: 0,
+          explanation:
+            "|x − 5| < 3 bedeutet: Der Abstand von x zu 5 ist kleiner als 3. Auflösen: −3 < x − 5 < 3. Addition von 5: 2 < x < 8. Lösungsmenge: das offene Intervall (2, 8). Geometrisch: alle Punkte auf der Zahlengeraden, die näher als 3 Einheiten an 5 liegen.",
+          hints: [
+            "|x − a| < d ergibt das Intervall (a − d, a + d).",
+            "Hier: a = 5, d = 3. Also (5 − 3, 5 + 3) = ?",
+          ],
+          difficulty: 2,
+          tags: ["betragsungleichung", "intervall", "algebra"],
+        },
+        {
+          question: "Berechne: Σ(i=1 bis 10) i mit der Gaußschen Summenformel.",
+          options: ["55", "50", "100", "45", "110"],
+          correctIndex: 0,
+          explanation:
+            "Gaußsche Summenformel: n(n+1)/2 = 10 × 11/2 = 110/2 = 55. Probe: 1+2+3+4+5+6+7+8+9+10 = 55. Die Formel stammt von Gauß, der als Schüler die Paare (1+10, 2+9, ...) bildete: 5 Paare à 11 = 55.",
+          hints: ["Formel: n(n+1)/2 mit n = 10.", "10 × 11 = 110. Dann 110/2 = ?"],
+          difficulty: 1,
+          tags: ["summenzeichen", "gauss", "algebra"],
         },
       ],
     },

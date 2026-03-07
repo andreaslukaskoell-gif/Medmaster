@@ -25,6 +25,8 @@ export const bioKapGenetik: Kapitel = {
 
 > **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
 
+{{IMAGE}}
+
 ---
 
 ## Gen: funktionelle Einheit auf der DNA
@@ -170,6 +172,8 @@ Ein metaphasisches (in der Metaphase befindliches) Chromosom (in der Zellteilung
 
 > **Merke:** Zentromer verbindet die beiden Schwesterchromatiden; p-Arm = kurz, q-Arm = lang; Telomere schützen die Enden.
 
+{{IMAGE}}
+
 ---
 
 ## Autosomen und Gonosomen
@@ -301,6 +305,8 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
 Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selbst. In der **S-Phase** wird die DNA verdoppelt; danach hat jede Chromosom zwei Schwesterchromatiden. **Diploid (2n)** bedeutet: zwei Chromosomensätze (beim Menschen 2n = 46). **Haploid (n)** bedeutet: ein Chromosomensatz (beim Menschen n = 23). Körperzellen sind diploid; Keimzellen müssen haploid sein, damit nach der Befruchtung (Eizelle + Spermium) wieder 2n = 46 entsteht.
 
 > **Merke:** Diploid (2n) = zwei Sätze; haploid (n) = ein Satz. Mensch: 2n = 46 in Körperzellen, n = 23 in Keimzellen.
+
+{{IMAGE}}
 
 ---
 
@@ -470,6 +476,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, so sind alle Nachkommen der **F₁-Generation** (erste Filialgeneration) **uniform** — gleicher Genotyp und gleicher Phänotyp. Beispiel: AA (rot) × aa (weiß) → alle F₁ sind **Aa** (rot, wenn A dominant). Die F₁ ist also **mischerbig (heterozygot)** und zeigt das dominante Merkmal.
 
 > **Merke:** 1. Mendelsche Regel: Homozygote Eltern (AA × aa) → F₁ zu 100 % uniform heterozygot (Aa).
+
+{{IMAGE}}
 
 ---
 
@@ -947,6 +955,8 @@ Da jeder Mensch diploid ist, trägt er genau **zwei** dieser drei Allele. Daraus
 
 > **Merke:** Kodominanz (AB0): Beide Allele werden vollständig exprimiert (A UND B sichtbar). Intermediär: Mischphänotyp. I^A und I^B dominant über i. Sechs Genotypen → vier Phänotypen.
 
+{{IMAGE}}
+
 **Isoagglutinine (natürliche Antikörper):** Im Serum befinden sich Antikörper gegen die Antigene, die man selbst NICHT hat. Blutgruppe A hat Anti-B; Blutgruppe B hat Anti-A; Blutgruppe 0 hat Anti-A und Anti-B; Blutgruppe AB hat keine Antikörper. Diese Regel ist die Grundlage für die Transfusionsmedizin.
 
 ---
@@ -1106,6 +1116,8 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
 
 > **Merke:** Genmutation = Änderung der DNA-Sequenz eines Gens; Punktmutation (Austausch) vs. Frameshift (Einfügung/Deletion); Nonsense = Stopp-Codon.
 
+{{IMAGE}}
+
 ---
 
 ## Chromosomenmutation
@@ -1244,6 +1256,8 @@ Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Sy
 **Genexpression** = die Gesamtheit aller Schritte, durch die die Information eines Gens in ein funktionelles Produkt (meist ein Protein) umgesetzt wird. Ein Gen, das gerade abgelesen wird, ist "exprimiert"; ein stillgelegtes Gen ist "reprimiert".
 
 > **Merke:** DNA → (Transkription) → mRNA → (Translation) → Protein. Genexpression = Umsetzung der genetischen Information in ein Produkt. Die DNA bleibt als Originalspeicher im Kern erhalten.
+
+{{IMAGE}}
 
 ---
 

@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import { HelpCircle } from "lucide-react";
 import type { Unterkapitel, SelfTestQuestion } from "@/data/bmsKapitel/types";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
+import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { extractKontrollfragen } from "@/utils/parseKontrollfragen";
 import {
   processTextForSmartLinks,
@@ -332,10 +333,10 @@ export function SubchapterContent({
   function renderSectionContent(text: string): ReactNode {
     if (!text.trim()) return null;
 
-    // Split on {{DIAGRAM}} (uses uk.diagram) and {{DIAGRAM:specific-type}} markers
-    const diagramPattern = /\{\{DIAGRAM(?::([a-z0-9-]+))?\}\}/g;
-    const hasAnyDiagram = diagramPattern.test(text);
-    if (!hasAnyDiagram) {
+    // Split on {{DIAGRAM}}, {{DIAGRAM:specific-type}}, and {{IMAGE}} markers
+    const placeholderPattern = /\{\{DIAGRAM(?::([a-z0-9-]+))?\}\}|\{\{IMAGE\}\}/g;
+    const hasAnyPlaceholder = placeholderPattern.test(text);
+    if (!hasAnyPlaceholder) {
       return (
         <MarkdownContent
           text={text}
@@ -346,13 +347,13 @@ export function SubchapterContent({
     }
 
     // Reset lastIndex after test()
-    diagramPattern.lastIndex = 0;
+    placeholderPattern.lastIndex = 0;
     const parts: ReactNode[] = [];
     let lastIndex = 0;
     let match: RegExpExecArray | null;
     let partKey = 0;
 
-    while ((match = diagramPattern.exec(text)) !== null) {
+    while ((match = placeholderPattern.exec(text)) !== null) {
       const before = text.slice(lastIndex, match.index);
       if (before.trim()) {
         parts.push(
@@ -365,15 +366,38 @@ export function SubchapterContent({
         );
         partKey++;
       }
-      // match[1] is the specific type from {{DIAGRAM:type}}, or undefined for {{DIAGRAM}}
-      const diagramType = match[1] || uk.diagram;
-      if (diagramType) {
-        parts.push(
-          <div key={`diag-${partKey}`} className="content-svg-wrap">
-            <DiagramSVG type={diagramType} />
-          </div>
-        );
-        partKey++;
+
+      if (match[0] === "{{IMAGE}}") {
+        // Render the UK imageUrl inline where it fits in the text
+        if (uk.imageUrl) {
+          parts.push(
+            <figure key={`img-${partKey}`} className="my-4 mx-auto max-w-md">
+              <ImageWithFallback
+                src={uk.imageUrl}
+                alt={uk.imageCaption || uk.title}
+                containerClassName="rounded-lg overflow-hidden shadow-sm border border-[var(--border)]"
+                lightbox
+              />
+              {uk.imageCaption && (
+                <figcaption className="mt-2 text-center text-xs text-[var(--text-muted)] italic">
+                  {uk.imageCaption}
+                </figcaption>
+              )}
+            </figure>
+          );
+          partKey++;
+        }
+      } else {
+        // {{DIAGRAM}} or {{DIAGRAM:type}}
+        const diagramType = match[1] || uk.diagram;
+        if (diagramType) {
+          parts.push(
+            <div key={`diag-${partKey}`} className="content-svg-wrap">
+              <DiagramSVG type={diagramType} />
+            </div>
+          );
+          partKey++;
+        }
       }
       lastIndex = match.index + match[0].length;
     }

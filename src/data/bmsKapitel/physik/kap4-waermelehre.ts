@@ -858,7 +858,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "Isotherm + ideales Gas: ΔU = 0 → Q = −W (Wärme = negative Arbeit des Systems).",
         "ATP-Wirkungsgrad ≈ 38 % — restliche 62 % werden als Körperwärme abgegeben.",
         "Lebewesen verletzen den 2. Hauptsatz nicht: Sie sind offene Systeme, die Entropie exportieren.",
-        "Drittes Hauptsatz: Bei T = 0 K ist S = 0 (perfekter Kristall) — 0 K nicht erreichbar.",
+        "Dritter Hauptsatz: Bei T = 0 K ist S = 0 (perfekter Kristall) — 0 K nicht erreichbar.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -1144,8 +1144,8 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
         {
           question:
             "Ein ideales Gas bei 27 °C und 2 bar wird isochor auf 127 °C erhitzt. Welcher Druck stellt sich ein?",
-          options: ["3 bar", "2,67 bar", "4 bar", "1,5 bar", "2 bar"],
-          correctIndex: 1,
+          options: ["2,67 bar", "3 bar", "4 bar", "1,5 bar", "2 bar"],
+          correctIndex: 0,
           explanation:
             "Bei isochorer (V = const) Zustandsänderung gilt: p₁/T₁ = p₂/T₂ (aus pV = nRT mit V, n = const). T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. Also p₂ = p₁ × T₂/T₁ = 2 bar × 400/300 = 2 × 4/3 ≈ 2,67 bar. Wichtig: Temperaturen müssen in Kelvin eingesetzt werden!",
           hints: [
@@ -1158,8 +1158,8 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
         {
           question:
             "Wie viel Energie ist nötig, um 200 g Eis (0 °C) vollständig zu Wasser (0 °C) zu schmelzen? (L_Schmelz = 334 kJ/kg)",
-          options: ["334 J", "66 800 J", "334 000 J", "1670 J", "33 400 J"],
-          correctIndex: 1,
+          options: ["334 J", "334 000 J", "66 800 J", "1670 J", "33 400 J"],
+          correctIndex: 2,
           explanation:
             "Die Schmelzwärme berechnet sich mit Q = m · L_f = 0,2 kg × 334 000 J/kg = 66 800 J = 66,8 kJ. Während des Schmelzens bleibt die Temperatur bei 0 °C konstant — die gesamte Energie geht in das Aufbrechen der Wasserstoffbrücken im Eiskristall. Erst danach, wenn alles Eis geschmolzen ist, kann die Temperatur des Wassers steigen.",
           hints: [
@@ -1174,12 +1174,12 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
             "Ein Taucher atmet in 30 m Tiefe Druckluft. Der N₂-Partialdruck in seinem Blut steigt auf das Vierfache des Normalwerts. Warum darf er nicht sofort auftauchen?",
           options: [
             "Weil der Auftrieb zu groß wäre",
-            "Weil der rasche Druckabfall nach Henry-Gesetz zur Blasenbildung von N₂ im Blut führt",
-            "Weil er sonst zu schnell Sauerstoff verliert",
             "Weil das Trommelfell platzen würde",
+            "Weil er sonst zu schnell Sauerstoff verliert",
+            "Weil der rasche Druckabfall nach Henry-Gesetz zur Blasenbildung von N₂ im Blut führt",
             "Weil bei 30 m Tiefe kein Blutfluss möglich ist",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Nach dem Henry-Gesetz (c = k_H · p) hat sich in 30 m Tiefe (Druck ≈ 4 bar) etwa viermal mehr N₂ im Blut und Gewebe gelöst als an der Oberfläche. Bei schnellem Auftauchen fällt der Druck rasch ab; das gelöste N₂ kann nicht schnell genug durch die Lunge abgeatmet werden und bildet Gasblasen (analog: geöffnete Sprudelflasche). Diese Blasen können Embolien, Gelenkschmerzen (Bends) und neurologische Ausfälle verursachen. Therapie: sofortige Rekompression in der Überdruckkammer, anschließend langsames Dekomprimieren mit Stopps nach Tauchtabellen.",
           hints: [
@@ -1194,12 +1194,12 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
             "Warum sterilisiert ein Autoklav bei 121 °C statt bei 100 °C, und wie wird diese Temperatur erreicht?",
           options: [
             "Der Autoklav heizt mit Mikrowellen, die 121 °C erzeugen",
-            "Durch Erhöhung des Dampfdrucks auf 2 bar steigt der Siedepunkt auf 121 °C, was Sporenabtötung ermöglicht",
+            "100 °C reicht aus; 121 °C ist nur eine Konvention",
             "Bei 121 °C gefriert Wasser und tötet Keime durch Eiskristallbildung",
             "Der Autoklav nutzt Ultraschall, der 121 °C erzeugt",
-            "100 °C reicht aus; 121 °C ist nur eine Konvention",
+            "Durch Erhöhung des Dampfdrucks auf 2 bar steigt der Siedepunkt auf 121 °C, was Sporenabtötung ermöglicht",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Wasser siedet, wenn sein Dampfdruck den Außendruck erreicht. Bei erhöhtem Außendruck (2 bar im Autoklav) muss Wasser stärker erhitzt werden, bis der Dampfdruck wieder 2 bar erreicht — das ist bei ≈ 121 °C der Fall. Diese Temperatur ist für die Sterilisation notwendig, weil bakterielle Endosporen (z. B. von Clostridium botulinum) bei 100 °C unter Umständen überleben. Bei 121 °C / 2 bar / 15–20 min werden alle Mikroorganismen einschließlich resistenter Sporen sicher abgetötet. Das Prinzip basiert direkt auf der Druckabhängigkeit des Siedepunkts.",
           hints: [

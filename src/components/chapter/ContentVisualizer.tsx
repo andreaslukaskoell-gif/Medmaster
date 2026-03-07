@@ -43,8 +43,8 @@ export function ContentVisualizer({
 
   return (
     <div className={`space-y-6 ${contentClassName}`}>
-      {/* Image — after intro, constrained size, with caption */}
-      {uk?.imageUrl && (
+      {/* Image — only show at top if NO {{IMAGE}} placeholder in content */}
+      {uk?.imageUrl && !uk.content?.includes("{{IMAGE}}") && (
         <figure className="my-4 mx-auto max-w-md">
           <ImageWithFallback
             src={uk.imageUrl}

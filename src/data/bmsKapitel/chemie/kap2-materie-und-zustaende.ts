@@ -170,8 +170,8 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question:
             "Ein ideales Gas bei 27 °C und 2 bar hat ein Volumen von 5 L. Auf welches Volumen ändert es sich, wenn der Druck auf 4 bar steigt und die Temperatur auf 127 °C erhöht wird?",
-          options: ["A) 3,33 L", "B) 2,50 L", "C) 4,17 L", "D) 6,67 L", "E) 1,25 L"],
-          correctIndex: 0,
+          options: ["D) 6,67 L", "B) 2,50 L", "C) 4,17 L", "A) 3,33 L", "E) 1,25 L"],
+          correctIndex: 3,
           explanation:
             "Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂. T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. V₂ = V₁ × (p₁/p₂) × (T₂/T₁) = 5 × (2/4) × (400/300) = 5 × 0,5 × 1,333 = 3,33 L. Der Druckanstieg von 2→4 bar halbiert das Volumen (Boyle-Mariotte), die Temperaturerhöhung von 300→400 K vergrößert es um Faktor 4/3 (Charles). Netto: 5 × 0,5 × 4/3 = 3,33 L. Merke: Celsius NIEMALS direkt in die Gasformel einsetzen – immer zuerst in Kelvin umrechnen!",
           hints: [
@@ -186,11 +186,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           options: [
             "A) Helium (He) bei 100 °C und 1 bar",
             "B) Stickstoff (N₂) bei 25 °C und 1 bar",
-            "C) Wasserdampf (H₂O) bei 200 °C und 100 bar",
-            "D) Argon (Ar) bei 0 °C und 1 bar",
             "E) Wasserstoff (H₂) bei 50 °C und 2 bar",
+            "D) Argon (Ar) bei 0 °C und 1 bar",
+            "C) Wasserdampf (H₂O) bei 200 °C und 100 bar",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Reale Gase weichen vom Idealverhalten ab, wenn (1) der Druck hoch ist (Eigenvolumen der Moleküle relevant) und (2) die Temperatur niedrig ist (intermolekulare Kräfte stark). H₂O bei 200 °C und 100 bar erfüllt beide Bedingungen: extrem hoher Druck UND starke Dipol-Dipol-Wechselwirkungen sowie Wasserstoffbrückenbindungen (sehr großes a in van-der-Waals-Gleichung: a = 5,537 L²·bar/mol²). Edelgase wie He und Ar haben kaum Wechselwirkungen (kleines a) und verhalten sich auch unter moderatem Druck noch weitgehend ideal. H₂ und N₂ zeigen bei Normaldruck und mittlerer Temperatur kaum Abweichungen.",
           hints: [
@@ -222,8 +222,8 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question:
             "Wie viele Gramm CO₂ (M = 44 g/mol) befinden sich in einem 10-L-Behälter bei 0 °C und 2 bar?",
-          options: ["A) 39,3 g", "B) 44,0 g", "C) 19,6 g", "D) 88,0 g", "E) 22,0 g"],
-          correctIndex: 0,
+          options: ["B) 44,0 g", "A) 39,3 g", "C) 19,6 g", "D) 88,0 g", "E) 22,0 g"],
+          correctIndex: 1,
           explanation:
             "Mit pV = nRT: n = pV/(RT). Einheiten L·bar: n = (2 bar × 10 L) / (0,08314 L·bar/(mol·K) × 273,15 K) = 20 / 22,71 = 0,881 mol. Masse: m = n × M = 0,881 mol × 44 g/mol = 38,8 g ≈ 39,3 g. Probe: Bei STP (1 bar, 0 °C) passen in 10 L genau 10/22,4 = 0,446 mol. Bei 2 bar (doppelter Druck) doppelt so viel: 0,892 mol → 39,3 g. Merke: 0 °C = 273,15 K – immer in Kelvin umrechnen!",
           hints: [
@@ -236,13 +236,13 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question: "Welche Aussage zu Avogadros Gesetz ist korrekt?",
           options: [
-            "A) Bei gleichem Druck und gleicher Temperatur enthalten gleiche Gasvolumina gleich viele Teilchen, unabhängig von der Molmasse.",
-            "B) Schwerere Gase enthalten bei STP mehr Mol als leichtere Gase im gleichen Volumen.",
             "C) Das molare Volumen hängt bei STP von der Molmasse des Gases ab.",
+            "B) Schwerere Gase enthalten bei STP mehr Mol als leichtere Gase im gleichen Volumen.",
+            "A) Bei gleichem Druck und gleicher Temperatur enthalten gleiche Gasvolumina gleich viele Teilchen, unabhängig von der Molmasse.",
             "D) Avogadros Gesetz gilt nur für einatomige Edelgase.",
             "E) 1 mol eines idealen Gases belegt bei STP stets 11,2 L.",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
             "Avogadros Gesetz (1811): Bei gleichen Bedingungen (p, T) enthalten gleiche Volumina aller idealen Gase gleich viele Teilchen, unabhängig von deren Masse oder chemischer Natur. Deshalb ist das molare Volumen V_m = 22,4 L/mol bei STP für ALLE idealen Gase gleich. 1 mol He (4 g), 1 mol N₂ (28 g) und 1 mol CO₂ (44 g) nehmen bei STP je 22,4 L ein. Option B und C sind falsch (Molmasse irrelevant für Teilchenanzahl). Option D ist falsch (gilt für alle idealen Gase). Option E ist falsch (22,4 L, nicht 11,2 L).",
           hints: [
@@ -256,13 +256,13 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           question:
             "In der van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT: Was korrigiert der Parameter b?",
           options: [
-            "A) Das Eigenvolumen der Gasmoleküle (Kovolumen)",
+            "D) Den Druck bei hoher Teilchendichte",
             "B) Die intermolekularen Anziehungskräfte zwischen den Molekülen",
             "C) Die Temperaturabhängigkeit der Wechselwirkungen",
-            "D) Den Druck bei hoher Teilchendichte",
+            "A) Das Eigenvolumen der Gasmoleküle (Kovolumen)",
             "E) Die Abweichung der Molmasse vom idealen Wert",
           ],
-          correctIndex: 0,
+          correctIndex: 3,
           explanation:
             "In der van-der-Waals-Gleichung korrigiert b (Kovolumen) das Eigenvolumen der Gasmoleküle: Das tatsächlich freie Volumen ist nicht V, sondern (V − nb). Jedes Mol Moleküle beansprucht ein Ausschlussvolumen von b Litern. Bei hohem Druck ist (V − nb) deutlich kleiner als V – das erklärt Z > 1 (Gas schwerer komprimierbar). Der Parameter a korrigiert dagegen den Druck: Intermolekulare Anziehung verringert den Impuls der Wandstöße, der wahre Druck (p + an²/V²) ist höher als gemessen. Merke: a → Druckkorrektur (Anziehung), b → Volumenkorrektur (Eigenvolumen).",
           hints: [
@@ -276,13 +276,13 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           question:
             "Ein Taucher atmet bei 30 m Wassertiefe (Gesamtdruck ca. 4 bar) Luft. Wie ändert sich das Volumen einer 1-L-Luftblase beim Aufstieg zur Oberfläche (1 bar, T = const)?",
           options: [
-            "A) Sie wird 4-mal größer (4 L)",
+            "E) Sie wird 3-mal größer (3 L)",
             "B) Sie bleibt gleich groß (1 L)",
             "C) Sie wird 2-mal größer (2 L)",
             "D) Sie wird 0,25-mal kleiner (0,25 L)",
-            "E) Sie wird 3-mal größer (3 L)",
+            "A) Sie wird 4-mal größer (4 L)",
           ],
-          correctIndex: 0,
+          correctIndex: 4,
           explanation:
             "Nach Boyle-Mariotte bei T = const: p₁V₁ = p₂V₂. Mit p₁ = 4 bar, V₁ = 1 L, p₂ = 1 bar: V₂ = p₁V₁/p₂ = 4 × 1/1 = 4 L. Die Blase vervierfacht ihr Volumen. Dies ist der physikalische Mechanismus der Dekompressionskrankheit: Unter hohem Druck löst sich N₂ vermehrt im Blut (Henry-Gesetz). Beim schnellen Auftauchen dehnen sich N₂-Blasen aus und blockieren Blutgefäße. Therapie: Rekompression in der Überdruckkammer, dann langsames kontrolliiertes Auftauchen mit Dekompressionsstopps.",
           hints: [
@@ -480,8 +480,8 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         {
           question:
             "Ein Gasgemisch enthält 3 mol N₂, 1 mol O₂ und 1 mol CO₂. Der Gesamtdruck beträgt 5 bar. Wie groß ist der Partialdruck von O₂?",
-          options: ["A) 1,0 bar", "B) 0,5 bar", "C) 2,0 bar", "D) 1,5 bar", "E) 0,2 bar"],
-          correctIndex: 0,
+          options: ["B) 0,5 bar", "A) 1,0 bar", "C) 2,0 bar", "D) 1,5 bar", "E) 0,2 bar"],
+          correctIndex: 1,
           explanation:
             "n_gesamt = 3 + 1 + 1 = 5 mol. Molenbruch O₂: x(O₂) = 1/5 = 0,2. Partialdruck: p(O₂) = 0,2 × 5 bar = 1,0 bar. Kontrolle: p(N₂) = (3/5) × 5 = 3 bar; p(CO₂) = (1/5) × 5 = 1 bar. Summe: 3 + 1 + 1 = 5 bar ✓. Das Daltonsche Gesetz gilt für ideale Gase exakt: Jede Komponente trägt proportional zu ihrem Molenbruch zum Gesamtdruck bei, unabhängig von den anderen Gasen.",
           hints: [
@@ -495,13 +495,13 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
           question:
             "Warum muss bei der Berechnung des alveolären O₂-Partialdrucks der Wasserdampfdruck berücksichtigt werden?",
           options: [
-            "A) Weil Wasserdampf bei 37 °C einen Partialdruck von ca. 6,27 kPa hat, der den verfügbaren Anteil für O₂ und CO₂ reduziert.",
-            "B) Weil Wasser O₂ chemisch bindet und so den Partialdruck senkt.",
             "C) Weil Wasserdampf den N₂-Partialdruck erhöht.",
+            "B) Weil Wasser O₂ chemisch bindet und so den Partialdruck senkt.",
+            "A) Weil Wasserdampf bei 37 °C einen Partialdruck von ca. 6,27 kPa hat, der den verfügbaren Anteil für O₂ und CO₂ reduziert.",
             "D) Weil Wasserdampf bei 37 °C kondensiert und kein Gas mehr ist.",
             "E) Weil Wasser das Henry-Gesetz ungültig macht.",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
             "Bei 37 °C ist eingeatmete Luft in der Lunge vollständig mit Wasserdampf gesättigt. Der Sättigungsdampfdruck beträgt ca. 6,27 kPa (47 mmHg). Nach Dalton: p_gesamt = p(O₂) + p(CO₂) + p(N₂) + p(H₂O). Bei p_gesamt = 101,3 kPa verbleiben für O₂, CO₂ und N₂ zusammen nur 101,3 − 6,27 = 95,0 kPa. Der O₂-Anteil von 21 % trifft dann auf 95,0 kPa (minus CO₂-Anteil) → p(O₂)_alveolär ≈ 13,3 kPa statt der 21,2 kPa der trockenen Außenluft.",
           hints: [
@@ -514,8 +514,8 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         {
           question:
             "Ein Taucher taucht auf 40 m Tiefe (Gesamtdruck 5 bar). Wie groß ist der N₂-Partialdruck in der Atemluft (Luft: 78 % N₂)?",
-          options: ["A) 3,9 bar", "B) 0,78 bar", "C) 5,0 bar", "D) 2,5 bar", "E) 1,95 bar"],
-          correctIndex: 0,
+          options: ["D) 2,5 bar", "B) 0,78 bar", "C) 5,0 bar", "A) 3,9 bar", "E) 1,95 bar"],
+          correctIndex: 3,
           explanation:
             "p(N₂) = x(N₂) × p_gesamt = 0,78 × 5 bar = 3,9 bar. An der Oberfläche (1 bar): p(N₂) = 0,78 bar. Unter Wasser steigt der N₂-Partialdruck auf das 5-fache! Nach Henry-Gesetz löst sich entsprechend 5× mehr N₂ im Blut. Ab p(N₂) ≈ 3 bar (≈ 30 m mit Luft) tritt Stickstoffnarkose (Tiefenrausch) auf: N₂ wirkt euphorisierend und sedierend, was unter Wasser lebensgefährlich werden kann. Je 10 m Wassertiefe erhöht sich der Druck um ca. 1 bar (Wasserdruck = ρgh ≈ 1000 × 9,81 × 10 = 98.100 Pa ≈ 1 bar).",
           hints: [
@@ -528,13 +528,13 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         {
           question: "Welche Aussage zum Henry-Gesetz ist korrekt?",
           options: [
-            "A) Die Konzentration eines gelösten Gases ist proportional zu seinem Partialdruck über der Lösung.",
+            "E) Das Henry-Gesetz gilt nur für Edelgase.",
             "B) Bei höherer Temperatur löst sich mehr Gas in einer Flüssigkeit.",
             "C) Das Henry-Gesetz beschreibt die Druckverteilung in Gasgemischen.",
             "D) Alle Gase haben dieselbe Henry-Konstante in Wasser.",
-            "E) Das Henry-Gesetz gilt nur für Edelgase.",
+            "A) Die Konzentration eines gelösten Gases ist proportional zu seinem Partialdruck über der Lösung.",
           ],
-          correctIndex: 0,
+          correctIndex: 4,
           explanation:
             "Henry-Gesetz (William Henry, 1803): c = k_H · p. Die Gaslöslichkeit ist direkt proportional zum Partialdruck. Option B ist falsch: Bei höherer Temperatur sinkt die Gaslöslichkeit in Flüssigkeiten (thermische Bewegung überwindet Solvatation – deshalb entweicht CO₂ aus warmem Sprudel schneller als aus kaltem). Option C beschreibt das Daltonsche Gesetz. Option D ist falsch: k_H variiert stark – CO₂ ist ca. 25× löslicher als O₂ in Wasser (daher transportiert Blut CO₂ viel effizienter als O₂ auf dem physikalischen Weg). Option E ist falsch.",
           hints: [
@@ -562,13 +562,13 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
           question:
             "Was ist Heliox und welcher physikalische Vorteil macht es bei obstruktiven Atemwegserkrankungen nützlich?",
           options: [
-            "A) He/O₂-Gemisch: Helium ist leichter als N₂ und reduziert die Gasdichte, was den Atemwiderstand senkt.",
             "B) H₂/O₂-Gemisch: Wasserstoff verbessert den O₂-Transport im Blut.",
+            "A) He/O₂-Gemisch: Helium ist leichter als N₂ und reduziert die Gasdichte, was den Atemwiderstand senkt.",
             "C) N₂O/O₂-Gemisch (Lachgas): Wirkt analgetisch und erleichtert das Atmen.",
             "D) CO₂/O₂-Gemisch: CO₂ stimuliert das Atemzentrum und vertieft die Atmung.",
             "E) Ar/O₂-Gemisch: Argon schützt die Atemwege vor Entzündungen.",
           ],
-          correctIndex: 0,
+          correctIndex: 1,
           explanation:
             "Heliox ist ein He/O₂-Gemisch (typisch 70:30 oder 80:20). Helium (M = 4 g/mol) ist viel leichter als Stickstoff (M = 28 g/mol) → Heliox hat deutlich geringere Gasdichte als Raumluft. Bei Atemwegsobstruktion dominiert turbulenter Gasfluss, dessen Widerstand mit der Gasdichte skaliert (∝ √ρ). Geringere Dichte → weniger turbulenter Widerstand → geringere Atemarbeit. Anwendung: Asthmaanfall, Krupp, obstruktive Tumoren. Nachteil: Begrenzte O₂-Konzentration (20–30 %). N₂O/O₂ (Entonox) ist ein Analgetikum ohne Dichtevorteil. Das Grahamsches Gesetz gilt für Effusion, aber auch hier ist die leichtere Masse von He ein Vorteil.",
           hints: [
@@ -581,13 +581,13 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         {
           question: "Was beschreibt der Molenbruch xᵢ einer Komponente in einem Gasgemisch?",
           options: [
-            "A) Das Verhältnis der Molzahl der Komponente zur Gesamtmolzahl: xᵢ = nᵢ / n_gesamt.",
-            "B) Das Verhältnis der Masse der Komponente zur Gesamtmasse des Gemisches.",
             "C) Das Verhältnis des Volumens der Komponente zum Gesamtvolumen bei verschiedenen Drücken.",
+            "B) Das Verhältnis der Masse der Komponente zur Gesamtmasse des Gemisches.",
+            "A) Das Verhältnis der Molzahl der Komponente zur Gesamtmolzahl: xᵢ = nᵢ / n_gesamt.",
             "D) Die Anzahl der Mole pro Liter Lösung (molare Konzentration).",
             "E) Der Prozentsatz der Moleküle in Masseneinheiten.",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
             "Molenbruch xᵢ = nᵢ/n_gesamt ist dimensionslos (0 bis 1). Er gibt an, welcher Anteil aller Gasteilchen auf Komponente i entfällt. Σ xᵢ = 1 (alle Molenbrüche summieren sich zu 1). Für ideale Gase bei konstantem p und T ist Molenbruch = Volumenanteil. Luft: x(N₂) ≈ 0,78, x(O₂) ≈ 0,21, x(Ar) ≈ 0,01. Der Massenanteil ωᵢ = mᵢ/m_gesamt ist eine andere Größe – er berücksichtigt Molmassen und ist für Gase mit verschiedenen M ≠ xᵢ. Direkte Anwendung: pᵢ = xᵢ · p_gesamt (nur mit Molenbruch, nicht mit Massenanteil!).",
           hints: [
@@ -775,13 +775,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
           question:
             "Wie viel mal schneller diffundiert CH₄ (M = 16 g/mol) im Vergleich zu SO₂ (M = 64 g/mol)?",
           options: [
-            "A) 2-mal schneller",
+            "D) 8-mal schneller",
             "B) 4-mal schneller",
             "C) 0,5-mal (halb so schnell)",
-            "D) 8-mal schneller",
+            "A) 2-mal schneller",
             "E) 1,4-mal schneller",
           ],
-          correctIndex: 0,
+          correctIndex: 3,
           explanation:
             "Graham: r(CH₄)/r(SO₂) = √(M(SO₂)/M(CH₄)) = √(64/16) = √4 = 2. CH₄ diffundiert genau 2× schneller als SO₂. Merke: Das Massenverhältnis (64/16 = 4) muss GEWURZELT werden → √4 = 2. Häufiger Fehler: Massenverhältnis nicht wurzeln → falsche Antwort 4. Oder falsch herum: √(16/64) = 0,5 → SO₂ wäre schneller, was falsch ist. Das schwerere Gas (SO₂, 64 g/mol) ist langsamer. Das Verhältnis der Molmassen 64:16 = 4:1 ergibt ein Geschwindigkeitsverhältnis von √4 = 2:1.",
           hints: [
@@ -795,13 +795,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
           question:
             "Warum diffundiert CO₂ in der Lunge ca. 20-mal schneller als O₂, obwohl CO₂ schwerer ist?",
           options: [
-            "A) Weil CO₂ eine viel höhere Löslichkeit in wässrigen Medien hat als O₂ – Löslichkeit geht linear in D ein, Molmasse nur als Wurzel.",
+            "E) Weil das Grahamsche Gesetz für CO₂ in Flüssigkeiten nicht gilt.",
             "B) Weil CO₂ kleiner ist als O₂.",
             "C) Weil CO₂ einen höheren Partialdruck hat als O₂ in der Alveole.",
             "D) Weil CO₂ chemisch mit Wasser reagiert und dadurch schneller transportiert wird.",
-            "E) Weil das Grahamsche Gesetz für CO₂ in Flüssigkeiten nicht gilt.",
+            "A) Weil CO₂ eine viel höhere Löslichkeit in wässrigen Medien hat als O₂ – Löslichkeit geht linear in D ein, Molmasse nur als Wurzel.",
           ],
-          correctIndex: 0,
+          correctIndex: 4,
           explanation:
             "In biologischen Medien gilt: D ∝ α/√M, wobei α die Bunsensche Löslichkeit ist. CO₂ ist in Wasser ca. 24× löslicher als O₂ (α(CO₂) ≈ 0,592 vs. α(O₂) ≈ 0,024 ml/(ml·atm) bei 37 °C). Der Molmassen-Nachteil: √(44)/√(32) = 1,17-fach. Effektiv: 24/1,17 ≈ 20× schnellere Diffusion. Die chemische Reaktion von CO₂ mit Wasser (CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻, katalysiert durch Carboanhydrase) erhöht zwar den Gesamttransport, ist aber vom physikalischen Diffusionskoeffizienten zu trennen.",
           hints: [
@@ -834,13 +834,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
           question:
             "Welches der folgenden Gase effundiert am langsamsten durch eine kleine Öffnung?",
           options: [
-            "A) UF₆ (M = 352 g/mol)",
             "B) H₂ (M = 2 g/mol)",
+            "A) UF₆ (M = 352 g/mol)",
             "C) He (M = 4 g/mol)",
             "D) CH₄ (M = 16 g/mol)",
             "E) N₂ (M = 28 g/mol)",
           ],
-          correctIndex: 0,
+          correctIndex: 1,
           explanation:
             "Nach Graham: r ∝ 1/√M. Das schwerste Gas effundiert am langsamsten. UF₆ (M = 352 g/mol) ist das schwerste: r(H₂)/r(UF₆) = √(352/2) = √176 ≈ 13,3 – H₂ ist 13,3× schneller! Technisch wichtig: Die geringfügig unterschiedliche Effusionsrate von ²³⁵UF₆ (M = 349) und ²³⁸UF₆ (M = 352) – Verhältnis: √(352/349) ≈ 1,0043 – wird in der Urananreicherung genutzt. Der Unterschied beträgt nur 0,43 % pro Stufe, weshalb tausende Effusionsstufen nötig sind (Gasdiffusionskaskade). M(UF₆) = 238 + 6 × 19 = 352 g/mol.",
           hints: [
@@ -853,13 +853,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
         {
           question: "Welche Aussage zu Ficks erstem Gesetz (J = −D·dc/dx) ist korrekt?",
           options: [
-            "A) Der Diffusionsfluss ist proportional zum Konzentrationsgradienten und zeigt in Richtung abnehmender Konzentration (von hoch nach niedrig).",
-            "B) Der Diffusionsfluss ist proportional zum Quadrat des Konzentrationsgradienten.",
             "C) Bei höherer Temperatur ist D kleiner, weil Gase dann langsamer diffundieren.",
+            "B) Der Diffusionsfluss ist proportional zum Quadrat des Konzentrationsgradienten.",
+            "A) Der Diffusionsfluss ist proportional zum Konzentrationsgradienten und zeigt in Richtung abnehmender Konzentration (von hoch nach niedrig).",
             "D) Das Minuszeichen zeigt an, dass Diffusion ein reversibler Prozess ist.",
             "E) D ist für alle Gase in allen Medien gleich groß.",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
             "Ficks 1. Gesetz J = −D·dc/dx: Fluss J ist proportional zum Konzentrationsgradienten dc/dx. Das Minuszeichen besagt: Fluss fließt ENTGEGEN dem Gradienten (von hoher zu niedriger Konzentration). D ist substanz- und mediumspezifisch: O₂ in Luft D ≈ 2 × 10⁻⁵ m²/s; CO₂ in Wasser D ≈ 1,9 × 10⁻⁹ m²/s (10.000× kleiner!). Bei höherer Temperatur steigt D für Gase (D ∝ T^(3/2)/p nach kinetischer Gastheorie). Option B ist falsch (linear, nicht quadratisch). Option D ist falsch (Minuszeichen = Richtung des Flusses, nicht Reversibilität).",
           hints: [
@@ -872,8 +872,8 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
         {
           question:
             "Ein Patient mit Lungenfibrose hat 40 % der normalen Alveolarfläche und eine doppelt so dicke alveolo-kapilläre Membran. Auf welchen Prozentsatz der Norm sinkt die Diffusionskapazität?",
-          options: ["A) 20 %", "B) 40 %", "C) 80 %", "D) 50 %", "E) 60 %"],
-          correctIndex: 0,
+          options: ["D) 50 %", "B) 40 %", "C) 80 %", "A) 20 %", "E) 60 %"],
+          correctIndex: 3,
           explanation:
             "Diffusionskapazität ∝ A/d (nach Fick). Neue Kapazität = (0,4·A_norm)/(2·d_norm) = 0,2 × (A_norm/d_norm). Nur 20 % der Norm! Beide Faktoren wirken gleichzeitig: Fläche halbiert sich effektiv auf 40 % → das allein würde 40 % ergeben. Zusätzlich doppelte Membrandicke → durch 2 dividieren → 40 % / 2 = 20 %. Klinisch: Eine so schwere kombinierte Schädigung führt zu massiver Hypoxämie, die trotz hoher F_IO₂ schwer zu korrigieren ist. Der DLCO-Test würde ebenfalls nur ca. 20 % des Sollwerts ergeben.",
           hints: [
@@ -887,13 +887,13 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
           question:
             "Welcher Faktor verdoppelt die Effusionsrate eines Gases nach dem Grahamschen Gesetz?",
           options: [
-            "A) Die molare Masse auf 1/4 reduzieren (von M auf M/4)",
+            "E) Die Öffnungsfläche verdoppeln",
             "B) Die Temperatur auf 200 % erhöhen",
             "C) Den Druck auf 200 % erhöhen",
             "D) Die molare Masse auf 1/2 reduzieren (von M auf M/2)",
-            "E) Die Öffnungsfläche verdoppeln",
+            "A) Die molare Masse auf 1/4 reduzieren (von M auf M/4)",
           ],
-          correctIndex: 0,
+          correctIndex: 4,
           explanation:
             "Graham: r ∝ 1/√M. Um r zu verdoppeln: 1/√M_neu = 2/√M_alt → √M_neu = √M_alt/2 → M_neu = M_alt/4. Masse auf ein VIERTEL reduzieren! Option D (M/2) würde r nur um √2 ≈ 1,41× erhöhen – nicht verdoppeln. Der Wurzel-Zusammenhang täuscht: Man denkt an Halbierung der Masse für doppelte Rate, aber es ist Viertelung nötig. Merke: Wegen der Wurzel in Grahams Gesetz braucht man das 4-fache Massenverhältnis für das 2-fache Geschwindigkeitsverhältnis. Analogie: v_rms ∝ 1/√M – genau dasselbe Prinzip.",
           hints: [
@@ -928,6 +928,8 @@ D ist proportional zur Gaslöslichkeit und umgekehrt proportional zu √M: D ∝
       content: `## Die vier Aggregatzustände der Materie
 
 Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
+
+{{IMAGE}}
 
 ### Fester Aggregatzustand (solid)
 
@@ -1060,13 +1062,13 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
           question:
             "Was charakterisiert den flüssigen Aggregatzustand auf molekularer Ebene am besten?",
           options: [
-            "Teilchen sind in einem geordneten Kristallgitter fixiert und führen nur Gitterschwingungen aus",
-            "Teilchen bewegen sich frei und unabhängig, intermolekulare Wechselwirkungen sind vernachlässigbar",
             "Teilchen haben Nahordnung, können sich relativ zueinander bewegen, bleiben aber durch Kohäsionskräfte im Verband",
+            "Teilchen bewegen sich frei und unabhängig, intermolekulare Wechselwirkungen sind vernachlässigbar",
+            "Teilchen sind in einem geordneten Kristallgitter fixiert und führen nur Gitterschwingungen aus",
             "Teilchen sind ionisiert und bewegen sich in einem gemeinsamen Elektronengas",
             "Teilchen haben keine kinetische Energie und bilden ein starres Netzwerk mit maximaler H-Brücken-Zahl",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Im flüssigen Zustand besteht eine Nahordnung (im Gegensatz zur Fernordnung im Kristall und zur vollständigen Unordnung im Gas). Teilchen können sich relativ zueinander bewegen (daher Fließfähigkeit), verlassen aber den Flüssigkeitsverband nicht, da intermolekulare Kohäsionskräfte (Van-der-Waals, H-Brücken, Dipol-Dipol) noch wirksam sind. Daher haben Flüssigkeiten ein definiertes Volumen (im Gegensatz zum Gas), aber keine eigene Form (im Gegensatz zum Festkörper). Diese Struktur erklärt auch Phänomene wie Oberflächenspannung und Viskosität.",
           hints: [
@@ -1100,11 +1102,11 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
           options: [
             "London-Dispersionskräfte zwischen großen Molekülen",
             "Dipol-Dipol-Wechselwirkungen zwischen polaren Molekülen",
-            "Wasserstoffbrückenbindungen",
             "Ionische Wechselwirkungen zwischen entgegengesetzt geladenen Ionen",
+            "Wasserstoffbrückenbindungen",
             "Hydrophobe Wechselwirkungen zwischen unpolaren Molekülen",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
             "Ionische Wechselwirkungen sind mit Energien von mehreren hundert bis über 1000 kJ/mol die stärksten intermolekularen Wechselwirkungen. Die Hierarchie der Stärke lautet: ionisch (bis ~1000 kJ/mol) > Wasserstoffbrücken (10–40 kJ/mol) > Dipol-Dipol (1–10 kJ/mol) > London-Dispersion (0,05–40 kJ/mol, je nach Molekülgröße). Diese Hierarchie spiegelt sich direkt in den Schmelzpunkten wider: Ionenkristalle (NaCl: 801°C) schmelzen bei viel höheren Temperaturen als Molekülkristalle (Eis: 0°C) oder Van-der-Waals-Feststoffe.",
           hints: [
@@ -1119,12 +1121,12 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Was ist die biologische Hauptbedeutung der Tatsache, dass Eis eine geringere Dichte als flüssiges Wasser hat?",
           options: [
             "Pflanzen können Wasser leichter durch Kapillarkräfte aufsteigen lassen",
-            "Aquatische Organismen überleben den Winter, weil Gewässer von oben gefrieren und eine isolierende Eisschicht bilden",
-            "Das Blut des Menschen kann leichter vom Herzen durch den Körper gepumpt werden",
             "Schneeflocken können in der Luft schweben und damit Niederschlag bilden",
+            "Das Blut des Menschen kann leichter vom Herzen durch den Körper gepumpt werden",
+            "Aquatische Organismen überleben den Winter, weil Gewässer von oben gefrieren und eine isolierende Eisschicht bilden",
             "Wasservögel können auf dem Wasser laufen dank der Oberflächenspannung des Eises",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Da Eis (ρ ≈ 0,917 g/cm³) leichter als flüssiges Wasser ist, schwimmt es oben. Im Winter kühlt sich die Wasseroberfläche ab – unter 4°C wird das Wasser leichter und gefriert schließlich an der Oberfläche. Das Eis bildet eine thermische Isolierschicht, die das darunter liegende Wasser vor weiterer Abkühlung schützt. Unter der Eisdecke bleibt das Wasser flüssig (bei ~4°C), und Fische, Mikroorganismen sowie andere aquatische Lebewesen können überleben. Ohne diese Anomalie würden Seen von unten nach oben vollständig durchgefrieren, und aquatisches Leben in gemäßigten Klimazonen wäre weitgehend unmöglich.",
           hints: [
@@ -1141,10 +1143,10 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Ionenkristall (z.B. NaCl)",
             "Molekülkristall (z.B. Eis)",
             "Kovalenter Netzwerkkristall (z.B. Diamant)",
-            "Metallkristall (z.B. Kupfer)",
             "Molekülkristall mit Wasserstoffbrücken (z.B. NH₃ fest)",
+            "Metallkristall (z.B. Kupfer)",
           ],
-          correctIndex: 3,
+          correctIndex: 4,
           explanation:
             "Metallkristalle bestehen aus positiv geladenen Ionenrümpfen, die in einem delokalisierten Elektronengas eingebettet sind. Die frei beweglichen Elektronen ermöglichen elektrische Leitfähigkeit und Wärmeleitung. Die nicht-direktionale Natur der Metallbindung erlaubt plastische Verformung (Duktilität, Hämmerbarkeit) ohne Sprödbruch. Der metallische Glanz entsteht durch Absorption und Reemission von Licht durch die freien Elektronen. Ionenkristalle sind bei Raumtemperatur nicht leitend (Ionen fixiert im Gitter), bei Schmelze oder in Lösung hingegen leitend. Diamant ist das härteste natürliche Material, aber elektrisch nicht leitend und spröde.",
           hints: [
@@ -1157,13 +1159,13 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
         {
           question: "Zwischen welchen Atomen können Wasserstoffbrückenbindungen gebildet werden?",
           options: [
-            "Zwischen jedem H-Atom und jedem Atom mit freiem Elektronenpaar",
-            "Nur zwischen zwei O-Atomen über ein H-Atom",
             "Zwischen einem H-Atom, das an N, O oder F gebunden ist, und einem freien Elektronenpaar eines N-, O- oder F-Atoms",
+            "Nur zwischen zwei O-Atomen über ein H-Atom",
+            "Zwischen jedem H-Atom und jedem Atom mit freiem Elektronenpaar",
             "Zwischen einem H-Atom und jedem negativen Ion",
             "Nur zwischen O-H-Gruppen in Wasser und Alkoholen",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Wasserstoffbrückenbindungen entstehen durch die starke Polarisierung des H-Atoms, wenn es kovalent an ein stark elektronegatiges Atom (N, O oder F) gebunden ist. Das H-Atom trägt dann eine ausgeprägte positive Partialladung (δ+) und kann mit dem freien Elektronenpaar eines benachbarten N-, O- oder F-Atoms in Wechselwirkung treten. Die Stärke (10–40 kJ/mol) liegt zwischen kovalenten Bindungen (~350 kJ/mol für C-H) und gewöhnlichen Van-der-Waals-Kräften (~1 kJ/mol). H-Brücken sind essentiell für DNA-Struktur (A-T: 2 H-Brücken, G-C: 3 H-Brücken), Proteinsekundärstruktur (α-Helix, β-Faltblatt) und die einzigartigen Eigenschaften von Wasser.",
           hints: [
@@ -1248,6 +1250,8 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 | gasförmig → flüssig | **Kondensieren** (exotherm) |
 | fest → gasförmig | **Sublimieren** (endotherm) |
 | gasförmig → fest | **Resublimieren / Desublimieren** (exotherm) |
+
+{{IMAGE}}
 
 - **Schmelzen** (fest → flüssig): endotherm, ΔH > 0; Gitterstruktur wird aufgebrochen
 - **Erstarren** (flüssig → fest): exotherm, ΔH < 0; Kristallgitter bildet sich. **Merke:** Von flüssig nach fest heißt immer **Erstarren**, nicht „Sublimieren“ oder „Verdampfen“.
@@ -1394,12 +1398,12 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
           question: "Welche Phasenübergänge sind endotherm?",
           options: [
             "Erstarren, Kondensieren, Resublimieren",
-            "Schmelzen, Verdampfen, Sublimieren",
-            "Nur Verdampfen",
             "Nur Schmelzen und Verdampfen",
+            "Nur Verdampfen",
+            "Schmelzen, Verdampfen, Sublimieren",
             "Alle sechs Phasenübergänge",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Endotherm (Energie wird zugeführt) sind die Übergänge zum „freierem“ Zustand: Schmelzen (fest→flüssig), Verdampfen (flüssig→gas), Sublimieren (fest→gas). Exotherm sind Erstarren, Kondensieren, Resublimieren.",
           hints: ["Endotherm = Energie rein. Welche Übergänge brauchen Energiezufuhr?"],
@@ -1411,12 +1415,12 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
             "Warum bleibt die Temperatur bei einem Phasenübergang (z. B. Schmelzen) konstant?",
           options: [
             "Weil keine Wärme zugeführt wird",
-            "Weil die zugeführte Energie für die Umordnung der Teilchen (latente Wärme) genutzt wird, nicht für Temperaturerhöhung",
+            "Nur bei Wasser, bei anderen Stoffen steigt T",
             "Weil der Druck abnimmt",
             "Weil die Teilchen sich nicht bewegen",
-            "Nur bei Wasser, bei anderen Stoffen steigt T",
+            "Weil die zugeführte Energie für die Umordnung der Teilchen (latente Wärme) genutzt wird, nicht für Temperaturerhöhung",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "An der Heizkurve zeigen Phasenübergänge Plateaus: Die zugeführte Wärme wird als latente Wärme (z. B. Schmelzenthalpie) verbraucht, um die Gitterstruktur aufzubrechen bzw. die Molekülanordnung zu ändern — ohne Temperaturänderung.",
           hints: ["Latente Wärme = Enthalpieänderung beim Phasenübergang."],
@@ -1425,8 +1429,8 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
         },
         {
           question: "Wie viel Energie braucht 1 g Wasser zum Verdampfen (bei 100 °C, 1 bar)?",
-          options: ["333 J", "2257 J", "4,18 J", "40,7 J", "Gleich viel wie zum Schmelzen"],
-          correctIndex: 1,
+          options: ["2257 J", "333 J", "4,18 J", "40,7 J", "Gleich viel wie zum Schmelzen"],
+          correctIndex: 0,
           explanation:
             "Verdampfungsenthalpie von Wasser: ΔH_v = 2257 J/g (40,7 kJ/mol). Schmelzenthalpie ΔH_s = 333 J/g. Verdampfen braucht etwa 7× mehr Energie als Schmelzen, weil alle H-Brücken gebrochen werden müssen.",
           hints: ["Verdampfen >> Schmelzen. 2257 J/g ist der große Wert."],
@@ -1454,12 +1458,12 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
             "Was bedeutet eine erhöhte Osmolalitätslücke im Blutplasma (gemessen − berechnet > 10 mosmol/kg)?",
           options: [
             "Normale Schwankung, ohne Bedeutung",
-            "Hinweis auf osmotisch wirksame Substanzen, die in der Berechnung nicht erfasst sind (z. B. Ethanol, Methanol, Ethylenglykol bei Intoxikation)",
             "Beweis für Diabetes mellitus",
+            "Hinweis auf osmotisch wirksame Substanzen, die in der Berechnung nicht erfasst sind (z. B. Ethanol, Methanol, Ethylenglykol bei Intoxikation)",
             "Zeichen für Nierenversagen ohne weitere Ursache",
             "Nur bei Kryoskopie-Messfehlern möglich",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die Osmolalitätslücke ist die Differenz aus gemessener (Kryoskopie) und berechneter Osmolalität (z. B. 2×Na⁺ + Glucose/18 + Harnstoff/2,8). Eine Lücke > 10 mosmol/kg weist auf osmotisch aktive Substanzen hin, die nicht in der Formel vorkommen — typisch bei Intoxikation mit Methanol oder Ethylenglykol.",
           hints: [

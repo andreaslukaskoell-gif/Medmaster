@@ -455,8 +455,8 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         {
           question:
             "Ein Widerstand von 470 Ω liegt an einer Spannung von 12 V. Wie groß ist die elektrische Leistung?",
-          options: ["P ≈ 0,026 W", "P ≈ 0,31 W", "P ≈ 5640 W", "P ≈ 25,5 mW", "P ≈ 5,76 W"],
-          correctIndex: 1,
+          options: ["P ≈ 0,31 W", "P ≈ 0,026 W", "P ≈ 5640 W", "P ≈ 25,5 mW", "P ≈ 5,76 W"],
+          correctIndex: 0,
           explanation:
             "P = U²/R = (12 V)² / 470 Ω = 144 / 470 ≈ 0,306 W ≈ 0,31 W. Alternativ: I = U/R = 12/470 ≈ 0,02553 A; P = U·I = 12 · 0,02553 ≈ 0,306 W. Option A wäre P = U·R (falsch). Option C verwechselt Quotient mit Produkt. Option D ≈ 25,5 mW wäre P = I²·R mit falschem I. Die korrekte Formel lautet P = U²/R oder äquivalent P = I²·R oder P = U·I.",
           hints: [
@@ -471,12 +471,12 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
             "Welche Aussage zum spezifischen Widerstand von Körpergewebe im Vergleich zu Kupfer ist korrekt?",
           options: [
             "Körpergewebe und Kupfer haben ähnliche spezifische Widerstände (~10⁻⁸ Ω·m)",
-            "Körpergewebe hat einen ca. 10⁷–10⁸-mal höheren spezifischen Widerstand als Kupfer",
-            "Körpergewebe leitet besser als Kupfer, da es Wasser enthält",
             "Der spezifische Widerstand ist für alle Gewebe identisch (1 Ω·m)",
+            "Körpergewebe leitet besser als Kupfer, da es Wasser enthält",
+            "Körpergewebe hat einen ca. 10⁷–10⁸-mal höheren spezifischen Widerstand als Kupfer",
             "Kupfer leitet schlechter als Körpergewebe, da es kein ionisches Leitmedium ist",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Kupfer hat ρ ≈ 1,7 × 10⁻⁸ Ω·m (hervorragender metallischer Leiter durch freie Elektronen). Körpergewebe hat je nach Typ ρ ≈ 0,5–3 Ω·m (Leitung durch Ionen). Das Verhältnis beträgt ca. 0,5 / (1,7×10⁻⁸) ≈ 3 × 10⁷ — also ca. 10⁷–10⁸-mal höherer spezifischer Widerstand bei Gewebe. Deshalb ist Körpergewebe ein schlechter Leiter. Bei der Defibrillation muss die Energie so gewählt werden, dass trotz des hohen Körperwiderstands genug Strom das Herz erreicht.",
           hints: [
@@ -512,11 +512,11 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
           options: [
             "Sie verursacht ein kaum wahrnehmbares Kribbeln",
             "Sie verursacht schmerzhafte Muskelkontraktionen, aber kein Kammerflimmern",
-            "Sie kann Kammerflimmern auslösen",
-            "Sie führt sofort zu Herzstillstand durch Asystolie",
             "Sie ist für den Menschen völlig harmlos",
+            "Sie führt sofort zu Herzstillstand durch Asystolie",
+            "Sie kann Kammerflimmern auslösen",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Ab ca. 80–100 mA Körperstrom kann Kammerflimmern (ventrikuläre Fibrillation) ausgelöst werden — ein unkoordiniertes, ineffektives Zittern des Herzens, das ohne sofortige Defibrillation letal ist. Schon 1–2 mA sind wahrnehmbar (Kribbeln); 10–20 mA erzeugen tetanische Muskelkontraktionen (Loslasssperre); 50–100 mA sind schmerzhaft und können Atemmuskel-Verkrampfung auslösen; über 1 A entsteht direkte thermische Herzschädigung. Defibrillation nutzt einen kurzen Energiestoß (200–360 J), um das Kammerflimmern zu terminieren.",
           hints: [
@@ -726,8 +726,8 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         {
           question:
             "Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω sind parallel geschaltet. Welcher Gesamtwiderstand ergibt sich?",
-          options: ["60 Ω", "5,45 Ω", "18,18 Ω", "10 Ω", "3,33 Ω"],
-          correctIndex: 1,
+          options: ["5,45 Ω", "60 Ω", "18,18 Ω", "10 Ω", "3,33 Ω"],
+          correctIndex: 0,
           explanation:
             "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60. R_ges = 60/11 ≈ 5,45 Ω. Bei Parallelschaltung ist der Gesamtwiderstand immer kleiner als der kleinste Einzelwiderstand (hier < 10 Ω). Zur Kontrolle: 60 Ω wäre die Reihenschaltung. 3,33 Ω wäre nur 1/3 des kleinsten Widerstands (falsch). 18,18 Ω wäre der arithmetische Mittelwert (kein physikalisch sinnvoller Wert für Parallelschaltung).",
           hints: [
@@ -754,8 +754,8 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         {
           question:
             "Ein Defibrillator wird auf 2000 V geladen (C = 150 µF). Welche Energie ist gespeichert?",
-          options: ["W = 150 J", "W = 300 J", "W = 600 J", "W = 30 J", "W = 3000 J"],
-          correctIndex: 1,
+          options: ["W = 150 J", "W = 600 J", "W = 300 J", "W = 30 J", "W = 3000 J"],
+          correctIndex: 2,
           explanation:
             "W = ½·C·U² = ½ · 150×10⁻⁶ F · (2000 V)² = ½ · 150×10⁻⁶ · 4×10⁶ = ½ · 600 = 300 J. Typische Defibrillatoren liefern 200–360 J. Diese Energie wird in ~10 ms über den Thorax entladen (R_thorax ≈ 50–100 Ω). Der resultierende Spitzenstrom beträgt I_max = U/R = 2000/75 ≈ 27 A — genug, um alle Herzmuskelzellen gleichzeitig zu depolarisieren und Kammerflimmern zu beenden. Moderne biphasische Defibrillatoren benötigen weniger Energie (100–200 J).",
           hints: [
@@ -770,12 +770,12 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
             "Die Wheatstone-Brücke ist im Gleichgewicht (kein Strom durch das Galvanometer), wenn gilt:",
           options: [
             "R₁ + R₂ = R₃ + R₄",
-            "R₁ · R₄ = R₂ · R₃",
+            "R₁ = R₂ = R₃ = R₄",
             "R₁/R₂ = R₃ + R₄",
             "R₁ · R₂ = R₃ · R₄",
-            "R₁ = R₂ = R₃ = R₄",
+            "R₁ · R₄ = R₂ · R₃",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Für die Wheatstone-Brücke im Gleichgewicht (U_Galvanometer = 0): R₁/R₂ = R₃/R₄, äquivalent zu R₁·R₄ = R₂·R₃ (Kreuzprodukt). Die Bedingung ergibt sich aus der Maschenregel: Beide Spannungsteiler teilen die Speisespannung im gleichen Verhältnis auf. Anwendungen: Präzisionsmessung von Widerstandsänderungen in Dehnungsmessstreifen, Drucksensoren (z. B. invasive Blutdruckmessung), Temperatursensoren und Biosensoren.",
           hints: [
@@ -956,8 +956,8 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
         {
           question:
             "Ein Proton (m = 1,67 × 10⁻²⁷ kg, q = 1,6 × 10⁻¹⁹ C) bewegt sich mit v = 10⁶ m/s senkrecht in ein Magnetfeld B = 0,5 T. Wie groß ist der Zyklotronradius?",
-          options: ["r ≈ 0,21 mm", "r ≈ 2,1 cm", "r ≈ 21 mm", "r ≈ 210 µm", "r ≈ 2,1 m"],
-          correctIndex: 1,
+          options: ["r ≈ 2,1 cm", "r ≈ 0,21 mm", "r ≈ 21 mm", "r ≈ 210 µm", "r ≈ 2,1 m"],
+          correctIndex: 0,
           explanation:
             "r = m·v/(q·B) = (1,67×10⁻²⁷ × 10⁶) / (1,6×10⁻¹⁹ × 0,5) = 1,67×10⁻²¹ / (8×10⁻²⁰) = 0,02088 m ≈ 2,1 cm. Dieses Prinzip nutzt das Zyklotron: Protonen werden durch wechselnde elektrische Felder beschleunigt und durch ein Magnetfeld auf Kreisbahnen gehalten. Mit steigender Geschwindigkeit wächst der Radius → spiralförmige Bahn nach außen. Bei ausreichend hoher Energie werden Protonen ausgekoppelt und für PET-Isotopen-Produktion (z. B. ¹⁸F) genutzt.",
           hints: [
@@ -986,12 +986,12 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
             "Welcher Effekt erklärt das charakteristische Klopfen und Hämmern während einer MRT-Untersuchung?",
           options: [
             "Magnetostriktion der supraleitenden Spule bei 4 K",
-            "Lorentz-Kraft auf stromführende Gradientenspulen im starken Hauptmagnetfeld B₀",
-            "Kavitation durch starke Schallwellen",
             "Thermische Ausdehnung der Kühlröhren bei Heliumzufuhr",
+            "Kavitation durch starke Schallwellen",
+            "Lorentz-Kraft auf stromführende Gradientenspulen im starken Hauptmagnetfeld B₀",
             "Resonanzschwingungen des Patienten im Magnetfeld",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Die Gradientenspulen (x, y, z) überlagern dem statischen Feld B₀ schwache ortsabhängige Felder zur Ortscodierung. Beim Ein- und Ausschalten dieser Gradientenströme (I, wechselnd) erfährt die stromführende Spule eine Lorentz-Kraft: F = I·L×B₀. Da B₀ sehr stark ist (1,5–7 T), entstehen erhebliche mechanische Kräfte auf die Spulenleiter — Vibrationen → Schall (~60–120 dB). Deshalb werden MRT-Patienten mit Gehörschutz versehen. Neuere Sequenzen (Silent Scan) modulieren die Gradienten sanfter, um die Lärmentwicklung zu reduzieren.",
           hints: [
@@ -1020,12 +1020,12 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
             "Die Transkranielle Magnetstimulation (TMS) nutzt welches physikalische Prinzip zur Nervenreizung?",
           options: [
             "Direkte Magnetkraft (Lorentz-Kraft) auf Neuronen-Ionenkanäle",
-            "Elektromagnetische Induktion (Faraday): Magnetfeldpuls induziert elektrischen Strom im Kortex",
+            "Kapazitive Kopplung über die Schädelkalotte",
             "Thermische Aktivierung durch Joulesche Wärme",
             "Resonanzabsorption von Radiowellen durch Protonen",
-            "Kapazitive Kopplung über die Schädelkalotte",
+            "Elektromagnetische Induktion (Faraday): Magnetfeldpuls induziert elektrischen Strom im Kortex",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "TMS nutzt das Faradaysche Induktionsgesetz: Eine Spule über dem Schädel erzeugt einen kurzen (~100 µs), sehr starken Magnetfeldpuls (dB/dt bis zu 10⁴ T/s). Nach Faraday (ε = −dΦ/dt) wird dadurch ein elektrisches Feld im darunterliegenden Kortexgewebe induziert. Dieses Feld treibt einen elektrischen Strom durch die Neuronen — ausreichend stark (~1–2 V/m), um Aktionspotentiale auszulösen. Vorteil gegenüber direkter elektrischer Stimulation: kein schmerzhafter Hautstrom, nicht-invasiv. TMS wird therapeutisch bei therapieresistenter Depression eingesetzt (rTMS) und in der Forschung zur Kartierung kortikaler Areale.",
           hints: [
@@ -1697,8 +1697,8 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         {
           question:
             "Eine Lupe hat eine Brennweite von 5 cm. Die deutliche Sehweite beträgt 25 cm. Welche Vergrößerung bietet die Lupe?",
-          options: ["2-fach", "5-fach", "10-fach", "25-fach", "0,2-fach"],
-          correctIndex: 1,
+          options: ["5-fach", "2-fach", "10-fach", "25-fach", "0,2-fach"],
+          correctIndex: 0,
           explanation:
             "Die Vergrößerung einer Lupe berechnet sich als M = S/f, wobei S = 25 cm (deutliche Sehweite) und f die Brennweite der Lupe in cm ist. Mit f = 5 cm: M = 25/5 = 5. Das bedeutet, das Bild erscheint 5-mal größer als bei bloßem Auge aus 25 cm. Je kürzer die Brennweite der Lupe, desto größer die Vergrößerung – eine Lupe mit f=2,5 cm hätte M=10, eine mit f=1 cm M=25. Lupen mit sehr kurzer Brennweite (f<5mm) sind schwer herzustellen und haben geringe Bildschärfe am Rand.",
           hints: [
@@ -1713,12 +1713,12 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
             "Ein Lichtmikroskop hat ein 100x-Ölimmersionsobjektiv (NA = 1,3) und ein 10x-Okular. Es wird Licht der Wellenlänge 480 nm verwendet. Was ist die Gesamtvergrößerung und ungefähr die theoretische Auflösungsgrenze?",
           options: [
             "M=110x, d_min ≈ 185 nm",
-            "M=1000x, d_min ≈ 185 nm",
-            "M=1000x, d_min ≈ 370 nm",
             "M=100x, d_min ≈ 185 nm",
+            "M=1000x, d_min ≈ 370 nm",
+            "M=1000x, d_min ≈ 185 nm",
             "M=1000x, d_min ≈ 500 nm",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Gesamtvergrößerung: M_ges = M_Objektiv × M_Okular = 100 × 10 = 1000x. Auflösungsgrenze nach Abbe: d_min = λ/(2·NA) = 480/(2·1,3) = 480/2,6 ≈ 185 nm. Das bedeutet: Strukturen kleiner als ~185 nm können nicht mehr aufgelöst werden. Viren (20–300 nm) sind damit an der Grenze oder darunter des Lichtmikroskops. Ölimmersion erhöht NA von ca. 0,95 (Luft) auf 1,3 (Öl), was die Auflösung um ~37% verbessert. Bakterien (1–10 µm) sind problemlos sichtbar.",
           hints: [
@@ -1731,8 +1731,8 @@ Durch Teleskop: 0,52° × 40 = 20,8° → Mond füllt ~40 % des Gesichtsfelds. K
         {
           question:
             "Ein Teleskop hat ein Objektiv mit f_ob = 800 mm und ein Okular mit f_ok = 20 mm. Welche Vergrößerung ergibt sich?",
-          options: ["16-fach", "40-fach", "80-fach", "400-fach", "820-fach"],
-          correctIndex: 1,
+          options: ["16-fach", "820-fach", "80-fach", "400-fach", "40-fach"],
+          correctIndex: 4,
           explanation:
             "Die Vergrößerung eines Keplerteleskops berechnet sich als M = f_ob/f_ok = 800 mm/20 mm = 40. Dabei ist f_ob die Brennweite des Objektivs (lang) und f_ok die Brennweite des Okulars (kurz). Für ein Keplersches Fernrohr gilt: Das erzeugte Bild ist umgekehrt. Galileische Fernrohre verwenden eine Zerstreuungslinse als Okular und erzeugen aufrechte Bilder, sind aber durch kleineres Gesichtsfeld limitiert. Die Körperlänge des Teleskops ist ungefähr f_ob + f_ok = 820 mm.",
           hints: [
@@ -2005,13 +2005,13 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
           question:
             "Ein Brillenrezept lautet: sph +1,50, cyl –0,75, Achse 90°. Welche Fehlsichtigkeiten werden korrigiert?",
           options: [
-            "Nur Myopie",
             "Hyperopie und Astigmatismus kombiniert",
+            "Nur Myopie",
             "Nur Presbyopie",
             "Myopie und Astigmatismus kombiniert",
             "Nur Astigmatismus",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "Das Rezept enthält zwei Komponenten: (1) sph +1,50 dpt – ein positiver sphärischer Wert bedeutet Sammellinse → Korrektur von Hyperopie (oder Presbyopie, wenn es sich um einen Add-Wert handelt). (2) cyl –0,75 dpt, Achse 90° – ein zylindrischer Wert mit Achsangabe bedeutet Korrektur von Astigmatismus. Die Zylinderlinse bricht nur in einem Meridian (senkrecht zur Achse) und gleicht die asymmetrische Hornhautkrümmung aus. Kombiniert: +1,50/–0,75 Achse 90° korrigiert eine Weitsichtigkeit mit astigmatischer Komponente. Bei myopem Astigmatismus wären die sph-Werte negativ.",
           hints: [
@@ -2026,12 +2026,12 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
             "Warum entwickeln stark Kurzsichtige im Alter oft keine oder nur geringe Presbyopie-Symptome beim Lesen?",
           options: [
             "Kurzsichtige haben eine dickere Linse und akkommodieren besser",
-            "Ihr Nahpunkt liegt ohnehin nahe, sodass sie ohne Brille noch lesen können, auch wenn die Akkommodation nachlässt",
-            "Myope akkommodieren generell stärker als Emmetrope",
             "Kurzsichtige haben einen größeren Augeninnendruck, der die Linse flexibler hält",
+            "Myope akkommodieren generell stärker als Emmetrope",
+            "Ihr Nahpunkt liegt ohnehin nahe, sodass sie ohne Brille noch lesen können, auch wenn die Akkommodation nachlässt",
             "Myopie schützt vor Linsenverhärtung durch bessere Linsenernährung",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Ein myopes Auge hat seinen Fernpunkt bei endlicher Entfernung (z. B. 33 cm bei –3 dpt). Zum Lesen (Abstand 30–40 cm) muss ein normalsichtiges Auge stark akkommodieren; ein myopes Auge kann hingegen ohne Brille (und ohne große Akkommodation) lesen, weil der Fokus ohnehin nahe liegt. Wenn im Alter die Akkommodation nachlässt (Presbyopie), kann der Myope für die Leseentfernung die Brille einfach abnehmen – die Zerstreuungslinsenbrille für Ferne ist dann nicht mehr nötig. Für Fernsicht benötigt er weiterhin seine Myopiebrille. Es handelt sich also um einen optischen Zufall, nicht um einen biologischen Schutz der Linse.",
           hints: [
@@ -2046,12 +2046,12 @@ Bei −6 dpt: t = 6 · 36 / 3 = **72 µm**. Hornhautdicke ~550 µm, mind. 250 µ
             'Was beschreibt der Begriff "Astigmatismus" physikalisch, und welche Linse korrigiert ihn?',
           options: [
             "Ein Auge, das zu lang ist und eine Zerstreuungslinse benötigt",
-            "Eine asymmetrische Hornhautkrümmung, bei der verschiedene Meridiane unterschiedliche Brechkraft haben – Korrektur durch Zylinderlinse",
+            "Ein Sehnerv-Defizit, das mit einer Bifokalgläser behandelt wird",
             "Eine verhärtete Linse, die eine Sammellinse als Lesebrille erfordert",
             "Eine zu kleine Pupille, die mit einer Prismenlinie korrigiert wird",
-            "Ein Sehnerv-Defizit, das mit einer Bifokalgläser behandelt wird",
+            "Eine asymmetrische Hornhautkrümmung, bei der verschiedene Meridiane unterschiedliche Brechkraft haben – Korrektur durch Zylinderlinse",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Astigmatismus (Stabsichtigkeit) bedeutet, dass die brechende Fläche (meist Hornhaut) keine gleichmäßig sphärische Krümmung hat, sondern in verschiedenen Meridianen unterschiedlich stark gewölbt ist – ähnlich einem Rugbyball statt einer Kugel. Dies führt dazu, dass verschiedene Ebenen des einfallenden Lichts unterschiedliche Brennpunkte haben (Sturmsches Intervall). Punkte werden als Linien oder Flecken wahrgenommen. Die Korrektur erfolgt mit torischen Linsen (Zylinderlinsen), die in einem Meridian eine definierte Brechkraft haben und im senkrechten Meridian keine. Das Brillenrezept enthält dafür den cyl-Wert (Stärke der zylindrischen Korrektur) und die Achse (Richtung des nicht-brechenden Meridians in Grad).",
           hints: [

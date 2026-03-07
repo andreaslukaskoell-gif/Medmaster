@@ -44,6 +44,8 @@ Jeder Stoffwechselvorgang im Körper, jede Medikamentenwirkung und jede Laborana
 - **Stöchiometrische Koeffizienten:** Ganzzahlige Verhältnisse der beteiligten Mol-Mengen
 - **Reaktionspfeil:** → (irreversibel) bzw. ⇌ (reversibel/Gleichgewicht)
 
+{{IMAGE}}
+
 ## Die vier klassischen Reaktionstypen
 
 | Reaktionstyp | Schema | Beispiel | Klinischer Bezug |
@@ -195,11 +197,11 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
           options: [
             "CaCO₃ → CaO + CO₂",
             "NaCl + AgNO₃ → AgCl + NaNO₃",
-            "2 Mg + O₂ → 2 MgO",
             "CH₄ + 2 O₂ → CO₂ + 2 H₂O",
+            "2 Mg + O₂ → 2 MgO",
             "HCl + NaOH → NaCl + H₂O",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Bei einer Synthesereaktion vereinigen sich zwei oder mehr Edukte zu einem einzigen Produkt: A + B → AB. 2 Mg + O₂ → 2 MgO erfüllt dieses Muster: Magnesium und Sauerstoff bilden gemeinsam Magnesiumoxid. Die Zersetzung (CaCO₃ → CaO + CO₂) ist das Gegenteil. NaCl + AgNO₃ → AgCl + NaNO₃ ist eine Metathese (Fällungsreaktion). Die Verbrennung von Methan und die Neutralisation sind ebenfalls keine reinen Synthesen in diesem engeren Sinne.",
           hints: [
@@ -213,12 +215,12 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
           question: "Was charakterisiert eine Redoxreaktion auf der Elektronenebene?",
           options: [
             "Übertragung von Protonen (H⁺) zwischen Reaktionspartnern",
-            "Übertragung von Elektronen: eine Substanz oxidiert, eine andere reduziert sich",
+            "Substitution eines Atoms durch ein anderes ohne Ladungsänderung",
             "Bildung eines unlöslichen Niederschlags aus zwei Salzen",
             "Zersetzung einer Verbindung durch Wärmezufuhr",
-            "Substitution eines Atoms durch ein anderes ohne Ladungsänderung",
+            "Übertragung von Elektronen: eine Substanz oxidiert, eine andere reduziert sich",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Redoxreaktionen sind durch den Transfer von Elektronen definiert. Die oxidierende Substanz gibt Elektronen ab (Oxidation = Elektronenverlust, Oxidationszahl steigt) und die reduzierende Substanz nimmt Elektronen auf (Reduktion = Elektronengewinn, Oxidationszahl sinkt). Die Gedächtnisstütze OIL RIG hilft: Oxidation Is Loss, Reduction Is Gain. H⁺-Transfer kennzeichnet hingegen Säure-Base-Reaktionen nach Brønsted. Die anderen Optionen beschreiben Fällungs-, Zersetzungs- und Substitutionsreaktionen.",
           hints: [
@@ -231,13 +233,13 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
         {
           question: "Was ist die korrekte Aussage über Katalysatoren?",
           options: [
-            "Sie erhöhen ΔH der Reaktion und machen sie exothermer.",
-            "Sie werden im Verlauf der Reaktion verbraucht und müssen nachgefüllt werden.",
             "Sie senken die Aktivierungsenergie E_A, ohne ΔH oder ΔG zu ändern.",
+            "Sie werden im Verlauf der Reaktion verbraucht und müssen nachgefüllt werden.",
+            "Sie erhöhen ΔH der Reaktion und machen sie exothermer.",
             "Sie verschieben das chemische Gleichgewicht zugunsten der Produkte.",
             "Sie erhöhen ausschließlich die Temperatur des Systems.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Katalysatoren senken die Aktivierungsenergie E_A, indem sie einen alternativen Reaktionsweg mit geringerer Energiebarriere bereitstellen. Dadurch wird die Reaktion schneller — sowohl Hin- als auch Rückreaktion. Entscheidend: ΔH, ΔG und die Gleichgewichtslage bleiben unverändert; der Katalysator wird nicht verbraucht. Enzyme als biologische Katalysatoren folgen demselben Prinzip — sie senken E_A durch Ausbildung eines Enzym-Substrat-Komplexes, ohne die Thermodynamik der Reaktion zu verändern.",
           hints: [
@@ -310,11 +312,11 @@ Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern vo
           options: [
             "Lösen von NaCl in Wasser (keine Katalyse)",
             "Haber-Bosch-Prozess (heterogene Katalyse mit Eisen)",
-            "Abbau von H₂O₂ durch Katalase zu H₂O und O₂ (Zersetzung)",
-            "Fällung von AgCl aus AgNO₃ und NaCl (Metathese)",
             "Neutralisation von HCl mit NaOH (Säure-Base)",
+            "Fällung von AgCl aus AgNO₃ und NaCl (Metathese)",
+            "Abbau von H₂O₂ durch Katalase zu H₂O und O₂ (Zersetzung)",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Katalase ist ein Enzym (biologischer Katalysator), das die Zersetzung von Wasserstoffperoxid katalysiert: 2 H₂O₂ → 2 H₂O + O₂. H₂O₂ ist ein zellschädigendes Oxidationsmittel, das bei Stoffwechselreaktionen entsteht. Katalase senkt die Aktivierungsenergie dieser Zersetzungsreaktion enorm — die Reaktionsrate steigt um den Faktor 10⁷. Klinisch relevant: Ein Katalase-Mangel (Akatalasämie) kann zu Gewebeschäden durch H₂O₂-Akkumulation führen. Dieser Fall vereint Enzymkatalyse und Zersetzungsreaktion.",
           hints: [
@@ -385,6 +387,8 @@ Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
 
 **Rechenbeispiel — Halbwertszeit 1. Ordnung:**
 Medikament mit k = 0,0693 h⁻¹. t₁/₂ = 0,693 / 0,0693 = 10 h. Nach 10 h: 50 %. Nach 20 h: 25 %. Nach 30 h: 12,5 %. Steady-State nach ~5 Halbwertszeiten (< 3 % Rest).
+
+{{IMAGE}}
 
 ## Einflussfaktoren auf die Reaktionsgeschwindigkeit
 
@@ -494,8 +498,8 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
       selfTest: [
         {
           question: "Welche Einheit hat die Reaktionsgeschwindigkeit v?",
-          options: ["mol / L", "mol · L⁻¹ · s⁻¹", "J / mol", "s⁻¹", "L · mol⁻¹"],
-          correctIndex: 1,
+          options: ["mol · L⁻¹ · s⁻¹", "mol / L", "J / mol", "s⁻¹", "L · mol⁻¹"],
+          correctIndex: 0,
           explanation:
             "Die Reaktionsgeschwindigkeit v = Δ[Konzentration] / Δt hat die Einheit (mol/L) / s = mol·L⁻¹·s⁻¹. mol/L allein ist eine Einheit der Konzentration (ohne Zeitbezug). J/mol ist eine Energieeinheit (z. B. für Aktivierungsenergie oder Enthalpie). s⁻¹ ist die Einheit der Geschwindigkeitskonstante k bei einer Reaktion 1. Ordnung. L·mol⁻¹ wäre ein Reziprokwert einer Konzentration. Nur mol·L⁻¹·s⁻¹ gibt korrekt an, um wie viel sich die Konzentration pro Zeiteinheit ändert.",
           hints: [
@@ -508,8 +512,8 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         {
           question:
             "Eine Reaktion 1. Ordnung hat k = 0,0693 min⁻¹. Wie lange dauert es, bis die Halbwertszeit erreicht ist?",
-          options: ["5 min", "7 min", "10 min", "14 min", "20 min"],
-          correctIndex: 2,
+          options: ["5 min", "10 min", "7 min", "14 min", "20 min"],
+          correctIndex: 1,
           explanation:
             "Für eine Reaktion 1. Ordnung gilt: t₁/₂ = ln 2 / k ≈ 0,693 / k. Mit k = 0,0693 min⁻¹ ergibt sich: t₁/₂ = 0,693 / 0,0693 min⁻¹ = 10 min. Die Halbwertszeit bei der 1. Ordnung ist konzentrationsunabhängig — ein Vorteil für klinische Anwendungen wie die Berechnung von Medikamenten-Dosierungsintervallen. Nach 10 min ist die Konzentration auf 50 %, nach 20 min auf 25 %, nach 30 min auf 12,5 % gesunken.",
           hints: [
@@ -543,12 +547,12 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
           question: "Warum folgt der Ethanolabbau in der Leber einer Kinetik 0. Ordnung?",
           options: [
             "Weil Ethanol keine Aktivierungsenergie benötigt.",
-            "Weil die beteiligten Enzyme (ADH, ALDH) bei typischen Blutalkoholspiegeln gesättigt sind.",
-            "Weil Ethanol mit Wasser reagiert und kein Enzym beteiligt ist.",
             "Weil die Körpertemperatur konstant ist und E_A nicht beeinflusst.",
+            "Weil Ethanol mit Wasser reagiert und kein Enzym beteiligt ist.",
+            "Weil die beteiligten Enzyme (ADH, ALDH) bei typischen Blutalkoholspiegeln gesättigt sind.",
             "Weil Ethanol eine kleine Molmasse hat und besonders schnell reagiert.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Der Abbau von Ethanol durch Alkoholdehydrogenase (ADH) und Aldehyddehydrogenase (ALDH) folgt bei normalen bis erhöhten Blutalkoholspiegeln einer Kinetik 0. Ordnung. Das liegt daran, dass die Enzyme bei diesen Konzentrationen bereits gesättigt sind — alle aktiven Zentren sind besetzt. Da [S] ≫ Kₘ gilt, ist v ≈ vₘₐₓ = konstant (0. Ordnung nach Michaelis-Menten). Daraus folgt: Der Ethanolspiegel sinkt mit konstanter Rate von ~0,1–0,15 ‰ pro Stunde, unabhängig von der Ausgangskonzentration. Erst bei sehr niedrigen Spiegeln ([S] ≈ Kₘ) wechselt die Kinetik zur 1. Ordnung.",
           hints: [
@@ -563,11 +567,11 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
           options: [
             "Er erhöht die Temperatur T des Systems.",
             "Er erhöht den präexponentiellen Faktor A auf unendlich.",
-            "Er senkt E_A, wodurch k und damit die Reaktionsgeschwindigkeit steigen.",
-            "Er erhöht R (Gaskonstante) für diese spezifische Reaktion.",
             "Er macht die Reaktion exotherm, wenn sie zuvor endotherm war.",
+            "Er erhöht R (Gaskonstante) für diese spezifische Reaktion.",
+            "Er senkt E_A, wodurch k und damit die Reaktionsgeschwindigkeit steigen.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "In der Arrhenius-Gleichung k = A·e^(−E_A/RT) ist E_A die Aktivierungsenergie. Ein Katalysator senkt E_A, indem er einen alternativen Reaktionspfad mit einer niedrigeren Energiebarriere bereitstellt. Da E_A im Exponenten mit negativem Vorzeichen steht, führt eine Senkung von E_A zu einem größeren Exponentialterm — k steigt exponentiell. Die Temperatur T, der Frequenzfaktor A und die Gaskonstante R werden vom Katalysator nicht verändert. Wichtig: ΔH und ΔG der Reaktion bleiben unverändert — der Katalysator beschleunigt die Einstellung des Gleichgewichts, verschiebt es aber nicht.",
           hints: [
@@ -580,13 +584,13 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         {
           question: "Bei der Michaelis-Menten-Kinetik: Was gilt, wenn [S] ≫ Kₘ?",
           options: [
-            "v ≈ 0, da das Enzym inhibiert wird.",
             "v ≈ vₘₐₓ, da das Enzym gesättigt ist (0. Ordnung).",
+            "v ≈ 0, da das Enzym inhibiert wird.",
             "v ≈ (vₘₐₓ/Kₘ)·[S], da lineare Kinetik gilt (1. Ordnung).",
             "Kₘ steigt auf den Wert von [S].",
             "vₘₐₓ sinkt auf die Hälfte.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "In der Michaelis-Menten-Gleichung v = vₘₐₓ·[S]/(Kₘ+[S]) gilt: Wenn [S] sehr viel größer als Kₘ ist, wird der Nenner (Kₘ+[S]) ≈ [S]. Damit vereinfacht sich die Gleichung zu v ≈ vₘₐₓ·[S]/[S] = vₘₐₓ. Die Reaktion läuft mit maximaler Geschwindigkeit, alle aktiven Zentren des Enzyms sind besetzt — Sättigungszustand. Kinetisch verhält sich das System wie eine Reaktion 0. Ordnung: v ist konstant und unabhängig von [S]. Dies ist das Prinzip hinter dem Ethanol-Metabolismus bei hohen Blutalkoholspiegeln.",
           hints: [
@@ -657,6 +661,8 @@ Beispiel: **2 H₂ + O₂ → 2 H₂O**
 - Avogadro-Zahl: N_A = 6,022 × 10²³ mol⁻¹ (1 mol = 6,022 × 10²³ Teilchen)
 - Molares Gasvolumen (Normalbedingungen): V_m = 22,4 L/mol
 - Universelle Gaskonstante: R = 8,314 J·mol⁻¹·K⁻¹
+
+{{IMAGE}}
 
 ## Reaktionsgleichung ausgleichen (Bilanzierung)
 
@@ -796,12 +802,12 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
           question: "Welche Mol-Verhältnisse beschreibt die Gleichung: N₂ + 3 H₂ → 2 NH₃?",
           options: [
             "1 g N₂ + 3 g H₂ → 2 g NH₃",
-            "1 mol N₂ + 3 mol H₂ → 2 mol NH₃",
             "1 mol N₂ + 3 mol H₂ → 2 g NH₃",
+            "1 mol N₂ + 3 mol H₂ → 2 mol NH₃",
             "2 mol N₂ + 6 mol H₂ → 4 mol NH₃ (kleinstmögliche Variante)",
             "14 g N₂ + 6 g H₂ → 34 g NH₃",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Die stöchiometrischen Koeffizienten in einer ausgeglichenen Reaktionsgleichung geben immer Mol-Verhältnisse an, keine Massenverhältnisse. 1 mol N₂ + 3 mol H₂ → 2 mol NH₃ ist die direkte Aussage der Koeffizienten 1:3:2. Die Massenangaben (28 g N₂ + 6 g H₂ → 34 g NH₃) wären zwar korrekt, entsprechen aber nicht den Koeffizienten direkt (1:3:2 ≠ 28:6:34). Option D zeigt das richtige Verhältnis, aber verdoppelt unnötig — es ist nicht die kleinstmögliche ganzzahlige Variante der Koeffizienten.",
           hints: [
@@ -815,13 +821,13 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
           question:
             "Man gibt 5 mol H₂ und 2 mol O₂ in eine Reaktion: 2 H₂ + O₂ → 2 H₂O. Welches ist das Mangelreagenz?",
           options: [
-            "O₂, weil es weniger Mol sind.",
+            "Keines — beide sind im exakten stöchiometrischen Verhältnis vorhanden.",
             "H₂, weil für 2 mol O₂ genau 4 mol H₂ benötigt werden, aber 5 mol vorhanden sind.",
             "H₂, weil es in der Gleichung mit dem Koeffizient 2 steht.",
-            "Keines — beide sind im exakten stöchiometrischen Verhältnis vorhanden.",
+            "O₂, weil es weniger Mol sind.",
             "O₂, weil es in der Luft immer im Überschuss vorliegt.",
           ],
-          correctIndex: 0,
+          correctIndex: 3,
           explanation:
             "Stöchiometrisches Verhältnis: 2 mol H₂ benötigen 1 mol O₂. Quotienten: H₂: 5/2 = 2,5; O₂: 2/1 = 2. Der kleinere Quotient (2 < 2,5) kennzeichnet O₂ als Mangelreagenz — O₂ wird zuerst aufgebraucht. Für 2 mol O₂ werden 4 mol H₂ verbraucht; 1 mol H₂ bleibt übrig. Option A nennt O₂ korrekt als Mangelreagenz.",
           hints: [
@@ -834,8 +840,8 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
         {
           question:
             "Wie viele Gramm CO₂ entstehen bei der vollständigen Verbrennung von 90 g Glucose (C₆H₁₂O₆, M = 180 g/mol)? (M CO₂ = 44 g/mol)",
-          options: ["44 g", "88 g", "132 g", "176 g", "264 g"],
-          correctIndex: 2,
+          options: ["44 g", "88 g", "264 g", "176 g", "132 g"],
+          correctIndex: 4,
           explanation:
             "Reaktionsgleichung: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O. Schritt 1: n(Glucose) = 90 g / 180 g/mol = 0,5 mol. Schritt 2: Mol-Verhältnis Glucose : CO₂ = 1:6 → n(CO₂) = 0,5 × 6 = 3 mol. Schritt 3: m(CO₂) = 3 mol × 44 g/mol = 132 g. Die Verbrennung von 90 g Glucose (ein halbes Mol) ergibt 3 Mol CO₂ und 3 Mol H₂O. Prüfung (Massenerhaltung): 90 g Glucose + 96 g O₂ = 132 g CO₂ + 54 g H₂O = 186 g = 186 g.",
           hints: [
@@ -848,8 +854,8 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
         {
           question:
             "Eine Reaktion ergibt theoretisch 50 g Produkt; tatsächlich werden 38 g isoliert. Wie groß ist die prozentuale Ausbeute?",
-          options: ["62 %", "72 %", "76 %", "82 %", "88 %"],
-          correctIndex: 2,
+          options: ["76 %", "72 %", "62 %", "82 %", "88 %"],
+          correctIndex: 0,
           explanation:
             "Ausbeute % = (tatsächliche Ausbeute / theoretische Ausbeute) × 100 = (38 g / 50 g) × 100 = 76 %. Ursachen für die Ausbeuteverluste (24 %): Nebenreaktionen, unvollständiger Umsatz (Gleichgewichtslage), Verluste bei der Isolierung und Aufarbeitung des Produkts. In der industriellen Chemie (z. B. Haber-Bosch-Prozess) ist die Optimierung der Ausbeute ein zentrales wirtschaftliches Ziel.",
           hints: [
@@ -862,8 +868,8 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
         {
           question:
             "Wie viel Gramm NaCl (M = 58,5 g/mol) sind in 500 mL physiologischer Kochsalzlösung (0,9 % w/v) enthalten?",
-          options: ["0,9 g", "2,25 g", "4,5 g", "9,0 g", "18,0 g"],
-          correctIndex: 2,
+          options: ["0,9 g", "4,5 g", "2,25 g", "9,0 g", "18,0 g"],
+          correctIndex: 1,
           explanation:
             "0,9 % (w/v) bedeutet 0,9 g NaCl pro 100 mL Lösung. In 500 mL sind daher: 0,9 g/100 mL × 500 mL = 4,5 g NaCl enthalten. Zur Kontrolle die molare Konzentration: c = 4,5 g / (58,5 g/mol × 0,5 L) = 4,5 / 29,25 ≈ 0,154 mol/L = 154 mmol/L. Das entspricht der physiologischen Na⁺/Cl⁻-Konzentration im Blut (~140/100 mmol/L). Diese Berechnung ist in der klinischen Pharmakologie und bei der Infusionszubereitung täglich relevant.",
           hints: [
@@ -890,8 +896,8 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
         {
           question:
             "Was ist der Respirationsquotient (RQ) bei der vollständigen Verbrennung von Glucose (C₆H₁₂O₆)?",
-          options: ["RQ = 0,7", "RQ = 0,8", "RQ = 1,0", "RQ = 1,5", "RQ = 2,0"],
-          correctIndex: 2,
+          options: ["RQ = 0,7", "RQ = 0,8", "RQ = 1,5", "RQ = 1,0", "RQ = 2,0"],
+          correctIndex: 3,
           explanation:
             "Die Verbrennung von Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O. Der Respirationsquotient RQ = produziertes CO₂ / verbrauchter O₂ = 6/6 = 1,0. Bei Fetten (z. B. Palmitinsäure) ist RQ ≈ 0,7, weil Fette verhältnismäßig weniger Sauerstoff im Molekül haben und mehr O₂ verbrauchen als CO₂ produzieren. Bei Proteinen liegt RQ ≈ 0,8. Ein RQ > 1 deutet auf Lipogenese (Kohlenhydrate → Fette) hin. Der RQ ist klinisch relevant bei Ernährungsmedizin und Beatmungstherapie (ARDS).",
           hints: [
@@ -1073,12 +1079,12 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
             "Welcher Ausdruck ist das korrekte Massenwirkungsgesetz für 2SO₂(g) + O₂(g) ⇌ 2SO₃(g)?",
           options: [
             "K_c = [SO₂]²·[O₂] / [SO₃]²",
-            "K_c = [SO₃]² / ([SO₂]²·[O₂])",
+            "K_c = [SO₂]·[O₂] / [SO₃]",
             "K_c = [SO₃] / ([SO₂]·[O₂])",
             "K_c = 2[SO₃] / (2[SO₂]·[O₂])",
-            "K_c = [SO₂]·[O₂] / [SO₃]",
+            "K_c = [SO₃]² / ([SO₂]²·[O₂])",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "Das MWG lautet K_c = [Produkte]^Koeffizient / [Edukte]^Koeffizient. Für 2SO₂ + O₂ ⇌ 2SO₃: K_c = [SO₃]² / ([SO₂]²·[O₂]). Die stöchiometrischen Koeffizienten (2, 1, 2) werden zu Exponenten. Die anderen Optionen verwechseln Zähler/Nenner oder berücksichtigen die Koeffizienten nicht korrekt. Koeffizienten dürfen nicht als Faktoren (z. B. 2×) in den Ausdruck eingehen — sie werden ausschließlich als Exponenten verwendet.",
           hints: [
@@ -1091,13 +1097,13 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
         {
           question: "Für eine Reaktion gilt K_c = 0,001. Was bedeutet das für das Gleichgewicht?",
           options: [
-            "Die Reaktion ist vollständig — nahezu alle Edukte werden zu Produkten.",
             "Das Gleichgewicht liegt stark auf der Seite der Edukte.",
+            "Die Reaktion ist vollständig — nahezu alle Edukte werden zu Produkten.",
             "Edukte und Produkte liegen in gleichen Konzentrationen vor.",
             "Die Reaktion ist sehr schnell.",
             "K_c < 1 bedeutet, die Reaktion ist verboten.",
           ],
-          correctIndex: 1,
+          correctIndex: 0,
           explanation:
             "K_c = 0,001 = 10⁻³ ist deutlich kleiner als 1. Das bedeutet, im Gleichgewicht überwiegen die Edukte stark gegenüber den Produkten. K_c sagt nichts über die Reaktionsgeschwindigkeit aus. 'Verboten' ist chemisch kein Konzept im Gleichgewichtskontext. Ein vollständiger Ablauf (nahezu nur Produkte) entspräche K_c >> 1. K_c ≈ 1 würde ähnliche Konzentrationen von Edukten und Produkten bedeuten.",
           hints: [
@@ -1130,12 +1136,12 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
           question: "Welche Aussage zum Zusammenhang ΔG° = −RT·ln(K) ist korrekt?",
           options: [
             "Wenn K = 1, dann ist ΔG° = RT.",
-            "Wenn K > 1, dann ist ΔG° negativ — die Reaktion ist thermodynamisch begünstigt.",
             "ΔG° gibt die Reaktionsgeschwindigkeit an.",
+            "Wenn K > 1, dann ist ΔG° negativ — die Reaktion ist thermodynamisch begünstigt.",
             "Wenn ΔG° > 0, dann ist K > 1.",
             "Die Formel gilt nur für endotherme Reaktionen.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Aus ΔG° = −RT·ln(K) folgt: Wenn K > 1, dann ist ln(K) > 0, also ΔG° = −RT·ln(K) < 0 — die Reaktion ist thermodynamisch begünstigt. Wenn K = 1, dann ln(1) = 0, also ΔG° = 0. Wenn ΔG° > 0, dann ln(K) < 0, also K < 1. ΔG° beschreibt Thermodynamik, nicht Kinetik. Die Formel gilt universell.",
           hints: [
@@ -1149,12 +1155,12 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
           question: "Warum erscheint Wasser (H₂O) im MWG-Ausdruck bei wässrigen Reaktionen nicht?",
           options: [
             "Weil Wasser kein Reaktant ist.",
-            "Weil die Aktivität des reinen Lösungsmittels näherungsweise 1 ist und keinen Beitrag leistet.",
-            "Weil H₂O immer vollständig reagiert.",
             "Weil das MWG nur für Gase gilt.",
+            "Weil H₂O immer vollständig reagiert.",
+            "Weil die Aktivität des reinen Lösungsmittels näherungsweise 1 ist und keinen Beitrag leistet.",
             "Weil Wasser keine Konzentration hat.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "In sehr verdünnten wässrigen Lösungen ist die Konzentration von Wasser näherungsweise konstant (ca. 55,5 mol/L) und ändert sich durch die Reaktion kaum. Formal entspricht das einer Aktivität von 1 — daher taucht H₂O im MWG-Ausdruck nicht auf. Dasselbe gilt für reine Feststoffe. Das MWG gilt für alle Aggregatzustände, nicht nur Gase.",
           hints: [
@@ -1170,11 +1176,11 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
           options: [
             "K_c steigt weiter an, weil höhere Temperatur immer K_c erhöht.",
             "K_c bleibt konstant, da K nur von der Konzentration abhängt.",
-            "K_c nimmt ab, weil bei exothermen Reaktionen höhere Temperatur das Gleichgewicht zu den Edukten verschiebt.",
-            "K_c wird genau 1.",
             "K_c wird negativ.",
+            "K_c wird genau 1.",
+            "K_c nimmt ab, weil bei exothermen Reaktionen höhere Temperatur das Gleichgewicht zu den Edukten verschiebt.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Für exotherme Reaktionen (ΔH < 0) verschiebt eine Temperaturerhöhung das Gleichgewicht in Richtung Edukte (Le Chatelier). Mathematisch sinkt K mit steigendem T, wenn ΔH° < 0. K_c kann nie negativ werden (Quotient positiver Konzentrationen). K ist nicht konzentrationsunabhängig — es ist temperaturabhängig.",
           hints: [
@@ -1187,13 +1193,13 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
         {
           question: "Welche Reaktion entspricht K_c = [NH₃]² / ([N₂]·[H₂]³)?",
           options: [
-            "NH₃ ⇌ N₂ + H₂",
-            "N₂ + H₂ ⇌ NH₃",
             "N₂ + 3H₂ ⇌ 2NH₃",
+            "N₂ + H₂ ⇌ NH₃",
+            "NH₃ ⇌ N₂ + H₂",
             "2N₂ + 3H₂ ⇌ 2NH₃",
             "2NH₃ ⇌ N₂ + 3H₂",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "K_c = [NH₃]² / ([N₂]·[H₂]³) entspricht N₂ + 3H₂ ⇌ 2NH₃. NH₃ steht mit Exponent 2 im Zähler (Produkt, Koeffizient 2), N₂ mit Exponent 1 im Nenner (Edukt, Koeffizient 1), H₂ mit Exponent 3 im Nenner (Edukt, Koeffizient 3). Dies ist die Haber-Bosch-Reaktion. 2NH₃ ⇌ N₂ + 3H₂ wäre die umgekehrte Reaktion, deren K_c der Kehrwert wäre.",
           hints: [
@@ -1364,12 +1370,12 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
             "Bei der Reaktion 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) wird der Druck erhöht. Was passiert?",
           options: [
             "Das Gleichgewicht verschiebt sich zu SO₂ und O₂ (Edukte), weil mehr Mole entstehen.",
-            "Das Gleichgewicht verschiebt sich zu SO₃ (Produkte), weil die Produktseite weniger Gasmoleküle hat.",
             "Der Druck hat keinen Einfluss, weil Δn = 0 ist.",
+            "Das Gleichgewicht verschiebt sich zu SO₃ (Produkte), weil die Produktseite weniger Gasmoleküle hat.",
             "K_c steigt bei höherem Druck.",
             "Nur die Reaktionsgeschwindigkeit ändert sich, nicht die Gleichgewichtslage.",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Für 2SO₂ + O₂ ⇌ 2SO₃ gilt: Auf der Eduktseite sind 3 Gasmoleküle (2+1), auf der Produktseite 2 (nur SO₃). Δn = 2 − 3 = −1. Nach Le Chatelier verschiebt sich das Gleichgewicht bei Druckerhöhung zur Seite mit weniger Gasmolekülen — also zur SO₃-Seite. K_c ändert sich durch Druck nicht. Dies ist die Grundlage des industriellen Contact-Prozesses zur Schwefelsäureherstellung.",
           hints: [
@@ -1383,12 +1389,12 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
           question: "Was ist das Prinzip von Le Chatelier in seiner präzisen Formulierung?",
           options: [
             "Eine Reaktion läuft immer in Richtung der Produkte, wenn Wärme zugeführt wird.",
-            "Wird ein Gleichgewichtssystem gestört, verschiebt es sich so, dass die Störung verkleinert wird.",
-            "Katalysatoren verschieben das Gleichgewicht zugunsten der Produkte.",
             "Bei konstanter Temperatur ist K_c unabhängig von der Konzentration.",
+            "Katalysatoren verschieben das Gleichgewicht zugunsten der Produkte.",
+            "Wird ein Gleichgewichtssystem gestört, verschiebt es sich so, dass die Störung verkleinert wird.",
             "Das Gleichgewicht liegt immer auf der Seite mit den energieärmeren Stoffen.",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "Das Prinzip von Le Chatelier lautet: Wird ein System im Gleichgewicht gestört, reagiert es durch Verschiebung in diejenige Richtung, die der Störung entgegenwirkt. Dies gilt für Konzentrationsänderungen, Druckänderungen (bei Δn ≠ 0) und Temperaturänderungen. Katalysatoren verschieben das Gleichgewicht nicht. Das Gleichgewicht liegt nicht zwingend auf der Seite der energieärmeren Stoffe.",
           hints: [
@@ -1404,11 +1410,11 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
           options: [
             "K_c sinkt, Gleichgewicht verschiebt sich zu A.",
             "K_c bleibt konstant, nur die Reaktionsgeschwindigkeit steigt.",
-            "K_c steigt, Gleichgewicht verschiebt sich zu B.",
-            "K_c sinkt, Gleichgewicht verschiebt sich zu B.",
             "Temperaturänderungen beeinflussen K_c bei endothermen Reaktionen nicht.",
+            "K_c sinkt, Gleichgewicht verschiebt sich zu B.",
+            "K_c steigt, Gleichgewicht verschiebt sich zu B.",
           ],
-          correctIndex: 2,
+          correctIndex: 4,
           explanation:
             "Bei endothermen Reaktionen (ΔH > 0) ist Wärme quasi ein Edukt: A + Wärme ⇌ B. Temperaturerhöhung = mehr Wärme-Edukt → Gleichgewicht verschiebt sich zu B (Produktseite). K_c steigt mit der Temperatur. K_c ändert sich bei Temperaturänderungen immer — im Gegensatz zu Konzentrations- und Druckänderungen.",
           hints: [
@@ -1422,13 +1428,13 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
           question:
             "Im Haber-Bosch-Prozess wird NH₃ nach der Synthese kontinuierlich verflüssigt und abgezogen. Welchen Effekt hat das?",
           options: [
-            "Das Gleichgewicht verschiebt sich zu N₂ und H₂ (Edukte).",
-            "K_c vergrößert sich, weil NH₃ entfernt wird.",
             "Das Gleichgewicht verschiebt sich kontinuierlich zu NH₃ — höhere Ausbeute.",
+            "K_c vergrößert sich, weil NH₃ entfernt wird.",
+            "Das Gleichgewicht verschiebt sich zu N₂ und H₂ (Edukte).",
             "Es hat keinen Einfluss, weil K_c konstant ist.",
             "Die Reaktion stoppt, weil kein NH₃ mehr vorhanden ist.",
           ],
-          correctIndex: 2,
+          correctIndex: 0,
           explanation:
             "Durch kontinuierliche Entnahme von NH₃ sinkt [NH₃] → Q < K_c → Hinreaktion überwiegt → mehr NH₃ wird produziert → Q nähert sich wieder K_c. K_c selbst ändert sich nicht — es ist die Konzentrationsänderung, die Q unter K_c drückt. Diese Strategie ist ein klassisches Le-Chatelier-Prinzip in der industriellen Chemie.",
           hints: [
@@ -1443,12 +1449,12 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
             "Welchen Einfluss hat die Zugabe eines Inertgases (z. B. Argon) bei konstantem Volumen auf ein Gasgleichgewicht?",
           options: [
             "Das Gleichgewicht verschiebt sich zur Seite mit mehr Gasmolekülen.",
-            "Das Gleichgewicht verschiebt sich zur Seite mit weniger Gasmolekülen.",
             "Kein Einfluss, da Partialdrücke der Reaktanten unverändert bleiben.",
+            "Das Gleichgewicht verschiebt sich zur Seite mit weniger Gasmolekülen.",
             "K_c steigt, weil der Gesamtdruck steigt.",
             "Die Reaktionsgeschwindigkeit halbiert sich.",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
             "Bei konstantem Volumen erhöht die Zugabe eines Inertgases den Gesamtdruck, aber die Partialdrücke der Reaktanten bleiben unverändert (p_i = n_i·RT/V; V, T, n_i konstant). Da das MWG nur Partialdrücke der Reaktanten enthält, ändert sich Q nicht — kein Einfluss auf das Gleichgewicht. Anders bei konstantem Druck: Dort sinken die Partialdrücke der Reaktanten.",
           hints: [
@@ -1463,12 +1469,12 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
             "Was passiert bei Hyperventilation mit dem Blut-pH (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻)?",
           options: [
             "[CO₂] steigt → pH sinkt (Azidose).",
-            "[CO₂] sinkt → Gleichgewicht verschiebt sich nach links → [H⁺] sinkt → pH steigt (Alkalose).",
             "[HCO₃⁻] steigt → pH sinkt.",
+            "[CO₂] sinkt → Gleichgewicht verschiebt sich nach links → [H⁺] sinkt → pH steigt (Alkalose).",
             "Keine Auswirkung, da CO₂ kein Reaktant ist.",
             "[H⁺] steigt → pH sinkt (Azidose).",
           ],
-          correctIndex: 1,
+          correctIndex: 2,
           explanation:
             "Bei Hyperventilation wird mehr CO₂ abgeatmet → pCO₂ sinkt → [H₂CO₃] sinkt → Gleichgewicht verschiebt sich links → [H⁺] sinkt → pH steigt → respiratorische Alkalose. Henderson-Hasselbalch: ↓[CO₂] im Nenner → größeres [HCO₃⁻]/[CO₂] → höherer pH. Klinisch: Schwindel, Kribbeln. Therapie: Rückatmung in Tüte.",
           hints: [
@@ -1484,11 +1490,11 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
           options: [
             "Weil K_c bei hoher Temperatur größer ist und mehr NH₃ entsteht.",
             "Weil bei 150 °C der Druck zu hoch wäre.",
-            "Weil bei niedrigen Temperaturen die Reaktion kinetisch zu langsam ist — Kompromiss zwischen K_c und Reaktionsgeschwindigkeit.",
             "Weil der Eisenkatalysator nur bei 400 °C aktiv ist.",
+            "Weil bei niedrigen Temperaturen die Reaktion kinetisch zu langsam ist — Kompromiss zwischen K_c und Reaktionsgeschwindigkeit.",
             "Weil NH₃ bei 150 °C nicht flüssig wird.",
           ],
-          correctIndex: 2,
+          correctIndex: 3,
           explanation:
             "Bei der exothermen NH₃-Synthese sinkt K_c mit steigender Temperatur — thermodynamisch wäre tiefe Temperatur ideal für hohe NH₃-Ausbeute. Aber bei 150 °C ist die Reaktionsgeschwindigkeit extrem niedrig. Der industrielle Kompromiss bei 400–500 °C bietet ausreichend hohe Reaktionsgeschwindigkeit (Kinetik) + noch akzeptabler K_c-Wert (Thermodynamik). Der Eisenkatalysator senkt E_A und erlaubt vernünftige Geschwindigkeiten bei dieser Temperatur.",
           hints: [
@@ -1531,6 +1537,8 @@ Die **Enthalpie** H ist eine thermodynamische Zustandsgröße (Zustandsgröße b
 **Exotherme Reaktionen (ΔH < 0):** Das System gibt Wärme an die Umgebung ab — die Produkte sind energieärmer als die Edukte. Du spürst das als Erwärmung. Beispiele: Verbrennung von Methan (ΔH = −890 kJ/mol), Neutralisation starker Säuren und Basen (ΔH ≈ −57 kJ/mol), Kristallisation aus einer übersättigten Lösung.
 
 **Endotherme Reaktionen (ΔH > 0):** Das System nimmt Wärme aus der Umgebung auf — die Produkte sind energiereicher als die Edukte. Du spürst das als Abkühlung. Beispiele: Auflösung von NH₄NO₃ in Wasser (Kältepack, ΔH = +25,7 kJ/mol), thermische Zersetzung von CaCO₃ zu CaO + CO₂ (ΔH = +178 kJ/mol), Photosynthese.
+
+{{IMAGE}}
 
 ### Bildungsenthalpie (ΔH_f°)
 
@@ -1828,12 +1836,12 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
           question: "Was bedeutet ΔG < 0 für eine chemische Reaktion?",
           options: [
             "Die Reaktion ist exotherm.",
-            "Die Reaktion läuft spontan ab (exergon).",
+            "Die Reaktion befindet sich im Gleichgewicht.",
             "Die Reaktion läuft sehr schnell ab.",
             "Die Entropie nimmt ab.",
-            "Die Reaktion befindet sich im Gleichgewicht.",
+            "Die Reaktion läuft spontan ab (exergon).",
           ],
-          correctIndex: 1,
+          correctIndex: 4,
           explanation:
             "ΔG < 0 bedeutet, dass die Reaktion thermodynamisch spontan (exergon) ist. Das heißt nicht, dass sie schnell abläuft — das hängt von der Aktivierungsenergie ab (Kinetik). Exotherm (ΔH < 0) ist nicht dasselbe wie exergon (ΔG < 0), weil die Entropie mitentscheidet.",
           hints: [
@@ -1846,13 +1854,13 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
         {
           question: "Welche Reaktion ist bei JEDER Temperatur spontan?",
           options: [
-            "ΔH > 0, ΔS < 0",
+            "ΔH < 0, ΔS > 0",
             "ΔH < 0, ΔS < 0",
             "ΔH > 0, ΔS > 0",
-            "ΔH < 0, ΔS > 0",
+            "ΔH > 0, ΔS < 0",
             "ΔH = 0, ΔS = 0",
           ],
-          correctIndex: 3,
+          correctIndex: 0,
           explanation:
             "Wenn ΔH < 0 (exotherm) und ΔS > 0 (mehr Unordnung), dann ist ΔG = ΔH − T·ΔS immer negativ: ein negativer ΔH minus ein positiver T·ΔS-Term ergibt immer einen negativen Wert. Beispiel: Verbrennung (exotherm + Gasentwicklung).",
           hints: [
@@ -1907,12 +1915,12 @@ Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei ho
             "Für eine Reaktion gilt: ΔH = −100 kJ/mol, ΔS = −200 J/(mol·K). Ab welcher Temperatur ist die Reaktion NICHT mehr spontan?",
           options: [
             "Ab 200 K",
-            "Ab 500 K",
-            "Ab 0,5 K",
             "Die Reaktion ist bei jeder Temperatur spontan",
+            "Ab 0,5 K",
+            "Ab 500 K",
             "Die Reaktion ist bei keiner Temperatur spontan",
           ],
-          correctIndex: 1,
+          correctIndex: 3,
           explanation:
             "ΔG = 0 bei der Umkehrtemperatur T* = ΔH/ΔS = (−100 kJ)/(−0,200 kJ/K) = 500 K. Unterhalb von 500 K: |ΔH| > T·|ΔS| → ΔG < 0 (spontan). Oberhalb von 500 K: T·|ΔS| > |ΔH| → ΔG > 0 (nicht spontan). Das ist Fall 3: exotherm + ΔS < 0 → bei tiefen T spontan.",
           hints: [

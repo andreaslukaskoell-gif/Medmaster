@@ -1255,6 +1255,8 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein (Protei
 
 > **Merke:** IgG: 2 schwere + 2 leichte Ketten, Y-Form. Fab = variabel (Antigenerkennung). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplementaktivierung, Plazentatransfer).
 
+{{IMAGE}}
+
 ---
 
 ## Immunglobulin-Klassen (Isotypen)
@@ -1430,6 +1432,8 @@ Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activati
 
 > **Merke:** V(D)J-Rekombination: RAG1/RAG2 schneidet, NHEJ ligiert, TdT fügt N-Nukleotide ein → junctionale Diversität. Nur produktive Rearrangements → B-Zelle überlebt.
 
+{{IMAGE}}
+
 ---
 
 ## Affinitätsreifung in Keimzentren
@@ -1593,6 +1597,8 @@ Das **AB0-Blutgruppensystem** wird durch das ABO-Gen auf Chromosom 9 bestimmt. D
 - I^A und I^B sind **kodominant** zueinander (beide werden exprimiert)
 - I^A und I^B sind beide **dominant** über i⁰ (rezessiv)
 - Das AB0-System ist ein klassisches Beispiel für **multiple Allelie** (drei Allele eines Gens) und **Kodominanz** in der Genetik
+
+{{IMAGE}}
 
 ---
 
@@ -1777,6 +1783,8 @@ Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB
 **Häufigkeit und Populationsgenetik:** Ca. 85% der Europäer sind Rh+, 15% Rh-. Die Frequenz variiert erheblich zwischen Populationen: In der baskischen Bevölkerung sind bis zu 35% Rh-negativ (höchste Frequenz weltweit), in afrikanischen und asiatischen Populationen ist Rh-negativ sehr selten (<1–5%). Die hohe Rh-negativ-Frequenz in Europa wird als Ergebnis genetischer Drift oder eines bisher unbekannten Selektionsvorteils diskutiert.
 
 **Genotypbestimmung beim Vater:** Bei Rh-negativer Mutter und Rh-positivem Vater ist klinisch relevant, ob der Vater homozygot (DD) oder heterozygot (Dd) ist: Bei DD → alle Kinder Rh+, bei Dd → 50% Rh+ (gefährdet) und 50% Rh- (nicht gefährdet). Die Zygotie des Vaters kann durch serologische Testung der D-Antigendichte oder molekulargenetisch bestimmt werden.
+
+{{IMAGE}}
 
 ---
 
