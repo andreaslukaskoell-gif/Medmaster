@@ -16,6 +16,8 @@ import {
   Eye,
   BarChart3,
   Timer,
+  TrendingUp,
+  Target,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -42,7 +44,8 @@ import type { AllergyCard } from "@/data/kffGenerators";
 import { OFFICIAL_ZF_EXAMPLES, generateSequenceTaskSet } from "@/data/kffZahlenfolgenMedAT";
 import { OFFICIAL_IMPLICATION_EXAMPLES, implikationenTasks } from "@/data/kffImplikationen";
 import {
-  generateFigurenTrainingSet,
+  generateFigurenTrainingTask,
+  SOLUTION_SHAPES,
   polygonToPath,
   polygonToPathScaledToViewBox,
   layoutPiecesCompact,
@@ -53,6 +56,7 @@ import {
 import { emotionQuestions } from "@/data/sekData";
 import type { EmotionQuestion } from "@/data/sekData";
 import type { TVText } from "@/data/tvData";
+import { Link } from "react-router-dom";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -512,10 +516,15 @@ function generateFigurenQuestions(section: SimSection): UnifiedQuestion[] {
   ];
   const seed = Date.now();
   const pool: FigureAssembleTask[] = [];
+  const numShapes = SOLUTION_SHAPES.length;
   for (let i = 0; i < section.questionCount; i++) {
     const diff = diffPattern[i % 10];
-    const t = generateFigurenTrainingSet(1, diff, seed + i * 7919);
-    if (t.length > 0) pool.push(t[0]);
+    try {
+      const t = generateFigurenTrainingTask(diff, seed + i * 7919, i % numShapes);
+      if (t) pool.push(t);
+    } catch {
+      /* skip failed generation */
+    }
   }
   return pool.map((q) => ({
     id: q.id,
@@ -762,6 +771,7 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 export default function Simulation() {
   usePageTitle("MedAT Simulation");
   const [mode, setMode] = useState<Mode>("select");
+  const currentResultIdRef = useRef<string>("");
   const [simType, setSimType] = useState<"full" | "bms" | "tv" | "kff" | "sek" | "kurz">("full");
   const [sections, setSections] = useState<SimSection[]>([]);
   const [currentSectionIdx, setCurrentSectionIdx] = useState(0);
@@ -780,7 +790,7 @@ export default function Simulation() {
   void sectionStartTime;
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const { addXP, checkStreak, saveQuizResult, logActivity, quizResults } = useStore();
   const getMinutes = useSessionTimer();
   const { recordAnswer: recordAdaptive } = useAdaptiveStore();
 
@@ -945,8 +955,10 @@ export default function Simulation() {
                 ? "SEK Simulation"
                 : sections[0]?.label || "Kurztest";
 
+    const resultId = `sim-${Date.now()}`;
+    currentResultIdRef.current = resultId;
     saveQuizResult({
-      id: `sim-${Date.now()}`,
+      id: resultId,
       type: "simulation",
       subject: subjectLabel,
       score: totalScore,
@@ -1253,7 +1265,7 @@ export default function Simulation() {
 
         {/* Individual Section Tests */}
         <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Einzelne Testteile</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* BMS */}
           <Card>
             <CardContent className="p-5 space-y-3">
@@ -1694,6 +1706,96 @@ export default function Simulation() {
               </div>
             </CardContent>
           </Card>
+        )}
+
+        {/* Previous attempts comparison */}
+        {(() => {
+          const prevSimulations = (quizResults ?? [])
+            .filter((r) => r.type === "simulation" && r.id !== currentResultIdRef.current)
+            .sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
+            .slice(0, 5);
+          if (prevSimulations.length === 0) return null;
+          const lastPct =
+            prevSimulations[0] && prevSimulations[0].total > 0
+              ? Math.round((prevSimulations[0].score / prevSimulations[0].total) * 100)
+              : 0;
+          const diff = totalPct - lastPct;
+          return (
+            <Card>
+              <CardContent className="p-5 space-y-3">
+                <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4" /> Vergleich mit früheren Versuchen
+                </h3>
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">
+                      {totalPct}%
+                    </p>
+                    <p className="text-xs text-muted">Jetzt</p>
+                  </div>
+                  <div
+                    className={`text-center px-3 py-1 rounded-lg ${diff > 0 ? "bg-green-50 dark:bg-green-900/20" : diff < 0 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-50 dark:bg-gray-800"}`}
+                  >
+                    <p
+                      className={`text-lg font-bold ${diff > 0 ? "text-green-600 dark:text-green-400" : diff < 0 ? "text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-400"}`}
+                    >
+                      {diff > 0 ? "+" : ""}
+                      {diff}%
+                    </p>
+                    <p className="text-xs text-muted">vs. letztes Mal</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-gray-500 dark:text-gray-400">
+                      {lastPct}%
+                    </p>
+                    <p className="text-xs text-muted">Letztes Mal</p>
+                  </div>
+                </div>
+                {prevSimulations.length > 1 && (
+                  <div className="flex items-end gap-1 h-16">
+                    {[...prevSimulations].reverse().map((r) => {
+                      const pct = r.total > 0 ? Math.round((r.score / r.total) * 100) : 0;
+                      return (
+                        <div key={r.id} className="flex-1 flex flex-col items-center gap-0.5">
+                          <div
+                            className="w-full bg-primary-200 dark:bg-primary-800 rounded-t"
+                            style={{ height: `${Math.max(4, (pct / 100) * 48)}px` }}
+                          />
+                          <span className="text-[10px] text-muted">{pct}%</span>
+                        </div>
+                      );
+                    })}
+                    <div className="flex-1 flex flex-col items-center gap-0.5">
+                      <div
+                        className="w-full bg-primary-500 dark:bg-primary-400 rounded-t"
+                        style={{ height: `${Math.max(4, (totalPct / 100) * 48)}px` }}
+                      />
+                      <span className="text-[10px] font-bold text-primary-700 dark:text-primary-300">
+                        {totalPct}%
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          );
+        })()}
+
+        {/* Train weak areas link */}
+        {weakAreas.length > 0 && weakAreas[0].pct < 70 && (
+          <div className="flex justify-center">
+            <Button asChild variant="outline" className="gap-2">
+              <Link
+                to={`/fragen-trainer?subjects=${weakAreas
+                  .filter((a) => a.pct < 70)
+                  .map((a) => a.sec.parentGroup || a.sec.label)
+                  .filter(Boolean)
+                  .join(",")}`}
+              >
+                <Target className="w-4 h-4" /> Schwachstellen gezielt trainieren
+              </Link>
+            </Button>
+          </div>
         )}
 
         {/* Detailed per-question results */}

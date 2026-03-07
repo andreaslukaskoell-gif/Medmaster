@@ -18,7 +18,8 @@ import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import {
   difficultyLabel,
-  generateFigurenTrainingSet,
+  generateFigurenTrainingTask,
+  SOLUTION_SHAPES,
   polygonToPath,
   polygonToPathScaledToViewBox,
   layoutPiecesCompact,
@@ -85,13 +86,18 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
         const seed = Date.now();
         const generated: FigureAssembleTask[] = [];
+        const numShapes = SOLUTION_SHAPES.length;
         for (let i = 0; i < Math.min(questionCount, 150); i++) {
-          const t = generateFigurenTrainingSet(
-            1,
-            difficultyForIndex(i, levels),
-            seed + i * 7919
-          )[0];
-          if (t) generated.push(t);
+          try {
+            const t = generateFigurenTrainingTask(
+              difficultyForIndex(i, levels),
+              seed + i * 7919,
+              i % numShapes
+            );
+            if (t) generated.push(t);
+          } catch {
+            /* skip failed generation */
+          }
         }
         valid = shuffleSlice(filterValidFigurenTasks(generated), Math.min(questionCount, 150));
         if (valid.length === 0)
@@ -255,13 +261,18 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
                     const seed = Date.now();
                     const generated: FigureAssembleTask[] = [];
+                    const numShapes = SOLUTION_SHAPES.length;
                     for (let i = 0; i < count - valid.length; i++) {
-                      const t = generateFigurenTrainingSet(
-                        1,
-                        difficultyForIndex(i, levels),
-                        seed + i * 7919
-                      )[0];
-                      if (t) generated.push(t);
+                      try {
+                        const t = generateFigurenTrainingTask(
+                          difficultyForIndex(i, levels),
+                          seed + i * 7919,
+                          i % numShapes
+                        );
+                        if (t) generated.push(t);
+                      } catch {
+                        /* skip */
+                      }
                     }
                     valid = [...valid, ...filterValidFigurenTasks(generated)];
                   }
@@ -281,13 +292,18 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
                   const seed = Date.now();
                   const generated: FigureAssembleTask[] = [];
+                  const numShapes = SOLUTION_SHAPES.length;
                   for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {
-                    const t = generateFigurenTrainingSet(
-                      1,
-                      difficultyForIndex(i, levels),
-                      seed + i * 7919
-                    )[0];
-                    if (t) generated.push(t);
+                    try {
+                      const t = generateFigurenTrainingTask(
+                        difficultyForIndex(i, levels),
+                        seed + i * 7919,
+                        i % numShapes
+                      );
+                      if (t) generated.push(t);
+                    } catch {
+                      /* skip */
+                    }
                   }
                   setQuestions(
                     filterValidFigurenTasks(generated).slice(0, EXAM_CONFIG.figuren.questions)
