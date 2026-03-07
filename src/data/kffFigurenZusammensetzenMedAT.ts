@@ -985,6 +985,7 @@ type CutScheme = { diff: FZDifficulty; shapeId: SolutionShapeName; cut: () => Cu
 
 /** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile. shapeId für ausgeglichene Verteilung. */
 const CUT_SCHEMES: CutScheme[] = [
+  // --- EASY: all 14 shapes, 2-3 pieces ---
   { diff: "easy", shapeId: "square", cut: cutSquareDiagonal },
   { diff: "easy", shapeId: "square", cut: cutSquareCenter4 },
   { diff: "easy", shapeId: "square", cut: cutSquare3 },
@@ -995,10 +996,22 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "easy", shapeId: "rhombus", cut: cutRhombus3 },
   { diff: "easy", shapeId: "parallelogram", cut: cutParallelogram2 },
   { diff: "easy", shapeId: "parallelogram", cut: cutParallelogram3 },
+  { diff: "easy", shapeId: "trapezoid", cut: cutTrapez2 },
+  { diff: "easy", shapeId: "trapezoid", cut: cutTrapez3 },
+  { diff: "easy", shapeId: "pentagon", cut: cutPentagon3 },
+  { diff: "easy", shapeId: "heptagon", cut: cutHeptagon4 },
+  { diff: "easy", shapeId: "octagon", cut: cutOctagon4 },
+  { diff: "easy", shapeId: "quarter-circle", cut: cutQuarterCircle2 },
+  { diff: "easy", shapeId: "half-circle", cut: cutHalfCircle3 },
+  { diff: "easy", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle3 },
+  { diff: "easy", shapeId: "full-circle", cut: cutFullCircle4 },
+  { diff: "easy", shapeId: "L-shape", cut: cutLShape4Simple },
+  // --- MEDIUM: all 14 shapes, 3-4 pieces ---
   { diff: "medium", shapeId: "hexagon", cut: cutHexagon3 },
   { diff: "medium", shapeId: "pentagon", cut: cutPentagon3 },
   { diff: "medium", shapeId: "pentagon", cut: cutPentagon4 },
   { diff: "medium", shapeId: "square", cut: cutSquareOffset },
+  { diff: "medium", shapeId: "square", cut: cutSquare3 },
   { diff: "medium", shapeId: "trapezoid", cut: cutTrapez2 },
   { diff: "medium", shapeId: "trapezoid", cut: cutTrapez3 },
   { diff: "medium", shapeId: "L-shape", cut: cutLShape4Simple },
@@ -1010,6 +1023,11 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "medium", shapeId: "half-circle", cut: cutHalfCircle4 },
   { diff: "medium", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle3 },
   { diff: "medium", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle4 },
+  { diff: "medium", shapeId: "triangle", cut: cutTriangle3 },
+  { diff: "medium", shapeId: "rhombus", cut: cutRhombus3 },
+  { diff: "medium", shapeId: "parallelogram", cut: cutParallelogram3 },
+  { diff: "medium", shapeId: "full-circle", cut: cutFullCircle4 },
+  // --- HARD: all 14 shapes, 4-8 pieces ---
   { diff: "hard", shapeId: "hexagon", cut: cutHexagon6 },
   { diff: "hard", shapeId: "heptagon", cut: cutHeptagon7 },
   { diff: "hard", shapeId: "pentagon", cut: cutPentagon5 },
@@ -1023,6 +1041,9 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "hard", shapeId: "trapezoid", cut: cutTrapez4Hard },
   { diff: "hard", shapeId: "octagon", cut: cutOctagon8Hard },
   { diff: "hard", shapeId: "L-shape", cut: cutLShape5Hard },
+  { diff: "hard", shapeId: "quarter-circle", cut: cutQuarterCircle3 },
+  { diff: "hard", shapeId: "half-circle", cut: cutHalfCircle4 },
+  { diff: "hard", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle4 },
 ];
 
 // =============================================================================
@@ -1784,11 +1805,14 @@ function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
  */
 export function cutPolygonStrategically(
   difficulty: FZDifficulty,
-  seed: number
+  seed: number,
+  forcedShapeIdx?: number
 ): { target: Polygon; pieces: Polygon[] } {
   const rng = createRng(seed);
-  // Use RNG (not raw seed modulo) so consecutive seeds don't cycle through shapes predictably
-  const shapeIndex = Math.floor(rng() * SOLUTION_SHAPES.length);
+  const shapeIndex =
+    forcedShapeIdx != null
+      ? forcedShapeIdx % SOLUTION_SHAPES.length
+      : Math.floor(rng() * SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
   // Try asymmetric cuts first (authentic look, with complex cuts for medium/hard)
@@ -1802,15 +1826,32 @@ export function cutPolygonStrategically(
     }
   }
 
-  // Fallback: old symmetric CUT_SCHEMES
+  // Fallback: CUT_SCHEMES — always keep the SAME shape, search across difficulties if needed
   const shapeId = SOLUTION_SHAPES[shapeIndex]!;
-  const schemes = CUT_SCHEMES.filter((s) => s.diff === difficulty && s.shapeId === shapeId);
-  const fallbackSchemes = CUT_SCHEMES.filter((s) => s.diff === difficulty);
-  const list = schemes.length > 0 ? schemes : fallbackSchemes;
-  if (list.length === 0) return cutSquareDiagonal();
-  const rawIdx = Math.floor((Math.abs(seed) >> 4) % list.length);
-  const idx = Math.min(list.length - 1, Math.max(0, rawIdx));
-  const entry = list[idx];
+  const sameShapeSameDiff = CUT_SCHEMES.filter(
+    (s) => s.diff === difficulty && s.shapeId === shapeId
+  );
+  const sameShapeAnyDiff = CUT_SCHEMES.filter((s) => s.shapeId === shapeId);
+  const list = sameShapeSameDiff.length > 0 ? sameShapeSameDiff : sameShapeAnyDiff;
+  if (list.length === 0) {
+    // No CUT_SCHEME for this shape at all — simple straight cut through the selected target
+    const fallbackRng = createRng(seed + 77777);
+    const cutLine = generateAsymmetricCut(
+      { points: target.points.map((p) => ({ ...p })) },
+      fallbackRng
+    );
+    if (cutLine) {
+      const result = splitPolygonByLine(
+        { points: target.points.map((p) => ({ ...p })) },
+        cutLine[0],
+        cutLine[1]
+      );
+      if (result) return { target, pieces: result };
+    }
+    return cutSquareDiagonal();
+  }
+  const rawIdx = Math.floor(rng() * list.length);
+  const entry = list[rawIdx];
   if (!entry?.cut) return cutSquareDiagonal();
   const { target: t, pieces: p } = entry.cut();
   return {
@@ -1825,12 +1866,17 @@ export function cutPolygonStrategically(
  */
 export function generateFigurenTrainingTask(
   difficulty: FZDifficulty,
-  seed: number
+  seed: number,
+  forcedShapeIdx?: number
 ): FigureAssembleTask {
   const rng = createRng(seed);
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const { target, pieces } = cutPolygonStrategically(difficulty, seed + attempt * 9973);
+    const { target, pieces } = cutPolygonStrategically(
+      difficulty,
+      seed + attempt * 9973,
+      forcedShapeIdx
+    );
     if (!isAllowedTarget(target)) continue;
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
@@ -1889,19 +1935,26 @@ function generateFigurenTrainingTaskFallback(
   difficulty: FZDifficulty,
   seed: number
 ): FigureAssembleTask {
-  const { target, pieces } = cutSquareDiagonal();
   const rng = createRng(seed);
-  const similar = [RHOMBUS, TRAPEZ, PARALLELOGRAM];
-  const four: Polygon[] = [target, similar[0]!, similar[1]!, similar[2]!];
+
+  // Pick a RANDOM CUT_SCHEME — prefer same difficulty, fall back to any
+  const sameDiff = CUT_SCHEMES.filter((s) => s.diff === difficulty);
+  const pool = sameDiff.length > 0 ? sameDiff : CUT_SCHEMES;
+  const scheme = pool[Math.floor(rng() * pool.length)]!;
+  const { target, pieces } = scheme.cut();
+
+  const distractors = buildDistractors(target, 3, rng, "");
+  const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
   const order = [0, 1, 2, 3];
   for (let i = 3; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
     [order[i], order[j]] = [order[j], order[i]];
   }
   const correctIndex = order.indexOf(0);
+  const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
   const task: FigureAssembleTask = {
     id: `fz-train-fb-${difficulty}-${seed}`,
-    pieces,
+    pieces: displayPieces,
     target,
     options: [four[order[0]!]!, four[order[1]!]!, four[order[2]!]!, four[order[3]!]!, OPTION_E],
     correctIndex,
@@ -1910,13 +1963,6 @@ function generateFigurenTrainingTaskFallback(
     targetShapeId: getTargetShapeIdForPolygon(target),
     solutionOverlay: computeSolutionOverlay(target, pieces),
   };
-  if (validateFigurenTask(task)) return task;
-  // OFFICIAL_FZ_EXAMPLES is empty (copyright removed), so no fallback here
-  if (false && OFFICIAL_FZ_EXAMPLES.length > 0) {
-    const first = OFFICIAL_FZ_EXAMPLES[0];
-    if (first && validateFigurenTask(first))
-      return { ...first, id: `fz-train-fb-official-${seed}` };
-  }
   return task;
 }
 
@@ -1926,8 +1972,16 @@ export function generateFigurenTrainingSet(
   baseSeed: number = Date.now()
 ): FigureAssembleTask[] {
   const tasks: FigureAssembleTask[] = [];
+  // Ensure all 14 shapes appear: cycle through shapes round-robin
   for (let i = 0; i < count; i++) {
-    tasks.push(generateFigurenTrainingTask(difficulty, baseSeed + i * 7919));
+    const forcedShapeIdx = i % SOLUTION_SHAPES.length;
+    tasks.push(generateFigurenTrainingTask(difficulty, baseSeed + i * 7919, forcedShapeIdx));
+  }
+  // Shuffle so shapes don't appear in predictable order
+  const rng = createRng(baseSeed);
+  for (let i = tasks.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [tasks[i], tasks[j]] = [tasks[j]!, tasks[i]!];
   }
   return tasks;
 }
