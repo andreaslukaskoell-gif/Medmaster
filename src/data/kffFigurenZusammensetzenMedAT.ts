@@ -367,7 +367,7 @@ function isAllowedTarget(poly: Polygon): boolean {
   return ALLOWED_FINGERPRINTS.has(polygonFingerprint(poly));
 }
 
-function isExactStrategyShape(poly: Polygon): boolean {
+export function isExactStrategyShape(poly: Polygon): boolean {
   return ALLOWED_FINGERPRINTS.has(polygonFingerprint(poly));
 }
 
@@ -410,6 +410,10 @@ export function computeSolutionOverlay(
       const key = segmentKey(pts[i]!, pts[j]!);
       if (targetEdges.has(key) || seen.has(key)) continue;
       seen.add(key);
+      // Skip degenerate (zero-length) edges
+      const dx = pts[j]!.x - pts[i]!.x;
+      const dy = pts[j]!.y - pts[i]!.y;
+      if (dx * dx + dy * dy < 1e-6) continue;
       lines.push({
         from: { x: rd(pts[i]!.x), y: rd(pts[i]!.y) },
         to: { x: rd(pts[j]!.x), y: rd(pts[j]!.y) },
@@ -1067,7 +1071,7 @@ function normalizePolygon(poly: Polygon): { x: number; y: number }[] {
 }
 
 /** Fingerprint: String-Darstellung des normalisierten Polygons (für Duplikat- und Eindeutigkeitsprüfung). */
-function polygonFingerprint(poly: Polygon): string {
+export function polygonFingerprint(poly: Polygon): string {
   const n = normalizePolygon(poly);
   return n.map((p) => `${p.x},${p.y}`).join("|");
 }
@@ -2092,11 +2096,13 @@ export function cutPolygonStrategically(
 export function generateFigurenTrainingTask(
   difficulty: FZDifficulty,
   seed: number,
-  forcedShapeIdx?: number
+  forcedShapeIdx?: number,
+  forceECorrect?: boolean
 ): FigureAssembleTask {
   const rng = createRng(seed);
-  // ~15% of tasks have E as correct answer (target not among A-D)
-  const makeECorrect = rng() < 0.08;
+  // E-correct is controlled by the caller (generateFigurenTrainingSet caps at 12%).
+  // When not specified, use a low random probability as fallback.
+  const makeECorrect = forceECorrect ?? rng() < 0.01;
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
@@ -2166,12 +2172,13 @@ export function generateFigurenTrainingTask(
     return task;
   }
 
-  return generateFigurenTrainingTaskFallback(difficulty, seed + maxAttempts);
+  return generateFigurenTrainingTaskFallback(difficulty, seed + maxAttempts, makeECorrect);
 }
 
 function generateFigurenTrainingTaskFallback(
   difficulty: FZDifficulty,
-  seed: number
+  seed: number,
+  makeECorrect = false
 ): FigureAssembleTask {
   const maxFallbackAttempts = 10;
   for (let fa = 0; fa < maxFallbackAttempts; fa++) {
@@ -2182,9 +2189,6 @@ function generateFigurenTrainingTaskFallback(
     const pool = sameDiff.length > 0 ? sameDiff : CUT_SCHEMES;
     const scheme = pool[Math.floor(rng() * pool.length)]!;
     const { target, pieces } = scheme.cut();
-
-    // ~15% of fallback tasks also use E as correct answer
-    const makeECorrect = rng() < 0.08;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
     let correctIndex: number;
@@ -2275,10 +2279,24 @@ export function generateFigurenTrainingSet(
   baseSeed: number = Date.now()
 ): FigureAssembleTask[] {
   const tasks: FigureAssembleTask[] = [];
+  // Explicitly assign ~10% of slots as E-correct, rest as non-E
+  const eSlots = new Set<number>();
+  const eTarget = Math.max(1, Math.floor(count * 0.1));
+  const setRng = createRng(baseSeed + 77);
+  while (eSlots.size < eTarget) {
+    eSlots.add(Math.floor(setRng() * count));
+  }
   // Ensure all 14 shapes appear: cycle through shapes round-robin
   for (let i = 0; i < count; i++) {
     const forcedShapeIdx = i % SOLUTION_SHAPES.length;
-    tasks.push(generateFigurenTrainingTask(difficulty, baseSeed + i * 7919, forcedShapeIdx));
+    const forceE = eSlots.has(i);
+    const task = generateFigurenTrainingTask(
+      difficulty,
+      baseSeed + i * 7919,
+      forcedShapeIdx,
+      forceE
+    );
+    tasks.push(task);
   }
   // Shuffle so shapes don't appear in predictable order
   const rng = createRng(baseSeed);
