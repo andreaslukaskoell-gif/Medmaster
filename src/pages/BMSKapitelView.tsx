@@ -175,7 +175,7 @@ export default function BMSKapitelView({
   );
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
+    <div className="max-w-4xl mx-auto space-y-6">
       <BreadcrumbNav
         items={[
           { label: "Dashboard", href: "/" },
@@ -255,7 +255,7 @@ export default function BMSKapitelView({
       )}
 
       {/* Unterkapitel list */}
-      <div className="space-y-2">
+      <div className="space-y-3">
         <h2 className="text-lg font-semibold text-midnight dark:text-slate-100">Unterkapitel</h2>
         {unterkapitel.length === 0 ? (
           <Card className={`border-l-4 ${subjectColors.border}`}>
@@ -266,63 +266,65 @@ export default function BMSKapitelView({
             </CardContent>
           </Card>
         ) : (
-          unterkapitel.map((uk, index) => {
-            if (!uk || !uk.id) return null; // Skip invalid subchapters
-            const isDone = completedChapters.includes(uk.id);
-            const selfTestCount =
-              uk.selfTest && Array.isArray(uk.selfTest) ? uk.selfTest.length : 0;
-            return (
-              <motion.div
-                key={uk.id}
-                initial={false}
-                animate={isDone ? { opacity: 1 } : {}}
-                transition={{ duration: 0.25 }}
-              >
-                <Card
-                  className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors.border} ${isDone ? "bg-slate-50/80 dark:bg-slate-900/30" : ""}`}
-                  onClick={() => {
-                    if (typeof sessionStorage !== "undefined") {
-                      sessionStorage.setItem(
-                        `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
-                        String(window.scrollY)
-                      );
-                    }
-                    setActiveUKIndex(index);
-                  }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {unterkapitel.map((uk, index) => {
+              if (!uk || !uk.id) return null; // Skip invalid subchapters
+              const isDone = completedChapters.includes(uk.id);
+              const selfTestCount =
+                uk.selfTest && Array.isArray(uk.selfTest) ? uk.selfTest.length : 0;
+              return (
+                <motion.div
+                  key={uk.id}
+                  initial={false}
+                  animate={isDone ? { opacity: 1 } : {}}
+                  transition={{ duration: 0.25 }}
                 >
-                  <CardContent className="p-4 flex items-center gap-3">
-                    {isDone ? (
-                      <motion.span
-                        initial={{ scale: 0.5, opacity: 0.8 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="shrink-0"
-                      >
-                        <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      </motion.span>
-                    ) : (
-                      <div className="w-5 h-5 rounded-full border-2 border-slate-300 dark:border-slate-600 shrink-0 flex items-center justify-center text-xs text-slate-500 font-medium">
-                        {index + 1}
+                  <Card
+                    className={`hover:shadow-md transition-shadow cursor-pointer border-l-4 ${subjectColors.border} ${isDone ? "bg-slate-50/80 dark:bg-slate-900/30" : ""}`}
+                    onClick={() => {
+                      if (typeof sessionStorage !== "undefined") {
+                        sessionStorage.setItem(
+                          `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
+                          String(window.scrollY)
+                        );
+                      }
+                      setActiveUKIndex(index);
+                    }}
+                  >
+                    <CardContent className="p-4 flex items-center gap-3">
+                      {isDone ? (
+                        <motion.span
+                          initial={{ scale: 0.5, opacity: 0.8 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                          className="shrink-0"
+                        >
+                          <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        </motion.span>
+                      ) : (
+                        <div className="w-5 h-5 rounded-full border-2 border-slate-300 dark:border-slate-600 shrink-0 flex items-center justify-center text-xs text-slate-500 font-medium">
+                          {index + 1}
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <h3
+                          className={`font-medium text-sm ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
+                        >
+                          {uk.title || "Untitled Subchapter"}
+                        </h3>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
+                          {selfTestCount} Selbsttest-Fragen
+                          {uk.altfrage && " · Altfrage"}
+                          {uk.klinischerBezug && " · Klinischer Bezug"}
+                        </p>
                       </div>
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <h3
-                        className={`font-medium text-sm ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
-                      >
-                        {uk.title || "Untitled Subchapter"}
-                      </h3>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 truncate mt-0.5">
-                        {selfTestCount} Selbsttest-Fragen
-                        {uk.altfrage && " · Altfrage"}
-                        {uk.klinischerBezug && " · Klinischer Bezug"}
-                      </p>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })
+                      <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
         )}
       </div>
 

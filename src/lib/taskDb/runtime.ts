@@ -15,6 +15,15 @@ import type { AllergyPass } from "@/data/kffGedaechtnisMedAT";
 import type { GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
 import type { MerkfahigkeitTaskData } from "./adapters";
 
+const shuffle = <T>(arr: T[]): T[] => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
 /** Benötigtes Minimum an validierten Aufgaben pro Domain, bevor Nachfüllen getriggert wird */
 const MIN_POOL_SIZE = 50;
 
@@ -52,12 +61,14 @@ export async function getTasksForUser(
   const maxDiff = Math.min(1000, userSkill + bandWidth);
   const totalInBand = await getTaskCountInBand(domain, minDiff, maxDiff);
 
+  // Over-fetch and shuffle to avoid shape/difficulty clustering from sequential DB storage
+  const fetchCount = Math.min(totalInBand, Math.max(count * 5, 50));
   let offset = 0;
-  if (totalInBand > count) {
-    offset = Math.floor(Math.random() * (totalInBand - count + 1));
+  if (totalInBand > fetchCount) {
+    offset = Math.floor(Math.random() * (totalInBand - fetchCount + 1));
   }
-  const tasks = await getTasksByDifficulty(domain, minDiff, maxDiff, count, offset);
-  if (tasks.length >= count) return tasks;
+  const pool = await getTasksByDifficulty(domain, minDiff, maxDiff, fetchCount, offset);
+  if (pool.length >= count) return shuffle(pool).slice(0, count);
 
   const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
@@ -74,7 +85,7 @@ export async function getTasksForUser(
     });
   }
 
-  return tasks;
+  return shuffle(pool);
 }
 
 /**
@@ -108,15 +119,6 @@ export async function getTasksForUserOrFill(
   return [];
 }
 
-const shuffle = <T>(arr: T[]): T[] => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-};
-
 /**
  * Wie getTasksForUserOrFill, aber bis zur Hälfte der gewünschten Anzahl aus failedIds
  * (öfter falsch gelöste Tasks), Rest aus Skill-Band. Merged und gemischt.
@@ -132,12 +134,15 @@ export async function getTasksForUserWithWeakness(
   const weakCount = failedIds?.length ? Math.min(Math.ceil(count / 2), failedIds.length) : 0;
   const restCount = count - weakCount;
 
+  // Use full difficulty range (0-1000) to ensure easy/medium/hard mix
+  const fullBandWidth = 500;
+
   const [weak, restRaw] = await Promise.all([
     weakCount > 0 && failedIds && failedIds.length > 0
       ? getTasksByIds(failedIds.slice(0, weakCount))
       : Promise.resolve([]),
     restCount > 0
-      ? getTasksForUserOrFill(domain, userSkill, restCount + weakCount, bandWidth)
+      ? getTasksForUserOrFill(domain, userSkill, restCount + weakCount, fullBandWidth)
       : Promise.resolve([]),
   ]);
 

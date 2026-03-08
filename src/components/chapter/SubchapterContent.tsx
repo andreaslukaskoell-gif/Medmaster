@@ -352,6 +352,7 @@ export function SubchapterContent({
     let lastIndex = 0;
     let match: RegExpExecArray | null;
     let partKey = 0;
+    let lastWasDiagram = false;
 
     while ((match = placeholderPattern.exec(text)) !== null) {
       const before = text.slice(lastIndex, match.index);
@@ -365,13 +366,17 @@ export function SubchapterContent({
           />
         );
         partKey++;
+        lastWasDiagram = false;
       }
 
       if (match[0] === "{{IMAGE}}") {
         // Render the UK imageUrl inline where it fits in the text
         if (uk.imageUrl) {
           parts.push(
-            <figure key={`img-${partKey}`} className="my-4 mx-auto max-w-md">
+            <figure
+              key={`img-${partKey}`}
+              className={`${lastWasDiagram ? "mt-10" : "mt-4"} mb-4 mx-auto max-w-md`}
+            >
               <ImageWithFallback
                 src={uk.imageUrl}
                 alt={uk.imageCaption || uk.title}
@@ -387,6 +392,7 @@ export function SubchapterContent({
           );
           partKey++;
         }
+        lastWasDiagram = false;
       } else {
         // {{DIAGRAM}} or {{DIAGRAM:type}}
         const diagramType = match[1] || uk.diagram;
@@ -397,6 +403,7 @@ export function SubchapterContent({
             </div>
           );
           partKey++;
+          lastWasDiagram = true;
         }
       }
       lastIndex = match.index + match[0].length;
@@ -669,7 +676,7 @@ export function SubchapterContent({
             variant="left"
           />
         </aside>
-        <div className="space-y-0 min-w-0">
+        <div className="space-y-0 min-w-0 max-w-prose">
           {unifiedSections.map((section, index) => (
             <div
               key={section.id}

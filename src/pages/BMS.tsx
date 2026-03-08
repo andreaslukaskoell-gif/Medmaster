@@ -757,7 +757,7 @@ export default function BMS() {
   // Note: totalUK and completedUK are already computed above (before early returns)
   const filterParam = searchParams.get("filter");
   return (
-    <div className="max-w-4xl mx-auto space-y-8 px-6 py-8">
+    <div className="max-w-5xl mx-auto space-y-8 px-6 py-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
 
       {/* filter=due banner */}

@@ -158,7 +158,7 @@ export default function Community() {
       )}
 
       {activeTab === "leaderboard" && (
-        <div className="pb-24">
+        <div className="pb-24 lg:pb-8">
           <Leaderboard />
         </div>
       )}

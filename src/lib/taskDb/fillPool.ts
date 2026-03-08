@@ -37,7 +37,9 @@ export async function generateAndSaveOne(
     const t = generateSequenceTask(diffLabel as "easy" | "medium" | "hard", seed);
     insert = sequenceToTask(t, "generated");
   } else if (domain === "kff-figuren") {
-    const t = generateFigurenTrainingTask(diffLabel as "easy" | "medium" | "hard", seed);
+    // Cycle through all 14 shapes to ensure even distribution
+    const shapeIdx = seed % 14;
+    const t = generateFigurenTrainingTask(diffLabel as "easy" | "medium" | "hard", seed, shapeIdx);
     insert = figurenToTask(t, "generated");
   } else if (domain === "kff-implikationen") {
     const diffNum = targetDifficulty <= 333 ? 1 : targetDifficulty <= 666 ? 2 : 3;

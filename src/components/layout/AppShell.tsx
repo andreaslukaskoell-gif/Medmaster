@@ -248,7 +248,7 @@ export function AppShell() {
             className={cn(
               "flex-1 p-4 lg:p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
               "pt-14 sm:pt-16",
-              isChapterRoute ? "max-w-none mx-auto" : "max-w-5xl mx-auto"
+              isChapterRoute ? "max-w-none mx-auto" : "max-w-7xl mx-auto"
             )}
           >
             <ErrorBoundary>

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import type { ComponentType, LazyExoticComponent } from "react";
 
+// Biology
 const AnimalCell = lazy(() => import("./biology/AnimalCell"));
 const PlantVsAnimalCell = lazy(() => import("./biology/PlantVsAnimalCell"));
 const CellMembrane = lazy(() => import("./biology/CellMembrane"));
@@ -31,6 +32,42 @@ const Sarcomere = lazy(() => import("./biology/Sarcomere"));
 const BloodComponents = lazy(() => import("./biology/BloodComponents"));
 const DoubleMembraneOrganelles = lazy(() => import("./biology/DoubleMembraneOrganelles"));
 const StemCells = lazy(() => import("./biology/StemCells"));
+const Gastrulation = lazy(() => import("./biology/Gastrulation"));
+const Neurulation = lazy(() => import("./biology/Neurulation"));
+const PhotosynthesisZScheme = lazy(() => import("./biology/PhotosynthesisZScheme"));
+const RadiationPenetration = lazy(() => import("./biology/RadiationPenetration"));
+
+// Chemistry
+const AtomicOrbitals = lazy(() => import("./chemistry/AtomicOrbitals"));
+const CovalentBond = lazy(() => import("./chemistry/CovalentBond"));
+const EnzymeSubstrate = lazy(() => import("./chemistry/EnzymeSubstrate"));
+const FunctionalGroups = lazy(() => import("./chemistry/FunctionalGroups"));
+const IonicBond = lazy(() => import("./chemistry/IonicBond"));
+const PeriodicTable = lazy(() => import("./chemistry/PeriodicTable"));
+const PHScale = lazy(() => import("./chemistry/PHScale"));
+
+// Physics
+const CircuitDiagram = lazy(() => import("./physics/CircuitDiagram"));
+const DopplerEffect = lazy(() => import("./physics/DopplerEffect"));
+const EMSpectrum = lazy(() => import("./physics/EMSpectrum"));
+const LensImaging = lazy(() => import("./physics/LensImaging"));
+const NewtonForces = lazy(() => import("./physics/NewtonForces"));
+const RadioactiveDecay = lazy(() => import("./physics/RadioactiveDecay"));
+const TemperatureScales = lazy(() => import("./physics/TemperatureScales"));
+const Thermodynamics = lazy(() => import("./physics/Thermodynamics"));
+const WaveTypes = lazy(() => import("./physics/WaveTypes"));
+
+// Math
+const CombinatoricsTree = lazy(() => import("./math/CombinatoricsTree"));
+const CoordinateSystem = lazy(() => import("./math/CoordinateSystem"));
+const ExponentialFunction = lazy(() => import("./math/ExponentialFunction"));
+const GeometricShapes = lazy(() => import("./math/GeometricShapes"));
+const LogarithmFunction = lazy(() => import("./math/LogarithmFunction"));
+const PercentFractions = lazy(() => import("./math/PercentFractions"));
+const ProbabilityDistribution = lazy(() => import("./math/ProbabilityDistribution"));
+const QuadraticFunction = lazy(() => import("./math/QuadraticFunction"));
+const UnitCircle = lazy(() => import("./math/UnitCircle"));
+const VectorAddition = lazy(() => import("./math/VectorAddition"));
 
 const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "animal-cell": AnimalCell,
@@ -63,6 +100,39 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   blutbestandteile: BloodComponents,
   "double-membrane-organelles": DoubleMembraneOrganelles,
   "stem-cells": StemCells,
+  gastrulation: Gastrulation,
+  neurulation: Neurulation,
+  "photosynthesis-z-scheme": PhotosynthesisZScheme,
+  "radiation-penetration": RadiationPenetration,
+  // Chemistry
+  "atomic-orbitals": AtomicOrbitals,
+  "covalent-bond": CovalentBond,
+  "enzyme-substrate": EnzymeSubstrate,
+  "functional-groups": FunctionalGroups,
+  "ionic-bond": IonicBond,
+  "periodic-table": PeriodicTable,
+  "ph-scale": PHScale,
+  // Physics
+  "circuit-diagram": CircuitDiagram,
+  "doppler-effect": DopplerEffect,
+  "em-spectrum": EMSpectrum,
+  "lens-imaging": LensImaging,
+  "newton-forces": NewtonForces,
+  "radioactive-decay": RadioactiveDecay,
+  "temperature-scales": TemperatureScales,
+  thermodynamics: Thermodynamics,
+  "wave-types": WaveTypes,
+  // Math
+  "combinatorics-tree": CombinatoricsTree,
+  "coordinate-system": CoordinateSystem,
+  "exponential-function": ExponentialFunction,
+  "geometric-shapes": GeometricShapes,
+  "logarithm-function": LogarithmFunction,
+  "percent-fractions": PercentFractions,
+  "probability-distribution": ProbabilityDistribution,
+  "quadratic-function": QuadraticFunction,
+  "unit-circle": UnitCircle,
+  "vector-addition": VectorAddition,
 };
 
 /** Short German captions shown below each diagram. */
@@ -104,6 +174,42 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "double-membrane-organelles":
     "Doppelmembran-Organellen: Mitochondrium und Chloroplast im Vergleich.",
   "stem-cells": "Stammzellen — Potenz-Stufen von totipotent bis unipotent.",
+  gastrulation: "Gastrulation — Bildung der drei Keimblätter aus der Zweiblattscheibe.",
+  neurulation: "Neurulation — Von der Neuralplatte zum Neuralrohr und Neuralleistenzellen.",
+  "photosynthesis-z-scheme":
+    "Z-Schema — Elektronenfluss durch PS II und PS I in der Lichtreaktion.",
+  "radiation-penetration":
+    "Durchdringungsfähigkeit — Alpha-, Beta- und Gamma-Strahlung im Vergleich.",
+  // Chemistry
+  "atomic-orbitals": "Atomorbitale — Formen der s-, p- und d-Orbitale.",
+  "covalent-bond": "Kovalente Bindung — Elektronenpaarbindung am Beispiel Wasser (H₂O).",
+  "enzyme-substrate": "Enzym-Substrat-Komplex — Schlüssel-Schloss-Prinzip und Katalyse.",
+  "functional-groups": "Funktionelle Gruppen der organischen Chemie im Überblick.",
+  "ionic-bond": "Ionenbindung — Elektronenübertragung und Kristallgitter (NaCl).",
+  "periodic-table": "Periodensystem der Elemente — Gruppen, Perioden und Trends.",
+  "ph-scale": "pH-Skala — Säuren, Basen und Neutralpunkt mit Alltagsbeispielen.",
+  // Physics
+  "circuit-diagram": "Schaltkreise — Reihen- und Parallelschaltung von Widerständen.",
+  "doppler-effect": "Doppler-Effekt — Frequenzverschiebung bei bewegter Quelle.",
+  "em-spectrum": "Elektromagnetisches Spektrum — von Gammastrahlung bis Radiowellen.",
+  "lens-imaging": "Linsenabbildung — Strahlengang durch Sammel- und Zerstreuungslinse.",
+  "newton-forces": "Kräfte und Newton'sche Gesetze — Gewichtskraft, Normalkraft, Reibung.",
+  "radioactive-decay": "Radioaktiver Zerfall — Alpha-, Beta- und Gammastrahlung.",
+  "temperature-scales": "Temperaturskalen — Celsius, Kelvin und Fahrenheit im Vergleich.",
+  thermodynamics: "Thermodynamik — Wärmekraftmaschine und Carnot-Wirkungsgrad.",
+  "wave-types": "Wellenarten — Transversal- vs. Longitudinalwellen im Vergleich.",
+  // Math
+  "combinatorics-tree": "Baumdiagramm — Permutationen, Variationen und Kombinationen.",
+  "coordinate-system": "Koordinatensystem — Lineare, quadratische und exponentielle Funktionen.",
+  "exponential-function": "Exponentialfunktion — Wachstum, Zerfall und die Euler'sche Zahl e.",
+  "geometric-shapes": "Geometrische Formen — Flächen- und Volumenformeln.",
+  "logarithm-function": "Logarithmusfunktion — Umkehrfunktion der Exponentialfunktion.",
+  "percent-fractions": "Prozentrechnung und Brüche — Umrechnung und Anwendung.",
+  "probability-distribution":
+    "Wahrscheinlichkeitsverteilungen — Normal-, Binomial- und Poisson-Verteilung.",
+  "quadratic-function": "Quadratische Funktionen — Parabelformen, Scheitelpunkt und Nullstellen.",
+  "unit-circle": "Einheitskreis — Sinus, Cosinus und Tangens an wichtigen Winkeln.",
+  "vector-addition": "Vektoraddition — Parallelogrammregel und Komponentenzerlegung.",
 };
 
 export type DiagramType = keyof typeof DIAGRAM_MAP;

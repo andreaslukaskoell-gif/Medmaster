@@ -191,8 +191,37 @@ export function filterValidFigurenTasks(tasks: FigureAssembleTask[]): FigureAsse
   return filterValidKFFTasks(tasks, "figuren", (t) => validateFiguren(t));
 }
 
+/**
+ * Shuffles options A–D (indices 0–3) of an IE task to eliminate answer-position bias.
+ * E (index 4) stays fixed. Returns a shallow copy with shuffled options and updated correctAnswer.
+ */
+function shuffleIEOptionPositions(task: ImplikationTask): ImplikationTask {
+  const opts = [...task.options] as [string, string, string, string, string];
+  // Build a permutation for indices 0–3 (Fisher-Yates)
+  const perm = [0, 1, 2, 3];
+  for (let i = 3; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [perm[i], perm[j]] = [perm[j], perm[i]];
+  }
+  const shuffled: [string, string, string, string, string] = [
+    opts[perm[0]],
+    opts[perm[1]],
+    opts[perm[2]],
+    opts[perm[3]],
+    opts[4],
+  ];
+  // Map correctAnswer through the permutation
+  let newCorrect = task.correctAnswer;
+  if (task.correctAnswer >= 0 && task.correctAnswer <= 3) {
+    newCorrect = perm.indexOf(task.correctAnswer);
+  }
+  return { ...task, options: shuffled, correctAnswer: newCorrect };
+}
+
 export function filterValidImplikationTasks(tasks: ImplikationTask[]): ImplikationTask[] {
-  return filterValidKFFTasks(tasks, "implikationen", (t) => validateImplikationen(t));
+  const valid = filterValidKFFTasks(tasks, "implikationen", (t) => validateImplikationen(t));
+  // Shuffle A–D option positions to break generator/pool answer-position bias
+  return valid.map(shuffleIEOptionPositions);
 }
 
 export function filterValidWordFluencyTasks(tasks: WordFluencyTask[]): WordFluencyTask[] {

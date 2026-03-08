@@ -382,57 +382,64 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
-          {/* Schnellzugriff */}
+          {/* Schnellzugriff + Prognose — side by side on desktop */}
           <motion.section
             variants={tileMotion}
             aria-label="Schnellzugriff"
-            className="grid grid-cols-3 gap-3"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-3"
           >
             <Link
               to="/simulation"
-              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+              className={cn(
+                cardClass,
+                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
+              )}
             >
-              <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
-                <Timer className="w-5 h-5 text-orange-500" />
+              <div className="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
+                <Timer className="w-4.5 h-4.5 text-orange-500" />
               </div>
-              <span className="text-xs font-medium text-[var(--text-primary)]">Simulation</span>
+              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
+                Simulation
+              </span>
             </Link>
             <Link
               to="/fragen-trainer"
-              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+              className={cn(
+                cardClass,
+                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
+              )}
             >
-              <div className="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
-                <Dumbbell className="w-5 h-5 text-violet-500" />
+              <div className="w-9 h-9 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center shrink-0">
+                <Dumbbell className="w-4.5 h-4.5 text-violet-500" />
               </div>
-              <span className="text-xs font-medium text-[var(--text-primary)]">Fragen</span>
+              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
+                Fragen-Trainer
+              </span>
             </Link>
             <Link
               to="/fortschritt"
-              className={cn(cardClass, "p-4 flex flex-col items-center gap-2 text-center")}
+              className={cn(
+                cardClass,
+                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
+              )}
             >
-              <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center">
-                <BarChart3 className="w-5 h-5 text-indigo-500" />
+              <div className="w-9 h-9 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center shrink-0">
+                <BarChart3 className="w-4.5 h-4.5 text-indigo-500" />
               </div>
-              <span className="text-xs font-medium text-[var(--text-primary)]">Fortschritt</span>
+              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
+                Fortschritt
+              </span>
             </Link>
-          </motion.section>
-
-          {/* Prognose-Karte */}
-          <motion.section
-            variants={tileMotion}
-            aria-label="Prognose"
-            className="grid grid-cols-1 gap-4"
-          >
-            <Link to="/fortschritt" className="max-w-md">
+            <Link to="/fortschritt">
               <div
                 className={cn(
                   cardClass,
-                  "h-full p-4 flex items-center gap-3",
+                  "h-full p-3 lg:p-4 flex items-center gap-3",
                   "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
                 )}
               >
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-5 h-5 text-[var(--accent-math)]" />
+                <div className="w-9 h-9 rounded-lg bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-4.5 h-4.5 text-[var(--accent-math)]" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
@@ -451,8 +458,12 @@ export default function Dashboard() {
             </Link>
           </motion.section>
 
-          {/* Wochen-Aktivität + Legende */}
-          <motion.section variants={tileMotion} aria-label="Wochen-Aktivität">
+          {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
+          <motion.section
+            variants={tileMotion}
+            aria-label="Wochen-Aktivität und Freunde"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+          >
             <div
               className={cn(
                 cardClass,
@@ -468,10 +479,6 @@ export default function Dashboard() {
               </div>
               <Heatmap />
             </div>
-          </motion.section>
-
-          {/* Freunde einladen */}
-          <motion.section variants={tileMotion} aria-label="Freunde einladen">
             <ReferralCard />
           </motion.section>
         </motion.div>
@@ -519,7 +526,7 @@ export default function Dashboard() {
 function ReferralCard() {
   const [shared, setShared] = useState(false);
   return (
-    <div className="rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[#e8ecf7] to-white dark:from-primary-950/30 dark:to-[var(--card)] p-5 shadow-sm">
+    <div className="h-full rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[#e8ecf7] to-white dark:from-primary-950/30 dark:to-[var(--card)] p-5 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
           <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>

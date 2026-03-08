@@ -189,7 +189,7 @@ function SelectionScreen({
   };
 
   return (
-    <div className="max-w-2xl mx-auto space-y-5">
+    <div className="max-w-4xl mx-auto space-y-5">
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
           <Dumbbell className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
@@ -206,7 +206,7 @@ function SelectionScreen({
       <Card>
         <CardContent className="p-4 space-y-3">
           <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">1. Fach wählen</p>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {BMS_SUBJECTS.map((s) => {
               const Icon = s.icon;
               const selected = subjectId === s.id;
@@ -720,205 +720,230 @@ function ResultsScreen({
   const right = answers.filter((a) => a.correct);
 
   return (
-    <div className="max-w-2xl mx-auto space-y-5">
+    <div className="max-w-4xl mx-auto space-y-5">
       <Confetti active={pct >= 80} />
       <Button variant="ghost" size="sm" onClick={onBack}>
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
 
       <Card>
-        <CardContent className="p-6 text-center">
-          <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
-            <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
+        <CardContent className="p-6">
+          <div className="text-center mb-5">
+            <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
+              <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <div className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+              {correct}
+              <span className="text-2xl text-muted-foreground font-normal">/{total}</span>
+            </div>
+            <p className="text-lg text-emerald-600 dark:text-emerald-400 font-semibold">
+              {pct}% richtig
+            </p>
+            {pct >= 90 && <p className="text-sm font-bold text-yellow-600 mt-2">Ausgezeichnet!</p>}
+            {pct >= 70 && pct < 90 && (
+              <p className="text-sm font-bold text-emerald-600 mt-2">Sehr gut!</p>
+            )}
+            {pct < 70 && (
+              <p className="text-sm text-muted-foreground mt-2">Weitermachen – du schaffst das!</p>
+            )}
           </div>
-          <div className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-1">
-            {correct}
-            <span className="text-2xl text-muted-foreground font-normal">/{total}</span>
+          <div className="grid grid-cols-3 gap-3 pt-4 border-t border-[var(--border)]">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{correct}</p>
+              <p className="text-xs text-muted-foreground">Richtig</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-red-500 dark:text-red-400">{wrong.length}</p>
+              <p className="text-xs text-muted-foreground">Falsch</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-[var(--accent)]">+{correct * 5}</p>
+              <p className="text-xs text-muted-foreground">XP</p>
+            </div>
           </div>
-          <p className="text-lg text-emerald-600 dark:text-emerald-400 font-semibold">
-            {pct}% richtig
-          </p>
-          <p className="text-sm text-muted-foreground mt-1">+{correct * 5} XP</p>
-          {pct >= 90 && <p className="text-sm font-bold text-yellow-600 mt-2">🏆 Ausgezeichnet!</p>}
-          {pct >= 70 && pct < 90 && (
-            <p className="text-sm font-bold text-emerald-600 mt-2">✅ Sehr gut!</p>
-          )}
-          {pct < 70 && (
-            <p className="text-sm text-muted-foreground mt-2">Weitermachen – du schaffst das!</p>
-          )}
         </CardContent>
       </Card>
 
       {/* Falsch beantwortet + Begründung */}
       {wrong.length > 0 && (
-        <div className="space-y-3">
-          <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+        <details className="group" open>
+          <summary className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
             <BookOpen className="w-4 h-4" /> Falsch beantwortet ({wrong.length})
-          </h3>
-          {wrong.map(({ frage, chosenOption, typKChosenOption }) => (
-            <Card key={frage.id} className="border-l-4 border-l-red-400">
-              <CardContent className="p-4 space-y-2">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                  {frage.stamm}
-                </p>
-                {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
-                  <div className="space-y-1">
-                    {frage.optionen.map((opt) => (
-                      <div
-                        key={opt.key}
-                        className={`text-xs px-3 py-1.5 rounded-lg ${
-                          opt.key === frage.korrekte_option
-                            ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
-                            : opt.key === chosenOption
-                              ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through"
-                              : "text-gray-400 dark:text-gray-600"
-                        }`}
-                      >
-                        <span className="font-bold mr-1">{opt.key}</span>
-                        {opt.text}
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {frage.typ === "K" && frage.aussagen && (
-                  <>
+            <span className="ml-auto text-xs text-muted-foreground group-open:rotate-90 transition-transform">
+              &#9654;
+            </span>
+          </summary>
+          <div className="space-y-3">
+            {wrong.map(({ frage, chosenOption, typKChosenOption }) => (
+              <Card key={frage.id} className="border-l-4 border-l-red-400">
+                <CardContent className="p-4 space-y-2">
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    {frage.stamm}
+                  </p>
+                  {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
                     <div className="space-y-1">
-                      {frage.aussagen.map((a) => (
+                      {frage.optionen.map((opt) => (
                         <div
-                          key={a.nr}
+                          key={opt.key}
                           className={`text-xs px-3 py-1.5 rounded-lg ${
-                            a.korrekt
-                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
-                              : "text-gray-500 dark:text-gray-500"
+                            opt.key === frage.korrekte_option
+                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
+                              : opt.key === chosenOption
+                                ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through"
+                                : "text-gray-400 dark:text-gray-600"
                           }`}
                         >
-                          <span className="font-bold mr-1">{a.nr}</span>
-                          {a.text}
+                          <span className="font-bold mr-1">{opt.key}</span>
+                          {opt.text}
                         </div>
                       ))}
                     </div>
-                    <div className="flex flex-wrap gap-2 text-xs">
-                      {typKChosenOption != null && (
-                        <span className="text-red-700 dark:text-red-400 font-medium">
-                          Deine Kombination:{" "}
-                          {formatTypKOptionLabel(
-                            frage.kombinationen?.find((k) => k.key === typKChosenOption),
-                            frage.aussagen.length
-                          ) || typKChosenOption}
-                        </span>
-                      )}
+                  )}
+                  {frage.typ === "K" && frage.aussagen && (
+                    <>
+                      <div className="space-y-1">
+                        {frage.aussagen.map((a) => (
+                          <div
+                            key={a.nr}
+                            className={`text-xs px-3 py-1.5 rounded-lg ${
+                              a.korrekt
+                                ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                                : "text-gray-500 dark:text-gray-500"
+                            }`}
+                          >
+                            <span className="font-bold mr-1">{a.nr}</span>
+                            {a.text}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex flex-wrap gap-2 text-xs">
+                        {typKChosenOption != null && (
+                          <span className="text-red-700 dark:text-red-400 font-medium">
+                            Deine Kombination:{" "}
+                            {formatTypKOptionLabel(
+                              frage.kombinationen?.find((k) => k.key === typKChosenOption),
+                              frage.aussagen.length
+                            ) || typKChosenOption}
+                          </span>
+                        )}
+                        {frage.korrekte_option && (
+                          <span className="text-green-700 dark:text-green-400 font-medium">
+                            Richtig:{" "}
+                            {formatTypKOptionLabel(
+                              frage.kombinationen?.find((k) => k.key === frage.korrekte_option),
+                              frage.aussagen.length
+                            ) || frage.korrekte_option}
+                          </span>
+                        )}
+                      </div>
+                    </>
+                  )}
+                  {frage.erklaerung?.trim() ? (
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                      <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
+                        Begründung
+                      </p>
+                      <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
+                        {stripMarkdownAsterisks(frage.erklaerung)}
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                      Keine Begründung hinterlegt.
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </details>
+      )}
+
+      {/* Richtig beantwortet + Begründung */}
+      {right.length > 0 && (
+        <details className="group">
+          <summary className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
+            <BookOpen className="w-4 h-4" /> Richtig beantwortet ({right.length}) – Begründungen
+            <span className="ml-auto text-xs text-muted-foreground group-open:rotate-90 transition-transform">
+              &#9654;
+            </span>
+          </summary>
+          <div className="space-y-3">
+            {right.map(({ frage }) => (
+              <Card key={frage.id} className="border-l-4 border-l-green-400">
+                <CardContent className="p-4 space-y-2">
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    {frage.stamm}
+                  </p>
+                  {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
+                    <div className="space-y-1">
+                      {frage.optionen.map((opt) => (
+                        <div
+                          key={opt.key}
+                          className={`text-xs px-3 py-1.5 rounded-lg ${
+                            opt.key === frage.korrekte_option
+                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
+                              : "text-gray-400 dark:text-gray-600"
+                          }`}
+                        >
+                          <span className="font-bold mr-1">{opt.key}</span>
+                          {opt.text}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {frage.typ === "K" && frage.aussagen && (
+                    <>
+                      <div className="space-y-1">
+                        {frage.aussagen.map((a) => (
+                          <div
+                            key={a.nr}
+                            className={`text-xs px-3 py-1.5 rounded-lg ${
+                              a.korrekt
+                                ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                                : "text-gray-500 dark:text-gray-500"
+                            }`}
+                          >
+                            <span className="font-bold mr-1">{a.nr}</span>
+                            {a.text}
+                          </div>
+                        ))}
+                      </div>
                       {frage.korrekte_option && (
-                        <span className="text-green-700 dark:text-green-400 font-medium">
+                        <p className="text-xs text-green-700 dark:text-green-400 font-medium">
                           Richtig:{" "}
                           {formatTypKOptionLabel(
                             frage.kombinationen?.find((k) => k.key === frage.korrekte_option),
                             frage.aussagen.length
                           ) || frage.korrekte_option}
-                        </span>
+                        </p>
                       )}
-                    </div>
-                  </>
-                )}
-                {frage.erklaerung?.trim() ? (
-                  <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
-                      Begründung
-                    </p>
-                    <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
-                      {stripMarkdownAsterisks(frage.erklaerung)}
-                    </p>
-                  </div>
-                ) : (
-                  <p className="text-xs text-gray-500 dark:text-gray-500 italic">
-                    Keine Begründung hinterlegt.
-                  </p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-
-      {/* Richtig beantwortet + Begründung */}
-      {right.length > 0 && (
-        <div className="space-y-3">
-          <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
-            <BookOpen className="w-4 h-4" /> Richtig beantwortet ({right.length}) – Begründungen
-          </h3>
-          {right.map(({ frage }) => (
-            <Card key={frage.id} className="border-l-4 border-l-green-400">
-              <CardContent className="p-4 space-y-2">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                  {frage.stamm}
-                </p>
-                {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
-                  <div className="space-y-1">
-                    {frage.optionen.map((opt) => (
-                      <div
-                        key={opt.key}
-                        className={`text-xs px-3 py-1.5 rounded-lg ${
-                          opt.key === frage.korrekte_option
-                            ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
-                            : "text-gray-400 dark:text-gray-600"
-                        }`}
-                      >
-                        <span className="font-bold mr-1">{opt.key}</span>
-                        {opt.text}
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {frage.typ === "K" && frage.aussagen && (
-                  <>
-                    <div className="space-y-1">
-                      {frage.aussagen.map((a) => (
-                        <div
-                          key={a.nr}
-                          className={`text-xs px-3 py-1.5 rounded-lg ${
-                            a.korrekt
-                              ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
-                              : "text-gray-500 dark:text-gray-500"
-                          }`}
-                        >
-                          <span className="font-bold mr-1">{a.nr}</span>
-                          {a.text}
-                        </div>
-                      ))}
-                    </div>
-                    {frage.korrekte_option && (
-                      <p className="text-xs text-green-700 dark:text-green-400 font-medium">
-                        Richtig:{" "}
-                        {formatTypKOptionLabel(
-                          frage.kombinationen?.find((k) => k.key === frage.korrekte_option),
-                          frage.aussagen.length
-                        ) || frage.korrekte_option}
+                    </>
+                  )}
+                  {frage.erklaerung?.trim() ? (
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                      <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
+                        Begründung
                       </p>
-                    )}
-                  </>
-                )}
-                {frage.erklaerung?.trim() ? (
-                  <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                    <p className="text-xs font-semibold text-blue-800 dark:text-blue-300 mb-0.5">
-                      Begründung
+                      <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
+                        {stripMarkdownAsterisks(frage.erklaerung)}
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                      Keine Begründung hinterlegt.
                     </p>
-                    <p className="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
-                      {stripMarkdownAsterisks(frage.erklaerung)}
-                    </p>
-                  </div>
-                ) : (
-                  <p className="text-xs text-gray-500 dark:text-gray-500 italic">
-                    Keine Begründung hinterlegt.
-                  </p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </details>
       )}
 
       <div className="flex gap-3 justify-center pb-4">
         <Button variant="outline" onClick={onRestart}>
-          <RotateCcw className="w-4 h-4 mr-1" /> Nochmal
+          <RotateCcw className="w-4 h-4 mr-1" /> Nochmal (gleiche Einstellungen)
         </Button>
         <Button onClick={onBack} className="bg-emerald-600 hover:bg-emerald-700 text-white">
           Neue Auswahl
@@ -959,7 +984,7 @@ export default function FragenTrainer() {
 
   if (planBms?.length && mixedPlanFragen.length === 0) {
     return (
-      <div className="p-4 pb-24 md:p-6">
+      <div className="p-4 pb-24 lg:pb-8 md:p-6">
         <Card>
           <CardContent className="p-6 space-y-4">
             <p className="text-gray-700 dark:text-gray-300">
@@ -984,7 +1009,7 @@ export default function FragenTrainer() {
   if (planBms?.length && mixedPlanFragen.length > 0) {
     if (planResults != null) {
       return (
-        <div className="p-4 pb-24 md:p-6">
+        <div className="p-4 pb-24 lg:pb-8 md:p-6">
           <ResultsScreen
             answers={planResults}
             onRestart={() => {
@@ -1000,7 +1025,7 @@ export default function FragenTrainer() {
       );
     }
     return (
-      <div className="p-4 pb-24 md:p-6">
+      <div className="p-4 pb-24 lg:pb-8 md:p-6">
         <QuizScreen
           subjectId="biologie"
           count={mixedPlanFragen.length}
@@ -1027,7 +1052,7 @@ export default function FragenTrainer() {
   }
 
   return (
-    <div className="p-4 pb-24 md:p-6">
+    <div className="p-4 pb-24 lg:pb-8 md:p-6">
       {screen === "select" && (
         <SelectionScreen
           userId={userId}
