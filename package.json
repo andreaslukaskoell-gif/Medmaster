@@ -12,6 +12,8 @@
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "qa-kff": "npx tsx scripts/qa-kff.mts",
+    "check": "npm run typecheck && npm run audit-bms && npm run qa-kff",
     "audit-bms": "npx tsx scripts/audit-bms-questions.mts",
     "audit-images": "npx tsx scripts/audit-bms-images.mts",
     "audit-stichworte-kapitel": "npx tsx scripts/audit-stichworte-kapitel.mts",
@@ -36,7 +38,6 @@
     "reels:render:rof": "node video/render.mjs --comp RichtigOderFalsch",
     "reels:render:imp": "node video/render.mjs --comp ImplikationenChallenge",
     "reels:render:fig": "node video/render.mjs --comp FigurenChallenge",
-    "check": "npm run typecheck && npm run audit-bms",
     "preview": "vite preview",
     "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
   },
