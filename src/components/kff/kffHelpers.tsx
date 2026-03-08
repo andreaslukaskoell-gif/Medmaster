@@ -43,6 +43,75 @@ export function shuffleSlice<T>(arr: T[], limit: number): T[] {
   return out.slice(0, limit);
 }
 
+/**
+ * Builds a session with controlled difficulty mix (~1/3 each).
+ * Buckets tasks by getDifficulty, picks proportionally, then interleaves
+ * with a light progressive bias (easy-leaning start, hard-leaning end)
+ * without strict sorting — feels natural, not forced.
+ */
+export function balancedDifficultySession<T>(
+  pool: T[],
+  target: number,
+  getDifficulty: (t: T) => "easy" | "medium" | "hard"
+): T[] {
+  const buckets: Record<"easy" | "medium" | "hard", T[]> = {
+    easy: [],
+    medium: [],
+    hard: [],
+  };
+  for (const t of pool) buckets[getDifficulty(t)].push(t);
+  // Shuffle within each bucket
+  for (const key of ["easy", "medium", "hard"] as const) {
+    const b = buckets[key];
+    for (let i = b.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [b[i], b[j]] = [b[j]!, b[i]!];
+    }
+  }
+  // Target per bucket: equal thirds, remainder goes medium > hard > easy
+  const base = Math.floor(target / 3);
+  const rem = target - base * 3;
+  const quotas = {
+    easy: base + (rem >= 3 ? 1 : 0),
+    medium: base + (rem >= 1 ? 1 : 0),
+    hard: base + (rem >= 2 ? 1 : 0),
+  };
+  // Pick from each bucket up to quota; track surplus for redistribution
+  const picked: Record<"easy" | "medium" | "hard", T[]> = { easy: [], medium: [], hard: [] };
+  let deficit = 0;
+  for (const key of ["easy", "medium", "hard"] as const) {
+    const take = Math.min(quotas[key], buckets[key].length);
+    picked[key] = buckets[key].slice(0, take);
+    deficit += quotas[key] - take;
+  }
+  // Fill deficit from whichever bucket has surplus
+  if (deficit > 0) {
+    for (const key of ["medium", "hard", "easy"] as const) {
+      const surplus = buckets[key].slice(picked[key].length);
+      const take = Math.min(deficit, surplus.length);
+      picked[key].push(...surplus.slice(0, take));
+      deficit -= take;
+      if (deficit <= 0) break;
+    }
+  }
+  // Interleave: mildly progressive (chunks of 3, each chunk has one of each when possible)
+  const result: T[] = [];
+  const queues = { easy: [...picked.easy], medium: [...picked.medium], hard: [...picked.hard] };
+  const order: ("easy" | "medium" | "hard")[] = ["easy", "medium", "hard"];
+  while (result.length < target) {
+    let added = false;
+    for (const key of order) {
+      if (queues[key].length > 0) {
+        result.push(queues[key].shift()!);
+        added = true;
+        if (result.length >= target) break;
+      }
+    }
+    if (!added) break;
+  }
+  return result;
+}
+
 /** Zeigt die Anzahl validierter Aufgaben in der Task-DB für eine Domain. */
 export function TaskDbCountHint({ domain }: { domain: TaskDomain }) {
   const [count, setCount] = useState<number | null>(null);

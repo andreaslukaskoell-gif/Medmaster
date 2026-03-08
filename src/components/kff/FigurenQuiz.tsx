@@ -37,7 +37,13 @@ import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
-import { difficultyForIndex, getLastCount, saveLastCount, shuffleSlice } from "./kffHelpers";
+import {
+  difficultyForIndex,
+  getLastCount,
+  saveLastCount,
+  shuffleSlice,
+  balancedDifficultySession,
+} from "./kffHelpers";
 
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
 /** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
@@ -112,7 +118,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           valid = shuffleSlice(filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]), target);
         if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
       }
-      setQuestions(shuffleSlice(valid, target));
+      setQuestions(balancedDifficultySession(valid, target, (t) => t.difficulty));
       if (valid.length < list.length && import.meta.env?.DEV) {
         logPoolWarning("figuren", valid.length, "Training");
       }
@@ -291,7 +297,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         count - valid.length
                       ),
                     ];
-                  setQuestions(valid.slice(0, count));
+                  setQuestions(balancedDifficultySession(valid, count, (t) => t.difficulty));
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -313,7 +319,11 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     }
                   }
                   setQuestions(
-                    filterValidFigurenTasks(generated).slice(0, EXAM_CONFIG.figuren.questions)
+                    balancedDifficultySession(
+                      filterValidFigurenTasks(generated),
+                      EXAM_CONFIG.figuren.questions,
+                      (t) => t.difficulty
+                    )
                   );
                   setIndex(0);
                   setAnswers({});
