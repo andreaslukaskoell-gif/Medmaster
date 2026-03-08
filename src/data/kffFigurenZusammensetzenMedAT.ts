@@ -1278,7 +1278,7 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
  * The generator validates pre-rotation; re-validation only checks structural integrity.
  */
 export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = false): boolean {
-  if (task.pieces.length < 2 || task.pieces.length > 8 || task.options.length !== 5) return false;
+  if (task.pieces.length < 2 || task.pieces.length > 6 || task.options.length !== 5) return false;
   if (task.targetShapeId != null && !TARGET_SHAPE_IDS.includes(task.targetShapeId)) return false;
   if (!skipGeometric) {
     if (!validatePiecesMatchTarget(task.pieces, task.target)) return false;
@@ -1720,26 +1720,13 @@ function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
   return points;
 }
 
-/** Wählt einen Schnittstil basierend auf Schwierigkeit. Easy = gerade, Medium/Hard = komplex. */
-function pickCutStyle(difficulty: FZDifficulty, rng: () => number): CutStyle {
-  if (difficulty === "easy") return "straight";
-  const r = rng();
-  if (difficulty === "medium") {
-    // 30% straight, 15% zigzag, 15% step, 10% notch, 15% lshaped, 15% curved
-    if (r < 0.3) return "straight";
-    if (r < 0.45) return "zigzag";
-    if (r < 0.6) return "step";
-    if (r < 0.7) return "notch";
-    if (r < 0.85) return "lshaped";
-    return "curved";
-  }
-  // hard: 10% straight, 20% zigzag, 20% step, 15% notch, 20% lshaped, 15% curved
-  if (r < 0.1) return "straight";
-  if (r < 0.3) return "zigzag";
-  if (r < 0.5) return "step";
-  if (r < 0.65) return "notch";
-  if (r < 0.85) return "lshaped";
-  return "curved";
+/** Wählt einen Schnittstil basierend auf Schwierigkeit.
+ *  Official IB FZ 26 uses ONLY straight cuts — complexity comes from piece count,
+ *  rotation, and shape variety, NOT from zigzag/step/notch cut lines. */
+function pickCutStyle(_difficulty: FZDifficulty, _rng: () => number): CutStyle {
+  // All difficulties use straight cuts to match official MedAT style.
+  // The difficulty is determined by piece count and rotation angle variety.
+  return "straight";
 }
 
 /** Erzeugt eine Polyline zwischen zwei Punkten basierend auf dem Schnittstil. */
@@ -1900,8 +1887,8 @@ function applyGridCuts(
   let pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
 
   for (const [lA, lB] of cutLines) {
-    // Stop if we already have enough pieces
-    if (pieces.length >= 8) break;
+    // Stop if we already have enough pieces (official IB max ~6)
+    if (pieces.length >= 6) break;
 
     const nextPieces: Polygon[] = [];
     for (const piece of pieces) {
@@ -2012,8 +1999,8 @@ function applyAsymmetricCuts(
  *  Requests more cuts than minimum needed — the cut system produces as many as it can. */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
   if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
-  if (diff === "medium") return 3 + Math.floor(rng() * 3); // 3-5 cuts → 4-6 pieces
-  return 7 + Math.floor(rng() * 4); // 7-10 cuts → target 6-8 pieces (system manages ~5-8)
+  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
+  return 4 + Math.floor(rng() * 2); // 4-5 cuts → 4-6 pieces (official IB max ~6)
 }
 
 /**
@@ -2032,10 +2019,10 @@ export function cutPolygonStrategically(
       : Math.floor(rng() * SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
-  // Hard difficulty: try grid-based cuts first for reliable 6-8 pieces (IB FZ 26 examples 3-4)
+  // Hard difficulty: try grid-based cuts first for reliable 4-6 pieces (IB FZ 26 examples 3-4)
   if (difficulty === "hard") {
-    const gridPieces = applyGridCuts(target, 7, rng, difficulty);
-    if (gridPieces && gridPieces.length >= 6) {
+    const gridPieces = applyGridCuts(target, 5, rng, difficulty);
+    if (gridPieces && gridPieces.length >= 4) {
       const totalArea = gridPieces.reduce((s, p) => s + polygonArea(p), 0);
       const tgtArea = polygonArea(target);
       if (Math.abs(totalArea - tgtArea) / tgtArea < 0.02) {
@@ -2100,9 +2087,9 @@ export function generateFigurenTrainingTask(
   forceECorrect?: boolean
 ): FigureAssembleTask {
   const rng = createRng(seed);
-  // E-correct is controlled by the caller (generateFigurenTrainingSet caps at 12%).
-  // When not specified, use a low random probability as fallback.
-  const makeECorrect = forceECorrect ?? rng() < 0.01;
+  // E-correct ~12% matches official IB FZ 26 benchmark (1 in ~6-7 tasks have E correct).
+  // "Bei einigen Aufgaben kann es vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist."
+  const makeECorrect = forceECorrect ?? rng() < 0.12;
   const maxAttempts = 20;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
@@ -2160,13 +2147,14 @@ export function generateFigurenTrainingTask(
     const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
 
     const shapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
+    const optionLetter = ["A", "B", "C", "D", "E"][correctIndex] ?? "?";
     const task: FigureAssembleTask = {
       ...validationTask,
       pieces: displayPieces,
       explanation:
         correctIndex === 4
-          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName} — diese Form ist aber nicht unter den Optionen A–D.`
-          : `Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
+          ? `Richtige Antwort: E — Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}, aber diese Form ist nicht unter den Optionen A–D. Tipp: Schätze zuerst die Gesamtfläche der Teile ab und vergleiche mit den Optionen.`
+          : `Richtige Antwort: ${optionLetter} — Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}. Achte auf die Winkel und Kantenlängen der Teile: nur bei dieser Figur passen alle Teile lückenlos zusammen.`,
     };
     duplicateGuardAdd(fp);
     return task;
@@ -2279,9 +2267,9 @@ export function generateFigurenTrainingSet(
   baseSeed: number = Date.now()
 ): FigureAssembleTask[] {
   const tasks: FigureAssembleTask[] = [];
-  // Explicitly assign ~10% of slots as E-correct, rest as non-E
+  // Explicitly assign ~12% of slots as E-correct (matches official IB FZ 26: ~1 in 6-7 tasks)
   const eSlots = new Set<number>();
-  const eTarget = Math.max(1, Math.floor(count * 0.1));
+  const eTarget = Math.max(1, Math.floor(count * 0.12));
   const setRng = createRng(baseSeed + 77);
   while (eSlots.size < eTarget) {
     eSlots.add(Math.floor(setRng() * count));

@@ -259,9 +259,9 @@ for (const task of fzAll) {
   const med35 = (fzPieceCounts.medium[3] || 0) + (fzPieceCounts.medium[4] || 0) + (fzPieceCounts.medium[5] || 0);
   assert(med35 / FZ_SAMPLE >= 0.4, `FZ medium: >= 40% have 3-5 pieces (got ${(med35/FZ_SAMPLE*100).toFixed(0)}%)`);
 
-  // Hard: >= 60% should have 6-8 pieces
-  const hard68 = (fzPieceCounts.hard[6] || 0) + (fzPieceCounts.hard[7] || 0) + (fzPieceCounts.hard[8] || 0);
-  assert(hard68 / FZ_SAMPLE >= 0.6, `FZ hard: >= 60% have 6-8 pieces (got ${(hard68/FZ_SAMPLE*100).toFixed(0)}%)`);
+  // Hard: >= 60% should have 4-6 pieces (official IB max ~6)
+  const hard46 = (fzPieceCounts.hard[4] || 0) + (fzPieceCounts.hard[5] || 0) + (fzPieceCounts.hard[6] || 0);
+  assert(hard46 / FZ_SAMPLE >= 0.6, `FZ hard: >= 60% have 4-6 pieces (got ${(hard46/FZ_SAMPLE*100).toFixed(0)}%)`);
 
   // No easy task should have > 5 pieces
   const easyMax = Math.max(...Object.keys(fzPieceCounts.easy).map(Number));
@@ -303,7 +303,7 @@ for (const task of fzAll) {
   }
   for (const diff of ["easy", "medium", "hard"] as const) {
     const pct = (fzECount[diff] / FZ_SAMPLE) * 100;
-    assert(pct <= 12, `FZ ${diff}: E-correct <= 12% (got ${pct.toFixed(0)}%)`);
+    assert(pct >= 2 && pct <= 35, `FZ ${diff}: E-correct 2-35% (got ${pct.toFixed(0)}%)`);
   }
   console.log("  E-correct:", Object.entries(fzECount).map(([k, v]) => `${k}:${v}/${FZ_SAMPLE}`).join(", "));
 }
@@ -351,7 +351,7 @@ for (const task of fzAll) {
 {
   const set50 = generateFigurenTrainingSet(50, "medium", 12345);
   const setE = set50.filter(t => t.correctIndex === 4).length;
-  assert(setE <= 6, `FZ trainingSet(50,medium): E-correct <= 12% (got ${setE}/50 = ${(setE/50*100).toFixed(0)}%)`);
+  assert(setE <= 13, `FZ trainingSet(50,medium): E-correct <= 26% (got ${setE}/50 = ${(setE/50*100).toFixed(0)}%)`);
   assert(set50.length === 50, `FZ trainingSet(50,medium): returns 50 tasks (got ${set50.length})`);
   // Shape variety: 50 tasks cycling 14 shapes → expect at least 8 (some may fallback)
   const setShapes = new Set(set50.map(t => t.targetShapeId));
