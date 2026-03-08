@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
-import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import {
@@ -25,6 +25,8 @@ import {
   layoutPiecesCompact,
   FIGURE_SVG_ASPECT_PROPS,
   isOptionE,
+  getShapeDisplayName,
+  getShapeDisplayNameAkk,
   type FigureAssembleTask,
   OFFICIAL_FZ_INSTRUCTION,
   OFFICIAL_FZ_EXAMPLES,
@@ -81,13 +83,19 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         getKffFailedIdsForDomain(domain)
       );
       const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
-      let valid = filterValidFigurenTasks(list);
-      if (valid.length === 0) {
+      // Filter DB tasks: must pass validator AND have solutionOverlay (reject stale data)
+      let valid = filterValidFigurenTasks(list).filter(
+        (t) => t.solutionOverlay && t.solutionOverlay.lines.length >= 1
+      );
+      const target = Math.min(questionCount, 150);
+      // Supplement from generator if DB pool is too small (not just empty)
+      if (valid.length < target) {
         const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
         const seed = Date.now();
         const generated: FigureAssembleTask[] = [];
         const numShapes = SOLUTION_SHAPES.length;
-        for (let i = 0; i < Math.min(questionCount, 150); i++) {
+        const needed = target - valid.length;
+        for (let i = 0; i < needed + 10; i++) {
           try {
             const t = generateFigurenTrainingTask(
               difficultyForIndex(i, levels),
@@ -99,15 +107,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
             /* skip failed generation */
           }
         }
-        valid = shuffleSlice(filterValidFigurenTasks(generated), Math.min(questionCount, 150));
+        valid = [...valid, ...filterValidFigurenTasks(generated)];
         if (valid.length === 0)
-          valid = shuffleSlice(
-            filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
-            Math.min(questionCount, 150)
-          );
-        if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Fallback (generiert)");
+          valid = shuffleSlice(filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]), target);
+        if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
       }
-      setQuestions(valid);
+      setQuestions(shuffleSlice(valid, target));
       if (valid.length < list.length && import.meta.env?.DEV) {
         logPoolWarning("figuren", valid.length, "Training");
       }
@@ -256,7 +261,9 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     getKffFailedIdsForDomain(domain)
                   );
                   const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
-                  let valid = filterValidFigurenTasks(list);
+                  let valid = filterValidFigurenTasks(list).filter(
+                    (t) => t.solutionOverlay && t.solutionOverlay.lines.length >= 1
+                  );
                   if (valid.length < count) {
                     const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
                     const seed = Date.now();
@@ -420,64 +427,81 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     </span>
                   )}
                 </div>
-                <div className="flex items-center gap-4 ml-7 mb-2 flex-wrap">
-                  <div>
-                    <p className="text-xs text-muted mb-1">Puzzleteile:</p>
-                    {(() => {
-                      const { viewBox, paths } = layoutPiecesCompact(q.pieces);
-                      return (
-                        <svg
-                          viewBox={viewBox}
-                          {...FIGURE_SVG_ASPECT_PROPS}
-                          className="w-32 h-12 sm:w-40 sm:h-14 bg-white dark:bg-gray-900 rounded"
-                        >
-                          {paths.map((p, pi) => (
-                            <path
-                              key={pi}
-                              d={p.d}
-                              fill={FILL_FZ}
-                              stroke="none"
-                              transform={p.transform}
-                            />
-                          ))}
-                        </svg>
-                      );
-                    })()}
+                {/* Solution overlay: target shape with correct cut lines */}
+                <div className="ml-7 mb-3">
+                  <p className="text-xs text-muted mb-1.5">So setzen sich die Teile zusammen:</p>
+                  <div className="flex items-center gap-4 flex-wrap">
+                    {/* Puzzleteile (rotiert, wie in der Aufgabe) */}
+                    <div>
+                      <p className="text-[10px] text-muted mb-0.5">Teile</p>
+                      {(() => {
+                        const { viewBox, paths } = layoutPiecesCompact(q.pieces);
+                        return (
+                          <svg
+                            viewBox={viewBox}
+                            {...FIGURE_SVG_ASPECT_PROPS}
+                            className="w-32 h-14 sm:w-40 sm:h-16 bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                          >
+                            {paths.map((p, pi) => (
+                              <path
+                                key={pi}
+                                d={p.d}
+                                fill={FILL_FZ}
+                                stroke="none"
+                                transform={p.transform}
+                              />
+                            ))}
+                          </svg>
+                        );
+                      })()}
+                    </div>
+                    {/* Arrow */}
+                    <span className="text-muted text-lg">→</span>
+                    {/* Target shape with solutionOverlay lines (geometrically correct) */}
+                    <div>
+                      <p className="text-[10px] text-muted mb-0.5">
+                        Lösung ({getShapeDisplayName(q.targetShapeId)})
+                      </p>
+                      <svg
+                        viewBox="0 0 200 200"
+                        {...FIGURE_SVG_ASPECT_PROPS}
+                        className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                      >
+                        <path d={polygonToPath(q.target)} fill={FILL_FZ} stroke="none" />
+                        {q.solutionOverlay?.lines.map((line, li) => (
+                          <line
+                            key={li}
+                            x1={line.from.x}
+                            y1={line.from.y}
+                            x2={line.to.x}
+                            y2={line.to.y}
+                            stroke="#0e7490"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                          />
+                        ))}
+                      </svg>
+                    </div>
                   </div>
+                </div>
+                {/* Answer comparison: correct vs user's choice */}
+                <div className="ml-7 mb-2 flex items-start gap-5 flex-wrap">
                   <div>
-                    <p className="text-xs text-muted mb-1">So setzen sich die Teile zusammen:</p>
-                    <svg
-                      viewBox="0 0 200 200"
-                      {...FIGURE_SVG_ASPECT_PROPS}
-                      className="w-24 h-24 sm:w-28 sm:h-28 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
-                    >
-                      {/* Zielform gefüllt */}
-                      <path d={polygonToPath(q.target)} fill={FILL_FZ} stroke="none" />
-                      {/* Trennlinien zwischen den Teilsteinen */}
-                      {q.pieces.map((piece, pi) => (
-                        <path
-                          key={pi}
-                          d={polygonToPath(piece)}
-                          fill="none"
-                          stroke="#0e7490"
-                          strokeWidth="1.5"
-                        />
-                      ))}
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-green-600 dark:text-green-400 mb-1">
-                      Richtig ({correctLabel}):
+                    <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">
+                      Richtig: {correctLabel}
+                      {q.correctIndex !== 4 && ` (${getShapeDisplayName(q.targetShapeId)})`}
                     </p>
                     {q.correctIndex === 4 ? (
-                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
-                        E – Keine der Figuren ist richtig
-                      </span>
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-green-50 dark:bg-green-900/20 rounded border-2 border-green-400 dark:border-green-700">
+                        <span className="text-xs text-center text-green-700 dark:text-green-400 font-medium px-2">
+                          E – Keine passt
+                        </span>
+                      </div>
                     ) : (
                       <svg
                         viewBox="0 0 200 200"
                         {...FIGURE_SVG_ASPECT_PROPS}
-                        className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded border border-green-300 dark:border-green-700"
+                        className="w-20 h-20 sm:w-24 sm:h-24 bg-green-50 dark:bg-green-900/20 rounded border-2 border-green-400 dark:border-green-700"
                       >
                         <path
                           d={polygonToPathScaledToViewBox(
@@ -485,25 +509,39 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                           )}
                           fill="#22c55e"
                           stroke="#15803d"
-                          strokeWidth="1.2"
+                          strokeWidth="1.5"
                         />
                       </svg>
                     )}
                   </div>
                   {!correct && selectedLabel && (
                     <div>
-                      <p className="text-xs text-red-600 dark:text-red-400 mb-1">
-                        Deine Antwort ({selectedLabel}):
+                      <p className="text-xs text-red-600 dark:text-red-400 font-medium mb-1">
+                        Deine Antwort: {selectedLabel}
+                        {selectedLabel !== "E" &&
+                          (() => {
+                            const selIdx = FZ_OPTION_LABELS.indexOf(
+                              selectedLabel as "A" | "B" | "C" | "D" | "E"
+                            );
+                            const selOpt = q.options[selIdx];
+                            if (selOpt && !isOptionE(selOpt)) {
+                              // Find shape name for the distractor
+                              return "";
+                            }
+                            return "";
+                          })()}
                       </p>
                       {selectedLabel === "E" ? (
-                        <span className="text-xs text-red-600 dark:text-red-400 font-medium">
-                          E – Keine der Figuren ist richtig
-                        </span>
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-red-50 dark:bg-red-900/20 rounded border-2 border-red-400 dark:border-red-700">
+                          <span className="text-xs text-center text-red-700 dark:text-red-400 font-medium px-2">
+                            E – Keine passt
+                          </span>
+                        </div>
                       ) : (
                         <svg
                           viewBox="0 0 200 200"
                           {...FIGURE_SVG_ASPECT_PROPS}
-                          className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded border border-red-300 dark:border-red-700"
+                          className="w-20 h-20 sm:w-24 sm:h-24 bg-red-50 dark:bg-red-900/20 rounded border-2 border-red-400 dark:border-red-700"
                         >
                           <path
                             d={polygonToPathScaledToViewBox(
@@ -515,16 +553,23 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             )}
                             fill="#ef4444"
                             stroke="#b91c1c"
-                            strokeWidth="1.2"
+                            strokeWidth="1.5"
                           />
                         </svg>
                       )}
                     </div>
                   )}
                 </div>
+                {/* Explanation — always use shape-aware text for trust */}
                 <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
                   <p className="text-xs text-blue-700 dark:text-blue-400">
-                    {stripMarkdownAsterisks(q.explanation)}
+                    {(() => {
+                      const name = getShapeDisplayNameAkk(q.targetShapeId);
+                      const n = q.pieces.length;
+                      return q.correctIndex === 4
+                        ? `Keine der Figuren A–D ist korrekt. Die ${n} Teile ergeben zusammengesetzt ${name} — diese Form ist aber nicht unter den Optionen A–D.`
+                        : `Die ${n} Teile ergeben zusammengesetzt ${name}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`;
+                    })()}
                   </p>
                 </div>
               </CardContent>
