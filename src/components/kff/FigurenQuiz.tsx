@@ -427,27 +427,32 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     </span>
                   )}
                 </div>
-                {/* Solution overlay: target shape with correct cut lines */}
-                <div className="ml-7 mb-3">
-                  <p className="text-xs text-muted mb-1.5">So setzen sich die Teile zusammen:</p>
-                  <div className="flex items-center gap-4 flex-wrap">
-                    {/* Puzzleteile (rotiert, wie in der Aufgabe) */}
-                    <div>
-                      <p className="text-[10px] text-muted mb-0.5">Teile</p>
+                {/* Assembly demonstration: large, clear visualization */}
+                <div className="ml-7 mb-4">
+                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    So setzen sich die Teile zusammen:
+                  </p>
+                  <div className="flex items-center gap-3 sm:gap-6 bg-gray-50 dark:bg-gray-900/40 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+                    {/* Puzzleteile — larger */}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-medium text-muted mb-1 uppercase tracking-wider">
+                        {q.pieces.length} Teile
+                      </p>
                       {(() => {
                         const { viewBox, paths } = layoutPiecesCompact(q.pieces);
                         return (
                           <svg
                             viewBox={viewBox}
                             {...FIGURE_SVG_ASPECT_PROPS}
-                            className="w-32 h-14 sm:w-40 sm:h-16 bg-white dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                            className="w-full h-20 sm:h-28"
                           >
                             {paths.map((p, pi) => (
                               <path
                                 key={pi}
                                 d={p.d}
                                 fill={FILL_FZ}
-                                stroke="none"
+                                stroke="#4d9eb8"
+                                strokeWidth="0.8"
                                 transform={p.transform}
                               />
                             ))}
@@ -456,18 +461,25 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       })()}
                     </div>
                     {/* Arrow */}
-                    <span className="text-muted text-lg">→</span>
-                    {/* Target shape with solutionOverlay lines (geometrically correct) */}
-                    <div>
-                      <p className="text-[10px] text-muted mb-0.5">
-                        Lösung ({getShapeDisplayName(q.targetShapeId)})
+                    <div className="flex flex-col items-center gap-0.5 shrink-0">
+                      <span className="text-2xl text-muted">→</span>
+                    </div>
+                    {/* Target shape with cut lines — much larger and prominent */}
+                    <div className="shrink-0">
+                      <p className="text-xs font-medium text-muted mb-1 uppercase tracking-wider">
+                        {getShapeDisplayName(q.targetShapeId)}
                       </p>
                       <svg
                         viewBox="0 0 200 200"
                         {...FIGURE_SVG_ASPECT_PROPS}
-                        className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-50 dark:bg-gray-900 rounded border border-gray-200 dark:border-gray-700"
+                        className="w-28 h-28 sm:w-36 sm:h-36"
                       >
-                        <path d={polygonToPath(q.target)} fill={FILL_FZ} stroke="none" />
+                        <path
+                          d={polygonToPath(q.target)}
+                          fill={FILL_FZ}
+                          stroke="#4d9eb8"
+                          strokeWidth="1"
+                        />
                         {q.solutionOverlay?.lines.map((line, li) => (
                           <line
                             key={li}
@@ -476,24 +488,28 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             x2={line.to.x}
                             y2={line.to.y}
                             stroke="#0e7490"
-                            strokeWidth="1.5"
+                            strokeWidth="2.5"
                             strokeLinecap="round"
+                            strokeDasharray="6 3"
                           />
                         ))}
                       </svg>
                     </div>
                   </div>
+                  <p className="text-[11px] text-muted mt-1.5 ml-1">
+                    Die gestrichelten Linien zeigen, wo die Teile zusammenstoßen.
+                  </p>
                 </div>
-                {/* Answer comparison: correct vs user's choice */}
-                <div className="ml-7 mb-2 flex items-start gap-5 flex-wrap">
+                {/* Answer comparison: correct vs user's choice — side by side, larger */}
+                <div className="ml-7 mb-3 flex items-start gap-4 sm:gap-6 flex-wrap">
                   <div>
-                    <p className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">
-                      Richtig: {correctLabel}
-                      {q.correctIndex !== 4 && ` (${getShapeDisplayName(q.targetShapeId)})`}
+                    <p className="text-xs text-green-700 dark:text-green-400 font-semibold mb-1.5">
+                      ✓ Richtig: {correctLabel}
+                      {q.correctIndex !== 4 && ` — ${getShapeDisplayName(q.targetShapeId)}`}
                     </p>
                     {q.correctIndex === 4 ? (
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-green-50 dark:bg-green-900/20 rounded border-2 border-green-400 dark:border-green-700">
-                        <span className="text-xs text-center text-green-700 dark:text-green-400 font-medium px-2">
+                      <div className="w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center bg-green-50 dark:bg-green-900/20 rounded-lg border-2 border-green-400 dark:border-green-700">
+                        <span className="text-sm text-center text-green-700 dark:text-green-400 font-medium px-3">
                           E – Keine passt
                         </span>
                       </div>
@@ -501,7 +517,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       <svg
                         viewBox="0 0 200 200"
                         {...FIGURE_SVG_ASPECT_PROPS}
-                        className="w-20 h-20 sm:w-24 sm:h-24 bg-green-50 dark:bg-green-900/20 rounded border-2 border-green-400 dark:border-green-700"
+                        className="w-24 h-24 sm:w-32 sm:h-32 bg-green-50 dark:bg-green-900/20 rounded-lg border-2 border-green-400 dark:border-green-700"
                       >
                         <path
                           d={polygonToPathScaledToViewBox(
@@ -509,31 +525,19 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                           )}
                           fill="#22c55e"
                           stroke="#15803d"
-                          strokeWidth="1.5"
+                          strokeWidth="2"
                         />
                       </svg>
                     )}
                   </div>
                   {!correct && selectedLabel && (
                     <div>
-                      <p className="text-xs text-red-600 dark:text-red-400 font-medium mb-1">
-                        Deine Antwort: {selectedLabel}
-                        {selectedLabel !== "E" &&
-                          (() => {
-                            const selIdx = FZ_OPTION_LABELS.indexOf(
-                              selectedLabel as "A" | "B" | "C" | "D" | "E"
-                            );
-                            const selOpt = q.options[selIdx];
-                            if (selOpt && !isOptionE(selOpt)) {
-                              // Find shape name for the distractor
-                              return "";
-                            }
-                            return "";
-                          })()}
+                      <p className="text-xs text-red-700 dark:text-red-400 font-semibold mb-1.5">
+                        ✗ Deine Antwort: {selectedLabel}
                       </p>
                       {selectedLabel === "E" ? (
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center bg-red-50 dark:bg-red-900/20 rounded border-2 border-red-400 dark:border-red-700">
-                          <span className="text-xs text-center text-red-700 dark:text-red-400 font-medium px-2">
+                        <div className="w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center bg-red-50 dark:bg-red-900/20 rounded-lg border-2 border-red-400 dark:border-red-700">
+                          <span className="text-sm text-center text-red-700 dark:text-red-400 font-medium px-3">
                             E – Keine passt
                           </span>
                         </div>
@@ -541,7 +545,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         <svg
                           viewBox="0 0 200 200"
                           {...FIGURE_SVG_ASPECT_PROPS}
-                          className="w-20 h-20 sm:w-24 sm:h-24 bg-red-50 dark:bg-red-900/20 rounded border-2 border-red-400 dark:border-red-700"
+                          className="w-24 h-24 sm:w-32 sm:h-32 bg-red-50 dark:bg-red-900/20 rounded-lg border-2 border-red-400 dark:border-red-700"
                         >
                           <path
                             d={polygonToPathScaledToViewBox(
@@ -553,23 +557,30 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             )}
                             fill="#ef4444"
                             stroke="#b91c1c"
-                            strokeWidth="1.5"
+                            strokeWidth="2"
                           />
                         </svg>
                       )}
                     </div>
                   )}
                 </div>
-                {/* Explanation — always use shape-aware text for trust */}
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                {/* Explanation — specific, pedagogically clear */}
+                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3.5 rounded-lg space-y-1.5">
+                  <p className="text-xs font-medium text-blue-800 dark:text-blue-300">
                     {(() => {
                       const name = getShapeDisplayNameAkk(q.targetShapeId);
                       const n = q.pieces.length;
                       return q.correctIndex === 4
                         ? `Keine der Figuren A–D ist korrekt. Die ${n} Teile ergeben zusammengesetzt ${name} — diese Form ist aber nicht unter den Optionen A–D.`
-                        : `Die ${n} Teile ergeben zusammengesetzt ${name}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`;
+                        : `Die ${n} Teile ergeben zusammengesetzt ${name} (Option ${correctLabel}).`;
                     })()}
+                  </p>
+                  <p className="text-[11px] text-blue-600 dark:text-blue-400">
+                    {correct
+                      ? "Gut erkannt! Achte auf die Gesamtfläche und die Winkel der Teile."
+                      : q.correctIndex === 4
+                        ? "Tipp: Prüfe zuerst die Gesamtfläche. Wenn kein Umriss A–D flächengleich ist, wähle E."
+                        : `Tipp: Vergleiche die Gesamtfläche und den Umriss — nur ${correctLabel} stimmt mit den ${q.pieces.length} Teilen überein. Die gestrichelten Linien oben zeigen die exakten Schnittstellen.`}
                   </p>
                 </div>
               </CardContent>

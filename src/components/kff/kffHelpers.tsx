@@ -17,9 +17,9 @@ const KFF_LAST_COUNT_KEY = "kff-last-count";
 export function getLastCount(domain: string): number {
   try {
     const stored = JSON.parse(localStorage.getItem(KFF_LAST_COUNT_KEY) || "{}");
-    return stored[domain] ?? 10;
+    return stored[domain] ?? 25;
   } catch {
-    return 10;
+    return 25;
   }
 }
 
