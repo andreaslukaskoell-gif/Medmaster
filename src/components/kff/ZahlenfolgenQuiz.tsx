@@ -17,7 +17,13 @@ import { UebungsbeschreibungCard } from "@/components/shared/Uebungsbeschreibung
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_ZF_INSTRUCTION } from "@/data/kffZahlenfolgenMedAT";
 import { difficultyLabel } from "@/data/kffFigurenZusammensetzenMedAT";
-import { getLastCount, saveLastCount, shuffleSlice, TaskDbCountHint } from "./kffHelpers";
+import {
+  getLastCount,
+  saveLastCount,
+  shuffleSlice,
+  preferUnseen,
+  TaskDbCountHint,
+} from "./kffHelpers";
 
 /** Zahlenfolge für Anzeige: nur Zahlen + genau „?, ?" am Ende (MedAT: immer 2 Lücken). */
 function formatZahlenfolgeDisplay(sequence: (number | "?")[] | undefined): string {
@@ -78,6 +84,7 @@ export function ZahlenfolgenQuiz({
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
+    getKffSeenIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -106,7 +113,8 @@ export function ZahlenfolgenQuiz({
         if (import.meta.env?.DEV)
           logPoolWarning("zahlenfolgen", valid.length, "Fallback (generiert)");
       }
-      setQuestions(valid);
+      const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
+      setQuestions(preferUnseen(valid, questionCount, seenIds));
       if (valid.length < questionCount && import.meta.env?.DEV) {
         logPoolWarning("zahlenfolgen", valid.length, "Training");
       }
@@ -225,7 +233,8 @@ export function ZahlenfolgenQuiz({
                       ...shuffleSlice(filterValidSequenceTasks(generated), count - valid.length),
                     ];
                   }
-                  setQuestions(valid.slice(0, count));
+                  const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
+                  setQuestions(preferUnseen(valid, count, seenIds));
                   setMode("training");
                   setIndex(0);
                   setAnswers({});

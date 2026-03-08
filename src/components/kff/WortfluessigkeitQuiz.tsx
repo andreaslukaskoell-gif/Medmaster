@@ -23,6 +23,7 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
+  preferUnseen,
   TaskDbCountHint,
 } from "./kffHelpers";
 
@@ -54,6 +55,7 @@ export function WortflüssigkeitQuiz({
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
+    getKffSeenIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -106,7 +108,10 @@ export function WortflüssigkeitQuiz({
         if (import.meta.env?.DEV)
           logPoolWarning("wortflüssigkeit", valid.length, "Fallback (generiert)");
       }
-      setQuestions(valid);
+      const seenIds = getKffSeenIdsForDomain("Wortfl");
+      setQuestions(
+        preferUnseen(valid as (WordFluencyTask & { id: string })[], questionCount, seenIds)
+      );
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("wortflüssigkeit", valid.length, "Training");
       }
@@ -248,7 +253,10 @@ export function WortflüssigkeitQuiz({
                       ...shuffleSlice(filterValidWordFluencyTasks(pool), count - valid.length),
                     ];
                   }
-                  setQuestions(valid.slice(0, count));
+                  const seenIds = getKffSeenIdsForDomain("Wortfl");
+                  setQuestions(
+                    preferUnseen(valid as (WordFluencyTask & { id: string })[], count, seenIds)
+                  );
                   setMode("training");
                   setIndex(0);
                   setAnswers({});

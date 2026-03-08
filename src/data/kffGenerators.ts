@@ -734,8 +734,8 @@ function generatePassportNumber(): string {
 }
 
 /**
- * Pool von Passfotos (AI-generiert / DiceBear, copyright-frei).
- * face-01..20: JPG (original), face-21..80: SVG (DiceBear avataaars).
+ * Pool von 80 Porträtfotos (randomuser.me, CC-lizenziert).
+ * face-01..40: Frauen, face-41..80: Männer – einheitlicher Stil.
  * Fallback: leerer String → UI zeigt Initialen-Avatar.
  */
 const AVATAR_COUNT = 80;
@@ -744,7 +744,7 @@ function getAvatarPool(count: number): string[] {
   const shuffled = shuffle(indices);
   return shuffled.slice(0, count).map((n) => {
     const num = String(n).padStart(2, "0");
-    return n <= 20 ? `/avatars/face-${num}.jpg` : `/avatars/face-${num}.svg`;
+    return `/avatars/face-${num}.jpg`;
   });
 }
 

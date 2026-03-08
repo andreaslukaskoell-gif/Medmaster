@@ -26,6 +26,7 @@ import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_GM_INSTRUCTION } from "@/data/kffGedaechtnisMedAT";
+import { preferUnseen } from "./kffHelpers";
 import { useEffect } from "react";
 
 // ==========================================
@@ -118,14 +119,16 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
   const [passCount, setPassCount] = useState(8);
   const [dbLoading, setDbLoading] = useState(false);
   const [dbError, setDbError] = useState<string | null>(null);
+  const { getKffSeenIdsForDomain } = useStore();
   const startFromDb = async () => {
     setDbError(null);
     setDbLoading(true);
     try {
       const set = await getOneMerkfahigkeitSet();
+      const seenIds = getKffSeenIdsForDomain("Gedächtnis");
       if (set && set.passes.length > 0 && set.questions.length > 0) {
         _currentGmPasses = set.passes;
-        _currentGmQuestions = set.questions;
+        _currentGmQuestions = preferUnseen(set.questions, set.questions.length, seenIds);
         onLearn();
       } else {
         const passes = generateAllergyPasses(8);
@@ -133,7 +136,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
         const questions = filterValidGedaechtnisQuestions(raw);
         if (questions.length > 0) {
           _currentGmPasses = passes;
-          _currentGmQuestions = questions;
+          _currentGmQuestions = preferUnseen(questions, questions.length, seenIds);
           onLearn();
         } else {
           setDbError("Keine gültigen Fragen generiert. Bitte später erneut versuchen.");

@@ -22,6 +22,7 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
+  preferUnseen,
   TaskDbCountHint,
 } from "./kffHelpers";
 
@@ -61,6 +62,7 @@ export function ImplikationenQuiz({
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
+    getKffSeenIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -105,7 +107,8 @@ export function ImplikationenQuiz({
         if (import.meta.env?.DEV)
           logPoolWarning("implikationen", valid.length, "Fallback (generiert)");
       }
-      setQuestions(valid);
+      const seenIds = getKffSeenIdsForDomain("Implikationen");
+      setQuestions(preferUnseen(valid, questionCount, seenIds));
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("implikationen", valid.length, "Training");
       }
@@ -244,7 +247,8 @@ export function ImplikationenQuiz({
                       ),
                     ];
                   }
-                  setQuestions(valid.slice(0, count));
+                  const seenIds = getKffSeenIdsForDomain("Implikationen");
+                  setQuestions(preferUnseen(valid, count, seenIds));
                   setMode("training");
                   setIndex(0);
                   setAnswers({});
