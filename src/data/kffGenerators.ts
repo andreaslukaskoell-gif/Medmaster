@@ -734,8 +734,9 @@ function generatePassportNumber(): string {
 }
 
 /**
- * Pool von 80 Porträtfotos (randomuser.me, CC-lizenziert).
- * face-01..40: Frauen, face-41..80: Männer – einheitlicher Stil.
+ * Pool von 80 Porträtfotos (256×256 JPEG, einheitlicher Stil).
+ * Generierte Gesichter (thispersondoesnotexist.com, CC0/public-domain).
+ * Gemischt (keine Geschlechter-Zuordnung nötig, da fiktive Namen).
  * Fallback: leerer String → UI zeigt Initialen-Avatar.
  */
 const AVATAR_COUNT = 80;
