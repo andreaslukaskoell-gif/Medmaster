@@ -112,6 +112,27 @@ export function balancedDifficultySession<T>(
   return result;
 }
 
+/**
+ * Removes already-seen tasks from a pool, preferring fresh tasks.
+ * If not enough fresh tasks remain, fills with least-recently-seen tasks.
+ * seenIds must be ordered most-recent-first (as returned by getKffSeenIdsForDomain).
+ */
+export function preferUnseen<T extends { id: string }>(
+  pool: T[],
+  target: number,
+  seenIds: string[]
+): T[] {
+  const seenSet = new Set(seenIds);
+  const fresh = pool.filter((t) => !seenSet.has(t.id));
+  if (fresh.length >= target) return fresh;
+  // Not enough fresh — supplement with least-recently-seen (end of seenIds = oldest)
+  const seenInPool = pool.filter((t) => seenSet.has(t.id));
+  // Sort by recency: least-recently-seen first (seenIds is most-recent-first, so reverse lookup)
+  const recencyMap = new Map(seenIds.map((id, i) => [id, i]));
+  seenInPool.sort((a, b) => (recencyMap.get(b.id) ?? 0) - (recencyMap.get(a.id) ?? 0));
+  return [...fresh, ...seenInPool].slice(0, target);
+}
+
 /** Zeigt die Anzahl validierter Aufgaben in der Task-DB für eine Domain. */
 export function TaskDbCountHint({ domain }: { domain: TaskDomain }) {
   const [count, setCount] = useState<number | null>(null);

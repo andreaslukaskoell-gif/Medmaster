@@ -43,6 +43,7 @@ import {
   saveLastCount,
   shuffleSlice,
   balancedDifficultySession,
+  preferUnseen,
 } from "./kffHelpers";
 
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
@@ -71,6 +72,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
     addKffTaskFailed,
     markKffTaskCorrect,
     getKffFailedIdsForDomain,
+    getKffSeenIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -118,7 +120,9 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           valid = shuffleSlice(filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]), target);
         if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
       }
-      setQuestions(balancedDifficultySession(valid, target, (t) => t.difficulty));
+      const seenIds = getKffSeenIdsForDomain("Figuren");
+      const fresh = preferUnseen(valid, target, seenIds);
+      setQuestions(balancedDifficultySession(fresh, target, (t) => t.difficulty));
       if (valid.length < list.length && import.meta.env?.DEV) {
         logPoolWarning("figuren", valid.length, "Training");
       }

@@ -328,6 +328,8 @@ interface AppState {
   getKffFailedIdsForDomain: (domain: string) => string[];
   kffDomainIntroSeen: Record<string, boolean>;
   markKffDomainIntroSeen: (domain: string) => void;
+  /** Returns task IDs the user has already answered for a KFF domain (from quizResults). Most-recent first. */
+  getKffSeenIdsForDomain: (subjectPrefix: string) => string[];
 
   addXP: (amount: number) => void;
   /** XP aus Basis + Schwierigkeit + Zeit; Fallbacks wenn Daten fehlen. */
@@ -486,6 +488,19 @@ export const useStore = create<AppState>()(
         const cur = get().kffFailedTasks[domain];
         if (!cur?.taskIds.length) return [];
         return [...cur.taskIds].sort((a, b) => (cur.wrongCount[b] ?? 0) - (cur.wrongCount[a] ?? 0));
+      },
+      getKffSeenIdsForDomain: (subjectPrefix) => {
+        const results = get().quizResults ?? [];
+        const seen = new Map<string, number>(); // id → timestamp index (higher = more recent)
+        for (let i = 0; i < results.length; i++) {
+          const r = results[i]!;
+          if (r.type !== "kff" || !r.subject?.startsWith(subjectPrefix)) continue;
+          for (const a of r.answers) {
+            if (a.questionId) seen.set(a.questionId, i);
+          }
+        }
+        // Return most-recently-seen first (so callers can pop oldest for reuse)
+        return [...seen.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id);
       },
       markKffDomainIntroSeen: (domain) =>
         set((s) => ({
