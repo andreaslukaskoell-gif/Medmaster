@@ -707,14 +707,14 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         },
         {
           question:
-            "Eine Krankheit tritt mit P = 0,1 auf. Ein Test hat Treffsicherheit p = 0,95 (unabhängig von der Erkrankung). Was ist P(Test positiv UND krank)?",
+            "Eine Krankheit tritt mit P = 0,1 auf. Ein diagnostischer Test hat eine Sensitivität von 95 %, d. h. P(Test positiv | krank) = 0,95. Wie groß ist P(Test positiv UND krank)?",
           options: ["0,095", "0,85", "0,1", "0,05", "0,9"],
           correctIndex: 0,
           explanation:
-            "Unabhängige Ereignisse: P(krank) = 0,1, P(Test positiv | krank) = 0,95. P(positiv UND krank) = P(krank) × P(pos|krank) = 0,1 × 0,95 = 0,095 = 9,5%. Dies ist die Wahrscheinlichkeit für 'richtig positiv' — der erste Schritt zur Vierfeldertafel.",
+            "Multiplikationsregel: P(positiv UND krank) = P(krank) × P(positiv | krank) = 0,1 × 0,95 = 0,095 = 9,5 %. Das ist die Wahrscheinlichkeit für ein richtig-positives Ergebnis — der erste Baustein der Vierfeldertafel.",
           hints: [
-            "Unabhängige Ereignisse: P(A∩B) = P(A) × P(B).",
-            "P(krank) × P(positiv) = 0,1 × 0,95 = ?",
+            "Multiplikationsregel: P(A ∩ B) = P(A) × P(B|A).",
+            "P(krank) × P(positiv | krank) = 0,1 × 0,95 = ?",
           ],
           difficulty: 2,
           tags: ["unabhängigkeit", "multiplikation", "klinisch"],
@@ -1274,6 +1274,9 @@ Bei bimodalen Verteilungen gibt es zwei Modi (z.B. zwei Altersgruppen mit erhöh
 ### Streumaße
 
 **Varianz (s²):**
+
+Warum quadriert man die Abweichungen? Würde man einfach die Differenzen (xi − x̄) addieren, käme immer Null heraus — positive und negative Abweichungen heben sich auf. Das Quadrieren löst dieses Problem und gewichtet zusätzlich große Abweichungen stärker als kleine.
+
 s² = Σ(xi − x̄)² / (n−1)     (Stichprobenvarianz, mit n−1 im Nenner)
 
 Beispiel {3, 5, 7, 7, 8}, x̄ = 6:
@@ -1415,7 +1418,7 @@ Körpertemperatur: N(μ = 36,8°C, σ = 0,4°C).
 
 ### Konfidenzintervall — Kurzüberblick für den MedAT
 
-Das **95%-Konfidenzintervall (KI)** für den Mittelwert einer Stichprobe gibt an, in welchem Bereich der wahre Populationsmittelwert mit 95% Wahrscheinlichkeit liegt:
+Das **95%-Konfidenzintervall (KI)** gibt an: Wenn man dieselbe Studie viele Male wiederholen würde, enthielten 95 % der so berechneten Intervalle den wahren Populationsmittelwert. Ein einzelnes KI "trifft" also entweder oder nicht — aber die Methode ist in 95 % der Fälle zuverlässig.
 
 KI = x̄ ± z × (σ / √n) = x̄ ± 1,96 × (σ / √n)
 
@@ -1424,7 +1427,7 @@ Dabei ist σ/√n der **Standardfehler** (SE) — die Standardabweichung des Sti
 **Rechenbeispiel:** In einer Studie mit n = 100 Patienten wird ein mittlerer Blutdruck von x̄ = 135 mmHg gemessen, σ = 20 mmHg.
 SE = σ/√n = 20/√100 = 20/10 = 2,0.
 95%-KI = 135 ± 1,96 × 2,0 = 135 ± 3,92 = **[131,1 ; 138,9] mmHg**.
-Interpretation: Der wahre Mittelwert der Population liegt mit 95% Wahrscheinlichkeit zwischen 131 und 139 mmHg.
+Interpretation: Bei Wiederholung der Studie würden 95 % der so berechneten Intervalle den wahren Populationsmittelwert enthalten — dieses konkrete Intervall [131; 139] mmHg ist eines davon.
 
 **Für 99%-KI:** z = 2,576 statt 1,96 → KI = 135 ± 2,576 × 2,0 = 135 ± 5,15 = [129,8 ; 140,2] mmHg (breiter, aber sicherer).
 

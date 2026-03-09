@@ -650,9 +650,10 @@ Die häufigste Umrechnung in der Klinik:
 
 ### mmol/L \u2194 mg/dL (Glucose!)
 
-Die Umrechnung hängt von der **Molmasse** (M) des Stoffs ab:
-- Allgemein: c [mg/dL] = c [mmol/L] \u00d7 M [g/mol] \u00d7 0,1
-- **Glucose (M = 180 g/mol):** c [mg/dL] = c [mmol/L] \u00d7 **18**
+Die Umrechnung hängt von der **Molmasse** (M) des Stoffs ab. Woher kommt die Formel? 1 mmol eines Stoffs wiegt M mg (= Molmasse in mg). Das ergibt mg pro Liter. Da 1 L = 10 dL, teilt man durch 10, um mg/dL zu erhalten:
+
+- Allgemein: c [mg/dL] = c [mmol/L] \u00d7 M [g/mol] / 10
+- **Glucose (M = 180 g/mol):** c [mg/dL] = c [mmol/L] \u00d7 180/10 = c [mmol/L] \u00d7 **18**
 
 **Rechenbeispiel:** Glucose 5,5 mmol/L \u2192 mg/dL. 5,5 \u00d7 18 = **99 mg/dL** (Normalbereich: 70--100 mg/dL nüchtern).
 
@@ -662,10 +663,10 @@ Die Umrechnung hängt von der **Molmasse** (M) des Stoffs ab:
 
 ### mL/min \u2194 L/h
 
-GFR und Clearance-Werte werden oft in mL/min angegeben, Infusionsraten in mL/h oder L/h:
-- mL/min \u00d7 60 = mL/h
-- mL/h \u00f7 1000 = L/h
-- mL/min \u00d7 0,06 = L/h
+GFR und Clearance-Werte werden in mL/min angegeben, Infusionsraten dagegen in mL/h oder L/h. Die Kettenmethode macht die Umrechnung transparent:
+- Schritt 1: mL/min \u00d7 60 = mL/h  (min \u2192 h)
+- Schritt 2: mL/h \u00f7 1000 = L/h  (mL \u2192 L)
+- Oder direkt: mL/min \u00d7 0,06 = L/h  (weil 60/1000 = 0,06)
 
 **Rechenbeispiel:** GFR 90 mL/min = 90 \u00d7 60 = 5400 mL/h = **5,4 L/h**.
 
@@ -770,14 +771,17 @@ GFR und Clearance-Werte werden oft in mL/min angegeben, Infusionsraten in mL/h o
         },
         {
           question:
-            "Antibiotikum-Infusion: 500 mg in 100 mL, zu verabreichen über 2 Stunden. Rate in mL/h?",
-          options: ["50 mL/h", "100 mL/h", "25 mL/h", "200 mL/h", "250 mL/h"],
+            "Dopamin-Perfusor: Dosierung 5 \u00b5g/kg/min, Patient 80 kg, L\u00f6sung 250 mg in 50 mL. Welche Laufrate in mL/h?",
+          options: ["4,8 mL/h", "24 mL/h", "0,08 mL/h", "48 mL/h", "12 mL/h"],
           correctIndex: 0,
           explanation:
-            "100 mL über 2 h = 100 \u00f7 2 = 50 mL/h. Einfache Division von Gesamtvolumen durch Infusionsdauer.",
-          hints: ["Gesamtvolumen durch Infusionsdauer teilen.", "100 mL \u00f7 2 h = ?"],
-          difficulty: 1,
-          tags: ["einheiten", "infusion", "division"],
+            "Kettenmethode: Dosis = 5 \u00d7 80 = 400 \u00b5g/min. Konzentration = 250 mg / 50 mL = 5 mg/mL = 5000 \u00b5g/mL. Rate = 400 / 5000 = 0,08 mL/min. In mL/h: 0,08 \u00d7 60 = 4,8 mL/h.",
+          hints: [
+            "Erst Gesamtdosis pro Minute: \u00b5g/kg/min \u00d7 kg = \u00b5g/min.",
+            "Dann durch Konzentration (\u00b5g/mL) teilen und \u00d760 f\u00fcr mL/h.",
+          ],
+          difficulty: 3,
+          tags: ["einheiten", "kettenmethode", "klinisch", "infusion"],
         },
       ],
     },

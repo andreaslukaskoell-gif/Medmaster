@@ -2328,9 +2328,9 @@ Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2×3
           heading: "Skalar- und Kreuzprodukt",
           text: `Skalarprodukt — Beispiel:
 **a** = (1, 2, 3), **b** = (4, −1, 2)
-**a × b** = 1×4 + 2×(−1) + 3×2 = 4 − 2 + 6 = 8
+**a · b** = 1×4 + 2×(−1) + 3×2 = 4 − 2 + 6 = 8
 
-Winkel: cos θ = (**a × b**) / (|**a**| × |**b**|)
+Winkel: cos θ = (**a · b**) / (|**a**| × |**b**|)
 |**a**| = √(1+4+9) = √14; |**b**| = √(16+1+4) = √21
 cos θ = 8 / (√14 × √21) = 8 / √294 ≈ 8/17,15 ≈ 0,467 → θ ≈ 62°
 
@@ -2344,7 +2344,7 @@ Kreuzprodukt — Beispiel:
           heading: "Ebenengleichung und Normalenvektor",
           text: `Eine Ebene kann durch drei Punkte oder durch Punkt + Normalenvektor definiert werden.
 
-Normalenform: **n × (r − r₀) = 0**
+Normalenform: **n · (r − r₀) = 0**
 
 Beispiel: Ebene durch P₀(1, 2, 3) mit Normalenvektor **n** = (1, −1, 2):
 1×(x−1) + (−1)×(y−2) + 2×(z−3) = 0
@@ -2375,11 +2375,11 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
       ],
       merksätze: [
         "Betrag eines Vektors: |a| = √(a₁² + a₂² + a₃²).",
-        "Skalarprodukt: a × b = a₁b₁ + a₂b₂ + a₃b₃ = |a|×|b|×cos θ.",
+        "Skalarprodukt: a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a|·|b|·cos θ.",
         "Senkrecht ↔ Skalarprodukt = 0; parallel ↔ Kreuzprodukt = 0.",
         "Kreuzprodukt a × b ist senkrecht zu beiden Vektoren; |a × b| = |a|×|b|×sin θ.",
         "|a × b| = Fläche des Parallelogramms, das a und b aufspannen.",
-        "Ebenengleichung: n × (r − r₀) = 0; n ist der Normalenvektor der Ebene.",
+        "Ebenengleichung: n · (r − r₀) = 0; n ist der Normalenvektor der Ebene.",
         "EKG-Herzachse = resultierender Depolarisationsvektor; Winkel definiert Lagetyp.",
         "Strahlentherapie: Strahlengang als Vektor durch Tumor — Summe aus verschiedenen Richtungen.",
         "Drehmoment M = r × F; maximal wenn Kraft senkrecht zum Hebelarm.",
@@ -2390,7 +2390,7 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
         question:
           "Die Vektoren **a** = (2, 1, −1) und **b** = (1, −1, 2) sind gegeben. Berechnen Sie das Skalarprodukt und bestimmen Sie den Winkel zwischen den Vektoren (cos⁻¹ angeben). Sind die Vektoren senkrecht zueinander?",
         answer:
-          "Das Skalarprodukt berechnet sich komponentenweise: a × b = a₁×b₁ + a₂×b₂ + a₃×b₃ = 2×1 + 1×(−1) + (−1)×2 = 2 − 1 − 2 = −1. Die Beträge der Vektoren: |a| = √(2² + 1² + (−1)²) = √(4 + 1 + 1) = √6; |b| = √(1² + (−1)² + 2²) = √(1 + 1 + 4) = √6. Der Kosinus des Winkels: cos θ = (a × b) / (|a| × |b|) = −1 / (√6 × √6) = −1/6 ≈ −0,167. Der Winkel: θ = arccos(−0,167) ≈ 99,6°. Da das Skalarprodukt −1 ≠ 0 ist, sind die Vektoren nicht senkrecht zueinander; sie schließen einen stumpfen Winkel von ca. 100° ein. Senkrecht wären sie nur, wenn das Skalarprodukt exakt null wäre.",
+          "Das Skalarprodukt berechnet sich komponentenweise: a · b = a₁b₁ + a₂b₂ + a₃b₃ = 2×1 + 1×(−1) + (−1)×2 = 2 − 1 − 2 = −1. Die Beträge der Vektoren: |a| = √(2² + 1² + (−1)²) = √(4 + 1 + 1) = √6; |b| = √(1² + (−1)² + 2²) = √(1 + 1 + 4) = √6. Der Kosinus des Winkels: cos θ = (a · b) / (|a| · |b|) = −1 / (√6 × √6) = −1/6 ≈ −0,167. Der Winkel: θ = arccos(−0,167) ≈ 99,6°. Da das Skalarprodukt −1 ≠ 0 ist, sind die Vektoren nicht senkrecht zueinander; sie schließen einen stumpfen Winkel von ca. 100° ein. Senkrecht wären sie nur, wenn das Skalarprodukt exakt null wäre.",
       },
       klinischerBezug:
         "EKG-Herzachse als Vektor (Lagetypen); MRT-Schichtorientierung via Normalenvektoren; Strahlentherapieplanung (Isodosen); Drehmoment in der Biomechanik.",
@@ -2413,8 +2413,8 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
           options: ["−3", "0", "3", "9", "−9"],
           correctIndex: 0,
           explanation:
-            "Das Skalarprodukt berechnet sich komponentenweise: a × b = a₁×b₁ + a₂×b₂ + a₃×b₃ = 3×1 + 0×5 + (−2)×3 = 3 + 0 − 6 = −3. Das Ergebnis −3 ist ein negativer Skalar, was bedeutet, dass der Winkel zwischen den Vektoren stumpf ist (> 90°). Da das Skalarprodukt ≠ 0, sind die Vektoren nicht senkrecht. Ein Skalarprodukt von 0 würde Orthogonalität bedeuten. Das Skalarprodukt ist immer eine Zahl (Skalar), kein Vektor.",
-          hints: ["a × b = a₁b₁ + a₂b₂ + a₃b₃.", "3×1 = 3; 0×5 = 0; (−2)×3 = −6; Summe?"],
+            "Das Skalarprodukt berechnet sich komponentenweise: a · b = a₁b₁ + a₂b₂ + a₃b₃ = 3×1 + 0×5 + (−2)×3 = 3 + 0 − 6 = −3. Das Ergebnis −3 ist ein negativer Skalar, was bedeutet, dass der Winkel zwischen den Vektoren stumpf ist (> 90°). Da das Skalarprodukt ≠ 0, sind die Vektoren nicht senkrecht. Ein Skalarprodukt von 0 würde Orthogonalität bedeuten. Das Skalarprodukt ist immer eine Zahl (Skalar), kein Vektor.",
+          hints: ["a · b = a₁b₁ + a₂b₂ + a₃b₃.", "3×1 = 3; 0×5 = 0; (−2)×3 = −6; Summe?"],
           tags: ["skalarprodukt", "vektor", "algebra"],
           difficulty: 1,
         },
@@ -2434,13 +2434,13 @@ Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren)
         },
         {
           question: "Welcher der folgenden Vektoren ist senkrecht zu n = (1, −2, 3)?",
-          options: ["(1, 2, 3)", "(2, −4, 6)", "(6, 3, 0)", "(3, 0, −1)", "(−1, 2, −3)"],
+          options: ["(1, 2, 3)", "(2, −4, 6)", "(6, 3, 0)", "(−3, 1, 1)", "(−1, 2, −3)"],
           correctIndex: 2,
           explanation:
-            "Ein Vektor v ist senkrecht zu n, wenn das Skalarprodukt n × v = 0. Testen wir Option C: v = (6, 3, 0): n × v = 1×6 + (−2)×3 + 3×0 = 6 − 6 + 0 = 0. Korrekt. Überprüfen wir die anderen: A: 1×1 + (−2)×2 + 3×3 = 1−4+9 = 6 ≠ 0. B: (2, −4, 6) = 2×(1, −2, 3) = 2n → parallel, nicht senkrecht. D: 1×3 + (−2)×0 + 3×(−1) = 3+0−3 = 0. Auch D wäre senkrecht! Da die Frage nach dem einzig richtigen fragt und D ebenfalls 0 ergibt, ist C die intendierte Antwort (erscheint zuerst im Test). Merke: Es gibt unendlich viele Vektoren senkrecht zu einem gegebenen Vektor.",
+            "Ein Vektor v ist senkrecht zu n, wenn das Skalarprodukt n · v = 0. Testen wir Option C: v = (6, 3, 0): n · v = 1×6 + (−2)×3 + 3×0 = 6 − 6 + 0 = 0 ✓. Die anderen: A: 1×1 + (−2)×2 + 3×3 = 1−4+9 = 6 ≠ 0. B: (2, −4, 6) = 2×(1, −2, 3) = 2n → parallel, nicht senkrecht. D: 1×(−3) + (−2)×1 + 3×1 = −3−2+3 = −2 ≠ 0. E: (−1, 2, −3) = −1×(1, −2, 3) = −n → antiparallel, nicht senkrecht.",
           hints: [
-            "Senkrecht ↔ Skalarprodukt n × v = 0.",
-            "Berechne n × v für jeden Optionsvektor.",
+            "Senkrecht ↔ Skalarprodukt n · v = 0.",
+            "Berechne n · v für jeden Optionsvektor.",
           ],
           tags: ["skalarprodukt", "orthogonalität", "vektor"],
           difficulty: 2,

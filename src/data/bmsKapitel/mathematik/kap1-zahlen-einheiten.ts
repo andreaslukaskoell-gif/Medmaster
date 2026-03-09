@@ -1004,11 +1004,11 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
             "(9,6/3,2) × 10^(6−(−2)) = 3,0 × 10⁸",
             "(9,6/3,2) × 10^(6×(−2)) = 3,0 × 10⁻¹²",
             "(9,6 − 3,2) × 10^(6−(−2)) = 6,4 × 10⁸",
-            "(9,6/3,2) × 10^(6+2) = 3,0 × 10⁸",
+            "(9,6+3,2) × 10^(6−(−2)) = 12,8 × 10⁸",
           ],
           correctIndex: 1,
           explanation:
-            "Bei Division werden Vorfaktoren geteilt und Exponenten subtrahiert: (9,6 / 3,2) × 10^(6 − (−2)) = 3,0 × 10^(6+2) = 3,0 × 10⁸. Option A dividiert fälschlicherweise die Exponenten (statt zu subtrahieren). Option C multipliziert die Exponenten (das wäre Potenzieren, nicht Division). Option D subtrahiert die Vorfaktoren statt sie zu dividieren. Option E ist identisch mit B in der Rechnung (6 − (−2) = 6 + 2 = 8) und führt zum gleichen richtigen Ergebnis — B ist die Standardformulierung mit expliziter Subtraktion.",
+            "Bei Division werden Vorfaktoren geteilt und Exponenten subtrahiert: (9,6 / 3,2) × 10^(6 − (−2)) = 3,0 × 10^(6+2) = 3,0 × 10⁸. Option A dividiert fälschlicherweise die Exponenten (statt zu subtrahieren). Option C multipliziert die Exponenten (das wäre Potenzieren, nicht Division). Option D subtrahiert die Vorfaktoren statt sie zu dividieren. Option E addiert fälschlicherweise die Vorfaktoren (statt sie zu dividieren) und erhält einen falschen Vorfaktor von 12,8.",
           hints: [
             "Division: Vorfaktoren dividieren (9,6 / 3,2 = 3), Exponenten subtrahieren: 6 − (−2) = 8.",
             "Minus − gibt plus: 6 − (−2) = 6 + 2 = 8. Ergebnis: 3,0 × 10⁸.",
@@ -1399,10 +1399,11 @@ Die Kreislaufzeit beträgt beim Gesunden ~1 Minute.
 
 ## Gleichmäßig beschleunigte Bewegung
 
-Die drei kinematischen Grundformeln:
-1. v(t) = v₀ + a × t (Geschwindigkeit nach Zeit t)
-2. s(t) = v₀ × t + ½ × a × t² (Weg nach Zeit t)
-3. v² = v₀² + 2 × a × s (Geschwindigkeit nach Weg s, ohne t)
+Wenn die Beschleunigung konstant bleibt, ergeben sich drei Formeln — jede löst ein anderes Problem:
+
+1. **v(t) = v₀ + a × t** — Die Geschwindigkeit wächst linear mit der Zeit. Jede Sekunde kommt derselbe Betrag a dazu.
+2. **s(t) = v₀ × t + ½ × a × t²** — Der Weg wächst quadratisch: In doppelter Zeit legt man die vierfache Strecke zurück (bei v₀ = 0). Das ½ kommt daher, dass die Geschwindigkeit von 0 bis v zunimmt — im Mittel ist sie nur halb so groß.
+3. **v² = v₀² + 2 × a × s** — Verknüpft Geschwindigkeit und Weg ohne die Zeit. Folgt aus der Energieerhaltung: kinetische Energie = Beschleunigungsarbeit.
 
 Freier Fall: a = g ≈ 9,81 m/s² ≈ 10 m/s², v₀ = 0:
 - v(t) = g × t
@@ -1411,7 +1412,7 @@ Freier Fall: a = g ≈ 9,81 m/s² ≈ 10 m/s², v₀ = 0:
 - Nach 2 s: v = 20 m/s, s = 20 m
 - Nach 3 s: v = 30 m/s, s = 45 m
 
-Aufprallgeschwindigkeit beim Sturz aus Höhe h:
+Aufprallgeschwindigkeit beim Sturz aus Höhe h (aus Energieerhaltung: potentielle Energie mgh = kinetische Energie ½mv², nach v aufgelöst):
 v = √(2 × g × h)
 - Aus 5 m: v = √(100) = 10 m/s = 36 km/h
 - Aus 20 m: v = √(400) = 20 m/s = 72 km/h
@@ -1688,17 +1689,9 @@ Dimensionen: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N×m/s] = [J/s] = [W] ✓
 
 Das Herz leistet in Ruhe ~1 Watt!
 
-## Metrische Vorsätze
+## Klinische Konzentrationseinheiten im Labor
 
-Giga (G) = 10⁹ → GBq
-Mega (M) = 10⁶ → MHz (Ultraschall 2–20 MHz)
-Kilo (k) = 10³ → kg, km, kJ, kPa
-Milli (m) = 10⁻³ → mL, ms, mmol, mV
-Mikro (μ) = 10⁻⁶ → μg, μL, μmol, μV
-Nano (n) = 10⁻⁹ → nm, nmol (Hormonspiegel)
-Piko (p) = 10⁻¹² → pmol (Schilddrüsenhormone T3/T4)
-
-Klinische Konzentrationseinheiten im Labor:
+Die metrischen Präfixe (Giga bis Piko) wurden ausführlich in Kapitel ma-1-02 behandelt. Hier die wichtigsten Konzentrationseinheiten, die im Labor begegnen — welche verwendet wird, hängt von der Substanz und der historischen Konvention ab:
 - mmol/L: Elektrolyte (Na 135–145; K 3,5–5,0; Ca 2,2–2,6 mmol/L)
 - mg/dL: Glukose (70–100 mg/dL), Cholesterin (<200 mg/dL)
 - μg/dL: Kortisol, Hormonspiegel
