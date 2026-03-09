@@ -24,92 +24,153 @@ export const mathKap5: Kapitel = {
         "Infusionsrate",
         "Kalibrierkurve",
       ],
-      content: `## Grundform und Begriffe
+      content: `## Was ist eine lineare Funktion?
 
-Eine lineare Funktion hat die allgemeine Form **f(x) = mx + b**, wobei x die unabhängige Variable (Argument), f(x) der zugehörige Funktionswert (Bild), m die **Steigung** (Steigungskoeffizient) und b der **y-Achsenabschnitt** (Ordinatenabschnitt, Schnittpunkt mit y-Achse) ist. Der Name “linear” leitet sich davon ab, dass der Graph dieser Funktion stets eine **Gerade** ist.
+Stell dir vor, du misst den Blutalkoholspiegel eines Patienten stündlich: 1,2 ‰ → 1,05 ‰ → 0,9 ‰ → 0,75 ‰. In jeder Stunde sinkt der Wert um exakt 0,15 ‰. Trägst du diese Werte in ein Diagramm ein, liegen alle Punkte auf einer **geraden Linie**. Genau das macht eine lineare Funktion aus: **konstante Änderungsrate**. Egal wo auf der Geraden du hinschaust — der Anstieg (oder Abfall) pro Einheit ist immer gleich.
 
-Die Steigung m beschreibt, um wie viele Einheiten sich f(x) verändert, wenn x um eine Einheit zunimmt. Formal gilt: m = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Ist m > 0, steigt die Gerade von links nach rechts; ist m < 0, fällt sie; ist m = 0, handelt es sich um eine horizontale Gerade (konstante Funktion).
+Die mathematische Form: **f(x) = mx + b**. Dabei ist m die **Steigung** (Änderungsrate) und b der **y-Achsenabschnitt** (Startwert bei x = 0). Aber wichtiger als die Formel ist das Erkennen: Siehst du in einem Graphen eine Gerade, weißt du sofort — hier ändert sich etwas mit konstanter Geschwindigkeit.
 
-> **Merke:** Die Steigung m einer Geraden ist der **Differenzenquotient** Δy/Δx. Sie gibt die Änderung des Funktionswerts pro Einheit der unabhängigen Variable an — im medizinischen Kontext z. B. “mg/L pro Stunde” oder “mmHg pro BMI-Punkt”.
+> **Merke:** Lineare Funktion erkennen: **Konstante Änderung** → Gerade Linie. In der Medizin: Wenn ein Wert pro Stunde/Tag/Dosis immer um den gleichen Betrag steigt oder fällt, ist der Zusammenhang linear.
 
-## Steigung und Achsenabschnitt im Detail
+---
 
-Der **y-Achsenabschnitt b** gibt den Punkt an, an dem die Gerade die y-Achse schneidet, d. h. f(0) = b. Der **x-Achsenabschnitt** (Nullstelle) ergibt sich durch Setzen von f(x) = 0: 0 = mx + b → x₀ = −b/m (für m ≠ 0).
+## Wann ist ein lineares Modell das richtige?
 
-Zwei Geraden sind **parallel**, wenn sie dieselbe Steigung m besitzen. Sie sind **senkrecht zueinander**, wenn das Produkt ihrer Steigungen −1 ergibt: m₁ × m₂ = −1, d. h. m₂ = −1/m₁.
+Nicht jeder Zusammenhang ist linear — aber überraschend viele medizinische Situationen lassen sich zumindest abschnittsweise als linear modellieren. Die Entscheidungshilfe:
+
+| Beobachtung | Modell | Beispiel |
+|---|---|---|
+| Wert ändert sich pro Einheit immer gleich | Linear | Alkoholabbau: −0,15 ‰/h |
+| Wert verdoppelt/halbiert sich regelmäßig | Exponentiell | Medikamentenabbau (nächstes Kapitel) |
+| Wert steigt erst schnell, dann langsamer | Sättigung | Enzymkinetik |
+| Wert steigt, erreicht Maximum, fällt wieder | Quadratisch | Wurfparabel, Dosis-Wirkung |
+
+Die Kernfrage: **Ist die Änderungsrate konstant?** Wenn ja → linear. Wenn die Änderungsrate selbst zunimmt oder abnimmt → anderer Funktionstyp.
+
+> **Merke:** Denkstrategie am MedAT: Schau dir nicht die Werte an, sondern die **Differenzen** zwischen aufeinanderfolgenden Werten. Sind die Differenzen konstant → linear. Werden die Differenzen größer → beschleunigtes Wachstum. Werden sie kleiner → Sättigung.
+
+---
+
+## Steigung — die wichtigste Größe
+
+Die Steigung m = Δy/Δx = (y₂ − y₁)/(x₂ − x₁) gibt die **Änderungsrate** an. Im medizinischen Alltag hat sie immer eine konkrete Bedeutung mit Einheit:
+
+- Alkoholabbau: m = −0,15 ‰/h → “Pro Stunde sinkt der Spiegel um 0,15 Promille”
+- BMI-Blutdruck-Regression: m = 1,8 mmHg/BMI-Punkt → “Pro BMI-Punkt steigt der Blutdruck um 1,8 mmHg”
+- Kalibrierkurve: m = 0,015 AU/(mg/L) → “Pro mg/L Konzentrationszunahme steigt die Absorption um 0,015”
+
+**Das Vorzeichen verrät die Richtung:** m > 0 → Gerade steigt (je mehr x, desto mehr y). m < 0 → Gerade fällt (je mehr x, desto weniger y). m = 0 → horizontale Gerade (y bleibt konstant, egal was mit x passiert).
+
+**Steigungsdreieck:** Um m grafisch abzulesen, wähle zwei Punkte auf der Geraden und bilde das Dreieck: horizontale Strecke (Δx) und vertikale Strecke (Δy). Zeigt Δy nach unten, ist m negativ.
 
 | Eigenschaft | Formel | Bedeutung |
 |---|---|---|
-| Steigung | m = Δy/Δx | Änderungsrate |
+| Steigung | m = Δy/Δx | Änderungsrate (mit Einheit!) |
 | y-Achsenabschnitt | b = f(0) | Startwert bei x = 0 |
-| Nullstelle | x₀ = −b/m | Graph schneidet x-Achse |
-| Parallel | m₁ = m₂ | Geraden schneiden sich nie |
-| Senkrecht | m₁ × m₂ = −1 | 90°-Winkel |
+| Nullstelle | x₀ = −b/m | Wann wird f(x) = 0? |
+| Parallel | m₁ = m₂ | Gleiche Änderungsrate, verschiedener Start |
+| Senkrecht | m₁ × m₂ = −1 | 90°-Winkel zwischen Geraden |
 
-## Aufstellen einer linearen Funktion
+---
 
-**Aus zwei Punkten:** Gegeben P₁(x₁|y₁) und P₂(x₂|y₂). Berechne zuerst m = (y₂ − y₁) / (x₂ − x₁), dann b durch Einsetzen eines Punktes: b = y₁ − m×x₁.
+## Gerade aufstellen — Schritt für Schritt
 
-**Aus Steigung und einem Punkt:** Gegeben m und P(x₀|y₀). Dann gilt b = y₀ − m×x₀.
+**Situation 1: Zwei Punkte gegeben** (häufigster MedAT-Fall)
 
-**Punkt-Steigungs-Form:** Manchmal ist es bequemer, die Gerade direkt als y − y₀ = m × (x − x₀) zu schreiben. Diese Form wird in der Statistik bei **Regressionsgeraden** (statistische Ausgleichsgerade durch Messdaten) verwendet: Die Regressionsgerade verläuft immer durch den Schwerpunkt (x̄|ȳ) der Daten.
+Denkprozess: “Ich kenne zwei Messpunkte → daraus bestimme ich erst die Steigung, dann den Startwert.”
 
-> **Merke:** Zwei verschiedene Punkte bestimmen genau eine Gerade. Immer zuerst m berechnen, dann b durch Einsetzen eines Punktes ermitteln.
+1. Steigung berechnen: m = (y₂ − y₁)/(x₂ − x₁)
+2. b durch Einsetzen eines Punktes: b = y₁ − m × x₁
+3. Gleichung: f(x) = mx + b
 
-## Grafische Darstellung
+**Situation 2: Steigung und ein Punkt gegeben**
 
-Eine Gerade ist durch zwei Punkte vollständig bestimmt. Praktisch wählt man oft den y-Achsenabschnitt (x = 0) und die Nullstelle (y = 0) als Zeichenpunkte. Die Steigung kann anschließend als Kontrollwert aus dem Graphen abgelesen werden: Man wählt zwei Gitterpunkte auf der Geraden und bildet den Quotienten Δy/Δx.
+Direkt: b = y₀ − m × x₀
 
-**Steigungsdreieck:** Um die Steigung grafisch abzulesen, zeichnet man ein rechtwinkliges Dreieck unter der Geraden. Die horizontale Kathete (Δx) und die vertikale Kathete (Δy) ergeben m = Δy/Δx. Zeigt Δy nach unten, ist m negativ.
+**Situation 3: Graph gegeben (MedAT-typisch)**
 
-## Anwendungen im medizinischen Kontext
+Denkprozess: “Ich lese zwei markante Punkte ab (z. B. Achsenschnittpunkte), berechne m = Δy/Δx, und lese b direkt als Schnittpunkt mit der y-Achse ab.”
 
-Lineare Zusammenhänge begegnen uns in der Medizin bei der **Kalibrierung von Messgeräten** (z. B. Lambert-Beer-Gesetz bei niedrigen Konzentrationen), bei **Dosierungs-Wirkungsbeziehungen** im linearen Bereich sowie bei der Berechnung von **Infusionsraten** (ml/h = konstante Dosis × Körpergewicht/Konzentration). Auch die lineare Interpolation zwischen Messwerten in Laborkurven setzt das Verständnis linearer Funktionen voraus.
+> **Merke:** Am MedAT unter Zeitdruck: Zuerst schauen, ob der y-Achsenabschnitt b direkt ablesbar ist — das spart einen Rechenschritt. Dann nur noch m aus zwei Punkten bestimmen.
 
-**Lineare Pharmakokinetik (Kinetik nullter Ordnung):** Ethanol wird in der Leber mit konstanter Rate abgebaut (ca. 0,1–0,15 ‰/h), weil die Alkoholdehydrogenase gesättigt ist. Die Blutalkoholkonzentration sinkt also linear: C(t) = C₀ − k₀×t. Hier ist die Steigung m = −k₀ die **Eliminationsrate** (konstant, unabhängig von der Konzentration).
-
-**Dosisberechnung nach Körpergewicht:** Viele Medikamente werden in mg/kg dosiert. Für Ibuprofen (10 mg/kg) ist die Dosis D(m) = 10×m eine Ursprungsgerade: Patient mit 70 kg → D = 10 × 70 = **700 mg**; Kind mit 25 kg → D = 10 × 25 = **250 mg**.
-
-**Infusionsrate berechnen:** Ein Perfusor enthält Noradrenalin 5 mg in 50 mL (Konzentration: 0,1 mg/mL). Verordnung: 0,15 µg/kg/min für 80 kg. Gesamtdosis = 0,15 × 80 = 12 µg/min = 0,012 mg/min. Rate = 0,012 / 0,1 = 0,12 mL/min = **7,2 mL/h**. Zusammenhang: R(m) = (Dosis_spez × m) / Konz — linear im Körpergewicht.
-
-**Lineares Wachstum (Größe bei Kindern):** Zwischen 2 und 10 Jahren wachsen Kinder annähernd linear ca. 6 cm/Jahr. Ein Kind ist mit 2 Jahren 87 cm groß: L(t) = 6t + 75 (t in Jahren ab Geburt, vereinfacht). Mit 8 Jahren: L(8) = 6 × 8 + 75 = **123 cm**. Die Steigung 6 cm/Jahr ist die Wachstumsgeschwindigkeit.
-
-> **Merke:** Im **linearen Messbereich** des Lambert-Beer-Gesetzes (A = ε×c×d) ist die Absorption A direkt proportional zur Konzentration c. Außerhalb dieses Bereichs weicht die Kalibrierkurve von der Linearität ab — ein häufiger MedAT-Aufgabentyp.
+---
 
 ## Besondere Geraden
 
-- **Horizontale Gerade** (f(x) = b, m = 0): parallel zur x-Achse; beschreibt konstante Größen (z. B. konstanter Blutzuckerspiegel).
-- **Vertikale Gerade** (x = a): keine Funktion im mathematischen Sinne, da einem x-Wert unendlich viele y-Werte zugeordnet sind.
-- **Ursprungsgerade** (b = 0, f(x) = mx): verläuft durch den Ursprung; typisch für direkte Proportionalität (z. B. Dosis proportional zum Körpergewicht).
+- **Horizontale Gerade** (f(x) = b, m = 0): konstanter Wert — z. B. gleichbleibender Blutzuckerspiegel.
+- **Ursprungsgerade** (f(x) = mx, b = 0): direkte Proportionalität — z. B. Dosis = 10 mg/kg × Körpergewicht. Doppeltes Gewicht → doppelte Dosis.
+- **Vertikale Gerade** (x = a): keine Funktion, weil einem x-Wert unendlich viele y-Werte zugeordnet wären.
 
-## Lineare Gleichungssysteme
+---
 
-Zwei lineare Funktionen f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich, wenn m₁ ≠ m₂. Der Schnittpunkt ergibt sich durch Gleichsetzen: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂). Sind m₁ = m₂ und b₁ ≠ b₂, sind die Geraden parallel und haben keinen Schnittpunkt. Sind m₁ = m₂ und b₁ = b₂, sind die Geraden identisch.
+## Schnittpunkte und Gleichungssysteme
 
-**Lösungsmethoden für lineare Gleichungssysteme** (2 Gleichungen, 2 Unbekannte):
-- **Gleichsetzungsverfahren**: Beide Gleichungen nach y auflösen, dann gleichsetzen.
-- **Einsetzungsverfahren**: Eine Gleichung nach einer Variable auflösen, in die andere einsetzen.
-- **Additionsverfahren**: Gleichungen so multiplizieren, dass eine Variable beim Addieren wegfällt.
+Zwei Geraden f(x) = m₁x + b₁ und g(x) = m₂x + b₂ schneiden sich genau dann, wenn m₁ ≠ m₂. Den Schnittpunkt findest du durch **Gleichsetzen**: m₁x + b₁ = m₂x + b₂ → x = (b₂ − b₁)/(m₁ − m₂).
 
-## Rechenbeispiele
+Sind die Steigungen gleich (m₁ = m₂), gibt es keinen Schnittpunkt (parallele Geraden) — es sei denn, auch b₁ = b₂, dann sind die Geraden identisch.
 
-**Beispiel 1 — Kalibrierkurve Photometer:**
-Absorption A = 0,015 × c + 0,02 (c in mg/L). Probe zeigt A = 0,77. Auflösen: c = (0,77 − 0,02)/0,015 = 0,75/0,015 = **50 mg/L**. Steigung 0,015: pro mg/L steigt Absorption um 0,015 Einheiten. y-Achsenabschnitt 0,02: Hintergrundabsorption der Küvette.
+**Lösungsmethoden** (2 Gleichungen, 2 Unbekannte):
+- **Gleichsetzen**: Beide nach y auflösen, dann gleichsetzen — am schnellsten wenn beide Gleichungen schon in der Form y = ... stehen.
+- **Einsetzen**: Eine Gleichung nach x oder y auflösen, in die andere einsetzen.
+- **Additionsverfahren**: Gleichungen so multiplizieren, dass eine Variable beim Addieren wegfällt — bei “unordentlichen” Gleichungen oft der eleganteste Weg.
 
-**Beispiel 2 — Regressionsgerade BMI vs. systolischer Blutdruck:**
-y = 1,8x + 85 (x = BMI, y = RR_sys in mmHg). Patient BMI = 30: RR = 1,8 × 30 + 85 = **139 mmHg** (Grenzwert Hypertonie 140). Pro BMI-Punkt: +1,8 mmHg. BMI-Reduktion von 30 auf 25: RR sinkt um 5 × 1,8 = **9 mmHg**.
+---
 
-**Beispiel 3 — Infusionsrate und Gleichgewichtskonzentration:**
-Elimination: C(t) = C₀ − k₀ × t (Kinetik nullter Ordnung). k₀ = 10 mg/h. Dauertropfrate R = 10 mg/h → Gleichgewicht: Zufuhr = Abbau. Bei R = 15 mg/h: Akkumulation mit 5 mg/h. Bei R = 8 mg/h: C sinkt um 2 mg/h. Steady-State nur bei **R = k₀ = 10 mg/h**.
+## Medizinische Anwendungen
 
-**Beispiel 4 — Alkoholabbau (Kinetik nullter Ordnung):**
-Patient hat nach einer Feier C₀ = 1,2 ‰. Abbaurate: k₀ = 0,15 ‰/h. C(t) = 1,2 − 0,15t. Wann ist C = 0? → 0 = 1,2 − 0,15t → t = 1,2/0,15 = **8 Stunden**. Nach 4 h: C(4) = 1,2 − 0,6 = **0,6 ‰** (noch fahruntüchtig, Grenze: 0,5 ‰).
+### Warum das Labor lineare Kalibrierung nutzt (Lambert-Beer)
 
-**Beispiel 5 — Gewichtsabhängige Dosierung:**
-Paracetamol: 15 mg/kg, max. 1000 mg. D(m) = 15m. Kind 20 kg: D = 15 × 20 = **300 mg**. Erwachsener 80 kg: D = 15 × 80 = 1200 mg → gedeckelt bei **1000 mg**. Ab welchem Gewicht greift die Deckelung? 1000 = 15m → m = 66,7 kg.
+Im klinischen Labor bestimmt man Konzentrationen von Substanzen (Hämoglobin, Bilirubin, Glukose) mithilfe eines Photometers. Das **Lambert-Beer-Gesetz** sagt: Bei niedrigen Konzentrationen ist die Lichtabsorption A direkt proportional zur Konzentration c:
 
-**Beispiel 6 — Senkrechte Geraden bestimmen:**
-Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = −1/m₁ = −1/3. b₂ = y₀ − m₂×x₀ = 1 − (−1/3)×6 = 1 + 2 = 3. Also: **g₂: y = −(1/3)x + 3**. Probe: m₁×m₂ = 3×(−1/3) = −1.`,
+**A = ε × c × d** (ε = Extinktionskoeffizient, d = Schichtdicke)
+
+Das ist eine Ursprungsgerade in c! Warum nutzt das Labor das? Weil man so eine **Kalibrierkurve** erstellen kann: Man misst die Absorption bei bekannten Konzentrationen, erhält eine Gerade, und kann dann aus der Absorption einer unbekannten Probe deren Konzentration direkt ablesen — einfach die Gerade umkehren: c = (A − b)/m.
+
+Der Haken: Ab einer bestimmten Konzentration weicht die Kurve von der Linearität ab (Sättigungseffekte). Deshalb verdünnt das Labor konzentrierte Proben, bis sie wieder im linearen Messbereich liegen.
+
+> **Merke:** Lambert-Beer funktioniert als lineares Modell nur im **niedrigen Konzentrationsbereich**. MedAT-Falle: “Die Absorption steigt unbegrenzt proportional mit der Konzentration” — falsch! Ab einer gewissen Konzentration flacht die Kurve ab.
+
+### Alkoholabbau — Kinetik nullter Ordnung
+
+Ethanol wird mit konstanter Rate abgebaut (die Alkoholdehydrogenase in der Leber ist gesättigt). Abbaurate: ca. 0,1–0,15 ‰/h. Das ergibt eine fallende Gerade: **C(t) = C₀ − k₀ × t**. Die Steigung m = −k₀ ist negativ und konstant — egal ob 2 ‰ oder 0,5 ‰ im Blut sind, pro Stunde wird immer gleich viel abgebaut.
+
+### Dosisberechnung nach Körpergewicht
+
+Ibuprofen: 10 mg/kg → D(m) = 10 × m (Ursprungsgerade). Kind 25 kg: 250 mg. Erwachsener 70 kg: 700 mg. Die Steigung 10 mg/kg ist hier die **Dosierungskonstante**.
+
+Paracetamol: 15 mg/kg, aber maximal 1000 mg → die Gerade wird ab einem bestimmten Gewicht gekappt: 1000 = 15m → m = 66,7 kg. Ab ca. 67 kg gilt die Maximaldosis, nicht mehr die lineare Formel.
+
+---
+
+## Rechenbeispiele mit Denkprozess
+
+**Beispiel 1 — Kalibrierkurve im Labor:**
+Denkprozess: “Die Kalibrierkurve ist eine Gerade A = m × c + b. Ich kenne A, suche c → Gleichung umformen.”
+Absorption A = 0,015 × c + 0,02 (c in mg/L). Probe: A = 0,77. Umformen: c = (0,77 − 0,02)/0,015 = 0,75/0,015 = **50 mg/L**. Die Steigung 0,015 ist die Sensitivität des Photometers, b = 0,02 die Hintergrundabsorption (Leerwert der Küvette).
+
+**Beispiel 2 — BMI und Blutdruck (Regressionsgerade):**
+Denkprozess: “Eine Regressionsgerade fasst den Zusammenhang zwischen zwei Variablen zusammen. Die Steigung sagt mir: Was passiert im Schnitt mit y, wenn x um 1 steigt?”
+y = 1,8x + 85 (x = BMI, y = RR in mmHg). Patient BMI 30: RR = 1,8 × 30 + 85 = **139 mmHg**. Nimmt der Patient 5 BMI-Punkte ab: RR sinkt um 5 × 1,8 = **9 mmHg** — ein klinisch relevanter Unterschied.
+
+**Beispiel 3 — Alkoholabbau:**
+Patient: C₀ = 1,2 ‰, Abbaurate k₀ = 0,15 ‰/h → C(t) = 1,2 − 0,15t. Wann nüchtern (C = 0)? → t = 1,2/0,15 = **8 h**. Nach 4 h: C = 1,2 − 0,6 = **0,6 ‰** (noch über Fahrgrenze 0,5 ‰).
+
+**Beispiel 4 — Infusionsrate:**
+Perfusor: Noradrenalin 5 mg/50 mL (= 0,1 mg/mL). Verordnung: 0,15 µg/kg/min, Patient 80 kg. Denkprozess: “Erst Gesamtdosis pro Minute, dann durch Konzentration teilen.”
+Dosis = 0,15 × 80 = 12 µg/min = 0,012 mg/min. Rate = 0,012/0,1 = 0,12 mL/min = **7,2 mL/h**. Linearer Zusammenhang: schwererer Patient → proportional höhere Rate.
+
+**Beispiel 5 — Senkrechte Geraden:**
+g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) = −1). b₂ = 1 − (−1/3) × 6 = 3. Also: **g₂: y = −(1/3)x + 3**.
+
+---
+
+## Häufige Fehler am MedAT
+
+- **Steigung mit Δx/Δy verwechseln** statt Δy/Δx — immer “y oben, x unten” merken.
+- **Vorzeichen bei negativer Steigung vergessen:** C(t) = 1,2 − 0,15t hat m = −0,15, nicht +0,15.
+- **”Linear” mit “proportional” verwechseln:** f(x) = 2x + 3 ist linear, aber nicht proportional (b ≠ 0). Nur Ursprungsgeraden (b = 0) sind proportional.
+- **Linearität über den Gültigkeitsbereich hinaus annehmen:** Lambert-Beer gilt nur im linearen Messbereich. Kinderwachstum ist nur zwischen 2–10 Jahren annähernd linear.
+- **Parallele und senkrechte Geraden verwechseln:** Parallel = gleiche Steigung. Senkrecht = Produkt der Steigungen = −1.`,
       lernziele: [
         "Die Geradengleichung f(x) = mx + b aufstellen, wenn zwei Punkte oder Steigung und ein Punkt gegeben sind.",
         "Steigung und y-Achsenabschnitt aus einem Graphen oder einer Gleichung ablesen und interpretieren.",
@@ -119,35 +180,35 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
       ],
       sections: [
         {
-          heading: "Die Geradengleichung",
-          text: "Jede nicht-vertikale Gerade lässt sich durch f(x) = mx + b beschreiben. Die Steigung m = Δy/Δx gibt die Änderungsrate an: Steigt x um 1, ändert sich y um m. Der y-Achsenabschnitt b ist der Funktionswert bei x = 0. Um eine Gerade eindeutig zu bestimmen, genügen zwei verschiedene Punkte oder ein Punkt und die Steigung.",
+          heading: "Lineare Funktion erkennen und aufstellen",
+          text: "Eine lineare Funktion beschreibt konstante Änderung: f(x) = mx + b. Die Steigung m gibt die Änderungsrate an (mit Einheit!), der y-Achsenabschnitt b den Startwert. Entscheidend ist das Erkennen: Sind die Differenzen zwischen aufeinanderfolgenden Messwerten konstant, liegt ein linearer Zusammenhang vor. Zwei Punkte genügen zur Bestimmung der Geraden.",
           merksatz:
-            "Steigung = Δy / Δx. Positiv: Gerade steigt. Negativ: Gerade fällt. Null: horizontale Gerade.",
+            "Konstante Differenzen zwischen Messwerten → linearer Zusammenhang. Wachsende oder schrumpfende Differenzen → anderer Funktionstyp.",
         },
         {
-          heading: "Nullstellen und Schnittpunkte",
-          text: "Die Nullstelle einer linearen Funktion (x-Achsenabschnitt) erhält man durch f(x) = 0 → x₀ = −b/m. Der Schnittpunkt zweier Geraden ergibt sich durch Gleichsetzen ihrer Funktionsterme. Parallele Geraden (gleiche Steigung) haben keinen Schnittpunkt, identische Geraden haben unendlich viele.",
+          heading: "Steigung als Änderungsrate interpretieren",
+          text: "Die Steigung m = Δy/Δx hat immer eine konkrete Bedeutung mit Einheit: ‰ pro Stunde (Alkoholabbau), mmHg pro BMI-Punkt (Regression), AU pro mg/L (Kalibrierkurve). Das Vorzeichen verrät die Richtung: m > 0 → ansteigend, m < 0 → fallend, m = 0 → konstant. Am MedAT wird häufig nach der Interpretation der Steigung gefragt, nicht nur nach dem Zahlenwert.",
           merksatz:
-            "Nullstelle: x₀ = −b/m. Schnittpunkt zweier Geraden: Gleichsetzen und nach x auflösen.",
+            "Steigung immer mit Einheit denken: 'Pro Stunde sinkt der Spiegel um 0,15 ‰' ist aussagekräftiger als 'm = −0,15'.",
         },
         {
-          heading: "Medizinische Anwendungen linearer Funktionen",
-          text: "Im medizinischen Labor folgt die Absorption von Licht nach dem Lambert-Beer-Gesetz A = ε×c×d einer linearen Funktion in c (Konzentration). Im linearen Messbereich lässt sich die unbekannte Konzentration einer Probe durch Interpolation auf der Kalibrierkurve bestimmen. Infusionsraten werden linear aus Körpergewicht und Dosierungsangabe berechnet.",
+          heading: "Lambert-Beer und lineare Kalibrierung",
+          text: "Das Lambert-Beer-Gesetz A = ε×c×d beschreibt einen linearen Zusammenhang zwischen Absorption und Konzentration — aber nur im niedrigen Konzentrationsbereich. Das Labor nutzt diese Linearität für Kalibriergeraden: Bekannte Standards messen, Gerade fitten, unbekannte Proben durch Umkehrung ablesen. Bei hohen Konzentrationen versagt das Modell (Sättigungseffekte), deshalb verdünnt man konzentrierte Proben.",
           merksatz:
-            "Lambert-Beer: A = ε×c×d ist linear in c. Kalibriergeraden ermöglichen Konzentrationsbestimmung aus Absorption.",
+            "Lambert-Beer = lineares Modell mit Grenzen. Kalibrierung funktioniert nur im linearen Messbereich. Außerhalb → Probe verdünnen.",
         },
       ],
       merksätze: [
-        "f(x) = mx + b: m = Steigung, b = y-Achsenabschnitt.",
-        "Steigung m = Δy/Δx = (y₂−y₁)/(x₂−x₁).",
-        "Nullstelle (x-Achsenabschnitt): x₀ = −b/m.",
-        "m > 0: Gerade steigt; m < 0: Gerade fällt; m = 0: konstant.",
-        "Parallele Geraden: gleiche Steigung m, verschiedene b.",
-        "Senkrechte Geraden: m₁ × m₂ = −1.",
-        "Ursprungsgerade (b = 0): direkte Proportionalität y = mx.",
-        "Zwei Punkte bestimmen eine Gerade eindeutig.",
-        "Schnittpunkt: Gleichsetzen der Funktionsterme → x berechnen → y einsetzen.",
-        "Lambert-Beer-Gesetz: Absorption A linear abhängig von Konzentration c.",
+        "Konstante Änderung → lineares Modell. Beschleunigte Änderung → exponentiell oder quadratisch.",
+        "Steigung m = Δy/Δx — immer mit Einheit interpretieren (z. B. mg/h, mmHg/BMI-Punkt).",
+        "m > 0: steigend. m < 0: fallend. m = 0: konstant. Vorzeichen = Richtung.",
+        "Nullstelle: x₀ = −b/m. y-Achsenabschnitt: b = f(0).",
+        "Parallele Geraden: m₁ = m₂. Senkrechte Geraden: m₁ × m₂ = −1.",
+        "Ursprungsgerade (b = 0): direkte Proportionalität — doppeltes x → doppeltes y.",
+        "Lambert-Beer: A ∝ c nur im linearen Messbereich. Außerhalb: Probe verdünnen!",
+        "Alkoholabbau = Kinetik nullter Ordnung = lineare Abnahme mit konstanter Rate.",
+        "Schnittpunkt zweier Geraden: Gleichsetzen → nach x auflösen → y einsetzen.",
+        "Linear ≠ proportional: f(x) = 2x + 3 ist linear, aber nicht proportional (b ≠ 0).",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -250,112 +311,139 @@ Gerade g₁: y = 3x − 2. Gesucht: senkrechte Gerade g₂ durch P(6|1). m₂ = 
         "Pharmakokinetik",
         "Radioaktiver Zerfall",
       ],
-      content: `## Allgemeine und Scheitelpunktform
+      content: `## Von der Geraden zur Kurve
 
-Eine quadratische Funktion hat die allgemeine Form **f(x) = ax² + bx + c** mit dem Leitkoeffizienten a (führender Koeffizient vor x²) ≠ 0. Der Graph ist eine **Parabel**. Ist a > 0, öffnet die Parabel nach oben (Minimum); ist a < 0, öffnet sie nach unten (Maximum). |a| bestimmt die "Breite" der Parabel: Großes |a| → schmale Parabel; kleines |a| → flache Parabel.
+Lineare Funktionen beschreiben konstante Änderung — doch in der Natur ist die Änderungsrate selbst oft nicht konstant. Ein Medikament, das seinen Wirkungsgrad steigert, erreicht irgendwann ein Maximum und verliert dann wieder an Wirkung. Ein geworfener Ball steigt erst, wird langsamer, hält kurz inne und fällt dann. Die Geschwindigkeit eines Autos bei einer Bremsung nimmt nicht linear ab, sondern der Bremsweg wächst quadratisch mit der Geschwindigkeit.
 
-Die **Scheitelpunktform** f(x) = a(x − xs)² + ys ist besonders anschaulich: Der Scheitelpunkt S(xs|ys) ist der Hoch- oder Tiefpunkt der Parabel. Die Umformung von der allgemeinen in die Scheitelpunktform erfolgt durch **quadratische Ergänzung**.
+All diese Situationen beschreibt die **quadratische Funktion**: Der Graph ist kein gerader Strich mehr, sondern eine **Parabel** — eine symmetrische Kurve mit genau einem Hoch- oder Tiefpunkt.
 
-> **Merke:** Der Leitkoeffizient a bestimmt **zwei** Eigenschaften gleichzeitig: das Vorzeichen entscheidet über die Öffnungsrichtung (a > 0: oben, a < 0: unten), der Betrag |a| über die Breite (|a| > 1: schmaler als Normalparabel (Parabel mit a = 1), |a| < 1: breiter).
+> **Merke:** Von linear zu quadratisch: Bei linearen Funktionen ist die **Änderungsrate konstant** (Gerade). Bei quadratischen Funktionen **ändert sich die Änderungsrate selbst gleichmäßig** (Parabel). Frage dich: "Wird der Anstieg/Abfall immer steiler?" → quadratisch.
 
 {{DIAGRAM:quadratic-function}}
 
-| Form | Darstellung | Vorteil |
+---
+
+## Die Parabel verstehen — Form vor Formel
+
+Bevor wir rechnen, schauen wir uns an, was eine Parabel **tut**:
+
+- Sie hat genau **einen Scheitel** — den höchsten oder tiefsten Punkt.
+- Sie ist **symmetrisch**: Links und rechts vom Scheitel verhält sich die Kurve spiegelbildlich.
+- Sie kann die x-Achse **zweimal, einmal oder gar nicht** schneiden (das hängt davon ab, wie hoch oder tief der Scheitel liegt).
+
+Der **Leitkoeffizient a** bestimmt zwei Dinge auf einen Blick:
+- **Vorzeichen:** a > 0 → Parabel öffnet nach oben (wie eine Schüssel → hat ein **Minimum**). a < 0 → öffnet nach unten (wie ein Hügel → hat ein **Maximum**).
+- **Betrag:** |a| > 1 → schmalere Parabel als die Normalparabel y = x². |a| < 1 → breitere, flachere Parabel.
+
+---
+
+## Drei Darstellungsformen — jede hat ihren Vorteil
+
+| Form | Darstellung | Was sofort ablesbar ist |
 |---|---|---|
-| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt direkt ablesbar (c) |
-| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt direkt ablesbar |
-| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen direkt ablesbar |
+| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt c (Wert bei x = 0) |
+| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt S(xs, ys) |
+| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen x₁ und x₂ |
+
+Am MedAT: Erkenne, welche Form dir die gesuchte Information am schnellsten liefert. Scheitelpunkt gesucht → Scheitelpunktform. Nullstellen gesucht → Faktorisierte Form oder Lösungsformel.
+
+---
 
 ## Scheitelpunkt berechnen
 
-Aus der allgemeinen Form erhält man den Scheitelpunkt mit:
+**Schnellformel (spart Zeit am MedAT):**
 - **xs = −b/(2a)**
-- **ys = f(xs) = c − b²/(4a)**
+- **ys = f(xs)** (xs einsetzen)
 
-Alternativ: quadratische Ergänzung. Beispiel: f(x) = 2x² − 8x + 3
-= 2(x² − 4x) + 3
-= 2(x² − 4x + 4 − 4) + 3
-= 2(x − 2)² − 8 + 3
-= 2(x − 2)² − 5
+**Quadratische Ergänzung** (wenn die Aufgabe sie explizit verlangt):
 
-Scheitelpunkt: S(2|−5), Öffnung nach oben (a = 2 > 0).
+Beispiel: f(x) = 2x² − 8x + 3
+Schritt 1 — a ausklammern: = 2(x² − 4x) + 3
+Schritt 2 — halben Koeffizienten von x quadrieren, addieren und subtrahieren: = 2(x² − 4x + 4 − 4) + 3
+Schritt 3 — binomische Formel rückwärts: = 2(x − 2)² − 8 + 3 = 2(x − 2)² − 5
 
-> **Merke:** Quadratische Ergänzung Schritt für Schritt: (1) a ausklammern, (2) halben Koeffizienten von x quadrieren und addieren/subtrahieren, (3) binomische Formel rückwärts anwenden. Am MedAT spart die Formel xs = −b/(2a) oft mehr Zeit als die vollständige Ergänzung.
+Ergebnis: S(2|−5), a = 2 > 0 → Öffnung nach oben → Minimum.
 
-## Nullstellen und Diskriminante
+> **Merke:** MedAT-Zeitstrategie: Die Formel xs = −b/(2a) ist fast immer schneller als quadratische Ergänzung. Ergänzung nur verwenden, wenn die Aufgabe die Scheitelpunktform explizit verlangt.
 
-Die **Nullstellen** einer quadratischen Funktion berechnet man mit der **Lösungsformel** (pq-Formel oder Mitternachtsformel):
+---
 
-**Mitternachtsformel**: x₁₂ = (−b ± √(b² − 4ac)) / (2a)
+## Nullstellen und Diskriminante — intuitiv verstanden
 
-Der Ausdruck unter der Wurzel heißt **Diskriminante**: **D = b² − 4ac**
+Die zentrale Frage: **Wo schneidet die Parabel die x-Achse?** Das hängt davon ab, wo der Scheitel liegt:
 
-- D > 0: **zwei verschiedene reelle Nullstellen**
-- D = 0: **genau eine Nullstelle** (Berührpunkt mit der x-Achse)
-- D < 0: **keine reelle Nullstelle** (Parabel berührt x-Achse nicht)
+- Scheitel **unter** der x-Achse bei einer nach oben offenen Parabel → die Kurve muss die Achse **zweimal** durchstoßen → 2 Nullstellen.
+- Scheitel **auf** der x-Achse → die Kurve berührt die Achse genau am Scheitel → **1 Nullstelle**.
+- Scheitel **über** der x-Achse bei einer nach oben offenen Parabel → die Kurve erreicht die Achse nie → **0 Nullstellen**.
 
-**pq-Formel** (für normierte Form x² + px + q = 0):
+Mathematisch steckt diese Information in der **Diskriminante D = b² − 4ac**. Denk an den Term unter der Wurzel in der Lösungsformel:
+
+**x₁₂ = (−b ± √D) / (2a)**
+
+Kannst du die Wurzel aus D ziehen?
+- **D > 0** (positiv): Ja, und das ± gibt zwei verschiedene Werte → **2 Nullstellen**.
+- **D = 0**: Die Wurzel ist 0, das ± macht keinen Unterschied → **1 Nullstelle** (x = −b/(2a)).
+- **D < 0** (negativ): Wurzel aus einer negativen Zahl? Nicht möglich (in ℝ) → **keine Nullstelle**.
+
+**pq-Formel** (Alternative für normierte Form x² + px + q = 0):
 x₁₂ = −p/2 ± √((p/2)² − q)
 
-**Achtung MedAT-Falle:** Die pq-Formel gilt nur für **normierte** quadratische Gleichungen (Koeffizient vor x² muss 1 sein). Hat x² einen anderen Koeffizienten, muss man zuerst durch a dividieren oder direkt die Mitternachtsformel verwenden.
+**Typische MedAT-Falle:** Die pq-Formel funktioniert nur, wenn der Koeffizient vor x² genau 1 ist. Bei 2x² − 6x + 4 = 0 erst durch 2 teilen: x² − 3x + 2 = 0, dann pq-Formel anwenden.
 
-## Symmetrie
+---
 
-Jede Parabel f(x) = ax² + bx + c ist **achsensymmetrisch** zur vertikalen Geraden x = xs = −b/(2a). Diese Symmetrieachse halbiert die Strecke zwischen den beiden Nullstellen: xs = (x₁ + x₂)/2. Kennt man eine Nullstelle und den Scheitelpunkt, kann man die zweite Nullstelle über die Symmetrie bestimmen: x₂ = 2×xs − x₁.
+## Satz von Vieta — warum x₁ + x₂ = −p gilt
 
-## Satz von Vieta
+Bei x² + px + q = 0 mit Nullstellen x₁ und x₂ kann man die Gleichung als (x − x₁)(x − x₂) = 0 schreiben. Multipliziert man aus:
 
-Bei normierten Gleichungen x² + px + q = 0 gilt der **Satz von Vieta**:
-- x₁ + x₂ = −p (Summe der Nullstellen)
-- x₁ × x₂ = q (Produkt der Nullstellen)
+x² − (x₁ + x₂)x + x₁ × x₂ = 0
 
-Dies ermöglicht oft eine schnelle Bestimmung der Nullstellen ohne Rechnung. **MedAT-Strategie:** Bei ganzzahligen p und q zuerst versuchen, zwei Zahlen mit passender Summe und passendem Produkt zu erraten — das ist schneller als die Formel.
+Koeffizientenvergleich mit x² + px + q = 0 ergibt sofort:
+- **x₁ + x₂ = −p** (Summe der Nullstellen = negatives p)
+- **x₁ × x₂ = q** (Produkt der Nullstellen = q)
 
-> **Merke:** Vieta ist besonders effizient, wenn die Nullstellen ganzzahlig sind. Beispiel: x² − 7x + 12 = 0 → gesucht: Summe 7, Produkt 12 → x₁ = 3, x₂ = 4 (sofort lösbar ohne Formel).
+Das ist keine Magie — es folgt direkt aus der Faktorisierung. Und es ist ein mächtiges Werkzeug: Statt die Lösungsformel anzuwenden, kannst du bei ganzzahligen Koeffizienten oft direkt **zwei Zahlen erraten**, deren Summe und Produkt passen.
 
-## Anwendungen in Physik und Medizin
+> **Merke:** Vieta-Strategie am MedAT: Bei x² + px + q = 0 mit ganzzahligen Koeffizienten → "Welche zwei Zahlen ergeben Summe −p und Produkt q?" Wenn du sie innerhalb von 10 Sekunden findest, spare dir die Formel. Wenn nicht → Mitternachtsformel.
 
-Quadratische Funktionen modellieren viele physikalische Vorgänge: Wurfparabeln, kinetische Energie (E_kin = ½mv²), die Beziehung zwischen Radius und Fläche eines Kreises (A = πr²). In der Pharmakologie erscheinen quadratische Terme in Dosis-Wirkungsmodellen und bei der Berechnung der Bioverfügbarkeit (resorbierter Wirkstoffanteil).
+Beispiel: x² − 7x + 12 = 0. Summe = 7, Produkt = 12. Probiere: 3 + 4 = 7, 3 × 4 = 12 → x₁ = 3, x₂ = 4. Fertig in 5 Sekunden.
 
-**Hagen-Poiseuille-Gesetz:** Der Volumenstrom V̇ durch ein Blutgefäß ist proportional zu r⁴. Da die Querschnittsfläche A = πr² quadratisch von r abhängt, führt eine Halbierung des Radius zu einer Reduktion der Fläche auf ein Viertel — und der Strömungswiderstand steigt auf das 16-Fache. Dies erklärt die dramatischen Auswirkungen von Arteriosklerose (Gefäßverkalkung).
+---
 
-**Wurfparabel:** Die Höhe h eines geworfenen Körpers folgt h(t) = −½g×t² + v₀×t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt des Erreichens an. Diese Parabel ist ein Standardbeispiel für a < 0 (Öffnung nach unten).
+## Symmetrie der Parabel
 
-## Exponentialfunktionen in der Medizin
+Jede Parabel ist achsensymmetrisch zur vertikalen Geraden x = xs = −b/(2a). Diese Achse halbiert den Abstand zwischen den Nullstellen: **xs = (x₁ + x₂)/2**. Praktischer Nutzen: Kennst du eine Nullstelle und den Scheitelpunkt, findest du die andere über x₂ = 2 × xs − x₁.
 
-Neben quadratischen Funktionen sind **Exponentialfunktionen** f(x) = a × bˣ (oder f(t) = a × e^(kt)) in der Medizin allgegenwärtig. Der entscheidende Unterschied: Bei quadratischen Funktionen wächst f(x) proportional zu x², bei Exponentialfunktionen wächst f(x) proportional zu sich selbst — das Wachstum ist umso schneller, je größer der aktuelle Wert.
+---
 
-**Bakterienwachstum (exponentielle Vermehrung):** In der logarithmischen Wachstumsphase verdoppelt sich die Bakterienzahl in regelmäßigen Abständen. Mit der Generationszeit g (Verdopplungszeit) gilt: N(t) = N₀ × 2^(t/g). E. coli hat g ≈ 20 min. Aus 1000 Bakterien werden nach 2 h (= 6 Generationen): N = 1000 × 2⁶ = **64.000 Bakterien**.
+## Quadratische Zusammenhänge in Physik und Medizin
 
-**Radioaktiver Zerfall / Halbwertszeit:** Radiopharmaka zerfallen exponentiell: A(t) = A₀ × (1/2)^(t/t₁/₂). Technetium-99m (t₁/₂ = 6 h) hat nach 18 h: A = A₀ × (1/2)³ = A₀/8. Von 800 MBq bleiben **100 MBq** — nach 3 Halbwertszeiten nur noch 1/8 der Ausgangsdosis.
+**Wurfparabel:** h(t) = −½g × t² + v₀ × t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt an. Hier ist a = −½g < 0 → Öffnung nach unten → Maximum.
 
-**Pharmakokinetik (Kinetik erster Ordnung):** Die meisten Medikamente werden nach Kinetik erster Ordnung eliminiert: C(t) = C₀ × e^(−k×t). Die Halbwertszeit berechnet sich als t₁/₂ = ln(2)/k ≈ 0,693/k. Diazepam (t₁/₂ ≈ 40 h, k ≈ 0,017/h): Nach 80 h sind noch C₀ × (1/2)² = **25 %** der Plasmakonzentration vorhanden.
+**Kinetische Energie:** E = ½mv² — quadratisch in v. Doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg!
 
-> **Merke:** Halbwertszeit = ln(2)/k ≈ 0,693/k. Nach n Halbwertszeiten verbleiben (1/2)ⁿ der Ausgangsaktivität. Faustregel: Nach 5 Halbwertszeiten sind < 5 % übrig — klinisch "eliminiert".
+**Gefäßquerschnitt:** A = πr² — quadratisch in r. Halbiert sich der Radius (Arteriosklerose), schrumpft die Fläche auf ein Viertel. Nach Hagen-Poiseuille steigt der Widerstand sogar auf das 16-Fache (r⁴!).
 
-**MedAT-typisch — Herzfrequenz als Parabel in t:** Ist **f(t) = f_Ruhe − a·t + b·t²** (Herzfrequenz: zuerst Verlangsamung −a·t, dann quadratische Beschleunigung +b·t²), so liegt das **Minimum** der Herzfrequenz dort, wo die Ableitung nach t null ist: −a + 2b·t = 0 ⇒ **t = a/(2b)**. Merke: Vor x² steht hier +b (Koeffizient von t²), also Scheitel bei **t = a/(2b)** Minuten (nicht a/b, nicht 2a/b, nicht a²/b).
+**Dosis-Wirkung als Parabel:** Optimale Dosis = Scheitelpunkt. Zu wenig wirkt nicht, zu viel ist toxisch — die Parabel modelliert genau dieses Verhalten.
 
-**MedAT-typisch — Parabel erkennen:** **y = −x² − 5** hat a = −1, b = 0, c = −5. Wegen **a < 0** öffnet die Parabel **nach unten**. Scheitel: x_s = −b/(2a) = 0, y_s = f(0) = −5 ⇒ **Scheitelpunkt (0|−5)**. Der Graph liegt vollständig unterhalb der x-Achse (Maximum bei y = −5).
+**MedAT-typisch — Parabel erkennen:** y = −x² − 5 hat a = −1, b = 0, c = −5. Wegen a < 0 öffnet die Parabel nach unten. Scheitel: xs = 0, ys = −5 → **S(0|−5)**. Der Graph liegt vollständig unterhalb der x-Achse.
 
-## Rechenbeispiele
+---
 
-**Beispiel 1 — Optimale Dosis-Wirkung (Scheitelpunkt):**
-Wirkung W(d) = −0,4d² + 16d − 40 (d in mg). Optimale Dosis: d_opt = −b/(2a) = −16/(2×(−0,4)) = **20 mg**. W_max = −0,4×400 + 320 − 40 = **120 Einheiten**. Nullstellen (keine Wirkung): d = (−16 ± √(256−64))/(−0,8) → d₁ ≈ 2,8 mg, d₂ ≈ 37,2 mg. Therapeutisches Fenster: ca. 3–37 mg.
+## Rechenbeispiele mit Denkprozess
 
-**Beispiel 2 — Parabolische Flugbahn: Blutdruckwelle:**
-Näherung p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −200/(2×(−200)) = **0,5 s**. p_max = −200×0,25 + 100 + 80 = **130 mmHg**. Pulsdauer (p = 80): −200t² + 200t = 0 → t(−200t + 200) = 0 → t = 0 und t = **1 s**.
+**Beispiel 1 — Optimale Dosis (Scheitelpunkt):**
+W(d) = −0,4d² + 16d − 40. Denkprozess: "a < 0 → Parabel öffnet nach unten → Maximum gesucht → Scheitelpunkt."
+d_opt = −16/(2 × (−0,4)) = **20 mg**. W_max = −0,4 × 400 + 320 − 40 = **120 Einheiten**. Therapeutisches Fenster (W = 0): Diskriminante D = 256 − 64 = 192 > 0 → zwei Nullstellen bei ca. 2,8 mg und 37,2 mg.
 
-**Beispiel 3 — Herzminutenvolumen und Gefäßwiderstand:**
-HMV = RR / TPR. Wenn RR = −0,4×HMV² + 14×HMV (nicht-lineare Beziehung). Nullstellen: HMV×(−0,4×HMV + 14) = 0 → HMV = 0 oder **35 L/min** (physiologisches Limit bei Leistungssportlern). Maximum: HMV = −14/(2×(−0,4)) = **17,5 L/min** mit RR_max = −0,4×306,25 + 14×17,5 = **122,5 mmHg**. Realwerte: HMV ≈ 5 L/min bei RR ≈ 60 mmHg (Ruhewert auf der Kurve).
+**Beispiel 2 — Blutdruckpuls als Parabel:**
+p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −200/(2 × (−200)) = **0,5 s**. p_max = 130 mmHg. Pulsdauer: p = 80 bei t = 0 und t = 1 s.
 
-**Beispiel 4 — Halbwertszeit Tc-99m (Szintigraphie):**
-Technetium-99m: t₁/₂ = 6 h. Injizierte Aktivität A₀ = 740 MBq. A(t) = 740 × (1/2)^(t/6). Nach 12 h: A = 740 × (1/2)² = 740/4 = **185 MBq**. Nach 24 h: A = 740 × (1/2)⁴ = 740/16 = **46,25 MBq**.
+**Beispiel 3 — Vieta-Schnellmethode:**
+x² − 11x + 28 = 0. Denkprozess: "Ganzzahlige Koeffizienten → Vieta versuchen. Summe = 11, Produkt = 28. Probiere: 4 + 7 = 11, 4 × 7 = 28." → **x₁ = 4, x₂ = 7**. Schneller als jede Formel.
 
-**Beispiel 5 — Bakterienwachstum:**
-E. coli: Generationszeit g = 20 min. Startkultur N₀ = 500. Nach 2 h (= 120 min = 6 Generationen): N = 500 × 2⁶ = 500 × 64 = **32.000**. Wie lange bis 1 Million? 10⁶ = 500 × 2^(t/20) → 2^(t/20) = 2000 → t/20 = log₂(2000) ≈ 11 → t ≈ **220 min ≈ 3,7 h**.
-
-**Beispiel 6 — Vieta-Schnellmethode:**
-x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch probieren: 4 + 7 = 11, 4 × 7 = 28 → **x₁ = 4, x₂ = 7**. Probe: f(4) = 16 − 44 + 28 = 0, f(7) = 49 − 77 + 28 = 0.`,
+**Beispiel 4 — Herzfrequenz-Minimum:**
+f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minimum bei t = a/(2b) — das ist xs = −(−a)/(2b). Typische Falle: Nicht a/b oder 2a/b, sondern exakt **a/(2b)**.`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",
         "Scheitelpunkt, Öffnungsrichtung und Symmetrieachse einer Parabel bestimmen.",
@@ -365,41 +453,41 @@ x² − 11x + 28 = 0. Vieta: x₁ + x₂ = 11, x₁ × x₂ = 28. Systematisch p
       ],
       sections: [
         {
-          heading: "Allgemeine Form und Scheitelpunktform",
-          text: "f(x) = ax² + bx + c (allgemein) und f(x) = a(x − xs)² + ys (Scheitelpunktform) sind zwei äquivalente Darstellungen einer Parabel. Der Scheitelpunkt S(xs|ys) ergibt sich direkt aus der Scheitelpunktform. Aus der allgemeinen Form: xs = −b/(2a), ys = f(xs). Die Umformung zwischen beiden Formen erfolgt durch quadratische Ergänzung. Der Leitkoeffizient a entscheidet über Öffnungsrichtung und Breite der Parabel.",
+          heading: "Parabel erkennen und Scheitelpunkt finden",
+          text: "Eine Parabel entsteht, wenn die Änderungsrate selbst gleichmäßig zu- oder abnimmt. Der Leitkoeffizient a bestimmt Öffnungsrichtung (Vorzeichen) und Breite (Betrag). Der Scheitelpunkt ist der Hoch- oder Tiefpunkt: xs = −b/(2a), ys = f(xs). Bei Optimierungsproblemen (maximale Wirkung, minimale Kosten) sucht man genau diesen Punkt — das ist die häufigste MedAT-Anwendung.",
           merksatz:
-            "Scheitelpunkt: xs = −b/(2a), ys = f(xs). a > 0: Parabel öffnet oben (Minimum). a < 0: Parabel öffnet unten (Maximum).",
+            "Parabel = sich ändernde Änderungsrate. Scheitelpunkt = Optimum. a > 0 → Minimum. a < 0 → Maximum. Schnellformel: xs = −b/(2a).",
         },
         {
-          heading: "Diskriminante und Nullstellen",
-          text: "Die Diskriminante D = b² − 4ac entscheidet über die Anzahl der Nullstellen einer quadratischen Funktion. D > 0: zwei Nullstellen x₁₂ = (−b ± √D)/(2a). D = 0: genau eine Nullstelle x = −b/(2a) (Parabelscheitel liegt auf der x-Achse). D < 0: keine reellen Nullstellen (Parabel liegt ganz ober- oder unterhalb der x-Achse). Die pq-Formel gilt für normierte Gleichungen (Leitkoeffizient = 1).",
+          heading: "Diskriminante — Nullstellen-Schnellcheck",
+          text: "D = b² − 4ac beantwortet die Frage: Schneidet die Parabel die x-Achse? Intuitiv: D sagt dir, ob du die Wurzel ziehen kannst. Positiv → zwei Schnittpunkte. Null → genau einer (Berührung). Negativ → keiner. Die Mitternachtsformel x₁₂ = (−b ± √D)/(2a) liefert die konkreten Werte. Achtung: pq-Formel nur bei normierter Form (a = 1).",
           merksatz:
-            "D = b² − 4ac: D > 0 → 2 Nullstellen; D = 0 → 1 Nullstelle; D < 0 → keine reelle Nullstelle.",
+            "D > 0: Wurzel ziehbar → 2 Nullstellen. D = 0: Wurzel = 0 → 1 Nullstelle. D < 0: keine reelle Wurzel → 0 Nullstellen.",
         },
         {
-          heading: "Satz von Vieta",
-          text: "Für x² + px + q = 0 gilt: x₁ + x₂ = −p und x₁ × x₂ = q. Dieses Werkzeug erlaubt es, Nullstellen durch Raten (z. B. bei ganzzahligen Lösungen) oder Überprüfen zu finden. Beispiel: x² − 5x + 6 = 0 → p = −5, q = 6; gesucht sind zwei Zahlen mit Summe 5 und Produkt 6 → x₁ = 2, x₂ = 3. Vieta ist besonders hilfreich bei MedAT-Aufgaben, wo Zeitdruck herrscht.",
+          heading: "Vieta — Nullstellen ohne Formel",
+          text: "Vieta folgt aus der Faktorisierung (x − x₁)(x − x₂) = x² − (x₁+x₂)x + x₁x₂. Koeffizientenvergleich ergibt: Summe = −p, Produkt = q. Bei ganzzahligen Koeffizienten ist Raten oft schneller als die Lösungsformel. Beispiel: x² − 5x + 6 = 0 → Summe 5, Produkt 6 → sofort 2 und 3.",
           merksatz:
-            "Vieta: x₁ + x₂ = −p; x₁ × x₂ = q. Zwei Zahlen mit gegebener Summe und Produkt finden.",
+            "Vieta bei ganzzahligen Koeffizienten: Zwei Zahlen mit passender Summe und Produkt erraten. Unter 10 Sekunden lösbar → Formel sparen.",
         },
         {
-          heading: "Medizinische Relevanz quadratischer Zusammenhänge",
-          text: "Die Michaelis-Menten-Kinetik und andere biochemische Reaktionen folgen zu Beginn oft quadratischen Näherungen. Kinetische Energie E = ½mv² und die Fläche eines Blutgefäßquerschnitts A = πr² sind quadratische Funktionen physikalischer Größen. In der Pharmakokinetik erscheinen quadratische Terme in Polyexponentialmodellen für die Plasmakonzentrations-Zeit-Kurve bei Zwei-Kompartiment-Modellen.",
+          heading: "Quadratische Zusammenhänge in Medizin und Physik",
+          text: "Kinetische Energie E = ½mv² wächst quadratisch mit v: doppelte Geschwindigkeit = vierfache Energie = vierfacher Bremsweg. Gefäßquerschnitt A = πr² schrumpft bei Arteriosklerose quadratisch: halber Radius → Viertel der Fläche → 16-facher Widerstand (Hagen-Poiseuille). Dosis-Wirkungskurven folgen oft einer nach unten offenen Parabel: Scheitelpunkt = optimale Dosis.",
           merksatz:
-            "E_kin = ½mv²: quadratisch in v. A = πr²: quadratisch in r. Kleine Änderungen im Radius bewirken große Flächenänderungen.",
+            "Quadratisch heißt: Kleine Änderungen im Input bewirken überproportional große Änderungen im Output. Halber Radius → Viertel der Fläche.",
         },
       ],
       merksätze: [
-        "f(x) = ax² + bx + c: a ≠ 0, Graph ist Parabel.",
-        "a > 0: Öffnung nach oben (Minimum); a < 0: Öffnung nach unten (Maximum).",
-        "Scheitelpunkt xs = −b/(2a), ys = f(xs).",
-        "Scheitelpunktform: f(x) = a(x − xs)² + ys.",
-        "Mitternachtsformel: x₁₂ = (−b ± √(b²−4ac))/(2a).",
-        "Diskriminante D = b² − 4ac: D > 0 → 2 NS; D = 0 → 1 NS; D < 0 → 0 NS.",
-        "Satz von Vieta: x₁+x₂ = −p; x₁×x₂ = q (normierte Form).",
-        "Symmetrieachse der Parabel: x = xs = −b/(2a).",
-        "Quadratische Ergänzung: x² + px = (x + p/2)² − (p/2)².",
-        "Nullstellen und Scheitelpunkt teilen dieselbe Symmetrieachse: xs = (x₁+x₂)/2.",
+        "Quadratisch erkennen: Änderungsrate ändert sich gleichmäßig → Parabel.",
+        "a > 0: Schüssel (Minimum). a < 0: Hügel (Maximum). |a| groß: schmal. |a| klein: breit.",
+        "Scheitelpunkt: xs = −b/(2a). Am MedAT fast immer schneller als quadratische Ergänzung.",
+        "Diskriminante D = b² − 4ac: positiv → 2 NS, null → 1 NS, negativ → 0 NS.",
+        "Mitternachtsformel: x₁₂ = (−b ± √D)/(2a). pq-Formel nur bei a = 1!",
+        "Vieta: x₁ + x₂ = −p, x₁ × x₂ = q. Folgt aus Ausmultiplizieren von (x−x₁)(x−x₂).",
+        "Symmetrieachse x = xs halbiert den Abstand der Nullstellen: xs = (x₁+x₂)/2.",
+        "E = ½mv²: doppelte Geschwindigkeit → vierfache Energie.",
+        "A = πr²: halber Radius → Viertel der Fläche → klinisch katastrophal (Arteriosklerose).",
+        "Optimale Dosis = Scheitelpunkt der Dosis-Wirkungsparabel.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {

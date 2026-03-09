@@ -351,92 +351,155 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Elektronenkonfiguration",
         "Übergangsmetalle",
       ],
-      content: `Vier Zahlen genügen, um jedes Elektron im Atom eindeutig zu beschreiben — die Quantenzahlen bilden das Koordinatensystem der Atomhülle.
+      content: `Wo genau halten sich Elektronen auf? Die Antwort bestimmt, wie ein Atom reagiert — ob es Bindungen eingeht, Elektronen abgibt oder Licht absorbiert. Um den Aufenthaltsort jedes einzelnen Elektrons zu beschreiben, brauchen wir ein präzises Adresssystem: die vier Quantenzahlen.
 
-Die vier Quantenzahlen sind das Adresssystem der Elektronen — sie sagen dir, in welchem Stockwerk (n), welcher Wohnungsform (l), welcher Raumrichtung (m_l) und mit welchem Spin (m_s) ein Elektron sitzt. Ohne dieses System wäre es unmöglich zu erklären, warum Eisen Sauerstoff transportiert oder warum Fluor das reaktivste Element ist.
+## Die vier Quantenzahlen — vier Fragen an jedes Elektron
 
-## Die vier Quantenzahlen
+Stell dir ein Hochhaus vor. Um eine bestimmte Person zu finden, brauchst du vier Angaben: Stockwerk, Wohnungstyp, Wohnungsnummer und ob die Person links oder rechts im Bett schläft. Genauso funktionieren die vier Quantenzahlen:
 
-| Quantenzahl | Symbol | Werte | Bestimmt |
-|-------------|--------|-------|----------|
-| Hauptquantenzahl | n | 1, 2, 3, ... | Schale, Energieniveau |
-| Nebenquantenzahl | l | 0, 1, ..., n−1 | Orbitalform (s, p, d, f) |
-| Magnetische QZ | mₗ | −l, ..., 0, ..., +l | Raumausrichtung |
-| Spinquantenzahl | mₛ | +½ oder −½ | Eigendrehimpuls |
+| Frage | Quantenzahl | Symbol | Werte | Antwort |
+|-------|-------------|--------|-------|---------|
+| Welches Stockwerk? | Hauptquantenzahl | n | 1, 2, 3, ... | Schale (Energieniveau) |
+| Welche Wohnungsform? | Nebenquantenzahl | l | 0, 1, ..., n−1 | Orbitalform (s, p, d, f) |
+| Welche Wohnungsnummer? | Magnetische QZ | mₗ | −l, ..., 0, ..., +l | Raumausrichtung |
+| Links oder rechts im Bett? | Spinquantenzahl | mₛ | +½ oder −½ | Eigendrehimpuls |
 
-**1. Hauptquantenzahl n** (n = 1, 2, 3, ...):
-Bestimmt die Hauptschale (Energieniveau) und die mittlere Entfernung des Elektrons vom Kern. Bei n = 1 ist die Energie am niedrigsten (innerste Schale). Entspricht den Bohrschen Schalen K (n=1), L (n=2), M (n=3), N (n=4). Maximale Elektronenzahl pro Schale: 2n².
+**1. Hauptquantenzahl n — „Welches Stockwerk?"**
+n gibt die Hauptschale an und bestimmt vor allem die Energie und den mittleren Abstand zum Kern. Je größer n, desto weiter draußen und desto energiereicher das Elektron. Die historischen Schalennamen lauten K (n=1), L (n=2), M (n=3), N (n=4). Jede Schale kann maximal 2n² Elektronen aufnehmen — für n=3 also 2 x 9 = 18.
 
-**2. Nebenquantenzahl l** (l = 0, 1, 2, ..., n−1):
-Bestimmt die Unterschale (Subschale) und die Form des Orbitals:
-- l = 0 → s-Orbital (kugelig), 1 Orbital → max. 2 e⁻
-- l = 1 → p-Orbital (hantelförmig), 3 Orbitale → max. 6 e⁻
-- l = 2 → d-Orbital (kleeblattförmig), 5 Orbitale → max. 10 e⁻
-- l = 3 → f-Orbital (komplex), 7 Orbitale → max. 14 e⁻
+**2. Nebenquantenzahl l — „Welche Wohnungsform?"**
+l beschreibt die Gestalt des Orbitals (Aufenthaltsraum des Elektrons). Die erlaubten Werte reichen von 0 bis n−1:
+- l = 0 → s-Orbital: kugelförmig, 1 Orbital → max. 2 e⁻
+- l = 1 → p-Orbital: hantelförmig, 3 Orbitale → max. 6 e⁻
+- l = 2 → d-Orbital: kleeblattförmig, 5 Orbitale → max. 10 e⁻
+- l = 3 → f-Orbital: komplex gelappt, 7 Orbitale → max. 14 e⁻
 
-**3. Magnetische Quantenzahl mₗ** (mₗ = −l, ..., 0, ..., +l):
-Bestimmt die Raumausrichtung des Orbitals. Für l = 1 (p) gibt es mₗ = −1, 0, +1 → drei p-Orbitale (pₓ, p_y, p_z). Anzahl der Orbitale pro Unterschale: 2l + 1.
+Warum kann n=1 nur ein s-Orbital haben? Weil l maximal n−1 sein kann — bei n=1 ist das nur l=0. Erst ab n=2 kommt p dazu, ab n=3 auch d, ab n=4 auch f.
 
-**4. Spinquantenzahl mₛ** (mₛ = +½ oder −½):
-Beschreibt den Eigendrehimpuls (Spin, Eigendrehung des Elektrons) des Elektrons. Zwei Elektronen im selben Orbital haben entgegengesetzte Spins (↑↓). Der Stern-Gerlach-Versuch (1922, Ablenkung eines Silberatomstrahls im Magnetfeld) wies den Elektronenspin experimentell nach.
+**3. Magnetische Quantenzahl mₗ — „Welche Wohnungsnummer?"**
+mₗ legt fest, wie das Orbital im Raum orientiert ist. Die Werte laufen von −l bis +l, das ergibt 2l+1 Orbitale pro Unterschale. Für p-Orbitale (l=1) sind das mₗ = −1, 0, +1 → drei Orbitale entlang der x-, y- und z-Achse (pₓ, p_y, p_z).
 
-> **Merke:** Vier Quantenzahlen beschreiben jedes Elektron eindeutig: n = Schale, l = Form, mₗ = Richtung, mₛ = Spin. Kein Quantenzahlen-Quartett darf doppelt vorkommen (Pauli).
+**4. Spinquantenzahl mₛ — „Links oder rechts?"**
+Der Spin ist eine Quanteneigenschaft ohne klassisches Analogon — man stellt ihn sich vereinfacht als Eigendrehung vor. Es gibt genau zwei Möglichkeiten: mₛ = +½ (↑) oder mₛ = −½ (↓). Zwei Elektronen im selben Orbital müssen entgegengesetzte Spins haben (↑↓). Der Stern-Gerlach-Versuch (1922) wies den Spin nach, indem ein Silberatomstrahl im Magnetfeld in genau zwei Teilstrahlen aufgespalten wurde.
+
+> **Merke:** Vier Quantenzahlen = vier Fragen: Welche Schale (n)? Welche Form (l)? Welche Richtung (mₗ)? Welcher Spin (mₛ)? Keine zwei Elektronen im selben Atom dürfen auf alle vier Fragen dieselbe Antwort geben (Pauli-Prinzip).
 
 {{IMAGE}}
 
 {{DIAGRAM:atomic-orbitals}}
 
-## Fundamentale Prinzipien der Elektronenkonfiguration
+## Die drei Besetzungsregeln — Wie Elektronen ihre Plätze finden
 
-**Pauliprinzip (Ausschlussprinzip, 1925):** Kein Atom kann zwei Elektronen mit identischen vier Quantenzahlen besitzen. Folge: Jedes Orbital kann maximal 2 Elektronen aufnehmen, und diese müssen entgegengesetzte Spins haben (↑↓).
+Jetzt wissen wir, welche Adressen es gibt. Aber in welcher Reihenfolge werden sie besetzt? Drei Regeln bestimmen das:
 
-**Aufbauprinzip (Energieminimumprinzip):** Elektronen besetzen zunächst die Orbitale mit der niedrigsten Energie. Orbitale füllen sich nicht einfach von n=1 aufwärts — sie folgen der Regel: zuerst das Orbital mit der kleinsten Summe (n+l). Bei gleicher Summe gewinnt das niedrigere n. Die Diagonalregel (1s->2s->2p->3s->3p->4s->3d->...) ergibt sich daraus. Dies ist die Madelung-Regel (auch Klechkowski-Regel):
-1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d < 5p < 6s < 4f < 5d ...
+---
 
-Achtung: 4s liegt energetisch vor 3d (n+l: 4s->4+0=4; 3d->3+2=5). Bei Übergangselementen werden bei der Ionenbildung die 4s-Elektronen zuerst entfernt (4s ist im Ion energetisch höher als 3d).
+**1. Pauliprinzip (Ausschlussprinzip, 1925):** Kein Atom kann zwei Elektronen mit identischen vier Quantenzahlen besitzen. Die Konsequenz: Pro Orbital maximal 2 Elektronen, und diese müssen entgegengesetzte Spins haben (↑↓). Das Pauliprinzip ist der Grund, warum Materie stabil ist — ohne es würden alle Elektronen in das 1s-Orbital kollabieren.
 
-> **Merke:** Aufbau: 4s vor 3d füllen. Ionisierung: 4s vor 3d entfernen. Fe → Fe²⁺: [Ar]3d⁶4s² → [Ar]3d⁶ (beide 4s-Elektronen weg).
+---
 
-**Hundsche Regel (1925):** Orbitale einer Unterschale werden zunächst einfach (mit parallelem Spin ↑↑↑) besetzt, bevor eine Doppelbesetzung stattfindet. Das Ergebnis ist die maximal mögliche Spinmultiplizität (Gesamtspinzustand mit meisten ungepaarten Elektronen) → paramagnetisch. Beispiel: Stickstoff (Z=7) hat 3 ungepaarte Elektronen in den 2p-Orbitalen: ↑|↑|↑. Kohlenstoff (Z=6) hat 2 ungepaarte p-Elektronen: ↑|↑|_.
+**2. Aufbauprinzip und die n+l-Regel (Madelung-Regel)**
 
-## Elektronenkonfigurationen schreiben
+Elektronen besetzen zuerst die energetisch günstigsten Orbitale. Aber welches Orbital hat die niedrigste Energie? Die Antwort ist nicht einfach „n=1 zuerst, dann n=2" — denn ab der dritten Periode überlappen sich die Energieniveaus. Die Madelung-Regel (auch Klechkowski-Regel) gibt die Reihenfolge vor:
 
+**Regel: Zuerst das Orbital mit der kleinsten Summe n+l. Bei gleicher Summe gewinnt das kleinere n.**
 
-**Schreibweise:** [Edelgas-Rumpf] + Valenzelektronen. Edelgase bilden eine besonders stabile, vollständig gefüllte Konfiguration.
+Warum funktioniert das? Orbitale mit kleinem l (vor allem s-Orbitale) dringen näher an den Kern heran und „spüren" mehr Kernladung, was ihre Energie senkt. Ein 4s-Orbital (n+l = 4+0 = 4) liegt deshalb energetisch tiefer als ein 3d-Orbital (n+l = 3+2 = 5), obwohl 3d eine kleinere Hauptquantenzahl hat.
 
-Beispiele (mit Z und Elektronenzahl):
-- Wasserstoff H (Z=1): 1s¹
-- Helium He (Z=2): 1s² → Edelgas, 1. Periode
-- Lithium Li (Z=3): 1s²2s¹ = [He]2s¹
-- Kohlenstoff C (Z=6): [He]2s²2p² → 2 ungepaarte e⁻
-- Natrium Na (Z=11): [Ne]3s¹ → 1 Valenzelektron, Gruppe 1
-- Schwefel S (Z=16): [Ne]3s²3p⁴ → 2 ungepaarte e⁻
-- Eisen Fe (Z=26): [Ar]3d⁶4s² (Achtung: 4s wird vor 3d aufgebaut, aber Ionen → 4s zuerst weg)
-- Kupfer Cu (Z=29): [Ar]3d¹⁰4s¹ (Ausnahme: volle 3d-Schale stabilisiert)
-- Chrom Cr (Z=24): [Ar]3d⁵4s¹ (Ausnahme: halb-gefüllte 3d-Schale stabilisiert)
+Konkret ergibt sich diese Reihenfolge:
+
+| n+l | Orbitale | Reihenfolge |
+|-----|----------|-------------|
+| 1 | 1s | zuerst |
+| 2 | 2s | dann |
+| 3 | 2p, 3s | 2p vor 3s (kleineres n bei gleichem n+l) |
+| 4 | 3p, 4s | 3p vor 4s |
+| 5 | 3d, 4p, 5s | 3d vor 4p vor 5s |
+| 6 | 4d, 5p, 6s | 4d vor 5p vor 6s |
+| 7 | 4f, 5d, 6p, 7s | 4f vor 5d vor 6p vor 7s |
+
+Vollständige Reihenfolge: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d ...
+
+**Der wichtigste Fall:** 4s füllt sich VOR 3d (4+0=4 < 3+2=5). Aber Achtung: Bei der Ionisierung werden die 4s-Elektronen ZUERST entfernt, weil 4s im positiv geladenen Ion energetisch höher liegt als 3d. Aufbau und Abbau folgen also unterschiedlichen Regeln!
+
+> **Merke:** n+l-Regel: Kleinere Summe wird zuerst besetzt. 4s (n+l=4) vor 3d (n+l=5). Bei Ionen aber umgekehrt: 4s wird vor 3d entfernt. Beispiel: Fe → Fe²⁺: [Ar]3d⁶4s² → [Ar]3d⁶.
+
+---
+
+**3. Hundsche Regel — Die Busplatz-Analogie**
+
+Stell dir einen Bus mit Doppelsitzen vor: Neue Fahrgäste setzen sich lieber auf einen leeren Doppelsitz, bevor sie sich neben jemanden quetschen. Genauso verhalten sich Elektronen in gleichenergetischen (entarteten) Orbitalen einer Unterschale: Sie besetzen zuerst alle Orbitale einzeln mit parallelem Spin (↑), bevor die Doppelbesetzung (↑↓) beginnt.
+
+Der physikalische Grund: Elektronen mit gleichem Spin halten sich voneinander fern (Pauli-Abstoßung), was die Coulomb-Abstoßung verringert und die Gesamtenergie senkt. Das Ergebnis ist die maximale Spinmultiplizität — möglichst viele ungepaarte Elektronen.
+
+Beispiele:
+- Stickstoff N (Z=7): 1s² 2s² 2p³ → drei 2p-Orbitale je einfach besetzt: ↑|↑|↑
+- Kohlenstoff C (Z=6): 1s² 2s² 2p² → zwei von drei p-Orbitalen besetzt: ↑|↑|_ (nicht ↑↓|_|_!)
+- Sauerstoff O (Z=8): 1s² 2s² 2p⁴ → erst jetzt beginnt Paarung: ↑↓|↑|↑
+
+> **Merke:** Hundsche Regel = Busplatz-Prinzip: Erst alle Plätze einzeln besetzen (↑↑↑), dann paaren (↑↓). Physikalischer Grund: Parallele Spins minimieren Elektronenabstoßung.
+
+## Elektronenkonfigurationen Schritt für Schritt aufbauen
+
+**Schreibweise:** Langform (alle Unterschalen) oder Kurzform [Edelgas-Rumpf] + Valenzelektronen.
+
+Bauen wir die Konfigurationen systematisch auf:
+
+| Element | Z | Konfiguration | Erklärung |
+|---------|---|---------------|-----------|
+| H | 1 | 1s¹ | 1 Elektron im niedrigsten Orbital |
+| He | 2 | 1s² | 1s voll → Edelgas |
+| Li | 3 | [He] 2s¹ | Neues Stockwerk beginnt |
+| C | 6 | [He] 2s² 2p² | 2 ungepaarte p-Elektronen (Hund!) |
+| N | 7 | [He] 2s² 2p³ | 3 ungepaarte p-Elektronen — halbvoll |
+| O | 8 | [He] 2s² 2p⁴ | Paarung beginnt |
+| Na | 11 | [Ne] 3s¹ | Gruppe 1 → 1 Valenzelektron |
+| S | 16 | [Ne] 3s² 3p⁴ | Analog zu O, eine Periode tiefer |
+| K | 19 | [Ar] 4s¹ | 4s vor 3d (n+l-Regel!) |
+| Ca | 20 | [Ar] 4s² | 4s voll, 3d noch leer |
+| Fe | 26 | [Ar] 3d⁶ 4s² | 4s wurde vor 3d aufgefüllt |
+| Cr | 24 | [Ar] 3d⁵ 4s¹ | **Ausnahme:** halbvolle d-Schale stabilisiert |
+| Cu | 29 | [Ar] 3d¹⁰ 4s¹ | **Ausnahme:** volle d-Schale stabilisiert |
+
+Die Ausnahmen Cr und Cu entstehen, weil halb- und vollgefüllte d-Schalen eine besonders symmetrische Elektronenverteilung haben. Die sogenannte Austauschenergie (Energiegewinn durch parallele Spins in gleichartigen Orbitalen) ist bei 3d⁵ und 3d¹⁰ maximal — das kompensiert den „Verlust" eines 4s-Elektrons.
+
+> **Prüfungstipp:** Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) sind MedAT-Dauerbrenner. Faustregel: Halb- und vollgefüllte d-Schalen sind besonders stabil.
 
 ## Valenz- und Rumpfelektronen
 
-**Valenzelektronen** sind die Elektronen in der äußersten besetzten Schale (und ggf. unvollständigen d-Schalen bei Übergangselementen). Sie bestimmen die Reaktivität und Bindungsfähigkeit eines Elements.
+**Valenzelektronen** sitzen in der äußersten besetzten Schale (bei Hauptgruppenelementen: s- und p-Elektronen) und bestimmen die chemische Reaktivität. Bei Übergangsmetallen zählen auch die unvollständigen d-Elektronen zu den Valenzelektronen.
 
-**Rumpfelektronen** sind alle inneren, vollständig abgeschlossenen Elektronen (im Edelgas-Rumpf). Sie schirmen die Kernladung ab und nehmen an chemischen Reaktionen normalerweise nicht teil.
+**Rumpfelektronen** sind die inneren, abgeschlossenen Schalen (Edelgas-Rumpf). Sie schirmen die Kernladung ab, reagieren aber chemisch nicht.
 
-Für Hauptgruppenelemente gilt: Valenzelektronen = Zahl der äußersten s- und p-Elektronen = Gruppennummer im PSE. Beispiel: Chlor (Gruppe 17) hat 7 Valenzelektronen (3s²3p⁵); nimmt 1 Elektron auf → Cl⁻ mit Edelgaskonfiguration [Ar].
+Für Hauptgruppenelemente gilt eine einfache Regel: Valenzelektronen = Gruppennummer. Chlor (Gruppe 17) hat 7 Valenzelektronen (3s²3p⁵) und nimmt 1 Elektron auf → Cl⁻ mit Edelgaskonfiguration [Ar].
+
+## Hybridisierung — Warum Methan tetraedrisch ist
+
+Die Quantenzahlen erklären einzelne Atome. Aber sobald Atome Bindungen eingehen, mischen sich Orbitale zu neuen **Hybridorbitalen** (Mischung aus verschiedenen Orbitaltypen, die bei Bindungsbildung entstehen):
+
+- **sp³-Hybridisierung:** Ein s- und drei p-Orbitale mischen sich zu vier gleichwertigen sp³-Orbitalen, die tetraedrisch angeordnet sind (Winkel 109,5°). Beispiel: Methan CH₄ — Kohlenstoff bildet 4 äquivalente Bindungen zu Wasserstoff. Auch Wasser (H₂O) und Ammoniak (NH₃) zeigen sp³-Hybridisierung am Zentralatom, wobei freie Elektronenpaare Plätze besetzen.
+- **sp²-Hybridisierung:** Ein s- und zwei p-Orbitale → drei sp²-Orbitale in einer Ebene (Winkel 120°), das übrige p-Orbital steht senkrecht und bildet eine π-Bindung. Beispiel: Ethen C₂H₄ (Doppelbindung = 1 σ + 1 π).
+- **sp-Hybridisierung:** Ein s- und ein p-Orbital → zwei lineare sp-Orbitale (180°), zwei p-Orbitale bilden zwei π-Bindungen. Beispiel: Ethin C₂H₂ (Dreifachbindung = 1 σ + 2 π).
+
+> **Merke:** Einfachbindung → sp³ (tetraedrisch). Doppelbindung → sp² (planar). Dreifachbindung → sp (linear). Die Hybridisierung bestimmt die Molekülgeometrie.
 
 ## Dia- und Paramagnetismus
 
-Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden von Magnetfeldern angezogen). Beispiel: Fe³⁺ ([Ar]3d⁵) hat 5 ungepaarte e⁻ → stark paramagnetisch. Atome ohne ungepaarte Elektronen sind **diamagnetisch** (werden schwach abgestoßen). Beispiel: Zn²⁺ ([Ar]3d¹⁰) → alle gepaart → diamagnetisch. MRT-Kontrastmittel (Gadolinium, Gd³⁺, [Xe]4f⁷) nutzen starken Paramagnetismus (7 ungepaarte f-Elektronen).
+Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
+- **Paramagnetisch** (von Magnetfeldern angezogen): enthält ungepaarte Elektronen. Beispiel: Fe³⁺ ([Ar]3d⁵) hat 5 ungepaarte e⁻ → stark paramagnetisch.
+- **Diamagnetisch** (schwach abgestoßen): alle Elektronen gepaart. Beispiel: Zn²⁺ ([Ar]3d¹⁰) → vollständig gepaart → diamagnetisch.
+- MRT-Kontrastmittel nutzen starken Paramagnetismus: Gadolinium Gd³⁺ ([Xe]4f⁷) hat 7 ungepaarte f-Elektronen.
 
 ## Klinische Relevanz — Übergangsmetalle als Spurenelemente
 
-Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für katalytische und koordinative Funktionen. Die biologische Rolle der Übergangsmetalle (Fe, Cu, Zn, Co, Mn) wird in UK ch-5-03 ausführlich behandelt. Hier das Wichtigste im Überblick:
-- **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette)
+Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für variable Oxidationsstufen und koordinative Funktionen. Die ausführliche biologische Rolle wird in UK ch-5-03 behandelt — hier das Wichtigste:
+- **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette). Der Fe²⁺/Fe³⁺-Wechsel durch die unvollständige 3d-Schale ermöglicht reversible O₂-Bindung.
 - **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Superoxid-Dismutase
 - **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme, Zinkfinger-Transkriptionsfaktoren
 - **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin)
 - **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase)
 
-> **Prüfungstipp:** Die Ausnahmen Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) werden fast jedes Jahr im MedAT abgefragt. Merke: halb- und vollgefüllte d-Schalen sind besonders stabil. Bei Ionen werden immer zuerst die 4s-Elektronen entfernt, nicht die 3d-Elektronen.`,
+> **Prüfungstipp:** Bei Ionen werden immer zuerst die 4s-Elektronen entfernt, nicht die 3d-Elektronen. Die Ausnahmen Cr und Cu werden fast jedes Jahr im MedAT abgefragt.`,
 
       lernziele: [
         "Die vier Quantenzahlen (n, l, mₗ, mₛ) und ihre möglichen Werte nennen und die damit beschriebene Eigenschaft des Elektrons erklären.",

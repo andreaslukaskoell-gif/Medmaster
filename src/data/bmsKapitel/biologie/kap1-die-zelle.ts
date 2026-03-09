@@ -721,22 +721,33 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
         "SGLT",
         "Herzglykoside",
       ],
-      content: `## Passiver Transport — entlang des Gradienten, ohne ATP
+      content: `## Überblick — Passiv vs. Aktiv
 
+Jeder Transport durch die Zellmembran lässt sich in zwei Kategorien einteilen:
+
+| | **Passiv (ohne ATP)** | **Aktiv (mit Energiequelle)** |
+|---|---|---|
+| Richtung | Entlang des Gradienten (bergab) | Gegen den Gradienten (bergauf) |
+| Energie | Keine — der Gradient selbst treibt | ATP (primär) oder Na⁺-Gradient (sekundär) |
+| Beispiele | Diffusion, Osmose, Ionenkanäle, GLUT-Carrier | Na⁺/K⁺-ATPase, SGLT, NCX |
+
+---
+
+## Passiver Transport — entlang des Gradienten, ohne ATP
 
 **1. Einfache Diffusion (ohne Protein)**
-Kleine, unpolare (lipophile, fettlösliche) Moleküle lösen sich in der Lipiddoppelschicht und diffundieren entlang des Konzentrationsgradienten. Beispiele: O2, CO2, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
+Kleine, unpolare (lipophile, fettlösliche) Moleküle lösen sich in der Lipiddoppelschicht und diffundieren entlang des Konzentrationsgradienten. Beispiele: O₂, CO₂, Ethanol, Steroide, fettlösliche Vitamine (A, D, E, K).
 
 **2. Erleichterte Diffusion (mit Membranprotein)**
 Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gradienten, ohne ATP:
 
 | Typ | Eigenschaft | Beispiele |
 |-----|-------------|-----------|
-| **Ionenkanäle** | Sehr schnell, selektiv, schaltbar (spannungs- oder ligandengesteuert) | Na+-, K+-, Ca2+-, Cl⁻-Kanäle |
+| **Ionenkanäle** | Sehr schnell, selektiv, schaltbar (spannungs- oder ligandengesteuert) | Na⁺-, K⁺-, Ca²⁺-, Cl⁻-Kanäle |
 | **Carrier/Transporter** | Langsamer, sättigbar (Kapazitätsgrenze) | GLUT1–4 (Glucose) |
 | **Aquaporine (AQP)** | Nur Wasser | AQP2 in Niere (ADH-reguliert → Wasserrückresorption) |
 
-> **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle schnell; Carrier sättigbar.
+> **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle sind schnell, aber nicht sättigbar; Carrier sind langsamer und sättigbar.
 
 {{IMAGE}}
 
@@ -762,23 +773,45 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 ## Aktiver Transport — gegen den Gradienten
 
+### Primär aktiver Transport (direkt ATP)
 
-**Primär aktiver Transport (direkt ATP)**
-Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **Na+/K+-ATPase**.
+Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: die **Na⁺/K⁺-ATPase**.
 
-- Pro Zyklus: **1 ATP** → **3 Na+ nach außen**, **2 K+ nach innen**
-- Folgen: Aufbau des **Ruhemembranpotenzials** (~-70 mV) — das ist die elektrische Spannung an der Membran einer ruhenden Zelle (innen negativ gegenüber außen); ferner niedrige intrazelluläre Na+-Konzentration (Grundlage für sekundären aktiven Transport und Aktionspotential) und hohe intrazelluläre K+-Konzentration
+- Pro Zyklus: **1 ATP** → **3 Na⁺ nach außen**, **2 K⁺ nach innen**
+- Ergebnis: hohe Na⁺-Konzentration **außen**, hohe K⁺-Konzentration **innen**
+- Aufbau des **Ruhemembranpotenzials** (~−70 mV, innen negativ gegenüber außen)
+- Niedrige intrazelluläre Na⁺-Konzentration = Grundlage für sekundär aktiven Transport und Aktionspotenzial
 
-**Klinisch — Herzglykoside (vertiefend):** Digitalis, Ouabain hemmen die Na+/K+-ATPase → intrazelluläres Na+ erhöht → Na+/Ca2+-Austauscher (NCX) arbeitet weniger → Ca2+ akkumuliert → stärkere Herzkontraktion (**positiv inotrop**, d.h. die Kontraktionskraft steigernd). Einsatz bei Herzinsuffizienz (Herzschwäche), Vorhofflimmern.
+> **Merke:** Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein pro 1 ATP — nicht umgekehrt! Sie ist die wichtigste Pumpe der Zelle.
 
-**Sekundär aktiver Transport (ohne direktes ATP)**
+---
 
-| Typ | Richtung | Beispiel | Klinik |
-|-----|----------|----------|--------|
-| **Symport** | Na+ und Substrat in **dieselbe** Richtung | SGLT1/2: Na+-Glucose-Kotransport (Dünndarm, proximaler Tubulus) | SGLT2-Hemmer (Empagliflozin, Dapagliflozin) → Glucosurie (Zuckerausscheidung im Urin) → Blutzuckersenkung bei Typ-2-Diabetes |
-| **Antiport** | Na+ ein, Substrat **heraus** | Na+/Ca2+-Austauscher (NCX) im Herzmuskel | Siehe Herzglykoside |
+### Sekundär aktiver Transport (ohne direktes ATP)
 
-> **Merke:** Na+/K+-ATPase: 3 Na+ raus, 2 K+ rein (1 ATP). Sekundär aktiv = Na+-Gradient treibt Substrat (Symport/Antiport).`,
+Die Na⁺/K⁺-ATPase baut einen steilen Na⁺-Gradienten auf (außen viel Na⁺, innen wenig). Andere Transporter nutzen diesen Gradienten als Energiequelle — wie ein Wasserrad, das von der Strömung angetrieben wird. Na⁺ strömt "bergab" in die Zelle und zieht dabei ein zweites Substrat mit (oder schiebt eines heraus).
+
+**Symport — gleiche Richtung:**
+Na⁺ und ein zweites Substrat werden in **dieselbe** Richtung transportiert (beide in die Zelle). Beispiel: **SGLT1** im Dünndarm und **SGLT2** im proximalen Tubulus der Niere. Na⁺ strömt entlang seines Gradienten in die Zelle und nimmt Glucose **gegen** deren Gradienten mit. So kann Glucose aus dem Darmlumen bzw. dem Primärharn resorbiert werden, obwohl die Glucose-Konzentration in der Zelle bereits höher ist.
+
+**Antiport — entgegengesetzte Richtung:**
+Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wird. Beispiel: **Na⁺/Ca²⁺-Austauscher (NCX)** im Herzmuskel — 3 Na⁺ rein, 1 Ca²⁺ raus. Weiteres Beispiel: **Na⁺/H⁺-Austauscher (NHE)** — Na⁺ rein, H⁺ raus (pH-Regulation).
+
+| Typ | Richtung | Beispiel | Was wird transportiert? |
+|-----|----------|----------|------------------------|
+| **Symport** | Na⁺ + Substrat in **dieselbe** Richtung | SGLT1/2 | Na⁺ + Glucose beide in die Zelle |
+| **Antiport** | Na⁺ rein, Substrat **heraus** | NCX, NHE | Na⁺ rein ↔ Ca²⁺ oder H⁺ raus |
+
+> **Merke:** Sekundär aktiv = Na⁺-Gradient (von der ATPase aufgebaut) treibt den Transport. Symport = gleiche Richtung; Antiport = entgegengesetzt.
+
+---
+
+## Klinische Vertiefung
+
+**SGLT2-Hemmer (Gliflozine):** Empagliflozin, Dapagliflozin blockieren SGLT2 in der Niere → Glucose wird nicht rückresorbiert → **Glucosurie** (Zuckerausscheidung im Urin) → Blutzuckersenkung bei **Typ-2-Diabetes**. Wichtige Medikamentengruppe in der modernen Diabetestherapie.
+
+**Herzglykoside:** Digitalis, Ouabain hemmen die Na⁺/K⁺-ATPase → intrazelluläres Na⁺ steigt → der Na⁺/Ca²⁺-Austauscher (NCX) kann weniger Ca²⁺ herausschleusen (weil der Na⁺-Gradient schwächer ist) → Ca²⁺ akkumuliert in der Zelle → stärkere Herzkontraktion (**positiv inotrop**, d. h. die Kontraktionskraft steigernd). Einsatz bei Herzinsuffizienz (Herzschwäche) und Vorhofflimmern.
+
+> **Merke:** Herzglykoside hemmen Na⁺/K⁺-ATPase → Na⁺ ↑ innen → NCX arbeitet weniger → Ca²⁺ ↑ → stärkere Kontraktion.`,
       lernziele: [
         "Passiven und aktiven Transport unterscheiden und je ein Beispiel nennen",
         "Osmose und Tonizität erklären sowie die Folgen hypotoner/hypertoner Lösungen (Hämolyse, Krenation)",
@@ -889,6 +922,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
       stichworte: [
         "Sekretorischer Weg",
         "rER",
+        "gER",
         "Golgi",
         "M6P-Targeting",
         "Mitochondrien",
@@ -899,40 +933,14 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: **N
         "Proteasomen",
         "Ubiquitin",
         "Kinozilien",
-        "Geißeln",
         "Flagellen",
         "9+2-Anordnung",
         "Dynein",
-        "Stereozilien",
         "Kartagener-Syndrom",
       ],
-      content: `## Der sekretorische Weg: rER → Golgi → Ziel
+      content: `## Rundgang durch die Zelle
 
-
-Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper) bestimmt sind, durchlaufen den **sekretorischen Weg** in drei Stationen:
-
-**1. Raues ER (rER) — Proteinfabrik:**
-- Mit Ribosomen besetzt → Co-translationale Proteinsynthese
-- **N-Glykosylierung**: Zuckerketten werden an Asparagin-Reste angehängt (Qualitätsmerkmal)
-- **Qualitätskontrolle**: Chaperone (Faltungshelfer-Proteine; Calnexin, Calreticulin) überprüfen Faltung; fehlgefaltete Proteine → ERAD (ER-assoziierter Abbau durch Proteasomen)
-- **ER-Stress**: Bei Überflutung mit fehlgefalteten Proteinen → Unfolded Protein Response (UPR, Stressantwort auf fehlgefaltete Proteine) → bei Überlastung → Apoptose (relevant bei Typ-2-Diabetes: ER-Stress in Beta-Zellen)
-
-**2. Glattes ER (gER) — Lipidsynthese und Entgiftung:**
-- Ohne Ribosomen
-- **Lipidsynthese**: Phospholipide, Steroide, Cholesterin
-- **Detoxifikation**: CYP450-Enzyme in Leberzellen oxidieren Pharmaka, Toxine, Steroide
-- **Ca2+-Speicher**: IP3 → Ca2+-Freisetzung → intrazelluläre Signalkaskade (Muskelkontraktion, Sekretion)
-- Sarkoplasmatisches Retikulum in Muskelzellen = spezialisiertes gER
-
-**3. Golgi-Apparat — Sortierung und Modifikation:**
-- Gestapelte Membransäcke: Cis-Seite (ER-nah) → medial → Trans-Seite (Membran-nah)
-- **Proteinmodifikation**: O-Glykosylierung (an Serin/Threonin), weitere Zuckermodifikationen
-- **Schlüssel für Lysosomales Targeting**: Mannose-6-Phosphat (M6P) wird angehängt → M6P-Rezeptor → Transport zu Lysosomen
-- **Sekretion**: reguliert (auf Signal, z.B. Insulin aus Granula) vs. konstitutiv (immer)
-
-**Klinisch — I-Zell-Krankheit (Mukolipidose II):** Defektes M6P-Tagging → lysosomale Enzyme landen im Blut statt im Lysosom → Substratakkumulation in Zellen.
-
-> **Merke:** rER → Golgi → Lysosom: N-Glykosylierung im ER, M6P-Tag im Golgi als Adresse für Lysosomen. M6P fehlt → I-Zell-Krankheit.
+Eine eukaryotische Zelle funktioniert wie eine Fabrik mit spezialisierten Abteilungen. Jedes Organell hat eine klar definierte Aufgabe — von der Proteinherstellung über Energiegewinnung bis zur Müllentsorgung. Die meisten Krankheiten lassen sich auf Fehlfunktionen einzelner Organellen zurückführen. Wer versteht, **wer was macht**, versteht Zellbiologie.
 
 {{DIAGRAM:endomembrane-system}}
 
@@ -940,124 +948,137 @@ Proteine, die für Membranen, Lysosomen oder die Sekretion (Hormone, Antikörper
 
 ---
 
-## Mitochondrien — Kraftwerk und Endosymbiont
+## 1. Die Proteinfabrik: rER → Golgi → Zielort
 
+Proteine für Membranen, Lysosomen oder den Export (Hormone, Antikörper) durchlaufen eine Fertigungsstraße aus drei Stationen:
+
+**Raues ER (rER)** — Herstellung und Qualitätskontrolle:
+- Ribosomen auf der ER-Membran → **co-translationale Insertion** (Protein wird während der Synthese ins ER geschleust)
+- **Signalpeptid** am Proteinanfang dirigiert das Ribosom zum ER
+- **N-Glykosylierung**: Zuckerketten an Asparagin-Reste → dient als Qualitätsmerkmal
+- Chaperone (Faltungshelfer wie Calnexin) prüfen die Faltung; fehlgefaltete Proteine → Abbau durch Proteasomen
+
+**Golgi-Apparat** — Veredelung und Versand:
+- Gestapelte Membransäcke: **Cis** (ER-nah) → **Medial** → **Trans** (Membran-nah)
+- O-Glykosylierung, weitere Zuckermodifikationen
+- Entscheidender Schritt: **Mannose-6-Phosphat (M6P)** wird an lysosomale Enzyme angehängt → M6P-Rezeptoren sortieren sie in Vesikel Richtung Lysosom
+- Sekretion: **reguliert** (auf Signal, z. B. Insulin) vs. **konstitutiv** (dauerhaft)
+
+**Klinisch:** Bei der **I-Zell-Krankheit** (Mukolipidose II) fehlt das M6P-Tag → lysosomale Enzyme landen im Blut statt im Lysosom → Substratakkumulation. Bei **Mukoviszidose** (ΔF508) erkennt die ER-Qualitätskontrolle das fehlgefaltete CFTR-Protein und baut es ab → kein Chloridkanal in der Membran.
+
+> **Merke:** rER baut Proteine, Golgi sortiert sie. M6P = Adressetikett für Lysosomen. Fehlt M6P → I-Zell-Krankheit.
+
+---
+
+## 2. Recycling und Müllentsorgung: Lysosomen, Proteasomen, Peroxisomen
+
+Proteine sind hergestellt und versandt — doch was passiert mit beschädigten Bauteilen? Drei Systeme kümmern sich um Abbau und Recycling:
+
+**Lysosomen — der Recyclinghof:**
+- Entstehen aus dem Trans-Golgi-Netzwerk; **pH 4,5** durch H⁺-ATPase
+- Enthalten >50 **saure Hydrolasen** (Proteasen, Lipasen, Glykosidasen)
+- **Autophagie**: defekte Organellen → Autophagosomen → Fusion mit Lysosom → Abbau
+- **Heterophagie**: aufgenommene Bakterien (Phagolysosom)
+- Klinisch: Fehlt **ein** Enzym → Substrat akkumuliert → **lysosomale Speicherkrankheit**
+
+| Krankheit | Fehlendes Enzym | Akkumuliertes Substrat |
+|---|---|---|
+| M. Gaucher | Glukozerebrosidase | Glukozerebrosid |
+| M. Tay-Sachs | Hexosaminidase A | GM2-Gangliosid |
+| M. Pompe | Alpha-Glukosidase | Glykogen |
+
+**Proteasomen — der Schredder:**
+- Zytosolische Proteinkomplexe (26S), **keine Membran**
+- Zielproteine werden mit **Ubiquitin** markiert (Polyubiquitin-Kette) → Proteasom erkennt, entfaltet und zerlegt sie
+- Klinisch: Peptide aus dem Proteasom werden auf **MHC-I** geladen → CD8⁺-T-Zell-Erkennung
+
+**Peroxisomen — Spezialabbau:**
+- Einmembranorganellen; **β-Oxidation sehr langkettiger Fettsäuren (VLCFA >C22)**
+- **Katalase** baut H₂O₂ ab (2H₂O₂ → 2H₂O + O₂)
+- Klinisch: **Zellweger-Syndrom** (Peroxisom-Biogenese-Defekt) → VLCFA erhöht → schwere Neurodegeneration
+
+> **Merke:** Lysosom = pH 4,5 + saure Hydrolasen (fehlt eins → Speicherkrankheit). Proteasom = Ubiquitin-markierte Proteine. Peroxisom = VLCFA + Katalase.
+
+---
+
+## 3. Das Kraftwerk: Mitochondrien
 
 {{DIAGRAM:double-membrane-organelles}}
 
-**Struktur:**
-- **Äußere Membran**: glatt, permeabel für kleine Moleküle (Porin-Kanäle)
-- **Innere Membran**: tief gefaltet zu **Cristae** (Einstülpungen der inneren Membran) → enorme Oberflächenvergrößerung für die Atmungskette
-- **Intermembranraum**: zwischen beiden Membranen (H+ werden hierhin gepumpt)
-- **Matrix**: innerster Bereich — hier läuft der Citratzyklus
+Mitochondrien liefern den Großteil des ATP — sind aber gleichzeitig der Todesschalter der Zelle.
 
-**Funktion (ATP-Synthese):**
-Glucose → Glykolyse (Zytoplasma) → Pyruvat → Acetyl-CoA → Citratzyklus (Matrix) → NADH/FADH2 → Atmungskette (innere Membran) → Protonengradient → ATP-Synthase → **~30–32 ATP pro Glucose** (aerob, vs. 2 ATP anaerob)
+**Struktur (vier Kompartimente):**
+- **Äußere Membran**: durchlässig für kleine Moleküle (Porine)
+- **Innere Membran**: stark gefaltet zu **Cristae** → riesige Oberfläche für die Atmungskette
+- **Intermembranraum**: H⁺ werden hierhin gepumpt (Protonengradient)
+- **Matrix**: Ort des Citratzyklus, eigene DNA
 
-**Apoptose:** Bei Zellstress → Cytochrom c wird aus Mitochondrien ins Zytoplasma freigesetzt → Apoptosom → Caspase-9/3-Aktivierung → kontrollierter Zelltod
+**Funktion:** Glucose → Pyruvat (Zytoplasma) → Acetyl-CoA → Citratzyklus (Matrix) → NADH/FADH₂ → Atmungskette (innere Membran) → **~30–32 ATP/Glucose** (aerob) vs. nur 2 ATP (anaerob)
 
-**Endosymbiontentheorie — 5 Belege** (ausführlich: UK "Prokaryoten vs. Eukaryoten"):
-1. Eigene **zirkuläre mtDNA** (~16.500 bp, kodiert 13 Proteine)
-2. **70S-Ribosomen** (bakteriell, nicht 80S)
-3. **Doppelmembran** (innere = ehemalige Bakterienmembran)
-4. **Binäre Fission** (nicht Mitose)
-5. **Antibiotika-Empfindlichkeit** (Chloramphenicol → aplastische Anämie bei hoher Dosis)
+**Apoptose:** Zellstress → **Cytochrom c** wird freigesetzt → Caspase-Kaskade → kontrollierter Zelltod
 
-**Maternale Vererbung:** mtDNA kommt ausschließlich aus dem Ei → mitochondriale Erkrankungen (MELAS, Leber-Optikusneuropathie) werden maternal vererbt.
+**Endosymbiontentheorie — 3 Kernbelege:**
+1. Eigene **zirkuläre mtDNA** (~16.500 bp) + **70S-Ribosomen** (bakteriell)
+2. **Doppelmembran** (innere = ehemalige Bakterienmembran)
+3. Vermehrung durch **Zweiteilung** (wie Bakterien, nicht Mitose)
 
-> **Merke:** Cristae = gefaltete innere Membran = Ort der Atmungskette. Mitochondrien = 5 Bakterien-Belege. Cytochrom c frei → Apoptose.
+**Maternale Vererbung:** mtDNA stammt ausschließlich aus der Eizelle → mitochondriale Erkrankungen (MELAS, LHON) werden mütterlicherseits vererbt. Betroffen sind v. a. energiehungrige Organe: ZNS, Muskulatur, Herz.
 
----
-
-## Lysosomen, Peroxisomen und Proteasomen: Abbau und Recycling
-
-
-**Lysosomen — zellulärer Recyclinghof:**
-- Entstehen aus dem Trans-Golgi-Netzwerk; pH 4,5–5 durch H+-ATPase in der Membran
-- Enthalten >50 **saure Hydrolasen** (Proteasen, Lipasen, Glykosidasen — alle optimiert für pH ~5)
-- **Autophagie**: eigene defekte Organellen werden in Autophagosomen verpackt → Fusion mit Lysosom → Abbau
-- **Heterophagie**: aufgenommene Bakterien/Partikel (Phagolysosom), Rezeptor-Recycling
-
-**Lysosomale Speicherkrankheiten** entstehen, wenn **ein lysosomales Enzym fehlt** → das zugehörige Substrat kann nicht abgebaut werden und **akkumuliert** in der Zelle (Speicherung), mit oft schweren Organ- und Nervenschäden:
-
-| Krankheit | Defektes Enzym | Substrat | Symptome |
-|---|---|---|---|
-| Morbus Gaucher | Glukozerebrosidase | Glukozerebrosid | Hepatosplenomegalie, Knochenschmerzen |
-| Morbus Tay-Sachs | Hexosaminidase A | GM2-Gangliosid | Neurodegeneration, kirschroter Fleck |
-| Morbus Pompe | Alpha-Glukosidase | Glykogen | Myopathie, Herzinsuffizienz |
-| Niemann-Pick C | NPC1-Protein | Cholesterin | Neurodegeneration |
-
-**Peroxisomen:**
-- Einmembranorganellen; entstehen durch Teilung oder de-novo aus ER
-- Funktion: **Beta-Oxidation sehr langkettiger Fettsäuren (VLCFA >C22)**, H2O2-Abbau durch **Katalase** (2H2O2 → 2H2O + O2), Plasmalogen-Synthese (Myelinisierung)
-- Klinisch: **Zellweger-Syndrom** (Peroxisom-Biogenese-Defekt) → VLCFA erhöht → schwere Neurodegeneration; **Adrenoleukodystrophie (ALD)** (X-chromosomal, ABCD1-Defekt) → VLCFA im ZNS
-
-**Proteasomen — molekuläre Schredder:**
-- Keine Membranorganellen; zytosolische Proteinkomplexe (26S = 20S-Kern + 2x19S-Kappen)
-- Abbau von: fehlgefalteten Proteinen, regulatorischen Proteinen (Cycline!), Entzündungsmediatoren
-- **Ubiquitin-System**: **Ubiquitin** ist ein kleines Protein, das als "Abbau-Markierung" an andere Proteine angehängt wird. Fehlgefaltete oder nicht mehr benötigte Proteine werden durch **Polyubiquitin-Ketten** (Lys48-Verknüpfung) markiert → das 26S-Proteasom erkennt Ubiquitin → entfaltet und zerlegt das Protein in kurze Peptide (~8 Aminosäuren)
-- Klinisch:
-  - **MHC-I-Antigenpräsentation**: Peptide aus dem Proteasom werden auf MHC-I geladen → Erkennung durch CD8+-T-Zellen
-  - **Bortezomib** (Proteasom-Inhibitor) beim multiplen Myelom → fehlgefaltete Myelomproteine akkumulieren → Apoptose
-  - **CFTR-DeltaF508** bei Mukoviszidose: fehlgefaltetes CFTR wird durch ERAD + Proteasom abgebaut → kein Cl⁻-Kanal in der Membran
-
-> **Merke:** Lysosom = saures Milieu pH 4,5, saure Hydrolasen. Fehlendes Lysosom-Enzym → Speicherkrankheit. Proteasom + Ubiquitin = Zellmüllentsorgung; Bortezomib blockiert das beim Myelom.
+> **Merke:** Cristae = innere Membran = Atmungskette. Eigene DNA + 70S-Ribosomen + Doppelmembran = Endosymbiont. Cytochrom c frei → Apoptose.
 
 ---
 
-## Kinozilien und Geißeln (Flagellen)
+## 4. Lipidsynthese und Entgiftung: Glattes ER
 
-
-**Aufbau:** Kinozilien und Geißeln haben den gleichen Grundbauplan: **9+2-Anordnung** aus Mikrotubuli — 9 Außendoubletten bilden einen Ring, in der Mitte liegen 2 zentrale Einzeltubuli. Die gesamte Struktur heißt **Axonem** und ist von der Zellmembran umhüllt. Am Übergang zur Zelle sitzt das **Basalkörperchen** (9x3-Tripletts, wie ein Zentriol).
-
-**Bewegungsmechanismus:** **Dynein-Motorproteine** (äußere und innere Dyneinarme) sitzen an den Außendoubletten und gleiten unter **ATP-Verbrauch** an benachbarten Doubletten entlang. Durch die Verankerung im Axonem wird das Gleiten in eine **Biegebewegung** umgewandelt.
-
-**Kinozilien vs. Geißeln:**
-- **Kinozilien**: kurz (~5–10 Mikrometer), **zahlreich** pro Zelle (hunderte), koordinierter Schlag in einer Richtung. Beispiel: **Flimmerepithel der Atemwege** → Schleimtransport (mukoziliäre Clearance); **Eileiter** → Eitransport
-- **Geißeln (Flagellen)**: lang (~50–70 Mikrometer), meist **1–2 pro Zelle**, wellenförmige Bewegung. Beispiel: **Spermien** → Fortbewegung
-
-**Achtung — Stereozilien:** **Stereozilien** sind KEINE echten Zilien! Sie bestehen aus **Aktin-Filamenten** (nicht Mikrotubuli), sind **unbeweglich** und haben **keine 9+2-Struktur**. Vorkommen: **Innenohr** (Haarzellen → mechanische Reizaufnahme) und **Nebenhoden** (Resorption). Der Name ist irreführend — sie sind eigentlich lange Mikrovilli.
-
-**Klinisch — Primäre Ziliendyskinesie (PCD / Kartagener-Syndrom):**
-Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder dyskinetisch. Konsequenzen:
-- **Chronische Bronchitis/Sinusitis**: fehlende mukoziliäre Clearance
-- **Situs inversus** (~50 % der Fälle): Embryonale Nodal-Zilien steuern die Links-Rechts-Achse; bei Defekt → zufällige Anordnung
-- **Männliche Infertilität**: Spermiengeißeln funktionslos
-
-> **Merke:** Kinozilien + Geißeln = 9+2-Mikrotubuli + Dynein. Stereozilien = Aktin (keine echten Zilien!).
+Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als das rER:
+- **Lipidsynthese**: Phospholipide, Steroide, Cholesterin
+- **Detoxifikation**: **CYP450-Enzyme** in Leberzellen oxidieren Medikamente und Toxine
+- **Ca²⁺-Speicher**: IP₃-Signal → Ca²⁺-Freisetzung → Muskelkontraktion, Sekretion
+- In Muskelzellen heißt das gER **Sarkoplasmatisches Retikulum** (spezialisiert auf Ca²⁺-Speicherung)
 
 ---
 
-## Übersicht: Organellen auf einen Blick
+## 5. Zellbewegung: Kinozilien und Geißeln
 
-**Organellen mit zwei (Doppel-)Membranen:** **Mitochondrien**, **Zellkern**. Peroxisom, Lysosom, ER, Golgi haben eine einfache Membran. **Peroxisom:** von eigener Membran umgeben, **Wasserstoffperoxid-Stoffwechsel** (Katalase). **Nukleosom** (Histon-DNA-Komplex) und **Ribosom** (Protein-rRNA-Komplex) haben **keine** eigene Membran.
+**Aufbau:** Beide nutzen das gleiche **Axonem** — die **9+2-Anordnung** aus Mikrotubuli (9 Außendoubletten + 2 zentrale Tubuli). **Dynein-Motorproteine** gleiten unter ATP-Verbrauch an Nachbardoubletten entlang → Biegebewegung.
+
+- **Kinozilien**: kurz (5–10 µm), hunderte pro Zelle, koordinierter Schlag → **Flimmerepithel der Atemwege** (Schleimtransport), **Eileiter** (Eitransport)
+- **Geißeln (Flagellen)**: lang (50–70 µm), 1–2 pro Zelle, wellenförmig → **Spermien**
+- **Achtung — Stereozilien** sind KEINE Zilien! Sie bestehen aus **Aktin** (nicht Mikrotubuli), sind unbeweglich und haben keine 9+2-Struktur. Vorkommen: Innenohr (Haarzellen), Nebenhoden.
+
+**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Autosomal-rezessiver **Dynein-Defekt** → unbewegliche Zilien → chronische Bronchitis/Sinusitis (fehlende mukoziliäre Clearance) + **Situs inversus** (~50 %, weil embryonale Nodal-Zilien die Links-Rechts-Achse bestimmen) + männliche Infertilität.
+
+> **Merke:** Kinozilien + Geißeln = 9+2-Mikrotubuli + Dynein. Stereozilien = Aktin (keine echten Zilien!). Dynein defekt → Kartagener.
+
+---
+
+## Übersicht: Alle Organellen auf einen Blick
 
 | Organell | Membran | Hauptfunktion | Klinischer Bezug |
 |---|---|---|---|
-| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, Cytochrom-c |
-| Raues ER | Einfach | Proteinsynthese, N-Glykosylierung | ER-Stress → Diabetes |
-| Glattes ER | Einfach | Lipidsynthese, Detox, Ca2+-Speicher | CYP450 (Leber) |
+| Raues ER | Einfach | Proteinsynthese, N-Glykosylierung | Mukoviszidose (ER-Qualitätskontrolle) |
 | Golgi-Apparat | Einfach | Sortierung (M6P), O-Glykosylierung | I-Zell-Krankheit |
-| Lysosomen | Einfach | Abbau (pH 4,5), Autophagie | Gaucher, Tay-Sachs |
-| Peroxisomen | Einfach | VLCFA-Abbau, H2O2-Abbau | Zellweger-Syndrom |
-| Proteasomen | Keine | Ubiquitin-markierte Proteine abbauen | Bortezomib (Myelom) |
-| Zentrosom | Keine | Spindelapparat bei Mitose | Ziliendyskinesie |`,
+| Lysosomen | Einfach | Abbau (pH 4,5), Autophagie | Gaucher, Tay-Sachs, Pompe |
+| Proteasomen | Keine | Ubiquitin-markierten Proteinabbau | MHC-I-Antigenpräsentation |
+| Peroxisomen | Einfach | VLCFA-Abbau, H₂O₂-Abbau | Zellweger-Syndrom |
+| Mitochondrien | Doppel | ATP (OXPHOS), Apoptose | MELAS, LHON |
+| Glattes ER | Einfach | Lipidsynthese, Detox, Ca²⁺ | CYP450 (Leber) |
+| Kinozilien | — | Schleimtransport, Eitransport | Kartagener-Syndrom |`,
       lernziele: [
-        "Die wichtigsten Zellorganellen (Mitochondrien, ER, Golgi, Lysosomen, Peroxisomen) mit Struktur und Funktion beschreiben",
-        "Endosymbiontenhypothese für Mitochondrien und Chloroplasten erläutern",
-        "Klinische Beispiele für Organell-Defekte (Mitochondriopathien, Speicherkrankheiten) nennen",
+        "Den sekretorischen Weg (rER → Golgi → Zielort) als zusammenhängende Fertigungsstraße beschreiben",
+        "Lysosomale Speicherkrankheiten als Prinzip erklären (fehlendes Enzym → Substratakkumulation)",
+        "Mitochondrien: Struktur, ATP-Synthese und Endosymbiontentheorie (3 Belege) zusammenfassen",
+        "Klinische Beispiele für Organell-Defekte nennen (I-Zell-Krankheit, Gaucher, MELAS, Kartagener)",
       ],
       merksätze: [
-        "Mitochondrien = Doppelmembran, Cristae, eigene DNA (70S), maternale Vererbung",
-        "rER = Ribosomen + Proteinsynthese + Glykosylierung; gER = Lipidbiosynthese + Detox + Ca²⁺",
-        "Golgi: Cis→Medial→Trans. Mannose-6-Phosphat = Lysosom-Adresse",
-        "Proteasom = 26S (20S-Kern + 19S-Kappen). Ubiquitin-Lys48-Kette → proteasomaler Abbau. Bortezomib = Proteasom-Inhibitor (Myelom-Therapie)",
-        "Lysosomen: pH 4,5 durch H⁺-ATPase. Fehlende Hydrolase → Speicherkrankheit (Gaucher, Tay-Sachs)",
-        "Peroxisomen: VLCFA-Abbau + Katalase. Zellweger = Peroxisom-Biogenese-Defekt",
-        "Ribosomen 80S (Eukaryoten) vs. 70S (Prokaryoten + Mitochondrien) = Antibiotika-Target",
+        "rER baut Proteine → Golgi sortiert mit M6P → Lysosom empfängt. Fehlt M6P → I-Zell-Krankheit",
+        "Lysosom: pH 4,5 + saure Hydrolasen. Fehlt ein Enzym → Speicherkrankheit (Gaucher, Tay-Sachs, Pompe)",
+        "Mitochondrien = Doppelmembran + Cristae + eigene zirkuläre DNA + 70S-Ribosomen → Endosymbiont",
+        "Proteasom baut Ubiquitin-markierte Proteine ab → Peptide auf MHC-I → CD8⁺-T-Zell-Erkennung",
+        "Kinozilien + Geißeln = 9+2 + Dynein. Stereozilien = Aktin (keine Zilien!). Dynein defekt → Kartagener",
       ],
       klinischerBezug:
-        "Mitochondriale Erkrankungen (Mitochondriopathien) betreffen v.a. energieintensive Organe: ZNS, Muskulatur, Herz. Beispiele: MELAS (Schlaganfall-ähnliche Episoden), LHON (Optikusneuropathie). Lysosomale Speicherkrankheiten (M. Gaucher, M. Fabry) werden durch Enzymersatztherapie behandelt. Peroxisomale Defekte: Zellweger-Syndrom (schwere neurologische Störung).",
+        "Mitochondriopathien (MELAS, LHON) betreffen energiehungrige Organe (ZNS, Muskel, Herz) und werden maternal vererbt. Lysosomale Speicherkrankheiten (Gaucher, Tay-Sachs) entstehen durch fehlende Hydrolasen — teils behandelbar durch Enzymersatztherapie. Zellweger-Syndrom (Peroxisomen-Defekt) und Kartagener-Syndrom (Dynein-Defekt) zeigen, wie spezifisch Organell-Defekte zu Krankheitsbildern führen.",
       selfTest: [
         {
           question: "Welche Funktion hat das raue endoplasmatische Retikulum (rER)?",
@@ -1070,7 +1091,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
           ],
           correctIndex: 1,
           explanation:
-            "Das raue ER ist mit Ribosomen besetzt und synthetisiert Proteine, die für den sekretorischen Weg (Export, Membran, Lysosomen) bestimmt sind. Lipidsynthese und Entgiftung sind Funktionen des glatten ER.",
+            "Das raue ER ist mit Ribosomen besetzt und synthetisiert Proteine für den sekretorischen Weg (Export, Membran, Lysosomen). Lipidsynthese und Entgiftung sind Funktionen des glatten ER.",
           difficulty: 1 as const,
           tags: ["Organellen", "ER"],
         },
@@ -1085,7 +1106,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
           ],
           correctIndex: 2,
           explanation:
-            "Im cis-Golgi werden lysosomale Enzyme mit Mannose-6-Phosphat markiert. M6P-Rezeptoren im trans-Golgi-Netzwerk erkennen dieses Signal und sortieren die Enzyme in Vesikel Richtung Lysosom.",
+            "Im Golgi werden lysosomale Enzyme mit Mannose-6-Phosphat markiert. M6P-Rezeptoren im trans-Golgi-Netzwerk sortieren die Enzyme in Vesikel Richtung Lysosom. Fehlt das M6P-Tag → I-Zell-Krankheit.",
           difficulty: 2 as const,
           tags: ["Lysosomen", "Targeting"],
         },
@@ -1100,7 +1121,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
           ],
           correctIndex: 2,
           explanation:
-            "Die Komplexe I–IV der Atmungskette und die ATP-Synthase (Komplex V) sitzen in der inneren Mitochondrienmembran. Die Cristae-Faltung vergrößert die Oberfläche enorm.",
+            "Die Komplexe I–IV der Atmungskette und die ATP-Synthase sitzen in der inneren Mitochondrienmembran. Die Cristae-Faltung vergrößert die Oberfläche enorm.",
           difficulty: 1 as const,
           tags: ["Mitochondrien", "Atmungskette"],
         },
@@ -1115,7 +1136,7 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
           ],
           correctIndex: 2,
           explanation:
-            "Mitochondrien haben zirkuläre DNA (ohne Histone), 70S-Ribosomen und teilen sich durch Zweiteilung — alles Merkmale, die auf einen bakteriellen Ursprung (α-Proteobakterien) hinweisen.",
+            "Mitochondrien haben zirkuläre DNA (ohne Histone), 70S-Ribosomen und teilen sich durch Zweiteilung — alles Merkmale, die auf einen bakteriellen Ursprung hinweisen.",
           difficulty: 2 as const,
           tags: ["Endosymbiontentheorie", "Evolution"],
         },
@@ -1130,9 +1151,24 @@ Autosomal-rezessiver Defekt der **Dyneinarme** → Zilien sind unbeweglich oder 
           ],
           correctIndex: 1,
           explanation:
-            "Morbus Gaucher ist eine lysosomale Speicherkrankheit: durch Glucocerebrosidase-Mangel akkumuliert Glucocerebrosid in Makrophagen (Gaucher-Zellen). Weitere Beispiele: Tay-Sachs (Hexosaminidase A), Morbus Pompe (α-Glucosidase).",
+            "Morbus Gaucher ist eine lysosomale Speicherkrankheit: Glucocerebrosidase-Mangel → Glucocerebrosid akkumuliert in Makrophagen (Gaucher-Zellen). Weitere Beispiele: Tay-Sachs, Pompe.",
           difficulty: 2 as const,
           tags: ["Lysosomen", "Speicherkrankheiten"],
+        },
+        {
+          question: "Welche Aussage zu Stereozilien ist richtig?",
+          options: [
+            "Sie besitzen eine 9+2-Mikrotubuli-Anordnung",
+            "Sie werden durch Dynein-Motorproteine bewegt",
+            "Sie bestehen aus Aktin und sind unbeweglich",
+            "Sie kommen im Flimmerepithel der Atemwege vor",
+            "Ihr Defekt verursacht das Kartagener-Syndrom",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Stereozilien sind KEINE echten Zilien — sie bestehen aus Aktin-Filamenten, sind unbeweglich und haben keine 9+2-Struktur. Sie kommen im Innenohr (Haarzellen) und Nebenhoden vor. Das Kartagener-Syndrom betrifft echte Kinozilien/Geißeln (Dynein-Defekt).",
+          difficulty: 2 as const,
+          tags: ["Zilien", "Zytoskelett"],
         },
       ],
       altfrage: {
@@ -1396,22 +1432,29 @@ Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kon
         "Cycline",
         "Trisomie",
       ],
-      content: `## Der Zellzyklus
+      content: `## Der Zellzyklus — Überblick
 
+Bevor sich eine Zelle teilen kann, muss sie sich vorbereiten: wachsen, ihre DNA verdoppeln und alles auf Fehler prüfen. Dieser Ablauf heißt **Zellzyklus** und besteht aus der **Interphase** (G1 → S → G2) und der **M-Phase** (Mitose + Zytokinese).
 
-**G1-Phase (Gap 1, erste Wachstumsphase):**
-Proteinsynthese, Zellwachstum, Erfüllung der Voraussetzungen für DNA-Replikation. Zellen, die dauerhaft nicht teilen (differenzierte Zellen wie Neuronen, Muskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase). Der **G1/S-Checkpoint** (Restriktionspunkt) überwacht, ob die Zelle groß genug ist und ob die DNA intakt ist. Schlüsselmolekül: **Cyclin D / CDK4** → Phosphorylierung von Rb (Retinoblastom-Protein) → Freigabe von E2F → Transkription von S-Phase-Genen. Bei Krebszellen ist dieser Checkpoint oft defekt (Rb-Mutation, Cyclin-D-Überexpression).
+| Phase | Was passiert? | Dauer (Mensch) |
+|-------|--------------|----------------|
+| **G1** (Gap 1) | Zellwachstum, Proteinsynthese | variabel (Stunden bis Jahre) |
+| **S** (Synthese) | DNA-Replikation: 2n → 4n DNA-Gehalt | 6–8 h |
+| **G2** (Gap 2) | Kontrolle, weitere Vorbereitung | 2–4 h |
+| **M** (Mitose) | Kernteilung + Zytokinese | ~1 h |
 
-**S-Phase (Synthese-Phase):**
-DNA-Replikation: Der haploide DNA-Gehalt verdoppelt sich. Aus 2n-DNA-Menge wird 4n-DNA-Menge (die Chromosomenzahl bleibt 2n, aber jedes Chromosom besteht nun aus 2 Schwesterchromatiden). Histon-Synthese läuft parallel zur DNA-Replikation. Dauert 6–8 h beim Menschen.
+Zellen, die sich dauerhaft nicht teilen (z. B. Neuronen, Herzmuskelzellen), verlassen den Zyklus in die **G0-Phase** (Ruhephase).
 
-**G2-Phase (Gap 2):**
-Kontrolle der replizierten DNA, weitere Zellvergrößerung. **G2/M-Checkpoint**: Wird die DNA-Replikation vollständig abgeschlossen? Ist alles repariert? Schlüsselmolekül: **Cyclin B / CDK1** (MPF, Maturation Promoting Factor) → löst Mitose aus.
+**Checkpoints — die Qualitätskontrolle:**
+**Cyclin-CDK-Komplexe** treiben den Zellzyklus an. An drei Checkpoints wird geprüft, ob alles in Ordnung ist:
 
-**M-Phase (Mitose + Zytokinese):**
-Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinetochor-Komplex prüft, ob alle Chromosomen an Spindelfasern angehängt sind → sonst kein Anaphase-Beginn).
+- **G1/S-Checkpoint** (Restriktionspunkt): DNA intakt? Zelle groß genug? → Cyclin D / CDK4 phosphoryliert Rb → E2F wird frei → S-Phase-Gene werden aktiviert
+- **G2/M-Checkpoint:** DNA vollständig repliziert? Alles repariert? → Cyclin B / CDK1 (MPF) löst Mitose aus
+- **Spindel-Checkpoint** (M-Phase): Alle Chromosomen an Spindelfasern angeheftet? → Erst dann Anaphase
 
-> **Merke:** G0 = Ruhephase, G1/S = Tumor-Checkpoint (Rb/E2F), G2/M = CDK1/CyclinB. Tumorzellen überwinden Checkpoints durch Mutationen in p53, Rb, Cyclin-Genen.
+Bei Krebszellen sind diese Checkpoints oft defekt (Mutationen in **p53**, **Rb**, Cyclin-Genen) → unkontrollierte Teilung.
+
+> **Merke:** Cyclin-CDK-Komplexe treiben den Zellzyklus. G1/S = Cyclin D/CDK4, G2/M = Cyclin B/CDK1. Checkpoints prüfen: DNA intakt? Repliziert? Spindel korrekt?
 
 {{DIAGRAM:cell-cycle}}
 
@@ -1419,59 +1462,60 @@ Kernspaltung + Zellteilung. Kontrolliert durch den **Spindel-Checkpoint** (Kinet
 
 ---
 
-## Mitose — Somatische Zellteilung
+## Mitose — identische Kopien für Wachstum und Reparatur
 
+Die Mitose erzeugt aus einer Mutterzelle **2 genetisch identische Tochterzellen** (2n → 2×2n). Sie dient dem Wachstum, der Gewebeerneuerung und der Wundheilung.
 
 {{DIAGRAM:mitosis}}
 
-**Prophase:**
-Chromosomen kondensieren (werden sichtbar durch Histon-H3-Phosphorylierung). Das **Zentrosom** dupliziert sich und wandert zu den Polen. Die **Kernhülle löst sich auf**. Der **Spindelapparat** (Mikrotubuli aus Zentrosomen) beginnt sich zu bilden.
+**Prophase:** Chromosomen kondensieren und werden sichtbar. Zentrosomen wandern zu den Polen. Der Spindelapparat (Mikrotubuli) beginnt sich zu bilden. Die Kernhülle löst sich auf.
 
-**Prometaphase:**
-Kernhülle vollständig aufgelöst. Spindelmikrotubuli heften sich an die **Kinetochore** der Chromosomen (Proteinstruktur am Zentromer). Chromosomen bewegen sich chaotisch.
+**Prometaphase:** Spindelmikrotubuli heften sich an die **Kinetochore** (Proteinstrukturen am Zentromer der Chromosomen). Chromosomen bewegen sich chaotisch.
 
-**Metaphase:**
-Alle Chromosomen sind an der **Metaphasenplatte** (Äquatorialplatte) ausgerichtet. **Spindel-Checkpoint** aktiv: Erst wenn alle Kinetochore besetzt sind → Signal für Anaphase.
+**Metaphase:** Alle Chromosomen reihen sich an der **Metaphasenplatte** (Äquatorialplatte) auf. Der Spindel-Checkpoint prüft: Sind alle Kinetochore besetzt? Erst dann → Anaphase.
 
-**Anaphase:**
-**Schwesterchromatiden trennen sich** (Protease Separase spaltet Cohesin, das die Chromatiden zusammenhält). Die Chromatiden werden zu entgegengesetzten Polen gezogen (Motorproteine: Kinesin, Dynein). Ergebnis: 46 Chromosomen pro Pol.
+**Anaphase:** Die **Schwesterchromatiden trennen sich** — Separase spaltet das Cohesin, das sie zusammenhielt. Die Chromatiden werden zu entgegengesetzten Polen gezogen. Ergebnis: 46 Chromosomen pro Pol.
 
-**Telophase:**
-Chromosomen dekondensieren. **Kernhülle bildet sich neu** (aus ER-Membranen). Nukleolus taucht wieder auf.
+**Telophase:** Chromosomen dekondensieren. Die Kernhülle bildet sich neu. Der Nukleolus taucht wieder auf.
 
-**Zytokinese:**
-Zellteilung durch **Kontraktilen Ring** (Aktin + Myosin II) → Einschnürung → 2 Tochterzellen. In Pflanzenzellen: Zellplatte (Phragmoplast aus Golgi-Vesikeln).
+**Zytokinese:** Ein kontraktiler Ring (Aktin + Myosin II) schnürt die Zelle ein → 2 Tochterzellen. Bei Pflanzenzellen: Zellplatte statt Einschnürung.
 
-> **Merke:** Anaphase = Schwesterchromatiden trennen sich (Cohesin gespalten). NICHT die homologen Chromosomen! Das ist Meiose I.
+> **Merke:** Mitose-Anaphase: **Schwesterchromatiden** trennen sich (2n → 2n). Eselsbrücke: **S**chwestern trennen sich bei der **S**omatischen Teilung.
 
 ---
 
-## Meiose — Keimzellteilung
+## Meiose — genetische Vielfalt für die Fortpflanzung
 
+Die Meiose erzeugt aus einer Keimzelle **4 genetisch verschiedene haploide Zellen** (2n → 4×n). Sie findet nur in den Gonaden (Eierstöcke, Hoden) statt.
 
 {{DIAGRAM:meiosis}}
 
-**Meiose I — Reduktionsteilung:**
-Reduziert den Chromosomensatz von diploid (2n) auf haploid (n).
+### Meiose I — Reduktionsteilung (das Besondere!)
 
-*Prophase I (am längsten, Unterst.: Leptotän → Zygotän → Pachytän → Diplotän → Diakinese):*
-- **Zygotän:** Homologe Chromosomen lagern sich zusammen (**synapsis**) und bilden **Bivalente** (Tetraden: 4 Chromatiden)
-- **Pachytän:** **Crossing-over** findet statt! Am **Synaptonemalcomplex** tauschen homologe Chromosomen DNA-Segmente aus (Rekombination). Erzeugt neue Allel-Kombinationen → genetische Vielfalt!
-- **Diplotän:** Homologe beginnen, sich zu trennen. Sichtbar werden **Chiasmata** (physische Kreuzungspunkte des Crossing-overs)
+**Prophase I** (die längste Phase — hier passiert das Entscheidende):
+- Homologe Chromosomen (eines vom Vater, eines von der Mutter) lagern sich zusammen und bilden **Bivalente** (= Tetraden: 4 Chromatiden insgesamt)
+- **Crossing-over:** Homologe Chromosomen tauschen Stücke untereinander aus → neue Allel-Kombinationen entstehen. **Deshalb sind Geschwister verschieden**, obwohl sie dieselben Eltern haben!
+- Sichtbar werden die Austauchstellen als **Chiasmata** (physische Kreuzungspunkte)
 
-*Metaphase I:*
-**Bivalente** (nicht einzelne Chromosomen wie in der Mitose) richten sich an der Metaphasenplatte aus. **Zufällige Ausrichtung der Bivalente** → weitere Quelle genetischer Variabilität (bei 23 Bivalenten: 2²³ = 8,4 Millionen verschiedene Kombinationen).
+**Metaphase I:** Die **Bivalente** (nicht einzelne Chromosomen wie bei der Mitose!) richten sich an der Metaphasenplatte aus. Welches Chromosom nach welchem Pol wandert, ist **zufällig** → bei 23 Chromosomenpaaren: 2²³ = **8,4 Millionen** verschiedene Kombinationen (zusätzlich zum Crossing-over).
 
-*Anaphase I:*
-**Homologe Chromosomen trennen sich** (nicht die Schwesterchromatiden!). Jeder Pol erhält ein Chromosom pro homologem Paar (jeweils aus 2 Schwesterchromatiden bestehend). Das Cohesin an Zentromerregionen bleibt intakt (Schutzmechanismus durch Shugoshin).
+**Anaphase I — DER entscheidende Unterschied zur Mitose:**
 
-*Telophase I + Zytokinese I:*
-2 haploide Zellen mit je n Chromosomen (jedes Chromosom = 2 Schwesterchromatiden).
+| | Mitose-Anaphase | Meiose-I-Anaphase |
+|---|---|---|
+| **Was trennt sich?** | Schwesterchromatiden | **Homologe Chromosomen** |
+| **Ergebnis** | 2n → 2n (identisch) | **2n → n (Reduktion!)** |
+| **Chromosomen am Pol** | 46 Einzelchromatiden | 23 Chromosomen (je 2 Schwesterchromatiden) |
 
-**Meiose II — Äquationsteilung (wie Mitose):**
-Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide Zellen (n), genetisch verschieden.
+Die homologen Chromosomen werden zu entgegengesetzten Polen gezogen. Jeder Pol erhält **ein** Chromosom pro Paar. Die Schwesterchromatiden bleiben noch verbunden!
 
-> **Merke:** Meiose I = homologe Chromosomen trennen sich (Reduktion). Meiose II = Schwesterchromatiden trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
+**Telophase I + Zytokinese I:** 2 haploide Zellen mit je n Chromosomen (jedes noch aus 2 Schwesterchromatiden bestehend).
+
+### Meiose II — Äquationsteilung (läuft wie die Mitose)
+
+Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 haploide Zellen (n)**, genetisch verschieden.
+
+> **Merke:** Meiose I = **homologe Chromosomen** trennen sich (Reduktion 2n→n). Meiose II = **Schwesterchromatiden** trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
 
 ---
 
@@ -1481,44 +1525,46 @@ Trennung der Schwesterchromatiden in jeder haploiden Zelle. Ergebnis: 4 haploide
 |---------|--------|--------|
 | Zelltyp | Somatische Zellen | Keimzellen (Gonaden) |
 | Teilungen | 1 | 2 (I + II) |
-| Tochterzellen | 2 | 4 |
-| Chromosomensatz | Diploid (2n → 2n) | Haploid (2n → n) |
-| Genetische Identität | Identisch | Genetisch verschieden |
-| Crossing-over | Nein (praktisch nie) | Ja (Prophase I) |
+| Tochterzellen | 2 (identisch) | 4 (genetisch verschieden) |
+| Chromosomensatz | 2n → 2n | 2n → n |
+| Crossing-over | Nein | Ja (Prophase I) |
 | Bivalente | Nein | Ja (Meiose I) |
+| Was trennt sich in Anaphase? | Schwesterchromatiden | I: Homologe; II: Schwesterchromatiden |
 | Funktion | Wachstum, Reparatur | Gametenbildung |
+
+> **Merke:** Mitose = 1 Teilung → 2 identische Zellen. Meiose = 2 Teilungen → 4 verschiedene Zellen. Der Schlüssel: Meiose I trennt Homologe!
 
 ---
 
 ## Non-disjunction und Chromosomenaberrationen
 
-**Non-disjunction** = fehlerhafte Chromosomentrennung → eine Tochterzelle erhält ein Chromosom zu viel, die andere zu wenig.
+**Non-disjunction** (Nicht-Trennung) = Chromosomen werden bei der Meiose fehlerhaft verteilt → eine Tochterzelle bekommt ein Chromosom zu viel (Trisomie), die andere zu wenig (Monosomie).
 
-**Kann in der Meiose I oder II auftreten:**
-- **Meiose I:** Homologe Chromosomen trennen sich nicht → alle 4 Tochterzellen betroffen
-- **Meiose II:** Schwesterchromatiden trennen sich nicht → 2 von 4 Tochterzellen betroffen (2 normal, 2 mit Aberration)
+**Wann kann es passieren?**
+- **In Meiose I:** Homologe trennen sich nicht → **alle 4** Keimzellen betroffen
+- **In Meiose II:** Schwesterchromatiden trennen sich nicht → **2 von 4** betroffen (die anderen 2 sind normal)
 
 **Häufige Chromosomenaberrationen:**
 
-| Chromosom | Aberration | Syndrom | Häufigkeit |
-|---|---|---|---|
-| Trisomie 21 | +21 | Down-Syndrom | 1:700, steigt mit Mutteralter |
-| Trisomie 18 | +18 | Edwards-Syndrom | 1:5.000, meist letal |
-| Trisomie 13 | +13 | Patau-Syndrom | 1:10.000, meist letal |
-| 45,X0 | Monosomie X | Turner-Syndrom | 1:2.500 Frauen |
-| 47,XXY | Trisomie X | Klinefelter-Syndrom | 1:1.000 Männer |
+| Aberration | Syndrom | Häufigkeit |
+|---|---|---|
+| Trisomie 21 (+21) | **Down-Syndrom** | 1:700, steigt mit Mutteralter |
+| Trisomie 18 (+18) | Edwards-Syndrom | 1:5.000, meist letal |
+| Trisomie 13 (+13) | Patau-Syndrom | 1:10.000, meist letal |
+| 45,X0 (Monosomie X) | Turner-Syndrom | 1:2.500 Frauen |
+| 47,XXY | Klinefelter-Syndrom | 1:1.000 Männer |
 
-**Risikofaktoren:** Mütterliches Alter bei Trisomien (Oozyten werden in Prophase I arretiert und mit dem Alter schlechter kontrolliert). Pränatale Diagnostik: Amniozentese (15.–18. SSW), Chorionzottenbiopsie (10.–12. SSW), nichtinvasive Pränataldiagnostik (NIPD, cell-free fetal DNA ab 10. SSW).
+**Warum steigt das Risiko mit dem Alter der Mutter?** Oozyten (Eizellen) werden bereits vor der Geburt in der Prophase I arretiert und verharren dort jahrzehntelang. Je älter die Frau, desto länger war die Eizelle arretiert → die Kontrollmechanismen werden fehleranfälliger.
 
-> **Merke:** Trisomie 21 = häufigste Chromosomenaberration Lebendgeborener; Non-disjunction in Meiose I: alle 4 Keimzellen betroffen; in Meiose II: 2 von 4.`,
+**Pränatale Diagnostik:** Amniozentese (15.–18. SSW), Chorionzottenbiopsie (10.–12. SSW), nichtinvasive Pränataldiagnostik (NIPD, cell-free fetal DNA ab 10. SSW).
+
+> **Merke:** Trisomie 21 = häufigste Chromosomenaberration Lebendgeborener. Non-disjunction in Meiose I → alle 4 Keimzellen betroffen; in Meiose II → 2 von 4.`,
       merksätze: [
-        "Mitose: 2n → 2 × 2n (identisch). Meiose: 2n → 4 × n (genetisch verschieden). Der Schlüssel: Meiose hat 2 Teilungen!",
-        "Crossing-over: Austausch von DNA-Segmenten zwischen homologen Chromosomen in der Prophase I. Erzeugt genetische Vielfalt.",
-        "Anaphase Mitose/Meiose II: Schwesterchromatiden trennen sich. Anaphase I (Meiose): Homologe Chromosomen trennen sich.",
-        "Spindel-Checkpoint: Erst wenn ALLE Kinetochore besetzt sind, beginnt die Anaphase. Fehler → Non-disjunction.",
-        "Non-disjunction → Trisomie (47 Chromosomen) oder Monosomie (45). Trisomie 21 = Down-Syndrom.",
-        "G0-Phase: Ruhephase, aus der Zellen nicht mehr in den Zellzyklus zurückkehren (Neurone, Herzmuskelzellen).",
-        "Cyclin D/CDK4 → G1/S-Checkpoint. Cyclin B/CDK1 → G2/M-Checkpoint. Cycline schwanken; CDKs sind konstant.",
+        "Mitose: 2n → 2 × 2n (identisch). Meiose: 2n → 4 × n (genetisch verschieden). Meiose hat 2 Teilungen!",
+        "DER Unterschied: Mitose-Anaphase trennt Schwesterchromatiden. Meiose-I-Anaphase trennt HOMOLOGE Chromosomen (2n → n).",
+        "Crossing-over: Homologe tauschen DNA-Stücke in der Prophase I → neue Kombinationen. Deshalb sind Geschwister verschieden.",
+        "Checkpoints: G1/S (Cyclin D/CDK4), G2/M (Cyclin B/CDK1), Spindel. Bei Defekt → Krebs oder Non-disjunction.",
+        "Non-disjunction → Trisomie (47) oder Monosomie (45). Trisomie 21 = Down-Syndrom, häufigste bei Lebendgeborenen.",
       ],
       lernziele: [
         "Mitose-Phasen (Prophase, Metaphase, Anaphase, Telophase) beschreiben und Zytokinese erklären",

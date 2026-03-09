@@ -31,64 +31,133 @@ export const chemKapReaktionen: Kapitel = {
         "OIL RIG",
         "Fällungsreaktion",
       ],
-      content: `## Grundbegriffe chemischer Reaktionen
+      content: `Jede chemische Reaktion folgt denselben Grundprinzipien: Energie muss investiert werden (Aktivierungsenergie), und am Ende ist die Welt energetisch anders als vorher. Bevor wir die verschiedenen Reaktionstypen katalogisieren, verstehen wir zuerst die drei Grundfragen, die jede Reaktion beantworten muss: **Läuft sie ab? Wie schnell? Und was passiert dabei?**
 
-Jeder Stoffwechselvorgang im Körper, jede Medikamentenwirkung und jede Laboranalyse beruht auf chemischen Reaktionen. Eine **chemische Reaktion** ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden — im Unterschied zu physikalischen Vorgängen (z. B. Schmelzen), bei denen die Molekülstruktur erhalten bleibt. Das Gesetz der Massenerhaltung (Lavoisier, 1789): Die Gesamtmasse der Edukte ist gleich der Gesamtmasse der Produkte. Atome werden dabei weder erzeugt noch vernichtet, nur umgeordnet.
+## 1. Was treibt Reaktionen an? — Die Gibbs-Energie
 
-> **Merke:** Bei jeder chemischen Reaktion gilt: Masse der Edukte = Masse der Produkte. Die Anzahl jeder Atomsorte bleibt auf beiden Seiten der Gleichung gleich.
+Eine chemische Reaktion ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden. Atome werden dabei weder erzeugt noch vernichtet (Massenerhaltung, Lavoisier 1789). Aber warum laufen manche Reaktionen von selbst ab und andere nicht?
 
-**Wichtige Grundbegriffe:**
-- **Edukte (Reaktanten):** Ausgangsstoffe, die in die Reaktion eingehen
-- **Produkte:** Stoffe, die bei der Reaktion entstehen
-- **Reaktionsgleichung:** Symbolische Darstellung mit ausgeglichenen Koeffizienten
-- **Stöchiometrische Koeffizienten:** Ganzzahlige Verhältnisse der beteiligten Mol-Mengen
-- **Reaktionspfeil:** → (irreversibel) bzw. ⇌ (reversibel/Gleichgewicht)
+Die Antwort liegt in der **Gibbs-Energie** (freie Enthalpie):
+
+**ΔG = ΔH − T·ΔS**
+
+Diese Gleichung hat drei Bestandteile, die zusammenspielen:
+
+- **ΔH (Enthalpie, Reaktionswärme):** Wird Wärme frei (ΔH < 0, exotherm) oder muss Wärme zugeführt werden (ΔH > 0, endotherm)? Exotherme Reaktionen setzen Energie frei, weil die Produkte energieärmere Bindungen haben als die Edukte.
+- **ΔS (Entropie, Unordnung):** Nimmt die Unordnung zu (ΔS > 0, z. B. Gas entsteht) oder ab (ΔS < 0, z. B. zwei Gase bilden einen Feststoff)? Die Natur „bevorzugt" Unordnung — ein positives ΔS treibt Reaktionen an.
+- **T (Temperatur in Kelvin):** Verstärkt den Entropie-Beitrag. Bei hoher Temperatur wird T·ΔS groß und kann ΔH überstimmen.
+
+**Spontan (exergon)** heißt: ΔG < 0. **Nicht spontan (endergon):** ΔG > 0.
+
+Damit ergeben sich vier Szenarien:
+
+| ΔH | ΔS | ΔG | Beispiel |
+|----|----|----|----------|
+| < 0 (exotherm) | > 0 (mehr Unordnung) | **immer < 0** → spontan bei jeder T | Verbrennung von Glucose |
+| < 0 (exotherm) | < 0 (weniger Unordnung) | bei **niedriger T** spontan | Gefrieren von Wasser |
+| > 0 (endotherm) | > 0 (mehr Unordnung) | bei **hoher T** spontan | Auflösen von NH₄NO₃ in Wasser |
+| > 0 (endotherm) | < 0 (weniger Unordnung) | **nie spontan** | Diamantsynthese unter Normaldruck |
+
+> **Merke:** ΔG = ΔH − T·ΔS bestimmt, ob eine Reaktion spontan abläuft. Exotherm (ΔH < 0) hilft, ist aber nicht genug — auch die Entropie entscheidet. „Exotherm = spontan" ist eine klassische MedAT-Falle.
+
+**Rechenbeispiel — Energiebilanz:**
+Verbrennung von 1 mol Ethanol: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O; ΔH = −1367 kJ/mol.
+Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Physiologischer Brennwert: 29,7 kJ/g (= 7,1 kcal/g) — fast doppelt so viel wie Kohlenhydrate (4 kcal/g).
+
+**Satz von Hess:** Die Reaktionsenthalpie ist wegunabhängig — nur Anfangs- und Endzustand zählen. ΔH_gesamt = ΣΔH_Teilschritte. Das erlaubt die Berechnung unbekannter ΔH-Werte aus Bildungsenthalpien.
+
+Biologisch nutzt die Zelle **energetische Kopplung**: Die exergone ATP-Hydrolyse (ΔG° ≈ −30,5 kJ/mol) treibt endergone Biosynthesen an — so werden thermodynamisch ungünstige Prozesse möglich.
+
+---
+
+## 2. Was bestimmt die Geschwindigkeit? — Aktivierungsenergie und Katalyse
+
+Dass eine Reaktion spontan ist (ΔG < 0), sagt nichts darüber, wie schnell sie abläuft. Holz verbrennt spontan an Luft (ΔG << 0), aber ohne Streichholz passiert nichts. Der Grund: Jede Reaktion muss eine **Aktivierungsenergie E_A** (Energiebarriere, die Edukte überwinden müssen) überwinden — die Energiebarriere zwischen Edukten und dem Übergangszustand.
 
 {{IMAGE}}
 
-## Die vier klassischen Reaktionstypen
+Drei Faktoren bestimmen die Geschwindigkeit:
 
-| Reaktionstyp | Schema | Beispiel | Klinischer Bezug |
+**Temperatur:** Höhere Temperatur → mehr Teilchen haben genug Energie, um E_A zu überschreiten. Faustregel (RGT-Regel): +10 °C verdoppelt bis verdreifacht die Geschwindigkeit.
+
+**Konzentration:** Mehr Teilchen → mehr Zusammenstöße → mehr Reaktion (gilt nicht bei Enzym-Sättigung, 0. Ordnung).
+
+**Katalysator:** Senkt E_A, indem er einen alternativen Reaktionsweg bereitstellt.
+
+---
+
+### Katalyse im Detail — Warum beide Richtungen schneller werden
+
+Ein **Katalysator** senkt die Aktivierungsenergie, ohne selbst verbraucht zu werden und ohne ΔG oder ΔH zu verändern. Aber warum beschleunigt er Hin- UND Rückreaktion gleichermaßen?
+
+Der Schlüssel liegt im Energieprofil: Die Aktivierungsenergie ist eine Barriere, die von beiden Seiten überwunden werden muss — von den Edukten zum Übergangszustand, aber auch von den Produkten zurück zum Übergangszustand. Senkt ein Katalysator die Barriere, ist sie von **beiden Seiten** niedriger. Deshalb kann ein Katalysator das Gleichgewicht nicht verschieben — er verkürzt nur die Zeit, bis es sich einstellt.
+
+| Eigenschaft | Homogene Katalyse | Heterogene Katalyse | Enzymkatalyse |
 |---|---|---|---|
-| Synthese | A + B → AB | 2 Na + Cl₂ → 2 NaCl | Harnstoffsynthese (NH₃ + CO₂ → Harnstoff) |
-| Zersetzung | AB → A + B | 2 H₂O₂ → 2 H₂O + O₂ | Katalase baut H₂O₂ in Peroxisomen ab |
-| Substitution | A + BC → AC + B | CH₃Br + OH⁻ → CH₃OH + Br⁻ | Transaminierung (ALT, AST) |
-| Metathese | AB + CD → AD + CB | NaCl + AgNO₃ → AgCl↓ + NaNO₃ | CaC₂O₄-Fällung bei Nierensteinen |
+| Phase | Katalysator in gleicher Phase | Verschiedene Phasen (fest/flüssig) | Wässrig (Protein + Substrat) |
+| Selektivität | Mäßig | Variabel | Extrem hoch (Schlüssel-Schloss) |
+| Beispiel | H⁺ in Lösung, NO (Ozon) | Fe beim Haber-Bosch, Pt im Auto | Katalase, Pepsin |
+| Beschleunigung | 10²–10⁴ | 10³–10⁶ | 10⁶–10¹² |
 
-> **Prüfungstipp:** Im MedAT wird häufig eine Reaktionsgleichung gegeben und nach dem Reaktionstyp gefragt. Entscheidend: Wie viele Edukte und Produkte gibt es, und was wird übertragen (Atome, Protonen, Elektronen)? Die Tabelle oben ist das Schlüsselwerkzeug.
+Enzyme senken E_A durch den Enzym-Substrat-Komplex im aktiven Zentrum (induced-fit-Modell). Coenzyme (z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
 
-**1. Synthesereaktion (Kombination):** Zwei oder mehr Substanzen reagieren zu einem einzigen Produkt.
-Allgemein: A + B → AB
-Beispiel: 2 Na + Cl₂ → 2 NaCl (Natriumchlorid-Bildung)
-Biologisch: Die Bildung von Peptidketten aus Aminosäuren (Kondensationsreaktion) ist im weiteren Sinne eine Synthese.
+> **Merke:** Katalysatoren senken E_A von beiden Seiten der Barriere → Hin- und Rückreaktion werden gleichermaßen beschleunigt. Gleichgewichtslage und ΔG bleiben unverändert.
 
-**2. Zersetzungsreaktion (Analyse):** Eine Verbindung zerfällt in zwei oder mehr einfachere Produkte.
-Allgemein: AB → A + B
-Beispiel: 2 H₂O₂ → 2 H₂O + O₂ (Abbau von Wasserstoffperoxid durch Katalase)
-Klinisch: Katalase-Mangel (Akatalasämie) führt zu Gewebeschäden durch H₂O₂-Akkumulation — besonders in der Mundschleimhaut.
+---
 
-**3. Substitutionsreaktion:** Ein Atom oder eine Gruppe ersetzt ein anderes Atom oder eine andere Gruppe.
-- **Nukleophile Substitution (Sₙ):** Ein Nukleophil (elektronenreicher Angreifer) ersetzt eine Abgangsgruppe (die austretende Gruppe). Beispiel: CH₃Br + OH⁻ → CH₃OH + Br⁻
-- **Elektrophile Substitution:** Typisch für Aromaten (z. B. Nitrierung von Benzol)
-- **Radikalische Substitution:** Über Radikale (Teilchen mit ungepaarten Elektronen), z. B. Halogenierung von Alkanen: CH₄ + Cl₂ → CH₃Cl + HCl)
-Biologisch: Enzymatische Transaminierungen (ALT, AST); Methylierungsreaktionen (SAM, S-Adenosylmethionin, als Methylgruppendonor)
+## 3. Grundbegriffe und Reaktionsgleichungen
 
-**4. Metathese (Doppelumsatz / Doppelsubstitution):** Zwei Verbindungen tauschen Partner.
-Allgemein: AB + CD → AD + CB
-Beispiel: NaCl + AgNO₃ → AgCl↓ + NaNO₃ (Fällungsreaktion)
-Treibende Kraft: Bildung eines schwerlöslichen Niederschlags, eines Gases oder von Wasser.
+Jede chemische Reaktion lässt sich in einer Reaktionsgleichung darstellen:
 
-## Säure-Base-Reaktionen und Redoxreaktionen
+- **Edukte (Reaktanten):** Ausgangsstoffe links vom Pfeil
+- **Produkte:** Entstehende Stoffe rechts vom Pfeil
+- **Stöchiometrische Koeffizienten:** Ganzzahlige Mol-Verhältnisse, die die Massenerhaltung sichern
+- **Reaktionspfeil:** → (irreversibel) bzw. ⇌ (reversibel, Gleichgewicht)
 
-**Säure-Base-Reaktion (Brønsted, 1923):** Übertragung eines Protons (H⁺) vom Donor (Säure) auf den Akzeptor (Base).
-Beispiel: HCl + H₂O → H₃O⁺ + Cl⁻
-Die konjugierte Base einer starken Säure ist eine schwache Base. Konjugierte Paare: HCl/Cl⁻, NH₄⁺/NH₃, H₂CO₃/HCO₃⁻. Puffergleichgewichte (z. B. HCO₃⁻/CO₂ im Blut) beruhen auf diesem Prinzip.
+---
 
-> **Merke:** Säure-Base = H⁺-Transfer; Redox = e⁻-Transfer. Dies sind die zwei fundamentalen Reaktionsklassen in der Biochemie.
+## 4. Die Reaktionstypen — Anwendung der Prinzipien
 
-**Redoxreaktion:** Übertragung von Elektronen (e⁻). Oxidation = Elektronenabgabe (Oxidationszahl ↑); Reduktion = Elektronenaufnahme (Oxidationszahl ↓). Oxidationsmittel wird reduziert; Reduktionsmittel wird oxidiert. Gedächtnisstütze: **OIL RIG** (Oxidation Is Loss, Reduction Is Gain).
+Mit dem Verständnis von Energie (ΔG), Geschwindigkeit (E_A) und Katalyse können wir nun die Reaktionstypen als Muster der Atom-Umordnung einordnen:
 
-> **Prüfungstipp:** Häufige MedAT-Falle: „Welches ist das Oxidationsmittel?" — Das Oxidationsmittel wird selbst **reduziert** (nimmt Elektronen auf). Verwechslung mit dem Reduktionsmittel ist der häufigste Fehler. OIL RIG auswendig können!
+### Die vier klassischen Typen
+
+| Typ | Schema | Was passiert? | Wie erkennen? |
+|-----|--------|---------------|---------------|
+| **Synthese** | A + B → AB | Zwei Stoffe vereinigen sich | Weniger Produkte als Edukte |
+| **Zersetzung** | AB → A + B | Ein Stoff zerfällt | Mehr Produkte als Edukte |
+| **Substitution** | A + BC → AC + B | Ein Atom ersetzt ein anderes | Gleich viele Edukte/Produkte, Austausch |
+| **Metathese** | AB + CD → AD + CB | Zwei Verbindungen tauschen Partner | Doppelter Partnertausch |
+
+**Synthese:** 2 Na + Cl₂ → 2 NaCl. Biologisch: Kondensationsreaktionen (Peptid-, Esterbindung). Klinisch: Harnstoffsynthese im Harnstoffzyklus.
+
+**Zersetzung (Analyse):** 2 H₂O₂ → 2 H₂O + O₂ (katalysiert durch Katalase). Klinisch: Katalase-Mangel (Akatalasämie) → Gewebeschäden durch H₂O₂-Akkumulation in der Mundschleimhaut.
+
+**Substitution:** Ein Atom oder eine Gruppe ersetzt eine andere.
+- *Nukleophile Substitution (Sₙ):* Elektronenreicher Angreifer (Nukleophil) ersetzt Abgangsgruppe. CH₃Br + OH⁻ → CH₃OH + Br⁻
+- *Elektrophile Substitution:* Typisch für Aromaten (Nitrierung von Benzol)
+- *Radikalische Substitution:* Über Radikale (Teilchen mit ungepaarten Elektronen), z. B. CH₄ + Cl₂ → CH₃Cl + HCl
+- Biologisch: Transaminierungen (ALT, AST), Methylierungen (SAM als Methylgruppendonor)
+
+**Metathese (Doppelumsatz):** NaCl + AgNO₃ → AgCl↓ + NaNO₃. Treibende Kraft: Bildung eines schwerlöslichen Niederschlags, eines Gases oder von Wasser.
+
+> **Prüfungstipp:** Im MedAT wird oft eine Gleichung gegeben → Reaktionstyp bestimmen. Strategie: Zähle Edukte/Produkte und frage, was übertragen wird (Atome? Protonen? Elektronen?).
+
+---
+
+### Die zwei fundamentalen Transferreaktionen
+
+Neben den vier klassischen Typen gibt es zwei übergeordnete Klassen, die nach dem **was übertragen wird** eingeteilt sind:
+
+**Säure-Base-Reaktion (Brønsted, 1923) = H⁺-Transfer:**
+Die Säure gibt ein Proton (H⁺) an die Base ab. Beispiel: HCl + H₂O → H₃O⁺ + Cl⁻. Konjugierte Paare: HCl/Cl⁻, NH₄⁺/NH₃, H₂CO₃/HCO₃⁻. Puffergleichgewichte (HCO₃⁻/CO₂ im Blut) beruhen auf diesem Prinzip.
+
+**Redoxreaktion = e⁻-Transfer:**
+Oxidation = Elektronenabgabe (Oxidationszahl ↑). Reduktion = Elektronenaufnahme (Oxidationszahl ↓). Gedächtnisstütze: **OIL RIG** — Oxidation Is Loss, Reduction Is Gain.
+
+Wichtige Verwechslungsfalle: Das **Oxidationsmittel** wird selbst reduziert (nimmt e⁻ auf). Das **Reduktionsmittel** wird selbst oxidiert (gibt e⁻ ab).
+
+> **Merke:** Säure-Base = H⁺-Transfer. Redox = e⁻-Transfer. Das sind die zwei fundamentalen Reaktionsklassen der Biochemie. OIL RIG: Oxidation Is Loss, Reduction Is Gain.
 
 **Rechenbeispiel — Oxidationszahlen bestimmen:**
 Zn + CuSO₄ → ZnSO₄ + Cu
@@ -96,47 +165,20 @@ Zn + CuSO₄ → ZnSO₄ + Cu
 - Cu: +2 → 0 (Reduktion, nimmt 2 e⁻ auf → Oxidationsmittel)
 - S und O: unverändert (+6 bzw. −2)
 
-Biologisch: Die Atmungskette ist eine Kaskade von Redoxreaktionen, bei der Elektronen von NADH (E° = −0,32 V) über Cytochrome auf O₂ (E° = +0,82 V) übertragen werden. Die Spannung ΔE° = 1,14 V treibt die ATP-Synthese an.
+Biologisch: Die Atmungskette ist eine Kaskade von Redoxreaktionen — Elektronen wandern von NADH (E° = −0,32 V) über Cytochrome auf O₂ (E° = +0,82 V). Die Spannung ΔE° = 1,14 V treibt die ATP-Synthese an.
 
+---
 
-**Fällungsreaktion:** Zwei lösliche Salze reagieren zu einem unlöslichen Niederschlag (Präzipitat, ausgefallener Feststoff). Die Löslichkeit wird durch das **Löslichkeitsprodukt K_sp** beschrieben: Ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
-Klinisch: Nierensteine (CaC₂O₄-Fällung im Harn bei Hyperoxalurie, erhöhter Oxalatausscheidung), Röntgenkontrastmittel (BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺), Gichtanfälle (Harnsäurekristall-Fällung in Gelenken).
+### Fällungsreaktionen
 
-## Katalyse
+Ein Spezialfall der Metathese: Zwei lösliche Salze reagieren zu einem unlöslichen **Niederschlag (Präzipitat)**. Die Löslichkeit wird durch das Löslichkeitsprodukt K_sp beschrieben — ist das Ionenprodukt Q > K_sp, fällt der Stoff aus.
 
-Ein **Katalysator** erhöht die Reaktionsgeschwindigkeit, indem er die Aktivierungsenergie E_A senkt, ohne selbst verbraucht zu werden. Er verändert nicht die Thermodynamik (ΔG, ΔH bleiben gleich), sondern nur den Reaktionsweg.
+Klinisch relevant:
+- **Nierensteine:** CaC₂O₄-Fällung bei Hyperoxalurie (erhöhter Oxalatausscheidung)
+- **Röntgenkontrastmittel:** BaSO₄ — unlöslich, daher nicht toxisch trotz Ba²⁺
+- **Gichtanfall:** Harnsäurekristall-Fällung in Gelenken
 
-- **Homogene Katalyse:** Katalysator und Reaktanten in derselben Phase (z. B. H⁺ als Katalysator in wässriger Lösung; NO bei der Ozonzerstörung in der Stratosphäre).
-- **Heterogene Katalyse:** Unterschiedliche Phasen — meist Feststoffkatalysator, gasförmige/flüssige Reaktanten (z. B. Platin im Autokatalysator; Eisen beim Haber-Bosch-Verfahren: N₂ + 3 H₂ → 2 NH₃ bei 400–500 °C, 150–300 bar).
-- **Enzymkatalyse:** Hochspezifische biologische Katalyse durch Proteine. Enzyme senken die Aktivierungsenergie durch Ausbildung eines Enzym-Substrat-Komplexes im aktiven Zentrum (Schlüssel-Schloss- bzw. induced-fit-Modell). Beschleunigung: Faktor 10⁶–10¹². Coenzyme (nicht-proteinartige Enzymhelfer, z. B. NAD⁺, FAD) fungieren als Elektronenüberträger.
-
-> **Merke:** Katalysatoren beschleunigen Hin- UND Rückreaktion gleichermaßen. Sie verschieben das Gleichgewicht nicht, sondern verkürzen nur die Zeit bis zur Einstellung.
-
-**Vergleich der Katalysearten:**
-
-| Eigenschaft | Homogen | Heterogen | Enzymatisch |
-|---|---|---|---|
-| Phase | gleich | verschieden | wässrig (meist) |
-| Selektivität | mäßig | variabel | extrem hoch |
-| Beispiel | H⁺ in Lösung | Fe (Haber-Bosch) | Katalase, Pepsin |
-| Klinisch | Säurekatalyse | Autoabgaskatalysator | Enzymdiagnostik |
-
-## Energetik: Exotherme und endotherme Reaktionen
-
-Die **Reaktionsenthalpie ΔH** beschreibt den Wärmeaustausch bei konstantem Druck.
-
-- **Exotherm (ΔH < 0):** Energie wird an die Umgebung abgegeben → Produkte energieärmer als Edukte. Beispiel: Verbrennung von Glucose: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; ΔH = −2803 kJ/mol.
-- **Endotherm (ΔH > 0):** Das System **nimmt Wärme aus der Umgebung auf** → Produkte energiereicher. Definition: *Eine Reaktion, bei der das System Wärme aus der Umgebung aufnimmt, nennt man endotherm.* Beispiel: Photosynthese (6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂; ΔH = +2803 kJ/mol), thermische Zersetzung von CaCO₃.
-
-**Rechenbeispiel — Energiebilanz:**
-Verbrennung von 1 mol Ethanol: C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O; ΔH = −1367 kJ/mol
-Bei 46 g Ethanol (= 1 mol) werden 1367 kJ frei. Der physiologische Brennwert von Alkohol beträgt daher 29,7 kJ/g (= 7,1 kcal/g) — fast doppelt so viel wie Kohlenhydrate (4 kcal/g).
-
-**Satz von Hess:** Die Reaktionsenthalpie ist wegunabhängig — nur Anfangs- und Endzustand zählen. ΔH_gesamt = ΣΔH_Teilschritte. Dies erlaubt die Berechnung von ΔH aus Bildungsenthalpien.
-
-Wichtig: Spontaneität einer Reaktion hängt nicht allein von ΔH ab, sondern von der freien Enthalpie **ΔG = ΔH − T·ΔS** (Gibbs-Energie). ΔG < 0 → spontan (exergon); ΔG > 0 → nicht spontan (endergon). Im Körper koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse, ΔG° ≈ −30,5 kJ/mol) an endergone Biosynthesen, um thermodynamisch ungünstige Prozesse anzutreiben (energetische Kopplung).
-
-> **Prüfungstipp:** „Exotherm = spontan" ist eine klassische Falle im MedAT. Spontaneität wird durch ΔG bestimmt, nicht durch ΔH allein. Merke: ΔG = ΔH − T·ΔS. Eine exotherme Reaktion mit stark negativem ΔS kann bei hoher Temperatur endergon werden.`,
+> **Prüfungstipp:** „Welches ist das Oxidationsmittel?" ist eine MedAT-Klassikerfalle. Das Oxidationsmittel wird selbst reduziert. Immer zuerst Oxidationszahlen bestimmen, dann zuordnen.`,
 
       lernziele: [
         "Die vier klassischen Reaktionstypen (Synthese, Zersetzung, Substitution, Metathese) anhand von Beispielen unterscheiden.",

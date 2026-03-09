@@ -27,7 +27,7 @@ export const mathKapAlgebra: Kapitel = {
       ],
       content: `## Grundprinzip der Gleichungsumformung
 
-**Idee:** Eine Gleichung A = B bleibt „wahr“, wenn auf **beiden Seiten** dieselbe Operation ausgeführt wird. So kannst du schrittweise die gesuchte Variable isolieren (allein auf einer Seite), ohne die Lösungsmenge zu ändern. Ziel ist immer: x = … (bzw. die gesuchte Größe).
+**Idee:** Eine Gleichung A = B bleibt „wahr", wenn auf **beiden Seiten** dieselbe Operation ausgeführt wird. So kannst du schrittweise die gesuchte Variable isolieren (allein auf einer Seite), ohne die Lösungsmenge zu ändern. Ziel ist immer: x = … (bzw. die gesuchte Größe).
 
 **Verfahren:** Erlaubte Schritte: Addition/Subtraktion derselben Zahl auf beiden Seiten; Multiplikation/Division beider Seiten mit derselben Zahl (niemals durch 0); Wurzelziehen oder Logarithmieren auf beiden Seiten (Definitionsbereich beachten). Bei linearen Gleichungen: Klammern auflösen → Brüche beseitigen (Hauptnenner) → x-Terme auf eine Seite, Zahlen auf die andere → durch Koeffizient von x teilen → Probe.
 
@@ -289,101 +289,152 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
         "Logarithmus",
         "Wurzelziehen",
       ],
-      content: `## Definition und Grundbegriffe
-
-Eine Potenz a hoch n ist das n-fache Produkt der Basis a mit sich selbst: a hoch n = a × a × a ... × a (n Faktoren). Dabei heißt a die **Basis** und n der **Exponent**. Diese Definition gilt zunächst für positive ganzzahlige Exponenten und wird anschließend auf null, negative und gebrochene Exponenten erweitert.
+      content: `Potenzen komprimieren Multiplikation. Wurzeln sind deren Umkehrung. Logarithmen übersetzen zwischen Potenz und Exponent. Wer diese drei Werkzeuge beherrscht, kann Halbwertszeiten berechnen, pH-Werte interpretieren und wissenschaftliche Notation lesen — alles Kernkompetenzen am MedAT.
 
 ---
 
-## Multiplikation und Division gleicher Basis
+## Potenzen multiplizieren und dividieren — Faktoren zählen
 
-Werden zwei Potenzen mit **derselben Basis** multipliziert oder dividiert, verrechnet man nur die Exponenten. Der Grund: Multiplikation bedeutet, die Faktoren aneinanderzureihen, Division kürzt gemeinsame Faktoren heraus.
+Eine Potenz ist nichts anderes als wiederholte Multiplikation: a hoch 3 = a × a × a (drei Faktoren a). Wenn du jetzt a hoch 3 × a hoch 2 rechnest, schreibst du die Faktoren hintereinander:
 
-**Multiplikation:** a hoch n × a hoch m = a hoch (n+m). Die Faktoren "a × a × ... (n-mal)" und "a × a × ... (m-mal)" ergeben zusammen (n+m) Faktoren a. Beispiel: 2 hoch 4 × 2 hoch 3 = 2 hoch 7 = 128.
+(a × a × a) × (a × a) = a × a × a × a × a = a hoch 5
 
-**Division:** a hoch n / a hoch m = a hoch (n − m). Von den n Faktoren im Zähler werden m durch den Nenner gekürzt. Beispiel: 5 hoch 6 / 5 hoch 2 = 5 hoch 4 = 625.
+Du **zählst** einfach die Faktoren zusammen: 3 + 2 = 5. Daraus folgt die Regel direkt:
 
-Diese beiden Regeln bilden das Fundament: Aus ihnen leiten sich alle weiteren Gesetze ab.
+**a hoch n × a hoch m = a hoch (n+m)** — Exponenten addieren, weil du Faktoren aneinanderreihst.
 
----
+Konkretes Beispiel: 2 hoch 4 × 2 hoch 3 = (2×2×2×2) × (2×2×2) = 2 hoch 7 = 128.
 
-## Potenz einer Potenz und Potenzen von Produkten
+Bei der Division funktioniert es genauso — du **kürzt** gemeinsame Faktoren heraus:
 
-Wird eine Potenz erneut potenziert, **multipliziert** man die Exponenten — nicht addieren! Der Grund: (a hoch n) hoch m bedeutet, den Ausdruck "a hoch n" insgesamt m-mal mit sich selbst zu multiplizieren, was n × m Faktoren a ergibt.
+a hoch 5 / a hoch 2 = (a×a×a×a×a) / (a×a) = a×a×a = a hoch 3
 
-**(a hoch n) hoch m = a hoch (n × m).** Beispiel: (3 hoch 2) hoch 4 = 3 hoch 8 = 6561.
+**a hoch n / a hoch m = a hoch (n−m)** — Exponenten subtrahieren, weil du Faktoren wegnimmst.
 
-Wird ein **Produkt** potenziert, darf der Exponent auf beide Faktoren verteilt werden: **(a × b) hoch n = a hoch n × b hoch n.** Beispiel: (2 × 5) hoch 3 = 2 hoch 3 × 5 hoch 3 = 8 × 125 = 1000 = 10 hoch 3. Aber Vorsicht: Für **Summen** gilt das nicht — (a+b) hoch n ist nicht gleich a hoch n + b hoch n!
-
-Analog für **Quotienten:** (a/b) hoch n = a hoch n / b hoch n. Beispiel: (2/3) hoch 4 = 16/81.
+> **Merke:** Gleiche Basis → nur die Exponenten verrechnen. Multiplikation: addieren. Division: subtrahieren. Das sind die beiden Grundregeln, aus denen sich alle anderen ableiten.
 
 ---
 
-## Spezialfälle: Nullter, negativer und gebrochener Exponent
+## Potenz einer Potenz — multiplizieren, nicht addieren!
 
-Diese drei Erweiterungen ergeben sich zwingend, wenn die Grundregeln widerspruchsfrei gelten sollen.
+Was bedeutet (a hoch 3) hoch 2? Du nimmst den Ausdruck "a × a × a" und multiplizierst ihn **zweimal** mit sich selbst:
 
-**Nullter Exponent:** a hoch 0 = 1 (für alle a ungleich 0). Herleitung: a hoch n / a hoch n = a hoch (n − n) = a hoch 0, aber zugleich ist a hoch n / a hoch n = 1.
+(a × a × a) × (a × a × a) = a hoch 6
 
-**Negativer Exponent:** a hoch (−n) = 1 / a hoch n. Der negative Exponent erzeugt den Kehrwert. Beispiel: 2 hoch (−3) = 1/8 = 0,125. Achtung: a hoch (−n) bedeutet nicht "minus a hoch n"!
+Das sind 3 × 2 = 6 Faktoren. Die Exponenten werden **multipliziert**, nicht addiert:
 
-**Gebrochener Exponent:** a hoch (1/n) = n-te Wurzel aus a. Allgemein: a hoch (m/n) = (n-te Wurzel aus a) hoch m. Der Nenner des Exponenten gibt den Wurzelindex an, der Zähler den Exponenten danach. Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2 hoch 2 = 4.
+**(a hoch n) hoch m = a hoch (n × m)**
 
-> **Merke:** Drei häufige Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — das Potenzgesetz gilt NUR für Produkte, nicht für Summen!
+Das ist der häufigste Fehler am MedAT: Viele schreiben a hoch (n+m) statt a hoch (n×m). Der Unterschied: Bei a hoch n × a hoch m stehen zwei **separate** Potenzen, deren Faktoren du aneinanderreihst (addieren). Bei (a hoch n) hoch m **potenzierst du eine Potenz** (multiplizieren).
 
-## Wurzelgesetze
+Beispiel: (3 hoch 2) hoch 4 = 3 hoch 8 = 6561, **nicht** 3 hoch 6!
 
-Wurzeln sind spezielle Potenzen: n-te Wurzel aus a = a hoch (1/n). Die Wurzelgesetze folgen direkt aus den Potenzgesetzen.
+---
 
-Produktregel: Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b (nur für a, b größer-gleich 0).
-Anwendung: Wurzel aus 72 = Wurzel aus (36 × 2) = 6 × Wurzel aus 2. Man sucht den größten quadratischen Teiler.
+## Potenzen von Produkten und Summen — hier lauert die Falle
 
-Quotientenregel: Wurzel aus (a/b) = Wurzel aus a / Wurzel aus b (für a größer-gleich 0, b > 0).
-Beispiel: Wurzel aus (9/16) = 3/4.
+Ein Produkt potenzieren geht Term für Term: **(a × b) hoch n = a hoch n × b hoch n.** Warum? (a × b) hoch 3 = (ab)(ab)(ab) = (a·a·a)(b·b·b) = a³ × b³.
 
-Potenz und Wurzel: (Wurzel aus a) hoch 2 = a und Wurzel aus (a hoch 2) = Betrag von a.
-Wichtig: Wurzel aus (a hoch 2) = Betrag von a, denn Wurzel aus 9 = 3 = Betrag von 3 = Betrag von (−3). Die Quadratwurzel ist immer nicht-negativ.
+Beispiel: (2 × 5) hoch 3 = 2³ × 5³ = 8 × 125 = 1000 = 10³. Analog: **(a/b) hoch n = a hoch n / b hoch n.**
 
-**Rationalisierung** (Wurzelfreiheit im Nenner herstellen): Wurzeln im Nenner sollten durch Erweitern mit der konjugierten Form (dritte binomische Formel) eliminiert werden.
+Aber für **Summen gilt das nicht**: (a+b) hoch n ≠ a hoch n + b hoch n!
 
-> **Merke:** Produktregel erlaubt: √(a×b) = √a×√b. VERBOTEN: √(a+b) ≠ √a+√b und √(a²) = |a| (nicht ±a — Wurzel ist immer nicht-negativ!).
+Gegenbeispiel: (2+3)² = 5² = 25, aber 2² + 3² = 4 + 9 = 13 ≠ 25. Wer Summen potenziert, muss die binomischen Formeln verwenden (→ ma-2-03).
 
-## Logarithmen, Halbwertszeit und pH-Rechnung
+---
+
+## Spezialfälle — warum a hoch 0 = 1 sein muss
+
+Die folgenden Erweiterungen sind keine willkürlichen Definitionen. Sie ergeben sich **zwingend**, wenn die Grundregeln widerspruchsfrei bleiben sollen.
+
+**Nullter Exponent:** a hoch n / a hoch n = a hoch (n−n) = a hoch 0. Gleichzeitig ist jede Zahl durch sich selbst geteilt gleich 1. Also: **a hoch 0 = 1** (für a ≠ 0).
+
+**Negativer Exponent:** a hoch 3 / a hoch 5 = a hoch (3−5) = a hoch (−2). Gleichzeitig: a³/a⁵ = 1/a². Also: **a hoch (−n) = 1/a hoch n** — der negative Exponent erzeugt den Kehrwert. Achtung: a hoch (−3) = 1/8, **nicht** −8!
+
+**Gebrochener Exponent:** Was muss a hoch (1/2) sein, damit (a hoch (1/2))² = a hoch 1 = a gilt? Die Antwort: die Quadratwurzel! Allgemein: **a hoch (1/n) = n-te Wurzel aus a**, und **a hoch (m/n) = (n-te Wurzel aus a) hoch m**. Der Nenner gibt den Wurzelindex, der Zähler den Exponenten.
+
+Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2² = 4.
+
+> **Merke:** Drei klassische Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — Potenzgesetz gilt NUR für Produkte!
+
+---
+
+## Wurzelgesetze — Potenzen mit gebrochenem Exponenten
+
+Da Wurzeln spezielle Potenzen sind (n-te Wurzel aus a = a hoch 1/n), folgen die Wurzelgesetze direkt aus den Potenzgesetzen.
+
+**Produktregel:** Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b. Das folgt aus (ab)^(1/2) = a^(1/2) × b^(1/2). Anwendung: Wurzel aus 72 = Wurzel aus (36 × 2) = 6 × Wurzel aus 2 — du suchst den größten quadratischen Teiler.
+
+**Quotientenregel:** Wurzel aus (a/b) = Wurzel aus a / Wurzel aus b. Beispiel: Wurzel aus (9/16) = 3/4.
+
+**Die verbotene Summenregel:** √(a+b) ≠ √a + √b! Konkretes Gegenbeispiel: √(9+16) = √25 = **5**, aber √9 + √16 = 3 + 4 = **7** ≠ 5. Dieser Fehler ist so häufig, dass er am MedAT gezielt abgefragt wird.
+
+**Wurzel und Betrag:** √(a²) = |a|, nicht ±a. Die Quadratwurzel ist **immer** nicht-negativ: √9 = 3 (nicht ±3).
+
+**Rationalisierung:** Wurzeln im Nenner eliminierst du durch Erweitern mit der konjugierten Form (dritte binomische Formel): 1/(√a − √b) × (√a + √b)/(√a + √b) = (√a + √b)/(a − b).
+
+> **Merke:** Erlaubt: √(a×b) = √a × √b. Verboten: √(a+b) ≠ √a + √b. Und: √(a²) = |a| (immer positiv, nie ±a).
+
+---
+
+## Logarithmen — die Frage nach dem Exponenten
+
+Der Logarithmus beantwortet eine einzige Frage: **„Welchen Exponenten brauche ich?"**
+
+Beispiel: 10 hoch **?** = 1000. Antwort: 3, denn 10³ = 1000. Schreibweise: lg(1000) = 3.
+
+Allgemein: **log_a(x) = y** bedeutet **a hoch y = x**. Der Logarithmus ist die Umkehrfunktion des Potenzierens — er „entpackt" den Exponenten.
 
 > **Vertiefung:** Ausführliche Behandlung von Logarithmengesetzen, Henderson-Hasselbalch-Gleichung, Semilog-Plots und Basiswechsel findest du im UK **Logarithmusfunktionen** (ma-5-04).
 
-Der Logarithmus ist die Umkehrfunktion der Potenz: log_a(x) = y genau dann, wenn a hoch y = x. Drei Rechenregeln: log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n × log a. Basiswechsel: log_a(x) = ln(x) / ln(a).
+Die drei Rechenregeln folgen direkt aus den Potenzgesetzen:
+- **log(a×b) = log a + log b** — Multiplikation → Exponenten addieren
+- **log(a/b) = log a − log b** — Division → Exponenten subtrahieren
+- **log(aⁿ) = n × log a** — Potenz → Exponent als Faktor herausziehen
 
-**Halbwertszeit:** N(t) = N0 × (1/2) hoch (t / T(1/2)). Zerfallskonstante λ = ln(2)/T½ ≈ 0,693/T½. Faustregel: Nach 5 HWZ ≈ 3 % → Medikament ausgewaschen.
+Basiswechsel: log_a(x) = ln(x) / ln(a) — damit rechnest du jeden Logarithmus in ln oder lg um.
 
-**pH = − lg[H⁺]:** Pro pH-Einheit ändert sich [H⁺] um Faktor 10. Normal arteriell: pH 7,35–7,45.
+---
 
-> **Merke:** Logarithmus, pH und Halbwertszeit sind eng mit Potenzgesetzen verknüpft. Für vollständige Herleitung, Henderson-Hasselbalch und Semilog-Plots → UK Logarithmusfunktionen (ma-5-04).
+## Halbwertszeit — Potenzen in der Medizin
+
+Warum sind Potenzen medizinisch relevant? Weil der Abbau vieler Medikamente einer Exponentialfunktion folgt:
+
+**N(t) = N₀ × (1/2) hoch (t / T½)**
+
+Konkretes Beispiel — Paracetamol mit T½ = 2 h und Anfangsdosis 1000 mg: Nach 8 Stunden sind 8/2 = 4 Halbwertszeiten vergangen. Restmenge = 1000 × (1/2)⁴ = 1000/16 = **62,5 mg**.
+
+Faustregel: Nach 5 Halbwertszeiten sind noch (1/2)⁵ ≈ 3 % vorhanden — das Medikament gilt als ausgewaschen. Zerfallskonstante: λ = ln(2)/T½ ≈ 0,693/T½.
+
+**pH = − lg[H⁺]:** Auch der pH-Wert basiert auf Potenzen. Pro pH-Einheit ändert sich die H⁺-Konzentration um **Faktor 10**. Normal arteriell: pH 7,35–7,45.
+
+> **Merke:** Nach n Halbwertszeiten: (1/2)ⁿ der Ausgangsmenge. 5 HWZ ≈ 3 %. λ = ln(2)/T½. pH = −lg[H⁺]: eine pH-Einheit = Faktor 10.
+
+---
 
 ## Zehnerpotenzen und wissenschaftliche Notation
 
-Sehr große und sehr kleine Zahlen werden als Produkt einer Zahl zwischen 1 und 10 und einer Zehnerpotenz geschrieben:
+Sehr große und sehr kleine Zahlen werden als Produkt einer Zahl zwischen 1 und 10 und einer Zehnerpotenz geschrieben: **a × 10 hoch n** (1 ≤ a < 10).
 
-a × 10 hoch n (wissenschaftliche Notation oder Exponentialschreibweise).
+Medizinische Beispiele:
+- Avogadro-Konstante: 6,022 × 10²³ pro Mol
+- Elementarladung: 1,602 × 10⁻¹⁹ C
+- Erythrozytendurchmesser: ca. 8 µm = 8 × 10⁻⁶ m
 
-Beispiele:
-- Avogadro-Konstante (Teilchenzahl pro Mol): 6,022 × 10 hoch 23 pro Mol
-- Elementarladung: 1,602 × 10 hoch (−19) C
-- Erythrozytendurchmesser: ungefähr 8 Mikrometer = 8 × 10 hoch (−6) m
+Rechenregel: (a × 10ⁿ) × (b × 10ᵐ) = (a × b) × 10^(n+m). Beispiel: (3 × 10⁴) × (2 × 10³) = 6 × 10⁷.
 
-Rechenregel: (a × 10 hoch n) × (b × 10 hoch m) = (a × b) × 10 hoch (n+m).
-Beispiel: (3 × 10 hoch 4) × (2 × 10 hoch 3) = 6 × 10 hoch 7.
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Halbwertszeit Paracetamol:**
-T(1/2) = 2 h, Anfangsdosis 1000 mg. Nach t = 8 h: Anzahl HWZ = 8/2 = 4. Restmenge = 1000 × (1/2) hoch 4 = 1000/16 = **62,5 mg**. Bei therapeutischem Bereich > 50 mg: Nachdosierung nach ca. 8 h sinnvoll. Allgemein: c(t) = c_0 × (1/2) hoch (t/T).
+**Beispiel 1 — Dezibel-Berechnung (Logarithmus):**
+Schallintensität verdoppelt sich: ΔL = 10 × lg(I₂/I₁) = 10 × lg(2) = 10 × 0,301 = **3,01 dB**. Verdopplung = +3 dB. Umgekehrt: 20 dB Unterschied = Faktor 10^(20/10) = 10² = **100-fache Intensität**.
 
-**Beispiel 2 — Dezibel-Berechnung (Logarithmus):**
-Schallintensität verdoppelt sich: Delta L = 10 × lg(I_2/I_1) = 10 × lg(2) = 10 × 0,301 = **3,01 dB**. Verdopplung der Schallintensität entspricht plus 3 dB. Umgekehrt: 20 dB Unterschied = Faktor 10 hoch (20/10) = 10 hoch 2 = **100-fache Intensität**. In der Audiometrie: Hörschwelle 0 dB, Gespräch 60 dB (10 hoch 6-fach!).
+**Beispiel 2 — pH-Berechnung bei Azidose:**
+Blut-pH 7,40: [H⁺] = 10⁻⁷·⁴⁰ = **3,98 × 10⁻⁸ mol/L**. Azidose pH 7,10: [H⁺] = 10⁻⁷·¹⁰ = **7,94 × 10⁻⁸ mol/L**. Die H⁺-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg 2 ≈ 0,30). Kleine pH-Änderung = große Konzentrationsänderung.
 
-**Beispiel 3 — pH-Berechnung bei Pufferverschiebung:**
-Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azidose pH 7,10: [H+] = 10 hoch (−7,10) = **7,94 × 10 hoch (−8) mol/L**. Die H+-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg(2) ungefähr 0,30). Klinisch bedeutsam: kleine pH-Änderungen = grosse Konzentrationsänderungen.`,
+**Beispiel 3 — Wurzelfalle erkennen:**
+Ist √(a²+b²) = a + b? Probe mit a = 3, b = 4: √(9+16) = √25 = 5, aber 3 + 4 = 7 ≠ 5. Also nein — die Summenregel ist **verboten**. Korrekt: √(a²+b²) lässt sich nicht weiter vereinfachen.`,
       lernziele: [
         "Alle acht Potenzgesetze sicher anwenden, insbesondere negative und gebrochene Exponenten korrekt handhaben",
         "Wurzeln vereinfachen durch Erkennen quadratischer Teiler und Anwendung der Produktregel",
@@ -517,141 +568,132 @@ Blut-pH 7,40: [H+] = 10 hoch (−7,40) = **3,98 × 10 hoch (−8) mol/L**. Azido
         "Klammernregeln",
         "Summenzeichen",
       ],
-      content: `**Hinweis:** Grundlagen zu Bruchrechnung, Prozentrechnung und Dreisatz findest du in den entsprechenden Grundlagen-Kapiteln (ma-grund-01, ma-grund-02, ma-grund-03).
+      content: `Terme umformen ist das Werkzeug für alles Weitere — Gleichungen, Funktionen, Physikformeln. Wer sicher umformt, spart Zeit und vermeidet Fehler. Die drei Rechengesetze, das Ausklammern und der Betrag bilden zusammen das Handwerkszeug, das du bei fast jeder MedAT-Rechenaufgabe brauchst.
+
+**Hinweis:** Grundlagen zu Bruchrechnung, Prozentrechnung und Dreisatz findest du in den Grundlagen-Kapiteln (ma-grund-01 bis ma-grund-03).
 
 ---
 
-## Rechengesetze — Kommutativ, Assoziativ, Distributiv
+## Das Distributivgesetz — das wichtigste der drei Gesetze
 
-Drei Gesetze bilden das Fundament jeder Termumformung. Wer sie verinnerlicht hat, vermeidet systematische Rechenfehler am MedAT.
+Bevor wir alle drei Rechengesetze sehen, beginnen wir mit dem einen, das die meisten Fehler verursacht und gleichzeitig am nützlichsten ist: dem **Distributivgesetz**.
 
-**Kommutativgesetz (Vertauschungsgesetz):**
-- Addition: a + b = b + a
-- Multiplikation: a × b = b × a
-- Gilt **nicht** für Subtraktion und Division! 5 − 3 ≠ 3 − 5; 6/2 ≠ 2/6.
+**a × (b + c) = a × b + a × c**
 
-**Assoziativgesetz (Verknüpfungsgesetz):**
-- Addition: (a + b) + c = a + (b + c)
-- Multiplikation: (a × b) × c = a × (b × c)
-- Ermöglicht das Umklammern, um günstige Rechenreihenfolgen zu wählen.
+Warum funktioniert das? Stell dir ein Rechteck vor mit Breite a und Höhe (b + c). Die Gesamtfläche ist a × (b + c). Dasselbe Rechteck kannst du in zwei Teilrechtecke zerlegen: eines mit Höhe b (Fläche a × b) und eines mit Höhe c (Fläche a × c). Die Gesamtfläche ist also auch a × b + a × c. Die Gleichheit folgt geometrisch — die Fläche ändert sich nicht.
 
-**Distributivgesetz (Verteilungsgesetz):**
-- a × (b + c) = a × b + a × c (Ausmultiplizieren)
-- a × b + a × c = a × (b + c) (Ausklammern — die Umkehrung)
+**Vorwärts** = Ausmultiplizieren: 3(x + 4) = 3x + 12.
+**Rückwärts** = Ausklammern: 3x + 12 = 3(x + 4).
 
-Das Distributivgesetz ist das wichtigste Gesetz für Termumformungen: Es verbindet Multiplikation mit Addition und ist die Grundlage für Ausmultiplizieren, Ausklammern und Faktorisieren.
+Beide Richtungen brauchst du ständig — Ausmultiplizieren beim Lösen von Gleichungen, Ausklammern beim Vereinfachen von Termen.
 
-> **Merke:** Distributivgesetz vorwärts = Ausmultiplizieren: a(b+c) = ab + ac. Rückwärts = Ausklammern: ab + ac = a(b+c). Kommutativ- und Assoziativgesetz gelten NUR für Addition und Multiplikation, NICHT für Subtraktion und Division!
+Die anderen beiden Gesetze sind weniger fehleranfällig, aber trotzdem wichtig:
 
----
+**Kommutativgesetz (Vertauschung):** a + b = b + a und a × b = b × a — die Reihenfolge ist egal. Gilt **nicht** für Subtraktion und Division: 5 − 3 ≠ 3 − 5 und 6/2 ≠ 2/6.
 
-## Vorzeichenregeln und Klammern
+**Assoziativgesetz (Umklammerung):** (a + b) + c = a + (b + c) und (a × b) × c = a × (b × c) — die Klammersetzung ist egal. Nützlich, um günstige Rechenreihenfolgen zu wählen: 17 + 48 + 3 = 17 + 3 + 48 = 20 + 48 = 68.
 
-**Vorzeichenregeln bei Multiplikation/Division:**
-- (+) × (+) = (+); (−) × (−) = (+)
-- (+) × (−) = (−); (−) × (+) = (−)
-- Merkhilfe: Gleiche Vorzeichen → positiv; verschiedene Vorzeichen → negativ.
-
-**Minusklammer auflösen:**
-- −(a + b − c) = −a − b + c (jedes Vorzeichen in der Klammer dreht sich um)
-- Typischer MedAT-Fehler: −(3x − 5) = −3x − 5 statt korrekt −3x + 5!
-
-**Klammer mal Klammer:**
-(a + b)(c + d) = ac + ad + bc + bd (jeder Term der ersten Klammer wird mit jedem der zweiten multipliziert).
-Sonderfall: (a + b)² = a² + 2ab + b² (→ binomische Formeln, siehe ma-2-03).
-
-> **Merke:** Minus vor Klammer dreht ALLE Vorzeichen um: −(a − b) = −a + b. Häufigster Fehler: Das zweite Vorzeichen nicht umdrehen!
+> **Merke:** Distributivgesetz: a(b+c) = ab + ac — vorwärts ausmultiplizieren, rückwärts ausklammern. Kommutativ/Assoziativ gelten NUR für Addition und Multiplikation, NICHT für Subtraktion und Division!
 
 ---
 
-## Ausklammern und Faktorisieren
+## Vorzeichenregeln und die Minusklammer-Falle
 
-Ausklammern ist die Umkehroperation des Ausmultiplizierens und eine der wichtigsten Vereinfachungstechniken.
+**Vorzeichenregeln:** Gleiche Vorzeichen → positiv, verschiedene → negativ. Also: (+)(+) = (+), (−)(−) = (+), (+)(−) = (−), (−)(+) = (−).
 
-**Schritt 1:** Gemeinsamen Faktor aller Summanden identifizieren.
-**Schritt 2:** Faktor vor die Klammer schreiben, Rest in die Klammer.
-**Schritt 3:** Probe durch Ausmultiplizieren.
+**Minusklammer auflösen — der häufigste MedAT-Fehler:**
+
+−(a + b − c) = −a − b + c
+
+Das Minus vor der Klammer dreht **jedes** Vorzeichen um. Konkret: −(3x − 5) = −3x **+ 5**, nicht −3x − 5! Der Fehler passiert, weil man das Vorzeichen des zweiten Terms vergisst umzudrehen.
+
+Warum? Weil −(3x − 5) eigentlich (−1) × (3x − 5) bedeutet — das Distributivgesetz in Aktion: (−1) × 3x + (−1) × (−5) = −3x + 5.
+
+**Klammer mal Klammer:** (a + b)(c + d) = ac + ad + bc + bd — jeder Term der ersten Klammer mit jedem der zweiten (→ binomische Formeln in ma-2-03).
+
+> **Merke:** Minus vor Klammer = Distributivgesetz mit Faktor (−1). ALLE Vorzeichen drehen sich um: −(a − b) = −a + b.
+
+---
+
+## Ausklammern — das Distributivgesetz rückwärts
+
+Wenn du einen Term wie 6x + 15 siehst, erkennst du mit dem Distributivgesetz: Beide Summanden enthalten den Faktor 3. Du „ziehst" ihn heraus: 6x + 15 = 3(2x + 5). Das ist Ausklammern — die Umkehrung des Ausmultiplizierens.
+
+**Wie findest du den gemeinsamen Faktor?**
+1. **ggT der Koeffizienten:** ggT(6, 15) = 3
+2. **Kleinste Potenz gemeinsamer Variablen:** Bei 4x² − 8x ist x in beiden Termen, kleinste Potenz x¹ → Faktor 4x
+3. **Probe:** Rückmultiplizieren muss den Originalterm ergeben
 
 Beispiele:
-- 6x + 15 = 3(2x + 5) — gemeinsamer Faktor 3
-- 4x² − 8x = 4x(x − 2) — gemeinsamer Faktor 4x
-- 12ab + 18a²b − 6ab² = 6ab(2 + 3a − b) — gemeinsamer Faktor 6ab
+- 4x² − 8x = 4x(x − 2) — Probe: 4x × x = 4x², 4x × (−2) = −8x ✓
+- 12ab + 18a²b − 6ab² = 6ab(2 + 3a − b)
 
-**Medizinisches Beispiel:** Gesamtkosten K = n × p + n × v (n Packungen, p Produktpreis, v Versandkosten je Packung). Ausklammern: K = n(p + v). So sieht man sofort: Die Kosten pro Packung betragen (p + v).
+**Warum ausklammern?** Es vereinfacht Brüche (gemeinsame Faktoren kürzen), macht Zusammenhänge sichtbar und ist der erste Schritt beim Faktorisieren. Medizinisches Beispiel: Gesamtkosten K = n × p + n × v = n(p + v) — sofort sieht man: Stückkosten = (p + v).
 
-> **Merke:** Ausklammern-Checkliste: (1) ggT der Koeffizienten bestimmen, (2) kleinste Potenz jeder gemeinsamen Variable, (3) Probe durch Rückmultiplikation. Ausklammern vereinfacht Terme und macht Zusammenhänge sichtbar.
+> **Merke:** Ausklammern = Distributivgesetz rückwärts. Checkliste: ggT der Koeffizienten, kleinste Variable-Potenz, Probe durch Rückmultiplizieren.
 
 ---
 
-## Betrag — Abstand auf der Zahlengeraden
+## Betrag — geometrisch denken
 
-Der **Betrag** |a| gibt den Abstand der Zahl a von Null auf der Zahlengeraden an. Er ist immer ≥ 0.
+Der **Betrag** |a| gibt den Abstand von a zu Null auf der Zahlengeraden an: |5| = 5, |−3| = 3, |0| = 0. Er ist immer ≥ 0.
 
-**Definition:**
-- |a| = a, falls a ≥ 0
-- |a| = −a, falls a < 0
+Formal: |a| = a falls a ≥ 0, und |a| = −a falls a < 0 (das Minus macht die negative Zahl positiv).
 
-Beispiele: |5| = 5; |−3| = 3; |0| = 0.
+Die entscheidende Einsicht: **|a − b| = Abstand zwischen a und b.** |7 − 3| = 4 und |3 − 7| = 4 — egal, in welche Richtung du misst.
 
-**Rechenregeln:**
-- |a × b| = |a| × |b| (Betrag des Produkts = Produkt der Beträge)
+Rechenregeln:
+- |a × b| = |a| × |b|
 - |a/b| = |a| / |b| (für b ≠ 0)
-- |a + b| ≤ |a| + |b| (**Dreiecksungleichung** — fundamentale Abschätzung)
-- |a − b| = Abstand zwischen a und b auf der Zahlengeraden
-
-> **Merke:** |x − a| = d bedeutet: x hat den Abstand d von a. Das ist die geometrische Interpretation des Betrags und der Schlüssel zu Betragsgleichungen.
+- |a + b| ≤ |a| + |b| (**Dreiecksungleichung**)
 
 ---
 
-## Betragsgleichungen und -ungleichungen
+## Betragsgleichungen — zwei Punkte auf der Zahlengeraden
 
-**Betragsgleichung |x − a| = d** hat zwei Lösungen: x = a + d und x = a − d (sofern d ≥ 0; für d < 0 keine Lösung).
+Betrachte |x − 3| = 5. Was bedeutet das geometrisch? „x hat den Abstand 5 von 3." Wo auf der Zahlengeraden liegt x? An genau **zwei** Punkten: 5 Einheiten rechts von 3 (also 3 + 5 = **8**) und 5 Einheiten links von 3 (also 3 − 5 = **−2**).
 
-Beispiel: |x − 3| = 5. Lösung: x = 3 + 5 = 8 oder x = 3 − 5 = −2.
+Das ist der Grund, warum Betragsgleichungen immer zwei Fälle brauchen — nicht als Rechentrick, sondern weil es geometrisch zwei Richtungen gibt.
 
-**Allgemeines Lösungsverfahren für |f(x)| = c (c ≥ 0):**
+**Allgemeines Verfahren für |f(x)| = c (c ≥ 0):**
 1. Fall 1: f(x) = c → lösen
 2. Fall 2: f(x) = −c → lösen
-3. Beide Lösungsmengen vereinigen
+3. Lösungsmengen vereinigen (für c < 0: keine Lösung, da Betrag nie negativ)
 
-**Betragsungleichung |x − a| < d** (d > 0): a − d < x < a + d (offenes Intervall um a).
+**Betragsungleichungen** folgen derselben Logik:
+- |x − a| < d → x liegt **näher** als d an a → offenes Intervall (a−d, a+d)
+- |x − a| > d → x liegt **weiter** als d von a → x < a−d oder x > a+d
 
-**Betragsungleichung |x − a| > d** (d > 0): x < a − d oder x > a + d (Komplement).
+**Klinisches Beispiel:** pH-Toleranzbereich: |pH − 7,40| ≤ 0,05 → 7,35 ≤ pH ≤ 7,45. Laborwert-Toleranz: |Messwert − S| ≤ 0,1 × S → 0,9 S ≤ Messwert ≤ 1,1 S.
 
-**Medizinisches Beispiel:** Ein Laborwert soll höchstens 10 % vom Sollwert S abweichen: |Messwert − S| ≤ 0,1 × S. Das ergibt: 0,9 S ≤ Messwert ≤ 1,1 S — der klinische Toleranzbereich.
-
-Klinisch: Der pH-Wert darf höchstens 0,05 vom Normalwert 7,40 abweichen → |pH − 7,40| ≤ 0,05 → 7,35 ≤ pH ≤ 7,45.
-
-> **Merke:** |f(x)| = c lösen: Zwei Fälle aufstellen (f(x) = c und f(x) = −c). |x−a| < d → Intervall (a−d, a+d). |x−a| > d → Komplement.
+> **Merke:** |x − a| = d → zwei Lösungen: x = a + d und x = a − d (geometrisch: zwei Punkte mit Abstand d von a). |x−a| < d → Intervall (a−d, a+d). |x−a| > d → Komplement.
 
 ---
 
-## Summen- und Produktzeichen
+## Summenzeichen Σ — Kurzschreibweise für viele Terme
 
-Das **Summenzeichen Σ** (griech. Sigma) ist eine Kurzschreibweise für Summen:
+Sobald du viele gleichartige Terme addieren willst, wird die Schreibweise 1 + 2 + 3 + ... + 100 unhandlich. Das **Summenzeichen** Σ (griechisch Sigma) löst das:
 
-Σ(i=1 bis n) aᵢ = a₁ + a₂ + ... + aₙ
+**Σ(i=1 bis n) aᵢ = a₁ + a₂ + ... + aₙ**
 
-Beispiel: Σ(i=1 bis 4) i² = 1 + 4 + 9 + 16 = 30.
+Lies es so: „Summiere aᵢ für i von 1 bis n." Beispiel: Σ(i=1 bis 4) i² = 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30.
 
-**Wichtige Summenformeln:**
-- Σ(i=1 bis n) i = n(n+1)/2 (Gaußsche Summenformel, Formel für die Summe der ersten n natürlichen Zahlen)
-- Σ(i=1 bis n) i² = n(n+1)(2n+1)/6
+Die wichtigste Formel dazu ist die **Gaußsche Summenformel**: Σ(i=1 bis n) i = n(n+1)/2. Gauß erkannte als Schüler: 1+100 = 101, 2+99 = 101, ..., 50+51 = 101 — das sind 50 Paare à 101 = 5050. Allgemein: n/2 Paare mit Summe (n+1).
 
-**Mittelwert:** x̄ = (1/n) × Σ(i=1 bis n) xᵢ — der arithmetische Mittelwert als Summe geteilt durch Anzahl.
+In der Medizin begegnet dir Σ vor allem beim **Mittelwert**: x̄ = (1/n) × Σ(i=1 bis n) xᵢ — mittlerer Blutdruck, mittlere Herzfrequenz, Studiendurchschnitte.
 
-In der Medizin: Mittlerer Blutdruck, mittlere Herzfrequenz, Durchschnittswerte in Studien — alles über Σ definiert.
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Ausklammern in der Dosierung:**
-Gesamtwirkstoff bei n Dosen à d mg mit r % Resorption: W = n × d × r/100. Für 3 Dosen à 250 mg bei 80 % Resorption: W = 3 × 250 × 0,8 = **600 mg**.
+**Beispiel 1 — Minusklammer und Distributivgesetz:**
+Vereinfache: −2(3x − 4) + 5(x + 1). Schritt 1: −6x + 8 + 5x + 5 = **−x + 13**. Probe: Für x = 3: −2(9−4) + 5(3+1) = −2(5) + 5(4) = −10 + 20 = 10. Und −3 + 13 = 10 ✓.
 
 **Beispiel 2 — Betragsgleichung:**
 |2x + 1| = 7. Fall 1: 2x + 1 = 7 → x = 3. Fall 2: 2x + 1 = −7 → x = −4. Probe: |2(3)+1| = |7| = 7 ✓; |2(−4)+1| = |−7| = 7 ✓. Lösungsmenge: {−4, 3}.
 
-**Beispiel 3 — Gaußsche Summenformel:**
-Wie viele Injektionen gibt ein Arzt in einer Impfkampagne, wenn er am 1. Tag 1, am 2. Tag 2, ..., am 20. Tag 20 Impfungen verabreicht? Σ(i=1 bis 20) i = 20 × 21/2 = **210** Impfungen.`,
+**Beispiel 3 — Gaußsche Summenformel in der Praxis:**
+Ein Arzt gibt in einer Impfkampagne am 1. Tag 1, am 2. Tag 2, ..., am 20. Tag 20 Impfungen. Gesamt: Σ(i=1 bis 20) i = 20 × 21/2 = **210** Impfungen.`,
       lernziele: [
         "Die drei Rechengesetze (kommutativ, assoziativ, distributiv) sicher anwenden und typische Fehlschlüsse vermeiden",
         "Terme durch Ausklammern und Faktorisieren vereinfachen",
@@ -1298,234 +1340,244 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
         "Parallelogramm",
         "Heronsche Formel",
         "Kreissektor",
-        "Trigonometrie",
-        "sin",
-        "cos",
-        "tan",
+        "Kreisring",
+        "Raute",
         "Ähnlichkeit",
         "Skalierungsfaktor",
         "Körperoberfläche",
         "DuBois-Formel",
+        "Neuner-Regel",
       ],
-      content: `Von der CT-Bildgebung bis zur Berechnung verbrannter Hautflächen: Flächenformeln sind im klinischen Alltag so präsent wie Vitalzeichen. Die Aortenklappenöffnungsfläche entscheidet über eine OP-Indikation, die Körperoberfläche bestimmt die Zytostatika-Dosis, und die Neuner-Regel bei Verbrennungen basiert auf geometrischen Anteilen.
+      content: `Ebene Figuren (Flächen in einer Ebene) begegnen dir in der Medizin überall: Die Aortenklappenöffnungsfläche entscheidet über eine OP-Indikation, die Körperoberfläche (KOF) bestimmt die Zytostatika-Dosis, und die Neuner-Regel bei Verbrennungen basiert auf geometrischen Flächenanteilen. Im MedAT werden Flächen- und Umfangsformeln regelmäßig abgefragt — oft in Kombination mit klinischen Szenarien.
 
 ---
 
 {{DIAGRAM:geometric-shapes}}
 
-## Dreiecke — die Grundform
+## 1. Rechteck und Quadrat — der einfachste Baustein
 
+Das Rechteck ist die Grundform: Länge l und Breite b spannen eine Fläche auf.
 
-Beim Rechteck mit Länge l und Breite b gilt:
 - Fläche: **A = l × b**
 - Umfang: **U = 2 × (l + b)**
 - Diagonale: **d = √(l² + b²)** (Satz des Pythagoras)
 
-Das Quadrat ist ein Sonderfall mit l = b = a: A = a², U = 4a, d = a × √2.
+Das **Quadrat** ist der Sonderfall l = b = a: A = a², U = 4a, d = a√2.
 
-> **Merke:** Die Diagonale eines Rechtecks folgt direkt aus dem Satz des Pythagoras — ein häufiger MedAT-Aufgabentyp.
+**Rechenbeispiel:** Ein Operationsfeld wird als Rechteck 8 cm × 5 cm markiert. Fläche: A = 8 × 5 = 40 cm². Umfang: U = 2 × (8 + 5) = 26 cm. Diagonale: d = √(64 + 25) = √89 ≈ 9,4 cm.
 
-**Rechenbeispiel:** Ein Operationsfeld wird als Rechteck 8 cm × 5 cm markiert. Fläche: A = 8 × 5 = 40 cm². Umfang: U = 2 × (8 + 5) = 26 cm. Diagonale: d = √(64 + 25) = √89 ≈ 9,4 cm. Die Diagonale ist stets länger als beide Seiten, aber kürzer als der halbe Umfang.
-
-## Dreieck
-
-**Flächenformel:** **A(Dreieck) = (Grundseite × Höhe) / 2** = ½ × g × h. Rechteck zum Vergleich: **A(Rechteck) = Länge × Breite.**
-
-Die allgemeine Dreiecksfläche berechnet sich über Grundlinie g und zugehörige Höhe h:
-**A = ½ × g × h**
-
-Für das rechtwinklige Dreieck mit Katheten a und b: A = ½ × a × b (die Katheten dienen als Grundlinie und Höhe).
-
-Die **Heronsche Formel** ermöglicht die Flächenberechnung bei bekannten drei Seitenlängen a, b, c:
-**s = (a + b + c) / 2** (halber Umfang, „Halbumfang")
-**A = √(s × (s − a) × (s − b) × (s − c))**
-
-Die **Winkelsumme** in jedem Dreieck beträgt **180°**. Im rechtwinkligen Dreieck gilt außerdem der Satz des Pythagoras: a² + b² = c² (c = Hypotenuse).
-
-Spezialfälle: Im gleichseitigen Dreieck (alle Seiten a) gilt: A = (√3/4) × a², Höhe h = (√3/2) × a. Im gleichschenkligen Dreieck mit Basis b und Schenkeln a: h = √(a² − (b/2)²).
-
-**Rechenbeispiel — Heron:** Dreieck mit a = 7, b = 8, c = 9 cm. s = (7+8+9)/2 = 12. A = √(12 × 5 × 4 × 3) = √720 = √(144 × 5) = 12√5 ≈ 26,8 cm². Probe: Die Höhe auf c = 9 wäre h = 2A/c = 2 × 26,8/9 ≈ 5,96 cm.
-
-**Rechenbeispiel — Dreieck vs. Rechteck (MedAT-typisch):** Ein Dreieck mit Grundlinie 5 cm und Höhe 8 cm hat die Fläche A = (5 × 8) / 2 = **20 cm²**. Hat dieses Dreieck ein Drittel der Fläche eines Rechtecks mit Breite 5 cm, so ist die Rechteckfläche 3 × 20 = **60 cm²**, also Länge = 60 / 5 = **12 cm**.
-
-## Kreis und Kreissektor
-
-Für einen Kreis mit Radius r:
-- Fläche: **A = π × r²**
-- Umfang (Kreislinie): **U = 2 × π × r**
-- Durchmesser: d = 2r, also A = π × d²/4
-
-Ein **Kreissektor** (Kreisausschnitt, „Tortenstück") mit Mittelpunktswinkel α (in Radiant):
-- Sektorfläche: **A = r² × α / 2**
-- Bogenlänge: **b = r × α**
-
-Umrechnung: α [Grad] → α [rad] = α × π / 180. Vollkreis: 360° = 2π rad.
-
-Ein **Kreisring** (Ringfläche zwischen zwei konzentrischen Kreisen mit Radien R und r, R > r):
-**A = π × (R² − r²)**
-
-> **Merke:** Kreisfläche A = π × r², Kreisumfang U = 2 × π × r — beide enthalten π und r, aber die Fläche hat r² (quadratisch), der Umfang nur r (linear). Verdopplung des Radius vervierfacht die Fläche, verdoppelt aber nur den Umfang.
-
-**Rechenbeispiel — Kreisring (Gefäßwand):** Arterie: Außenradius R = 3 mm, Innenradius r = 2 mm. Querschnittsfläche der Gefäßwand: A = π × (3² − 2²) = π × (9 − 4) = 5π ≈ 15,7 mm². Lumen: A_L = π × 4 = 12,6 mm². Wandanteil: 15,7/(15,7+12,6) ≈ 55%.
-
-## Trapez und Parallelogramm
-
-Trapez (a und c sind die parallelen Seiten, h die Höhe zwischen ihnen):
-**A = ½ × (a + c) × h**
-
-Die Formel entspricht einem Rechteck mit der mittleren Breite (a+c)/2 und der Höhe h.
-
-Parallelogramm (Grundseite g, Höhe h senkrecht zur Grundseite):
-**A = g × h**
-
-Der Umfang des Parallelogramms: U = 2 × (a + b), wobei a und b die Seitenlängen sind.
-
-> **Merke:** Das Parallelogramm hat dieselbe Flächenformel wie das Rechteck (A = g × h), aber h ist die senkrechte Höhe, nicht die Schrägseite. Ein häufiger Fehler ist die Verwechslung von Höhe und Seitenlänge.
-
-**MedAT-typischer Aufgabentyp:** Ein Parallelogramm hat die Grundseite g = 12 cm und die Schrägseite b = 5 cm. Der Winkel zur Grundseite beträgt 30°. Höhe: h = b × sin 30° = 5 × 0,5 = 2,5 cm. Fläche: A = 12 × 2,5 = 30 cm².
+> **Merke:** Bei Flächen steht immer eine quadratische Einheit (cm², m²). Wer „40 cm" statt „40 cm²" schreibt, verwechselt Umfang und Fläche — ein klassischer MedAT-Fehler.
 
 ---
 
-## Trigonometrie-Grundlagen (sin, cos, tan)
+## 2. Dreieck — die halbe Rechteckfläche
 
-**Wozu brauche ich das im MedAT?** Steigungsangaben (z. B. 16 % Steigung), Winkel in rechtwinkligen Dreiecken, EKG-Achse und viele geometrische Aufgaben verlangen die drei **Winkelfunktionen** Sinus, Kosinus und Tangens. Sie verknüpfen Winkel und Seitenverhältnisse im **rechtwinkligen Dreieck**.
+Jedes Dreieck lässt sich als halbes Rechteck verstehen: Zeichne um ein Dreieck ein Rechteck mit der Grundlinie g als Breite und der Höhe h als Länge — das Dreieck nimmt genau die Hälfte der Fläche ein.
 
-**Begriffe beim ersten Auftreten:** Im **rechtwinkligen Dreieck** liegt der rechte Winkel (90°) an einer Ecke. Die **Hypotenuse** ist die Seite gegenüber dem rechten Winkel (immer die längste Seite). Bezüglich eines spitzen Winkels **α** heißen: **Gegenkathete** = Seite gegenüber von α, **Ankathete** = Seite, die an α anliegt (nicht die Hypotenuse).
+**A = ½ × g × h**
 
-**Definitionen (immer im rechtwinkligen Dreieck):**
+Für das **rechtwinklige Dreieck** mit Katheten a und b: A = ½ × a × b (die Katheten sind Grundlinie und Höhe).
 
-| Funktion | Formel | Merkhilfe |
-|----------|--------|-----------|
-| **sin(α)** | Gegenkathete / Hypotenuse | „Gegen durch Hypotenuse“ |
-| **cos(α)** | Ankathete / Hypotenuse | „An durch Hypotenuse“ |
-| **tan(α)** | Gegenkathete / Ankathete | tan = sin/cos |
+**Winkelsumme:** In jedem Dreieck beträgt die Summe der Innenwinkel **180°**. Im rechtwinkligen Dreieck gilt zusätzlich der Satz des Pythagoras: a² + b² = c² (c = Hypotenuse).
 
-**Rechenprinzip Schritt für Schritt:** (1) Dreieck skizzieren und rechten Winkel markieren. (2) Winkel α und die Seiten (Hypotenuse, Gegenkathete, Ankathete) zuordnen. (3) Gesuchte Größe auswählen (Seite oder Winkel). (4) Passende Formel wählen (sin, cos oder tan) und umstellen. (5) Zahlen einsetzen und ausrechnen.
+**Spezialfälle:**
+- Gleichseitiges Dreieck (alle Seiten a): A = (√3/4) × a², Höhe h = (√3/2) × a
+- Gleichschenkliges Dreieck (Basis b, Schenkel a): h = √(a² − (b/2)²)
 
-**Beispielrechnung:** Im rechtwinkligen Dreieck sei α = 30°, die Hypotenuse c = 10 cm. Gesucht: Gegenkathete a.  
-Schritt 1: sin(30°) = Gegenkathete / Hypotenuse = a / 10.  
-Schritt 2: a = 10 × sin(30°) = 10 × 0,5 = **5 cm**.  
-(Wichtige Werte: sin 30° = cos 60° = 0,5; cos 30° = sin 60° = √3/2 ≈ 0,866; tan 45° = 1.)
+### Die Heronsche Formel — Fläche nur aus Seitenlängen
 
-**Typische Fehler:** Steigung in % (z. B. 16 %) entspricht dem **Tangens** des Steigungswinkels (Höhenunterschied / Horizontaldistanz), nicht Sinus oder Kosinus. Sinus und Kosinus sind immer ≤ 1; der Tangens kann größer als 1 sein.
+Wenn keine Höhe bekannt ist, aber alle drei Seiten a, b, c:
 
-> **Merke:** **sin(α) = Gegenkathete/Hypotenuse**, **cos(α) = Ankathete/Hypotenuse**, **tan(α) = Gegenkathete/Ankathete**. Steigung in % = (Höhe/Horizontale) × 100 = **tan(α) × 100 %**. Im MedAT: „Welche Winkelfunktion bei Steigung?“ → **Tangens**.
+1. Halbumfang berechnen: **s = (a + b + c) / 2**
+2. Fläche: **A = √(s × (s − a) × (s − b) × (s − c))**
 
-## Raute (Rhombus) und Drachen
+**Rechenbeispiel:** Dreieck mit a = 7, b = 8, c = 9 cm. s = (7+8+9)/2 = 12. A = √(12 × 5 × 4 × 3) = √720 = 12√5 ≈ 26,8 cm².
 
-Die Raute ist ein Parallelogramm mit vier gleich langen Seiten. Ihre Diagonalen stehen senkrecht aufeinander und halbieren sich:
-**A = ½ × d₁ × d₂** (d₁, d₂ = Diagonalen)
+**Rechenbeispiel — Dreieck vs. Rechteck (MedAT-typisch):** Ein Dreieck mit g = 5 cm und h = 8 cm hat A = (5 × 8)/2 = **20 cm²**. Hat dieses Dreieck ein Drittel der Fläche eines Rechtecks mit Breite 5 cm, so ist die Rechteckfläche 3 × 20 = **60 cm²**, also Länge = 60/5 = **12 cm**.
 
-Ein Drachen hat ebenfalls senkrechte Diagonalen; dieselbe Formel gilt: A = ½ × d₁ × d₂.
+> **Merke:** Dreiecksfläche = halbe Rechteckfläche (½ × g × h). Die Heronsche Formel ist der Rettungsanker, wenn nur die drei Seiten gegeben sind.
 
-## Ähnlichkeit
+---
 
-Zwei Figuren sind **ähnlich**, wenn alle entsprechenden Winkel gleich und alle entsprechenden Seiten im gleichen Verhältnis k (Ähnlichkeitsfaktor) stehen.
-- Entsprechende Längen verhalten sich wie **k : 1**
-- Entsprechende Flächen verhalten sich wie **k² : 1**
-- (Entsprechende Volumina bei Körpern wie **k³ : 1**)
+## 3. Kreis, Kreissektor und Kreisring
 
-Wenn ein Bild auf das Doppelte vergrößert wird (k = 2), vervierfacht sich die Fläche (k² = 4).
+Beim Kreis mit Radius r:
 
-**Rechenbeispiel — Ähnlichkeit in der Bildgebung:** Ein Tumor im MRT hat im Januar einen Durchmesser von 2 cm (Querschnittsfläche A₁ = π × 1² ≈ 3,14 cm²). Im Juni misst er 3 cm (A₂ = π × 1,5² ≈ 7,07 cm²). Der Skalierungsfaktor k = 3/2 = 1,5. Flächenzunahme: k² = 2,25 — die Querschnittsfläche hat sich um den Faktor 2,25 (also um 125%) vergrößert, obwohl der Durchmesser nur um 50% gewachsen ist.
+- Fläche: **A = π × r²**
+- Umfang: **U = 2 × π × r**
+- Durchmesser: d = 2r, also auch A = π × d²/4
 
-## Klinischer Kontext
+**Kreissektor** (Kreisausschnitt, „Tortenstück") mit Mittelpunktswinkel α:
+- Sektorfläche: **A = r² × α / 2** (α in Radiant)
+- Bogenlänge: **b = r × α** (α in Radiant)
+- Umrechnung: α [Grad] → α [rad] = α × π/180. Vollkreis = 360° = 2π rad.
 
-Die Körperoberfläche (KOF) ist in der Medizin entscheidend für die Dosierung von Zytostatika. Die **DuBois-Formel** lautet:
-**KOF = 0,007184 × Gewicht^0,425 × Größe^0,725** (Gewicht in kg, Größe in cm, KOF in m²)
+**Kreisring** (Ringfläche zwischen zwei konzentrischen Kreisen, Radien R > r):
+**A = π × (R² − r²)**
 
-Vereinfachte Mosteller-Formel: **KOF = √(Gewicht × Größe / 3600)** (Gewicht kg, Größe cm, KOF m²). Für 70 kg, 175 cm: KOF = √(70 × 175 / 3600) = √3,403 ≈ 1,84 m².
+> **Merke:** Verdopplung des Radius vervierfacht die Fläche (r² → (2r)² = 4r²), verdoppelt aber nur den Umfang. Diese quadratische Skalierung ist ein häufiger Stolperstein im MedAT.
 
-Im EKG entspricht die **Fläche unter der ST-Kurve** geometrisch einer Trapez- bzw. Dreiecksintegration und ist ein Maß für das Ausmaß eines Myokardinfarkts. Auch bei der Berechnung der Wundfläche zur Abschätzung der benötigten Hauttransplantatgröße kommen Flächenformeln direkt zur Anwendung.
+**Rechenbeispiel — Kreisring (Gefäßwand):** Arterie mit Außenradius R = 3 mm, Innenradius r = 2 mm. Gefäßwand-Querschnitt: A = π × (9 − 4) = 5π ≈ 15,7 mm². Lumen: A = π × 4 ≈ 12,6 mm². Wandanteil: 15,7/(15,7 + 12,6) ≈ 55 %.
 
-Die **Neuner-Regel nach Wallace** teilt den Körper in Flächenanteile von je ca. 9% der KOF: Kopf 9%, jeder Arm 9%, Brust 9%, Bauch 9%, Rücken 18%, jedes Bein 18%, Genitale 1%. Bei Verbrennungen wird so der Anteil der verbrannten Körperoberfläche (VKOF) rasch abgeschätzt.
+**Rechenbeispiel — Aortenklappe:** Gesunde Klappe: d = 2,5 cm → A = π × 1,25² ≈ **4,9 cm²**. Schwere Stenose: A = 0,8 cm² — nur noch **16 %** der Normalfläche. OP-Indikation bei A < 1,0 cm².
 
-## Rechenbeispiele
+---
 
-**Beispiel 1 — Verbrennungsfläche (Neuner-Regel + Kreisfläche):**
-Kreisförmige Verbrennung mit Durchmesser 12 cm: A = pi × r² = pi × 6² = 36 pi = **113 cm² ungefähr 0,011 m²**. Bei BSA = 1,8 m²: Anteil = 0,011/1,8 × 100 = **0,6% der KOF** — unter der Schwelle für Flüssigkeitstherapie (ab 15% VKOF).
+## 4. Weitere Vierecke
 
-**Beispiel 2 — Heronscher Flächensatz für irreguläre Wunde:**
-Dreiseitige Wunde: a = 5 cm, b = 7 cm, c = 8 cm. s = (5+7+8)/2 = 10. A = Wurzel aus (10 × 5 × 3 × 2) = Wurzel aus 300 = **17,3 cm²**. Erforderliche Hauttransplantatfläche (mit 10% Zuschlag): 17,3 × 1,1 = **19 cm²**.
+### Parallelogramm
+Grundseite g, senkrechte Höhe h (nicht die Schrägseite!):
+**A = g × h**, Umfang U = 2 × (a + b)
 
-**Beispiel 3 — Aortenklappenöffnungsfläche (Kreissegment):**
-Gesunde Klappe: A = pi × r² mit d = 2,5 cm → A = pi × 1,25² = **4,9 cm²**. Schwere Aortenstenose: A = 0,8 cm². Reduktion: 4,9 − 0,8 = 4,1 cm², also auf **16% der Normalfläche**. OP-Indikation bei A < 1,0 cm² (schwere Stenose).
+Braucht man die Höhe aus einem Winkel, hilft sin (siehe Kapitel ma-2-05 Trigonometrie): h = b × sin(α).
 
-**Beispiel 4 — Kreisring als Gefäßwandquerschnitt:**
-Koronararterie: Außendurchmesser 4 mm (R = 2 mm), Wanddicke 0,5 mm (r = 1,5 mm). Lumen A_innen = pi × 1,5² = **7,07 mm²**. Gesamtquerschnitt A_aussen = pi × 2² = 12,57 mm². Wandfläche = 12,57 − 7,07 = **5,5 mm²**.`,
+### Trapez
+Parallele Seiten a und c, Höhe h:
+**A = ½ × (a + c) × h** — entspricht einem Rechteck mit der mittleren Breite (a + c)/2.
+
+### Raute (Rhombus) und Drachen
+Beide haben senkrechte Diagonalen d₁ und d₂:
+**A = ½ × d₁ × d₂**
+
+Die Raute ist ein Spezialfall des Parallelogramms mit vier gleich langen Seiten.
+
+> **Merke:** Beim Parallelogramm ist h die senkrechte Höhe, nicht die Schrägseite — das ist der häufigste Fehler. Die Trapezformel nutzt den Mittelwert der Parallelseiten.
+
+---
+
+## 5. Ähnlichkeit und Skalierung
+
+Zwei Figuren sind **ähnlich**, wenn alle Winkel gleich und alle Seiten im gleichen Verhältnis k stehen.
+
+- Längen skalieren mit **k**
+- Flächen skalieren mit **k²**
+- (Volumina bei Körpern mit **k³**)
+
+**Rechenbeispiel — Tumorwachstum:** Ein Tumor hat im MRT im Januar d = 2 cm (A₁ = π × 1² ≈ 3,14 cm²), im Juni d = 3 cm (A₂ = π × 1,5² ≈ 7,07 cm²). Skalierungsfaktor k = 1,5. Flächenzunahme: k² = 2,25 — die Querschnittsfläche hat sich um **125 %** vergrößert, obwohl der Durchmesser nur um 50 % gewachsen ist.
+
+> **Merke:** Flächen skalieren mit k², nicht mit k. Doppelte Größe (k = 2) = vierfache Fläche. Das gilt für MRT-Bilder, Organquerschnitte und Wunden gleichermaßen.
+
+---
+
+## 6. Zusammengesetzte Flächen
+
+Viele MedAT-Aufgaben kombinieren einfache Figuren:
+- **Zerlegung:** Komplexe Form in Rechtecke, Dreiecke, Kreisausschnitte zerlegen und aufsummieren
+- **Subtraktion:** Von einer größeren Fläche eine kleinere abziehen (z. B. Kreisring = großer Kreis − kleiner Kreis)
+- **Wundflächen:** Irreguläre Wunden werden durch Rechtecke oder Dreiecke angenähert
+
+---
+
+## 7. Klinische Anwendungen
+
+### Körperoberfläche (KOF)
+Die KOF bestimmt die Dosierung von Zytostatika und Immunsuppressiva.
+
+- **DuBois-Formel:** KOF = 0,007184 × Gewicht^0,425 × Größe^0,725 (Gewicht in kg, Größe in cm, KOF in m²)
+- **Mosteller (vereinfacht):** KOF = √(Gewicht × Größe / 3600)
+
+Für 70 kg, 175 cm: KOF = √(70 × 175 / 3600) = √3,403 ≈ **1,84 m²**.
+
+### Neuner-Regel nach Wallace
+Teilt den Körper in Flächenanteile von je ~9 % KOF: Kopf 9 %, jeder Arm 9 %, Brust 9 %, Bauch 9 %, Rücken 18 %, jedes Bein 18 %, Genitale 1 %. Damit wird der Anteil verbrannter Körperoberfläche (VKOF) rasch abgeschätzt.
+
+**Rechenbeispiel — Verbrennungsfläche:** Kreisförmige Verbrennung mit d = 12 cm: A = π × 6² = 36π ≈ **113 cm² ≈ 0,011 m²**. Bei KOF = 1,8 m²: Anteil = 0,011/1,8 × 100 ≈ **0,6 % der KOF**.
+
+**Rechenbeispiel — Hauttransplantat (Heron):** Dreiseitige Wunde mit a = 5, b = 7, c = 8 cm. s = 10. A = √(10 × 5 × 3 × 2) = √300 ≈ **17,3 cm²**. Mit 10 % Zuschlag: **19 cm²** Transplantatfläche.
+
+---
+
+## Häufige Fallen im MedAT
+
+- **Einheiten vergessen:** Fläche immer in Quadrateinheiten (cm², m²), nicht in cm oder m
+- **π-Rundungsfehler:** π ≈ 3,14 genügt meist; bei π² ≈ 9,87 nicht 3,14 × 3,14 = 9,86 verwechseln
+- **Umfang ≠ Fläche:** Zwei Figuren können gleichen Umfang, aber sehr verschiedene Flächen haben
+- **Parallelogramm-Höhe:** Immer die senkrechte Höhe verwenden, nicht die Schrägseite
+- **Radius vs. Durchmesser:** In der Kreisformel steht r, nicht d — häufig wird d/2 vergessen
+
+---
+
+## Formelübersicht
+
+| Figur | Fläche A | Umfang U |
+|---|---|---|
+| Rechteck | l × b | 2(l + b) |
+| Quadrat | a² | 4a |
+| Dreieck | ½ × g × h | a + b + c |
+| Kreis | π × r² | 2πr |
+| Parallelogramm | g × h | 2(a + b) |
+| Trapez | ½(a + c) × h | a + b + c + d |
+| Raute/Drachen | ½ × d₁ × d₂ | 4a (Raute) |
+| Kreissektor | r²α/2 (α in rad) | 2r + rα |
+| Kreisring | π(R² − r²) | — |`,
       lernziele: [
         "Flächen und Umfänge von Rechteck, Dreieck, Kreis, Trapez und Parallelogramm korrekt berechnen.",
         "Die Heronsche Formel auf Dreiecke mit bekannten Seitenlängen anwenden.",
         "Kreissektor-Fläche und Bogenlänge bei gegebenem Mittelpunktswinkel bestimmen.",
-        "Den Ähnlichkeitsfaktor k und seinen Einfluss auf Längen und Flächen erklären.",
-        "Den klinischen Bezug zwischen Flächenformeln und medizinischen Anwendungen (KOF, EKG) herstellen.",
-        "Im rechtwinkligen Dreieck sin, cos und tan anwenden und Steigung in % als tan(α)×100 interpretieren.",
+        "Den Ähnlichkeitsfaktor k und seinen Einfluss auf Längen (k) und Flächen (k²) erklären.",
+        "Klinische Anwendungen (KOF, Neuner-Regel, Aortenklappenöffnungsfläche) mit Flächenformeln verknüpfen.",
       ],
       sections: [
         {
           heading: "Grundformeln ebener Figuren",
           text: `Die wichtigsten Figuren und ihre Formeln im Überblick:
 
-| Figur         | Fläche A              | Umfang U                  |
-|---------------|----------------------|---------------------------|
-| Rechteck      | l × b                | 2 × (l + b)               |
-| Quadrat       | a²                   | 4 × a                     |
-| Dreieck       | ½ × g × h            | a + b + c                 |
-| Kreis         | π × r²               | 2 × π × r                 |
-| Parallelogramm| g × h                | 2 × (a + b)               |
-| Trapez        | ½ × (a + c) × h      | a + b + c + d             |
-| Kreissektor   | r² × α / 2 (α in rad)| 2r + r × α                |
+| Figur | Fläche A | Umfang U |
+|---|---|---|
+| Rechteck | l × b | 2(l + b) |
+| Quadrat | a² | 4a |
+| Dreieck | ½ × g × h | a + b + c |
+| Kreis | π × r² | 2πr |
+| Parallelogramm | g × h | 2(a + b) |
+| Trapez | ½(a + c) × h | a + b + c + d |
+| Raute/Drachen | ½ × d₁ × d₂ | 4a (Raute) |
+| Kreissektor | r²α/2 (α rad) | 2r + rα |
 
-Merkhilfe: Für den Kreis — Fläche „pi r quadrat", Umfang „zwei pi r".`,
+Merkhilfe Kreis: Fläche „πr²" (quadratisch → wächst schnell), Umfang „2πr" (linear → wächst langsam).`,
           merksatz:
-            "Kreisfläche A = π × r², Kreisumfang U = 2 × π × r — beide Formeln enthalten π und r, aber die Fläche hat r², der Umfang nur r.",
+            "Fläche hat immer Quadrateinheiten (cm², m²). Verdopplung des Radius vervierfacht die Kreisfläche, verdoppelt aber nur den Umfang.",
         },
         {
           heading: "Ähnlichkeit und Skalierung",
-          text: `Ähnliche Figuren entstehen durch gleichmäßige Streckung oder Stauchung mit dem Faktor k.
+          text: `Ähnliche Figuren haben gleiche Winkel und proportionale Seiten (Faktor k).
 
-Beispiel: Ein Rechteck 3 cm × 4 cm (A = 12 cm²) wird mit k = 3 vergrößert → neues Rechteck 9 cm × 12 cm (A = 108 cm² = 12 × 9 = 12 × k²).
+- Längen: k-fach
+- Flächen: k²-fach
+- Volumina: k³-fach
 
-Die Heronsche Formel erlaubt Flächenberechnung ohne Kenntnis der Höhe:
-1. Berechne s = (a + b + c) / 2
-2. Berechne A = √(s × (s−a) × (s−b) × (s−c))
+Beispiel: Ein Rechteck 3 × 4 cm (A = 12 cm²) mit k = 3 vergrößert → 9 × 12 cm (A = 108 cm² = 12 × 3² = 12 × 9).
 
-Beispiel: a = 3, b = 4, c = 5: s = 6; A = √(6 × 3 × 2 × 1) = √36 = 6 cm²`,
+Klinisch: Wächst ein Tumor-Durchmesser um 50 % (k = 1,5), steigt die Querschnittsfläche um 125 % (k² = 2,25).`,
           merksatz:
             "Flächen skalieren mit k², Längen mit k — wird ein Organ doppelt so groß (k = 2), vervierfacht sich seine Querschnittsfläche.",
         },
         {
-          heading: "Klinische Anwendungen der Flächenformeln",
-          text: `Die **Körperoberfläche** (KOF) ist für die Dosierung von Zytostatika, Immunsuppressiva und einigen Antibiotika unverzichtbar. Standard ist die DuBois-Formel, die KOF in m² liefert.
+          heading: "Klinische Anwendungen",
+          text: `Die **Körperoberfläche** (KOF, ca. 1,7–1,9 m² bei Erwachsenen) bestimmt die Dosierung von Zytostatika und Immunsuppressiva. Die Mosteller-Formel liefert schnell: KOF = √(kg × cm / 3600).
 
-Die **Wundflächenbestimmung** (z. B. bei Verbrennungen) nutzt Annäherungen durch Rechtecke und Dreiecke. Die „Neuner-Regel" teilt den Körper in Bereiche von je ~9 % KOF auf.
+Die **Neuner-Regel** (Kopf 9 %, Arm je 9 %, Brust/Bauch je 9 %, Rücken 18 %, Bein je 18 %, Genitale 1 %) ermöglicht die rasche Abschätzung verbrannter Körperoberfläche.
 
-Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Amplitude × Zeit in Sekunden), die als Maß für die Ischämielast interpretiert wird.`,
+Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiografie als Kreisfläche berechnet — eine schwere Stenose liegt bei A < 1,0 cm² vor.`,
           merksatz:
-            "Körperoberfläche (KOF) ≈ 1,7–1,9 m² bei Erwachsenen; Zytostatika-Dosis in mg/m² multipliziert mit KOF ergibt die individuelle Gesamtdosis.",
+            "Zytostatika-Dosis = Dosierung [mg/m²] × KOF [m²]. KOF-Abweichungen ändern die Gesamtdosis erheblich.",
         },
       ],
       merksätze: [
-        "Rechteck: A = l × b; Umfang: U = 2 × (l + b).",
-        "Dreieck: A = ½ × g × h; Winkelsumme = 180°.",
-        "Heron: s = (a+b+c)/2; A = √(s(s−a)(s−b)(s−c)) — wenn nur die drei Seiten bekannt sind.",
-        "Kreis: A = π × r²; U = 2 × π × r.",
-        "Kreissektor (α in Radiant): A = r² × α / 2; Bogenlänge b = r × α.",
-        "Trapez: A = ½ × (a + c) × h — Mittelwert der Parallelseiten × Höhe.",
-        "Parallelogramm: A = g × h — Grundseite × Höhe (senkrecht zur Grundseite).",
-        "Ähnlichkeit: Längen skalieren mit k, Flächen mit k², Volumina mit k³.",
-        "KOF nach DuBois: 0,007184 × Gewicht^0,425 × Größe^0,725 (Gewicht kg, Größe cm).",
-        "Im EKG ist die ST-Fläche (Amplitude × Zeit) ein Maß für das ischämische Myokardareal.",
+        "Fläche = Quadrateinheiten (cm², m²); Umfang = lineare Einheiten (cm, m) — niemals verwechseln.",
+        "Dreieck = halbes Rechteck: A = ½ × g × h. Heron-Formel als Rettungsanker, wenn nur drei Seiten bekannt.",
+        "Kreis: A = πr², U = 2πr. Verdopplung von r → vierfache Fläche, doppelter Umfang.",
+        "Ähnlichkeit: Längen × k, Flächen × k², Volumina × k³.",
+        "Parallelogramm: A = g × h — h ist die senkrechte Höhe, nicht die Schrägseite.",
+        "KOF (Mosteller): √(kg × cm / 3600) ≈ 1,7–1,9 m² bei Erwachsenen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
           "Ein Dreieck hat die Seitenlängen a = 5 cm, b = 7 cm und c = 8 cm. Berechnen Sie die Fläche des Dreiecks mithilfe der Heronschen Formel.",
         answer:
-          "Zuerst wird der Halbumfang s bestimmt: s = (a + b + c) / 2 = (5 + 7 + 8) / 2 = 20 / 2 = 10 cm. Dann werden die Differenzen berechnet: s − a = 10 − 5 = 5 cm, s − b = 10 − 7 = 3 cm, s − c = 10 − 8 = 2 cm. Die Heronsche Formel lautet: A = √(s × (s−a) × (s−b) × (s−c)) = √(10 × 5 × 3 × 2) = √300. Da 300 = 100 × 3, ergibt sich A = 10 × √3 ≈ 10 × 1,732 ≈ 17,32 cm². Zur Überprüfung: Das Dreieck mit Seiten 5, 7, 8 ist ein stumpfwinkliges Dreieck; die Fläche erscheint plausibel. Eine alternative Methode wäre, zunächst die Höhe über die Zerlegung in zwei rechtwinklige Dreiecke zu bestimmen, was bei diesem Dreieck aber aufwendiger ist. Die Heronsche Formel ist daher besonders praktisch, wenn alle drei Seiten bekannt, die Höhe jedoch nicht direkt gegeben ist.",
+          "Zuerst wird der Halbumfang s bestimmt: s = (a + b + c) / 2 = (5 + 7 + 8) / 2 = 20 / 2 = 10 cm. Dann werden die Differenzen berechnet: s − a = 10 − 5 = 5 cm, s − b = 10 − 7 = 3 cm, s − c = 10 − 8 = 2 cm. Die Heronsche Formel lautet: A = √(s × (s−a) × (s−b) × (s−c)) = √(10 × 5 × 3 × 2) = √300. Da 300 = 100 × 3, ergibt sich A = 10 × √3 ≈ 10 × 1,732 ≈ 17,32 cm².",
       },
       klinischerBezug:
-        "KOF-basierte Chemotherapie-Dosierung (DuBois-Formel); Wundflächenbestimmung bei Verbrennungen; ST-Fläche im EKG als Ischämiemaß.",
+        "KOF-basierte Chemotherapie-Dosierung (DuBois/Mosteller); Neuner-Regel bei Verbrennungen; Aortenklappenöffnungsfläche als OP-Kriterium; Wundflächenbestimmung für Hauttransplantate.",
       selfTest: [
         {
           question:
@@ -1533,7 +1585,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
           options: ["32 cm²", "40 cm²", "48 cm²", "24 cm²", "64 cm²"],
           correctIndex: 0,
           explanation:
-            "Die Trapezfläche berechnet sich nach A = ½ × (a + c) × h. Einsetzen: A = ½ × (6 + 10) × 4 = ½ × 16 × 4 = ½ × 64 = 32 cm². Die Formel entspricht der Fläche eines Rechtecks mit der mittleren Breite (Mittelwert der parallelen Seiten) und der Höhe. Wichtig: h ist die senkrechte Höhe zwischen den parallelen Seiten, nicht die Schrägseite. Bei einem Trapez mit a = 6 und c = 10 ist der Mittelwert 8 cm, multipliziert mit der Höhe 4 ergibt sich ebenfalls 32 cm².",
+            "Trapezfläche: A = ½ × (a + c) × h = ½ × (6 + 10) × 4 = ½ × 16 × 4 = 32 cm². Die Formel nutzt den Mittelwert der parallelen Seiten (hier 8 cm) × Höhe. Wichtig: h ist die senkrechte Höhe zwischen den Parallelseiten, nicht die Schrägseite.",
           hints: [
             "Die Trapezformel verwendet den Mittelwert der beiden parallelen Seiten.",
             "A = ½ × (Summe der parallelen Seiten) × Höhe.",
@@ -1547,7 +1599,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
           options: ["3,14 cm", "6,28 cm", "12,56 cm", "25,12 cm", "4,71 cm"],
           correctIndex: 1,
           explanation:
-            "Zunächst wird der Winkel von Grad in Radiant umgerechnet: α = 45 × π / 180 = π / 4 ≈ 3,14 / 4 ≈ 0,785 rad. Die Bogenlänge berechnet sich dann nach b = r × α = 8 × 0,785 ≈ 6,28 cm. Alternativ: Der Winkel 45° beträgt 1/8 des Vollkreises (360°). Die gesamte Kreislinie wäre 2 × π × r = 2 × 3,14 × 8 = 50,24 cm. Ein Achtel davon: 50,24 / 8 = 6,28 cm. Beide Methoden liefern das gleiche Ergebnis.",
+            "45° ist genau 1/8 des Vollkreises (360°/45° = 8). Gesamtumfang: 2πr = 2 × 3,14 × 8 = 50,24 cm. Ein Achtel: 50,24/8 = 6,28 cm. Alternativ: α = 45° × π/180 = π/4 ≈ 0,785 rad; b = r × α = 8 × 0,785 ≈ 6,28 cm.",
           hints: [
             "45° ist genau ein Achtel des Vollkreises (360° / 45° = 8).",
             "Bogenlänge = Anteil des Vollkreisumfangs entsprechend dem Winkelanteil.",
@@ -1561,7 +1613,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
           options: ["24 cm²", "48 cm²", "96 cm²", "192 cm²", "36 cm²"],
           correctIndex: 2,
           explanation:
-            "Bei ähnlichen Figuren skalieren die Flächen mit dem Quadrat des Ähnlichkeitsfaktors. Hier gilt: A_groß = A_klein × k² = 6 × 4² = 6 × 16 = 96 cm². Dieses Skalierungsgesetz ist fundamental: Wenn alle Längen k-fach werden, werden alle Flächen k²-fach. Bei k = 4 wird die Fläche also 16-fach größer. Medizinischer Bezug: Wenn ein Organ-Querschnitt im MRT auf das Vierfache skaliert wird, bedeutet das nicht viermal, sondern sechzehnmal so viel Fläche.",
+            "Flächen skalieren mit k²: A_groß = A_klein × k² = 6 × 4² = 6 × 16 = 96 cm². Achtung: Nicht mit k multiplizieren (das wäre nur 24 cm²), sondern mit k². Klinisch: Wenn ein Organ-Querschnitt im MRT vierfach skaliert wird, ist die Fläche 16-fach größer.",
           hints: [
             "Flächen skalieren mit k², nicht mit k.",
             "k = 4 bedeutet k² = 16 für die Fläche.",
@@ -1581,7 +1633,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
           ],
           correctIndex: 1,
           explanation:
-            "Heron: s = (6 + 6 + 6) / 2 = 9. A = √(9 × (9−6) × (9−6) × (9−6)) = √(9 × 3 × 3 × 3) = √243 = √(81 × 3) = 9√3 ≈ 9 × 1,732 ≈ 15,59 cm². Zur Kontrolle über die Standardformel: Höhe des gleichseitigen Dreiecks h = (√3 / 2) × a = (√3 / 2) × 6 = 3√3. A = ½ × 6 × 3√3 = 9√3. Beide Methoden stimmen überein. Die allgemeine Formel für gleichseitige Dreiecke lautet A = (√3 / 4) × a² = (√3 / 4) × 36 = 9√3.",
+            "Heron: s = (6+6+6)/2 = 9. A = √(9 × 3 × 3 × 3) = √243 = √(81 × 3) = 9√3 ≈ 15,59 cm². Kontrolle: A = (√3/4) × 6² = (√3/4) × 36 = 9√3. Beide Wege stimmen überein.",
           hints: [
             "Für Heron: s = (a+b+c)/2; alle drei Seiten sind gleich lang.",
             "A = √(s × (s−a)³) bei gleichseitigem Dreieck.",
@@ -1591,13 +1643,24 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
         },
         {
           question:
-            "Ein Patient hat ein Körpergewicht von 70 kg und eine Körpergröße von 175 cm. Die KOF nach DuBois berechnet sich zu 1,84 m². Ein Zytostatikum wird mit 50 mg/m² dosiert. Welche Gesamtdosis erhält der Patient?",
+            "Ein Patient (70 kg, 175 cm) hat eine KOF von 1,84 m². Ein Zytostatikum wird mit 50 mg/m² dosiert. Welche Gesamtdosis erhält der Patient?",
           options: ["50 mg", "70 mg", "92 mg", "175 mg", "84 mg"],
           correctIndex: 2,
           explanation:
-            "Die Gesamtdosis ergibt sich aus: Dosis = Dosierung [mg/m²] × KOF [m²] = 50 mg/m² × 1,84 m² = 92 mg. Die KOF-basierte Dosierung bei Zytostatika ist klinisch relevant, weil die Toxizität dieser Medikamente eng mit der Körperoberfläche korreliert. Patienten mit größerer KOF benötigen eine höhere absolute Dosis, um die gleiche Wirkstoffkonzentration pro Körperoberfläche zu erreichen. Bei einem Standardpatienten mit KOF = 1,73 m² wäre die Dosis 86,5 mg — ein deutlich anderer Wert als die 92 mg dieses Patienten.",
+            "Gesamtdosis = Dosierung × KOF = 50 mg/m² × 1,84 m² = 92 mg. Die KOF-basierte Dosierung ist klinisch wichtig, weil die Toxizität von Zytostatika eng mit der Körperoberfläche korreliert.",
           hints: ["Gesamtdosis = Dosierung × KOF (die KOF ist gegeben).", "50 mg/m² × 1,84 m² = ?"],
           tags: ["kof", "zytostatikum", "dosierung"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Eine kreisförmige Verbrennung hat einen Durchmesser von 10 cm. Wie groß ist die verbrannte Fläche? (π ≈ 3,14)",
+          options: ["31,4 cm²", "78,5 cm²", "314 cm²", "50 cm²", "100 cm²"],
+          correctIndex: 1,
+          explanation:
+            "Durchmesser d = 10 cm → Radius r = 5 cm. A = π × r² = 3,14 × 25 = 78,5 cm². Häufiger Fehler: d statt r in die Formel einsetzen (ergibt 314 cm² — viermal zu viel).",
+          hints: ["Erst den Radius berechnen: r = d/2.", "A = π × r², nicht π × d²."],
+          tags: ["kreis", "fläche", "verbrennung"],
           difficulty: 1,
         },
       ],
@@ -1624,7 +1687,7 @@ Im **EKG** entspricht die ST-Strecken-Elevation geometrisch einer Fläche (Ampli
         "Tumorvolummetrie",
         "Oberfläche-Volumen-Verhältnis",
       ],
-      content: `**Idee:** Volumen V = „Rauminhalt”, Oberfläche O = „Hüllfläche“. **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
+      content: `**Idee:** Volumen V = „Rauminhalt", Oberfläche O = „Hüllfläche". **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
 
 **Verfahren — Schrittfolge:** (1) **Quader/Würfel:** V = a×b×c, O = 2(ab+ac+bc); Würfel V = a³, O = 6a². (2) **Zylinder:** V = πr²h, O = 2πr²+2πrh. (3) **Kugel:** V = (4/3)πr³, O = 4πr². (4) **Kegel:** V = (1/3)πr²h. (5) **Ellipsoid:** V ≈ (4/3)πabc (Herz).
 
@@ -1943,7 +2006,7 @@ Die **Normalform** (Slope-Intercept-Form):
 - m = Steigung (Tangens des Steigungswinkels α: **m = tan α**)
 - b = y-Achsenabschnitt (Wert bei x = 0)
 
-**Trigonometrie im rechtwinkligen Dreieck (MedAT-relevant):** Mit Hypotenuse, Gegenkathete (gegenüber von α) und Ankathete (an α): **sin(α) = Gegenkathete/Hypotenuse**, **cos(α) = Ankathete/Hypotenuse**, **tan(α) = Gegenkathete/Ankathete**. **Steigung in %** = (Höhenunterschied / Horizontaldistanz) × 100 = **tan(α) × 100 %**. Beispiel: 16 % Steigung bedeutet bei 100 m horizontaler Strecke 16 m Höhendifferenz — das Verhältnis 16/100 entspricht dem **Tangens** des Steigungswinkels (nicht Sinus, nicht Cosinus). MedAT-Frage „Welche Winkelfunktion?“ → **Tangens**.
+**Trigonometrie im rechtwinkligen Dreieck (MedAT-relevant):** Mit Hypotenuse, Gegenkathete (gegenüber von α) und Ankathete (an α): **sin(α) = Gegenkathete/Hypotenuse**, **cos(α) = Ankathete/Hypotenuse**, **tan(α) = Gegenkathete/Ankathete**. **Steigung in %** = (Höhenunterschied / Horizontaldistanz) × 100 = **tan(α) × 100 %**. Beispiel: 16 % Steigung bedeutet bei 100 m horizontaler Strecke 16 m Höhendifferenz — das Verhältnis 16/100 entspricht dem **Tangens** des Steigungswinkels (nicht Sinus, nicht Cosinus). MedAT-Frage „Welche Winkelfunktion?" → **Tangens**.
 
 Steigung aus zwei Punkten: **m = (y₂ − y₁) / (x₂ − x₁) = Δy / Δx**
 

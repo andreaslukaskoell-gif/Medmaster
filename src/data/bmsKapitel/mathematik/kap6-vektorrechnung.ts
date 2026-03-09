@@ -27,99 +27,158 @@ export const mathKap6: Kapitel = {
         "Skalare Multiplikation",
         "Kraftzerlegung",
       ],
-      content: `Ein **Vektor** ist eine gerichtete Größe: Er besitzt sowohl einen **Betrag** (Länge) als auch eine **Richtung**. Im Gegensatz dazu ist ein **Skalar** eine reine Zahlgröße ohne Richtung (z. B. Temperatur, Masse, Energie). Vektoren werden grafisch als Pfeile dargestellt und algebraisch als Spaltenvektoren geschrieben:
+      content: `In der Biomechanik wirken auf ein Kniegelenk gleichzeitig Muskelzug, Bandspannung und Schwerkraft. Jede dieser Kräfte hat nicht nur eine Stärke, sondern auch eine Richtung — „30 Newton nach links oben" ist eine völlig andere Belastung als „30 Newton nach rechts unten". Eine einzelne Zahl reicht nicht aus, um das zu beschreiben. Genau dafür gibt es **Vektoren**.
 
-$$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$$
+## Was ist ein Vektor?
 
-Der Betrag eines Vektors ergibt sich aus dem verallgemeinerten Satz des Pythagoras im Raum:
+Stell dir einen Pfeil vor: Er hat eine **Länge** (wie stark?) und zeigt in eine bestimmte **Richtung** (wohin?). Das ist ein Vektor. Im Gegensatz dazu ist ein **Skalar** nur eine nackte Zahl ohne Richtung — etwa die Temperatur 37 °C oder eine Masse von 70 kg.
 
-$$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$$
+Typische Vektoren in der Physik und Medizin:
+- **Kraft** (z. B. Muskelzug am Knochen)
+- **Geschwindigkeit** (z. B. Blutfluss in einer Arterie)
+- **Verschiebung** (z. B. Bewegung eines Gelenks)
 
-Im zweidimensionalen Fall entfällt die dritte Komponente: $|\\vec{v}| = \\sqrt{v_1^2 + v_2^2}$. Der **Nullvektor** $\\vec{0} = (0, 0, 0)^\\top$ hat Betrag 0 und keine definierte Richtung — er ist das neutrale Element der Vektoraddition.
-
-> **Merke:** Vektoren beschreiben gerichtete Größen (Kraft, Geschwindigkeit, Verschiebung). Skalare beschreiben ungerichtete Größen (Temperatur, Masse, Energie). Diese Unterscheidung ist in der Physik und Medizin fundamental.
+Typische Skalare: Temperatur, Masse, Energie, Druck.
 
 {{DIAGRAM:vector-addition}}
 
-## Vektoroperationen
+## Vom Pfeil zur Zahl: Wie man Vektoren aufschreibt
 
-**Addition** zweier Vektoren erfolgt komponentenweise: $\\vec{a} + \\vec{b} = (a_1+b_1,\\, a_2+b_2,\\, a_3+b_3)^\\top$. Geometrisch entspricht dies der **Parallelogrammregel**: Beide Vektoren werden am selben Ausgangspunkt angetragen, die Diagonale des Parallelogramms ist der Summenvektor (Resultierende). Alternativ kann man die Vektoren „hintereinanderhängen" (Spitze-an-Schaft-Methode): Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten Vektors.
+Geometrisch ist ein Vektor ein Pfeil. Algebraisch schreibt man ihn als **Spaltenvektor** — die Komponenten geben an, wie weit der Pfeil in jede Raumrichtung zeigt:
 
-**Subtraktion** $\\vec{a} - \\vec{b}$ ist äquivalent zur Addition von $\\vec{a}$ und $(-\\vec{b})$. Geometrisch ist $\\vec{a} - \\vec{b}$ die zweite Diagonale des Parallelogramms.
+$$\\vec{a} = \\begin{pmatrix} a_1 \\\\ a_2 \\\\ a_3 \\end{pmatrix}$$
 
-**Skalare Multiplikation** $\\lambda \\cdot \\vec{v}$ streckt oder staucht den Vektor: Für $|\\lambda| > 1$ wird der Vektor verlängert, für $0 < |\\lambda| < 1$ verkürzt; für $\\lambda < 0$ kehrt sich zusätzlich die Richtung um. Der Betrag skaliert linear: $|\\lambda \\vec{v}| = |\\lambda| \\cdot |\\vec{v}|$. Zwei Vektoren sind **parallel** (kollinear (auf einer Geraden liegend)), wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$ für ein $k \\neq 0$.
+Der Vektor $(3, 4)$ zum Beispiel zeigt 3 Einheiten nach rechts und 4 nach oben. Seine **Länge** (der Betrag) folgt direkt aus dem Satz des Pythagoras — der Pfeil ist die Hypotenuse eines rechtwinkligen Dreiecks:
 
-**Rechengesetze der Vektoraddition:**
-- Kommutativgesetz: $\\vec{a} + \\vec{b} = \\vec{b} + \\vec{a}$
-- Assoziativgesetz: $(\\vec{a} + \\vec{b}) + \\vec{c} = \\vec{a} + (\\vec{b} + \\vec{c})$
-- Distributivgesetz: $\\lambda(\\vec{a} + \\vec{b}) = \\lambda\\vec{a} + \\lambda\\vec{b}$
+$$|\\vec{v}| = \\sqrt{v_1^2 + v_2^2} \\quad \\text{(2D)}, \\qquad |\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2} \\quad \\text{(3D)}$$
 
-## Linearkombination und lineare Unabhängigkeit
+**Konkret:** $|(3, 4)| = \\sqrt{9 + 16} = \\sqrt{25} = 5$ — das klassische 3-4-5-Dreieck.
 
-> **Intuition vor der Definition:** Zwei Vektoren in der Ebene sind **linear abhängig**, wenn sie **parallel** sind (einer ist ein Vielfaches des anderen). Drei Vektoren im Raum sind linear abhängig, wenn sie **in einer Ebene liegen**. So behältst du die formale Definition im Griff.
+Der **Nullvektor** $\\vec{0} = (0, 0, 0)^\\top$ hat Betrag 0 und keine definierte Richtung.
 
-Eine **Linearkombination** mehrerer Vektoren ist eine Summe der Form $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} + \\ldots$ mit skalaren Koeffizienten $\\lambda_i$. Vektoren heißen **linear unabhängig**, wenn keiner von ihnen als Linearkombination der anderen darstellbar ist, d. h. $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} = \\vec{0}$ nur für $\\lambda_1 = \\lambda_2 = 0$ gilt.
+> **Merke:** Der Betrag eines Vektors ist der verallgemeinerte Pythagoras. Beim MedAT die pythagoräischen Tripel (3-4-5, 5-12-13, 1-2-√5) im Kopf haben — spart Rechenzeit.
 
-> **Merke:** Zwei Vektoren sind genau dann linear abhängig, wenn sie parallel (kollinear) sind. Drei Vektoren im ℝ³ sind linear abhängig, wenn sie in einer Ebene liegen (koplanar (in einer Ebene liegend)).
+## Vektoren addieren: erst das Bild, dann die Formel
 
-**Basisvektoren** spannen den gesamten Raum auf. Im $\\mathbb{R}^3$ bilden $\\vec{e_1}=(1,0,0)^\\top$, $\\vec{e_2}=(0,1,0)^\\top$, $\\vec{e_3}=(0,0,1)^\\top$ die Standardbasis (auch: kanonische Basis). Jeder Vektor lässt sich eindeutig als Linearkombination dieser Basisvektoren schreiben: $\\vec{v} = v_1 \\vec{e_1} + v_2 \\vec{e_2} + v_3 \\vec{e_3}$. Im $\\mathbb{R}^n$ benötigt man genau $n$ linear unabhängige Vektoren als Basis — diese Zahl heißt **Dimension** des Raumes.
+Wenn am Knie gleichzeitig zwei Kräfte angreifen — z. B. $\\vec{F}_1$ (Quadrizeps, nach oben) und $\\vec{F}_2$ (Schwerkraft, nach unten) — dann wirkt die **Resultierende** $\\vec{F}_1 + \\vec{F}_2$.
 
-## Einheitsvektor
+**Geometrisch (Parallelogrammregel):** Zeichne beide Pfeile am selben Startpunkt. Vervollständige das Parallelogramm. Die **Diagonale** ist der Summenvektor.
 
-Der **Einheitsvektor** $\\hat{e}$ zeigt in dieselbe Richtung wie $\\vec{v}$, hat aber den Betrag 1:
+**Alternativ (Spitze-an-Schaft):** Hänge den zweiten Pfeil an die Spitze des ersten. Der Summenvektor zeigt vom Anfang des ersten zum Ende des zweiten.
+
+**Algebraisch:** Einfach komponentenweise addieren:
+$$\\vec{a} + \\vec{b} = (a_1+b_1,\\; a_2+b_2,\\; a_3+b_3)^\\top$$
+
+**Beispiel:** $\\vec{a} = (2, 3)$ und $\\vec{b} = (4, -1)$. Dann $\\vec{a} + \\vec{b} = (6, 2)$. Achtung: $3 + (-1) = 2$, nicht $4$ — Vorzeichen sorgfältig beachten!
+
+**Subtraktion:** $\\vec{a} - \\vec{b}$ bedeutet: addiere den umgedrehten Vektor $(-\\vec{b})$. Geometrisch ist $\\vec{a} - \\vec{b}$ die zweite Diagonale des Parallelogramms.
+
+---
+
+## Skalare Multiplikation: Vektoren strecken und stauchen
+
+$\\lambda \\cdot \\vec{v}$ streckt oder staucht den Pfeil:
+- $\\lambda = 2$: doppelt so lang, gleiche Richtung
+- $\\lambda = 0{,}5$: halb so lang, gleiche Richtung
+- $\\lambda = -1$: gleich lang, **umgekehrte** Richtung
+
+Für den Betrag gilt: $|\\lambda \\vec{v}| = |\\lambda| \\cdot |\\vec{v}|$.
+
+Zwei Vektoren sind **parallel** (kollinear), wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$ für ein $k \\neq 0$. Sie zeigen dann in dieselbe oder genau entgegengesetzte Richtung.
+
+**Rechengesetze** (kurz bestätigt — funktionieren wie bei normalen Zahlen):
+- Kommutativ: $\\vec{a} + \\vec{b} = \\vec{b} + \\vec{a}$
+- Assoziativ: $(\\vec{a} + \\vec{b}) + \\vec{c} = \\vec{a} + (\\vec{b} + \\vec{c})$
+- Distributiv: $\\lambda(\\vec{a} + \\vec{b}) = \\lambda\\vec{a} + \\lambda\\vec{b}$
+
+---
+
+## Einheitsvektor: reine Richtung, Betrag genau 1
+
+Manchmal interessiert nur die **Richtung** einer Kraft, nicht ihre Stärke. Dafür normiert man den Vektor auf Betrag 1:
 
 $$\\hat{e} = \\frac{\\vec{v}}{|\\vec{v}|}$$
 
-Die Berechnung des Einheitsvektors wird auch **Normierung** (Skalieren auf Betrag 1) genannt. Voraussetzung: $\\vec{v} \\neq \\vec{0}$, da durch den Betrag dividiert wird. Einheitsvektoren geben reine Richtungsinformationen wieder und sind essentiell bei der Zerlegung von Kräften in Komponenten.
+**Beispiel:** $\\vec{v} = (6, 8)$. Betrag: $\\sqrt{36+64} = 10$. Einheitsvektor: $\\hat{e} = (0{,}6;\\; 0{,}8)$. Probe: $\\sqrt{0{,}36+0{,}64} = 1$ ✓.
 
-**MedAT-typische Aufgabe:** Gegeben $\\vec{v} = (3, 4)$. Berechne den Einheitsvektor.
-- Betrag: $|\\vec{v}| = \\sqrt{9 + 16} = 5$
-- Einheitsvektor: $\\hat{e} = \\frac{1}{5}(3, 4) = (0{,}6;\\; 0{,}8)$
-- Probe: $|\\hat{e}| = \\sqrt{0{,}36 + 0{,}64} = 1$ ✓
+> **Merke:** Einheitsvektor = Vektor ÷ seinen Betrag. Damit kannst du jede Kraft in „Richtung × Stärke" zerlegen: $\\vec{F} = |\\vec{F}| \\cdot \\hat{e}$.
+
+---
 
 ## Ortsvektor und Verbindungsvektor
 
-Der **Ortsvektor** $\\vec{r}_P$ eines Punktes $P(x, y, z)$ zeigt vom Koordinatenursprung zum Punkt: $\\vec{r}_P = (x, y, z)^\\top$. Der **Verbindungsvektor** von Punkt $A$ nach Punkt $B$ wird berechnet als:
+Der **Ortsvektor** $\\vec{r}_P$ zeigt vom Koordinatenursprung zum Punkt $P$: $\\vec{r}_P = (x, y, z)^\\top$.
+
+Der **Verbindungsvektor** von $A$ nach $B$ ist der Unterschied:
 
 $$\\vec{AB} = \\vec{r}_B - \\vec{r}_A = (b_1 - a_1,\\; b_2 - a_2,\\; b_3 - a_3)^\\top$$
 
-> **Merke:** Verbindungsvektor = Ziel − Start. Der Abstand $d(A,B) = |\\vec{AB}|$ ist der Betrag dieses Verbindungsvektors. Achtung: $\\vec{AB} = -\\vec{BA}$ — die Richtung kehrt sich um!
+**Eselsbrücke:** Verbindungsvektor = **Ziel minus Start**. Der Abstand zwischen den Punkten ist dann einfach $d(A,B) = |\\vec{AB}|$.
 
-**Mittelpunkt** der Strecke $\\overline{AB}$: $M = \\frac{1}{2}(\\vec{r}_A + \\vec{r}_B)$ — das arithmetische Mittel der Ortsvektoren. Allgemeiner teilt ein Punkt $T$ die Strecke im Verhältnis $\\lambda:(1-\\lambda)$: $\\vec{r}_T = (1-\\lambda)\\vec{r}_A + \\lambda\\vec{r}_B$.
+> **Merke:** $\\vec{AB} = -\\vec{BA}$ — wer Start und Ziel vertauscht, dreht die Richtung um. Der Betrag (Abstand) bleibt gleich.
 
-## Vektorielle Darstellung mit Polarkoordinaten
+**Mittelpunkt** der Strecke: $M = \\frac{1}{2}(\\vec{r}_A + \\vec{r}_B)$ — das arithmetische Mittel beider Ortsvektoren.
 
-Ein 2D-Vektor kann statt über seine Komponenten auch über **Betrag** $r$ und **Winkel** $\\alpha$ (zur x-Achse) angegeben werden:
+**Beispiel:** $A(1, 3, -2)$, $B(4, 1, 2)$:
+- $\\vec{AB} = (3, -2, 4)$, Abstand $= \\sqrt{9+4+16} = \\sqrt{29} \\approx 5{,}39$
+- Mittelpunkt $M = (2{,}5;\\; 2;\\; 0)$
+
+---
+
+## Kraftzerlegung am Kniegelenk — Vektoren in Aktion
+
+Eine Muskelkraft $\\vec{F} = (30, 40)$ N greift am Knie an. Die Unterschenkelachse zeigt in Richtung $\\vec{e}_x = (1, 0)$.
+
+- **Kompressionsanteil** (entlang der Achse): $F_{\\parallel} = 30$ N — drückt den Knochen zusammen.
+- **Scherkomponente** (senkrecht): $F_{\\perp} = \\sqrt{50^2 - 30^2} = 40$ N — belastet Bänder und Menisken.
+
+Klinisch ist die Scherkraft oft der limitierende Faktor — deshalb werden Kräfte in der Biomechanik immer vektoriell zerlegt.
+
+**EKG-Herzachse:** Im EKG wird die elektrische Erregung des Herzens als Summenvektor dargestellt. Aus Ableitung I (horizontal) und aVF (vertikal) ergibt sich der Herzachsenvektor. Zeigt er bei ca. 60° nach rechts unten: Normalachse. Starke Abweichung (> −30°): Hinweis auf linksventrikuläre Hypertrophie. Die Kardiologie denkt hier in Vektoren.
+
+---
+
+## Linearkombination und lineare Unabhängigkeit
+
+**Intuition zuerst:** Kannst du mit zwei Vektoren jeden Punkt in der Ebene erreichen? Nur dann, wenn die beiden Vektoren in **verschiedene Richtungen** zeigen — also nicht parallel sind.
+
+Formal: Eine **Linearkombination** ist $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} + \\ldots$ — man streckt/staucht die Vektoren und addiert sie.
+
+Vektoren heißen **linear unabhängig**, wenn keiner als Linearkombination der anderen darstellbar ist. Das bedeutet: $\\lambda_1 \\vec{v_1} + \\lambda_2 \\vec{v_2} = \\vec{0}$ geht nur für $\\lambda_1 = \\lambda_2 = 0$.
+
+**So prüfst du es praktisch:**
+- Zwei Vektoren → parallel? Dann abhängig. Sonst unabhängig.
+- Drei Vektoren im ℝ³ → liegen sie in einer Ebene (koplanar)? Dann abhängig.
+
+**Beispiel:** $\\vec{a} = (1, 2)$ und $\\vec{b} = (3, 6)$: Es gilt $\\vec{b} = 3\\vec{a}$ → **abhängig**. Aber $\\vec{a} = (1, 2)$ und $\\vec{c} = (2, -1)$: Kein $k$ mit $\\vec{c} = k\\vec{a}$ → **unabhängig**.
+
+Die **Standardbasis** im ℝ³ besteht aus $\\vec{e_1}=(1,0,0)$, $\\vec{e_2}=(0,1,0)$, $\\vec{e_3}=(0,0,1)$. Jeder Vektor lässt sich eindeutig als Linearkombination dieser drei schreiben: $\\vec{v} = v_1 \\vec{e_1} + v_2 \\vec{e_2} + v_3 \\vec{e_3}$.
+
+> **Merke:** Linear abhängig = einer ist „überflüssig" (als Kombination der anderen darstellbar). Im ℝ³ braucht man genau 3 linear unabhängige Vektoren, um jeden Punkt zu erreichen.
+
+---
+
+## Polarkoordinaten: Vektor über Betrag und Winkel
+
+Ein 2D-Vektor lässt sich auch über **Betrag** $r$ und **Winkel** $\\alpha$ beschreiben:
 
 $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmatrix}$$
 
-Diese Darstellung ist besonders bei der Zerlegung von Kräften nützlich. Umrechnung: $r = |\\vec{v}|$, $\\alpha = \\arctan(v_2/v_1)$ (Quadrant beachten!).
+**Beispiel:** Ein Vektor mit Betrag 10 und Winkel 60° zur x-Achse hat:
+- x-Komponente: $10 \\cos(60°) = 10 \\cdot 0{,}5 = 5$
+- y-Komponente: $10 \\sin(60°) = 10 \\cdot \\frac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8{,}66$
 
-## Rechenbeispiele
+> **Merke:** Polarform ist ideal bei Kraftzerlegung. Merke: cos = x-Richtung, sin = y-Richtung. Winkelwerte $\\sin(30°)=\\frac{1}{2}$, $\\sin(60°)=\\frac{\\sqrt{3}}{2}$, $\\cos(60°)=\\frac{1}{2}$ auswendig können.
 
-**Beispiel 1 — Verbindungsvektor und Abstand:**
-Gegeben: $A(1, 3, -2)$ und $B(4, 1, 2)$.
-- Verbindungsvektor: $\\vec{AB} = (4-1,\\; 1-3,\\; 2-(-2)) = (3, -2, 4)$
-- Abstand: $d = |\\vec{AB}| = \\sqrt{3^2+(-2)^2+4^2} = \\sqrt{9+4+16} = \\sqrt{29} \\approx 5{,}39$
-- Mittelpunkt: $M = \\frac{1}{2}((1,3,-2)+(4,1,2)) = (2{,}5;\\; 2;\\; 0)$
+---
 
-**Beispiel 2 — Kraftzerlegung in der Biomechanik:**
-Eine Muskelkraft $\\vec{F} = (30, 40)$ N greift am Knie an. Die Achse des Unterschenkels zeigt in Richtung $\\vec{e}_x = (1, 0)$.
-- Kraftkomponente entlang der Achse (Kompression): $F_{\\parallel} = \\vec{F} \\cdot \\vec{e}_x = 30$ N
-- Kraftkomponente senkrecht (Scherkraft): $F_{\\perp} = \\sqrt{|\\vec{F}|^2 - F_{\\parallel}^2} = \\sqrt{2500 - 900} = 40$ N
-- Die Scherkraft belastet Bänder und Menisken und ist klinisch oft der limitierende Faktor.
+## Typische Fehler und Fallen
 
-**Beispiel 3 — EKG-Herzachse:**
-Die Ableitungen I, II, III messen Spannungsdifferenzen. Aus Ableitung I (horizontal) und aVF (vertikal nach unten) ergibt sich der Herzachsenvektor. Zeigt er z. B. nach rechts unten mit 60°, liegt eine Normalachse vor. Deviationen deuten auf Hypertrophie oder Leitungsblockierungen hin.
-
-**Beispiel 4 — Lineare Unabhängigkeit prüfen:**
-Sind $\\vec{a} = (1, 2)$ und $\\vec{b} = (3, 6)$ linear unabhängig?
-- Prüfung: $\\vec{b} = 3 \\cdot \\vec{a}$ → linear **abhängig** (parallel).
-- Dagegen: $\\vec{a} = (1, 2)$ und $\\vec{c} = (2, -1)$ → kein skalares $k$ mit $\\vec{c} = k \\cdot \\vec{a}$ → linear **unabhängig**.
-
-## Klinische Bedeutung
-
-Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** werden Muskelkräfte und Gelenkbelastungen als Vektoren zerlegt. Die resultierende Gelenkkraft ist die Vektorsumme aller angreifenden Kräfte — bei einem Kniegelenk wirken gleichzeitig Quadrizeps, hintere Kreuzbänder und Schwerkraft, deren Resultierende die tatsächliche Belastung bestimmt. Im **EKG** wird die elektrische Herzachse als Summenvektor der Erregungsausbreitung dargestellt; der Cabrera-Kreis visualisiert diese Achse in der Frontalebene. Eine Linksachsenabweichung (>−30°) kann auf eine linksventrikuläre Hypertrophie hinweisen. Der **Blutfluss** in Gefäßen besitzt sowohl eine Geschwindigkeit (Betrag) als auch eine Fließrichtung und wird daher vektoriell beschrieben. In der **Doppler-Sonographie** misst man die Blutflussgeschwindigkeit als Vektorkomponente entlang der Schallstrahlrichtung — der gemessene Wert hängt vom Winkel zwischen Schallstrahl und Gefäß ab (Doppler-Gleichung).`,
+- **Vorzeichen beim Addieren vergessen:** $(3) + (-1) = 2$, nicht 4. Immer Vorzeichen mitführen.
+- **Betrag quadrieren:** $(-2)^2 = +4$, nicht $-4$. Quadrat ist immer positiv.
+- **Verbindungsvektor falsch herum:** $\\vec{AB} = B - A$, nicht $A - B$. Eselsbrücke: **Z**iel minus **S**tart.
+- **Parallele Vektoren verwechseln mit gleichen:** $\\vec{a} = (1,2)$ und $\\vec{b} = (-2,-4)$ sind parallel ($\\vec{b} = -2\\vec{a}$), obwohl sie entgegengesetzt zeigen.
+- **Einheitsvektor vergessen zu normieren:** Der Einheitsvektor ist $\\vec{v}/|\\vec{v}|$, nicht einfach $\\vec{v}$.`,
       lernziele: [
         "Vektoren als gerichtete Größen definieren und von Skalaren abgrenzen können.",
         "Addition, Subtraktion und skalare Multiplikation von Vektoren komponentenweise und geometrisch durchführen können.",
@@ -129,45 +188,39 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
       ],
       sections: [
         {
-          heading: "Darstellung und Betrag von Vektoren",
-          text: "Ein Vektor wird als Spaltenvektor $(a_1, a_2, a_3)^\\top$ geschrieben. Sein Betrag ist $|\\vec{a}| = \\sqrt{a_1^2 + a_2^2 + a_3^2}$ (Pythagoras im Raum). Im 2D-Fall entfällt die dritte Komponente. Der Nullvektor $(0, 0, 0)^\\top$ hat Betrag 0 und keine definierte Richtung.",
+          heading: "Vektor vs. Skalar und geometrische Vorstellung",
+          text: "Ein Vektor ist ein Pfeil mit Länge (Betrag) und Richtung — er beschreibt gerichtete Größen wie Kraft, Geschwindigkeit und Verschiebung. Ein Skalar hat nur einen Zahlenwert (Temperatur, Masse). Algebraisch wird ein Vektor als Spaltenvektor $(a_1, a_2, a_3)^\\top$ geschrieben. Sein Betrag folgt aus dem Satz des Pythagoras: $|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + v_3^2}$.",
           merksatz:
-            "Betrag = räumlicher Pythagoras: |v| = √(v₁² + v₂² + v₃²). Der Einheitsvektor ê = v/|v| hat stets Betrag 1.",
+            "Vektor = Betrag + Richtung. Skalar = nur Zahlenwert. Betrag = Pythagoras: |v| = √(v₁² + v₂² + v₃²).",
         },
         {
-          heading: "Vektoroperationen und geometrische Interpretation",
-          text: "Addition komponentenweise: $(a_1+b_1, a_2+b_2)^\\top$. Geometrisch: Parallelogrammregel (Resultierende). Skalarmultiplikation $\\lambda \\cdot \\vec{v}$ streckt (|λ|>1), staucht (|λ|<1) oder spiegelt (λ<0) den Vektor. Zwei Vektoren sind **parallel**, wenn einer ein skalares Vielfaches des anderen ist: $\\vec{a} = k \\cdot \\vec{b}$.",
+          heading: "Addition, Subtraktion und skalare Multiplikation",
+          text: "Vektoraddition geometrisch: Parallelogrammregel (Diagonale = Summenvektor) oder Spitze-an-Schaft. Algebraisch komponentenweise: $(a_1+b_1, a_2+b_2)^\\top$. Skalarmultiplikation $\\lambda \\cdot \\vec{v}$ streckt, staucht oder dreht den Vektor um. Der Einheitsvektor $\\hat{e} = \\vec{v}/|\\vec{v}|$ hat Betrag 1 und gibt reine Richtung an — essentiell für Kraftzerlegung.",
           merksatz:
-            "Parallelogrammregel: Die Diagonale ist der Summenvektor. Parallele Vektoren: a = k×b für ein k ≠ 0.",
+            "Parallelogrammregel zuerst denken, Formel zweite Wahl. Einheitsvektor ê = v/|v| gibt reine Richtung.",
         },
         {
-          heading: "Linearkombination, Basis und klinische Anwendung",
-          text: "Jeder Vektor im $\\mathbb{R}^3$ lässt sich als Linearkombination der drei Standardbasisvektoren eindeutig darstellen. In der Biomechanik wird eine Muskelkraft in ihre Komponenten entlang der Gelenk-Längsachse (Kompressionsanteil) und senkrecht dazu (Scherkraftanteil) zerlegt. Im EKG ergibt die Vektorsumme aller Herzaktionspotenziale den elektrischen Herzachsenvektor.",
+          heading: "Verbindungsvektor, Linearkombination und klinische Anwendung",
+          text: "Verbindungsvektor = Ziel − Start: $\\vec{AB} = \\vec{r}_B - \\vec{r}_A$, Abstand = Betrag davon. Linear unabhängige Vektoren zeigen in verschiedene Richtungen — parallele Vektoren sind abhängig. In der Biomechanik wird Muskelkraft in Kompression (entlang der Gelenkachse) und Scherkraft (senkrecht) zerlegt. Im EKG ist die Herzachse ein Summenvektor der Erregungsausbreitung.",
           merksatz:
-            "Klinisch: Gelenkkraft = Vektorsumme aller Muskelkräfte. EKG-Herzachse = elektrischer Summenvektor der Erregung.",
+            "Verbindungsvektor = Ziel − Start. Abhängig = parallel. Gelenkkraft = Vektorsumme aller Muskelkräfte.",
         },
       ],
       merksätze: [
-        "Ein Vektor besitzt Betrag UND Richtung — ein Skalar nur einen Zahlenwert.",
-        "Betrag im Raum: |v| = √(v₁² + v₂² + v₃²) — verallgemeinerter Pythagoras.",
-        "Addition: komponentenweise; geometrisch Parallelogrammregel (Resultierende = Diagonale).",
-        "Skalare Multiplikation λ×v: λ > 1 streckt, 0 < λ < 1 staucht, λ < 0 dreht Richtung um.",
-        "Einheitsvektor ê = v/|v|: Betrag genau 1, zeigt die Richtung von v.",
-        "Linear unabhängig: Kein Vektor ist Linearkombination der anderen.",
-        "Standardbasis im ℝ³: e₁=(1,0,0), e₂=(0,1,0), e₃=(0,0,1) — spannen den Raum auf.",
-        "Parallele Vektoren: a = k×b für ein skalares k ≠ 0.",
-        "Biomechanik: Gelenkkraft = Vektorsumme aller angreifenden Muskelkräfte.",
-        "EKG-Herzachse: elektrischer Vektor der Erregungsausbreitung — darstellbar im Cabrera-Kreis.",
+        "Betrag = Pythagoras im Raum: |v| = √(v₁² + v₂² + v₃²). Tripel 3-4-5 und 5-12-13 auswendig können.",
+        "Addition geometrisch: Parallelogrammregel (Diagonale = Resultierende). Algebraisch: komponentenweise.",
+        "Einheitsvektor ê = v/|v|: Richtung beibehalten, Betrag auf 1 normieren. Damit Kraft = |F| × ê.",
+        "Verbindungsvektor = Ziel − Start. Vertauschen dreht Richtung um, Betrag bleibt gleich.",
+        "Linear abhängig = parallel (2D) oder koplanar (3D). Unabhängig = verschiedene Richtungen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Erklären Sie den Begriff 'Vektor' und seine grundlegenden Operationen. Welche klinische Bedeutung haben Vektoren in der Medizin?",
+          "Eine Muskelkraft von $\\vec{F} = (30, 40)$ N greift am Knie an. Die Unterschenkelachse zeigt in x-Richtung. Berechnen Sie die Kompressionskraft entlang der Achse und die Scherkraft senkrecht dazu.",
         answer:
-          "Ein Vektor ist eine gerichtete physikalische oder mathematische Größe, die durch Betrag und Richtung vollständig beschrieben wird. Im Unterschied zum Skalar (reine Zahlgröße wie Temperatur oder Masse) trägt der Vektor eine Richtungsinformation. Algebraisch wird er als Spaltenvektor $(a_1, a_2, a_3)^\\top$ dargestellt. Der Betrag $|\\vec{v}| = \\sqrt{v_1^2+v_2^2+v_3^2}$ entspricht dem verallgemeinerten Satz des Pythagoras im Raum. Die **Addition** zweier Vektoren erfolgt komponentenweise und entspricht geometrisch der Parallelogrammregel: Die Resultierende ist die Diagonale des durch beide Vektoren aufgespannten Parallelogramms. Bei der **skalaren Multiplikation** $\\lambda \\cdot \\vec{v}$ wird der Betrag mit $|\\lambda|$ skaliert; für $\\lambda < 0$ kehrt sich die Richtung um. Der **Einheitsvektor** $\\hat{e} = \\vec{v}/|\\vec{v}|$ hat genau den Betrag 1 und gibt nur die Richtung an. Klinisch sind Vektoren in der Biomechanik unverzichtbar: Muskelkräfte und Gelenkreaktionskräfte werden als Vektoren dargestellt und addiert, um die resultierende Belastung zu berechnen. Im EKG repräsentiert die Herzachse den elektrischen Summenvektor der Erregungsausbreitung und wird im Cabrera-Kreis visualisiert. Blutfluss besitzt sowohl Geschwindigkeit als auch Richtung und ist daher grundsätzlich eine vektorielle Größe.",
+          "Der Betrag der Kraft ist $|\\vec{F}| = \\sqrt{30^2+40^2} = \\sqrt{900+1600} = \\sqrt{2500} = 50$ N. Die **Kompressionskomponente** entlang der Achse $(1,0)$ ist die x-Komponente: $F_{\\parallel} = 30$ N. Die **Scherkomponente** senkrecht dazu: $F_{\\perp} = \\sqrt{|\\vec{F}|^2 - F_{\\parallel}^2} = \\sqrt{2500 - 900} = 40$ N. Die Scherkraft belastet Bänder und Menisken und ist klinisch oft der limitierende Faktor. Diese Zerlegung nutzt die Vektorkomponenten direkt — die Kraft wird in einen Anteil parallel und einen Anteil senkrecht zur Gelenkachse aufgeteilt.",
       },
       klinischerBezug:
-        "Biomechanik: Gelenkkräfte als Vektorsummen; EKG-Herzachse als elektrischer Summenvektor (Cabrera-Kreis); Blutflussvektor in der Hämodynamik.",
+        "Biomechanik: Kraftzerlegung in Kompression und Scherkraft am Gelenk; EKG-Herzachse als Summenvektor der Erregungsausbreitung (Cabrera-Kreis); Doppler-Sonographie: Blutflussvektor entlang Schallstrahlrichtung.",
       selfTest: [
         {
           question: "Berechnen Sie den Betrag des Vektors $\\vec{v} = (3, 4)$.",
@@ -292,86 +345,155 @@ Vektoren spielen in der Medizin eine fundamentale Rolle. In der **Biomechanik** 
         "Lorentz-Kraft",
         "Parallelogrammfläche",
       ],
-      content: `## Skalarprodukt
+      content: `Wir brauchen zwei Operationen, um mit Vektoren wirklich arbeiten zu können. Das **Skalarprodukt** beantwortet die Frage: „Wie sehr zeigen diese beiden Vektoren in die gleiche Richtung?" Das **Kreuzprodukt** beantwortet: „Was steht senkrecht auf beiden?" Beide Operationen tauchen überall in Physik und Medizin auf — von der mechanischen Arbeit bis zum Drehmoment am Gelenk.
 
-Das **Skalarprodukt** (Dot-Produkt, inneres Produkt) zweier Vektoren $\\vec{a}$ und $\\vec{b}$ ist definiert als:
+## Skalarprodukt: Wie ähnlich sind zwei Richtungen?
 
-$$\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\theta$$
+Stell dir vor, du schiebst einen Schlitten: Die Kraft $\\vec{F}$ zieht schräg nach oben, aber der Schlitten bewegt sich horizontal. Nur der **Anteil der Kraft in Bewegungsrichtung** leistet tatsächlich Arbeit. Genau das misst das Skalarprodukt.
 
-Das Ergebnis ist ein **Skalar** (keine Richtung). Die geometrische Bedeutung: Das Skalarprodukt misst, wie sehr zwei Vektoren in dieselbe Richtung zeigen. Es ist **kommutativ**: $\\vec{a} \\cdot \\vec{b} = \\vec{b} \\cdot \\vec{a}$ und **distributiv**: $\\vec{a} \\cdot (\\vec{b} + \\vec{c}) = \\vec{a} \\cdot \\vec{b} + \\vec{a} \\cdot \\vec{c}$.
+**Geometrische Idee:** Das Skalarprodukt projiziert einen Vektor auf den anderen. Je mehr sie in die gleiche Richtung zeigen, desto größer das Ergebnis. Stehen sie senkrecht, ist das Ergebnis null — kein gemeinsamer Anteil.
 
-**Wichtige Spezialfälle:**
-- $\\vec{a} \\cdot \\vec{b} = 0 \\Rightarrow$ Vektoren sind **orthogonal** (senkrecht, $\\theta = 90°$)
-- $\\vec{a} \\cdot \\vec{b} > 0 \\Rightarrow$ spitzer Winkel ($\\theta < 90°$)
-- $\\vec{a} \\cdot \\vec{b} < 0 \\Rightarrow$ stumpfer Winkel ($\\theta > 90°$)
-- $\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2$ (Skalarprodukt mit sich selbst = Betrag zum Quadrat)
+$$\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\theta$$
 
-> **Merke:** Das Skalarprodukt $\\vec{a} \\cdot \\vec{b} = 0$ ist DAS zentrale Kriterium für Orthogonalität. Im MedAT wird häufig gefragt, ob zwei Vektoren senkrecht aufeinander stehen — immer über das Skalarprodukt prüfen!
+Der $\\cos \\theta$ ist der Schlüssel: Er misst die „Ausrichtung" der Vektoren zueinander.
 
-**Winkelberechnung:**
+**Berechnung über Komponenten** (die Formel, die du tatsächlich verwendest):
+$$\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3$$
+
+Das Ergebnis ist ein **Skalar** — eine einzelne Zahl, kein Vektor.
+
+**Beispiel:** $\\vec{a} = (3, -2, 1)$ und $\\vec{b} = (1, 4, -2)$:
+$\\vec{a} \\cdot \\vec{b} = 3 \\cdot 1 + (-2) \\cdot 4 + 1 \\cdot (-2) = 3 - 8 - 2 = -7$
+
+Das negative Ergebnis verrät sofort: Die Vektoren zeigen eher in entgegengesetzte Richtungen (stumpfer Winkel).
+
+---
+
+## Was das Vorzeichen verrät
+
+- $\\vec{a} \\cdot \\vec{b} > 0$: **spitzer Winkel** ($\\theta < 90°$) — Vektoren zeigen grob in die gleiche Richtung
+- $\\vec{a} \\cdot \\vec{b} = 0$: **rechter Winkel** ($\\theta = 90°$) — Vektoren stehen **senkrecht** (orthogonal)
+- $\\vec{a} \\cdot \\vec{b} < 0$: **stumpfer Winkel** ($\\theta > 90°$) — Vektoren zeigen eher entgegengesetzt
+
+> **Merke:** Skalarprodukt = 0 ist DER Schnelltest für Orthogonalität. Beim MedAT: „Stehen die Vektoren senkrecht?" → Skalarprodukt berechnen und prüfen, ob es null ist.
+
+Außerdem: $\\vec{a} \\cdot \\vec{a} = |\\vec{a}|^2$ — das Skalarprodukt eines Vektors mit sich selbst ergibt seinen Betrag zum Quadrat.
+
+---
+
+## Winkel zwischen zwei Vektoren berechnen
+
+Aus der geometrischen Formel umgestellt:
+
 $$\\cos \\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$$
 
-Die wichtigsten Werte: $\\cos(0°) = 1$, $\\cos(60°) = 1/2$, $\\cos(90°) = 0$, $\\cos(120°) = -1/2$, $\\cos(180°) = -1$. Ein negatives Skalarprodukt zeigt einen stumpfen Winkel an.
+**Schritt für Schritt:**
+1. Skalarprodukt berechnen (komponentenweise)
+2. Beide Beträge berechnen
+3. Dividieren → cos θ
+4. Winkel ablesen (Standardwerte kennen!)
 
-**Mechanische Arbeit als Skalarprodukt:** Die physikalische Arbeit ist definiert als $W = \\vec{F} \\cdot \\vec{s} = |\\vec{F}| \\cdot |\\vec{s}| \\cdot \\cos\\theta$. Nur die Kraftkomponente in Bewegungsrichtung leistet Arbeit. Bei $\\theta = 90°$ (Kraft senkrecht zur Bewegung) ist $W = 0$.
+**Wichtige Kosinuswerte:** $\\cos(0°) = 1$, $\\cos(60°) = \\frac{1}{2}$, $\\cos(90°) = 0$, $\\cos(120°) = -\\frac{1}{2}$, $\\cos(180°) = -1$.
 
-## Kreuzprodukt
+**Beispiel:** $\\vec{a} = (1, 0)$ und $\\vec{b} = (1, 1)$:
+- Skalarprodukt: $1 \\cdot 1 + 0 \\cdot 1 = 1$
+- Beträge: $|\\vec{a}| = 1$, $|\\vec{b}| = \\sqrt{2}$
+- $\\cos \\theta = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\Rightarrow \\theta = 45°$
 
-Das **Kreuzprodukt** (Vektorprodukt) ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**:
+---
+
+## Mechanische Arbeit — das Skalarprodukt in der Physik
+
+Die physikalische Arbeit ist $W = \\vec{F} \\cdot \\vec{s} = |\\vec{F}| \\cdot |\\vec{s}| \\cdot \\cos\\theta$.
+
+Nur die Kraftkomponente **in Bewegungsrichtung** leistet Arbeit. Steht die Kraft senkrecht zur Bewegung ($\\theta = 90°$), ist $\\cos(90°) = 0$ → keine Arbeit. Deshalb leistet die Normalkraft auf einer Tischplatte keine Arbeit am darauf liegenden Buch — sie steht senkrecht zur (horizontalen) Verschiebung.
+
+---
+
+## Orthogonalprojektion: Kräfte zerlegen
+
+Die **Projektion** von $\\vec{a}$ auf die Richtung von $\\vec{b}$ ist:
+
+$$\\text{proj}_{\\vec{b}} \\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\cdot \\vec{b}$$
+
+Die senkrechte Komponente: $\\vec{a}_{\\perp} = \\vec{a} - \\text{proj}_{\\vec{b}} \\vec{a}$.
+
+**Biomechanische Anwendung:** Eine Muskelkraft am Knie wird auf die Gelenkachse projiziert → **Kompressionskraft** (parallel, drückt Knochen zusammen). Der Rest ist **Scherkraft** (senkrecht, belastet Bänder). Ist die Projektion null, greift die gesamte Kraft als Schere an.
+
+> **Merke:** Projektion auf Achse = Nutzkraft in dieser Richtung. Senkrechte Komponente = Kraft − Projektion. In der Biomechanik: Projektion auf Gelenkachse = Kompression, Rest = Scherkraft.
+
+---
+
+## Kreuzprodukt: Was steht senkrecht auf beiden?
+
+Jetzt zur zweiten Operation. Ein Chirurg dreht eine Schraube: Die Kraft greift am Schraubenschlüssel an, das **Drehmoment** steht senkrecht auf Hebelarm und Kraft — es zeigt entlang der Schraubenachse. Das ist genau das Kreuzprodukt.
+
+Das **Kreuzprodukt** $\\vec{a} \\times \\vec{b}$ liefert einen **Vektor**, der senkrecht auf $\\vec{a}$ und $\\vec{b}$ steht:
 
 $$\\vec{a} \\times \\vec{b} = \\begin{pmatrix} a_2 b_3 - a_3 b_2 \\\\ a_3 b_1 - a_1 b_3 \\\\ a_1 b_2 - a_2 b_1 \\end{pmatrix}$$
 
-Dieses Ergebnis steht **senkrecht** auf beiden Ausgangsvektoren — es ist der **Normalenvektor** der von $\\vec{a}$ und $\\vec{b}$ aufgespannten Ebene.
-
-**Betrag des Kreuzprodukts:**
+Sein Betrag:
 $$|\\vec{a} \\times \\vec{b}| = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\sin \\theta$$
 
-Geometrisch entspricht dies dem **Flächeninhalt des Parallelogramms**, das von $\\vec{a}$ und $\\vec{b}$ aufgespannt wird. Die **Dreiecksfläche** ist entsprechend $A_{\\triangle} = \\frac{1}{2}|\\vec{a} \\times \\vec{b}|$.
+Geometrisch ist das die **Fläche des Parallelogramms**, das von beiden Vektoren aufgespannt wird. Die Dreiecksfläche ist die Hälfte davon: $A_{\\triangle} = \\frac{1}{2}|\\vec{a} \\times \\vec{b}|$.
 
-**Wichtige Eigenschaften:**
-- **Antikommutativ**: $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$ — Reihenfolge vertauschen ändert das Vorzeichen!
-- Parallele Vektoren ($\\theta = 0°$ oder $180°$): $\\vec{a} \\times \\vec{b} = \\vec{0}$ (da $\\sin 0° = \\sin 180° = 0$)
-- Die Richtung folgt der **Rechten-Hand-Regel**: Finger von $\\vec{a}$ zu $\\vec{b}$ einrollen, Daumen zeigt in Richtung $\\vec{a} \\times \\vec{b}$
-- Zyklische Eigenschaft der Standardbasis: $\\vec{e_1} \\times \\vec{e_2} = \\vec{e_3}$, $\\vec{e_2} \\times \\vec{e_3} = \\vec{e_1}$, $\\vec{e_3} \\times \\vec{e_1} = \\vec{e_2}$
+**Richtung:** Die **Rechte-Hand-Regel** bestimmt, wohin der Ergebnisvektor zeigt: Finger von $\\vec{a}$ zu $\\vec{b}$ einrollen → Daumen zeigt in Richtung $\\vec{a} \\times \\vec{b}$.
 
-| Eigenschaft | Skalarprodukt | Kreuzprodukt |
+---
+
+## Kreuzprodukt: Was du wissen musst
+
+- **Antikommutativ:** $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$ — Reihenfolge tauschen dreht das Vorzeichen um!
+- **Parallele Vektoren:** $\\vec{a} \\times \\vec{b} = \\vec{0}$, weil $\\sin(0°) = 0$ — kein Parallelogramm aufspannbar.
+- **Standardbasis:** $\\vec{e_1} \\times \\vec{e_2} = \\vec{e_3}$ (x × y = z), und zyklisch weiter.
+- Nur im **ℝ³** definiert (im Gegensatz zum Skalarprodukt, das auch in 2D funktioniert).
+
+**Beispiel:** $\\vec{a} = (1, 0, 0)$ und $\\vec{b} = (0, 1, 0)$:
+$\\vec{a} \\times \\vec{b} = (0-0,\\; 0-0,\\; 1-0) = (0, 0, 1)$ — zeigt in z-Richtung ✓
+
+---
+
+## Drehmoment am Ellbogen — das Kreuzprodukt in Aktion
+
+Der Bizeps übt eine Kraft $\\vec{F} = (0, 120, 0)$ N aus. Der Hebelarm (Ansatzpunkt zum Drehpunkt) ist $\\vec{r} = (0{,}05, 0, 0)$ m.
+
+$\\vec{M} = \\vec{r} \\times \\vec{F} = (0, 0, 0{,}05 \\cdot 120) = (0, 0, 6)$ Nm
+
+Das Drehmoment von 6 Nm zeigt in z-Richtung (aus der Ebene heraus) und wirkt als Flexionsmoment. Da Hebelarm und Kraft senkrecht stehen ($\\theta = 90°$, $\\sin 90° = 1$), ist das Drehmoment **maximal** — der Bizeps arbeitet am effizientesten bei 90° Ellbogenbeugung.
+
+> **Merke:** Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$. Je senkrechter Kraft und Hebelarm, desto stärker das Drehmoment. Bei 90° ist es maximal (sin 90° = 1).
+
+---
+
+## Entscheidungshilfe: Skalarprodukt oder Kreuzprodukt?
+
+| Eigenschaft | Skalarprodukt $\\vec{a} \\cdot \\vec{b}$ | Kreuzprodukt $\\vec{a} \\times \\vec{b}$ |
 |------------|---------------|--------------|
-| Ergebnis | Skalar | Vektor |
+| Ergebnis | Skalar (Zahl) | Vektor (Pfeil) |
 | Definiert in | ℝ² und ℝ³ | nur ℝ³ |
 | Kommutativ? | Ja | Nein (antikommutativ) |
-| Geometrische Bedeutung | Projektion, Winkel | Fläche, Normalenvektor |
-| Null bei | Orthogonalität | Parallelität |
+| Misst | Ausrichtung, Projektion | Fläche, senkrechte Richtung |
+| Null bei | Orthogonalität ($\\theta = 90°$) | Parallelität ($\\theta = 0°/180°$) |
 
-## Orthogonalprojektion
+**Faustregel für den MedAT:**
+- Siehst du „Winkel", „senkrecht", „Arbeit", „Projektion" → **Skalarprodukt**
+- Siehst du „Drehmoment", „senkrecht auf beiden", „Fläche", „Normalenvektor" → **Kreuzprodukt**
 
-Die **Projektion** eines Vektors $\\vec{a}$ auf $\\vec{b}$: $\\text{proj}_{\\vec{b}} \\vec{a} = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{b}|^2} \\cdot \\vec{b}$. Die senkrechte Komponente: $\\vec{a}_{\\perp} = \\vec{a} - \\text{proj}_{\\vec{b}} \\vec{a}$. In der Biomechanik wird damit die **Kompressionskraft** (parallel zur Gelenkachse) von der **Scherkraft** (senkrecht) getrennt.
+---
 
-> **Merke:** Projektion auf Gelenkachse = Kompressionskraft, senkrechte Komponente = Scherkraft. Projektion = 0 bedeutet Orthogonalität.
+## Lorentz-Kraft: Kreuzprodukt im MRT
 
-## Rechenbeispiele
+Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf geladene Teilchen im Magnetfeld — die Kraft steht senkrecht auf Geschwindigkeit und Magnetfeld. Für die MRT-Sicherheit bedeutet das: Metallische Implantate im starken Magnetfeld können Kräfte erfahren. Die Richtung dieser Kraft folgt der Rechten-Hand-Regel.
 
-**Beispiel 1 — Winkelberechnung:**
-$\\vec{a} = (2, 1, -1)$, $\\vec{b} = (1, -1, 2)$.
-- Skalarprodukt: $2 \\cdot 1 + 1 \\cdot (-1) + (-1) \\cdot 2 = 2 - 1 - 2 = -1$
-- Beträge: $|\\vec{a}| = \\sqrt{4+1+1} = \\sqrt{6}$, $|\\vec{b}| = \\sqrt{1+1+4} = \\sqrt{6}$
-- $\\cos \\theta = \\frac{-1}{\\sqrt{6} \\cdot \\sqrt{6}} = \\frac{-1}{6} \\Rightarrow \\theta = \\arccos(-1/6) \\approx 99{,}6°$ (stumpfer Winkel)
+---
 
-**Beispiel 2 — Kreuzprodukt und Fläche:**
-$\\vec{a} = (1, 2, 0)$, $\\vec{b} = (3, 0, 1)$.
-- $\\vec{a} \\times \\vec{b} = (2 \\cdot 1 - 0 \\cdot 0,\\; 0 \\cdot 3 - 1 \\cdot 1,\\; 1 \\cdot 0 - 2 \\cdot 3) = (2, -1, -6)$
-- Parallelogrammfläche: $|\\vec{a} \\times \\vec{b}| = \\sqrt{4+1+36} = \\sqrt{41} \\approx 6{,}40$
-- Dreiecksfläche (halbes Parallelogramm): $A_{\\triangle} = \\frac{1}{2}\\sqrt{41} \\approx 3{,}20$
+## Typische Fehler und Fallen
 
-**Beispiel 3 — Drehmoment am Ellbogengelenk:**
-Der Bizeps übt eine Kraft $\\vec{F} = (0, 120, 0)$ N am Unterarm aus. Der Hebelarm (Ansatzpunkt zum Drehpunkt) ist $\\vec{r} = (0{,}05, 0, 0)$ m.
-- $\\vec{M} = \\vec{r} \\times \\vec{F} = (0, 0, 0{,}05 \\cdot 120) = (0, 0, 6)$ Nm
-- Das Drehmoment von 6 Nm wirkt als Flexionsmoment und reicht aus, um einen Gegenstand von ca. 2 kg auf Unterarmlänge zu halten.
-
-## Klinische Bedeutung
-
-Das **Drehmoment** $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist zentral für die Biomechanik: Je länger der Hebelarm und je senkrechter die Kraft, desto größer das Drehmoment. Bei $\\theta = 90°$ ist es maximal — der Bizeps arbeitet am effizientesten bei 90° Ellbogenbeugung.
-
-Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ ist für die MRT-Sicherheit relevant: Metallische Implantate erfahren im Magnetfeld eine Kraft senkrecht zu Bewegungsrichtung und Feld. Die **Orthogonalprojektion** zerlegt Muskelkräfte in Kompressions- (parallel zur Gelenkachse) und Scherkraft (senkrecht).`,
+- **Skalar- und Kreuzprodukt verwechseln:** Skalarprodukt → Zahl. Kreuzprodukt → Vektor. Beide haben einen Punkt bzw. ein Kreuz als Symbol.
+- **Vorzeichen beim Skalarprodukt übersehen:** $(-2) \\times 4 = -8$, nicht $+8$.
+- **Kreuzprodukt-Reihenfolge ignorieren:** $\\vec{a} \\times \\vec{b} \\neq \\vec{b} \\times \\vec{a}$! Das Vorzeichen dreht sich um.
+- **Parallele Vektoren beim Kreuzprodukt:** Ergeben den Nullvektor, nicht „undefiniert".
+- **cos vs. sin verwechseln:** Skalarprodukt nutzt cos (= 0 bei 90°), Kreuzprodukt nutzt sin (= 0 bei 0°/180°).`,
       lernziele: [
         "Das Skalarprodukt komponentenweise und über den Winkel berechnen und interpretieren können.",
         "Orthogonalität zweier Vektoren anhand des Skalarprodukts erkennen und beweisen können.",
@@ -381,52 +503,39 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ ist für die MRT
       ],
       sections: [
         {
-          heading: "Skalarprodukt — Definition und Anwendung",
-          text: "Das Skalarprodukt $\\vec{a} \\cdot \\vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen Skalar. Ist es gleich null, stehen die Vektoren senkrecht aufeinander (orthogonal). Der Winkel zwischen zwei Vektoren ergibt sich zu $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$. Das Skalarprodukt ist kommutativ: $\\vec{a}\\cdot\\vec{b} = \\vec{b}\\cdot\\vec{a}$.",
+          heading: "Skalarprodukt — Ausrichtung messen und Winkel berechnen",
+          text: "Das Skalarprodukt $\\vec{a} \\cdot \\vec{b} = a_1b_1 + a_2b_2 + a_3b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ misst, wie sehr zwei Vektoren in dieselbe Richtung zeigen. Das Ergebnis ist eine Zahl (Skalar). Null → orthogonal. Positiv → spitzer Winkel. Negativ → stumpfer Winkel. Winkelberechnung: $\\cos\\theta = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$. Mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$: nur die Kraftkomponente in Bewegungsrichtung zählt.",
           merksatz:
-            "Skalarprodukt = 0 → orthogonal. Skalarprodukt > 0 → spitzer Winkel. Skalarprodukt < 0 → stumpfer Winkel.",
+            "Skalarprodukt = 0 → senkrecht (Schnelltest!). Vorzeichen verrät Winkeltyp: positiv = spitz, negativ = stumpf.",
         },
         {
-          heading: "Kreuzprodukt — Definition, Eigenschaften und Berechnung",
-          text: "Das Kreuzprodukt $\\vec{a}\\times\\vec{b}$ ist nur im ℝ³ definiert und ergibt einen Vektor senkrecht zu $\\vec{a}$ und $\\vec{b}$. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht der Fläche des aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Antikommutativ: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Für parallele Vektoren gilt $\\vec{a}\\times\\vec{b} = \\vec{0}$.",
+          heading: "Kreuzprodukt — senkrechter Vektor und Fläche",
+          text: "Das Kreuzprodukt $\\vec{a}\\times\\vec{b}$ ergibt einen Vektor senkrecht auf beiden (nur im ℝ³). Betrag = Fläche des aufgespannten Parallelogramms: $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$. Richtung folgt der Rechten-Hand-Regel. Antikommutativ: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Parallele Vektoren → Nullvektor. Wichtigste Anwendung: Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ — maximal bei 90° zwischen Hebelarm und Kraft.",
           merksatz:
-            "Kreuzprodukt → Vektor ⊥ zu beiden; |a×b| = Parallelogrammfläche; antikommutativ: a×b = −(b×a).",
+            "Kreuzprodukt = Vektor senkrecht auf beiden. |a×b| = Parallelogrammfläche. Antikommutativ: Reihenfolge zählt!",
         },
         {
-          heading: "Klinische Anwendungen: Drehmoment und Lorentz-Kraft",
-          text: "Das Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$ ist das Kreuzprodukt aus Hebelarm $\\vec{r}$ und Kraft $\\vec{F}$. Im Knie beispielsweise ergibt die Quadrizepskraft × dem Hebelarm das Streckmoment. In der MRT-Sicherheit ist die Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$ relevant: Ein im Magnetfeld bewegtes metallisches Implantat kann eine Kraft durch das Kreuzprodukt aus Ladungsgeschwindigkeit und Magnetfeld erfahren. Das Skalarprodukt erlaubt die Projektion einer Kraft auf eine Bewegungsrichtung (mechanische Arbeit: $W = \\vec{F}\\cdot\\vec{s}$).",
+          heading: "Projektion und klinische Anwendungen",
+          text: "Projektion von $\\vec{a}$ auf $\\vec{b}$: $\\text{proj} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\vec{b}$ — in der Biomechanik Kompressionskraft (parallel) vs. Scherkraft (senkrecht). Drehmoment $\\vec{M} = \\vec{r} \\times \\vec{F}$: Bizeps bei 90° Beugung maximal effizient. Lorentz-Kraft $\\vec{F} = q(\\vec{v}\\times\\vec{B})$: MRT-Sicherheit bei metallischen Implantaten. Mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$: nur Kraftanteil in Bewegungsrichtung leistet Arbeit.",
           merksatz:
-            "Drehmoment M = r × F (Kreuzprodukt). Mechanische Arbeit W = F × s (Skalarprodukt). MRT: Lorentz-Kraft F = q×(v×B).",
-        },
-        {
-          heading: "Orthogonalprojektion",
-          text: "Die Projektion $\\text{proj}_{\\vec{b}}\\vec{a} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\cdot\\vec{b}$ zerlegt einen Vektor in parallele und senkrechte Komponenten. In der Biomechanik wird damit die Kompressionskraft (entlang der Gelenkachse) von der Scherkraft (senkrecht dazu) getrennt.",
-          merksatz:
-            "Projektion von a auf b: proj = (a·b/|b|²)·b. Senkrechte Komponente = a − proj.",
+            "Entscheidungsregel: 'Winkel/Projektion/Arbeit' → Skalarprodukt. 'Drehmoment/Fläche/senkrecht auf beiden' → Kreuzprodukt.",
         },
       ],
       merksätze: [
-        "Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃ — Ergebnis ist ein Skalar.",
-        "a×b = |a|×|b|×cos θ — damit lässt sich der Winkel zwischen Vektoren berechnen.",
-        "a×b = 0 bedeutet Orthogonalität (θ = 90°) — zentrales Kriterium!",
-        "Kreuzprodukt: a×b steht senkrecht auf a UND b — Ergebnis ist ein Vektor.",
-        "|a×b| = |a|×|b|×sin θ = Fläche des aufgespannten Parallelogramms.",
-        "Rechte-Hand-Regel: Finger von a nach b einrollen, Daumen zeigt a×b.",
-        "Antikommutativ: a×b = −(b×a) — Reihenfolge vertauschen ändert das Vorzeichen.",
-        "Parallele Vektoren: Kreuzprodukt = Nullvektor (sin 0° = 0).",
-        "Drehmoment M = r×F — Kreuzprodukt aus Hebelarm und Kraft in der Biomechanik.",
-        "Mechanische Arbeit W = F×s — Skalarprodukt aus Kraft und Weg.",
-        "Projektion von a auf b: proj = (a·b/|b|²)·b — zerlegt Kraft in Kompressions- und Scherkomponente.",
+        "Skalarprodukt = 0 ist DER Schnelltest für Orthogonalität. Beim MedAT zuerst prüfen.",
+        "Winkel: cos θ = (a·b)/(|a|·|b|). Standardwerte cos(60°)=½, cos(90°)=0, cos(120°)=−½ kennen.",
+        "Kreuzprodukt a×b steht senkrecht auf BEIDEN Vektoren. Betrag = Parallelogrammfläche.",
+        "Antikommutativ: a×b = −(b×a). Reihenfolge tauschen dreht Vorzeichen um.",
+        "Drehmoment M = r×F: maximal bei 90° (sin 90° = 1), null bei paralleler Kraft.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Was ist der Unterschied zwischen Skalarprodukt und Kreuzprodukt? Beschreiben Sie Berechnung, Ergebnis und je eine klinische Anwendung.",
+          "Der Bizeps übt eine Kraft $\\vec{F} = (0, 120, 0)$ N am Unterarm aus. Der Hebelarm ist $\\vec{r} = (0{,}05, 0, 0)$ m. Berechnen Sie das Drehmoment. Warum ist es bei 90° Beugung maximal?",
         answer:
-          "Das **Skalarprodukt** $\\vec{a}\\cdot\\vec{b} = a_1b_1+a_2b_2+a_3b_3 = |\\vec{a}||\\vec{b}|\\cos\\theta$ liefert einen **Skalar** ohne Richtung. Es misst die Übereinstimmung der Richtungen zweier Vektoren. Ist das Skalarprodukt null, stehen die Vektoren senkrecht (orthogonal) aufeinander. Bei positivem Wert schließen sie einen spitzen Winkel ein, bei negativem einen stumpfen. Klinisch wird das Skalarprodukt für die mechanische Arbeit $W = \\vec{F}\\cdot\\vec{s}$ verwendet: Nur die Kraftkomponente in Bewegungsrichtung leistet Arbeit. Das **Kreuzprodukt** $\\vec{a}\\times\\vec{b}$ ist nur im $\\mathbb{R}^3$ definiert und liefert einen **Vektor**, der senkrecht auf beiden Ausgangsvektoren steht. Sein Betrag $|\\vec{a}\\times\\vec{b}| = |\\vec{a}||\\vec{b}|\\sin\\theta$ entspricht dem Flächeninhalt des von beiden Vektoren aufgespannten Parallelogramms. Die Richtung folgt der Rechten-Hand-Regel. Im Gegensatz zum Skalarprodukt ist das Kreuzprodukt **antikommutativ**: $\\vec{a}\\times\\vec{b} = -(\\vec{b}\\times\\vec{a})$. Klinisch ist das Drehmoment $\\vec{M} = \\vec{r}\\times\\vec{F}$ die wichtigste Anwendung: Es beschreibt die Dreheigenschaft einer Kraft um einen Gelenkpunkt und ist zentral für das Verständnis von Hebelkräften in der Biomechanik.",
+          "Das Drehmoment berechnet sich als Kreuzprodukt: $\\vec{M} = \\vec{r} \\times \\vec{F}$. Komponentenweise: $\\vec{M} = (0 \\cdot 0 - 0 \\cdot 0,\\; 0 \\cdot 0 - 0{,}05 \\cdot 0,\\; 0{,}05 \\cdot 120 - 0 \\cdot 0) = (0, 0, 6)$ Nm. Der Betrag ist $|\\vec{M}| = 6$ Nm. Alternativ: $|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta = 0{,}05 \\cdot 120 \\cdot \\sin(90°) = 6$ Nm. Das Drehmoment ist bei 90° maximal, weil $\\sin(90°) = 1$ — Hebelarm und Kraft stehen senkrecht aufeinander, und die gesamte Kraft wirkt als Drehelement. Bei kleinerem oder größerem Winkel wäre $\\sin\\theta < 1$, und ein Teil der Kraft würde als Kompression statt als Drehung wirken.",
       },
       klinischerBezug:
-        "Drehmoment M = r×F an Gelenken (Biomechanik); Lorentz-Kraft F = q×(v×B) für MRT-Implantat-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt); Projektion zerlegt Muskelkräfte in Kompressions- und Scherkraft.",
+        "Drehmoment M = r×F an Gelenken (Bizeps bei 90° maximal); Lorentz-Kraft F = q(v×B) für MRT-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt); Projektion zerlegt Muskelkräfte in Kompressions- und Scherkraft.",
       selfTest: [
         {
           question:
