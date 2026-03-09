@@ -1659,7 +1659,7 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
       ],
     },
     {
-      id: "bio-4-02",
+      id: "bio-9-10",
       title: "Gastrulation und die drei Keimblätter",
       stichworte: [
         "Gastrulation",
@@ -1942,7 +1942,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       ],
     },
     {
-      id: "bio-4-03",
+      id: "bio-9-11",
       title: "Organogenese, Embryo vs. Fetus und kritische Phasen",
       stichworte: [
         "Embryonalperiode",
@@ -2096,7 +2096,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
     },
     {
-      id: "bio-4-04",
+      id: "bio-9-12",
       title: "Embryonalhüllen und Plazenta",
       stichworte: [
         "Plazenta",
