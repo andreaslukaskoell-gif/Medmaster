@@ -1413,123 +1413,191 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
     },
     {
       id: "ph-2-03",
-      title: "Statik, Druck und Hydrodynamik",
+      title: "Statik, Druck und Hebelmechanik",
       stichworte: [
         "Gleichgewicht",
+        "Kräftegleichgewicht",
+        "Momentengleichgewicht",
+        "Schwerpunkt",
         "Drehmoment",
         "Hebelgesetz",
+        "einseitiger Hebel",
+        "zweiseitiger Hebel",
+        "schiefe Ebene",
+        "Hangabtriebskraft",
+        "Normalkraft",
         "Druck",
         "Pascal-Prinzip",
         "hydrostatischer Druck",
         "Auftrieb",
-        "Bernoulli-Gleichung",
-        "Kontinuitätsgleichung",
-        "Poiseuille-Gesetz",
-        "Viskosität",
-        "laminare Strömung",
       ],
       content: `
 
 
-## Statik, Druck und Hydrodynamik
+## Statik, Druck und Hebelmechanik
 
+Wer schon einmal eine schwere Tür mit einem Finger am äußersten Rand geöffnet hat, kennt das Prinzip: Nicht die Kraft allein entscheidet, sondern **wo** sie ansetzt. Genau dieses Hebelgesetz nutzt der menschliche Körper in jedem Gelenk — und genau deshalb reißen Sehnen, wenn die Biomechanik an ihre Grenzen kommt. Orthopädie, Unfallchirurgie und Rehabilitationsmedizin beruhen auf den Gesetzen der Statik.
 
+---
 
-Die Statik untersucht Körper und Systeme im Gleichgewicht, während die Hydrodynamik (Lehre von strömenden Flüssigkeiten und Gasen) die Bewegung von Flüssigkeiten und Gasen beschreibt. Beide Gebiete sind für die Medizin von zentraler Bedeutung: Statik erklärt die Mechanik des Bewegungsapparates (Hebelprinzipien im Skelett), Hydrodynamik beschreibt den Blutfluss und die Funktion der Lunge.
+## Gleichgewichtsbedingungen
 
-## Statik und Gleichgewichtsbedingungen
+Ein Körper befindet sich im **mechanischen Gleichgewicht**, wenn zwei Bedingungen gleichzeitig erfüllt sind:
 
-Ein Körper befindet sich im mechanischen Gleichgewicht, wenn zwei Bedingungen gleichzeitig erfüllt sind:
-1. **Kräftegleichgewicht:** Die Summe aller Kräfte (Vektoren) ist null: ΣF = 0. Damit ist Translationsgleichgewicht gewährleistet.
-2. **Momentengleichgewicht:** Die Summe aller Drehmomente um jeden beliebigen Punkt ist null: ΣM = 0. Damit ist Rotationsgleichgewicht gewährleistet.
+1. **Kräftegleichgewicht (Translationsgleichgewicht):** Die vektorielle Summe aller angreifenden Kräfte ist null:
 
-**Drehmoment:** M = F · d, wobei d der senkrechte Hebelarm (Abstand von der Drehachse zur Wirkungslinie der Kraft) ist. Einheit: N·m. Ein großer Hebelarm ermöglicht es, mit kleiner Kraft ein großes Drehmoment zu erzeugen — das ist das Hebelgesetz.
+**ΣF = 0**
 
-Im Körper: Der Unterarm ist ein einarmiger Hebel (Typ 3). Der Bizeps (Kraft F_B) wirkt ca. 5 cm vom Ellenbogengelenk (Drehachse) entfernt. Eine Last von 10 kg (100 N) in der Hand wirkt ca. 35 cm von der Drehachse. Momentengleichgewicht: F_B · 0,05 = 100 · 0,35 → F_B = 700 N. Der Muskel muss eine siebenmal größere Kraft aufwenden als die Last — das ist anatomisch nachteilig, aber ermöglicht schnelle, weite Bewegungen (Geschwindigkeitshebel).
+Das bedeutet: Der Körper wird weder nach links, rechts, oben noch unten beschleunigt. Jede Kraft hat eine Gegenkraft — im Stehen drückt die Gewichtskraft nach unten, der Boden drückt mit der Normalkraft (Reaktionskraft des Bodens auf den Körper) gleich stark nach oben.
 
-## Druck in Flüssigkeiten
+2. **Momentengleichgewicht (Rotationsgleichgewicht):** Die Summe aller Drehmomente um **jeden** beliebigen Punkt ist null:
 
-Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen gleich (Pascal'sches Prinzip, gleichmäßige Druckausbreitung in Fluiden). Der hydrostatische Druck in einer Flüssigkeit der Dichte ρ in Tiefe h beträgt p = ρ·g·h. Im menschlichen Körper: Der arterielle Blutdruck (systolisch ca. 120 mmHg) überwindet den peripheren Gefäßwiderstand und treibt das Blut durch den Kreislauf. Der venöse Druck (ca. 5 mmHg) ist viel niedriger — Klappen verhindern Rückfluss.
+**ΣM = 0**
 
-**Auftrieb:** Ein in eine Flüssigkeit eingetauchter Körper erfährt eine Auftriebskraft F_A = ρ_Fl · g · V_verdrängt (Archimedisches Prinzip). Für den menschlichen Körper (Dichte ca. 0,98 kg/dm³ im Wasser) ist der Auftrieb fast vollständig gleich dem Gewicht — das ermöglicht therapeutisches Schwimmen und Rehabilitationsübungen im Wasser.
+Ohne diese Bedingung könnte ein Körper zwar kräftefrei sein, sich aber trotzdem drehen — wie ein Karussell, das sich mit konstanter Geschwindigkeit dreht.
 
-## Strömungslehre – Grundlagen der Hydrodynamik
+> **Merke:** Gleichgewicht erfordert **immer beide** Bedingungen: ΣF = 0 **und** ΣM = 0. Nur Kräftegleichgewicht reicht nicht — ein Kräftepaar (zwei gleich große, entgegengesetzte Kräfte an verschiedenen Angriffspunkten) erzeugt eine Drehung bei ΣF = 0.
 
-Die Hydrodynamik beschreibt die Bewegung von Fluiden (Flüssigkeiten und Gasen). Die folgenden Grundprinzipien sind für das Verständnis des Blutkreislaufs unverzichtbar.
+---
 
-**Kontinuitätsgleichung (Massenerhaltung):** In einem geschlossenen Rohrsystem ist der Volumenstrom Q konstant. Daraus folgt:
+## Schwerpunkt
 
-**A₁ · v₁ = A₂ · v₂**
+Der **Schwerpunkt** (Massenmittelpunkt) ist der Punkt, in dem man sich die gesamte Masse eines Körpers konzentriert denken kann. Greift die Schwerkraft am Schwerpunkt an, entsteht kein Drehmoment — der Körper kippt nicht.
 
-Wird der Querschnitt A kleiner, muss die Strömungsgeschwindigkeit v proportional steigen — und umgekehrt. Klinisch: Die Aorta (A ≈ 4,5 cm²) hat eine hohe Blutgeschwindigkeit (~0,3 m/s); im Kapillarbett (Gesamtquerschnitt ≈ 4500 cm²) sinkt v auf ~0,3 mm/s — optimal für den Stoffaustausch.
+- **Standsicherheit:** Ein Körper ist stabil, solange das **Lot vom Schwerpunkt** innerhalb der **Standfläche** (Unterstützungsfläche) fällt. Fällt es außerhalb → Umkippen.
+- **Klinisch:** Patienten mit Beinprothesen oder Schwangere verlagern ihren Schwerpunkt — die Sturzgefahr steigt, wenn das Lot die Standfläche verlässt. Breitbeiniges Stehen vergrößert die Standfläche und erhöht die Stabilität.
 
-**Bernoulli-Gleichung (Energieerhaltung):** Halte den Daumen über einen Gartenschlauch — das Wasser spritzt schneller heraus, aber der Druck in der Verengung ist paradoxerweise **niedriger**, nicht höher. Das ist der Kern der Bernoulli-Gleichung: Wo eine Flüssigkeit schneller strömt, sinkt ihr statischer Druck. Die Gesamtenergie pro Volumen bleibt konstant, sie verteilt sich nur um — mehr Geschwindigkeitsenergie bedeutet weniger Druckenergie.
+---
 
-Für ein ideales, reibungsfreies Fluid in stationärer Strömung gilt:
+## Drehmoment und Hebelgesetz
 
-**p + ½ρv² + ρgh = const**
+Das **Drehmoment** M beschreibt die Drehwirkung einer Kraft bezüglich einer Achse:
 
-Wo die Geschwindigkeit zunimmt, sinkt der statische Druck — der **Venturi-Effekt**. Bei einer Gefäßstenose steigt v an der Engstelle, gleichzeitig fällt der lokale Druck.
+**M = F · d**
 
-**Laminare vs. turbulente Strömung:** Bei laminarer Strömung bewegen sich die Fluidschichten geordnet und parallel; es entsteht ein parabolisches Geschwindigkeitsprofil. Turbulente Strömung ist chaotisch, mit Wirbeln und höherem Energieverlust. Die **Reynolds-Zahl** Re = ρ·v·d/η entscheidet: Re < 2300 → laminar; Re > 4000 → turbulent. Klinisch: Stenosen erhöhen v → Re steigt → turbulente Strömung → auskultierbare Stenosegeräusche.
+Dabei ist **d** der **Hebelarm** — der senkrechte Abstand von der Drehachse zur Wirkungslinie der Kraft. Einheit: N·m (Newton-Meter). Je größer der Hebelarm, desto größer die Drehwirkung bei gleicher Kraft.
 
-**Viskosität (η):** Die dynamische Viskosität beschreibt die „innere Reibung" eines Fluids. Blut hat eine Viskosität von ca. 3–4 mPa·s (bei 37 °C) — etwa dreimal so viskos wie Wasser. Die Viskosität beeinflusst den Strömungswiderstand nach dem **Poiseuille-Gesetz:** Q = πr⁴Δp/(8ηl). Der Radius geht mit der **vierten Potenz** ein — das ist der klinisch wichtigste Punkt dieses Gesetzes. Eine Halbierung des Gefäßradius reduziert den Blutfluss auf 1/16! Konkret: Eine Arteriosklerose, die den Gefäßradius um nur 20 % verengt, reduziert den Blutfluss bereits um ca. 60 % — (0,8)⁴ = 0,41, also nur noch 41 % des Normalflusses. Das erklärt, warum schon moderate Stenosen klinisch symptomatisch werden.
+{{DIAGRAM:lever-arm}}
 
-> **Merke:** Kontinuität: A₁v₁ = A₂v₂. Bernoulli: schneller → niedrigerer Druck. Reynolds: Re > 4000 → turbulent. Poiseuille: Q ~ r⁴. Ausführliche Herleitungen, Rechenbeispiele und klinische Vertiefung → siehe Fluidmechanik-Kapitel.
+**Das Hebelgesetz** beschreibt das Momentengleichgewicht eines Hebels:
 
-> **Prüfungstipp:** Das Hebelgesetz (F₁·d₁ = F₂·d₂) wird im MedAT häufig am Beispiel Bizeps/Unterarm geprüft. Typische Falle: Vergessen, dass der Muskelhebelarm viel kürzer ist als der Lasthebelarm — die Muskelkraft ist daher immer ein Vielfaches der Last.
+**F₁ · d₁ = F₂ · d₂**
 
-## Rechenbeispiele
+Es gibt zwei Grundtypen:
 
-**Beispiel 1 — Bizepskraft beim Tragen (Hebelgesetz):**
-Last in der Hand: 5 kg (= 49 N). Abstand Hand↔Ellenbogen: 35 cm. Bizepsansatz: 5 cm vom Ellenbogen.
-Momentengleichgewicht: F_B × 0,05 = 49 × 0,35 → F_B = 17,15 / 0,05 = **343 N** ≈ 35 kgf.
-Der Bizeps muss das Siebenfache der Last aufbringen — erklärt Sehnenverletzungen bei schwerem Heben.
+| Typ | Drehpunkt | Beispiel Alltag | Beispiel Körper |
+|-----|-----------|-----------------|-----------------|
+| **Einseitiger Hebel** (Typ 3) | Am Ende, Kraft und Last auf derselben Seite | Pinzette, Schubkarre | Bizeps–Unterarm–Hand |
+| **Zweiseitiger Hebel** (Typ 1) | Zwischen Kraft und Last | Wippe, Schere | Atlanto-okzipitales Gelenk (Kopfnicken) |
 
-**Beispiel 2 — Hydrostatischer Druck im Stehen:**
-Blutdruckdifferenz Kopf↔Fuß: Höhe h = 1,7 m, ρ_Blut = 1060 kg/m³.
-Δp = ρgh = 1060 × 9,81 × 1,7 = **17 677 Pa ≈ 133 mmHg**.
-Am Fuß: 120 + 133 ≈ **253 mmHg** systolisch. Am Kopf: 120 - 25 ≈ **95 mmHg** (30 cm über Herz).
+**Klinisch — Gelenke als Hebel:** Der Unterarm funktioniert als **einseitiger Hebel (Typ 3)**. Der Bizeps setzt nur ~5 cm vom Ellenbogengelenk (Drehachse) an, während die Hand ~35 cm entfernt ist. Dieses ungünstige Hebelverhältnis von 1:7 bedeutet: Für eine Last von 10 kg (≈ 100 N) muss der Bizeps **700 N** aufbringen. Das ist anatomisch „nachteilig" für die Kraft, aber ein **Geschwindigkeitshebel** — kleine Muskelverkürzung erzeugt große Handbewegung.
 
-Weitere Strömungs-Rechenbeispiele (Koronarstenose, Kontinuität, Reynolds) → siehe Fluidmechanik-Kapitel.`,
+Das **Kiefergelenk** ist ein weiteres klinisches Beispiel: Der Musculus masseter setzt nahe am Gelenk an (kurzer Hebelarm), die Schneidezähne sind weit entfernt. Deshalb ist die Beißkraft an den Molaren (kürzerer Lastarm) deutlich höher als an den Incisivi.
+
+> **Merke:** Kurzer Muskelhebelarm → große Muskelkraft nötig, aber schnelle Bewegung. Langer Muskelhebelarm → weniger Kraft nötig, aber langsame Bewegung. Der Körper bevorzugt Geschwindigkeitshebel.
+
+---
+
+## Schiefe Ebene
+
+Die schiefe Ebene zerlegt die Gewichtskraft F_G = m·g in zwei Komponenten:
+
+{{DIAGRAM:inclined-plane}}
+
+- **Hangabtriebskraft** (parallel zur Ebene): F_H = m·g·sin(α)
+- **Normalkraft** (senkrecht zur Ebene): F_N = m·g·cos(α)
+
+Je steiler der Winkel α, desto größer die Hangabtriebskraft und desto kleiner die Normalkraft.
+
+**Klinisch:** In der Orthopädie nutzt man schiefe Ebenen bei **Extensionsbehandlungen** (Streckverbänden). Das Bein liegt auf einer geneigten Schiene, und das Eigengewicht erzeugt über die Hangabtriebskraft eine kontrollierte Zugkraft auf die Fraktur — ohne externes Gewicht.
+
+> **Merke:** Schiefe Ebene: F_H = mg·sin(α), F_N = mg·cos(α). Bei α = 30°: sin(30°) = 0,5 → die Hangabtriebskraft ist genau die Hälfte der Gewichtskraft.
+
+---
+
+## Druck — Grundlagen
+
+Der **Druck** p ist definiert als Kraft pro Fläche:
+
+**p = F / A**
+
+Einheit: Pascal (Pa = N/m²). Ein kleiner Querschnitt bei gleicher Kraft erzeugt hohen Druck — deshalb durchdringen Injektionsnadeln die Haut leicht (winzige Fläche, hoher Druck), obwohl die aufgewendete Kraft gering ist.
+
+**Pascal'sches Prinzip:** In einer eingeschlossenen, inkompressiblen Flüssigkeit breitet sich eine Druckänderung **gleichmäßig in alle Richtungen** aus. Anwendung: Hydraulische Pressen und — im Körper — die gleichmäßige Druckübertragung in Gelenkkapseln (Synovialflüssigkeit).
+
+**Hydrostatischer Druck:** In einer ruhenden Flüssigkeit steigt der Druck mit der Tiefe:
+
+**p = ρ · g · h**
+
+Dabei ist ρ die Dichte der Flüssigkeit, g die Fallbeschleunigung und h die Tiefe. **Klinisch:** Beim stehenden Patienten addiert sich der hydrostatische Blutdruck in den Beinen zum arteriellen Druck — bei 1,5 m Höhendifferenz (Herz↔Fuß) kommen ca. 115 mmHg hinzu. Das erklärt Beinödeme, Krampfadern und venöse Ulzera am Unterschenkel.
+
+**Auftrieb (Archimedisches Prinzip):** Ein eingetauchter Körper erfährt eine Auftriebskraft F_A = ρ_Fl · g · V_verdrängt, die dem Gewicht des verdrängten Fluids entspricht. Therapeutisch genutzt in der **Hydrotherapie**: Im Wasser reduziert sich die effektive Gewichtsbelastung auf Gelenke — ideal für Rehabilitation nach Operationen.
+
+> **Merke:** p = F/A → kleine Fläche = hoher Druck. Hydrostatisch: p = ρgh → Druck steigt mit Tiefe. Auftrieb: F_A = ρ_Fl·g·V.
+
+---
+
+## Hydrodynamik — Kurzüberblick
+
+Die Strömungsmechanik von Fluiden (Blutfluss, Ventilation) wird im **Kapitel Fluidmechanik** (kap2) ausführlich behandelt. Dort findest du Bernoulli-Gleichung, Kontinuitätsgleichung, Poiseuille-Gesetz (Q ~ r⁴), Reynolds-Zahl und deren klinische Anwendung auf Gefäßstenosen, Kapillardurchblutung und Herzgeräusche.
+
+---
+
+## Rechenbeispiel — Schiefe Ebene
+
+**Extensionsbehandlung:** Ein Bein (Masse 12 kg) liegt auf einer geneigten Schiene mit α = 20°.
+
+- Gewichtskraft: F_G = 12 kg × 9,81 m/s² = **117,7 N**
+- Hangabtriebskraft (Zugkraft auf die Fraktur): F_H = 117,7 × sin(20°) = 117,7 × 0,342 = **40,3 N**
+- Normalkraft (Auflagekraft auf die Schiene): F_N = 117,7 × cos(20°) = 117,7 × 0,940 = **110,6 N**
+
+Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 13 853 ✓
+
+> **Merke:** Bei Rechenaufgaben zur schiefen Ebene: sin(α) für die Komponente **parallel** zur Ebene, cos(α) für die Komponente **senkrecht** zur Ebene. Eselsbrücke: „**S**inus = **s**chiefwärts (hangabwärts)."
+
+> 💡 **Prüfungstipp:** Das Hebelgesetz (F₁·d₁ = F₂·d₂) wird im MedAT häufig am Beispiel Bizeps/Unterarm geprüft. Typische Falle: Vergessen, dass der Muskelhebelarm viel kürzer ist als der Lasthebelarm — die Muskelkraft ist daher immer ein Vielfaches der Last.`,
       lernziele: [
         "Die zwei Gleichgewichtsbedingungen (Kräfte- und Momentengleichgewicht) anwenden",
         "Drehmomente berechnen und das Hebelgesetz auf den Bewegungsapparat anwenden",
-        "Die Bernoulli-Gleichung und Kontinuitätsgleichung auf den Blutkreislauf anwenden",
-        "Das Poiseuille-Gesetz erklären und die Bedeutung des Radius⁴-Gesetzes für Gefäßstenosen verstehen",
-        "Laminare und turbulente Strömung unterscheiden und die Reynoldszahl einordnen",
+        "Einseitige und zweiseitige Hebel unterscheiden und klinische Beispiele nennen",
+        "Die schiefe Ebene analysieren und Hangabtriebskraft/Normalkraft berechnen",
+        "Druck (p=F/A), hydrostatischen Druck (p=ρgh) und Auftrieb erklären und anwenden",
       ],
       sections: [
         {
-          heading: "Hebelgesetz und Muskelkräfte",
-          text: "Ein Hebel im Gleichgewicht erfüllt: F₁·d₁ = F₂·d₂ (Drehmomentgleichgewicht). Im Körper sind Muskeln nahe an Gelenken angesetzt (kleiner Hebelarm), was große Muskelkräfte erfordert, aber schnelle und weite Bewegungen ermöglicht. Der Unterarm-Bizeps-Mechanismus ist ein Typ-3-Hebel: Muskelkraft (ca. 5 cm vom Gelenk) vs. Last (ca. 35 cm vom Gelenk) → Kraft-Übersetzung 1:7. Für 10 kg Last braucht der Bizeps ca. 700 N.",
+          heading: "Gleichgewichtsbedingungen",
+          text: "Mechanisches Gleichgewicht erfordert zwei Bedingungen: (1) Kräftegleichgewicht ΣF = 0 — keine resultierende Kraft, keine Beschleunigung. (2) Momentengleichgewicht ΣM = 0 — keine resultierende Drehwirkung, keine Rotation. Beide müssen gleichzeitig erfüllt sein. Standsicherheit: Ein Körper kippt nicht, solange das Lot vom Schwerpunkt innerhalb der Standfläche fällt.",
           merksatz:
-            "M = F·d. Kleiner Hebelarm → große Kraft nötig. Großer Hebelarm → kleine Kraft nötig. Gleichgewicht: F₁·d₁ = F₂·d₂.",
+            "Gleichgewicht = ΣF = 0 UND ΣM = 0. Fehlt eine Bedingung → Translation oder Rotation.",
         },
         {
-          heading: "Bernoulli und Blutdruck",
-          text: "Die Bernoulli-Gleichung (½ρv² + ρgh + p = const) besagt: Schnelle Strömung → niedriger Druck. Bei Gefäßstenosen steigt v, fällt p. Das Poiseuille-Gesetz Q = πr⁴Δp/(8ηl) zeigt die extreme Abhängigkeit vom Radius — das r⁴-Gesetz macht den Gefäßradius zum dominanten Faktor für den Blutfluss.",
+          heading: "Drehmoment und Hebelgesetz",
+          text: "Drehmoment M = F·d (Kraft × senkrechter Hebelarm, Einheit N·m). Hebelgesetz: F₁·d₁ = F₂·d₂. Im Körper: Muskeln setzen nahe am Gelenk an (kurzer Hebelarm) → große Muskelkraft nötig, aber schnelle Bewegung. Bizeps–Unterarm: Hebelverhältnis 1:7, für 10 kg Last braucht der Bizeps 700 N. Kiefergelenk: Molaren näher am Drehpunkt → höhere Beißkraft als Incisivi.",
           merksatz:
-            "Poiseuille: Q ~ r⁴. Radius halbiert → Fluss auf 1/16 reduziert. Gefäßverengung ist extrem flusslimitierend.",
+            "M = F·d. Kurzer Muskelhebelarm → große Kraft, schnelle Bewegung (Geschwindigkeitshebel).",
         },
         {
-          heading: "Laminare vs. turbulente Strömung",
-          text: "Die Reynoldszahl Re = ρ·v·d/η entscheidet über den Strömungstyp: Re < 2300 → laminar (geordnet, schichtenweise); Re > 4000 → turbulent (wirbelnd, Energieverlust). Turbulente Strömung erzeugt Geräusche (Herzgeräusche, Strömungsgeräusche bei Stenosen). Im normalen Kreislauf ist die Strömung meist laminar; an Klappen, Stenosen und Biegungen kann Turbulenz entstehen. Turbulenz erhöht den Strömungswiderstand und den Energiebedarf des Herzens.",
+          heading: "Schiefe Ebene",
+          text: "Die schiefe Ebene zerlegt die Gewichtskraft in zwei Komponenten: Hangabtriebskraft F_H = mg·sin(α) parallel zur Ebene und Normalkraft F_N = mg·cos(α) senkrecht zur Ebene. Klinisch: Extensionsbehandlungen nutzen geneigte Schienen, um über das Eigengewicht kontrollierte Zugkräfte auf Frakturen auszuüben.",
           merksatz:
-            "Re = ρvd/η. Re < 2300: laminar (leise, effizient). Re > 4000: turbulent (laut, energieaufwendig).",
+            "Schiefe Ebene: F_H = mg·sin(α), F_N = mg·cos(α). Sinus = schiefwärts (hangabwärts).",
+        },
+        {
+          heading: "Druck und Hydrostatik",
+          text: "Druck p = F/A (Pa = N/m²). Pascal'sches Prinzip: Druckänderung breitet sich gleichmäßig in alle Richtungen aus. Hydrostatischer Druck p = ρgh steigt mit der Tiefe — erklärt den erhöhten Blutdruck in den Beinen beim Stehen (+115 mmHg bei 1,5 m). Auftrieb F_A = ρ·g·V (Archimedisches Prinzip) — therapeutisch in der Hydrotherapie genutzt.",
+          merksatz:
+            "p = F/A → kleine Fläche = hoher Druck. Hydrostatisch: p = ρgh. Auftrieb: F_A = ρ·g·V.",
         },
       ],
       merksätze: [
         "Gleichgewicht: ΣF = 0 (Kräfte) UND ΣM = 0 (Momente). Beide Bedingungen müssen erfüllt sein.",
+        "Schwerpunkt: Lot muss in Standfläche fallen → sonst Umkippen.",
         "Drehmoment M = F · d. Einheit: N·m. Großer Hebelarm → großes Drehmoment bei kleiner Kraft.",
+        "Hebelgesetz: F₁·d₁ = F₂·d₂. Körperhebel: kurzer Muskelarm → große Kraft, schnelle Bewegung.",
+        "Schiefe Ebene: F_H = mg·sin(α), F_N = mg·cos(α). Sinus = parallel, Cosinus = senkrecht.",
         "Druck p = F/A. Einheit Pascal (Pa). Hydrostatisch: p = ρgh.",
-        "Bernoulli: ½ρv² + ρgh + p = const. Schnell → niedriger Druck (Venturi-Effekt).",
-        "Kontinuität: A₁v₁ = A₂v₂. Enger Querschnitt → schnellere Strömung.",
-        "Poiseuille: Q = πr⁴Δp/(8ηl). Radius geht mit 4. Potenz ein!",
-        "Reynoldszahl: Re = ρvd/η. Laminar: Re < 2300. Turbulent: Re > 4000.",
         "Archimedisches Prinzip: F_A = ρ_Fl·g·V. Auftrieb = Gewicht des verdrängten Fluids.",
-        "Kapillaren: Gesamtquerschnitt 1000× größer als Aorta → Blutfluss 1000× langsamer (Kontinuität).",
-        "Arterienstenose 50 % Radius → Fluss auf (0,5)⁴ = 6,25 % des Normalflusses (Poiseuille).",
+        "Strömungsmechanik (Bernoulli, Poiseuille, Reynolds) → siehe Fluidmechanik-Kapitel.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {

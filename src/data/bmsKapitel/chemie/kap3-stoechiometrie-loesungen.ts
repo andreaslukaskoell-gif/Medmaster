@@ -411,117 +411,209 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
         "Infusionslösung",
         "NaCl 0,9%",
         "Blutglucose",
+        "Äquivalentkonzentration",
+        "Osmolarität",
+        "Normalität",
       ],
-      content: `## Konzentrationsangaben im Überblick
+      content: `## Konzentration — die Sprache der Klinik
 
-Es gibt verschiedene Arten, die Konzentration eines gelösten Stoffes anzugeben. Für den MedAT sind vor allem **Molarität (c = n/V)** und **Massenkonzentration (β = m/V)** relevant. **Molalität (b = n/m_LM)** brauchst du für kolligative Eigenschaften. Die anderen Angaben (Molenbruch, ppm) kommen selten vor.
+Ein Patient kommt mit Bewusstseinstrübung in die Notaufnahme. Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
 
-{{IMAGE}}
+---
 
-### Molarität c (Stoffmengenkonzentration)
+## Stoffmengenkonzentration (Molarität)
 
-**c = n / V** [mol/L = M]
+Die **Molarität c** (Stoffmengenkonzentration) ist die mit Abstand häufigste Konzentrationsangabe in Chemie und Medizin. Sie beschreibt, wie viele Mol eines Stoffes in einem Liter Lösung gelöst sind:
 
-Die am häufigsten verwendete Konzentrationsangabe in der Chemie. Sie gibt die Stoffmenge des gelösten Stoffes pro Liter Lösung an.
+**c = n / V** — Einheit: mol/L (oft als „M" abgekürzt, z. B. „0,1 M NaOH")
 
-- 1 M = 1 mol/L
-- Klinisch üblich: mmol/L (z. B. Blutglucose: 3,9–5,5 mmol/L nüchtern)
+In der Klinik begegnet dir die Molarität fast immer in **mmol/L** — Elektrolyte wie Natrium (Na⁺: 135–145 mmol/L), Kalium (K⁺: 3,5–5,0 mmol/L) und Calcium (Ca²⁺: 2,2–2,6 mmol/L) werden standardmäßig in mmol/L angegeben. Die Molarität ist **volumenbasiert** und damit temperaturabhängig: Da sich Flüssigkeiten bei Erwärmung ausdehnen, ändert sich das Volumen und damit die Molarität — im Laboralltag spielt das bei Raumtemperatur kaum eine Rolle, wohl aber bei der Molalität (dazu gleich mehr).
+
+### Rechenbeispiel: Molarität einer NaCl-Lösung
+
+**Aufgabe:** 5,85 g NaCl (M = 58,5 g/mol) werden in Wasser gelöst und auf 500 mL aufgefüllt. Welche Molarität hat die Lösung?
+
+**Schritt 1:** Stoffmenge berechnen: n = m / M = 5,85 g / 58,5 g/mol = 0,1 mol
+
+**Schritt 2:** Volumen in Liter: 500 mL = 0,5 L
+
+**Schritt 3:** Molarität: c = n / V = 0,1 mol / 0,5 L = **0,2 mol/L**
+
+> **Merke:** c = n/V [mol/L]. Volumen immer in Liter umrechnen! Häufigster MedAT-Fehler: mL statt L einsetzen → Ergebnis um Faktor 1000 daneben.
+
+---
+
+## Massenkonzentration und Massenanteil
+
+Neben der Molarität sind zwei massebasierte Konzentrationsangaben im klinischen Alltag unverzichtbar: die **Massenkonzentration** und der **Massenanteil**.
+
+### Massenkonzentration β
+
+**β = m(Stoff) / V(Lösung)** — Einheit: g/L oder mg/dL
+
+Die Massenkonzentration gibt an, wie viel Gramm eines Stoffes pro Liter (oder mg pro Deziliter) Lösung enthalten sind. In der US-amerikanischen und historisch österreichischen Labormedizin wird Blutglucose oft in **mg/dL** angegeben (Normalwert nüchtern: 70–100 mg/dL). Das SI-konforme Pendant ist mmol/L — die Umrechnung ist eine klassische MedAT-Aufgabe.
 
 ### Massenanteil w (Gewichtsprozent)
 
 **w = m(Stoff) / m(Lösung) × 100 %**
 
-Gibt den Masseanteil des gelösten Stoffes bezogen auf die Gesamtmasse der Lösung an. „NaCl 0,9 %" bedeutet: 0,9 g NaCl in 100 g Lösung.
+Der Massenanteil gibt den prozentualen Masseanteil des gelösten Stoffes an der Gesamtmasse an. „NaCl 0,9 %" bedeutet: **0,9 g NaCl in 100 g Lösung** — nicht in 100 mL! Bei verdünnten wässrigen Lösungen (ρ ≈ 1 g/mL) darf man jedoch g ≈ mL setzen.
 
-### Massenkonzentration β (oder ρ*)
+### Rechenbeispiel: mg/dL in mmol/L umrechnen (Blutglucose)
 
-**β = m(Stoff) / V(Lösung)** [g/L oder mg/dL]
+**Aufgabe:** Nüchtern-Blutzucker = 126 mg/dL. Wie viel ist das in mmol/L? (M_Glucose = 180 g/mol)
 
-Masse des gelösten Stoffes pro Volumen der Lösung. Klinisch relevant: Blutglucose wird oft in mg/dL angegeben (Normalwert: 70–100 mg/dL nüchtern).
+**Schritt 1:** Einheit umrechnen: 126 mg/dL × 10 = 1260 mg/L = 1,26 g/L
 
-### Weitere Angaben
+**Schritt 2:** Stoffmenge: n = m / M = 1,26 g / 180 g/mol = 0,007 mol/L = **7,0 mmol/L**
 
-- **Molalität b** = n(Stoff) / m(Lösungsmittel) [mol/kg] — temperaturunabhängig (kein Volumen!)
-- **Molenbruch x** (Stoffmengenanteil) = n(Stoff) / n(gesamt) — dimensionslos, Summe aller x = 1
-- **ppm** = mg/kg = mg/L (bei verdünnten wässrigen Lösungen) — für Spurenkonzentrationen
+**Schnellformel Glucose:** mmol/L = mg/dL ÷ 18 (da M = 180 und dL→L-Faktor = 10 → 180/10 = 18). Also: 126 ÷ 18 = 7,0 mmol/L. Ein Nüchternwert ≥ 7,0 mmol/L (≥ 126 mg/dL) gilt als Diabetes-Schwelle!
 
-> **Merke:** Molarität (mol/L) ist volumenbasiert und temperaturabhängig. Molalität (mol/kg) ist massebasiert und temperaturunabhängig — wichtig für kolligative Eigenschaften!
+> **Merke:** Massenkonzentration β = m/V [g/L]; Massenanteil w = m(Stoff)/m(Lösung) × 100 %. Glucose-Schnellformel: mmol/L = mg/dL ÷ 18. NaCl 0,9 % = 0,9 g pro 100 g Lösung.
 
 ---
 
-## Umrechnungen zwischen Konzentrationsangaben
+## Weitere Konzentrationsangaben
 
-Im MedAT begegnen dir vor allem zwei Umrechnungen: mg/dL → mmol/L (Laborwerte) und Massenprozent → Molarität (Herstellung von Lösungen).
+{{DIAGRAM:ph-scale}}
 
-### Beispiel 1: mg/dL → mmol/L (Blutglucose)
+Über Molarität und Massenanteil hinaus gibt es Konzentrationsangaben, die am MedAT seltener, aber gezielt gefragt werden:
 
-**Aufgabe:** Nüchtern-Blutzucker = 90 mg/dL. Wie viel ist das in mmol/L?
+| Größe | Formel | Einheit | Besonderheit |
+|-------|--------|---------|-------------|
+| **Molalität b** | n(Stoff) / m(LM) | mol/kg | Temperaturunabhängig (massebasiert!) |
+| **Molenbruch x** | n(Stoff) / n(gesamt) | dimensionslos | Summe aller x = 1 |
+| **Äquivalentkonzentration** | c × z | val/L (= eq/L) | z = Wertigkeit (H⁺ oder Ladungen) |
+| **ppm** | mg/kg ≈ mg/L | — | Spurenkonzentrationen |
 
-**Lösung:**
-1. 90 mg/dL = 900 mg/L = 0,9 g/L
-2. n = m/M = 0,9 g / 180 g/mol = 0,005 mol/L = **5,0 mmol/L** ✓ (Normalbereich)
+Die **Molalität** ist besonders wichtig für kolligative Eigenschaften (Siedepunktserhöhung, Gefrierpunktserniedrigung), weil sie unabhängig von der Temperatur ist — im Gegensatz zur Molarität, die sich mit dem Volumen ändert.
 
-**Schnellformel Glucose:** mmol/L = mg/dL ÷ 18 (weil M = 180 g/mol und der Faktor dL→L = 10 sich zu 180/10 = 18 kürzt).
+Die **Äquivalentkonzentration** (Normalität, N) berücksichtigt die Wertigkeit z des gelösten Stoffes: 1 M H₂SO₄ = 2 N (da H₂SO₄ zwei H⁺ liefert). In der klinischen Blutgasanalyse und bei Elektrolytangaben in mval/L (Milliäquivalent) wird sie noch verwendet.
 
-### Beispiel 2: Massenprozent → Molarität (konzentrierte HCl)
+**Osmolarität und Osmolalität** geben die Gesamtzahl osmotisch wirksamer Teilchen an. Die Plasma-Osmolalität beträgt 285–295 mosmol/kg und wird berechnet als: **≈ 2 × Na⁺ + Glucose + Harnstoff** (alles in mmol/L). Der Faktor 2 vor Na⁺ berücksichtigt die begleitenden Anionen.
 
-**Aufgabe:** Konzentrierte Salzsäure hat 37 % HCl und eine Dichte von ρ = 1,19 kg/L. Welche Molarität hat sie?
-
-**Lösung:**
-1. 1 L Lösung wiegt 1190 g (wegen ρ = 1,19 kg/L)
-2. Davon sind 37 % HCl: m(HCl) = 0,37 × 1190 = 440,3 g
-3. n(HCl) = 440,3 / 36,5 = **12,1 mol** → c = **12,1 mol/L**
-
-> 💡 **Allgemeine Formel:** c = (w × ρ × 1000) / M [wenn ρ in kg/L und w als Dezimalzahl]. Diese Umrechnung wird selten direkt geprüft, aber das Verständnis des Zusammenhangs zwischen w, ρ und c ist wichtig.
+> **Merke:** Molarität (mol/L) ist temperaturabhängig, Molalität (mol/kg) nicht. Äquivalentkonzentration = Molarität × Wertigkeit. Plasma-Osmolalität ≈ 290 mosmol/kg.
 
 ---
 
-## Verdünnungsformel
+## Verdünnungsregel: c₁ × V₁ = c₂ × V₂
 
-Bei der Verdünnung ändert sich die Stoffmenge nicht, nur das Volumen:
+Beim Verdünnen wird nur Lösungsmittel zugefügt — die Stoffmenge n bleibt gleich. Da n = c × V, folgt direkt die Verdünnungsformel:
 
 **c₁ × V₁ = c₂ × V₂**
 
-### Rechenbeispiel: Verdünnung
+Diese Formel ist das Arbeitspferd der Apotheke und des Labors. Ob Antibiotikum-Infusion, Desinfektionsmittel oder Laborstandard — überall wird verdünnt.
 
-**Aufgabe:** Aus einer 10 %igen NaCl-Stammlösung sollen 500 mL einer 0,9 %igen Lösung hergestellt werden. Wie viel Stammlösung wird benötigt?
+### Rechenbeispiel: Herstellung einer NaCl-Infusion
 
-**Lösung:** c₁V₁ = c₂V₂ → V₁ = c₂V₂/c₁ = 0,9 × 500 / 10 = **45 mL**
+**Aufgabe:** Aus einer 10 %igen NaCl-Stammlösung sollen 500 mL physiologische Kochsalzlösung (0,9 %) hergestellt werden. Wie viel Stammlösung wird benötigt?
 
-Man nimmt 45 mL der 10 %-Lösung und füllt mit destilliertem Wasser auf 500 mL auf.
+**Lösung:** V₁ = c₂ × V₂ / c₁ = 0,9 × 500 / 10 = **45 mL**
 
-> **Merke:** c₁V₁ = c₂V₂ gilt nur für Verdünnungen (Lösungsmittel hinzufügen). Bei Mischungen verschiedener Konzentrationen gilt die Mischungsregel (Mischungskreuz).
+Man pipettiert 45 mL der 10 %-Lösung in einen Messkolben und füllt mit destilliertem Wasser auf exakt 500 mL auf.
+
+### Rechenbeispiel: Medikamentenverdünnung
+
+**Aufgabe:** Ein Antibiotikum liegt als 500 mg/50 mL Infusionslösung vor (β = 10 mg/mL). Du sollst eine Lösung mit 2 mg/mL herstellen. Auf welches Volumen musst du 20 mL der Stammlösung verdünnen?
+
+**Lösung:** c₁V₁ = c₂V₂ → V₂ = c₁V₁ / c₂ = 10 × 20 / 2 = **100 mL**
+
+> **Merke:** c₁V₁ = c₂V₂ gilt NUR für Verdünnungen (Lösungsmittel zugeben). Bei Mischung zweier verschiedener Konzentrationen → Mischungskreuz verwenden. Immer gleiche Einheiten auf beiden Seiten!
 
 ---
 
-## Löslichkeit und Löslichkeitsprodukt
+## Löslichkeit und Löslichkeitsprodukt K_sp
 
-Die **Löslichkeit** gibt die maximale Menge eines Stoffes an, die sich in einem bestimmten Volumen Lösungsmittel bei gegebener Temperatur löst. Eine gesättigte Lösung enthält die maximal mögliche Konzentration.
+{{DIAGRAM:ionic-bond}}
 
-Wenn du Salz in Wasser löst, erreicht die Lösung irgendwann einen Sättigungspunkt — ab hier fällt jedes weitere Salz als Feststoff aus. Das **Löslichkeitsprodukt K_sp** beschreibt genau dieses Gleichgewicht: Ist das Ionenprodukt Q kleiner als K_sp, löst sich noch Stoff; übersteigt Q den Wert K_sp, fällt Feststoff aus.
+Warum bilden sich Nierensteine? Warum fällt BaSO₄ beim Röntgen-Kontrastmittel aus? Die Antwort liegt im **Löslichkeitsprodukt K_sp** — dem Gleichgewicht zwischen gelösten Ionen und ungelöstem Feststoff.
 
-**Löslichkeitsprodukt K_sp:** Für schwer lösliche Salze wie CaF₂ gilt im Gleichgewicht:
+### Löslichkeit
 
-CaF₂ ⇌ Ca²⁺ + 2 F⁻ → **K_sp = [Ca²⁺] × [F⁻]²**
+Die **Löslichkeit** gibt die maximale Masse (oder Stoffmenge) eines Stoffes an, die sich bei einer bestimmten Temperatur in einem definierten Volumen Lösungsmittel löst. Bei Erreichen dieser Grenze ist die Lösung **gesättigt** — jedes weitere Gramm fällt als Feststoff aus (Bodenkörper). Die Löslichkeit der meisten Salze steigt mit der Temperatur, Ausnahme: Calciumsulfat und einige Carbonate.
 
-Allgemein für A_mB_n: **K_sp = [A]^m × [B]^n**
+### Löslichkeitsprodukt K_sp
 
-- K_sp ist temperaturabhängig und stoffspezifisch
-- Wenn Ionenprodukt Q > K_sp → Niederschlag fällt aus
-- Wenn Q < K_sp → Lösung ungesättigt, Stoff löst sich weiter
+Für schwer lösliche Salze beschreibt K_sp das heterogene Gleichgewicht zwischen Feststoff und gelösten Ionen. Am Beispiel von Calciumfluorid:
 
-Klinisch wichtig: K_sp(CaCO₃) bestimmt, ob Nierensteine (Calciumoxalat, Calciumphosphat) ausfallen. Hohe Ca²⁺-Konzentration im Urin + alkalischer pH → erhöhtes Steinrisiko.
+**CaF₂ ⇌ Ca²⁺ + 2 F⁻** → K_sp = [Ca²⁺] × [F⁻]²
 
-> **Merke:** K_sp = Produkt der Ionenkonzentrationen (mit Exponenten = stöchiometrische Koeffizienten). Ionenprodukt Q > K_sp → Fällung; Q < K_sp → Lösung noch nicht gesättigt.`,
+Allgemein für ein Salz A_mB_n: **K_sp = [A]^m × [B]^n**
+
+Das K_sp ist eine **Gleichgewichtskonstante** — temperaturabhängig, aber konzentrationsunabhängig (Aktivität des Feststoffs = 1). Der entscheidende Vergleich im MedAT:
+
+- **Ionenprodukt Q < K_sp** → Lösung ungesättigt, Stoff löst sich weiter
+- **Q = K_sp** → Lösung gesättigt, Gleichgewicht
+- **Q > K_sp** → Übersättigt, **Niederschlag fällt aus**
+
+### Rechenbeispiel: Sättigungskonzentration von AgCl
+
+**Aufgabe:** K_sp(AgCl) = 1,8 × 10⁻¹⁰. Wie hoch ist die Sättigungskonzentration von Ag⁺?
+
+**Lösung:** AgCl ⇌ Ag⁺ + Cl⁻ (1:1-Salz). Sei s = [Ag⁺] = [Cl⁻].
+
+K_sp = s × s = s² → s = √(K_sp) = √(1,8 × 10⁻¹⁰) = **1,34 × 10⁻⁵ mol/L**
+
+### Klinischer Bezug: Nierensteine
+
+K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfallen. Hohe Ca²⁺-Konzentration im Urin, alkalischer pH (fördert Phosphatfällung) und wenig Flüssigkeitsaufnahme (konzentrierter Urin) erhöhen das Ionenprodukt Q über K_sp — Nierensteine entstehen. Trinken verdünnt den Urin → Q sinkt unter K_sp → kein Niederschlag.
+
+> **Merke:** K_sp = Produkt der Ionenkonzentrationen (Exponenten = stöchiometrische Koeffizienten). Q > K_sp → Fällung, Q < K_sp → Lösung ungesättigt. Für 1:1-Salze: s = √(K_sp); für 1:2-Salze: s = ∛(K_sp/4).
+
+---
+
+## Prüfungsrelevante Zahlen und typische Fallen
+
+| Größe | Wert | Kontext |
+|-------|------|---------|
+| NaCl 0,9 % | ≈ 154 mmol/L, ≈ 308 mosmol/L | Isotone Infusion |
+| Glucose 5 % | ≈ 278 mmol/L, ≈ 278 mosmol/L | Isotone Infusion (i = 1) |
+| Nüchtern-BZ | 70–100 mg/dL = 3,9–5,6 mmol/L | Diabetes ab ≥ 126 mg/dL |
+| Plasma-Na⁺ | 135–145 mmol/L | Hauptosmolyt |
+| Plasma-Osmolalität | 285–295 mosmol/kg | 2 × Na⁺ + Glc + Harnstoff |
+
+**Typische MedAT-Fallen:**
+- mL nicht in L umgerechnet → Faktor 1000 daneben
+- Massenanteil w verwechselt mit Volumenanteil φ
+- Verdünnungsformel auf Mischung zweier Lösungen angewendet (falsch!)
+- Beim K_sp die stöchiometrischen Exponenten vergessen (z. B. [F⁻]² bei CaF₂)
+- Osmolalität (pro kg LM) und Osmolarität (pro L Lösung) verwechselt`,
+      sections: [
+        {
+          heading: "Stoffmengenkonzentration (Molarität)",
+          text: "Die Molarität c = n/V [mol/L] ist die wichtigste Konzentrationsangabe in Chemie und Klinik. Elektrolyte (Na⁺, K⁺, Ca²⁺) werden in mmol/L angegeben. Rechenweg: Masse → Stoffmenge (n = m/M) → Molarität (c = n/V). Volumen immer in Liter!",
+          merksatz:
+            "c = n/V [mol/L]. Volumen immer in Liter umrechnen! 1 M = 1 mol/L. Klinisch meist mmol/L.",
+        },
+        {
+          heading: "Massenkonzentration, Massenanteil und Umrechnungen",
+          text: "Massenkonzentration β = m/V [g/L, mg/dL]. Massenanteil w = m(Stoff)/m(Lösung) × 100 %. NaCl 0,9 % = 0,9 g pro 100 g Lösung. Glucose-Schnellformel: mmol/L = mg/dL ÷ 18 (da M = 180 g/mol). Weitere: Molalität (mol/kg, temperaturunabhängig), Äquivalentkonzentration (c × z), Osmolarität/Osmolalität.",
+          merksatz:
+            "Massenanteil w in % bezieht sich auf die Gesamtmasse der Lösung, nicht auf das Volumen. Glucose: mmol/L = mg/dL ÷ 18.",
+        },
+        {
+          heading: "Verdünnungsregel c₁V₁ = c₂V₂",
+          text: "Beim Verdünnen bleibt die Stoffmenge n konstant (nur Lösungsmittel wird zugefügt). Daraus folgt c₁V₁ = c₂V₂. Gilt nicht für Mischungen verschiedener Konzentrationen — dort Mischungskreuz verwenden. Einheiten müssen auf beiden Seiten übereinstimmen.",
+          merksatz:
+            "c₁V₁ = c₂V₂ nur bei reiner Verdünnung (Lösungsmittel zugeben). Bei Mischungen → Mischungskreuz.",
+        },
+        {
+          heading: "Löslichkeit und Löslichkeitsprodukt K_sp",
+          text: "K_sp = Produkt der Ionenkonzentrationen im Sättigungsgleichgewicht (Exponenten = stöchiometrische Koeffizienten). Ionenprodukt Q vs. K_sp: Q < K_sp → ungesättigt, Q > K_sp → Fällung. Klinisch: Nierensteinbildung bei Q(CaOx) > K_sp im Urin. Für 1:1-Salze: s = √(K_sp).",
+          merksatz:
+            "K_sp: Q > K_sp → Niederschlag, Q < K_sp → Lösung ungesättigt. Exponenten nicht vergessen!",
+        },
+      ],
       merksätze: [
         "Molarität c = n/V [mol/L]; Massenanteil w = m(Stoff)/m(Lösung) × 100 %; Massenkonzentration β = m/V [g/L].",
         "NaCl 0,9 % ≈ 154 mmol/L NaCl → 308 mosmol/L (isoton zum Blutplasma).",
         "Verdünnungsformel c₁V₁ = c₂V₂ — nur bei Zugabe von reinem Lösungsmittel gültig!",
         "Löslichkeitsprodukt K_sp: Q > K_sp → Fällung, Q < K_sp → ungesättigt.",
         "Blutglucose: mmol/L = mg/dL ÷ 18 (Umrechnungsfaktor für Glucose).",
+        "Plasma-Osmolalität ≈ 290 mosmol/kg. Schnellformel: 2 × Na⁺ + Glucose + Harnstoff.",
       ],
       klinischerBezug:
-        "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol).",
+        "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol). Die Verdünnungsformel wird täglich in Apotheke und auf Station für Medikamenten- und Infusionszubereitungen angewendet.",
 
       altfrage: {
         question:

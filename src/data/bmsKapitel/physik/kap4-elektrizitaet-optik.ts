@@ -1336,64 +1336,40 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Wellenlänge",
         "Superposition",
       ],
-      content: `## Warum schimmern Seifenblasen in Regenbogenfarben?
+      content: `## Seifenblasen, Entspiegelung, OCT — Licht als Welle
 
-Warum zeigt eine Seifenblase bunte Farbmuster? Warum reflektiert eine CD Licht in Spektralfarben? Die geometrische Optik (Strahlenmodell) hat darauf keine Antwort. Diese Phänomene entstehen, weil Licht eine **Welle** ist — und Wellen sich gegenseitig verstärken oder auslöschen können. Genau das untersucht die Wellenoptik.
+Warum schimmern Seifenblasen in Regenbogenfarben? Warum zeigt eine dünne Ölschicht auf einer Pfütze bunte Ringe? Und wie kann ein Augenarzt die Netzhaut schichtweise in Mikrometerauflösung darstellen? Die Antwort auf all diese Fragen liegt in der **Wellenoptik**: Licht ist eine transversale elektromagnetische Welle, deren Wellenberge und -täler sich gegenseitig verstärken oder auslöschen können. Diese Überlagerung — zusammen mit Beugung und Polarisation — erklärt Phänomene, die das Strahlenmodell der geometrischen Optik nicht fassen kann.
 
-Licht ist eine transversale elektromagnetische Welle: elektrisches und magnetisches Feld schwingen senkrecht zur Ausbreitungsrichtung. Die Wellenlänge bestimmt die Farbe — von 380 nm (violett) bis 780 nm (rot). Die zentrale Gleichung:
-
-> **c = λ · f** (c ≈ 3 × 10⁸ m/s im Vakuum)
-
-Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_Medium = λ₀/n), aber die **Frequenz bleibt gleich** — ein häufiger Prüfungspunkt.
+Zur Erinnerung: Licht breitet sich mit c ≈ 3 × 10⁸ m/s im Vakuum aus. Die Wellenlänge bestimmt die Farbe (380 nm violett bis 780 nm rot), und es gilt **c = λ · f**. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_Medium = λ₀/n), aber die **Frequenz bleibt immer gleich** — ein klassischer Prüfungspunkt.
 
 {{DIAGRAM:em-spectrum}}
 
 ---
 
-## Interferenz — wenn Wellen sich treffen
+## Interferenz — Verstärkung oder Auslöschung
 
-**Alltagsbild:** Zwei Lautsprecher spielen denselben Ton. Gehst du durch den Raum, findest du laute Stellen (konstruktive Interferenz) und leise Stellen (destruktive Interferenz). Licht verhält sich genauso.
+Stell dir zwei Lautsprecher vor, die denselben Ton spielen. Gehst du durch den Raum, findest du laute Stellen (Wellenberge addieren sich) und leise Stellen (Berg trifft auf Tal). Genau so verhält sich Licht, wenn zwei kohärente Wellen — gleiche Frequenz, feste Phasenbeziehung — aufeinandertreffen. Ob Verstärkung oder Auslöschung eintritt, hängt vom **Gangunterschied Δ** ab: dem Unterschied der Wegstrecken, die beide Wellen bis zum Treffpunkt zurücklegen.
 
-**Interferenz** ist die Überlagerung (Superposition) kohärenter Wellen — gleiche Frequenz, feste Phasenbeziehung. Treffen Wellenberg auf Wellenberg, addieren sich die Amplituden:
+- **Konstruktive Interferenz** (hell): Gangunterschied Δ = n · λ (n = 0, 1, 2, …) — Berg trifft Berg
+- **Destruktive Interferenz** (dunkel): Gangunterschied Δ = (n + ½) · λ — Berg trifft Tal
 
-- **Konstruktive Interferenz** (Verstärkung): Gangunterschied **Δ = n · λ** (n = 0, 1, 2, …)
-- **Destruktive Interferenz** (Auslöschung): Gangunterschied **Δ = (n + ½) · λ**
-
-> **Merke:** Berg + Berg = doppelt hell. Berg + Tal = dunkel. Der Gangunterschied Δ entscheidet.
+> **Merke:** Berg + Berg = doppelt hell. Berg + Tal = dunkel. Der Gangunterschied Δ entscheidet, ob Wellen sich verstärken oder auslöschen.
 
 ---
 
-## Dünnschichtinterferenz — Seifenblasen und Ölfilme
+## Doppelspaltexperiment (Young) — der Beweis für Lichtwellen
 
-Hier wird das Interferenzprinzip greifbar: Licht reflektiert sowohl an der **Oberseite** als auch an der **Unterseite** einer dünnen Schicht (Seifenfilm, Ölfilm auf Pfütze, Entspiegelungsschicht auf Brillenglas). Die beiden reflektierten Wellen überlagern sich.
+Thomas Youngs Experiment (1801) machte die Interferenz von Licht erstmals sichtbar und bewies damit dessen Wellencharakter. Die Idee: Licht fällt auf zwei schmale, parallele Spalte im Abstand d. Hinter den Spalten breiten sich zwei kohärente Kugelwellen aus, die auf einem Schirm (Abstand L) ein charakteristisches **Streifenmuster aus hellen und dunklen Streifen** erzeugen.
 
-**Entscheidende Faktoren:**
-- **Schichtdicke d**: bestimmt den Gangunterschied (Licht durchläuft die Schicht zweimal: hin und zurück)
-- **Brechungsindex n der Schicht**: optische Weglänge = 2 · n · d
-- **Phasensprung bei Reflexion**: Trifft Licht auf ein optisch dichteres Medium (n₂ > n₁), springt die Phase bei Reflexion um λ/2 — ein halber Wellenzug extra. Am optisch dünneren Medium: kein Phasensprung
+Intuitiv: An Stellen, wo beide Wellen gleichzeitig als Berg ankommen, entsteht ein heller Streifen. Wo Berg auf Tal trifft, löschen sie sich aus — dunkler Streifen. Der Gangunterschied hängt vom Winkel θ ab:
 
-**Bedingung für konstruktive Interferenz (helle Farbe bei Reflexion):**
-> **2 · n · d = (m + ½) · λ** (wenn genau ein Phasensprung auftritt)
+> **Maxima bei d · sin θ = n · λ** (n = 0, 1, 2, …)
 
-**Warum wechseln die Farben mit dem Betrachtungswinkel?** Bei schrägem Blick durchläuft das Licht eine längere Strecke in der Schicht → der Gangunterschied ändert sich → eine andere Wellenlänge (Farbe) wird konstruktiv verstärkt. Deshalb schimmern Seifenblasen bei Bewegung.
+Für kleine Winkel (sin θ ≈ y/L) ergibt sich der praktisch nutzbare **Streifenabstand**:
 
-**Anwendungen:**
-- **Entspiegelung** (Vergütung): Schichtdicke so gewählt, dass reflektierte Wellen destruktiv interferieren → weniger Reflexion (Brillengläser, Kameralinsen)
-- **Ölfilm auf Wasser**: Öl (n ≈ 1,5) auf Wasser (n ≈ 1,33) → Phasensprung nur an Öl-Oberseite → bunte Ringe
-
-> **Merke:** Dünnschichtinterferenz = Reflexion an Ober- UND Unterseite → Phasensprung beachten → Farbe hängt von Schichtdicke und Betrachtungswinkel ab.
-
----
-
-## Doppelspaltexperiment (Young)
-
-Thomas Youngs Experiment (1801) bewies den Wellencharakter des Lichts: Licht trifft auf zwei schmale Spalte im Abstand d. Dahinter entstehen zwei kohärente Kugelwellen, die auf einem Schirm (Abstand L) ein **Streifenmuster aus hellen und dunklen Streifen** erzeugen.
-
-Der Gangunterschied für den Winkel θ:
-> **Δ = d · sin θ** → **Maxima bei d · sin θ = n · λ**
-
-Für kleine Winkel (sin θ ≈ y/L) ergibt sich der **Streifenabstand**:
 > **Δy = λ · L / d**
+
+{{DIAGRAM:double-slit}}
 
 **Was passiert bei Veränderungen?**
 | Änderung | Effekt auf Streifenabstand |
@@ -1403,123 +1379,137 @@ Für kleine Winkel (sin θ ≈ y/L) ergibt sich der **Streifenabstand**:
 | L vergrößert | Δy vergrößert |
 | Rotes statt blaues Licht | breitere Streifen (λ_rot > λ_blau) |
 
-> **Merke:** Δy = λ·L/d — je größer die Wellenlänge oder je kleiner der Spaltabstand, desto weiter liegen die Interferenzstreifen auseinander.
+> **Merke:** Δy = λ·L/d — je größer die Wellenlänge oder je kleiner der Spaltabstand, desto weiter liegen die hellen Streifen auseinander.
 
 ---
 
-## Beugung (Diffraktion)
+## Beugung — Licht biegt um Ecken
 
-**Häufiges Missverständnis:** „Beugung passiert nur an Spalten." Falsch — Beugung tritt an **jeder Kante** auf. Licht biegt sich um Hindernisse, wenn deren Abmessung in der Größenordnung der Wellenlänge liegt. Auch „Licht kann nicht um Ecken biegen" stimmt nicht — es kann, nur extrem wenig bei sichtbarem Licht.
+Ein verbreitetes Missverständnis lautet: „Licht breitet sich nur geradlinig aus." Tatsächlich biegt sich Licht um Hindernisse und Kanten, wenn deren Abmessung in die Größenordnung der Wellenlänge kommt. Dieses Phänomen heißt **Beugung** (Diffraktion) und tritt nicht nur an Spalten auf, sondern an jeder Kante.
 
-**Einzelspalt der Breite b:**
-- Erstes Minimum bei: **sin α = λ / b**
-- Das zentrale Maximum hat **doppelte Breite** verglichen mit den Nebenmaxima
-- Kurzwelliges Licht (violett) wird weniger gebeugt als langwelliges (rot)
+**Einzelspalt der Breite b:** Fällt Licht auf einen einzelnen Spalt, entsteht kein scharfer Schatten, sondern ein breites Zentralmaximum mit schwächeren Nebenmaxima. Das erste Minimum liegt bei **sin α = λ / b**. Je schmaler der Spalt (b kleiner), desto breiter das Beugungsmuster — langwelliges rotes Licht wird stärker gebeugt als kurzwelliges violettes.
 
-**Beugungsscheibchen (Airy-Disk):** Jeder Punkt wird durch eine kreisförmige Öffnung (Linse, Pupille) in ein Beugungsscheibchen abgebildet — nicht in einen Punkt. Das begrenzt die Auflösung jedes optischen Systems.
+**Beugungsscheibchen (Airy-Disk):** Jede kreisförmige Öffnung — ob Linse, Pupille oder Objektivblende — bildet einen Punkt nicht als Punkt, sondern als kleines Scheibchen ab. Das begrenzt die Auflösung jedes optischen Instruments grundlegend.
 
-**Auflösungsvermögen — Abbe-Kriterium:**
+**Auflösungsvermögen — Abbe-Kriterium:** Wie nah dürfen zwei Punkte sein, damit ein Mikroskop sie noch getrennt darstellt?
+
 > **d_min = λ / (2 · NA)** mit **NA = n · sin α**
 
-(n = Brechungsindex des Mediums, α = halber Öffnungswinkel des Objektivs)
+Dabei ist n der Brechungsindex des Mediums zwischen Objekt und Objektiv und α der halbe Öffnungswinkel. Zwei Stellschrauben verbessern die Auflösung: **kürzere Wellenlänge** oder **höhere numerische Apertur** (z. B. Ölimmersion mit n ≈ 1,52 statt Luft mit n = 1):
 
-- Luft (n = 1): NA_max ≈ 0,95 → d_min ≈ 270 nm
-- Ölimmersion (n ≈ 1,52): NA ≈ 1,4 → d_min ≈ 185 nm
-- UV-Licht (λ = 350 nm) + Öl: d_min ≈ 125 nm
+- Luft, grünes Licht (520 nm): d_min ≈ 274 nm
+- Ölimmersion (NA ≈ 1,3): d_min ≈ 200 nm
+- Ölimmersion + UV (350 nm): d_min ≈ 135 nm
 
-> **Prüfungstipp:** Abbe-Kriterium ist eine Standardfrage. Zwei Stellschrauben: kürzere Wellenlänge ODER höhere numerische Apertur. Ölimmersion verbessert die Auflösung um ~50 %.
+> **Merke:** Abbe-Kriterium d_min = λ/(2·NA). Ölimmersion verbessert die Auflösung um ~50 %, weil das Öl die NA erhöht.
 
 ---
 
 ## Beugungsgitter — scharfe Spektrallinien
 
-Ein Beugungsgitter besteht aus Tausenden paralleler Spalte mit konstantem Abstand d (Gitterkonstante). Viele Spalte statt zwei bewirken: Die Interferenzmaxima werden **extrem scharf** (schmale Peaks), während dazwischen fast vollständige Dunkelheit herrscht.
+Vom Doppelspalt zum Beugungsgitter: Ein Gitter besteht aus Tausenden paralleler Spalte mit konstantem Abstand d (Gitterkonstante). Der Effekt vieler Spalte statt nur zweier: Die Interferenzmaxima werden **extrem scharf** (schmale Peaks), während dazwischen nahezu vollständige Dunkelheit herrscht. Die Gittergleichung ist identisch mit der Doppelspaltbedingung:
 
-**Gittergleichung:**
 > **d · sin θ = n · λ** (n = Beugungsordnung)
 
-**Anwendung in der Medizin:** Gitter zerlegen Licht präzise in Spektralfarben → Grundlage von **Spektralphotometrie** (Labordiagnostik, Blutgasanalyse) und **Pulsoximetrie** (wellenlängenabhängige Absorption von Oxy- vs. Desoxyhämoglobin bei 660 nm rot und 940 nm infrarot).
+**Klinische Bedeutung:** Beugungsgitter zerlegen Licht präzise in seine Spektralfarben — die Grundlage der **Spektralphotometrie** (Labordiagnostik, Blutgasanalyse) und der **Pulsoximetrie** (wellenlängenabhängige Absorption von Oxy- vs. Desoxyhämoglobin bei 660 nm rot und 940 nm infrarot). Selbst eine CD ist ein Reflexionsgitter — die eng gepackten Rillen beugen weißes Licht in Spektralfarben.
 
-Eine CD oder DVD ist im Prinzip ein Reflexionsgitter — die dicht gepackten Rillen beugen weißes Licht in Spektralfarben.
-
-> **Merke:** Gitter = viele Spalte → scharfe Spektrallinien. Medizinisch: Spektrophotometer, Pulsoximeter.
+> **Merke:** Gitter = viele Spalte → scharfe Spektrallinien. Medizinisch unverzichtbar: Spektrophotometer und Pulsoximeter.
 
 ---
 
-## Polarisation — Licht schwingt in einer Ebene
+## Dünnschichtinterferenz — Seifenblasen und Entspiegelung
 
-Da Licht eine **transversale** Welle ist (E-Feld schwingt senkrecht zur Ausbreitung), kann es polarisiert werden. Longitudinale Wellen (Schall) können das nicht — ein wichtiger Unterschied.
+Nun zur sichtbarsten Interferenz im Alltag: Licht reflektiert sowohl an der **Oberseite** als auch an der **Unterseite** einer dünnen Schicht (Seifenfilm, Ölfilm, Brillenvergütung). Diese beiden reflektierten Wellen überlagern sich — und je nach Schichtdicke verstärkt sich eine bestimmte Farbe, während andere ausgelöscht werden.
+
+**Drei Faktoren entscheiden:**
+- **Schichtdicke d**: Das Licht durchläuft die Schicht doppelt (hin und zurück) → optische Weglänge = 2 · n · d
+- **Brechungsindex n der Schicht**: bestimmt die effektive Wellenlänge im Material
+- **Phasensprung bei Reflexion**: An einem optisch dichteren Medium (n₂ > n₁) springt die Phase um λ/2 — ein halber Wellenzug extra. Am dünneren Medium: kein Phasensprung
+
+{{DIAGRAM:thin-film-interference}}
+
+**Bedingung bei genau einem Phasensprung (typischer Fall):**
+> **2 · n · d = (m + ½) · λ** → konstruktive Interferenz (helle Farbe in Reflexion)
+
+**Warum wechseln Seifenblasen ihre Farben beim Bewegen?** Bei schrägem Blick durchläuft das Licht eine längere Strecke in der Schicht → der Gangunterschied verschiebt sich → eine andere Wellenlänge wird verstärkt → andere Farbe.
+
+**Klinisch relevante Anwendungen:**
+- **Entspiegelung** (Vergütung): Schichtdicke wird so gewählt, dass reflektierte Wellen sich destruktiv überlagern → weniger Reflexion an Brillengläsern und Endoskoplinsen
+- **Tränenfilm-Diagnostik**: Interferenzmuster des Tränenfilms (Lipidschicht ~40–80 nm) zeigen Trockenheits-Areale bei Keratoconjunctivitis sicca
+
+> **Merke:** Dünnschichtinterferenz = Reflexion an Ober- UND Unterseite einer dünnen Schicht. Phasensprung am dichteren Medium beachten. Farbe hängt von Schichtdicke und Betrachtungswinkel ab.
+
+---
+
+## Polarisation — Schwingungsebene kontrollieren
+
+Schall ist eine Longitudinalwelle — die Teilchen schwingen in Ausbreitungsrichtung, es gibt keine „Vorzugsrichtung" quer dazu. Licht dagegen ist **transversal**: Das E-Feld schwingt senkrecht zur Ausbreitung, und zwar in jede beliebige Richtung innerhalb dieser Ebene. **Polarisation** bedeutet, diese Schwingung auf eine bestimmte Richtung einzuschränken.
 
 **Arten der Polarisation:**
-- **Unpolarisiertes Licht**: E-Feld schwingt in allen Richtungen senkrecht zur Ausbreitung (normales Licht)
-- **Linear polarisiert**: E-Feld schwingt nur in einer Ebene (nach Polarisationsfilter)
-- **Zirkular polarisiert**: E-Feld rotiert schraubenförmig
+- **Unpolarisiert**: E-Feld schwingt in allen Querrichtungen (normales Licht aus Glühbirne oder Sonne)
+- **Linear polarisiert**: E-Feld schwingt nur in einer Ebene (nach Durchgang durch Polarisationsfilter)
+- **Zirkular polarisiert**: E-Feld rotiert schraubenförmig (zwei senkrecht stehende, phasenverschobene Komponenten)
 
-**Polarisation durch Reflexion — Brewster-Winkel:**
-Bei Reflexion an einer Grenzfläche wird Licht teilweise polarisiert. Beim **Brewster-Winkel** θ_B ist das reflektierte Licht **vollständig polarisiert**:
+**Polarisation durch Reflexion — Brewster-Winkel:** Bei Reflexion an einer Grenzfläche wird Licht teilweise polarisiert. Beim **Brewster-Winkel** θ_B ist das reflektierte Licht **vollständig** linear polarisiert:
+
 > **tan θ_B = n₂ / n₁**
 
-Für Glas (n = 1,5): θ_B = arctan(1,5) ≈ 56°. Polarisationssonnenbrillen nutzen diesen Effekt, um Blendreflexe (Wasseroberfläche, Straße) zu eliminieren.
+Für Glas (n = 1,5): θ_B = arctan(1,5) ≈ 56°. Polarisationssonnenbrillen nutzen genau diesen Effekt: Sie blockieren horizontal polarisiertes Blendlicht von Wasseroberflächen und nassen Straßen.
 
-**Gesetz von Malus:** Fällt polarisiertes Licht der Intensität I₀ auf einen Analysator mit Winkel φ zur Polarisationsrichtung:
+**Gesetz von Malus:** Fällt linear polarisiertes Licht (Intensität I₀) auf einen Analysator, der um den Winkel φ zur Polarisationsrichtung gedreht ist:
+
 > **I = I₀ · cos²φ**
 
-Bei φ = 90° (gekreuzte Filter): I = 0 — kein Licht kommt durch.
+Bei φ = 90° (gekreuzte Filter) kommt **kein Licht** durch — totale Auslöschung.
 
 **Klinische Anwendungen:**
-- **Polarisationsmikroskopie**: Gichtkristalle (Natriumurat) zeigen negative Doppelbrechung → leuchten gelb bei paralleler, blau bei senkrechter Orientierung. Pseudogicht (Calciumpyrophosphat) zeigt positive Doppelbrechung — diagnostisch unterscheidbar
-- **LCD-Bildschirme**: Zwei gekreuzte Polarisationsfilter → Flüssigkristalle drehen die Polarisationsebene spannungsabhängig
-- **Spannungsoptik (Photoelastizität)**: Transparente Materialien unter mechanischer Spannung werden doppelbrechend → Spannungsverteilung sichtbar (Prothetik, Biomechanik)
-- **Polarimeter**: Messung der optischen Aktivität chiraler Moleküle (z. B. Glukosekonzentration in Lösungen)
+- **Polarisationsmikroskopie**: Gichtkristalle (Natriumurat) zeigen negative Doppelbrechung → gelb bei paralleler, blau bei senkrechter Orientierung. Pseudogicht (Calciumpyrophosphat) zeigt positive Doppelbrechung — diagnostisch unterscheidbar
+- **Polarimetrie**: Messung der optischen Aktivität chiraler Moleküle → Glukosekonzentration in Lösungen bestimmen (Diabetesforschung)
+- **LCD-Bildschirme**: Zwei gekreuzte Polarisationsfilter, Flüssigkristalle drehen die Polarisationsebene spannungsabhängig
 
-> **Merke:** Nur transversale Wellen sind polarisierbar. Brewster-Winkel: tan θ_B = n₂/n₁. Medizinisch: Gichtkristalle unter Polarisationsmikroskop, Glukose im Polarimeter.
+> **Merke:** Nur transversale Wellen sind polarisierbar (Licht ja, Schall nein). Brewster: tan θ_B = n₂/n₁. Klinisch: Gichtkristalle im Polarisationsmikroskop, Glukose im Polarimeter.
 
 ---
 
-## Klinische Anwendungen der Wellenoptik
+## OCT — Interferometrie in der Klinik
+
+Die **optische Kohärenztomographie (OCT)** ist die wichtigste klinische Anwendung der Wellenoptik. Sie nutzt **Niederkohärenz-Interferometrie**: Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird in einen Referenz- und einen Probenarm aufgeteilt. Konstruktive Interferenz tritt nur dann auf, wenn die optischen Weglängen beider Arme bis auf die Kohärenzlänge übereinstimmen. Durch Scannen der Referenzlänge erhält man tiefenaufgelöste Schnittbilder mit ~10 µm axialer Auflösung — ohne Kontrastmittel, ohne Strahlenbelastung.
+
+**Klinischer Einsatz:** Standard in der Augenheilkunde (Makula, Glaukom, Netzhautödem), zunehmend auch in Kardiologie (intravaskuläres OCT zur Darstellung von Koronarplaques) und Dermatologie.
 
 | Verfahren | Wellenoptisches Prinzip | Klinischer Einsatz |
 |---|---|---|
-| **Pulsoximetrie** | Wellenlängenabhängige Absorption (660 nm / 940 nm) | SpO₂-Messung am Finger |
-| **Spektrophotometrie** | Beugungsgitter zerlegt Licht | Blutgasanalyse, Laborchemie |
 | **OCT** | Niederkohärenz-Interferometrie | Netzhautdiagnostik, Koronargefäße |
-| **Polarisationsmikroskopie** | Doppelbrechung polarisierten Lichts | Gichtkristalle, Amyloid-Nachweis |
-| **Entspiegelte Optik** | Dünnschicht-Destruktivinterferenz | Endoskope, Brillengläser |
-| **Laser** | Kohärente, monochromatische Strahlung | Chirurgie, Photokoagulation |
-
-**Optische Kohärenztomographie (OCT)** verdient besondere Betonung: Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird in Referenz- und Probenarm aufgeteilt. Konstruktive Interferenz tritt nur auf, wenn beide Weglängen übereinstimmen. Durch Scannen erhält man tiefenaufgelöste Schnittbilder (axiale Auflösung ~10 µm). Standard in der Augenheilkunde für Makula, Glaukom und Netzhautödem.
-
----
-
-## Typische Fallen und Missverständnisse
-
-- **„Beugung passiert nur an Spalten"** → Nein, an jeder Kante und jedem Hindernis. Spalte sind nur die klassischen Lehrbeispiele.
-- **„Licht kann nicht um Ecken biegen"** → Doch, durch Beugung. Bei sichtbarem Licht ist der Effekt nur sehr gering wegen der kleinen Wellenlänge.
-- **„Im Medium ändert sich die Frequenz"** → Nein! Nur Wellenlänge und Geschwindigkeit ändern sich. Die Frequenz bleibt konstant.
-- **„Phasensprung bei jeder Reflexion"** → Nur am optisch dichteren Medium (n₂ > n₁). Am dünneren Medium: kein Phasensprung.
-- **„Polarisation funktioniert auch bei Schall"** → Nein. Schall ist eine Longitudinalwelle und nicht polarisierbar.
+| **Pulsoximetrie** | Wellenlängenabhängige Absorption (660/940 nm) | SpO₂-Messung |
+| **Spektrophotometrie** | Beugungsgitter zerlegt Licht | Blutgasanalyse, Laborchemie |
+| **Polarisationsmikroskopie** | Doppelbrechung | Gicht vs. Pseudogicht |
+| **Entspiegelte Optik** | Destruktive Dünnschichtinterferenz | Endoskope, Brillengläser |
 
 ---
 
-## Rechenbeispiele
+## Rechenbeispiel — Entspiegelungsschicht
 
-**Beispiel 1 — Doppelspalt-Streifenabstand:**
-λ = 550 nm, d = 0,1 mm = 10⁻⁴ m, L = 2 m.
-Δy = λ·L/d = 550×10⁻⁹ · 2 / 10⁻⁴ = **11 mm**.
-Bei rotem Licht (λ = 700 nm): Δy = 700×10⁻⁹ · 2 / 10⁻⁴ = **14 mm** — breiteres Muster.
+Ein Brillenglas (n_Glas = 1,5) soll für grünes Licht (λ = 530 nm) entspiegelt werden. Die Beschichtung hat n_Schicht = 1,38 (Magnesiumfluorid, MgF₂).
 
-**Beispiel 2 — Auflösungsgrenze (Abbe):**
-Trockenobjektiv (NA = 0,95), grün (λ = 520 nm): d_min = 520/(2·0,95) = **274 nm**.
-Ölimmersion (NA = 1,3), grün: d_min = 520/(2·1,3) = **200 nm**.
-Ölimmersion + UV (λ = 350 nm): d_min = 350/(2·1,3) = **135 nm**.
+**Ziel:** Destruktive Interferenz der beiden reflektierten Teilstrahlen (Oberseite und Unterseite der Schicht).
 
-**Beispiel 3 — Dünnschicht:**
-Seifenfilm (n = 1,33), Dicke d = 300 nm. Optische Weglänge = 2·1,33·300 = 798 nm.
-Mit einem Phasensprung: konstruktiv bei λ = 2nd/(m+½). Für m = 0: λ = 798/0,5 = 1596 nm (IR, unsichtbar). Für m = 1: λ = 798/1,5 = **532 nm (grün)** — der Film erscheint grün!
+**Analyse der Phasensprünge:** Luft (n=1) → Schicht (n=1,38): Phasensprung (dichter). Schicht (n=1,38) → Glas (n=1,5): Phasensprung (dichter). Beide Reflexionen haben einen Phasensprung → die Phasensprünge heben sich auf. Destruktive Interferenz erfordert daher:
 
-**Beispiel 4 — Brewster-Winkel:**
-Glas (n = 1,5): tan θ_B = 1,5 → θ_B = arctan(1,5) ≈ **56,3°**.
-Wasser (n = 1,33): tan θ_B = 1,33 → θ_B ≈ **53,1°** — Blendung von Wasseroberflächen.`,
+2 · n_Schicht · d = (m + ½) · λ
+
+Für m = 0 (dünnste Schicht): d = λ / (4 · n_Schicht) = 530 / (4 · 1,38) = **96 nm**.
+
+Eine nur 96 nm dicke MgF₂-Schicht eliminiert die Reflexion bei 530 nm nahezu vollständig — darum haben entspiegelte Brillen einen leichten violetten Restschimmer (Grün fehlt).
+
+---
+
+## Typische Fallen
+
+- **„Im Medium ändert sich die Frequenz"** → Nein! Nur Wellenlänge und Geschwindigkeit ändern sich, die Frequenz bleibt konstant
+- **„Phasensprung bei jeder Reflexion"** → Nur am optisch dichteren Medium. Am dünneren Medium: kein Phasensprung
+- **„Beugung passiert nur an Spalten"** → Nein, an jeder Kante und jedem Hindernis
+- **„Polarisation funktioniert auch bei Schall"** → Nein, Schall ist longitudinal und nicht polarisierbar
+- **„Kurzwelliges Licht wird stärker gebeugt"** → Umgekehrt! Langwelliges Licht (rot) wird stärker gebeugt`,
       diagram: "em-spectrum",
       lernziele: [
         "Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erklären.",
@@ -1687,94 +1677,174 @@ Wasser (n = 1,33): tan θ_B = 1,33 → θ_B ≈ **53,1°** — Blendung von Wass
         "CCD-Sensor",
         "Glasfaser",
       ],
-      content: `## Lupe
+      content: `## Optische Instrumente und Mikroskopie
 
-Die Lupe ist die einfachste Sehhilfe – eine einzelne **Sammellinse**. **Um eine Sammellinse als Lupe zu verwenden** (vergrößertes, aufrechtes virtuelles Bild), muss sich der **Gegenstand innerhalb der einfachen Brennweite** befinden (g < f). Außerhalb der Brennweite entstünde ein reelles (umgekehrtes) Bild; als Lupe nutzt man bewusst g < f. Das menschliche Auge kann einen Gegenstand bei der **deutlichen Sehweite** (konventionell S = 25 cm) scharf sehen. Bringt man eine Sammellinse mit Brennweite f vor das Auge und platziert das Objekt **innerhalb der Brennweite** (nahe am Brennpunkt), entsteht ein aufrechtes, vergrößertes virtuelles Bild bei der deutlichen Sehweite.
+Ein Pathologe beugt sich über das Lichtmikroskop und mustert eine Gewebeprobe aus einer Magenbiopsie — 400-fache Vergrößerung, H&E-Färbung, verdächtige Zellkerne. Gleichzeitig nutzt der Gastroenterologe ein Videoendoskop, um die nächste Läsion per Glasfaserlicht auszuleuchten. Beide Instrumente folgen denselben physikalischen Grundprinzipien: Brechung, Vergrößerung und Auflösungsgrenzen.
+
+---
+
+## Lupe — das einfachste Vergrößerungsinstrument
+
+Die Lupe ist eine einzelne **Sammellinse**, die ein aufrechtes, vergrößertes virtuelles Bild erzeugt, wenn sich der Gegenstand innerhalb der Brennweite befindet (g < f). Das Auge kann bei der **deutlichen Sehweite** S = 25 cm am bequemsten scharf stellen.
 
 **Vergrößerung der Lupe:**
-> **M = S / f** (S = 25 cm, f in cm)
+> **V = S / f = 250 mm / f**
 
-Beispiel: Lupe mit f = 5 cm → M = 25/5 = 5-fache Vergrößerung.
+Beispiel: Dermatoskop mit f = 4 cm → V = 25/4 = **6,25×**. Operationslupe mit f = 5 cm → V = 5×.
 
-> **Merke:** Lupe = Sammellinse, die das Objekt näher als die deutliche Sehweite bringt und es virtuell, aufrecht und vergrößert zeigt.
+Die **Winkelvergrößerung** beschreibt, um welchen Faktor der Sehwinkel mit Lupe gegenüber dem Sehwinkel bei deutlicher Sehweite ohne Lupe zunimmt — physikalisch gleichwertig mit V = S/f für das entspannte Auge.
 
-**Klinische Lupen:**
-- **Dermatoskop** (f ≈ 4 cm, M ≈ 6×): Hautläsionen nach ABCDE-Kriterien beurteilen
-- **Operationslupe** (2–6×): mikrochirurgische Eingriffe (Gefäß-, Nervennaht)
-- **Kopflupe mit Beleuchtung**: HNO, Zahnheilkunde
+> **Merke:** Lupe = Sammellinse mit g < f → virtuelles, aufrechtes, vergrößertes Bild. Je kürzer f, desto größer V.
 
-## Lichtmikroskop
+**Klinische Lupen:** Dermatoskop (6×, ABCDE-Kriterien), Operationslupe (2–6×, Gefäß-/Nervennaht), Kopflupe mit Beleuchtung (HNO, Zahnheilkunde).
 
-Warum reicht eine einzelne Lupe nicht für hohe Vergrößerungen? Eine Lupe allein kann maximal ~25-fach vergrößern (f müsste unpraktisch klein werden). Das Lichtmikroskop löst das Problem mit einem Zwei-Linsen-System: Das Objektiv erzeugt ein vergrößertes reelles Zwischenbild, das die Okularlinse wie eine Lupe weiter vergrößert. Die Gesamtvergrößerung ist das Produkt beider Einzelvergrößerungen — so werden 1000-fache Vergrößerungen möglich.
+---
 
-Das Lichtmikroskop besteht aus zwei Linsensystemen:
-- **Objektiv** (dem Objekt zugewandt, kurze Brennweite f_ob): erzeugt ein vergrößertes, reelles Zwischenbild
-- **Okular** (dem Auge zugewandt, mittlere Brennweite f_ok): wirkt als Lupe, die das Zwischenbild betrachtet
+## Lichtmikroskop — Aufbau und Vergrößerung
+
+Eine einzelne Lupe erreicht maximal ~25×. Für höhere Vergrößerungen nutzt das Lichtmikroskop ein **Zwei-Linsen-System**:
+
+- **Objektiv** (kurze Brennweite f_ob, nah am Präparat): erzeugt ein reelles, vergrößertes Zwischenbild
+- **Okular** (mittlere Brennweite f_ok, am Auge): wirkt als Lupe für dieses Zwischenbild
 
 **Gesamtvergrößerung:**
 > **M_ges = M_ob × M_ok**
 
-wobei M_ob = Bildröhrenlänge / f_ob und M_ok = S / f_ok (S = 25 cm).
+wobei M_ob = Tubuslänge / f_ob und M_ok = S / f_ok (S = 25 cm). Typisch: Objektiv 40× · Okular 10× = **400×**.
 
-Typische Werte: Objektiv 40x, Okular 10x → Gesamtvergrößerung 400x.
+{{DIAGRAM:microscope-optics}}
 
-Das **theoretische Auflösungslimit** (Abbe) beträgt bei Lichtmikroskopen ca. **200 nm** mit sichtbarem Licht und Ölimmersionsobjektiv (NA~1,4). Moderne STED- oder STORM-Mikroskope überwinden diese Grenze durch Spezialtechniken.
+**Auflösungsgrenze nach Abbe:**
 
-**Konfokales Mikroskop:** Ein Laserstrahl fokussiert auf einen Punkt, eine Lochblende (Pinhole) vor dem Detektor blendet Streulicht aus anderen Ebenen aus → optische Schnittbilder, 3D-Rekonstruktion möglich.
+Die Auflösung eines Mikroskops hängt nicht von der Vergrößerung ab, sondern von der Wellenlänge λ und der numerischen Apertur NA:
 
-## Teleskop (historische Einordnung)
+> **d_min = 0,61 · λ / NA**
 
-Das Teleskop vergrößert ferne Objekte mit der Formel M = f_ob/f_ok (Objektiv-/Okularbrennweite). Es hat keine direkte medizinische Relevanz, demonstriert aber das allgemeine Prinzip der Zweistufenoptik: Objektiv erzeugt ein reelles Zwischenbild, Okular betrachtet es als Lupe.
+Mit sichtbarem Licht (λ ≈ 500 nm) und Ölimmersion (NA ≈ 1,4): d_min ≈ 500 · 0,61/1,4 ≈ **218 nm** — das Abbe-Limit. Strukturen unter ~200 nm (die meisten Viren) sind lichtmikroskopisch nicht auflösbar.
 
-## Endoskop
+**Leere Vergrößerung:** Vergrößerung über das Auflösungslimit hinaus zeigt nur unscharfe Details größer — kein Informationsgewinn. Die sinnvolle Maximalvergrößerung beträgt ca. 1000× mit Ölimmersion.
 
-Das Endoskop ist das wichtigste minimal-invasive optische Instrument in der Medizin. Es kombiniert:
+**Kontrastverfahren:**
+- **Phasenkontrast**: wandelt Brechungsindex-Unterschiede in Helligkeitsunterschiede um → ungefärbte lebende Zellen sichtbar
+- **Dunkelfeld**: nur gestreutes Licht erreicht das Objektiv → leuchtende Strukturen auf dunklem Grund (Spirochäten-Nachweis)
+- **Konfokales Mikroskop**: Laserstrahl + Lochblende (Pinhole) vor dem Detektor → nur Licht aus der Fokusebene passiert → optische Schnittbilder, 3D-Rekonstruktion
 
-1. **Lichtleitung**: Glasfaserbündel leiten weißes LED- oder Xenon-Licht (Kaltlicht) zum Untersuchungsort ohne thermische Gewebelast.
-2. **Bildübertragung**: Früher durch kohärente Glasfaserbündel (Faseroptik), heute fast ausschließlich durch CCD/CMOS-Chip (digitale Bildsensoren) am distalen Ende (Videoendoskop).
-3. **Arbeitskanal**: Für Biopsiezangen, Polypektomieschlingen, Laser.
-4. **Spülung und Absaugung**: Für klares Sichtfeld.
+> **Merke:** Auflösung ≠ Vergrößerung. Das Abbe-Limit d_min = 0,61λ/NA bestimmt die kleinste auflösbare Struktur, nicht die Vergrößerung.
 
-**Physik der Glasfaser-Lichtleitung:** Jede Glasfaser besteht aus einem Kern (n_Kern ≈ 1,62) und einem Mantel (n_Mantel ≈ 1,52). Da n_Kern > n_Mantel, tritt an der Kern-Mantel-Grenzfläche **Totalreflexion** auf — Licht, das unter einem Winkel steiler als der Grenzwinkel α_grenz = arcsin(n_Mantel/n_Kern) einfällt, bleibt im Kern gefangen. So wird Licht über Meter um enge Kurven geleitet, ohne merkliche Verluste. Die **numerische Apertur** der Faser bestimmt den maximalen Einkoppelwinkel: NA = √(n_Kern² − n_Mantel²).
+---
 
-> **Merke:** Endoskop-Glasfasern funktionieren durch Totalreflexion: Kern (hohes n) leitet Licht, Mantel (niedriges n) hält es gefangen. Kein Licht geht verloren, kein Wärme-Transport ins Gewebe.
+## Elektronenmikroskop — TEM vs. REM
 
-Das distale Ende ist biegbar (Steuerdraht-Mechanismus), sodass Windungen im Gastrointestinaltrakt oder Bronchialbaum navigiert werden können. Wichtige klinische Einsatzgebiete:
-- **Gastroskopie**: Speiseröhre, Magen, Duodenum
-- **Koloskopie**: Dickdarm (Polyp-Screening)
-- **Bronchoskopie**: Bronchien (Biopsie, Lavage)
-- **Laparoskopie** (Bauchspiegelung): Bauchhöhle (minimalinvasive Chirurgie)
-- **Zystoskopie**: Blase
+Die Abbe-Grenze des Lichtmikroskops (~200 nm) wird durch die Wellenlänge des sichtbaren Lichts gesetzt. Elektronen haben eine viel kürzere **De-Broglie-Wellenlänge** (bei 100 kV: λ ≈ 0,004 nm) und ermöglichen so Auflösungen bis unter 0,1 nm.
 
-**Laparoskopie — optische Besonderheiten:** Das starre Laparoskop enthält Stablinsen (Hopkins-Optik), die im Vergleich zu Glasfasern ein deutlich helleres und schärferes Bild liefern. Die Bauchhöhle wird mit CO₂ insuffliert (Pneumoperitoneum), um ein Arbeitsfeld zu schaffen. Trokar-Zugänge (5–12 mm) erlauben das Einführen von Kamera und Instrumenten. Die Linsengleichung bestimmt den Arbeitsabstand: Bei f = 10 mm Objektivbrennweite und g = 50 mm Gewebsabstand liegt das reelle Bild bei b = 1/(1/10 − 1/50) = 12,5 mm — auf dem CCD-Chip.
+**Transmissions-Elektronenmikroskop (TEM):**
+- Elektronenstrahl durchdringt ultradünne Probe (~50–100 nm Schnittdicke)
+- Elektromagnetische Linsen fokussieren den Strahl
+- Auflösung bis ~0,1 nm (atomare Ebene)
+- Aufwendige Probenpräparation: Fixierung, Einbettung, Ultramikrotom-Schnitte, Kontrastierung (Schwermetallsalze: Uranylacetat, Bleinitrat)
+- Anwendung: Virusdiagnostik (Negativkontrastierung), Organellen-Ultrastruktur, Nierenbiopsien (Basalmembran)
+
+**Raster-Elektronenmikroskop (REM/SEM):**
+- Elektronenstrahl rastert die Probenoberfläche ab
+- Sekundärelektronen werden detektiert → dreidimensionales Oberflächenbild mit großer Tiefenschärfe
+- Auflösung ~1–5 nm
+- Probe muss leitfähig sein (Goldbedampfung)
+- Anwendung: Oberflächentopografie von Implantaten, Bakterienmorphologie, Biomaterialforschung
+
+| Eigenschaft | Lichtmikroskop | TEM | REM |
+|---|---|---|---|
+| **Strahlung** | Sichtbares Licht | Elektronen (100–300 kV) | Elektronen (1–30 kV) |
+| **Auflösung** | ~200 nm | ~0,1 nm | ~1–5 nm |
+| **Max. Vergrößerung** | ~1500× | ~500.000× | ~100.000× |
+| **Bildtyp** | 2D (Durchlicht) | 2D (Transmission) | 3D-Oberfläche |
+| **Probenpräparation** | Fixierung, Färbung | Ultradünnschnitt, Kontrastierung | Bedampfung (Gold/Platin) |
+| **Lebende Proben** | Ja (Phasenkontrast) | Nein (Vakuum) | Nein (Vakuum) |
+
+> **Merke:** TEM = Durchstrahlung ultradünner Schnitte → höchste Auflösung (0,1 nm). REM = Oberflächenabrasterung → 3D-Bilder mit Tiefenschärfe. Beide brauchen Vakuum, keine Lebendbeobachtung.
+
+---
+
+## Fluoreszenzmikroskopie
+
+Fluoreszenzmikroskopie nutzt die Eigenschaft bestimmter Moleküle (Fluorophore), Licht einer bestimmten Wellenlänge zu absorbieren und bei längerer Wellenlänge wieder abzustrahlen (Stokes-Verschiebung).
+
+- **Anregung**: kurzwelliges Licht (z. B. UV oder Blau, λ_ex ≈ 488 nm)
+- **Emission**: längerwelliges Licht (z. B. Grün, λ_em ≈ 509 nm)
+- Ein **Dichroitspiegel** trennt Anregungs- von Emissionslicht → nur Fluoreszenz erreicht den Detektor
+
+**Green Fluorescent Protein (GFP):** Aus der Qualle *Aequorea victoria* isoliert, kann GFP gentechnisch an beliebige Proteine fusioniert werden → Proteinlokalisation in lebenden Zellen sichtbar. Nobelpreis 2008 (Shimomura, Chalfie, Tsien).
+
+**DAPI-Färbung**: bindet an DNA → Zellkerne leuchten blau (λ_ex 360 nm / λ_em 460 nm). Standard in der Histopathologie.
+
+**Superresolution-Mikroskopie** (STED, PALM, STORM) überwindet das Abbe-Limit durch gezielte An-/Abschaltung einzelner Fluorophore → Auflösung bis ~20 nm.
+
+> **Merke:** Fluoreszenz: Anregung bei kurzer λ, Emission bei längerer λ (Stokes-Shift). Dichroitspiegel trennt die Wellenlängen. GFP = genetisch kodierbarer Fluoreszenzmarker.
+
+---
+
+## Endoskop — Totalreflexion und Glasfaser
+
+{{DIAGRAM:endoscope-fiber}}
+
+Das Endoskop ist das zentrale minimalinvasive optische Instrument der Medizin. Es kombiniert:
+
+1. **Lichtleitung**: Glasfaserbündel leiten LED- oder Xenon-Kaltlicht zum Untersuchungsort — keine thermische Gewebelast
+2. **Bildübertragung**: CCD/CMOS-Chip am distalen Ende (Videoendoskop); früher kohärente Glasfaserbündel
+3. **Arbeitskanal**: für Biopsiezangen, Polypektomieschlingen, Laser
+4. **Spülung/Absaugung**: für klares Sichtfeld
+
+**Physik der Glasfaser:** Jede Faser besteht aus Kern (n_Kern ≈ 1,62) und Mantel (n_Mantel ≈ 1,52). Da n_Kern > n_Mantel, tritt an der Grenzfläche **Totalreflexion** auf — Licht bleibt im Kern gefangen und wird verlustarm über Meter geleitet, auch um enge Kurven. Die **numerische Apertur** NA = √(n_Kern² − n_Mantel²) bestimmt den maximalen Einkoppelwinkel.
+
+> **Merke:** Glasfaser-Lichtleitung beruht auf Totalreflexion: Kern (hohes n) leitet, Mantel (niedriges n) reflektiert. Kein Wärmetransport ins Gewebe.
+
+**Klinische Einsatzgebiete:** Gastroskopie (Ösophagus, Magen, Duodenum), Koloskopie (Polyp-Screening), Bronchoskopie (Biopsie, Lavage), Laparoskopie (minimalinvasive Chirurgie), Zystoskopie (Blase).
+
+**Laparoskopie:** Starres Laparoskop mit Hopkins-Stablinsen (heller und schärfer als flexible Glasfasern). CO₂-Insufflation (Pneumoperitoneum) schafft Arbeitsraum. Trokar-Zugänge 5–12 mm.
+
+---
 
 ## Ophthalmoskop und Spaltlampe
 
-Das **direkte Ophthalmoskop** (Augenspiegel) projiziert Licht durch die Pupille auf die Netzhaut. Eine Linsenoptik ermöglicht den Blick auf Papille, Makulabereich und Gefäße. Klinisch wichtig für Diagnose von Glaukomschäden, Papillenödem, diabetische Retinopathie.
+Das **direkte Ophthalmoskop** (Augenspiegel) projiziert Licht durch die Pupille auf die Netzhaut. Über ein System aus halbdurchlässigem Spiegel und Korrekturlinsen (Drehrad mit verschiedenen Dioptrien) sieht der Untersucher Papille, Makula und Gefäße — entscheidend für die Diagnose von Papillenödem (Hirndruckzeichen), diabetischer Retinopathie, Glaukomschäden und hypertensiver Fundusveränderungen.
 
-Die **Spaltlampe** ist ein spezielles Auflichtmikroskop mit Spaltbeleuchtung. Sie beleuchtet das Auge mit einem feinen Lichtspalt und erlaubt Schnittdarstellungen von Hornhaut, Linse, Glaskörper. Kombination mit Kontaktlinsen ermöglicht Hintergrunduntersuchung.
+Die **Spaltlampe** (Biomikroskop) kombiniert eine verstellbare Spaltbeleuchtung mit einem binokularen Mikroskop (6–40× Vergrößerung). Der feine Lichtspalt erzeugt einen optischen Schnitt durch die transparenten Augenstrukturen — Hornhaut, Vorderkammer, Linse, Glaskörper werden schichtweise sichtbar. Mit Zusatzlinsen (z. B. Goldmann-Dreispiegelkontaktglas) kann auch der Fundus beurteilt werden. Typische Befunde: Katarakt (Linsentrübung), Hornhautulkus, Vorderkammer-Zellen bei Uveitis.
 
-## Elektronenmikroskop
+> **Merke:** Ophthalmoskop = Fundusbeurteilung (Papille, Gefäße, Makula). Spaltlampe = optischer Schnitt durch vordere Augenabschnitte (Hornhaut bis Linse).
 
-Das **Transmissions-Elektronenmikroskop (TEM)** nutzt Elektronen statt Licht. De-Broglie-Wellenlänge der Elektronen (bei 100 kV: λ ≈ 0,004 nm) ist ~100.000× kleiner als Licht → Auflösung bis ~0,1 nm (Atomniveau). Das **Raster-Elektronenmikroskop (REM/SEM)** rastert die Oberfläche ab und liefert dreidimensionale Bilder mit großer Tiefenschärfe. Medizinisch: Virusdiagnostik (Negativkontrastierung), Gewebeultrastruktur, Biomaterialforschung.
+---
 
-> **Merke:** Elektronenmikroskopie überwindet die Abbe-Grenze durch extrem kurze De-Broglie-Wellenlänge der Elektronen.
+## Spektroskopie (Kurzüberblick)
 
-> **Prüfungstipp:** Verwechsle nicht die Vergrößerungsformeln: Lupe M = S/f (S = 25 cm), Mikroskop M = M_ob × M_ok (Multiplikation!). Die Auflösung eines Mikroskops hängt NICHT von der Vergrößerung ab, sondern vom Abbe-Limit d_min = λ/(2·NA).
+Spektroskopische Methoden zerlegen Licht in seine Wellenlängenkomponenten und messen die Absorption oder Emission bei charakteristischen Wellenlängen. Medizinisch relevant:
+
+- **Photometrie/Spektrophotometrie**: Konzentrationsbestimmung über Lambert-Beer-Gesetz (A = ε · c · d) — Laborchemie (Enzymatik, Blutgasanalyse)
+- **Pulsoximetrie**: Absorptionsverhältnis bei 660 nm (rot, Desoxyhämoglobin) und 940 nm (infrarot, Oxyhämoglobin) → SpO₂
+- **Infrarotspektroskopie**: Identifikation von Harnsteinen, organischen Verbindungen
+
+Für Wellenoptik und Beugungsgitter: → siehe UK ph-7-01 (Atomphysik und Spektroskopie).
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Lupen-Vergrößerung für dermatologische Untersuchung:**
-Dermatoskop mit f = 4 cm. M = S/f = 25/4 = **6,25-fach**.
-Lupe mit f = 2,5 cm: M = 25/2,5 = **10-fach** — Standard für Hautläsionen (ABCDE-Kriterien).
+**Beispiel 1 — Lupen-Vergrößerung:**
+Dermatoskop mit f = 4 cm. V = S/f = 25/4 = **6,25×**.
+Operationslupe mit f = 2,5 cm: V = 25/2,5 = **10×**.
 
-**Beispiel 2 — Mikroskop: Vergrößerung und Auflösungsgrenze:**
-Objektiv 40× (f_ob = 4 mm), Okular 10× (f_ok = 25 mm). M_ges = 40 × 10 = **400×**.
-Ölimmersion 100× (NA = 1,25), λ = 500 nm: d_min = λ/(2·NA) = 500/(2·1,25) = **200 nm**.
-Vergrößerung über M_leer = 500·NA/M_ges = 500·1,25/1000 = 0,625 (Nyquist: M_leer < 1 → sinnvolle Vergrößerung).
+**Beispiel 2 — Mikroskop-Auflösung:**
+Objektiv 100× Ölimmersion (NA = 1,25), Okular 10×, λ = 500 nm.
+M_ges = 100 × 10 = **1000×**.
+d_min = 0,61 · λ / NA = 0,61 · 500/1,25 = **244 nm**.
+Sinnvolle Maximalvergrößerung: ~1000× (500 · NA ≈ 625 → darüber leere Vergrößerung).
 
-**Beispiel 3 — Endoskop: Bildweite auf CCD-Chip:**
-Laparoskop-Objektiv f = 10 mm, Gewebeabstand g = 50 mm. 1/b = 1/f − 1/g = 1/10 − 1/50 = 4/50 → b = **12,5 mm** (Bild auf CCD-Chip). Abbildungsmaßstab: m = b/g = 12,5/50 = **0,25** → Bild ist ¼ der Originalgröße auf dem Chip.`,
+**Beispiel 3 — Endoskop-Glasfaser (Grenzwinkel):**
+Kern n₁ = 1,62, Mantel n₂ = 1,52. Grenzwinkel: sin α_grenz = n₂/n₁ = 1,52/1,62 = 0,938 → α_grenz ≈ **69,8°**.
+NA = √(1,62² − 1,52²) = √(2,6244 − 2,3104) = √0,314 ≈ **0,56**. Akzeptanzwinkel: θ = arcsin(0,56) ≈ **34°**.
+
+**Beispiel 4 — TEM: De-Broglie-Wellenlänge:**
+Beschleunigungsspannung U = 100 kV. Elektronenmasse m = 9,1·10⁻³¹ kg, e = 1,6·10⁻¹⁹ C.
+Kinetische Energie: E = eU = 1,6·10⁻¹⁴ J. Impuls: p = √(2mE) = √(2 · 9,1·10⁻³¹ · 1,6·10⁻¹⁴) ≈ 1,7·10⁻²² kg·m/s.
+λ = h/p = 6,63·10⁻³⁴ / 1,7·10⁻²² ≈ **0,004 nm** — ~100.000× kürzer als sichtbares Licht.`,
       lernziele: [
         "Die Vergrößerungsformel der Lupe M = S/f anwenden.",
         "Das Prinzip des Lichtmikroskops (Objektiv × Okular) und das Auflösungslimit erläutern.",

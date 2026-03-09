@@ -459,8 +459,9 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
-      imageUrl: "/images/bms/bio-dna-nukleotide.jpg",
-      imageCaption: "Abb.: DNA-Nukleotide — Bausteine der Erbinformation (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-zellzyklus.jpg",
+      imageCaption:
+        "Abb.: Kreuzungsschema nach Mendel — Vererbung über Generationen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Uniformitätsregel",
         "Spaltungsregel",
@@ -470,41 +471,137 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
         "Punnett-Quadrat",
         "monohybrid",
         "dihybrid",
+        "Testkreuzung",
+        "Mukoviszidose",
+        "Huntington",
+        "Epistasie",
       ],
-      content: `## 1. Mendelsche Regel (Uniformitätsregel)
+      content: `## Warum bekommt ein Viertel der Kinder Mukoviszidose?
 
-Kreuzt man **reinerbige (homozygote)** Eltern mit **unterschiedlichen Merkmalen**, so sind alle Nachkommen der **F₁-Generation** (erste Filialgeneration) **uniform** — gleicher Genotyp und gleicher Phänotyp. Beispiel: AA (rot) × aa (weiß) → alle F₁ sind **Aa** (rot, wenn A dominant). Die F₁ ist also **mischerbig (heterozygot)** und zeigt das dominante Merkmal.
+Beide Eltern sind gesund. Kein Familienmitglied war je auffällig. Trotzdem wird jedes vierte Kind mit **Mukoviszidose** (zystische Fibrose) geboren — einer schweren Lungenerkrankung. Die Erklärung liegt in drei Regeln, die der Augustinermönch Gregor Mendel 1865 an Erbsenpflanzen entdeckte. Sie gelten unverändert für den Menschen und sind die Grundlage jeder genetischen Beratung.
 
-> **Merke:** 1. Mendelsche Regel: Homozygote Eltern (AA × aa) → F₁ zu 100 % uniform heterozygot (Aa).
-
-{{IMAGE}}
+Die Meiose (vorheriges Kapitel) liefert den Mechanismus: Während der Keimzellbildung werden die Allele auf die Gameten verteilt. Mendels Regeln beschreiben, **welche Kombinationen** dabei entstehen und in **welchen Verhältnissen** sie in der nächsten Generation auftreten.
 
 ---
 
-## 2. Mendelsche Regel (Spaltungsregel)
-
-
-Kreuzt man die **F₁-Hybriden** untereinander (Aa × Aa), so **spaltet** die **F₂-Generation** in festen Verhältnissen auf. **Genotyp:** 1 AA : 2 Aa : 1 aa (Verhältnis 1:2:1). **Phänotyp** (bei dominant-rezessiv, A dominant über a): 3 dominant (rot) : 1 rezessiv (weiß), also **3:1**. Das Punnett-Quadrat (2×2) zeigt die vier möglichen Kombinationen der Gameten (A und a von jedem Elternteil).
-
-> **Merke:** 2. Mendelsche Regel: Aa × Aa → F₂ Genotyp 1:2:1 (AA:Aa:aa), Phänotyp (dominant-rezessiv) 3:1.
-
----
-
-## 3. Mendelsche Regel (Unabhängigkeitsregel)
-
+## 1. Mendelsche Regel — Uniformitätsregel
 
 {{DIAGRAM:meiosis}}
 
-Betrachtet man **zwei Merkmale** (zwei Gene auf **verschiedenen Chromosomen** oder weit voneinander entfernt), so werden die Gene **unabhängig** voneinander verteilt. Kreuzung **RrGg × RrGg** (dihybrider Erbgang) ergibt in F₂ das **Phänotyp-Verhältnis 9:3:3:1** (9 R_G_, 3 R_gg, 3 rrG_, 1 rrgg). Das Punnett-Quadrat hat 4×4 = 16 Felder. Voraussetzung: **Unabhängigkeit** der Gene (keine Kopplung). Bei **gekoppelten Genen** (auf demselben Chromosom, nah beieinander) weicht das Verhältnis ab — dann überwiegen die Parentaltypen.
+Kreuzt man zwei **reinerbige (homozygote)** Eltern mit unterschiedlichen Merkmalen, sind alle Nachkommen der **F₁-Generation** (erste Filialgeneration) **uniform** — sie haben denselben Genotyp und denselben Phänotyp.
 
-> **Merke:** 3. Mendelsche Regel: Zwei unabhängige Gene (RrGg × RrGg) → F₂ 9:3:3:1. Nur bei Genen auf verschiedenen Chromosomen oder ohne Kopplung.
+**Kreuzungsschema (monohybrid):**
+
+| | **A** (Vater) | **A** (Vater) |
+|---|---|---|
+| **a** (Mutter) | Aa | Aa |
+| **a** (Mutter) | Aa | Aa |
+
+Ergebnis: **100 % Aa** — alle F₁ heterozygot, alle zeigen das dominante Merkmal.
+
+**Klinisches Beispiel:** Beide Eltern homozygot — einer AA (gesund, kein CF-Träger), einer aa (Mukoviszidose). Alle Kinder sind **Aa** (gesunde Träger, Carrier).
+
+> **Merke:** 1. Mendelsche Regel: Homozygote Eltern (AA × aa) → F₁ zu 100 % uniform heterozygot (Aa). Gilt für jedes Merkmal mit zwei Allelen.
 
 ---
 
-## Punnett-Quadrat und Wahrscheinlichkeit
+## 2. Mendelsche Regel — Spaltungsregel
 
+Kreuzt man die **F₁-Hybriden** (Aa × Aa), **spaltet** die F₂-Generation in festen Verhältnissen auf. Hier liegt der Schlüssel zur Mukoviszidose-Frage.
 
-Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eizellen/Spermien) dar. Monohybrid: 2×2 = 4 Kombinationen (Aa × Aa → AA, Aa, Aa, aa). Dihybrid: 4×4 = 16 (je Elternteil 4 Gameten-Typen: RG, Rg, rG, rg). **Produktregel** bei unabhängigen Ereignissen: P(rrgg) = P(rr) × P(gg) = 1/4 × 1/4 = 1/16.`,
+### Punnett-Quadrat (monohybrid, 2×2)
+
+| | **A** (Vater) | **a** (Vater) |
+|---|---|---|
+| **A** (Mutter) | **AA** | **Aa** |
+| **a** (Mutter) | **Aa** | **aa** |
+
+**Genotyp-Verhältnis:** 1 AA : 2 Aa : 1 aa = **1 : 2 : 1**
+
+**Phänotyp-Verhältnis** (bei vollständiger Dominanz): 3 dominant : 1 rezessiv = **3 : 1**
+
+Zurück zum Mukoviszidose-Beispiel: Beide Eltern sind **Aa** (gesunde Träger). Die Wahrscheinlichkeit für ein krankes Kind (aa) beträgt **1/4 = 25 %**. Drei von vier Kindern sind phänotypisch gesund (1 AA + 2 Aa), aber zwei davon sind Träger.
+
+### Rückkreuzung (Testkreuzung)
+
+Wie unterscheidet man AA von Aa, wenn beide denselben Phänotyp zeigen? Durch **Testkreuzung** mit einem homozygot rezessiven Partner (aa):
+
+- **AA × aa** → alle Nachkommen Aa (100 % dominant)
+- **Aa × aa** → 50 % Aa, 50 % aa (Aufspaltung **1 : 1**)
+
+Spaltet die Nachkommenschaft auf, war der Elternteil **heterozygot**.
+
+> **Merke:** 2. Mendelsche Regel: Aa × Aa → Genotyp 1:2:1, Phänotyp 3:1. Testkreuzung mit aa entlarvt den Genotyp: 100 % dominant → AA; Aufspaltung 1:1 → Aa.
+
+---
+
+## 3. Mendelsche Regel — Unabhängigkeitsregel
+
+{{DIAGRAM:pedigree-analysis}}
+
+Betrachtet man **zwei Merkmale** gleichzeitig (dihybrider Erbgang), werden Gene auf **verschiedenen Chromosomen** unabhängig voneinander vererbt. Die unabhängige Verteilung in der Meiose I (zufällige Orientierung der Bivalente) ist der zelluläre Mechanismus dahinter.
+
+### Dihybrides Punnett-Quadrat (4×4)
+
+Kreuzung **RrGg × RrGg** — jeder Elternteil bildet vier Gametentypen: RG, Rg, rG, rg (je 25 %).
+
+| | **RG** | **Rg** | **rG** | **rg** |
+|---|---|---|---|---|
+| **RG** | RRGG | RRGg | RrGG | RrGg |
+| **Rg** | RRGg | RRgg | RrGg | Rrgg |
+| **rG** | RrGG | RrGg | rrGG | rrGg |
+| **rg** | RrGg | Rrgg | rrGg | rrgg |
+
+**Phänotyp-Verhältnis:** 9 R_G_ : 3 R_gg : 3 rrG_ : 1 rrgg = **9 : 3 : 3 : 1**
+
+**Produktregel:** P(rrgg) = P(rr) × P(gg) = 1/4 × 1/4 = **1/16**
+
+### Ausnahme: Genkopplung
+
+Gene auf **demselben Chromosom**, die nahe beieinander liegen, werden **gemeinsam vererbt** (Kopplung). Dann weicht das Verhältnis von 9:3:3:1 ab — Parentaltypen überwiegen. Nur durch **Crossing-over** (Prophase I) können gekoppelte Gene rekombiniert werden.
+
+> **Merke:** 3. Mendelsche Regel: Zwei unabhängige Gene (RrGg × RrGg) → F₂ 9:3:3:1. Voraussetzung: Gene auf verschiedenen Chromosomen oder nicht gekoppelt. Bei Kopplung überwiegen Parentaltypen.
+
+---
+
+## Klinische Erbgänge — Mendel in der Medizin
+
+Die Mendelschen Regeln erklären die Vererbungsmuster monogener Erkrankungen:
+
+| Erbgang | Beispiel | Merkmal |
+|---------|----------|---------|
+| **Autosomal-rezessiv** | Mukoviszidose (CFTR-Gen) | Beide Allele defekt nötig (aa); Träger (Aa) gesund; Eltern Aa × Aa → 25 % betroffen |
+| **Autosomal-dominant** | Chorea Huntington (HTT-Gen) | Ein defektes Allel reicht (Aa); 50 % Risiko bei Aa × aa; vollständige Penetranz |
+| **Kodominanz** | ABO-Blutgruppen | I^A und I^B gleichzeitig exprimiert → Blutgruppe AB (→ nächstes Kapitel) |
+
+**Mukoviszidose** ist die häufigste autosomal-rezessive Erkrankung bei Europäern. Etwa 1 von 25 Personen ist Träger (Aa). P(aa) = 1/4 bei Aa × Aa — exakt Mendels Spaltungsregel.
+
+**Huntington** zeigt autosomal-dominante Vererbung: Ein Elternteil Aa, der andere aa → 50 % der Kinder betroffen. Die Krankheit manifestiert sich erst im Erwachsenenalter (Spätmanifestation), die Penetranz beträgt 100 %.
+
+> **Merke:** Mukoviszidose = autosomal-rezessiv (Aa × Aa → 25 % aa). Huntington = autosomal-dominant (Aa × aa → 50 % Aa). Blutgruppen AB = Kodominanz.
+
+---
+
+## Abweichungen von Mendel — kurzer Überblick
+
+Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene:
+
+- **Epistasie** (Überdeckung): Ein Gen maskiert die Wirkung eines anderen Gens. Beispiel: Labrador-Fellfarbe — Gen E (epistatisch) bestimmt, ob Pigment eingelagert wird; Gen B die Farbe (schwarz/braun). Genotyp ee = immer gelb, unabhängig von B. F₂-Verhältnis verschiebt sich (z. B. 9:3:4 statt 9:3:3:1).
+- **Polygenie** (polygene Vererbung): Viele Gene beeinflussen ein Merkmal additiv → kontinuierliche Verteilung (Körpergröße, Hautfarbe). Keine diskreten Mendel-Klassen.
+- **Pleiotropie**: Ein Gen beeinflusst mehrere Merkmale. Beispiel: Sichelzellanämie — eine Mutation (Glu→Val im β-Globin) → sichelförmige Erythrozyten, Anämie, Milzinfarkte, Malariaschutz bei Heterozygoten.
+
+> **Merke:** Epistasie = ein Gen maskiert ein anderes (veränderte Spaltungsverhältnisse). Polygenie = viele Gene → ein Merkmal. Pleiotropie = ein Gen → viele Merkmale.
+
+---
+
+## Zusammenfassung der Mendelschen Regeln
+
+| Regel | Kreuzung | Ergebnis |
+|-------|----------|----------|
+| **1. Uniformität** | AA × aa | F₁: 100 % Aa (uniform) |
+| **2. Spaltung** | Aa × Aa | F₂: Genotyp 1:2:1, Phänotyp 3:1 |
+| **3. Unabhängigkeit** | RrGg × RrGg | F₂: 9:3:3:1 (bei freier Kombination) |
+| **Testkreuzung** | ? × aa | 100 % dominant → AA; 1:1 → Aa |`,
       lernziele: [
         "Die drei Mendelschen Regeln formulieren und auf Kreuzungsbeispiele anwenden.",
         "Punnett-Quadrat für mono- und dihybride Erbgänge zeichnen und Verhältnisse ableiten.",
@@ -1285,39 +1382,154 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
         "Trisomie",
         "Nicht-Disjunktion",
       ],
-      content: `## Genmutation
+      content: `## Eine einzige Base verändert ein Leben
 
-**Genmutationen** betreffen die **DNA-Sequenz** eines Gens (einzelne Basen oder wenige Basen). **Punktmutation:** Austausch einer Base. Folgen: **stille Mutation** (gleiche Aminosäure durch Degeneriertheit des Codes), **Missense-Mutation** (andere Aminosäure wird eingebaut), **Nonsense-Mutation** (Stopp-Codon → verkürztes, oft nicht-funktionales Protein). **Frameshift-Mutation:** Einfügung oder Deletion von nicht durch 3 teilbaren Basen → Verschiebung des Leserasters → meist schwerer Defekt. Genmutationen können in Keimzellen vererbt werden oder in Körperzellen (somatisch) auftreten (z. B. bei Krebs).
-
-> **Merke:** Genmutation = Änderung der DNA-Sequenz eines Gens; Punktmutation (Austausch) vs. Frameshift (Einfügung/Deletion); Nonsense = Stopp-Codon.
-
-{{IMAGE}}
+Ein Austausch von Adenin gegen Thymin im β-Globin-Gen — sechs Buchstaben im drei Milliarden Buchstaben langen menschlichen Genom — reicht aus, um aus normalen runden Erythrozyten sichelförmige, starre Zellen zu machen. Die **Sichelzellanämie** zeigt eindrücklich: Mutationen können auf der kleinsten Ebene auftreten und trotzdem das gesamte Organsystem betreffen. Dieses Kapitel ordnet Mutationen systematisch nach drei Ebenen (Gen, Chromosom, Genom), erklärt ihre Ursachen und stellt die wichtigsten DNA-Reparaturmechanismen vor.
 
 ---
 
-## Chromosomenmutation
+## Genmutationen — Veränderungen der DNA-Sequenz
 
-**Chromosomenmutationen** sind **strukturelle** Veränderungen von Chromosomenabschnitten (nicht der Gesamtzahl). **Deletion:** Verlust eines Stücks (z. B. Cri-du-chat: 5p-Deletion). **Duplikation:** Verdopplung eines Abschnitts. **Translokation:** Verlagerung eines Stücks auf ein anderes Chromosom (z. B. Robertsonsche Translokation (Fusion zweier akrozentrischer Chromosomen) bei Trisomie 21). **Inversion:** Drehung eines Abschnitts um 180°. **Balancierte** Translokation/Inversion: Kein Verlust von Material → Träger oft phänotypisch unauffällig, aber erhöhtes Risiko für unbalancierte Keimzellen (Nachkommen mit Über- oder Unterdosierung).
+{{DIAGRAM:mutation-types}}
 
-> **Merke:** Chromosomenmutation = strukturell (Deletion, Duplikation, Translokation, Inversion). Cri-du-chat = 5p-Deletion.
+Genmutationen betreffen einzelne oder wenige Basenpaare innerhalb eines Gens. Man unterscheidet **Punktmutationen** (Austausch einer Base) und **Frameshift-Mutationen** (Einfügung oder Deletion von Basen).
+
+### Punktmutationen
+
+Bei einer Punktmutation wird eine einzelne Base gegen eine andere ausgetauscht. Je nach Auswirkung auf das Protein ergeben sich drei Typen:
+
+- **Stille Mutation (Silent):** Das neue Codon codiert dieselbe Aminosäure (dank der Degeneriertheit des genetischen Codes). Beispiel: GAA → GAG — beide codieren Glutamat. Kein Effekt auf das Protein.
+- **Missense-Mutation:** Das neue Codon codiert eine **andere Aminosäure**. Die Auswirkung hängt von der Position und der chemischen Ähnlichkeit ab. Konservative Missense (ähnliche Aminosäure) sind oft toleriert, nicht-konservative können das Protein zerstören. Beispiel: Sichelzellanämie — GAG → GTG: Glutamat → Valin im β-Globin.
+- **Nonsense-Mutation:** Das neue Codon ist ein **Stopp-Codon** (UAA, UAG, UGA). Die Translation bricht vorzeitig ab → verkürztes, meist funktionsloses Protein. Beispiel: Viele Fälle von Mukoviszidose (CFTR-Gen) und Duchenne-Muskeldystrophie.
+
+### Frameshift-Mutationen
+
+Werden Basen eingefügt (**Insertion**) oder entfernt (**Deletion**), und ist die Zahl **nicht durch 3 teilbar**, verschiebt sich das gesamte Leseraster ab der Mutationsstelle. Alle nachfolgenden Codons werden falsch gelesen, oft entsteht ein vorzeitiges Stopp-Codon. Frameshift-Mutationen führen fast immer zu einem **schwer defekten Protein**. Ist die Insertion/Deletion durch 3 teilbar, bleibt das Leseraster erhalten (In-frame-Mutation) — es wird eine Aminosäure eingefügt oder entfernt, das restliche Protein bleibt intakt.
+
+| Mutationstyp | Mechanismus | Auswirkung | Beispiel |
+|---|---|---|---|
+| Silent | Basenaustausch, gleiches AS-Codon | Keine | GAA → GAG (Glu → Glu) |
+| Missense | Basenaustausch, andere Aminosäure | Mild bis schwer | Sichelzellanämie (Glu → Val) |
+| Nonsense | Basenaustausch → Stopp-Codon | Verkürztes Protein | Mukoviszidose (CFTR) |
+| Frameshift | Insertion/Deletion (nicht ÷3) | Leseraster verschoben | Tay-Sachs-Krankheit |
+| In-frame | Insertion/Deletion (÷3) | ±1 Aminosäure | ΔF508-CFTR (Deletion von Phe508) |
+
+> **Merke:** Punktmutation = Austausch einer Base (Silent / Missense / Nonsense). Frameshift = Insertion oder Deletion, Basenzahl nicht durch 3 teilbar → Leserasterverschiebung. Nonsense erzeugt ein Stopp-Codon.
+
+Genmutationen können **somatisch** auftreten (nur im betroffenen Gewebe, z. B. bei Krebs) oder in **Keimzellen** (vererbbar an die nächste Generation).
 
 ---
 
-## Genommutation
+## Chromosomenmutationen — strukturelle Veränderungen
 
-**Genommutationen** betreffen die **Anzahl** der Chromosomen. **Aneuploidie:** Abweichung um einzelne Chromosomen — **Trisomie** (3 Kopien, z. B. Trisomie 21) oder **Monosomie** (1 Kopie, z. B. 45,X = Turner). Ursache meist **Nicht-Disjunktion** in der Meiose (Chromosomen trennen sich nicht). **Polyploidie:** Vervielfachung des gesamten Chromosomensatzes (3n, 4n); beim Menschen in der Regel letal. Trisomie 21 (Down-Syndrom) ist die häufigste lebensfähige Autosom-Trisomie; das Risiko steigt mit dem mütterlichen Alter.
+{{DIAGRAM:chromosomal-mutations}}
 
-> **Merke:** Genommutation = falsche Chromosomenzahl. Trisomie/Monosomie durch Nicht-Disjunktion; Polyploidie = 3n/4n.
+Chromosomenmutationen verändern die **Struktur** ganzer Chromosomenabschnitte — sie betreffen Tausende bis Millionen Basenpaare, nicht einzelne Gene. Vier Grundtypen:
+
+### Deletion
+
+Verlust eines Chromosomenabschnitts. Die Gene dieses Abschnitts fehlen → **Haploinsuffizienz** (eine Kopie reicht nicht für normale Funktion). Klinisches Beispiel: **Cri-du-chat-Syndrom** (Katzenschrei-Syndrom) — Deletion am kurzen Arm von Chromosom 5 (del 5p). Betroffene Kinder zeigen einen charakteristischen hohen Schrei, geistige Retardierung und Mikrozephalie (kleiner Kopf).
+
+### Duplikation
+
+Verdopplung eines Chromosomenabschnitts → Gendosiseffekt (zu viel Genprodukt). Duplikationen können zu Genfamilien führen und sind ein Motor der Evolution (das Duplikat kann neue Funktionen erwerben).
+
+### Inversion
+
+Ein Chromosomenabschnitt wird **herausgeschnitten und um 180° gedreht** wieder eingebaut. Perizentrische Inversion (umfasst das Zentromer) vs. parazentrische Inversion (nur ein Arm). Inversionsträger sind oft phänotypisch unauffällig, aber bei der Meiose können **unbalancierte Keimzellen** entstehen.
+
+### Translokation
+
+Verlagerung eines Chromosomenstücks auf ein **anderes Chromosom**:
+
+- **Reziproke Translokation:** Zwei Chromosomen tauschen Stücke aus. Klinisches Beispiel: **Philadelphia-Chromosom** — t(9;22): Das ABL-Gen (Chromosom 9) fusioniert mit dem BCR-Gen (Chromosom 22) → BCR-ABL-Fusionsprotein (dauerhafte Tyrosinkinase-Aktivität) → **Chronische myeloische Leukämie (CML)**. Therapie: Imatinib (Tyrosinkinase-Inhibitor).
+- **Robertsonsche Translokation:** Fusion zweier **akrozentrischer Chromosomen** (13, 14, 15, 21, 22) an ihren Zentromeren. Träger haben 45 Chromosomen, sind aber phänotypisch unauffällig (**balanciert**). Risiko: unbalancierte Keimzellen → **Translokations-Trisomie 21** (ca. 4 % aller Down-Syndrom-Fälle, altersunabhängig).
+
+> **Merke:** Chromosomenmutation = Deletion, Duplikation, Inversion, Translokation. Klinische Schlüsselbeispiele: Cri-du-chat (del 5p), CML (t(9;22) Philadelphia-Chromosom), Robertsonsche Translokation (Trisomie 21). Balancierte Träger sind phänotypisch unauffällig, haben aber ein Risiko für unbalancierte Nachkommen.
 
 ---
 
-## Übersicht
+## Genommutationen — veränderte Chromosomenzahl
 
-| Ebene | Typ | Beispiel |
-|-------|-----|----------|
-| Gen | Genmutation (Punkt-, Frameshift) | Sichelzellanämie (Missense), viele Erbkrankheiten |
-| Chromosom | Chromosomenmutation (Deletion, Translokation …) | Cri-du-chat (5p-), Robertsonsche Translokation |
-| Genom | Genommutation (Trisomie, Monosomie) | Trisomie 21, Turner (45,X), Klinefelter (47,XXY) |`,
+Genommutationen betreffen die **Anzahl** ganzer Chromosomen. Man unterscheidet Aneuploidie und Polyploidie.
+
+### Aneuploidie
+
+Abweichung um **einzelne Chromosomen** — Ursache ist fast immer **Nicht-Disjunktion** in der Meiose (homologe Chromosomen oder Schwesterchromatiden trennen sich nicht korrekt). Eine Keimzelle erhält ein Chromosom zu viel, die andere zu wenig.
+
+| Aneuploidie | Karyotyp | Syndrom | Leitsymptome |
+|---|---|---|---|
+| Trisomie 21 | 47,XX/XY,+21 | Down-Syndrom | Geistige Retardierung, Epikanthus, Vierfingerfurche, Herzfehler |
+| Trisomie 18 | 47,XX/XY,+18 | Edwards-Syndrom | Schwere Fehlbildungen, Überkreuzen der Finger, meist letal im 1. Lebensjahr |
+| Trisomie 13 | 47,XX/XY,+13 | Pätau-Syndrom | Holoprosenzephalie, Lippen-Kiefer-Gaumenspalte, meist letal |
+| Monosomie X | 45,X | Turner-Syndrom | Kleinwuchs, Flügelfell (Pterygium colli), Infertilität |
+| 47,XXY | 47,XXY | Klinefelter-Syndrom | Hochwuchs, Gynäkomastie, Infertilität |
+
+Das Risiko für Trisomien (besonders Trisomie 21) steigt mit dem **mütterlichen Alter**, da die Eizellen jahrzehntelang in der Meiose-I-Prophase arretiert sind und die Kohäsin-Proteine (halten Chromosomen zusammen) mit der Zeit degenerieren.
+
+### Polyploidie
+
+Vervielfachung des **gesamten** Chromosomensatzes (3n = triploid, 4n = tetraploid). Ursache: Befruchtung durch zwei Spermien (Dispermie) oder Ausfall der ersten meiotischen Teilung. Beim Menschen ist Polyploidie **in der Regel letal** (Spontanabort im ersten Trimester). In der Pflanzenwelt ist Polyploidie dagegen verbreitet und ein wichtiger Mechanismus der Artbildung.
+
+> **Merke:** Aneuploidie = Abweichung einzelner Chromosomen (Trisomie/Monosomie) durch Nicht-Disjunktion. Polyploidie = Vervielfachung des gesamten Satzes (3n, 4n), beim Menschen letal. Trisomie 21 = häufigste lebensfähige Autosomentrisomie, Risiko steigt mit mütterlichem Alter.
+
+---
+
+## Mutationsursachen: Spontan vs. induziert
+
+Mutationen entstehen entweder **spontan** (ohne äußere Einwirkung) oder **induziert** (durch Mutagene):
+
+**Spontane Mutationen:**
+- Replikationsfehler (Einbau falscher Basen, Schlupf bei repetitiven Sequenzen)
+- Tautomerie (seltene Keto-Enol-Tautomere führen zu Fehlpaarungen)
+- Depurinierung (Verlust einer Purinbase, ~5.000×/Zelle/Tag)
+- Desaminierung (Cytosin → Uracil, 5-Methylcytosin → Thymin)
+- Oxidativer Schaden durch reaktive Sauerstoffspezies (ROS)
+
+**Induzierte Mutationen (Mutagene):**
+- **UV-Strahlung:** Thymin-Dimere (kovalente Verbindung benachbarter Pyrimidine) → NER-Reparatur nötig. Defekte NER: **Xeroderma pigmentosum** (extreme Sonnenempfindlichkeit, Hautkrebsrisiko ×1000)
+- **Ionisierende Strahlung** (Röntgen, Gamma): Doppelstrangbrüche → Chromosomenaberrationen
+- **Chemische Mutagene:** Basenanaloga (z. B. 5-Bromuracil), alkylierende Agenzien (z. B. Ethylmethansulfonat), interkalierende Substanzen (z. B. Ethidiumbromid → Frameshifts), Aflatoxin B1 (Schimmelpilz → Leberkrebs, G→T-Transversion in p53)
+
+> **Merke:** Spontane Mutationen: Replikationsfehler, Depurinierung, Desaminierung, ROS. Induzierte Mutagene: UV (Thymin-Dimere), ionisierende Strahlung (Doppelstrangbrüche), Chemikalien (Basenanaloga, Alkylanzien, Interkalatoren).
+
+---
+
+## DNA-Reparaturmechanismen
+
+Die Zelle besitzt mehrere Reparatursysteme, um Mutationen zu korrigieren, **bevor** sie an Tochterzellen weitergegeben werden:
+
+- **Mismatch-Reparatur (MMR):** Erkennt Fehlpaarungen, die der Polymerase-Proofreading entgangen sind. Das MutS/MutL-System schneidet den fehlerhaften Strang heraus und ersetzt ihn. Defekte: **Lynch-Syndrom** (hereditäres nicht-polypöses Kolonkarzinom, HNPCC).
+- **Basenexzisionsreparatur (BER):** Erkennt kleine Basenschäden (Desaminierung, Oxidation). DNA-Glykosylase entfernt die beschädigte Base → AP-Stelle → Auffüllung durch Polymerase + Ligase.
+- **Nukleotidexzisionsreparatur (NER):** Erkennt sperrige Schäden (Thymin-Dimere, kovalente Addukte). Schneidet ein ~25–30 Nukleotide langes Stück heraus. Defekt: **Xeroderma pigmentosum**.
+- **Nicht-homologes Endjoining (NHEJ):** Repariert **Doppelstrangbrüche** durch direktes Zusammenfügen der Enden — schnell, aber fehleranfällig (kann kleine Deletionen/Insertionen verursachen).
+- **Homologe Rekombinationsreparatur (HR):** Nutzt die Schwesterchromatide als Vorlage → fehlerfrei, aber nur in der S/G2-Phase möglich. Defekte in BRCA1/BRCA2 erhöhen das Risiko für Brust- und Eierstockkrebs.
+
+> **Merke:** MMR = Fehlpaarungen (Lynch-Syndrom). BER = kleine Basenschäden. NER = sperrige Schäden wie Thymin-Dimere (Xeroderma pigmentosum). NHEJ = Doppelstrangbrüche (schnell, fehleranfällig). HR = fehlerfreie DSB-Reparatur via Schwesterchromatid (BRCA1/2).
+
+---
+
+## Klinische Bedeutung: Gain-of-function vs. Loss-of-function
+
+Mutationen lassen sich nach ihrem Effekt auf das Genprodukt einteilen:
+
+- **Loss-of-function (LOF):** Das Protein verliert seine Funktion (z. B. durch Nonsense, Frameshift oder Deletion). Oft **rezessiv** — eine funktionierende Kopie reicht aus. Wird beide Kopien betroffen, entsteht die Erkrankung. Beispiel: Mukoviszidose (CFTR), Phenylketonurie (PAH).
+- **Gain-of-function (GOF):** Das Protein erhält eine **neue oder übermäßige** Funktion. Oft **dominant** — eine mutierte Kopie genügt für den Phänotyp. Beispiel: Achondroplasie (FGFR3 konstitutiv aktiv → Minderwuchs), Huntington-Krankheit (Trinukleotid-Repeat-Expansion → toxisches Protein).
+- **Dominant-negativ:** Das mutierte Protein stört die Funktion des normalen Proteins (z. B. bei Multimeren wie Kollagen → Osteogenesis imperfecta).
+
+Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mutation) treiben das Zellwachstum an; **Tumorsuppressorgene** (LOF, z. B. p53, RB1) verlieren ihre Bremsfunktion. Krebs entsteht typischerweise durch **Akkumulation mehrerer Mutationen** (Multi-Hit-Hypothese nach Knudson).
+
+> **Merke:** LOF = Funktionsverlust (oft rezessiv). GOF = neue/übermäßige Funktion (oft dominant). Onkogene = GOF in Protoonkogenen; Tumorsuppressoren = LOF. Krebs = Akkumulation mehrerer Mutationen.
+
+---
+
+## Übersicht: Die drei Mutationsebenen
+
+| Ebene | Definition | Beispiel-Typen | Klinisches Beispiel |
+|---|---|---|---|
+| **Genmutation** | Veränderung der DNA-Sequenz eines Gens | Silent, Missense, Nonsense, Frameshift | Sichelzellanämie, Mukoviszidose, Tay-Sachs |
+| **Chromosomenmutation** | Strukturelle Veränderung von Chromosomenabschnitten | Deletion, Duplikation, Inversion, Translokation | Cri-du-chat (del 5p), CML (t(9;22)), Translokations-Trisomie 21 |
+| **Genommutation** | Veränderte Chromosomenzahl | Aneuploidie (Trisomie, Monosomie), Polyploidie | Down-Syndrom, Turner (45,X), Edwards, Pätau |`,
       lernziele: [
         "Genmutation, Chromosomenmutation und Genommutation unterscheiden und Beispiele zuordnen.",
         "Nicht-Disjunktion als Ursache von Trisomie/Monosomie erklären.",

@@ -661,135 +661,176 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf gelade
         "Normalenvektor",
         "Matrix",
         "Determinante",
+        "Sarrus-Regel",
         "Inverse Matrix",
         "Lineares Gleichungssystem",
+        "Gauß-Verfahren",
         "Cramersche Regel",
-        "Eigenwert",
-        "Eigenvektor",
         "CT-Bildrekonstruktion",
       ],
-      content: `## Geradengleichung im Raum
+      content: `Bei einer CT-gesteuerten Biopsie sticht der Radiologe eine Nadel durch die Haut Richtung Tumor. Die Nadelspitze startet an einem Punkt, bewegt sich geradlinig in eine bestimmte Richtung — mathematisch ist das nichts anderes als eine **Gerade im Raum**. Der Tumor selbst liegt in einer bestimmten Gewebeschicht, die sich als **Ebene** modellieren lässt. Und die Dosisberechnung bei einer anschließenden Chemotherapie? Drei Medikamente, drei Organe, unterschiedliche Verteilungskoeffizienten — das ergibt eine **Matrix**. Geraden, Ebenen und Matrizen sind das Handwerkszeug, mit dem solche 3D-Probleme lösbar werden.
 
-Eine Gerade im dreidimensionalen Raum wird durch die **Parameterform** beschrieben:
+## Geraden im Raum: Parameterform
+
+Die Nadelbahn der Biopsie lässt sich durch einen Startpunkt und eine Richtung beschreiben. Mathematisch heißt das **Parameterform**:
 
 $$\\vec{r} = \\vec{r_0} + t \\cdot \\vec{d}, \\quad t \\in \\mathbb{R}$$
 
-Dabei ist $\\vec{r_0}$ der **Stützvektor** (ein Punkt auf der Geraden) und $\\vec{d}$ der **Richtungsvektor** (gibt die Richtung an). Der Parameter $t$ durchläuft alle reellen Zahlen und erzeugt alle Punkte der Geraden. Für $t = 0$ erhält man den Stützpunkt, für $t = 1$ den Punkt $\\vec{r_0} + \\vec{d}$.
+- $\\vec{r_0}$ = **Stützvektor** (Einstichstelle, ein konkreter Punkt auf der Geraden)
+- $\\vec{d}$ = **Richtungsvektor** (Nadelrichtung)
+- $t$ = Parameter: $t = 0$ ergibt den Stützpunkt, $t = 1$ den Punkt $\\vec{r_0} + \\vec{d}$
 
-**Aufstellen einer Geradengleichung:** Gegeben zwei Punkte $A$ und $B$, wählt man $\\vec{r_0} = \\vec{r}_A$ und $\\vec{d} = \\vec{AB} = \\vec{r}_B - \\vec{r}_A$.
+**Gerade durch zwei Punkte aufstellen:** Gegeben $A$ und $B$, wähle $\\vec{r_0} = A$ und $\\vec{d} = \\vec{AB} = B - A$.
 
-**Punktprobe:** Um zu prüfen, ob ein Punkt $P$ auf der Geraden liegt, setzt man $\\vec{r} = P$ und löst nach $t$. Wenn das lineare Gleichungssystem konsistent ist (d. h. alle drei Gleichungen denselben $t$-Wert liefern), liegt $P$ auf der Geraden.
+**Punktprobe — liegt ein Punkt auf der Geraden?** Setze die Koordinaten von $P$ ein und löse nach $t$. Liefern alle drei Gleichungen **denselben** $t$-Wert, liegt $P$ auf der Geraden.
 
-> **Merke:** Eine Gerade im ℝ³ hat genau einen Freiheitsgrad (den Parameter $t$). Zwei verschiedene Punkte bestimmen genau eine Gerade.
+**Rechenbeispiel — Nadelweg:**
+Einstich bei $A(1, 2, 3)$, Zielpunkt $B(4, 0, 1)$.
+- *Denkprozess:* Richtungsvektor = Ziel minus Start: $\\vec{d} = (4{-}1,\\; 0{-}2,\\; 1{-}3) = (3, -2, -2)$
+- Parameterform: $\\vec{r} = (1,2,3) + t \\cdot (3,-2,-2)$
+- Punktprobe $P(7,-2,-1)$: Einsetzen ergibt $t = 2$ in allen drei Komponenten ✓
 
-## Ebenengleichungen
+> **Merke:** Gerade = Stützvektor + Parameter $\\times$ Richtungsvektor. Zwei Punkte bestimmen genau eine Gerade. Bei der Punktprobe muss $t$ in **allen** Koordinaten gleich sein!
 
-Ebenen im ℝ³ können auf drei äquivalente Weisen dargestellt werden:
+---
 
-**1. Normalenform:** $\\vec{n} \\cdot (\\vec{r} - \\vec{r_0}) = 0$
-- $\\vec{n}$ ist der Normalenvektor (senkrecht zur Ebene), $\\vec{r_0}$ ein Punkt auf der Ebene.
-- Jeder Vektor in der Ebene steht senkrecht auf $\\vec{n}$ (Skalarprodukt = 0).
+## Ebenen im Raum
 
-**2. Koordinatenform:** $ax + by + cz = d$
-- Die Koeffizienten $(a, b, c)$ bilden den Normalenvektor $\\vec{n}$.
-- $d = \\vec{n} \\cdot \\vec{r_0}$ ergibt sich durch Einsetzen eines bekannten Ebenenpunktes.
+Während eine Gerade eindimensional durch den Raum läuft, breitet sich eine Ebene zweidimensional aus — etwa die Schnittebene eines CT-Scans. Es gibt drei gleichwertige Darstellungen:
 
-**3. Parameterform:** $\\vec{r} = \\vec{r_0} + s\\cdot\\vec{d_1} + t\\cdot\\vec{d_2}$
-- Zwei linear unabhängige Richtungsvektoren $\\vec{d_1}$, $\\vec{d_2}$ spannen die Ebene auf.
-- Der Normalenvektor ergibt sich als Kreuzprodukt: $\\vec{n} = \\vec{d_1} \\times \\vec{d_2}$.
+**Normalenform:** $\\vec{n} \\cdot (\\vec{r} - \\vec{r_0}) = 0$
+- $\\vec{n}$ = **Normalenvektor** (steht senkrecht auf der Ebene)
+- Jeder Vektor, der in der Ebene liegt, hat mit $\\vec{n}$ das Skalarprodukt 0
 
-**Umrechnung Parameterform → Koordinatenform:** Normalenvektor via Kreuzprodukt berechnen, dann Koordinatenform mit $d = \\vec{n} \\cdot \\vec{r_0}$ aufstellen. Dies ist eine typische MedAT-Aufgabe.
+**Koordinatenform:** $ax + by + cz = d$
+- Die Koeffizienten $(a, b, c)$ **sind** der Normalenvektor — direkt ablesbar!
+- $d$ ergibt sich durch Einsetzen eines bekannten Ebenenpunkts
 
-## Matrizenrechnung
+**Parameterform:** $\\vec{r} = \\vec{r_0} + s \\cdot \\vec{d_1} + t \\cdot \\vec{d_2}$
+- Zwei linear unabhängige Richtungsvektoren spannen die Ebene auf
+- Normalenvektor per Kreuzprodukt: $\\vec{n} = \\vec{d_1} \\times \\vec{d_2}$
 
-Eine **Matrix** $A$ ist ein rechteckiges Schema von Zahlen (m Zeilen × n Spalten). Matrizen ermöglichen die kompakte Darstellung linearer Gleichungssysteme und Transformationen.
+{{DIAGRAM:plane-normal-form}}
 
-**Addition:** Nur für gleich große Matrizen, elementweise: $(A+B)_{ij} = A_{ij} + B_{ij}$
+**Rechenbeispiel — Ebene aus drei Punkten (typische MedAT-Aufgabe):**
+$A(1,0,0)$, $B(0,2,0)$, $C(0,0,3)$:
+- *Denkprozess:* Zwei Richtungsvektoren bilden: $\\vec{d_1} = B - A = (-1,2,0)$, $\\vec{d_2} = C - A = (-1,0,3)$
+- Normalenvektor per Kreuzprodukt: $\\vec{n} = (-1,2,0) \\times (-1,0,3) = (6, 3, 2)$
+- Koordinatenform: $6x + 3y + 2z = d$. Punkt $A$ einsetzen: $6 \\cdot 1 = 6$ → also $6x + 3y + 2z = 6$
 
-**Skalare Multiplikation:** $(\\lambda A)_{ij} = \\lambda \\cdot A_{ij}$
+> **Merke:** In der Koordinatenform $ax + by + cz = d$ liest man den Normalenvektor $(a,b,c)$ direkt ab. Umrechnung Parameter → Koordinate: Kreuzprodukt der Richtungsvektoren bildet $\\vec{n}$, dann $d = \\vec{n} \\cdot \\vec{r_0}$.
 
-**Matrizenprodukt:** $A$ (m×n) × $B$ (n×p) = $C$ (m×p). Das Element $C_{ij} = \\sum_k A_{ik} B_{kj}$ (Zeile von $A$ × Spalte von $B$). Matrizenmultiplikation ist i. A. **nicht kommutativ**: $A \\cdot B \\neq B \\cdot A$.
+---
 
-> **Merke:** Dimensionsregel: (m×n) × (n×p) = (m×p). Die inneren Dimensionen müssen übereinstimmen! Wenn A 3 Spalten und B 3 Zeilen hat, ist das Produkt definiert.
+## Matrizen: Rechnen mit Zahlentabellen
 
-**Transponierte Matrix:** $A^\\top$ entsteht durch Vertauschen von Zeilen und Spalten: $(A^\\top)_{ij} = A_{ji}$. Eine Matrix heißt **symmetrisch**, wenn $A = A^\\top$. Die **Einheitsmatrix** $E$ hat Einsen auf der Hauptdiagonale und Nullen sonst; sie ist das neutrale Element der Matrizenmultiplikation: $A \\cdot E = E \\cdot A = A$.
+Von Geraden und Ebenen ist es nur ein kleiner Schritt zu Matrizen — denn ein lineares Gleichungssystem (LGS) mit mehreren Unbekannten lässt sich kompakt als Matrizengleichung schreiben. Eine **Matrix** ist ein rechteckiges Zahlenschema mit $m$ Zeilen und $n$ Spalten.
 
-**Determinante einer 2×2-Matrix:**
-$$\\det(A) = \\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc$$
+**Addition:** Nur bei gleicher Größe, elementweise: $(A+B)_{ij} = A_{ij} + B_{ij}$
 
-- $\\det(A) = 0$: Die Zeilen/Spalten sind linear abhängig; das LGS hat keine eindeutige Lösung. Die Matrix heißt **singulär**.
-- $\\det(A) \\neq 0$: Matrix ist **regulär** (invertierbar), das LGS hat genau eine Lösung.
-- Geometrische Bedeutung: $|\\det(A)|$ ist der Flächeninhalt des von den Zeilenvektoren aufgespannten Parallelogramms.
+**Skalare Multiplikation:** Jedes Element wird mit dem Skalar multipliziert: $(\\lambda A)_{ij} = \\lambda \\cdot A_{ij}$
 
-**Determinante einer 3×3-Matrix (Sarrus-Regel):**
+**Matrizenmultiplikation** — die zentrale Operation:
+$A$ (m$\\times$n) $\\cdot$ $B$ (n$\\times$p) = $C$ (m$\\times$p). Jedes Element $C_{ij}$ ist das Skalarprodukt der $i$-ten Zeile von $A$ mit der $j$-ten Spalte von $B$.
+
+{{DIAGRAM:matrix-multiplication}}
+
+**Rechenbeispiel — Dosis-Matrix:**
+Ein Arzt verteilt 2 Medikamente auf 2 Organe. Die Verteilungsmatrix $A$ und der Dosisvektor $\\vec{b}$:
+
+$A = \\begin{pmatrix}2 & 1\\\\3 & 4\\end{pmatrix}$, $\\vec{b} = \\begin{pmatrix}1\\\\0\\end{pmatrix}$
+
+- *Denkprozess:* Dimensionen prüfen: (2$\\times$2) $\\cdot$ (2$\\times$1) = (2$\\times$1) ✓
+- Zeile 1 $\\cdot$ Spalte: $2 \\cdot 1 + 1 \\cdot 0 = 2$
+- Zeile 2 $\\cdot$ Spalte: $3 \\cdot 1 + 4 \\cdot 0 = 3$
+- Ergebnis: $\\begin{pmatrix}2\\\\3\\end{pmatrix}$
+
+**Wichtig:** Matrizenmultiplikation ist **nicht kommutativ** — $A \\cdot B \\neq B \\cdot A$ im Allgemeinen!
+
+**Transponierte Matrix** $A^\\top$: Zeilen und Spalten vertauschen ($(A^\\top)_{ij} = A_{ji}$). Eine Matrix heißt **symmetrisch**, wenn $A = A^\\top$.
+
+Die **Einheitsmatrix** $E$ (Einsen auf der Diagonale, sonst Nullen) ist das neutrale Element: $A \\cdot E = E \\cdot A = A$.
+
+> **Merke:** Dimensionsregel: (m$\\times$n) $\\cdot$ (n$\\times$p) = (m$\\times$p) — die **inneren** Dimensionen müssen übereinstimmen. MedAT-Falle: Reihenfolge bei der Multiplikation beachten, da nicht kommutativ!
+
+---
+
+## Determinante: Schlüssel zur Lösbarkeit
+
+Die Determinante verrät, ob ein Gleichungssystem eine eindeutige Lösung hat — eine Art „Ja/Nein-Schalter" für die Invertierbarkeit einer Matrix.
+
+**2$\\times$2-Determinante:**
+$$\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc \\quad \\text{(Hauptdiagonale minus Nebendiagonale)}$$
+
+**3$\\times$3-Determinante — Sarrus-Regel** (Merkschema für die Berechnung einer 3$\\times$3-Determinante durch Diagonalprodukte):
+Die drei Hauptdiagonalprodukte addieren, die drei Nebendiagonalprodukte subtrahieren. Alternativ Entwicklung nach einer Zeile:
 $$\\det(A) = a_{11}(a_{22}a_{33}-a_{23}a_{32}) - a_{12}(a_{21}a_{33}-a_{23}a_{31}) + a_{13}(a_{21}a_{32}-a_{22}a_{31})$$
 
-## Inverse Matrix
+**Was sagt die Determinante aus?**
+- $\\det(A) \\neq 0$: Matrix ist **regulär** (invertierbar), LGS hat genau eine Lösung
+- $\\det(A) = 0$: Matrix ist **singulär** (nicht invertierbar, Zeilen/Spalten linear abhängig), keine eindeutige Lösung
+- Geometrisch: $|\\det(A)|$ = Fläche des Parallelogramms (2D) bzw. Volumen des Spats (3D)
 
-Die **inverse Matrix** $A^{-1}$ existiert nur für reguläre Matrizen ($\\det(A) \\neq 0$). Es gilt $A \\cdot A^{-1} = A^{-1} \\cdot A = E$ (Einheitsmatrix).
+**Rechenbeispiel:** $A = \\begin{pmatrix}3 & 5\\\\1 & 2\\end{pmatrix}$
+- *Denkprozess:* $\\det = 3 \\cdot 2 - 5 \\cdot 1 = 6 - 5 = 1 \\neq 0$ → regulär, invertierbar ✓
 
-Für eine 2×2-Matrix:
-$$A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$$
+> **Merke:** $\\det = 0$ → singulär (nicht invertierbar, kein eindeutiges LGS). $\\det \\neq 0$ → regulär (invertierbar, genau eine Lösung). Beim MedAT reicht oft die 2$\\times$2-Formel $ad - bc$.
 
-Die Formel lässt sich merken als: Hauptdiagonale tauschen, Nebendiagonale negieren, durch Determinante teilen. Probe: $A \\cdot A^{-1} = E$.
+---
 
-## Lineare Gleichungssysteme (LGS)
+## LGS lösen: Gauß-Verfahren und Cramersche Regel
 
-Ein LGS $A\\vec{x} = \\vec{b}$ kann mit Matrizen kompakt geschrieben werden. Bei regulärer Matrix gilt $\\vec{x} = A^{-1} \\cdot \\vec{b}$. Die **Cramersche Regel** löst 2×2- und 3×3-Systeme über Determinanten:
+Nachdem Determinanten klären, **ob** ein LGS lösbar ist, brauchen wir Methoden, um die Lösung tatsächlich zu **finden**.
 
+**Matrixschreibweise:** $A\\vec{x} = \\vec{b}$, wobei $A$ die **Koeffizientenmatrix** (Matrix der Vorfaktoren der Unbekannten), $\\vec{x}$ der Lösungsvektor und $\\vec{b}$ die rechte Seite ist.
+
+**Gauß-Verfahren (Eliminationsverfahren):**
+1. Erweiterte Matrix $(A | \\vec{b})$ aufstellen
+2. Durch Zeilenoperationen (Addieren/Subtrahieren von Vielfachen) auf **Stufenform** bringen
+3. Von unten nach oben rückwärts einsetzen
+
+**Cramersche Regel** (elegant für 2$\\times$2- und 3$\\times$3-Systeme):
 $$x_i = \\frac{\\det(A_i)}{\\det(A)}$$
-
 wobei $A_i$ die Matrix ist, bei der die $i$-te Spalte durch $\\vec{b}$ ersetzt wird.
 
-**Lösbarkeit eines LGS:**
+**Rechenbeispiel — LGS mit Cramer:**
+$2x + y = 5$, $x - y = 1$
+
+- *Denkprozess:* Koeffizientenmatrix $A = \\begin{pmatrix}2&1\\\\1&-1\\end{pmatrix}$, $\\vec{b} = \\begin{pmatrix}5\\\\1\\end{pmatrix}$
+- $\\det(A) = 2 \\cdot (-1) - 1 \\cdot 1 = -3 \\neq 0$ → eindeutig lösbar
+- $x = \\det\\begin{pmatrix}5&1\\\\1&-1\\end{pmatrix} / (-3) = (-5-1)/(-3) = 2$
+- $y = \\det\\begin{pmatrix}2&5\\\\1&1\\end{pmatrix} / (-3) = (2-5)/(-3) = 1$
+- Probe: $2 \\cdot 2 + 1 = 5$ ✓, $2 - 1 = 1$ ✓
+
 | Bedingung | Lösung |
 |-----------|--------|
-| det(A) $\\neq$ 0 | Genau eine Lösung (reguläres System) |
-| det(A) = 0, konsistent | Unendlich viele Lösungen |
-| det(A) = 0, inkonsistent | Keine Lösung |
+| $\\det(A) \\neq 0$ | Genau eine Lösung |
+| $\\det(A) = 0$, konsistent | Unendlich viele Lösungen |
+| $\\det(A) = 0$, inkonsistent | Keine Lösung |
 
-## Eigenwerte und Eigenvektoren (Grundidee)
+> **Merke:** Cramersche Regel: $x_i = \\det(A_i)/\\det(A)$ — die $i$-te Spalte wird durch $\\vec{b}$ ersetzt. Funktioniert nur bei $\\det(A) \\neq 0$. Für größere Systeme ist Gauß effizienter.
 
-Ein Vektor $\\vec{v} \\neq \\vec{0}$ heißt **Eigenvektor** der Matrix $A$ zum **Eigenwert** $\\lambda$, wenn:
+---
 
-$$A\\vec{v} = \\lambda \\vec{v}$$
+## Inverse Matrix (Kurzfassung)
 
-Die Matrix streckt oder staucht den Eigenvektor, ändert aber nicht seine Richtung. Eigenwerte findet man über das **charakteristische Polynom** $\\det(A - \\lambda E) = 0$. Eine $n \\times n$-Matrix hat höchstens $n$ Eigenwerte.
+Die **inverse Matrix** $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Es gilt $A \\cdot A^{-1} = E$.
 
-> **Merke:** Eigenwerte und Eigenvektoren sind zentral für die PCA in der medizinischen Statistik und für die Schwingungsanalyse in der Biomechanik. Der größte Eigenwert zeigt die Richtung der maximalen Varianz in einem Datensatz.
+Für 2$\\times$2 gibt es eine direkte Formel:
+$$A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$$
 
-## Rechenbeispiele
+Merkregel: Hauptdiagonale tauschen, Nebendiagonale negieren, durch $\\det$ teilen.
 
-**Beispiel 1 — Geradengleichung aufstellen:**
-Gerade durch $A(1, 2, 3)$ und $B(4, 0, 1)$:
-- Richtungsvektor: $\\vec{d} = \\vec{AB} = (4-1, 0-2, 1-3) = (3, -2, -2)$
-- Parameterform: $\\vec{r} = (1, 2, 3) + t \\cdot (3, -2, -2)$
-- Punktprobe für $P(7, -2, -1)$: $(7,{-}2,{-}1) = (1,2,3) + t(3,{-}2,{-}2)$ → $t = 2$ ✓
+**Schnellbeispiel:** $A = \\begin{pmatrix}2&1\\\\5&3\\end{pmatrix}$, $\\det = 1$
+→ $A^{-1} = \\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix}$. Probe: $A \\cdot A^{-1} = E$ ✓
 
-**Beispiel 2 — Ebenengleichung aus 3 Punkten:**
-$A(1,0,0)$, $B(0,2,0)$, $C(0,0,3)$:
-- $\\vec{d_1} = \\vec{AB} = (-1,2,0)$, $\\vec{d_2} = \\vec{AC} = (-1,0,3)$
-- Normalenvektor: $\\vec{n} = \\vec{d_1} \\times \\vec{d_2} = (6, 3, 2)$
-- Koordinatenform: $6x + 3y + 2z = 6$
+> **Merke:** Inverse = „Rückgängig-Matrix". Existiert nur bei $\\det \\neq 0$. Für 2$\\times$2 die Formel auswendig können — wird beim MedAT gerne als Rechenaufgabe gestellt.
 
-**Beispiel 3 — LGS mit Cramer:**
-$2x + y = 5$, $x - y = 1$:
-- $\\det(A) = 2 \\cdot (-1) - 1 \\cdot 1 = -3$
-- $x = \\det\\begin{pmatrix}5&1\\\\1&-1\\end{pmatrix}/(-3) = (-5-1)/(-3) = 2$
-- $y = \\det\\begin{pmatrix}2&5\\\\1&1\\end{pmatrix}/(-3) = (2-5)/(-3) = 1$
-
-**Beispiel 4 — Inverse einer 2×2-Matrix:**
-$A = \\begin{pmatrix}2 & 1 \\\\ 5 & 3\\end{pmatrix}$, $\\det(A) = 6-5 = 1$
-- $A^{-1} = \\frac{1}{1}\\begin{pmatrix}3 & -1 \\\\ -5 & 2\\end{pmatrix} = \\begin{pmatrix}3 & -1 \\\\ -5 & 2\\end{pmatrix}$
-- Probe: $\\begin{pmatrix}2&1\\\\5&3\\end{pmatrix} \\cdot \\begin{pmatrix}3&-1\\\\-5&2\\end{pmatrix} = \\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}$ ✓
+---
 
 ## Klinische Bedeutung
 
-In der **CT-Bildrekonstruktion** werden die gemessenen Absorptionswerte durch eine Radon-Transformation verarbeitet. Die Rückprojektion ist mathematisch eine Matrizenoperation: Aus Messdaten (Sinogramm) wird durch iterative Matrizenoperationen ein 3D-Bilddatensatz rekonstruiert. Iterative Verfahren lösen das LGS $A\\vec{x} = \\vec{b}$, wobei $A$ die Systemmatrix, $\\vec{x}$ der Bildvektor und $\\vec{b}$ die Messdaten sind. Die Systemmatrix kann Millionen von Zeilen und Spalten haben.
-
-In der **Bioinformatik** werden Genexpressionsdaten als Matrizen gespeichert (Zeilen = Gene, Spalten = Patientenproben). Die **Hauptkomponentenanalyse (PCA)** berechnet Eigenwerte und Eigenvektoren der Kovarianzmatrix und reduziert die Dimensionalität auf die wichtigsten Hauptkomponenten. So können z. B. Tumorsubtypen visuell getrennt und Biomarker identifiziert werden.
-
-In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Modell für Medikamentenverteilung) als Matrizendifferentialgleichungen formuliert. Die Eigenwerte der Systemmatrix bestimmen die Halbwertszeiten der Verteilungs- und Eliminationsphasen. Bei der **MRT-Bildgebung** werden die k-Raum-Daten durch Fourier-Transformation (ebenfalls Matrizenoperationen) in ein Bild umgerechnet.`,
+In der **CT-Bildrekonstruktion** werden Absorptionswerte aus verschiedenen Winkeln gemessen und als großes LGS $A\\vec{x} = \\vec{b}$ formuliert ($A$ = Systemmatrix, $\\vec{x}$ = Bildvektor, $\\vec{b}$ = Messdaten). Die gefilterte Rückprojektion löst dieses System durch Matrizenoperationen. In der **Pharmakologie** beschreiben Matrizen die Verteilung von Wirkstoffen auf verschiedene Kompartimente (Blut, Gewebe, Organe) — die Koeffizientenmatrix enthält die Übergangsraten zwischen den Kompartimenten.`,
       lernziele: [
         "Die Parameterform einer Geraden im ℝ³ aufstellen und Punkte auf der Geraden berechnen können.",
         "Ebenengleichungen in Normalenform, Koordinatenform und Parameterform ineinander umrechnen können.",
@@ -800,44 +841,40 @@ In der **Pharmakologie** werden Kompartimentmodelle (z. B. Zwei-Kompartiment-Mod
       sections: [
         {
           heading: "Geraden und Ebenen im dreidimensionalen Raum",
-          text: "Eine Gerade im ℝ³ wird durch Stützvektor $\\vec{r_0}$ und Richtungsvektor $\\vec{d}$ dargestellt: $\\vec{r} = \\vec{r_0} + t\\cdot\\vec{d}$. Eine Ebene kann durch zwei Richtungsvektoren aufgespannt werden (Parameterform) oder durch ihren Normalenvektor $\\vec{n}$ beschrieben werden (Normalenform: $\\vec{n}\\cdot(\\vec{r}-\\vec{r_0})=0$). In der Koordinatenform $ax+by+cz=d$ bilden die Koeffizienten $(a,b,c)$ genau den Normalenvektor.",
+          text: "Eine Gerade im ℝ³ wird durch Stützvektor und Richtungsvektor in Parameterform beschrieben: $\\vec{r} = \\vec{r_0} + t\\cdot\\vec{d}$. Punktprobe: $t$ muss in allen Koordinaten gleich sein. Ebenen haben drei Darstellungsformen: Normalenform $\\vec{n}\\cdot(\\vec{r}-\\vec{r_0})=0$, Koordinatenform $ax+by+cz=d$ (Normalenvektor direkt ablesbar) und Parameterform mit zwei Richtungsvektoren. Umrechnung: Kreuzprodukt der Richtungsvektoren ergibt den Normalenvektor.",
           merksatz:
-            "Gerade: r = r₀ + t×d (Stützvektor + Vielfaches des Richtungsvektors). Ebene-Normalenform: n×(r−r₀)=0.",
+            "Gerade: r = r₀ + t×d. Ebene Koordinatenform: ax+by+cz=d → Normalenvektor (a,b,c) direkt ablesbar. Parameterform → Koordinatenform: Kreuzprodukt = Normalenvektor.",
         },
         {
-          heading: "Matrizenrechnung — Grundoperationen und Determinante",
-          text: "Matrizen werden elementweise addiert; das Produkt $A\\cdot B$ erfordert gleiche innere Dimensionen (n) und ist nicht kommutativ. Die Transponierte $A^\\top$ entsteht durch Zeile-Spalte-Tausch. Die Determinante einer 2×2-Matrix: $\\det(A) = ad-bc$. Ist sie null, sind die Zeilen linear abhängig — das entsprechende LGS hat keine eindeutige Lösung. Wichtige Anwendung: Prüfung auf lineare Unabhängigkeit von Vektoren.",
+          heading: "Matrizen — Grundoperationen und Multiplikation",
+          text: "Matrizen werden elementweise addiert; das Produkt erfordert passende innere Dimensionen: (m×n)·(n×p) = (m×p). Die Matrizenmultiplikation ist nicht kommutativ. Die Transponierte $A^\\top$ entsteht durch Zeile-Spalte-Tausch. Die Einheitsmatrix $E$ ist das neutrale Element der Multiplikation.",
           merksatz:
-            "Matrizenprodukt: m×n × n×p = m×p. Determinante 2×2: ad−bc. det = 0 → linear abhängig, kein eindeutiges LGS.",
+            "Matrizenprodukt: (m×n)·(n×p) = (m×p) — innere Dimensionen müssen passen. Nicht kommutativ: A·B ≠ B·A!",
         },
         {
-          heading: "Klinische Anwendungen: CT und Bioinformatik",
-          text: "CT-Bildrekonstruktion: Die gemessenen Röntgenabsorptionsdaten werden als Sinogramm gespeichert und durch Matrizenoperationen (gefilterte Rückprojektion) in ein 3D-Volumenbild umgerechnet. Bioinformatik: Genexpressionsdaten als Matrizen (Gene × Patienten). PCA (Hauptkomponentenanalyse) nutzt Eigenvektoren und Eigenwerte dieser Matrizen, um Datenmuster zu erkennen und Dimensionen zu reduzieren. Auch lineare Regression und medizinische Bildgebung (MRT, Ultraschall-Beamforming) stützen sich auf Matrizenalgebra.",
+          heading: "Determinante und LGS lösen",
+          text: "Die Determinante einer 2×2-Matrix: $\\det(A) = ad-bc$. det = 0 → singulär (nicht invertierbar), det ≠ 0 → regulär (invertierbar, LGS eindeutig lösbar). 3×3 per Sarrus-Regel. LGS lösen: Gauß-Verfahren (Stufenform + Rückeinsetzen) oder Cramersche Regel ($x_i = \\det(A_i)/\\det(A)$). Inverse Matrix 2×2: Hauptdiagonale tauschen, Nebendiagonale negieren, durch det teilen.",
           merksatz:
-            "CT-Rekonstruktion = Matrizenoperationen (Rückprojektion). Bioinformatik: Genmatrix (Gene × Patienten). PCA nutzt Eigenvektoren.",
+            "det 2×2: ad−bc. det = 0 → singulär. Cramer: xᵢ = det(Aᵢ)/det(A). Inverse 2×2: (1/det)×(d,−b;−c,a).",
         },
         {
-          heading: "Inverse Matrix, LGS und Eigenwerte",
-          text: "Die inverse Matrix $A^{-1}$ existiert nur bei $\\det(A) \\neq 0$. Für 2×2: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}$. Die Cramersche Regel löst ein LGS über Determinanten: $x_i = \\det(A_i)/\\det(A)$, wobei $A_i$ die $i$-te Spalte durch den Lösungsvektor ersetzt. Eigenwerte $\\lambda$ erfüllen $\\det(A-\\lambda E)=0$; der zugehörige Eigenvektor wird nur gestreckt, nicht gedreht. Eigenwerte sind zentral für PCA, Schwingungsanalyse und pharmakokinetische Kompartimentmodelle.",
+          heading: "Klinische Anwendungen",
+          text: "CT-Bildrekonstruktion: Absorptionsmesswerte als großes LGS A·x = b, gelöst durch gefilterte Rückprojektion (Matrizenoperationen). Pharmakologie: Kompartimentmodelle (Medikamentenverteilung auf Blut/Gewebe/Organe) als Matrizengleichungen. Die Koeffizientenmatrix enthält die Übergangsraten zwischen Kompartimenten.",
           merksatz:
-            "Inverse: A⁻¹ = (1/det)×adj(A). Cramer: xᵢ = det(Aᵢ)/det(A). Eigenwert: A×v = λ×v — Richtung bleibt, nur Betrag ändert sich.",
+            "CT-Rekonstruktion = großes LGS mit Matrizenoperationen. Pharmakokinetik: Kompartimentmodelle als Matrizengleichungen.",
         },
       ],
       merksätze: [
-        "Geradengleichung Raum: r = r₀ + t×d (Stützvektor + Parameter × Richtungsvektor).",
-        "Ebene Normalenform: n×(r − r₀) = 0, wobei n ⊥ Ebene.",
-        "Ebene Koordinatenform: ax + by + cz = d — Koeffizienten (a,b,c) sind der Normalenvektor.",
-        "Matrizenaddition: nur für gleich große Matrizen, elementweise.",
-        "Matrizenprodukt: A(m×n) × B(n×p) = C(m×p) — innere Dimensionen müssen übereinstimmen.",
-        "Matrizenmultiplikation ist nicht kommutativ: A×B ≠ B×A (im Allgemeinen).",
-        "Transponierte Aᵀ: Zeilen und Spalten vertauschen; symmetrisch wenn A = Aᵀ.",
-        "Determinante 2×2: det(A) = ad − bc.",
-        "det(A) = 0 → Zeilen/Spalten linear abhängig → LGS nicht eindeutig lösbar.",
-        "Inverse 2×2: A⁻¹ = (1/det)×(d, −b; −c, a) — nur bei det ≠ 0.",
-        "Cramersche Regel: xᵢ = det(Aᵢ)/det(A) — spaltenweise Determinantenberechnung.",
-        "Eigenwert λ: A×v = λ×v → det(A−λE) = 0 (charakteristisches Polynom).",
-        "CT: Bildrekonstruktion durch Radon-Transformation und Matrizenoperationen (Rückprojektion).",
-        "PCA: Eigenvektoren der Kovarianzmatrix = Hauptkomponenten → Dimensionsreduktion.",
+        "Gerade im Raum: r = r₀ + t×d — Stützvektor + Parameter × Richtungsvektor. Punktprobe: t muss in allen Koordinaten gleich sein.",
+        "Ebene Normalenform: n·(r − r₀) = 0, wobei n ⊥ Ebene. Koordinatenform: ax + by + cz = d → Normalenvektor (a,b,c) direkt ablesbar.",
+        "Parameterform → Koordinatenform: Kreuzprodukt der Richtungsvektoren = Normalenvektor, dann d = n · r₀.",
+        "Matrizenprodukt: (m×n) · (n×p) = (m×p) — innere Dimensionen müssen übereinstimmen. Nicht kommutativ!",
+        "Determinante 2×2: det(A) = ad − bc. det = 0 → singulär (nicht invertierbar). det ≠ 0 → regulär (invertierbar).",
+        "Sarrus-Regel: 3×3-Determinante über Diagonalprodukte (3 Hauptdiagonalen minus 3 Nebendiagonalen).",
+        "Cramersche Regel: xᵢ = det(Aᵢ)/det(A) — i-te Spalte durch Lösungsvektor ersetzen.",
+        "Gauß-Verfahren: Erweiterte Matrix aufstellen → Stufenform → rückwärts einsetzen.",
+        "Inverse 2×2: A⁻¹ = (1/det) × (d, −b; −c, a) — Hauptdiagonale tauschen, Nebendiagonale negieren.",
+        "CT-Rekonstruktion = großes LGS A·x = b, gelöst durch Matrizenoperationen (gefilterte Rückprojektion).",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {

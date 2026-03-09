@@ -848,80 +848,178 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
         "Neurotransmitter",
         "Reflexbogen",
       ],
-      content: `## Nervensystem — einfach erklärt
+      content: `## Nervensystem — Steuerung und Kommunikation
 
-Dein Nervensystem ist wie das Kommunikationsnetz deines Körpers. Es hat zwei große Teile: Das **ZNS** (Gehirn + Rückenmark) ist die Zentrale, das **PNS** sind die Leitungen zu den Organen. Innerhalb des PNS gibt es das **vegetative Nervensystem**, das automatisch arbeitet — mit zwei Gegenspielern: **Sympathikus** (Stressmodus) und **Parasympathikus** (Ruhemodus).
-
+Ein Schlaganfall in der linken Großhirnhemisphäre kann Sprache und rechtsseitige Motorik gleichzeitig auslöschen — weil Gehirnareale hochspezialisiert und die Leitungsbahnen gekreuzt sind. Dieses Kapitel zeigt, wie das Nervensystem aufgebaut ist und warum solche Ausfälle lokalisierbar sind.
 
 {{DIAGRAM:nervensystem-übersicht}}
 
-## Sympathikus und Parasympathikus — zwei Gegenspieler
+---
 
-Stell dir zwei Fernbedienungen vor: Eine für Vollgas (**Sympathikus** — fight or flight), eine für Entspannung (**Parasympathikus** — rest and digest). Beide steuern dieselben Organe, aber in gegensätzliche Richtungen.
+## Gliederung: ZNS und PNS
 
-Der **Sympathikus** kommt aus dem Brustmark (T1-L2) und nutzt **Noradrenalin** als Botenstoff. Der **Parasympathikus** kommt aus Hirnnerven und Kreuzmark (S2-S4) und nutzt **Acetylcholin**.
+Das Nervensystem gliedert sich in zwei große Anteile:
 
-| Organ | Sympathikus (Stress) | Parasympathikus (Ruhe) |
-| --- | --- | --- |
-| Herz | Schneller und kräftiger (beta-1) | Langsamer (M2, Vagus) |
-| Bronchien | Weiter (beta-2) | Enger (M3) |
-| Pupille | Weit (Mydriasis, alpha-1) | Eng (Miosis, M3) |
-| Darm | Peristaltik langsamer | Peristaltik schneller |
-| Blase | Schliesst den Schliessmuskel | Entleert (Detrusor kontrahiert) |
+- **ZNS (Zentralnervensystem):** Gehirn + Rückenmark — Verarbeitung und Integration
+- **PNS (Peripheres Nervensystem):** Alle Nerven außerhalb des ZNS — Leitung zum und vom ZNS
 
-Stell dir vor, du wirst von einem Hund gejagt (Sympathikus an): Dein Herz rast, die Bronchien weiten sich für mehr Luft, die Pupillen werden gross, die Verdauung wird heruntergefahren. Wenn du dann sicher auf dem Sofa sitzt (Parasympathikus an): Herz beruhigt sich, Verdauung läuft, Pupillen verengen sich.
+Das PNS wird funktionell unterteilt:
+- **Somatisches NS:** Willkürliche Motorik (Skelettmuskulatur) + bewusste Sensorik
+- **Autonomes (vegetatives) NS:** Unwillkürliche Steuerung innerer Organe (Sympathikus, Parasympathikus, enterisches NS)
 
-> **Merke:** Sympathikus = Stress, Noradrenalin. Parasympathikus = Ruhe, Acetylcholin. Herz: Sympathikus beschleunigt (beta-1), Parasympathikus bremst (M2, Vagus).
-
-{{IMAGE}}
+> **Merke:** ZNS = Gehirn + Rückenmark. PNS = somatisch (willkürlich) + autonom (unwillkürlich).
 
 ---
 
-## Die Synapse — Signalübergabe zwischen Neuronen
+## Gehirn — Funktionelle Gliederung
 
-An der **Synapse** wird das elektrische Signal in ein chemisches umgewandelt und wieder zurück. Stell dir das wie einen Staffellauf vor: Der Läufer (elektrisches Signal) gibt den Stab (Neurotransmitter) weiter, und der nächste Läufer rennt los.
+| Struktur | Hauptfunktionen |
+|---|---|
+| **Großhirn (Cerebrum)** | Motorik, Sensorik, Sprache, Gedächtnis, Bewusstsein |
+| **Kleinhirn (Cerebellum)** | Koordination, Gleichgewicht, Feinmotorik, motorisches Lernen |
+| **Zwischenhirn (Diencephalon)** | **Thalamus** (sensorische Umschaltstation — außer Geruch!), **Hypothalamus** (Hormonsystem, Temperatur, Hunger, Durst, zirkadiane Rhythmik) |
+| **Hirnstamm** (Mittelhirn, Pons, Medulla oblongata) | Vitalfunktionen (Atmung, Kreislauf, Schutzreflexe), Hirnnervenkerne, Formatio reticularis (Wachheit) |
 
-**So läuft es ab:**
-1. Das Signal kommt am Axon-Ende an, **Calcium-Kanäle** öffnen sich
-2. Calcium strömt ein und löst die Verschmelzung von Neurotransmitter-Bläschen mit der Membran aus (über den **SNARE-Komplex**)
-3. Neurotransmitter werden in den Spalt freigesetzt
-4. Sie binden an Rezeptoren auf der nächsten Zelle
+Das **Großhirn** besitzt vier Lappen: Frontallappen (Motorik, Planung, Persönlichkeit), Parietallappen (Sensorik, räumliche Orientierung), Temporallappen (Hören, Sprachverständnis), Okzipitallappen (Sehen). Motorische und sensorische Bahnen kreuzen zur Gegenseite — eine Läsion links verursacht Ausfälle rechts.
 
-Das Ergebnis ist entweder erregend (**EPSP** — Glutamat macht die nächste Zelle aktiver) oder hemmend (**IPSP** — GABA beruhigt die nächste Zelle).
-
-Es gibt zwei Arten von Rezeptoren:
-- **Ionotrope** Rezeptoren öffnen direkt einen Kanal (schnell, Millisekunden)
-- **Metabotrope** Rezeptoren lösen eine Signalkette aus (langsam, Sekunden)
-
-**Botulinumtoxin** zerstört den SNARE-Komplex — keine Neurotransmitter-Freisetzung mehr, die Muskeln erschlaffen. **Tetanustoxin** blockiert die hemmenden Botenstoffe (GABA) — die Muskeln verkrampfen.
-
-> **Merke:** Signal kommt an, Calcium öffnet die Bläschen (SNARE), Neurotransmitter übergibt die Botschaft. EPSP = erregend (Glutamat), IPSP = hemmend (GABA).
+> **Merke:** Thalamus = „Tor zum Bewusstsein" (alle Sinne außer Geruch). Hypothalamus = vegetative Schaltzentrale.
 
 ---
 
-## Das Aktionspotential — wie ein Signal über weite Strecken läuft
+## Rückenmark — Graue und weiße Substanz
 
-Im Ruhezustand liegt die Spannung an der Nervenzelle bei etwa **-70 mV** (innen negativ). Das wird durch die Natrium-Kalium-Pumpe aufrechterhalten (3 Na+ raus, 2 K+ rein).
+Im Querschnitt zeigt das Rückenmark eine charakteristische Schmetterlingsform:
 
-Wenn ein ausreichend starker Reiz kommt (Schwelle ca. -55 mV), passiert alles auf einmal — wie ein Dominoeffekt:
-1. **Natrium-Kanäle öffnen sich** — Na+ strömt rein, die Spannung steigt auf +40 mV
-2. Na+-Kanäle schließen sich, **Kalium-Kanäle öffnen sich** — K+ strömt raus, Spannung fällt zurück
-3. Kurzzeitig fällt die Spannung sogar unter -70 mV (**Hyperpolarisation**)
+- **Graue Substanz (innen):** Nervenzellkörper (Neurone). **Vorderhorn** = Motoneurone (Efferenz), **Hinterhorn** = sensorische Neurone (Afferenz), **Seitenhorn** (T1–L2) = vegetative Neurone (Sympathikus)
+- **Weiße Substanz (außen):** Myelinisierte Axonbahnen (auf-/absteigende Leitungsbahnen). **Hinterstrang** = feine Berührung/Propriozeption, **Seitenstrang** = Pyramidenbahn (Motorik) + Tractus spinothalamicus (Schmerz/Temperatur)
 
-Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip**: Entweder es feuert ganz oder gar nicht. Während der **absoluten Refraktärzeit** (Na+-Kanäle inaktiviert) kann kein zweites Signal kommen. Das verhindert, dass das Signal rückwärts läuft.
-
-> **Merke:** Ruhepotential -70 mV. Schwelle -55 mV. Na+ rein = Depolarisation (+40 mV). K+ raus = Repolarisation. Alles-oder-Nichts.
+> **Merke:** Vorderhorn = motorisch, Hinterhorn = sensorisch, Seitenhorn = vegetativ (nur T1–L2).
 
 ---
 
-## Reflexbogen
+## Autonomes Nervensystem — Sympathikus vs. Parasympathikus
 
+Beide Systeme innervieren dieselben Organe, wirken aber antagonistisch. Die Umschaltung erfolgt jeweils in einem Ganglion (Nervenzellknoten) — präganglionär immer mit **Acetylcholin (ACh)**, postganglionär unterschiedlich.
 
-**Vergleich Reflextypen:**
-- **Monosynaptisch** (Eigenreflex): 1 Synapse, sehr schnell. Rezeptor = Muskelspindel, Afferenz = Ia-Faser (~120 m/s), keine Interneurone. Gleichzeitig: reziproke Hemmung des Antagonisten (über Ia-Interneuron)
-- **Polysynaptisch** (Fremdreflex): mehrere Synapsen + Interneurone. Beispiel Fluchtreflex: Nozizeptor → Aδ-Faser → Interneurone → Beuger aktiviert + Strecker gehemmt + gekreuzte Streckreaktion (kontralateral)
+| Merkmal | Sympathikus | Parasympathikus |
+|---|---|---|
+| Funktion | **Fight or flight** (Leistung) | **Rest and digest** (Erholung) |
+| Ursprung | Thorakolumbal (T1–L2) | Kraniosakral (Hirnnerven III, VII, IX, **X** + S2–S4) |
+| Ganglien | Paravertebral (Grenzstrang), prävertebral | Organnah (in/an Organwand) |
+| Postgangl. Transmitter | **Noradrenalin (NA)** | **Acetylcholin (ACh)** |
+| Rezeptoren (Effektor) | α₁, α₂, β₁, β₂, β₃ | M₂, M₃ |
 
-> **Merke:** **Monosynaptischer Eigenreflex** (Patellarsehne): Muskelspindel → Ia-Faser → **direkt** α-Motoneuron (1 Synapse, keine Interneurone). **Polysynaptischer Fremdreflex** (Fluchtreflex): Nozizeptor → mehrere Interneurone → komplexe motorische Antwort. Reflexe laufen spinal ab — **unabhängig vom Bewusstsein**!`,
+**Organwirkungen im Vergleich:**
+
+| Organ | Sympathikus | Parasympathikus |
+|---|---|---|
+| Herz | Frequenz ↑, Kontraktilität ↑ (β₁) | Frequenz ↓ (M₂, N. vagus) |
+| Bronchien | Dilatation (β₂) | Konstriktion (M₃) |
+| Pupille | **Mydriasis** (weit, α₁) | **Miosis** (eng, M₃) |
+| Magen-Darm | Peristaltik ↓, Sphinkter ↑ | Peristaltik ↑, Sekretion ↑ (M₃) |
+| Blase | Sphinkter-Kontraktion (α₁) | Detrusor-Kontraktion → Miktion (M₃) |
+| Gefäße | Vasokonstriktion (α₁) | — (kaum direkte Innervation) |
+
+**Sonderfall Nebennierenmark:** Chromaffine Zellen werden direkt präganglionär innerviert (ACh, nikotinisch) und setzen **Adrenalin (80 %) und Noradrenalin (20 %)** ins Blut frei — hormonelle Verstärkung der Sympathikuswirkung.
+
+> **Merke:** Sympathikus = Noradrenalin postganglionär. Parasympathikus = ACh prä- und postganglionär.
+
+---
+
+## Synapse — Signalübertragung zwischen Neuronen
+
+An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewandelt:
+
+1. **Aktionspotential** erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** öffnen
+2. Ca²⁺-Einstrom → **SNARE-Komplex** (Synaptobrevin + Syntaxin + SNAP-25) vermittelt Vesikelfusion
+3. **Neurotransmitter** werden in den synaptischen Spalt (~20 nm) freigesetzt (Exozytose)
+4. Bindung an **postsynaptische Rezeptoren** → Signalwirkung
+
+**Rezeptortypen:**
+- **Ionotrop** (ligandengesteuerter Ionenkanal): Schnell (ms). Beispiele: AMPA/NMDA (Glutamat), GABA_A, nikotinischer AChR
+- **Metabotrop** (G-Protein-gekoppelt): Langsam (Sek.–Min.). Beispiele: Dopamin-R, Serotonin-R, muskarinischer AChR
+
+**Postsynaptische Potentiale:**
+- **EPSP** (exzitatorisch): Depolarisation — Glutamat (häufigster exzitatorischer NT im ZNS)
+- **IPSP** (inhibitorisch): Hyperpolarisation — GABA (häufigster inhibitorischer NT im ZNS), Glycin (Rückenmark)
+
+**Klinisch:** Botulinumtoxin spaltet SNARE → keine Transmitterfreisetzung → Muskelparalyse. Tetanustoxin hemmt GABA/Glycin-Freisetzung → Dauererregung → Krämpfe.
+
+> **Merke:** Ca²⁺ → SNARE → Vesikelfusion → Transmitter. EPSP = Glutamat, IPSP = GABA.
+
+---
+
+## Aktionspotential — Signalweiterleitung am Axon
+
+**Ruhepotential (~−70 mV):** Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein) + K⁺-Leckkanäle → Innenseite negativ.
+
+**Ablauf des Aktionspotentials:**
+1. Schwellenreiz (~−55 mV) → spannungsgesteuerte **Na⁺-Kanäle öffnen** → Na⁺ strömt ein → **Depolarisation** auf ~+40 mV
+2. Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (verzögert) → K⁺ strömt aus → **Repolarisation**
+3. K⁺-Kanäle schließen verzögert → kurzzeitig unter −70 mV → **Hyperpolarisation**
+
+**Alles-oder-Nichts-Prinzip:** Schwelle erreicht → volles AP; unterschwellig → kein AP.
+
+**Refraktärzeiten:** Absolut (Na⁺-Kanäle inaktiviert, kein AP möglich) → verhindert Rückwärtsleitung. Relativ (überschwelliger Reiz nötig).
+
+**Saltatorische Leitung:** An myelinisierten Axonen springt das AP von **Ranvier-Schnürring** zu Schnürring → ~120 m/s (vs. ~1 m/s unmyelinisiert).
+
+> **Merke:** −70 mV → Schwelle −55 mV → Na⁺ rein (+40 mV) → K⁺ raus → Repolarisation. Alles-oder-Nichts.
+
+---
+
+## Reflexbogen — Die 5 Glieder
+
+Reflexe sind unwillkürliche, stereotype Antworten auf einen Reiz. Jeder Reflexbogen besteht aus fünf Gliedern:
+
+1. **Rezeptor** — nimmt den Reiz auf (z. B. Muskelspindel, Nozizeptor)
+2. **Afferente Nervenfaser** — leitet zum ZNS (sensorisch)
+3. **Reflexzentrum** — Verarbeitung im Rückenmark (oder Hirnstamm)
+4. **Efferente Nervenfaser** — leitet zum Effektor (motorisch)
+5. **Effektor** — führt die Antwort aus (Muskel, Drüse)
+
+{{DIAGRAM:reflexbogen}}
+
+**Eigenreflex (monosynaptisch):** Rezeptor und Effektor im selben Organ. **Beispiel Patellarsehnenreflex:** Muskelspindel (Dehnung) → Ia-Faser (~120 m/s) → **direkt** auf α-Motoneuron (1 Synapse, keine Interneurone) → M. quadriceps kontrahiert. Gleichzeitig: reziproke Hemmung des Antagonisten über Ia-Interneuron.
+
+**Fremdreflex (polysynaptisch):** Rezeptor und Effektor in verschiedenen Organen, mehrere Interneurone. **Beispiel Fluchtreflex:** Nozizeptor → Aδ-Faser → Interneurone → Beuger aktiviert + Strecker gehemmt + gekreuzte Streckreaktion (kontralaterales Bein stützt).
+
+| Merkmal | Eigenreflex | Fremdreflex |
+|---|---|---|
+| Synapsen | 1 (monosynaptisch) | Mehrere (polysynaptisch) |
+| Latenz | Sehr kurz | Länger |
+| Ermüdbarkeit | Keine | Ja (Habituation) |
+| Beispiel | Patellarsehnenreflex | Fluchtreflex, Kornealreflex |
+
+> **Merke:** 5 Glieder: Rezeptor → Afferenz → Zentrum → Efferenz → Effektor. Eigenreflex = 1 Synapse, keine Ermüdung.
+
+---
+
+## Hirnhäute und Liquor
+
+Drei Hirnhäute (Meningen) schützen das ZNS (von außen nach innen):
+- **Dura mater** (harte Hirnhaut): Derb, an Schädelknochen anliegend
+- **Arachnoidea** (Spinnwebhaut): Zart, begrenzt den **Subarachnoidalraum** (enthält Liquor)
+- **Pia mater** (weiche Hirnhaut): Liegt dem Gehirn direkt auf, gefäßführend
+
+**Liquor cerebrospinalis:** Wird in den **Plexus choroidei** der Ventrikel gebildet (~500 ml/Tag, Gesamtvolumen ~150 ml). Funktion: mechanischer Schutz (Auftrieb), Nährstofftransport, Abfallentsorgung. Lumbalpunktion (zwischen L3/L4 oder L4/L5) zur Diagnostik möglich, da das Rückenmark auf Höhe L1/L2 endet (Conus medullaris).
+
+> **Merke:** Liquor im Subarachnoidalraum (zwischen Arachnoidea und Pia). Lumbalpunktion ab L3/L4 gefahrlos.
+
+---
+
+## Dermatome — Segmentale Hautinnervation
+
+Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautareal — das **Dermatom**. Bei Rückenmarksverletzungen lässt sich anhand der Sensibilitätsgrenze das Läsionsniveau bestimmen.
+
+**Klinisch wichtige Orientierungspunkte:**
+- **C4:** Schulter
+- **T4/T5:** Mamillenebene (Brustwarze)
+- **T10:** Nabelhöhe
+- **L1:** Leistenregion
+- **S3–S5:** Perianalregion (Reithosenanästhesie bei Kaudasyndrom)
+
+> **Merke:** T4 = Mamille, T10 = Nabel. Dermatome ermöglichen die Höhenlokalisation bei Querschnittslähmung.`,
       lernziele: [
         "Das Nervensystem in ZNS und PNS (somatisch und autonom) gliedern und die Funktion jedes Teils beschreiben.",
         "Die Wirkungen von Sympathikus und Parasympathikus auf Herz, Bronchien, Pupille, Magen-Darm und Blase vergleichen und die jeweiligen Neurotransmitter und Rezeptoren benennen.",
@@ -932,10 +1030,10 @@ Das Ganze dauert nur 1-2 Millisekunden und folgt dem **Alles-oder-Nichts-Prinzip
       sections: [],
 
       merksätze: [
-        "**Sympathikus** (fight-or-flight, thorakolumbal [T1-L2], Noradrenalin, α/β-Rezeptoren): Herz ↑ (β1, Frequenz/Kontraktilität), Bronchodilatation (β2), Mydriasis (α1, Pupille), Peristaltik ↓ (α2), Glykogenolyse ↑ (β2), Lipolyse ↑ (β3). **Parasympathikus** (rest-and-digest, kraniosakral [Hirnnerven III/VII/IX/X, S2-S4], Acetylcholin, M2/M3): Herz ↓ (M2, Vagus), Bronchokonstriktion (M3), Miosis (M3), Peristaltik ↑ (M3), Miktion (M3).",
-        "**Synapse:** Präsynaptisch (Ca²⁺-Kanäle, SNARE [Synaptobrevin + Syntaxin + SNAP-25], Synaptotagmin [Ca²⁺-Sensor]) → Vesikel-Fusion → Neurotransmitter-Freisetzung (Quantal Release) → Postsynaptisch (ionotrop [AMPA, NMDA, GABA_A, nikotinisch], metabotrop [D1/D2, 5-HT, α/β, M1-M5]). **EPSP** (Depolarisation, Glutamat/Acetylcholin) vs. **IPSP** (Hyperpolarisation, GABA/Glycin).",
-        "**Aktionspotential:** Ruhepotential ~-70 mV (Na⁺/K⁺-ATPase [3 Na⁺ raus, 2 K⁺ rein], K⁺-Leckkanäle). Schwelle ~-55 mV → **Na⁺-Kanäle öffnen** (Depolarisation +40 mV) → Na⁺-Kanäle **inaktivieren** (Inaktivierungstor) + **K⁺-Kanäle öffnen** (Repolarisation) → Hyperpolarisation. **Refraktärzeit:** Absolut (Na⁺-Kanäle inaktiviert, KEIN AP) + relativ (Na⁺-Kanäle erholen, K⁺-Kanäle offen, überschwellig). **Alles-oder-Nichts-Prinzip** (Schwelle überschritten → volles AP).",
-        "**Saltatorische Erregungsleitung** (myelinisierte Axone): **Ranvier-Schnürringe** (unmyelinisiert, ~1 μm, Na⁺-Kanäle ↑↑↑ [Nav1.6]) → Aktionspotential regeneriert. **Internodien** (~1 mm, Myelin [80% Lipide], Isolation) → Depolarisation breitet sich passiv aus (elektrotonisch, kein Ionenverlust). Aktionspotential **springt** von Schnürring zu Schnürring → schnell (~120 m/s vs. ~1 m/s unmyelinisiert), energieeffizient (Na⁺/K⁺-ATPase nur an Schnürringen).",
+        "Sympathikus: Noradrenalin, T1–L2, Herz ↑ (β₁), Mydriasis (α₁). Parasympathikus: ACh, kraniosakral, Herz ↓ (M₂), Miosis (M₃).",
+        "Synapse: Ca²⁺ → SNARE → Vesikelfusion → Transmitter. EPSP = Glutamat (erregend), IPSP = GABA (hemmend).",
+        "Aktionspotential: −70 mV → Schwelle −55 mV → Na⁺ rein (+40 mV) → K⁺ raus → Repolarisation. Alles-oder-Nichts.",
+        "Reflexbogen: Rezeptor → Afferenz → Reflexzentrum → Efferenz → Effektor. Eigenreflex = 1 Synapse, Fremdreflex = mehrere.",
       ],
       // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
@@ -1274,46 +1372,174 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss in ein elektrisches Signal übe
         "T3/T4",
         "Feedback-Regulation",
       ],
-      content: `{{DIAGRAM:hormonsystem}}
+      content: `Eine junge Patientin klagt über Herzrasen, Gewichtsverlust und Hitzeunverträglichkeit — die Laborwerte zeigen TSH im Keller und freies T₄ massiv erhöht. Morbus Basedow. Ohne das Zusammenspiel von Hypothalamus, Hypophyse und Schilddrüse zu verstehen, bleibt diese Diagnose ein Rätsel. Das endokrine System steuert über chemische Botenstoffe nahezu jeden Stoffwechselprozess — von der Blutzuckerregulation bis zur Stressantwort.
 
-{{DIAGRAM:menstrual-cycle}}
-
-## Hormonklassen und Wirkungsmechanismen
-
-**Um das endokrine System einzuordnen,** beginnen wir mit den **Hormonklassen** und wie sie wirken. Peptidhormone (Insulin, ACTH, TSH) sind hydrophil und wirken über Membranrezeptoren mit Second Messengern (cAMP, IP₃, Ca²⁺) – schnelle Wirkung in Minuten. Steroidhormone (Cortisol, Aldosteron, Testosteron) sind lipophil, passieren die Membran und binden intrazelluläre Rezeptoren im Zellkern, die die Genexpression regulieren – langsame Wirkung in Stunden. T₃/T₄ sind lipophile Aminosäurederivate und wirken ähnlich wie Steroidhormone.
-
-> **Merke:** **Hormonklassen & Rezeptoren:** Peptidhormone (Insulin, GH, ACTH) = hydrophil → Membranrezeptoren (Tyrosinkinase, G-Protein) → Second Messenger (cAMP, IP₃, Ca²⁺) → schnelle Wirkung (Minuten). Steroidhormone (Cortisol, Testosteron, Östrogen) + T₃/T₄ = lipophil → intrazelluläre Rezeptoren → Genexpression → langsame Wirkung (Stunden).
-
-{{IMAGE}}
+{{DIAGRAM:hormonsystem}}
 
 ---
 
-## Schilddrüse und Nebenniere
+## Hormonklassen und Signalwege
 
+Hormone lassen sich nach ihrer **chemischen Struktur** in drei Hauptklassen einteilen, die sich fundamental in Löslichkeit, Rezeptorlokalisation und Wirkgeschwindigkeit unterscheiden:
+| Hormonklasse | Beispiele | Löslichkeit | Rezeptor | Wirkweg | Geschwindigkeit |
+|---|---|---|---|---|---|
+| **Peptidhormone** | Insulin, ACTH, TSH, GH, Glukagon | hydrophil | Membranrezeptoren (Tyrosinkinase, G-Protein-gekoppelt) | Second Messenger (cAMP, IP₃, Ca²⁺) | Minuten |
+| **Steroidhormone** | Cortisol, Aldosteron, Testosteron, Östrogen | lipophil | Intrazelluläre Rezeptoren (Zellkern) | Hormon-Rezeptor-Komplex → DNA-Bindung → Genexpression | Stunden |
+| **Aminosäurederivate** | T₃/T₄ (lipophil), Adrenalin/Noradrenalin (hydrophil) | variabel | T₃/T₄: intrazellulär; Katecholamine: Membranrezeptoren | T₃/T₄: Genexpression; Adrenalin: cAMP/IP₃ | variabel |
 
-Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %). Die Rinde hat drei Zonen: Zona glomerulosa (Aldosteron), Zona fasciculata (Cortisol), Zona reticularis (DHEA/Androgene).
+**Peptidhormone** wie Insulin oder ACTH sind wasserlöslich und können die Lipid-Doppelschicht der Zellmembran nicht passieren. Sie binden an **Membranrezeptoren** — entweder Tyrosinkinasen (Insulin-Rezeptor: Autophosphorylierung → PI3K → GLUT4-Translokation) oder G-Protein-gekoppelte Rezeptoren (ACTH → Gs → Adenylatcyclase → cAMP ↑ → Proteinkinase A). Die Signalkaskade über **Second Messenger** (cAMP, IP₃, Ca²⁺, DAG) ermöglicht eine schnelle Wirkung innerhalb von Minuten, da keine neue Proteinbiosynthese nötig ist.
 
-**Cortisol** (Zona fasciculata, Glukokortikoid): das zentrale Stresshormon, reguliert über die CRH–ACTH-Achse. Wirkt über intrazelluläre Glukokortikoid-Rezeptoren (GR) → Genexpression. Katabol: steigert Glukoneogenese in der Leber (Blutzucker ↑, diabetogene Wirkung), fördert Protein- und Fettkatabolismus in Muskel und Fettgewebe. Immunsuppressiv: hemmt Phospholipase A₂ → Arachidonsäure ↓ → Prostaglandine und Leukotriene ↓. Langfristig hemmt Cortisol Osteoblasten → Knochenaufbau ↓ → Osteoporoserisiko bei chronischer Therapie (Cushing-Syndrom).
+**Steroidhormone** werden aus Cholesterin synthetisiert (alle Nebennierenrinden- und Sexualhormone). Als lipophile Moleküle passieren sie die Zellmembran frei, binden im Zytoplasma oder Zellkern an **intrazelluläre Rezeptoren** und der Hormon-Rezeptor-Komplex wirkt als Transkriptionsfaktor direkt an der DNA. Dieser Weg über Genexpression dauert Stunden, hält aber länger an. Steroidhormone werden im Blut an Transportproteine gebunden (z. B. CBG für Cortisol, SHBG für Sexualhormone) — nur die freie Fraktion ist biologisch aktiv.
 
-**Aldosteron** (Zona glomerulosa, Mineralokortikoid): reguliert Na⁺/K⁺-Haushalt in der Niere über ENaC (epithelialer Na⁺-Kanal) → Na⁺-Retention + K⁺-Exkretion → Volumen ↑, Blutdruck ↑. Eingebunden in das RAAS: Renin (Niere bei Druckabfall) → Angiotensin II → Aldosteron ↑. Klinisch: Conn-Syndrom (primärer Hyperaldosteronismus) → Hypertonie + Hypokaliämie.
+**Aminosäurederivate** sind eine heterogene Gruppe: T₃/T₄ (aus Tyrosin, lipophil, wirken wie Steroidhormone über intrazelluläre Rezeptoren) versus Katecholamine (Adrenalin, Noradrenalin — aus Tyrosin, aber hydrophil, wirken über Membranrezeptoren). Diese Zweiteilung ist ein klassischer MedAT-Stolperstein.
 
-**Adrenalin/Noradrenalin** (Nebennierenmark): Chromaffine Zellen sezernieren Adrenalin (80 %) und Noradrenalin (20 %) bei sympathischer Stimulation (Fight-or-Flight). Adrenalin: β₁ (Herzfrequenz ↑), β₂ (Bronchodilatation, Glykogenolyse), α₁ (Vasokonstriktion).
+> **Merke:** Peptidhormone = hydrophil → Membranrezeptoren → Second Messenger → schnell (Minuten). Steroidhormone = lipophil → intrazelluläre Rezeptoren → Genexpression → langsam (Stunden). T₃/T₄ sind Aminosäurederivate, wirken aber wie Steroidhormone (intrazellulär). Adrenalin ist ebenfalls ein Aminosäurederivat, wirkt aber über Membranrezeptoren.
 
-> **Merke:** **Schilddrüsenhormone:** T₃ (aktiv, 3 Jod) + T₄ (Prohormon, 4 Jod, peripher → T₃). TPO jodiert Tyrosin in Thyreoglobulin: MIT + DIT → T₃, 2×DIT → T₄. Wirkung: Grundumsatz ↑, Herzfrequenz ↑ (β-Rezeptor-Upregulation), Genexpression ↑. TSH stimuliert (TRH-abhängig). Hashimoto → T₃/T₄ ↓, TSH ↑.
+---
+
+## Hypothalamus-Hypophysen-Achse
+
+{{DIAGRAM:hpa-axis}}
+
+Der **Hypothalamus** ist die zentrale Schaltstelle zwischen Nervensystem und endokrinem System. Als Teil des Zwischenhirns empfängt er neuronale Signale (Stress, Temperatur, zirkadiane Rhythmik) und übersetzt sie in hormonelle Befehle.
+
+**Hypophysenvorderlappen (Adenohypophyse):** Der Hypothalamus sezerniert **Releasing-Hormone** (Liberine) und **Inhibiting-Hormone** (Statine) in das hypothalamisch-hypophysäre Pfortadersystem — ein spezielles venöses Gefäßsystem, das Hypothalamus und Hypophyse direkt verbindet:
+
+| Hypothalamus (Releasing-/Inhibiting-Hormon) | Hypophysenvorderlappen (Trophes Hormon) | Periphere Drüse / Zielorgan |
+|---|---|---|
+| **TRH** (Thyreotropin-Releasing-Hormon) | **TSH** (Thyreoidea-stimulierendes Hormon) | Schilddrüse → T₃/T₄ |
+| **CRH** (Corticotropin-Releasing-Hormon) | **ACTH** (Adrenocorticotropes Hormon) | Nebennierenrinde → Cortisol |
+| **GnRH** (Gonadotropin-Releasing-Hormon, pulsatil!) | **LH + FSH** | Gonaden → Testosteron/Östrogen |
+| **GHRH** / Somatostatin (hemmend) | **GH** (Growth Hormone, Somatotropin) | Leber → IGF-1 (Wachstum) |
+| Dopamin (hemmend!) | **Prolaktin** | Brustdrüse (Laktation) |
+
+**Hypophysenhinterlappen (Neurohypophyse):** Hier werden keine Hormone produziert, sondern im Hypothalamus gebildete Hormone **gespeichert und freigesetzt**: **ADH** (Vasopressin, Osmoregulation: AQP2-Einbau → Wasserrückresorption im Sammelrohr) und **Oxytocin** (Wehen, Milchejektion). Die Neurohypophyse ist also kein echtes endokrines Organ, sondern ein Speicher.
+
+> **Merke:** Vorderlappen (Adenohypophyse) = produziert 6 Hormone (TSH, ACTH, LH, FSH, GH, Prolaktin), gesteuert durch Releasing-/Inhibiting-Hormone über das Pfortadersystem. Hinterlappen (Neurohypophyse) = speichert und sezerniert ADH + Oxytocin (im Hypothalamus produziert). Prolaktin ist das einzige Vorderlappenhormon, das vorwiegend gehemmt wird (durch Dopamin).
+
+---
+
+## Schilddrüse: T₃/T₄-Biosynthese und Regulation
+
+Die Schilddrüse (Glandula thyroidea) liegt unterhalb des Kehlkopfs und besteht aus **Follikeln**: Hohlkugeln aus Thyreozyten (Epithelzellen), die **Kolloid** (Thyreoglobulin-haltiges Speichermaterial) umschließen. Zwischen den Follikeln liegen **C-Zellen** (parafollikuläre Zellen), die Calcitonin produzieren.
+
+**Biosynthese der Schilddrüsenhormone — Schritt für Schritt:**
+
+1. **Jodid-Aufnahme:** Der Natrium-Jodid-Symporter (**NIS**) an der basolateralen Membran der Thyreozyten transportiert Jodid (I⁻) aktiv gegen ein Konzentrationsgefälle aus dem Blut in die Zelle (sekundär aktiv, Na⁺-Gradient)
+2. **Transport ins Kolloid:** Pendrin transportiert Jodid an der apikalen Membran in das Follikellumen
+3. **Oxidation und Jodierung:** Die **Thyreoperoxidase (TPO)** an der apikalen Membran oxidiert Jodid zu elementarem Jod und jodiert Tyrosinreste im Thyreoglobulin (TG): → **MIT** (Monojodtyrosin, 1 Jod) und **DIT** (Dijodtyrosin, 2 Jod)
+4. **Kopplung:** TPO katalysiert auch die Kopplung: **MIT + DIT → T₃** (Trijodthyronin, 3 Jod-Atome) und **DIT + DIT → T₄** (Thyroxin, 4 Jod-Atome). T₄ wird in deutlich größerer Menge gebildet (~90 %)
+5. **Freisetzung:** TSH-Stimulus → Endozytose von Kolloid → lysosomale Proteolyse des Thyreoglobulins → T₃ und T₄ werden ins Blut freigesetzt
+6. **Periphere Konversion:** T₄ ist ein **Prohormon** — erst die Dejodierung durch Dejodase in peripheren Geweben (Leber, Niere) erzeugt das 3–5× potentere **T₃** (biologisch aktive Form)
+
+**Regulation:** TRH (Hypothalamus) → TSH (Hypophyse) → Schilddrüse → T₃/T₄ → negative Rückkopplung auf Hypothalamus und Hypophyse. Bei **Jodmangel**: T₃/T₄ ↓ → TSH ↑ (kompensatorisch) → Schilddrüsenhyperplasie → **Struma** (Kropf).
+
+**Wirkungen von T₃/T₄:** Grundumsatz ↑ (O₂-Verbrauch, Wärmeproduktion), Herzfrequenz ↑ (β-Rezeptor-Upregulation am Herzen), Wachstum und ZNS-Entwicklung (Kretinismus bei kongenitalem Mangel), Glukose- und Lipidstoffwechsel ↑.
+
+**Klinische Korrelation:**
+- **Morbus Basedow** (häufigste Ursache der Hyperthyreose): TSH-Rezeptor-Autoantikörper (TRAK) stimulieren die Schilddrüse unkontrolliert → T₃/T₄ ↑, TSH ↓ (supprimiert). Merseburger Trias: Tachykardie, Struma, Exophthalmus
+- **Hashimoto-Thyreoiditis** (häufigste Ursache der Hypothyreose): Autoimmune Zerstörung der Schilddrüse → T₃/T₄ ↓, TSH ↑ (kompensatorisch). Symptome: Müdigkeit, Kälteintoleranz, Gewichtszunahme, Bradykardie
+
+> **Merke:** T₃ (3 Jod, aktiv) und T₄ (4 Jod, Prohormon). Biosynthese: NIS → Jodid in Thyreozyten → TPO jodiert Tyrosin in TG → MIT + DIT → T₃, 2×DIT → T₄ → TSH-abhängige Freisetzung → periphere Dejodierung T₄→T₃. TPO ist das Schlüsselenzym (Angriffspunkt von TPO-Antikörpern bei Hashimoto). Thyreostatika (Thiamazol) hemmen TPO.
+
+---
+
+## Nebenniere: Rinde und Mark
+
+Die Nebenniere (Glandula suprarenalis) sitzt kappenförmig auf der Niere und gliedert sich funktionell in zwei Organe: **Rinde** (Kortex, ~80 %, mesodermalen Ursprungs) und **Mark** (Medulla, ~20 %, aus der Neuralleiste, also neuroektodermalen Ursprungs).
+
+**Nebennierenrinde — Zonengliederung (Merkspruch: „Salz, Zucker, Sex"):**
+
+| Zone | Hormon(e) | Klasse | Regulation | Klinische Störung |
+|---|---|---|---|---|
+| **Zona glomerulosa** (außen) | **Aldosteron** | Mineralokortikoid | RAAS (Angiotensin II), K⁺ | Conn-Syndrom (↑) |
+| **Zona fasciculata** (Mitte, größte Zone) | **Cortisol** | Glukokortikoid | CRH → ACTH | Cushing-Syndrom (↑), Addison (↓) |
+| **Zona reticularis** (innen) | **DHEA**, Androstendion | Androgene | ACTH | Adrenogenitales Syndrom (AGS) |
+
+**Cortisol** (Zona fasciculata): das zentrale Stresshormon, reguliert über die CRH-ACTH-Achse mit deutlichem **zirkadianem Rhythmus** (Maximum morgens ~6–8 Uhr, Minimum um Mitternacht). Wirkt über intrazelluläre Glukokortikoid-Rezeptoren (GR) → Genexpression. Metabolisch: steigert Glukoneogenese in der Leber (Blutzucker ↑, diabetogene Wirkung), fördert Proteinkatabolismus in Muskel und Lipolyse im Fettgewebe. Immunsuppressiv: hemmt Phospholipase A₂ → Arachidonsäure ↓ → Prostaglandine und Leukotriene ↓ → Entzündungshemmung. Langfristig hemmt Cortisol Osteoblasten → Knochenaufbau ↓ → Osteoporoserisiko (Cushing). Klinisch: Cushing-Syndrom = Cortisol ↑ (exogen durch Therapie oder endogen durch ACTH-Adenom) → Stammfettsucht, Vollmondgesicht, Striae rubrae, Hyperglykämie, Osteoporose. Morbus Addison = NNR-Insuffizienz → Cortisol ↓, ACTH ↑ → Hyperpigmentierung (ACTH-Fragment = MSH-Wirkung).
+
+**Aldosteron** (Zona glomerulosa): reguliert Na⁺/K⁺-Haushalt über ENaC (epithelialer Na⁺-Kanal) im distalen Tubulus und Sammelrohr → Na⁺-Retention + K⁺-Exkretion → Volumen ↑, Blutdruck ↑. Regulation über RAAS: Renin (juxtaglomeruläre Zellen bei Druckabfall) → Angiotensinogen → Angiotensin I → ACE → Angiotensin II → Aldosteron ↑. Klinisch: Conn-Syndrom (primärer Hyperaldosteronismus) → therapieresistente Hypertonie + Hypokaliämie + metabolische Alkalose.
+
+**Nebennierenmark:** Chromaffine Zellen (modifizierte sympathische Neurone) sezernieren **Adrenalin** (~80 %) und **Noradrenalin** (~20 %) bei sympathischer Aktivierung (Acetylcholin → nikotinerge Rezeptoren). Adrenalin entsteht aus Noradrenalin durch PNMT (Phenylethanolamin-N-Methyltransferase, Cortisol-abhängig — daher liegt das Mark innen, umspült von cortisolreichem venösem Blut der Rinde). Rezeptorwirkungen: α₁ (Vasokonstriktion), β₁ (Herzfrequenz ↑, Kontraktilität ↑), β₂ (Bronchodilatation, Glykogenolyse in Leber, Vasodilatation Skelettmuskulatur). Klinisch: Phäochromozytom = Katecholamin-produzierender Tumor → episodische Hypertonie, Tachykardie, Kopfschmerzen, Schwitzen.
+
+> **Merke:** NNR-Zonen von außen nach innen: glomerulosa (Aldosteron/Salz) → fasciculata (Cortisol/Zucker) → reticularis (DHEA/Sex). Cortisol = Glukoneogenese ↑, Immunsuppression, Osteoblasten ↓. Aldosteron = Na⁺ rein, K⁺ raus (RAAS-gesteuert). Nebennierenmark = Katecholamine (Fight-or-Flight), Adrenalin braucht PNMT (cortisolabhängig).
 
 ---
 
 ## Pankreas und Blutzuckerregulation
 
+{{DIAGRAM:menstrual-cycle}}
 
-> **Merke:** **Insulin vs. Glukagon:** Insulin (β-Zellen, nach Mahlzeit): GLUT4-Translokation ↑ (Muskel/Fett), Glykogensynthese ↑ (Leber), Lipolyse ↓, Proteinaufbau ↑ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Typ-1-DM: β-Zell-Zerstörung. Typ-2-DM: Insulinresistenz + relativer Mangel.
+Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) enthalten die endokrinen Zellen des Pankreas. Die exokrine Funktion (Verdauungsenzyme) wird hier nicht behandelt.
+
+**Zelltypen der Langerhans-Inseln:**
+- **β-Zellen** (~65–80 %): produzieren **Insulin** (blutzuckersenkend)
+- **α-Zellen** (~15–20 %): produzieren **Glukagon** (blutzuckersteigernd)
+- **δ-Zellen** (~5 %): produzieren **Somatostatin** (hemmt Insulin und Glukagon)
+- **PP-Zellen**: pankreatisches Polypeptid (Verdauungsregulation)
+
+**Insulin-Sekretionsmechanismus (β-Zelle):** Glukose → GLUT2-Transporter (insulinunabhängig) → Glykolyse → ATP ↑ → ATP-sensitive K⁺-Kanäle (K_ATP) schließen → Membrandepolarisation → spannungsabhängige Ca²⁺-Kanäle öffnen → Ca²⁺-Einstrom → Exozytose der Insulin-Vesikel. Dieser Mechanismus erklärt, warum **Sulfonylharnstoffe** (z. B. Glibenclamid) bei Typ-2-DM wirken: Sie blockieren K_ATP-Kanäle direkt → Insulin-Freisetzung ↑ (unabhängig von Glukose).
+
+**Insulinwirkung (anabol, blutzuckersenkend):**
+- **Muskel + Fettgewebe:** GLUT4-Translokation zur Zellmembran → Glukoseaufnahme ↑ (GLUT4 ist insulinabhängig — im Gegensatz zu GLUT2 in Leber und β-Zellen)
+- **Leber:** Glykogensynthase ↑ → Glykogensynthese ↑, Glukoneogenese ↓
+- **Fettgewebe:** Lipogenese ↑, Lipolyse ↓
+- **Muskel:** Proteinsynthese ↑, Aminosäureaufnahme ↑
+
+**Glukagonwirkung (katabol, blutzuckersteigernd):**
+- **Leber (Hauptzielorgan):** Glykogenolyse ↑ (Glykogenphosphorylase ↑), Glukoneogenese ↑ (PEPCK ↑)
+- Glukagon wirkt über Gs-Protein → cAMP ↑ → Proteinkinase A
+- **Nicht** an Muskel/Fettgewebe (dort kein Glukagonrezeptor in relevantem Ausmaß)
+
+**Diabetes mellitus:**
+- **Typ 1:** Autoimmune β-Zell-Zerstörung (Autoantikörper: GAD, IA-2, IAA) → absoluter Insulinmangel → Ketoacidose-Gefahr (Lipolyse ↑↑ → Ketonkörper ↑↑). Therapie: lebenslange Insulinsubstitution
+- **Typ 2:** Insulinresistenz (v. a. Muskel, Fettgewebe, Leber) + relative β-Zell-Erschöpfung → Hyperglykämie. Assoziation mit Adipositas, metabolischem Syndrom. Therapie: Lebensstil, Metformin, ggf. Sulfonylharnstoffe oder Insulin
+
+> **Merke:** Insulin (β-Zellen, postprandial): GLUT4 ↑ (Muskel/Fett), Glykogensynthese ↑, Lipolyse ↓ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Insulinsekretion ist ATP- und Ca²⁺-abhängig (K_ATP-Kanal-Mechanismus). Typ 1 = absoluter Mangel (autoimmun), Typ 2 = relativer Mangel + Resistenz.
+
+---
+
+## Kalziumregulation: PTH, Calcitonin und Vitamin D
+
+Der Serum-Kalziumspiegel (~2,2–2,6 mmol/L) wird durch drei Hormone eng reguliert — Abweichungen führen zu Tetanie (↓) oder Herzrhythmusstörungen (↑):
+
+**Parathormon (PTH)** — Nebenschilddrüsen (4 Epithelkörperchen, Glandulae parathyroideae): Wird bei **Ca²⁺ ↓** freigesetzt (Ca²⁺-sensing Receptor, CaSR). Wirkt auf drei Zielorgane:
+- **Knochen:** Stimuliert Osteoklasten (indirekt über RANKL-Signalweg) → Ca²⁺-Freisetzung ↑
+- **Niere:** Ca²⁺-Rückresorption ↑ im distalen Tubulus, PO₄³⁻-Ausscheidung ↑, Aktivierung der 1α-Hydroxylase → Vitamin-D-Aktivierung ↑
+- **Darm (indirekt):** Über Calcitriol → Ca²⁺-Resorption ↑
+- Nettoeffekt: **Serum-Ca²⁺ ↑**
+
+**Calcitonin** — C-Zellen (parafollikuläre Zellen der Schilddrüse): Wird bei **Ca²⁺ ↑** freigesetzt. Hemmt Osteoklasten → Knochenresorption ↓ → Ca²⁺ ↓. Klinisch weniger bedeutsam als PTH, aber: erhöhtes Calcitonin = Tumormarker für medulläres Schilddrüsenkarzinom (C-Zell-Karzinom).
+
+**Vitamin D (Calcitriol, 1,25-(OH)₂-Vitamin D₃):** Eigentlich ein Steroidhormon. Aktivierung in 3 Schritten: UV-B in Haut (7-Dehydrocholesterol → Cholecalciferol) → 25-Hydroxylierung in Leber → **1α-Hydroxylierung in Niere** (PTH-stimuliert!) → aktives Calcitriol. Steigert Ca²⁺- und Phosphat-Resorption im Darm (Calbindin-Expression ↑).
+
+> **Merke:** PTH = Ca²⁺ ↑ (Knochenabbau, renale Rückresorption, Vitamin-D-Aktivierung). Calcitonin = Ca²⁺ ↓ (Osteoklasten ↓). Vitamin D = Ca²⁺ + PO₄³⁻ ↑ (Darmresorption). Hypoparathyreoidismus → Ca²⁺ ↓ → Tetanie (Chvostek-Zeichen, Pfötchenstellung). PTH und Vitamin D arbeiten synergistisch am Ca²⁺-Spiegel.
 
 ---
 
 ## Regelkreise und negative Rückkopplung
 
+Das Grundprinzip des endokrinen Systems ist die **negative Rückkopplung** (negatives Feedback): Das Endprodukt einer Hormonachse hemmt die übergeordneten Zentren und drosselt so die eigene Produktion — ein Thermostat-Prinzip.
 
-> **Merke:** **Hypothalamus-Hypophyse-Regelkreis:** Hypothalamus (TRH, CRH, GnRH, GHRH) → Hypophyse (TSH, ACTH, LH/FSH, GH) → periphere Drüse (T₃/T₄, Cortisol, Östrogen/Testosteron) → **negative Rückkopplung** hemmt Hypothalamus + Hypophyse. Primäre Insuffizienz: periphere Drüse ↓ → trophe Hormone ↑.`,
+**Konkretes Beispiel — Schilddrüsenachse:**
+1. Hypothalamus sezerniert **TRH** → stimuliert Hypophysenvorderlappen
+2. Hypophyse sezerniert **TSH** → stimuliert Schilddrüse
+3. Schilddrüse produziert **T₃/T₄** → Wirkung an Zielorganen
+4. T₃/T₄ hemmen **TRH-Freisetzung** (Hypothalamus) und **TSH-Freisetzung** (Hypophyse) → Kreislauf geschlossen
+
+**Diagnostische Konsequenz bei Störungen:**
+
+| Störungsebene | Periphere Hormone | Trophes Hormon | Beispiel |
+|---|---|---|---|
+| **Primär** (periphere Drüse defekt) | ↓ | ↑ (kompensatorisch) | Hashimoto: T₃/T₄ ↓, TSH ↑ |
+| **Sekundär** (Hypophyse defekt) | ↓ | ↓ | Hypophysenadenom: T₃/T₄ ↓, TSH ↓ |
+| **Tertiär** (Hypothalamus defekt) | ↓ | ↓ | TRH-Mangel: TSH ↓, T₃/T₄ ↓ |
+
+Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH-LH/FSH-Sexualhormone, GHRH-GH-IGF-1. Die Unterscheidung primär/sekundär/tertiär durch Laborkonstellation ist ein Kernthema im MedAT.
+
+**Positive Rückkopplung** (Ausnahme): Beim LH-Peak vor der Ovulation — hohe Östrogenspiegel in der späten Follikelphase stimulieren (statt hemmen) die LH-Freisetzung → LH-Surge → Eisprung. Danach kehrt das System zur negativen Rückkopplung zurück.
+
+> **Merke:** Negative Rückkopplung = Endprodukt hemmt Hypothalamus + Hypophyse (Thermostat-Prinzip). Primäre Insuffizienz: periphere Drüse ↓ → trophes Hormon ↑ (z. B. Hashimoto: T₃/T₄ ↓, TSH ↑). Sekundäre Insuffizienz: Hypophyse ↓ → trophes Hormon ↓ → peripheres Hormon ↓. Positive Rückkopplung: LH-Surge vor Ovulation (Ausnahme).`,
       lernziele: [
         "Steroid- und Peptidhormone nach Löslichkeit, Rezeptorlokalisation und Wirkgeschwindigkeit unterscheiden und den Second-Messenger-Weg (cAMP) vs. Genexpressionsweg beschreiben.",
         "Die Hypothalamus-Hypophyse-Achse mit ihren Releasing-Hormonen (TRH, CRH, GnRH), trophen Hormonen (TSH, ACTH, LH/FSH) und peripheren Drüsenhormonen darstellen und das Prinzip der negativen Rückkopplung erklären.",
@@ -1441,40 +1667,234 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Diastole",
         "Systole",
       ],
-      content: `{{DIAGRAM:blutkreislauf}}
+      content: `## Das Herz — Aufbau, Erregung und Kreislauf
 
-## Herzaufbau und Klappen
-
-**Um Herz und Kreislauf zu verstehen,** beginnen wir mit **Aufbau und Klappen**. Das Herz hat 4 Kammern (RA, RV, LA, LV) und 3 Wandschichten: Endokard (Endothel, innen), Myokard (Herzmuskel, Kontraktion), Epikard (Gleitfläche). Der linke Ventrikel hat die dickste Wand (~10–15 mm vs. ~3–5 mm rechts), da er gegen den hohen Systemwiderstand pumpt. AV-Klappen (Trikuspidal: 3 Segel, Mitral: 2 Segel) haben Sehnenfäden an Papillarmuskeln; Taschenklappen (Pulmonal, Aorta: je 3 Taschen) öffnen passiv. **Systole** (Kontraktionsphase: Ventrikel pumpen Blut aus) und **Diastole** (Relaxationsphase: Ventrikel füllen sich mit Blut). Die Auswurffraktion beträgt in Ruhe ~55–70 % des enddiastolischen Volumens.
-
-> **Merke:** **Herzklappen:** AV-Klappen haben Sehnenfäden (Trikuspidal 3, Mitral 2), Taschenklappen haben Taschen (Pulmonal, Aorta je 3) – beide stoppen Rückfluss! (AV = Atrioventrikulär, Sehnenfäden verhindern Prolaps; Taschenklappen öffnen/schließen passiv)
-
-{{IMAGE}}
+Ein 70-jähriger Patient kollabiert beim Einkaufen. Das EKG zeigt eine ST-Hebung in den Ableitungen II, III und aVF — ein akuter Hinterwandinfarkt. Innerhalb von 60 Minuten muss die verschlossene rechte Koronararterie mittels PCI (perkutane Koronarintervention) eröffnet werden, sonst stirbt Herzmuskelgewebe unwiederbringlich ab. Um solche Notfälle zu verstehen, brauchen wir ein solides Fundament: den Aufbau des Herzens, seine elektrische Erregung und die Kreislaufphysiologie.
 
 ---
 
-## Erregungsleitung
+## Herzaufbau: 4 Kammern, 3 Wandschichten, 1 Beutel
 
+Das Herz ist ein muskuläres Hohlorgan (~300 g, faustgroß) im Mediastinum (Mittelfellraum), leicht nach links verlagert. Es besteht aus:
 
-> **Merke:** **Erregungsleitung:** SA-Knoten startet (60–80), AV-Knoten verzögert, His-Bündel leitet, Tawara teilt, Purkinje sprintet von Spitze nach oben! (SA → AV [Verzögerung] → His → Tawara [re/li] → Purkinje [Spitze → Basis])
+- **Rechter Vorhof (RA)**: Empfängt O₂-armes Blut über obere und untere Hohlvene (V. cava superior/inferior)
+- **Rechter Ventrikel (RV)**: Pumpt O₂-armes Blut in den Truncus pulmonalis → Lunge
+- **Linker Vorhof (LA)**: Empfängt O₂-reiches Blut über 4 Lungenvenen (Vv. pulmonales)
+- **Linker Ventrikel (LV)**: Pumpt O₂-reiches Blut in die Aorta → Körperkreislauf
+
+**Wandschichten** (von innen nach außen):
+1. **Endokard** — Endothel + subendotheliales Bindegewebe (glatte Innenfläche → Thromboseprophylaxe)
+2. **Myokard** — Herzmuskulatur (quergestreifte Muskelzellen mit Gap Junctions = funktionelles Synzytium)
+3. **Epikard** — viszerales Blatt des Perikards (seröse Gleitfläche)
+
+Der **Herzbeutel (Perikard)** umgibt das Herz: Epikard (innen) + parietales Blatt (außen) mit der Perikardhöhle dazwischen (~20–50 mL seröse Flüssigkeit → reibungsarme Herzaktion). Bei einer **Herzbeuteltamponade** füllt sich die Perikardhöhle mit Blut/Flüssigkeit → Kompression → Herzstillstand.
+
+**Wanddicke und Druckverhältnisse:**
+Der LV hat eine ~3× dickere Wand (~10–15 mm) als der RV (~3–5 mm), weil er gegen den hohen Systemwiderstand pumpt (~120 mmHg systolisch vs. ~25 mmHg im Lungenkreislauf).
+
+**Koronargefäße** versorgen den Herzmuskel selbst:
+- **Linke Koronararterie (LCA)** → R. interventricularis anterior (RIVA/LAD, Vorderwand) + R. circumflexus (RCX, Seitenwand)
+- **Rechte Koronararterie (RCA)** → Hinterwand + SA-Knoten (bei ~60% der Menschen)
+
+> **Merke:** Wandschichten von innen nach außen: **E**ndokard – **M**yokard – **E**pikard (Eselsbrücke: **EME**). LV-Wand 3× dicker als RV, weil Systemdruck ~5× höher als Pulmonaldruck.
 
 {{DIAGRAM:heart-anatomy}}
 
 ---
 
-## Kreislauf und Blutgefäße
+## Herzklappen: Ventile gegen Rückfluss
 
+Vier Klappen sorgen für gerichteten Blutfluss. Sie öffnen und schließen rein passiv durch Druckgradienten:
 
-> **Merke:** **Kreisläufe:** Rechts = Lunge (klein, niedrig), Links = Körper (groß, hoch) – Lungenarterie hat O₂-armes Blut, Lungenvene hat O₂-reiches Blut! (Kleiner Kreislauf: RV → Lungenarterie → Lunge → Lungenvene → LA; Großer Kreislauf: LV → Aorta → Körper → Venen → RA)
+| Klappe | Typ | Lage | Besonderheit |
+|---|---|---|---|
+| **Trikuspidalklappe** | AV-Klappe | RA → RV | 3 Segel, Sehnenfäden + Papillarmuskeln |
+| **Mitralklappe** (Bikuspidal) | AV-Klappe | LA → LV | 2 Segel, Sehnenfäden + Papillarmuskeln |
+| **Pulmonalklappe** | Taschenklappe | RV → Truncus pulmonalis | 3 Taschen, **keine** Sehnenfäden |
+| **Aortenklappe** | Taschenklappe | LV → Aorta | 3 Taschen, **keine** Sehnenfäden |
+
+**AV-Klappen** (Atrioventrikulärklappen) besitzen **Sehnenfäden (Chordae tendineae)**, die an **Papillarmuskeln** befestigt sind. Diese verhindern bei Ventrikelsystole, dass die Segel in den Vorhof zurückschlagen (Prolaps). **Taschenklappen** haben keine Sehnenfäden — sie schließen passiv, wenn der Druck in Aorta/Pulmonalarterie den Ventrikeldruck übersteigt.
+
+**Herztöne:** Der 1. Herzton (systolisch) entsteht durch Schluss der AV-Klappen, der 2. Herzton (diastolisch) durch Schluss der Taschenklappen. Pathologische Geräusche (Herzgeräusche) deuten auf **Klappenstenosen** (verengt) oder **Klappeninsuffizienzen** (undicht) hin.
+
+> **Merke:** AV-Klappen = Sehnenfäden (verhindern Prolaps): Trikuspidal **3** Segel, Mitral **2** Segel. Taschenklappen = **keine** Sehnenfäden, passiv: Pulmonal + Aorta je **3** Taschen.
 
 ---
 
+## Herzzyklus: Systole und Diastole
+
+Nachdem wir den Aufbau kennen, betrachten wir die mechanische Herzaktion. Ein Herzzyklus (~0,8 s bei 75/min) gliedert sich in:
+
+**Systole** (Kontraktionsphase, ~0,3 s):
+1. **Anspannungsphase** (isovolumetrisch): Alle Klappen geschlossen, Ventrikeldruck steigt steil an
+2. **Austreibungsphase**: Ventrikeldruck übersteigt Aorten-/Pulmonaldruck → Taschenklappen öffnen → Blutauswurf
+
+**Diastole** (Entspannungsphase, ~0,5 s):
+1. **Entspannungsphase** (isovolumetrisch): Taschenklappen schließen (2. Herzton), alle Klappen zu, Ventrikeldruck fällt
+2. **Füllungsphase**: Ventrikeldruck < Vorhofdruck → AV-Klappen öffnen → passive Füllung (~80%) + aktive Vorhofkontraktion (~20%, „Vorhof-Kick")
+
+**Volumina:**
+- Enddiastolisches Volumen (EDV): ~120–130 mL
+- Endsystolisches Volumen (ESV): ~50–60 mL
+- **Schlagvolumen (SV)** = EDV − ESV ≈ **70 mL**
+- **Ejektionsfraktion (EF)** = SV/EDV ≈ **55–70%** (unter 40% = systolische Herzinsuffizienz)
+
+> **Merke:** Systole = Anspannung + Austreibung. Diastole = Entspannung + Füllung. EF = SV/EDV ≈ 55–70%. Diastole dauert länger als Systole — deshalb wird der Herzmuskel hauptsächlich in der Diastole durchblutet (Koronarperfusion!).
+
+---
+
+## Erregungsleitungssystem: Vom Impuls zur Kontraktion
+
+Das Herz schlägt **autonom** — auch ohne Nervenversorgung, weil spezialisierte Schrittmacherzellen spontan depolarisieren. Die Erregung breitet sich in festgelegter Reihenfolge aus:
+
+1. **SA-Knoten** (Sinusknoten) — rechter Vorhof, nahe V. cava superior
+   - **Primärer Schrittmacher**, Eigenfrequenz **60–80/min**
+   - Spontane diastolische Depolarisation durch If-Kanäle (HCN-Kanäle, „funny current")
+
+2. **Vorhofmuskulatur** — Erregungsausbreitung über Gap Junctions → Vorhofkontraktion (P-Welle im EKG)
+
+3. **AV-Knoten** (Atrioventrikulärknoten) — am Boden des RA, nahe Koronarsinus
+   - **Einzige elektrische Verbindung** zwischen Vorhöfen und Kammern (Herzskelett isoliert sonst!)
+   - **Verzögerung ~100–120 ms** → Vorhöfe haben Zeit, sich vollständig zu entleeren, bevor Kammern kontrahieren
+   - Sekundärer Schrittmacher, Eigenfrequenz **40–60/min** (Backup bei SA-Ausfall)
+
+4. **His-Bündel** → **Tawara-Schenkel** (rechter + linker Schenkel entlang Kammerseptum)
+
+5. **Purkinje-Fasern** — schnellste Leitung (~4 m/s), verteilen die Erregung von der **Herzspitze → Basis**
+   - Tertiärer Schrittmacher, Eigenfrequenz **20–40/min**
+   - Dadurch kontrahieren die Kammern von unten nach oben → effiziente Blutaustreibung Richtung Aorta/Truncus pulmonalis
+
+**Klinisch — Herzrhythmusstörungen:**
+- **AV-Block I°**: PQ-Zeit verlängert (>200 ms), jede Erregung wird übergeleitet
+- **AV-Block III°** (komplett): Vorhöfe und Kammern schlagen unabhängig → Bradykardie → Schrittmacher-Indikation
+- **Vorhofflimmern**: Unkoordinierte Vorhoferregung, unregelmäßiger QRS → Thromboembolie-Risiko → Antikoagulation
+
+> **Merke:** SA-Knoten (60–80/min) → AV-Knoten (Verzögerung, 40–60/min) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern (20–40/min, Spitze → Basis). Frequenz-Hierarchie: Der schnellste Schrittmacher dominiert!
+
 {{DIAGRAM:cardiac-conduction}}
+
+---
+
+## EKG-Grundlagen: P-QRS-T
+
+Das Elektrokardiogramm zeichnet die elektrische Aktivität des Herzens an der Körperoberfläche auf:
+
+| Abschnitt | Entspricht | Normwert |
+|---|---|---|
+| **P-Welle** | Vorhofdepolarisation (SA → Vorhöfe) | <0,1 s, <0,25 mV |
+| **PQ-Strecke** | AV-Überleitung (Verzögerung) | 0,12–0,20 s |
+| **QRS-Komplex** | Ventrikeldepolarisation | <0,12 s |
+| **ST-Strecke** | Plateau-Phase (alle Ventrikelmyozyten depolarisiert) | Isoelektrisch |
+| **T-Welle** | Ventrikelrepolarisation | Konkordant zu QRS |
+
+**ST-Hebung** → akuter Myokardinfarkt (STEMI): Transmuraler Schaden durch Koronarverschluss.
+**QRS >0,12 s** → Schenkelblock (Rechts- oder Linksschenkelblock).
+**Kammerflimmern** → chaotische Ventrikelerregung, kein Auswurf → Kreislaufstillstand → sofortige **Defibrillation**.
+
+> **Merke:** PQ-Zeit = AV-Überleitung (normal <0,2 s; verlängert = AV-Block). QRS = Ventrikeldepolarisation (<0,12 s). ST-Hebung = Infarkt-Alarmzeichen!
+
+---
+
+## Großer und kleiner Kreislauf
+
+Die beiden Kreisläufe sind **in Serie geschaltet** — das Blut muss zwingend durch beide:
+
+**Kleiner Kreislauf (Lungenkreislauf):**
+RV → Truncus pulmonalis → **Lungenarterien** (O₂-arm!) → Lungenkapillaren (Gasaustausch an Alveolen: CO₂ ab, O₂ auf) → **Lungenvenen** (O₂-reich!) → LA
+
+**Großer Kreislauf (Körperkreislauf):**
+LV → Aorta → Arterien → Arteriolen → Kapillaren (Stoffaustausch) → Venolen → Venen → V. cava superior/inferior → RA
+
+**Achtung — häufige Prüfungsfalle:** „Arterie" bedeutet **vom Herzen weg**, „Vene" bedeutet **zum Herzen hin** — unabhängig vom O₂-Gehalt! Lungenarterien führen O₂-armes, Lungenvenen O₂-reiches Blut.
+
+**Gefäßtypen und ihre Funktionen:**
+
+| Gefäß | Funktion | Merkmal |
+|---|---|---|
+| **Aorta/große Arterien** | Windkesselfunktion | Elastische Wand → pulsatil → kontinuierlich |
+| **Arteriolen** | Widerstandsgefäße | Glatte Muskulatur, TPR-Regulation (α₁ = Konstriktion) |
+| **Kapillaren** | Stoffaustausch | Einschichtiges Endothel, ~600 m² Oberfläche |
+| **Venen** | Kapazitätsgefäße | ~70% des Blutvolumens, Klappen in Beinvenen |
+
+Die **Windkesselfunktion** der Aorta ist zentral: In der Systole dehnt sich die elastische Aortenwand → speichert kinetische Energie. In der Diastole zieht sie sich zurück → drückt Blut kontinuierlich in die Peripherie. Ergebnis: Der pulsatile Herzauswurf wird in einen gleichmäßigeren peripheren Fluss umgewandelt.
+
+> **Merke:** Kleiner Kreislauf = RV → Lunge → LA (Gasaustausch, niedriger Druck ~25 mmHg). Großer Kreislauf = LV → Körper → RA (Stoffaustausch, hoher Druck ~120 mmHg). In Serie, nicht parallel!
+
+{{DIAGRAM:blutkreislauf}}
+
+---
+
+## Herzzeitvolumen und Regulation
+
+Das **Herzzeitvolumen (HZV, Cardiac Output)** beschreibt, wie viel Blut das Herz pro Minute pumpt:
+
+**HZV = Schlagvolumen (SV) × Herzfrequenz (HF)**
+- Ruhe: ~70 mL × 75/min = **~5 L/min**
+- Belastung: bis **25 L/min** (SV ↑ + HF ↑)
+
+**Regulation des Schlagvolumens:**
+
+1. **Frank-Starling-Mechanismus** (intrinsisch, Preload-abhängig):
+   - Vermehrter venöser Rückstrom → stärkere Ventrikelvordehnung (Preload ↑) → Sarkomere in optimaler Überlappung → Kontraktionskraft ↑ → SV ↑
+   - Klinisch: Beide Ventrikel gleichen ihre Auswurfleistung automatisch an — sonst würde sich Blut in einem Kreislauf stauen
+
+2. **Sympathikus** (extrinsisch): Noradrenalin an β₁-Rezeptoren → **positiv inotrop** (Kontraktionskraft ↑), **positiv chronotrop** (HF ↑), **positiv dromotrop** (Überleitungsgeschwindigkeit ↑)
+
+3. **Parasympathikus** (N. vagus): Acetylcholin an M₂-Rezeptoren am SA-/AV-Knoten → **negativ chronotrop** (HF ↓), **negativ dromotrop** (AV-Überleitung ↓). **Kein relevanter Einfluss auf Kontraktionskraft der Ventrikel** (kaum parasympathische Innervation am Ventrikelmyokard).
+
+**Afterload** (Nachlast): Widerstand, gegen den der Ventrikel pumpen muss. Bei Hypertonie → Afterload ↑ → LV muss mehr arbeiten → konzentrische Hypertrophie → langfristig Herzinsuffizienz.
+
+> **Merke:** HZV = SV × HF (~5 L/min in Ruhe). Frank-Starling: Mehr Füllung → mehr Auswurf (intrinsisch). Sympathikus = β₁ = alles positiv (inotrop, chronotrop, dromotrop). Vagus = M₂ = HF ↓ (chronotrop negativ).
+
+---
 
 ## Blutdruckregulation
 
+Der **mittlere arterielle Blutdruck (MAP)** ergibt sich aus:
 
-> **Merke:** **Blutdruckregulation:** Barorezeptoren messen Druck (kurzfristig), RAAS rettet Salz und Wasser (langfristig) – Angiotensin II macht eng und Aldosteron speichert! (Barorezeptor-Reflex: Blutdruck ↑ → Parasympathikus ↑ → HF ↓; RAAS: Renin → Angiotensin II → Vasokonstriktion + Aldosteron ↑ → Na⁺/H₂O ↑)`,
+**MAP = HZV × TPR** (totaler peripherer Widerstand)
+
+Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140/90 mmHg.
+
+**Kurzfristige Regulation (Sekunden–Minuten):**
+- **Barorezeptor-Reflex**: Drucksensoren in Aortenbogen und Karotissinus messen Wanddehnung
+  - RR ↑ → Barorezeptoren ↑ → Medulla oblongata → Parasympathikus ↑ (Vagus → HF ↓) + Sympathikus ↓ (Vasodilatation, HZV ↓) → RR ↓
+  - RR ↓ → umgekehrt: Sympathikus ↑ → Vasokonstriktion + HF ↑ + Kontraktilität ↑ → RR ↑
+- Anpassung bei Lagewechsel (Orthostase): Aufstehen → venöses Pooling in Beinen → Preload ↓ → HZV ↓ → Baroreflex kompensiert innerhalb von Sekunden
+
+**Langfristige Regulation (Stunden–Tage):**
+- **RAAS** (Renin-Angiotensin-Aldosteron-System):
+  1. Niere erkennt Minderperfusion → **Renin** wird freigesetzt (juxtaglomeruläre Zellen)
+  2. Renin spaltet Angiotensinogen (Leber) → **Angiotensin I**
+  3. ACE (Angiotensin Converting Enzyme, v.a. Lunge) → **Angiotensin II**
+  4. Angiotensin II: **Vasokonstriktion** (TPR ↑) + **Aldosteron-Freisetzung** (NNR) → Na⁺/H₂O-Retention → Volumen ↑ → RR ↑
+  5. + ADH-Freisetzung (Hypothalamus/Neurohypophyse) → Wasserretention
+- **ANP** (atriales natriuretisches Peptid): Bei Vorhofdehnung → Na⁺-Ausscheidung ↑ → Volumen ↓ → RR ↓ (Gegenspieler des RAAS)
+- **ACE-Hemmer** (z. B. Ramipril) blockieren die Umwandlung Ang I → Ang II → Standardtherapie bei Hypertonie und Herzinsuffizienz
+
+> **Merke:** Kurzfristig: Baroreflex (Sekunden). Langfristig: RAAS (Renin → Angiotensin II → Vasokonstriktion + Aldosteron → Na⁺/H₂O ↑). ANP = Gegenspieler. MAP = HZV × TPR.
+
+---
+
+## Prüfungsrelevante Zahlen
+
+| Parameter | Wert |
+|---|---|
+| Herzgewicht | ~300 g |
+| LV-Wanddicke | ~10–15 mm |
+| RV-Wanddicke | ~3–5 mm |
+| Schlagvolumen | ~70 mL |
+| Ejektionsfraktion | 55–70% |
+| HZV (Ruhe) | ~5 L/min |
+| HZV (Belastung) | bis ~25 L/min |
+| Systolischer RR | ~120 mmHg |
+| Diastolischer RR | ~80 mmHg |
+| Pulmonalarteriendruck | ~25/10 mmHg |
+| SA-Knoten Frequenz | 60–80/min |
+| AV-Knoten Frequenz | 40–60/min |
+| AV-Verzögerung | ~100–120 ms |
+| PQ-Zeit (EKG) | 0,12–0,20 s |
+| QRS-Dauer (EKG) | <0,12 s |`,
       lernziele: [
         "Den Aufbau des Herzens (4 Kammern, 3 Wandschichten Endokard/Myokard/Epikard, Perikard) und den Unterschied zwischen linkem und rechtem Ventrikel in Wanddicke und Arbeitsdruck beschreiben.",
         "Die vier Herzklappen (AV-Klappen mit Sehnenfäden vs. Taschenklappen ohne Sehnenfäden) nach Lage, Typ und Funktion unterscheiden.",
@@ -1599,46 +2019,171 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Hämoglobin",
         "Blutplasma",
       ],
-      content: `{{DIAGRAM:blutbestandteile}}
+      content: `Ein 22-jähriger Medizinstudent spendet zum ersten Mal Blut. Beim Ausfüllen des Fragebogens erfährt er, dass seine Blutgruppe A Rh-positiv ist — doch was genau bedeutet das? Warum darf er sein Blut nicht an jeden Empfänger geben? Und warum gerinnt das Blut im Beutel nicht, wohl aber in einer Schnittwunde innerhalb von Minuten? Blut ist weit mehr als eine rote Flüssigkeit: Es ist ein flüssiges Organ mit exakt aufeinander abgestimmten Transport-, Abwehr- und Reparaturfunktionen.
+
+---
+
+## Blutbestandteile — Plasma und zelluläre Elemente
+
+Ein Erwachsener besitzt etwa **4–6 Liter Blut** (ca. 7–8 % des Körpergewichts). Nach Zentrifugation trennt sich das Blut in zwei Phasen:
+
+**Blutplasma (~55 %)** ist die zellfreie, gelbliche Flüssigkeit. Es besteht zu ~90 % aus Wasser und enthält gelöste Proteine, Elektrolyte, Glukose, Hormone und Stoffwechselprodukte. Die wichtigsten **Plasmaproteine** sind:
+- **Albumin (~60 %)**: Aufrechterhaltung des kolloidosmotischen (onkotischen) Drucks (hält Wasser im Gefäß), Transport von Bilirubin, Fettsäuren, Medikamenten
+- **Globuline (~35 %)**: α/β-Globuline (Transportproteine wie Transferrin, Ceruloplasmin) + γ-Globuline (Immunglobuline = Antikörper)
+- **Fibrinogen (~4 %)**: Gerinnungsfaktor I, Vorstufe des Fibrins
+
+**Zelluläre Bestandteile (~45 %)** bilden den **Hämatokrit** — den Volumenanteil der Erythrozyten am Gesamtblut. Normalwerte: **Männer ~45 %, Frauen ~42 %** (Männer höher wegen Testosteron → Erythropoese ↑). Hämatokrit ↓ = Anämie, Hämatokrit ↑ = Polyglobulie oder Dehydratation.
+
+**Plasma vs. Serum:** Plasma enthält Fibrinogen (Blut + Antikoagulans → Zentrifugation). Serum ist Plasma *ohne* Fibrinogen (Blut gerinnen lassen → Überstand = Serum).
+
+> **Merke:** Plasma = mit Fibrinogen, Serum = ohne Fibrinogen. Hämatokrit misst nur den Erythrozyten-Anteil (nicht alle Zellen). Albumin → onkotischer Druck, Globuline → Abwehr + Transport.
+
+{{DIAGRAM:blutbestandteile}}
+
+---
 
 ## Erythrozyten und Hämoglobin
 
-**Um die Bestandteile des Blutes einzuordnen,** beginnen wir mit den **Erythrozyten** — sie transportieren O₂. Erythrozyten sind bikonkave Scheiben **ohne Zellkern** (reife menschliche Erythrozyten haben keinen Zellkern!) mit Hämoglobin (Tetramer 2α2β, Fe²⁺). **Mittlerer Durchmesser ~7,5 µm** (= 7,5×10⁻⁶ m; nicht 7,5 nm, nicht 7,5 mm). Der Bohr-Effekt beschreibt die Rechtsverschiebung der O₂-Bindungskurve bei CO₂↑/pH↓/Temperatur↑ → O₂-Abgabe ↑ im Gewebe. Abbau nach ~120 Tagen in der Milz: Hämoglobin → Bilirubin (unkonjugiert) → Leber → konjugiertes Bilirubin → Galle → Stuhl (Sterkobilin) + Urin (Urobilin).
+Erythrozyten (rote Blutkörperchen) sind mit **~5 Millionen/µL** die zahlreichsten Blutzellen. Ihre besondere Form — **bikonkave Scheiben** mit einem Durchmesser von **~7,5 µm** — maximiert die Oberfläche für den Gasaustausch und ermöglicht die Passage durch enge Kapillaren (Durchmesser ~5 µm). Reife Erythrozyten haben **keinen Zellkern** und keine Mitochondrien — sie gewinnen Energie ausschließlich über anaerobe Glykolyse und haben eine Lebensdauer von **~120 Tagen**.
 
-> **Merke:** **Hämatokrit:** Männer ~45%, Frauen ~42% – Erythrozyten-Volumen im Blut (Anämie ↓, Polyglobulie ↑). (Hämatokrit = Volumenanteil Erythrozyten, Männer höher wegen Testosteron)
+**Hämoglobin (Hb)** ist das O₂-transportierende Protein im Erythrozyten. Jedes Hb-Molekül ist ein **Tetramer aus 2α- und 2β-Untereinheiten**, wobei jede Untereinheit eine **Häm-Gruppe** mit einem zentralen **Fe²⁺-Ion** trägt — insgesamt also **4 O₂-Bindungsstellen** pro Hb. Fe²⁺ (Eisen-II) ist entscheidend: Wird es zu Fe³⁺ oxidiert, entsteht **Methämoglobin**, das keinen Sauerstoff binden kann.
 
-{{IMAGE}}
+Die O₂-Bindung an Hämoglobin folgt einer **sigmoidalen (S-förmigen) Kurve** — Ausdruck der **kooperativen Bindung**: Bindet ein O₂-Molekül an eine Untereinheit, erhöht sich die Affinität der übrigen Untereinheiten (T-Zustand → R-Zustand). Die Kurve wird durch mehrere Faktoren nach **rechts verschoben** (O₂-Affinität ↓, O₂-Abgabe ↑):
+
+| Faktor | Richtung | Wirkung |
+|---|---|---|
+| CO₂ ↑ | Rechtsverschiebung | Mehr O₂-Abgabe im Gewebe |
+| pH ↓ (H⁺ ↑) | Rechtsverschiebung | Bohr-Effekt |
+| Temperatur ↑ | Rechtsverschiebung | Arbeitende Muskeln |
+| 2,3-BPG ↑ | Rechtsverschiebung | Höhenadaptation, Anämie |
+
+Dieser **Bohr-Effekt** ist physiologisch genial: In metabolisch aktivem Gewebe (Muskel, Gehirn) steigen CO₂ und Temperatur, der pH sinkt — genau dort wird mehr O₂ abgegeben. Umgekehrt wird in der Lunge O₂ effizient aufgenommen (hoher pO₂, niedriges CO₂, höherer pH → Linksverschiebung).
+
+**CO-Vergiftung (Kohlenmonoxid):** CO bindet mit **200–300-facher Affinität** an Fe²⁺ im Vergleich zu O₂. Zusätzlich verschiebt CO die Bindungskurve nach **links** → verbleibendes O₂ wird im Gewebe nicht mehr abgegeben → inneres Ersticken bei normaler Atemfrequenz. Klinisch: kirschrote Hautfarbe, Kopfschmerz, Bewusstlosigkeit. Therapie: 100 % O₂.
+
+**Erythrozyten-Abbau:** Nach ~120 Tagen werden alte Erythrozyten in der **Milz** (und Leber) durch Makrophagen des RES (retikuloendotheliales System) abgebaut: Hämoglobin → Globin (Aminosäuren) + Häm → **Biliverdin** → **unkonjugiertes Bilirubin** (wasserunlöslich, albumingebunden) → Leber (Konjugation mit Glucuronsäure) → **konjugiertes Bilirubin** → Galle → Darm → **Sterkobilin** (braune Stuhlfarbe) + teilweise Rückresorption → **Urobilin** (gelbe Urinfarbe).
+
+> **Merke:** Hb = Tetramer (2α2β), 4 Häm-Gruppen mit Fe²⁺, kooperative Bindung (sigmoidal). Bohr-Effekt: CO₂↑/pH↓/Temp↑/2,3-BPG↑ → Rechtsverschiebung → O₂-Abgabe ↑. CO bindet 200× stärker als O₂ und verschiebt die Kurve nach links. Abbau: Milz → Bilirubin → Leber → Galle.
+
+{{DIAGRAM:hemoglobin-curve}}
 
 ---
 
-## Leukozyten
+## Leukozyten — die Immunzellen im Blut
 
+Vom Erythrozyten-Transport gehen wir nun zu den Abwehrzellen über. Leukozyten (weiße Blutkörperchen) sind mit **4.000–10.000/µL** deutlich seltener als Erythrozyten, aber essenziell für die Immunabwehr. Sie werden nach Morphologie und Funktion in drei Hauptgruppen eingeteilt:
+
+### Granulozyten (enthalten Granula im Zytoplasma)
+
+| Zelltyp | Anteil | Kernform | Hauptfunktion |
+|---|---|---|---|
+| **Neutrophile** | 50–70 % | Segmentkernig (3–5 Segmente) | Phagozytose von Bakterien, Respiratory Burst (NADPH-Oxidase → O₂⁻, MPO → HOCl) |
+| **Eosinophile** | 1–5 % | Bilobulär | Parasitenabwehr (toxische Granula), allergische Reaktionen |
+| **Basophile** | <1 % | S-förmig/unregelmäßig | Histaminfreisetzung, IgE-vermittelte Allergie |
+
+### Agranulozyten
 
 | Zelltyp | Anteil | Hauptfunktion |
 |---|---|---|
-| **Neutrophile** | ~60% | Erste Linie gegen Bakterien; Phagozytose + Respiratory Burst |
-| **Lymphozyten** | ~25% | Adaptive Immunität: B-Zellen (Antikörper), T-Zellen (zellulär), NK-Zellen |
-| **Monozyten** | ~5% | Vorläufer von Makrophagen und dendritischen Zellen; Phagozytose |
-| **Eosinophile** | ~3% | Parasitenabwehr; Allergiereaktionen (Typ I/III) |
-| **Basophile** | ~1% | Histaminfreisetzung; Allergie und Entzündung |
+| **Monozyten** | 3–8 % | Vorläufer von Gewebsmakrophagen und dendritischen Zellen; Phagozytose, Antigenpräsentation (MHC II) |
+| **Lymphozyten** | 20–40 % | Adaptive Immunität: **B-Zellen** (Antikörperproduktion), **T-Zellen** (CD4⁺ Helfer, CD8⁺ zytotoxisch), **NK-Zellen** (angeboren, MHC-I-Missing-Self) |
 
-**Linksverschiebung** (↑ stabkernige Neutrophile) = Zeichen akuter Bakterieninfektion. Leukozytose (>10.000/µL) deutet auf Infektion hin; Leukopenie kann Chemotherapie-Nebenwirkung sein.
+**Klinische Blutbild-Interpretation:**
+- **Linksverschiebung** = vermehrt **unreife** (stabkernige) Neutrophile → Zeichen einer **akuten bakteriellen Infektion** (das Knochenmark schüttet unreife Zellen vorzeitig aus)
+- **Leukozytose** (>10.000/µL) → Infektion, Entzündung, Leukämie
+- **Leukopenie** (<4.000/µL) → Chemotherapie, Autoimmunerkrankung, aplastische Anämie
+- **Eosinophilie** → Parasiteninfektion oder allergische Erkrankung
 
----
-
-## Gerinnung und Hämostase
-
-
-> **Merke:** **Gerinnungskaskade:** Extrinsisch = TF+VII (schnell, Sekunden), Intrinsisch = XII (langsam, Minuten), Endstrecke = Xa+Va → Thrombin → Fibrin! (Beide Wege aktivieren Faktor X → Prothrombinase-Komplex → Thrombin → Fibrinogen → Fibrin)
-
-{{DIAGRAM:immune-response}}
+> **Merke:** Neutrophile (50–70 %) = häufigste Leukozyten, erste Linie gegen Bakterien. Lymphozyten (20–40 %) = adaptive Immunität. Linksverschiebung = unreife Stabkernige ↑ → akute bakterielle Infektion. Merkhilfe Differentialblutbild: „Never Let Monkeys Eat Bananas" (Neutrophile > Lymphozyten > Monozyten > Eosinophile > Basophile).
 
 ---
 
-## Blutgruppen
+## Thrombozyten — die Blutplättchen
 
+Thrombozyten sind **kernlose Zellfragmente** aus Megakaryozyten (Knochenmark) mit einer Lebensdauer von **~10 Tagen** und einer Normalzahl von **150.000–400.000/µL**. Sie enthalten Granula mit Gerinnungsfaktoren (α-Granula: vWF, Fibrinogen, PDGF) und ADP/Serotonin/Ca²⁺ (dense Granula). Bei Gefäßverletzung werden sie sofort aktiviert und bilden den primären Thrombozytenpfropf.
 
-> **Merke:** **AB0-Blutgruppen:** 0 = Universalspender (keine Antigene), AB = Universalempfänger (keine Antikörper) – natürliche IgM-Antikörper! (A hat Anti-B, B hat Anti-A, AB hat keine, 0 hat Anti-A+B)`,
+**Thrombozytenhemmer** im klinischen Alltag:
+- **ASS (Aspirin)**: hemmt COX-1 irreversibel → Thromboxan A₂ (TxA₂) ↓ → Aggregation ↓
+- **Clopidogrel**: P2Y₁₂-Rezeptor-Antagonist → ADP-Hemmung
+- **Abciximab**: GPIIb/IIIa-Antagonist → blockiert Fibrinogen-Brücken
+
+**Thrombozytopenie** (<100.000/µL): Petechien (punktförmige Hautblutungen); <20.000/µL → Spontanblutungsgefahr.
+
+> **Merke:** Thrombozyten = kernlose Fragmente aus Megakaryozyten, 150.000–400.000/µL, Lebensdauer ~10 Tage. ASS hemmt COX-1 → TxA₂ ↓. Thrombozytopenie → Petechien.
+
+---
+
+## Hämostase — primäre und sekundäre Blutstillung
+
+Die Fähigkeit des Blutes zu gerinnen schützt vor Verbluten, muss aber streng reguliert werden, um Thrombosen zu verhindern. Die Hämostase läuft in zwei aufeinanderfolgenden Phasen ab:
+
+### Primäre Hämostase (Thrombozytenpfropf, Minuten)
+
+1. **Vasokonstriktion**: Reflexartige Gefäßverengung → Blutfluss ↓
+2. **Thrombozytenadhäsion**: Kollagen im Subendothel wird freigelegt → **von-Willebrand-Faktor (vWF)** bindet an Kollagen *und* an **GPIb-Rezeptoren** auf Thrombozyten → Brückenmolekül
+3. **Thrombozytenaktivierung**: Formveränderung (Scheibe → Kugel mit Pseudopodien), Freisetzung von ADP, TxA₂, Serotonin
+4. **Thrombozytenaggregation**: Aktivierte Thrombozyten exprimieren **GPIIb/IIIa-Rezeptoren** → **Fibrinogen** vernetzt benachbarte Thrombozyten → weißer Thrombus
+
+### Sekundäre Hämostase (Gerinnungskaskade, Minuten bis Stunden)
+
+Die plasmatische Gerinnung stabilisiert den Thrombozytenpfropf durch ein Fibrinnetz. Zwei Aktivierungswege münden in eine **gemeinsame Endstrecke**:
+
+**Extrinsischer Weg** (schnell, Sekunden): Verletztes Gewebe setzt **Tissue Factor (TF, Faktor III)** frei → TF aktiviert **Faktor VII** → Komplex TF/VIIa aktiviert **Faktor X**. Labormessung: **Quick/PT** (Prothrombinzeit).
+
+**Intrinsischer Weg** (langsam, Minuten): Kontaktaktivierung durch negativ geladene Oberflächen (z. B. freiliegendes Kollagen) → **Faktor XII** → XI → IX → IX/VIIIa-Komplex aktiviert **Faktor X**. Labormessung: **PTT** (partielle Thromboplastinzeit).
+
+**Gemeinsame Endstrecke:** Faktor **Xa + Va** (Prothrombinase-Komplex) → spaltet **Prothrombin (II)** zu **Thrombin (IIa)** → Thrombin spaltet **Fibrinogen (I)** zu **Fibrinmonomeren** → Polymerisation → **Faktor XIII** quervernetzt Fibrin kovalent → stabiler **roter Thrombus**.
+
+| Labormessung | Prüft | Klinische Bedeutung |
+|---|---|---|
+| **PT/Quick** | Extrinsischer + gemeinsamer Weg | Marcumar-Steuerung, Leberfunktion |
+| **PTT** | Intrinsischer + gemeinsamer Weg | Heparin-Steuerung, Hämophilie A/B |
+| **Blutungszeit** | Primäre Hämostase | vWS, Thrombozytopathie |
+
+**Vitamin K** ist essenzieller Kofaktor für die hepatische Synthese der Gerinnungsfaktoren **II, VII, IX, X** (Merkhilfe: „1972"). Vitamin-K-Antagonisten (Marcumar/Warfarin) hemmen diese Synthese → Antikoagulation. **Heparin** verstärkt die Wirkung von **Antithrombin III** (AT-III) → inaktiviert Thrombin und Faktor Xa.
+
+### Fibrinolyse — Auflösung des Thrombus
+
+Nach der Wundheilung wird der Thrombus wieder abgebaut: **Plasminogen** → **Plasmin** (durch tPA, tissue plasminogen activator) → spaltet Fibrin → **Fibrinspaltprodukte** (D-Dimere). D-Dimere im Labor ↑ = Hinweis auf Thrombose, Lungenembolie, DIC.
+
+**Klinischer Bezug — DIC (Disseminierte intravasale Gerinnung):** Systemische Gerinnungsaktivierung (z. B. bei Sepsis, Trauma) → massiver Verbrauch von Gerinnungsfaktoren und Thrombozyten → paradoxerweise gleichzeitig Mikrothrombosen *und* Blutungsneigung (Verbrauchskoagulopathie). Labor: PT ↑, PTT ↑, Fibrinogen ↓, D-Dimere ↑↑, Thrombozyten ↓.
+
+> **Merke:** Primäre Hämostase = Thrombozyten (vWF → GPIb, Fibrinogen → GPIIb/IIIa). Sekundäre = Gerinnungskaskade: Extrinsisch (TF+VII, Quick/PT), Intrinsisch (XII→IX→X, PTT), Endstrecke (Xa+Va → Thrombin → Fibrin). Vitamin K: Faktoren II, VII, IX, X („1972"). Fibrinolyse: Plasmin → D-Dimere.
+
+{{DIAGRAM:coagulation-cascade}}
+
+---
+
+## Blutgruppen — AB0- und Rhesus-System
+
+Von der Gerinnung wechseln wir nun zur Blutgruppen-Immunologie — einem Thema, das bei Transfusionen über Leben und Tod entscheidet. Blutgruppen werden durch **Antigene auf der Erythrozytenoberfläche** definiert, gegen die im Plasma **Antikörper** (Agglutinine) existieren können.
+
+### AB0-System
+
+Das AB0-System beruht auf Zucker-Antigenen (Agglutinogene) auf der Erythrozytenmembran und **natürlich vorkommenden IgM-Antikörpern** (Isoagglutinine) im Plasma, die ohne vorherige Sensibilisierung ab dem ~6. Lebensmonat gebildet werden (Kreuzreaktion mit Bakterienantigenen der Darmflora):
+
+| Blutgruppe | Antigen (Erythrozyt) | Antikörper (Plasma) | Kann empfangen von | Kann spenden an |
+|---|---|---|---|---|
+| **A** | A | Anti-B | A, 0 | A, AB |
+| **B** | B | Anti-A | B, 0 | B, AB |
+| **AB** | A + B | Keine | A, B, AB, 0 | AB |
+| **0** | Keine (nur H-Antigen) | Anti-A + Anti-B | nur 0 | A, B, AB, 0 |
+
+**Universalspender** = Blutgruppe **0** (keine Antigene → keine Reaktion beim Empfänger). **Universalempfänger** = Blutgruppe **AB** (keine Antikörper → reagiert nicht auf Spenderantigene). In der Praxis wird dennoch **immer** eine Kreuzprobe (Verträglichkeitstest) durchgeführt.
+
+**Transfusionsreaktion:** Bei inkompatibler Transfusion (z. B. B-Blut an A-Empfänger) binden die IgM-Antikörper (Anti-B) an die Spender-Erythrozyten → **Komplementaktivierung** → **intravasale Hämolyse** → freies Hämoglobin → Nierenversagen (Hb-Zylinder in den Tubuli), Schock, DIC. **Sofortiger Transfusionsstopp + Notfalltherapie!**
+
+### Rhesus-System
+
+Das Rhesus-System wird durch das **D-Antigen** definiert: **Rh+ (~85 %)** = D-Antigen vorhanden, **Rh− (~15 %)** = kein D-Antigen. Im Gegensatz zum AB0-System bilden sich Anti-D-Antikörper **erst nach Sensibilisierung** (Transfusion oder Schwangerschaft).
+
+**Klinisch hochrelevant — Morbus haemolyticus neonatorum:** Eine **Rh-negative Mutter** trägt ein **Rh-positives Kind** (Vater Rh+). Bei der **1. Geburt** gelangen fetale Rh+ Erythrozyten in den mütterlichen Kreislauf → Sensibilisierung → Bildung von **Anti-D-IgG**. In der **2. Schwangerschaft** mit einem Rh+ Fetus passieren diese IgG-Antikörper die Plazenta → fetale Erythrozyten-Hämolyse → Anämie, Ikterus, Hydrops fetalis. **Prophylaxe:** Anti-D-Immunglobulin innerhalb von 72 h nach der Geburt (und in der 28. SSW) → verhindert mütterliche Sensibilisierung.
+
+**Kreuzprobe** — vor jeder Transfusion: **Major-Test** (Spender-Erythrozyten + Empfänger-Serum) ist entscheidend; **Minor-Test** (Empfänger-Erythrozyten + Spender-Serum) ergänzend. Zusätzlich **Bedside-Test** (AB0-Schnelltest am Bett unmittelbar vor Transfusion).
+
+> **Merke:** AB0: natürliche IgM-Antikörper (keine Sensibilisierung nötig). 0 = Universalspender, AB = Universalempfänger. Rhesus: Anti-D erst nach Sensibilisierung (IgG, plazentagängig). Rh− Mutter + Rh+ Kind → MHN-Risiko ab 2. Schwangerschaft → Anti-D-Prophylaxe. Immer Kreuzprobe + Bedside-Test vor Transfusion.
+
+{{IMAGE}}`,
       lernziele: [
         "Die Zusammensetzung des Blutes (Plasma vs. zelluläre Elemente, Hämatokrit, Plasma vs. Serum) und die Hauptfunktionen der Plasmaproteine (Albumin, Fibrinogen, Globuline) beschreiben.",
         "Den Aufbau und die Funktion des Hämoglobins erklären sowie den Bohr-Effekt und die O₂-Bindungskurve (Rechtsverschiebung bei CO₂↑/pH↓) interpretieren.",
@@ -1762,38 +2307,166 @@ Die **Nebenniere** gliedert sich in Rinde (Kortex, 80 %) und Mark (Medulla, 20 %
         "Allergie",
         "MHC",
       ],
-      content: `## Angeborene Immunität
+      content: `## Warum Immunologie lebensrettend ist
 
-**Um das Immunsystem zu verstehen,** unterscheidet man **angeborene** (schnell, unspezifisch) und **erworbene** (spezifisch, Gedächtnis) Immunität. Zelluläre Komponenten: Neutrophile (Phagozytose, Respiratory Burst), Makrophagen (Phagozytose, Antigenpräsentation MHC II, IL-1/TNF-α), NK-Zellen (töten Zellen ohne MHC-I über Perforin/Granzyme), dendritische Zellen (Brücke zur adaptiven Immunität). Das Komplementsystem kann über drei Wege aktiviert werden: **Klassischer Weg** (Antigen-Antikörper-Komplexe aktivieren C1q), **Lektin-Weg** (Mannose-bindendes Lektin/MBL erkennt Pathogenzucker), **Alternativer Weg** (spontane C3-Hydrolyse + Verstärkungsschleife auf Pathogenoberflächen). Alle drei Wege münden in C3-Spaltung → C3a (Anaphylatoxin) + C3b (Opsonin) → MAC-Bildung. Humorale Komponenten: Komplementsystem – C3b (Opsonierung), C5a (Chemotaxis), MAC/C5b-C9 (Lyse). Interferone hemmen Virusreplikation.
+Ein Kind erhält seine erste MMR-Impfung — wenige Wochen später ist es gegen Masern, Mumps und Röteln geschützt. Ein Transplantationspatient nimmt lebenslang Immunsuppressiva, damit sein Körper das Spenderorgan nicht abstößt. Beide Szenarien zeigen: Das Immunsystem entscheidet über Gesundheit und Krankheit. Es unterscheidet „selbst" von „fremd", bekämpft Pathogene und bildet ein immunologisches Gedächtnis — doch es kann auch überreagieren (Allergie) oder sich gegen den eigenen Körper richten (Autoimmunität).
 
-> **Merke:** **Angeborene vs. Erworbene:** Angeboren = schnell (Minuten), unspezifisch, kein Gedächtnis (Makrophagen, Neutrophile, Komplement). Erworben = langsam (Tage), spezifisch, Gedächtnis (T-/B-Zellen, Antikörper). (Angeborene Immunität reagiert sofort, erworbene braucht Zeit für klonale Expansion)
+Die Immunabwehr gliedert sich in zwei eng verzahnte Systeme: die **angeborene (unspezifische)** und die **erworbene (adaptive, spezifische) Immunität**.
 
-{{IMAGE}}
+| Merkmal | Angeboren | Erworben |
+|---|---|---|
+| Reaktionszeit | Sekunden–Stunden | Tage (Erstantwort) |
+| Spezifität | Unspezifisch (PAMPs) | Hochspezifisch (Antigene) |
+| Gedächtnis | Keines | Ja (Gedächtniszellen) |
+| Zelltypen | Neutrophile, Makrophagen, NK-Zellen, dendritische Zellen | T-Zellen, B-Zellen, Plasmazellen |
+| Humorale Faktoren | Komplement, Interferone, Lysozym | Antikörper (Ig) |
 
----
-
-## Erworbene Immunität und T-Zellen
-
-
-> **Merke:** **MHC-Präsentation:** MHC I auf ALLEN Zellen zeigt CD8⁺ Viren (innen), MHC II auf APCs zeigt CD4⁺ Bakterien (außen)! (MHC I → CD8⁺ → intrazelluläre Pathogene; MHC II → CD4⁺ → extrazelluläre Pathogene)
-
----
-
-## Antikörper und Impfung
-
-
-> **Merke:** **Antikörper-Klassen:** IgM = Erste (Pentamer, Primär), IgG = Gedächtnis (Sekundär, Plazenta), IgA = Schleimhaut (Dimer), IgE = Allergie (Mastzellen)! (IgM → akut, IgG → chronisch/Impfung, IgA → Sekrete, IgE → Anaphylaxie)
+> **Merke:** Angeboren = schnell, unspezifisch, kein Gedächtnis. Erworben = langsam (klonale Expansion braucht Tage), hochspezifisch, Gedächtnisbildung. Beide Systeme arbeiten zusammen — dendritische Zellen sind die Brücke.
 
 ---
 
-{{DIAGRAM:blood-groups}}
+## Angeborene Immunität — erste Verteidigungslinie
 
-## Allergie und Autoimmunität
+Die angeborene Immunität steht **sofort** zur Verfügung und erkennt Pathogene über konservierte Muster (PAMPs = Pathogen-Associated Molecular Patterns) mittels Pattern-Recognition-Rezeptoren (PRRs, z. B. Toll-like-Rezeptoren).
 
+**Physikalische und chemische Barrieren:**
+- **Haut**: Verhornte Epidermis, saurer pH (~5,5), antimikrobielle Peptide (Defensine)
+- **Schleimhäute**: Muzin-Schicht, Lysozym (Tränen, Speichel), Magensäure (pH ~2), mukoziliäre Clearance (Atemwege)
+- **Normalflora**: Konkurrenz mit Pathogenen, Produktion antimikrobieller Substanzen
 
-Typ-I-Allergie (IgE-vermittelt): Sensibilisierung (Allergen → Th2 → IgE auf Mastzellen) → Re-Exposition (Allergen kreuzvernetzt IgE → Mastzell-Degranulation → Histamin, Leukotriene). Manifestationen: Rhinitis, Asthma, Urtikaria, Anaphylaxie. Notfalltherapie Anaphylaxie: Adrenalin i.m. (β₂ Bronchodilatation, α₁ Vasokonstriktion). Allergie-Typen II–IV: Typ II (zytotoxisch: Antikörper gegen Zelloberflächenantigene, z.B. Autoimmunhämolyse); Typ III (Immunkomplexe: z.B. Serumkrankheit, SLE-Nephritis); Typ IV (verzögert/zellulär: T-Zell-vermittelt, z.B. Tuberkulin-Test, Kontaktdermatitis). Nur Typ I ist IgE-vermittelt und soforttyp. Autoimmunerkrankungen entstehen durch Verlust der Selbsttoleranz.
+**Zelluläre Komponenten:**
+- **Neutrophile Granulozyten**: Häufigste Leukozyten (~60 %), erste am Infektionsort, Phagozytose + Respiratory Burst (ROS-Produktion zur Abtötung). Kurzlebig (Stunden–wenige Tage)
+- **Makrophagen**: Phagozytose + **Antigenpräsentation** über MHC-II (Brücke zur erworbenen Immunität). Sekretion von IL-1, IL-6, TNF-α → Fieber, Akute-Phase-Reaktion
+- **NK-Zellen (Natural Killer)**: Erkennen Zellen mit fehlendem MHC-I („Missing Self") → töten virusinfizierte Zellen und Tumorzellen durch Perforin/Granzyme → Apoptose. Keine vorherige Sensibilisierung nötig
+- **Dendritische Zellen**: Professionelle APCs (antigenpräsentierende Zellen) — nehmen Antigene in der Peripherie auf, wandern in Lymphknoten und aktivieren naive T-Zellen via MHC-II
 
-> **Merke:** **Impfung:** Aktiv = Antigen → eigene Antikörper → Gedächtnis (Wochen, Jahre), Passiv = fertige Antikörper → sofort, kurz (Stunden, Monate, kein Gedächtnis)! (Aktiv: MMR, Tetanus; Passiv: Tetanus-Immunglobulin, Anti-D)`,
+**Entzündungsreaktion (Inflammation):**
+Gewebeschaden oder Infektion → Makrophagen sezernieren TNF-α, IL-1, IL-6 → **lokale Reaktion**: Vasodilatation (Rötung, Wärme), Permeabilität↑ (Schwellung), Schmerz (Prostaglandine). Chemokine locken Neutrophile an (Chemotaxis) → Diapedese (Durchtritt durch Gefäßwand) → Phagozytose am Infektionsort. **Systemisch**: Fieber (IL-1, IL-6 → Hypothalamus), Akute-Phase-Proteine (CRP, Fibrinogen aus Leber), Leukozytose.
+
+**Komplementsystem — drei Aktivierungswege, ein Ziel:**
+
+| Weg | Auslöser | Startmolekül |
+|---|---|---|
+| Klassisch | Antigen-Antikörper-Komplex | C1q |
+| Lektin | Mannose auf Pathogenoberfläche | MBL (Mannose-bindendes Lektin) |
+| Alternativ | Spontane C3-Hydrolyse auf Pathogenoberfläche | C3b (Verstärkungsschleife) |
+
+Alle drei Wege münden in die **C3-Spaltung** → **C3a** (Anaphylatoxin, Entzündungsmediator) + **C3b** (Opsonin, markiert Pathogene für Phagozytose) → **C5a** (stärkste Chemotaxis) → **MAC (C5b–C9)** (Membran-Angriffs-Komplex → Lyse gramnegativer Bakterien).
+
+**Interferone (IFN-α, IFN-β):** Von virusinfizierten Zellen sezerniert → Nachbarzellen in antiviralen Zustand versetzt (MHC-I↑, Proteinsyntheseblockade).
+
+> **Merke:** Komplement-Effekte: **C3b** = Opsonierung, **C5a** = Chemotaxis + Entzündung, **MAC (C5b–C9)** = Lyse. NK-Zellen töten bei „Missing Self" (fehlendes MHC-I) — wichtig bei Tumoren und Viren, die MHC-I herunterregulieren.
+
+{{DIAGRAM:immune-response}}
+
+---
+
+## Erworbene Immunität — T-Zell-Aktivierung und klonale Expansion
+
+Nachdem die angeborene Immunität die erste Abwehr geleistet hat, übernimmt die erworbene Immunität mit **hochspezifischen** Antworten auf einzelne Antigene und bildet ein **immunologisches Gedächtnis**. Zentrale Akteure sind T-Zellen (zellulär) und B-Zellen (humoral). Die Aktivierung erfordert die **Antigenpräsentation** über MHC-Moleküle.
+
+**MHC-System (Major Histocompatibility Complex):**
+
+| | MHC-Klasse I | MHC-Klasse II |
+|---|---|---|
+| **Exprimiert auf** | Allen kernhaltigen Zellen | Nur APCs (dendritische Zellen, Makrophagen, B-Zellen) |
+| **Präsentiert** | Intrazelluläre Antigene (Viren, Tumorproteine) | Extrazelluläre Antigene (phagozytierte Bakterien) |
+| **Erkannt von** | CD8⁺ zytotoxische T-Zellen | CD4⁺ T-Helferzellen |
+| **Folge** | Zielzelle wird getötet (Perforin/Granzyme → Apoptose) | Koordination der Immunantwort (Zytokine) |
+
+**T-Zell-Aktivierung — Schritt für Schritt:**
+1. **Antigenpräsentation**: Dendritische Zelle phagozytiert Pathogen → prozessiert Antigen → präsentiert Peptid auf **MHC-II** → wandert in Lymphknoten
+2. **T-Zell-Erkennung**: Naive CD4⁺-T-Zelle erkennt MHC-II-Peptid-Komplex über ihren TCR (T-Zell-Rezeptor) + kostimulatorisches Signal (CD28–B7-Interaktion, „Signal 2")
+3. **Klonale Expansion**: Aktivierte T-Zelle proliferiert massiv (Tage) → Tausende identischer Tochterzellen
+4. **Differenzierung**: CD4⁺ → **Th1** (IFN-γ → Makrophagen-Aktivierung, zelluläre Abwehr) oder **Th2** (IL-4, IL-5, IL-13 → B-Zell-Hilfe, IgE-Produktion, Allergie) oder **Th17** (IL-17 → Neutrophilen-Rekrutierung) oder **Treg** (IL-10, TGF-β → Immunsuppression, Selbsttoleranz)
+5. **Effektorphase**: CD8⁺ töten infizierte Zellen; CD4⁺ koordinieren Makrophagen und B-Zellen
+6. **Gedächtnisbildung**: Nach Abklingen der Infektion überleben **Gedächtnis-T-Zellen** (langlebig) → bei Reinfektion schnellere, stärkere Antwort (Sekundärantwort)
+
+**Klinisch — HIV/AIDS:** HIV infiziert CD4⁺-T-Zellen (Bindung über gp120 an CD4 + Korezeptor CCR5/CXCR4) → progressiver CD4⁺-Verlust → bei <200/µL = AIDS → opportunistische Infektionen (PCP, CMV, Toxoplasmose). Therapie: cART (kombinierte antiretrovirale Therapie).
+
+**Klinisch — Transplantatabstoßung:** Spender-MHC wird als „fremd" erkannt → T-Zell-Aktivierung → Abstoßungsreaktion (hyperakut: Minuten [präformierte Antikörper]; akut: Tage–Wochen [T-Zellen]; chronisch: Monate–Jahre [Fibrose]). Immunsuppressiva (Ciclosporin, Tacrolimus) hemmen T-Zell-Aktivierung.
+
+> **Merke:** MHC-I (alle kernhaltigen Zellen) → CD8⁺ → intrazelluläre Pathogene (Viren). MHC-II (nur APCs) → CD4⁺ → extrazelluläre Pathogene (Bakterien). Klonale Expansion = massiv Tochterzellen → Effektorzellen + Gedächtniszellen. Merkhilfe: **I** × **8** = **8**, **II** × **4** = **8**.
+
+---
+
+## Antikörper — Aufbau, Klassen und Funktionen
+
+B-Zellen reifen im **Knochenmark** und werden in den Lymphknoten durch CD4⁺-T-Helferzellen (T-Zell-Hilfe via CD40L + IL-4) aktiviert → Differenzierung zu **Plasmazellen** (Antikörper-Fabriken) und **Gedächtnis-B-Zellen**.
+
+**Antikörper-Struktur (Y-Form):**
+- **2 schwere Ketten** (H-Ketten) + **2 leichte Ketten** (L-Ketten, κ oder λ), verbunden durch Disulfidbrücken
+- **Fab-Region** (Fragment antigen-binding): Variable Domänen (VH + VL) → **Antigenbindungsstelle** (2 pro Antikörper). Bestimmt die Spezifität — jeder Antikörper erkennt ein spezifisches Epitop
+- **Fc-Region** (Fragment crystallizable): Konstante Domänen der schweren Ketten → bestimmt die **biologische Funktion** (Komplementaktivierung, Bindung an Fc-Rezeptoren auf Phagozyten, Plazenta-Transfer). Die Fc-Region definiert die Immunglobulinklasse
+- **Hinge-Region** (Gelenkregion): Flexible Verbindung zwischen Fab und Fc → ermöglicht gleichzeitige Bindung zweier Epitope
+
+**Die fünf Immunglobulinklassen:**
+
+| Ig-Klasse | Struktur | Vorkommen | Funktion | Klinische Relevanz |
+|---|---|---|---|---|
+| **IgG** | Monomer | Serum (~75 %) | Opsonierung, Komplement (klassisch), Neutralisation | Einziges **plazentagängiges** Ig → Nestschutz; Sekundärantwort, lang (HWZ ~21 Tage) |
+| **IgM** | Pentamer | Serum | Komplement ↑↑↑ (10 Bindungsstellen), Agglutination | **Primärantwort** (akute Infektion); IgM↑ = frische Infektion |
+| **IgA** | Dimer (sekretorisch) | Schleimhäute, Muttermilch, Speichel, Tränen | Neutralisation auf Schleimhäuten | Schleimhautschutz, Muttermilch-IgA → Säuglingsschutz |
+| **IgE** | Monomer | Gewebe (Mastzellen) | Mastzell-Degranulation, Parasiten | **Allergie** Typ I, Parasiten-Abwehr; IgE↑ = Atopie |
+| **IgD** | Monomer | B-Zell-Oberfläche | Ko-Rezeptor mit IgM auf naiven B-Zellen | Rolle bei B-Zell-Aktivierung, klinisch wenig relevant |
+
+**Klassenwechsel (Isotype Switching):** Nach B-Zell-Aktivierung kann die schwere Kette gewechselt werden (IgM → IgG, IgA oder IgE), ohne die Antigenspezifität zu ändern. Gesteuert durch T-Helfer-Zytokine: IL-4 → IgE (Allergie), TGF-β → IgA (Schleimhaut), IFN-γ → IgG (Opsonierung). Der Klassenwechsel erfolgt durch DNA-Rekombination in der Switch-Region.
+
+**Antikörper-Funktionen im Überblick:**
+- **Neutralisation**: Blockiert Toxine/Viren an Zielzell-Bindung
+- **Opsonierung**: Fc-Region markiert Pathogene → Phagozytose durch Makrophagen/Neutrophile ↑
+- **Komplement-Aktivierung**: IgM und IgG aktivieren klassischen Weg (C1q bindet Fc)
+- **ADCC** (Antibody-Dependent Cell-mediated Cytotoxicity): NK-Zellen binden über Fc-Rezeptor (CD16) an Antikörper-beladene Zielzellen → Lyse
+
+> **Merke:** Y-Form: 2 Fab (Antigenbindung, Spezifität) + 1 Fc (Effektorfunktion, Klasse). IgM = Pentamer, Primärantwort, akut. IgG = Monomer, Sekundärantwort, plazentagängig, ~75 % im Serum. IgA = Dimer, Schleimhaut. IgE = Allergie + Parasiten. Klassenwechsel ändert Fc (Funktion), nicht Fab (Spezifität).
+
+{{DIAGRAM:antibody-structure}}
+
+---
+
+## Aktive vs. passive Immunisierung
+
+Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — entweder durch Stimulation des eigenen Immunsystems oder durch Zufuhr fertiger Antikörper.
+
+**Aktive Immunisierung** — Antigen-Gabe → Immunsystem bildet eigene Antikörper + Gedächtniszellen:
+- **Lebendimpfstoffe** (attenuierte Erreger): MMR, Varizellen, Rotavirus — stärkste Immunantwort, aber kontraindiziert bei Immunsuppression
+- **Totimpfstoffe**: Influenza (inaktiviert), Hepatitis A, Polio (Salk)
+- **Toxoidimpfstoffe**: Tetanus, Diphtherie (inaktiviertes Toxin)
+- **mRNA-Impfstoffe**: COVID-19 (Spike-Protein-kodierend)
+- Wirkungseintritt: **Wochen** (klonale Expansion nötig), Schutz: **Jahre bis Jahrzehnte**
+
+**Passive Immunisierung** — Zufuhr fertiger Antikörper (IgG):
+- Tetanus-Immunglobulin (Postexpositionsprophylaxe)
+- Anti-D-Immunglobulin (Rhesus-Inkompatibilität)
+- Hepatitis-B-Immunglobulin (Nadelstichverletzung)
+- Wirkungseintritt: **Stunden** (sofort), Schutz: **Wochen bis ~3 Monate** (Antikörper werden abgebaut), **kein Gedächtnis**
+
+**Natürlicher Nestschutz:** Mütterliches IgG passiert die Plazenta → Schutz des Neugeborenen für ~6 Monate (passive Immunisierung). Zusätzlich: IgA über Muttermilch (Schleimhautschutz).
+
+> **Merke:** Aktiv = Antigen → eigene Antikörper + Gedächtnis → Langzeitschutz (Wochen Anlaufzeit). Passiv = fertige Antikörper → Sofortschutz, kein Gedächtnis, kurz (~3 Monate). Lebendimpfstoffe kontraindiziert bei Immunsuppression!
+
+---
+
+## Allergie und Hypersensitivität — die vier Typen nach Coombs und Gell
+
+Überreaktionen des Immunsystems werden nach Mechanismus in vier Typen eingeteilt. Nur **Typ I** ist IgE-vermittelt und eine Sofortreaktion.
+
+**Typ-I-Allergie (IgE-vermittelt, Soforttyp) — Schritt für Schritt:**
+1. **Sensibilisierung** (Erstkontakt): Allergen → dendritische Zelle → Th2-Aktivierung → IL-4 → B-Zelle → Klassenwechsel zu **IgE** → IgE bindet an Fc-Rezeptoren (FcεRI) auf **Mastzellen/Basophilen**
+2. **Re-Exposition** (Zweitkontakt): Allergen **kreuzvernetzt** zwei IgE auf Mastzelle → **Degranulation** → Histamin, Leukotriene, Prostaglandine
+3. **Symptome**: Histamin → Vasodilatation, Permeabilität↑, Bronchospasmus, Pruritus (Juckreiz). Lokale Manifestationen: Rhinitis, Urtikaria, Asthma. **Systemisch**: Anaphylaxie (Schock, Kreislaufversagen)
+4. **Notfalltherapie Anaphylaxie**: **Adrenalin i.m.** (α₁ → Vasokonstriktion; β₂ → Bronchodilatation) — erste Maßnahme! + Volumen + Antihistaminika + Glukokortikoide
+
+| Typ | Name | Mechanismus | Zeitverlauf | Klinische Beispiele |
+|---|---|---|---|---|
+| **I** | Soforttyp | IgE + Mastzell-Degranulation | Sekunden–Minuten | Anaphylaxie, Heuschnupfen, allergisches Asthma, Urtikaria |
+| **II** | Zytotoxisch | IgG/IgM gegen Zelloberflächen-Antigene → Komplement/ADCC | Stunden | Autoimmunhämolyse, Morbus haemolyticus neonatorum, Myasthenia gravis (Anti-AChR), Goodpasture (Anti-GBM) |
+| **III** | Immunkomplex | Ag-Ak-Komplexe → Komplementaktivierung → Gewebeschaden | Stunden–Tage | SLE (Anti-dsDNA), Post-Streptokokken-GN, Serumkrankheit |
+| **IV** | Verzögert (T-Zell-vermittelt) | T-Zellen (CD4⁺/CD8⁺) → Zytokinfreisetzung → Entzündung | 48–72 Stunden | Tuberkulin-Test, Kontaktdermatitis (Nickel), Transplantatabstoßung (zellulär), Diabetes Typ 1 |
+
+**Klinisch — Autoimmunerkrankungen:** Verlust der Selbsttoleranz → Immunsystem greift körpereigene Strukturen an. Beispiele: SLE (Anti-dsDNA, Schmetterlingserythem), Hashimoto-Thyreoiditis (Anti-TPO → Hypothyreose), Rheumatoide Arthritis (Anti-CCP, Synovitis), MS (Demyelinisierung im ZNS), Diabetes Typ 1 (Anti-GAD → β-Zell-Zerstörung).
+
+> **Merke:** Typ I = IgE + Mastzellen (Sofort, Allergie). Typ II = IgG/IgM gegen Zellen (zytotoxisch). Typ III = Immunkomplexe (Komplement). Typ IV = T-Zellen (verzögert, 48–72 h). Anaphylaxie-Therapie: **Adrenalin i.m.** ist immer erste Maßnahme!`,
       lernziele: [
         "Die angeborene (unspezifische) und erworbene (adaptive, spezifische) Immunität nach Reaktionsgeschwindigkeit, Spezifität und Gedächtnisbildung unterscheiden und die wichtigsten Zelltypen jeder Linie benennen.",
         "Das Komplementsystem (klassischer, alternativer, Lektin-Weg) mit seinen Effekten (C3b Opsonierung, C5a Chemotaxis, MAC Lyse) beschreiben.",
@@ -2647,67 +3320,122 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
         "Periost",
         "Ossifikation",
       ],
-      content: `## Knochen — Umbau durch Osteoblasten und Osteoklasten
+      content: `## Klinischer Einstieg
 
-Knochen leben: Jedes Jahr werden rund 10 % der gesamten Knochenmasse abgebaut und neu aufgebaut. Das Skelett ist kein statisches Gerüst — ~10 % der Knochenmasse werden jährlich umgebaut. Drei Zelltypen steuern diesen Prozess:
+Eine 68-jährige Patientin stürzt beim Einkaufen und erleidet eine Schenkelhalsfraktur — obwohl sie nur aus dem Stand gefallen ist. Die Diagnose: **Osteoporose** mit massiv reduzierter Knochendichte. Warum brechen manche Knochen bei Bagatelltrauma? Die Antwort liegt im Zusammenspiel von Skelettanatomie, Knochenumbau und hormoneller Regulation.
 
-| Zelltyp | Herkunft | Funktion | Marker |
-|---|---|---|---|
-| **Osteoblasten** | Mesenchym (Stroma) | Osteoid (Kollagen I) aufbauen, mineralisieren, RANKL + OPG produzieren | ALP ↑, Osteocalcin |
-| **Osteozyten** | eingemauerter Osteoblast | Mechanorezeption, Signalgebung über Canaliculi | — |
-| **Osteoklasten** | hämatopoetisch (Monozyten/Makrophagen) | Knochen resorbieren (HCl pH ~4,5 + Kathepsin K, Ruffled Border) | TRAP ↑ |
-
-**RANKL/OPG-System** (zentraler Regulationsschalter):
-- Osteoblasten sezernieren **RANKL** → bindet RANK auf Osteoklasten → Resorption ↑
-- Osteoblasten sezernieren auch **OPG** (Osteoprotegerin, Decoy-Rezeptor) → fängt RANKL ab → Resorption ↓
-- **Östrogen** stimuliert OPG → Knochen geschützt. Östrogenmangel (Menopause) → OPG ↓, RANKL dominiert → **Osteoporose**
-
-**Therapeutisch:** Bisphosphonate (hemmen Osteoklastenrekrutierung/Apoptose), Denosumab (monoklonaler Anti-RANKL-Antikörper = OPG-Mimikry).
-
-> **Merke:** **OsteoBlast** = Baut auf (ALP ↑, mesenchymal). **OsteoKlast** = Klaut (TRAP ↑, hämatopoetisch). **RANKL** aktiviert Osteoklasten. **OPG** hemmt RANKL. **Östrogen ↓** → OPG ↓ → Knochenabbau ↑ → **Osteoporose**.
+Die Grundlagen zu Knochengewebe (Osteoblasten, Osteoklasten, RANKL/OPG), Knorpeltypen und Kollagen sind in **bio-2-02 (Binde- und Stützgewebe)** behandelt. Hier liegt der Fokus auf dem **Skelett als Organsystem**: Gliederung, Gelenktypen, Ossifikation und Wirbelsäule.
 
 ---
 
-## Knorpeltypen, Gelenke und Kalziumregulation
+## Gliederung des Skeletts — Axial- und Appendikulärskelett
 
+{{DIAGRAM:skeleton-overview}}
 
-| Typ | Zusammensetzung | Eigenschaften | Vorkommen |
+Das erwachsene Skelett umfasst **206 Knochen**, eingeteilt in zwei funktionelle Gruppen:
+
+**Axialskelett** (80 Knochen — Körperachse, Schutz):
+- **Schädel** (22 Knochen): Hirnschädel (Frontal-, Parietal-, Temporal-, Okzipitalknochen) + Gesichtsschädel (Maxilla, Mandibula, Nasenbein, Jochbein). Schädelnähte (Suturen) = Synarthrosen (unbeweglich, fibrös verbunden)
+- **Wirbelsäule** (24 freie Wirbel + Sakrum + Steißbein): **7 HWK – 12 BWK – 5 LWK – 5 SWK (verschmolzen zum Sakrum) – 3–5 Steißwirbel**. Eselsbrücke: „Beim Frühstück um **7** isst man ein **12**-Uhr-Mittagessen um **5**"
+- **Thorax** (25 Knochen): Sternum (Manubrium, Corpus, Processus xiphoideus) + 12 Rippenpaare (7 echte [direkt am Sternum], 3 falsche [indirekt über Rippenbogen], 2 freie [flottierende Rippen])
+
+**Appendikulärskelett** (126 Knochen — Extremitäten + Gürtel):
+- **Schultergürtel**: Clavicula (Schlüsselbein) + Scapula (Schulterblatt) — einzige knöcherne Verbindung zum Rumpf: Sternoclaviculargelenk
+- **Obere Extremität**: Humerus → Radius + Ulna → Carpalknochen (8) → Metacarpalia (5) → Phalangen (14)
+- **Beckengürtel**: Os coxae (Darmbein + Sitzbein + Schambein, verschmolzen) — verbunden durch Symphysis pubica (Faserknorpel) und Iliosakralgelenk
+- **Untere Extremität**: Femur (längster Knochen) → Patella + Tibia + Fibula → Tarsalknochen (7, inkl. Talus + Calcaneus) → Metatarsalia (5) → Phalangen (14)
+
+> **Merke:** **Axialskelett** = Schädel + Wirbelsäule + Thorax (Schutz von Gehirn, Rückenmark, Herz/Lunge). **Appendikulärskelett** = Extremitäten + Gürtel (Bewegung). Wirbelsäulenformel: **7-12-5-5-(3–5)**.
+
+---
+
+## Gelenktypen — Freiheitsgrade und Beispiele
+
+{{DIAGRAM:joint-types}}
+
+Gelenke verbinden Knochen und bestimmen das Bewegungsausmaß. Grundunterscheidung: **Synarthrosen** (unecht, kein Gelenkspalt — Schädelnähte, Symphyse) vs. **Diarthrosen** (echt, mit Gelenkspalt, Kapsel und Synovia).
+
+Die wichtigsten Diarthrosen-Formen:
+
+| Gelenktyp | Achsen | Bewegung | Beispiel |
 |---|---|---|---|
-| **Hyalin** | Kollagen II + Aggrecan | Glatt, druckresistent | Gelenkflächen, Trachealringe, fetales Skelett |
-| **Faser** | Kollagen I dominiert | Zugfest + druckresistent | Bandscheiben (Anulus fibrosus), Menisci, Symphysis pubica |
-| **Elastisch** | Kollagen II + Elastinfasern | Biegsam, kehrt zurück | Ohrmuschel, Epiglottis |
+| **Kugelgelenk** | 3 (sagittal, frontal, vertikal) | Flexion/Extension, Ab-/Adduktion, Rotation | **Schulter** (beweglichstes), **Hüfte** |
+| **Scharniergelenk** | 1 (transversal) | Flexion/Extension | **Ellenbogen** (Humeroulnargelenk), Fingergelenke (PIP, DIP) |
+| **Sattelgelenk** | 2 | Flexion/Extension, Ab-/Adduktion (+ Opposition) | **Daumensattelgelenk** (CMC I) — ermöglicht Greifbewegung |
+| **Eigelenk** (Ellipsoidgelenk) | 2 | Flexion/Extension, Ab-/Adduktion | **Handgelenk** (Radiokarpalgelenk) |
+| **Drehgelenk** (Rad-/Zapfengelenk) | 1 (Längsachse) | Rotation | **Atlas-Axis** (Kopfdrehung), proximales Radioulnargelenk (Pronation/Supination) |
+| **Amphiarthrose** (straffes Gelenk) | minimal | Federung, kaum Bewegung | **Iliosakralgelenk**, Intertarsalgelenke |
 
-**Gelenktypen (Diarthrosen):**
-- **Kugelgelenk** (3 Achsen, 6 Freiheitsgrade): Schulter, Hüfte
-- **Scharniergelenk** (1 Achse): Ellenbogen, Knie (modifiziert), Fingergelenke
-- Synovialmembran produziert Gelenkflüssigkeit (Hyaluronsäure, Schmierfunktion)
+**Gelenkaufbau einer Diarthrose:**
+- **Gelenkknorpel** (hyalin) auf den Gelenkflächen — druckverteilend, reibungsarm
+- **Gelenkkapsel**: äußere Membrana fibrosa (Stabilität) + innere **Membrana synovialis** (produziert Synovia)
+- **Synovia** (Gelenkflüssigkeit): Hyaluronsäure + Gleitmittel → Schmierung + Ernährung des avaskulären Knorpels
+- **Bänder** (Ligamente): Knochen-Knochen-Verbindung, Stabilisierung. Nicht verwechseln mit **Sehnen** (Muskel-Knochen)!
+
+> **Merke:** Kugelgelenk = 3 Achsen (Schulter, Hüfte). Scharniergelenk = 1 Achse (Ellenbogen). Sattelgelenk = 2 Achsen (Daumen — Greifhand des Menschen!). **Synovia** ernährt den avaskulären Gelenkknorpel durch Diffusion.
+
+---
+
+## Ossifikation — zwei Wege zum Knochen
+
+Knochen entsteht auf zwei grundverschiedenen Wegen, das Endprodukt ist aber identisch: **Lamellenknochen**.
+
+**Desmale (direkte) Ossifikation:**
+Mesenchymale Stammzellen differenzieren direkt zu Osteoblasten → Osteoid-Synthese → Mineralisation. Kein Knorpelzwischenstadium. Betrifft: **flache Knochen** — Schädelknochen (Frontal-, Parietalknochen), Clavicula, Teile der Mandibula. Beim Neugeborenen sind die Schädelnähte noch bindegewebig (Fontanellen) — sie schließen sich im 1.–2. Lebensjahr.
+
+**Chondrale (indirekte, enchondrale) Ossifikation:**
+Ein hyalines **Knorpelmodell** wird als Platzhalter gebildet und dann schrittweise durch Knochen ersetzt. Ablauf:
+1. Chondrozyten hypertrophieren (vergrößern sich) im Zentrum des Knorpelmodells
+2. Knorpelmatrix kalzifiziert → Chondrozyten sterben ab (Apoptose)
+3. Blutgefäße wachsen ein → Osteoblasten wandern entlang der Gefäße ein
+4. Knochen ersetzt den Knorpel von innen nach außen
+
+Betrifft: **Röhrenknochen** (Femur, Tibia, Humerus), Rippen, Wirbelkörper — also den Großteil des Skeletts.
+
+**Epiphysenfuge (Wachstumsfuge):**
+Bei Kindern und Jugendlichen liegt zwischen Epi- und Diaphyse die **Epiphysenfuge** — eine Zone aus proliferierenden Chondrozyten, die für das **Längenwachstum** verantwortlich ist. Nach Abschluss des Wachstums verknöchert die Fuge (Epiphysenschluss, ~16–20 J.). Klinisch: Wachstumshormon (GH/STH) stimuliert die Epiphysenfuge → bei GH-Überschuss vor Schluss: **Gigantismus**; nach Schluss: **Akromegalie** (Vergrößerung von Akren, Kiefer, Zunge).
+
+> **Merke:** **Desmal** = direkt, ohne Knorpel (Schädeldach, Clavicula). **Chondral** = über Knorpelmodell (Röhrenknochen, Rippen). Die **Epiphysenfuge** ermöglicht Längenwachstum bis zum Epiphysenschluss (~16–20 J.).
+
+---
+
+## Knochenumbau und Remodeling
+
+Das Skelett wird lebenslang umgebaut — jährlich werden ~10 % der Knochenmasse erneuert. Für Zelltypen und RANKL/OPG-Regulation → siehe **bio-2-02**. Hier die klinisch wichtigsten Aspekte:
+
+**Wolff'sches Gesetz:** Knochen passt seine Struktur an die mechanische Belastung an — Trabekel richten sich entlang der Hauptkraftlinien aus. Immobilisation → Knochenabbau ↑ (Astronauten verlieren ~1–2 % Knochenmasse/Monat in der Schwerelosigkeit).
 
 **Ca²⁺-Regulation** (Normalwert: 2,2–2,6 mmol/L):
-- **PTH** (Nebenschilddrüse, bei Ca²⁺ ↓): Osteoklasten ↑ → Ca²⁺ ↑; Vitamin D-Aktivierung (25-OH → 1,25-OH); Niere: Ca²⁺-Rückresorption ↑, Phosphat-Ausscheidung ↑
-- **Vitamin D** (1,25-OH, Calcitriol): Darm-Ca²⁺-Absorption ↑ (Calbindin), Niere-Ca²⁺-Retention ↑
-- **Calcitonin** (C-Zellen der Schilddrüse, bei Ca²⁺ ↑): Osteoklasten ↓ → Ca²⁺ ↓ (physiologisch weniger relevant)
+- **PTH** (Nebenschilddrüse, bei Ca²⁺ ↓): Osteoklasten ↑ → Ca²⁺-Freisetzung; Vitamin-D-Aktivierung (25-OH → 1,25-OH₂D₃ in der Niere); renale Ca²⁺-Rückresorption ↑
+- **Calcitonin** (C-Zellen, bei Ca²⁺ ↑): Osteoklasten ↓ → Ca²⁺ ↓ (klinisch weniger relevant)
+- **Vitamin D** (Calcitriol): Darm-Ca²⁺-Absorption ↑ (via Calbindin)
 
-> **Merke:** **Knorpel avaskulär** → schlechte Heilung. Hyalin (Gelenk, Kollagen II) vs. Faser (Bandscheibe, Kollagen I) vs. Elastisch (Ohr, Elastin). **PTH** ↑ Ca²⁺ (Osteoklasten ↑, Vitamin D ↑, Niere ↑). **Calcitonin** ↓ Ca²⁺.
+**Klinisch:** Rachitis (Kinder) / Osteomalazie (Erwachsene) = Vitamin-D-Mangel → gestörte Mineralisation → weiche Knochen. Osteogenesis imperfecta = Kollagen-I-Defekt → brüchige Knochen, blaue Skleren.
+
+> **Merke:** **PTH ↑ Ca²⁺** (Knochenabbau ↑, Vitamin D ↑, renale Rückresorption ↑). **Calcitonin ↓ Ca²⁺**. Bewegung stärkt Knochen (Wolff'sches Gesetz), Immobilisation schwächt sie.
 
 ---
 
-## Ossifikation — Knochenbildung
+## Wirbelsäule — Krümmungen und Bandscheiben
 
+Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier physiologische Krümmungen**, die wie ein doppeltes S Stöße abfedern:
 
-**Enchondrale Ossifikation** (indirekter Weg):
-Ein Knorpelmodell (Chondrozyten) wird zunächst gebildet und dann schrittweise durch Knochen ersetzt. Ablauf: Chondrozyten hypertrophieren → Knorpelmatrix kalzifiziert → Osteoblasten wandern ein → Knochen ersetzt Knorpel. Betrifft: Röhrenknochen (Femur, Tibia, Humerus), Rippen, Wirbelkörper.
+- **Halslordose** (HWS, konvex nach vorn) — ermöglicht aufrechte Kopfhaltung
+- **Brustkyphose** (BWS, konvex nach hinten) — Raum für Herz und Lunge
+- **Lendenlordose** (LWS, konvex nach vorn) — trägt das Körpergewicht
+- **Sakralkyphose** (Sakrum, fixiert)
 
-**Desmale Ossifikation** (direkter Weg):
-Knochen entsteht direkt aus mesenchymalen Stammzellen ohne Knorpelvorlage. Betrifft: Schädelknochen (Frontal-, Parietalknochen), Schlüsselbein, Teile des Unterkiefers.
+**Pathologische Abweichungen:**
+- **Hyperkyphose** (verstärkte BWS-Kyphose): Rundrücken, häufig bei Osteoporose (Wirbelkörper-Sinterungsfrakturen → Größenverlust)
+- **Hyperlordose** (verstärkte LWS-Lordose): Hohlkreuz, z. B. in Schwangerschaft
+- **Skoliose**: seitliche Verkrümmung (>10° Cobb-Winkel) — häufigste Wirbelsäulendeformität bei Jugendlichen (idiopathisch, Mädchen häufiger)
 
-**Zelltypen der Knochenentwicklung:**
-- **Osteoblasten**: knochenbildende Zellen, sezernieren Kollagen I + Osteoid, werden zu Osteozyten eingemauert
-- **Osteozyten**: reife Knochenzellen im Lakunen-Kanälchen-System, mechanosensitiv
-- **Osteoklasten**: knochenabbauende mehrkernige Riesenzellen (RANKL/OPG-System)
+**Bandscheibe (Discus intervertebralis):**
+- **Nucleus pulposus** (gallertiger Kern): wasserreich, Proteoglykane → Druckverteilung
+- **Anulus fibrosus** (Faserring): konzentrische Lamellen aus Faserknorpel (Kollagen I) → hält Nucleus in Position
+- Häufigster **Bandscheibenvorfall** (Prolaps): L4/L5 und L5/S1 → Kompression des N. ischiadicus → **Ischialgie** (ausstrahlender Beinschmerz, Lasègue-Zeichen positiv)
 
-**Klinisch:** Rachitis (Vitamin-D-Mangel → gestörte Mineralisation), Osteogenesis imperfecta (Kollagen-I-Defekt).
-
-> **Merke:** Enchondral = Knorpel zuerst (Extremitäten). Desmal = direkt (Schädel). Beide Wege produzieren identisch strukturierten Lamellenknochen — nur der Weg ist verschieden.`,
+> **Merke:** Lordose = nach vorn konvex (HWS, LWS). Kyphose = nach hinten konvex (BWS, Sakrum). **Skoliose** = seitlich. Bandscheibenvorfall am häufigsten lumbal (L4/L5, L5/S1) → Ischialgie.`,
       lernziele: [
         "Den Unterschied zwischen Osteoblasten (Knochenaufbau, Kollagen I, Mineralisierung) und Osteoklasten (Knochenabbau, H⁺, mehrkernig) erklären.",
         "Das RANKL/OPG-System und seine Bedeutung für die Osteoklastenaktivierung und Osteoporose-Therapie (Denosumab) darstellen.",

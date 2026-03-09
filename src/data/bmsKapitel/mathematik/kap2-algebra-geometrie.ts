@@ -13,183 +13,199 @@ export const mathKapAlgebra: Kapitel = {
       title: "Gleichungen und Ungleichungen",
       stichworte: [
         "Lineare Gleichung",
-        "Quadratische Gleichung",
-        "Diskriminante",
-        "Mitternachtsformel",
-        "Ungleichung",
-        "Vorzeichenumkehr",
+        "Äquivalenzumformung",
         "Gleichungssystem",
         "Substitutionsverfahren",
         "Additionsverfahren",
-        "Vieta",
+        "Gleichsetzungsverfahren",
+        "Ungleichung",
+        "Vorzeichenumkehr",
+        "Bruchgleichung",
+        "Definitionsmenge",
         "Dosierungsberechnung",
         "Verdünnungsformel",
       ],
-      content: `## Grundprinzip der Gleichungsumformung
+      content: `## Wie viel NaCl für 500 mL einer 0,9%-Lösung?
 
-**Idee:** Eine Gleichung A = B bleibt „wahr", wenn auf **beiden Seiten** dieselbe Operation ausgeführt wird. So kannst du schrittweise die gesuchte Variable isolieren (allein auf einer Seite), ohne die Lösungsmenge zu ändern. Ziel ist immer: x = … (bzw. die gesuchte Größe).
-
-**Verfahren:** Erlaubte Schritte: Addition/Subtraktion derselben Zahl auf beiden Seiten; Multiplikation/Division beider Seiten mit derselben Zahl (niemals durch 0); Wurzelziehen oder Logarithmieren auf beiden Seiten (Definitionsbereich beachten). Bei linearen Gleichungen: Klammern auflösen → Brüche beseitigen (Hauptnenner) → x-Terme auf eine Seite, Zahlen auf die andere → durch Koeffizient von x teilen → Probe.
-
-
-
-Eine **Gleichung** ist eine Aussage der Form **A = B**, wobei A und B mathematische Ausdrücke sind. **Äquivalenzumformung** (gültigkeitserhaltende Umformung) bedeutet: Die Gleichung bleibt gültig, wenn du auf **beiden Seiten** dieselbe Operation durchführst. Erlaubte Operationen sind:
-
-- Addition oder Subtraktion derselben Zahl auf beiden Seiten
-- Multiplikation oder Division beider Seiten mit derselben Zahl (niemals durch null)
-- Anwenden einer Funktion auf beiden Seiten (z.B. Wurzelziehen, Logarithmieren — Definitionsbereich beachten)
-
-Ziel ist stets, die gesuchte Variable zu isolieren, d.h. allein auf einer Seite stehen zu haben.
-
-**Typische Prüfungsfehler:** Operation nur auf einer Seite durchführen (Gleichung wird falsch). Durch null teilen. Bei Ungleichungen: Multiplikation/Division mit negativer Zahl ohne Vorzeichenumkehr. Kehrwert falsch: (a/b)⁻¹ = b/a (nicht a/b). Hauptnenner vergessen bei Brüchen.
-
-**Umformen von Termen (MedAT-typisch):** Ist **a = b/c** gegeben und **d = a⁻¹** (Kehrwert von a), so gilt **d = 1/a = 1/(b/c) = c/b**. Merke: Bruch invertieren heißt Zähler und Nenner tauschen — also **d = c/b** (nicht d = b/c, nicht d = b−c). Allgemein: **a/b invertieren → (a/b)⁻¹ = b/a**.
-
-> **Merke:** Was links passiert, passiert auch rechts — jede Operation auf BEIDE Seiten der Gleichung anwenden, sonst verliert sie ihre Gültigkeit. **a = b/c und d = a⁻¹ ⇒ d = c/b.**
-
-## Lineare Gleichungen — Rechenprinzip Schritt für Schritt
-
-Eine **lineare Gleichung** in einer Unbekannten x hat die Form **ax + b = c** (a, b, c reelle Zahlen, a ≠ 0). **Rechenweg immer in dieser Reihenfolge:**
-
-1. **Klammern** ausmultiplizieren (Distributivgesetz: a(b+c) = ab+ac)
-2. **Brüche** beseitigen: mit dem **Hauptnenner** (kgV = kleinstes gemeinsames Vielfaches aller Nenner) multiplizieren
-3. Alle **Terme mit x** auf eine Seite bringen (Addition/Subtraktion)
-4. Alle **Zahlen** auf die andere Seite bringen
-5. Durch den **Koeffizienten** (Vorfaktor) **von x** dividieren
-6. **Probe:** Lösung in die Ausgangsgleichung einsetzen
-
-**Beispiel (Schritt für Schritt):** 5x − 3 = 2x + 9.  
-Schritt 1–2: Keine Klammern/Brüche.  
-Schritt 3: 2x subtrahieren → 3x − 3 = 9.  
-Schritt 4: +3 addieren → 3x = 12.  
-Schritt 5: durch 3 teilen → **x = 4**.  
-Schritt 6: Probe: 5(4) − 3 = 17 und 2(4) + 9 = 17 ✓
-
-Gleichungen mit Brüchen: Mit dem Hauptnenner (kgV aller Nenner) multiplizieren, um Brüche zu eliminieren. Beispiel: x/3 + x/4 = 7. Multipliziere mit 12: 4x + 3x = 84, also 7x = 84, x = 12.
-
-Gleichungen mit Klammern: Zuerst ausmultiplizieren (Distributivgesetz), dann wie gewohnt vorgehen. Beispiel: 3(2x − 4) = 2(x + 5) ergibt 6x − 12 = 2x + 10, dann 4x = 22, x = 5,5.
-
-> **Merke:** Schema für lineare Gleichungen: (1) Klammern ausmultiplizieren, (2) Brüche durch HN-Multiplikation eliminieren, (3) x-Terme auf eine Seite, Zahlen auf die andere, (4) durch Koeffizient dividieren, (5) Probe einsetzen.
-
-## Gleichungssysteme mit zwei Unbekannten
-
-Ein lineares Gleichungssystem mit zwei Gleichungen und zwei Unbekannten (x, y) hat im Allgemeinen genau eine Lösung.
-
-Substitutionsverfahren (Einsetzmethode): Eine Gleichung nach einer Variablen auflösen, Ergebnis einsetzen.
-
-Beispiel: (I) x + y = 10 und (II) 3x − y = 6. Aus (I): y = 10 − x. Einsetzen in (II): 3x − (10 − x) = 6, also 4x = 16, x = 4. Dann y = 10 − 4 = 6.
-
-Additionsverfahren: Die Gleichungen mit Faktoren multiplizieren, sodass eine Variable eliminiert wird.
-
-Beispiel: (I) 2x + 3y = 12 und (II) 4x − y = 10. Multipliziere (II) mit 3: 12x − 3y = 30. Addiere mit (I): 14x = 42, x = 3. Einsetzen: 2(3) + 3y = 12, y = 2.
-
-> **Merke:** Substitution eignet sich, wenn eine Variable Koeffizient ±1 hat. Addition/Elimination eignet sich, wenn sich Koeffizienten durch Multiplikation leicht aufheben lassen. Immer Probe durch Einsetzen in BEIDE Originalgleichungen!
-
-## Quadratische Gleichungen (Kurzüberblick)
-
-> **Vertiefung:** Ausführliche Behandlung inkl. binomischer Formeln, pq-Formel und Anwendungen im UK **Quadratische Gleichungen und binomische Formeln** (ma-2-03). Hier: Kurzüberblick für den Zusammenhang mit linearen Gleichungen und Ungleichungen.
-
-Eine quadratische Gleichung hat die Normalform ax² + bx + c = 0 (a ungleich null). Die allgemeine Lösungsformel (Mitternachtsformel, auch abc-Formel genannt) lautet:
-
-x = (−b +/- Wurzel aus (b² − 4ac)) / (2a)
-
-Der Ausdruck D = b² − 4ac heißt **Diskriminante** (lat. „Unterscheider" -- entscheidet über Lösungsanzahl):
-- D > 0: zwei verschiedene reelle Lösungen
-- D = 0: genau eine Lösung (Doppellösung): x = − b / (2a)
-- D < 0: keine reelle Lösung
-
-Beispiel: 2x² − 5x + 3 = 0. a = 2, b = − 5, c = 3. D = 25 − 24 = 1. x = (5 +/- 1) / 4. Also x1 = 6/4 = 1,5 und x2 = 4/4 = 1.
-
-Faktorisierung: Wenn Lösungen ganze Zahlen sind, kann man faktorisieren. Beispiel: x² − 7x + 12 = 0. Zwei Zahlen mit Summe 7 und Produkt 12 sind 3 und 4. Also (x − 3)(x − 4) = 0, Lösungen x1 = 3, x2 = 4.
-
-Quadratisches Ergänzen: x² + px + q = 0 wird zu (x + p/2)² = (p/2)² − q, woraus x = − p/2 +/- Wurzel aus ((p/2)² − q).
-
-> **Merke:** Diskriminante D = b² − 4ac: D > 0 → zwei reelle Lösungen, D = 0 → eine Doppellösung (x = −b/2a), D < 0 → keine reelle Lösung. Mitternachtsformel: x = (−b ± √D) / (2a).
-
-## Ungleichungen
-
-**Idee:** Ungleichungen (A < B, A ≤ B, …) werden wie Gleichungen umgeformt — **gleiche Operation auf beiden Seiten** — mit einer **kritischen Ausnahme:** Multiplizierst oder dividierst du mit einer **negativen** Zahl, dreht sich das Relationszeichen um, weil die Anordnung auf der Zahlengeraden sich umkehrt.
-
-**Verfahren:** Wie bei Gleichungen: Terme sortieren, Variable isolieren. **Vor Division/Multiplikation prüfen:** Steht da eine **negative** Zahl? → Dann < ↔ > und ≤ ↔ ≥ **umkehren**. Bei positiven Zahlen kein Umdrehen.
-
-**Typische Fallen:** Nach Division durch −3 das Zeichen vergessen umzudrehen (z. B. −3x > 6 fälschlich zu x > −2 statt x < −2). Doppelte Ungleichung: Operation auf **alle drei** Teile anwenden.
+Physiologische Kochsalzlösung (NaCl 0,9 %) gehört zu den häufigsten Infusionen im Krankenhaus. Die Frage „Wie viel Gramm NaCl brauche ich für 500 mL?" ist nichts anderes als eine **lineare Gleichung**: 0,009 × 500 = x → x = 4,5 g. Gleichungen lösen heißt: eine unbekannte Größe systematisch isolieren — und genau das trainiert dieses Kapitel.
 
 ---
 
-Ungleichungen verwenden statt = eines der Zeichen <, >, ≤, ≥. Die Umformungsregeln sind fast identisch zu Gleichungen, mit einer entscheidenden Ausnahme:
+{{DIAGRAM:equation-balance}}
 
-Bei Multiplikation oder Division mit einer negativen Zahl kehrt sich das Ungleichungszeichen um!
+## Äquivalenzumformung — das Waage-Modell
 
-Beispiel: − 3x + 6 > 12. Subtrahiere 6: − 3x > 6. Dividiere durch − 3 (Vorzeichen dreht um!): x < − 2.
+Stell dir eine Gleichung als **Balkenwaage** vor: links und rechts liegt jeweils ein Ausdruck, und die Waage ist im Gleichgewicht (A = B). Solange du auf **beiden Seiten** dasselbe tust, bleibt das Gleichgewicht erhalten.
 
-Doppelte Ungleichungen: Alle Operationen auf alle drei Teile anwenden. Beispiel: 1 ≤ 2x − 3 < 7. Addiere 3 überall: 4 ≤ 2x < 10. Dividiere durch 2: 2 ≤ x < 5. Lösungsmenge: [2, 5).
+**Erlaubte Operationen (Äquivalenzumformungen):**
 
-> **Merke:** Ungleichungs-Falle: Bei Multiplikation/Division mit einer NEGATIVEN Zahl dreht sich das Ungleichungszeichen um! Aus < wird >, aus ≥ wird ≤. Positive Zahlen → kein Umdrehen.
+- **Addition/Subtraktion** derselben Zahl auf beiden Seiten
+- **Multiplikation/Division** beider Seiten mit derselben Zahl (**niemals durch null!**)
+- **Funktion anwenden** auf beiden Seiten (z. B. Wurzelziehen, Logarithmieren — Definitionsbereich beachten)
 
-## Klinische Anwendung: Dosierungsberechnungen
+**Verboten:** Operation nur auf einer Seite durchführen (Gleichung wird falsch). Durch null teilen (undefiniert). Kehrwert falsch bilden: (a/b)⁻¹ = b/a, **nicht** a/b.
 
-In der Klinik treten lineare Gleichungen bei nahezu jeder Dosierungsaufgabe auf.
+> **Merke:** Was links passiert, passiert auch rechts — die goldene Regel der Gleichungsumformung. Jede Operation auf BEIDE Seiten anwenden, sonst verliert die Gleichung ihre Gültigkeit.
 
-Gesamtdosis [mg] = Dosierung [mg/kg] × Körpergewicht [kg].
+---
 
-Für ein Medikament mit 5 mg/kg Dosis und einem 72-kg-Patienten: D = 5 × 72 = 360 mg.
+## Lineare Gleichungen — Schritt für Schritt
 
-Liegt das Medikament als Lösung vor: V [mL] = D [mg] / c [mg/mL]. Für 360 mg bei c = 4 mg/mL: V = 360 / 4 = 90 mL.
+Eine **lineare Gleichung** hat die Form **ax + b = c** (a ≠ 0). Der Lösungsweg folgt immer demselben Schema:
 
-Die Verdünnungsformel c1 × V1 = c2 × V2 ist ebenfalls eine lineare Gleichung. Beispiel: Stammlösung c1 = 20 mg/mL, Gebrauchslösung c2 = 5 mg/mL mit V2 = 100 mL. V1 = c2 × V2 / c1 = 5 × 100 / 20 = 25 mL Stammlösung, aufgefüllt auf 100 mL.
+1. **Klammern** ausmultiplizieren (Distributivgesetz: a(b + c) = ab + ac)
+2. **Brüche** beseitigen: beide Seiten mit dem **Hauptnenner** (kgV aller Nenner) multiplizieren
+3. Alle **x-Terme** auf eine Seite, alle **Zahlen** auf die andere
+4. Durch den **Koeffizienten von x** dividieren
+5. **Probe:** Lösung in die Ausgangsgleichung einsetzen
 
-## Rechenbeispiele
+**Rechenbeispiel — Denkprozess:**
 
-**Beispiel 1 — Infusionsrate Propofol (Gleichungssystem):**
-Propofol-Dosis: 6 mg/kg/h, Patient 80 kg. Stammlösung: 10 mg/mL. Schritt 1: Dosis/h = 6 × 80 = 480 mg/h. Schritt 2: V = 480 / 10 = **48 mL/h**. Tropfgeschwindigkeit bei 20 Tropfen/mL: 48 × 20 / 60 = **16 Tropfen/min**.
+Gegeben: 5x − 3 = 2x + 9.
+*Denkprozess:* Keine Klammern/Brüche → direkt x-Terme sammeln.
+Schritt 3: −2x auf beiden Seiten → 3x − 3 = 9.
+Schritt 4: +3 auf beiden Seiten → 3x = 12.
+Schritt 5: ÷3 → **x = 4**.
+Probe: 5(4) − 3 = 17 und 2(4) + 9 = 17 ✓
 
-**Beispiel 2 — Quadratische Gleichung in der Pharmakokinetik:**
-Wirkstoffkonzentration c(t) = − 2t² + 20t (in mg/L, t in Stunden). Maximale Konzentration: t_max = − b/(2a) = − 20/(2 × (−2)) = **5 h**. c_max = − 2 × 25 + 20 × 5 = **50 mg/L**. Scheitelpunkt der Parabel bestimmt optimale Dosierungszeit.
+**Rechenbeispiel mit Brüchen — Denkprozess:**
 
-**Beispiel 3 — Gleichungssystem: Mischung zweier Infusionslösungen:**
-Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. System: V_A + V_B = 500 und 0,05 × V_A + 0,20 × V_B = 0,08 × 500 = 40. Substitution: V_A = 500 − V_B. Einsetzen: 0,05 × (500 − V_B) + 0,20 × V_B = 40. 25 − 0,05 V_B + 0,20 V_B = 40. 0,15 V_B = 15. V_B = **100 mL**, V_A = **400 mL**.`,
+Gegeben: x/3 + x/4 = 7.
+*Denkprozess:* Hauptnenner von 3 und 4 ist 12. Beide Seiten × 12.
+4x + 3x = 84 → 7x = 84 → **x = 12**.
+Probe: 12/3 + 12/4 = 4 + 3 = 7 ✓
+
+> **Merke:** Schema für lineare Gleichungen: (1) Klammern auflösen, (2) Hauptnenner multiplizieren, (3) x-Terme sammeln, (4) durch Koeffizient dividieren, (5) Probe einsetzen — in dieser Reihenfolge.
+
+---
+
+## Lineare Gleichungssysteme (2 × 2)
+
+Zwei Gleichungen mit zwei Unbekannten (x, y) haben im Regelfall genau eine Lösung. Drei Verfahren stehen zur Wahl:
+
+**1. Einsetzungsverfahren (Substitution):** Eine Gleichung nach einer Variablen auflösen, in die andere einsetzen. Ideal, wenn eine Variable Koeffizient ±1 hat.
+
+**Rechenbeispiel — Denkprozess:**
+
+(I) x + y = 10, (II) 3x − y = 6.
+*Denkprozess:* In (I) steht y mit Koeffizient 1 → leicht isolierbar.
+Aus (I): y = 10 − x. Einsetzen in (II): 3x − (10 − x) = 6 → 4x − 10 = 6 → 4x = 16 → **x = 4**, y = 6.
+Probe: (I) 4 + 6 = 10 ✓ (II) 12 − 6 = 6 ✓
+
+**2. Gleichsetzungsverfahren:** Beide Gleichungen nach derselben Variablen auflösen und gleichsetzen.
+
+**3. Additionsverfahren (Elimination):** Gleichungen so multiplizieren, dass sich eine Variable bei Addition aufhebt.
+
+**Rechenbeispiel — Denkprozess:**
+
+(I) 2x + 3y = 12, (II) 4x − y = 10.
+*Denkprozess:* Multipliziere (II) × 3 → 12x − 3y = 30. Addiere mit (I): 14x = 42 → **x = 3**. Einsetzen: 6 + 3y = 12 → **y = 2**.
+Probe: (I) 6 + 6 = 12 ✓ (II) 12 − 2 = 10 ✓
+
+> **Merke:** Substitution bei Koeffizient ±1. Addition bei leicht eliminierbaren Koeffizienten. Immer Probe in BEIDE Originalgleichungen einsetzen!
+
+---
+
+{{DIAGRAM:inequality-numberline}}
+
+## Ungleichungen — die Vorzeichenfalle
+
+Ungleichungen (A < B, A ≤ B, …) werden wie Gleichungen umgeformt — mit einer **kritischen Ausnahme:**
+
+**Bei Multiplikation oder Division mit einer negativen Zahl kehrt sich das Ungleichungszeichen um!** Grund: Die Anordnung auf der Zahlengeraden wird gespiegelt (z. B. 2 < 3, aber −2 > −3).
+
+**Rechenbeispiel — Denkprozess:**
+
+Gegeben: −3x + 6 > 12.
+*Denkprozess:* Erst +/− ohne Vorzeichenwechsel, dann Division durch negative Zahl.
+Schritt 1: −6 auf beiden Seiten → −3x > 6.
+Schritt 2: ÷(−3) → **x < −2** (Zeichen dreht um!).
+
+**Doppelte Ungleichung — Denkprozess:**
+
+Gegeben: 1 ≤ 2x − 3 < 7.
+*Denkprozess:* Alle Operationen auf **alle drei Teile** anwenden.
++3 überall: 4 ≤ 2x < 10. ÷2: **2 ≤ x < 5**. Lösungsmenge: [2, 5).
+
+**Betragsungleichungen:** |x − a| < r bedeutet a − r < x < a + r (offenes Intervall um a mit Radius r). |x − a| > r bedeutet x < a − r oder x > a + r.
+
+> **Merke:** Multiplikation/Division mit negativer Zahl: Ungleichungszeichen umkehren! Aus < wird >, aus ≥ wird ≤. Das ist die häufigste Fehlerquelle im MedAT-Mathe-Teil.
+
+---
+
+## Bruchgleichungen — Definitionsmenge beachten
+
+Bei Gleichungen mit der Variablen im **Nenner** muss vor dem Lösen die **Definitionsmenge** bestimmt werden: Alle x-Werte, für die ein Nenner null wird, sind ausgeschlossen.
+
+**Rechenbeispiel — Denkprozess:**
+
+Gegeben: 3/(x − 2) = 6/x.
+*Denkprozess:* Nenner x − 2 und x → Definitionsmenge: x ≠ 0 und x ≠ 2.
+Beide Seiten × x(x − 2): 3x = 6(x − 2) → 3x = 6x − 12 → −3x = −12 → **x = 4**.
+Probe: 3/(4 − 2) = 3/2 und 6/4 = 3/2 ✓. x = 4 liegt in der Definitionsmenge ✓.
+
+**Typische Falle:** Eine rechnerische Lösung kann außerhalb der Definitionsmenge liegen — dann hat die Gleichung keine Lösung. Immer prüfen!
+
+> **Merke:** Bei Bruchgleichungen zuerst Definitionsmenge bestimmen (Nenner ≠ 0), dann mit dem Nenner multiplizieren. Jede Lösung gegen die Definitionsmenge prüfen!
+
+---
+
+## Klinische Anwendung: Verdünnungsformel und Mischungsrechnung
+
+Die **Verdünnungsformel c₁ × V₁ = c₂ × V₂** ist eine lineare Gleichung und kommt täglich bei Infusionszubereitung, Chemotherapie und Notfallmedikamenten vor.
+
+**Rechenbeispiel — Denkprozess:**
+
+Stammlösung c₁ = 20 mg/mL, Ziel: c₂ = 5 mg/mL bei V₂ = 100 mL.
+*Denkprozess:* Nach V₁ auflösen: V₁ = c₂ × V₂ / c₁ = 5 × 100 / 20 = **25 mL** Stammlösung, aufgefüllt auf 100 mL.
+
+**Rechenbeispiel — Gleichungssystem (Mischung zweier Lösungen):**
+
+Lösung A: 5 % Glucose, Lösung B: 20 % Glucose. Ziel: 500 mL einer 8%-Lösung.
+System: V_A + V_B = 500 und 0,05 V_A + 0,20 V_B = 40.
+Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0,15 V_B = 40 → V_B = **100 mL**, V_A = **400 mL**.`,
       lernziele: [
         "Lineare Gleichungen durch systematische Umformung nach einer Variablen auflösen und die Lösung mit einer Probe überprüfen",
         "Lineare Gleichungssysteme mit zwei Unbekannten mithilfe des Substitutions- und des Additionsverfahrens lösen",
-        "Quadratische Gleichungen mit der allgemeinen Lösungsformel, durch Faktorisierung und durch Vieta-Beziehungen lösen sowie die Diskriminante interpretieren",
+        "Bruchgleichungen unter Beachtung der Definitionsmenge lösen und Scheinlösungen erkennen",
         "Ungleichungen korrekt umformen und dabei die Vorzeichenregel bei Multiplikation und Division mit negativen Zahlen beachten",
         "Klinische Dosierungs- und Verdünnungsaufgaben als lineare Gleichungen formulieren und lösen",
       ],
       sections: [
         {
-          heading: "Lineare Gleichungen — Umformungsregeln und Strategie",
-          text: "Das Grundprinzip: Was man auf einer Seite tut, muss man auf der anderen auch tun. Die vier erlaubten Basisoperationen sind Addition, Subtraktion, Multiplikation und Division mit derselben Zahl (Division niemals durch null). Bei Gleichungen mit Klammern zuerst ausmultiplizieren (Distributivgesetz); bei Gleichungen mit Brüchen zuerst mit dem Hauptnenner multiplizieren. Nach jeder Umformung empfiehlt sich eine Probe durch Einsetzen. In der Medizin erscheinen lineare Gleichungen bei der Berechnung der Infusionsrate (V = c × t), der Verdünnungsformel (c1V1 = c2V2) oder der Dosierungsformel (Dosis = Konzentration × Körpergewicht).",
+          heading: "Äquivalenzumformung — das Waage-Modell",
+          text: "Eine Gleichung ist wie eine Balkenwaage im Gleichgewicht. Erlaubte Operationen: Addition/Subtraktion, Multiplikation/Division (nie durch null), Funktion anwenden auf beiden Seiten. So wird die Variable schrittweise isoliert.",
           merksatz:
-            "Was links passiert, passiert auch rechts — die goldene Regel der Gleichungsumformung. Probe nie vergessen!",
+            "Was links passiert, passiert auch rechts — die goldene Regel der Gleichungsumformung.",
         },
         {
-          heading: "Quadratische Gleichungen und die Diskriminante",
-          text: "Die Lösungsformel x = (−b +/- Wurzel aus D) / (2a) ist das Universalwerkzeug für quadratische Gleichungen. Die Diskriminante D = b² − 4ac gibt vor der Rechnung Auskunft: D > 0 bedeutet zwei Lösungen, D = 0 bedeutet eine Doppellösung, D < 0 bedeutet keine reelle Lösung. Bei einfachen Koeffizienten ist das Faktorisieren via Vieta oft schneller. Quadratisches Ergänzen liefert zusätzlich den Scheitelpunkt der Parabel.",
+          heading: "Lineare Gleichungen — Schritt für Schritt",
+          text: "Schema: (1) Klammern ausmultiplizieren, (2) Hauptnenner multiplizieren, (3) x-Terme auf eine Seite, (4) durch Koeffizient dividieren, (5) Probe einsetzen. In der Medizin erscheinen lineare Gleichungen bei Infusionsraten, Verdünnungsformeln und Dosierungsberechnungen.",
           merksatz:
-            "Diskriminante D = b² − 4ac: D>0 ergibt 2 Lösungen, D=0 eine Lösung, D<0 keine reelle Lösung.",
+            "Klammern → Brüche → x-Terme sammeln → dividieren → Probe. In dieser Reihenfolge.",
         },
         {
           heading: "Ungleichungen — die Vorzeichenfalle",
-          text: "Ungleichungen funktionieren wie Gleichungen, mit einer kritischen Ausnahme: Bei Multiplikation oder Division mit einer negativen Zahl dreht sich das Ungleichungszeichen um. Das ist die häufigste Fehlerquelle. Bei doppelten Ungleichungen müssen alle Operationen auf alle drei Teile angewendet werden. Die Lösungsmenge einer Ungleichung ist ein Intervall, kein einzelner Punkt.",
+          text: "Ungleichungen funktionieren wie Gleichungen, mit einer kritischen Ausnahme: Bei Multiplikation oder Division mit einer negativen Zahl dreht sich das Ungleichungszeichen um. Bei doppelten Ungleichungen alle Operationen auf alle drei Teile anwenden. Betragsungleichungen ergeben Intervalle.",
           merksatz:
             "Multiplikation/Division mit negativer Zahl: Ungleichungszeichen umkehren! Aus < wird >, aus ≥ wird ≤.",
         },
         {
-          heading: "Gleichungssysteme — Substitution vs. Addition",
-          text: "Beim Substitutionsverfahren wird eine Gleichung nach einer Variablen aufgelöst und eingesetzt — geeignet, wenn eine Variable Koeffizient 1 oder − 1 hat. Beim Additionsverfahren werden Gleichungen mit Faktoren multipliziert, sodass eine Variable bei Addition eliminiert wird. Beide Verfahren liefern dasselbe Ergebnis. In der Medizin erscheinen Systeme z.B. bei der Berechnung gemischter Lösungen oder bei der Bestimmung zweier unbekannter Parameter aus zwei Messwerten.",
+          heading: "Gleichungssysteme und Bruchgleichungen",
+          text: "Drei Verfahren für 2×2-Systeme: Einsetzung (bei Koeffizient ±1), Gleichsetzung, Addition (bei leicht eliminierbaren Koeffizienten). Bei Bruchgleichungen zuerst Definitionsmenge bestimmen (Nenner ≠ 0), dann mit Nenner multiplizieren und Lösung gegen Definitionsmenge prüfen.",
           merksatz:
-            "Substitution: wenn eine Variable leicht isolierbar ist. Addition: wenn Koeffizienten sich leicht eliminieren lassen.",
+            "Substitution bei Koeffizient ±1, Addition bei leicht eliminierbaren Koeffizienten. Bruchgleichungen: Definitionsmenge zuerst!",
         },
       ],
       merksätze: [
         "Was links passiert, passiert auch rechts — Grundregel jeder Gleichungsumformung.",
+        "Schema: Klammern → Hauptnenner → x-Terme sammeln → dividieren → Probe.",
         "Bei Division/Multiplikation mit negativer Zahl: Ungleichungszeichen umkehren!",
-        "Diskriminante D = b² − 4ac bestimmt die Anzahl reeller Lösungen.",
-        "Lösungsformel: x = (−b +/- Wurzel aus D) / (2a) — Mitternachtsformel.",
-        "Vieta: Summe x1+x2 = − b/a und Produkt x1 × x2 = c/a.",
+        "Substitution bei Koeffizient ±1, Addition bei leicht eliminierbaren Koeffizienten.",
+        "Bruchgleichungen: Definitionsmenge bestimmen (Nenner ≠ 0), Lösung prüfen.",
+        "Betragsungleichung |x − a| < r ergibt Intervall (a − r, a + r).",
+        "Verdünnungsformel: c₁ × V₁ = c₂ × V₂ ist eine lineare Gleichung.",
         "Probe immer durchführen: Lösung einsetzen und Gleichung überprüfen.",
-        "Gleichungssysteme: Substitution oder Addition führen zum selben Ergebnis.",
-        "Verdünnungsformel: c1 × V1 = c2 × V2 ist eine lineare Gleichung.",
         "Doppelte Ungleichung: alle Operationen auf alle drei Teile anwenden.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -614,132 +630,163 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
         "Klammernregeln",
         "Summenzeichen",
       ],
-      content: `Terme umformen ist das Werkzeug für alles Weitere — Gleichungen, Funktionen, Physikformeln. Wer sicher umformt, spart Zeit und vermeidet Fehler. Die drei Rechengesetze, das Ausklammern und der Betrag bilden zusammen das Handwerkszeug, das du bei fast jeder MedAT-Rechenaufgabe brauchst.
-
-**Hinweis:** Grundlagen zu Bruchrechnung, Prozentrechnung und Dreisatz findest du in den Grundlagen-Kapiteln (ma-grund-01 bis ma-grund-03).
+      content: `Ein Patient erhält Methotrexat in ansteigender Dosierung: Woche 1 bekommt er 5 mg, Woche 2 dann 10 mg, Woche 3 dann 15 mg — immer 5 mg mehr. Nach 8 Wochen will der Arzt die kumulative Gesamtdosis berechnen. Dafür braucht er Termumformung, das Summenzeichen und sicheres Rechnen mit Klammern. Genau dieses Handwerkszeug — Rechengesetze, Vorzeichen, Betrag und Σ — steckt hinter fast jeder MedAT-Rechenaufgabe.
 
 ---
 
-## Das Distributivgesetz — das wichtigste der drei Gesetze
+## Die drei Grundrechengesetze
 
-Bevor wir alle drei Rechengesetze sehen, beginnen wir mit dem einen, das die meisten Fehler verursacht und gleichzeitig am nützlichsten ist: dem **Distributivgesetz**.
+Drei Gesetze regeln, wie du Terme umordnen und umklammern darfst. Ihre Namen kommen aus dem Lateinischen und verraten ihre Bedeutung:
 
-**a × (b + c) = a × b + a × c**
+**Kommutativgesetz** (lat. *commutare* = vertauschen): Die Reihenfolge ist egal.
+- a + b = b + a und a × b = b × a
+- Gilt **nicht** für Subtraktion und Division: 5 − 3 ≠ 3 − 5 und 6 ÷ 2 ≠ 2 ÷ 6
 
-Warum funktioniert das? Stell dir ein Rechteck vor mit Breite a und Höhe (b + c). Die Gesamtfläche ist a × (b + c). Dasselbe Rechteck kannst du in zwei Teilrechtecke zerlegen: eines mit Höhe b (Fläche a × b) und eines mit Höhe c (Fläche a × c). Die Gesamtfläche ist also auch a × b + a × c. Die Gleichheit folgt geometrisch — die Fläche ändert sich nicht.
+**Assoziativgesetz** (lat. *associare* = verbinden): Die Klammergruppierung ist egal.
+- (a + b) + c = a + (b + c) und (a × b) × c = a × (b × c)
+- Rechentrick: 17 + 48 + 3 = (17 + 3) + 48 = 20 + 48 = 68
+
+**Distributivgesetz** (lat. *distribuere* = verteilen): Multiplikation wird über die Addition „verteilt".
+- **a × (b + c) = a × b + a × c**
+
+Warum funktioniert das? Stell dir ein Rechteck mit Breite a und Höhe (b + c) vor. Die Gesamtfläche ist a × (b + c). Du kannst es in zwei Teilrechtecke zerlegen — eines mit Höhe b, eines mit Höhe c. Die Flächen addiert ergeben dasselbe: a × b + a × c.
+
+{{DIAGRAM:distributive-rectangle}}
 
 **Vorwärts** = Ausmultiplizieren: 3(x + 4) = 3x + 12.
 **Rückwärts** = Ausklammern: 3x + 12 = 3(x + 4).
 
-Beide Richtungen brauchst du ständig — Ausmultiplizieren beim Lösen von Gleichungen, Ausklammern beim Vereinfachen von Termen.
-
-Die anderen beiden Gesetze sind weniger fehleranfällig, aber trotzdem wichtig:
-
-**Kommutativgesetz (Vertauschung):** a + b = b + a und a × b = b × a — die Reihenfolge ist egal. Gilt **nicht** für Subtraktion und Division: 5 − 3 ≠ 3 − 5 und 6/2 ≠ 2/6.
-
-**Assoziativgesetz (Umklammerung):** (a + b) + c = a + (b + c) und (a × b) × c = a × (b × c) — die Klammersetzung ist egal. Nützlich, um günstige Rechenreihenfolgen zu wählen: 17 + 48 + 3 = 17 + 3 + 48 = 20 + 48 = 68.
-
-> **Merke:** Distributivgesetz: a(b+c) = ab + ac — vorwärts ausmultiplizieren, rückwärts ausklammern. Kommutativ/Assoziativ gelten NUR für Addition und Multiplikation, NICHT für Subtraktion und Division!
+> **Merke:** Kommutativ (Reihenfolge) und Assoziativ (Klammerung) gelten NUR für Addition und Multiplikation. Das Distributivgesetz a(b+c) = ab + ac verbindet Multiplikation mit Addition — vorwärts ausmultiplizieren, rückwärts ausklammern.
 
 ---
 
 ## Vorzeichenregeln und die Minusklammer-Falle
 
-**Vorzeichenregeln:** Gleiche Vorzeichen → positiv, verschiedene → negativ. Also: (+)(+) = (+), (−)(−) = (+), (+)(−) = (−), (−)(+) = (−).
+**Vorzeichenregeln:** Gleiche Vorzeichen → positiv, verschiedene → negativ.
+- (+) × (+) = (+), (−) × (−) = (+)
+- (+) × (−) = (−), (−) × (+) = (−)
 
 **Minusklammer auflösen — der häufigste MedAT-Fehler:**
 
 −(a + b − c) = −a − b + c
 
-Das Minus vor der Klammer dreht **jedes** Vorzeichen um. Konkret: −(3x − 5) = −3x **+ 5**, nicht −3x − 5! Der Fehler passiert, weil man das Vorzeichen des zweiten Terms vergisst umzudrehen.
+*Denkprozess:* Das Minus vor der Klammer ist eigentlich der Faktor (−1). Das Distributivgesetz liefert: (−1) × a + (−1) × b + (−1) × (−c) = −a − b + c. Jedes Vorzeichen dreht sich um.
 
-Warum? Weil −(3x − 5) eigentlich (−1) × (3x − 5) bedeutet — das Distributivgesetz in Aktion: (−1) × 3x + (−1) × (−5) = −3x + 5.
+Konkretes Beispiel: −(3x − 5) = −3x **+ 5**, nicht −3x − 5! Der Fehler passiert, weil man das Vorzeichen von −5 vergisst umzudrehen.
 
 **Klammer mal Klammer:** (a + b)(c + d) = ac + ad + bc + bd — jeder Term der ersten Klammer mit jedem der zweiten (→ binomische Formeln in ma-2-03).
 
-> **Merke:** Minus vor Klammer = Distributivgesetz mit Faktor (−1). ALLE Vorzeichen drehen sich um: −(a − b) = −a + b.
+**Rechenbeispiel — Medikamenten-Gesamtkosten:**
+Ein Krankenhaus bestellt n Packungen. Preis pro Packung: p Euro, Versandkosten pro Packung: v Euro, Rabatt pro Packung: r Euro. Gesamtkosten:
+
+*Denkprozess:* K = n × p + n × v − n × r. Jeder Summand enthält den Faktor n. Ausklammern: K = n(p + v − r). Sofort erkennbar: Stückkosten = (p + v − r).
+
+> **Merke:** Minus vor Klammer = Distributivgesetz mit Faktor (−1). ALLE Vorzeichen drehen sich um: −(a − b) = −a + b. Immer durch Rückmultiplizieren kontrollieren!
 
 ---
 
-## Ausklammern — das Distributivgesetz rückwärts
+## Ausklammern und Faktorisieren
 
-Wenn du einen Term wie 6x + 15 siehst, erkennst du mit dem Distributivgesetz: Beide Summanden enthalten den Faktor 3. Du „ziehst" ihn heraus: 6x + 15 = 3(2x + 5). Das ist Ausklammern — die Umkehrung des Ausmultiplizierens.
+Ausklammern ist das Distributivgesetz rückwärts — und eine der wichtigsten Vereinfachungstechniken.
 
-**Wie findest du den gemeinsamen Faktor?**
-1. **ggT der Koeffizienten:** ggT(6, 15) = 3
-2. **Kleinste Potenz gemeinsamer Variablen:** Bei 4x² − 8x ist x in beiden Termen, kleinste Potenz x¹ → Faktor 4x
-3. **Probe:** Rückmultiplizieren muss den Originalterm ergeben
+**Systematisches Vorgehen:**
+1. **ggT der Koeffizienten bestimmen:** Bei 12x² + 18x → ggT(12, 18) = 6
+2. **Kleinste Potenz gemeinsamer Variablen:** x kommt in beiden Termen vor, kleinste Potenz x¹ → Faktor 6x
+3. **Herausziehen und Probe:** 12x² + 18x = 6x(2x + 3) — Probe: 6x × 2x = 12x², 6x × 3 = 18x ✓
 
-Beispiele:
-- 4x² − 8x = 4x(x − 2) — Probe: 4x × x = 4x², 4x × (−2) = −8x ✓
-- 12ab + 18a²b − 6ab² = 6ab(2 + 3a − b)
+**Rechenbeispiel — Infusionsrate:**
+Gesamtvolumen V = π r² h₁ + π r² h₂ (Volumen zweier zylindrischer Infusionsbeutel mit gleichem Radius).
 
-**Warum ausklammern?** Es vereinfacht Brüche (gemeinsame Faktoren kürzen), macht Zusammenhänge sichtbar und ist der erste Schritt beim Faktorisieren. Medizinisches Beispiel: Gesamtkosten K = n × p + n × v = n(p + v) — sofort sieht man: Stückkosten = (p + v).
+*Denkprozess:* Gemeinsame Faktoren: π, r², also V = π r²(h₁ + h₂). Das Gesamtvolumen hängt nur noch von der Höhensumme ab — eine sofort interpretierbare Form.
 
-> **Merke:** Ausklammern = Distributivgesetz rückwärts. Checkliste: ggT der Koeffizienten, kleinste Variable-Potenz, Probe durch Rückmultiplizieren.
+**Bruchrechnung mit Variablen** nutzt dieselbe Technik. Um (6x² + 12x) / (3x) zu vereinfachen: Zähler ausklammern → 6x(x + 2) / (3x) = 2(x + 2). Kürzen geht nur mit Faktoren, nie mit Summanden!
+
+> **Merke:** Ausklammern = ggT der Koeffizienten × kleinste gemeinsame Variablenpotenz. Kürzen von Brüchen nur mit Faktoren — niemals einzelne Summanden streichen!
 
 ---
 
-## Betrag — geometrisch denken
+## Betrag — Abstand auf der Zahlengeraden
 
-Der **Betrag** |a| gibt den Abstand von a zu Null auf der Zahlengeraden an: |5| = 5, |−3| = 3, |0| = 0. Er ist immer ≥ 0.
+Der **Betrag** |a| gibt den Abstand von a zur Null an: |5| = 5, |−3| = 3, |0| = 0. Er ist immer ≥ 0.
 
 Formal: |a| = a falls a ≥ 0, und |a| = −a falls a < 0 (das Minus macht die negative Zahl positiv).
 
-Die entscheidende Einsicht: **|a − b| = Abstand zwischen a und b.** |7 − 3| = 4 und |3 − 7| = 4 — egal, in welche Richtung du misst.
+Die entscheidende Einsicht: **|a − b| = Abstand zwischen a und b** auf der Zahlengeraden. |7 − 3| = 4 und |3 − 7| = 4 — egal, in welche Richtung du misst.
 
-Rechenregeln:
+**Rechenregeln:**
 - |a × b| = |a| × |b|
-- |a/b| = |a| / |b| (für b ≠ 0)
-- |a + b| ≤ |a| + |b| (**Dreiecksungleichung**)
+- |a / b| = |a| / |b| (für b ≠ 0)
+- |a + b| ≤ |a| + |b| (**Dreiecksungleichung** — der Umweg ist nie kürzer als der direkte Weg)
 
 ---
 
-## Betragsgleichungen — zwei Punkte auf der Zahlengeraden
+## Betragsgleichungen und -ungleichungen
 
-Betrachte |x − 3| = 5. Was bedeutet das geometrisch? „x hat den Abstand 5 von 3." Wo auf der Zahlengeraden liegt x? An genau **zwei** Punkten: 5 Einheiten rechts von 3 (also 3 + 5 = **8**) und 5 Einheiten links von 3 (also 3 − 5 = **−2**).
+|x − 3| = 5 bedeutet geometrisch: „x hat den Abstand 5 von 3." Auf der Zahlengeraden gibt es genau **zwei** solche Punkte: 3 + 5 = **8** (rechts) und 3 − 5 = **−2** (links).
 
-Das ist der Grund, warum Betragsgleichungen immer zwei Fälle brauchen — nicht als Rechentrick, sondern weil es geometrisch zwei Richtungen gibt.
+{{DIAGRAM:absolute-value-numberline}}
 
 **Allgemeines Verfahren für |f(x)| = c (c ≥ 0):**
 1. Fall 1: f(x) = c → lösen
 2. Fall 2: f(x) = −c → lösen
 3. Lösungsmengen vereinigen (für c < 0: keine Lösung, da Betrag nie negativ)
 
-**Betragsungleichungen** folgen derselben Logik:
-- |x − a| < d → x liegt **näher** als d an a → offenes Intervall (a−d, a+d)
-- |x − a| > d → x liegt **weiter** als d von a → x < a−d oder x > a+d
+**Betragsungleichungen** als Intervalle:
+- |x − a| < d → x liegt näher als d an a → **offenes Intervall (a − d, a + d)**
+- |x − a| > d → x liegt weiter als d von a → **x < a − d oder x > a + d**
 
-**Klinisches Beispiel:** pH-Toleranzbereich: |pH − 7,40| ≤ 0,05 → 7,35 ≤ pH ≤ 7,45. Laborwert-Toleranz: |Messwert − S| ≤ 0,1 × S → 0,9 S ≤ Messwert ≤ 1,1 S.
+**Rechenbeispiel — Blut-pH-Toleranz:**
 
-> **Merke:** |x − a| = d → zwei Lösungen: x = a + d und x = a − d (geometrisch: zwei Punkte mit Abstand d von a). |x−a| < d → Intervall (a−d, a+d). |x−a| > d → Komplement.
+*Denkprozess:* Der physiologische pH-Wert ist 7,40. Toleranz: ±0,05. Als Betragsungleichung: |pH − 7,40| ≤ 0,05. Auflösen: −0,05 ≤ pH − 7,40 ≤ 0,05. Addition von 7,40: **7,35 ≤ pH ≤ 7,45**. Werte außerhalb → Azidose (< 7,35) oder Alkalose (> 7,45).
+
+**Rechenbeispiel — Betragsgleichung:**
+|2x + 1| = 7. Fall 1: 2x + 1 = 7 → x = 3. Fall 2: 2x + 1 = −7 → x = −4. Probe: |2(3)+1| = 7 ✓; |2(−4)+1| = 7 ✓. Lösungsmenge: {−4, 3}.
+
+> **Merke:** |x − a| = d → zwei Lösungen: x = a ± d. |x − a| < d → Intervall (a−d, a+d). Betragsungleichungen modellieren Toleranzbereiche in der Labormedizin.
 
 ---
 
-## Summenzeichen Σ — Kurzschreibweise für viele Terme
+## Summenzeichen Σ — Kurzschreibweise für Reihen
 
-Sobald du viele gleichartige Terme addieren willst, wird die Schreibweise 1 + 2 + 3 + ... + 100 unhandlich. Das **Summenzeichen** Σ (griechisch Sigma) löst das:
+Wenn du viele gleichartige Terme addierst, wird die Schreibweise schnell unhandlich. Das **Summenzeichen** Σ (griechisch *Sigma*, der Buchstabe für „S" wie Summe) fasst zusammen:
 
 **Σ(i=1 bis n) aᵢ = a₁ + a₂ + ... + aₙ**
 
-Lies es so: „Summiere aᵢ für i von 1 bis n." Beispiel: Σ(i=1 bis 4) i² = 1² + 2² + 3² + 4² = 1 + 4 + 9 + 16 = 30.
+Lies: „Summiere aᵢ für i von 1 bis n." Dabei heißt i der **Laufindex**, 1 die untere und n die obere Grenze.
 
-Die wichtigste Formel dazu ist die **Gaußsche Summenformel**: Σ(i=1 bis n) i = n(n+1)/2. Gauß erkannte als Schüler: 1+100 = 101, 2+99 = 101, ..., 50+51 = 101 — das sind 50 Paare à 101 = 5050. Allgemein: n/2 Paare mit Summe (n+1).
+**Rechenregeln:**
+- Konstante herausziehen: Σ(i=1 bis n) c × aᵢ = c × Σ(i=1 bis n) aᵢ
+- Summe aufteilen: Σ(i=1 bis n) (aᵢ + bᵢ) = Σ aᵢ + Σ bᵢ
+- Index-Verschiebung: Σ(i=1 bis n) aᵢ = Σ(j=0 bis n−1) a_{j+1} (gleiche Summe, anderer Startindex)
 
-In der Medizin begegnet dir Σ vor allem beim **Mittelwert**: x̄ = (1/n) × Σ(i=1 bis n) xᵢ — mittlerer Blutdruck, mittlere Herzfrequenz, Studiendurchschnitte.
+Die **Gaußsche Summenformel** ist die wichtigste geschlossene Form: Σ(i=1 bis n) i = n(n+1)/2. Gauß erkannte als Schüler: 1+100 = 101, 2+99 = 101, ..., 50+51 = 101 — 50 Paare à 101 = 5050.
+
+**Rechenbeispiel — kumulative Medikamentendosis:**
+Zurück zum Eingangsbeispiel: Methotrexat-Dosis in Woche k = 5k mg. Gesamtdosis nach 8 Wochen:
+
+*Denkprozess:* Σ(k=1 bis 8) 5k = 5 × Σ(k=1 bis 8) k = 5 × 8 × 9/2 = 5 × 36 = **180 mg**.
+Die Konstante 5 wird vor das Σ gezogen (Rechenregel 1), dann Gauß-Formel anwenden.
+
+In der Medizin begegnet dir Σ beim **Mittelwert**: x̄ = (1/n) × Σ(i=1 bis n) xᵢ — mittlere Herzfrequenz, Blutdruck-Durchschnitt, Studienergebnisse.
+
+> **Merke:** Σ fasst gleichartige Additionen zusammen. Konstanten dürfen herausgezogen werden. Gaußsche Summenformel: 1 + 2 + ... + n = n(n+1)/2. Index-Verschiebung ändert die Summe nicht, nur den Startpunkt.
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Minusklammer und Distributivgesetz:**
-Vereinfache: −2(3x − 4) + 5(x + 1). Schritt 1: −6x + 8 + 5x + 5 = **−x + 13**. Probe: Für x = 3: −2(9−4) + 5(3+1) = −2(5) + 5(4) = −10 + 20 = 10. Und −3 + 13 = 10 ✓.
+**Beispiel 1 — Distributivgesetz und Minusklammer:**
+Vereinfache: −2(3x − 4) + 5(x + 1).
 
-**Beispiel 2 — Betragsgleichung:**
-|2x + 1| = 7. Fall 1: 2x + 1 = 7 → x = 3. Fall 2: 2x + 1 = −7 → x = −4. Probe: |2(3)+1| = |7| = 7 ✓; |2(−4)+1| = |−7| = 7 ✓. Lösungsmenge: {−4, 3}.
+*Denkprozess:* Zuerst ausmultiplizieren: −2 × 3x = −6x, −2 × (−4) = +8, 5 × x = 5x, 5 × 1 = 5. Zusammenfassen: (−6x + 5x) + (8 + 5) = **−x + 13**. Probe mit x = 3: −2(9−4) + 5(4) = −10 + 20 = 10. Und −3 + 13 = 10 ✓.
 
-**Beispiel 3 — Gaußsche Summenformel in der Praxis:**
-Ein Arzt gibt in einer Impfkampagne am 1. Tag 1, am 2. Tag 2, ..., am 20. Tag 20 Impfungen. Gesamt: Σ(i=1 bis 20) i = 20 × 21/2 = **210** Impfungen.`,
+**Beispiel 2 — Ausklammern eines Bruchs:**
+Vereinfache: (4x² − 8x) / (2x).
+
+*Denkprozess:* Zähler ausklammern: 4x(x − 2). Kürzen: 4x(x − 2) / (2x) = **2(x − 2) = 2x − 4**. Achtung: x ≠ 0 (Definitionsbereich!). Probe mit x = 5: (100 − 40)/10 = 6. Und 2(5) − 4 = 6 ✓.
+
+**Beispiel 3 — Betragsungleichung als Labortoleranz:**
+Ein Laborwert soll maximal 10 % vom Sollwert S = 120 mg/dL abweichen: |x − 120| ≤ 12. Auflösen: 108 ≤ x ≤ 132. Ganzzahlige Werte im Toleranzbereich: 132 − 108 + 1 = **25 Werte**.`,
       lernziele: [
         "Die drei Rechengesetze (kommutativ, assoziativ, distributiv) sicher anwenden und typische Fehlschlüsse vermeiden",
         "Terme durch Ausklammern und Faktorisieren vereinfachen",
@@ -2307,123 +2354,147 @@ Im Streudiagramm zeigt die Regressionsgerade y = mx + b die Richtung und Stärke
         "Strahlentherapie",
         "Biomechanik",
       ],
-      content: `**Idee:** **Vektor** = Betrag + Richtung (Pfeil); **Skalar** = nur Zahl. **Betrag** |a| = √(a₁²+a₂²+a₃²). **Skalarprodukt** a·b = |a||b|cos θ → Winkel und Orthogonalität (a·b = 0). **Kreuzprodukt** a×b = Vektor ⊥ zu beiden, |a×b| = |a||b|sin θ.
+      content: `## Warum Vektoren in der Medizin?
 
-**Verfahren — Schrittfolge:** (1) **Betrag:** |a| = √(a₁²+a₂²+a₃²). (2) **Addition/Subtraktion:** komponentenweise. (3) **Skalarprodukt:** a·b = a₁b₁+a₂b₂+a₃b₃; cos θ = a·b/(|a||b|); orthogonal ⇔ a·b = 0. (4) **Kreuzprodukt:** a×b steht senkrecht auf a und b; Recht-Hand-Regel.
-
-**Typische Prüfungsfehler:** Skalarprodukt = Zahl (nicht Vektor!); Kreuzprodukt = Vektor. Orthogonal: a·b = 0 (nicht a×b = 0). Betrag: Wurzel aus Summe der Quadrate der Komponenten.
+Wenn ein Kardiologe die elektrische Herzachse im EKG bestimmt, rechnet er mit Vektoren: Die Amplituden der Ableitungen I und aVF bilden die x- und y-Komponente eines Pfeils, dessen Winkel den Lagetyp verrät. Auch CT-gesteuerte Nadelführungen und Drehmomente an Gelenken sind Vektorprobleme. Die Grundlagen dafür stehen hier.
 
 ---
 
-## Grundbegriffe
+## Vektor-Grundlagen (Kurzwiederholung)
 
+Ein **Vektor** hat Betrag und Richtung; ein **Skalar** ist nur eine Zahl. In 3D schreibt man **a** = (a₁, a₂, a₃).
 
+- **Betrag (Länge):** |**a**| = √(a₁² + a₂² + a₃²)
+- **Einheitsvektor:** **â** = **a** / |**a**| — gleiche Richtung, Länge 1
+- **Ortsvektor A → B:** **AB** = **b** − **a** = (b₁−a₁, b₂−a₂, b₃−a₃)
+- **Addition:** komponentenweise, geometrisch = Pfeile aneinanderhängen
+- **Skalierung:** c × **a** = (c·a₁, c·a₂, c·a₃); bei c < 0 kehrt die Richtung um
 
+Vertiefung zu Vektorraum, Basis und Koordinatensystemen: siehe Kapitel ma-6-01.
 
+> **Merke:** Zwei Punkte A und B im Raum verbindet der Differenzvektor **AB** = **b** − **a**. Sein Betrag |**AB**| ist der Abstand zwischen den Punkten.
 
-Ein Vektor **a** in 3D wird durch seine Komponenten beschrieben: **a** = (a₁, a₂, a₃). Im 2D entsprechend: **a** = (a₁, a₂).
+---
 
-**Betrag (Länge)** eines Vektors:
-|**a**| = √(a₁² + a₂² + a₃²)
+{{DIAGRAM:vector-addition-parallelogram}}
 
-Im 2D: |**a**| = √(a₁² + a₂²).
+## Skalarprodukt — Winkel und Orthogonalität
 
-**Einheitsvektor** (Länge 1): **â** = **a** / |**a**|. Er gibt nur die Richtung an.
+Das Skalarprodukt misst, wie stark zwei Vektoren in dieselbe Richtung zeigen. Es liefert immer eine **Zahl** (keinen Vektor):
 
-**Addition und Subtraktion** (komponentenweise):
-**a** + **b** = (a₁+b₁, a₂+b₂, a₃+b₃)
-**a** − **b** = (a₁−b₁, a₂−b₂, a₃−b₃)
+**a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a| · |b| · cos θ**
 
-Geometrisch: Addition nach der Parallelogrammregel oder Dreiecksregel (Pfeile aneinanderhängen).
+- **a · b = 0** → Vektoren senkrecht (orthogonal), θ = 90°
+- **a · b > 0** → spitzer Winkel (θ < 90°)
+- **a · b < 0** → stumpfer Winkel (θ > 90°)
 
-**Skalierung**: c × **a** = (c×a₁, c×a₂, c×a₃). Bei c > 0 bleibt die Richtung gleich; bei c < 0 kehrt sie sich um.
+**Winkel berechnen:** cos θ = (a · b) / (|a| · |b|) → θ = arccos(…)
 
-> **Merke:** Der Ortsvektor vom Punkt A zum Punkt B ist der Differenzvektor: **AB** = **b** − **a** = (b₁−a₁, b₂−a₂, b₃−a₃). Der Abstand zwischen A und B ist |**AB**|.
+**Projektion** eines Vektors **a** auf **b**: Die Komponente von **a** in Richtung **b** hat den Betrag (a · b) / |b|. In der Kardiologie wird genau das genutzt, um die EKG-Herzachse auf die einzelnen Ableitungsrichtungen zu projizieren.
 
-**Rechenbeispiel:** **a** = (3, −1, 2), **b** = (1, 4, −3). Summe: **a** + **b** = (4, 3, −1). Differenz: **a** − **b** = (2, −5, 5). Betrag von **a**: |**a**| = √(9+1+4) = √14 ≈ 3,74. Einheitsvektor: **â** = (3/√14, −1/√14, 2/√14).
+> **Merke:** Skalarprodukt = Zahl; Skalarprodukt = 0 ↔ senkrecht. Häufigster Prüfungsfehler: Skalarprodukt mit Kreuzprodukt verwechseln (Zahl vs. Vektor).
 
-## Skalarprodukt (Inneres Produkt)
+---
 
-Das Skalarprodukt zweier Vektoren **a** und **b**:
-**a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a| × |b| × cos θ**
+## Kreuzprodukt — Fläche und Drehmoment
 
-θ = Winkel zwischen den Vektoren.
+Das Kreuzprodukt **a × b** erzeugt einen neuen **Vektor**, der senkrecht auf **a** und **b** steht:
 
-**Bedeutung**:
-- Wenn **a · b = 0**: die Vektoren sind senkrecht (θ = 90°)
-- Wenn **a · b > 0**: spitzer Winkel (θ < 90°)
-- Wenn **a · b < 0**: stumpfer Winkel (θ > 90°)
+**a × b** = (a₂b₃ − a₃b₂,  a₃b₁ − a₁b₃,  a₁b₂ − a₂b₁)
 
-**Winkelberechnung**: cos θ = (**a** · **b**) / (|**a**| × |**b**|) → θ = arccos((**a** · **b**) / (|**a**| × |**b**|))
+- **|a × b| = |a| · |b| · sin θ** — gleich der Fläche des aufgespannten Parallelogramms
+- **a × b = 0** → Vektoren parallel (θ = 0° oder 180°)
+- **Antikommutativ:** a × b = −(b × a) — Reihenfolge zählt!
 
-> **Merke:** Das Skalarprodukt liefert immer eine Zahl (einen Skalar), keinen Vektor. Es beantwortet die Frage: „Wie stark zeigen die Vektoren in dieselbe Richtung?"
+Die Richtung bestimmt die **Rechte-Hand-Regel**: Zeigefinger = **a**, Mittelfinger = **b**, Daumen = **a × b**.
 
-**Rechenbeispiel — Winkel zwischen Vektoren:** **a** = (1, 2, 2), **b** = (2, −1, 2). **a** × **b** = 2 − 2 + 4 = 4. |**a**| = √(1+4+4) = 3. |**b**| = √(4+1+4) = 3. cos θ = 4/(3×3) = 4/9 ≈ 0,444. θ = arccos(0,444) ≈ 63,6°.
+{{DIAGRAM:cross-product-right-hand}}
 
-## Kreuzprodukt (Vektorielles Produkt)
+**Klinische Anwendung — Drehmoment:** Am Gelenk gilt **M** = **r** × **F**. Der Betrag ist |M| = |r| · |F| · sin θ. Maximales Drehmoment entsteht bei θ = 90° (Kraft senkrecht zum Hebelarm, sin 90° = 1).
 
-Das Kreuzprodukt **a × b** ergibt einen Vektor senkrecht zu beiden:
-**a × b** = (a₂b₃ − a₃b₂, a₃b₁ − a₁b₃, a₁b₂ − a₂b₁)
+> **Merke:** Kreuzprodukt = Vektor senkrecht zu beiden Ausgangsvektoren. Kreuzprodukt = 0 ↔ parallel. |a × b| = Parallelogrammfläche; Dreiecksfläche = ½ |a × b|.
 
-**|a × b| = |a| × |b| × sin θ** — entspricht der Fläche des von **a** und **b** aufgespannten Parallelogramms.
+---
 
-Wenn **a × b = 0**: die Vektoren sind parallel (θ = 0° oder 180°).
+## Rechenbeispiel — EKG-Herzachse als Vektorproblem
 
-Wichtige Eigenschaft: **a × b = −(b × a)** — das Kreuzprodukt ist antikommutativ (Reihenfolge zählt!).
+**Aufgabe:** Ableitung I zeigt +8 mm, Ableitung aVF zeigt +4 mm. Bestimme den Betrag und Winkel der Herzachse.
 
-**Rechenbeispiel:** **a** = (1, 0, 0), **b** = (0, 1, 0). **a × b** = (0×0 − 0×1, 0×0 − 1×0, 1×1 − 0×0) = (0, 0, 1) → Einheitsvektor in z-Richtung. **b × a** = (0, 0, −1) → umgekehrte Richtung!
+**Denkprozess:**
 
-**Rechenbeispiel — Dreiecksfläche:** Dreieck mit Eckpunkten A(1,0,0), B(0,2,0), C(0,0,3). Vektoren: **AB** = (−1,2,0), **AC** = (−1,0,3). **AB × AC** = (2×3−0×0, 0×(−1)−(−1)×3, (−1)×0−2×(−1)) = (6, 3, 2). |**AB × AC**| = √(36+9+4) = √49 = 7. Dreiecksfläche = ½ × 7 = 3,5 Flächeneinheiten.
+1. Vektor aufstellen: **v** = (I, aVF) = (8, 4).
+2. Betrag: |**v**| = √(8² + 4²) = √(64 + 16) = √80 ≈ **8,9 mm**.
+3. Winkel: φ = arctan(aVF / I) = arctan(4/8) = arctan(0,5) ≈ **26,6°**.
+4. Interpretation: 26,6° liegt zwischen 0° und +90° → **Normaltyp** (Indifferenztyp wäre bei ca. 60°, hier eher Linkstyp-nah).
 
-## Ebenengleichung
+**Probe:** cos 26,6° ≈ 0,894; sin 26,6° ≈ 0,447. Rückrechnung: 8,9 × 0,894 ≈ 8 ✓; 8,9 × 0,447 ≈ 4 ✓.
 
-Eine Ebene wird durch einen Punkt **r₀** auf der Ebene und einen Normalenvektor **n** (senkrecht zur Ebene) beschrieben:
-**n × (r − r₀) = 0**
+> **Merke:** EKG-Herzachse = resultierender Depolarisationsvektor. Ableitung I = x-Komponente, aVF = y-Komponente. Winkel φ = arctan(aVF/I) bestimmt den Lagetyp.
 
-Ausgeschrieben: n₁(x − x₀) + n₂(y − y₀) + n₃(z − z₀) = 0
+---
 
-Koordinatenform: n₁x + n₂y + n₃z = d, wobei d = n₁x₀ + n₂y₀ + n₃z₀.
-
-**Parameterform**: **r** = **r₀** + s × **u** + t × **v**, wobei **u** und **v** zwei nicht-parallele Richtungsvektoren in der Ebene sind und s, t reelle Parameter.
-
-**Normalenvektor aus drei Punkten**: Gegeben A, B, C. Berechne **n** = (**B** − **A**) × (**C** − **A**).
-
-**Abstand eines Punktes P von einer Ebene** (n₁x + n₂y + n₃z = d):
-**Abstand = |n₁×xP + n₂×yP + n₃×zP − d| / |n|**
-
-> **Merke:** Der Normalenvektor steht senkrecht auf der Ebene. Seine Richtung bestimmt die Orientierung der Ebene; sein Betrag spielt für die Lage der Ebene keine Rolle (er kann normiert werden).
-
-**Rechenbeispiel:** Ebene durch P₀(1, 2, 3) mit **n** = (1, −1, 2). Gleichung: 1×(x−1) + (−1)×(y−2) + 2×(z−3) = 0 → x − y + 2z = 5. Abstand des Punktes Q(3, 1, 0): |3 − 1 + 0 − 5| / √(1+1+4) = |−3| / √6 = 3/√6 ≈ 1,22.
+{{DIAGRAM:ekg-axis-vector}}
 
 ## Geraden im Raum
 
-Eine Gerade im 3D-Raum in Parameterform: **r** = **p** + t × **v**, wobei **p** ein Punkt auf der Gerade und **v** der Richtungsvektor ist.
+Eine Gerade wird in **Parameterform** beschrieben: **r**(t) = **p** + t · **v**, wobei **p** ein Stützpunkt und **v** der Richtungsvektor ist. Jeder Wert von t liefert einen Punkt auf der Geraden.
 
-Zwei Geraden im Raum können sich schneiden, parallel sein, identisch sein oder windschief sein (weder parallel noch schneidend — ein Phänomen, das nur in 3D existiert).
+Zwei Geraden im 3D-Raum können:
+- **sich schneiden** (gemeinsamer Punkt, verschiedene Richtungen)
+- **parallel** sein (gleiche Richtung, kein gemeinsamer Punkt)
+- **identisch** sein (gleiche Richtung und ein gemeinsamer Punkt)
+- **windschief** sein — weder parallel noch schneidend (nur in 3D möglich)
 
-## Klinischer Kontext
+**Abstand Punkt P von Gerade** (Stützpunkt **p**, Richtung **v**):
+d = |(**P** − **p**) × **v**| / |**v**|
 
-**3D-Bildgebung**: Im MRT und CT wird der Körper in diskrete Volumenelemente (Voxel) unterteilt. Jedes Voxel entspricht einem Quader; Schichtdicke, Pixelgröße und Rekonstruktionsalgorithmen basieren auf Vektormathematik. Jede Bildschicht definiert eine Ebene mit einem Normalenvektor, der die Schichtorientierung festlegt (axial, sagittal, koronal).
+Klinisch: Der Abstand eines Tumorzentrums von einem CT-Nadelweg lässt sich so berechnen — liegt der Tumor nah genug an der geplanten Trajektorie?
 
-**Strahlentherapie**: Der Strahlengang eines Bestrahlungsfeldes wird als Vektor durch den Tumor beschrieben. Mehrere Felder können so geplant werden, dass sich die Strahlendosen am Tumor addieren, im umgebenden Gewebe jedoch minimal bleiben (Isodosen-Planung, IMRT).
+> **Merke:** Parameterform einer Geraden: **r** = **p** + t · **v**. Windschiefe Geraden existieren nur im 3D-Raum (2D unmöglich).
 
-**EKG-Herzachse**: Die elektrische Herzachse wird als resultierender Vektor der Depolarisationswellen in der Frontalebene modelliert. Der Winkel dieses Vektors (typisch zwischen −30° und +90°) definiert den Lagetyp (Normaltyp, Links-/Rechtstyp, Steiltyp). Die Berechnung aus den Amplituden der Ableitungen I (x-Komponente) und aVF (y-Komponente) ist ein klassisches Vektorproblem.
+---
 
-**Biomechanik**: Kräfte an Gelenken werden als Vektoren addiert (Vektoraddition). Der Kraftvektor des Muskels und die Hebelwirkung bestimmen das resultierende Drehmoment: **M** = **r** × **F**. Maximales Drehmoment entsteht, wenn Kraft und Hebelarm senkrecht zueinander stehen (sin 90° = 1).
+## Rechenbeispiel — Drehmoment am Ellenbogengelenk
 
-## Rechenbeispiele
+**Aufgabe:** Der Bizeps übt F = 300 N unter θ = 80° auf einen Hebelarm von r = 4 cm an.
 
-**Beispiel 1 — EKG-Herzachse aus Ableitungen I und aVF:**
-Amplitude I = +8 mm, aVF = +4 mm. Vektor v = (8, 4). Betrag: |v| = √(64+16) = √80 = **8,94 mm**. Winkel: φ = arctan(4/8) = arctan(0,5) = **26,6°** → Normaltyp (0° bis +90°). Indifferenztyp liegt bei ca. 60°: hier eher Linkstyp-nah.
+**Denkprozess:**
 
-**Beispiel 2 — Drehmoment am Ellenbogengelenk:**
-Bizeps-Kraft F = 300 N, Hebelarm r = 4 cm = 0,04 m, Ansatzwinkel θ = 80°. |M| = |r| × |F| × sin θ = 0,04 × 300 × sin 80° = 0,04 × 300 × 0,985 = **11,8 N×m**. Bei θ = 90° (optimal): |M| = 12 N×m. Bei θ = 30°: |M| = 6 N×m — Krafteffizienz halbiert bei flachem Ansatz.
+1. Einheiten umrechnen: r = 0,04 m.
+2. Formel: |M| = r · F · sin θ = 0,04 · 300 · sin 80°.
+3. sin 80° ≈ 0,985 → |M| = 0,04 × 300 × 0,985 = **11,8 N·m**.
+4. Vergleich: Bei θ = 90° wäre |M| = 12 N·m (Maximum). Bei θ = 30°: |M| = 0,04 × 300 × 0,5 = 6 N·m — die Krafteffizienz halbiert sich bei flachem Ansatzwinkel.
 
-**Beispiel 3 — Strahlentherapie: Isodosen-Addition:**
-Zwei Bestrahlungsfelder mit Dosisanteil-Vektoren d₁ = (1,5; 0,8; 0,4) Gy und d₂ = (0,4; 0,8; 1,5) Gy (Komponenten: Tumor, Normalgewebe links, Normalgewebe rechts). Gesamtdosis: d₁ + d₂ = **(1,9; 1,6; 1,9) Gy**. Tumordosis 1,9 Gy pro Fraktion, Normalgewebe max. 1,9 Gy — Ziel: Tumordosis >> Normalgewebe durch mehr Felder aus verschiedenen Richtungen.
+---
 
-**Beispiel 4 — Abstand Punkt-Ebene (Tumorrand zum Resektionsrand):**
-Resektionsebene: 2x − y + 2z = 10. Tumorzentrum bei T(3, 2, 4). Abstand: |2×3 − 2 + 2×4 − 10| / √(4+1+4) = |6 − 2 + 8 − 10| / 3 = |2| / 3 = **0,67 cm**. Sicherheitsabstand von 1 cm nicht erreicht → Nachresektion erforderlich.`,
+## Ebenengleichung (vertiefend, Kurzüberblick)
+
+Eine Ebene im Raum lässt sich durch einen Punkt **r₀** und einen **Normalenvektor** **n** beschreiben: **n** · (**r** − **r₀**) = 0, oder in Koordinatenform: n₁x + n₂y + n₃z = d.
+
+Den Normalenvektor aus drei Punkten A, B, C erhält man über das Kreuzprodukt: **n** = (**B** − **A**) × (**C** − **A**). Der Abstand eines Punktes P von der Ebene beträgt |n₁xP + n₂yP + n₃zP − d| / |**n**|.
+
+Im MRT definiert jede Bildschicht eine Ebene; der Normalenvektor legt die Schichtorientierung fest (axial, sagittal, koronal). Weiterführend: siehe Kapitel ma-6-03.
+
+---
+
+## Typische Prüfungsfehler
+
+- **Skalar- vs. Kreuzprodukt verwechselt:** Skalarprodukt → Zahl, Kreuzprodukt → Vektor
+- **Orthogonalitätstest:** senkrecht ↔ Skalarprodukt = 0 (nicht Kreuzprodukt = 0!)
+- **Parallelitätstest:** parallel ↔ Kreuzprodukt = 0 (nicht Skalarprodukt = 0!)
+- **Reihenfolge beim Kreuzprodukt:** a × b = −(b × a) — Vorzeichen beachten
+- **Betrag vergessen:** cos θ = (a · b) / (|a| · |b|), nicht einfach a · b
+
+---
+
+## Zusammenfassung
+
+| Operation | Ergebnis | Formel | Bedeutung |
+|-----------|----------|--------|-----------|
+| Betrag | Skalar | √(a₁²+a₂²+a₃²) | Länge des Vektors |
+| Skalarprodukt | Skalar | a₁b₁+a₂b₂+a₃b₃ | Winkel, Orthogonalität |
+| Kreuzprodukt | Vektor | (a₂b₃−a₃b₂, …) | Fläche, Drehmoment |
+| Gerade | Parameterform | **p** + t·**v** | Stützpunkt + Richtung |`,
 
       lernziele: [
         "Betrag, Addition, Subtraktion und Skalierung von Vektoren berechnen.",

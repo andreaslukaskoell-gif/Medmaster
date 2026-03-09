@@ -840,55 +840,85 @@ Die **kritischen Perioden** (Phasen hoher Empfindlichkeit gegenüber Teratogenen
         "Divergenz",
         "Kladistik",
       ],
-      content: `## Stammbäume, Homologie und Analogie
+      content: `## Phylogenetik und Systematik
 
-Der Arm eines Menschen, die Flosse eines Wals und der Flügel einer Fledermaus sehen völlig unterschiedlich aus — und doch teilen sie denselben Bauplan mit den gleichen Knochen. Umgekehrt sehen Vogelflügel und Insektenflügel verblüffend ähnlich aus, obwohl sie unabhängig voneinander entstanden sind. Dieses Spannungsfeld zwischen Homologie (gleicher Ursprung) und Analogie (gleiche Funktion) ist der Schlüssel, um Verwandtschaft zwischen Lebewesen zu erkennen und Stammbäume richtig zu lesen.
+Als Ende 2019 ein neuartiges Coronavirus auftauchte, verglichen Forscher innerhalb weniger Wochen seine RNA-Sequenz mit verwandten Viren — und konnten so den Ursprung, die Ausbreitungswege und die Entstehung neuer Varianten (Alpha, Delta, Omikron) in Echtzeit nachverfolgen. Dieselbe Methode, mit der Kliniken heute MRSA-Ausbrüche (Methicillin-resistenter Staphylococcus aureus) auf Stationen zurückverfolgen, bildet das Fundament der modernen Phylogenetik: die Rekonstruktion von Verwandtschaftsbeziehungen anhand molekularer und morphologischer Daten.
 
+---
 
-## Homologie vs. Analogie — Ein kritischer Unterschied
+## Biologische Systematik — Domänen, Reiche und der Artbegriff
 
-Homologie und Analogie werden häufig verwechselt. Der entscheidende Unterschied liegt im Ursprung: Homologe Strukturen haben denselben evolutionären Ursprung (common ancestry) — sie sind strukturell oft ähnlich, obwohl die Funktion verschieden ist. Analoge Strukturen haben unterschiedliche evolutionäre Ursprünge — sie sind funktionell ähnlich (durch konvergente Evolution auf dasselbe Problem gestoßen), aber strukturell verschieden. Als Faustregel: Homologie → gemeinsame Herkunft, ähnlicher Bau; Analogie → unabhängige Entstehung, ähnliche Funktion. Ein besonders eindrucksvolles Analogiebeispiel ist das Linsenauge von Tintenfischen und Wirbeltieren: Beide haben unabhängig ein optisches System mit Linse, Retina und Iris entwickelt — aber die Photorezeptoren zeigen grundlegend verschiedene Struktur und Entwicklung.
+Die gesamte Vielfalt des Lebens wird hierarchisch geordnet. Carl Woese revolutionierte 1977 die Systematik, als er anhand von 16S-rRNA-Vergleichen (ribosomale RNA der kleinen Untereinheit, hochkonserviert in allen Lebewesen) die Archaea als eigenständige Domäne identifizierte. Seitdem unterscheidet man **drei Domänen**: **Bacteria**, **Archaea** und **Eukarya**. Innerhalb der Eukarya existieren traditionell vier Reiche: Protista (Einzeller und einfache Mehrzeller), Plantae (Pflanzen), Fungi (Pilze) und Animalia (Tiere) — wobei Protista eine paraphyletische Sammelgruppe darstellt und zunehmend aufgelöst wird.
 
-> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel).
+Die hierarchischen Ebenen der Taxonomie (Lehre von der Klassifikation) folgen dem Schema: **Domäne → Stamm (Phylum) → Klasse → Ordnung → Familie → Gattung → Art**. Die **binäre Nomenklatur** nach Carl von Linné (1753) benennt jede Art mit Gattungsname + Artepitheton, kursiv geschrieben: *Homo sapiens*, *Escherichia coli*, *Staphylococcus aureus*.
+
+Was genau eine **Art** ist, bleibt umstritten. Das **biologische Artkonzept** (Ernst Mayr, 1942) definiert Arten als Populationen, deren Mitglieder sich untereinander fortpflanzen können und fertile Nachkommen erzeugen — versagt aber bei asexuellen Organismen (Bakterien) und Fossilien. Daher nutzt die Mikrobiologie oft das **phylogenetische Artkonzept**: Arten als kleinste monophyletische Gruppen mit geteilter Evolutionsgeschichte, erkennbar an DNA-Sequenzähnlichkeit (bei Bakterien >97 % 16S-rRNA-Identität als Richtwert).
+
+> **Merke:** Drei Domänen (Woese): Bacteria, Archaea, Eukarya. Binäre Nomenklatur (Linné): *Gattung Art*. Biologisches Artkonzept (Mayr): reproduktive Isolation + fertile Nachkommen.
+
+---
+
+## Phylogenetische Bäume lesen — Kladistik
+
+{{DIAGRAM:phylogenetic-tree}}
+
+Die **Kladistik** (von griech. *klados* = Zweig) ist die heute dominierende Methode, Verwandtschaft zu rekonstruieren. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten Merkmalen, die nach der Trennung vom letzten gemeinsamen Vorfahren neu entstanden sind. Das Ergebnis ist ein **Kladogramm (phylogenetischer Stammbaum)**, dessen Elemente sich wie folgt lesen:
+
+- **Äste** = Evolutionslinien einzelner Taxa (systematische Einheiten: Art, Gattung, Familie etc.)
+- **Knoten** = Verzweigungspunkte, die hypothetische gemeinsame Vorfahren darstellen
+- **Terminale Taxa** = rezente oder fossile Arten an den Astspitzen
+- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen (LUCA bei universellen Bäumen)
+- **Schwestergruppen** = zwei Taxa, die den nächsten gemeinsamen Knoten teilen
+- **Außengruppe (Outgroup)** = ein entfernt verwandtes Taxon zur Polarisierung von Merkmalen (primitiv vs. abgeleitet)
+
+Zentral ist die Unterscheidung von Gruppentypen: Ein **Clade (Klade)** ist eine **monophyletische Gruppe** — ein gemeinsamer Vorfahre und **alle** seine Nachkommen, ohne Ausschluss. Die Kladistik akzeptiert ausschließlich monophyletische Gruppen. Eine **paraphyletische** Gruppe schließt nicht alle Nachkommen ein: Das klassische Beispiel sind „Reptilien" ohne Vögel — obwohl Vögel direkte Nachkommen der Dinosaurier sind. **Polyphyletische** Gruppen vereinen Organismen ohne gemeinsamen Vorfahren und beruhen auf Analogie statt Verwandtschaft.
+
+Für die Merkmalsanalyse im Stammbaum unterscheidet man: **Apomorphie** (abgeleitetes, neu entstandenes Merkmal — z. B. Federn bei Vögeln) vs. **Plesiomorphie** (ursprüngliches, vom Vorfahren geerbtes Merkmal — z. B. vier Extremitäten bei Tetrapoden). Nur geteilte Apomorphien (**Syn**apomorphien) zeigen echte Verwandtschaft an, während geteilte Plesiomorphien (**Sym**plesiomorphien) keine Aussage über enge Verwandtschaft erlauben.
+
+> **Merke:** Clade = monophyletisch = Vorfahre + ALLE Nachkommen. Synapomorphie = geteiltes abgeleitetes Merkmal → zeigt Verwandtschaft. Plesiomorphie = ursprüngliches Merkmal → keine Verwandtschaftsaussage.
+
+---
+
+## Homologie vs. Analogie — Der kritische Unterschied
+
+Wer Stammbäume korrekt lesen will, muss echte Verwandtschaft (Homologie) von oberflächlicher Ähnlichkeit (Analogie) trennen. **Homologe Strukturen** gehen auf denselben evolutionären Ursprung zurück — sie teilen den Grundbauplan, obwohl die Funktion verschieden sein kann. Das Lehrbuchbeispiel: Menschenarm, Walflosse, Fledermausflügel und Pferdevorderbein besitzen alle Humerus, Radius, Ulna und Karpalknochen — Ausdruck **divergenter Evolution** ausgehend von einem gemeinsamen Tetrapoden-Vorfahren.
+
+**Analoge Strukturen** hingegen entstanden unabhängig in verschiedenen Abstammungslinien als Lösung für dasselbe funktionelle Problem — **konvergente Evolution**. Vogelflügel (modifizierte Knochen-Vorderextremität) und Insektenflügel (Ausstülpungen des Exoskeletts) sehen funktionell ähnlich aus, haben aber grundlegend verschiedene Baupläne. Besonders eindrucksvoll: Das Linsenauge von Wirbeltieren und Tintenfischen entstand zweimal unabhängig — mit Linse, Retina und Iris, aber völlig unterschiedlicher Photorezeptor-Orientierung.
 
 | Merkmal | Homologie | Analogie |
 | --- | --- | --- |
 | Ursprung | Gemeinsamer Vorfahre | Unabhängig (konvergent) |
 | Bauplan | Ähnlich (Grundstruktur) | Verschieden |
-| Funktion | Oft verschieden | Gleich |
+| Funktion | Oft verschieden | Gleich oder ähnlich |
 | Beispiel | Arm / Flosse / Flügel (Wirbeltiere) | Vogelflügel / Insektenflügel |
-| Nachweis | Embryologie, Anatomie | Funktionsanalyse |
+| Nachweis | Embryologie, Anatomie, Genetik | Funktionsanalyse |
 | Fachbegriff | Divergente Evolution | Konvergente Evolution |
 
----
-
-## Molekulare Uhr — Evolution zeitlich datieren
-
-Die Idee der molekularen Uhr basiert auf der Beobachtung, dass neutrale Mutationen in bestimmten Genen mit einer nahezu konstanten Rate akkumulieren. Je mehr Sequenzunterschiede zwischen zwei Arten, desto weiter sind ihre Abstammungslinien auseinander gelaufen (desto länger ist der gemeinsame Vorfahre her). Durch Kalibrierung mit datierten Fossilien können absolute Zeitpunkte berechnet werden. Beispiel: Der molekulare Vergleich von Cytochrom c (Protein der Atmungskette) zwischen Mensch und Schimpanse zeigt sehr wenige Unterschiede (beide divergierten vor ca. 6--7 Millionen Jahren). Molekulare Uhren haben Diskrepanzen zu fossilen Befunden aufgedeckt (z. B. die frühere Trennung von Wirbeltier-Klassen als bisher angenommen). Probleme: Mutationsraten sind nicht immer konstant (Generation Time Effect, unterschiedliche Selektionsdrücke).
-
-> **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren konstant → Sequenzunterschiede proportional zu Zeit seit Divergenz. Kalibrierung mit Fossilien.
+> **Merke:** Homologie = gleicher Ursprung, verschiedene Funktion (Vogelflügel und Menschenarm). Analogie = verschiedener Ursprung, gleiche Funktion (Vogelflügel und Insektenflügel). Nur Homologien belegen Verwandtschaft.
 
 ---
 
-## Kladistik und Stammbäume lesen
+## Molekulare Phylogenetik — Sequenzvergleich und molekulare Uhr
 
 {{DIAGRAM:dna-helix}}
 
-Die **Kladistik** ist die moderne Methode der biologischen Systematik. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten (evoluierten) Merkmalen, die in der Linie nach dem letzten gemeinsamen Vorfahren neu entstanden sind. Im **Stammbaum (Kladogramm)**:
-- **Äste** = Evolutionslinien der abstammenden Taxa (systematische Einheiten wie Art, Gattung, Familie)
-- **Knoten (Nodes)** = gemeinsame Vorfahren (Verzweigungspunkte)
-- **Terminale Taxa** = heute lebende (oder erforschte) Arten an den Astspitzen
-- **Wurzel** = letzter gemeinsamer Vorfahre aller dargestellten Gruppen
+Während klassische Systematik auf morphologischen Merkmalen (Knochen, Organe, Embryonalentwicklung) aufbaut, nutzt die molekulare Phylogenetik DNA-, RNA- und Proteinsequenzen zur Verwandtschaftsanalyse. Der Grundgedanke: Je mehr Sequenzunterschiede zwei Arten in einem homologen Gen aufweisen, desto länger liegt ihre letzte gemeinsame Abstammung zurück.
 
-Ein **Clade (Klade)** ist eine **monophyletische** Gruppe: ein gemeinsamer Vorfahre und **ALLE** seine Nachkommen. Die Cladistik akzeptiert nur monophyletische Gruppen. **Paraphyletische** Gruppen schließen gemeinsamen Vorfahren, aber nicht alle Nachkommen ein — sie sind in der modernen Systematik abgelehnt. Klassisches Beispiel: "Reptilien" ohne Vögel ist eine **paraphyletische** Gruppe, weil Vögel evolutionäre Nachkommen der Dinosaurier sind und daher zum selben Clade gehören. **Polyphyletische** Gruppen vereinen Organismen, die keinen gemeinsamen Vorfahren teilen — sie entstanden durch Analogie (konvergente Evolution).
+Standardmarker für verschiedene taxonomische Ebenen sind: **16S-rRNA** für Bakterien und Archaea (Woese), **18S-rRNA** für Eukaryoten, **Cytochrom c** und **Cytochrom-Oxidase I (COI)** für Tiere (DNA-Barcoding), und **ITS-Sequenzen** (Internal Transcribed Spacer) für Pilze. Die Wahl des Markers hängt von der Fragestellung ab: Hochkonservierte Gene (rRNA) eignen sich für tiefe Verwandtschaften (Domänen, Stämme), schnell evolvierende Sequenzen (Kontrollregion der mtDNA) für nahe verwandte Arten oder Populationen.
 
-> **Merke:** Clade = monophyletisch = gemeinsamer Vorfahre + ALLE Nachkommen (kein Ausschluss). Paraphyletisch = nicht alle Nachkommen eingeschlossen. Kladistik verwendet nur Synapomorphien.
+Die **molekulare Uhr** basiert auf der Beobachtung, dass neutrale Mutationen (ohne Selektionsvorteil oder -nachteil) mit einer nahezu konstanten Rate akkumulieren. Durch Kalibrierung mit datierten Fossilien lassen sich absolute Divergenzzeitpunkte berechnen. So zeigt der Cytochrom-c-Vergleich zwischen Mensch und Schimpanse nur minimale Unterschiede — konsistent mit einer Divergenz vor ca. 6–7 Millionen Jahren. Einschränkungen der molekularen Uhr: Die Mutationsrate variiert zwischen Genen, Organismen und Generationszeiten (**Generation Time Effect** — Organismen mit kurzer Generationszeit akkumulieren schneller Mutationen).
+
+> **Merke:** Molekulare Uhr: neutrale Mutationen akkumulieren proportional zur Zeit → Sequenzunterschiede ≈ Divergenzzeit. Kalibrierung über Fossilien. 16S-rRNA = Standardmarker für bakterielle Phylogenetik (Woese → Entdeckung der Archaea).
 
 ---
 
-## Klinischer Bezug
+## Anwendung — Von MRSA-Tracking bis Pandemie-Überwachung
 
-Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.`,
+Molekulare Phylogenetik ist längst klinischer Alltag. Bei einem nosokomialen MRSA-Ausbruch (Krankenhaus-assoziierte Infektion) vergleichen Hygieniker die Genomsequenzen der Isolate verschiedener Patienten: Bilden die Sequenzen einen Cluster im Stammbaum, stammen sie von einer gemeinsamen Quelle (klonale Ausbreitung). Unterscheiden sie sich stark, handelt es sich um unabhängige Einträge. Dieselbe Logik ermöglichte während der COVID-19-Pandemie die Genomic Epidemiology: Phylogenetische Analysen von SARS-CoV-2-Sequenzen identifizierten den zoonotischen Ursprung, kartierten Übertragungsketten zwischen Ländern und entdeckten Varianten mit veränderten Eigenschaften (höhere Transmissibilität, Immunevasion).
+
+Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand viraler Stammbaum-Analysen nachgewiesen, dass ein Zahnarzt seine Patienten infiziert hatte — die HIV-Sequenzen der Patienten bildeten einen Cluster, der vom Zahnarzt-Isolat abstammte.
+
+> **Merke:** Klinische Phylogenetik: MRSA-Ausbruchsanalyse (klonale vs. unabhängige Isolate), COVID-19-Variantentracking (Genomic Epidemiology), HIV-Forensik (Übertragungsketten-Nachweis).`,
       lernziele: [
         "Homologe von analogen Strukturen anhand von Beispielen unterscheiden",
         "Phylogenetische Stammbäume lesen und Verwandtschaftsbeziehungen ableiten",
@@ -1022,43 +1052,110 @@ Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische A
         "Hominisation",
         "Aufrechter Gang",
       ],
-      content: `{{DIAGRAM:dna-helix}}
+      content: `98,7 % DNA-Übereinstimmung mit Schimpansen — und doch trennen uns aufrechter Gang, Sprache und ein dreifach größeres Gehirn. Die Geschichte der Hominiden ist kein linearer Aufstieg, sondern ein verzweigter Stammbaum mit Sackgassen, Koexistenzen und überraschenden Hybridisierungen.
 
-## Bipedie vor Gehirnvergrößerung — Eine wichtige Erkenntnis
-
-Lange glaubte man, dass Gehirnvergrößerung und aufrechter Gang parallel evolvierten. Die Fossil-Befunde zeigen jedoch klar: Frühe Homininen (Menschenartige, die Abstammungslinie nach der Trennung von Schimpansen) wie Australopithecus afarensis (Lucy, 3,2 Mya (Million years ago, Millionen Jahre)) gingen bereits aufrecht, hatten aber ein Hirnvolumen von nur ~450 ccm (Kubikzentimeter) (ähnlich einem Schimpansen). Die Gehirnvergrößerung folgte deutlich später. Warum Bipedie? Mehrere Hypothesen: Freisetzen der Hände für Werkzeuge (aber Werkzeuge kamen viel später), thermoregulatorische Vorteile (aufrechter Gang reduziert Sonneneinstrahlung auf den Körper), effizientere Fortbewegung über lange Strecken in offener Savanne, bessere Übersicht in der Savanne. Wahrscheinlich kombinierten mehrere Selektionsvorteile. Die bipede Anatomie hat auch Nachteile: Beckenerweiterung für Geburt kollidiert mit großem Kopf (Neugeborenenkopf muss gedreht werden), erhöhte Risiken für Rückenschmerzen, Krampfadern, Leistenbrüche.
-
-> **Merke:** Bipedie evolvierte vor Gehirnvergrößerung: Australopithecus aufrecht (3,9 Mya), Hirnvolumen erst ab Homo (1,5 Mya) deutlich vergrößert.
+{{DIAGRAM:dna-helix}}
 
 ---
 
-## Homo habilis — Der erste Werkzeugmacher
+## Primaten-Stammbaum — Vom Halbaffen zum Menschen
 
-**Homo habilis** (ca. 2,4–1,5 Mya) gilt als erster Vertreter der Gattung *Homo* und wurde wegen seiner Assoziation mit einfachen Steinwerkzeugen der **Oldowan-Kultur** (älteste Steinwerkzeugtradition, benannt nach der Olduvai-Schlucht) als „geschickter Mensch" benannt. Sein Hirnvolumen lag bei ca. **630 ccm** — deutlich mehr als bei Australopithecus (~450 ccm), aber weit unter dem von H. erectus. Die Fähigkeit zur Werkzeugherstellung setzte kognitive Leistungen voraus, die bei früheren Homininen nicht nachweisbar sind: vorausschauendes Planen und präzise Feinmotorik. H. habilis lebte zeitlich überlappend mit späten Australopithecus-Populationen und frühen H. erectus-Gruppen in Ostafrika.
+Die Ordnung **Primates** gliedert sich in zwei große Gruppen:
+- **Strepsirrhini (Feuchtnasenprimaten):** Lemuren, Loris — nachtaktiv, Riechkolben dominant
+- **Haplorhini (Trockennasenprimaten):** Koboldmakis, Affen, Menschenaffen
 
-> **Merke:** H. habilis: ~2,4 Mya; Hirnvolumen ~630 ccm; erster Steinwerkzeugbenutzer (Oldowan-Kultur); erster Vertreter der Gattung Homo.
+Innerhalb der Haplorhini unterscheidet man:
+- **Neuweltaffen (Platyrrhini):** Klammerschwanz, breite Nasenscheidewand (Kapuzineraffen, Brüllaffen)
+- **Altweltaffen (Catarrhini):** enge Nasenscheidewand, kein Greifschwanz (Makaken, Paviane)
+- **Menschenaffen (Hominoidea):** schwanzlos — Gibbons, Orang-Utans, Gorillas, Schimpansen, Menschen
+
+Die engste Verwandtschaft besteht zwischen **Mensch und Schimpanse**: Ihre Linien trennten sich vor ca. **6–7 Millionen Jahren** (Mya). Die Abstammungslinie nach dieser Trennung — also alle Arten, die näher mit dem Menschen als mit dem Schimpansen verwandt sind — heißt **Hominini** (oft vereinfacht „Hominiden").
+
+> **Merke:** Primaten-Hierarchie: Strepsirrhini → Haplorhini → Catarrhini → Hominoidea → Hominini. Mensch und Schimpanse trennten sich vor ~6–7 Mya.
 
 ---
 
-## Homo erectus — Der erste Mensch außerhalb Afrikas
+## Schlüsselmerkmale der Hominisation
 
-**Homo erectus** (ca. 1,9 Mya–100.000 Jahre) war der erste Hominin, der den afrikanischen Kontinent verließ und weite Teile Asiens und Europas besiedelte. Fossilien wurden in **Java** (Java-Mensch, Dubois 1891), **China** (Peking-Mensch) und dem Nahen Osten gefunden. Sein Hirnvolumen lag bei ca. **900–1.100 ccm** — deutlich größer als bei H. habilis, aber noch unter dem des modernen Menschen (~1.350 ccm). H. erectus fertigte komplexere Steinwerkzeuge der **Acheuléen-Kultur** (symmetrische Faustkeile) und gilt als erster Hominin mit regelmäßiger **Feuernutzung**. Seine Körpergröße und Proportionen ähnelten bereits stark dem modernen Menschen. Die fast zwei Millionen Jahre umfassende Existenz macht H. erectus zu einem der erfolgreichsten Homininen.
+Die **Hominisation** (Menschwerdung) umfasst vier zentrale Entwicklungsschritte, die nicht gleichzeitig, sondern in einer bestimmten Reihenfolge auftraten:
 
-> **Merke:** H. erectus: ~1,9 Mya; erster Hominin außerhalb Afrikas; Hirnvolumen ~1.000 ccm; Feuer; Acheuléen-Werkzeuge.
+1. **Aufrechter Gang (Bipedie):** Der früheste Schritt — bereits Australopithecus afarensis (Lucy, 3,2 Mya) ging aufrecht, hatte aber ein schimpansengroßes Gehirn (~450 ccm). Selektionsvorteile: Thermoregulation in der Savanne, effizientere Fortbewegung über weite Strecken, freie Hände. Nachteile: Rückenschmerzen, erschwerter Geburtskanal (Kopf-Becken-Kompromiss).
+2. **Gehirnwachstum (Enzephalisation):** Erst ab der Gattung *Homo* (~2,5 Mya) nahm das Hirnvolumen deutlich zu — von ~630 ccm (H. habilis) über ~1.000 ccm (H. erectus) auf ~1.350 ccm (H. sapiens). Treiber: proteinreiche Ernährung, Feuer (gekochte Nahrung), soziale Komplexität.
+3. **Werkzeuggebrauch:** Oldowan-Geröllgeräte (H. habilis, ~2,6 Mya) → Acheuléen-Faustkeile (H. erectus) → Levallois-Technik (H. neanderthalensis) → Klingen, Nadeln, Kunst (H. sapiens).
+4. **Sprache:** Anatomische Voraussetzungen (tiefer Kehlkopf, FOXP2-Gen) entwickelten sich schrittweise; vollentwickelte Sprache wahrscheinlich erst bei H. sapiens.
+
+> **Merke:** Reihenfolge der Hominisation: Bipedie (zuerst!) → Werkzeuggebrauch → Gehirnwachstum → Sprache. Bipedie ging der Enzephalisation um mehrere Millionen Jahre voraus.
 
 ---
 
-## Neanderthaler — Verwandte, keine Vorfahren
+## Wichtige Fossilien — Chronologischer Überblick
 
-Homo neanderthalensis war keine primitive Vorstufe des modernen Menschen, sondern eine eigenständige, an Kälteklima adaptierte Menschenart in Europa. Neanderthaler hatten ein vergleichbares oder sogar etwas größeres Hirnvolumen als wir (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente) und pflegten Kranke. Genetische Analysen (Svante Pääbo, Nobelpreis 2022) zeigen, dass moderne Menschen außerhalb Afrikas 1–4% neanderthalische DNA tragen — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige neanderthalische Allele haben Konsequenzen für moderne Menschen: TLR-Allele (Toll-like-Rezeptoren, Sensoren der angeborenen Immunabwehr), Allergie-Risiko, COVID-19-Schwere-Risikofaktoren. Das Aussterben der Neanderthaler vor ca. 40.000 Jahren war wahrscheinlich eine Kombination aus Konkurrenz mit H. sapiens, Klimawandel und demografischen Effekten.
+{{DIAGRAM:phylogenetic-tree}}
 
-> **Merke:** Neanderthaler: eigenständige Art, nicht Vorstufe. 1–4% ihrer DNA in modernen Menschen. Svante Pääbo: Paläogenomik, Nobelpreis 2022.
+| Art | Zeitraum | Hirnvolumen | Werkzeuge | Besonderheit |
+| --- | --- | --- | --- | --- |
+| **Sahelanthropus tchadensis** | ~7 Mya | ~350 ccm | keine | Ältester möglicher Hominin (Tschad) |
+| **Australopithecus afarensis** | 3,9–2,9 Mya | ~450 ccm | keine | „Lucy" — bipeder Gang, kleines Gehirn |
+| **Homo habilis** | 2,4–1,5 Mya | ~630 ccm | Oldowan | Erster *Homo*; erster Werkzeugmacher |
+| **Homo erectus** | 1,9 Mya–100 ka | ~900–1.100 ccm | Acheuléen | Erster Auswanderer aus Afrika; Feuer |
+| **H. neanderthalensis** | 400–40 ka | ~1.400–1.600 ccm | Levallois | Kälteanpassung; Bestattungen; Hybridisierung |
+| **Homo sapiens** | ab ~300 ka | ~1.350 ccm | Klingen, Kunst | Einzige überlebende Homininen-Art |
+
+**Lucy** (AL 288-1) ist das bekannteste Fossil: 1974 in Äthiopien entdeckt, ~40 % Skeletterhalt, weiblich, ~1,07 m groß. Ihr Becken und Kniegelenk belegen eindeutig bipeden Gang — obwohl das Hirnvolumen auf Schimpansenniveau lag. Diese Entdeckung widerlegte die alte Hypothese, dass Gehirnwachstum und Bipedie parallel evolvierten.
+
+> **Merke:** Fossilreihe: Sahelanthropus → Australopithecus → H. habilis → H. erectus → H. neanderthalensis / H. sapiens. Hirnvolumen steigt von ~350 auf ~1.350 ccm.
+
+---
+
+## Homo erectus — Der erste Weltenbummler
+
+**Homo erectus** war der erste Hominin, der Afrika verließ und weite Teile Eurasiens besiedelte. Fossilien fanden sich in **Java** (Java-Mensch, Dubois 1891), **China** (Peking-Mensch), Georgien (Dmanisi, 1,8 Mya — ältester Nachweis außerhalb Afrikas) und Europa. H. erectus beherrschte als erster Hominin das **Feuer** regelmäßig — ein Gamechanger: Gekochte Nahrung liefert mehr Energie, tötet Parasiten und ermöglichte kürzere Därme zugunsten eines größeren Gehirns (Expensive-Tissue-Hypothese). Mit fast zwei Millionen Jahren Existenz ist H. erectus die langlebigste Homininen-Art.
+
+> **Merke:** H. erectus: ~1,9 Mya; erster Hominin außerhalb Afrikas; ~1.000 ccm; Feuer + Acheuléen-Faustkeile; Expensive-Tissue-Hypothese (Kochen → größeres Gehirn).
+
+---
+
+## Neandertaler — Verwandte, keine Vorfahren
+
+**Homo neanderthalensis** war keine primitive Vorstufe, sondern eine eigenständige, an Kälteklima adaptierte Schwesterart des modernen Menschen in Europa und Westasien. Neandertaler hatten ein vergleichbares oder sogar etwas **größeres Hirnvolumen** als H. sapiens (~1.400–1.600 ccm), bestatteten ihre Toten, nutzten Schmuck (Muschelperlen, Pigmente), pflegten Kranke und stellten Birkenpech als Klebstoff her.
+
+Genetische Analysen von **Svante Pääbo** (Nobelpreis Medizin 2022) revolutionierten unser Bild: Moderne Menschen außerhalb Afrikas tragen **1–4 % neanderthalische DNA** — Beweis für Hybridisierung nach dem Out-of-Africa-Ereignis. Einige geerbte Neandertaler-Allele haben klinische Relevanz: TLR-Gene (Toll-like-Rezeptoren, angeborene Immunabwehr), erhöhtes Allergie-Risiko und ein **Chromosom-3-Risikohaplotyp** für schwere COVID-19-Verläufe.
+
+Das Aussterben vor ca. 40.000 Jahren war vermutlich multifaktoriell: Konkurrenz mit H. sapiens, Klimaschwankungen und kleine Populationsgrößen (genetische Drift).
+
+> **Merke:** Neandertaler: eigenständige Art (~400–40 ka), nicht Vorstufe. 1–4 % ihrer DNA in modernen Nicht-Afrikanern. Pääbo: Nobelpreis 2022 für Paläogenomik.
+
+---
+
+## Out-of-Africa vs. multiregionales Modell
+
+Zwei konkurrierende Hypothesen erklären die Herkunft des modernen Menschen:
+
+- **Out-of-Africa (Replacement-Hypothese):** H. sapiens entstand **einmalig in Afrika** (vor ~300.000 Jahren) und migrierte vor ~60.000–70.000 Jahren in den Rest der Welt, wobei er lokale Populationen (H. erectus, Neandertaler) weitgehend ersetzte. **Stärkste Belege:** Maximale genetische Diversität in afrikanischen Populationen (Gründereffekt bei Auswanderung), mtDNA- und Y-Chromosom-Konvergenz auf afrikanische Ursprünge, Fossilbefunde.
+- **Multiregionales Modell:** H. sapiens entwickelte sich parallel in mehreren Regionen aus lokalen H. erectus-Populationen, verbunden durch Genfluss. Heute weitgehend **widerlegt**, da genetische Daten klar für einen einmaligen afrikanischen Ursprung sprechen.
+
+Die Wahrheit liegt dazwischen: Out-of-Africa ist das Grundmodell, aber die Neandertaler-DNA in modernen Genomen zeigt, dass es **begrenzte Hybridisierung** (Genintrogression) gab — kein komplettes Replacement.
+
+> **Merke:** Out-of-Africa: H. sapiens einmalig in Afrika entstanden, migrierte vor ~70.000 Jahren weltweit. Beleg: größte genetische Diversität in Afrika (Gründereffekt). Multiregionales Modell weitgehend widerlegt.
+
+---
+
+## Molekulare Uhr — mtDNA-Eva und Y-Chromosom-Adam
+
+Die **molekulare Uhr** nutzt die konstante Akkumulation neutraler Mutationen, um Divergenzzeitpunkte zu berechnen. Zwei Konzepte sind prüfungsrelevant:
+
+- **Mitochondriale Eva:** Die jüngste gemeinsame Vorfahrin aller heute lebenden Menschen in der **maternalen Linie** (mtDNA wird nur über die Mutter vererbt). Sie lebte vor ca. **150.000–200.000 Jahren in Afrika** — nicht die einzige Frau ihrer Zeit, sondern diejenige, deren mtDNA-Linie als einzige bis heute ununterbrochen überlebt hat.
+- **Y-Chromosom-Adam:** Der jüngste gemeinsame Vorfahre aller heutigen Männer in der **paternalen Linie** (Y-Chromosom wird nur vom Vater an Söhne vererbt). Er lebte vor ca. **200.000–300.000 Jahren in Afrika**.
+
+Beide Befunde stützen die Out-of-Africa-Hypothese unabhängig voneinander.
+
+> **Merke:** Mitochondriale Eva (~200 ka) und Y-Chromosom-Adam (~250 ka): beide afrikanischen Ursprungs. Sie lebten nicht gleichzeitig und waren nicht die einzigen Menschen — nur ihre Linien überlebten ununterbrochen.
 
 ---
 
 ## Klinischer Bezug
 
-Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik (Erbgutanalyse ausgestorbener Arten) der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.`,
+Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden-Forschung direkt mit moderner Medizin: Der Neandertaler-Risikohaplotyp auf Chromosom 3 erhöht das COVID-19-Schwereverlaufsrisiko signifikant. Weitere neanderthalische Allele beeinflussen Schmerzempfindlichkeit (SCN9A-Varianten), Immunantwort (TLR-Gene) und Gerinnungsfaktoren. Diese Erkenntnis zeigt, dass prähistorische Hybridisierungsereignisse bis heute klinisch messbare Konsequenzen haben.`,
       lernziele: [
         "Die wichtigsten Homininen (Australopithecus afarensis, H. habilis, H. erectus, H. neanderthalensis, H. sapiens) in chronologische Reihenfolge bringen und ihre Merkmale nennen",
         "Die Out-of-Africa-Theorie und genetische Belege (Neanderthaler-DNA) beschreiben",

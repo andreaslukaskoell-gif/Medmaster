@@ -905,126 +905,167 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `## Definition und Grundbegriffe
+      content: `## pH 7,1 vs. 7,4 — wie viel saurer ist das eigentlich?
 
-Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Für die Basis b > 0, b ≠ 1 gilt:
+Die Antwort: **doppelt so viel H⁺-Ionen.** Ein Unterschied von 0,3 pH-Einheiten klingt harmlos, bedeutet aber eine Verdoppelung der Protonenkonzentration — und eine lebensbedrohliche Azidose. Dass sich hinter winzigen Zahlenverschiebungen gewaltige Konzentrationsunterschiede verbergen, liegt am **Logarithmus**: der mathematischen Funktion, die aus Potenzierungen wieder handhabbare Zahlen macht. Ohne Logarithmen gäbe es keinen pH-Wert, keine Dezibel-Skala und keine Halbwertszeitberechnung.
+
+---
+
+## Was ist ein Logarithmus?
+
+Der Logarithmus ist die **Umkehrfunktion der Exponentialfunktion**. Die zentrale Definition:
 
 **log_b(x) = y ⟺ b^y = x**
 
-In Worten: "Der Logarithmus von x zur Basis b ist der Exponent, mit dem man b potenzieren muss, um x zu erhalten." Diese Umkehrbeziehung ist der Schlüssel zum Lösen von Exponentialgleichungen.
-
-Wichtige Spezialfälle:
-- **log₁₀(x)** (Zehnerlogarithmus, oft kurz "log"): Basis 10 — verwendet für pH-Wert, Dezibel
-- **ln(x)** (natürlicher Logarithmus): Basis e ≈ 2,718 — verwendet in Pharmakokinetik, Physik. **ln(x) ist nur für x > 0 definiert** (MedAT-Falle: ln(0) und ln(negativ) existieren nicht).
-- **log₂(x)** bzw. **ld(x)** (Logarithmus dualis, Binärlogarithmus): Basis 2 — **ld = log₂**. Es gilt **ld(2ⁿ) = n**, z. B. **ld(16) = 4** (weil 2⁴ = 16). Verwendet bei Halbwertszeiten, Informatik.
-
-> **Merke:** Logarithmus beantwortet die Frage: "Wie oft muss ich die Basis mit sich selbst multiplizieren, um x zu erreichen?" **ld(16) = 4**, weil 2⁴ = 16. **log(a·b) = log a + log b** gilt nur bei **gleicher Basis**; **ld(a+b) ≠ ld a + ld b** (typische Falle!).
+In Worten: „Welchen Exponenten brauche ich bei Basis b, um x zu erhalten?" Beispiel: log₂(8) = 3, weil 2³ = 8. Der Logarithmus beantwortet also die Frage nach dem **unbekannten Exponenten** — genau das Werkzeug, das man braucht, um Exponentialgleichungen wie 2ⁿ = 1024 zu lösen (n = log₂(1024) = 10).
 
 {{DIAGRAM:logarithm-function}}
 
-## Rechenregeln
+**Drei wichtige Logarithmus-Varianten:**
 
-Die wichtigsten Logarithmengesetze (für alle Basen gleich):
+| Schreibweise | Basis | Name | Typische Anwendung |
+|---|---|---|---|
+| **ln(x)** | e ≈ 2,718 | Natürlicher Logarithmus | Pharmakokinetik, Halbwertszeit, Physik |
+| **log(x)** oder **lg(x)** | 10 | Dekadischer Logarithmus | pH-Wert, Dezibel |
+| **ld(x)** oder **log₂(x)** | 2 | Binärlogarithmus | Halbwertszeiten (ld(2ⁿ) = n) |
 
-1. **Produktregel**: log(a × b) = log(a) + log(b)
-2. **Quotientenregel**: log(a/b) = log(a) − log(b)
-3. **Potenzregel**: log(aⁿ) = n × log(a)
-4. **Basiswechsel**: log_b(x) = ln(x)/ln(b) = log(x)/log(b)
-5. **Spezialwerte**: log(1) = 0; log(b) = 1; log(b^n) = n; b^(log_b(x)) = x
+> **Merke:** **ln(x) ist nur für x > 0 definiert.** log(0) und log(negative Zahlen) existieren nicht — eine klassische MedAT-Falle. Definitionsbereich: D = (0, ∞), Wertebereich: W = ℝ. Nullstelle immer bei x = 1 (da log_b(1) = 0 für jede Basis).
 
-| Regel | Formel | Beispiel |
+---
+
+## Logarithmengesetze — Produkte werden zu Summen
+
+Die vier Grundgesetze verwandeln komplizierte Terme in einfache:
+
+1. **Produktregel:** log(a × b) = log(a) + log(b) — Multiplikation wird zur Addition
+2. **Quotientenregel:** log(a/b) = log(a) − log(b) — Division wird zur Subtraktion
+3. **Potenzregel:** log(aⁿ) = n × log(a) — Exponent wird zum Faktor
+4. **Basiswechsel:** log_b(x) = ln(x) / ln(b) = log(x) / log(b)
+
+| Regel | Formel | Rechenbeispiel |
 |---|---|---|
 | Produktregel | log(a×b) = log a + log b | log(2×5) = log 2 + log 5 = log 10 = 1 |
-| Quotientenregel | log(a/b) = log a − log b | ln(1/2) = ln 1 − ln 2 = −ln 2 |
+| Quotientenregel | log(a/b) = log a − log b | ln(1/2) = ln 1 − ln 2 = 0 − 0,693 = −0,693 |
 | Potenzregel | log(aⁿ) = n × log a | log(10³) = 3 × log 10 = 3 |
-| Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8 / ln 2 = 3 |
+| Basiswechsel | log_b(x) = ln x / ln b | log₂(8) = ln 8 / ln 2 = 2,079/0,693 = 3 |
 
-## Vorzeichen von Logarithmen
+**Denkprozess — Halbwertszeit herleiten mit der Quotientenregel:**
+Aus C₀/2 = C₀ · e^(−k·T½) folgt 1/2 = e^(−k·T½). Logarithmieren: ln(1/2) = −k·T½. Jetzt Quotientenregel: ln(1/2) = ln(1) − ln(2) = 0 − ln(2) = **−ln(2)**. Also: T½ = ln(2)/k ≈ 0,693/k. Ohne Quotientenregel wäre diese Herleitung nicht möglich.
 
-Das Vorzeichen eines Logarithmus lässt sich direkt am Argument ablesen:
+> **Merke:** **log(a + b) ≠ log(a) + log(b)** — die Regeln gelten nur für Produkte, Quotienten und Potenzen, **niemals für Summen oder Differenzen**. Diese Verwechslung ist die häufigste Logarithmus-Falle im MedAT.
 
-- ln(x) > 0 wenn x > 1
-- ln(x) = 0 wenn x = 1
-- ln(x) < 0 wenn 0 < x < 1
+---
 
-**Beispiel:** „Welches Vorzeichen hat ln(1/e²) + ln(e³)?"
-Lösung: ln(1/e²) = ln(e⁻²) = −2. ln(e³) = 3. Summe = −2 + 3 = **+1 > 0** (positiv).
+## Natürlicher Logarithmus ln — die Sprache der Pharmakokinetik
 
-> **Merke:** Schnelltest: Argument > 1 → ln positiv; Argument = 1 → ln null; Argument zwischen 0 und 1 → ln negativ. Bei Summen/Differenzen jeden Term einzeln auswerten, dann verrechnen.
+Der natürliche Logarithmus (Basis e ≈ 2,718) ist die Umkehrfunktion von eˣ. In der Medizin begegnet er überall, wo Exponentialfunktionen auftreten: Medikamentenabbau, radioaktiver Zerfall, Enzymkinetik.
 
-## Eigenschaften der Logarithmusfunktion
+**Zentrale Spezialwerte:**
+- ln(1) = 0 (da e⁰ = 1)
+- ln(e) = 1 (da e¹ = e)
+- **ln(2) ≈ 0,693** — der wichtigste Merkwert (steckt in jeder T½-Berechnung)
+- ln(10) ≈ 2,303
 
-- **Definitionsbereich**: D = (0, ∞) — nur positive Zahlen!
-- **Wertebereich**: W = ℝ (alle reellen Zahlen)
-- **Nullstelle**: x = 1 (da log(1) = 0 für jede Basis)
-- **Vertikale Asymptote**: x = 0 (Funktion geht gegen −∞)
-- **Monotonie**: b > 1 → streng monoton steigend; 0 < b < 1 → streng monoton fallend
-- **Kein Maximum, kein Minimum**: Funktion wächst unbegrenzt (aber sehr langsam)
+**Pharmakokinetik-Anwendung:** Die Eliminationskonstante k ergibt sich aus zwei Messwerten im Semilog-Plot. Logarithmiert man C(t) = C₀ · e^(−kt), erhält man **ln(C) = ln(C₀) − k·t** — eine Geradengleichung mit Steigung −k. Im halblogarithmischen Diagramm (y-Achse: ln C, x-Achse: t) erscheint Kinetik erster Ordnung als **Gerade**.
 
-**Achtung MedAT-Falle:** **ln(x) nur für x > 0 definiert.** log(0) und log(negativ) existieren nicht. Bei Gleichungen der Form U = (a/b)·ln(A/B): U = 0 nur wenn A = B (nicht wenn A = 0 oder B = 0 — dann ist ln nicht definiert!). Bei a > 0 und b < 0 ist a/b < 0; für A > B > 0 ist ln(A/B) > 0, also **U < 0**.
+---
 
-## pH-Wert — Logarithmus in der Medizin
+## Dezimaler Logarithmus lg — pH und Dezibel
 
-Der **pH-Wert** ist definiert als negativer dekadischer Logarithmus der Wasserstoffionenkonzentration:
+Der Zehnerlogarithmus (lg oder log₁₀) komprimiert riesige Wertebereiche auf handhabbare Skalen:
 
-**pH = −log₁₀([H⁺])** oder **pH = −log₁₀([H₃O⁺])**
+**pH-Wert:** pH = −log₁₀([H⁺])
 
-Beispiele:
-- [H⁺] = 10⁻⁷ mol/L → pH = −log(10⁻⁷) = 7 (neutral)
-- [H⁺] = 10⁻² mol/L → pH = 2 (stark sauer)
-- [H⁺] = 10⁻¹⁴ mol/L → pH = 14 (stark basisch)
+| [H⁺] | pH | Bedeutung |
+|---|---|---|
+| 10⁻² mol/L | 2 | Magensaft (stark sauer) |
+| 10⁻⁷ mol/L | 7 | Neutral (reines Wasser) |
+| 4 × 10⁻⁸ mol/L | 7,4 | Normalblut |
+| 10⁻¹⁴ mol/L | 14 | Stark basisch |
 
-**Umrechnung pH → [H⁺]**: [H⁺] = 10^(−pH)
+Eine pH-Änderung um 1 entspricht einer **10-fachen** Änderung der [H⁺]. Eine Änderung um 2 → Faktor 100. Umkehrung: [H⁺] = 10^(−pH).
 
-Eine pH-Änderung um 1 entspricht einer **10-fachen** Änderung der [H⁺]! Eine Änderung um 2 Einheiten entspricht einem Faktor 100.
+**Dezibel (dB):** L = 10 · log₁₀(I/I₀). Ein Anstieg um 10 dB = 10-fache Intensität. Normales Gespräch (~60 dB) ist 10⁶-mal intensiver als die Hörschwelle (0 dB).
 
-> **Merke:** pH = 7,4 (Normalblut) entspricht [H⁺] ≈ 40 nmol/L. Eine Verdoppelung der [H⁺] auf 80 nmol/L senkt den pH nur um log(2) ≈ 0,3 auf pH 7,1 — bereits eine lebensbedrohliche Azidose (Blutübersäuerung). Der logarithmische Maßstab "versteckt" große absolute Änderungen.
+> **Merke:** pH 7,4 (Normalblut) = [H⁺] ≈ 40 nmol/L. Verdoppelung auf 80 nmol/L → pH sinkt nur um log(2) ≈ 0,3 auf **pH 7,1** — bereits eine lebensbedrohliche Azidose. Der logarithmische Maßstab „versteckt" große absolute Änderungen hinter kleinen Zahlendifferenzen.
 
-## Henderson-Hasselbalch-Gleichung
+{{DIAGRAM:ph-scale}}
 
-Die Henderson-Hasselbalch-Gleichung beschreibt den pH einer Pufferlösung:
+---
 
-**pH = pKₐ + log₁₀([A⁻]/[HA])**
+## Henderson-Hasselbalch — Puffergleichung des Blutes
 
-wobei [A⁻] die Konzentration der konjugierten Base (nach Protonenabgabe entstehende Base) und [HA] die Konzentration der schwachen Säure ist. Bei pH = pKₐ liegt genau ein 1:1-Verhältnis vor — der Puffer ist am effektivsten in einem pH-Bereich von pKₐ ± 1.
+Die Henderson-Hasselbalch-Gleichung verbindet pH, Säurestärke und Pufferverhältnis:
 
-Für den **Bicarbonatpuffer im Blut** gilt speziell: pH = 6,1 + log([HCO₃⁻] / (0,03 × pCO₂)). Die Normwerte HCO₃⁻ = 24 mmol/L und pCO₂ = 40 mmHg ergeben: pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,3 = **7,4**.
+**pH = pKₐ + log₁₀([A⁻] / [HA])**
 
-## Logarithmische Skalen (Semilog-Plot)
+Dabei ist [A⁻] die konjugierte Base (Protonenakzeptor) und [HA] die schwache Säure (Protonendonor). Bei [A⁻] = [HA] gilt log(1) = 0, also pH = pKₐ — dort puffert das System am effektivsten (Bereich pKₐ ± 1).
 
-Wenn man f(t) = C₀ × e^(−kt) logarithmiert:
-ln(C) = ln(C₀) − k×t
+**Durchgerechnetes Rechenbeispiel — Bicarbonatpuffer im Blut:**
 
-Das heißt: **ln(C) ist eine lineare Funktion von t** mit Steigung −k und Achsenabschnitt ln(C₀). Trägt man Konzentrationswerte in einem **semilogarithmischen Diagramm** (Semilog-Plot) (y-Achse: log-Skala, x-Achse: lineare Skala) auf, erscheint eine Kinetik erster Ordnung als Gerade. Dies ist die experimentelle Methode zur Bestimmung von k und T½.
+Für das Bicarbonat-System gilt speziell: pH = 6,1 + log([HCO₃⁻] / (0,03 × pCO₂))
 
-## Basiswechsel und Umrechnung
+Gegeben: [HCO₃⁻] = 24 mmol/L, pCO₂ = 40 mmHg
 
-Jeder Logarithmus kann in einen anderen umgerechnet werden:
-log_b(x) = ln(x)/ln(b)
+*Denkprozess:*
+- Schritt 1: Nenner berechnen: 0,03 × 40 = **1,2 mmol/L** gelöstes CO₂
+- Schritt 2: Verhältnis bilden: 24 / 1,2 = **20**
+- Schritt 3: Logarithmus berechnen: log(20) = log(2 × 10) = log(2) + log(10) = 0,301 + 1 = **1,301**
+- Schritt 4: Einsetzen: pH = 6,1 + 1,3 = **7,4** ✓
 
-Besonders nützlich: log₂(x) = ln(x)/ln(2) = ln(x)/0,693
+**Klinisches Szenario — metabolische Azidose:** [HCO₃⁻] fällt auf 12 mmol/L (z. B. bei diabetischer Ketoazidose), pCO₂ bleibt 40 mmHg:
+pH = 6,1 + log(12/1,2) = 6,1 + log(10) = 6,1 + 1,0 = **7,1** — lebensbedrohlich! Das Verhältnis sank von 20:1 auf 10:1, der pH fiel um 0,3.
 
-Diese Umrechnung ist bei der Berechnung von Halbwertszeiten wichtig: T½ = log₂(2)/k = 1/k (wenn k in "pro Halbwertszeit" gemessen wird).
+> **Merke:** Das 20:1-Verhältnis von [HCO₃⁻] zu gelöstem CO₂ hält den Blut-pH bei 7,4. Jede Halbierung dieses Verhältnisses senkt den pH um log(2) ≈ 0,3. Henderson-Hasselbalch ist die mathematische Grundlage jeder Blutgasanalyse-Interpretation.
 
-**Nützliche Merkwerte für den MedAT:**
-- ln(2) ≈ 0,693
-- log(2) ≈ 0,301
+---
+
+## Vorzeichen von Logarithmen — Schnelltest
+
+Das Vorzeichen lässt sich direkt am Argument ablesen, ohne zu rechnen:
+
+- **x > 1** → log(x) > 0 (positiv)
+- **x = 1** → log(x) = 0 (null)
+- **0 < x < 1** → log(x) < 0 (negativ)
+
+Das gilt für **jede** Basis > 1 (also für ln, log, ld gleichermaßen).
+
+**Denkprozess — Übungsaufgabe:** „Welches Vorzeichen hat ln(1/e²) + ln(e³)?"
+- ln(1/e²) = ln(e⁻²) = −2 (Argument 1/e² < 1, also negativ ✓)
+- ln(e³) = 3 (Argument e³ > 1, also positiv ✓)
+- Summe = −2 + 3 = **+1 > 0** (positiv)
+
+---
+
+## Basiswechsel und Merkwerte
+
+Jeder Logarithmus lässt sich über den Basiswechselsatz in ln oder log umrechnen:
+
+**log_b(x) = ln(x) / ln(b)**
+
+**Denkprozess — Exponentialgleichung lösen:** 5ˣ = 200. Beide Seiten logarithmieren: x · ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ mit log: x = log(200)/log(5) = 2,301/0,699 = **3,29** — identisches Ergebnis, egal welche Basis.
+
+**Merkwerte für den MedAT (auswendig lernen!):**
+- **ln(2) ≈ 0,693** — steckt in T½ = ln(2)/k
+- **log(2) ≈ 0,301** — pH sinkt um 0,3 bei [H⁺]-Verdoppelung
 - log(3) ≈ 0,477
 - ln(10) ≈ 2,303
 
+---
+
 ## Rechenbeispiele
 
-**Beispiel 1 — Henderson-Hasselbalch (Säure-Base):**
-pH = pKs + log([A⁻]/[HA]). Essigsäure pKs = 4,76; [A⁻] = 0,1 M, [HA] = 0,01 M. pH = 4,76 + log(0,1/0,01) = 4,76 + log(10) = 4,76 + 1 = **5,76**. Klinisch: Bicarbonatpuffer im Blut: pH = 6,1 + log([HCO₃⁻]/(0,03×pCO₂)). Bei HCO₃⁻ = 24, pCO₂ = 40: pH = 6,1 + log(24/1,2) = 6,1 + log(20) = 6,1 + 1,30 = **7,40**.
+**Beispiel 1 — pH aus Protonenkonzentration:**
+[H⁺] = 10⁻⁴ mol/L → pH = −log(10⁻⁴) = −(−4) = **4** (stark sauer, vergleichbar mit Orangensaft).
 
 **Beispiel 2 — Semilog: k und T½ aus Messdaten:**
-Messwerte: C(0) = 100 mg/L, C(3h) = 50 mg/L. Steigung im Semilog: m = (ln50 − ln100)/(3−0) = (3,912 − 4,605)/3 = **−0,231 h⁻¹**. k = 0,231 h⁻¹. T½ = ln2/k = 0,693/0,231 = **3,0 h**. Clearance bei Vd = 20 L: CL = k × Vd = 0,231 × 20 = **4,62 L/h**.
+Messwerte: C(0) = 100 mg/L, C(3 h) = 50 mg/L. Im Semilog-Plot: Steigung = (ln 50 − ln 100) / (3 − 0) = (3,912 − 4,605) / 3 = **−0,231 h⁻¹**. Also k = 0,231 h⁻¹, T½ = 0,693/0,231 = **3,0 h**.
 
 **Beispiel 3 — Dezibel und Hörverlust:**
-Normalgehör: 0 dB HL. Patient hört erst ab 40 dB HL (Schwerhörigkeit). Intensitätsverhältnis: I₂/I₁ = 10^(40/10) = 10⁴ = **10.000-fach** höhere Intensität nötig. Verbesserung durch Hörgerät um 30 dB: Verstärkungsfaktor = 10^(30/10) = **1000-fach**.
+Patient hört erst ab 40 dB HL. Intensitätsverhältnis: I₂/I₁ = 10^(40/10) = 10⁴ = **10.000-fach** höhere Intensität nötig. Hörgerät mit 30 dB Verstärkung: Faktor = 10^(30/10) = **1000-fach**.
 
-**Beispiel 4 — Logarithmengesetze zur Gleichungslösung:**
-Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/ln(5) = 5,298/1,609 = **3,29**. Alternativ: x = log(200)/log(5) = 2,301/0,699 = **3,29**. Basiswechsel liefert identische Ergebnisse.`,
+**Beispiel 4 — Logarithmengesetze anwenden:**
+Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = log(100) = **2**. Einfacher als jeden Term einzeln auszurechnen.`,
       lernziele: [
         "Den Logarithmus als Umkehrfunktion der Exponentialfunktion verstehen und Logarithmengesetze sicher anwenden.",
         "Den pH-Wert aus der Protonenkonzentration berechnen und die Bedeutung des negativen dekadischen Logarithmus erklären.",
@@ -1173,123 +1214,146 @@ Gesucht: x aus 5ˣ = 200. Logarithmieren: x × ln(5) = ln(200) → x = ln(200)/l
         "Rationale Funktion",
         "Kaplan-Meier-Kurve",
       ],
-      content: `## Graphen und ihre Eigenschaften ablesen
+      content: `## Der ICU-Monitor zeigt eine Kurve — aber welche?
 
-Das Lesen und Interpretieren von Funktionsgraphen ist eine zentrale mathematische Kompetenz — besonders im medizinischen Kontext, wo Kurven täglich auf Monitoren, in Laborbefunden und in der wissenschaftlichen Literatur zu interpretieren sind.
+Auf der Intensivstation fällt die Plasmakonzentration eines Antibiotikums steil ab. Ist das ein linearer Abfall oder ein exponentieller Zerfall? Die Antwort bestimmt, wann die nächste Dosis fällig ist. Auf der Pharmakologie-Klausur wird eine S-förmige Kurve gezeigt — ist das Michaelis-Menten oder eine Dosis-Wirkungskurve? Wer Kurvenformen sicher erkennt, Asymptoten abliest und semilogarithmische Plots versteht, beherrscht die Sprache, in der die gesamte biomedizinische Forschung ihre Ergebnisse kommuniziert.
 
-**Wichtige Eigenschaften, die man aus einem Graphen ablesen kann:**
-- **Nullstellen**: Schnittpunkte mit der x-Achse (f(x) = 0)
-- **y-Achsenabschnitt**: Schnittpunkt mit der y-Achse (f(0))
-- **Monotoniebereiche**: Bereiche, in denen f steigt oder fällt
-- **Extrempunkte**: lokale Minima und Maxima (Hochpunkt, Tiefpunkt)
-- **Wendepunkte**: Stellen, an denen die Kurve ihre Krümmungsrichtung wechselt
-- **Asymptoten**: Grenzlinien, an die sich der Graph annähert, ohne sie zu erreichen
+---
 
-> **Merke:** Beim MedAT werden Graphen oft ohne explizite Funktionsgleichung gezeigt. Man muss dann aus dem **Kurvenverlauf** auf den Funktionstyp schließen: Gerade = linear, Parabel = quadratisch, S-Kurve = sigmoidal (S-förmig), asymptotische Annäherung = exponentiell oder Sättigungskinetik.
+## 1. Grundlegende Kurvenformen — fünf Typen, die du kennen musst
 
-## Asymptoten im Detail
+Jeder Funktionstyp erzeugt eine charakteristische Kurvenform. Am MedAT wird oft ein Graph ohne Gleichung gezeigt — du musst den Typ sofort erkennen:
 
-**Horizontale Asymptote**: Eine Gerade y = a heißt horizontale Asymptote, wenn lim(x→±∞) f(x) = a. Beispiele: f(x) = e^(−x) → y = 0 für x → ∞; f(x) = (2x+1)/(x+1) → y = 2 für x → ±∞.
-
-**Vertikale Asymptote**: Eine Gerade x = a heißt vertikale Asymptote, wenn lim(x→a) f(x) = ±∞. Beispiele: f(x) = ln(x) → x = 0 (f → −∞); f(x) = 1/x → x = 0.
-
-**Schräge Asymptote**: Eine Gerade y = mx + b heißt schräge Asymptote, wenn lim(x→∞) [f(x) − (mx+b)] = 0. Sie tritt bei rationalen Funktionen auf, wenn der Grad des Zählers genau um 1 größer ist als der des Nenners.
-
-| Asymptoten-Typ | Bedingung bei rationalen Funktionen f(x) = P(x)/Q(x) | Ergebnis |
+| Kurvenform | Funktionstyp | Klinisches Beispiel |
 |---|---|---|
-| Horizontale y = 0 | Grad(P) < Grad(Q) | Funktion → 0 |
-| Horizontale y = c | Grad(P) = Grad(Q) | c = führender Koeff. P / führender Koeff. Q |
-| Schräge y = mx + b | Grad(P) = Grad(Q) + 1 | Polynomdivision ergibt mx + b |
-| Keine horizontale | Grad(P) > Grad(Q) + 1 | f(x) → ±∞ |
+| **Gerade** | linear: y = mx + b | Ethanol-Abbau (Kinetik 0. Ordnung, ca. 0,15 ‰/h) |
+| **Konvexe Kurve** (nach oben gewölbt, flacht ab) | exponentieller Zerfall: y = a·e^(−kx) | Medikamentenabbau im Blut (Kinetik 1. Ordnung) |
+| **Konkave Kurve** (nach oben gewölbt, wird steiler) | exponentielles Wachstum: y = a·e^(kx) | Bakterienvermehrung bei Sepsis |
+| **S-Kurve** (sigmoidal (S-förmig)) | logistisch oder Hill-Gleichung | Dosis-Wirkungskurve, O₂-Bindungskurve von Hämoglobin |
+| **Hyperbel** (steigt steil, flacht asymptotisch ab) | Sättigungskinetik: y = a·x/(b+x) | Michaelis-Menten-Enzymkinetik |
 
-## Monotonie und Krümmung
+> **Merke:** **Gerade = linear, konvexer Abfall = exponentieller Zerfall, S-Kurve = sigmoidal, Hyperbel = Sättigung.** Wenn du am MedAT nur den Kurvenverlauf siehst, ordne ihn einem dieser fünf Typen zu — daraus ergibt sich die Funktionsgleichung.
 
-Monotonie beschreibt die Steigungsrichtung des Graphen:
-- **Streng monoton steigend**: f(x₁) < f(x₂) für alle x₁ < x₂
-- **Streng monoton fallend**: f(x₁) > f(x₂) für alle x₁ < x₂
+{{DIAGRAM:curve-types-overview}}
 
-Krümmung beschreibt, ob sich die Steigung ändert:
-- **Konvex (linksgekrümmt)**: Kurve liegt wie ein Hügel, Steigung nimmt ab
-- **Konkav (rechtsgekrümmt)**: Kurve liegt wie eine Schüssel, Steigung nimmt zu
-- **Wendepunkt**: Übergang zwischen Konvex und Konkav
+**Denkprozess — Kurventyp erkennen:**
+Du siehst einen Graphen, der zunächst steil ansteigt und dann ein Plateau erreicht. Frage: Sigmoidal oder hyperbolisch?
+- Hat die Kurve einen **Wendepunkt** (Punkt der steilsten Steigung)? → **Sigmoidal** (S-Kurve)
+- Steigt sie von Anfang an steil und flacht nur ab, **ohne Wendepunkt**? → **Hyperbel** (Sättigungskurve)
 
-**Zusammenhang Monotonie und Extrempunkte:** Ein lokales Maximum liegt vor, wenn die Funktion von steigend auf fallend wechselt. Ein lokales Minimum liegt vor, wenn die Funktion von fallend auf steigend wechselt. Der Wendepunkt einer sigmoiden Kurve (z. B. Dosis-Wirkungskurve) markiert den Punkt der steilsten Steigung — bei der Hill-Gleichung liegt er bei der EC₅₀ (halbmaximale Wirkkonzentration).
+---
 
-## Semilogarithmische und doppelt-logarithmische Darstellung
+## 2. Asymptoten — Grenzlinien mit biologischer Bedeutung
 
-In Naturwissenschaften und Medizin begegnet man häufig Daten, die sich über viele Größenordnungen erstrecken. Lineare Skalen versagen dann — logarithmische Skalen kommen zum Einsatz.
+Eine **Asymptote** (griech. „sich nicht berührend") ist eine Gerade, der sich ein Graph beliebig annähert, ohne sie je zu erreichen. In der Medizin haben Asymptoten handfeste Bedeutung:
 
-**Semilogarithmischer Plot (Semilog-Plot)**:
-- y-Achse logarithmisch, x-Achse linear
-- Exponentialfunktionen erscheinen als Geraden: y = A×e^(kx) → log y = log A + k×x×log e
-- Anwendung: Pharmakokinetikuntersuchungen, Bakterienwachstumskurven, Radioaktivitätsmessungen
+**Horizontale Asymptote** — der Grenzwert für x → ±∞:
+- Berechnung: y = lim(x→∞) f(x)
+- **Biologisch**: maximale Enzymgeschwindigkeit v_max (Michaelis-Menten), maximale Wirkung E_max (Dosis-Wirkungskurve)
+- Beispiel: f(x) = 3·e^(−x) + 2 → für x→∞ geht e^(−x)→0, also **y = 2**
 
-**Doppelt-logarithmischer Plot (Log-Log-Plot)**:
-- Beide Achsen logarithmisch
-- Potenzfunktionen y = A×xⁿ erscheinen als Geraden: log y = log A + n×log x
-- Anwendung: Skalierungsgesetze in der Biologie (Allometrie (Körpergrößen-Skalierung)), Dosis-Wirkungskurven
+**Vertikale Asymptote** — die Polstelle (Definitionslücke):
+- Berechnung: x = a, wenn f(x) → ±∞ für x → a
+- **Biologisch**: ln(x) hat vertikale Asymptote bei x = 0 — die Konzentration kann nie negativ werden
+- Beispiel: f(x) = 1/(x−3) → **x = 3**
 
-> **Merke:** **Welcher Plot für welche Funktion?** Semilog-Plot linearisiert Exponentialfunktionen. Log-Log-Plot linearisiert Potenzfunktionen. Linearer Plot zeigt lineare Funktionen als Gerade. Wenn eine Kurve im Semilog-Plot keine Gerade ist, liegt **keine** reine Kinetik erster Ordnung vor.
+**Schräge Asymptote** — bei rationalen Funktionen, wenn Grad(Zähler) = Grad(Nenner) + 1:
+- Berechnung über Polynomdivision → y = mx + b
+- Seltener am MedAT, aber gelegentlich abgefragt
 
-## Linearisierung von Daten
+| Bei rationalen Funktionen P(x)/Q(x) | Asymptoten-Typ |
+|---|---|
+| Grad(P) < Grad(Q) | Horizontale: **y = 0** |
+| Grad(P) = Grad(Q) | Horizontale: **y = führende Koeffizienten dividieren** |
+| Grad(P) = Grad(Q) + 1 | **Schräge** Asymptote (Polynomdivision) |
 
-Die Überführung einer nichtlinearen Funktion in eine lineare durch geeignete Transformation heißt Linearisierung. Für pharmakokinetische Daten:
+> **Merke:** **Enzym-Sättigung = horizontale Asymptote.** Wenn alle Enzym-Bindungsstellen besetzt sind, steigt v nicht weiter — das Plateau v_max ist die horizontale Asymptote der Michaelis-Menten-Kurve. Dasselbe Prinzip gilt für die maximale Rezeptor-Antwort E_max.
 
-C(t) = C₀ × e^(−kt) → ln C = −kt + ln C₀
+---
 
-In einem ln C vs. t Diagramm ergibt sich eine Gerade mit:
-- Steigung: m = −k → k = −m
-- Achsenabschnitt: b = ln C₀ → C₀ = eᵇ
-- Aus k: T½ = ln(2)/k = 0,693/k
+## 3. Semilogarithmische Darstellung — warum die Pharmakologie sie liebt
 
-**Lineweaver-Burk-Linearisierung** (doppelt-reziprokes Enzymkinetik-Diagramm) der Michaelis-Menten-Gleichung: 1/v = (Km/(v_max)) × 1/[S] + 1/v_max. In einem 1/v vs. 1/[S] Diagramm ergibt sich eine Gerade mit Steigung Km/v_max und y-Achsenabschnitt 1/v_max. Der x-Achsenabschnitt liegt bei −1/Km.
+Exponentieller Zerfall sieht in linearer Darstellung wie eine Kurve aus, aus der man kaum Zahlenwerte ablesen kann. Die Lösung: **eine Achse logarithmieren**.
 
-## Graphische Kurvenarten in der Medizin
+**Semilog-Plot** (ln C auf der y-Achse, t linear auf der x-Achse):
+- C(t) = C₀·e^(−kt) → **ln C = ln C₀ − k·t** → eine **Gerade**!
+- **Steigung** = −k → daraus k ablesen
+- **y-Achsenabschnitt** = ln C₀ → daraus die Anfangskonzentration
+- **T½** direkt ablesbar: Zeitspanne, in der die Kurve um ln(2) ≈ 0,693 fällt
 
-**Dose-Response-Kurve (Dosis-Wirkungskurve)**:
-Typisch sigmoidal (S-förmig) in halblogarithmischer Darstellung. Wichtige Punkte:
-- EC₅₀ (half maximal effective concentration): mittlere effektive Dosis
-- Maximale Wirkung (Efficacy)
-- Steigung der Kurve (Hill-Koeffizient)
+{{DIAGRAM:semilog-plot}}
 
-**Michaelis-Menten-Kurve**:
-v = v_max × [S] / (Km + [S]) — hyperbolische Sättigungskurve
+**Denkprozess — Parameter aus dem Semilog-Plot ablesen:**
+Gegeben: Gerade durch (0 | ln 100) und (10 h | ln 50).
+1. Steigung = (ln 50 − ln 100)/10 = ln(0,5)/10 = −0,693/10 = **−0,0693 h⁻¹**
+2. k = −Steigung = **0,0693 h⁻¹**
+3. T½ = 0,693/k = 0,693/0,0693 = **10 h** ✓ (Probe: von 100 auf 50 in 10 h = eine Halbierung)
 
-- Für [S] << Km: v ≈ (v_max/Km)×[S] → linear (Kinetik 1. Ordnung)
-- Für [S] >> Km: v ≈ v_max → Sättigung (Kinetik 0. Ordnung)
-- v = v_max/2 bei [S] = Km (Definition von Km!)
+**Wann ist der Semilog-Plot KEINE Gerade?**
+- Biphasische Kurve (Knick) → **Mehr-Kompartiment-Kinetik** (Alpha-Phase = Verteilung, Beta-Phase = Elimination)
+- Gebogene Kurve → **keine reine Kinetik 1. Ordnung** (z. B. Sättigungskinetik wie bei Phenytoin)
 
-**Überlebensfunktionen und Kaplan-Meier-Kurven**:
-In der klinischen Epidemiologie zeigen Kaplan-Meier-Kurven (Überlebenszeit-Darstellung) den zeitlichen Verlauf des Überlebens in einer Patientengruppe — treppenartige Abfälle, die in Form und Steigung pharmakokinetischen Zerfallskurven ähneln. Ein steiler Abfall zeigt hohe Mortalität, ein flacher Verlauf gute Prognose.
+**Doppelt-logarithmischer Plot (Log-Log):** Beide Achsen logarithmisch. Linearisiert **Potenzfunktionen** y = A·xⁿ → log y = log A + n·log x. Anwendung: Allometrie (Körpergrößen-Skalierung in der Biologie), manche Dosis-Wirkungskurven.
 
-## Graphen vergleichen und interpretieren
+> **Merke:** **Semilog linearisiert Exponentialfunktionen. Log-Log linearisiert Potenzfunktionen.** Ist die Kurve im Semilog-Plot keine Gerade, liegt keine reine Kinetik 1. Ordnung vor — sofort an Sättigungskinetik oder Mehrkompartiment-Modelle denken.
 
-Beim Vergleich zweier Graphen achtet man auf:
-- Schnitt- und Berührpunkte (gemeinsame x-Werte mit gleichem f(x))
-- Steigungsunterschiede (Welche Kurve steigt/fällt schneller?)
-- Lage der Asymptoten
-- Verschiebungen und Spiegelungen (vertikale/horizontale Shifts, Streckungen)
+---
 
-**Graphentransformationen** (häufig am MedAT):
-- f(x) + c: Graph um c Einheiten **nach oben** verschieben
-- f(x − c): Graph um c Einheiten **nach rechts** verschieben
-- −f(x): Spiegelung an der **x-Achse**
-- f(−x): Spiegelung an der **y-Achse**
-- a × f(x): Streckung/Stauchung in y-Richtung (a > 1: Streckung; 0 < a < 1: Stauchung)
+## 4. Michaelis-Menten & Lineweaver-Burk — Enzymkinetik als Graphen lesen
+
+Die **Michaelis-Menten-Gleichung** beschreibt die Reaktionsgeschwindigkeit v in Abhängigkeit von der Substratkonzentration [S]:
+
+**v = v_max × [S] / (Km + [S])**
+
+Der Graph ist eine **Hyperbel** mit drei entscheidenden Bereichen:
+- **[S] << Km** (Substratmangel): v ≈ (v_max/Km)·[S] → **linear** (Kinetik 1. Ordnung)
+- **[S] = Km**: v = v_max/2 → **halbmaximale Geschwindigkeit** (Definition von Km!)
+- **[S] >> Km** (Substratüberschuss): v ≈ v_max → **Sättigung** (Kinetik 0. Ordnung)
+
+**Denkprozess — v bei gegebener [S] berechnen:**
+v_max = 10 µmol/(L·s), Km = 2 mmol/L. Gesucht: v bei [S] = 8 mmol/L.
+v = 10 × 8/(2+8) = 80/10 = **8 µmol/(L·s)** = 80 % von v_max.
+Erkenntnis: Selbst bei [S] = 4×Km werden nur 80 % erreicht — Sättigungskinetik!
+
+**Lineweaver-Burk-Plot** — die Linearisierung der Michaelis-Menten-Kurve:
+Kehrwert bilden: **1/v = (Km/v_max) · 1/[S] + 1/v_max**
+
+In einem 1/v vs. 1/[S] Diagramm ergibt sich eine Gerade:
+- **Steigung** = Km/v_max
+- **y-Achsenabschnitt** = 1/v_max → v_max ablesen
+- **x-Achsenabschnitt** = −1/Km → Km ablesen
+
+> **Merke:** **Km = [S] bei v = v_max/2.** Kleines Km = hohe Affinität (das Enzym greift das Substrat schon bei niedriger Konzentration effizient). Der Lineweaver-Burk-Plot macht aus der Hyperbel eine Gerade, aus der man Km und v_max direkt abliest — Goldstandard der Enzymkinetik-Analyse.
+
+---
+
+## 5. Dosis-Wirkungskurven — EC₅₀ und Hill-Koeffizient
+
+In der Pharmakologie wird die Wirkung E gegen die logarithmierte Dosis aufgetragen. Es entsteht eine **sigmoidale Kurve** (S-Form):
+
+**E = E_max × [D]ⁿ / (EC₅₀ⁿ + [D]ⁿ)** — die Hill-Gleichung
+
+Drei Parameter bestimmen alles:
+- **E_max** (horizontale Asymptote): maximale Wirkung — misst die **Effizienz** (Efficacy) des Pharmakons
+- **EC₅₀** (Wendepunkt der Kurve): Konzentration bei halbmaximaler Wirkung — misst die **Potenz**. Niedriges EC₅₀ = hohe Potenz (weniger Substanz nötig)
+- **Hill-Koeffizient n** (Steilheit der S-Kurve): beschreibt Kooperativität. n = 1 → Michaelis-Menten-Form (Hyperbel). n > 1 → steilere S-Kurve (positive Kooperativität, z. B. Hämoglobin mit n ≈ 2,8). n < 1 → flachere Kurve (negative Kooperativität)
+
+**Therapeutischer Index** = TD₅₀/ED₅₀ (toxische Dosis / effektive Dosis). Großer Index = breite therapeutische Breite = sicheres Medikament.
+
+> **Merke:** **EC₅₀ misst Potenz, E_max misst Effizienz.** Ein Medikament kann hochpotent sein (niedriges EC₅₀), aber geringe Effizienz haben (niedriges E_max) — oder umgekehrt. Der Hill-Koeffizient bestimmt, ob die Kurve eine flache Hyperbel (n=1) oder eine steile S-Kurve (n>1) ist.
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Michaelis-Menten: Enzymsättigung:**
-v_max = 10 µmol/(L×s), Km = 2 mmol/L. Bei [S] = 2 mmol/L (= Km): v = 10×2/(2+2) = **5 µmol/(L×s)** (halbe Maximalgeschwindigkeit — Definition von Km). Bei [S] = 20 mmol/L: v = 10×20/(2+20) = 200/22 = **9,1 µmol/(L×s)** (91% von v_max). Bei [S] = 0,5 mmol/L: v = 10×0,5/2,5 = **2,0 µmol/(L×s)** (20% von v_max).
+**Beispiel 1 — Asymptoten einer rationalen Funktion:**
+f(x) = (3x² + 6)/(x² − 4). *Denkprozess:* Grad(Zähler) = Grad(Nenner) = 2 → horizontale Asymptote bei y = 3/1 = **3**. Vertikale Asymptoten: Nenner = 0 → x² = 4 → **x = ±2**. Klinisch: Die horizontale Asymptote entspricht E_max, die vertikalen Asymptoten markieren Definitionslücken.
 
-**Beispiel 2 — Semilog-Plot: Zweiphasenkinetik ablesen:**
-C(t) nach i.v.-Bolus zeigt im Semilog-Plot eine biphasische Kurve. Alpha-Phase (0–2h): ln C sinkt von 4,6 auf 2,3 → k_α = (4,6−2,3)/2 = **1,15 h⁻¹** (T½α = 0,6 h). Beta-Phase (2–12h): ln C sinkt von 2,3 auf 0 → k_β = 2,3/10 = **0,23 h⁻¹** (T½β = 3 h). Klinisch: Alpha = Verteilung, Beta = Elimination.
+**Beispiel 2 — Biphasische Kinetik im Semilog-Plot:**
+Nach i.v.-Bolus: Alpha-Phase (0–2 h): ln C fällt von 4,6 auf 2,3 → k_α = 2,3/2 = **1,15 h⁻¹** (T½α = 0,6 h). Beta-Phase (2–12 h): ln C fällt von 2,3 auf 0 → k_β = 2,3/10 = **0,23 h⁻¹** (T½β = 3 h). Der Knick verrät: Erst verteilt sich das Medikament (Alpha), dann wird es eliminiert (Beta).
 
-**Beispiel 3 — Asymptoten einer rationalen Funktion:**
-f(x) = (3x² + 6)/(x² − 4). Horizontale Asymptote: Grad Zähler = Grad Nenner → y = 3/1 = **y = 3**. Vertikale Asymptoten: x² − 4 = 0 → x = ±2. Für x = 2: Nenner → 0, Zähler = 18 ≠ 0 → **VA bei x = 2 und x = −2**. Klinisch relevant bei Dosis-Wirkungs-Kurven: horizontale Asymptote = maximale Wirkung (E_max).
-
-**Beispiel 4 — Graphentransformation erkennen:**
-Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x−3 → Verschiebung 3 nach rechts, (2) negatives Vorzeichen im Exponenten → Spiegelung an der y-Achse (Zerfall statt Wachstum), (3) Faktor 2 → Streckung in y-Richtung, (4) +1 → Verschiebung 1 nach oben. Neue Asymptote: **y = 1** (statt y = 0). y-Wert bei x = 3: g(3) = 2×e⁰ + 1 = **3**.`,
+**Beispiel 3 — Michaelis-Menten bei v = v_max/4:**
+Gesucht: [S] bei v = v_max/4. Einsetzen: v_max/4 = v_max·[S]/(Km+[S]) → 1/4 = [S]/(Km+[S]) → Km+[S] = 4[S] → Km = 3[S] → **[S] = Km/3**. Bei einem Drittel der Km-Konzentration läuft das Enzym nur mit 25 % — Sättigungskinetik in Aktion.`,
       lernziele: [
         "Horizontale, vertikale und schräge Asymptoten aus Graphen ablesen und berechnen.",
         "Monotoniebereiche, Extrempunkte und Wendepunkte in Funktionsgraphen identifizieren.",
@@ -1318,16 +1382,15 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
         },
       ],
       merksätze: [
-        "Asymptote: Gerade, an die sich Graph annähert, ohne sie zu erreichen.",
-        "Horizontale Asymptote: y = lim(x→±∞) f(x).",
-        "Vertikale Asymptote: x = a, wenn f(x) → ±∞ für x → a.",
-        "Semilog-Plot (log y vs. x): Exponentialfunktionen erscheinen als Geraden.",
-        "Log-Log-Plot: Potenzfunktionen erscheinen als Geraden.",
-        "Linearisierung C(t): ln C = −kt + ln C₀; Steigung = −k.",
-        "Michaelis-Menten: v = v_max×[S]/(Km+[S]); Km = [S] bei v = v_max/2.",
-        "EC₅₀: Dosis, bei der die halbe maximale Wirkung erzielt wird.",
-        "Kinetik 1. Ordnung im Semilog: Gerade. Kinetik 0. Ordnung: Gerade im linearen Plot.",
-        "Wendepunkt: Vorzeichenwechsel der Krümmung, nicht zwingend ein Extremum.",
+        "Fünf Kurventypen: Gerade (linear), konvexer Abfall (exp. Zerfall), konkaver Anstieg (exp. Wachstum), S-Kurve (sigmoidal), Hyperbel (Sättigung).",
+        "Horizontale Asymptote = biologisches Maximum (v_max, E_max). Vertikale Asymptote = Definitionsgrenze.",
+        "Semilog-Plot linearisiert Exponentialfunktionen: ln C = −kt + ln C₀. Steigung = −k, daraus T½ = 0,693/k.",
+        "Log-Log-Plot linearisiert Potenzfunktionen. Keine Gerade im Semilog → keine reine Kinetik 1. Ordnung.",
+        "Michaelis-Menten: v = v_max×[S]/(Km+[S]). Km = [S] bei v = v_max/2. Kleines Km = hohe Affinität.",
+        "Lineweaver-Burk: 1/v vs. 1/[S] → Gerade. y-Achsenabschnitt = 1/v_max, x-Achsenabschnitt = −1/Km.",
+        "EC₅₀ misst Potenz (Wendepunkt der Dosis-Wirkungskurve), E_max misst Effizienz (horizontale Asymptote).",
+        "Hill-Koeffizient n: n=1 → Hyperbel (Michaelis-Menten), n>1 → steile S-Kurve (Kooperativität).",
+        "Therapeutischer Index = TD₅₀/ED₅₀. Großer Index = breite therapeutische Breite = sicheres Medikament.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -1449,125 +1512,167 @@ Gegeben: f(x) = eˣ. Wie sieht g(x) = 2×e^(−(x−3)) + 1 aus? Analyse: (1) x�
         "Geometrische Reihe",
         "Summenformel",
       ],
-      content: `## Arithmetische Folgen — gleicher Abstand
+      content: `## Antibiotikum alle 8 Stunden — wann stabilisiert sich der Blutspiegel?
 
-Eine Folge (a_n) heißt **arithmetisch**, wenn die Differenz d = a_{n+1} − a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist. Man sagt auch: Die Folge wächst (oder fällt) linear.
+Ein Patient nimmt alle 8 h ein Antibiotikum mit Halbwertszeit T½ = 8 h. Vor jeder neuen Dosis ist die Hälfte der vorherigen eliminiert, doch ein Rest addiert sich auf: Dosis 1 → 100 %, Dosis 2 → 50 % + 100 % = 150 %, Dosis 3 → 75 % + 100 % = 175 %, ... Der Blutspiegel nähert sich einem **Steady State** — und die Mathematik dahinter ist eine **geometrische Reihe**. Um solche Kumulations-, Verdünnungs- und Wachstumsprobleme im MedAT sicher zu lösen, brauchst du das Werkzeug Folgen und Reihen.
+
+---
+
+## Arithmetische Folgen — gleicher Abstand, lineares Wachstum
+
+Eine Folge (a_n) heißt **arithmetisch**, wenn die Differenz d = a_{n+1} − a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist.
 
 **Formel für das n-te Glied:**
 
-a_n = a₁ + (n − 1) × d
+a_n = a₁ + (n − 1) · d
 
-**Beispiel 1:** a₁ = 3, d = 5 → Folge: 3, 8, 13, 18, 23, ... Das 10. Glied: a₁₀ = 3 + 9 × 5 = **48**. Das 100. Glied: a₁₀₀ = 3 + 99 × 5 = **498**.
+**Durchgerechnetes Beispiel — Dosiseskalation:**
+In einer Phase-I-Studie wird die Dosis eines neuen Wirkstoffs wöchentlich um 15 mg gesteigert, Start bei 20 mg.
 
-**Beispiel 2:** Die geraden Zahlen 2, 4, 6, 8, ... sind eine arithmetische Folge mit a₁ = 2, d = 2. a_n = 2 + (n−1)×2 = 2n.
+*Denkprozess:* a₁ = 20, d = 15. Gesucht: Dosis in Woche 8.
+a₈ = 20 + (8 − 1) · 15 = 20 + 105 = **125 mg**
 
-**Eigenschaft:** Jedes Glied einer arithmetischen Folge ist das **arithmetische Mittel** seiner beiden Nachbarn: a_n = (a_{n−1} + a_{n+1})/2.
+**Eigenschaft:** Jedes Glied ist das arithmetische Mittel seiner Nachbarn: a_n = (a_{n−1} + a_{n+1}) / 2.
 
-> **Merke:** Arithmetische Folge: gleicher Abstand d. Formel: a_n = a₁ + (n−1)·d. Jedes Glied ist das arithmetische Mittel seiner Nachbarn. Lineares Wachstum.
-
----
-
-## Summe arithmetischer Folgen — die Gauss-Summe
-
-Die Summe der ersten n Glieder einer arithmetischen Folge ist:
-
-**S_n = n/2 × (a₁ + a_n)**
-
-Oder, wenn a_n nicht bekannt: **S_n = n/2 × (2a₁ + (n−1)·d)**
-
-**Der legendäre Gauss-Trick:** Der junge Carl Friedrich Gauss (ca. 9 Jahre alt) sollte die Zahlen 1 bis 100 addieren. Statt mühsam zu rechnen, bildete er Paare: (1+100) + (2+99) + (3+98) + ... + (50+51) = 50 Paare × 101 = **5050**. Die allgemeine Formel S_n = n(n+1)/2 für die Summe 1+2+...+n folgt direkt daraus.
-
-**Rechenbeispiel:** Summe der ersten 20 ungeraden Zahlen (1, 3, 5, ..., 39). Hier a₁ = 1, d = 2, n = 20, a₂₀ = 1 + 19×2 = 39. S₂₀ = 20/2 × (1 + 39) = 10 × 40 = **400**. Überraschung: Die Summe der ersten n ungeraden Zahlen ist immer n² (hier 20² = 400).
-
-**Medizinischer Kontext:** In der Dosiseskalation (Phase-I-Studien) wird die Dosis oft in gleichen Schritten erhöht — eine arithmetische Folge. Die kumulative Gesamtdosis ist dann die Gauss-Summe.
-
-> **Merke:** Gauss-Summe: S_n = n/2 × (erstes + letztes Glied). Spezialfall: 1+2+...+n = n(n+1)/2.
+> **Merke:** Arithmetische Folge = konstante Differenz d = lineares Wachstum. Formel: a_n = a₁ + (n−1)·d. MedAT-Falle: (n) statt (n−1) einsetzen — immer prüfen, ob a₁ korrekt herauskommt.
 
 ---
 
-## Geometrische Folgen — gleicher Faktor
+## Arithmetische Reihen — die Gauss-Summe
 
-Eine Folge (a_n) heißt **geometrisch**, wenn der Quotient q = a_{n+1}/a_n zwischen aufeinanderfolgenden Gliedern **konstant** ist. Man sagt auch: Die Folge wächst (oder fällt) exponentiell.
+Die Summe der ersten n Glieder einer arithmetischen Folge lässt sich elegant mit dem **Gauss-Trick** berechnen: Man bildet Paare aus dem ersten und letzten Glied — jedes Paar hat dieselbe Summe.
+
+**S_n = n/2 × (a₁ + a_n)** oder **S_n = n/2 × (2a₁ + (n−1)·d)**
+
+**Durchgerechnetes Beispiel — Kumulative Gesamtdosis:**
+In der obigen Dosiseskalation über 8 Wochen: Wie hoch ist die Gesamtdosis?
+
+*Denkprozess:* Wir kennen a₁ = 20, a₈ = 125, n = 8. Gauss-Formel:
+S₈ = 8/2 × (20 + 125) = 4 × 145 = **580 mg** Gesamtdosis.
+
+*Kontrolle:* 20 + 35 + 50 + 65 + 80 + 95 + 110 + 125 = 580 ✓
+
+**Spezialfall:** 1 + 2 + 3 + ... + n = n(n+1)/2. Für n = 100: S = 100 × 101/2 = **5050** (der Gauss-Trick aus der Schulzeit).
+
+> **Merke:** Gauss-Summe: S_n = n/2 × (erstes + letztes). Spezialfall: 1+2+...+n = n(n+1)/2. Klinisch relevant: kumulative Gesamtdosis bei linearer Dosiseskalation.
+
+---
+
+## Geometrische Folgen — gleicher Faktor, exponentielles Verhalten
+
+Eine Folge (a_n) heißt **geometrisch**, wenn der Quotient q = a_{n+1}/a_n **konstant** ist. Geometrische Folgen beschreiben Prozesse mit proportionaler Änderung — Bakterienvermehrung, Verdünnungsreihen, Medikamentenabbau.
 
 **Formel für das n-te Glied:**
 
-a_n = a₁ × q^(n−1)
+a_n = a₁ · q^(n−1)
 
-**Beispiel 1:** a₁ = 2, q = 3 → Folge: 2, 6, 18, 54, 162, ... Das 6. Glied: a₆ = 2 × 3⁵ = 2 × 243 = **486**.
+| Szenario | a₁ | q | Verhalten |
+|---|---|---|---|
+| Bakterien (Verdopplung) | N₀ | 2 | exponentielles Wachstum |
+| 1:2-Verdünnungsreihe | C₀ | 0,5 | exponentieller Zerfall |
+| Zinseszins (5 %) | K₀ | 1,05 | langsames Wachstum |
 
-**Beispiel 2:** Verdünnungsreihe im Labor: 1:2-Verdünnung → q = 1/2. Ausgangskonzentration 100 mg/L: 100, 50, 25, 12,5, 6,25, ... Das n-te Glied: a_n = 100 × (1/2)^(n−1).
+**Durchgerechnetes Beispiel — Verdünnungsreihe im Labor:**
+Ausgangskonzentration eines Antikörpers: 128 mg/L. Bei einer 1:2-Verdünnungsreihe — welche Konzentration hat Stufe 7?
 
-**Eigenschaft:** Jedes Glied einer geometrischen Folge ist das **geometrische Mittel** seiner beiden Nachbarn: a_n = √(a_{n−1} × a_{n+1}).
+*Denkprozess:* a₁ = 128, q = 1/2. Stufe 7 bedeutet n = 7.
+a₇ = 128 · (1/2)^(7−1) = 128 · (1/2)⁶ = 128/64 = **2 mg/L**
 
-**Summe der ersten n Glieder:**
+**Partialsumme der ersten n Glieder:**
 
-S_n = a₁ × (q^n − 1) / (q − 1) für q ≠ 1
+S_n = a₁ · (q^n − 1) / (q − 1) für q ≠ 1
 
-**Beispiel:** S₅ = 2 × (3⁵ − 1)/(3 − 1) = 2 × 242/2 = **242**.
+> **Merke:** Geometrische Folge = konstanter Faktor q. q > 1: Wachstum, 0 < q < 1: Zerfall. Formel: a_n = a₁ · q^(n−1). Jedes Glied ist das geometrische Mittel seiner Nachbarn.
 
-> **Merke:** Geometrische Folge: gleicher Faktor q. Formel: a_n = a₁ × q^(n−1). Exponentielles Wachstum (q > 1) oder Zerfall (0 < q < 1).
+{{DIAGRAM:arithmetic-vs-geometric}}
 
----
-
-## Zinseszins — Anwendung geometrischer Folgen
-
-Der Zinseszins ist die wichtigste praktische Anwendung geometrischer Folgen. Ein Anfangskapital K₀ wächst bei einem jährlichen Zinssatz p (in Prozent) nach n Jahren auf:
-
-**K_n = K₀ × (1 + p/100)^n**
-
-Hier ist der Wachstumsfaktor q = 1 + p/100.
-
-**Beispiel 1:** K₀ = 1000 €, p = 5 %, n = 10 Jahre. K₁₀ = 1000 × 1,05¹⁰ = 1000 × 1,6289 ≈ **1628,89 €**. Ohne Zinseszins (einfacher Zins): K₁₀ = 1000 + 10 × 50 = 1500 €. Differenz: **128,89 € Zinseszinseffekt**.
-
-**Beispiel 2:** Wie lange dauert es, bis sich ein Kapital bei 3 % Zinsen verdoppelt? K_n = 2K₀ → (1,03)^n = 2 → n = ln(2)/ln(1,03) = 0,693/0,0296 ≈ **23,4 Jahre**. Faustregel: **72er-Regel** — 72/p ≈ Verdopplungszeit → 72/3 = 24 Jahre (gute Näherung!).
-
-**Medizinischer Kontext:** Bakterienvermehrung folgt (in der exponentiellen Phase) einer geometrischen Folge. Bei Verdopplungszeit T_d: N(t) = N₀ × 2^(t/T_d). Ebenso: Kumulation eines Medikaments bei wiederholter Gabe vor Erreichen des Steady State.
-
-> **Merke:** Zinseszins: K_n = K₀ × (1+p/100)^n. 72er-Regel: Verdopplungszeit ≈ 72/p Jahre.
+Oben siehst du den entscheidenden Unterschied: Die arithmetische Folge wächst linear (gerader Anstieg), die geometrische Folge exponentiell (Kurve). Bereits nach wenigen Gliedern übersteigt die geometrische Folge die arithmetische massiv — genau das passiert bei unkontrolliertem Bakterienwachstum.
 
 ---
 
-## Konvergenz und Grenzwerte von Folgen
+## Konvergenz und Grenzwerte — nähert sich die Folge einem Wert?
 
-Eine Folge (a_n) **konvergiert** gegen einen Grenzwert L, wenn sich die Glieder für wachsendes n dem Wert L beliebig nähern: lim(n→∞) a_n = L. Andernfalls **divergiert** die Folge.
+Eine Folge **konvergiert** gegen einen Grenzwert L, wenn sich die Glieder für wachsendes n dem Wert L beliebig nähern: lim(n→∞) a_n = L. Andernfalls **divergiert** die Folge.
 
-**Wichtige Beispiele:**
+**Wichtige Fälle:**
 - a_n = 1/n → lim = 0 (harmonische Nullfolge)
-- a_n = (2n+1)/(n+3) → lim = 2 (höchste Potenzen kürzen)
+- a_n = (2n+1)/(n+3) → lim = 2 (höchste Potenzen kürzen: 2n/n = 2)
 - a_n = (−1)^n → divergiert (springt zwischen −1 und 1, kein fester Grenzwert)
-- a_n = q^n: konvergiert gegen 0 für |q| < 1; divergiert für |q| > 1; a_n = 1 für q = 1
+- a_n = q^n: konvergiert gegen 0 für |q| < 1; divergiert für |q| > 1
 
-**Rechenregeln für Grenzwerte:** Wenn lim a_n = A und lim b_n = B, dann: lim(a_n ± b_n) = A ± B; lim(a_n × b_n) = A × B; lim(a_n/b_n) = A/B (falls B ≠ 0).
+**Rechenregeln:** Wenn lim a_n = A und lim b_n = B, dann:
+lim(a_n ± b_n) = A ± B, lim(a_n · b_n) = A · B, lim(a_n / b_n) = A/B (falls B ≠ 0).
+
+> **Merke:** Die Frage „Konvergiert das?" ist in der Pharmakokinetik gleichbedeutend mit „Stellt sich ein Steady State ein?". Bedingung: |q| < 1, also wird pro Zyklus weniger nachgeliefert als eliminiert.
 
 ---
 
-## Geometrische Reihe — unendliche Summe
+## Geometrische Reihe — unendliche Summe und Steady State
 
-Die **geometrische Reihe** ist die unendliche Summe einer geometrischen Folge. Für |q| < 1 konvergiert sie:
+Die **geometrische Reihe** summiert unendlich viele Glieder einer geometrischen Folge. Für |q| < 1 konvergiert sie zu einem endlichen Wert:
 
 **S = a₁ / (1 − q)**
 
-**Beispiel 1:** 1 + 1/2 + 1/4 + 1/8 + ... = 1/(1 − 1/2) = **2**.
+Für |q| ≥ 1 divergiert die Reihe — die Partialsummen wachsen über alle Grenzen.
 
-**Beispiel 2:** 3 + 3×(0,1) + 3×(0,01) + ... = 3/(1 − 0,1) = 3/0,9 = **10/3 ≈ 3,33**.
+**Durchgerechnetes Beispiel — Medikamentenkumulation (Steady State):**
+Zurück zum Antibiotikum: Einzeldosis erzeugt Spitzenkonzentration D = 10 mg/L, T½ = 8 h, Dosierungsintervall τ = 8 h. Vor jeder neuen Dosis verbleibt Restfaktor q = (1/2)^(τ/T½) = 1/2.
 
-Für |q| ≥ 1 divergiert die Reihe (die Partialsummen (Summen der ersten n Glieder) wachsen über alle Grenzen).
+*Denkprozess:* Die Spitzenkonzentration nach Dosis n ist:
+C_n = D + D·q + D·q² + ... + D·q^(n−1) = D · (1 − q^n)/(1 − q)
 
-**Medizinischer Kontext:** Die geometrische Reihe beschreibt die Kumulation eines Medikaments bei wiederholter Gabe: C_ss = D/(1 − e^(−k×τ)), wobei τ das Dosierungsintervall und k die Eliminationskonstante ist. Für k×τ klein (kurzes Intervall, langsame Elimination) nähert sich dies einer geometrischen Reihe.
+Für n → ∞ (Steady State): C_ss = D / (1 − q) = 10 / (1 − 0,5) = **20 mg/L**
 
-> **Merke:** Geometrische Reihe: S = a₁/(1−q) nur für |q| < 1. Für |q| ≥ 1 divergiert die Reihe. Medizinische Anwendung: Medikamentenkumulation.
+Das heißt: Die Spitzenkonzentration im Steady State ist genau **doppelt so hoch** wie nach einer Einzeldosis. Die Talspiegel liegen bei 20 · 0,5 = 10 mg/L.
+
+*Prüfung:* Nach Dosis 5: C₅ = 10 · (1−0,5⁵)/(1−0,5) = 10 · 0,96875/0,5 = **19,375 mg/L** — bereits 97 % des Steady State. Das bestätigt die **4–5-Halbwertszeiten-Regel**.
+
+{{DIAGRAM:series-convergence}}
+
+Das Diagramm zeigt, wie die Partialsummen sich dem Grenzwert annähern: Schnell am Anfang, dann immer langsamer — genau wie der Blutspiegel bei wiederholter Dosierung.
+
+> **Merke:** Geometrische Reihe: S = a₁/(1−q) nur für |q| < 1. Klinische Bedeutung: C_ss = D/(1−q) beschreibt den Steady State. Nach 4–5 Halbwertszeiten sind ~94–97 % erreicht.
 
 ---
 
-## Rechenbeispiele
+## Medizinische Anwendungen im Überblick
 
-**Beispiel 1 — Gauss-Summe:** Berechne 5 + 10 + 15 + ... + 200. Arithmetische Folge mit a₁ = 5, d = 5, a_n = 200. n = (200−5)/5 + 1 = 40. S₄₀ = 40/2 × (5+200) = 20 × 205 = **4100**.
+| Anwendung | Folgentyp | Schlüsselformel |
+|---|---|---|
+| Dosiseskalation (Phase-I) | arithmetisch | a_n = a₁ + (n−1)·d |
+| Bakterienwachstum (Log-Phase) | geometrisch, q = 2 | N = N₀ · 2^(t/T_d) |
+| Verdünnungsreihe (1:10) | geometrisch, q = 0,1 | a_n = C₀ · 0,1^(n−1) |
+| Medikamentenkumulation | geometrische Reihe | C_ss = D/(1−q) |
+| MIC-Bestimmung (Titer) | geometrisch, q = 1/2 | Konzentrationsstufen halbieren sich |
 
-**Beispiel 2 — Zinseszins:** 5000 € werden zu 4 % p.a. angelegt. Nach 15 Jahren: K₁₅ = 5000 × 1,04¹⁵ = 5000 × 1,8009 ≈ **9005 €**. Zinsen insgesamt: 9005 − 5000 = **4005 €**.
+**Durchgerechnetes Beispiel — Bakterienwachstum:**
+Eine Bakterienkultur startet mit N₀ = 500 Zellen, Verdopplungszeit T_d = 30 min. Wie viele Bakterien nach 5 h?
 
-**Beispiel 3 — Geometrische Reihe:** Ein Medikament hat eine Bioverfügbarkeit von 80 % pro Dosis. Kumulative Wirkung bei unendlicher Wiederholung: S = 1/(1−0,8) = **5** (d. h. 5-fache Einzeldosis als Steady-State-Effekt).
+*Denkprozess:* 5 h = 300 min. Verdopplungen: n = 300/30 = 10. Geometrische Folge mit q = 2:
+N = 500 · 2¹⁰ = 500 · 1024 = **512 000 Bakterien**
 
-**Beispiel 4 — Verdopplungszeit:** Eine Bakterienkultur verdoppelt sich alle 30 min. Wie viele Bakterien nach 5 h (ausgehend von 500)? Anzahl Verdopplungen: 5×60/30 = 10. N = 500 × 2¹⁰ = 500 × 1024 = **512 000**.`,
+---
+
+## Rechenbeispiele mit Denkprozess
+
+**Beispiel 1 — Gauss-Summe:**
+Berechne 5 + 10 + 15 + ... + 200.
+
+*Denkprozess:* Arithmetische Folge mit a₁ = 5, d = 5, a_n = 200. Wie viele Glieder?
+n = (a_n − a₁)/d + 1 = (200 − 5)/5 + 1 = 39 + 1 = 40.
+S₄₀ = 40/2 × (5 + 200) = 20 × 205 = **4100**
+
+**Beispiel 2 — Geometrische Reihe:**
+Ein Analgetikum wird alle 6 h gegeben. T½ = 6 h. Einzeldosis-Spitze: 8 mg/L. Steady-State-Spitze?
+
+*Denkprozess:* q = (1/2)^(6/6) = 1/2. Geometrische Reihe:
+C_ss = 8 / (1 − 0,5) = 8/0,5 = **16 mg/L**
+Kumulation: Faktor 16/8 = 2 — bei τ = T½ verdoppelt sich der Spitzenspiegel im Steady State immer.
+
+**Beispiel 3 — Verdünnungsreihe:**
+Antikörper-Titer: Ausgangskonzentration 1:1, sechs 1:2-Verdünnungsschritte. Letzter Titer mit positivem Nachweis?
+
+*Denkprozess:* Titer-Stufen: 1:1, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64. Das ist eine geometrische Folge mit q = 1/2 und 7 Stufen (n = 1 bis 7). Stufe 7: Verdünnung = 1/2⁶ = **1:64**.`,
       lernziele: [
         "Das n-te Glied arithmetischer und geometrischer Folgen berechnen.",
         "Die Gauss-Summe und die geometrische Partialsumme anwenden.",

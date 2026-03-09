@@ -2930,77 +2930,138 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
-      content: `## Galvanische Zellen (Voltasche Elemente)
+      content: `Ein Herzschrittmacher muss 10 Jahre lang zuverlässig Strom liefern — tief im Brustkorb, ohne Wartung. Die Batterie, die das ermöglicht, basiert auf denselben elektrochemischen Prinzipien wie das einfache Daniell-Element aus dem 19. Jahrhundert. Wer Galvanische Zellen versteht, versteht auch Batterien, Korrosion und sogar die Blutgasanalyse im Krankenhaus.
 
+---
 
-Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen** (Elektroden), die durch eine Salzbrücke oder ein Diaphragma verbunden sind. An der **Anode** findet Oxidation statt (das Metall löst sich auf oder Anionen werden oxidiert), an der **Kathode** findet Reduktion statt (Kationen werden abgeschieden).
+## Galvanische Zelle — Aufbau und Prinzip
 
-**Aufbau eines Daniell-Elements (Zn/Cu-Zelle):**
-- Anode (negativ): Zn -> Zn2+ + 2e- (Oxidation)
-- Kathode (positiv): Cu2+ + 2e- -> Cu (Reduktion)
-- Gesamt: Zn + Cu2+ -> Zn2+ + Cu
-- Zellspannung: E-Zelle = E-Kathode - E-Anode = +0,34 V - (-0,76 V) = **+1,10 V**
+Eine galvanische Zelle wandelt chemische Energie spontan in elektrische Energie um. Sie besteht aus zwei **Halbzellen**, verbunden durch eine **Salzbrücke** (Ionenleitung) und einen äußeren Draht (Elektronenleitung). Die zentrale Merkhilfe: **AnOx RedKat** — an der **An**ode findet **Ox**idation statt, an der **Kathode** **Red**uktion.
 
-Die **Salzbrücke** (z. B. mit gesättigter KCl-Lösung) sorgt für Ladungsausgleich zwischen den Halbzellen, ohne die Elektroden-Lösungen zu vermischen. Ohne Salzbrücke würde schnell eine Ladungstrennung entstehen, die den Elektronenfluss stoppt.
+{{DIAGRAM:galvanic-cell}}
 
-## Standardelektrodenpotenziale (Standardreduktionspotenziale)
+**Das Daniell-Element (Zn/Cu) als Prototyp:**
+- **Anode (Minuspol):** Zn-Stab in ZnSO₄-Lösung — Zn → Zn²⁺ + 2e⁻ (Oxidation)
+- **Kathode (Pluspol):** Cu-Stab in CuSO₄-Lösung — Cu²⁺ + 2e⁻ → Cu (Reduktion)
+- **Gesamtreaktion:** Zn + Cu²⁺ → Zn²⁺ + Cu
+- **Salzbrücke** (z. B. KCl in Agar): Anionen wandern zur Anode, Kationen zur Kathode — ohne diesen Ladungsausgleich stoppt der Elektronenfluss sofort, weil sich Ladungen aufstauen
 
-Das Standardelektrodenpotenzial E beschreibt die Tendenz eines Redox-Paares, Elektronen aufzunehmen (Reduktion), gemessen gegen die Standard-Wasserstoff-Elektrode (SHE, E = 0,00 V per Definition) bei 25 °C, 1 atm, allen Ionen in 1 mol/L Konzentration.
+Warum fließen die Elektronen überhaupt? Zink hat ein niedrigeres E° als Kupfer — es gibt „lieber" Elektronen ab. Diese Elektronen können nicht durch die Lösung wandern (Lösungen leiten nur Ionen), sondern müssen den Umweg über den äußeren Draht nehmen. Genau diesen Elektronenfluss nutzen wir als elektrischen Strom.
 
-**Regeln zur Verwendung:**
-- Höheres E = stärkeres Oxidationsmittel (nimmt lieber Elektronen auf)
-- Niedrigeres E = stärkeres Reduktionsmittel (gibt lieber Elektronen ab)
-- Eine spontane Redox-Reaktion läuft ab, wenn E-Zelle = E-Kathode - E-Anode > 0
-- DeltaG = -n*F*E-Zelle (Faraday-Gleichung, n = Elektronenanzahl, F = 96485 C/mol)
+> **Merke:** AnOx RedKat gilt überall — in der galvanischen Zelle UND bei der Elektrolyse. Anode = Oxidation, Kathode = Reduktion, immer.
 
+---
 
-## Elektrolyse (erzwungene Redox-Reaktionen)
+## Elektrochemische Spannungsreihe
 
-Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektrische Energie erzwungen. Die Polarität wird umgekehrt: Anode ist jetzt positiv (angeschlossen an den Plus-Pol), Kathode ist negativ.
+Nachdem wir den Aufbau einer galvanischen Zelle verstanden haben, stellt sich die Frage: Woher weiß man, welches Metall die Anode und welches die Kathode wird? Die Antwort liefert die elektrochemische Spannungsreihe.
 
-**Faradaysche Gesetze:**
-1. Die abgeschiedene Stoffmenge ist proportional zur geflossenen Ladungsmenge (Q = I * t)
-2. Für gleiche Ladung werden äquivalente Stoffmengen verschiedener Elemente abgeschieden
+Die Spannungsreihe ordnet Redox-Paare nach ihrer Reduktionsneigung. Das **Standardelektrodenpotenzial E°** wird gegen die **Standard-Wasserstoff-Elektrode** (SHE, E° = 0,00 V per Definition) gemessen, bei 25 °C, 1 atm und 1 mol/L Ionenkonzentration.
 
-**m = (M * I * t) / (n * F)**
-- m = abgeschiedene Masse (g)
-- M = Molmasse (g/mol)
-- I = Stromstärke (A)
-- t = Zeit (s)
-- n = Anzahl übertragener Elektronen
-- F = Faraday-Konstante = 96485 C/mol
+| Redox-Paar | E° (V) | Bedeutung |
+|---|---|---|
+| F₂/2F⁻ | +2,87 | Stärkstes Oxidationsmittel |
+| Cl₂/2Cl⁻ | +1,36 | |
+| O₂/2H₂O | +1,23 | |
+| Cu²⁺/Cu | +0,34 | Edel (wird reduziert) |
+| 2H⁺/H₂ | 0,00 | Referenz (SHE) |
+| Fe²⁺/Fe | −0,44 | |
+| Zn²⁺/Zn | −0,76 | Unedel (wird oxidiert) |
+| Li⁺/Li | −3,04 | Stärkstes Reduktionsmittel |
 
-**Beispiel: Elektrolyse von CuSO4-Lösung**
-- Kathode: Cu2+ + 2e- -> Cu (Kupfer scheidet sich ab)
-- Anode: 2H2O -> O2 + 4H+ + 4e- (Wasser wird oxidiert, wenn Elektrode inert)
-- Anwendung: Galvanik, Kupferraffination, Chlor-Alkali-Elektrolyse
+**Ablesen:** Höheres E° = stärkeres Oxidationsmittel (nimmt gerne Elektronen auf). Niedrigeres E° = stärkeres Reduktionsmittel (gibt gerne Elektronen ab). Eine Reaktion läuft spontan ab, wenn E°(Zelle) = E°(Kathode) − E°(Anode) > 0.
+
+Die **Standard-Wasserstoff-Elektrode (SHE)** dient als Bezugspunkt: Pt-Elektrode in 1 mol/L H⁺, umspült von H₂ bei 1 atm. Da man absolute Potenziale nicht messen kann, misst man immer nur Differenzen zur SHE. Jedes Metall, das in der Tabelle unter H₂ steht (negatives E°), löst sich in Säure unter H₂-Entwicklung auf — deshalb löst sich Zink in HCl, aber Kupfer nicht.
+
+> **Merke:** Die Spannungsreihe ist wie ein Ranking: Oben stehen die „Elektronenfresser" (Oxidationsmittel), unten die „Elektronenspender" (Reduktionsmittel). Jedes Paar oben oxidiert jedes Paar unten — spontan.
+
+---
+
+## Rechenbeispiel: Zellspannung und ΔG°
+
+**Daniell-Element:** E°(Zelle) = E°(Cu²⁺/Cu) − E°(Zn²⁺/Zn) = +0,34 − (−0,76) = **+1,10 V**
+
+Verknüpfung mit Thermodynamik: **ΔG° = −n · F · E°(Zelle)**
+
+ΔG° = −2 × 96485 C/mol × 1,10 V = −212267 J/mol ≈ **−212 kJ/mol**
+
+Der negative ΔG°-Wert bestätigt: Die Reaktion ist spontan und exergon. Gleichzeitig ergibt sich K = 10^(n·E°/0,05916) ≈ 10³⁷ — praktisch vollständiger Umsatz.
+
+**Zweites Beispiel — Kann Silber Kupfer aus CuSO₄ verdrängen?** E°(Ag⁺/Ag) = +0,80 V, E°(Cu²⁺/Cu) = +0,34 V. Ag müsste die Anode sein: E°(Zelle) = +0,34 − 0,80 = −0,46 V → negativ → **nicht spontan**. Silber ist edler als Kupfer und verdrängt es nicht. Umgekehrt kann Kupfer aber Silber aus AgNO₃ verdrängen (E° = +0,46 V).
+
+> **Merke:** E°(Zelle) = E°(Kathode) − E°(Anode). Positiver Wert = spontan (ΔG° < 0). Je größer E°(Zelle), desto mehr nutzbare elektrische Arbeit.
+
+---
+
+## Elektrolyse — die erzwungene Umkehrung
+
+Bisher haben wir Reaktionen betrachtet, die freiwillig ablaufen und dabei Strom erzeugen. Doch viele wichtige Prozesse — von der Aluminiumgewinnung bis zur Wasserspaltung — laufen thermodynamisch „bergauf". Hier kommt die Elektrolyse ins Spiel.
+
+Während die galvanische Zelle spontan Strom erzeugt, erzwingt die **Elektrolyse** eine nicht-spontane Redox-Reaktion durch externe Spannung. Die Polarität kehrt sich um: Die Anode wird zum **Pluspol** (Stromquelle zieht Elektronen ab), die Kathode zum **Minuspol**.
+
+{{DIAGRAM:electrolysis}}
+
+| | Galvanische Zelle | Elektrolyse |
+|---|---|---|
+| Energiefluss | Chemisch → elektrisch | Elektrisch → chemisch |
+| Spontanität | Spontan (ΔG° < 0) | Erzwungen (ΔG° > 0) |
+| Anode | Minuspol | Pluspol |
+| Kathode | Pluspol | Minuspol |
+| AnOx RedKat | ✓ gilt | ✓ gilt auch hier |
+
+**Faradaysche Gesetze** bestimmen die abgeschiedene Masse: **m = (M · I · t) / (n · F)**
+
+Dabei: M = Molmasse, I = Stromstärke (A), t = Zeit (s), n = übertragene Elektronen, F = 96485 C/mol.
+
+**Rechenbeispiel:** Bei der Elektrolyse von CuSO₄ (M = 63,5 g/mol, n = 2) mit I = 2 A über t = 965 s:
+m = 63,5 × 2 × 965 / (2 × 96485) = 122555 / 192970 ≈ **0,635 g Kupfer** an der Kathode.
+
+**Wichtige Anwendungen:**
+- **Chloralkali-Elektrolyse:** 2NaCl + 2H₂O → Cl₂ + 2NaOH + H₂ (Grundchemikalie für Desinfektionsmittel, PVC)
+- **Galvanisierung:** Metallbeschichtung (Vergolden, Verchromen) durch kathodische Abscheidung
+- **Kupferraffination:** Rohkupfer-Anode löst sich auf, reines Cu scheidet sich an der Kathode ab
+
+> **Merke:** Faraday: m = M·I·t/(n·F). Pro 96485 Coulomb (= 1 Faraday) wird genau 1 Moläquivalent (M/n Gramm) Substanz abgeschieden.
+
+---
 
 ## Batterien und Akkumulatoren
 
-**Primärzellen** (nicht wiederaufladbar, z. B. Alkaline): Redox-Reaktionen sind irreversibel. **Sekundärzellen/Akkumulatoren** (wiederaufladbar, z. B. Li-Ionen, Blei-Akku): Beim Laden werden die Reaktionen durch externe Energie umgekehrt. **Brennstoffzellen** (H₂ + ½O₂ → H₂O) gewinnen direkt elektrische Energie mit bis zu 60 % Wirkungsgrad.
+Nachdem wir gesehen haben, wie man mit Elektrolyse Reaktionen erzwingen kann, liegt die Frage nahe: Kann man eine galvanische Zelle „rückwärts laden"? Genau das tun Akkumulatoren.
 
-> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion — gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle gibt das unedlere Metall freiwillig Elektronen ab → Anode (Minuspol). Bei der Elektrolyse erzwingt eine externe Spannung den umgekehrten Prozess → die Anode wird zum Pluspol, weil hier die Stromquelle Elektronen abzieht.
+Galvanische Zellen lassen sich nach Wiederaufladbarkeit einteilen:
 
-## Korrosion -- elektrochemische Zerstörung
+- **Primärzellen** (nicht aufladbar): Irreversible Reaktionen. Beispiel: Alkaline-Batterie (Zn/MnO₂), Lithium-Iodid-Batterie im Herzschrittmacher (5–10 Jahre Lebensdauer ohne Wartung)
+- **Sekundärzellen (Akkumulatoren):** Reversible Reaktionen, aufladbar durch Elektrolyse. Beispiel: **Blei-Akkumulator** — Entladereaktion: Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O (E° ≈ 2 V pro Zelle, 6 Zellen = 12 V Autobatterie). **Li-Ionen-Akku**: Li⁺-Ionen wandern zwischen Graphit-Anode und LiCoO₂-Kathode, hohe Energiedichte — Standard in Defibrillatoren und Insulinpumpen
+- **Brennstoffzellen:** H₂ + ½O₂ → H₂O, kontinuierliche Brennstoffzufuhr, bis 60 % Wirkungsgrad, kein Aufladen nötig
 
-Korrosion ist eine unerwünschte galvanische Reaktion: Eisen wird in Gegenwart von Wasser und O₂ zu Rost oxidiert. **Korrosionsschutz:** Opferanode aus unedlerem Metall (Zn an Schiffen), Verzinkung, Passivierung (Al₂O₃-Schicht bei Aluminium) oder Beschichtungen.
+**Klinische Relevanz:** Die Wahl der Batterie entscheidet über Patientensicherheit. Herzschrittmacher verwenden Lithium-Iodid-Primärzellen, weil ihre Spannungskurve vorhersagbar abfällt — der Arzt kann den Batteriestand über die Impulsrate ablesen. Implantierbare Defibrillatoren brauchen dagegen Li-Ionen-Akkus, weil sie kurzzeitig sehr hohe Ströme für den Elektroschock liefern müssen.
 
-## Rechenbeispiel: DeltaG aus Zellspannung
+> **Merke:** Primärzelle = nicht aufladbar (irreversibel). Sekundärzelle/Akku = aufladbar (reversibel durch externe Spannung = Elektrolyse).
 
-Daniell-Element (Zn/Cu): E-Zelle = +1,10 V, n = 2 Elektronen.
+---
 
-DeltaG = -n * F * E-Zelle = -2 x 96485 C/mol x 1,10 V = -212267 J/mol = **-212 kJ/mol**
+## Korrosion — das unerwünschte galvanische Element
 
-Negativer DeltaG-Wert bestätigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist spontan und exergon. Verknüpfung mit Gleichgewichtskonstante: ln(K) = nFE/(RT) -> K = e^(2 x 96485 x 1,10 / (8,314 x 298)) = ca. 10^37 (praktisch vollständig).
+Alles bisher Gelernte — Spannungsreihe, Lokalelement, Spontanität — erklärt auch eines der teuersten Probleme der Technik: Korrosion. Korrosion ist eine spontane elektrochemische Zerstörung von Metallen. Wenn Eisen mit Wasser und Sauerstoff in Kontakt kommt, bildet sich ein **Lokalelement**: Verunreinigungen (z. B. Kohlenstoff im Stahl) wirken als Kathode, Eisen als Anode — Fe → Fe²⁺ + 2e⁻. Die Elektronen fließen zur Kathode, wo O₂ reduziert wird. Fe²⁺ reagiert mit Wasser und O₂ weiter zu Rost (Fe₂O₃ · nH₂O).
 
-## Medizinische Anwendungen der Elektrochemie
+**Korrosionsschutz:**
+- **Opferanode** (kathodischer Schutz): Unedleres Metall (Zn) wird bevorzugt oxidiert — schützt das Eisen (z. B. Zinkblöcke an Schiffsrümpfen)
+- **Verzinkung:** Zn-Überzug als Opferschicht
+- **Passivierung:** Stabile Oxidschicht (z. B. Al₂O₃ bei Aluminium, Cr₂O₃ bei Edelstahl)
+- **Beschichtung:** Lacke, Kunststoffe — mechanische Barriere gegen Wasser und O₂
 
-- **Herzschrittmacher:** Lithium-Iodid-Primärbatterien (5-10 Jahre Lebensdauer) oder Li-Ionen-Akkus
-- **Blutgasanalyse:** Potentiometrische pH- und pO2-Elektroden basieren auf Standardelektrodenpotenzial-Prinzipien
-- **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
-- **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden -> Galvanischer Geschmack
+Man unterscheidet **Säurekorrosion** (H⁺ als Oxidationsmittel, H₂-Entwicklung) und **Sauerstoffkorrosion** (O₂ als Oxidationsmittel, häufiger in der Praxis). Sauerstoffkorrosion ist der Hauptmechanismus der Rostbildung: An der Kathode wird O₂ + 2H₂O + 4e⁻ → 4OH⁻ reduziert, an der Anode Fe → Fe²⁺ + 2e⁻ oxidiert.
 
-> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.`,
+**Klinisches Beispiel — galvanischer Geschmack in der Zahnmedizin:** Befinden sich im Mund verschiedene Metalle (Goldkrone neben Amalgamfüllung), entsteht ein galvanisches Element im Speichel (Elektrolyt). Patienten berichten über metallischen Geschmack oder Schmerzen — direkte Anwendung der Spannungsreihe am Patienten.
+
+---
+
+## Zusammenfassung: Vom Daniell-Element zum Herzschrittmacher
+
+Alle elektrochemischen Systeme basieren auf demselben Prinzip: Elektronentransfer zwischen Redox-Paaren unterschiedlichen Potenzials. Die galvanische Zelle nutzt dies spontan, die Elektrolyse erzwingt die Umkehrung, Batterien verpacken das Prinzip tragbar, und Korrosion zeigt die unerwünschte Seite derselben Chemie. Die Spannungsreihe und die Formel ΔG° = −nFE° sind dabei die zentralen Werkzeuge, um vorherzusagen, ob und wie stark eine Reaktion ablaufen wird.
+
+> **Prüfungstipp:** Häufige MedAT-Falle: AnOx RedKat gilt immer, aber die Polarität (Plus/Minus) wechselt zwischen galvanischer Zelle und Elektrolyse. In der galvanischen Zelle ist die Anode der Minuspol, in der Elektrolyse der Pluspol — die Reaktion (Oxidation an der Anode) bleibt gleich.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
