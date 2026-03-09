@@ -311,29 +311,34 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
         "Pharmakokinetik",
         "Radioaktiver Zerfall",
       ],
-      content: `## Von der Geraden zur Kurve
+      content: `## Warum der Bremsweg quadratisch wächst
 
-Lineare Funktionen beschreiben konstante Änderung — doch in der Natur ist die Änderungsrate selbst oft nicht konstant. Ein Medikament, das seinen Wirkungsgrad steigert, erreicht irgendwann ein Maximum und verliert dann wieder an Wirkung. Ein geworfener Ball steigt erst, wird langsamer, hält kurz inne und fällt dann. Die Geschwindigkeit eines Autos bei einer Bremsung nimmt nicht linear ab, sondern der Bremsweg wächst quadratisch mit der Geschwindigkeit.
+Ein Auto fährt 50 km/h — Bremsweg 12,5 m. Doppelte Geschwindigkeit, 100 km/h — Bremsweg nicht 25 m, sondern **50 m**. Vierfach. Das ist kein Zufall, sondern das Wesen der **quadratischen Funktion** (Funktion, bei der die Variable im Quadrat steht): Kleine Änderungen im Input erzeugen überproportional große Änderungen im Output. In der Medizin begegnet dir das ständig — vom Gefäßquerschnitt A = \u03C0r\u00B2 bis zur optimalen Medikamentendosis.
 
-All diese Situationen beschreibt die **quadratische Funktion**: Der Graph ist kein gerader Strich mehr, sondern eine **Parabel** — eine symmetrische Kurve mit genau einem Hoch- oder Tiefpunkt.
-
-> **Merke:** Von linear zu quadratisch: Bei linearen Funktionen ist die **Änderungsrate konstant** (Gerade). Bei quadratischen Funktionen **ändert sich die Änderungsrate selbst gleichmäßig** (Parabel). Frage dich: "Wird der Anstieg/Abfall immer steiler?" → quadratisch.
+> **Merke:** Quadratisch erkennen: Wird der Anstieg oder Abfall **selbst immer steiler** (statt konstant zu bleiben)? Dann ist der Zusammenhang quadratisch, nicht linear. Der Graph ist eine **Parabel** statt einer Geraden.
 
 {{DIAGRAM:quadratic-function}}
 
 ---
 
-## Die Parabel verstehen — Form vor Formel
+## Die Parabel — drei Eigenschaften, die alles bestimmen
 
-Bevor wir rechnen, schauen wir uns an, was eine Parabel **tut**:
+Bevor du rechnest, lies aus dem Graphen ab:
 
-- Sie hat genau **einen Scheitel** — den höchsten oder tiefsten Punkt.
-- Sie ist **symmetrisch**: Links und rechts vom Scheitel verhält sich die Kurve spiegelbildlich.
-- Sie kann die x-Achse **zweimal, einmal oder gar nicht** schneiden (das hängt davon ab, wie hoch oder tief der Scheitel liegt).
+- **Scheitel** (Vertex): Der einzige Hoch- oder Tiefpunkt der Kurve. Hier liegt das Optimum.
+- **Symmetrieachse**: Die vertikale Linie durch den Scheitel — links und rechts davon ist die Kurve spiegelbildlich.
+- **Nullstellen**: Wo die Parabel die x-Achse schneidet (0, 1 oder 2 Stellen).
 
-Der **Leitkoeffizient a** bestimmt zwei Dinge auf einen Blick:
-- **Vorzeichen:** a > 0 → Parabel öffnet nach oben (wie eine Schüssel → hat ein **Minimum**). a < 0 → öffnet nach unten (wie ein Hügel → hat ein **Maximum**).
-- **Betrag:** |a| > 1 → schmalere Parabel als die Normalparabel y = x². |a| < 1 → breitere, flachere Parabel.
+Der **Leitkoeffizient a** (Vorfaktor von x\u00B2) verrät dir sofort:
+
+| a | Öffnung | Extremum | Eselsbrücke |
+|---|---|---|---|
+| a > 0 | nach oben | **Minimum** | Schüssel — sammelt Wasser |
+| a < 0 | nach unten | **Maximum** | Hügel — Wasser fließt ab |
+| \u007Ca\u007C > 1 | schmal | steilere Flanken | |
+| \u007Ca\u007C < 1 | breit | flachere Flanken | |
+
+> **Merke:** a > 0 = Schüssel (Minimum). a < 0 = Hügel (Maximum). Das Vorzeichen von a entscheidet, ob du ein Maximum oder Minimum suchst — die häufigste Frage bei MedAT-Optimierungsaufgaben.
 
 ---
 
@@ -341,109 +346,137 @@ Der **Leitkoeffizient a** bestimmt zwei Dinge auf einen Blick:
 
 | Form | Darstellung | Was sofort ablesbar ist |
 |---|---|---|
-| Allgemeine Form | f(x) = ax² + bx + c | y-Achsenabschnitt c (Wert bei x = 0) |
-| Scheitelpunktform | f(x) = a(x − xs)² + ys | Scheitelpunkt S(xs, ys) |
-| Faktorisierte Form | f(x) = a(x − x₁)(x − x₂) | Nullstellen x₁ und x₂ |
+| Allgemeine Form | f(x) = ax\u00B2 + bx + c | y-Achsenabschnitt c (Wert bei x = 0) |
+| Scheitelpunktform | f(x) = a(x \u2212 xs)\u00B2 + ys | Scheitelpunkt S(xs\u007Cys) direkt |
+| Faktorisierte Form | f(x) = a(x \u2212 x\u2081)(x \u2212 x\u2082) | Nullstellen x\u2081 und x\u2082 direkt |
 
-Am MedAT: Erkenne, welche Form dir die gesuchte Information am schnellsten liefert. Scheitelpunkt gesucht → Scheitelpunktform. Nullstellen gesucht → Faktorisierte Form oder Lösungsformel.
-
----
-
-## Scheitelpunkt berechnen
-
-**Schnellformel (spart Zeit am MedAT):**
-- **xs = −b/(2a)**
-- **ys = f(xs)** (xs einsetzen)
-
-**Quadratische Ergänzung** (wenn die Aufgabe sie explizit verlangt):
-
-Beispiel: f(x) = 2x² − 8x + 3
-Schritt 1 — a ausklammern: = 2(x² − 4x) + 3
-Schritt 2 — halben Koeffizienten von x quadrieren, addieren und subtrahieren: = 2(x² − 4x + 4 − 4) + 3
-Schritt 3 — binomische Formel rückwärts: = 2(x − 2)² − 8 + 3 = 2(x − 2)² − 5
-
-Ergebnis: S(2|−5), a = 2 > 0 → Öffnung nach oben → Minimum.
-
-> **Merke:** MedAT-Zeitstrategie: Die Formel xs = −b/(2a) ist fast immer schneller als quadratische Ergänzung. Ergänzung nur verwenden, wenn die Aufgabe die Scheitelpunktform explizit verlangt.
+**MedAT-Strategie:** Erkenne, welche Form die gesuchte Information am schnellsten liefert. Scheitelpunkt gesucht? Scheitelpunktform. Nullstellen gesucht? Faktorisierte Form oder Lösungsformel.
 
 ---
 
-## Nullstellen und Diskriminante — intuitiv verstanden
+## Scheitelpunkt berechnen — zwei Wege
 
-Die zentrale Frage: **Wo schneidet die Parabel die x-Achse?** Das hängt davon ab, wo der Scheitel liegt:
+**Weg 1 — Schnellformel (spart Zeit am MedAT):**
+- **xs = \u2212b/(2a)**
+- **ys = f(xs)** (xs in die Originalgleichung einsetzen)
 
-- Scheitel **unter** der x-Achse bei einer nach oben offenen Parabel → die Kurve muss die Achse **zweimal** durchstoßen → 2 Nullstellen.
-- Scheitel **auf** der x-Achse → die Kurve berührt die Achse genau am Scheitel → **1 Nullstelle**.
-- Scheitel **über** der x-Achse bei einer nach oben offenen Parabel → die Kurve erreicht die Achse nie → **0 Nullstellen**.
+**Weg 2 — Quadratische Ergänzung** (wenn die Scheitelpunktform explizit verlangt wird):
 
-Mathematisch steckt diese Information in der **Diskriminante D = b² − 4ac**. Denk an den Term unter der Wurzel in der Lösungsformel:
+Beispiel: f(x) = 2x\u00B2 \u2212 8x + 3
+- Schritt 1 — a ausklammern: = 2(x\u00B2 \u2212 4x) + 3
+- Schritt 2 — halben Koeffizienten quadrieren, addieren/subtrahieren: = 2(x\u00B2 \u2212 4x + 4 \u2212 4) + 3
+- Schritt 3 — binomische Formel rückwärts: = 2(x \u2212 2)\u00B2 \u2212 8 + 3 = **2(x \u2212 2)\u00B2 \u2212 5**
 
-**x₁₂ = (−b ± √D) / (2a)**
+Ergebnis: S(2|\u22125), a = 2 > 0 \u2192 Minimum.
 
-Kannst du die Wurzel aus D ziehen?
-- **D > 0** (positiv): Ja, und das ± gibt zwei verschiedene Werte → **2 Nullstellen**.
-- **D = 0**: Die Wurzel ist 0, das ± macht keinen Unterschied → **1 Nullstelle** (x = −b/(2a)).
-- **D < 0** (negativ): Wurzel aus einer negativen Zahl? Nicht möglich (in ℝ) → **keine Nullstelle**.
+> **Merke:** Die Formel xs = \u2212b/(2a) liefert den Scheitelpunkt in 5 Sekunden. Quadratische Ergänzung nur verwenden, wenn die Aufgabe die Scheitelpunktform **explizit** verlangt — ansonsten Zeitverschwendung am MedAT.
 
-**pq-Formel** (Alternative für normierte Form x² + px + q = 0):
-x₁₂ = −p/2 ± √((p/2)² − q)
-
-**Typische MedAT-Falle:** Die pq-Formel funktioniert nur, wenn der Koeffizient vor x² genau 1 ist. Bei 2x² − 6x + 4 = 0 erst durch 2 teilen: x² − 3x + 2 = 0, dann pq-Formel anwenden.
+**Klinisches Beispiel — Optimale Dosis:** Die Wirkung W eines Medikaments folgt W(d) = \u22120,4d\u00B2 + 16d \u2212 40. Welche Dosis ist optimal? a = \u22120,4 < 0 \u2192 Maximum. d_opt = \u221216/(2 \u00D7 (\u22120,4)) = **20 mg**. W_max = \u22120,4 \u00D7 400 + 320 \u2212 40 = **120 Einheiten**.
 
 ---
 
-## Satz von Vieta — warum x₁ + x₂ = −p gilt
+## Nullstellen und die Diskriminante
 
-Bei x² + px + q = 0 mit Nullstellen x₁ und x₂ kann man die Gleichung als (x − x₁)(x − x₂) = 0 schreiben. Multipliziert man aus:
+Die zentrale Frage: **Wo schneidet die Parabel die x-Achse?** Die Antwort steckt in der **Diskriminante** (Unterscheidungsgröße) **D = b\u00B2 \u2212 4ac** — dem Term unter der Wurzel in der Lösungsformel.
 
-x² − (x₁ + x₂)x + x₁ × x₂ = 0
+**Mitternachtsformel (abc-Formel):** x\u2081\u2082 = (\u2212b \u00B1 \u221AD) / (2a)
 
-Koeffizientenvergleich mit x² + px + q = 0 ergibt sofort:
-- **x₁ + x₂ = −p** (Summe der Nullstellen = negatives p)
-- **x₁ × x₂ = q** (Produkt der Nullstellen = q)
+| Diskriminante | Wurzel möglich? | Nullstellen | Geometrisch |
+|---|---|---|---|
+| D > 0 | Ja, zwei Werte | **2 Nullstellen** | Parabel durchstößt x-Achse |
+| D = 0 | Ja, aber \u00B1 irrelevant | **1 Nullstelle** | Scheitel berührt x-Achse |
+| D < 0 | Nein (\u221A negativ) | **0 Nullstellen** | Parabel schwebt über/unter x-Achse |
 
-Das ist keine Magie — es folgt direkt aus der Faktorisierung. Und es ist ein mächtiges Werkzeug: Statt die Lösungsformel anzuwenden, kannst du bei ganzzahligen Koeffizienten oft direkt **zwei Zahlen erraten**, deren Summe und Produkt passen.
+{{DIAGRAM:discriminant-cases}}
 
-> **Merke:** Vieta-Strategie am MedAT: Bei x² + px + q = 0 mit ganzzahligen Koeffizienten → "Welche zwei Zahlen ergeben Summe −p und Produkt q?" Wenn du sie innerhalb von 10 Sekunden findest, spare dir die Formel. Wenn nicht → Mitternachtsformel.
+**pq-Formel** (Alternative für normierte Form x\u00B2 + px + q = 0):
+x\u2081\u2082 = \u2212p/2 \u00B1 \u221A((p/2)\u00B2 \u2212 q)
 
-Beispiel: x² − 7x + 12 = 0. Summe = 7, Produkt = 12. Probiere: 3 + 4 = 7, 3 × 4 = 12 → x₁ = 3, x₂ = 4. Fertig in 5 Sekunden.
+> **Merke:** Die pq-Formel funktioniert **nur bei a = 1**. Bei 2x\u00B2 \u2212 6x + 4 = 0 erst durch 2 teilen: x\u00B2 \u2212 3x + 2 = 0, dann pq-Formel. Vergisst du das Teilen, wird das Ergebnis falsch — eine der häufigsten MedAT-Fallen.
+
+**Durchgerechnetes Beispiel:** f(x) = x\u00B2 \u2212 4x \u2212 5. Nullstellen?
+- D = (\u22124)\u00B2 \u2212 4\u00D71\u00D7(\u22125) = 16 + 20 = 36
+- x\u2081\u2082 = (4 \u00B1 6)/2 \u2192 x\u2081 = 5, x\u2082 = \u22121
+- Probe via Vieta: 5 + (\u22121) = 4 = \u2212(\u22124) \u2713. 5 \u00D7 (\u22121) = \u22125 = c \u2713.
+
+---
+
+## Satz von Vieta — Nullstellen ohne Formel
+
+Aus der Faktorisierung (x \u2212 x\u2081)(x \u2212 x\u2082) = x\u00B2 \u2212 (x\u2081 + x\u2082)x + x\u2081\u00D7x\u2082 folgt durch Koeffizientenvergleich mit x\u00B2 + px + q = 0:
+
+- **x\u2081 + x\u2082 = \u2212p** (Summe der Nullstellen)
+- **x\u2081 \u00D7 x\u2082 = q** (Produkt der Nullstellen)
+
+**Vieta-Strategie:** Bei ganzzahligen Koeffizienten frage dich: "Welche zwei Zahlen haben Summe \u2212p und Produkt q?" Findest du sie in 10 Sekunden, spare dir die Formel.
+
+| Gleichung | Summe | Produkt | Lösung | Zeit |
+|---|---|---|---|---|
+| x\u00B2 \u2212 7x + 12 = 0 | 7 | 12 | 3 und 4 | ~3 s |
+| x\u00B2 \u2212 5x + 6 = 0 | 5 | 6 | 2 und 3 | ~3 s |
+| x\u00B2 \u2212 11x + 28 = 0 | 11 | 28 | 4 und 7 | ~5 s |
+| x\u00B2 + 2x \u2212 15 = 0 | \u22122 | \u221215 | 3 und \u22125 | ~8 s |
+
+> **Merke:** Vieta funktioniert am besten bei ganzzahligen, kleinen Koeffizienten. Wenn du nach 10 Sekunden keine passenden Zahlen findest \u2192 sofort zur Mitternachtsformel wechseln, nicht weiter raten.
 
 ---
 
 ## Symmetrie der Parabel
 
-Jede Parabel ist achsensymmetrisch zur vertikalen Geraden x = xs = −b/(2a). Diese Achse halbiert den Abstand zwischen den Nullstellen: **xs = (x₁ + x₂)/2**. Praktischer Nutzen: Kennst du eine Nullstelle und den Scheitelpunkt, findest du die andere über x₂ = 2 × xs − x₁.
+Die Symmetrieachse x = xs = \u2212b/(2a) halbiert den Abstand zwischen den Nullstellen:
+
+**xs = (x\u2081 + x\u2082)/2**
+
+Praktischer Nutzen: Kennst du eine Nullstelle x\u2081 und den Scheitelpunkt xs, findest du die andere Nullstelle über **x\u2082 = 2\u00D7xs \u2212 x\u2081**.
 
 ---
 
 ## Quadratische Zusammenhänge in Physik und Medizin
 
-**Wurfparabel:** h(t) = −½g × t² + v₀ × t + h₀. Der Scheitelpunkt gibt die maximale Höhe und den Zeitpunkt an. Hier ist a = −½g < 0 → Öffnung nach unten → Maximum.
+| Zusammenhang | Formel | Konsequenz |
+|---|---|---|
+| Kinetische Energie | E = \u00BDmv\u00B2 | 2\u00D7 Geschwindigkeit \u2192 4\u00D7 Energie \u2192 4\u00D7 Bremsweg |
+| Gefäßquerschnitt | A = \u03C0r\u00B2 | \u00BD Radius \u2192 \u00BC Fläche \u2192 16\u00D7 Widerstand (Hagen-Poiseuille: R ~ r\u207B\u2074) |
+| Wurfparabel | h(t) = \u2212\u00BDgt\u00B2 + v\u2080t + h\u2080 | Scheitel = maximale Höhe |
+| Dosis-Wirkung | W(d) = ad\u00B2 + bd + c (a < 0) | Scheitel = optimale Dosis |
+| Scherkräfte | \u03C4 ~ v\u00B2 | Turbulenzen bei Stenosen steigen überproportional |
 
-**Kinetische Energie:** E = ½mv² — quadratisch in v. Doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg!
+**Arteriosklerose — warum quadratisch gefährlich ist:** Ein Gefäß verengt sich von r = 4 mm auf r = 2 mm (Halbierung). Die Querschnittsfläche sinkt von 50,3 mm\u00B2 auf 12,6 mm\u00B2 — ein Viertel. Der Strömungswiderstand steigt nach Hagen-Poiseuille (R \u221D 1/r\u2074) sogar auf das **16-Fache**. Das erklärt, warum selbst moderate Stenosen dramatische hämodynamische Auswirkungen haben.
 
-**Gefäßquerschnitt:** A = πr² — quadratisch in r. Halbiert sich der Radius (Arteriosklerose), schrumpft die Fläche auf ein Viertel. Nach Hagen-Poiseuille steigt der Widerstand sogar auf das 16-Fache (r⁴!).
-
-**Dosis-Wirkung als Parabel:** Optimale Dosis = Scheitelpunkt. Zu wenig wirkt nicht, zu viel ist toxisch — die Parabel modelliert genau dieses Verhalten.
-
-**MedAT-typisch — Parabel erkennen:** y = −x² − 5 hat a = −1, b = 0, c = −5. Wegen a < 0 öffnet die Parabel nach unten. Scheitel: xs = 0, ys = −5 → **S(0|−5)**. Der Graph liegt vollständig unterhalb der x-Achse.
+> **Merke:** E = \u00BDmv\u00B2 und A = \u03C0r\u00B2 — die zwei wichtigsten quadratischen Formeln für den MedAT. "Doppelt so schnell = vierfache Energie" und "halber Radius = Viertel der Fläche" sind Klassiker.
 
 ---
 
 ## Rechenbeispiele mit Denkprozess
 
-**Beispiel 1 — Optimale Dosis (Scheitelpunkt):**
-W(d) = −0,4d² + 16d − 40. Denkprozess: "a < 0 → Parabel öffnet nach unten → Maximum gesucht → Scheitelpunkt."
-d_opt = −16/(2 × (−0,4)) = **20 mg**. W_max = −0,4 × 400 + 320 − 40 = **120 Einheiten**. Therapeutisches Fenster (W = 0): Diskriminante D = 256 − 64 = 192 > 0 → zwei Nullstellen bei ca. 2,8 mg und 37,2 mg.
+**Beispiel 1 — Blutdruckpuls als Parabel:**
+p(t) = \u2212200t\u00B2 + 200t + 80 (mmHg, t in Sekunden).
+Denkprozess: a = \u2212200 < 0 \u2192 Maximum.
+t_max = \u2212200/(2\u00D7(\u2212200)) = **0,5 s**. p_max = \u2212200\u00D70,25 + 200\u00D70,5 + 80 = \u221250 + 100 + 80 = **130 mmHg**.
 
-**Beispiel 2 — Blutdruckpuls als Parabel:**
-p(t) = −200t² + 200t + 80 (mmHg, t in Sekunden). Maximum: t = −200/(2 × (−200)) = **0,5 s**. p_max = 130 mmHg. Pulsdauer: p = 80 bei t = 0 und t = 1 s.
+**Beispiel 2 — MedAT-typisch, Parabel erkennen:**
+y = \u2212x\u00B2 \u2212 5. Hier ist a = \u22121, b = 0, c = \u22125.
+Wegen a < 0 öffnet die Parabel nach unten. Scheitel: xs = 0, ys = \u22125 \u2192 **S(0|\u22125)**. Da der Scheitel unterhalb der x-Achse liegt und die Parabel nach unten öffnet, hat sie **keine Nullstellen** (D = 0 \u2212 4\u00D7(\u22121)\u00D7(\u22125) = \u221220 < 0).
 
-**Beispiel 3 — Vieta-Schnellmethode:**
-x² − 11x + 28 = 0. Denkprozess: "Ganzzahlige Koeffizienten → Vieta versuchen. Summe = 11, Produkt = 28. Probiere: 4 + 7 = 11, 4 × 7 = 28." → **x₁ = 4, x₂ = 7**. Schneller als jede Formel.
+**Beispiel 3 — Herzfrequenz-Minimum:**
+f(t) = f_Ruhe \u2212 a\u00B7t + b\u00B7t\u00B2 (erst Verlangsamung, dann Beschleunigung).
+Minimum bei t = a/(2b) — das ist xs = \u2212(\u2212a)/(2b). Typische Falle: Nicht a/b oder 2a/b, sondern exakt **a/(2b)**.
 
-**Beispiel 4 — Herzfrequenz-Minimum:**
-f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minimum bei t = a/(2b) — das ist xs = −(−a)/(2b). Typische Falle: Nicht a/b oder 2a/b, sondern exakt **a/(2b)**.`,
+---
+
+## Prüfungsrelevante Fakten und Formeln
+
+| Formel/Fakt | Wert |
+|---|---|
+| Allgemeine Form | f(x) = ax\u00B2 + bx + c |
+| Scheitelpunkt | xs = \u2212b/(2a), ys = f(xs) |
+| Mitternachtsformel | x\u2081\u2082 = (\u2212b \u00B1 \u221A(b\u00B2\u22124ac))/(2a) |
+| pq-Formel (nur a=1) | x\u2081\u2082 = \u2212p/2 \u00B1 \u221A((p/2)\u00B2\u2212q) |
+| Vieta | x\u2081+x\u2082 = \u2212p, x\u2081\u00D7x\u2082 = q |
+| D > 0 / D = 0 / D < 0 | 2 / 1 / 0 Nullstellen |
+| E = \u00BDmv\u00B2 | 2v \u2192 4E |
+| A = \u03C0r\u00B2 | r/2 \u2192 A/4 |
+| Hagen-Poiseuille | R \u221D 1/r\u2074: r/2 \u2192 16R |`,
       lernziele: [
         "Quadratische Funktionen in allgemeiner Form und Scheitelpunktform darstellen und ineinander umwandeln.",
         "Scheitelpunkt, Öffnungsrichtung und Symmetrieachse einer Parabel bestimmen.",
@@ -478,16 +511,14 @@ f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minim
         },
       ],
       merksätze: [
-        "Quadratisch erkennen: Änderungsrate ändert sich gleichmäßig → Parabel.",
-        "a > 0: Schüssel (Minimum). a < 0: Hügel (Maximum). |a| groß: schmal. |a| klein: breit.",
-        "Scheitelpunkt: xs = −b/(2a). Am MedAT fast immer schneller als quadratische Ergänzung.",
-        "Diskriminante D = b² − 4ac: positiv → 2 NS, null → 1 NS, negativ → 0 NS.",
-        "Mitternachtsformel: x₁₂ = (−b ± √D)/(2a). pq-Formel nur bei a = 1!",
-        "Vieta: x₁ + x₂ = −p, x₁ × x₂ = q. Folgt aus Ausmultiplizieren von (x−x₁)(x−x₂).",
-        "Symmetrieachse x = xs halbiert den Abstand der Nullstellen: xs = (x₁+x₂)/2.",
-        "E = ½mv²: doppelte Geschwindigkeit → vierfache Energie.",
-        "A = πr²: halber Radius → Viertel der Fläche → klinisch katastrophal (Arteriosklerose).",
-        "Optimale Dosis = Scheitelpunkt der Dosis-Wirkungsparabel.",
+        "Quadratisch = Änderungsrate ändert sich gleichmäßig. Graph = Parabel, nicht Gerade.",
+        "a > 0: Schüssel (Minimum). a < 0: Hügel (Maximum). Vorzeichen bestimmt Optimierungsrichtung.",
+        "Scheitelpunkt-Schnellformel: xs = −b/(2a), dann ys = f(xs). In 5 Sekunden lösbar.",
+        "D = b² − 4ac: positiv → 2 NS, null → 1 NS (Berührung), negativ → 0 NS.",
+        "pq-Formel nur bei a = 1! Sonst erst durch a teilen — häufigste MedAT-Falle.",
+        "Vieta: x₁ + x₂ = −p, x₁ × x₂ = q. Bei ganzzahligen Koeffizienten schneller als jede Formel.",
+        "E = ½mv²: doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg.",
+        "A = πr²: halber Radius → ¼ Fläche. Hagen-Poiseuille: halber Radius → 16× Widerstand.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -500,16 +531,6 @@ f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minim
         "Die kinetische Energie eines Blutpartikels E = ½mv² ist quadratisch in der Strömungsgeschwindigkeit v, was erklärt, warum Turbulenzen und Scherkräfte bei Stenosen mit zunehmendem Schweregrad überproportional ansteigen. Der Querschnitt eines Blutgefäßes A = πr² hängt quadratisch vom Radius ab: Eine Halbierung des Radius (z. B. durch Arteriosklerose) reduziert die Querschnittsfläche auf ein Viertel und erhöht den Strömungswiderstand nach Hagen-Poiseuille auf das 16-Fache. In Zwei-Kompartiment-Pharmakokinetikmodellen erscheinen biexponentielle Kurven, deren frühes Abklingverhalten durch quadratische Näherungen beschrieben werden kann.",
       selfTest: [
         {
-          question: "Welchen Scheitelpunkt hat die Parabel f(x) = 2x² − 8x + 5?",
-          options: ["S(2|−3)", "S(−2|13)", "S(2|5)", "S(4|−3)", "S(−4|69)"],
-          correctIndex: 0,
-          explanation:
-            "xs = −b/(2a) = −(−8)/(2×2) = 8/4 = 2. ys = f(2) = 2×4 − 8×2 + 5 = 8 − 16 + 5 = −3. Scheitelpunkt: S(2|−3). Da a = 2 > 0, öffnet die Parabel nach oben und S ist ein Minimum. Das Verständnis des Scheitelpunkts ist zentral: In Optimierungsproblemen (z. B. maximale Konzentration, minimale Kosten) sucht man genau diesen Punkt.",
-          hints: ["xs = −b/(2a) = −(−8)/(4) = 2", "ys = f(2) = 2×4 − 16 + 5"],
-          difficulty: 2,
-          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
-        },
-        {
           question: "Die quadratische Gleichung x² − 5x + 6 = 0 hat die Lösungen:",
           options: [
             "x = 1 und x = 6",
@@ -520,10 +541,20 @@ f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minim
           ],
           correctIndex: 1,
           explanation:
-            "Satz von Vieta: x₁ + x₂ = 5 und x₁ × x₂ = 6. Zwei Zahlen mit Summe 5 und Produkt 6: 2 + 3 = 5, 2 × 3 = 6. Also x₁ = 2, x₂ = 3. Probe mit Mitternachtsformel: D = 25 − 24 = 1 > 0 → x = (5 ± 1)/2 → x₁ = 3, x₂ = 2. Vieta ist bei MedAT-Aufgaben oft der schnellere Weg, wenn man ganzzahlige Lösungen erraten kann.",
-          hints: ["Vieta: Summe = 5, Produkt = 6", "Zwei Zahlen mit Summe 5 und Produkt 6 suchen"],
+            "Satz von Vieta: x₁ + x₂ = 5 und x₁ × x₂ = 6. Zwei Zahlen mit Summe 5 und Produkt 6: 2 und 3. Probe: 2 + 3 = 5, 2 × 3 = 6. Alternativ Mitternachtsformel: D = 25 − 24 = 1, x = (5 ± 1)/2 → x₁ = 3, x₂ = 2.",
+          hints: ["Vieta: Summe = 5, Produkt = 6", "Welche zwei Zahlen passen?"],
           difficulty: 1,
-          tags: ["vieta", "nullstellen", "parabel"],
+          tags: ["vieta", "nullstellen", "quadratische-gleichung"],
+        },
+        {
+          question: "Welchen Scheitelpunkt hat die Parabel f(x) = 2x² − 8x + 5?",
+          options: ["S(2|−3)", "S(−2|13)", "S(2|5)", "S(4|−3)", "S(−4|69)"],
+          correctIndex: 0,
+          explanation:
+            "xs = −b/(2a) = −(−8)/(2×2) = 8/4 = 2. ys = f(2) = 2×4 − 8×2 + 5 = 8 − 16 + 5 = −3. Scheitelpunkt: S(2|−3). Da a = 2 > 0, öffnet die Parabel nach oben → S ist ein Minimum.",
+          hints: ["xs = −b/(2a) = 8/4 = 2", "ys = f(2) = 8 − 16 + 5"],
+          difficulty: 2,
+          tags: ["parabel", "scheitelpunkt", "quadratische-funktion"],
         },
         {
           question: "Welche Aussage trifft auf f(x) = −3(x − 2)² + 7 zu?",
@@ -536,40 +567,51 @@ f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minim
           ],
           correctIndex: 1,
           explanation:
-            "In der Scheitelpunktform f(x) = a(x − xs)² + ys gilt: a = −3 < 0 → Öffnung nach unten → Maximum. Der Scheitelpunkt liegt bei xs = 2 (Vorzeichen beachten: (x − 2)²) und ys = 7. Also: Maximum bei S(2|7). Die Parabel liegt vollständig unterhalb der Horizontalen y = 7. In Optimierungsaufgaben sucht man bei a < 0 den maximalen Funktionswert, der immer im Scheitelpunkt liegt.",
-          hints: [
-            "a = −3 < 0: Öffnung nach unten → Maximum",
-            "Scheitelpunkt direkt aus xs = 2, ys = 7 ablesen",
-          ],
-          difficulty: 2,
-          tags: ["parabel", "maximum", "scheitelpunkt"],
+            "Scheitelpunktform f(x) = a(x − xs)² + ys: a = −3 < 0 → Öffnung nach unten → Maximum. xs = 2 (Vorzeichen beachten: (x − 2)²), ys = 7. Maximum bei S(2|7). MedAT-Falle: Das Minus in (x − 2)² bedeutet xs = +2, nicht −2.",
+          hints: ["a = −3 < 0: nach unten → Maximum", "Scheitel direkt ablesen: xs = 2, ys = 7"],
+          difficulty: 1,
+          tags: ["parabel", "maximum", "scheitelpunktform"],
         },
         {
-          question: "Berechnen Sie die Nullstellen von f(x) = x² − 4x − 5.",
+          question: "Wie viele Nullstellen hat f(x) = 3x² − 2x + 5?",
           options: [
-            "x = 5 und x = −1",
-            "x = −5 und x = 1",
-            "x = 4 und x = 1",
-            "x = 2 und x = −3",
-            "keine reellen Nullstellen",
+            "Zwei reelle Nullstellen",
+            "Eine doppelte Nullstelle",
+            "Keine reellen Nullstellen",
+            "Unendlich viele Nullstellen",
+            "Genau drei Nullstellen",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
-            "Mitternachtsformel: a = 1, b = −4, c = −5. D = 16 − 4×(−5) = 16 + 20 = 36. x₁₂ = (4 ± 6)/2. x₁ = 10/2 = 5, x₂ = −2/2 = −1. Probe via Vieta: x₁ + x₂ = 5 + (−1) = 4 = −(−4). x₁ × x₂ = 5 × (−1) = −5. Beide Nullstellen liegen auf verschiedenen Seiten der Symmetrieachse xs = 2.",
-          hints: ["D = 16 − 4×1×(−5) = 16 + 20 = 36", "x = (4 ± √36)/2 = (4 ± 6)/2"],
+            "D = b² − 4ac = (−2)² − 4×3×5 = 4 − 60 = −56 < 0. Negative Diskriminante → keine reellen Nullstellen. Die Parabel (a = 3 > 0, nach oben offen) schwebt vollständig oberhalb der x-Achse.",
+          hints: ["D = b² − 4ac berechnen", "D < 0 → Wurzel aus negativer Zahl nicht möglich"],
           difficulty: 2,
-          tags: ["diskriminante", "lösungsformel", "quadratische-gleichung"],
+          tags: ["diskriminante", "nullstellen", "quadratische-funktion"],
         },
         {
           question:
-            "Eine Parabel f(x) = ax² + bx + c hat ihren Scheitelpunkt bei S(3|4) und verläuft durch den Punkt P(1|12). Welchen Wert hat a?",
-          options: ["a = 1", "a = 2", "a = 3", "a = 4", "a = 0,5"],
-          correctIndex: 1,
+            "Ein Gefäß hat den Radius r = 4 mm. Durch Arteriosklerose verengt sich der Radius auf 2 mm. Um welchen Faktor steigt der Strömungswiderstand nach Hagen-Poiseuille (R ∝ 1/r⁴)?",
+          options: ["Faktor 2", "Faktor 4", "Faktor 8", "Faktor 16", "Faktor 32"],
+          correctIndex: 3,
           explanation:
-            "In Scheitelpunktform: f(x) = a(x − 3)² + 4. Einsetzen von P(1|12): 12 = a(1 − 3)² + 4 = a×4 + 4 → 8 = 4a → a = 2. Vollständige Gleichung: f(x) = 2(x − 3)² + 4 = 2x² − 12x + 22. Probe: f(1) = 2 − 12 + 22 = 12. f(3) = 18 − 36 + 22 = 4. a = 2 > 0 → Öffnung nach oben, S ist Minimum.",
+            "R ∝ 1/r⁴. Halbierung des Radius: r_neu = r/2. R_neu ∝ 1/(r/2)⁴ = 1/(r⁴/16) = 16/r⁴. Der Widerstand steigt auf das 16-Fache. Merke: Die Fläche sinkt quadratisch (Faktor 4), aber der Widerstand steigt mit der vierten Potenz (Faktor 16) — das macht Arteriosklerose so gefährlich.",
           hints: [
-            "Scheitelpunktform: f(x) = a(x − 3)² + 4",
-            "P(1|12) einsetzen und nach a auflösen",
+            "R ∝ 1/r⁴: Wie verändert sich r⁴ bei Halbierung?",
+            "(r/2)⁴ = r⁴/16 → R wird 16× größer",
+          ],
+          difficulty: 3,
+          tags: ["hagen-poiseuille", "quadratisch", "klinisch"],
+        },
+        {
+          question:
+            "Eine Parabel f(x) = ax² + bx + c hat ihren Scheitelpunkt bei S(3|4) und verläuft durch P(1|12). Welchen Wert hat a?",
+          options: ["a = 0,5", "a = 1", "a = 2", "a = 3", "a = 4"],
+          correctIndex: 2,
+          explanation:
+            "Scheitelpunktform: f(x) = a(x − 3)² + 4. Punkt P einsetzen: 12 = a(1 − 3)² + 4 = 4a + 4. Also 8 = 4a → a = 2. Probe: f(1) = 2×4 + 4 = 12 ✓. f(3) = 2×0 + 4 = 4 ✓. Da a = 2 > 0, ist S ein Minimum.",
+          hints: [
+            "Scheitelpunktform aufstellen: f(x) = a(x − 3)² + 4",
+            "P(1|12) einsetzen: 12 = a×4 + 4",
           ],
           difficulty: 3,
           tags: ["scheitelpunktform", "parabel", "algebra"],

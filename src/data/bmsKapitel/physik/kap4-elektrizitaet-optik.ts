@@ -588,73 +588,164 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
       ],
       content: `## Grundlegende Schaltungstypen
 
-Vom Defibrillator bis zur Zellmembran: Jedes elektrische System lässt sich als Kombination von Reihen- und Parallelschaltungen analysieren.
+Ein Defibrillator rettet Leben, indem er einen Kondensator in Millisekunden über den Thorax entlädt. Ein EKG misst Herzströme über präzise Spannungsteiler. Die Zellmembran filtert Signale wie ein RC-Glied. Hinter all diesen Anwendungen stehen zwei einfache Grundprinzipien: Reihen- und Parallelschaltung.
 
 {{DIAGRAM:circuit-diagram}}
 
-**Reihenschaltung von Widerständen:**
-- Gesamtwiderstand: **R_ges = R₁ + R₂ + ... + Rₙ** (immer größer als jeder Einzelwiderstand)
-- Strom durch alle Widerstände gleich: I₁ = I₂ = ... = I
-- Spannungsaufteilung: U₁ = I·R₁, U₂ = I·R₂ (Spannungsteiler)
+### Reihenschaltung von Widerständen
 
-**Parallelschaltung von Widerständen:**
-- Gesamtwiderstand: **1/R_ges = 1/R₁ + 1/R₂ + ... + 1/Rₙ** (immer kleiner als der kleinste Einzelwiderstand)
-- Spannung an allen Widerständen gleich: U₁ = U₂ = ... = U
-- Stromaufteilung: I₁ = U/R₁, I₂ = U/R₂
+Stell dir eine Einbahnstraße mit mehreren Engstellen vor — der gesamte Verkehr muss durch jede Engstelle hindurch. Genauso fließt in der Reihenschaltung der gesamte Strom durch jeden Widerstand:
 
-Biologische Zellmembranen sind elektrisch äquivalent zu einem **RC-Parallelglied**: Die Lipiddoppelschicht wirkt als Kondensator C_m (lädt/entlädt sich bei Spannungsänderungen), die Ionenkanäle als variable Widerstände R_m (genauer: Leitfähigkeiten). Das Hodgkin-Huxley-Modell (mathematische Beschreibung der Erregungsleitung) formalisiert dies als Schaltkreis mit spannungsgesteuerten Leitfähigkeiten für Na⁺, K⁺ und Leckstrom.
+- **Strom:** überall identisch: I₁ = I₂ = ... = I
+- **Spannung:** teilt sich auf: U_ges = U₁ + U₂ + ... + Uₙ
+- **Gesamtwiderstand:** R_ges = R₁ + R₂ + ... + Rₙ (immer größer als jeder Einzelwiderstand)
+- **Spannungsteiler-Prinzip:** U₁ = U_ges · R₁/R_ges — je größer der Widerstand, desto mehr Spannung fällt an ihm ab
 
-## Die Kirchhoffschen Gesetze
+> **Merke:** Reihenschaltung = gleicher Strom, Spannungen addieren sich, R_ges = ΣRᵢ. Eselsbrücke: Widerstände in Reihe sind wie Hürden hintereinander — der Gesamtwiderstand wird immer größer.
 
-**Kirchhoffs Knotenregel (KCL):** Die Summe aller in einen Knoten einfließenden Ströme ist gleich der Summe aller abfließenden Ströme:
+---
 
-**ΣI_ein = ΣI_aus** (bzw. ΣI = 0 bei Vorzeichenkonvention)
+### Parallelschaltung von Widerständen
 
-Physikalische Basis: **Ladungserhaltung** — Ladung kann sich in einem Knoten weder ansammeln noch verschwinden.
+Jetzt denk an eine Autobahn mit mehreren Fahrspuren — der Verkehr verteilt sich auf alle Spuren, und mehr Spuren bedeuten weniger Gesamtstau:
 
-**Kirchhoffs Maschenregel (KVL):** Die Summe aller Spannungen in einer geschlossenen Masche ist null:
+- **Spannung:** an allen Widerständen gleich: U₁ = U₂ = ... = U
+- **Strom:** teilt sich auf: I_ges = I₁ + I₂ + ... + Iₙ
+- **Gesamtwiderstand:** 1/R_ges = 1/R₁ + 1/R₂ + ... + 1/Rₙ (immer kleiner als der kleinste Einzelwiderstand)
+- **Für genau 2 Widerstände:** R_ges = (R₁ · R₂) / (R₁ + R₂) — die Produktformel, die im MedAT häufig abgefragt wird
 
-**ΣU = 0** (bei Umlauf durch die Masche)
+> **Merke:** Parallelschaltung = gleiche Spannung, Ströme addieren sich, 1/R_ges = Σ(1/Rᵢ). Je mehr Widerstände parallel, desto kleiner R_ges — wie zusätzliche Fahrspuren den Stau reduzieren.
 
-Physikalische Basis: **Energieerhaltung** — beim Umlauf durch eine geschlossene Schleife ist die Gesamtarbeit null (konservatives Feld).
+---
 
-Diese zwei Gesetze ermöglichen die vollständige Analyse beliebig komplexer Netzwerke. Gemeinsam mit dem Ohmschen Gesetz (U = R·I) bilden sie die Basis der Schaltungsanalyse.
-
-> **Merke:** KCL (Knotenregel) = Ladungserhaltung: ΣI = 0. KVL (Maschenregel) = Energieerhaltung: ΣU = 0. Beide zusammen mit U = R·I lösen jedes lineare Netzwerk.
-
-**Vergleich Reihen- und Parallelschaltung:**
+### Vergleich auf einen Blick
 
 | Eigenschaft | Reihenschaltung | Parallelschaltung |
 |---|---|---|
 | Strom | überall gleich (I₁ = I₂) | teilt sich auf (I = I₁ + I₂) |
 | Spannung | teilt sich auf (U = U₁ + U₂) | überall gleich (U₁ = U₂) |
-| R_ges | R₁ + R₂ (größer) | (R₁·R₂)/(R₁+R₂) (kleiner) |
-| Anwendung | Spannungsteiler, EKG-Ableitungen | Parallele Ionenkanäle in Membranen |
+| R_ges | R₁ + R₂ (wird größer) | (R₁·R₂)/(R₁+R₂) (wird kleiner) |
+| C_ges | 1/C₁ + 1/C₂ (wird kleiner) | C₁ + C₂ (wird größer) |
+| Klinisch | Spannungsteiler im EKG | Parallele Ionenkanäle in Membranen |
+
+> **Merke:** Kondensatoren verhalten sich genau umgekehrt zu Widerständen: Parallel → C addiert sich direkt; Reihe → Kehrwerte addieren sich. Diese Vertauschung ist eine klassische MedAT-Falle.
+
+---
+
+## Die Kirchhoffschen Gesetze
+
+Gustav Kirchhoff formulierte 1845 zwei Gesetze, die zusammen mit dem Ohmschen Gesetz (U = R·I) ausreichen, um jedes beliebig komplexe elektrische Netzwerk vollständig zu analysieren.
+
+**1. Knotenregel (KCL — Kirchhoff's Current Law):**
+
+An jedem Knotenpunkt (Verzweigung) eines Schaltkreises gilt:
+
+**ΣI_ein = ΣI_aus** (bzw. ΣI = 0 bei Vorzeichenkonvention)
+
+Physikalische Basis: **Ladungserhaltung** — Ladung kann sich in einem Knoten weder ansammeln noch verschwinden. Analogie: An einer Autobahnkreuzung muss die Zahl der einfahrenden Autos gleich der Zahl der ausfahrenden sein.
+
+{{DIAGRAM:kirchhoff-laws}}
+
+**2. Maschenregel (KVL — Kirchhoff's Voltage Law):**
+
+In jeder geschlossenen Masche (Schleife) eines Schaltkreises gilt:
+
+**ΣU = 0** (bei Umlauf durch die Masche)
+
+Physikalische Basis: **Energieerhaltung** — beim vollständigen Umlauf kehrt man zum selben Potenzial zurück. Analogie: Wanderst du einen Rundweg im Gebirge, ist die Gesamthöhendifferenz am Ende null — jeder Anstieg wird durch einen Abstieg kompensiert.
+
+> **Merke:** KCL = Ladungserhaltung am Knoten (ΣI = 0). KVL = Energieerhaltung in der Masche (ΣU = 0). Zusammen mit U = R·I lösen sie jedes lineare Netzwerk. Prüfungstipp: KCL fragen nach Strömen, KVL fragen nach Spannungen.
+
+---
 
 ## Kondensatoren in Schaltkreisen
 
-Ein **Kondensator** speichert elektrische Energie im elektrischen Feld zwischen zwei Platten. Kapazität: **C = Q/U** [F = Farad = C/V]. Für einen Plattenkondensator: C = ε₀·εᵣ·A/d (A = Plattenfläche, d = Abstand, εᵣ = relative Permittivität des Dielektrikums).
+Ein **Kondensator** (Bauelement zur Energiespeicherung im elektrischen Feld) besteht aus zwei leitfähigen Platten, getrennt durch ein Dielektrikum (Isolator). Die Kapazität gibt an, wie viel Ladung pro Volt gespeichert wird:
 
-Gespeicherte Energie: **W = ½·C·U²** = Q²/(2C) = ½·Q·U.
+**C = Q/U** [F = Farad = Coulomb/Volt]
 
-**Reihenschaltung von Kondensatoren:** 1/C_ges = 1/C₁ + 1/C₂ (C_ges kleiner)
-**Parallelschaltung:** C_ges = C₁ + C₂ (C_ges größer)
+Für einen Plattenkondensator: **C = ε₀ · εᵣ · A / d** (A = Plattenfläche, d = Plattenabstand, εᵣ = relative Permittivität des Dielektrikums).
 
+**Drei Stellschrauben der Kapazität:**
+- Größere Fläche A → mehr C (mehr Platz für Ladungen)
+- Kleinerer Abstand d → mehr C (stärkeres Feld bei gleicher Spannung)
+- Höheres εᵣ → mehr C (Dielektrikum verstärkt die Polarisation)
 
+Gespeicherte Energie: **W = ½ · C · U²** = Q²/(2C) = ½ · Q · U
 
-**RC-Schaltkreis (Lade-/Entladekurve):** Wird ein Kondensator über einen Widerstand geladen, verläuft die Spannung exponentiell: U_C(t) = U₀ · (1 − e^(−t/τ)), mit Zeitkonstante **τ = R·C** [s]. Nach τ ist der Kondensator zu 63 % geladen, nach 5τ gilt er als vollständig geladen. Die Entladung: U_C(t) = U₀ · e^(−t/τ). Der Defibrillator nutzt einen großen Kondensator (C ≈ 200 µF, geladen auf ~1000–2000 V, W = ½·C·U² ≈ 200–400 J), der in ms über den Thorax entladen wird.
+| Schaltungstyp | Widerstände (R) | Kondensatoren (C) |
+|---|---|---|
+| Reihenschaltung | R_ges = R₁ + R₂ | 1/C_ges = 1/C₁ + 1/C₂ |
+| Parallelschaltung | 1/R_ges = 1/R₁ + 1/R₂ | C_ges = C₁ + C₂ |
+
+> **Merke:** W = ½·C·U² — die Kondensatorenergie steigt quadratisch mit der Spannung. Verdopplung der Spannung vervierfacht die gespeicherte Energie. Ein Defibrillator bei 2000 V speichert viermal so viel Energie wie bei 1000 V.
+
+---
+
+## Das RC-Glied: Zeitkonstante und exponentielles Verhalten
+
+Wird ein Kondensator über einen Widerstand geladen, steigt die Spannung nicht sofort auf den Endwert, sondern folgt einer **Exponentialkurve** — anfangs schnell, dann immer langsamer:
+
+**Laden:** U_C(t) = U₀ · (1 − e^(−t/τ))
+**Entladen:** U_C(t) = U₀ · e^(−t/τ)
+
+Die **Zeitkonstante** τ = R · C [Sekunden] bestimmt die Geschwindigkeit:
+
+| Zeitpunkt | Laden (% von U₀) | Entladen (% von U₀) |
+|---|---|---|
+| t = τ | 63 % | 37 % |
+| t = 2τ | 86 % | 14 % |
+| t = 3τ | 95 % | 5 % |
+| t = 5τ | >99 % (praktisch voll) | <1 % (praktisch leer) |
+
+**Biologische Membran als RC-Glied:** Die Lipiddoppelschicht wirkt als Kondensator (C_m ≈ 1 µF/cm²), die Ionenkanäle als variable Widerstände. Das **Hodgkin-Huxley-Modell** (mathematische Beschreibung der Erregungsleitung am Neuron, Nobelpreis 1963) formalisiert die Membran als Schaltkreis mit spannungsgesteuerten Leitfähigkeiten für Na⁺, K⁺ und Leckstrom. Die Membranzeitkonstante τ_m = R_m · C_m (typisch 1–20 ms) bestimmt, wie schnell ein Neuron auf synaptische Eingänge reagiert.
+
+**Defibrillator als RC-Entladung:** Ein großer Kondensator (C ≈ 200 µF) wird auf 1000–2000 V geladen. Die gespeicherte Energie W = ½·C·U² ≈ 200–400 J wird in Millisekunden über den Thorax (R ≈ 50–100 Ω) entladen. Der resultierende Stromstoß depolarisiert alle Herzmuskelzellen gleichzeitig und terminiert so Kammerflimmern (lebensbedrohliche Herzrhythmusstörung).
+
+> **Merke:** τ = R·C ist die zentrale Zeitkonstante. Nach 1τ: 63 % geladen. Nach 5τ: praktisch voll. Biologische Membranen haben τ_m = R_m·C_m ≈ 1–20 ms — das bestimmt die neuronale Reaktionsgeschwindigkeit.
+
+---
 
 ## Wechselstrom und Impedanz
 
-Bei **Wechselstrom (AC)** mit Frequenz f = 1/T verhält sich ein Kondensator wie ein frequenzabhängiger Widerstand, die **kapazitive Reaktanz**: **X_C = 1/(2π·f·C)** [Ω]. Bei hohen Frequenzen ist X_C klein (Kondensator leitet), bei niedrigen groß (Kondensator sperrt). Eine Induktivität L hat die induktive Reaktanz: X_L = 2π·f·L. Die Gesamtimpedanz: Z = √(R² + (X_L − X_C)²).
+Bei **Wechselstrom (AC)** mit Frequenz f wechselt die Stromrichtung periodisch (im Gegensatz zum Gleichstrom DC). Kondensatoren und Spulen verhalten sich hier frequenzabhängig:
 
-Im menschlichen Körper ist die **Bioimpedanz** frequenzabhängig, weil Zellmembranen als Kondensatoren wirken — Details zur frequenzabhängigen Gewebeleitung und zur Bioimpedanzanalyse (BIA) findest du im Kapitel „Strom, Widerstand und Ohmsches Gesetz" (ph-5-02).
+**Kapazitive Reaktanz** (Blindwiderstand des Kondensators):
+**X_C = 1/(2π · f · C)** [Ω]
+- Hohe Frequenz → kleines X_C → Kondensator leitet gut (Kurzschluss für sehr hohe f)
+- Niedrige Frequenz → großes X_C → Kondensator sperrt (offener Kreis für f = 0)
 
-## Spannungsteiler und Messbrücken
+**Induktive Reaktanz** (Blindwiderstand der Spule):
+**X_L = 2π · f · L** [Ω]
+- Hohe Frequenz → großes X_L → Spule sperrt
+- Niedrige Frequenz → kleines X_L → Spule leitet
 
-Der **Spannungsteiler** teilt eine Spannung U₀ proportional zu den Widerständen auf: U₂ = U₀ · R₂/(R₁ + R₂). Die **Wheatstone-Brücke** detektiert minimale Widerstandsänderungen durch Vergleich zweier Spannungsteiler — genutzt in Dehnungsmessstreifen, Drucksensoren und Biosensoren (z. B. Glukosemessgeräte, Pulsoxymetrie-Schaltkreise).
+**Gesamtimpedanz** (Scheinwiderstand, Kombination aus ohmschem und Blindwiderstand):
+**Z = √(R² + (X_L − X_C)²)** [Ω]
 
-> **Prüfungstipp:** Merke dir die Eselsbrücke: Bei Reihenschaltung addieren sich R-Werte direkt, bei Parallelschaltung die Kehrwerte. Für Kondensatoren gilt es genau umgekehrt! Die Wheatstone-Gleichgewichtsbedingung R₁·R₄ = R₂·R₃ (Kreuzprodukt) wird gerne abgefragt.
+Im menschlichen Körper ist die **Bioimpedanz** frequenzabhängig: Zellmembranen wirken als Kondensatoren. Bei 50 kHz durchdringt der Strom die Membranen (X_C sinkt) und erfasst intra- und extrazelluläres Wasser — Grundlage der Bioimpedanzanalyse (BIA) zur Körperzusammensetzung. Details siehe Kapitel ph-5-02.
+
+> **Merke:** X_C = 1/(2πfC) sinkt mit steigender Frequenz; X_L = 2πfL steigt mit steigender Frequenz. Kondensator = Hochpassfilter (lässt hohe Frequenzen durch), Spule = Tiefpassfilter. Die Zellmembran als biologischer Kondensator wird bei höherer Frequenz durchlässiger.
+
+---
+
+## Spannungsteiler und Wheatstone-Brücke
+
+Der **Spannungsteiler** ist eine der wichtigsten Grundschaltungen. Zwei Widerstände in Reihe teilen eine Eingangsspannung U₀ proportional auf:
+
+**U₂ = U₀ · R₂ / (R₁ + R₂)**
+
+Klinische Anwendung: EKG-Ableitungen nutzen Spannungsteiler-Prinzipien zur Messung der Herzpotentiale.
+
+Die **Wheatstone-Brücke** (Präzisionsmessschaltung aus vier Widerständen) vergleicht zwei Spannungsteiler und detektiert minimale Widerstandsänderungen. Gleichgewichtsbedingung (kein Strom durch das Galvanometer):
+
+**R₁ · R₄ = R₂ · R₃** (Kreuzprodukt)
+
+Anwendungen: Dehnungsmessstreifen (Kraftmessung), piezoelektrische Drucksensoren (invasive Blutdruckmessung), Temperatursensoren (Fieberthermometer), Biosensoren (Glukosemessgeräte, Pulsoxymetrie).
+
+> **Merke:** Spannungsteiler: U₂ = U₀ · R₂/(R₁+R₂). Wheatstone-Gleichgewicht: R₁·R₄ = R₂·R₃ (Kreuzprodukt). Beide Formeln sind klassische MedAT-Prüfungsinhalte.
+
+---
 
 ## Rechenbeispiele
 
@@ -665,14 +756,29 @@ Gespeicherte Energie: W = ½·C·U₀² = ½ · 200×10⁻⁶ · 1800² = **324 
 
 **Beispiel 2 — Gemischte Schaltung: R₁ in Reihe mit (R₂ ∥ R₃):**
 R₁ = 100 Ω (Reihe), R₂ = 200 Ω ∥ R₃ = 300 Ω.
-R₂₃ = (R₂·R₃)/(R₂+R₃) = (200·300)/500 = **120 Ω**.
-R_ges = R₁ + R₂₃ = 100 + 120 = **220 Ω**.
-Spannung U = 12 V → I_ges = 12/220 ≈ 54,5 mA. U₁ = I·R₁ = 5,45 V; U₂₃ = I·R₂₃ = 6,55 V.
+Schritt 1: R₂₃ = (R₂·R₃)/(R₂+R₃) = (200·300)/500 = **120 Ω**.
+Schritt 2: R_ges = R₁ + R₂₃ = 100 + 120 = **220 Ω**.
+Schritt 3: I_ges = U/R_ges = 12/220 ≈ **54,5 mA**. U₁ = I·R₁ = 5,45 V; U₂₃ = I·R₂₃ = 6,55 V.
+Kontrolle: U₁ + U₂₃ = 5,45 + 6,55 = 12,0 V ✓ (Maschenregel)
 
 **Beispiel 3 — Neuronale Membran-Zeitkonstante:**
 Typisches Neuron: R_m = 10 kΩ·cm², C_m = 1 µF/cm².
 τ_m = R_m · C_m = 10.000 Ω·cm² × 10⁻⁶ F/cm² = **10 ms**.
-Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~10 ms 63 % der Endspannung. Dünnere Axone (höheres R_m) haben längere τ → langsamere Antwort.`,
+Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~10 ms 63 % der Endspannung. Myelinisierte Axone (dicke Isolierschicht → höheres R_m, niedrigeres C_m) haben eine andere τ als unmyelinisierte — die Myelinisierung erhöht die Leitungsgeschwindigkeit entscheidend.
+
+---
+
+## Prüfungsrelevante Zahlen und Fakten
+
+| Größe | Typischer Wert | Klinischer Bezug |
+|---|---|---|
+| Defibrillator-Kapazität | C ≈ 200 µF | Energiespeicher für Schock |
+| Defibrillator-Spannung | 1000–2000 V | W = ½·C·U² ≈ 200–360 J |
+| Thoraxwiderstand | R ≈ 50–100 Ω | Bestimmt Entladezeit τ |
+| Membrankapazität | C_m ≈ 1 µF/cm² | Universal für alle Zellen |
+| Neuronale Zeitkonstante | τ_m ≈ 1–20 ms | Reaktionsgeschwindigkeit |
+| BIA-Frequenz | 50 kHz | Durchdringt Zellmembranen |
+| MRT-Feldstärke | 1,5–7 T | Vergleich: Erdmagnetfeld ~50 µT |`,
 
       diagram: "circuit-diagram",
       lernziele: [
@@ -703,16 +809,14 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
       ],
 
       merksätze: [
-        "Reihenschaltung R: R_ges = R₁ + R₂ + ... (größer als jeder Einzelwert).",
-        "Parallelschaltung R: 1/R_ges = 1/R₁ + 1/R₂ + ... (kleiner als jeder Einzelwert).",
-        "Kondensatoren: Reihe → 1/C addieren; Parallel → C direkt addieren.",
-        "KCL (Knotenregel): ΣI_ein = ΣI_aus — Ladungserhaltung.",
-        "KVL (Maschenregel): ΣU = 0 in Masche — Energieerhaltung.",
-        "RC-Zeitkonstante: τ = R·C [s]. Nach τ: 63 % geladen.",
-        "Kondensatorenergie: W = ½·C·U².",
-        "Kapazitive Reaktanz: X_C = 1/(2π·f·C) — sinkt mit Frequenz.",
-        "Zellmembran als RC-Glied: C_m ≈ 1 µF/cm², R_m = Kanalwiderstand.",
-        "Defibrillator: Kondensatorentladung ~200 J in ms → terminiert Kammerflimmern.",
+        "Reihe: R addieren, C-Kehrwerte addieren. Parallel: R-Kehrwerte addieren, C addieren. Kondensatoren sind immer umgekehrt zu Widerständen!",
+        "KCL (Knoten): ΣI = 0 → Ladungserhaltung. KVL (Masche): ΣU = 0 → Energieerhaltung.",
+        "τ = R·C: Nach 1τ = 63 %, nach 3τ = 95 %, nach 5τ ≈ 100 %. Gilt für Laden und Entladen (spiegelbildlich).",
+        "W = ½·C·U² — Energie steigt quadratisch mit Spannung. Defi: 200 µF, 1800 V → 324 J in ~12 ms.",
+        "X_C = 1/(2πfC): Kondensator sperrt bei DC, leitet bei hohem f. Zellmembran bei 50 kHz durchlässig (BIA-Prinzip).",
+        "Spannungsteiler: U₂ = U₀ · R₂/(R₁+R₂). Wheatstone-Gleichgewicht: R₁·R₄ = R₂·R₃ (Kreuzprodukt).",
+        "Zellmembran = RC-Parallelglied: Lipidschicht = C (1 µF/cm²), Ionenkanäle = variable R. τ_m = 1–20 ms.",
+        "Parallelwiderstand für 2 R: R_ges = (R₁·R₂)/(R₁+R₂) — die Produktformel, häufig im MedAT.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -733,13 +837,13 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
           options: ["5,45 Ω", "60 Ω", "18,18 Ω", "10 Ω", "3,33 Ω"],
           correctIndex: 0,
           explanation:
-            "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60. R_ges = 60/11 ≈ 5,45 Ω. Bei Parallelschaltung ist der Gesamtwiderstand immer kleiner als der kleinste Einzelwiderstand (hier < 10 Ω). Zur Kontrolle: 60 Ω wäre die Reihenschaltung. 3,33 Ω wäre nur 1/3 des kleinsten Widerstands (falsch). 18,18 Ω wäre der arithmetische Mittelwert (kein physikalisch sinnvoller Wert für Parallelschaltung).",
+            "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60. R_ges = 60/11 ≈ 5,45 Ω. Kontrolle: Parallelwiderstand muss kleiner sein als der kleinste Einzelwiderstand (< 10 Ω) — nur 5,45 Ω und 3,33 Ω erfüllen das. 60 Ω wäre die Reihenschaltung, 18,18 Ω der arithmetische Mittelwert, 10 Ω der kleinste Einzelwert, 3,33 Ω = 10/3 (falsche Berechnung).",
           hints: [
             "1/R_ges = 1/R₁ + 1/R₂ + 1/R₃. Bringe auf gemeinsamen Nenner (60).",
-            "Parallelwiderstand ist immer kleiner als der kleinste Einzelwiderstand. Welche Antwort ist < 10 Ω?",
+            "Parallelwiderstand ist immer kleiner als der kleinste Einzelwiderstand. Welche Antwort ist < 10 Ω und sinnvoll?",
           ],
           difficulty: 1,
-          tags: ["parallelschaltung", "widerstand", "schaltkreis"],
+          tags: ["parallelschaltung", "widerstand", "rechenfrage"],
         },
         {
           question:
@@ -747,13 +851,32 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
           options: ["Nach 0,1 ms", "Nach 1 ms", "Nach 10 ms", "Nach 100 ms", "Nach 1 s"],
           correctIndex: 3,
           explanation:
-            "Die Zeitkonstante τ = R·C = 1000 Ω · 100×10⁻⁶ F = 0,1 s = 100 ms. Nach genau einer Zeitkonstante τ ist der Kondensator auf U₀·(1−e⁻¹) = U₀ · 0,632 ≈ 63 % aufgeladen. Nach 5τ = 500 ms gilt der Kondensator als vollständig geladen (>99 %). Diese Zeitkonstante ist analog zur Membranzeitkonstante τ_m = R_m·C_m (typisch 1–20 ms für Neuronen), die die Reaktionsgeschwindigkeit auf Strompulse bestimmt.",
+            "τ = R·C = 1000 Ω · 100×10⁻⁶ F = 0,1 s = 100 ms. Nach genau einer Zeitkonstante τ ist der Kondensator auf 63 % aufgeladen (U = U₀·(1−e⁻¹) ≈ 0,632·U₀). Nach 5τ = 500 ms ist er zu >99 % geladen. Biologische Parallele: Neuronale Membranzeitkonstante τ_m = R_m·C_m beträgt typisch 1–20 ms.",
           hints: [
-            "τ = R·C. Berechne: 1000 Ω × 100 µF = ?",
+            "τ = R·C. Berechne: 1000 Ω × 100 µF = ? (Einheiten: Ω × F = s)",
             "100 µF = 100 × 10⁻⁶ F = 10⁻⁴ F. 1000 × 10⁻⁴ = 0,1 s = 100 ms.",
           ],
           difficulty: 1,
           tags: ["kondensator", "zeitkonstante", "rc-glied"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über die Kirchhoffschen Gesetze ist FALSCH?",
+          options: [
+            "Die Knotenregel basiert auf der Ladungserhaltung",
+            "Die Maschenregel besagt, dass die Summe aller Spannungen in einer Masche null ist",
+            "Die Knotenregel gilt nur für Gleichstromkreise, nicht für Wechselstrom",
+            "Zusammen mit dem Ohmschen Gesetz lässt sich jedes lineare Netzwerk lösen",
+            "An einem Knoten ist die Summe der zufließenden Ströme gleich der Summe der abfließenden",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Knotenregel (KCL) gilt universell — für Gleich- und Wechselstromkreise. Sie folgt direkt aus der Ladungserhaltung, die ein fundamentales Naturgesetz ist und nicht von der Stromart abhängt. Bei Wechselstrom werden die Ströme als komplexe Größen (Zeiger) behandelt, aber ΣI = 0 gilt weiterhin an jedem Knoten. Alle anderen Aussagen sind korrekt.",
+          hints: [
+            "Die Kirchhoffschen Gesetze basieren auf fundamentalen Erhaltungssätzen. Gelten Erhaltungssätze nur bei Gleichstrom?",
+            "Ladungserhaltung ist universell — sie gilt unabhängig davon, ob der Strom konstant ist oder sich zeitlich ändert.",
+          ],
+          difficulty: 2,
+          tags: ["kirchhoff", "knotenregel", "falschaussage"],
         },
         {
           question:
@@ -761,13 +884,13 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
           options: ["W = 150 J", "W = 600 J", "W = 300 J", "W = 30 J", "W = 3000 J"],
           correctIndex: 2,
           explanation:
-            "W = ½·C·U² = ½ · 150×10⁻⁶ F · (2000 V)² = ½ · 150×10⁻⁶ · 4×10⁶ = ½ · 600 = 300 J. Typische Defibrillatoren liefern 200–360 J. Diese Energie wird in ~10 ms über den Thorax entladen (R_thorax ≈ 50–100 Ω). Der resultierende Spitzenstrom beträgt I_max = U/R = 2000/75 ≈ 27 A — genug, um alle Herzmuskelzellen gleichzeitig zu depolarisieren und Kammerflimmern zu beenden. Moderne biphasische Defibrillatoren benötigen weniger Energie (100–200 J).",
+            "W = ½·C·U² = ½ · 150×10⁻⁶ F · (2000 V)² = ½ · 150×10⁻⁶ · 4×10⁶ = ½ · 600 = 300 J. Typische Defibrillatoren liefern 200–360 J. Häufiger Fehler: Vergessen des Faktors ½ (→ 600 J, Option B) oder Verwechslung von U und U² (→ 150 J oder 30 J). Der Spitzenstrom beträgt I_max = U/R ≈ 2000/75 ≈ 27 A.",
           hints: [
-            "W = ½·C·U². C = 150 µF = 150 × 10⁻⁶ F. U = 2000 V → U² = 4 × 10⁶ V².",
+            "W = ½·C·U². C = 150 µF = 150 × 10⁻⁶ F. U² = (2000)² = 4 × 10⁶ V².",
             "½ × 150 × 10⁻⁶ × 4 × 10⁶ = ½ × 600 = 300 J.",
           ],
           difficulty: 2,
-          tags: ["defibrillator", "kondensator", "energie"],
+          tags: ["defibrillator", "kondensator", "rechenfrage"],
         },
         {
           question:
@@ -781,27 +904,27 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
           ],
           correctIndex: 4,
           explanation:
-            "Für die Wheatstone-Brücke im Gleichgewicht (U_Galvanometer = 0): R₁/R₂ = R₃/R₄, äquivalent zu R₁·R₄ = R₂·R₃ (Kreuzprodukt). Die Bedingung ergibt sich aus der Maschenregel: Beide Spannungsteiler teilen die Speisespannung im gleichen Verhältnis auf. Anwendungen: Präzisionsmessung von Widerstandsänderungen in Dehnungsmessstreifen, Drucksensoren (z. B. invasive Blutdruckmessung), Temperatursensoren und Biosensoren.",
+            "Im Gleichgewicht teilen beide Spannungsteiler die Speisespannung im gleichen Verhältnis: R₁/R₂ = R₃/R₄, umgeformt: R₁·R₄ = R₂·R₃ (Kreuzprodukt). Option A (Summengleichheit) wäre zu schwach — sie erlaubt z. B. R₁=1, R₂=5, R₃=3, R₄=3, was kein Gleichgewicht ergibt. Option D (R₁·R₂ = R₃·R₄) vertauscht die Indizes. Anwendungen: Dehnungsmessstreifen, invasive Blutdrucksensoren, Biosensoren.",
           hints: [
-            "Gleichgewicht: beide Spannungsteiler gleich. R₁/(R₁+R₂) = R₃/(R₃+R₄). Vereinfachen.",
-            "Kreuzprodukt: R₁·R₄ = R₂·R₃.",
+            "Gleichgewicht bedeutet: gleiche Spannungsteilung auf beiden Seiten. R₁/(R₁+R₂) = R₃/(R₃+R₄).",
+            "Kreuzweise multiplizieren: R₁·(R₃+R₄) = R₃·(R₁+R₂) → vereinfachen → R₁·R₄ = R₂·R₃.",
           ],
           difficulty: 3,
           tags: ["wheatstone-brücke", "spannungsteiler", "widerstandsmessung"],
         },
         {
           question:
-            "Welche Kapazität hat ein Plattenkondensator mit A = 0,01 m², d = 1 mm und εᵣ = 4?",
-          options: ["C ≈ 35 pF", "C ≈ 354 pF", "C ≈ 3,54 nF", "C ≈ 35,4 nF", "C ≈ 354 nF"],
+            "Ein Kondensator (C = 50 µF) in einem Defibrillator wird über R = 80 Ω entladen. Nach welcher Zeit ist die Spannung auf unter 5 % des Anfangswerts gefallen?",
+          options: ["Nach 4 ms", "Nach 12 ms", "Nach 20 ms", "Nach 40 ms", "Nach 200 ms"],
           correctIndex: 1,
           explanation:
-            "C = ε₀·εᵣ·A/d = (8,854×10⁻¹² · 4 · 0,01) / (1×10⁻³) = (8,854×10⁻¹² · 0,04) / (10⁻³) = 3,542×10⁻¹³ / 10⁻³ = 3,542×10⁻¹⁰ F ≈ 354 pF. Probe: 354 pF = 0,354 nF. Option A wäre ohne den Faktor εᵣ = 4 (nur ε₀). Option C wäre mit d = 0,1 mm (zehnmal kleiner). Bei biologischen Membranen gilt C_m ≈ 1 µF/cm² — eine typische Zelle (A ≈ 1000 µm²) hat eine Membrankapazität von ca. 10–100 pF.",
+            "τ = R·C = 80 · 50×10⁻⁶ = 4 ms. Nach 3τ = 12 ms ist die Spannung auf e⁻³ ≈ 5 % des Anfangswerts gefallen (genau: 4,98 %). Nach 1τ = 4 ms wäre sie noch bei 37 %, nach 5τ = 20 ms bei <1 %. Die Frage verlangt <5 %, also reichen 3τ = 12 ms. Klinisch: Die Entladungszeit bestimmt die Effektivität der Defibrillation.",
           hints: [
-            "C = ε₀·εᵣ·A/d. ε₀ = 8,854 × 10⁻¹² F/m. d = 1 mm = 10⁻³ m.",
-            "Zähler: 8,854×10⁻¹² × 4 × 0,01 = 3,54×10⁻¹³. Nenner: 10⁻³. Division ergibt C in Farad.",
+            "Berechne τ = R·C. Wie viele Zeitkonstanten braucht man, um auf 5 % zu kommen?",
+            "U(t) = U₀·e^(−t/τ). Für U/U₀ = 0,05: e^(−t/τ) = 0,05 → t/τ ≈ 3. Also t = 3τ.",
           ],
           difficulty: 3,
-          tags: ["kapazität", "plattenkondensator", "permittivität"],
+          tags: ["rc-glied", "entladung", "rechenfrage"],
         },
       ],
     },

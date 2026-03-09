@@ -1074,107 +1074,179 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
         "Boyle-Mariotte",
         "Autoklav",
       ],
-      content: `
+      content: `Warum kocht Wasser auf dem Mount Everest schon bei 70 °C, im Autoklav aber erst bei 121 °C? Warum perlt Stickstoff im Blut eines Tauchers wie CO₂ in einer Sprudelflasche? Die Antwort steckt in zwei Konzepten: dem **idealen Gasgesetz** und den **Phasenübergängen**. Beide sind MedAT-Dauerbrenner — und beide lassen sich mit wenigen Formeln vollständig beherrschen.
 
+---
 
 ## Ideales Gasgesetz
 
-Stellt man sich ein Gas als Ansammlung winziger, punktförmiger Teilchen vor, die keinerlei Anziehungskräfte aufeinander ausüben und deren Eigenvolumen vernachlässigbar ist, so gelangt man zum Modell des **idealen Gases**. Dieses Modell beschreibt das Verhalten realer Gase erstaunlich gut, solange der Druck nicht zu hoch und die Temperatur nicht zu niedrig ist — Bedingungen, die in der Lungenphysiologie und bei Blutgasanalysen fast immer erfüllt sind.
+Das Modell des **idealen Gases** beschreibt Gasteilchen als punktförmig, ohne gegenseitige Anziehung und mit vernachlässigbarem Eigenvolumen. Trotz dieser Vereinfachung liefert es für Lungenphysiologie und Blutgasanalysen exzellente Ergebnisse, solange Druck nicht extrem hoch und Temperatur nicht extrem niedrig ist.
 
-Die physikalische Intuition ist einfach: Mehr Teilchen in einem Raum erzeugen mehr Stöße gegen die Wand — also höheren Druck. Höhere Temperatur bedeutet schnellere Teilchen, die härter gegen die Wand prallen — ebenfalls höherer Druck. Die zentrale Gleichung, die alle Zustandsgrößen miteinander verknüpft, lautet:
+Die zentrale Gleichung verknüpft alle Zustandsgrößen:
 
 **p · V = n · R · T**
 
-Dabei ist p der Druck in Pascal [Pa], V das Volumen in Kubikmetern [m³], n die Stoffmenge in Mol, R die universelle Gaskonstante (8,314 J/(mol·K)) und T die **absolute Temperatur in Kelvin**. Diese Gleichung ist das Fundament der gesamten Gasphysik, und aus ihr lassen sich sämtliche Spezialfälle ableiten.
+| Größe | Bedeutung | Einheit |
+|-------|-----------|---------|
+| p | Druck | Pa |
+| V | Volumen | m³ |
+| n | Stoffmenge | mol |
+| R | Universelle Gaskonstante | 8,314 J/(mol·K) |
+| T | Absolute Temperatur | K (nie °C!) |
 
-Hält man die Temperatur konstant (isothermer Prozess), so ergibt sich das Gesetz von **Boyle-Mariotte**: p · V = const. Verdoppelt man den Druck, halbiert sich das Volumen — ein Prinzip, das beim Tauchen unmittelbar spürbar wird, wenn die Lungenluft in der Tiefe komprimiert wird. Bei konstantem Druck (isobarer Prozess) liefert die Zustandsgleichung das Gesetz von **Gay-Lussac**: V/T = const. Kalte Einatmungsluft dehnt sich beim Erwärmen in der Lunge aus, weil T steigt und p näherungsweise gleich bleibt. Bei konstantem Volumen (isochorer Prozess) gilt schließlich: p/T = const — der Druck in einem starren Behälter steigt proportional zur Temperatur.
+Die physikalische Intuition: Mehr Teilchen oder schnellere Teilchen (= höheres T) erzeugen mehr Wandstöße und damit höheren Druck.
 
-Unter Normbedingungen (p₀ = 101 325 Pa, T₀ = 273,15 K) nimmt ein Mol eines idealen Gases ein Volumen von exakt 22,4 Litern ein — das sogenannte **Molvolumen**, eine der wichtigsten Bezugsgrößen in der Chemie und Physiologie.
+> **Merke:** T muss in der Zustandsgleichung **immer in Kelvin** stehen. Umrechnung: T [K] = T [°C] + 273,15. Bei 20 °C einzusetzen als 293 K, nicht als 20!
 
-> 💡 **Prüfungstipp:** Bei Gasgesetz-Aufgaben im MedAT lautet der häufigste Fehler, die Temperatur in °C statt in Kelvin einzusetzen. Merke: T muss **immer** in Kelvin stehen — 20 °C = 293 K, nicht 20!
+---
+
+## Spezialfälle des Gasgesetzes
+
+Hält man jeweils eine Zustandsgröße konstant, ergeben sich die klassischen Gasgesetze:
+
+| Gesetz | Konstant | Beziehung | Klinisches Beispiel |
+|--------|----------|-----------|---------------------|
+| **Boyle-Mariotte** | T (isotherm) | p₁·V₁ = p₂·V₂ | Lungenkompression beim Tauchen |
+| **Gay-Lussac** | p (isobar) | V₁/T₁ = V₂/T₂ | Atemluft erwärmt sich in der Lunge |
+| **Charles** | V (isochor) | p₁/T₁ = p₂/T₂ | Druck in starrem Gascontainer |
+
+Unter **Normbedingungen** (p₀ = 101 325 Pa, T₀ = 273,15 K) nimmt 1 mol ideales Gas exakt **22,4 Liter** ein — das **Molvolumen**, eine zentrale Bezugsgröße in Chemie und Physiologie.
+
+{{DIAGRAM:ideal-gas-laws}}
+
+> **Merke:** Boyle-Mariotte (p·V = const bei T = const) ist das am häufigsten geprüfte Gasgesetz im MedAT. Doppelter Druck = halbes Volumen — direkt anwendbar auf Tauchen, Spritzen und Beatmung.
+
+---
 
 ## Phasendiagramm
 
-Jeder Stoff kann abhängig von Druck und Temperatur in verschiedenen Aggregatzuständen vorliegen. Das **Phasendiagramm** stellt diese Zustände grafisch dar, wobei die Druck-Achse (y) gegen die Temperatur-Achse (x) aufgetragen wird. Die drei Hauptphasen — fest, flüssig und gasförmig — werden durch Phasengrenzkurven voneinander getrennt, entlang derer jeweils zwei Phasen im Gleichgewicht koexistieren.
+Jeder Stoff kann je nach Druck und Temperatur fest, flüssig oder gasförmig vorliegen. Das **Phasendiagramm** (Druck auf der y-Achse, Temperatur auf der x-Achse) zeigt alle drei Phasen, getrennt durch **Phasengrenzkurven**, entlang derer jeweils zwei Phasen im Gleichgewicht koexistieren.
 
-Die **Schmelzkurve** trennt den festen vom flüssigen Bereich und verläuft bei den meisten Stoffen nahezu senkrecht, weil der Schmelzpunkt nur schwach druckabhängig ist. Die **Dampfdruckkurve** trennt flüssig von gasförmig und endet am **kritischen Punkt** — oberhalb dieser Temperatur und dieses Drucks verschwindet die Grenze zwischen Flüssigkeit und Gas vollständig, und es entsteht ein überkritisches Fluid. Für Wasser liegt der kritische Punkt bei T_krit = 647 K und p_krit = 221 bar. Die **Sublimationskurve** schließlich beschreibt den direkten Übergang von fest zu gasförmig.
+{{DIAGRAM:phase-diagram-water}}
 
-Am **Tripelpunkt** treffen alle drei Kurven zusammen: Hier koexistieren feste, flüssige und gasförmige Phase gleichzeitig im Gleichgewicht. Für Wasser liegt dieser bemerkenswerte Punkt bei T_triple = 273,16 K und p_triple = 611,7 Pa — knapp über dem Gefrierpunkt bei extrem niedrigem Druck.
+Drei Kurven, drei besondere Punkte:
 
-Eine Besonderheit des Wassers verdient besondere Aufmerksamkeit: Seine Schmelzkurve hat eine **negative Steigung**. Das bedeutet, dass eine Druckerhöhung den Schmelzpunkt senkt — Eis kann durch Druck zum Schmelzen gebracht werden. **Ursache:** Eis ist weniger dicht als flüssiges Wasser (ρ_Eis ≈ 917 kg/m³ vs. ρ_Wasser ≈ 1000 kg/m³). Nach Le Chatelier verschiebt Druckerhöhung das Gleichgewicht zur dichteren Phase — also zu flüssigem Wasser. Deshalb sinkt der Schmelzpunkt unter Druck. Dieses ungewöhnliche Verhalten erklärt, warum Gletscher an ihrer Unterseite fließen können.
+| Kurve / Punkt | Beschreibung | Wasser-Werte |
+|---------------|-------------|--------------|
+| **Schmelzkurve** | Trennt fest ↔ flüssig; verläuft meist nahezu senkrecht | Negative Steigung bei Wasser! |
+| **Dampfdruckkurve** | Trennt flüssig ↔ gasförmig; endet am kritischen Punkt | Bis 647 K / 221 bar |
+| **Sublimationskurve** | Trennt fest ↔ gasförmig (direkter Übergang) | Unterhalb des Tripelpunkts |
+| **Tripelpunkt** | Alle drei Phasen koexistieren gleichzeitig | 273,16 K / 611,7 Pa |
+| **Kritischer Punkt** | Oberhalb verschwindet die Grenze flüssig/gasförmig | 647 K / 221 bar |
+
+**Anomalie des Wassers:** Die Schmelzkurve hat eine **negative Steigung** — Druckerhöhung senkt den Schmelzpunkt. Ursache: Eis (917 kg/m³) ist weniger dicht als flüssiges Wasser (1000 kg/m³). Nach Le Chatelier verschiebt Druck das Gleichgewicht zur dichteren Phase (flüssig). Deshalb können Gletscher an ihrer Unterseite unter dem eigenen Gewicht fließen.
+
+> **Merke:** Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht. Für Wasser: T = 273,16 K bei nur 611,7 Pa. Der kritische Punkt von Wasser liegt bei 647 K / 221 bar — darüber gibt es keinen Unterschied zwischen Flüssigkeit und Gas.
+
+---
 
 ## Latentwärmen (Phasenübergangswärme)
 
-Bei Phasenübergängen geschieht etwas auf den ersten Blick Überraschendes: Man führt einem Stoff Wärme zu, und dennoch steigt die Temperatur nicht. Die gesamte zugeführte Energie wird stattdessen genutzt, um die intermolekularen Bindungen zu verändern — beim Schmelzen wird die starre Gitterstruktur aufgelöst, beim Verdampfen werden die verbliebenen Anziehungskräfte zwischen den Molekülen vollständig überwunden.
+Bei Phasenübergängen bleibt die Temperatur konstant, obwohl Wärme zugeführt wird — die Energie geht vollständig in das Aufbrechen (oder Bilden) intermolekularer Bindungen. Diese „verborgene" Energie heißt **latente Wärme** (lat. *latere* = verborgen):
 
-Die dafür benötigte Energie heißt **latente Wärme** (von lateinisch *latere* — verborgen) und wird über die Formel **Q = m · L** berechnet, wobei L die spezifische Latentwärme in J/kg ist.
+**Q = m · L**
 
-Für Wasser gilt: **Schmelzwärme** L_f = 334 000 J/kg und **Verdampfungswärme** L_v = 2 260 000 J/kg. Die Verdampfungswärme ist also fast **siebenmal größer** als die Schmelzwärme — was unmittelbar einleuchtet, wenn man bedenkt, dass beim Verdampfen sämtliche Wasserstoffbrückenbindungen aufgebrochen werden müssen, während beim Schmelzen nur das Kristallgitter gelockert wird.
+| Phasenübergang | Temperatur | L [kJ/kg] | Was passiert? |
+|----------------|-----------|-----------|---------------|
+| Schmelzen (Eis → Wasser) | 0 °C | 334 | Kristallgitter wird gelockert |
+| Verdampfen (Wasser → Dampf) | 100 °C | 2 260 | Alle H-Brücken werden aufgebrochen |
+| Verdunsten bei Körpertemperatur | 37 °C | 2 430 | Schweiß kühlt die Haut |
 
-> 💡 **Prüfungstipp:** Bei Aufgaben mit Phasenübergängen immer zuerst die Latentwärme berechnen (Q = m · L), dann die Erwärmung (Q = m · c · ΔT). Die Gesamtenergie ist die Summe beider Beiträge. Häufiger MedAT-Fehler: den Schmelz- oder Verdampfungsschritt vergessen!
+Die Verdampfungswärme ist fast **siebenmal größer** als die Schmelzwärme — beim Verdampfen müssen sämtliche intermolekularen Kräfte überwunden werden, beim Schmelzen wird nur die Gitterordnung aufgelöst.
+
+> **Merke:** Latentwärme Q = m · L — Temperatur bleibt während des gesamten Phasenübergangs konstant (Plateau in der Heizkurve). Bei Kombinationsaufgaben: erst Q_Schmelz = m · L_f, dann Q_Erwärm = m · c · ΔT, dann addieren!
+
+---
 
 ## Dampfdruck und Siedepunkt
 
-Über jeder Flüssigkeit befindet sich ein Gleichgewicht zwischen verdampfenden und kondensierenden Molekülen. Der Druck, den der Dampf dabei ausübt, ist der **Dampfdruck** p_D(T), und er steigt exponentiell mit der Temperatur an. Die **Clausius-Clapeyron-Gleichung** beschreibt, wie sich der Siedepunkt mit dem Druck ändert — deshalb kocht Wasser in den Bergen bei niedrigerer Temperatur und im Autoklav erst bei 121 °C:
+Über jeder Flüssigkeit herrscht ein Gleichgewicht zwischen verdampfenden und kondensierenden Molekülen. Der dabei entstehende **Dampfdruck** p_D(T) steigt exponentiell mit der Temperatur. Die **Clausius-Clapeyron-Gleichung** beschreibt diesen Zusammenhang:
 
-> **dp/dT = ΔH_vap / (T · ΔV)**
+**ln(p₂/p₁) = −ΔH_vap/R · (1/T₂ − 1/T₁)**
 
-In der vereinfachten, integrierten Form (für ideale Gase und ΔV ≈ V_gas):
+(ΔH_vap = molare Verdampfungsenthalpie; Wasser: 40,7 kJ/mol)
 
-> **ln(p₂/p₁) = −ΔH_vap/R · (1/T₂ − 1/T₁)**
+Eine Flüssigkeit beginnt zu **sieden**, sobald ihr Dampfdruck den Umgebungsdruck erreicht (p_D = p_außen). Das erklärt drei prüfungsrelevante Situationen:
 
-Dabei ist ΔH_vap die molare Verdampfungsenthalpie (Wasser: 40,7 kJ/mol), R = 8,314 J/(mol·K) die Gaskonstante und T die absolute Temperatur in Kelvin. Die Gleichung erklärt quantitativ, warum der Dampfdruck exponentiell mit T steigt.
+| Situation | Druck | Siedepunkt | Konsequenz |
+|-----------|-------|------------|------------|
+| Hochgebirge (3000 m) | ~0,7 bar | ~90 °C | Eier brauchen länger zum Kochen |
+| Meereshöhe | 1,013 bar | 100 °C | Normaler Siedepunkt |
+| **Autoklav** | 2 bar | **121 °C** | Sporenabtötung in 15 min |
+| Autoklav (Prionen) | 3 bar | 134 °C | CJK-Sterilisation in 18 min |
 
-Sobald der Dampfdruck den Umgebungsdruck erreicht (p_D = p_außen), beginnt die Flüssigkeit zu **sieden**: Dampfblasen bilden sich im Inneren der Flüssigkeit und steigen auf.
+> **Merke:** Siedepunkt = Temperatur, bei der Dampfdruck = Außendruck. Höherer Außendruck = höherer Siedepunkt. Der Autoklav nutzt genau dieses Prinzip: 2 bar Dampfdruck → 121 °C → Sterilisation.
 
-Diese Druckabhängigkeit des Siedepunkts hat weitreichende praktische Konsequenzen. Im Hochgebirge, wo der Luftdruck geringer ist, siedet Wasser bereits unter 100 °C — auf 3000 m Höhe etwa bei 90 °C, weshalb Eier dort deutlich länger gekocht werden müssen. Im **Dampfkochtopf** wird umgekehrt der Druck erhöht, sodass der Siedepunkt steigt und Lebensmittel bei höherer Temperatur schneller garen. Das medizinisch wichtigste Beispiel ist der **Autoklav**: Bei 2 bar Überdruck erreicht Wasserdampf 121 °C — eine Temperatur, die ausreicht, um selbst hitzeresistente Bakteriensporen innerhalb von 15 Minuten abzutöten.
+---
 
-## Klinisch wichtige Gesetze
+## Henry-Gesetz und Gaslöslichkeit
 
-Das **Henry-Gesetz** beschreibt, wie viel Gas sich in einer Flüssigkeit löst: **c = k_H · p**. Die Konzentration c des gelösten Gases ist direkt proportional zu seinem Partialdruck p über der Flüssigkeit. Dieses einfache Gesetz hat enorme klinische Bedeutung.
+Das **Henry-Gesetz** beschreibt, wie viel Gas sich in einer Flüssigkeit löst:
 
-Bei einem Taucher in 30 m Tiefe herrscht ein Umgebungsdruck von etwa 4 bar. Der Stickstoff-Partialdruck steigt entsprechend, und nach dem Henry-Gesetz löst sich die vierfache Menge N₂ im Blut und Gewebe. Steigt der Taucher nun zu schnell auf, fällt der Partialdruck rasch ab, und der überschüssige Stickstoff perlt als Gasblasen aus — vergleichbar mit einer geöffneten Sprudelflasche. Diese Blasen verursachen die gefürchtete **Dekompressionskrankheit** (Caisson-Krankheit): Gelenkschmerzen, Embolien und im schlimmsten Fall neurologische Ausfälle.
+**c = k_H · p**
 
-Bei der **hyperbaren Sauerstofftherapie** wird das Henry-Gesetz therapeutisch genutzt: 100 % O₂ bei erhöhtem Druck löst deutlich mehr Sauerstoff physikalisch im Blutplasma, was bei chronischen Wunden, Kohlenmonoxidvergiftung und Gasgangrän lebensrettend sein kann.
+Die Konzentration c des gelösten Gases ist direkt proportional zu seinem **Partialdruck** p über der Flüssigkeit. Doppelter Druck = doppelte Löslichkeit — ein linearer Zusammenhang mit enormer klinischer Bedeutung.
 
-**Verdunstungskühlung** ist der effektivste Kühlmechanismus des menschlichen Körpers. Pro Gramm Schweiß, der bei 37 °C verdunstet, werden etwa 2430 J an Wärmeenergie abgeführt. Bei einer Schweißproduktion von 1 L/h entspricht das einer Kühlleistung von rund 675 W — mehr als das Zehnfache des Ruhemetabolismus.
+**Taucherkrankheit (Dekompressionskrankheit):** In 30 m Tiefe herrscht ~4 bar Gesamtdruck. Der N₂-Partialdruck (79 % der Atemluft) vervierfacht sich, und nach Henry löst sich die vierfache Menge N₂ im Blut. Bei zu schnellem Auftauchen fällt der Druck rasch — der überschüssige Stickstoff perlt als Gasblasen aus (wie eine geöffnete Sprudelflasche). Folgen: Gelenkschmerzen (Bends), Embolien, neurologische Ausfälle. Therapie: Rekompression in der Überdruckkammer, dann langsames Dekomprimieren.
 
-**Warum ist Verdunstung so effektiv?** Der Phasenübergang flüssig → gasförmig erfordert die gesamte Verdampfungswärme (L_v = 2430 kJ/kg bei 37 °C). Diese Energie wird der Hautoberfläche entzogen, ohne dass Temperaturarbeit geleistet wird — der Körper kühlt ab, während der Schweiß verdampft. Bei hoher Luftfeuchtigkeit (>80 %) ist die Verdunstung behindert: die Luft ist bereits wasserdampfgesättigt → Hitzestau-Gefahr.
+**Hyperbare O₂-Therapie:** 100 % O₂ bei 3 bar löst physikalisch ~6 mL O₂ pro 100 mL Plasma (normal: 0,3 mL) — genug zur Gewebeversorgung auch ohne Hämoglobin. Indikationen: CO-Vergiftung, chronische Wunden, Gasgangrän.
 
-> **Merke:** Schwitzen kühlt durch den Phasenübergang flüssig → gasförmig. Pro Liter verdunstetem Schweiß werden ~2430 kJ abgeführt. Hohe Luftfeuchtigkeit blockiert die Verdunstung und kann zum Hitzschlag führen.
+> **Merke:** Henry-Gesetz: c = k_H · p. Klinisch zentral für Tauchen (N₂-Löslichkeit), Blutgasanalyse (pO₂, pCO₂) und hyperbare Therapie. Bei Rechenaufgaben den N₂-Anteil der Luft (79 %) nicht vergessen!
 
-**Infusionswärmung:** Kalte Infusionslösungen (Raumtemperatur 20 °C) senken die Körpertemperatur. Pro Liter Infusionslösung (spezifische Wärmekapazität ≈ 4,0 kJ/(kg·K), ΔT = 17 K): Q = 1 · 4000 · 17 = 68 kJ Wärmeverlust. Bei massiver Transfusion (>10 L) kann dies zur gefährlichen Hypothermie führen → Bluterwärmer auf 37 °C vorgeschrieben.
+---
 
-> 💡 **Prüfungstipp:** Das Henry-Gesetz (c = k_H · p) wird im MedAT gerne im Kontext Tauchen oder Blutgasanalyse gefragt. Merke den linearen Zusammenhang: doppelter Druck = doppelte Löslichkeit. Bei Rechenaufgaben den N₂-Anteil der Luft (79 %) nicht vergessen!
+## Verdunstungskühlung
+
+**Schweiß** ist der effektivste Kühlmechanismus des Körpers. Der Phasenübergang flüssig → gasförmig entzieht der Haut die gesamte Verdampfungswärme (L_v = 2430 kJ/kg bei 37 °C), ohne dass die Dampftemperatur steigt.
+
+**Rechenbeispiel:** 1 L Schweiß/h → Kühlleistung = 1 kg × 2 430 000 J/kg / 3600 s ≈ **675 W** — mehr als das Zehnfache des Ruhemetabolismus (~70 W).
+
+Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdunstung blockiert → Hitzestau-Gefahr bis zum Hitzschlag.
+
+**Infusionswärmung:** Kalte Infusionslösungen (20 °C) entziehen dem Körper Wärme: Q = m · c · ΔT = 1 kg · 4000 J/(kg·K) · 17 K = 68 kJ pro Liter. Bei massiver Transfusion (>10 L) droht Hypothermie → Bluterwärmer auf 37 °C ist vorgeschrieben.
+
+> **Merke:** Schwitzen kühlt durch den Phasenübergang flüssig → gasförmig. Pro Liter verdunstetem Schweiß: ~2430 kJ Wärmeabfuhr. Hohe Luftfeuchtigkeit blockiert die Verdunstung → Hitzschlag-Gefahr.
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Boyle-Mariotte (isotherme Kompression):**
-Eine Spritze enthält V₁ = 50 mL Luft bei p₁ = 1 bar. Der Kolben wird bei konstanter Temperatur auf V₂ = 10 mL zusammengedrückt. Nach Boyle-Mariotte gilt p₁ · V₁ = p₂ · V₂, also p₂ = p₁ · V₁/V₂ = 1 · 50/10 = **5 bar**. Anwendung: Druckinfusor in der Notfallmedizin — durch Kompression der Infusionsbeutel-Luft wird die Infusionsrate erhöht.
+**Beispiel 1 — Boyle-Mariotte:** Spritze mit V₁ = 50 mL bei p₁ = 1 bar, isotherme Kompression auf V₂ = 10 mL. p₂ = p₁ · V₁/V₂ = 1 · 50/10 = **5 bar**.
 
-**Beispiel 2 — Eis schmelzen und erwärmen (Kombinationsaufgabe):**
-500 g Eis bei 0 °C sollen zu flüssigem Wasser bei 37 °C (Körpertemperatur) werden.
-Schritt 1 — Schmelzen: Q₁ = m · L_f = 0,5 · 334 000 = 167 000 J.
-Schritt 2 — Erwärmen: Q₂ = m · c · ΔT = 0,5 · 4180 · 37 = 77 330 J.
-Gesamt: Q = Q₁ + Q₂ = 244 330 J ≈ **244 kJ**. Der Schmelzvorgang allein verbraucht mehr als doppelt so viel Energie wie das anschließende Erwärmen um 37 K — ein eindrucksvolles Beispiel für die Größe der Latentwärme.
+**Beispiel 2 — Eis schmelzen + erwärmen:** 500 g Eis (0 °C) → Wasser (37 °C).
+- Schmelzen: Q₁ = 0,5 kg · 334 000 J/kg = 167 000 J
+- Erwärmen: Q₂ = 0,5 kg · 4180 J/(kg·K) · 37 K = 77 330 J
+- Gesamt: Q = 167 000 + 77 330 = **244 kJ** (Schmelzen allein > doppelt so viel wie Erwärmen!)
 
-**Beispiel 3 — Henry-Gesetz und Tauchen:**
-An der Oberfläche (1 bar) beträgt die N₂-Konzentration im Blut: c₁ = k_H · 0,79 bar. In 30 m Tiefe (Gesamtdruck 4 bar) steigt sie auf c₂ = k_H · 0,79 · 4 — die **vierfache** N₂-Konzentration. Beim Auftauchen muss dieser Überschuss langsam abgeatmet werden: Aufstiegsgeschwindigkeit ≤ 9 m/min mit Sicherheitsstopp auf 5 m für 3 Minuten.
+**Beispiel 3 — Henry-Gesetz:** Oberfläche (1 bar): c₁ = k_H · 0,79 bar. In 30 m Tiefe (4 bar): c₂ = k_H · 0,79 · 4 = **4 × c₁**. Aufstieg: ≤ 9 m/min + Sicherheitsstopp auf 5 m (3 min).
 
-**Beispiel 4 — Gay-Lussac (isobare Expansion in der Lunge):**
-Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In der Lunge wird die Luft auf T₂ = 37 °C = 310 K erwärmt, der Druck bleibt konstant (Atmosphärendruck). Nach Gay-Lussac: V₂ = V₁ · T₂/T₁ = 500 · 310/293 = **529 mL**. Die eingeatmete Luft dehnt sich also um etwa 6 % aus — ein Effekt, der bei der Spirometrie berücksichtigt werden muss (BTPS-Korrektur).
+**Beispiel 4 — Gay-Lussac in der Lunge:** V₁ = 500 mL, T₁ = 293 K (20 °C), T₂ = 310 K (37 °C). V₂ = 500 · 310/293 = **529 mL** (~6 % Expansion → BTPS-Korrektur bei Spirometrie).
+
+---
 
 ## Klinische Vertiefung
 
-**Dampfsterilisation (Autoklav):** Der Standard-Sterilisationszyklus für chirurgische Instrumente läuft bei 121 °C, 2 bar für 15 Minuten. Für prionenkontaminiertes Material (z. B. bei Verdacht auf Creutzfeldt-Jakob-Krankheit) werden verschärfte Bedingungen angewandt: 134 °C, 3 bar, 18 Minuten. Das Grundprinzip: Erhöhter Dampfdruck verschiebt den Siedepunkt nach oben, und feuchte Hitze denaturiert Proteine und DNA wesentlich effizienter als trockene Hitze (trockene Sterilisation erfordert 180 °C für 30 Minuten).
+**Sublimation in der Medizin (Gefriertrocknung/Lyophilisation):** Impfstoffe und Blutplasma werden eingefroren, dann wird der Druck unter den Tripelpunkt gesenkt. Das Eis sublimiert direkt zu Dampf — die Proteinstruktur bleibt erhalten, das Produkt ist bei Raumtemperatur lagerbar und wird durch Zugabe von sterilem Wasser rekonstituiert.
 
-**Pulsoxymetrie und Gaspartialdrücke:** Die Sauerstoffsättigung des Hämoglobins hängt vom pO₂ ab (Sauerstoff-Bindungskurve). Nach dem Henry-Gesetz bestimmt der pO₂ zusätzlich die physikalisch gelöste O₂-Menge im Plasma — etwa 0,3 mL O₂ pro 100 mL Blut bei pO₂ = 100 mmHg. Bei hyperbarer Therapie (3 bar reiner O₂) steigt der physikalisch gelöste Anteil auf rund 6 mL/100 mL — genug, um Gewebe auch ohne Hämoglobin zu versorgen.
+**Pulsoxymetrie:** Die O₂-Sättigung des Hämoglobins hängt vom pO₂ ab. Zusätzlich bestimmt das Henry-Gesetz die physikalisch gelöste O₂-Menge: ~0,3 mL O₂/100 mL Blut bei pO₂ = 100 mmHg. Bei hyperbarer Therapie (3 bar) steigt dieser Anteil auf ~6 mL/100 mL.
 
-**Sublimation in der Medizin (Gefriertrocknung/Lyophilisation):** Impfstoffe und Blutplasma werden durch Gefriertrocknung haltbar gemacht. Dabei wird das Produkt zunächst eingefroren, dann der Druck unter den Tripelpunkt gesenkt: Das Eis sublimiert direkt zu Dampf, ohne den flüssigen Zustand zu durchlaufen. Das getrocknete Produkt behält seine dreidimensionale Struktur (Proteine bleiben funktionsfähig) und ist bei Raumtemperatur lagerbar. Beim Rekonstituieren wird steriles Wasser zugefügt — die ursprüngliche Lösung entsteht nahezu unverändert wieder.
+---
 
-> **Merke:** Phasenübergänge (Schmelzen, Verdampfen, Sublimieren) benötigen Energie (latente Wärme), ohne dass sich die Temperatur ändert. Am Tripelpunkt koexistieren alle drei Phasen im Gleichgewicht.
+## Prüfungsrelevante Zahlen und Fakten
 
-> **Merke:** Der Dampfdruck steigt exponentiell mit der Temperatur (Clausius-Clapeyron). Eine Flüssigkeit siedet, wenn ihr Dampfdruck den Umgebungsdruck erreicht — deshalb kocht Wasser auf dem Berg früher (niedrigerer Luftdruck).`,
+| Größe | Wert |
+|-------|------|
+| Gaskonstante R | 8,314 J/(mol·K) |
+| Molvolumen (Normbedingungen) | 22,4 L/mol |
+| Schmelzwärme Wasser (L_f) | 334 kJ/kg |
+| Verdampfungswärme Wasser 100 °C (L_v) | 2 260 kJ/kg |
+| Verdampfungswärme Schweiß 37 °C | 2 430 kJ/kg |
+| Tripelpunkt Wasser | 273,16 K / 611,7 Pa |
+| Kritischer Punkt Wasser | 647 K / 221 bar |
+| Autoklav Standard | 121 °C / 2 bar / 15 min |
+| Autoklav Prionen | 134 °C / 3 bar / 18 min |
+| N₂-Anteil Atemluft | 79 % |
+| Henry: Gelöster O₂ bei pO₂ = 100 mmHg | 0,3 mL/100 mL Blut |`,
 
       lernziele: [
         "Die allgemeine Zustandsgleichung des idealen Gases pV = nRT anwenden und Sonderfälle ableiten",
@@ -1219,15 +1291,13 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
       ],
 
       merksätze: [
-        "pV = nRT — die universelle Zustandsgleichung des idealen Gases; R = 8,314 J/(mol·K).",
-        "Normvolumen: 1 mol ideales Gas = 22,4 L bei 0 °C und 1 atm.",
-        "Siedepunkt hängt vom Außendruck ab: höherer Druck → höherer Siedepunkt.",
-        "Autoklav: 121 °C bei 2 bar → Sterilisation (Sporenabtötung).",
-        "Im Hochgebirge siedet Wasser unter 100 °C (p_Außen < 1 atm).",
-        "Verdampfungswärme Wasser (100 °C): 2260 kJ/kg >> Schmelzwärme: 334 kJ/kg.",
-        "Henry-Gesetz: c = k_H · p — Gaslöslichkeit proportional zum Partialdruck.",
-        "Taucherkrankheit: schnelles Auftauchen → N₂-Blasenbildung im Blut → Embolie.",
-        "Schweiß-Verdunstung: ≈ 2430 J/g — effektivster Kühlmechanismus des Körpers.",
+        "pV = nRT — T immer in Kelvin! R = 8,314 J/(mol·K). Molvolumen: 22,4 L bei 0 °C / 1 atm.",
+        "Boyle-Mariotte (T = const): p·V = const. Doppelter Druck = halbes Volumen.",
+        "Latentwärme Q = m · L: Temperatur bleibt beim Phasenübergang konstant. L_v ≈ 7 × L_f bei Wasser.",
+        "Siedepunkt = Temperatur bei Dampfdruck = Außendruck. Autoklav: 2 bar → 121 °C → Sporenabtötung.",
+        "Henry-Gesetz: c = k_H · p. Doppelter Druck = doppelte Gaslöslichkeit. Basis für Taucher- und O₂-Therapie.",
+        "Tripelpunkt Wasser: 273,16 K / 611,7 Pa — alle drei Phasen koexistieren im Gleichgewicht.",
+        "Verdunstungskühlung: ~2430 kJ/kg bei 37 °C — effektivster Kühlmechanismus. Hohe Luftfeuchtigkeit blockiert Verdunstung.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -1248,44 +1318,60 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
           options: ["2,67 bar", "3 bar", "4 bar", "1,5 bar", "2 bar"],
           correctIndex: 0,
           explanation:
-            "Bei isochorer (V = const) Zustandsänderung gilt: p₁/T₁ = p₂/T₂ (aus pV = nRT mit V, n = const). T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. Also p₂ = p₁ × T₂/T₁ = 2 bar × 400/300 = 2 × 4/3 ≈ 2,67 bar. Wichtig: Temperaturen müssen in Kelvin eingesetzt werden!",
+            "Isochor (V = const): p₁/T₁ = p₂/T₂. T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. p₂ = 2 · 400/300 = 2,67 bar. Häufigster Fehler: Temperaturen in °C statt Kelvin einsetzen!",
           hints: [
-            "Isochor: V = const. Aus pV = nRT folgt p/T = const, also p₁/T₁ = p₂/T₂.",
-            "Temperaturen in Kelvin umrechnen: T₁ = 300 K, T₂ = 400 K. Dann p₂ berechnen.",
+            "Isochor: V = const → p/T = const → p₁/T₁ = p₂/T₂.",
+            "Erst in Kelvin umrechnen: 27 °C = 300 K, 127 °C = 400 K.",
           ],
           tags: ["ideales-gas", "isochor", "zustandsänderung"],
           difficulty: 2,
         },
         {
           question:
-            "Wie viel Energie ist nötig, um 200 g Eis (0 °C) vollständig zu Wasser (0 °C) zu schmelzen? (L_Schmelz = 334 kJ/kg)",
+            "Wie viel Energie ist nötig, um 200 g Eis (0 °C) vollständig zu Wasser (0 °C) zu schmelzen? (L_f = 334 kJ/kg)",
           options: ["334 J", "334 000 J", "66 800 J", "1670 J", "33 400 J"],
           correctIndex: 2,
           explanation:
-            "Die Schmelzwärme berechnet sich mit Q = m · L_f = 0,2 kg × 334 000 J/kg = 66 800 J = 66,8 kJ. Während des Schmelzens bleibt die Temperatur bei 0 °C konstant — die gesamte Energie geht in das Aufbrechen der Wasserstoffbrücken im Eiskristall. Erst danach, wenn alles Eis geschmolzen ist, kann die Temperatur des Wassers steigen.",
-          hints: [
-            "Latentwärme beim Schmelzen: Q = m · L_f. m = 200 g = 0,2 kg einsetzen.",
-            "L_f = 334 kJ/kg = 334 000 J/kg. Berechnen: 0,2 × 334 000.",
-          ],
+            "Q = m · L_f = 0,2 kg · 334 000 J/kg = 66 800 J. Während des Schmelzens bleibt T = 0 °C konstant — die gesamte Energie bricht die Wasserstoffbrücken im Eiskristall auf. Erst wenn alles Eis geschmolzen ist, steigt die Temperatur.",
+          hints: ["Latentwärme: Q = m · L_f. Masse in kg: 200 g = 0,2 kg.", "0,2 · 334 000 = ?"],
           tags: ["schmelzwärme", "phasenübergang", "eis"],
           difficulty: 1,
         },
         {
-          question:
-            "Ein Taucher atmet in 30 m Tiefe Druckluft. Der N₂-Partialdruck in seinem Blut steigt auf das Vierfache des Normalwerts. Warum darf er nicht sofort auftauchen?",
+          question: "Welche Aussage zum Phasendiagramm von Wasser ist FALSCH?",
           options: [
-            "Weil der Auftrieb zu groß wäre",
-            "Weil das Trommelfell platzen würde",
-            "Weil er sonst zu schnell Sauerstoff verliert",
-            "Weil der rasche Druckabfall nach Henry-Gesetz zur Blasenbildung von N₂ im Blut führt",
-            "Weil bei 30 m Tiefe kein Blutfluss möglich ist",
+            "Am Tripelpunkt koexistieren feste, flüssige und gasförmige Phase",
+            "Oberhalb des kritischen Punktes existiert kein Unterschied zwischen Flüssigkeit und Gas",
+            "Die Schmelzkurve von Wasser hat eine positive Steigung wie bei den meisten Stoffen",
+            "Die Dampfdruckkurve endet am kritischen Punkt",
+            "Der Tripelpunkt von Wasser liegt bei etwa 273,16 K und 611,7 Pa",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
-            "Nach dem Henry-Gesetz (c = k_H · p) hat sich in 30 m Tiefe (Druck ≈ 4 bar) etwa viermal mehr N₂ im Blut und Gewebe gelöst als an der Oberfläche. Bei schnellem Auftauchen fällt der Druck rasch ab; das gelöste N₂ kann nicht schnell genug durch die Lunge abgeatmet werden und bildet Gasblasen (analog: geöffnete Sprudelflasche). Diese Blasen können Embolien, Gelenkschmerzen (Bends) und neurologische Ausfälle verursachen. Therapie: sofortige Rekompression in der Überdruckkammer, anschließend langsames Dekomprimieren mit Stopps nach Tauchtabellen.",
+            "Die Schmelzkurve von Wasser hat eine NEGATIVE Steigung — eine Anomalie. Eis ist weniger dicht als Wasser (917 vs. 1000 kg/m³), daher senkt Druckerhöhung den Schmelzpunkt (Le Chatelier: Gleichgewicht verschiebt sich zur dichteren Phase). Bei den meisten anderen Stoffen ist die Schmelzkurve tatsächlich positiv.",
           hints: [
-            "Henry-Gesetz: mehr Druck → mehr Gas löst sich. Bei Druckabfall: Was passiert mit dem gelösten Gas?",
-            "Analogie: Öffnet man eine Sprudelflasche langsam oder schnell — was passiert mit dem gelösten CO₂?",
+            "Was ist die berühmte Anomalie des Wassers im Phasendiagramm?",
+            "Eis schwimmt auf Wasser — was sagt das über die Dichte und die Schmelzkurve?",
+          ],
+          tags: ["phasendiagramm", "wasser-anomalie", "schmelzkurve"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Ein Taucher atmet in 30 m Tiefe Druckluft (Gesamtdruck 4 bar). Um welchen Faktor steigt die im Blut gelöste N₂-Menge gegenüber der Oberfläche?",
+          options: [
+            "Um den Faktor 2",
+            "Um den Faktor 3",
+            "Um den Faktor 4",
+            "Um den Faktor 0,79",
+            "Gar nicht — N₂ ist ein Inertgas",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Nach dem Henry-Gesetz (c = k_H · p) ist die gelöste Gasmenge proportional zum Partialdruck. Der N₂-Partialdruck an der Oberfläche: 0,79 · 1 bar = 0,79 bar. In 30 m Tiefe: 0,79 · 4 bar = 3,16 bar. Das Verhältnis: 3,16/0,79 = 4. Die gelöste N₂-Menge vervierfacht sich. Bei schnellem Auftauchen perlt dieser Überschuss als Gasblasen aus — Dekompressionskrankheit.",
+          hints: [
+            "Henry-Gesetz: c = k_H · p. Wie ändert sich p_N₂ von Oberfläche zu 30 m Tiefe?",
+            "Gesamtdruck in 30 m = 4 bar. N₂-Anteil bleibt 79 %. Verhältnis zu Oberfläche?",
           ],
           tags: ["henry-gesetz", "tauchen", "dekompression"],
           difficulty: 2,
@@ -1302,27 +1388,27 @@ Einatmungsvolumen V₁ = 500 mL bei T₁ = 20 °C = 293 K (kalte Außenluft). In
           ],
           correctIndex: 4,
           explanation:
-            "Wasser siedet, wenn sein Dampfdruck den Außendruck erreicht. Bei erhöhtem Außendruck (2 bar im Autoklav) muss Wasser stärker erhitzt werden, bis der Dampfdruck wieder 2 bar erreicht — das ist bei ≈ 121 °C der Fall. Diese Temperatur ist für die Sterilisation notwendig, weil bakterielle Endosporen (z. B. von Clostridium botulinum) bei 100 °C unter Umständen überleben. Bei 121 °C / 2 bar / 15–20 min werden alle Mikroorganismen einschließlich resistenter Sporen sicher abgetötet. Das Prinzip basiert direkt auf der Druckabhängigkeit des Siedepunkts.",
+            "Siedepunkt = Temperatur bei Dampfdruck = Außendruck. Bei 2 bar im Autoklav muss Wasser auf 121 °C erhitzt werden, bis sein Dampfdruck 2 bar erreicht. Diese Temperatur tötet auch hitzeresistente Endosporen (z. B. Clostridium botulinum) sicher ab, die bei 100 °C überleben können.",
           hints: [
-            "Siedepunkt des Wassers hängt vom Außendruck ab: höherer Druck → höherer Siedepunkt.",
-            "Warum reicht 100 °C nicht zur Sterilisation? Bakteriensporen überleben kochendes Wasser.",
+            "Siedepunkt hängt vom Außendruck ab: höherer Druck → höherer Siedepunkt.",
+            "Warum reicht 100 °C nicht? Bakteriensporen können kochendes Wasser überleben.",
           ],
           tags: ["siedepunkt", "autoklav", "dampfdruck"],
-          difficulty: 2,
+          difficulty: 1,
         },
         {
           question:
-            "1 kg Wasser bei 100 °C soll vollständig verdampft werden. Wie viel Energie wird dafür benötigt? (L_v = 2260 kJ/kg)",
-          options: ["2260 J", "2 260 000 J", "226 000 J", "22 600 J", "334 000 J"],
+            "300 g Eis bei 0 °C sollen zu Wasser bei 50 °C erwärmt werden. Wie viel Gesamtenergie wird benötigt? (L_f = 334 kJ/kg, c_Wasser = 4,18 kJ/(kg·K))",
+          options: ["100,2 kJ", "162,9 kJ", "37,6 kJ", "334 kJ", "163 000 kJ"],
           correctIndex: 1,
           explanation:
-            "Verdampfungswärme: Q = m · L_v = 1 kg × 2 260 000 J/kg = 2 260 000 J = 2260 kJ. Dies ist die Energie, die bei konstanter Temperatur (100 °C) zugeführt werden muss, um alle intermolekularen Bindungen des flüssigen Wassers zu überwinden und den Phasenübergang flüssig → gasförmig zu vollziehen. Zum Vergleich: Das gleiche Kilogramm Wasser von 0 °C auf 100 °C zu erwärmen braucht nur Q = 1 × 4180 × 100 = 418 000 J = 418 kJ — gut fünfmal weniger.",
+            "Zwei Schritte: (1) Schmelzen: Q₁ = m · L_f = 0,3 · 334 = 100,2 kJ. (2) Erwärmen: Q₂ = m · c · ΔT = 0,3 · 4,18 · 50 = 62,7 kJ. Gesamt: Q = 100,2 + 62,7 = 162,9 kJ. Der Schmelzvorgang verbraucht deutlich mehr Energie als das Erwärmen um 50 K — typisch für Phasenübergangs-Aufgaben.",
           hints: [
-            "Verdampfungswärme: Q = m · L_v. Einheit von L_v beachten: J/kg oder kJ/kg.",
-            "m = 1 kg, L_v = 2 260 000 J/kg (oder 2260 kJ/kg).",
+            "Erst schmelzen (Q = m · L_f), dann erwärmen (Q = m · c · ΔT). Beide Energien addieren.",
+            "m = 0,3 kg. Schmelzen: 0,3 · 334 kJ. Erwärmen: 0,3 · 4,18 · 50 kJ.",
           ],
-          tags: ["verdampfungswärme", "phasenübergang", "wasser"],
-          difficulty: 1,
+          tags: ["latentwärme", "kombinationsaufgabe", "phasenübergang"],
+          difficulty: 3,
         },
       ],
     },

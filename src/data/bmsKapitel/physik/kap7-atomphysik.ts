@@ -1396,152 +1396,228 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Akutes Strahlensyndrom",
         "Radon Österreich",
       ],
-      content: `## Strahlenschutz — Vertiefung und klinische Anwendung
+      content: `## Strahlenschutz — Wenn Physik Leben rettet
 
-Die Grundprinzipien des Strahlenschutzes (ALARA: Abstand, Abschirmung, Zeit; → UK 03) werden hier um die **klinische Umsetzung** und **gesetzliche Rahmenbedingungen** erweitert.
+Jeder Radiologe trägt ein Dosimeter, jede CT-Anforderung braucht eine Rechtfertigung, und in manchen Teilen Oberösterreichs sickert unsichtbar Radongas aus dem Boden in Wohnhäuser. Strahlenschutz ist kein abstraktes Thema — er bestimmt den klinischen Alltag und war bereits in mehreren MedAT-Prüfungen vertreten.
 
-> **Merke:** ALARA = Abstand ↑ (I ∝ 1/r²), Abschirmung ↑ (PAB: Papier–Alu–Blei für α–β–γ), Zeit ↓ (D = Ḋ·t). Details zu Abstandsgesetz und Abschirmmaterialien → UK 03.
+{{DIAGRAM:strahlenschutz-alara}}
+
+Die drei Säulen des Strahlenschutzes folgen dem **ALARA-Prinzip** (As Low As Reasonably Achievable):
+
+| Maßnahme | Physikalisches Prinzip | Formel | Praxisbeispiel |
+|----------|----------------------|--------|----------------|
+| **Abstand** ↑ | Dosisleistung sinkt mit r² | Ḋ ∝ 1/r² | 2× Abstand → ¼ der Dosis |
+| **Abschirmung** ↑ | Material absorbiert Strahlung | I = I₀ · (½)^(d/HVL) | Bleischürze, Betonwand |
+| **Zeit** ↓ | Dosis proportional zur Expositionszeit | D = Ḋ · t | Kurzprogramm statt Standardprotokoll |
+
+**Abschirmregel PAB** — welches Material für welche Strahlung?
+
+| Strahlenart | Abschirmung | Warum? |
+|-------------|------------|--------|
+| α (Heliumkerne) | Papier, Haut | Hohe Masse → geringe Reichweite (~5 cm Luft) |
+| β (Elektronen) | Aluminium, Plexiglas | Kein Blei! → Bremsstrahlung |
+| γ / Röntgen (Photonen) | Blei, Beton | Hohe Elektronendichte → Photoeffekt, Compton |
+| Neutronen | Wasser, Paraffin | Leichte Kerne (H) → elastischer Stoß, max. Energieübertrag |
+
+> **Merke:** ALARA = **A**bstand ↑ (I ∝ 1/r²), **A**bschirmung ↑ (PAB: Papier–Alu–Blei für α–β–γ), **Z**eit ↓ (D = Ḋ·t). MedAT-Falle: Blei ist für Neutronen unwirksam — Wasser/Paraffin ist richtig!
 
 ---
 
 ## Gesetzliche Dosisgrenzwerte (Österreich / EU)
 
-Die österreichische **Strahlenschutzverordnung** (StrSchV) legt Grenzwerte für die effektive Dosis fest:
+Die österreichische **Strahlenschutzverordnung** (StrSchV) setzt verbindliche Obergrenzen. Stell dir das als ein Stufenmodell vor: Je näher eine Person an Strahlenquellen arbeitet, desto höher der erlaubte Grenzwert — aber auch desto strenger die Überwachung.
 
-| Personengruppe | Grenzwert effektive Dosis | Details |
-|---------------|--------------------------|---------|
-| Beruflich strahlenexponiert (Kat. A) | ≤ 20 mSv/Jahr | Ärzte, Radiologen, Nuklearmediziner |
-| Beruflich strahlenexponiert (Kat. B) | ≤ 6 mSv/Jahr | Sonstiges Krankenhauspersonal |
+| Personengruppe | Grenzwert effektive Dosis | Überwachung |
+|---------------|--------------------------|-------------|
+| Beruflich Kat. A (Radiologen, Nuklearmediziner) | **≤ 20 mSv/Jahr** | Personendosimeter Pflicht |
+| Beruflich Kat. B (OP-Personal, Ambulanz) | ≤ 6 mSv/Jahr | Bereichsüberwachung |
 | Allgemeinbevölkerung | ≤ 1 mSv/Jahr | Zusätzlich zur natürlichen Strahlung |
-| Schwangere (ab Meldung) | ≤ 1 mSv für restliche Schwangerschaft | Strenger Schutz des Embryos |
+| Schwangere (ab Meldung) | ≤ 1 mSv restliche Schwangerschaft | Strenger Embryonalschutz |
 | Augenlinse (beruflich) | ≤ 20 mSv/Jahr | Schutz vor Strahlenkatarakt |
 
-**Natürliche Strahlenbelastung in Österreich:** ca. 2,1 mSv/Jahr (kosmische Strahlung ~0,3; terrestrische ~0,5; Radon-Inhalation ~1,0; interne Strahlung ~0,3). Medizinische Diagnostik addiert durchschnittlich weitere ~1,5 mSv/Jahr.
+**Natürliche Strahlenbelastung in Österreich:** ca. **2,1 mSv/Jahr** — zusammengesetzt aus kosmischer Strahlung (~0,3 mSv), terrestrischer Strahlung (~0,5 mSv), Radon-Inhalation (~1,0 mSv) und interner Strahlung durch ⁴⁰K im Körper (~0,3 mSv). Medizinische Diagnostik addiert im Schnitt weitere ~1,5 mSv/Jahr.
 
-**Dosisvergleiche für MedAT:**
+> **Merke:** Grenzwerte: Beruf Kat. A ≤ **20 mSv/a** | Bevölkerung ≤ **1 mSv/a** | Natürlich ~**2,1 mSv/a**. Die Zahl 20 taucht dreimal auf: 20 mSv Kat. A, 20 mSv Augenlinse, w_R = 20 für α-Strahlung.
 
-| Exposition | Effektive Dosis | Vergleich |
-|-----------|----------------|-----------|
-| Röntgen Thorax (2 Ebenen) | 0,02–0,1 mSv | 1–5 Tage natürliche Strahlung |
+---
+
+## Dosisvergleiche — ein Röntgenbild vs. ein CT
+
+Für die MedAT-Prüfung musst du Größenordnungen kennen. Die folgende Tabelle ordnet typische medizinische Expositionen ein:
+
+| Exposition | Effektive Dosis | Entspricht … natürlicher Strahlung |
+|-----------|----------------|--------------------------------------|
+| Röntgen Thorax (2 Ebenen) | 0,02–0,1 mSv | 1–5 Tage |
 | Mammographie | 0,4 mSv | 2 Monate |
-| CT Schädel | 2 mSv | 1 Jahr |
-| CT Thorax | 7 mSv | 3 Jahre |
-| CT Abdomen | 10 mSv | 4–5 Jahre |
+| CT Schädel | 2 mSv | ~1 Jahr |
+| CT Thorax | 7 mSv | ~3 Jahre |
+| **CT Abdomen** | **10 mSv** | **~5 Jahre** |
 | PET/CT (¹⁸F-FDG) | 10–25 mSv | 5–12 Jahre |
 | Koronarangiographie | 5–15 mSv | 2–7 Jahre |
-| Transatlantikflug | 0,05 mSv | 2–3 Tage |
+| Transatlantikflug (hin+zurück) | 0,05 mSv | 2–3 Tage |
 
-> **Merke:** Beruflich: ≤ 20 mSv/a; Bevölkerung: ≤ 1 mSv/a. Natürliche Strahlung in Österreich: ~2,1 mSv/a (davon ~1 mSv Radon). CT Abdomen: ~10 mSv = 5 Jahre natürliche Strahlung!
+**Faustregel:** Ein CT Abdomen entspricht etwa **500 Thorax-Röntgenaufnahmen** oder 5 Jahren natürlicher Strahlung. Deshalb verlangt jede CT-Anforderung eine rechtfertigende Indikation.
+
+> **Merke:** CT Abdomen ~10 mSv ≈ 5 Jahre natürliche Strahlung ≈ 500× Thorax-Röntgen. Niedrigste Dosis: konventionelles Röntgen; höchste: PET/CT und Intervention.
 
 ---
 
 ## Strahlentherapie — Ionisierende Strahlung gegen Krebs
 
-Die Strahlentherapie nutzt die DNA-schädigende Wirkung ionisierender Strahlung gezielt zur Tumorzerstörung. Ziel: maximale Dosis im Tumor, minimale Dosis im gesunden Gewebe.
+Die DNA ist das Hauptziel: Ionisierende Strahlung erzeugt Einzel- und Doppelstrangbrüche. Tumorzellen reparieren diese Schäden schlechter als gesundes Gewebe, weil ihre DNA-Reparaturmechanismen oft defekt sind. Diesen Unterschied nutzt die Strahlentherapie systematisch aus.
 
-### Teletherapie (externe Bestrahlung)
+{{DIAGRAM:strahlentherapie-vergleich}}
 
-Die Strahlenquelle befindet sich **außerhalb** des Körpers:
+### Teletherapie (Quelle außerhalb des Körpers)
 
-- **Linearbeschleuniger (LINAC):** Erzeugt hochenergetische Photonen (4–25 MV) oder Elektronen durch Beschleunigung in einem Hohlraumresonator. Modernster Standard. Vorteile: variable Energie, kein radioaktives Material, IMRT/VMAT möglich.
-- **⁶⁰Co-Gerät (Telekobalt):** Historisch wichtig; γ-Strahlung mit 1,17 + 1,33 MeV. Nachteil: Quelle muss regelmäßig ausgetauscht werden (T½ = 5,27 a), niedrigere Dosisrate als LINAC. In Entwicklungsländern noch verbreitet.
-- **Protonentherapie:** Protonen geben ihre Energie erst am Ende ihrer Reichweite schlagartig ab — wie ein Auto, das auf den letzten Metern bremst. Dieses Phänomen heißt **Bragg-Peak** und erlaubt es, die maximale Dosis exakt im Tumor zu platzieren, während das Gewebe davor wenig und dahinter fast keine Dosis erhält. Ideal für Tumoren nahe empfindlicher Strukturen (Auge, ZNS, Kinder).
+| Methode | Strahlung | Energie | Besonderheit |
+|---------|-----------|---------|--------------|
+| **LINAC** (Linearbeschleuniger) | Photonen oder Elektronen | 4–25 MV | Gold-Standard; variable Energie, IMRT/VMAT möglich |
+| **⁶⁰Co-Gerät** | γ (1,17 + 1,33 MeV) | fest | Historisch; T½ = 5,27 a, Quellentausch nötig |
+| **Protonentherapie** | Protonen (p⁺) | 70–250 MeV | **Bragg-Peak**: Dosismaximum am Reichweitenende |
 
-**Moderne Bestrahlungstechniken** (IMRT, VMAT, stereotaktische Verfahren) haben ein gemeinsames Prinzip: Durch computergesteuerte Modulation der Strahlintensität aus verschiedenen Winkeln wird die Dosis dreidimensional an die Tumorform angepasst, während Risikoorgane geschont werden.
+Der **Bragg-Peak** ist der entscheidende Vorteil geladener Teilchen: Protonen geben ihre Energie erst am Ende ihrer Reichweite schlagartig ab — wie ein Läufer, der auf den letzten Metern sprintet. Vor dem Tumor liegt die Dosis niedrig, im Tumor ist sie maximal, und dahinter fällt sie auf nahezu null. Photonen dagegen zeigen ein exponentielles Dosisprofil mit Maximum nahe der Oberfläche und stetigem Abfall — Gewebe hinter dem Tumor wird also immer mitbelastet.
 
-### Brachytherapie (Kontaktbestrahlung)
+**IMRT** (Intensity-Modulated Radiation Therapy) und **VMAT** (Volumetric Modulated Arc Therapy) modulieren die Strahlintensität computergesteuert aus vielen Winkeln. Ergebnis: Die Dosis wird dreidimensional an die Tumorform angepasst, Risikoorgane (Rückenmark, Parotis, Lunge) werden geschont.
 
-Die Strahlenquelle wird **im oder direkt am Tumor** platziert:
+### Brachytherapie (Quelle im oder am Tumor)
 
-- **Intrakavitäre Brachytherapie:** Strahlenquellen in Körperhöhlen (z. B. Uterus bei Zervixkarzinom)
-- **Interstitielle Brachytherapie:** Strahlenquellen direkt ins Tumorgewebe (z. B. Prostatakarzinom, Seeds mit ¹²⁵I oder ¹⁰³Pd)
-- Vorteil: Sehr hohe lokale Dosis, schneller Dosisabfall mit Abstand (1/r²) → wenig Belastung für umliegendes Gewebe
+| Technik | Beschreibung | Typische Indikation |
+|---------|-------------|---------------------|
+| Intrakavitär | Quelle in Körperhöhle | Zervix-Ca (Uterus) |
+| Interstitiell | Seeds direkt im Tumorgewebe | Prostata-Ca (¹²⁵I, ¹⁰³Pd) |
 
-**Verwendete Nuklide:** ¹⁹²Ir (T½ = 73,8 d, γ), ¹²⁵I (T½ = 59,4 d, γ), ¹⁰³Pd (T½ = 17 d, γ), ⁶⁰Co (T½ = 5,27 a, γ).
+Vorteil der Brachytherapie: Durch das Abstandsquadratgesetz (I ∝ 1/r²) fällt die Dosis um die Quelle herum extrem schnell ab. Wenige Zentimeter entfernt ist die Belastung bereits minimal — das umliegende gesunde Gewebe wird geschont.
 
-> **Merke:** Teletherapie = Quelle außerhalb (LINAC, Kobalt); Brachytherapie = Quelle im/am Tumor (hohe lokale Dosis, schneller Abfall). Protonentherapie: Bragg-Peak → Dosismaximum im Tumor, wenig dahinter.
+**Nuklide in der Brachytherapie:** ¹⁹²Ir (T½ = 73,8 d), ¹²⁵I (T½ = 59,4 d), ¹⁰³Pd (T½ = 17 d), ⁶⁰Co (T½ = 5,27 a) — alle γ-Strahler.
 
----
-
-## Nuklearmedizin — Diagnostik und Therapie im Überblick
-
-### Diagnostische Nuklearmedizin
-
-| Verfahren | Nuklid | Prinzip | Hauptanwendungen |
-|-----------|--------|---------|------------------|
-| Szintigraphie | ⁹⁹ᵐTc (γ, 140 keV, 6h) | Gammakamera, planares Bild | Knochen, Schilddrüse, Niere |
-| SPECT | ⁹⁹ᵐTc, ²⁰¹Tl | Rotierende Gammakamera, 3D | Myokardperfusion, Hirnperfusion |
-| PET | ¹⁸F (β⁺, 511 keV, 110min) | Koinzidenzdetektion, 3D | Tumorstaging, Neurologie |
-| PET/CT | ¹⁸F-FDG | PET + CT fusioniert | Tumorstaging, Therapiekontrolle |
-| PET/MRT | ¹⁸F-FDG | PET + MRT fusioniert | Neurologie, Pädiatrie |
-
-### Therapeutische Nuklearmedizin
-
-| Verfahren | Nuklid | Prinzip | Indikation |
-|-----------|--------|---------|-----------|
-| Radiojodtherapie | ¹³¹I (β⁻+γ, 8d) | β⁻-Strahlung zerstört Schilddrüsengewebe | M. Basedow, Schilddrüsen-Ca |
-| PSMA-Therapie | ¹⁷⁷Lu (β⁻, 6,65d) | β⁻-Strahlung, PSMA-Ligand | Metastasiertes Prostata-Ca |
-| DOTATATE-Therapie | ¹⁷⁷Lu (β⁻, 6,65d) | β⁻-Strahlung, Somatostatinrezeptor | Neuroendokrine Tumoren |
-| Radiosynoviorthese | ⁹⁰Y, ¹⁸⁶Re, ¹⁶⁹Er | β⁻-Strahlung intraartikulär | Chronische Gelenksentzündungen |
-| Ra-223-Therapie | ²²³Ra (α, 11,4d) | α-Strahlung, knochenaffin | Knochenmetastasen (Prostata-Ca) |
-
-> **Merke:** Diagnostik: γ-Strahler (Photonen verlassen den Körper → Detektion). Therapie: β⁻- oder α-Strahler (kurze Reichweite → lokale Gewebezerstörung). Moderne Theragnostik: gleicher Ligand, verschiedene Nuklide (z. B. ⁶⁸Ga-PSMA für PET-Diagnostik, ¹⁷⁷Lu-PSMA für Therapie).
+> **Merke:** Teletherapie = Quelle **außen** (LINAC, Protonen, ⁶⁰Co). Brachytherapie = Quelle **im/am Tumor** (hohe lokale Dosis, schneller 1/r²-Abfall). Protonentherapie-Vorteil: Bragg-Peak → Dosismaximum erst im Tumor, fast null dahinter.
 
 ---
 
-## Akutes Strahlensyndrom (ARS)
+## Nuklearmedizin — Diagnostik und Therapie
 
-Das akute Strahlensyndrom tritt nach einer Ganzkörperbestrahlung mit hoher Dosis in kurzer Zeit auf. Es ist ein deterministischer Effekt mit Schwellendosis.
+Nuklearmedizin dreht das Prinzip der Radiologie um: Statt Strahlung von außen durch den Körper zu schicken, wird ein radioaktives Pharmakon (Tracer) verabreicht, das sich im Zielgewebe anreichert und Strahlung **von innen** aussendet.
 
-| Phase | Dosis (Ganzkörper) | Symptome | Prognose |
-|-------|-------------------|----------|----------|
-| Prodromalphase (h) | ab 1 Gy | Übelkeit, Erbrechen, Durchfall | Reversibel |
-| Hämatopoetisches Syndrom | 1–6 Gy | Leukopenie, Thrombopenie, Anämie | Überlebbar mit Therapie |
-| Gastrointestinales Syndrom | 6–10 Gy | Zottenatrophie, blutiger Durchfall, Sepsis | Meist letal |
-| Zerebrovaskuläres Syndrom | > 10 Gy | Hirnödem, Koma, Kreislaufkollaps | Immer letal |
+### Diagnostik: Dem Stoffwechsel zuschauen
 
-Die Reihenfolge der Organbeteiligung folgt dem **Bergonié-Tribondeau-Gesetz**: schnell teilende Zellen (Lymphozyten, Knochenmark, Darmepithel) sind am empfindlichsten. Nervenzellen (kaum Teilung) sind am widerstandsfähigsten.
+| Verfahren | Nuklid | Energie / T½ | Prinzip | Klinische Anwendung |
+|-----------|--------|--------------|---------|---------------------|
+| Szintigraphie | ⁹⁹ᵐTc | γ, 140 keV, 6 h | Gammakamera, 2D | Skelett, Schilddrüse, Niere |
+| SPECT | ⁹⁹ᵐTc, ²⁰¹Tl | γ | Rotierende Gammakamera, 3D | Myokardperfusion, Hirnperfusion |
+| PET | ¹⁸F | β⁺ → 2×511 keV, 110 min | Koinzidenzdetektion, 3D | Tumorstaging, Neurologie |
+| PET/CT | ¹⁸F-FDG | β⁺ + CT | PET + CT fusioniert | Tumorstaging, Therapiekontrolle |
 
-**Lymphozytenabfall als Biomarker:** Der schnelle Abfall der Lymphozytenzahl in den ersten 48 h nach Exposition korreliert mit der Strahlendosis und dient als einfacher biologischer Dosimeter.
+**Warum ⁹⁹ᵐTc der „Arbeitsesel" der Nuklearmedizin ist:** Ideale γ-Energie (140 keV — durchdringt den Körper, ist aber gut detektierbar), kurze T½ (6 h — genug für die Untersuchung, schneller Zerfall danach), leicht aus ⁹⁹Mo-Generator verfügbar, bindet an viele Pharmazeutika.
 
-> **Merke:** ARS: Schwellendosis ~1 Gy Ganzkörper. Reihenfolge: hämatopoetisch (1–6 Gy) → gastrointestinal (6–10 Gy) → zerebrovaskulär (>10 Gy). Lymphozyten sind die strahlenempfindlichsten Zellen. LD₅₀/₆₀ (ohne Therapie): ca. 3,5–4 Gy.
+### Therapie: Strahlung von innen
+
+| Verfahren | Nuklid | Strahlung / T½ | Indikation |
+|-----------|--------|----------------|-----------|
+| Radiojodtherapie | ¹³¹I | β⁻ + γ, 8 d | M. Basedow, Schilddrüsen-Ca |
+| PSMA-Therapie | ¹⁷⁷Lu | β⁻, 6,65 d | Metastasiertes Prostata-Ca |
+| DOTATATE-Therapie | ¹⁷⁷Lu | β⁻, 6,65 d | Neuroendokrine Tumoren |
+| Radiosynoviorthese | ⁹⁰Y, ¹⁸⁶Re, ¹⁶⁹Er | β⁻ | Chronische Gelenksentzündungen |
+| Ra-223-Therapie | ²²³Ra | α, 11,4 d | Knochenmetastasen (Prostata-Ca) |
+
+**Theragnostik** — das Zukunftsprinzip: Derselbe Ligand wird mit verschiedenen Nukliden gekoppelt. Beispiel PSMA: ⁶⁸Ga-PSMA (β⁺-Strahler → PET-Diagnostik), ¹⁷⁷Lu-PSMA (β⁻-Strahler → Therapie). Erst sehen, wo der Tumor sitzt, dann gezielt bestrahlen.
+
+> **Merke:** Diagnostik nutzt **γ-Strahler** (Photonen verlassen den Körper → Detektion von außen). Therapie nutzt **β⁻- oder α-Strahler** (kurze Reichweite im Gewebe → lokale Zerstörung). Theragnostik: gleicher Ligand, verschiedene Nuklide (⁶⁸Ga-PET / ¹⁷⁷Lu-Therapie).
 
 ---
 
-## Radon in Österreich — klinische Relevanz
+## Biologische Strahlenwirkung und Akutes Strahlensyndrom (ARS)
 
-Radon (²²²Rn) ist ein radioaktives Edelgas aus der Uran-Radium-Zerfallsreihe (²²⁶Ra → ²²²Rn + α). Es ist geruchlos, farblos und kann aus dem Boden in Gebäude diffundieren.
+Strahlung schädigt Gewebe auf zwei Wegen: **direkt** (Ionisation der DNA → Strangbrüche) und **indirekt** (Radiolyse von Wasser → freie Radikale wie OH• → DNA-Schäden). ~70 % der biologischen Wirkung in Weichgewebe entstehen über den indirekten Weg.
 
-**Warum ist Radon gefährlich?**
-1. ²²²Rn zerfällt (T½ = 3,82 d) zu kurzlebigen α-Strahlern: ²¹⁸Po (T½ = 3,1 min) → ²¹⁴Pb → ²¹⁴Bi → ²¹⁴Po (T½ = 164 μs)
-2. Diese Zerfallsprodukte lagern sich an Aerosolpartikel an und werden eingeatmet
-3. In der Lunge geben sie α-Strahlung direkt ins Bronchialepithel ab (w_R = 20!)
-4. Folge: **Lungenkrebs** — nach Rauchen die zweithäufigste Ursache
+Das **Bergonié-Tribondeau-Gesetz** (1906) erklärt, warum verschiedene Gewebe unterschiedlich strahlenempfindlich sind: Je höher die Mitoserate und je undifferenzierter die Zellen, desto empfindlicher.
 
-**Radon in Österreich:**
-- Mittlere Raumluftkonzentration: ~99 Bq/m³
-- EU-Referenzwert: 300 Bq/m³
-- Radon-Risikogebiete: Mühlviertel, Waldviertel, Teile der Steiermark und Salzburgs (kristallines Grundgestein)
-- Maßnahmen: Radon-Messung in Gebäuden, Abdichtung von Kellerböden, Belüftung
+| Gewebe | Empfindlichkeit | Begründung |
+|--------|----------------|------------|
+| Lymphozyten, Knochenmark | Sehr hoch | Hohe Teilungsrate |
+| Darmepithel | Hoch | Schnelle Erneuerung (3–5 Tage) |
+| Haut, Keimzellen | Mittel | Stammzellkompartiment |
+| Muskulatur | Niedrig | Wenig Teilung |
+| Nervenzellen | Sehr niedrig | Postmitotisch |
+
+### Das Akute Strahlensyndrom (ARS)
+
+Das ARS tritt nach **Ganzkörperbestrahlung** mit hoher Dosis in kurzer Zeit auf. Es ist ein **deterministischer Effekt** (Schwellendosis, Schwere dosisabhängig) — im Gegensatz zu stochastischen Effekten (Krebs, keine Schwelle, Wahrscheinlichkeit dosisabhängig).
+
+| Syndrom | Dosis (Ganzkörper) | Latenz | Leitsymptome | Prognose |
+|---------|-------------------|--------|--------------|----------|
+| Prodromalphase | ab ~1 Gy | Stunden | Übelkeit, Erbrechen, Durchfall | Reversibel |
+| **Hämatopoetisch** | 1–6 Gy | 2–3 Wochen | Leukopenie, Thrombopenie → Infekte, Blutungen | Überlebbar mit Therapie |
+| **Gastrointestinal** | 6–10 Gy | 1 Woche | Zottenatrophie, blutiger Durchfall, Sepsis | Meist letal |
+| **Zerebrovaskulär** | > 10 Gy | Stunden | Hirnödem, Koma, Kreislaufkollaps | Immer letal |
+
+**LD₅₀/₆₀** (letale Dosis für 50 % der Exponierten innerhalb von 60 Tagen, ohne Therapie): ca. **3,5–4 Gy**. Mit moderner Intensivmedizin (Knochenmarktransplantation, Wachstumsfaktoren) kann die Überlebensgrenze auf ~8 Gy angehoben werden.
+
+**Lymphozytenabfall als biologischer Dosimeter:** Lymphozyten reagieren innerhalb von Stunden auf Strahlung. Ein Abfall auf < 1000/μl in den ersten 48 h deutet auf > 1 Gy; < 500/μl auf > 2 Gy; < 100/μl auf > 6 Gy. Dieser einfache Bluttest ist in Strahlenunfall-Szenarien die schnellste Dosisabschätzung.
+
+> **Merke:** ARS-Reihenfolge: hämatopoetisch (1–6 Gy) → gastrointestinal (6–10 Gy) → zerebrovaskulär (>10 Gy). LD₅₀ ≈ 3,5–4 Gy. Lymphozyten = empfindlichste Zellen = bester Biomarker. Deterministisch (Schwelle!) vs. stochastisch (Krebs, keine Schwelle).
+
+---
+
+## Radon in Österreich — die unsichtbare Gefahr
+
+Radon (²²²Rn) ist ein farb- und geruchloses radioaktives **Edelgas** aus der Uran-Radium-Zerfallsreihe: ²³⁸U → … → ²²⁶Ra → **²²²Rn** + α (T½ = 3,82 d). Als Gas diffundiert es aus dem Boden durch Risse und Spalten in Gebäude.
+
+**Warum ist Radon so gefährlich?**
+
+1. ²²²Rn zerfällt zu kurzlebigen **α-strahlenden Tochterprodukten**: ²¹⁸Po (T½ = 3,1 min) → ²¹⁴Pb → ²¹⁴Bi → ²¹⁴Po (T½ = 164 μs)
+2. Diese Tochterprodukte lagern sich an **Aerosolpartikel** an und werden eingeatmet
+3. Im Bronchialepithel geben sie **α-Strahlung** direkt ins Gewebe ab — mit einem Strahlenwichtungsfaktor w_R = 20 (20× biologisch wirksamer als γ!)
+4. Folge: **Lungenkrebs** — nach Rauchen die **zweithäufigste Ursache** weltweit
+
+**Radon-Situation in Österreich:**
+
+| Parameter | Wert |
+|-----------|------|
+| Mittlere Raumluftkonzentration | ~99 Bq/m³ |
+| EU-Referenzwert (Grenze für Sanierung) | 300 Bq/m³ |
+| Beitrag zur Jahresdosis | ~1 mSv/a (~50 % der natürlichen Strahlung) |
+| Risikogebiete | Mühlviertel, Waldviertel, Teile der Steiermark und Salzburgs |
+
+Der geologische Grund: Kristallines Grundgestein (Granit, Gneis) in diesen Regionen enthält mehr Uran als Sedimentgestein. Gegenmaßnahmen: Radon-Messung, Abdichtung von Kellerböden, kontrollierte Belüftung.
+
+> **Merke:** Radon (²²²Rn): α-strahlendes Edelgas, T½ = 3,82 d. Tochterprodukte im Lungenepithel → α-Strahlung (w_R = 20) → Lungenkrebs (Nr. 2 nach Rauchen). In Österreich ~1 mSv/a, Risikogebiete: Mühlviertel/Waldviertel.
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Abstandsquadratgesetz im klinischen Kontext:**
-Ein ⁶⁰Co-Präparat hat in 1 m Abstand eine Dosisleistung von 0,5 mSv/h. In welchem Abstand beträgt die Dosisleistung nur noch 0,02 mSv/h?
-Lösung: Ḋ₁·r₁² = Ḋ₂·r₂² → r₂ = r₁ · √(Ḋ₁/Ḋ₂) = 1 m · √(0,5/0,02) = 1 m · √25 = 1 m · 5 = **5 m**.
+**Beispiel 1 — Abstandsquadratgesetz:**
+Ein ⁶⁰Co-Präparat hat in 1 m Abstand eine Dosisleistung von 0,5 mSv/h. In welchem Abstand beträgt sie nur noch 0,02 mSv/h?
 
-**Beispiel 2 — Abschirmberechnung mit HVL:**
-Eine ¹³⁷Cs-Quelle (γ, 662 keV) hat eine Dosisleistung von 100 mSv/h. Die Halbwertsschichtdicke in Blei beträgt HVL = 6,5 mm. Wie viel Blei braucht man, um die Dosis auf < 1 mSv/h zu senken?
-Lösung: 100 · (½)ⁿ < 1 → (½)ⁿ < 0,01 → n > log(0,01)/log(0,5) = −2/(−0,301) = 6,64 → n = 7 HVL.
-Bleidicke: 7 × 6,5 mm = **45,5 mm ≈ 4,6 cm**.
+Lösung: Ḋ₁·r₁² = Ḋ₂·r₂² → r₂ = r₁ · \\u221A(Ḋ₁/Ḋ₂) = 1 m · \\u221A(0,5/0,02) = 1 m · \\u221A25 = **5 m**.
+
+**Beispiel 2 — Abschirmung (Halbwertsschichtdicke HVL):**
+¹³⁷Cs-Quelle: Ḋ₀ = 100 mSv/h. HVL in Blei = 6,5 mm. Wie viel Blei für < 1 mSv/h?
+
+Lösung: 100 · (1/2)^n < 1 → n > log(100)/log(2) = 6,64 → **n = 7 HVL** → 7 × 6,5 mm = **45,5 mm Blei**.
 
 **Beispiel 3 — Jahresdosis eines Radiologen:**
-Ein Radiologe steht 8 Stunden/Tag in 3 m Abstand von einer Röntgenquelle (Dosisleistung in 1 m: 0,1 mSv/h). Arbeitstage: 250/Jahr.
-Dosisleistung in 3 m: 0,1 × (1/3)² = 0,1/9 = 0,0111 mSv/h.
-Tagesdosis: 0,0111 × 8 = 0,089 mSv/Tag.
-Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 20 mSv! Maßnahme: zusätzliche Bleischürze oder größerer Abstand.`,
+Dosisleistung in 1 m: 0,1 mSv/h. Arbeitsplatz: 3 m Abstand, 8 h/Tag, 250 Tage/Jahr.
+
+In 3 m: Ḋ = 0,1 × (1/3)² = 0,0111 mSv/h.
+Tagesdosis: 0,0111 × 8 = 0,089 mSv. Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → Grenzwert 20 mSv überschritten! Maßnahme: Bleischürze oder mehr Abstand.
+
+---
+
+## Prüfungsrelevante Zahlen und Fakten
+
+| Größe | Wert | MedAT-Relevanz |
+|-------|------|----------------|
+| Grenzwert Kat. A | ≤ 20 mSv/a | Häufig abgefragt |
+| Grenzwert Bevölkerung | ≤ 1 mSv/a | Häufig abgefragt |
+| Natürliche Strahlung (AT) | ~2,1 mSv/a | Radon-Anteil ~1 mSv |
+| CT Abdomen | ~10 mSv | = 5 Jahre natürliche Strahlung |
+| LD₅₀/₆₀ | 3,5–4 Gy | Ohne Therapie |
+| Radon T½ | 3,82 d | α-Strahler, Edelgas |
+| w_R (α) | 20 | 20× wirksamer als γ |
+| ⁹⁹ᵐTc γ-Energie | 140 keV, T½ = 6 h | Häufigstes Nuklid |
+| Bragg-Peak | Protonen: Dosismax. am Ende | Protonentherapie-Vorteil |`,
       lernziele: [
         "Das ALARA-Prinzip (Abstand, Abschirmung, Zeit) erklären und das Abstandsquadratgesetz auf Strahlenschutzszenarien anwenden.",
         "Die gesetzlichen Dosisgrenzwerte für beruflich Strahlenexponierte und die Allgemeinbevölkerung kennen.",
@@ -1570,13 +1646,15 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
         },
       ],
       merksätze: [
-        "ALARA-Details und Abschirmregeln → UK 03. Hier: Dosisgrenzwerte und klinische Anwendungen.",
-        "Dosisgrenzwerte: Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a; natürliche Strahlung ~2,1 mSv/a.",
-        "Bragg-Peak: Protonen geben Energie am Reichweiten-Ende ab → Dosismaximum exakt im Tumor, fast null dahinter.",
-        "Teletherapie = Quelle außen (LINAC, Protonen); Brachytherapie = Quelle im Tumor (hohe lokale Dosis).",
-        "Diagnostik: γ-Strahler (verlassen den Körper). Therapie: β⁻-/α-Strahler (kurze Reichweite, lokal).",
-        "Akutes Strahlensyndrom: ab ~1 Gy Ganzkörper; hämatopoetisch → GI → zerebrovaskulär. LD₅₀ ≈ 3,5–4 Gy.",
-        "Radon (²²²Rn): α-strahlendes Edelgas, Inhalation → Lungenkrebs; ~1 mSv/a in Österreich.",
+        "ALARA = Abstand ↑ (I ∝ 1/r²) + Abschirmung ↑ (PAB: Papier–Alu–Blei für α–β–γ) + Zeit ↓ (D = Ḋ·t). Blei ist für Neutronen unwirksam — Wasser/Paraffin!",
+        "Dosisgrenzwerte: Beruf Kat. A ≤ 20 mSv/a | Bevölkerung ≤ 1 mSv/a | natürliche Strahlung AT ~2,1 mSv/a (davon ~1 mSv Radon).",
+        "CT Abdomen ~10 mSv ≈ 500× Thorax-Röntgen ≈ 5 Jahre natürliche Strahlung. Jede CT braucht rechtfertigende Indikation.",
+        "Bragg-Peak: Protonen geben Energie am Reichweitenende schlagartig ab → Dosismaximum im Tumor, fast null dahinter. Ideal für Kinder, Auge, ZNS.",
+        "Teletherapie = Quelle außen (LINAC, ⁶⁰Co, Protonen); Brachytherapie = Quelle im/am Tumor (1/r²-Abfall → lokale Wirkung).",
+        "Nuklearmedizin: Diagnostik = γ-Strahler (⁹⁹ᵐTc, 140 keV). Therapie = β⁻/α-Strahler (¹³¹I, ¹⁷⁷Lu, ²²³Ra). Theragnostik: gleicher Ligand, verschiedene Nuklide.",
+        "ARS: hämatopoetisch (1–6 Gy) → GI (6–10 Gy) → zerebrovaskulär (>10 Gy). LD₅₀/₆₀ ≈ 3,5–4 Gy. Lymphozyten = empfindlichste Zellen und bester Biomarker.",
+        "Bergonié-Tribondeau: Je höher die Mitoserate, desto strahlenempfindlicher. Lymphozyten > Darmepithel > Haut > Muskel > Nerven.",
+        "Radon (²²²Rn): α-Edelgas, T½ = 3,82 d, Tochterprodukte → α im Lungenepithel (w_R = 20!) → Lungenkrebs Nr. 2 nach Rauchen. AT-Risikogebiete: Mühl-/Waldviertel.",
       ],
       altfrage: {
         question:
@@ -1593,10 +1671,10 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
           options: ["4 mSv/h", "2 mSv/h", "1 mSv/h", "0,5 mSv/h", "0,25 mSv/h"],
           correctIndex: 1,
           explanation:
-            "Das Abstandsquadratgesetz besagt: Ḋ ∝ 1/r². Wird der Abstand von 2 m auf 4 m verdoppelt, sinkt die Dosisleistung auf (2/4)² = 1/4 des Ausgangswerts: 8 × 1/4 = 2 mSv/h. Alternativ: Ḋ₁·r₁² = Ḋ₂·r₂² → Ḋ₂ = 8 × 4/16 = 2 mSv/h. Das Abstandsquadratgesetz gilt exakt nur für Punktquellen ohne Abschirmung, ist aber eine gute Näherung für klinische Szenarien.",
+            "Das Abstandsquadratgesetz besagt: Ḋ ∝ 1/r². Verdopplung des Abstands (2 m → 4 m) senkt die Dosisleistung auf (2/4)² = 1/4: also 8 × 1/4 = 2 mSv/h. Dieses Gesetz gilt für Punktquellen und ist eine wichtige Grundlage klinischer Strahlenschutzberechnungen.",
           hints: [
             "Abstandsquadratgesetz: I ∝ 1/r². Abstand verdoppelt → Dosis geviertelt.",
-            "Ḋ₂ = Ḋ₁ × (r₁/r₂)² = 8 × (2/4)² = 8 × 1/4 = 2 mSv/h.",
+            "Ḋ₂ = Ḋ₁ × (r₁/r₂)² = 8 × (2/4)² = 2 mSv/h.",
           ],
           tags: ["abstandsgesetz", "strahlenschutz", "dosisleistung"],
           difficulty: 1,
@@ -1607,9 +1685,9 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
           options: ["Blei", "Aluminium", "Wasser oder Paraffin", "Beton", "Kupfer"],
           correctIndex: 2,
           explanation:
-            "Neutronen werden am effektivsten durch Materialien mit leichten Kernen (insbesondere Wasserstoff) moderiert (abgebremst). Wasser und Paraffin (Kohlenwasserstoffe) enthalten viele Wasserstoffatome und sind daher ideale Neutronenabschirmer. Bei einem Stoß mit einem Proton (gleiche Masse wie Neutron) kann das Neutron bis zu 100 % seiner kinetischen Energie übertragen — bei einem Stoß mit einem schweren Bleikern nur wenige Prozent. Blei ist dagegen ideal für γ-Strahlung (hohe Elektronendichte). Dies ist eine klassische MedAT-Falle: Blei für Neutronen ist ineffektiv!",
+            "Neutronen sind ungeladen und werden am effektivsten durch elastische Stöße mit leichten Kernen moderiert. Bei einem Stoß mit einem Proton (gleiche Masse) kann ein Neutron bis zu 100 % seiner Energie abgeben — bei schwerem Blei nur wenige Prozent. Wasser und Paraffin enthalten viel Wasserstoff und sind daher ideal. Klassische MedAT-Falle: Blei ist für Neutronen weitgehend unwirksam!",
           hints: [
-            "Neutronen sind ungeladen → keine Coulomb-Wechselwirkung mit Elektronenhülle. Was bremst sie am besten?",
+            "Neutronen sind ungeladen → keine Coulomb-Wechselwirkung. Was bremst sie am besten?",
             "Elastischer Stoß: maximaler Energieübertrag bei gleichen Massen. Neutron ≈ Proton (Wasserstoff).",
           ],
           tags: ["neutronenabschirmung", "strahlenschutz", "wasser"],
@@ -1617,7 +1695,7 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
         },
         {
           question:
-            "Welcher der folgenden Dosisgrenzwerte gilt für beruflich strahlenexponierte Personen (Kategorie A) in Österreich?",
+            "Welcher Dosisgrenzwert gilt in Österreich für beruflich strahlenexponierte Personen der Kategorie A?",
           options: [
             "≤ 1 mSv pro Jahr",
             "≤ 6 mSv pro Jahr",
@@ -1627,52 +1705,71 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
           ],
           correctIndex: 2,
           explanation:
-            "Der Dosisgrenzwert für beruflich strahlenexponierte Personen der Kategorie A (z. B. Radiologen, Nuklearmediziner, Strahlentherapie-Personal) beträgt in Österreich und der EU ≤ 20 mSv effektive Dosis pro Jahr (gemittelt über 5 Jahre, mit max. 50 mSv in einem Einzeljahr). Für die Allgemeinbevölkerung gilt ≤ 1 mSv/Jahr (zusätzlich zur natürlichen Strahlung von ~2,1 mSv/a). Kategorie B (geringere Exposition): ≤ 6 mSv/a.",
+            "Kat. A (Radiologen, Nuklearmediziner): ≤ 20 mSv/a effektive Dosis. Kat. B (sonstiges Krankenhauspersonal): ≤ 6 mSv/a. Allgemeinbevölkerung: ≤ 1 mSv/a zusätzlich zur natürlichen Strahlung von ~2,1 mSv/a. Die 20 mSv gelten gemittelt über 5 Jahre, mit max. 50 mSv in einem Einzeljahr.",
           hints: [
-            "Beruflich strahlenexponiert Kat. A: der höchste Grenzwert für reguläre Beschäftigung.",
-            "1 mSv = Bevölkerung; 6 mSv = Kat. B; 20 mSv = Kat. A.",
+            "Drei Stufen: 1 mSv (Bevölkerung), 6 mSv (Kat. B), 20 mSv (Kat. A).",
+            "Kat. A = höchste Expositionskategorie → höchster erlaubter Grenzwert.",
           ],
           tags: ["dosisgrenzwert", "strahlenschutz", "österreich"],
           difficulty: 1,
         },
         {
-          question: "Was ist der Bragg-Peak in der Protonentherapie?",
+          question: "Welche Aussage zum Bragg-Peak ist richtig?",
           options: [
-            "Die maximale Eindringtiefe von Protonen in Blei",
-            "Der Punkt maximaler Dosisabgabe am Ende der Protonenreichweite im Gewebe",
-            "Die Frequenz, bei der Protonen in Resonanz geraten",
-            "Die Schwellenenergie für Kernreaktionen mit Protonen",
-            "Der maximale Dosisabfall hinter einer Bleiabschirmung",
+            "Er beschreibt den exponentiellen Dosisabfall von Photonenstrahlung im Gewebe",
+            "Protonen geben den Großteil ihrer Energie am Ende ihrer Reichweite ab, was ein scharfes Dosismaximum erzeugt",
+            "Er tritt nur bei α-Strahlung auf, nicht bei Protonen",
+            "Er bewirkt, dass die höchste Dosis direkt an der Hautoberfläche entsteht",
+            "Er beschreibt die Halbwertsschichtdicke von Blei für γ-Strahlung",
           ],
           correctIndex: 1,
           explanation:
-            "Der Bragg-Peak ist eine charakteristische Eigenschaft geladener Teilchen (Protonen, Schwerionen): Sie geben den Großteil ihrer Energie am Ende ihrer Reichweite ab, bevor sie zum Stillstand kommen. Dies führt zu einem scharfen Dosismaximum in einer definierten Tiefe, während die Dosis davor (Eingangsbereich) relativ niedrig ist und dahinter fast null beträgt. Für die Strahlentherapie ist dies ideal: Der Tumor erhält die maximale Dosis, das gesunde Gewebe vor und hinter dem Tumor wird geschont. Im Gegensatz dazu zeigen Photonen (Röntgen, γ) ein exponentielles Dosisprofil mit Maximum nahe der Oberfläche und kontinuierlichem Abfall in der Tiefe.",
+            "Der Bragg-Peak ist eine Eigenschaft geladener Teilchen (Protonen, Schwerionen): Sie werden im Gewebe zunehmend langsamer und geben am Ende ihrer Reichweite schlagartig den Großteil ihrer Energie ab → scharfes Dosismaximum. Dahinter ist die Dosis nahezu null. Photonen dagegen zeigen ein exponentielles Dosisprofil mit Maximum nahe der Oberfläche. Der Bragg-Peak ermöglicht es, Tumoren präzise zu bestrahlen und Risikoorgane zu schonen.",
           hints: [
-            "Protonen werden im Gewebe immer langsamer (Ionisationsverluste). Wo geben sie die meiste Energie ab?",
-            "Am Ende der Reichweite: Geschwindigkeit → 0, Ionisierungsdichte maximal → Bragg-Peak.",
+            "Geladene Teilchen ionisieren stärker, je langsamer sie werden.",
+            "Am Ende der Reichweite: maximale Ionisierungsdichte = Bragg-Peak. Dahinter: fast null.",
           ],
           tags: ["bragg-peak", "protonentherapie", "strahlentherapie"],
           difficulty: 2,
         },
         {
-          question:
-            "Welches nuklearmedizinische Verfahren nutzt die Annihilationsstrahlung zweier 511-keV-Photonen zur Bildgebung?",
+          question: "Was beschreibt das Bergonié-Tribondeau-Gesetz?",
           options: [
-            "SPECT (Single Photon Emission CT)",
-            "Planare Szintigraphie",
-            "PET (Positronen-Emissions-Tomographie)",
-            "Röntgen-Computertomographie",
-            "Magnetresonanztomographie",
+            "Die Halbwertszeit radioaktiver Isotope nimmt mit der Ordnungszahl zu",
+            "Die Strahlenempfindlichkeit eines Gewebes steigt mit seiner Mitoserate und sinkt mit dem Differenzierungsgrad",
+            "Die Dosisleistung einer Punktquelle nimmt mit dem Quadrat des Abstands ab",
+            "Der Bragg-Peak entsteht nur bei Protonen mit Energien über 100 MeV",
+            "Die biologische Wirkung ionisierender Strahlung ist unabhängig vom Gewebetyp",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
-            "Die PET (Positronen-Emissions-Tomographie) beruht auf β⁺-Zerfall: Das emittierte Positron annihiliert mit einem Elektron → 2 Gammaphotonen mit je 511 keV, emittiert unter 180°. Der PET-Scanner detektiert Koinzidenzpaare — zwei 511-keV-Photonen, die gleichzeitig auf gegenüberliegenden Detektoren registriert werden. SPECT nutzt dagegen einzelne γ-Photonen (z. B. ⁹⁹ᵐTc, 140 keV) mit einem mechanischen Kollimator. CT und MRT nutzen keine Radionuklide.",
+            "Das Bergonié-Tribondeau-Gesetz (1906) besagt: Je höher die Mitoserate (Zellteilungsrate) und je undifferenzierter die Zellen, desto strahlenempfindlicher sind sie. Deshalb sind Lymphozyten und Knochenmarkzellen am empfindlichsten, Nervenzellen (postmitotisch, hochdifferenziert) am widerstandsfähigsten. Dieses Gesetz erklärt auch die Reihenfolge beim akuten Strahlensyndrom: erst hämatopoetisch, dann GI, zuletzt zerebrovaskulär.",
           hints: [
-            "Welches Verfahren basiert auf β⁺-Zerfall → Annihilation → Koinzidenzdetektion?",
-            "511 keV = Ruheenergie eines Elektrons. Annihilation: e⁺ + e⁻ → 2 × 511 keV.",
+            "Welche Zellen teilen sich am schnellsten? Die sind am empfindlichsten.",
+            "Lymphozyten > Darmepithel > Haut > Muskel > Nervenzellen.",
           ],
-          tags: ["pet", "annihilation", "nuklearmedizin"],
-          difficulty: 1,
+          tags: ["bergonie-tribondeau", "strahlenbiologie", "strahlensensibilität"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Ein Patient wird bei einem Strahlenunfall mit 5 Gy Ganzkörperdosis bestrahlt. Welches Syndrom dominiert?",
+          options: [
+            "Nur Prodromalsymptome, keine weiteren Folgen",
+            "Hämatopoetisches Syndrom (Knochenmarkversagen)",
+            "Gastrointestinales Syndrom (Darmversagen)",
+            "Zerebrovaskuläres Syndrom (Hirnödem)",
+            "Chronisches Strahlensyndrom ohne akute Symptome",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Bei 5 Gy Ganzkörperdosis liegt man im Bereich des hämatopoetischen Syndroms (1–6 Gy): Das Knochenmark wird geschädigt, es kommt zu Leukopenie, Thrombopenie und Anämie innerhalb von 2–3 Wochen. Ohne Therapie (z. B. Knochenmarktransplantation, Wachstumsfaktoren) kann dies letal sein — die LD₅₀/₆₀ liegt bei 3,5–4 Gy. Das GI-Syndrom beginnt erst ab ~6 Gy, das zerebrovaskuläre ab >10 Gy.",
+          hints: [
+            "ARS-Reihenfolge: hämatopoetisch (1–6 Gy) → GI (6–10 Gy) → zerebrovaskulär (>10 Gy).",
+            "5 Gy liegt im Bereich 1–6 Gy → welches Syndrom ist das?",
+          ],
+          tags: ["ars", "strahlensyndrom", "hämatopoetisch"],
+          difficulty: 3,
         },
       ],
     },
