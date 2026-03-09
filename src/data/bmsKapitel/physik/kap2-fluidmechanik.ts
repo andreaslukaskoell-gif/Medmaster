@@ -247,6 +247,8 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
 
 ## Archimedisches Prinzip
 
+Warum fühlst du dich im Schwimmbecken leichter? Weil das Wasser von unten stärker drückt als von oben — die Differenz ist die Auftriebskraft.
+
 **Ein in ein Fluid eingetauchter Körper** erfährt eine nach oben gerichtete Kraft -- die **Auftriebskraft** F_A. Diese ist gleich der Gewichtskraft des verdrängten Fluids:
 
 **F_A = rho_Fluid * g * V_verdrängt**
@@ -281,7 +283,11 @@ Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
 
 ## Oberflächenspannung
 
-Um Oberflächenspannung zu verstehen, muss man die molekularen Kräfte an der Oberfläche einer Flüssigkeit betrachten. Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
+Bisher haben wir Kräfte betrachtet, die auf eingetauchte Körper wirken. Aber auch an der Oberfläche eines Fluids wirken besondere Kräfte:
+
+Warum kann eine Nadel auf Wasser schwimmen? Die Wassermoleküle an der Oberfläche werden nach innen gezogen — die Oberfläche verhält sich wie eine gespannte Folie.
+
+Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
 
 Die **Oberflächenspannung sigma** ist definiert als Kraft pro Länge entlang einer gedachten Linie auf der Oberfläche:
 
@@ -462,16 +468,17 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
 
 Der **Volumenstrom** Q = A · v beschreibt das Fluidvolumen, das pro Zeiteinheit durch einen Querschnitt fließt (Einheit: m³/s). Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
 
-> **Merke:** Volumenstrom Q = A * v (Einheit: m3/s). Für ein ideales Fluid: inkompressibel, reibungsfrei, stationär.
+> **Merke:** Volumenstrom Q = A · v (Einheit: m³/s). Für ein ideales Fluid: inkompressibel, reibungsfrei, stationär.
 
 ---
 
 ## Kontinuitätsgleichung
 
+Was links in ein Rohr hineinfließt, muss rechts herauskommen — wird das Rohr enger, muss das Fluid schneller werden. Mathematisch formuliert:
 
-**A1 * v1 = A2 * v2 = const**
+**A₁ · v₁ = A₂ · v₂ = const**
 
-**Konsequenz:** Verengt sich ein Rohr (A2 < A1), so muss die Strömungsgeschwindigkeit **zunehmen** (v2 > v1) -- und umgekehrt.
+**Konsequenz:** Verengt sich ein Rohr (A₂ < A₁), so muss die Strömungsgeschwindigkeit **zunehmen** (v₂ > v₁) -- und umgekehrt.
 
 **Rechenbeispiel -- Aortenstenose:**
 Die Aorta hat einen Querschnitt A1 ca. 4,5 cm2 = 4,5 x 10-4 m2 und die mittlere Blutgeschwindigkeit beträgt v1 ca. 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A2 ca. 1,5 cm2 = 1,5 x 10-4 m2.
@@ -482,34 +489,40 @@ Die Geschwindigkeit verdreifacht sich an der Stenose! Bei stärkerer Verengung k
 **Klinisch -- Gesamtquerschnitt des Kapillarbetts:**
 Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquerschnitt A ca. 4500 cm2 -> v_Kapillare = v_Aorta * (A_Aorta/A_Kapillaren) = 0,3 * (4,5/4500) = **0,0003 m/s ca. 0,3 mm/s**. Diese extrem langsame Strömung ermöglicht den **Stoffaustausch** in den Kapillaren!
 
-> **Merke:** Kontinuitätsgleichung: A1*v1 = A2*v2. Engere Stelle -> höhere Geschwindigkeit. Kapillarbett: riesiger Gesamtquerschnitt -> extrem langsame Strömung -> optimaler Stoffaustausch.
+> **Merke:** Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ — was links reinfließt, kommt rechts raus. Engere Stelle → höhere Geschwindigkeit. Kapillarbett: riesiger Gesamtquerschnitt → extrem langsame Strömung → optimaler Stoffaustausch.
 
 ---
 
 ## Bernoulli-Gleichung
 
+Die Bernoulli-Gleichung ist nichts anderes als Energieerhaltung für strömende Fluide: Kinetische Energie (Geschwindigkeit) + potentielle Energie (Höhe) + Druckenergie = konstant. Wenn die Geschwindigkeit steigt, MUSS der Druck sinken — wie bei einem Gartenschlauch, wenn du den Daumen draufhältst.
 
-**p + 0,5*rho*v2 + rho*g*h = const**
+**p + ½·ρ·v² + ρ·g·h = const**
 
 Die drei Terme:
 - **p** = statischer Druck (der "normale" Druck, den man mit einem Manometer misst)
-- **0,5*rho*v2** = dynamischer Druck (Staudruck; entsteht durch die Bewegung)
-- **rho*g*h** = hydrostatischer Druck (Schweredruck; Einfluss der Höhe)
+- **½·ρ·v²** = dynamischer Druck (Staudruck; entsteht durch die Bewegung)
+- **ρ·g·h** = hydrostatischer Druck (Schweredruck; Einfluss der Höhe)
 
 **Kernaussage:** Wo die Geschwindigkeit v zunimmt, sinkt der statische Druck p -- und umgekehrt!
 
 **Venturi-Effekt:** Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstäuber).
 
-**Rechenbeispiel -- Druckabfall an einer Stenose:**
-Aorta: v1 = 0,3 m/s, p1 = 100 mmHg. Stenose: v2 = 0,9 m/s (3-fache Geschwindigkeit). Da v steigt, sinkt p (Bernoulli). Ergebnis: p2 ca. **97 mmHg** -- der statische Druck sinkt um ca. **3 mmHg**. Bei stärkerer Stenose (v2 = 3 m/s) wäre der Druckabfall erheblich größer.
+**Rechenbeispiel -- Druckabfall an einer Stenose (Schritt für Schritt):**
+Aorta: v₁ = 0,3 m/s, p₁ = 100 mmHg ≈ 13 333 Pa. Stenose: v₂ = 0,9 m/s (aus Kontinuität: A₁/A₂ = 3 → v₂ = 3·v₁).
+Bernoulli bei gleicher Höhe (h₁ = h₂): p₁ + ½ρv₁² = p₂ + ½ρv₂²
+→ p₂ = p₁ + ½ρ(v₁² − v₂²) = p₁ + ½ · 1060 · (0,09 − 0,81)
+→ p₂ = 13 333 + ½ · 1060 · (−0,72) = 13 333 − 382 Pa
+→ Δp = 382 Pa ≈ **2,9 mmHg** → p₂ ≈ **97 mmHg**.
+Bei stärkerer Stenose (v₂ = 3 m/s): Δp = ½ · 1060 · (9 − 0,09) ≈ 4728 Pa ≈ **35 mmHg** — klinisch hochrelevant!
 
-> **Merke:** Bernoulli: p + 0,5*rho*v2 + rho*g*h = const. Höhere Geschwindigkeit -> niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck 0,5*rho*v2 beschreibt die kinetische Energie des Fluids pro Volumen.
+> **Merke:** Bernoulli = Energieerhaltung für Fluide: p + ½ρv² + ρgh = const. Höhere Geschwindigkeit → niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck ½ρv² beschreibt die kinetische Energie des Fluids pro Volumen.
 
 ---
 
 ## Laminare vs. turbulente Strömung
 
-Bei realen Strömungen betrachten wir zwei grundlegend verschiedene Strömungsformen:
+Die Bernoulli-Gleichung setzt ideale, reibungsfreie Strömung voraus. Aber wann ist eine Strömung geordnet (laminar) und wann chaotisch (turbulent)? Die Reynolds-Zahl gibt die Antwort:
 
 **Laminare Strömung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blättchen); die Strömung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
 
@@ -544,7 +557,7 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskosität.
 **Aneurysma (Aussackung):**
 - A steigt -> v sinkt (Kontinuität)
 - p steigt in der Aussackung (Bernoulli)
-- Die Wandspannung sigma = p*r/(2d) steigt mit dem Radius (Laplace!)
+- Die Wandspannung τ_W = p·r/(2d_Wand) steigt mit dem Radius (Laplace!) — Hinweis: σ wird in diesem Kapitel für die Oberflächenspannung verwendet; für die Wandspannung nutzen wir τ_W zur Unterscheidung
 - **Teufelskreis**: Aussackung -> höherer Druck -> Wand dehnt sich weiter -> noch größere Aussackung -> **Ruptur** (Gefäßriss)
 
 > **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geräusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklärbar durch Kontinuität + Bernoulli.`,
@@ -725,8 +738,8 @@ Die **kinematische Viskosität ν** (nü) = η/ρ (Einheit: m²/s) — tritt in 
 
 **Nicht-Newtonsches Fluid:** Die **Viskosität** hängt von der Scherrate ab. Es gibt verschiedene Typen:
 - **Scherverdünnung** (Pseudoplastizität, scheinbare Fließfähigkeit): η sinkt bei steigender Scherrate → Fluid wird „dünnflüssiger" bei Belastung. Beispiel: **Vollblut**, Ketchup, Farbe.
-- **Scherverdickung** (Dilatanz, Aufweitung unter Belastung): η steigt bei steigender Scherrate. Beispiel: Maisstärke-Wasser-Gemisch.
-- **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze). Beispiel: Zahnpasta.
+- **Scherverdickung** (Dilatanz): η steigt bei steigender Scherrate — selten prüfungsrelevant.
+- **Bingham-Fluid**: Fließt erst ab einer Mindest-Scherspannung (Fließgrenze) — selten prüfungsrelevant.
 
 **Blut als nicht-Newtonsches Fluid:**
 Vollblut ist **scherverdünnend**: Bei niedriger Scherrate (langsame Strömung) bilden die Erythrozyten sogenannte **Geldrollenaggregate** (Rouleaux, münzenförmige Stapel von Erythrozyten) → hohe Viskosität. Bei hoher Scherrate (schnelle Strömung) richten sich die Erythrozyten aus und deformieren sich → niedrigere Viskosität.
@@ -794,7 +807,7 @@ Der TPR beschreibt den Gesamtwiderstand des Gefäßsystems. Er wird hauptsächli
 
 ## Fåhræus-Lindqvist-Effekt
 
-muss man beachten, dass Blut kein Newtonsches Fluid ist. In **engen Gefäßen** (d < 300 µm) tritt ein besonderer Effekt auf: Die **scheinbare Viskosität** des Blutes **sinkt** mit abnehmendem Gefäßdurchmesser.
+Bei der Anwendung von Hagen-Poiseuille auf den Blutkreislauf muss man beachten, dass Blut kein Newtonsches Fluid ist. In **engen Gefäßen** (d < 300 µm) tritt ein besonderer Effekt auf: Die **scheinbare Viskosität** des Blutes **sinkt** mit abnehmendem Gefäßdurchmesser.
 
 **Erklärung:** In engen Gefäßen wandern die Erythrozyten zur Gefäßmitte (axiale Migration) — es entsteht eine zellfreie Randschicht (Plasmaschicht) mit niedriger Viskosität. Da die Wandreibung hauptsächlich von der Randschicht bestimmt wird, sinkt der effektive Strömungswiderstand.
 
@@ -816,9 +829,11 @@ Für eine schnellere Infusion gibt es vier Stellschrauben:
 3. **Kürzere Leitung** (L↓): z. B. kürzere Kanüle
 4. **Niedrigere Viskosität** (η↓): kristalloide (salzhaltige Lösungen wie NaCl) fließen schneller als kolloide Lösungen (eiweisshaltige Lösungen) oder Blutkonserven
 
+**Faustregel:** Der Durchfluss hängt extrem vom Radius ab (r⁴!). Ein Katheter mit doppeltem Radius hat 16× den Durchfluss. Deshalb ist die Kanülengröße der mit Abstand wichtigste Faktor.
+
 **Rechenbeispiel:**
-Infusion durch eine 18G-Kanüle (r = 0,6 mm = 6 × 10⁻⁴ m, L = 5 cm = 0,05 m), Δp = 10 kPa, η_NaCl ≈ 10⁻³ Pa·s:
-Q = π · (6×10⁻⁴)⁴ · 10 000 / (8 · 10⁻³ · 0,05) = π · 1,296×10⁻¹³ · 10⁴ / (4×10⁻⁴) ≈ **1,02 × 10⁻⁵ m³/s ≈ 10,2 mL/s ≈ 612 mL/min**
+Infusion durch eine 18G-Kanüle (r = 0,6 mm, L = 5 cm), Δp = 10 kPa, η_NaCl ≈ 10⁻³ Pa·s:
+Q = π · r⁴ · Δp / (8 · η · L) = π · (6×10⁻⁴)⁴ · 10⁴ / (8 · 10⁻³ · 0,05) ≈ **10,2 mL/s ≈ 612 mL/min**
 
 In der Praxis ist der Fluss durch Turbulenzen und nicht-ideale Bedingungen deutlich niedriger, aber die r⁴-Abhängigkeit bleibt der dominierende Faktor.
 

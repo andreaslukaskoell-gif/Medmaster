@@ -711,13 +711,14 @@ Alternativform: ΔU = Q − W_System (wenn W_System die vom System verrichtete A
 Die innere Energie U ist die Gesamtenergie aller Mikrozustände (Translation, Rotation, Vibration der Teilchen, Bindungsenergien). Bei idealen Gasen gilt U ∝ T.
 
 Spezielle Zustandsänderungen:
-- **Isochor** (V = const): W = 0 → ΔU = Q (gesamte Wärme erhöht innere Energie)
-- **Isobar** (p = const): W = −p·ΔV → ΔU = Q − p·ΔV
 
-Bei **isobaren Prozessen** (p = const) leistet das System Volumenarbeit gegen den konstanten Außendruck. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontraktion).
+- **Isochor** (V = const): Ein geschlossener Druckkochtopf — das Volumen bleibt gleich, aber der Druck steigt mit der Temperatur. W = 0 → **ΔU = Q** (gesamte Wärme erhöht innere Energie).
 
-- **Isotherm** (T = const): ΔU = 0 → Q = −W (beim idealen Gas)
-- **Adiabatisch** (Q = 0): ΔU = W (alle Arbeit geht in innere Energie, Temperatur ändert sich)
+- **Isobar** (p = const): Ein Kolben, der sich frei bewegen kann — der Druck bleibt gleich, aber das Volumen ändert sich. W = −p·ΔV → **ΔU = Q − p·ΔV**. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontraktion).
+
+- **Isotherm** (T = const): Langsame Expansion mit permanentem Wärmeaustausch — die Temperatur bleibt gleich, das Gas leistet Arbeit und nimmt dafür Wärme auf. **ΔU = 0 → Q = −W** (beim idealen Gas).
+
+- **Adiabatisch** (Q = 0): Ein schneller Kompressionsvorgang — so schnell, dass keine Wärme entweichen kann. **ΔU = W** (alle Arbeit geht in innere Energie, Temperatur ändert sich).
 
 Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt).
 
@@ -734,7 +735,7 @@ Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt)
 
 Folgen:
 - Keine thermische Maschine kann 100 % der Wärme in Arbeit umwandeln.
-- Biologie scheinbar im Widerspruch? Nein: Lebewesen sind **offene Systeme** — sie exportieren Entropie in die Umgebung (Wärme, Abfall), um intern Ordnung aufrechtzuerhalten.
+- Biologie scheinbar im Widerspruch? Nein: Der zweite Hauptsatz gilt für **abgeschlossene Systeme** (kein Energie-/Materieaustausch). Lebewesen sind **offene Systeme**: Sie nehmen hochgeordnete Nahrung (niedrige Entropie) auf und geben Wärme, CO₂ und Abfallprodukte ab (hohe Entropie). Lokal sinkt die Entropie im Organismus, aber die Gesamtentropie (Organismus + Umgebung) steigt — der zweite Hauptsatz bleibt gewahrt.
 
 
 
@@ -753,37 +754,17 @@ Der maximal erreichbare Wirkungsgrad η einer Wärmekraftmaschine zwischen zwei 
 
 ## Biologische Anwendung: ATP-Synthese
 
-Mitochondrien arbeiten nicht wie Wärmekraftmaschinen, sondern nutzen elektrochemische Gradienten. Der bioenergische Wirkungsgrad der oxidativen Phosphorylierung beträgt ≈ 38–40 %. Die restliche Energie (~60 %) wird als Wärme abgegeben und hält die Körpertemperatur aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zur Arbeit.
+Die Hauptsätze gelten auch für biologische Systeme — Mitochondrien sind keine Ausnahme. Sie arbeiten allerdings nicht wie Wärmekraftmaschinen (Carnot ist nicht anwendbar), sondern nutzen elektrochemische Gradienten (Protonenmotorische Kraft). Aus der Verbrennungsenergie von Glucose (ΔG° = −2870 kJ/mol) werden ≈ 30 mol ATP synthetisiert (je 30,5 kJ/mol freie Enthalpie): Genutzte Energie = 30 × 30,5 = 915 kJ → **η ≈ 34 %**. Die restlichen ~66 % werden als Wärme abgegeben und halten die Körpertemperatur aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zur Arbeit.
 
-Formell: Verbrennungsenergie von Glucose (ΔG = −2870 kJ/mol) → ≈ 30 mol ATP (≈ 30 × 30,5 kJ = 915 kJ) → η ≈ 32 %.
+## Thermoregulation — Querverweis
 
-## Körpertemperaturregulation — Thermodynamik am lebenden Organismus
-
-Der Mensch ist **homoiotherm** (gleichwarm): Die Kerntemperatur wird bei ~37 °C gehalten, unabhängig von der Umgebungstemperatur. Thermodynamisch betrachtet ist der Körper ein offenes System, das ständig Wärme produziert und abgibt. Die Wärmebilanz lautet:
-
-**Q_Produktion = Q_Strahlung + Q_Konvektion + Q_Leitung + Q_Verdunstung**
-
-- **Strahlung (Infrarot)**: ~40 % der Wärmeabgabe in Ruhe. Jeder Körper mit T > 0 K strahlt elektromagnetische Energie ab (Stefan-Boltzmann: P = ε·σ·A·T⁴). Bei 37 °C und 1,8 m² Körperoberfläche: P ≈ 80 W.
-- **Konvektion**: ~30 %. Warme Luft steigt von der Haut auf und wird durch kühlere ersetzt. Wind verstärkt den Effekt (Windchill).
-- **Verdunstung**: ~25 %. Pro Gramm Schweiß werden 2430 J abgeführt (bei 37 °C). Maximal ~1 L/h Schweiß → bis 675 W Kühlleistung.
-- **Leitung (Konduktion)**: ~5 %. Direkte Wärmeübertragung bei Kontakt mit kälteren Oberflächen.
-
-> **Merke:** Fieber erhöht den Sollwert des hypothalamischen Thermoregulationszentrums. Pro 1 °C Temperaturanstieg steigt der Grundumsatz um ~13 % (van-'t-Hoff-Regel: Verdopplung der Reaktionsgeschwindigkeit pro 10 °C, Q₁₀ ≈ 2–3).
-
-**Hypothermie in der Chirurgie:** Bei Herzoperationen wird die Körpertemperatur kontrolliert auf 28–32 °C gesenkt. Der Sauerstoffverbrauch sinkt um ~50 %, was das Gehirn bei Kreislaufstillstand schützt. Thermodynamisch: niedrigeres T → langsamere Enzymkinetik → geringerer O₂-Bedarf.
+Die Mechanismen der Wärmeabgabe (Strahlung, Konvektion, Verdunstung) werden in UK 02 ausführlich behandelt. Thermodynamisch relevant ist hier vor allem die **van-'t-Hoff-Regel**: Pro 1 °C Temperaturanstieg steigt der Grundumsatz um ~13 % (Q₁₀ ≈ 2–3). Deshalb wird bei Herzoperationen die Körpertemperatur auf 28–32 °C gesenkt — der Sauerstoffverbrauch sinkt um ~50 %, was das Gehirn bei Kreislaufstillstand schützt.
 
 ## Kalorimetrie: Brennwerte messen
 
-Die **Kalorimetrie** misst die bei chemischen Reaktionen freigesetzte Wärme. Zwei Methoden sind zentral:
+Um den Energieumsatz quantitativ zu erfassen, nutzt man die **Kalorimetrie**. Im **Bombenkalorimeter** verbrennt eine Probe vollständig bei V = const in reinem O₂; die freigesetzte Wärme Q = ΔU (isochor) liefert den **physikalischen Brennwert**: Kohlenhydrate ~17 kJ/g, Fette ~39 kJ/g, Proteine ~23 kJ/g. Der **physiologische Brennwert** von Proteinen ist mit ~17 kJ/g geringer, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff ausscheidet.
 
-| Methode | Prinzip | Anwendung |
-|---|---|---|
-| **Bombenkalorimeter** | Probe verbrennt vollständig bei V = const in reinem O₂; Q = ΔU (isochor) | Physikalischer Brennwert von Nahrungsmitteln |
-| **Indirekte Kalorimetrie** | O₂-Verbrauch und CO₂-Produktion messen → Energieumsatz über respiratorischen Quotienten (RQ) berechnen | Grundumsatz (BMR) in der Ernährungsmedizin |
-
-- **Physikalischer Brennwert** (Bombenkalorimeter): Kohlenhydrate ~17 kJ/g, Fette ~39 kJ/g, Proteine ~23 kJ/g
-- **Physiologischer Brennwert** (im Körper): Proteine nur ~17 kJ/g, weil Stickstoff als Harnstoff ausgeschieden wird (nicht vollständig oxidiert)
-- **RQ** = V(CO₂)/V(O₂): Kohlenhydrate RQ = 1,0; Fette RQ ≈ 0,7; Proteine RQ ≈ 0,8
+Klinisch relevanter ist die **indirekte Kalorimetrie**: Über den O₂-Verbrauch und die CO₂-Produktion wird der Grundumsatz (Basal Metabolic Rate) berechnet — das Standardverfahren in der Ernährungsmedizin und Intensivpflege.
 
 > **Merke:** Der physiologische Brennwert von Proteinen ist geringer als der physikalische, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff (energiereich) ausscheidet.
 
@@ -799,8 +780,8 @@ T_warm = 550 °C = 823 K (Dampf), T_kalt = 30 °C = 303 K (Flusswasser):
 
 **Beispiel 2 — Energiebilanz der Glucose-Oxidation:**
 Glucose: ΔG° = −2870 kJ/mol. Daraus werden ≈ 30 mol ATP synthetisiert, je 30,5 kJ/mol freie Enthalpie:
-Genutzte Energie: 30 × 30,5 = 915 kJ. Wirkungsgrad: η = 915/2870 = 31,9 %. Die restlichen 1955 kJ (68 %) werden als Wärme freigesetzt.
-Pro Tag (2000 kcal ≈ 8400 kJ): ~5700 kJ = 5,7 MJ Wärme → Durchschnittsleistung: 5 700 000 J / 86 400 s ≈ 66 W (Ruhemetabolismus).
+Genutzte Energie: 30 × 30,5 = 915 kJ. Wirkungsgrad: η = 915/2870 ≈ **34 %** (≈ 32 %, je nach ATP-Ausbeute 30–32 mol; als Richtwert gilt ~34 %). Die restlichen ~66 % (≈ 1955 kJ) werden als Wärme freigesetzt.
+Pro Tag (2000 kcal ≈ 8400 kJ): ~5500 kJ Wärme → Durchschnittsleistung: 5 500 000 J / 86 400 s ≈ 64 W (Ruhemetabolismus).
 
 **Beispiel 3 — Wärmekraftmaschine: Arbeit und Abwärme:**
 Maschine nimmt Q_warm = 1200 J auf, verrichtet W = 400 J Nutzarbeit.
@@ -847,7 +828,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         },
         {
           heading: "Entropie und Biologie",
-          text: "Lebende Systeme sind offene Systeme: Sie nehmen hoch strukturierte Energie (Nahrung, Licht) auf und geben unstrukturierte Wärme ab, wodurch sie intern Ordnung aufrechterhalten können (Protein-Synthese, Zellteilung). Der Gesamtentropie des Universums nimmt trotzdem zu — das Leben verletzt den zweiten Hauptsatz nicht. ATP-Synthese hat einen Wirkungsgrad von ≈ 38 %, die verbleibenden 62 % der Glucose-Verbrennungsenergie dienen der Körperwärmeerzeugung.",
+          text: "Lebende Systeme sind offene Systeme: Sie nehmen hoch strukturierte Energie (Nahrung, Licht) auf und geben unstrukturierte Wärme ab, wodurch sie intern Ordnung aufrechterhalten können (Protein-Synthese, Zellteilung). Der Gesamtentropie des Universums nimmt trotzdem zu — das Leben verletzt den zweiten Hauptsatz nicht. ATP-Synthese hat einen Wirkungsgrad von ≈ 34 %, die verbleibenden ~66 % der Glucose-Verbrennungsenergie dienen der Körperwärmeerzeugung.",
           merksatz:
             "Lebewesen sind offene Systeme — sie exportieren Entropie, um intern Ordnung zu erzeugen. Kein Widerspruch zum 2. Hauptsatz.",
         },
@@ -858,9 +839,9 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         "1. Hauptsatz: ΔU = Q + W — Energieerhaltung, kein Perpetuum mobile erster Art.",
         "2. Hauptsatz: Entropie abgeschlossener Systeme nimmt nie ab (ΔS ≥ 0).",
         "Carnot-Wirkungsgrad: η = 1 − T_kalt/T_warm — maximaler Wirkungsgrad, T in Kelvin.",
-        "Adiabatisch + Kompression → Temperatur steigt (Q = 0, W > 0 → ΔU > 0).",
-        "Isotherm + ideales Gas: ΔU = 0 → Q = −W (Wärme = negative Arbeit des Systems).",
-        "ATP-Wirkungsgrad ≈ 38 % — restliche 62 % werden als Körperwärme abgegeben.",
+        "Adiabatische Kompression: Die gesamte Arbeit wird in innere Energie umgewandelt — deshalb wird eine Fahrradpumpe heiß.",
+        "Isotherme Expansion: Das Gas leistet Arbeit, muss aber gleichzeitig Wärme aufnehmen, um nicht abzukühlen.",
+        "ATP-Wirkungsgrad ≈ 34 % — restliche ~66 % werden als Körperwärme abgegeben.",
         "Lebewesen verletzen den 2. Hauptsatz nicht: Sie sind offene Systeme, die Entropie exportieren.",
         "Dritter Hauptsatz: Bei T = 0 K ist S = 0 (perfekter Kristall) — 0 K nicht erreichbar.",
       ],
@@ -874,7 +855,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
       },
 
       klinischerBezug:
-        "ATP-Synthese (~38 % Wirkungsgrad), Körperwärme als metabolisches Nebenprodukt (Fieber bei erhöhtem Stoffwechsel), Wärmekraftmaschinen-Analogie für Herz-Kreislaufarbeit.",
+        "ATP-Synthese (~34 % Wirkungsgrad), Körperwärme als metabolisches Nebenprodukt (Fieber bei erhöhtem Stoffwechsel), Wärmekraftmaschinen-Analogie für Herz-Kreislaufarbeit.",
 
       selfTest: [
         {
@@ -932,7 +913,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
         },
         {
           question:
-            "Die ATP-Synthese in den Mitochondrien hat einen Wirkungsgrad von ca. 38 %. Was geschieht mit den restlichen 62 % der Energie der Nahrung?",
+            "Die ATP-Synthese in den Mitochondrien hat einen Wirkungsgrad von ca. 34 %. Was geschieht mit den restlichen ~66 % der Energie der Nahrung?",
           options: [
             "Sie werden in ADP gespeichert.",
             "Sie werden direkt als mechanische Arbeit genutzt.",
@@ -942,9 +923,9 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
           ],
           correctIndex: 4,
           explanation:
-            "Gemäß dem zweiten Hauptsatz kann kein Prozess 100 % der Energie in eine andere Form umwandeln. Bei der oxidativen Phosphorylierung werden ≈ 38 % der freien Enthalpie der Glucose (ΔG° = −2870 kJ/mol) in ATP-Bindungsenergie überführt. Die verbleibenden ≈ 62 % werden als Wärme freigesetzt und halten die Körpertemperatur bei 37 °C aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zum Energieumsatz — daher erhöht sich die Körpertemperatur bei Sport leicht.",
+            "Gemäß dem zweiten Hauptsatz kann kein Prozess 100 % der Energie in eine andere Form umwandeln. Bei der oxidativen Phosphorylierung werden ≈ 34 % der freien Enthalpie der Glucose (ΔG° = −2870 kJ/mol) in ATP-Bindungsenergie überführt (30 × 30,5 kJ = 915 kJ; 915/2870 ≈ 34 %). Die verbleibenden ~66 % werden als Wärme freigesetzt und halten die Körpertemperatur bei 37 °C aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zum Energieumsatz — daher erhöht sich die Körpertemperatur bei Sport leicht.",
           hints: [
-            "Wirkungsgrad 38 % bedeutet: Von 100 % Nahrungsenergie werden 38 % nutzbar (ATP), der Rest?",
+            "Wirkungsgrad ~34 % bedeutet: Von 100 % Nahrungsenergie werden ~34 % nutzbar (ATP), der Rest?",
             "Thermodynamisches Prinzip: Nicht nutzbare Energie wird als Wärme abgegeben (2. Hauptsatz).",
           ],
           tags: ["atp-synthese", "wirkungsgrad", "thermodynamik"],
@@ -994,7 +975,7 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
 
 Stellt man sich ein Gas als Ansammlung winziger, punktförmiger Teilchen vor, die keinerlei Anziehungskräfte aufeinander ausüben und deren Eigenvolumen vernachlässigbar ist, so gelangt man zum Modell des **idealen Gases**. Dieses Modell beschreibt das Verhalten realer Gase erstaunlich gut, solange der Druck nicht zu hoch und die Temperatur nicht zu niedrig ist — Bedingungen, die in der Lungenphysiologie und bei Blutgasanalysen fast immer erfüllt sind.
 
-Die zentrale Gleichung, die alle Zustandsgrößen eines idealen Gases miteinander verknüpft, lautet:
+Die physikalische Intuition ist einfach: Mehr Teilchen in einem Raum erzeugen mehr Stöße gegen die Wand — also höheren Druck. Höhere Temperatur bedeutet schnellere Teilchen, die härter gegen die Wand prallen — ebenfalls höherer Druck. Die zentrale Gleichung, die alle Zustandsgrößen miteinander verknüpft, lautet:
 
 **p · V = n · R · T**
 
@@ -1014,7 +995,7 @@ Die **Schmelzkurve** trennt den festen vom flüssigen Bereich und verläuft bei 
 
 Am **Tripelpunkt** treffen alle drei Kurven zusammen: Hier koexistieren feste, flüssige und gasförmige Phase gleichzeitig im Gleichgewicht. Für Wasser liegt dieser bemerkenswerte Punkt bei T_triple = 273,16 K und p_triple = 611,7 Pa — knapp über dem Gefrierpunkt bei extrem niedrigem Druck.
 
-Eine Besonderheit des Wassers verdient besondere Aufmerksamkeit: Seine Schmelzkurve hat eine **negative Steigung**. Das bedeutet, dass eine Druckerhöhung den Schmelzpunkt senkt — Eis kann durch Druck zum Schmelzen gebracht werden. Dieses ungewöhnliche Verhalten erklärt, warum Schlittschuhe auf Eis gleiten und warum Gletscher an ihrer Unterseite fließen können.
+Eine Besonderheit des Wassers verdient besondere Aufmerksamkeit: Seine Schmelzkurve hat eine **negative Steigung**. Das bedeutet, dass eine Druckerhöhung den Schmelzpunkt senkt — Eis kann durch Druck zum Schmelzen gebracht werden. **Ursache:** Eis ist weniger dicht als flüssiges Wasser (ρ_Eis ≈ 917 kg/m³ vs. ρ_Wasser ≈ 1000 kg/m³). Nach Le Chatelier verschiebt Druckerhöhung das Gleichgewicht zur dichteren Phase — also zu flüssigem Wasser. Deshalb sinkt der Schmelzpunkt unter Druck. Dieses ungewöhnliche Verhalten erklärt, warum Gletscher an ihrer Unterseite fließen können.
 
 ## Latentwärmen (Phasenübergangswärme)
 
@@ -1028,7 +1009,17 @@ Für Wasser gilt: **Schmelzwärme** L_f = 334 000 J/kg und **Verdampfungswärme*
 
 ## Dampfdruck und Siedepunkt
 
-Über jeder Flüssigkeit befindet sich ein Gleichgewicht zwischen verdampfenden und kondensierenden Molekülen. Der Druck, den der Dampf dabei ausübt, ist der **Dampfdruck** p_D(T), und er steigt exponentiell mit der Temperatur an — beschrieben durch die Clausius-Clapeyron-Gleichung. Sobald der Dampfdruck den Umgebungsdruck erreicht (p_D = p_außen), beginnt die Flüssigkeit zu **sieden**: Dampfblasen bilden sich im Inneren der Flüssigkeit und steigen auf.
+Über jeder Flüssigkeit befindet sich ein Gleichgewicht zwischen verdampfenden und kondensierenden Molekülen. Der Druck, den der Dampf dabei ausübt, ist der **Dampfdruck** p_D(T), und er steigt exponentiell mit der Temperatur an. Die **Clausius-Clapeyron-Gleichung** beschreibt, wie sich der Siedepunkt mit dem Druck ändert — deshalb kocht Wasser in den Bergen bei niedrigerer Temperatur und im Autoklav erst bei 121 °C:
+
+> **dp/dT = ΔH_vap / (T · ΔV)**
+
+In der vereinfachten, integrierten Form (für ideale Gase und ΔV ≈ V_gas):
+
+> **ln(p₂/p₁) = −ΔH_vap/R · (1/T₂ − 1/T₁)**
+
+Dabei ist ΔH_vap die molare Verdampfungsenthalpie (Wasser: 40,7 kJ/mol), R = 8,314 J/(mol·K) die Gaskonstante und T die absolute Temperatur in Kelvin. Die Gleichung erklärt quantitativ, warum der Dampfdruck exponentiell mit T steigt.
+
+Sobald der Dampfdruck den Umgebungsdruck erreicht (p_D = p_außen), beginnt die Flüssigkeit zu **sieden**: Dampfblasen bilden sich im Inneren der Flüssigkeit und steigen auf.
 
 Diese Druckabhängigkeit des Siedepunkts hat weitreichende praktische Konsequenzen. Im Hochgebirge, wo der Luftdruck geringer ist, siedet Wasser bereits unter 100 °C — auf 3000 m Höhe etwa bei 90 °C, weshalb Eier dort deutlich länger gekocht werden müssen. Im **Dampfkochtopf** wird umgekehrt der Druck erhöht, sodass der Siedepunkt steigt und Lebensmittel bei höherer Temperatur schneller garen. Das medizinisch wichtigste Beispiel ist der **Autoklav**: Bei 2 bar Überdruck erreicht Wasserdampf 121 °C — eine Temperatur, die ausreicht, um selbst hitzeresistente Bakteriensporen innerhalb von 15 Minuten abzutöten.
 

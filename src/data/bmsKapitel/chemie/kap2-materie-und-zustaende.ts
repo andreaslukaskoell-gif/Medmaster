@@ -103,11 +103,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
 
 > **Merke:** Leichtere Gase sind bei gleicher Temperatur schneller: v_rms = √(3RT/M) – M muss in kg/mol eingesetzt werden!
 
-## Licht als elektromagnetische Welle
-
-Licht lässt sich als **elektromagnetische Welle** beschreiben, charakterisiert durch Wellenlänge λ, Frequenz ν und die fundamentale Beziehung c = λ·ν. Die **Lichtgeschwindigkeit im Vakuum** beträgt c ≈ 3 × 10⁸ m/s (300.000 km/s). Gleichzeitig zeigt Licht Teilchencharakter: Die Lichtquanten heißen **Photonen** – nicht zu verwechseln mit Protonen! Die Energie eines Photons ist umgekehrt proportional zur Wellenlänge: E = h·ν = h·c/λ. Je kürzer die Wellenlänge, desto energiereicher das Licht – UV-Strahlung ist energiereicher als sichtbares Licht, und Röntgenstrahlung energiereicher als UV.
-
-> **Merke:** Licht = elektromagnetische Welle; c ≈ 300.000 km/s; Lichtteilchen = **Photonen**; Energie ~ 1/Wellenlänge.`,
+`,
 
       lernziele: [
         "Die ideale Gasgleichung pV=nRT aus den Einzelgesetzen (Boyle-Mariotte, Charles, Avogadro) herleiten und auf Rechenaufgaben anwenden.",
@@ -396,12 +392,9 @@ wobei kH die substanzspezifische Henry-Konstante ist. Bei erhöhtem O2-Partialdr
 
 ## Sauerstofftoxizität und Hyperoxie
 
-Zu hohe O2-Partialdrucke sind schädlich! Bei F_IO2 > 0,6 über längere Zeit drohen:
-- **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizität -- Entzündung der Alveolarepithelien, Surfactant-Schädigung (oberflächenaktive Substanz der Alveolen), ARDS-ähnliches Bild
-- **Paul-Bert-Effekt**: Zerebrale O2-Toxizität bei p(O2) > 160 kPa (Tauchen mit reinem O2 tiefer als 6 m) -- Krampfanfälle
-- **Retinopathia praematurorum** (Netzhauterkrankung Frühgeborener): Bei Frühgeborenen führt hoher p(O2) zu pathologischer Gefäßneubildung in der Retina (Netzhaut) -> Erblindungsgefahr
+Zu hohe O2-Partialdrucke sind schädlich! Bei F_IO2 > 0,6 über längere Zeit droht der **Lorrain-Smith-Effekt**: Pulmonale O2-Toxizität mit Entzündung der Alveolarepithelien und Surfactant-Schädigung (oberflächenaktive Substanz der Alveolen), die ein ARDS-ähnliches Bild verursachen kann. Auch zerebrale Toxizität (Krampfanfälle) und Netzhautschäden bei Frühgeborenen sind bekannt.
 
-> **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schädigt Lunge, Gehirn und Retina. Zielwert: p(O2)_art = 8-13 kPa (60-100 mmHg).
+> **Merke:** Sauerstoff ist ein Medikament mit therapeutischer Breite! Zu wenig (Hypoxie) ist lebensbedrohlich, zu viel (Hyperoxie) schädigt vor allem die Lunge (Lorrain-Smith-Effekt). Zielwert: p(O2)_art = 8-13 kPa (60-100 mmHg).
 
 ## Umrechnung kPa und mmHg
 
@@ -614,68 +607,19 @@ Das Henry-Gesetz (c = k_H · p) beschreibt die physikalische Löslichkeit: Im Bl
         "DLCO-Test",
         "Isotopentrennung",
       ],
-      content: `## Diffusion von Gasen
+      content: `## Grahamsches Gesetz der Diffusion und Effusion
 
-**Diffusion** ist der spontane, thermisch getriebene Transport von Gasteilchen von Orten höherer Konzentration zu Orten niedrigerer Konzentration. Der Antrieb ist die Entropiezunahme (Zunahme der Unordnung): Systeme streben zum Zustand maximaler Unordnung.
-
-Makroskopisch beschreibt das **erste Ficksche Diffusionsgesetz** die Diffusion:
-
-**J = −D · (dc/dx)**
-
-- J: Diffusionsstromdichte [mol/(m²·s)] – Stofffluss pro Fläche und Zeit
-- D: Diffusionskoeffizient [m²/s] – substanz- und mediumspezifisch
-- dc/dx: Konzentrationsgradient (negatives Vorzeichen: Fluss von hoher zu niedriger Konzentration)
-
-## Grahamsches Gesetz der Diffusion und Effusion
-
-Thomas Graham (1848) entdeckte: Die Diffusionsrate eines Gases ist **umgekehrt proportional zur Wurzel seiner molaren Masse**:
+Thomas Graham (1848) entdeckte: **Leichtere Gasmoleküle bewegen sich schneller als schwere.** Der Grund: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT). Wenn die Energie gleich ist, muss ein leichteres Molekül schneller fliegen, um denselben Energiewert zu erreichen. Daraus folgt die quantitative Beziehung:
 
 **r₁/r₂ = √(M₂/M₁)**
 
-
-Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum). Das Grahamsche Gesetz folgt direkt aus der kinetischen Gastheorie: Bei gleicher Temperatur haben alle Gasmoleküle dieselbe mittlere kinetische Energie (½Mv² = 3/2 k_BT → v ∝ 1/√M).
-
+Die Diffusionsrate (r) ist umgekehrt proportional zur Wurzel der molaren Masse. Gleiches gilt für **Effusion** (Ausströmen durch eine sehr kleine Öffnung ins Vakuum).
 
 **Beispiele:**
 - H₂ (M = 2) vs. O₂ (M = 32): r(H₂)/r(O₂) = √(32/2) = √16 = 4 → H₂ diffundiert 4-mal schneller!
 - N₂ (M = 28) vs. CO₂ (M = 44): r(N₂)/r(CO₂) = √(44/28) ≈ 1,25 → N₂ 25 % schneller.
 
-## Mittlere freie Weglänge
-
-In einem Gas kollidieren Moleküle ständig. Die **mittlere freie Weglänge** λ ist die Durchschnittsstrecke zwischen zwei Kollisionen:
-
-**λ = k_BT / (√2 · π · d² · p)**
-
-Bei Atmosphärendruck und 25 °C: λ ≈ 60–70 nm für N₂. Kollisionsfrequenz z ≈ 5 × 10⁹ s⁻¹ (5 Milliarden/s!). Trotz hoher Molekülgeschwindigkeit (v_rms ≈ 515 m/s) ist die Nettoausbreitung durch ständige Richtungsänderungen langsam.
-
-## Ficksche Gesetze in der Lungendiffusion
-
-Für den pulmonalen Gasaustausch gilt (Ficks Gesetz für Membranen):
-
-**Fluss = (D × A × Δp) / d**
-
-- A: Alveolarfläche (60–80 m² – entspricht einem Tennisplatz!)
-- D: Diffusionskoeffizient (∝ Löslichkeit / √Molmasse)
-- Δp: Partialdruckgradient über der Membran
-- d: Diffusionsstrecke (alveolo-kapilläre Membran: 0,3–0,5 μm)
-
-CO₂ diffundiert ca. 20-mal schneller als O₂ in der Lunge, obwohl es schwerer ist, weil CO₂ in wässrigen Medien viel löslicher ist (Löslichkeit geht linear in D ein, Masse nur als Wurzel).
-
-## Anwendung: Isotopentrennung
-
-Grahams Effusionsgesetz ermöglicht die Trennung von Gasisotopen. Urananreicherung für Kernkraftwerke nutzt Effusion von UF₆:
-
-r(²³⁵UF₆)/r(²³⁸UF₆) = √(352/349) = 1,0043
-
-Nur 0,43 % Unterschied pro Stufe → tausende Kaskadenstufen nötig!
-
-## Zweites Ficksches Gesetz
-
-Das zweite Ficksche Gesetz beschreibt die zeitliche Konzentrationsänderung:
-
-**∂c/∂t = D · ∂²c/∂x²**
-
-Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze Strecken (Zellmembran: nm) extrem schnell, über große Distanzen (Organe: cm) viel zu langsam – deshalb brauchen höhere Organismen Kreislaufsysteme.
+Technisch lässt sich die Effusion auch zur Isotopentrennung nutzen (z. B. ²³⁵UF₆ vs. ²³⁸UF₆), allerdings beträgt der Unterschied pro Stufe nur 0,43 %, weshalb tausende Kaskadenstufen nötig sind.
 
 ## Rechenbeispiel: Grahamsches Gesetz
 
@@ -690,6 +634,46 @@ Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze
 
 > **Merke:** Das leichtere Gas legt den größeren Weg zurück. Der Treffpunkt liegt NICHT in der Mitte, sondern verschoben zur Seite des schwereren Gases. Dies ist ein klassisches Prüfungsbeispiel für Grahams Gesetz!
 
+## Ficksches Diffusionsgesetz und klinische Anwendung
+
+**Diffusion** ist der spontane Transport von Teilchen von Orten höherer zu Orten niedrigerer Konzentration. Der Diffusionsstrom ist proportional zum Konzentrationsgefälle und zur Fläche — steiles Gefälle = schnelle Diffusion. Mathematisch formuliert das **erste Ficksche Gesetz**:
+
+**J = −D · (dc/dx)**
+
+- J: Diffusionsstromdichte [mol/(m²·s)] – Stofffluss pro Fläche und Zeit
+- D: Diffusionskoeffizient [m²/s] – substanz- und mediumspezifisch
+- dc/dx: Konzentrationsgradient (negatives Vorzeichen: Fluss von hoher zu niedriger Konzentration)
+
+Für den **pulmonalen Gasaustausch** wird Ficks Gesetz auf die Membrandiffusion angepasst:
+
+**Fluss = (D × A × Δp) / d**
+
+- A: Alveolarfläche (60–80 m² – entspricht einem Tennisplatz!)
+- D: Diffusionskoeffizient (∝ Löslichkeit / √Molmasse)
+- Δp: Partialdruckgradient über der Membran
+- d: Diffusionsstrecke (alveolo-kapilläre Membran: 0,3–0,5 μm)
+
+CO₂ diffundiert ca. 20-mal schneller als O₂ in der Lunge, obwohl es schwerer ist, weil CO₂ in wässrigen Medien viel löslicher ist (Löslichkeit geht linear in D ein, Masse nur als Wurzel).
+
+## DLCO-Test: Klinische Messung der Diffusionskapazität
+
+Der **DLCO-Test** (Transfer-Faktor für CO) nutzt Ficks Gesetz direkt:
+- Patient atmet eine geringe CO-Konzentration (0,3 %) ein und hält 10 s die Luft an
+- CO hat eine **210× höhere Hb-Affinität als O₂** → p_Blut(CO) ≈ 0 → maximaler Gradient ist immer gewährleistet
+- Der gemessene CO-Uptake reflektiert ausschließlich die Membranparameter (A, d, D)
+
+**Erniedrigter DLCO** bei: Lungenfibrose (d↑ → dickere Membran), Emphysem (A↓ → zerstörte Alveolarfläche), pulmonale Hypertonie (Gefäßverdickung), Anämie (weniger Hb).
+
+**Erhöhter DLCO** bei: Alveolärer Hämorrhagie (Blut in Alveolen bindet CO), Polyzythämie (mehr Hb), Links-Rechts-Shunt (erhöhtes pulmonales Blutvolumen).
+
+> **Merke:** DLCO ↓ bei Fibrose (d↑) und Emphysem (A↓) — beide Erkrankungen schädigen die Diffusionsstrecke durch verschiedene Mechanismen.
+
+## Mittlere freie Weglänge
+
+Obwohl Gasmoleküle bei Raumtemperatur mit Hunderten von Metern pro Sekunde fliegen, ist die Nettoausbreitung langsam, weil sie ständig kollidieren. Die **mittlere freie Weglänge** λ – also die Durchschnittsstrecke zwischen zwei Kollisionen – beträgt bei Atmosphärendruck und 25 °C nur ca. 60–70 nm für N₂ (Kollisionsfrequenz: ca. 5 Milliarden/s!).
+
+Die biologische Konsequenz: Diffusion ist über kurze Strecken (Zellmembran: nm) extrem schnell, über große Distanzen (Organe: cm) viel zu langsam – deshalb brauchen höhere Organismen Kreislaufsysteme.
+
 ## Diffusionskoeffizienten: Vergleichswerte
 
 | Medium | D (m²/s) | Beispiel |
@@ -698,27 +682,7 @@ Charakteristische Diffusionszeitskala: t ≈ x²/(2D). Diffusion ist über kurze
 | Gas in Wasser | ~10⁻⁹ | O₂ in H₂O: 2,1 × 10⁻⁹ |
 | Protein in Wasser | ~10⁻¹¹ | Hämoglobin: 6,9 × 10⁻¹¹ |
 
-Der Diffusionskoeffizient in Wasser ist ca. **10.000× kleiner** als in Luft – dies hat fundamentale biologische Konsequenzen. Zellen müssen klein sein (typisch 10–50 μm), damit Nährstoffe per Diffusion alle Bereiche rechtzeitig erreichen. Größere Organismen benötigen konvektive Transportsysteme (Kreislauf, Atemwege).
-
-## Klinischer Bezug: DLCO-Test und Diffusionsstörungen
-
-Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung der Diffusionskapazität. Das Prinzip nutzt Ficks Gesetz direkt:
-- Patient atmet eine geringe CO-Konzentration (0,3 %) ein und hält 10 s die Luft an
-- CO hat eine **210× höhere Hb-Affinität als O₂** → p_Blut(CO) ≈ 0 → maximaler Gradient ist immer gewährleistet
-- Der gemessene CO-Uptake reflektiert ausschließlich die Membranparameter (A, d, D)
-
-**Erniedrigter DLCO** bei:
-- Lungenfibrose (narbiger Umbau des Lungengewebes; d↑ → dickere Membran)
-- Emphysem (Zerstörung der Lungenbläschen; A↓ → zerstörte Alveolarfläche)
-- Pulmonale Hypertonie (Lungenhochdruck; Gefäßverdickung)
-- Anämie (weniger Hb zur CO-Bindung)
-
-**Erhöhter DLCO** bei:
-- Alveolärer Hämorrhagie (Lungenblutung; Blut in Alveolen bindet CO)
-- Polyzythämie (krankhafte Vermehrung roter Blutkörperchen; mehr Hb)
-- Links-Rechts-Shunt (Kurzschlussverbindung im Herzen; erhöhtes pulmonales Blutvolumen)
-
-> **Merke:** DLCO ↓ bei Fibrose (d↑) und Emphysem (A↓) — beide Erkrankungen schädigen die Diffusionsstrecke durch verschiedene Mechanismen.`,
+Der Diffusionskoeffizient in Wasser ist ca. **10.000× kleiner** als in Luft. Zellen müssen daher klein sein (typisch 10–50 μm), damit Nährstoffe per Diffusion alle Bereiche rechtzeitig erreichen.`,
 
       lernziele: [
         "Das Grahamsche Gesetz der Diffusion/Effusion formulieren und anwenden: r₁/r₂ = √(M₂/M₁).",
@@ -747,16 +711,12 @@ Der **DLCO-Test** (Transfer-Faktor für CO) ist die wichtigste klinische Messung
         },
       ],
       merksätze: [
-        "Graham: r₁/r₂ = √(M₂/M₁) – Diffusions-/Effusionsrate umgekehrt proportional zur Wurzel der molaren Masse.",
-        "Bei gleicher T: ½Mv² = const für alle idealen Gase – leichtere Moleküle bewegen sich schneller.",
+        "Graham: r₁/r₂ = √(M₂/M₁) – leichtere Moleküle bewegen sich schneller, weil bei gleicher Temperatur alle Gase dieselbe kinetische Energie haben.",
         "H₂ (2 g/mol) diffundiert 4× schneller als O₂ (32 g/mol): √(32/2) = √16 = 4.",
-        "Ficks 1. Gesetz: J = −D·dc/dx – Fluss proportional zum Konzentrationsgradienten (von hoch nach niedrig).",
-        "Ficks Gesetz in der Lunge: Fluss = D·A·Δp/d – optimiert durch große A und kleines d.",
-        "CO₂ diffundiert in der Lunge 20× schneller als O₂ (wegen höherer Wasserlöslichkeit, trotz größerer Molmasse).",
-        "Mittlere freie Weglänge λ bei 1 bar ≈ 60–70 nm (N₂). Kollisionsfrequenz ≈ 5 Mrd./s.",
-        "Diffusionszeitskala: t ≈ x²/(2D). Über nm: Nanosekunden. Über 1 cm: Stunden!",
-        "Effusion: Ausströmen durch winzige Öffnung ins Vakuum – ebenfalls ∝ 1/√M (Graham gilt).",
-        "Isotopentrennung UF₆: Nur 0,43 % Unterschied pro Effusionsstufe → Tausende Kaskadenstufen nötig.",
+        "Fick: Steiles Konzentrationsgefälle + große Fläche + kurze Strecke = schnelle Diffusion. In der Lunge: Fluss = D·A·Δp/d.",
+        "CO₂ diffundiert in der Lunge 20× schneller als O₂ – die viel höhere Wasserlöslichkeit schlägt den Molmassen-Nachteil.",
+        "Diffusion über nm: Nanosekunden. Über 1 cm: Stunden! Deshalb brauchen große Organismen einen Kreislauf.",
+        "DLCO ↓ bei Fibrose (dickere Membran) und Emphysem (weniger Alveolarfläche) – zwei verschiedene Mechanismen, ein Test.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {

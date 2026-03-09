@@ -79,6 +79,8 @@ mit h = 6,626 × 10⁻³⁴ J·s (Plancksches Wirkungsquantum), f = Frequenz, c 
 
 Die Energie des Photons entspricht der Energiedifferenz: ΔE = Eₙ₂ − Eₙ₁ = hf.
 
+**Vorzeichenkonvention:** ΔE > 0 (positiv) bedeutet **Absorption** — das Elektron springt auf eine höhere Schale und nimmt ein Photon auf. ΔE < 0 (negativ) bedeutet **Emission** — das Elektron fällt auf eine tiefere Schale und gibt ein Photon ab. Der **Betrag** |ΔE| entspricht in beiden Fällen der Photonenenergie hf.
+
 Beim **Absorptionsspektrum** werden aus einem kontinuierlichen Spektrum bestimmte Wellenlängen absorbiert (dunkle Linien = Fraunhofer-Linien bei der Sonne). Beim **Emissionsspektrum** leuchten nur bestimmte Wellenlängen (helle Linien auf dunklem Hintergrund). Jedes Element besitzt ein einzigartiges Linienspektrum – ein “Fingerabdruck”, der in der analytischen Chemie und Astrophysik zur Identifikation genutzt wird.
 
 Für **Wasserstoff** liefern Übergänge zur n = 2-Schale die **Balmer-Serie** (sichtbares Licht):
@@ -409,19 +411,13 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 
 ## Zerfallsreihen
 
-Ein radioaktiver Kern zerfällt oft nicht in ein stabiles Nuklid, sondern in ein weiteres instabiles Nuklid, das erneut zerfällt. Es bilden sich **Zerfallsreihen**, die erst bei einem stabilen Endnuklid enden. In der Natur gibt es vier Zerfallsreihen (benannt nach ihrem langlebigsten Glied):
+Ein radioaktiver Kern zerfällt oft nicht in ein stabiles Nuklid, sondern in ein weiteres instabiles — es bilden sich **Zerfallsreihen** bis zu einem stabilen Endnuklid. Prüfungsrelevant ist vor allem die **Uran-Radium-Reihe** (A mod 4 = 4n+2), weil sie ²²²Rn (Radon) enthält — die wichtigste natürliche Strahlenquelle:
 
-| Reihe | Startnuklid | Endnuklid (stabil) | A mod 4 |
-|-------|-------------|---------------------|---------|
-| Uran-Radium | ²³⁸U | ²⁰⁶Pb | 4n+2 |
-| Actinium | ²³⁵U | ²⁰⁷Pb | 4n+3 |
-| Thorium | ²³²Th | ²⁰⁸Pb | 4n |
-| Neptunium | ²³⁷Np | ²⁰⁹Bi | 4n+1 |
-
-Die Uran-Radium-Reihe ist klinisch am relevantesten, weil sie ²²²Rn (Radon) enthält:
 ²³⁸U → (α) → ²³⁴Th → (β⁻) → ²³⁴Pa → (β⁻) → ²³⁴U → ... → ²²⁶Ra → (α) → **²²²Rn** → (α) → ²¹⁸Po → ... → ²⁰⁶Pb (stabil).
 
-> **Merke:** Alle natürlichen Zerfallsreihen enden bei einem stabilen Blei-Isotop (²⁰⁶Pb, ²⁰⁷Pb, ²⁰⁸Pb) oder ²⁰⁹Bi. Die Massenzahl A ändert sich nur bei α-Zerfall (−4), nicht bei β-Zerfall → die Reihen sind durch A mod 4 klassifiziert.
+Daneben existieren die Thorium-Reihe (²³²Th → ²⁰⁸Pb), die Actinium-Reihe (²³⁵U → ²⁰⁷Pb) und die ausgestorbene Neptunium-Reihe (²³⁷Np → ²⁰⁹Bi).
+
+> **Merke:** Die Uran-Radium-Reihe (²³⁸U → ... → ²²²Rn → ... → ²⁰⁶Pb) ist klinisch am wichtigsten wegen Radon. Massenzahl ändert sich nur bei α-Zerfall (−4), nicht bei β-Zerfall.
 
 ---
 
@@ -433,7 +429,7 @@ Die Uran-Radium-Reihe ist klinisch am relevantesten, weil sie ²²²Rn (Radon) e
 
 Die freigesetzten Neutronen können weitere ²³⁵U-Kerne spalten → **Kettenreaktion** (kontrolliert im Reaktor, unkontrolliert in der Atombombe). Nicht Alpha-, Beta-Teilchen, Protonen oder Neutrinos; **Neutronen** lösen die Kettenreaktion aus.
 
-**Massendefekt und Bindungsenergie:** Die **Masse des Atomkerns** ist **etwas geringer** als die Summe der Massen der in ihm enthaltenen Nukleonen (Protonen + Neutronen). Diese Massendifferenz (Massendefekt Δm) entspricht der **Bindungsenergie** des Kerns nach Einstein:
+**Massendefekt und Bindungsenergie:** Die Masse eines Atomkerns ist kleiner als die Summe seiner Einzelteile — die „fehlende" Masse wurde in Bindungsenergie umgewandelt (E = mc²). Wer den Kern in seine Einzelteile zerlegen will, muss genau diese Energie aufbringen. Diese Massendifferenz (Massendefekt Δm) entspricht der **Bindungsenergie** des Kerns nach Einstein:
 
 > **E_B = Δm · c²**
 
@@ -664,18 +660,13 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         },
       ],
       merksätze: [
-        "α-Zerfall: A−4, Z−2; Tunneleffekt; Abschirmung: Papier; w_R = 20; hoher LET.",
-        "β⁻-Zerfall: A gleich, Z+1; Elektron + Antineutrino; kontinuierliches Spektrum; Abschirmung: Aluminium.",
-        "β⁺-Zerfall: A gleich, Z−1; Positron + Neutrino; Annihilation → 2×511 keV unter 180°; Grundlage der PET.",
-        "γ-Strahlung: keine Änderung von A oder Z; isomerer Übergang; Abschirmung: Blei/Beton.",
-        "Zerfallsgesetz: N(t) = N₀·e^(−λt); Halbwertszeit T½ = ln2/λ ≈ 0,693/λ.",
-        "n Halbwertszeiten: N = N₀·(½)ⁿ – nach 10 HWZ < 0,1 % übrig.",
-        "Aktivität A = λ·N [Bq]; 1 Bq = 1 Zerfall/s; 1 Ci = 3,7×10¹⁰ Bq.",
-        "Effektive HWZ: 1/T_eff = 1/T_phys + 1/T_bio; immer kürzer als die kürzere Einzel-HWZ.",
-        "Energiedosis [Gy = J/kg]; Äquivalentdosis [Sv = Gy × w_R]; effektive Dosis [Sv = Σ(w_T × H_T)].",
-        "Massendefekt: Kernmasse < Nukleonensumme; E_B = Δm·c²; Maximum bei ⁵⁶Fe.",
-        "Neutronenabschirmung: Wasser/Paraffin (nicht Blei!); Neutronen lösen Kernspaltung aus.",
-        "Zerfallsreihen enden bei stabilem Blei: ²³⁸U → ... → ²⁰⁶Pb; ²³⁵U → ... → ²⁰⁷Pb.",
+        "Abschirmung merken: PAB — Papier (α), Aluminium (β), Blei (γ); Neutronen: Wasser/Paraffin (nicht Blei!).",
+        "α innerlich hochgefährlich (w_R = 20, hoher LET), äußerlich harmlos. β⁺-Annihilation → 2×511 keV → PET.",
+        "Halbwertszeit-Schnellrechnung: N = N₀·(½)ⁿ mit n = t/T½. Nach 10 HWZ < 0,1 % übrig.",
+        "Effektive HWZ: 1/T_eff = 1/T_phys + 1/T_bio — immer kürzer als die kürzere Einzel-HWZ.",
+        "Für α: 1 Gy = 20 Sv! Für β/γ: 1 Gy = 1 Sv. Effektive Dosis berücksichtigt zusätzlich Organempfindlichkeit (w_T).",
+        "Massendefekt: Die fehlende Kernmasse = Bindungsenergie (E = Δm·c²). Maximum bei ⁵⁶Fe → Fusion (leicht) und Spaltung (schwer) setzen Energie frei.",
+        "Uran-Radium-Reihe (²³⁸U → ²²²Rn → ²⁰⁶Pb): Radon = Nr. 2 Lungenkrebsursache nach Rauchen.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -860,7 +851,7 @@ In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert u
 **Steuerung der Bildqualität:**
 - **Röhrenspannung U (kV):** Bestimmt die maximale Photonenenergie und damit die Durchdringungsfähigkeit (Härte). Höhere Spannung → härtere Strahlung → weniger Kontrast, aber geringere Dosis.
 - **Röhrenstrom I (mA):** Bestimmt die Anzahl der Elektronen pro Zeiteinheit und damit die Strahlungsintensität (Menge). Höherer Strom → mehr Photonen → besseres Signal-Rausch-Verhältnis, aber höhere Dosis.
-- **Filterung (Al, Cu):** Absorbiert niederenergetische ("weiche") Photonen, die nicht zum Bild beitragen, aber die Hautdosis erhöhen → Aufhärtung des Strahls.
+- **Filterung (Al, Cu):** Absorbiert niederenergetische ("weiche") Photonen, die nicht zum Bild beitragen, aber die Hautdosis erhöhen → Aufhärtung des Strahls. Die Filterung ist eine zentrale ALARA-Maßnahme: Aluminiumfilter (typisch 2,5 mm Al) entfernen bevorzugt Photonen unter ~30 keV, die im Gewebe vollständig absorbiert werden und nur Dosis, aber keinen diagnostischen Informationsgewinn liefern.
 
 ## Computertomographie (CT) — Prinzip
 
@@ -884,7 +875,7 @@ Die CT nutzt Röntgenstrahlung, um Querschnittsbilder (Schnittbilder) des Körpe
 
 Röntgenphotonen werden durch drei Wechselwirkungen geschwächt:
 - **Photoelektrischer Effekt** (dominiert bei niedrigen Energien < 100 keV, Abhängigkeit ∝ Z⁴/E³): Photon überträgt gesamte Energie auf Hüllenelektron → Ion + freies Elektron + charakteristische Strahlung. Verantwortlich für den hohen Kontrast zwischen Knochen und Weichgewebe.
-- **Compton-Effekt** (dominiert bei mittleren Energien, 100 keV–10 MeV): Photon wird an einem (quasi-)freien Elektron gestreut, gibt einen Teil seiner Energie ab. Die Wellenlängenverschiebung beträgt Δλ = (h/mₑc)(1−cosθ), maximal 0,00486 nm bei 180°-Streuung.
+- **Compton-Effekt** (dominiert bei mittleren Energien, 100 keV–10 MeV): Ein Röntgenphoton prallt wie eine Billardkugel auf ein Elektron — es gibt dabei Energie ab und wird langwelliger. Je größer der Streuwinkel, desto mehr Energie verliert es. Das Photon wird an einem (quasi-)freien Elektron gestreut. Die Wellenlängenverschiebung beträgt Δλ = (h/mₑc)(1−cosθ), maximal 0,00486 nm bei 180°-Streuung.
 - **Paarbildung** (erst ab 1,02 MeV, da Ruheenergie von e⁻+e⁺ = 2×0,511 MeV): Photon erzeugt Elektron-Positron-Paar im Coulomb-Feld eines Kerns. Relevant in der Strahlentherapie (MeV-Bereich).
 
 > **Merke:** Photoeffekt (Z⁴-Abhängigkeit) → Kontrast im Röntgenbild. Compton-Effekt → dominiert bei diagnostischen CT-Energien. Paarbildung → nur in Strahlentherapie relevant (E > 1,02 MeV).
@@ -910,7 +901,7 @@ Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, di
 - **DNA-Protein-Crosslinks und Clusterläsionen:** Besonders bei Strahlung mit hohem LET (α-Strahlung) → mehrere Schäden auf engem Raum → kaum reparierbar
 - Bei hohen Dosen: Zelluntergang (Apoptose, Nekrose), bei mittleren: genomische Instabilität → Karzinogenese
 
-**Sauerstoffeffekt:** Zellen sind bei Anwesenheit von Sauerstoff ca. 2,5–3× strahlenempfindlicher als unter Hypoxie. Der OER (Oxygen Enhancement Ratio) beträgt für Photonen ~2,5–3,0. Grund: O₂ fixiert strahleninduzierte Radikale (macht Schäden irreversibel). Klinische Konsequenz: Hypoxische Tumoranteile sind strahlenresistenter → Fraktionierung der Strahlentherapie (Reoxygenierung zwischen den Fraktionen).
+**Sauerstoffeffekt:** Zellen sind bei Anwesenheit von Sauerstoff ca. 2,5–3× strahlenempfindlicher als unter Hypoxie. Der OER (Oxygen Enhancement Ratio) beträgt für Photonen ~2,5–3,0. Sauerstoff „fixiert" DNA-Schäden durch Radikale: Ein Radikal, das in Anwesenheit von O₂ entsteht, wird chemisch stabilisiert (Peroxidbildung) und kann nicht mehr enzymatisch repariert werden. Deshalb sind gut durchblutete Tumore strahlensensitiver, während hypoxische Tumoranteile strahlenresistenter sind → Fraktionierung der Strahlentherapie (Reoxygenierung zwischen den Fraktionen).
 
 **Strahlenempfindlichkeit** (Bergonié-Tribondeau-Gesetz, 1906): Zellen sind umso strahlenempfindlicher, je höher ihre Mitoserate und je geringer ihre Differenzierung. Reihenfolge (abnehmend):
 
@@ -922,7 +913,7 @@ Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, di
 | Niedrig | Muskelzellen | > 10 Gy |
 | Sehr niedrig | Nervenzellen | > 20 Gy |
 
-**Strahlenwirkungstypen — ein fundamentaler Unterschied:**
+**Strahlenwirkungstypen — ein fundamentaler Unterschied (MedAT-Klassiker!):**
 
 **Stochastische Effekte:**
 - **Kein Schwellenwert** — jede noch so kleine Dosis erhöht das Risiko (lineares Modell ohne Schwelle, LNT)
@@ -1196,6 +1187,8 @@ SPECT/CT kombiniert funktionelle und anatomische Information. Klinische Anwendun
 
 ## MRT – Magnetresonanztomographie
 
+Während PET und SPECT auf radioaktiven Tracern basieren und damit funktionelle Stoffwechselinformation liefern, verfolgt die MRT einen grundlegend anderen Ansatz: Sie nutzt die magnetischen Eigenschaften körpereigener Wasserstoffkerne und kommt vollständig ohne ionisierende Strahlung aus.
+
 Das **Kernspinresonanz-Prinzip (NMR)** beruht auf den magnetischen Eigenschaften von Atomkernen mit ungerader Protonen- oder Neutronenzahl. ¹H (Proton) ist der wichtigste Kern in der klinischen MRT (abundant in biologischem Gewebe).
 
 Im starken äußeren Magnetfeld B₀ (1,5–3 Tesla in klinischen Geräten) orientieren sich Protonenspins parallel oder antiparallel zu B₀ und **präzedieren** mit der **Larmorfrequenz**:
@@ -1204,12 +1197,12 @@ Im starken äußeren Magnetfeld B₀ (1,5–3 Tesla in klinischen Geräten) orie
 
 Bei B₀ = 1,5 T: f = 42,58 × 1,5 ≈ 63,9 MHz (Radiofrequenz). Ein RF-Puls genau dieser Frequenz versetzt die Längsmagnetisierung in die Transversalebene (Resonanz). Nach dem Puls relaxiert das System:
 
-- **T1-Relaxation** (Längsrelaxation): Rückkehr der Längsmagnetisierung zu M₀; abhängig von Wechselwirkungen Proton–Umgebung (Spin-Gitter). Fett: kurzes T1 (hell in T1-Bild).
-- **T2-Relaxation** (Querrelaxation): Zerfall der Transversalmagnetisierung durch Dephasierung (Spin-Spin-Relaxation). Wasser: langes T2 (hell in T2-Bild).
+- **T1-Relaxation** (Längsrelaxation): Rückkehr der Längsmagnetisierung zu M₀; abhängig von Wechselwirkungen Proton–Umgebung (Spin-Gitter). Fett hat eine kurze T1-Zeit, weil seine großen Moleküle mit ähnlicher Frequenz wie die Larmor-Frequenz rotieren — sie geben die Energie schnell an die Umgebung ab. Deshalb: Fett hell in T1-Bild.
+- **T2-Relaxation** (Querrelaxation): Zerfall der Transversalmagnetisierung durch Dephasierung (Spin-Spin-Relaxation). Wasser hat eine lange T2-Zeit, weil seine kleinen, schnell beweglichen Moleküle die Phasenkohärenz der Protonenspins länger bewahren — lokale Feldinhomogenitäten werden „herausgemittelt". Deshalb: Wasser hell in T2-Bild.
 
 Durch Schaltung von **Gradientenfeldern** (zusätzliche, ortsabhängige Magnetfelder, typisch 10–80 mT/m) wird die Ortsabhängigkeit der Larmorfrequenz erzeugt → Ortskodierung in drei Dimensionen (Schichtselektion, Frequenzkodierung, Phasenkodierung).
 
-**Kontrastmittel:** Gadolinium (Gd³⁺, paramagnetisch, 7 ungepaarte Elektronen) verkürzt T1 → Gewebe mit KM-Aufnahme erscheint in T1-Sequenzen heller (Enhancement). Cave: Nephrogene systemische Fibrose (NSF) bei schwerer Niereninsuffizienz → eGFR prüfen!
+**Kontrastmittel:** Gadolinium (Gd³⁺, paramagnetisch, 7 ungepaarte Elektronen) verkürzt T1 → Gewebe mit KM-Aufnahme erscheint in T1-Sequenzen heller (Enhancement). Cave: **Nephrogene systemische Fibrose (NSF)** bei schwerer Niereninsuffizienz (eGFR < 30 mL/min) → eGFR prüfen! Der Mechanismus: Bei eingeschränkter Nierenfunktion verweilt der Gd-Chelatkomplex länger im Körper, Gd³⁺ kann sich vom Chelator lösen (Transmetallierung), und freies Gd³⁺ lagert sich in Haut, Bindegewebe und inneren Organen ab → fibrotische Umbauprozesse mit Hautverhärtung, Gelenkkontrakturen und potenziell letalem Verlauf.
 
 > **Merke:** T1-gewichtet: Fett hell, Wasser dunkel, KM-Enhancement. T2-gewichtet: Wasser hell, Fett dunkel. Eselsbrücke: "Wasser = Weiß in T2".
 
@@ -1217,7 +1210,9 @@ Durch Schaltung von **Gradientenfeldern** (zusätzliche, ortsabhängige Magnetfe
 
 ## Photoelektrischer Effekt
 
-Der **Photoelektrische Effekt** (Einstein, 1905) beschreibt die Emission von Elektronen aus einer Metalloberfläche beim Einfall von Licht, wenn die Photonenenergie eine minimale Schwelle überschreitet:
+Neben den bildgebenden Verfahren basiert ein weiteres fundamentales Prinzip der modernen Physik auf der Wechselwirkung von Licht und Materie:
+
+Im Gegensatz zum inneren Photoeffekt (Röntgenabsorption im Gewebe, → UK 03) beschreibt der **äußere Photoelektrische Effekt** (Einstein, 1905) das Herauslösen von Elektronen aus einer **Metalloberfläche** beim Einfall von Licht, wenn die Photonenenergie eine minimale Schwelle überschreitet:
 
 > **E_kin = hf − φ** (φ = Austrittsarbeit des Metalls)
 
@@ -1401,45 +1396,11 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
         "Akutes Strahlensyndrom",
         "Radon Österreich",
       ],
-      content: `## Strahlenschutz — die drei Grundprinzipien
+      content: `## Strahlenschutz — Vertiefung und klinische Anwendung
 
-Der Strahlenschutz folgt international dem **ALARA-Prinzip** (As Low As Reasonably Achievable) und beruht auf drei Säulen:
+Die Grundprinzipien des Strahlenschutzes (ALARA: Abstand, Abschirmung, Zeit; → UK 03) werden hier um die **klinische Umsetzung** und **gesetzliche Rahmenbedingungen** erweitert.
 
-### 1. Abstand — Das Abstandsquadratgesetz
-
-Die Dosisleistung einer Punktquelle nimmt mit dem **Quadrat des Abstands** ab:
-
-> **Ḋ(r) = Ḋ₀ / r²**
-
-Verdopplung des Abstands → Dosis sinkt auf **¼**. Verdreifachung → Dosis auf **1/9**. Dies ist die effektivste und einfachste Strahlenschutzmaßnahme!
-
-**Rechenbeispiel:** In 1 m Abstand von einer ⁶⁰Co-Quelle beträgt die Dosisleistung 2 mSv/h. In 5 m Abstand: Ḋ = 2 × (1/5)² = 2 × 1/25 = 0,08 mSv/h — eine Reduktion um Faktor 25.
-
-> **Merke:** Abstandsquadratgesetz: I ∝ 1/r². Verdopplung des Abstands → ¼ der Dosis. Dies ist die wichtigste und einfachste Schutzmaßnahme. Gilt exakt nur für Punktquellen im Vakuum, ist aber eine gute Näherung.
-
-### 2. Abschirmung — Material zwischen Quelle und Person
-
-Verschiedene Strahlenarten erfordern unterschiedliche Abschirmungen:
-
-| Strahlenart | Effektive Abschirmung | Beispiel |
-|-------------|----------------------|----------|
-| α-Strahlung | Papier, Haut, Luft (cm) | Keine externe Abschirmung nötig |
-| β-Strahlung | Aluminium (mm), Plexiglas | Laborbrillen, Plexiglasschirme |
-| γ-Strahlung | Blei (cm), Beton (dm) | Bleischürzen, Betonwände |
-| Röntgenstrahlung | Blei (0,25–0,5 mm) | Bleischürzen, Schilddrüsenschutz |
-| Neutronenstrahlung | Wasser, Paraffin, Polyethylen | Wassertanks, PE-Blöcke |
-
-**Wichtig bei β-Abschirmung:** Hochenergetische β-Strahlung erzeugt beim Auftreffen auf schwere Kerne **Bremsstrahlung** (sekundäre Röntgenstrahlung). Deshalb: β-Strahler zuerst mit leichtem Material (Plexiglas, Aluminium) abschirmen, dann ggf. Blei für die Bremsstrahlung. Niemals direkt Blei für β-Abschirmung verwenden!
-
-**Halbwertsschichtdicke (HVL):** Die Materialdicke, die die Intensität auf die Hälfte reduziert: HVL = ln 2/μ. Nach n HVL-Schichten: I = I₀ · (½)ⁿ — analog zur Halbwertszeit!
-
-### 3. Zeit — Expositionsdauer minimieren
-
-> **D = Ḋ × t**
-
-Die Gesamtdosis ist proportional zur Expositionszeit. Schnelles Arbeiten, gute Vorbereitung und klare Handlungsabläufe reduzieren die Strahlenbelastung. In der Nuklearmedizin: Patienten erst injizieren, dann erst in den Scanner → Wartezeit nutzen, um Abstand zu halten.
-
-> **Merke:** ALARA = Abstand ↑ (1/r²), Abschirmung ↑ (Blei/Beton), Zeit ↓ (D = Ḋ·t). Merkhilfe: "AAZ" — Abstand, Abschirmung, Zeit.
+> **Merke:** ALARA = Abstand ↑ (I ∝ 1/r²), Abschirmung ↑ (PAB: Papier–Alu–Blei für α–β–γ), Zeit ↓ (D = Ḋ·t). Details zu Abstandsgesetz und Abschirmmaterialien → UK 03.
 
 ---
 
@@ -1484,12 +1445,9 @@ Die Strahlenquelle befindet sich **außerhalb** des Körpers:
 
 - **Linearbeschleuniger (LINAC):** Erzeugt hochenergetische Photonen (4–25 MV) oder Elektronen durch Beschleunigung in einem Hohlraumresonator. Modernster Standard. Vorteile: variable Energie, kein radioaktives Material, IMRT/VMAT möglich.
 - **⁶⁰Co-Gerät (Telekobalt):** Historisch wichtig; γ-Strahlung mit 1,17 + 1,33 MeV. Nachteil: Quelle muss regelmäßig ausgetauscht werden (T½ = 5,27 a), niedrigere Dosisrate als LINAC. In Entwicklungsländern noch verbreitet.
-- **Protonentherapie:** Protonen haben einen **Bragg-Peak** — sie geben den Großteil ihrer Energie am Ende ihrer Reichweite ab. Vorteil: scharf begrenztes Dosismaximum, weniger Dosis hinter dem Tumor. Ideal für Tumoren nahe empfindlicher Strukturen (Auge, ZNS, Kinder).
+- **Protonentherapie:** Protonen geben ihre Energie erst am Ende ihrer Reichweite schlagartig ab — wie ein Auto, das auf den letzten Metern bremst. Dieses Phänomen heißt **Bragg-Peak** und erlaubt es, die maximale Dosis exakt im Tumor zu platzieren, während das Gewebe davor wenig und dahinter fast keine Dosis erhält. Ideal für Tumoren nahe empfindlicher Strukturen (Auge, ZNS, Kinder).
 
-**Moderne Techniken:**
-- **IMRT** (Intensity-Modulated Radiation Therapy): Moduliert die Dosisverteilung über Multileaf-Kollimatoren (MLC) → Tumor erhält hohe, gleichmäßige Dosis; Risikoorgane werden geschont.
-- **VMAT** (Volumetric Modulated Arc Therapy): IMRT bei rotierendem Gantry → schnellere Behandlung.
-- **Stereotaktische Radiochirurgie (SRS/SBRT):** Sehr hohe Einzeldosen auf kleine Volumina, extreme Präzision (< 1 mm). Anwendung: Hirnmetastasen, Lungentumore.
+**Moderne Bestrahlungstechniken** (IMRT, VMAT, stereotaktische Verfahren) haben ein gemeinsames Prinzip: Durch computergesteuerte Modulation der Strahlintensität aus verschiedenen Winkeln wird die Dosis dreidimensional an die Tumorform angepasst, während Risikoorgane geschont werden.
 
 ### Brachytherapie (Kontaktbestrahlung)
 
@@ -1593,10 +1551,10 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
       ],
       sections: [
         {
-          heading: "ALARA-Prinzip und Dosisgrenzwerte",
-          text: "ALARA: Abstand (I ∝ 1/r²), Abschirmung (PAB: Papier–Alu–Blei für α–β–γ; Neutronen: Wasser), Zeit (D = Ḋ·t). Grenzwerte Österreich/EU: beruflich ≤ 20 mSv/a, Bevölkerung ≤ 1 mSv/a, Schwangere ≤ 1 mSv restliche Schwangerschaft, Augenlinse ≤ 20 mSv/a. Natürliche Strahlung ~2,1 mSv/a (davon ~1 mSv Radon).",
+          heading: "Dosisgrenzwerte und Strahlenschutzrecht",
+          text: "ALARA-Grundprinzipien (Abstand, Abschirmung, Zeit) → UK 03. Grenzwerte Österreich/EU: beruflich Kat. A ≤ 20 mSv/a, Kat. B ≤ 6 mSv/a, Bevölkerung ≤ 1 mSv/a, Schwangere ≤ 1 mSv restliche Schwangerschaft, Augenlinse ≤ 20 mSv/a. Natürliche Strahlung ~2,1 mSv/a (davon ~1 mSv Radon). Dosisvergleich: CT Abdomen ~10 mSv = 500 Thorax-Röntgen.",
           merksatz:
-            "ALARA: Abstand ↑ (1/r²), Abschirmung ↑, Zeit ↓. Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a.",
+            "Dosisgrenzwerte: Beruf Kat. A ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a. CT Abdomen ~10 mSv ≈ 5 Jahre natürliche Strahlung.",
         },
         {
           heading: "Strahlentherapie: Teletherapie und Brachytherapie",
@@ -1612,14 +1570,12 @@ Jahresdosis: 0,089 × 250 = **22,2 mSv/Jahr** → übersteigt den Grenzwert von 
         },
       ],
       merksätze: [
-        "ALARA: Abstand (1/r²), Abschirmung (PAB für α/β/γ), Zeit (D = Ḋ·t) — die drei Säulen des Strahlenschutzes.",
-        "Abstandsquadratgesetz: Verdopplung des Abstands → ¼ der Dosis; Verdreifachung → 1/9.",
-        "Abschirmregel: α → Papier; β → Aluminium/Plexiglas; γ → Blei/Beton; Neutronen → Wasser/Paraffin.",
+        "ALARA-Details und Abschirmregeln → UK 03. Hier: Dosisgrenzwerte und klinische Anwendungen.",
         "Dosisgrenzwerte: Beruf ≤ 20 mSv/a; Bevölkerung ≤ 1 mSv/a; natürliche Strahlung ~2,1 mSv/a.",
-        "Teletherapie: LINAC (4–25 MV), ⁶⁰Co (1,17+1,33 MeV), Protonentherapie (Bragg-Peak).",
-        "Brachytherapie: Strahlenquelle im/am Tumor (¹⁹²Ir, ¹²⁵I); hohe lokale Dosis, schneller Abfall.",
+        "Bragg-Peak: Protonen geben Energie am Reichweiten-Ende ab → Dosismaximum exakt im Tumor, fast null dahinter.",
+        "Teletherapie = Quelle außen (LINAC, Protonen); Brachytherapie = Quelle im Tumor (hohe lokale Dosis).",
         "Diagnostik: γ-Strahler (verlassen den Körper). Therapie: β⁻-/α-Strahler (kurze Reichweite, lokal).",
-        "Akutes Strahlensyndrom: ab ~1 Gy Ganzkörper; hämatopoetisch → GI → zerebrovaskulär.",
+        "Akutes Strahlensyndrom: ab ~1 Gy Ganzkörper; hämatopoetisch → GI → zerebrovaskulär. LD₅₀ ≈ 3,5–4 Gy.",
         "Radon (²²²Rn): α-strahlendes Edelgas, Inhalation → Lungenkrebs; ~1 mSv/a in Österreich.",
       ],
       altfrage: {

@@ -196,7 +196,7 @@ Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glü
           heading: "Die sieben SI-Basisgrößen",
           text: "Das SI-System beruht auf sieben fundamental unabhängigen Basisgrößen: Länge (m), Masse (kg), Zeit (s), elektrische Stromstärke (A), thermodynamische Temperatur (K), Stoffmenge (mol) und Lichtstärke (cd). Diese sieben Größen sind so gewählt, dass sie unabhängig voneinander sind — keine lässt sich aus den anderen ableiten — und zusammen ausreichen, um jede bekannte physikalische Größe zu beschreiben. Seit der SI-Reform von 2019 werden alle Basiseinheiten durch Naturkonstanten definiert, nicht mehr durch physische Artefakte. Das Kilogramm ist nun über die Planck-Konstante, das Ampere über die Elementarladung, das Kelvin über die Boltzmann-Konstante und das Mol über die Avogadro-Konstante definiert. Diese Neudefinition macht das SI-System zeitlos und ortsunabhängig — jedes gut ausgestattete Labor der Welt kann die Einheiten eigenständig realisieren, ohne Zugang zu einem physischen Referenzartefakt zu benötigen.",
           merksatz:
-            "Merkhilfe für die 7 SI-Basisgrößen: Länge(m) — Masse(kg) — Zeit(s) — Ampere(A) — Kelvin(K) — Mol(mol) — Candela(cd). Abkürzung: LaMZAKMC",
+            'Merkhilfe: "Luise Mag Zwei Alte Katzen Mit Charme" → Länge(m), Masse(kg), Zeit(s), Ampere(A), Kelvin(K), Mol(mol), Candela(cd)',
         },
         {
           heading: "Abgeleitete Einheiten und ihre Basisdarstellung",
@@ -225,9 +225,7 @@ Leistung P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glü
         "Skalar = nur Betrag (Temperatur, Druck, Masse). Vektor = Betrag + Richtung (Kraft, Geschwindigkeit, Beschleunigung)",
         "Intensiv ≠ Extensiv: Konzentration verdoppelt sich nicht beim Verdoppeln des Volumens — Masse schon",
         "1 mmHg ≈ 133 Pa — klinischer Blutdruck in mmHg, SI-Einheit ist Pascal",
-        "Das Kilogramm ist seit 2019 über die Planck-Konstante definiert — keine physischen Artefakte mehr",
         "Kelvin (K) = absolutes Temperaturmaß; 0 K = absoluter Nullpunkt = -273,15 °C; T(K) = T(°C) + 273,15",
-        "1 mol enthält genau 6,022 × 10²³ Teilchen (Avogadro-Konstante) — definiert seit SI-Reform 2019",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -1172,49 +1170,103 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
 
 Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem **abgeschlossenen System** (kein Austausch mit der Umgebung) konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung.
 
-## Impuls und Impulserhaltung
+## Halten ist keine Arbeit — die klassische MedAT-Falle
 
-Der **Impuls** p = m · v (eine Größe, die „Bewegungsmenge" beschreibt: Masse × Geschwindigkeit) hat die Einheit kg·m/s = N·s und ist ein **Vektor** (Richtung entscheidend). Der **Kraftstoß** J = F·Δt (Kraft × Einwirkzeit) entspricht genau der **Impulsänderung** Δp. Impuls ist ein Vektor — Betrag und Richtung sind entscheidend. Der Kraftstoß J = F · Δt = Δp beschreibt die Änderung des Impulses durch eine Kraft über eine Zeitspanne. Daraus folgt das zweite Newtonsche Gesetz in allgemeinerer Form: F = dp/dt.
+Bevor wir Formeln einführen, ein zentrales Konzept: **Physikalische Arbeit erfordert Bewegung.** Trägst du einen schweren Koffer horizontal durch die Halle, leistest du physikalisch **keine Arbeit** an ihm — deine Kraft zeigt nach oben (gegen die Schwerkraft), aber der Weg geht nach vorne. Kraft und Weg stehen senkrecht aufeinander, also ist die verrichtete Arbeit null. Auch wer einen Sack Zement einfach nur festhält und nicht bewegt, leistet physikalisch keine Arbeit — egal wie sehr die Muskeln brennen.
 
-Impulserhaltungssatz: In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt unabhängig davon, welche inneren Kräfte wirken (Explosionen, Kollisionen, chemische Reaktionen).
+> **Merke:** Trägst du einen Koffer horizontal, leistest du physikalisch keine Arbeit an ihm — die Kraft zeigt nach oben, der Weg nach vorne. Arbeit = Kraft × Weg **in Kraftrichtung**. Senkrechte Kraft zum Weg → W = 0.
 
-Anwendungen: Bei einem elastischen Stoß (Billardkugeln) sind sowohl Impuls als auch kinetische Energie erhalten. Bei einem inelastischen Stoß (Knetmasse-Kollision) ist nur der Impuls erhalten — kinetische Energie wird in Wärme, Verformungsenergie umgewandelt. Beim vollkommen unelastischen Stoß vereinigen sich beide Körper: m₁·v₁ + m₂·v₂ = (m₁+m₂)·v'. In der Medizin: Ballistisches Trauma — ein Projektil überträgt seinen Impuls auf das Gewebe: F·Δt = Δp. Hohle Projektile (Deformationsgeschosse, die sich beim Aufprall aufpilzen) verlängern den Kontaktzeitraum und erhöhen die Gewebedeformation.
+Warum fühlt sich Halten dann anstrengend an? Weil die Muskelfasern ständig kontrahieren und relaxieren (isometrische Kontraktion) — sie leisten biochemische Arbeit auf Zellebene, aber der Körper als Ganzes bewegt sich nicht.
 
-## Arbeit, Energie und der Energieerhaltungssatz
+---
 
-**Arbeit** ist definiert als **W = F · s** (bzw. W = F·s·cos θ bei schrägem Kraftvektor) — Einheit Joule (J = N·m). **Mechanische Arbeit wird nur bei einer Verschiebung (Weg s ≠ 0) verrichtet.**
+## Von der Intuition zur Formel: Energieerhaltung
 
-**Formelklartext:** W = F·s heißt: **Arbeit** = **Kraft** × **Weg** (in Kraftrichtung). **Beim Halten** (s = 0) wird **keine** Arbeit verrichtet — unabhängig von der Dauer. Beim Heben: W = F_G·h = m·g·h = Zunahme der potenziellen Energie. **Einheiten:** [W] = J = N·m = kg·m²/s². **Leistung** P = W/t = Arbeit pro Zeit [W = J/s]. **MedAT-Falle:** „Halten kostet Kraft, also wird Arbeit geleistet" — falsch; nur **Bewegung** (s ≠ 0) verrichtet Arbeit.
+Stell dir einen Ball vor, der einen Hügel hinunterrollt. Oben steht er still — voller „gespeicherter" Energie durch seine Höhe. Beim Rollen wird er immer schneller. Woher kommt die Geschwindigkeit? Die Lageenergie (Höhe) wandelt sich in Bewegungsenergie um. Am Fuß des Hügels ist die gesamte Höhenenergie in Bewegung übergegangen. Genau das beschreibt der Energieerhaltungssatz.
 
-Beim **Halten** eines Gegenstands (z. B. Sack Zement in gleicher Höhe) ist der Weg null → **es wird keine mechanische Arbeit geleistet** — unabhängig von der Dauer des Haltens. Nur beim **Heben** (Weg nach oben) wird Arbeit verrichtet; die Dauer des Hebens ändert die verrichtete Arbeit nicht (W = F·s hängt nicht von t ab), wohl aber die **Leistung** P = W/t. Typische Falle: „Beim Halten wird Arbeit geleistet, umso länger umso mehr" ist **falsch**.
+**Potenzielle Energie** (Lageenergie) ist die Energie, die ein Körper durch seine Höhe über dem Boden besitzt. Je höher und schwerer ein Objekt, desto mehr Energie steckt darin:
 
-**Kinetische Energie** (Bewegungsenergie): E_kin = ½·m·v². Sie ist proportional zum Quadrat der Geschwindigkeit — bei doppelter Geschwindigkeit viermal so viel kinetische Energie. Das erklärt, warum Hochgeschwindigkeitsprojektile so verheerend sind und warum der Bremsweg bei Kraftfahrzeugen quadratisch mit der Geschwindigkeit wächst.
+**E_pot = m · g · h**
 
-**Formelklartext:** E_kin = ½·m·v² bedeutet: **Bewegungsenergie** wächst mit dem **Quadrat** der Geschwindigkeit. Doppelte Geschwindigkeit → **vierfache** kinetische Energie (nicht doppelt!). **Einheiten:** [E_kin] = J = kg·m²/s². **Nicht verwechseln:** Impuls p = m·v [kg·m/s]; Energie E_kin = ½·m·v² [J]. **Potenzielle Energie** E_pot = m·g·h: proportional zu Masse, Fallbeschleunigung und Höhe; [E_pot] = J.
+Das bedeutet: Ein 70-kg-Mensch auf einem 10-m-Sprungturm hat 70 × 10 × 10 = 7000 J gespeicherte Energie — genug, um beim Aufprall erhebliche Kräfte zu erzeugen.
 
-**Potenzielle Energie** (Lageenergie): E_pot = m·g·h. Die potenzielle Energie ist eine Zustandsgröße — sie hängt nur von der Höhe h über einem gewählten Referenzniveau ab, nicht vom zurückgelegten Weg.
+**Kinetische Energie** (Bewegungsenergie) ist die Energie, die ein Körper durch seine Geschwindigkeit besitzt. Entscheidend: Sie wächst mit dem **Quadrat** der Geschwindigkeit:
 
-**Energieerhaltungssatz:** In einem abgeschlossenen System ohne Reibung gilt: E_kin + E_pot = const. Energie kann zwischen kinetischer und potenzieller Form umgewandelt werden, aber die Gesamtenergie bleibt konstant. Mit Reibung gilt: Die mechanische Energie nimmt ab, aber die freigesetzte Wärme kompensiert exakt den Verlust — die Gesamtenergie (thermisch + mechanisch) bleibt erhalten.
+**E_kin = ½ · m · v²**
 
-## Leistung und Wirkungsgrad
+Doppelte Geschwindigkeit bedeutet **vierfache** Bewegungsenergie — nicht doppelte. Das erklärt, warum der Bremsweg bei 100 km/h viermal so lang ist wie bei 50 km/h, und warum Hochgeschwindigkeitsprojektile so verheerend sind.
 
-Leistung P = W/t = F·v (Einheit: Watt, W = J/s). Leistung ist Arbeit pro Zeit. Ein Mensch kann kurzfristig etwa 1000 W (1 kW) leisten, im Dauerbetrieb etwa 100–200 W. Das Herz pumpt täglich ca. 8000 l Blut und leistet dabei eine mechanische Arbeit von ca. 1 J pro Herzschlag (70 Schläge/min → ca. 1 W mechanische Herzleistung, tatsächlich benötigt das Herz ca. 6 W wegen des Wirkungsgrades des Herzmuskelgewebes von etwa 17 %).
+**Energieerhaltungssatz:** In einem abgeschlossenen System ohne Reibung gilt:
 
-Wirkungsgrad η = P_nutz / P_ges · 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben.
+**E_kin + E_pot = const**
 
-> **Merke:** Die Energieerhaltung ist das universellste Prinzip der Physik — Energie kann weder erzeugt noch zerstört, sondern nur umgewandelt werden. In biologischen Systemen: chemische Energie (ATP) → mechanische Arbeit (Muskelkontraktion) + Wärme. Der Erste Hauptsatz der Thermodynamik ist nichts anderes als die Energieerhaltung, angewandt auf Wärmeprozesse.
+Oben am Hügel: viel E_pot, wenig E_kin. Unten: wenig E_pot, viel E_kin. Die Summe bleibt gleich. Mit Reibung nimmt die mechanische Energie ab, aber die entstehende Wärme kompensiert exakt den Verlust — die Gesamtenergie (thermisch + mechanisch) bleibt erhalten. Das ist nichts anderes als der Erste Hauptsatz der Thermodynamik.
+
+Ein Ball, der aus Höhe h fällt, erreicht am Boden die Geschwindigkeit v = √(2gh) — direkt aus E_pot = E_kin hergeleitet.
+
+---
+
+## Arbeit: Die Brücke zwischen Kraft und Energie
+
+Wie kommt Energie in ein System hinein oder heraus? Durch **Arbeit**. Arbeit ist das Produkt aus Kraft und Weg in Kraftrichtung:
+
+**W = F · s · cos θ**
+
+Dabei ist θ der Winkel zwischen Kraft und Weg. Steht die Kraft senkrecht auf dem Weg (θ = 90°, cos 90° = 0), wird **keine Arbeit** verrichtet — das ist genau der Koffer-Fall von oben. Beim senkrechten Heben (Kraft und Weg parallel nach oben) ist θ = 0° und W = F · s = m · g · h.
 
 > **Prüfungstipp:** Klassische MedAT-Falle: „Beim Halten eines Gewichts wird mechanische Arbeit verrichtet" — falsch! W = F·s, und bei s = 0 ist W = 0. Auch wichtig: E_kin ~ v² bedeutet, dass doppelte Geschwindigkeit **vierfachen** Bremsweg ergibt, nicht doppelten.
 
+---
+
+## Impuls und Impulserhaltung
+
+Wenn ein LKW und ein Fahrrad mit gleicher Geschwindigkeit fahren, ist der LKW schwerer zu stoppen — er hat mehr „Wucht". Diese Wucht heißt **Impuls**:
+
+**p = m · v**
+
+Der Impuls (Einheit: kg·m/s = N·s) ist ein **Vektor** — Betrag und Richtung sind entscheidend. Um den Impuls eines Körpers zu ändern, braucht man einen **Kraftstoß**: J = F · Δt = Δp. Daraus folgt: Dieselbe Impulsänderung kann durch eine große Kraft über kurze Zeit **oder** durch eine kleine Kraft über lange Zeit erreicht werden. Das ist das Airbag-Prinzip: Längere Einwirkzeit → geringere Spitzenkraft.
+
+**Impulserhaltungssatz:** In einem abgeschlossenen System (keine äußeren Kräfte) bleibt der Gesamtimpuls konstant: p_ges = Σmᵢ·vᵢ = const. Das gilt für Explosionen, Kollisionen und sogar chemische Reaktionen.
+
+**Elastischer Stoß** (z. B. Billardkugeln): Impuls **und** kinetische Energie bleiben erhalten. **Inelastischer Stoß** (z. B. Autounfall, Gewebetrauma): Nur der Impuls bleibt erhalten — kinetische Energie wird in Wärme und Verformung umgewandelt. Beim **vollkommen unelastischen Stoß** vereinigen sich beide Körper: m₁·v₁ + m₂·v₂ = (m₁+m₂)·v'.
+
+> **Merke:** Kräfte überlagern sich wie Pfeile: Die Gesamtkraft auf einen Körper ist die Vektorsumme aller Einzelkräfte (F_res = F₁ + F₂ + ...). Zwei gleich große Kräfte in entgegengesetzter Richtung heben sich auf — wie beim Tauziehen im Gleichgewicht. Zwei Kräfte im rechten Winkel ergeben eine diagonale Resultante (Pythagoras).
+
+---
+
+## Leistung und Wirkungsgrad
+
+Arbeit sagt nichts über die Geschwindigkeit aus. Ob du eine Treppe in 10 Sekunden oder 2 Minuten hochläufst — die Arbeit (m·g·h) ist dieselbe. Der Unterschied ist die **Leistung**:
+
+**P = W / t = F · v**
+
+Die Einheit ist Watt (W = J/s). Ein Mensch kann kurzfristig etwa 1000 W leisten (Sprint), im Dauerbetrieb etwa 100–200 W. Das Herz leistet ca. 1 J pro Schlag, bei 70 Schlägen/min ergibt das ca. 1 W mechanische Herzleistung. Weil der Herzmuskel nur ca. 17 % Wirkungsgrad hat, verbraucht das Herz metabolisch ca. 6 W.
+
+**Wirkungsgrad** η = P_nutz / P_ges × 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben. In biologischen Systemen: chemische Energie (ATP) → mechanische Arbeit (Muskelkontraktion) + Wärme.
+
+---
+
 ## Federkraft und elastische Energie
 
-In der Biomechanik spielen elastische Strukturen eine zentrale Rolle. Die **Federkraft** folgt dem Hookeschen Gesetz (Kraft proportional zur Auslenkung): F = -k·x, wobei k die Federkonstante (N/m) und x die Auslenkung aus der Ruheposition ist. Die in einer gedehnten Feder gespeicherte elastische Energie beträgt E_el = ½·k·x². Sehnen und Bänder verhalten sich näherungsweise wie Federn — sie speichern bei Dehnung Energie, die bei Entlastung wieder freigegeben wird. Die Achillessehne speichert beim Laufen pro Schritt ca. 35 J elastische Energie und gibt sie beim Abstoß zurück — ein wichtiger Beitrag zur Laufeffizienz. Auch die Aortenwand fungiert als elastisches Reservoir (Windkesselfunktion, Pufferung der pulsatilen Herzauswurfkraft): Während der Systole dehnt sich die Aorta und speichert Energie, die während der Diastole den Blutfluss aufrechterhält.
+Die **Federkraft** folgt dem Hookeschen Gesetz (Kraft proportional zur Auslenkung): F = -k·x, wobei k die Federkonstante (N/m) und x die Auslenkung aus der Ruheposition ist. Das Minuszeichen bedeutet: Die Kraft wirkt immer der Auslenkung entgegen — sie zieht die Feder zurück.
+
+Die in einer gedehnten Feder gespeicherte elastische Energie beträgt E_el = ½·k·x². Sehnen und Bänder verhalten sich näherungsweise wie Federn. Die Achillessehne speichert beim Laufen pro Schritt ca. 35 J elastische Energie und gibt sie beim Abstoß zurück — ein wichtiger Beitrag zur Laufeffizienz. Auch die Aortenwand fungiert als elastisches Reservoir (Windkesselfunktion): Während der Systole dehnt sich die Aorta und speichert Energie, die während der Diastole den Blutfluss aufrechterhält.
+
+---
 
 ## Drehimpuls und Rotationsenergie
 
-Drehimpuls L = I · ω, wobei I das Trägheitsmoment (Widerstand gegen Drehbeschleunigung, kg·m²) und ω die Winkelgeschwindigkeit (rad/s) ist. Drehimpulserhaltung: In Abwesenheit äußerer Drehmomente bleibt L = const. Der Pirouetten-Effekt: Wenn ein Eiskunstläufer die Arme anzieht (verringert I), erhöht sich ω — bei konstantem L. Rotationsenergie: E_rot = ½·I·ω². Im Körper bestimmt das Trägheitsmoment der Gliedmaßen die Energieeffizienz der Bewegung.
+Der Drehimpuls ist das rotatorische Gegenstück zum linearen Impuls. Er beschreibt, wie viel „Rotationswucht" ein drehender Körper hat:
 
+**L = I · ω**
 
+Dabei ist I das **Trägheitsmoment** (Widerstand gegen Drehbeschleunigung, Einheit: kg·m²) und ω die **Winkelgeschwindigkeit** (rad/s). Das Trägheitsmoment hängt nicht nur von der Masse ab, sondern entscheidend davon, wie weit die Masse von der Drehachse entfernt ist (I = Σmᵢ·rᵢ²).
+
+**Drehimpulserhaltung** erklärt den berühmten Pirouetteneffekt: Eine Eiskunstläuferin dreht sich langsam mit ausgestreckten Armen. Dann zieht sie die Arme eng an den Körper — ihr Trägheitsmoment I sinkt dramatisch (die Masse rückt näher an die Drehachse). Da der Drehimpuls L = I·ω erhalten bleiben muss und I kleiner wird, muss ω proportional steigen. Das Ergebnis: Sie dreht sich plötzlich viel schneller, ohne zusätzlichen Antrieb. Streckt sie die Arme wieder aus, wird sie sofort langsamer. Die zusätzliche Rotationsenergie stammt aus der Muskelarbeit gegen die Zentrifugalkraft beim Einziehen der Arme.
+
+**Rotationsenergie:** E_rot = ½·I·ω² — analog zur kinetischen Energie ½·m·v².
+
+> **Merke:** Die Energieerhaltung ist das universellste Prinzip der Physik — Energie kann weder erzeugt noch zerstört, sondern nur umgewandelt werden.
 
 ## Rechenbeispiele
 
@@ -1263,16 +1315,16 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
         },
       ],
       merksätze: [
-        "Impuls p = m·v: Vektorgröße in kg·m/s. Impulserhaltung in abgeschlossenen Systemen.",
+        "Koffer tragen = keine Arbeit: Kraft nach oben, Weg nach vorne — senkrecht zueinander, also W = 0.",
+        'Impuls p = m·v: Die „Wucht" eines Körpers. LKW bei 50 km/h hat mehr Impuls als Fahrrad bei 50 km/h.',
         "Kraftstoß J = F·Δt = Δp. Längere Einwirkzeit → geringere Spitzenkraft (Airbag-Prinzip).",
-        "E_kin = ½·m·v²: Bei doppelter Geschwindigkeit viermal so viel kinetische Energie.",
-        "E_pot = m·g·h: Lageenergie abhängig von Höhe, Masse und Erdbeschleunigung.",
-        "Energieerhaltung: E_kin + E_pot = const (ohne Reibungsverluste).",
-        "Arbeit W = F·s·cos(θ): Senkrechte Kraft zum Weg → keine Arbeit geleistet.",
-        "Leistung P = W/t = F·v: Einheit Watt (W = J/s).",
-        "Elastischer Stoß: Impuls UND kinetische Energie erhalten.",
-        "Inelastischer Stoß: NUR Impuls erhalten, kinetische Energie nimmt ab.",
-        "Drehimpulserhaltung: I·ω = const → kleineres I → größeres ω (Pirouetteneffekt).",
+        "E_kin = ½·m·v²: Doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg!",
+        "E_pot = m·g·h: Ball oben am Hügel hat Lageenergie; beim Rollen wird sie zu Bewegungsenergie.",
+        "Energieerhaltung: E_kin + E_pot = const. Oben langsam + hoch, unten schnell + tief.",
+        "Leistung P = W/t = F·v: Gleiche Treppe, schneller hoch = mehr Leistung bei gleicher Arbeit.",
+        "Elastischer Stoß: Impuls UND kinetische Energie erhalten (Billardkugeln).",
+        "Inelastischer Stoß: NUR Impuls erhalten, Energie wird zu Wärme/Verformung (Autounfall).",
+        "Pirouetteneffekt: Arme anziehen → I sinkt → ω steigt (L = I·ω = const). Kein zusätzlicher Antrieb nötig.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -1401,11 +1453,29 @@ Druck p = F/A (Einheit: Pascal, Pa = N/m²). Der Druck wirkt in alle Richtungen 
 
 **Auftrieb:** Ein in eine Flüssigkeit eingetauchter Körper erfährt eine Auftriebskraft F_A = ρ_Fl · g · V_verdrängt (Archimedisches Prinzip). Für den menschlichen Körper (Dichte ca. 0,98 kg/dm³ im Wasser) ist der Auftrieb fast vollständig gleich dem Gewicht — das ermöglicht therapeutisches Schwimmen und Rehabilitationsübungen im Wasser.
 
-## Strömungslehre (Kurzüberblick)
+## Strömungslehre – Grundlagen der Hydrodynamik
 
-Die Kernformeln der Strömungslehre — Kontinuitätsgleichung (Massenerhaltung: A₁v₁ = A₂v₂), Bernoulli-Gleichung (Energieerhaltung in Strömungen: ½ρv² + ρgh + p = const) und Poiseuille-Gesetz (Durchfluss durch Rohre: Q = πr⁴Δp/(8ηl)) — werden ausführlich im **Fluidmechanik-Kapitel** behandelt. Dort findest du Herleitungen, Rechenbeispiele und klinische Anwendungen (Koronarstenosen, Blutfluss in Kapillaren, Reynolds-Zahl).
+Die Hydrodynamik beschreibt die Bewegung von Fluiden (Flüssigkeiten und Gasen). Die folgenden Grundprinzipien sind für das Verständnis des Blutkreislaufs unverzichtbar.
 
-> **Merke:** Poiseuille: Q ~ r⁴. Radius halbiert → Fluss auf 1/16. → Details siehe Fluidmechanik-Kapitel.
+**Kontinuitätsgleichung (Massenerhaltung):** In einem geschlossenen Rohrsystem ist der Volumenstrom Q konstant. Daraus folgt:
+
+**A₁ · v₁ = A₂ · v₂**
+
+Wird der Querschnitt A kleiner, muss die Strömungsgeschwindigkeit v proportional steigen — und umgekehrt. Klinisch: Die Aorta (A ≈ 4,5 cm²) hat eine hohe Blutgeschwindigkeit (~0,3 m/s); im Kapillarbett (Gesamtquerschnitt ≈ 4500 cm²) sinkt v auf ~0,3 mm/s — optimal für den Stoffaustausch.
+
+**Bernoulli-Gleichung (Energieerhaltung):** Halte den Daumen über einen Gartenschlauch — das Wasser spritzt schneller heraus, aber der Druck in der Verengung ist paradoxerweise **niedriger**, nicht höher. Das ist der Kern der Bernoulli-Gleichung: Wo eine Flüssigkeit schneller strömt, sinkt ihr statischer Druck. Die Gesamtenergie pro Volumen bleibt konstant, sie verteilt sich nur um — mehr Geschwindigkeitsenergie bedeutet weniger Druckenergie.
+
+Für ein ideales, reibungsfreies Fluid in stationärer Strömung gilt:
+
+**p + ½ρv² + ρgh = const**
+
+Wo die Geschwindigkeit zunimmt, sinkt der statische Druck — der **Venturi-Effekt**. Bei einer Gefäßstenose steigt v an der Engstelle, gleichzeitig fällt der lokale Druck.
+
+**Laminare vs. turbulente Strömung:** Bei laminarer Strömung bewegen sich die Fluidschichten geordnet und parallel; es entsteht ein parabolisches Geschwindigkeitsprofil. Turbulente Strömung ist chaotisch, mit Wirbeln und höherem Energieverlust. Die **Reynolds-Zahl** Re = ρ·v·d/η entscheidet: Re < 2300 → laminar; Re > 4000 → turbulent. Klinisch: Stenosen erhöhen v → Re steigt → turbulente Strömung → auskultierbare Stenosegeräusche.
+
+**Viskosität (η):** Die dynamische Viskosität beschreibt die „innere Reibung" eines Fluids. Blut hat eine Viskosität von ca. 3–4 mPa·s (bei 37 °C) — etwa dreimal so viskos wie Wasser. Die Viskosität beeinflusst den Strömungswiderstand nach dem **Poiseuille-Gesetz:** Q = πr⁴Δp/(8ηl). Der Radius geht mit der **vierten Potenz** ein — das ist der klinisch wichtigste Punkt dieses Gesetzes. Eine Halbierung des Gefäßradius reduziert den Blutfluss auf 1/16! Konkret: Eine Arteriosklerose, die den Gefäßradius um nur 20 % verengt, reduziert den Blutfluss bereits um ca. 60 % — (0,8)⁴ = 0,41, also nur noch 41 % des Normalflusses. Das erklärt, warum schon moderate Stenosen klinisch symptomatisch werden.
+
+> **Merke:** Kontinuität: A₁v₁ = A₂v₂. Bernoulli: schneller → niedrigerer Druck. Reynolds: Re > 4000 → turbulent. Poiseuille: Q ~ r⁴. Ausführliche Herleitungen, Rechenbeispiele und klinische Vertiefung → siehe Fluidmechanik-Kapitel.
 
 > **Prüfungstipp:** Das Hebelgesetz (F₁·d₁ = F₂·d₂) wird im MedAT häufig am Beispiel Bizeps/Unterarm geprüft. Typische Falle: Vergessen, dass der Muskelhebelarm viel kürzer ist als der Lasthebelarm — die Muskelkraft ist daher immer ein Vielfaches der Last.
 
@@ -1580,7 +1650,7 @@ Isaac Newton erkannte, dass dieselbe Kraft, die einen Apfel fallen lässt, auch 
 
 **Gewichtskraft vs. Masse:** Masse m ist eine unveränderliche Eigenschaft des Körpers (Menge der Materie). Gewichtskraft F_G = m·g ist die Gravitationskraft auf der Erde. Auf dem Mond (g_Mond ≈ 1,62 m/s²) wiegt derselbe Körper nur 1/6 seines Erdgewichts. In der Schwerelosigkeit (Raumstation, freier Fall) ist F_G = 0 — der Körper ist gewichtslos, aber seine Masse bleibt gleich.
 
-**Keplersche Gesetze:** (1) Planeten bewegen sich auf Ellipsen mit der Sonne im Brennpunkt. (2) Der Fahrstrahl überstreicht in gleichen Zeiten gleiche Flächen — das folgt aus der Drehimpulserhaltung. (3) Das Quadrat der Umlaufzeit ist proportional zur dritten Potenz der großen Halbachse: T² ~ a³. Diese Gesetze gelten analog für Satelliten und ermöglichen die Berechnung von GPS-Satellitenbahnen.
+**Keplersche Gesetze** beschreiben die Bewegung von Planeten und Satelliten (Ellipsenbahnen, Flächensatz, T² ~ a³). Sie folgen direkt aus dem Gravitationsgesetz und der Drehimpulserhaltung, sind aber für den MedAT nicht prüfungsrelevant.
 
 ## Kreisbewegung und Zentripetalbeschleunigung
 
@@ -1612,7 +1682,19 @@ Das Trägheitsmoment I = Σmᵢ·rᵢ² (Einheit: kg·m²) ist das rotatorische 
 
 ## g-Kräfte in der Medizin
 
-Die Belastung des menschlichen Körpers durch Beschleunigung wird häufig in Vielfachen der Erdbeschleunigung g angegeben. Im Alltag erfahren wir 1 g. In einer Achterbahn wirken kurzzeitig 3–5 g. Piloten von Kampfjets erleben bis zu 9 g — dabei wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling (Blutversacken in den Beinen).
+Die Belastung des menschlichen Körpers durch Beschleunigung wird in Vielfachen der Erdbeschleunigung g angegeben:
+
+| Situation | g-Wert | Medizinische Relevanz |
+|-----------|--------|----------------------|
+| Stehen / Liegen | 1 g | Normaler Referenzwert |
+| Bremsen im Auto | 0,5–1 g | Alltäglich, sicher |
+| Achterbahn | 3–5 g | Kurzzeitig tolerierbar |
+| Frontalaufprall 50 km/h | ~20 g | Organverletzungen, Frakturen |
+| Kampfjetpilot | bis 9 g | G-LOC (Bewusstlosigkeit durch Blutversacken) |
+| Laborzentrifuge (3000 rpm) | ~1000 g | Bluttrennung (Erythrozyten, Plasma) |
+| Ultrazentrifuge | 100 000+ g | Lipoprotein-/DNA-Auftrennung |
+
+Bei hohen g-Werten wird das Blut in die Beine gedrückt, die Sauerstoffversorgung des Gehirns kann sistieren (G-LOC, g-induced loss of consciousness). Anti-G-Hosen komprimieren die Beinvenen und verhindern venöses Pooling (Blutversacken in den Beinen).
 
 In der Notfallmedizin sind g-Kräfte bei Dezelerationstraumen zentral: Ein Frontalaufprall bei 50 km/h mit Bremsstrecke 50 cm erzeugt ca. 20 g. Die dabei auf innere Organe wirkenden Kräfte (F = m·a = m·20g) können Gefäßabrisse (Aortentranssektion), Leberrupturen und diffuse axonale Hirnverletzungen (Zerreißung von Nervenfasern durch Scherkräfte) verursachen. Sicherheitsgurte und Airbags verlängern die Bremsstrecke und reduzieren damit die maximale g-Belastung — ein direktes Resultat von F = m·a.
 
@@ -1624,11 +1706,12 @@ Laborzentrifuge: Drehzahl n = 3000 rpm, Radius r = 15 cm = 0,15 m.
 a_z = ω²r = 314² × 0,15 = 98 596 × 0,15 = **14 789 m/s²**.
 RCF = a_z/g = 14 789/9,81 ≈ **1507 × g** → ausreichend für Serumgewinnung aus Vollblut.
 
-**Beispiel 2 — Geostationärer Satellit (GPS-Anwendung):**
-Umlaufzeit T = 24 h = 86 400 s. M_Erde = 5,97 × 10²⁴ kg, G = 6,674 × 10⁻¹¹ N·m²/kg².
-Aus F_z = F_G: m·ω²·r = G·M·m/r² → r³ = G·M/ω² = G·M·T²/(4π²).
-r³ = 6,674 × 10⁻¹¹ × 5,97 × 10²⁴ × (86 400)² / (4π²) = 7,53 × 10²² m³.
-r = **42 164 km** ≈ 35 786 km über der Erdoberfläche — dort kreisen TV- und Kommunikationssatelliten.
+**Beispiel 2 — Ultrazentrifuge für Lipoprotein-Diagnostik:**
+Klinisches Ziel: LDL- und HDL-Fraktionen trennen. Benötigt: RCF ≈ 100 000 g.
+Radius r = 8 cm = 0,08 m. Gesucht: Drehzahl n.
+RCF = ω²r/g → ω² = RCF·g/r = 100 000 × 9,81 / 0,08 = 1,226 × 10⁷ → ω ≈ 3502 rad/s.
+n = ω/(2π) × 60 ≈ **33 440 rpm** → typisch für Ultrazentrifugen.
+Auf die Lipoproteinteilchen wirkt die 100 000-fache Erdanziehung — sie ordnen sich nach Dichte (VLDL oben, LDL mittig, HDL unten).
 
 **Beispiel 3 — Sturzsicherheit (Standfläche und Schwerpunkt):**
 Patient (h = 1,80 m, Schwerpunkt bei 0,56 × h = 1,01 m) steht auf Standfläche Breite 25 cm.

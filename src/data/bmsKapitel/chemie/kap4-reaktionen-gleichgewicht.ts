@@ -630,8 +630,8 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
     {
       id: "ch-7-03",
       title: "Stöchiometrie und Ausbeute",
-      imageUrl: "/images/bms/ch-enzyme.jpg",
-      imageCaption: "Abb.: Enzymatische Reaktion — Substrat-Enzym-Komplex (OpenStax, CC BY 4.0)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Stöchiometrie",
         "Mol-Verhältnis",
@@ -732,6 +732,8 @@ Klinisch/industriell: Der Haber-Bosch-Prozess (N₂ + 3 H₂ ⇌ 2 NH₃) erreic
 
 Beispiel NaCl 0,9 %: 9 g NaCl pro 1 L → c = 9 / 58,5 = 0,154 mol/L ≈ 154 mmol/L (nahe dem Plasma-Na⁺ von ~140 mmol/L).
 
+Die Stöchiometrie lässt sich direkt auf den Stoffwechsel übertragen — der Respiratorische Quotient (RQ) verrät, welcher Nährstoff gerade verbrannt wird:
+
 **Respirationsquotienten verschiedener Nährstoffe:**
 
 | Nährstoff | RQ (CO₂/O₂) | Brennwert |
@@ -779,12 +781,9 @@ Klinisch: RQ > 1,0 deutet auf Lipogenese (Fettaufbau aus Kohlenhydraten) hin (Um
         "Schema: m →(÷M)→ n →(×Koeffizientenverhältnis)→ n →(×M)→ m.",
         "Mangelreagenz = der zuerst aufgebrauchte Reaktionspartner, der die Ausbeute begrenzt.",
         "Ausbeute % = (tatsächliche / theoretische Ausbeute) × 100.",
-        "Haber-Bosch: N₂ + 3 H₂ ⇌ 2 NH₃; Fe-Katalysator, 400–500 °C, 150–300 bar.",
-        "Glucose-Verbrennung: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O; Respirationsquotient = 1,0.",
-        "Physiologische NaCl = 0,9 % = ~154 mmol/L; Glucose 5 % ≈ 0,278 mol/L.",
-        "n = m / M; m = n × M; c = n / V — die drei Grundformeln der Stöchiometrie.",
+        "RQ verrät den Brennstoff: Kohlenhydrate = 1,0; Fette ≈ 0,7; Proteine ≈ 0,8. RQ > 1 deutet auf Lipogenese.",
+        "Physiologische NaCl = 0,9 % = ~154 mmol/L — Standardfrage im MedAT.",
         "Beim Ausgleichen von Gleichungen zuerst Metalle, dann Nichtmetalle, zuletzt H und O.",
-        "Nebenreaktionen, unvollständige Umsätze und Aufarbeitungsverluste reduzieren die Ausbeute.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -984,7 +983,7 @@ Ein großes K_c bedeutet nicht, dass die Reaktion schnell abläuft — das regel
 
 ## K_p und K_c bei Gasreaktionen
 
-Für Gasreaktionen kann man statt Konzentrationen Partialdrücke verwenden:
+Für Gasreaktionen ist es praktischer, mit Drücken statt Konzentrationen zu arbeiten — K_p beschreibt das gleiche Gleichgewicht wie K_c, nur in Druckeinheiten. Für Gasreaktionen kann man statt Konzentrationen Partialdrücke verwenden:
 
 **K_p = p_C^c · p_D^d / (p_A^a · p_B^b)**
 
@@ -1012,7 +1011,7 @@ Diese Beziehung verbindet die Kinetik (über K) mit der Thermodynamik (über ΔG
 
 ## Hämoglobin und das MWG
 
-Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Die Michaelis-Konstante K_M bei Enzymreaktionen ist ebenfalls eine Gleichgewichtskonstante und gibt die Substrataffinität von Enzymen an.
+Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ ⇌ HbO₂. In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂ — Sauerstoff wird geladen. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Hämoglobin zeigt dabei **Kooperativität**: Die Bindung des ersten O₂ erleichtert die Bindung der nächsten → sigmoidale (S-förmige) Bindungskurve statt hyperbeler Kurve. Le Chatelier steuert so die O₂-Abgabe automatisch nach Bedarf.
 
 > **Prüfungstipp:** Feststoffe und Wasser (als Lösungsmittel) erscheinen NICHT im MWG-Ausdruck — ihre Aktivität ist näherungsweise 1. Diese Regel wird im MedAT gerne als Stolperfalle eingebaut.`,
 
@@ -1051,7 +1050,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
         "K_c >> 1: Gleichgewicht auf Produktseite; K_c << 1: auf Eduktseite.",
         "K_p = K_c·(RT)^Δn — nur bei Δn ≠ 0 verschieden.",
         "ΔG° = −RT·ln(K) — Verknüpfung von Thermodynamik und Gleichgewicht.",
-        "K ist temperaturabhängig, aber nicht konzentrationsabhängig.",
+        "Egal wie viel Edukt du zugibst — K ändert sich nicht. Die Lage verschiebt sich, aber das Gleichgewicht 'weiß' seinen Wert.",
         "Exotherm + höhere T → kleineres K (Gleichgewicht verschiebt zu Edukten).",
         "Hämoglobin-O₂-Bindung folgt MWG: pO₂ steuert die Lage des Gleichgewichts.",
       ],
@@ -1072,7 +1071,7 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
       },
 
       klinischerBezug:
-        "Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin (Hb + O₂ ⇌ HbO₂): In der Lunge (hoher pO₂) liegt Q < K, das Gleichgewicht verschiebt sich zu HbO₂ — Sauerstoff wird geladen. Im Gewebe (niedriger pO₂) gilt Q > K, die Reaktion läuft rückwärts, O₂ wird abgegeben. Im Labor nutzt man Gleichgewichtskonstanten bei Enzym-Substrat-Reaktionen (Michaelis-Konstante K_M), um Enzymaffinitäten zu vergleichen und Pharmaka zu optimieren.",
+        "Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin (Hb + O₂ ⇌ HbO₂): In der Lunge (hoher pO₂) liegt Q < K → Sauerstoff wird geladen. Im Gewebe (niedriger pO₂) gilt Q > K → O₂ wird abgegeben. Kooperativität (sigmoidale Bindungskurve) ermöglicht eine besonders effiziente O₂-Abgabe im Gewebe.",
 
       selfTest: [
         {

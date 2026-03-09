@@ -648,6 +648,8 @@ Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Ga
 
 ---
 
+Wie Stickstoff ist auch Schwefel ein Nichtmetall mit vielfältiger Biochemie:
+
 ## Schwefel (S) — das Bio-Element
 
 Schwefel (Atomnr. 16, Gruppe 16) ist ein essenzielles Bioelement. Es kommt in zwei der 20 proteinogenen Aminosäuren vor:
@@ -660,13 +662,7 @@ Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen 
 
 **SO₂ (Schwefeldioxid):** Reizgas, Luftschadstoff (saurer Regen: SO₂ + H₂O → H₂SO₃, weiter zu H₂SO₄). **Saurer Regen** wird am meisten durch **HNO₃** (Stickoxide aus Verbrennung) und **H₂SO₄** (Schwefeloxide) verursacht. SO₂ ist Konservierungsmittel (E220), **Asthmaprovokator** bei empfindlichen Personen.
 
-**H₂SO₄ (Schwefelsäure) — Kontaktverfahren:** Mengenmäßig wichtigste Industriechemikalie (~250 Mio. t/Jahr weltweit):
-1. S + O₂ → SO₂ (Schwefelverbrennung oder Pyrit-Röstung)
-2. 2 SO₂ + O₂ → 2 SO₃ (V₂O₅-Katalysator, 400–600 °C; >98 % Ausbeute)
-3. SO₃ + konz. H₂SO₄ → Oleum (H₂S₂O₇) — nicht direkt + H₂O (Aerosol-Problem!)
-4. Oleum + H₂O → 2 H₂SO₄
-
-pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygroskopisch** und **dehydratisierend** (karbonisiert Zucker zu schwarzem Kohlenstoff, verursacht schwere Verätzungen).
+**H₂SO₄ (Schwefelsäure):** Mengenmäßig wichtigste Industriechemikalie (~250 Mio. t/Jahr). Herstellung im **Kontaktverfahren**: S → SO₂ → SO₃ (V₂O₅-Katalysator) → Oleum → H₂SO₄. pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygroskopisch** und **dehydratisierend** (karbonisiert Zucker, verursacht schwere Verätzungen).
 
 **Schwefel in der Medizin — klinische Bezüge:**
 - **Glutathion (GSH):** Tripeptid (γ-Glu-Cys-Gly) mit freier −SH-Gruppe → wichtigstes intrazelluläres Antioxidans; GSH-Peroxidase reduziert H₂O₂ und Lipidperoxide; Paracetamol-Überdosis → GSH-Depletion → Lebernekrose (Antidot: N-Acetylcystein liefert Cystein für GSH-Resynthese)
@@ -686,6 +682,8 @@ pKa1 <<0 (starke erste Stufe), pKa2 ≈ 1,99. Konzentrierte H₂SO₄ ist **hygr
 > **Merke:** Schwefel ist essenziell für Redox-Biochemie (Disulfidbrücken, Glutathion, CoA) und Methylierung (SAM). Klinisch relevant: NAC bei Paracetamol-Vergiftung liefert Cystein für GSH-Resynthese.
 
 ---
+
+Die Halogene (Gruppe 17) sind die reaktivsten Nichtmetalle — jedes hat eine spezifische medizinische Bedeutung:
 
 ## Halogene — Gruppe 17
 
@@ -709,7 +707,7 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
 
 **Interhalogenverbindungen und Polyhalogenide:** Halogene können untereinander reagieren: ClF₃ (stärkstes Fluorierungsmittel), BrCl, ICl (Iodmonochlorid — braune Flüssigkeit, Desinfektionsmittel). I₃⁻ (Triiodid-Ion) entsteht durch I₂ + I⁻ → I₃⁻ — stabiler als I₂ in wässriger Lösung, Basis der Lugol-Lösung (KI + I₂) für Schilddrüsenblockade und Wunddesinfektion.
 
-> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ — abnehmendes E° in Gruppe 17 von oben nach unten. F⁻ für Zähne (Fluorapatit) und PET (¹⁸F-FDG), Cl⁻ für Magensäure und CFTR, Br⁻ historisch Sedativum, I⁻ für Schilddrüse (T₃/T₄) und CT-Kontrastmittel.
+> **Merke:** Halogene Oxidationskraft: F₂ > Cl₂ > Br₂ > I₂ (abnehmendes E° von oben nach unten). Jedes Halogen hat EINE medizinische Schlüsselrolle: Fluorid härtet Zahnschmelz (Fluorapatit), Chlorid bildet Magensäure (HCl), Iodid ist essentiell für Schilddrüsenhormone (T₃/T₄). Brom hat heute keine klinische Bedeutung mehr.
 
 > **Prüfungstipp:** Iod-Schilddrüse (T₃ = 3 Iod, T₄ = 4 Iod), Fluorapatit-Karieschutz und die Haber-Bosch-Bedingungen (400-500 °C, 150-300 bar, Fe-Katalysator) sind wiederkehrende MedAT-Themen. Bei H₂S: Geruchslähmung ab ~100 ppm als Fangfrage beachten. Neue Fangfrage: „Welches Halogen ist bei RT flüssig?" → Brom (Br₂).`,
       sections: [
@@ -2608,28 +2606,13 @@ Bei der Elektrolyse wird eine nicht-spontane Redox-Reaktion durch externe elektr
 
 ## Batterien und Akkumulatoren
 
-**Primärzellen** (nicht wiederaufladbar): Leclanche-Element (Zinkkohlenstoff), Alkaline-Batterie (Zn/MnO2), Lithium-Primärzellen. Die chemischen Reaktionen sind irreversibel.
+**Primärzellen** (nicht wiederaufladbar, z. B. Alkaline): Redox-Reaktionen sind irreversibel. **Sekundärzellen/Akkumulatoren** (wiederaufladbar, z. B. Li-Ionen, Blei-Akku): Beim Laden werden die Reaktionen durch externe Energie umgekehrt. **Brennstoffzellen** (H₂ + ½O₂ → H₂O) gewinnen direkt elektrische Energie mit bis zu 60 % Wirkungsgrad.
 
-**Sekundärzellen/Akkumulatoren** (wiederaufladbar): Blei-Akkumulator, Lithium-Ionen-Akku, Nickel-Metallhydrid (NiMH). Beim Laden werden die Redox-Reaktionen durch externe Energie umgekehrt.
-
-**Blei-Akkumulator (Kfz-Batterie):**
-- Entladen (Anode): Pb -> Pb2+ + 2e- (Pb wird zu PbSO4)
-- Entladen (Kathode): PbO2 + 4H+ + SO4(2-) + 2e- -> PbSO4 + 2H2O
-- Laden: Reaktionen umgekehrt, PbSO4 -> Pb und PbO2
-
-**Brennstoffzellen:** H2 + 1/2 O2 -> H2O mit direkter elektrischer Energiegewinnung (Wirkungsgrad bis 60%), ideal für CO2-freie Energieerzeugung.
-
-> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion -- gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle ist die Anode negativ, bei der Elektrolyse positiv (umgekehrte Polarität).
+> **Merke:** AnOx RedKat: Anode = Oxidation, Kathode = Reduktion — gilt sowohl in galvanischen Zellen als auch bei der Elektrolyse. In der galvanischen Zelle gibt das unedlere Metall freiwillig Elektronen ab → Anode (Minuspol). Bei der Elektrolyse erzwingt eine externe Spannung den umgekehrten Prozess → die Anode wird zum Pluspol, weil hier die Stromquelle Elektronen abzieht.
 
 ## Korrosion -- elektrochemische Zerstörung
 
-Korrosion ist eine unerwünschte galvanische Reaktion: Ein Metall (z. B. Eisen) wird in Gegenwart von Wasser und O2 oxidiert: Fe -> Fe2+ + 2e- (Anode); O2 + 2H2O + 4e- -> 4OH- (Kathode). Fe2+ und OH- bilden Fe(OH)2, das zu Fe2O3*xH2O (Rost) weiteroxidiert.
-
-**Korrosionsschutz:**
-- **Kathodischer Schutz:** Opferanode aus unedlerem Metall (Zn an Stahlschiffen, Mg an Pipelines) -- das unedlere Metall wird bevorzugt oxidiert
-- **Verzinkung:** Zn-Überzug schützt selbst bei Beschädigung (Zn als Opferanode)
-- **Passivierung:** Aluminium bildet eine dichte Al2O3-Schicht (selbstschützend)
-- **Lacke und Beschichtungen:** Verhindern Kontakt mit Elektrolyt
+Korrosion ist eine unerwünschte galvanische Reaktion: Eisen wird in Gegenwart von Wasser und O₂ zu Rost oxidiert. **Korrosionsschutz:** Opferanode aus unedlerem Metall (Zn an Schiffen), Verzinkung, Passivierung (Al₂O₃-Schicht bei Aluminium) oder Beschichtungen.
 
 ## Rechenbeispiel: DeltaG aus Zellspannung
 
@@ -2646,9 +2629,7 @@ Negativer DeltaG-Wert bestätigt: Die Reaktion Zn + Cu2+ -> Zn2+ + Cu ist sponta
 - **Defibrillator-Implantate:** Hohe Energiedichte durch Li-Ionen-Technologie
 - **Galvanik in der Zahnmedizin:** Verschiedene Metalle im Mund (Gold, Amalgam) können galvanische Elemente bilden -> Galvanischer Geschmack
 
-> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.
-
-> **Prüfungstipp:** AnOx RedKat (Anode = Oxidation, Kathode = Reduktion) gilt IMMER -- sowohl in galvanischen Zellen als auch bei der Elektrolyse. Die Formel E = E(Kathode) - E(Anode) > 0 für spontane Reaktionen muss sitzen.`,
+> **Merke:** E-Zelle = E-Kathode - E-Anode. Positiv = spontan (DeltaG < 0). Je größer E-Zelle, desto mehr nutzbare elektrische Energie.`,
       lernziele: [
         "Aufbau und Funktionsweise galvanischer Zellen erläutern und Anode/Kathode zuordnen",
         "Standardelektrodenpotenziale lesen, interpretieren und zur Vorhersage spontaner Redox-Reaktionen nutzen",
@@ -3162,12 +3143,13 @@ Reaktive Sauerstoffspezies (ROS, englisch: Reactive Oxygen Species) sind hochrea
 
 Die Zelle verfügt über enzymatische und nicht-enzymatische Antioxidantien:
 
-**Enzymatische Antioxidantien:**
-- **Superoxiddismutase (SOD):** Disproportioniert O2*- -> H2O2 + O2. Drei Isoformen: SOD1 (Cu/Zn, zytoplasmatisch), SOD2 (Mn, mitochondrial), SOD3 (Cu/Zn, extrazellulär)
-- **Katalase:** H2O2 -> H2O + 1/2 O2. Peroxisomales Enzym. Höchste Umsatzzahl aller bekannten Enzyme (ca. 10^7 /s)
-- **Glutathion-Peroxidase (GPx):** H2O2 + 2GSH -> 2H2O + GSSG. Verwendet reduziertes Glutathion (GSH) als Reduktionsmittel. Selenocystein im aktiven Zentrum.
-- **Glutathion-Reduktase (GR):** GSSG + NADPH -> 2GSH. Regeneriert GSH auf Kosten von NADPH (aus Pentosephosphatweg).
-- **Thioredoxin-System:** Thioredoxin (Trx) + Thioredoxin-Reduktase (TrxR) + NADPH: reduziert oxidierte Proteine
+**Enzymatische Antioxidantien — die Schutzkaskade:**
+- **Superoxiddismutase (SOD):** Disproportioniert O2*- -> H2O2 + O2
+- **Katalase:** H2O2 -> H2O + 1/2 O2. Peroxisomales Enzym
+- **Glutathion-Peroxidase (GPx):** H2O2 + 2GSH -> 2H2O + GSSG. Selenocystein im aktiven Zentrum
+- **Glutathion-Reduktase (GR):** GSSG + NADPH -> 2GSH. Regeneriert GSH auf Kosten von NADPH (aus Pentosephosphatweg)
+
+> **Merke:** O₂ →(1e⁻)→ O₂·⁻ →(SOD)→ H₂O₂ →(Katalase/GPx)→ H₂O. GPx braucht GSH, GSH braucht NADPH, NADPH braucht G6PD — bei G6PD-Mangel bricht die Kette.
 
 **Nicht-enzymatische Antioxidantien:**
 - **Glutathion (GSH):** Tripeptid (gamma-Glu-Cys-Gly), zentrales intrazelluläres Antioxidans. Konzentration 1-10 mmol/L intrazellulär.
@@ -3185,11 +3167,7 @@ NADPH (Nicotinamid-Adenin-Dinukleotid-Phosphat, reduziert) ist das zentrale Redu
 
 ## ROS als Signalmoleküle
 
-ROS haben nicht ausschließlich schädliche Funktionen. In physiologischen Konzentrationen wirken sie als **Redox-Signalmoleküle** (Konzept des Eustress vs. Distress):
-- H2O2 oxidiert Cystein-SH-Gruppen von Signalproteinen -> Konformationsänderung -> Signalübertragung
-- Aktivierung von NF-kappaB, HIF-1alpha, Nrf2 (antioxidativer Transkriptionsfaktor)
-- NADPH-Oxidase (NOX) in Phagozyten produziert O2*- gezielt zur Pathogenabwehr (oxidativer Burst)
-- Mitochondriale ROS regulieren Apoptose und Autophagie
+ROS sind nicht nur schädlich — in physiologischen (nanomolaren) Konzentrationen wirkt H₂O₂ als **Redox-Signalmolekül**, das durch Oxidation von Cystein-SH-Gruppen Signalwege moduliert. Die **NADPH-Oxidase (NOX2)** in Phagozyten produziert O₂·⁻ gezielt zur Pathogenabwehr (oxidativer Burst).
 
 ---
 

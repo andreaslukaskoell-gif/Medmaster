@@ -353,6 +353,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
       ],
       content: `Vier Zahlen genügen, um jedes Elektron im Atom eindeutig zu beschreiben — die Quantenzahlen bilden das Koordinatensystem der Atomhülle.
 
+Die vier Quantenzahlen sind das Adresssystem der Elektronen — sie sagen dir, in welchem Stockwerk (n), welcher Wohnungsform (l), welcher Raumrichtung (m_l) und mit welchem Spin (m_s) ein Elektron sitzt. Ohne dieses System wäre es unmöglich zu erklären, warum Eisen Sauerstoff transportiert oder warum Fluor das reaktivste Element ist.
+
 ## Die vier Quantenzahlen
 
 | Quantenzahl | Symbol | Werte | Bestimmt |
@@ -388,10 +390,10 @@ Beschreibt den Eigendrehimpuls (Spin, Eigendrehung des Elektrons) des Elektrons.
 
 **Pauliprinzip (Ausschlussprinzip, 1925):** Kein Atom kann zwei Elektronen mit identischen vier Quantenzahlen besitzen. Folge: Jedes Orbital kann maximal 2 Elektronen aufnehmen, und diese müssen entgegengesetzte Spins haben (↑↓).
 
-**Aufbauprinzip (Energieminimumprinzip):** Elektronen besetzen zunächst die Orbitale mit der niedrigsten Energie. Die Energiereihenfolge richtet sich nach n + l (Madelung-Regel, auch Klechkowski-Regel):
+**Aufbauprinzip (Energieminimumprinzip):** Elektronen besetzen zunächst die Orbitale mit der niedrigsten Energie. Orbitale füllen sich nicht einfach von n=1 aufwärts — sie folgen der Regel: zuerst das Orbital mit der kleinsten Summe (n+l). Bei gleicher Summe gewinnt das niedrigere n. Die Diagonalregel (1s->2s->2p->3s->3p->4s->3d->...) ergibt sich daraus. Dies ist die Madelung-Regel (auch Klechkowski-Regel):
 1s < 2s < 2p < 3s < 3p < 4s < 3d < 4p < 5s < 4d < 5p < 6s < 4f < 5d ...
 
-Bei gleichem n + l wird das kleinere n zuerst besetzt. Achtung: 4s liegt energetisch vor 3d (n+l: 4s→4+0=4; 3d→3+2=5). Bei Übergangselementen werden bei der Ionenbildung die 4s-Elektronen zuerst entfernt (4s ist im Ion energetisch höher als 3d).
+Achtung: 4s liegt energetisch vor 3d (n+l: 4s->4+0=4; 3d->3+2=5). Bei Übergangselementen werden bei der Ionenbildung die 4s-Elektronen zuerst entfernt (4s ist im Ion energetisch höher als 3d).
 
 > **Merke:** Aufbau: 4s vor 3d füllen. Ionisierung: 4s vor 3d entfernen. Fe → Fe²⁺: [Ar]3d⁶4s² → [Ar]3d⁶ (beide 4s-Elektronen weg).
 
@@ -427,12 +429,12 @@ Atome oder Ionen mit **ungepaarten Elektronen** sind **paramagnetisch** (werden 
 
 ## Klinische Relevanz — Übergangsmetalle als Spurenelemente
 
-Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für katalytische und koordinative Funktionen:
-- **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette), Katalase
-- **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Ceruloplasmin (Kupfer-Transportprotein im Blut), Superoxid-Dismutase
-- **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme (Carboanhydrase, Alkohol-Dehydrogenase), Zinkfinger-Proteine (Transkriptionsfaktoren)
-- **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin), essenziell für Methylierungsreaktionen
-- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase), Arginase (Harnstoffzyklus)
+Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für katalytische und koordinative Funktionen. Die biologische Rolle der Übergangsmetalle (Fe, Cu, Zn, Co, Mn) wird in UK ch-5-03 ausführlich behandelt. Hier das Wichtigste im Überblick:
+- **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette)
+- **Cu** ([Ar]3d¹⁰4s¹): Zytochrom-c-Oxidase, Superoxid-Dismutase
+- **Zn** ([Ar]3d¹⁰4s²): >300 Enzyme, Zinkfinger-Transkriptionsfaktoren
+- **Co** ([Ar]3d⁷4s²): Kern von Vitamin B12 (Cobalamin)
+- **Mn** ([Ar]3d⁵4s²): Mn-SOD (mitochondriale Superoxid-Dismutase)
 
 > **Prüfungstipp:** Die Ausnahmen Cr ([Ar]3d⁵4s¹) und Cu ([Ar]3d¹⁰4s¹) werden fast jedes Jahr im MedAT abgefragt. Merke: halb- und vollgefüllte d-Schalen sind besonders stabil. Bei Ionen werden immer zuerst die 4s-Elektronen entfernt, nicht die 3d-Elektronen.`,
 
@@ -1839,6 +1841,8 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 
 ## Kolloidchemie
 
+Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die weder echte Lösungen noch Suspensionen sind:
+
 **Kolloide** sind Systeme, in denen Partikel mit einem Durchmesser von **1 nm bis 1 μm** in einem Dispersionsmedium verteilt sind. Sie liegen zwischen echten Lösungen (<1 nm, molekulardispers) und Suspensionen (>1 μm, sedimentieren).
 
 
@@ -1861,7 +1865,7 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 **Emulsionen in der Medizin:**
 - **Parenterale Ernährung:** Fettemulsionen (Sojaöl/Wasser mit Phospholipid-Emulgator) liefern Energie ohne enterale Resorption
 - **Lungenembolie durch Fettembolie:** Fetttröpfchen aus Knochenmarkschädigung (Fraktur) bilden Emulsion im Blut und können Lungenarterien verlegen
-- **Surfactant der Lunge:** Phospholipid-Gemisch (Dipalmitoylphosphatidylcholin, DPPC), das die Alveolen-Wasser-Grenzfläche stabilisiert und die Oberflächenspannung senkt → verhindert Alveolarkollaps; bei Frühgeborenen noch nicht ausgereift → **Atemnotsyndrom (RDS)**
+- **Surfactant der Lunge:** Warum ist der Druck in einer kleinen Seifenblase höher als in einer großen? Die gekrümmte Oberfläche übt eine nach innen gerichtete Kraft aus — je kleiner der Radius, desto stärker die Krümmung und desto höher der Innendruck (Laplace-Gleichung: ΔP = 2γ/r). Surfactant (Phospholipid-Gemisch, v.a. Dipalmitoylphosphatidylcholin/DPPC) senkt die Oberflächenspannung in den Alveolen und verhindert, dass kleine Alveolen in große kollabieren (Laplace!) — bei Frühgeborenen fehlt er, was zum **Atemnotsyndrom (RDS)** führt
 
 > **Prüfungstipp:** Endotherm vs. exotherm ist ein Klassiker: Alles, was „lockerer" macht (Schmelzen, Verdampfen, Sublimation) ist endotherm. Alles, was „fester" macht (Erstarren, Kondensieren, Resublimation) ist exotherm. Die Verdampfungswärme von Wasser (2257 J/g) kommt oft als Zahlenangabe in Aufgaben vor.`,
 
@@ -2174,10 +2178,10 @@ Der **Metallcharakter** nimmt zu: in einer Periode von rechts nach links und in 
 
 ## Ausnahmen beim Aufbauprinzip: Chrom und Kupfer
 
-- **Chrom (Z=24)**: Erwartet [Ar] 3d⁴ 4s², tatsächlich **[Ar] 3d⁵ 4s¹** - halbgefülltes d⁵ (maximale Austauschenergie nach Hund)
-- **Kupfer (Z=29)**: Erwartet [Ar] 3d⁹ 4s², tatsächlich **[Ar] 3d¹⁰ 4s¹** - vollgefülltes d¹⁰ ist besonders stabil
+- **Chrom (Z=24)**: [Ar] 3d⁵ 4s¹ statt erwartet 3d⁴ 4s²
+- **Kupfer (Z=29)**: [Ar] 3d¹⁰ 4s¹ statt erwartet 3d⁹ 4s²
 
-Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insulinwirkung). Chrom(VI): stark karzinogen.
+Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Erklärung mit Austauschenergie und klinischer Relevanz (Cr als Spurenelement, Cu-Stoffwechsel) findet sich in UK ch-1-02.
 
 > **Merke:** Die Ordnungszahl (Protonenzahl) bestimmt die Stellung im PSE und damit die chemischen Eigenschaften eines Elements. Elemente derselben Gruppe haben gleich viele Valenzelektronen und verhalten sich chemisch ähnlich.
 
@@ -2398,9 +2402,8 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
     {
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
-      imageUrl: "/images/bms/ch-proteinstruktur.jpg",
-      imageCaption:
-        "Abb.: Chemische Strukturen — von Atomen zu komplexen Molekülen (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption: "Abb.: Periodische Trends im PSE — Atomradius, IE, EN (OpenStax, CC BY 4.0)",
       stichworte: [
         "Effektive Kernladung",
         "Atomradius",
@@ -2419,7 +2422,9 @@ Chrom(III): essentielles Spurenelement (Glukosetoleranzfaktor, potenziert Insuli
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
-Alle periodischen Trends lassen sich auf die **effektive Kernladung** (Z_eff) zurückführen. Ein Valenzelektron spürt nicht die volle Kernladung Z, weil innere Elektronen die Kernladung teilweise abschirmen:
+Die Kernladung, die ein Außenelektron tatsächlich "spürt", ist kleiner als die Gesamtladung — innere Elektronen schirmen den Kern ab, wie eine Menschenmenge zwischen dir und einem Lautsprecher. Je mehr Leute (innere Elektronen) dazwischen stehen, desto leiser (schwächer) kommt das Signal (die Anziehung) an.
+
+Alle periodischen Trends lassen sich auf diese **effektive Kernladung** (Z_eff) zurückführen. Ein Valenzelektron spürt nicht die volle Kernladung Z, weil innere Elektronen die Kernladung teilweise abschirmen:
 
 **Z_eff = Z − σ** (σ nach Slater: gleiche Schale ≈0,35; nächstinnere ≈0,85; alle weiter innen ≈1,0)
 
@@ -2445,9 +2450,9 @@ Isoelektronische Reihe ([Ne]-Konfiguration): O²⁻ > F⁻ > Ne > Na⁺ > Mg²�
 
 Trends: In der Periode↑ (Z_eff steigt); in der Gruppe↓ (Valenzelektronen weiter vom Kern).
 
-**IE-Ausnahmen Periode 2**:
-- IE₁(B) < IE₁(Be): Bors 5. Elektron im energiereicheren 2p-Orbital → leichter zu entfernen trotz höherem Z
-- IE₁(O) < IE₁(N): Stickstoff hat halbgefülltes 2p³ (maximale Austauschenergie, stabil nach Hund). Sauerstoffs 4. 2p-Elektron muss ein besetztes Orbital teilen → Pairing Penalty (Coulomb-Abstoßung) → leichter zu entfernen. IE₁(O)=1314 < IE₁(N)=1402 kJ/mol
+**IE-Ausnahmen Periode 2** (MedAT-Dauerbrenner!):
+- IE₁(B) < IE₁(Be): Bor hat eine niedrigere IE als Beryllium, obwohl Z steigt — das 2p-Elektron sitzt allein in einem neuen Unterschalen-Typ und ist leichter zu entfernen als ein 2s-Elektron aus dem voll besetzten 2s². Ein Umzug aus einer WG (2p, neu, ungemütlich) fällt leichter als aus einer Eigentumswohnung (2s², voll besetzt, stabil).
+- IE₁(O) < IE₁(N): Sauerstoff hat eine niedrigere IE als Stickstoff, weil es ein Elektron doppelt besetzt hat — die Abstoßung im gleichen Orbital erleichtert die Entfernung. Stickstoff hat halbgefülltes 2p³ (jedes der drei 2p-Orbitale genau einfach besetzt, maximale Austauschenergie nach Hund → besonders stabil). Sauerstoffs 4. 2p-Elektron muss in ein bereits besetztes Orbital → Pairing Penalty (Coulomb-Abstoßung) → leichter zu entfernen. IE₁(O)=1314 < IE₁(N)=1402 kJ/mol
 
 Analoge Pairing-Penalty Periode 3: IE(S) < IE(P) (P hat halbgefülltes 3p³).
 Analoge Subshell-Ausnahme Periode 3: IE(Al) < IE(Mg) (Al entfernt 3p-, Mg 3s-Elektron).

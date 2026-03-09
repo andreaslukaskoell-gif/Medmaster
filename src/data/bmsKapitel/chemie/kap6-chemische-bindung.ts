@@ -579,7 +579,7 @@ Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindend
 
 ## Hybridisierung
 
-Hybridisierung erklärt die Geometrie von Kohlenstoff- (und anderen) Verbindungen durch Mischung von Atomorbitalen zu energieäquivalenten **Hybridorbitalen**. Die Zahl der Hybridorbitale entspricht der Zahl der gemischten Atomorbitale. Der Energieaufwand für die Promotion (Anhebung eines Elektrons aus dem s- in ein p-Orbital) wird durch die Bildung stärkerer Bindungen mehr als kompensiert.
+Kohlenstoff hat die Konfiguration 2s² 2p² — eigentlich nur 2 ungepaarte Elektronen. Aber um 4 gleichwertige Bindungen zu bilden, „mischt" es ein s- mit drei p-Orbitalen zu vier identischen sp³-Hybriden. Das kostet Energie (Promotion), die durch die 4 stabilen Bindungen mehr als kompensiert wird. Dieses Prinzip — **Hybridisierung** — erklärt die Geometrie von Kohlenstoff- (und anderen) Verbindungen durch Mischung von Atomorbitalen zu energieäquivalenten **Hybridorbitalen**. Die Zahl der Hybridorbitale entspricht der Zahl der gemischten Atomorbitale.
 
 **sp³-Hybridisierung** (Methan, CH₄):
 Ein s-Orbital + drei p-Orbitale → vier sp³-Hybridorbitale → tetraedrische Anordnung (109,5°). Alle Bindungen sind Sigma-Bindungen (σ). Beispiele: Alkane, gesättigte Kohlenwasserstoffe, Wasser (O ist sp³), Aminosäuren (Cα). Biologisch: Das sp³-Kohlenstoffatom in Aminosäuren ist das Chiralitätszentrum (außer Glycin).
@@ -691,7 +691,8 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
         {
           heading: "Hybridisierung und biologische Relevanz",
           text: "Hybridorbitale entstehen durch mathematische Mischung von s- und p-Atomorbitalen. sp³: Tetraeder (Aminosäuren, gesättigte Fettsäuren); sp²: trigonal planar (Peptidgruppe, Aromaten, Carbonylgruppen); sp: linear (Nitrile, CO). Die Peptidgruppe (–CO–NH–) ist sp²-hybridisiert, was ihr partiellen Doppelbindungscharakter verleiht — sie ist planar und kann nicht frei rotieren, was die Sekundärstruktur von Proteinen (α-Helix, β-Faltblatt) direkt beeinflusst.",
-          merksatz: "sp³ = Tetraeder; sp² = planar (Doppelbindung); sp = linear (Dreifachbindung).",
+          merksatz:
+            "Hybridisierung = Mischung: sp hat 50 % s-Charakter → 180°; sp² 33 % → 120°; sp³ 25 % → 109,5°. Mehr s-Anteil = größerer Winkel.",
         },
         {
           heading: "Sigma- und Pi-Bindungen",
@@ -743,7 +744,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
         "CO₂ ist trotz polarer C=O-Bindungen unpolar (linear, Dipole heben sich auf).",
         "VSEPR: Elektronenpaare stoßen sich ab → maximaler Abstand → Geometrie.",
         "Freie Elektronenpaare verkleinern Bindungswinkel stärker als bindende Paare.",
-        "sp³: 109,5° Tetraeder; sp²: 120° planar; sp: 180° linear.",
+        "Mehr s-Charakter = größerer Winkel: sp (50 % s) → 180°, sp² (33 % s) → 120°, sp³ (25 % s) → 109,5°.",
         "Hybridisierung erkennen: σ-Bindungen + freie EP zählen: 4 → sp³, 3 → sp², 2 → sp.",
         "π-Bindung verhindert freie Rotation → Cis-Trans-Isomerie, Rigidität der Peptidbindung.",
         "Benzol: sp², delokalisiertes π-System → aromatisch, besonders stabil (4n+2 π-Elektronen).",
@@ -1026,8 +1027,6 @@ Einflussfaktoren:
 | Kr | 36 | −153 | Mittel |
 | Xe | 54 | −108 | Stärker |
 
-> **Merke:** London-Dispersionskräfte sind die **universellen** intermolekularen Kräfte — sie wirken zwischen ALLEN Molekülen und Atomen, auch komplett unpolaren. Bei großen Molekülen (Fettsäuren, Proteine, Polymere) können sie kollektiv beträchtliche Stärke erreichen. Sie sind der Grund, warum auch unpolare Substanzen kondensieren und erstarren können.
-
 **London-Kräfte in biologischen Membranen:** Die Lipiddoppelschicht wird primär durch den hydrophoben Effekt stabilisiert, aber London-Kräfte zwischen den parallelen Kohlenwasserstoffketten der Fettsäuren tragen wesentlich zum Zusammenhalt bei. Gesättigte Fettsäuren mit geraden Ketten können sich dichter packen → stärkere London-Kräfte → höhere Membranrigidität. Cholesterol reguliert die Membranfluidität, indem es London-Kräfte zwischen Fettsäureketten verstärkt (bei hoher T) oder abschwächt (bei niedriger T).
 
 **Siedepunktvergleich — Einfluss der intermolekularen Kräfte:**
@@ -1079,8 +1078,6 @@ Ein Spezialfall ist die **Keesom-Wechselwirkung** (Anziehung zwischen zwei perma
 | Keesom | Permanent ↔ permanent | 1–5 kJ/mol | HCl, Aceton, CHCl₃ |
 | Debye | Permanent → induziert | 0,5–2 kJ/mol | HCl neben Ar; H₂O neben O₂ |
 
-> **Merke:** „Van-der-Waals-Kräfte" ist der Oberbegriff für alle drei Typen (London + Keesom + Debye). In der Praxis dominieren London-Kräfte fast immer — selbst bei polaren Molekülen machen sie oft >50 % der gesamten intermolekularen Wechselwirkung aus. Nur bei sehr kleinen, stark polaren Molekülen (HF, H₂O) überwiegen H-Brücken.
-
 ---
 
 ## Hierarchie der intermolekularen Kräfte — Stärkenvergleich
@@ -1103,15 +1100,13 @@ Die **Stärkehierarchie** der Wechselwirkungen ist entscheidend für das Verstä
 - H-Brücken, Dipol-Dipol, London: **intermolekular** (halten Moleküle zusammen)
 - Ion-Dipol: Grenzfall (hält Ionen in Lösung)
 
-> **Merke:** Die Hierarchie der Kräfte: kovalent ≈ ionisch >> Ion-Dipol >> H-Brücke >> Dipol-Dipol >> London. Für Siedepunkte und Löslichkeit sind die intermolekularen Kräfte entscheidend. In der Biochemie dominieren H-Brücken und der hydrophobe Effekt (London-Kräfte) die molekulare Erkennung.
-
 ---
 
 **Ion-Dipol-Wechselwirkungen:** Wirken zwischen Ionen und polaren Molekülen — Grundlage der Hydratation/Solvatation. Na⁺ wird von den partiell negativen Sauerstoffatomen des Wassers umgeben (Hydratationszahl ~6), Cl⁻ von den partiell positiven Wasserstoffatomen. Diese Wechselwirkung ist der stärkste intermolekulare Krafttyp und ermöglicht das Lösen von Salzen in Wasser. Die Hydratationsenthalpie von Na⁺ beträgt −406 kJ/mol, von Cl⁻ −377 kJ/mol — zusammen fast so groß wie die Gitterenergie von NaCl (−786 kJ/mol).
 
 ## Wasserstoffbrückenbindungen (H-Brücken)
 
-Wasserstoffbrücken sind die wichtigste intermolekulare Kraft in biologischen Systemen — stärker als Dipol-Dipol-Kräfte und London-Kräfte. Sie erklären die Anomalien des Wassers, die DNA-Basenpaarung und die Proteinstruktur.
+Die stärkste intermolekulare Kraft (außer Ionenbindungen) ist die Wasserstoffbrücke. Wasserstoffbrücken sind die wichtigste intermolekulare Kraft in biologischen Systemen — stärker als Dipol-Dipol-Kräfte und London-Kräfte. Sie erklären die Anomalien des Wassers, die DNA-Basenpaarung und die Proteinstruktur.
 
 **Definition:** Wasserstoffbrücken entstehen, wenn ein Wasserstoff, der kovalent an ein hochelektronegatives Atom gebunden ist (N, O, F — „Donor"), elektrostatisch mit dem freien Elektronenpaar eines anderen elektronegativen Atoms („Akzeptor") wechselwirkt.
 
@@ -1196,8 +1191,6 @@ Ohne H-Brücken müsste Wasser bei ca. −80 °C sieden (Extrapolation der Reihe
 
 Die Anomalie ist bei H₂O am größten (4 H-Brücken pro Molekül), bei HF ebenfalls stark (stärkste einzelne H-Brücke, aber nur 2 pro Molekül: 1 Donor, 3 Akzeptoren wegen 3 freier EP → Ketten statt Netzwerk). Bei NH₃ ist die Anomalie am kleinsten (1 freies EP = 1 Akzeptor, 3 Donoren → weniger H-Brücken pro Molekül als bei H₂O).
 
-> **Merke:** H₂O > HF > NH₃ in der Stärke der Siedepunkt-Anomalie. H₂O bildet das stärkste 3D-Netzwerk (4 H-Brücken: 2 Donor + 2 Akzeptor). NH₃ und HF bilden eher Ketten. Daher siedet H₂O bei 100 °C, obwohl es die kleinste Molmasse in der Reihe hat.
-
 ---
 
 ### Biologische Bedeutung der Wasserstoffbrücken
@@ -1226,17 +1219,9 @@ Die Anomalie ist bei H₂O am größten (4 H-Brücken pro Molekül), bei HF eben
 | **Schwermetalle** | Pb²⁺, Hg²⁺, Ag⁺ binden an −SH-Gruppen → Disulfidbrücken + Konformation gestört | Quecksilbervergiftung: Enzyminaktivierung |
 | **Organische Lösungsmittel** | Ethanol, Aceton verdrängen Wasser → hydrophobe Wechselwirkungen gestört | Ethanol 70 %: Desinfektion durch Proteindenaturierung |
 
-**Fieber — kontrollierte Denaturierung als Abwehrmechanismus:**
-Fieber (Körpertemperatur >38,0 °C) wird durch **Pyrogene** ausgelöst: exogene (Lipopolysaccharide/LPS von Bakterien) oder endogene (IL-1, IL-6, TNF-α, PGE₂). PGE₂ (Prostaglandin E₂) erhöht den Sollwert im Hypothalamus (thermoregulatorisches Zentrum). Antipyretika (Paracetamol, Ibuprofen, ASS) hemmen **Cyclooxygenase (COX)** → weniger PGE₂ → Fiebersenkung.
+Hitze, extreme pH-Werte oder Schwermetalle zerstören die Wasserstoffbrücken in Proteinen → **Denaturierung** (Verlust der 3D-Struktur und Funktion, Primärstruktur bleibt intakt). Ab ca. 42 °C werden auch humane Proteine zunehmend denaturiert (Hitzschlag).
 
-Warum ist Fieber nützlich? Bei 39–40 °C:
-- **Bakterielle Enzyme** verlieren Aktivität (ihre H-Brücken-Netzwerke sind auf ~37 °C optimiert)
-- **Immunzellen** arbeiten schneller (höhere Enzymaktivität, schnellere Phagozytose)
-- **Eisen-Sequestrierung** nimmt zu → weniger verfügbares Fe für Bakterienwachstum
-
-Ab **42 °C** werden auch humane Proteine zunehmend denaturiert → Hitzschlag: Organversagen durch massive Proteindenaturierung (Leber, Niere, Gehirn).
-
-> **Merke:** Denaturierung = Strukturverlust durch Brechen nichtkovalenter Bindungen (H-Brücken, hydrophobe WW, Salzbrücken), NICHT der Peptidbindungen. Fieber nutzt die Temperaturabhängigkeit von H-Brücken gezielt gegen Pathogene. Ab 42 °C werden eigene Proteine geschädigt.
+> **Merke:** Denaturierung = Strukturverlust durch Brechen nichtkovalenter Bindungen (H-Brücken, hydrophobe WW, Salzbrücken), NICHT der Peptidbindungen.
 
 **Renaturierung vs. irreversible Denaturierung:**
 - **Reversibel:** Kleine Proteine (<100 AS) können sich nach Entfernen des Denaturierungsmittels spontan zurückfalten (Anfinsen-Experiment: Ribonuklease A). Die Aminosäuresequenz enthält alle Informationen für die korrekte Faltung.
@@ -1246,12 +1231,8 @@ Ab **42 °C** werden auch humane Proteine zunehmend denaturiert → Hitzschlag: 
 ---
 
 **Weitere biologische Beispiele für H-Brücken:**
-- **Cellulose-Mikrofibrillen:** Hunderte paralleler β-1,4-Glucanketten, verknüpft durch O–H···O-Brücken → enorme Zugfestigkeit (stärker als Stahl bezogen auf die Dichte). Baumwolle, Holz, Papier — alles H-Brücken-basiert.
-- **Kohlenhydrat-Erkennung:** Lektine (Zucker-bindende Proteine) erkennen spezifische Kohlenhydrate an Zelloberflächen über H-Brücken → Immunabwehr, Blutgruppenbestimmung (Anti-A/B-Antikörper), Infektionsprozesse (Bakterien-Lektine binden an Darm-Glykoproteine).
-- **Wasser-Kanal Aquaporin:** Selektiv permeabel für H₂O, aber nicht für H₃O⁺ (Hydronium). Mechanismus: Die H-Brücken-Kette wird im Inneren des Kanals unterbrochen — Wasser passiert einzeln, Protonen können die H-Brücken-Kette nicht durchlaufen (Grotthuss-Mechanismus/Protonenweitergabe über H-Brücken-Ketten blockiert).
-- **Anästhesie:** Inhalationsanästhetika (Sevofluran, Desfluran) wirken u. a. durch Störung von H-Brücken an GABA-Rezeptoren und Ionenkanälen → veränderte Protein-Konformation → Bewusstlosigkeit.
-
-**Pharmaka:** H-Brücken-Donoren und -Akzeptoren sind entscheidend für Lipinski's Rule of Five (Faustregeln für orale Bioverfügbarkeit von Arzneistoffen): ≤5 HBD, ≤10 HBA. Zu viele H-Brücken-Gruppen → schlechte Membranpermeabilität.
+- **Cellulose:** β-1,4-Glucanketten, verknüpft durch O–H···O-Brücken → hohe Zugfestigkeit (Holz, Baumwolle).
+- **Kohlenhydrat-Erkennung:** Lektine erkennen spezifische Kohlenhydrate an Zelloberflächen über H-Brücken → Immunabwehr, Blutgruppenbestimmung.
 
 **Tabellarischer Überblick: H-Brücken in biologischen Systemen:**
 
@@ -1262,11 +1243,10 @@ Ab **42 °C** werden auch humane Proteine zunehmend denaturiert → Hitzschlag: 
 | β-Faltblatt | N–H···O=C (Strang-Strang) | Flächige Sekundärstruktur | Amyloid-Fehlfaltung (Alzheimer) |
 | Kollagen | N–H···O (Gly-X-Y) | Tripelhelix → Zugfestigkeit | Skorbut (Vitamin-C-Mangel) |
 | Wasser | O–H···O | 3D-Netzwerk → alle Anomalien | — (Wasser ohne H-Brücken wäre gasförmig bei RT) |
-| Cellulose | O–H···O (Ketten) | Mikrofibrillen → Reißfestigkeit | — |
 | Enzym-Substrat | Diverse | Spezifische Erkennung, Katalyse | Kompetitive Hemmung |
 
 **Wasser als Lösungsmittel — H-Brücken in der Solvatation:**
-Wasser löst polare und ionische Substanzen durch Ausbildung von H-Brücken (und Ion-Dipol-Wechselwirkungen) mit dem gelösten Stoff. Die Hydratation von Glucose z. B. erfolgt über H-Brücken zwischen den zahlreichen OH-Gruppen der Glucose und den Wassermolekülen. Aminosäuren an der Proteinoberfläche werden ebenfalls durch H-Brücken mit Wasser stabilisiert. Das erklärt auch, warum Harnstoff (hohe H-Brücken-Kapazität: 4 Donoren, 1 Akzeptor) als Denaturierungsmittel wirkt — er konkurriert erfolgreich mit den intramolekularen H-Brücken des Proteins.
+Wasser löst polare und ionische Substanzen durch Ausbildung von H-Brücken (und Ion-Dipol-Wechselwirkungen) mit dem gelösten Stoff. Die Hydratation von Glucose z. B. erfolgt über H-Brücken zwischen den zahlreichen OH-Gruppen der Glucose und den Wassermolekülen. Harnstoff (hohe H-Brücken-Kapazität: 4 Donoren, 1 Akzeptor) wirkt als Denaturierungsmittel, weil er mit den intramolekularen H-Brücken des Proteins konkurriert.
 
 **Van-der-Waals-Kräfte in Zellmembranen:**
 Die Integrität der Lipiddoppelschicht hängt nicht nur vom hydrophoben Effekt ab, sondern auch von London-Kräften zwischen den parallel angeordneten Fettsäureketten. Gesättigte Ketten packen sich dicht → stärkere London-Kräfte → rigidere Membran. Cis-ungesättigte Ketten erzeugen Knicke → lockere Packung → schwächere London-Kräfte → fluidere Membran. Cholesterol füllt Lücken zwischen ungesättigten Ketten und erhöht die Ordnung → bei 37 °C moduliert es die Membranfluidität optimal für die Zellfunktion.
@@ -1281,6 +1261,8 @@ Die Integrität der Lipiddoppelschicht hängt nicht nur vom hydrophoben Effekt a
 
 ## Metallbindung
 
+Einen völlig anderen Bindungstyp finden wir bei Metallen — hier teilen sich nicht zwei Atome ein Elektronenpaar, sondern alle Valenzelektronen gehören dem gesamten Gitter gemeinsam.
+
 ### Elektronengasmodell (Drude-Modell)
 
 **Modell:** Im Metall befinden sich die Metallatome im Gitter, ihre Valenzelektronen sind jedoch **delokalisiert** und bilden ein „Elektronengas" oder „Elektronenmeer", das sich frei durch das gesamte Gitter bewegt. Die positiven Metallionen (Rumpfionen) werden durch das Elektronengas zusammengehalten — die Bindung ist **ungerichtet** und **nicht gesättigt** (im Gegensatz zur kovalenten Bindung).
@@ -1292,24 +1274,13 @@ Die Bindungsstärke hängt ab von:
 
 ### Bändermodell (vereinfacht)
 
-Das **Bändermodell** ist die quantenmechanisch korrektere Beschreibung: Wenn N Atome im Metallkristall ihre Atomorbitale überlappen, spalten diese in N eng benachbarte Energieniveaus auf — die Energieniveaus liegen so dicht, dass sie praktisch ein **kontinuierliches Band** bilden.
+Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall überlappen die Atomorbitale zu quasi-kontinuierlichen Energiebändern (Valenz- und Leitungsband). Die **Bandlücke** (Energiedifferenz dazwischen) bestimmt die Leitfähigkeit:
 
-- **Valenzband:** enthält die Valenzelektronen
-- **Leitungsband:** höheres Energieband, in dem sich Elektronen frei bewegen können
-- **Bandlücke (Bandgap):** Energiedifferenz zwischen Valenz- und Leitungsband
+- **Metall:** Keine Bandlücke (Bänder überlappen) → sofortige Leitung. Leitfähigkeit sinkt bei steigender T (Gitterschwingungen streuen Elektronen).
+- **Halbleiter** (Si, Ge): Kleine Bandlücke (0,1–3 eV) → Leitfähigkeit steigt mit T (mehr Elektronen überspringen die Lücke) — Gegenteil von Metallen!
+- **Isolator** (Diamant, NaCl): Große Bandlücke (> 3 eV) → keine Leitung.
 
-| Material | Bandlücke | Leitfähigkeit | Beispiele |
-|---|---|---|---|
-| Metall | Keine (Bänder überlappen) | Exzellent | Cu, Au, Ag, Fe |
-| Halbmetall | Minimal | Gering | Bi, Sb, Graphit |
-| Halbleiter | Klein (0,1–3 eV) | Mittel (T-abhängig) | Si (1,1 eV), Ge (0,7 eV) |
-| Isolator | Groß (> 3 eV) | Keine | Diamant (5,5 eV), NaCl, Glas |
-
-Bei **Metallen** überlappen Valenz- und Leitungsband → Elektronen können ohne Energieaufwand in höhere Zustände wechseln → sofortige Stromleitung bei angelegter Spannung. Bei **Halbleitern** müssen Elektronen die (kleine) Bandlücke überwinden → Leitfähigkeit steigt mit Temperatur (Gegenteil von Metallen!). Bei **Isolatoren** ist die Bandlücke zu groß → keine Leitung.
-
-> **Merke:** Im Bändermodell bestimmt die Bandlücke, ob ein Stoff leitet: Keine Lücke = Metall (Leiter); kleine Lücke = Halbleiter; große Lücke = Isolator. Halbleiter leiten besser bei hoher Temperatur (Gegenteil von Metallen!).
-
-> **Prüfungstipp:** „Wie ändert sich die Leitfähigkeit mit der Temperatur?" — Metall: sinkt (mehr Gitterschwingungen streuen Elektronen). Halbleiter: steigt (mehr Elektronen überspringen die Bandlücke). Diese Gegenläufigkeit ist ein beliebtes MedAT-Thema.
+> **Merke:** Bandlücke bestimmt Leiter/Halbleiter/Isolator. Metall: Leitfähigkeit sinkt mit T; Halbleiter: steigt mit T — diese Gegenläufigkeit ist MedAT-relevant.
 
 ### Eigenschaften aus dem Elektronengas-Modell
 
@@ -1347,15 +1318,7 @@ Bei **Metallen** überlappen Valenz- und Leitungsband → Elektronen können ohn
 | Li (Lithium) | Stimmungsstabilisator bei bipolarer Störung | Li⁺ interferiert mit Signaltransduktion |
 | Gd (Gadolinium) | MRT-Kontrastmittel (Gd-DTPA) | Paramagnetisch → verkürzt T1-Relaxationszeit |
 
-### Supraleitung und besondere Metallphänomene (Vertiefung)
-
-Einige Metalle zeigen bei sehr niedrigen Temperaturen **Supraleitung**: Der elektrische Widerstand sinkt schlagartig auf exakt null (z. B. Quecksilber unter 4,2 K, Niob unter 9,3 K). Im supraleitenden Zustand bilden Elektronen Cooper-Paare (gekoppelte Elektronenpaare mit entgegengesetztem Spin), die sich widerstandsfrei durch das Gitter bewegen. Medizinisch relevant: Supraleitende Magnete in **MRT-Geräten** (NbTi-Legierungen bei 4 K → extrem starke, homogene Magnetfelder von 1,5–7 Tesla). Die Kühlung erfolgt mit flüssigem Helium (4,2 K).
-
-**Halbleiter in der Medizintechnik:**
-- **Photodioden** (Si, Ge): Detektoren in CT-Scannern, Röntgengeräten, Pulsoximetern
-- **Transistoren** (Si): Grundlage aller medizinischen Elektronik (EKG, EEG, Beatmungsgeräte)
-- **LEDs** (GaN, InGaN): Phototherapie bei Neugeborenenikterus (Blaulicht 460 nm → Bilirubinabbau)
-- **Piezoelektrische Kristalle** (Quarz, Bariumtitanat): Ultraschallsonden (1–20 MHz) → Bildgebung
+**Supraleitung:** Einige Metalle zeigen bei sehr niedrigen Temperaturen Widerstand von exakt null (z. B. Nb unter 9,3 K). Medizinisch relevant: Supraleitende Magnete in **MRT-Geräten** (NbTi-Legierungen bei 4 K, Kühlung mit flüssigem Helium). Halbleiter (Si) sind Grundlage der Medizinelektronik (CT-Detektoren, Pulsoximeter, EKG).
 
 ---
 
@@ -1448,20 +1411,13 @@ Einige Metalle zeigen bei sehr niedrigen Temperaturen **Supraleitung**: Der elek
       ],
 
       merksätze: [
-        "London-Kräfte: wirken zwischen ALLEN Molekülen, entstehen durch instantane Dipole.",
-        "Größere Moleküle = höhere Polarisierbarkeit = stärkere London-Kräfte.",
-        "Verzweigung verringert Kontaktfläche → schwächere London-Kräfte → niedrigerer Siedepunkt.",
-        "Dipol-Dipol: nur zwischen polaren Molekülen; stärker als London bei ähnlicher Masse; T-abhängig.",
+        "London-Kräfte steigen mit Molmasse und Kontaktfläche — Verzweigung senkt Kontaktfläche → niedrigerer Siedepunkt.",
         "Stärke-Hierarchie: kovalent ≈ ionisch >> Ion-Dipol >> H-Brücke >> Dipol-Dipol >> London.",
-        "H-Brücke: H–N/O/F als Donor; N/O/F mit freiem EP als Akzeptor.",
-        "Stärkste H-Brücke: F–H···F (25–40 kJ/mol); häufigste in Biologie: N–H···O und O–H···O.",
-        "DNA: A-T = 2 H-Brücken; G-C = 3 H-Brücken → GC-reich = thermisch stabiler.",
-        "Wasser: bis zu 4 H-Brücken → anomal hoher Siedepunkt, Dichte-Anomalie des Eises.",
-        "London-Kräfte in Membranen: gesättigte Ketten → dichte Packung → rigide; cis-ungesättigt → Knick → fluid.",
-        "Metallbindung: delokalisiertes Elektronengas → Leitfähigkeit, Duktilität, Glanz.",
-        "Bändermodell: Metall = keine Bandlücke; Halbleiter = kleine Lücke; Isolator = große Lücke.",
-        "Ionenkristall: spröde (Verschiebung → Abstoßung gleicher Ladungen); Metall: duktil (Elektronengas gleitet mit).",
-        "H-Brücken: 10–40 kJ/mol; schwächer als kovalent, aber kollektiv enorm wichtig in Biomolekülen.",
+        "H-Brücke: nur N, O, F als Donor/Akzeptor; stärkste einzelne H-Brücke: F–H···F (25–40 kJ/mol).",
+        "DNA: A–T = 2 H-Brücken; G–C = 3 → GC-reich = thermisch stabiler.",
+        "Wasser: 4 H-Brücken pro Molekül → anomal hoher Siedepunkt, Dichteanomalie, hohe Wärmekapazität.",
+        "Metallbindung: delokalisiertes Elektronengas → Leitfähigkeit, Duktilität, Glanz; Ionenkristall dagegen spröde.",
+        "Bandlücke: keine = Metall; klein = Halbleiter (Leitfähigkeit steigt mit T); groß = Isolator.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -1762,6 +1718,10 @@ Zusätzlich zu den H-Brücken stabilisieren π-π-Stapelwechselwirkungen (London
 Proteine, Kohlenhydrate, Lipide und Nukleinsäuren bestehen aus denselben Atomsorten (C, H, O, N, S, P), unterscheiden sich aber grundlegend in ihren **Bindungsmustern**. Sechs kovalente Bindungstypen dominieren die Biochemie: Peptidbindung (Proteine), glykosidische Bindung (Kohlenhydrate), Esterbindung (Fette, DNA/RNA), Disulfidbrücke (Proteine), Phosphodiesterbindung (Nukleinsäuren) und Amidbindung (verschiedene Biomoleküle). Jede dieser Bindungen entsteht durch eine **Kondensationsreaktion** (Abspaltung von H₂O) und wird durch **Hydrolyse** (Anlagerung von H₂O) wieder gespalten — ein universelles Prinzip der Biochemie.
 
 Parallel dazu formen **nichtkovalente Wechselwirkungen** (H-Brücken, hydrophober Effekt, van-der-Waals-Kräfte, ionische Wechselwirkungen) die dreidimensionale Gestalt und damit die Funktion jedes Biomoleküls. Das Zusammenspiel beider Klassen — kovalentes Gerüst plus nichtkovalente Feinstruktur — ist der Schlüssel zum Verständnis biologischer Moleküle.
+
+**Der hydrophobe Effekt** ist die treibende Kraft der Proteinfaltung und Membranbildung: Unpolare Seitenketten werden ins Innere des Proteins gedrängt — nicht weil sie sich anziehen, sondern weil das Wasser sie „ausschließt". Die geordnete Wasserhülle (Hydratationsschale) um unpolare Gruppen hat niedrige Entropie; beim Zusammenlagern der unpolaren Gruppen wird dieses geordnete Wasser freigesetzt → **Entropiegewinn** → spontaner Prozess (ΔG < 0). Derselbe Effekt treibt die Selbstorganisation von Phospholipiden zur Doppelschicht.
+
+**Lipinski's Rule of Five** beschreibt Faustregeln für orale Bioverfügbarkeit von Arzneistoffen: MW ≤ 500 Da, logP ≤ 5, ≤ 5 H-Brücken-Donoren (NH, OH), ≤ 10 H-Brücken-Akzeptoren (N, O). Zu viele polare Gruppen → schlechte Membranpermeabilität; zu unpolar → schlechte Wasserlöslichkeit. Der optimale Arzneistoff balanciert Lipophilie und Hydrophilie.
 
 > **Merke:** Alle biopolymeren Bindungen (Peptid-, Glykosid-, Ester-, Phosphodiester-) entstehen durch Kondensation (−H₂O) und werden durch Hydrolyse (+H₂O) gespalten. Kovalente Bindungen = Gerüst; nichtkovalente Wechselwirkungen = Feineinstellung.
 

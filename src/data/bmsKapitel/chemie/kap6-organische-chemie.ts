@@ -28,6 +28,8 @@ Ab Butan (C₄H₁₀) treten **Konstitutionsisomere** auf — Verbindungen mit 
 
 Die **typische Reaktion der Alkane** ist die radikalische Substitution (SR). Da Alkane weder π-Elektronen noch freie Elektronenpaare besitzen, benötigen sie energiereiche Bedingungen — UV-Licht oder hohe Temperaturen — um mit Halogenen zu reagieren. Ein Wasserstoffatom wird dabei durch ein Halogenatom ersetzt: CH₄ + Cl₂ → CH₃Cl + HCl. Die Reaktion verläuft als Kettenreaktion in drei Phasen: Im **Kettenstart** spaltet UV-Licht das Cl₂-Molekül homolytisch in zwei hochreaktive Chlorradikale (Cl₂ →[hν] 2 Cl•). In der **Kettenfortpflanzung** abstrahiert ein Chlorradikal ein Wasserstoffatom vom Methan (Cl• + CH₄ → CH₃• + HCl), und das entstandene Methylradikal reagiert seinerseits mit einem weiteren Cl₂-Molekül (CH₃• + Cl₂ → CH₃Cl + Cl•) — so regeneriert sich das Chlorradikal, und die Kette setzt sich fort. Im **Kettenabbruch** rekombinieren zwei Radikale miteinander.
 
+Die Struktur bestimmt die Reaktivität: Alkane mit ihren gesättigten C-C-Bindungen sind relativ reaktionsträge — erst Alkene und Alkine mit ihren π-Bindungen eröffnen ein reiches Reaktionsspektrum.
+
 ## Alkene — einfach ungesättigte Kohlenwasserstoffe
 
 Entfernt man aus einem Alkan zwei benachbarte Wasserstoffatome, entsteht zwischen den betroffenen Kohlenstoffatomen eine Doppelbindung — ein Alken mit der allgemeinen Formel CₙH₂ₙ. Diese Doppelbindung besteht aus einer σ-Bindung und einer zusätzlichen π-Bindung, die durch seitliche Überlappung der unhybridisierten p-Orbitale zustande kommt. Die beteiligten C-Atome sind sp²-hybridisiert und bilden eine trigonal-planare Geometrie mit einem Bindungswinkel von 120°. Die π-Bindung ist energiereicher und zugleich reaktiver als die σ-Bindung, weil die Elektronendichte oberhalb und unterhalb der Molekülebene für Angriffe zugänglich ist.
@@ -35,7 +37,7 @@ Entfernt man aus einem Alkan zwei benachbarte Wasserstoffatome, entsteht zwische
 Das elektronenreiche π-System macht Alkene zum idealen Angriffsziel für elektronenarme Teilchen (Elektrophile). Die **typische Reaktion** ist daher die elektrophile Addition: Brom addiert sich an die Doppelbindung (C₂H₄ + Br₂ → C₂H₄Br₂), und darauf beruht der klassische **Bromwasser-Nachweis** — orangefarbenes Bromwasser entfärbt sich bei Anwesenheit einer C=C- oder C≡C-Bindung.
 
 
-Bei der Addition von Halogenwasserstoffen an asymmetrische Alkene bestimmt die **Markovnikov-Regel** die Regioselektivität: Das Proton addiert an das C-Atom mit den meisten Wasserstoffatomen, das Halogenid an das höher substituierte C. Grund ist die Stabilität des intermediären Carbokations — ein sekundäres oder tertiäres Carbokation wird bevorzugt gebildet.
+Bei der Addition von Halogenwasserstoffen an asymmetrische Alkene bestimmt die **Markovnikov-Regel** die Regioselektivität: Das H geht an das C-Atom mit den meisten H-Atomen — weil das entstehende Carbokation dann stabiler (tertiär > sekundär > primär) ist. Das Halogenid addiert anschließend an das höher substituierte, positiv geladene C-Atom. In der Praxis: Bei Propen (CH₃−CH=CH₂) + HBr addiert H an das endständige CH₂ (wird zu CH₃), und Br⁻ an das mittlere C (tertiär stabilisiertes Carbokation) → 2-Brompropan (Markovnikov-Produkt).
 
 Da die π-Bindung die freie Drehbarkeit um die C=C-Achse aufhebt, können Alkene **cis/trans-Isomerie** zeigen, sofern beide doppelgebundenen C-Atome jeweils zwei verschiedene Substituenten tragen. Bei cis-But-2-en stehen beide Methylgruppen auf derselben Seite (Sdp. 3,7 °C), bei trans-But-2-en auf gegenüberliegenden (Sdp. 0,9 °C). Für komplexere Fälle nutzt man die E/Z-Nomenklatur nach CIP-Prioritätsregeln (höhere Ordnungszahl = höhere Priorität).
 
@@ -816,108 +818,107 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
       title: "Aromate und biologisch relevante organische Verbindungen",
       content: `## Benzol und Aromatizität
 
-Nach den gesättigten und ungesättigten Kohlenwasserstoffen bilden die Aromaten eine dritte, ganz eigene Substanzklasse. Ihr Prototyp ist **Benzol** (C₆H₆), eine ringförmige, vollständig planare Verbindung, in der sechs π-Elektronen über den gesamten Ring delokalisiert sind. Diese Delokalisierung verleiht Benzol eine außergewöhnliche thermodynamische Stabilität — die sogenannte Mesomerie- oder Resonanzenergie beträgt etwa 150 kJ/mol.
+Aromaten sind eine besondere Klasse von Kohlenwasserstoffen: Ihr delokalisiertes π-Elektronensystem verleiht ihnen außergewöhnliche Stabilität. Statt Additionsreaktionen (wie bei Alkenen) bevorzugen sie Substitution — um die Aromatizität zu bewahren.
 
-Ob eine cyclische Verbindung aromatisch ist, beantwortet die **Hückel-Regel**: Voraussetzung sind ein planarer Ring, vollständige Konjugation und genau 4n+2 π-Elektronen (mit n = 0, 1, 2, ...). Für Benzol ergibt sich mit n = 1 die Zahl 6 — die sechs p-Orbitale der sp²-hybridisierten Kohlenstoffatome überlappen seitlich zu einem durchgehenden π-System oberhalb und unterhalb der Ringebene. Alle C-C-Bindungen sind mit 139 pm gleich lang, was zwischen einer reinen Einfach- (154 pm) und einer Doppelbindung (134 pm) liegt.
+Der Prototyp ist **Benzol** (C₆H₆), eine ringförmige, vollständig planare Verbindung, in der sechs π-Elektronen über den gesamten Ring delokalisiert sind. Diese Delokalisierung verleiht Benzol eine außergewöhnliche thermodynamische Stabilität — die sogenannte Mesomerie- oder Resonanzenergie beträgt etwa 150 kJ/mol.
 
-## Reaktionen der Aromate: Elektrophile aromatische Substitution (EAS)
+Ob eine cyclische Verbindung aromatisch ist, beantwortet die **Hückel-Regel**: Voraussetzung sind ein planarer Ring, vollständige Konjugation und genau 4n+2 π-Elektronen (mit n = 0, 1, 2, ...). Für Benzol ergibt sich mit n = 1 die Zahl 6 — die sechs p-Orbitale der sp²-hybridisierten Kohlenstoffatome überlappen seitlich zu einem durchgehenden π-System oberhalb und unterhalb der Ringebene. Alle C-C-Bindungen sind mit 139 pm gleich lang, was zwischen einer reinen Einfach- (154 pm) und einer Doppelbindung (134 pm) liegt. Verbindungen mit 4n π-Elektronen (z. B. Cyclooctatetraen mit 8) sind **antiaromatisch** und daher besonders instabil — COT weicht in eine nicht-planare Wannenform aus.
 
-Die besondere Stabilität des aromatischen π-Systems hat eine weitreichende Konsequenz für die Reaktivität: Aromaten bevorzugen **Substitutionsreaktionen**, nicht Additionsreaktionen, weil eine Addition das aromatische System zerstören und die wertvolle Resonanzenergie aufheben würde.
+## Elektrophile aromatische Substitution (EAS)
 
-Im Mechanismus der elektrophilen aromatischen Substitution (EAS) greift zunächst ein Elektrophil (E⁺) das elektronenreiche π-System an und bildet ein Areniumion (Wheland-Komplex, Meisenheimer-Komplex). In diesem Übergangszustand ist die Aromatizität vorübergehend aufgehoben. Durch Abspaltung eines Protons wird der aromatische Zustand wiederhergestellt — ein H-Atom ist durch das Elektrophil ersetzt worden, ohne dass die Gesamtstabilität verloren geht. Die wichtigsten EAS-Reaktionen sind die **Nitrierung** (E⁺ = NO₂⁺, Nitroniumion, aus HNO₃/H₂SO₄), die **Sulfonierung** (E⁺ = SO₃), die **Halogenierung** (benötigt eine Lewis-Säure als Katalysator wie FeCl₃) und die **Friedel-Crafts-Alkylierung** (R-Cl mit AlCl₃).
+Bei der elektrophilen aromatischen Substitution greift ein Elektrophil (z. B. NO₂⁺, Br⁺) den elektronenreichen Ring an. Der Ring gibt ein H⁺ ab, um sein π-System zurückzugewinnen — Substitution statt Addition.
+
+Im Detail: Das Elektrophil (E⁺) attackiert das π-System und bildet ein **Areniumion** (Wheland-Komplex). In diesem kationischen Übergangszustand ist die Aromatizität vorübergehend aufgehoben — ein C-Atom wird sp³-hybridisiert. Durch Abspaltung eines Protons wird der aromatische Zustand wiederhergestellt. Die wichtigsten EAS-Reaktionen:
+
+- **Nitrierung**: E⁺ = NO₂⁺ (Nitroniumion, aus HNO₃/H₂SO₄) → Nitrobenzol (Ausgangsstoff für Anilin und Arzneimittel)
+- **Sulfonierung**: E⁺ = SO₃ → Benzolsulfonsäure
+- **Halogenierung**: E⁺ = Br⁺ oder Cl⁺ (benötigt Lewis-Säure-Katalysator wie FeBr₃ oder AlCl₃)
+- **Friedel-Crafts-Alkylierung**: R⁺ (aus R-Cl + AlCl₃) → Alkylbenzol
+
+## Dirigierende Effekte — +M/−M und +I/−I
+
+Substituenten am Benzolring beeinflussen bei der EAS sowohl die Reaktionsgeschwindigkeit als auch die Position der nächsten Substitution. Das Zusammenspiel von **mesomeren** (+M/−M) und **induktiven** (+I/−I) Effekten bestimmt das Ergebnis:
+
+**Aktivierende Substituenten** (elektronenschiebend) erhöhen die Elektronendichte im Ring und dirigieren in die **ortho/para**-Position: −OH (+M, stark aktivierend), −NH₂ (+M, stark aktivierend), −Alkyl (+I, schwach aktivierend). Diese Gruppen schieben Elektronendichte in den Ring und stabilisieren den Wheland-Komplex besonders in ortho- und para-Position.
+
+**Desaktivierend Substituenten** (elektronenziehend) verringern die Elektronendichte und dirigieren in die **meta**-Position: −NO₂ (−M, −I), −COOH (−M), −SO₃H (−M). Sie destabilisieren den Wheland-Komplex in ortho/para stärker als in meta.
+
+**Halogene** sind ein Sonderfall: Sie **desaktivieren** den Ring (starker −I-Effekt durch hohe Elektronegativität), dirigieren aber trotzdem **ortho/para** (schwacher +M-Effekt durch freie Elektronenpaare überwiegt bei der Richtungslenkung, nicht aber bei der Aktivierung).
+
+> **Merke:** +M/+I → aktivierend, ortho/para-dirigierend. −M/−I → desaktivierend, meta-dirigierend. Halogene: desaktivierend, aber ortho/para (Sonderfall!).
 
 ## Heteroaromaten — Stickstoffhaltige Ringsysteme
 
-Enthält der aromatische Ring neben Kohlenstoff auch Heteroatome wie Stickstoff, Sauerstoff oder Schwefel, spricht man von **Heteroaromaten**. Sie sind in der Biochemie allgegenwärtig. **Pyridin** (6-Ring mit einem N) ist das Stickstoff-Analogon des Benzols und findet sich als Grundgerüst in NAD⁺/NADH und Vitamin B₃ (Niacin). Das freie Elektronenpaar des Pyridin-Stickstoffs steht senkrecht zum π-System und verleiht dem Molekül basische Eigenschaften. Im Gegensatz dazu ist **Pyrrol** (5-Ring mit einem N) nicht basisch, weil sein Stickstoff-Elektronenpaar in das π-System einbezogen ist und so die für Aromatizität nötigen 6 π-Elektronen vervollständigt. Vier Pyrrolringe bilden das Grundgerüst des **Porphyrins**, das als Häm in Hämoglobin und als Chlorophyll in Pflanzen zentrale biologische Funktionen erfüllt.
+Enthält der aromatische Ring neben Kohlenstoff auch Heteroatome wie Stickstoff, Sauerstoff oder Schwefel, spricht man von **Heteroaromaten**. Sie sind in der Biochemie allgegenwärtig.
 
-**Imidazol** (5-Ring mit zwei N) vereint beide Typen: einen pyridin-artigen (basischen) und einen pyrrol-artigen Stickstoff. Es bildet die Seitenkette der Aminosäure Histidin, deren pKₐ von etwa 6 eine Pufferfunktion bei physiologischem pH ermöglicht. Die beiden Nukleinsäure-Basenklassen leiten sich ebenfalls von Heteroaromaten ab: **Purine** (Adenin, Guanin) bestehen aus einem kondensierten Imidazol-Pyrimidin-Ringsystem, **Pyrimidine** (Cytosin, Thymin, Uracil) aus einem Sechsring mit zwei Stickstoffatomen.
+**Pyridin** (6-Ring mit einem N) ist das Stickstoff-Analogon des Benzols und findet sich als Grundgerüst in NAD⁺/NADH und Vitamin B₃ (Niacin). Das freie Elektronenpaar des Pyridin-Stickstoffs steht senkrecht zum π-System und verleiht dem Molekül basische Eigenschaften (pKₐ ≈ 5,2).
 
-Substituenten am Benzolring beeinflussen bei der EAS die Position der nächsten Substitution: Elektronenschiebende Gruppen (−OH, −NH₂, −Alkyl) aktivieren den Ring und dirigieren in die **ortho/para**-Position, elektronenziehende Gruppen (−NO₂, −COOH, −SO₃H) desaktivieren und dirigieren in die **meta**-Position. Halogene stellen einen Sonderfall dar: Sie desaktivieren den Ring (−I-Effekt), dirigieren aber ortho/para (+M-Effekt überwiegt bei der Richtungslenkung). Unter den polycyclischen aromatischen Kohlenwasserstoffen (PAK) ist **Benzo[a]pyren** (5 kondensierte Ringe, im Tabakrauch) ein potentes Karzinogen — es wird durch CYP450-Enzyme zu einem Diolepoxid aktiviert, das kovalent an die DNA bindet und Mutationen auslöst.
+Im Gegensatz dazu ist **Pyrrol** (5-Ring mit einem N) nicht basisch, weil sein Stickstoff-Elektronenpaar in das π-System einbezogen ist und so die für Aromatizität nötigen 6 π-Elektronen vervollständigt (4 C-Atome liefern je 1 π-Elektron, das N-Atom steuert sein Elektronenpaar bei: 4 + 2 = 6). Vier Pyrrolringe bilden das Grundgerüst des **Porphyrins**, das als Häm in Hämoglobin und als Chlorophyll in Pflanzen zentrale biologische Funktionen erfüllt.
 
-## Aminosäuren — Struktur und Eigenschaften
+**Imidazol** (5-Ring mit zwei N) vereint beide Typen: einen pyridin-artigen (basischen) und einen pyrrol-artigen Stickstoff. Es bildet die Seitenkette der Aminosäure Histidin, deren pKₐ von etwa 6 eine Pufferfunktion bei physiologischem pH ermöglicht.
 
-Die Aminosäuren sind die Brücke zwischen organischer Chemie und Biochemie. Alle 20 proteinogenen Aminosäuren teilen einen gemeinsamen Grundbauplan: Am α-Kohlenstoffatom hängen eine Aminogruppe (−NH₂), eine Carboxylgruppe (−COOH), ein Wasserstoffatom und eine variable Seitenkette (R-Gruppe). **Proteine bestehen aus Aminosäure-Bausteinen** — nicht aus Nucleotiden, Zuckern oder Fettsäuren. Das α-C-Atom ist bei allen Aminosäuren chiral, mit Ausnahme von Glycin (R = H).
+Die beiden Nukleinsäure-Basenklassen leiten sich ebenfalls von Heteroaromaten ab: **Purine** (Adenin, Guanin) bestehen aus einem kondensierten Imidazol-Pyrimidin-Ringsystem (Doppelring, 9 Atome), **Pyrimidine** (Cytosin, Thymin, Uracil) aus einem Sechsring mit zwei Stickstoffatomen. Purine und Pyrimidine als Basen der Nukleinsäuren werden ausführlich in UK ch-13-04 behandelt.
 
-Die 20 proteinogenen Aminosäuren werden nach der Polarität ihrer Seitenkette klassifiziert: unpolare aliphatische (Glycin, Alanin, Valin, Leucin, Isoleucin, Prolin, Methionin), unpolare aromatische (Phenylalanin, Tyrosin, Tryptophan), polare ungeladene (Serin, Threonin, Cystein, Asparagin, Glutamin), positiv geladene basische (Lysin, Arginin, Histidin) und negativ geladene saure (Aspartat, Glutamat). Neun dieser Aminosäuren sind **essentiell** und müssen mit der Nahrung aufgenommen werden: Phe, Val, Thr, Trp, Ile, Met, His, Leu, Lys (Eselsbrücke: **PVT TIM HaLL**).
+## Polyzyklische aromatische Kohlenwasserstoffe (PAK)
 
-Bei physiologischem pH liegt jede Aminosäure als **Zwitterion** vor — die Aminogruppe ist protoniert (−NH₃⁺), die Carboxylgruppe deprotoniert (−COO⁻). Am isoelektrischen Punkt (pI) beträgt die Nettoladung null.
+Kondensierte aromatische Ringsysteme — also Aromaten, die zwei oder mehr Ringe über gemeinsame Kanten teilen — bilden die Klasse der **PAK**. Naphthalin (2 Ringe, 10 π-Elektronen, n = 2) ist das einfachste Beispiel. Unter den PAK ist **Benzo[a]pyren** (5 kondensierte Ringe, im Tabakrauch und gegrilltem Fleisch) ein potentes **Karzinogen**: Es wird durch CYP450-Enzyme (Phase-I-Metabolismus) zu einem Diolepoxid aktiviert, das kovalent an die DNA bindet und Mutationen auslöst — ein klassisches Beispiel für metabolische Aktivierung eines Prokanzerogens.
 
-## Nukleotide und Nukleinsäuren
+> **Merke:** Hückel-Regel: 4n+2 π-Elektronen → aromatisch (2, 6, 10, 14 ...). Benzol: 6 (n=1). Aromaten bevorzugen Substitution (EAS), nicht Addition — um die Resonanzenergie zu erhalten.
 
-Nukleotide sind die Monomere der DNA und RNA. Jedes besteht aus einer Stickstoffbase, einem Pentosezucker (Desoxyribose in DNA, Ribose in RNA) und einer Phosphatgruppe. Die Purinbasen Adenin (A) und Guanin (G) besitzen einen Doppelring, die Pyrimidinbasen Cytosin (C), Thymin (T, nur DNA) und Uracil (U, nur RNA) einen Einzelring. Die **Chargaff-Regeln** beschreiben die quantitativen Verhältnisse in doppelsträngiger DNA: A = T (verbunden durch 2 Wasserstoffbrücken), G ≡ C (3 Wasserstoffbrücken), und daraus folgt A + G = C + T. **ATP** (Adenosintriphosphat) dient als universeller Energieträger — die Spaltung der Phosphoanhydridbindung (ATP → ADP + Pᵢ) setzt etwa 30 kJ/mol frei.
-
-## Purinstoffwechsel und Gicht
-
-Der Abbau der Purinbasen Adenin und Guanin führt über Hypoxanthin und Xanthin schließlich zur **Harnsäure** (Urat), dem Endprodukt des Purinstoffwechsels beim Menschen. Anders als die meisten Säugetiere besitzt der Mensch keine Uricase und kann Harnsäure nicht weiter abbauen. Liegt die Harnsäurekonzentration im Blut über 6,8 mg/dl (Hyperurikämie), können Natriumurat-Kristalle in Gelenken und Nieren ausfallen. Die bevorzugte Erstmanifestation ist das Großzehengrundgelenk (**Podagra**) — eine akute, äußerst schmerzhafte Arthritis. In der Therapie hemmt **Allopurinol** als Substratanalogon die Xanthinoxidase und reduziert so die Harnsäureproduktion; **Colchicin** wirkt beim akuten Gichtanfall, indem es die Neutrophilen-Migration hemmt.
-
-## Aromatische Aminosäuren als Neurotransmitter-Vorläufer
-
-Die aromatischen Aminosäuren Phenylalanin, Tyrosin und Tryptophan sind nicht nur Proteinbausteine, sondern dienen als Ausgangsstoffe für lebenswichtige Signalmoleküle. Phenylalanin wird durch die Phenylalanin-Hydroxylase zu **Tyrosin** hydroxyliert — ein Enzymdefekt führt zur Phenylketonurie (PKU). Aus Tyrosin entsteht über mehrere enzymatische Schritte die **Catecholamin-Kaskade**: Dopa → Dopamin → Noradrenalin → Adrenalin. Tryptophan ist der Vorläufer von **Serotonin** (Stimmungsregulation, Darmperistaltik) und **Melatonin** (Schlaf-Wach-Rhythmus, Zirbeldrüse). Auch die Schilddrüsenhormone T3 und T4 leiten sich von Tyrosin ab und benötigen Iod für ihre Synthese — bei Iodmangel entsteht eine Struma (Kropf). **Histamin** schließlich entsteht durch Decarboxylierung aus Histidin und wirkt als Entzündungsmediator, Magensäuresekretionsförderer und allergischer Botenstoff.
-
-## Peptidbindung und Proteinaufbau
-
-Die **Peptidbindung** (−CO−NH−) verknüpft Aminosäuren zu Ketten. Sie entsteht durch Kondensation zwischen der α-Carboxylgruppe einer Aminosäure und der α-Aminogruppe der nächsten unter Wasserabspaltung. Durch Mesomerie (C=O ↔ C−O⁻/N⁺) besitzt die Peptidbindung partiellen Doppelbindungscharakter, ist **planar** und nicht frei drehbar. Nur die Winkel Φ (um N−Cα) und Ψ (um Cα−C) können variieren und bestimmen damit die dreidimensionale Faltung des Proteins.
-
-Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärstruktur** ist die lineare Aminosäuresequenz. **Sekundärstrukturelemente** wie α-Helix und β-Faltblatt entstehen durch Wasserstoffbrücken im Rückgrat. Die **Tertiärstruktur** ergibt sich aus der dreidimensionalen Faltung durch hydrophobe Wechselwirkungen, ionische Bindungen, Disulfidbrücken und H-Brücken der Seitenketten. Bei Proteinen aus mehreren Untereinheiten — wie Hämoglobin (α₂β₂) — kommt die **Quartärstruktur** hinzu.
-
-> **Merke:** Aldehyde (–CHO) und Ketone (–CO–) enthalten die Carbonylgruppe C=O. Aldehyde sind leichter oxidierbar als Ketone — sie reagieren positiv mit Fehling- und Tollens-Reagenz (Silberspiegelprobe).
-
-> **Merke:** Die Carbonylgruppe ist polar (δ⁺ am C, δ⁻ am O) und ermöglicht nucleophile Additionen. Glucose liegt in wässriger Lösung als Halbacetal (Ringform) vor — ein Gleichgewicht aus offenkettiger Aldehydform und cyclischer Form.
-
-> **Prüfungstipp:** Die Hückel-Regel (4n+2 π-Elektronen) ist eine beliebte Rechenaufgabe im MedAT. Erlaubte Zahlen: 2, 6, 10, 14 π-Elektronen. Benzol hat 6 (n=1). Cyclooctatetraen hat 8 → nicht aromatisch! Auch die essentiellen Aminosäuren (Eselsbrücke: PVT TIM HaLL) und die Catecholamin-Kaskade (Tyr → DOPA → Dopamin → Noradrenalin → Adrenalin) werden regelmäßig geprüft.`,
+> **Prüfungstipp:** Die Hückel-Regel (4n+2 π-Elektronen) ist eine beliebte Rechenaufgabe im MedAT. Cyclooctatetraen hat 8 π-Elektronen → nicht aromatisch (4n+2 = 8 hat keine ganzzahlige Lösung)! Dirigierende Effekte: −OH ortho/para, −NO₂ meta, Halogene ortho/para (aber desaktivierend). Die Chemie der Aminosäuren wird in UK ch-13-01 ausführlich behandelt.`,
       stichworte: [
         "Benzol",
         "Aromatizität",
         "Hückel-Regel",
-        "elektrophile Substitution",
+        "elektrophile aromatische Substitution",
         "Heteroaromaten",
         "Pyridin",
-        "Purin",
-        "Pyrimidin",
-        "Aminosäuren",
-        "Peptidbindung",
-        "Neurotransmitter",
-        "Proteinstruktur",
+        "Pyrrol",
+        "Imidazol",
+        "dirigierende Effekte",
+        "+M/-M-Effekt",
+        "Benzo[a]pyren",
+        "PAK",
       ],
       lernziele: [
         "Die Hückel-Regel (4n+2 π-Elektronen) erklären und Benzol als aromatische Verbindung identifizieren.",
-        "Die elektrophile aromatische Substitution (Nitrierung, Halogenierung) im Mechanismus erklären.",
-        "Den Aufbau der 20 proteinogenen Aminosäuren (α-C, -NH₂, -COOH, -R) und das Zwitterion-Konzept beschreiben.",
-        "Die Bausteine eines Nukleotids (Base, Zucker, Phosphat) benennen und Purine von Pyrimidinen unterscheiden.",
-        "Den Purinstoffwechsel und die Entstehung von Gicht (Harnsäureablagerungen) erläutern.",
+        "Die elektrophile aromatische Substitution (Nitrierung, Halogenierung) im Mechanismus beschreiben.",
+        "Dirigierende Effekte (+M/−M, +I/−I) auf ortho/para- vs. meta-Stellung anwenden.",
+        "Die wichtigsten Heteroaromaten (Pyridin, Pyrrol, Imidazol) und ihre biologische Relevanz erklären.",
+        "Benzo[a]pyren als Karzinogen und das Prinzip der metabolischen Aktivierung beschreiben.",
       ],
       sections: [
         {
           heading: "Hückel-Regel und Benzol-Struktur",
-          text: "Benzol (C₆H₆) erfüllt alle Bedingungen der Aromatizität: (1) planarer Ring, (2) vollständige Konjugation, (3) 6 π-Elektronen (n=1, 4·1+2=6). Die sechs p-Orbitale der sp²-hybridisierten C-Atome überlappen seitlich zu einem durchgehenden π-System oberhalb und unterhalb der Ringebene. Alle C-C-Bindungen sind gleichlang (139 pm). Die Resonanzenergie (Mesomerie-Energie) von ca. 150 kJ/mol erklärt, warum Benzol Additionsreaktionen meidet — Addition würde das aromatische System zerstören. Benzol reagiert daher bevorzugt durch elektrophile Substitution (EAS), bei der das π-System erhalten bleibt.",
+          text: "Benzol (C₆H₆) erfüllt alle Bedingungen der Aromatizität: (1) planarer Ring, (2) vollständige Konjugation, (3) 6 π-Elektronen (n=1, 4·1+2=6). Die sechs p-Orbitale der sp²-hybridisierten C-Atome überlappen seitlich zu einem durchgehenden π-System oberhalb und unterhalb der Ringebene. Alle C-C-Bindungen sind gleichlang (139 pm). Die Resonanzenergie (Mesomerie-Energie) von ca. 150 kJ/mol erklärt, warum Benzol Additionsreaktionen meidet — Addition würde das aromatische System zerstören.",
           merksatz:
             "Hückel: 4n+2 π-Elektronen → aromatisch. Benzol: 6 π-Elektronen (n=1). Aromatisch = planar, konjugiert, stabil. EAS bevorzugt (nicht Addition!), um Aromatizität zu erhalten.",
         },
         {
-          heading: "Aminosäuren — Struktur und Zwitterion",
-          text: "Alle 20 proteinogenen Aminosäuren haben dasselbe Grundgerüst am α-C: -NH₂, -COOH, -H und eine variable R-Gruppe (Seitenkette). Das α-C ist sp³-hybridisiert und bei allen Aminosäuren (außer Glycin) chiral. Im physiologischen pH-Bereich liegt die Aminosäure als Zwitterion vor: die Aminogruppe ist protoniert (-NH₃⁺, positiv) und die Carboxylgruppe deprotoniert (-COO⁻, negativ) → Nettoladung 0 am isoelektrischen Punkt (pI). Die Seitenkette R bestimmt die besonderen Eigenschaften: hydrophob/polar/geladen. Essentielle Aminosäuren (9 beim Menschen) müssen mit der Nahrung zugeführt werden, da der Körper sie nicht selbst synthetisieren kann.",
+          heading: "EAS-Mechanismus und dirigierende Effekte",
+          text: "Bei der EAS greift ein Elektrophil (E⁺) das π-System an → Areniumion (Wheland-Komplex, sp³ am angegriffenen C) → H⁺-Abspaltung stellt Aromatizität wieder her. Wichtigste EAS: Nitrierung (NO₂⁺), Halogenierung (Br⁺/Cl⁺ mit Lewis-Säure), Sulfonierung (SO₃), Friedel-Crafts (R⁺ mit AlCl₃). Dirigierende Effekte: +M/+I-Gruppen (−OH, −NH₂, Alkyl) aktivieren und dirigieren ortho/para; −M/−I-Gruppen (−NO₂, −COOH) desaktivieren und dirigieren meta. Halogene: desaktivierend (−I), aber ortho/para-dirigierend (+M überwiegt bei Richtungslenkung).",
           merksatz:
-            "Aminosäure = α-C mit -NH₂, -COOH, -H, -R. Alle L-konfiguriert in Proteinen. Zwitterion bei pH=pI: -NH₃⁺ und -COO⁻. Essenziell: 9 AA müssen über Nahrung aufgenommen werden.",
+            "EAS: E⁺ greift π-System an → Wheland-Komplex → H⁺ ab → Aromatizität erhalten. +M → ortho/para; −M → meta. Halogene: Sonderfall (desaktivierend, aber ortho/para).",
         },
         {
-          heading: "Purinstoffwechsel — Harnsäure und Gicht",
-          text: "Purinbasen (Adenin, Guanin) aus dem Nukleotidabbau werden zu Hypoxanthin und Xanthin abgebaut. Das Enzym Xanthinoxidase oxidiert Xanthin zu Harnsäure (Urat). Beim Menschen ist Harnsäure das Endprodukt (fehlende Uricase). Harnsäure hat geringe Wasserlöslichkeit; bei Hyperurikämie (> 6,8 mg/dl) präzipitieren Natriumurat-Kristalle in Gelenken (Gicht, Podagra) und Nieren (Urolithiasis). Allopurinol (Xanthinoxidase-Hemmer) verhindert die Harnsäureproduktion. Der Xanthin-Inhibitor Febuxostat ist eine neuere Alternative. Diät: purinreiche Nahrung meiden (Fleisch, Innereien, Bier).",
+          heading: "Heteroaromaten und PAK",
+          text: "Pyridin (6-Ring, 1 N): basisch (freies Elektronenpaar senkrecht zum π-System), Grundgerüst von NAD⁺ und Vitamin B₃. Pyrrol (5-Ring, 1 N): nicht basisch (Elektronenpaar im π-System, liefert die 6. und 7. π-Elektronen für Aromatizität). Imidazol (5-Ring, 2 N): vereint pyridin- und pyrrol-artigen N; Seitenkette von Histidin. Porphyrine (4 Pyrrolringe) = Häm/Chlorophyll. PAK: Benzo[a]pyren (5 Ringe, Tabakrauch) → CYP450-Aktivierung → Diolepoxid bindet kovalent an DNA → Karzinogen.",
           merksatz:
-            "Purine → Xanthin → Harnsäure (Xanthinoxidase). Hyperurikämie → Gicht (Urat-Kristalle in Gelenken). Allopurinol hemmt Xanthinoxidase. Podagra = Gicht im Großzehengrundgelenk.",
+            "Pyridin = basisch (N-Elektronenpaar ⊥ zum Ring). Pyrrol = nicht basisch (Elektronenpaar im π-System). Imidazol = beides. Benzo[a]pyren → DNA-Addukt → Krebs.",
         },
       ],
 
       merksätze: [
-        "Hückel-Regel: 4n+2 π-Elektronen → aromatisch. Benzol: n=1, 6 π-Elektronen.",
-        "Aromate: bevorzugen elektrophile aromatische Substitution (EAS), nicht Addition.",
-        "EAS: Elektrophil greift π-System an, H⁺ wird abgespalten → Aromatizität bleibt erhalten.",
-        "Nitrierung: Benzol + NO₂⁺ (aus HNO₃/H₂SO₄) → Nitrobenzol; Ausgangsstoff für Anilin/Arzneimittel.",
-        "Aminosäure-Grundbaustein: α-C mit -NH₂, -COOH, -H, -R. Außer Glycin alle chiral.",
-        "Proteinogene AA: alle L-Konfiguration. 9 essenzielle AA müssen mit der Nahrung zugeführt werden.",
-        "Nukleotide = Base + Pentose + Phosphat. Purine: Adenin, Guanin (Doppelring). Pyrimidine: Cytosin, Thymin, Uracil.",
-        "Chargaff: A=T (2 H-Brücken), G≡C (3 H-Brücken) in der DNA.",
-        "Purinstoffwechsel → Harnsäure → Gicht bei Hyperurikämie. Allopurinol: Xanthinoxidase-Hemmer.",
-        "Aromatische AA (Phe, Tyr, Trp) als Vorläufer von Catecholaminen, Serotonin, Melatonin, Schilddrüsenhormonen.",
+        "Hückel-Regel: 4n+2 π-Elektronen → aromatisch. Benzol: n=1, 6 π-Elektronen. Erlaubte Zahlen: 2, 6, 10, 14.",
+        "Aromate: bevorzugen elektrophile aromatische Substitution (EAS), nicht Addition — Resonanzenergie bleibt erhalten.",
+        "EAS-Mechanismus: E⁺ greift π-System an → Areniumion (Wheland-Komplex) → H⁺ ab → Aromatizität wiederhergestellt.",
+        "Nitrierung: Benzol + NO₂⁺ (aus HNO₃/H₂SO₄) → Nitrobenzol. Halogenierung: Benzol + Br₂/FeBr₃ → Brombenzol.",
+        "+M/+I-Gruppen (−OH, −NH₂, Alkyl): aktivierend, ortho/para-dirigierend.",
+        "−M/−I-Gruppen (−NO₂, −COOH, −SO₃H): desaktivierend, meta-dirigierend.",
+        "Halogene: desaktivierend (−I), aber ortho/para-dirigierend (+M überwiegt bei Richtungslenkung).",
+        "Pyridin: basisch (freies e⁻-Paar ⊥ π-System). Pyrrol: nicht basisch (e⁻-Paar im π-System). Imidazol: beides.",
+        "Porphyrin = 4 Pyrrolringe → Häm (Hämoglobin) und Chlorophyll.",
+        "Benzo[a]pyren (PAK, 5 Ringe): Prokarzinogen → CYP450-Aktivierung → DNA-Addukt → Mutationen.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -927,7 +928,7 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           "Die elektrophile aromatische Substitution (EAS) ist die charakteristische Reaktion aromatischer Verbindungen. Bei dieser Reaktion wird ein Wasserstoffatom des Aromaten durch ein Elektrophil (elektronenarme Spezies) ersetzt, wobei das aromatische π-System erhalten bleibt. Der Mechanismus der Nitrierung von Benzol verläuft in zwei Schritten: Im ersten Schritt wird durch Reaktion von konzentrierter Salpetersäure (HNO₃) mit konzentrierter Schwefelsäure (H₂SO₄) das Nitroniumion (NO₂⁺) als reaktives Elektrophil gebildet: HNO₃ + H₂SO₄ → NO₂⁺ + HSO₄⁻ + H₂O. Im zweiten Schritt greift das Nitroniumion (NO₂⁺) das π-Elektronensystem des Benzols nucleophil an. Dabei entsteht ein kationischer Übergangszustand (Wheland-Intermediat oder Areniumion), in dem die aromatische Stabilität kurzzeitig verloren geht — der betroffene Kohlenstoff ist sp³-hybridisiert. Im dritten Schritt wird ein Proton (H⁺) abgespalten; die Aromatizität wird wiederhergestellt, das Proton wird von HSO₄⁻ aufgenommen. Produkt: Nitrobenzol. Aromate bevorzugen Substitution statt Addition aus thermodynamischen Gründen: Die Mesomerie-Energie (Resonanzenergie) des aromatischen Systems beträgt ca. 150 kJ/mol. Eine Additionsreaktion würde diese Resonanzenergie zerstören und ein nicht-aromatisches, energetisch ungünstigeres Produkt liefern. Die Substitution hingegen erhält das aromatische π-System — die 'Treibkraft' ist die Wiederherstellung der Aromatizität durch Protonenabspaltung. Dieses Prinzip erklärt auch die biologische Inertheit von aromatischen Ringen in Biomolekülen.",
       },
       klinischerBezug:
-        "Purinstoffwechsel: Harnsäure (Gicht, Hyperurikämie). Aromatische AA: Phe→PKU bei Enzymdefekt; Tyr→Catecholamine (Dopamin, Adrenalin); Trp→Serotonin/Melatonin. Allopurinol hemmt Xanthinoxidase.",
+        "Benzol bei chronischer Exposition karzinogen (AML). Benzo[a]pyren (Tabakrauch) → metabolische Aktivierung → DNA-Mutationen → Lungenkrebs. Heteroaromaten in Arzneimitteln: Imidazol-Derivate (Antimykotika), Pyridin-Derivate (Niacin/B₃). Nitrobenzol als Ausgangsstoff für Anilin und Sulfonamide.",
       selfTest: [
         {
           question: "Welche Aussage über Benzol ist korrekt?",
@@ -940,7 +941,7 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           ],
           correctIndex: 2,
           explanation:
-            "Benzol (C₆H₆) ist die klassische aromatische Verbindung. Die sechs sp²-hybridisierten C-Atome bilden einen planaren hexagonalen Ring. Jedes C-Atom hat ein p-Orbital senkrecht zur Ringmembran; diese sechs p-Orbitale überlappen zu einem delokalisierten π-System mit 6 π-Elektronen. Die Hückel-Regel (4n+2 mit n=1 → 6 π-Elektronen) ist erfüllt. Alle C-C-Bindungen sind gleichlang (139 pm). Benzol reagiert bevorzugt durch EAS (Substitution), nicht durch Addition — um die Aromatizität und die damit verbundene Resonanzenergie zu erhalten.",
+            "Benzol (C₆H₆) ist die klassische aromatische Verbindung. Die sechs sp²-hybridisierten C-Atome bilden einen planaren hexagonalen Ring. Jedes C-Atom hat ein p-Orbital senkrecht zur Ringebene; diese sechs p-Orbitale überlappen zu einem delokalisierten π-System mit 6 π-Elektronen. Die Hückel-Regel (4n+2 mit n=1 → 6 π-Elektronen) ist erfüllt. Alle C-C-Bindungen sind gleichlang (139 pm). Benzol reagiert bevorzugt durch EAS (Substitution), nicht durch Addition — um die Aromatizität und die damit verbundene Resonanzenergie (~150 kJ/mol) zu erhalten.",
           hints: [
             "Hückel-Regel: 4n+2 π-Elektronen. Für n=1: wie viele π-Elektronen?",
             "Aromatisch = planar, konjugiert, 4n+2 π-Elektronen. Was ist charakteristisch?",
@@ -949,96 +950,83 @@ Die Strukturhierarchie der Proteine gliedert sich in vier Ebenen: Die **Primärs
           tags: ["benzol", "hückel-regel", "aromatizität"],
         },
         {
-          question: "Was unterscheidet Purinbasen von Pyrimidinbasen?",
-          options: [
-            "Purine haben eine OH-Gruppe, Pyrimidine nicht",
-            "Purine sind positiv geladen, Pyrimidine negativ",
-            "Purine kommen nur in RNA vor, Pyrimidine nur in DNA",
-            "Purine sind zweiringaromatische Basen, Pyrimidine sind einringaromatisch",
-            "Purine haben 4n+2 π-Elektronen, Pyrimidine nicht",
-          ],
-          correctIndex: 3,
-          explanation:
-            "Stickstoffbasen der Nukleinsäuren werden nach ihrer Ringstruktur unterschieden: Purine bestehen aus einem Pyrimidin-Ring und einem Imidazol-Ring (Doppelring = Bicyclus, 9 Atome). Purine: Adenin (A) und Guanin (G) — kommen in DNA und RNA vor. Pyrimidine haben nur einen Sechsring (6 Atome, Monocyclus). Pyrimidine: Cytosin (C, in DNA und RNA), Thymin (T, nur DNA), Uracil (U, nur RNA). Eselsbrücke: 'CUT the Pyrimidine' (Cytosin, Uracil, Thymin sind Pyrimidine).",
-          hints: [
-            "'Pyr-' kommt von Pyrexis/Pyrimidin (ein Ring). 'Pur-' (Purin) — wie viele Ringe?",
-            "Denke an die Größe: Purine sind größer (zwei Ringe), Pyrimidine kleiner (ein Ring).",
-          ],
-          difficulty: 2,
-          tags: ["purine", "pyrimidine", "nukleinsäuren"],
-        },
-        {
-          question: "Welche Aussage zur Chargaff-Regel ist korrekt?",
-          options: [
-            "In der DNA ist A = G und C = T (gleiche Mengen gleicher Ringtypen)",
-            "Chargaff-Regel gilt nur für RNA, nicht für DNA",
-            "In der RNA ist A = T, weil RNA einzelsträngig ist",
-            "Purine und Pyrimidine kommen in der DNA im Verhältnis 2:1 vor",
-            "In der DNA ist A = T und G = C (komplementäre Basenpaarung)",
-          ],
-          correctIndex: 4,
-          explanation:
-            "Chargaff stellte fest, dass in doppelsträngiger DNA die Menge von Adenin immer gleich der Menge von Thymin ist (A = T), und die Menge von Guanin gleich der von Cytosin (G = C). Dies ergibt sich aus der Watson-Crick-Basenpaarung: A-T-Paar (2 Wasserstoffbrücken), G-C-Paar (3 Wasserstoffbrücken). Folgerung: Purine (A+G) = Pyrimidine (C+T). Diese Regel gilt für doppelsträngige DNA; für einzelsträngige RNA oder Einzelstrang-DNA nicht.",
-          hints: [
-            "Chargaff: denke an komplementäre Basenpaarung in der Doppelhelix.",
-            "A paart mit T (2 H-Brücken), G paart mit C (3 H-Brücken). Was folgt daraus quantitativ?",
-          ],
-          difficulty: 2,
-          tags: ["chargaff-regel", "basenpaarung", "dna-doppelhelix"],
-        },
-        {
           question:
-            "Welche Erkrankung entsteht durch Ablagerung von Natriumurat-Kristallen in Gelenken?",
+            "Welchen Effekt hat eine −NH₂-Gruppe als Substituent am Benzolring bei einer EAS?",
           options: [
-            "Gicht (Arthritis urica)",
-            "Phenylketonurie",
-            "Diabetes mellitus",
-            "Alkaptonurie",
-            "Homocystinurie",
-          ],
-          correctIndex: 0,
-          explanation:
-            "Gicht (Arthritis urica, Hyperurikämie) ist eine Stoffwechselerkrankung des Purinstoffwechsels. Purine werden im Menschen zu Harnsäure abgebaut (letzter Schritt: Xanthinoxidase). Bei Überproduktion oder verminderter renaler Ausscheidung akkumuliert Harnsäure im Blut. Ab einer Konzentration von ca. 6,8 mg/dl ist die Löslichkeitsgrenze überschritten, Natriumurat kristallisiert aus und lagert sich in Gelenken (bevorzugt Großzehengrundgelenk = Podagra, aber auch Finger, Knie) und in der Niere (Nierensteine) ab. Die Kristalle lösen eine Entzündungsreaktion aus (akuter Gichtanfall mit starken Schmerzen). Therapie: Allopurinol (Xanthinoxidase-Hemmer).",
-          hints: [
-            "Harnsäure ist das Endprodukt des Purinstoffwechsels. Was passiert, wenn sie zu hoch konzentriert ist?",
-            "Natriumurat-Kristalle fallen aus und lagern sich ab. Wo verursacht das Schmerzen?",
-          ],
-          difficulty: 1,
-          tags: ["gicht", "harnsäure", "natriumurat"],
-        },
-        {
-          question:
-            "Welche Aminosäure dient als Vorläufer für Dopamin, Adrenalin und Noradrenalin (Catecholamine)?",
-          options: ["Tryptophan", "Tyrosin", "Histidin", "Glycin", "Phenylalanin (direkt)"],
-          correctIndex: 1,
-          explanation:
-            "Die Catecholaminbiosynthese beginnt mit Tyrosin (einer aromatischen Aminosäure). Der Weg: Tyrosin → L-DOPA (durch Tyrosinhydroxylase, dem geschwindigkeitsbestimmenden Schritt) → Dopamin (durch DOPA-Decarboxylase) → Noradrenalin (durch Dopamin-β-Hydroxylase) → Adrenalin (durch PNMT). Phenylalanin ist der Vorläufer von Tyrosin (Phenylalanin-Hydroxylase); bei Phenylketonurie (PKU) ist diese Hydroxylase defekt. Tryptophan ist Vorläufer von Serotonin und Melatonin. Histidin ist Vorläufer von Histamin.",
-          hints: [
-            "Catecholamine haben einen Catechol-Ring (Benzol mit zwei benachbarten OH-Gruppen). Welche AA hat bereits den Benzolring?",
-            "L-DOPA (bei Parkinson eingesetzt) kommt von welcher Aminosäure?",
-          ],
-          difficulty: 2,
-          tags: ["tyrosin", "catecholamine", "dopamin-biosynthese"],
-        },
-        {
-          question:
-            "Ein Patient hat erhöhte Harnsäurewerte (Hyperurikämie). Welcher Mechanismus liegt bei der Therapie mit Allopurinol zugrunde?",
-          options: [
-            "Allopurinol erhöht die renale Ausscheidung von Harnsäure",
-            "Allopurinol löst Urat-Kristalle in den Gelenken auf",
-            "Allopurinol hemmt die Xanthinoxidase und reduziert so die Harnsäureproduktion",
-            "Allopurinol blockiert die Purinaufnahme im Darm",
-            "Allopurinol aktiviert die Uricase, die Harnsäure abbaut",
+            "Desaktivierend und meta-dirigierend",
+            "Aktivierend und meta-dirigierend",
+            "Aktivierend und ortho/para-dirigierend",
+            "Desaktivierend und ortho/para-dirigierend",
+            "Kein Effekt auf die Zweitsubstitution",
           ],
           correctIndex: 2,
           explanation:
-            "Allopurinol ist ein Strukturanalog des Hypoxanthins. Es hemmt kompetitiv die Xanthinoxidase, das Enzym, das Hypoxanthin → Xanthin → Harnsäure katalysiert. Durch Hemmung der Xanthinoxidase wird weniger Harnsäure gebildet; stattdessen akkumulieren Hypoxanthin und Xanthin (die löslicher als Harnsäure sind und leichter renal ausgeschieden werden). Die Harnsäurekonzentration im Blut sinkt. Allopurinol selbst wird durch die Xanthinoxidase zu Oxipurinol metabolisiert, das ebenfalls ein wirksamer Xanthinoxidase-Inhibitor ist. Menschen haben keine Uricase (anders als die meisten anderen Säugetiere), daher ist Harnsäure unser Endprodukt.",
+            "Die −NH₂-Gruppe hat einen starken +M-Effekt: Das freie Elektronenpaar des Stickstoffs wird durch Mesomerie in den Ring geschoben und erhöht die Elektronendichte besonders in ortho- und para-Position. Dadurch ist der Ring aktiviert (reagiert schneller als Benzol) und das Elektrophil wird bevorzugt in ortho- und para-Stellung dirigiert. Andere aktivierende, ortho/para-dirigierende Gruppen sind −OH und Alkylgruppen (+I-Effekt).",
           hints: [
-            "Allopurinol ist ein Strukturanalog des Hypoxanthin-Substrats der Xanthinoxidase — was macht ein Substratanalog?",
-            "Harnsäure entsteht durch Xanthinoxidase. Wenn man dieses Enzym hemmt...",
+            "−NH₂ hat ein freies Elektronenpaar, das in den Ring geschoben werden kann (+M-Effekt).",
+            "Elektronenschiebende Gruppen erhöhen die Dichte in ortho und para.",
+          ],
+          difficulty: 2,
+          tags: ["eas", "dirigierende-effekte", "aminogruppe"],
+        },
+        {
+          question: "Warum ist Pyrrol (5-Ring mit einem N) im Gegensatz zu Pyridin NICHT basisch?",
+          options: [
+            "Pyrrol hat keine Stickstoffatome",
+            "Das Elektronenpaar des Pyrrol-N ist Teil des aromatischen π-Systems und steht nicht für Protonierung zur Verfügung",
+            "Pyrrol ist antiaromatisch und daher unreaktiv",
+            "Pyridin hat zwei N-Atome, Pyrrol nur eines",
+            "Pyrrol ist zu klein für eine Protonenaufnahme",
+          ],
+          correctIndex: 1,
+          explanation:
+            "In Pyrrol ist das freie Elektronenpaar des Stickstoffs in das aromatische π-System einbezogen — es liefert 2 der insgesamt 6 π-Elektronen (4 von den C-Atomen + 2 vom N). Eine Protonierung des N würde dieses Elektronenpaar aus dem π-System entfernen und die Aromatizität zerstören. Bei Pyridin steht das freie Elektronenpaar senkrecht zum π-System in der Ringebene (es ist nicht an der Aromatizität beteiligt) und kann daher Protonen aufnehmen.",
+          hints: [
+            "Pyrrol braucht das N-Elektronenpaar für die 4n+2-Regel. Was passiert bei Protonierung?",
+            "Bei Pyridin liegt das Elektronenpaar in der Ringebene, bei Pyrrol senkrecht dazu im π-System.",
+          ],
+          difficulty: 2,
+          tags: ["pyrrol", "pyridin", "heteroaromaten", "basizität"],
+        },
+        {
+          question:
+            "Warum ist Benzo[a]pyren karzinogen, obwohl es selbst nicht direkt mit DNA reagiert?",
+          options: [
+            "Es zerstört die Zellmembran durch seine Hydrophobizität",
+            "Es hemmt die DNA-Polymerase kompetitiv",
+            "Es wird durch CYP450-Enzyme zu einem reaktiven Diolepoxid aktiviert, das kovalent an DNA bindet",
+            "Es interkaliert zwischen die Basenpaare und verhindert die Replikation",
+            "Es methyliert Cytosin-Basen und verursacht Gensilencing",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Benzo[a]pyren ist ein Prokarzinogen — es ist selbst nicht direkt reaktiv, wird aber durch CYP450-Enzyme (Phase-I-Metabolismus) zu einem Diolepoxid bioaktiviert. Dieses hochreaktive Zwischenprodukt bindet kovalent an die DNA (bildet DNA-Addukte, bevorzugt an Guanin) und verursacht Mutationen. Dies ist ein klassisches Beispiel für metabolische Aktivierung: Der Körper versucht, die lipophile Substanz durch Oxidation wasserlöslicher zu machen, erzeugt dabei aber ein reaktiveres, karzinogenes Intermediat.",
+          hints: [
+            "Pro-Karzinogen = wird erst im Körper zum Karzinogen aktiviert. Durch welches Enzymsystem?",
+            "CYP450 oxidiert lipophile Substanzen — manchmal entstehen dabei reaktivere Metabolite.",
           ],
           difficulty: 3,
-          tags: ["allopurinol", "xanthinoxidase", "gicht-therapie"],
+          tags: ["benzopyren", "karzinogen", "cyp450", "metabolische-aktivierung"],
+        },
+        {
+          question:
+            "Bei der Nitrierung von Benzol entsteht das Elektrophil NO₂⁺. Wie wird es gebildet?",
+          options: [
+            "Durch Reduktion von NO₃⁻ mit Zink",
+            "Durch Reaktion von HNO₃ mit H₂SO₄ (Nitriersäure)",
+            "Durch thermische Zersetzung von NaNO₂",
+            "Durch Oxidation von NH₃ mit O₂",
+            "Durch Elektrolyse von Salpetersäure",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Das Nitroniumion (NO₂⁺) wird durch Reaktion von konzentrierter Salpetersäure mit konzentrierter Schwefelsäure gebildet: HNO₃ + H₂SO₄ → NO₂⁺ + HSO₄⁻ + H₂O. Die Schwefelsäure wirkt als starke Brønsted-Säure und protoniert die Salpetersäure, wodurch Wasser abgespalten und das Elektrophil NO₂⁺ freigesetzt wird. Dieses Gemisch wird als Nitriersäure bezeichnet und ist das klassische Reagenz für die Nitrierung aromatischer Verbindungen.",
+          hints: [
+            "Nitriersäure = HNO₃ + H₂SO₄. Welche Rolle spielt die Schwefelsäure?",
+            "H₂SO₄ protoniert HNO₃ → Wasser wird abgespalten → was bleibt?",
+          ],
+          difficulty: 2,
+          tags: ["nitrierung", "nitroniumion", "eas"],
         },
         {
           question:

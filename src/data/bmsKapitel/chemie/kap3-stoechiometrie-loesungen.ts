@@ -275,13 +275,15 @@ In der pharmazeutischen Industrie spielt die Ausbeute eine zentrale Rolle. Die *
 
 Die Stöchiometrie ist alles andere als abstrakte Theorie — sie begegnet Ärztinnen und Ärzten täglich. Ein anschauliches Beispiel ist die **Neutralisation von Magensäure** durch Antacida: Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Eine Antacidum-Tablette mit 300 mg Mg(OH)₂ enthält n = 0,300 g / 58,3 g/mol = 5,15 mmol Magnesiumhydroxid. Da das Molverhältnis 1:2 beträgt, neutralisiert sie 2 × 5,15 = 10,3 mmol HCl — eine beachtliche Menge, wenn man bedenkt, dass der Magen täglich etwa 50–100 mmol HCl produziert.
 
-Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwechsel**. Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g) und 6 mol H₂O. Das Verhältnis von produziertem CO₂ zu verbrauchtem O₂ heißt **respiratorischer Quotient (RQ)**: Für Kohlenhydrate beträgt RQ = 6/6 = 1,0, für Fette sinkt er auf etwa 0,7 (Fettsäuren benötigen mehr O₂ pro erzeugtem CO₂). Klinisch wird der RQ über indirekte Kalorimetrie bestimmt und gibt Aufschluss über den aktuellen Substratmix der Energiegewinnung eines Patienten.
+Die Stöchiometrie chemischer Reaktionen lässt sich auch auf den Stoffwechsel anwenden — der Respiratorische Quotient (RQ) gibt das Verhältnis von produziertem CO₂ zu verbrauchtem O₂ an:
+
+Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g) und 6 mol H₂O. Das Verhältnis von produziertem CO₂ zu verbrauchtem O₂ heißt **respiratorischer Quotient (RQ)**: Für Kohlenhydrate beträgt RQ = 6/6 = 1,0, für Fette sinkt er auf etwa 0,7 (Fettsäuren benötigen mehr O₂ pro erzeugtem CO₂). Klinisch wird der RQ über indirekte Kalorimetrie bestimmt und gibt Aufschluss über den aktuellen Substratmix der Energiegewinnung eines Patienten.
 
 > 💡 **Prüfungstipp:** Der RQ wird im MedAT gerne als Verknüpfung zwischen Stöchiometrie und Physiologie gefragt. Merke: RQ = 1,0 (Kohlenhydrate), RQ ≈ 0,7 (Fette), RQ ≈ 0,8 (Proteine). Ein gemischter RQ von 0,85 entspricht einer normalen Mischkost.`,
       merksätze: [
         "Stöchiometrische Koeffizienten sind Molverhältnisse, nicht Massenverhältnisse!",
         "Rechenweg: g → mol (÷M) → Koeffizientenverhältnis → mol → g (×M).",
-        "Massenerhaltung: Die Gesamtmasse der Edukte equals die Gesamtmasse der Produkte.",
+        "Massenerhaltung: Die Gesamtmasse der Edukte entspricht der Gesamtmasse der Produkte.",
         "Limitierendes Reagenz = das Edukt, das zuerst aufgebraucht wird → bestimmt die maximale Produktmenge.",
         "Glucose-Verbrennung: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O — RQ = 1,0 für Kohlenhydrate.",
       ],
@@ -412,7 +414,7 @@ Ein zweites klinisch relevantes Beispiel ist die **CO₂-Produktion im Stoffwech
       ],
       content: `## Konzentrationsangaben im Überblick
 
-Es gibt verschiedene Arten, die Konzentration eines gelösten Stoffes anzugeben:
+Es gibt verschiedene Arten, die Konzentration eines gelösten Stoffes anzugeben. Für den MedAT sind vor allem **Molarität (c = n/V)** und **Massenkonzentration (β = m/V)** relevant. **Molalität (b = n/m_LM)** brauchst du für kolligative Eigenschaften. Die anderen Angaben (Molenbruch, ppm) kommen selten vor.
 
 {{IMAGE}}
 
@@ -449,6 +451,28 @@ Masse des gelösten Stoffes pro Volumen der Lösung. Klinisch relevant: Blutgluc
 
 ## Umrechnungen zwischen Konzentrationsangaben
 
+Im MedAT begegnen dir vor allem zwei Umrechnungen: mg/dL → mmol/L (Laborwerte) und Massenprozent → Molarität (Herstellung von Lösungen).
+
+### Beispiel 1: mg/dL → mmol/L (Blutglucose)
+
+**Aufgabe:** Nüchtern-Blutzucker = 90 mg/dL. Wie viel ist das in mmol/L?
+
+**Lösung:**
+1. 90 mg/dL = 900 mg/L = 0,9 g/L
+2. n = m/M = 0,9 g / 180 g/mol = 0,005 mol/L = **5,0 mmol/L** ✓ (Normalbereich)
+
+**Schnellformel Glucose:** mmol/L = mg/dL ÷ 18 (weil M = 180 g/mol und der Faktor dL→L = 10 sich zu 180/10 = 18 kürzt).
+
+### Beispiel 2: Massenprozent → Molarität (konzentrierte HCl)
+
+**Aufgabe:** Konzentrierte Salzsäure hat 37 % HCl und eine Dichte von ρ = 1,19 kg/L. Welche Molarität hat sie?
+
+**Lösung:**
+1. 1 L Lösung wiegt 1190 g (wegen ρ = 1,19 kg/L)
+2. Davon sind 37 % HCl: m(HCl) = 0,37 × 1190 = 440,3 g
+3. n(HCl) = 440,3 / 36,5 = **12,1 mol** → c = **12,1 mol/L**
+
+> 💡 **Allgemeine Formel:** c = (w × ρ × 1000) / M [wenn ρ in kg/L und w als Dezimalzahl]. Diese Umrechnung wird selten direkt geprüft, aber das Verständnis des Zusammenhangs zwischen w, ρ und c ist wichtig.
 
 ---
 
@@ -474,6 +498,8 @@ Man nimmt 45 mL der 10 %-Lösung und füllt mit destilliertem Wasser auf 500 mL 
 
 Die **Löslichkeit** gibt die maximale Menge eines Stoffes an, die sich in einem bestimmten Volumen Lösungsmittel bei gegebener Temperatur löst. Eine gesättigte Lösung enthält die maximal mögliche Konzentration.
 
+Wenn du Salz in Wasser löst, erreicht die Lösung irgendwann einen Sättigungspunkt — ab hier fällt jedes weitere Salz als Feststoff aus. Das **Löslichkeitsprodukt K_sp** beschreibt genau dieses Gleichgewicht: Ist das Ionenprodukt Q kleiner als K_sp, löst sich noch Stoff; übersteigt Q den Wert K_sp, fällt Feststoff aus.
+
 **Löslichkeitsprodukt K_sp:** Für schwer lösliche Salze wie CaF₂ gilt im Gleichgewicht:
 
 CaF₂ ⇌ Ca²⁺ + 2 F⁻ → **K_sp = [Ca²⁺] × [F⁻]²**
@@ -486,19 +512,7 @@ Allgemein für A_mB_n: **K_sp = [A]^m × [B]^n**
 
 Klinisch wichtig: K_sp(CaCO₃) bestimmt, ob Nierensteine (Calciumoxalat, Calciumphosphat) ausfallen. Hohe Ca²⁺-Konzentration im Urin + alkalischer pH → erhöhtes Steinrisiko.
 
-> **Merke:** K_sp = Produkt der Ionenkonzentrationen (mit Exponenten = stöchiometrische Koeffizienten). Ionenprodukt Q > K_sp → Fällung; Q < K_sp → Lösung noch nicht gesättigt.
-
----
-
-## Blutglucose: Einheitenumrechnung
-
-**Aufgabe:** Nüchtern-Blutzucker = 90 mg/dL. Wie viel ist das in mmol/L?
-
-**Lösung:**
-1. 90 mg/dL = 900 mg/L = 0,9 g/L
-2. n = m/M = 0,9/180 = 0,005 mol/L = **5,0 mmol/L** ✓ (Normalbereich)
-
-Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
+> **Merke:** K_sp = Produkt der Ionenkonzentrationen (mit Exponenten = stöchiometrische Koeffizienten). Ionenprodukt Q > K_sp → Fällung; Q < K_sp → Lösung noch nicht gesättigt.`,
       merksätze: [
         "Molarität c = n/V [mol/L]; Massenanteil w = m(Stoff)/m(Lösung) × 100 %; Massenkonzentration β = m/V [g/L].",
         "NaCl 0,9 % ≈ 154 mmol/L NaCl → 308 mosmol/L (isoton zum Blutplasma).",
@@ -629,7 +643,7 @@ Umrechnungsfaktor Glucose: **mmol/L = mg/dL × 0,0555** (oder ÷ 18)`,
 
 **Kolligative Eigenschaften** (lat. colligare = zusammenfassen) hängen nur von der **Anzahl gelöster Teilchen** ab, nicht von deren Art. Sie betreffen das Lösungsmittel:
 
-1. **Dampfdruckerniedrigung** (Raoult'sches Gesetz): p_LM = x_LM × p°_LM
+1. **Dampfdruckerniedrigung** (Raoult'sches Gesetz): p_LM = x_LM × p°_LM — gelöste Teilchen besetzen Plätze an der Flüssigkeitsoberfläche, sodass weniger Lösungsmittelmoleküle verdampfen können und der Dampfdruck sinkt.
 2. **Siedepunktserhöhung:** ΔT_b = K_b × b × i
 3. **Gefrierpunktserniedrigung:** ΔT_f = K_f × b × i
 4. **Osmotischer Druck:** π = i × c × R × T
@@ -648,6 +662,8 @@ Dabei ist **i = van't Hoff-Faktor**: Anzahl der Teilchen, in die ein Stoff in L�
 ### Siedepunktserhöhung ΔT_b
 
 Gelöste Teilchen senken den Dampfdruck des Lösungsmittels (Raoult). Daher muss stärker erhitzt werden, bis der Dampfdruck den Atmosphärendruck erreicht → **Siedepunkt steigt**.
+
+**Raoult quantitativ:** p_LM = x_LM × p°_LM. Beispiel: Löst man 1 mol Glucose in 9 mol Wasser, ist x_Wasser = 9/10 = 0,9 → der Dampfdruck sinkt auf 90 % des reinen Wasserdampfdrucks. In der Praxis reicht für den MedAT die Faustregel: Mehr gelöste Teilchen → niedrigerer Dampfdruck → höherer Siedepunkt.
 
 **ΔT_b = K_b × b × i**
 

@@ -41,8 +41,6 @@ Eine harmonische Schwingung ist die einfachste periodische Bewegung und beschrei
 
 **Formelklartext:** x(t) = A*cos(omega*t+phi_0) beschreibt, *wo* sich der Körper zu jedem Zeitpunkt t befindet: Die Auslenkung schwankt zwischen +A und -A; omega*t ist der Phasenwinkel (in Radiant), der angibt, wie weit die Schwingung in ihrer Periode fortgeschritten ist. **F = -k*x** bedeutet: Die Rückstellkraft ist proportional zur Auslenkung und wirkt immer zur Ruhelage hin; je steifer die Feder (größeres k), desto größer die Kraft bei gleicher Auslenkung.
 
-> **Merke:** Die Kreisfrequenz omega = 2*Pi*f = 2*Pi/T ist die zentrale Verknüpfungsgröße zwischen allen Schwingungsparametern. Sie gibt an, welchen Winkel (in Radiant) die Schwingung pro Sekunde durchläuft.
-
 > 💡 **Prüfungstipp:** T und f sind Kehrwerte: f = 1/T, T = 1/f. Häufige Falle: ω mit f verwechseln! ω = 2πf hat die Einheit rad/s, f hat die Einheit Hz = 1/s.
 
 Aus der Auslenkungsfunktion lassen sich Geschwindigkeit und Beschleunigung durch Ableitung gewinnen:
@@ -143,15 +141,7 @@ In biologischen Systemen sorgt Dämpfung für Stabilität (z. B. Gelenkknorpel a
 
 Wird einem gedämpften Oszillator durch eine **periodische äußere Kraft** F(t) = F_0*cos(Omega*t) Energie zugeführt, so entsteht eine **erzwungene Schwingung**. Nach einer Einschwingphase schwingt das System mit der **Anregungsfrequenz Omega** (nicht mit seiner Eigenfrequenz omega_0).
 
-Die Amplitude der stationären erzwungenen Schwingung hängt vom Frequenzverhältnis Omega/omega_0 ab:
-
-**A(Omega) = F_0 / Wurzel((omega_0^2 - Omega^2)^2 + (2*delta*Omega)^2)**
-
-Das Maximum dieser Funktion (die **Resonanzkurve**) liegt bei:
-- **Omega_res = Wurzel(omega_0^2 - 2*delta^2)** ungefähr omega_0 für schwache Dämpfung
-- Bei schwacher Dämpfung: A_max ungefähr F_0/(2*delta*omega_0) -- die Amplitude wird sehr groß
-
-**Resonanzkatastrophe:** Ohne (oder mit sehr geringer) Dämpfung strebt die Amplitude bei Omega = omega_0 theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
+Je näher die Anregungsfrequenz an der Eigenfrequenz liegt, desto stärker wird die Schwingung — bei genauer Übereinstimmung droht **Resonanzkatastrophe**. Die Resonanzkurve zeigt ein scharfes Maximum bei Omega ungefähr omega_0 (bei schwacher Dämpfung). Ohne ausreichende Dämpfung strebt die Amplitude theoretisch gegen unendlich. In der Praxis führt dies zu Strukturversagen:
 - **Tacoma-Narrows-Brücke (1940):** Wind mit passender Frequenz regte Schwingungsmoden der Brücke an --> Resonanzkatastrophe --> Einsturz
 - **Millennium Bridge London (2000):** Fußgänger synchronisierten ihren Gang mit der Brückenfrequenz --> seitliches Schwanken
 - **Marschieren auf Brücken verboten:** Soldaten brechen den Gleichschritt, um Resonanzanregung zu vermeiden
@@ -186,9 +176,6 @@ An einer vertikalen Feder hängt eine Masse von 0,3 kg und dehnt sie um 6 cm. k 
 
 **Beispiel 6 -- Gedämpfte Schwingung:**
 Ein Federpendel hat omega_0 = 10 rad/s und delta = 0,5 s^(-1). Die gedämpfte Frequenz: omega_d = Wurzel(100 - 0,25) = Wurzel(99,75) ungefähr 9,99 rad/s (kaum verändert bei schwacher Dämpfung). Die Halbwertszeit der Amplitude: t_halb = ln(2)/0,5 = 1,39 s. Der Gütefaktor: Q = 10/(2*0,5) = 10 --> das System führt ca. 10 Schwingungen aus, bevor die Amplitude auf 4,3 % sinkt.
-
-**Beispiel 7 -- Resonanzfrequenz einer erzwungenen Schwingung:**
-Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz: Omega_res = Wurzel(400 - 8) = Wurzel(392) ungefähr 19,8 rad/s. Bei schwacher Dämpfung liegt die Resonanzfrequenz also nur knapp unter der Eigenfrequenz.
 
 ## Klinische Vertiefung
 
@@ -227,20 +214,13 @@ Ein Oszillator hat omega_0 = 20 rad/s und delta = 2 s^(-1). Die Resonanzfrequenz
       ],
 
       merksätze: [
-        "x(t) = A · cos(ωt + φ₀) – die Grundformel der harmonischen Schwingung.",
-        "ω = 2πf = 2π/T – Kreisfrequenz verknüpft f und T.",
         "Fadenpendel: T = 2π√(l/g) – keine Masse, keine Amplitude (kleine Winkel!).",
         "Federpendel: T = 2π√(m/k) – größere Masse → langsamer, steifere Feder → schneller.",
-        "v_max = A·ω tritt in der Ruhelage auf; a_max = A·ω² bei maximaler Auslenkung.",
-        "E_ges = ½·k·A² = const. (ungedämpft); E_kin ↔ E_pot tauschen sich periodisch.",
-        "E_kin = E_pot bei x = ±A/√2 ≈ ±0,707·A.",
-        "Dämpfung: Amplitude nimmt exponentiell ab, Energie wird in Wärme umgewandelt.",
-        "Resonanz tritt auf, wenn Anregungsfrequenz = Eigenfrequenz – Amplitude wird maximal.",
-        "Isochronie: Periodendauer unabhängig von der Amplitude (bei kleinen Auslenkungen).",
-        "Gedämpfte Schwingung: A(t) = A₀·e^(−δt); drei Fälle: Schwingfall (δ<ω₀), aperiodischer Grenzfall (δ=ω₀), Kriechfall (δ>ω₀).",
-        "Aperiodischer Grenzfall: schnellste Rückkehr ohne Überschwingen – ideal für Autofederung, Türschliesser.",
-        "Resonanzkatastrophe: Resonanz ohne Dämpfung → theoretisch unendliche Amplitude → Strukturversagen.",
-        "Gütefaktor Q = ω₀/(2δ): hohe Q → scharfe Resonanz; niedrige Q → breite, gedämpfte Resonanz.",
+        "E_ges ∝ A² – verdoppelte Amplitude = vierfache Energie; Energie pendelt zwischen kinetisch (Ruhelage) und potentiell (Umkehrpunkt).",
+        "Isochronie: Periodendauer unabhängig von der Amplitude (bei kleinen Auslenkungen) – Grundprinzip mechanischer Uhren.",
+        "Resonanz tritt auf, wenn Anregungsfrequenz ≈ Eigenfrequenz – Amplitude wird maximal; ohne Dämpfung droht Strukturversagen (Resonanzkatastrophe).",
+        "Aperiodischer Grenzfall (δ = ω₀): schnellste Rückkehr ohne Überschwingen – ideal für Krankenwagen-Federung, Türschliesser.",
+        "MRT nutzt Resonanz gezielt: Protonen werden exakt mit der Larmorfrequenz angeregt → maximale Energieabsorption.",
       ],
 
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -785,9 +765,7 @@ Interferenz ist möglich bei **kohärenten** Wellen (gleiche Frequenz, feste Pha
 
 ## Stehende Wellen
 
-Wenn eine Welle an einem festen Ende reflektiert wird und sich mit der hinlaufenden Welle überlagert, entsteht eine **stehende Welle**. Charakteristisch sind:
-- **Knoten** (K): Punkte ohne Auslenkung (destruktive Dauerinterferenz)
-- **Bäuche** (B): Punkte maximaler Auslenkung
+Wenn eine Welle an einem festen Ende reflektiert wird und sich mit der einlaufenden Welle überlagert, entstehen Punkte, die immer in Ruhe bleiben (**Knoten**) und Punkte maximaler Schwingung (**Bäuche**). Das ist eine **stehende Welle** — sie wandert nicht, sondern schwingt am Ort. Knoten entstehen durch dauerhafte destruktive Interferenz (hin- und rücklaufende Welle löschen sich dort aus), Bäuche durch dauerhafte konstruktive Interferenz.
 
 Auf einer beidseitig eingespannten Saite der Länge L gilt für die n-te Harmonische:
 λₙ = 2L/n und fₙ = n·f₁ (mit f₁ = c/(2L) = Grundfrequenz)
@@ -829,7 +807,9 @@ Dabei ist θ der Winkel zwischen Schallstrahl und Blutfluss. Bei θ = 0° (paral
 
 **Beugung**: Wellen breiten sich um Hindernisse oder durch Öffnungen in den geometrischen Schattenraum aus. Stärkstes Beugungseffekt, wenn Hindernisbreite ≈ λ. Beugung beweist den Wellencharakter von Licht. Schallwellen (λ ≈ 0,02–17 m) beugen leicht um Hindernisse wie Häuserecken; Lichtwellen (λ ≈ 500 nm) werden nur an Mikrostrukturen merklich gebeugt.
 
-**Brechung**: Änderung der Ausbreitungsrichtung beim Übergang zwischen Medien mit verschiedenen Ausbreitungsgeschwindigkeiten. Snellius'sches Brechungsgesetz: **n₁·sin(α₁) = n₂·sin(α₂)**, wobei n = c₀/c (Brechungsindex). Übergang in dichteres Medium (n₂ > n₁) → Brechung zum Lot hin; in dünneres Medium → Brechung vom Lot weg.
+**Brechung**: Änderung der Ausbreitungsrichtung beim Übergang zwischen Medien mit verschiedenen Ausbreitungsgeschwindigkeiten. **Warum bricht Licht?** Stell dir ein Auto vor, das schräg von Asphalt auf Sand fährt: Das Rad, das zuerst den Sand berührt, wird langsamer — das andere Rad dreht noch schnell — dadurch schwenkt das Auto zur Sandseite hin. Genauso trifft eine Wellenfront schräg auf die Grenzfläche; der Teil, der zuerst ins langsamere Medium eintritt, wird abgebremst, der Rest läuft noch schnell — die Ausbreitungsrichtung dreht sich.
+
+Snellius'sches Brechungsgesetz: **n₁·sin(α₁) = n₂·sin(α₂)**, wobei n = c₀/c (Brechungsindex). Übergang in dichteres Medium (n₂ > n₁, langsamere Ausbreitung) → Brechung zum Lot hin; in dünneres Medium (schnellere Ausbreitung) → Brechung vom Lot weg.
 
 > **Merke:** Brechung zum Lot = langsameres Medium (grösserer n); Brechung vom Lot = schnelleres Medium (kleinerer n).
 
@@ -1090,7 +1070,7 @@ Die wichtigsten Werte:
 
 ## Wie dein Ohr funktioniert
 
-Schall trifft auf dein Trommelfell und wird über drei winzige Knöchelchen (Hammer, Amboss, Steigbuegel) ins Innenohr weitergeleitet. Die Knöchelchen verstärken den Druck dabei um das 22-Fache -- das ist nötig, weil im Innenohr Flüssigkeit statt Luft ist.
+Schall trifft auf dein Trommelfell und wird über drei winzige Knöchelchen (Hammer, Amboss, Steigbügel) ins Innenohr weitergeleitet. Zwei Mechanismen verstärken den Schalldruck: Das **Flächenverhältnis** von Trommelfell (~55 mm²) zu ovalem Fenster (~3,2 mm²) ergibt einen Faktor ~17, der **Hebeleffekt** der Knöchelchenkette einen Faktor ~1,3 — insgesamt eine Druckverstärkung um etwa das **22-Fache** (Impedanzanpassung Luft → Perilymphe). Diese Verstärkung ist nötig, weil im Innenohr Flüssigkeit statt Luft ist.
 
 Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flötenröhre. An verschiedenen Stellen reagiert sie auf verschiedene Töne:
 - **Am Eingang** (Basis): hohe Töne (z. B. Pfeiftöne)
@@ -1098,9 +1078,9 @@ Im Innenohr sitzt die **Schnecke** (Cochlea). Sie ist wie eine aufgerollte Flöt
 
 Das nennt man **Tonotopie** -- jede Tonhöhe hat ihren eigenen Platz in der Schnecke.
 
-Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie unwiderruflich zerstören!
+Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die zum Gehirn gehen. Diese Haarzellen sind empfindlich -- Lärm kann sie dauerhaft zerstören (beim Menschen derzeit nicht regenerierbar).
 
-> **Merke:** Hohe Töne am Eingang der Schnecke, tiefe Töne am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal kaputt, immer kaputt.
+> **Merke:** Hohe Töne am Eingang der Schnecke, tiefe Töne am Ende. Haarzellen wandeln Schwingungen in Nervenimpulse um -- einmal geschädigt, derzeit nicht reparierbar.
 
 ---
 
@@ -1118,7 +1098,7 @@ Winzige **Haarzellen** wandeln die Schwingungen in elektrische Signale um, die z
 
 Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 dB halbiert sich die erlaubte Zeit: Bei 88 dB nur noch 4 Stunden, bei 91 dB nur noch 2 Stunden. Ein Rockkonzert mit 110 dB kann schon nach wenigen Minuten die Haarzellen schädigen -- und zwar für immer.
 
-> **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschäden sind nicht heilbar!`,
+> **Merke:** 85 dB = Gefahrengrenze bei 8 Stunden. Pro +3 dB halbiert sich die sichere Zeit. Haarzellschäden sind beim Menschen derzeit nicht reversibel.`,
 
       lernziele: [
         "Den Schalldruckpegel in Dezibel berechnen und die Skala mit klinisch relevanten Werten verknüpfen.",
@@ -1165,7 +1145,7 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 d
         question:
           "Erläutern Sie die Physiologie des Hörens von der Schallaufnahme bis zur Frequenzauflösung in der Cochlea. Gehen Sie dabei auf die physikalischen Prinzipien der Schallverstärkung und der Tonotopie ein.",
         answer:
-          "Schall trifft als Druckwelle auf das Trommelfell und versetzt es in Schwingung. Die Gehörknöchelchen (Hammer, Amboss, Steigbügel) leiten die Schwingung zum ovalen Fenster weiter und verstärken dabei den Schalldruck: Das Flächenverhältnis von Trommelfell (~55 mm²) zu ovalem Fenster (~3,2 mm²) ergibt eine Druckverstärkung um den Faktor ~17, ergänzt durch den Hebeleffekt der Knöchelchen (~1,3) – insgesamt etwa 25–30-fache Druckerhöhung. Dies ist nötig, um Energie vom luftgefüllten Mittelohr in die flüssigkeitsgefüllte Cochlea zu übertragen (Impedanzanpassung). In der Cochlea erzeugt der Steigbügel Wanderwellen in der Perilymphe, die sich auf der Basilarmembran ausbreiten. Die Basilarmembran ist an der Basis schmal und steif (hohe Eigenfrequenz), am Apex breit und elastisch (tiefe Eigenfrequenz). Daher hat jede Frequenz ihren maximalen Amplitudenort: Tonotopie. An diesem Ort biegen sich die Stereozilien der Haarzellen und öffnen Ionenkanäle → Depolarisation → Aktionspotenziale im Hörnerv. Äussere Haarzellen verstärken aktiv durch Motilität (Prestin-Protein). Hoher Lärm (> 85 dB) schädigt bevorzugt Haarzellen bei 4 kHz irreversibel.",
+          "Schall trifft als Druckwelle auf das Trommelfell und versetzt es in Schwingung. Die Gehörknöchelchen (Hammer, Amboss, Steigbügel) leiten die Schwingung zum ovalen Fenster weiter und verstärken dabei den Schalldruck: Das Flächenverhältnis von Trommelfell (~55 mm²) zu ovalem Fenster (~3,2 mm²) ergibt eine Druckverstärkung um den Faktor ~17, ergänzt durch den Hebeleffekt der Knöchelchen (~1,3) – insgesamt etwa 22-fache Druckerhöhung. Dies ist nötig, um Energie vom luftgefüllten Mittelohr in die flüssigkeitsgefüllte Cochlea zu übertragen (Impedanzanpassung). In der Cochlea erzeugt der Steigbügel Wanderwellen in der Perilymphe, die sich auf der Basilarmembran ausbreiten. Die Basilarmembran ist an der Basis schmal und steif (hohe Eigenfrequenz), am Apex breit und elastisch (tiefe Eigenfrequenz). Daher hat jede Frequenz ihren maximalen Amplitudenort: Tonotopie. An diesem Ort biegen sich die Stereozilien der Haarzellen und öffnen Ionenkanäle → Depolarisation → Aktionspotenziale im Hörnerv. Äussere Haarzellen verstärken aktiv durch Motilität (Prestin-Protein). Hoher Lärm (> 85 dB) schädigt bevorzugt Haarzellen bei 4 kHz irreversibel.",
       },
 
       klinischerBezug:
@@ -1310,6 +1290,7 @@ Ab **85 dB** bei dauerhafter Belastung (8 Stunden) droht Gehörschaden. Pro +3 d
       ],
       content: `
 
+Dieses Kapitel vertieft drei Themenblöcke, die über die Grundlagen in UK 02 (Impedanz, Reflexionskoeffizient) und UK 03 (Doppler-Formel) hinausgehen: **Dezibel-Rechnung**, **Frequenz-Tiefen-Kompromiss** im Ultraschall und **therapeutische Ultraschallanwendungen**.
 
 ## Dezibel-Rechnung — Vertiefung
 
@@ -1348,91 +1329,9 @@ Beispiel: Ein Lautsprecher erzeugt 80 dB in 1 m Abstand. In 10 m Abstand: 80 - 2
 
 ---
 
-## Schallimpedanz — Vertiefung
+## Frequenz-Tiefen-Kompromiss im Ultraschall
 
-Die **akustische Impedanz** Z bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird:
-
-**Z = rho mal c** [kg/(m^2 s) = Rayl]
-
-| Medium | rho [kg/m^3] | c [m/s] | Z [x10^6 Rayl] |
-|--------|-----------|---------|----------------|
-| Luft | 1,2 | 340 | 0,000408 |
-| Wasser | 1000 | 1480 | 1,48 |
-| Fett | 920 | 1450 | 1,33 |
-| Weichgewebe | 1060 | 1540 | 1,63 |
-| Knochen | 1800 | 3500 | 6,30 |
-| Leber | 1060 | 1550 | 1,64 |
-| Blut | 1060 | 1570 | 1,66 |
-
-### Reflexionskoeffizient
-
-**R = [(Z2 - Z1)/(Z2 + Z1)]^2**
-
-- **Luft zu Weichgewebe:** R ungefähr 0,999: 99,9 % Reflexion: **ohne Gel kein Ultraschall-Bild!**
-- **Weichgewebe zu Knochen:** R ungefähr 0,35: 35 % Reflexion: starkes Echo, Knochen schwer durchschallbar
-- **Leber zu Blut:** R ungefähr 0,000037: 0,004 % Reflexion: kaum Echo: gut durchschallbar
-- **Gel zu Haut:** R ungefähr 0: nahezu vollständige Transmission: deshalb Ultraschallgel essenziell
-
-> **Merke:** Kleine Impedanzdifferenz: wenig Reflexion: gute Transmission (z. B. zwischen Weichgeweben). GroßeImpedanzdifferenz: starke Reflexion: schwer durchschallbar (z. B. Gewebe-Knochen, Gewebe-Luft). Ultraschallgel gleicht die Impedanz an der Haut an.
-
----
-
-## Doppler-Effekt — Vertiefung
-
-### Allgemeine Doppler-Formel
-
-**f' = f0 mal (c +/- v_E) / (c -/+ v_S)**
-
-- f0 = Sendefrequenz der Quelle
-- c = Schallgeschwindigkeit im Medium
-- v_E = Geschwindigkeit des Empfängers
-- v_S = Geschwindigkeit der Quelle/Senders
-
-**Vorzeichenkonvention:**
-- Zähler: + wenn Empfänger sich **zur** Quelle bewegt, - wenn **weg**
-- Nenner: - wenn Quelle sich **zum** Empfänger bewegt, + wenn **weg**
-
-> **Merke:** Annäherung: f' > f0 (höherer Ton / Blauverschiebung); Entfernung: f' < f0 (tieferer Ton / Rotverschiebung). Der Doppler-Effekt gilt für **alle** Wellen: Schall, Licht, Ultraschall.
-
-### Doppler-Sonographie — quantitativ
-
-In der Doppler-Sonographie ist der Schallkopf gleichzeitig Sender **und** Empfänger. Der Ultraschall wird an bewegten Erythrozyten reflektiert. Da der Schall den Weg zweimal zurücklegt (hin und zurück), ist der Doppler-Shift:
-
-**Delta_f = 2 mal f0 mal v mal cos(theta) / c**
-
-- **v** = Blutflussgeschwindigkeit [m/s]
-- **theta** = Winkel zwischen Ultraschallstrahl und Blutflussrichtung
-- **c** = Schallgeschwindigkeit in Gewebe (ungefähr 1540 m/s)
-- **Faktor 2**: weil der Schall zweimal den Weg durchläuft (Hin- und Rückweg)
-
-**Wichtig:** Bei theta = 90 Grad (Schallstrahl senkrecht zum Blutfluss) ist cos(90 Grad) = 0, also Delta_f = 0: **kein Signal!** Deshalb muss der Schallkopf immer schräg zum Gefäß gehalten werden (optimal: theta = 30-60 Grad).
-
-### Umstellung nach v (Blutflussgeschwindigkeit):
-
-**v = Delta_f mal c / (2 mal f0 mal cos theta)**
-
-### Rechenbeispiel — Doppler-Sonographie:
-f0 = 5 MHz, v = 0,3 m/s (normaler arterieller Blutfluss), theta = 45 Grad:
-Delta_f = 2 x 5x10^6 x 0,3 x cos(45 Grad) / 1540 = 2 x 5x10^6 x 0,3 x 0,707 / 1540 ungefähr 1379 Hz
-
-Die Frequenzverschiebung von ~1,4 kHz liegt im **hörbaren Bereich** — daher kann der Blutfluss als akustisches Signal wiedergegeben werden. Arterien erzeugen ein pulsierendes Signal, Venen ein kontinuierliches.
-
-### Farbdoppler-Kodierung:
-- **Rot:** Blut fließt auf den Schallkopf zu (Delta_f > 0)
-- **Blau:** Blut fließt vom Schallkopf weg (Delta_f < 0)
-- **Mosaik/Turbulenz:** Ungeordnete Strömung (z. B. an Stenosen, Klappeninsuffizienzen)
-
-Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit Doppler-Signal (Flussinformation) in einer Untersuchung.
-
----
-
-## Frequenzbereiche in der Medizin
-
-| Bereich | Frequenz | Medizinische Relevanz |
-|---------|----------|----------------------|
-| **Infraschall** | < 20 Hz | Nicht hörbar; Vibrationsbelastung am Arbeitsplatz; Erdbeben-Detektion |
-| **Hörschall** | 20 Hz - 20 kHz | Sprache (300-3400 Hz), Audiometrie, Stimmgabel-Tests |
-| **Ultraschall** | > 20 kHz | Sonographie (2-20 MHz), Doppler (2-10 MHz), Lithotripsie |
+Die Impedanztabelle und den Reflexionskoeffizienten R = [(Z₂−Z₁)/(Z₂+Z₁)]² findest du in UK 02. Hier geht es um den **Zusammenhang zwischen Frequenzwahl, Eindringtiefe und Auflösung** — ein MedAT-Klassiker.
 
 ### Ultraschall-Frequenzwahl in der Diagnostik:
 
@@ -1443,9 +1342,9 @@ Die **Duplex-Sonographie** kombiniert B-Mode-Bild (anatomische Darstellung) mit 
 | 10-15 MHz | 2-4 cm | ~0,2 mm | Haut, oberflächliche Strukturen |
 | 20 MHz | < 1 cm | ~0,1 mm | Auge (Hochfrequenz-US) |
 
-**Zusammenhang:** Höhere Frequenz: kürzere Wellenlänge (lambda = c/f): bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2): geringere Eindringtiefe.
+**Zusammenhang:** Höhere Frequenz --> kürzere Wellenlänge (lambda = c/f) --> bessere Auflösung, aber stärkere Dämpfung im Gewebe (Dämpfung proportional f^2) --> geringere Eindringtiefe. Die Frequenzwahl ist immer ein Kompromiss zwischen Auflösung und Eindringtiefe.
 
-> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, großeTiefe. Kompromiss je nach Fragestellung.
+> **Merke:** Diagnostischer Ultraschall: 2-20 MHz. Hohe Frequenz = gute Auflösung, geringe Tiefe. Niedrige Frequenz = schlechte Auflösung, große Tiefe. Kompromiss je nach Fragestellung.
 
 ---
 
@@ -1456,31 +1355,19 @@ Zwei Maschinen a 80 dB stehen nebeneinander. Gesamtpegel: L_ges = 80 + 10 log10(
 
 **Beispiel 2 — Abstandsgesetz:**
 Eine Sirene erzeugt 100 dB in 5 m Abstand. In 50 m Abstand (10x weiter):
-Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB: L = 100 - 20 = 80 dB.
+Delta_L = -20 log10(50/5) = -20 log10(10) = -20 dB. L = 100 - 20 = 80 dB.
 
-**Beispiel 3 — Reflexionskoeffizient berechnen:**
-Gewebe (Z1 = 1,63x10^6) zu Knochen (Z2 = 6,30x10^6):
-R = [(6,30 - 1,63)/(6,30 + 1,63)]^2 = [4,67/7,93]^2 = [0,589]^2 = 0,347: 34,7 % werden reflektiert.
-Konsequenz: Hinter Knochen ist Ultraschall-Diagnostik kaum möglich (akustischer Schatten).
-
-**Beispiel 4 — Doppler: Blutflussgeschwindigkeit berechnen:**
-Delta_f = 2000 Hz, f0 = 4 MHz, theta = 60 Grad, c = 1540 m/s:
-v = Delta_f mal c / (2 mal f0 mal cos theta) = 2000 x 1540 / (2 x 4x10^6 x 0,5) = 3.080.000 / 4.000.000 = 0,77 m/s.
-Normaler arterieller Blutfluss: 0,2-1,0 m/s: Wert ist plausibel.
-
-**Beispiel 5 — Ultraschall-Wellenlänge und Auflösung:**
+**Beispiel 3 — Ultraschall-Wellenlänge und Auflösung:**
 f = 7,5 MHz in Gewebe (c = 1540 m/s): lambda = 1540 / 7,5x10^6 = 0,205 mm.
 Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddrüsenknoten (typisch 5-30 mm).
 
 ## Klinische Vertiefung
 
-**Doppler bei Gefäßstenose:** Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitätsgleichung: A1 v1 = A2 v2). Die Doppler-Frequenzverschiebung ist proportional zur Geschwindigkeit: erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
+**Doppler bei Gefäßstenose:** Die Doppler-Formel und Farbkodierung findest du in UK 03. Klinisch wichtig: Bei einer Karotisstenose steigt die Blutflussgeschwindigkeit im verengten Bereich (Kontinuitätsgleichung: A1 v1 = A2 v2). Erhöhter Doppler-Shift = Hinweis auf Stenose. Ab v > 1,2 m/s: Verdacht auf >50%-Stenose; ab v > 2,3 m/s: >70%-Stenose.
 
-**Ultraschall in der Schwangerschaft:** Obstetrik verwendet 3,5-5 MHz (gute Eindringtiefe für den Uterus). Der Doppler der Nabelschnurarterien (Resistance-Index) gibt Auskunft über die plazentare Durchblutung und damit die fetale Versorgung.
+**Therapeutischer Ultraschall (HIFU):** Hochintensiver fokussierter Ultraschall nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensität zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwärmung auf > 60 °C --> Koagulationsnekrose. Im Gegensatz zur diagnostischen Sonographie steht hier nicht die Bildgebung, sondern die therapeutische Gewebezerstörung im Vordergrund.
 
-**Therapeutischer Ultraschall:** Hochintensiver fokussierter Ultraschall (HIFU) nutzt Frequenzen von 0,8-3,5 MHz bei sehr hoher Intensität zur Gewebeablation (z. B. Uterusmyome, Prostatakrebs). Die Energie wird im Fokus konzentriert: lokale Erwärmung auf > 60 °C: Koagulationsnekrose.
-
-**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertruemmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein: Fragmentierung.`,
+**Extrakorporale Stosswellen-Lithotripsie (ESWL):** Stosswellen zertrümmern Nieren- und Gallensteine durch fokussierte Druckwellen. Die Impedanzdifferenz zwischen Stein und Gewebe erzeugt Reflexion und Scherspannung im Stein --> Fragmentierung. Die Stosswellen werden von außen fokussiert, sodass nur im Brennpunkt genug Energie für die Fragmentierung entsteht.`,
 
       lernziele: [
         "Dezibel-Aufgaben systematisch lösen: Quellenaddition, Abstandsgesetz, Pegelunterschiede.",
@@ -1497,28 +1384,26 @@ Axiale Auflösung ungefähr lambda/2 ungefähr 0,1 mm. Ausreichend für Schilddr
           merksatz: "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB; 2× Abstand → −6 dB.",
         },
         {
-          heading: "Schallimpedanz und Ultraschall-Bildgebung",
-          text: "Die akustische Impedanz Z = ρ·c bestimmt, wie viel Schall an einer Grenzfläche reflektiert wird. Großer Z-Unterschied (z. B. Luft–Gewebe: Faktor ~4000) → fast 100 % Reflexion → kein Bild ohne Gel. Kleiner Z-Unterschied (z. B. Leber–Niere) → wenig Reflexion → gute Transmission. Der Reflexionskoeffizient R = [(Z₂−Z₁)/(Z₂+Z₁)]² quantifiziert die Reflexion an jeder Grenzfläche.",
-          merksatz: "Z = ρ·c; großer Z-Sprung → starke Reflexion; Gel eliminiert Luft-Haut-Sprung.",
+          heading: "Frequenz-Tiefen-Kompromiss im Ultraschall",
+          text: "Höhere Ultraschallfrequenz bedeutet kürzere Wellenlänge und bessere Auflösung — aber auch stärkere Gewebedämpfung (∝ f²) und geringere Eindringtiefe. Für tiefe Organe (Leber, Herz: 5–15 cm) nutzt man 2–3,5 MHz; für oberflächliche Strukturen (Schilddrüse, Haut: 1–4 cm) 7,5–15 MHz. Die Impedanztabelle und den Reflexionskoeffizienten findest du in UK 02.",
+          merksatz:
+            "Hohe US-Frequenz → gute Auflösung, wenig Tiefe; niedrige Frequenz → umgekehrt.",
         },
         {
-          heading: "Doppler-Sonographie: Blutfluss messen",
-          text: "Der Doppler-Shift Δf = 2f₀v·cos θ/c ist proportional zur Blutflussgeschwindigkeit v. Der Winkel θ zwischen Schallstrahl und Blutfluss ist entscheidend: Bei θ = 90° (senkrecht) ist cos(90°) = 0 → kein Signal. Optimal: θ = 30–60°. Farbkodierung: Rot = Fluss zum Schallkopf, Blau = weg. Erhöhte Flussgeschwindigkeit an Stenosen → erhöhter Doppler-Shift → klinische Diagnose.",
-          merksatz: "Δf = 2f₀v·cosθ/c; θ = 90° → kein Signal; Rot = Fluss zum Schallkopf.",
+          heading: "Therapeutischer Ultraschall: HIFU und ESWL",
+          text: "Neben der Diagnostik wird Ultraschall auch therapeutisch eingesetzt. HIFU (hochintensiver fokussierter Ultraschall) konzentriert Energie im Brennpunkt → lokale Erhitzung > 60 °C → Koagulationsnekrose (z. B. Uterusmyome, Prostatatumoren). ESWL (extrakorporale Stosswellen-Lithotripsie) fragmentiert Nierensteine durch fokussierte Druckwellen, die an Impedanzgrenzen im Stein Reflexion und Scherspannung erzeugen.",
+          merksatz:
+            "HIFU = fokussierte Wärme zur Tumorablation; ESWL = fokussierte Druckwellen zur Steinfragmentierung.",
         },
       ],
 
       merksätze: [
-        "L = 20·log(p/p₀) = 10·log(I/I₀); p₀ = 20 µPa, I₀ = 10⁻¹² W/m².",
         "2 gleiche Quellen → +3 dB; 10 gleiche Quellen → +10 dB (logarithmische Addition).",
         "Abstandsgesetz: Verdopplung des Abstands → −6 dB (I ∝ 1/r²).",
-        "Z = ρ·c [Rayl]; großer Z-Sprung → starke Reflexion → kein Bild ohne Gel.",
-        "R = [(Z₂−Z₁)/(Z₂+Z₁)]² — Reflexionskoeffizient an Grenzflächen.",
-        "Doppler allgemein: f' = f₀·(c±v_E)/(c∓v_S); Annäherung → f↑, Entfernung → f↓.",
-        "Doppler-Sonographie: Δf = 2f₀v·cosθ/c; Faktor 2 wegen Hin- und Rückweg.",
-        "θ = 90° → Δf = 0 → kein Signal! Schallkopf immer schräg zum Gefäss.",
-        "Farbdoppler: Rot = zum Schallkopf; Blau = vom Schallkopf weg; Mosaik = Turbulenz.",
         "US-Frequenzwahl: hohe f → gute Auflösung, wenig Tiefe; niedrige f → schlechte Auflösung, viel Tiefe.",
+        "Impedanztabelle und Reflexionskoeffizient: siehe UK 02; Doppler-Formel und Farbkodierung: siehe UK 03.",
+        "HIFU: fokussierter Ultraschall → lokale Koagulationsnekrose (> 60 °C).",
+        "ESWL: Stosswellen fragmentieren Steine an Impedanzgrenzen.",
       ],
 
       altfrage: {
