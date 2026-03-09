@@ -989,223 +989,327 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
 
     {
       id: "bio-10-06",
-      title: "Sukzession und Populationsdynamik",
+      title: "Populationsdynamik",
       stichworte: [
-        "Sukzession",
-        "Primäre Sukzession",
-        "Sekundäre Sukzession",
-        "Pionier",
-        "Klimaxgesellschaft",
         "Populationswachstum",
         "exponentiell",
         "logistisch",
         "Kapazitätsgrenze K",
         "r-Strategen",
         "K-Strategen",
+        "Lotka-Volterra",
+        "Räuber-Beute",
+        "dichteabhängig",
+        "dichteunabhängig",
+        "R₀",
+        "Herdenimmunität",
       ],
-      content: `## Exponentielles Wachstum (J-Kurve) — wenn Bakterien zur Waffe werden
+      content: `## Warum explodieren manche Populationen, während andere stabil bleiben?
 
-Stell dir eine einzige Bakterienzelle in einer Blutkultur vor: Sie teilt sich alle 20 Minuten. Nach einer Stunde sind es 8, nach 3 Stunden 512, nach 10 Stunden über eine Million. Dieses explosive Wachstum ohne Bremse ist **exponentielles Wachstum** — mathematisch beschrieben durch:
+Eine einzige *E. coli*-Zelle teilt sich alle 20 Minuten. Nach 10 Stunden wären es über eine Million, nach 24 Stunden rechnerisch mehr als die Masse der Erde. Offensichtlich passiert das nicht — aber warum? Populationsdynamik erklärt Wachstum, Zusammenbrüche und Gleichgewichte mit derselben Mathematik, die auch für bakterielle Infektionen, Tumorwachstum und Epidemien gilt.
 
-**dN/dt = r · N**
+Jede Populationsgröße ändert sich durch vier Prozesse: **Geburten** und **Immigration** (Zuwachs) versus **Todesfälle** und **Emigration** (Verlust). Die Nettoänderung pro Zeiteinheit bestimmt, ob eine Population wächst, schrumpft oder stabil bleibt.
 
-- **N** = aktuelle Populationsgröße (Anzahl der Individuen oder Zellen)
-- **r** = intrinsische Wachstumsrate (Geburten minus Todesfälle pro Individuum pro Zeiteinheit)
-- **dN/dt** = Änderung der Populationsgröße pro Zeiteinheit
-
-Die Wachstumsrate ist proportional zur Populationsgröße — je mehr Individuen, desto schneller das Wachstum. Grafisch entsteht eine **J-förmige Kurve**, die immer steiler nach oben geht.
-
-**Klinische Bedeutung — Sepsis:** Eine Bakteriämie (Bakterien im Blut) kann zur Sepsis (systemische Entzündungsreaktion auf eine Infektion) eskalieren, wenn die Erreger sich exponentiell vermehren und das Immunsystem überlasten. Die **Generationszeit** (Zeit für eine Zellteilung) bestimmt das Tempo: *E. coli* teilt sich unter optimalen Bedingungen alle 20 Minuten, *Mycobacterium tuberculosis* dagegen nur alle 15–20 Stunden. Deshalb verläuft eine E.-coli-Sepsis fulminant (stürmisch), während Tuberkulose schleichend fortschreitet.
-
-**Verdopplungszeit (tD):** Die Zeit, in der sich die Population verdoppelt. Bei konstantem r gilt: tD = ln(2)/r ≈ 0,693/r. Eine kürzere Verdopplungszeit bedeutet aggressiveres Wachstum — klinisch relevant bei Tumorverdopplungszeiten (dazu mehr unten).
-
-> **Merke:** Exponentielles Wachstum: dN/dt = r·N → J-Kurve, kein Limit. Bakterien in Blutkultur: Generationszeit 20 min (E. coli) → Verdopplung alle 20 min. Sepsis = unkontrolliertes exponentielles Erregerwachstum.
+> **Merke:** ΔN = (Geburten + Immigration) − (Todesfälle + Emigration). Ist ΔN > 0, wächst die Population; ist ΔN < 0, schrumpft sie; bei ΔN = 0 herrscht Gleichgewicht.
 
 ---
 
-## Logistisches Wachstum (S-Kurve) — Warum Tumore nicht unendlich wachsen
+## Exponentielles Wachstum — die J-Kurve
 
-In der Realität sind Ressourcen begrenzt. Die Population nähert sich einer **Kapazitätsgrenze K** (carrying capacity) — der maximalen Zahl, die das System dauerhaft tragen kann. Die logistische Gleichung:
+Bei unbegrenzten Ressourcen wächst eine Population proportional zu ihrer Größe:
 
-**dN/dt = r · N · (K − N) / K**
+**N(t) = N₀ · e^(r·t)**
 
-Der Term (K − N)/K wirkt als Bremsfaktor: Je näher N an K kommt, desto stärker verlangsamt sich das Wachstum. Grafisch ergibt sich eine **S-förmige (sigmoidale) Kurve**:
+- **N₀** = Anfangspopulation
+- **r** = intrinsische Wachstumsrate (Geburtenrate minus Sterberate pro Individuum pro Zeiteinheit)
+- **t** = Zeit
+- Die Differentialform lautet: **dN/dt = r · N**
 
-- **Anfangs** (N << K): Wachstum nahezu exponentiell (Bremsfaktor ≈ 1)
-- **Bei N = K/2:** Maximale absolute Wachstumsrate (Wendepunkt der S-Kurve)
-- **Bei N = K:** Wachstum = null (Gleichgewicht, Geburten = Todesfälle)
+Grafisch entsteht eine **J-förmige Kurve**, die immer steiler ansteigt. Dieses Modell setzt voraus, dass Nahrung, Raum und andere Ressourcen unbegrenzt verfügbar sind — eine Situation, die in der Natur nur kurzzeitig existiert.
 
-**Tumorwachstum folgt einer S-Kurve — das Gompertz-Modell:**
+**Verdopplungszeit t_D:** Die Zeit, in der sich die Populationsgröße verdoppelt. Es gilt: **t_D = ln(2) / r ≈ 0,693 / r**. Je größer r, desto kürzer die Verdopplungszeit.
 
-Solide Tumore wachsen anfangs exponentiell, verlangsamen dann aber. Das liegt an der **Kapazitätsgrenze**: Ab einer bestimmten Größe kann die Angiogenese (Bildung neuer Blutgefäße zur Tumorversorgung) nicht mehr mit dem Tumorwachstum Schritt halten → Hypoxie (Sauerstoffmangel) im Tumorzentrum → Nekrose (Zelltod durch Unterversorgung) → verlangsamtes Nettowachstum. Das **Gompertz-Modell** beschreibt dieses Verhalten mathematisch genauer als die einfache Logistik: Die Wachstumsrate nimmt exponentiell ab, was einen langsameren Anstieg zur Kapazitätsgrenze ergibt als die klassische S-Kurve.
+**Wo kommt exponentielles Wachstum real vor?**
+- **Bakterien im Labor:** *E. coli* in frischem Nährmedium (Generationszeit 20 min)
+- **Invasive Arten:** Kaninchen in Australien nach Einführung 1859 — keine natürlichen Feinde, explosionsartiges Wachstum
+- **Frühes Tumorwachstum:** Solide Tumore in den ersten Teilungszyklen, bevor Nährstoffversorgung limitiert
+- **Sepsis:** Bakteriämie mit *E. coli* → fulminanter Verlauf, weil Generationszeit nur 20 min vs. 15–20 h bei *M. tuberculosis* (schleichend)
 
-**Klinische Konsequenz — Chemotherapie und Tumorverdopplungszeit:**
-
-Die **Tumorverdopplungszeit** variiert enorm: Burkitt-Lymphom (ein hochaggressives B-Zell-Lymphom) ca. 1–3 Tage, Mammakarzinom (Brustkrebs) ca. 100–300 Tage, Prostatakarzinom ca. 2–4 Jahre. Zytostatika (Chemotherapeutika, die die Zellteilung hemmen) wirken am besten in der Wachstumsphase (hohe Teilungsrate) — daher sind schnell wachsende Tumore paradoxerweise oft besser chemosensibel. Bei langsam wachsenden Tumoren nahe K ist die Teilungsrate niedrig und die Chemotherapie weniger wirksam.
-
-> **Merke:** Logistisches Wachstum: S-Kurve, K = Kapazitätsgrenze. Tumorwachstum: anfangs exponentiell, dann S-Kurve (Gompertz). Angiogenese begrenzt K. Schnell wachsende Tumore = besser chemosensibel.
-
----
-
-## Bakterielles Wachstum — Die vier Phasen in der Blutkultur
-
-{{DIAGRAM:plant-vs-animal-cell}}
-
-Bakterienwachstum in einer geschlossenen Kultur (z. B. Blutkultur, Nährmedium im Labor) durchläuft vier charakteristische Phasen:
-
-**1. Lag-Phase (Anlaufphase):** Die Bakterien passen ihren Stoffwechsel an das neue Medium an — Enzyme werden synthetisiert, Ribosomen aufgebaut. Keine oder minimale Teilung. Dauer: Minuten bis Stunden, abhängig von Erreger und Nährstoffangebot.
-
-**2. Exponentialphase (Log-Phase):** Maximale Teilungsrate, exponentielles Wachstum (J-Kurve). Hier greift die Wachstumsgleichung dN/dt = r·N in Reinform. Die Generationszeit ist minimal und konstant. **Klinisch entscheidend: Die meisten Antibiotika wirken am besten in dieser Phase**, weil sie in zelluläre Prozesse eingreifen, die nur bei aktiver Teilung ablaufen:
-- **Beta-Laktame** (Penicilline, Cephalosporine): Hemmen die Zellwandsynthese (Transpeptidase) → wirken nur bei aktiver Zellteilung, da neue Zellwand nur beim Wachstum benötigt wird
-- **Fluorchinolone** (z. B. Ciprofloxacin): Hemmen die DNA-Gyrase → blockieren DNA-Replikation (nötig für Teilung)
-- **Aminoglykoside** (z. B. Gentamicin): Binden an 30S-Ribosomen → fehlerhafte Proteine, aber Wirkung auch auf ruhende Zellen (teilweise)
-
-**3. Stationäre Phase:** Nährstoffe werden knapp, toxische Metabolite (Stoffwechselendprodukte wie Säuren) akkumulieren → Geburtenrate = Absterberate → Populationsgröße bleibt konstant (N ≈ K). Einige Bakterien bilden in dieser Phase **Endosporen** (Bacillus, Clostridium) — metabolisch inaktive, extrem widerstandsfähige Dauerformen.
-
-**4. Absterbephase:** Nährstoffe erschöpft, toxische Produkte dominieren → exponentielle Abnahme der lebenden Zellen. Todesfälle überwiegen Neubildungen.
-
-| Phase | Teilung | Antibiotikawirksamkeit | Klinische Relevanz |
-|-------|---------|----------------------|-------------------|
-| Lag | Keine/minimal | Gering | Fenster für Prophylaxe |
-| Exponentiell | Maximal | **Maximal** (v. a. Beta-Laktame) | Sepsis-Eskalation |
-| Stationär | ≈ Absterben | Reduziert, Persisterzellen (tolerante Subpopulationen) | Chronische Infektionen |
-| Absterben | < Absterben | Irrelevant | Spontanheilung oder Immunabwehr |
-
-> **Merke:** 4 Phasen: Lag → Exponentiell → Stationär → Absterben. Antibiotika (v. a. Beta-Laktame) wirken am besten in der Exponentialphase, weil Zellwandsynthese nur bei aktiver Teilung abläuft. Stationäre Phase → Persisterzellen (tolerante, nicht resistente Zellen) → Therapieversagen.
+> **Merke:** Exponentielles Wachstum: N(t) = N₀·e^(rt), J-Kurve, keine Obergrenze. Verdopplungszeit = ln(2)/r. Kommt real nur bei unbegrenzten Ressourcen vor — Bakterienkultur, invasive Spezies, frühe Tumorphase.
 
 ---
 
-## r-Strategen und K-Strategen — Bakterien vs. Mensch
+## Logistisches Wachstum — die S-Kurve und die Kapazitätsgrenze K
 
-Die Lebensstrategien von Organismen lassen sich auf einem Spektrum zwischen zwei Extremen einordnen:
+In der Realität sind Ressourcen begrenzt. Die **Kapazitätsgrenze K** (carrying capacity) beschreibt die maximale Populationsgröße, die ein Habitat dauerhaft tragen kann. Die logistische Gleichung integriert diese Bremse:
 
-**r-Strategen** (benannt nach r = intrinsische Wachstumsrate): Maximieren die Reproduktionsrate. Viele Nachkommen, wenig oder keine Brutpflege, kurze Generationszeit, kleine Körpergröße. Sie besiedeln schnell instabile oder neue Habitate und produzieren Masse statt Qualität.
-- **Beispiele:** Bakterien (Generationszeit 20 min bis Stunden), Insekten, Mäuse, Löwenzahn
-- **Medizinisches Beispiel:** *E. coli* im Darm — kurze Generationszeit, schnelle Anpassung durch hohe Mutationsrate, rasche Kolonisation nach Antibiotikagabe
+**dN/dt = r · N · (1 − N/K)**
 
-**K-Strategen** (benannt nach K = Kapazitätsgrenze): Maximieren die Überlebenswahrscheinlichkeit jedes Nachkommen. Wenige Nachkommen, intensive Brutpflege, lange Generationszeit, große Körpergröße. Leben in stabilen Habitaten nahe der Kapazitätsgrenze.
-- **Beispiele:** Elefant, Wal, Mensch (Generationszeit ca. 25–30 Jahre), Adler
-- **Medizinisches Beispiel:** Der Mensch als K-Stratege mit langer Schwangerschaft (9 Monate), intensiver Brutpflege und niedrigster Reproduktionsrate aller Primaten
+Der Bremsterm **(1 − N/K)** bewirkt:
+- **N << K:** Bremsterm ≈ 1 → Wachstum nahezu exponentiell
+- **N = K/2:** **Wendepunkt** der Kurve — hier ist die absolute Wachstumsrate **maximal** (maximaler Populationszuwachs pro Zeiteinheit)
+- **N = K:** Bremsterm = 0 → Wachstum stoppt, Geburtenrate = Sterberate
+- **N > K:** Bremsterm negativ → Population schrumpft zurück auf K
+
+Grafisch ergibt sich eine **S-förmige (sigmoidale) Kurve**: anfangs steil, dann abflachend, schließlich Plateau bei K.
+
+**K ist keine fixe Konstante.** Die Kapazitätsgrenze ändert sich mit Umweltbedingungen: Eine Dürre senkt K (weniger Nahrung), Düngung erhöht K (mehr Ressourcen). Dieser Punkt ist eine häufige Prüfungsfalle.
+
+**Tumorwachstum — Gompertz-Modell:** Solide Tumore folgen einer S-Kurve. Anfangs exponentiell, dann Verlangsamung, weil die Angiogenese (Neubildung von Blutgefäßen) nicht Schritt hält → Hypoxie im Tumorzentrum → Nekrose → verlangsamtes Nettowachstum. Die Tumorverdopplungszeit variiert enorm: Burkitt-Lymphom 1–3 Tage, Mammakarzinom 100–300 Tage, Prostatakarzinom 2–4 Jahre. Schnell wachsende Tumore sind paradoxerweise besser chemosensibel (hohe Teilungsrate → Zytostatika greifen).
+
+> **Merke:** Logistisch: dN/dt = r·N·(1−N/K), S-Kurve. Wendepunkt bei K/2 = maximale Wachstumsrate. K ist variabel, nicht fix! Tumorwachstum folgt Gompertz (S-Kurve); Angiogenese begrenzt K.
+
+---
+
+## Dichteabhängige vs. dichteunabhängige Faktoren
+
+Populationen werden durch zwei Kategorien von Faktoren reguliert — eine der wichtigsten Unterscheidungen in der Ökologie:
+
+**Dichteabhängige Faktoren** wirken stärker, je größer die Population ist. Sie sind der biologische Mechanismus hinter dem Bremsterm (1 − N/K):
+- **Intraspezifische Konkurrenz:** Mehr Individuen → weniger Nahrung, Raum, Brutplätze pro Individuum → reduzierte Reproduktion, erhöhte Mortalität
+- **Prädation (Räuber-Beute):** Hohe Beutedichte zieht mehr Räuber an → stärkerer Fraßdruck
+- **Krankheiten und Parasiten:** Dichte Populationen begünstigen Erregerübertragung (kürzere Kontaktdistanz, aerogene Tröpfcheninfektion) → Epidemien dezimieren die Population
+- **Intraspezifischer Stress:** Überfüllung → Cortisol-Anstieg → reduzierte Fortpflanzung (nachgewiesen bei Nagetieren)
+
+**Dichteunabhängige Faktoren** treffen die Population unabhängig von ihrer Größe:
+- **Wetter und Klima:** Frost, Dürre, Überschwemmung töten einen fixen Prozentsatz
+- **Naturkatastrophen:** Vulkanausbrüche, Waldbrände, Tsunamis
+- **Habitatzerstörung durch den Menschen:** Rodung, Versiegelung, Pestizideinsatz
+
+Klinische Parallele: In einem Krankenhaus wirkt die **Bettenbelegung** dichteabhängig — je voller die Station, desto höher das Risiko nosokomialer Infektionen (Krankenhauskeime). Ein **Stromausfall** wirkt dichteunabhängig — er betrifft alle Patienten gleichermaßen.
+
+> **Merke:** Dichteabhängig = wirkt stärker bei hoher Dichte (Konkurrenz, Krankheit, Prädation) → biologische Bremse hinter K. Dichteunabhängig = trifft unabhängig von Populationsgröße (Wetter, Katastrophen). Prüfungsrelevant: Die Unterscheidung erkennen und Beispiele zuordnen.
+
+---
+
+## r-Strategen und K-Strategen
+
+Organismen lassen sich auf einem Spektrum zwischen zwei Reproduktionsstrategien einordnen:
 
 | Merkmal | r-Stratege | K-Stratege |
 |---------|-----------|-----------|
 | Nachkommen | Viele | Wenige |
-| Brutpflege | Minimal | Intensiv |
+| Brutpflege | Minimal bis keine | Intensiv |
 | Generationszeit | Kurz | Lang |
 | Körpergröße | Klein | Groß |
-| Mortalität | Hoch (dichteunabhängig) | Niedrig (dichteabhängig) |
-| Populationsgröße | Schwankend, weit unter K | Relativ stabil, nahe K |
-| Beispiel-Erreger | E. coli, Influenzavirus | M. tuberculosis (lange Generation, langsame Ausbreitung) |
+| Lebensdauer | Kurz | Lang |
+| Mortalität | Hoch (v. a. dichteunabhängig) | Niedrig (v. a. dichteabhängig) |
+| Populationsgröße | Stark schwankend, weit unter K | Relativ stabil, nahe K |
+| Umwelt | Instabil, unvorhersehbar | Stabil, vorhersehbar |
+| Beispiele | Bakterien, Insekten, Löwenzahn, Mäuse | Elefant, Wal, Mensch, Adler |
 
-> **Merke:** r-Strategen = viele Nachkommen, schnelle Vermehrung, kurze Generation (Bakterien). K-Strategen = wenige Nachkommen, viel Brutpflege, lange Generation (Mensch). Klinisch: r-Strategien erklären, warum Bakterien so schnell Resistenzen entwickeln — hohe Mutationsrate + kurze Generationszeit = rasche Selektion.
+**r-Strategen** maximieren die Reproduktionsrate r. Sie produzieren Masse statt Qualität und besiedeln schnell neue oder gestörte Habitate. *E. coli* im Darm ist der Prototyp: kurze Generationszeit (20 min), hohe Mutationsrate, rasche Kolonisation leerer Nischen nach Antibiotikagabe.
 
----
+**K-Strategen** maximieren die Überlebenswahrscheinlichkeit jedes Nachkommen. Der Mensch ist ein typischer K-Stratege: lange Schwangerschaft (9 Monate), intensive Brutpflege, niedrigste Reproduktionsrate aller Primaten, Generationszeit ca. 25–30 Jahre.
 
-## Lotka-Volterra — Räuber-Beute in der Immunologie
+Klinisch erklärt das r/K-Konzept, warum Bakterien so schnell Resistenzen entwickeln: hohe Mutationsrate + kurze Generationszeit = rasche Selektion resistenter Varianten.
 
-Die Lotka-Volterra-Gleichungen beschreiben die wechselseitige Dynamik von Räuber- und Beutepopulationen. Übertragen auf die Immunologie: **Pathogene = Beute, Immunzellen = Räuber**.
-
-**Der klassische Zyklus:**
-
-1. **Erreger vermehren sich** (Beute-Population steigt) → Antigenpräsentation an T-Zellen
-2. **Immunantwort wird aktiviert** (Räuber-Population steigt zeitverzögert) → klonale Expansion von T-Zellen und B-Zellen
-3. **Erreger werden eliminiert** (Beute-Population sinkt) → weniger Antigenstimulation
-4. **Immunzellen sterben ab** (Apoptose der Effektorzellen, Räuber-Population sinkt) → Kontraktion der Immunantwort
-5. **Gedächtniszellen bleiben** → bei erneutem Kontakt schnellere Reaktion (Sekundärantwort)
-
-Die **Räuberpopulation (Immunzellen) hinkt der Beutepopulation (Pathogen) zeitlich nach** — genau wie beim klassischen Luchs-Schneehase-Zyklus (ca. 10-Jahres-Zyklen in Kanada).
-
-**Chronische Infektionen als oszillierendes Lotka-Volterra-System:**
-
-Bei chronischen Infektionen (z. B. HIV, Hepatitis B, Malaria) stellt sich kein stabiles Gleichgewicht ein, sondern es kommt zu **zyklischen Schwankungen**: Das Pathogen mutiert (Immun-Escape, Flucht vor der Immunerkennung), die Immunantwort passt sich an (neue T-Zell-Klone), das Pathogen mutiert erneut. Bei Malaria zeigt sich das als **periodische Fieberschübe**: synchrones Platzen infizierter Erythrozyten → Zytokinfreisetzung → Fieber → neue Erythrozyteninvasion → Zyklus.
-
-> **Merke:** Lotka-Volterra in der Immunologie: Pathogen (Beute) ↔ Immunzelle (Räuber). Immunantwort hinkt Erregervermehrung zeitlich nach. Chronische Infektionen = oszillierendes System ohne stabile Eliminierung.
+> **Merke:** r-Strategen = viele Nachkommen, kurze Generation, instabile Umwelt (Bakterien, Insekten). K-Strategen = wenige Nachkommen, lange Generation, stabile Umwelt (Mensch, Elefant). r-Strategen entwickeln schneller Resistenzen.
 
 ---
 
-## Klinische Integration: Populationsdynamik in der Medizin
+## Lotka-Volterra: Räuber-Beute-Dynamik
 
-**Sepsis-Verlauf als Populationsdynamik:**
+Die **Lotka-Volterra-Gleichungen** beschreiben die wechselseitige Dynamik zweier Populationen — Räuber und Beute. Beide Populationen oszillieren zeitversetzt:
 
-Eine Sepsis lässt sich als Wettlauf zwischen exponentiellem Erregerwachstum und Immunantwort verstehen:
-- **Frühe Phase:** Erreger in exponentieller Vermehrung, Immunsystem noch in "Lag-Phase" (Aktivierung, Zytokinproduktion, Neutrophilenrekrutierung) → Zeitfenster für Antibiose
-- **SIRS (Systemisches Inflammatorisches Response-Syndrom):** Überschießende Immunantwort (zu viele "Räuber") → Zytokinsturm → Organschäden durch eigene Immunzellen
-- **Septischer Schock:** Kapillarleck (Flüssigkeitsverlust ins Gewebe), Vasodilatation (Gefäßerweiterung) → Blutdruckabfall → Organversagen
-- **Therapeutisch:** Antibiotika senken die Erreger-Wachstumsrate r; Volumentherapie und Vasopressoren stabilisieren den Kreislauf
+1. **Beutepopulation wächst** (viel Nahrung, wenig Räuber)
+2. **Räuberpopulation steigt zeitverzögert** (mehr Nahrung → mehr Räuber-Nachkommen)
+3. **Beutepopulation sinkt** (starker Fraßdruck)
+4. **Räuberpopulation sinkt zeitverzögert** (weniger Nahrung → Räuber verhungern)
+5. **Zyklus beginnt von vorn**
 
-**Antibiotikaresistenz als Selektionsdynamik:**
+Das klassische Beispiel: der **Luchs-Schneehase-Zyklus** in Kanada mit ca. 10-Jahres-Perioden. Die Räuberkurve hinkt der Beutekurve stets um eine Phasenverzögerung nach — die Räuber erreichen ihr Maximum erst, wenn die Beute schon abnimmt.
 
-In einer gemischten Bakterienpopulation mit empfindlichen und resistenten Stämmen wirkt das Antibiotikum als **Selektionsdruck**: Empfindliche Zellen sterben (Beutepopulation sinkt), resistente vermehren sich ungebremst in die freigewordene Nische (Konkurrenzbefreiung). Nach Absetzen des Antibiotikums können sensitive Stämme durch höhere Fitness (kein Resistenz-Kostenfaktor) wieder dominieren — daher die Empfehlung, Antibiotika **nicht zu kurz** zu geben (alle Erreger sollen eliminiert werden, bevor Resistente selektiert werden).
+**Immunologische Übertragung:** Pathogen = Beute, Immunzellen = Räuber. Erreger vermehren sich → T-Zell-Aktivierung und klonale Expansion (zeitverzögert) → Erreger eliminiert → Effektorzellen sterben durch Apoptose → Gedächtniszellen bleiben. Chronische Infektionen (HIV, Malaria) zeigen persistierende Oszillationen: Pathogen mutiert (Immun-Escape), Immunantwort passt sich an, Pathogen mutiert erneut. Bei Malaria äußert sich das als periodische Fieberschübe.
 
-**Tumorwachstum — Verdopplungszeit und Therapieplanung:**
+> **Merke:** Lotka-Volterra: Räuber- und Beutepopulation schwingen zeitversetzt. Räuber hinkt Beute nach. Immunologisch: Pathogen (Beute) ↔ Immunzelle (Räuber). Chronische Infektionen = oszillierendes System.
 
-| Tumortyp | Verdopplungszeit | Klinische Konsequenz |
-|----------|-----------------|---------------------|
-| Burkitt-Lymphom | 1–3 Tage | Hochaggressiv, aber chemosensibel (hohe Teilungsrate) |
-| Mammakarzinom | 100–300 Tage | Screening-Intervalle kalkulierbar |
-| Prostatakarzinom | 2–4 Jahre | Active Surveillance (aktive Überwachung) oft vertretbar |
+---
 
-Die **Chemotherapie senkt effektiv K** (reduziert Tumormasse), aber Resistenzen können entstehen (analog zur Antibiotikaresistenz): Unter Selektionsdruck überleben resistente Zellklone und repopulieren den Tumor. Moderne Ansätze wie **Adaptive Therapie** nutzen Lotka-Volterra-Logik: Man behandelt nicht bis zur maximalen Reduktion, sondern hält eine Population sensitiver Zellen aufrecht, die resistente Zellen durch Konkurrenz unterdrückt.
+## Epidemiologische Parallele: R₀ und Herdenimmunität
 
-> **Merke:** Sepsis = Wettlauf exponentielles Erregerwachstum vs. Immunantwort. Antibiotika senken r, Resistenz = Selektion in die leere Nische. Tumorwachstum folgt Gompertz (S-Kurve), Verdopplungszeit bestimmt Aggressivität und Chemosensibilität.`,
+Populationsdynamik erklärt auch die Ausbreitung von Infektionskrankheiten. Die zentrale Kennzahl ist die **Basisreproduktionszahl R₀** — die durchschnittliche Anzahl von Sekundärinfektionen, die ein Infizierter in einer vollständig empfänglichen Population verursacht.
+
+- **R₀ > 1:** Epidemie breitet sich aus (jeder Infizierte steckt im Mittel mehr als eine Person an)
+- **R₀ = 1:** Endemie (stabile Fallzahlen)
+- **R₀ < 1:** Epidemie erlischt
+
+| Erreger | R₀ | Herdenimmunitätsschwelle |
+|---------|-----|------------------------|
+| Masern | 12–18 | **92–95 %** |
+| Windpocken | 10–12 | 90–92 % |
+| SARS-CoV-2 (Wildtyp) | 2–3 | 50–67 % |
+| Influenza | 1,5–2 | 33–50 % |
+| Ebola | 1,5–2,5 | 33–60 % |
+
+Die **Herdenimmunitätsschwelle** berechnet sich als: **H = 1 − 1/R₀**
+
+Für Masern (R₀ ≈ 15): H = 1 − 1/15 ≈ 0,93 → **93 % der Bevölkerung müssen immun sein**, damit die Übertragungskette reißt. Deshalb führen selbst kleine Impflücken bei Masern sofort zu Ausbrüchen — die Schwelle ist extrem hoch.
+
+R₀ ist konzeptionell identisch mit der intrinsischen Wachstumsrate r: Beide beschreiben das Ausbreitungspotenzial ohne Bremsung. Impfung wirkt wie eine Erhöhung der „Sterberate" für das Virus — sie senkt die effektive Reproduktionszahl R_eff unter 1.
+
+> **Merke:** R₀ = Sekundärinfektionen pro Infiziertem. R₀ > 1 → Epidemie. Herdenimmunität = 1 − 1/R₀. Masern (R₀ ≈ 15) brauchen 93 % Durchimpfungsrate. Kleine Impflücken → sofort Ausbrüche.
+
+---
+
+## Populationskontrolle: Top-down vs. Bottom-up
+
+Ökosysteme werden durch zwei gegensätzliche Kontrollmechanismen reguliert:
+
+**Top-down-Kontrolle (Räuberkontrolle):** Räuber regulieren die Beutepopulation. Entfernt man den Topprädator, explodiert die Beutepopulation → Überweidung → Ökosystemkollaps. Klassisches Beispiel: Nach der Ausrottung der Wölfe im Yellowstone-Nationalpark explodierten die Hirschbestände → Überweidung der Flussufervegetation → Erosion → erst die Wiederansiedlung der Wölfe 1995 stellte das Gleichgewicht wieder her (trophische Kaskade).
+
+**Bottom-up-Kontrolle (Ressourcenkontrolle):** Die Verfügbarkeit von Nährstoffen und Energie begrenzt die Primärproduktion, die wiederum alle höheren trophischen Ebenen limitiert. Nährstoffarme Gewässer (oligotroph) haben weniger Phytoplankton → weniger Zooplankton → weniger Fisch.
+
+In den meisten Ökosystemen wirken beide Mechanismen gleichzeitig, wobei je nach System einer dominiert.
+
+> **Merke:** Top-down: Räuber kontrollieren Beute (Wolfsentfernung → Hirschexplosion). Bottom-up: Nährstoffangebot begrenzt alle Ebenen. Trophische Kaskade = Top-down-Effekt über mehrere Ebenen.
+
+---
+
+## Bakterielles Wachstum — Die vier Phasen
+
+{{DIAGRAM:plant-vs-animal-cell}}
+
+Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft vier Phasen, die alle bisherigen Konzepte vereinen:
+
+**1. Lag-Phase (Anlaufphase):** Stoffwechselanpassung, Enzymsynthese. Keine oder minimale Teilung. Dauer: Minuten bis Stunden.
+
+**2. Exponentialphase (Log-Phase):** Maximale Teilungsrate, J-Kurve. Generationszeit minimal und konstant. **Antibiotika wirken hier am besten**, weil sie in Prozesse eingreifen, die nur bei aktiver Teilung ablaufen: Beta-Laktame hemmen die Zellwandsynthese, Fluorchinolone blockieren die DNA-Replikation.
+
+**3. Stationäre Phase:** Nährstoffe knapp, toxische Metabolite akkumulieren → Geburtenrate ≈ Sterberate → N ≈ K. Einige Bakterien bilden **Endosporen** (Bacillus, Clostridium) — extrem widerstandsfähige Dauerformen. **Persisterzellen** (tolerante, nicht resistente Subpopulationen) überleben hier trotz Antibiotika → Ursache für Therapieversagen bei chronischen Infektionen.
+
+**4. Absterbephase:** Ressourcen erschöpft → exponentielle Abnahme der Lebendzellzahl.
+
+| Phase | Teilung | Antibiotikawirksamkeit | Klinische Relevanz |
+|-------|---------|----------------------|-------------------|
+| Lag | Keine/minimal | Gering | Fenster für Prophylaxe |
+| Exponentiell | Maximal | **Maximal** | Sepsis-Eskalation |
+| Stationär | ≈ Absterben | Reduziert (Persisterzellen) | Chronische Infektionen |
+| Absterben | < Absterben | Irrelevant | Spontanheilung / Immunabwehr |
+
+> **Merke:** 4 Phasen: Lag → Exponentiell → Stationär → Absterben. Beta-Laktame wirken nur in der Exponentialphase (Zellwandsynthese nur bei Teilung). Persisterzellen in der stationären Phase überleben Antibiotika → Rückfälle.
+
+---
+
+## Häufige Fehlannahmen
+
+**"Exponentielles Wachstum geht ewig weiter"** — Nein. Exponentielles Wachstum ist die Ausnahme: Es tritt nur bei unbegrenzten Ressourcen auf (frische Kultur, Invasion ohne Feinde). Sobald dichteabhängige Faktoren greifen, wird es logistisch.
+
+**"K ist eine fixe Zahl"** — Nein. K ändert sich ständig mit den Umweltbedingungen. Eine Dürre senkt K, ein nährstoffreiches Jahr erhöht K. In der Prüfung wird oft gefragt, ob K konstant ist — die Antwort ist immer nein.
+
+**"Räuber und Beute erreichen gleichzeitig ihr Maximum"** — Nein. Die Räuberkurve ist phasenverschoben: Räuber erreichen ihr Maximum erst, wenn die Beute schon abnimmt (zeitverzögerte Reaktion).
+
+**"Hohe Impfrate = Krankheit ausgerottet"** — Nur wenn die Impfrate dauerhaft über der Herdenimmunitätsschwelle bleibt. Fällt sie darunter (z. B. Masern-Impflücken), kehren Ausbrüche sofort zurück.
+
+> **Merke:** Exponentiell ≠ unbegrenzt (Ressourcen limitieren). K ≠ fix (ändert sich mit Umwelt). Räuber-Maximum liegt nach Beute-Maximum (Phasenverschiebung). Herdenimmunität erfordert dauerhafte Impfrate über Schwelle.`,
       lernziele: [
-        "Primäre und sekundäre Sukzession unterscheiden und Pionierorganismen nennen.",
-        "Exponentielles und logistisches Wachstum sowie Kapazitätsgrenze K beschreiben.",
+        "Exponentielles und logistisches Wachstum mathematisch beschreiben und grafisch unterscheiden (J- vs. S-Kurve).",
+        "Die Kapazitätsgrenze K und den Wendepunkt bei K/2 erklären.",
+        "Dichteabhängige und dichteunabhängige Faktoren unterscheiden und Beispiele nennen.",
         "r- und K-Strategen mit Merkmalen und Beispielen zuordnen.",
+        "Das Lotka-Volterra-Modell und die Basisreproduktionszahl R₀ auf Infektionen anwenden.",
       ],
       sections: [],
       merksätze: [
-        "Primäre Sukzession: nacktes Substrat, Flechten/Moose zuerst. Sekundäre: Boden/Samen da, schneller.",
-        "Exponentiell = J-Kurve, logistisch = S-Kurve, K = Kapazitätsgrenze.",
-        "r-Strategen = viele Nachkommen, wenig Fürsorge. K-Strategen = wenige Nachkommen, viel Fürsorge.",
+        "Exponentiell = J-Kurve (N₀·e^rt), logistisch = S-Kurve (Bremse 1−N/K), Wendepunkt bei K/2.",
+        "Dichteabhängig (Konkurrenz, Krankheit) bremst bei hoher Dichte; dichteunabhängig (Wetter) trifft alle gleich.",
+        "r-Strategen = viele Nachkommen, kurze Generation. K-Strategen = wenige Nachkommen, viel Fürsorge.",
+        "R₀ > 1 → Epidemie. Herdenimmunität = 1 − 1/R₀. Masern brauchen 93 % Impfrate.",
       ],
       selfTest: [
         {
           question:
-            "Nach einem Vulkanausbruch ist eine Fläche vollständig mit Lava bedeckt. Welche Sukzession beginnt, und wer besiedelt zuerst?",
+            "Bei welchem Wert von N ist die absolute Wachstumsrate (dN/dt) im logistischen Modell am größten?",
           options: [
-            "Sekundäre Sukzession — Gräser und Sträucher",
-            "Primäre Sukzession — Flechten, Moose und Cyanobakterien als Pionierorganismen",
-            "Sekundäre Sukzession — Bäume aus Samenbänken",
-            "Primäre Sukzession — nur Bakterien",
-            "Klimaxgesellschaft — Wald",
+            "Bei N = K (Kapazitätsgrenze)",
+            "Bei N = K/2 (Wendepunkt der S-Kurve)",
+            "Bei N = 0 (Population noch nicht vorhanden)",
+            "Bei N = K/4 (ein Viertel der Kapazität)",
+            "Bei N > K (Überschreitung der Kapazität)",
           ],
           correctIndex: 1,
           explanation:
-            "Primäre Sukzession: nacktes Substrat ohne Boden und Samen. Pionierorganismen = Flechten, Moose, Cyanobakterien. Sekundäre Sukzession wäre es, wenn noch Boden/Samen vorhanden wären (z. B. nach Waldbrand).",
-          difficulty: 1,
-          tags: ["sukzession", "primär", "pionier"],
+            "Im logistischen Modell dN/dt = r·N·(1−N/K) ist die absolute Wachstumsrate bei N = K/2 maximal. Das ist der Wendepunkt der S-Kurve — danach flacht das Wachstum ab.",
+          difficulty: 2,
+          tags: ["logistisch", "wendepunkt", "k-halbe"],
         },
         {
           question:
-            "Eine Population wächst in einem Habitat mit begrenzten Ressourcen und nähert sich einer oberen Grenze. Welche Wachstumsform und welche Kurve?",
+            "Welcher Faktor ist dichteABhängig und wirkt stärker bei hoher Populationsdichte?",
           options: [
-            "Exponentielles Wachstum — J-Kurve",
-            "Logistisches Wachstum — S-Kurve (Annäherung an Kapazitätsgrenze K)",
-            "Exponentielles Wachstum — S-Kurve",
-            "Logistisches Wachstum — J-Kurve",
-            "Kein Wachstum — horizontale Linie",
+            "Vulkanausbruch",
+            "Intraspezifische Konkurrenz um Nahrung",
+            "Frost im Winter",
+            "Überschwemmung",
+            "Habitatzerstörung durch Rodung",
           ],
           correctIndex: 1,
           explanation:
-            "Begrenzte Ressourcen → logistisches Wachstum, S-Kurve, Annäherung an die Kapazitätsgrenze K. Exponentiell (J-Kurve) gilt nur bei unbegrenzten Ressourcen.",
+            "Intraspezifische Konkurrenz ist dichteabhängig: Je mehr Individuen, desto weniger Nahrung pro Individuum → stärkere Bremswirkung. Vulkan, Frost, Überschwemmung und Rodung sind dichteunabhängig.",
           difficulty: 1,
-          tags: ["logistisch", "s-kurve", "k"],
+          tags: ["dichteabhängig", "konkurrenz", "regulation"],
         },
         {
-          question: "Welche Kombination kennzeichnet einen K-Strategen?",
+          question:
+            "Masern haben eine Basisreproduktionszahl R₀ von etwa 15. Wie hoch muss die Durchimpfungsrate mindestens sein, um Herdenimmunität zu erreichen?",
           options: [
-            "Viele Nachkommen, kurze Generationszeit, wenig Brutpflege",
-            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege",
-            "Viele Nachkommen, intensive Brutpflege",
-            "Wenige Nachkommen, kurze Generationszeit",
-            "Unbegrenzte Nachkommen, keine Brutpflege",
+            "Etwa 50 %",
+            "Etwa 67 %",
+            "Etwa 80 %",
+            "Etwa 93 %",
+            "100 % — alle müssen geimpft sein",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Herdenimmunitätsschwelle H = 1 − 1/R₀ = 1 − 1/15 ≈ 0,93 = 93 %. Deshalb führen selbst kleine Impflücken bei Masern sofort zu Ausbrüchen.",
+          difficulty: 2,
+          tags: ["r-null", "herdenimmunität", "masern", "rechenfrage"],
+        },
+        {
+          question: "Im Lotka-Volterra-Modell: Wann erreicht die Räuberpopulation ihr Maximum?",
+          options: [
+            "Gleichzeitig mit dem Maximum der Beutepopulation",
+            "Bevor die Beutepopulation ihr Maximum erreicht",
+            "Nachdem die Beutepopulation ihr Maximum bereits überschritten hat (phasenverschoben)",
+            "Wenn die Beutepopulation bei null ist",
+            "Die Räuberpopulation bleibt konstant",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Räuberkurve ist phasenverschoben: Räuber erreichen ihr Maximum erst, wenn die Beute schon abnimmt. Das liegt an der zeitverzögerten Reaktion (Reproduktion braucht Zeit).",
+          difficulty: 2,
+          tags: ["lotka-volterra", "phasenverschiebung", "räuber-beute"],
+        },
+        {
+          question:
+            "Eine Bakterienkultur befindet sich in der stationären Phase. Welche Aussage ist FALSCH?",
+          options: [
+            "Die Geburtenrate entspricht ungefähr der Absterberate",
+            "Die Populationsgröße bleibt annähernd konstant bei K",
+            "Einige Bakterien bilden Endosporen als Dauerformen",
+            "Beta-Laktam-Antibiotika wirken in dieser Phase am besten",
+            "Persisterzellen können trotz Antibiotika überleben",
+          ],
+          correctIndex: 3,
+          explanation:
+            "FALSCH ist D: Beta-Laktame hemmen die Zellwandsynthese und wirken nur bei aktiver Zellteilung — also maximal in der Exponentialphase, nicht in der stationären Phase, wo die Teilungsrate gering ist.",
+          difficulty: 2,
+          tags: ["bakterienwachstum", "stationäre-phase", "antibiotika"],
+        },
+        {
+          question: "Welche Kombination beschreibt korrekt einen r-Strategen?",
+          options: [
+            "Wenige Nachkommen, lange Generationszeit, intensive Brutpflege, stabile Umwelt",
+            "Viele Nachkommen, kurze Generationszeit, wenig Brutpflege, instabile Umwelt",
+            "Wenige Nachkommen, kurze Generationszeit, keine Brutpflege",
+            "Viele Nachkommen, lange Generationszeit, intensive Brutpflege",
+            "Wenige Nachkommen, mittlere Generationszeit, gemäßigte Brutpflege",
           ],
           correctIndex: 1,
           explanation:
-            "K-Strategen: wenige Nachkommen, intensive Brutpflege, lange Generationszeit, stabile Habitate. r-Strategen: viele Nachkommen, wenig Brutpflege, kurze Generationszeit.",
+            "r-Strategen maximieren die Reproduktionsrate: viele Nachkommen, kurze Generationszeit, minimale Brutpflege. Sie besiedeln instabile/neue Habitate. K-Strategen (Option A) sind das Gegenteil.",
           difficulty: 1,
-          tags: ["k-strategen", "r-k"],
+          tags: ["r-strategen", "k-strategen", "lebensstrategien"],
         },
       ],
     },

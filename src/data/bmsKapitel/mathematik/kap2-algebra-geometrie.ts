@@ -276,7 +276,7 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
     },
     {
       id: "ma-2-04",
-      title: "Potenz- und Wurzelgesetze",
+      title: "Potenzgesetze & Logarithmen",
       stichworte: [
         "Potenzgesetz",
         "Wurzelgesetz",
@@ -287,267 +287,313 @@ Lösung A: 5% Glucose, Lösung B: 20% Glucose. Ziel: 500 mL einer 8%-Lösung. Sy
         "Zehnerpotenzen",
         "Wissenschaftliche Notation",
         "Logarithmus",
-        "Wurzelziehen",
+        "pH-Wert",
+        "Dezibel",
+        "Henderson-Hasselbalch",
+        "Halbwertszeit",
       ],
-      content: `Potenzen komprimieren Multiplikation. Wurzeln sind deren Umkehrung. Logarithmen übersetzen zwischen Potenz und Exponent. Wer diese drei Werkzeuge beherrscht, kann Halbwertszeiten berechnen, pH-Werte interpretieren und wissenschaftliche Notation lesen — alles Kernkompetenzen am MedAT.
+      content: `Potenzen und Logarithmen komprimieren enorme Zahlenbereiche auf handliche Werte. Ohne sie wären pH-Skala, Dezibel, Richterskala und Medikamentendosierung nicht formulierbar. Ein pH von 7 klingt harmlos — dahinter steckt eine H⁺-Konzentration von 10⁻⁷ mol/L, also 0,0000001. Die Potenz macht das lesbar. Der Logarithmus macht es rechenfähig.
 
 ---
 
-## Potenzen multiplizieren und dividieren — Faktoren zählen
+## Die acht Potenzgesetze — mit Intuition
 
-Eine Potenz ist nichts anderes als wiederholte Multiplikation: a hoch 3 = a × a × a (drei Faktoren a). Wenn du jetzt a hoch 3 × a hoch 2 rechnest, schreibst du die Faktoren hintereinander:
+Eine Potenz ist wiederholte Multiplikation: a³ = a × a × a (drei Faktoren a). Alle Regeln folgen aus dieser einen Idee.
 
-(a × a × a) × (a × a) = a × a × a × a × a = a hoch 5
+**Regel 1 — Multiplikation gleicher Basis:** a hoch n × a hoch m = a hoch (n+m). Du reihst Faktoren aneinander: a³ × a² = (a×a×a)(a×a) = a⁵. Eselsbrücke: „Multiplizieren = Exponenten addieren."
 
-Du **zählst** einfach die Faktoren zusammen: 3 + 2 = 5. Daraus folgt die Regel direkt:
+**Regel 2 — Division gleicher Basis:** a hoch n / a hoch m = a hoch (n−m). Du kürzt Faktoren: a⁵/a² = a³. Eselsbrücke: „Dividieren = Exponenten subtrahieren."
 
-**a hoch n × a hoch m = a hoch (n+m)** — Exponenten addieren, weil du Faktoren aneinanderreihst.
+**Regel 3 — Potenz einer Potenz:** (a hoch n) hoch m = a hoch (n×m). Du potenzierst eine Potenz: (a³)² = (a×a×a)(a×a×a) = a⁶ = a hoch (3×2). **Häufigster MedAT-Fehler:** hier wird n×m mit n+m verwechselt!
 
-Konkretes Beispiel: 2 hoch 4 × 2 hoch 3 = (2×2×2×2) × (2×2×2) = 2 hoch 7 = 128.
+**Regel 4 — Produkt potenzieren:** (a×b) hoch n = a hoch n × b hoch n. Jeder Faktor wird einzeln potenziert.
 
-Bei der Division funktioniert es genauso — du **kürzt** gemeinsame Faktoren heraus:
+**Regel 5 — Quotient potenzieren:** (a/b) hoch n = a hoch n / b hoch n.
 
-a hoch 5 / a hoch 2 = (a×a×a×a×a) / (a×a) = a×a×a = a hoch 3
+**Regel 6 — Nullter Exponent:** a⁰ = 1 (für a ≠ 0). Warum? Betrachte das Muster: 2³ = 8, 2² = 4, 2¹ = 2. Jeder Schritt teilt durch 2. Der nächste Schritt muss 2⁰ = 1 ergeben. Alternativ: a hoch n / a hoch n = a hoch (n−n) = a⁰, und jede Zahl durch sich selbst ist 1.
 
-**a hoch n / a hoch m = a hoch (n−m)** — Exponenten subtrahieren, weil du Faktoren wegnimmst.
+**Regel 7 — Negativer Exponent:** a hoch (−n) = 1/a hoch n. Der negative Exponent erzeugt den Kehrwert, **nicht** ein Minuszeichen! Beispiel: 2⁻³ = 1/2³ = 1/8, **nicht** −8.
 
-> **Merke:** Gleiche Basis → nur die Exponenten verrechnen. Multiplikation: addieren. Division: subtrahieren. Das sind die beiden Grundregeln, aus denen sich alle anderen ableiten.
+**Regel 8 — Gebrochener Exponent:** a hoch (1/n) = n-te Wurzel aus a. Allgemein: a hoch (m/n) = (n-te Wurzel aus a) hoch m. Der Nenner gibt den Wurzelindex, der Zähler den Exponenten. Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8)² = 2² = 4.
 
----
-
-## Potenz einer Potenz — multiplizieren, nicht addieren!
-
-Was bedeutet (a hoch 3) hoch 2? Du nimmst den Ausdruck "a × a × a" und multiplizierst ihn **zweimal** mit sich selbst:
-
-(a × a × a) × (a × a × a) = a hoch 6
-
-Das sind 3 × 2 = 6 Faktoren. Die Exponenten werden **multipliziert**, nicht addiert:
-
-**(a hoch n) hoch m = a hoch (n × m)**
-
-Das ist der häufigste Fehler am MedAT: Viele schreiben a hoch (n+m) statt a hoch (n×m). Der Unterschied: Bei a hoch n × a hoch m stehen zwei **separate** Potenzen, deren Faktoren du aneinanderreihst (addieren). Bei (a hoch n) hoch m **potenzierst du eine Potenz** (multiplizieren).
-
-Beispiel: (3 hoch 2) hoch 4 = 3 hoch 8 = 6561, **nicht** 3 hoch 6!
+> **Merke:** Drei klassische Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — Potenzgesetz gilt NUR für Produkte, nie für Summen!
 
 ---
 
-## Potenzen von Produkten und Summen — hier lauert die Falle
+## Wurzelgesetze — Spezialfall gebrochener Exponenten
 
-Ein Produkt potenzieren geht Term für Term: **(a × b) hoch n = a hoch n × b hoch n.** Warum? (a × b) hoch 3 = (ab)(ab)(ab) = (a·a·a)(b·b·b) = a³ × b³.
+Da Wurzeln Potenzen mit gebrochenem Exponenten sind (n-te Wurzel aus a = a hoch 1/n), folgen die Wurzelgesetze direkt aus den Potenzgesetzen.
 
-Beispiel: (2 × 5) hoch 3 = 2³ × 5³ = 8 × 125 = 1000 = 10³. Analog: **(a/b) hoch n = a hoch n / b hoch n.**
+**Produktregel:** √(a×b) = √a × √b. Anwendung: √72 = √(36×2) = 6√2 — suche den größten quadratischen Teiler.
 
-Aber für **Summen gilt das nicht**: (a+b) hoch n ≠ a hoch n + b hoch n!
+**Quotientenregel:** √(a/b) = √a / √b. Beispiel: √(9/16) = 3/4.
 
-Gegenbeispiel: (2+3)² = 5² = 25, aber 2² + 3² = 4 + 9 = 13 ≠ 25. Wer Summen potenziert, muss die binomischen Formeln verwenden (→ ma-2-03).
+**Die verbotene Summenregel:** √(a+b) ≠ √a + √b! Gegenbeispiel: √(9+16) = √25 = **5**, aber √9 + √16 = 3 + 4 = **7** ≠ 5. Dieser Fehler wird am MedAT gezielt abgefragt.
 
----
+**Wurzel und Betrag:** √(a²) = |a|, nicht ±a. Die Quadratwurzel ist **immer** nicht-negativ.
 
-## Spezialfälle — warum a hoch 0 = 1 sein muss
-
-Die folgenden Erweiterungen sind keine willkürlichen Definitionen. Sie ergeben sich **zwingend**, wenn die Grundregeln widerspruchsfrei bleiben sollen.
-
-**Nullter Exponent:** a hoch n / a hoch n = a hoch (n−n) = a hoch 0. Gleichzeitig ist jede Zahl durch sich selbst geteilt gleich 1. Also: **a hoch 0 = 1** (für a ≠ 0).
-
-**Negativer Exponent:** a hoch 3 / a hoch 5 = a hoch (3−5) = a hoch (−2). Gleichzeitig: a³/a⁵ = 1/a². Also: **a hoch (−n) = 1/a hoch n** — der negative Exponent erzeugt den Kehrwert. Achtung: a hoch (−3) = 1/8, **nicht** −8!
-
-**Gebrochener Exponent:** Was muss a hoch (1/2) sein, damit (a hoch (1/2))² = a hoch 1 = a gilt? Die Antwort: die Quadratwurzel! Allgemein: **a hoch (1/n) = n-te Wurzel aus a**, und **a hoch (m/n) = (n-te Wurzel aus a) hoch m**. Der Nenner gibt den Wurzelindex, der Zähler den Exponenten.
-
-Beispiel: 8 hoch (2/3) = (Kubikwurzel aus 8) hoch 2 = 2² = 4.
-
-> **Merke:** Drei klassische Fallen: (1) (aⁿ)ᵐ = aⁿˣᵐ, NICHT aⁿ⁺ᵐ. (2) a⁻ⁿ = 1/aⁿ, NICHT −aⁿ. (3) (a+b)ⁿ ≠ aⁿ+bⁿ — Potenzgesetz gilt NUR für Produkte!
+> **Merke:** Erlaubt: √(a×b) = √a × √b. Verboten: √(a+b) ≠ √a + √b. Und: √(a²) = |a| (immer positiv).
 
 ---
 
-## Wurzelgesetze — Potenzen mit gebrochenem Exponenten
+## Logarithmus — Definition als Umkehrung
 
-Da Wurzeln spezielle Potenzen sind (n-te Wurzel aus a = a hoch 1/n), folgen die Wurzelgesetze direkt aus den Potenzgesetzen.
+Der Logarithmus beantwortet genau eine Frage: **„Auf welche Potenz muss ich die Basis erheben, um x zu erhalten?"**
 
-**Produktregel:** Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b. Das folgt aus (ab)^(1/2) = a^(1/2) × b^(1/2). Anwendung: Wurzel aus 72 = Wurzel aus (36 × 2) = 6 × Wurzel aus 2 — du suchst den größten quadratischen Teiler.
+**Definition:** log_b(x) = y bedeutet b hoch y = x. Der Logarithmus „entpackt" den Exponenten.
 
-**Quotientenregel:** Wurzel aus (a/b) = Wurzel aus a / Wurzel aus b. Beispiel: Wurzel aus (9/16) = 3/4.
+Drei wichtige Basen:
+- **lg (= log₁₀):** Dekadischer Logarithmus — für pH, Dezibel, Richterskala
+- **ln (= logₑ):** Natürlicher Logarithmus — für Zerfallskonstanten, Pharmakokinetik
+- **log₂:** Binärlogarithmus — für Halbwertszeiten (jede HWZ halbiert → log₂)
 
-**Die verbotene Summenregel:** √(a+b) ≠ √a + √b! Konkretes Gegenbeispiel: √(9+16) = √25 = **5**, aber √9 + √16 = 3 + 4 = **7** ≠ 5. Dieser Fehler ist so häufig, dass er am MedAT gezielt abgefragt wird.
-
-**Wurzel und Betrag:** √(a²) = |a|, nicht ±a. Die Quadratwurzel ist **immer** nicht-negativ: √9 = 3 (nicht ±3).
-
-**Rationalisierung:** Wurzeln im Nenner eliminierst du durch Erweitern mit der konjugierten Form (dritte binomische Formel): 1/(√a − √b) × (√a + √b)/(√a + √b) = (√a + √b)/(a − b).
-
-> **Merke:** Erlaubt: √(a×b) = √a × √b. Verboten: √(a+b) ≠ √a + √b. Und: √(a²) = |a| (immer positiv, nie ±a).
+Beispiel: lg(1000) = 3, weil 10³ = 1000. ln(e²) = 2. log₂(8) = 3, weil 2³ = 8.
 
 ---
 
-## Logarithmen — die Frage nach dem Exponenten
+## Warum braucht die Medizin Logarithmen? — Das pH-Motiv
 
-Der Logarithmus beantwortet eine einzige Frage: **„Welchen Exponenten brauche ich?"**
+Die H⁺-Konzentration im Körper reicht von 10⁻¹⁴ mol/L (starke Lauge) bis 10⁰ mol/L (konzentrierte Säure) — das sind **14 Größenordnungen**. Auf einer linearen Skala wäre der physiologische Bereich (pH 7,35–7,45) ein unsichtbarer Punkt. Die logarithmische Skala staucht diese riesige Spanne auf übersichtliche Zahlen von 0 bis 14.
 
-Beispiel: 10 hoch **?** = 1000. Antwort: 3, denn 10³ = 1000. Schreibweise: lg(1000) = 3.
+**pH = −lg[H⁺]**
 
-Allgemein: **log_a(x) = y** bedeutet **a hoch y = x**. Der Logarithmus ist die Umkehrfunktion des Potenzierens — er „entpackt" den Exponenten.
+Warum das Minuszeichen? Weil [H⁺] im physiologischen Bereich immer kleiner als 1 ist (z. B. 10⁻⁷), ist lg[H⁺] negativ (z. B. −7). Das Minuszeichen dreht das Vorzeichen, damit pH **steigt**, wenn die Azidität **sinkt** — intuitiv für Kliniker.
 
-> **Vertiefung:** Ausführliche Behandlung von Logarithmengesetzen, Henderson-Hasselbalch-Gleichung, Semilog-Plots und Basiswechsel findest du im UK **Logarithmusfunktionen** (ma-5-04).
+**Die entscheidende Einsicht — pH-Abfall von 0,3 = [H⁺] verdoppelt:**
+
+Warum? lg(2) ≈ 0,301. Wenn sich [H⁺] verdoppelt, ändert sich lg[H⁺] um +0,30. Da pH = −lg[H⁺], sinkt der pH um 0,30.
+
+Konkretes Beispiel: Arterielles Blut pH 7,40: [H⁺] = 10⁻⁷·⁴⁰ ≈ 3,98 × 10⁻⁸ mol/L ≈ 40 nmol/L. Metabolische Azidose pH 7,10: [H⁺] = 10⁻⁷·¹⁰ ≈ 7,94 × 10⁻⁸ mol/L ≈ 80 nmol/L. Die H⁺-Konzentration hat sich **verdoppelt** — klinisch lebensbedrohlich. Auf der pH-Skala sieht das nach „nur 0,3 Einheiten" aus.
+
+> **Merke:** pH sinkt um 0,3 → [H⁺] verdoppelt sich. pH sinkt um 1,0 → [H⁺] verzehnfacht sich. Kleine pH-Änderungen bedeuten große Konzentrationsänderungen!
+
+---
+
+## Henderson-Hasselbalch — die klinische Puffergleichung
+
+Puffersysteme halten den pH stabil, indem sie H⁺-Ionen aufnehmen oder abgeben. Das wichtigste Puffersystem im Blut ist CO₂/HCO₃⁻. Die Henderson-Hasselbalch-Gleichung beschreibt den Zusammenhang:
+
+**pH = pKₐ + lg([A⁻]/[HA])**
+
+Dabei ist HA die Säure (z. B. CO₂ × 0,03 = gelöstes CO₂), A⁻ die konjugierte Base (HCO₃⁻), und pKₐ = −lg(Kₐ) die Säurestärke.
+
+Für den Bicarbonat-Puffer: **pH = 6,1 + lg([HCO₃⁻] / (0,03 × pCO₂))**
+
+Normal: [HCO₃⁻] = 24 mmol/L, pCO₂ = 40 mmHg. pH = 6,1 + lg(24/1,2) = 6,1 + lg(20) = 6,1 + 1,30 = **7,40**. Das Verhältnis 20:1 (Base:Säure) ergibt den normalen Blut-pH.
+
+> **Merke:** Henderson-Hasselbalch: pH = pKₐ + lg([A⁻]/[HA]). Für Blut: pH = 6,1 + lg([HCO₃⁻]/(0,03 × pCO₂)). Normales Verhältnis 20:1 ergibt pH 7,40.
+
+---
+
+## Logarithmus-Rechenregeln
 
 Die drei Rechenregeln folgen direkt aus den Potenzgesetzen:
-- **log(a×b) = log a + log b** — Multiplikation → Exponenten addieren
-- **log(a/b) = log a − log b** — Division → Exponenten subtrahieren
-- **log(aⁿ) = n × log a** — Potenz → Exponent als Faktor herausziehen
 
-Basiswechsel: log_a(x) = ln(x) / ln(a) — damit rechnest du jeden Logarithmus in ln oder lg um.
+- **log(a×b) = log a + log b** — Multiplikation wird zu Addition (daher erleichtert der Logarithmus das Rechnen mit riesigen Zahlen)
+- **log(a/b) = log a − log b** — Division wird zu Subtraktion
+- **log(aⁿ) = n × log a** — der Exponent wird zum Faktor herausgezogen
+
+**Basiswechsel:** log_a(x) = ln(x)/ln(a) = lg(x)/lg(a). Damit rechnest du jeden Logarithmus in ln oder lg um.
+
+**Verbotener Fehler:** lg(a+b) ≠ lg(a) + lg(b)! Die Produktregel gilt für Multiplikation, **nicht** für Addition. Gegenbeispiel: lg(10+10) = lg(20) ≈ 1,30, aber lg(10) + lg(10) = 1 + 1 = 2 ≠ 1,30.
+
+Nützliche Werte: lg(2) ≈ 0,301; lg(3) ≈ 0,477; ln(2) ≈ 0,693; ln(10) ≈ 2,303.
+
+> **Merke:** log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n × log a. Aber: log(a+b) ≠ log a + log b — das ist der häufigste Logarithmusfehler!
 
 ---
 
-## Halbwertszeit — Potenzen in der Medizin
+## Dezibel — Logarithmus der Schallintensität
 
-Warum sind Potenzen medizinisch relevant? Weil der Abbau vieler Medikamente einer Exponentialfunktion folgt:
+Die Dezibelskala komprimiert den enormen Bereich hörbarer Schallintensitäten (Faktor 10¹² zwischen Hörschwelle und Schmerzgrenze) auf eine Skala von 0–130 dB.
 
-**N(t) = N₀ × (1/2) hoch (t / T½)**
+**L = 10 × lg(I/I₀)** mit I₀ = 10⁻¹² W/m² (Hörschwelle).
 
-Konkretes Beispiel — Paracetamol mit T½ = 2 h und Anfangsdosis 1000 mg: Nach 8 Stunden sind 8/2 = 4 Halbwertszeiten vergangen. Restmenge = 1000 × (1/2)⁴ = 1000/16 = **62,5 mg**.
+Zwei Faustregeln, die du dir merken solltest:
+- **+10 dB = 10-fache Intensität** (weil lg(10) = 1, also 10 × 1 = 10 dB)
+- **+3 dB ≈ doppelte Intensität** (weil lg(2) ≈ 0,3, also 10 × 0,3 = 3 dB)
 
-Faustregel: Nach 5 Halbwertszeiten sind noch (1/2)⁵ ≈ 3 % vorhanden — das Medikament gilt als ausgewaschen. Zerfallskonstante: λ = ln(2)/T½ ≈ 0,693/T½.
+Beispiel: Verdopplung der Schallintensität: ΔL = 10 × lg(2) = 10 × 0,301 ≈ **3 dB**. 20 dB Unterschied: Faktor = 10^(20/10) = 10² = **100-fache Intensität**.
 
-**pH = − lg[H⁺]:** Auch der pH-Wert basiert auf Potenzen. Pro pH-Einheit ändert sich die H⁺-Konzentration um **Faktor 10**. Normal arteriell: pH 7,35–7,45.
+Beachte die Parallele zum pH: Dort bedeuten 0,3 Einheiten eine Verdopplung der [H⁺], hier bedeuten 3 dB eine Verdopplung der Intensität — beides folgt aus lg(2) ≈ 0,3.
 
-> **Merke:** Nach n Halbwertszeiten: (1/2)ⁿ der Ausgangsmenge. 5 HWZ ≈ 3 %. λ = ln(2)/T½. pH = −lg[H⁺]: eine pH-Einheit = Faktor 10.
+> **Merke:** +3 dB ≈ doppelte Intensität; +10 dB = 10-fache Intensität. Grundformel: L = 10 × lg(I/I₀).
+
+---
+
+## Halbwertszeit — Potenzen in der Pharmakokinetik
+
+Der Abbau vieler Medikamente folgt einer Exponentialfunktion:
+
+**N(t) = N₀ × (1/2) hoch (t/T½)**
+
+Konkretes Beispiel — Paracetamol mit T½ = 2 h und Anfangsdosis 1000 mg: Nach 8 h sind 8/2 = 4 Halbwertszeiten vergangen. Restmenge = 1000 × (1/2)⁴ = 1000/16 = **62,5 mg**.
+
+Faustregel: Nach 5 Halbwertszeiten sind noch (1/2)⁵ ≈ 3 % vorhanden — das Medikament gilt als **ausgewaschen**. Zerfallskonstante: λ = ln(2)/T½ ≈ 0,693/T½.
+
+Dosierungsintervalle hängen direkt von T½ ab: Aspirin (T½ ≈ 15 min), Amoxicillin (T½ ≈ 1 h, dreimal täglich), Digoxin (T½ ≈ 36 h, einmal täglich).
+
+> **Merke:** Nach n Halbwertszeiten: (1/2)ⁿ der Ausgangsmenge. 5 HWZ ≈ 3 % (ausgewaschen). λ = ln(2)/T½ ≈ 0,693/T½.
 
 ---
 
 ## Zehnerpotenzen und wissenschaftliche Notation
 
-Sehr große und sehr kleine Zahlen werden als Produkt einer Zahl zwischen 1 und 10 und einer Zehnerpotenz geschrieben: **a × 10 hoch n** (1 ≤ a < 10).
+Sehr große und kleine Zahlen werden als **a × 10 hoch n** geschrieben (1 ≤ a < 10).
 
 Medizinische Beispiele:
-- Avogadro-Konstante: 6,022 × 10²³ pro Mol
+- Avogadro-Konstante: 6,022 × 10²³ /mol
 - Elementarladung: 1,602 × 10⁻¹⁹ C
 - Erythrozytendurchmesser: ca. 8 µm = 8 × 10⁻⁶ m
+- Normale [H⁺] im Blut: 4 × 10⁻⁸ mol/L = 40 nmol/L
 
-Rechenregel: (a × 10ⁿ) × (b × 10ᵐ) = (a × b) × 10^(n+m). Beispiel: (3 × 10⁴) × (2 × 10³) = 6 × 10⁷.
+Rechenregel: (a × 10ⁿ) × (b × 10ᵐ) = (a×b) × 10^(n+m). Beispiel: (3 × 10⁴) × (2 × 10³) = 6 × 10⁷.
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Dezibel-Berechnung (Logarithmus):**
-Schallintensität verdoppelt sich: ΔL = 10 × lg(I₂/I₁) = 10 × lg(2) = 10 × 0,301 = **3,01 dB**. Verdopplung = +3 dB. Umgekehrt: 20 dB Unterschied = Faktor 10^(20/10) = 10² = **100-fache Intensität**.
+**Beispiel 1 — pH bei Azidose:**
+Blut-pH sinkt von 7,40 auf 7,10 (Differenz 0,30). Wie ändert sich [H⁺]? Da ΔpH = 0,30 ≈ lg(2), verdoppelt sich [H⁺]. Rechnung: [H⁺] bei pH 7,40 = 10⁻⁷·⁴⁰ ≈ 40 nmol/L. Bei pH 7,10 = 10⁻⁷·¹⁰ ≈ 80 nmol/L. Verhältnis: 80/40 = 2. Bestätigt: **pH-Abfall um 0,3 = Verdopplung der [H⁺].**
 
-**Beispiel 2 — pH-Berechnung bei Azidose:**
-Blut-pH 7,40: [H⁺] = 10⁻⁷·⁴⁰ = **3,98 × 10⁻⁸ mol/L**. Azidose pH 7,10: [H⁺] = 10⁻⁷·¹⁰ = **7,94 × 10⁻⁸ mol/L**. Die H⁺-Konzentration verdoppelt sich bei pH-Abfall um nur 0,30 Einheiten (da lg 2 ≈ 0,30). Kleine pH-Änderung = große Konzentrationsänderung.
+**Beispiel 2 — Dezibel:**
+Ein Presslufthammer (100 dB) neben einem zweiten gleichen: I_gesamt = 2 × I₁. ΔL = 10 × lg(2) ≈ 3 dB. Ergebnis: **103 dB**, nicht 200 dB!
 
 **Beispiel 3 — Wurzelfalle erkennen:**
-Ist √(a²+b²) = a + b? Probe mit a = 3, b = 4: √(9+16) = √25 = 5, aber 3 + 4 = 7 ≠ 5. Also nein — die Summenregel ist **verboten**. Korrekt: √(a²+b²) lässt sich nicht weiter vereinfachen.`,
+Ist √(a²+b²) = a+b? Probe: a=3, b=4: √(9+16) = √25 = 5, aber 3+4 = 7 ≠ 5. Die Summenregel ist **verboten**. √(a²+b²) lässt sich nicht vereinfachen.
+
+**Beispiel 4 — Henderson-Hasselbalch:**
+Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) = 6,1 + lg(10) = 6,1 + 1,0 = **7,10**. Das halbierte Bicarbonat hat den pH von 7,40 auf 7,10 gesenkt — metabolische Azidose.`,
       lernziele: [
         "Alle acht Potenzgesetze sicher anwenden, insbesondere negative und gebrochene Exponenten korrekt handhaben",
-        "Wurzeln vereinfachen durch Erkennen quadratischer Teiler und Anwendung der Produktregel",
+        "Den Logarithmus als Umkehrfunktion des Potenzierens definieren und die drei Rechenregeln anwenden",
+        "Erklären, warum der pH-Wert logarithmisch ist, und die Faustregel 'pH sinkt um 0,3 = [H⁺] verdoppelt' herleiten",
+        "Henderson-Hasselbalch auf den Bicarbonat-Puffer anwenden und pH-Änderungen abschätzen",
+        "Die Dezibelskala interpretieren: +3 dB ≈ doppelte Intensität, +10 dB = 10-fache Intensität",
         "Halbwertszeit-Berechnungen mit Potenzen durchführen (Pharmakokinetik, Radioaktivität)",
-        "Zahlen in wissenschaftlicher Notation schreiben und mit Zehnerpotenzen rechnen",
       ],
       sections: [
         {
           heading: "Potenzgesetze — die acht Grundregeln mit Tücken",
-          text: "Die drei häufigsten Fehler: Erstens wird (a hoch n) hoch m = a hoch (n × m) mit a hoch (n+m) verwechselt — es ist Multiplikation, nicht Addition. Zweitens gilt (a+b) hoch n ungleich a hoch n + b hoch n — das Potenzgesetz gilt nur für Produkte, nicht für Summen. Drittens bedeutet a hoch (−n) nicht − a hoch n, sondern 1 / a hoch n. Strategie: Bei jeder Umformung die Basis identifizieren und prüfen, welches Gesetz anwendbar ist.",
+          text: "Die drei häufigsten Fehler: Erstens wird (a hoch n) hoch m = a hoch (n×m) mit a hoch (n+m) verwechselt — es ist Multiplikation, nicht Addition. Zweitens gilt (a+b) hoch n ungleich a hoch n + b hoch n — das Potenzgesetz gilt nur für Produkte. Drittens bedeutet a hoch (−n) nicht −a hoch n, sondern 1/a hoch n. Der nullte Exponent folgt aus dem Muster: 2³=8, 2²=4, 2¹=2, 2⁰=1 — jeder Schritt halbiert.",
           merksatz:
-            "a hoch n × a hoch m = a hoch (n+m); (a hoch n) hoch m = a hoch (n × m) — addieren vs. multiplizieren der Exponenten nicht verwechseln!",
+            "Multiplizieren = Exponenten addieren. Potenzieren = Exponenten multiplizieren. Nicht verwechseln!",
         },
         {
-          heading: "Gebrochene Exponenten und Wurzeln vereinfachen",
-          text: "a hoch (m/n) = (n-te Wurzel aus a) hoch m — der Nenner des Exponenten ist der Wurzelindex, der Zähler ist der Exponent. Beispiel: 27 hoch (2/3) = (Kubikwurzel aus 27) hoch 2 = 3 hoch 2 = 9. Wurzeln vereinfachen: Größten quadratischen Teiler ausklammern. Wurzel aus 200 = Wurzel aus (100 × 2) = 10 × Wurzel aus 2. Wichtige Verbote: Die Wurzel einer Summe darf nicht aufgeteilt werden. Wurzel aus (a+b) ist ungleich Wurzel aus a + Wurzel aus b!",
+          heading: "pH-Motivation — warum logarithmisch?",
+          text: "[H⁺] spannt 14 Größenordnungen (10⁻¹⁴ bis 10⁰ mol/L). Linear wäre der physiologische Bereich unsichtbar. Der Logarithmus staucht das auf 0–14. Das Minus in pH = −lg[H⁺] sorgt dafür, dass pH steigt wenn Azidität sinkt — intuitiv für Kliniker. Schlüsseleinsicht: lg(2) ≈ 0,30, daher bedeutet ein pH-Abfall von 0,3 eine Verdopplung der H⁺-Konzentration. pH 7,40 → 7,10 = [H⁺] von 40 auf 80 nmol/L — metabolische Azidose.",
           merksatz:
-            "a hoch (m/n) = (n-te Wurzel aus a) hoch m. Wurzelregel: Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b erlaubt. Wurzel aus (a+b) ungleich Wurzel aus a + Wurzel aus b verboten!",
+            "pH sinkt um 0,3 → [H⁺] verdoppelt sich. pH sinkt um 1,0 → [H⁺] verzehnfacht sich.",
         },
         {
-          heading: "Halbwertszeit — Potenzen in der Pharmakokinetik",
-          text: "N(t) = N0 × (1/2) hoch (t / T(1/2)) beschreibt radioaktiven Zerfall und Medikamentenabbau 1. Ordnung. Nach n Halbwertszeiten sind noch (1/2) hoch n der Ausgangsmenge vorhanden. Nach 5 T(1/2): noch ungefähr 3%; nach 10 T(1/2): unter 0,1%. Klinische Faustregel: Ein Medikament gilt nach 5 Halbwertszeiten als ausgewaschen. Logarithmengesetze, pH und Henderson-Hasselbalch → siehe UK Logarithmusfunktionen (ma-5-04).",
+          heading: "Henderson-Hasselbalch und Dezibel — Logarithmen in Aktion",
+          text: "Henderson-Hasselbalch: pH = pKₐ + lg([A⁻]/[HA]). Für Blut: pH = 6,1 + lg([HCO₃⁻]/(0,03×pCO₂)). Normales Verhältnis 20:1 ergibt pH 7,40. Dezibel: L = 10×lg(I/I₀). +3 dB ≈ doppelte Intensität (weil lg 2 ≈ 0,3). +10 dB = 10-fache Intensität. Beide Skalen nutzen dasselbe Prinzip: Logarithmus komprimiert riesige Bereiche.",
           merksatz:
-            "Nach n Halbwertszeiten: (1/2) hoch n der Ausgangsmenge. Nach 5 T(1/2): ungefähr 3%. Lambda = ln(2) / T(1/2) ungefähr 0,693 / T(1/2).",
+            "Henderson-Hasselbalch: pH = 6,1 + lg([HCO₃⁻]/(0,03×pCO₂)). Dezibel: +3 dB = doppelt, +10 dB = zehnfach.",
         },
       ],
       merksätze: [
-        "a hoch n × a hoch m = a hoch (n+m); a hoch n / a hoch m = a hoch (n − m); (a hoch n) hoch m = a hoch (n × m).",
-        "a hoch 0 = 1 (für a ≠ 0); a hoch (−n) = 1 / a hoch n; a hoch (m/n) = (n-te Wurzel aus a) hoch m.",
-        "(a × b) hoch n = a hoch n × b hoch n, aber (a+b) hoch n ungleich a hoch n + b hoch n!",
-        "Wurzel aus (a × b) = Wurzel aus a × Wurzel aus b; Wurzel aus (a hoch 2) = Betrag von a.",
-        "log(a × b) = log a + log b; log(a/b) = log a − log b; log(a hoch n) = n × log a.",
-        "pH = − lg[H+]; pro pH-Einheit ändert sich [H+] um Faktor 10.",
-        "Nach n Halbwertszeiten: (1/2) hoch n der Ausgangsmenge vorhanden.",
-        "Halbwertszeit T(1/2) = ln(2) / lambda ungefähr 0,693 / lambda; lambda = Zerfallskonstante.",
-        "Wissenschaftliche Notation: a × 10 hoch n mit 1 ≤ a kleiner 10.",
-        "ln(x) ungefähr 2,303 × lg(x); ln(2) ungefähr 0,693; ln(10) ungefähr 2,303.",
+        "a hoch n × a hoch m = a hoch (n+m); a hoch n / a hoch m = a hoch (n−m); (a hoch n) hoch m = a hoch (n×m).",
+        "a⁰ = 1 (Muster: 2³→2²→2¹→2⁰ halbiert jedes Mal); a⁻ⁿ = 1/aⁿ; a hoch (m/n) = (n-te Wurzel aus a) hoch m.",
+        "(a×b)ⁿ = aⁿ×bⁿ, aber (a+b)ⁿ ≠ aⁿ+bⁿ! √(a+b) ≠ √a+√b!",
+        "log(a×b) = log a + log b; log(a/b) = log a − log b; log(aⁿ) = n×log a. Aber: log(a+b) ≠ log a + log b!",
+        "pH = −lg[H⁺]. pH sinkt um 0,3 → [H⁺] verdoppelt. pH sinkt um 1 → [H⁺] verzehnfacht.",
+        "Henderson-Hasselbalch: pH = pKₐ + lg([A⁻]/[HA]). Blut: pH = 6,1 + lg([HCO₃⁻]/(0,03×pCO₂)).",
+        "Dezibel: L = 10×lg(I/I₀). +3 dB ≈ doppelte Intensität. +10 dB = 10-fache Intensität.",
+        "Nach n Halbwertszeiten: (1/2)ⁿ der Ausgangsmenge. 5 HWZ ≈ 3 %. λ = ln(2)/T½.",
+        "lg(2) ≈ 0,301; lg(3) ≈ 0,477; ln(2) ≈ 0,693; ln(10) ≈ 2,303.",
+        "Wissenschaftliche Notation: a × 10 hoch n mit 1 ≤ a < 10.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Ein Patient erhält eine Chemotherapie mit einem Wirkstoff der Halbwertszeit 12 Stunden. Die Initialdosis beträgt 800 mg. (a) Wie viel mg sind nach 36 Stunden noch im Körper? (b) Nach wie vielen Stunden ist die Konzentration auf unter 50 mg gefallen? (c) Wie hängen Halbwertszeit und Zerfallskonstante lambda zusammen?",
+          "Der arterielle Blut-pH eines Patienten sinkt von 7,40 auf 6,80. (a) Um welchen Faktor hat sich die H⁺-Konzentration geändert? (b) Berechnen Sie die H⁺-Konzentration bei beiden pH-Werten. (c) Erklären Sie mithilfe der Henderson-Hasselbalch-Gleichung, welche Änderung des HCO₃⁻/CO₂-Verhältnisses diesen pH-Shift verursachen könnte.",
         answer:
-          "Teil a: 36 Stunden entsprechen 36 / 12 = 3 Halbwertszeiten. N(36) = 800 × (1/2) hoch 3 = 800 × 1/8 = 100 mg. Nach 36 Stunden sind noch 100 mg vorhanden. Teil b: Gesucht ist t, sodass N(t) < 50 mg. Also 800 × (1/2) hoch (t/12) < 50. Dividiere durch 800: (1/2) hoch (t/12) < 1/16. Da 1/16 = (1/2) hoch 4, folgt t/12 > 4, also t > 48 Stunden. Logarithmisch: (t/12) × ln(1/2) < ln(1/16), also − (t/12) × ln(2) < − 4 × ln(2), also t/12 > 4. Genau bei t = 48 Stunden sind 800 × (1/2) hoch 4 = 50 mg vorhanden, also fällt die Konzentration nach mehr als 48 Stunden unter 50 mg. Teil c: T(1/2) = ln(2) / lambda ungefähr 0,693 / lambda. Hergeleitet aus N(T(1/2)) = N0/2 = N0 × e hoch (−lambda × T(1/2)). Kürze N0 und logarithmiere: − lambda × T(1/2) = ln(1/2) = − ln(2). Damit T(1/2) = ln(2) / lambda.",
+          "Teil a: ΔpH = 7,40 − 6,80 = 0,60 = 2 × 0,30. Da pH-Abfall um 0,30 eine Verdopplung von [H⁺] bedeutet (lg 2 ≈ 0,30), entspricht 0,60 einer Vervierfachung. Alternativ: Faktor = 10^(ΔpH) = 10^0,60 ≈ 4. Teil b: Bei pH 7,40: [H⁺] = 10⁻⁷·⁴⁰ ≈ 3,98 × 10⁻⁸ mol/L ≈ 40 nmol/L. Bei pH 6,80: [H⁺] = 10⁻⁶·⁸⁰ ≈ 1,58 × 10⁻⁷ mol/L ≈ 158 nmol/L. Verhältnis: 158/40 ≈ 4 ✓. Teil c: Henderson-Hasselbalch: pH = 6,1 + lg([HCO₃⁻]/(0,03×pCO₂)). Normal: lg(20) = 1,30 → pH 7,40. Für pH 6,80: 6,80 = 6,1 + lg(R), also lg(R) = 0,70, R = 10^0,70 ≈ 5. Das Verhältnis ist von 20:1 auf 5:1 gefallen — z. B. durch HCO₃⁻-Verlust bei metabolischer Azidose oder CO₂-Anstieg bei respiratorischer Azidose.",
       },
       klinischerBezug:
-        "Pharmakokinetik basiert auf Exponentialfunktionen: Viele Medikamente werden nach Kinetik 1. Ordnung abgebaut. Die Halbwertszeit bestimmt das Dosierungsintervall — Aspirin mit T(1/2) ungefähr 15 min, Amoxicillin mit T(1/2) ungefähr 1 h (dreimal täglich), Digoxin mit T(1/2) ungefähr 36 h (einmal täglich), Amiodaron mit T(1/2) ungefähr 40 bis 55 Tage (erfordert Loading-Dose-Regime). pH = − lg[H+]: Der arterielle pH 7,35 bis 7,45 entspricht H+-Konzentrationen von 35 bis 45 nmol/L. Eine Azidose auf pH 7,0 bedeutet eine Verdopplung der H+-Konzentration — klinisch lebensbedrohlich.",
+        "Pharmakokinetik: Halbwertszeit bestimmt Dosierungsintervall (5 HWZ = ausgewaschen). pH = −lg[H⁺]: Arteriell 7,35–7,45 entspricht 35–45 nmol/L H⁺; pH-Abfall um 0,3 = Verdopplung der [H⁺] — lebensbedrohlich. Henderson-Hasselbalch erklärt metabolische und respiratorische Azidose/Alkalose über das HCO₃⁻/CO₂-Verhältnis. Dezibel: Lärmschwerhörigkeit ab 85 dB Dauerbelastung; jede Verdopplung der Schallintensität = +3 dB.",
       selfTest: [
         {
           question: "Was ergibt 3 hoch 4 × 3 hoch (−2)?",
           options: ["9", "81", "27", "3", "729"],
           correctIndex: 0,
           explanation:
-            "3 hoch 4 × 3 hoch (−2) = 3 hoch (4 + (−2)) = 3 hoch 2 = 9. Gleiche Basis: Exponenten addieren. 4 + (−2) = 2. 3 hoch 2 = 9. Alternativ: 3 hoch 4 = 81; 3 hoch (−2) = 1/9. 81 × 1/9 = 9. Beide Wege liefern dasselbe Ergebnis. Die Regel lautet: Gleiche Basis × gleiche Basis ergibt gleiche Basis mit Exponentensumme.",
-          hints: [
-            "Gleiche Basis: Exponenten addieren. 4 + (−2) = ?",
-            "3 hoch (4 − 2) = 3 hoch 2 = ?",
-          ],
+            "3 hoch 4 × 3 hoch (−2) = 3 hoch (4+(−2)) = 3 hoch 2 = 9. Gleiche Basis: Exponenten addieren. 4+(−2) = 2. 3² = 9. Alternativ: 3⁴ = 81; 3⁻² = 1/9; 81 × 1/9 = 9.",
+          hints: ["Gleiche Basis: Exponenten addieren. 4 + (−2) = ?", "3 hoch 2 = ?"],
           difficulty: 1,
           tags: ["potenzgesetze", "exponenten", "algebra"],
         },
         {
-          question: "Was ist 16 hoch (3/4)?",
-          options: ["8", "12", "4", "32", "64"],
+          question:
+            "Der Blut-pH sinkt von 7,40 auf 7,10. Um welchen Faktor ändert sich die H⁺-Konzentration?",
+          options: [
+            "Sie verdoppelt sich",
+            "Sie verzehnfacht sich",
+            "Sie halbiert sich",
+            "Sie bleibt gleich",
+            "Sie vervierfacht sich",
+          ],
           correctIndex: 0,
           explanation:
-            "16 hoch (3/4) = (vierte Wurzel aus 16) hoch 3 = 2 hoch 3 = 8. Der Nenner 4 ist der Wurzelindex, der Zähler 3 der Exponent. Vierte Wurzel aus 16 = 2, weil 2 hoch 4 = 16. Dann 2 hoch 3 = 8. Alternativ: 16 hoch (3/4) = (16 hoch 3) hoch (1/4) = 4096 hoch (1/4) = 8 (da 8 hoch 4 = 4096). Beide Wege liefern dasselbe Ergebnis.",
+            "pH-Abfall um 0,30 Einheiten bedeutet Verdopplung der [H⁺], weil lg(2) ≈ 0,301. Rechnung: [H⁺] bei pH 7,40 ≈ 40 nmol/L, bei pH 7,10 ≈ 80 nmol/L. 80/40 = 2. Allgemein: ΔpH = 0,3 → Faktor 2; ΔpH = 1,0 → Faktor 10.",
           hints: [
-            "a hoch (m/n) = (n-te Wurzel aus a) hoch m. Hier: (vierte Wurzel aus 16) hoch 3.",
-            "Vierte Wurzel aus 16 = 2, da 2 hoch 4 = 16. Dann 2 hoch 3 = ?",
+            "lg(2) ≈ 0,30 — was bedeutet das für die pH-Skala?",
+            "pH sinkt um 0,30 → [H⁺] ändert sich um Faktor 10^0,30 ≈ ?",
           ],
-          difficulty: 3,
-          tags: ["potenzgesetze", "gebrochener-exponent", "wurzel"],
-        },
-        {
-          question: "Was ergibt lg(1000) − lg(10)?",
-          options: ["2", "100", "3", "1", "10"],
-          correctIndex: 0,
-          explanation:
-            "lg(1000) = lg(10 hoch 3) = 3 und lg(10) = lg(10 hoch 1) = 1. Differenz: 3 − 1 = 2. Alternativ mit Quotientenregel: lg(1000) − lg(10) = lg(1000/10) = lg(100) = lg(10 hoch 2) = 2. Beide Wege liefern 2. Die Quotientenregel des Logarithmus sagt: Der Logarithmus eines Quotienten ist die Differenz der Logarithmen.",
-          hints: [
-            "lg(10 hoch n) = n. Was sind die Exponenten für 1000 und 10?",
-            "Oder: Quotientenregel: lg(1000) − lg(10) = lg(1000/10) = lg(100).",
-          ],
-          difficulty: 1,
-          tags: ["logarithmus", "lg", "rechenregeln"],
+          difficulty: 2,
+          tags: ["ph-wert", "logarithmus", "klinisch"],
         },
         {
           question:
-            "Ein Medikament hat T(1/2) = 8 h. Nach 24 h sind noch wie viel Prozent der Ausgangsdosis vorhanden?",
-          options: ["12,5%", "25%", "50%", "6,25%", "33,3%"],
+            "Zwei identische Schallquellen: Eine allein erzeugt 80 dB. Wie viel dB erzeugen beide zusammen?",
+          options: ["83 dB", "160 dB", "80 dB", "86 dB", "90 dB"],
           correctIndex: 0,
           explanation:
-            "Anzahl Halbwertszeiten: 24 h / 8 h = 3. Verbleibender Anteil: (1/2) hoch 3 = 1/8 = 12,5%. Schrittweise: 100% nach 1 T(1/2) ergibt 50%; nach 2 T(1/2) ergibt 25%; nach 3 T(1/2) ergibt 12,5%. Nach jeder Halbwertszeit halbiert sich die Konzentration. Dies ist das Grundprinzip der Pharmakokinetik 1. Ordnung und des radioaktiven Zerfalls.",
-          hints: [
-            "Wie viele Halbwertszeiten passen in 24 h?",
-            "Nach 3 T(1/2): (1/2) hoch 3 = 1/8 = ?%",
-          ],
+            "Zwei identische Quellen = doppelte Intensität. ΔL = 10 × lg(2) ≈ 10 × 0,301 ≈ 3 dB. Also 80 + 3 = 83 dB. Dezibel addieren sich NICHT linear (nicht 80+80=160), weil die Skala logarithmisch ist.",
+          hints: ["Doppelte Intensität: ΔL = 10 × lg(2) ≈ ?", "lg(2) ≈ 0,301. Also ΔL ≈ 3 dB."],
           difficulty: 2,
+          tags: ["dezibel", "logarithmus", "schall"],
+        },
+        {
+          question:
+            "Ein Medikament hat T½ = 8 h. Nach 24 h sind noch wie viel Prozent der Ausgangsdosis vorhanden?",
+          options: ["12,5 %", "25 %", "50 %", "6,25 %", "33,3 %"],
+          correctIndex: 0,
+          explanation:
+            "Anzahl Halbwertszeiten: 24/8 = 3. Restanteil: (1/2)³ = 1/8 = 12,5 %. Schrittweise: 100 % → 50 % → 25 % → 12,5 %. Nach jeder HWZ halbiert sich die Konzentration.",
+          hints: ["Wie viele Halbwertszeiten passen in 24 h?", "(1/2) hoch 3 = ?"],
+          difficulty: 1,
           tags: ["halbwertszeit", "pharmakokinetik", "exponentialfunktion"],
         },
         {
-          question: "Welchen pH hat eine Lösung mit [H+] = 10 hoch (−5) mol/L?",
-          options: ["5", "−5", "0,00001", "10", "100000"],
+          question:
+            "Henderson-Hasselbalch: pH = 6,1 + lg([HCO₃⁻]/(0,03 × pCO₂)). Bei [HCO₃⁻] = 24 mmol/L und pCO₂ = 80 mmHg ergibt sich welcher pH?",
+          options: ["7,10", "7,40", "6,80", "7,70", "6,10"],
           correctIndex: 0,
           explanation:
-            "pH = − lg[H+] = − lg(10 hoch (−5)) = − (−5) = 5. Die Formel pH = − lg[H+] gibt direkt den pH-Wert. Da [H+] = 10 hoch (−5), ist lg(10 hoch (−5)) = − 5, und pH = − (−5) = 5. Dieser pH-Wert entspricht einer sauren Lösung (pH < 7). Normal arteriell: pH 7,35 bis 7,45.",
+            "Einsetzen: pH = 6,1 + lg(24/(0,03×80)) = 6,1 + lg(24/2,4) = 6,1 + lg(10) = 6,1 + 1,0 = 7,10. Der erhöhte pCO₂ (normal 40, hier 80 = verdoppelt) senkt den pH von 7,40 auf 7,10 — respiratorische Azidose.",
+          hints: ["Berechne 0,03 × 80 = ?", "lg(24/2,4) = lg(10) = ?"],
+          difficulty: 3,
+          tags: ["henderson-hasselbalch", "puffer", "logarithmus", "klinisch"],
+        },
+        {
+          question: "Welche Aussage über Logarithmen ist FALSCH?",
+          options: [
+            "lg(a+b) = lg(a) + lg(b)",
+            "lg(a×b) = lg(a) + lg(b)",
+            "lg(a/b) = lg(a) − lg(b)",
+            "lg(aⁿ) = n × lg(a)",
+            "lg(1) = 0",
+          ],
+          correctIndex: 0,
+          explanation:
+            "lg(a+b) = lg(a) + lg(b) ist FALSCH. Die Produktregel gilt nur für Multiplikation: lg(a×b) = lg(a) + lg(b). Gegenbeispiel: lg(10+10) = lg(20) ≈ 1,30, aber lg(10) + lg(10) = 1 + 1 = 2. Alle anderen Aussagen sind korrekt.",
           hints: [
-            "pH = − lg[H+]. Hier [H+] = 10 hoch (−5).",
-            "lg(10 hoch (−5)) = − 5. Also pH = − (−5) = ?",
+            "Prüfe jede Aussage mit konkreten Zahlen.",
+            "Welche Rechenoperation steht im Argument des Logarithmus?",
           ],
           difficulty: 2,
-          tags: ["ph-wert", "logarithmus", "säure-base"],
+          tags: ["logarithmus", "rechenregeln", "falsch-aussage"],
         },
       ],
     },

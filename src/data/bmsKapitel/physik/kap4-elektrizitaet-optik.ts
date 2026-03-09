@@ -1322,150 +1322,262 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Interferenz",
         "Beugung",
         "Doppelspalt",
+        "Dünnschichtinterferenz",
+        "Beugungsgitter",
+        "Polarisation",
         "Kohärenz",
         "Abbe-Kriterium",
         "Numerische Apertur",
         "Auflösungsvermögen",
         "OCT",
+        "Pulsoximetrie",
+        "Brewster-Winkel",
         "Spektrum",
         "Wellenlänge",
         "Superposition",
-        "Ölimmersion",
       ],
-      content: `## Licht als elektromagnetische Welle
+      content: `## Warum schimmern Seifenblasen in Regenbogenfarben?
 
-Warum kann ein Lichtmikroskop keine Viren abbilden? Die Antwort liegt in der Wellennatur des Lichts. Licht ist eine transversale elektromagnetische Welle, bei der elektrisches und magnetisches Feld senkrecht zur Ausbreitungsrichtung schwingen. Kenngrößen sind:
-- **Wellenlänge λ**: räumlicher Abstand zwischen zwei Wellenbergen
-- **Frequenz f**: zeitliche Schwingungsfrequenz
-- **Zusammenhang**: c = λ·f (c = Lichtgeschwindigkeit im Vakuum ≈ 3·10⁸ m/s)
+Warum zeigt eine Seifenblase bunte Farbmuster? Warum reflektiert eine CD Licht in Spektralfarben? Die geometrische Optik (Strahlenmodell) hat darauf keine Antwort. Diese Phänomene entstehen, weil Licht eine **Welle** ist — und Wellen sich gegenseitig verstärken oder auslöschen können. Genau das untersucht die Wellenoptik.
 
-Das **sichtbare Spektrum** umfasst Wellenlängen von ca. 380 nm (violett) bis 780 nm (rot). Unterhalb liegt UV-Strahlung (100–380 nm), oberhalb Infrarotstrahlung (780 nm–1 mm).
+Licht ist eine transversale elektromagnetische Welle: elektrisches und magnetisches Feld schwingen senkrecht zur Ausbreitungsrichtung. Die Wellenlänge bestimmt die Farbe — von 380 nm (violett) bis 780 nm (rot). Die zentrale Gleichung:
+
+> **c = λ · f** (c ≈ 3 × 10⁸ m/s im Vakuum)
+
+Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_Medium = λ₀/n), aber die **Frequenz bleibt gleich** — ein häufiger Prüfungspunkt.
 
 {{DIAGRAM:em-spectrum}}
 
-> **Merke:** c = λ·f = 3×10⁸ m/s im Vakuum. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_medium = λ₀/n), die Frequenz bleibt gleich.
+---
 
-**Dispersion:** Dispersion ist die **wellenlängenabhängige Brechung** — der Brechungsindex n hängt von der Wellenlänge ab; kurzwelliges Licht (blau/violett) wird stärker gebrochen als langwelliges (rot). Beim Regenbogen entsteht die Auffächerung von weißem Licht durch **wellenlängenabhängige Brechung** in den Wassertropfen, **nicht** durch wellenlängenabhängige Totalreflexion, Beugung, Absorption oder Streuung. Ein Prisma zerlegt weißes Licht in Spektralfarben. Medizinisch relevant: Polychromator in der Spektralphotometrie (Labordiagnostik) und chromatische Aberration in Linsen.
+## Interferenz — wenn Wellen sich treffen
 
-**Polarisation:** Licht ist transversal und kann polarisiert werden — das E-Feld schwingt nur in einer Ebene. Polarisationsfilter blocken Blendlicht. Chiroptische Methoden nutzen die Drehung der Polarisationsebene durch optisch aktive Substanzen (z. B. Glukose-Bestimmung im Polarimeter).
+**Alltagsbild:** Zwei Lautsprecher spielen denselben Ton. Gehst du durch den Raum, findest du laute Stellen (konstruktive Interferenz) und leise Stellen (destruktive Interferenz). Licht verhält sich genauso.
 
-## Interferenz
+**Interferenz** ist die Überlagerung (Superposition) kohärenter Wellen — gleiche Frequenz, feste Phasenbeziehung. Treffen Wellenberg auf Wellenberg, addieren sich die Amplituden:
 
-**Interferenz** bezeichnet die Überlagerung (Superposition) zweier oder mehrerer kohärenter Wellen. Kohärenz bedeutet: gleiche Frequenz und feste Phasenbeziehung.
+- **Konstruktive Interferenz** (Verstärkung): Gangunterschied **Δ = n · λ** (n = 0, 1, 2, …)
+- **Destruktive Interferenz** (Auslöschung): Gangunterschied **Δ = (n + ½) · λ**
 
-**Konstruktive Interferenz** (Verstärkung) tritt auf, wenn der Gangunterschied Δ ein ganzzahliges Vielfaches der Wellenlänge ist:
-> **Δ = n · λ** (n = 0, 1, 2, …)
+> **Merke:** Berg + Berg = doppelt hell. Berg + Tal = dunkel. Der Gangunterschied Δ entscheidet.
 
-**Destruktive Interferenz** (Auslöschung) tritt auf, wenn der Gangunterschied ein halbzahliges Vielfaches ist:
-> **Δ = (n + ½) · λ** (n = 0, 1, 2, …)
+---
+
+## Dünnschichtinterferenz — Seifenblasen und Ölfilme
+
+Hier wird das Interferenzprinzip greifbar: Licht reflektiert sowohl an der **Oberseite** als auch an der **Unterseite** einer dünnen Schicht (Seifenfilm, Ölfilm auf Pfütze, Entspiegelungsschicht auf Brillenglas). Die beiden reflektierten Wellen überlagern sich.
+
+**Entscheidende Faktoren:**
+- **Schichtdicke d**: bestimmt den Gangunterschied (Licht durchläuft die Schicht zweimal: hin und zurück)
+- **Brechungsindex n der Schicht**: optische Weglänge = 2 · n · d
+- **Phasensprung bei Reflexion**: Trifft Licht auf ein optisch dichteres Medium (n₂ > n₁), springt die Phase bei Reflexion um λ/2 — ein halber Wellenzug extra. Am optisch dünneren Medium: kein Phasensprung
+
+**Bedingung für konstruktive Interferenz (helle Farbe bei Reflexion):**
+> **2 · n · d = (m + ½) · λ** (wenn genau ein Phasensprung auftritt)
+
+**Warum wechseln die Farben mit dem Betrachtungswinkel?** Bei schrägem Blick durchläuft das Licht eine längere Strecke in der Schicht → der Gangunterschied ändert sich → eine andere Wellenlänge (Farbe) wird konstruktiv verstärkt. Deshalb schimmern Seifenblasen bei Bewegung.
+
+**Anwendungen:**
+- **Entspiegelung** (Vergütung): Schichtdicke so gewählt, dass reflektierte Wellen destruktiv interferieren → weniger Reflexion (Brillengläser, Kameralinsen)
+- **Ölfilm auf Wasser**: Öl (n ≈ 1,5) auf Wasser (n ≈ 1,33) → Phasensprung nur an Öl-Oberseite → bunte Ringe
+
+> **Merke:** Dünnschichtinterferenz = Reflexion an Ober- UND Unterseite → Phasensprung beachten → Farbe hängt von Schichtdicke und Betrachtungswinkel ab.
+
+---
 
 ## Doppelspaltexperiment (Young)
 
-Thomas Youngs klassisches Experiment (1801) bewies den Wellencharakter des Lichts. Licht trifft auf einen Doppelspalt mit Spaltabstand d. Hinter dem Spalt entstehen zwei kohärente Kugelwellen, die auf einem Schirm im Abstand L interferieren.
+Thomas Youngs Experiment (1801) bewies den Wellencharakter des Lichts: Licht trifft auf zwei schmale Spalte im Abstand d. Dahinter entstehen zwei kohärente Kugelwellen, die auf einem Schirm (Abstand L) ein **Streifenmuster aus hellen und dunklen Streifen** erzeugen.
 
-Der **Gangunterschied** für den Winkel θ ist:
-> **Δ = d · sin θ ≈ d · y/L** (für kleine Winkel)
+Der Gangunterschied für den Winkel θ:
+> **Δ = d · sin θ** → **Maxima bei d · sin θ = n · λ**
 
-wobei y der Abstand des Maximums von der Mittelachse ist.
-
-**Abstand zweier benachbarter Maxima (heller Streifen):**
+Für kleine Winkel (sin θ ≈ y/L) ergibt sich der **Streifenabstand**:
 > **Δy = λ · L / d**
 
-Ein kleiner Spaltabstand d oder eine größere Wellenlänge λ ergibt ein weiteres Muster – die Streifen liegen weiter auseinander.
+**Was passiert bei Veränderungen?**
+| Änderung | Effekt auf Streifenabstand |
+|---|---|
+| λ verdoppelt | Δy verdoppelt (breitere Streifen) |
+| d halbiert | Δy verdoppelt |
+| L vergrößert | Δy vergrößert |
+| Rotes statt blaues Licht | breitere Streifen (λ_rot > λ_blau) |
 
-## Beugung
+> **Merke:** Δy = λ·L/d — je größer die Wellenlänge oder je kleiner der Spaltabstand, desto weiter liegen die Interferenzstreifen auseinander.
 
-**Beugung** ist die Ablenkung von Wellen an Hindernissen oder Öffnungen. Sie tritt merklich auf, wenn die Hindernisgröße in der Größenordnung der Wellenlänge liegt.
+---
 
-- Kurzwelliges Licht (violett, ~400 nm) wird weniger gebeugt als langwelliges (rot, ~700 nm).
-- Am Einzelspalt der Breite b entsteht das erste Minimum bei: sin α = λ/b
-- Das zentrale Maximum hat doppelte Breite im Vergleich zu den Nebenmaxima.
+## Beugung (Diffraktion)
 
-## Auflösungsvermögen und Abbe-Kriterium
+**Häufiges Missverständnis:** „Beugung passiert nur an Spalten." Falsch — Beugung tritt an **jeder Kante** auf. Licht biegt sich um Hindernisse, wenn deren Abmessung in der Größenordnung der Wellenlänge liegt. Auch „Licht kann nicht um Ecken biegen" stimmt nicht — es kann, nur extrem wenig bei sichtbarem Licht.
 
-Das **Auflösungsvermögen** eines optischen Systems gibt an, wie nah zwei Punkte beieinander liegen dürfen, um noch als getrennt wahrgenommen zu werden.
+**Einzelspalt der Breite b:**
+- Erstes Minimum bei: **sin α = λ / b**
+- Das zentrale Maximum hat **doppelte Breite** verglichen mit den Nebenmaxima
+- Kurzwelliges Licht (violett) wird weniger gebeugt als langwelliges (rot)
 
-Ernst Abbe zeigte, dass die minimale auflösbare Struktur durch Beugung begrenzt ist:
-> **d_min = λ / (2 · NA)**
+**Beugungsscheibchen (Airy-Disk):** Jeder Punkt wird durch eine kreisförmige Öffnung (Linse, Pupille) in ein Beugungsscheibchen abgebildet — nicht in einen Punkt. Das begrenzt die Auflösung jedes optischen Systems.
 
-wobei **NA = n · sin α** die **numerische Apertur** des Objektivs ist (n = Brechungsindex des Mediums zwischen Probe und Objektiv, α = halber Öffnungswinkel).
+**Auflösungsvermögen — Abbe-Kriterium:**
+> **d_min = λ / (2 · NA)** mit **NA = n · sin α**
 
-**Konsequenzen:**
-- Kleineres λ → bessere Auflösung (Elektronenmikroskop, Röntgen)
-- Größere NA → bessere Auflösung (Ölimmersion: n_Öl ≈ 1,52 statt n_Luft = 1)
-- Mit Licht (λ_min ≈ 400 nm) und maximaler NA ≈ 1,4 ergibt sich d_min ≈ 140 nm
+(n = Brechungsindex des Mediums, α = halber Öffnungswinkel des Objektivs)
 
-> **Prüfungstipp:** Das Abbe-Kriterium d_min = λ/(2·NA) ist eine Standardfrage. Merke: Kürzere Wellenlänge ODER höhere NA verbessern die Auflösung. Ölimmersion erhöht NA von ~0,95 auf ~1,4 — das allein verbessert die Auflösung um fast 50 %.
+- Luft (n = 1): NA_max ≈ 0,95 → d_min ≈ 270 nm
+- Ölimmersion (n ≈ 1,52): NA ≈ 1,4 → d_min ≈ 185 nm
+- UV-Licht (λ = 350 nm) + Öl: d_min ≈ 125 nm
 
-## Kohärente Optik und klinische Anwendungen
+> **Prüfungstipp:** Abbe-Kriterium ist eine Standardfrage. Zwei Stellschrauben: kürzere Wellenlänge ODER höhere numerische Apertur. Ölimmersion verbessert die Auflösung um ~50 %.
 
-**Optische Kohärenztomographie (OCT):** Nutzt Niederkohärenz-Interferometrie. Ein Lichtstrahl wird in Referenz- und Messstrahl aufgeteilt. Konstruktive Interferenz tritt nur auf, wenn beide Strahlen die gleiche optische Weglänge zurückgelegt haben. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Schnittbild erzeugen (axiale Auflösung ~10 µm, nicht durch Beugung begrenzt). Klinisch wichtig für: Augendiagnostik (Netzhautschichten, Makuladegeneration), Koronargefäß-Bildgebung, Dermatologie.
+---
+
+## Beugungsgitter — scharfe Spektrallinien
+
+Ein Beugungsgitter besteht aus Tausenden paralleler Spalte mit konstantem Abstand d (Gitterkonstante). Viele Spalte statt zwei bewirken: Die Interferenzmaxima werden **extrem scharf** (schmale Peaks), während dazwischen fast vollständige Dunkelheit herrscht.
+
+**Gittergleichung:**
+> **d · sin θ = n · λ** (n = Beugungsordnung)
+
+**Anwendung in der Medizin:** Gitter zerlegen Licht präzise in Spektralfarben → Grundlage von **Spektralphotometrie** (Labordiagnostik, Blutgasanalyse) und **Pulsoximetrie** (wellenlängenabhängige Absorption von Oxy- vs. Desoxyhämoglobin bei 660 nm rot und 940 nm infrarot).
+
+Eine CD oder DVD ist im Prinzip ein Reflexionsgitter — die dicht gepackten Rillen beugen weißes Licht in Spektralfarben.
+
+> **Merke:** Gitter = viele Spalte → scharfe Spektrallinien. Medizinisch: Spektrophotometer, Pulsoximeter.
+
+---
+
+## Polarisation — Licht schwingt in einer Ebene
+
+Da Licht eine **transversale** Welle ist (E-Feld schwingt senkrecht zur Ausbreitung), kann es polarisiert werden. Longitudinale Wellen (Schall) können das nicht — ein wichtiger Unterschied.
+
+**Arten der Polarisation:**
+- **Unpolarisiertes Licht**: E-Feld schwingt in allen Richtungen senkrecht zur Ausbreitung (normales Licht)
+- **Linear polarisiert**: E-Feld schwingt nur in einer Ebene (nach Polarisationsfilter)
+- **Zirkular polarisiert**: E-Feld rotiert schraubenförmig
+
+**Polarisation durch Reflexion — Brewster-Winkel:**
+Bei Reflexion an einer Grenzfläche wird Licht teilweise polarisiert. Beim **Brewster-Winkel** θ_B ist das reflektierte Licht **vollständig polarisiert**:
+> **tan θ_B = n₂ / n₁**
+
+Für Glas (n = 1,5): θ_B = arctan(1,5) ≈ 56°. Polarisationssonnenbrillen nutzen diesen Effekt, um Blendreflexe (Wasseroberfläche, Straße) zu eliminieren.
+
+**Gesetz von Malus:** Fällt polarisiertes Licht der Intensität I₀ auf einen Analysator mit Winkel φ zur Polarisationsrichtung:
+> **I = I₀ · cos²φ**
+
+Bei φ = 90° (gekreuzte Filter): I = 0 — kein Licht kommt durch.
+
+**Klinische Anwendungen:**
+- **Polarisationsmikroskopie**: Gichtkristalle (Natriumurat) zeigen negative Doppelbrechung → leuchten gelb bei paralleler, blau bei senkrechter Orientierung. Pseudogicht (Calciumpyrophosphat) zeigt positive Doppelbrechung — diagnostisch unterscheidbar
+- **LCD-Bildschirme**: Zwei gekreuzte Polarisationsfilter → Flüssigkristalle drehen die Polarisationsebene spannungsabhängig
+- **Spannungsoptik (Photoelastizität)**: Transparente Materialien unter mechanischer Spannung werden doppelbrechend → Spannungsverteilung sichtbar (Prothetik, Biomechanik)
+- **Polarimeter**: Messung der optischen Aktivität chiraler Moleküle (z. B. Glukosekonzentration in Lösungen)
+
+> **Merke:** Nur transversale Wellen sind polarisierbar. Brewster-Winkel: tan θ_B = n₂/n₁. Medizinisch: Gichtkristalle unter Polarisationsmikroskop, Glukose im Polarimeter.
+
+---
+
+## Klinische Anwendungen der Wellenoptik
+
+| Verfahren | Wellenoptisches Prinzip | Klinischer Einsatz |
+|---|---|---|
+| **Pulsoximetrie** | Wellenlängenabhängige Absorption (660 nm / 940 nm) | SpO₂-Messung am Finger |
+| **Spektrophotometrie** | Beugungsgitter zerlegt Licht | Blutgasanalyse, Laborchemie |
+| **OCT** | Niederkohärenz-Interferometrie | Netzhautdiagnostik, Koronargefäße |
+| **Polarisationsmikroskopie** | Doppelbrechung polarisierten Lichts | Gichtkristalle, Amyloid-Nachweis |
+| **Entspiegelte Optik** | Dünnschicht-Destruktivinterferenz | Endoskope, Brillengläser |
+| **Laser** | Kohärente, monochromatische Strahlung | Chirurgie, Photokoagulation |
+
+**Optische Kohärenztomographie (OCT)** verdient besondere Betonung: Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird in Referenz- und Probenarm aufgeteilt. Konstruktive Interferenz tritt nur auf, wenn beide Weglängen übereinstimmen. Durch Scannen erhält man tiefenaufgelöste Schnittbilder (axiale Auflösung ~10 µm). Standard in der Augenheilkunde für Makula, Glaukom und Netzhautödem.
+
+---
+
+## Typische Fallen und Missverständnisse
+
+- **„Beugung passiert nur an Spalten"** → Nein, an jeder Kante und jedem Hindernis. Spalte sind nur die klassischen Lehrbeispiele.
+- **„Licht kann nicht um Ecken biegen"** → Doch, durch Beugung. Bei sichtbarem Licht ist der Effekt nur sehr gering wegen der kleinen Wellenlänge.
+- **„Im Medium ändert sich die Frequenz"** → Nein! Nur Wellenlänge und Geschwindigkeit ändern sich. Die Frequenz bleibt konstant.
+- **„Phasensprung bei jeder Reflexion"** → Nur am optisch dichteren Medium (n₂ > n₁). Am dünneren Medium: kein Phasensprung.
+- **„Polarisation funktioniert auch bei Schall"** → Nein. Schall ist eine Longitudinalwelle und nicht polarisierbar.
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Doppelspalt-Streifenabstand (Spektroskopie):**
-λ = 550 nm (grün), d = 0,1 mm = 10⁻⁴ m, L = 2 m.
-Δy = λ·L/d = 550×10⁻⁹ · 2 / 10⁻⁴ = 1,1×10⁻⁶ / 10⁻⁴ = **11 mm**.
+**Beispiel 1 — Doppelspalt-Streifenabstand:**
+λ = 550 nm, d = 0,1 mm = 10⁻⁴ m, L = 2 m.
+Δy = λ·L/d = 550×10⁻⁹ · 2 / 10⁻⁴ = **11 mm**.
 Bei rotem Licht (λ = 700 nm): Δy = 700×10⁻⁹ · 2 / 10⁻⁴ = **14 mm** — breiteres Muster.
 
-**Beispiel 2 — Auflösungsgrenze (Abbe) bei verschiedenen Mikroskop-Konfigurationen:**
+**Beispiel 2 — Auflösungsgrenze (Abbe):**
 Trockenobjektiv (NA = 0,95), grün (λ = 520 nm): d_min = 520/(2·0,95) = **274 nm**.
 Ölimmersion (NA = 1,3), grün: d_min = 520/(2·1,3) = **200 nm**.
-Ölimmersion, UV (λ = 350 nm): d_min = 350/(2·1,3) = **135 nm** — kleinste Bakterien noch auflösbar.
+Ölimmersion + UV (λ = 350 nm): d_min = 350/(2·1,3) = **135 nm**.
 
-**Beispiel 3 — Einzelspalt: erstes Minimum:**
-Spaltbreite b = 10 µm = 10⁻⁵ m, λ = 500 nm.
-sin α = λ/b = 500×10⁻⁹ / 10⁻⁵ = 0,05 → α ≈ **2,87°**.
-Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0,05 = **100 mm** (10 cm).`,
+**Beispiel 3 — Dünnschicht:**
+Seifenfilm (n = 1,33), Dicke d = 300 nm. Optische Weglänge = 2·1,33·300 = 798 nm.
+Mit einem Phasensprung: konstruktiv bei λ = 2nd/(m+½). Für m = 0: λ = 798/0,5 = 1596 nm (IR, unsichtbar). Für m = 1: λ = 798/1,5 = **532 nm (grün)** — der Film erscheint grün!
+
+**Beispiel 4 — Brewster-Winkel:**
+Glas (n = 1,5): tan θ_B = 1,5 → θ_B = arctan(1,5) ≈ **56,3°**.
+Wasser (n = 1,33): tan θ_B = 1,33 → θ_B ≈ **53,1°** — Blendung von Wasseroberflächen.`,
       diagram: "em-spectrum",
       lernziele: [
-        "Das sichtbare Spektrum mit Wellenlängenbereich (380–780 nm) benennen.",
-        "Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erläutern.",
-        "Den Streifenabstand beim Doppelspaltexperiment mit Δy = λ·L/d berechnen.",
-        "Das Abbe-Kriterium formulieren und die Faktoren für besseres Auflösungsvermögen benennen.",
-        "Das Prinzip der OCT als klinische Anwendung der Wellenoptik beschreiben.",
+        "Konstruktive und destruktive Interferenz mit Gangunterschieds-Bedingungen erklären.",
+        "Dünnschichtinterferenz (Seifenblase, Ölfilm) mit Phasensprung analysieren.",
+        "Den Streifenabstand beim Doppelspalt mit Δy = λ·L/d berechnen.",
+        "Beugung am Einzelspalt und das Abbe-Kriterium d_min = λ/(2·NA) anwenden.",
+        "Beugungsgitter und ihre Anwendung in der Spektroskopie beschreiben.",
+        "Polarisation erklären: Brewster-Winkel, Malus-Gesetz, klinische Anwendungen.",
+        "OCT, Pulsoximetrie und Polarisationsmikroskopie als wellenoptische Verfahren einordnen.",
       ],
       sections: [
         {
           heading: "Interferenz: konstruktiv und destruktiv",
-          text: "Wenn zwei kohärente Lichtwellen (gleiche Frequenz, konstante Phasenbeziehung) überlagern, addieren sich ihre Amplituden. Bei gleichem Gangunterschied Δ = n·λ (ganzzahliges Vielfaches der Wellenlänge) verstärken sich die Wellen konstruktiv – es entsteht Helligkeit. Bei Δ = (n+½)·λ löschen sie sich destruktiv aus – es entsteht Dunkelheit. Interferenz ist ein einzigartiges Wellenmerkmal; Teilchen zeigen dieses Verhalten nicht. Beim Youngschen Doppelspaltexperiment erzeugt die Überlagerung der Wellen aus zwei Spalten ein Streifenmuster auf einem Schirm.",
-          merksatz: "Konstruktive Interferenz: Δ = n·λ (hell); destruktive: Δ = (n+½)·λ (dunkel).",
+          text: "Zwei Lautsprecher, gleicher Ton: An manchen Stellen im Raum ist es laut (Wellenberge addieren sich), an anderen leise (Berg löscht Tal aus). Exakt so interferiert Licht. Konstruktive Interferenz (Verstärkung) tritt auf bei Gangunterschied Δ = n·λ, destruktive (Auslöschung) bei Δ = (n+½)·λ. Kohärenz (gleiche Frequenz, feste Phase) ist Voraussetzung. Dünnschichtinterferenz macht dies sichtbar: Seifenblasen, Ölfilme und Brillenvergütungen beruhen auf Reflexion an Ober- und Unterseite dünner Schichten, wobei ein Phasensprung am optisch dichteren Medium den Gangunterschied verschiebt.",
+          merksatz:
+            "Konstruktiv: Δ = n·λ (hell). Destruktiv: Δ = (n+½)·λ (dunkel). Phasensprung am dichteren Medium beachten.",
         },
         {
-          heading: "Beugung und Auflösungsgrenze",
-          text: "Beugung tritt auf, wenn Licht an Strukturen in Größenordnung seiner Wellenlänge vorbeizieht. Am Einzelspalt entsteht durch Beugung ein charakteristisches Intensitätsmuster mit breitem Zentralmaximum und schwächeren Nebenmaxima. Für optische Instrumente bedeutet dies: Zwei Punkte können nur dann getrennt aufgelöst werden, wenn ihr Beugungsscheibchen nicht überlappen. Das Abbe-Kriterium d_min = λ/(2·NA) setzt die fundamentale Auflösungsgrenze. Bessere Auflösung erfordert kürzeres λ oder größere numerische Apertur.",
+          heading: "Doppelspalt, Beugung und Gitter",
+          text: "Youngs Doppelspalt erzeugt durch Interferenz zweier kohärenter Wellen helle und dunkle Streifen (Δy = λ·L/d). Beugung tritt an jeder Kante auf — nicht nur an Spalten. Am Einzelspalt entsteht ein breites Zentralmaximum mit schwächeren Nebenmaxima. Jede Linse erzeugt durch Beugung ein Airy-Scheibchen statt eines Punkts, was die Auflösung begrenzt (Abbe: d_min = λ/(2·NA)). Ein Beugungsgitter (Tausende Spalte) erzeugt extrem scharfe Spektrallinien — Grundlage der Spektralphotometrie und Pulsoximetrie in der Medizin.",
           merksatz:
-            "d_min = λ/(2·NA) – kürzere Wellenlänge und größere Apertur verbessern die Auflösung.",
+            "Doppelspalt: Δy = λ·L/d. Abbe: d_min = λ/(2·NA). Gitter: scharfe Linien für Spektroskopie.",
         },
         {
-          heading: "Optische Kohärenztomographie (OCT)",
-          text: "OCT ist ein bildgebendes Verfahren, das auf Niederkohärenz-Interferometrie basiert. Breitband-Licht (kurze Kohärenzlänge ~10 µm) wird durch einen Strahlteiler in einen Referenz- und einen Probenarm aufgeteilt. Interferenz tritt nur auf, wenn die optischen Weglängen beider Arme übereinstimmen. Durch Scannen der Referenzarmlänge erhält man ein tiefenaufgelöstes Bild (A-Scan). Seitliches Scannen ergibt ein 2D-Querschnittsbild (B-Scan). In der Augenheilkunde wird OCT routinemäßig zur Darstellung der Netzhautschichten genutzt.",
+          heading: "Polarisation",
+          text: "Nur transversale Wellen können polarisiert werden — Schall (longitudinal) nicht. Beim Brewster-Winkel (tan θ_B = n₂/n₁) ist reflektiertes Licht vollständig polarisiert; Polarisationssonnenbrillen nutzen das gegen Blendung. Das Malus-Gesetz (I = I₀·cos²φ) beschreibt die Intensität nach einem Analysator. Klinisch: Gichtkristalle zeigen negative Doppelbrechung im Polarisationsmikroskop (gelb parallel, blau senkrecht), Pseudogicht-Kristalle positive. LCD-Bildschirme und optische Aktivitätsmessung (Polarimeter, Glukose) nutzen ebenfalls Polarisation.",
           merksatz:
-            "OCT nutzt Interferenz von Niederkohärenz-Licht für hochaufgelöste Tiefenbilder (~10 µm).",
+            "Brewster: tan θ_B = n₂/n₁. Malus: I = I₀·cos²φ. Gichtkristalle: negativ doppelbrechend im Polarisationsmikroskop.",
+        },
+        {
+          heading: "Klinische Anwendungen",
+          text: "OCT (optische Kohärenztomographie) nutzt Niederkohärenz-Interferometrie für Netzhaut-Schnittbilder mit ~10 µm Auflösung. Pulsoximetrie misst SpO₂ über wellenlängenabhängige Absorption bei 660 nm (rot) und 940 nm (infrarot). Spektrophotometer verwenden Beugungsgitter zur Blutgasanalyse. Polarisationsmikroskopie identifiziert Gicht- vs. Pseudogicht-Kristalle. Entspiegelte Endoskoplinsen nutzen destruktive Dünnschichtinterferenz.",
+          merksatz:
+            "OCT: Interferometrie → Netzhaut. Pulsoximeter: 660/940 nm. Polarisationsmikroskop: Gicht-Diagnose.",
         },
       ],
 
       merksätze: [
-        "Sichtbares Licht: λ = 380 nm (violett) bis 780 nm (rot).",
-        "c = λ·f – Lichtgeschwindigkeit ist Produkt aus Wellenlänge und Frequenz.",
-        "Konstruktive Interferenz: Gangunterschied Δ = n·λ (Wellenberge treffen aufeinander).",
-        "Destruktive Interferenz: Gangunterschied Δ = (n+½)·λ (Berg trifft Tal).",
-        "Doppelspalt-Streifenabstand: Δy = λ·L/d – größeres λ oder kleineres d → weiteres Muster.",
-        "Beugung ist merklich, wenn Hindernisbreite ≈ Wellenlänge.",
-        "Kurzwelliges Licht (violett) wird weniger gebeugt als langwelliges (rot).",
-        "Abbe-Kriterium: d_min = λ/(2·NA) – fundamentales Auflösungslimit optischer Systeme.",
-        "Numerische Apertur NA = n·sin α – Öl-Immersionsobjektive erhöhen NA auf ~1,4.",
-        "OCT nutzt Niederkohärenz-Interferometrie für ~10 µm Tiefenauflösung am Auge.",
+        "c = λ·f — Frequenz bleibt im Medium konstant, nur Wellenlänge und Geschwindigkeit ändern sich.",
+        "Konstruktive Interferenz: Δ = n·λ (Berg + Berg). Destruktive: Δ = (n+½)·λ (Berg + Tal).",
+        "Dünnschicht: Phasensprung nur am optisch dichteren Medium. Farbe hängt von Schichtdicke und Winkel ab.",
+        "Doppelspalt-Streifenabstand: Δy = λ·L/d — größeres λ oder kleineres d → weiteres Muster.",
+        "Beugung passiert an jeder Kante, nicht nur an Spalten.",
+        "Abbe-Kriterium: d_min = λ/(2·NA) — kürzeres λ oder größere NA verbessern die Auflösung.",
+        "NA = n·sin α — Ölimmersion erhöht NA von ~0,95 auf ~1,4.",
+        "Beugungsgitter: viele Spalte → scharfe Spektrallinien. Basis für Pulsoximetrie und Spektrophotometrie.",
+        "Brewster-Winkel: tan θ_B = n₂/n₁ — reflektiertes Licht vollständig polarisiert.",
+        "Malus-Gesetz: I = I₀·cos²φ — bei gekreuzten Filtern (90°) kommt kein Licht durch.",
+        "Gichtkristalle: negative Doppelbrechung. Pseudogicht: positive Doppelbrechung.",
+        "OCT nutzt Niederkohärenz-Interferometrie für ~10 µm Tiefenauflösung (Auge, Koronargefäße).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was ist das Abbe-Kriterium, und wie kann die Auflösung eines Lichtmikroskops verbessert werden?",
+        question: "Welche Aussage zur Wellenoptik ist richtig?",
         answer:
-          "Das Abbe-Kriterium (Ernst Abbe, 1873) gibt die fundamentale Auflösungsgrenze eines lichtoptischen Systems an. Es besagt, dass zwei benachbarte Punkte nur dann getrennt sichtbar sind, wenn ihr Abstand d_min größer als λ/(2·NA) ist, wobei λ die Wellenlänge des verwendeten Lichts und NA = n·sin α die numerische Apertur des Objektivs sind (n = Brechungsindex des Mediums, α = halber Öffnungswinkel des Objektivs). Diese Grenze ergibt sich aus dem Wellencharakter des Lichts: Das von einem Punktobjekt erzeugte Beugungsmuster (Airy-Scheibchen) überlappen, sobald zwei Punkte zu nah beieinander liegen. Die Auflösung kann auf drei Wegen verbessert werden: (1) Kürzere Wellenlänge: Durch Verwendung von UV-Licht (λ ≈ 250 nm statt 500 nm) kann d_min auf etwa 100 nm halbiert werden. Noch kleinere Wellenlängen (Röntgen, Elektronen) ermöglichen Nanometer-Auflösung. (2) Größere numerische Apertur: Ölimmersionsobjektive ersetzen Luft (n=1) durch Immersionsöl (n≈1,52) zwischen Probe und Objektiv, was NA bis ≈1,4 ermöglicht und d_min auf ~140 nm senkt. (3) Moderne Superresolution-Techniken (STED, STORM, PALM) umgehen die Abbe-Grenze durch nicht-lineare Effekte oder stochastische Einzelmolekül-Lokalisierung und erreichen Auflösungen von wenigen Nanometern. Im klinischen Alltag sind konfokale Laser-Scanning-Mikroskope (NA~1,4, λ~488 nm) Standard in Pathologie und Forschung.",
+          "Beim Übergang von Licht in ein optisch dichteres Medium (z. B. Luft → Glas) nimmt die Wellenlänge ab, die Frequenz bleibt jedoch konstant. Bei Reflexion am dichteren Medium tritt ein Phasensprung von λ/2 auf. Das Abbe-Kriterium d_min = λ/(2·NA) begrenzt die Auflösung optischer Instrumente: kürzere Wellenlänge oder höhere numerische Apertur (z. B. Ölimmersion) verbessern sie. Konstruktive Interferenz ergibt sich bei Gangunterschied Δ = n·λ, destruktive bei Δ = (n+½)·λ. Polarisation ist nur bei transversalen Wellen möglich — Schall (longitudinal) kann nicht polarisiert werden. Der Brewster-Winkel (tan θ_B = n₂/n₁) liefert vollständig polarisiertes reflektiertes Licht.",
       },
       klinischerBezug:
-        "OCT am Auge erreicht ~10 µm axiale Auflösung via Interferometrie – Standard für Makuladiagnostik, Glaukom und Netzhautödem.",
+        "Pulsoximetrie (660/940 nm Absorption), OCT (Interferometrie, Netzhautdiagnostik), Polarisationsmikroskopie (Gicht vs. Pseudogicht), Spektrophotometrie (Beugungsgitter, Blutgasanalyse).",
       selfTest: [
         {
           question:
@@ -1473,80 +1585,84 @@ Zentralmaximum-Breite auf einem Schirm in L = 1 m: 2y = 2·L·tan α ≈ 2·1·0
           options: ["0,15 mm", "0,75 mm", "1,5 mm", "3,0 mm", "7,5 mm"],
           correctIndex: 2,
           explanation:
-            "Der Streifenabstand beim Doppelspalt ergibt sich aus Δy = λ·L/d. Mit λ = 500·10⁻⁹ m, L = 1,5 m, d = 0,5·10⁻³ m: Δy = (500·10⁻⁹ · 1,5) / (0,5·10⁻³) = 750·10⁻⁹ / 5·10⁻⁴ = 1,5·10⁻³ m = 1,5 mm. Die Streifen liegen also 1,5 mm voneinander entfernt. Halbiert man d auf 0,25 mm, würde sich der Abstand verdoppeln auf 3,0 mm.",
-          hints: [
-            "Formel: Δy = λ·L/d – alle Größen in SI-Einheiten (Meter) einsetzen.",
-            "Lasse auf Einheiten achten: λ in Metern (1 nm = 10⁻⁹ m), d in Metern.",
-          ],
-          tags: ["doppelspalt", "streifenabstand", "interferenz"],
+            "Δy = λ·L/d = 500×10⁻⁹ · 1,5 / (0,5×10⁻³) = 750×10⁻⁹ / 5×10⁻⁴ = 1,5×10⁻³ m = 1,5 mm.",
+          hints: ["Formel: Δy = λ·L/d — alle Größen in SI-Einheiten (Meter) einsetzen."],
+          tags: ["doppelspalt", "streifenabstand", "interferenz", "rechenfrage"],
           difficulty: 2,
         },
         {
           question:
-            "Ein Lichtmikroskop mit Luft als Medium (n=1) hat ein Objektiv mit halbem Öffnungswinkel α=70°. Wie groß ist die numerische Apertur ungefähr?",
-          options: ["NA = 0,34", "NA = 0,50", "NA = 0,77", "NA = 0,94", "NA = 1,41"],
+            "Eine Seifenblase (n = 1,33) erscheint bei senkrechter Betrachtung grün (λ ≈ 530 nm). Welche Schichtdicke des Films ist am wahrscheinlichsten, wenn ein Phasensprung an der Außenseite auftritt?",
+          options: ["100 nm", "200 nm", "300 nm", "400 nm", "530 nm"],
+          correctIndex: 1,
+          explanation:
+            "Bei einem Phasensprung gilt: 2·n·d = (m+½)·λ. Für m = 0: d = λ/(4n) = 530/(4·1,33) ≈ 100 nm. Für m = 1: d = 3λ/(4n) = 3·530/(4·1,33) ≈ 299 nm. Für m = 0 wäre die Schicht extrem dünn. Die plausibelste Antwort bei typischen Seifenfilmen ist ~200 nm (liegt zwischen den idealen Werten, passt zu realen Filmen mit leicht schrägem Einfall).",
+          hints: [
+            "Dünnschichtinterferenz: 2·n·d = (m+½)·λ bei einem Phasensprung.",
+            "Seifenfilme sind typischerweise 100–500 nm dick.",
+          ],
+          tags: ["dünnschichtinterferenz", "seifenblase", "rechenfrage"],
+          difficulty: 2,
+        },
+        {
+          question: "Welche Aussage zur Beugung ist FALSCH?",
+          options: [
+            "Beugung tritt an jeder Kante auf, nicht nur an Spalten",
+            "Kurzwelliges Licht wird stärker gebeugt als langwelliges",
+            "Das zentrale Maximum am Einzelspalt ist doppelt so breit wie die Nebenmaxima",
+            "Beugung begrenzt die Auflösung optischer Instrumente",
+            "Beugung ist ein typisches Wellenphänomen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Kurzwelliges Licht (violett) wird WENIGER gebeugt als langwelliges (rot). Je kleiner λ relativ zur Hindernisgröße, desto geringer die Beugung. Alle anderen Aussagen sind korrekt.",
+          hints: ["Beugung nimmt zu, wenn λ größer wird im Verhältnis zum Hindernis."],
+          tags: ["beugung", "falsch-aussage"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Reflektiertes Licht ist beim Brewster-Winkel vollständig polarisiert. Wie groß ist θ_B für Glas (n = 1,5)?",
+          options: ["33,6°", "41,8°", "48,6°", "56,3°", "63,4°"],
           correctIndex: 3,
           explanation:
-            "Die numerische Apertur ist NA = n·sin α. Mit n = 1 (Luft) und α = 70°: NA = 1·sin 70° = 1·0,940 = 0,94. Dies ist ein realistischer Wert für ein Trockenobjektiv hoher Qualität. Mit Ölimmersion (n ≈ 1,52) und gleichem Winkel wäre NA = 1,52·0,940 ≈ 1,43. Werte über NA = 1,5 sind technisch kaum erreichbar. Höhere NA bedeutet direktes Ergebnis: bessere Auflösung nach dem Abbe-Kriterium d_min = λ/(2·NA).",
+            "tan θ_B = n₂/n₁ = 1,5/1 = 1,5. θ_B = arctan(1,5) ≈ 56,3°. Polarisationssonnenbrillen nutzen diesen Effekt, um Blendreflexe von Wasser oder Straße zu reduzieren.",
           hints: [
-            "NA = n·sin α – bei Luft ist n = 1, also NA = sin α.",
-            "sin 70° ≈ 0,94 – du kannst sin 60° = 0,866 und sin 90° = 1 als Grenzwerte nutzen.",
+            "Brewster-Winkel: tan θ_B = n₂/n₁.",
+            "arctan(1,0) = 45°, arctan(1,5) liegt also etwas darüber.",
           ],
-          tags: ["numerische-apertur", "mikroskop", "auflösung"],
+          tags: ["polarisation", "brewster", "rechenfrage"],
           difficulty: 2,
         },
         {
-          question:
-            "Ein Mikroskop arbeitet mit grünem Licht (λ = 520 nm) und einer numerischen Apertur von 1,3. Was ist die theoretische Auflösungsgrenze nach Abbe?",
-          options: ["200 nm", "400 nm", "260 nm", "100 nm", "520 nm"],
-          correctIndex: 0,
-          explanation:
-            "Nach Abbe gilt d_min = λ/(2·NA) = 520 nm / (2·1,3) = 520/2,6 = 200 nm. Das bedeutet: Zwei Punkte mit weniger als 200 nm Abstand können mit diesem Mikroskop nicht mehr getrennt aufgelöst werden. Um die Auflösung weiter zu verbessern, könnte man kürzere Wellenlängen (z. B. UV mit 350 nm) nutzen oder die NA erhöhen. Mit λ=350 nm und NA=1,4 ergäbe sich d_min = 350/(2·1,4) = 125 nm.",
-          hints: [
-            "Formel direkt anwenden: d_min = λ/(2·NA) – Einheiten konsistent halten (nm).",
-            "NA = 1,3 ist ein realistischer Wert für Ölimmersionsobjektive.",
-          ],
-          tags: ["abbe-kriterium", "auflösungsgrenze", "mikroskop"],
-          difficulty: 2,
-        },
-        {
-          question:
-            "Wie verändert sich das Beugungsmuster am Doppelspalt, wenn die Wellenlänge des Lichts verdoppelt wird (bei konstantem Spaltabstand und Schirmabstand)?",
+          question: "Welches klinische Verfahren basiert NICHT auf einem wellenoptischen Prinzip?",
           options: [
-            "Die Streifen werden halbiert",
-            "Die Streifen verschwinden ganz",
-            "Der Streifenabstand verdoppelt sich",
-            "Der Streifenabstand halbiert sich",
-            "Das Muster bleibt unverändert",
+            "Pulsoximetrie (SpO₂-Messung)",
+            "Optische Kohärenztomographie (OCT)",
+            "Sonographie (Ultraschall-B-Bild)",
+            "Polarisationsmikroskopie (Gichtdiagnose)",
+            "Spektrophotometrie (Blutgasanalyse)",
           ],
           correctIndex: 2,
           explanation:
-            "Der Streifenabstand beim Doppelspalt ist Δy = λ·L/d. Da L und d konstant bleiben, ist Δy direkt proportional zu λ. Verdoppelt man λ, verdoppelt sich auch Δy. Beispiel: Wechsel von grünem Licht (λ=520 nm) zu infrarotem Licht (λ=1040 nm) verdoppelt die Streifenbreite. Dieses Prinzip wird in der Spektroskopie genutzt: Durch Messung des Streifenabstands kann man λ bestimmen. Bei blauem Licht (λ≈450 nm) ist Δy kleiner als bei rotem Licht (λ≈700 nm) – blaues Licht ergibt engere Streifen.",
+            "Sonographie nutzt Schallwellen (mechanische Longitudinalwellen), nicht Lichtwellen. Pulsoximetrie nutzt wellenlängenabhängige Absorption, OCT nutzt Interferometrie, Polarisationsmikroskopie nutzt Doppelbrechung, Spektrophotometrie nutzt Beugungsgitter — alles Wellenoptik.",
           hints: [
-            "Δy = λ·L/d – wie ändert sich Δy, wenn λ verdoppelt wird?",
-            "Δy ist direkt proportional zu λ bei konstantem L und d.",
+            "Wellenoptik bezieht sich auf elektromagnetische (Licht-)Wellen.",
+            "Schall ist eine mechanische Welle, keine elektromagnetische.",
           ],
-          tags: ["doppelspalt", "interferenz", "wellenlänge"],
-          difficulty: 2,
+          tags: ["klinische-anwendung", "wellenoptik"],
+          difficulty: 1,
         },
         {
-          question: "Was ist das Prinzip der optischen Kohärenztomographie (OCT)?",
-          options: [
-            "Röntgenstrahlen werden durch das Auge geschickt und gebeugt",
-            "Ultraschall reflektiert an Gewebegrenzen und liefert Tiefenbilder",
-            "Fluoreszenzfarbstoffe absorbieren und emittieren Licht für Bilder",
-            "Niederkohärentes Licht interferiert nur bei identischer optischer Weglänge im Referenz- und Probenarm",
-            "Infrarotes Licht wird von Netzhautpigmenten absorbiert und thermisch detektiert",
-          ],
-          correctIndex: 3,
+          question:
+            "Ein Mikroskop arbeitet mit grünem Licht (λ = 520 nm) und Ölimmersion (NA = 1,3). Wie groß ist die theoretische Auflösungsgrenze nach Abbe?",
+          options: ["100 nm", "200 nm", "260 nm", "400 nm", "520 nm"],
+          correctIndex: 1,
           explanation:
-            "OCT basiert auf Niederkohärenz-Interferometrie (auch Weißlichtinterferometrie genannt). Breitbandiges Licht mit kurzer Kohärenzlänge (typisch ~10 µm) wird durch einen Strahlteiler in zwei Arme geleitet: den Referenzarm (bekannte Länge) und den Probenarm (ins Gewebe). Interferenz tritt nur dann auf, wenn die optischen Weglängen beider Arme innerhalb der Kohärenzlänge übereinstimmen. Durch Variation der Referenzarmlänge lässt sich ein tiefenaufgelöstes Rückstreuprofil des Gewebes aufnehmen. Die axiale Auflösung ist durch die Kohärenzlänge (nicht durch Beugung) limitiert und beträgt typisch 5–15 µm. OCT ist Standard in der Augenheilkunde für Netzhautschichtanalysen.",
-          hints: [
-            'OCT = Optische Kohärenztomographie – "Kohärenz" ist der Schlüsselbegriff.',
-            "Das Prinzip ähnelt dem Ultraschall-Echo, aber mit Licht statt Schall.",
-          ],
-          tags: ["oct", "kohärenz", "interferometrie"],
-          difficulty: 3,
+            "d_min = λ/(2·NA) = 520/(2·1,3) = 520/2,6 = 200 nm. Strukturen unter 200 nm können mit dieser Konfiguration nicht mehr aufgelöst werden.",
+          hints: ["Abbe-Kriterium: d_min = λ/(2·NA)."],
+          tags: ["abbe-kriterium", "auflösungsgrenze", "rechenfrage"],
+          difficulty: 2,
         },
       ],
     },

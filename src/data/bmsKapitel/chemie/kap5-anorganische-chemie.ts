@@ -962,6 +962,377 @@ Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Stru
         },
       ],
     },
+
+    {
+      id: "ch-9-04",
+      title: "Übergangselemente — Biochemie und Pharmazie",
+      stichworte: [
+        "d-Block-Elemente",
+        "Variable Oxidationsstufen",
+        "Koordinationschemie",
+        "Ligand",
+        "Koordinationszahl",
+        "Eisen Fe²⁺ Fe³⁺",
+        "Hämoglobin",
+        "Ferritin Transferrin",
+        "Kupfer Coeruloplasmin",
+        "Zink Metalloenzyme",
+        "Cobalt Vitamin B12",
+        "Chelat-Therapie EDTA",
+        "Deferoxamin",
+        "D-Penicillamin Wilson",
+        "Cisplatin",
+      ],
+      content: `Eisen transportiert Sauerstoff, Kupfer treibt die Atmungskette an, Zink katalysiert über 300 Enzymreaktionen. Ohne Übergangsmetalle wäre kein einziger dieser Prozesse möglich — und genau deshalb führen selbst minimale Spurenelementdefizite zu spezifischen Krankheitsbildern.
+
+## Warum d-Block-Elemente biologisch unersetzlich sind
+
+Die Elemente der Gruppen 3–12 (Nebengruppen) besitzen **unvollständig gefüllte d-Orbitale**. Daraus ergeben sich drei Schlüsseleigenschaften:
+
+1. **Variable Oxidationsstufen** — d-Elektronen liegen energetisch eng zusammen und können schrittweise abgegeben oder aufgenommen werden. Eisen wechselt zwischen Fe²⁺ und Fe³⁺, Kupfer zwischen Cu⁺ und Cu²⁺, Mangan zwischen Mn²⁺ und Mn⁴⁺. Dieses Redox-Pendeln ist die Grundlage biologischer Elektronentransportketten.
+
+2. **Komplexbildung** — Übergangsmetall-Ionen wirken als **Lewis-Säuren** (Elektronenpaar-Akzeptoren). Sie binden Moleküle oder Ionen (Liganden) über deren freie Elektronenpaare und bilden **Koordinationsverbindungen** (Komplexe). Die Häm-Gruppe im Hämoglobin ist ein solcher Komplex: Fe²⁺ im Zentrum, vier Stickstoff-Atome des Porphyrins als Liganden.
+
+3. **Farbigkeit** — d-d-Übergänge absorbieren spezifische Wellenlängen sichtbaren Lichts. Deshalb ist venöses Blut (Desoxyhämoglobin) dunkelrot und arterielles Blut (Oxyhämoglobin) hellrot; Kupferproteine wie Coeruloplasmin schimmern blau.
+
+> **Merke:** Variable Oxidationsstufen + Komplexbildung + Farbigkeit — diese drei Eigenschaften erklären, warum d-Block-Elemente im biologischen Elektronentransport, in der Enzymkatalyse und als diagnostische Marker unersetzlich sind.
+
+---
+
+## Koordinationschemie — Wie Metalle Liganden binden
+
+### Koordinationszahl und Geometrie
+
+Die **Koordinationszahl (KZ)** gibt an, wie viele Liganden direkt an das Zentralmetall gebunden sind:
+
+| KZ | Geometrie | Beispiel |
+|---|---|---|
+| 2 | Linear | [Ag(NH₃)₂]⁺ (Tollens-Reagenz) |
+| 4 | Tetraedrisch | [ZnCl₄]²⁻, Zinkfinger-Proteine |
+| 4 | Quadratisch-planar | [Pt(NH₃)₂Cl₂] (Cisplatin) |
+| 6 | Oktaedrisch | [Fe(CN)₆]⁴⁻, [Co(NH₃)₆]³⁺, Häm |
+
+Die Geometrie bestimmt die räumliche Anordnung der Liganden und damit die biologische Funktion: Cisplatin ist quadratisch-planar — nur in der cis-Konfiguration kann es DNA quervernetzen. Das trans-Isomer (Transplatin) ist unwirksam.
+
+### Ligandentypen
+
+Liganden werden nach der Anzahl ihrer Donoratome klassifiziert:
+
+- **Einzähnig (monodental):** H₂O, NH₃, Cl⁻, CN⁻, CO — binden über ein einziges freies Elektronenpaar
+- **Zweizähnig (bidental):** Ethylendiamin (en), Oxalat (C₂O₄²⁻) — binden über zwei Donoratome gleichzeitig
+- **Sechszähnig (hexadental):** **EDTA** (Ethylendiamintetraessigsäure) — bindet über sechs Donoratome und umschließt das Metallion vollständig
+
+Mehrzähnige Liganden bilden **Chelatkomplexe** (griechisch chelē = Krebsschere). Der **Chelateffekt** erklärt, warum diese Komplexe besonders stabil sind: Ein einzelner hexadentater Ligand (EDTA) verdrängt sechs Wassermoleküle — der Entropiegewinn (6 freigesetzte H₂O vs. 1 gebundenes EDTA) treibt die Reaktion thermodynamisch an.
+
+> **Merke:** Einzähnig (H₂O, NH₃, Cl⁻) → Zweizähnig (Ethylendiamin) → Sechszähnig (EDTA). Je mehr Donoratome, desto stabiler der Komplex (Chelateffekt durch Entropiegewinn).
+
+### Warum Komplexe farbig sind
+
+In einem oktaedrischen Komplex spalten sich die fünf d-Orbitale in zwei Energieniveaus auf: t₂g (niedrigere Energie) und eg (höhere Energie). Die Energiedifferenz Δ entspricht bestimmten Wellenlängen sichtbaren Lichts. Wird ein Photon absorbiert, springt ein Elektron von t₂g nach eg — das nicht absorbierte Licht bestimmt die wahrgenommene Farbe.
+
+- Cu²⁺-Lösungen: absorbieren oranges Licht → erscheinen **blau**
+- Fe³⁺-Lösungen: absorbieren blaues Licht → erscheinen **gelb-braun**
+- MnO₄⁻: absorbiert grünes Licht → erscheint **violett**
+
+Klinisch nutzbar: Die Farbe von Blut, Galle (Biliverdin = Cu-frei, aber Häm-Abbau) und Urin ändert sich mit dem Oxidationszustand der beteiligten Metallkomplexe.
+
+---
+
+## Eisen — Das Sauerstoff-Metall
+
+Eisen ist das häufigste Übergangsmetall im Körper (~3–5 g). Die Biologie des Eisens dreht sich um den Wechsel zwischen **Fe²⁺ (Ferro, reduziert)** und **Fe³⁺ (Ferri, oxidiert)**.
+
+### Hämoglobin: Kooperativer O₂-Transport
+
+Jedes Hämoglobin-Tetramer (2α + 2β-Ketten) trägt vier **Häm-Gruppen** — einen Protoporphyrin-IX-Ring mit Fe²⁺ im Zentrum (KZ = 6, oktaedrisch). Vier Koordinationsstellen belegen die Stickstoff-Atome des Porphyrins, die fünfte ein proximales Histidin der Globinkette. Die sechste Stelle bindet **reversibel O₂**.
+
+**Kooperative Bindung:** Die erste O₂-Bindung erleichtert die nächsten drei (sigmoidale Sättigungskurve). Mechanismus: O₂-Bindung zieht Fe²⁺ in die Porphyrinebene → Konformationsänderung der Globinkette → T-Zustand (tense, niedrige Affinität) wird zum R-Zustand (relaxed, hohe Affinität).
+
+**Bohr-Effekt:** Niedrigeres pH und höheres pCO₂ im aktiven Gewebe senken die O₂-Affinität → mehr O₂ wird freigesetzt, genau dort wo es gebraucht wird. In der Lunge kehrt sich der Effekt um.
+
+**Wichtig:** Nur **Fe²⁺** bindet O₂. Fe³⁺ (Methämoglobin) bindet kein O₂ → funktionslos. Methämoglobin-Reduktase (NADH-abhängig) reduziert Fe³⁺ zurück zu Fe²⁺.
+
+### Eisenstoffwechsel: Speicherung und Transport
+
+| Protein | Funktion | Klinische Bedeutung |
+|---|---|---|
+| **Transferrin** | Transport von Fe³⁺ im Plasma (2 Fe³⁺ pro Molekül) | Transferrinsättigung ↓ bei Eisenmangel |
+| **Ferritin** | Intrazelluläre Fe³⁺-Speicherung (bis 4500 Fe³⁺-Ionen pro Molekül) | Serum-Ferritin = bester Marker für Eisenspeicher |
+| **Hepcidin** | Hormon der Leber, blockiert Ferroportin → hemmt Fe-Export aus Enterozyten | Hepcidin ↑ bei Entzündung → Anämie chronischer Erkrankungen |
+| **Ferroportin** | Einziger bekannter Fe-Exporter (Enterozyt → Plasma) | Durch Hepcidin reguliert |
+
+**Aufnahme:** Nahrungseisen liegt überwiegend als Fe³⁺ vor. Magensäure und Vitamin C (Ascorbat) reduzieren Fe³⁺ zu Fe²⁺ → DMT1 (Divalenter Metalltransporter 1) nimmt Fe²⁺ im Duodenum auf. Häm-Eisen (aus Fleisch) wird direkt über HCP1 (Häm-Carrier-Protein 1) resorbiert — höhere Bioverfügbarkeit.
+
+> **Merke:** Fe²⁺ (Ferro) ≠ Fe³⁺ (Ferri). Nahrungseisen ist meist Fe³⁺, muss aber zu Fe²⁺ reduziert werden (Vitamin C hilft), damit DMT1 es im Duodenum aufnehmen kann. Häm-Eisen aus tierischer Nahrung umgeht diesen Schritt.
+
+### Eisenmangel und Eisenüberladung
+
+- **Eisenmangelanämie** (häufigste Anämie weltweit): mikrozytär (MCV ↓), hypochrom (MCH ↓). Labor: Ferritin ↓, Transferrinsättigung ↓, löslicher Transferrinrezeptor ↑. Ursachen: chronischer Blutverlust (Menstruation, GI-Blutung), Malabsorption, erhöhter Bedarf (Schwangerschaft, Wachstum).
+- **Hämochromatose** (HFE-Genmutation, häufigste genetische Erkrankung bei Nordeuropäern): gestörte Hepcidin-Produktion → unkontrollierte Fe-Resorption → Eisenüberladung. Organschäden: Leberzirrhose (→ hepatozelluläres Karzinom), Kardiomyopathie, Diabetes mellitus Typ 3 („Bronzediabetes"), Hyperpigmentierung, Arthropathie. Therapie: Aderlass (Phlebotomie), Deferoxamin bei Transfusionshämosiderose.
+
+---
+
+## Kupfer — Elektronentransport und Redoxschutz
+
+Kupfer (~100 mg im Körper) pendelt zwischen **Cu⁺** und **Cu²⁺** und katalysiert Einelektronen-Übertragungen.
+
+**Schlüsselenzyme:**
+- **Cytochrom-c-Oxidase** (Komplex IV der Atmungskette): Cu-Zentren übertragen Elektronen auf O₂ → H₂O. Letzter Schritt der oxidativen Phosphorylierung.
+- **Cu/Zn-Superoxiddismutase (SOD1):** 2 O₂⁻• + 2H⁺ → H₂O₂ + O₂. Schutz vor oxidativem Stress im Zytoplasma.
+- **Coeruloplasmin:** Ferroxidase-Aktivität — oxidiert Fe²⁺ zu Fe³⁺, damit Transferrin Eisen binden kann. Bindet ~95% des Plasma-Kupfers.
+- **Lysyloxidase:** Quervernetzung von Kollagen und Elastin.
+- **Tyrosinase:** Melaninsynthese (Kupfermangel → Depigmentierung).
+
+**Wilson-Krankheit** (autosomal-rezessiv, ATP7B-Mutation): gestörte biliäre Cu-Ausscheidung → Cu-Akkumulation in Leber (Hepatitis, Zirrhose), Gehirn (Basalganglien → Tremor, Dystonie, psychiatrische Symptome) und Auge (**Kayser-Fleischer-Kornealring** — grün-brauner Cu-Ring in der Descemet-Membran, pathognomonisch). Labor: Coeruloplasmin ↓, freies Cu ↑, Cu im 24h-Urin ↑. Therapie: **D-Penicillamin** (Chelator), Zink (hemmt intestinale Cu-Resorption).
+
+**Menkes-Krankheit** (X-chromosomal, ATP7A-Mutation): Cu-Resorptionsstörung im Darm → systemischer Cu-Mangel → Neurodegeneration, „Stahlhaar" (Pili torti), Bindegewebsschwäche. Letaler Verlauf in der Kindheit.
+
+---
+
+## Zink — Der stille Katalysator
+
+Zink (~2–3 g im Körper) ist nach Eisen das zweithäufigste Übergangsmetall im Organismus. Anders als Fe und Cu wechselt Zn²⁺ **nicht** die Oxidationsstufe — es ist immer Zn²⁺ und wirkt als Lewis-Säure in der Katalyse.
+
+**Wichtige Zn²⁺-Enzyme und -Proteine:**
+- **Carboanhydrase:** CO₂ + H₂O ⇌ H₂CO₃ (10⁶-fache Beschleunigung). Zn²⁺ aktiviert H₂O zum nucleophilen OH⁻-Angriff auf CO₂. Essentiell für CO₂-Transport in Erythrozyten, Säuresekretion im Magen, Augeninnendruck (Kammerwasser). Hemmung durch **Acetazolamid** → Diuretikum, Glaukomtherapie.
+- **Alkoholdehydrogenase (ADH):** Ethanol → Acetaldehyd (erster Schritt des Alkoholabbaus).
+- **Zinkfinger-Transkriptionsfaktoren:** Zn²⁺ stabilisiert die „Finger"-Strukturen, die DNA erkennen und binden → Genregulation.
+- **Matrix-Metalloproteasen (MMPs):** Bindegewebsumbau, Wundheilung, aber auch Tumormetastasierung.
+- **Insulin-Speicherung:** 2 Zn²⁺ + 6 Insulinmoleküle → Zink-Insulin-Hexamer in den β-Zell-Granula.
+
+**Zinkmangel:** Wachstumsstörungen, verzögerte Wundheilung, Immunschwäche (T-Zell-Dysfunktion), Hypogonadismus, Alopezie, Diarrhö, Geschmacksstörungen. Ursache: Malabsorption, Alkoholismus, Acrodermatitis enteropathica (genetisch, SLC39A4-Mutation).
+
+> **Merke:** Zn²⁺ ist immer zweiwertig (kein Redoxwechsel), wirkt als Lewis-Säure. Über 300 Metalloenzyme + Zinkfinger-Proteine. Klinisches Trias bei Mangel: Wundheilungsstörung + Immunschwäche + Wachstumsverzögerung.
+
+---
+
+## Cobalt — Das Vitamin-B12-Metall
+
+Cobalt ist ausschließlich als **Co³⁺ im Corrin-Ring** von Vitamin B12 (Cobalamin) biologisch aktiv. Die beiden Coenzymformen:
+
+- **Methylcobalamin:** Cofaktor der Methionin-Synthase (Homocystein → Methionin). Gleichzeitig wird Tetrahydrofolat (THF) regeneriert → essentiell für DNA-Synthese.
+- **Adenosylcobalamin:** Cofaktor der Methylmalonyl-CoA-Mutase (Methylmalonyl-CoA → Succinyl-CoA → Citratzyklus). Mangel → Methylmalonsäure-Akkumulation (diagnostischer Marker).
+
+**B12-Mangel:** Megaloblastäre Anämie (MCV ↑, hypersegmentierte Neutrophile) + funikuläre Myelose (Demyelinisierung der Hinter- und Seitenstränge → Ataxie, Parästhesien, Spastik). Ursachen: Intrinsic-Factor-Mangel (perniziöse Anämie, Autoantikörper gegen Parietalzellen), Gastrektomie, streng vegane Ernährung. Therapie: B12 parenteral (i.m.) bei Resorptionsstörung.
+
+---
+
+## Weitere medizinisch relevante Übergangsmetalle
+
+- **Mangan (Mn):** Mn-SOD (SOD2, mitochondrial) — Schutz vor Superoxidradikalen. Arginase im Harnstoffzyklus. Manganismus (chronische Mn-Exposition, z. B. Schweißer): Parkinson-ähnliches Syndrom (Basalganglien-Schädigung).
+- **Molybdän (Mo):** Cofaktor der Xanthinoxidase (Hypoxanthin → Xanthin → Harnsäure). Gicht-Therapie: **Allopurinol** hemmt Xanthinoxidase → Harnsäure ↓.
+- **Chrom (Cr³⁺):** Diskutierte Rolle in der Insulinsensitivierung (Chromodulin). Cr⁶⁺ (Chromat) ist hochkanzerogen (Lungenkrebs bei Industriearbeitern) — Cr³⁺ vs. Cr⁶⁺ ist ein wichtiges toxikologisches Unterscheidungsmerkmal.
+- **Platin (Pt):** Cisplatin [Pt(NH₃)₂Cl₂] — quadratisch-planarer Pt²⁺-Komplex, quervernetzt DNA-Stränge (Guanin-Guanin intrastrand crosslinks) → Apoptose. Bedeutendes Zytostatikum bei Hoden-, Ovarial-, Blasen- und Lungenkarzinomen. Nephrotoxizität und Ototoxizität als Hauptnebenwirkungen.
+
+---
+
+## Chelat-Therapie — Metallvergiftung behandeln
+
+Das Prinzip: Ein mehrzähniger Ligand (Chelator) bindet das toxische Metallion mit höherer Affinität als körpereigene Proteine → wasserlöslicher Chelatkomplex → renale Ausscheidung.
+
+| Chelator | Zielmetall | Indikation |
+|---|---|---|
+| **EDTA** (Ethylendiamintetraessigsäure) | Pb²⁺, Ca²⁺ | Bleivergiftung (CaNa₂-EDTA, damit kein Ca-Entzug) |
+| **Deferoxamin** (Desferrioxamin) | Fe³⁺ | Transfusionshämosiderose, akute Eisenvergiftung |
+| **Deferasirox** | Fe³⁺ | Orale Alternative zu Deferoxamin |
+| **D-Penicillamin** | Cu²⁺, Pb²⁺ | Wilson-Krankheit, Bleivergiftung |
+| **DMSA** (Dimercaptobernsteinsäure) | Pb²⁺, Hg²⁺, As³⁺ | Schwermetallvergiftung (oral) |
+| **BAL** (Dimercaprol) | As³⁺, Hg²⁺, Au³⁺ | Arsen-, Quecksilbervergiftung (i.m.) |
+
+> **Merke:** EDTA bei Blei, Deferoxamin bei Eisen, D-Penicillamin bei Kupfer (Wilson). Grundprinzip: Chelator bindet Metallion fester als körpereigene Proteine → renale Elimination des Chelatkomplexes.
+
+**Cave:** CaNa₂-EDTA wird bei Bleivergiftung eingesetzt, nicht Na₂-EDTA allein — letzteres würde Ca²⁺ chelieren → lebensbedrohliche Hypokalzämie.
+
+---
+
+## Typische Prüfungsfallen
+
+1. **Fe²⁺ vs. Fe³⁺:** Nahrungseisen ist Fe³⁺ → muss zu Fe²⁺ reduziert werden für die Resorption (DMT1). Im Hämoglobin ist Fe²⁺ aktiv — Fe³⁺ = Methämoglobin = funktionslos.
+2. **Zink hat keine Redoxchemie:** Zn²⁺ bleibt immer Zn²⁺. Es wirkt als Lewis-Säure, nicht als Redoxpartner.
+3. **Cisplatin ist cis, nicht trans:** Nur die cis-Konfiguration kann beide Chloride an benachbarte Guanine der DNA binden. Transplatin ist inaktiv.
+4. **Coeruloplasmin hat Ferroxidase-Aktivität:** Obwohl es ein Kupferprotein ist, oxidiert es Eisen (Fe²⁺ → Fe³⁺).
+5. **CaNa₂-EDTA, nicht Na₂-EDTA:** Bei Bleivergiftung muss der EDTA-Komplex bereits Ca²⁺ enthalten, um keine Hypokalzämie auszulösen.
+
+> **Merke:** Hämoglobin = Fe²⁺ (bindet O₂), Methämoglobin = Fe³⁺ (bindet kein O₂). Coeruloplasmin = Cu-Protein mit Ferroxidase-Funktion. Cisplatin = cis-Konfiguration therapeutisch wirksam, trans unwirksam.`,
+      lernziele: [
+        "Die drei Schlüsseleigenschaften der d-Block-Elemente (variable Oxidationsstufen, Komplexbildung, Farbigkeit) erklären",
+        "Koordinationszahl, Geometrie und Ligandentypen (mono-/bi-/hexadental) an Beispielen beschreiben",
+        "Den Chelateffekt thermodynamisch begründen (Entropiegewinn)",
+        "Den Eisenstoffwechsel (Transferrin, Ferritin, Hepcidin, DMT1) und die Unterscheidung Fe²⁺/Fe³⁺ erklären",
+        "Klinische Bilder bei Eisenmangel, Hämochromatose, Wilson-Krankheit und B12-Mangel den betroffenen Metallen zuordnen",
+        "Die wichtigsten Chelatoren (EDTA, Deferoxamin, D-Penicillamin) ihren Zielmetallen und Indikationen zuordnen",
+      ],
+      sections: [
+        {
+          heading: "Koordinationschemie: Liganden, Geometrie, Chelateffekt",
+          text: "Übergangsmetall-Ionen binden Liganden über deren freie Elektronenpaare (Lewis-Säure-Base-Prinzip). KZ = 4: tetraedrisch (Zinkfinger) oder quadratisch-planar (Cisplatin). KZ = 6: oktaedrisch (Häm, [Co(NH₃)₆]³⁺). Mehrzähnige Liganden (EDTA: hexadental) bilden besonders stabile Chelatkomplexe — der Chelateffekt beruht auf dem Entropiegewinn: 1 EDTA verdrängt 6 H₂O. Farbigkeit entsteht durch d-d-Elektronenübergänge: die Kristallfeldaufspaltung Δ bestimmt die absorbierte Wellenlänge.",
+          merksatz:
+            "KZ 4 = tetraedrisch/quadratisch-planar; KZ 6 = oktaedrisch. Chelateffekt: je mehr Donoratome, desto stabiler. Farbigkeit = d-d-Übergänge.",
+        },
+        {
+          heading: "Eisen: Hämoglobin, Ferritin, Transferrin",
+          text: "Fe²⁺ im Häm bindet reversibel O₂ (6. Koordinationsstelle). Kooperative Bindung: T→R-Konformationsänderung. Bohr-Effekt: pH↓ → O₂-Affinität↓. Eisentransport: Transferrin (2 Fe³⁺ im Plasma). Speicherung: Ferritin (bis 4500 Fe³⁺). Regulation: Hepcidin blockiert Ferroportin → hemmt Fe-Export aus Enterozyten. Resorption: Fe³⁺ → Fe²⁺ (Vitamin C) → DMT1 im Duodenum. Eisenmangelanämie: mikrozytär, hypochrom, Ferritin↓. Hämochromatose: HFE-Mutation → Fe-Überladung → Leber, Herz, Pankreas.",
+          merksatz:
+            "Fe²⁺ = aktives Hämoglobin (O₂-Bindung); Fe³⁺ = Methämoglobin (inaktiv). Nahrung: Fe³⁺ → Reduktion zu Fe²⁺ → Resorption via DMT1.",
+        },
+        {
+          heading: "Kupfer, Zink, Cobalt — Spurenelemente mit Schlüsselfunktion",
+          text: "Cu: Cytochrom-c-Oxidase (Komplex IV), Cu/Zn-SOD, Coeruloplasmin (Ferroxidase). Wilson-Krankheit: ATP7B-Mutation → Cu-Akkumulation → Kayser-Fleischer-Ring. Therapie: D-Penicillamin. Zn²⁺: >300 Metalloenzyme (Carboanhydrase, ADH, MMPs), Zinkfinger-Proteine, Insulin-Hexamer. Kein Redoxwechsel — reine Lewis-Säure. Co³⁺ im Corrin-Ring von Vitamin B12: Methylcobalamin (Methionin-Synthase) und Adenosylcobalamin (Methylmalonyl-CoA-Mutase). B12-Mangel: megaloblastäre Anämie + funikuläre Myelose.",
+          merksatz:
+            "Cu: Atmungskette + Wilson-Krankheit. Zn: 300+ Enzyme, kein Redoxwechsel. Co: nur in B12 — Mangel = Anämie + Myelose.",
+        },
+        {
+          heading: "Chelat-Therapie: Metallvergiftungen gezielt behandeln",
+          text: "Chelatoren binden toxische Metallionen mit höherer Affinität als körpereigene Proteine → renale Elimination. EDTA (hexadental): Bleivergiftung (als CaNa₂-EDTA, nicht Na₂-EDTA → sonst Hypokalzämie). Deferoxamin: Fe³⁺-Chelator bei Transfusionshämosiderose. D-Penicillamin: Cu²⁺-Chelator bei Wilson-Krankheit. DMSA/BAL: Schwermetalle (Pb, Hg, As). Allopurinol hemmt die Mo-haltige Xanthinoxidase → Harnsäure↓ → Gichttherapie.",
+          merksatz:
+            "EDTA → Blei; Deferoxamin → Eisen; D-Penicillamin → Kupfer (Wilson). CaNa₂-EDTA verwenden, nie reines Na₂-EDTA.",
+        },
+      ],
+      merksätze: [
+        "d-Block-Elemente: variable Oxidationsstufen + Komplexbildung + Farbigkeit — Grundlage biologischer Katalyse.",
+        "Koordinationszahl 6 → oktaedrisch (Häm, Cytochrome); KZ 4 → tetraedrisch oder quadratisch-planar (Cisplatin).",
+        "Chelateffekt: mehrzähnige Liganden bilden stabilere Komplexe durch Entropiegewinn (1 EDTA verdrängt 6 H₂O).",
+        "Fe²⁺ (Ferro) bindet O₂ im Hämoglobin; Fe³⁺ (Ferri) = Methämoglobin, funktionslos.",
+        "Nahrungseisen: Fe³⁺ → Reduktion zu Fe²⁺ (Vitamin C) → DMT1-Aufnahme im Duodenum.",
+        "Ferritin = Eisenspeicher (Serum-Ferritin bester Labormarker); Transferrin = Fe³⁺-Transport im Plasma.",
+        "Hepcidin ↑ → Ferroportin blockiert → Eisenresorption ↓ (Anämie chronischer Erkrankungen).",
+        "Cu: Cytochrom-c-Oxidase, SOD1, Coeruloplasmin. Wilson (ATP7B) → Cu-Akkumulation → D-Penicillamin.",
+        "Zn²⁺: immer zweiwertig, >300 Enzyme, Zinkfinger-Proteine. Mangel → Wundheilungsstörung, Immunschwäche.",
+        "Co³⁺ in Vitamin B12 → Mangel: megaloblastäre Anämie + funikuläre Myelose.",
+        "EDTA (Pb), Deferoxamin (Fe), D-Penicillamin (Cu) — drei Chelatoren mit klarer Zuordnung.",
+        "Cisplatin: cis-Pt(II)-Komplex quervernetzt DNA → Apoptose. Trans-Isomer ist unwirksam.",
+      ],
+      altfrage: {
+        question:
+          "Erklären Sie, warum Eisen im Hämoglobin in der Oxidationsstufe +2 vorliegen muss und welche klinischen Konsequenzen eine Oxidation zu Fe³⁺ hätte.",
+        answer:
+          "Fe²⁺ im Häm-Zentrum des Hämoglobins besitzt sechs Koordinationsstellen: vier davon sind durch Stickstoffatome des Protoporphyrin-IX-Rings besetzt, die fünfte durch das proximale Histidin (His F8) der Globinkette. Die sechste Stelle ist frei und kann reversibel O₂ binden. Diese Reversibilität funktioniert nur mit Fe²⁺: Es bildet eine partielle, reversible Bindung zu O₂ ohne vollständige Elektronenübertragung.\n\nWird Fe²⁺ zu Fe³⁺ oxidiert, entsteht Methämoglobin (MetHb). Fe³⁺ kann kein O₂ binden → funktioneller Sauerstofftransportverlust. Normalerweise liegt <1% MetHb vor, weil NADH-Methämoglobin-Reduktase (Cytochrom-b5-Reduktase) Fe³⁺ kontinuierlich zu Fe²⁺ reduziert.\n\nMethämoglobinämie (>10% MetHb): Zyanose (schokoladenbraunes Blut), Dyspnoe, bei >50% lebensbedrohlich. Ursachen: Nitrite (Nitroprussid, Dapsone), Lokalanästhetika (Prilocain, Benzocain), angeborener Enzymmangel. Therapie: Methylenblau i.v. (wird durch NADPH-MetHb-Reduktase zu Leukomethylenblau reduziert, das dann MetHb zu Hb reduziert).",
+      },
+      klinischerBezug:
+        "Eisenmangelanämie ist die häufigste Anämie weltweit und betrifft besonders menstruierende Frauen, Schwangere und Kleinkinder. Die Labordiagnostik folgt einer klaren Kaskade: Ferritin (Speicher) → Transferrinsättigung (Transport) → löslicher Transferrinrezeptor (zellulärer Bedarf) → MCV/MCH (Erythrozytenmorphologie). Wilson-Krankheit wird oft verzögert diagnostiziert, weil psychiatrische Symptome (Depression, Persönlichkeitsveränderung) der Lebererkrankung vorausgehen können — der Kayser-Fleischer-Ring in der Spaltlampenuntersuchung ist pathognomonisch. Cisplatin revolutionierte die Hodenkarzinom-Therapie: Heilungsrate von <10% auf >90%.",
+      selfTest: [
+        {
+          question:
+            "Welche Eigenschaft der d-Block-Elemente ermöglicht den biologischen Elektronentransport in der Atmungskette?",
+          options: [
+            "Die Fähigkeit, stabile Edelgaskonfigurationen zu bilden",
+            "Variable Oxidationsstufen durch energetisch nahestehende d-Elektronen",
+            "Die Abgabe von genau zwei Valenzelektronen wie Erdalkalimetalle",
+            "Ihre hohe Elektronegativität im Vergleich zu Nichtmetallen",
+            "Die Bildung ausschließlich ionischer Bindungen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "d-Block-Elemente haben unvollständig gefüllte d-Orbitale mit energetisch eng zusammenliegenden Elektronen. Diese können schrittweise abgegeben oder aufgenommen werden → variable Oxidationsstufen (z. B. Fe²⁺/Fe³⁺, Cu⁺/Cu²⁺). In der Atmungskette nutzen Cytochrome und Cu-Zentren genau dieses Redox-Pendeln, um Elektronen von NADH/FADH₂ schrittweise auf O₂ zu übertragen. Edelgaskonfiguration und feste Ionenladungen (Antworten A, C) gelten für Hauptgruppenelemente.",
+          hints: [
+            "Die Atmungskette überträgt Elektronen schrittweise — das erfordert Metalle, die ihre Ladung flexibel ändern können.",
+            "Fe wechselt zwischen +2 und +3, Cu zwischen +1 und +2.",
+          ],
+          difficulty: 1,
+          tags: ["d-block", "oxidationsstufen", "atmungskette"],
+        },
+        {
+          question:
+            "EDTA ist ein besonders stabiler Chelator. Welche Aussage erklärt den Chelateffekt thermodynamisch korrekt?",
+          options: [
+            "EDTA hat eine höhere Elektronegativität als andere Liganden",
+            "EDTA bildet nur zwei Bindungen zum Metallion, aber diese sind kovalent",
+            "Ein hexadentater Ligand verdrängt sechs H₂O-Moleküle → Entropiegewinn treibt die Reaktion an",
+            "EDTA verändert die Oxidationsstufe des Metalls und stabilisiert es dadurch",
+            "Der Chelateffekt beruht auf der geringeren Masse des EDTA-Komplexes",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Chelateffekt ist primär ein Entropie-Effekt: Ein einzelnes EDTA-Molekül (hexadental, 6 Donoratome) ersetzt sechs einzähnige H₂O-Liganden. Die Zahl freier Teilchen steigt (1 gebunden + 6 freigesetzt vs. 6 gebunden + 1 freigesetzt) → ΔS > 0 → ΔG negativer → stabilerer Komplex. EDTA hat keine besondere EN (A falsch), bildet 6 Bindungen nicht 2 (B falsch), verändert nicht die Oxidationsstufe (D falsch).",
+          hints: [
+            "1 EDTA ersetzt 6 H₂O — wie ändert sich die Teilchenzahl in Lösung?",
+            "Mehr freie Teilchen = höhere Entropie = thermodynamisch begünstigt.",
+          ],
+          difficulty: 2,
+          tags: ["chelateffekt", "edta", "thermodynamik"],
+        },
+        {
+          question:
+            "Ein Patient mit Transfusionshämosiderose benötigt eine Chelat-Therapie. Welcher Chelator wird eingesetzt?",
+          options: [
+            "D-Penicillamin — weil es den stärksten Chelateffekt aller Chelatoren hat",
+            "CaNa₂-EDTA — weil es spezifisch Fe³⁺ bindet",
+            "Deferoxamin (Desferrioxamin) — ein spezifischer Fe³⁺-Chelator",
+            "BAL (Dimercaprol) — als universeller Schwermetallchelator",
+            "Acetazolamid — weil es die eisenhaltige Carboanhydrase hemmt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Deferoxamin (Desferrioxamin) ist der Standardchelator bei Eisenüberladung (Transfusionshämosiderose). Es bindet hochspezifisch Fe³⁺ (Stabilitätskonstante K ≈ 10³¹) und wird renal als Ferrioxamin ausgeschieden. D-Penicillamin ist ein Cu-Chelator (Wilson-Krankheit). CaNa₂-EDTA wird bei Bleivergiftung verwendet. BAL bei As/Hg-Vergiftung. Acetazolamid hemmt die Carboanhydrase, ist aber kein Chelator.",
+          hints: [
+            "Der Name 'Desferri-oxamin' verrät das Zielmetall: Eisen (Ferrum).",
+            "Ziel: Fe³⁺-Chelation und renale Elimination.",
+          ],
+          difficulty: 2,
+          tags: ["deferoxamin", "eisenüberladung", "chelat-therapie"],
+        },
+        {
+          question:
+            "Ein 28-jähriger Patient zeigt Leberzirrhose und einen grün-braunen Kornealring in der Spaltlampe. Welches Metall akkumuliert, und welche Therapie ist indiziert?",
+          options: [
+            "Eisen-Akkumulation (Hämochromatose) — Therapie: Aderlass",
+            "Kupfer-Akkumulation (Wilson-Krankheit) — Therapie: D-Penicillamin",
+            "Zink-Akkumulation — Therapie: EDTA",
+            "Mangan-Akkumulation (Manganismus) — Therapie: L-DOPA",
+            "Blei-Akkumulation (Saturnismus) — Therapie: DMSA",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Kayser-Fleischer-Kornealring (grün-braune Cu-Ablagerung in der Descemet-Membran) ist pathognomonisch für die Wilson-Krankheit (ATP7B-Mutation → gestörte biliäre Cu-Ausscheidung → Cu-Akkumulation in Leber, ZNS, Kornea). Labor: Coeruloplasmin↓, freies Cu im Serum↑, Cu im 24h-Urin↑. Therapie: D-Penicillamin (Cu-Chelator), alternativ Trientin. Langfristig: Zink-Supplementation (hemmt intestinale Cu-Resorption durch Metallothionein-Induktion).",
+          hints: [
+            "Grün-brauner Kornealring = Kayser-Fleischer-Ring — pathognomonisch für eine Metallspeicherkrankheit.",
+            "Das Metall hat die Farbcodes blau-grün — denk an Kupferpatina.",
+          ],
+          difficulty: 2,
+          tags: ["wilson-krankheit", "kayser-fleischer", "d-penicillamin"],
+        },
+        {
+          question: "Welche Aussage zur Eisenresorption im Duodenum ist FALSCH?",
+          options: [
+            "Nahrungseisen liegt überwiegend als Fe³⁺ vor",
+            "Vitamin C (Ascorbat) fördert die Resorption durch Reduktion von Fe³⁺ zu Fe²⁺",
+            "DMT1 (Divalenter Metalltransporter 1) transportiert Fe²⁺ in die Enterozyte",
+            "Hepcidin fördert die Eisenresorption durch Aktivierung von Ferroportin",
+            "Häm-Eisen aus tierischer Nahrung hat eine höhere Bioverfügbarkeit als Nicht-Häm-Eisen",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Die Aussage D ist falsch: Hepcidin HEMMT die Eisenresorption, indem es Ferroportin (den einzigen Fe-Exporter auf der basolateralen Seite der Enterozyten) internalisiert und abbaut. Hepcidin ↑ → Ferroportin ↓ → Fe bleibt in der Enterozyte und geht mit der Zellabschilferung verloren. Bei Entzündungen steigt Hepcidin → Anämie chronischer Erkrankungen. Alle anderen Aussagen sind korrekt: Nahrungseisen ist Fe³⁺ (A), Vitamin C reduziert es zu Fe²⁺ (B), DMT1 transportiert Fe²⁺ (C), Häm-Eisen hat höhere Bioverfügbarkeit (E).",
+          hints: [
+            "Hepcidin ist das 'Eisentorwächter-Hormon' — fördert oder blockiert es den Eisenexport?",
+            "Hepcidin wird bei Eisenüberladung und Entzündung hochreguliert — was wäre der biologische Sinn?",
+          ],
+          difficulty: 3,
+          tags: ["hepcidin", "ferroportin", "eisenresorption"],
+        },
+        {
+          question:
+            "Cisplatin [Pt(NH₃)₂Cl₂] ist ein wichtiges Zytostatikum. Warum ist nur die cis-Konfiguration therapeutisch wirksam?",
+          options: [
+            "Weil die cis-Form besser wasserlöslich ist als die trans-Form",
+            "Weil die cis-Form eine höhere Oxidationsstufe des Platins hat",
+            "Weil nur in der cis-Konfiguration die beiden Chlorid-Liganden an benachbarte Guanin-Basen der DNA binden können (intrastrand crosslink)",
+            "Weil die trans-Form im Körper sofort zu Pt⁰ reduziert wird",
+            "Weil Transplatin eine oktaedrische statt quadratisch-planare Geometrie hat",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Cisplatin ist quadratisch-planar (Pt²⁺, KZ=4). In der cis-Konfiguration stehen die beiden Chlorid-Liganden auf derselben Seite. Im Zellinnern werden die Cl⁻ durch H₂O ersetzt (Aquation), und die entstehenden Aqua-Komplexe binden an die N7-Position zweier benachbarter Guanine auf demselben DNA-Strang (intrastrand crosslink, 1,2-d(GpG)). Dieser Crosslink verbiegt die DNA (~35°) und wird von Reparaturenzymen nicht effizient entfernt → Apoptose. In der trans-Konfiguration stehen die Abgangsgruppen gegenüber → geometrisch unmöglich, zwei benachbarte Basen gleichzeitig zu erreichen.",
+          hints: [
+            "Quadratisch-planar: cis = gleiche Seite, trans = gegenüberliegende Seite.",
+            "Für einen intrastrand crosslink müssen beide Bindungsstellen auf derselben Seite des Moleküls liegen.",
+          ],
+          difficulty: 3,
+          tags: ["cisplatin", "cis-trans", "dna-crosslink"],
+        },
+      ],
+    },
+
     // === from kap10-säure-base ===
     {
       id: "ch-10-01",

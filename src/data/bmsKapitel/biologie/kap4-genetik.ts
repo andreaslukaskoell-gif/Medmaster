@@ -588,119 +588,294 @@ Das **Punnett-Quadrat** stellt die möglichen Kombinationen der **Gameten** (Eiz
         "rezessiv",
         "kodominant",
         "intermediär",
+        "Epistasie",
+        "Penetranz",
+        "Expressivität",
+        "Pleiotropie",
+        "polygene Vererbung",
+        "multiple Allele",
         "Testkreuzung",
+        "ABO-Blutgruppen",
+        "Sichelzellanämie",
       ],
-      content: `## Genotyp und Phänotyp
+      content: `## Gleicher Genotyp, unterschiedlicher Phänotyp — warum?
 
-Der **Genotyp** ist die **Allel-Kombination** eines Individuums für ein (oder mehrere) Gene — z. B. AA, Aa oder aa. Der **Phänotyp** ist die **sichtbare oder messbare Ausprägung** des Merkmals — z. B. rote oder weiße Blüte, Blutgruppe A, B, AB oder 0. Mehrere Genotypen können zum gleichen Phänotyp führen (z. B. AA und Aa zeigen beide den dominanten Phänotyp), wenn ein Allel dominant ist.
-
-> **Merke:** Genotyp = genetische Ausstattung (Allel-Kombination). Phänotyp = sichtbares Merkmal.
+Zwei Menschen tragen dieselbe Mutation im BRCA1-Gen. Die eine erkrankt mit 40 an Brustkrebs, die andere bleibt ihr Leben lang gesund. Die Allel-Kombination (der **Genotyp**) ist identisch — das sichtbare Ergebnis (der **Phänotyp**) nicht. Zwischen Genotyp und Phänotyp liegen Dominanzverhältnisse, Wechselwirkungen zwischen Genen und Umwelteinflüsse. Dieses Kapitel zeigt, welche Mechanismen dafür sorgen, dass gleiche Gene zu verschiedenen Ergebnissen führen können.
 
 ---
 
-## Homozygot und heterozygot
+## Genotyp → Phänotyp: Die Grundregel
 
+Der **Genotyp** ist die Allel-Kombination eines Individuums an einem Genort — z. B. **AA**, **Aa** oder **aa**. Der **Phänotyp** ist das beobachtbare Merkmal: Blütenfarbe, Blutgruppe, Körpergröße. Die zentrale Erkenntnis: Vom Genotyp zum Phänotyp ist es kein 1:1-Weg — Dominanzverhältnisse, andere Gene und die Umwelt modulieren das Ergebnis.
 
-**Homozygot** (reinerbig): Beide Allele sind gleich — **AA** (homozygot dominant) oder **aa** (homozygot rezessiv). **Heterozygot** (mischerbig): Die beiden Allele sind unterschiedlich — **Aa**. Bei der Vererbung gibt jeder Elternteil genau eines seiner beiden Allele weiter (über die Keimzelle); deshalb kann man mit Kreuzungsschemata die Genotyp- und Phänotyp-Verhältnisse vorhersagen.
+**Homozygot** (reinerbig): Beide Allele gleich — **AA** (homozygot dominant) oder **aa** (homozygot rezessiv). **Heterozygot** (mischerbig): Zwei verschiedene Allele — **Aa**. Welcher Phänotyp beim Heterozygoten entsteht, hängt vom Dominanzverhältnis ab.
 
----
-
-## Dominanzverhältnisse
-
-
-**Dominant-rezessiv:** Das **dominante** Allel (üblicherweise Großbuchstabe, z. B. A) setzt sich auch im heterozygoten Zustand durch; das **rezessive** Allel (Kleinbuchstabe, a) ist nur im homozygoten Zustand (aa) sichtbar. Beispiel: Aa → gleicher Phänotyp wie AA (rot).
-
-**Intermediär (unvollständige Dominanz):** Der Heterozygote (Aa) zeigt einen **Mischphänotyp** zwischen den beiden Homozygoten (z. B. AA rot, aa weiß, Aa rosa). Das F₂-Phänotyp-Verhältnis entspricht dann dem Genotyp-Verhältnis **1:2:1**.
-
-**Kodominant:** Beide Allele kommen im Phänotyp **gleichzeitig** zur Geltung (nicht gemischt). Klassisches Beispiel: **Blutgruppe AB** — beide Antigene A und B werden exprimiert (I^A und I^B kodominant).
-
-> **Merke:** Dominant-rezessiv: Aa = AA im Phänotyp. Intermediär: Aa = Mischung (1:2:1). Kodominant: beide Allele sichtbar (z. B. AB).
+> **Merke:** Genotyp = Allel-Kombination (AA, Aa, aa). Phänotyp = sichtbares Merkmal. Homozygot = gleiche Allele; heterozygot = verschiedene Allele.
 
 ---
 
-## Testkreuzung (Rückkreuzung)
+## Vollständige Dominanz (dominant-rezessiv)
 
+Das häufigste Verhältnis: Das **dominante** Allel (Großbuchstabe, z. B. A) bestimmt den Phänotyp allein, auch wenn nur eine Kopie vorliegt. Das **rezessive** Allel (Kleinbuchstabe, a) zeigt sich erst im homozygoten Zustand (aa). Der Heterozygote Aa sieht aus wie AA.
+
+- **AA** → dominanter Phänotyp (z. B. rote Blüte)
+- **Aa** → dominanter Phänotyp (äußerlich nicht von AA unterscheidbar)
+- **aa** → rezessiver Phänotyp (z. B. weiße Blüte)
+
+Kreuzung Aa × Aa ergibt im F₂: **3:1** (Phänotyp), **1:2:1** (Genotyp).
+
+Die **Testkreuzung** klärt, ob ein dominant-phänotypisches Individuum AA oder Aa ist: Kreuzung mit **aa**. Alle Nachkommen dominant → **AA**. Aufspaltung 1:1 → **Aa**.
+
+> **Merke:** Dominant-rezessiv: Aa = AA im Phänotyp. Testkreuzung × aa entlarvt den Genotyp (100 % dominant → AA; 1:1 → Aa).
+
+---
+
+## Unvollständige Dominanz (intermediär)
 
 {{DIAGRAM:pedigree-analysis}}
 
-Will man wissen, ob ein Individuum mit **dominantem Phänotyp** **homozygot (AA)** oder **heterozygot (Aa)** ist, kreuzt man es mit einem **homozygot rezessiven** Partner (aa). **Ergebnis:** Sind alle Nachkommen dominant → Elternteil war **AA**. Spaltet die Nachkommenschaft **1:1** (dominant : rezessiv) → Elternteil war **Aa**. Die Testkreuzung liefert also eine klare Aussage über den Genotyp.
+Keines der Allele setzt sich vollständig durch. Der Heterozygote zeigt einen **Mischphänotyp** zwischen den beiden Homozygoten. Klassisches Beispiel: Die **Wunderblume** (*Mirabilis jalapa*) — rote Blüte (AA) × weiße Blüte (aa) ergibt **rosa** Blüten (Aa). Hier „verdünnt" das fehlende Allel die Farbintensität.
 
-> **Merke:** Testkreuzung × aa: 100 % dominant → AA; 1:1 (dominant : rezessiv) → Aa.`,
+**Entscheidend:** Das Phänotyp-Verhältnis im F₂ entspricht dem Genotyp-Verhältnis **1:2:1** (rot : rosa : weiß = 1 : 2 : 1), weil jeder Genotyp einen eigenen Phänotyp hat.
+
+> **Merke:** Intermediär = Mischphänotyp im Heterozygoten. F₂ = 1:2:1 (nicht 3:1!). Wunderblume: rot × weiß = rosa.
+
+---
+
+## Kodominanz — beide Allele voll exprimiert
+
+Bei Kodominanz werden **beide Allele gleichzeitig und vollständig** exprimiert — kein Mischen, sondern Nebeneinander. Das wichtigste Beispiel für den MedAT: die **ABO-Blutgruppen**.
+
+### ABO-Blutgruppen als Musterbeispiel
+
+Das ABO-Gen hat **drei Allele** (multiple Allele): **I^A**, **I^B** und **i**. I^A und I^B sind **kodominant** zueinander, beide sind **dominant über i** (rezessiv).
+
+| Genotyp | Blutgruppe (Phänotyp) | Antigene auf Erythrozyten | Antikörper im Serum |
+|---------|----------------------|---------------------------|---------------------|
+| I^A I^A oder I^A i | **A** | A-Antigen | Anti-B |
+| I^B I^B oder I^B i | **B** | B-Antigen | Anti-A |
+| I^A I^B | **AB** | A- **und** B-Antigen | keine |
+| ii | **0** | keine | Anti-A und Anti-B |
+
+- **AB = Universalempfänger** (keine Antikörper → verträgt A, B, AB, 0)
+- **0 = Universalspender** (keine Antigene → wird von keinem Empfänger abgestoßen)
+
+Dieses System zeigt drei Konzepte gleichzeitig: **Kodominanz** (I^A I^B → AB), **Dominanz** (I^A über i) und **multiple Allele** (drei Allele an einem Locus).
+
+> **Merke:** ABO: I^A und I^B kodominant, beide dominant über i. AB = Universalempfänger (keine Antikörper), 0 = Universalspender (keine Antigene).
+
+---
+
+## Intermediär ≠ kodominant — der häufigste Fehler
+
+Beide betreffen Heterozygote, aber der Mechanismus ist grundverschieden:
+
+| | Intermediär | Kodominant |
+|--|-------------|------------|
+| **Phänotyp Aa** | Mischform (Zwischenstufe) | Beide Merkmale nebeneinander |
+| **Beispiel** | Rosa Blüte (rot + weiß gemischt) | Blutgruppe AB (A-Antigen UND B-Antigen) |
+| **Molekular** | Halbe Menge Genprodukt | Volle Menge beider Genprodukte |
+
+> **Merke:** Intermediär = Blending (rosa). Kodominant = beide voll da (A + B nebeneinander). Nie verwechseln!
+
+---
+
+## Multiple Allele
+
+Ein Gen kann in einer Population in **mehr als zwei Varianten** vorkommen. Jedes Individuum trägt aber weiterhin nur **zwei Allele** (diploid). Beispiel: ABO mit drei Allelen (I^A, I^B, i) ergibt sechs mögliche Genotypen, aber nur vier Phänotypen. Weiteres Beispiel: Das Fellfarben-Gen bei Kaninchen hat vier Allele (Wildtyp > Chinchilla > Himalaya > Albino) mit einer Dominanzhierarchie.
+
+---
+
+## Epistasie — ein Gen maskiert ein anderes
+
+**Epistasie** (griech. „Darüberstehen") liegt vor, wenn ein Gen die Ausprägung eines **anderen Gens** beeinflusst oder unterdrückt. Das übergeordnete Gen heißt **epistatisch**, das unterdrückte **hypostatisch**.
+
+Beispiel: **Labrador-Fellfarbe** — Gen E bestimmt, ob Pigment eingelagert wird (E_) oder nicht (ee = gelb, egal ob B_ oder bb). Gen B bestimmt die Pigmentfarbe (B_ = schwarz, bb = braun). Genotyp bbee = gelb, nicht braun — Gen E ist epistatisch über Gen B.
+
+Bei Epistasie weichen die F₂-Spaltungsverhältnisse vom erwarteten 9:3:3:1 ab (z. B. **9:3:4** bei rezessiver Epistasie).
+
+> **Merke:** Epistasie = ein Gen maskiert die Wirkung eines anderen Gens. Ergebnis: veränderte Mendel-Verhältnisse im F₂.
+
+---
+
+## Penetranz und Expressivität
+
+Nicht jeder Träger einer krankheitsverursachenden Mutation wird krank — und wenn doch, nicht gleich schwer. Zwei Begriffe fassen das:
+
+**Penetranz** = Anteil der Genotyp-Träger, die den Phänotyp tatsächlich zeigen (in Prozent). **Vollständige Penetranz** (100 %): Jeder Träger ist betroffen — z. B. **Chorea Huntington**. **Unvollständige Penetranz**: Nicht jeder Träger erkrankt — z. B. **BRCA1-Mutationen** mit ca. **70 % Penetranz** (70 von 100 Trägerinnen entwickeln Brustkrebs).
+
+**Expressivität** = **Schweregrad** der Merkmalsausprägung bei denjenigen, die betroffen sind. Variable Expressivität bedeutet: Betroffene zeigen das Merkmal unterschiedlich stark. Beispiel: **Neurofibromatose Typ 1** — manche Patienten haben nur wenige Café-au-lait-Flecken, andere entwickeln hunderte Neurofibrome.
+
+| Begriff | Frage | Beispiel |
+|---------|-------|----------|
+| **Penetranz** | Ob? (betroffen ja/nein) | BRCA1: 70 % Penetranz |
+| **Expressivität** | Wie stark? (Schweregrad) | NF1: wenige Flecken bis schwere Tumoren |
+
+> **Merke:** Penetranz = ob ein Merkmal auftritt (%). Expressivität = wie stark es auftritt. Huntington = 100 % Penetranz. BRCA1 ≈ 70 % Penetranz.
+
+---
+
+## Polygene Vererbung — viele Gene, ein Merkmal
+
+Merkmale wie **Körpergröße**, **Hautfarbe** oder **Blutdruck** werden nicht von einem Gen bestimmt, sondern von vielen Genen gleichzeitig — das nennt man **polygene Vererbung**. Jedes einzelne Gen trägt einen kleinen additiven Effekt bei. Die Umwelt (Ernährung, Klima, Training) moduliert zusätzlich. Das Ergebnis ist eine **kontinuierliche Verteilung** (Normalverteilung/Glockenkurve) statt diskreter Klassen.
+
+> **Merke:** Polygene Vererbung = viele Gene beeinflussen ein Merkmal additiv → Normalverteilung (z. B. Körpergröße). Nicht mendelnde Verhältnisse.
+
+---
+
+## Pleiotropie — ein Gen, viele Merkmale
+
+Das Gegenstück zur polygenen Vererbung: Ein einzelnes Gen beeinflusst **mehrere, scheinbar unverbundene Merkmale**. Beispiel: Beim **Marfan-Syndrom** führt eine Mutation im Fibrillin-1-Gen (FBN1) zu langen Fingern, Linsenluxation, Aortenaneurysma und Überstreckbarkeit der Gelenke — ein Gen, vier Organsysteme betroffen. Auch die **Sichelzellanämie** ist pleiotrop: Die HbS-Mutation verursacht sichelförmige Erythrozyten, Anämie, Milzinfarkte und Organschäden.
+
+> **Merke:** Pleiotropie = ein Gen → viele Merkmale. Marfan: FBN1 betrifft Herz, Auge, Skelett, Gelenke. Gegenstück: polygene Vererbung (viele Gene → ein Merkmal).
+
+---
+
+## Klinische Anwendung: Sichelzellanämie
+
+Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
+
+- **Kodominanz auf molekularer Ebene:** Heterozygote (HbA/HbS) produzieren **beide** Hämoglobin-Varianten — HbA und HbS sind nebeneinander nachweisbar (Elektrophorese zeigt zwei Banden).
+- **Unvollständige Dominanz auf klinischer Ebene:** HbA/HbS-Träger sind unter Normalbedingungen symptomfrei, können aber unter Sauerstoffmangel (Höhe, Narkose) Sichelzellkrisen erleiden — ein intermediärer Phänotyp.
+- **Heterozygotenvorteil:** In Malariagebieten haben HbA/HbS-Träger einen **Selektionsvorteil** — die Sichelzellen erschweren dem Malaria-Parasiten (*Plasmodium falciparum*) die Vermehrung. Deshalb bleibt das HbS-Allel in diesen Regionen häufig, obwohl HbS/HbS schwer krank macht.
+- **Pleiotropie:** Die eine Mutation (Glu → Val in der β-Globin-Kette) verursacht sichelförmige Erythrozyten, chronische Anämie, Gefäßverschlüsse, Milzinfarkte und Organschäden.
+
+> **Merke:** Sichelzellanämie = Kodominanz (beide Hb nachweisbar) + Heterozygotenvorteil (Malariaresistenz) + Pleiotropie (eine Mutation, viele Organschäden).
+
+---
+
+## Häufige Missverständnisse
+
+**„Dominant = häufiger/besser"** — Falsch. Dominanz beschreibt nur die Ausprägung im Heterozygoten, nicht die Allel-Häufigkeit in der Population. Polydaktylie (überzählige Finger) ist dominant, aber selten. Blaue Augen sind rezessiv, aber in Nordeuropa sehr häufig.
+
+**„Intermediär und kodominant sind dasselbe"** — Falsch. Intermediär = Mischung (rosa). Kodominant = beide vollständig da (A + B). Der Unterschied liegt im molekularen Mechanismus.
+
+**„Rezessive Merkmale verschwinden"** — Falsch. Rezessive Allele werden im Heterozygoten „versteckt" weitergegeben. In großen Populationen bleiben sie über das Hardy-Weinberg-Gleichgewicht stabil erhalten.
+
+---
+
+## Zusammenfassung (ultrakompakt)
+
+| Konzept | Kernaussage |
+|---------|-------------|
+| **Genotyp → Phänotyp** | Allel-Kombination → sichtbares Merkmal (kein 1:1-Weg) |
+| **Vollständig dominant** | Aa = AA; F₂ = 3:1 |
+| **Intermediär** | Aa = Mischform; F₂ = 1:2:1 |
+| **Kodominant** | Aa = beide Merkmale sichtbar (ABO: I^A I^B = AB) |
+| **Multiple Allele** | >2 Varianten in Population, aber 2 pro Individuum |
+| **Epistasie** | Ein Gen maskiert ein anderes (Labrador-Farbe) |
+| **Penetranz** | Ob? — Huntington 100 %, BRCA1 ~70 % |
+| **Expressivität** | Wie stark? — NF1 variabel |
+| **Polygen** | Viele Gene → ein Merkmal (Körpergröße) |
+| **Pleiotrop** | Ein Gen → viele Merkmale (Marfan, Sichelzelle) |`,
       lernziele: [
         "Genotyp und Phänotyp sowie homozygot und heterozygot definieren.",
-        "Dominant-rezessiv, intermediär und kodominant unterscheiden und die Testkreuzung anwenden.",
+        "Vollständige Dominanz, intermediäre Vererbung und Kodominanz unterscheiden und Beispiele nennen.",
+        "Das ABO-Blutgruppensystem als Beispiel für Kodominanz, Dominanz und multiple Allele erklären.",
+        "Epistasie, Penetranz, Expressivität, polygene Vererbung und Pleiotropie definieren und klinische Beispiele zuordnen.",
+        "Die Testkreuzung erklären und anwenden.",
       ],
       sections: [],
       merksätze: [
-        "Genotyp = genetische Ausstattung; Phänotyp = sichtbares Merkmal. Testkreuzung × aa: 100 % dominant = AA, 1:1 = Aa.",
+        "Genotyp = Allel-Kombination; Phänotyp = sichtbares Merkmal. AA/Aa/aa = homo-dom./hetero./homo-rez.",
+        "Intermediär = Mischung (1:2:1), Kodominant = beide voll exprimiert (AB). Nie verwechseln!",
+        "Penetranz = ob (%), Expressivität = wie stark. Polygen = viele Gene → 1 Merkmal, Pleiotrop = 1 Gen → viele Merkmale.",
       ],
       selfTest: [
         {
-          question:
-            "Bei welchem Dominanzverhältnis zeigt der Heterozygote (Aa) einen Mischphänotyp (z. B. rosa zwischen rot und weiß)?",
+          question: "Welches Blutgruppen-Genotyp-Paar zeigt Kodominanz?",
           options: [
-            "Dominant-rezessiv",
-            "Kodominant",
-            "Intermediär (unvollständige Dominanz)",
-            "Rezessiv",
-            "X-chromosomal",
+            "I^A I^A und I^B I^B",
+            "I^A I^B → Blutgruppe AB, da beide Antigene gleichzeitig exprimiert werden",
+            "I^A i → Blutgruppe A, da I^A dominant über i ist",
+            "ii → Blutgruppe 0, da beide Allele rezessiv sind",
+            "I^B i → Blutgruppe B, da I^B dominant über i ist",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
-            "Bei **intermediärer** (unvollständiger) Dominanz zeigt der Heterozygote Aa einen **Mischphänotyp** zwischen den beiden Homozygoten (z. B. rosa zwischen rot und weiß). Bei **kodominant** werden beide Allele **gleichzeitig** exprimiert (nicht gemischt), z. B. Blutgruppe AB mit A- und B-Antigen. Bei **dominant-rezessiv** zeigt Aa den gleichen Phänotyp wie AA.",
+            "**Kodominanz** bedeutet, dass beide Allele im Heterozygoten **gleichzeitig und vollständig** exprimiert werden. Bei **I^A I^B** werden sowohl das A-Antigen als auch das B-Antigen auf den Erythrozyten gebildet → **Blutgruppe AB**. Bei I^A i hingegen liegt Dominanz (nicht Kodominanz) vor: I^A ist dominant über i.",
           difficulty: 1,
-          tags: ["intermediär", "dominanz", "phänotyp"],
+          tags: ["kodominanz", "blutgruppe", "abo"],
         },
         {
           question:
-            "Ein Individuum mit dominantem Phänotyp wird mit einem homozygot rezessiven Partner gekreuzt. Die Nachkommen spalten 1:1 (dominant : rezessiv). Welchen Genotyp hatte das erste Individuum?",
+            "Die Wunderblume zeigt bei der Kreuzung rot (AA) × weiß (aa) rosa Blüten in der F₁. Welches Phänotyp-Verhältnis zeigt die F₂ (Aa × Aa)?",
+          options: [
+            "3:1 (rot : weiß)",
+            "1:2:1 (rot : rosa : weiß)",
+            "9:3:3:1",
+            "1:1 (rot : weiß)",
+            "Alle rosa",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Bei **intermediärer** Vererbung hat jeder Genotyp einen eigenen Phänotyp: AA = rot, Aa = rosa, aa = weiß. Daher entspricht das Phänotyp-Verhältnis dem Genotyp-Verhältnis **1:2:1**. Das 3:1-Verhältnis gilt nur bei vollständiger Dominanz.",
+          difficulty: 1,
+          tags: ["intermediär", "1:2:1", "wunderblume"],
+        },
+        {
+          question:
+            "Ein Individuum mit dominantem Phänotyp wird mit aa gekreuzt. Die Nachkommen spalten 1:1 (dominant : rezessiv). Welchen Genotyp hatte das getestete Individuum?",
           options: [
             "AA (homozygot dominant)",
             "aa (homozygot rezessiv)",
             "Aa (heterozygot)",
             "A (hemizygot)",
-            "Der Genotyp kann nicht bestimmt werden",
+            "Der Genotyp lässt sich nicht bestimmen",
           ],
           correctIndex: 2,
           explanation:
-            "Bei der **Testkreuzung** (× aa): Wenn die Nachkommen **1:1** aufspalten (dominant : rezessiv), muss das getestete Individuum **heterozygot (Aa)** gewesen sein. Bei AA wären **alle** Nachkommen dominant.",
+            "Bei der **Testkreuzung** (× aa): 1:1-Aufspaltung bedeutet, das Individuum war **Aa** (heterozygot). Wäre es AA gewesen, wären **alle** Nachkommen dominant (Aa). Die Testkreuzung ist die Standardmethode, um zwischen AA und Aa zu unterscheiden.",
           difficulty: 1,
           tags: ["testkreuzung", "heterozygot", "genotyp"],
         },
         {
           question:
-            "Bei welchem Dominanzverhältnis sind im Heterozygoten beide Allele gleichzeitig phänotypisch sichtbar (nicht gemischt)?",
-          options: ["Dominant-rezessiv", "Intermediär", "Kodominant", "Rezessiv", "Epistasie"],
-          correctIndex: 2,
-          explanation:
-            "**Kodominanz** bedeutet: Beide Allele werden **gleichzeitig** exprimiert und sind im Phänotyp sichtbar (z. B. Blutgruppe AB: A-Antigen UND B-Antigen). Das ist anders als **intermediär**, wo ein **Mischphänotyp** entsteht (z. B. rosa).",
-          difficulty: 1,
-          tags: ["kodominant", "blutgruppe", "phänotyp"],
-        },
-        {
-          question:
-            "Welches Phänotyp-Verhältnis zeigt die F₂-Generation bei intermediärer Vererbung (Aa × Aa)?",
-          options: ["3:1", "1:2:1 (entspricht dem Genotyp-Verhältnis)", "9:3:3:1", "1:1", "2:1"],
-          correctIndex: 1,
-          explanation:
-            "Bei **intermediärer** Dominanz zeigt jeder Genotyp einen eigenen Phänotyp: AA = rot, Aa = rosa, aa = weiß. Daher entspricht das **Phänotyp-Verhältnis** dem **Genotyp-Verhältnis: 1:2:1**. Bei dominant-rezessiv wäre es 3:1.",
-          difficulty: 2,
-          tags: ["intermediär", "1:2:1", "f2"],
-        },
-        {
-          question: "Warum bedeutet 'dominant' NICHT automatisch 'häufig in der Population'?",
+            "BRCA1-Mutationsträgerinnen erkranken zu ca. 70 % an Brustkrebs. Welcher Fachbegriff beschreibt dieses Phänomen?",
           options: [
-            "Weil dominante Allele immer letal sind",
-            "Weil Dominanz die Phänotyp-Ausprägung im Heterozygoten beschreibt, nicht die Häufigkeit eines Allels in der Population",
-            "Weil rezessive Allele immer häufiger sind",
-            "Weil Dominanz nur bei X-chromosomalen Genen vorkommt",
-            "Weil alle Allele gleich häufig sind",
+            "Variable Expressivität",
+            "Unvollständige Penetranz",
+            "Kodominanz",
+            "Epistasie",
+            "Polygene Vererbung",
           ],
           correctIndex: 1,
           explanation:
-            "**Dominanz** beschreibt, wie sich Allele im **Heterozygoten** (Aa) auswirken — ob A den Phänotyp allein bestimmt oder nicht. Die **Häufigkeit** eines Allels in der Population ist davon unabhängig. Beispiel: Polydaktylie ist dominant, aber selten.",
+            "**Penetranz** gibt an, welcher Anteil der Genotyp-Träger den Phänotyp tatsächlich zeigt. Bei BRCA1 liegt die Penetranz bei ca. 70 % — nicht alle Trägerinnen erkranken. Das ist **unvollständige Penetranz**. **Expressivität** beschreibt dagegen den Schweregrad bei denjenigen, die erkranken.",
           difficulty: 2,
-          tags: ["dominant", "häufigkeit", "population"],
+          tags: ["penetranz", "brca1", "klinisch"],
+        },
+        {
+          question:
+            "Beim Marfan-Syndrom verursacht eine einzige Mutation im FBN1-Gen gleichzeitig Aortenaneurysma, Linsenluxation und lange Finger. Wie nennt man dieses Phänomen?",
+          options: [
+            "Polygene Vererbung",
+            "Epistasie",
+            "Pleiotropie",
+            "Multiple Allele",
+            "Intermediäre Dominanz",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**Pleiotropie** bedeutet: Ein Gen beeinflusst **mehrere, scheinbar unverbundene Merkmale**. Beim Marfan-Syndrom betrifft die FBN1-Mutation Herz (Aorta), Auge (Linse) und Skelett (Finger) gleichzeitig. Das Gegenstück ist **polygene Vererbung** (viele Gene → ein Merkmal).",
+          difficulty: 2,
+          tags: ["pleiotropie", "marfan", "klinisch"],
+        },
+        {
+          question:
+            "Bei Labrador Retrievern bestimmt Gen B die Pigmentfarbe (B_ = schwarz, bb = braun) und Gen E, ob Pigment eingelagert wird (ee = gelb, egal ob B_ oder bb). Wie heißt diese Wechselwirkung?",
+          options: [
+            "Kodominanz",
+            "Intermediäre Vererbung",
+            "Epistasie",
+            "Pleiotropie",
+            "Polygene Vererbung",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**Epistasie** liegt vor, wenn ein Gen die Ausprägung eines **anderen Gens** maskiert. Hier ist Gen E epistatisch über Gen B: Bei ee wird kein Pigment eingelagert → der Hund ist gelb, unabhängig vom B-Genotyp. Das Gen E 'überschreibt' die Wirkung von Gen B.",
+          difficulty: 2,
+          tags: ["epistasie", "labrador", "geninteraktion"],
         },
       ],
     },
@@ -1420,187 +1595,293 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
       ],
     },
 
-    // ─── 10. Hardy-Weinberg-Gleichgewicht ──────────────────────────────────────
+    // ─── 10. Tumorgenetik ──────────────────────────────────────────────────────
     {
       id: "bio-4-10",
-      title: "Hardy-Weinberg-Gleichgewicht",
+      title: "Tumorgenetik",
       stichworte: [
-        "Hardy-Weinberg",
-        "Allelfrequenz",
-        "Genotypfrequenz",
-        "Heterozygotenfrequenz",
-        "Panmixie",
-        "Populationsgenetik",
-        "p² + 2pq + q²",
+        "Tumorgenetik",
+        "Onkogen",
+        "Proto-Onkogen",
+        "Tumorsuppressorgen",
+        "p53",
+        "RB",
+        "BRCA",
+        "Two-Hit-Hypothese",
+        "Karzinogenese",
+        "Hallmarks of Cancer",
+        "Knudson",
+        "Metastase",
       ],
-      content: `## Grundbegriffe der Populationsgenetik
+      content: `## Krebs ist eine genetische Erkrankung
 
-In der **Populationsgenetik** betrachtet man nicht einzelne Familien, sondern ganze **Populationen**. Statt nach dem Genotyp eines Individuums zu fragen, fragt man: Wie häufig ist ein bestimmtes **Allel** in der gesamten Population?
+Krebs entsteht, wenn eine Zelle die Kontrolle über ihr eigenes Wachstum verliert. Dahinter stecken **Mutationen** in Genen, die normalerweise das Zellwachstum steuern. Keine einzelne Mutation reicht aus — es braucht typischerweise **5–7 unabhängige Mutationen**, die sich über Jahre ansammeln, bis eine Zelle alle Kontrollmechanismen umgangen hat. Deshalb steigt das Krebsrisiko mit dem Alter: Je mehr Zellteilungen, desto mehr Gelegenheiten für Mutationsereignisse.
 
-**Allelfrequenz (= Allelhäufigkeit):** Der Anteil eines bestimmten Allels an allen Allelen eines Genorts in der Population. Bei einem Gen mit zwei Allelen (A und a) gilt:
-- **p** = Frequenz des dominanten Allels A
-- **q** = Frequenz des rezessiven Allels a
-- Es gilt immer: **p + q = 1** (da es nur zwei Allele gibt)
+**Der Grundmechanismus:** Normale Zelle → Mutationen in wachstumskontrollierenden Genen → unkontrollierte Teilung → **Tumor** (Neoplasie (Neubildung von Gewebe)) → Einwachsen in Nachbargewebe und Streuung über Blut/Lymphe → **Metastasen** (Tochtergeschwülste in entfernten Organen).
 
-**Genotypfrequenz:** Der Anteil eines bestimmten Genotyps (AA, Aa oder aa) in der Population.
-
-> **Merke:** p = Frequenz von A, q = Frequenz von a. p + q = 1 (die Summe aller Allelfrequenzen ist immer 1).
+> **Merke:** Krebs = Akkumulation von 5–7 Mutationen in wachstumskontrollierenden Genen. Nicht eine Mutation, sondern das Zusammenspiel vieler genetischer Treffer macht eine Zelle bösartig.
 
 ---
 
-## Die Hardy-Weinberg-Gleichung
+## Proto-Onkogene und Onkogene — das festgeklemmte Gaspedal
 
-Wenn bestimmte Voraussetzungen erfüllt sind (siehe unten), lassen sich die **Genotypfrequenzen** direkt aus den Allelfrequenzen berechnen:
+**Proto-Onkogene** sind normale Gene, die das Zellwachstum **fördern** — sie codieren z. B. für Wachstumsfaktoren, Rezeptoren oder Signalproteine, die der Zelle sagen: „Teile dich!" Sie sind essentiell für normales Wachstum und Gewebeerneuerung.
 
-**p² + 2pq + q² = 1**
+Wird ein Proto-Onkogen durch eine Mutation **überaktiviert**, entsteht ein **Onkogen** (griech. onkos = Geschwulst). Das Onkogen sendet dauerhaft Wachstumssignale — wie ein **Gaspedal, das festklemmt**. Die Zelle teilt sich ständig, auch wenn kein Wachstumssignal von außen kommt.
 
-| Genotyp | Frequenz | Bedeutung |
-|---------|----------|-----------|
-| **AA** (homozygot dominant) | p² | Häufigkeit der Homozygoten für A |
-| **Aa** (heterozygot) | 2pq | Häufigkeit der Überträger/Heterozygoten |
-| **aa** (homozygot rezessiv) | q² | Häufigkeit der Homozygoten für a (bei rezessiven Erkrankungen = Erkrankte) |
+**Aktivierungsmechanismen (gain of function):**
+- **Punktmutation:** Ein einziger Basenaustausch macht das Protein dauerhaft aktiv (z. B. RAS)
+- **Genamplifikation:** Das Gen wird vervielfacht → zu viel Protein (z. B. HER2)
+- **Chromosomentranslokation:** Das Gen gerät unter einen starken Promotor oder verschmilzt mit einem anderen Gen → Fusionsprotein (z. B. BCR-ABL bei CML)
 
-Die Formel entspricht dem Ausmultiplizieren von **(p + q)²** — sie beschreibt die zufällige Kombination von Gameten bei der Befruchtung.
+| Onkogen | Normales Protein | Aktivierung | Tumor |
+|---------|-----------------|-------------|-------|
+| **RAS** | GTPase (Signalschalter) | Punktmutation → dauerhaft „an" | ~30 % aller Karzinome |
+| **MYC** | Transkriptionsfaktor | Amplifikation/Translokation | Burkitt-Lymphom, viele Karzinome |
+| **HER2** (ERBB2) | Wachstumsfaktor-Rezeptor | Amplifikation → zu viele Rezeptoren | ~20 % der Mammakarzinome |
+| **BCR-ABL** | Fusionsprotein (Tyrosinkinase) | Translokation t(9;22) „Philadelphia-Chromosom" | Chronische myeloische Leukämie (CML) |
 
-> **Merke:** p² + 2pq + q² = 1 verknüpft Allelfrequenzen (p, q) mit Genotypfrequenzen (AA, Aa, aa). Die Heterozygotenfrequenz ist 2pq.
+**Wichtig:** Es genügt, wenn **ein Allel** mutiert ist (dominant wirkend). Ein defektes Gaspedal reicht, um die Zelle anzutreiben.
 
----
-
-## Voraussetzungen des Hardy-Weinberg-Gleichgewichts
-
-
-1. **Große Population** — kein genetischer Drift (keine zufälligen Schwankungen durch kleine Populationsgrößen)
-2. **Keine Selektion** — kein Genotyp hat einen Überlebens- oder Fortpflanzungsvorteil
-3. **Keine Mutation** — keine neuen Allele entstehen
-4. **Panmixie** (Zufallspaarung) — die Partnerwahl ist nicht vom Genotyp abhängig (keine Assortative Paarung, keine Inzucht)
-5. **Keine Migration** — kein Zu- oder Abwandern von Individuen mit anderen Allelfrequenzen
-
-In der Realität sind diese Bedingungen nie vollständig erfüllt. Das Hardy-Weinberg-Gleichgewicht dient als **Nullmodell**: Abweichungen deuten auf Evolution (Selektion, Drift, Migration, Mutation) hin.
-
-> **Merke:** 5 Voraussetzungen: große Population, keine Selektion, keine Mutation, Panmixie, keine Migration. In der Natur nie vollständig erfüllt — aber als Modell für Berechnungen im MedAT unverzichtbar.
+> **Merke:** Proto-Onkogen (normal) → Onkogen (mutiert, überaktiv) = Gain of function. Wirkt dominant: eine mutierte Kopie reicht. Eselsbrücke: Onkogen = festgeklemmtes Gaspedal.
 
 ---
 
-## Rechenbeispiel: Von der Phänotyp-Häufigkeit zur Überträgerfrequenz
+## Tumorsuppressorgene — die kaputte Bremse
 
+**Tumorsuppressorgene** (TSG) sind die Gegenspieler: Sie **bremsen** das Zellwachstum, lösen bei DNA-Schäden einen **Zellzyklusarrest** aus oder leiten den programmierten Zelltod (**Apoptose**) ein. Wenn beide Kopien eines Tumorsuppressorgens ausfallen, fehlt die Bremse — die Zelle kann sich trotz Schäden weiterteilen.
 
-**Aufgabe:** Mukoviszidose (CF) ist autosomal-rezessiv. In Österreich ist etwa 1 von 3.500 Neugeborenen betroffen. Wie hoch ist die Überträgerfrequenz?
+| Tumorsuppressorgen | Funktion | Klinisches Syndrom |
+|-------------------|----------|-------------------|
+| **TP53** (p53) | „Guardian of the Genome": stoppt Zellzyklus bei DNA-Schaden, aktiviert Reparatur oder Apoptose | Li-Fraumeni-Syndrom; **in >50 % aller Tumoren mutiert** |
+| **RB1** | Kontrolliert G1/S-Übergang im Zellzyklus | Retinoblastom (Knudson-Modell!) |
+| **BRCA1/BRCA2** | DNA-Reparatur durch homologe Rekombination | Hereditäres Mamma-/Ovarialkarzinom |
+| **APC** | Reguliert Wnt-Signalweg (Wachstumssignalkaskade), kontrolliert Zellproliferation im Darm | Familiäre adenomatöse Polyposis (FAP) → Darmkrebs |
 
-**Schritt 1:** Erkrankte sind homozygot rezessiv (aa). Deren Frequenz ist q².
-q² = 1/3.500 ≈ 0,000286
+**p53 — der wichtigste Tumorsuppressor:** Wird die DNA beschädigt (z. B. durch UV, Chemikalien, Replikationsfehler), steigt die Konzentration von p53 in der Zelle. p53 stoppt den Zellzyklus (in G1), aktiviert DNA-Reparaturgene und löst bei irreparablem Schaden die Apoptose aus. Fällt p53 aus, teilen sich geschädigte Zellen weiter und sammeln immer mehr Mutationen an.
 
-**Schritt 2:** q berechnen (Wurzel ziehen):
-q = √(1/3.500) ≈ √0,000286 ≈ 0,0169 ≈ 1/59
+**Unterschied zu Onkogenen:** Tumorsuppressorgene wirken **rezessiv** — beide Allele müssen ausfallen (loss of function), damit die Bremse versagt.
 
-**Schritt 3:** p berechnen:
-p = 1 − q = 1 − 0,0169 ≈ 0,983
-
-**Schritt 4:** Heterozygotenfrequenz (Überträger) berechnen:
-2pq = 2 × 0,983 × 0,0169 ≈ 0,0332 ≈ **1 in 30**
-
-**Ergebnis:** Etwa **jeder 30. Mensch in Österreich** ist symptomloser Überträger (Aa) für Mukoviszidose — obwohl nur 1 von 3.500 erkrankt ist!
-
-> **Merke:** Rechenschema: q² (Erkrankte) → q = √q² → p = 1 − q → 2pq (Überträger). Bei CF: q² = 1/3.500, Überträgerfrequenz ≈ 1/30. Die Überträger sind viel häufiger als die Erkrankten!
+> **Merke:** Tumorsuppressorgen = Bremse. Beide Kopien müssen ausfallen (rezessiv). p53 = „Guardian of the Genome" — in über der Hälfte aller Tumoren mutiert. Eselsbrücke: Gaspedal klemmt (Onkogen) UND Bremse kaputt (TSG) — dann wird die Zelle zum Tumor.
 
 ---
 
-## Weiteres Rechenbeispiel: Sichelzellanämie
+## Two-Hit-Hypothese (Knudson) — warum zwei Treffer nötig sind
 
+Alfred Knudson formulierte 1971 die **Two-Hit-Hypothese** am Beispiel des **Retinoblastoms** (Netzhauttumor bei Kindern): Da Tumorsuppressorgene rezessiv wirken, müssen **beide Allele** inaktiviert werden, bevor die Schutzfunktion verloren geht.
 
-**Aufgabe:** In einer westafrikanischen Population sind 2 % der Bevölkerung homozygot für das Sichelzellallel (HbS/HbS = krank). Wie viele sind Überträger (HbA/HbS)?
+**Hereditäre Form (familiär):**
+- Kind erbt **ein defektes Allel** (1. Hit = Keimbahnmutation, in jeder Zelle vorhanden)
+- Nur **ein weiterer Hit** (somatische Mutation) in einer Netzhautzelle reicht → Tumor
+- Folge: **Frühes Auftreten**, oft **bilateral** (beide Augen), erhöhtes Risiko für Zweittumoren
 
-q² = 0,02 → q = √0,02 ≈ 0,141
-p = 1 − 0,141 = 0,859
-2pq = 2 × 0,859 × 0,141 ≈ **0,242 ≈ 24,2 %**
+**Sporadische Form:**
+- Kind hat **zwei normale Allele**
+- **Beide Hits** müssen zufällig in derselben Netzhautzelle auftreten → sehr unwahrscheinlich
+- Folge: **Spätes Auftreten**, fast immer **unilateral** (ein Auge)
 
-Fast ein Viertel der Population sind Überträger! Der Grund: Heterozygote (HbA/HbS) haben einen **Selektionsvorteil** gegen Malaria (**Heterozygotenvorteil**). Dieser Vorteil hält das „kranke" Allel in der Population, obwohl Homozygote (HbS/HbS) schwer krank sind.
+| | Hereditär | Sporadisch |
+|---|----------|-----------|
+| **Keimbahnmutation** | Ja (1. Hit ererbt) | Nein |
+| **Somatische Mutationen nötig** | 1 (nur 2. Hit) | 2 (beide Hits) |
+| **Auftreten** | Früh (Kindesalter) | Spät |
+| **Seitigkeit** | Oft bilateral | Fast immer unilateral |
+| **Familiäre Häufung** | Ja | Nein |
 
-> **Merke:** Sichelzellanämie: Heterozygotenvorteil (Malariaresistenz) hält HbS-Allel in der Population. q² = 0,02 → 2pq ≈ 24 % Überträger. Der Heterozygotenvorteil ist eine Form der Selektion, die das HW-Gleichgewicht beeinflusst.
+> **Merke:** Two-Hit-Hypothese (Knudson): Beide Allele eines TSG müssen ausfallen. Hereditär: 1. Hit ererbt → nur 1 somatischer Hit nötig → frühes, oft bilaterales Retinoblastom. Sporadisch: 2 somatische Hits in derselben Zelle → spät, unilateral.
 
 ---
 
-## Klinische Anwendungen
+## Mehrstufenmodell der Karzinogenese — vom Adenom zum Karzinom
 
-| Erkrankung | q² (Erkrankte) | q | 2pq (Überträger) | Besonderheit |
-|-----------|---------------|---|-------------------|-------------|
-| **Mukoviszidose** | 1/3.500 | 1/59 | ~1/30 | Häufigste autosomal-rezessive Erkrankung in Österreich |
-| **Sichelzellanämie** | ~2 % (Westafrika) | ~0,14 | ~24 % | Heterozygotenvorteil (Malaria) |
-| **Phenylketonurie** | 1/10.000 | 1/100 | ~1/50 | PKU-Screening bei Neugeborenen |
-| **Hämochromatose** | ~1/200 (Nordeuropa) | ~1/14 | ~1/7 | Sehr häufige Überträger |`,
+Krebs entsteht nicht plötzlich, sondern in einem **mehrstufigen Prozess**. Das Paradebeispiel ist das **Vogelstein-Modell** des kolorektalen Karzinoms (Darmkrebs), das zeigt, wie sich über Jahre Mutationen anhäufen:
+
+**Normales Epithel** → APC-Mutation → **Adenom (Polyp, gutartig)** → KRAS-Mutation → **Größeres Adenom** → SMAD4-Verlust → **Fortgeschrittenes Adenom** → TP53-Mutation → **Karzinom (bösartig)** → weitere Mutationen → **Metastasen**
+
+**Drei Phasen der Karzinogenese (Mehrstufenmodell):**
+
+| Phase | Was passiert | Beispiel |
+|-------|-------------|---------|
+| **Initiation** | Erste irreversible Mutation in einer Zelle | APC-Mutation im Darmepithel |
+| **Promotion** | Klonale Expansion (Vermehrung der mutierten Zelle), weitere Mutationen | Polyp wächst, KRAS-Mutation |
+| **Progression** | Übergang zur Bösartigkeit, Invasion und Metastasierung | TP53-Verlust → Karzinom |
+
+Jeder Schritt dauert Jahre — deshalb entwickelt sich Darmkrebs typischerweise über 10–15 Jahre aus einem gutartigen Polypen. Das erklärt den Wert der **Vorsorgekoloskopie**: Polypen können entfernt werden, bevor sie entarten.
+
+> **Merke:** Karzinogenese = mehrstufig (Initiation → Promotion → Progression). Vogelstein-Modell: APC → KRAS → SMAD4 → TP53. Darmkrebs braucht ~10–15 Jahre vom Polyp zum Karzinom.
+
+---
+
+## DNA-Reparaturgene — die dritte Säule
+
+Neben Onkogenen und Tumorsuppressorgenen gibt es eine dritte Gruppe krebsrelevanter Gene: **DNA-Reparaturgene**. Fallen sie aus, steigt die Mutationsrate dramatisch — ein Zustand namens **genomische Instabilität**. Die Zelle sammelt Mutationen viel schneller an als normal.
+
+**Mismatch-Reparatur (MMR):**
+- Korrigiert Fehler, die bei der DNA-Replikation entstehen (falsch eingebaute Basen)
+- Ausfall → **Lynch-Syndrom** (hereditäres nicht-polypöses kolorektales Karzinom, HNPCC)
+- Betroffene haben ein stark erhöhtes Risiko für Darm-, Endometrium- und andere Karzinome
+
+**BRCA1/BRCA2 (homologe Rekombination):**
+- Reparieren Doppelstrangbrüche der DNA durch homologe Rekombination (fehlerfreie Reparatur)
+- Ausfall → Doppelstrangbrüche werden fehlerhaft repariert → genomische Instabilität
+- **BRCA1/2-Keimbahnmutationen** → 60–80 % Lebenszeitrisiko für Brustkrebs, 20–40 % für Eierstockkrebs
+- Klinisch: BRCA-Screening in Risikofamilien, prophylaktische Maßnahmen möglich
+
+> **Merke:** DNA-Reparaturgene: Ausfall → genomische Instabilität → beschleunigte Krebsentstehung. Lynch-Syndrom = Mismatch-Reparatur-Defekt (Darmkrebs). BRCA1/2-Defekt = Brust-/Eierstockkrebs.
+
+---
+
+## Hallmarks of Cancer — die zehn Kennzeichen
+
+Hanahan und Weinberg definierten sechs (2000), später zehn (2011) **Hallmarks of Cancer** — universelle Eigenschaften, die eine Krebszelle von einer normalen Zelle unterscheiden:
+
+| Hallmark | Bedeutung | Genetisches Beispiel |
+|----------|-----------|---------------------|
+| **Proliferative Signale** | Zelle sendet sich selbst Wachstumssignale | RAS-Onkogen dauerhaft aktiv |
+| **Wachstumssuppression umgehen** | Bremsen werden ignoriert | RB- oder p53-Verlust |
+| **Apoptose-Resistenz** | Programmierter Zelltod wird blockiert | BCL2-Überexpression, p53-Ausfall |
+| **Replikative Unsterblichkeit** | Telomerase (Enzym, das Chromosomenenden verlängert) reaktiviert → kein Hayflick-Limit | Telomerase (TERT) in >85 % der Tumoren |
+| **Angiogenese** | Tumor lockt Blutgefäße an (Nährstoffversorgung) | VEGF-Hochregulation |
+| **Invasion und Metastasierung** | Zellen lösen sich, wandern, besiedeln andere Organe | E-Cadherin-Verlust, EMT (epithelial-mesenchymale Transition) |
+
+Weitere Hallmarks (2011): genomische Instabilität, tumorförderliche Entzündung, Energiestoffwechsel-Umprogrammierung (Warburg-Effekt: Tumorzellen vergären Glukose auch bei Sauerstoffangebot), Immunevasion (Verstecken vor dem Immunsystem).
+
+> **Merke:** Hallmarks of Cancer: 1) eigene Wachstumssignale, 2) Bremsen ignorieren, 3) Apoptose blockieren, 4) unsterblich (Telomerase), 5) Angiogenese, 6) Invasion/Metastasen. Jeder Hallmark korreliert mit bestimmten Genmutationen.
+
+---
+
+## Häufige Irrtümer
+
+**„Eine einzige Mutation verursacht Krebs"** — Falsch. Es braucht typischerweise 5–7 Mutationen in verschiedenen Genen (Onkogene + Tumorsuppressorgene + Reparaturgene). Deshalb dauert die Krebsentstehung meist Jahrzehnte.
+
+**„Krebs ist erblich"** — Nur ~5–10 % aller Krebserkrankungen sind hereditär (z. B. BRCA1/2, Lynch-Syndrom, FAP). Die überwiegende Mehrheit (~90 %) entsteht durch **somatische Mutationen** (im Laufe des Lebens erworben, nicht vererbbar). Hereditäre Formen fallen durch frühes Auftreten, familiäre Häufung und bilaterales Auftreten auf.
+
+**„Gutartige Tumoren sind harmlos"** — Gutartige Tumoren (benigne) sind zwar nicht invasiv und metastasieren nicht, können aber durch Kompression (z. B. Hirntumor) oder Hormonproduktion gefährlich werden. Zudem können manche entarten (z. B. Darmpolyp → Karzinom).
+
+---
+
+## Klinische Relevanz: Gezielte Krebstherapie
+
+Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medikamente können gezielt gegen die mutierten Proteine gerichtet werden:
+
+| Medikament | Zielstruktur | Erkrankung | Mechanismus |
+|-----------|-------------|------------|-------------|
+| **Imatinib** (Gleevec) | BCR-ABL-Fusionsprotein | CML (Philadelphia-Chromosom) | Tyrosinkinase-Inhibitor blockiert das dauerhaft aktive Fusionsprotein |
+| **Trastuzumab** (Herceptin) | HER2-Rezeptor | HER2-positiver Brustkrebs | Antikörper gegen überexprimierten Rezeptor |
+| **PARP-Inhibitoren** | PARP-Enzym | BRCA1/2-mutierter Brustkrebs | Nutzt den Reparaturdefekt: Zellen ohne BRCA können DNA-Schäden nicht mehr reparieren → synthetische Letalität |
+
+**Vorsorge bei hereditären Syndromen:**
+- **BRCA1/2-Screening:** Genetische Testung in Risikofamilien → intensivierte Früherkennung oder prophylaktische OP
+- **Lynch-Syndrom:** Regelmäßige Koloskopie ab 25 Jahren
+- **FAP (APC-Mutation):** Prophylaktische Kolektomie, da nahezu 100 % Darmkrebsrisiko`,
       lernziele: [
-        "Die Hardy-Weinberg-Gleichung (p² + 2pq + q² = 1) anwenden.",
-        "Aus Phänotyp-Häufigkeiten Allel- und Genotypfrequenzen berechnen.",
-        "Die fünf Voraussetzungen des HW-Gleichgewichts nennen.",
-        "Heterozygotenfrequenz für klinisch relevante Erkrankungen berechnen.",
+        "Proto-Onkogene und Tumorsuppressorgene unterscheiden und ihre Aktivierungsmechanismen erklären.",
+        "Die Two-Hit-Hypothese (Knudson) am Beispiel des Retinoblastoms erklären.",
+        "Das Mehrstufenmodell der Karzinogenese (Vogelstein-Modell) beschreiben.",
+        "Die sechs Hallmarks of Cancer benennen und ihren genetischen Hintergrund erklären.",
+        "Klinische Beispiele gezielter Krebstherapie (Imatinib, Trastuzumab) den zugehörigen Mutationen zuordnen.",
       ],
       sections: [],
       merksätze: [
-        "p + q = 1 (Allelfrequenzen); p² + 2pq + q² = 1 (Genotypfrequenzen). Rechenschema: q² → q → p → 2pq.",
-        "5 Voraussetzungen: große Population, keine Selektion, keine Mutation, Panmixie, keine Migration.",
-        "Mukoviszidose: q² = 1/3.500 → Überträger 2pq ≈ 1/30 (viel häufiger als Erkrankte!).",
+        "Onkogen = festgeklemmtes Gaspedal (gain of function, dominant). Tumorsuppressorgen = kaputte Bremse (loss of function, rezessiv — Two-Hit).",
+        "Two-Hit (Knudson): Hereditäres Retinoblastom = 1. Hit ererbt → früh, bilateral. Sporadisch = 2 Hits in derselben Zelle → spät, unilateral.",
+        "Vogelstein-Modell: APC → KRAS → SMAD4 → TP53 = mehrstufige Karzinogenese (Polyp → Karzinom in 10–15 Jahren).",
+        "p53 = Guardian of the Genome, in >50 % aller Tumoren mutiert. BRCA1/2 = Doppelstrangbruch-Reparatur, Ausfall → Brust-/Eierstockkrebs.",
       ],
       selfTest: [
         {
-          question:
-            "In einer Population sind 1 % der Individuen von einer autosomal-rezessiven Erkrankung betroffen (aa). Wie hoch ist q?",
-          options: ["0,01", "0,1", "0,5", "0,99", "0,001"],
+          question: "Was ist der Unterschied zwischen einem Proto-Onkogen und einem Onkogen?",
+          options: [
+            "Proto-Onkogene hemmen das Zellwachstum, Onkogene fördern es.",
+            "Ein Proto-Onkogen ist ein normales Gen für Zellwachstum; durch eine Mutation wird es zum Onkogen, das dauerhaft Wachstumssignale sendet.",
+            "Proto-Onkogene kommen nur in Krebszellen vor.",
+            "Onkogene sind Tumorsuppressorgene mit verlorener Funktion.",
+            "Es gibt keinen Unterschied — die Begriffe sind synonym.",
+          ],
           correctIndex: 1,
           explanation:
-            "q² = 0,01 (1 % sind homozygot rezessiv). Daraus folgt q = √0,01 = **0,1**. Die Allelfrequenz des rezessiven Allels beträgt also 10 %, obwohl nur 1 % erkrankt sind.",
+            "Ein **Proto-Onkogen** ist ein normales Gen, das das Zellwachstum fördert (z. B. Wachstumsfaktor-Rezeptor). Durch eine **Gain-of-function-Mutation** (Punktmutation, Amplifikation, Translokation) wird es zum **Onkogen** — es ist dauerhaft aktiv wie ein festgeklemmtes Gaspedal. Schon **ein mutiertes Allel** reicht (dominant).",
           difficulty: 1,
-          tags: ["hardy-weinberg", "allelfrequenz", "rechnung"],
+          tags: ["onkogen", "proto-onkogen", "tumorgenetik"],
         },
         {
           question:
-            "Welche Formel beschreibt die Genotypfrequenzen im Hardy-Weinberg-Gleichgewicht?",
-          options: ["p + q = 2", "p² + q² = 1", "p² + 2pq + q² = 1", "2p + 2q = 1", "p³ + q³ = 1"],
-          correctIndex: 2,
-          explanation:
-            "Die **Hardy-Weinberg-Gleichung** lautet **p² + 2pq + q² = 1**. p² = Frequenz von AA, 2pq = Frequenz von Aa (Heterozygote), q² = Frequenz von aa. Die Summe aller Genotypfrequenzen ist 1.",
-          difficulty: 1,
-          tags: ["hardy-weinberg", "formel", "genotypfrequenz"],
-        },
-        {
-          question:
-            "Mukoviszidose betrifft 1 von 3.500 Neugeborenen (autosomal-rezessiv). Wie hoch ist ungefähr die Überträgerfrequenz (2pq)?",
-          options: ["1 von 3.500", "1 von 350", "1 von 30", "1 von 3", "1 von 59"],
-          correctIndex: 2,
-          explanation:
-            "q² = 1/3.500 → q = √(1/3.500) ≈ 1/59 → p ≈ 1 − 1/59 ≈ 58/59 ≈ 1. Überträger: 2pq ≈ 2 × 1 × 1/59 ≈ 2/59 ≈ **1/30**. Etwa jeder 30. Mensch in Österreich ist symptomloser CF-Überträger.",
-          difficulty: 2,
-          tags: ["hardy-weinberg", "mukoviszidose", "überträger", "rechnung"],
-        },
-        {
-          question:
-            "Welche der folgenden Bedingungen ist KEINE Voraussetzung des Hardy-Weinberg-Gleichgewichts?",
+            "Wie viele Mutationen sind typischerweise nötig, damit eine normale Zelle zu einer Krebszelle wird?",
           options: [
-            "Große Population",
-            "Keine Selektion",
-            "Panmixie (Zufallspaarung)",
-            "Hohe Mutationsrate",
-            "Keine Migration",
+            "Genau 1 Mutation",
+            "Genau 2 Mutationen",
+            "Typischerweise 5–7 Mutationen in verschiedenen Genen",
+            "Mindestens 20 Mutationen",
+            "Es ist keine Mutation nötig — Krebs ist rein umweltbedingt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Krebs ist ein **mehrstufiger Prozess**: Typischerweise müssen **5–7 Mutationen** in verschiedenen Genen (Onkogene, Tumorsuppressorgene, Reparaturgene) zusammenkommen. Deshalb dauert die Krebsentstehung meist Jahre bis Jahrzehnte, und das Risiko steigt mit dem Alter.",
+          difficulty: 1,
+          tags: ["karzinogenese", "mehrstufenmodell"],
+        },
+        {
+          question:
+            "Ein Kind erkrankt im Alter von 2 Jahren an einem bilateralen Retinoblastom. Was ist die wahrscheinlichste genetische Erklärung?",
+          options: [
+            "Zwei unabhängige somatische Mutationen im RB1-Gen in beiden Augen (sporadisch).",
+            "Eine Keimbahnmutation im RB1-Gen (1. Hit ererbt), mit einer somatischen Mutation als 2. Hit in beiden Augen (hereditär).",
+            "Eine Onkogenaktivierung im RAS-Gen.",
+            "Ein Defekt im Mismatch-Reparatursystem.",
+            "Eine p53-Mutation allein verursacht das Retinoblastom.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Frühes Auftreten + bilateral = typisch **hereditär**. Das Kind hat eine **Keimbahnmutation** im RB1-Gen (1. Hit in jeder Zelle). Es braucht nur noch **einen somatischen 2. Hit** pro Auge → Tumor entsteht in beiden Augen. Das ist die **Two-Hit-Hypothese nach Knudson**.",
+          difficulty: 2,
+          tags: ["two-hit", "knudson", "retinoblastom"],
+        },
+        {
+          question:
+            "Welche Reihenfolge beschreibt das Vogelstein-Modell der Darmkrebsentstehung korrekt?",
+          options: [
+            "TP53 → RAS → APC → SMAD4",
+            "APC → KRAS → SMAD4 → TP53",
+            "BRCA1 → BRCA2 → RAS → MYC",
+            "HER2 → BCR-ABL → RB → p53",
+            "RAS → APC → TP53 → SMAD4",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Das **Vogelstein-Modell** beschreibt die schrittweise Karzinogenese im Dickdarm: **APC**-Mutation (Adenom) → **KRAS**-Mutation (Adenomwachstum) → **SMAD4**-Verlust (Progression) → **TP53**-Mutation (Übergang zum Karzinom). Dieser Prozess dauert typischerweise 10–15 Jahre.",
+          difficulty: 2,
+          tags: ["vogelstein", "karzinogenese", "darmkrebs"],
+        },
+        {
+          question: "Welche Aussage zu p53 (TP53) ist FALSCH?",
+          options: [
+            "p53 wird als \u201EGuardian of the Genome\u201C bezeichnet.",
+            "p53 kann den Zellzyklus in G1 arretieren.",
+            "p53 aktiviert bei irreparablem DNA-Schaden die Apoptose.",
+            "Eine einzige funktionsfähige Kopie von TP53 reicht für vollständigen Tumorschutz, da p53 dominant wirkt.",
+            "p53 ist in über 50 % aller menschlichen Tumoren mutiert.",
           ],
           correctIndex: 3,
           explanation:
-            "Eine **hohe Mutationsrate** ist keine Voraussetzung — im Gegenteil: HW setzt **keine Mutation** voraus. Die fünf Voraussetzungen sind: große Population, keine Selektion, keine Mutation, Panmixie und keine Migration.",
-          difficulty: 1,
-          tags: ["hardy-weinberg", "voraussetzungen"],
+            "TP53 ist ein **Tumorsuppressorgen** und folgt grundsätzlich dem **Two-Hit-Prinzip** — beide Allele müssen ausfallen. Die Aussage, dass eine Kopie für \u201Evollständigen Tumorschutz\u201C reicht, ist irreführend: Viele TP53-Mutationen wirken sogar **dominant-negativ** (das mutierte Protein inaktiviert das normale). Alle anderen Aussagen sind korrekt.",
+          difficulty: 3,
+          tags: ["p53", "tumorsuppressor", "guardian-of-genome"],
         },
         {
           question:
-            "Warum bleibt das Sichelzellallel (HbS) in Malariagebieten so häufig, obwohl homozygote Träger (HbS/HbS) schwer erkranken?",
+            "Welches Medikament wird gezielt gegen das BCR-ABL-Fusionsprotein bei chronischer myeloischer Leukämie (CML) eingesetzt?",
           options: [
-            "Weil HbS dominant über HbA ist",
-            "Weil es keine Selektion gegen HbS gibt",
-            "Weil heterozygote Träger (HbA/HbS) einen Selektionsvorteil gegen Malaria haben (Heterozygotenvorteil)",
-            "Weil HbS durch häufige Neumutationen entsteht",
-            "Weil homozygote HbS/HbS immun gegen Malaria sind",
+            "Trastuzumab (Herceptin)",
+            "Imatinib (Gleevec)",
+            "Tamoxifen",
+            "Cisplatin",
+            "PARP-Inhibitoren",
           ],
-          correctIndex: 2,
+          correctIndex: 1,
           explanation:
-            "Heterozygote (HbA/HbS) haben einen **Überlebensvorteil** in Malariagebieten (Malariaparasiten können sich in Sichelzellen schlechter vermehren). Dieser **Heterozygotenvorteil** (= balancierende Selektion) hält das HbS-Allel in der Population, obwohl HbS/HbS homozygot krank macht.",
+            "**Imatinib** (Gleevec) ist ein **Tyrosinkinase-Inhibitor**, der spezifisch das **BCR-ABL-Fusionsprotein** blockiert. Dieses entsteht durch die Translokation t(9;22) — das **Philadelphia-Chromosom** — und treibt die CML an. Imatinib war eines der ersten Beispiele für gezielte Krebstherapie und hat die Prognose der CML dramatisch verbessert.",
           difficulty: 2,
-          tags: ["sichelzellanämie", "heterozygotenvorteil", "selektion"],
+          tags: ["imatinib", "bcr-abl", "cml", "targeted-therapy"],
         },
       ],
     },

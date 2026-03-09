@@ -242,95 +242,160 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
         "Laplace-Gesetz",
         "Atelektase",
       ],
-      content: `
+      content: `## Zwei Kräfte, die das Verhalten von Objekten in Fluiden bestimmen
 
-
-## Archimedisches Prinzip
-
-Warum fühlst du dich im Schwimmbecken leichter? Weil das Wasser von unten stärker drückt als von oben — die Differenz ist die Auftriebskraft.
-
-**Ein in ein Fluid eingetauchter Körper** erfährt eine nach oben gerichtete Kraft -- die **Auftriebskraft** F_A. Diese ist gleich der Gewichtskraft des verdrängten Fluids:
-
-**F_A = rho_Fluid * g * V_verdrängt**
-
-Dabei ist V_verdrängt das Volumen des eingetauchten Körperteils. Die Auftriebskraft wirkt im **Schwerpunkt** des verdrängten Fluidvolumens (Druckpunkt).
-
-**Herleitung (vereinfacht):** Der Druck an der Unterseite des Körpers ist größer als an der Oberseite (p = rho*g*h nimmt mit der Tiefe zu). Die resultierende Druckdifferenz ergibt eine Nettokraft nach oben -- das ist die Auftriebskraft.
-
-> **Merke:** Archimedisches Prinzip: Die Auftriebskraft F_A = rho_Fluid * g * V_verdrängt entspricht der Gewichtskraft des verdrängten Fluids. Sie hängt NICHT von der Dichte des eingetauchten Körpers ab, sondern von der Dichte des Fluids und dem verdrängten Volumen.
+Warum schwimmt ein tonnenschweres Stahlschiff, aber ein winziger Stein sinkt? Warum bilden Wassertropfen Kugeln, und warum kollabieren die kleinsten Lungenbläschen ohne einen speziellen Schutzfilm? Hinter beidem stecken zwei fundamentale Phänomene: **Auftrieb** (bestimmt, ob ein Objekt schwimmt oder sinkt) und **Oberflächenspannung** (bestimmt, wie sich Flüssigkeitsoberflächen verhalten). Beide sind für die Medizin unmittelbar relevant — vom Hydrotherapie-Bad bis zur Neugeborenen-Intensivstation.
 
 ---
 
-## Schwimmen, Schweben und Sinken
+## Auftrieb — das Archimedische Prinzip
 
+Die Grundidee ist verblüffend einfach: Ein Objekt in einer Flüssigkeit fühlt sich leichter an, weil das Fluid mit einer Kraft zurückdrückt, die genau dem Gewicht des verdrängten Fluids entspricht. Diese nach oben gerichtete Kraft heißt **Auftriebskraft** F_A.
+
+**F_A = ρ_Fluid · g · V_verdrängt**
+
+- **ρ_Fluid** = Dichte des umgebenden Fluids (Wasser: 1000 kg/m³, Blut: 1060 kg/m³)
+- **g** = Erdbeschleunigung (9,81 m/s²)
+- **V_verdrängt** = Volumen des eingetauchten Körperteils
+
+Die physikalische Ursache: Der hydrostatische Druck p = ρ·g·h nimmt mit der Tiefe zu. Die Unterseite eines eingetauchten Objekts liegt tiefer als die Oberseite — dort herrscht also ein höherer Druck. Die resultierende Druckkraft nach oben überwiegt die nach unten. Diese Nettokraft ist die Auftriebskraft.
+
+> **Merke:** Auftriebskraft F_A = ρ_Fluid · g · V_verdrängt — sie hängt nur von der Fluiddichte und dem verdrängten Volumen ab, NICHT von der Dichte oder Masse des eingetauchten Körpers.
+
+**Rechenbeispiel — Schwimmt ein Eiswürfel in Wasser?**
+- ρ_Eis = 917 kg/m³, ρ_Wasser = 1000 kg/m³
+- Da ρ_Eis < ρ_Wasser, schwimmt er. Im Gleichgewicht (F_A = F_G) ist der eingetauchte Anteil: V_ein/V_ges = ρ_Eis/ρ_Wasser = 917/1000 = 0,917
+- Ergebnis: **91,7 % unter Wasser**, nur 8,3 % ragen heraus
+- Eis ist also weniger dicht als flüssiges Wasser — eine Anomalie, die dafür sorgt, dass Seen von oben zufrieren und Lebewesen darunter überleben
+
+---
+
+## Schwimmen, Schweben, Sinken — die Dichte entscheidet
+
+Ob ein Körper schwimmt, schwebt oder sinkt, hängt ausschließlich vom Vergleich der **mittleren Körperdichte** mit der **Fluiddichte** ab:
 
 | Bedingung | Verhalten | Beispiel |
 |-----------|-----------|----------|
-| rho_Körper < rho_Fluid | **Schwimmen** (ragt teilweise heraus) | Holz auf Wasser, Eisberg |
-| rho_Körper = rho_Fluid | **Schweben** (in jeder Tiefe stabil) | U-Boot (reguliert Ballast) |
-| rho_Körper > rho_Fluid | **Sinken** (bis zum Boden) | Stein in Wasser |
+| ρ_Körper < ρ_Fluid | **Schwimmen** — ragt teilweise heraus | Holz (550 kg/m³) auf Wasser, Eisberg |
+| ρ_Körper = ρ_Fluid | **Schweben** — in jeder Tiefe stabil | U-Boot (reguliert Ballasttanks), Fisch (Schwimmblase) |
+| ρ_Körper > ρ_Fluid | **Sinken** — fällt zum Boden | Kieselstein (2600 kg/m³), Eisennagel |
 
-**Warum schwimmt ein Stahlschiff?** Stahl hat rho ca. 7800 kg/m3 (viel dichter als Wasser). Aber das Schiff ist hohl -- die **mittlere Dichte** von Stahl + eingeschlossener Luft ist kleiner als rho_Wasser. Es verdrängt genug Wasser, damit F_A = F_G.
+**Der menschliche Körper:** ρ_Mensch ≈ 1020–1080 kg/m³ (abhängig von Fett-/Muskelanteil). In Süßwasser (1000 kg/m³) sinken die meisten Menschen leicht; im Toten Meer (ρ ≈ 1240 kg/m³) schwimmt jeder mühelos — die extrem hohe Salzdichte erzeugt genug Auftrieb.
 
-**Rechenbeispiel -- Eisberg:**
-Eis hat rho_Eis ca. 917 kg/m3, Meerwasser rho_Meer ca. 1025 kg/m3.
-Anteil über Wasser: 1 - rho_Eis/rho_Meer = 1 - 917/1025 ca. 0,105 -> ca. **10,5 %** ragen heraus.
-Also schwimmen ca. **89,5 %** unter Wasser -- "Spitze des Eisbergs"!
+**Warum schwimmt ein Stahlschiff?** Stahl allein hat ρ ≈ 7800 kg/m³ und würde sofort sinken. Aber ein Schiff ist hohl — die **mittlere Dichte** (Stahl + eingeschlossene Luft) beträgt nur etwa 200–300 kg/m³, also weit weniger als Wasser. Der Rumpf verdrängt genug Wasser, damit F_A = F_G. Wird der Rumpf leck und flutet, steigt die mittlere Dichte über 1000 kg/m³ → das Schiff sinkt.
 
-> **Merke:** Schwimmen: rho_Körper < rho_Fluid; Schweben: rho_Körper = rho_Fluid; Sinken: rho_Körper > rho_Fluid. Die mittlere Dichte zählt -- ein hohler Stahlkörper kann schwimmen!
+> **Merke:** Schwimmen (ρ_K < ρ_F), Schweben (ρ_K = ρ_F), Sinken (ρ_K > ρ_F). Entscheidend ist die **mittlere** Dichte, nicht die Masse! „Schwere Objekte sinken" ist falsch — ein 100 000-Tonnen-Schiff schwimmt, ein 5-Gramm-Nagel sinkt.
 
----
-
-## Oberflächenspannung
-
-Bisher haben wir Kräfte betrachtet, die auf eingetauchte Körper wirken. Aber auch an der Oberfläche eines Fluids wirken besondere Kräfte:
-
-Warum kann eine Nadel auf Wasser schwimmen? Die Wassermoleküle an der Oberfläche werden nach innen gezogen — die Oberfläche verhält sich wie eine gespannte Folie.
-
-Moleküle im Inneren werden allseitig von Nachbarmolekülen angezogen (Kohäsionskräfte, d. h. Anziehungskräfte zwischen gleichartigen Molekülen, heben sich auf). An der **Oberfläche** fehlen die Nachbarn nach oben -- es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine **gespannte elastische Haut**.
-
-Die **Oberflächenspannung sigma** ist definiert als Kraft pro Länge entlang einer gedachten Linie auf der Oberfläche:
-
-**sigma = F / l** (Einheit: N/m = J/m2)
-
-Typische Werte:
-- Wasser (20 °C): sigma ca. 0,073 N/m
-- Blutplasma: sigma ca. 0,050 N/m
-- Surfactant-Lösung: sigma ca. 0,025 N/m (stark erniedrigt!)
-
-**Kapillarität:** In engen Röhren (Kapillaren) steigt oder sinkt die Flüssigkeit je nach dem Verhältnis von Adhäsions- (Fluid-Wand) zu Kohäsionskräften (Fluid-Fluid):
-- **Adhäsion > Kohäsion** -> konkaver Meniskus (nach innen gewölbte Flüssigkeitsoberfläche, d. h. Randbereich höher) -> Flüssigkeit steigt (Wasser in Glasröhre)
-- **Kohäsion > Adhäsion** -> konvexer Meniskus (nach außen gewölbte Oberfläche) -> Flüssigkeit sinkt (Quecksilber in Glasröhre)
-
-> **Merke:** Oberflächenspannung sigma = F/l entsteht durch unausgeglichene Kohäsionskräfte an der Oberfläche. Kapillarität: Adhäsion > Kohäsion -> Steigen; Kohäsion > Adhäsion -> Sinken.
+> 💡 **Prüfungstipp:** Typische MedAT-Falle: „Ein Objekt ist schwerer als Wasser — sinkt es?" Antwort: Nicht unbedingt. Es kommt auf die Dichte an, nicht auf das Gewicht. Ein Supertanker wiegt Hunderttausende Tonnen und schwimmt.
 
 ---
 
-## Laplace-Gesetz und Surfactant
+## Klinische Relevanz des Auftriebs
 
+- **Hydrotherapie:** Im Wasser verliert ein Patient scheinbar bis zu 90 % seines Körpergewichts (Auftrieb). Gelenke und Wirbelsäule werden entlastet → ideale Bedingung für Rehabilitation nach Frakturen, Gelenkersatz oder bei rheumatischen Erkrankungen.
+- **Tauchmedizin:** Ein Taucher muss seinen Auftrieb aktiv regulieren (Bleigurt, Tarierweste). Zu viel Auftrieb → unkontrolliertes Aufsteigen → Dekompressionskrankheit.
+- **Infusionslösungen:** Bei Pleurapunktion oder Aszitesdrainage: Die Dichte der abgeleiteten Flüssigkeit gibt diagnostische Hinweise (Transsudat vs. Exsudat).
 
-Für eine Kugelblase mit einer Wand (z. B. Alveole, Lungenbläschen):
+---
 
-**Delta-p = 2*sigma / r**
+## Oberflächenspannung — warum Tropfen rund sind
 
-Dabei ist:
-- **Delta-p** = Druckdifferenz (innen - außen)
-- **sigma** = Oberflächenspannung
+An der Grenzfläche zwischen Flüssigkeit und Luft herrschen besondere Verhältnisse. Moleküle im Inneren einer Flüssigkeit werden von allen Seiten gleich stark von ihren Nachbarn angezogen (**Kohäsionskräfte**, Anziehungskräfte zwischen gleichartigen Molekülen). An der **Oberfläche** fehlen die Nachbarn nach oben — es entsteht eine resultierende Kraft ins Innere. Die Oberfläche verhält sich wie eine gespannte elastische Membran, die ihre Fläche minimiert. Deshalb nehmen freie Tropfen Kugelform an — die Kugel hat die kleinste Oberfläche bei gegebenem Volumen.
+
+Die **Oberflächenspannung** σ (sigma) quantifiziert diese Kraft:
+
+**σ = F / l** (Einheit: N/m = J/m²)
+
+| Substanz | σ (bei 20 °C) |
+|----------|--------------|
+| Wasser | 0,073 N/m |
+| Blutplasma | 0,050 N/m |
+| Surfactant-Lösung (Alveolen) | 0,025 N/m |
+| Ethanol | 0,022 N/m |
+
+Seife und Spülmittel (Tenside, oberflächenaktive Substanzen) senken die Oberflächenspannung von Wasser drastisch — deshalb perlt Spülwasser nicht ab, sondern benetzt Geschirr flächig.
+
+> **Merke:** Oberflächenspannung σ = F/l entsteht durch unausgeglichene Kohäsionskräfte an der Oberfläche. Die Oberfläche minimiert ihre Fläche → Tropfen werden kugelförmig.
+
+---
+
+## Kapillarität — wenn Flüssigkeiten klettern
+
+In engen Röhren (Kapillaren) steigt oder sinkt eine Flüssigkeit entgegen der Schwerkraft. Ob sie steigt oder sinkt, hängt vom Verhältnis zweier Kräfte ab:
+
+- **Adhäsionskräfte** (Anziehung Fluid ↔ Wand): Ziehen die Flüssigkeit an der Wand hoch
+- **Kohäsionskräfte** (Anziehung Fluid ↔ Fluid): Halten die Flüssigkeit zusammen
+
+**Adhäsion > Kohäsion** → konkaver Meniskus (Rand höher als Mitte) → Flüssigkeit **steigt**
+Beispiel: Wasser in einer Glaskapillare. Die Wassermoleküle „kleben" an der hydrophilen Glaswand und ziehen den Wasserspiegel hoch.
+
+**Kohäsion > Adhäsion** → konvexer Meniskus (Mitte höher als Rand) → Flüssigkeit **sinkt**
+Beispiel: Quecksilber in Glas. Quecksilberatome ziehen sich untereinander stärker an als sie vom Glas angezogen werden.
+
+Die Steighöhe berechnet sich aus: **h = 2σ · cos θ / (ρ · g · r)** — je enger die Kapillare (kleiner r), desto höher steigt die Flüssigkeit.
+
+**Klinisch — Kapillare Blutabnahme:** Bei der Blutentnahme aus der Fingerbeere (Lanzettstich) wird ein hauchdünnes Glasröhrchen an den Bluttropfen gehalten. Durch Kapillarkräfte steigt das Blut automatisch in das Röhrchen — ohne Ansaugen. Dies funktioniert, weil Blut Glas gut benetzt (Adhäsion > Kohäsion).
+
+> **Merke:** Kapillarität: Adhäsion > Kohäsion → konkaver Meniskus → Flüssigkeit steigt (Wasser in Glas). Kohäsion > Adhäsion → konvexer Meniskus → Flüssigkeit sinkt (Quecksilber in Glas). Je enger das Rohr, desto stärker der Effekt.
+
+---
+
+## Laplace-Gesetz — warum kleine Blasen gefährlicher sind
+
+Das Laplace-Gesetz verknüpft Oberflächenspannung mit dem Innendruck einer Blase. Für eine kugelförmige Blase mit einer Wand (z. B. eine Alveole):
+
+**Δp = 2σ / r**
+
+- **Δp** = Druckdifferenz zwischen Innen- und Außenseite
+- **σ** = Oberflächenspannung der Grenzfläche
 - **r** = Radius der Blase
 
-**Entscheidende Konsequenz:** Je **kleiner** der Radius r, desto **größer** der Innendruck Delta-p. Kleine Alveolen hätten ohne Gegenmaßnahme einen viel höheren Innendruck als große -> sie würden in die großen Alveolen "hineinblasen" -> **Kollaps** der kleinen Alveolen (= **Atelektase**).
+Die entscheidende Konsequenz steckt im Bruch: **Je kleiner der Radius, desto größer der Innendruck.** Eine Blase mit halbem Radius braucht den doppelten Innendruck, um nicht zu kollabieren.
 
-**Surfactant (Surface Active Agent):**
-Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mischung aus Phospholipiden und Proteinen. Surfactant:
-- **senkt die Oberflächenspannung** an der Luft-Wasser-Grenzfläche der Alveolen
-- wirkt **radiusabhängig**: In kleinen Alveolen (Surfactant-Moleküle dichter gepackt) ist sigma stärker reduziert als in großen -> **Druckausgleich** zwischen verschieden großen Alveolen
-- verhindert **Atelektase** (Alveolarkollaps)
+**Rechenbeispiel — Zwei Alveolen:**
+- Große Alveole: r₁ = 0,15 mm → Δp₁ = 2σ / 0,15
+- Kleine Alveole: r₂ = 0,05 mm → Δp₂ = 2σ / 0,05
+- Verhältnis: Δp₂ / Δp₁ = 0,15 / 0,05 = **3** → Die kleine Alveole hat den **dreifachen Innendruck**
 
-**Klinisch -- Frühgeborene:** Ab der ca. 24. SSW (Schwangerschaftswoche) beginnt die Surfactant-Produktion, ab der 35. SSW ist sie ausreichend. Frühgeborene vor der 35. SSW haben oft **Atemnotsyndrom (IRDS)** durch Surfactant-Mangel -> Behandlung: Surfactant-Substitution über den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure, kontinuierlicher Atemwegsüberdruck).
+Ohne Gegenmaßnahme würde Luft aus der kleinen Alveole (hoher Druck) in die große Alveole (niedriger Druck) strömen → die kleine **kollabiert** (= **Atelektase**, Zusammenfallen von Lungengewebe), die große bläht sich auf. Die Lunge wäre funktionsunfähig.
 
-> **Merke:** Laplace-Gesetz: Delta-p = 2*sigma/r -- kleinere Blasen haben höheren Innendruck! Surfactant senkt sigma radiusabhängig -> stabilisiert kleine Alveolen -> verhindert Atelektase. Frühgeborene: Surfactant-Mangel -> IRDS.
+> **Merke:** Laplace-Gesetz: Δp = 2σ/r — kleinerer Radius → höherer Innendruck. Ohne Surfactant würden kleine Alveolen kollabieren und große sich überblähen.
 
-> 💡 **Prüfungstipp:** „Warum kollabieren kleine Alveolen ohne Surfactant?" — Laplace: Δp = 2σ/r. Kleiner r → höherer Druck → Luft strömt in große Alveolen → Atelektase. Surfactant senkt σ radiusabhängig.`,
+---
+
+## Surfactant — der Lebensretter in der Lunge
+
+Die Lösung des Laplace-Problems liefert **Surfactant** (Surface Active Agent), ein Gemisch aus Phospholipiden (v. a. Dipalmitoylphosphatidylcholin, DPPC) und spezifischen Proteinen (SP-A, SP-B, SP-C, SP-D). Produziert wird es von **Typ-II-Pneumozyten** (Alveolarepithelzellen Typ II).
+
+Surfactant wirkt über zwei Mechanismen:
+
+1. **Senkung der Oberflächenspannung:** σ sinkt von ca. 0,070 N/m (reines Wasser) auf ca. 0,025 N/m → der Innendruck aller Alveolen wird reduziert → weniger Atemarbeit nötig
+
+2. **Radiusabhängige Wirkung:** In kleinen Alveolen sind die Surfactant-Moleküle auf weniger Fläche dichter gepackt → σ wird dort **stärker** gesenkt als in großen Alveolen → Δp wird angeglichen → **Druckausgleich** zwischen verschieden großen Alveolen → kein Kollaps
+
+**Klinisch — Atemnotsyndrom des Neugeborenen (IRDS):**
+- Surfactant-Produktion beginnt ab ca. 24. SSW (Schwangerschaftswoche), reicht ab ca. 35. SSW
+- Frühgeborene vor der 35. SSW haben häufig **Surfactant-Mangel** → kleine Alveolen kollabieren → massiv eingeschränkter Gasaustausch → **IRDS** (Infant Respiratory Distress Syndrome, Atemnotsyndrom des Neugeborenen)
+- **Therapie:** Surfactant-Substitution direkt über den Tubus (Beatmungsschlauch) + CPAP-Beatmung (Continuous Positive Airway Pressure) → hält Alveolen offen
+- **Prävention:** Gabe von Glukokortikoiden (Betamethason) an die Mutter bei drohender Frühgeburt → beschleunigt die fetale Surfactant-Produktion
+
+Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Acute Respiratory Distress Syndrome, akutes Lungenversagen) — z. B. nach Pneumonie, Aspiration oder Sepsis — wird Surfactant geschädigt → alveolärer Kollaps → lebensbedrohliche Hypoxie (Sauerstoffmangel).
+
+> **Merke:** Surfactant = Phospholipid-Protein-Gemisch aus Typ-II-Pneumozyten. Senkt σ radiusabhängig → stabilisiert kleine Alveolen → verhindert Atelektase. Frühgeborene < 35. SSW → Surfactant-Mangel → IRDS. Therapie: Surfactant-Gabe + CPAP.
+
+---
+
+## Häufige Missverständnisse und Prüfungsfallen
+
+**„Schwere Objekte sinken"** — Falsch. Ein Flugzeugträger (100 000 t) schwimmt, eine Büroklammer (1 g) sinkt. Entscheidend ist die **Dichte**, nicht die Masse. Ein Stahlschiff schwimmt, weil seine mittlere Dichte (Stahl + Luft) kleiner als ρ_Wasser ist.
+
+**„Die Auftriebskraft hängt von der Dichte des Körpers ab"** — Falsch. F_A = ρ_Fluid · g · V_verdrängt enthält nur die Fluiddichte und das verdrängte Volumen. Ein Bleiklotz und ein gleich großer Holzklotz, vollständig eingetaucht, erfahren exakt dieselbe Auftriebskraft.
+
+**„Größere Alveolen kollabieren eher"** — Falsch, genau umgekehrt. Laplace: Δp = 2σ/r → die **kleinen** Alveolen haben den höheren Innendruck und neigen zum Kollaps, nicht die großen.
+
+**„Oberflächenspannung ist eine Kraft"** — Unpräzise. σ ist eine Kraft **pro Länge** (N/m), nicht eine Kraft (N). Sie beschreibt die Energie, die nötig ist, um die Oberfläche um eine Flächeneinheit zu vergrößern (J/m² = N/m).
+
+> 💡 **Prüfungstipp:** Bei Auftriebsaufgaben immer fragen: Was ist ρ_Körper vs. ρ_Fluid? Bei Laplace-Aufgaben: Welcher Radius ist kleiner → dort ist Δp größer. Surfactant = Ausgleich zwischen groß und klein.`,
 
       lernziele: [
         "Das Archimedische Prinzip mathematisch anwenden und Auftriebskräfte berechnen können",
@@ -364,17 +429,17 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
           options: ["500 N", "4905 N", "9810 N", "490,5 N", "49 050 N"],
           correctIndex: 1,
           explanation:
-            "F_A = ρ_Fluid · g · V_verdrängt = 1000 kg/m³ · 9,81 m/s² · 0,5 m³ = 4905 N. Die Auftriebskraft entspricht der Gewichtskraft von 0,5 m³ Wasser (= 500 kg). Beachte: Die Dichte des eingetauchten Körpers spielt für die Auftriebskraft keine Rolle — nur das verdrängte Fluidvolumen und die Fluiddichte zählen!",
+            "F_A = ρ_Fluid · g · V_verdrängt = 1000 · 9,81 · 0,5 = 4905 N. Die Auftriebskraft entspricht der Gewichtskraft von 0,5 m³ Wasser (= 500 kg). Die Dichte des eingetauchten Körpers spielt keine Rolle — nur Fluiddichte und verdrängtes Volumen zählen.",
           hints: [
             "Archimedisches Prinzip: F_A = ρ_Fluid · g · V_verdrängt — setze die Werte ein!",
-            "1000 · 9,81 · 0,5 = ? Achte auf die Einheiten: kg/m³ · m/s² · m³ = N.",
+            "1000 · 9,81 · 0,5 = ? Einheiten: kg/m³ · m/s² · m³ = N.",
           ],
           difficulty: 1,
-          tags: ["archimedes", "auftrieb", "kraft"],
+          tags: ["archimedes", "auftrieb", "rechenfrage"],
         },
         {
           question:
-            "Ein Gegenstand hat die Dichte ρ = 800 kg/m³ und wird in Salzwasser (ρ = 1025 kg/m³) gelegt. Was passiert?",
+            "Ein Gegenstand (ρ = 800 kg/m³) wird in Salzwasser (ρ = 1025 kg/m³) gelegt. Was passiert?",
           options: [
             "Er sinkt auf den Boden",
             "Er schwebt vollständig untergetaucht in beliebiger Tiefe",
@@ -384,13 +449,32 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
           ],
           correctIndex: 2,
           explanation:
-            "Da ρ_Körper (800 kg/m³) < ρ_Fluid (1025 kg/m³), schwimmt der Körper. Er taucht soweit ein, bis die Auftriebskraft gleich der Gewichtskraft ist: V_eingetaucht/V_gesamt = ρ_Körper/ρ_Fluid = 800/1025 ≈ 0,78 → ca. 78 % sind unter Wasser, 22 % ragen heraus.",
+            "Da ρ_Körper (800 kg/m³) < ρ_Fluid (1025 kg/m³), schwimmt der Körper. Er taucht ein, bis F_A = F_G: V_ein/V_ges = ρ_Körper/ρ_Fluid = 800/1025 ≈ 0,78 → ca. 78 % unter Wasser, 22 % heraus.",
           hints: [
-            "Vergleiche die Dichten: Ist ρ_Körper kleiner, gleich oder größer als ρ_Fluid?",
-            "Schwimmen: ρ_Körper < ρ_Fluid — der Körper taucht nur teilweise ein.",
+            "Vergleiche: Ist ρ_Körper kleiner, gleich oder größer als ρ_Fluid?",
+            "ρ_Körper < ρ_Fluid → der Körper schwimmt und taucht nur teilweise ein.",
           ],
           difficulty: 1,
           tags: ["schwimmen", "dichte", "auftrieb"],
+        },
+        {
+          question: "Welche Aussage zur Oberflächenspannung ist FALSCH?",
+          options: [
+            "Sie entsteht durch unausgeglichene Kohäsionskräfte an der Flüssigkeitsoberfläche",
+            "Ihre Einheit ist N/m, was äquivalent zu J/m² ist",
+            "Tenside (z. B. Spülmittel) erhöhen die Oberflächenspannung von Wasser",
+            "Freie Tropfen nehmen Kugelform an, weil die Kugel die kleinste Oberfläche hat",
+            "Surfactant in den Alveolen senkt die Oberflächenspannung",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Tenside SENKEN die Oberflächenspannung, sie erhöhen sie nicht. Tenside (wie Spülmittel oder Surfactant) lagern sich an der Grenzfläche an und verringern die Kohäsionskräfte zwischen den Wassermolekülen an der Oberfläche. Alle anderen Aussagen sind korrekt.",
+          hints: [
+            "Tenside = oberflächenaktive Substanzen. Was bedeutet 'aktiv' hier — verstärken oder schwächen?",
+            "Denke an Spülmittel: Wasser perlt nicht mehr ab, sondern benetzt flächig — die Oberflächenspannung ist geringer.",
+          ],
+          difficulty: 1,
+          tags: ["oberflaechenspannung", "tenside", "falschaussage"],
         },
         {
           question:
@@ -404,46 +488,53 @@ Typ-II-Pneumozyten (Alveolarepithelzellen) produzieren **Surfactant** -- eine Mi
           ],
           correctIndex: 1,
           explanation:
-            "Laplace-Gesetz: Δp = 2σ/r. Das Verhältnis Δp₁/Δp₂ = (2σ/r₁)/(2σ/r₂) = r₂/r₁ = 0,15/0,05 = 3. Also ist der Innendruck in der kleinen Alveole dreimal so groß wie in der großen. Ohne Surfactant würde die kleine Alveole in die große hineinblasen → Atelektase. Surfactant gleicht dies aus, indem σ in kleinen Alveolen stärker gesenkt wird.",
+            "Laplace: Δp = 2σ/r. Verhältnis Δp₁/Δp₂ = r₂/r₁ = 0,15/0,05 = 3. Der Innendruck der kleinen Alveole ist dreimal so groß. Ohne Surfactant würde Luft von der kleinen in die große Alveole strömen → Atelektase.",
           hints: [
-            "Laplace: Δp = 2σ/r — wie verhält sich Δp, wenn r dreimal kleiner ist?",
-            "Bilde das Verhältnis Δp₁/Δp₂ = r₂/r₁.",
+            "Δp ist umgekehrt proportional zu r. Dreimal kleinerer Radius → dreimal höherer Druck.",
+            "Bilde das Verhältnis: Δp₁/Δp₂ = (2σ/r₁) / (2σ/r₂) = r₂/r₁.",
           ],
           difficulty: 2,
-          tags: ["laplace", "alveolen", "surfactant"],
-        },
-        {
-          question: "Welche Funktion erfüllt Surfactant in den Lungenalveolen?",
-          options: [
-            "Es erhöht die Oberflächenspannung, damit die Alveolen stabil bleiben",
-            "Es senkt die Oberflächenspannung radiusabhängig und verhindert Atelektase",
-            "Es erhöht die Viskosität der Alveolarflüssigkeit",
-            "Es wirkt als Antibiotikum gegen Lungenerreger",
-            "Es transportiert Sauerstoff durch die Alveolarmembran",
-          ],
-          correctIndex: 1,
-          explanation:
-            "Surfactant (Surface Active Agent) ist eine Mischung aus Phospholipiden und Proteinen, produziert von Typ-II-Pneumozyten. Es SENKT die Oberflächenspannung an der Luft-Wasser-Grenzfläche der Alveolen — und zwar radiusabhängig: In kleinen Alveolen ist die Surfactant-Schicht dichter gepackt → stärkere Reduktion von σ → Druckausgleich zwischen verschieden großen Alveolen → Verhinderung von Atelektase (Alveolarkollaps).",
-          hints: [
-            "Das Wort 'Surfactant' kommt von 'Surface Active Agent' — es beeinflusst die Oberfläche.",
-            "Denke an das Laplace-Gesetz: Kleine Alveolen haben hohen Innendruck — Surfactant gleicht das aus.",
-          ],
-          difficulty: 2,
-          tags: ["surfactant", "alveolen", "atelektase"],
+          tags: ["laplace", "alveolen", "rechenfrage"],
         },
         {
           question:
-            "Ein Eisberg (ρ_Eis = 920 kg/m³) schwimmt im Meer (ρ_Meer = 1025 kg/m³). Welcher Anteil des Eisbergs befindet sich über der Wasseroberfläche?",
-          options: ["Etwa 5 %", "Etwa 10 %", "Etwa 20 %", "Etwa 50 %", "Etwa 90 %"],
+            "Ein Frühgeborenes (30. SSW) zeigt Atemnot mit zunehmender Zyanose. Die Diagnose lautet IRDS. Welche pathophysiologische Ursache liegt zugrunde?",
+          options: [
+            "Überschuss an Surfactant führt zu Überblähung der Alveolen",
+            "Surfactant-Mangel → hohe Oberflächenspannung → Kollaps kleiner Alveolen (Atelektase)",
+            "Erhöhte Viskosität des Blutes verhindert den Gasaustausch",
+            "Verengung der Bronchien durch allergische Reaktion",
+            "Fehlbildung der Alveolarsepten mit Shunt-Bildung",
+          ],
           correctIndex: 1,
           explanation:
-            "Im Gleichgewicht gilt: F_A = F_G → ρ_Meer · g · V_unter = ρ_Eis · g · V_gesamt → V_unter/V_gesamt = ρ_Eis/ρ_Meer = 920/1025 ≈ 0,898. Unter Wasser befinden sich ca. 89,8 %, über Wasser also ca. 10,2 % ≈ 10 %. Das ist die berühmte 'Spitze des Eisbergs'!",
+            "Vor der 35. SSW produzieren Typ-II-Pneumozyten nicht genügend Surfactant. Ohne Surfactant bleibt σ hoch → nach dem Laplace-Gesetz (Δp = 2σ/r) kollabieren bevorzugt kleine Alveolen → Atelektase → massiv eingeschränkter Gasaustausch → IRDS. Therapie: Surfactant-Substitution + CPAP.",
           hints: [
-            "Im Schwimmgleichgewicht: V_unter/V_gesamt = ρ_Eis/ρ_Meer.",
-            "920/1025 ≈ 0,90 → 90 % unter Wasser → 10 % über Wasser.",
+            "Surfactant-Produktion reicht erst ab ca. 35. SSW — was fehlt bei 30. SSW?",
+            "Laplace-Gesetz: Ohne Surfactant → hohe σ → hoher Druck in kleinen Alveolen → Kollaps.",
           ],
           difficulty: 2,
-          tags: ["archimedes", "schwimmen", "eisberg"],
+          tags: ["surfactant", "irds", "klinisch"],
+        },
+        {
+          question:
+            "Ein Stahlschiff (Masse 50 000 t) schwimmt im Ozean, ein Stahlnagel (Masse 5 g) sinkt. Welche Begründung ist physikalisch korrekt?",
+          options: [
+            "Das Schiff hat eine größere Oberfläche und wird daher vom Wasser getragen",
+            "Die Auftriebskraft ist bei größeren Objekten grundsätzlich stärker als die Gewichtskraft",
+            "Die mittlere Dichte des Schiffs (Stahl + Luft) ist kleiner als ρ_Wasser, die des Nagels größer",
+            "Der Ozean hat eine höhere Oberflächenspannung als Süßwasser und trägt schwerere Objekte",
+            "Das Schiff sinkt tatsächlich auch — nur sehr langsam aufgrund seiner Größe",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Schwimmen vs. Sinken hängt ausschließlich von der mittleren Dichte ab. Das Schiff ist hohl: ρ_mittel (Stahl + Luft) ≈ 200–300 kg/m³ < ρ_Wasser (1025 kg/m³) → es schwimmt. Der massive Stahlnagel hat ρ ≈ 7800 kg/m³ > ρ_Wasser → er sinkt. Masse und Größe allein sind irrelevant.",
+          hints: [
+            "Erinnere dich: Nicht die Masse entscheidet, sondern die Dichte!",
+            "Ein Schiff ist hohl — welche mittlere Dichte ergibt sich aus Stahl + eingeschlossener Luft?",
+          ],
+          difficulty: 3,
+          tags: ["schwimmen", "sinken", "dichte", "missverstaendnis"],
         },
       ],
     },

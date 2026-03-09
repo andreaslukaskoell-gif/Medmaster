@@ -594,112 +594,171 @@ f(t) = f_Ruhe − a·t + b·t² (erst Verlangsamung, dann Beschleunigung). Minim
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `## Grundform und Eigenschaften
+      content: `## Warum Exponentialfunktionen in der Medizin allgegenwärtig sind
 
-Die Exponentialfunktion hat die allgemeine Form **f(x) = a × bˣ** mit der Basis b > 0, b ≠ 1, und dem Vorfaktor a > 0. Die wichtigste Basis ist die **Eulersche Zahl e ≈ 2,71828...**, was zur natürlichen Exponentialfunktion f(x) = eˣ führt.
+Radioaktiver Zerfall in der Nuklearmedizin, Medikamentenabbau im Blut, Bakterienvermehrung bei einer Sepsis — all diese Prozesse folgen **demselben mathematischen Prinzip**: Die Änderungsrate ist proportional zum aktuellen Bestand. Dieses eine Prinzip erzeugt die Exponentialfunktion, und wer sie versteht, kann Dosierungsintervalle berechnen, Strahlenschutzzeiten abschätzen und Infektionsverläufe vorhersagen.
 
-Eigenschaften der Exponentialfunktion:
-- **Definitionsbereich**: D = ℝ (alle reellen Zahlen)
-- **Wertebereich**: W = (0, ∞) (stets positiv!)
-- **y-Achsenabschnitt**: f(0) = a × b⁰ = a
-- **Horizontale Asymptote**: y = 0 (x → −∞)
-- **Monotonie**: b > 1 → streng monoton steigend (Wachstum); 0 < b < 1 → streng monoton fallend (Zerfall)
-- **Keine Nullstellen**: Da f(x) = a × bˣ > 0 für alle x gilt
+---
 
-> **Merke:** Die Exponentialfunktion ist **immer positiv** — sie kann niemals den Wert 0 oder negative Werte annehmen. Das ist eine häufige MedAT-Falle: "Die Konzentration eines Medikaments erreicht nach unendlich langer Zeit den Wert 0" ist mathematisch falsch (sie nähert sich nur asymptotisch an).
+## Die Grundgleichung: f(t) = a · e^(kt)
+
+Die **Eulersche Zahl e ≈ 2,718** ist die natürliche Basis exponentieller Prozesse. Die allgemeine Form lautet:
+
+**f(t) = a · e^(kt)**
+
+Jeder Parameter hat eine klare Bedeutung:
+- **a** = Anfangswert zum Zeitpunkt t = 0 (z. B. Anfangskonzentration eines Medikaments)
+- **k** = Ratenkonstante — bestimmt, wie schnell der Prozess abläuft
+- **k > 0** → exponentielles **Wachstum** (Bakterien, Tumore, Zinseszins)
+- **k < 0** → exponentieller **Zerfall** (Medikamentenabbau, radioaktiver Zerfall)
+- **t** = Zeit
+
+> **Merke:** Die Exponentialfunktion ist **immer positiv** — sie erreicht niemals den Wert 0. MedAT-Falle: „Die Konzentration eines Medikaments wird nach unendlich langer Zeit null" ist mathematisch falsch. Sie nähert sich asymptotisch an, erreicht die Null aber nie.
 
 {{DIAGRAM:exponential-function}}
 
-## Wachstum und Zerfall
+**Eigenschaften auf einen Blick:**
+- **Definitionsbereich**: D = ℝ (alle reellen Zahlen)
+- **Wertebereich**: W = (0, ∞) — stets positiv, keine Nullstellen
+- **y-Achsenabschnitt**: f(0) = a (da e⁰ = 1)
+- **Horizontale Asymptote**: y = 0 (für x → −∞ bei Wachstum, für x → +∞ bei Zerfall)
+- **Besondere Eigenschaft**: (eˣ)' = eˣ — die e-Funktion ist ihre eigene Ableitung
 
-**Exponentielles Wachstum** (b > 1 oder positiver Exponent): f(t) = f₀ × eᵏᵗ (k > 0)
+---
 
-Typische Beispiele: Bakterienwachstum, Zinseszins, unkontrollierte Zellvermehrung.
+## Halbwertszeit T½ = ln(2)/k
 
-**Exponentieller Zerfall** (0 < b < 1 oder negativer Exponent): f(t) = f₀ × e⁻ᵏᵗ (k > 0)
+Die **Halbwertszeit (T½)** ist die zentrale Größe beim exponentiellen Zerfall: die Zeit, nach der genau die Hälfte der Ausgangssubstanz übrig ist.
 
-Typische Beispiele: Radioaktiver Zerfall, Medikamentenabbau im Blut (Pharmakokinetik (Arzneimittelverteilung im Körper) erster Ordnung), Abklingen elektrischer Ströme.
+**Herleitung:**
+f(T½) = a/2 = a · e^(−k·T½) → 1/2 = e^(−k·T½) → ln(1/2) = −k·T½ → **T½ = ln(2)/k ≈ 0,693/k**
 
-| Typ | Formel | k-Wert | Beispiel |
-|---|---|---|---|
-| Wachstum | f(t) = f₀ × eᵏᵗ | k > 0 | Bakterienkultur |
-| Zerfall | f(t) = f₀ × e⁻ᵏᵗ | k > 0 | Medikamentenabbau |
-| Sättigung | f(t) = A × (1 − e⁻ᵏᵗ) | k > 0 | Steady-State-Aufbau |
+Die Halbwertszeit ist **unabhängig von der Ausgangsmenge**: Ob 1000 mg oder 10 mg — nach einer T½ ist stets die Hälfte übrig.
 
-## Halbwertszeit
+**Intuitive Eselsbrücke — so viel bleibt nach n Halbwertszeiten:**
 
-Die **Halbwertszeit T₁/₂** ist die Zeit, nach der eine exponentiell abnehmende Größe auf die Hälfte ihres Ausgangswertes gesunken ist:
-
-f(T₁/₂) = f₀/2 = f₀ × e^(−k×T₁/₂)
-
-1/2 = e^(−k×T₁/₂)
-
-ln(1/2) = −k×T₁/₂
-
-**T₁/₂ = ln(2)/k ≈ 0,693/k**
-
-Nach n Halbwertszeiten verbleiben: f(n×T₁/₂) = f₀ × (1/2)ⁿ
-
-| Anzahl T½ | Restmenge | In Prozent |
+| Anzahl T½ | Restmenge | Prozent |
 |---|---|---|
-| 1 | f₀/2 | 50 % |
-| 2 | f₀/4 | 25 % |
-| 3 | f₀/8 | 12,5 % |
-| 4 | f₀/16 | 6,25 % |
-| 5 | f₀/32 | 3,1 % |
+| 1 | a/2 | 50 % |
+| 2 | a/4 | 25 % |
+| 3 | a/8 | 12,5 % |
+| 4 | a/16 | 6,25 % |
+| 5 | a/32 | **≈ 3 %** |
 
-> **Merke:** Nach **5 Halbwertszeiten** sind weniger als 3,2 % der Ausgangssubstanz übrig — klinisch gilt das Medikament als vollständig eliminiert. Diese Faustregel wird im MedAT häufig abgefragt.
+> **Merke:** Nach **5 Halbwertszeiten** sind weniger als 3,2 % übrig — klinisch gilt die Substanz als **praktisch vollständig eliminiert**. Diese 5-T½-Regel ist eine der am häufigsten abgefragten Faustregeln im MedAT.
+
+**Häufiges Missverständnis:** T½ ist NICHT die Zeit, bis etwas „komplett weg" ist. Mathematisch erreicht die Kurve nie exakt null — praktisch setzt man aber bei ~3 % (5 T½) die Grenze.
+
+---
 
 ## Verdopplungszeit
 
-Das Pendant beim Wachstum ist die **Verdopplungszeit T₂**:
+Beim Wachstum heißt das Pendant **Verdopplungszeit T₂**: die Zeit, in der sich eine Größe verdoppelt.
 
-T₂ = ln(2)/k ≈ 0,693/k
+**T₂ = ln(2)/k ≈ 0,693/k**
 
-Die Formel ist identisch — der Unterschied liegt nur im Kontext (Zerfall vs. Wachstum).
+Die Formel ist identisch zur Halbwertszeit — nur der Kontext unterscheidet sich (Zerfall vs. Wachstum). Beispiel: Bakterien mit T₂ = 20 min erreichen nach 2 h (= 6 Verdopplungen) das 2⁶ = 64-fache der Ausgangsmenge.
 
-## Eulersche Zahl e
+---
 
-e ≈ 2,71828 ist die Basis der natürlichen Exponentialfunktion. Sie ist definiert als:
-- e = lim(n→∞)(1 + 1/n)ⁿ
-- e ist die Basis, für welche die Exponentialfunktion ihre eigene Ableitung ist: (eˣ)' = eˣ
+## Kinetik erster Ordnung vs. nullter Ordnung
 
-In der Finanzmathematik taucht e bei der stetigen Verzinsung auf: Kapital K nach t Jahren bei Zinssatz r ergibt sich als K(t) = K₀ × eʳᵗ. Beim Zinseszins mit n Zinsperioden pro Jahr: K = K₀ × (1 + r/n)ⁿᵗ, und für n → ∞ konvergiert dies gegen K₀ × eʳᵗ.
+Dieser Unterschied ist eine klassische MedAT-Falle:
 
-## Die e-Funktion in der Pharmakokinetik
+**Kinetik 1. Ordnung (exponentiell):** Die Eliminationsrate ist **proportional zur aktuellen Konzentration**. Je mehr Substanz vorhanden, desto schneller wird abgebaut. Mathematisch: dC/dt = −k·C → **C(t) = C₀ · e^(−kt)**. Die meisten Medikamente folgen dieser Kinetik. Im halblogarithmischen Diagramm ergibt sich eine Gerade.
 
-Bei der **Kinetik erster Ordnung** gilt: Die Eliminationsrate ist proportional zur aktuellen Konzentration. Das führt zur Differentialgleichung dC/dt = −k×C mit der Lösung:
+**Kinetik 0. Ordnung (linear):** Die Eliminationsrate ist **konstant**, unabhängig von der Konzentration. Mathematisch: dC/dt = −k₀ → **C(t) = C₀ − k₀·t**. Der Abbau erfolgt linear.
 
-**C(t) = C₀ × e^(−k×t)**
+| Eigenschaft | 1. Ordnung | 0. Ordnung |
+|---|---|---|
+| Abbaurate | proportional zu C | konstant |
+| Kurvenform | exponentiell | linear (Gerade) |
+| Halbwertszeit | konstant | konzentrationsabhängig |
+| Typisches Beispiel | Die meisten Medikamente | Ethanol (~0,15 ‰/h) |
 
-wobei C₀ die Anfangskonzentration und k die Eliminationskonstante ist. Der pH-abhängige Ionisierungsgrad von Arzneimitteln folgt ebenfalls einer exponentiellen Beziehung (Henderson-Hasselbalch).
+> **Merke:** Ethanol wird mit **konstanter Rate** abgebaut (ca. 0,15 ‰ pro Stunde), weil das abbauende Enzym Alkoholdehydrogenase bei üblichen Trinkmengen **gesättigt** ist. Deshalb funktioniert die Faustregel „pro Stunde ein Bier" — bei Kinetik 1. Ordnung wäre das nicht möglich.
 
-**Kinetik erster Ordnung vs. nullter Ordnung:** Bei Kinetik erster Ordnung ist die Eliminationsrate proportional zur Konzentration (exponentieller Abfall). Bei Kinetik nullter Ordnung ist die Eliminationsrate konstant (linearer Abfall) — Beispiel: Ethanolabbau in der Leber bei gesättigter Alkoholdehydrogenase.
+---
 
-## Exponentialfunktionen umformen
+## Pharmakokinetik: Einzeldosis
 
-Jede Exponentialfunktion f(x) = aˣ lässt sich als f(x) = eˣ×ln(a) schreiben, da aˣ = e^(x×ln(a)). Diese Umformung verbindet Exponential- und Logarithmusfunktion und ist für Ableitungen und Integrale unerlässlich.
+Bei einmaliger Gabe eines Medikaments mit Kinetik 1. Ordnung gilt:
 
-**Rechenregeln für Potenzen** (Wiederholung):
-- aˣ × aʸ = aˣ⁺ʸ
-- aˣ / aʸ = aˣ⁻ʸ
-- (aˣ)ʸ = aˣ×ʸ
-- a⁰ = 1 (für a ≠ 0)
-- a⁻ˣ = 1/aˣ
+**C(t) = C₀ · e^(−k·t)**
+
+**Durchgerechnetes Beispiel:** Antibiotikum mit T½ = 6 h, Anfangskonzentration C₀ = 120 mg/L. Wie viel bleibt nach 18 h?
+
+Schritt 1: Anzahl Halbwertszeiten: n = 18 h / 6 h = **3**
+Schritt 2: Restmenge = C₀ · (½)³ = 120 · 1/8 = **15 mg/L**
+
+Kontrolle mit Formel: k = ln(2)/6 = 0,1155 h⁻¹. C(18) = 120 · e^(−0,1155·18) = 120 · e^(−2,079) = 120 · 0,125 = **15 mg/L** ✓
+
+---
+
+## Steady State bei wiederholter Dosierung
+
+Bei regelmäßiger Medikamenteneinnahme stellt sich ein **Gleichgewichtszustand (Steady State)** ein. Dieses Konzept wird in der aktuellen Tabelle oben nur erwähnt, verdient aber eine genaue Erklärung:
+
+**Warum entsteht ein Steady State?** Bei jeder Dosis wird Substanz hinzugefügt, aber zwischen den Dosen wird ein Teil eliminiert. Am Anfang ist wenig Substanz im Körper → wenig Elimination → die Konzentration steigt. Mit steigender Konzentration steigt auch die Eliminationsrate (Kinetik 1. Ordnung!), bis schließlich **pro Dosierungsintervall genau so viel eliminiert wird, wie eine Dosis hinzufügt**. Das ist der Steady State.
+
+**Die Steady-State-Formel:**
+
+**C_ss = D / (1 − e^(−k·τ))**
+
+wobei:
+- **D** = Dosis (genauer: die Spitzenkonzentration, die eine Einzeldosis erzeugt)
+- **k** = Eliminationskonstante
+- **τ** (tau) = Dosierungsintervall
+
+**Aufbau des Steady State nach n Dosen:** Der Anteil des Steady-State-Niveaus beträgt 1 − (½)ⁿ, wenn τ = T½:
+
+| Dosis Nr. | Anteil Steady State |
+|---|---|
+| 1 | 50 % |
+| 2 | 75 % |
+| 3 | 87,5 % |
+| 4 | 93,75 % |
+| 5 | **96,9 %** |
+
+> **Merke:** Der Steady State wird nach **4–5 Halbwertszeiten** erreicht (~94–97 %). Das gilt **unabhängig von Dosis und Dosierungsintervall** — nur T½ bestimmt, wie lange es dauert.
+
+**Klinisches Beispiel — Digoxin:** T½ ≈ 36 h, tägliche Einnahme. Zeit bis Steady State: 4–5 × 36 h = **144–180 h ≈ 6–7,5 Tage**. Deshalb braucht Digoxin ohne Aufsättigungsdosis fast eine Woche, bis der therapeutische Spiegel stabil ist. Bei lebensbedrohlichen Arrhythmien kann man diese Phase mit einer Aufsättigungsdosis (Loading Dose) überspringen.
+
+**Die 5-Halbwertszeiten-Regel gilt in beide Richtungen:**
+- **Aufbau**: Nach 5 T½ bei regelmäßiger Gabe → ~97 % des Steady State erreicht
+- **Abbau**: Nach 5 T½ nach Absetzen → ~97 % eliminiert
+
+---
+
+## Radioaktiver Zerfall
+
+Der radioaktive Zerfall folgt exakt derselben Exponentialfunktion:
+
+**A(t) = A₀ · e^(−λ·t)**
+
+(In der Physik wird die Zerfallskonstante traditionell λ statt k genannt — mathematisch identisch.)
+
+**Beispiel — ⁹⁹ᵐTc-Szintigraphie:** T½ = 6 h, Injektionsaktivität A₀ = 740 MBq. λ = ln(2)/6 = 0,1155 h⁻¹. Nach 18 h (= 3 T½): A = 740 · (½)³ = 740/8 = **92,5 MBq** (12,5 % Restaktivität). Nach 24 h (= 4 T½): A = 740 · (½)⁴ = **46,3 MBq** (6,3 %).
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Pharmakokinetik: Gentamicin-Talspiegel:**
-C₀ = 8 mg/L (Peak), k = 0,231 h⁻¹ (T½ = ln2/0,231 = 3 h). Talspiegel nach 8 h: C(8) = 8 × e^(−0,231×8) = 8 × e^(−1,848) = 8 × 0,158 = **1,26 mg/L**. Therapeutisch: Talspiegel < 2 mg/L (Nephrotoxizitätsgrenze) → **im sicheren Bereich**.
+**Beispiel 1 — Restmenge berechnen:**
+Medikament mit T½ = 4 h, Einzeldosis 400 mg. Restmenge nach 12 h?
+n = 12/4 = 3 Halbwertszeiten. Restmenge = 400 · (½)³ = 400/8 = **50 mg**.
 
-**Beispiel 2 — Bakterienwachstum:**
-Ausgangskolonie: N₀ = 1000. Verdopplungszeit 30 min → k = ln2/30 = 0,0231 min⁻¹. Nach 4 h (240 min): N = 1000 × e^(0,0231×240) = 1000 × e^(5,544) = 1000 × 256 = **256.000 Bakterien**. Alternativ: 240/30 = 8 Verdopplungen → 1000 × 2⁸ = **256.000**.
+**Beispiel 2 — k aus T½ bestimmen und einsetzen:**
+T½ = 3 h → k = 0,693/3 = 0,231 h⁻¹. Konzentration nach 8 h bei C₀ = 8 mg/L:
+C(8) = 8 · e^(−0,231·8) = 8 · e^(−1,848) = 8 · 0,158 = **1,26 mg/L**.
 
-**Beispiel 3 — Radioaktiver Zerfall: ⁹⁹ᵐTc-Szintigraphie:**
-T½ = 6,01 h, Injektionsaktivität A₀ = 740 MBq. k = ln2/6,01 = 0,1153 h⁻¹. Nach 24 h: A = 740 × e^(−0,1153×24) = 740 × e^(−2,767) = 740 × 0,0628 = **46,5 MBq**. Restaktivität = 46,5/740 = **6,3%** — Patient kann nach 24 h bedenkenlos Kontakt mit Kindern haben (<5% gilt als unbedenklich, hier knapp darüber).
+**Beispiel 3 — Bakterienwachstum:**
+N₀ = 1000, Verdopplungszeit 30 min. Nach 4 h (240 min):
+n = 240/30 = 8 Verdopplungen → N = 1000 · 2⁸ = **256.000 Bakterien**.
 
-**Beispiel 4 — Steady-State-Aufbau:**
-Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n Dosen: 1 − (½)ⁿ. Nach 1 Dosis: 50 %, nach 2: 75 %, nach 3: 87,5 %, nach 4: 93,75 %, nach 5: 96,9 %. Klinische Faustregel: **Steady State nach 4–5 T½** (94–97 % erreicht).`,
+**Beispiel 4 — Steady-State-Zeitpunkt:**
+Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
+4–5 × T½ = 4–5 × 8 h = **32–40 h**. Erst dann ist die Gleichgewichtskonzentration stabil.`,
       lernziele: [
         "Exponentialfunktionen in der Form f(t) = f₀ × e^(kt) aufstellen und Wachstum von Zerfall unterscheiden.",
         "Die Halbwertszeit T₁/₂ = ln(2)/k aus der Eliminationskonstante berechnen und umgekehrt.",
@@ -755,62 +814,76 @@ Medikament mit T½ = 12 h, Dosierung alle 12 h. Anteil des Steady-State nach n D
           options: ["5 h", "10 h", "7 h", "14 h", "3 h"],
           correctIndex: 1,
           explanation:
-            "T½ = ln(2)/k = 0,693/0,0693 h⁻¹ = 10 h. ln(2) ≈ 0,693 ist ein Schlüsselwert, den man auswendig kennen sollte. Die Einheit von k ist h⁻¹ (pro Stunde), also ist T½ in Stunden angegeben. Klinisches Beispiel: Bei diesem Medikament wäre nach 50 h (≈ 5 Halbwertszeiten) weniger als 3,1 % der Ausgangsdosis übrig — praktisch vollständig eliminiert.",
+            "T½ = ln(2)/k = 0,693/0,0693 = 10 h. Den Wert ln(2) ≈ 0,693 sollte man auswendig kennen. Da k die Einheit h⁻¹ hat, ergibt T½ Stunden. Klinisch: Nach 50 h (5 × T½) wären weniger als 3,1 % der Ausgangsdosis übrig.",
           hints: ["T½ = ln(2)/k ≈ 0,693/k", "T½ = 0,693/0,0693 = 10"],
           difficulty: 1,
           tags: ["halbwertszeit", "zerfallskonstante", "exponentialfunktion"],
         },
         {
           question:
-            "Ein Patient erhält eine Einzeldosis von 400 mg eines Antibiotikums (T½ = 4 h). Wie viel mg sind nach 12 h noch im Körper?",
-          options: ["25 mg", "50 mg", "100 mg", "200 mg", "12,5 mg"],
+            "Ein Antibiotikum (T½ = 6 h, C₀ = 120 mg/L) wird als Einzeldosis gegeben. Wie hoch ist die Konzentration nach 18 h?",
+          options: ["30 mg/L", "15 mg/L", "60 mg/L", "7,5 mg/L", "20 mg/L"],
           correctIndex: 1,
           explanation:
-            "12 h entsprechen 12/4 = 3 Halbwertszeiten. Nach 3 Halbwertszeiten verbleiben (½)³ = 1/8 der Ausgangsdosis: 400 mg × (1/8) = 50 mg. Systematisch: nach 4 h → 200 mg, nach 8 h → 100 mg, nach 12 h → 50 mg. Diese Berechnungsmethode ist schneller als die exponentielle Formel und liefert für ganzzahlige Halbwertszeiten exakte Ergebnisse.",
-          hints: ["n = 12 h / 4 h = 3 Halbwertszeiten", "Restmenge = 400 × (½)³ = 400/8"],
+            "18 h / 6 h = 3 Halbwertszeiten. Restmenge = 120 · (½)³ = 120/8 = 15 mg/L. Schritt für Schritt: nach 6 h → 60, nach 12 h → 30, nach 18 h → 15. Bei ganzzahligen T½ ist diese Methode schneller als die e-Funktion.",
+          hints: ["n = 18/6 = 3 Halbwertszeiten", "120 × (½)³ = 120/8 = 15"],
           difficulty: 1,
           tags: ["halbwertszeit", "pharmakokinetik", "restmenge"],
         },
         {
-          question: "Welche der folgenden Aussagen über f(x) = 3 × e^(−2x) ist FALSCH?",
+          question: "Welche Aussage über den Ethanolabbau im Körper ist richtig?",
           options: [
-            "Die Funktion ist streng monoton fallend.",
-            "Die Funktion hat keine Nullstellen.",
-            "Der y-Achsenabschnitt liegt bei y = 3.",
-            "Die horizontale Asymptote ist y = 0.",
-            "Die Funktion nimmt für x → ∞ negative Werte an.",
+            "Ethanol wird nach Kinetik 1. Ordnung abgebaut (exponentiell).",
+            "Die Halbwertszeit von Ethanol ist konstant und dosisunabhängig.",
+            "Ethanol wird mit konstanter Rate abgebaut (ca. 0,15 ‰/h) — Kinetik 0. Ordnung.",
+            "Der Abbau von Ethanol beschleunigt sich bei höherer Konzentration.",
+            "Im halblogarithmischen Diagramm ergibt der Ethanolabbau eine Gerade.",
           ],
-          correctIndex: 4,
+          correctIndex: 2,
           explanation:
-            "f(x) = 3×e^(−2x): Da e^(−2x) > 0 für alle x und der Vorfaktor 3 > 0, gilt f(x) > 0 für alle x ∈ ℝ. Die Funktion kann niemals negative Werte annehmen — das ist eine fundamentale Eigenschaft der Exponentialfunktion. Für x → ∞ nähert sich f(x) von oben der Asymptote y = 0, ohne sie je zu erreichen. Alle anderen Aussagen sind korrekt: fallend (negativer Exponent), keine Nullstellen, f(0) = 3, y = 0 als Asymptote.",
-          hints: [
-            "e^(−2x) > 0 für alle x; Vorfaktor 3 > 0",
-            "Exponentialfunktion ist stets positiv",
-          ],
+            "Ethanol folgt einer Kinetik 0. Ordnung, weil das abbauende Enzym (Alkoholdehydrogenase) bei üblichen Trinkmengen gesättigt ist. Daher ist die Abbaurate konstant (~0,15 ‰/h) und unabhängig von der Konzentration. Das ist der Grund für die Faustregel ‚pro Stunde ein Bier'. Bei Kinetik 1. Ordnung wäre die Rate konzentrationsabhängig — das trifft auf die meisten Medikamente zu, nicht aber auf Ethanol.",
+          hints: ["Gesättigtes Enzym → konstante Rate", "Kinetik 0. Ordnung = linearer Abbau"],
           difficulty: 2,
-          tags: ["exponentialfunktion", "wertebereich", "algebra"],
+          tags: ["kinetik", "nullte-ordnung", "ethanol"],
         },
         {
           question:
-            "Eine Bakterienkultur verdoppelt sich alle 20 min. Wie viele Bakterien gibt es nach 2 h, wenn zu Beginn 1000 Bakterien vorhanden waren?",
-          options: ["32 000", "64 000", "16 000", "128 000", "48 000"],
-          correctIndex: 1,
+            "Digoxin hat eine Halbwertszeit von 36 h und wird täglich eingenommen. Nach wie vielen Tagen ist der Steady State ungefähr erreicht?",
+          options: ["1–2 Tage", "3–4 Tage", "6–8 Tage", "10–12 Tage", "14–16 Tage"],
+          correctIndex: 2,
           explanation:
-            "2 h = 120 min. Anzahl der Verdopplungen: n = 120/20 = 6. Anzahl = 1000 × 2⁶ = 1000 × 64 = 64 000. Oder: f(t) = 1000 × e^(k×t) mit k = ln(2)/20 min. f(120) = 1000 × e^(ln(2)/20 × 120) = 1000 × e^(6×ln(2)) = 1000 × 2⁶ = 64 000. Exponentielles Bakterienwachstum erklärt, warum eine unkontrollierte Infektion so schnell lebensbedrohlich werden kann.",
-          hints: ["n Verdopplungen in 120 min: n = 120/20 = 6", "Anzahl = 1000 × 2⁶"],
-          difficulty: 2,
-          tags: ["wachstumsfunktion", "verdopplung", "bakterien"],
-        },
-        {
-          question:
-            "Die Gleichgewichtskonzentration (Steady State) eines oral verabreichten Medikaments mit T½ = 8 h wird bei regelmäßiger Einnahme nach ca. wie vielen Stunden erreicht?",
-          options: ["8 h", "16 h", "24 h", "32–40 h", "4 h"],
-          correctIndex: 3,
-          explanation:
-            "Der Steady State wird nach 4–5 Halbwertszeiten erreicht: 4 × 8 h = 32 h bis 5 × 8 h = 40 h. Dies gilt unabhängig von Dosis oder Dosierungsintervall. Nach 4 T½ sind ca. 94 % des Steady-State-Niveaus erreicht, nach 5 T½ ca. 97 %. Diese Faustregel ist klinisch entscheidend: Bei Aufsättigungsdosen (z. B. Amiodaron, Digitalis) überspringt man diese Phase und erreicht sofort therapeutische Spiegel, um lebensgefährliche Wartezeiten zu vermeiden.",
-          hints: ["Steady State nach 4–5 T½", "4 × 8 h = 32 h, 5 × 8 h = 40 h"],
+            "Steady State wird nach 4–5 Halbwertszeiten erreicht: 4 × 36 h = 144 h ≈ 6 Tage, 5 × 36 h = 180 h ≈ 7,5 Tage. Das fällt in den Bereich 6–8 Tage. Diese Faustregel gilt unabhängig von Dosis und Dosierungsintervall — nur T½ bestimmt die Dauer. Bei lebensbedrohlichen Arrhythmien überbrückt man die Wartezeit mit einer Aufsättigungsdosis.",
+          hints: ["Steady State nach 4–5 × T½", "5 × 36 h = 180 h ≈ 7,5 Tage"],
           difficulty: 2,
           tags: ["steady-state", "pharmakokinetik", "halbwertszeit"],
+        },
+        {
+          question:
+            "Ein radioaktives Isotop hat T½ = 8 h. Welcher Anteil der Ausgangsaktivität ist nach 32 h noch vorhanden?",
+          options: ["12,5 %", "3,125 %", "25 %", "6,25 %", "1,56 %"],
+          correctIndex: 3,
+          explanation:
+            "32 h / 8 h = 4 Halbwertszeiten. Restanteil = (½)⁴ = 1/16 = 6,25 %. Schrittweise: 8 h → 50 %, 16 h → 25 %, 24 h → 12,5 %, 32 h → 6,25 %. Nach einer weiteren T½ (40 h) wären es 3,125 % — dann wäre die 5-T½-Schwelle erreicht und die Substanz klinisch als eliminiert betrachtet.",
+          hints: ["n = 32/8 = 4 Halbwertszeiten", "(½)⁴ = 1/16 = 6,25 %"],
+          difficulty: 2,
+          tags: ["radioaktiver-zerfall", "halbwertszeit", "restmenge"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über die Exponentialfunktion f(x) = 5 · e^(−3x) ist FALSCH?",
+          options: [
+            "f(x) > 0 für alle x ∈ ℝ.",
+            "Die horizontale Asymptote ist y = 0.",
+            "Der y-Achsenabschnitt liegt bei y = 5.",
+            "Die Funktion ist streng monoton steigend.",
+            "Die Funktion hat keine Nullstellen.",
+          ],
+          correctIndex: 3,
+          explanation:
+            "f(x) = 5·e^(−3x) hat einen negativen Exponenten (−3x), daher ist die Funktion streng monoton FALLEND, nicht steigend. Alle anderen Aussagen stimmen: stets positiv (e-Funktion!), Asymptote y = 0, f(0) = 5·e⁰ = 5, keine Nullstellen. Die Verwechslung von steigend/fallend bei negativem Exponenten ist eine klassische Falle.",
+          hints: ["Negativer Exponent → fallend", "Exponentialfunktion ist immer positiv"],
+          difficulty: 3,
+          tags: ["exponentialfunktion", "monotonie", "falsch-aussage"],
         },
       ],
       diagram: "exponential-function",

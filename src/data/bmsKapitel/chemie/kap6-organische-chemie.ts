@@ -312,51 +312,158 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
     {
       id: "ch-12-02",
       title: "Isomerie und Stereochemie",
-      content: `## Konstitutionsisomere (Strukturisomere)
+      content: `## Warum dieselbe Formel verschiedene Stoffe ergibt
 
-Zwei Verbindungen mit identischer Summenformel, aber unterschiedlichem Aufbau — das ist Isomerie, eines der zentralen Konzepte der organischen Chemie. Die grundlegendste Form ist die **Konstitutionsisomerie**: Die Atome sind zwar in gleicher Anzahl vorhanden, aber auf verschiedene Weise miteinander verknüpft. So haben n-Butan und Isobutan (2-Methylpropan) beide die Formel C₄H₁₀, unterscheiden sich jedoch in der Verzweigung des Kohlenstoffgerüsts — und damit in ihren physikalischen Eigenschaften (Sdp. −1 °C vs. −12 °C). Man unterteilt Konstitutionsisomere in **Skelettisomere** (verschiedene Kohlenstoffgerüste wie n-Butan vs. Isobutan), **Stellungsisomere** (gleiche funktionelle Gruppe an verschiedener Position, etwa 1-Propanol vs. 2-Propanol) und **Funktionsisomere** (verschiedene funktionelle Gruppen bei gleicher Summenformel, z. B. Ethanol CH₃CH₂OH vs. Dimethylether CH₃OCH₃ — beide C₂H₆O). Die Zahl der möglichen Konstitutionsisomere steigt mit der Molekülgröße dramatisch: C₄H₁₀ hat 2, C₅H₁₂ hat 3, C₆H₁₄ hat 5 und C₁₀H₂₂ bereits 75 Isomere.
+Ethanol und Dimethylether haben exakt dieselbe Summenformel: C₂H₆O. Trotzdem ist das eine ein trinkbarer Alkohol (Sdp. 78 °C), das andere ein gasförmiger Ether (Sdp. −24 °C). Der Grund: Gleiche Atome, aber unterschiedliche Verknüpfung. Dieses Phänomen — **Isomerie** — erklärt, warum ein einziges Kohlenstoffatom an der falschen Stelle über Heilwirkung oder Missbildung entscheiden kann.
 
-## Konformationsisomere
+Die zentrale Unterscheidung: Sind die Atome **anders verknüpft** (verschiedene Bindungspartner)? Dann liegt **Konstitutionsisomerie** vor. Sind sie **gleich verknüpft**, aber **räumlich anders angeordnet**? Dann spricht man von **Stereoisomerie**.
 
-Neben der Konnektivität kann auch die räumliche Anordnung variieren, ohne dass dabei Bindungen gebrochen werden. **Konformere** entstehen durch Rotation um C-C-Einfachbindungen und gehen ständig ineinander über. Beim Ethan beispielsweise wechseln die Substituenten zwischen der energiearmen gestaffelten Konformation (Substituenten „auf Lücke") und der energiereicheren ekliptischen Konformation (Substituenten „auf Deckung", sterische Abstoßung). Für die Medizin besonders relevant ist das Cyclohexan: Es nimmt bevorzugt die spannungsfreie **Sesselkonformation** ein, in der man axiale und äquatoriale Positionen unterscheidet. Große Substituenten wie die tert-Butylgruppe bevorzugen die äquatoriale Position, weil dort weniger 1,3-diaxiale Wechselwirkungen auftreten.
+---
 
-## Stereoisomere
+## Konstitutionsisomerie — verschiedene Verknüpfung
 
-Spannender für die Pharmakologie werden die Verhältnisse, wenn Verbindungen zwar identische Konnektivität besitzen, sich aber in der räumlichen Anordnung ihrer Atome unterscheiden. Solche **Stereoisomere** unterteilen sich in mehrere Kategorien.
+Bei Konstitutionsisomeren (Strukturisomeren) stimmt die Summenformel überein, aber die Atome sind auf unterschiedliche Weise miteinander verbunden. Drei Untertypen:
 
-### cis/trans-Isomerie (Z/E-Isomerie)
+- **Skelettisomere** — verschiedene Kohlenstoffgerüste: n-Butan (unverzweigt) vs. Isobutan/2-Methylpropan (verzweigt), beide C₄H₁₀, aber mit unterschiedlichen Siedepunkten (−1 °C vs. −12 °C)
+- **Stellungsisomere** (Positionsisomere) — gleiche funktionelle Gruppe, andere Position: 1-Propanol (OH am C1) vs. 2-Propanol (OH am C2)
+- **Funktionsisomere** — verschiedene funktionelle Gruppen bei gleicher Formel: Ethanol (CH₃CH₂OH, Alkohol) vs. Dimethylether (CH₃OCH₃, Ether), beide C₂H₆O
 
-An C=C-Doppelbindungen und in Ringen kann die freie Drehbarkeit nicht stattfinden, weil die π-Bindung dies verhindert. Tragen beide doppelgebundenen Kohlenstoffatome jeweils zwei verschiedene Substituenten, existieren zwei räumlich verschiedene Anordnungen: Im **cis-Isomer** (Z, zusammen) stehen die gleichartigen Substituenten auf der gleichen Seite, im **trans-Isomer** (E, entgegengesetzt) auf gegenüberliegenden Seiten. cis-2-Buten und trans-2-Buten sind daher verschiedene Verbindungen mit unterschiedlichen Siedepunkten (3,7 °C vs. 0,9 °C). Für die exakte Benennung komplexerer Fälle verwendet man die E/Z-Nomenklatur, bei der die Substituenten nach den CIP-Prioritätsregeln (höhere Ordnungszahl = höhere Priorität) geordnet werden.
+Die Zahl möglicher Konstitutionsisomere explodiert mit wachsender Kettenlänge: C₄H₁₀ hat 2, C₆H₁₄ hat 5, C₁₀H₂₂ bereits 75 Isomere.
 
-### Chiralität und R/S-Isomerie (Enantiomere)
+> **Merke:** Konstitutionsisomere = gleiche Summenformel, verschiedene Konnektivität (Bindungspartner). Sie unterscheiden sich in allen physikalischen Eigenschaften.
 
-Ein Kohlenstoffatom, das vier verschiedene Substituenten trägt, wird als **chirales Zentrum** (Stereozentrum) bezeichnet. Ein solches Molekül lässt sich nicht mit seinem Spiegelbild zur Deckung bringen — genauso wie die rechte Hand nicht deckungsgleich auf die linke gelegt werden kann. Die beiden nicht-superponierbaren Spiegelbildformen heißen **Enantiomere**.
+---
 
-Enantiomere sind in vielerlei Hinsicht identisch: Sie haben gleiche Siedepunkte, Schmelzpunkte, Löslichkeiten und identische chemische Reaktivität in achiraler Umgebung. Doch in zwei entscheidenden Punkten unterscheiden sie sich. Erstens drehen sie die Schwingungsebene von linear polarisiertem Licht um den gleichen Betrag, aber in entgegengesetzte Richtungen — das (+)-Enantiomer nach rechts (dextrogyr), das (−)-Enantiomer nach links (lävogyr). Gemessen wird dies mit dem **Polarimeter** über die spezifische Drehung [α] = α / (c · l). Zweitens — und das ist für die Medizin entscheidend — zeigen sie **verschiedene biologische Wirkung**, weil Enzyme, Rezeptoren und Transportproteine selbst chiral sind und ihre Substrate stereoselektiv erkennen.
+## Konformationsisomere — Rotation ohne Bindungsbruch
 
-Zur Benennung der Konfiguration am chiralen Zentrum dient das **R/S-System** nach CIP: Man ordnet die vier Substituenten nach absteigender Priorität (höhere Ordnungszahl = höhere Priorität), orientiert die niedrigste Priorität (4) vom Betrachter weg und verfolgt den Weg von Gruppe 1 über 2 nach 3. Verläuft dieser im Uhrzeigersinn, lautet die Konfiguration **R** (rectus, „rechts"), entgegen dem Uhrzeigersinn **S** (sinister, „links"). Wichtig: Die R/S-Bezeichnung sagt nichts über die Drehrichtung (+/−) polarisierten Lichts aus — diese muss experimentell bestimmt werden.
+**Konformere** entstehen durch Drehung um C-C-Einfachbindungen und wandeln sich bei Raumtemperatur ständig ineinander um — es werden keine Bindungen gebrochen. Beim Ethan unterscheidet man die energiearme **gestaffelte** Konformation (Substituenten „auf Lücke") von der energiereicheren **ekliptischen** (Substituenten „auf Deckung", sterische Spannung).
 
-In der Biochemie nutzt man zusätzlich das **L-/D-System**: Proteinogene Aminosäuren liegen ausnahmslos in der L-Konfiguration vor, und Glucose im Stoffwechsel in der D-Form.
+Klinisch relevant ist das **Cyclohexan**: Es nimmt die spannungsfreie **Sesselkonformation** ein, mit axialen (senkrechten) und äquatorialen (seitlichen) Positionen. Große Substituenten bevorzugen die äquatoriale Position, weil dort weniger sterische 1,3-diaxiale Wechselwirkungen auftreten.
 
-## Racemisch und meso-Verbindungen
+---
 
-Ein **racemisches Gemisch** (Racemat) enthält beide Enantiomere im Verhältnis 1:1. Da sich die optischen Drehungen gegenseitig aufheben, ist ein Racemat optisch inaktiv. Dies erklärt, warum chemisch synthetisierte chirale Verbindungen oft als Racemate anfallen, während biologische Systeme — dank stereoselektiver Enzyme — in der Regel nur ein Enantiomer produzieren.
+## cis/trans-Isomerie (E/Z-Isomerie) — blockierte Rotation
 
-Eine **meso-Verbindung** besitzt zwar Chiralitätszentren, enthält aber eine innere Spiegelebene, die das Molekül als Ganzes achiral macht. Die meso-Weinsäure hat beispielsweise zwei Stereozentren, ist aber dennoch optisch inaktiv. Ein verwandtes Konzept ist die **Prochiralität**: Ein sp³-C-Atom mit zwei gleichen Substituenten kann durch eine einzige Reaktion chiral werden — relevant für die enzymatische Stereospezifität, etwa beim Citrat im Citratzyklus.
+An C=C-Doppelbindungen ist freie Rotation unmöglich, weil die π-Bindung (seitliche p-Orbital-Überlappung) bei Drehung zerstört würde. Tragen beide doppelgebundenen C-Atome jeweils zwei verschiedene Substituenten, entstehen zwei räumlich verschiedene, nicht ineinander überführbare Anordnungen:
 
-## Diastereomere
+- **cis-Isomer** (Z = zusammen): gleichartige Substituenten auf derselben Seite
+- **trans-Isomer** (E = entgegengesetzt): gleichartige Substituenten auf gegenüberliegenden Seiten
 
-Alle Stereoisomere, die keine Enantiomere sind, nennt man **Diastereomere**. Bei n Chiralitätszentren gibt es maximal 2ⁿ Stereoisomere (Ausnahme: meso-Verbindungen). Im Gegensatz zu Enantiomeren unterscheiden sich Diastereomere in ihren physikalischen Eigenschaften (Schmelzpunkt, Löslichkeit, chromatographisches Verhalten) und lassen sich daher durch konventionelle Trennmethoden separieren. Spezialfälle sind **Epimere**, die sich an genau einem Chiralitätszentrum unterscheiden (D-Glucose vs. D-Galactose sind C4-Epimere, D-Glucose vs. D-Mannose C2-Epimere), und **Anomere**, die sich am anomeren C-Atom der Ringform von Zuckern unterscheiden (α- und β-D-Glucose).
+Beispiel: cis-2-Buten (Sdp. 3,7 °C) vs. trans-2-Buten (Sdp. 0,9 °C) — verschiedene Verbindungen mit verschiedenen Eigenschaften.
 
-## Klinische Relevanz der Chiralität
+Für komplexere Moleküle mit mehr als zwei verschiedenen Substituenten reicht cis/trans nicht aus. Hier verwendet man die **E/Z-Nomenklatur**: Die Substituenten an jedem C der Doppelbindung werden nach den CIP-Prioritätsregeln (siehe unten) geordnet. Stehen die beiden höherprioren Gruppen auf derselben Seite → **Z** (zusammen); auf gegenüberliegenden Seiten → **E** (entgegen).
 
-Die biologische Bedeutung der Chiralität ist enorm, denn Enzyme, Rezeptoren und Transportproteine erkennen Enantiomere unterschiedlich. Das eindrücklichste Beispiel ist **Thalidomid (Contergan)**: Das R-Enantiomer wirkt als Sedativum, das S-Enantiomer ist teratogen und verursacht schwere Gliedmaßenfehlbildungen (Phokomelie). Tragischerweise findet im menschlichen Körper eine spontane Racemisierung statt, sodass auch die Gabe des reinen R-Enantiomers die Teratogenität nicht verhindert.
+> **Merke:** cis/trans-Isomerie tritt nur auf, wenn die Rotation blockiert ist (Doppelbindung oder Ring) UND beide C-Atome jeweils zwei verschiedene Substituenten tragen. E/Z ist die exakte Nomenklatur; cis/trans ist die vereinfachte Bezeichnung für einfache Fälle.
 
-Weitere pharmazeutisch relevante Beispiele zeigen dasselbe Prinzip: Bei **Ibuprofen** ist das S(+)-Enantiomer der aktive Wirkstoff, das R(−)-Enantiomer deutlich schwächer wirksam. Bei der Parkinson-Therapie setzt man ausschließlich **L-Dopa** ein, weil D-Dopa keine Wirkung hat — die DOPA-Decarboxylase ist streng stereoselektiv. In der Pharmazie bezeichnet man das wirksamere Enantiomer als **Eutomer**, das weniger wirksame als **Distomer**. Die moderne Arzneimittelzulassung verlangt die separate Prüfung beider Enantiomere, und zunehmend werden Racemate durch reine Enantiomere ersetzt — etwa Omeprazol durch Esomeprazol (das S-Enantiomer mit stärkerer Wirkung).
+**Häufiger Fehler:** E/Z und cis/trans sind nicht immer identisch! Bei einfachen Molekülen wie 2-Buten stimmen sie überein (cis = Z, trans = E). Sobald aber die CIP-Prioritäten nicht den „gleichartigen" Gruppen entsprechen, kann ein Z-Isomer die trans-Geometrie haben. Im Zweifel gilt immer E/Z.
 
-> **Merke:** Thalidomid: R=Sedativum, S=teratogen; in vivo Racemisierung → Trennung klinisch unwirksam. Chirale Arzneimittel müssen auf jedes Enantiomer separat geprüft werden.
+---
 
-> **Prüfungstipp:** Im MedAT werden Isomerie-Typen gerne als Zuordnung abgefragt. Entscheidungsbaum: Gleiche Summenformel? Ja → Isomere. Gleiche Konnektivität? Nein → Konstitutionsisomere. Ja → Stereoisomere. Spiegelbilder? Ja → Enantiomere. Nein → Diastereomere. Merke auch: R/S sagt nichts über (+)/(−) aus!`,
+## Chiralität — wenn Spiegelbilder nicht deckungsgleich sind
+
+Deine Hände sind der perfekte Einstieg: Linke und rechte Hand haben dieselbe Struktur, sind Spiegelbilder — aber ein linker Handschuh passt nicht auf die rechte Hand. Genau das passiert auf molekularer Ebene, wenn ein Kohlenstoffatom **vier verschiedene Substituenten** trägt.
+
+Ein solches C-Atom heißt **chirales Zentrum** (Stereozentrum, asymmetrisches C-Atom). Das Molekül lässt sich nicht mit seinem Spiegelbild zur Deckung bringen. Die beiden nicht-superponierbaren Spiegelbildformen heißen **Enantiomere**.
+
+> **Merke:** Vier verschiedene Substituenten am C-Atom = chirales Zentrum = zwei Enantiomere. Fehlt diese Bedingung (z. B. zwei gleiche Substituenten), ist das Molekül achiral.
+
+### Eigenschaften von Enantiomeren
+
+Enantiomere sind in fast jeder Hinsicht identisch: gleicher Schmelzpunkt, gleicher Siedepunkt, gleiche Löslichkeit, gleiche Reaktivität in achiraler Umgebung. Sie unterscheiden sich in genau zwei Punkten:
+
+1. **Optische Aktivität**: Sie drehen die Schwingungsebene von linear polarisiertem Licht um den gleichen Betrag, aber in entgegengesetzte Richtungen. Das **(+)-Enantiomer** (dextrogyr, d) dreht nach rechts, das **(−)-Enantiomer** (lävogyr, l) nach links. Gemessen mit dem **Polarimeter**: spezifische Drehung [α] = α / (c · l).
+
+2. **Verschiedene biologische Wirkung**: Enzyme, Rezeptoren und Transportproteine sind selbst chiral. Sie erkennen ihre Substrate stereoselektiv — wie ein Handschuh, der nur auf eine Hand passt. Ein Enantiomer kann therapeutisch wirken, das andere wirkungslos oder sogar toxisch sein.
+
+---
+
+## R/S-Konfiguration — die CIP-Regeln Schritt für Schritt
+
+Um Enantiomere eindeutig zu benennen, verwendet man das **R/S-System** nach Cahn, Ingold und Prelog (CIP):
+
+**Schritt 1 — Prioritäten zuordnen:** Die vier Substituenten am chiralen C werden nach der Ordnungszahl des direkt gebundenen Atoms geordnet. Höhere Ordnungszahl = höhere Priorität. Bei Gleichstand geht man zur nächsten Bindungsebene weiter (erste Unterscheidungsstelle entscheidet). Doppelbindungen werden als zwei Einfachbindungen zum selben Atom gezählt.
+
+**Schritt 2 — Niedrigste Priorität nach hinten:** Das Molekül wird so orientiert, dass die Gruppe mit der niedrigsten Priorität (Nr. 4) vom Betrachter weg zeigt.
+
+**Schritt 3 — Drehsinn ablesen:** Man verfolgt den Weg von Gruppe 1 → 2 → 3.
+- Im Uhrzeigersinn → **R** (rectus, „rechts")
+- Gegen den Uhrzeigersinn → **S** (sinister, „links")
+
+**Konkretes Beispiel — L-Alanin:**
+Am α-C-Atom sitzen: −NH₂ (N, OZ 7), −COOH (C→O, effektiv hohe Priorität durch O), −CH₃ (C→H) und −H (OZ 1).
+Prioritäten: 1. NH₂ (N=7) → 2. COOH (C mit O,O,O) → 3. CH₃ (C mit H,H,H) → 4. H (OZ 1).
+H nach hinten orientieren, Weg 1→2→3 verfolgen → L-Alanin ist **S**-konfiguriert.
+
+> **Merke:** R/S beschreibt die räumliche Konfiguration, (+)/(−) beschreibt die experimentell gemessene Drehrichtung polarisierten Lichts. Beides ist voneinander unabhängig! Ein R-Enantiomer kann (+) oder (−) drehen — das lässt sich nicht vorhersagen.
+
+### L/D-System in der Biochemie
+
+Neben R/S existiert das ältere **L-/D-System** (Fischer-Konvention), das in der Biochemie nach wie vor Standard ist:
+- **Proteinogene Aminosäuren** liegen ausnahmslos in der **L-Konfiguration** vor (D-Aminosäuren findet man in Bakterienzellwänden)
+- **Glucose** im Stoffwechsel liegt in der **D-Form** vor
+
+L/D bezieht sich auf die Stellung der funktionellen Gruppe in der Fischer-Projektion und ist nicht mit R/S oder (+)/(−) gleichzusetzen.
+
+---
+
+## Racemate und meso-Verbindungen
+
+Ein **racemisches Gemisch** (Racemat, gekennzeichnet mit ±) enthält beide Enantiomere im Verhältnis 1:1. Die optischen Drehungen heben sich exakt auf → ein Racemat ist **optisch inaktiv** (Drehwert = 0). Chemische Synthesen liefern oft Racemate, weil ohne chiralen Katalysator beide Enantiomere gleich wahrscheinlich entstehen. Biologische Systeme dagegen produzieren dank stereoselektiver Enzyme in der Regel nur ein Enantiomer.
+
+Eine **meso-Verbindung** besitzt zwar Chiralitätszentren, enthält aber eine **innere Spiegelebene**, die das Molekül insgesamt achiral macht. Beispiel: meso-Weinsäure hat zwei Stereozentren, ist aber optisch inaktiv, weil sich die Drehungen der beiden Zentren intramolekular aufheben.
+
+> **Merke:** Racemat = 1:1-Gemisch zweier Enantiomere, optisch inaktiv (externe Kompensation). Meso-Verbindung = ein Molekül mit Chiralitätszentren, aber innerer Spiegelebene, optisch inaktiv (interne Kompensation).
+
+---
+
+## Diastereomere — Stereoisomere, die keine Spiegelbilder sind
+
+Alle Stereoisomere, die **nicht** im Enantiomerverhältnis stehen, heißen **Diastereomere**. Der entscheidende Unterschied zu Enantiomeren: Diastereomere haben **verschiedene physikalische Eigenschaften** (Schmelzpunkt, Löslichkeit, chromatographisches Verhalten) und lassen sich daher durch konventionelle Methoden trennen.
+
+Bei n Chiralitätszentren gibt es maximal **2ⁿ Stereoisomere** (Ausnahme: meso-Verbindungen reduzieren die Zahl). Beispiel: 2 Chiralitätszentren → maximal 2² = 4 Stereoisomere: (R,R), (S,S), (R,S), (S,R). Dabei sind (R,R)/(S,S) ein Enantiomerpaar und (R,S)/(S,R) ein zweites — aber (R,R) und (R,S) sind Diastereomere zueinander.
+
+Wichtige Spezialfälle:
+- **Epimere**: Diastereomere, die sich an genau einem Chiralitätszentrum unterscheiden. D-Glucose vs. D-Galactose sind C4-Epimere, D-Glucose vs. D-Mannose C2-Epimere.
+- **Anomere**: Epimere am anomeren C-Atom (C1) der Ringform von Zuckern. α-D-Glucose (OH am C1 axial) und β-D-Glucose (OH am C1 äquatorial) sind Anomere — sie wandeln sich in wässriger Lösung über die offenkettige Form ineinander um (**Mutarotation**).
+
+---
+
+## Pharmazeutische Relevanz — warum Chiralität Leben rettet oder zerstört
+
+Enzyme, Rezeptoren und Transporter sind selbst chiral. Sie erkennen Enantiomere so unterschiedlich wie eine rechte Hand einen rechten vs. einen linken Handschuh.
+
+### Thalidomid (Contergan) — das eindrücklichste Beispiel
+
+In den 1950er/60er Jahren als Schlaf- und Beruhigungsmittel vermarktet, enthält Thalidomid ein chirales Zentrum:
+- **R-Enantiomer** → sedierende, schlafanstoßende Wirkung
+- **S-Enantiomer** → **teratogen** (verursacht schwere Gliedmaßenfehlbildungen, Phokomelie)
+
+Das Medikament wurde als Racemat verabreicht. Tragischerweise hätte auch die Gabe des reinen R-Enantiomers nichts genützt: Im menschlichen Körper findet spontane **Racemisierung** statt — das „sichere" R-Enantiomer wandelt sich in vivo teilweise ins toxische S-Enantiomer um. Über 10.000 Kinder wurden geschädigt. Dieser Skandal revolutionierte die Arzneimittelzulassung weltweit.
+
+### Weitere klinische Beispiele
+
+| Wirkstoff | Eutomer (wirksam) | Distomer (schwächer/unwirksam) |
+|---|---|---|
+| **Ibuprofen** | S(+) — analgetisch aktiv | R(−) — schwach, wird in vivo teils zu S umgewandelt |
+| **L-Dopa** | L-Form — Parkinson-Therapie | D-Dopa — wirkungslos (DOPA-Decarboxylase ist stereoselektiv) |
+| **Omeprazol** | S-Enantiomer (Esomeprazol) — stärker | R-Enantiomer — schwächer wirksam |
+
+In der Pharmazie heißt das wirksamere Enantiomer **Eutomer**, das weniger wirksame **Distomer**. Die moderne Arzneimittelzulassung verlangt die separate Prüfung beider Enantiomere. Zunehmend werden Racemate durch reine Enantiomere ersetzt (Chiral Switch).
+
+> **Merke:** Thalidomid: R = Sedativum, S = teratogen. In-vivo-Racemisierung macht die Trennung klinisch unwirksam. Lehre: Jedes Enantiomer muss einzeln auf Wirksamkeit und Toxizität geprüft werden.
+
+---
+
+## Entscheidungsbaum — Isomerie-Typ bestimmen
+
+Dieses Schema ist im MedAT Gold wert:
+
+1. **Gleiche Summenformel?** — Nein → keine Isomere. Ja → weiter.
+2. **Gleiche Konnektivität** (gleiche Bindungspartner)? — Nein → **Konstitutionsisomere**. Ja → weiter.
+3. **Spiegelbilder, nicht superponierbar?** — Ja → **Enantiomere**. Nein → weiter.
+4. → **Diastereomere** (einschließlich cis/trans, Epimere, Anomere).
+
+> **Prüfungstipp:** Im MedAT kommen Isomerie-Zuordnungen häufig vor. Lerne den Entscheidungsbaum auswendig. Typische Fallen: (1) R/S sagt nichts über (+)/(−) — das muss experimentell bestimmt werden. (2) E/Z ist nicht immer identisch mit cis/trans. (3) Meso-Verbindungen haben Chiralitätszentren, sind aber insgesamt achiral. (4) Diastereomere haben verschiedene physikalische Eigenschaften, Enantiomere nicht (außer optische Drehung).`,
       stichworte: [
         "Isomerie",
         "Konstitutionsisomere",
@@ -1057,43 +1164,203 @@ Kondensierte aromatische Ringsysteme — also Aromaten, die zwei oder mehr Ringe
       imageUrl: "/images/bms/ch-aminosaeure.jpg",
       imageCaption:
         "Abb.: Grundstruktur einer Aminosäure mit funktionellen Gruppen (OpenStax, CC BY 4.0)",
-      content: `## Grundstruktur der Aminosäuren
+      content: `## Amine — Stickstoffbasen der organischen Chemie
 
-Aminosäuren sind die molekularen Bausteine, aus denen der Körper sämtliche Proteine zusammensetzt — von Enzymen über Antikörper bis hin zu Strukturproteinen wie Kollagen. Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Grundbauplan am α-Kohlenstoff: eine **α-Aminogruppe** (–NH₂), eine **α-Carboxylgruppe** (–COOH), ein Wasserstoffatom und eine variable **Seitenkette (R-Gruppe)**, die jeder Aminosäure ihre individuellen Eigenschaften verleiht. Glycin ist die einzige Ausnahme ohne Stereozentrum (R = H), alle anderen 19 liegen im menschlichen Körper ausschließlich als L-Enantiomere vor.
+Aminosäuren sind die Bausteine aller Proteine — und damit die molekulare Grundlage des Lebens. Ihre Chemie zu verstehen ist Voraussetzung für Biochemie, Pharmakologie und klinische Medizin. Bevor wir die Aminosäuren selbst betrachten, lohnt ein kurzer Blick auf die funktionelle Gruppe, die ihnen den Namen gibt: die **Aminogruppe (–NH₂)**.
+
+Amine entstehen formal durch schrittweisen Ersatz der Wasserstoffatome im Ammoniak (NH₃) durch organische Reste. Je nach Zahl der Substituenten am Stickstoff unterscheidet man:
+
+- **Primäre Amine** (R–NH₂): ein organischer Rest, z. B. Methylamin (CH₃–NH₂)
+- **Sekundäre Amine** (R₂NH): zwei Reste, z. B. Dimethylamin ((CH₃)₂NH)
+- **Tertiäre Amine** (R₃N): drei Reste, z. B. Trimethylamin ((CH₃)₃N)
+
+Das freie Elektronenpaar am Stickstoff macht alle Amine zu **Basen** — sie können ein Proton aufnehmen: R–NH₂ + H₂O ⇌ R–NH₃⁺ + OH⁻. Aliphatische Amine (pKb ≈ 3–4) sind stärkere Basen als Ammoniak, weil der +I-Effekt der Alkylgruppen die Elektronendichte am N erhöht. Aromatische Amine wie Anilin (C₆H₅–NH₂) sind dagegen schwächere Basen (pKb ≈ 9,4), weil das Elektronenpaar ins aromatische π-System delokalisiert wird. Biogene Amine spielen eine zentrale Rolle als Neurotransmitter: Dopamin, Serotonin, Histamin und Adrenalin sind allesamt Amine.
+
+---
+
+## Grundstruktur der Aminosäuren
+
+Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Bauplan am zentralen **α-Kohlenstoffatom** — vier verschiedene Gruppen sind daran gebunden:
+
+1. Eine **α-Aminogruppe** (–NH₂)
+2. Eine **α-Carboxylgruppe** (–COOH)
+3. Ein **Wasserstoffatom** (–H)
+4. Eine variable **Seitenkette (R-Gruppe)** — sie bestimmt die Identität und Eigenschaften jeder Aminosäure
+
+Da das α-C vier verschiedene Substituenten trägt, ist es ein **Chiralitätszentrum** (Stereozentrum). Alle proteinogenen Aminosäuren liegen im Körper ausschließlich als **L-Enantiomere** vor (die Fischer-Projektion zeigt die NH₂-Gruppe links). Einzige Ausnahme: **Glycin** (R = H) — mit zwei identischen Substituenten am α-C ist es achiral.
 
 {{IMAGE}}
 
-## Klassifikation der Aminosäuren
+> **Merke:** Vier Gruppen am α-C: NH₂, COOH, H, R. Vier verschiedene Reste = Chiralität. Alle proteinogenen AS sind L-konfiguriert. Glycin (R = H) ist die einzige achirale Ausnahme.
 
-Die Seitenkette bestimmt, ob eine Aminosäure hydrophob oder hydrophil, geladen oder ungeladen ist — und damit, wo sie sich in einem gefalteten Protein bevorzugt aufhält. **Unpolare hydrophobe Seitenketten** (Alanin, Valin, Leucin, Isoleucin, Phenylalanin, Tryptophan, Methionin, Prolin) finden sich typischerweise im Proteininneren, abgeschirmt vom Wasser. **Polare ungeladene Seitenketten** (Serin, Threonin, Cystein, Tyrosin, Asparagin, Glutamin) können Wasserstoffbrücken ausbilden. Die **sauren Aminosäuren** Asparaginsäure und Glutaminsäure tragen bei physiologischem pH eine negative Ladung, die **basischen** Lysin, Arginin und Histidin eine positive. Besondere Aufmerksamkeit verdienen die **schwefelhaltigen** Aminosäuren Cystein (–SH, kann Disulfidbrücken bilden) und Methionin (–S–CH₃), sowie die drei **aromatischen** Vertreter Phenylalanin, Tyrosin und Tryptophan, die als Vorläufer von Neurotransmittern dienen.
+---
 
-Von den 20 proteinogenen Aminosäuren sind 8 beim Erwachsenen **essentiell** — der Körper kann sie nicht selbst synthetisieren und ist auf die Zufuhr über die Nahrung angewiesen: Isoleucin, Leucin, Lysin, Methionin, Phenylalanin, Threonin, Tryptophan und Valin. Histidin ist im Kindesalter zusätzlich essentiell.
+## Zwitterion und isoelektrischer Punkt
+
+Bei physiologischem pH (~7,4) liegt eine Aminosäure nicht als ungeladenes Molekül vor, sondern als **Zwitterion** (inneres Salz): Die Aminogruppe ist protoniert (–NH₃⁺), die Carboxylgruppe deprotoniert (–COO⁻). Das Molekül trägt also gleichzeitig eine positive und eine negative Ladung, ist aber nach außen neutral.
+
+Der **isoelektrische Punkt (pI)** ist der pH-Wert, bei dem die Nettoladung einer Aminosäure exakt null beträgt. Am pI wandert die Aminosäure im elektrischen Feld nicht — sie bleibt stehen (Grundlage der **Elektrophorese**).
+
+Für Aminosäuren ohne ionisierbare Seitenkette gilt: **pI = (pKs₁ + pKs₂) / 2** (Mittelwert der pKs-Werte von COOH und NH₃⁺). Für saure AS (Asp, Glu) verschiebt sich der pI nach unten (~2,8–3,2), für basische AS (Lys, Arg, His) nach oben (~7,6–10,8).
+
+> **Merke:** Am isoelektrischen Punkt (pI) hat eine Aminosäure keine Nettoladung und wandert im elektrischen Feld nicht. pI = Mittelwert der beiden relevanten pKs-Werte.
+
+---
+
+## Klassifikation der Seitenketten
+
+Die Seitenkette (R-Gruppe) bestimmt, ob eine Aminosäure hydrophob oder hydrophil, geladen oder ungeladen ist — und damit, wo sie sich im gefalteten Protein bevorzugt aufhält.
+
+**Unpolar / hydrophob** — diese Reste verstecken sich im Proteininneren, weg vom Wasser:
+
+| Aminosäure | Kürzel | Seitenkette |
+|---|---|---|
+| Glycin | Gly (G) | –H (kleinstes, flexibelstes) |
+| Alanin | Ala (A) | –CH₃ |
+| Valin | Val (V) | –CH(CH₃)₂ (verzweigt) |
+| Leucin | Leu (L) | –CH₂CH(CH₃)₂ |
+| Isoleucin | Ile (I) | –CH(CH₃)CH₂CH₃ |
+| Prolin | Pro (P) | zyklische Seitenkette (Iminosäure!) |
+| Phenylalanin | Phe (F) | –CH₂–C₆H₅ (Benzylrest) |
+| Tryptophan | Trp (W) | Indolring (größte AS) |
+| Methionin | Met (M) | –CH₂CH₂–S–CH₃ (schwefelhaltig) |
+
+**Polar / ungeladen** — können Wasserstoffbrücken bilden:
+
+| Aminosäure | Kürzel | Besonderheit |
+|---|---|---|
+| Serin | Ser (S) | –OH (phosphorylierbar!) |
+| Threonin | Thr (T) | –OH (sekundär, phosphorylierbar) |
+| Asparagin | Asn (N) | Amid von Asparaginsäure |
+| Glutamin | Gln (Q) | Amid von Glutaminsäure |
+| Cystein | Cys (C) | –SH → Disulfidbrücken (–S–S–) |
+| Tyrosin | Tyr (Y) | phenolische –OH (phosphorylierbar) |
+
+**Positiv geladen (basisch)** bei pH 7,4:
+
+| Aminosäure | Kürzel | pKs Seitenkette |
+|---|---|---|
+| Lysin | Lys (K) | ~10,5 (ε-Aminogruppe) |
+| Arginin | Arg (R) | ~12,5 (Guanidiniumgruppe) |
+| Histidin | His (H) | ~6,0 (Imidazolring) |
+
+**Negativ geladen (sauer)** bei pH 7,4:
+
+| Aminosäure | Kürzel | pKs Seitenkette |
+|---|---|---|
+| Asparaginsäure | Asp (D) | ~3,9 |
+| Glutaminsäure | Glu (E) | ~4,1 |
+
+> **Merke:** Unpolar im Proteininneren, polar an der Oberfläche. Saure AS (Asp, Glu) tragen bei pH 7,4 eine negative Ladung (–COO⁻), basische AS (Lys, Arg, His) eine positive. Cystein bildet als einzige AS kovalente Disulfidbrücken.
+
+---
+
+## Besondere Aminosäuren — Prolin und Histidin
+
+**Prolin** ist streng genommen eine **Iminosäure**, keine Aminosäure: Seine Seitenkette bildet einen Ring mit dem α-Stickstoff, sodass die Aminogruppe sekundär ist (–NH– statt –NH₂). Diese Ringstruktur schränkt die Rotationsfreiheit des Peptidrückgrats massiv ein und erzwingt einen Knick in der Peptidkette. Deshalb findet sich Prolin häufig in **Schleifen** (Turns) und stört α-Helices — man nennt es den „Helixbrecher".
+
+**Histidin** verdient besondere Aufmerksamkeit: Sein **Imidazolring** hat einen pKs von ~6,0 — das liegt nahe am physiologischen pH von 7,4. Deshalb ist Histidin bei Körper-pH teilweise protoniert, teilweise unprotoniert. Diese Eigenschaft macht Histidin zum einzigen Aminosäurerest, der bei physiologischem pH als **Puffer** und als **Protonenüberträger** in Enzymaktivzentren fungieren kann (z. B. in der katalytischen Triade von Serinproteasen: Ser–His–Asp).
+
+> **Merke:** Prolin = Iminosäure mit Ringstruktur → „Helixbrecher". Histidin (pKs ~6) = einzige AS, die bei pH 7,4 als Puffer und Protonendonor/-akzeptor fungiert.
+
+---
+
+## Essentielle Aminosäuren
+
+Von den 20 proteinogenen Aminosäuren kann der menschliche Körper **8 nicht selbst synthetisieren** — sie müssen über die Nahrung zugeführt werden: **Val, Leu, Ile, Thr, Met, Phe, Trp, Lys**. Histidin ist zusätzlich essentiell im Säuglings- und Kindesalter (schnelles Wachstum).
+
+Merkhilfe für die 8 essentiellen AS: **„Phänomenale Isolde Leuchtete Thronsaal Valiums Methode Lystig Tryptisch"** — oder kürzer nach Anfangsbuchstaben: **Phe, Ile, Leu, Thr, Val, Met, Lys, Trp**.
+
+---
 
 ## Peptidbindung
 
-Die Verknüpfung zweier Aminosäuren erfolgt über die **Peptidbindung**, eine Amidbindung (–CO–NH–), die durch **Kondensationsreaktion** zwischen der Carboxylgruppe der einen und der Aminogruppe der nächsten Aminosäure unter Abspaltung eines Wassermoleküls entsteht. Die resultierende Bindung hat bemerkenswerte Eigenschaften: Durch Mesomerie zwischen der C=O- und der C–N-Bindung besitzt sie **partiellen Doppelbindungscharakter**, ist daher **planar** (die sechs Atome Cα–C–O–N–H–Cα liegen in einer Ebene) und erlaubt **keine freie Rotation** um die C–N-Achse. Die Synthese im Ribosom erfolgt stets in einer Richtung — vom N-Terminus zum C-Terminus.
+Die Verknüpfung zweier Aminosäuren erfolgt über die **Peptidbindung** (eine Amidbindung, –CO–NH–). Sie entsteht durch **Kondensation** (Wasserabspaltung) zwischen der Carboxylgruppe der einen und der Aminogruppe der nächsten Aminosäure.
 
-## Proteinstruktur
+Die Peptidbindung hat drei bemerkenswerte Eigenschaften:
 
-Die räumliche Organisation von Proteinen wird in vier hierarchische Ebenen gegliedert, die aufeinander aufbauen. Die **Primärstruktur** ist die lineare Abfolge der Aminosäuren, festgelegt durch die mRNA-Sequenz. Bereits auf dieser Ebene ist die gesamte Information für die dreidimensionale Faltung enthalten. Die **Sekundärstruktur** beschreibt lokale, regelmäßige Faltungsmuster, die durch Wasserstoffbrücken zwischen den C=O- und N–H-Gruppen des Peptidrückgrats stabilisiert werden: In der **α-Helix** windet sich die Kette schraubenförmig (3,6 Aminosäuren pro Windung, H-Brücke zwischen Aminosäure i und i+4), im **β-Faltblatt** lagern sich gestreckte Peptidketten parallel oder antiparallel nebeneinander.
+1. **Partieller Doppelbindungscharakter** — durch Mesomerie zwischen C=O und C–N ist die Bindungslänge (1,32 Å) kürzer als eine typische C–N-Einfachbindung (1,47 Å)
+2. **Planarität** — die sechs Atome Cα–C(=O)–N(–H)–Cα liegen in einer Ebene
+3. **Keine freie Rotation** um die C–N-Achse; fast immer in **trans-Konfiguration** (Ausnahme: X–Pro-Bindungen können cis sein)
 
-Die **Tertiärstruktur** ergibt sich aus der gesamten dreidimensionalen Faltung einer Polypeptidkette. Hier wirken vielfältige Kräfte der Seitenketten zusammen: **hydrophobe Wechselwirkungen** (unpolare Reste fliehen ins Proteininnere), **ionische Wechselwirkungen** (Salzbrücken zwischen geladenen Seitenketten), **Wasserstoffbrücken** und **kovalente Disulfidbrücken** zwischen zwei Cysteinen. Die **Quartärstruktur** beschreibt schließlich die räumliche Anordnung mehrerer Polypeptidketten (Untereinheiten) zu einem funktionellen Komplex — das bekannteste Beispiel ist **Hämoglobin** mit seinen vier Untereinheiten (α₂β₂).
+Die Synthese am Ribosom verläuft stets vom **N-Terminus zum C-Terminus** (die mRNA wird 5'→3' abgelesen).
 
-## Denaturierung
+> **Merke:** Peptidbindung = Kondensation (–H₂O) zwischen –COOH und –NH₂. Planar durch Mesomerie, partieller Doppelbindungscharakter, trans-Konfiguration. Synthese: N→C.
 
-Wird ein Protein Hitze, extremen pH-Werten, organischen Lösungsmitteln oder Schwermetallionen ausgesetzt, verliert es seine dreidimensionale Struktur — man spricht von **Denaturierung**. Die Primärstruktur (Aminosäuresequenz) bleibt erhalten, aber die Sekundär-, Tertiär- und Quartärstruktur werden zerstört, und damit geht die biologische Funktion verloren. Ein alltägliches Beispiel ist das Kochen eines Eis: Das transparente Eiklar (Albumin) wird irreversibel weiß und fest. In der Medizin nutzt man Denaturierung gezielt zur Sterilisation (Autoklavieren bei 121 °C). Manche Proteine können sich unter geeigneten Bedingungen spontan zurückfalten (**Renaturierung**) — dies zeigte Christian Anfinsen am Beispiel der Ribonuklease und bewies, dass die Aminosäuresequenz allein die dreidimensionale Struktur festlegt.
+---
+
+## Proteinstruktur — vier hierarchische Ebenen
+
+Die räumliche Organisation von Proteinen gliedert sich in vier Ebenen, die aufeinander aufbauen:
+
+**Primärstruktur** — die lineare Aminosäuresequenz, festgelegt durch die mRNA. Sie enthält bereits die gesamte Information für die dreidimensionale Faltung (Anfinsen-Dogma).
+
+**Sekundärstruktur** — lokale, regelmäßige Faltungsmuster, stabilisiert durch **H-Brücken im Peptidrückgrat** (nicht in den Seitenketten!):
+- **α-Helix**: rechtsgängige Schraube, 3,6 AS pro Windung, H-Brücke zwischen C=O(i) und N–H(i+4)
+- **β-Faltblatt**: gestreckte Ketten lagern sich parallel oder antiparallel nebeneinander, H-Brücken zwischen den Strängen
+
+**Tertiärstruktur** — die gesamte 3D-Faltung einer Polypeptidkette, stabilisiert durch Kräfte der **Seitenketten**:
+- Hydrophobe Wechselwirkungen (unpolare Reste im Proteininneren)
+- Ionische Wechselwirkungen / Salzbrücken (z. B. Lys⁺···Glu⁻)
+- Wasserstoffbrücken zwischen polaren Seitenketten
+- **Disulfidbrücken** (Cys–S–S–Cys) — die einzigen kovalenten Bindungen in der Tertiärstruktur (außer Peptidbindungen selbst)
+
+**Quartärstruktur** — Zusammenlagerung mehrerer Polypeptidketten (Untereinheiten) zu einem funktionellen Komplex. Bekanntestes Beispiel: **Hämoglobin** (α₂β₂-Tetramer).
+
+> **Merke:** Primär = Sequenz. Sekundär = H-Brücken im Rückgrat (α-Helix, β-Faltblatt). Tertiär = Seitenketten-WW + Disulfidbrücken. Quartär = Untereinheiten.
+
+---
+
+## Disulfidbrücken und Denaturierung
+
+**Disulfidbrücken** (–S–S–) entstehen durch Oxidation zweier Cystein-SH-Gruppen. Sie stabilisieren die Tertiär- und Quartärstruktur kovalent und sind besonders wichtig in **sekretierten Proteinen** (extrazellulär, z. B. Antikörper, Insulin). **Insulin** besteht aus zwei Peptidketten (A-Kette: 21 AS, B-Kette: 30 AS), die durch zwei Interchain-Disulfidbrücken zusammengehalten werden; die A-Kette hat zusätzlich eine Intrachain-Disulfidbrücke.
+
+**Denaturierung** bezeichnet den Verlust der dreidimensionalen Struktur (Sekundär- bis Quartärstruktur), wobei die **Primärstruktur erhalten bleibt**. Auslöser:
+- **Hitze** (>~60 °C) — zerstört H-Brücken und hydrophobe WW
+- **Extreme pH-Werte** — verändern ionische WW und Protonierungszustände
+- **Detergenzien** (z. B. SDS) — stören hydrophobe WW
+- **Reduktionsmittel** (z. B. β-Mercaptoethanol) — spalten Disulfidbrücken
+- **Schwermetalle** (Hg²⁺, Pb²⁺) — binden an SH-Gruppen
+
+Ein alltägliches Beispiel: Beim Kochen eines Eis wird das transparente Eiklar (Albumin) irreversibel weiß und fest. Manche Proteine renaturieren unter milden Bedingungen spontan — Anfinsen zeigte dies an der Ribonuklease und bewies, dass die Aminosäuresequenz allein die 3D-Struktur festlegt.
+
+---
 
 ## Enzymkinetik — Grundprinzipien
 
-Enzyme sind biologische Katalysatoren, die die Aktivierungsenergie einer Reaktion herabsetzen, ohne selbst verbraucht zu werden. Die einfachste Beschreibung liefert die **Michaelis-Menten-Kinetik**: Das Enzym (E) bildet mit dem Substrat (S) einen Enzym-Substrat-Komplex (ES), der zum Produkt (P) umgesetzt wird. Die Reaktionsgeschwindigkeit v nähert sich mit steigender Substratkonzentration einem Maximalwert **Vmax** — dann sind alle Enzymaktiven Zentren besetzt (Sättigung). Die **Michaelis-Konstante Km** ist die Substratkonzentration, bei der v = Vmax/2 gilt, und dient als Maß für die Affinität des Enzyms zum Substrat: Ein niedriger Km bedeutet hohe Affinität.
+Enzyme sind biologische Katalysatoren: Sie senken die Aktivierungsenergie, ohne selbst verbraucht zu werden. Die **Michaelis-Menten-Kinetik** beschreibt das Grundprinzip: E + S ⇌ ES → E + P.
 
-Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibitoren** konkurrieren mit dem Substrat um das aktive Zentrum (Km steigt, Vmax bleibt gleich). **Nicht-kompetitive Inhibitoren** binden an einer anderen Stelle (Vmax sinkt, Km bleibt gleich). Viele Arzneimittel — von ACE-Hemmern über Statine bis hin zu Proteaseinhibitoren — wirken als Enzyminhibitoren.
+- **Vmax** = maximale Reaktionsgeschwindigkeit (alle Enzymzentren gesättigt)
+- **Km** (Michaelis-Konstante) = Substratkonzentration bei v = Vmax/2. Niedriger Km = hohe Affinität
 
-> **Merke:** Proteine bestehen aus Aminosäuren, verbunden durch planare Peptidbindungen. Vier Strukturebenen (Primär bis Quartär) bestimmen die dreidimensionale Form und damit die Funktion. Denaturierung zerstört die Raumstruktur, nicht die Aminosäuresequenz.
+**Enzymhemmung** — ein zentrales Prinzip der Pharmakologie:
+- **Kompetitiv**: Inhibitor konkurriert mit Substrat um aktives Zentrum → Km steigt, Vmax bleibt gleich (durch Substratüberschuss überwindbar)
+- **Nicht-kompetitiv**: Inhibitor bindet an allosterische Stelle → Vmax sinkt, Km bleibt gleich
 
-> **Prüfungstipp:** MedAT-Klassiker: „Welche Bindung stabilisiert die Sekundärstruktur?" → Wasserstoffbrücken im Peptidrückgrat (nicht Seitenketten!). „Welche Bindung ist kovalent in der Tertiärstruktur?" → Disulfidbrücken (Cys-Cys). Auch die Sichelzellanämie (Glu→Val, Position 6, β-Globin) wird als Paradebeispiel für Primärstruktur-Defekte gefragt.`,
+Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), Proteaseinhibitoren (HIV-Therapie).
+
+---
+
+## Klinischer Bezug
+
+**Phenylketonurie (PKU)**: Autosomal-rezessiver Defekt der Phenylalanin-Hydroxylase → Phe kann nicht zu Tyrosin hydroxyliert werden. Phe akkumuliert und wird zu neurotoxischen Metaboliten abgebaut (Phenylpyruvat, Phenylacetat). Unbehandelt: schwere Intelligenzminderung. Therapie: phenylalaninarme Diät ab Geburt. PKU wird im **Neugeborenenscreening** (Guthrie-Test) erfasst.
+
+**Sichelzellanämie**: Ein einziger Aminosäureaustausch in der Primärstruktur — Glu→Val an Position 6 der β-Globinkette (HbS statt HbA) — verändert die gesamte Proteinfunktion. Die hydrophobe Val-Seitenkette passt in eine komplementäre Tasche des Nachbarmoleküls → Desoxy-HbS polymerisiert → sichelförmige Erythrozyten → Gefäßverschlüsse.
+
+**Biomarker** — intrazelluläre Proteine treten bei Zellschäden ins Blut aus:
+- **Troponin T/I** → Herzinfarkt (Goldstandard, steigt nach 3–6 h)
+- **CK-MB** → frühzeitig bei Myokardschäden
+- **GPT/ALT** → leberparenchymspezifisch (Hepatitis)
+- **LDH** → unspezifisch, aber sensibel
+
+> **Merke:** PKU = Phe-Hydroxylase-Defekt → Phe↑, Tyrosin↓ → Neugeborenenscreening! Sichelzellanämie = Glu6Val in β-Globin → HbS-Polymerisation. Troponin = Goldstandard Herzinfarkt.
+
+> **Prüfungstipp:** MedAT-Klassiker: „Welche Bindung stabilisiert die Sekundärstruktur?" → H-Brücken im Peptidrückgrat (nicht Seitenketten!). „Welche Bindung ist kovalent in der Tertiärstruktur?" → Disulfidbrücken (Cys–Cys). Histidin als Puffer bei pH 7,4 und Prolin als Helixbrecher sind beliebte Fallenoptionen. Essentielle AS werden häufig abgefragt — Merkhilfe nutzen!`,
       stichworte: [
+        "Amine",
         "Aminosäuren",
+        "Zwitterion",
+        "Isoelektrischer Punkt",
         "Proteine",
         "Peptidbindung",
         "Primärstruktur",
@@ -1104,10 +1371,16 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
         "α-Helix",
         "β-Faltblatt",
         "Denaturierung",
+        "Histidin",
+        "Prolin",
         "Troponin",
+        "PKU",
       ],
       lernziele: [
-        "Den Grundaufbau einer Aminosäure (α-C, Amino-, Carboxylgruppe, R-Gruppe) beschreiben und Aminosäuren nach Polarität und Ladung klassifizieren",
+        "Primäre, sekundäre und tertiäre Amine unterscheiden und ihre Basizität erklären",
+        "Den Grundaufbau einer Aminosäure (α-C, Amino-, Carboxylgruppe, R-Gruppe) beschreiben und die Seitenketten nach Polarität und Ladung klassifizieren",
+        "Das Zwitterion-Konzept und den isoelektrischen Punkt (pI) erklären und für die Elektrophorese anwenden",
+        "Die Besonderheiten von Prolin (Iminosäure, Helixbrecher) und Histidin (Puffer bei pH 7,4) erläutern",
         "Die Bildung einer Peptidbindung als Kondensationsreaktion erklären und ihre strukturellen Besonderheiten (planar, partieller Doppelbindungscharakter) nennen",
         "Die vier Ebenen der Proteinstruktur und die jeweiligen stabilisierenden Wechselwirkungen beschreiben",
         "Denaturierung erklären und Beispiele für reversible und irreversible Denaturierung nennen",
@@ -1134,15 +1407,20 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
       ],
 
       merksätze: [
+        "Amine: primär (R–NH₂), sekundär (R₂NH), tertiär (R₃N) — alle basisch dank freiem Elektronenpaar am N.",
         "Alle proteinogenen Aminosäuren (außer Glycin) sind L-konfiguriert und tragen am α-C: –NH₂, –COOH, –H, –R.",
+        "Bei pH 7,4 liegen Aminosäuren als Zwitterionen vor: –NH₃⁺ und –COO⁻ gleichzeitig.",
+        "Isoelektrischer Punkt (pI): pH, bei dem Nettoladung = 0 → keine Wanderung im E-Feld.",
+        "Prolin = Iminosäure (sekundäres Amin im Ring) → Helixbrecher. Histidin (pKs ~6) → Puffer bei pH 7,4.",
         "Essentielle AS (8 Erwachsene): Ile, Leu, Lys, Met, Phe, Thr, Trp, Val — Histidin zusätzlich für Kinder.",
-        "Peptidbindung = Amidbindung; entsteht durch Kondensation (–H₂O); ist planar wegen Mesomerie.",
+        "Peptidbindung = Amidbindung; entsteht durch Kondensation (–H₂O); planar, partieller Doppelbindungscharakter, trans.",
         "Synthese am Ribosom: N-Terminus → C-Terminus (5'→3' auf mRNA kodiert).",
-        "Sekundärstruktur α-Helix: H-Brücken zwischen C=O(n) und N–H(n+4), rechtsgängig.",
+        "Sekundärstruktur α-Helix: H-Brücken zwischen C=O(n) und N–H(n+4), rechtsgängig, 3,6 AS/Windung.",
         "Disulfidbrücken (Cys–Cys) sind die einzigen kovalenten Bindungen in der Tertiär-/Quartärstruktur (außer Peptidbindungen).",
+        "Insulin: 2 Ketten (A: 21 AS, B: 30 AS) über 2 Interchain- + 1 Intrachain-Disulfidbrücke verknüpft.",
         "Denaturierung zerstört Sekundär- bis Quartärstruktur, nicht die Primärstruktur.",
         "Sichelzellanämie: Glu6Val in β-Globin → Hämoglobin-S aggregiert bei Desoxigenierung.",
-        "PKU: Phenylalanin-Hydroxylase-Defekt → Phe akkumuliert, Tyrosin wird nicht gebildet.",
+        "PKU: Phenylalanin-Hydroxylase-Defekt → Phe akkumuliert, Tyrosin fehlt → Neugeborenenscreening.",
         "Biomarker: Troponin = Herzinfarkt; GPT/ALT = Leberschaden; LDH = unspezifisch.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
@@ -1269,22 +1547,42 @@ Enzymhemmung ist ein zentrales pharmakologisches Prinzip: **Kompetitive Inhibito
         },
         {
           question:
-            "Ein 45-jähriger Patient kommt mit typischen Brustschmerzen in die Notaufnahme. Welcher der folgenden Labormarker ist am spezifischsten für einen akuten Myokardinfarkt und steigt frühzeitig an?",
+            "Welche Aussage zum Zwitterion und isoelektrischen Punkt (pI) von Aminosäuren ist korrekt?",
           options: [
-            "Troponin T oder Troponin I",
-            "GPT/ALT (Alaninaminotransferase)",
-            "Amylase",
-            "LDH (Laktatdehydrogenase)",
-            "Gesamtprotein im Serum",
+            "Am pI liegt die Aminosäure vollständig ungeladen vor (weder NH₃⁺ noch COO⁻)",
+            "Am pI wandert die Aminosäure im elektrischen Feld zur Kathode",
+            "Am pI trägt die Aminosäure gleichzeitig positive und negative Ladung, aber die Nettoladung ist null",
+            "Der pI aller 20 Aminosäuren liegt einheitlich bei pH 7,0",
+            "Am pI ist die Aminosäure maximal löslich in Wasser",
           ],
-          correctIndex: 0,
+          correctIndex: 2,
           explanation:
-            "Troponin T und Troponin I sind kardiale Proteine des kontraktilen Apparats der Herzmuskelzellen und sind bei gesunden Personen im Blut kaum nachweisbar. Bei Myokardnekrose werden sie frühzeitig (3–6 h nach Ereignis) freigesetzt und sind für mehrere Tage erhöht. Sie gelten heute als Goldstandard für die Infarktdiagnostik (hohe Sensitivität und Spezifität). LDH ist wenig spezifisch (kommt in vielen Geweben vor). GPT/ALT ist ein Leberwert (hepatozellulärer Schaden). Amylase weist auf Pankreatitis hin.",
+            "Am isoelektrischen Punkt (pI) liegt eine Aminosäure als Zwitterion vor: Die Aminogruppe ist protoniert (–NH₃⁺) und die Carboxylgruppe deprotoniert (–COO⁻). Die Nettoladung ist null, aber das Molekül trägt durchaus Ladungen — daher ist es nicht ‚ungeladen'. Am pI wandert die AS im elektrischen Feld nicht (Nettoladung = 0). Der pI variiert je nach Seitenkette: neutrale AS ~5,5–6,3, saure AS (Asp, Glu) ~2,8–3,2, basische AS (Lys, Arg, His) ~7,6–10,8. Am pI ist die Löslichkeit sogar minimal (geringste elektrostatische Abstoßung).",
           hints: [
-            "Welches Protein ist ausschließlich im Herzmuskel in dieser Form vorhanden?",
-            "Der gesuchte Marker ist seit den 1990ern der Standard für Herzinfarktdiagnostik und hat CK-MB weitgehend ersetzt.",
+            "Ein Zwitterion trägt gleichzeitig + und − Ladung — ist es dann wirklich ‚ungeladen'?",
+            "Was passiert mit einem Teilchen ohne Nettoladung im elektrischen Feld?",
           ],
-          tags: ["biomarker", "troponin", "herzinfarkt", "klinisch"],
+          tags: ["zwitterion", "isoelektrischer-punkt", "elektrophorese"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Welche Besonderheit unterscheidet Histidin von allen anderen proteinogenen Aminosäuren?",
+          options: [
+            "Histidin ist die einzige Aminosäure mit einer Thiolgruppe (–SH) in der Seitenkette",
+            "Histidin kann bei physiologischem pH (~7,4) als Protonendonor und -akzeptor fungieren, weil sein pKs nahe 6 liegt",
+            "Histidin ist die einzige achirale proteinogene Aminosäure",
+            "Histidin bildet als einzige Aminosäure eine zyklische Seitenkette mit dem Rückgrat-Stickstoff",
+            "Histidin ist die einzige Aminosäure, die nicht in Peptidbindungen eingebaut werden kann",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Imidazolring des Histidins hat einen pKs von ~6,0. Da der physiologische pH (7,4) relativ nahe am pKs liegt, existiert Histidin bei Körper-pH in einem Gleichgewicht zwischen protonierter und unprotonierter Form. Damit ist es die einzige proteinogene Aminosäure, die bei physiologischem pH effektiv als Puffer und als Protonenüberträger in Enzymaktivzentren wirken kann (z. B. katalytische Triade der Serinproteasen). Die Thiolgruppe gehört zu Cystein (nicht Histidin). Achiral ist nur Glycin. Die zyklische Seitenkette mit dem Rückgrat-N beschreibt Prolin.",
+          hints: [
+            "Welcher pKs-Wert muss in der Nähe des physiologischen pH liegen, damit eine Gruppe als Puffer wirkt?",
+            "Henderson-Hasselbalch: maximale Pufferkapazität bei pH = pKs ± 1.",
+          ],
+          tags: ["histidin", "puffer", "enzymkatalyse", "imidazol"],
           difficulty: 2,
         },
       ],
@@ -1552,9 +1850,13 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
       stichworte: [
         "Fettsäuren",
         "Triglyceride",
+        "Verseifung",
         "Phospholipide",
+        "Sphingolipide",
         "Cholesterin",
         "Steroide",
+        "Eicosanoide",
+        "Prostaglandine",
         "β-Oxidation",
         "Lipoproteine",
         "Statine",
@@ -1562,126 +1864,344 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         "Membranbildung",
         "Essentielle Fettsäuren",
         "Trans-Fettsäuren",
+        "Dyslipidemien",
       ],
-      content: `## Fettsäuren
+      content: `## Was Lipide eigentlich sind
 
-Lipide bilden eine chemisch heterogene Gruppe von Biomolekülen, die eines gemeinsam haben: Sie sind in Wasser schlecht, in organischen Lösungsmitteln gut löslich. Ihre biologischen Funktionen reichen von der Energiespeicherung über den Membranaufbau bis zur Signalübertragung.
+Fette machen krank, Cholesterin verstopft Arterien, Butter ist Gift — so klingt es in Schlagzeilen. Die biochemische Realität ist komplexer und faszinierender: Lipide bilden Zellmembranen, speichern Energie effizienter als jeder andere Makronährstoff, isolieren Nervenfasern, tragen Signale zwischen Zellen und sind Ausgangsstoff für Hormone. Ohne Lipide gäbe es kein Cortisol, kein Testosteron, kein Vitamin D. Wer Lipidchemie versteht, versteht Ernährung, Atherosklerose und Pharmakologie.
 
-Das Fundament der Lipidchemie bilden die **Fettsäuren** — unverzweigte Carbonsäuren mit typischerweise 12–24 Kohlenstoffatomen, fast immer in gerader Anzahl (weil die Biosynthese jeweils 2 C-Atome als Acetyl-CoA anfügt). Nach ihrem Sättigungsgrad unterscheidet man drei Gruppen: **Gesättigte Fettsäuren** enthalten keine Doppelbindungen. Ihre gestreckten Ketten können sich dicht aneinanderlagern, was starke van-der-Waals-Kräfte und damit hohe Schmelzpunkte zur Folge hat — gesättigte Fette sind bei Raumtemperatur fest. Die wichtigsten Vertreter sind Palmitinsäure (C16:0, häufigste gesättigte FS) und Stearinsäure (C18:0). **Einfach ungesättigte Fettsäuren** (MUFA) enthalten eine C=C-Doppelbindung — allen voran Ölsäure (C18:1Δ9, cis), die Hauptfettsäure in Olivenöl. Die cis-Konfiguration erzeugt einen Knick von etwa 30° in der Kette, der die dichte Packung stört und den Schmelzpunkt senkt — ungesättigte Fette sind bei Raumtemperatur flüssig (Öle). **Mehrfach ungesättigte Fettsäuren** (PUFA) besitzen mindestens zwei Doppelbindungen. Unter ihnen befinden sich die beiden **essentiellen Fettsäuren**, die der Mensch nicht selbst synthetisieren kann: Linolsäure (C18:2, ω-6) und α-Linolensäure (C18:3, ω-3). Aus Linolsäure wird Arachidonsäure (C20:4, ω-6) gebildet, der Vorläufer der **Eicosanoide** — Prostaglandine, Thromboxane und Leukotriene, die als lokale Entzündungs- und Schmerzmediatoren wirken.
+Chemisch sind Lipide **keine einheitliche Stoffklasse** wie Kohlenhydrate oder Proteine. Was sie verbindet, ist eine physikalische Eigenschaft: Sie lösen sich gut in organischen Lösungsmitteln (Chloroform, Ether, Benzol), aber schlecht in Wasser. Diese Hydrophobie entsteht durch ihre langen Kohlenwasserstoffketten oder kondensierten Ringsysteme mit wenigen polaren Gruppen.
 
-Die **ω-Nomenklatur** zählt die Position der ersten Doppelbindung vom Methylende (ω-Ende): ω-3 bedeutet Doppelbindung am C3 vom Ende, ω-6 am C6. Die Δ-Nomenklatur zählt dagegen vom Carboxylende (Δ9 = Doppelbindung zwischen C9 und C10).
+---
 
-Natürlich vorkommende ungesättigte Fettsäuren liegen fast ausschließlich in **cis-Konfiguration** vor. **Trans-Fettsäuren** entstehen durch industrielle Fetthärtung (partielle Hydrierung) und haben gestreckte Ketten ähnlich wie gesättigte Fettsäuren — sie erhöhen das LDL-Cholesterin, senken das HDL und wirken **atherogen**. Die EU begrenzt den Trans-Fettsäure-Gehalt in Lebensmitteln auf maximal 2 %.
+## Fettsäuren — Bausteine der Lipide
 
-Der Grund für die hohe **Energiedichte** der Lipide (38 kJ/g bzw. 9 kcal/g gegenüber 17 kJ/g bzw. 4 kcal/g bei Kohlenhydraten und Proteinen) liegt in ihrem stark reduzierten Zustand: Fettsäuren enthalten sehr viel Wasserstoff und wenig Sauerstoff, während Kohlenhydrate formal CH₂O-Einheiten darstellen und somit bereits „partiell oxidiert" sind. Zudem bindet Fettgewebe kaum Wasser, wohingegen Glykogen etwa 2 g Wasser pro Gramm speichert.
+Das Fundament der Lipidchemie bilden **Fettsäuren** (FA): unverzweigte Monocarbonsäuren mit typischerweise 12–24 C-Atomen, fast immer in gerader Anzahl (die Biosynthese fügt jeweils 2-C-Einheiten als Acetyl-CoA an). Die Carboxylgruppe (–COOH) am einen Ende ist polar, die lange Kohlenwasserstoffkette am anderen Ende ist unpolar.
 
-{{IMAGE}}
+### Gesättigte Fettsäuren
 
-## Triglyceride (Triacylglycerine)
+Keine C=C-Doppelbindungen. Die gestreckten Ketten lagern sich dicht aneinander → starke Van-der-Waals-Kräfte → **hoher Schmelzpunkt** → bei Raumtemperatur **fest** (Butter, Palmfett, Talg).
 
-**Triglyceride** (TAG) entstehen, wenn alle drei Hydroxylgruppen des Glycerins mit Fettsäuren verestert werden — drei Esterbindungen, drei Wassermoleküle als Nebenprodukt. Als vollständig hydrophobe Moleküle ohne polare Kopfgruppe bilden sie den wichtigsten Energiespeicher des Körpers. Ein 70 kg schwerer Mensch speichert in seinen Fettzellen (Adipozyten) durchschnittlich 15 kg Fett, was einer Energiereserve von etwa 570.000 kJ entspricht — genug für rund 40 Fastentage.
+| Fettsäure | Kurzschreibweise | Vorkommen |
+|---|---|---|
+| Laurinsäure | C12:0 | Kokosfett |
+| Myristinsäure | C14:0 | Muskatnuss, Milchfett |
+| Palmitinsäure | C16:0 | Häufigste gesättigte FS überhaupt |
+| Stearinsäure | C18:0 | Tierische Fette, Kakaobutter |
 
-Die Mobilisierung dieser Reserven — die **Lipolyse** — wird hormonell reguliert: Adrenalin und Glucagon aktivieren über cAMP die hormonsensitive Lipase (HSL), die TAG in Glycerin und drei freie Fettsäuren spaltet; Insulin hemmt diesen Prozess. Die freigesetzten Fettsäuren werden im Blut an Albumin gebunden transportiert und in den Mitochondrien durch **β-Oxidation** schrittweise um je 2 C-Atome verkürzt. Jeder Zyklus liefert ein Acetyl-CoA, ein FADH₂ und ein NADH. Palmitinsäure (C16) ergibt nach vollständiger β-Oxidation 8 Acetyl-CoA, die im Citratzyklus und der Atmungskette insgesamt etwa 106 ATP netto liefern.
+### Einfach ungesättigte Fettsäuren (MUFA)
 
-## Phospholipide
+Eine C=C-Doppelbindung, fast immer in **cis-Konfiguration**. Der cis-Knick (ca. 30°) stört die dichte Packung → schwächere Van-der-Waals-Kräfte → **niedriger Schmelzpunkt** → bei Raumtemperatur **flüssig** (Öle).
 
-Im Unterschied zu Triglyceriden tragen **Phospholipide** an der dritten Position des Glycerins keine Fettsäure, sondern eine **Phosphatgruppe mit einem polaren Kopf**. Bei den **Glycerophospholipiden** sitzt an sn-1 meist eine gesättigte, an sn-2 meist eine ungesättigte Fettsäure (häufig Arachidonsäure), und an sn-3 die Phosphatgruppe mit einem variablen Alkohol-Rest.
+Wichtigster Vertreter: **Ölsäure** (C18:1Δ9, cis) — Hauptfettsäure in Olivenöl.
+
+### Mehrfach ungesättigte Fettsäuren (PUFA)
+
+Mindestens zwei C=C-Doppelbindungen. Unter ihnen die beiden **essentiellen Fettsäuren**, die der Mensch nicht synthetisieren kann:
+- **Linolsäure** (C18:2, ω-6) → Vorläufer der Arachidonsäure (C20:4, ω-6)
+- **α-Linolensäure** (C18:3, ω-3) → Vorläufer von EPA (C20:5) und DHA (C22:6)
+
+> **Merke:** Essentiell = Linolsäure (ω-6) + α-Linolensäure (ω-3). Beides PUFA, beides muss über die Nahrung zugeführt werden. EPA und DHA (Fischöl) sind daraus ableitbar, aber die Konversionsrate ist gering.
+
+### Nomenklatur: ω vs. Δ
+
+Zwei Zählweisen existieren nebeneinander:
+- **Δ-Nomenklatur**: Zählt vom Carboxylende (–COOH). Δ9 = Doppelbindung zwischen C9 und C10.
+- **ω-Nomenklatur**: Zählt vom Methylende (–CH₃). ω-3 = erste Doppelbindung am C3 vom Ende.
+
+Der Körper kann Doppelbindungen nur bis Δ9 einfügen (Δ9-Desaturase). Doppelbindungen jenseits von Δ9 (also ω-6 und ω-3 bei langen Ketten) sind deshalb essentiell — sie müssen aus der Nahrung kommen.
+
+### Trans-Fettsäuren — die industrielle Falle
+
+Natürliche ungesättigte FS liegen fast immer **cis** vor. **Trans-Fettsäuren** entstehen bei industrieller **Fetthärtung** (partielle Hydrierung): Dabei wird die cis-Doppelbindung in die trans-Konfiguration umgelagert. Trans-FS haben eine gestreckte Kette wie gesättigte FS → hoher Schmelzpunkt, gute Streichfähigkeit (Margarine). Gesundheitlich sind sie problematisch: Sie erhöhen LDL, senken HDL und wirken **atherogen**. Die EU begrenzt den Gehalt auf maximal 2 % der Gesamtfette.
+
+> **Merke:** cis-Doppelbindung → Knick → flüssig (Öl). trans-Doppelbindung → gestreckt wie gesättigt → fest → atherogen.
+
+### Warum Fett so viel Energie liefert
+
+Lipide liefern **38 kJ/g (9 kcal/g)** — mehr als doppelt so viel wie Kohlenhydrate oder Proteine (je 17 kJ/g, 4 kcal/g). Der Grund: Fettsäuren sind stark **reduziert** (viel H, wenig O), während Kohlenhydrate als formale CH₂O-Einheiten bereits „partiell oxidiert" sind. Bei vollständiger Oxidation geben Fettsäuren deshalb mehr Elektronen an die Atmungskette ab. Zusätzlich bindet Fettgewebe kaum Wasser (Glykogen bindet ca. 2 g H₂O/g), was die effektive Energiedichte noch weiter steigert.
+
+{{DIAGRAM:lipid-structure}}
+
+---
+
+## Triacylglyceride (TAG) — der Energiespeicher
+
+**Triglyceride** entstehen durch Veresterung: Alle drei –OH-Gruppen des Glycerins werden mit je einer Fettsäure über eine **Esterbindung** verknüpft (3× Kondensation, 3× H₂O als Nebenprodukt). Ergebnis: ein vollständig hydrophobes Molekül ohne polare Kopfgruppe — ideal zur wasserfreien Energiespeicherung.
+
+Ein 70-kg-Mensch speichert in seinen Adipozyten (Fettzellen) durchschnittlich 15 kg Fett ≈ 570.000 kJ — Energie für rund 40 Fastentage. Zum Vergleich: Die gesamte Glykogenreserve (ca. 400 g) reicht für weniger als einen Tag intensiver Aktivität.
+
+### Fette vs. Öle — eine Frage der Fettsäuren
+
+Ob ein TAG bei Raumtemperatur fest (Fett) oder flüssig (Öl) ist, hängt von seinen Fettsäuren ab:
+- **Überwiegend gesättigte FS** → dichte Packung → fest (Butter, Schmalz, Kokosfett)
+- **Überwiegend ungesättigte FS (cis)** → Knicke → lockere Packung → flüssig (Olivenöl, Sonnenblumenöl)
+
+### Verseifung — die alkalische Hydrolyse
+
+TAG reagieren mit starker Base (NaOH oder KOH) zu **Glycerin + 3 Seifen** (Natriumsalze der Fettsäuren):
+
+TAG + 3 NaOH → Glycerin + 3 R–COO⁻Na⁺ (Seife)
+
+Seifen sind amphipathisch: Die lange unpolare Kohlenwasserstoffkette dringt in Fettflecken ein, das geladene Carboxylat-Ende (–COO⁻) interagiert mit Wasser → Mizellenbildung → Fett wird emulgiert und abwaschbar. Die **Verseifungszahl** gibt an, wie viel mg KOH nötig sind, um 1 g Fett vollständig zu verseifen — ein Maß für die mittlere Kettenlänge der Fettsäuren.
+
+> **Merke:** Verseifung = Fett + Lauge → Glycerin + Seife. Die entstehenden Fettsäure-Salze (Seifen) sind amphipathisch und können Fette emulgieren.
+
+### Lipolyse und β-Oxidation
+
+Die Mobilisierung der Fettreserven — **Lipolyse** — wird hormonell gesteuert: Adrenalin und Glucagon aktivieren über cAMP die **hormonsensitive Lipase (HSL)**, die TAG in Glycerin + 3 freie Fettsäuren spaltet. **Insulin hemmt** die HSL → Insulin = anaboles Signal, Lipolyse = kataboles Signal.
+
+Freie Fettsäuren gelangen an **Albumin** gebunden ins Blut und werden in den Mitochondrien durch **β-Oxidation** abgebaut: In jedem Zyklus werden 2 C-Atome als Acetyl-CoA abgespalten, dazu je 1 FADH₂ und 1 NADH.
+
+**Rechenbeispiel Palmitinsäure (C16:0):**
+- 7 Zyklen β-Oxidation → **8 Acetyl-CoA** + 7 FADH₂ + 7 NADH
+- 8 Acetyl-CoA im Citratzyklus → 8× (3 NADH + 1 FADH₂ + 1 GTP)
+- Gesamtertrag Atmungskette: **ca. 106 ATP netto** (nach Abzug der 2 ATP für Aktivierung zu Palmitoyl-CoA)
+
+Zum Vergleich: 1 Mol Glucose liefert über Glykolyse + Citratzyklus nur ca. 30–32 ATP.
+
+---
+
+## Phospholipide — Architekten der Zellmembran
+
+Im Unterschied zu TAG tragen **Phospholipide** an der dritten Position (sn-3) des Glycerins keine Fettsäure, sondern eine **Phosphatgruppe mit einem polaren Kopf** (Alkohol-Rest). An sn-1 sitzt meist eine gesättigte FS, an sn-2 oft eine ungesättigte (häufig Arachidonsäure — das wird bei den Eicosanoiden wichtig).
 
 | Phospholipid | Polarer Rest | Funktion |
 |---|---|---|
-| Phosphatidylcholin (Lecithin) | Cholin | Häufigstes Membranphospholipid, Lungensurfactant |
-| Phosphatidylserin | Serin | Innere Membranseite; Apoptosesignal bei Exposition auf Außenseite |
-| Phosphatidylethanolamin | Ethanolamin | Zweithäufigstes PL, v.a. innere Membranseite |
-| Phosphatidylinositol (PI) | Inositol | Signaltransduktion: PIP₂ → IP₃ + DAG (Second Messenger) |
+| Phosphatidylcholin (Lecithin) | Cholin | Häufigstes Membran-PL, Lungensurfactant |
+| Phosphatidylserin | Serin | Innenseite der Membran; bei Apoptose nach außen → „Eat me"-Signal |
+| Phosphatidylethanolamin | Ethanolamin | Zweithäufigstes PL, v. a. innere Membranseite |
+| Phosphatidylinositol (PI) | Inositol | Signaltransduktion: PIP₂ → IP₃ + DAG |
 
-Die zweite große Lipidklasse der Membranen sind die **Sphingolipide**, die auf dem Aminoalkohol Sphingosin basieren: Ceramid (Sphingosin + Fettsäure), Sphingomyelin (Ceramid + Phosphocholin, Myelinscheiden) und Glykolipide (Cerebroside, Ganglioside — tragen Zuckerreste und sind für Zell-Zell-Erkennung und Blutgruppenantigene wichtig).
+### Amphipathie → Bilayer → Membran
 
-Der **amphipathische Charakter** der Phospholipide — ein polarer Phosphatkopf (hydrophil) kombiniert mit zwei unpolaren Fettsäureschwänzen (hydrophob) — ist die physikalische Grundlage aller biologischen Membranen. In wässrigem Milieu organisieren sich Phospholipide spontan zu einer **Lipiddoppelschicht (Bilayer)**: Die polaren Köpfe weisen zum Wasser, die unpolaren Schwänze zeigen nach innen. Diese Selbstorganisation wird durch den hydrophoben Effekt angetrieben. Das Enzym **Phospholipase A₂** spaltet die Fettsäure an sn-2 (oft Arachidonsäure) ab und leitet damit die Eicosanoid-Synthese ein — COX-Enzyme bilden Prostaglandine und Thromboxane, LOX-Enzyme Leukotriene. NSAIDs wie Ibuprofen und Aspirin hemmen die COX.
+Der entscheidende Punkt: Phospholipide sind **amphipathisch** — polarer Kopf (hydrophil) + zwei unpolare Schwänze (hydrophob). In wässrigem Milieu organisieren sie sich **spontan** zu einer **Lipiddoppelschicht (Bilayer)**: Köpfe zeigen zum Wasser, Schwänze nach innen. Diese Selbstorganisation wird durch den **hydrophoben Effekt** angetrieben — das Wasser maximiert seine Entropie, indem es unpolare Bereiche ausschließt. Der Bilayer ist die Grundstruktur **aller** biologischen Membranen.
 
-## Steroide
+Warum bilden Phospholipide einen Bilayer und keine Mizellen? Phospholipide haben **zwei** Schwänze (zylindrische Geometrie) → Bilayer. Detergenzien/Seifen haben **einen** Schwanz (Kegelform) → Mizellen.
 
-Alle Steroide teilen das **Sterangerüst** (Cyclopentanoperhydrophenanthren) — drei kondensierte Sechsringe (A, B, C) und ein Fünfring (D). Der Ausgangsstoff aller Steroide ist **Cholesterin** (27 C-Atome, 3β-OH-Gruppe, Δ5-Doppelbindung), das in der Leber über den Mevalonat-Weg aus Acetyl-CoA synthetisiert wird. Das Schlüsselenzym ist die **HMG-CoA-Reduktase** — Zielstruktur der Statine. Cholesterin dient nicht nur als Membranbestandteil (reguliert die Fluidität), sondern ist Ausgangsstoff für **Gallensäuren** (Cholsäure, Chenodesoxycholsäure — Emulgatoren für Nahrungsfette im Darm mit enterohepatischem Kreislauf), sämtliche **Steroidhormone** (Glucocorticoide, Mineralocorticoide, Androgene, Östrogene, Gestagene — alle lipophil, wirken über intrazelluläre Kernrezeptoren) und **Vitamin D₃** (Cholecalciferol → 25-OH-D₃ in der Leber → 1,25-(OH)₂-D₃ = Calcitriol in der Niere → Calcium/Phosphat-Homöostase).
+> **Merke:** Phospholipid = 2 Schwänze → Bilayer (Membran). Seife/Detergens = 1 Schwanz → Mizelle. Triglycerid = 3 Schwänze, kein polarer Kopf → Fetttröpfchen (kein Bilayer).
 
-Im Blut werden Lipide als **Lipoproteine** transportiert — Partikel mit einem hydrophoben Kern (TAG, Cholesterinester) und einer amphipathischen Hülle (Phospholipid-Monolayer, Apolipoproteine). Die wichtigsten Klassen sind **Chylomikronen** (exogene Lipide vom Darm), **VLDL** (endogene Lipide von der Leber), **LDL** („schlechtes" Cholesterin, transportiert Cholesterin zu peripheren Geweben, atherogen bei Exzess) und **HDL** („gutes" Cholesterin, reverser Cholesterintransport zurück zur Leber).
+---
 
-## Klinischer Bezug
+## Sphingolipide — das andere Membranlipid
 
-Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko erheblich. LDL dringt in die Intimaschicht der Arterien ein, wird dort oxidiert und von Makrophagen über Scavenger-Rezeptoren aufgenommen — es entstehen **Schaumzellen**, die den Anfang eines atherosklerotischen Plaques markieren. Plaque-Ruptur führt zur Thrombose und damit zum Myokardinfarkt oder Schlaganfall. **Statine** hemmen die HMG-CoA-Reduktase, reduzieren die endogene Cholesterinsynthese und bewirken eine kompensatorische Hochregulation der LDL-Rezeptoren in Hepatozyten, was das Blut-LDL um 30–50 % senkt.
+Sphingolipide basieren nicht auf Glycerin, sondern auf dem Aminoalkohol **Sphingosin** (18 C-Atome, trans-Doppelbindung, Amino- und Hydroxylgruppe):
 
-**Omega-3-Fettsäuren** (EPA, DHA aus Fischöl) wirken antiinflammatorisch, senken Triglyceride und werden bei Hypertriglyceridämie empfohlen. **Ketonkörper** (Acetoacetat, β-Hydroxybutyrat, Aceton) entstehen in den Lebermitochondrien aus überschüssigem Acetyl-CoA, wenn die β-Oxidation die Kapazität des Citratzyklus übersteigt — typischerweise bei Fasten oder unkontrolliertem Typ-1-Diabetes. Bei massiver Ketonkörperproduktion droht die **diabetische Ketoazidose** (pH < 7,3, Acetongeruch, Kußmaul-Atmung). **Morbus Gaucher**, die häufigste Sphingolipidose, entsteht durch Mangel an Glucocerebrosidase und führt zu Hepatosplenomegalie und Knochenbefall — eine Enzymersatztherapie ist verfügbar.
+- **Ceramid** = Sphingosin + 1 Fettsäure (über Amidbindung) → Grundbaustein aller Sphingolipide
+- **Sphingomyelin** = Ceramid + Phosphocholin → häufigstes Sphingolipid, essenziell für **Myelinscheiden** (Nervenisolation)
+- **Glykolipide** = Ceramid + Zuckerreste:
+  - Cerebroside (1 Zucker) — Gehirn, Nervensystem
+  - Ganglioside (Oligosaccharid mit Sialinsäure) — Zell-Zell-Erkennung, Blutgruppenantigene
 
-> **Merke:** Statine hemmen HMG-CoA-Reduktase → LDL-Rezeptor-Hochregulation → LDL↓ 30–50%. LDL atherogen, HDL protektiv. Ketoazidose (Typ-1-Diabetes): Acetongeruch, pH <7,3, Kußmaul-Atmung.
+Klinisch relevant: **Sphingolipidosen** — lysosomale Speicherkrankheiten durch Enzymmangel. Morbus Gaucher (häufigste): Glucocerebrosidase-Mangel → Glucocerebrosid-Akkumulation → Hepatosplenomegalie. Morbus Tay-Sachs: Hexosaminidase-A-Mangel → Gangliosid-Akkumulation im ZNS → letaler Verlauf im Kindesalter.
 
-> **Prüfungstipp:** Im MedAT kommen Lipide in mehreren Varianten vor: (1) Energiedichte — Fette liefern 38 kJ/g, doppelt so viel wie KH/Proteine (17 kJ/g). (2) cis vs. trans — cis-Doppelbindung erzeugt Knick und senkt Schmelzpunkt, trans verhält sich wie gesättigt. (3) Statine hemmen HMG-CoA-Reduktase (nicht direkt LDL-Rezeptoren!). (4) Essentielle FS: Linolsäure (ω-6) und α-Linolensäure (ω-3) — beides PUFA, die der Körper nicht synthetisieren kann.`,
+---
+
+## Cholesterin — mehr als nur ein Risikofaktor
+
+**Cholesterin** (C₂₇H₄₆O) besitzt das **Sterangerüst** (Cyclopentanoperhydrophenanthren) — drei kondensierte Sechsringe (A, B, C) + ein Fünfring (D), dazu eine 3β-OH-Gruppe, eine Δ5-Doppelbindung und eine aliphatische Seitenkette. Es wird in der **Leber** über den **Mevalonat-Weg** aus Acetyl-CoA synthetisiert. Schlüsselenzym: **HMG-CoA-Reduktase** — die geschwindigkeitsbestimmende Reaktion und Angriffspunkt der **Statine**.
+
+### Funktionen des Cholesterins
+
+1. **Membranbestandteil**: Lagert sich zwischen Phospholipid-Schwänze. Bei niedrigen Temperaturen verhindert es Erstarren, bei hohen Temperaturen übermäßige Fluidisierung → **Fluiditätspuffer**
+2. **Ausgangsstoff für Gallensäuren**: Cholsäure, Chenodesoxycholsäure — Emulgatoren für Nahrungsfette im Darm (enterohepatischer Kreislauf: 95 % werden im Ileum rückresorbiert)
+3. **Steroidhormone**: Alle lipophil, alle wirken über intrazelluläre Kernrezeptoren:
+
+| Steroidgruppe | Beispiel | Hauptfunktion |
+|---|---|---|
+| Glucocorticoide | Cortisol | Stressreaktion, Gluconeogenese, Immunsuppression |
+| Mineralocorticoide | Aldosteron | Na⁺-Rückresorption, K⁺-Sekretion (Niere) |
+| Androgene | Testosteron | Virilisierung, Spermatogenese |
+| Östrogene | Östradiol | Feminisierung, Menstruationszyklus |
+| Gestagene | Progesteron | Schwangerschaftserhaltung |
+
+4. **Vitamin D₃**: 7-Dehydrocholesterin → UV-B in Haut → Cholecalciferol → 25-OH-D₃ (Leber) → **1,25-(OH)₂-D₃ = Calcitriol** (Niere) → Ca²⁺/Phosphat-Homöostase
+
+> **Merke:** Cholesterin = Membranfluidität + Gallensäuren + ALLE Steroidhormone + Vitamin D. Es ist kein „Gift", sondern ein lebenswichtiges Molekül — problematisch wird nur das Zuviel im Blut.
+
+---
+
+## Eicosanoide — Entzündung, Schmerz, Gerinnung
+
+Eicosanoide sind lokale Signalmoleküle, die aus der **Arachidonsäure** (C20:4, ω-6) entstehen. Arachidonsäure wird durch das Enzym **Phospholipase A₂** aus der sn-2-Position von Membran-Phospholipiden freigesetzt. Dann teilt sich der Weg:
+
+### COX-Weg (Cyclooxygenase)
+
+Cyclooxygenase (COX-1 konstitutiv, COX-2 induzierbar bei Entzündung) katalysiert:
+- **Prostaglandine** (z. B. PGE₂): Entzündung, Schmerz, Fieber, Magenschleimhautschutz (PGE₂ über COX-1)
+- **Thromboxane** (TXA₂): Thrombozytenaggregation, Vasokonstriktion (in Plättchen)
+- **Prostacyclin** (PGI₂): Gegenspieler von TXA₂ — hemmt Aggregation, Vasodilatation (im Endothel)
+
+### LOX-Weg (Lipoxygenase)
+
+5-Lipoxygenase (5-LOX) katalysiert:
+- **Leukotriene** (LTB₄: Chemotaxis von Neutrophilen; LTC₄/D₄/E₄: Bronchokonstriktion bei Asthma)
+
+### Pharmakologische Hemmung — warum Aspirin wirkt
+
+- **Aspirin** (ASS): Hemmt COX **irreversibel** durch Acetylierung eines Serin-Rests. In Thrombozyten (kernlos, kein Nachschub an COX) hält die Hemmung **lebenslang** (7–10 Tage Plättchenlebensdauer) → niedrigdosiertes Aspirin (100 mg) als Thrombozytenaggregationshemmer
+- **Ibuprofen, Diclofenac** (NSAIDs): Hemmen COX **reversibel** → Schmerzlinderung, Entzündungshemmung, Fiebersenkung
+- **Paracetamol**: Schwacher COX-Hemmer, zentral wirksam (Hypothalamus) → Fiebersenkung + Analgesie, kaum antiinflammatorisch
+- **Cortison** (Glucocorticoide): Hemmen **Phospholipase A₂** indirekt (über Lipocortin) → blockiert den gesamten Eicosanoid-Weg → starke Entzündungshemmung, aber Nebenwirkungen
+
+> **Merke:** Arachidonsäure → COX → Prostaglandine + Thromboxane (Aspirin/Ibuprofen hemmen hier). Arachidonsäure → LOX → Leukotriene. Cortison hemmt bereits die Freisetzung der Arachidonsäure.
+
+---
+
+## Lipoproteine — Lipidtransport im Blut
+
+Lipide sind wasserunlöslich, Blut ist wässrig — das Problem wird durch **Lipoproteine** gelöst: kugelförmige Partikel mit hydrophobem Kern (TAG, Cholesterinester) und amphipathischer Hülle (Phospholipid-Monolayer + Apolipoproteine).
+
+| Lipoprotein | Herkunft | Hauptfracht | Klinische Bedeutung |
+|---|---|---|---|
+| Chylomikronen | Darm (exogen) | Nahrungs-TAG | Postprandiale Triglyceride |
+| VLDL | Leber (endogen) | Hepatische TAG | Triglycerid-Transport |
+| LDL | Aus VLDL nach TAG-Abbau | Cholesterin → Peripherie | **„Schlechtes" Cholesterin** — atherogen |
+| HDL | Leber/Darm | Cholesterin ← Peripherie | **„Gutes" Cholesterin** — reverser Transport |
+
+Der **LDL-Rezeptor** auf Hepatozyten erkennt Apolipoprotein B-100 auf LDL-Partikeln und nimmt LDL per rezeptorvermittelter Endozytose auf. Weniger intrazelluläres Cholesterin → Hochregulation der LDL-Rezeptoren (über SREBP-2) → mehr LDL-Aufnahme aus dem Blut → LDL↓.
+
+---
+
+## Statine — Wirkmechanismus Schritt für Schritt
+
+1. **Statine** (Atorvastatin, Simvastatin, Rosuvastatin) hemmen kompetitiv die **HMG-CoA-Reduktase** (Schlüsselenzym des Mevalonat-Wegs)
+2. → Weniger endogene Cholesterinsynthese in Hepatozyten
+3. → Intrazellulärer Cholesterinspiegel sinkt
+4. → SREBP-2 wird aktiviert → **LDL-Rezeptoren werden hochreguliert**
+5. → Mehr LDL-Aufnahme aus dem Blut
+6. → **Blut-LDL sinkt um 30–50 %**
+
+Statine hemmen also **nicht** direkt den LDL-Rezeptor und „fischen" nicht selbst LDL aus dem Blut — sie zwingen die Leber indirekt dazu, mehr LDL-Rezeptoren zu exprimieren.
+
+---
+
+## Dyslipidemien — wenn der Lipidstoffwechsel entgleist
+
+### Familiäre Hypercholesterinämie (FH)
+
+Autosomal-dominant. Mutation im **LDL-Rezeptor-Gen** (häufigste Form) → defekte oder fehlende LDL-Rezeptoren → massiv erhöhtes Blut-LDL → frühe Atherosklerose. Heterozygote (1:250): LDL 200–400 mg/dL, KHK ab 40–50 J. Homozygote (1:1.000.000): LDL >500 mg/dL, Herzinfarkt im Kindesalter.
+
+### Atherosklerose-Pathogenese
+
+LDL dringt in die Intima ein → wird **oxidiert** (oxLDL) → Makrophagen nehmen oxLDL über **Scavenger-Rezeptoren** auf (keine Feedback-Hemmung!) → Schaumzellen → Fettstreifen → fibröse Plaques → Plaque-Ruptur → Thrombose → Myokardinfarkt / Schlaganfall.
+
+> **Merke:** LDL = „Liefert Den Lipidüberschuss" (atherogen). HDL = „Holt Das Lipid" (protektiv, reverser Transport zur Leber).
+
+---
+
+## Ketonkörper — Brennstoff im Notfall
+
+Bei prolongiertem Fasten oder unkontrolliertem Typ-1-Diabetes übersteigt die Acetyl-CoA-Produktion aus β-Oxidation die Kapazität des Citratzyklus (Oxalacetat wird zur Gluconeogenese abgezogen). Überschüssiges Acetyl-CoA wird in der Leber zu **Ketonkörpern** kondensiert:
+- **Acetoacetat** (das erste Ketonkörper-Produkt)
+- **β-Hydroxybutyrat** (Reduktion von Acetoacetat; eigentlich kein Keton, aber traditionell so benannt)
+- **Aceton** (spontane Decarboxylierung von Acetoacetat; flüchtig → Atemluft)
+
+Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Substrat nutzen (Rückumwandlung zu Acetyl-CoA). Bei unkontrolliertem Typ-1-Diabetes fehlt Insulin → unkontrollierte Lipolyse → massive Ketonproduktion → **diabetische Ketoazidose** (pH < 7,3, Acetongeruch, Kußmaul-Atmung als respiratorische Kompensation).
+
+---
+
+## Häufige Missverständnisse
+
+**„Fett ist schlecht"** — Falsch. Essentielle Fettsäuren (Linolsäure, α-Linolensäure) sind lebenswichtig. Fett ist der effizienteste Energiespeicher, bildet Membranen, isoliert Nerven, transportiert fettlösliche Vitamine (A, D, E, K). Problematisch sind Exzess und ungünstige Zusammensetzung (viel gesättigte + trans-FS, wenig ω-3).
+
+**„Cholesterin ist immer schädlich"** — Falsch. Cholesterin ist essenziell für Membranen, Steroidhormone, Gallensäuren und Vitamin D. Jede Zelle synthetisiert Cholesterin. Nur **erhöhtes Blut-LDL** über lange Zeit führt zur Atherosklerose. HDL-Cholesterin wirkt sogar protektiv.
+
+**„Statine senken LDL durch direkte Cholesterin-Bindung"** — Falsch. Statine hemmen die HMG-CoA-Reduktase → weniger endogene Synthese → LDL-Rezeptor-Hochregulation → die Leber nimmt aktiv mehr LDL auf.
+
+---
+
+## Prüfungsrelevante Zahlen
+
+| Parameter | Wert |
+|---|---|
+| Energiedichte Fett | 38 kJ/g (9 kcal/g) |
+| Energiedichte KH / Protein | je 17 kJ/g (4 kcal/g) |
+| ATP aus Palmitinsäure (C16) | ca. 106 netto |
+| LDL-Senkung durch Statine | 30–50 % |
+| Trans-FS-Limit EU | max. 2 % der Gesamtfette |
+| Aspirin-Plättchenhemmung | irreversibel, 7–10 Tage |
+| Heterozygote FH Prävalenz | ca. 1:250 |
+
+> **Prüfungstipp:** MedAT-Klassiker: (1) Energiedichte Fett vs. KH (38 vs. 17 kJ/g). (2) cis → Knick → flüssig; trans → gestreckt → fest → atherogen. (3) Statine hemmen HMG-CoA-Reduktase (NICHT den LDL-Rezeptor direkt!). (4) Essentielle FS = Linolsäure (ω-6) + α-Linolensäure (ω-3). (5) Aspirin hemmt COX irreversibel → TXA₂↓ → Thrombozytenaggregationshemmung. (6) Phospholipide = amphipathisch → Bilayer; TAG = hydrophob → Fetttröpfchen.`,
       lernziele: [
-        "Fettsäuren nach Sättigungsgrad klassifizieren, den Unterschied zwischen cis/trans-Konfiguration und seine physiologische Bedeutung erklären",
-        "Die Struktur von Triglyceriden und ihre Bildung durch Veresterung beschreiben sowie die Lipolyse erklären",
-        "Den amphipathischen Aufbau von Phospholipiden und die Konsequenz für die Membranbildung erläutern",
-        "Das Sterangerüst und die wichtigsten Steroide (Cholesterin, Steroidhormone, Vitamin D, Gallensäuren) benennen",
-        "Hypercholesterinämie, Atherosklerose und das Wirkprinzip von Statinen (HMG-CoA-Reduktase-Hemmung) erklären",
+        "Fettsäuren nach Sättigungsgrad klassifizieren und den Zusammenhang zwischen cis/trans-Konfiguration, Packung und Schmelzpunkt erklären",
+        "TAG-Aufbau, Verseifung, Lipolyse und β-Oxidation (inkl. ATP-Bilanz von Palmitinsäure) beschreiben",
+        "Den amphipathischen Aufbau von Phospholipiden und die spontane Bilayer-Bildung erläutern",
+        "Die Eicosanoid-Synthese (COX- und LOX-Weg) und den Wirkmechanismus von Aspirin/NSAIDs erklären",
+        "Cholesterin-Funktionen, den Statin-Wirkmechanismus (HMG-CoA-Reduktase → LDL-Rezeptor-Hochregulation) und die Atherosklerose-Pathogenese beschreiben",
+        "Sphingolipide (Ceramid, Sphingomyelin, Glykolipide) und Lipoproteine (Chylomikronen, VLDL, LDL, HDL) zuordnen",
       ],
       sections: [
         {
           heading: "Fettsäuren: Struktur und Eigenschaften",
-          text: "Die Länge der Kohlenwasserstoffkette und der Sättigungsgrad bestimmen physikalische Eigenschaften und biologische Wirkung von Fettsäuren. Gesättigte Fettsäuren (keine Doppelbindungen, Palmitinsäure C16:0, Stearinsäure C18:0) können sich gestreckt eng aneinanderlagern → hohe Van-der-Waals-Kräfte → festes Fett bei Raumtemperatur. Ungesättigte Fettsäuren (Ölsäure C18:1Δ9, cis) haben einen Knick an der Doppelbindung → schlechtere Packung → niedriger Schmelzpunkt → flüssiges Öl. Trans-Fettsäuren aus industrieller Fetthärtung sind atherogen. Essentielle Fettsäuren (Linolsäure ω-6, α-Linolensäure ω-3) dienen als Vorläufer für Eicosanoide (Prostaglandine, Leukotriene).",
+          text: "Die Kettenlänge und der Sättigungsgrad bestimmen physikalische Eigenschaften und biologische Wirkung. Gesättigte FS (C16:0 Palmitinsäure, C18:0 Stearinsäure): gestreckte Ketten → dichte Packung → starke Van-der-Waals-Kräfte → fest bei RT. Einfach ungesättigte FS (C18:1Δ9 Ölsäure, cis): 30°-Knick → lockere Packung → flüssig. Mehrfach ungesättigte FS (Linolsäure ω-6, α-Linolensäure ω-3): essentiell, Eicosanoid-Vorläufer. Trans-FS (industrielle Fetthärtung): gestreckt wie gesättigt → atherogen. ω-Nomenklatur zählt vom Methylende, Δ-Nomenklatur vom Carboxylende.",
           merksatz:
-            "Gesättigte Fettsäuren = fest, arteriogen; ungesättigte cis = flüssig, protektiv; trans = fest, arteriogen.",
+            "Gesättigt = gestreckt = fest. cis-ungesättigt = Knick = flüssig. trans = gestreckt wie gesättigt = atherogen. Essentiell: Linolsäure (ω-6) + α-Linolensäure (ω-3).",
         },
         {
-          heading: "Phospholipide und Membranbildung",
-          text: "Glycerophospholipide (z.B. Phosphatidylcholin = Lecithin) bestehen aus Glycerin, zwei Fettsäuren (sn-1 meist gesättigt, sn-2 meist ungesättigt), einer Phosphatgruppe und einem polaren Alkohol-Rest (Cholin, Serin etc.). Sie sind amphipathisch: Der polare Phosphokopf interagiert mit Wasser (hydrophil), die unpolaren Fettsäureschwänze meiden Wasser (hydrophob). In wässrigem Milieu organisieren sich Phospholipide spontan zu einem Bilayer — die Grundstruktur aller biologischen Membranen. Cholesterin lagert sich zwischen die Fettsäureschwänze und moduliert die Membranfluidität (bei tiefen Temperaturen verhindernd Erstarren; bei hohen Temperaturen verhindernd Überfließen).",
+          heading: "TAG, Verseifung und β-Oxidation",
+          text: "Triglyceride = Glycerin + 3 Fettsäuren (3 Esterbindungen). Fette vs. Öle: gesättigte FS → fest; ungesättigte FS → flüssig. Verseifung: TAG + 3 NaOH → Glycerin + 3 Seifen (Na-Salze der FS). Lipolyse: HSL spaltet TAG, aktiviert durch Adrenalin/Glucagon, gehemmt durch Insulin. β-Oxidation: je Zyklus 2 C als Acetyl-CoA + 1 FADH₂ + 1 NADH. Palmitinsäure (C16): 8 Acetyl-CoA → ca. 106 ATP netto. Energiedichte: 38 kJ/g (Fett) vs. 17 kJ/g (KH).",
           merksatz:
-            "Phospholipid = Amphiphil; polarer Kopf außen, apolare Schwänze innen → Bilayer = Membran.",
+            "TAG + 3 NaOH → Glycerin + 3 Seifen. Fett liefert 38 kJ/g = 9 kcal/g. Palmitinsäure → 106 ATP netto.",
         },
         {
-          heading: "Cholesterin und Statine",
-          text: "Cholesterin wird in der Leber aus Acetyl-CoA über den Mevalonat-Weg synthetisiert; das Schlüsselenzym ist HMG-CoA-Reduktase. Im Blut wird Cholesterin in Lipoproteinen transportiert: LDL transportiert Cholesterin zu peripheren Geweben (hohes LDL = 'schlechtes' Cholesterin → Atherosklerose), HDL holt Cholesterin aus Geweben zurück zur Leber. Statine (Atorvastatin, Simvastatin) hemmen kompetitiv HMG-CoA-Reduktase → weniger endogene Cholesterinsynthese → Hochregulation der LDL-Rezeptoren in Hepatozyten → mehr LDL-Aufnahme aus Blut → LDL-Senkung um 30–50%.",
+          heading: "Phospholipide, Sphingolipide und Membranbildung",
+          text: "Glycerophospholipide: Glycerin + 2 FS + Phosphat-Kopfgruppe → amphipathisch → spontaner Bilayer in Wasser (hydrophober Effekt). Wichtigstes PL: Lecithin (Phosphatidylcholin). Sphingolipide basieren auf Sphingosin: Ceramid → Sphingomyelin (Myelinscheiden) oder Glykolipide (Zell-Erkennung). Cholesterin zwischen den Schwänzen: Fluiditätspuffer (verhindert Erstarren und Überfließen). 2 Schwänze → Bilayer; 1 Schwanz → Mizelle; 3 Schwänze (TAG) → Fetttröpfchen.",
           merksatz:
-            "Statine hemmen HMG-CoA-Reduktase → weniger Cholesterinsynthese → LDL-Rezeptor-Hochregulation → LDL-Senkung.",
+            "Phospholipid = amphipathisch (2 Schwänze + polarer Kopf) → Bilayer = Membran. Sphingomyelin = Myelinscheiden. Cholesterin = Fluiditätspuffer.",
+        },
+        {
+          heading: "Eicosanoide und Pharmakologie",
+          text: "Arachidonsäure (C20:4, ω-6) wird durch Phospholipase A₂ aus Membran-PL freigesetzt. COX-Weg: Prostaglandine (PGE₂ → Entzündung, Schmerz, Fieber) + Thromboxane (TXA₂ → Plättchenaggregation). LOX-Weg: Leukotriene (LTB₄ Chemotaxis, LTC₄/D₄ Bronchokonstriktion). Aspirin hemmt COX irreversibel (Acetylierung) → in kernlosen Thrombozyten lebenslang → Aggregationshemmung. NSAIDs (Ibuprofen) hemmen COX reversibel. Cortison hemmt Phospholipase A₂ indirekt → blockiert gesamten Eicosanoid-Weg.",
+          merksatz:
+            "Arachidonsäure → COX → Prostaglandine + Thromboxane (Aspirin hemmt irreversibel). → LOX → Leukotriene. Cortison hemmt Phospholipase A₂.",
+        },
+        {
+          heading: "Cholesterin, Statine und Dyslipidemien",
+          text: "Cholesterin: Sterangerüst (3 Sechsringe + 1 Fünfring), synthetisiert über Mevalonat-Weg (HMG-CoA-Reduktase). Funktionen: Membranfluidität, Gallensäuren, Steroidhormone, Vitamin D₃. Lipoproteine: LDL ('schlechtes' Cholesterin, atherogen), HDL ('gutes', reverser Transport). Statine → HMG-CoA-Reduktase↓ → weniger Cholesterin in Hepatozyten → LDL-Rezeptor↑ → mehr LDL-Aufnahme → Blut-LDL↓ 30–50%. Familiäre Hypercholesterinämie: LDLR-Mutation → massiv erhöhtes LDL → frühe Atherosklerose.",
+          merksatz:
+            "Statine hemmen HMG-CoA-Reduktase → LDL-Rezeptor-Hochregulation → LDL↓. LDL = 'Liefert Den Lipidüberschuss'. HDL = 'Holt Das Lipid'.",
         },
         {
           heading: "Wichtige Steroide und ihre Funktionen",
-          text: "Alle Steroide leiten sich vom Cholesterin ab:",
+          text: "Alle Steroide leiten sich vom Cholesterin ab und wirken über intrazelluläre Kernrezeptoren (lipophil → membrangängig):",
           table: {
             headers: ["Steroid", "Funktion"],
             rows: [
-              [
-                "Cholesterin",
-                "Membrankomponente (reguliert Fluidität), Ausgangsstoff für alle Steroide",
-              ],
-              ["Cortisol", "Glucocorticoid; Stressreaktion, Gluconeogenese, Antiinflammation"],
-              ["Aldosteron", "Mineralocorticoid; Na⁺/K⁺-Regulation in Niere"],
+              ["Cholesterin", "Membranfluidität, Ausgangsstoff für alle Steroide"],
+              ["Cortisol", "Glucocorticoid; Stressreaktion, Gluconeogenese, Immunsuppression"],
+              ["Aldosteron", "Mineralocorticoid; Na⁺-Rückresorption, K⁺-Sekretion (Niere)"],
               ["Testosteron", "Androgen; Virilisierung, Spermatogenese"],
               ["Östradiol", "Östrogen; Feminisierung, Menstruationszyklus"],
-              ["Progesteron", "Gelbkörperhormon; Schwangerschaft"],
-              ["Vitamin D₃", "Calcitriol (aktiv); Calcium- und Phosphathomöostase"],
-              ["Gallensäuren", "Cholsäure etc.; Fettemulgierung im Darm"],
+              ["Progesteron", "Gestagen; Schwangerschaftserhaltung"],
+              ["Calcitriol (1,25-(OH)₂-D₃)", "Aktives Vitamin D; Ca²⁺/Phosphat-Homöostase"],
+              ["Gallensäuren (Cholsäure)", "Fettemulgierung im Darm, enterohepatischer Kreislauf"],
             ],
           },
         },
       ],
 
       merksätze: [
-        "Fettsäuren: gesättigt = keine C=C; einfach ungesättigt = eine C=C; mehrfach ungesättigt = ≥2 C=C.",
-        "Essentielle Fettsäuren: Linolsäure (ω-6) und α-Linolensäure (ω-3) — müssen mit Nahrung zugeführt werden.",
-        "cis-Doppelbindung → Knick → niedriger Schmelzpunkt; trans-Doppelbindung → gerade → höherer Schmelzpunkt.",
-        "Energiedichte: Lipide 38 kJ/g vs. Kohlenhydrate/Proteine je 17 kJ/g.",
-        "Triglycerid = Glycerin + 3 Fettsäuren, verknüpft durch 3 Esterbindungen (Kondensation).",
-        "Phospholipide = amphipathisch (polarer Phosphatkopf + 2 apolare Fettsäureschwänze) → Bilayer.",
-        "Lecithin (Phosphatidylcholin) = häufigstes Membranphospholipid.",
-        "Sterangerüst = 4 kondensierte Ringe (3× Sechsring + 1× Fünfring); Cholesterin ist Grundgerüst.",
-        "Statine hemmen HMG-CoA-Reduktase (Schlüsselenzym der Cholesterinbiosynthese).",
-        "Ketonkörper: Acetoacetat, β-Hydroxybutyrat, Aceton — entstehen bei exzessiver Lipolyse (Fasten, Typ-1-Diabetes).",
+        "Fettsäuren: gesättigt = keine C=C = gestreckt = fest; ungesättigt cis = Knick = flüssig; trans = gestreckt = atherogen.",
+        "Essentielle Fettsäuren: Linolsäure (ω-6) + α-Linolensäure (ω-3) — Körper kann Doppelbindungen jenseits Δ9 nicht einfügen.",
+        "Energiedichte: Lipide 38 kJ/g (9 kcal/g) vs. KH/Proteine je 17 kJ/g (4 kcal/g).",
+        "TAG = Glycerin + 3 Fettsäuren via Esterbindung. Verseifung: TAG + NaOH → Glycerin + Seife.",
+        "Phospholipide = amphipathisch (2 Schwänze + Phosphatkopf) → Bilayer = Membran.",
+        "Sphingomyelin (Sphingosin-basiert) = Myelinscheiden. Sphingolipidosen: lysosomale Speicherkrankheiten.",
+        "Cholesterin: Membranfluidität + Gallensäuren + Steroidhormone + Vitamin D. NICHT pauschal schädlich.",
+        "Eicosanoide: Arachidonsäure → COX → PG/TX; → LOX → Leukotriene. Aspirin hemmt COX irreversibel.",
+        "Statine hemmen HMG-CoA-Reduktase → LDL-Rezeptor↑ → LDL↓ 30–50%. Nicht direkt am Rezeptor!",
+        "LDL = 'Liefert Den Lipidüberschuss' (atherogen). HDL = 'Holt Das Lipid' (protektiv).",
+        "Ketonkörper: Acetoacetat, β-Hydroxybutyrat, Aceton — bei Fasten/Typ-1-Diabetes aus überschüssigem Acetyl-CoA.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie, weshalb Phospholipide spontan Lipiddoppelschichten bilden und welche Rolle Cholesterin in biologischen Membranen spielt.",
+        question: "Welche der folgenden Aussagen über Eicosanoide ist richtig?",
         answer:
-          "Phospholipide sind amphipathische Moleküle: Sie besitzen einen hydrophilen (wasserfreundlichen) polaren Kopf (Phosphatgruppe mit Cholin oder einem anderen polaren Alkohol) und zwei hydrophobe (wasserfeindliche) unpolare Fettsäureschwänze. Wenn Phospholipide in wässriges Milieu gebracht werden, führt der hydrophobe Effekt zur spontanen Selbstorganisation: Die Fettsäureschwänze meiden den Kontakt mit Wasser und lagern sich zusammen (hydrophobe Wechselwirkungen), während die polaren Köpfe zur wässrigen Phase weisen. Das thermodynamisch günstigste Arrangement ist dabei nicht die Mizelle (wie bei Detergenzien mit nur einem Schwanz), sondern eine **Phospholipid-Doppelschicht (Bilayer)**: Zwei Lagen Phospholipide ordnen sich so an, dass ihre Fettsäureschwänze nach innen zeigen und ihre polaren Köpfe nach außen zur wässrigen Phase. Dies führt zu einem selbstdichtenden, flexiblen flüssigkristallinen Membransystem — der Grundstruktur aller biologischen Membranen. Cholesterin fügt sich mit seiner kleinen OH-Gruppe in Richtung der Phosphatkopfgruppen und seinem unpolaren Sterangerüst zwischen den Fettsäureketten ein. Es erfüllt dabei eine duale temperaturabhängige Funktion: Bei niedrigen Temperaturen verhindert es das Erstarren der Membran (Fluiditätspuffer), bei hohen Temperaturen die übermäßige Fluidisierung. Darüber hinaus dient Cholesterin als Ausgangsstoff für Steroidhormone, Gallensäuren und Vitamin D₃.",
+          "Eicosanoide (Prostaglandine, Thromboxane, Leukotriene) werden aus Arachidonsäure (C20:4, ω-6) gebildet, die durch Phospholipase A₂ aus Membranphospholipiden freigesetzt wird. Der COX-Weg liefert Prostaglandine (PGE₂: Entzündung, Schmerz, Fieber) und Thromboxane (TXA₂: Thrombozytenaggregation); der LOX-Weg liefert Leukotriene (LTB₄: Chemotaxis, LTC₄/D₄: Bronchokonstriktion). Aspirin hemmt COX irreversibel durch Acetylierung eines Serin-Rests. Da Thrombozyten keinen Zellkern haben, können sie kein neues COX-Enzym nachsynthetisieren → die Hemmung hält für die gesamte Plättchenlebensdauer (7–10 Tage). Dies erklärt die Wirkung von niedrigdosiertem Aspirin (100 mg/Tag) als Thrombozytenaggregationshemmer in der Sekundärprävention kardiovaskulärer Ereignisse. Glucocorticoide (Cortison) hemmen dagegen die Phospholipase A₂ indirekt (über Lipocortin-Induktion) und blockieren damit den gesamten Eicosanoid-Weg — stärker antiinflammatorisch, aber auch mehr Nebenwirkungen.",
       },
       klinischerBezug:
-        "Hypercholesterinämie und Atherosklerose; Statine als HMG-CoA-Reduktase-Hemmer; Ketoazidose bei Typ-1-Diabetes; Trans-Fettsäuren als kardiovaskulärer Risikofaktor.",
+        "Atherosklerose (oxLDL → Schaumzellen → Plaque). Familiäre Hypercholesterinämie (LDLR-Mutation). Statine (HMG-CoA-Reduktase-Hemmung → LDL↓). Aspirin (COX-Hemmung → Thrombozytenaggregation↓). Trans-Fettsäuren (atherogen). Ketoazidose bei Typ-1-Diabetes. Sphingolipidosen (M. Gaucher, M. Tay-Sachs). Omega-3-FS (antiinflammatorisch, Triglyceride↓).",
       selfTest: [
         {
           question:
@@ -1695,9 +2215,9 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
           ],
           correctIndex: 3,
           explanation:
-            "Lipide (Fette) liefern ca. 38 kJ/g (≈ 9 kcal/g), während Kohlenhydrate und Proteine je ca. 17 kJ/g (≈ 4 kcal/g) liefern. Die höhere Energiedichte der Lipide erklärt sich durch den stärker reduzierten (höherer Wasserstoffgehalt, weniger Sauerstoff) Zustand der Fettsäuren im Vergleich zu Kohlenhydraten (die formal CH₂O-Einheiten enthalten und somit 'schon partiell oxidiert' sind). Deshalb sind Triglyceride als Energiespeicher effizienter als Glykogen (zudem nimmt Glykogen gebundenes Wasser mit → effektive Energiedichte von Glykogen noch geringer).",
+            "Lipide liefern ca. 38 kJ/g (9 kcal/g), KH und Proteine je ca. 17 kJ/g (4 kcal/g). Der Grund: Fettsäuren sind stark reduziert (viel H, wenig O) und geben bei Oxidation mehr Elektronen an die Atmungskette ab. Zusätzlich bindet Fettgewebe kaum Wasser (Glykogen bindet ~2 g H₂O/g), was die effektive Energiedichte weiter steigert.",
           hints: [
-            "Lipide enthalten viel mehr Wasserstoff relativ zum Sauerstoff als Kohlenhydrate — welche Konsequenz hat das für die Oxidationsenergie?",
+            "Lipide enthalten viel Wasserstoff relativ zum Sauerstoff — welche Konsequenz hat das für die Oxidationsenergie?",
             "Merke: Fett = 9 kcal/g; KH und Protein = 4 kcal/g.",
           ],
           tags: ["energiedichte", "lipide", "kohlenhydrate", "stoffwechsel"],
@@ -1710,14 +2230,14 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
             "Sie sind vollständig hydrophil und können sich frei in wässriger Lösung lösen",
             "Sie können kovalente Bindungen mit Membranproteinen eingehen und die Membran fixieren",
             "Sie tragen drei Fettsäureketten wie Triglyceride und sind deshalb besonders stabil",
-            "Sie sind amphipathisch (polarer Kopf + apolare Schwänze) und bilden spontan Bilayer in Wasser",
+            "Sie sind amphipathisch (polarer Kopf + 2 apolare Schwänze) und bilden spontan Bilayer in Wasser",
           ],
           correctIndex: 4,
           explanation:
-            "Phospholipide sind amphipathische Moleküle: Der hydrophile polare Kopf (Phosphat + Cholin oder anderer polarer Rest) ist wasserfreundlich, die zwei hydrophoben Fettsäureschwänze sind wasserfeindlich. In wässrigem Milieu ordnen sie sich durch den hydrophoben Effekt spontan zu einer Doppelschicht (Bilayer) an: Köpfe nach außen zur wässrigen Phase, Schwänze nach innen. Diese Selbstorganisation liefert die Grundstruktur aller biologischen Membranen. Triglyceride (drei Fettsäuren, kein polarer Kopf) sind vollständig hydrophob und bilden keine Membranen, sondern Fetttröpfchen.",
+            "Phospholipide sind amphipathisch: hydrophiler Phosphatkopf + 2 hydrophobe Fettsäureschwänze. In Wasser ordnen sie sich durch den hydrophoben Effekt spontan zum Bilayer: Köpfe nach außen, Schwänze nach innen. Zwei Schwänze → zylindrische Geometrie → Bilayer. Detergenzien/Seifen (1 Schwanz, Kegelform) bilden dagegen Mizellen. TAG (3 Schwänze, kein polarer Kopf) bilden Fetttröpfchen.",
           hints: [
             "Was ist das Besondere an einer Substanz, die sowohl hydrophile als auch hydrophobe Bereiche hat?",
-            "Denke an den hydrophoben Effekt: Was geschieht mit unpolaren Bereichen in Wasser?",
+            "Zwei Schwänze → Bilayer. Ein Schwanz → Mizelle. Drei Schwänze, kein Kopf → Fetttröpfchen.",
           ],
           tags: ["phospholipide", "membran", "amphipathisch", "bilayer"],
           difficulty: 1,
@@ -1734,87 +2254,105 @@ Bei **Hypercholesterinämie** (LDL > 160 mg/dL) steigt das Atheroskleroserisiko 
           ],
           correctIndex: 0,
           explanation:
-            "Olivenöl enthält hauptsächlich Ölsäure (C18:1Δ9, cis-Konfiguration, einfach ungesättigt). Die cis-Doppelbindung erzeugt einen Knick von ca. 30° in der Fettsäurekette. Dieser Knick verhindert die enge parallele Packung der Fettsäuremoleküle und reduziert die Van-der-Waals-Wechselwirkungen → niedriger Schmelzpunkt → bei Raumtemperatur flüssig. Palmfett enthält hauptsächlich Palmitinsäure (C16:0, gesättigt, gestreckte Kette) → dichte Packung → stärkere Van-der-Waals-Kräfte → höherer Schmelzpunkt → fest bei Raumtemperatur. Trans-Fettsäuren verhalten sich ähnlich wie gesättigte (gerade Kette) und wären ebenfalls fest.",
+            "Olivenöl enthält hauptsächlich Ölsäure (C18:1Δ9, cis). Die cis-Doppelbindung erzeugt einen ca. 30°-Knick → verhindert enge parallele Packung → weniger Van-der-Waals-Kräfte → niedriger Schmelzpunkt → flüssig bei RT. Palmfett enthält hauptsächlich Palmitinsäure (C16:0, gesättigt) → gestreckte Kette → dichte Packung → fest. Trans-FS verhalten sich wie gesättigte (gerade Kette) → fest.",
           hints: [
             "Was bewirkt eine cis-Doppelbindung geometrisch für die Form der Fettsäurekette?",
-            "Dichte Packung → mehr Van-der-Waals-Kräfte → höherer Schmelzpunkt. Welche Fettsäureart erlaubt dichteste Packung?",
+            "Dichte Packung → stärkere Van-der-Waals-Kräfte → höherer Schmelzpunkt.",
           ],
           tags: ["fettsäuren", "schmelzpunkt", "cis", "gesättigt-ungesättigt"],
-          difficulty: 2,
+          difficulty: 1,
         },
         {
           question:
-            "Welches Enzym wird durch Statine gehemmt und welche Konsequenz hat dies für den Cholesterinstoffwechsel?",
+            "Welches Enzym wird durch Statine gehemmt und welche Konsequenz hat dies für den LDL-Spiegel?",
           options: [
-            "Cholesterin-Oxidase → Cholesterin wird direkt abgebaut → LDL sinkt",
-            "HMG-CoA-Reduktase → weniger Cholesterinsynthese → Hochregulation der LDL-Rezeptoren → LDL-Senkung",
-            "LDL-Rezeptor → weniger LDL-Aufnahme in Hepatozyten → LDL-Anstieg im Blut",
+            "Cholesterin-Oxidase → direkter LDL-Abbau im Blut",
+            "HMG-CoA-Reduktase → weniger Cholesterinsynthese → LDL-Rezeptor-Hochregulation → LDL↓",
+            "LDL-Rezeptor → weniger LDL-Aufnahme → LDL↑",
             "Lipoprotein-Lipase → weniger VLDL-Abbau → Triglyceridanstieg",
-            "Phospholipase A₂ → Membranabbau in Hepatozyten → diffuse Lipidstörung",
+            "Phospholipase A₂ → weniger Eicosanoide → veränderte Lipidspiegel",
           ],
           correctIndex: 1,
           explanation:
-            "Statine (z.B. Atorvastatin, Simvastatin, Rosuvastatin) hemmen kompetitiv die HMG-CoA-Reduktase, das Schlüsselenzym der Cholesterinbiosynthese im Mevalonat-Weg. Durch weniger endogene Cholesterinsynthese in der Leber sinkt der intrahepatische Cholesteringehalt. Als Reaktion darauf reguliert die Leberzelle die LDL-Rezeptoren auf ihrer Oberfläche hoch (mehr SREBP-2-Aktivierung). Diese erhöhte LDL-Rezeptor-Dichte führt zu verstärkter Aufnahme von LDL-Cholesterin aus dem Blut → LDL-Senkung um 30–50%. HDL-Cholesterin steigt leicht an. Statine sind die wirksamsten Medikamente zur LDL-Senkung und zur Reduktion kardiovaskulärer Ereignisse.",
+            "Statine hemmen kompetitiv die HMG-CoA-Reduktase (Schlüsselenzym des Mevalonat-Wegs). Weniger endogene Cholesterinsynthese → intrahepatisches Cholesterin↓ → SREBP-2-Aktivierung → LDL-Rezeptoren werden hochreguliert → mehr LDL-Aufnahme aus dem Blut → LDL-Senkung um 30–50 %. Statine wirken also indirekt: Sie hemmen nicht den LDL-Rezeptor, sondern zwingen die Leber dazu, mehr davon zu exprimieren.",
           hints: [
-            "HMG-CoA-Reduktase ist das Schrittmacherenzym der Cholesterinbiosynthese — was passiert, wenn es gehemmt wird?",
-            "Die Leber reagiert auf niedrigen intrazellulären Cholesterinspiegel mit Hochregulation von Rezeptoren — welchen?",
+            "HMG-CoA-Reduktase ist das Schrittmacherenzym der Cholesterinbiosynthese.",
+            "Die Leber reagiert auf niedrigen intrazellulären Cholesterinspiegel mit Hochregulation welcher Rezeptoren?",
           ],
           tags: ["statine", "hmg-coa-reduktase", "cholesterin", "ldl", "klinisch"],
           difficulty: 2,
         },
         {
           question:
-            "Welches Steroid dient als gemeinsamer Ausgangsstoff für Cortisol, Testosteron und Vitamin D₃?",
+            "Welche Aussage über die Eicosanoid-Synthese und deren pharmakologische Hemmung ist richtig?",
+          options: [
+            "Eicosanoide werden aus Cholesterin durch die HMG-CoA-Reduktase gebildet",
+            "Aspirin hemmt die Lipoxygenase (LOX) reversibel und reduziert so die Leukotrien-Synthese",
+            "Arachidonsäure wird durch Phospholipase A₂ freigesetzt; COX bildet daraus Prostaglandine und Thromboxane, Aspirin hemmt COX irreversibel",
+            "Prostaglandine werden durch die LOX gebildet und hemmen die Thrombozytenaggregation",
+            "Glucocorticoide hemmen COX-2 direkt und steigern gleichzeitig die Leukotrien-Synthese",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Arachidonsäure (C20:4, ω-6) wird durch Phospholipase A₂ aus Membranphospholipiden freigesetzt. Der COX-Weg liefert Prostaglandine (PGE₂: Entzündung, Schmerz, Fieber) und Thromboxane (TXA₂: Plättchenaggregation). Der LOX-Weg liefert Leukotriene. Aspirin hemmt COX irreversibel durch Acetylierung eines Serin-Rests — in kernlosen Thrombozyten hält die Hemmung für die gesamte Plättchenlebensdauer (7–10 Tage). Glucocorticoide hemmen Phospholipase A₂ indirekt (über Lipocortin), nicht COX direkt.",
+          hints: [
+            "Welches Enzym setzt Arachidonsäure aus der Membran frei?",
+            "Aspirin acetyliert einen Serin-Rest im aktiven Zentrum von COX — ist das reversibel oder irreversibel?",
+          ],
+          tags: ["eicosanoide", "prostaglandine", "aspirin", "cox", "pharmakologie"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Welches Steroid dient als gemeinsamer Ausgangsstoff für Cortisol, Testosteron, Gallensäuren und Vitamin D₃?",
           options: ["Östradiol", "Aldosteron", "Cholesterin", "Cortisol", "Progesteron"],
           correctIndex: 2,
           explanation:
-            "Cholesterin ist der universelle Vorläufer aller Steroide im menschlichen Körper. Es besitzt das Sterangerüst (vier kondensierte Ringe: drei Sechsringe + ein Fünfring) und eine –OH-Gruppe an C3 sowie eine aliphatische Seitenkette. Aus Cholesterin werden in den Nebennieren Glucocorticoide (Cortisol) und Mineralocorticoide (Aldosteron) synthetisiert, in den Gonaden Androgene (Testosteron) und Östrogene (Östradiol), in der Leber Gallensäuren, und in Haut/Leber/Niere Vitamin D₃ (Cholecalciferol → Calcidiol → Calcitriol). Progesteron ist selbst ein Steroid-Intermediat, kein Ausgangsstoff für alle genannten.",
+            "Cholesterin ist der universelle Vorläufer aller Steroide. Aus seinem Sterangerüst (3 Sechsringe + 1 Fünfring) werden in den Nebennieren Glucocorticoide (Cortisol) und Mineralocorticoide (Aldosteron), in den Gonaden Androgene (Testosteron) und Östrogene (Östradiol), in der Leber Gallensäuren, und in Haut/Leber/Niere Vitamin D₃ synthetisiert. Progesteron ist selbst ein Steroid-Intermediat, nicht der Ausgangsstoff.",
           hints: [
-            "Was haben Cortisol, Testosteron, Aldosteron und Vitamin D strukturell gemeinsam?",
-            "Der Ausgangsstoff ist das häufigste Steroid in Säugetierzellmembranen.",
+            "Welches Molekül hat das Sterangerüst, eine 3β-OH-Gruppe und ist der häufigste Steroid-Bestandteil von Membranen?",
+            "Alle genannten Produkte sind lipophil und haben ein Vierringsystem — was ist deren gemeinsamer Vorläufer?",
           ],
           tags: ["cholesterin", "steroide", "steroidhormone", "biosynthese"],
           difficulty: 1,
         },
         {
-          question:
-            "Ketonkörper entstehen bei längerem Fasten oder unkontrolliertem Typ-1-Diabetes. Welche Metabolite sind das und in welchem Organ werden sie hauptsächlich gebildet?",
+          question: "Bei der Verseifung eines Triglycerids mit NaOH entstehen:",
           options: [
-            "Glucose und Fructose; gebildet in der Niere durch Gluconeogenese",
-            "Cholesterin und Gallensäuren; gebildet in der Leber bei erhöhtem Fettkonsum",
-            "Pyruvat und Lactat; gebildet in der Muskulatur bei anaerober Glykolyse",
-            "Acetoacetat, β-Hydroxybutyrat und Aceton; gebildet in der Leber aus überschüssigem Acetyl-CoA",
-            "Harnsäure und Ammoniak; gebildet in der Leber beim Proteinabbau",
+            "3 Fettsäuren + Glycerin + 3 NaCl",
+            "Glycerin + 3 Natriumsalze der Fettsäuren (Seifen)",
+            "Cholesterin + 3 Natriumacetat",
+            "Phospholipide + 3 NaOH",
+            "3 freie Fettsäuren + Na₃-Glycerat",
           ],
-          correctIndex: 3,
+          correctIndex: 1,
           explanation:
-            "Ketonkörper sind Acetoacetat, β-Hydroxybutyrat und Aceton. Sie entstehen in der Leber (Mitochondrien) aus überschüssigem Acetyl-CoA, das bei gesteigerter Fettsäureoxidation (β-Oxidation) anfällt, wenn der Oxalacetat-Pool für den Citratzyklus nicht ausreicht (z.B. bei Glukosemangel). In der Ketogenese kondensieren zwei Acetyl-CoA-Moleküle zu Acetoacetyl-CoA, das zu Acetoacetat umgewandelt wird; durch Reduktion entsteht β-Hydroxybutyrat, durch spontane Decarboxylierung flüchtiges Aceton. Bei unkontrolliertem Typ-1-Diabetes führt absoluter Insulinmangel zu unkontrollierter Lipolyse und Ketogenese → Ketoazidose (Blut-pH fällt, Acetongeruch der Atemluft).",
+            "Verseifung = alkalische Hydrolyse der Esterbindungen: TAG + 3 NaOH → Glycerin + 3 R-COO⁻Na⁺ (Seifen). Die entstehenden Seifen sind Natriumsalze langkettiger Fettsäuren — amphipathische Moleküle, die Fette emulgieren können (langer unpolarer Schwanz + geladenes Carboxylat-Ende). Es entstehen keine freien Fettsäuren (die wären protoniert: R-COOH), sondern deprotonierte Carboxylate als Na-Salze.",
           hints: [
-            "In welchem Organ läuft die β-Oxidation der Fettsäuren ab und was ist das Endprodukt?",
-            "Bei Glukosemangel fehlt Oxalacetat für den Citratzyklus — wohin geht dann das Acetyl-CoA?",
+            "Was passiert chemisch, wenn eine Esterbindung mit NaOH gespalten wird?",
+            "Das Natriumsalz einer Fettsäure hat eine geladene Kopfgruppe (COO⁻) — was macht das mit der Löslichkeit?",
+          ],
+          tags: ["verseifung", "triglyceride", "esterbindung", "seife"],
+          difficulty: 2,
+        },
+        {
+          question: "Welche Aussage über Ketonkörper und die diabetische Ketoazidose ist korrekt?",
+          options: [
+            "Ketonkörper entstehen in der Niere aus Glucose bei Insulinüberschuss",
+            "β-Hydroxybutyrat, Acetoacetat und Aceton entstehen in der Leber, wenn Acetyl-CoA die Citratzyklus-Kapazität übersteigt",
+            "Ketonkörper können nur von der Leber selbst als Brennstoff genutzt werden",
+            "Die Ketoazidose entsteht durch zu viel HDL-Cholesterin im Blut",
+            "Aceton wird enzymatisch in der Niere produziert und über den Urin ausgeschieden",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Ketonkörper (Acetoacetat, β-Hydroxybutyrat, Aceton) entstehen in der Leber aus überschüssigem Acetyl-CoA, wenn die β-Oxidation viel Acetyl-CoA liefert, aber Oxalacetat für den Citratzyklus fehlt (z. B. bei Fasten, Typ-1-Diabetes). Gehirn, Herz und Skelettmuskel können Ketonkörper nutzen — die Leber selbst kann es nicht (fehlende Thiophorase). Bei unkontrolliertem Typ-1-Diabetes: Insulinmangel → unkontrollierte Lipolyse → massive Ketogenese → Ketoazidose (pH < 7,3, Acetongeruch, Kußmaul-Atmung).",
+          hints: [
+            "Bei Glucosemangel wird Oxalacetat zur Gluconeogenese abgezogen — was passiert dann mit dem Acetyl-CoA aus der β-Oxidation?",
+            "Welches Organ produziert Ketonkörper, kann sie aber selbst nicht verwerten?",
           ],
           tags: ["ketonkörper", "ketoazidose", "diabetes", "fasten", "klinisch"],
           difficulty: 3,
-        },
-        {
-          question:
-            "Welche Funktion haben Gallensäuren und von welchem Molekül werden sie synthetisiert?",
-          options: [
-            "Gallensäuren sind Verdauungsenzyme für Fette; sie werden aus Aminosäuren gebildet",
-            "Gallensäuren sind Cofaktoren der Lipasen und werden aus Fettsäuren gebildet",
-            "Gallensäuren sind Hormone mit Steroidstruktur; sie werden in der Bauchspeicheldrüse gebildet",
-            "Gallensäuren sind Transportproteine für Lipide im Blut; sie werden aus Triglyceriden gebildet",
-            "Gallensäuren sind Emulgatoren für Fette im Darm; sie werden aus Cholesterin gebildet",
-          ],
-          correctIndex: 4,
-          explanation:
-            "Gallensäuren (z.B. Cholsäure, Chenodesoxycholsäure) werden in der Leber aus Cholesterin synthetisiert und als Gallensalze (konjugiert mit Glycin oder Taurin) in der Gallenblase gespeichert. Im Dünndarm wirken sie als biologische Detergenzien (Emulgatoren): Durch ihren amphipathischen Charakter (Sterangerüst + polare OH-Gruppen) emulgieren sie Nahrungsfette in kleine Mizellen → vergrößerte Angriffsfläche für pankre­atische Lipasen. Gallensäuren werden im terminalen Ileum resorbiert und zur Leber zurücktransportiert (enterohepatischer Kreislauf). Sie sind keine Enzyme selbst, sondern ermöglichen die effiziente enzymatische Fettspaltung.",
-          hints: [
-            "Gallensäuren haben ein Sterangerüst — von welchem häufigen Steroid werden sie abgeleitet?",
-            "Was bedeutet 'emulgieren' und warum ist das für die Fettverdauung wichtig?",
-          ],
-          tags: ["gallensäuren", "cholesterin", "fettverdauung", "emulgierung"],
-          difficulty: 2,
         },
       ],
     },

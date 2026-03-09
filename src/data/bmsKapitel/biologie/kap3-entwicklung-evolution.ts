@@ -535,173 +535,296 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
     },
     {
       id: "bio-9-05",
-      title: "Artbegriff und Artbildung — Isolationsmechanismen",
+      title: "Embryonalentwicklung — Von der Zygote zum Organismus",
       stichworte: [
-        "Biologischer Artbegriff",
-        "Allopatrisch",
-        "Sympatrisch",
-        "Reproduktive Isolation",
-        "Speziation",
-        "Isolationsmechanismen",
+        "Befruchtung",
+        "Furchung",
+        "Morula",
+        "Blastocyste",
+        "Gastrulation",
+        "Keimblätter",
+        "Neurulation",
+        "Organogenese",
+        "Teratogene",
       ],
-      content: `## Reproduktive Isolation — Präzygotisch und Postzygotisch
+      content: `Aus einer einzigen befruchteten Eizelle entsteht ein Organismus mit über 200 Zelltypen, gegliederten Organsystemen und einem funktionierenden Nervensystem. Die Embryologie erklärt, wie dieser Weg Schritt für Schritt abläuft — und wo er schiefgehen kann.
 
-**Reproduktive Isolation** (Unfähigkeit zur Kreuzung zwischen Populationen) verhindert den Genfluss zwischen zwei Populationen und ist die entscheidende Voraussetzung für Artbildung. Je nach Zeitpunkt unterscheidet man:
-
-**Präzygotische Isolation** (vor Bildung der Zygote) — verhindert die Befruchtung selbst:
-- **Geografische Isolation**: physische Barrieren (Gebirge, Ozean, Fluss) verhindern Kontakt
-- **Ökologische Isolation**: Populationen nutzen verschiedene Habitate im selben Gebiet
-- **Zeitliche Isolation**: verschiedene Paarungs- oder Blütezeiten (z. B. Frühjahrs- vs. Herbstblüher)
-- **Verhaltensisolation**: verschiedene Balzrituale oder Paarungsrufe, die keine Anziehung erzeugen
-- **Mechanische Inkompatibilität**: Genitalien oder Blütenstruktur passen morphologisch nicht zusammen
-
-**Postzygotische Isolation** (nach Befruchtung) — Zygote entsteht, hat aber verminderte Fitness:
-- **Hybridlethalität**: der Hybrid überlebt nicht (Embryo stirbt früh ab)
-- **Hybridsterilität**: der Hybrid lebt, kann sich aber nicht fortpflanzen — **Maultier** (Pferd × Esel; Pferd: 2n=64, Esel: 2n=62, Maultier: 2n=63 → keine reguläre Meiose möglich → steril)
-
-> **Merke:** Präzygotisch = vor Befruchtung (verhindert Energieverschwendung). Postzygotisch = nach Befruchtung; Hybridsterilität (Maultier) und Hybridlethalität sind die wichtigsten Formen.
+{{DIAGRAM:cell-cycle}}
 
 ---
 
-## Allopatrische Artbildung — Schritt für Schritt
+## Befruchtung (Tag 0)
 
-Allopatrische Artbildung verläuft in typischen Schritten: (1) Ausgangs-Population ist genetisch durchmischt. (2) Eine geografische Barriere (Fluss, Gebirge, Gletschervorstoß, Meereseinbruch) teilt die Population. (3) Beide Teilpopulationen akkumulieren unabhängig Mutationen, unterliegen verschiedenen Selektionsdrücken und erleben Gendrift (v. a. in kleinen Gründerpopulationen). (4) Divergenz der Genotypen und Phänotypen über viele Generationen. (5) Bei Wiedervereinigung (Abbau der Barriere): Test auf Reproduktionsisolation. Wenn vollständige Isolation besteht → zwei Arten. Wenn noch Hybridisierung möglich → Sekundärzone, möglicherweise vollständige Isolation durch Auslese gegen Hybriden (Verstärkung). Die Darwin-Finken auf den Galapagos-Inseln (13–15 Arten aus einer Gründerpopulation) sind das klassische Beispiel für adaptive Radiation (rasche allopatrische Artbildung in verschiedene ökologische Nischen).
+Die **Befruchtung** (Fertilisation) findet im **Ampullenteil des Eileiters** statt. Das Spermium durchdringt drei Barrieren:
+1. **Corona radiata** (Granulosazellschicht um die Eizelle) — Hyaluronidase aus dem Akrosom löst die Zellverbindungen
+2. **Zona pellucida** (Glykoproteinschicht) — Bindung an ZP3-Rezeptor löst die **Akrosomreaktion** (Freisetzung proteolytischer Enzyme) aus
+3. **Eizellmembran** — Fusion der Zellmembranen von Spermium und Eizelle
 
-> **Merke:** Allopatrische Artbildung: geografische Barriere → Isolation → unabhängige Divergenz → Reproduktionsisolation → neue Arten.
+Sofort nach Verschmelzung erfolgt der **Polyspermieblock** in zwei Stufen:
+- **Schneller Block** (Sekunden): Depolarisation der Eizellmembran verhindert weitere Spermienbindung
+- **Langsamer Block** (Minuten): **Kortikalreaktion** — kortikale Granula verschmelzen mit der Membran, Enzyme modifizieren die Zona pellucida (Zona-Reaktion), sodass kein weiteres Spermium binden kann
+
+Das Ergebnis: eine diploide **Zygote** (2n = 46) mit mütterlichem und väterlichem Vorkern, die anschließend verschmelzen (Karyogamie).
+
+> **Merke:** Befruchtung = Ampulle des Eileiters. Akrosomreaktion durchbricht Zona pellucida. Polyspermieblock: schnell (elektrisch) + langsam (Kortikalreaktion). Ergebnis: diploide Zygote.
 
 ---
 
-## Polyploidie — Sympatrische Artbildung in einer Generation
+## Furchung und Morula (Tag 1–4)
 
-{{DIAGRAM:dna-helix}}
+Die Zygote beginnt sofort mit **Furchungsteilungen** (mitotische Teilungen ohne Wachstum): Die Zellen (Blastomeren) werden bei jeder Teilung kleiner, das Gesamtvolumen bleibt gleich.
 
-Polyploidie ist der wichtigste Mechanismus sympatrischer Artbildung, besonders bei Pflanzen. Wenn die Meiose fehlerhaft verläuft, können diploide Gameten entstehen (statt haploider). Vereinigung zweier diploider Gameten → tetraploider Organismus (Autopolyploidie). Dieser kann sich nicht mehr mit den Ausgangsdiploiden fortpflanzen (Hybride sind triploid und steril), aber tetraploide Individuen können sich untereinander fortpflanzen → neue Art. Allopolyploidie: Ein interspezifischer Hybrid (steril) verdoppelt seinen Chromosomensatz → jedes Chromosom hat ein Homologes → fertil. Beispiele: Weizen (Triticum aestivum, 6n=42 aus drei diploiden Vorfahren), Raps (Brassica napus, aus Kohl und Rübsen). Beim Menschen führt Polyploidie zum Tod (Ausnahme: einzelne Gewebe).
+- **Tag 1:** 2-Zell-Stadium
+- **Tag 2:** 4-Zell-Stadium
+- **Tag 3:** 8–16 Zellen → **Morula** (lat. Maulbeere) — kompakter Zellhaufen, noch von der Zona pellucida umgeben
+- Während der Furchung wandert der Keim durch den Eileiter Richtung Uterus
 
-> **Merke:** Polyploidie: Chromosomensatzverdoppelung → Reproduktionsisolation vom Ausgangsorganismus → sympatrische Artbildung in einer Generation.
+Wichtig: Furchung ist **nicht** dasselbe wie normales Zellwachstum. Die Blastomeren teilen sich, ohne zwischen den Teilungen zu wachsen — das erklärt, warum eine Morula kaum größer ist als die ursprüngliche Zygote.
+
+> **Merke:** Furchung = Teilungen ohne Wachstum (Zellen werden kleiner). Morula = kompakter Zellhaufen (Tag 3–4), noch in der Zona pellucida, auf dem Weg zum Uterus.
 
 ---
 
-## Klinischer Bezug
+## Blastocyste und Implantation (Tag 5–12)
 
-Polyploidie ist in der Humanmedizin teratogen (fruchtschädigend): Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid (mit abweichender Chromosomenzahl) oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.`,
+{{DIAGRAM:animal-cell}}
+
+Ab Tag 5 bildet sich im Inneren der Morula ein flüssigkeitsgefüllter Hohlraum (**Blastozoel**) — es entsteht die **Blastocyste** (auch Blastozyste). Sie besteht aus:
+
+- **Trophoblast** (äußere Zellschicht): wird zur **Plazenta** und den Eihäuten; produziert **hCG** (humanes Choriongonadotropin), das den Gelbkörper erhält und die Schwangerschaft sichert
+- **Embryoblast** (innere Zellmasse, ICM): wird zum **Embryo** selbst; differenziert sich weiter in **Epiblast** (Quelle aller drei Keimblätter) und **Hypoblast** (bildet den Dottersack)
+- **Blastozoel**: der flüssigkeitsgefüllte Hohlraum
+
+**Implantation** (Nidation): Ab Tag 6–7 schlüpft die Blastocyste aus der Zona pellucida (**Hatching**) und heftet sich an das Endometrium (Gebärmutterschleimhaut). Der Trophoblast differenziert in **Synzytiotrophoblast** (invasiv, dringt ins Endometrium ein) und **Zytotrophoblast** (Stammzellschicht). Bis Tag 12 ist die Blastocyste vollständig in die Schleimhaut eingebettet.
+
+> **Merke:** Blastocyste: Trophoblast (außen) → Plazenta + hCG; Embryoblast (innen) → Embryo; Blastozoel = Hohlraum. Implantation ab Tag 6–7 durch invasiven Synzytiotrophoblast.
+
+---
+
+## Gastrulation — Der wichtigste Tag deines Lebens (Woche 3)
+
+Der Entwicklungsbiologe Lewis Wolpert sagte: *"It is not birth, marriage, or death, but gastrulation which is truly the most important time in your life."* Warum? Weil hier der gesamte Bauplan des Körpers festgelegt wird.
+
+{{DIAGRAM:gastrulation}}
+
+Die **Gastrulation** (Tag 15–21) verwandelt die zweischichtige Keimscheibe (Epiblast + Hypoblast) in einen Embryo mit **drei Keimblättern**:
+
+1. Der **Primitivstreifen** erscheint auf der Oberfläche des Epiblast (definiert die Längsachse und Symmetrie des Embryos)
+2. Epiblastzellen wandern zum Primitivstreifen und stülpen sich ein (**Invagination**)
+3. Eingewanderte Zellen bilden das **Mesoderm** (mittleres Keimblatt) — lagert sich zwischen Epiblast und Hypoblast ein
+4. Ein Teil der Zellen verdrängt den Hypoblast und wird zum **definitiven Endoderm** (inneres Keimblatt)
+5. Die an der Oberfläche verbleibenden Epiblastzellen werden zum **Ektoderm** (äußeres Keimblatt)
+
+Aus dem **Primitivknoten** (am kranialen Ende des Primitivstreifens) entsteht das **Notochord** (Chorda dorsalis) — ein mesodermaler Stab in der Mittellinie, der als **Induktor** die nachfolgende Neurulation auslöst.
+
+> **Merke:** Gastrulation = aus dem Epiblast entstehen alle drei Keimblätter. Primitivstreifen → Invagination → Mesoderm + Endoderm; Oberfläche → Ektoderm. Notochord aus Primitivknoten induziert Neurulation.
+
+---
+
+## Die drei Keimblätter und ihre Derivate
+
+Welches Keimblatt welches Organ bildet, ist eine der meistgeprüften Tabellen im MedAT.
+
+| Keimblatt | Position | Wichtige Derivate |
+|-----------|----------|-------------------|
+| **Ektoderm** | außen | **Nervensystem** (Gehirn, Rückenmark, periphere Nerven), Epidermis (Oberhaut), Haare, Nägel, Zahnschmelz, Linse, Innenohr, Nebennierenmark, Hypophysenvorderlappen (Adenohypophyse) |
+| **Mesoderm** | Mitte | **Muskeln** (Skelett-, Herz-, glatte Muskulatur), Knochen, Knorpel, **Niere**, Gonaden (Hoden/Ovar), **Blut** und Blutgefäße, Herz, Milz, Nebennierenrinde, Bindegewebe, Dermis |
+| **Endoderm** | innen | **Epithel des Gastrointestinaltrakts** (Magen, Darm), **Leber**, **Pankreas**, **Lunge** (Alveolarepithel), Schilddrüse, Thymus, Harnblasenepithel |
+
+**Typische Fehlannahmen** — im MedAT gerne als Distraktoren verwendet:
+- Ektoderm ≠ nur Haut! Das gesamte **Nervensystem** stammt aus dem Ektoderm (via Neuralrohr und Neuralleiste)
+- Mesoderm ≠ nur Muskeln! Auch **Niere**, **Blut**, Herz und Gonaden sind mesodermaler Herkunft
+- Endoderm ≠ ganzer Darm! Nur das **Epithel** des Darms ist endodermal; die Muskelschicht der Darmwand stammt aus dem Mesoderm
+
+> **Merke:** Ektoderm = außen + Nerven; Mesoderm = Mitte (Muskeln, Knochen, Blut, Niere); Endoderm = innen (Darm-Epithel, Lunge, Leber, Pankreas). Eselsbrücke: **E**ktoderm = **E**pidermis + **E**ncephalon (Gehirn).
+
+---
+
+## Neurulation (Woche 3–4)
+
+{{DIAGRAM:neurulation}}
+
+Die **Neurulation** ist die Bildung des Neuralrohrs, der Vorstufe des zentralen Nervensystems. Sie wird durch Signale des Notochords induziert.
+
+1. Das Notochord signalisiert dem darüberliegenden Ektoderm → es verdickt sich zur **Neuralplatte**
+2. Die Ränder der Neuralplatte heben sich und bilden **Neuralfalten**, dazwischen entsteht die **Neuralrinne**
+3. Die Neuralfalten nähern sich und verschmelzen → es entsteht das **Neuralrohr** (wird zu Gehirn + Rückenmark)
+4. Beim Ablösen der Neuralfalten wandern Zellen seitlich aus: die **Neuralleistenzellen** (Crista neuralis)
+
+Die **Neuralleiste** ist eine einzigartige Struktur der Wirbeltiere. Neuralleistenzellen wandern durch den Embryo und differenzieren sich zu:
+- **Periphere Neuronen** und Gliazellen (Schwann-Zellen)
+- **Nebennierenmark** (Chromaffine Zellen: Adrenalin, Noradrenalin)
+- **Melanocyten** (Pigmentzellen der Haut)
+- **Odontoblasten** (Dentinbildner der Zähne)
+- **Knorpel und Knochen des Gesichtsschädels** (kranialer Anteil)
+- Teile des Herzens (Septum, Ausstrombahn)
+
+> **Merke:** Neuralplatte → Neuralrinne → Neuralrohr (ZNS). Neuralleistenzellen = wandernde Multitalente: periphere Nerven, Nebennierenmark, Melanocyten, Gesichtsknochen.
+
+---
+
+## Organogenese und Zeitplan (Woche 3–8)
+
+Ab der dritten Woche beginnt die **Organogenese** (Organbildung). Die wichtigsten Meilensteine:
+
+| Zeitpunkt | Ereignis |
+|-----------|----------|
+| Woche 3 | Gastrulation, Neurulation beginnt, erstes Blut bildet sich |
+| Woche 4 | Herz schlägt (Tag 22–23!), Neuralrohr schließt sich, Armknospen |
+| Woche 5 | Beinknospen, Handplatten, Augenbläschen |
+| Woche 6 | Finger strahlenförmig, äußeres Ohr beginnt |
+| Woche 8 | Alle Organanlagen vorhanden → ab jetzt **Fetus** (nicht mehr Embryo) |
+| Ab Woche 9 | Fetalperiode: Wachstum und Reifung, kaum neue Organanlagen |
+
+Die **kritischen Perioden** (Phasen hoher Empfindlichkeit gegenüber Teratogenen) liegen in der Organogenese (Woche 3–8). Jedes Organ hat sein eigenes Zeitfenster maximaler Vulnerabilität:
+- **Neuralrohr**: Woche 3–4 (Schluss bis Tag 28)
+- **Herz**: Woche 3–6
+- **Gliedmaßen**: Woche 4–8
+- **Augen**: Woche 4–8
+
+> **Merke:** Embryonalperiode = Woche 1–8 (Organanlage). Fetalperiode = ab Woche 9 (Wachstum + Reifung). Kritische Perioden = Woche 3–8 (höchste Teratogenempfindlichkeit).
+
+---
+
+## Klinischer Bezug — Teratogene und Fehlbildungen
+
+**Teratogene** (griech. teras = Monster) sind Substanzen oder Einflüsse, die Fehlbildungen verursachen:
+
+- **Folsäuremangel** → **Neuralrohrdefekte**: Spina bifida (offener Rücken — Neuralrohr schließt sich kaudal nicht), Anencephalie (Neuralrohr schließt sich kranial nicht → fehlende Großhirnanlage). Prophylaxe: **0,4 mg Folsäure/Tag** perikonzeptionell
+- **Alkohol** → **Fetales Alkoholsyndrom** (FAS): Mikrocephalie, Wachstumsretardierung, kognitive Defizite, typische Fazies (kurze Lidspalten, flaches Philtrum)
+- **Thalidomid** (Contergan) → **Phokomelie** (Robbengliedrigkeit): fehlende/verkürzte Extremitäten. Historisches Beispiel für die Bedeutung kritischer Perioden — Einnahme in Woche 4–8 war entscheidend
+- **Rötelnvirus** (1. Trimenon) → Gregg-Syndrom: Herzfehler, Katarakt, Taubheit
+- **Diabetes mellitus** der Mutter → kaudales Regressionssyndrom, Herzfehler, Makrosomie
+
+> **Merke:** Kritischste Phase für Teratogene: Woche 3–8. Folsäure schützt vor Neuralrohrdefekten. Alkohol ist das häufigste Teratogen — kein sicherer Schwellenwert bekannt.`,
       lernziele: [
-        "Den biologischen Artbegriff (Mayr) definieren und seine Grenzen benennen",
-        "Präzygotische von postzygotischen Isolationsmechanismen unterscheiden und Beispiele nennen",
-        "Allopatrische von sympatrischer Artbildung unterscheiden und je ein Beispiel nennen",
+        "Den zeitlichen Ablauf der Embryonalentwicklung (Befruchtung → Furchung → Blastocyste → Gastrulation → Neurulation → Organogenese) beschreiben",
+        "Die drei Keimblätter und ihre wichtigsten Derivate zuordnen (Ektoderm, Mesoderm, Endoderm)",
+        "Neurulation und Neuralleiste erklären und klinische Bezüge (Neuralrohrdefekte, Teratogene) herstellen",
       ],
       sections: [],
       merksätze: [
-        "Biologischer Artbegriff (Mayr): Populationen, die sich untereinander fortpflanzen und von anderen reproduktiv isoliert sind.",
-        "Präzygotisch: Isolation vor Befruchtung (geografisch, zeitlich, Verhalten). Postzygotisch: nach Befruchtung (Hybridsterilität, -lethalität).",
-        "Allopatrisch = geografische Isolation; sympatrisch = keine geografische Isolation (z. B. Polyploidie bei Pflanzen).",
+        "Befruchtung in der Ampulle des Eileiters. Polyspermieblock: schnell (elektrisch) + langsam (Kortikalreaktion).",
+        "Ektoderm = außen + Nerven; Mesoderm = Mitte (Muskeln, Knochen, Blut, Niere); Endoderm = innen (Darm-Epithel, Lunge, Leber, Pankreas).",
+        "Embryonalperiode Woche 1–8 (Organanlage), Fetalperiode ab Woche 9 (Wachstum). Kritische Phase für Teratogene: Woche 3–8.",
       ],
       klinischerBezug:
-        "Polyploidie ist in der Humanmedizin teratogen: Triploide (3n=69) und tetraploide Embryonen sind nicht lebensfähig und führen zu Frühaborten. In der Krebsbiologie sind viele Tumorzellen aneuplooid oder polyplooid — Chromosomeninstabilität ist ein Hallmark of Cancer.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
+        "Neuralrohrdefekte (Spina bifida, Anencephalie) durch Folsäuremangel — Prophylaxe mit 0,4 mg/Tag. Fetales Alkoholsyndrom: häufigstes Teratogen. Thalidomid (Contergan): Phokomelie bei Einnahme in Woche 4–8. Röteln im 1. Trimenon: Gregg-Syndrom (Herz, Auge, Ohr).",
       altfrage: {
-        question: "Was unterscheidet allopatrische von sympatrischer Artbildung?",
+        question:
+          "Ordne die drei Keimblätter ihren wichtigsten Derivaten zu und nenne je ein klinisches Beispiel für eine Fehlbildung.",
         answer:
-          "Allopatrische Artbildung erfolgt durch geografische Trennung einer Population durch eine Barriere (Gebirge, Ozean). Die getrennten Populationen divergieren durch Mutation, Selektion und Gendrift, bis sie reproduktiv isoliert sind. Sympatrische Artbildung erfolgt im selben geografischen Gebiet ohne physische Trennung. Bei Pflanzen ist Polyploidie der häufigste Mechanismus: Ein polyploider Organismus kann sich nicht mehr mit den Elterndiploiden fortpflanzen, wohl aber mit anderen Polyploiden derselben Art — eine neue Art entsteht in einer Generation.",
+          "Ektoderm: Nervensystem (Gehirn, Rückenmark), Epidermis, Zahnschmelz — Fehlbildung: Anencephalie/Spina bifida (Neuralrohrdefekt). Mesoderm: Muskeln, Knochen, Herz, Niere, Blut, Gonaden — Fehlbildung: Ventrikelseptumdefekt (häufigster angeborener Herzfehler). Endoderm: Darmepithel, Lunge, Leber, Pankreas, Schilddrüse — Fehlbildung: Ösophagusatresie (Speiseröhrenfehlbildung, oft mit Trachealfistel).",
       },
       selfTest: [
         {
-          question:
-            "Ein Maultier (Hybrid aus Pferd und Esel) ist lebensfähig, aber steril. Welcher Isolationsmechanismus liegt vor?",
+          question: "Wo findet die Befruchtung beim Menschen normalerweise statt?",
           options: [
-            "Präzygotische Isolation durch geografische Trennung",
-            "Präzygotische Isolation durch Verhaltensinkompatibilität",
-            "Postzygotische Isolation durch Hybridsterilität",
-            "Postzygotische Isolation durch Hybridlethalität",
-            "Präzygotische Isolation durch mechanische Inkompatibilität",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Das Maultier (Hybrid aus Pferde-Stute × Esel-Hengst) ist lebensfähig und phänotypisch gesund, aber unfruchtbar (steril). Dies ist ein klassisches Beispiel für postzygotische Isolation durch Hybridsterilität: Die Zygote und der Hybrid entstehen normal (präzygotische Barrieren versagen), aber der Hybrid kann keine Gameten bilden. Ursache: Pferd hat 64 Chromosomen, Esel 62 — im Hybriden können die Chromosomen in der Meiose nicht normal paaren.",
-          hints: [
-            "Post-zygotisch = nach der Befruchtung. Das Maultier ist ja bereits geboren.",
-            "Steril = kann keine Nachkommen erzeugen. Ist das Maultier lebensfähig? Ja. Kann es sich fortpflanzen? Nein.",
-          ],
-          difficulty: 1,
-          tags: ["maultier", "hybridsterilität", "postzygotisch", "isolation"],
-        },
-        {
-          question:
-            "Der biologische Artbegriff von Mayr hat Grenzen. Für welche Organismen ist er am wenigsten geeignet?",
-          options: [
-            "Für sexuell reproduzierende Vögel",
-            "Für Säugetiere mit bekannten Kreuzungsbarrieren",
-            "Für asexuell reproduzierende Organismen (z. B. Bakterien) und Fossilien",
-            "Für Insekten mit territorialem Verhalten",
-            "Für Meeresorganismen mit großen Verbreitungsgebieten",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Der biologische Artbegriff basiert auf sexueller Reproduktion und reproduktiver Isolation. Für asexuell reproduzierende Organismen (Bakterien, viele Protisten, parthenogenetische Tiere) ist er nicht anwendbar, da diese sich nicht sexuell fortpflanzen. Für Fossilien ist er ebenfalls nicht anwendbar, da man das Fortpflanzungsverhalten ausgestorbener Organismen nicht direkt beobachten kann.",
-          hints: [
-            "Wenn eine Art sich nicht sexuell fortpflanzt, gibt es keine 'reproduktive Isolation' — was fehlt dem Konzept dann?",
-            "Fossilien können keine Kreuzungsexperimente durchführen — wie soll man ihre Artgrenzen bestimmen?",
-          ],
-          difficulty: 2,
-          tags: ["artbegriff", "mayr", "asexuell", "grenzen-artbegriff"],
-        },
-        {
-          question:
-            "Auf einer Insel wurden zwei verwandte Vogelarten gefunden, die sich nicht miteinander fortpflanzen. Beide sind von einer einzigen Population auf dem Festland abgeleitet, die durch eine glaziale Periode getrennt wurde. Welcher Artbildungsmechanismus liegt vor?",
-          options: [
-            "Sympatrische Artbildung durch Polyploidie",
-            "Sympatrische Artbildung durch Habitattrennung",
-            "Allopatrische Artbildung durch geografische Isolation",
-            "Parapatrische Artbildung in einer Kontaktzone",
-            "Instantane Artbildung durch Chromosomenmutation",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Die Beschreibung passt zur allopatrischen Artbildung: Eine ursprünglich einheitliche Population wurde durch eine geografische Barriere (glaziale Periode → Gletschervorstoß oder Meereseinbruch) getrennt. Beide Teilpopulationen divergierten unabhängig voneinander, bis sie reproduktiv isoliert waren. Nach dem Ende der glazialen Periode kamen die Nachkommen wieder in Kontakt, konnten sich aber nicht mehr miteinander fortpflanzen.",
-          hints: [
-            "Die geografische Trennung (glaziale Periode) ist das Schlüsselmerkmal — welches Artbildungsmodell setzt eine solche Trennung voraus?",
-            "Allopatrisch = verschiedene Orte (allos = verschieden, patria = Heimat).",
-          ],
-          difficulty: 2,
-          tags: ["allopatrische-artbildung", "geografische-isolation", "divergenz", "vogel"],
-        },
-        {
-          question:
-            "Weizen (Triticum aestivum) ist hexaploid (6n = 42) und entstand aus drei diploiden Vorfahrenarten. Welcher Artbildungsmechanismus war beteiligt?",
-          options: [
-            "Allopatrische Artbildung durch geografische Isolation",
-            "Stabilisierende Selektion auf die Chromosomenzahl",
-            "Allopolyploidie (Hybridisierung + Chromosomensatzverdoppelung)",
-            "Gendrift in einer kleinen Gründerpopulation",
-            "Disruptive Selektion auf verschiedene Nahrungsquellen",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Die Entstehung von hexaploidem Weizen ist ein klassisches Beispiel für Allopolyploidie: Drei verschiedene diploide Vorfahrenarten (je 2n=14) kreuzten sich. Die Hybriden waren zunächst steril (keine homologen Chromosomenpaare für die Meiose). Durch zufällige Verdoppelungen des Chromosomensatzes (Allopolyploidie) entstanden fertile Pflanzen mit je zwei Kopien jedes Genoms (6n=42). Diese können sich nicht mehr mit den Ausgangsarten kreuzen — eine neue Art in wenigen Generationen.",
-          hints: [
-            "Hexaploid = 6 Chromosomensätze. Wenn drei diploide Arten sich vereinigen und die Chromosomen verdoppeln, wie viele Sätze entstehen?",
-            "Polyploidie bei Pflanzen ist der wichtigste Mechanismus der sympatrischen Artbildung.",
-          ],
-          difficulty: 3,
-          tags: ["polyploidie", "weizen", "sympatrische-artbildung", "allopolyploidie"],
-        },
-        {
-          question: "Welche Aussage über präzygotische Isolationsmechanismen ist korrekt?",
-          options: [
-            "Sie treten nach der Befruchtung auf und verhindern die Entwicklung des Hybriden",
-            "Sie verhindern die Bildung einer Zygote und reduzieren damit den Energieaufwand für erfolglose Kreuzungsversuche",
-            "Sie betreffen ausschließlich geografische Trennung",
-            "Sie führen immer zur vollständigen genetischen Isolation innerhalb einer Generation",
-            "Sie treten nur bei pflanzlichen Organismen auf",
+            "Im Uterus (Gebärmutterhöhle)",
+            "Im Ampullenteil des Eileiters (Tuba uterina)",
+            "Im Isthmus des Eileiters",
+            "Im Ovar direkt nach der Ovulation",
+            "Im Zervikalkanal",
           ],
           correctIndex: 1,
           explanation:
-            "Präzygotische Isolationsmechanismen verhindern die Bildung einer Zygote — sie wirken vor der Befruchtung. Dies ist energetisch effizienter als postzygotische Mechanismen, bei denen bereits Ressourcen in Paarung und Befruchtung investiert wurden. Präzygotische Mechanismen umfassen: geografische Isolation, ökologische Isolation, zeitliche Isolation, Verhaltensisolation und mechanische Inkompatibilität.",
+            "Die Befruchtung findet im Ampullenteil (ampullärer Teil) des Eileiters statt. Die Eizelle wird nach der Ovulation vom Fimbrientrichter aufgefangen und im weitlumigen Ampullenteil von den aufsteigenden Spermien erreicht. Erst als befruchtete Zygote wandert sie durch den Eileiter Richtung Uterus.",
           hints: [
-            "Prä- = vor. Zygote = befruchtete Eizelle. Präzygotisch = vor der Befruchtung.",
-            "Welchen Vorteil hat es, eine Hybridisierung vor der Befruchtung zu verhindern?",
+            "Die Ampulle ist der weiteste Teil des Eileiters — ideal für die Begegnung von Eizelle und Spermium.",
+            "Erst die Zygote (nicht die unbefruchtete Eizelle) wandert aktiv zum Uterus.",
+          ],
+          difficulty: 1,
+          tags: ["befruchtung", "eileiter", "ampulle", "fertilisation"],
+        },
+        {
+          question: "Welche Struktur der Blastocyste wird zur Plazenta und produziert hCG?",
+          options: [
+            "Embryoblast (innere Zellmasse)",
+            "Trophoblast (äußere Zellschicht)",
+            "Blastozoel (Hohlraum)",
+            "Epiblast",
+            "Hypoblast",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Trophoblast ist die äußere Zellschicht der Blastocyste. Er differenziert sich in Synzytiotrophoblast (invasiv, dringt ins Endometrium ein) und Zytotrophoblast (Stammzellschicht). Der Trophoblast produziert hCG (humanes Choriongonadotropin), das den Gelbkörper erhält, und wird zur fetalen Seite der Plazenta. Der Embryoblast (innere Zellmasse) wird hingegen zum Embryo selbst.",
+          hints: [
+            "Trophoblast = trophe (Ernährung) — die äußere Schicht ernährt den Embryo und bildet die Plazenta.",
+            "hCG ist das Hormon, das Schwangerschaftstests nachweisen — es kommt vom Trophoblasten.",
+          ],
+          difficulty: 1,
+          tags: ["blastocyste", "trophoblast", "hcg", "plazenta"],
+        },
+        {
+          question: "Aus welchem Keimblatt entwickelt sich das Nervensystem?",
+          options: [
+            "Endoderm",
+            "Mesoderm",
+            "Ektoderm",
+            "Trophoblast",
+            "Alle drei Keimblätter gleichermaßen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Das gesamte Nervensystem (Gehirn, Rückenmark, periphere Nerven) stammt aus dem Ektoderm. Durch Neurulation bildet sich das Neuralrohr (zentrales NS) aus dem Neuroektoderm, die Neuralleiste liefert das periphere NS und weitere Strukturen. Ein häufiger Fehler: Ektoderm wird nur mit Haut assoziiert, aber das Nervensystem ist ebenfalls ektodermaler Herkunft.",
+          hints: [
+            "Ektoderm = äußeres Keimblatt. Es bildet sowohl die Oberfläche (Epidermis) als auch das Nervensystem.",
+            "Eselsbrücke: Ektoderm = Epidermis + Encephalon (Gehirn).",
+          ],
+          difficulty: 1,
+          tags: ["keimblätter", "ektoderm", "nervensystem", "neurulation"],
+        },
+        {
+          question: "Welches Organ ist KEIN Derivat des Mesoderms?",
+          options: ["Niere", "Herz", "Skelettmuskulatur", "Leber", "Milz"],
+          correctIndex: 3,
+          explanation:
+            "Die Leber ist ein Derivat des Endoderms (inneres Keimblatt), nicht des Mesoderms. Das Leberparenchym (Hepatocyten) entsteht als Aussprossung des Vorderdarms. Niere, Herz, Skelettmuskulatur und Milz sind hingegen alle mesodermaler Herkunft. Merke: Endoderm = Epithel des Verdauungstrakts und seine Drüsen (Leber, Pankreas), plus Lunge und Schilddrüse.",
+          hints: [
+            "Mesoderm = Muskeln, Knochen, Blut, Niere, Gonaden, Herz. Aber innere Organe wie Leber und Pankreas?",
+            "Leber und Pankreas sprossen aus dem Vorderdarm — und der Darm ist endodermal.",
           ],
           difficulty: 2,
-          tags: ["präzygotisch", "isolation", "vor-befruchtung", "artbildung"],
+          tags: ["keimblätter", "mesoderm", "endoderm", "leber", "derivate"],
+        },
+        {
+          question: "Welche Aussage über Neuralrohrdefekte ist korrekt?",
+          options: [
+            "Sie entstehen durch Mesoderm-Fehlentwicklung in Woche 8–12",
+            "Spina bifida entsteht durch mangelhaften Schluss des kranialen Neuralrohrs",
+            "Folsäure-Supplementation perikonzeptionell senkt das Risiko für Neuralrohrdefekte signifikant",
+            "Anencephalie betrifft das kaudale Neuralrohr und ist mit dem Leben vereinbar",
+            "Neuralrohrdefekte sind ausschließlich genetisch bedingt und nicht präventabel",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Perikonzeptionelle Folsäure-Supplementation (0,4 mg/Tag, ab mindestens 4 Wochen vor Konzeption bis Ende des 1. Trimenons) senkt das Risiko für Neuralrohrdefekte um 50–70 %. Spina bifida = mangelhafter Schluss des KAUDALEN (nicht kranialen) Neuralrohrs. Anencephalie = mangelhafter Schluss des KRANIALEN Neuralrohrs, nicht mit dem Leben vereinbar. Neuralrohrdefekte sind multifaktoriell (Genetik + Umwelt), nicht rein genetisch.",
+          hints: [
+            "Folsäure ist essenziell für DNA-Synthese und Zellteilung — besonders kritisch bei der raschen Teilung während der Neurulation.",
+            "Kranial = kopfwärts (Anencephalie), kaudal = steißwärts (Spina bifida).",
+          ],
+          difficulty: 2,
+          tags: ["neuralrohrdefekt", "folsäure", "spina-bifida", "anencephalie", "teratogene"],
+        },
+        {
+          question:
+            "In welcher Entwicklungswoche sind Teratogene am gefährlichsten für die Organentwicklung?",
+          options: [
+            "Woche 1–2 (Vorbefruchtung und Furchung)",
+            "Woche 3–8 (Embryonalperiode / Organogenese)",
+            "Woche 9–12 (frühes Fetalstadium)",
+            "Woche 20–24 (mittleres Fetalstadium)",
+            "Woche 36–40 (spätes Fetalstadium)",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die Wochen 3–8 (Embryonalperiode) sind die kritischste Phase für teratogene Schäden, weil hier die Organogenese stattfindet. Jedes Organ hat sein Zeitfenster maximaler Empfindlichkeit (z. B. Neuralrohr Woche 3–4, Herz Woche 3–6, Extremitäten Woche 4–8). In Woche 1–2 gilt das Alles-oder-nichts-Prinzip (Absterben oder ungestörte Entwicklung). Ab Woche 9 (Fetalperiode) sind die Organe angelegt; Teratogene verursachen dann eher Wachstumsstörungen als strukturelle Fehlbildungen.",
+          hints: [
+            "Organogenese = Organbildung. Wenn Organe gerade entstehen, sind sie am empfindlichsten gegenüber Störungen.",
+            "Ab Woche 9 spricht man vom Fetus — die Organe sind angelegt, es geht um Wachstum und Reifung.",
+          ],
+          difficulty: 2,
+          tags: ["teratogene", "kritische-perioden", "organogenese", "embryonalperiode"],
         },
       ],
     },

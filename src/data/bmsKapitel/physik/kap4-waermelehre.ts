@@ -674,6 +674,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
       stichworte: [
         "Erster Hauptsatz",
         "Zweiter Hauptsatz",
+        "Dritter Hauptsatz",
         "Entropie",
         "Innere Energie",
         "Carnot-Wirkungsgrad",
@@ -682,180 +683,268 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
         "Isobar",
         "Isotherm",
         "Adiabatisch",
+        "Gibbs-Energie",
         "ATP-Synthese",
         "Perpetuum mobile",
+        "Mikrozustände",
       ],
-      content: `
-
-
-## Nullter Hauptsatz: Thermisches Gleichgewicht
+      content: `Die Hauptsätze der Thermodynamik erklären, warum Wärme von heiß nach kalt fließt, warum ein Perpetuum mobile unmöglich ist und warum dein Kaffee immer kalt wird — aber nie spontan wieder heiß. Die Kernidee: Energie bleibt erhalten (1. Hauptsatz), aber ihre Qualität nimmt unaufhaltsam ab (2. Hauptsatz).
 
 {{DIAGRAM:thermodynamics}}
 
-"Wenn zwei Systeme je im thermischen Gleichgewicht mit einem dritten System stehen, dann stehen sie auch untereinander im thermischen Gleichgewicht."
+---
 
-Dies ist die physikalische Grundlage der Temperaturmessung: Ein Thermometer erreicht mit dem Körper ein Gleichgewicht und zeigt dann denselben Temperaturwert an.
+## Nullter Hauptsatz: Was Temperatur überhaupt bedeutet
+
+Wenn System A im thermischen Gleichgewicht mit System C steht und System B ebenfalls im Gleichgewicht mit C steht, dann sind auch A und B im Gleichgewicht miteinander. Das klingt trivial — ist aber die physikalische Grundlage jeder Temperaturmessung: Ein Thermometer (C) erreicht mit deinem Körper (A) ein Gleichgewicht und zeigt dann denselben Temperaturwert an.
+
+> **Merke:** Der nullte Hauptsatz definiert Temperatur als messbare Größe. Ohne ihn wäre Fiebermessen physikalisch nicht begründbar.
+
+---
 
 ## Erster Hauptsatz: Energieerhaltung
 
+Die innere Energie U eines Systems kann sich nur auf zwei Wegen ändern: durch Wärmezufuhr (Q) oder durch mechanische Arbeit (W).
+
 **ΔU = Q + W**
 
-- ΔU: Änderung der inneren Energie [J]
-- Q: dem System zugeführte Wärme [J] (positiv: Wärme zugeführt)
-- W: am System verrichtete Arbeit [J] (positiv: Kompression/Arbeit von außen)
+- **ΔU** = Änderung der inneren Energie [J]
+- **Q** = dem System zugeführte Wärme [J] (positiv bei Zufuhr)
+- **W** = am System verrichtete Arbeit [J] (positiv bei Kompression)
 
-**Formelklartext:** ΔU = Q + W ist die **Energieerhaltung** der Thermodynamik: Die Änderung der inneren Energie des Systems ist gleich der **zugeführten Wärme** plus der **am System verrichteten Arbeit**. Wärme zuführen (Q > 0) oder Kompression (W > 0) erhöht U. **Vorzeichenkonvention prüfen:** Manche Bücher schreiben ΔU = Q − W, wenn W = vom System verrichtete Arbeit (z. B. Expansion). Bei isochoren Prozessen: W = 0 → ΔU = Q; bei adiabatischen: Q = 0 → ΔU = W.
+Die **innere Energie** U umfasst alle Bewegungsformen der Teilchen: Translation (geradlinige Bewegung), Rotation, Vibration und Bindungsenergien. Bei idealen Gasen hängt U nur von der Temperatur ab: U ∝ T.
 
-Alternativform: ΔU = Q − W_System (wenn W_System die vom System verrichtete Arbeit ist).
+> 💡 **Prüfungstipp — Vorzeichenkonvention:** Manche Lehrbücher schreiben ΔU = Q − W, wobei W dann die vom System verrichtete Arbeit ist (z. B. bei Expansion). Im MedAT-Kontext: Immer prüfen, welche Konvention angegeben ist. Merke: Bei ΔU = Q + W ist W positiv, wenn Arbeit am System geleistet wird (Kompression). Bei ΔU = Q − W ist W positiv, wenn das System Arbeit leistet (Expansion).
 
-Die innere Energie U ist die Gesamtenergie aller Mikrozustände (Translation, Rotation, Vibration der Teilchen, Bindungsenergien). Bei idealen Gasen gilt U ∝ T.
+Konsequenz: Energie kann weder erzeugt noch vernichtet werden — ein **Perpetuum mobile erster Art** (Maschine, die Energie aus dem Nichts erzeugt) ist unmöglich.
 
-Spezielle Zustandsänderungen:
+> **Merke:** ΔU = Q + W ist die Energieerhaltung der Thermodynamik. Jedes Joule, das ein System gewinnt, muss als Wärme oder Arbeit zugeführt worden sein.
 
-- **Isochor** (V = const): Ein geschlossener Druckkochtopf — das Volumen bleibt gleich, aber der Druck steigt mit der Temperatur. W = 0 → **ΔU = Q** (gesamte Wärme erhöht innere Energie).
+---
 
-- **Isobar** (p = const): Ein Kolben, der sich frei bewegen kann — der Druck bleibt gleich, aber das Volumen ändert sich. W = −p·ΔV → **ΔU = Q − p·ΔV**. Klinisch relevant: Lungenbelüftung bei Spontanatmung ist näherungsweise isobar (Atmosphärendruck bleibt konstant, Volumen ändert sich durch Diaphragmakontraktion).
+## Spezielle Zustandsänderungen
 
-- **Isotherm** (T = const): Langsame Expansion mit permanentem Wärmeaustausch — die Temperatur bleibt gleich, das Gas leistet Arbeit und nimmt dafür Wärme auf. **ΔU = 0 → Q = −W** (beim idealen Gas).
+Je nachdem, welche Größe konstant gehalten wird, vereinfacht sich der erste Hauptsatz auf charakteristische Weise:
 
-- **Adiabatisch** (Q = 0): Ein schneller Kompressionsvorgang — so schnell, dass keine Wärme entweichen kann. **ΔU = W** (alle Arbeit geht in innere Energie, Temperatur ändert sich).
+| Prozess | Konstant | W | 1. Hauptsatz | Anschauung |
+|---|---|---|---|---|
+| **Isochor** | V = const | W = 0 | **ΔU = Q** | Druckkochtopf: Volumen fest, Druck steigt mit T |
+| **Isobar** | p = const | W = −p·ΔV | **ΔU = Q − p·ΔV** | Kolben frei beweglich: Volumen passt sich an |
+| **Isotherm** | T = const | W ≠ 0 | **ΔU = 0 → Q = −W** | Langsame Expansion mit Wärmebad: T bleibt gleich |
+| **Adiabatisch** | Q = 0 | W ≠ 0 | **ΔU = W** | Schnelle Kompression: keine Zeit für Wärmeaustausch |
 
-Kein Perpetuum mobile erster Art kann existieren (Maschine, die Energie erzeugt).
+**Isochor** — Beispiel: Ein verschlossener Druckkochtopf wird erhitzt. Das Volumen kann sich nicht ändern, also ist die Volumenarbeit null. Die gesamte zugeführte Wärme erhöht direkt die innere Energie → die Temperatur steigt, der Druck steigt. Klinisch: Gasflaschen dürfen nicht erhitzt werden (Berstgefahr).
 
+**Isobar** — Beispiel: Ein Kolben, der sich frei bewegen kann. Der Druck bleibt gleich (Atmosphärendruck), aber das Volumen ändert sich. Ein Teil der zugeführten Wärme wird für Volumenarbeit (p·ΔV) verbraucht — deshalb ist die Temperaturerhöhung bei isobarer Erwärmung geringer als bei isochorer. Lungenbelüftung bei Spontanatmung ist näherungsweise isobar.
 
+**Isotherm** — Beispiel: Ein Gas dehnt sich langsam aus, während es permanent Wärme aus der Umgebung aufnimmt. Die Temperatur bleibt konstant → bei idealem Gas bleibt U konstant → die aufgenommene Wärme wird vollständig in Arbeit umgewandelt: Q = −W.
+
+**Adiabatisch** — Beispiel: Schnelle Kompression, so schnell, dass kein Wärmeaustausch stattfinden kann (Q = 0). Die gesamte Kompressionsarbeit geht in innere Energie → die Temperatur steigt. Deshalb wird eine Fahrradpumpe heiß. Dieselmotor: Luft wird adiabatisch so stark komprimiert, dass T über den Zündpunkt des Kraftstoffs steigt.
+
+> **Merke:** Isotherme Expansion: das Gas leistet Arbeit und nimmt dafür Wärme auf. Adiabatische Kompression: die gesamte Arbeit wird in innere Energie umgewandelt — darum wird die Pumpe heiß.
+
+---
 
 ## Zweiter Hauptsatz: Entropie und Irreversibilität
 
-**Formulierungen** (äquivalent):
-1. Wärme fließt nicht spontan von kalt nach warm (Clausius).
-2. Es gibt keine Maschine, die Wärme vollständig in Arbeit umwandelt (Kelvin-Planck).
-3. Die Entropie eines abgeschlossenen Systems nimmt bei irreversiblen Prozessen zu: **ΔS ≥ 0**.
+Der zweite Hauptsatz beantwortet die Frage, die der erste offen lässt: Wenn Energie erhalten bleibt, warum fließt Wärme dann nur in eine Richtung? Warum wird Kaffee kalt, statt die Tasse spontan heißer zu machen?
 
-**Entropie S** ist ein Maß für die Unordnung (Anzahl der Mikrozustände W): S = k_B · ln(W) (Boltzmann-Relation). Je größer die Entropie, desto wahrscheinlicher der Zustand.
+### Drei äquivalente Formulierungen
 
-Folgen:
-- Keine thermische Maschine kann 100 % der Wärme in Arbeit umwandeln.
-- Biologie scheinbar im Widerspruch? Nein: Der zweite Hauptsatz gilt für **abgeschlossene Systeme** (kein Energie-/Materieaustausch). Lebewesen sind **offene Systeme**: Sie nehmen hochgeordnete Nahrung (niedrige Entropie) auf und geben Wärme, CO₂ und Abfallprodukte ab (hohe Entropie). Lokal sinkt die Entropie im Organismus, aber die Gesamtentropie (Organismus + Umgebung) steigt — der zweite Hauptsatz bleibt gewahrt.
+1. **Clausius:** Wärme fließt spontan nur von warm nach kalt — nie umgekehrt. (Einen Kühlschrank betreiben erfordert Arbeit.)
+2. **Kelvin-Planck:** Es gibt keine Maschine, die Wärme vollständig in Arbeit umwandelt. (Kein Perpetuum mobile zweiter Art.)
+3. **Entropie:** Die Gesamtentropie eines abgeschlossenen Systems nimmt bei irreversiblen Prozessen zu: **ΔS_gesamt ≥ 0**.
 
+Alle drei Formulierungen sind logisch äquivalent — wer eine akzeptiert, muss die anderen ebenfalls akzeptieren.
 
+### Entropie: Intuition zuerst
 
-## Carnotscher Wirkungsgrad
+Bevor wir zur Formel kommen, das Bild: **Entropie misst die Anzahl möglicher Mikrozustände** — also auf wie viele verschiedene Weisen sich die Teilchen eines Systems anordnen können.
 
-Der maximal erreichbare Wirkungsgrad η einer Wärmekraftmaschine zwischen zwei Temperaturreservoirs:
+- **Eis** (niedriges S): Wassermoleküle sitzen in einem regelmäßigen Kristallgitter. Wenige Anordnungsmöglichkeiten.
+- **Flüssiges Wasser** (höheres S): Moleküle bewegen sich frei. Viel mehr mögliche Positionen und Geschwindigkeiten.
+- **Wasserdampf** (höchstes S): Moleküle füllen den gesamten verfügbaren Raum. Enormes Volumen an Mikrozuständen.
+
+Ein weiteres Beispiel: Ein Gas, das in eine Hälfte einer Box eingesperrt ist, hat weniger Mikrozustände als dasselbe Gas in der gesamten Box. Öffnet man die Trennwand, expandiert das Gas spontan — weil der expandierte Zustand wahrscheinlicher ist (mehr Mikrozustände). Es wird nie spontan in die Hälfte zurückkehren, obwohl das energetisch erlaubt wäre.
+
+**Die fundamentale Einsicht:** Systeme entwickeln sich spontan zu Zuständen mit höherer Wahrscheinlichkeit. Das ist der zweite Hauptsatz.
+
+### Entropie: Formale Definition
+
+**Boltzmann-Relation:** S = k_B · ln(W)
+
+Dabei ist k_B = 1,381 × 10⁻²³ J/K die Boltzmann-Konstante und W die Anzahl der Mikrozustände. Je mehr Mikrozustände, desto höher die Entropie.
+
+**Clausius-Definition (makroskopisch):** ΔS = Q_rev / T
+
+Die Entropieänderung eines reversiblen Prozesses ist die zugeführte Wärme geteilt durch die absolute Temperatur. Wichtig: Q_rev ist die Wärme bei einem reversiblen Prozess. Für irreversible Prozesse gilt: ΔS > Q/T.
+
+> **Merke:** Entropie ist kein Chaos — sie misst die Anzahl möglicher Mikrozustände. Mehr Mikrozustände = wahrscheinlicherer Zustand = höhere Entropie. Systeme entwickeln sich spontan zum wahrscheinlichsten Zustand.
+
+---
+
+## Dritter Hauptsatz: Der absolute Nullpunkt
+
+Beim absoluten Nullpunkt (T = 0 K = −273,15 °C) hat ein perfekter Kristall die Entropie null: **S(T → 0) = 0**. Das bedeutet: Es gibt nur einen einzigen Mikrozustand — alle Atome sitzen an ihrem Platz, keine Bewegung, keine Unordnung, W = 1, also S = k_B · ln(1) = 0.
+
+Der absolute Nullpunkt ist prinzipiell nicht erreichbar (Nernst-Theorem) — man kann ihm nur asymptotisch näherkommen.
+
+---
+
+## Carnot-Wirkungsgrad: Die theoretische Obergrenze
+
+Jede Wärmekraftmaschine (Dampfturbine, Verbrennungsmotor) nimmt Wärme Q_warm aus einem heißen Reservoir auf, wandelt einen Teil in Arbeit W um und gibt den Rest als Abwärme Q_kalt an ein kaltes Reservoir ab. Der **Carnot-Wirkungsgrad** gibt die theoretisch maximal mögliche Effizienz an:
 
 **η_Carnot = 1 − T_kalt / T_warm**
 
-(T in Kelvin!)
+**T muss in Kelvin eingesetzt werden!** Häufiger Fehler: 1 − 30/600 statt 1 − 303/873.
 
-**Formelklartext:** Der **Carnot-Wirkungsgrad** ist der theoretisch **maximale** Wirkungsgrad einer Wärmekraftmaschine zwischen zwei Temperaturreservoirs. Er hängt **nur** von den Temperaturen ab: Je größer T_warm oder je kleiner T_kalt, desto höher η. **Unbedingt T in Kelvin** einsetzen – 1 − (30+273)/(600+273) ≠ 1 − 30/600! Reale Maschinen haben immer η < η_Carnot wegen Reibung und Irreversibilität.
+- T_warm = 600 K, T_kalt = 300 K → η = 1 − 300/600 = **50 %**
+- Reale Maschinen erreichen weniger (Reibung, Wärmeleitung, Irreversibilitäten): Dampfkraftwerke ~35–45 %, Automotoren ~25–35 %
+- Verbesserung: T_warm erhöhen (Hochdruck-Dampf) oder T_kalt senken (kaltes Kühlwasser)
 
-- Reale Maschinen haben immer η < η_Carnot (Reibung, Wärmeverluste, Irreversibilität).
-- Beispiel: T_warm = 600 K, T_kalt = 300 K → η = 1 − 300/600 = 50 %.
+> **Merke:** η_Carnot = 1 − T_kalt/T_warm — T immer in Kelvin. Je größer der Temperaturunterschied, desto höher der maximal mögliche Wirkungsgrad. Kein realer Prozess kann diesen Wert übertreffen.
 
-## Biologische Anwendung: ATP-Synthese
+---
 
-Die Hauptsätze gelten auch für biologische Systeme — Mitochondrien sind keine Ausnahme. Sie arbeiten allerdings nicht wie Wärmekraftmaschinen (Carnot ist nicht anwendbar), sondern nutzen elektrochemische Gradienten (Protonenmotorische Kraft). Aus der Verbrennungsenergie von Glucose (ΔG° = −2870 kJ/mol) werden ≈ 30 mol ATP synthetisiert (je 30,5 kJ/mol freie Enthalpie): Genutzte Energie = 30 × 30,5 = 915 kJ → **η ≈ 34 %**. Die restlichen ~66 % werden als Wärme abgegeben und halten die Körpertemperatur aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zur Arbeit.
+## Gibbs-Energie: Spontaneität vorhersagen
 
-## Thermoregulation — Querverweis
+In Chemie und Biologie arbeitet man selten mit abgeschlossenen Systemen. Die **freie Enthalpie** (Gibbs-Energie) G verknüpft Enthalpie und Entropie bei konstantem Druck und Temperatur:
 
-Die Mechanismen der Wärmeabgabe (Strahlung, Konvektion, Verdunstung) werden in UK 02 ausführlich behandelt. Thermodynamisch relevant ist hier vor allem die **van-'t-Hoff-Regel**: Pro 1 °C Temperaturanstieg steigt der Grundumsatz um ~13 % (Q₁₀ ≈ 2–3). Deshalb wird bei Herzoperationen die Körpertemperatur auf 28–32 °C gesenkt — der Sauerstoffverbrauch sinkt um ~50 %, was das Gehirn bei Kreislaufstillstand schützt.
+**ΔG = ΔH − T · ΔS**
+
+- **ΔG < 0** → Reaktion läuft spontan (exergonisch)
+- **ΔG > 0** → Reaktion läuft nicht spontan (endergonisch, braucht Energiezufuhr)
+- **ΔG = 0** → Gleichgewicht
+
+Die vier Kombinationen von ΔH und ΔS:
+
+| ΔH | ΔS | ΔG | Spontaneität |
+|---|---|---|---|
+| − (exotherm) | + (Entropie steigt) | immer < 0 | **immer spontan** |
+| − (exotherm) | − (Entropie sinkt) | < 0 bei niedrigem T | spontan bei **niedrigen T** |
+| + (endotherm) | + (Entropie steigt) | < 0 bei hohem T | spontan bei **hohen T** |
+| + (endotherm) | − (Entropie sinkt) | immer > 0 | **nie spontan** |
+
+Beispiel: Eis schmelzen (ΔH > 0, ΔS > 0) — spontan erst oberhalb von 0 °C, wenn T·ΔS > ΔH.
+
+> **Merke:** ΔG = ΔH − TΔS. Spontan wenn ΔG < 0. Bei endothermen Reaktionen mit Entropiezunahme entscheidet die Temperatur.
+
+---
+
+## Biologie und der zweite Hauptsatz
+
+Lebende Organismen bauen aus einfachen Molekülen hochstrukturierte Proteine, DNA und Zellorganellen — scheinbar eine Abnahme der Entropie. Widerspricht das dem zweiten Hauptsatz?
+
+**Nein.** Der zweite Hauptsatz gilt für **abgeschlossene Systeme** (kein Energie- oder Materieaustausch mit der Umgebung). Lebewesen sind **offene Systeme**: Sie nehmen hochgeordnete Nahrung (niedrige Entropie) auf und geben Wärme, CO₂ und Abfallprodukte ab (hohe Entropie). Die Entropie der Umgebung steigt dabei stärker als die Entropie im Organismus sinkt. Die **Gesamtentropie** (Organismus + Umgebung) nimmt zu — der zweite Hauptsatz bleibt gewahrt.
+
+**ATP-Hydrolyse als Motor:** Viele biochemische Reaktionen sind endergonisch (ΔG > 0) und würden allein nie ablaufen — etwa Proteinsynthese oder Ionenpumpen. Sie werden an die Hydrolyse von ATP gekoppelt (ΔG° = −30,5 kJ/mol). Die Summe der ΔG-Werte wird negativ → der gekoppelte Prozess wird spontan. ATP ist somit die universelle Energiewährung, die nicht-spontane Reaktionen thermodynamisch ermöglicht.
+
+**Körpertemperatur:** Von der Verbrennungsenergie der Glucose (ΔG° = −2870 kJ/mol) werden ≈ 30 mol ATP synthetisiert (30 × 30,5 = 915 kJ), also η ≈ 34 %. Die restlichen ~66 % werden als Wärme freigesetzt und halten die Körpertemperatur bei 37 °C aufrecht. Pro Tag (2000 kcal ≈ 8400 kJ) ergibt das ~5500 kJ Wärme — eine Durchschnittsleistung von etwa 64 W im Ruhezustand.
+
+> **Merke:** Lebewesen verletzen den zweiten Hauptsatz nicht — sie sind offene Systeme, die Entropie in die Umgebung exportieren. ATP-Hydrolyse treibt nicht-spontane Reaktionen an, indem sie ΔG der Gesamtreaktion negativ macht.
+
+---
 
 ## Kalorimetrie: Brennwerte messen
 
-Um den Energieumsatz quantitativ zu erfassen, nutzt man die **Kalorimetrie**. Im **Bombenkalorimeter** verbrennt eine Probe vollständig bei V = const in reinem O₂; die freigesetzte Wärme Q = ΔU (isochor) liefert den **physikalischen Brennwert**: Kohlenhydrate ~17 kJ/g, Fette ~39 kJ/g, Proteine ~23 kJ/g. Der **physiologische Brennwert** von Proteinen ist mit ~17 kJ/g geringer, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff ausscheidet.
+Im **Bombenkalorimeter** verbrennt eine Probe vollständig bei V = const in reinem O₂; die freigesetzte Wärme Q = ΔU (isochor) liefert den **physikalischen Brennwert**: Kohlenhydrate ~17 kJ/g, Fette ~39 kJ/g, Proteine ~23 kJ/g. Der **physiologische Brennwert** von Proteinen ist mit ~17 kJ/g geringer, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff ausscheidet.
 
-Klinisch relevanter ist die **indirekte Kalorimetrie**: Über den O₂-Verbrauch und die CO₂-Produktion wird der Grundumsatz (Basal Metabolic Rate) berechnet — das Standardverfahren in der Ernährungsmedizin und Intensivpflege.
+Die **indirekte Kalorimetrie** misst O₂-Verbrauch und CO₂-Produktion → Grundumsatz (BMR). Standardverfahren in Ernährungsmedizin und Intensivpflege.
 
-> **Merke:** Der physiologische Brennwert von Proteinen ist geringer als der physikalische, weil der Körper Stickstoff nicht zu N₂ oxidiert, sondern als Harnstoff (energiereich) ausscheidet.
+> **Merke:** Der physiologische Brennwert von Proteinen (~17 kJ/g) ist geringer als der physikalische (~23 kJ/g), weil der Körper Stickstoff als Harnstoff statt als N₂ ausscheidet.
 
-## Dritter Hauptsatz (ergänzend)
+---
 
-Beim absoluten Nullpunkt (0 K) ist die Entropie eines perfekten Kristalls null: S(T→0) = 0. Der absolute Nullpunkt ist nicht erreichbar (Nernst).
+## Häufige Missverständnisse
+
+- **"Entropie = Chaos/Unordnung"** — zu vereinfacht. Entropie misst die Anzahl der Mikrozustände (Wahrscheinlichkeit), nicht Unordnung im Alltagssinn. Ein Kartenspiel hat dieselbe Entropie, egal ob sortiert oder gemischt.
+- **"Lebewesen widerlegen den 2. Hauptsatz"** — falsch. Sie verringern ihre eigene Entropie lokal, aber die Gesamtentropie (inkl. Umgebung) steigt immer.
+- **"T in Celsius beim Carnot-Wirkungsgrad"** — der häufigste Rechenfehler. Immer Kelvin verwenden.
+- **"Adiabatisch = isotherm"** — Verwechslungsgefahr. Adiabatisch: kein Wärmeaustausch (Q = 0), Temperatur ändert sich. Isotherm: Temperatur konstant, aber Wärmeaustausch findet statt.
+
+---
 
 ## Rechenbeispiele
 
 **Beispiel 1 — Carnot-Wirkungsgrad eines Dampfkraftwerks:**
-T_warm = 550 °C = 823 K (Dampf), T_kalt = 30 °C = 303 K (Flusswasser):
-η_Carnot = 1 − 303/823 = 1 − 0,368 = 0,632 = 63,2 %. Reales Kraftwerk: η ≈ 40 %. Verbesserung? T_warm erhöhen (Hochdruck-Dampf) oder T_kalt senken (kaltes Kühlwasser).
+T_warm = 550 °C = 823 K, T_kalt = 30 °C = 303 K:
+η_Carnot = 1 − 303/823 = 1 − 0,368 = **63,2 %**. Reales Kraftwerk: η ≈ 40 %.
 
-**Beispiel 2 — Energiebilanz der Glucose-Oxidation:**
-Glucose: ΔG° = −2870 kJ/mol. Daraus werden ≈ 30 mol ATP synthetisiert, je 30,5 kJ/mol freie Enthalpie:
-Genutzte Energie: 30 × 30,5 = 915 kJ. Wirkungsgrad: η = 915/2870 ≈ **34 %** (≈ 32 %, je nach ATP-Ausbeute 30–32 mol; als Richtwert gilt ~34 %). Die restlichen ~66 % (≈ 1955 kJ) werden als Wärme freigesetzt.
-Pro Tag (2000 kcal ≈ 8400 kJ): ~5500 kJ Wärme → Durchschnittsleistung: 5 500 000 J / 86 400 s ≈ 64 W (Ruhemetabolismus).
+**Beispiel 2 — Wärmekraftmaschine: Arbeit und Abwärme:**
+Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
+η = W/Q_warm = 400/1200 = **33,3 %**. Carnot bei 600 K / 300 K: η = 50 % → Maschine schöpft 66,6 % des Maximums aus.
 
-**Beispiel 3 — Wärmekraftmaschine: Arbeit und Abwärme:**
-Maschine nimmt Q_warm = 1200 J auf, verrichtet W = 400 J Nutzarbeit.
-Abwärme: Q_kalt = Q_warm − W = 800 J. Wirkungsgrad: η = W/Q_warm = 400/1200 = 33,3 %.
-Zum Vergleich Carnot bei T_warm = 600 K, T_kalt = 300 K: η = 1 − 300/600 = 50 %. Die Maschine schöpft also nur 33,3/50 = 66,6 % des theoretischen Maximums aus.
+**Beispiel 3 — Entropieänderung beim Eisschmelzen:**
+1 kg Eis bei 273 K: Q = m · L_f = 1 × 334 000 = 334 000 J.
+ΔS = Q/T = 334 000 / 273 = **1224 J/K** — große Entropiezunahme, weil die geordnete Kristallstruktur in ungeordnete Flüssigkeit übergeht.
 
-**Beispiel 4 — Entropieänderung beim Eisschmelzen:**
-1 kg Eis schmilzt bei T = 273 K (0 °C). Schmelzwärme: Q = m · L_f = 1 × 334 000 = 334 000 J.
-Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme, weil die geordnete Kristallstruktur des Eises in die ungeordnete Flüssigkeitsstruktur übergeht.
+**Beispiel 4 — Gibbs-Energie der ATP-Hydrolyse:**
+ΔG° = −30,5 kJ/mol. Negatives ΔG → spontan. In der Zelle ist ΔG sogar noch negativer (~−54 kJ/mol), weil die ATP-Konzentration hoch und die ADP-Konzentration niedrig ist. Diese große negative ΔG treibt gekoppelte endergonische Reaktionen an.
+
+---
 
 ## Klinische Vertiefung
 
-**Kalorimetrie und Ernährungsmedizin:** Der Brennwert der Nahrung (kcal/kJ) wird kalorimetrisch bestimmt: Vollständige Verbrennung im Bombenkalorimeter (Q = ΔU bei V = const). Der physiologische Brennwert ist etwas geringer (Proteine werden nicht vollständig oxidiert → Harnstoff). Grundumsatz (Basal Metabolic Rate): ≈ 4,2 kJ/(kg·h) für Männer, ≈ 3,5 kJ/(kg·h) für Frauen — Harris-Benedict-Formel in der Ernährungsberatung.
+**Maligne Hyperthermie:** Volatile Anästhetika (Halothan) und Succinylcholin können eine unkontrollierte Ca²⁺-Freisetzung im Muskel auslösen → maximaler Metabolismus → Körpertemperatur steigt auf >40 °C in Minuten. Thermodynamisch: Die metabolische Wärmeproduktion übersteigt die Abgabekapazität (Strahlung + Konvektion + Verdunstung) massiv. Therapie: Dantrolen (blockiert Ryanodinrezeptor) + aggressive Kühlung.
 
-**Maligne Hyperthermie:** Eine pharmakogenetische Störung, bei der volatile Anästhetika (z. B. Halothan) und Succinylcholin eine unkontrollierte Calciumfreisetzung im Muskel auslösen → maximaler Metabolismus → Körpertemperatur steigt auf >40 °C in Minuten. Thermodynamisch betrachtet: Die metabolische Wärmeproduktion übersteigt die Wärmeabgabekapazität (Strahlung + Konvektion + Verdunstung) massiv. Therapie: Dantrolen (blockiert Ryanodinrezeptor) + aggressive Kühlung.
+**Therapeutische Hypothermie:** Bei Herzoperationen wird die Körpertemperatur auf 28–32 °C gesenkt. Van-'t-Hoff-Regel: Pro 1 °C Temperaturabfall sinkt der Grundumsatz um ~13 % (Q₁₀ ≈ 2–3). Bei 28 °C ist der O₂-Verbrauch um ~50 % reduziert — das schützt das Gehirn bei Kreislaufstillstand.
 
-**Kryotherapie und Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem Stickstoff). Der Phasenübergang Wasser→Eis in den Zellen zerstört diese durch Eiskristallbildung und osmotischen Stress. Nutzung: Warzenentfernung, Tumortherapie (Leber, Prostata). Thermodynamisch: Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f), die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.
-
-> **Merke:** Der zweite Hauptsatz der Thermodynamik: Die Entropie eines abgeschlossenen Systems nimmt nie ab (ΔS ≥ 0). Wärme fließt spontan nur von warm nach kalt — nie umgekehrt.
-
-> **Merke:** Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der maximal mögliche Wirkungsgrad einer Wärmekraftmaschine. Kein realer Prozess kann diesen Wert übertreffen.`,
+**Kryochirurgie:** Kontrolliertes Einfrieren von Gewebe (−20 bis −196 °C mit flüssigem N₂). Der Phasenübergang Wasser → Eis zerstört Zellen durch Eiskristallbildung und osmotischen Stress. Dem Gewebe wird die Schmelzwärme entzogen (Q = m · L_f); die Temperatur bleibt während des Phasenübergangs konstant bei 0 °C.`,
 
       diagram: "thermodynamics",
       lernziele: [
         "Die vier thermodynamischen Hauptsätze mit Formeln und Formulierungen wiedergeben",
         "ΔU = Q + W auf konkrete Zustandsänderungen (isochor, isobar, isotherm, adiabatisch) anwenden",
         "Den Carnot-Wirkungsgrad berechnen und interpretieren",
-        "Die Bedeutung der Entropie und den zweiten Hauptsatz auf biologische Systeme anwenden",
-        "Den bioenergischen Wirkungsgrad der ATP-Synthese mit thermodynamischen Konzepten verknüpfen",
+        "Entropie als Anzahl der Mikrozustände erklären und die drei Formulierungen des 2. Hauptsatzes unterscheiden",
+        "ΔG = ΔH − TΔS anwenden und die Spontaneität von Reaktionen beurteilen",
+        "Erklären, warum Lebewesen den zweiten Hauptsatz nicht verletzen",
       ],
 
       sections: [
         {
-          heading: "Erster Hauptsatz: Energieerhaltung in der Thermodynamik",
-          text: "ΔU = Q + W besagt, dass die innere Energie eines Systems nur durch Wärme (Q) und Arbeit (W) geändert werden kann. Energie wird nicht erzeugt oder vernichtet. Bei isochorer Änderung (V = const) ist W = 0, sodass ΔU = Q. Bei isothermer Änderung eines idealen Gases ist ΔU = 0 (T = const → U = const), also Q = −W. Bei adiabatischer Kompression (Q = 0) steigt die Temperatur, weil ΔU = W > 0. Diese Fälle sind MedAT-relevant: Kenntnis der Vorzeichen und Bedingungen wird geprüft.",
+          heading: "Erster Hauptsatz: Energieerhaltung",
+          text: "ΔU = Q + W — die innere Energie eines Systems ändert sich nur durch Wärme (Q) und Arbeit (W). Isochor (V=const): W=0 → ΔU=Q. Isotherm (T=const, ideales Gas): ΔU=0 → Q=−W. Adiabatisch (Q=0): ΔU=W — Kompression erhöht T. Isobar (p=const): ΔU=Q−p·ΔV. Vorzeichenkonvention beachten: Bei ΔU=Q+W ist W positiv bei Kompression (Arbeit am System).",
           merksatz:
-            "ΔU = Q + W — Energieerhaltung gilt immer; Energie kann nur umgewandelt, nie erzeugt oder vernichtet werden.",
+            "ΔU = Q + W — Energieerhaltung der Thermodynamik. Energie wird nie erzeugt oder vernichtet, nur umgewandelt.",
         },
         {
-          heading: "Zweiter Hauptsatz und Carnot-Wirkungsgrad",
-          text: "Der zweite Hauptsatz verbietet perfekte Maschinen: Keine Maschine kann Wärme vollständig in Arbeit umwandeln. Der Carnot-Prozess definiert die theoretische Obergrenze: η = 1 − T_kalt/T_warm (Kelvin). Um den Wirkungsgrad zu verbessern, muss man die Quelltemperatur T_warm erhöhen oder die Senkentemperatur T_kalt senken. Reale Kraftwerke (Dampfturbinen) erreichen η ≈ 35–45 %, weit unterhalb des Carnot-Werts, da Reibung und Irreversibilität auftreten.",
+          heading: "Zweiter Hauptsatz: Entropie und Carnot",
+          text: "Drei äquivalente Formulierungen: (1) Clausius: Wärme fließt spontan nur von warm nach kalt. (2) Kelvin-Planck: Keine Maschine wandelt Wärme vollständig in Arbeit um. (3) ΔS_gesamt ≥ 0. Entropie misst die Anzahl der Mikrozustände (S = k_B · ln W) — nicht 'Unordnung'. Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm (T in Kelvin!) ist die theoretische Obergrenze jeder Wärmekraftmaschine.",
           merksatz:
-            "η_Carnot = 1 − T_kalt/T_warm — T immer in Kelvin; je größer der Temperaturunterschied, desto höher der maximal mögliche Wirkungsgrad.",
+            "Entropie misst Mikrozustände, nicht Chaos. η_Carnot = 1 − T_kalt/T_warm — T immer in Kelvin, kein realer Prozess übertrifft diesen Wert.",
         },
         {
-          heading: "Entropie und Biologie",
-          text: "Lebende Systeme sind offene Systeme: Sie nehmen hoch strukturierte Energie (Nahrung, Licht) auf und geben unstrukturierte Wärme ab, wodurch sie intern Ordnung aufrechterhalten können (Protein-Synthese, Zellteilung). Der Gesamtentropie des Universums nimmt trotzdem zu — das Leben verletzt den zweiten Hauptsatz nicht. ATP-Synthese hat einen Wirkungsgrad von ≈ 34 %, die verbleibenden ~66 % der Glucose-Verbrennungsenergie dienen der Körperwärmeerzeugung.",
+          heading: "Gibbs-Energie und Biologie",
+          text: "ΔG = ΔH − TΔS bestimmt die Spontaneität bei konstantem p und T: ΔG < 0 = spontan. Lebewesen sind offene Systeme — sie exportieren Entropie (Wärme, CO₂) an die Umgebung. ATP-Hydrolyse (ΔG° = −30,5 kJ/mol) treibt endergonische Reaktionen an, indem sie ΔG der Gesamtreaktion negativ macht. ATP-Synthese: η ≈ 34 %, ~66 % werden als Körperwärme freigesetzt.",
           merksatz:
-            "Lebewesen sind offene Systeme — sie exportieren Entropie, um intern Ordnung zu erzeugen. Kein Widerspruch zum 2. Hauptsatz.",
+            "ΔG = ΔH − TΔS — spontan wenn ΔG < 0. Lebewesen verletzen den 2. Hauptsatz nicht: offene Systeme, die Entropie exportieren.",
         },
       ],
 
       merksätze: [
-        "0. Hauptsatz: Thermisches Gleichgewicht — Grundlage der Temperaturmessung.",
+        "0. Hauptsatz: Thermisches Gleichgewicht definiert Temperatur — Grundlage der Temperaturmessung.",
         "1. Hauptsatz: ΔU = Q + W — Energieerhaltung, kein Perpetuum mobile erster Art.",
-        "2. Hauptsatz: Entropie abgeschlossener Systeme nimmt nie ab (ΔS ≥ 0).",
-        "Carnot-Wirkungsgrad: η = 1 − T_kalt/T_warm — maximaler Wirkungsgrad, T in Kelvin.",
-        "Adiabatische Kompression: Die gesamte Arbeit wird in innere Energie umgewandelt — deshalb wird eine Fahrradpumpe heiß.",
-        "Isotherme Expansion: Das Gas leistet Arbeit, muss aber gleichzeitig Wärme aufnehmen, um nicht abzukühlen.",
+        "2. Hauptsatz: ΔS_gesamt ≥ 0. Drei äquivalente Formulierungen: Clausius, Kelvin-Planck, Entropie.",
+        "Entropie = Anzahl der Mikrozustände (S = k_B · ln W), nicht einfach 'Unordnung'.",
+        "3. Hauptsatz: Bei T = 0 K ist S = 0 (perfekter Kristall) — 0 K nicht erreichbar.",
+        "Carnot: η = 1 − T_kalt/T_warm — T in Kelvin, theoretisches Maximum.",
+        "ΔG = ΔH − TΔS — spontan wenn ΔG < 0. Endotherme Reaktion mit ΔS > 0: spontan ab T > ΔH/ΔS.",
         "ATP-Wirkungsgrad ≈ 34 % — restliche ~66 % werden als Körperwärme abgegeben.",
-        "Lebewesen verletzen den 2. Hauptsatz nicht: Sie sind offene Systeme, die Entropie exportieren.",
-        "Dritter Hauptsatz: Bei T = 0 K ist S = 0 (perfekter Kristall) — 0 K nicht erreichbar.",
+        "Lebewesen sind offene Systeme, die lokal Entropie senken, aber global die Gesamtentropie erhöhen.",
+        "Adiabatische Kompression: Q=0 → ΔU=W → Temperatur steigt (Fahrradpumpe, Dieselmotor).",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
           "Erläutern Sie den zweiten Hauptsatz der Thermodynamik und diskutieren Sie, ob lebende Systeme diesen scheinbar verletzen.",
         answer:
-          "Der zweite Hauptsatz der Thermodynamik lässt sich auf mehrere äquivalente Weisen formulieren: (1) Wärme fließt nicht spontan von einem kälteren zu einem wärmeren Körper (Clausius). (2) Es existiert keine zyklisch arbeitende Maschine, die Wärme aus einem Reservoir vollständig in Arbeit umwandelt (Kelvin-Planck). (3) Bei irreversiblen Prozessen in abgeschlossenen Systemen nimmt die Entropie zu (ΔS ≥ 0). Die Entropie S ist ein Maß für die Unordnung eines Systems: S = k_B · ln(W), wobei W die Anzahl der Mikrozustände ist. Lebende Systeme scheinen dem zu widersprechen: Sie bauen aus einfachen Molekülen hochstrukturierte Proteine, DNA und Organellen — offenbar Abnahme der Entropie. Dies ist jedoch kein Widerspruch, da Lebewesen offene Systeme sind. Sie nehmen hoch strukturierte Energie (z. B. chemische Energie der Nahrung, Lichtenergie) auf und geben niedrig strukturierte Energie (Wärme, CO₂, Metaboliten) ab. Die Entropie in der Umgebung steigt dabei stärker als die Entropie im Organismus sinkt. Die Gesamtentropie des Universums nimmt zu — der zweite Hauptsatz wird nicht verletzt. Praktisch bedeutet das: Kein Lebewesen kann ohne Energiezufuhr Ordnung erzeugen; der permanente Energiestrom ist Voraussetzung für Lebensprozesse.",
+          "Der zweite Hauptsatz lässt sich auf drei äquivalente Weisen formulieren: (1) Wärme fließt spontan nur von warm nach kalt (Clausius). (2) Keine zyklisch arbeitende Maschine kann Wärme vollständig in Arbeit umwandeln (Kelvin-Planck). (3) Die Gesamtentropie eines abgeschlossenen Systems nimmt bei irreversiblen Prozessen zu (ΔS_gesamt ≥ 0). Entropie S misst die Anzahl der Mikrozustände: S = k_B · ln(W). Lebewesen scheinen dem zu widersprechen, da sie aus einfachen Molekülen hochstrukturierte Proteine und DNA aufbauen — scheinbar eine Entropieabnahme. Dies ist kein Widerspruch, weil Lebewesen offene Systeme sind: Sie nehmen niedrigentropische Nahrung auf und geben hochentropische Wärme und Abfallprodukte ab. Die Entropie der Umgebung steigt stärker als die Entropie im Organismus sinkt → die Gesamtentropie nimmt zu. ATP-Hydrolyse (ΔG° = −30,5 kJ/mol) koppelt endergonische Reaktionen an exergonische und macht so nicht-spontane Prozesse thermodynamisch möglich.",
       },
 
       klinischerBezug:
-        "ATP-Synthese (~34 % Wirkungsgrad), Körperwärme als metabolisches Nebenprodukt (Fieber bei erhöhtem Stoffwechsel), Wärmekraftmaschinen-Analogie für Herz-Kreislaufarbeit.",
+        "ATP-Synthese (~34 % Wirkungsgrad), Körperwärme als metabolisches Nebenprodukt, maligne Hyperthermie (unkontrollierte Wärmeproduktion), therapeutische Hypothermie (O₂-Verbrauchssenkung bei Herzchirurgie), Gibbs-Energie als Kriterium für biochemische Spontaneität.",
 
       selfTest: [
         {
@@ -870,9 +959,9 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
           ],
           correctIndex: 0,
           explanation:
-            "Bei isochorer Zustandsänderung gilt V = const, daher ist die Volumenarbeit W = −p·ΔV = 0. Nach dem ersten Hauptsatz folgt: ΔU = Q + 0 = Q. Die gesamte zugeführte Wärme erhöht die innere Energie des Gases, was sich als Temperaturanstieg manifestiert. Bei konstantem Volumen findet also kein Energieaustausch durch mechanische Arbeit statt.",
+            "Isochor: V = const → ΔV = 0 → Volumenarbeit W = 0. Nach dem ersten Hauptsatz: ΔU = Q + 0 = Q. Die gesamte zugeführte Wärme erhöht die innere Energie, was sich als Temperaturanstieg zeigt.",
           hints: [
-            "Isochor: V = const → Volumenänderung ΔV = 0 → Arbeit W = p·ΔV = 0.",
+            "Isochor: V = const → W = p·ΔV = 0.",
             "1. Hauptsatz: ΔU = Q + W. Wenn W = 0, dann ΔU = Q.",
           ],
           tags: ["thermodynamik", "isochor", "erster-hauptsatz"],
@@ -884,64 +973,81 @@ Entropieänderung: ΔS = Q/T = 334 000 / 273 = 1224 J/K. Große Entropiezunahme,
           options: ["25 %", "75 %", "50 %", "100 %", "38 %"],
           correctIndex: 2,
           explanation:
-            "Der Carnot-Wirkungsgrad gibt die theoretische Obergrenze an: η = 1 − T_kalt/T_warm = 1 − 250/500 = 1 − 0,5 = 0,5 = 50 %. Reale Maschinen erreichen diesen Wert nie, da Reibung, Wärmeleitung und andere Irreversibilitäten auftreten. Ein Wirkungsgrad von 100 % würde den zweiten Hauptsatz verletzen.",
+            "Carnot-Wirkungsgrad: η = 1 − T_kalt/T_warm = 1 − 250/500 = 0,5 = 50 %. Reale Maschinen erreichen weniger wegen Reibung und Irreversibilitäten. 100 % würde den zweiten Hauptsatz verletzen.",
           hints: [
-            "Carnot: η = 1 − T_kalt/T_warm. T muss in Kelvin angegeben sein.",
+            "Carnot: η = 1 − T_kalt/T_warm. T in Kelvin.",
             "Beide Temperaturen sind schon in Kelvin: η = 1 − 250/500.",
           ],
           tags: ["carnot", "wirkungsgrad", "wärmekraftmaschine"],
           difficulty: 1,
         },
         {
-          question: "Ein Gas wird adiabatisch komprimiert. Was passiert mit der Temperatur?",
+          question: "Welche der folgenden Aussagen über Entropie ist FALSCH?",
           options: [
-            "Die Temperatur bleibt konstant.",
-            "Die Temperatur hängt nur vom Volumen ab.",
-            "Die Temperatur sinkt.",
-            "Die Temperatur steigt.",
-            "Keine Temperaturänderung, da Q = 0.",
+            "Entropie misst die Anzahl möglicher Mikrozustände eines Systems.",
+            "Beim Schmelzen von Eis nimmt die Entropie zu.",
+            "In einem abgeschlossenen System kann die Gesamtentropie abnehmen, wenn ein Teil des Systems Ordnung aufbaut.",
+            "Die Boltzmann-Relation lautet S = k_B · ln(W).",
+            "Am absoluten Nullpunkt hat ein perfekter Kristall die Entropie null.",
           ],
-          correctIndex: 3,
+          correctIndex: 2,
           explanation:
-            "Adiabatisch bedeutet Q = 0 (kein Wärmeaustausch). Bei Kompression wird Arbeit am System verrichtet: W > 0. Aus dem ersten Hauptsatz folgt: ΔU = Q + W = 0 + W = W > 0. Steigende innere Energie bedeutet steigende Temperatur (da U ∝ T für ideale Gase). Praktisches Beispiel: Dieselmotor — Luft wird adiabatisch so stark komprimiert, dass die Temperatur über den Zündpunkt des Kraftstoffs steigt.",
+            "In einem abgeschlossenen System kann die Gesamtentropie nie abnehmen (ΔS_gesamt ≥ 0, zweiter Hauptsatz). Ein Teil kann lokal Entropie verringern, aber nur wenn ein anderer Teil mindestens ebenso viel Entropie gewinnt. Die Gesamtbilanz ist immer positiv oder null.",
           hints: [
-            "Adiabatisch: Q = 0. Kompression: Arbeit wird am Gas verrichtet → W > 0.",
-            "ΔU = Q + W = 0 + W > 0 → innere Energie steigt → Temperatur steigt.",
+            "Was sagt der zweite Hauptsatz über abgeschlossene Systeme?",
+            "Lokal kann Entropie sinken — aber was gilt für die Gesamtentropie?",
           ],
-          tags: ["adiabatisch", "kompression", "temperatur"],
+          tags: ["entropie", "zweiter-hauptsatz", "mikrozustände"],
           difficulty: 2,
         },
         {
           question:
-            "Die ATP-Synthese in den Mitochondrien hat einen Wirkungsgrad von ca. 34 %. Was geschieht mit den restlichen ~66 % der Energie der Nahrung?",
+            "Eine Reaktion hat ΔH = +40 kJ/mol und ΔS = +120 J/(mol·K). Ab welcher Temperatur wird sie spontan?",
           options: [
-            "Sie werden in ADP gespeichert.",
-            "Sie werden direkt als mechanische Arbeit genutzt.",
-            "Sie verlassen den Körper als Licht.",
-            "Sie werden in Fett umgewandelt.",
-            "Sie werden als Wärme an den Körper und die Umgebung abgegeben.",
+            "Bei jeder Temperatur spontan",
+            "Nie spontan",
+            "Ab ca. 333 K (60 °C)",
+            "Ab ca. 480 K (207 °C)",
+            "Ab ca. 40 K (−233 °C)",
           ],
-          correctIndex: 4,
+          correctIndex: 2,
           explanation:
-            "Gemäß dem zweiten Hauptsatz kann kein Prozess 100 % der Energie in eine andere Form umwandeln. Bei der oxidativen Phosphorylierung werden ≈ 34 % der freien Enthalpie der Glucose (ΔG° = −2870 kJ/mol) in ATP-Bindungsenergie überführt (30 × 30,5 kJ = 915 kJ; 915/2870 ≈ 34 %). Die verbleibenden ~66 % werden als Wärme freigesetzt und halten die Körpertemperatur bei 37 °C aufrecht. Bei körperlicher Aktivität steigt die Wärmeproduktion proportional zum Energieumsatz — daher erhöht sich die Körpertemperatur bei Sport leicht.",
+            "ΔG = ΔH − TΔS. Spontan wenn ΔG < 0, also ΔH < TΔS → T > ΔH/ΔS = 40 000 J / 120 J/K = 333 K (≈ 60 °C). Unterhalb dieser Temperatur ist ΔG > 0 (nicht spontan), darüber ΔG < 0 (spontan). Achtung: ΔH in J umrechnen (40 kJ = 40 000 J)!",
           hints: [
-            "Wirkungsgrad ~34 % bedeutet: Von 100 % Nahrungsenergie werden ~34 % nutzbar (ATP), der Rest?",
-            "Thermodynamisches Prinzip: Nicht nutzbare Energie wird als Wärme abgegeben (2. Hauptsatz).",
+            "ΔG = ΔH − TΔS. Spontan wenn ΔG < 0.",
+            "Grenztemperatur: ΔG = 0 → T = ΔH/ΔS. Einheiten beachten!",
           ],
-          tags: ["atp-synthese", "wirkungsgrad", "thermodynamik"],
+          tags: ["gibbs-energie", "spontaneität", "thermodynamik"],
+          difficulty: 3,
+        },
+        {
+          question:
+            "Warum verletzen lebende Organismen den zweiten Hauptsatz der Thermodynamik NICHT?",
+          options: [
+            "Weil biologische Reaktionen reversibel ablaufen.",
+            "Weil Lebewesen offene Systeme sind, die Entropie an die Umgebung exportieren.",
+            "Weil ATP die Entropie im gesamten Universum verringert.",
+            "Weil der zweite Hauptsatz nur für Gase gilt, nicht für Flüssigkeiten.",
+            "Weil Enzyme die Entropieänderung einer Reaktion umkehren können.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der zweite Hauptsatz gilt für abgeschlossene Systeme. Lebewesen sind offene Systeme: Sie nehmen niedrigentropische Nahrung auf und geben hochentropische Wärme und Abfallprodukte ab. Die Gesamtentropie (Organismus + Umgebung) steigt — der zweite Hauptsatz bleibt gewahrt.",
+          hints: [
+            "Welcher Systemtyp ist ein Lebewesen — offen, geschlossen oder abgeschlossen?",
+            "Was passiert mit der Entropie der Umgebung, wenn ein Organismus Ordnung aufbaut?",
+          ],
+          tags: ["entropie", "biologie", "zweiter-hauptsatz"],
           difficulty: 2,
         },
         {
           question:
-            "Eine Wärmekraftmaschine nimmt Q_warm = 800 J Wärme aus dem heißen Reservoir auf und gibt Q_kalt = 500 J an das kalte Reservoir ab. Welchen Wirkungsgrad hat sie?",
+            "Eine Wärmekraftmaschine nimmt Q_warm = 800 J auf und gibt Q_kalt = 500 J ab. Welchen Wirkungsgrad hat sie?",
           options: ["62,5 %", "37,5 %", "50 %", "25 %", "100 %"],
           correctIndex: 1,
           explanation:
-            "Die verrichtete Arbeit beträgt W = Q_warm − Q_kalt = 800 J − 500 J = 300 J. Der Wirkungsgrad ist η = W/Q_warm = 300/800 = 0,375 = 37,5 %. Dies ist deutlich unter dem Carnot-Wirkungsgrad (der nur von den Temperaturen abhängt) — reale Maschinen haben immer Verluste. Erinnerung: η = W/Q_warm = 1 − Q_kalt/Q_warm.",
-          hints: [
-            "Nutzarbeit: W = Q_warm − Q_kalt. Wirkungsgrad: η = W/Q_warm.",
-            "W = 800 − 500 = 300 J. η = 300/800.",
-          ],
+            "Nutzarbeit: W = Q_warm − Q_kalt = 800 − 500 = 300 J. Wirkungsgrad: η = W/Q_warm = 300/800 = 0,375 = 37,5 %. Alternativ: η = 1 − Q_kalt/Q_warm = 1 − 500/800 = 37,5 %.",
+          hints: ["W = Q_warm − Q_kalt. η = W/Q_warm.", "300/800 = ?"],
           tags: ["wärmekraftmaschine", "wirkungsgrad", "thermodynamik"],
           difficulty: 2,
         },

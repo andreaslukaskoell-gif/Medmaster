@@ -2378,47 +2378,157 @@ Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 �
         "Gegenstromprinzip",
         "Harnleiter",
       ],
-      content: `{{DIAGRAM:nephron}}
+      content: `Die Niere ist weit mehr als ein Ausscheidungsorgan — sie reguliert Wasserhaushalt, Elektrolyte, Säure-Basen-Gleichgewicht und Blutdruck. Wer Nierenphysiologie versteht, versteht auch, warum Diuretika wirken, warum Diabetiker Proteinurie entwickeln und warum ACE-Hemmer Husten verursachen.
 
-## Nephron-Segmente und Rückresorption
+## Das Nephron — funktionelle Einheit der Niere
 
-180 Liter Blutplasma filtert die Niere pro Tag — und gewinnt über 99 % davon zurück. Das Nephron filtert täglich ~180 L Primärharn (GFR ~120 mL/min). Über 99 % werden rückresorbiert — nur ~1–2 L Endurin. Jedes Segment hat spezifische Transporter:
+{{DIAGRAM:nephron}}
 
-| Segment | Resorption | Wichtige Transporter |
-|---|---|---|
-| **Glomerulus** | Filtration (GFR ~120 mL/min) | Moleküle <70 kDa passieren |
-| **Proximaler Tubulus** | **65 %** (Na⁺, H₂O, HCO₃⁻, Glukose 100%) | **SGLT2** (Glukose + Na⁺), NHE3 (Na⁺/H⁺) |
-| **Henle-Schleife, absteigend** | H₂O raus (Aquaporin-1) | Für NaCl impermeabel |
-| **Henle-Schleife, aufsteigend** | **NaCl raus** (NKCC2), **kein H₂O** | Baut osmotischen Gradienten auf |
-| **Distaler Tubulus** | ~10 %, **Aldosteron-abhängig** | ENaC (Na⁺), ROMK (K⁺ raus) |
-| **Sammelrohr** | ~4 %, **ADH-abhängig** | **Aquaporin-2** (ADH-reguliert) |
+Jede Niere enthält ca. **1 Million Nephrone**. Ein einzelnes Nephron besteht aus:
 
-**Gegenstromprinzip (Henle-Schleife):** Die absteigende Schleife konzentriert den Tubulusharn (H₂O raus → NaCl konzentrierter). Die aufsteigende Schleife pumpt NaCl raus (wasserdicht) → schafft osmotischen Gradienten im Mark (bis ~1200 mOsm/L). Dieser Gradient wird dann von ADH genutzt: ADH → Aquaporin-2-Insertion im Sammelrohr → H₂O folgt dem Gradienten → konzentrierter Urin.
+1. **Nierenkörperchen (Glomerulus + Bowman-Kapsel)** — hier wird filtriert
+2. **Proximaler Tubulus** — der Hauptrückresorber (~65 % des Filtrats)
+3. **Henle-Schleife** (absteigend + aufsteigend) — erzeugt den osmotischen Gradienten
+4. **Distaler Tubulus** — Feinregulation unter Hormonkontrolle
+5. **Sammelrohr** — finale Harnkonzentrierung (ADH-abhängig)
 
-**Glukose-Nierenschwelle:** Bis ~180 mg/dL Blutglukose resorbiert SGLT2 alles. Darüber: Glukosurie. **SGLT2-Hemmer** (Gliflozine) blockieren SGLT2 → Glukose im Urin → Blutzucker ↓ (Diabetes Typ 2 Therapie).
+**Zwei Nephrontypen:** Kortikale Nephrone (~85 %, kurze Henle-Schleife) und juxtamedulläre Nephrone (~15 %, lange Schleife bis tief ins Mark — entscheidend für die Harnkonzentrierung).
 
-**Ableitende Harnwege:** Der fertige Urin verlässt die Niere über das **Nierenbecken (Pelvis renalis) → Harnleiter (Ureter) → Harnblase (Vesica urinaria) → Harnröhre (Urethra)**. Der Ureter besitzt drei physiologische Engstellen (häufigste Stellen für Harnleitersteine). Die Harnblase ist mit **Urothel** (Übergangsepithel, Schirmzellen) ausgekleidet und fasst ~300–500 mL. Die Miktion wird durch den M. detrusor vesicae (glatte Muskulatur, Parasympathikus) gesteuert.
-
-> **Merke:** Nephron-Resorption: proximal **65 %** (alles, SGLT2), Henle **20 %** (NaCl), distal **10 %** (Aldosteron-ENaC), Sammelrohr **4 %** (ADH-AQP2). Gesamt: **99 %** zurück → ~1–2 L Urin. **Ableitende Harnwege:** Nierenbecken → Ureter → Harnblase → Urethra.
-
-{{IMAGE}}
+> **Merke:** Das Nephron ist die funktionelle Einheit. Jede Niere hat ~1 Mio. Nephrone. Nur juxtamedulläre Nephrone reichen tief genug ins Mark, um den vollen osmotischen Gradienten (bis 1200 mOsm/L) aufzubauen.
 
 ---
 
-## ADH, Aldosteron und RAAS-Regulation
+## Glomeruläre Filtration — der erste Schritt
 
+Im Glomerulus wird Blutplasma durch eine dreischichtige **Filtrationsbarriere** gepresst:
 
-**Aldosteron** (Zona glomerulosa, NNR): Reiz: Angiotensin II, Hyperkaliämie. Wirkung: **ENaC** (Na⁺-Einstrom) + **ROMK** (K⁺-Ausschüttung) + Na⁺/K⁺-ATPase ↑ → Na⁺/H₂O-Retention, K⁺ und H⁺ -Ausscheidung.
+1. **Fenestriertes Endothel** (Poren ~70 nm — hält Blutzellen zurück)
+2. **Glomeruläre Basalmembran (GBM)** — negativ geladen, blockiert große und negativ geladene Proteine
+3. **Podozyten** (Schlitzmembran zwischen Fußfortsätzen) — feinster Filter
 
-**RAAS-Kaskade:**
-1. Blutdruck ↓ → juxtaglomeruläre Zellen → **Renin** ↑
-2. Renin spaltet Angiotensinogen → **Angiotensin I**
-3. ACE (Angiotensin-Converting Enzyme, **Lunge** + Endothel) → **Angiotensin II**
-4. Ang. II → a) direkte **Vasokonstriktion** (AT₁-Rezeptor) b) **Aldosteron**-Freisetzung (NNR) c) **ADH**-Freisetzung d) Durst
+**Was passiert wird filtriert?** Alles unter ~70 kDa: Wasser, Elektrolyte, Glukose, Aminosäuren, Harnstoff, Kreatinin. **Was bleibt zurück?** Albumin (66 kDa — gerade noch an der Grenze), größere Proteine, Blutzellen.
 
-**Therapieangriffspunkte:** ACE-Hemmer (Bradykinin ↑ → Husten-NW!) | AT₁-Blocker (kein Bradykinin) | Spironolacton (Aldosteron-Antagonist) | Aliskiren (Renin-Inhibitor)
+**GFR (glomeruläre Filtrationsrate):** ~120 mL/min = ~180 L Primärharn pro Tag. Davon werden **über 99 % rückresorbiert** — es entstehen nur ~1,5 L Endharn. Dieses Verhältnis ist zentral: Die Niere filtert massiv und resorbiert selektiv, statt gezielt auszuscheiden.
 
-> **Merke:** **RAAS**: Renin (Niere, Druck ↓) → Ang. I → ACE (Lunge) → **Ang. II** → Vasokonstriktion + Aldosteron (Na⁺/H₂O ↑) + ADH ↑ → Blutdruck ↑. **ACE-Hemmer**: Bradykinin ↑ → Husten (häufigste NW).`,
+**Primärharn vs. Endharn:** Primärharn (Ultrafiltrat) ist praktisch protein- und zellfreies Plasma. Endharn ist das Endprodukt nach Rückresorption und Sekretion — konzentriert, mit Abfallstoffen angereichert.
+
+> **Merke:** Filtriert wird alles unter ~70 kDa — Albumin (66 kDa) ist der Grenzgänger. Erscheint Albumin im Urin (Proteinurie), ist die Filtrationsbarriere beschädigt (z. B. Glomerulonephritis, diabetische Nephropathie).
+
+---
+
+## Tubuläre Rückresorption — Segment für Segment
+
+Nach der Filtration durchläuft der Primärharn die Tubulusabschnitte. Jedes Segment hat spezialisierte Transporter:
+
+| Segment | Resorption | Schlüsseltransporter | Besonderheit |
+|---|---|---|---|
+| **Proximaler Tubulus** | **~65 %** (Na⁺, H₂O, Glukose 100 %, AS 100 %, HCO₃⁻ ~80 %) | **SGLT2** (Glukose + Na⁺), NHE3 (Na⁺/H⁺), AQP1 | Größter Rückresorber, obligatorisch |
+| **Henle absteigend** | H₂O raus | Aquaporin-1 | NaCl-impermeabel |
+| **Henle aufsteigend** | NaCl raus | **NKCC2** (Na⁺/K⁺/2Cl⁻) | **Wasserundurchlässig** — Schlüssel zum Gradienten |
+| **Distaler Tubulus** | ~5–10 % NaCl | NCC (Thiazid-sensitiv) | Ca²⁺-Resorption (PTH-abhängig) |
+| **Sammelrohr** | ~1–4 % H₂O, Na⁺ | **AQP2** (ADH), **ENaC** (Aldosteron) | Hormonell regulierte Feinsteuerung |
+
+**Wichtig — Filtration vs. Sekretion:** Filtration geschieht im Glomerulus (passiv, druckgetrieben). **Sekretion** ist das Gegenteil der Resorption: Substanzen werden aktiv aus dem Blut in den Tubulus transportiert (z. B. K⁺, H⁺, Medikamente, Kreatinin im proximalen Tubulus). Beide zusammen bestimmen die renale Ausscheidung.
+
+**Glukose-Nierenschwelle (~180 mg/dL):** Normalerweise resorbiert SGLT2 im proximalen Tubulus 100 % der filtrierten Glukose. Steigt der Blutzucker über ~180 mg/dL, sind die Transporter gesättigt → **Glukosurie** (Glukose im Urin). **SGLT2-Hemmer** (Empagliflozin, Dapagliflozin) blockieren diesen Transporter gezielt → Glukose wird ausgeschieden → Blutzucker sinkt. Einsatz bei Diabetes Typ 2, aber auch kardio- und nephroprotektiv.
+
+> **Merke:** Proximaler Tubulus = 65 % von allem (SGLT2 für Glukose). GFR ≠ Urinmenge! GFR misst, wie viel filtriert wird (120 mL/min). Die Urinmenge hängt davon ab, wie viel rückresorbiert wird (reguliert durch ADH/Aldosteron).
+
+---
+
+## Gegenstromprinzip — wie die Niere Urin konzentriert
+
+Das Gegenstromprinzip der Henle-Schleife erzeugt einen osmotischen Gradienten im Nierenmark (300 mOsm/L in der Rinde → bis **1200 mOsm/L** im inneren Mark). Ohne diesen Gradienten könnte die Niere keinen konzentrierten Urin produzieren.
+
+**So funktioniert es:**
+
+- **Absteigender Schenkel:** Wasserdurchlässig (AQP1), aber NaCl-impermeabel. Wasser diffundiert osmotisch ins hyperosmolare Interstitium → Tubulusflüssigkeit wird **hyperton** (konzentriert, bis ~1200 mOsm/L an der Schleifenspitze).
+
+- **Aufsteigender Schenkel:** **Wasserundurchlässig** (keine Aquaporine!), aber pumpt aktiv NaCl raus (NKCC2-Transporter). Die Tubulusflüssigkeit wird **hypoton** (~100 mOsm/L), während das Mark immer salziger wird.
+
+**Ergebnis:** Das Mark ist hyperosmolar — ein Gradient, den das Sammelrohr nutzt: Wenn ADH Aquaporin-2 einbaut, folgt Wasser dem Gradienten → konzentrierter Urin.
+
+**Schleifendiuretika (Furosemid)** hemmen NKCC2 im aufsteigenden Schenkel → der osmotische Gradient wird zerstört → die Niere kann nicht mehr konzentrieren → massive Diurese. Deshalb sind sie die stärksten Diuretika.
+
+> **Merke:** Absteigend = Wasser raus (konzentriert). Aufsteigend = NaCl raus, kein Wasser (verdünnt). Zusammen: osmotischer Gradient im Mark. Furosemid zerstört diesen Gradienten → stärkste Diurese.
+
+---
+
+## ADH und Aldosteron — hormonelle Feinsteuerung
+
+**ADH (Antidiuretisches Hormon, Vasopressin)** — Hypophysenhinterlappen:
+
+- **Trigger:** Osmolalität ↑ (>295 mOsm/kg, Hypothalamus-Osmorezeptoren) oder Volumen ↓ (Barorezeptoren)
+- **Wirkung:** V₂-Rezeptor (Sammelrohr, basolateral) → cAMP ↑ → **Aquaporin-2-Insertion** in die luminale Membran → Wasser folgt dem medullären Gradienten → **konzentrierter Urin** (bis 1200 mOsm/L)
+- **Ohne ADH:** AQP2 bleibt im Zytoplasma → Sammelrohr wasserundurchlässig → **verdünnter Urin** (~50 mOsm/L), Polyurie
+
+**Diabetes insipidus** — die Krankheit des fehlenden ADH-Effekts:
+- **Zentral:** ADH-Mangel (Hypophysenschaden) → Polyurie (>3 L/Tag), Polydipsie. Therapie: Desmopressin (synthetisches ADH)
+- **Nephrogen:** V₂-Rezeptor-Defekt oder AQP2-Mutation → ADH wirkt nicht. Desmopressin hilft **nicht**
+
+**SIADH** (Syndrom der inadäquaten ADH-Sekretion): ADH ↑ ohne Trigger → zu viel Wasser zurück → Verdünnungs-**Hyponatriämie** (nicht Hypernatriämie — häufiger Denkfehler!).
+
+**Aldosteron** — Nebennierenrinde (Zona glomerulosa):
+
+- **Trigger:** Angiotensin II, Hyperkaliämie
+- **Wirkung am distalen Tubulus/Sammelrohr:** ENaC ↑ (Na⁺ rein) + ROMK ↑ (K⁺ raus) + Na⁺/K⁺-ATPase ↑ → **Na⁺- und H₂O-Retention**, K⁺- und H⁺-Ausscheidung
+- **Hyperaldosteronismus (Conn-Syndrom):** Na⁺ ↑, K⁺ ↓, Hypertonie
+- **Antagonist:** Spironolacton (blockiert Mineralokortikoid-Rezeptor)
+
+> **Merke:** ADH = Wasserregulation (AQP2 im Sammelrohr). Aldosteron = Na⁺/K⁺-Regulation (ENaC/ROMK im distalen Tubulus). Beide zusammen bestimmen Urinvolumen und -zusammensetzung.
+
+---
+
+## RAAS — Blutdruckregulation über die Niere
+
+Die **Renin-Angiotensin-Aldosteron-System (RAAS)**-Kaskade ist der wichtigste langfristige Blutdruckregulator:
+
+1. **Blutdruck ↓** / Na⁺ ↓ / Sympathikus ↑ → juxtaglomeruläre Zellen (afferente Arteriole) setzen **Renin** frei
+2. Renin spaltet **Angiotensinogen** (aus der Leber) → **Angiotensin I**
+3. **ACE** (Angiotensin-Converting Enzyme, v. a. Lungenendothel) → **Angiotensin II**
+4. Angiotensin II wirkt vierfach:
+   - **Vasokonstriktion** (AT₁-Rezeptor) → Blutdruck ↑ sofort
+   - **Aldosteron ↑** (NNR) → Na⁺/H₂O-Retention → Volumen ↑
+   - **ADH ↑** (Hypophyse) → Wasser-Rückresorption ↑
+   - **Durst ↑** (Hypothalamus) → Flüssigkeitsaufnahme ↑
+
+**Therapeutische Angriffspunkte** (Antihypertensiva):
+
+| Wirkstoffgruppe | Mechanismus | Besonderheit |
+|---|---|---|
+| **ACE-Hemmer** (Ramipril, Enalapril) | ACE ↓ → Ang II ↓ | Bradykinin ↑ → **Husten** (häufigste NW!) |
+| **AT₁-Blocker** (Losartan, Valsartan) | Blockiert Ang-II-Rezeptor | Kein Bradykinin-Effekt → kein Husten |
+| **Spironolacton** | Aldosteron-Antagonist | K⁺-sparend, bei Herzinsuffizienz |
+| **Aliskiren** | Renin-Inhibitor | Selten eingesetzt |
+
+> **Merke:** RAAS-Kaskade: Renin (Niere) → Ang I → ACE (Lunge) → **Ang II** → Vasokonstriktion + Aldosteron + ADH → Blutdruck ↑. ACE-Hemmer: Bradykinin ↑ → Husten. AT₁-Blocker: gleiche Wirkung, kein Husten.
+
+---
+
+## Ableitende Harnwege
+
+Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → Harnleiter (Ureter) → Harnblase (Vesica urinaria) → Harnröhre (Urethra)**.
+
+- **Ureter:** Drei physiologische Engstellen (Nierenbeckenabgang, Kreuzung A. iliaca, Blasenmündung) — häufigste Stellen für **Harnleitersteine**
+- **Harnblase:** Ausgekleidet mit **Urothel** (Übergangsepithel mit Schirmzellen, dehnbar), Fassungsvermögen ~300–500 mL
+- **Miktion:** M. detrusor vesicae (glatte Muskulatur, Parasympathikus) kontrahiert, innerer Sphinkter (glatt, unwillkürlich) und äußerer Sphinkter (quergestreift, willkürlich) relaxieren
+
+---
+
+## Klinische Integration
+
+**Proteinurie:** Albumin im Urin zeigt Filterbarriere-Schaden an (Frühzeichen diabetischer Nephropathie). Screening: Urin-Albumin-Kreatinin-Quotient (UACR).
+
+**GFR-Abfall bei Niereninsuffizienz:** CKD-Stadien I–V nach GFR. Stadium V (GFR <15 mL/min) = terminale Niereninsuffizienz → Dialyse oder Transplantation. Häufigste Ursache: diabetische Nephropathie.
+
+**Diuretika-Übersicht:**
+- **Schleifendiuretika** (Furosemid): NKCC2-Hemmung → stärkste Wirkung
+- **Thiazide** (HCT): NCC-Hemmung im distalen Tubulus → moderate Wirkung
+- **K⁺-sparende** (Spironolacton, Amilorid): ENaC/Aldosteron-Blockade → schwach, aber K⁺-schonend
+
+**Säure-Basen-Regulation:** Die Niere reguliert den pH über drei Mechanismen: HCO₃⁻-Rückresorption (PT, NHE3 + Carboanhydrase), H⁺-Sekretion (H⁺-ATPase) und Ammonium-Bildung (NH₄⁺ aus Glutamin im PT).
+
+> **Merke:** Kreatinin wird filtriert und teilweise sezerniert, aber **nicht resorbiert** — deshalb eignet es sich als GFR-Marker (Kreatinin-Clearance ≈ GFR).`,
       lernziele: [
         "Die vier Funktionen der Niere (Wasser-/Elektrolythaushalt, Säure-Basen-Haushalt, Blutdruckregulation, Exkretion) benennen.",
         "Die Filtrations- und Rückresorptionsvorgänge der Nephron-Abschnitte (GFR ~120 mL/min, SGLT2 im proximalen Tubulus, Gegenstromprinzip der Henle-Schleife) erklären.",

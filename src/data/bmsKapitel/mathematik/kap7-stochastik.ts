@@ -22,25 +22,25 @@ export const mathKapStochastik: Kapitel = {
         "mit Wiederholung",
         "ohne Wiederholung",
       ],
-      content: `## Grundbegriffe und Entscheidungsbaum
-
-Bevor man eine Formel anwendet, beantwortet man zwei Fragen:
-
-1. **Spielt die Reihenfolge eine Rolle?** (geordnet vs. ungeordnet)
-2. **Darf ein Objekt mehrfach vorkommen?** (mit vs. ohne Wiederholung)
-
-| Reihenfolge | Wiederholung | Begriff | Formel |
-|-------------|--------------|---------|--------|
-| Ja | Nein | Variation ohne Wdh. | n! / (n-k)! |
-| Ja | Ja | Variation mit Wdh. | n^k |
-| Nein | Nein | Kombination ohne Wdh. | n! / (k! × (n-k)!) |
-| Nein | Ja | Kombination mit Wdh. | (n+k-1)! / (k! × (n-1)!) |
-
-> **Merke:** Die Entscheidung "geordnet oder ungeordnet" ist der wichtigste erste Schritt — sie bestimmt, ob man Permutation/Variation oder Kombination verwendet.
+      content: `Auf wie viele Arten können sich 5 Symptome kombinieren? Wie viele Medikamenten-Kombinationen gibt es aus 10 Wirkstoffen? Kombinatorik liefert die Werkzeuge, um systematisch zu zählen — ohne jede Möglichkeit einzeln aufzulisten.
 
 ---
 
-{{DIAGRAM:combinatorics-tree}}
+## Das Grundprinzip: Multiplikation und Addition
+
+Zwei fundamentale Zählprinzipien bilden das Fundament der gesamten Kombinatorik:
+
+**Multiplikationsprinzip:** Gibt es für Schritt 1 genau a Möglichkeiten und für Schritt 2 genau b Möglichkeiten, dann gibt es a × b Möglichkeiten insgesamt — vorausgesetzt, die Schritte sind unabhängig.
+
+Beispiel: Ein Diagnosepfad hat 3 Stufen — 4 Bluttests, 3 Bildgebungen, 2 Biopsietypen. Gesamtzahl verschiedener Pfade: 4 × 3 × 2 = **24**.
+
+Beispiel: AB0-Blutgruppen (4 Phänotypen) × Rhesus (2 Varianten) = **8** Blutgruppen-Phänotypen (A+, A−, B+, B−, AB+, AB−, 0+, 0−). Erweitert um Kell (2 Varianten): 4 × 2 × 2 = **16**.
+
+**Additionsprinzip:** Schließen sich zwei Ereignisse gegenseitig aus (entweder A oder B), addiert man die Möglichkeiten: a + b.
+
+> **Merke:** Das Multiplikationsprinzip gilt bei UND-Verknüpfung (Schritt 1 UND Schritt 2), das Additionsprinzip bei ODER-Verknüpfung (Fall A ODER Fall B). Diese Unterscheidung ist die Basis jeder Zählaufgabe.
+
+---
 
 ## Die Fakultät — Grundbaustein aller Formeln
 
@@ -48,241 +48,282 @@ Die **Fakultät** n! (sprich: "n Fakultät") ist das Produkt aller natürlichen 
 
 n! = 1 × 2 × 3 × ... × n
 
-Besondere Werte: 0! = 1 (per Definition), 1! = 1, 2! = 2, 3! = 6, 4! = 24, 5! = 120, 6! = 720, 7! = 5040, 10! = 3.628.800
+Wichtige Werte zum Auswendiglernen:
 
-> **Merke:** 0! = 1 ist keine Ausnahme, sondern folgt aus der Rekursionsformel (n+1)! = (n+1) × n!, rückwärts angewendet.
+| n | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 10 |
+|---|---|---|---|---|---|---|---|---|---|
+| n! | 1 | 1 | 2 | 6 | 24 | 120 | 720 | 5.040 | 3.628.800 |
+
+Warum gilt 0! = 1? Die Rekursionsformel (n+1)! = (n+1) × n! rückwärts angewendet ergibt: 1! = 1 × 0!, also muss 0! = 1 sein. Außerdem: Es gibt genau eine Möglichkeit, null Objekte anzuordnen — nämlich gar nichts zu tun.
+
+> **Merke:** 0! = 1 ist keine willkürliche Festlegung, sondern mathematisch zwingend. Dieser Wert taucht in C(n,0) = n!/(0! × n!) = 1 auf — die leere Auswahl ist immer genau eine Möglichkeit.
 
 ---
 
-## Permutationen
+## Permutationen — Alle Objekte anordnen
 
-Eine **Permutation** ist eine Anordnung aller n verschiedenen Objekte in einer Reihe.
+Eine **Permutation** (lateinisch permutare = vertauschen) ist eine Anordnung aller n Objekte in einer bestimmten Reihenfolge.
 
-**Ohne Wiederholung:** P(n) = n!
+**Ohne Wiederholung (alle verschieden):** P(n) = n!
 
-Beispiel: Wie viele Reihenfolgen gibt es für die Buchstaben A, B, C, D?
-P(4) = 4! = 24
+*Wie viele Möglichkeiten gibt es, 5 Bücher auf einem Regal anzuordnen?*
+Für Position 1 gibt es 5 Möglichkeiten, für Position 2 noch 4, für Position 3 noch 3, usw.:
+P(5) = 5! = 5 × 4 × 3 × 2 × 1 = **120**
 
-Beispiel MedAT-Kontext: 5 Personen sollen auf 5 Stühlen Platz nehmen. Wie viele Sitzordnungen gibt es?
-P(5) = 5! = 120
+*5 Personen sollen auf 5 Stühlen Platz nehmen — wie viele Sitzordnungen?*
+Gleiche Logik: P(5) = 5! = **120**
 
-**Mit Wiederholung** (wenn gleiche Objekte vorkommen): Sind von n Objekten k1 gleich vom Typ 1, k2 gleich vom Typ 2 usw., dann gilt:
+**Kreispermutation** (runder Tisch): Wenn nur die relative Anordnung zählt (weil man den Tisch drehen kann), fixiert man eine Person und ordnet die restlichen n−1 an: **(n−1)!**
 
-P(n; k1, k2, ...) = n! / (k1! × k2! × ...)
+6 Ärzte am runden Tisch: (6−1)! = 5! = **120** (statt 6! = 720 bei linearer Anordnung).
 
-Beispiel: Wie viele unterschiedliche Wörter lassen sich aus den Buchstaben ANNA bilden?
-n = 4, A kommt 2-mal vor (k1 = 2), N kommt 2-mal vor (k2 = 2).
-P = 4! / (2! × 2!) = 24 / 4 = 6
-Die 6 Anordnungen: ANNA, ANAN, AANN, NANA, NAAN, NNAA.
+---
 
-> **Merke:** Bei Permutationen mit Wiederholung teilt man durch die Fakultäten der identischen Elemente, weil ihre Vertauschungen nicht unterscheidbar sind.
+**Mit Wiederholung** (identische Objekte vorhanden): Wenn von n Objekten k₁ vom Typ 1, k₂ vom Typ 2 usw. identisch sind:
 
-**Weitere Rechenbeispiele — Permutationen:**
+P(n; k₁, k₂, ...) = n! / (k₁! × k₂! × ...)
 
-**Beispiel: Sitzordnung am runden Tisch:**
-6 Ärzte setzen sich an einen runden Tisch. Beim runden Tisch zählt nur die relative Anordnung (da man den Tisch drehen kann). Kreispermutation: (n−1)! = 5! = **120** Anordnungen. (Bei linearer Anordnung wären es 6! = 720.)
+Man teilt durch die Fakultäten der identischen Elemente, weil deren Vertauschung keine neue Anordnung erzeugt.
 
-**Beispiel: Buchstaben von MISSISSIPPI:**
+*Wie viele verschiedene Anordnungen der Buchstaben ANNA gibt es?*
+n = 4, A kommt 2× vor (k₁ = 2), N kommt 2× vor (k₂ = 2).
+P = 4! / (2! × 2!) = 24 / 4 = **6**
+Alle 6: ANNA, ANAN, AANN, NANA, NAAN, NNAA.
+
+**Das MISSISSIPPI-Problem — Klassiker der Kombinatorik:**
 n = 11 Buchstaben: M(1×), I(4×), S(4×), P(2×).
-P = 11! / (1! × 4! × 4! × 2!) = 39.916.800 / (1 × 24 × 24 × 2) = 39.916.800 / 1.152 = **34.650** verschiedene Anordnungen.
+P = 11! / (1! × 4! × 4! × 2!) = 39.916.800 / (1 × 24 × 24 × 2) = 39.916.800 / 1.152 = **34.650**
+Ohne die Korrektur wären es 11! = 39.916.800 — die identischen Buchstaben reduzieren die Zahl um den Faktor 1.152.
 
-**Beispiel (MedAT): DNA-Sequenz mit Basenwiederholungen:**
-Wie viele verschiedene Reihenfolgen gibt es für eine DNA-Sequenz mit 3×A, 2×T, 1×G, 1×C (7 Basen)?
-P = 7! / (3! × 2! × 1! × 1!) = 5.040 / (6 × 2 × 1 × 1) = 5.040 / 12 = **420** verschiedene Sequenzen.
+*DNA-Sequenz mit 3×A, 2×T, 1×G, 1×C (7 Basen):*
+P = 7! / (3! × 2!) = 5.040 / 12 = **420** verschiedene Sequenzen.
+
+> **Merke:** Bei Permutationen mit Wiederholung: Zähler = n! (als wären alle verschieden), Nenner = Produkt der Fakultäten aller Wiederholungsgruppen. Je mehr identische Elemente, desto kleiner das Ergebnis.
 
 ---
 
-## Variationen
+## Variationen — k aus n auswählen, Reihenfolge zählt
 
-Eine **Variation** ordnet k Elemente aus n an — die Reihenfolge zählt, aber es werden nur k der n Objekte ausgewählt.
+Eine **Variation** wählt k Objekte aus n und ordnet sie an — es werden nicht alle, sondern nur k der n Objekte verwendet, und die Reihenfolge ist relevant.
 
-**Ohne Wiederholung:** V(n, k) = n! / (n-k)!
+**Ohne Wiederholung:** V(n, k) = n! / (n−k)! = n × (n−1) × ... × (n−k+1)
 
-Beispiel: Wie viele 3-stellige Zahlen aus den Ziffern 1, 2, 3, 4, 5 (ohne Wiederholung)?
-V(5, 3) = 5! / (5-3)! = 120 / 2 = 60
+*Wie viele 3-stellige Zahlen aus den Ziffern 1–5 (ohne Wiederholung)?*
+1. Stelle: 5 Möglichkeiten, 2. Stelle: 4, 3. Stelle: 3 → V(5,3) = 5 × 4 × 3 = **60**
 
-Erklärung: Für die erste Stelle 5 Möglichkeiten, für die zweite 4, für die dritte 3 → 5 × 4 × 3 = 60.
+*Aus 12 Chirurgen werden Operateur, 1. Assistent, 2. Assistent bestimmt (verschiedene Rollen):*
+V(12,3) = 12 × 11 × 10 = **1.320**
+Zum Vergleich: Ohne Rollenverteilung (nur ein Team wählen) → C(12,3) = 1.320/6 = 220. Verhältnis: 1.320/220 = 6 = 3! — das bestätigt: **Variation = Kombination × k!**
 
-**Mit Wiederholung:** V(n, k) = n^k
+**Mit Wiederholung:** V(n, k) = nᵏ
 
-Beispiel: Wie viele 4-stellige PIN-Codes aus den Ziffern 0–9?
-V(10, 4) = 10^4 = 10.000
+Jede Position wird unabhängig besetzt — das Multiplikationsprinzip in Reinform.
 
-Beispiel: Wie viele Möglichkeiten hat ein Schloss mit 3 Walzen, jede mit 8 Symbolen?
-V(8, 3) = 8^3 = 512
-
-**Rechenbeispiel — Multiple-Choice-Test (MedAT-Kontext):**
-Ein BMS-Test hat 40 Fragen mit je 5 Antwortmöglichkeiten (A–E). Ein Student rät bei jeder Frage zufällig.
-Wie viele verschiedene Antwortbögen sind möglich?
-Reihenfolge zählt (Frage 1 ≠ Frage 2), Wiederholung erlaubt (A darf mehrfach gewählt werden).
-→ Variation mit Wiederholung: V(5, 40) = 5⁴⁰ ≈ 9,09 × 10²⁷ Möglichkeiten.
-P(eine bestimmte Frage richtig durch Raten) = 1/5 = 20%.
+*4-stelliger PIN-Code aus 0–9:* V(10,4) = 10⁴ = **10.000**
+*BMS-Test: 40 Fragen, je 5 Antworten (A–E), Student rät zufällig:*
+V(5,40) = 5⁴⁰ ≈ 9,09 × 10²⁷ mögliche Antwortbögen.
 Erwartungswert richtig geratener Fragen: 40 × 1/5 = **8 von 40**.
 
-> **Merke:** "Mit Wiederholung" heißt: Jede Stelle kann unabhängig von den anderen belegt werden — Multiplikationsprinzip: n × n × n × ... (k-mal) = n^k.
+> **Merke:** Variation ohne Wiederholung = fallende Faktoren (n × (n−1) × ... k Stück). Variation mit Wiederholung = nᵏ. Der Unterschied: Darf das gleiche Objekt mehrfach gezogen werden?
 
 ---
 
 ## Kombinationen und der Binomialkoeffizient
 
-Eine **Kombination** wählt k Elemente aus n aus — die Reihenfolge spielt keine Rolle.
+Eine **Kombination** wählt k Elemente aus n — die Reihenfolge spielt **keine** Rolle. Ob ich die Medikamente A, B, C oder C, B, A wähle, ist dasselbe Screening-Panel.
 
-**Ohne Wiederholung:** C(n, k) = "n über k" = n! / (k! × (n-k)!)
+**Ohne Wiederholung:** C(n,k) = "n über k" = n! / (k! × (n−k)!)
 
-Der Ausdruck "n über k" heißt **Binomialkoeffizient** und wird geschrieben als (n k) oder C(n,k).
+Der Ausdruck "n über k" heißt **Binomialkoeffizient**. Er zählt, wie viele k-elementige Teilmengen eine n-elementige Menge hat.
 
-Beispiel Lotto "6 aus 49": Wie viele Möglichkeiten gibt es, 6 Zahlen aus 49 zu ziehen?
-C(49, 6) = 49! / (6! × 43!) = (49 × 48 × 47 × 46 × 45 × 44) / (6 × 5 × 4 × 3 × 2 × 1)
-= 10.068.347.520 / 720 = **13.983.816**
+**Rechenweg (Kurzformel):** Statt alle Fakultäten auszurechnen, kürzt man (n−k)! im Zähler weg:
 
-Rechenweg (Zähler: nur die oberen k Faktoren zählen):
-Zähler = 49 × 48 × 47 × 46 × 45 × 44 = 10.068.347.520
-Nenner = 6! = 720
-Ergebnis = 13.983.816
+C(n,k) = [n × (n−1) × ... × (n−k+1)] / k!
 
-> **Merke:** Beim Binomialkoeffizienten gilt C(n,k) = C(n, n-k). Es spielt keine Rolle, ob man "6 aus 49" oder "43 aus 49" wählt — die Anzahl ist identisch. Diese Symmetrie ist nützlich für schnelle Prüfungsberechnungen.
+Es stehen also nur k Faktoren im Zähler und k! im Nenner.
 
-**Kurzrechnung mit der Symmetrie:**
-C(10, 8) = C(10, 2) = (10 × 9)/(2 × 1) = 45. Statt 8 Faktoren im Zähler und 8! im Nenner rechnet man mit dem kleineren k = 2 — viel schneller!
+**Lotto "6 aus 45" (österreichisches Lotto):**
+C(45,6) = (45 × 44 × 43 × 42 × 41 × 40) / (6 × 5 × 4 × 3 × 2 × 1) = 5.864.443.200 / 720 = **8.145.060**
 
-**Weitere Rechenbeispiele — Binomialkoeffizient:**
+**Symmetrie-Eigenschaft:** C(n,k) = C(n, n−k)
+6 Zahlen aus 45 auswählen = 39 Zahlen weglassen. Gleiche Anzahl!
+Praktisch: C(10,8) = C(10,2) = (10 × 9)/2 = **45** — mit k=2 statt k=8, viel schneller.
 
-C(6,2) = (6 × 5)/(2 × 1) = 30/2 = **15**
-C(7,3) = (7 × 6 × 5)/(3 × 2 × 1) = 210/6 = **35**
-C(8,4) = (8 × 7 × 6 × 5)/(4 × 3 × 2 × 1) = 1680/24 = **70**
-C(10,3) = (10 × 9 × 8)/(3 × 2 × 1) = 720/6 = **120**
-C(12,4) = (12 × 11 × 10 × 9)/(4 × 3 × 2 × 1) = 11880/24 = **495**
+**Häufige Binomialkoeffizienten zum Auswendiglernen:**
 
-**Rechenbeispiel — Blutuntersuchungen auswählen:**
-Aus 12 verfügbaren Bluttests soll der Arzt 4 für ein Screening-Panel auswählen. Reihenfolge egal, kein Test doppelt.
-C(12, 4) = 495 verschiedene Panels. Würde die Reihenfolge zählen (z. B. Prioritätsreihung): V(12,4) = 12 × 11 × 10 × 9 = 11.880 — Faktor 24 = 4! mehr als bei Kombination.
+| C(n,k) | k=2 | k=3 | k=4 |
+|--------|-----|-----|-----|
+| n=4 | 6 | 4 | 1 |
+| n=5 | 10 | 10 | 5 |
+| n=6 | 15 | 20 | 15 |
+| n=7 | 21 | 35 | 35 |
+| n=8 | 28 | 56 | 70 |
+| n=10 | 45 | 120 | 210 |
 
-> **Merke:** Für schnelles Kopfrechnen im MedAT lerne die häufigsten Binomialkoeffizienten auswendig: C(4,2)=6, C(5,2)=10, C(5,3)=10, C(6,2)=15, C(6,3)=20, C(7,3)=35, C(8,3)=56, C(10,3)=120. Das spart wertvolle Prüfungszeit.
+*Aus 12 Bluttests 4 für ein Screening-Panel wählen (Reihenfolge egal):*
+C(12,4) = (12 × 11 × 10 × 9) / (4 × 3 × 2 × 1) = 11.880 / 24 = **495**
 
-**Mit Wiederholung** (Multisets): C(n+k-1, k) — seltener im MedAT, aber für Vollständigkeit:
+**Komplementstrategie** — "mindestens eins" über den Umweg:
+Aus 10 Professoren (6 Männer, 4 Frauen) soll eine 3er-Kommission mit mind. 1 Frau gebildet werden.
+Gesamt: C(10,3) = 120. Nur Männer: C(6,3) = 20. Mit ≥1 Frau = 120 − 20 = **100**.
 
-Beispiel: 3 Kugeln aus 4 Farben mit Zurücklegen, Reihenfolge egal:
-C(4+3-1, 3) = C(6, 3) = 20
+> **Merke:** C(n,k) = C(n, n−k) — immer das kleinere k nehmen! Bei "mindestens"-Aufgaben: Komplementstrategie (Gesamt minus Verbot) ist fast immer schneller als alle Fälle einzeln.
+
+**Mit Wiederholung** (Multisets, selten im MedAT): C(n+k−1, k)
+3 Kugeln aus 4 Farben mit Zurücklegen, Reihenfolge egal: C(6,3) = **20**
 
 ---
 
-## Pascalsches Dreieck
+## Pascalsches Dreieck — Binomialkoeffizienten auf einen Blick
 
-Das Pascalsche Dreieck ordnet die Binomialkoeffizienten in einem Dreieck an. Jede Zahl ist die Summe der zwei darüberliegenden Zahlen:
+Das Pascalsche Dreieck ordnet alle Binomialkoeffizienten in einem Dreieck an. Die Konstruktionsregel: **Jede Zahl ist die Summe der zwei Zahlen direkt darüber.**
 
-    Zeile 0:          1
-    Zeile 1:        1   1
-    Zeile 2:      1   2   1
-    Zeile 3:    1   3   3   1
-    Zeile 4:  1   4   6   4   1
-    Zeile 5: 1  5  10  10   5  1
+\`\`\`
+                  1                    ← Zeile 0: C(0,0)
+                1   1                  ← Zeile 1: C(1,0)  C(1,1)
+              1   2   1                ← Zeile 2: C(2,0)  C(2,1)  C(2,2)
+            1   3   3   1              ← Zeile 3
+          1   4   6   4   1            ← Zeile 4
+        1   5  10  10   5   1          ← Zeile 5
+      1   6  15  20  15   6   1        ← Zeile 6
+\`\`\`
 
 Zeile n enthält die Werte C(n,0), C(n,1), ..., C(n,n).
-Rechenregel: C(n,k) = C(n-1, k-1) + C(n-1, k) ("Pascalsches Dreieck-Gesetz")
 
-Wichtige Eigenschaften:
-- Zeilensumme der Zeile n = 2^n (alle Teilmengen einer n-elementigen Menge)
-- C(n,0) = C(n,n) = 1 (leere Menge und Gesamtmenge)
-- C(n,1) = n
+**Formale Rechenregel (Pascalsches Gesetz):**
+C(n,k) = C(n−1, k−1) + C(n−1, k)
 
-**Pascalsches Dreieck als Schnellreferenz:**
-Für die Binomialverteilung B(n, p) braucht man C(n, k). Bei kleinem n liest man die Werte direkt ab:
-- C(3,0)=1, C(3,1)=3, C(3,2)=3, C(3,3)=1 → Zeile 3
-- C(4,0)=1, C(4,1)=4, C(4,2)=6, C(4,3)=4, C(4,4)=1 → Zeile 4
-- C(5,0)=1, C(5,1)=5, C(5,2)=10, C(5,3)=10, C(5,4)=5, C(5,5)=1 → Zeile 5
+Beispiel: C(5,2) = C(4,1) + C(4,2) = 4 + 6 = **10** — stimmt mit dem Dreieck überein.
 
-**Rechenbeispiel — Binomialkoeffizient über Pascalsches Dreieck:**
-P(genau 3 von 5 Münzwürfen = Kopf)? → C(5,3) × (1/2)³ × (1/2)² = 10 × 1/32 = **10/32 = 5/16 ≈ 31,3%**.
-C(5,3) = 10 direkt aus Zeile 5 abgelesen — kein Rechnen nötig!
+**Drei wichtige Eigenschaften:**
+- **Zeilensumme** von Zeile n = 2ⁿ (= Anzahl aller Teilmengen einer n-elementigen Menge)
+- **Randzahlen:** C(n,0) = C(n,n) = 1 (leere Menge / Gesamtmenge — je genau eine Möglichkeit)
+- **Symmetrie:** Das Dreieck ist achsensymmetrisch, weil C(n,k) = C(n, n−k)
 
-> **Merke:** Das Pascalsche Dreieck erlaubt das schnelle Ablesen kleiner Binomialkoeffizienten ohne Rechnung — nützlich für die Binomialverteilung in Wahrscheinlichkeitsaufgaben. Für n ≤ 5 ist Auswendiglernen der Zeilen effizienter als jede Formel.
+**Schnellablesen statt Rechnen:**
+P(genau 3 von 5 Münzwürfen = Kopf)? → C(5,3) × (1/2)³ × (1/2)² = **10** × 1/32 = 10/32 = 5/16 ≈ 31,3%.
+C(5,3) = 10 direkt aus Zeile 5 abgelesen — kein Taschenrechner nötig.
+
+> **Merke:** Für n ≤ 6 ist das Pascalsche Dreieck schneller als jede Formel. Die Zeilen 0–5 auswendig lernen spart im MedAT wertvolle Sekunden bei Binomialverteilungs-Aufgaben.
 
 ---
 
-## Übersichtstabelle: Alle vier Formeltypen
+## Binomialsatz — Verbindung zwischen Algebra und Kombinatorik
+
+Der **Binomialsatz** verknüpft das Pascalsche Dreieck mit algebraischen Potenzen:
+
+**(a + b)ⁿ = Σ C(n,k) × aⁿ⁻ᵏ × bᵏ** (k von 0 bis n)
+
+Die Koeffizienten der Entwicklung sind genau die Einträge aus Zeile n des Pascalschen Dreiecks:
+
+(a+b)² = 1·a² + 2·ab + 1·b² (Zeile 2: 1, 2, 1)
+(a+b)³ = 1·a³ + 3·a²b + 3·ab² + 1·b³ (Zeile 3: 1, 3, 3, 1)
+(a+b)⁴ = 1·a⁴ + 4·a³b + 6·a²b² + 4·ab³ + 1·b⁴ (Zeile 4: 1, 4, 6, 4, 1)
+
+**Genetik-Anwendung — Mendelsche Aufspaltung:**
+In einem monohybriden Erbgang mit vollständiger Dominanz gilt für die F₂-Generation: p(dominant) = 3/4, p(rezessiv) = 1/4. Bei 4 Nachkommen verwendet man (a+b)⁴ mit a = 3/4 und b = 1/4:
+
+P(genau k von 4 Nachkommen zeigen den dominanten Phänotyp) = C(4,k) × (3/4)ᵏ × (1/4)⁴⁻ᵏ
+
+| k dominant | C(4,k) | (3/4)ᵏ | (1/4)⁴⁻ᵏ | Ergebnis |
+|-----------|--------|---------|-----------|----------|
+| 0 | 1 | 1 | 1/256 | 1/256 ≈ 0,4% |
+| 1 | 4 | 3/4 | 1/64 | 12/256 ≈ 4,7% |
+| 2 | 6 | 9/16 | 1/16 | 54/256 ≈ 21,1% |
+| 3 | 4 | 27/64 | 1/4 | 108/256 ≈ 42,2% |
+| 4 | 1 | 81/256 | 1 | 81/256 ≈ 31,6% |
+
+Am wahrscheinlichsten: genau 3 von 4 dominant (≈ 42%) — passend zum 3:1-Verhältnis. Die Koeffizienten C(4,0) bis C(4,4) = 1, 4, 6, 4, 1 kommen direkt aus dem Pascalschen Dreieck (Zeile 4).
+
+> **Merke:** Der Binomialsatz ist die Brücke zwischen Kombinatorik und Genetik. Die Koeffizienten (a+b)ⁿ stammen aus dem Pascalschen Dreieck. In der Genetik liefert er die Wahrscheinlichkeitsverteilung der Phänotypen bei n Nachkommen.
+
+---
+
+## Entscheidungsbaum: Die richtige Formel finden
+
+{{DIAGRAM:combinatorics-tree}}
+
+Bei jeder Kombinatorik-Aufgabe stellst du zwei Fragen:
+
+**Schritt 1: Ist die Reihenfolge relevant?**
+- JA → Variation oder Permutation
+- NEIN → Kombination
+
+**Schritt 2: Ist Wiederholung erlaubt?**
+- JA → "mit Wiederholung"-Formel
+- NEIN → "ohne Wiederholung"-Formel
 
 | | **Ohne Wiederholung** | **Mit Wiederholung** |
 |---|---|---|
-| **Geordnet (Reihenfolge zählt)** | **Variation** V(n,k) = n!/(n−k)! | **Variation** V(n,k) = nᵏ |
-| | *Beispiel:* 3 Buchstaben aus 5 → 5!/2! = 60 | *Beispiel:* 4-stellige PIN (0–9) → 10⁴ = 10.000 |
-| **Ungeordnet (Reihenfolge egal)** | **Kombination** C(n,k) = n!/(k!·(n−k)!) | **Kombination** C(n+k−1,k) |
-| | *Beispiel:* Lotto 6/45 → C(45,6) ≈ 8 Mio | *Beispiel:* 3 Kugeln aus 4 Farben → C(6,3) = 20 |
-| **Alle n anordnen** | **Permutation** P = n! | **Permutation** P = n!/(k₁!·k₂!·…) |
-| | *Beispiel:* 5 Personen → 5! = 120 | *Beispiel:* MAMA → 4!/(2!·2!) = 6 |
+| **Geordnet** | **Variation** n!/(n−k)! | **Variation** nᵏ |
+| | *3 von 5 Buchstaben anordnen → 60* | *4-stellige PIN aus 0–9 → 10.000* |
+| **Ungeordnet** | **Kombination** n!/(k!(n−k)!) | **Kombination** C(n+k−1,k) |
+| | *Lotto 6/45 → 8.145.060* | *3 Kugeln aus 4 Farben → 20* |
+| **Alle n anordnen** | **Permutation** n! | **Permutation** n!/(k₁!·k₂!·…) |
+| | *5 Bücher → 120* | *MISSISSIPPI → 34.650* |
 
-> **Merke:** Lerne diese Tabelle auswendig — im MedAT reicht es, die zwei Entscheidungsfragen zu beantworten (Reihenfolge? Wiederholung?), um die richtige Formel sofort aus der Tabelle abzulesen.
+**Typische Signalwörter in Aufgaben:**
+- "anordnen", "Reihenfolge", "Code", "Platzierung" → **geordnet** (Variation/Permutation)
+- "auswählen", "Team bilden", "Teilmenge", "ziehen ohne Reihenfolge" → **ungeordnet** (Kombination)
+- "mit Zurücklegen", "darf mehrfach" → **mit Wiederholung**
+- "ohne Zurücklegen", "verschieden" → **ohne Wiederholung**
+
+> **Merke:** Zwei Fragen vor jeder Aufgabe: (1) Reihenfolge? (2) Wiederholung? Damit landest du immer bei der richtigen der 6 Formeln. Der häufigste Prüfungsfehler: Variation und Kombination verwechseln.
 
 ---
 
-## Rechenbeispiele
+## Typische Missverständnisse
 
-**Beispiel 1 — Blutgruppen-Phänotypen: Wie viele AB0-Rhesus-Kombinationen gibt es?**
-AB0 hat 4 Phänotypen (A, B, AB, 0), Rhesus hat 2 (Rh+ , Rh−). Jede Person hat genau eine AB0- und eine Rhesus-Eigenschaft (Reihenfolge egal, keine Wiederholung innerhalb der Kategorie). Multiplikationsprinzip: 4 × 2 = **8 verschiedene Blutgruppen-Phänotypen** (A+, A−, B+, B−, AB+, AB−, 0+, 0−). Erweitert man um Kell (2 Varianten): 4 × 2 × 2 = **16**.
+**"Variation und Kombination sind doch das Gleiche"** — Nein! Bei der Variation zählt die Reihenfolge (ABC ≠ CBA), bei der Kombination nicht (ABC = CBA). Variation liefert immer ein k!-fach größeres Ergebnis als die entsprechende Kombination.
 
-**Beispiel 2 — Studien-Randomisierung: 3 von 8 Medikamenten für einen Arm auswählen:**
-In einer klinischen Studie sollen 3 Medikamente aus 8 verfügbaren gleichzeitig getestet werden (Reihenfolge egal, ohne Wiederholung). → Kombination: C(8,3) = (8 × 7 × 6) / (3 × 2 × 1) = 336 / 6 = **56 mögliche Dreier-Kombinationen**. Soll zusätzlich ein viertes Medikament als Reserve bestimmt werden (Reihenfolge der Reserve zählt): Variation V(8,4) = 8!/4! = 8 × 7 × 6 × 5 = **1.680**.
+**"Permutation ist eine eigene Kategorie"** — Eine Permutation ist ein Spezialfall der Variation, bei dem k = n (alle Objekte werden angeordnet). Darum: V(n,n) = n!/(n−n)! = n!/0! = n!/1 = n! = P(n).
 
-**Beispiel 3 — DNA-Codons: Wie viele verschiedene Basentripletts gibt es?**
-4 Basen (A, U/T, G, C), je 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA). → Variation mit Wiederholung: V(4,3) = 4³ = **64 mögliche Codons**. Davon codieren 61 für Aminosäuren (3 Stopp-Codons). Mit 20 Aminosäuren → Code ist degeneriert (redundant): im Schnitt 61/20 ≈ 3 Codons pro Aminosäure.
+**"Bei Wiederholung wird es immer mehr"** — Richtig bei Variationen (nᵏ > n!/(n−k)! für große n), aber bei Kombinationen kann "mit Wiederholung" auch subtil sein. Entscheidend: Kann dasselbe Element mehrfach gewählt werden?
 
-**Beispiel 4 — Chirurgisches Team zusammenstellen:**
-Aus 12 Chirurgen sollen ein Operateur, ein 1. Assistent und ein 2. Assistent bestimmt werden.
-Reihenfolge zählt (verschiedene Rollen) → Variation ohne Wiederholung.
-V(12, 3) = 12!/(12−3)! = 12 × 11 × 10 = **1.320 Möglichkeiten**.
-Vergleich: Würde man nur ein 3er-Team ohne Rollenverteilung wählen → C(12,3) = (12 × 11 × 10)/(3 × 2 × 1) = 1.320/6 = **220**. Das Verhältnis 1.320/220 = 6 = 3! bestätigt: Variation = Kombination × k!.
+---
 
-**Beispiel 5 — Genetik: Heterozygote Genotypen bei 4 Allelen:**
-Ein Gen hat 4 Allele (A₁, A₂, A₃, A₄). Wie viele heterozygote Genotypen gibt es?
-Heterozygot = 2 verschiedene Allele, Reihenfolge egal (A₁A₂ = A₂A₁) → Kombination ohne Wiederholung.
-C(4, 2) = (4 × 3)/(2 × 1) = **6 heterozygote Genotypen**.
-Homozygot: 4 Genotypen (A₁A₁, …). Gesamt: 6 + 4 = 10. Allgemein bei n Allelen: C(n,2) + n = n(n+1)/2.
+## Rechenbeispiele — Medizinischer Kontext
 
-**Beispiel 6 — Passwort-Sicherheit: Kombination vs. Variation:**
-Ein Passwort hat 8 Zeichen aus 62 Symbolen (a–z, A–Z, 0–9), Wiederholung erlaubt, Reihenfolge zählt.
-V(62, 8) = 62⁸ = 62 × 62 × 62 × 62 × 62 × 62 × 62 × 62 ≈ **2,18 × 10¹⁴** Möglichkeiten.
-Zum Vergleich: Nur Kleinbuchstaben (26 Zeichen): V(26,8) = 26⁸ ≈ 2,09 × 10¹¹ — Faktor 1.000 weniger sicher.
+**DNA-Codons:** 4 Basen (A, U/T, G, C), 3 Positionen, Wiederholung erlaubt, Reihenfolge zählt (AUG ≠ GUA):
+V(4,3) = 4³ = **64 Codons**. Davon 61 für Aminosäuren, 3 Stopp-Codons. Der genetische Code ist degeneriert: 61/20 ≈ 3 Codons pro Aminosäure.
 
-**Beispiel 7 — Prüfungskommission (Kombination mit Einschränkung):**
-Aus 10 Professoren (6 Männer, 4 Frauen) soll eine 3er-Kommission mit mindestens 1 Frau gebildet werden.
-Gesamt ohne Einschränkung: C(10,3) = (10×9×8)/(3×2×1) = 720/6 = **120**.
-Nur Männer (kein Frau): C(6,3) = (6×5×4)/(3×2×1) = 120/6 = **20**.
-Mit mindestens 1 Frau = Gesamt − nur Männer = 120 − 20 = **100 Kommissionen**.
-Methode: **Komplementstrategie** — einfacher als alle Fälle (1F+2M, 2F+1M, 3F) einzeln zu zählen.
+**Heterozygote Genotypen:** Ein Gen hat 4 Allele (A₁–A₄). Heterozygot = 2 verschiedene Allele, Reihenfolge egal:
+C(4,2) = 6. Plus 4 homozygote → **10 Genotypen** insgesamt. Allgemein bei n Allelen: n(n+1)/2.
 
-**Beispiel 8 — Multiplikationsprinzip (Diagnostik-Algorithmus):**
-Ein Diagnosepfad hat 3 Stufen: Stufe 1 (4 Bluttests), Stufe 2 (3 Bildgebungen), Stufe 3 (2 Biopsietypen).
-Wie viele verschiedene diagnostische Pfade gibt es?
-Multiplikationsprinzip: 4 × 3 × 2 = **24 verschiedene Pfade**.
-Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der fundamentalste Zählbaustein.`,
+**Prüfungskommission mit Einschränkung:** 10 Professoren (6M, 4F), 3er-Kommission mit ≥1 Frau:
+Gesamt C(10,3) = 120, nur Männer C(6,3) = 20, mit ≥1 Frau = 120 − 20 = **100**. (Komplementstrategie!)
+
+**Passwort-Sicherheit:** 8 Zeichen aus 62 Symbolen (a–z, A–Z, 0–9), Wiederholung erlaubt:
+V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 10¹¹ — Faktor 1.000 weniger sicher.`,
       lernziele: [
-        "Die vier kombinatorischen Grundtypen (Permutation/Variation/Kombination × mit/ohne Wiederholung) anhand der Entscheidungsfragen 'geordnet?' und 'Wiederholung?' korrekt zuordnen",
-        "Permutationen ohne und mit Wiederholung berechnen und die Formel für identische Elemente anwenden",
-        "Den Binomialkoeffizienten C(n,k) = n!/(k!(n-k)!) berechnen und seine Symmetrie C(n,k)=C(n,n-k) nutzen",
-        "Variationen und Kombinationen in Textaufgaben vom MedAT-Typ erkennen und korrekt berechnen",
-        "Das Pascalsche Dreieck für kleine Binomialkoeffizienten verwenden",
+        "Multiplikations- und Additionsprinzip als Grundlage aller Zählprobleme anwenden",
+        "Die sechs kombinatorischen Formeln (Permutation/Variation/Kombination × mit/ohne Wiederholung) über den Entscheidungsbaum korrekt zuordnen",
+        "Permutationen mit identischen Elementen berechnen (z. B. MISSISSIPPI-Problem)",
+        "Den Binomialkoeffizienten C(n,k) berechnen, seine Symmetrie nutzen und im Pascalschen Dreieck ablesen",
+        "Den Binomialsatz (a+b)ⁿ auf genetische Aufspaltungsprobleme anwenden",
       ],
       sections: [
         {
           heading: "Entscheidungsbaum: Die richtige Formel finden",
-          text: "Der erste Schritt bei jeder Kombinatorik-Aufgabe ist nicht das Rechnen, sondern das Analysieren: Zählt die Reihenfolge? Wenn ja, liegt Permutation oder Variation vor. Wenn nein, ist es eine Kombination. Zweite Frage: Darf ein Element mehrfach auftreten? Wenn ja, gilt die Wiederholungsformel. Nur wer diese Fragen zuerst beantwortet, wählt die richtige Formel und vermeidet den häufigsten Prüfungsfehler.",
+          text: "Der erste Schritt bei jeder Kombinatorik-Aufgabe ist nicht das Rechnen, sondern das Analysieren: Zählt die Reihenfolge? Wenn ja, liegt Variation oder Permutation vor. Wenn nein, ist es eine Kombination. Zweite Frage: Darf ein Element mehrfach auftreten? Signalwörter helfen — 'anordnen', 'Code', 'Platzierung' deuten auf geordnet hin, 'auswählen', 'Team bilden', 'Teilmenge' auf ungeordnet.",
           merksatz:
-            "Zwei Fragen vor jeder Aufgabe: (1) Reihenfolge wichtig? → Ja = Variation/Permutation, Nein = Kombination. (2) Wiederholung erlaubt? → Ja = Potenzformel, Nein = Fakultätformel.",
+            "Zwei Fragen vor jeder Aufgabe: (1) Reihenfolge wichtig? → Ja = Variation/Permutation, Nein = Kombination. (2) Wiederholung erlaubt? → Ja = nᵏ bzw. Multiset, Nein = Fakultätformel. Häufigster Fehler: Variation und Kombination verwechseln.",
         },
         {
-          heading: "Binomialkoeffizient — Rechenschritte",
-          text: "Für C(n,k) kürzt man zuerst den Nenner (n-k)! gegen die letzten (n-k) Faktoren im Zähler n!, so dass im Zähler nur die k größten Faktoren (n, n-1, ..., n-k+1) stehen. Dann teilt man durch k!. Beispiel C(8,3) = (8×7×6)/(3×2×1) = 336/6 = 56. Diese Schreibweise ist rechnerisch viel einfacher als das vollständige Ausschreiben der Fakultäten.",
+          heading: "Pascalsches Dreieck und Binomialsatz",
+          text: "Das Pascalsche Dreieck liefert alle Binomialkoeffizienten auf einen Blick: Jede Zahl ist die Summe der zwei darüber. Zeile n enthält C(n,0) bis C(n,n). Der Binomialsatz (a+b)ⁿ nutzt genau diese Koeffizienten. In der Genetik berechnet man damit die Phänotyp-Verteilung bei n Nachkommen: P(k dominant von n) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ.",
           merksatz:
-            "C(n,k) Rechenschritt: Zähler = n×(n-1)×...×(n-k+1) (k Faktoren), Nenner = k!. Symmetrie: C(n,k) = C(n, n-k) — nimm immer das kleinere k.",
+            "Zeilen 0–5 des Pascalschen Dreiecks auswendig lernen — bei Binomialverteilungs-Aufgaben im MedAT spart das wertvolle Sekunden. C(n,k) = C(n, n−k) — immer das kleinere k nehmen!",
         },
       ],
       merksätze: [
-        "Permutation (alle anordnen): n! ohne, n!/(k1!×k2!×...) mit identischen Elementen",
-        "Variation (k aus n, geordnet): n!/(n-k)! ohne Wiederholung, n^k mit Wiederholung",
-        "Kombination (k aus n, ungeordnet): C(n,k) = n!/(k!×(n-k)!) ohne Wiederholung",
-        "Lotto 6 aus 45: C(45,6) = 8.145.060 — Reihenfolge zählt nicht, ohne Zurücklegen",
-        "Pascalsches Dreieck: C(n,k) = C(n-1,k-1) + C(n-1,k) — Additions-Eigenschaft",
-        "0! = 1 per Definition — wichtig für C(n,0) = 1 und C(n,n) = 1",
-        "Bei 'Wiederholung erlaubt': Multiplikationsprinzip → n^k Möglichkeiten",
+        "Multiplikationsprinzip (UND) vs. Additionsprinzip (ODER) — die Basis jeder Zählaufgabe",
+        "Permutation mit Wiederholung: n!/(k₁!×k₂!×...) — durch identische Elemente teilen (MISSISSIPPI: 11!/(4!×4!×2!))",
+        "Variation vs. Kombination: Reihenfolge zählt → Variation (immer k!-mal mehr als Kombination)",
+        "C(n,k) = C(n, n−k) — Symmetrie nutzen, immer das kleinere k rechnen!",
+        "Pascalsches Dreieck: Jede Zahl = Summe der zwei darüber. Zeile n = Koeffizienten von (a+b)ⁿ",
+        "Binomialsatz + Genetik: P(k dominant von n) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ — Koeffizienten aus dem Dreieck",
+        "0! = 1 ist mathematisch zwingend — wichtig für C(n,0) = 1 und C(n,n) = 1",
       ],
       selfTest: [
         {
@@ -291,51 +332,37 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
           options: ["24", "12", "16", "8", "4"],
           correctIndex: 0,
           explanation:
-            "Es werden alle 4 Patienten angeordnet (Reihenfolge wichtig, alle Objekte) → Permutation: P(4) = 4! = 4 × 3 × 2 × 1 = 24. Merkhilfe: Für den ersten Termin 4 Möglichkeiten, dann 3, dann 2, dann 1. Multiplikationsprinzip: 4 × 3 × 2 × 1 = 24.",
+            "Alle 4 Patienten werden angeordnet (Reihenfolge zählt, alle Objekte) → Permutation: P(4) = 4! = 4 × 3 × 2 × 1 = 24. Für den ersten Termin 4 Möglichkeiten, dann 3, dann 2, dann 1.",
           hints: [
-            "Alle 4 Patienten werden angeordnet, Reihenfolge zählt → Permutation.",
-            "P(4) = 4! = 4 × 3 × 2 × 1 = ?",
+            "Alle Objekte anordnen, Reihenfolge zählt → Permutation P(n) = n!",
+            "P(4) = 4 × 3 × 2 × 1 = ?",
           ],
           difficulty: 1,
           tags: ["permutation", "fakultät", "kombinatorik"],
         },
         {
           question:
-            "Eine Studie wählt 3 Medikamente aus 7 verfügbaren aus, um sie gleichzeitig zu testen (Reihenfolge spielt keine Rolle). Wie viele Kombinationen gibt es?",
-          options: ["35", "21", "210", "42", "105"],
-          correctIndex: 0,
-          explanation:
-            "Reihenfolge unwichtig, ohne Wiederholung → Kombination: C(7,3) = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 210/6 = 35. Kurzrechnung: Zähler nur die 3 oberen Faktoren (7×6×5 = 210), Nenner = 3! = 6. Ergebnis: 35.",
-          hints: [
-            "Reihenfolge spielt keine Rolle → Kombination, nicht Variation.",
-            "C(7,3) = (7×6×5)/(3×2×1) = ?",
-          ],
-          difficulty: 2,
-          tags: ["kombination", "binomialkoeffizient", "kombinatorik"],
-        },
-        {
-          question:
-            "Ein Zahlencode besteht aus 3 Stellen, jede Stelle kann eine Ziffer von 1–6 sein (Wiederholung erlaubt). Wie viele Codes gibt es?",
+            "Ein Zahlencode hat 3 Stellen, jede Stelle kann eine Ziffer von 1–6 sein (Wiederholung erlaubt). Wie viele Codes gibt es?",
           options: ["216", "120", "36", "18", "729"],
           correctIndex: 0,
           explanation:
-            "Reihenfolge zählt (Code 123 ≠ Code 321), Wiederholung erlaubt → Variation mit Wiederholung: V(6,3) = 6^3 = 216. Jede der 3 Stellen hat unabhängig 6 Möglichkeiten: 6 × 6 × 6 = 216.",
+            "Reihenfolge zählt (Code 123 ≠ 321), Wiederholung erlaubt → Variation mit Wiederholung: V(6,3) = 6³ = 216. Jede der 3 Stellen hat unabhängig 6 Möglichkeiten: 6 × 6 × 6 = 216. Falle: 729 = 9³ (falsche Basis), 120 = 5! (Permutation statt Variation), 36 = 6×6 (nur 2 Stellen).",
           hints: [
-            "Reihenfolge zählt (Code), Wiederholung erlaubt → V(n,k) = n^k.",
-            "V(6,3) = 6^3 = ?",
+            "Reihenfolge zählt + Wiederholung erlaubt → V(n,k) = nᵏ",
+            "V(6,3) = 6 × 6 × 6 = ?",
           ],
           difficulty: 1,
           tags: ["variation", "wiederholung", "kombinatorik"],
         },
         {
           question:
-            "Wie viele unterschiedliche Anordnungen gibt es für das Wort LEVEL (5 Buchstaben, E kommt 2×, L kommt 2× vor)?",
+            "Wie viele unterschiedliche Anordnungen der Buchstaben LEVEL gibt es? (L kommt 2×, E kommt 2× vor)",
           options: ["30", "60", "120", "24", "10"],
           correctIndex: 0,
           explanation:
-            "Permutation mit Wiederholung: n = 5, L kommt 2× vor (k1=2), E kommt 2× vor (k2=2). P = 5!/(2!×2!) = 120/(2×2) = 120/4 = 30. Die Formel teilt durch die Fakultäten der identischen Elemente, weil deren Vertauschungen nicht unterscheidbar sind.",
+            "Permutation mit Wiederholung: n = 5, L(2×), E(2×), V(1×). P = 5!/(2!×2!) = 120/4 = 30. Ohne Korrektur wäre es 5! = 120, aber die identischen L und E erzeugen keine neuen Anordnungen. Falle: 120 = 5! (vergessen durch identische Buchstaben zu teilen).",
           hints: [
-            "Permutation mit identischen Elementen: P = n!/(k1!×k2!×...)",
+            "Permutation mit identischen Elementen: P = n!/(k₁! × k₂! × ...)",
             "n=5, L: 2×, E: 2× → 5!/(2!×2!) = ?",
           ],
           difficulty: 2,
@@ -343,14 +370,42 @@ Unabhängig von der Kombinatorik-Formel — das Multiplikationsprinzip ist der f
         },
         {
           question:
-            "Beim österreichischen Lotto werden 6 Zahlen aus 45 gezogen (ohne Zurücklegen, Reihenfolge egal). Welcher Wert liegt am nächsten an der korrekten Anzahl der Möglichkeiten?",
+            "Eine Studie wählt 3 Medikamente aus 7 verfügbaren (Reihenfolge spielt keine Rolle). Wie viele Möglichkeiten?",
+          options: ["35", "21", "210", "42", "120"],
+          correctIndex: 0,
+          explanation:
+            "Reihenfolge egal, ohne Wiederholung → Kombination: C(7,3) = (7×6×5)/(3×2×1) = 210/6 = 35. Falle: 210 = 7×6×5 wäre die Variation (Reihenfolge zählt) — hier aber nicht! 210/6 = 35, weil 3! = 6 Anordnungen pro Gruppe identisch sind.",
+          hints: [
+            "Reihenfolge egal → Kombination C(n,k), nicht Variation",
+            "C(7,3) = (7×6×5)/(3!) = 210/6 = ?",
+          ],
+          difficulty: 2,
+          tags: ["kombination", "binomialkoeffizient", "kombinatorik"],
+        },
+        {
+          question:
+            "In einem monohybriden Erbgang (p=3/4 dominant) beträgt die Wahrscheinlichkeit, dass genau 3 von 4 Nachkommen den dominanten Phänotyp zeigen, ungefähr:",
+          options: ["42%", "32%", "21%", "75%", "56%"],
+          correctIndex: 0,
+          explanation:
+            "Binomialverteilung: P(X=3) = C(4,3) × (3/4)³ × (1/4)¹ = 4 × 27/64 × 1/4 = 108/256 ≈ 42,2%. C(4,3) = 4 direkt aus dem Pascalschen Dreieck (Zeile 4: 1,4,6,4,1). Falle: 75% wäre p selbst — aber gefragt ist die Wahrscheinlichkeit für genau 3 von 4, nicht der Erwartungswert.",
+          hints: [
+            "Binomialverteilung: P(X=k) = C(n,k) × pᵏ × (1−p)ⁿ⁻ᵏ",
+            "C(4,3) = 4 (Zeile 4 im Pascalschen Dreieck), p = 3/4, n = 4, k = 3",
+          ],
+          difficulty: 3,
+          tags: ["binomialkoeffizient", "pascalsches-dreieck", "genetik", "kombinatorik"],
+        },
+        {
+          question:
+            "Beim österreichischen Lotto werden 6 Zahlen aus 45 gezogen (ohne Zurücklegen, Reihenfolge egal). Welcher Wert liegt am nächsten?",
           options: ["8 Millionen", "1 Million", "45 Millionen", "120.000", "300.000"],
           correctIndex: 0,
           explanation:
-            "C(45,6) = (45×44×43×42×41×40)/(6!) = 8.145.060 ≈ 8 Millionen. Zähler: 45×44×43×42×41×40 = 5.864.443.200. Nenner: 6! = 720. Ergebnis: 8.145.060. Zum Vergleich: Lotto 6/49 ergibt C(49,6) ≈ 13,98 Millionen Möglichkeiten.",
+            "C(45,6) = (45×44×43×42×41×40)/720 = 5.864.443.200/720 = 8.145.060 ≈ 8 Millionen. Die Symmetrie C(45,6) = C(45,39) nützt hier rechnerisch wenig, da k=6 bereits klein ist. Zum Vergleich: Lotto 6/49 → C(49,6) ≈ 14 Millionen.",
           hints: [
-            "Reihenfolge egal, ohne Zurücklegen → C(45,6).",
-            "Zähler: 45×44×43×42×41×40, Nenner: 6! = 720.",
+            "Reihenfolge egal, ohne Zurücklegen → Kombination C(45,6)",
+            "Zähler: 45×44×43×42×41×40, Nenner: 6! = 720",
           ],
           difficulty: 3,
           tags: ["kombination", "lotto", "binomialkoeffizient"],
